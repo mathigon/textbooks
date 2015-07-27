@@ -1,0 +1,100 @@
+// =================================================================================================
+// GRAPH THEORY
+// =================================================================================================
+
+@red:    #b30469;  // Ruby
+@blue:   #1f7aff;  // Blue Ribbon
+@green:  #31b304;  // La Palma
+@yellow: #ff941f;  // Neon Carrot
+@grey:   #242430;  // Charade
+
+.s-button {
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    background-image: radial-gradient(center bottom, ellipse farthest-side, fade(#FFF,40%), fade(#FFF,0) 100%);
+    background-size: 200% 150%;
+    background-repeat: no-repeat;
+    background-position: 200% 50%;
+    transition: box-shadow .3s, color .3s, background-position .4s, background-color .3s, opacity .3s;
+
+    &:not(.disabled):hover {
+        z-index: 10;
+        color: #FFF;
+        box-shadow: 0 2px 8px rgba(0,0,0,.4);
+        background-position: 10% 50%;
+    }
+
+    & .icon { opacity: 0.8; transition: opacity .3s; }
+    &:not(.disabled):hover .icon { opacity: 1 }
+
+    &.disabled, &.disabled:hover { cursor: default; box-shadow: none; }
+}
+
+// =================================================================================================
+
+.node { stroke: #FFF; fill: @red; stroke-width: 2px; cursor: move; }
+.link { stroke: #DDD; stroke-width: 2px; fill: transparent; }
+.arrow { fill: #DDD; }
+.graph { border: 1px solid #EEE; }
+
+#graph0 .node { transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: scale(1); transform-origin: center; }
+#graph0.novertices .node { transform: scale(0); cursor: default; }
+
+#graph0 .link { stroke-dasharray: 70px 70px; stroke-dashoffset: 140px; transition: stroke-dashoffset 1.6s; }
+#graph0.noedges .link { stroke-dashoffset: 70px; }
+
+#gt_flags { max-width: none; margin-left: 50%; transform: translateX(-50%); }
+
+.party-img { width: 260px; margin-top: -45px; }
+@media screen and (max-width: 730px) { .party-img { margin-top: -20px; } }
+@media screen and (max-width: 700px) { .party-img { margin-top: 0px; } }
+
+.person { display: inline-block; width: 24px; height: 24px; text-align: center; color: #FFF; border-radius: 20px; }
+.handshakes .duplicate { opacity: 1; transition: opacity .5s; }
+.complete .handshakes .duplicate { opacity: 0.1; }
+.handshakes td { text-align: center; color: #666; }
+
+.bridge { fill: #F7931E; stroke: transparent; stroke-width: 10px; } 
+.water { fill: #6AB0CE; }
+
+// =================================================================================================
+
+#planarity circle { fill: @blue; cursor: move; stroke: mix(@blue, #FFF, 20%); stroke-width: 2.5px; }
+#planarity circle.intersect { fill: @red; }
+#planarity line { stroke: fade(#000, 30%); stroke-width: 2.5px; }
+#planarity line.intersect { stroke: @red; }
+
+// =================================================================================================
+
+.m-draw-pointer { cursor: crosshair; }
+.m-draw-path { fill: none; stroke: black; stroke-width: 4px; pointer-events: none; }
+.map-bridge { fill: #F7931E; stroke: rgba(0,0,0,0); stroke-width: 20px; }
+.utility { z-index: 10; }
+.utility1, .utility2, .utility3 { opacity: 0; transition: opacity .3s; }
+
+// =================================================================================================
+
+#planar-1 .link, #planar-2 .link, #planar-3 .link { stroke-width: 3px; }
+
+.clear-button { position: absolute; bottom: 10px; left: 10px; }
+
+.four-colour-icon { width: 40px; height: 40px; padding: 8px; display: inline-block; margin-right: 10px; cursor: pointer; }
+.four-colour-icon.on { padding: 0; border: 8px solid rgba(0,0,0,0.6); }
+
+#dominoes { cursor: pointer; }
+#dominoes g rect { fill: #999; }
+#dominoes g text { fill: #F2F2F2; font-size: 18; letter-spacing: -1; }
+#dominoes g { transform-origin: bottom right; transition: transform .1s linear; }
+
+.tsm-box { position: relative; }
+.tsm-city { width: 30px; height: 30px; background: #C00; position: absolute; top: 0; border-radius: 20px; cursor: move; }
+.tsm-path { fill: none; stroke: #00C; stroke-width: 6; }
+
+.vertex-orders text { font-size: 20px; fill: #FFF; }
+.vertex-orders circle { transition: fill .5s; }
+
+.graph-applications p { text-align: center; font-size: 90%; margin: .5em 0 1.5em; }
+
+.euler-sum { opacity: 0; margin: 0.4em 0px 0px; padding-top: .4em; border-top: 1px solid #ddd; }

@@ -1,0 +1,43 @@
+<svg x="0px" y="0px" viewBox="0 0 200 200" class="d3-outline" width="200" height="200">
+
+<polygon style="opacity: 0" fill="#006DD9" points="24,56 100,12 176,56 175,145 100,188 24,144 "/>
+
+<line style="stroke: #999" stroke-width="2" x1="75" y1="56" x2="100" y2="12"/>
+<line style="stroke: #999" stroke-width="2" x1="100" y1="12" x2="127" y2="56"/>
+<line style="stroke: #999" stroke-width="2" x1="127" y1="57" x2="176" y2="57"/>
+<line style="stroke: #999" stroke-width="2" x1="176" y1="56" x2="100" y2="12"/>
+<line style="stroke: #999" stroke-width="2" x1="100" y1="12" x2="24" y2="56"/>
+<line style="stroke: #999" stroke-width="2" x1="75" y1="57" x2="24" y2="57"/>
+<line style="stroke: #999" stroke-width="2" x1="75" y1="57" x2="127" y2="57"/>
+<line style="stroke: #999" stroke-width="2" x1="127" y1="56" x2="150" y2="100"/>
+<line style="stroke: #999" stroke-width="2" x1="150" y1="100" x2="127" y2="144"/>
+<line style="stroke: #999" stroke-width="2" x1="127" y1="145" x2="75" y2="145"/>
+<line style="stroke: #999" stroke-width="2" x1="75" y1="144" x2="51" y2="100"/>
+<line style="stroke: #999" stroke-width="2" x1="51" y1="100" x2="75" y2="56"/>
+<line style="stroke: #999" stroke-width="2" x1="51" y1="100" x2="24" y2="56"/>
+<line style="stroke: #999" stroke-width="2" x1="23" y1="56" x2="23" y2="144"/>
+<line style="stroke: #999" stroke-width="2" x1="23.5" y1="144" x2="51" y2="100"/>
+<line style="stroke: #999" stroke-width="2" x1="23" y1="145" x2="75" y2="145"/>
+<line style="stroke: #999" stroke-width="2" x1="127" y1="145" x2="176" y2="145"/>
+<line style="stroke: #999" stroke-width="2" x1="176" y1="145" x2="150" y2="100"/>
+<line style="stroke: #999" stroke-width="2" x1="150" y1="100" x2="176" y2="56"/>
+<line style="stroke: #999" stroke-width="2" x1="175" y1="56" x2="175" y2="145"/>
+<line style="stroke: #999" stroke-width="2" x1="176" y1="145" x2="100" y2="189"/>
+<line style="stroke: #999" stroke-width="2" x1="100" y1="189" x2="127" y2="144"/>
+<line style="stroke: #999" stroke-width="2" x1="100" y1="189" x2="75" y2="144"/>
+<line style="stroke: #999" stroke-width="2" x1="23" y1="144.5" x2="100" y2="189"/>
+
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="24" cy="56" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="24" cy="144" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="176" cy="56" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="175" cy="145" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="100" cy="12" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="100" cy="188" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="75" cy="56" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="127" cy="56" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="75" cy="144" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="127" cy="144" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="51" cy="100" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="150" cy="100" r="7"/>
+
+</svg>

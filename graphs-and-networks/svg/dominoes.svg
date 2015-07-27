@@ -1,0 +1,114 @@
+<svg viewBox="0 0 960 80" width="960" height="80" id="dominoes">
+
+<rect x="0" y="0" width="960" height="80" fill="#FFF"/>
+
+<linearGradient id="grad1" gradientUnits="userSpaceOnUse" x1="480" y1="80" x2="480" y2="68">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#CCCCCC"/>
+</linearGradient>
+<rect y="68" fill="url(#grad1)" width="960" height="12"/>
+
+<linearGradient id="grad2" gradientUnits="userSpaceOnUse" x1="0" y1="74" x2="20" y2="74">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<rect y="68" fill="url(#grad2)" width="20" height="12"/>
+
+<g>
+	<rect x="20" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 23.3833 24.5)">0</text>
+</g>
+<g>
+	<rect x="60" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 63.3833 24.5)">1</text>
+</g>
+<g>
+	<rect x="100" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 103.3833 24.5)">2</text>
+</g>
+<g>
+	<rect x="140" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 143.3833 24.5)">3</text>
+</g>
+<g>
+	<rect x="180" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 183.3833 24.5)">4</text>
+</g>
+<g>
+	<rect x="220" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 223.3833 24.5)">5</text>
+</g>
+<g>
+	<rect x="260" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 263.3833 24.5)">6</text>
+</g>
+<g>
+	<rect x="300" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 303.3833 24.5)">7</text>
+</g>
+<g>
+	<rect x="340" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 343.3833 24.5)">8</text>
+</g>
+<g>
+	<rect x="380" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 383.3833 24.5)">9</text>
+</g>
+<g>
+	<rect x="420" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 419.4863 24.5)">10</text>
+</g>
+<g>
+	<rect x="460" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 459.4863 24.5)">11</text>
+</g>
+<g>
+	<rect x="500" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 499.4863 24.5)">12</text>
+</g>
+<g>
+	<rect x="540" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 539.4863 24.5)">13</text>
+</g>
+<g>
+	<rect x="580" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 579.4863 24.5)">14</text>
+</g>
+<g>
+	<rect x="620" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 619.4863 24.5)">15</text>
+</g>
+<g>
+	<rect x="660" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 659.4863 24.5)">16</text>
+</g>
+<g>
+	<rect x="700" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 699.4863 24.5)">17</text>
+</g>
+<g>
+	<rect x="740" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 739.4863 24.5)">18</text>
+</g>
+<g>
+	<rect x="780" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 779.4863 24.5)">19</text>
+</g>
+<g>
+	<rect x="820" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 819.4863 24.5)">20</text>
+</g>
+<g>
+	<rect x="860" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 859.4863 24.5)">21</text>
+</g>
+<g>
+	<rect x="900" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 899.4863 24.5)">22</text>
+</g>
+<g>
+	<rect x="940" y="8" width="16" height="60"/>
+	<text transform="matrix(1 0 0 1 939.4863 24.5)">23</text>
+</g>
+
+</svg>

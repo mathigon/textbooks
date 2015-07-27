@@ -1,0 +1,77 @@
+<svg class="vertex-orders" x="0px" y="0px" viewBox="0 0 640 200" width="640" height="200">
+
+<rect x="60.2" y="77" fill="none" stroke="#999" stroke-width="4" width="93" height="93"/>
+<polyline fill="none" stroke="#999" stroke-width="4" points="60.2,77 106.7,27.3 153.2,77 60.2,170 "/>
+<line fill="none" stroke="#999" stroke-width="4" x1="60.2" y1="77" x2="153.2" y2="170"/>
+<rect x="295" y="25" fill="none" stroke="#999" stroke-width="4" width="50" height="150"/>
+<rect x="245" y="75" fill="none" stroke="#999" stroke-width="4" width="150" height="50"/>
+<rect x="480.3" y="46.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 85.754 406.3074)" fill="none" stroke="#999" stroke-width="4" width="106.1" height="106.1"/>
+<polygon fill="none" stroke="#999" stroke-width="4" points="558,49 509,49 533.3,99.6 "/>
+<polygon fill="none" stroke="#999" stroke-width="4" points="558,149 509,149 533.3,99.1 "/>
+<polygon fill="none" stroke="#999" stroke-width="4" points="483,75 483,124 533.6,99.7 "/>
+<polygon fill="none" stroke="#999" stroke-width="4" points="583,75 583,124 533.1,99.7 "/>
+
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="107" cy="28" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 101.8698 34.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="153" cy="77" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 147.8698 83.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="153" cy="170" r="12" data-value="3"/>
+<text transform="matrix(1 0 0 1 147.8698 176.3269)">3</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="60" cy="170" r="12" data-value="3"/>
+<text transform="matrix(1 0 0 1 54.8698 176.3269)">3</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="60" cy="77" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 54.8698 83.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="107" cy="123" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 101.8698 129.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="25" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 289.8698 31.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="25" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 339.8698 31.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="75" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 289.8698 81.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="75" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 339.8698 81.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="245" cy="75" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 239.8698 81.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="395" cy="75" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 389.8698 81.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="245" cy="125" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 239.8698 131.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="125" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 289.8698 131.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="125" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 339.8698 131.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="395" cy="125" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 389.8698 131.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="175" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 289.8698 181.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="175" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 339.8698 181.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="483" cy="75" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 477.8698 81.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="509" cy="49" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 503.8698 55.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="533" cy="25" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 527.8698 31.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="558" cy="49" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 552.8698 55.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="583" cy="74" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 577.8698 80.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="533" cy="100" r="12" data-value="8"/>
+<text transform="matrix(1 0 0 1 527.8698 106.3269)">8</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="458" cy="100" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 452.8698 106.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="608" cy="99" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 602.8698 105.3269)">2</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="583" cy="124" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 577.8698 130.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="483" cy="124" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 477.8698 130.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="508" cy="149" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 502.8698 155.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="558" cy="149" r="12" data-value="4"/>
+<text transform="matrix(1 0 0 1 552.8698 155.3269)">4</text>
+<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="533" cy="175" r="12" data-value="2"/>
+<text transform="matrix(1 0 0 1 527.8698 181.3269)">2</text>
+
+</svg>

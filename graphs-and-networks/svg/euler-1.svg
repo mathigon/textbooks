@@ -1,0 +1,29 @@
+<svg x="0px" y="0px" viewBox="0 0 200 200" class="d3-outline" width="200" height="200">
+
+<polygon style="opacity: 0" fill="#006DD9" points="24,47 102,23 152,40 173,100 141,130 107,178 41,137 "/>
+
+<line style="stroke: #999" stroke-width="2" x1="24" y1="47" x2="102" y2="23"/>
+<line style="stroke: #999" stroke-width="2" x1="102" y1="23" x2="152" y2="40"/>
+<line style="stroke: #999" stroke-width="2" x1="152" y1="40" x2="173" y2="100"/>
+<line style="stroke: #999" stroke-width="2" x1="173" y1="100" x2="141" y2="130"/>
+<line style="stroke: #999" stroke-width="2" x1="141" y1="130" x2="93" y2="86"/>
+<line style="stroke: #999" stroke-width="2" x1="93" y1="86" x2="152" y2="40"/>
+<line style="stroke: #999" stroke-width="2" x1="93" y1="86" x2="42" y2="137"/>
+<line style="stroke: #999" stroke-width="2" x1="42" y1="137" x2="107" y2="178"/>
+<line style="stroke: #999" stroke-width="2" x1="107" y1="178" x2="141" y2="130"/>
+<line style="stroke: #999" stroke-width="2" x1="93" y1="86" x2="24" y2="47"/>
+<line style="stroke: #999" stroke-width="2" x1="101" y1="21" x2="93" y2="86"/>
+<line style="stroke: #999" stroke-width="2" x1="40" y1="137" x2="141" y2="130"/>
+<line style="stroke: #999" stroke-width="2" x1="24" y1="47" x2="42" y2="137"/>
+<line style="stroke: #999" stroke-width="2" x1="93" y1="86" x2="173" y2="100"/>
+
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="102" cy="23" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="152" cy="40" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="173" cy="100" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="93" cy="86" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="24" cy="47" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="42" cy="137" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="107" cy="178" r="7"/>
+<circle style="fill: #999" stroke="#FFFFFF" stroke-width="2" cx="141" cy="130" r="7"/>
+
+</svg>
