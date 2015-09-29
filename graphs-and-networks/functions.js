@@ -1,22 +1,21 @@
-// ================================================================================================
-// MATHIGON ACTIVE
-// GRAPH THEORY
-// ================================================================================================
+// =============================================================================
+// Mathigon.org | Graphs and Networks
+// (c) 2015 Mathigon
+// =============================================================================
 
 
-/* jshint curly: false */
-/* global window, $, $C, $T, $N, $$N, $$, d3 */
+import Graph from 'graph/graph';
+import Vector from 'vector';
+import { Point } from 'geometry';
+import { tabulate, list } from 'arrays';
+import { subsets } from 'combinatorics';
+import { $, $$, $T, $C, $$C, $$T, $N } from 'elements'; 
 
-window.MA = window.MA || {};
-window.MA.bfn = window.MA.bfn || {};
 
+// -----------------------------------------------------------------------------
+// Biographies
 
-
-// ================================================================================================
-// BIOGRAPHIES AND GLOSSARY
-// ================================================================================================
-
-MA.bio = {
+const bio = {
     euler: {
         name: "Leonhard Euler",
         birth: "1707",
@@ -66,9 +65,11 @@ MA.bio = {
     }
 };
 
-// ------------------------------------------------------------------------------------------------
 
-MA.gloss = {
+// -----------------------------------------------------------------------------
+// Glossary
+
+const gloss = {
     complete: {
         title: "Complete Graph",
         text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac white'><span><em>n</em> &times; (<em>n</em> &#8211; 1)</span><span>2</span></span> edges.</p>"
@@ -121,12 +122,34 @@ MA.gloss = {
 };
 
 
+// -----------------------------------------------------------------------------
+// Hints
 
-// ================================================================================================
-// HINTS
-// ================================================================================================
+const hints = {
 
-MA.hints = {
+    intro1: {
+        text: 'If you click the <em>Play button</em> <span class="target" data-target="section.active .section-audio"></span> I will read out the text and give you additional instructions for questions and exercises.'
+    },
+
+    intro2: {
+        text: 'The colour blue usually indicates questions or exercises. Here are two blanks <span class="target" data-target=".first-section x-blank"></span> which you need to fill in.'
+    },
+
+    intro3: {
+        text: 'Every chapter consists of many short sections which are revealed step by step. Click the <em>Next button</em> <span class="target" data-target=".go-next"></span> to skip ahead.'
+    },
+
+    intro4: {
+        text: 'In the <em>Progress panel</em> <span class="target" data-target="#nav-button-progress"></span> you can see an overview of the sections in this chapter, and how much you have completed. You can also chat with others <span class="target" data-target="#nav-button-discussion"></span> or change the chapter settings <span class="target" data-target="#nav-button-settings"></span>.'
+    },
+
+    intro5: {
+        text: 'Red boxes <span class="target" data-target="#slider1"></span> in the text indicate interactive numbers. Move the slider horizontally to change their value and see what happens.'
+    },
+
+    firstGraphSolved: {
+        text: 'Well done! All <x-target to="#graph0">graph diagrams</x-target> in this chapter are interactive: try moving the vertices around.'
+    },
 
     crossWater: {
         audio: [1764, 1767.6],
@@ -189,132 +212,121 @@ MA.hints = {
 };
 
 
+// -----------------------------------------------------------------------------
+// Functions
 
-// ================================================================================================
-// SECTION FUNCTIONS
-// ================================================================================================
+const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,' +
+    '14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';
 
-MA.bfn.GT_0_0 = function(section, chapter) {
+const fns = {};
 
-    var $graph = $C('graph', section.$el);
-    new M.Graph($graph, 8, [[0,4],[4,5],[5,2],[5,1],[1,2],[2,3],[3,4],[3,6],[6,7],[7,3],[2,7]]);
+const RED = '#b30469';
+const BLUE = '#1f7aff';
+const GREEN = '#31b304';
+const YELLOW = '#ff941f';
 
-    var solved = 0;
-    var solvedHint = 'Well done! All graph diagrams <span class="target" data-target="#graph0"></span> in this chapter are interactive: try moving the vertices around.';
-
-    section.blanks[0].on('valid', function() {
-        $graph.removeClass('novertices');
-        ++ solved;
-        if (solved == 2) chapter.addHint(solvedHint);
-    });
-
-    section.blanks[1].on('valid', function() {
-        $graph.removeClass('noedges');
-        ++ solved;
-        if (solved == 2) chapter.addHint(solvedHint);
-    });
-
-    section.on('load', function() {
-
-        chapter.addHint('If you click the <em>Play button</em> <span class="target" data-target="section.active .section-audio"></span> I will read out the text and give you additional instructions for questions and exercises.');
-
-        chapter.addHint('The colour blue usually indicates questions or exercises. Here are two blanks <span class="target" data-target="#blank1, #blank2"></span> which you need to fill in.');
-
-        chapter.addHint('Every chapter consists of many short sections which are revealed step by step. Click the <em>Next button</em> <span class="target" data-target=".go-next"></span> to skip ahead.');
-
-    });
-};
-
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_0_1 = function(section, chapter) {
-    var graphs = $$C('graph', section.$el);
-
-    new M.Graph(graphs[0], 7, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,5],[6,3]], { directed: true });
-    new M.Graph(graphs[1], 9, [[0,1],[1,2],[2,3],[3,0],[1,3],[4,5],[5,6],[6,4],[7,8]]);
-    new M.Graph(graphs[2], 4, [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,0],[0,3],[0,0],[1,1],[2,2],[3,3]], { arc: true });
+fns.GT_0_0 = function(section, chapter) {
 
     // console.log("section initialise");
     // section.on('load',     function() { console.log('section load'); });
     // section.on('active',   function() { console.log('section active'); });
     // section.on('complete', function() { console.log('section complete'); });
 
+    var $graph = $C('graph', section.$el);
+    new Graph($graph, 8, [[0,4],[4,5],[5,2],[5,1],[1,2],[2,3],[3,4],[3,6],[6,7],[7,3],[2,7]]);
+
+    section.needs('blank', 2, function() { chapter.addHint('firstGraphSolved'); });
+
+    section.blanks[0].on('valid', function() {
+        $graph.removeClass('novertices');
+        section.count('blank');
+    });
+
+    section.blanks[1].on('valid', function() {
+        $graph.removeClass('noedges');
+        section.count('blank');
+    });
+
     section.on('load', function() {
-        chapter.addHint('In the <em>Progress panel</em> <span class="target" data-target="#nav-button-progress"></span> you can see an overview of the sections in this chapter, and how much you have completed. You can also chat with others <span class="target" data-target="#nav-button-discussion"></span> or change the chapter settings <span class="target" data-target="#nav-button-settings"></span>.');
+        chapter.addHint('intro1');
+        chapter.addHint('intro2');
+        chapter.addHint('intro3');
     });
 };
 
-// ------------------------------------------------------------------------------------------------
+fns.GT_0_1 = function(section, chapter) {
+    let graphs = $$C('graph', section.$el);
 
-MA.bfn.GT_0_2 = function(section, chapter) {
-    var graphs = $$C('graph', section.$el);
+    new Graph(graphs[0], 7, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,5],[6,3]], { directed: true });
+    new Graph(graphs[1], 9, [[0,1],[1,2],[2,3],[3,0],[1,3],[4,5],[5,6],[6,4],[7,8]]);
+    new Graph(graphs[2], 4, [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,0],[0,3],[0,0],[1,1],[2,2],[3,3]], { arc: true });
 
-    new M.Graph(graphs[0], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[2,5]], { vertex: '#1f7aff', edge: '#1f7aff' });
-    new M.Graph(graphs[2], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]], { vertex: '#31b304', edge: '#31b304' });
-    new M.Graph(graphs[4], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[4,5],[5,1]], { vertex: '#ff941f', edge: '#ff941f' });
-
-    new M.Graph(graphs[1], 8, [[0,1],[1,2],[2,3],[3,0],[1,3],[1,4],[4,6],[6,2],[3,5],[5,7],[7,0]], {
-        vertex: function(v) { return v < 6 ? '#1f7aff' : '#DDD' },
-        edge: function(u, v) { return (u < 6 && v < 6 && !(u == 1 && v == 3)) ? '#1f7aff' : '#DDD'; }
-    });
-
-    new M.Graph(graphs[3], 7, [[0,1],[1,2],[2,3],[3,4],[4,0],[0,3],[1,3],[2,5],[5,3],[5,6],[6,3],[6,4]], {
-        vertex: function(v) { return v < 5 ? '#31b304' : '#DDD' },
-        edge: function(u, v) { return (u < 5 && v < 5 && !(v == 3 && (u == 0 || u == 1))) ? '#31b304' : '#DDD'; }
-    });
-
-    new M.Graph(graphs[5], 8, [[0,1],[1,2],[2,3],[3,0],[0,4],[4,5],[5,1],[1,3],[1,4],[3,6],[6,0],[4,7],[7,0]], {
-        vertex: function(v) { return v < 6 ? '#ff941f' : '#DDD' },
-        edge: function(u, v) { return (u < 6 && v < 6 && !(u == 1 && (v == 3 || v == 4))) ? '#ff941f' : '#DDD'; }
+    section.on('load', function() {
+        chapter.addHint('intro4');
     });
 };
 
-// ------------------------------------------------------------------------------------------------
+fns.GT_0_2 = function(section, chapter) {
+    let graphs = $$C('graph', section.$el);
 
-MA.bfn.GT_0_3 = function(section, chapter) {
-    var graphs = $$C('graph', section.$el);
+    new Graph(graphs[0], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[2,5]], { vertex: BLUE, edge: BLUE });
+    new Graph(graphs[2], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]], { vertex: GREEN, edge: GREEN });
+    new Graph(graphs[4], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[4,5],[5,1]], { vertex: YELLOW, edge: YELLOW });
 
-    new M.Graph(graphs[0], 5, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,2]]);
-    new M.Graph(graphs[1], 8, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,0],[0,2],[1,3],[2,4],[3,5],[4,6],[5,7],[6,0],[7,1]]);
+    new Graph(graphs[1], 8, [[0,1],[1,2],[2,3],[3,0],[1,3],[1,4],[4,6],[6,2],[3,5],[5,7],[7,0]], {
+        vertex: (v) => (v < 6 ? BLUE : '#DDD'),
+        edge: function(u, v) { return (u < 6 && v < 6 && !(u == 1 && v == 3)) ? BLUE : '#DDD'; }
+    });
 
-    new M.Graph(graphs[2], 7, [[0,1],[0,2],[0,3],[1,4],[4,2],[2,5],[5,3],[3,6],[6,1]],
-        { vertex: function(v) { return v ? '#DDD' : '#b30469' } });
+    new Graph(graphs[3], 7, [[0,1],[1,2],[2,3],[3,4],[4,0],[0,3],[1,3],[2,5],[5,3],[5,6],[6,3],[6,4]], {
+        vertex: (v) => (v < 5 ? GREEN : '#DDD'),
+        edge: function(u, v) { return (u < 5 && v < 5 && !(v == 3 && (u == 0 || u == 1))) ? GREEN : '#DDD'; }
+    });
 
-    new M.Graph(graphs[3], 7, [[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]],
-        { vertex: function(v) { return v ? '#DDD' : '#b30469' } });
+    new Graph(graphs[5], 8, [[0,1],[1,2],[2,3],[3,0],[0,4],[4,5],[5,1],[1,3],[1,4],[3,6],[6,0],[4,7],[7,0]], {
+        vertex: (v) => (v < 6 ? YELLOW : '#DDD'),
+        edge: function(u, v) { return (u < 6 && v < 6 && !(u == 1 && (v == 3 || v == 4))) ? YELLOW : '#DDD'; }
+    });
 };
 
-// ------------------------------------------------------------------------------------------------
+fns.GT_0_3 = function(section, chapter) {
+    let graphs = $$C('graph', section.$el);
 
-MA.bfn.GT_0_4 = function(section, chapter) {
-    var graphs = $$C('graph', section.$el);
-    new M.Graph(graphs[0], 3, [[0,1],[1,2],[2,0]]);
-    new M.Graph(graphs[1], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]]);
-    new M.Graph(graphs[2], 7, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]);
+    new Graph(graphs[0], 5, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,2]]);
+    new Graph(graphs[1], 8, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,0],[0,2],[1,3],[2,4],[3,5],[4,6],[5,7],[6,0],[7,1]]);
+
+    new Graph(graphs[2], 7, [[0,1],[0,2],[0,3],[1,4],[4,2],[2,5],[5,3],[3,6],[6,1]],
+        { vertex: (v) => (v ? '#DDD' : RED) });
+
+    new Graph(graphs[3], 7, [[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[1,2],[2,3],[3,4],[4,5],[5,6],[6,1]],
+        { vertex: (v) => (v ? '#DDD' : RED) });
 };
 
-// ------------------------------------------------------------------------------------------------
+fns.GT_0_4 = function(section, chapter) {
+    let graphs = $$C('graph', section.$el);
+    new Graph(graphs[0], 3, [[0,1],[1,2],[2,0]]);
+    new Graph(graphs[1], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]]);
+    new Graph(graphs[2], 7, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]);
+};
 
-var person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';
+/*
 
-MA.bfn.GT_1_1 = function(section, chapter) {
+fns.GT_1_1 = function(section, chapter) {
 
-    var g = new M.Graph($C('graph', section.$el), 5, M.subsets(M.list(5), 2), { icon: person });
+    let g = new Graph($C('graph', section.$el), 5, subsets(list(5), 2), { icon: person });
 
     section.vars[0].on('change', function(n) {
-        g.load(n, M.subsets(M.list(n), 2));
+        g.load(n, subsets(list(n), 2));
         g.attraction /= 2;
         g.repulsion *= 2;
     });
 
     section.on('load', function() {
-        chapter.addHint('Red boxes <span class="target" data-target="#slider1"></span> in the text indicate interactive numbers. Move the slider horizontally to change their value and see what happens.');
+        chapter.addHint('intro5');
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_1_2 = function(section, chapter) {
+fns.GT_1_2 = function(section, chapter) {
     section.blanks[0].on('valid', function() {
         setTimeout( function(){ $I('handshakes-table').addClass('complete'); }, 1000);
     });
@@ -323,34 +335,31 @@ MA.bfn.GT_1_2 = function(section, chapter) {
 
     section.vars[0].on('change', function(n) {
         var colours = M.colour.rainbow(n);
-        var makePerson = function(x,y) {
+
+        function makePerson(x,y) {
             var newX= (x>=y ? x+1 : x);
             return ['<td', (x<y ? ' class="duplicate"' : ''), '><span class="person" style="background: ',
                     colours[y], '">', y+1, '</span> + <span class="person" style="background: ', colours[newX],
                     '">', newX + 1, '</span></td>'].join('');
         }
 
-        $table.html('<table class="handshakes grid">' + M.tabulate(makePerson, n-1, n).each(function(x){
-            return '<tr>' + x.join('') + '</tr>';
-        }).join('') + '</table>');
+        $table.html('<table class="handshakes grid">' +
+            tabulate(makePerson, n-1, n).forEach(x => `<tr${ x.join('') }</tr>`).join('') +
+            '</table>');
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_1_3 = function(section, chapter) {
-    var graphs = $$C('graph', section.$el);
-    new M.Graph(graphs[0], 4, M.subsets(M.list(4), 2));
-    new M.Graph(graphs[1], 5, M.subsets(M.list(5), 2));
-    new M.Graph(graphs[2], 6, M.subsets(M.list(6), 2));
-    new M.Graph(graphs[3], 7, M.subsets(M.list(7), 2));
+fns.GT_1_3 = function(section, chapter) {
+    let graphs = $$C('graph', section.$el);
+    new Graph(graphs[0], 4, subsets(list(4), 2));
+    new Graph(graphs[1], 5, subsets(list(5), 2));
+    new Graph(graphs[2], 6, subsets(list(6), 2));
+    new Graph(graphs[3], 7, subsets(list(7), 2));
 };
 
-// ------------------------------------------------------------------------------------------------
+fns.GT_1_4 = function(section, chapter) {
 
-MA.bfn.GT_1_4 = function(section, chapter) {
-
-    var g = new M.Graph($C('graph', section.$el), 0, [],
+    var g = new Graph($C('graph', section.$el), 0, [],
         { static: true, icon: person, bound: true });
 
     section.vars[0].on('change', drawBipartiteGraph);
@@ -360,8 +369,8 @@ MA.bfn.GT_1_4 = function(section, chapter) {
         var m = section.varValues.m;
         var f = section.varValues.f;
 
-        var mPoints = M.tabulate(function(x){ return { x: (x+1) / (m+1) * 300, y:  30 }; }, m);
-        var fPoints = M.tabulate(function(x){ return { x: (x+1) / (f+1) * 300, y: 110 }; }, f);
+        var mPoints = tabulate(x => ({ x: (x+1) / (m+1) * 300, y:  30 }), m);
+        var fPoints = tabulate(x => ({ x: (x+1) / (f+1) * 300, y: 110 }), f);
 
         var edges = [];
         for (var i=0; i<m; ++i) for (var j=0; j<f; ++j) edges.push([i, m + j]);
@@ -371,9 +380,7 @@ MA.bfn.GT_1_4 = function(section, chapter) {
     }
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_2_0 = function(section, chapter) {
+fns.GT_2_0 = function(section, chapter) {
 
     // if (!creating && !count) section.solveds[0].show();
 
@@ -388,8 +395,8 @@ MA.bfn.GT_2_0 = function(section, chapter) {
         var totalCrossed = 0;
 
         var map = new M.Draw($svg, { paths: $paths });
-        map.on('start', function() { map.clear(); });
-        $C('clear-button', $el).click(function() { map.clear(); });
+        map.on('start', map.clear);
+        $C('clear-button', $el).on('click', map.clear);
 
         map.on('clear', function() {
             attempts += 1;
@@ -413,7 +420,7 @@ MA.bfn.GT_2_0 = function(section, chapter) {
             $error.enter('pop', 300);
         }, $svg);
 
-        $bridges.each(function($bridge) {
+        $bridges.forEach(function($bridge) {
             var enter = null;
             var crossed = false;
 
@@ -452,41 +459,37 @@ MA.bfn.GT_2_0 = function(section, chapter) {
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_2_1 = function(section, chapter) {
+fns.GT_2_1 = function(section, chapter) {
 
     var $svg = $T('svg', section.$el);
 
-    var $water    = $C('water', $svg);
-    var $bg       = $C('background', $svg);
-    var $bridges  = $$C('bridge', $svg);
+    var $water   = $C('water', $svg);
+    var $bg      = $C('background', $svg);
+    var $bridges = $$C('bridge', $svg);
 
     var $edges    = $$C('edge', $svg);
     var $vertices = $$C('vertex', $svg);
     var $trace    = $C('trace', $svg);
 
-    $edges.each(function($e) { $e.exit(); });
-    $vertices.each(function($e) { $e.exit(); });
+    $edges.forEach(function($e) { $e.exit(); });
+    $vertices.forEach(function($e) { $e.exit(); });
     $trace.exit();
 
     section.blanks[0].on('valid', function() {
-        $vertices.each(function($v){ $v.enter('pop', 400); });
+        $vertices.forEach(function($v){ $v.enter('pop', 400); });
     });
 
     section.blanks[1].on('valid', function() {
-        setTimeout(function(){ ([$water, $bg]).concat($bridges).each(function($x){ $x.exit('fade', 800); }); }, 1600);
-        $edges.each(function($e) { $e.enter('draw', 800); });
+        setTimeout(function(){ ([$water, $bg]).concat($bridges).forEach(function($x){ $x.exit('fade', 800); }); }, 1600);
+        $edges.forEach(function($e) { $e.enter('draw', 800); });
     });
 
     section.subsections[0].on('show', function() {
-        setTimeout( function(){ $trace.enter('draw', 4000); }, 2000);
+        setTimeout(function(){ $trace.enter('draw', 4000); }, 2000);
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_2_3 = function(section, chapter) {
+fns.GT_2_3 = function(section, chapter) {
 
     var $select = $T('select', section.$el);
     var $circles = $$T('circle', section.$el);
@@ -516,9 +519,7 @@ MA.bfn.GT_2_3 = function(section, chapter) {
     colour();
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_2_4 = function(section, chapter) {
+fns.GT_2_4 = function(section, chapter) {
 
     var $svg = section.$el.find('svg')[0];
     var $g = section.$el.find('g')[0];
@@ -565,9 +566,7 @@ MA.bfn.GT_2_4 = function(section, chapter) {
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_3_0 = function(section, chapter) {
+fns.GT_3_0 = function(section, chapter) {
 
     var $svg = $I('map-utilities');
     var currentUtility;
@@ -604,7 +603,7 @@ MA.bfn.GT_3_0 = function(section, chapter) {
 
     $$C('utility', $svg).each(function($ut) {
         var $c = $ut.children(0);
-        var p = new M.geo.Point(Number($c.attr('cx')), Number($c.attr('cy')));
+        var p = new Point(+$c.attr('cx'), +$c.attr('cy'));
         var onThis = false;
         var dataType = $ut.attr('data-type');
 
@@ -659,27 +658,25 @@ MA.bfn.GT_3_0 = function(section, chapter) {
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_3_1 = function(section, chapter) {
+fns.GT_3_1 = function(section, chapter) {
 
     var graphs = $$C('graph', section.$el);
 
     var p3 = [[100, 35], [170, 155], [30, 155]];
-    new M.Graph(graphs[0], 3, M.subsets(M.list(3), 2), { r: 8, static: true, posn: p3 });
+    new Graph(graphs[0], 3, subsets(list(3), 2), { r: 8, static: true, posn: p3 });
 
     var p4  = [[40, 40], [160, 40], [160, 160], [40, 160]];
     var p4x = [[100, 110], [100, 25], [175, 160], [25, 160]];
-    var k4  = new M.Graph(graphs[1], 4, M.subsets(M.list(4), 2), { r: 8, static: true, posn: p4 });
+    var k4  = new Graph(graphs[1], 4, subsets(list(4), 2), { r: 8, static: true, posn: p4 });
 
     var p5  = [[100, 30], [175, 85], [145, 170], [55, 170], [25, 85]];
     var p5x = [[100, 30], [120, 110], [185, 170], [15, 170], [80, 110]];
-    var k5  = new M.Graph(graphs[2], 5, M.subsets(M.list(5), 2), { r: 8, static: true, posn: p5 });
+    var k5  = new Graph(graphs[2], 5, subsets(list(5), 2), { r: 8, static: true, posn: p5 });
 
     function transition(graph, to) {
-        var from = graph.vertices.each(function(v) { return [v.posn.x, v.posn.y]; });
+        var from = graph.vertices.forEach(v => [v.posn.x, v.posn.y]);
         M.animate(function(q) {
-            graph.arrange(from.each(function(x, i) { return {
+            graph.arrange(from.forEach(function(x, i) { return {
                 x: to[i][0] * q + from[i][0] * (1-q),
                 y: to[i][1] * q + from[i][1] * (1-q)
             }; }));
@@ -697,22 +694,20 @@ MA.bfn.GT_3_1 = function(section, chapter) {
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_3_3 = function(section, chapter) {
+fns.GT_3_3 = function(section, chapter) {
 
     var $svg = $T('svg', section.$el);
     var $newBtn = $T('button', section.$el);
     var creating = false;
 
-    $newBtn.click(function() { generateGraph(section.varValues.n); })
+    $newBtn.on('click', function() { generateGraph(section.varValues.n); })
     section.vars[0].on('change', function(n) { generateGraph(n); })
 
     var g = new M.Graph($svg, 0, [], { r: 12, static: true, bound: true });
 
     function shuffle(n) {
-        return M.tabulate(function() {
-            return new M.geo.Point(Math.random() * g.width, Math.random() * g.height);
+        return tabulate(function() {
+            return new Point(Math.random() * g.width, Math.random() * g.height);
         }, n);
     }
 
@@ -732,7 +727,7 @@ MA.bfn.GT_3_3 = function(section, chapter) {
             edges.push([u,v]);
         }
 
-        for (var i=0; i<n; ++i) addEdge(i, M.random.int(n));
+        for (let i=0; i<n; ++i) addEdge(i, M.random.int(n));
         for (i=0; i<n; ++i) for (j=i+1; j<n; ++j) addEdge(i, j);
 
         g.load(n, edges, shuffle(n));
@@ -747,14 +742,14 @@ MA.bfn.GT_3_3 = function(section, chapter) {
         count = intersect(g.edges);
         if (!creating && !count) section.solveds[0].show();
 
-        g.vertices.each(function(v) { v.$el.setClass('intersect', v.intersect); });
-        g.edges.each(function(e) { e.$el.setClass('intersect', e.intersect); });
+        g.vertices.forEach(function(v) { v.$el.setClass('intersect', v.intersect); });
+        g.edges.forEach(function(e) { e.$el.setClass('intersect', e.intersect); });
     });
 
     function intersect(edges) {
         var count = 0;
 
-        edges.each(function(e) {
+        edges.forEach(function(e) {
             e.intersect = e.vertices[0].intersect = e.vertices[1].intersect = false;
         });
 
@@ -776,32 +771,28 @@ MA.bfn.GT_3_3 = function(section, chapter) {
     }
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_4_1 = function(section, chapter) {
+fns.GT_4_1 = function(section, chapter) {
 
     var $svg = section.$el.find('svg');
     var notes = section.$el.find('.euler-sum');
 
-    section.blanks.each(function(blank, i) {
+    section.blanks.forEach(function(blank, i) {
         var x = i%3;
         var mySvg = $svg[(i-x)/3]
         blank.on('valid', function() {
             if (x == 0) {
-                mySvg.find('circle').each(function($c) { $c.animate({ css: 'fill', to: M.colour.green, duration: 400 }); })
+                mySvg.find('circle').forEach(function($c) { $c.animate({ css: 'fill', to: M.colour.green, duration: 400 }); })
             } else if (x == 1) {
-                mySvg.find('polygon').each(function($c) { $c.animate({ css: 'opacity', to: .3, duration: 400 }); });
+                mySvg.find('polygon').forEach(function($c) { $c.animate({ css: 'opacity', to: .3, duration: 400 }); });
                 notes[(i-x)/3].animate({ css: 'opacity', to: 1, duration: 400 });
             } else if (x == 2) {
-                mySvg.find('line').each(function($c) { $c.animate({ css: 'stroke', to: M.colour.red, duration: 400 }); })
+                mySvg.find('line').forEach(function($c) { $c.animate({ css: 'stroke', to: M.colour.red, duration: 400 }); })
             }
         });
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_4_3 = function(section, chapter) {
+fns.GT_4_3 = function(section, chapter) {
 
     var $svg = $I('dominoes');
     var $gs = $svg.find('g');
@@ -823,9 +814,7 @@ MA.bfn.GT_4_3 = function(section, chapter) {
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_5_1 = function(section, chapter) {
+fns.GT_5_1 = function(section, chapter) {
 
     var stateBorders = {"AK":["WA"],"WA":["AK","ID","OR"],"AL":["FL","GA","MS","TN"],"FL":["AL","GA"],"GA":["AL","FL","NC","SC","TN"],"MS":["AL","AR","LA","TN"],"TN":["AL","AR","GA","KY","MO","MS","NC","VA"],"AR":["LA","MO","MS","OK","TN","TX"],"LA":["AR","MS","TX"],"MO":["AR","IA","IL","KS","KY","NE","OK","TN"],"OK":["AR","CO","KS","MO","NM","TX"],"TX":["AR","LA","NM","OK"],"AZ":["CA","CO","NM","NV","UT"],"CA":["AZ","HI","NV","OR"],"CO":["AZ","KS","NE","NM","OK","UT","WY"],"NM":["AZ","CO","OK","TX","UT"],"NV":["AZ","CA","ID","OR","UT"],"UT":["AZ","CO","ID","NM","NV","WY"],"HI":["CA"],"OR":["CA","ID","NV","WA"],"KS":["CO","MO","NE","OK"],"NE":["CO","IA","KS","MO","SD","WY"],"WY":["CO","ID","MT","NE","SD","UT"],"CT":["MA","NY","RI"],"MA":["CT","NH","NY","RI","VT"],"NY":["CT","MA","NJ","PA","VT"],"RI":["CT","MA"],"DC":["MD","VA"],"MD":["DC","DE","PA","VA","WV"],"VA":["DC","KY","MD","NC","TN","WV"],"DE":["MD","NJ","PA"],"NJ":["DE","NY","PA"],"PA":["DE","MD","NJ","NY","OH","WV"],"NC":["GA","SC","TN","VA"],"SC":["GA","NC"],"IA":["IL","MN","MO","NE","SD","WI"],"IL":["IA","IN","KY","MO","WI"],"MN":["IA","ND","SD","WI"],"SD":["IA","MN","MT","ND","NE","WY"],"WI":["IA","IL","MI","MN"],"ID":["MT","NV","OR","UT","WA","WY"],"MT":["ID","ND","SD","WY"],"IN":["IL","KY","MI","OH"],"KY":["IL","IN","MO","OH","TN","VA","WV"],"MI":["IN","OH","WI"],"OH":["IN","KY","MI","PA","WV"],"WV":["KY","MD","OH","PA","VA"],"NH":["MA","ME","VT"],"VT":["MA","NH","NY"],"ME":["NH"],"ND":["MN","MT","SD"]};
 
@@ -891,38 +880,34 @@ MA.bfn.GT_5_1 = function(section, chapter) {
 
         $C('clear-button', $el).click(function() {
             stateColours = [];
-            $states.each(function($s) { $s.css('fill', '#CCC'); });
+            $states.forEach(function($s) { $s.css('fill', '#CCC'); });
         });
 
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_5_2 = function(section, chapter) {
+fns.GT_5_2 = function(section, chapter) {
 
     var $svg = section.$el.find('svg')[0];
     var $countries = $svg.find('polygon');
     var $edges     = $svg.find('path');
     var $vertices  = $svg.find('circle');
 
-    $edges.each(function($e) { $e.exit(); });
-    $vertices.each(function($e) { $e.exit(); });
+    $edges.forEach(function($e) { $e.exit(); });
+    $vertices.forEach(function($e) { $e.exit(); });
 
     section.blanks[0].on('valid', function() {
-        $vertices.each(function($v) { $v.enter('pop', 600); });
-        $countries.each(function($c) { $c.animate({ css: 'opacity', from: 1, to: .4, duration: 800 }) })
+        $vertices.forEach(function($v) { $v.enter('pop', 600); });
+        $countries.forEach(function($c) { $c.animate({ css: 'opacity', from: 1, to: .4, duration: 800 }) })
     });
 
     section.blanks[1].on('valid', function() {
-        $edges.each(function($e) { $e.enter('draw', 800); });
-        $countries.each(function($c) { $c.animate({ css: 'opacity', to: .1, duration: 800 }) })
+        $edges.forEach(function($e) { $e.enter('draw', 800); });
+        $countries.forEach(function($c) { $c.animate({ css: 'opacity', to: .1, duration: 800 }) })
     });
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_6_2 = function(section, chapter) {
+fns.GT_6_2 = function(section, chapter) {
     window.getTsmString = function(x) {
         var a = ['There are <strong>'+x+'</strong> choices for the first city.'];
         if (x > 2) a.push('After picking the first city, there are only <strong>'+(x-1)+'</strong> choices left for the second city.');
@@ -933,9 +918,7 @@ MA.bfn.GT_6_2 = function(section, chapter) {
     }
 };
 
-// ------------------------------------------------------------------------------------------------
-
-MA.bfn.GT_6_4 = function(section, chapter) {
+fns.GT_6_4 = function(section, chapter) {
 
     var $box = $C('tsm-box', section.$el);
     var $svg = $T('svg', $box);
@@ -948,13 +931,13 @@ MA.bfn.GT_6_4 = function(section, chapter) {
         for (var i=0; i<coords.length; ++i) dist[i] = [];
         for (var i=0; i<coords.length; ++i) {
             for (var j=0; j<i; ++j) {
-                dist[i][j] = dist[j][i] = M.Vector(M.map(M.subtr, coords[i], coords[j])).norm();
+                dist[i][j] = dist[j][i] = Vector(M.map(M.subtr, coords[i], coords[j])).norm();
             }
         }
 
         var tsm = M.geo.travellingSalesman(dist);
         $path.setPoints(tsm.path.each(function(i) {
-            return new M.geo.Point(coords[i][0], coords[i][1]);
+            return new Point(coords[i][0], coords[i][1]);
         }));
     };
 
@@ -973,3 +956,10 @@ MA.bfn.GT_6_4 = function(section, chapter) {
         drag.set(c[0]-15, c[1]-15);
     });
 };
+
+*/
+
+
+// -----------------------------------------------------------------------------
+
+export default { bio, gloss, hints, sections: fns };

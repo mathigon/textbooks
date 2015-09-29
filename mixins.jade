@@ -1,0 +1,17 @@
+
+mixin frac(a,b)
+  span.frac
+    span!= a
+    span!= b
+
+mixin blank(choices)
+  span.popup.blank(data-choices=choices)
+
+mixin var(choices)
+  span.popup.blank(data-choices=choices)
+
+mixin input(answer)
+  span.blank.input(data-choices=answer)
+
+mixin target(ids)
+  span.target(data-target=ids)
