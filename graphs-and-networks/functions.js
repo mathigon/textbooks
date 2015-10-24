@@ -6,10 +6,16 @@
 
 import Graph from 'graph/graph';
 import Vector from 'vector';
-import { Point } from 'geometry';
+import Colour from 'colour';
+import Browser from 'browser';
+import Draggable from 'draggable/draggable';
+import Drawing from 'drawing/drawing';
+import { svgPointerPosn } from 'dom-events';
+import { animate } from 'animate';
+import { Point, travellingSalesman } from 'geometry';
 import { tabulate, list } from 'arrays';
 import { subsets } from 'combinatorics';
-import { $, $$, $T, $C, $$C, $$T, $N } from 'elements'; 
+import { $, $I, $$, $T, $C, $$C, $$T, $N } from 'elements';
 
 
 // -----------------------------------------------------------------------------
@@ -20,7 +26,7 @@ const bio = {
         name: "Leonhard Euler",
         birth: "1707",
         death: "1783",
-        img: "resources/bio/euler.jpg",
+        img: "/resources/bio/euler.jpg",
         bio: "<p>Leonhard Euler is one the greatest mathematicians of all times. His work spans all areas of mathematics, and he wrote 80 volumes of research.</p><p>Euler was born in Switzerland and studied in Basel, but lived most of his life in Berlin, Prussia, and St. Petersburg, Russia.</p><p>Euler invented most of the modern mathematical terminology and notation, and made important discoveries in calculus, analysis, graph theory, physics, astronomy, and many other topics.</p>"
     },
 
@@ -28,7 +34,7 @@ const bio = {
         name: "Francis Guthrie",
         birth: "1831",
         death: "1899",
-        img: "resources/bio/guthrie.jpg",
+        img: "/resources/bio/guthrie.jpg",
         bio: "<p>Francis Guthrie was a South African botanist and mathematician, who first stated the Four Colour Problem in 1852.</p><p>He was a student of Augustus De Morgan, one of the greatest British mathematicians.</p><p>In addition to being a mathematics professor and teacher, Guthrie worked as a lawyer and did research in solar power and aeronautics.</p>"
     },
 
@@ -36,7 +42,7 @@ const bio = {
         name: "Wolfgang Haken",
         birth: "1928",
         death: "",
-        img: "resources/bio/haken.jpg",
+        img: "/resources/bio/haken.jpg",
         bio: "<p>Wolfgang Haken is a German mathematician, known for his proof the Four Colour Theorem with Kenneth Appel.</p><p>In recognition, he and Appell received the Fulkerson Prize of the American Mathematical Society.</p><p>In 1990, Haken became a member of the Center for Advanced Study at the University of Illinois, where he is now an Emeritus Professor.</p>"
     },
 
@@ -44,7 +50,7 @@ const bio = {
         name: "Kenneth Appel",
         birth: "1932",
         death: "2013",
-        img: "resources/bio/appel.jpg",
+        img: "/resources/bio/appel.jpg",
         bio: "<p>Kenneth Appel was an American mathematician, known for his proof of the Four Colour Theorem with Wolfgang Haken.</p><p>In recognition, he and Haken received the Fulkerson Prize of the American Mathematical Society.</p><p>Appel studied at Queens College, New York, and the University of Michigan. He taught at the University of Illinois, and the University of New Hampshire.</p>"
     },
 
@@ -52,7 +58,7 @@ const bio = {
         name: "Frigyes Karinthy",
         birth: "1887",
         death: "1938",
-        img: "resources/bio/karinthy.jpg",
+        img: "/resources/bio/karinthy.jpg",
         bio: "<p>Frigyes Karinthy was a Hungarian author, poet and journalist.</p><p>He is best known for the 1929 short story &#8220;Chains&#8221;, which first introduced the concept of <em>six degrees of separation</em>.</p>"
     },
 
@@ -60,7 +66,7 @@ const bio = {
         name: "Stanley Milgram",
         birth: "1933",
         death: "1984",
-        img: "resources/bio/milgram.jpg",
+        img: "/resources/bio/milgram.jpg",
         bio: "<p>Stanley Milgram was a famous social psychologist.</p><p>He is best known for experiments on <em>obedience</em>, testing how willing adults are to follow orders, even when hurting others, and for the <em>small-world experiment</em>, which tests the degree of connectedness of societies.</p>"
     }
 };
@@ -70,6 +76,31 @@ const bio = {
 // Glossary
 
 const gloss = {
+    graph: {
+        title: "Graph",
+        text: "<p>A graph is a collection of vertices connected by edges.</p>"
+    },
+
+    vertex: {
+        title: "Vertex",
+        text: "<p>A vertex is a point or node that is part of a graph.</p>"
+    },
+
+    edge: {
+        title: "Edge",
+        text: "<p>Edges are the lines that connect vertices (points) in a graph.</p>"
+    },
+
+    directed: {
+        title: "Directed Graph",
+        text: "<p>In a directed graph, every edge as an arrow, i.e. a start vertex and an end vertex.</p>"
+    },
+
+    subgraph: {
+        title: "Subgraph",
+        text: "<p>A graph is a subgraph of another graph, if it is formed by a subset of the larger graphs edges and vertices.</p>"
+    },
+
     complete: {
         title: "Complete Graph",
         text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac white'><span><em>n</em> &times; (<em>n</em> &#8211; 1)</span><span>2</span></span> edges.</p>"
@@ -128,23 +159,23 @@ const gloss = {
 const hints = {
 
     intro1: {
-        text: 'If you click the <em>Play button</em> <span class="target" data-target="section.active .section-audio"></span> I will read out the text and give you additional instructions for questions and exercises.'
+        text: 'If you click the <x-target to="section.active .section-audio">Play button</x-target> I will read out the text and give you additional instructions for questions and exercises.'
     },
 
     intro2: {
-        text: 'The colour blue usually indicates questions or exercises. Here are two blanks <span class="target" data-target=".first-section x-blank"></span> which you need to fill in.'
+        text: 'The colour blue usually indicates questions or exercises. Here are two <x-target to="#GT_0_0 x-blank">blanks</x-target> which you need to fill in.'
     },
 
     intro3: {
-        text: 'Every chapter consists of many short sections which are revealed step by step. Click the <em>Next button</em> <span class="target" data-target=".go-next"></span> to skip ahead.'
+        text: 'Every chapter consists of many short sections which are revealed step by step. Click the <x-target to=".go-next">Next button</x-target> to skip ahead.'
     },
 
     intro4: {
-        text: 'In the <em>Progress panel</em> <span class="target" data-target="#nav-button-progress"></span> you can see an overview of the sections in this chapter, and how much you have completed. You can also chat with others <span class="target" data-target="#nav-button-discussion"></span> or change the chapter settings <span class="target" data-target="#nav-button-settings"></span>.'
+        text: 'In the <x-target to=".toolkit-button.progress">Progress panel</x-target> you can see an overview of the sections in this chapter, and how much you have completed. You can also <x-target to=".toolkit-button.forum">chat with others</x-target> or change the <x-target to=".toolkit-button.settings">settings</x-target>.'
     },
 
     intro5: {
-        text: 'Red boxes <span class="target" data-target="#slider1"></span> in the text indicate interactive numbers. Move the slider horizontally to change their value and see what happens.'
+        text: '<x-target to="#slider1">Red boxes</x-target> in the text indicate interactive numbers. Move the slider horizontally to change their value and see what happens.'
     },
 
     firstGraphSolved: {
@@ -226,11 +257,10 @@ const GREEN = '#31b304';
 const YELLOW = '#ff941f';
 
 fns.GT_0_0 = function(section, chapter) {
-
-    // console.log("section initialise");
-    // section.on('load',     function() { console.log('section load'); });
-    // section.on('active',   function() { console.log('section active'); });
-    // section.on('complete', function() { console.log('section complete'); });
+    chapter.addHint('intro1');
+    chapter.addHint('intro2');
+    chapter.addHint('intro3');
+    chapter.addGloss('graph', 'vertex', 'edge');
 
     var $graph = $C('graph', section.$el);
     new Graph($graph, 8, [[0,4],[4,5],[5,2],[5,1],[1,2],[2,3],[3,4],[3,6],[6,7],[7,3],[2,7]]);
@@ -246,24 +276,16 @@ fns.GT_0_0 = function(section, chapter) {
         $graph.removeClass('noedges');
         section.count('blank');
     });
-
-    section.on('load', function() {
-        chapter.addHint('intro1');
-        chapter.addHint('intro2');
-        chapter.addHint('intro3');
-    });
 };
 
 fns.GT_0_1 = function(section, chapter) {
-    let graphs = $$C('graph', section.$el);
+    chapter.addHint('intro4');
+    chapter.addGloss('directed');
 
+    let graphs = $$C('graph', section.$el);
     new Graph(graphs[0], 7, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,5],[6,3]], { directed: true });
     new Graph(graphs[1], 9, [[0,1],[1,2],[2,3],[3,0],[1,3],[4,5],[5,6],[6,4],[7,8]]);
     new Graph(graphs[2], 4, [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,0],[0,3],[0,0],[1,1],[2,2],[3,3]], { arc: true });
-
-    section.on('load', function() {
-        chapter.addHint('intro4');
-    });
 };
 
 fns.GT_0_2 = function(section, chapter) {
@@ -309,9 +331,9 @@ fns.GT_0_4 = function(section, chapter) {
     new Graph(graphs[2], 7, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]);
 };
 
-/*
-
 fns.GT_1_1 = function(section, chapter) {
+    /*
+    chapter.addHint('intro5');
 
     let g = new Graph($C('graph', section.$el), 5, subsets(list(5), 2), { icon: person });
 
@@ -320,13 +342,11 @@ fns.GT_1_1 = function(section, chapter) {
         g.attraction /= 2;
         g.repulsion *= 2;
     });
-
-    section.on('load', function() {
-        chapter.addHint('intro5');
-    });
+    */
 };
 
 fns.GT_1_2 = function(section, chapter) {
+    /*
     section.blanks[0].on('valid', function() {
         setTimeout( function(){ $I('handshakes-table').addClass('complete'); }, 1000);
     });
@@ -347,6 +367,7 @@ fns.GT_1_2 = function(section, chapter) {
             tabulate(makePerson, n-1, n).forEach(x => `<tr${ x.join('') }</tr>`).join('') +
             '</table>');
     });
+    */
 };
 
 fns.GT_1_3 = function(section, chapter) {
@@ -358,7 +379,7 @@ fns.GT_1_3 = function(section, chapter) {
 };
 
 fns.GT_1_4 = function(section, chapter) {
-
+    /*
     var g = new Graph($C('graph', section.$el), 0, [],
         { static: true, icon: person, bound: true });
 
@@ -378,47 +399,44 @@ fns.GT_1_4 = function(section, chapter) {
         g.options.vertex = function(v) { return v < m ? '#20a0ff' : '#ff207e'; }
         g.load(m + f, edges, M.concat(mPoints, fPoints));
     }
+    */
 };
 
 fns.GT_2_0 = function(section, chapter) {
+    $$C('slide', section.$el).forEach(function($el, i) {
 
-    // if (!creating && !count) section.solveds[0].show();
+        let $svg = $T('svg', $el);
+        let $paths = $C('paths', $svg);
+        let $water = $C('water', $svg);
+        let $bridges = $$C('bridge', $svg);
+        let $error = $C('error', $svg);
 
-    $C('slideshow-pages', section.$el).children().each(function($el, i) {
+        let attempts = 0;
+        let totalCrossed = 0;
+        $error.exit();
 
-        var $svg = $T('svg', $el);
-        var $paths = $C('paths', $svg);
-        var $water = $C('water', $svg);
-        var $bridges = $$C('bridge', $svg);
-
-        var attempts = 0;
-        var totalCrossed = 0;
-
-        var map = new M.Draw($svg, { paths: $paths });
-        map.on('start', map.clear);
+        var map = new Drawing($svg, { paths: $paths });
+        map.on('start', map.clear.bind(map));
         $C('clear-button', $el).on('click', map.clear);
 
         map.on('clear', function() {
             attempts += 1;
             totalCrossed = 0;
-            $error.exit('pop', 300);
-            section.solveds[i].hide();
+            $error.exit(300, 'pop');
+            section.solveds[i]._el.hide();
 
-            if (attempts === 4)
-                chapter.addHint(i === 1 || i === 2 ? 'tryDifferentStartPoint' : 'tryDifferentMap');
+            //if (attempts === 4)
+                //chapter.addHint(i === 1 || i === 2 ? 'tryDifferentStartPoint' : 'tryDifferentMap');
         });
-
-        var $error = $C('error', $svg);
-        $error.exit();
 
         $water.on('pointerEnter', function(e) {
             if (!map.drawing) return;
             map.stop();
             chapter.addHint('crossWater');
-            var p = M.events.pointerOffset(e, $svg);
+            var p = svgPointerPosn(e, $svg);
             $error.translate(p.x - 20, p.y - 20);
             $error.enter('pop', 300);
-        }, $svg);
+        });
 
         $bridges.forEach(function($bridge) {
             var enter = null;
@@ -426,28 +444,29 @@ fns.GT_2_0 = function(section, chapter) {
 
             $bridge.on('pointerEnter', function(e) {
                 if (map.drawing) {
-                    enter = M.events.pointerOffset(e, $svg);
+                    enter = svgPointerPosn(e, $svg);
                     if (crossed) {
                         map.stop();
-                        $bridge.css('fill', M.colour.red);
+                        $bridge.css('fill', Colour.red);
                         chapter.addHint('bridgeCrossedBefore');
                     }
                     crossed = true;
                 }
-            }, $svg);
+            });
 
             $bridge.on('pointerLeave', function(e) {
                 if (map.drawing) {
-                    var out = M.events.pointerOffset(e, $svg);
-                    if (M.geo.distance(enter || out, out) < 40) {
+                    let out = svgPointerPosn(e, $svg);
+                    if (Point.distance(enter || out, out) < 40) {
                         crossed = false;
                     } else {
-                        $bridge.css('fill', M.colour.green);
+                        $bridge.css('fill', Colour.green);
                         totalCrossed += 1;
-                        if (totalCrossed === $bridges.length) section.solveds[i].show();
+                        if (totalCrossed === $bridges.length)
+                            section.solveds[i]._el.show();
                     }
                 }
-            }, $svg);
+            });
 
             map.on('clear', function() {
                 crossed = false;
@@ -471,103 +490,98 @@ fns.GT_2_1 = function(section, chapter) {
     var $vertices = $$C('vertex', $svg);
     var $trace    = $C('trace', $svg);
 
-    $edges.forEach(function($e) { $e.exit(); });
-    $vertices.forEach(function($e) { $e.exit(); });
-    $trace.exit();
+    $edges.forEach($e => { $e.hide(); });
+    $vertices.forEach($e => { $e.hide(); });
+    $trace.hide();
 
     section.blanks[0].on('valid', function() {
-        $vertices.forEach(function($v){ $v.enter('pop', 400); });
+        $vertices.forEach($v => { $v.enter(400, 'pop'); });
     });
 
     section.blanks[1].on('valid', function() {
-        setTimeout(function(){ ([$water, $bg]).concat($bridges).forEach(function($x){ $x.exit('fade', 800); }); }, 1600);
-        $edges.forEach(function($e) { $e.enter('draw', 800); });
+        setTimeout(() => { [$water, $bg].concat($bridges).forEach($x => { $x.exit(800); }); }, 1600);
+        $edges.forEach($e => { $e.enter(800, 'draw'); });
     });
 
     section.subsections[0].on('show', function() {
-        setTimeout(function(){ $trace.enter('draw', 4000); }, 2000);
+        setTimeout(() => { $trace.enter(4000, 'draw'); }, 2000);
     });
 };
 
 fns.GT_2_3 = function(section, chapter) {
-
-    var $select = $T('select', section.$el);
-    var $circles = $$T('circle', section.$el);
-
-    var g = M.colour.green, r = M.colour.red, b=M.colour.blue, o = M.colour.orange;
-    var colours = {
-        val: M.colour.rainbow(8),
+    let g = Colour.green, r = Colour.red, b = Colour.blue, o = Colour.orange;
+    let colours = {
+        val: Colour.rainbow(8),
         eo: [g,r,g,r,g,r,g],
         prime: [g,g,r,g,r,g,r],
         size: [b,b,o,o,o,o,o]
     };
-    var done = { val: true };
 
-    var colour = function(x) {
-        var x = $select.value();
-        $circles.each(function($c) {
-            var y = Number($c.attr('data-value'));
+    let done = { val: true };
+    let $circles = $$T('circle', section.$el);
+
+    function colour(x) {
+        $circles.forEach(function($c) {
+            let y = +$c.attr('data-value');
             $c.css('fill', colours[x][y-2]);  // -2 because no 0s and 1s
         });
-        if (!done[x]) {
+        if (!(x in done)) {
             done[x] = true;
-            section.score();
+            section.step();
         }
     }
 
-    $select.change(colour);
-    colour();
+    $T('select', section.$el).change(colour);
+    colour('val');
 };
 
 fns.GT_2_4 = function(section, chapter) {
+    let $svg    = $T('svg', section.$el);
+    let $g      = $T('g', section.$el);
+    let $edges  = $$T('line', $svg);
+    let $vertex = $T('circle', $svg);
+    let $text   = $T('text', $svg);
+    let $trace  = $T('path', $svg);
 
-    var $svg = section.$el.find('svg')[0];
-    var $g = section.$el.find('g')[0];
-    var $edges = $svg.find('line');
-    var $vertex = $svg.find('circle')[0];
-    var $text = $svg.find('text')[0];
-    var $trace = $svg.find('path')[0];
+    for (var i=0; i<6; ++i) $edges[i].hide();
+    $trace.hide();
 
-    for (var i=0; i<6; ++i) $edges[i].exit();
-    $trace.exit();
-
-    section.slideshow.on('next', function(x) {
+    section.slides.on('next', function(x) {
         if (x < 4) {
-            $edges[2*x-2].enter('draw', 800);
-            $edges[2*x-1].enter('draw', 800, 800);
-            setTimeout(function(){
-                $text.text(2*x-1);
-                $vertex.css('fill', M.colour.red);
+            $edges[2 * x - 2].enter(800, 'draw');
+            $edges[2 * x - 1].enter(800, 'draw', 800);
+            setTimeout(function() {
+                $text.text = 2 * x - 1;
+                $vertex.css('fill', Colour.red);
             }, 600);
-            setTimeout(function(){
-                $text.text(2*x);
-                $vertex.css('fill', M.colour.green);
+            setTimeout(function() {
+                $text.text = 2 * x;
+                $vertex.css('fill', Colour.green);
             }, 1000);
 
         } else if (x === 5) {
-            $g.animate({ css: M.prefix('transform'), from: 'scale(1)', to: 'scale(.4)' });
-            $trace.enter('draw', 5000, 1000);
+            $g.animate({ css: Browser.prefix('transform'), from: 'scale(1)', to: 'scale(.4)' });
+            $trace.enter(5000, 'draw', 1000);
         }
     });
 
-    section.slideshow.on('prev', function(x) {
+    section.slides.on('back', function(x) {
         if (x < 3) {
-            $edges[2*x+1].exit('draw', 600);
-            $edges[2*x  ].exit('draw', 600, 600);
-            setTimeout(function(){
-                $text.text(2*x || '');
-                $vertex.css('fill', x ? M.colour.green : '#BBB');
+            $edges[2 * x + 1].exit(600, 'draw');
+            $edges[2 * x  ].exit(600, 'draw', 600);
+            setTimeout(function() {
+                $text.text = 2 * x || '';
+                $vertex.css('fill', x ? Colour.green : '#BBB');
             }, 600);
 
         } else if (x === 4) {
-            $g.animate({ css: M.prefix('transform'), from: 'scale(.4)', to: 'scale(1)' });
-            $trace.exit('fade', 1000);
+            $g.animate({ css: Browser.prefix('transform'), from: 'scale(.4)', to: 'scale(1)' });
+            $trace.exit(1000);
         }
     });
 };
 
 fns.GT_3_0 = function(section, chapter) {
-
     var $svg = $I('map-utilities');
     var currentUtility;
     var startUtility;
@@ -575,7 +589,7 @@ fns.GT_3_0 = function(section, chapter) {
     var error = false;
     var remove = false;
 
-    var map = new M.Draw($svg, {
+    var map = new Drawing($svg, {
         noStart: true,
         paths: $I('utility-paths'),
         intersect: true
@@ -584,7 +598,7 @@ fns.GT_3_0 = function(section, chapter) {
     map.on('intersect', function(e) {
         e.paths[0].css('stroke','#C00');
         e.paths[1].css('stroke','#C00');
-        chapter.sidebar.addHint('Careful - the lines are not allowed to cross.');
+        chapter.addHint('Careful - the lines are not allowed to cross.');
         error = true;
         map.stop();
     });
@@ -595,19 +609,19 @@ fns.GT_3_0 = function(section, chapter) {
 
     var allUtilities = $$('.utility1, .utility2, .utility3', $svg);
     var clear = function() {
-        allUtilities.each(function($el) { $el.css('opacity', 0); });
+        allUtilities.forEach($el => { $el.css('opacity', 0); });
         map.clear();
     };
 
-    $I('utilities-clear').click(clear);
+    $I('utilities-clear').on('click', clear);
 
-    $$C('utility', $svg).each(function($ut) {
+    $$C('utility', $svg).forEach(function($ut) {
         var $c = $ut.children(0);
-        var p = new Point(+$c.attr('cx'), +$c.attr('cy'));
+        var p = { x: +$c.attr('cx'), y: +$c.attr('cy') };
         var onThis = false;
         var dataType = $ut.attr('data-type');
 
-        $ut.on('mousedown touchstart', function(e) {
+        $ut.on('pointerStart', function(e) {
             currentUtility = $ut;
             startUtility = $ut;
             e.preventDefault();
@@ -627,17 +641,17 @@ fns.GT_3_0 = function(section, chapter) {
             onThis = true;
         });
 
-        $ut.on('mouseout', function(e) {
+        $ut.on('pointerLeave', function(e) {
             if (!onThis) return;
             map.drawing = true;
             onThis = false;
         });
 
-        $ut.on('touchenter mouseover', function(e) {
+        $ut.on('pointerEnter', function(e) {
             if (!map.drawing || currentUtility == $ut) return;
             map.addPoint(p);
             map.stop();
-            $ut.pulseDown();
+            $ut.effect('pulse-down');
             if (startUtility.attr('data-type') == dataType) {
                 map.paths.last().css('stroke','#C00');
                 if(dataType == 'house') {
@@ -659,23 +673,22 @@ fns.GT_3_0 = function(section, chapter) {
 };
 
 fns.GT_3_1 = function(section, chapter) {
+    let graphs = $$C('graph', section.$el);
 
-    var graphs = $$C('graph', section.$el);
-
-    var p3 = [[100, 35], [170, 155], [30, 155]];
+    let p3 = [[100, 35], [170, 155], [30, 155]];
     new Graph(graphs[0], 3, subsets(list(3), 2), { r: 8, static: true, posn: p3 });
 
-    var p4  = [[40, 40], [160, 40], [160, 160], [40, 160]];
-    var p4x = [[100, 110], [100, 25], [175, 160], [25, 160]];
-    var k4  = new Graph(graphs[1], 4, subsets(list(4), 2), { r: 8, static: true, posn: p4 });
+    let p4  = [[40, 40], [160, 40], [160, 160], [40, 160]];
+    let p4x = [[100, 110], [100, 25], [175, 160], [25, 160]];
+    let k4  = new Graph(graphs[1], 4, subsets(list(4), 2), { r: 8, static: true, posn: p4 });
 
-    var p5  = [[100, 30], [175, 85], [145, 170], [55, 170], [25, 85]];
-    var p5x = [[100, 30], [120, 110], [185, 170], [15, 170], [80, 110]];
-    var k5  = new Graph(graphs[2], 5, subsets(list(5), 2), { r: 8, static: true, posn: p5 });
+    let p5  = [[100, 30], [175, 85], [145, 170], [55, 170], [25, 85]];
+    let p5x = [[100, 30], [120, 110], [185, 170], [15, 170], [80, 110]];
+    let k5  = new Graph(graphs[2], 5, subsets(list(5), 2), { r: 8, static: true, posn: p5 });
 
     function transition(graph, to) {
-        var from = graph.vertices.forEach(v => [v.posn.x, v.posn.y]);
-        M.animate(function(q) {
+        let from = graph.vertices.forEach(v => [v.posn.x, v.posn.y]);
+        animate(function(q) {
             graph.arrange(from.forEach(function(x, i) { return {
                 x: to[i][0] * q + from[i][0] * (1-q),
                 y: to[i][1] * q + from[i][1] * (1-q)
@@ -695,7 +708,7 @@ fns.GT_3_1 = function(section, chapter) {
 };
 
 fns.GT_3_3 = function(section, chapter) {
-
+    /*
     var $svg = $T('svg', section.$el);
     var $newBtn = $T('button', section.$el);
     var creating = false;
@@ -769,10 +782,11 @@ fns.GT_3_3 = function(section, chapter) {
 
         return count;
     }
+    */
 };
 
 fns.GT_4_1 = function(section, chapter) {
-
+    /*
     var $svg = section.$el.find('svg');
     var notes = section.$el.find('.euler-sum');
 
@@ -790,32 +804,33 @@ fns.GT_4_1 = function(section, chapter) {
             }
         });
     });
+    */
 };
 
 fns.GT_4_3 = function(section, chapter) {
 
-    var $svg = $I('dominoes');
-    var $gs = $svg.find('g');
+    let $svg = $I('dominoes');
+    let $gs = $svg.findAll('g');
 
-    var hasClicked = false;
-    $svg.click(function() {
+    let hasClicked = false;
+    $svg.on('click', function() {
         if (hasClicked) return;
         hasClicked = true;
 
         $svg.css('cursor','default');
-        $gs.each(function($g, i) {
-            setTimeout(function(){ $g.transform('rotate(23.5deg)'); }, i*100);
-            setTimeout(function(){ $g.transform('rotate(43.5deg)'); }, i*100 + 100);
-            setTimeout(function(){ $g.transform('rotate(  56deg)'); }, i*100 + 200);
-            setTimeout(function(){ $g.transform('rotate(  62deg)'); }, i*100 + 300);
-            setTimeout(function(){ $g.transform('rotate(64.5deg)'); }, i*100 + 400);
-            setTimeout(function(){ $g.transform('rotate(65.5deg)'); }, i*100 + 500);
+        $gs.forEach(function($g, i) {
+            setTimeout(() => { $g.transform = 'rotate(23.5deg)'; }, i*100);
+            setTimeout(() => { $g.transform = 'rotate(43.5deg)'; }, i*100 + 100);
+            setTimeout(() => { $g.transform = 'rotate(  56deg)'; }, i*100 + 200);
+            setTimeout(() => { $g.transform = 'rotate(  62deg)'; }, i*100 + 300);
+            setTimeout(() => { $g.transform = 'rotate(64.5deg)'; }, i*100 + 400);
+            setTimeout(() => { $g.transform = 'rotate(65.5deg)'; }, i*100 + 500);
         });
     });
 };
 
 fns.GT_5_1 = function(section, chapter) {
-
+    /*
     var stateBorders = {"AK":["WA"],"WA":["AK","ID","OR"],"AL":["FL","GA","MS","TN"],"FL":["AL","GA"],"GA":["AL","FL","NC","SC","TN"],"MS":["AL","AR","LA","TN"],"TN":["AL","AR","GA","KY","MO","MS","NC","VA"],"AR":["LA","MO","MS","OK","TN","TX"],"LA":["AR","MS","TX"],"MO":["AR","IA","IL","KS","KY","NE","OK","TN"],"OK":["AR","CO","KS","MO","NM","TX"],"TX":["AR","LA","NM","OK"],"AZ":["CA","CO","NM","NV","UT"],"CA":["AZ","HI","NV","OR"],"CO":["AZ","KS","NE","NM","OK","UT","WY"],"NM":["AZ","CO","OK","TX","UT"],"NV":["AZ","CA","ID","OR","UT"],"UT":["AZ","CO","ID","NM","NV","WY"],"HI":["CA"],"OR":["CA","ID","NV","WA"],"KS":["CO","MO","NE","OK"],"NE":["CO","IA","KS","MO","SD","WY"],"WY":["CO","ID","MT","NE","SD","UT"],"CT":["MA","NY","RI"],"MA":["CT","NH","NY","RI","VT"],"NY":["CT","MA","NJ","PA","VT"],"RI":["CT","MA"],"DC":["MD","VA"],"MD":["DC","DE","PA","VA","WV"],"VA":["DC","KY","MD","NC","TN","WV"],"DE":["MD","NJ","PA"],"NJ":["DE","NY","PA"],"PA":["DE","MD","NJ","NY","OH","WV"],"NC":["GA","SC","TN","VA"],"SC":["GA","NC"],"IA":["IL","MN","MO","NE","SD","WI"],"IL":["IA","IN","KY","MO","WI"],"MN":["IA","ND","SD","WI"],"SD":["IA","MN","MT","ND","NE","WY"],"WI":["IA","IL","MI","MN"],"ID":["MT","NV","OR","UT","WA","WY"],"MT":["ID","ND","SD","WY"],"IN":["IL","KY","MI","OH"],"KY":["IL","IN","MO","OH","TN","VA","WV"],"MI":["IN","OH","WI"],"OH":["IN","KY","MI","PA","WV"],"WV":["KY","MD","OH","PA","VA"],"NH":["MA","ME","VT"],"VT":["MA","NH","NY"],"ME":["NH"],"ND":["MN","MT","SD"]};
 
     var countNoZero = function(array) {
@@ -884,30 +899,32 @@ fns.GT_5_1 = function(section, chapter) {
         });
 
     });
+    */
 };
 
 fns.GT_5_2 = function(section, chapter) {
 
-    var $svg = section.$el.find('svg')[0];
-    var $countries = $svg.find('polygon');
-    var $edges     = $svg.find('path');
-    var $vertices  = $svg.find('circle');
+    let $svg       = $T('svg', section.$el);
+    let $countries = $$T('polygon', $svg);
+    let $edges     = $$T('path', $svg);
+    let $vertices  = $$T('circle', $svg);
 
-    $edges.forEach(function($e) { $e.exit(); });
-    $vertices.forEach(function($e) { $e.exit(); });
+    $edges.forEach($e => { $e.exit(); });
+    $vertices.forEach($e => { $e.exit(); });
 
     section.blanks[0].on('valid', function() {
-        $vertices.forEach(function($v) { $v.enter('pop', 600); });
-        $countries.forEach(function($c) { $c.animate({ css: 'opacity', from: 1, to: .4, duration: 800 }) })
+        $vertices.forEach($v => { $v.enter('pop', 600); });
+        $countries.forEach($c => { $c.animate({ css: 'opacity', from: 1, to: .4, duration: 800 }) })
     });
 
     section.blanks[1].on('valid', function() {
-        $edges.forEach(function($e) { $e.enter('draw', 800); });
-        $countries.forEach(function($c) { $c.animate({ css: 'opacity', to: .1, duration: 800 }) })
+        $edges.forEach($e => { $e.enter('draw', 800); });
+        $countries.forEach($c => { $c.animate({ css: 'opacity', to: .1, duration: 800 }) })
     });
 };
 
 fns.GT_6_2 = function(section, chapter) {
+    /*
     window.getTsmString = function(x) {
         var a = ['There are <strong>'+x+'</strong> choices for the first city.'];
         if (x > 2) a.push('After picking the first city, there are only <strong>'+(x-1)+'</strong> choices left for the second city.');
@@ -916,48 +933,45 @@ fns.GT_6_2 = function(section, chapter) {
         a.push('Finally, there is only <strong>1</strong> choice left for the '+M.toOrdinal(x)+' city.');
         return '<li style="margin-bottom: 0">' + a.join('</li><li style="margin-bottom: 0">') + '</li>';
     }
+    */
 };
 
 fns.GT_6_4 = function(section, chapter) {
+    let $box = $C('tsm-box', section.$el);
+    let $svg = $T('svg', $box);
+    let $path = $N('path', { class: 'tsm-path' }, $svg);
 
-    var $box = $C('tsm-box', section.$el);
-    var $svg = $T('svg', $box);
-    var $path = $N('path', { class: 'tsm-path' }, $svg);
+    let coords = [{ x: 150, y: 110 }, { x: 360, y: 240 }, { x: 520, y: 170 },
+        { x: 420, y: 400 }, { x: 120, y: 340 }, { x: 330, y: 60 }];
 
-    var coords = [[150,110],[360,240],[520,170],[420,400],[120,340],[330,60]];
+    let matrix = tabulate(null, coords.length, coords.length);
 
-    var reset = function() {
-        var dist = [];
-        for (var i=0; i<coords.length; ++i) dist[i] = [];
-        for (var i=0; i<coords.length; ++i) {
-            for (var j=0; j<i; ++j) {
-                dist[i][j] = dist[j][i] = Vector(M.map(M.subtr, coords[i], coords[j])).norm();
+    function redraw() {
+        for (let i = 0; i < coords.length; ++i) {
+            for (let j = 0; j < i; ++j) {
+                matrix[i][j] = matrix[j][i] = Point.distance(coords[i], coords[j]);
             }
         }
 
-        var tsm = M.geo.travellingSalesman(dist);
-        $path.setPoints(tsm.path.each(function(i) {
-            return new Point(coords[i][0], coords[i][1]);
-        }));
-    };
+        let tsm = travellingSalesman(matrix);
+        $path.points = tsm.path.map(i => coords[i]);
+    }
 
-    var makeCity = function($c, i) {
-        var drag = new M.Draggable($c, $box, '', 15);
-        drag.on('change', function(e) {
-            coords[i] = [e.x+15, e.y+15];
-            reset();
+    function makeCity($c, i) {
+        let drag = new Draggable($c, $box);
+        drag.on('move', function(e) {
+            coords[i] = e;
+            redraw();
         });
         return drag;
-    };
+    }
 
-    coords.each(function(c, i) {
-        var $city = $N('div', { class: 'tsm-city' }, $box);
-        var drag = makeCity($city, i);
-        drag.set(c[0]-15, c[1]-15);
+    coords.forEach(function(c, i) {
+        let $city = $N('div', { class: 'tsm-city' }, $box);
+        let drag = makeCity($city, i);
+        drag.position = c;
     });
 };
-
-*/
 
 
 // -----------------------------------------------------------------------------

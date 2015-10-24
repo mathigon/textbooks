@@ -1,4 +1,4 @@
-<svg id="map-utilities" width="640" height="400" style="background: #EEE">
+<svg id="map-utilities" viewBox="0 0 640 400">
   <g id="utility-paths"></g>
 
   <g class="utility" data-type="utility" data-utility="utility1">

@@ -1,4 +1,4 @@
-<svg x="0px" y="0px" viewBox="0 0 640 200" class="frame" width="640" height="200">
+<svg x="0px" y="0px" viewBox="0 0 640 200" class="frame">
 	<line class="edge" stroke="#BBB" stroke-width="3" x1="153" y1="101.5" x2="271" y2="30"/>
 	<line class="edge" stroke="#BBB" stroke-width="3" x1="389" y1="101.5" x2="271" y2="30"/>
 	<line class="edge" stroke="#BBB" stroke-width="3" x1="270" y1="173.5" x2="388" y2="102"/>

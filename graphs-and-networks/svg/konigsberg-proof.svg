@@ -1,4 +1,4 @@
-<svg x="0px" y="0px" viewBox="0 0 640 200">
+<svg x="0px" y="0px" viewBox="0 0 640 200" id="konigsberg-proof">
 <g>
 	<line stroke="#BBB" stroke-width="8" x2="315" y2="101" x1="-84" y1="101"/>
 	<line stroke="#BBB" stroke-width="8" x1="315" y1="101" x2="581.2" y2="-99.2"/>
@@ -15,7 +15,7 @@
 	<path stroke="#29ABE2" fill="none" stroke-width="12" d="M-83.9,100.9L65.2,-92.2L315.2,100.8L578.2,297.8L714.2,100.8L581.2,-99.2L65.2,289.9L-83.8,101L714,101"/>
 
 	<circle fill="#BBB" stroke="#FFFFFF" stroke-width="6" cx="315.2" cy="100.8" r="22.8"/>
-	<text transform="matrix(1 0 0 1 304.8687 112.2367)" fill="#FFFFFF" font-size="36"></text>
+	<text transform="matrix(1 0 0 1 314.5 112)"></text>
 
 	<circle fill="#00a81a" stroke="#FFFFFF" stroke-width="6" cx="581.2" cy="-99.2" r="22.8"/>
 	<circle fill="#d32900" stroke="#FFFFFF" stroke-width="6" cx="-83.8" cy="100.8" r="22.8"/>

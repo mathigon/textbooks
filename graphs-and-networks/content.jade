@@ -6,10 +6,10 @@
 
 include ../mixins
 
-section(class="first-section", id="GT_0_0", data-audio="0|40")
+section#GT_0_0(data-audio="0|40")
 
   if !user || !user.progress
-    .chapter-intro First time here? The <x-target to=".toolkit-button.help">Help sidebar</x-target> shows you how to get started.
+    .chapter-intro First time here? The <x-target to=".toolkit-button.help">Help panel</x-target> shows you how to get started.
 
   h2 Introduction
 
@@ -19,7 +19,7 @@ section(class="first-section", id="GT_0_0", data-audio="0|40")
     div(style="width: 160px;")
       p: svg#graph0.graph.novertices.noedges(width="160" height="130")
   p #[strong Graph theory] is the study of graphs and their properties. It is one of the most exciting and visual areas of mathematics, and has countless important applications.
-  
+
   x-gallery(slide-width="300")
     div
       x-media(src="/resources/graphs-and-networks/images/network1.jpg", credit="© Depositphotos / chungking", lightbox)
@@ -78,20 +78,20 @@ section(id="GT_0_3", data-audio='103|113')
   .row
     div(style='width: 130px')
       svg.graph(height='100', width='100', style='margin: 0 auto .8em;')
-      p.text-center Order: #[span.blank.input(data-answer='5')]
+      p.text-center Order: #[+input('5')]
     div(style='width: 130px')
       svg.graph(height='100', width='100', style='margin: 0 auto .8em;')
-      p.text-center Order: #[span.blank.input(data-answer='8')]
+      p.text-center Order: #[+input('8')]
     div(style='width: 130px')
       svg.graph(height='100', width='100', style='margin: 0 auto .8em;')
-      p.text-center Degree: #[span.blank.input(data-answer='3')]
+      p.text-center Degree: #[+input('3')]
     div(style='width: 130px')
       svg.graph(height='100', width='100', style='margin: 0 auto .8em;')
-      p.text-center Degree: #[span.blank.input(data-answer='6')]
+      p.text-center Degree: #[+input('6')]
 
 
 section(id="GT_0_4", data-audio='113|128')
-  p.grow Graphs which consist of a single ring of vertices are called #[strong cycles] All cycles have #[x-blank(choices="the same number of edges and vertices|more edges than vertices|fewer edges than vertices")]. Most graphs have many cycles as subgraphs.
+  p.grow Graphs which consist of a single ring of vertices are called #[strong cycles] All cycles have #[+blank("the same number of edges and vertices|more edges than vertices|fewer edges than vertices")]. Most graphs have many cycles as subgraphs.
   .row
     svg.graph(style='width: 90px; height: 90px;')
     svg.graph(style='width: 90px; height: 90px;')
@@ -110,16 +110,16 @@ section(id="GT_1_1", data-audio='142|173')
   .row
     .grow
       p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[i#slider1(data-var='hnd|5|slider|2,15,1') hnd] people present. Now it is easy to count the number of edges, and we find that there #[i (hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')] .
-      p(subsection='', data-audio='162') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
+      p.subsection(data-audio='162') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
     div(style='width: 220px;')
       svg.graph(style='width: 220px; height: 220px;')
 
 
 section(id="GT_1_2", data-audio="173|202")
-  p Each of the #[i(data-var="hnd2|5|slider|2,7,1") hnd2] people at the party shakes hands with #[i hnd2-1] others. That makes #[i hnd2] &times; #[i hnd2-1] = #[i hnd2 * (hnd2-1)] handshakes in total.
+  p Each of the #[i(data-var="hnd2|5|slider|2,7,1") hnd2] people at the party shakes hands with #[i hnd2-1] others. That makes #[i hnd2] µ #[i hnd2-1] = #[i hnd2 * (hnd2-1)] handshakes in total.
   p: #handshakes-table
-  div(subsection data-audio="184")
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[i hnd2] guests is  #[span.frac #[span #[i hnd2] &times; #[i hnd2-1]]#[span 2]] = #[i hnd2 * (hnd2-1) / 2].
+  .subsection(data-audio="184")
+    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[i hnd2] guests is  #[span.frac #[span #[i hnd2] µ #[i hnd2-1]]#[span 2]] = #[i hnd2 * (hnd2-1) / 2].
 
 
 section(id="GT_1_3", data-audio="202|229")
@@ -129,16 +129,16 @@ section(id="GT_1_3", data-audio="202|229")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
-  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> &times; (<em>n</em> &#8211; 1)', '2')] edges.
+  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> µ (<em>n</em> &#8211; 1)', '2')] edges.
 
 
 section(id="GT_1_4", data-audio="229|278")
   p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
   p On a different day, you are invited to a speed dating event for <i data-var="m|5|slider|2,8,1">m</i> boys and <i data-var="f|4|slider|2,8,1">f</i> girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
-  .row(subsection, data-audio="245")
+  .row.subsection(data-audio="245")
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
     div(style="width: 300px;"): svg.graph(style="width: 300px; height: 140px;")
-  p(subsection data-audio="262") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x &times; y|x + y|2x - y")] edges, which means that in the above example there are <i>m</i> &times; <i>f</i> = <i>m * f</i> dates.
+  p.subsection(data-audio="262") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are <i>m</i> µ <i>f</i> = <i>m * f</i> dates.
 
 //- ----------------------------------------------------------------------------------------------
 
@@ -146,38 +146,36 @@ section(id="GT_2_0", data-steps="4", data-audio="278|318")
   h2 The Bridges of K&ouml;nigsberg
   .row
     .grow
-      p One of the first mathematicians to think about graphs and networks was <span class="bio" id="euler">Leonhard Euler</span>. Euler was intrigued by an old problem regarding the town of K&ouml;nigsberg near the Baltic Sea. <span class="lgrey">(Today, the city is called Kaliningrad and located in Russia.)</span>
+      p One of the first mathematicians to think about graphs and networks was #[x-bio#euler Leonhard Euler]. Euler was intrigued by an old problem regarding the town of K&ouml;nigsberg near the Baltic Sea. #[span.lgrey (Today, the city is called Kaliningrad and located in Russia.)]
       p.quote The river Pregel divides Königsberg into four separate parts, which are connected by seven Bridges. Is it possible to walk around the city crossing every one of the bridges exactly once – but not more than once? You can start and finish anywhere, not necessarily in the same place.
     div(style="width: 250px; margin-top: -5em;")
       img(src="/resources/graphs-and-networks/images/konigsberg1.jpg" width="250" height="350" style="margin-top: 2.4em")
   p Try to find a valid route by drawing on this map:
-  .slideshow
-    .slideshow-slides
-      .slideshow-pages
-        div
-          .solved
-          include svg/bridges-1.svg
-          button.clear-button Clear
-        div
-          .solved
-          include svg/bridges-2.svg
-          button.clear-button Clear
-        div
-          .solved
-          include svg/bridges-3.svg
-          button.clear-button Clear
-        div
-          .solved
-          include svg/bridges-4.svg
-          button.clear-button Clear
+  x-slideshow
+    .slide
+      x-solved
+      include svg/bridges-1.svg
+      button.clear-button Clear
+    .slide
+      x-solved
+      include svg/bridges-2.svg
+      button.clear-button Clear
+    .slide
+      x-solved
+      include svg/bridges-3.svg
+      button.clear-button Clear
+    .slide
+      x-solved
+      include svg/bridges-4.svg
+      button.clear-button Clear
 
 
 section(id="GT_2_1", data-audio="318|365")
   p In the case of K&ouml;nigsberg it seems to be impossible to find a valid route, but some of the other cities do work. Euler managed to find a simple rule that can be applied to any city, without having to try lots of possibilities – using graph theory.
   .row
     .grow
-      p First, we need to convert the city maps into graphs with edges and vertices. Every island or region of land is represented by <span class="blank" data-choices="a vertex|an edge|an area"></span> and every bridge connecting two regions is represented by a corresponding <span class="blank" data-choices="edge|vertex|street"></span>.
-      p(subsection) Now the problem of &#8220;touring a city while crossing every bridge exactly once&#8221; has become a problem of &#8220;drawing a graph with one continuous stroke while tracing every edge exactly once&#8221;.
+      p First, we need to convert the city maps into graphs with edges and vertices. Every island or region of land is represented by #[+blank("a vertex|an edge|an area")] and every bridge connecting two regions is represented by a corresponding #[+blank("edge|vertex|street")].
+      p.subsection Now the problem of &#8220;touring a city while crossing every bridge exactly once&#8221; has become a problem of &#8220;drawing a graph with one continuous stroke while tracing every edge exactly once&#8221;.
     div(style="width: 200px")
       include svg/konigsberg.svg
 
@@ -190,7 +188,7 @@ section(data-audio="365|369")
 section(id="GT_2_3", data-steps="4", data-audio="369|381")
   p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its <span class="gloss" id="order">order</span>:
 
-  .frame.fill(style="width: 640px;")
+  .frame.fill
     .frame-body(style="margin-bottom: -18px;"): strong These graphs are possible:
     include svg/vertex-orders-1.svg
     .frame-body(style="margin-bottom: -24px;"): strong These graphs are not possible:
@@ -205,17 +203,15 @@ section(id="GT_2_3", data-steps="4", data-audio="369|381")
 
 section(id="GT_2_4", data-audio="381|450")
   p Comparing these numbers for graphs which are possible and those which are not possible, it seems that a graph can be drawn if it <span class="blank wide" data-choices="has no more than two &#8220;odd&#8221; vertices|only has &#8220;even&#8221; vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3"></span>. This condition can be explained if we look at just a single vertex in the graph:</p>
-  .slideshow
-    .slideshow-stage
+  x-slideshow
+    .stage
       include svg/konigsberg-proof.svg
-    .slideshow-legend
-      .slideshow-pages
-        div(data-audio="381") Here you can see a single, magnified vertex in a graph.
-        div(data-audio="398") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
-        div(data-audio="409") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
-        div(data-audio="420") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
-        div(data-audio="429") Notice that, either way, there always is an even number of edges meeting at the vertex.
-        div(data-audio="436") The only two exceptions are the vertices where the path starts, and where it ends &#8211; these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+    .legend(data-audio="381") Here you can see a single, magnified vertex in a graph.
+    .legend(data-audio="398") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
+    .legend(data-audio="409") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
+    .legend(data-audio="420") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
+    .legend(data-audio="429") Notice that, either way, there always is an even number of edges meeting at the vertex.
+    .legend(data-audio="436") The only two exceptions are the vertices where the path starts, and where it ends &#8211; these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
 
 
 section(data-audio="450|480")
@@ -236,7 +232,7 @@ section(id="GT_3_0", data-audio="480|511")
     div(style="width: 300px;")
       x-media(credit="&copy; Depositphotos / Grossinge", width="300", height="169", src="/resources/graphs-and-networks/images/factory.mp4")
   p Try to connect each of the plants below to each of the houses, without any of your lines crossing:
-  .frame.fill(style="width: 640px")
+  .frame.fill
     include svg/utilities.svg
     button.clear-button#utilities-clear Clear
 
@@ -249,10 +245,10 @@ section(id="GT_3_1", data-audio="511|527")
       p.text-center <em>K</em><sub>3</sub> is planar.
     div(style="width: 200px")
       svg.graph#planar-2(width="200" height="200" style="margin-bottom: .4em;")
-      p.text-center <em>K</em><sub>4</sub> <span class="blank" data-choices="is planar|is not planar"></span>.
+      p.text-center #[em K]#[sub 4] #[+blank("is planar|is not planar")].
     div(style="width: 200px")
       svg.graph#planar-3(width="200" height="200" style="margin-bottom: .4em;")
-      p.text-center <em>K</em><sub>5</sub> <span class="blank" data-choices="is not planar|is planar"></span>.
+      p.text-center #[em K]#[sub 5] #[+blank("is not planar|is planar")].
 
 
 section(data-audio="527|558")
@@ -264,8 +260,8 @@ section(id="GT_3_3", data-audio="558|568")
   .box.problem-box
     .box-title: h3 Planarity
     .box-body
-      .solved
-      svg#planarity.frame(style="width: 640px; height: 320px" width="640", height="320")
+      x-solved
+      svg#planarity.frame(viewBox="0 0 640 320")
       p This is a planar graph, but the <i data-var="n|6|slider|5,20,1">n</i> vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
       button New Random Graph
 
@@ -296,13 +292,13 @@ section(data-audio="568|575", id="GT_4_1")
 
 
 section(data-audio="575|609")
-  p When comparing these numbers, you will notice that the number of edges is always one less than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same <span class="bio" id="euler">mathematician</span> who solved the K&ouml;nigsberg Bridges problem.</p>
+  p When comparing these numbers, you will notice that the number of edges is always one less than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio#euler mathematician] who solved the K&ouml;nigsberg Bridges problem.</p>
   p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple <span class="gloss" id="proof">proof</span> that works for any graph&hellip;</p>
 
 
 section(data-audio="609|657")
-  .slideshow
-    .slideshow-stage
+  x-slideshow
+    .stage
       include svg/euler-proof.svg
       div(style="position: absolute; top: 20px; right: 0; font-size: 1.2em;")
         table.grid.table-small
@@ -315,13 +311,12 @@ section(data-audio="609|657")
             td 1
             td 0
         p <strong class="blue">0</strong> + <strong class="green">1</strong> &nbsp;=&nbsp; <strong class="red">0</strong> + 1
-    .slideshow-legend
-      .slideshow-pages
-        div(data-audio="609") The simplest graph consists of a single vertex. We can easily check that Euler&rsquo;s equation works.
-        div(data-audio="618") Let us add a new vertex to our graph. We also have to add an edge, and Euler&rsquo;s equation still works.
-        div(data-audio="625") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler&rsquo;s equation still works.
-        div(data-audio="638") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler&rsquo;s equation works.
-        div(data-audio="647") Let's keep going: if we now create a square we add one vertex, two edges and one face. Euler&rsquo;s equation still works.
+
+    .legend(data-audio="609") The simplest graph consists of a single vertex. We can easily check that Euler&rsquo;s equation works.
+    .legend(data-audio="618") Let us add a new vertex to our graph. We also have to add an edge, and Euler&rsquo;s equation still works.
+    .legend(data-audio="625") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler&rsquo;s equation still works.
+    .legend(data-audio="638") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler&rsquo;s equation works.
+    .legend(data-audio="647") Let's keep going: if we now create a square we add one vertex, two edges and one face. Euler&rsquo;s equation still works.
 
 
 section(id="GT_4_3", data-audio="657|692")
@@ -333,8 +328,8 @@ section(id="GT_4_3", data-audio="657|692")
 section(data-audio="692|710")
   p Many planar graphs look very similar to the nets of <span class="gloss" id="polyhedron">polyhedra</span>, three dimensional shapes with <span class="gloss" id="polygon">polygonal</span> faces. If we think of polyhedra as made of elastic bands, we can imagine stretching them out until they become flat, planar graphs:
   .row
-    .grow: img.image-sequence(data-src="/resources/graphs-and-networks/images/cube/cube#.png", data-pages="32", width="300", height="300")
-    .grow: img.image-sequence(data-src="/resources/graphs-and-networks/images/dodecahedron/dodeca#.png", data-pages="32", width="300", height="300")
+    .grow: x-img-sequence(src="/resources/graphs-and-networks/images/cube/cube#.png", pages="32", width="300", height="300")
+    .grow: x-img-sequence(src="/resources/graphs-and-networks/images/dodecahedron/dodeca#.png", pages="32", width="300", height="300")
 
 
 section(data-audio="710|742")
@@ -366,43 +361,34 @@ section(data-audio="742|777")
 
 section(id="GT_5_1", data-audio="777|790")
   p When colouring the map of US states, 50 colours are obviously enough, but far fewer are necessary. Try colouring the maps below with as few colours as possible:
-  .slideshow
-    div
-      .four-colour-icon.on
-      .four-colour-icon
-      .four-colour-icon
-      .four-colour-icon
-      .four-colour-icon
-      .four-colour-icon
-    .slideshow-slides
-      .slideshow-pages
-        .colour-map
-          include svg/colours-1.svg
-          .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-          button.clear-button Clear
-        .colour-map
-          include svg/colours-2.svg
-          .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-          button.clear-button Clear
-        .colour-map
-          include svg/colours-3.svg
-          .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-          button.clear-button Clear
-        .colour-map
-          include svg/colours-4.svg
-          .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-          button.clear-button Clear
+  x-slideshow
+    .slide
+      include svg/colours-1.svg
+      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
+      button.clear-button Clear
+    .slide
+      include svg/colours-2.svg
+      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
+      button.clear-button Clear
+    .slide
+      include svg/colours-3.svg
+      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
+      button.clear-button Clear
+    .slide
+      include svg/colours-4.svg
+      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
+      button.clear-button Clear
   p.small.lgrey Note that states or countries which only share a #[em corner] are allowed to have the same colour. Alaska and Hawaii are isolated from all of the other states and can have any colour.
 
 
 section(id="GT_5_2", data-audio="790|834")
   .row
-    .grow: p All of these maps can be coloured with only four different colours, but it is not hard to imagine that other, very complicated maps might need many more colours. In fact, some maps need <em>at least</em> four colours, whenever they contain four countries all connected to each other.
+    .grow: p All of these maps can be coloured with only four different colours, but it is not hard to imagine that other, very complicated maps might need many more colours. In fact, some maps need #[em at least] four colours, whenever they contain four countries all connected to each other.
     div(style="width: 200px;"): img(src="/resources/graphs-and-networks/images/four-colours.png" width="200" height="120")
 
-  p Like before, we can convert a map with countries and borders into a planar graph: every country becomes <span class="popup blank" data-choices="a vertex|an edge|a face"></span>, and countries which <span class="popup blank" data-choices="share a border|have the same colour"></span> get connected by an edge:
+  p Like before, we can convert a map with countries and borders into a planar graph: every country becomes #[+blank("a vertex|an edge|a face")], and countries which #[+blank("share a border|have the same colour")] get connected by an edge:
   p: include svg/colour-graph.svg
-  p(subsection, data-audio="824") Now we want to colour the vertices of a graph, and two vertices must have a different colour if they are connected by an edge.
+  p.subsection(data-audio="824") Now we want to colour the vertices of a graph, and two vertices must have a different colour if they are connected by an edge.
 
 
 section(data-audio="834|884")
@@ -410,7 +396,7 @@ section(data-audio="834|884")
     div(style="width: 240px;")
       x-media(lightbox, credit="&copy; Depositphotos / sergeyussr", width="240", height="320", src="/resources/graphs-and-networks/images/england-counties.jpg")
     .grow
-      p In 1852, the botany student <span class="bio" id="guthrie">Francis Guthrie</span> had to colour a map of counties in England. He observed that four colours seemed to suffice for any map he tried, but he was not able to find a proof that worked for <em>all</em> maps. This turned out to be an extremely difficult problem, and became known as the <strong>four colour theorem</strong>.
+      p In 1852, the botany student #[x-bio#guthrie Francis Guthrie] had to colour a map of counties in England. He observed that four colours seemed to suffice for any map he tried, but he was not able to find a proof that worked for #[em all] maps. This turned out to be an extremely difficult problem, and became known as the #[strong four colour theorem].
       p During the following 100 years, many mathematicians published &#8220;proofs&#8221; to the four colour theorem, only for mistakes to be found later. Some of these invalid proofs were so convincing that it took more than 10 years to discover errors.
       p For a long time, mathematicians were unable to either prove that four colours are enough, or to find a map that needed more than four colours.
 
@@ -418,7 +404,7 @@ section(data-audio="834|884")
 section(data-audio="884|909")
   x-parallax(background='/resources/graphs-and-networks/images/ibm-360.jpg')
     .feature-text.right
-      p Little progress was made on the four colour problem until 1976, when <span class="bio" id="haken">Wolfgang Haken</span> and <span class="bio" id="appel">Kenneth Appel</span> used a computer to finally solve it. They reduced infinitely many possible maps to 1936 special cases, which were each checked by a computer taking over 1000 hours in total.
+      p Little progress was made on the four colour problem until 1976, when #[x-bio#haken Wolfgang Haken] and #[x-bio#appel Kenneth Appel] used a computer to finally solve it. They reduced infinitely many possible maps to 1936 special cases, which were each checked by a computer taking over 1000 hours in total.
 
 
 section(data-audio="909|932")
@@ -432,7 +418,7 @@ section(data-audio="932|961")
   .row
     .grow
       p The four colour theorem only works for maps on a flat plane or a sphere, and where all countries consist of a single area.
-      p However mathematicians have also looked at maps of <em>empires</em>, where countries can consist of multiple disconnected components, and at maps on differently-shaped planets, such as a torus (doughnut shape). In these cases you may need more than four colours and the proofs become even more difficult.
+      p However mathematicians have also looked at maps of #[em empires], where countries can consist of multiple disconnected components, and at maps on differently-shaped planets, such as a torus (doughnut shape). In these cases you may need more than four colours and the proofs become even more difficult.
     div(style="width: 300px")
       x-media(width="300", height="220", src="/resources/graphs-and-networks/images/torus.mp4")
       p.caption This map on a torus requires seven colours.
@@ -444,7 +430,7 @@ section(data-audio="961|1007")
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit <i data-var="tsn|8|slider|2,50,1">tsn</i> different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a <span class="popup blank" data-choices="complete graph|cycle|bipartite graph"></span>, so there are <span class="frac"><span><i>tsn</i> &times; (<i>tsn</i> &#8211; 1)</span><span>2</span></span> = <i>tsn*(tsn-1)/2</i> edges in total.
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit <i data-var="tsn|8|slider|2,50,1">tsn</i> different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a <span class="popup blank" data-choices="complete graph|cycle|bipartite graph"></span>, so there are <span class="frac"><span><i>tsn</i> µ (<i>tsn</i> &#8211; 1)</span><span>2</span></span> = <i>tsn*(tsn-1)/2</i> edges in total.
       p The delivery truck has to visit all cities, in any order. In the K&ouml;nigsberg bridges problem we wanted to find paths which travel along <em>every edge</em> exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
     div(style="width: 260px"): img(credit="&copy; Depositphotos / ilfede", src="/resources/graphs-and-networks/images/truck.jpg", width="260", height="280")
 
@@ -460,7 +446,7 @@ section(id="GT_6_2", data-audio="1021|1076")
   p In a graph with <i data-var="tsn1|4|slider|2,10,1">tsn1</i> cities, every Hamiltonian cycle must also contain <i>tsn1</i> cities. Now,
   ul <i>getTsmString(tsn1)</i>
   p This means that, in total, there are <i>M.list(tsn1,1).join(' &times; ')</i> = <i>M.numberFormat(M.factorial(tsn1))</i> possible paths. A shorthand for this product is <i>tsn1</i>! or <i>tsn1</i> <strong>Factorial</strong>.
-  p(subsection data-audio="1058") You could imagine that it might not be possible to travel directly between two cities - without going via another city. In that case we no longer have a complete graph, and finding the number of Hamiltonian cycles, if they exist at all, becomes much more difficult.
+  p.subsectio(data-audio="1058") You could imagine that it might not be possible to travel directly between two cities - without going via another city. In that case we no longer have a complete graph, and finding the number of Hamiltonian cycles, if they exist at all, becomes much more difficult.
 
 
 section(data-audio="1076|1136")
@@ -474,7 +460,8 @@ section(data-audio="1076|1136")
 section(id="GT_6_4", data-audio="1136|1170")
   p Unfortunately there is no more efficient algorithm to solve the travelling salesman problem. Instead, mathematicians and computer scientists have developed various algorithms that find <em>good</em> solutions, even if they may not be the very best one. These algorithms, which only give approximate solutions, are called <strong>Heuristics</strong>.
   p Try rearranging the cities on this map. You can remove cities by clicking on them, and you can add cities by clicking anywhere on the map.</p>
-  div.tsm-box.frame.fill(style="width: 640px; height: 480px"): svg(width="640" height="480")
+  .tsm-wrap.frame.fill.clearfix
+    .tsm-box: svg
 
 
 section(data-audio="1170|1186")
@@ -504,8 +491,8 @@ section(data-audio="1230|1273")
   .row
     .grow: ul
       li The ant colony sends out many scouts which initially travel in random directions. Once they find food, they return, leaving behind a trail of pheromone.
-      li(subsection, data-audio="1242") Other ants tend to follow a trail when they find one, which leads them to food. On their return journey they deposit more pheromone, thus reinforcing the trail.
-      li(subsection, data-audio="1254") Over time, pheromone evaporates. The longer a path is, the more time it takes ants to travel along it, and so the pheromone has more time to evaporate. Short paths, on the other hand, can get reinforced more quickly, so their strength increases faster.
+      li.subsection(data-audio="1242") Other ants tend to follow a trail when they find one, which leads them to food. On their return journey they deposit more pheromone, thus reinforcing the trail.
+      li.subsection(data-audio="1254") Over time, pheromone evaporates. The longer a path is, the more time it takes ants to travel along it, and so the pheromone has more time to evaporate. Short paths, on the other hand, can get reinforced more quickly, so their strength increases faster.
     div(style="width: 240px"): p.todo Graphic
 
 
@@ -626,6 +613,6 @@ section(data-audio="1701|1746")
   .row
     div(style="width: 200px;"): img(credit="&copy Metro-Goldwyn-Mayer, 1993", src="/resources/graphs-and-networks/images/six-degrees.jpg", width="200", height="265", style="border: 1px solid #CCC")
     .grow
-      p In 1929, when the Hungarian author <span class="bio" id="karinthy">Frigyes Karinthy</span> first proposed the idea of &#8220;six degrees of separation&#8221;, there was no internet or social media, but the world had already started to become more interconnected.
-      p In 1967, <span class="bio" id="milgram">Stanley Milgram</span> conducted a first empirical experiment, where 296 participants living in Nebraska and Kansas were asked to deliver a letter to a particular person living in Boston, Massachusetts. They all had to choose a friend to send the letter to, who then picked another friend. At every step, the letter moved closer to Boston. Milgram found that there were, on average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
+      p In 1929, when the Hungarian author #[x-bio#karinthy Frigyes Karinthy] first proposed the idea of &#8220;six degrees of separation&#8221;, there was no internet or social media, but the world had already started to become more interconnected.
+      p In 1967, #[x-bio#milgram Stanley Milgram] conducted a first empirical experiment, where 296 participants living in Nebraska and Kansas were asked to deliver a letter to a particular person living in Boston, Massachusetts. They all had to choose a friend to send the letter to, who then picked another friend. At every step, the letter moved closer to Boston. Milgram found that there were, on average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
   p Today, every one of us is part of countless invisible graphs, which underly our social interactions, travel, internet and technology, science, and so much more.
