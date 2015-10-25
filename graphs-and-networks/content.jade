@@ -103,23 +103,23 @@ section(data-audio='128|142')
   .row
     .grow
       p You have been invited to an extravagant birthday party. After a rousing celebration the guests get ready to leave, and everyone shakes hands with everyone else. How many handshakes are there in total?
-    .party-img: img(src='/resources/graphs-and-networks/images/party.jpg', width='260', height='165')
+    .party-img(style="margin-top: -60px"): img(src='/resources/graphs-and-networks/images/party.jpg', width='260', height='165')
 
 
 section(id="GT_1_1", data-audio='142|173')
   .row
     .grow
-      p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[i#slider1(data-var='hnd|5|slider|2,15,1') hnd] people present. Now it is easy to count the number of edges, and we find that there #[i (hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')] .
+      p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[+var('hnd', 'hnd|5|2,15,1')] people present. Now it is easy to count the number of edges, and we find that there #[+var("(hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')")].
       p.subsection(data-audio='162') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
     div(style='width: 220px;')
       svg.graph(style='width: 220px; height: 220px;')
 
 
 section(id="GT_1_2", data-audio="173|202")
-  p Each of the #[i(data-var="hnd2|5|slider|2,7,1") hnd2] people at the party shakes hands with #[i hnd2-1] others. That makes #[i hnd2] µ #[i hnd2-1] = #[i hnd2 * (hnd2-1)] handshakes in total.
+  p Each of the #[+var('hnd2', 'hnd2|5|2,7,1')] people at the party shakes hands with #[+var('hnd2-1')] others. That makes #[+var('hnd2')] µ #[+var('hnd2-1')] = #[var('hnd2 * (hnd2-1)')] handshakes in total.
   p: #handshakes-table
   .subsection(data-audio="184")
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[i hnd2] guests is  #[span.frac #[span #[i hnd2] µ #[i hnd2-1]]#[span 2]] = #[i hnd2 * (hnd2-1) / 2].
+    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var('hnd2')] guests is #[span.frac.inline #[span #[+var('hnd2')] µ #[+var('hnd2-1')]]#[span 2]] = #[+var('hnd2 * (hnd2-1) / 2')].
 
 
 section(id="GT_1_3", data-audio="202|229")
