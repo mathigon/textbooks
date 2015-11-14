@@ -4,12 +4,12 @@
 // =============================================================================
 
 
-import Graph from 'graph/graph';
+import Graph from 'graph';
 import Vector from 'vector';
 import Colour from 'colour';
 import Browser from 'browser';
-import Draggable from 'draggable/draggable';
-import Drawing from 'drawing/drawing';
+import Draggable from 'draggable';
+import Drawing from 'drawing';
 import { svgPointerPosn } from 'dom-events';
 import { animate } from 'animate';
 import { Point, travellingSalesman } from 'geometry';
@@ -21,7 +21,7 @@ import { $, $I, $$, $T, $C, $$C, $$T, $N } from 'elements';
 // -----------------------------------------------------------------------------
 // Biographies
 
-const bio = {
+export const bio = {
     euler: {
         name: "Leonhard Euler",
         birth: "1707",
@@ -75,7 +75,7 @@ const bio = {
 // -----------------------------------------------------------------------------
 // Glossary
 
-const gloss = {
+export const gloss = {
     graph: {
         title: "Graph",
         text: "<p>A graph is a collection of vertices connected by edges.</p>"
@@ -156,7 +156,7 @@ const gloss = {
 // -----------------------------------------------------------------------------
 // Hints
 
-const hints = {
+export const hints = {
 
     intro1: {
         text: 'If you click the <x-target to="section.active .section-audio">Play button</x-target> I will read out the text and give you additional instructions for questions and exercises.'
@@ -973,7 +973,4 @@ fns.GT_6_4 = function(section, chapter) {
     });
 };
 
-
-// -----------------------------------------------------------------------------
-
-export default { bio, gloss, hints, sections: fns };
+export const sections = fns;
