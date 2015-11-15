@@ -116,7 +116,7 @@ section(id="GT_1_1", data-audio='142|173')
 
 
 section(id="GT_1_2", data-audio="173|202")
-  p Each of the #[+var('hnd2', 'hnd2|5|2,7,1')] people at the party shakes hands with #[+var('hnd2-1')] others. That makes #[+var('hnd2')] µ #[+var('hnd2-1')] = #[var('hnd2 * (hnd2-1)')] handshakes in total.
+  p Each of the #[+var('hnd2', 'hnd2|5|2,7,1')] people at the party shakes hands with #[+var('hnd2-1')] others. That makes #[+var('hnd2')] µ #[+var('hnd2-1')] = #[+var('hnd2 * (hnd2-1)')] handshakes in total.
   p: #handshakes-table
   .subsection(data-audio="184")
     p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var('hnd2')] guests is #[span.frac.inline #[span #[+var('hnd2')] µ #[+var('hnd2-1')]]#[span 2]] = #[+var('hnd2 * (hnd2-1) / 2')].

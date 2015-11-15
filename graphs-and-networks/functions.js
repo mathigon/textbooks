@@ -10,7 +10,7 @@ import Colour from 'colour';
 import Browser from 'browser';
 import Draggable from 'draggable';
 import Drawing from 'drawing';
-import { svgPointerPosn } from 'dom-events';
+import { svgPointerPosn } from 'events';
 import { animate } from 'animate';
 import { Point, travellingSalesman } from 'geometry';
 import { tabulate, list } from 'arrays';
@@ -332,11 +332,11 @@ fns.GT_0_4 = function(section, chapter) {
 };
 
 fns.GT_1_1 = function(section, chapter) {
-    /*
     chapter.addHint('intro5');
 
     let g = new Graph($C('graph', section.$el), 5, subsets(list(5), 2), { icon: person });
 
+    /*
     section.vars[0].on('change', function(n) {
         g.load(n, subsets(list(n), 2));
         g.attraction /= 2;
