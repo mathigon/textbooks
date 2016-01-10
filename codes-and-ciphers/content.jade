@@ -1,0 +1,204 @@
+//- ============================================================================
+//- Mathigon | Codes and Ciphers
+//- (c) 2016 Mathigon
+//- ============================================================================
+
+
+include ../mixins
+
+section
+  h2 Introduction
+  p #[strong Information] is everywhere around us, but it is difficult to define what exactly "information" #[em means]. Instead we can give examples of things that contain information: books and newspapers, numbers and charts, images, sound or film clips.
+  div(row)
+    div(style="width: 80px"): img(width="100", height="100", src="xyz")
+    div(style="width: 80px"): img(width="100", height="100", src="xyz")
+    div(style="width: 80px"): img(width="100", height="100", src="xyz")
+    div(style="width: 80px"): img(width="100", height="100", src="xyz")
+    div(style="width: 80px"): img(width="100", height="100", src="xyz")
+    div(style="width: 80px"): img(width="100", height="100", src="xyz")
+  p #[strong Codes] are rules or algorithms to express information in certain formats. Our alphabet is a example of a code can can be used to express #[em language] in the form of #[em letters].
+  p Sometimes letters are not the best format to express information, and we can use other codes. In this chapter we will discover some of these codes as well as the algorithms to encode and decode messages.
+
+section
+  h2 Simple Codes
+  p.todo Morse
+  p.todo Binary and Computers
+
+section
+  h2 Error Correction and Error Detection
+  p.todo Bar Code
+  p.todo Satellite Communications
+  p.todo CDs and DVDs
+
+section
+  h2 Secret Codes and Ciphers
+  p Some codes are designed in a way that only t
+
+  p Mention secret codes, and we immediately think of James Bond or the Spy Who Came in from the Cold. But nearly everyone uses secret codes in their daily lives, for normal activities such as Internet banking. Our communications with our bank are encrypted—put into code—so that criminals can’t read the messages and gain access to our money. At least, not easily.
+
+  p Alice and Bob
+
+  p The science of creating secret codes is called #[strong Cryptography] and the are of breaking them is called #[srong Cryptanalysis].
+
+  p When designing ciphers, there are several possible objectives:
+  ul
+    li #[strong Secrecy: ] A and B can be sure that no third party X can read the message.
+    li #[strong Integrity: ] A and B can be sure that no third party X can alter the message whilte it is being transmitted.
+    li #[strong Secrecy: ] B can be sure that the message actually comes from A, and not from some impostor.
+
+  p Length of security (hours, years), level of security
+
+
+
+section(data-id="CC_caesar")
+  h2 The Caesar Cipher
+  p.todo TODO
+
+  p The diagram below shows how plaintext letters #[span.letter.plain *] are converted into cipher letters #[span.letter.cipher *]. The chart also shows the relative frequency of every letter in your text, as well as the entire english language.
+
+  .code-play
+
+    .freq-table-wrap
+      .freq-table
+        .freq-table-chart
+          each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+            .freq-col
+              .letter-bar.plain
+              .letter-bar.real
+        .freq-table-plain
+          each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+            .freq-col: .letter.plain= l
+        .freq-table-cipher
+          each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+            .freq-col
+          #letter-slider(data-slide-width="26")
+            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+              .freq-col: .letter.cipher= l
+
+    div(row)
+      .code-area(grow)
+        h3.code-title Plain Text
+        .plain-text(contenteditable="true", placeholder="Start typing to create your first cypher …")
+      .code-area(grow)
+        h3.code-title Enciphered Text
+        .cipher-text
+
+  p Once you know the pattern the Caesar cipher is very easy to break: you just have to try all #[+input("25")] possibilities. Try to decode the following secret messages:
+
+  p.todo TODO
+
+section
+  h2 Modular arithmetic
+  p.todo TODO
+
+
+section
+  h2 Substitution Cipher
+  p It is not hard to make the Caesar cipher more secure: rather than shifting the letters we could scramble all of them randomly. Now there are not only 25 but 26! = 403,291,461,126,605,635,584,000,000 possibilities. Even using a computer it would take very long to check all possible combinations.
+  p.todo Substitution Cipher Encoding Interactive
+
+section
+  p But it turns out that if we have a sufficiently long section of text, even the substitution cipher is easy to crack – using what we know about the language of the original plaintext.
+  p In every language, some letters are more common than others. This means that the ciphertext should also contain some letters more often than others.
+  p.todo Substitution Cipher Decoding Setp-by-step demo
+
+section
+  p Now it is your turn: try decoding the following messages which have been encoded using substitution ciphers:
+  p.todo Substitution Cipher Decoding Interactive
+
+section
+  h2 One Time Pads
+  p.todo TODO
+
+section
+  h2 The Vigenère Cipher
+  p.todo TODO
+
+section
+  h2 The Enigma
+  p.todo TODO
+
+section
+  h2 RSA Cryptography
+  p.todo TODO
+
+section
+  h2 Quantum Cryptography
+  p.todo TODO
+
+
+//
+  http://plus.maths.org/content/cracking-codes
+  http://plus.maths.org/content/exploring-enigma
+  http://nrich.maths.org/2198
+
+
+  ALL CONTENT IN “JOURNEY INTO CRYPTOGRAPHY”
+
+  # Ancient cryptography
+  The Caesar cipher
+  Frequency Fingerprint
+  Polyalphabetic cipher
+  The one-time pad
+  Perfect Secrecy
+  Frequency stability property
+  Coin flip sequences
+  The Enigma encryption machine
+
+  # Ciphers
+  Ciphers vs. codes
+  Shift cipher
+  Caesar cipher encryption
+  Caesar cipher decryption
+  Caesar cipher frequency analysis
+  Vigenere cipher encryption
+  XOR bitwise operation
+  XOR and the one-time pad
+  XOR exploration
+  Bitwise operators
+
+  # Modern cryptography
+  The fundamental theorem of arithmetic
+  Public key cryptography: What is it?
+  The discrete logarithm problem
+  Diffie-hellman key exchange
+  RSA encryption: Step 1
+  RSA encryption: Step 2
+  RSA encryption: Step 3
+  Time Complexity (Exploration)
+  Euler's totient function
+  Euler Totient Exploration
+  RSA encryption: Step 4
+
+  # Ancient information theory
+  Explore the history of communication from signal fires to the Information Age
+  What is information theory?
+  Prehistory: Proto-writing
+  Ancient history: The alphabet
+  Ptolemaic: Rosetta Stone
+  Source encoding
+  Visual telegraphs (case study)
+  Decision tree exploration
+  Electrostatic telegraphs (case study)
+  The battery and electromagnetism
+  Morse code and the information age
+
+  # Modern information theory
+  Information Theory in the 20th Century
+  Symbol rate
+  Introduction to channel capacity
+  Message space exploration
+  Measuring information
+  Origin of Markov chains
+  Markov chain exploration
+  A mathematical theory of communication
+  Markov text exploration
+  Information entropy
+  Compression codes
+  Error correction
+
+
+
+
+
+
