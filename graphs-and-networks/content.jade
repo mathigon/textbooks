@@ -116,14 +116,14 @@ section(id="GT_1_1", data-audio='142|173')
 
 
 section(id="GT_1_2", data-audio="173|202")
-  p Each of the #[+var('hnd2', 'hnd2|5|2,7,1')] people at the party shakes hands with #[+var('hnd2-1')] others. That makes #[+var('hnd2')] µ #[+var('hnd2-1')] = #[+var('hnd2 * (hnd2-1)')] handshakes in total.
-  p: #handshakes-table
+  p Each of the #[+var('n', 'n|5|2,8,1')] people at the party shakes hands with #[+var('n-1')] others. That makes #[+var('n')] µ #[+var('n-1')] = #[+var('n * (n-1)')] handshakes in total.
+  p.var ${ handshakeTable(n) }
   .subsection(data-audio="184")
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var('hnd2')] guests is #[span.frac.inline #[span #[+var('hnd2')] µ #[+var('hnd2-1')]]#[span 2]] = #[+var('hnd2 * (hnd2-1) / 2')].
+    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var('n')] guests is #[span.frac.inline #[span #[+var('n')] µ #[+var('n-1')]]#[span 2]] = #[+var('n * (n-1) / 2')].
 
 
 section(id="GT_1_3", data-audio="202|229")
-  p The handshake graphs are special because every vertex is connected to every other vertex. Graphs with this property are called #[strong complete graphs]. The complete graph with #[i(data-var="comp|5|slider|2,12,1") comp] vertices is often abbreviated as #[em K#[sub #[i comp]]].
+  p The handshake graphs are special because every vertex is connected to every other vertex. Graphs with this property are called #[strong complete graphs]. The complete graph with #[+var('comp', 'comp|5|2,12,1')] vertices is often abbreviated as #[em K#[sub #[+var('comp')]]].
   .row
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
@@ -134,11 +134,11 @@ section(id="GT_1_3", data-audio="202|229")
 
 section(id="GT_1_4", data-audio="229|278")
   p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
-  p On a different day, you are invited to a speed dating event for <i data-var="m|5|slider|2,8,1">m</i> boys and <i data-var="f|4|slider|2,8,1">f</i> girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
+  p On a different day, you are invited to a speed dating event for #[+var('m', 'm|5|slider|2,8,1')] boys and #[+var('f', 'f|4|slider|2,8,1')] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
   .row.subsection(data-audio="245")
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
     div(style="width: 300px;"): svg.graph(style="width: 300px; height: 140px;")
-  p.subsection(data-audio="262") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are <i>m</i> µ <i>f</i> = <i>m * f</i> dates.
+  p.subsection(data-audio="262") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are #[+var('m')] µ #[+var('f')] = #[+var('m*f')] dates.
 
 //- ----------------------------------------------------------------------------------------------
 
@@ -186,7 +186,7 @@ section(data-audio="365|369")
 
 
 section(id="GT_2_3", data-steps="4", data-audio="369|381")
-  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its <span class="gloss" id="order">order</span>:
+  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[span.gloss#order order]:
 
   .frame.fill
     .frame-body(style="margin-bottom: -18px;"): strong These graphs are possible:
@@ -238,7 +238,7 @@ section(id="GT_3_0", data-audio="480|511")
 
 
 section(id="GT_3_1", data-audio="511|527")
-  p Just like the K&ouml;nigsberg bridges before, you quickly discover that this problem, too, is impossible. It seems that some graphs can be drawn without overlapping edges – these are called <strong>planar graphs</strong> – but others cannot.
+  p Just like the K&ouml;nigsberg bridges before, you quickly discover that this problem, too, is impossible. It seems that some graphs can be drawn without overlapping edges – these are called #[strong planar graphs] – but others cannot.
   .row
     div(style="width: 200px")
       svg.graph(width="200" height="200" style="margin-bottom: .4em;")
@@ -262,7 +262,7 @@ section(id="GT_3_3", data-audio="558|568")
     .box-body
       x-solved
       svg#planarity.frame(viewBox="0 0 640 320")
-      p This is a planar graph, but the <i data-var="n|6|slider|5,20,1">n</i> vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
+      p This is a planar graph, but the #[+var('n', 'n|6|slider|5,20,1')] vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
       button New Random Graph
 
 //- ----------------------------------------------------------------------------------------------

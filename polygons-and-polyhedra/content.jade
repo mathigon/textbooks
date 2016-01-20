@@ -1,0 +1,220 @@
+//- ============================================================================
+//- Mathigon | Polygons and Polyhedra Content
+//- (c) 2016 Mathigon
+//- ============================================================================
+
+
+include ../mixins
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Polygons
+
+  p You've already learned about points, lines, angles, shapes and other objects in geometry. A #[strong polygon] is any shape which is made up only of straight lines. A square, for example, is a polygon, but a circle is not. Select all of these shapes which are polygons:
+
+  x-set-picker.row.padded-thin
+    .set-item: svg(width=120, height=120): polygon(points="12,73 47,12 108,47 73,108", fill="#c1272d")
+    .set-item: svg(width=120, height=120): circle(cx="60", cy="60", r="44", fill="#f15a24")
+    .set-item: svg(width=120, height=120): polygon(points="93,93 47,105 14,72 26,26 72,14 105,47", fill="#fbb03b")
+    .set-item: svg(width=120, height=120): polygon(points="93,73 93,46 81,46 81,19 38,19 38,46 26,46 26,73 13,73 13,100 106,100 106,73", fill="#d9e021")
+    .set-item: svg(width=120, height=120): path(d="M59,18c-19,0-35,16-35,35v46h71V54C94,34,78,18,59,18z", fill="#8cc63f")
+    .set-item: svg(width=120, height=120): path(d="M96,12L13,26l14,82C74,101,104,58,96,12z", fill="#009245")
+    .set-item: svg(width=120, height=120): path(d="M16,26c12-14,41-10,65,9s33,47,22,61s-40,10-64-9S5,40,16,26z", fill="#00a99d")
+    .set-item: svg(width=120, height=120): polygon(points="115,60 52,100 13,64 55,5 65,40", fill="#0071bc")
+    .set-item: svg(width=120, height=120): polygon(points="36,102 13,51 54,13 103,41 92,96 ", fill="#1b1464")
+    .set-item: svg(width=120, height=120): polygon(points="101,26 88,57 106,86 72,83 50,109 43,76 11,63 40,46 43,12 68,34", fill="#93278f")
+  p.text-center: button.btn.btn-bounce.btn-small Check…
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p If all the sides of a polygon have the same length, it is called a #[strong regular polygon]. Select all of these shapes which are regular polygons:
+
+  x-set-picker.row.padded-thin
+    .set-item: svg(width=120, height=120): polygon(points="12,73 47,12 108,47 73,108", fill="#c1272d")
+    .set-item: svg(width=120, height=120): circle(cx="60", cy="60", r="44", fill="#f15a24")
+    .set-item: svg(width=120, height=120): polygon(points="93,93 47,105 14,72 26,26 72,14 105,47", fill="#fbb03b")
+    .set-item: svg(width=120, height=120): polygon(points="93,73 93,46 81,46 81,19 38,19 38,46 26,46 26,73 13,73 13,100 106,100 106,73", fill="#d9e021")
+    .set-item: svg(width=120, height=120): path(d="M59,18c-19,0-35,16-35,35v46h71V54C94,34,78,18,59,18z", fill="#8cc63f")
+  p.text-center: button.btn.btn-bounce.btn-small Check…
+
+  p The sides of a polygon are called #[strong edges], and the points are called #[strong vertices]. However these are enough words and terminology for now…
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section#triangles
+
+  h2 Angles in Triangles
+
+  p Every triangle has three #[strong internal angles] – angles at every vertex on the inside. In this diagram you can move the vertices and see what happens to the internal angles.
+
+  .geopad
+    svg
+      // path(d="${angle(a,b,c)}", class='geo-angle m-red faded')
+      // g(transform="${slide>3?'rotate(180deg)':''}")
+      // circle(cx="${a[0]}", cy="${a[1]}", r="30")
+
+      path(x-d="${svgAngle(a,b,c,50)}", class='geo-angle m-red')
+      path(x-d="${svgAngle(b,c,a,50)}", class='geo-angle m-blue')
+      path(x-d="${svgAngle(c,a,b,50)}", class='geo-angle m-green')
+
+      path.geo-line(x-d='${svgLine(a,b)}')
+      path.geo-line(x-d='${svgLine(a,c)}')
+      path.geo-line(x-d='${svgLine(b,c)}')
+
+      path.geo-edge(x-d='${svgSegment(a,b)}')
+      path.geo-edge(x-d='${svgSegment(a,c)}')
+      path.geo-edge(x-d='${svgSegment(b,c)}')
+
+      circle.geo-vertex(x-cx="${a.x}", x-cy="${a.y}", r="10")
+      circle.geo-vertex(x-cx="${b.x}", x-cy="${b.y}", r="10")
+      circle.geo-vertex(x-cx="${c.x}", x-cy="${c.y}", r="10")
+
+    p a = ${deg(angle(a,c,b))}, b = ${deg(angle(b,a,c))}, c = ${deg(angle(c,b,a))}
+
+  p Try making all angles as large as possible. The largest value any one
+
+  p.todo DISCOVERY
+
+  p.todo The three internal angles are highlighted red, blue and green. Observe how the three angles at the top must be the same as the three angles inside. And they add up to exactly half a circle: to 180°.
+
+  p Since we know the sum of the angles in every triangle, we can also work out the size of a missing angle.
+
+  p.todo EXERCISES
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Angles in Polyhedra
+
+  p Next, let's have a look at quadrilaterals. 
+
+  p.todo diagram and explanation
+
+  p It seems that the sum of the internal angles is always #[+input(360)]°.
+
+  p This is no only a full circle rotation, it is also twice the sum of triangles. And this is because we can split every quadrilateral into two triangles:
+
+  p INTERACTIVE DIAGRAM
+
+  p The same, of course, also works for larger polygons. We can split a pentagon into #[+input(3)] triangles, so its internal angle sum is #[+input(540)]°. And we can split a hexagon into #[+input(4)] triangles, so its internal angle sum is #[+input(720)]°.
+
+  p .todo REACTIVE DIAGRAM
+
+  p.todo  In general, a polygon with #[em x] sides will have an internal angle sum of 180° µ (x - 2) = /**/.
+
+  p.todo Remember that in regular polygons, all <sides have the same length>. In addition, all angles are all the same size. Therefore we can calculate the size of a single internal angle in a regular polygon:
+
+  p.text-center angle = #[span.frac #[span #[+blank("sum of all angles|number of angles")]]#[span #[+blank("number of angles|sum of all angles")]]] = #[+frac('180° µ (<em>x</em>] - 2)', '<em>x</em>')] = 180° - #[+frac('360°','<em>x</em>')].
+
+  p.todo REGULAR POLYGON DIAGRAM
+
+  p.todo In particular, the sum of a regular polygon with <x> sides is 180• - 360• / <x> = <y>.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p.todo Circular Quadrilaterals
+  p.todo Opposite angles of parallelogram are congruent
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Tessellations
+
+  p Polygons appear everywhere in nature. They are especially useful if you want to tile a large area, because you can fit polygons together without any gaps or overlaps. These patterns are called tessellations.
+
+  p honey comb, pavement, eden project, Hexagonal Honey Comb	Quadratic Pavement Pattern	Hexagonal Greenhouse Roof
+
+  p When trying to create a tessellation, you will notice that some shapes tessellate easily, while others don’t tessellate at all. In fact, the only regular polygons that tessellate are equilateral triangles, squares and regular hexagons.
+
+  p triangles  squares	pentagons	hexagons
+  p triangles tessellate	squares tessellate	pentagons don’t tessellate	hexagons tessellate
+  p This can be explained using the internal angles of the polygons. In a tessellation, the corners of several polygons meet at one point and the sum of the angles which meet has to be 360°. If the sum is less than 360°, there is a gap; if if the sum is more, there is an overlap.
+
+  p You can also make tessellations consisting of several different polygons – as long as the angles of these shapes can still be combined to make 360°.
+
+  p Trihexagonal Tessellation
+  p So far we have only thought about which regular polygons tessellate. But of course we can also tessellate non-regular polygons. Remember that the sum of the angles in any quadrilateral is always 360°, and twice the sum of the angles in any triangle is also 360°. This means that any triangle or quadrilateral tessellates, as long as we make sure we join the right corners:
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p Penrose Tilings
+
+  p All the tessellations above have one thing in common: they consist of a certain pattern that is repeated again and again. They can continue forever in all directions and always look the same. It seems logically that all tessellations must eventually repeat themselves.
+
+  p But in the 1970s, the English mathematician Sir Roger Penrose (*1931) made an amazing discovery. He found a set of polygons which can be used to create tessellations, but these tessellations have to be non-periodic. They continue forever and while some areas will look similar, the pattern will eventually continue differently. They are called Penrose tilings, and below are some examples:
+
+  p Notice how, in the left image, you have the same patterns at various scales. The yellow pentagons, blue stars, orange rhombi and green ‘ships’ appear in their original size, in a slightly larger size (dark blue) and an even larger size (dark green). This self-similarity can be used to prove that this Penrose tiling is non-periodic.
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Polyhedra
+
+  p Up to now we have looked at what you can do with polygons in a flat, two-dimensional world. We can also connect polygons to form three-dimensional solids – these are called Polyhedra.
+
+  p The sides of a polyhedron are called faces, the lines where faces meet are called edges, and the corners where edges meet are called vertices.
+
+  p The Greeks were wrong in believing that matter consists of Platonic solids. However, like tessellations, they do appear in many other places in nature:
+
+  p circogonia icosahedra	hiv virus icosahedron	atoms in a hexedral lattice	crystal platonic solid
+  p The Circogonia Icosahedra, a Radiolarian.	Some viruses, like HIV, have the shape of Platonic solids.	Atoms in many crystal lattices are arranged in a tetrahedral, cubic or octahedral grid.
+  p Mathematics can be used to understand the development and behaviour of these shapes. The reason why they appear in nature is that their shape, because so symmetric, is very efficient. We can use that in technology and everyday life:
+
+  p octahedral space frames	stacking oranges in tetrahedra	platonic solids dice	football
+  p Octahedral space frames can support very large roofs.	The most efficient way to stack spheres is tetrahedral.	The probability of each number is the same.	The most famous polyhedron: a Truncated Icosahedron
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Platonic Solids
+
+  p Platonic solids are particularly “regular” polyhedra. They are made up of only one kind of regular polygons, and the same number of faces meet at every vertex. They are named after the Greek philosopher Plato, who discovered that there are only five polyhedra with these properties. Their names are derived from the Greek name for the number of faces (“tetra”, for example, means “four”).
+
+  p Plato believed that all matter in the Universe consists of four elements, and that these elements correspond to the Platonic solids: the Tetrahedron as fire, the cube as earth, the Octahedron as air and the Icosahedron as water. The Dodecahedron represented the Universe as a whole. Today we know that there are more than 100 elements, and that they consist of spherical atoms, not polyhedra.
+
+  p Let us think about why there aren’t any other Platonic solids. Remember that we can only use one kind of regular polygons, and that we need the same number of faces to meet at every vertex. If two faces meet at every vertex, we simply get a flat plane. Therefore we need at least 3 faces meeting at every vertex:
+
+  p These are all the possibilities, so our five Platonic Solids are indeed the only ones.
+
+  p Euler’s Formula and Dual Solids
+
+  p Now that we know there are only five Platonic solids, let us explore these in more detail. Here is a table with some of their properties:
+
+  p Notice that the number of faces plus the number of vertices always seems to be 2 more that the number of edges. In other words, F + V = E + 2. This formula was discovered by Leonhard Euler (1707 – 1783). We have just shown that it works for all Platonic solids, but in fact it is true for any polyhedron. There is a very similar formula for the number of faces, edges and vertices of planar graphs.
+
+  p Another thing we can observe from the table is that the number of faces and vertices is swapped around for cube and Octahedron, as well as for Dodecahedron and Icosahedron. The reason is that these pairs of Platonic solids are “dual”: we can convert one into the other by placing a vertex at the centre of every face, and a face where the vertices have been:
+
+  p Cube and Octahedron are dual	Icosahedron and Dodecahedron are dual
+  p The Tetrahedron is dual with itself. If we were to do the same as above we would simply get two Tetrahedra.
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Archimedean Solids
+
+  p Platonic solids are only a starting point when we think about Polyhedra. Archimedean Solids also consist of regular polygons and look the same from every direction, but they can consist of more than one type of regular polygon. In total there are 13 Archimedean solids, plus two mirror images. You can check that Euler’s formula still holds for these polyhedra.
+
+  p There are countless more polyhedra: some looking like stars, some consisting of non-regular polygons, and some having holes inside. Their symmetries can be analysed using Group theory and their properties can be explained using geometry. But, most importantly, they look amazing.
+
+  p Beautiful images and folding instructions
+  p Just like the flat tessellations we saw before, we can also try building three-dimensional “tessellations” using Platonic and Archimedean solids. The various solids have to fill space without any gaps or overlaps. There are countless ways to do this, but here are a few examples:

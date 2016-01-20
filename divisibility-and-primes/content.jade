@@ -6,8 +6,379 @@
 
 include ../mixins
 
+mixin grid(n)
+  .number-grid
+    - var i = 1
+    while i <= n
+      .number-cell= i
+      - i += 1
+
+mixin divisor-table(divisors, pairs)
+  - var len = divisors.length
+  - var last = divisors[len-1]
+  table.divisor-table
+    tr
+      td.td-border-right(width="24")= last
+      for i in divisors
+        td(width="24")= i + (i == last ? '' : ',')
+    for i in pairs
+      tr
+        td
+        if i
+          td(colspan=i)
+        td(colspan=len - 2 * i): .divisor-pair(style="height: " + (len/2 - i) + "00%")
+        if i
+          td(colspan=i)
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
 section
-  h2 Introduction
+
+  h2 Factors and Multiples
+
+  p By now you should be comfortable with basic integer arithmetic and addition, subtraction and multiplication. Division is slightly different, because you  can't always divide any integer by any other. For example 17 divided by 3 is not a whole number – it is somewhere in between 5 and 6. Of course you can give a remainder (2), of express the answer as a decimal number (5.66).
+
+  .row.padded
+    .grow
+      include svg/divisibility-1.svg
+      p.caption 12 is divisible by 3
+    .grow
+      include svg/divisibility-2.svg
+      p.caption 10 is not divisible by 3
+
+  p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] or #[strong divisor] of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. For example, #[strong.green 7] is a factor of #[strong.orange 21], because #[strong.orange 21] ÷ #[strong.green 7] = 3, and #[strong.purple 60] is a multiple of #[strong.cyan 12], because #[strong.cyan 12] µ 5 = #[strong.purple 60];
+
+section
+  p.todo SIMPLE WORDS EXERCISE
+  p In the next section we will learn about some techniques to easily check if a number is divisible by another.
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section#divisibility2
+  h2 Divisibility Rules
+  p Obviously every number is divisible by 1. To check is a number is divisible by 2, we simply have to check if it’s even or not.
+  +grid(30)
+  p Any number that ends in 0, 2, 4, 6, or 8 is divisible by 2.
+
+//- ---------------------------------------------------------------------------
+
+section#divisibility5
+  p Another easy example is the checking for divisibility by 5. Any number that ends in 0 or 5 is divisible by 5.
+  +grid(30)
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p Of course there is a reason why the rules for 2 and 5 are so simple – and that has to do with our number system. We use the number 10 as base of our number notation, which means that every digit in a number is worth 10 times as much as the next one to the right: units, tenths, hundreds, thousands, and so on.
+
+  p.todo Place Value diagram
+
+  P This means that we could write a 4-digit number abcd as
+
+  p.text-center abcd = abc µ 10 + d
+
+  p As it happens, both 2 and 5 both divide 10. Therefore they will always also divide abc µ 10, no matter what the values of a, b and c are. Now we only have to check the last digit: if d is divisible by 2 then the whole number is divisible by 2. And if d is divisible by 5 then the whole number is divisible by 5.
+  p Note that in this case, 0 is divisible by 5 because 5 µ 0 = 0. In fact, 0 is divisible by any integer.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p Now let's try to find divisibility rules for 4 and 8. Unfortunately, 4 doesn’t divide 10. However 4 divides 100, which means that we can use a similar trick. We can write abcd = ab µ 100 + cd. Since every multiple of 100 is also a multiple of 4, we only have to look at the last two digits to check if a number if divisible by 4.
+
+  p For example, 24 is divisible by 4, so 273524 is also divisible by 4. However, 18 is not divisible by 4, so 194718 is also not divisible by 4.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p The divisibility rules for 8 get even more difficult, because 100 is not divisible by 8. But #[+blank("1000|800|108")] is divisible by 8, so we have to look at the last #[+input(3)] digits.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p Now we have a quick way of determining if a number is divisible by 2, 4, 5 or 8. The easiest is the divisibility rule for 10: we just need to check if the #[+blank("last digit is a 0|first digit is a 1|last digit is even")].
+
+  p Lets practice these divisibility rules in this simple game.
+  .box.problem-box
+    .box-title: h3 Find the Divisor
+    .box-body.bubble-pop
+      .bubble-number 3653
+
+//- ---------------------------------------------------------------------------
+
+section#divisibility31
+
+  p The divisibility rule for 3 is rather more difficult. 3 doesn’t divide 10, and it also doesn’t divide 100, or 1000, or any larger power of 10. Simply looking at the last few digits of a number isn’t going to work.
+
+  p Instead we need to use the digit sum of a number, which is simply the sum of all its individual digits. For example, the digit sum of #[+var('13*n+123', 'n|3|0,20,1')] is #[+var('(123 + 13*n).toString().split("").join(" + ")')] = #[+var('digitSum(123 + 13*n)')] and the digit sum of 3524 is #[+input(14)].
+
+section#divisibility32
+  +grid(30)
+
+  p Here we’ve highlighted all numbers which are multiples of three. You can see that their digit sums are always #[+blank("a multiple of 3|either 0 or 3|odd numbers")].
+
+  p To check if any number is divisible by 3, you just have to calculate its digit sum, and check if the result is divisible by 3.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p Next, let’s look at multiples of 9:
+
+  .number-grid
+    for x in [9, 18, 27, 36, 45, 54, 63, 72, 81, 90]
+      .number-cell.yellow= x
+
+  p We can still use the digit sum to help us, but in this case the digit sum has to be divisible by 9. For example, the digit sum of 4752 is #[+input(18)], so 4752 is #[+blank("is|is not")] divisible by 9.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p Of course, these curious patterns for numbers divisible by 3 and 9 must have some reason. Like before, it has to do with the decimal representation of numbers as powers of 10. For example writing the number #[strong.m-red 6]#[strong.m-blue 3]#[strong.m-green 8]#[strong.m-yellow 4] really means
+
+  p.text-center #[strong.m-red 6 µ 1000] + #[strong.m-blue 3 µ 100] + #[strong.m-green 8 µ 10] + #[strong.m-yellow 4].
+
+  p We can write this sum a bit differently:
+
+  p.text-center #[strong.m-red #[span.digit-sum-else 6 µ 999] + #[span.digit-sum-is 6]] + #[strong.m-blue #[span.digit-sum-else 3 µ 99] + #[span.digit-sum-is 3]] + #[strong.m-green #[span.digit-sum-else 8 µ 9] + #[span.digit-sum-is 8]] + #[strong.m-yellow.digit-sum-is 4].
+
+  p Of course, #[strong.m-green 9], #[strong.m-blue 99], #[strong.m-red 999], and so on are always divisible by 3 and by 9. Therefore we only have to check that what’s left over is also divisible by 3 or 9:
+
+  p.text-center #[strong.m-red 6] + #[strong.m-blue 3] + #[strong.m-green 8] + #[strong.m-yellow 4]
+
+  p This just happens to be the digit sum! So if the #[x-target(to=".digit-sum-is") digit sum] is a multiple of 3, and we know that #[x-target(to=".digit-sum-else") everything else] is a multiple of 3, then the result must also be a multiple of 3.
+
+//- ---------------------------------------------------------------------------
+
+section#divisibility6
+  p We’ve still skipped number 6 – but we’ve already done all the hard work. Remember that 6 = 2 µ 3.
+  +grid(30)
+  p
+    span.btn.btn-bounce.btn-yellow Show multiple of 2
+    span.btn.btn-bounce.btn-yellow Show multiple of 3
+  p To check if a number is divisible by 6 we just have to check that it is divisible by 2 #[+blank("and also|or")] divisible by 3. (Note that this happens to work for 6, but certainly not for #[em any] number that is the product of two others. More on that later…)
+
+section
+  p Unfortunately there is no simple divisibility rule for 7. However we now know the rules for all other numbers from 1 to 10, so let’s try a more advanced version of the divisibility game!
+  .box.problem-box
+    .box-title: h3 Find the Divisor
+    .box-body.bubble-pop
+      .bubble-number 3653
 
 
 
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Finding Factors
+
+  p In many cases, it is not enough to find if a number is divisible by another – we need a list of #[em all] its divisors. For example, the divisors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60.
+
+  p But we don’t want to have to try 60 different numbers and check which one is a divisor. Instead we can use a simple technique, which relies on the fact that divisors always appear in pairs.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p In the case of 60 we have 60 = 1 µ 60 = 2 µ 30 = 3 µ 20 = 4 µ 15 = 5 µ 12 = 6 µ 10. Or, in a different notation,
+
+  +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
+
+  p To find all divisors of a number we simply start at both ends of this list, until we meet in the middle.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  x-slideshow
+    .stage
+      +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
+    .legend For example, the first divisor pair of 42 is simply 1 and 42, and we write them down with much space in between.
+    .legend After 1 at the beginning, we check if 2 divides 42. It does, and the corresponding pair is 42 ÷ 2 = 21.
+    .legend Next, we check if 3 divides 42. It does, and the corresponding pair if 42 ÷ 3 = 14.
+    .legend Now we check if 4 divides 42. It does not, however, so we move on.
+    .legend 5 also doesn’t divide 42 so we move on.
+    .legend 6 does divide 42 again. It's pair is 42 ÷ 6 = 7. Notice how we’ve met in the middle, without having to test all numbers from 7 to 42.
+
+  p The only special case for this method is when you have a square number. In that case, you will meet at just a single number in the middle, like 64 = 8 µ 8.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p.todo EXERCISE
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Prime Numbers
+
+  p When calculating these divisor pairs, it can happen that a number doesn't have any divisors except for the first pair. One example is 13 – its only divisors are 1 and 13 itself. These special numbers are called #[strong Prime numbers]. They can’t be broken up into products of smaller numbers, which, in a way, makes them the atoms of numbers.
+
+  p Note that by definition 1 itself, is not a prime number. The first few prime numbers are 2, 3, 5, 7, 11, 13, …
+
+  p.todo EXERCISE which is prime / composite
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p Any number which is not prime can be written as the product of prime numbers: we simply keep dividing it into more parts until all factors are prime. For example,
+
+  p.text-center.todo 84 = 2 µ 42#[br]= µ 2 µ 21#[br] 2 µ 2 µ 3 µ 7
+
+  p Now 2, 3 and 7 are prime numbers and can’t be divided further. The product 2 µ 2 µ 3 µ 7 is called the #[strong prime factorisation] of 84, and 2, 3 and 7 are its #[strong prime factors]. Note that some primes, like 2 in this case, can appear multiple times in a prime factorisation.
+
+  p Every integer has a prime factorisation and no two integers have the same prime factorisation. Furthermore, there is only one way to write a number as a product of primes – unless we count different orderings of the primes. This is called the #[strong Fundamental Theorem of Arithmetic] (FTA).
+
+  p Using the FTA can make many problems in mathematics much easier: we divide numbers into their prime factors, we solve the problem for the individual primes, which often is much easier, and then we combine these results to solve the initial problem.
+
+  p.todo EXERCISE find prime factors and prime factorisation
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section#eratosthenes
+
+  h2 The Sieve of Eratosthenes
+
+  p It can be quite difficult to find new prime numbers, or to check whether a certain number is prime. The Greek mathematician Eratosthenes of Cyrene came up with a simple method to find all prime numbers up to 100: the #[strong Sieve of Eratosthenes].
+
+  x-slideshow
+    .stage
+      +grid(100)
+    .legend  First we need to write down all numbers up to 100. We know that 1 is not prime, so we delete it.
+    .legend The smallest prime number is 2. Any multiple of 2 can’t be prime, since it has 2 as a factor. Therefore we can cross out all multiples of 2.
+    .legend The next number in our list is 3 – again a prime number. All multiples of 3 can’t be prime, since they have 3 as a factor. Therefore we can cross these out as well.
+    .legend The next number, 4, is already crossed out so we move on to 5: it is a prime number and again we cross out all multiples of 5.
+    .legend.todo 7
+    .legend.todo 11
+
+  p All remaining numbers are also crossed out already, so all remaining numbers must be prime. There are #[+blank("25|24|23")] prime numbers less than 100.
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 How many Prime Numbers are there?
+
+  p Of course we can use the Sieve of Eratosthenes or other algorithms to find larger prime numbers. There are 21 primes between 100 and 200, 16 primes between 200 and 300 and only 14 primes between 500 and 600. The primes seems to keep getting more and more spread out, but do they ever stop? Is there a biggest/last prime number?
+
+  p The Greek mathematician Euclid of Alexandria (300 BC) proved that there are infinitely many prime numbers. He used the following argument:
+
+  p: em Suppose there were only finitely many prime numbers. Let us multiply all of them together, to get a very large number which we call #[em N]. Now let us think about the number #[em N] + 1. Note that any prime that divides #[em N] cannot divide #[em N] + 1. All prime numbers we have found so far divide #[em N], so none of these primes divide #[em N] + 1.
+
+  p: em But remember that, by the Fundamental Theorem of Arithmetic, every number, including #[em N] + 1, must have a prime factor. Therefore #[em N] + 1 is either itself prime, or there is a new prime that divides #[em N] + 1. In both cases we’ve found a new prime not in our original list. Therefore our initial assumption that there are only finitely numbers must have been wrong.
+
+  p Euclid’s explanation is one of the first examples in history of a formal mathematical proof.
+
+//- ---------------------------------------------------------------------------
+
+section#primeTest
+
+  p There are many different computer algorithms to check if numbers are prime, or to find new prime numbers. Here you can try some of them:
+
+  p.todo PRIME CALCULATOR, LARGE PRIMES
+
+  p: input(class="form-field", type="number")
+  p.var result: ${isPrime}
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p The Polish mathematician Stanisław Ulam, who – incidentally – was also one of the inventors of the nuclear bombs as part of the Manhatten project, came up with a cool way to show the distribution of large prime numbers:
+
+  p.todo ULAM SPIRAL
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Least Common Multiple and Greatest Common Divisor
+
+  p.todo least common multiple
+  p.todo lcm of two numbers with repeating factors
+  p.todo lcm of three numbers
+
+  p.todo Greatest common factor
+  p.todo EXERCISE Find the greatest common factor of two (or three) integers
+
+  p.todo word problems
+
+  p.todo In the forests of Tennessee this summer, part of this code literally bursts from the ground. Nashville is usually home to the sound of blue grass and honky tonk. But every 13 years, the banjos and basses get drowned out for six weeks by the chorus of an insect that has fascinated me ever since I became a mathematician. Only found in the eastern areas of North America, this cicadas survival depends on exploiting the strange properties of some of the most fundamental numbers in mathematics - the primes, numbers that are only divisible by themselves and one. The cicadas appear periodically but only emerge after a prime number of years. In the case of the brood appearing around Nashville this year, 13 years. The forests have been quiet for 12 years since the last invasion of these mathematical bugs in 1998 and the locals won't be disturbed by them again until 2024. This choice of a 13-year cycle doesn't seem too arbitrary. There are another two broods across north America that also have this 13-year life cycle, appearing in different regions and different years. In addition there are another 12 broods that appear every 17 years. Primes are the atoms of the arithmetic - the hydrogen and oxygen of the world of numbers You could just dismiss these numbers as random. But it's very curious that there are no cicadas with 12, 14, 15, 16 or 18-year life cycles. However look at these cicadas through the mathematician's eyes and a pattern begins to emerge. Because 13 and 17 are both indivisible this gives the cicadas an evolutionary advantage as primes are helpful in avoiding other animals with periodic behaviour. Suppose for example that a predator appears every six years in the forest. Then a cicada with an eight or nine-year life cycle will coincide with the predator much more often than a cicada with a seven-year prime life cycle. These insects are tapping into the code of mathematics for their survival. The cicadas unwittingly discovered the primes using evolutionary tactics but humans have understood that these numbers not just the key to survival but are the very building blocks of the code of mathematics. Every number is built by multiplying primes together and from numbers you get mathematics and from mathematics you get the whole of science.
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 RSA Cryptography
+
+  p.todo Prime numbers are intrinsically useful in mathematics, but for a long time they were thought to have no practical application whatsoever. This changed in the second half of the 20th century, when mathematicians discovered an extremely secure way to encrypt messages using prime numbers.
+
+  p.todo It is called RSA Cryptography, and named after its three inventors, Ron Rivest, Adi Shamir and Leonard Adleman, who published it in 1977. A similar method was known to GCHQ, the cryptography arm of the British Secret Service, since 1973, but classified.
+
+  p.todo The mathematics behind RSA is described in the chapter on Cryptography. Today, RSA is used everywhere in technology, whether online banking or sending secure emails.
+
+  p.todo The cryptography that keeps our credit cards secure when we shop online exploits the same numbers that protect the cicadas in North America - the primes. Every time you send your credit card number to a website your are depending on primes to keep your details secret. To encode your credit card number your computer receives a public number N from the website, which it uses to perform a calculation with your credit card number. This scrambles your details so that the encoded message can be sent across the internet. But to decode the message the website uses the primes which divide N to undo the calculation. Although N is public, the primes which divide N are the secret keys which unlock the secret. The reason this is so secure is that although it is easy to multiply two prime numbers together it is almost impossible to pull them apart. For example no one has been able to find the two primes which divide the following 617-digit number:
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 Mysteries and Unsolved Problems
+
+  p.todo Goldbach Conjecture
+
+  p.todo Prime numbers are defined using the concept of multiplication, factors and divisors, and appear very often when you have to multiply different numbers. It therefore seems unlikely that Primes should have any link to addition, but this is the idea behind the Goldbach Conjecture:
+
+  p.todo In 1742, the German mathematician Christian Goldbach noticed that, so it seems, all even integers (except 2) can be written as the sum of two prime numbers. For example, 6 = 3 + 3, 8 = 3 + 5 or 24 = 13 + 11. He wrote this in a letter to Leonhard Euler, but neither of them was able to prove it.
+
+  p.todo Since then, computers have checked that the Goldbach Conjecture works for all even numbers up to 4 × 1018 (that’s a 4 with 18 zeros). Many mathematicians have tried, but nobody was able to find a proof. Its simplicity and difficulty make it one of the best known unsolved problems in mathematics.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p.todo The Distribution of the Primes
+
+  p.todo Above, we saw that prime numbers get rarer as numbers increase. But they also appear completely random, without regular intervals or patterns. And now and then, two primes appear next to each other, just 2 apart: these are called Twin Primes. Here are a few examples:
+
+  p.todo (3, 5), (11, 13), (41, 43), (101, 103), (2027,2029), (108377,108379), (1523651,1523653)
+
+  p.todo For very large numbers, the gaps between primes (on average) get bigger and bigger. But it seems we can always find two primes next to each other. The largest known pair of twin primes has 58711 digits! Nevertheless, it is an open problem whether there are infinitely many twin primes or not.
+
+//- ---------------------------------------------------------------------------
+
+section
+
+  p.todo Many mathematicians have thought about the structure and distribution of prime numbers. But the twin primes show that the gaps between consecutive primes are not particularly useful – they can be incredibly large or as small as 2. The German mathematician Carl Friedrich Gauss, when only 15 years old, had a much better idea: he counted how many primes there were up to a particular point. This gave rise to the Prime Counting Function, often denoted by π(x) (not to be confused by the number π):
+
+  p.todo As we zoom out of this function, it becomes very smooth, and Gauss noticed that it looked surprisingly similar to the function x/log(x) . (Here “log” is the natural logarithm which some books also denote “ln”.) Gauss predicted that these two functions are always “approximately similar”. This is called the Prime Number Theorem, and it was proved formally in 1896.
+
+  p.todo The Riemann Hypothesis
+
+  p.todo Unfortunately the Riemann hypothesis proved to be very hard, and nobody so far has managed to even make a significant attempt at a proof. So – mathematicians started to check it in many cases, and the first 10 000 000 000 000 do indeed have real part 1/2. But since there are infinitely many zeros, this doesn’t even come close to a proof.
+
+  p.todo The Fields Medal is considered the highest award in mathematics.
+
+  p.todo The Riemann hypothesis is linked to many other open problems in mathematics, which is why it is often considered one the most important unsolved problem in mathematics. However there are no practical consequences of knowing whether it is true or not.
+
+  p.todo There is a different reason for trying to prove it: in 2000 the Clay Mathematica Institute named it one of six Millennium Prize Problems and promised $1 000 000 any mathematician who proves one of them.
+
+  p.todo Only one of the Millennium Problems has been solved so far: the Poincaré conjecture by the Russian mathematician Grigori Perelman. (And it so happens that he actually declined the award!) Since many of the greatest mathematicians since Riemann himself have tried to prove his hypothesis, and failed, it is unlikely that we will find out any time soon whether it is true or not…

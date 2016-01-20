@@ -346,28 +346,24 @@ fns.GT_1_1 = function(section, chapter) {
 };
 
 fns.GT_1_2 = function(section, chapter) {
-    /*
-    section.blanks[0].on('valid', function() {
+    /* section.blanks[0].on('valid', function() {
         setTimeout( function(){ $I('handshakes-table').addClass('complete'); }, 1000);
-    });
+    }); */
 
-    var $table = $I('handshakes-table');
+    section.model.set('handshakeTable', function(n) {
+        var colours = Colour.rainbow(section.model.n);
 
-    section.vars[0].on('change', function(n) {
-        var colours = M.colour.rainbow(n);
-
-        function makePerson(x,y) {
+        function makePerson(x, y) {
             var newX= (x>=y ? x+1 : x);
             return ['<td', (x<y ? ' class="duplicate"' : ''), '><span class="person" style="background: ',
                     colours[y], '">', y+1, '</span> + <span class="person" style="background: ', colours[newX],
                     '">', newX + 1, '</span></td>'].join('');
         }
 
-        $table.html('<table class="handshakes grid">' +
-            tabulate(makePerson, n-1, n).forEach(x => `<tr${ x.join('') }</tr>`).join('') +
-            '</table>');
+        return '<table class="handshakes grid">' +
+            tabulate(makePerson, n-1, n).map(x => `<tr>${ x.join('') }</tr>`).join('') +
+            '</table>';
     });
-    */
 };
 
 fns.GT_1_3 = function(section, chapter) {
