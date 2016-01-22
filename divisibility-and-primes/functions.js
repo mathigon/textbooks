@@ -6,6 +6,7 @@
 
 import { $, $$ } from 'elements';
 import { total } from 'arrays';
+import { animate } from 'animate';
 
 
 // -----------------------------------------------------------------------------
@@ -119,6 +120,43 @@ fns.primeTest = function(section) {
 
 
     });
+};
+
+
+
+fns.race = function(section) {
+
+    let $runners = section.$el.findAll('circle');
+    let $paths = section.$el.findAll('.runner-path');
+    let pathLengths = $paths.map(p => p._el.getTotalLength());
+    let $lapTimes = section.$el.findAll('.lap-times').map($l => $l.children());
+
+    let speed = [6, 4];
+    let duration = 12;
+
+    section.$el.find('svg').on('click', function() {
+        // $play.exit(200, 'pop');
+        $lapTimes.forEach($g => { $g.forEach($l => { $l.exit(200, 'pop'); }); });
+
+        for (let i of [0, 1]) {
+            animate(function(p) {
+                let offset = ((p * duration) % speed[i]) / speed[i];
+                let point = $paths[i]._el.getPointAtLength(pathLengths[i] * offset);
+                $runners[i].attr('cx', point.x);
+                $runners[i].attr('cy', point.y);
+            }, duration * 1000);
+            for (let x = 0; x < duration/speed[i]; ++x) {
+                setTimeout(function() {
+                    $lapTimes[i][x].enter(200, 'pop');
+                }, speed[i] * (x+1) * 1000);
+            }
+        }
+
+        /* setTimeout(function() {
+            $play.enter(200, 'pop');
+        }, duration); */
+    });
+
 };
 
 

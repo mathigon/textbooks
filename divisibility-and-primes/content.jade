@@ -306,20 +306,97 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
+section#race
+
+  h2 The Least Common Multiple
+
+  p Two runners are training on a circular racing track. The first runner takes 60 seconds for one lap. The second runner only takes 40 seconds for one lap. Both start together from the XXX. When will they meet again at the start line?
+
+  include svg/race.svg
+
+  p This question really isn't about the geometry of the race track, or about velocity and speed - it is about multiples and divisibility.
+
+  o The first runner, A, crosses the start line after 60s, 120s, 180s, 240s, and so on. These are simply the <multiples> of 60. The second runner, B, crosses the start line after 40s, 80s, 120s, 160s, and so on. The first time the runners are both at the start line is 120s.
+
+  p What we've just found is the smallest number which is both a multiple of 40 and a multiple of 60. This is called the _least common multiple_ or LCM.
+
 section
 
-  h2 Least Common Multiple and Greatest Common Divisor
+  p To find the LCM of any two numbers, it is important to realise that if a divides b, then b needs to have all the prime factors which a has - plus maybe some new ones:
 
-  p.todo least common multiple
-  p.todo lcm of two numbers with repeating factors
-  p.todo lcm of three numbers
+  p 12 divides 60
+  p prime factors 2 * 2 * 3   /   prime factors 2 * 2 * 3 * 5
 
-  p.todo Greatest common factor
-  p.todo EXERCISE Find the greatest common factor of two (or three) integers
+  p This is easy to verify: if a prime factor divides 12, and 12 divides 60, then that prime factor must also divide 60.
 
-  p.todo word problems
+  p To find the LCM of 40 and 60, we need to find the prime factorisation of both:
 
-  p.todo In the forests of Tennessee this summer, part of this code literally bursts from the ground. Nashville is usually home to the sound of blue grass and honky tonk. But every 13 years, the banjos and basses get drowned out for six weeks by the chorus of an insect that has fascinated me ever since I became a mathematician. Only found in the eastern areas of North America, this cicadas survival depends on exploiting the strange properties of some of the most fundamental numbers in mathematics - the primes, numbers that are only divisible by themselves and one. The cicadas appear periodically but only emerge after a prime number of years. In the case of the brood appearing around Nashville this year, 13 years. The forests have been quiet for 12 years since the last invasion of these mathematical bugs in 1998 and the locals won't be disturbed by them again until 2024. This choice of a 13-year cycle doesn't seem too arbitrary. There are another two broods across north America that also have this 13-year life cycle, appearing in different regions and different years. In addition there are another 12 broods that appear every 17 years. Primes are the atoms of the arithmetic - the hydrogen and oxygen of the world of numbers You could just dismiss these numbers as random. But it's very curious that there are no cicadas with 12, 14, 15, 16 or 18-year life cycles. However look at these cicadas through the mathematician's eyes and a pattern begins to emerge. Because 13 and 17 are both indivisible this gives the cicadas an evolutionary advantage as primes are helpful in avoiding other animals with periodic behaviour. Suppose for example that a predator appears every six years in the forest. Then a cicada with an eight or nine-year life cycle will coincide with the predator much more often than a cicada with a seven-year prime life cycle. These insects are tapping into the code of mathematics for their survival. The cicadas unwittingly discovered the primes using evolutionary tactics but humans have understood that these numbers not just the key to survival but are the very building blocks of the code of mathematics. Every number is built by multiplying primes together and from numbers you get mathematics and from mathematics you get the whole of science.
+  p 40 = 2^3 * 5
+  p 60 = 2^2 * 3 * 5
+
+  p Suppose that X is the LCM of 40 and 60. Then 40 divides x, so 2, 2, 2 and 5 must be prime factors of x. Also, 60 divides x, so 2, 2, 3 and 5 must be prime factors of x.
+
+  p To find x, we simply combine all the prime factors of 40 and 60, but we only need duplicates once:
+
+  p 40 = 2 * 2 * 2 *       5
+  p 60 = 2 * 2 *       3 * 5
+  p x   = 2 * 2 * 2 * 3 * 5
+
+  p This gives us that x = 120, just like we saw above. Notice that if the same prime factor appears multiple times, like 2 above, we need to keep the maximum occurrences in one of the two numbers (3 times in 40 is more than 2 times in 60).
+
+  p How we have a simple method for finding the LCM of two numbers:
+  p * find the prime factorisation of each
+  p * combine all prime factors, but only count duplicates once.
+
+  p Try finding the prime factors of these examples:
+
+  p <EXERCISE>
+
+  p We can also find the LCM of three or more numbers at once, using the same technique:
+
+  p 12 =  2 * 2 * 3
+  p 30 =  2      * 3       * 5
+  p 45 =             3 * 3 * 5
+  p   x = 2 * 2 * 3 * 3 * 5
+  p x = 180
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 The Greatest common factor
+
+  p <real world problem>
+
+  p <explanation>
+
+  p <exercise>
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+
+  h2 LCM and GCD Applications
+
+  p The relationship between lcm, gcd and prime factorisation has some important results:
+  p * the lcm of two primes is simply the product of both
+  p * the gcd of two primes is always 1.
+
+  p This has some surprising results in nature:
+
+  p North America is home to certain broods of cicadas. These have the curious property that they only emerge every few years during the summer to breed - the remaining time they XXX. For example, the cicadas in XXX and XXX appear every 13 years. The cicadas in XXX appear every 17 years. There are no cicadas with 12, 14, 15 or 16 year cycles. But both 13 and 17 are prime numbers - and that has a very good reason.
+
+  p Imagine there is a predator that appears every 6 years in the forest, and a brood of cicadas appears every <13> years. Now, the two animals would meet every <n> years, which is the lcm of 6 and <13>.
+  p <DIAGRAM>
+  p Notice how this number is much larger of the cicada cycle is prime. This is because prime numbers don't share any factors with 6, so when calculating the lcm we don't have any duplicate prime factors which get canceled.
+  p <DIAGRAM MULTIPLICATION>
+
+  p Of course, cicadas have no idea what prime numbers are - but over millions of years, evolution as worked out that prime cycles are best. The predator animal seems to have gone extinct over time, but the prime number cycles have XXX.
+
+  p There are many other applications of lcm and gcd in nature, technology or everyday life. Try these interactive problems:
+  p <EXERCISES>
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
