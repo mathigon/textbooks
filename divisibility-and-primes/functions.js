@@ -49,37 +49,48 @@ function digitSum(n) {
 const fns = {};
 
 fns.divisibility2 = function(section) {
-    numberGrid(section.$el.find('.number-grid'), 1000, 'blue', i => (i % 2 === 0));
+    section.on('load', function() {
+        numberGrid(section.$el.find('.number-grid'), 1000, 'blue', i => (i % 2 === 0));
+    });
 };
 
 fns.divisibility5 = function(section) {
-    numberGrid(section.$el.find('.number-grid'), 1000, 'green', i => (i % 5 === 0));
+    section.on('load', function() {
+        numberGrid(section.$el.find('.number-grid'), 1000, 'green', i => (i % 5 === 0));
+    });
 };
 
 fns.divisibility31 = function(section) {
-    section.model.load({ digitSum });
+    section.on('load', function() {
+        section.model.load({ digitSum });
+    });
 };
 
 fns.divisibility32 = function(section) {
-    numberGrid(section.$el.find('.number-grid'), 1000, 'red', i => (i % 3 === 0));
+    section.on('load', function() {
+        numberGrid(section.$el.find('.number-grid'), 1000, 'red', i => (i % 3 === 0));
+    });
 };
 
 fns.divisibility6 = function(section) {
 
-    let buttons = section.$el.findAll('.btn');
+    section.goals.push('btn2', 'btn3');
 
-    buttons[0].on('click', function() {
+    section.on('score-btn2', function() {
         numberGrid(section.$el.find('.number-grid'), 1000, 'yellow', i => (i % 2 === 0));
     });
 
-    buttons[1].on('click', function() {
+    section.on('score-btn3', function() {
         numberGrid(section.$el.find('.number-grid'), 1000, 'blue', i => (i % 3 === 0));
     });
 
-    section.blanks[0].on('valid', function() {
+    section.on('score-blank-0', function() {
         numberGrid(section.$el.find('.number-grid'), 1000, 'green', i => (i % 6 === 0));
     });
 
+    let buttons = section.$el.findAll('.btn');
+    buttons[0].on('click', function() { section.score('btn2'); });
+    buttons[1].on('click', function() { section.score('btn3'); });
 };
 
 fns.eratosthenes = function(section) {
@@ -135,8 +146,8 @@ fns.race = function(section) {
     let duration = 12;
 
     section.$el.find('svg').on('click', function() {
-        // $play.exit(200, 'pop');
-        $lapTimes.forEach($g => { $g.forEach($l => { $l.exit(200, 'pop'); }); });
+        // $play.exit('pop', 200);
+        $lapTimes.forEach($g => { $g.forEach($l => { $l.exit('pop', 200); }); });
 
         for (let i of [0, 1]) {
             animate(function(p) {
@@ -147,13 +158,13 @@ fns.race = function(section) {
             }, duration * 1000);
             for (let x = 0; x < duration/speed[i]; ++x) {
                 setTimeout(function() {
-                    $lapTimes[i][x].enter(200, 'pop');
+                    $lapTimes[i][x].enter('pop', 200);
                 }, speed[i] * (x+1) * 1000);
             }
         }
 
         /* setTimeout(function() {
-            $play.enter(200, 'pop');
+            $play.enter('pop', 200);
         }, duration); */
     });
 

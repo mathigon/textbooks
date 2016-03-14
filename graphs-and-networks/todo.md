@@ -1,6 +1,5 @@
 # Graph Theory
 
-- Secton.score examples
 - Graph Scale Parameters
 - Three Utilities
 - Four Colour Maps
@@ -18,4 +17,14 @@
 - Graphic under construction beside ant pheromone paragraph?
 - I think this part could be explained in a bit more detail: "Finding a fast and exact algorithm would have serious implications in the field of computer science: it would mean that there are fast algorithms for all NP-hard problems. " ie, why does it imply a fast algorithm for all NP-hard problems and how many NP-hard problems are there?
 - Pop-up under construction?: Based on a study which Facebook conducted in 2011, ...
+
+
+An exciting question would now be: if you pick any two random Facebook users, how many “friendship edges” would you need to follow to get from one to the other? For example, the distance between friends is #[1], the distance between friends of friends is #[2], and so on.
+
+You can actually calculate 
+
+3.57
+
+https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/
+
 

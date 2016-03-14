@@ -37,7 +37,7 @@ section
 
   h2 Factors and Multiples
 
-  p By now you should be comfortable with basic integer arithmetic and addition, subtraction and multiplication. Division is slightly different, because you  can't always divide any integer by any other. For example 17 divided by 3 is not a whole number – it is somewhere in between 5 and 6. Of course you can give a remainder (2), of express the answer as a decimal number (5.66).
+  p By now you should be comfortable with basic integer arithmetic and addition, subtraction and multiplication. Division is slightly different, because you  can't always divide any integer by any other. For example 17 divided by 3 is not a whole number – it is somewhere in between 5 and 6. You either have to give a remainder (2), or express the answer as a decimal number (5.66).
 
   .row.padded
     .grow
@@ -47,10 +47,14 @@ section
       include svg/divisibility-2.svg
       p.caption 10 is not divisible by 3
 
-  p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] or #[strong divisor] of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. For example, #[strong.green 7] is a factor of #[strong.orange 21], because #[strong.orange 21] ÷ #[strong.green 7] = 3, and #[strong.purple 60] is a multiple of #[strong.cyan 12], because #[strong.cyan 12] µ 5 = #[strong.purple 60];
+  p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] or #[strong divisor] of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. For example, #[strong.green 7] is a factor of #[strong.orange 21], because #[strong.orange 21] ÷ #[strong.green 7] = 3, and #[strong.purple 60] is a #[+blank("multiple|factor|divisor")] of #[strong.cyan 12], because #[strong.cyan 12] µ 5 = #[strong.purple 60];
 
 section
-  p.todo SIMPLE WORDS EXERCISE
+  .box.problem-box
+    .box-title: h3 Divisors and Multiples
+    .box-body
+      p.todo TODO
+
   p In the next section we will learn about some techniques to easily check if a number is divisible by another.
 
 //- ---------------------------------------------------------------------------
@@ -152,7 +156,7 @@ section
 
   p.text-center #[strong.m-red 6] + #[strong.m-blue 3] + #[strong.m-green 8] + #[strong.m-yellow 4]
 
-  p This just happens to be the digit sum! So if the #[x-target(to=".digit-sum-is") digit sum] is a multiple of 3, and we know that #[x-target(to=".digit-sum-else") everything else] is a multiple of 3, then the result must also be a multiple of 3.
+  p This just happens to be the digit sum! So if the #[x-target(to=".digit-sum-is", no-margins) digit sum] is a multiple of 3, and we know that #[x-target(to=".digit-sum-else", no-margins) everything else] is a multiple of 3, then the result must also be a multiple of 3.
 
 //- ---------------------------------------------------------------------------
 
@@ -405,13 +409,25 @@ section
 
   h2 RSA Cryptography
 
-  p.todo Prime numbers are intrinsically useful in mathematics, but for a long time they were thought to have no practical application whatsoever. This changed in the second half of the 20th century, when mathematicians discovered an extremely secure way to encrypt messages using prime numbers.
+  p.todo Prime numbers are one of the most fundamental concepts in mathematics, but for a long time they had very few applications in engineering or science. This changed in the 20th century, with new discoveries in a field of mathematics called #[em Cryptography].
 
-  p.todo It is called RSA Cryptography, and named after its three inventors, Ron Rivest, Adi Shamir and Leonard Adleman, who published it in 1977. A similar method was known to GCHQ, the cryptography arm of the British Secret Service, since 1973, but classified.
+  p.todo For thousands of years, people have tried to conceal messages so that only the intended recipiend could read them – this is called encryption. It is used by generals exchaning secret orders during wars, as well as personal emails or online banking details.
 
-  p.todo The mathematics behind RSA is described in the chapter on Cryptography. Today, RSA is used everywhere in technology, whether online banking or sending secure emails.
+  p.todo Mathematicians always strived to come up with better, more secure encryption methods, but, after some time, they were always broken using yet more advanced algorithms. In the second world war, the German army used the Enigma: a complex machine consisting of a keyboard, rotating wheels and plugs. It encrypted messages using one of 158 million million million possiblities (that's a 158 followed by 18 zeros!). The code was widely belived to be unbreakable, but the British Secret Service, led by mathematician Alan Turing, build some of the first computers that managed to decode it.
 
-  p.todo The cryptography that keeps our credit cards secure when we shop online exploits the same numbers that protect the cicadas in North America - the primes. Every time you send your credit card number to a website your are depending on primes to keep your details secret. To encode your credit card number your computer receives a public number N from the website, which it uses to perform a calculation with your credit card number. This scrambles your details so that the encoded message can be sent across the internet. But to decode the message the website uses the primes which divide N to undo the calculation. Although N is public, the primes which divide N are the secret keys which unlock the secret. The reason this is so secure is that although it is easy to multiply two prime numbers together it is almost impossible to pull them apart. For example no one has been able to find the two primes which divide the following 617-digit number:
+  p.todo Today's computers are much chaper and more advanced, capable of trying millions of possibilities every second. To develop better encryption algorithms you have to find a mathematical operations that were very difficult for computers to do. Computers are incredibly fast at addition, subtraction, multiplication and division. However, as it turns out, computers are very slow at factorising large integers into primes…
+
+  p.todo Imagine that Alice wants to send a secret message to Bob. Bob starts by randomly picking two very large prime numbers, let's call them p and q. # pick p, pick q
+
+  p.todo Calculating the product is very easy using a computer: N = p * q = #[p*q]. However, if you only know this product it is incredibly difficult to reconstruct the two original prime factors. You would essentially have to try every possible factor, and even using every computer ever built this could take thousands of years.
+
+  p.todo The product of p and q is called Bob's _public key_: he publishes it on the internet, visible for anyone including Alice. Now Alice writes her secret message. She then uses Bob's public key N to encrypt the message.
+
+  p.todo You only need to know N to encrypt the message, but to revert it back to readable text you also need to know the original factors p and q. Since only Bob knows the original factors, and no one can calculate them quickly, Bob is the only one who can read Alice's method.
+
+  p.todo This encryption algorithm is called RSA Cryptography, after its three inventors, Ron Rivest, Adi Shamir and Leonard Adleman who published it in 1977. It turns out that a very similar method was known to the British Secret Service since 1973, but remained classified…
+
+  p.todo Today, prime numbers are used by computers all over the world to exchange data. Whenever you send an email or visit a secure website, your phone or laptop quietly generates large prime numbers and exchanges public keys with other computers.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------

@@ -9,7 +9,7 @@ include ../mixins
 section#GT_0_0(data-audio="0|40")
 
   if !user || !user.progress
-    .chapter-intro First time here? The <x-target to=".toolkit-button.help">Help panel</x-target> shows you how to get started.
+    .chapter-intro First time here? The #[x-target(to=".toolkit-button.help", no-scroll) Help panel] shows you how to get started.
 
   h2 Introduction
 
@@ -110,7 +110,7 @@ section(id="GT_1_1", data-audio='142|173')
   .row
     .grow
       p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[+var('hnd', 'hnd|5|2,15,1')] people present. Now it is easy to count the number of edges, and we find that there #[+var("(hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')")].
-      p.subsection(data-audio='162') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
+      p.subsection(data-audio='162', data-needs='blank-0 blank-1') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
     div(style='width: 220px;')
       svg.graph(style='width: 220px; height: 220px;')
 
@@ -134,15 +134,15 @@ section(id="GT_1_3", data-audio="202|229")
 
 section(id="GT_1_4", data-audio="229|278")
   p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
-  p On a different day, you are invited to a speed dating event for #[+var('m', 'm|5|slider|2,8,1')] boys and #[+var('f', 'f|4|slider|2,8,1')] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
+  p On a different day, you are invited to a speed dating event for #[+var('m', 'm|5|2,8,1')] boys and #[+var('f', 'f|4|2,8,1')] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
   .row.subsection(data-audio="245")
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
     div(style="width: 300px;"): svg.graph(style="width: 300px; height: 140px;")
-  p.subsection(data-audio="262") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are #[+var('m')] µ #[+var('f')] = #[+var('m*f')] dates.
+  p.subsection(data-audio="262", data-needs="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are #[+var('m')] µ #[+var('f')] = #[+var('m*f')] dates.
 
 //- ----------------------------------------------------------------------------------------------
 
-section(id="GT_2_0", data-steps="4", data-audio="278|318")
+section(id="GT_2_0", data-audio="278|318")
   h2 The Bridges of K&ouml;nigsberg
   .row
     .grow
@@ -155,19 +155,19 @@ section(id="GT_2_0", data-steps="4", data-audio="278|318")
     .slide
       x-solved
       include svg/bridges-1.svg
-      button.clear-button Clear
-    .slide
+      button.btn.btn-bounce Clear
+    .slide(data-needs="bride-1")
       x-solved
       include svg/bridges-2.svg
-      button.clear-button Clear
-    .slide
+      button.btn.btn-bounce Clear
+    .slide(data-needs="bride-2")
       x-solved
       include svg/bridges-3.svg
-      button.clear-button Clear
-    .slide
+      button.btn.btn-bounce Clear
+    .slide(data-needs="bride-3")
       x-solved
       include svg/bridges-4.svg
-      button.clear-button Clear
+      button.btn.btn-bounce Clear
 
 
 section(id="GT_2_1", data-audio="318|365")
@@ -175,7 +175,7 @@ section(id="GT_2_1", data-audio="318|365")
   .row
     .grow
       p First, we need to convert the city maps into graphs with edges and vertices. Every island or region of land is represented by #[+blank("a vertex|an edge|an area")] and every bridge connecting two regions is represented by a corresponding #[+blank("edge|vertex|street")].
-      p.subsection Now the problem of &#8220;touring a city while crossing every bridge exactly once&#8221; has become a problem of &#8220;drawing a graph with one continuous stroke while tracing every edge exactly once&#8221;.
+      p.subsection(data-needs="blank-0 blank-1") Now the problem of &#8220;touring a city while crossing every bridge exactly once&#8221; has become a problem of &#8220;drawing a graph with one continuous stroke while tracing every edge exactly once&#8221;.
     div(style="width: 200px")
       include svg/konigsberg.svg
 
@@ -185,7 +185,7 @@ section(data-audio="365|369")
   p.todo Interactive
 
 
-section(id="GT_2_3", data-steps="4", data-audio="369|381")
+section(id="GT_2_3", data-audio="369|381")
   p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[span.gloss#order order]:
 
   .frame.fill
@@ -194,7 +194,7 @@ section(id="GT_2_3", data-steps="4", data-audio="369|381")
     .frame-body(style="margin-bottom: -24px;"): strong These graphs are not possible:
     include svg/vertex-orders-2.svg
     .frame-body Colour vertices by
-      select
+      select.btn
         option(value="val", selected) value
         option(value="size") small and large
         option(value="prime") prime and composite
@@ -234,7 +234,7 @@ section(id="GT_3_0", data-audio="480|511")
   p Try to connect each of the plants below to each of the houses, without any of your lines crossing:
   .frame.fill
     include svg/utilities.svg
-    button.clear-button#utilities-clear Clear
+    button.btn.btn-bounce#utilities-clear Clear
 
 
 section(id="GT_3_1", data-audio="511|527")
@@ -262,7 +262,7 @@ section(id="GT_3_3", data-audio="558|568")
     .box-body
       x-solved
       svg#planarity.frame(viewBox="0 0 640 320")
-      p This is a planar graph, but the #[+var('n', 'n|6|slider|5,20,1')] vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
+      p This is a planar graph, but the #[+var('n', 'n|6|5,20,1')] vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
       button New Random Graph
 
 //- ----------------------------------------------------------------------------------------------
@@ -365,19 +365,19 @@ section(id="GT_5_1", data-audio="777|790")
     .slide
       include svg/colours-1.svg
       .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.clear-button Clear
+      button.btn.btn-bounce Clear
     .slide
       include svg/colours-2.svg
       .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.clear-button Clear
+      button.btn.btn-bounce Clear
     .slide
       include svg/colours-3.svg
       .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.clear-button Clear
+      button.btn.btn-bounce Clear
     .slide
       include svg/colours-4.svg
       .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.clear-button Clear
+      button.btn.btn-bounce Clear
   p.small.lgrey Note that states or countries which only share a #[em corner] are allowed to have the same colour. Alaska and Hawaii are isolated from all of the other states and can have any colour.
 
 
@@ -388,7 +388,7 @@ section(id="GT_5_2", data-audio="790|834")
 
   p Like before, we can convert a map with countries and borders into a planar graph: every country becomes #[+blank("a vertex|an edge|a face")], and countries which #[+blank("share a border|have the same colour")] get connected by an edge:
   p: include svg/colour-graph.svg
-  p.subsection(data-audio="824") Now we want to colour the vertices of a graph, and two vertices must have a different colour if they are connected by an edge.
+  p.subsection(data-audio="824", data-needs="blank-0 blank-1") Now we want to colour the vertices of a graph, and two vertices must have a different colour if they are connected by an edge.
 
 
 section(data-audio="834|884")
@@ -430,7 +430,7 @@ section(data-audio="961|1007")
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit <i data-var="tsn|8|slider|2,50,1">tsn</i> different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a <span class="popup blank" data-choices="complete graph|cycle|bipartite graph"></span>, so there are <span class="frac"><span><i>tsn</i> µ (<i>tsn</i> &#8211; 1)</span><span>2</span></span> = <i>tsn*(tsn-1)/2</i> edges in total.
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit <i data-var="tsn|8|2,50,1">tsn</i> different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a <span class="popup blank" data-choices="complete graph|cycle|bipartite graph"></span>, so there are <span class="frac"><span><i>tsn</i> µ (<i>tsn</i> &#8211; 1)</span><span>2</span></span> = <i>tsn*(tsn-1)/2</i> edges in total.
       p The delivery truck has to visit all cities, in any order. In the K&ouml;nigsberg bridges problem we wanted to find paths which travel along <em>every edge</em> exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
     div(style="width: 260px"): img(credit="&copy; Depositphotos / ilfede", src="/resources/graphs-and-networks/images/truck.jpg", width="260", height="280")
 
@@ -443,7 +443,7 @@ section(data-audio="1007|1021")
 
 
 section(id="GT_6_2", data-audio="1021|1076")
-  p In a graph with <i data-var="tsn1|4|slider|2,10,1">tsn1</i> cities, every Hamiltonian cycle must also contain <i>tsn1</i> cities. Now,
+  p In a graph with <i data-var="tsn1|4|2,10,1">tsn1</i> cities, every Hamiltonian cycle must also contain <i>tsn1</i> cities. Now,
   ul <i>getTsmString(tsn1)</i>
   p This means that, in total, there are <i>M.list(tsn1,1).join(' &times; ')</i> = <i>M.numberFormat(M.factorial(tsn1))</i> possible paths. A shorthand for this product is <i>tsn1</i>! or <i>tsn1</i> <strong>Factorial</strong>.
   p.subsectio(data-audio="1058") You could imagine that it might not be possible to travel directly between two cities - without going via another city. In that case we no longer have a complete graph, and finding the number of Hamiltonian cycles, if they exist at all, becomes much more difficult.
@@ -453,7 +453,7 @@ section(data-audio="1076|1136")
   .row.right
     .grow
       p So far we have ignored the fact that some cities might be further apart than others. In real life, however, this is a very important consideration: we don&rsquo;t just want to find <em>any</em> path but we want to find the shortest one. This is called the <strong>Travelling Salesman Problem</strong>. It has to be solved not only in transportation and logistics, but also when positioning transistors on microchips, to make faster computers, or when analysing the structure of <span class="gloss" id="dna">DNA</span>.
-      p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just <i data-var="tsn2|10|slider|2,20,1">tsn2</i> cities there are <i>tsn2</i>! = <i>M.numberFormat(M.factorial(tsn2))</i> possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
+      p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just <i data-var="tsn2|10|2,20,1">tsn2</i> cities there are <i>tsn2</i>! = <i>M.numberFormat(M.factorial(tsn2))</i> possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
     div(style="width: 220px"): x-media(lightbox, src="/resources/graphs-and-networks/images/microchip.jpg", width="210", height="365", credit="&copy; Depositphotos / claudiodivizia")
 
 

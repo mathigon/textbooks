@@ -137,8 +137,18 @@ export const gloss = {
     },
 
     order: {
-        title: "Order of Vertices",
-        text: "<p>The <em>order</em> of a vertex is the number of edges that meet at that vertex.</p>"
+        title: "Order",
+        text: "<p>The <em>order</em> of a graph is the number of vertices in it.</p>"
+    },
+
+    degree: {
+        title: "Degree",
+        text: "<p>The <em>degree</em> of a vertex is the number of edges that meet at that vertex.</p>"
+    },
+
+    cycle: {
+        title: "Cycle",
+        text: "<p>Cycles are graphs that consist of a single ring of vertices.</p>"
     },
 
     subdivision: {
@@ -157,26 +167,6 @@ export const gloss = {
 // Hints
 
 export const hints = {
-
-    intro1: {
-        text: 'If you click the <x-target to="section.active .section-audio">Play button</x-target> I will read out the text and give you additional instructions for questions and exercises.'
-    },
-
-    intro2: {
-        text: 'The colour blue usually indicates questions or exercises. Here are two <x-target to="#GT_0_0 x-blank">blanks</x-target> which you need to fill in.'
-    },
-
-    intro3: {
-        text: 'Every chapter consists of many short sections which are revealed step by step. Click the <x-target to=".go-next">Next button</x-target> to skip ahead.'
-    },
-
-    intro4: {
-        text: 'In the <x-target to=".toolkit-button.progress">Progress panel</x-target> you can see an overview of the sections in this chapter, and how much you have completed. You can also <x-target to=".toolkit-button.forum">chat with others</x-target> or change the <x-target to=".toolkit-button.settings">settings</x-target>.'
-    },
-
-    intro5: {
-        text: '<x-target to="#slider1">Red boxes</x-target> in the text indicate interactive numbers. Move the slider horizontally to change their value and see what happens.'
-    },
 
     firstGraphSolved: {
         text: 'Well done! All <x-target to="#graph0">graph diagrams</x-target> in this chapter are interactive: try moving the vertices around.'
@@ -257,29 +247,17 @@ const GREEN = '#31b304';
 const YELLOW = '#ff941f';
 
 fns.GT_0_0 = function(section, chapter) {
-    chapter.addHint('intro1');
-    chapter.addHint('intro2');
-    chapter.addHint('intro3');
     chapter.addGloss('graph', 'vertex', 'edge');
 
     var $graph = $C('graph', section.$el);
     new Graph($graph, 8, [[0,4],[4,5],[5,2],[5,1],[1,2],[2,3],[3,4],[3,6],[6,7],[7,3],[2,7]]);
 
-    section.needs('blank', 2, function() { chapter.addHint('firstGraphSolved'); });
-
-    section.blanks[0].on('valid', function() {
-        $graph.removeClass('novertices');
-        section.count('blank');
-    });
-
-    section.blanks[1].on('valid', function() {
-        $graph.removeClass('noedges');
-        section.count('blank');
-    });
+    section.onScore('blank-0', function() { $graph.removeClass('novertices'); });
+    section.onScore('blank-1', function() { $graph.removeClass('noedges'); });
+    section.onScore('blank-0 blank-1', function() { chapter.addHint('firstGraphSolved'); });
 };
 
 fns.GT_0_1 = function(section, chapter) {
-    chapter.addHint('intro4');
     chapter.addGloss('directed');
 
     let graphs = $$C('graph', section.$el);
@@ -289,6 +267,8 @@ fns.GT_0_1 = function(section, chapter) {
 };
 
 fns.GT_0_2 = function(section, chapter) {
+    chapter.addGloss('subgraph');
+
     let graphs = $$C('graph', section.$el);
 
     new Graph(graphs[0], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[2,5]], { vertex: BLUE, edge: BLUE });
@@ -312,6 +292,8 @@ fns.GT_0_2 = function(section, chapter) {
 };
 
 fns.GT_0_3 = function(section, chapter) {
+    chapter.addGloss('order', 'degree');
+
     let graphs = $$C('graph', section.$el);
 
     new Graph(graphs[0], 5, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,2]]);
@@ -325,6 +307,8 @@ fns.GT_0_3 = function(section, chapter) {
 };
 
 fns.GT_0_4 = function(section, chapter) {
+    chapter.addGloss('cycle');
+
     let graphs = $$C('graph', section.$el);
     new Graph(graphs[0], 3, [[0,1],[1,2],[2,0]]);
     new Graph(graphs[1], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]]);
@@ -332,8 +316,6 @@ fns.GT_0_4 = function(section, chapter) {
 };
 
 fns.GT_1_1 = function(section, chapter) {
-    chapter.addHint('intro5');
-
     let g = new Graph($C('graph', section.$el), 5, subsets(list(5), 2), { icon: person });
 
     /*
@@ -399,6 +381,8 @@ fns.GT_1_4 = function(section, chapter) {
 };
 
 fns.GT_2_0 = function(section, chapter) {
+    section.addGoals('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3')
+
     $$C('slide', section.$el).forEach(function($el, i) {
 
         let $svg = $T('svg', $el);
@@ -413,12 +397,12 @@ fns.GT_2_0 = function(section, chapter) {
 
         var map = new Drawing($svg, { paths: $paths });
         map.on('start', map.clear.bind(map));
-        $C('clear-button', $el).on('click', map.clear);
+        $el.find('.btn').on('click', map.clear);
 
         map.on('clear', function() {
             attempts += 1;
             totalCrossed = 0;
-            $error.exit(300, 'pop');
+            $error.exit('pop', 300);
             section.solveds[i]._el.hide();
 
             //if (attempts === 4)
@@ -491,20 +475,22 @@ fns.GT_2_1 = function(section, chapter) {
     $trace.hide();
 
     section.blanks[0].on('valid', function() {
-        $vertices.forEach($v => { $v.enter(400, 'pop'); });
+        $vertices.forEach($v => { $v.enter('pop', 400); });
     });
 
     section.blanks[1].on('valid', function() {
-        setTimeout(() => { [$water, $bg].concat($bridges).forEach($x => { $x.exit(800); }); }, 1600);
-        $edges.forEach($e => { $e.enter(800, 'draw'); });
+        setTimeout(() => { [$water, $bg].concat($bridges).forEach($x => { $x.exit('fade', 800); }); }, 1600);
+        $edges.forEach($e => { $e.enter('draw', 800); });
     });
 
     section.subsections[0].on('show', function() {
-        setTimeout(() => { $trace.enter(4000, 'draw'); }, 2000);
+        setTimeout(() => { $trace.enter('draw', 4000); }, 2000);
     });
 };
 
 fns.GT_2_3 = function(section, chapter) {
+    section.addGoals('c-eo', 'c-prime', 'c-size')
+
     let g = Colour.green, r = Colour.red, b = Colour.blue, o = Colour.orange;
     let colours = {
         val: Colour.rainbow(8),
@@ -513,7 +499,6 @@ fns.GT_2_3 = function(section, chapter) {
         size: [b,b,o,o,o,o,o]
     };
 
-    let done = { val: true };
     let $circles = $$T('circle', section.$el);
 
     function colour(x) {
@@ -521,10 +506,7 @@ fns.GT_2_3 = function(section, chapter) {
             let y = +$c.attr('data-value');
             $c.css('fill', colours[x][y-2]);  // -2 because no 0s and 1s
         });
-        if (!(x in done)) {
-            done[x] = true;
-            section.step();
-        }
+        section.score('c-' + x);
     }
 
     $T('select', section.$el).change(colour);
@@ -544,8 +526,8 @@ fns.GT_2_4 = function(section, chapter) {
 
     section.slides.on('next', function(x) {
         if (x < 4) {
-            $edges[2 * x - 2].enter(800, 'draw');
-            $edges[2 * x - 1].enter(800, 'draw', 800);
+            $edges[2 * x - 2].enter('draw', 800);
+            $edges[2 * x - 1].enter('draw', 800, 800);
             setTimeout(function() {
                 $text.text = 2 * x - 1;
                 $vertex.css('fill', Colour.red);
@@ -557,14 +539,14 @@ fns.GT_2_4 = function(section, chapter) {
 
         } else if (x === 5) {
             $g.animate({ css: Browser.prefix('transform'), from: 'scale(1)', to: 'scale(.4)' });
-            $trace.enter(5000, 'draw', 1000);
+            $trace.enter('draw', 5000, 1000);
         }
     });
 
     section.slides.on('back', function(x) {
         if (x < 3) {
-            $edges[2 * x + 1].exit(600, 'draw');
-            $edges[2 * x  ].exit(600, 'draw', 600);
+            $edges[2 * x + 1].exit('draw', 600);
+            $edges[2 * x  ].exit('draw', 600, 600);
             setTimeout(function() {
                 $text.text = 2 * x || '';
                 $vertex.css('fill', x ? Colour.green : '#BBB');
@@ -572,7 +554,7 @@ fns.GT_2_4 = function(section, chapter) {
 
         } else if (x === 4) {
             $g.animate({ css: Browser.prefix('transform'), from: 'scale(.4)', to: 'scale(1)' });
-            $trace.exit(1000);
+            $trace.exit('fade', 1000);
         }
     });
 };
@@ -889,7 +871,7 @@ fns.GT_5_1 = function(section, chapter) {
 
         });
 
-        $C('clear-button', $el).click(function() {
+       $el.findAll('btn').click(function() {
             stateColours = [];
             $states.forEach(function($s) { $s.css('fill', '#CCC'); });
         });
@@ -908,12 +890,12 @@ fns.GT_5_2 = function(section, chapter) {
     $edges.forEach($e => { $e.exit(); });
     $vertices.forEach($e => { $e.exit(); });
 
-    section.blanks[0].on('valid', function() {
+    section.onScore('blank-0', function() {
         $vertices.forEach($v => { $v.enter('pop', 600); });
         $countries.forEach($c => { $c.animate({ css: 'opacity', from: 1, to: .4, duration: 800 }) })
     });
 
-    section.blanks[1].on('valid', function() {
+    section.onScore('blank-1', function() {
         $edges.forEach($e => { $e.enter('draw', 800); });
         $countries.forEach($c => { $c.animate({ css: 'opacity', to: .1, duration: 800 }) })
     });
