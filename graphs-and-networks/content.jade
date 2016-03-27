@@ -8,7 +8,7 @@ include ../mixins
 
 section#GT_0_0(data-audio="0|40")
 
-  if !user || !user.progress
+  //- if !user || !user.progress
     .chapter-intro First time here? The #[x-target(to=".toolkit-button.help", no-scroll) Help panel] shows you how to get started.
 
   h2 Introduction
@@ -109,21 +109,21 @@ section(data-audio='128|142')
 section(id="GT_1_1", data-audio='142|173')
   .row
     .grow
-      p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[+var('hnd', 'hnd|5|2,15,1')] people present. Now it is easy to count the number of edges, and we find that there #[+var("(hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')")].
+      p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[+var('hnd|5|2,15,1') hnd] people present. Now it is easy to count the number of edges, and we find that there #[+var (hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')].
       p.subsection(data-audio='162', data-needs='blank-0 blank-1') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
     div(style='width: 220px;')
       svg.graph(style='width: 220px; height: 220px;')
 
 
 section(id="GT_1_2", data-audio="173|202")
-  p Each of the #[+var('n', 'n|5|2,8,1')] people at the party shakes hands with #[+var('n-1')] others. That makes #[+var('n')] µ #[+var('n-1')] = #[+var('n * (n-1)')] handshakes in total.
+  p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] µ #[+var n-1] = #[+var n * (n-1)] handshakes in total.
   p.var ${ handshakeTable(n) }
   .subsection(data-audio="184")
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var('n')] guests is #[span.frac.inline #[span #[+var('n')] µ #[+var('n-1')]]#[span 2]] = #[+var('n * (n-1) / 2')].
+    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[span.frac.inline #[span #[+var n] µ #[+var n-1]]#[span 2]] = #[+var n*(n-1)/2].
 
 
 section(id="GT_1_3", data-audio="202|229")
-  p The handshake graphs are special because every vertex is connected to every other vertex. Graphs with this property are called #[strong complete graphs]. The complete graph with #[+var('comp', 'comp|5|2,12,1')] vertices is often abbreviated as #[em K#[sub #[+var('comp')]]].
+  p The handshake graphs are special because every vertex is connected to every other vertex. Graphs with this property are called #[strong complete graphs]. The complete graph with #[+var('comp|5|2,12,1') comp] vertices is often abbreviated as #[em K#[sub #[+var comp]]].
   .row
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
@@ -134,11 +134,11 @@ section(id="GT_1_3", data-audio="202|229")
 
 section(id="GT_1_4", data-audio="229|278")
   p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
-  p On a different day, you are invited to a speed dating event for #[+var('m', 'm|5|2,8,1')] boys and #[+var('f', 'f|4|2,8,1')] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
+  p On a different day, you are invited to a speed dating event for #[+var('m|5|2,8,1') m] boys and #[+var('f|4|2,8,1') f] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
   .row.subsection(data-audio="245")
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
     div(style="width: 300px;"): svg.graph(style="width: 300px; height: 140px;")
-  p.subsection(data-audio="262", data-needs="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are #[+var('m')] µ #[+var('f')] = #[+var('m*f')] dates.
+  p.subsection(data-audio="262", data-needs="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are #[+var m] µ #[+var f] = #[+var m*f] dates.
 
 //- ----------------------------------------------------------------------------------------------
 
@@ -171,7 +171,7 @@ section(id="GT_2_0", data-audio="278|318")
 
 
 section(id="GT_2_1", data-audio="318|365")
-  p In the case of K&ouml;nigsberg it seems to be impossible to find a valid route, but some of the other cities do work. Euler managed to find a simple rule that can be applied to any city, without having to try lots of possibilities – using graph theory.
+  p In the case of Königsberg it seems to be impossible to find a valid route, but some of the other cities do work. Euler managed to find a simple rule that can be applied to any city, without having to try lots of possibilities – using graph theory.
   .row
     .grow
       p First, we need to convert the city maps into graphs with edges and vertices. Every island or region of land is represented by #[+blank("a vertex|an edge|an area")] and every bridge connecting two regions is represented by a corresponding #[+blank("edge|vertex|street")].
@@ -188,12 +188,12 @@ section(data-audio="365|369")
 section(id="GT_2_3", data-audio="369|381")
   p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[span.gloss#order order]:
 
-  .frame.fill
+  .frame.fill(style="padding: 20px")
     .frame-body(style="margin-bottom: -18px;"): strong These graphs are possible:
     include svg/vertex-orders-1.svg
     .frame-body(style="margin-bottom: -24px;"): strong These graphs are not possible:
     include svg/vertex-orders-2.svg
-    .frame-body Colour vertices by
+    .frame-body Colour vertices by&nbsp;&nbsp;
       select.btn
         option(value="val", selected) value
         option(value="size") small and large
@@ -219,7 +219,7 @@ section(data-audio="450|480")
     .grow
       p If you scroll back to the map of Königsberg, you will find that there are more than two islands with an odd number of bridges. Therefore a route that crosses every bridge exactly once is indeed impossible &#8211; and this is what Leonard Euler discovered.
       p Euler&rsquo;s discovery may not seem particularly useful in real life, but graphs are at the foundation of many other geographic problems, such as finding directions between two locations. We will discover more of these applications later.
-    div(style="width: 240px"): x-media(lightbox, credit="&copy; Depositphotos / DmitryRukhlenko", width="240", height="260", src="/resources/graphs-and-networks/images/prague.jpg")
+    div(style="width: 240px"): x-media(lightbox, credit="© Depositphotos / DmitryRukhlenko", width="240", height="260", src="/resources/graphs-and-networks/images/prague.jpg")
 
 //- ----------------------------------------------------------------------------------------------
 
@@ -230,7 +230,7 @@ section(id="GT_3_0", data-audio="480|511")
       p Let us try another simple puzzle that is related to graph theory.
       p.quote(style="margin-bottom: 0;") In a small village there are three utility plants, producing water, electricity and gas respectively, and three houses which need to be served. Unfortunately, due to the city&rsquo;s layout, the pipes or cables for every product are not allowed to cross.
     div(style="width: 300px;")
-      x-media(credit="&copy; Depositphotos / Grossinge", width="300", height="169", src="/resources/graphs-and-networks/images/factory.mp4")
+      x-media(credit="© Depositphotos / Grossinge", width="300", height="169", src="/resources/graphs-and-networks/images/factory.mp4")
   p Try to connect each of the plants below to each of the houses, without any of your lines crossing:
   .frame.fill
     include svg/utilities.svg
@@ -262,8 +262,8 @@ section(id="GT_3_3", data-audio="558|568")
     .box-body
       x-solved
       svg#planarity.frame(viewBox="0 0 640 320")
-      p This is a planar graph, but the #[+var('n', 'n|6|5,20,1')] vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-      button New Random Graph
+      p This is a planar graph, but the #[+var('n|7|5,20,1') n] vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
+      button.btn.btn-bounce New Random Graph
 
 //- ----------------------------------------------------------------------------------------------
 
@@ -273,26 +273,26 @@ section(data-audio="568|575", id="GT_4_1")
   .row
     div(style="width: 200px")
       include svg/euler-2.svg
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="6"></span> Vertices
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="5"></span> Faces
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="10"></span> Edges
+      p.text-center(style="margin: .4em 0 0") #[+input('6')] Vertices
+      p.text-center(style="margin: .4em 0 0") #[+input('5')] Faces
+      p.text-center(style="margin: .4em 0 0") #[+input('10')] Edges
       p.text-center.euler-sum 11 Vertices + Faces
     div(style="width: 200px")
       include svg/euler-1.svg
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="8"></span> Vertices
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="7"></span> Faces
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="14"></span> Edges
+      p.text-center(style="margin: .4em 0 0") #[+input('8')] Vertices
+      p.text-center(style="margin: .4em 0 0") #[+input('7')] Faces
+      p.text-center(style="margin: .4em 0 0") #[+input('14')] Edges
       p.text-center.euler-sum 15 Vertices + Faces
     div(style="width: 200px")
       include svg/euler-3.svg
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="12"></span> Vertices
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="13"></span> Faces
-      p.text-center(style="margin: .4em 0 0") <span class="blank input" data-answer="24"></span> Edges
+      p.text-center(style="margin: .4em 0 0") #[+input('12')] Vertices
+      p.text-center(style="margin: .4em 0 0") #[+input('13')] Faces
+      p.text-center(style="margin: .4em 0 0") #[+input('24')] Edges
       p.text-center.euler-sum 25 Vertices + Faces
 
 
 section(data-audio="575|609")
-  p When comparing these numbers, you will notice that the number of edges is always one less than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio#euler mathematician] who solved the K&ouml;nigsberg Bridges problem.</p>
+  p When comparing these numbers, you will notice that the number of edges is always #[+blank("one less|bigger|the same")] than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio#euler mathematician] who solved the K&ouml;nigsberg Bridges problem.</p>
   p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple <span class="gloss" id="proof">proof</span> that works for any graph&hellip;</p>
 
 
@@ -356,7 +356,7 @@ section(data-audio="742|777")
       p When colouring a map – or any other drawing consisting of distinct regions – adjacent countries cannot have the same colour. We might also want to use as few different colours as possible.
       p Some simple &#8220;maps&#8221;, like a chessboard, only need two colours (black and white), but most complex maps need more.
     div(style="margin-top: -5px;")
-      img(credit="&copy; Depositphotos / elenathewise", src="/resources/graphs-and-networks/images/globe.jpg", width="240", height="320")
+      x-media(credit="© Depositphotos / elenathewise", src="/resources/graphs-and-networks/images/globe.jpg", width="240", height="320")
 
 
 section(id="GT_5_1", data-audio="777|790")
@@ -394,7 +394,7 @@ section(id="GT_5_2", data-audio="790|834")
 section(data-audio="834|884")
   .row.right
     div(style="width: 240px;")
-      x-media(lightbox, credit="&copy; Depositphotos / sergeyussr", width="240", height="320", src="/resources/graphs-and-networks/images/england-counties.jpg")
+      x-media(lightbox, credit="© Depositphotos / sergeyussr", width="240", height="320", src="/resources/graphs-and-networks/images/england-counties.jpg")
     .grow
       p In 1852, the botany student #[x-bio#guthrie Francis Guthrie] had to colour a map of counties in England. He observed that four colours seemed to suffice for any map he tried, but he was not able to find a proof that worked for #[em all] maps. This turned out to be an extremely difficult problem, and became known as the #[strong four colour theorem].
       p During the following 100 years, many mathematicians published &#8220;proofs&#8221; to the four colour theorem, only for mistakes to be found later. Some of these invalid proofs were so convincing that it took more than 10 years to discover errors.
@@ -410,7 +410,7 @@ section(data-audio="884|909")
 section(data-audio="909|932")
   p The four colour theorem is the first well-known mathematical theorem to be proven using a computer, something that has become much more common and less controversial since. Faster computers and a more efficient algorithm mean that today you can solve the four colour theorem on a laptop in just a few hours.
   .img-block
-    img(src="/resources/graphs-and-networks/images/suffice.jpg", width="320", height="80", credit="http://www.math.illinois.edu/History/postmarks.pdf")
+    x-media(src="/resources/graphs-and-networks/images/suffice.jpg", width="320", height="80", credit="http://www.math.illinois.edu/History/postmarks.pdf")
     p.caption Postmark for the Department of Mathematics at the University of<br/>Illinois Urbana-Champaign, where Haken and Appel worked.
 
 
@@ -430,9 +430,11 @@ section(data-audio="961|1007")
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit <i data-var="tsn|8|2,50,1">tsn</i> different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a <span class="popup blank" data-choices="complete graph|cycle|bipartite graph"></span>, so there are <span class="frac"><span><i>tsn</i> µ (<i>tsn</i> &#8211; 1)</span><span>2</span></span> = <i>tsn*(tsn-1)/2</i> edges in total.
-      p The delivery truck has to visit all cities, in any order. In the K&ouml;nigsberg bridges problem we wanted to find paths which travel along <em>every edge</em> exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
-    div(style="width: 260px"): img(credit="&copy; Depositphotos / ilfede", src="/resources/graphs-and-networks/images/truck.jpg", width="260", height="280")
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[span.frac.inline #[span #[+var tsn] µ (#[+var tsn] – 1)]#[span 2]] = #[+var tsn*(tsn-1)/2} edges in total.
+
+      p The delivery truck has to visit all cities, in any order. In the Königsberg bridges problem we wanted to find paths which travel along #[em every edge] exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
+
+    div(style="width: 260px"): x-media(credit="© Depositphotos / ilfede", src="/resources/graphs-and-networks/images/truck.jpg", width="260", height="280")
 
 
 section(data-audio="1007|1021")
@@ -443,9 +445,9 @@ section(data-audio="1007|1021")
 
 
 section(id="GT_6_2", data-audio="1021|1076")
-  p In a graph with <i data-var="tsn1|4|2,10,1">tsn1</i> cities, every Hamiltonian cycle must also contain <i>tsn1</i> cities. Now,
-  ul <i>getTsmString(tsn1)</i>
-  p This means that, in total, there are <i>M.list(tsn1,1).join(' &times; ')</i> = <i>M.numberFormat(M.factorial(tsn1))</i> possible paths. A shorthand for this product is <i>tsn1</i>! or <i>tsn1</i> <strong>Factorial</strong>.
+  p In a graph with #[+var('tsn1|4|2,10,1') tsn1] cities, every Hamiltonian cycle must also contain #[+var tsn1] cities. Now,
+  ul.var ${tsmString(tsn1)}
+  p This means that, in total, there are #[+var tsnPaths(tsn1)] possible paths. A shorthand for this product is #[+var tsn1]! or #[+var tsn1] #[strong Factorial].
   p.subsectio(data-audio="1058") You could imagine that it might not be possible to travel directly between two cities - without going via another city. In that case we no longer have a complete graph, and finding the number of Hamiltonian cycles, if they exist at all, becomes much more difficult.
 
 
@@ -454,7 +456,7 @@ section(data-audio="1076|1136")
     .grow
       p So far we have ignored the fact that some cities might be further apart than others. In real life, however, this is a very important consideration: we don&rsquo;t just want to find <em>any</em> path but we want to find the shortest one. This is called the <strong>Travelling Salesman Problem</strong>. It has to be solved not only in transportation and logistics, but also when positioning transistors on microchips, to make faster computers, or when analysing the structure of <span class="gloss" id="dna">DNA</span>.
       p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just <i data-var="tsn2|10|2,20,1">tsn2</i> cities there are <i>tsn2</i>! = <i>M.numberFormat(M.factorial(tsn2))</i> possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
-    div(style="width: 220px"): x-media(lightbox, src="/resources/graphs-and-networks/images/microchip.jpg", width="210", height="365", credit="&copy; Depositphotos / claudiodivizia")
+    div(style="width: 220px"): x-media(lightbox, src="/resources/graphs-and-networks/images/microchip.jpg", width="210", height="365", credit="© Depositphotos / claudiodivizia")
 
 
 section(id="GT_6_4", data-audio="1136|1170")
@@ -498,7 +500,7 @@ section(data-audio="1230|1273")
 
 section(data-audio="1273|1307")
   .row.right
-    div(style="width: 220px"): img(style="margin-top: 5px", credit="&copy; Depositphotos / lifeonwhite", src="/resources/graphs-and-networks/images/ant.jpg", width="220", height="220")
+    div(style="width: 220px"): img(style="margin-top: 5px", credit="© Depositphotos / lifeonwhite", src="/resources/graphs-and-networks/images/ant.jpg", width="220", height="220")
     .grow
       p Ant Colony System (ACS) algorithms try to replicate this behaviour on computers, using many &#8220;virtual&#8221; ants. They can quickly find very good solutions for the travelling salesman problem.
       p One particularly useful property of ACS algorithms is that they can run continuously and adapt in real time to changes to the graph. These changes could be caused by car accidents and road closures on street networks, or by traffic spikes to web servers on computer networks.
@@ -521,7 +523,7 @@ section(data-audio="1359|1400")
     .grow
       p The internet, for example, is a vast, virtual graph. Every vertex is an individual webpage, and every edge means that there is a hyperlink between two pages. Note that links only go one way, so this graph is <span class="blank" data-choices="directed|multi-line|conected"></span>, and that this graph is <em>very, very, large</em>.</p>
       p Some websites, like Wikipedia or Facebook, have lots of incoming links, while many smaller websites may have very few incoming links. This is the underlying concept which Google uses to sort search results.</p>
-    div(style="width: 240px"): img(credit="&copy various", src="/resources/graphs-and-networks/images/internet.png", width="240", height="240")
+    div(style="width: 240px"): img(credit="© various", src="/resources/graphs-and-networks/images/internet.png", width="240", height="240")
 
 section(data-audio="1400|1436")
   p Websites with more incoming links tend to be of higher quality and should be shown at the top of the search results. For example, when searching for &#8220;London&#8221;, official tourist information sites are shown before small shops in London, or blogs of people who live in London. This simple idea from Graph theory, the <strong>Page Rank Algorithm</strong>, made Google significantly better than other early search engines.
@@ -538,20 +540,20 @@ section(data-audio="1448|1483")
   p While websites and hyperlinks form a <em>virtual</em> graph, there is also the <em>physical</em> network of computers, servers, routers, phone lines and cables.
   .row.right
     .grow: p Every time you make a phone call or load a website, network operators have to find a way to connect sender and receiver, without exceeding the capacity of any individual cable or connection. Graph theory and probability make it possible to guarantee a reliable service, for example by finding diversions when a particular connection is busy.
-    div(style="width: 220px"): x-media(lightbox src="/resources/graphs-and-networks/images/phone.jpg", width="220", height="166", credit="&copy Depositphotos / Asiana")
+    div(style="width: 220px"): x-media(lightbox src="/resources/graphs-and-networks/images/phone.jpg", width="220", height="166", credit="© Depositphotos / Asiana")
 
 
 section(data-audio="1483|1501")
   p Graphs also play an important role in transportation and navigation. All flight, train and subway networks form graphs, which can be used when creating efficient schedules. One of the most recognisable graphs is the London Underground map:
-  p: x-media(lightbox, src="/resources/graphs-and-networks/images/tube-map.png", width="720", height="480", credit="&copy Transport for London, 2014")
+  p: x-media(lightbox, src="/resources/graphs-and-networks/images/tube-map.png", width="720", height="480", credit="© Transport for London, 2014")
 
 
 section(data-audio="1501|1536")
   .row
     .grow: p All roads and motorways also form a large network, which is used by navigation services like Google Maps when working out the shortest route between two given points.
-    div(style="width: 60px"): x-media(credit="&copy; Google", src="/resources/graphs-and-networks/images/google-maps.jpg", width="70", height="70")
+    div(style="width: 60px"): x-media(credit="© Google", src="/resources/graphs-and-networks/images/google-maps.jpg", width="70", height="70")
   .row
-    div(style="width: 280px"): x-media(lightbox, credit="&copy; Depositphotos / Paha_L", src="/resources/graphs-and-networks/images/congestion.jpg", width="280", height="170")
+    div(style="width: 280px"): x-media(lightbox, credit="© Depositphotos / Paha_L", src="/resources/graphs-and-networks/images/congestion.jpg", width="280", height="170")
     .grow
       p In the future, <strong>Intelligent Transportation Systems</strong> will reduce congestion and accidents by routing cars more efficiently, using location data collected from smartphones and self-driving cars. This could save millions of hours lost on the road every year, significantly reduce pollution, and allow emergency services to travel faster.</p>
 
@@ -566,29 +568,29 @@ section(data-audio="1543|1588")
   p There are countless other graphs in science, engineering or everyday life:
   .row.graph-applications
     div(style="width: 200px")
-      x-media(lightbox, credit="&copy Depositphotos / digiart", src="/resources/graphs-and-networks/images/molecules.jpg", width="200", height="200")
+      x-media(lightbox, credit="© Depositphotos / digiart", src="/resources/graphs-and-networks/images/molecules.jpg", width="200", height="200")
       p The links between atoms in <strong>molecules</strong> and crystal grids form a graph.
     div(style="width: 200px")
-      x-media(lightbox, credit="&copy Depositphotos / angellodeco", src="/resources/graphs-and-networks/images/epidemic.jpg", width="200", height="200")
+      x-media(lightbox, credit="© Depositphotos / angellodeco", src="/resources/graphs-and-networks/images/epidemic.jpg", width="200", height="200")
       p The <strong>spread of diseases</strong> and epidemics can be modelled using a network.
     div(style="width: 200px")
-      x-media(lightbox, credit="&copy Depositphotos / CoreyFord", src="/resources/graphs-and-networks/images/evolution.jpg", width="200", height="200")
+      x-media(lightbox, credit="© Depositphotos / CoreyFord", src="/resources/graphs-and-networks/images/evolution.jpg", width="200", height="200")
       p In Biology, the <strong>evolutionary trees</strong> that show the ancestry of species form a graph.
     div(style="width: 200px")
-      x-media(lightbox, credit="&copy Depositphotos / anterovium", src="/resources/graphs-and-networks/images/network6.jpg", width="200", height="200")
+      x-media(lightbox, credit="© Depositphotos / anterovium", src="/resources/graphs-and-networks/images/network6.jpg", width="200", height="200")
       p The different components of <strong>electric circuits</strong> and computer chips form a network.
     div(style="width: 200px")
-      x-media(lightbox, credit="&copy Depositphotos / franckito", src="/resources/graphs-and-networks/images/letters.jpg", width="200", height="200")
+      x-media(lightbox, credit="© Depositphotos / franckito", src="/resources/graphs-and-networks/images/letters.jpg", width="200", height="200")
       p The grammatical structure of <strong>languages</strong> can be modelled using graphs, for example to create translation algorithms.
     div(style="width: 200px")
-      x-media(lightbox, credit="&copy Depositphotos / Yermek", src="/resources/graphs-and-networks/images/finance.jpg", width="200", height="200")
+      x-media(lightbox, credit="© Depositphotos / Yermek", src="/resources/graphs-and-networks/images/finance.jpg", width="200", height="200")
       p Graphs also have many applications in <strong>probability</strong>, <strong>game theory</strong> and <strong>financial mathematics</strong>.
 
 //- ----------------------------------------------------------------------------------------------
 
 section(data-audio="1588|1628")
   h2 Social Networks
-  p Finally, let us think about one particularly good example of graphs which exist in everyday life: social media. Here, vertices represent <span class="blank" data-choices="people|friends|networks"></span> and edges represent friendships, likes, subscriptions or followers.
+  p Finally, let us think about one particularly good example of graphs which exist in everyday life: social media. Here, vertices represent #[+blank("people|friends|networks")] and edges represent friendships, likes, subscriptions or followers.
   p When we start drawing social media graphs, we can clearly see certain <strong>clusters</strong> of mutual friends, who may have gone to the same school or live in the same city. We can also determine people's <strong>centrality</strong>, which depends on how well-connected a vertex is, and which may be a measure of a person&rsquo;s popularity in social media.
   .img-block: x-media(lightbox, src="/resources/graphs-and-networks/images/social-network.png", width="720", height="500")
 
@@ -596,23 +598,24 @@ section(data-audio="1588|1628")
 section(data-audio="1628|1670")
   .row
     .grow
-      p In 2014, Facebook had 1.23 billion active users and a total of more than 200 billion friendships. Half of all Facebook users have more than 200 friends, and since most of our friends have a similar number of friends, we could easily have tens of thousands of <em>friends of friends</em>.
-      p An exciting question would now be: if you pick any two random Facebook users, how many &#8220;friendship edges&#8221; would you need to follow to get from one to the other? For example, the distance between friends is <span class="blank input" data-answer="1"></span>, the distance between friends of friends is <span class="blank input" data-answer="2"></span>, and so on.
-    div(style="width: 200px"): img(credit="&copy; Depositphotos / Mikado767", src="/resources/graphs-and-networks/images/facebook-like.png", width="200", height="200")
+      p In 2014, Facebook had 1.4 billion active users and a total of more than 200 billion friendships. Half of all Facebook users have more than 200 friends, and since most of our friends have a similar number of friends, we could easily have tens of thousands of <em>friends of friends</em>.
+      p An exciting question would now be: if you pick any two random Facebook users, how many &#8220;friendship edges&#8221; would you need to follow to get from one to the other? For example, the distance between friends is #[+input(1)], the distance between friends of friends is #[+input(2)], and so on.
+    div(style="width: 200px"): x-media(credit="© Depositphotos / Mikado767", src="/resources/graphs-and-networks/images/facebook-like.png", width="200", height="200")
 
 
 section(data-audio="1670|1701")
-  p Based on a <a href="https://www.facebook.com/notes/facebook-data-team/anatomy-of-facebook/10150388519243859" target="_blank">study</a> which Facebook conducted in 2011, almost all pairs of users are connected through at most six friendships, and the average is only 4.74.
-  p In other words, if you pick a random person out of the millions of Facebook users all around the world, they will have a friend of a friend who knows a friend of one of your friends. And this includes celebrities, politicians or royalty&hellip;
+  p Based on a <a href="https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/" target="_blank">study</a> which Facebook conducted in 2016, you are, on average, connected to anyone else on Facebook through at most 3.57 other people: we say there are 3.57 #[strong Degrees of separation].
+  p In other words, if you pick any one of the billions of Facebook users all around the world, they will have a friend of a friend who knows a friend of one of your friends. And this includes celebrities, politicians or royalty…
   .img-block
-    x-media(lightbox src="/resources/graphs-and-networks/images/facebook.jpg", width="720", height="360", credit="&copy Facebook, 2010")
+    x-media(lightbox, src="/resources/graphs-and-networks/images/facebook.jpg", width="720", height="360", credit="© Facebook, 2010")
     p.caption Geographic visualisation of all Facebook friendships in 2010.
 
 
 section(data-audio="1701|1746")
   .row
-    div(style="width: 200px;"): img(credit="&copy Metro-Goldwyn-Mayer, 1993", src="/resources/graphs-and-networks/images/six-degrees.jpg", width="200", height="265", style="border: 1px solid #CCC")
+    div(style="width: 200px;"): x-media(credit="© Metro-Goldwyn-Mayer, 1993", src="/resources/graphs-and-networks/images/six-degrees.jpg", width="200", height="265", style="border: 1px solid #CCC")
     .grow
-      p In 1929, when the Hungarian author #[x-bio#karinthy Frigyes Karinthy] first proposed the idea of &#8220;six degrees of separation&#8221;, there was no internet or social media, but the world had already started to become more interconnected.
+      p In 1929, when the Hungarian author #[x-bio#karinthy Frigyes Karinthy] first proposed the idea of &#8220;six degrees of Separation&#8221;, there was no internet or social media, but the world had already started to become more interconnected.
       p In 1967, #[x-bio#milgram Stanley Milgram] conducted a first empirical experiment, where 296 participants living in Nebraska and Kansas were asked to deliver a letter to a particular person living in Boston, Massachusetts. They all had to choose a friend to send the letter to, who then picked another friend. At every step, the letter moved closer to Boston. Milgram found that there were, on average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
+
   p Today, every one of us is part of countless invisible graphs, which underly our social interactions, travel, internet and technology, science, and so much more.

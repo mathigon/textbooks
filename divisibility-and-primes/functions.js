@@ -18,7 +18,16 @@ export const bio = { };
 // -----------------------------------------------------------------------------
 // Glossary
 
-export const gloss = { };
+export const gloss = {
+    factor: {
+        title: "Factor",
+        text: "<p>A number A is a factor (or divisor) of a number B, if you can divide B by A without remainder.</p>"
+    },
+    multiple: {
+        title: "Multiple",
+        text: "<p>A number A is a multiple (or divisor) of a number B, if you can divide A by B without remainder.</p>"
+    }
+};
 
 
 // -----------------------------------------------------------------------------
@@ -47,6 +56,10 @@ function digitSum(n) {
 // Functions
 
 const fns = {};
+
+fns.divisibility1 = function(section, chapter) {
+    chapter.addGloss('factor', 'multiple');
+};
 
 fns.divisibility2 = function(section) {
     section.on('load', function() {

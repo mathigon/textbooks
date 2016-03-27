@@ -10,9 +10,12 @@ import Colour from 'colour';
 import Browser from 'browser';
 import Draggable from 'draggable';
 import Drawing from 'drawing';
+import { factorial } from 'combinatorics';
+import { integer } from 'probability';
+import { numberFormat, toOrdinal } from 'arithmetic'
 import { svgPointerPosn } from 'events';
 import { animate } from 'animate';
-import { Point, travellingSalesman } from 'geometry';
+import { Point, travellingSalesman, lineLineIntersect } from 'geometry';
 import { tabulate, list } from 'arrays';
 import { subsets } from 'combinatorics';
 import { $, $I, $$, $T, $C, $$C, $$T, $N } from 'elements';
@@ -316,21 +319,19 @@ fns.GT_0_4 = function(section, chapter) {
 };
 
 fns.GT_1_1 = function(section, chapter) {
-    let g = new Graph($C('graph', section.$el), 5, subsets(list(5), 2), { icon: person });
+    let g = new Graph($C('graph', section.$el), 5, [], { icon: person });
 
-    /*
-    section.vars[0].on('change', function(n) {
-        g.load(n, subsets(list(n), 2));
+    section.model.change(function() {
+        g.load(section.model.hnd, subsets(list(section.model.hnd), 2));
         g.attraction /= 2;
         g.repulsion *= 2;
     });
-    */
 };
 
 fns.GT_1_2 = function(section, chapter) {
-    /* section.blanks[0].on('valid', function() {
-        setTimeout( function(){ $I('handshakes-table').addClass('complete'); }, 1000);
-    }); */
+    section.onScore('blank-0', function() {
+        setTimeout(function() { $I('handshakes-table').addClass('complete'); }, 1000);
+    });
 
     section.model.set('handshakeTable', function(n) {
         var colours = Colour.rainbow(section.model.n);
@@ -357,27 +358,22 @@ fns.GT_1_3 = function(section, chapter) {
 };
 
 fns.GT_1_4 = function(section, chapter) {
-    /*
-    var g = new Graph($C('graph', section.$el), 0, [],
+    let g = new Graph($C('graph', section.$el), 0, [],
         { static: true, icon: person, bound: true });
 
-    section.vars[0].on('change', drawBipartiteGraph);
-    section.vars[1].on('change', drawBipartiteGraph);
+    section.model.change(function() {
+        let m = section.model.m;
+        let f = section.model.f;
 
-    function drawBipartiteGraph() {
-        var m = section.varValues.m;
-        var f = section.varValues.f;
+        let mPoints = tabulate(x => ({ x: (x+1) / (m+1) * 300, y:  30 }), m);
+        let fPoints = tabulate(x => ({ x: (x+1) / (f+1) * 300, y: 110 }), f);
 
-        var mPoints = tabulate(x => ({ x: (x+1) / (m+1) * 300, y:  30 }), m);
-        var fPoints = tabulate(x => ({ x: (x+1) / (f+1) * 300, y: 110 }), f);
-
-        var edges = [];
+        let edges = [];
         for (var i=0; i<m; ++i) for (var j=0; j<f; ++j) edges.push([i, m + j]);
 
         g.options.vertex = function(v) { return v < m ? '#20a0ff' : '#ff207e'; }
-        g.load(m + f, edges, M.concat(mPoints, fPoints));
-    }
-    */
+        g.load(m + f, edges, mPoints.concat(fPoints));
+    });
 };
 
 fns.GT_2_0 = function(section, chapter) {
@@ -385,7 +381,7 @@ fns.GT_2_0 = function(section, chapter) {
 
     $$C('slide', section.$el).forEach(function($el, i) {
 
-        let $svg = $T('svg', $el);
+        let $svg = $el.children('svg')[0];
         let $paths = $C('paths', $svg);
         let $water = $C('water', $svg);
         let $bridges = $$C('bridge', $svg);
@@ -397,7 +393,7 @@ fns.GT_2_0 = function(section, chapter) {
 
         var map = new Drawing($svg, { paths: $paths });
         map.on('start', map.clear.bind(map));
-        $el.find('.btn').on('click', map.clear);
+        $el.find('.btn').on('click', map.clear.bind(map));
 
         map.on('clear', function() {
             attempts += 1;
@@ -526,41 +522,40 @@ fns.GT_2_4 = function(section, chapter) {
 
     section.slides.on('next', function(x) {
         if (x < 4) {
-            $edges[2 * x - 2].enter('draw', 800);
-            $edges[2 * x - 1].enter('draw', 800, 800);
-            setTimeout(function() {
+            $edges[2 * x - 2].enter('draw', 600).then(function() {
                 $text.text = 2 * x - 1;
                 $vertex.css('fill', Colour.red);
-            }, 600);
-            setTimeout(function() {
+            }).then(function() {
+                return $edges[2 * x - 1].enter('draw', 600)
+            }).then(function() {
                 $text.text = 2 * x;
                 $vertex.css('fill', Colour.green);
-            }, 1000);
+            });
 
         } else if (x === 5) {
-            $g.animate({ css: Browser.prefix('transform'), from: 'scale(1)', to: 'scale(.4)' });
-            $trace.enter('draw', 5000, 1000);
+            $g.animate({ transform: ['scale(1)', 'scale(.4)'] }, 600);
+            $trace.enter('draw', 5000, 800);
         }
     });
 
     section.slides.on('back', function(x) {
         if (x < 3) {
-            $edges[2 * x + 1].exit('draw', 600);
-            $edges[2 * x  ].exit('draw', 600, 600);
-            setTimeout(function() {
+            $edges[2 * x + 1].exit('draw').then(function() {
+                return $edges[2 * x  ].exit('draw', 400);
+            }).then(function() {
                 $text.text = 2 * x || '';
                 $vertex.css('fill', x ? Colour.green : '#BBB');
-            }, 600);
+            });
 
         } else if (x === 4) {
-            $g.animate({ css: Browser.prefix('transform'), from: 'scale(.4)', to: 'scale(1)' });
+            $g.animate({ transform: ['scale(.4)', 'scale(1)'] });
             $trace.exit('fade', 1000);
         }
     });
 };
 
 fns.GT_3_0 = function(section, chapter) {
-    var $svg = $I('map-utilities');
+    /* var $svg = $I('map-utilities');
     var currentUtility;
     var startUtility;
 
@@ -647,7 +642,7 @@ fns.GT_3_0 = function(section, chapter) {
             }
             // TODO Error on connect twice
         }, $svg);
-    });
+    }); */
 };
 
 fns.GT_3_1 = function(section, chapter) {
@@ -665,90 +660,86 @@ fns.GT_3_1 = function(section, chapter) {
     let k5  = new Graph(graphs[2], 5, subsets(list(5), 2), { r: 8, static: true, posn: p5 });
 
     function transition(graph, to) {
-        let from = graph.vertices.forEach(v => [v.posn.x, v.posn.y]);
+        let from = graph.vertices.map(v => [v.posn.x, v.posn.y]);
         animate(function(q) {
-            graph.arrange(from.forEach(function(x, i) { return {
+            graph.arrange(from.map(function(x, i) { return {
                 x: to[i][0] * q + from[i][0] * (1-q),
                 y: to[i][1] * q + from[i][1] * (1-q)
             }; }));
         }, 800);
     }
 
-    section.blanks[0].on('valid', function() {
+    section.onScore('blank-0', function() {
         transition(k4, p4x);
     });
 
-    section.blanks[1].on('valid', function() {
+    section.onScore('blank-1', function() {
         transition(k5, p5x);
-        k5.edges[1].$el.animate({ css: 'stroke', to: '#C00', duration: 800 });
-        k5.edges[4].$el.animate({ css: 'stroke', to: '#C00', duration: 800 });
+        k5.edges[1].$el.animate({ stroke: '#C00' }, 800);
+        k5.edges[4].$el.animate({ stroke: '#C00' }, 800);
     });
 };
 
 fns.GT_3_3 = function(section, chapter) {
-    /*
-    var $svg = $T('svg', section.$el);
-    var $newBtn = $T('button', section.$el);
-    var creating = false;
+    let $svg = $$T('svg', section.$el)[1];
+    let $newBtn = $T('button', section.$el);
+    let creating = false;
 
-    $newBtn.on('click', function() { generateGraph(section.varValues.n); })
-    section.vars[0].on('change', function(n) { generateGraph(n); })
-
-    var g = new M.Graph($svg, 0, [], { r: 12, static: true, bound: true });
+    let graph = new Graph($svg, 0, [], { r: 12, static: true, bound: true });
 
     function shuffle(n) {
         return tabulate(function() {
-            return new Point(Math.random() * g.width, Math.random() * g.height);
+            return { x: Math.random() * graph.width, y: Math.random() * graph.height };
         }, n);
     }
 
     function generateGraph(n) {
         creating = true;
-        section.solveds[0].hide();
+        section.solveds[0]._el.hide();
 
         var points = shuffle(n);
         var edges = [];
 
         function addEdge(u, v) {
             if (u == v) return;
-            var edge = { p1: points[u], p2: points[v] };
-            for (var i=0; i<edges.length; ++i)
-                if (M.geo.lineIntersect(edge, { p1: points[edges[i][0]], p2: points[edges[i][1]] }))
+            let edge = { p1: points[u], p2: points[v] };
+            for (let i=0; i<edges.length; ++i)
+                if (lineLineIntersect(edge, { p1: points[edges[i][0]], p2: points[edges[i][1]] }))
                     return;
             edges.push([u,v]);
         }
 
-        for (let i=0; i<n; ++i) addEdge(i, M.random.int(n));
-        for (i=0; i<n; ++i) for (j=i+1; j<n; ++j) addEdge(i, j);
+        for (let i=0; i<n; ++i) addEdge(i, integer(n));
+        for (let i=0; i<n; ++i) for (let j=i+1; j<n; ++j) addEdge(i, j);
 
-        g.load(n, edges, shuffle(n));
+        graph.load(n, edges, shuffle(n));
 
-        while (!intersect(g.edges) && n > 4) {
-            g.arrange(shuffle(n));
+        while (!intersect(graph.edges) && n > 4) {
+            graph.arrange(shuffle(n));
         };
         creating = false;
     }
 
-    g.on('update', function() {
-        count = intersect(g.edges);
-        if (!creating && !count) section.solveds[0].show();
+    graph.on('update', function() {
+        let count = intersect(graph.edges);
+        if (!creating && !count) section.solveds[0]._el.show();
 
-        g.vertices.forEach(function(v) { v.$el.setClass('intersect', v.intersect); });
-        g.edges.forEach(function(e) { e.$el.setClass('intersect', e.intersect); });
+        graph.vertices.forEach(function(v) { v.$el.setClass('intersect', v.intersect); });
+        graph.edges.forEach(function(e) { e.$el.setClass('intersect', e.intersect); });
     });
 
     function intersect(edges) {
-        var count = 0;
+        let count = 0;
 
         edges.forEach(function(e) {
             e.intersect = e.vertices[0].intersect = e.vertices[1].intersect = false;
         });
 
-        for (var i=0; i<edges.length; ++i) {
-            var e1 = { p1: edges[i].vertices[0].posn, p2: edges[i].vertices[1].posn };
-            for (var j=i+1; j<edges.length; ++j) {
-                var e2 = { p1: edges[j].vertices[0].posn, p2: edges[j].vertices[1].posn };
-                if (M.geo.lineIntersect(e1, e2)) {
+        for (let i=0; i<edges.length; ++i) {
+            let e1 = { p1: edges[i].vertices[0].posn, p2: edges[i].vertices[1].posn };
+            for (let j=i+1; j<edges.length; ++j) {
+                let e2 = { p1: edges[j].vertices[0].posn, p2: edges[j].vertices[1].posn };
+                if (lineLineIntersect(e1, e2)) {
                     edges[i].intersect = edges[j].intersect = edges[i].vertices[0].intersect =
                         edges[i].vertices[1].intersect = edges[j].vertices[0].intersect =
                         edges[j].vertices[1].intersect = true;
@@ -760,29 +751,29 @@ fns.GT_3_3 = function(section, chapter) {
 
         return count;
     }
-    */
+
+    $newBtn.on('click', function() { generateGraph(section.model.n); })
+    section.model.change(function() { generateGraph(section.model.n); });
 };
 
 fns.GT_4_1 = function(section, chapter) {
-    /*
-    var $svg = section.$el.find('svg');
-    var notes = section.$el.find('.euler-sum');
+    let $svgs = section.$el.findAll('svg');
+    let $notes = section.$el.findAll('.euler-sum');
 
-    section.blanks.forEach(function(blank, i) {
-        var x = i%3;
-        var mySvg = $svg[(i-x)/3]
-        blank.on('valid', function() {
+    list(9).forEach(function(i) {
+        let x = i%3;
+        let $svg = $svgs[(i-x)/3]
+        section.onScore('blank-' + i, function() {
             if (x == 0) {
-                mySvg.find('circle').forEach(function($c) { $c.animate({ css: 'fill', to: M.colour.green, duration: 400 }); })
+                $svg.findAll('circle').forEach(function($c) { $c.animate({ fill: Colour.green }); })
             } else if (x == 1) {
-                mySvg.find('polygon').forEach(function($c) { $c.animate({ css: 'opacity', to: .3, duration: 400 }); });
-                notes[(i-x)/3].animate({ css: 'opacity', to: 1, duration: 400 });
+                $svg.findAll('polygon').forEach(function($c) { $c.animate({ opacity: .3 }); });
+                $notes[(i-x)/3].fadeIn();
             } else if (x == 2) {
-                mySvg.find('line').forEach(function($c) { $c.animate({ css: 'stroke', to: M.colour.red, duration: 400 }); })
+                $svg.findAll('line').forEach(function($c) { $c.animate({ stroke: Colour.red }); });
             }
         });
     });
-    */
 };
 
 fns.GT_4_3 = function(section, chapter) {
@@ -892,26 +883,30 @@ fns.GT_5_2 = function(section, chapter) {
 
     section.onScore('blank-0', function() {
         $vertices.forEach($v => { $v.enter('pop', 600); });
-        $countries.forEach($c => { $c.animate({ css: 'opacity', from: 1, to: .4, duration: 800 }) })
+        $countries.forEach($c => { $c.animate({ opacity: [1, .4] }, 800) })
     });
 
     section.onScore('blank-1', function() {
         $edges.forEach($e => { $e.enter('draw', 800); });
-        $countries.forEach($c => { $c.animate({ css: 'opacity', to: .1, duration: 800 }) })
+        $countries.forEach($c => { $c.animate({ opacity: .1 }, 800) })
     });
 };
 
 fns.GT_6_2 = function(section, chapter) {
-    /*
-    window.getTsmString = function(x) {
-        var a = ['There are <strong>'+x+'</strong> choices for the first city.'];
-        if (x > 2) a.push('After picking the first city, there are only <strong>'+(x-1)+'</strong> choices left for the second city.');
-        for (var i = 3; i < Math.min(6,x); ++i) a.push('Then there are <strong>'+(x-i+1)+'</strong> choices for the '+M.toOrdinal(i)+' city.');
+    section.model.set('tsmString', function(x) {
+        let a = [`There are <strong>${x}</strong> choices for the first city.`];
+        if (x > 2) a.push(`After picking the first city, there are only <strong>${x-1}</strong> choices left for the second city.`);
+        for (let i = 3; i < Math.min(6,x); ++i) a.push(`Then there are <strong>${x-i+1}</strong> choices for the ${toOrdinal(i)} city.`);
         if (x > 6) a.push('&hellip;');
-        a.push('Finally, there is only <strong>1</strong> choice left for the '+M.toOrdinal(x)+' city.');
+        a.push(`Finally, there is only <strong>1</strong> choice left for the ${toOrdinal(x)} city.`);
+
         return '<li style="margin-bottom: 0">' + a.join('</li><li style="margin-bottom: 0">') + '</li>';
-    }
-    */
+    });
+
+    section.model.set('tsnPaths', function(x) {
+        return list(x, 1).join(' µ ') + ' = ' + numberFormat(factorial(x));
+    });
+
 };
 
 fns.GT_6_4 = function(section, chapter) {

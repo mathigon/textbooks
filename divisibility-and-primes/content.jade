@@ -33,7 +33,7 @@ mixin divisor-table(divisors, pairs)
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#divisibility1
 
   h2 Factors and Multiples
 
@@ -45,9 +45,9 @@ section
       p.caption 12 is divisible by 3
     .grow
       include svg/divisibility-2.svg
-      p.caption 10 is not divisible by 3
+      p.caption 10 is not divisible by 4
 
-  p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] or #[strong divisor] of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. For example, #[strong.green 7] is a factor of #[strong.orange 21], because #[strong.orange 21] ÷ #[strong.green 7] = 3, and #[strong.purple 60] is a #[+blank("multiple|factor|divisor")] of #[strong.cyan 12], because #[strong.cyan 12] µ 5 = #[strong.purple 60];
+  p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] or #[strong divisor] of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. For example, #[strong.green 7] is a factor of #[strong.orange 21], because #[strong.orange 21] ÷ #[strong.green 7] = 3, and #[strong.purple 60] is a #[+blank("multiple|factor|divisor")] of #[strong.cyan 12], because #[strong.cyan 12] µ 5 = #[strong.purple 60].
 
 section
   .box.problem-box
@@ -119,7 +119,7 @@ section#divisibility31
 
   p The divisibility rule for 3 is rather more difficult. 3 doesn’t divide 10, and it also doesn’t divide 100, or 1000, or any larger power of 10. Simply looking at the last few digits of a number isn’t going to work.
 
-  p Instead we need to use the digit sum of a number, which is simply the sum of all its individual digits. For example, the digit sum of #[+var('13*n+123', 'n|3|0,20,1')] is #[+var('(123 + 13*n).toString().split("").join(" + ")')] = #[+var('digitSum(123 + 13*n)')] and the digit sum of 3524 is #[+input(14)].
+  p Instead we need to use the digit sum of a number, which is simply the sum of all its individual digits. For example, the digit sum of #[+var('n|3|0,20,1') 13*n+123] is #[+var (123 + 13*n).toString().split("").join(" + ")] = #[+var digitSum(123 + 13*n)] and the digit sum of 3524 is #[+input(14)].
 
 section#divisibility32
   +grid(30)

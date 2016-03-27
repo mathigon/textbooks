@@ -7,11 +7,17 @@ mixin frac(a,b)
 mixin blank(choices)
   x-blank(choices=choices)
 
-mixin var(content, bind)
+mixin var(bind)
   if bind
-    x-var(bind=bind)= '${' + content + '}'
+    x-var(bind=bind)
+      | ${
+      block
+      | }
   else
-    span.var= '${' + content+ '}'
+    span.var
+      | ${
+      block
+      | }
 
 mixin input(answer)
   x-blank(input=answer)
