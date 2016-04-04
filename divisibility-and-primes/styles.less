@@ -11,6 +11,7 @@
     margin: 1em auto;
     display: flex;
     flex-wrap: wrap;
+    .stage & { margin-bottom: 32px; }
 }
 
 .number-cell {
@@ -22,16 +23,39 @@
     text-align: center;
     font-size: 20px;
     border-radius: 100%;
-    transition: color .2s, background .2s;
+    position: relative;
+    transition: color .2s, background .2s, opacity .4s;
+
+    @media (max-width: 620px) {
+        width: 8%; padding-bottom: 8%; height: 0; line-height: 36px;
+        margin: 1%;
+        font-size: 18px;
+    }
+
+    &.off { opacity: 0.1; }
 
     &.red { color: white; background: @red; }
     &.blue { color: white; background: @blue; }
     &.green { color: white; background: @green; }
     &.yellow { color: white; background: @yellow; }
 
-    &.blue.yellow { background: linear-gradient(to bottom right, #1f7aff 50%, #FF9418 50%); }
-    &.blue.yellow.green { background: @green; }
+    #divisibility6 &.blue.yellow { background: linear-gradient(to bottom right, #1f7aff 50%, #FF9418 50%); }
+    #divisibility6 &.blue.yellow.green { background: @green; }
 }
+
+.number-badge {
+    font-size: 15px;
+    line-height: 22px;
+    width: 22px;
+    position: absolute;
+    background: @grey;
+    border-radius: 100%;
+    top: -8px;
+    right: -8px;
+    color: white;
+
+}
+
 
 .divisor-table { table-layout: fixed; }
 .divisor-table td { position: relative; padding: .5em .5em; }
@@ -46,6 +70,61 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: none;
+}
+
+
+
+
+
+.number-ball {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    min-width: 20px;
+    padding: 0 5px;
+    border-radius: 20px;
+    background: @red;
+    color: white;
+    position: relative;
+
+    &.blue { background: @blue; }
+    &.green { background: @green; }
+    &.yellow { background: @yellow; }
+
+    &.blue.cross { position: relative; background: fade(@blue, 30%); }
+    &.cross:after {
+        content: "";
+        width: 150%;
+        height: 2px;
+        background: #c00;
+        position: absolute;
+        left: -25%;
+        top: 50%;
+        transform: rotate(-45deg);
+        margin-top: -1px;
+    }
+}
+
+
+
+#twin-primes .twin { display: inline-block; }
+#twin-primes .number-ball {
+    margin: 2px 0 2px 8px;
+
+    &:nth-child(odd):after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 4px;
+        position: absolute;
+        right: -9px;
+        top: 13px;
+        background: @red;
+    }
+
+    &.blue:nth-child(odd):after { background: @blue; }
+    &.green:nth-child(odd):after { background: @green; }
+    &.yellow:nth-child(odd):after { background: @yellow; }
 }
 
 
@@ -86,11 +165,97 @@
 .bubble-number:before { top: 16px; left: 18px; }
 .bubble-number:after { bottom: 16px; right: 18px; }
 
-
 @keyframes bubble {
      0% { transform: translate(   0,      0) scale(.97,1.03); }
     25% { transform: translate(40px, -125px) scale(1.03,.97); }
     50% { transform: translate(   0, -230px) scale(.97,1.03); }
     75% { transform: translate(40px, -345px) scale(1.03,.97); }
     to  { transform: translate(   0, -460px) scale(.97,1.03); }
+}
+
+
+
+.factor-game {
+    align-items: center;
+}
+
+.factor-game-text {
+    text-align: center;
+    width: 200px;
+    .column { margin: -70px 0; display: inline-block; width: 117px; }
+    .btn { width: 100px;}
+}
+
+.factor-game-number {
+    width: 140px !important; height: 140px;
+    line-height: 140px;
+    text-align: center;
+    background: @red;
+    border-radius: 100%;
+    color: white;
+    font-size: 36px;
+}
+
+
+.calculator {
+    max-width: 400px;
+    background: @grey;
+    border-radius: 8px;
+    margin: 2em auto;
+    padding: 20px;
+    text-align: center;
+
+    h3 { margin: 0 0 1em; color: white; }
+    p { margin: 0; color: fade(white, 60%); font-size: .9em; }
+    p.result { font-size: 1.2em; color: white; margin: 0; }
+    p.small { color: fade(white, 40%); font-size:.8em; }
+
+    input {
+        display: block;
+        margin: 10px auto;
+        background: @light-grey;
+        text-align: center;
+    }
+}
+
+#riemann {
+    stroke-width: 2px;
+    line, path { vector-effect: non-scaling-stroke; }
+
+    .axis { stroke: @light-grey; }
+
+    .chart {
+        transform-origin: bottom left;
+        transform: scale(34, 16);
+        transition: transform 2s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+    }
+
+    .small-primes {
+        stroke: @blue;
+        opacity: 0.3;
+        transition: opacity .5s;
+    }
+
+    text {
+        fill: #999;
+        text-anchor: middle;
+        transition: opacity .5s;
+        font-size: 14px;
+        &.prime { fill: black; font-weight: bold; }
+    }
+
+    .zoom .chart {
+        transform: scale(1, 1);
+        transition: transform 2s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    }
+
+    .zoom .small-primes, .zoom text { opacity: 0; }
+}
+
+.divides {
+    display: inline-block;
+    width: 1px;
+    background: currentColor;
+    margin: -10px 5px;
+    height: 2em;
 }
