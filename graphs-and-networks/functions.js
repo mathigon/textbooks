@@ -106,7 +106,7 @@ export const gloss = {
 
     complete: {
         title: "Complete Graph",
-        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac white'><span><em>n</em> &times; (<em>n</em> &#8211; 1)</span><span>2</span></span> edges.</p>"
+        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac inline white'><span><em>n</em> µ (<em>n</em> – 1)</span><span>2</span></span> edges.</p>"
     },
 
     bipartite: {
@@ -115,8 +115,8 @@ export const gloss = {
     },
 
     proof: {
-        title: "Proofs",
-        text: "<p>A proof is a rigorous logical argument which shows that a mathematical statement is true, based on a set of previously known results.</p>"
+        title: "Proof",
+        text: "<p>A proof is a logical argument that shows beyond any doubt that a certain statement is true or false.</p>"
     },
 
     polyhedron: {

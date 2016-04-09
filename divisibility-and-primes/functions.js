@@ -10,6 +10,7 @@ import { animate } from 'animate';
 import thread from 'thread';
 import { numberFormat } from 'arithmetic';
 import { isPrime, lcm, goldbach, generatePrime } from 'number-theory';
+import { isOneOf } from 'utilities';
 
 
 // -----------------------------------------------------------------------------
@@ -18,27 +19,51 @@ import { isPrime, lcm, goldbach, generatePrime } from 'number-theory';
 export const bio = {
     eratosthenes: {
         name: "Eratosthenes of Cyrene",
-        birth: "around 300 BCE",
+        birth: "c. 276 BC",
+        death: "c. 195 BC",
         img: "/resources/bio/eratosthenes.jpg",
-        bio: ""
+        bio: "<p>Eratosthenes was a Greek mathematician, geographer, astronomer and poet. He first calculated the circumference of the Earth and the distance from Earth to the sun, and he drew some of the first world maps. He also discovered the Sieve of Eratosthenes, an efficient way to determine which numbers are prime.</p>"
     },
     euclid: {
         name: "Euclid of Alexandria",
         birth: "around 300 BCE",
         img: "/resources/bio/euclid.jpg",
-        bio: ""
+        bio: "<p>Euclid was a Greek mathematician and is often called the <em>father of geometry</em>. He published a book <em>Elements</em> that first introduced Euclidean geometry and contained many important proofs in geometry and number theory. It was the main textbook for teaching mathematics until the 19th century. Very little else is known about his life.</p>"
     },
     goldbach: {
         name: "Christian Goldbach",
-        birth: "around 300 BCE",
-        img: "/resources/bio/euclid.jpg",
-        bio: ""
+        birth: "1690",
+        death: "1764",
+        img: "/resources/bio/goldbach.jpg",
+        bio: "<p>Christian Goldbach was a Prussian mathematician and contemporary of Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar Peter II, and is remembered for his “Goldbach Conjecture“.</p>"
     },
     euler: {
         name: "Leonhard Euler",
-        birth: "around 300 BCE",
-        img: "/resources/bio/euclid.jpg",
-        bio: ""
+        birth: "1707",
+        death: "1783",
+        img: "/resources/bio/euler.jpg",
+        bio: "<p>Leonhard Euler is one the greatest mathematicians of all times. His work spans all areas of mathematics, and he wrote 80 volumes of research.</p><p>Euler was born in Switzerland and studied in Basel, but lived most of his life in Berlin, Prussia, and St. Petersburg, Russia.</p><p>Euler invented most of the modern mathematical terminology and notation, and made important discoveries in calculus, analysis, graph theory, physics, astronomy, and many other topics.</p>"
+    },
+    ulam: {
+        name: "Stanisław Ulam",
+        birth: "1909",
+        death: "1984",
+        img: "/resources/bio/ulam.jpg",
+        bio: "<p>Stanislaw Ulam was a Polish-American mathematician. He played an important part in the American <em>Manhatten Project</em> that developed the first nuclear weapons. He also worked on rocket propulsion using nuclear pulses, and developed the <em>Monte Carlo method</em> – and important concept in statistics.</p>"
+    },
+    gauss: {
+        name: "Carl Friedrich Gauss",
+        birth: "1777",
+        death: "1855",
+        img: "/resources/bio/gauss.jpg",
+        bio: "<p>Carl Friedrich Gauss is arguably the greatest mathematician of all times. He made groundbreaking discoveries in just about ever field of mathematics, from algebra and number theory to statistics, calculus, geometry, geology and astronomy.</p><p>According to legend, he corrected a mistake in his father‘s accounting at the age of 3, and found a way to easily add up all integers from 1 to 100 at the age of 8. He made his first important discoveries while still a teenager, and later tutored many other famous mathematicians as Professor.</p>"
+    },
+    riemann: {
+        name: "Bernhard Riemann",
+        birth: "1826",
+        death: "1866",
+        img: "/resources/bio/riemann.jpg",
+        bio: "<p>Bernhard Riemann was a German mathematician working in the fields of analysis and number theory. He came up with the first rigorous definition of integration, studied differential geometry which laid the foundation for general relativity, and made groundbreaking discoveries regarding the distribution of prime numbers.</p>"
     }
 };
 
@@ -49,11 +74,51 @@ export const bio = {
 export const gloss = {
     factor: {
         title: "Factor",
-        text: "<p>A number A is a factor (or divisor) of a number B, if you can divide B by A without remainder.</p>"
+        text: "<p>A number <em>a</em> is a factor (or divisor) of a number <em>b</em>, if you can divide <em>b</em> by <em>a</em> without remainder.</p>"
+    },
+    divisor: {
+        title: "Divisor",
+        text: "<p>Divisor is just another name for <em>factor</em>.</p>"
     },
     multiple: {
         title: "Multiple",
-        text: "<p>A number A is a multiple (or divisor) of a number B, if you can divide A by B without remainder.</p>"
+        text: "<p>A number <em>a</em> is a multiple of a number <em>b</em>, if <em>b</em> is a factor of <em>a</em>.</p>"
+    },
+    prime: {
+        title: "Prime Number",
+        text: "<p>A prime number is an integer that has no divisors other than 1 and itself.</p>"
+    },
+    primefactor: {
+        title: "Prime Factor",
+        text: "<p>A prime factor of a number is simply a factor which is prime.</p>"
+    },
+    factorisation: {
+        title: "Prime Factorisation",
+        text: "<p>The prime factorisation of a number is a way to write it as a product of prime numbers.</p>"
+    },
+    fta: {
+        title: "Fundamental Theorem of Arithemtic",
+        text: "<p>The FTA says that every integer has a unique prime factorisation.</p>"
+    },
+    proof: {
+        title: "Proof",
+        text: "<p>A proof is a logical argument that shows beyond any doubt that a certain statement is true or false.</p>"
+    },
+    lcm: {
+        title: "Lowest Common Multiple",
+        text: "<p>The lcm of two numbers <em>a</em> and <em>b</em> is the smallest integer that is a multiple of both <em>a</em> and <em>b</em>.</p>"
+    },
+    gcd: {
+        title: "Greatest Common Divisor",
+        text: "<p>The gcd of two numbers <em>a</em> and <em>b</em> is the largest integer that is a divisor of both <em>a</em> and <em>b</em>.</p>"
+    },
+    cryptography: {
+        title: "Cryptography",
+        text: "<p>Cryptography is an area of mathematics that‘s about enciphering and deciphering secret messages.</p>"
+    },
+    twins: {
+        title: "Twin Primes",
+        text: "<p>Twin primes are pairs of prime numbers like 17 and 19 which are just 2 apart.</p>"
     }
 };
 
@@ -86,7 +151,7 @@ function digitSum(n) {
 const fns = {};
 
 fns.divisibility1 = function(section, chapter) {
-    chapter.addGloss('factor', 'multiple');
+    chapter.addGloss('factor', 'multiple', 'divisor');
 };
 
 fns.divisibility2 = function(section) {
@@ -138,6 +203,14 @@ fns.divisibility6 = function(section) {
     buttons[1].on('click', function() { section.score('btn3'); });
 };
 
+fns.primes = function(section, chapter) {
+    chapter.addGloss('prime');
+};
+
+fns.primefactor = function(section, chapter) {
+    chapter.addGloss('primefactor', 'factorisation', 'fta');
+};
+
 fns.eratosthenes = function(section) {
 
     let $grid = section.$el.find('.number-grid');
@@ -165,6 +238,9 @@ fns.eratosthenes = function(section) {
 
 };
 
+fns.eulerproof = function(section, chapter) {
+    chapter.addGloss('proof');
+};
 
 
 fns.primeTest = function(section) {
@@ -181,7 +257,6 @@ fns.primeTest = function(section) {
 };
 
 
-
 fns.primeGenerator = function(section) {
 
     section.$el.find('button').on('click', function() {
@@ -193,7 +268,6 @@ fns.primeGenerator = function(section) {
         });
     });
 };
-
 
 fns.ulam = function(section) {
     let $cells = section.$el.findAll('.number-cell');
@@ -217,9 +291,8 @@ fns.ulam = function(section) {
     });
 };
 
-
-
-fns.race = function(section) {
+fns.race = function(section, chapter) {
+    chapter.addGloss('lcm');
 
     let $runners = section.$el.findAll('circle');
     let $paths = section.$el.findAll('.runner-path');
@@ -254,6 +327,25 @@ fns.race = function(section) {
 
 };
 
+fns.gcd = function(section, chapter) {
+    chapter.addGloss('gcd');
+    let $tiles = section.$el.find('.tiles');
+
+    section.model.change(function() {
+        let n = section.model.x;
+        section.model.set('result', isOneOf(n, 1, 2, 3, 6) ? 'It works!' : 'That doesn‘t seem to fit…');
+
+        $tiles.clear();
+
+        for (let x=0; x<30; x+=n) {
+            for (let y=0; y<18; y+=n) {
+                $N('rect', { x: 40 + 10 * x, y: 40 + 10 * y, width: 10 * n, height: 10 * n,
+                    stroke: '#736357', 'stroke-width': 2, fill: 'url(#tile)'}, $tiles);
+            }
+        }
+    });
+};
+
 
 fns.cicadas = function(section) {
     section.addGoals('bound-low', 'bound-high');
@@ -279,6 +371,9 @@ fns.cicadas = function(section) {
     });
 };
 
+fns.rsa = function(section, chapter) {
+    chapter.addGloss('cryptography');
+};
 
 fns.goldbach = function(section) {
     let $input = section.$el.find('input');
@@ -293,6 +388,10 @@ fns.goldbach = function(section) {
             section.model.set('time', Math.round(time));
         });
     });
+};
+
+fns.twins = function(section, chapter) {
+    chapter.addGloss('twins');
 };
 
 fns.riemann = function(section) {
