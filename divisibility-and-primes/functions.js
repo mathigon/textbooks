@@ -10,7 +10,7 @@ import { animate } from 'animate';
 import thread from 'thread';
 import { numberFormat } from 'arithmetic';
 import { isPrime, lcm, goldbach, generatePrime } from 'number-theory';
-import { isOneOf } from 'utilities';
+import { isOneOf, delay } from 'utilities';
 
 
 // -----------------------------------------------------------------------------
@@ -132,11 +132,11 @@ export const hints = { };
 // -----------------------------------------------------------------------------
 // Shared Utilities and Classes
 
-function numberGrid($grid, delay, className, filter) {
+function numberGrid($grid, time, className, filter) {
     $grid.children().forEach(function($i) {
         if (!filter(+$i.text)) return;
-        setTimeout(function() { $i.addClass(className); }, delay);
-        delay += 80;
+        delay(function() { $i.addClass(className); }, time);
+        time += 80;
     });
 }
 
@@ -175,6 +175,22 @@ fns.divisibility31 = function(section) {
 fns.divisibility32 = function(section) {
     section.on('load', function() {
         numberGrid(section.$el.find('.number-grid'), 1000, 'red', i => (i % 3 === 0));
+
+        setTimeout(function() {
+            section.$el.findAll('.number-badge').forEach(function($b, i) {
+                setTimeout(function() { $b.enter('pop'); }, 80*i);
+            });
+        }, 2000);
+    });
+};
+
+fns.divisibility9 = function(section) {
+    section.on('load', function() {
+        setTimeout(function() {
+            section.$el.findAll('.number-badge').forEach(function($b, i) {
+                setTimeout(function() { $b.enter('pop'); }, 80*i);
+            });
+        }, 1000);
     });
 };
 
@@ -186,22 +202,58 @@ fns.divisibility6 = function(section) {
 
     section.on('score-btn2', function() {
         buttons[0].exit('pop');
-        numberGrid($grid, 1000, 'yellow', i => (i % 2 === 0));
+        numberGrid($grid, 200, 'yellow', i => (i % 2 === 0));
     });
 
     section.on('score-btn3', function() {
         buttons[1].exit('pop');
-        numberGrid($grid, 1000, 'blue', i => (i % 3 === 0));
+        numberGrid($grid, 200, 'blue', i => (i % 3 === 0));
     });
 
     section.on('score-blank-0', function() {
         $grid.children().forEach($el => { $el.removeClass('yellow blue'); });
-        numberGrid($grid, 1000, 'green', i => (i % 6 === 0));
+        numberGrid($grid, 200, 'green', i => (i % 6 === 0));
     });
 
     buttons[0].on('click', function() { section.score('btn2'); });
     buttons[1].on('click', function() { section.score('btn3'); });
 };
+
+fns.factors2 = function(section) {
+    let $pairs = section.$el.findAll('.divisor-pair').reverse();
+    let $numbers = section.$el.findAll('.divisor-number');
+
+    $numbers.forEach($p => { $p.noDisplayChange = true; });
+
+    $pairs.slice(1).forEach($p => { $p.hide(); });
+    $numbers.forEach(($n, i) => { if (i > 0 && i < 7) $n.hide(); });
+
+    section.slides.on('next', function(x) {
+        switch(x) {
+            case 1: $numbers[1].enter(); $numbers[6].enter(); $pairs[1].enter(); break;
+            case 2: $numbers[2].enter(); $numbers[5].enter(); $pairs[2].enter(); break;
+            case 3: $numbers[3].html = 4; $numbers[3].enter(); break;
+            case 4: $numbers[3].exit().then(() => { $numbers[3].html = 5; $numbers[3].enter(); }); break;
+            case 5: $numbers[3].exit().then(() => {
+                $numbers[3].html = '6,'; $numbers[3].enter(); $numbers[4].enter(); $pairs[3].enter();
+            });
+        }
+    });
+
+    section.slides.on('back', function(x) {
+        switch(x) {
+            case 0: $numbers[1].exit(); $numbers[6].exit(); $pairs[1].exit(); break;
+            case 1: $numbers[2].exit(); $numbers[5].exit(); $pairs[2].exit(); break;
+            case 2: $numbers[3].exit(); break;
+            case 3: $numbers[3].exit().then(() => { $numbers[3].html = 4; $numbers[3].enter(); }); break;
+            case 4: $numbers[4].exit(); $pairs[3].exit(); $numbers[3].exit().then(() => {
+                $numbers[3].html = 5; $numbers[3].enter();
+            });
+        }
+    });
+};
+
+
 
 fns.primes = function(section, chapter) {
     chapter.addGloss('prime');
@@ -215,27 +267,25 @@ fns.eratosthenes = function(section) {
 
     let $grid = section.$el.find('.number-grid');
 
+    function colour(n, c) {
+        numberGrid($grid, 1000, c, i => (i % n === 0));
+        numberGrid($grid, 1000, 'off',  i => (i > n && i % n === 0));
+    }
+
     section.slides.on('next', function(x) {
         switch(x) {
-            case 1:
-                section.$el.find('.number-cell').addClass('off'); break;
-            case 2:
-                numberGrid($grid, 1000, 'red', i => (i % 2 === 0));
-                numberGrid($grid, 1000, 'off',  i => (i > 2 && i % 2 === 0)); break;
-            case 3:
-                numberGrid($grid, 1000, 'blue', i => (i % 3 === 0));
-                numberGrid($grid, 1000, 'off',  i => (i > 3 && i % 3 === 0)); break;
-            case 4:
-                numberGrid($grid, 1000, 'green', i => (i % 5 === 0));
-                numberGrid($grid, 1000, 'off',  i => (i > 5 && i % 5 === 0)); break;
+            case 1: section.$el.find('.number-cell').addClass('off'); break;
+            case 2: colour(2, 'red'); break;
+            case 3: colour(3, 'blue'); break;
+            case 4: colour(5, 'green'); break;
+            case 5:
+                if (section.scores.has()) {
+                    colour(7, 'yellow'); break;
+                } else {
+                    section.on('score-blank-0', function() { colour(7, 'yellow'); });
+                }
         }
     });
-
-    section.on('score-blank-0', function() {
-        numberGrid($grid, 1000, 'yellow', i => (i % 7 === 0));
-        numberGrid($grid, 1000, 'off',  i => (i > 7 && i % 7 === 0));
-    });
-
 };
 
 fns.eulerproof = function(section, chapter) {
@@ -248,10 +298,14 @@ fns.primeTest = function(section) {
 
     $input.on('blur', function() {
         let v = +$input.value;
+        if (!v) { section.model.set('result', ''); }
+        if (v > Number.MAX_SAFE_INTEGER) { section.model.set('result', 'That number is too large :('); return; }
+        section.model.set('result', '<span class="loading"></span>');
 
-        thread(isPrime, v).then(function({ data, time }) {
+        thread(isPrime, v).then(function({ data }) {
             section.model.set('result', data ? 'is prime' : 'is not prime');
-            section.model.set('time', Math.round(time));
+        }).catch(function() {
+            section.model.set('result', `Couldn‘t find a solution :(`);
         });
     });
 };
@@ -261,10 +315,13 @@ fns.primeGenerator = function(section) {
 
     section.$el.find('button').on('click', function() {
         let d = +section.model.d;
+        section.model.set('result', '<span class="loading"></span>');
 
         thread(generatePrime, d, 10000).then(function({ data, time }) {
             section.model.set('result', numberFormat(data));
             section.model.set('time', Math.round(time));
+        }).catch(function() {
+            section.model.set('result', `Couldn‘t find a prime :(`);
         });
     });
 };
@@ -380,12 +437,16 @@ fns.goldbach = function(section) {
 
     $input.on('blur', function() {
         let v = +$input.value;
+        if (!v) { section.model.set('result', ''); return; }
+        if (v % 2) { section.model.set('result', 'Pick an even number.'); return; }
+        if (v > Number.MAX_SAFE_INTEGER) { section.model.set('result', 'That number is too large :('); return; }
+        section.model.set('result', '<span class="loading"></span>');
 
         // hard: 12345678902468024
-        thread(goldbach, v, 5000).then(function({ data, time }) {
-            section.model.set('n', v);
-            section.model.set('sum', data);
-            section.model.set('time', Math.round(time));
+        thread(goldbach, v, 10000).then(function({ data }) {
+            section.model.set('result', `${v} = ${data[0]} + ${data[1]}`);
+        }).catch(function() {
+            section.model.set('result', `Couldn‘t find a solution :(`);
         });
     });
 };

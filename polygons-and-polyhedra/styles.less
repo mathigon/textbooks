@@ -7,10 +7,10 @@
 @import "styles/variables";
 
 
+.geopad { margin: 2em 0; }
 .geopad svg {
     width: 100%;
     height: 400px;
-    margin: 1.5em 0;
 }
 
 .geo-edge {
@@ -35,8 +35,41 @@
 .geo-angle {
     opacity: 0.6;
     fill: @red;
+    &.m-blue { fill: @blue; }
+    &.m-green { fill: @green; }
+    &.m-yellow { fill: @yellow; }
 }
 
+// -----------------------------------------------------------------------------
 
+.angle-values { margin-top: -44px; text-align: center; }
 
+.angle-value {
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 40px;
+    background: @light-grey;
+    padding: 3px 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    height: 36px;
+    box-sizing: border-box;
 
+    &.m-red { background: @red; color: white; }
+    &.m-blue { background: @blue; color: white; }
+    &.m-green { background: @green; color: white; }
+    &.m-yellow { background: @yellow; color: white; }
+}
+
+select.angle-value {
+    -webkit-appearance: none;
+    margin-right: 0;
+    border-radius: 40px 0 0 40px;
+    background-image: data-uri('svg/dropdown.svg');
+    background-size: 15px 8px;
+    background-position: right 9px top 15px;
+    background-repeat: no-repeat;
+    padding-right: 32px;
+
+    & + .angle-value { margin-left: 2px; border-radius: 0 40px 40px 0; }
+}

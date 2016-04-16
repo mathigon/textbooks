@@ -50,10 +50,10 @@
     position: absolute;
     background: @grey;
     border-radius: 100%;
-    top: -8px;
-    right: -8px;
+    top: -7px;
+    right: -7px;
     color: white;
-
+    display: none;
 }
 
 
@@ -106,9 +106,13 @@
 }
 
 
+.base-10 { margin: 0 auto 1em; td { padding: 0; width: 1.5em; } }
+.base-10-large { font-size: 1.8em; line-height: 1; }
 
-#twin-primes .twin { display: inline-block; }
-#twin-primes .number-ball {
+
+
+#twins .twin { display: inline-block; }
+#twins .number-ball {
     margin: 2px 0 2px 8px;
 
     &:nth-child(odd):after {
@@ -206,15 +210,23 @@
     text-align: center;
 
     h3 { margin: 0 0 1em; color: white; }
+
     p { margin: 0; color: fade(white, 60%); font-size: .9em; }
-    p.result { font-size: 1.2em; color: white; margin: 0; }
-    p.small { color: fade(white, 40%); font-size:.8em; }
+    .result { font-size: 1.2em; color: white; margin: 0; height: 30px; line-height: 1.2; }
 
     input {
         display: block;
         margin: 10px auto;
         background: @light-grey;
         text-align: center;
+    }
+
+    .loading {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url('/images/loading-white.gif');
+        background-size: 20px 20px;
     }
 }
 

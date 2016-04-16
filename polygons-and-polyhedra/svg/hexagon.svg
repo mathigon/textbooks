@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="140" height="140">
+  <title>polygons</title>
+  <polygon points="202.5 45.5 225.7 154.2 143.2 228.7 37.5 194.5 14.3 85.8 96.8 11.3 202.5 45.5" fill="#31b304"/>
+  <g opacity="0.6">
+    <line x1="37.5" y1="194.5" x2="96.8" y2="11.3" stroke="#fff" stroke-width="2"/>
+    <line x1="143.2" y1="228.7" x2="96.8" y2="11.3" stroke="#fff" stroke-width="2"/>
+    <line x1="202.5" y1="45.5" x2="143.2" y2="228.7" stroke="#fff" stroke-width="2"/>
+  </g>
+  <text transform="translate(27.2 100.1)" font-size="20" fill="#fff">180</text>
+  <text transform="translate(72.6 165)" font-size="20" fill="#fff">180</text>
+  <text transform="translate(136.1 85)" font-size="20" fill="#fff">180</text>
+  <text transform="translate(182.6 152.5)" font-size="20" fill="#fff">180</text>
+</svg>
