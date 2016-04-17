@@ -41,7 +41,7 @@ section#divisibility1
 
   h2 Factors and Multiples
 
-  p By now you should be comfortable with basic integer arithmetic and addition, subtraction and multiplication. Division is slightly different, because you  can't always divide any integer by any other. For example 17 divided by 3 is not a whole number – it is somewhere in between 5 and 6. You either have to give a remainder (2), or express the answer as a decimal number (5.66).
+  p By now you should be comfortable with basic integer arithmetic and addition, subtraction and multiplication. Division is slightly different, because you  can’t always divide any integer by any other. For example 17 divided by 3 is not a whole number – it is somewhere in between 5 and 6. You either have to give a remainder (2), or express the answer as a decimal number (5.66).
 
   .row.padded
     .grow
@@ -204,7 +204,7 @@ section
 section#divisibility6
   p We’ve still skipped number 6 – but we’ve already done all the hard work. Remember that 6 = 2 µ 3.
   +grid(40)
-  p.btn-row.text-center
+  p.btn-row.text-center(style="margin-bottom:1em")
     button.btn.btn-small.btn-bounce Show multiple of 2
     button.btn.btn-small.btn-bounce Show multiple of 3
   p To check if a number is divisible by 6 we just have to check that it is divisible by 2 #[+blank("and also|or")] divisible by 3. Note that this happens to work for 6, but certainly not for #[em any] number that is the product of two others. More on that later…
@@ -247,7 +247,7 @@ section#factors2
     .legend Next, we check if 3 divides 42. It does, and the corresponding pair if 42 ÷ 3 = 14.
     .legend Now we check if 4 divides 42. It does not, however, so we move on.
     .legend 5 also doesn’t divide 42 so we move on.
-    .legend 6 does divide 42 again. It's pair is 42 ÷ 6 = 7. Notice how we’ve met in the middle after only a few attempts, without having to test all numbers from 7 to 42.
+    .legend 6 does divide 42 again. Its pair is 42 ÷ 6 = 7. Notice how we’ve met in the middle after only a few attempts, without having to test all numbers from 7 to 42.
 
   p The only special case with this method is for square number: in that case, you will meet at just a single number in the middle, like 64 = 8 µ 8.
 
@@ -264,7 +264,7 @@ section
 section#primes
   h2 Prime Numbers
 
-  p When calculating these divisor pairs, it can happen that a number doesn't have any divisors except for the first pair. One example is 13 – its only divisors are 1 and 13 itself. These special numbers are called #[strong Prime numbers]. They can’t be broken up into products of smaller numbers, which, in a way, makes them the “atoms of numbers”.
+  p When calculating these divisor pairs, it can happen that a number doesn’t have any divisors except for the first pair. One example is 13 – its only divisors are 1 and 13 itself. These special numbers are called #[strong Prime numbers]. They can’t be broken up into products of smaller numbers, which, in a way, makes them the “atoms of numbers”.
 
   p Note that 1 itself is #[em not] a prime number, so the first few prime numbers are 2, 3, 5, 7, 11, 13, …
 
@@ -281,17 +281,17 @@ section#primefactor
   table.table-tiny
     tr
       td(colspan=4)
-      td: .number-ball 84
+      td: .number-ball.legs.b.a 84
     tr
       td(colspan=2)
       td: .number-ball.blue 2
       td(colspan=3) µ
-      td: .number-ball.blue 42
+      td: .number-ball.blue.legs.b 42
     tr
       td(colspan=4)
       td: .number-ball.green 2
       td(colspan=2) µ
-      td: .number-ball.green(style="margin: 0 -10px") 21
+      td: .number-ball.green.legs(style="margin: 0 -10px") 21
     tr.td-border-bottom
       td(colspan=6)
       td: .number-ball.yellow 3
@@ -322,7 +322,6 @@ section#primefactor
 //- ---------------------------------------------------------------------------
 
 section#eratosthenes
-
   h2 The Sieve of Eratosthenes
 
   p So far, it turned out quite difficult to determine if a number is prime: you always had to find #[em all] its prime factors, which gets more and more challenging as the numbers get bigger. Instead, the Greek mathematician #[x-bio#eratosthenes Eratosthenes of Cyrene] came up with a simple algorithm to find all prime numbers up to 100: the #[strong Sieve of Eratosthenes].
@@ -333,8 +332,8 @@ section#eratosthenes
     .legend First we need to write down all numbers up to 100.
     .legend We know that 1 is not prime, so we delete it.
     .legend The smallest prime number is #[strong.m-red 2]. Any multiple of 2 can’t be prime, since it has 2 as a factor. Therefore we can cross out all multiples of 2.
-    .legend The next number in our list is 3 – again a prime number. All multiples of 3 can’t be prime, since they have 3 as a factor. Therefore we can cross these out as well.
-    .legend The next number, 4, is already crossed out so we move on to 5: it is a prime number and again we cross out all multiples of 5.
+    .legend The next number in our list is #[strong.m-blue 3] – again a prime number. All multiples of 3 can’t be prime, since they have 3 as a factor. Therefore we can cross these out as well.
+    .legend The next number, 4, is already crossed out so we move on to #[strong.m-green 5]: it is a prime number and again we cross out all multiples of 5.
     .legend The next prime number must be #[+input(7)], since 6 is crossed out. Once more, we cross out all of its multiples.
     .legend The next prime number is #[+input(11)]. Notice, however, that all of its multiples are #[+blank('already crossed out|multiples of 3')]. The same is actually true for all other remaining numbers. Therefore all these remaining numbers must be prime.
 
@@ -391,7 +390,7 @@ section
       p With the arrival of computers in the 20th century, calculating large primes became much faster and easier. Currently, the largest known prime number has 22,338,618 digits – you would need 5000 sheets of paper to print it out! It was discovered in September 2015 using a network of many thousands of computers around the world, run by volunteers, students and universities.
 
     div(style="width: 300px")
-      img(src="/resources/divisibility-and-primes/images/network.jpg", width="200", height="200")
+      img(src="/resources/divisibility-and-primes/images/network.jpg", width="300", height="200")
       p.caption The GIMPS Project (#[em Great Internet Mersenne Prime Search]) uses a network of computers around the world to find large prime numbers.
 
 section#primeGenerator
@@ -431,7 +430,7 @@ section#ulam
   p We write down all integers in a rectangular grid, starting with 1 in the middle and then spiralling outwards. #[span.subsection Then we highlight all numbers which are prime.]
 
 section
-  p So far, the Ulam spiral doesn't look particularly exciting. But if we zoom out, interesting patterns emerge. Here are the primes up to 160,000:
+  p So far, the Ulam spiral doesn’t look particularly exciting. But if we zoom out, interesting patterns emerge. Here are the primes up to 160,000:
   .img-block: img(src="/resources/divisibility-and-primes/images/ulam.png", width="399", height="399")
 
   .row
@@ -447,62 +446,128 @@ section
 //- ---------------------------------------------------------------------------
 
 section#race
-
   h2 The Least Common Multiple
 
   p Two runners are training on a circular racing track. The #[strong.m-blue first runner] takes #[strong.m-blue 60] seconds for one lap. The #[strong.m-green second runner] only takes #[strong.m-green 40] seconds for one lap. If both leave at the same time from the start line, when will they meet again at the start?
 
-  include svg/race.svg
+  .img-block: include svg/race.svg
 
 section
-
-  p This question really isn't about the geometry of the race track, or about velocity and speed – it is about multiples and divisibility.
+  p This question really isn’t about the geometry of the race track, or about velocity and speed – it is about multiples and divisibility.
 
   p The first runner crosses the start line after 60s, 120s, 180s, 240s, and so on. These are simply the #[+blank("multiples|factors")] of #[strong.m-blue 60]. The second runner crosses the start line after 40s, 80s, 120s, 160s, and so on. The first time both runners are back at the start line is after #[+input(120)] seconds.
 
   p.subsection(needs="blank-0 blank-1") What we've just found is the smallest number which is both a multiple of #[strong.m-green 40] and a multiple of #[strong.m-blue 60]. This is called the #[strong least common multiple] or #[strong lcm].
 
-section.todo
+section
 
-  p To find the lcm of any two numbers, it is important to realise that if a divides b, then b needs to have all the prime factors which a has - plus maybe some new ones:
+  p To find the lcm of any two numbers, it is important to realise that if #[strong.m-yellow a] divides #[strong.m-blue b], then #[strong.m-blue b] needs to have all the prime factors of #[strong.m-yellow a] (plus some more):
 
-  p 12 divides 60
-  p prime factors 2 * 2 * 3   /   prime factors 2 * 2 * 3 * 5
+  table.table-tiny
+    tr
+      td.text-right: .number-ball.yellow 12
+      td: .divides
+      td.text-left: .number-ball.blue 60
+    tr
+      td
+        .number-ball.l-yellow 2
+        | &nbsp;µ&nbsp;
+        .number-ball.l-yellow 2
+        | &nbsp;µ&nbsp;
+        .number-ball.l-yellow 3
+      td
+      td
+        .number-ball.l-yellow 2
+        | &nbsp;µ&nbsp;
+        .number-ball.l-yellow 2
+        | &nbsp;µ&nbsp;
+        .number-ball.l-yellow 3
+        | &nbsp;µ&nbsp;
+        .number-ball.l-blue 5
 
-  p This is easy to verify: if a prime factor divides 12, and 12 divides 60, then that prime factor must also divide 60.
+  p This is easy to verify: if a prime factor divides #[strong.m-yellow a], and #[strong.m-yellow a] divides #[strong.m-green b], then that prime factor must #[em also] divide #[strong.m-green b].
 
-  p To find the lcm of 40 and 60, we need to find the #[x-gloss#factorisation prime factorisation] of both:
+section
+  p To find the lcm of #[strong.m-green 40] and #[strong.m-blue 60], we first need to find the #[x-gloss#factorisation prime factorisation] of both:
 
-  p 40 = 2^3 * 5
-  p 60 = 2^2 * 3 * 5
+  table.table-tiny
+    tr
+      td: .number-ball.blue 40
+      td: | =
+      td: .number-ball.l-blue 2
+      td: | µ
+      td: .number-ball.l-blue 2
+      td: | µ
+      td: .number-ball.l-blue 2
+      td(colspan=3): | µ
+      td: .number-ball.l-blue 5
+    tr
+      td: .number-ball.green 60
+      td: | =
+      td: .number-ball.l-green 2
+      td: | µ
+      td: .number-ball.l-green 2
+      td(colspan=3): | µ
+      td: .number-ball.l-green 3
+      td: | µ
+      td: .number-ball.l-green 5
 
-  p Suppose that X is the lcm of 40 and 60. Then 40 divides x, so 2, 2, 2 and 5 must be prime factors of x. Also, 60 divides x, so 2, 2, 3 and 5 must be prime factors of x.
+  p Suppose that #[strong.m-red X] is the lcm of #[strong.m-green 40] and #[strong.m-blue 60]. Then #[strong.m-green 40] divides #[strong.m-red X], so #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 5] must be prime factors of #[strong.m-red X]. Also, #[strong.m-blue 60] divides #[strong.m-red X], so #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5] must be prime factors of #[strong.m-red X].
 
-  p To find x, we simply combine all the prime factors of 40 and 60, but we only need duplicates once:
+section
+  p To find #[strong.m-red X], we simply combine all the prime factors of #[strong.m-green 40] and #[strong.m-blue 60], but any #[+blank("duplicates we only need once|xxx|xxx")]:
 
-  p 40 = 2 * 2 * 2 *       5
-  p 60 = 2 * 2 *       3 * 5
-  p x   = 2 * 2 * 2 * 3 * 5
+  p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue 2] µ #[span.number-ball.l-green 3] µ #[span.number-ball.l-blue-green 5]
 
-  p This gives us that x = 120, just like we saw above. Notice that if the same prime factor appears multiple times, like 2 above, we need to keep the maximum occurrences in one of the two numbers (3 times in 40 is more than 2 times in 60).
+  p This gives us that #[strong.m-red X] = 120, just like we saw above. Notice that if the same prime factor appears multiple times, like 2 above, we need to keep the maximum occurrences in one of the two numbers (3 times in #[strong.m-green 40] is more than 2 times in #[strong.m-blue 60]).
 
-  p How we have a simple method for finding the lcm of two numbers:
-  p * find the prime factorisation of each
-  p * combine all prime factors, but only count duplicates once.
+section
+  p Now we have a simple method for finding the lcm of two numbers:
 
-  p Try finding the prime factors of these examples:
+  ol.proof
+    li Find the prime factorisation of each number.
+    li Combine all prime factors, but only count duplicates once.
 
-  p <EXERCISE>
+  p We can use the same method to find the lcm of three or more numbers at once, like #[strong.m-blue 12], #[strong.m-green 30] and #[strong.m-yellow 45]:
 
-  p We can also find the lcm of three or more numbers at once, using the same technique:
+  table.table-tiny
+    tr
+      td: .number-ball.blue 12
+      td: | =
+      td: .number-ball.l-blue 2
+      td: | µ
+      td: .number-ball.l-blue 2
+      td: | µ
+      td: .number-ball.l-blue 3
+    tr
+      td: .number-ball.green 30
+      td: | =
+      td: .number-ball.l-green 2
+      td(colspan=3): | µ
+      td: .number-ball.l-green 3
+      td(colspan=3): | µ
+      td: .number-ball.l-green 5
+    tr
+      td: .number-ball.yellow 45
+      td: | =
+      td(colspan=4)
+      td: .number-ball.l-yellow 3
+      td: | µ
+      td: .number-ball.l-yellow 3
+      td: | µ
+      td: .number-ball.l-yellow 5
 
-  p 12 =  2 * 2 * 3
-  p 30 =  2      * 3       * 5
-  p 45 =             3 * 3 * 5
-  p   x = 2 * 2 * 3 * 3 * 5
-  p x = 180
+  p Therefore the lcm of #[strong.m-blue 12], #[strong.m-green 30] and #[strong.m-yellow 45] is 2 µ #[+input(2)] µ 3 µ 3 µ #[+input(5)] = 180.
 
-  p The lcm of two different primes is their product, because they don't have any common prime factors which would get "canceled".
+section
+  p A special case are prime numbers: the lcm of two different primes is simply their #[+blank("product|sum|difference")], because they don’t have any common prime factors which would get “canceled”.
+
+//- section
+  p Try finding the lowest common multiple of these examples:
+
+  .box.problem-box
+    .box-title: h3 Find the LCM
+    .box-body: p.todo Exercises under development…
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -510,7 +575,7 @@ section.todo
 section#gcd
   h2 The Greatest Common Factor
 
-  p An architect is planning the floor for a large courtyard that measures 18m by 30m. She want's it to be covered in quadratic tiles, without any gaps or overlaps along the sides. What is the largest size of squares she can use?
+  p An architect is planning the floor for a large courtyard that measures 18m by 30m. She wants it to be covered in quadratic tiles, without any gaps or overlaps along the sides. What is the largest size of squares she can use?
 
   .img-block
     include svg/floorplan.svg
@@ -520,28 +585,53 @@ section
   p Just like before, this question is not about geometry - it is about divisibility. The length of the sides of the tiles has to divide both 18 and 30, and the largest possible number with that property is #[+input(6)]. This is called the #[strong Greatest Common Divisor] or #[strong gcd] of 18 and 30.
 
 section
-  p We can calculate the gcd of any two numbers using their #[x-gloss#factorisation prime factorisation]. The key is to observe that any divisor of a number contains a subset of the divisors of that number.
+  p Once again, we can use the #[x-gloss#factorisation prime factorisation] to calculate the gcd of any two numbers. Remember that any divisor of a number must have some of the prime factors of that number.
 
-  p.todo DIAGRAM
+  table.table-tiny
+    tr
+      td: .number-ball.blue 18
+      td: | =
+      td: .number-ball.l-blue 2
+      td: | µ
+      td: .number-ball.l-blue 3
+      td: | µ
+      td: .number-ball.l-blue 3
+    tr
+      td: .number-ball.green 30
+      td: | =
+      td: .number-ball.l-green 2
+      td: | µ
+      td: .number-ball.l-green 3
+      td(colspan=3): | µ
+      td: .number-ball.l-green 5
 
-  p To find the gcd of two numbers #[strong.m-green A] and #[strong.m-yellow B], we want to find the largest subset of divisors that is both in #[strong.m-green A] and #[strong.m-yellow B].
+  p Suppose that #[strong.m-red X] is the gcd of #[strong.m-green 18] and #[strong.m-blue 30]. Then #[strong.m-red X] divides #[strong.m-green 18] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 3]. Also, #[strong.m-red X] divides #[strong.m-blue 30] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5].
 
-  p.todo DIAGRAM
+section
+  p To find #[strong.m-red X], we simply need to multiple all numbers which are  prime factors of #[+blank("both|one of")] #[strong.m-green 18] and #[strong.m-blue 30]:
 
-  p This also means that the gcd of two different prime numbers is always #[+input(1)], because they don't have any prime factors in common.
+  p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue-green 3] &nbsp;=&nbsp; 6.
+
+section
+  p Now we have a simple method for finding the gcd of two numbers:
+
+  ol.proof
+    li Find the prime factorisation of each number.
+    li Multiple the prime factors which are in both numbers.
+
+  p Once again prime numbers are special: the gcd of two different primes is always #[+input(1)], because they don’t share any prime factors.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
 section#cicadas
-
   h2 LCM and GCD Applications
 
   .row
     .grow
       p North America is home to various broods of cicadas. These have the curious property that they only emerge every few years during the summer to breed – the remaining time they spend underground.
       p For example, the cicadas in Florida and Mississippi appear every 13 years. The cicadas in Illinois and Iowa only appear every 17 years. But there are no cicadas with 12, 14, 15 or 16 year cycles.
-    div(style="width: 360px"): x-media(lightbox, credit="© Depositphotos", width="360", height="240", src="/resources/divisibility-and-primes/images/cicadas.jpg")
+    div(style="width: 360px"): x-media(credit="© Depositphotos", width="360", height="240", src="/resources/divisibility-and-primes/images/cicadas.jpg")
 
   p Both 13 and 17 are prime numbers – and that has a very good reason. Imagine that there are predators in the forest which kill cicadas. These predators also appear in regular intervals, say every 6 years.
 
@@ -553,7 +643,6 @@ section#cicadas
 
 section
   p  This number seems to be much larger if the cicada cycle is a prime number like 13 and 17. That‘s is because prime numbers don‘t share any factors with 6, so when calculating the lcm we don‘t cancel any duplicate factors.
-  p.todo DIAGRAM MULTIPLICATION
 
   p Of course, cicadas have no idea what prime numbers are – but over millions of years, evolution has worked out that prime cycles are the safest. The predator animal seems to have gone extinct over time, but the prime number cycles remain.
 
@@ -573,22 +662,22 @@ section#rsa
     .grow
       p One of the most important modern applications of prime numbers is in a field of mathematics called #[strong Cryptography]. For thousands of years, people have tried to conceal messages so that only the intended recipient could read them – this is called encryption. It is used by everyone from generals exchanging secret orders during wars to personal emails or online banking details.
 
-      p People always tried to come up with better, more secure encryption methods, but after some time, they were all broken using yet more advanced algorithms. In the Second World War, the German army used the Enigma: a complex machine consisting of a keyboard, rotating wheels and plugs. It encrypted messages using one of 158 million million million possibilities (that's a 158 followed by 18 zeros!). The code was widely belied to be unbreakable, but the British Secret Service, led by mathematician Alan Turing, built some of the first computers that managed to decode it.
+      p People always tried to come up with better, more secure encryption methods, but after some time, they were all broken using yet more advanced algorithms. In the Second World War, the German army used the Enigma: a complex machine consisting of a keyboard, rotating wheels and plugs. It encrypted messages using one of 158 million million million possibilities (that’s a 158 followed by 18 zeros!). The code was widely belied to be unbreakable, but the British Secret Service, led by mathematician Alan Turing, built some of the first computers that managed to decode it.
 
     div(style="width: 240px")
       x-media(lightbox, credit="Magnus Manske, via Wikipedia", width="240", height="344", src="/resources/divisibility-and-primes/images/enigma.jpg")
       p.caption German four-rotor Enigma machine
 
-  p Today's computers are much more advanced, capable of trying millions of possibilities every second. To develop better encryption algorithms you have to find a mathematical operations that is difficult for a powerful computers. Computers are incredibly fast at addition, subtraction, multiplication and division. However, as it turns out, computers are very slow at factorising large integers into primes…
+  p Today’s computers are much more advanced, capable of trying millions of possibilities every second. To develop better encryption algorithms you have to find a mathematical operations that is difficult for a powerful computers. Computers are incredibly fast at addition, subtraction, multiplication and division. However, as it turns out, computers are very slow at factorising large integers into primes…
 
 //- section
-  p Imagine that Alice wants to send a secret message to Bob. Bob starts by randomly picking two very large prime numbers, let's call them p and q. # pick p, pick q
+  p Imagine that Alice wants to send a secret message to Bob. Bob starts by randomly picking two very large prime numbers, let’s call them p and q. # pick p, pick q
 
   p Calculating the product is very easy using a computer: N = p * q = ${p*q}. However, if you only know this product it is incredibly difficult to reconstruct the two original prime factors. You would essentially have to try every possible factor, and even using every computer ever built this could take thousands of years.
 
-  p The product of p and q is called Bob's _public key_: he publishes it on the internet, visible for anyone including Alice. Now Alice writes her secret message. She then uses Bob's public key N to encrypt the message.
+  p The product of p and q is called Bob’s _public key_: he publishes it on the internet, visible for anyone including Alice. Now Alice writes her secret message. She then uses Bob’s public key N to encrypt the message.
 
-  p You only need to know N to encrypt the message, but to revert it back to readable text you also need to know the original factors p and q. Since only Bob knows the original factors, and no one can calculate them quickly, Bob is the only one who can read Alice's method.
+  p You only need to know N to encrypt the message, but to revert it back to readable text you also need to know the original factors p and q. Since only Bob knows the original factors, and no one can calculate them quickly, Bob is the only one who can read Alice’s method.
 
 section
   p.todo RSA example with Alice and Bob
@@ -604,7 +693,7 @@ section#goldbach
 
   h2 Mysteries and Unsolved Problems
 
-  p In 1742, the German mathematician #[x-bio#goldbach Christian Goldbach] made a curious discovery: he noticed that all even integers (except 2) can be written as the sum of two prime numbers. For example, 8 = 5 + 3 and 24 = 13 + 11. This is quite surprising, because primes are defined using multiplication and factors – and shouldn't have much to do with addition.
+  p In 1742, the German mathematician #[x-bio#goldbach Christian Goldbach] made a curious discovery: he noticed that all even integers (except 2) can be written as the sum of two prime numbers. For example, 8 = 5 + 3 and 24 = 13 + 11. This is quite surprising, because primes are defined using multiplication and factors – and shouldn’t have much to do with addition.
 
   .calculator
     h3 Goldbach Calculator
@@ -615,7 +704,7 @@ section#goldbach
 
   p Goldbach wrote about his observation in a letter to the famous mathematician #[x-bio#euler Leonhard Euler], but neither of them was able to prove it. It became known as the #[strong Goldbach Conjecture].
 
-  p Computers have checked that the Goldbach Conjecture works for every even number up to 4 µ 10#[sup 18] (that’s a 4 with 18 zeros), but mathematicians have still not found a proof that it works for #[em all] even integers. And that is a big difference, because there are infinitely many integers, so we couldn't possible check all of them.
+  p Computers have checked that the Goldbach Conjecture works for every even number up to 4 µ 10#[sup 18] (that’s a 4 with 18 zeros), but mathematicians have still not found a proof that it works for #[em all] even integers. And that is a big difference, because there are infinitely many integers, so we couldn’t possible check all of them.
 
   p Its apparent simplicity made the Goldbach conjecture one of the most famous unsolved problems in mathematics.
 
@@ -668,7 +757,7 @@ section#riemann
 
   p When only 15 years old, the German mathematician #[x-bio#gauss Carl Friedrich Gauss] had a groundbreaking new idea: he counted the number of primes up to a certain point, and showed the results in a chart:
 
-  .img-block
+  .img-block(style="max-width:680px;position:relative;")
     svg(width=680, height=300, viewBox="0 0 680 300")
       line.axis(x1=0, y1=280, x2=680, y2=280)
       g.chart
@@ -676,13 +765,13 @@ section#riemann
         path.log(fill="none", stroke="#b30469")
         g.small-primes
       g.numbers
-    //- p.caption Hello
+    .zoom-icon: svg(viewBox="0 0 32 32", class="icon", width=32, height=32): use(xlink:href="#icon_search")
 
-  p Along the x-axis you can see all integers. Whenever there is a prime, the #[em.m-blue Prime Counting Function] increases by one. As we zoom out, the blue line becomes very smooth.
+  p Along the x-axis you can see all integers. Whenever there is a prime, the #[em.m-blue Prime Counting Function] increases by one. As we #[x-target(to="#riemann .zoom-icon") zoom out], the blue line becomes very smooth.
 
-  p Gauss noticed that the shape of this function looks very similar to the function #[span.frac.inline.m-red #[em x]#[span log(#[em x])]]. He predicted that the two functions are always “approximately similar”, and this was proven in 1896.
+  p.subsection(needs="zoom") Gauss noticed that the shape of this function looks very similar to the function #[span.frac.inline.m-red #[em x]#[span log(#[em x])]]. He predicted that the two functions are always “approximately similar”, and this was proven in 1896.
 
 section
-  p However, as you can see above, there is still a significant error between the actual number of primes, and Gauss's approximation. In 1859, the mathematician #[x-bio#riemann Bernhard Riemann] discovered an approximation that looked much better, but he wasn't able to prove that that would #[em always] work. His idea became known as the #[strong Riemann Hypothesis].
+  p However, as you can see above, there is still a significant error between the actual number of primes, and Gauss’s approximation. In 1859, the mathematician #[x-bio#riemann Bernhard Riemann] discovered an approximation that looked much better, but he wasn’t able to prove that that would #[em always] work. His idea became known as the #[strong Riemann Hypothesis].
 
-  p Hundreds of mathematicians have tried to prove Riemann's hypothesis, but all without success. It is often considered one of the most difficult and most important unsolved problems in mathematics. In 2000, the Clay Mathematics Institute named it one of six #[strong Millennium Prize Problems] and promised $1,000,000 to any mathematician who solves it.
+  p Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all without success. It is often considered one of the most difficult and most important unsolved problems in mathematics. In 2000, the Clay Mathematics Institute named it one of six #[strong Millennium Prize Problems] and promised $1,000,000 to any mathematician who solves it.

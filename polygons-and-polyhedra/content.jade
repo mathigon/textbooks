@@ -9,38 +9,40 @@ include ../mixins
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#polygon1
 
   h2 Polygons
 
-  p You've already learned about points, lines, angles, shapes and other objects in geometry. A #[strong polygon] is any shape which is made up only of straight lines. A square, for example, is a polygon, but a circle is not. Select all of these shapes which are polygons:
+  p You’ve already learned about points, lines, angles, shapes and other objects in geometry. A #[strong polygon] is any shape which is made up only of straight lines. A square, for example, is a polygon, but a circle is not. Select all of these shapes which are polygons:
 
-  x-set-picker.row.padded-thin
-    .set-item: svg(width=120, height=120): polygon(points="12,73 47,12 108,47 73,108", fill="#c1272d")
-    .set-item: svg(width=120, height=120): circle(cx="60", cy="60", r="44", fill="#f15a24")
-    .set-item: svg(width=120, height=120): polygon(points="93,93 47,105 14,72 26,26 72,14 105,47", fill="#fbb03b")
-    .set-item: svg(width=120, height=120): polygon(points="93,73 93,46 81,46 81,19 38,19 38,46 26,46 26,73 13,73 13,100 106,100 106,73", fill="#d9e021")
-    .set-item: svg(width=120, height=120): path(d="M59,18c-19,0-35,16-35,35v46h71V54C94,34,78,18,59,18z", fill="#8cc63f")
-    .set-item: svg(width=120, height=120): path(d="M96,12L13,26l14,82C74,101,104,58,96,12z", fill="#009245")
-    .set-item: svg(width=120, height=120): path(d="M16,26c12-14,41-10,65,9s33,47,22,61s-40,10-64-9S5,40,16,26z", fill="#00a99d")
-    .set-item: svg(width=120, height=120): polygon(points="115,60 52,100 13,64 55,5 65,40", fill="#0071bc")
-    .set-item: svg(width=120, height=120): polygon(points="36,102 13,51 54,13 103,41 92,96 ", fill="#1b1464")
-    .set-item: svg(width=120, height=120): polygon(points="101,26 88,57 106,86 72,83 50,109 43,76 11,63 40,46 43,12 68,34", fill="#93278f")
-  p.text-center: button.btn.btn-bounce.btn-small Check…
+  .set-picker
+    .row.padded-thin
+      .set-item.valid: svg(width=120, height=120): polygon(points="12,73 47,12 108,47 73,108", fill="#c1272d")
+      .set-item: svg(width=120, height=120): circle(cx="60", cy="60", r="44", fill="#f15a24")
+      .set-item.valid: svg(width=120, height=120): polygon(points="93,93 47,105 14,72 26,26 72,14 105,47", fill="#fbb03b")
+      .set-item.valid: svg(width=120, height=120): polygon(points="93,73 93,46 81,46 81,19 38,19 38,46 26,46 26,73 13,73 13,100 106,100 106,73", fill="#d9e021")
+      .set-item: svg(width=120, height=120): path(d="M59,18c-19,0-35,16-35,35v46h71V54C94,34,78,18,59,18z", fill="#8cc63f")
+      .set-item: svg(width=120, height=120): path(d="M96,12L13,26l14,82C74,101,104,58,96,12z", fill="#009245")
+      .set-item: svg(width=120, height=120): path(d="M16,26c12-14,41-10,65,9s33,47,22,61s-40,10-64-9S5,40,16,26z", fill="#00a99d")
+      .set-item.valid: svg(width=120, height=120): polygon(points="115,60 52,100 13,64 55,5 65,40", fill="#0071bc")
+      .set-item.valid: svg(width=120, height=120): polygon(points="36,102 13,51 54,13 103,41 92,96 ", fill="#1b1464")
+      .set-item.valid: svg(width=120, height=120): polygon(points="101,26 88,57 106,86 72,83 50,109 43,76 11,63 40,46 43,12 68,34", fill="#93278f")
+    p.text-center: button.btn.btn-bounce.btn-small Check…
 
 //- ---------------------------------------------------------------------------
 
-section
+section#polygon2
 
   p If all the sides of a polygon have the same length, it is called a #[strong regular polygon]. Select all of these shapes which are regular polygons:
 
-  x-set-picker.row.padded-thin
-    .set-item: svg(width=120, height=120): polygon(points="36,102 13,51 54,13 103,41 92,96 ", fill="#c1272d")
-    .set-item: svg(width=120, height=120): polygon(points="12,73 47,12 108,47 73,108", fill="#fbb03b")
-    .set-item: svg(width=120, height=120): polygon(points="93,93 14,72 72,14", fill="#8cc63f")
-    .set-item: svg(width=120, height=120): polygon(points="93,93 47,105 14,72 26,26 72,14 105,47", fill="#00a99d")
-    .set-item: svg(width=120, height=120): polygon(points="115,60 52,100 13,64 55,5 65,40", fill="#1b1464")
-  p.text-center: button.btn.btn-bounce.btn-small Check…
+  .set-picker
+    .row.padded-thin
+      .set-item.valid: svg(width=120, height=120): polygon(points="36,102 13,51 54,13 103,41 92,96 ", fill="#c1272d")
+      .set-item: svg(width=120, height=120): polygon(points="90,7 109,108 5,87 27,23", fill="#fbb03b")
+      .set-item.valid: svg(width=120, height=120): polygon(points="93,93 14,72 72,14", fill="#8cc63f")
+      .set-item.valid: svg(width=120, height=120): polygon(points="93,93 47,105 14,72 26,26 72,14 105,47", fill="#00a99d")
+      .set-item: svg(width=120, height=120): polygon(points="115,60 52,100 13,64 55,5 65,40", fill="#1b1464")
+    p.text-center: button.btn.btn-bounce.btn-small Check…
 
   p The sides of a polygon are called #[strong edges], and the points are called #[strong vertices]. However these are enough words and terminology for now…
 
@@ -76,11 +78,11 @@ section#triangles
       .angle-value.m-blue ${deg(angle(b,c,a))}°
       .angle-value.m-green ${deg(angle(c,a,b))}°
       select.angle-value
-        option Largest angle:
-        option Smallest angle:
-        option Product of angles:
-        option Sum of angles:
-      .angle-value ${deg(angle(a,c,b))}
+        option(value="max") Largest angle:
+        option(value="min") Smallest angle:
+        option(value="prod") Product of angles:
+        option(value="sum") Sum of angles:
+      .angle-value ${selected(a,b,c)}
 
 //- ---------------------------------------------------------------------------
 

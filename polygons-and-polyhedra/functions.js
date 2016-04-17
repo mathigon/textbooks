@@ -7,6 +7,7 @@
 import { $, $$ } from 'elements';
 import Draggable from 'draggable';
 import { angle } from 'geometry';
+import setPicker from 'components/set-picker';
 
 
 // -----------------------------------------------------------------------------
@@ -64,6 +65,7 @@ function svgOppositeAngle(a, b, c, size) {
 function svgLine(a, b) {
     let p = pointAtX(a, b, -10);
     let q = pointAtX(a, b, 800);
+    if (!isFinite(p.x) || !isFinite(p.y) || !isFinite(q.x) || !isFinite(q.y)) return '';
     return 'M' + p.x + ',' + p.y + 'L' + q.x + ',' + q.y;
 }
 
@@ -86,6 +88,14 @@ function deg(angle) {
 
 const fns = {};
 
+fns.polygon1 = function(section) {
+    setPicker(section.$el.find('.set-picker'), section);
+};
+
+fns.polygon2 = function(section) {
+    setPicker(section.$el.find('.set-picker'), section);
+};
+
 fns.triangles = function(section) {
     section.model.load({ angle, svgAngle, svgLine, svgSegment, deg });
 
@@ -97,6 +107,20 @@ fns.triangles = function(section) {
         drag.on('move', e => { section.model.set('abc'[i], e); });
         drag.position = initial[i];
     });
+
+    section.model.load({ x: 'max' });
+    let $select = section.$el.find('select');
+    $select.on('change', function() { section.model.set('x', $select.value); });
+
+    section.model.load({ selected: function(a, b, c) {
+        console.log('hello', section.model.x);
+        return {
+            max: function() { return deg(Math.max(angle(a,b,c), angle(b,c,a), angle(c,a,b))); },
+            min: function() { return deg(Math.min(angle(a,b,c), angle(b,c,a), angle(c,a,b))); },
+            prod: function() { return deg(angle(a,b,c)) * deg(angle(b,c,a)) * deg(angle(c,a,b)); },
+            sum: function() { return 180; }
+        }[section.model.x]();
+    }});
 };
 
 fns.triangleProof = function(section) {
@@ -117,7 +141,7 @@ fns.triangleProof = function(section) {
 fns.quadrilateral = function(section) {
     section.model.load({ angle, svgAngle, svgLine, svgSegment, deg });
 
-    let initial = [{ x: 160, y: 70 }, { x: 500, y: 180 }, { x: 110, y: 320 }, { x: 200, y: 200 }];
+    let initial = [{ x: 170, y: 40 }, { x: 480, y: 140 }, { x: 540, y: 320 }, { x: 120, y: 270 }];
     let $geopad = section.$el.find('.geopad');
 
     section.$el.findAll('.geo-vertex').forEach(function($v, i) {

@@ -5,7 +5,7 @@
 
 
 import { $, $$, $N } from 'elements';
-import { total, sortByFn } from 'arrays';
+import { total, sortByFn, list } from 'arrays';
 import { animate } from 'animate';
 import thread from 'thread';
 import { numberFormat } from 'arithmetic';
@@ -195,28 +195,29 @@ fns.divisibility9 = function(section) {
 };
 
 fns.divisibility6 = function(section) {
-    let buttons = section.$el.findAll('.btn');
+    let $buttons = section.$el.findAll('.btn');
     let $grid = section.$el.find('.number-grid');
 
+    $buttons.forEach(function($b) { $b.noDisplayChange = true; });
     section.goals.push('btn2', 'btn3');
 
     section.on('score-btn2', function() {
-        buttons[0].exit('pop');
+        $buttons[0].exit('pop');
         numberGrid($grid, 200, 'yellow', i => (i % 2 === 0));
     });
 
     section.on('score-btn3', function() {
-        buttons[1].exit('pop');
+        $buttons[1].exit('pop');
         numberGrid($grid, 200, 'blue', i => (i % 3 === 0));
     });
 
     section.on('score-blank-0', function() {
-        $grid.children().forEach($el => { $el.removeClass('yellow blue'); });
         numberGrid($grid, 200, 'green', i => (i % 6 === 0));
+        delay(function() { $grid.children().forEach($el => { $el.removeClass('yellow blue'); }); }, 1200);
     });
 
-    buttons[0].on('click', function() { section.score('btn2'); });
-    buttons[1].on('click', function() { section.score('btn3'); });
+    $buttons[0].on('click', function() { section.score('btn2'); });
+    $buttons[1].on('click', function() { section.score('btn3'); });
 };
 
 fns.factors2 = function(section) {
@@ -351,37 +352,45 @@ fns.ulam = function(section) {
 fns.race = function(section, chapter) {
     chapter.addGloss('lcm');
 
+    let $button = section.$el.find('.lap-button');
+    let $buttonText = $button.find('text');
     let $runners = section.$el.findAll('circle');
     let $paths = section.$el.findAll('.runner-path');
-    let pathLengths = $paths.map(p => p._el.getTotalLength());
     let $lapTimes = section.$el.findAll('.lap-times').map($l => $l.children());
 
-    let speed = [6, 4];
+    let pathLengths = $paths.map($p => $p.strokeLength);
+    let speed = [4, 6];
     let duration = 12;
+    let running = false;
 
-    section.$el.find('svg').on('click', function() {
-        // $play.exit('pop', 200);
+    function run() {
+        if (running) return;
+        running = true;
         $lapTimes.forEach($g => { $g.forEach($l => { $l.exit('pop', 200); }); });
 
-        for (let i of [0, 1]) {
-            animate(function(p) {
+        animate(function(p) {
+            for (let i of [0, 1]) {
                 let offset = ((p * duration) % speed[i]) / speed[i];
-                let point = $paths[i]._el.getPointAtLength(pathLengths[i] * offset);
+                let point = $paths[i].getLengthAt(pathLengths[i] * offset);
                 $runners[i].attr('cx', point.x);
                 $runners[i].attr('cy', point.y);
-            }, duration * 1000);
+                $runners[i].attr('r', 12 * (1 + point.y/234));
+            }
+            $buttonText.text = Math.floor(p * duration * 10) + ' s';
+        }, duration * 1000).then(function() {
+            setTimeout(function() { running = false; $buttonText.text = 'Start'; }, 1000);
+        });
+
+        for (let i of [0, 1]) {
             for (let x = 0; x < duration/speed[i]; ++x) {
                 setTimeout(function() {
                     $lapTimes[i][x].enter('pop', 200);
                 }, speed[i] * (x+1) * 1000);
             }
         }
+    }
 
-        /* setTimeout(function() {
-            $play.enter('pop', 200);
-        }, duration); */
-    });
-
+    $button.on('click', run);
 };
 
 fns.gcd = function(section, chapter) {
@@ -456,13 +465,12 @@ fns.twins = function(section, chapter) {
 };
 
 fns.riemann = function(section) {
+    let dx = 23.5;
+    let dy = 27;
+    let y0 = 280;
 
-    let dx = 680/1000;
-    let dy = 280/170;
-
-    let y = 280;
+    let y = y0;
     let points = [{ x: 0, y }];
-
     for (let i = 1; i <= 1000; ++i) {
         if (isPrime(i)) {
             points.push({ x: (i-1) * dx, y });
@@ -470,34 +478,25 @@ fns.riemann = function(section) {
             points.push({ x: (i-1) * dx, y });
         }
     }
-
-    let $pi = section.$el.find('.pi');
-    $pi.points = points;
+    section.$el.find('.pi').points = points;
 
     let $smallPrimes = section.$el.find('.small-primes');
     [3, 5, 7, 11, 13, 17, 19, 23, 29].forEach(function(p, i) {
-        $N('line', { x1: (p-1) * dx, y1: 280, x2: (p-1) * dx,
-            y2: 280 - dy * (i+1) }, $smallPrimes);
+        $N('line', { x1: (p-1) * dx, y1: y0, x2: (p-1) * dx,
+            y2: y0 - dy * (i+1) }, $smallPrimes);
     });
 
     let $numbers = section.$el.find('.numbers');
     for (let i = 2; i < 30; ++i) {
-        $N('text', { html: i, x: (i-1) * dx * 34, y: 298, 'class': isPrime(i) ? 'prime' : '' }, $numbers);
-
+        $N('text', { html: i, x: (i-1)*dx, y: y0+18, 'class': isPrime(i) ? 'prime' : '' }, $numbers);
     }
 
-    let fn = [];
-    for (let i = 3; i <= 1000; ++i) {
-        fn.push({ x: (i-1) * dx, y: 280 - dy * i / Math.log(i) });
-    }
-
-    let $log = section.$el.find('.log');
-    $log.points = fn;
+    points = list(3, 1000).map(i => ({ x: (i-1) * dx, y: y0 - dy * i / Math.log(i) }));
+    section.$el.find('.log').points = points;
 
     let $svg = section.$el.find('svg');
-    $svg.on('click', function() { $svg.toggleClass('zoom'); });
-
-
+    let $zoom = section.$el.find('.zoom-icon');
+    $zoom.on('click', function() { section.score('zoom'); $svg.toggleClass('zoom'); });
 };
 
 
