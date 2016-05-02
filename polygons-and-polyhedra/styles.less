@@ -73,3 +73,19 @@ select.angle-value {
 
     & + .angle-value { margin-left: 2px; border-radius: 0 40px 40px 0; }
 }
+
+.quadrilaterals { table-layout: fixed; width: 600px; }
+.quadrilaterals tr:nth-child(n+2) td { padding-top: 40px; }
+.quadrilaterals td { position: relative; }
+.quadrilaterals .line { position: absolute; width: 2px; height: 40px; background: @light-grey; left: 50%; top: 0; }
+.quadrilaterals .line.left { transform: rotate(45deg); margin-left: 50px; height: 45px; }
+.quadrilaterals .line.right { transform: rotate(-45deg);  margin-left: -50px; height: 45px; }
+.quadrilaterals svg { margin: 0 -10px; }
+
+// -----------------------------------------------------------------------------
+
+.tessellation-canvas {
+    height: 450px;
+    svg { height: 450px; width: 100%; position: relative; }
+    polygon { cursor: move; stroke: #eee; transition: transform .1s; }
+}

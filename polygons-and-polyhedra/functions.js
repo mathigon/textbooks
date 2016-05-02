@@ -4,9 +4,11 @@
 // =============================================================================
 
 
-import { $, $$ } from 'elements';
+import { $, $$, $C, $N } from 'elements';
 import Draggable from 'draggable';
 import { angle } from 'geometry';
+import { clamp } from 'utilities';
+import { numberFormat, roundTo } from 'arithmetic';
 import setPicker from 'components/set-picker';
 
 
@@ -42,7 +44,7 @@ function pointAtX(a, b, x) {
     return { x, y };
 }
 
-function svgAngle(a, b, c, size) {
+function svgAngle(a, b, c, size, full=false) {
     let ab = normalise({ x: b.x - a.x, y: b.y - a.y });
     let ac = normalise({ x: c.x - a.x, y: c.y - a.y });
 
@@ -51,7 +53,9 @@ function svgAngle(a, b, c, size) {
     b = { x: a.x + ab.x * size, y: a.y + ab.y * size };
     c = { x: a.x + ac.x * size, y: a.y + ac.y * size };
 
-    return ['M'+a.x,a.y+'L'+b.x,b.y+'A'+size,size,0,0,(orient<0?1:0),c.x,c.y+'Z'].join(',');
+    let arcSweep = (full && orient > 0) ? 1 : 0;
+    let largeArc = (full || orient < 0) ? 1 : 0;
+    return ['M'+a.x,a.y+'L'+b.x,b.y+'A'+size,size,0,arcSweep,largeArc,c.x,c.y+'Z'].join(',');
 }
 
 function svgCorrespondingAngle(a, b, c, size, s) {
@@ -77,9 +81,9 @@ function svgSegment(a, b) {
     return 'M' + a.x + ',' + a.y + 'L' + b.x + ',' + b.y;
 }
 
-function deg(angle) {
-    angle = angle * 180 / Math.PI;
-    return Math.round(Math.min(angle, 360-angle));
+function deg(a, b, c) {
+    let x = angle(a, b, c) * 180 / Math.PI;
+    return Math.round(Math.min(x, 360 - x));
 }
 
 
@@ -97,7 +101,7 @@ fns.polygon2 = function(section) {
 };
 
 fns.triangles = function(section) {
-    section.model.load({ angle, svgAngle, svgLine, svgSegment, deg });
+    section.model.load({ angle, svgAngle, svgLine, svgSegment, deg, x: 'max' });
 
     let initial = [{ x: 160, y: 70 }, { x: 500, y: 180 }, { x: 110, y: 320 }];
     let $geopad = section.$el.find('.geopad');
@@ -108,22 +112,20 @@ fns.triangles = function(section) {
         drag.position = initial[i];
     });
 
-    section.model.load({ x: 'max' });
     let $select = section.$el.find('select');
     $select.on('change', function() { section.model.set('x', $select.value); });
 
     section.model.load({ selected: function(a, b, c) {
-        console.log('hello', section.model.x);
         return {
-            max: function() { return deg(Math.max(angle(a,b,c), angle(b,c,a), angle(c,a,b))); },
-            min: function() { return deg(Math.min(angle(a,b,c), angle(b,c,a), angle(c,a,b))); },
-            prod: function() { return deg(angle(a,b,c)) * deg(angle(b,c,a)) * deg(angle(c,a,b)); },
+            max: function() { return Math.max(deg(a,b,c), deg(b,c,a), deg(c,a,b)); },
+            min: function() { return Math.min(deg(a,b,c), deg(b,c,a), deg(c,a,b)); },
+            prod: function() { return numberFormat(deg(a,b,c) * deg(b,c,a) * deg(c,a,b)); },
             sum: function() { return 180; }
         }[section.model.x]();
     }});
 };
 
-fns.triangleProof = function(section) {
+fns.triangleProof = function(section, chapter) {
     section.model.load({ angle, svgAngle, svgLine, svgLineThrough, svgCorrespondingAngle,
         svgOppositeAngle, svgSegment, deg });
 
@@ -137,9 +139,9 @@ fns.triangleProof = function(section) {
     });
 };
 
-
 fns.quadrilateral = function(section) {
-    section.model.load({ angle, svgAngle, svgLine, svgSegment, deg });
+    function deg(a, b, c) { return Math.round(angle(a, b, c) * 180 / Math.PI); }
+    section.model.load({ angle, svgAngle, svgLine, svgSegment, deg, x: 'max' });
 
     let initial = [{ x: 170, y: 40 }, { x: 480, y: 140 }, { x: 540, y: 320 }, { x: 120, y: 270 }];
     let $geopad = section.$el.find('.geopad');
@@ -149,6 +151,74 @@ fns.quadrilateral = function(section) {
         drag.on('move', e => { section.model.set('abcd'[i], e); });
         drag.position = initial[i];
     });
+
+    let $select = section.$el.find('select');
+    $select.on('change', function() { section.model.set('x', $select.value); });
+    let hasWarned = false;
+
+    let functions = {
+        max: function (a,b,c,d) { return Math.max(deg(c,b,a), deg(d,c,b), deg(a,d,c), deg(b,a,d)); },
+        min: function (a,b,c,d) { return Math.min(deg(c,b,a), deg(d,c,b), deg(a,d,c), deg(b,a,d)); },
+        prod: function (a,b,c,d) { return numberFormat(deg(c,b,a) * deg(d,c,b) * deg(a,d,c) * deg(b,a,d)); },
+        sum: function (a,b,c,d) { return roundTo(deg(c,b,a) + deg(d,c,b) + deg(a,d,c) + deg(b,a,d), 10); }
+    };
+
+    section.model.load({ selected: function(a,b,c,d) {
+        let sum = functions.sum(a,b,c,d);
+        if (!hasWarned && sum > 360) {
+            chapter.addHint('Make sure that the lines don’t overlap – otherwise weird stuff happens…');
+            hasWarned = true;
+        }
+        return (section.model.x == 'sum') ? sum : functions[section.model.x](a,b,c,d);
+    }});
 };
+
+fns.polyhedra = function(section) {
+    section.model.load({
+        fn1: function(x) { return x < 3 ? '<em>x</em>' : x; },
+        fn2: function(x) { return x < 3 ? '<em>x</em> – 2' : x-2 + ' = ' + 180 * (x-2); }
+    });
+};
+
+fns.tessellation = function(section) {
+    const shapes = {
+        3: '0,-34.6 30,17.3 -30,17.3',
+        4: '-30,-30 30,-30 30,30 -30,30',
+        5: '-30,-30 30,-30 30,30 -30,30',
+        6: '0,-60 52,-30 52,30 0,60 -52,30 -52,-30'
+    };
+
+    let $box = $('svg', section.$el);
+    let coords = [{ x: 150, y: 110, p: 3 }, { x: 360, y: 240, p: 4 }, { x: 520, y: 170, p: 5 },
+        { x: 420, y: 400, p: 4 }, { x: 120, y: 340, p: 6 }, { x: 330, y: 60, p: 6 }];
+
+    coords.forEach(function(c) {
+        let angle = 0;
+
+        let $g = $N('g', {}, $box);
+        let $city = $N('polygon', { 'points': shapes[c.p], 'class': 'tessellation-shape' }, $g);
+        $city.css('fill', ['#1f7aff', '#31b304', '#ff941f', '#b30469'][c.p - 3]);
+
+        let drag = new Draggable($g, $box, 'xy', 0, true);
+        drag.position = c;
+
+        $city.on('click', function() { angle += 30; $city.transform = `rotate(${angle}deg)`; });
+    });
+};
+
+fns.penrose = function(section) {
+    let $slider = section.$el.find('x-slider');
+    let $g = section.$el.findAll('svg g');
+
+    $g[1].attr('opacity', 0);
+    $g[2].attr('opacity', 0);
+
+    $slider.on('move', function(n) {
+        $g[0].attr('opacity', n < 50 ? 1-n/77 : 0.35);
+        $g[1].attr('opacity', n < 50 ? n/50 : 1.5-n/100);
+        $g[2].attr('opacity', n < 50 ? 0 : n/50-1);
+    });
+};
+
 
 export const sections = fns;
