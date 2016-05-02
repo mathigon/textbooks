@@ -144,6 +144,10 @@ function digitSum(n) {
     return total(n.toString().split('').map(x => +x));
 }
 
+function digitSumString(n) {
+    return n.toString().split('').join(' + ');
+}
+
 
 // -----------------------------------------------------------------------------
 // Functions
@@ -168,7 +172,7 @@ fns.divisibility5 = function(section) {
 
 fns.divisibility31 = function(section) {
     section.on('load', function() {
-        section.model.load({ digitSum });
+        section.model.load({ digitSum, digitSumString });
     });
 };
 

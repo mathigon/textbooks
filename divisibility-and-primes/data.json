@@ -2,6 +2,6 @@
     "title": "Divisibility and Primes",
     "stage": "foundations",
     "description": "Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.",
-    "icon": "/courses/course_f-integers.png",
+    "icon": "courses/course_f-integers.png",
     "hero": "hero.jpg"
 }

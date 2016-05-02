@@ -159,7 +159,7 @@ section#divisibility31
 
   p The divisibility rule for 3 is rather more difficult. 3 doesn’t divide 10, and it also doesn’t divide 100, or 1000, or any larger power of 10. Simply looking at the last few digits of a number isn’t going to work.
 
-  p Instead we need to use the #[strong digit sum] of a number, which is simply the sum of all its individual digits. For example, the digit sum of #[+var('n|3|0,20,1') 13*n+123] is #[+var (123 + 13*n).toString().split("").join(" + ")] = #[+var digitSum(123 + 13*n)] and the digit sum of 3524 is #[+input(14)].
+  p Instead we need to use the #[strong digit sum] of a number, which is simply the sum of all its individual digits. For example, the digit sum of #[+var('n|3|0,20,1') 13*n+123] is #[+var digitSumString(123 + 13*n)] = #[+var digitSum(123 + 13*n)] and the digit sum of 3524 is #[+input(14)].
 
 section#divisibility32
   +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
