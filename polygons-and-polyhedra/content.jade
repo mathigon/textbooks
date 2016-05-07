@@ -10,6 +10,7 @@ include ../mixins
 //- ---------------------------------------------------------------------------
 
 section#polygon1
+  +intro
 
   h2 Polygons
 
@@ -182,7 +183,7 @@ section#quadrilateral
 
   p It seems that the sum of the internal angles is always #[+input(360)]°.
 
-section#polyhedra
+section#polygonsangle
   p This is no only a full circle rotation, it is also twice the sum of triangles. And this is because we can split every quadrilateral into two triangles.
 
   .row.padded
@@ -243,19 +244,19 @@ section
         include svg/quadrilaterals/square.svg
         p.caption Finally, if all angles are 90° #[em and] all sides have the same length, we have a #[strong square].
 
-section
+section#classifyquadriateral
   p Any quadrilaterals could fall into more than one of these categories. Let’s have a look at a simple example:
 
   .row
-    div(style="width: 300px")
-      include svg/quadrilaterals/rhombus.svg
+    div(style="width: 200px")
+      include svg/quadrilaterals/classify.svg
     .grow
-      p This shape is clearly a [Rhombus], because all four of its [sides] have the same length.
-      p But two pairs of adjacent sides #[em also] have the same length – you could pick #[em any] pairs. Therefore this is also a [Kite].
-      p And both pairs of opposite sides are parallel, so this is also a [Parallelogram].
-      p Finally, if both pairs of sides are parallel, then #[em one] pair of sides must also be parallel. Therefore we also have a [Trapezium].
+      p This shape is clearly a #[+blank('rhombus|trapezium|square')], because all four of its #[+blank('sides|angles')] have the same length.
+      p But top and bottom pairs of adjacent sides also #[em each] have the same length. Therefore this is also a #[+blank('kite|rectangle')].
+      p And both pairs of opposite sides are parallel, so this is also a #[+blank('parallelogram|square')].
+      p Finally, if both pairs of sides are parallel, then #[em one] pair of sides must also be parallel. Therefore we also have a #[+blank('trapezium|rectangle')].
 
-  p To avoid this kind of ambiguity when identifying quadrilaterals, we usually only use the #[em most specific] one – or the type furthest down in the tree diagram above.
+  p To avoid this kind of ambiguity when identifying quadrilaterals, we usually only use the #[em most specific] one – or the type furthest down in the tree diagram above. In the above example that would be a #[+blank('rhombus|kite|Parallelogram|trapezium')].
 
 section
   .box.problem-box
@@ -263,16 +264,38 @@ section
     .box-body: p.todo Exercises under development…
 
 section
-  p We often need to calculate the area of quadrilaterals. The area of a square is simply its width squared. The area of a rectangle is the product of its width and its height.
-  p For other quadrilaterals, we can try to convert them into rectangles:
-
   .row
-    .grow(style="width: 240px")
-      p Parallelogram
-    .grow(style="width: 240px")
-      p Kite + Rhombus
-    .grow(style="width: 240px")
-      p Trapezium
+    .grow
+      p We often need to calculate the area of quadrilaterals. The area of a square is simply its width squared. The area of a rectangle is the product of its width and its height.
+      p For other quadrilaterals, we first have to try to “convert” them into rectangles.
+    div(style="width: 250px"): include svg/quadrilaterals/area.svg
+
+section
+  h3 Parallelogram
+  .row
+    div(style="width: 260px; margin-top: -20px")
+      include svg/quadrilaterals/area-parallelogram.svg
+    .grow
+      p Notice how the overlap on the left is exactly the same as the gap on the right. Therefore the area of the #[strong.m-blue blue parallelogram] is the same as the area of the #[strong.m-red red rectangle]. This means that the area of any parallelogram is simply
+      p.text-center #[strong.i.m-green base] µ #[strong.i.m-yellow height].
+
+section
+  h3 Kite and Rhombus
+  .row
+    div(style="width: 260px; margin-top: -20px")
+      include svg/quadrilaterals/area-kite.svg
+    .grow
+      p Each the four smaller rectangles are exactly half blue. Therefore the area of the #[strong.m-blue blue kite] is half the area of the #[strong.m-red red rectangle]. In other words, the area of a kite or rhombus is always
+      p.text-center #[span.frac #[span 1]#[span 2]] #[strong.i.m-green width] µ #[strong.i.m-yellow height].
+
+section
+  h3 Trapezium
+  .row
+    div(style="width: 260px")
+      include svg/quadrilaterals/area-trapezium.svg
+    .grow
+      p Notice how the gaps on the left and right are each exactly as big as the overlap on that side. The width of the #[strong.m-red red rectangle] is the average of the widths of the top side and the bottom side. Therefore the area of a trapezium is
+      p.text-center #[span.frac #[span #[strong.m-green top] + #[strong.m-green bottom]]#[span 2]] µ #[strong.i.m-yellow height].
 
 section
   .box.problem-box
@@ -280,13 +303,14 @@ section
     .box-body: p.todo Exercises under development…
 
 section
-  p.todo TODO More on Quadrilaterals:#[br]Parallelogram diagonals bisect each other#[br]Parallelogram opposite angles are equal, adjacent add up to 180°#[br]#[br]Rhombus diagonals are perpendiucular bisectors#[br]Cyclic quadrilateral
+  p.todo More on Quadrilaterals coming soon…
+  //- Parallelogram diagonals bisect each other#[br]Parallelogram opposite angles are equal, adjacent add up to 180°#[br]#[br]Rhombus diagonals are perpendiucular bisectors#[br]Cyclic quadrilateral
 
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#tessellation
   h2 Tessellations
 
   p Polygons appear everywhere in nature. They are especially useful if you want to tile a large area, because you can fit polygons together without any gaps or overlaps – these patterns are called #[strong tessellations].
@@ -333,15 +357,14 @@ section
       x-media(credit="© M. C. Escher", src="/resources/polygons-and-polyhedra/images/tessellations/escher.jpg", width="200", height="200")
       p.caption Study of Regular Division of the Plane with Reptiles, M. C. Escher
 
-section#tessellation
+section#drawing
   p Here you can create your own tessellations with regular polygons. See if there are any shapes that tessellate well or not at all, and try to create interesting patterns.
 
   .tessellation-canvas.frame.fill: svg
-
-  p.todo rotate, add new, delete, snap to corner, export to png, clear canvas, save to db
+  //- TODO rotate, add new, delete, snap to corner, export to png, clear canvas, save to db
 
 section#possible
-  p When creating tessellations with regular polygons, you'll have noticed that some kinds of polygons tessallate easily, while others don't tessellate at all.
+  p When creating tessellations with regular polygons, you'll have noticed that some kinds of polygons tessellate easily, while others don’t tessellate at all.
 
   .row
     .grow(style="width: 120px")
@@ -357,7 +380,7 @@ section#possible
       include svg/hexagons.svg
       p.caption Hexagons #[+blank("tessellate|don’t tessellate")] because 3 µ 120° = 360°.
 
-  p This has to do with the size of their internal angles, which we leaned to calculate before. If you can make multiples of their internal angle add up to [360]°, the same will tessellate. Otherwise there will either be a gap or an overlap.
+  p This has to do with the size of their internal angles, which we leaned to calculate before. If you can make multiples of their internal angle add up to #[+input(360)]°, the shape will tessellate. Otherwise there will either be a gap or an overlap.
 
 section
   p You can also make tessellations out of multiple different kinds of regular polygons, provided their combined internal angles make 360°:
@@ -388,7 +411,7 @@ section
       include svg/tessellations/tessellation_8.svg
       p.caption equilateral triangles, squares and dodecagons
 
-  p Notice that none of these tessellations contain a regular [pentagon]…
+  p Notice that none of these tessellations contain a regular #[+blank('pentagon|hexagon|octagon')]…
 
 section
   p And of course we can make tessellations out of non-regular polygons as well.
@@ -396,16 +419,16 @@ section
   .row
     div(style="width: 320px")
       p.todo interactive diagram
-    .grow: p Triangles always tessellate. Their internal angle sum is [180]°, so if we use every angle [twice] at a vertex, we get 360°.
+    .grow: p Triangles always tessellate. Their internal angle sum is #[+input(180)]°, so if we use every angle twice at a vertex, we get 360°.
     div(style="width: 320px")
       p.todo interactive diagram
-    .grow: p Quadrilaterals always tessellate. Their internal angle sum is [360]°, so if we use every angle at a vertex, we get 360°.
+    .grow: p Quadrilaterals always tessellate. Their internal angle sum is #[+input(360)]°, so if we use every angle at a vertex, we get 360°.
     div(style="width: 320px")
       p.todo diagram
     .grow: p Pentagons sometimes tessellate, but only if they have particular shapes.
 
 section
-  p Many artists came up with much more complicated tessellations, most famously [M. C. Escher]. Here are a few examples:
+  p Many artists came up with much more complicated tessellations, most famously #[x-bio#escher M. C. Escher]. Here are a few examples:
 
   .img-block
     .row
@@ -421,9 +444,9 @@ section
 //- ---------------------------------------------------------------------------
 
 section#penrose
-  p All the tessellations we saw so far have one thing in common: they are [periodic]. This means that they consist of a regular pattern that is repeated again and again. They can continue forever in all directions and they will look the same everywhere.
+  p All the tessellations we saw so far have one thing in common: they are #[em periodic]. This means that they consist of a regular pattern that is repeated again and again. They can continue forever in all directions and they will look the same everywhere.
 
-  p In the 1970s, the English mathematician [Sir Roger Penrose] discovered a #[em non-periodic] tessellation – it still continues infinitely in all directions, but it will #[em never] look exactly the same. These are called #[strong Penrose tilings], and you only need a few different kinds of polygons to create one:
+  p In the 1970s, the English mathematician #[x-bio#penrose Sir Roger Penrose] discovered a #[em non-periodic] tessellation – it still continues infinitely in all directions, but it will #[em never] look exactly the same. These are called #[strong Penrose tilings], and you only need a few different kinds of polygons to create one:
 
   .img-block
     include svg/penrose.svg
@@ -433,22 +456,29 @@ section#penrose
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#polyhedra
   h2 Polyhedra
 
   p Up to now we have looked at what you can do with polygons in a flat, two-dimensional world. We can also connect polygons to form three-dimensional solids – these are called #[strong Polyhedra].
 
   p The sides of a polyhedron are called #[strong faces], the lines where faces meet are called #[strong edges], and the corners where #[strong edges] meet are called vertices.
 
-  p.todo Euler’s Formula
+  p.todo Euler’s Formula Coming Soon…
 
-  p.todo Notice that the number of faces plus the number of vertices always seems to be 2 more that the number of edges. In other words, F + V = E + 2. This formula was discovered by Leonhard Euler (1707 – 1783). We have just shown that it works for all Platonic solids, but in fact it is true for any polyhedron. There is a very similar formula for the number of faces, edges and vertices of planar graphs.
+  //- p.todo There are countless more polyhedra: some looking like stars, some consisting of non-regular polygons, and some having holes inside.
+
+  //- p.todo Notice that the number of faces plus the number of vertices always seems to be 2 more that the number of edges. In other words, F + V = E + 2. This formula was discovered by Leonhard Euler (1707 – 1783). We have just shown that it works for all Platonic solids, but in fact it is true for any polyhedron. There is a very similar formula for the number of faces, edges and vertices of planar graphs.
 
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#platonic
+  h2 Platonic Solids
+
+  p.todo Coming Soon…
+
+//- section
   h2 Platonic Solids
 
   p Just like we defined #[em regular polygons] as particularly symmetric polygons, we could try to create particularly “regular” polyhedra. For example, only using a single kind of regular polygon.
@@ -529,10 +559,10 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#archimedean
   h2 More on Polyhedra
 
-  p.todo Archimedean Solids also consist of regular polygons and look the same from every direction, but they can consist of more than one type of regular polygon. In total there are 13 Archimedean solids, plus two mirror images. You can check that Euler’s formula still holds for these polyhedra.
+  p #[strong Archimedean solids] are slightly less regular. They still consist of regular polygons and look the same from every direction, but they can consist of more than one type of regular polygon. They are named after another ancient Greek mathematician: #[x-bio#archimedes Archimedes of Syracuse]. In total there are 13 Archimedean solids, plus two mirror images.
 
   //- In geometry, an Archimedean solid is a highly symmetric, semi-regular convex polyhedron composed of two or more types of regular polygons meeting in identical vertices. They are distinct from the Platonic solids, which are composed of only one type of polygon meeting in identical vertices, and from the Johnson solids, whose regular polygonal faces do not meet in identical vertices.
 
@@ -543,8 +573,6 @@ section
   //- The Archimedean solids take their name from Archimedes, who discussed them in a now-lost work. Pappus refers to it, stating that Archimedes listed 13 polyhedra.[1] During the Renaissance, artists and mathematicians valued pure forms and rediscovered all of these forms. This search was almost entirely completed around 1620 by Johannes Kepler,[2] who defined prisms, antiprisms, and the non-convex solids known as the Kepler-Poinsot polyhedra.
 
   //- Kepler may have also found the elongated square gyrobicupola (pseudorhombicuboctahedron): at least, he once stated that there were 14 Archimedean solids. However, his published enumeration only includes the 13 uniform polyhedra, and the first clear statement of the pseudorhombicuboctahedron's existence was made in 1905, by Duncan Sommerville.[1]
-
-
 
   .row
     div(style="width: 160px")
@@ -586,9 +614,6 @@ section
     div(style="width: 160px")
       x-media(width="200", height="200", src="/resources/polygons-and-polyhedra/images/polyhedra/snub-dodecahedron.gif")
       p.caption Snub Dodecahedron
-
-  p.todo There are countless more polyhedra: some looking like stars, some consisting of non-regular polygons, and some having holes inside.
-
 
 section
   p Plato was wrong in believing that matter consists of Platonic solids. But regular polyhedra have many special properties that make them appear everywhere in nature – and we can copy these properties in science and engineering.
@@ -638,7 +663,7 @@ section
       x-media(lightbox, credit="© Depositphotos, anyaberkut", width="180", height="180", src="/resources/polygons-and-polyhedra/images/louvre.jpg")
       p.caption Louvre museum in Paris
     .grow
-      p.todo Tetrahedra and Octahedra are incredibly rigid and stable, which makes them very useful in construction. #[em Space frames] are polygonal structures that can support large roos and heavy bridges.
+      p Tetrahedra and Octahedra are incredibly rigid and stable, which makes them very useful in construction. #[em Space frames] are polygonal structures that can support large roos and heavy bridges.
 
   // application: https://en.wikipedia.org/wiki/Carbon_nanotube
   // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
@@ -654,7 +679,8 @@ section
       x-media(lightbox, credit="© Depositphotos / blackregis2", width="180", height="180", src="/resources/polygons-and-polyhedra/images/dice.jpg")
       p.caption Polygonal role-playing dice
     .grow
-      p.todo Platonic solids are often used to make dice – their regularity means that the dice are always fair.
+      p Because of their symmetry, Platonic solids are often used to create dice. Every side has the probability of landing facing up, so the dice are always fair.
+      p The truncated icosahedron is probably the most famous polyhedron in the world: it is the shape of the football.
 
   // These shapes frequently show up in other games or puzzles. Puzzles similar to a Rubik's Cube come in all five shapes – see magic polyhedra.
 

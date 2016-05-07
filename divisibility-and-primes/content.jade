@@ -38,7 +38,7 @@ mixin divisor-table(divisors, pairs)
 //- ---------------------------------------------------------------------------
 
 section#divisibility1
-
+  +intro
   h2 Factors and Multiples
 
   p By now you should be comfortable with basic integer arithmetic and addition, subtraction and multiplication. Division is slightly different, because you  can’t always divide any integer by any other. For example 17 divided by 3 is not a whole number – it is somewhere in between 5 and 6. You either have to give a remainder (2), or express the answer as a decimal number (5.66).
@@ -515,7 +515,7 @@ section
   p Suppose that #[strong.m-red X] is the lcm of #[strong.m-green 40] and #[strong.m-blue 60]. Then #[strong.m-green 40] divides #[strong.m-red X], so #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 5] must be prime factors of #[strong.m-red X]. Also, #[strong.m-blue 60] divides #[strong.m-red X], so #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5] must be prime factors of #[strong.m-red X].
 
 section
-  p To find #[strong.m-red X], we simply combine all the prime factors of #[strong.m-green 40] and #[strong.m-blue 60], but any #[+blank("duplicates we only need once|xxx|xxx")]:
+  p To find #[strong.m-red X], we simply combine all the prime factors of #[strong.m-green 40] and #[strong.m-blue 60], but any duplicates we only need once:
 
   p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue 2] µ #[span.number-ball.l-green 3] µ #[span.number-ball.l-blue-green 5]
 

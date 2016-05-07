@@ -7,9 +7,7 @@
 include ../mixins
 
 section#GT_0_0(data-audio="0|40")
-
-  //- if !user || !user.progress
-    .chapter-intro First time here? The #[x-target(to=".toolkit-button.help", no-scroll) Help panel] shows you how to get started.
+  +intro
 
   h2 Introduction
 
@@ -234,7 +232,7 @@ section(id="GT_3_0", data-audio="480|511")
   p Try to connect each of the plants below to each of the houses, without any of your lines crossing:
   .frame.fill
     include svg/utilities.svg
-    button.btn.btn-bounce#utilities-clear Clear
+    button.btn.btn-bounce Clear
 
 
 section(id="GT_3_1", data-audio="511|527")
@@ -338,10 +336,10 @@ section(data-audio="710|742")
   .row
     div(style="width: 200px")
       x-media(width="200", height="200", src="/resources/graphs-and-networks/images/icosahedron.mp4")
-      p.caption Icosahedron<br/>one of the 5 <em>Platonic Solids</em><br/><strong class="blue">20</strong> Faces, <strong class="green">12</strong> Vertices and <strong class="red">30</strong> Edges
+      p.caption Icosahedron<br/>one of the 5 <a href="/course/polygons-and-polyhedra#platonic-solids">Platonic Solids</a><br/><strong class="blue">20</strong> Faces, <strong class="green">12</strong> Vertices and <strong class="red">30</strong> Edges
     div(style="width: 200px")
       x-media(width="200", height="200", src="/resources/graphs-and-networks/images/rhombi.mp4")
-      p.caption Small Rhombicosidodecahedron<br/>one of the 13 <em>Archimedean Solids</em><br/><strong class="blue">62</strong> Faces, <strong class="green">60</strong> Vertices and <strong class="red">120</strong> Edges
+      p.caption Small Rhombicosidodecahedron<br/>one of the 13 <a href="/course/polygons-and-polyhedra#more-on-polyhedra">Archimedean Solids</a><br/><strong class="blue">62</strong> Faces, <strong class="green">60</strong> Vertices and <strong class="red">120</strong> Edges
     div(style="width: 200px")
       x-media(credit="pond5.com", width="200", height="200", src="/resources/graphs-and-networks/images/football.mp4")
       p.caption Football, or <em>Truncated Icosahedron</em><br/><strong class="blue">32</strong> Faces (12 black and 20 white),<br/><strong class="green">60</strong> Vertices and <strong class="red">90</strong> Edges
@@ -361,24 +359,41 @@ section(data-audio="742|777")
 
 section(id="GT_5_1", data-audio="777|790")
   p When colouring the map of US states, 50 colours are obviously enough, but far fewer are necessary. Try colouring the maps below with as few colours as possible:
-  x-slideshow
+  p.text-center
+    span.four-colour-icon.on
+    span.four-colour-icon
+    span.four-colour-icon
+    span.four-colour-icon
+    span.four-colour-icon
+    span.four-colour-icon
+    span.four-colour-icon
+
+  x-slideshow.four-colours
     .slide
+      x-solved
       include svg/colours-1.svg
-      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.btn.btn-bounce Clear
+      .colour-count 0
+      button.btn.btn-bounce.clear Clear
+      button.btn.btn-bounce.solve Solve
+      p.small.lgrey.text-center Note that states or countries which only share a #[em corner] are allowed to have the same colour.#[br]Alaska and Hawaii are isolated from all of the other states and can have any colour.
     .slide
+      x-solved
       include svg/colours-2.svg
-      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.btn.btn-bounce Clear
+      .colour-count 0
+      button.btn.btn-bounce.clear Clear
+      button.btn.btn-bounce.solve Solve
     .slide
+      x-solved
       include svg/colours-3.svg
-      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.btn.btn-bounce Clear
+      .colour-count 0
+      button.btn.btn-bounce.clear Clear
+      button.btn.btn-bounce.solve Solve
     .slide
+      x-solved
       include svg/colours-4.svg
-      .colour-count(style="position: absolute; right: 10px; bottom: 10px;")
-      button.btn.btn-bounce Clear
-  p.small.lgrey Note that states or countries which only share a #[em corner] are allowed to have the same colour. Alaska and Hawaii are isolated from all of the other states and can have any colour.
+      .colour-count 0
+      button.btn.btn-bounce.clear Clear
+      button.btn.btn-bounce.solve Solve
 
 
 section(id="GT_5_2", data-audio="790|834")

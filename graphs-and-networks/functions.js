@@ -10,6 +10,7 @@ import Colour from 'colour';
 import Browser from 'browser';
 import Draggable from 'draggable';
 import Drawing from 'drawing';
+import { last } from 'arrays';
 import { factorial } from 'combinatorics';
 import { integer } from 'probability';
 import { numberFormat, toOrdinal } from 'arithmetic'
@@ -555,14 +556,14 @@ fns.GT_2_4 = function(section, chapter) {
 };
 
 fns.GT_3_0 = function(section, chapter) {
-    /* var $svg = $I('map-utilities');
-    var currentUtility;
-    var startUtility;
 
-    var error = false;
-    var remove = false;
+    let currentUtility;
+    let startUtility;
 
-    var map = new Drawing($svg, {
+    let errors = [];
+    let remove = false;
+
+    let map = new Drawing($I('map-utilities'), {
         noStart: true,
         paths: $I('utility-paths'),
         intersect: true
@@ -572,27 +573,28 @@ fns.GT_3_0 = function(section, chapter) {
         e.paths[0].css('stroke','#C00');
         e.paths[1].css('stroke','#C00');
         chapter.addHint('Careful - the lines are not allowed to cross.');
-        error = true;
+        errors.push(...e.paths);
         map.stop();
     });
 
-    map.on('end', function() {
-        if (map.drawing) remove = true;
-    });
+    map.on('end', function() { if (map.drawing) remove = true; });
 
-    var allUtilities = $$('.utility1, .utility2, .utility3', $svg);
-    var clear = function() {
+    let allUtilities = section.$el.findAll('.utility1, .utility2, .utility3');
+    let sectors = new WeakMap();
+
+    function clear() {
         allUtilities.forEach($el => { $el.css('opacity', 0); });
         map.clear();
+        errors = [];
     };
 
-    $I('utilities-clear').on('click', clear);
+    section.$el.find('button').on('click', clear);
 
-    $$C('utility', $svg).forEach(function($ut) {
-        var $c = $ut.children(0);
-        var p = { x: +$c.attr('cx'), y: +$c.attr('cy') };
-        var onThis = false;
-        var dataType = $ut.attr('data-type');
+    section.$el.findAll('.utility').forEach(function($ut) {
+        let $c = $ut.children(0);
+        let p = { x: +$c.attr('cx'), y: +$c.attr('cy') };
+        let onThis = false;
+        let dataType = $ut.attr('data-type');
 
         $ut.on('pointerStart', function(e) {
             currentUtility = $ut;
@@ -600,14 +602,9 @@ fns.GT_3_0 = function(section, chapter) {
             e.preventDefault();
             e.stopPropagation();
 
-            if (error) clear();
-            error = false;
-
-            if (remove) {
-                var last = map.paths.pop();
-                last.fadeOut(200);
-            }
-            remove = false;
+            map.clearPaths(errors);
+            errors.forEach(e => { if (sectors.has(e)) sectors.get(e).css('opacity', 0); });
+            errors = [];
 
             map.start(p);
             map.drawing = false;
@@ -626,23 +623,22 @@ fns.GT_3_0 = function(section, chapter) {
             map.stop();
             $ut.effect('pulse-down');
             if (startUtility.attr('data-type') == dataType) {
-                map.paths.last().css('stroke','#C00');
+                last(map.paths).css('stroke','#C00');
+                errors.push(last(map.paths));
                 if(dataType == 'house') {
                     chapter.addHint('housesToEachOther');
                 } else {
                     chapter.addHint('factoriesToEachOther');
                 }
-                remove = true;
             } else {
-                if (startUtility.attr('data-type') == 'house') {
-                    $C($ut.attr('data-utility'), currentUtility).css('opacity', 1);
-                } else {
-                    $C(currentUtility.attr('data-utility'), $ut).css('opacity', 1);
-                }
+                let sector = (startUtility.attr('data-type') == 'house') ?
+                    $C($ut.attr('data-utility'), currentUtility) : $C(currentUtility.attr('data-utility'), $ut);
+                sector.css('opacity', 1);
+                sectors.set(last(map.paths), sector);
             }
             // TODO Error on connect twice
-        }, $svg);
-    }); */
+        });
+    });
 };
 
 fns.GT_3_1 = function(section, chapter) {
@@ -799,76 +795,91 @@ fns.GT_4_3 = function(section, chapter) {
 };
 
 fns.GT_5_1 = function(section, chapter) {
-    /*
-    var stateBorders = {"AK":["WA"],"WA":["AK","ID","OR"],"AL":["FL","GA","MS","TN"],"FL":["AL","GA"],"GA":["AL","FL","NC","SC","TN"],"MS":["AL","AR","LA","TN"],"TN":["AL","AR","GA","KY","MO","MS","NC","VA"],"AR":["LA","MO","MS","OK","TN","TX"],"LA":["AR","MS","TX"],"MO":["AR","IA","IL","KS","KY","NE","OK","TN"],"OK":["AR","CO","KS","MO","NM","TX"],"TX":["AR","LA","NM","OK"],"AZ":["CA","CO","NM","NV","UT"],"CA":["AZ","HI","NV","OR"],"CO":["AZ","KS","NE","NM","OK","UT","WY"],"NM":["AZ","CO","OK","TX","UT"],"NV":["AZ","CA","ID","OR","UT"],"UT":["AZ","CO","ID","NM","NV","WY"],"HI":["CA"],"OR":["CA","ID","NV","WA"],"KS":["CO","MO","NE","OK"],"NE":["CO","IA","KS","MO","SD","WY"],"WY":["CO","ID","MT","NE","SD","UT"],"CT":["MA","NY","RI"],"MA":["CT","NH","NY","RI","VT"],"NY":["CT","MA","NJ","PA","VT"],"RI":["CT","MA"],"DC":["MD","VA"],"MD":["DC","DE","PA","VA","WV"],"VA":["DC","KY","MD","NC","TN","WV"],"DE":["MD","NJ","PA"],"NJ":["DE","NY","PA"],"PA":["DE","MD","NJ","NY","OH","WV"],"NC":["GA","SC","TN","VA"],"SC":["GA","NC"],"IA":["IL","MN","MO","NE","SD","WI"],"IL":["IA","IN","KY","MO","WI"],"MN":["IA","ND","SD","WI"],"SD":["IA","MN","MT","ND","NE","WY"],"WI":["IA","IL","MI","MN"],"ID":["MT","NV","OR","UT","WA","WY"],"MT":["ID","ND","SD","WY"],"IN":["IL","KY","MI","OH"],"KY":["IL","IN","MO","OH","TN","VA","WV"],"MI":["IN","OH","WI"],"OH":["IN","KY","MI","PA","WV"],"WV":["KY","MD","OH","PA","VA"],"NH":["MA","ME","VT"],"VT":["MA","NH","NY"],"ME":["NH"],"ND":["MN","MT","SD"]};
+    section.addGoals('map-1', 'map-2', 'map-3', 'map-4');
 
-    var countNoZero = function(array) {
-        var count = 0;
-        for (var i=0; i<array.length; ++i) if (array[i]) ++count;
-        return count;
-    }
+    let colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', Colour.violet, Colour.orange, Colour.cyan];
+    let $colours = section.$el.findAll('.four-colour-icon');
+    let activeColour = 0;
+    let warned = false;
 
-    var $colourIcons = $$C('four-colour-icon',section.$el);
-    var activeColour = 0;
-    var activeColourEl = $colourIcons[0];
-    var colours = M.colour.rainbow(6);
-
-    $colourIcons.each(function($el, i) {
-        $el.css('background-color', colours[i]);
-        $el.click(function(){
-            activeColourEl.removeClass('on');
+    $colours.forEach(function($el, i) {
+        $el.css('background', colours[i]);
+        $el.on('click', function(){
+            $colours[activeColour].removeClass('on');
+            $colours[i].addClass('on');
             activeColour = i;
-            activeColourEl = $el
-            $el.addClass('on');
         });
     });
 
-    $$C('colour-map', section.$el).each(function($el) {
+    let borders = [
+        {"AK":["WA"],"WA":["AK","ID","OR"],"AL":["FL","GA","MS","TN"],"FL":["AL","GA"],"GA":["AL","FL","NC","SC","TN"],"MS":["AL","AR","LA","TN"],"TN":["AL","AR","GA","KY","MO","MS","NC","VA"],"AR":["LA","MO","MS","OK","TN","TX"],"LA":["AR","MS","TX"],"MO":["AR","IA","IL","KS","KY","NE","OK","TN"],"OK":["AR","CO","KS","MO","NM","TX"],"TX":["AR","LA","NM","OK"],"AZ":["CA","NM","NV","UT"],"CA":["AZ","HI","NV","OR"],"CO":["KS","NE","NM","OK","UT","WY"],"NM":["AZ","CO","OK","TX"],"NV":["AZ","CA","ID","OR","UT"],"UT":["AZ","CO","ID","NV","WY"],"HI":["CA"],"OR":["CA","ID","NV","WA"],"KS":["CO","MO","NE","OK"],"NE":["CO","IA","KS","MO","SD","WY"],"WY":["CO","ID","MT","NE","SD","UT"],"CT":["MA","NY","RI"],"MA":["CT","NH","NY","RI","VT"],"NY":["CT","MA","NJ","PA","VT"],"RI":["CT","MA"],"DC":["MD","VA"],"MD":["DC","DE","PA","VA","WV"],"VA":["DC","KY","MD","NC","TN","WV"],"DE":["MD","NJ","PA"],"NJ":["DE","NY","PA"],"PA":["DE","MD","NJ","NY","OH","WV"],"NC":["GA","SC","TN","VA"],"SC":["GA","NC"],"IA":["IL","MN","MO","NE","SD","WI"],"IL":["IA","IN","KY","MO","WI"],"MN":["IA","ND","SD","WI"],"SD":["IA","MN","MT","ND","NE","WY"],"WI":["IA","IL","MI","MN"],"ID":["MT","NV","OR","UT","WA","WY"],"MT":["ID","ND","SD","WY"],"IN":["IL","KY","MI","OH"],"KY":["IL","IN","MO","OH","TN","VA","WV"],"MI":["IN","OH","WI"],"OH":["IN","KY","MI","PA","WV"],"WV":["KY","MD","OH","PA","VA"],"NH":["MA","ME","VT"],"VT":["MA","NH","NY"],"ME":["NH"],"ND":["MN","MT","SD"]},
+        {"Colombia": ["Venezuela","Brazil","Peru","Ecuador"],"Venezuela": ["Colombia","Brazil","Guyana"],"Guyana": ["Venezuela","Brazil","Suriname"],"Suriname": ["Guyana","Brazil","FrenchGuiana"],"FrenchGuiana": ["Suriname","Brazil"],"Ecuador": ["Peru","Colombia"],"Peru": ["Ecuador","Colombia","Brazil","Bolivia","Chile"],"Bolivia": ["Peru","Brazil","Paraguay","Argentina","Chile"],"Paraguay": ["Argentina","Bolivia","Brazil"],"Chile": ["Peru","Bolivia","Argentina"],"Argentina": ["Chile","Bolivia","Paraguay","Brazil","Uruguay"],"Uruguay": ["Argentina","Brazil"],"Brazil": ["FrenchGuiana","Suriname","Guyana","Venezuela","Colombia","Peru","Bolivia","Paraguay","Argentina","Uruguay"]},
+        {"Schleswig-Holstein":["Niedersachsen","Hamburg","Mecklenburg-Vorpommern"],"Hamburg":["Niedersachsen","Schleswig-Holstein"],"Brandenburg":["Mecklenburg-Vorpommern","Niedersachsen","Sachsen-Anhalt","Sachsen","Berlin"],"Berlin":["Brandenburg"],"Mecklenburg-Vorpommern":["Schleswig-Holstein","Niedersachsen","Brandenburg"],"Niedersachsen":["Schleswig-Holstein","Hamburg","Mecklenburg-Vorpommern","Brandenburg","Sachsen-Anhalt","Thüringen","Hessen","Nordrhein-Westfalen","Bremen"],"Bremen":["Niedersachsen"],"Sachsen-Anhalt":["Niedersachsen","Brandenburg","Sachsen","Thüringen"],"Sachsen":["Brandenburg","Sachsen-Anhalt","Thüringen","Bayern"],"Thüringen":["Hessen","Niedersachsen","Sachsen-Anhalt","Sachsen","Bayern"],"Nordrhein-Westfalen":["Niedersachsen","Hessen","Rheinland-Pfalz"],"Hessen":["Rheinland-Pfalz","Nordrhein-Westfalen","Niedersachsen","Thüringen","Bayern","Baden_Württemberg"],"Rheinland-Pfalz":["Nordrhein-Westfalen","Hessen","Baden_Württemberg","Saarland"],"Saarland":["Rheinland-Pfalz"],"Baden_Württemberg":["Rheinland-Pfalz","Hessen","Bayern"],"Bayern":["Baden_Württemberg","Hessen","Thüringen"]},
+        {"Northumberland":["Cumbria","County_Durham","Tyne_and_Wear"],"Tyne_and_Wear":["Northumberland","County_Durham"],"Cumbria":["Northumberland","North_Yorkshire","County_Durham","Lancashire"],"County_Durham":["Tyne_and_Wear","Northumberland","Cumbria","North_Yorkshire"],"North_Yorkshire":["County_Durham","Cumbria","Lancashire","West_Yorkshire","South_Yorkshire","East_Riding_of_Yorkshire"],"Lancashire":["Cumbria","North_Yorkshire","West_Yorkshire","Greater_Manchester","Merseyside"],"West_Yorkshire":["Greater_Manchester","Lancashire","North_Yorkshire","South_Yorkshire","Derbyshire"],"East_Riding_of_Yorkshire":["North_Yorkshire","South_Yorkshire","Lincolnshire"],"Greater_Manchester":["Merseyside","Lancashire","West_Yorkshire","Derbyshire","Cheshire"],"Merseyside":["Lancashire","Greater_Manchester","Cheshire"],"South_Yorkshire":["West_Yorkshire","North_Yorkshire","East_Riding_of_Yorkshire","Lincolnshire","Nottinghamshire","Derbyshire"],"Cheshire":["Merseyside","Greater_Manchester","Derbyshire","Staffordshire","Shropshire"],"Derbyshire":["Cheshire","Greater_Manchester","West_Yorkshire","South_Yorkshire","Nottinghamshire","Leicestershire","Warwickshire","Staffordshire"],"Nottinghamshire":["Derbyshire","South_Yorkshire","Lincolnshire","Rutland","Leicestershire"],"Lincolnshire":["East_Riding_of_Yorkshire","South_Yorkshire","Nottinghamshire","Leicestershire","Rutland","Cambridgeshire","Norfolk"],"Staffordshire":["Shropshire","Cheshire","Derbyshire","Leicestershire","Warwickshire","West_Midlands"],"Leicestershire":["Derbyshire","Nottinghamshire","Lincolnshire","Rutland","Northamptonshire","Warwickshire","Staffordshire"],"Rutland":["Leicestershire","Lincolnshire","Cambridgeshire","Northamptonshire"],"Norfolk":["Lincolnshire","Cambridgeshire","Suffolk"],"Shropshire":["Cheshire","Staffordshire","Worcestershire","Herefordshire"],"West_Midlands":["Staffordshire","Warwickshire","Worcestershire"],"Warwickshire":["Staffordshire","Derbyshire","Leicestershire","Northamptonshire","Oxfordshire","Gloucestershire","Worcestershire","West_Midlands"],"Northamptonshire":["Warwickshire","Leicestershire","Rutland","Cambridgeshire","Bedfordshire","Buckinghamshire","Oxfordshire"],"Cambridgeshire":["Northamptonshire","Rutland","Lincolnshire","Norfolk","Suffolk","Essex","Hertfordshire","Bedfordshire"],"Suffolk":["Norfolk","Cambridgeshire","Essex"],"Essex":["Suffolk","Cambridgeshire","Hertfordshire","Greater_London","Kent"],"Greater_London":["Buckinghamshire","Hertfordshire","Essex","Kent","Surrey","Berkshire"],"Buckinghamshire":["Oxfordshire","Northamptonshire","Bedfordshire","Hertfordshire","Greater_London","Berkshire"],"Bedfordshire":["Northamptonshire","Cambridgeshire","Hertfordshire","Buckinghamshire"],"East_Sussex":["West_Sussex","Kent","Surrey"],"Surrey":["Hampshire","Berkshire","Greater_London","Kent","East_Sussex","West_Sussex"],"West_Sussex":["East_Sussex","Kent","Surrey","Hampshire"],"Berkshire":["Oxfordshire","Buckinghamshire","Greater_London","Surrey","Hampshire","Wiltshire"],"Oxfordshire":["Gloucestershire","Warwickshire","Northamptonshire","Buckinghamshire","Berkshire","Wiltshire"],"Gloucestershire":["Herefordshire","Worcestershire","Warwickshire","Oxfordshire","Wiltshire","Somerset"],"Wiltshire":["Somerset","Gloucestershire","Oxfordshire","Berkshire","Hampshire","Dorset"],"Hampshire":["Dorset","Wiltshire","Berkshire","Surrey","West_Sussex"],"Dorset":["Devon","Somerset","Wiltshire","Hampshire"],"Somerset":["Devon","Dorset","Wiltshire","Gloucestershire"],"Devon":["Cornwall","Somerset","Dorset"],"Cornwall":["Devon"],"Worcestershire":["Herefordshire","Shropshire","Staffordshire","West_Midlands","Warwickshire","Gloucestershire"],"Hertfordshire":["Bedfordshire","Cambridgeshire","Essex","Greater_London","Buckinghamshire"],"Herefordshire":["Shropshire","Worcestershire","Gloucestershire"],"Kent":["Essex","Greater_London","Surrey","East_Sussex"]}
+    ];
 
-        var $svg = $T('svg', $el);
-        var $coloursUsed = $C('colour-count', $el);
-        var $states = $svg.children();
-        $states.each(function($s) { $s.css('fill', '#CCC'); });
+    section.$el.findAll('.slide').forEach(function($map, i) {
+        let $count = $map.find('.colour-count');
+        let $countries = $map.find('.frame').children();
 
-        var colourUses = [0,0,0,0,0,0];
-        var stateColours = [];
+        let countryIds = [];
+        let countryColours = {};
+        let colourUses = [0,0,0,0,0,0,0];
+        let completed = 10;
+        let used = 0;
 
-        $states.each(function($s) {
+        let $solve = $map.find('.solve');
+        $map.find('.clear').on('click', function() {
+            countryColours = {};
+            $countries.forEach($c => { $c.css('fill', '#CCC'); });
+            section.solveds[i]._el.hide();
+            colourUses = [0,0,0,0,0,0,0];
+            $count.text = used = 0;
+        });
 
-            var id = $s.attr('id');
-            stateColours[id] = null;
+        $countries.forEach(function($c) {
+            let id = $c.attr('id');
+            let neighbours = borders[i][id] || [];
+            countryIds.push(id);
 
-            $s.click(function() {
+            let initial = colours.indexOf($c.attr('fill'));
+            $c.css('fill', '#CCC');
 
-                for (var i=0; i<stateBorders[id].length; ++i) {
-                    if (stateColours[stateBorders[id][i]] == activeColour) {
-                        return false;
-                    }
-                }
-
-                if (stateColours[id]) --colourUses[stateColours[id]];
-                ++colourUses[activeColour];
-                stateColours[id] = activeColour;
-                $coloursUsed.html(countNoZero(colourUses));
-
-                $s.css('fill', colours[activeColour]);
-
-                for (var i=0; i<50; ++i) {
-                    if (!stateColours[i]) return;
-                }
-
-                // TODO completed msg
+            $solve.on('click', function() {
+                countryColours[id] = initial;
+                $c.css('fill', colours[initial]);
+                $count.text = used = 4;
+                completed = true;
             });
 
-        });
+            $c.on('click', function() {
+                for (let n of neighbours) if (countryColours[n] == activeColour) {
+                    if (!warned) chapter.addHint('You can’t use this colour here because it is already in one of the neighbouring areas.');
+                    warned = true;
+                    return;
+                }
 
-       $el.findAll('btn').click(function() {
-            stateColours = [];
-            $states.forEach(function($s) { $s.css('fill', '#CCC'); });
-        });
+                if (countryColours[id] != null) --colourUses[countryColours[id]];
+                ++colourUses[activeColour];
+                $count.text = used = colourUses.filter(x => x > 0).length;
 
+                countryColours[id] = activeColour;
+                $c.css('fill', colours[activeColour]);
+
+                if (used < completed && countryIds.every(id => countryColours[id] != null)) {
+                    completed = used;
+                    if (used <= 4) {
+                        section.solveds[i]._el.show();
+                        section.score('map-' + i);
+                    } else {
+                        chapter.addHint(`Well done! Can you colour this map with fewer than ${used} colours?`);
+                    }
+                }
+            });
+
+            return id;
+        });
     });
-    */
 };
 
 fns.GT_5_2 = function(section, chapter) {
