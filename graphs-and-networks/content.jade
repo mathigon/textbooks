@@ -294,27 +294,37 @@ section(data-audio="575|609")
   p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss#proof proof] that works for any graph&hellip;</p>
 
 
-section(data-audio="609|657")
+section(data-audio="609|657", id="GT_4_2")
   x-slideshow
     .stage
-      include svg/euler-proof.svg
+      svg(x="0px" y="0px" viewBox="0 0 640 200" class="frame")
+        line.link(style="stroke-width: 3px; display: none" x1="270" y1="30"  x2="150" y2="100")
+        line.link(style="stroke-width: 3px; display: none" x1="150" y1="100" x2="270" y2="170" )
+        line.link(style="stroke-width: 3px; display: none" x1="270" y1="170" x2="390" y2="100")
+        line.link(style="stroke-width: 3px" x1="390" y1="100" x2="270" y2="30")
+        circle.node(cx="270" cy="30"  r="7")
+        circle.node(cx="150" cy="100" r="7" style="display: none")
+        circle.node(cx="270" cy="170" r="7" style="display: none")
+        circle.node(cx="390" cy="100" r="7" style="display: none")
+
+
       div(style="position: absolute; top: 20px; right: 0; font-size: 1.2em;")
         table.grid.table-small
           tr
-            td <strong class="blue"><em>F</em></strong>
-            td <strong class="green"><em>V</em></strong>
-            td <strong class="red"><em>E</em></strong>
+            td: strong.blue.i F
+            td: strong.green.i V
+            td: strong.red.i E
           tr
-            td 0
-            td 1
-            td 0
-        p <strong class="blue">0</strong> + <strong class="green">1</strong> &nbsp;=&nbsp; <strong class="red">0</strong> + 1
+            td.xf 0
+            td.xv 1
+            td.xe 0
+        p <strong class="blue xf">0</strong> + <strong class="green xv">1</strong> &nbsp;=&nbsp; <strong class="red xe">0</strong> + 1
 
     .legend(data-audio="609") The simplest graph consists of a single vertex. We can easily check that Euler&rsquo;s equation works.
     .legend(data-audio="618") Let us add a new vertex to our graph. We also have to add an edge, and Euler&rsquo;s equation still works.
     .legend(data-audio="625") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler&rsquo;s equation still works.
     .legend(data-audio="638") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler&rsquo;s equation works.
-    .legend(data-audio="647") Let's keep going: if we now create a square we add one vertex, two edges and one face. Euler&rsquo;s equation still works.
+    .legend(data-audio="647") Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face. Euler&rsquo;s equation still works.
 
 
 section(id="GT_4_3", data-audio="657|692")

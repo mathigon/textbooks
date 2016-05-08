@@ -40,7 +40,7 @@ export const bio = {
         birth: "c. 425",
         death: "c. 347 BC",
         img: "/resources/bio/plato.jpg",
-        bio: "<p>Plato was a philosopher in ancient Greece, and – together with his teacher Socrates and his student Archimedes – laid the very foundation of Western philosophy and science.</p><p>Plato founded the Academy of Athens, the first higher learning institution in the Western world, and his many writings on philosophy and theology, science and mathematics, politics and justice, make him one of the most influential thinkers of all time.</p>"
+        bio: "<p>Plato was a philosopher in ancient Greece, and – together with his teacher Socrates and his student Archimedes – laid the very foundation of Western philosophy and science.</p><p>Plato founded the Academy of Athens, the first higher learning institution in the Western world. His many writings on philosophy and theology, science and mathematics, politics and justice, make him one of the most influential thinkers of all time.</p>"
     },
     archimedes: {
         name: "Archimedes",

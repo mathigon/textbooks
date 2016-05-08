@@ -772,6 +772,74 @@ fns.GT_4_1 = function(section, chapter) {
     });
 };
 
+fns.GT_4_2 = function(section, chapter) {
+    let $vertices = section.$el.findAll('circle');
+    let $edges = section.$el.findAll('line');
+
+    let $f = section.$el.findAll('.xf');
+    let $e = section.$el.findAll('.xe');
+    let $v = section.$el.findAll('.xv');
+
+    let positions = [
+        [{x: 300, y: 100}, {x: 270, y: 170}, {x: 270, y: 170}, {x: 300, y: 100}],  // show 0
+        [{x: 200, y: 100}, {x: 270, y: 170}, {x: 270, y: 170}, {x: 390, y: 100}],  // show 0, 3
+        [{x: 270, y:  30}, {x: 270, y: 170}, {x: 270, y: 170}, {x: 390, y: 100}],  // show 0, 1, 3
+        [{x: 270, y: 100}, {x: 150, y: 100}, {x: 270, y: 170}, {x: 390, y: 100}],  // show 0, 1, 3
+        [{x: 270, y:  30}, {x: 150, y: 100}, {x: 270, y: 170}, {x: 390, y: 100}]   // show all
+    ];
+
+    let slide = 0;
+    $vertices.forEach(($v, i) => { $v.center(positions[0][i]); });
+    $edges.forEach(($e, i) => { $e.line(positions[0][i], positions[0][(i+1)%4]); });
+
+    section.slides.on('next back', function(s) {
+        let start = positions[slide]
+        let end = positions[s];
+        slide = s;
+
+        animate(function(x) {
+            $vertices.forEach(($v, i) => { $v.center(Point.interpolate(start[i], end[i], x)); });
+            $edges.forEach(($e, i) => { $e.line(Point.interpolate(start[i], end[i], x),
+                                                Point.interpolate(start[(i+1)%4], end[(i+1)%4], x)); });
+        }, 400);
+    });
+
+    section.slides.on('next', function(s) {
+        if (s == 1) {
+            $vertices[3].enter('pop', 1);
+        } else if (s == 2) {
+            $vertices[1].enter('pop', 400, 400);
+            $edges[0].enter('fade', 400, 400); $edges[2].enter('fade', 400, 400);
+        } else if (s == 3) {
+            $edges[2].exit('fade', 400);
+        } else if (s == 4) {
+            $vertices[2].enter('pop', 400);
+            $edges[1].enter('draw', 400); $edges[2].enter('draw', 400);
+        }
+    });
+
+    section.slides.on('back', function(s) {
+        if (s == 0) {
+            $vertices[3].exit('pop', 400)
+        } else if (s == 1) {
+            $vertices[1].exit('pop', 400)
+            $edges[0].exit('fade', 400); $edges[2].exit('fade', 400);
+        } else if (s == 2) {
+            $edges[2].enter('draw', 400);
+        } else if (s == 3) {
+            $vertices[2].exit('pop')
+            $edges[1].exit('fade', 400); $edges[2].exit('fade', 400);
+        }
+    });
+
+    let values = [[0,1,0], [0,2,1], [1,3,3], [0,3,2], [1,4,4]]
+    section.slides.on('step', function(s) {
+        $f.forEach(x => { x.text = values[s][0]; });
+        $v.forEach(x => { x.text = values[s][1]; });
+        $e.forEach(x => { x.text = values[s][2]; });
+    });
+};
+
 fns.GT_4_3 = function(section, chapter) {
 
     let $svg = $I('dominoes');

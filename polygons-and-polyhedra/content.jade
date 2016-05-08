@@ -483,41 +483,66 @@ section#platonic
 
   p Just like we defined #[em regular polygons] as particularly symmetric polygons, we can create particularly “regular” polyhedra – for example, only using just a single kind of regular polygon:
 
-  p.todo Explanation coming soon…
+  p To create a 3-dimensional object, we need at least #[+input(3)] faces to meet at every vertex. Let’s start with equilateral triangles:
 
-  //- div
-    p To create a 3-dimensional object, we need at least [3] faces to meet at every vertex. Let’s start with equilateral triangles.
+  table.plato.subsection(needs="blank-0")
+    tr
+      td(style="width: 80px"): include svg/platonic/triangle-1.svg
+      td(style="width: 80px"): x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/tetrahedron.gif")
+      td: p We can create a polyhedron where three equilateral triangles meet at every vertex. The result is called a #[strong Tetrahedron].
+    tr
+      td: include svg/platonic/triangle-2.svg
+      td: x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/octahedron.gif")
+      td: p If four triangles meet at every vertex, we get a different polyhedron called #[strong Octahedron].
+    tr
+      td: include svg/platonic/triangle-3.svg
+      td: x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/icosahedron.gif")
+      td: p If five triangles meet at every vertex, we get another polyhedron called #[strong Icosahedron].
+    tr(style="background: #eee")
+      td: include svg/platonic/triangle-4.svg
+      td
+      td: p If six triangles meet at every vertex we don’t get a polyhedron: just a flat #[+blank('tessellation|angle|quadrilateral')].
+    tr(style="background: #eee")
+      td(colspan=3): p We always need a #[+blank('gap|overlap')] to create a 3-dimensional shape. Therefore seven or more triangles at every vertex also can’t produce new polyhedra.
 
-    .row
-      .grow
-        p We can create a polyhedron where three equilateral triangles meet at every vertex. It is called a #[strong Tetrahedron].
-        //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/tetrahedron.gif")
-      .grow
-        p If four triangles meet at every vertex, we get an #[strong Octahedron].
-        //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/octahedron.gif")
-      .grow
-        p And if five triangles meet at every vertex, we get an #[strong Icosahedron].
-        //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/icosahedron.gif")
-      .grow
-        p If six triangles meet at every vertex, we don’t get a polyhedron, just a flat tessellation.
-      .grow
-        p And more than six vertices doesn’t work at all…
+section
+  p We can do the same with squares:
 
-    p We can do the same with squares:
+  table.plato
+    tr
+      td(style="width: 80px"): include svg/platonic/square-1.svg
+      td(style="width: 80px"): x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/cube.gif")
+      td: p If three squares meet at every vertex, we get a #[strong cube], sometimes also called #[em Hexahedron].
+    tr(style="background: #eee")
+      td: include svg/platonic/square-2.svg
+      td
+      td: p If four squares meet at every vertex, we get another tessellation. Like above, five or more squares also won’t work.
 
-    .row
-      p If three squares meet at every vertex, we get a cube.
-      p If four squares meet at every vertex, we get a flat tessellation. Five or more squares doesn't work at all.
+section
+  p Next, let’s try pentagons:
 
-    p Next, let's try pentagons.
+  table.plato
+    tr
+      td(style="width: 80px"): include svg/platonic/pentagon-1.svg
+      td(style="width: 80px"): x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/dodecahedron.gif")
+      td: p If three pentagons meet at every vertex, we get a polyhedron called #[strong Dodecahedron].
+    tr(style="background: #eee")
+      td(style="width: 80px"): include svg/platonic/pentagon-2.svg
+      td
+      td: p Like above, four or more pentagons #[+blank('don’t work|are possible')] because there is no gap we can fold.
 
-    .row
-      p If three pentagons meet at every vertex, we get a dodecahedron.
-      p Four or more pentagons don't work at all.
+section
+  p And similarly for hexagons:
 
-    p If we have three hexagons meet at every vertex, we immediately get a tessellation. And regular polygons with more than six sides don't even tessellate. Therefore we have found every possibility.
+  table.plato
+    tr(style="background: #eee")
+      td(style="width: 80px"): include svg/platonic/hexagon.svg
+      td: p If three hexagons meet at every vertex we get a flat tessellation but no polyhedron. And again, four or more hexagons also don’t work.
 
-  p Thus, there are just five different polyhedra with these properties. They are called #[strong Platonic Solids], named after the Greek philosopher #[x-bio(id="plato") Plato] who discovered them. Their individual names are derived from the Greek name for their number of faces: “tetra”, for example, means “four”.
+section
+  p The same also happens for all regular polygons with more than six sides. They don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
+
+  p Thus, there are #[+input(5)] different polyhedra consisting of just one kind of #[+blank('regular polygon|triangle|polygon')]. These are called #[strong Platonic Solids], named after the Greek philosopher #[x-bio(id="plato") Plato] who discovered them. Their individual names are derived from the Greek name for their number of faces: “tetra”, for example, means “four”.
 
 section
   p Plato believed that all matter in the Universe consists of four elements: air, earth, water and fire, and that these correspond to different Platonic solids. The fifth, he thought, was the shape of the entire Universe. Today we know that there are more than 100 elements which consist of spherical atoms, not polyhedra.
