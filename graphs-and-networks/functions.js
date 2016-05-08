@@ -821,21 +821,13 @@ fns.GT_5_1 = function(section, chapter) {
     section.$el.findAll('.slide').forEach(function($map, i) {
         let $count = $map.find('.colour-count');
         let $countries = $map.find('.frame').children();
+        let $solve = $map.find('.solve');
 
         let countryIds = [];
         let countryColours = {};
         let colourUses = [0,0,0,0,0,0,0];
         let completed = 10;
         let used = 0;
-
-        let $solve = $map.find('.solve');
-        $map.find('.clear').on('click', function() {
-            countryColours = {};
-            $countries.forEach($c => { $c.css('fill', '#CCC'); });
-            section.solveds[i]._el.hide();
-            colourUses = [0,0,0,0,0,0,0];
-            $count.text = used = 0;
-        });
 
         $countries.forEach(function($c) {
             let id = $c.attr('id');
@@ -844,13 +836,7 @@ fns.GT_5_1 = function(section, chapter) {
 
             let initial = colours.indexOf($c.attr('fill'));
             $c.css('fill', '#CCC');
-
-            $solve.on('click', function() {
-                countryColours[id] = initial;
-                $c.css('fill', colours[initial]);
-                $count.text = used = 4;
-                completed = true;
-            });
+            $solve.on('click', function() { countryColours[id] = initial; $c.css('fill', colours[initial]); });
 
             $c.on('click', function() {
                 for (let n of neighbours) if (countryColours[n] == activeColour) {
@@ -876,9 +862,23 @@ fns.GT_5_1 = function(section, chapter) {
                     }
                 }
             });
-
-            return id;
         });
+
+        $map.find('.clear').on('click', function() {
+            $count.text = used = 0;
+            countryColours = {};
+            $countries.forEach($c => { $c.css('fill', '#CCC'); });
+            section.solveds[i]._el.hide();
+            colourUses = [0,0,0,0,0,0,0];
+        });
+
+        $solve.on('click', function() {
+            $count.text = used = 4;
+            completed = true;
+            colourUses = [0,0,0,0,0,0,0];
+            countryIds.forEach(c => { colourUses[countryColours[c]] += 1 })
+        });
+
     });
 };
 

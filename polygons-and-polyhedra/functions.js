@@ -331,7 +331,6 @@ fns.drawing = function(section) {
 };
 
 fns.penrose = function(section, chapter) {
-    console.log('penrose');
     chapter.addGloss('penrose');
 
     let $slider = section.$el.find('x-slider');

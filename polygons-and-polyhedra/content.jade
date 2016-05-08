@@ -357,6 +357,11 @@ section#tessellation
       x-media(credit="© M. C. Escher", src="/resources/polygons-and-polyhedra/images/tessellations/escher.jpg", width="200", height="200")
       p.caption Study of Regular Division of the Plane with Reptiles, M. C. Escher
 
+  // TODO Carbon Nanotube
+  // application: https://en.wikipedia.org/wiki/Carbon_nanotube
+  // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
+  // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
+
 section#drawing
   p Here you can create your own tessellations with regular polygons. See if there are any shapes that tessellate well or not at all, and try to create interesting patterns.
 
@@ -476,51 +481,46 @@ section#polyhedra
 section#platonic
   h2 Platonic Solids
 
-  p.todo Coming Soon…
+  p Just like we defined #[em regular polygons] as particularly symmetric polygons, we can create particularly “regular” polyhedra – for example, only using just a single kind of regular polygon:
 
-//- section
-  h2 Platonic Solids
+  p.todo Explanation coming soon…
 
-  p Just like we defined #[em regular polygons] as particularly symmetric polygons, we could try to create particularly “regular” polyhedra. For example, only using a single kind of regular polygon.
+  //- div
+    p To create a 3-dimensional object, we need at least [3] faces to meet at every vertex. Let’s start with equilateral triangles.
 
-  p To create a 3-dimensional object, we need at least [3] faces to meet at every vertex. Let’s start with equilateral triangles.
+    .row
+      .grow
+        p We can create a polyhedron where three equilateral triangles meet at every vertex. It is called a #[strong Tetrahedron].
+        //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/tetrahedron.gif")
+      .grow
+        p If four triangles meet at every vertex, we get an #[strong Octahedron].
+        //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/octahedron.gif")
+      .grow
+        p And if five triangles meet at every vertex, we get an #[strong Icosahedron].
+        //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/icosahedron.gif")
+      .grow
+        p If six triangles meet at every vertex, we don’t get a polyhedron, just a flat tessellation.
+      .grow
+        p And more than six vertices doesn’t work at all…
 
-  .row
-    .grow
-      p We can create a polyhedron where three equilateral triangles meet at every vertex. It is called a #[strong Tetrahedron].
-      //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/tetrahedron.gif")
-    .grow
-      p If four triangles meet at every vertex, we get an #[strong Octahedron].
-      //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/octahedron.gif")
-    .grow
-      p And if five triangles meet at every vertex, we get an #[strong Icosahedron].
-      //- x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/icosahedron.gif")
-    .grow
-      p If six triangles meet at every vertex, we don’t get a polyhedron, just a flat tessellation.
-    .grow
-      p And more than six vertices doesn’t work at all…
+    p We can do the same with squares:
 
-  p We can do the same with squares:
+    .row
+      p If three squares meet at every vertex, we get a cube.
+      p If four squares meet at every vertex, we get a flat tessellation. Five or more squares doesn't work at all.
 
-  .row
-    p If three squares meet at every vertex, we get a cube.
-    p If four squares meet at every vertex, we get a flat tessellation. Five or more squares doesn't work at all.
+    p Next, let's try pentagons.
 
-  p Next, let's try pentagons.
+    .row
+      p If three pentagons meet at every vertex, we get a dodecahedron.
+      p Four or more pentagons don't work at all.
 
-  .row
-    p If three pentagons meet at every vertex, we get a dodecahedron.
-    p Four or more pentagons don't work at all.
+    p If we have three hexagons meet at every vertex, we immediately get a tessellation. And regular polygons with more than six sides don't even tessellate. Therefore we have found every possibility.
 
-  p If we have three hexagons meet at every vertex, we immediately get a tessellation. And regular polygons with more than six sides don't even tessellate. Therefore we have found every possibility.
+  p Thus, there are just five different polyhedra with these properties. They are called #[strong Platonic Solids], named after the Greek philosopher #[x-bio(id="plato") Plato] who discovered them. Their individual names are derived from the Greek name for their number of faces: “tetra”, for example, means “four”.
 
-  p There are only five polyhedra that consist of only one kind of regular polygon, and look the same from every direction. They are called #[strong Platonic Solids], named after the Greek philosopher Plato who discovered them.
-
-  p.todo Their names are derived from the Greek name for the number of faces (“tetra”, for example, means “four”).
-
-  p Plato believed that all matter in the Universe consists of four elements: air, earth, water and fire.
-
-  p.todo and that these elements correspond to the Platonic solids: the Tetrahedron as fire, the cube as earth, the Octahedron as air and the Icosahedron as water. The Dodecahedron represented the Universe as a whole. Today we know that there are more than 100 elements, and that they consist of spherical atoms, not polyhedra.
+section
+  p Plato believed that all matter in the Universe consists of four elements: air, earth, water and fire, and that these correspond to different Platonic solids. The fifth, he thought, was the shape of the entire Universe. Today we know that there are more than 100 elements which consist of spherical atoms, not polyhedra.
 
   p Try to fill in the following table with properties about the platonic solids:
 
@@ -530,7 +530,7 @@ section#platonic
       td: strong Cube
       td: strong Octahedron
       td: strong Dodecahedron
-      td: strong icosahedron
+      td: strong Icosahedron
     tr
       td: x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/tetrahedron.gif")
       td: x-media(width="100", height="100", src="/resources/polygons-and-polyhedra/images/polyhedra/cube.gif")
@@ -544,9 +544,14 @@ section#platonic
       td The Universe
       td Water
     tr
-      td [4] Faces#[br][4] Vertices#[br][6] Edges
+      td #[+input(4)] Faces#[br]#[+input(4)] Vertices#[br]#[+input(6)] Edges
+      td #[+input(6)] Faces#[br]#[+input(8)] Vertices#[br]#[+input(12)] Edges
+      td #[+input(8)] Faces#[br]#[+input(6)] Vertices#[br]12 Edges
+      td #[+input(12)] Faces#[br]20 Vertices#[br]30 Edges
+      td #[+input(20)] Faces#[br]12 Vertices#[br]30 Edges
 
-  p Notice how the number of faces and vertices is swapped around for Cube an Octahedron, and Dodecahedron and Icosahedron, while the number of edges stays the same. These pairs of Platonic solids are called #[em dual].
+section
+  p Notice how the number of faces and vertices are #[+blank('swapped around|the same')] for cube an octahedron, and dodecahedron and icosahedron, while the number of edges #[+blank('stays the same|are different')]. These pairs of Platonic solids are called #[strong dual solids].
 
   p We can even turn one into each other, by “replacing” every face with a vertex, and vice versa:
 
@@ -554,7 +559,7 @@ section#platonic
     .grow: x-img-sequence(src="/resources/polygons-and-polyhedra/images/dual1/d#.png", pages="24", width="300", height="300")
     .grow: x-img-sequence(src="/resources/polygons-and-polyhedra/images/dual2/d#.png", pages="24", width="300", height="300")
 
-  p The Tetrahedron is dual with itself. If we were to do the same as above we would simply get another Tetrahedron.
+  p The tetrahedron is dual with itself. If we were to do the same kind of intersection, we would simply get two tetrahedra.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -562,17 +567,9 @@ section#platonic
 section#archimedean
   h2 More on Polyhedra
 
-  p #[strong Archimedean solids] are slightly less regular. They still consist of regular polygons and look the same from every direction, but they can consist of more than one type of regular polygon. They are named after another ancient Greek mathematician: #[x-bio#archimedes Archimedes of Syracuse]. In total there are 13 Archimedean solids, plus two mirror images.
+  p #[strong Archimedean solids] are slightly less regular. They are like Platonic solids, but they can consist of more than one type of regular polygon. They are named after another ancient Greek mathematician: #[x-bio#archimedes Archimedes of Syracuse]. In total there are 13 Archimedean solids, plus two mirror images.
 
-  //- In geometry, an Archimedean solid is a highly symmetric, semi-regular convex polyhedron composed of two or more types of regular polygons meeting in identical vertices. They are distinct from the Platonic solids, which are composed of only one type of polygon meeting in identical vertices, and from the Johnson solids, whose regular polygonal faces do not meet in identical vertices.
-
-  //- "Identical vertices" are usually taken to mean that for any two vertices, there must be an isometry of the entire solid that takes one vertex to the other. Sometimes it is instead only required that the faces that meet at one vertex are related isometrically to the faces that meet at the other. This difference in definitions controls whether the elongated square gyrobicupola (pseudo-rhombicuboctahedron) is considered an Archimedean solid or a Johnson solid: it is the unique convex polyhedron that has regular polygons meeting in the same way at each vertex, but that does not have a global symmetry taking every vertex to every other vertex. Based on its existence, Branko Grünbaum (2009) has suggested a terminological distinction in which an Archimedean solid is defined as having the same vertex figure at each vertex (including the elongated square gyrobicupola) while a uniform polyhedron is defined as having each vertex symmetric to each other vertex (excluding the gyrobicupola).
-
-  //- Prisms and antiprisms, whose symmetry groups are the dihedral groups, are generally not considered to be Archimedean solids, despite meeting the above definition. With this restriction, there are only finitely many Archimedean solids. All but the elongated square gyrobicupola can be made via Wythoff constructions from the Platonic solids with tetrahedral, octahedral and icosahedral symmetry.
-
-  //- The Archimedean solids take their name from Archimedes, who discussed them in a now-lost work. Pappus refers to it, stating that Archimedes listed 13 polyhedra.[1] During the Renaissance, artists and mathematicians valued pure forms and rediscovered all of these forms. This search was almost entirely completed around 1620 by Johannes Kepler,[2] who defined prisms, antiprisms, and the non-convex solids known as the Kepler-Poinsot polyhedra.
-
-  //- Kepler may have also found the elongated square gyrobicupola (pseudorhombicuboctahedron): at least, he once stated that there were 14 Archimedean solids. However, his published enumeration only includes the 13 uniform polyhedra, and the first clear statement of the pseudorhombicuboctahedron's existence was made in 1905, by Duncan Sommerville.[1]
+  //- TODO Prisms and antiprisms, whose symmetry groups are the dihedral groups, are generally not considered to be Archimedean solids, despite meeting the above definition. With this restriction, there are only finitely many Archimedean solids. All but the elongated square gyrobicupola can be made via Wythoff constructions from the Platonic solids with tetrahedral, octahedral and icosahedral symmetry.
 
   .row
     div(style="width: 160px")
@@ -651,7 +648,7 @@ section
       x-media(lightbox, credit="Archaeodontosaurus, via Wikipedia", width="180", height="180", src="/resources/polygons-and-polyhedra/images/rock.jpg")
       p.caption Pyrite cube
     .grow
-      p.todo Most crystals have their atoms arranged in a regular pattern of tetrahedra, cubes, octahedra or many other polyhedra. TODO
+      p Most crystals have their atoms arranged in a regular grids consisting of tetrahedra, cubes, octahedra and many other polyhedra. When they crack or shatter, you can see these patterns on a much larger scale.
 
 section
   h3 Construction
@@ -665,10 +662,6 @@ section
     .grow
       p Tetrahedra and Octahedra are incredibly rigid and stable, which makes them very useful in construction. #[em Space frames] are polygonal structures that can support large roos and heavy bridges.
 
-  // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-  // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-  // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 section
   h3 Games
   .row
@@ -681,15 +674,7 @@ section
     .grow
       p Because of their symmetry, Platonic solids are often used to create dice. Every side has the probability of landing facing up, so the dice are always fair.
       p The truncated icosahedron is probably the most famous polyhedron in the world: it is the shape of the football.
-
-  // These shapes frequently show up in other games or puzzles. Puzzles similar to a Rubik's Cube come in all five shapes – see magic polyhedra.
-
-  // circogonia icosahedra	hiv virus icosahedron	atoms in a hexedral lattice	crystal platonic solid
-  // The Circogonia Icosahedra, a Radiolarian.	Some viruses, like HIV, have the shape of Platonic solids.	Atoms in many crystal lattices are arranged in a tetrahedral, cubic or octahedral grid.
-
-  // octahedral space frames	stacking oranges in tetrahedra	platonic solids dice	football
-  // Octahedral space frames can support very large roofs.	The most efficient way to stack spheres is tetrahedral.	The probability of each number is the same.	The most famous polyhedron: a Truncated Icosahedron
-
+      // TODO Rubicks cube
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
