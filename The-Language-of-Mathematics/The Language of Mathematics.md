@@ -24,8 +24,8 @@ A <strong>set</strong> is a collection of objects called elements or members. Th
 
 The symbol ∈ is used to indicate membership of a set.
 
-<h1> <span style="color:red">A∈B</span> A belongs to B</h1>
-<h1> <span style="color:red">A∉B</span> A doesn't belongs to B</h1>
+<h3> <span style="color:red">A∈B</span> A belongs to B</h3>
+<h3> <span style="color:red">A∉B</span> A doesn't belongs to B</h3>
 </body>
 </html>
 
