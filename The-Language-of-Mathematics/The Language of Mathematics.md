@@ -7,9 +7,9 @@
 3.The language of proof
 4.Two identities
 
-<p> Mathematical language was developed as an unified language to express mathematical concepts. It is expressed in terms of well defined mathematical objects. These objects can be numbers, points, functions, geometrical shapes, etc...
+<p> Mathematical language was developed as an unified language to express mathematical concepts. It is expressed in terms of well defined mathematical objects. These objects can be numbers, points, functions, geometrical shapes, etc...</p>
 
-A <strong>set</strong> is a collection of objects called elements or members. There is no limitation on the types of objects in a set as long as a specification is provided to indicate whether an given object is in the set. One of the ways of making such specification is the use of the <strong>Venn diagram</strong>, named after the 19th-century Cambridge mathematician John Venn.</p>
+<p>A <strong>set</strong> is a collection of objects called elements or members. There is no limitation on the types of objects in a set as long as a specification is provided to indicate whether an given object is in the set. One of the ways of making such specification is the use of the <strong>Venn diagram</strong>, named after the 19th-century Cambridge mathematician John Venn.</p>
 
 <ul>
 <li>ℝ, denotes the set of real numbers.</li>
@@ -25,7 +25,7 @@ A <strong>set</strong> is a collection of objects called elements or members. Th
 The symbol ∈ is used to indicate membership of a set.
 
 <h3> <span style="color:red">A∈B</span> A belongs to B</h3>
-<h3> <span style="color:red">A∉B</span> A doesn't belongs to B</h3>
+<h3> <span style="color:red">A∉B</span> A doesn't belong to B</h3>
 </body>
 </html>
 
