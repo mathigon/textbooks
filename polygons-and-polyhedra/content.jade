@@ -68,9 +68,7 @@ section#triangles
       path.geo-line(x-d='${svgLine(a,c)}')
       path.geo-line(x-d='${svgLine(b,c)}')
 
-      path.geo-edge(x-d='${svgSegment(a,b)}')
-      path.geo-edge(x-d='${svgSegment(a,c)}')
-      path.geo-edge(x-d='${svgSegment(b,c)}')
+      polygon.geo-polygon(x-points="${svgPolygon(a,b,c)}")
 
       circle.geo-vertex(x-cx="${a.x}", x-cy="${a.y}", r="10")
       circle.geo-vertex(x-cx="${b.x}", x-cy="${b.y}", r="10")
@@ -93,16 +91,15 @@ section#triangleProof
   .row
     .grow
       p In #[em any] triangle, the sum of the internal angles is always #[+input(180)]°.
+      p This is one of the most fundamental results in geometry and it is not difficult to see why.
 
-      .subsection(needs="blank-0")
-        p This is one of the most fundamental results in geometry and it is not difficult to see why.
-        p First we take one of the sides of the triangle and draw a parallel line through the remaining vertex.
+      p.subsection(data-needs="blank-0") First we take one of the sides of the triangle and draw a parallel line through the remaining vertex.
 
       p.subsection Now we can shift the green and blue angles #[em up one level], because they are #[+blank("corresponding|opposite|alternating")] angles.
 
-      p.subsection(needs="blank-1 blank-2") Finally we can flip the red angle over,  because they are #[+blank("opposite|corresponding|alternating")] angles.
+      p.subsection(data-needs="blank-0 blank-1") Finally we can flip the red angle over,  because they are #[+blank("opposite|corresponding|alternating")] angles.
 
-      p.subsection(needs="blank-3") Now the blue, red and green angle form exactly one semicircle, which is 180°. Like before, you can move the vertices in the diagram to see that this works for #[em any] triangle.
+      p.subsection(data-needs="blank-0 blank-1 blank-2") Now the #[strong.m-blue blue], #[strong.m-red red] and #[strong.m-green green] angle form exactly one semicircle, which is 180°. Like before, you can move the vertices in the diagram to see that this works for #[em any] triangle.
 
     .geopad(style="width:300px")
       svg(style="height:360px")
@@ -114,19 +111,16 @@ section#triangleProof
         path.geo-angle.m-blue(x-d="${svgAngle(b,c,a,50)}")
         path.geo-angle.m-green(x-d="${svgAngle(c,a,b,50)}")
 
-        path.geo-angle(x-d="${svgOppositeAngle(a,b,c,50)}")
-        path.geo-angle.m-blue(x-d="${svgCorrespondingAngle(b,c,a,50,a)}")
-        path.geo-angle.m-green(x-d="${svgCorrespondingAngle(c,a,b,50,a)}")
+        path.geo-angle.opposite(x-d="${svgOppositeAngle(a,b,c,50)}", style="display: none;")
+        path.geo-angle.m-blue.corresponding(x-d="${svgCorrespondingAngle(b,c,a,50,a)}", style="display: none;")
+        path.geo-angle.m-green.corresponding(x-d="${svgCorrespondingAngle(c,a,b,50,a)}", style="display: none;")
 
         path.geo-line(x-d='${svgLine(a,b)}')
         path.geo-line(x-d='${svgLine(a,c)}')
         path.geo-line(x-d='${svgLine(b,c)}')
 
-        path.geo-line(x-d='${svgLineThrough(b,c,a)}')
-
-        path.geo-edge(x-d='${svgSegment(a,b)}')
-        path.geo-edge(x-d='${svgSegment(a,c)}')
-        path.geo-edge(x-d='${svgSegment(b,c)}')
+        path.geo-line.parallel(x-d='${svgLineThrough(b,c,a)}', style="display: none;")
+        polygon.geo-polygon(x-points="${svgPolygon(a,b,c)}")
 
         circle.geo-vertex(x-cx="${a.x}", x-cy="${a.y}", r="10")
         circle.geo-vertex(x-cx="${b.x}", x-cy="${b.y}", r="10")
@@ -159,10 +153,7 @@ section#quadrilateral
       path.geo-angle.m-green(x-d="${svgAngle(c,d,b,50,true)}")
       path.geo-angle.m-yellow(x-d="${svgAngle(d,a,c,50,true)}")
 
-      path.geo-edge(x-d='${svgSegment(a,b)}')
-      path.geo-edge(x-d='${svgSegment(b,c)}')
-      path.geo-edge(x-d='${svgSegment(c,d)}')
-      path.geo-edge(x-d='${svgSegment(a,d)}')
+      polygon.geo-polygon(x-points="${svgPolygon(a,b,c,d)}")
 
       circle.geo-vertex(x-cx="${a.x}", x-cy="${a.y}", r="10")
       circle.geo-vertex(x-cx="${b.x}", x-cy="${b.y}", r="10")
@@ -188,9 +179,9 @@ section#polygonsangle
 
   .row.padded
     .grow(style="width:120px"): include svg/square.svg
-    .grow(style="width:120px"): include svg/pentagon.svg
-    .grow(style="width:120px"): include svg/hexagon.svg
-    .grow(style="width:120px"): include svg/heptagon.svg
+    .grow.pentagon(style="width:120px; visibility: hidden"): include svg/pentagon.svg
+    .grow.hexagon(style="width:120px; visibility: hidden"): include svg/hexagon.svg
+    .grow.heptagon(style="width:120px; visibility: hidden"): include svg/heptagon.svg
 
   p The same, of course, also works for larger polygons. We can split a pentagon into #[+input(3)] triangles, so its internal angle sum is #[+input(540)]°. And we can split a hexagon into #[+input(4)] triangles, so its internal angle sum is #[+input(720)]°.
 
@@ -252,11 +243,11 @@ section#classifyquadriateral
       include svg/quadrilaterals/classify.svg
     .grow
       p This shape is clearly a #[+blank('rhombus|trapezium|square')], because all four of its #[+blank('sides|angles')] have the same length.
-      p But top and bottom pairs of adjacent sides also #[em each] have the same length. Therefore this is also a #[+blank('kite|rectangle')].
-      p And both pairs of opposite sides are parallel, so this is also a #[+blank('parallelogram|square')].
-      p Finally, if both pairs of sides are parallel, then #[em one] pair of sides must also be parallel. Therefore we also have a #[+blank('trapezium|rectangle')].
+      p.subsection(data-needs="blank-0 blank-1") But top and bottom pairs of adjacent sides also #[em each] have the same length. Therefore this is also a #[+blank('kite|rectangle')].
+      p.subsection(data-needs="blank-2") And both pairs of opposite sides are parallel, so this is also a #[+blank('parallelogram|square')].
+      p.subsection(data-needs="blank-3") Finally, if both pairs of sides are parallel, then #[em one] pair of sides must also be parallel. Therefore we also have a #[+blank('trapezium|rectangle')].
 
-  p To avoid this kind of ambiguity when identifying quadrilaterals, we usually only use the #[em most specific] one – or the type furthest down in the tree diagram above. In the above example that would be a #[+blank('rhombus|kite|Parallelogram|trapezium')].
+  p.subsection(data-needs="blank-4") To avoid this kind of ambiguity when identifying quadrilaterals, we usually only use the #[em most specific] one – or the type furthest down in the tree diagram above. In the above example that would be a #[+blank('rhombus|kite|parallelogram|trapezium')].
 
 section
   .box.problem-box
@@ -266,7 +257,7 @@ section
 section
   .row
     .grow
-      p We often need to calculate the area of quadrilaterals. The area of a square is simply its width squared. The area of a rectangle is the product of its width and its height.
+      p We often need to calculate the area of quadrilaterals. The area of a square is simply its width squared. The area of a rectangle is the #[+blank('product|sum')] of its width and its height.
       p For other quadrilaterals, we first have to try to “convert” them into rectangles.
     div(style="width: 250px"): include svg/quadrilaterals/area.svg
 
@@ -276,7 +267,7 @@ section
     div(style="width: 260px; margin-top: -20px")
       include svg/quadrilaterals/area-parallelogram.svg
     .grow
-      p Notice how the overlap on the left is exactly the same as the gap on the right. Therefore the area of the #[strong.m-blue blue parallelogram] is the same as the area of the #[strong.m-red red rectangle]. This means that the area of any parallelogram is simply
+      p Notice how the overlap on the left is exactly the same as the gap on the right. Therefore the area of the #[strong.m-blue blue parallelogram] is #[+blank('the same as|smaller than|larger than')] the area of the #[strong.m-red red rectangle]. This means that the area of any parallelogram is simply
       p.text-center #[strong.i.m-green base] µ #[strong.i.m-yellow height].
 
 section
@@ -294,18 +285,42 @@ section
     div(style="width: 260px")
       include svg/quadrilaterals/area-trapezium.svg
     .grow
-      p Notice how the gaps on the left and right are each exactly as big as the overlap on that side. The width of the #[strong.m-red red rectangle] is the average of the widths of the top side and the bottom side. Therefore the area of a trapezium is
-      p.text-center #[span.frac #[span #[strong.m-green top] + #[strong.m-green bottom]]#[span 2]] µ #[strong.i.m-yellow height].
+      p Notice how the gaps on the left and right are each exactly as big as the overlap on that side. The width of the #[strong.m-red red rectangle] is the average of the widths of the top side and the bottom side of the #[strong.m-blue blue trapezium]. Therefore the area of a trapezium is
+      p.text-center #[span.frac #[span #[strong.i.m-green top] + #[strong.i.m-green bottom]]#[span 2]] µ #[strong.i.m-yellow height].
 
 section
   .box.problem-box
     .box-title: h3 Area of Quadrilaterals
     .box-body: p.todo Exercises under development…
 
-section
-  p.todo More on Quadrilaterals coming soon…
-  //- Parallelogram diagonals bisect each other#[br]Parallelogram opposite angles are equal, adjacent add up to 180°#[br]#[br]Rhombus diagonals are perpendiucular bisectors#[br]Cyclic quadrilateral
+//- section
+  TODO More on Quadrilaterals coming soon…
+  Parallelogram diagonals bisect each other
+  Parallelogram opposite angles are equal, adjacent add up to 180°
+  Rhombus diagonals are perpendiucular bisectors
+  Cyclic quadrilaterals
 
+section#parallelograms
+  p If we connect the centers of a quadrilateral, we get #[+blank('another quadrilateral|a triangle|a rectangle')]. Try to move the vertices of the outer quadrilateral to change the shape on the inside.
+
+  .geopad
+    svg
+      polygon.geo-polygon(x-points="${svgPolygon(a,b,c,d)}")
+      polygon.geo-polygon(x-points="${svgPolygon(between(a,b),between(b,c),between(c,d),between(d,a))}", style="fill: #b30469; stroke: #b30469; stroke-width: 3px; fill-opacity: 0.3")
+
+      circle.geo-vertex(x-cx="${a.x}", x-cy="${a.y}", r="10")
+      circle.geo-vertex(x-cx="${b.x}", x-cy="${b.y}", r="10")
+      circle.geo-vertex(x-cx="${c.x}", x-cy="${c.y}", r="10")
+      circle.geo-vertex(x-cx="${d.x}", x-cy="${d.y}", r="10")
+
+      circle(x-cx="${(a.x + b.x)/2}", x-cy="${(a.y + b.y)/2}", r="6" style="fill: #b30469")
+      circle(x-cx="${(b.x + c.x)/2}", x-cy="${(b.y + c.y)/2}", r="6" style="fill: #b30469")
+      circle(x-cx="${(c.x + d.x)/2}", x-cy="${(c.y + d.y)/2}", r="6" style="fill: #b30469")
+      circle(x-cx="${(d.x + a.x)/2}", x-cy="${(d.y + a.y)/2}", r="6" style="fill: #b30469")
+
+  .subsection
+    p It looks like the quadrilateral on the inside is always a #[+blank('quadrilateral|trapezium|rectangle')]!
+    p.todo Explanation coming soon…
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -416,10 +431,10 @@ section
       include svg/tessellations/tessellation_8.svg
       p.caption equilateral triangles, squares and dodecagons
 
-  p Notice that none of these tessellations contain a regular #[+blank('pentagon|hexagon|octagon')]…
+  p Notice, however, that none of these tessellations contain a regular #[+blank('pentagon|hexagon|octagon')]…
 
 section
-  p And of course we can make tessellations out of non-regular polygons as well.
+  p And of course we can make tessellations out of non-regular polygons as well:
 
   .row
     div(style="width: 320px")
@@ -451,7 +466,7 @@ section
 section#penrose
   p All the tessellations we saw so far have one thing in common: they are #[em periodic]. This means that they consist of a regular pattern that is repeated again and again. They can continue forever in all directions and they will look the same everywhere.
 
-  p In the 1970s, the English mathematician #[x-bio#penrose Sir Roger Penrose] discovered a #[em non-periodic] tessellation – it still continues infinitely in all directions, but it will #[em never] look exactly the same. These are called #[strong Penrose tilings], and you only need a few different kinds of polygons to create one:
+  p In the 1970s, the English mathematician #[x-bio#penrose Sir Roger Penrose] discovered #[em non-periodic] tessellations – they still continue infinitely in all directions, but it will #[em never] look exactly the same. These are called #[strong Penrose tilings], and you only need a few different kinds of polygons to create one:
 
   .img-block
     include svg/penrose.svg
@@ -468,7 +483,7 @@ section#polyhedra
 
   p The sides of a polyhedron are called #[strong faces], the lines where faces meet are called #[strong edges], and the corners where #[strong edges] meet are called vertices.
 
-  p.todo Euler’s Formula Coming Soon…
+  p.todo Diagrams and Euler’s Formula Coming Soon…
 
   //- p.todo There are countless more polyhedra: some looking like stars, some consisting of non-regular polygons, and some having holes inside.
 
@@ -485,7 +500,7 @@ section#platonic
 
   p To create a 3-dimensional object, we need at least #[+input(3)] faces to meet at every vertex. Let’s start with equilateral triangles:
 
-  table.plato.subsection(needs="blank-0")
+  table.plato.subsection(data-needs="blank-0")
     tr
       td(style="width: 80px"): include svg/platonic/triangle-1.svg
       td(style="width: 80px"): x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/tetrahedron.gif")

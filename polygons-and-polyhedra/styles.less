@@ -13,9 +13,10 @@
     height: 400px;
 }
 
-.geo-edge {
+.geo-edge, .geo-polygon {
     stroke: @grey;
     stroke-width: 4px;
+    fill: none;
 }
 
 .geo-line {
@@ -27,7 +28,7 @@
     fill: @dark-grey;
     cursor: move;
     stroke: transparent;
-    stroke-width: 30px;
+    stroke-width: 40px;
     &:hover { transform: scale(1.2); }
     transition: transform .2s;
 }
@@ -81,6 +82,8 @@ select.angle-value {
 .quadrilaterals .line.left { transform: rotate(45deg); margin-left: 50px; height: 45px; }
 .quadrilaterals .line.right { transform: rotate(-45deg);  margin-left: -50px; height: 45px; }
 .quadrilaterals svg { margin: 0 -10px; width: 240px; }
+
+#classifyquadriateral line { transition: stroke .4s; }
 
 // -----------------------------------------------------------------------------
 

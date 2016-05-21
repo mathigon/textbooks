@@ -59,17 +59,16 @@ section
     .box-title: h3 Divisors and Multiples
     .box-body
       p.todo Exercises under development…
-      //- .factor-game.row
-
-      //- .factor-game-number 24
-      //-   .factor-game-text
-      //-    | is a
-      //-    .column
-      //-      button.btn.btn-bounce factor
-      //-      button.btn.btn-bounce multiple
-      //-      button.btn.btn-bounce neither
-      //-    | of
-      //- .factor-game-number 4
+    //- x-gameplay.box-body
+      .factors-row
+        .factor-number 24
+        | is a
+        .factor-value
+          .factor-bubble factor
+          .factor-bubble multiple
+          .factor-bubble neither
+        | of
+        .factor-number 8
 
   p In the next section we will learn various techniques to easily check if a number is divisible by another.
 
@@ -166,7 +165,7 @@ section#divisibility32
 
   p Here we’ve highlighted all numbers which are multiples of three. You can see that their digit sums are always #[+blank("a multiple of 3|either 0 or 3|odd numbers")].
 
-  p.subsection(needs="blank-0") So to determine if any number is divisible by 3, you just have to calculate its digit sum, and check if the result is also divisible by 3.
+  p.subsection(data-needs="blank-0") So to determine if any number is divisible by 3, you just have to calculate its digit sum, and check if the result is also divisible by 3.
 
 //- ---------------------------------------------------------------------------
 
@@ -180,7 +179,7 @@ section#divisibility9
 
   p
     | It seems that all the numbers divisible by 9 have a digit sum which is #[+blank('also|not')] divisible by 9.
-    span.subsection(needs="blank-0") For example, the digit sum of 4752 is #[+input(18)], so 4752 #[+blank("is|is not")] divisible by 9.
+    span.subsection(data-needs="blank-0") For example, the digit sum of 4752 is #[+input(18)], so 4752 #[+blank("is|is not")] divisible by 9.
 
 //- ---------------------------------------------------------------------------
 
@@ -324,7 +323,7 @@ section#primefactor
 section#eratosthenes
   h2 The Sieve of Eratosthenes
 
-  p So far, it turned out quite difficult to determine if a number is prime: you always had to find #[em all] its prime factors, which gets more and more challenging as the numbers get bigger. Instead, the Greek mathematician #[x-bio#eratosthenes Eratosthenes of Cyrene] came up with a simple algorithm to find all prime numbers up to 100: the #[strong Sieve of Eratosthenes].
+  p It turned out to be quite difficult to determine if a number is prime: you always had to find #[em all] its prime factors, which gets more and more challenging as the numbers get bigger. Instead, the Greek mathematician #[x-bio#eratosthenes Eratosthenes of Cyrene] came up with a simple algorithm to find all prime numbers up to 100: the #[strong Sieve of Eratosthenes].
 
   x-slideshow
     .stage
@@ -348,7 +347,7 @@ section#eulerproof
   .row
     .grow
       p Of course we can also use the Sieve of Eratosthenes to find larger prime numbers. There are 21 primes between 100 and 200, 16 primes between 200 and 300, 17 primes between 400 and 500 and only 11 between 10,000 and 10,100.
-      p The primes seems to keep getting more and more spread out, but do they ever stop? Is there a #[em biggest] or a #[em last] prime number?
+      p The primes seem to keep getting more and more spread out, but do they ever stop? Is there a #[em biggest] or a #[em last] prime number?
       p The ancient Greek mathematician #[x-bio#euclid Euclid of Alexandria] first proved that there are infinitely many prime numbers, using the following argument:
     div(style="width: 220px;")
       x-media(lightbox, width="220", height="300", src="/resources/divisibility-and-primes/images/euclid.jpg")
@@ -457,7 +456,7 @@ section
 
   p The first runner crosses the start line after 60s, 120s, 180s, 240s, and so on. These are simply the #[+blank("multiples|factors")] of #[strong.m-blue 60]. The second runner crosses the start line after 40s, 80s, 120s, 160s, and so on. The first time both runners are back at the start line is after #[+input(120)] seconds.
 
-  p.subsection(needs="blank-0 blank-1") What we've just found is the smallest number which is both a multiple of #[strong.m-green 40] and a multiple of #[strong.m-blue 60]. This is called the #[strong least common multiple] or #[strong lcm].
+  p.subsection(data-needs="blank-0 blank-1") What we’ve just found is the smallest number which is both a multiple of #[strong.m-green 40] and a multiple of #[strong.m-blue 60]. This is called the #[strong least common multiple] or #[strong lcm].
 
 section
 
@@ -769,7 +768,7 @@ section#riemann
 
   p Along the x-axis you can see all integers. Whenever there is a prime, the #[em.m-blue Prime Counting Function] increases by one. As we #[x-target(to="#riemann .zoom-icon") zoom out], the blue line becomes very smooth.
 
-  p.subsection(needs="zoom") Gauss noticed that the shape of this function looks very similar to the function #[span.frac.inline.m-red #[em x]#[span log(#[em x])]]. He predicted that the two functions are always “approximately similar”, and this was proven in 1896.
+  p.subsection(data-needs="zoom") Gauss noticed that the shape of this function looks very similar to the function #[span.frac.inline.m-red #[em x]#[span log(#[em x])]]. He predicted that the two functions are always “approximately similar”, and this was proven in 1896.
 
 section
   p However, as you can see above, there is still a significant error between the actual number of primes, and Gauss’s approximation. In 1859, the mathematician #[x-bio#riemann Bernhard Riemann] discovered an approximation that looked much better, but he wasn’t able to prove that that would #[em always] work. His idea became known as the #[strong Riemann Hypothesis].

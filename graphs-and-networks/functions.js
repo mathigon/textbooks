@@ -331,7 +331,7 @@ fns.GT_1_1 = function(section, chapter) {
 
 fns.GT_1_2 = function(section, chapter) {
     section.onScore('blank-0', function() {
-        setTimeout(function() { $I('handshakes-table').addClass('complete'); }, 1000);
+        setTimeout(function() { section.$el.addClass('complete'); }, 1000);
     });
 
     section.model.set('handshakeTable', function(n) {

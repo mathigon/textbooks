@@ -6,7 +6,7 @@
 
 import { $, $$, $C, $N } from 'elements';
 import Draggable from 'draggable';
-import { angle } from 'geometry';
+import { Point, angle } from 'geometry';
 import { numberFormat, roundTo } from 'arithmetic';
 import setPicker from 'components/set-picker';
 
@@ -173,6 +173,10 @@ function svgCorrespondingAngle(a, b, c, size, s) {
     return svgAngle(s, { x: b.x+s.x-a.x, y: b.y+s.y-a.y }, { x: c.x+s.x-a.x, y: c.y+s.y-a.y }, size);
 }
 
+function svgPolygon(...points) {
+    return points.map(p => p.x + ',' + p.y).join(' ');
+}
+
 function svgOppositeAngle(a, b, c, size) {
     return svgAngle(a, { x: 2*a.x-c.x, y: 2*a.y-c.y }, { x: 2*a.x-b.x, y: 2*a.y-b.y }, size);
 }
@@ -186,10 +190,6 @@ function svgLine(a, b) {
 
 function svgLineThrough(a, b, c) {
     return svgLine(c, { x: c.x + b.x - a.x, y: c.y + b.y - a.y });
-}
-
-function svgSegment(a, b) {
-    return 'M' + a.x + ',' + a.y + 'L' + b.x + ',' + b.y;
 }
 
 function deg(a, b, c) {
@@ -215,7 +215,7 @@ fns.polygon2 = function(section, chapter) {
 
 fns.triangles = function(section, chapter) {
     chapter.addGloss('intangle');
-    section.model.load({ angle, svgAngle, svgLine, svgSegment, deg, x: 'max' });
+    section.model.load({ angle, svgAngle, svgLine, svgPolygon, deg, x: 'max' });
 
     let initial = [{ x: 160, y: 70 }, { x: 500, y: 180 }, { x: 110, y: 320 }];
     let $geopad = section.$el.find('.geopad');
@@ -241,7 +241,7 @@ fns.triangles = function(section, chapter) {
 
 fns.triangleProof = function(section) {
     section.model.load({ angle, svgAngle, svgLine, svgLineThrough, svgCorrespondingAngle,
-        svgOppositeAngle, svgSegment, deg });
+        svgOppositeAngle, svgPolygon, deg });
 
     let initial = [{ x: 100, y: 80 }, { x: 250, y: 300 }, { x: 50, y: 300 }];
     let $geopad = section.$el.find('.geopad');
@@ -251,13 +251,17 @@ fns.triangleProof = function(section) {
         drag.on('move', e => { section.model.set('abc'[i], e); });
         drag.position = initial[i];
     });
+
+    section.subsections[0].on('show', function() { section.$el.find('.parallel').enter('draw', 400, 400); });
+    section.subsections[1].on('show', function() { section.$el.findAll('.corresponding').forEach(a => { a.enter('fade', 400, 400); }); });
+    section.subsections[2].on('show', function() { section.$el.find('.opposite').enter('fade', 400, 400); });
 };
 
 fns.quadrilateral = function(section, chapter) {
     chapter.addGloss('quadrilateral');
 
     function deg(a, b, c) { return Math.round(angle(a, b, c) * 180 / Math.PI); }
-    section.model.load({ angle, svgAngle, svgLine, svgSegment, deg, x: 'max' });
+    section.model.load({ angle, svgAngle, svgLine, svgPolygon, deg, x: 'max' });
 
     let initial = [{ x: 170, y: 40 }, { x: 480, y: 140 }, { x: 540, y: 320 }, { x: 120, y: 270 }];
     let $geopad = section.$el.find('.geopad');
@@ -291,12 +295,40 @@ fns.quadrilateral = function(section, chapter) {
 
 fns.classifyquadriateral = function(section, chapter) {
     chapter.addGloss('trapezium', 'parallelogram', 'kite', 'rectangle', 'rhombus');
+
+    let $lines = section.$el.findAll('line');
+    $lines.forEach($l => { $l.attr('stroke', '#b30469'); });
+
+    section.onScore('subsection-0', function() { $lines[1].attr('stroke', '#ff941f'); $lines[3].attr('stroke', '#ff941f'); });
+    section.onScore('subsection-1', function() { $lines[1].attr('stroke', '#b30469'); $lines[2].attr('stroke', '#ff941f'); });
+    section.onScore('subsection-2', function() { $lines[2].exit('draw'); $lines[3].exit('draw'); });
 };
 
 fns.polygonsangle = function(section) {
     section.model.load({
         fn1: function(x) { return x < 3 ? '<em>x</em>' : x; },
         fn2: function(x) { return x < 3 ? '<em>x</em> – 2' : x-2 + ' = ' + 180 * (x-2); }
+    });
+
+    section.onScore('blank-0', function() { section.$el.find('.pentagon').enter('pop', 400); });
+    section.onScore('blank-2', function() { section.$el.find('.hexagon').enter('pop', 400);
+        section.$el.find('.heptagon').enter('pop', 400, 800);});
+};
+
+fns.parallelograms = function(section) {
+    section.model.load({ svgPolygon, between: Point.interpolate });
+    let initial = [{ x: 170, y: 40 }, { x: 480, y: 140 }, { x: 540, y: 320 }, { x: 120, y: 270 }];
+
+    section.$el.findAll('.geo-vertex').forEach(function($v, i) {
+        let drag = new Draggable($v, section.$el.find('.geopad'));
+        drag.on('move', e => {
+            section.model.set('abcd'[i], e);
+        });
+        drag.position = initial[i];
+
+        setTimeout(function() { drag.one('move', e => {
+            setTimeout(function () { section.subsections[0].show(); }, 2000);
+        }); }, 10);
     });
 };
 
