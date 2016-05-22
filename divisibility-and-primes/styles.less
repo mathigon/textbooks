@@ -7,7 +7,6 @@
 @import "styles/variables";
 
 
-
 .factors-row {
     margin-top: 120px;
     font-size: 1.2em;
@@ -15,7 +14,7 @@
 }
 
 .factor-number {
-    background: @red;
+    background: @grey;
     width: 2em;
     height: 2em;
     line-height: 2em;
@@ -28,28 +27,28 @@
 .factor-value {
     display: inline-block;
     position: relative;
-    width: 4em;
-    height: 4em;
-    margin: 0 .5em -1.65em;
+    width: 6em;
+    height: 2em;
+    margin: 0 .5em -.6em;
 }
 
 .factor-bubble {
-    width: 4em;
-    height: 4em;
-    line-height: 4em;
-    background: @blue;
-    color: white;
+    width: 6em;
+    height: 2em;
+    padding: 0;
+    line-height: 2em;
     top: 0;
     left: 0;
     position: absolute;
-    border-radius: 100%;
 
+    transition: transform .2s;
+    transition-delay: .1s;
     &:first-child { transform: translateY(-120%); }
     &:last-child { transform: translateY(120%); }
+
+    &.success .btn { pointer-events: none; background: @green; z-index: 10; box-shadow: none; color: white; }
+    &.error .btn { pointer-events: none; background: @red; z-index: 10; box-shadow: none; color: white; }
 }
-
-
-
 
 .number-grid {
     max-width: 560px;

@@ -54,21 +54,23 @@ section#divisibility1
   p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] (or #[strong divisor]) of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. We often write #[strong.blue B]|#[strong.red A], where the vertical bar simply means #[em "divides"].
   p For example, #[strong.green 7] µ 3 = #[strong.orange 21], so #[strong.green 7] is a #[+blank("factor|multiple")] of #[strong.orange 21], #[strong.orange 21] is a #[+blank("multiple|factor")] of #[strong.green 7], and #[strong.green 7]|#[strong.orange 21].
 
-section
+section#divisibilitygame
+  p In this short game you have to determine which numbers are factors or multiples, as fast as possible. Click the #[x-target(to="#divisibilitygame .toggle") play button] to start.
+
   .box.problem-box
-    .box-title: h3 Divisors and Multiples
-    .box-body
+    .box-title: h3 Factors and Multiples Quiz
+    //- .box-body
       p.todo Exercises under development…
-    //- x-gameplay.box-body
+    x-gameplay.box-body
       .factors-row
-        .factor-number 24
+        .factor-number ${x}
         | is a
         .factor-value
-          .factor-bubble factor
-          .factor-bubble multiple
-          .factor-bubble neither
+          .factor-bubble: .btn.btn-blue.btn-bounce factor
+          .factor-bubble: .btn.btn-blue.btn-bounce multiple
+          .factor-bubble: .btn.btn-blue.btn-bounce neither
         | of
-        .factor-number 8
+        .factor-number ${y}
 
   p In the next section we will learn various techniques to easily check if a number is divisible by another.
 

@@ -11,6 +11,7 @@ import thread from 'thread';
 import { numberFormat } from 'arithmetic';
 import { isPrime, lcm, goldbach, generatePrime } from 'number-theory';
 import { isOneOf, delay } from 'utilities';
+import { integer, smart } from 'probability';
 
 
 // -----------------------------------------------------------------------------
@@ -156,6 +157,51 @@ const fns = {};
 
 fns.divisibility1 = function(section, chapter) {
     chapter.addGloss('factor', 'multiple', 'divisor');
+};
+
+fns.divisibilitygame = function(section) {
+    section.gameplay._el.setFirstSlide(function($el) {
+        $el.model({ x: '?', y: '?' });
+    });
+
+    section.gameplay._el.slideGenerator = function($el, success, error) {
+        let answer = smart(3, 'divisibility-game');
+        let n1 = smart(9, 'divisibility-game-number') + 2;
+        let n2 = smart(9, 'divisibility-game-number') + 2;
+
+        let x, y;
+        switch(answer) {
+            case 0: x = n1; y = n1 * n2; break;  // factor
+            case 1: x = n1 * n2; y = n1; break;  // multiple
+            case 2:
+                x = n1; y = (n1 * n2) + [1, -1][integer(1)];  // neither
+                if (integer(1)) [x, y] = [y, x];
+        }
+
+        $el.model({ x, y });
+
+        let $buttons = $el.findAll('.factor-bubble');
+        $buttons[0].on('click', answer === 0 ? success : error);
+        $buttons[1].on('click', answer == 1 ? success : error);
+        $buttons[2].on('click', answer > 1 ? success : error);
+
+        $el.on('success', function() {
+            $buttons.forEach(function($b, i) {
+                if (answer == i) {
+                    $b.addClass('success'); $b.css('transform', 'none');
+                } else {
+                    $b.children(0).exit('pop');
+                }
+            });
+        });
+
+        $el.on('error', function() {
+            $buttons.forEach(function($b, i) {
+                $b.addClass(answer == i ? 'success' : 'error');
+            });
+        });
+
+    };
 };
 
 fns.divisibility2 = function(section) {
