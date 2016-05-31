@@ -1,0 +1,129 @@
+//- ============================================================================
+//- Mathigon | Probability Content
+//- (c) 2016 Mathigon
+//- ============================================================================
+
+
+include ../mixins
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+  +intro
+
+  h2 Introduction
+
+  p Today, probabilities and likelihoods are everywhere around us: from XXX to newspapers. But in the history of mathematics, it is actually a very recent idea.
+
+  p In the 17th century, two of the most important mathematicians in history, Pascal and Fermat, were sitting in a cafe in France and playing a simple game: they repeatedly flip a coin and whoever guesses
+
+
+
+  p In summary, we have come up with this simple equation:
+
+  p.center Probability of an event = #[span.frac #[span Number of ways the event could happen]#[span Number of possible outcome]].
+
+  p This only works if all possible outcomes are equally likely – but that's good enough for now.
+
+
+  h2 Games and Chance
+
+  p After the advent of probability, more and more mathematicians started applying the laws of probability to other parts of life – including casino games.
+
+  p One of these mathematicians was Karl Pearson who analysed the results of roulette games published in the French newspaper Le Monaco.
+
+  p Roulette consists of a wheel with the numbers from 1 to 36 coloured in red or black, as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour, and their potential winning depends on the likelihood of each of these outcomes.
+
+  p If we ignore the green 0 – which means the casino wins –
+
+
+  p Casino red/black
+
+  p Shannon wearable computers
+
+  p Lottery tickets required
+
+  p Venn Diagrams and set operations
+
+  p Independent and Mutually Exclusive Events
+
+  p Probability Trees
+
+  p Random numbers
+
+  p Tossing coins and rolling dice
+
+  p Monty Hall, Penny Game
+
+
+  p Lotto: Tickets needed to guarantee 2/3 matches
+  p Pearson casino pairs of numbers fake
+  p Shannon wearable computers casino
+
+
+
+  // Probability is an area of mathematics which we use all the time in daily life – and usually without thinking about it. While many aspects are very intuitive, probability becomes much more difficult when thinking about it in a precise, mathematical way. The easiest definition is that probabilities are numbers between 0 and 1 which specify the chance that something happens. A probability of 0 means that something is impossible; a probability of 1 means that something is certain.
+
+  // It is certain that the Earth will still exist tomorrow and impossible that you will meet a basilisk. A coin landing heads or a die rolling 6 have probabilities in between 0 and 1.
+
+  // However, when tossing a coin, it will either land heads or it will land tails. So why isn’t the probability either 1 or 0 – rather than a number inbetween? Or suppose we toss a coin but don’t look at it. For us, the probability of landing heads is still 0.5, even though it has already happened!
+
+  // These questions can be answered by thinking about the various different ways in which we can interpret probabilities:
+
+  // FREQUENTIST
+  // The probability of landing heads is the proportion of heads we get if we toss a coin many times.
+
+  // PROPENSITY
+  // The probability of landing heads is the ‘tendency’ of a coin to land heads.
+
+  // SUBJECTIVIST
+  // The probability of landing heads tells us how strongly we ‘believe’ that a coin will land heads.
+
+  // Notice that subjectivist probabilities may be different for different people – often depending on how much they know. For example, I might estimate that the chance of rain is about 70%, while a meterologist with detailed weather data might say the chance of rain is 64.2%.
+
+  // Going back to the example of tossing coins, a probability 0.5 of landing heads tells us two things: before tossing a coin we know that it is just as likely to land heads as it is to land tails. And after tossing a coin many times we know that approximately half of the results are heads – though we can’t predict which individual tosses landed heads.
+
+  // Probability theory is about determining the likelihood of certain events, the chance that something particular is going to happen. In statistics you do exactly the opposite: you look at the results of particular observations and try to determine the probabilities from which they might have originated.
+
+
+  // h2 The Meaning of Randomness
+
+  // Suppose we toss a coin: the chance of it landing heads is 0.5. If we knew which way the coin was facing just before it left the hand, we might be able to make a slightly better predictions – such as 0.58 or 0.41. If we also knew the position, velocity, weight and size of the coin as it left the hand, we could use the laws of physics – gravity, friction and air resistance – to model the motion of the coin and to predict the outcome. Finally, if we knew the exact position of every atom in the coin and of all the air molecules surrounding it, we could create a computer simulation to accurately predict what will happen to the coin.
+
+  // Therefore one could argue that tossing a coin really isn’t random at all – it is chaotic. This means that the underlying physical principles are very complicated and even tiny changes to the initial conditions (e.g. the speed of the coin) could completely change the result. We can use coins in games and gambling simply because it is so incredibly difficult (and for practical purposes, impossible) to calculate which face it will land on.
+
+  // The same principle applies to many other “random” events in life: rolling dice, spinning a roulette wheel, or even predicting the weather. They are not really random, we simply don’t have the tools to do the mathematical calculations accurately enough to predict the outcome.
+
+  // On computers you can generate random numbers. These random numbers have many uses, from statistical modelling in Excel to determining who wins a battle in a video game. But, like before, these numbers aren’t really random. For example, a computer could use the last digit of the number of milliseconds since the last startup. If the time since the last startup is, say, 397542 milliseconds, we choose the random number 2. This method is not truly random, but it is so unpredictable that it is random enough for most purposes.
+
+  // There are many other clever way to create random numbers, some relying only on mathematics, others on physical observations such as random variations in atmospheric noise. Yet, it seems that if we had sufficiently accurate data about the physical conditions, we could predict the outcome.
+
+  // But true randomness does exists – at the very foundations of matter. A block of radioactive material consists of millions of atoms which, over time, decay: they fall apart into other atoms, emitting dangerous radiation. Physicists know the probability that a particular atom will decay every minute. But even knowing the exact position and properties of every atom, it is impossible to work out which atom in a block of radioactive material is going to decay next.
+
+  // Possible probability distributons of the position of an electron in a hydrogen atom. Lighter areas represent more likely locations of the electron.
+
+  // Radioactive decay of atoms is caused by forces which act at much smaller scales within atoms, and which can be explained using Quantum mechanics. During the last century, physicists discovered that it is impossible to know the exact position and speed of fundamental particles. Instead of being in one particular place, particles can be at infinitely many different positions at once, and at every position with a particular probability. The probability distribution is called a wave function. This doesn’t mean that we simply don’t know which positions a particle is at, the particles actually are in many places at once.
+
+  // We can’t understand this behaviour, we just have to accept that it is what mathematical theory predicts and physical observations confirm. It is not clear how quantum mechanics affects us in everyday life. Maybe quantum effects at a subatomic scale have an effect on objects as large as coins or dice – thus making them more random than suggested above. Quantum mechanics is the only known effect in nature that produces true randomness.
+
+
+  // h2 Tossing Coins and Rolling Dice
+
+  // Even if we ignore quantum mechanics, coins never have exactly the probability 0.5 of landing heads. Maybe it is 0.4856, maybe it is 0.500012, depending on their physical properties.
+
+  // In mathematics we don’t have to worry about the underlying physics or tiny inaccuracies. We simplify the real world and build a mathematical model: an imaginary “mathematical coin”, for example, has exactly the probability 0.5 of landing heads and is truly random. This allows us to answer much more interesting questions – such as the probability of three coins landing the same way up.
+
+  // Coins are simple because they can only land in two states. Dice, on the other hand, can land in six different states, so the probability of each is
+
+  // If we roll two dice at once and add up their scores we can get any number from 2 to 12. However for some numbers there are multiple possibilities: to get a 7, for example, we could roll 2 and 6, we could roll 2 and 5, or we could roll 2 and 5.
+
+  // The table on the right shows all possible pairs of die rolls. Every pair has the same probability of happening, but since there are six different pairs to get a 7, this is the most likely outcome. You are least likely to get a 2 or a 12, because there is only one possibility in each case.
+
+  // In the following animation you can roll two or more “virtual” dice at once and see how often you get which sum, as you repeat the experiment many times.
+
+  // We roll 2 dice at once and record the SUM of their scores. The green lines represent the probabilities of every possible outcome predicted by probability theory; the blue bars show how often each outcome happened in this computer generated experiment.
+
+  // Notice how, as we roll dice more and more often, the observed frequencies become closer and closer to the frequencies we predict using probability theory. This principle always applies in probability and is called the Law of large numbers.
+
+  // As we increase the number of dice rolled at once, we also see that the shape of the probability distribution changes from a triangular shape to a bell-shaped curve. This is known as the Central Limit Theorem.
