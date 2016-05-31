@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270">
+<svg viewBox="0 0 760 270" width="760" height="270">
   <font horiz-adv-x="1000">
-    <font-face font-family="OCRAStd" units-per-em="1000"/>
+    <font-face font-family="myfont" units-per-em="1000"/>
     <glyph unicode="A" horiz-adv-x="720" d="M113,50C106,26 133,0 161,0C192,0 208,26 215,50l38,120l213,0l37,-120C510,26 526,0 557,0C585,0 612,26 605,50l-193,677C405,753 393,778 360,778C328,778 317,754 309,727M438,270l-157,0l78,271l2,0z"/>
     <glyph unicode="R" horiz-adv-x="720" d="M213,422l23,0l276,-394C523,12 536,0 556,0C584,0 607,19 607,47C607,66 593,85 582,100l-225,322l92,0C529,422 607,470 607,564l0,69C607,722 528,778 449,778l-336,0l0,-728C113,18 127,0 163,0C199,0 213,18 213,50M213,678l223,0C466,678 507,673 507,633l0,-69C507,524 463,522 435,522l-222,0z"/>
     <glyph unicode="S" horiz-adv-x="720" d="M228,637C224,643 213,655 213,664C213,681 236,678 247,678l212,0C490,678 507,673 507,639C507,611 525,592 555,592C591,592 607,618 607,650C607,685 586,722 560,745C531,770 499,778 461,778l-212,0C217,778 194,778 166,760C132,738 113,704 113,664C113,629 125,609 146,582l343,-441C493,135 507,120 507,112C507,97 482,100 474,100l-217,0C229,100 213,104 213,134C213,161 195,185 166,185C131,185 113,157 113,125C113,90 133,54 160,32C190,7 223,0 261,0l220,0C550,0 607,38 607,113C607,147 592,170 572,196z"/>
@@ -27,32 +27,32 @@
 
   <g class="lap-button">
     <path fill="#333333" d="M423,82.2h-75c-2.2,0-4,1.8-4,4v16c0,2.2,1.8,4,4,4h75c2.2,0,4-1.8,4-4v-16C427,84,425.2,82.2,423,82.2z"/>
-    <text transform="matrix(1 0 0 1 352.4004 102.2421)" fill="#FFFFFF" font-family="'OCRAStd'" font-size="21px" letter-spacing="-2">START</text>
+    <text transform="matrix(1 0 0 1 352.4004 102.2421)" fill="#FFFFFF" font-family="myfont" font-size="21px" letter-spacing="-2">START</text>
   </g>
 
   <g class="lap-times">
   	<g style="display: none">
   		<path fill="#31B304" d="M353,112.2h-41c-2.2,0-4,1.8-4,4v16c0,2.2,1.8,4,4,4h41c2.2,0,4-1.8,4-4v-16 C357,114,355.2,112.2,353,112.2z"/>
-  		<text transform="matrix(1 0 0 1 324.8604 132.2421)" fill="#FFFFFF" font-family="'OCRAStd'" font-size="21px" letter-spacing="-2">40</text>
+  		<text transform="matrix(1 0 0 1 324.8604 132.2421)" fill="#FFFFFF" font-family="myfont" font-size="21px" letter-spacing="-2">40</text>
   	</g>
   	<g style="display: none">
   		<path fill="#31B304" d="M406,112.2h-41c-2.2,0-4,1.8-4,4v16c0,2.2,1.8,4,4,4h41c2.2,0,4-1.8,4-4v-16 C410,114,408.2,112.2,406,112.2z"/>
-  		<text transform="matrix(1 0 0 1 377.8604 132.2421)" fill="#FFFFFF" font-family="'OCRAStd'" font-size="21px" letter-spacing="-2">80</text>
+  		<text transform="matrix(1 0 0 1 377.8604 132.2421)" fill="#FFFFFF" font-family="myfont" font-size="21px" letter-spacing="-2">80</text>
   	</g>
   	<g style="display: none">
   		<path fill="#31B304" d="M459,112.2h-41c-2.2,0-4,1.8-4,4v16c0,2.2,1.8,4,4,4h41c2.2,0,4-1.8,4-4v-16 C463,114,461.2,112.2,459,112.2z"/>
-  		<text transform="matrix(1 0 0 1 417.8408 132.2421)" fill="#FFFFFF" font-family="'OCRAStd'" font-size="21px" letter-spacing="-2">120</text>
+  		<text transform="matrix(1 0 0 1 417.8408 132.2421)" fill="#FFFFFF" font-family="myfont" font-size="21px" letter-spacing="-2">120</text>
   	</g>
   </g>
 
   <g class="lap-times">
     <g style="display: none">
       <path fill="#1F7AFF" d="M380,139.2h-41c-2.2,0-4,1.8-4,4v16c0,2.2,1.8,4,4,4h41c2.2,0,4-1.8,4-4v-16 C384,141,382.2,139.2,380,139.2z"/>
-      <text transform="matrix(1 0 0 1 351.8604 159.2421)" fill="#FFFFFF" font-family="'OCRAStd'" font-size="21px" letter-spacing="-2">60</text>
+      <text transform="matrix(1 0 0 1 351.8604 159.2421)" fill="#FFFFFF" font-family="myfont" font-size="21px" letter-spacing="-2">60</text>
     </g>
     <g style="display: none">
       <path fill="#1F7AFF" d="M433,139.2h-41c-2.2,0-4,1.8-4,4v16c0,2.2,1.8,4,4,4h41c2.2,0,4-1.8,4-4v-16 C437,141,435.2,139.2,433,139.2z"/>
-      <text transform="matrix(1 0 0 1 391.8408 159.2421)" fill="#FFFFFF" font-family="'OCRAStd'" font-size="21px" letter-spacing="-2">120</text>
+      <text transform="matrix(1 0 0 1 391.8408 159.2421)" fill="#FFFFFF" font-family="myfont" font-size="21px" letter-spacing="-2">120</text>
     </g>
   </g>
 

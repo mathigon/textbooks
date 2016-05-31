@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><title>tessellate</title><rect x="-10" y="-10" width="50" height="50" fill="#1f7aff"/><rect x="40" y="-10" width="50" height="50" fill="#175cbf"/><rect x="90" y="-10" width="50" height="50" fill="#1f7aff"/><rect x="-10" y="40" width="50" height="50" fill="#175cbf"/><rect x="40" y="40" width="50" height="50" fill="#1f7aff"/><rect x="90" y="40" width="50" height="50" fill="#175cbf"/><rect x="-10" y="90" width="50" height="50" fill="#1f7aff"/><rect x="40" y="90" width="50" height="50" fill="#175cbf"/><rect x="140" y="-10" width="50" height="50" fill="#175cbf"/><rect x="140" y="40" width="50" height="50" fill="#1f7aff"/><rect x="-10" y="140" width="50" height="50" fill="#175cbf"/><rect x="40" y="140" width="50" height="50" fill="#1f7aff"/><rect x="90" y="140" width="50" height="50" fill="#175cbf"/><rect x="140" y="140" width="50" height="50" fill="#1f7aff"/><rect x="140" y="90" width="50" height="50" fill="#175cbf"/><rect x="90" y="90" width="50" height="50" fill="#1f7aff"/><path d="M88,88V55.1A35,35,0,0,0,55.1,88H88Z" fill="#fff" opacity="0.7"/><path d="M92,55.1V88h32.9A35,35,0,0,0,92,55.1Z" fill="#fff" opacity="0.7"/><path d="M88,124.9V92H55.1A35,35,0,0,0,88,124.9Z" fill="#fff" opacity="0.7"/><path d="M92,124.9A35,35,0,0,0,124.9,92H92v32.9Z" fill="#fff" opacity="0.7"/><text transform="translate(112 58)" font-size="18" fill="#fff">90°</text><text transform="translate(46 61)" font-size="18" fill="#fff">90°</text><text transform="translate(43 134)" font-size="18" fill="#fff">90°</text><text transform="translate(113 132)" font-size="18" fill="#fff">90°</text></svg>
+<svg viewBox="0 0 180 180">
+    <rect x="-10" y="-10" width="50" height="50" fill="#1f7aff"/>
+    <rect x="40" y="-10" width="50" height="50" fill="#175cbf"/>
+    <rect x="90" y="-10" width="50" height="50" fill="#1f7aff"/>
+    <rect x="-10" y="40" width="50" height="50" fill="#175cbf"/>
+    <rect x="40" y="40" width="50" height="50" fill="#1f7aff"/>
+    <rect x="90" y="40" width="50" height="50" fill="#175cbf"/>
+    <rect x="-10" y="90" width="50" height="50" fill="#1f7aff"/>
+    <rect x="40" y="90" width="50" height="50" fill="#175cbf"/>
+    <rect x="140" y="-10" width="50" height="50" fill="#175cbf"/>
+    <rect x="140" y="40" width="50" height="50" fill="#1f7aff"/>
+    <rect x="-10" y="140" width="50" height="50" fill="#175cbf"/>
+    <rect x="40" y="140" width="50" height="50" fill="#1f7aff"/>
+    <rect x="90" y="140" width="50" height="50" fill="#175cbf"/>
+    <rect x="140" y="140" width="50" height="50" fill="#1f7aff"/>
+    <rect x="140" y="90" width="50" height="50" fill="#175cbf"/>
+    <rect x="90" y="90" width="50" height="50" fill="#1f7aff"/>
+    <path d="M88,88V55.1A35,35,0,0,0,55.1,88H88Z" fill="#fff" opacity="0.7"/>
+    <path d="M92,55.1V88h32.9A35,35,0,0,0,92,55.1Z" fill="#fff" opacity="0.7"/>
+    <path d="M88,124.9V92H55.1A35,35,0,0,0,88,124.9Z" fill="#fff" opacity="0.7"/>
+    <path d="M92,124.9A35,35,0,0,0,124.9,92H92v32.9Z" fill="#fff" opacity="0.7"/>
+    <text transform="translate(112 58)" font-size="18" fill="#fff">90°</text>
+    <text transform="translate(46 61)" font-size="18" fill="#fff">90°</text>
+    <text transform="translate(43 134)" font-size="18" fill="#fff">90°</text>
+    <text transform="translate(113 132)" font-size="18" fill="#fff">90°</text>
+</svg>

@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><title>tessellate</title><polyline points="55 -10 55 30 20 50 -15 30 -15 -10" fill="#ff941f"/><polygon points="90 50 125 30 160 50 160 90 125 110 90 90 90 50" fill="#ff941f"/><polyline points="125 -10 125 30 90 50 55 30 55 -10" fill="#bf6f17"/><polyline points="-15 30 20 50 20 90 -15 110" fill="#bf6f17"/><polyline points="195 -10 195 30 160 50 125 30 125 -10" fill="#ffa94c"/><polygon points="20 50 55 30 90 50 90 90 55 110 20 90 20 50" fill="#ffa94c"/><polygon points="-15 110 20 90 55 110 55 150 20 170 -15 150 -15 110" fill="#ff941f"/><polyline points="90 192 90 170 125 150 160 170 160 192" fill="#ff941f"/><polygon points="55 110 90 90 125 110 125 150 90 170 55 150 55 110" fill="#bf6f17"/><polyline points="-50 192 -50 170 -15 150 20 170 20 192" fill="#bf6f17"/><polyline points="195 110 160 90 160 50 195 30" fill="#bf6f17"/><polyline points="160 192 160 170 195 150 230 170 230 192" fill="#bf6f17"/><polygon points="125 110 160 90 195 110 195 150 160 170 125 150 125 110" fill="#ffa94c"/><polyline points="20 192 20 170 55 150 90 170 90 192" fill="#ffa94c"/><path d="M125,90A35,35,0,0,0,92,55.1V88.8l29.3,16.8A34.8,34.8,0,0,0,125,90Z" fill="#fff" opacity="0.7"/><path d="M88,55.1a35,35,0,0,0-29.3,50.5L88,88.8V55.1Z" fill="#fff" opacity="0.7"/><path d="M90,92.3L60.7,109.1a35,35,0,0,0,58.7,0Z" fill="#fff" opacity="0.7"/><text transform="translate(120 65)" font-size="18" fill="#fff">120°</text><text transform="translate(73 144)" font-size="18" fill="#fff">120°</text><text transform="translate(29 66)" font-size="18" fill="#fff">120°</text></svg>
+<svg viewBox="0 0 180 180">
+    <polyline points="55 -10 55 30 20 50 -15 30 -15 -10" fill="#ff941f"/>
+    <polygon points="90 50 125 30 160 50 160 90 125 110 90 90 90 50" fill="#ff941f"/>
+    <polyline points="125 -10 125 30 90 50 55 30 55 -10" fill="#bf6f17"/>
+    <polyline points="-15 30 20 50 20 90 -15 110" fill="#bf6f17"/>
+    <polyline points="195 -10 195 30 160 50 125 30 125 -10" fill="#ffa94c"/>
+    <polygon points="20 50 55 30 90 50 90 90 55 110 20 90 20 50" fill="#ffa94c"/>
+    <polygon points="-15 110 20 90 55 110 55 150 20 170 -15 150 -15 110" fill="#ff941f"/>
+    <polyline points="90 192 90 170 125 150 160 170 160 192" fill="#ff941f"/>
+    <polygon points="55 110 90 90 125 110 125 150 90 170 55 150 55 110" fill="#bf6f17"/>
+    <polyline points="-50 192 -50 170 -15 150 20 170 20 192" fill="#bf6f17"/>
+    <polyline points="195 110 160 90 160 50 195 30" fill="#bf6f17"/>
+    <polyline points="160 192 160 170 195 150 230 170 230 192" fill="#bf6f17"/>
+    <polygon points="125 110 160 90 195 110 195 150 160 170 125 150 125 110" fill="#ffa94c"/>
+    <polyline points="20 192 20 170 55 150 90 170 90 192" fill="#ffa94c"/>
+    <path d="M125,90A35,35,0,0,0,92,55.1V88.8l29.3,16.8A34.8,34.8,0,0,0,125,90Z" fill="#fff" opacity="0.7"/>
+    <path d="M88,55.1a35,35,0,0,0-29.3,50.5L88,88.8V55.1Z" fill="#fff" opacity="0.7"/>
+    <path d="M90,92.3L60.7,109.1a35,35,0,0,0,58.7,0Z" fill="#fff" opacity="0.7"/>
+    <text transform="translate(120 65)" font-size="18" fill="#fff">120°</text>
+    <text transform="translate(73 144)" font-size="18" fill="#fff">120°</text>
+    <text transform="translate(29 66)" font-size="18" fill="#fff">120°</text>
+</svg>
