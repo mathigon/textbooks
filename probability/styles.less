@@ -5,4 +5,149 @@
 
 
 @import "styles/variables";
+@import "../../slate.js/src/fixed/fixed";
 
+
+.section-wrap, footer { background: white; }
+x-fixed .section-wrap { background: none; }
+
+.casino-felt {
+    background-image: url('/resources/probability/images/felt.png'), -webkit-radial-gradient(50% 40%, circle farthest-corner, #527C14, #243a0a);
+    background-size: 180px 180px, auto;
+    color: white;
+    h2, strong { color: white; }
+}
+
+.roulette-wheel {
+    float: right;
+    width: 380px;
+    height: 380px;
+    border-radius: 100%;
+    background: url('/resources/probability/images/roulette/roulette_1.jpg');
+    background-size: 380px 380px;
+    shape-outside: circle(190px);
+    margin: 0 0 1em 1em;
+    box-shadow: 2px 10px 30px rgba(0,0,0,0.4);
+    position: relative;
+
+    @media screen and (min-width: 1000px) { margin-right: -120px; }
+    @media screen and (max-width: 640px) { float: none; margin: 1em auto; }
+
+    .layer-2, .layer-3, .layer-4, .layer-5 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: 380px 380px; }
+
+    .layer-2 { background-image: url('/resources/probability/images/roulette/roulette_2.png') }
+    .layer-3 { background-image: url('/resources/probability/images/roulette/roulette_3.png') }
+    .layer-4 { background-image: url('/resources/probability/images/roulette/roulette_4.png') }
+    .layer-5 { background-image: url('/resources/probability/images/roulette/roulette_5.png') }
+
+    .ball { }
+}
+
+
+.newspaper {
+    background: #ccc;
+    padding: 12px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    position: relative;
+    margin: 2em 0;
+    font-family: monospace;
+    color: #333;
+
+    &:before, &:after {
+        content: " ";
+        height: 2px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #ccc;
+        clip-path: polygon(0% 0%, 5%  100%, 10% 0%, 15%  100%, 20% 0%, 25% 100%, 30% 0%, 35%  100%, 40% 0%, 45%  100%, 50% 0%, 55%  100%, 60% 0%, 65%  100%, 70% 0%, 75%  100%, 80% 0%, 85%  100%, 90% 0%, 95%  100%, 100% 0%);
+    }
+    &:before { top: -2px; transform: scaleY(-1); }
+    &:after { bottom: -2px; }
+
+    .red, .black {
+        color: white;
+        border-radius: 100%;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: -2px;
+        margin: 0 5px 2px 0;
+    }
+    .red { background: #c00; }
+    .black { background: black; }
+
+    p { margin-bottom: 4px; }
+}
+
+
+
+
+
+.gameshow-lights {
+    background: url('/resources/probability/images/lights.jpg') no-repeat center top;
+    background-size: cover;
+    color: white;
+    h2, strong { color: white; }
+    .section-wrap { background: none; }
+}
+
+.monty-hall {
+    margin: 2em 0;
+
+    .door-box {
+        float: left; width: 16%; margin: 0 4%;
+        padding-bottom: 24%;
+        position: relative;
+        perspective: 400px;
+        &:first-child { margin-left: 18%; }
+        &:hover { box-shadow: 0 0 20px 10px #00b1ff; }
+    }
+
+    .door {
+        width: 100%;
+        height: 100%;
+        background: #975424;
+        position: absolute;
+        transition: transform 1s;
+        transform-origin: 0 50%;
+        &.open { transform: rotateY(-90deg); }
+    }
+
+    .floor {
+        clear: both;
+        padding-bottom: 13%;
+        background: url('/resources/probability/images/floor.png');
+        background-size: cover;
+    }
+}
+
+
+
+
+.probTable table { width: 100%; table-layout: fixed; }
+.probTable td { overflow: hidden; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.3); }
+.probTable tr:last-child td { border-bottom: none; }
+
+.dice {
+    min-width: 20px;
+    height: 24px;
+    background: #C00;
+    color: white;
+    display: inline-block;
+    padding: 0 2px 0;
+    border-radius: 4px;
+    line-height: 24px;
+}
+
+.pBox { width: 100%; height: 200px; position: relative;}
+.diceCount { width: 100%; position: absolute; bottom: 0; background: fade(@blue, 40%); }
+.diceProb  { width: 100%; position: absolute; bottom: 0; background: @green; height: 3px; }
+
+
+.radioactive circle {
+    fill: @red;
+    &.off { fill: @blue; transform: scale(0.7); }
+}
