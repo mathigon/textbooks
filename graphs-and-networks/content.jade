@@ -180,7 +180,7 @@ section(id="GT_2_1", data-audio="318|365")
 
 section(data-audio="365|369")
   p Try drawing these graphs with one continuous stroke:
-  p.todo Interactive
+  p.todo Interactive coming soon…
 
 
 section(id="GT_2_3", data-audio="369|381")
@@ -465,8 +465,10 @@ section(data-audio="961|1007")
 section(data-audio="1007|1021")
   p There are countless different possibilities for Hamiltonian cycles in complete graphs. In fact, we can pick any vertex as starting vertex and then pick any of the remaining cities in any order:
   .row
-    .grow: p.todo Table Diagram
-    .grow: p.todo Graph Diagram
+    //- Table Diagram
+    .grow: p.todo Diagram coming soon…
+    //- Graph Diagram
+    .grow: p.todo Diagram Coming Soon…
 
 
 section(id="GT_6_2", data-audio="1021|1076")
@@ -494,16 +496,18 @@ section(id="GT_6_4", data-audio="1136|1170")
 section(data-audio="1170|1186")
   .row
     .grow
-      p The <strong>Greedy Algorithm</strong> (or Nearest Neighbour Algorithm) is very simple: you start in a random city and consecutively move to the closest city you haven&rsquo;t visited before. Once you have visited all cities, you stop.
-    div(style="width: 300px"): p.todo Animation: Slider
+      p The #[strong Greedy Algorithm] (or Nearest Neighbour Algorithm) is very simple: you start in a random city and consecutively move to the closest city you haven&rsquo;t visited before. Once you have visited all cities, you stop.
+    //- Animation: Slider
+    div(style="width: 300px"): p.todo Animation coming soon…
   p You can show that, on average, paths found using the greedy algorithm are 25% longer than the shortest possible path.
 
 
 section(data-audio="1186|1204")
   .row
     .grow
-      p The <strong>2-Opt Algorithm</strong> starts with a random possible path. Then you repeatedly pick two edges and swap them around if that would reduce the length of the path. You stop when you can't reduce the length further by swapping any pairs of edges.</p>
-    div(style="width: 300px"): p.todo Animation: Slider
+      p The #[strong 2-Opt Algorithm] starts with a random possible path. Then you repeatedly pick two edges and swap them around if that would reduce the length of the path. You stop when you can't reduce the length further by swapping any pairs of edges.
+    //- Animation: Slider
+    div(style="width: 300px"): p.todo Animation coming soon…
 
 
 section(data-audio="1204|1230")
@@ -520,14 +524,14 @@ section(data-audio="1230|1273")
       li The ant colony sends out many scouts which initially travel in random directions. Once they find food, they return, leaving behind a trail of pheromone.
       li.subsection(data-audio="1242") Other ants tend to follow a trail when they find one, which leads them to food. On their return journey they deposit more pheromone, thus reinforcing the trail.
       li.subsection(data-audio="1254") Over time, pheromone evaporates. The longer a path is, the more time it takes ants to travel along it, and so the pheromone has more time to evaporate. Short paths, on the other hand, can get reinforced more quickly, so their strength increases faster.
-    div(style="width: 240px"): p.todo Graphic
+    div(style="width: 240px"): p.todo Diagram coming soon…
 
 
 section(data-audio="1273|1307")
   .row.right
-    div(style="width: 220px"): img(style="margin-top: 5px", credit="© Depositphotos / lifeonwhite", src="/resources/graphs-and-networks/images/ant.jpg", width="220", height="220")
+    div(style="width: 220px"): x-media(style="margin-top: 5px", credit="© Depositphotos / lifeonwhite", src="/resources/graphs-and-networks/images/ant.jpg", width="220", height="220")
     .grow
-      p Ant Colony System (ACS) algorithms try to replicate this behaviour on computers, using many &#8220;virtual&#8221; ants. They can quickly find very good solutions for the travelling salesman problem.
+      p Ant Colony System (ACS) algorithms try to replicate this behaviour on computers, using many “virtual” ants. They can quickly find very good solutions for the travelling salesman problem.
       p One particularly useful property of ACS algorithms is that they can run continuously and adapt in real time to changes to the graph. These changes could be caused by car accidents and road closures on street networks, or by traffic spikes to web servers on computer networks.
 
 

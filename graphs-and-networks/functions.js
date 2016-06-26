@@ -178,12 +178,12 @@ export const hints = {
 
     crossWater: {
         audio: [1764, 1767.6],
-        text: "Careful &#8211; you are not allowed to enter the water."
+        text: "Careful – you are not allowed to enter the water."
     },
 
     bridgeCrossedBefore: {
         audio: [1767.6, 1772],
-        text: "You've already crossed this bridge before. Try to find a different route."
+        text: "You’ve already crossed this bridge before. Try to find a different route."
     },
 
     wellDone2: {
@@ -193,11 +193,11 @@ export const hints = {
 
     tryDifferentMap: {
         audio: [1774, 1779],
-        text: "Maybe a solution doesn&rsquo;t exist for this city. Go next to try another map."
+        text: "Maybe a solution doesn’t exist for this city. Go next to try another map."
     },
 
     tryDifferentStartPoint: {
-        text: "The starting location might be important. If you can't find a solution, try starting on a different island."
+        text: "The starting location might be important. If you can’t find a solution, try starting on a different island."
     },
 
     excellent: {
@@ -227,12 +227,12 @@ export const hints = {
 
     linesCross: {
         audio: [1794, 1797.1],
-        text: "Careful &#8211; your lines are not allowed to cross."
+        text: "Careful – your lines are not allowed to cross."
     },
 
     edgeDrawnBefore: {
         audio: [1797.1, 1800],
-        text: "Watch out, you've already drwan this edge once."
+        text: "Watch out, you’ve already drwan this edge once."
     }
 };
 
