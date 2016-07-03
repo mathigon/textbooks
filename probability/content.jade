@@ -62,11 +62,19 @@ section
 section
   p Pascal and Fermat decided to write down all possible ways the game could have continued:
 
-  .row.todo
-    .grow.text-center(style="width: 120px") Pascal wins
-    .grow.text-center(style="width: 120px") Pascal wins
-    .grow.text-center(style="width: 120px") Pascal wins
-    .grow.text-center(style="width: 120px") Fermat wins
+  .row
+    .grow.text-center(style="width: 120px")
+      img(src="/resources/probability/images/coins-1.png" width=136 height=48 alt="HHH")
+      p.caption Pascal wins
+    .grow.text-center(style="width: 120px")
+      img(src="/resources/probability/images/coins-2.png" width=136 height=48 alt="HHT")
+      p.caption Pascal wins
+    .grow.text-center(style="width: 120px")
+      img(src="/resources/probability/images/coins-3.png" width=136 height=48 alt="HTH")
+      p.caption Pascal wins
+    .grow.text-center(style="width: 120px")
+      img(src="/resources/probability/images/coins-4.png" width=136 height=48 alt="HTT")
+      p.caption Fermat wins
 
   p All of these outcomes are equally likely, so Pascal is #[+blank('three|four|two')] times as likely to win as Fermat. #[span.subsection Thus they decided that Fermat should pay 3/4 of the bill and Pascal should pay 1/4].
 
@@ -76,7 +84,7 @@ section
 
   p.text-center Probability of an event = #[span.frac #[span Number of ways the event could happen]#[span Total number of possible outcome]].
 
-  p In our example, the probability of Pascal winning the game is #[span.frac.inline #[span 3]#[span 4]] = 0.75.
+  p In our example, the probability of Pascal winning the game is #[span.frac.inline #[span 3]#[span 4]] = 0.75, and the probability of Fermat winning the game is #[span.frac.inline #[span 1]#[span 4]] = 0.25.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -476,8 +484,8 @@ section
   p This incredible property is used by Quantum computers. Conventional computers can only ever do one computation at a time. Quantum computers can use the properties of subatomic particles to do many calculations at the same time – and that makes them significantly faster.
 
   .img-block
-    x-media(lightbox, src="/resources/probability/images/quantum.jpg", width="720", height="360", credit="")
-    p.caption The crazy world of
+    x-media(lightbox, src="/resources/probability/images/quantum.jpg", width="760", height="390", credit="© Depositphotos / agsandrew")
+    p.caption The crazy world of subatomic particles
 
 section
   p We can’t really #[em understand] or #[em explain] quantum mechanics – we just have to accept that it is what is predicted by mathematical theory and confirmed by physical observations. The curious quantum effects have only ever been observed on tiny scales of a few atoms, and it is not clear how they affects us in everyday life. But it is the only known effect in nature that produces true randomness.
