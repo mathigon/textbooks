@@ -52,7 +52,7 @@ section#divisibility1
       p.caption 10 is not divisible by 4
 
   p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] (or #[strong divisor]) of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. We often write #[strong.blue B]|#[strong.red A], where the vertical bar simply means #[em "divides"].
-  p For example, #[strong.green 7] µ 3 = #[strong.orange 21], so #[strong.green 7] is a #[+blank("factor|multiple")] of #[strong.orange 21], #[strong.orange 21] is a #[+blank("multiple|factor")] of #[strong.green 7], and #[strong.green 7]|#[strong.orange 21].
+  p For example, #[strong.green 7] × 3 = #[strong.orange 21], so #[strong.green 7] is a #[+blank("factor|multiple")] of #[strong.orange 21], #[strong.orange 21] is a #[+blank("multiple|factor")] of #[strong.green 7], and #[strong.green 7]|#[strong.orange 21].
 
 section#divisibilitygame
   p In this short game you have to determine which numbers are factors or multiples, as fast as possible. Click the #[x-target(to="#divisibilitygame .toggle") play button] to start.
@@ -114,24 +114,24 @@ section
     tr.base-10-large
       td #[strong.m-red abc]#[strong.m-green d]
       td: | =
-      td #[strong.m-red abc µ 10]
+      td #[strong.m-red abc × 10]
       td +
       td #[strong.m-green d]
     tr.caption
       td #[strong.m-red 638]#[strong.m-green 2]
       td: | =
-      td #[strong.m-red 638 µ 10]
+      td #[strong.m-red 638 × 10]
       td +
       td #[strong.m-green 2]
 
-  p Both 2 and 5 are factors of 10, so they will #[+blank('always divide|never divide|sometimes divide')] #[strong.m-red abc µ 10], no matter what the values of #[strong.m-red a], #[strong.m-red b] and #[strong.m-red c] are. Therefore we only have to check the last digit: if #[strong.m-green d] is divisible by 2 then #[+blank('the whole number|abc')] is also divisible by 2. If #[strong.m-green d] is divisible by 5 then the whole number is divisible by 5.
+  p Both 2 and 5 are factors of 10, so they will #[+blank('always divide|never divide|sometimes divide')] #[strong.m-red abc × 10], no matter what the values of #[strong.m-red a], #[strong.m-red b] and #[strong.m-red c] are. Therefore we only have to check the last digit: if #[strong.m-green d] is divisible by 2 then #[+blank('the whole number|abc')] is also divisible by 2. If #[strong.m-green d] is divisible by 5 then the whole number is divisible by 5.
 
 //- ---------------------------------------------------------------------------
 
 section#divisibility4
   h3 Divisibility by 4 and 8
 
-  p Unfortunately 4 doesn’t divide 10, so we can‘t just look at the last number – but we 4 #[em does] divide 100, so we just have to slightly modify our rule from above. Now we write #[strong.m-red ab]#[strong.m-green cd] = #[strong.m-red ab µ 100] + #[strong.m-green cd]. We know that 4 will always divide #[strong.m-red ab µ 100], so we have to look at the last #[+input(2)] digits to check if a number if divisible by 4.
+  p Unfortunately 4 doesn’t divide 10, so we can‘t just look at the last number – but we 4 #[em does] divide 100, so we just have to slightly modify our rule from above. Now we write #[strong.m-red ab]#[strong.m-green cd] = #[strong.m-red ab × 100] + #[strong.m-green cd]. We know that 4 will always divide #[strong.m-red ab × 100], so we have to look at the last #[+input(2)] digits to check if a number if divisible by 4.
 
   p For example, #[strong.m-green 24] is divisible by 4 so #[strong.m-red 2735]#[strong.m-green 24] #[+blank('is also|is not')] divisible by 4, and #[strong.m-green 18] is not divisible by 4 so #[strong.m-red 1947]#[strong.m-green 18] #[+blank('is also not|is')] divisible by 4.
 
@@ -188,11 +188,11 @@ section#divisibility9
 section
   p Of course, these curious patterns for numbers divisible by 3 and 9 must have some reason – and like before it has to do with our base 10 numbers system. As we saw, writing the number #[strong.m-red 6]#[strong.m-blue 3]#[strong.m-green 8]#[strong.m-yellow 4] really means
 
-  p.text-center #[strong.m-red 6 µ 1000] + #[strong.m-blue 3 µ 100] + #[strong.m-green 8 µ 10] + #[strong.m-yellow 4].
+  p.text-center #[strong.m-red 6 × 1000] + #[strong.m-blue 3 × 100] + #[strong.m-green 8 × 10] + #[strong.m-yellow 4].
 
   p We can split up each of these products into two parts:
 
-  p.text-center #[strong.m-red #[span.digit-sum-else 6 µ 999] + #[span.digit-sum-is 6]] + #[strong.m-blue #[span.digit-sum-else 3 µ 99] + #[span.digit-sum-is 3]] + #[strong.m-green #[span.digit-sum-else 8 µ 9] + #[span.digit-sum-is 8]] + #[strong.m-yellow.digit-sum-is 4].
+  p.text-center #[strong.m-red #[span.digit-sum-else 6 × 999] + #[span.digit-sum-is 6]] + #[strong.m-blue #[span.digit-sum-else 3 × 99] + #[span.digit-sum-is 3]] + #[strong.m-green #[span.digit-sum-else 8 × 9] + #[span.digit-sum-is 8]] + #[strong.m-yellow.digit-sum-is 4].
 
   p Of course, #[strong.m-green 9], #[strong.m-blue 99], #[strong.m-red 999], and so on are always divisible by 3 (or by 9). All that remains is to check that what’s left over is also divisible by 3 (or 9):
 
@@ -203,7 +203,7 @@ section
 //- ---------------------------------------------------------------------------
 
 section#divisibility6
-  p We’ve still skipped number 6 – but we’ve already done all the hard work. Remember that 6 = 2 µ 3.
+  p We’ve still skipped number 6 – but we’ve already done all the hard work. Remember that 6 = 2 × 3.
   +grid(40)
   p.btn-row.text-center(style="margin-bottom:1em")
     button.btn.btn-small.btn-bounce Show multiple of 2
@@ -231,7 +231,7 @@ section
 //- ---------------------------------------------------------------------------
 
 section
-  p In the case of 60 we have 60 = 1 µ 60 = 2 µ 30 = 3 µ 20 = 4 µ 15 = 5 µ 12 = 6 µ 10. Or, in a different notation,
+  p In the case of 60 we have 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 = 6 × 10. Or, in a different notation,
 
   +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
 
@@ -250,7 +250,7 @@ section#factors2
     .legend 5 also doesn’t divide 42 so we move on.
     .legend 6 does divide 42 again. Its pair is 42 ÷ 6 = 7. Notice how we’ve met in the middle after only a few attempts, without having to test all numbers from 7 to 42.
 
-  p The only special case with this method is for square number: in that case, you will meet at just a single number in the middle, like 64 = 8 µ 8.
+  p The only special case with this method is for square number: in that case, you will meet at just a single number in the middle, like 64 = 8 × 8.
 
 //- ---------------------------------------------------------------------------
 
@@ -286,30 +286,30 @@ section#primefactor
     tr
       td(colspan=2)
       td: .number-ball.blue 2
-      td(colspan=3) µ
+      td(colspan=3) ×
       td: .number-ball.blue.legs.b 42
     tr
       td(colspan=4)
       td: .number-ball.green 2
-      td(colspan=2) µ
+      td(colspan=2) ×
       td: .number-ball.green.legs(style="margin: 0 -10px") 21
     tr.td-border-bottom
       td(colspan=6)
       td: .number-ball.yellow 3
-      td µ
+      td ×
       td: .number-ball.yellow 7
     tr
       td: .number-ball 84
       td: | =
       td: .number-ball.blue 2
-      td µ
+      td ×
       td: .number-ball.green 2
-      td µ
+      td ×
       td: .number-ball.yellow 3
-      td µ
+      td ×
       td: .number-ball.yellow 7
 
-  p Now 2, 3 and 7 are prime numbers and can’t be divided further. The product 2 µ 2 µ 3 µ 7 is called the #[strong prime factorisation] of 84, and 2, 3 and 7 are its #[strong prime factors]. Note that some primes, like 2 in this case, can appear multiple times in a prime factorisation.
+  p Now 2, 3 and 7 are prime numbers and can’t be divided further. The product 2 × 2 × 3 × 7 is called the #[strong prime factorisation] of 84, and 2, 3 and 7 are its #[strong prime factors]. Note that some primes, like 2 in this case, can appear multiple times in a prime factorisation.
 
   p Every integer has a prime factorisation and no two integers have the same prime factorisation. Furthermore, there is only a single way to write any number as a product of primes – unless we count different orderings of the primes. This is called the #[strong Fundamental Theorem of Arithmetic] (FTA).
 
@@ -358,7 +358,7 @@ section#eulerproof
     li Suppose there were only finitely many prime numbers.
       .text-center #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P]
     li.subsection Let us multiply all of them together, to get a very large number which we call #[em N].
-      .text-center #[em.number-ball N] = #[em.number-ball.blue P] µ #[em.number-ball.blue P] µ #[em.number-ball.blue P] µ #[em.number-ball.blue P] µ #[em.number-ball.blue P]
+      .text-center #[em.number-ball N] = #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P]
     li.subsection Now let’s think about #[em N] + 1. Any prime number that divides #[em N] can’t also  divide #[em N] + 1. And since all prime numbers we have found so far divide #[em N], none of these can also divide #[em N] + 1.
       .text-center #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[.number-ball.blue P] #[span.divides] #[em.number-ball N]
       .text-center #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[.number-ball.blue.cross P] #[span.divides] #[em.number-ball N] + 1
@@ -472,18 +472,18 @@ section
     tr
       td
         .number-ball.l-yellow 2
-        | &nbsp;µ&nbsp;
+        | &nbsp;×&nbsp;
         .number-ball.l-yellow 2
-        | &nbsp;µ&nbsp;
+        | &nbsp;×&nbsp;
         .number-ball.l-yellow 3
       td
       td
         .number-ball.l-yellow 2
-        | &nbsp;µ&nbsp;
+        | &nbsp;×&nbsp;
         .number-ball.l-yellow 2
-        | &nbsp;µ&nbsp;
+        | &nbsp;×&nbsp;
         .number-ball.l-yellow 3
-        | &nbsp;µ&nbsp;
+        | &nbsp;×&nbsp;
         .number-ball.l-blue 5
 
   p This is easy to verify: if a prime factor divides #[strong.m-yellow a], and #[strong.m-yellow a] divides #[strong.m-green b], then that prime factor must #[em also] divide #[strong.m-green b].
@@ -496,21 +496,21 @@ section
       td: .number-ball.blue 40
       td: | =
       td: .number-ball.l-blue 2
-      td: | µ
+      td: | ×
       td: .number-ball.l-blue 2
-      td: | µ
+      td: | ×
       td: .number-ball.l-blue 2
-      td(colspan=3): | µ
+      td(colspan=3): | ×
       td: .number-ball.l-blue 5
     tr
       td: .number-ball.green 60
       td: | =
       td: .number-ball.l-green 2
-      td: | µ
+      td: | ×
       td: .number-ball.l-green 2
-      td(colspan=3): | µ
+      td(colspan=3): | ×
       td: .number-ball.l-green 3
-      td: | µ
+      td: | ×
       td: .number-ball.l-green 5
 
   p Suppose that #[strong.m-red X] is the lcm of #[strong.m-green 40] and #[strong.m-blue 60]. Then #[strong.m-green 40] divides #[strong.m-red X], so #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 5] must be prime factors of #[strong.m-red X]. Also, #[strong.m-blue 60] divides #[strong.m-red X], so #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5] must be prime factors of #[strong.m-red X].
@@ -518,7 +518,7 @@ section
 section
   p To find #[strong.m-red X], we simply combine all the prime factors of #[strong.m-green 40] and #[strong.m-blue 60], but any duplicates we only need once:
 
-  p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue 2] µ #[span.number-ball.l-green 3] µ #[span.number-ball.l-blue-green 5]
+  p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] × #[span.number-ball.l-blue-green 2] × #[span.number-ball.l-blue 2] × #[span.number-ball.l-green 3] × #[span.number-ball.l-blue-green 5]
 
   p This gives us that #[strong.m-red X] = 120, just like we saw above. Notice that if the same prime factor appears multiple times, like 2 above, we need to keep the maximum occurrences in one of the two numbers (3 times in #[strong.m-green 40] is more than 2 times in #[strong.m-blue 60]).
 
@@ -536,29 +536,29 @@ section
       td: .number-ball.blue 12
       td: | =
       td: .number-ball.l-blue 2
-      td: | µ
+      td: | ×
       td: .number-ball.l-blue 2
-      td: | µ
+      td: | ×
       td: .number-ball.l-blue 3
     tr
       td: .number-ball.green 30
       td: | =
       td: .number-ball.l-green 2
-      td(colspan=3): | µ
+      td(colspan=3): | ×
       td: .number-ball.l-green 3
-      td(colspan=3): | µ
+      td(colspan=3): | ×
       td: .number-ball.l-green 5
     tr
       td: .number-ball.yellow 45
       td: | =
       td(colspan=4)
       td: .number-ball.l-yellow 3
-      td: | µ
+      td: | ×
       td: .number-ball.l-yellow 3
-      td: | µ
+      td: | ×
       td: .number-ball.l-yellow 5
 
-  p Therefore the lcm of #[strong.m-blue 12], #[strong.m-green 30] and #[strong.m-yellow 45] is 2 µ #[+input(2)] µ 3 µ 3 µ #[+input(5)] = 180.
+  p Therefore the lcm of #[strong.m-blue 12], #[strong.m-green 30] and #[strong.m-yellow 45] is 2 × #[+input(2)] × 3 × 3 × #[+input(5)] = 180.
 
 section
   p A special case are prime numbers: the lcm of two different primes is simply their #[+blank("product|sum|difference")], because they don’t have any common prime factors which would get “canceled”.
@@ -593,17 +593,17 @@ section
       td: .number-ball.blue 18
       td: | =
       td: .number-ball.l-blue 2
-      td: | µ
+      td: | ×
       td: .number-ball.l-blue 3
-      td: | µ
+      td: | ×
       td: .number-ball.l-blue 3
     tr
       td: .number-ball.green 30
       td: | =
       td: .number-ball.l-green 2
-      td: | µ
+      td: | ×
       td: .number-ball.l-green 3
-      td(colspan=3): | µ
+      td(colspan=3): | ×
       td: .number-ball.l-green 5
 
   p Suppose that #[strong.m-red X] is the gcd of #[strong.m-green 18] and #[strong.m-blue 30]. Then #[strong.m-red X] divides #[strong.m-green 18] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 3]. Also, #[strong.m-red X] divides #[strong.m-blue 30] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5].
@@ -611,7 +611,7 @@ section
 section
   p To find #[strong.m-red X], we simply need to multiple all numbers which are  prime factors of #[+blank("both|one of")] #[strong.m-green 18] and #[strong.m-blue 30]:
 
-  p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] µ #[span.number-ball.l-blue-green 3] &nbsp;=&nbsp; 6.
+  p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] × #[span.number-ball.l-blue-green 3] &nbsp;=&nbsp; 6.
 
 section
   p Now we have a simple method for finding the gcd of two numbers:
@@ -705,7 +705,7 @@ section#goldbach
 
   p Goldbach wrote about his observation in a letter to the famous mathematician #[x-bio#euler Leonhard Euler], but neither of them was able to prove it. It became known as the #[strong Goldbach Conjecture].
 
-  p Computers have checked that the Goldbach Conjecture works for every even number up to 4 µ 10#[sup 18] (that’s a 4 with 18 zeros), but mathematicians have still not found a proof that it works for #[em all] even integers. And that is a big difference, because there are infinitely many integers, so we couldn’t possible check all of them.
+  p Computers have checked that the Goldbach Conjecture works for every even number up to 4 × 10#[sup 18] (that’s a 4 with 18 zeros), but mathematicians have still not found a proof that it works for #[em all] even integers. And that is a big difference, because there are infinitely many integers, so we couldn’t possible check all of them.
 
   p Its apparent simplicity made the Goldbach conjecture one of the most famous unsolved problems in mathematics.
 

@@ -114,10 +114,10 @@ section(id="GT_1_1", data-audio='142|173')
 
 
 section(id="GT_1_2", data-audio="173|202")
-  p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] µ #[+var n-1] = #[+var n * (n-1)] handshakes in total.
+  p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] × #[+var n-1] = #[+var n * (n-1)] handshakes in total.
   p.var ${ handshakeTable(n) }
   .subsection(data-audio="184")
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[span.frac.inline #[span #[+var n] µ #[+var n-1]]#[span 2]] = #[+var n*(n-1)/2].
+    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[span.frac.inline #[span #[+var n] × #[+var n-1]]#[span 2]] = #[+var n*(n-1)/2].
 
 
 section(id="GT_1_3", data-audio="202|229")
@@ -127,7 +127,7 @@ section(id="GT_1_3", data-audio="202|229")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
-  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> µ (<em>n</em> &#8211; 1)', '2')] edges.
+  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> × (<em>n</em> &#8211; 1)', '2')] edges.
 
 
 section(id="GT_1_4", data-audio="229|278")
@@ -136,7 +136,7 @@ section(id="GT_1_4", data-audio="229|278")
   .row.subsection(data-audio="245")
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
     div(style="width: 300px;"): svg.graph(style="width: 300px; height: 140px;")
-  p.subsection(data-audio="262", data-needs="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x µ y|x + y|2x - y")] edges, which means that in the above example there are #[+var m] µ #[+var f] = #[+var m*f] dates.
+  p.subsection(data-audio="262", data-needs="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x × y|x + y|2x - y")] edges, which means that in the above example there are #[+var m] × #[+var f] = #[+var m*f] dates.
 
 //- ----------------------------------------------------------------------------------------------
 
@@ -455,7 +455,7 @@ section(data-audio="961|1007")
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[span.frac.inline #[span #[+var tsn] µ (#[+var tsn] – 1)]#[span 2]] = #[+var tsn*(tsn-1)/2} edges in total.
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[span.frac.inline #[span #[+var tsn] × (#[+var tsn] – 1)]#[span 2]] = #[+var tsn*(tsn-1)/2} edges in total.
 
       p The delivery truck has to visit all cities, in any order. In the Königsberg bridges problem we wanted to find paths which travel along #[em every edge] exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
 

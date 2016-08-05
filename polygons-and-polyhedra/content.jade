@@ -185,12 +185,12 @@ section#polygonsangle
 
   p The same, of course, also works for larger polygons. We can split a pentagon into #[+input(3)] triangles, so its internal angle sum is #[+input(540)]°. And we can split a hexagon into #[+input(4)] triangles, so its internal angle sum is #[+input(720)]°.
 
-  p In general, a polygon with #[+var('x|2|2,12,1') fn1(x)] sides will have an internal angle sum of 180° µ #[+var fn2(x)].
+  p In general, a polygon with #[+var('x|2|2,12,1') fn1(x)] sides will have an internal angle sum of 180° × #[+var fn2(x)].
 
 section
   p Remember that in regular polygons, all sides have the same length and all angles are all the same size. Therefore we can calculate the size of a single internal angle in a regular polygon:
 
-  p.text-center angle = #[span.frac #[span #[+blank("sum of all angles|number of angles")]]#[span #[+blank("number of angles|sum of all angles")]]] = #[+frac('180° µ (<em>x</em> – 2)', '<em>x</em>')] = 180° – #[+frac('360°','<em>x</em>')].
+  p.text-center angle = #[span.frac #[span #[+blank("sum of all angles|number of angles")]]#[span #[+blank("number of angles|sum of all angles")]]] = #[+frac('180° × (<em>x</em> – 2)', '<em>x</em>')] = 180° – #[+frac('360°','<em>x</em>')].
 
   p In particular, the sum of a regular polygon with #[+var('x|6|3,12,1') x] sides is 180° – #[span.frac.inline #[span 360°]#[span #[+var x]]] = #[+var Math.round(180-360/x)]°.
 
@@ -268,7 +268,7 @@ section
       include svg/quadrilaterals/area-parallelogram.svg
     .grow
       p Notice how the overlap on the left is exactly the same as the gap on the right. Therefore the area of the #[strong.m-blue blue parallelogram] is #[+blank('the same as|smaller than|larger than')] the area of the #[strong.m-red red rectangle]. This means that the area of any parallelogram is simply
-      p.text-center #[strong.i.m-green base] µ #[strong.i.m-yellow height].
+      p.text-center #[strong.i.m-green base] × #[strong.i.m-yellow height].
 
 section
   h3 Kite and Rhombus
@@ -277,7 +277,7 @@ section
       include svg/quadrilaterals/area-kite.svg
     .grow
       p Each the four smaller rectangles are exactly half blue. Therefore the area of the #[strong.m-blue blue kite] is half the area of the #[strong.m-red red rectangle]. In other words, the area of a kite or rhombus is always
-      p.text-center #[span.frac #[span 1]#[span 2]] #[strong.i.m-green width] µ #[strong.i.m-yellow height].
+      p.text-center #[span.frac #[span 1]#[span 2]] #[strong.i.m-green width] × #[strong.i.m-yellow height].
 
 section
   h3 Trapezium
@@ -286,7 +286,7 @@ section
       include svg/quadrilaterals/area-trapezium.svg
     .grow
       p Notice how the gaps on the left and right are each exactly as big as the overlap on that side. The width of the #[strong.m-red red rectangle] is the average of the widths of the top side and the bottom side of the #[strong.m-blue blue trapezium]. Therefore the area of a trapezium is
-      p.text-center #[span.frac #[span #[strong.i.m-green top] + #[strong.i.m-green bottom]]#[span 2]] µ #[strong.i.m-yellow height].
+      p.text-center #[span.frac #[span #[strong.i.m-green top] + #[strong.i.m-green bottom]]#[span 2]] × #[strong.i.m-yellow height].
 
 section
   .box.problem-box
@@ -389,16 +389,16 @@ section#possible
   .row
     .grow(style="width: 120px")
       include svg/triangles.svg
-      p.caption Triangles #[+blank("tessellate|don’t tessellate")] because 6 µ 60° = 360°.
+      p.caption Triangles #[+blank("tessellate|don’t tessellate")] because 6 × 60° = 360°.
     .grow(style="width: 120px")
       include svg/squares.svg
-      p.caption Squares #[+blank("tessellate|don’t tessellate")] because 4 µ 90° = 360°.
+      p.caption Squares #[+blank("tessellate|don’t tessellate")] because 4 × 90° = 360°.
     .grow(style="width: 120px")
       include svg/pentagons.svg
       p.caption Pentagons #[+blank("don’t tessellate|tessellate")] because multiples of 108° don't add up to 360°.
     .grow(style="width: 120px")
       include svg/hexagons.svg
-      p.caption Hexagons #[+blank("tessellate|don’t tessellate")] because 3 µ 120° = 360°.
+      p.caption Hexagons #[+blank("tessellate|don’t tessellate")] because 3 × 120° = 360°.
 
   p This has to do with the size of their internal angles, which we leaned to calculate before. If you can make multiples of their internal angle add up to #[+input(360)]°, the shape will tessellate. Otherwise there will either be a gap or an overlap.
 

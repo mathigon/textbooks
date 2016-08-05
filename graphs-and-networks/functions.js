@@ -107,7 +107,7 @@ export const gloss = {
 
     complete: {
         title: "Complete Graph",
-        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac inline white'><span><em>n</em> µ (<em>n</em> – 1)</span><span>2</span></span> edges.</p>"
+        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac inline white'><span><em>n</em> × (<em>n</em> – 1)</span><span>2</span></span> edges.</p>"
     },
 
     bipartite: {
@@ -983,7 +983,7 @@ fns.GT_6_2 = function(section, chapter) {
     });
 
     section.model.set('tsnPaths', function(x) {
-        return list(x, 1).join(' µ ') + ' = ' + numberFormat(factorial(x));
+        return list(x, 1).join(' × ') + ' = ' + numberFormat(factorial(x));
     });
 
 };
