@@ -897,14 +897,17 @@ fns.GT_5_1 = function(section, chapter) {
         let completed = 10;
         let used = 0;
 
-        $countries.forEach(function($c) {
+        $countries.forEach(function($c, j) {
             let id = $c.attr('id');
             let neighbours = borders[i][id] || [];
             countryIds.push(id);
 
             let initial = colours.indexOf($c.attr('fill'));
             $c.css('fill', '#CCC');
-            $solve.on('click', function() { countryColours[id] = initial; $c.css('fill', colours[initial]); });
+            $solve.on('click', function() {
+                countryColours[id] = initial;
+                setTimeout(() => { $c.css('fill', colours[initial]); }, j * 10);
+            });
 
             $c.on('click', function() {
                 for (let n of neighbours) if (countryColours[n] == activeColour) {

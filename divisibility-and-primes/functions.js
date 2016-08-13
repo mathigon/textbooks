@@ -428,7 +428,7 @@ fns.race = function(section, chapter) {
             }
             $buttonText.text = Math.floor(p * duration * 10) + ' s';
         }, duration * 1000).then(function() {
-            setTimeout(function() { running = false; $buttonText.text = 'Start'; }, 1000);
+            setTimeout(function() { running = false; $buttonText.text = 'START'; }, 1000);
         });
 
         for (let i of [0, 1]) {

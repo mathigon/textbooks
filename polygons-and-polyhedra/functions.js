@@ -307,7 +307,7 @@ fns.classifyquadriateral = function(section, chapter) {
 fns.polygonsangle = function(section) {
     section.model.load({
         fn1: function(x) { return x < 3 ? '<em>x</em>' : x; },
-        fn2: function(x) { return x < 3 ? '<em>x</em> – 2' : x-2 + ' = ' + 180 * (x-2); }
+        fn2: function(x) { return x < 3 ? '(<em>x</em> – 2)' : x-2 + ' = ' + 180 * (x-2); }
     });
 
     section.onScore('blank-0', function() { section.$el.find('.pentagon').enter('pop', 400); });
