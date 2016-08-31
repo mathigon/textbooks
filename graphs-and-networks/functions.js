@@ -5,9 +5,7 @@
 
 
 import Graph from 'graph';
-import Vector from 'vector';
 import Colour from 'colour';
-import Browser from 'browser';
 import Draggable from 'draggable';
 import Drawing from 'drawing';
 import { last } from 'arrays';
@@ -20,6 +18,7 @@ import { Point, travellingSalesman, lineLineIntersect } from 'geometry';
 import { tabulate, list } from 'arrays';
 import { subsets } from 'combinatorics';
 import { $, $I, $$, $T, $C, $$C, $$T, $N } from 'elements';
+import { isOneOf } from 'utilities';
 
 
 // -----------------------------------------------------------------------------
@@ -177,62 +176,35 @@ export const hints = {
     },
 
     crossWater: {
-        audio: [1764, 1767.6],
         text: "Careful – you are not allowed to enter the water."
     },
 
     bridgeCrossedBefore: {
-        audio: [1767.6, 1772],
         text: "You’ve already crossed this bridge before. Try to find a different route."
     },
 
-    wellDone2: {
-        audio: [1772, 1774],
-        text: "Well done, you made it!"
-    },
-
     tryDifferentMap: {
-        audio: [1774, 1779],
-        text: "Maybe a solution doesn’t exist for this city. Go next to try another map."
+        text: 'Maybe there is no solution for this city… You could try <x-target to="#GT_2_0 .next">another map</x-target>!'
     },
 
     tryDifferentStartPoint: {
-        text: "The starting location might be important. If you can’t find a solution, try starting on a different island."
-    },
-
-    excellent: {
-        audio: [1779, 1780],
-        text: "Excellent!"
-    },
-
-    wellDone1: {
-        audio: [1780, 1780.4],
-        text: "Well done!"
-    },
-
-    goodJob: {
-        audio: [1780.4, 1782.9],
-        text: "Good Job!"
+        text: "The starting location might be important. See what happens if you start on a different island."
     },
 
     housesToEachOther: {
-        audio: [1782.9, 1788.6],
         text: "You only need to connect the houses to the factories, but not the houses to each other."
     },
 
     factoriesToEachOther: {
-        audio: [1788.6, 1794],
         text: "You only need to connect the factories to the houses, but not the factories to each other."
     },
 
     linesCross: {
-        audio: [1794, 1797.1],
         text: "Careful – your lines are not allowed to cross."
     },
 
     edgeDrawnBefore: {
-        audio: [1797.1, 1800],
-        text: "Watch out, you’ve already drwan this edge once."
+        text: "Watch out, you’ve already drawn this edge once."
     }
 };
 
@@ -319,7 +291,7 @@ fns.GT_0_4 = function(section, chapter) {
     new Graph(graphs[2], 7, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]);
 };
 
-fns.GT_1_1 = function(section, chapter) {
+fns.GT_1_1 = function(section) {
     let g = new Graph($C('graph', section.$el), 5, [], { icon: person });
 
     section.model.change(function() {
@@ -329,7 +301,7 @@ fns.GT_1_1 = function(section, chapter) {
     });
 };
 
-fns.GT_1_2 = function(section, chapter) {
+fns.GT_1_2 = function(section) {
     section.onScore('blank-0', function() {
         setTimeout(function() { section.$el.addClass('complete'); }, 1000);
     });
@@ -350,7 +322,7 @@ fns.GT_1_2 = function(section, chapter) {
     });
 };
 
-fns.GT_1_3 = function(section, chapter) {
+fns.GT_1_3 = function(section) {
     let graphs = $$C('graph', section.$el);
     new Graph(graphs[0], 4, subsets(list(4), 2));
     new Graph(graphs[1], 5, subsets(list(5), 2));
@@ -358,7 +330,7 @@ fns.GT_1_3 = function(section, chapter) {
     new Graph(graphs[3], 7, subsets(list(7), 2));
 };
 
-fns.GT_1_4 = function(section, chapter) {
+fns.GT_1_4 = function(section) {
     let g = new Graph($C('graph', section.$el), 0, [],
         { static: true, icon: person, bound: true });
 
@@ -372,13 +344,14 @@ fns.GT_1_4 = function(section, chapter) {
         let edges = [];
         for (var i=0; i<m; ++i) for (var j=0; j<f; ++j) edges.push([i, m + j]);
 
-        g.options.vertex = function(v) { return v < m ? '#20a0ff' : '#ff207e'; }
+        g.options.vertex = function(v) { return v < m ? '#20a0ff' : '#ff207e'; };
         g.load(m + f, edges, mPoints.concat(fPoints));
     });
 };
 
 fns.GT_2_0 = function(section, chapter) {
-    section.addGoals('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3')
+    section.addGoals('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3');
+    let previousErrors = [];
 
     $$C('slide', section.$el).forEach(function($el, i) {
 
@@ -388,31 +361,43 @@ fns.GT_2_0 = function(section, chapter) {
         let $bridges = $$C('bridge', $svg);
         let $error = $C('error', $svg);
 
+        let success = false;
+        let afterError = true;
         let attempts = 0;
         let totalCrossed = 0;
         $error.exit();
 
         var map = new Drawing($svg, { paths: $paths });
         map.on('start', map.clear.bind(map));
-        $el.find('.btn').on('click', map.clear.bind(map));
+        $el.find('.btn').on('click', function() { map.clear(); });
+
+        function error(name) {
+            afterError = true;
+            if (previousErrors.indexOf(name) < 0) chapter.addHint(name);
+            previousErrors.push(name);
+            attempts += 1;
+            if (!success && attempts == 2) chapter.addHint('tryDifferentStartPoint');
+            if (!success && isOneOf(i, 0, 3) && attempts == 4) {
+                chapter.addHint('tryDifferentMap');
+                section.score('bridge-' + i);
+            }
+        }
 
         map.on('clear', function() {
-            attempts += 1;
             totalCrossed = 0;
             $error.exit('pop', 300);
             section.solveds[i]._el.hide();
-
-            //if (attempts === 4)
-                //chapter.addHint(i === 1 || i === 2 ? 'tryDifferentStartPoint' : 'tryDifferentMap');
+            if (!afterError) attempts += 1;
+            afterError = false;
         });
 
         $water.on('pointerEnter', function(e) {
             if (!map.drawing) return;
             map.stop();
-            chapter.addHint('crossWater');
             var p = svgPointerPosn(e, $svg);
             $error.translate(p.x - 20, p.y - 20);
             $error.enter('pop', 300);
+            error('crossWater');
         });
 
         $bridges.forEach(function($bridge) {
@@ -425,7 +410,7 @@ fns.GT_2_0 = function(section, chapter) {
                     if (crossed) {
                         map.stop();
                         $bridge.css('fill', Colour.red);
-                        chapter.addHint('bridgeCrossedBefore');
+                        error('bridgeCrossedBefore');
                     }
                     crossed = true;
                 }
@@ -439,8 +424,11 @@ fns.GT_2_0 = function(section, chapter) {
                     } else {
                         $bridge.css('fill', Colour.green);
                         totalCrossed += 1;
-                        if (totalCrossed === $bridges.length)
+                        if (totalCrossed === $bridges.length) {
                             section.solveds[i]._el.show();
+                            section.score('bridge-' + i);
+                            success = true;
+                        }
                     }
                 }
             });
@@ -485,8 +473,8 @@ fns.GT_2_1 = function(section, chapter) {
     });
 };
 
-fns.GT_2_3 = function(section, chapter) {
-    section.addGoals('c-eo', 'c-prime', 'c-size')
+fns.GT_2_3 = function(section) {
+    section.addGoals('c-eo', 'c-prime', 'c-size');
 
     let g = Colour.green, r = Colour.red, b = Colour.blue, o = Colour.orange;
     let colours = {
@@ -510,7 +498,7 @@ fns.GT_2_3 = function(section, chapter) {
     colour('val');
 };
 
-fns.GT_2_4 = function(section, chapter) {
+fns.GT_2_4 = function(section) {
     let $svg    = $T('svg', section.$el);
     let $g      = $T('g', section.$el);
     let $edges  = $$T('line', $svg);
@@ -556,6 +544,7 @@ fns.GT_2_4 = function(section, chapter) {
 };
 
 fns.GT_3_0 = function(section, chapter) {
+    section.addGoals('try-three-times');
 
     let currentUtility;
     let startUtility;
@@ -569,12 +558,23 @@ fns.GT_3_0 = function(section, chapter) {
         intersect: true
     });
 
+    let attempts = 0;
+    function resolve(hint) {
+        attempts += 1;
+        if (attempts == 3) {
+            section.score('try-three-times');
+            chapter.addHint('I think this puzzle might also be impossible… Sorry I tricked you :1f61c:');
+        } else if (hint) {
+            chapter.addHint(hint);
+        }
+    }
+
     map.on('intersect', function(e) {
         e.paths[0].css('stroke','#C00');
         e.paths[1].css('stroke','#C00');
-        chapter.addHint('Careful - the lines are not allowed to cross.');
         errors.push(...e.paths);
         map.stop();
+        resolve('Careful: the lines are not allowed to cross.');
     });
 
     map.on('end', function() { if (map.drawing) remove = true; });
@@ -586,7 +586,8 @@ fns.GT_3_0 = function(section, chapter) {
         allUtilities.forEach($el => { $el.css('opacity', 0); });
         map.clear();
         errors = [];
-    };
+        resolve();
+    }
 
     section.$el.find('button').on('click', clear);
 
@@ -625,7 +626,7 @@ fns.GT_3_0 = function(section, chapter) {
             if (startUtility.attr('data-type') == dataType) {
                 last(map.paths).css('stroke','#C00');
                 errors.push(last(map.paths));
-                if(dataType == 'house') {
+                if (dataType == 'house') {
                     chapter.addHint('housesToEachOther');
                 } else {
                     chapter.addHint('factoriesToEachOther');

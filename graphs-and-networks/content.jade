@@ -15,7 +15,7 @@ section#GT_0_0(data-audio="0|40")
     .grow
       p Every day we are surrounded by countless connections and networks: roads and rail tracks, phone lines and the internet, electronic circuits and molecular bonds. There are also #[em social networks] between friends and families. All these systems consist of certain points, called #[x-blank(choices="vertices|circles|crossings")], connected by lines, called #[x-blank(choices="edges|boundaries|pairs")]. In mathematics, all these networks are called #[strong graphs].</p>
     div(style="width: 160px;")
-      p: svg#graph0.graph.novertices.noedges(width="160" height="130")
+      svg#graph0.graph.novertices.noedges(width="160" height="130")
   p #[strong Graph theory] is the study of graphs and their properties. It is one of the most exciting and visual areas of mathematics, and has countless important applications.
 
   x-gallery(slide-width="300")
@@ -141,7 +141,7 @@ section(id="GT_1_4", data-audio="229|278")
 //- ----------------------------------------------------------------------------------------------
 
 section(id="GT_2_0", data-audio="278|318")
-  h2 The Bridges of K&ouml;nigsberg
+  h2 The Bridges of Königsberg
   .row
     .grow
       p One of the first mathematicians to think about graphs and networks was #[x-bio#euler Leonhard Euler]. Euler was intrigued by an old problem regarding the town of K&ouml;nigsberg near the Baltic Sea. #[span.lgrey (Today, the city is called Kaliningrad and located in Russia.)]
@@ -154,15 +154,15 @@ section(id="GT_2_0", data-audio="278|318")
       x-solved
       include svg/bridges-1.svg
       button.btn.btn-bounce Clear
-    .slide(data-needs="bride-1")
+    .slide(data-needs="bridge-0")
       x-solved
       include svg/bridges-2.svg
       button.btn.btn-bounce Clear
-    .slide(data-needs="bride-2")
+    .slide(data-needs="bridge-1")
       x-solved
       include svg/bridges-3.svg
       button.btn.btn-bounce Clear
-    .slide(data-needs="bride-3")
+    .slide(data-needs="bridge-2")
       x-solved
       include svg/bridges-4.svg
       button.btn.btn-bounce Clear
@@ -226,7 +226,7 @@ section(id="GT_3_0", data-audio="480|511")
   .row
     .grow
       p Let us try another simple puzzle that is related to graph theory.
-      p.quote(style="margin-bottom: 0;") In a small village there are three utility plants, producing water, electricity and gas respectively, and three houses which need to be served. Unfortunately, due to the city&rsquo;s layout, the pipes or cables for every product are not allowed to cross.
+      p.quote(style="margin-bottom: 0;") In a small village there are three utility plants, producing water, electricity and gas respectively, and three houses which need to be served. Unfortunately, due to the city’s layout, the pipes or cables for every product are not allowed to cross.
     div(style="width: 300px;")
       x-media(credit="© Depositphotos / Grossinge", width="300", height="169", src="/resources/graphs-and-networks/images/factory.mp4")
   p Try to connect each of the plants below to each of the houses, without any of your lines crossing:
@@ -236,7 +236,7 @@ section(id="GT_3_0", data-audio="480|511")
 
 
 section(id="GT_3_1", data-audio="511|527")
-  p Just like the K&ouml;nigsberg bridges before, you quickly discover that this problem, too, is impossible. It seems that some graphs can be drawn without overlapping edges – these are called #[strong planar graphs] – but others cannot.
+  p Just like the Königsberg bridges before, you quickly discover that this problem is also impossible. It seems that some graphs can be drawn without overlapping edges – these are called #[strong planar graphs] – but others cannot.
   .row
     div(style="width: 200px")
       svg.graph(width="200" height="200" style="margin-bottom: .4em;")
@@ -330,7 +330,7 @@ section(data-audio="609|657", id="GT_4_2")
 section(id="GT_4_3", data-audio="657|692")
   p Any (finite) graph can be constructed by starting with one vertex and adding more vertices one by one. We have shown that, whichever way we add new vertices, Euler&rsquo;s equation is valid. Therefore it is valid for all graphs.
   p The process we have used is called <strong>mathematical induction</strong>. It is a very useful technique for proving results in infinitely many cases, simply by starting with the simplest case, and showing that the result holds at every step when constructing more complex cases.
-  p: include svg/dominoes.svg
+  .svg-block: include svg/dominoes.svg
 
 
 section(data-audio="692|710")
@@ -412,7 +412,7 @@ section(id="GT_5_2", data-audio="790|834")
     div(style="width: 200px;"): img(src="/resources/graphs-and-networks/images/four-colours.png" width="200" height="120")
 
   p Like before, we can convert a map with countries and borders into a planar graph: every country becomes #[+blank("a vertex|an edge|a face")], and countries which #[+blank("share a border|have the same colour")] get connected by an edge:
-  p: include svg/colour-graph.svg
+  .svg-block: include svg/colour-graph.svg
   p.subsection(data-audio="824", data-needs="blank-0 blank-1") Now we want to colour the vertices of a graph, and two vertices must have a different colour if they are connected by an edge.
 
 
