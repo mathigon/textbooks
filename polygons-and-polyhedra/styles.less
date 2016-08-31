@@ -29,8 +29,10 @@
     cursor: move;
     stroke: transparent;
     stroke-width: 40px;
-    &:hover { transform: scale(1.2); }
-    transition: transform .2s;
+    // This seems to break in a recent Chrome update: when moving, the transform center
+    // is the original center before starting to move...
+    &:hover { /* transform: scale(1.2); */ r: 12px; }
+    transition: r .2s;
 }
 
 .geo-angle {
