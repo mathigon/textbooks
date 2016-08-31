@@ -2,6 +2,6 @@
     "title": "<TITLE>",
     "stage": "foundations",
     "description": "TODO",
-    "icon": "courses/course_f-<TITLE>.png",
+    "icon": "courses/f-<TITLE>.png",
     "hero": "hero.jpg"
 }
