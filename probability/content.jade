@@ -43,16 +43,19 @@ mixin dice(n)
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section(data-gloss="probability")
+  //- This fixes overflowing gloss bubbles at the very beginning.
+  style .article-wrap { margin-top: -120px; padding-top: 120px; }
+
   +intro
 
   h2 Introduction
 
-  p Probabilities and likelihoods are everywhere around us, from weather forecasting to games, insurance or statistics in newspapers. It turns out, however, that historically probability it is actually a very recent idea. While geometry and algebra were studied by Ancient Greek mathematicians more than 2500 years ago, the concepts of probability only emerged in the 17th and 18th century.
+  p Probabilities and likelihoods are everywhere around us, from weather forecasting to games, insurance or statistics in newspapers. However, in the history of mathematics, probability it is actually a very recent idea. While geometry and algebra were studied by Ancient Greek mathematicians more than 2500 years ago, the concepts of probability only emerged in the 17th and 18th century.
 
   .row
     .grow
-      p According to legend, two of the most famous mathematicians in history, #[x-bio#pascal Blaise Pascal] and #[x-bio#fermat Pierre de Fermat], would regularly meet up in a small cafe in Paris.
+      p According to legend, two of the most famous mathematicians, #[x-bio#pascal Blaise Pascal] and #[x-bio#fermat Pierre de Fermat], would regularly meet up in a small cafe in Paris.
       p To distract from the difficult mathematical theories they were discussing, they  often played a simple game: they repeatedly tossed a coin – every #[em heads] was a point for Pascal and every #[em tails] was a point for Fermat. Whoever had more points after three coin tosses had to pay the bill.
     div(style="width: 360px"): img(src="/resources/probability/images/paris.jpg", width="360", height="254")
 
@@ -89,14 +92,35 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#probLine
   h2 What are Probabilities
 
   p A #[strong probability] is a numbers between 0 and 1 which describes the likelihood of a certain #[strong event]. A probability of 0 means that something is #[em impossible]; a probability of 1 means that something is #[em certain].
 
-  p For example, it is #[+blank('certain|impossible')] that the Earth will still exist tomorrow and it is #[+blank('impossible|certain')] that you will meet a real dragon tomorrow. The probabilities of a coin landing #[em heads] or a die rolling a 6 are somewhere in between.
+  p For example, it is #[+blank('impossible|certain')] that you will meet a real life dragon, and it is #[+blank('certain|impossible')] that the sun will rise tomorrow. The probability of a coin landing #[em heads] is exactly #[+blank('in the middle|the same')].
 
-  p.todo 0-1 line diagram
+  p.subsection(data-needs="blank-0 blank-1 blank-2") The probability of rolling a 6 on a die, or picking a particular suit from a deck of cards is #[+blank('less|more')] than 0.5 – which means unlikely. The probability of a good football team winning a match, or of a train arriving on time is #[+blank('more|less')] than 0.5 – which means likely.
+
+  .p-line.clearfix
+    img(src="/resources/probability/images/line-1.png", width=140, height=140, style="width: 18.42%; opacity: 0", alt="dragon")
+    img(src="/resources/probability/images/line-2.png", width=140, height=140, style="width: 10.53%; opacity: 0", alt="dice")
+    img(src="/resources/probability/images/line-3.png", width=140, height=140, style="width: 15.79%; opacity: 0", alt="cards")
+    img(src="/resources/probability/images/line-4.png", width=140, height=140, style="width: 11.84%; opacity: 0", alt="coins")
+    img(src="/resources/probability/images/line-5.png", width=140, height=140, style="width: 11.84%; opacity: 0", alt="football")
+    img(src="/resources/probability/images/line-6.png", width=140, height=140, style="width: 17.11%; opacity: 0", alt="train")
+    img(src="/resources/probability/images/line-7.png", width=140, height=140, style="width: 14.47%; opacity: 0", alt="sun")
+    img(src="/resources/probability/images/line-8.png", width=760, height=40, style="width: 100%", alt="line")
+
+section
+  p Here are some more events: drag them into the correct order, from likely to unlikely:
+
+  x-sortable
+    .item(data-index="3") You throw a die and it lands on 6.
+    .item(data-index="5") Penguins #[+emoji('1f427')] live on the North Pole.
+    .item(data-index="1") It's going to rain #[+emoji('26c8')] in November.
+    .item(data-index="0") A baby will be born in China today.
+    .item(data-index="4") You buy a lottery ticket and win the Jackpot #[+emoji('1f389')].
+    .item(data-index="2") You select a card out of a deck and it is red (either #[+emoji('2665')] or #[+emoji('2666')]).
 
   p We often use probabilities and likelihoods in everyday life, usually without thinking about it. What is the chance of rain tomorrow? How likely is it that I will make it to school on time?
 
@@ -116,16 +140,18 @@ section
 
   .row
     .grow(style="width: 200px")
-      p.todo img
+      img(src="/resources/probability/images/classical.png" width=240 height=75 alt="classical probability")
       p.text-center The #[strong classical] probability of landing heads is the proportion of #[em possible outcomes] that are heads.
     .grow(style="width: 200px")
-      p.todo img
+      img(src="/resources/probability/images/frequentist.png" width=240 height=75 alt="frequentist probability")
       p.text-center The #[strong frequentist] probability is the proportion of heads we get if we toss the coin #[em many times].
     .grow(style="width: 200px")
-      p.todo img
+      img(src="/resources/probability/images/subjectivist.png" width=240 height=75 alt="subjectivist probability")
       p.text-center The #[strong subjectivist] probability tells us how strongly we #[em believe] that the coin will land heads.
 
   p(style="margin-bottom: 2em") While probabilities are great for estimating and predicting, we can never actually #[em forecast] what will happen. Every possible outcome #[em could] happen, even if it only has a very tiny probability.
+
+
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -133,7 +159,7 @@ section
 .fixed.casino-felt
   .fixed-bg
 
-  section#roulette
+  section#roulette(data-gloss="roulette")
     h2 Analysing Roulette
 
     .roulette-wheel
@@ -181,9 +207,11 @@ section
     p Pearson calculated that the probability of seeing results which were this skewed was less than 1 in 100,000,000! He assumed that the Roulette wheels were rigged to create higher profits for the Casino – and wrote many angry letters to expose this scam.
 
   section
-    p When he finally travelled to Monte Carlo, he discovered that the reason for the skewed results was of a very different nature: the journalists who were supposed to be recording the results were instead just sitting in the bar, drinking, and making up random colours…
-
-    p.todo cocktails image
+    .row
+      div(style="width: 300px")
+        x-media(src="/resources/probability/images/cocktails.jpg", credit="© Depositphotos / serrnovik", width=300, height=185)
+      .grow
+        p When he finally travelled to Monte Carlo, he discovered that the reason for the skewed results was of a very different nature: the journalists who were supposed to be recording the results were instead just sitting in the bar of the casino, drinking, and making up random colours…
 
   section#randomSequence
     p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour), and overestimate likely ones (alternating colours). This fact can be used effectively to detect fraud in banking and insurance.
@@ -191,14 +219,14 @@ section
     p Here you can try for yourself if you are better than the journalists: write down a sequence of Rs and Bs, and find out how random it really is:
 
     label.newspaper: input(type="text", placeholder="RBBRRBBBRRRBRBRRB")
-    p.score
+    p.text-center(style="margin-top: -1em; font-family: monospace") Randomness Score: #[span.score 100]
 
-  section
+  section(data-gloss="blackjack")
     h2 Beat the Dealer
 
     .row
       .grow
-        p While Pearson only analysed Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio Edward Thorp], who invented #[em card counting] – a techniques that allowed him to beat casinos at #[x-gloss Blackjack].
+        p While Pearson only analysed Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio Edward Thorp], who invented #[em card counting] – a techniques that allowed him to beat casinos at #[x-gloss#blackjack Blackjack].
 
         p He later turned his focus to Roulette: believing that, if you knew the exact position and speed of the ball in a Roulette wheel, you should be able to use Physics to approximately predict the outcome. After the dealer sets the roulette wheel spinning, there are just a few seconds when you are still allowed to place new bets. Unfortunately this time is much to short for humans to do calculate the outcome in their head.
 
@@ -207,10 +235,10 @@ section
           img(src="/resources/probability/images/beat-the-dealer.jpg", width=150, height=250)
 
 
-  section
+  section(data-gloss="information")
     img.computer(src="/resources/probability/images/wearable-computer.png", width=275, height=364)
 
-    p At the Massachusetts Institute of Technology, Thorp discussed his ideas with #[x-bio Claude Shannon], another mathematician and the father of #[x-gloss information theory]. Together they decided to build the first ever #[em wearable computer], decades before the likes of Google Glass or Apple Watch.
+    p At the Massachusetts Institute of Technology, Thorp discussed his ideas with #[x-bio Claude Shannon], another mathematician and the father of #[x-gloss#information information theory]. Together they decided to build the first ever #[em wearable computer], decades before the likes of Google Glass or Apple Watch.
 
     p The computer was roughly the size of a pack of cigarettes and strapped around their waist. A set of wires ran down to their shoe, which they tapped whenever the ball crossed a certain marker on the roulette wheel. That allowed the computer to calculate its speed, and predict where it would end up. Another set of wires led from the computer to an earpiece, which produced different tones based on different outcomes.
 
@@ -314,7 +342,7 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section(data-gloss="probTree")
   h2 Probability Trees
 
   p Now let’s try a more difficult game: there is a bag that contains five red and three blue marbles. When picking two marbles at random, what is the probability that both of them are red?
@@ -342,22 +370,23 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section(data-gloss="venn")
   h2 Venn Diagrams
+  p.todo More coming soon…
 
-  p.todo Opposite probabilities always add up to 1. This means that you can calculate the opposite of a probability by subtracting it from 1.
+  // p Opposite probabilities always add up to 1. This means that you can calculate the opposite of a probability by subtracting it from 1.
 
-  p.todo Venn Diagrams and set operations
+  // p Venn Diagrams and set operations
 
-  p.todo Independent and Mutually Exclusive Events
+  // p Independent and Mutually Exclusive Events
 
-  p.todo There are 200 kids in a school. 140 students are taking Mathematics, and 100 students are taking Biology. 80 students are studying both Maths and Biology.
+  // p There are 200 kids in a school. 140 students are taking Mathematics, and 100 students are taking Biology. 80 students are studying both Maths and Biology.
 
-  p.todo The corresponding Venn Diagram corresponds to two overlapping circles for Maths and Biology. We can write 80 in their intersection.
+  // p The corresponding Venn Diagram corresponds to two overlapping circles for Maths and Biology. We can write 80 in their intersection.
 
-  p.todo There are 140 - 80 = 60 students studying just Mathematics, so we write than in the remaining part of the Maths circle.  There are 100 - 80 = 20 students studying just Biology so we write that in the remaining part of the Biology circle.
+  // p There are 140 - 80 = 60 students studying just Mathematics, so we write than in the remaining part of the Maths circle.  There are 100 - 80 = 20 students studying just Biology so we write that in the remaining part of the Biology circle.
 
-  p.todo How many students at the school study neither Mathematics nor Biology?
+  // p How many students at the school study neither Mathematics nor Biology?
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -466,7 +495,7 @@ section
 
   p The same principle applies to many other “random” events in life, including dice and roulette wheels. They are not really #[em random], we simply don’t have the tools to do the mathematical calculations accurately enough to predict the outcome.
 
-section#radioactive
+section#radioactive(data-gloss="radioactivity")
   .row
     .grow
       p But #[em true randomness] does exists – at the very foundations of matter. A block of radioactive material consists of millions of atoms which decay over time: they fall apart into smaller atoms, while emitting dangerous radiation.
@@ -478,8 +507,8 @@ section#radioactive
 
   //- TODO Possible probability distributions of the position of an electron in a hydrogen atom. Lighter areas represent more likely locations of the electron.
 
-section
-  p Radioactive decay of atoms is caused by forces which act at much smaller scales within atoms, and which can be explained using Quantum mechanics. During the last century, physicists discovered that fundamental particles have a mindlowing property: they can be in multiple different places #[em at the same time]. They don't have a fixed position, but instead a probability distribution (or wave function) which tells us how likely it is we are going to find them at a particular position.
+section(data-gloss="quantum")
+  p #[x-gloss#radioactive Radioactive decay] of atoms is caused by forces which act at much smaller scales within atoms, and which can be explained using #[x-gloss#quantum Quantum mechanics]. During the last century, physicists like #[x-bio#planck Max Planck] and #[x-bio#dirac Paul Dirac] discovered that fundamental particles have a mindlowing property: they can be in multiple different places #[em at the same time]. They don't have a fixed position, but instead a probability distribution (or wave function) which tells us how likely it is we are going to find them at a particular position.
 
   p This incredible property is used by Quantum computers. Conventional computers can only ever do one computation at a time. Quantum computers can use the properties of subatomic particles to do many calculations at the same time – and that makes them significantly faster.
 

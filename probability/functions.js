@@ -15,13 +15,102 @@ import { weighted, shuffle, exponential, chiCDF } from 'probability';
 // -----------------------------------------------------------------------------
 // Biographies
 
-export const bio = { };
+export const bio = {
+    pascal: {
+        name: "Blaise Pascal",
+        birth: "1623",
+        death: "1662",
+        img: "/resources/bio/pascal.jpg",
+        bio: "<p>Blaise Pascal was a French mathematician, physicist and philosopher. He invented some of the first mechanical calculators, as well as working on projective geometry, probability and the physics of the vacuum.</p><p>Most famously, Pascal is remembered for naming <em>Pascal’s Triangle</em>, an infinite triangle of numbers with some amazing properties.</em></p>"
+    },
+    fermat: {
+        name: "Pierre de Fermat",
+        birth: "1607",
+        death: "1665",
+        img: "/resources/bio/fermat.jpg",
+        bio: "<p>Pierre de Fermat was a French mathematician and Lawyer. He was one of the early pioneers of calculus, as well as working on number theory, probability, geometry and optics.</p><p>In 1637, he wrote a short note in the margin of one od his textbooks, claiming that the equation <em>a<sup>n</sup></em> + <em>b<sup>n</sup></em> = <em>c<sup>n</sup></em> has no integer solutions for <em>n</em> > 2, and that he had a “marvelous proof, which this margin is too narrow to contain”. This became known as <em>Fermat's Last Theorem</em>, and became one of the most famous unsolved problems in mathematics – until it was finally proven in 1994.</p>"
+    },
+    pearson: {
+        name: "Karl Pearson",
+        birth: "1857",
+        death: "1936",
+        img: "/resources/bio/pearson.jpg",
+        bio: "<p>Karl Pearson was an English mathematician and statistician. He worked on biometrics, meteorology, and eugenics, among many other topics, and founded the world’s first university statistics department, at University College London.</p>"
+    },
+    thorp: {
+        name: "Edward Thorp",
+        birth: "1932",
+        img: "/resources/bio/thorp.jpg",
+        bio: "<p>Edward Thorp is an American hedge fund manager and blackjack player, known for inventing <em>card counting</em> and for building the first <em>wearable computer</em> to beat casinos at Roulette. He worked at MIT, is a professor of mathematics, and pioneered modern applications of probability theory.</p>"
+    },
+    shannon: {
+        name: "Claude Shannon",
+        birth: "1898",
+        death: "1972",
+        img: "/resources/bio/shannon.jpg",
+        bio: "<p>Claude Shannon was an American mathematician and electrical engineer, remembered as the “father of information theory”. He worked on cryptography, including codebreaking for national defense during World War II, but he was also interested in juggling, unicycling and chess. In his spare times, he built machines that could juggle or solve the Rubik’s Cube puzzle.</p>"
+    },
+    venn: {
+        name: "John Venn",
+        birth: "1834",
+        death: "1923",
+        img: "/resources/bio/venn.jpg",
+        bio: "<p>John Venn was an English mathematician and philosopher who introduced the <em>Venn diagram</em> used in set theory and probability. He taught at Cambridge University and was a Fellow of the Royal Society in London.</p>"
+    },
+    planck: {
+        name: "Max Plank",
+        birth: "1858",
+        death: "1947",
+        img: "/resources/bio/planck.jpg",
+        bio: "<p>Max Plank was a German physicist and one of the original developers of Quantum Mechanics – for which received the Nobel Prize in 1918.</p>"
+    },
+    dirac: {
+        name: "Paul Dirac",
+        birth: "1898",
+        death: "1972",
+        img: "/resources/bio/dirac.jpg",
+        bio: "<p>Paul Dirac was an English theoretical physicist, who shared the 1933 Nobel Prize with Erwin Schrödinger. Dirac was one of the pioneers of Quantum Mechanics, formulated the famous <em>Dirac equation</em> and first predicted the existence of antimatter.</p><p>He taught at Cambridge University, before moving to America. Dirac was famously shy and, according to Einstein, <em>“balancing on the dizzying path between genius and madness”</em>.</p>"
+    }
+};
 
 
 // -----------------------------------------------------------------------------
 // Glossary
 
-export const gloss = { };
+export const gloss = {
+    probability: {
+        title: "Probability",
+        text: "<p>A number between 0 and 1 that quantifies the likelihood of a certain event.</p>"
+    },
+    blackjack: {
+        title: "Blackjack",
+        text: "<p>A card game in which you add up the value of multiple cards to get as close to 21 – but not above.</p>"
+    },
+    roulette: {
+        title: "Roulette",
+        text: "<p>A casino game in which you bet on where a spinning ball is going to land. It contains 36 numbers as well as one or two 0s.</p>"
+    },
+    information: {
+        title: "Information Theory",
+        text: "<p>The study of quantification, storage and communication of data and information. It is used in logic, cryptography and computer science.</p>"
+    },
+    probTree: {
+        title: "Probability Tree",
+        text: "<p>A tree diagram representing the combined probability of multiple sequential events.</p>"
+    },
+    venn: {
+        title: "Venn Diagram",
+        text: "<p>A diagram that visualises multiple overlapping events, and their probabilities.</p>"
+    },
+    quantum: {
+        title: "Quantum Mechanics",
+        text: "<p>A branch of Physics that explains the stage behaviour of fundamental particles.</p>"
+    },
+    radioactivity: {
+        title: "Radioactive Decay",
+        text: "<p>A physical process by which unstable atoms break apart and release energy.</p>"
+    }
+};
 
 
 // -----------------------------------------------------------------------------
@@ -164,6 +253,18 @@ fns.randomSequence = function(section) {
     section.$el.find('input').change(function(str) {
         $score.text = Math.round(compute(str.toUpperCase()) * 100);
     });
+};
+
+// -----------------------------------------------------------------------------
+
+fns.probLine = function(section) {
+    let items = section.$el.findAll('.p-line img');
+
+    section.onScore('blank-0', function() { items[0].enter('pop'); });
+    section.onScore('blank-1', function() { items[6].enter('pop'); });
+    section.onScore('blank-2', function() { items[3].enter('pop'); });
+    section.onScore('blank-3', function() { items[1].enter('pop'); items[2].enter('pop', 500, 300); });
+    section.onScore('blank-4', function() { items[4].enter('pop'); items[5].enter('pop', 500, 300); });
 };
 
 // -----------------------------------------------------------------------------

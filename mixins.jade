@@ -30,3 +30,6 @@ mixin intro()
     span.user Remember to #[x-target(to=".nav-link.dropdown-title") login] to save your progress and get personalised content.
     | &nbsp;
     span.size This textbook works best on larger devices like tablets or laptops.
+
+mixin emoji(n)
+  img.emoji(width=20 height=20 src="/images/emoji/#{n}.png")
