@@ -223,8 +223,6 @@ const GREEN = '#31b304';
 const YELLOW = '#ff941f';
 
 fns.GT_0_0 = function(section, chapter) {
-    chapter.addGloss('graph', 'vertex', 'edge');
-
     var $graph = $C('graph', section.$el);
     new Graph($graph, 8, [[0,4],[4,5],[5,2],[5,1],[1,2],[2,3],[3,4],[3,6],[6,7],[7,3],[2,7]]);
 
@@ -234,8 +232,6 @@ fns.GT_0_0 = function(section, chapter) {
 };
 
 fns.GT_0_1 = function(section, chapter) {
-    chapter.addGloss('directed');
-
     let graphs = $$C('graph', section.$el);
     new Graph(graphs[0], 7, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,5],[6,3]], { directed: true });
     new Graph(graphs[1], 9, [[0,1],[1,2],[2,3],[3,0],[1,3],[4,5],[5,6],[6,4],[7,8]]);
@@ -243,8 +239,6 @@ fns.GT_0_1 = function(section, chapter) {
 };
 
 fns.GT_0_2 = function(section, chapter) {
-    chapter.addGloss('subgraph');
-
     let graphs = $$C('graph', section.$el);
 
     new Graph(graphs[0], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[2,5]], { vertex: BLUE, edge: BLUE });
@@ -268,8 +262,6 @@ fns.GT_0_2 = function(section, chapter) {
 };
 
 fns.GT_0_3 = function(section, chapter) {
-    chapter.addGloss('order', 'degree');
-
     let graphs = $$C('graph', section.$el);
 
     new Graph(graphs[0], 5, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,2]]);
@@ -283,8 +275,6 @@ fns.GT_0_3 = function(section, chapter) {
 };
 
 fns.GT_0_4 = function(section, chapter) {
-    chapter.addGloss('cycle');
-
     let graphs = $$C('graph', section.$el);
     new Graph(graphs[0], 3, [[0,1],[1,2],[2,0]]);
     new Graph(graphs[1], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]]);

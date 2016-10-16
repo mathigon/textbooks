@@ -155,10 +155,6 @@ function digitSumString(n) {
 
 const fns = {};
 
-fns.divisibility1 = function(section, chapter) {
-    chapter.addGloss('factor', 'multiple', 'divisor');
-};
-
 fns.divisibilitygame = function(section) {
     section.gameplay._el.setFirstSlide(function($el) {
         $el.model({ x: '?', y: '?' });
@@ -304,18 +300,7 @@ fns.factors2 = function(section) {
     });
 };
 
-
-
-fns.primes = function(section, chapter) {
-    chapter.addGloss('prime');
-};
-
-fns.primefactor = function(section, chapter) {
-    chapter.addGloss('primefactor', 'factorisation', 'fta');
-};
-
 fns.eratosthenes = function(section) {
-
     let $grid = section.$el.find('.number-grid');
 
     function colour(n, c) {
@@ -339,11 +324,6 @@ fns.eratosthenes = function(section) {
     });
 };
 
-fns.eulerproof = function(section, chapter) {
-    chapter.addGloss('proof');
-};
-
-
 fns.primeTest = function(section) {
     let $input = section.$el.find('input');
 
@@ -363,7 +343,6 @@ fns.primeTest = function(section) {
 
 
 fns.primeGenerator = function(section) {
-
     section.$el.find('button').on('click', function() {
         let d = +section.model.d;
         section.model.set('result', '<span class="loading"></span>');
@@ -399,9 +378,7 @@ fns.ulam = function(section) {
     });
 };
 
-fns.race = function(section, chapter) {
-    chapter.addGloss('lcm');
-
+fns.race = function(section) {
     let $button = section.$el.find('.lap-button');
     let $buttonText = $button.find('text');
     let $runners = section.$el.findAll('circle');
@@ -443,8 +420,7 @@ fns.race = function(section, chapter) {
     $button.on('click', run);
 };
 
-fns.gcd = function(section, chapter) {
-    chapter.addGloss('gcd');
+fns.gcd = function(section) {
     let $tiles = section.$el.find('.tiles');
 
     section.model.change(function() {
@@ -487,10 +463,6 @@ fns.cicadas = function(section) {
     });
 };
 
-fns.rsa = function(section, chapter) {
-    chapter.addGloss('cryptography');
-};
-
 fns.goldbach = function(section) {
     let $input = section.$el.find('input');
 
@@ -508,10 +480,6 @@ fns.goldbach = function(section) {
             section.model.set('result', `Couldn‘t find a solution :(`);
         });
     });
-};
-
-fns.twins = function(section, chapter) {
-    chapter.addGloss('twins');
 };
 
 fns.riemann = function(section) {
@@ -548,8 +516,6 @@ fns.riemann = function(section) {
     let $zoom = section.$el.find('.zoom-icon');
     $zoom.on('click', function() { section.score('zoom'); $svg.toggleClass('zoom'); });
 };
-
-
 
 
 export const sections = fns;

@@ -258,8 +258,6 @@ fns.triangleProof = function(section) {
 };
 
 fns.quadrilateral = function(section, chapter) {
-    chapter.addGloss('quadrilateral');
-
     function deg(a, b, c) { return Math.round(angle(a, b, c) * 180 / Math.PI); }
     section.model.load({ angle, svgAngle, svgLine, svgPolygon, deg, x: 'max' });
 
@@ -294,8 +292,6 @@ fns.quadrilateral = function(section, chapter) {
 };
 
 fns.classifyquadriateral = function(section, chapter) {
-    chapter.addGloss('trapezium', 'parallelogram', 'kite', 'rectangle', 'rhombus');
-
     let $lines = section.$el.findAll('line');
     $lines.forEach($l => { $l.attr('stroke', '#b30469'); });
 
@@ -332,10 +328,6 @@ fns.parallelograms = function(section) {
     });
 };
 
-fns.tessellation = function(section, chapter) {
-    chapter.addGloss('tessellation');
-};
-
 fns.drawing = function(section) {
     const shapes = {
         3: '0,-34.6 30,17.3 -30,17.3',
@@ -363,8 +355,6 @@ fns.drawing = function(section) {
 };
 
 fns.penrose = function(section, chapter) {
-    chapter.addGloss('penrose');
-
     let $slider = section.$el.find('x-slider');
     let $g = section.$el.findAll('svg g');
 
@@ -376,18 +366,6 @@ fns.penrose = function(section, chapter) {
         $g[1].attr('opacity', n < 50 ? n/50 : 1.5-n/100);
         $g[2].attr('opacity', n < 50 ? 0 : n/50-1);
     });
-};
-
-fns.polyhedra = function(section, chapter) {
-    chapter.addGloss('polyhedron', 'face');
-};
-
-fns.platonic = function(section, chapter) {
-    chapter.addGloss('platonic');
-};
-
-fns.archimedean = function(section, chapter) {
-    chapter.addGloss('archimedean');
 };
 
 export const sections = fns;
