@@ -478,7 +478,7 @@ fns.GT_2_3 = function(section) {
 
     function colour(x) {
         $circles.forEach(function($c) {
-            let y = +$c.attr('data-value');
+            let y = +$c.data.value;
             $c.css('fill', colours[x][y-2]);  // -2 because no 0s and 1s
         });
         section.score('c-' + x);
@@ -585,7 +585,7 @@ fns.GT_3_0 = function(section, chapter) {
         let $c = $ut.children(0);
         let p = { x: +$c.attr('cx'), y: +$c.attr('cy') };
         let onThis = false;
-        let dataType = $ut.attr('data-type');
+        let dataType = $ut.data.type;
 
         $ut.on('pointerStart', function(e) {
             currentUtility = $ut;
@@ -613,7 +613,7 @@ fns.GT_3_0 = function(section, chapter) {
             map.addPoint(p);
             map.stop();
             $ut.effect('pulse-down');
-            if (startUtility.attr('data-type') == dataType) {
+            if (startUtility.data.type == dataType) {
                 last(map.paths).css('stroke','#C00');
                 errors.push(last(map.paths));
                 if (dataType == 'house') {
@@ -622,8 +622,8 @@ fns.GT_3_0 = function(section, chapter) {
                     chapter.addHint('factoriesToEachOther');
                 }
             } else {
-                let sector = (startUtility.attr('data-type') == 'house') ?
-                    $C($ut.attr('data-utility'), currentUtility) : $C(currentUtility.attr('data-utility'), $ut);
+                let sector = (startUtility.data.type == 'house') ?
+                    $C($ut.data.utility, currentUtility) : $C(currentUtility.data.utility, $ut);
                 sector.css('opacity', 1);
                 sectors.set(last(map.paths), sector);
             }
