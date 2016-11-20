@@ -60,7 +60,7 @@ section(data-gloss="probability")
     div(style="width: 360px"): img(src="/resources/probability/images/paris.jpg", width="360", height="254")
 
 section
-  p One day, however, they get interrupted after the first coin toss and Fermat has to leave urgently. Later, they wonder who should pay the bill, or if there is a fair way to split it. The first coin landed #[em heads] (a point for Pascal), so maybe Fermat should pay everything. However there also is a small change that Fermat could have won, if the #[+blank('two next tosses|next coin toss')] would have been #[em tails].
+  p One day, however, they get interrupted after the first coin toss and Fermat has to leave urgently. Later, they wonder who should pay the bill, or if there is a fair way to split it. The first coin landed #[em heads] (a point for Pascal), so maybe Fermat should pay everything. However, there also is a small change that Fermat could have won if the #[+blank('two next tosses|next coin toss')] would have been #[em tails].
 
 section
   p Pascal and Fermat decided to write down all possible ways the game could have continued:
@@ -85,7 +85,7 @@ section
 section
   p Pascal and Fermat had discovered the first important equation of probability: if an experiment has multiple possible outcomes which are all equally likely, then
 
-  p.text-center Probability of an event = #[span.frac #[span Number of ways the event could happen]#[span Total number of possible outcome]].
+  p.text-center Probability of an event = #[span.frac #[span Number of ways the event could happen]#[span Total number of possible outcomes]].
 
   p In our example, the probability of Pascal winning the game is #[span.frac.inline #[span 3]#[span 4]] = 0.75, and the probability of Fermat winning the game is #[span.frac.inline #[span 1]#[span 4]] = 0.25.
 
@@ -95,7 +95,7 @@ section
 section#probLine
   h2 What are Probabilities
 
-  p A #[strong probability] is a numbers between 0 and 1 which describes the likelihood of a certain #[strong event]. A probability of 0 means that something is #[em impossible]; a probability of 1 means that something is #[em certain].
+  p A #[strong probability] is a number between 0 and 1 which describes the likelihood of a certain #[strong event]. A probability of 0 means that something is #[em impossible]; a probability of 1 means that something is #[em certain].
 
   p For example, it is #[+blank('impossible|certain')] that you will meet a real life dragon, and it is #[+blank('certain|impossible')] that the sun will rise tomorrow. The probability of a coin landing #[em heads] is exactly #[+blank('in the middle|the same')].
 
@@ -133,7 +133,7 @@ section
 
   //- p.todo And after tossing a coin many times we know that approximately half of the results are heads – though we can’t predict which individual tosses landed heads.
 
-  p.todo Or suppose that I toss a coin, but don't tell you the result. I know the outcome for certain, but for you the probabilities are still 0.5. In this case, the probability depends on the #[em knowledge] of the observer.
+  p.todo Or suppose that I toss a coin, but don't tell you the result. I know the outcome for certain, but for you, the probabilities are still 0.5. In this case, the probability depends on the #[em knowledge] of the observer.
   //- Notice that subjectivist probabilities may be different for different people – often depending on how much they know. For example, I might estimate that the chance of rain is about 70%, while a meterologist with detailed weather data might say the chance of rain is 64.2%.
 
   p It turns out that there are many different ways to think about probabilities, though in practice they often give the same results:
@@ -150,7 +150,6 @@ section
       p.text-center The #[strong subjectivist] probability tells us how strongly we #[em believe] that the coin will land heads.
 
   p(style="margin-bottom: 2em") While probabilities are great for estimating and predicting, we can never actually #[em forecast] what will happen. Every possible outcome #[em could] happen, even if it only has a very tiny probability.
-
 
 
 //- ---------------------------------------------------------------------------
@@ -170,14 +169,14 @@ section
       .ball
       svg(width=380, height=380): circle(cx=190, cy=190, r=190)
 
-    p After the advent of probability, more and more mathematicians started applying the laws of probability to other parts of life – including casino games.
+    p Soon after their initial discovery, mathematicians started applying the laws of probability to other parts of life – including casino games.
 
     p One of these mathematicians was #[x-bio#pearson Karl Pearson] who analysed the results of roulette games published in the French newspaper #[em Le Monaco].
 
-    p Roulette consists of a wheel with the numbers from 1 to 36 coloured in #[strong.red red] or #[strong.black black], as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour, and their potential winning depends on the likelihood of each of these outcomes.
+    p Roulette consists of a wheel with the numbers from 1 to 36 coloured in #[strong.red red] or #[strong.black black], as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour. Their potential winning depends on the likelihood of each of these outcomes.
 
   section
-    p Here is one of the many hundreds of newspaper extracts which Pearson collected and analysed:
+    p Here is one of the many hundreds of newspaper extracts which Pearson collected and analysed. At first sight, it looks pretty random:
 
     .newspaper
       p Roulette results on 19 August 1823, Table 5:
@@ -185,7 +184,7 @@ section
         for x in [13, 12, 30, 33, 3, 12, 29, 5, 8, 22, 23, 13, 5, 18, 14, 31, 36, 15, 18, 28, 32, 29, 11, 34, 23, 36, 8, 16, 2, 3, 9, 20, 16, 14, 15, 26, 31, 21, 15, 3, 33, 22, 12, 14, 9, 6, 30, 13, 33, 5, 28, 17, 27, 6, 5, 34, 11, 18, 32, 6, 9, 31, 29, 2, 18, 35, 6, 1, 34, 28, 1, 10]
           span(class=colour(x))= x
 
-    p A roulette wheel has the same number of red and black numbers. If we ignore the green 0 (which means the casino wins) we would expect the number of red and black numbers to be #[+blank('approximately the same|exactly equal')]. We can check that this is indeed the case for the set of results above.
+    p A roulette wheel has the same number of red and black numbers. If we ignore the green 0 (which means the casino wins) we would expect the number of red and black numbers to be #[+blank('approximately the same|exactly equal')]. Let’s check that this is indeed the case for the set of results above.
 
     +barchart([['Red', 37, 'r'], ['Black', 35, 'b']])
 
@@ -194,7 +193,7 @@ section
 
     +barchart([['RR', 14, 'r'], ['RB', 24, 'rb'], ['BR', 24, 'rb'], ['BB', 9, 'b']])
 
-    p For some reasons, it seems that #[strong.red RR] and #[strong.black BB] happen much less frequent than #[strong.red R]#[strong.black B] and #[strong.red B]#[strong.black R], even though they should all have the same probability. Of course we might have just been #[em unlucky] in this particular sequence of results – but Pearson tested many thousands of results and always found the same.
+    p For some reasons, it seems that #[strong.red RR] and #[strong.black BB] happen much less frequent than #[strong.red R]#[strong.black B] and #[strong.red B]#[strong.black R], even though they should all have the same probability. Of course, we might have just been #[em unlucky] in this particular sequence of results – but Pearson tested many thousands of results and always found the same.
 
   section
 
@@ -202,7 +201,7 @@ section
 
     +barchart([['RRR', 3, 'r'], ['RRB', 10, 'rrb'], ['BRR', 10, 'rrb'], ['RBR', 15, 'rrb'], ['BRB', 14, 'bbr'], ['RBB', 8, 'bbr'], ['BBR', 8, 'bbr'], ['BBB', 2, 'b']])
 
-    p It seems that in this particular casino, the colours alternate much more often than one would expect. There are hardly any long sequences of the same colour.
+    p It seems that in this particular casino, the colours alternate much more often than one would expect. There are hardly any long sequences of the same colour (#[strong.red RRR] or #[strong.black BBB]).
 
     p Pearson calculated that the probability of seeing results which were this skewed was less than 1 in 100,000,000! He assumed that the Roulette wheels were rigged to create higher profits for the Casino – and wrote many angry letters to expose this scam.
 
@@ -214,7 +213,7 @@ section
         p When he finally travelled to Monte Carlo, he discovered that the reason for the skewed results was of a very different nature: the journalists who were supposed to be recording the results were instead just sitting in the bar of the casino, drinking, and making up random colours…
 
   section#randomSequence
-    p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour), and overestimate likely ones (alternating colours). This fact can be used effectively to detect fraud in banking and insurance.
+    p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour) and overestimate likely ones (alternating colours). This fact can be used effectively to detect fraud in banking and insurance.
 
     p Here you can try for yourself if you are better than the journalists: write down a sequence of Rs and Bs, and find out how random it really is:
 
@@ -226,9 +225,9 @@ section
 
     .row
       .grow
-        p While Pearson only analysed Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio Edward Thorp], who invented #[em card counting] – a techniques that allowed him to beat casinos at #[x-gloss#blackjack Blackjack].
+        p While Pearson only analysed Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio Edward Thorp], who invented #[em card counting] – a technique that allowed him to beat casinos at #[x-gloss#blackjack Blackjack].
 
-        p He later turned his focus to Roulette: believing that, if you knew the exact position and speed of the ball in a Roulette wheel, you should be able to use Physics to approximately predict the outcome. After the dealer sets the roulette wheel spinning, there are just a few seconds when you are still allowed to place new bets. Unfortunately this time is much to short for humans to do calculate the outcome in their head.
+        p He later turned his focus to Roulette: believing that, if you knew the exact position and speed of the ball in a Roulette wheel, you should be able to use Physics to approximately predict the outcome. After the dealer sets the roulette wheel spinning, there are just a few seconds when you are still allowed to place new bets. Unfortunately this time is much too short for humans to do calculate the outcome in their head.
 
       div(style="width: 150px")
         .book
@@ -248,7 +247,7 @@ section
 
     p During the summer of 1961, Thorp and Shannon successfully tried their computer in Las Vegas. But while they made some money, the computer – which even contained parts of model airplanes – was not robust enough to be used at a larger scale.
 
-    p(style="margin-bottom: 2em") Thorp wrote about their results in a scientific paper, and of course computers were later forbidden in casinos. Thorp even got banned from all casinos in Las Vegas, but by then he had already moved on to yet more profitable ventures: using mathematics and computers on the stock market and Wall Street.
+    p(style="margin-bottom: 2em") Thorp wrote about their results in a scientific paper, and of course, computers were later forbidden in casinos. Thorp even got banned from all casinos in Las Vegas, but by then he had already moved on to yet more profitable ventures: using mathematics and computers on the stock market and Wall Street.
 
     //- p Shannon cryptography and code-breaking during World War II, and would go on to become known as the father of information theory -- and, indeed, the information age. Shannon taught him to juggle three balls, and that he rode a unicycle on a steel cable strung between two tree stumps. "He later reached his goal," he wrote, "which was to juggle the balls while riding the unicycle on the tightrope."
 
@@ -257,14 +256,62 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
-  h2 Tossing Coins and Rolling Dice
+section(data-gloss="probTree")
+  h2 Probability Trees
 
   p In real life, coins never have exactly a probability of 0.5. It might be 0.4932 or 0.500012, depending on their exact shape or physical properties. In mathematics we don’t have to worry about these tiny inaccuracies: we can simply assume that our “mathematical model” of a coin has exactly a 0.5 probability of landing heads and is truly random. With this simplification, we can start answering much more interesting questions.
 
-  p.todo more on coins
+  p.todo More coming soon…
 
-  p If we roll two dice at once and add up their scores we could get results from #[+input(2)] up to #[+input(12)]. However, not all outcomes are equally likely: some results (like #[span.dice.outline 12]) can only happen one way (rolling #[span.dice #[+dice(6)]] and #[span.dice #[+dice(6)]]) while others (like #[span.dice.outline 5]) could happen in multiple different ways (rolling #[span.dice #[+dice(1)]] and #[span.dice #[+dice(4)]], or #[span.dice #[+dice(2)]] and #[span.dice #[+dice(3)]]).
+  // div
+    p.todo Now let’s try a more difficult game: there is a bag that contains five red and three blue marbles. When picking two marbles at random, what is the probability that both of them are red?
+
+    p.todo We already know how to calculate the probability that the first marble is red: it is 5/8 = 0.625.
+
+    p.todo However, once we have picked the first marble, the probabilities change: now there are only 7 marbles left, and only four of them are red. Therefore the probability that the second marble is red is 4/7 = 0.571.
+
+    p.todo To calculate the probability that #[em both] marbles are red, we simply have to multiply these probabilities: the final answer is 0.625 × 0.571 = 0.357.
+
+    p.todo There are four possible outcomes in total: red-red, red-blue, blue-red and blue-blue. We can represent all these possibilities in a single diagram:
+
+    p.todo slideshow
+
+    p.todo Now we can simply read off the probability of the different outcomes. The probability that both marbles are blue is xxx, and the probability that you get two marbles with different colours are xxx + xxx = xxx.
+
+    p.todo Probability trees can be used to solve many problems that consist of multiple steps that happen one after the other. Here are some exercises for you to try:
+
+  .box.problem-box
+    .box-title: h3 Probability Trees
+    .box-body: p.todo Exercises coming soon…
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section(data-gloss="venn")
+  h2 Venn Diagrams
+  p.todo More coming soon…
+
+  // p Opposite probabilities always add up to 1. This means that you can calculate the opposite of a probability by subtracting it from 1.
+
+  // p Venn Diagrams and set operations
+
+  // p Independent and Mutually Exclusive Events
+
+  // p There are 200 kids in a school. 140 students are taking Mathematics, and 100 students are taking Biology. 80 students are studying both Maths and Biology.
+
+  // p The corresponding Venn Diagram corresponds to two overlapping circles for Maths and Biology. We can write 80 in their intersection.
+
+  // p There are 140 - 80 = 60 students studying just Mathematics, so we write than in the remaining part of the Maths circle.  There are 100 - 80 = 20 students studying just Biology so we write that in the remaining part of the Biology circle.
+
+  // p How many students at the school study neither Mathematics nor Biology?
+
+//- ---------------------------------------------------------------------------
+//- ---------------------------------------------------------------------------
+
+section
+  h2 Predicting the Future
+
+  p If we roll two dice at once and add up their scores we could get results from #[+input(2)] up to #[+input(12)]. However, not all outcomes are equally likely: some results can only happen one way (for example, to get #[span.dice.outline 12]) you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (for example, to get #[span.dice.outline 5]) you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
 
   p This table shows all possible outcomes:
 
@@ -339,64 +386,12 @@ section
 
   p The least likely outcomes are #[span.dice.outline 2] and #[span.dice.outline 12], each with a probability of #[span.frac.inline #[span 1]#[span 36]] = 0.0277.
 
-//- ---------------------------------------------------------------------------
-//- ---------------------------------------------------------------------------
-
-section(data-gloss="probTree")
-  h2 Probability Trees
-
-  p Now let’s try a more difficult game: there is a bag that contains five red and three blue marbles. When picking two marbles at random, what is the probability that both of them are red?
-
-  p We already know how to calculate the probability that the first marble is red: it is 5/8 = 0.625.
-
-  p However, once we have picked the first marble, the probabilities change: now there are only 7 marbles left, and only four of them are red. Therefore the probability that the second marble is red is 4/7 = 0.571.
-
-  p To calculate the probability that #[em both] marbles are red, we simply have to multiply these probabilities: the final answer is 0.625 × 0.571 = 0.357.
-
-section
-  p There are four possible outcomes in total: red-red, red-blue, blue-red and blue-blue. We can represent all these possibilities in a single diagram:
-
-  p.todo slideshow
-
-  p Now we can simply read of the probability of the different outcomes. The probability that both marbles are blue is xxx, and the probability that you get two marbles with different colours are xxx + xxx = xxx.
-
-section
-  p Probability trees can be used to solve many problems that consist of multiple steps that happen one after the other. Here are some exercises for you to try:
-
-  .box.problem-box
-    .box-title: h3 Probability Trees
-    .box-body: p.todo Under development
-
-//- ---------------------------------------------------------------------------
-//- ---------------------------------------------------------------------------
-
-section(data-gloss="venn")
-  h2 Venn Diagrams
-  p.todo More coming soon…
-
-  // p Opposite probabilities always add up to 1. This means that you can calculate the opposite of a probability by subtracting it from 1.
-
-  // p Venn Diagrams and set operations
-
-  // p Independent and Mutually Exclusive Events
-
-  // p There are 200 kids in a school. 140 students are taking Mathematics, and 100 students are taking Biology. 80 students are studying both Maths and Biology.
-
-  // p The corresponding Venn Diagram corresponds to two overlapping circles for Maths and Biology. We can write 80 in their intersection.
-
-  // p There are 140 - 80 = 60 students studying just Mathematics, so we write than in the remaining part of the Maths circle.  There are 100 - 80 = 20 students studying just Biology so we write that in the remaining part of the Biology circle.
-
-  // p How many students at the school study neither Mathematics nor Biology?
-
-//- ---------------------------------------------------------------------------
-//- ---------------------------------------------------------------------------
 
 section#diceSimulation
-  h2 Predicting the Future
 
-  p We saw above that it is impossible to forecast the outcome of a single coin toss or die roll. However, using probability, we can very accurately predict the outcome of #[em many] dice.
+  p It is impossible to forecast the outcome of a single coin toss or die roll. However, using probability, we can very accurately predict the outcome of #[em many] dice.
 
-  p If we throw a die 30 times, we know that we would get around #[span.frac.inline #[span 1]#[span 6]] × 30 = 5 sixes. If we roll it 300 times, there will be around #[span.frac.inline #[span 1]#[span 6]] × 300 = 50 sixes. These predictions get more and more accurate as we repeat rge predictions more and more often.
+  p If we throw a die 30 times, we know that we would get around #[+frac(1, 6, true)] × 30 = 5 sixes. If we roll it 300 times, there will be around #[+frac(1, 6, true)] × 300 = 50 sixes. These predictions get more and more accurate as we repeat the predictions more and more often.
 
   p In this animation you can roll many “virtual” dice at once and see how the results compare to the predicted probabilities:
 
@@ -405,7 +400,7 @@ section#diceSimulation
     .box-body
       .probTable.var ${ probTable(d) }
 
-      p We roll #[+var('d|2|1,6,1') d] dice at once and record the #[span.dice SUM] of their scores. The #[strong.m-green green lines] represent the probabilities of every possible outcome predicted by probability theory and the #[strong.m-blue blue bars] show how often each outcome happened in this computer generated experiment.
+      p We roll #[+var('d|2|1,6,1') d] dice at once and record the #[span.dice(style="width: auto; padding: 0 4px;") SUM] of their scores. The #[strong.m-green green lines] represent the probabilities of every possible outcome predicted by probability theory and the #[strong.m-blue blue bars] show how often each outcome happened in this computer generated experiment.
       p.btn-row
         button.btn.btn-bounce Roll once
         button.btn.btn-bounce Roll 100 times
@@ -413,8 +408,7 @@ section#diceSimulation
 
   p Notice how, as we roll more and more dice, the observed frequencies become closer and closer to the frequencies we predicted using probability theory. This principle applies to all probability experiments and is called the #[strong Law of large numbers].
 
-  p Similarly, as we increase the number of dice rolled at once, you can also see that the probabilities change from a straight line (1 die) to a triangle (2 die) and then to a bell-shaped curve. This
-    distribution changes from a triangular shape to a bell-shaped curve. This is known as the Central Limit Theorem.
+  p Similarly, as we increase the number of dice rolled at once, you can also see that the probabilities change from a straight line (1 die) to a triangle (2 die) and then to a bell-shaped curve. This is known as the #[strong Central Limit Theorem], and the bell-shaped curve is called the #[strong normal distribution].
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -427,7 +421,7 @@ section#diceSimulation
 
     p Welcome to the most spectacular game show on the planet! You now have a once-in-a-lifetime chance of winning a fantastic Ferrari which is hidden behind one of these three doors. Unfortunately, there are only goats behind the other two doors. Simply tap on one to make your choice!
 
-    .monty-hall
+    .monty-hall.selectable
       .door-box: .door
       .door-box: .door
       .door-box: .door
@@ -435,10 +429,10 @@ section#diceSimulation
 
     .subsection(data-needs="door-select")
       p Are you sure about that? You can still change your mind by tapping a different door…
-      p.btn-row.text-center: button.btn.btn-bounce.sure I’m sure!
+      p.text-center: button.btn.btn-bounce.sure I’m sure!
 
     .subsection(data-needs="door-sure")
-      p A great choice, but let me make life a little easier for you. I'll open one of the doors with a goat, so that there are only two doors left for you to pick from. Do you want to stick with your choice, or do you want to swap?
+      p A great choice, but let me make life a little easier for you. I'll open one of the other doors with a goat, so that there are only two doors left for you to pick from. Do you want to stick with your choice, or do you want to swap?
       p.text-center
         button.btn.btn-bounce.swap I want to stay!
         button.btn.btn-bounce.swap I want to swap!
@@ -448,32 +442,28 @@ section#diceSimulation
       p.text-center: button.btn.btn-bounce.reveal Open the doors…
 
     .subsection(data-needs="door-revealed")
-      p Here is some text
+      p.monty-choice-right Looks like swapping doors was a good choice. Congratulations, you just won a beautiful new sports car!
+      p.monty-choice-wrong Sorry – it seems like time time you only won a goat. But don't worry, you can play again!
       p.text-center: button.btn.btn-bounce.reset Replay game
 
+  section
+    p If you play this game many times, you’ll notice that you’re more likely to win if you #[+blank('swap|don’t swap')] after the first door is opened#[span.required(data-needs="blank-0") , rather than sticking with your initial choice.]
+
+    .subsection(data-needs="blank-0")
+      p But how can this be – surely the car is equally likely to be behind each of the two remaining doors?
 
   section
-    p If you play this game many times, you'll notice that you're much more likely to win if you swap after the first door is opened, rather than sticking with your initial choice.
-
-    p But how can this be – surely the car is equally likely to be behind each of the remaining two doors?
+    p The explanation is very subtle. When you pick the initial door, the probability of being correct is #[+frac(1,3, true)] and the probability of being wrong is #[+frac(2,3, true)].
+    p.text-center: include svg/monty-1.svg
 
   section
-    p Let's start like before, by drawing a probability tree. The #[em order] of the doors is not important, se we can assume that you always start by picking the first door.
+    p After the game master opens one of the other doors, the probability of being wrong is #[em still] #[+frac(2,3, true)], except now all this probability is on just one door. This means that swapping doors #[+blank('doubles|triples|halves')] your chance of winning.
+    p.text-center: include svg/monty-2.svg
 
-    x-slideshow.dark
-      .stage(style="height: 300px")
-      .legend There are three possible doors behind which the car could be. The probability of each possibility is #[span.frac.inline #[span 1]#[span 3]].
-      .legend Now the gameshow host opens one of the doors with a goat. In the first two cases he only has one possibility…
-      .legend …but in the last cases he has two doors he could open. Let's assume he always opens the first one, because – like before – the order of the doors doesn't really matter.
-      .legend Now let's see in which of the possible outcomes you should swap, and in which we should stick with our choice.
-      .legend If we hadd up the probability, we see that we should swap in #[span.frac.inline #[span 2]#[span 3]] of the cases, but we should stick in only #[span.frac.inline #[span 1]#[span 3]] of the cases. Swapping seems to be more likely to lead to success.
-
-   section
-    p We know how to calculate this probability, but it still doesn't #[em really] make sense – how come the doors are not all equally likely?
-    p To see this more clearly, let's draw a different probability tree:
-
-    p.todo pick correct door vs pick incorrect door
-
+  section
+    p Even if this doesn't seem very intuitive, we can prove that it is correct – simply by listing all different possibilities:
+    .img-block: img(src="/resources/probability/images/monty.png", width="694", height="468")
+    p Out of the 9 possibilities #[+input(6)] need you to switch doors, to win. This gives a chance of #[+frac(6,9, true)] = #[+frac(2,3, true)] like before.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -483,9 +473,9 @@ section
 
   .row
     .grow
-      p Most of this chapter relied on the fact that things like coins, or dice, or roulette wheels are completely random. However that is not really true – we already learned that Edward Thorpe managed to predict the outcome of roulette.
+      p Most of this chapter relied on the fact that things like coins, or dice, or roulette wheels are completely random. However, that is not really true – we already learned that Edward Thorpe managed to predict the outcome of roulette.
 
-      p Suppose we toss a coin: the chance of it landing heads is 0.5. If we knew which way the coin was facing just before it left the hand, we might be able to make a slightly better predictions, such as 0.58 or 0.41. If we also knew the weight and size of the coin, and the angle, position and speed as it left the hand, we could use the laws of physics – gravity, friction and air resistance – to model the motion of the coin and to predict the outcome. Finally, if we knew the exact position of every atom in the coin and of all the air molecules surrounding it, we could create a computer simulation to accurately predict what will happen.
+      p Suppose we toss a coin: the chance of it landing heads is 0.5. If we knew which way the coin was facing just before it left the hand, we might be able to make a slightly better prediction, such as 0.58 or 0.41. If we also knew the weight and size of the coin, and the angle, position and speed as it left the hand, we could use the laws of physics – gravity, friction and air resistance – to model the motion of the coin and to predict the outcome. Finally, if we knew the exact position of every atom in the coin and of all the air molecules surrounding it, we could create a computer simulation to accurately predict what will happen.
 
     div(style="width: 240px")
       x-media(src="/resources/probability/images/coins.jpg", width=240, height=343, credit="© Depositphotos / Whiterabbit83")
@@ -498,7 +488,7 @@ section
 section#radioactive(data-gloss="radioactivity")
   .row
     .grow
-      p But #[em true randomness] does exists – at the very foundations of matter. A block of radioactive material consists of millions of atoms which decay over time: they fall apart into smaller atoms, while emitting dangerous radiation.
+      p But #[em true randomness] does exists – at the very foundations of matter. A block of radioactive material consists of millions of atoms which decay over time: they fall apart into smaller atoms while emitting dangerous radiation.
       p Physicists know the probability that a particular atom will decay in a certain period of time. In fact, for a large block of radioactive material, the overall rate of decay is so steady that it is used in atomic clocks. But even knowing the exact properties of every atom, it is impossible to work out #[em which one] will decay next – this is completely random.
 
     div(style="width: 300px")
@@ -508,7 +498,7 @@ section#radioactive(data-gloss="radioactivity")
   //- TODO Possible probability distributions of the position of an electron in a hydrogen atom. Lighter areas represent more likely locations of the electron.
 
 section(data-gloss="quantum")
-  p #[x-gloss#radioactive Radioactive decay] of atoms is caused by forces which act at much smaller scales within atoms, and which can be explained using #[x-gloss#quantum Quantum mechanics]. During the last century, physicists like #[x-bio#planck Max Planck] and #[x-bio#dirac Paul Dirac] discovered that fundamental particles have a mindlowing property: they can be in multiple different places #[em at the same time]. They don't have a fixed position, but instead a probability distribution (or wave function) which tells us how likely it is we are going to find them at a particular position.
+  p #[x-gloss#radioactive Radioactive decay] of atoms is caused by forces which act at much smaller scales within atoms, and which can be explained using #[x-gloss#quantum Quantum mechanics]. During the last century, physicists like #[x-bio#planck Max Planck] and #[x-bio#dirac Paul Dirac] discovered that fundamental particles have a mindblowing property: they can be in multiple different places #[em at the same time]. They don't have a fixed position, but instead a probability distribution (or wave function) which tells us how likely it is we are going to find them at a particular position.
 
   p This incredible property is used by Quantum computers. Conventional computers can only ever do one computation at a time. Quantum computers can use the properties of subatomic particles to do many calculations at the same time – and that makes them significantly faster.
 
@@ -517,8 +507,6 @@ section(data-gloss="quantum")
     p.caption The crazy world of subatomic particles
 
 section
-  p We can’t really #[em understand] or #[em explain] quantum mechanics – we just have to accept that it is what is predicted by mathematical theory and confirmed by physical observations. The curious quantum effects have only ever been observed on tiny scales of a few atoms, and it is not clear how they affects us in everyday life. But it is the only known effect in nature that produces true randomness.
+  p We can’t really #[em understand] or #[em explain] quantum mechanics – we just have to accept that it is what is predicted by mathematical theory and confirmed by physical observations. The curious quantum effects have only ever been observed on tiny scales of a few atoms, and it is not clear how they affect us in everyday life. But it is the only known effect in nature that produces true randomness.
 
-  //- todo
-    p Lottery tickets required
-    p Lotto: Tickets needed to guarantee 2/3 matches
+  //- TODO Lotto: Tickets needed to guarantee 2/3 matches

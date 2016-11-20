@@ -142,7 +142,9 @@ function animate(callback, precision = 0.0001) {
     return { cancel: function() { running = false; } };
 }
 
-fns.roulette = function(section) {
+fns.roulette = function(section, chapter) {
+    chapter.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
+
     let $wheels = section.$el.findAll('.wheel');
     let $ball = section.$el.find('.ball');
     let $target = section.$el.find('circle');
@@ -320,77 +322,98 @@ fns.diceSimulation = function(section) {
 
 class OneTimeButton {
 
-    constructor($els, fns) {
+    constructor($els, callback) {
         if (!Array.isArray($els)) $els = [$els];
         this.$els = $els;
-        this.clicked = false;
 
         $els.forEach(($el, i) => {
-            let callback = Array.isArray(fns) ? fns[i] : fns;
             $el.on('click', () => {
-                if (this.clicked) return;
-                this.clicked = true;
-                callback();
+                callback(i);
                 for (let $el of $els) $el.attr('disabled', true);
             });
         });
     }
 
     reset() {
-        this.clicked = true;
-        for (let $el of this.$els) $el.removeAttr('disabled');
+        for (let $el of this.$els) $el.attr('disabled', null);
     }
 }
 
 fns.montyhall = function(section) {
     let selected = null;
+    let decided = false;
     let opened = null;
     let car = null;
+    let attempt = 0;
 
-    let $doors = section.$el.findAll('.door');
+    let $monty = section.$el.find('.monty-hall');
+    let $doors = $monty.findAll('.door-box');
+
     $doors.forEach(function($d, i) {
-        $d.on('click', function() {
-            if (i == selected || sureBtn.clicked) return;
-            if (selected != null) $doors[selected].removeClass('selected');
+        $d.find('.door').on('click', function() {
+            if (i === selected || decided) return;
+            if (selected !== null) $doors[selected].removeClass('selected');
 
-            $d.addClass('selected');
             selected = i;
+            $d.addClass('selected');
             section.score('door-select');
+            section.subsections[0].$el.addClass('on');
         });
     });
 
     let $sure = section.$el.find('.sure');
     let sureBtn = new OneTimeButton($sure, function() {
         [car, opened] = shuffle([0, 1, 2].filter(i => i != selected));
+        $doors[car].addClass('car');
+        decided = true;
+        $monty.removeClass('selectable');
         setTimeout(function() {
             $doors[opened].addClass('open');
             section.score('door-sure');
+            section.subsections[1].$el.addClass('on');
         }, 1000);
     });
 
     let $swap = section.$el.findAll('.swap');
-    let swapBtn = new OneTimeButton($swap, [function() {
-        $doors[car].addClass('car');
-        section.score('door-swap');
-    }, function() {
-        $doors[selected].removeClass('selected');
-        [car, selected] = [selected, car];
-        $doors[selected].addClass('selected');
-        $doors[car].addClass('car');
-        section.score('door-swap');
-    }]);
+    let swapBtn = new OneTimeButton($swap, function(i) {
+        if (i == 1) {
+            $doors[selected].removeClass('selected');
+            selected = car;
+            $doors[selected].addClass('selected');
+            section.$el.find('.monty-choice-right').show();
+            section.$el.find('.monty-choice-wrong').hide();
+        }
+        setTimeout(function() {
+            section.score('door-swap');
+            section.subsections[2].$el.addClass('on');
+        }, 1000);
+    });
 
     let $reveal = section.$el.find('.reveal');
     let revealBtn = new OneTimeButton($reveal, function() {
-        $doors[selected].addClass('open');
-        $doors[car].addClass('open');
-        section.score('door-revealed');
+        $doors.forEach($d => { $d.addClass('open'); });
+        setTimeout(function() {
+            section.score('door-revealed');
+            section.subsections[3].$el.addClass('on');
+        }, 1000);
     });
 
     section.$el.find('.reset').on('click', function() {
-        for (let btn of [sureBtn, swapBtn, revealBtn]) btn.reset();
-        selected = opened = car = null;
+        for (let b of [sureBtn, swapBtn, revealBtn]) b.reset();
+        for (let s of section.subsections) s.$el.removeClass('on');
         for (let $d of $doors) $d.removeClass('car selected open');
+        section.$el.find('.monty-choice-right').hide();
+        section.$el.find('.monty-choice-wrong').show();
+        selected = opened = car = null;
+        decided = false;
+        $monty.addClass('selectable');
+        attempt += 1;
+    });
+
+    setTimeout(function() {
+        if (section.completed) {
+            for (let s of section.subsections) s.$el.removeClass('on');
+        }
     });
 };
 
