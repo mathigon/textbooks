@@ -106,7 +106,7 @@ export const gloss = {
         title: "Quantum Mechanics",
         text: "<p>A branch of Physics that explains the stage behaviour of fundamental particles.</p>"
     },
-    radioactivity: {
+    radioactive: {
         title: "Radioactive Decay",
         text: "<p>A physical process by which unstable atoms break apart and release energy.</p>"
     }
@@ -143,7 +143,9 @@ function animate(callback, precision = 0.0001) {
 }
 
 fns.roulette = function(section, chapter) {
-    if (section.active) chapter.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
+    section.one('enter', function() {
+        chapter.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
+    });
 
     let $wheels = section.$el.findAll('.wheel');
     let $ball = section.$el.find('.ball');
@@ -235,7 +237,7 @@ fns.randomSequence = function(section) {
         let poss = generatePossibilities(max);
         let result = 1;
 
-        for (var i = 2; i <= max; ++i) {
+        for (let i = 2; i <= max; ++i) {
             let values = poss[i - 1];
             let count = values.length;
 

@@ -48,16 +48,16 @@ section(data-gloss="probability")
 
   h2 Introduction
 
-  p Probabilities and likelihoods are everywhere around us, from weather forecasting to games, insurance or statistics in newspapers. However, in the history of mathematics, probability it is actually a very recent idea. While geometry and algebra were studied by Ancient Greek mathematicians more than 2500 years ago, the concepts of probability only emerged in the 17th and 18th century.
+  p Probabilities and likelihoods are everywhere around us, from weather forecasting to games, insurance or election polls. However, in the history of mathematics, probability it is actually a very recent idea. While geometry and algebra were studied by ancient Greek mathematicians more than 2500 years ago, the concepts of probability only emerged in the 17th and 18th century.
 
   .row
     .grow
-      p According to legend, two of the most famous mathematicians, #[x-bio#pascal Blaise Pascal] and #[x-bio#fermat Pierre de Fermat], would regularly meet up in a small cafe in Paris.
+      p According to legend, two of the greatest mathematicians, #[x-bio#pascal Blaise Pascal] and #[x-bio#fermat Pierre de Fermat], would regularly meet up in a small cafe in Paris.
       p To distract from the difficult mathematical theories they were discussing, they  often played a simple game: they repeatedly tossed a coin – every #[em heads] was a point for Pascal and every #[em tails] was a point for Fermat. Whoever had more points after three coin tosses had to pay the bill.
     div(style="width: 360px"): img(src="/resources/probability/images/paris.jpg", width="360", height="254")
 
 section
-  p One day, however, they get interrupted after the first coin toss and Fermat has to leave urgently. Later, they wonder who should pay the bill, or if there is a fair way to split it. The first coin landed #[em heads] (a point for Pascal), so maybe Fermat should pay everything. However, there also is a small change that Fermat could have won if the #[+blank('two next tosses|next coin toss')] would have been #[em tails].
+  p One day, however, they get interrupted after the first coin toss and Fermat has to leave urgently. Later, they wonder who should pay the bill, or if there is a fair way to split it. The first coin landed #[em heads] (a point for Pascal), so maybe Fermat should pay everything. However, there is a small change that Fermat could have still won if the #[+blank('two next tosses|next coin toss')] would have been #[em tails].
 
 section
   p Pascal and Fermat decided to write down all possible ways the game could have continued:
@@ -76,7 +76,7 @@ section
       img(src="/resources/probability/images/coins-4.png" width=136 height=48 alt="HTT")
       p.caption Fermat wins
 
-  p All of these outcomes are equally likely, so Pascal is #[+blank('three|four|two')] times as likely to win as Fermat. #[span.subsection Thus they decided that Fermat should pay 3/4 of the bill and Pascal should pay 1/4].
+  p All four possible outcomes are equally likely, and Pascal wins in #[+blank('three|four|two')] of them. #[span.subsection(data-needs="blank-0") Thus they decided that Fermat should pay 3/4 of the bill and Pascal should pay 1/4].
 
 
 section
@@ -117,23 +117,26 @@ section
     .item(data-index="1") It's going to rain #[+emoji('26c8')] in November.
     .item(data-index="0") A baby will be born in China today.
     .item(data-index="4") You buy a lottery ticket and win the Jackpot #[+emoji('1f389')].
-    .item(data-index="2") You select a card out of a deck and it is red (either #[+emoji('2665')] or #[+emoji('2666')]).
+    .item(data-index="2") A newborn baby will be a girl #[+emoji('1f476')].
 
-  p We often use probabilities and likelihoods in everyday life, usually without thinking about it. What is the chance of rain tomorrow? How likely is it that I will make it to school on time?
+  p We often use probabilities and likelihoods in everyday life, usually without thinking about it. What is the chance of rain tomorrow? How likely is it that I will miss the bus? What is the probability I will win this game?
 
 
 section
   p Tossing a (fair) coin has two possible outcomes, #[em heads] and #[em tails], which are both equally likely. According to the equation above, the probability of a coin landing #[em heads] must be #[span.frac.inline #[span 1]#[span 2]] = 0.5, or 50%.
+  //- TODO However, the equation is not very helpful if the different outcomes are not all equally likely, or if there are infinitely many possible outcomes.
 
-  p.todo However, the equation is not very helpful if the different outcomes are not all equally likely, or if there are infinitely many possible outcomes. This is the case, for example, TODO
-  //- However, if we actually throw a coin, it can only land #[em heads] #[strong or] #[em tails] – so it is not XX to think that the probability should be either 0 or 1, rather than a number in between.
+  p Note that this probability is #[em in between] 0 and 1, even though only one of the outcomes can actually happen. But probabilities have very little to fo with actual results: if we toss a coin many times we know that #[+blank('approximately half|exactly half|all|none')] of the results are heads – but we have no way of predicting #[em exactly which] tosses landed heads.
 
-  //- p.todo And after tossing a coin many times we know that approximately half of the results are heads – though we can’t predict which individual tosses landed heads.
+  p Even events with tiny probabilities (like winning the lottery #[+emoji('1f389')]) #[em can still happen] – and they #[em do happen] all the time (but to a very small proportion of the people who participate).
 
-  p.todo Or suppose that I toss a coin, but don't tell you the result. I know the outcome for certain, but for you, the probabilities are still 0.5. In this case, the probability depends on the #[em knowledge] of the observer.
-  //- Notice that subjectivist probabilities may be different for different people – often depending on how much they know. For example, I might estimate that the chance of rain is about 70%, while a meterologist with detailed weather data might say the chance of rain is 64.2%.
+section
+  p Probabilities also depend on how much each of us knows about the event. For example, you might estimate that the chance of rain today is about 70%, while a meteorologist with detailed weather data might say the chance of rain is 64.2%.
 
-  p It turns out that there are many different ways to think about probabilities, though in practice they often give the same results:
+  p Or suppose that I toss a coin and cover it up with my hands – the probability of tails is 50%. Now I peek at the result, but don't tell you. I know for certain what has happened, but for you the probability is #[+blank('still 50%|100%|not 50%')].
+
+section
+  p There are many different ways to think about probabilities, but in practice they often give the same results:
 
   .row
     .grow(style="width: 200px")
@@ -146,7 +149,11 @@ section
       img(src="/resources/probability/images/subjectivist.png" width=240 height=75 alt="subjectivist probability")
       p.text-center The #[strong subjectivist] probability tells us how strongly we #[em believe] that the coin will land heads.
 
-  p(style="margin-bottom: 2em") While probabilities are great for estimating and predicting, we can never actually #[em forecast] what will happen. Every possible outcome #[em could] happen, even if it only has a very tiny probability.
+  //- Notice that subjectivist probabilities may be different for different people – often depending on how much they know.
+
+  p(style="margin-bottom: 2em") Remember that while probabilities are great for #[em estimating and forecasting], we can never tell what #[em actually] will happen.
+
+  p Now let’s have a look at some fun applications of probability.
 
 
 //- ---------------------------------------------------------------------------
@@ -166,11 +173,11 @@ section
       .ball
       svg(width=380, height=380): circle(cx=190, cy=190, r=190)
 
-    p Soon after their initial discovery, mathematicians started applying the laws of probability to other parts of life – including casino games.
+    p Soon after their initial discovery, mathematicians started applying the laws of probability to many different parts of life – including casino games.
 
     p One of these mathematicians was #[x-bio#pearson Karl Pearson] who analysed the results of roulette games published in the French newspaper #[em Le Monaco].
 
-    p Roulette consists of a wheel with the numbers from 1 to 36 coloured in #[strong.red red] or #[strong.black black], as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour. Their potential winning depends on the likelihood of each of these outcomes.
+    p Roulette consists of a wheel with the numbers from 1 to 36 coloured in #[strong.red red] and #[strong.black black], as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour. Their potential winning depends on the likelihood of each of these outcomes.
 
   section
     p Here is one of the many hundreds of newspaper extracts which Pearson collected and analysed. At first sight, it looks pretty random:
@@ -186,14 +193,16 @@ section
     +barchart([['Red', 37, 'r'], ['Black', 35, 'b']])
 
   section
-    p However, Pearson realised that if the results were completely random, then each of the four possible pairs of two consecutive colours should also be equally likely. Again we can count the number of occurrences in our example:
+    p This looks pretty evenly distributed – there is a small difference between the number of red and black results, but that is always to be expected in probability.
+
+    p However, Pearson didn’t stop here. He realised that if the results were completely random, then each of the four possible pairs of two consecutive colours should also be equally likely. Again we can count the number of occurrences in our example:
 
     +barchart([['RR', 14, 'r'], ['RB', 24, 'rb'], ['BR', 24, 'rb'], ['BB', 9, 'b']])
 
-    p For some reasons, it seems that #[strong.red RR] and #[strong.black BB] happen much less frequent than #[strong.red R]#[strong.black B] and #[strong.red B]#[strong.black R], even though they should all have the same probability. Of course, we might have just been #[em unlucky] in this particular sequence of results – but Pearson tested many thousands of results and always found the same.
+  section
+    p For some reasons, it seems that #[strong.red RR] and #[strong.black BB] happen much #[+blank('less frequently|more frequently')] than #[strong.red R]#[strong.black B] and #[strong.red B]#[strong.black R], even though they should all have the same probability. Of course, we might have just been #[em unlucky] in this particular sequence of results – but Pearson tested many thousands of results and always found the same.
 
   section
-
     p It gets even worse if we look at triples of results. Each of the 8 possible triples of colours should be equally likely, but that is clearly not the case here:
 
     +barchart([['RRR', 3, 'r'], ['RRB', 10, 'rrb'], ['BRR', 10, 'rrb'], ['RBR', 15, 'rrb'], ['BRB', 14, 'bbr'], ['RBB', 8, 'bbr'], ['BBR', 8, 'bbr'], ['BBB', 2, 'b']])
@@ -210,19 +219,19 @@ section
         p When he finally travelled to Monte Carlo, he discovered that the reason for the skewed results was of a very different nature: the journalists who were supposed to be recording the results were instead just sitting in the bar of the casino, drinking, and making up random colours…
 
   section#randomSequence
-    p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour) and overestimate likely ones (alternating colours). This fact can be used effectively to detect fraud in banking and insurance.
+    p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour) and overestimate likely ones (alternating colours). This can be used effectively to detect fraud in banking and insurance.
 
     p Here you can try for yourself if you are better than the journalists: write down a sequence of Rs and Bs, and find out how random it really is:
 
     label.newspaper: input(type="text", placeholder="RBBRRBBBRRRBRBRRB")
-    p.text-center(style="margin-top: -1em; font-family: monospace") Randomness Score: #[span.score 100]
+    p.text-center(style="margin-top: -1em; font-family: monospace") Randomness Score: #[span.score 100]/100
 
   section(data-gloss="blackjack")
     h2 Beat the Dealer
 
     .row
       .grow
-        p While Pearson only analysed Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio Edward Thorp], who invented #[em card counting] – a technique that allowed him to beat casinos at #[x-gloss#blackjack Blackjack].
+        p While Pearson only analysed previous Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio Edward Thorp], who invented #[em card counting] – a technique that allowed him to beat casinos at #[x-gloss#blackjack Blackjack].
 
         p He later turned his focus to Roulette: believing that, if you knew the exact position and speed of the ball in a Roulette wheel, you should be able to use Physics to approximately predict the outcome. After the dealer sets the roulette wheel spinning, there are just a few seconds when you are still allowed to place new bets. Unfortunately this time is much too short for humans to do calculate the outcome in their head.
 
@@ -244,11 +253,11 @@ section
 
     p During the summer of 1961, Thorp and Shannon successfully tried their computer in Las Vegas. But while they made some money, the computer – which even contained parts of model airplanes – was not robust enough to be used at a larger scale.
 
-    p(style="margin-bottom: 2em") Thorp wrote about their results in a scientific paper, and of course, computers were later forbidden in casinos. Thorp even got banned from all casinos in Las Vegas, but by then he had already moved on to yet more profitable ventures: using mathematics and computers on the stock market and Wall Street.
+    p Thorp wrote about their results in a scientific paper, and of course, computers were later forbidden in casinos. Thorp even got banned from all casinos in Las Vegas, but by then he had already moved on to yet more profitable ventures: using mathematics and computers on the stock market.
 
     //- p Shannon cryptography and code-breaking during World War II, and would go on to become known as the father of information theory -- and, indeed, the information age. Shannon taught him to juggle three balls, and that he rode a unicycle on a steel cable strung between two tree stumps. "He later reached his goal," he wrote, "which was to juggle the balls while riding the unicycle on the tightrope."
 
-    p After this short trip through history, now let’s get back to some actual mathematics…
+    p After this short trip through history, let’s get back to some actual mathematics…
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -260,7 +269,7 @@ section(data-gloss="probTree")
 
   p.todo More coming soon…
 
-  // div
+  //- div
     p.todo Now let’s try a more difficult game: there is a bag that contains five red and three blue marbles. When picking two marbles at random, what is the probability that both of them are red?
 
     p.todo We already know how to calculate the probability that the first marble is red: it is 5/8 = 0.625.
@@ -279,7 +288,7 @@ section(data-gloss="probTree")
 
   .box.problem-box
     .box-title: h3 Probability Trees
-    .box-body: p.todo Exercises coming soon…
+    .box-body: p.todo More coming soon…
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -308,7 +317,7 @@ section(data-gloss="venn")
 section
   h2 Predicting the Future
 
-  p If we roll two dice at once and add up their scores we could get results from #[+input(2)] up to #[+input(12)]. However, not all outcomes are equally likely: some results can only happen one way (for example, to get #[span.dice.outline 12]) you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (for example, to get #[span.dice.outline 5]) you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
+  p If we roll two dice at once and add up their scores we could get results from #[+input(2)] up to #[+input(12)]. However, not all outcomes are equally likely: some results can only happen one way (for example, to get #[span.dice.outline 12] you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (for example, to get #[span.dice.outline 5]) you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
 
   p This table shows all possible outcomes:
 
@@ -379,14 +388,14 @@ section
       td(colspan=5)
 
 
-  p The most likely result when rolling two dice is #[span.dice.outline 7]. There are #[+input(6)] outcomes where the sum is 7, and #[+input(36)] outcomes in total, so the probability of getting a 7 is #[span.frac.inline #[span 6]#[span 36]] = 0.1666.
+  p The most likely result when rolling two dice is #[span.dice.outline 7]. There are #[+input(6)] outcomes where the sum is 7, and #[+input(36)] outcomes in total, #[.subsection(data-needs="blank-0 blank-1") so the probability of getting a 7 is #[span.frac.inline #[span 6]#[span 36]] = 0.1666.]
 
   p The least likely outcomes are #[span.dice.outline 2] and #[span.dice.outline 12], each with a probability of #[span.frac.inline #[span 1]#[span 36]] = 0.0277.
 
 
 section#diceSimulation
 
-  p It is impossible to forecast the outcome of a single coin toss or die roll. However, using probability, we can very accurately predict the outcome of #[em many] dice.
+  p It is impossible to forecast the outcome of a single coin toss or die roll. However, using probability we can very accurately predict the outcome of #[em many] dice.
 
   p If we throw a die 30 times, we know that we would get around #[+frac(1, 6, true)] × 30 = 5 sixes. If we roll it 300 times, there will be around #[+frac(1, 6, true)] × 300 = 50 sixes. These predictions get more and more accurate as we repeat the predictions more and more often.
 
@@ -405,7 +414,7 @@ section#diceSimulation
 
   p Notice how, as we roll more and more dice, the observed frequencies become closer and closer to the frequencies we predicted using probability theory. This principle applies to all probability experiments and is called the #[strong Law of large numbers].
 
-  p Similarly, as we increase the number of dice rolled at once, you can also see that the probabilities change from a straight line (1 die) to a triangle (2 die) and then to a bell-shaped curve. This is known as the #[strong Central Limit Theorem], and the bell-shaped curve is called the #[strong normal distribution].
+  //- TODO p Similarly, as we increase the number of dice rolled at once, you can also see that the probabilities change from a straight line (1 die) to a triangle (2 dice) and then to a bell-shaped curve. This is known as the #[strong Central Limit Theorem], and the bell-shaped curve is called the #[strong normal distribution].
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -416,7 +425,7 @@ section#diceSimulation
   section#montyhall
     h2 Monty Hall
 
-    p Welcome to the most spectacular game show on the planet! You now have a once-in-a-lifetime chance of winning a fantastic Ferrari which is hidden behind one of these three doors. Unfortunately, there are only goats behind the other two doors. Simply tap on one to make your choice!
+    p Welcome to the most spectacular game show on the planet! You now have a once-in-a-lifetime chance of winning a fantastic sports car which is hidden behind one of these three doors. Unfortunately, there are only goats behind the other two doors. Simply tap on one to make your choice!
 
     .monty-hall.selectable
       .door-box: .door
@@ -478,7 +487,7 @@ section
       x-media(src="/resources/probability/images/coins.jpg", width=240, height=343, credit="© Depositphotos / Whiterabbit83")
 
 section
-  p One could argue that tossing a coin really isn’t random at all – it is #[em chaotic]. That means that the underlying physical principles are so complex that even tiny changes to the starting conditions (speed, angle) can have a dramatic effect on the final outcome. We can use coins in games and gambling not because they are random, but because it is so incredibly difficult (and for practical purposes, impossible) to predict the result.
+  p One could argue that tossing a coin really isn’t random at all – it is #[em chaotic]. That means that the underlying physical principles are so complex that even tiny changes to the starting conditions (speed, angle) can have a dramatic effect on the final outcome. We can use coins in games and gambling not because they are random, but because it is so incredibly difficult (and for practical purposes impossible) to predict the result.
 
   p The same principle applies to many other “random” events in life, including dice and roulette wheels. They are not really #[em random], we simply don’t have the tools to do the mathematical calculations accurately enough to predict the outcome.
 
@@ -504,6 +513,6 @@ section(data-gloss="quantum")
     p.caption The crazy world of subatomic particles
 
 section
-  p We can’t really #[em understand] or #[em explain] quantum mechanics – we just have to accept that it is what is predicted by mathematical theory and confirmed by physical observations. The curious quantum effects have only ever been observed on tiny scales of a few atoms, and it is not clear how they affect us in everyday life. But it is the only known effect in nature that produces true randomness.
+  p We can’t really #[em understand] or #[em explain] quantum mechanics – we just have to accept that it is what is predicted by mathematical theory and confirmed by physical observations. The curious quantum effects have only ever been observed on tiny scales of a few atoms, and it is not clear how they affect us in everyday life. But it is the only known effect in nature that produces #[em true randomness].
 
   //- TODO Lotto: Tickets needed to guarantee 2/3 matches
