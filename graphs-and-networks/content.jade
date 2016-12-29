@@ -13,7 +13,7 @@ section#GT_0_0(data-gloss="graph vertex edge")
 
   .row
     .grow
-      p Every day we are surrounded by countless connections and networks: roads and rail tracks, phone lines and the internet, electronic circuits and molecular bonds. There are also #[em social networks] between friends and families. All these systems consist of certain points, called #[x-blank(choices="vertices|circles|crossings")], connected by lines, called #[x-blank(choices="edges|boundaries|pairs")]. In mathematics, all these networks are called #[strong graphs].</p>
+      p Every day we are surrounded by countless connections and networks: roads and rail tracks, phone lines and the internet, electronic circuits and even molecular bonds. There are also #[em social networks] between friends and families. All these systems consist of certain points, called #[x-blank(choices="vertices|circles|crossings")], connected by lines, called #[x-blank(choices="edges|boundaries|pairs")]. In mathematics, all these networks are called #[strong graphs].
     div(style="width: 160px;")
       svg#graph0.graph.novertices.noedges(width="160" height="130")
   p #[strong Graph theory] is the study of graphs and their properties. It is one of the most exciting and visual areas of mathematics, and has countless important applications.
@@ -200,7 +200,7 @@ section#GT_2_3
 
 
 section#GT_2_4
-  p Comparing these numbers for graphs which are possible and those which are not possible, it seems that a graph can be drawn if it <span class="blank wide" data-choices="has no more than two &#8220;odd&#8221; vertices|only has &#8220;even&#8221; vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3"></span>. This condition can be explained if we look at just a single vertex in the graph:</p>
+  p Comparing these numbers for graphs which are possible and those which are not possible, it seems that a graph can be drawn if it <span class="blank wide" data-choices="has no more than two &#8220;odd&#8221; vertices|only has &#8220;even&#8221; vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3"></span>. This condition can be explained if we look at just a single vertex in the graph:
   x-slideshow
     .stage
       include svg/konigsberg-proof.svg
@@ -290,8 +290,8 @@ section#GT_4_1
 
 
 section
-  p When comparing these numbers, you will notice that the number of edges is always #[+blank("one less|bigger|the same")] than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio#euler mathematician] who solved the K&ouml;nigsberg Bridges problem.</p>
-  p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss#proof proof] that works for any graph&hellip;</p>
+  p When comparing these numbers, you will notice that the number of edges is always #[+blank("one less|bigger|the same")] than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio#euler mathematician] who solved the K&ouml;nigsberg Bridges problem.
+  p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss#proof proof] that works for any graph&hellip;
 
 
 section#GT_4_2
@@ -488,7 +488,7 @@ section
 
 section#GT_6_4
   p Unfortunately there is no more efficient algorithm to solve the travelling salesman problem. Instead, mathematicians and computer scientists have developed various algorithms that find <em>good</em> solutions, even if they may not be the very best one. These algorithms, which only give approximate solutions, are called <strong>Heuristics</strong>.
-  p Try rearranging the cities on this map. You can remove cities by clicking on them, and you can add cities by clicking anywhere on the map.</p>
+  p Try rearranging the cities on this map. You can remove cities by clicking on them, and you can add cities by clicking anywhere on the map.
   .tsm-wrap.frame.fill.clearfix
     .tsm-box: svg
 
@@ -550,8 +550,8 @@ section
   p Throughout this chapter we have seen many applications of graph theory, though some were somehow contrived. It turns out, however, that graphs are at the very heart of many objects and concepts in everyday life.
   .row
     .grow
-      p The internet, for example, is a vast, virtual graph. Every vertex is an individual webpage, and every edge means that there is a hyperlink between two pages. Note that links only go one way, so this graph is <span class="blank" data-choices="directed|multi-line|conected"></span>, and that this graph is <em>very, very, large</em>.</p>
-      p Some websites, like Wikipedia or Facebook, have lots of incoming links, while many smaller websites may have very few incoming links. This is the underlying concept which Google uses to sort search results.</p>
+      p The internet, for example, is a vast, virtual graph. Every vertex is an individual webpage, and every edge means that there is a hyperlink between two pages. Note that links only go one way, so this graph is <span class="blank" data-choices="directed|multi-line|conected"></span>, and that this graph is <em>very, very, large</em>.
+      p Some websites, like Wikipedia or Facebook, have lots of incoming links, while many smaller websites may have very few incoming links. This is the underlying concept which Google uses to sort search results.
     div(style="width: 240px"): img(credit="© various", src="/resources/graphs-and-networks/images/internet.png", width="240", height="240")
 
 section
@@ -584,7 +584,7 @@ section
   .row
     div(style="width: 280px"): x-media(lightbox, credit="© Depositphotos / Paha_L", src="/resources/graphs-and-networks/images/congestion.jpg", width="280", height="170")
     .grow
-      p In the future, <strong>Intelligent Transportation Systems</strong> will reduce congestion and accidents by routing cars more efficiently, using location data collected from smartphones and self-driving cars. This could save millions of hours lost on the road every year, significantly reduce pollution, and allow emergency services to travel faster.</p>
+      p In the future, <strong>Intelligent Transportation Systems</strong> will reduce congestion and accidents by routing cars more efficiently, using location data collected from smartphones and self-driving cars. This could save millions of hours lost on the road every year, significantly reduce pollution, and allow emergency services to travel faster.
 
 
 section

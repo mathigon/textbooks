@@ -93,7 +93,7 @@ section#divisibility5
 //- ---------------------------------------------------------------------------
 
 section
-  p The reason why these rules for 2 and 5 are so simple has to do with our number system. The base of our number system is 10, which means that every digit in a number is worth 10 times as much as the next one to the right. If we take the number 6392 as an example,
+  p The reason why these rules for 2 and 5 are so simple has to do with our number system. The base of our number system is 10, which means that every digit in a number is worth 10 times as much as the next one to the right. If we take the number 6382 as an example,
 
   table.base-10.base-10-fixed
     tr.base-10-large
@@ -131,7 +131,7 @@ section
 section#divisibility4
   h3 Divisibility by 4 and 8
 
-  p Unfortunately 4 doesn’t divide 10, so we can‘t just look at the last number – but we 4 #[em does] divide 100, so we just have to slightly modify our rule from above. Now we write #[strong.m-red ab]#[strong.m-green cd] = #[strong.m-red ab × 100] + #[strong.m-green cd]. We know that 4 will always divide #[strong.m-red ab × 100], so we have to look at the last #[+input(2)] digits to check if a number if divisible by 4.
+  p Unfortunately 4 doesn’t divide 10, so we can‘t just look at the last number – but 4 #[em does] divide 100, so we just have to slightly modify our rule from above. Now we write #[strong.m-red ab]#[strong.m-green cd] = #[strong.m-red ab × 100] + #[strong.m-green cd]. We know that 4 will always divide #[strong.m-red ab × 100], so we have to look at the last #[+input(2)] digits to check if a number if divisible by 4.
 
   p For example, #[strong.m-green 24] is divisible by 4 so #[strong.m-red 2735]#[strong.m-green 24] #[+blank('is also|is not')] divisible by 4, and #[strong.m-green 18] is not divisible by 4 so #[strong.m-red 1947]#[strong.m-green 18] #[+blank('is also not|is')] divisible by 4.
 
@@ -365,7 +365,7 @@ section(data-gloss="proof")
     li.subsection We know from the #[x-gloss#fta Fundamental Theorem of Arithmetic] that #[em N] + 1, must have a prime factor. Either #[em N] + 1 is itself prime, or there is some other new prime #[em P’] that divides #[em N] + 1.
       .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
     li.subsection In both cases we’ve found a new prime not in our original list – but we assumed that #[em all] primes were in this list.
-    li.subsection Clearly something went wrong! But since steps #[span.proof-step 2]–#[span.proof-step 4] all valid, the only possibility is that our initial assumption in #[span.proof-step 1] was wrong. This means there must actually be infinitely many primes.
+    li.subsection Clearly something went wrong! But since steps #[span.proof-step 2]–#[span.proof-step 4] were definitely valid, the only possibility is that our initial assumption in #[span.proof-step 1] was wrong. This means there must actually be infinitely many primes.
 
   //- Notice that any prime that divides N cannot divide N + 1. (If it would, it also had to divide the difference between N and N + 1 which is 1. But the only number that divides 1 is 1 itself.)
 
@@ -609,7 +609,7 @@ section
   p Suppose that #[strong.m-red X] is the gcd of #[strong.m-green 18] and #[strong.m-blue 30]. Then #[strong.m-red X] divides #[strong.m-green 18] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 3]. Also, #[strong.m-red X] divides #[strong.m-blue 30] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5].
 
 section
-  p To find #[strong.m-red X], we simply need to multiple all numbers which are  prime factors of #[+blank("both|one of")] #[strong.m-green 18] and #[strong.m-blue 30]:
+  p To find #[strong.m-red X], we simply need to multiply all numbers which are  prime factors of #[+blank("both|one of")] #[strong.m-green 18] and #[strong.m-blue 30]:
 
   p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] × #[span.number-ball.l-blue-green 3] &nbsp;=&nbsp; 6.
 
@@ -683,7 +683,7 @@ section(data-gloss="cryptography")
 section
   p.todo RSA example with Alice and Bob coming soon…
 
-  p This encryption algorithm is called #[strong RSA Cryptography], after its three inventors, Ron Rivest, Adi Shamir and Leonard Adleman who published it in 1977. It turns out that a very similar method was known to the British Secret Service since 1973, but remained classified until mich later.
+  p This encryption algorithm is called #[strong RSA Cryptography], after its three inventors, Ron Rivest, Adi Shamir and Leonard Adleman who published it in 1977. It turns out that a very similar method was known to the British Secret Service since 1973, but remained classified until much later.
 
   p Today, prime numbers are used by computers all over the world to exchange data. Whenever you send an email or visit a secure website, your phone or laptop quietly generates large prime numbers and exchanges public keys with other computers.
 

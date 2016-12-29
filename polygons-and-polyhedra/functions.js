@@ -204,12 +204,12 @@ function deg(a, b, c) {
 const fns = {};
 
 fns.polygon1 = function(section, chapter) {
-    chapter.addGloss('polygon', 'edge', 'vertex');
+    chapter.addGloss('polygon');
     setPicker(section.$el.find('.set-picker'), section);
 };
 
 fns.polygon2 = function(section, chapter) {
-    chapter.addGloss('regpoly', 'equilateral', 'square');
+    chapter.addGloss('regpoly', 'equilateral', 'square', 'edge', 'vertex');
     setPicker(section.$el.find('.set-picker'), section);
 };
 
