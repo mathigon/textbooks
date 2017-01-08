@@ -14,8 +14,71 @@ section
 
   h2 Introduction
 
-  p.text-center #[em ax]#[sup 2] + #[em bx] + #[em c] = 0
-  p.text-center #[em ax] = #[span.frac #[span #[em b] #[span.math ±] #[span.sqrt #[em b]#[sup 2] – 4#[em ac]]]#[span 2#[em b]]]
+  p Welcome to SkateSum, a company that produces skateboards. Engineers have been working hard to create a new model, the SquareBoard, which is finally ready to start production. However building the skateboards is not cheap:
+
+  ul
+    li Buying the tools and machines required to construct skateboards costs $2,000.
+    li Every skateboard required $60 worth of of wood and other components, as well as the salary for employees.
+
+  p Many people want to buy these new skateboards, but the demand falls if the price is too high. This can be shown using a simple function that relates cost (on the x-axis) to number of skateboards sold (on the y-axis). Which of these functions do you think is most likely?
+
+  p.todo Multiple choice interactive: ... Exactly! Higher cost means lower demand, so the graph of the function moves downwards.
+
+  p Economists did some market research and came up with the following equation that relates the price of skateboards to the demand:
+
+  p.text-center #[em.purple demand] = 5000 - 30 × #[em.orange price]
+
+  p This is called a #[strong linear equation], because its graph is just a straight line. You should already be familiar with linear functions and equations.
+
+  p For example, if the skateboard costs $100, the demand will be #[+input(2000)] units.
+
+  p The company wants to maximise its #[em.blue profit], which is the #[em.green revenue] they make from selling skateboards, minus the #[em.red cost] which they have to spend to produce them. We can come up with equations for all of these values.
+
+  p The cost is the fixed value
+
+  p The revenue is simply the number of units sold (the demand) times the price of each:
+
+  p.text-center revenue = demand * price
+
+  p Finally, the profit is the difference between those two values:
+
+  x-equation-system
+    table
+      tr
+        td profit
+        td= '='
+        td revenue - cost
+      tr
+        td
+        td= '='
+        td: x-equation(vars="profit revenue cost demand price", fns="+ - * ^")
+
+  p.
+    demand = 5000 - 30 × #[em.orange price]#[br]
+    cost = 2000 + 60 × demand = 2000 + 60 × (5000 - 30 × #[em.orange price])#[br]
+    cost = 302000 - 1800 × price#[br]
+    profit = demand × price - cost = (5000 - 30 × price) × #[em.orange price] – (302000 - 1800 × #[em.orange price])#[br]
+    profit = -30 × price2 + 6800 × price - 302000#[br]
+
+  p.text-center(contenteditable="true") #[mi x]#[mo =]#[mfrac #[mrow #[mi b]#[mo ±]#[msqrt #[mrow #[mi b]#[sup 2]#[mo –]4#[mi ac]]]]#[mrow 2#[mi b]]]
+
+  p Notice that this equation contains price as well as price2. Therefore it is called a quadratic equation.
+
+  p We want to find the value of price that produces the largest profit. We can start by creating a graph that shows the profit (on the y-axis) for a range of possible different prices (on the x-axis):
+
+  p If the price is 0, the profit is actually negative, because we're just giving away lots of expensive skateboards. As the price increases, our profit rises. However, if the skateboards become too expensive, people no longer want to buy them and our profit falls.
+
+  p What price should SkateSum pick for the new skateboard, to make the highest profit?
+
+  p Quadratic equations are of the form
+  p.text-center a × x2 + b × x + c,
+  p where x is a variable and where a, b and c can be any numbers (including negative ones). Both b and c could be 0, but a can't be 0 because then we would just have a linear equation.
+
+  p Functions like this will always have a "curved" shape like we saw before. This shape is called a Parabola.
+
+  p The simplest quadratic function is just y = x2. If we plot this on a diagram, we get a simple, upward pointing parabola.
+
+  p Many problems, like the one we saw before, require us to work with quadratic functions.
 
 
   h2 Factorising
@@ -32,4 +95,120 @@ section
 
   h2 Applications
 
+  p.text-center #[em ax]#[sup 2] + #[em bx] + #[em c] = 0
+  p.text-center #[em ax] = #[span.frac #[span #[em b] #[span.math ±] #[span.sqrt #[em b]#[sup 2] – 4#[em ac]]]#[span 2#[em b]]]
 
+
+
+
+
+
+
+
+
+
+
+
+  //- hello
+    Factorisation
+    Slide 1
+    Let's start by revising how to simplify terms with brackets. For example
+    x (2x + 3)  =  2x2 + 3x
+    and similarly
+    (x - 1) (x + 5)  =  x2 - x + 5x - 5  =  x2 + 4x - 5
+    The trick is simply to add up all possible pairs of numbers, while taking care to respect all minus signs:
+    Try to expand this product and simplify the answer:
+    (x + 5) (x - 2)
+    Number input interactive:
+    Solution: x2 + 3x - 10
+    Slide 2
+    This answer looks like part of a quadratic equation, and we can invert our work to solve quadratic equations:
+    x2 + 3x - 10 = 0
+    is the same as (x + 5) (x - 2) = 0
+    And now comes the clever part: if the product of two numbers is 0, then at least one of these numbers has to be zero. If both are non-zero, then the product is also always non-zero. This means that
+    either    (x + 5) = 0     or     (x - 2) = 0
+    And thus the solution of the quadratic equation is either x = 2 or x = -5.
+    It is interesting to observe that quadratic equations, unlike linear equations, can have (up to) two solutions, and you have to find both to solve the equation. Here is a summary of what we've done:
+    Start with a quadratic equation like x2 + 3x - 10 = 0
+    Find a way to write the equation as a product of two terms:  (x + 5) (x - 2) = 0
+    The product is 0, so one of the two factors has to be zero: (x + 5) = 0 or (x - 2) = 0
+    These are now both linear equations which we can solve: x = -5 or x = 2.
+    Slide 3
+    Try to find the missing number in these factorisation examples:
+    x2 + 3x + 2 = (x + 1) (x + __)
+    x2 + 5x + 4 = (x + 4) (x + __)
+    x2 - 8x + 15 = (x - 3) (x - __)
+    x2 - 5x - 14 = (x + 2) (x - __)
+    Multiple choice interactive:
+    Solutions: 2, 1, 5, 7
+    Slide 4
+    The difficult part when factorising these quadratic equations is finding two numbers that work. However there is a simple pattern:
+    (x + A) (x + B) = x2 + (A + B)x + (A × B)
+    This means that if we have a quadratic equation x2 + Px + Q then we have to find two numbers A and B so that P = A + B and Q = A × B.
+    For example, in our original example we had x2 + 3x - 10 = (x + 5) (x - 2). We can see that
+    5 - 2 = 3 and 5 × (-2) = -10.
+    Finding A and B can take some guesswork, but with a bit of practice it becomes quite easy. Try factorising these examples:
+    TODO EXERCISES
+    Slide 5
+    TODO SPECIAL CASES:
+    x2 - 16 = 0
+    x2 + 4x = 0
+    x2 + 2x + 1 = 0
+    Slide 6
+    TODO NON-1 COEFFICIENTS:
+    4x2 + 2x + 3 = 0
+    Slide 7
+    TODO MIXED EXERCISES
+    Completing the Square
+    Slide 1
+    In some cases, it is impossible to solve quadratic equations using factorisation. In that case we can use a different method which is more difficult, but which always works. We use the expansion
+    (x + y)2 = x2 + 2xy + y2
+    Suppose we have a quadratic equation
+      x2 + 6x - 12 = 0
+    Let's write this slightly differently:
+      x2 + 2x × 3 - 12 = 0
+    The first part looks a bit like the expansion above, with y = 3. However we'd need another + 32, and instead we have -12. However, we could just add 32 ourself, and the subtract it again:
+      x2 + 2x × 3 + 32 - 32 - 12 = 0
+    Now we have everything we need to factorise the first part of this equation:
+    (x + 3)2 - 32 - 12 = 0
+    This already looks much better, and we can simplify further:
+    (x + 3)2 - 9 - 12 = 0
+    (x + 3)2 - 21 = 0
+    (x + 3)2 = 21
+    Now it gets interesting: while we could just  take the square root on either side of the equation, it's not quite that simple. If we square a number, we lose information about whether it was positive or negative. For example, 52 = 25 but (-5)2 = 25 also. When taking the square root, we have to account for the fact that the result could have been positive or negative:
+    x + 3 = ±√21
+    The symbol ± ("plus-minus") basically means that we have two possible equations: x + 3 = +√21 as well as x + 3 = -√21.
+    And if we subtract 3 on both sides of the equation, we are left with
+    x = -3 ± √21
+    Using a calculator, we find that either x = -3 + √21 = 1.58 or x = -3 - √21 = -7.58. Notice that, like before, we have two different solutions for x.
+    Slide 2
+    TODO: EXERCISES
+    Slide 3
+    TODO: SPECIAL CASES
+    ONE SOLUTION
+    NO SOLUTION
+    The Quadratic Formula
+    Slide 1
+    In the previous section we learned how to solve any quadratic equation by completing the square. However that was sometimes quite difficult, even though the steps were always exactly the same. Instead, we want to find a single, simple formula that would allow us to do the same.
+    Imagine we have a quadratic equation
+    ax2 + bx + c = 0.
+    Here, a, b and c could be any numbers like before, however we will leave them as variables for now. The plan is to solve the equation like this, with a, b and c, to get a general solution. Then we can substitute the actual values of a, b and c into this result, to find the solution of any quadratic equation.
+    If this doesn't quite make sense, don't worry - it will soon!
+    Slide 2
+    Let's start by dividing by a, so that x2 is on its own:
+    ax2 + bx + c = 0.
+    x2+bax+ca=0
+    Like before, we have to complete the square by adding b2a2, and the subtracting it again:
+    x2+bax+b2a2-b2a2+ca=0
+    The first part of this equation is just the expanded version of x+b2a2, so we have
+    x+b2a2-b2a2+ca=0
+    Now we can solve for x like before:
+    x+b2a2=b2a2-ca
+    Remember that, when taking the square root, the result could be positive or negative. We use the symbol ±, which really means we have two possible solutions: one with + and one with -.
+    x+b2a=b2a2-ca
+    So, finally, we have that
+    x=-b2ab2a2-ca
+    Slide 3
+    Let's have a look at an example:
+
+  p .end
