@@ -2,7 +2,7 @@
 
 
 ## Introduction
-Welcome to Mathigon! This repository is where we create
+Welcome to Mathigon! This repository is where we create our courses.
 
 
 ## How to Contribute
@@ -12,7 +12,7 @@ Thanks for your interest in contributing to Mathigon. There are many ways how yo
 * Write code for interactive problems and animations.
 * Test and proofread chapters, and fix bugs and mistakes.
 
-To contribute, you need to create a _GitHub account_, _fork_ this repository and create a _local clone_ on your computer. Now you can make changes to the code and content, _committ_ your changes, _push_ your changes to GitHub and finally create a _pull request_ back into our central repo. We will review all your pull requests with changes and then merge them back into our master.
+To contribute, you need to create a _GitHub account_, _fork_ this repository and create a _local clone_ on your computer. Now you can make changes to the code and content, _commit_ your changes, _push_ your changes to GitHub and finally create a _pull request_ back into our central repo. We will review all your pull requests with changes and then merge them back into our master.
 
 
 ## Documentation
