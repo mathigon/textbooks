@@ -106,7 +106,7 @@ export const gloss = {
 
     complete: {
         title: "Complete Graph",
-        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac inline white'><span><em>n</em> × (<em>n</em> – 1)</span><span>2</span></span> edges.</p>"
+        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <mfrac class='inline white'><mrow><mi>n</mi> × (<mi>n</mi> – 1)</mrow><mrow>2</mrow></mfrac> edges.</p>"
     },
 
     bipartite: {

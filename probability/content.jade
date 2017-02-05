@@ -82,9 +82,9 @@ section
 section
   p Pascal and Fermat had discovered the first important equation of probability: if an experiment has multiple possible outcomes which are all equally likely, then
 
-  p.text-center Probability of an event = #[span.frac #[span Number of ways the event could happen]#[span Total number of possible outcomes]].
+  p.text-center Probability of an event = #[mfrac #[mrow Number of ways the event could happen]#[mrow Total number of possible outcomes]].
 
-  p In our example, the probability of Pascal winning the game is #[span.frac.inline #[span 3]#[span 4]] = 0.75, and the probability of Fermat winning the game is #[span.frac.inline #[span 1]#[span 4]] = 0.25.
+  p In our example, the probability of Pascal winning the game is #[+frac(3, 4, true)] = 0.75, and the probability of Fermat winning the game is #[+frac(1, 4, true)] = 0.25.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -123,7 +123,7 @@ section
 
 
 section
-  p Tossing a (fair) coin has two possible outcomes, #[em heads] and #[em tails], which are both equally likely. According to the equation above, the probability of a coin landing #[em heads] must be #[span.frac.inline #[span 1]#[span 2]] = 0.5, or 50%.
+  p Tossing a (fair) coin has two possible outcomes, #[em heads] and #[em tails], which are both equally likely. According to the equation above, the probability of a coin landing #[em heads] must be #[+frac(1, 2, true)] = 0.5, or 50%.
   //- TODO However, the equation is not very helpful if the different outcomes are not all equally likely, or if there are infinitely many possible outcomes.
 
   p Note that this probability is #[em in between] 0 and 1, even though only one of the outcomes can actually happen. But probabilities have very little to fo with actual results: if we toss a coin many times we know that #[+blank('approximately half|exactly half|all|none')] of the results are heads – but we have no way of predicting #[em exactly which] tosses landed heads.
@@ -388,9 +388,9 @@ section
       td(colspan=5)
 
 
-  p The most likely result when rolling two dice is #[span.dice.outline 7]. There are #[+input(6)] outcomes where the sum is 7, and #[+input(36)] outcomes in total, #[.subsection(data-needs="blank-0 blank-1") so the probability of getting a 7 is #[span.frac.inline #[span 6]#[span 36]] = 0.1666.]
+  p The most likely result when rolling two dice is #[span.dice.outline 7]. There are #[+input(6)] outcomes where the sum is 7, and #[+input(36)] outcomes in total, #[span.subsection(data-needs="blank-0 blank-1") so the probability of getting a 7 is #[+frac(6, 36, true)] = 0.1666.]
 
-  p The least likely outcomes are #[span.dice.outline 2] and #[span.dice.outline 12], each with a probability of #[span.frac.inline #[span 1]#[span 36]] = 0.0277.
+  p The least likely outcomes are #[span.dice.outline 2] and #[span.dice.outline 12], each with a probability of #[+frac(1, 36, true)] = 0.0277.
 
 
 section#diceSimulation

@@ -117,7 +117,7 @@ section#GT_1_2
   p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] × #[+var n-1] = #[+var n * (n-1)] handshakes in total.
   p.var ${ handshakeTable(n) }
   .subsection
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[span.frac.inline #[span #[+var n] × #[+var n-1]]#[span 2]] = #[+var n*(n-1)/2].
+    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[mfrac.inline #[mrow #[+var n] × #[+var n-1]]#[mrow 2]] = #[+var n*(n-1)/2].
 
 
 section#GT_1_3
@@ -127,7 +127,7 @@ section#GT_1_3
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
-  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> × (<em>n</em> &#8211; 1)', '2')] edges.
+  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> × (<em>n</em> – 1)', '2')] edges.
 
 
 section#GT_1_4
@@ -455,7 +455,7 @@ section
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[span.frac.inline #[span #[+var tsn] × (#[+var tsn] – 1)]#[span 2]] = #[+var tsn*(tsn-1)/2} edges in total.
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[mfrac.inline #[mrow #[+var tsn] × (#[+var tsn] – 1)]#[mrow 2]] = #[+var tsn*(tsn-1)/2} edges in total.
 
       p The delivery truck has to visit all cities, in any order. In the Königsberg bridges problem we wanted to find paths which travel along #[em every edge] exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
 

@@ -1,13 +1,13 @@
 
 mixin frac(a,b,inline)
   if inline
-    span.frac.inline
-      span!= a
-      span!= b
+    mfrac.inline
+      mrow!= a
+      mrow!= b
   else
-    span.frac
-      span!= a
-      span!= b
+    mfrac
+      mrow!= a
+      mrow!= b
 
 mixin blank(choices)
   x-blank(choices=choices)

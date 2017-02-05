@@ -190,9 +190,9 @@ section#polygonsangle
 section
   p Remember that in regular polygons, all sides have the same length and all angles are all the same size. Therefore we can calculate the size of a single internal angle in a regular polygon:
 
-  p.text-center angle = #[span.frac #[span #[+blank("sum of all angles|number of angles")]]#[span #[+blank("number of angles|sum of all angles")]]] = #[+frac('180° × (<em>x</em> – 2)', '<em>x</em>')] = 180° – #[+frac('360°','<em>x</em>')].
+  p.text-center angle = #[mfrac #[mrow #[+blank("sum of all angles|number of angles")]]#[mrow #[+blank("number of angles|sum of all angles")]]] = #[+frac('180° × (<em>x</em> – 2)', '<em>x</em>')] = 180° – #[+frac('360°','<em>x</em>')].
 
-  p In particular, the sum of a regular polygon with #[+var('x|6|3,12,1') x] sides is 180° – #[span.frac.inline #[span 360°]#[span #[+var x]]] = #[+var Math.round(180-360/x)]°.
+  p In particular, the sum of a regular polygon with #[+var('x|6|3,12,1') x] sides is 180° – #[mfrac.inline #[mrow 360°]#[mrow #[+var x]]] = #[+var Math.round(180-360/x)]°.
 
 
 //- ---------------------------------------------------------------------------
@@ -277,7 +277,7 @@ section
       include svg/quadrilaterals/area-kite.svg
     .grow
       p Each the four smaller rectangles are exactly half blue. Therefore the area of the #[strong.m-blue blue kite] is half the area of the #[strong.m-red red rectangle]. In other words, the area of a kite or rhombus is always
-      p.text-center #[span.frac #[span 1]#[span 2]] #[strong.i.m-green width] × #[strong.i.m-yellow height].
+      p.text-center #[+frac(1, 2)] #[strong.i.m-green width] × #[strong.i.m-yellow height].
 
 section
   h3 Trapezium
@@ -286,7 +286,7 @@ section
       include svg/quadrilaterals/area-trapezium.svg
     .grow
       p Notice how the gaps on the left and right are each exactly as big as the overlap on that side. The width of the #[strong.m-red red rectangle] is the average of the widths of the top side and the bottom side of the #[strong.m-blue blue trapezium]. Therefore the area of a trapezium is
-      p.text-center #[span.frac #[span #[strong.i.m-green top] + #[strong.i.m-green bottom]]#[span 2]] × #[strong.i.m-yellow height].
+      p.text-center #[mfrac #[mrow #[strong.i.m-green top] + #[strong.i.m-green bottom]]#[mrow 2]] × #[strong.i.m-yellow height].
 
 section
   .box.problem-box
