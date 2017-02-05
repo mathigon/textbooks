@@ -9,103 +9,190 @@ include ../mixins
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+section#s1
   +intro
 
   h2 Introduction
 
-  p Welcome to SkateSum, a company that produces skateboards. Engineers have been working hard to create a new model, the SquareBoard, which is finally ready to start production. However building the skateboards is not cheap:
+  p Welcome to SkateSum, a small company that produces skateboards. Engineers have been working on a brand new model, the #[em SquareBoard], which is finally ready to start production. However building the skateboards is not cheap:
 
   ul
-    li Buying the tools and machines required to construct skateboards costs $2,000.
-    li Every skateboard required $60 worth of of wood and other components, as well as the salary for employees.
+    li The tools and machines required to construct skateboards cost $2,000.
+    li Every skateboard costs additional $60 worth of of wood and other materials, as well as the salary for employees.
 
-  p Many people want to buy these new skateboards, but the demand falls if the price is too high. This can be shown using a simple function that relates cost (on the x-axis) to number of skateboards sold (on the y-axis). Which of these functions do you think is most likely?
+  p The new skateboards are highly anticipated, but the higher the price is, the fewer people will actually buy one. We can show this relationship on a simple chart with the cost of a skateboard on the x-axis, and the corresponding number of people who will buy one on the y-axis.
 
   p.todo Multiple choice interactive: ... Exactly! Higher cost means lower demand, so the graph of the function moves downwards.
 
   p Economists did some market research and came up with the following equation that relates the price of skateboards to the demand:
 
-  p.text-center #[em.purple demand] = 5000 - 30 × #[em.orange price]
+  p.text-center #[em.b.purple demand] = 5000 – 30 × #[em.b.orange price]
 
-  p This is called a #[strong linear equation], because its graph is just a straight line. You should already be familiar with linear functions and equations.
+  p For example, if the skateboard costs $100, the demand will be #[+input(2000)] units. This is called a #[strong linear equation], because its graph is just a straight line.
 
-  p For example, if the skateboard costs $100, the demand will be #[+input(2000)] units.
+  p The company wants to maximise its #[em.b.blue profit], which is the #[em.b.green revenue] they make from selling skateboards, minus the #[em.b.red cost] which they have to spend to produce them. We can come up with equations for all of these values.
 
-  p The company wants to maximise its #[em.blue profit], which is the #[em.green revenue] they make from selling skateboards, minus the #[em.red cost] which they have to spend to produce them. We can come up with equations for all of these values.
+  p The revenue is the number of units sold (the demand) times the price of each:
+  p.text-center #[em.b.green revenue] = #[em.b.purple demand] × #[em.b.orange price]
 
-  p The cost is the fixed value
+  p The cost is $2000 for buying tools and machines plus the $60 for every skateboard they produce – and ideally this number should be equal to the demand:
+  p.text-center #[em.b.red cost] = 2000 + 60 × #[em.b.purple demand]
 
-  p The revenue is simply the number of units sold (the demand) times the price of each:
-
-  p.text-center revenue = demand * price
-
-  p Finally, the profit is the difference between those two values:
+  p Finally, the profit is the difference between those two values. We can substitute the variables we have previously determined, and express total #[em.b.blue profit] just in terms of the #[em.b.orange price] of every skateboard:
 
   x-equation-system
     table
       tr
-        td profit
+        td #[em.b.blue profit]
         td= '='
-        td revenue - cost
+        td #[em.b.green revenue] – #[em.b.red cost]
       tr
         td
         td= '='
-        td: x-equation(vars="profit revenue cost demand price", fns="+ - * ^")
+        td: x-equation.var(vars="profit revenue cost demand price", fns="+ - * ^", x-props="qvalidate")
 
   p.
-    demand = 5000 - 30 × #[em.orange price]#[br]
-    cost = 2000 + 60 × demand = 2000 + 60 × (5000 - 30 × #[em.orange price])#[br]
-    cost = 302000 - 1800 × price#[br]
+    cost = 2000 + 60 × (5000 - 30 × #[em.orange price]) = 302000 - 1800 × price#[br]
     profit = demand × price - cost = (5000 - 30 × price) × #[em.orange price] – (302000 - 1800 × #[em.orange price])#[br]
     profit = -30 × price2 + 6800 × price - 302000#[br]
 
-  p.text-center(contenteditable="true") #[mi x]#[mo =]#[mfrac #[mrow #[mi b]#[mo ±]#[msqrt #[mrow #[mi b]#[sup 2]#[mo –]4#[mi ac]]]]#[mrow 2#[mi b]]]
+  p.text-center #[mi x]#[mo =]#[mfrac #[mrow #[mi b]#[mo ±]#[msqrt #[mrow #[mi b]#[sup 2]#[mo –]4#[mi ac]]]]#[mrow 2#[mi b]]]
 
-  p Notice that this equation contains price as well as price2. Therefore it is called a quadratic equation.
+  p Notice that this equation contains #[em price] as well as #[em price]#[sup 2]. Therefore it is called a #[strong Quadratic Equation].
 
-  p We want to find the value of price that produces the largest profit. We can start by creating a graph that shows the profit (on the y-axis) for a range of possible different prices (on the x-axis):
+  p We want to find the value of price that produces the largest profit. We can start by creating a graph that shows the profit (on the #[em y]-axis) for a range of possible different prices (on the #[em x]-axis):
 
-  p If the price is 0, the profit is actually negative, because we're just giving away lots of expensive skateboards. As the price increases, our profit rises. However, if the skateboards become too expensive, people no longer want to buy them and our profit falls.
+  x-coordinate-system(x="-20 180 20" x-label="price" y="-100 100 20" y-label="profit" y-suffix="k" fn="-0.03 * x^2 + 6.8 * x - 302")
 
-  p What price should SkateSum pick for the new skateboard, to make the highest profit?
+  p If the price is 0, the “profit” is negative, because we’re just giving away expensive skateboards. As the price increases, our profit rises. However, if the skateboards become too expensive, people no longer want to buy them and the profit falls again. SkateSum can maximise its profit by pricing the skateboards at approximately $#[+input(110)].
+
+
+section
+  h2 Quadratic Equations
 
   p Quadratic equations are of the form
-  p.text-center a × x2 + b × x + c,
-  p where x is a variable and where a, b and c can be any numbers (including negative ones). Both b and c could be 0, but a can't be 0 because then we would just have a linear equation.
+  p.text-center #[em a] #[em x]#[sup 2] + #[em b] #[em x] + #[em c] = 0,
+  p where #[em x] is a variable and #[em a], #[em b] and #[em c] can be any numbers (including negative ones). Both #[em b] and #[em c] could be 0, but #[em a] can’t be 0 because then we would just have a linear equation.
 
-  p Functions like this will always have a "curved" shape like we saw before. This shape is called a Parabola.
+  p The graphs of quadratic equations will always have a “curved” shape like the one we saw before. This shape is called a #[strong Parabola].
 
-  p The simplest quadratic function is just y = x2. If we plot this on a diagram, we get a simple, upward pointing parabola.
+  p The simplest quadratic function is just #[em y] = #[em x]#[sup 2]. If we plot this on a diagram, we get a simple, upward pointing parabola:
 
-  p Many problems, like the one we saw before, require us to work with quadratic functions.
+  x-coordinate-system(x="-5 5 1" y="-1 7 1" fn="x^2")
+
+  p In the following sections we will learn many different ways to solve quadratic equations and interpret their graphs.
 
 
+section
   h2 Factorising
 
+  p.todo Here is a simple term containing the product of two sums. To simplify it, we have to match up all possible terms and add them up:
 
+  p.text-center (#[mi x]#[mo +]5)#[mo ×](2#[mi x]#[mo –]1)#[mo =]#[mi x]#[mo ×]2#[mi x]#[mo +]#[mi x]#[mo ×]#[mo +]
+
+  p.todo The result
+
+
+section
   h2 Completing the Square
 
+  p.todo In some cases, factorising doesn't work: there simply aren't any
 
+
+section
   h2 The Quadratic Formula
 
-
-  h2 Geometric Interpretation
-
-
-  h2 Applications
-
-  p.text-center #[em ax]#[sup 2] + #[em bx] + #[em c] = 0
-  p.text-center #[em ax] = #[span.frac #[span #[em b] #[span.math ±] #[span.sqrt #[em b]#[sup 2] – 4#[em ac]]]#[span 2#[em b]]]
+  p.todo text
 
 
+section
+  h2 Geometric interpretation
+
+  p Let’s now design a small skate park, to try out our new SquareBoads. We’ve got 50m of fence, as well as two existing walls we can use to enclose the area – and of course we want to make it as large as possible.
+
+  p.todo interactive diagram
+
+  p If we call the horizontal part of the fence #[em x], then the vertical part has length #[x-equation.var(vars="x", fns="+ -")]. The total area of the skate park is
+
+  p.text-center #[mi A]#[mo =]#[x-equation.var(vars="x", fns="+ -")]
+
+  p Once again, we have a quadratic equation! Except, rather than solving it, we want to find it’s #[em maximum].
+
+  p.todo Diagram, numeric solution
+
+  p.todo Scheitelpunktform und Grundform
+
+  .box.problem-box
+    .box-title: h3 Finding maxima and minima of quadratic functions
+    .box-body
+      p.todo Exercises under development…
+
+  p.todo Nullstellen
+
+  .box.problem-box
+    .box-title: h3 Finding the zeros of quadratic functions
+    .box-body
+      p.todo Exercises under development…
 
 
+section
+  h2 Projectile Motion
+
+  p Having used quadratic equations to create the optimal business plan for our Skateboard company, and to design the largest possible skate park, now lets actually XXX.
+
+  p When practicing jumps and tricks, it is important to understand how gravity
+
+  p.todo skateboarding image
+
+  p Let’s start with a simple example: a ball is thrown straight up into the air, with an initial speed of 50m/s. Using the laws of physics, we can predict the motion of the ball, and the time it will take for the ball to fall back on the ground.
+
+  p Once in the air, gravity pulls the ball back towards the ground. This force causes the ball’s speed to change by a fixed amount every second: approximately -10m/s#[sup 2]. We use a negative value, because gravity acts downwards. Since we know the initial speed of the ball, we can easily calculate the speed after every subsequent second.
+
+  p Speed, on the other hand, is the rate of change of position. The ball started at a height 0 when we threw it, and we can calculate its height after every subsequent second by adding the speed at that time.
+
+  p.todo. table
+    time             0    1s    2s    3s    4s    5s    6s    7s    8s    9s
+    acceleration   -10   -10   -10   -10   -10   -10   -10   -10   -10   -10
+    speed           50    40    30    20    10     0   -10   -20   -30   -40
+    position         0    50    90   120   140   150   150   140   120    90
+
+  p Notice how the height of the ball increases quickly, then slows down, and then decreases, as it falls back towards the ground. Let’s visualise this motion in a diagram:
+
+  p.todo diagram
+
+  p This shape looks just like a parabola. If we ignore things like air resistance, then all objects we throw into the air follow a parabolic path: including basketballs, jets of water, or even rockets.
+
+  p.todo example images
 
 
+section
+  h2 More Applications
 
+  p Many equations in physics or economics contain multiplication, and these multiplications often lead to squares. That’s why it should come at no surprise that our world is full of quadratic equations and parabolas. Here are a few more examples:
 
+  h3 Mirrors and Telescopes
 
+  p.todo In a parabolic mirror, incoming light rays are all reflected onto a single point in the center. This curious property can be used when building radio telescopes, where the receiver is placed in the focus, or thermal solar power plants, which focus the suns' rays onto a single point to create a lot of heat.
+
+  p.todo The actual shape of this telescope is called a Paraboloid – it is basically a 3-dimensional version of a parabola.
+
+  p.todo Even the TV dishes at your home have a paraboloid shape. They focus the incoming radio waves onto the small receiver in its center.
+
+  h3 Bridges
+
+  p.todo In many suspension bridges the main suspension cables form a parabola. One famous example is the Golden Gate Bridge in San Francisco:
+
+  p.todo Suspension bridges can span especially long distances, and are relatively economical to build.
+
+  p.todo The suspension cables carry the huge weight of the deck of the bridge, as well as all the traffic travelling across it. This causes large tension and compression forces, and the parabola is the best shape to balance these forces equally.
+
+  h3 Conic Sections
+
+  p.todo The parabola is one of four different shapes that can be created by cutting a slice through a cone:
+
+  p.todo These four shapes, called conic sections, have many properties in common, even though the look very different. The circle and ellipse, for example, are closed, which the parabola and hyperbola are open and infinite.
+
+  p Quadratic equations are hidden everywhere in our world. Can you think of any other examples?
 
 
 
@@ -210,5 +297,3 @@ section
     x=-b2ab2a2-ca
     Slide 3
     Let's have a look at an example:
-
-  p .end

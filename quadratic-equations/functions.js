@@ -5,6 +5,9 @@
 
 
 import { $, $$, $C, $N } from 'elements';
+import xEquation from 'components/equation';
+import xEquationSystem from 'components/equation-system';
+import xCoordinateSystem from 'components/coordinate-system';
 
 
 // -----------------------------------------------------------------------------
@@ -29,5 +32,15 @@ export const hints = { };
 // Functions
 
 const fns = {};
+
+fns.s1 = function(section, chapter) {
+
+  section.model.set('qvalidate', function() {
+    console.log(validate);
+  });
+
+
+};
+
 
 export const sections = fns;

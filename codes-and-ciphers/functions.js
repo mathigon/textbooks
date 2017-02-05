@@ -1,13 +1,13 @@
 // =============================================================================
 // Mathigon.org | Codes and Ciphers
-// (c) 2015 Mathigon
+// (c) 2017 Mathigon
 // =============================================================================
 
 
 import Evented from 'evented';
 import { clamp } from 'utilities';
 import { letterFrequency, caesarCipher } from 'cryptography';
-import { $I, $$, $C, $N } from 'elements';
+import { $, $$, $N } from 'elements';
 
 
 // -----------------------------------------------------------------------------
@@ -32,69 +32,69 @@ export const hints = { };
 // Utilities and CLasses
 
 class CodeBox extends Evented {
-    constructor($plain, $cipher, options) {
-        super();
+  constructor($plain, $cipher, options) {
+    super();
 
-        $plain.isTextarea = $plain.is('[contenteditable]');
-        $cipher.isTextarea =  $cipher.is('[contenteditable]');
+    $plain.isTextarea = $plain.is('[contenteditable]');
+    $cipher.isTextarea =  $cipher.is('[contenteditable]');
 
-        var alphabeth = ('abcdefghijklmnopqrstuvwxyz').split('');
-        var letters = { plain: [], cipher: [] };
-        var letterObj = {};
+    let alphabet = ('abcdefghijklmnopqrstuvwxyz').split('');
+    let letters = { plain: [], cipher: [] };
+    let letterObj = {};
 
-        alphabeth.each(function(l, i) {
-            letterObj[l] = { cols: [] };
-            if (options.chartCols)  letterObj[l].cols.push(options.chartCols[i]);
-            if (options.plainCols)  letterObj[l].cols.push(options.plainCols[i]);
-            if (options.cipherCols) letterObj[l].cols.push(options.cipherCols[i]);
-            if (options.realBars)   options.realBars[i].css('height', letterFrequency(l)*750 + '%');
+    alphabet.forEach(function(l, i) {
+      letterObj[l] = { cols: [] };
+      if (options.chartCols)  letterObj[l].cols.push(options.chartCols[i]);
+      if (options.plainCols)  letterObj[l].cols.push(options.plainCols[i]);
+      if (options.cipherCols) letterObj[l].cols.push(options.cipherCols[i]);
+      if (options.realBars)   options.realBars[i].css('height', letterFrequency(l)*750 + '%');
+    });
+
+    function update($container, current, other, bars) {
+      return function(text) {
+        let caret = $container.isTextarea ? $container.cursor : 0;
+
+        $container.html('');
+        letters[current] = [];
+
+        text.split('').forEach(function(l) {
+          if (l === '\xA0') {
+            $container.$el.appendChild(document.createTextNode('\xA0'));
+          } else {
+            letters[current].push($N('span', { html: l, class: 'cipher-letter' }, $container));
+          }
         });
 
-        function update($container, current, other, bars) {
-            return function(text) {
-                var caret = $container.isTextarea ? $container.cursor : 0;
+        letters[current].forEach(function(l, i) {
+          let letter = l.text().toLowerCase();
 
-                $container.html('');
-                letters[current] = [];
+          l.on('mouseenter', function() {
+            l.addClass('hover');
+            letters[other][i].addClass('hover');
+            letterObj[letter].cols.forEach(function(x) { x.addClass('hover'); });
+          });
 
-                text.split('').each(function(l) {
-                    if (l === '\xA0') {
-                        $container.$el.appendChild(document.createTextNode('\xA0'));
-                    } else {
-                        letters[current].push($N('span', { html: l, class: 'cipher-letter' }, $container));
-                    }
-                });
+          l.on('mouseleave', function() {
+            l.removeClass('hover');
+            letters[other][i].removeClass('hover');
+            letterObj[letter].cols.forEach(function(x) { x.removeClass('hover'); });
+          });
+        });
 
-                letters[current].each(function(l, i) {
-                    var letter = l.text().toLowerCase();
+        if ($container.isTextarea) $container.cursor = caret;
 
-                    l.on('mouseenter', function() {
-                        l.addClass('hover');
-                        letters[other][i].addClass('hover');
-                        letterObj[letter].cols.each(function(x) { x.addClass('hover'); });
-                    });
-
-                    l.on('mouseleave', function() {
-                        l.removeClass('hover');
-                        letters[other][i].removeClass('hover');
-                        letterObj[letter].cols.each(function(x) { x.removeClass('hover'); });
-                    });
-                });
-
-                if ($container.isTextarea) $container.cursor = caret;
-
-                if (bars) {
-                    var freq = cipherLetterFreq(text);
-                    alphabeth.each(function(l, i) {
-                        bars[i].css('height', freq[i]/text.length*750 + '%');
-                    });
-                }
-            };
+        if (bars) {
+          let freq = cipherLetterFreq(text);
+          alphabet.forEach(function(l, i) {
+            bars[i].css('height', freq[i]/text.length*750 + '%');
+          });
         }
-
-        this.listen('plain',  update($plain,  'plain', 'cipher', options.plainBars));
-        this.listen('cipher', update($cipher, 'cipher', 'plain', options.realBars));  // TODO
+      };
     }
+
+    this.on('plain',  update($plain,  'plain', 'cipher', options.plainBars));
+    this.on('cipher', update($cipher, 'cipher', 'plain', options.realBars));  // TODO
+  }
 }
 
 
@@ -103,32 +103,32 @@ class CodeBox extends Evented {
 
 const fns = {};
 
-fns.C_CAESAR = function(section) {
+fns.caesar_cipher = function(section) {
 
-    let $plain = $C('plain-text', section.$el);
-    let $cipher = $C('cipher-text', section.$el);
+  let $plain = $('.plain-text', section.$el);
+  let $cipher = $('.cipher-text', section.$el);
 
-    var codeBox = new CodeBox($plain, $cipher, {
-        chartCols:  section.$el.findAll('.freq-table-chart  .freq-col'),
-        plainCols:  section.$el.findAll('.freq-table-plain  .freq-col'),
-        cipherCols: section.$el.findAll('.freq-table-cipher .freq-col'),
-        plainBars:  section.$el.findAll('.letter-bar.plain'),
-        realBars:   section.$el.findAll('.letter-bar.real')
-    });
+  let codeBox = new CodeBox($plain, $cipher, {
+    chartCols:  section.$el.findAll('.freq-table-chart  .freq-col'),
+    plainCols:  section.$el.findAll('.freq-table-plain  .freq-col'),
+    cipherCols: section.$el.findAll('.freq-table-cipher .freq-col'),
+    plainBars:  section.$el.findAll('.letter-bar.plain'),
+    realBars:   section.$el.findAll('.letter-bar.real')
+  });
 
-    var shift = 0;
-    var text = '';
+  let shift = 0;
+  let text = '';
 
-    $plain.on('input', function() {
-        text = $plain.$el.textContent;
-        codeBox.set('plain', text);
-        codeBox.set('cipher', caesarCipher(text, shift, 26));
-    });
+  $plain.on('input', function() {
+    text = $plain.text;
+    codeBox.set('plain', text);
+    codeBox.set('cipher', caesarCipher(text, shift, 26));
+  });
 
-    $I('letter-slider').on('move', function(x) {
-        shift = clamp(Math.round(-x/26) % 26, 0, 25);
-        codeBox.set('cipher', caesarCipher(text, shift, 26));
-    });
+  $('#letter-slider').on('move', function(x) {
+    shift = clamp(Math.round(-x/26) % 26, 0, 25);
+    codeBox.set('cipher', caesarCipher(text, shift, 26));
+  });
 
 };
 
