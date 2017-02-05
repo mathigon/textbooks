@@ -343,9 +343,9 @@ fns.GT_2_0 = function(section, chapter) {
     section.addGoals('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3');
     let previousErrors = [];
 
-    $$C('slide', section.$el).forEach(function($el, i) {
+    section.$el.$$('.slide').forEach(function($el, i) {
 
-        let $svg = $el.children('svg')[0];
+        let $svg = $el.$('svg.frame');
         let $paths = $C('paths', $svg);
         let $water = $C('water', $svg);
         let $bridges = $$C('bridge', $svg);
@@ -357,7 +357,7 @@ fns.GT_2_0 = function(section, chapter) {
         let totalCrossed = 0;
         $error.exit();
 
-        var map = new Drawing($svg, { paths: $paths });
+        let map = new Drawing($svg, { paths: $paths });
         map.on('start', map.clear.bind(map));
         $el.find('.btn').on('click', function() { map.clear(); });
 
@@ -384,15 +384,15 @@ fns.GT_2_0 = function(section, chapter) {
         $water.on('pointerEnter', function(e) {
             if (!map.drawing) return;
             map.stop();
-            var p = svgPointerPosn(e, $svg);
+            let p = svgPointerPosn(e, $svg);
             $error.translate(p.x - 20, p.y - 20);
             $error.enter('pop', 300);
             error('crossWater');
         });
 
         $bridges.forEach(function($bridge) {
-            var enter = null;
-            var crossed = false;
+            let enter = null;
+            let crossed = false;
 
             $bridge.on('pointerEnter', function(e) {
                 if (map.drawing) {
@@ -582,7 +582,7 @@ fns.GT_3_0 = function(section, chapter) {
     section.$el.find('button').on('click', clear);
 
     section.$el.findAll('.utility').forEach(function($ut) {
-        let $c = $ut.children(0);
+        let $c = $ut.children[0];
         let p = { x: +$c.attr('cx'), y: +$c.attr('cy') };
         let onThis = false;
         let dataType = $ut.attr('data-type');
@@ -879,7 +879,7 @@ fns.GT_5_1 = function(section, chapter) {
 
     section.$el.findAll('.slide').forEach(function($map, i) {
         let $count = $map.find('.colour-count');
-        let $countries = $map.find('.frame').children();
+        let $countries = $map.find('.frame').children;
         let $solve = $map.find('.solve');
 
         let countryIds = [];

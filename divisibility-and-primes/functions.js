@@ -134,7 +134,7 @@ export const hints = { };
 // Shared Utilities and Classes
 
 function numberGrid($grid, time, className, filter) {
-    $grid.children().forEach(function($i) {
+    $grid.children.forEach(function($i) {
         if (!filter(+$i.text)) return;
         delay(function() { $i.addClass(className); }, time);
         time += 80;
@@ -186,7 +186,7 @@ fns.divisibilitygame = function(section) {
                 if (answer == i) {
                     $b.addClass('success'); $b.css('transform', 'none');
                 } else {
-                    $b.children(0).exit('pop');
+                    $b.children[0].exit('pop');
                 }
             });
         });
@@ -259,7 +259,7 @@ fns.divisibility6 = function(section) {
 
     section.on('score-blank-0', function() {
         numberGrid($grid, 200, 'green', i => (i % 6 === 0));
-        delay(function() { $grid.children().forEach($el => { $el.removeClass('yellow blue'); }); }, 1200);
+        delay(function() { $grid.children.forEach($el => { $el.removeClass('yellow blue'); }); }, 1200);
     });
 
     $buttons[0].on('click', function() { section.score('btn2'); });
@@ -383,7 +383,7 @@ fns.race = function(section) {
     let $buttonText = $button.find('text');
     let $runners = section.$el.findAll('circle');
     let $paths = section.$el.findAll('.runner-path');
-    let $lapTimes = section.$el.findAll('.lap-times').map($l => $l.children());
+    let $lapTimes = section.$el.findAll('.lap-times').map($l => $l.children);
 
     let pathLengths = $paths.map($p => $p.strokeLength);
     let speed = [4, 6];
