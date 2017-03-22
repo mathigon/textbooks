@@ -1,7 +1,5 @@
-# Mathigon Active
+# Mathigon Courses
 
-
-## Introduction
 Welcome to Mathigon! This repository contains all the textbook content for http://mathigon.org, including text, code, styling as well as image and media resources.
 
 ![Creative Commons Attribution-ShareAlike license](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png "CC BY-NC-SA")
