@@ -478,11 +478,11 @@ section#GT_6_2
   p.subsection You could imagine that it might not be possible to travel directly between two cities - without going via another city. In that case we no longer have a complete graph, and finding the number of Hamiltonian cycles, if they exist at all, becomes much more difficult.
 
 
-section
+section#GT_6_3
   .row.right
     .grow
       p So far we have ignored the fact that some cities might be further apart than others. In real life, however, this is a very important consideration: we don&rsquo;t just want to find <em>any</em> path but we want to find the shortest one. This is called the <strong>Travelling Salesman Problem</strong>. It has to be solved not only in transportation and logistics, but also when positioning transistors on microchips, to make faster computers, or when analysing the structure of #[x-gloss#dna DNA].
-      p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just <i data-var="tsn2|10|2,20,1">tsn2</i> cities there are <i>tsn2</i>! = <i>M.numberFormat(M.factorial(tsn2))</i> possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
+      p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just #[+var("tsn2|10|2,20,1") tsn2] cities there are #[+var tsn2]! = #[+var factorial(tsn2)] possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
     div(style="width: 220px"): x-media(lightbox, src="/resources/graphs-and-networks/images/microchip.jpg", width="210", height="365", credit="© Depositphotos / claudiodivizia")
 
 

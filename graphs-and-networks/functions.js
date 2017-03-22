@@ -982,6 +982,10 @@ fns.GT_6_2 = function(section, chapter) {
 
 };
 
+fns.GT_6_3 = function(section, chapter) {
+  section.model.set('factorial', x => numberFormat(factorial(x)));
+};
+
 fns.GT_6_4 = function(section, chapter) {
     let $box = $C('tsm-box', section.$el);
     let $svg = $T('svg', $box);
