@@ -2,12 +2,15 @@
 
 
 ## Introduction
-Welcome to Mathigon! This repository is where we create
+Welcome to Mathigon! This repository contains all the textbook content for http://mathigon.org, including text, code, styling as well as image and media resources.
 
+![Creative Commons Attribution-ShareAlike license](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png "CC BY-NC-SA")
+
+All text and code in this repo is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike license (CC BY-NC-SA) version 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Note that some third-party images or media may have more restrictive licenses.
 
 ## How to Contribute
 Thanks for your interest in contributing to Mathigon. There are many ways how you can help provide amazing educational content to students all around the world:
-* Research and write new chapters; we have a long list of planned topics at XXX.
+* Research and write new chapters.
 * Create graphics and diagrams.
 * Write code for interactive problems and animations.
 * Test and proofread chapters, and fix bugs and mistakes.
@@ -16,6 +19,8 @@ To contribute, you need to create a _GitHub account_, _fork_ this repository and
 
 
 ## Documentation
+
+We're still working on more detailed documentation!
 
 ### content.jade
 This file is the main content of every chapter, written in [Jade](http://jade-lang.com). It could consist of a series of `<section>`s which define the progress steps throughout the chapter.
@@ -27,9 +32,3 @@ This file contains additional data as well all interactive content for every cha
 * `gloss`
 * `hints`
 * `fns`
-
-### Media Resources
-
-## Style Guide
-TODO
-
