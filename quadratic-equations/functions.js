@@ -9,6 +9,7 @@ import Expression from 'expression';
 import xEquation from 'equation';
 import xEquationSystem from 'equation-system';
 import xCoordinateSystem from 'coordinate-system';
+import xCoordinateSketch from 'coordinate-sketch';
 
 
 // -----------------------------------------------------------------------------
@@ -20,7 +21,16 @@ export const bio = { };
 // -----------------------------------------------------------------------------
 // Glossary
 
-export const gloss = { };
+export const gloss = {
+
+  term: {},
+  variable: {},
+  coefficient: {},
+  degree: {},
+  quadratic: {}
+
+
+};
 
 
 // -----------------------------------------------------------------------------

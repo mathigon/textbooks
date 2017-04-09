@@ -2,7 +2,6 @@
 
 (c) 2017 Mathigon
 
-
 ---
 
 ## Introduction
@@ -28,9 +27,7 @@ Pick the chart that you think makes most sense:
 
 {.todo} Higher cost means lower demand, so the graph of the function moves downwards.
 
-
 ---{#s1}
-
 
 Economists did some market research and came up with the following equation that
 relates the price of skateboards to the demand:
@@ -72,9 +69,7 @@ _{.b.yellow}profit_ just in terms of the _{.b.orange}price_ of every skateboard:
 Notice that this equation contains _price_ as well as _price_[{sup}2]. Therefore
 it is called a __Quadratic Equation__.
 
-
 ---
-
 
 We want to find the value of price that produces the largest profit. We can
 start by creating a graph that shows the profit (on the _y_-axis) for a range of
@@ -88,9 +83,7 @@ the skateboards become too expensive, people no longer want to buy them and the
 profit falls again. SkateSum can maximise its profit by pricing the skateboards
 at approximately $<110>.
 
-
 ---
-
 
 ## Quadratic Equations
 
@@ -102,13 +95,26 @@ where `x` is a variable and `a`, `b` and `c` can be any numbers (including
 negative ones). Both `b` and `c` could be 0, but `a` can’t be 0 because then we
 would just have a linear equation.
 
-The graphs of quadratic equations will always have a “curved” shape like the
+The graph of a quadratic equation always has a “curved” shape like the
 one we saw before. This shape is called a __Parabola__.
 
-The simplest quadratic function is just `y = x^2`. If we plot this on a
-diagram, we get a simple, upward pointing parabola:
+The simplest quadratic function is `y = x^2`. If we plot this on a
+diagram, we get a simple, upward pointing parabola.
 
-  x-coordinate-system(x="-5 5 1" y="-1 7 1" fn="x^2")
+  x-coordinate-system.var(x="-5 5 1" y="-3 5 1" fn="${a}*x^2+(${b})*x+(${c})")
+
+Now try changing the values of _a_, _b_ and _c_ in the quadratic equation and
+see how the parabola changes:
+
+{.text-center} _y_ = ${a}{a|1|-4,4,0.1} _x_ 2 + ${b}{b|0|-4,4,0.1} _x_ +
+${c}{c|0|-4,4,0.1}
+
+To solve a quadratic equation, we have to find the points where _y_ = 0. These
+are the points where the graph of the parabola crosses the _x_-axis.
+
+While linear equations always have exactly one solution, we can see from the
+diagram that quadratic equations can sometimes have no solution, or even two
+solutions.
 
 In the following sections we will learn many different ways to solve quadratic
 equations and interpret their graphs.
@@ -116,11 +122,20 @@ equations and interpret their graphs.
   .img-block
     x-media(src="images/skater-2.jpg", width="400", height="352", credit="© Depositphotos")
 
-
 ---
 
-
 ## Taking Square Roots
+
+{.todo} Solving basic or simple quadratics involves using algebraic manipulation,
+the easiest way to see these is to look at a few examples.
+
+{.todo} Think:  identify the order of operations necessary to isolate the $x$x variable.  In this case we will deal with the subtraction then the square in that order.
+
+{.todo} Remember that all square roots can have a positive or negative answer.  Normally written $[+-]$[+−] 
+Just to remind you, What is $4^2$42 and what is $\left(-4\right)^2$(−4)2?   Hence $\sqrt{16}=\pm4$√16=±4  
+
+{.todo} Special note about exact solutions. For nearly all of our work with solutions to functions and equations it is standard practice to leave in exact form.  In this case, $\sqrt{106}$√106 is as far as we will go.  I cannot simplify the root any further.  In questions involving applications of quadratics we may be asked to evaluate the square root at the very end and then approximate to a specific number of decimal places, for example if we want the time taken to travel a certain distance, or an estimate of the area of a block of land.  
+
 
 Let’s calculate a few different values of squares:
 
@@ -215,6 +230,8 @@ If you look at the table above, you'll also notice that `x^2` is always positive
 x^2 = -10 have _no solution at all_. There is no number x which, when squared,
 is negative.
 
+  x-coordinate-sketch(validate="quadratic:2,-4,1")
+
 ---
 
 Here are some more examples of quadratic equations with different numbers of
@@ -308,6 +325,11 @@ What are the two solutions of the equation above?
 ---
 
 ## Factorising
+
+{.todo} Find solutions to, $\left(x-6\right)\left(x-2\right)=0$(x−6)(x−2)=0 The property of $0$0 is very special.  The ONLY way two things that are being multiplied can have the answer of $0$0, is if one, or both of those things are $0$0 themselves. So if I have $2$2 factors, like $\left(x-6\right)$(x−6) and $\left(x-2\right)$(x−2) above, and I multiply them together and they equal $0$0. Then one of those factors $\left(x-6\right)$(x−6) or $\left(x-2\right)$(x−2) MUST be $0$0.  A written solution to a question like this would be similar to the following, 
+
+{.todo} The property of $0$0 is very special.  The ONLY way two things that are being multiplied can have the answer of $0$0, is if one, or both of those things are $0$0 themselves. So if I have $2$2 factors, like $a$a and $b$b , and I multiply them together and they equal $0$0. Then one of those factors $a$a or $b$b MUST be $0$0.  A written solution to a question like this would be similar to the following, If $a\times b=0$a×b=0 then $a=0$a=0   or  $b=0$b=0
+
 
 Here is a simple term containing the product of two sums. To simplify it, we
 have to match up all possible terms and add them up:
