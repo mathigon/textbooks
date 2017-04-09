@@ -381,7 +381,7 @@ fns.GT_2_0 = function(section, chapter) {
             afterError = false;
         });
 
-        $water.on('pointerEnter', function(e) {
+        $water.on('pointerenter', function(e) {
             if (!map.drawing) return;
             map.stop();
             let p = svgPointerPosn(e, $svg);
@@ -394,7 +394,7 @@ fns.GT_2_0 = function(section, chapter) {
             let enter = null;
             let crossed = false;
 
-            $bridge.on('pointerEnter', function(e) {
+            $bridge.on('pointerenter', function(e) {
                 if (map.drawing) {
                     enter = svgPointerPosn(e, $svg);
                     if (crossed) {
@@ -406,7 +406,7 @@ fns.GT_2_0 = function(section, chapter) {
                 }
             });
 
-            $bridge.on('pointerLeave', function(e) {
+            $bridge.on('pointerleave', function(e) {
                 if (map.drawing) {
                     let out = svgPointerPosn(e, $svg);
                     if (Point.distance(enter || out, out) < 40) {
@@ -587,7 +587,7 @@ fns.GT_3_0 = function(section, chapter) {
         let onThis = false;
         let dataType = $ut.attr('data-type');
 
-        $ut.on('pointerStart', function(e) {
+        $ut.on('pointerdown', function(e) {
             currentUtility = $ut;
             startUtility = $ut;
             e.preventDefault();
@@ -602,13 +602,13 @@ fns.GT_3_0 = function(section, chapter) {
             onThis = true;
         });
 
-        $ut.on('pointerLeave', function() {
+        $ut.on('pointerleave', function() {
             if (!onThis) return;
             map.drawing = true;
             onThis = false;
         });
 
-        $ut.on('pointerEnter', function() {
+        $ut.on('pointerenter', function() {
             if (!map.drawing || currentUtility == $ut) return;
             map.addPoint(p);
             map.stop();
