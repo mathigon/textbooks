@@ -146,8 +146,8 @@ section#GT_2_0
     .grow
       p One of the first mathematicians to think about graphs and networks was #[x-bio#euler Leonhard Euler]. Euler was intrigued by an old problem regarding the town of K&ouml;nigsberg near the Baltic Sea. #[span.lgrey (Today, the city is called Kaliningrad and located in Russia.)]
       p.quote The river Pregel divides Königsberg into four separate parts, which are connected by seven Bridges. Is it possible to walk around the city crossing every one of the bridges exactly once – but not more than once? You can start and finish anywhere, not necessarily in the same place.
-    div(style="width: 250px; margin-top: -5em;")
-      img(src="/resources/graphs-and-networks/images/konigsberg1.jpg" width="250" height="350" style="margin-top: 2.4em")
+    .konigsberg-img(style="width: 250px;")
+      img(src="/resources/graphs-and-networks/images/konigsberg1.jpg" width="250" height="350")
   p Try to find a valid route by drawing on this map:
   x-slideshow
     .slide
@@ -184,7 +184,7 @@ section
 
 
 section#GT_2_3
-  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss#order order]:
+  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss#degree degree]:
 
   .frame.fill(style="padding: 20px")
     .frame-body(style="margin-bottom: -18px;"): strong These graphs are possible:
