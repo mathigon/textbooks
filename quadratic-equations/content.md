@@ -95,6 +95,9 @@ where `x` is a variable and `a`, `b` and `c` can be any numbers (including
 negative ones). Both `b` and `c` could be 0, but `a` can’t be 0 because then we
 would just have a linear equation.
 
+{.todo} The variables, or pronumeral, are the letters or unknowns in an expression or equation.
+The coefficient is the number (whole, rational, irrational, real) in front of a variable.
+
 The graph of a quadratic equation always has a “curved” shape like the
 one we saw before. This shape is called a __Parabola__.
 
@@ -112,11 +115,19 @@ ${c}{c|0|-4,4,0.1}
 To solve a quadratic equation, we have to find the points where _y_ = 0. These
 are the points where the graph of the parabola crosses the _x_-axis.
 
-While linear equations always have exactly one solution, we can see from the
+{.todo} While linear equations always have exactly one solution, we can see from the
 diagram that quadratic equations can sometimes have no solution, or even two
 solutions.
 
-In the following sections we will learn many different ways to solve quadratic
+This interesting fact has to do with the properties of squares:
+
+* For every value of `x^2`, there are <two|three|one> possible values of `x` – a positive and a negative one.
+  For example, this means that if `x^2=`${x*x}{x|4|2,10,1}, we don't know if `x=`${x} or `x=`${-x}. In this case,
+  the quadratic equation has __two solutions__. As an abbreviation, we sometimes write `x=\pm`${x} ("x equals plus-minus ${x}").
+
+* Square numbers are always positive. This means that there is no number `x` that could satisfy `x^2 = -9`. This equation has __no solutions__.
+
+In the following sections we will learn a few different ways to solve quadratic
 equations and interpret their graphs.
 
   .img-block
@@ -126,140 +137,58 @@ equations and interpret their graphs.
 
 ## Taking Square Roots
 
-{.todo} Solving basic or simple quadratics involves using algebraic manipulation,
-the easiest way to see these is to look at a few examples.
+{.todo} When trying to solve equations, we often use _opposites_ of mathematical
+operators. For example, addition and subtraction are opposites, and
+multiplication and division are opposites. The opposite of taking squares are
 
-{.todo} Think:  identify the order of operations necessary to isolate the $x$x variable.  In this case we will deal with the subtraction then the square in that order.
-
-{.todo} Remember that all square roots can have a positive or negative answer.  Normally written $[+-]$[+−] 
-Just to remind you, What is $4^2$42 and what is $\left(-4\right)^2$(−4)2?   Hence $\sqrt{16}=\pm4$√16=±4  
-
-{.todo} Special note about exact solutions. For nearly all of our work with solutions to functions and equations it is standard practice to leave in exact form.  In this case, $\sqrt{106}$√106 is as far as we will go.  I cannot simplify the root any further.  In questions involving applications of quadratics we may be asked to evaluate the square root at the very end and then approximate to a specific number of decimal places, for example if we want the time taken to travel a certain distance, or an estimate of the area of a block of land.  
-
-
-Let’s calculate a few different values of squares:
-
-  table
-    tr
-      td #[em x]
-      td –4
-      td –3
-      td –2
-      td –1
-      td 0
-      td 1
-      td 2
-      td 3
-      td 4
-    tr
-      td #[em x]#[sup 2]
-      td 16
-      td 9
-      td 4
-      td 1
-      td 0
-      td 1
-      td 4
-      td 9
-      td 16
-
-There are two important points to notice when looking at this table:
-
-* For every value of _x_[{sup}2], there are _two_ corresponding values of _x_.
-  This means, for example, that the equation _x_[{sup}2] = 9
-* Squares are always positive. This means
-
-When trying to solve equations, we often use _opposites_ of mathematical
-operators like addition or multiplication. For example, addition of
-multiplication are opposites:
-
-  p.todo x - 3 = 5
-  p.todo   + 3 =   + 3   // Add 3 on both sides of the equation
-  p.todo x     = 5 + 3
-  p.todo x     = 8
-
-Similarly, multiplication and division are opposites:
-
-  p.todo x / 5 = 3
-  p.todo   * 5 =   * 5
-  p.todo x     = 3 * 5
-  p.todo x     = 15
-
+{.todo}
 The opposite of squaring a number is taking the square root. For example,
 5^2 = 25, so /25 = 5.
 
----
+For slightly more complex quadratic equations, we first need to isolate `x^2` on
+one side of the equation before taking square roots:
 
-Unfortunately, this is not quite the end – because (-5)^2 = (-5)*(-5) = +25.
-Using the same logic as above, we could say /25 = -5.
-
-  p.todo x^2 = 36
-  p.todo /(x^2) = +- /36
-  p.todo x = +- 6
-
-Unlike linear equations, which always had
-
-When solving linear equations, we often use "inverse operators": addition is
-the opposite of subtraction, and multiplication is the opposite of division.
-To solve quadratic equations we need square roots, the inverse operation of
-squaring. For example, 6^2 = 36, so /36 = 6.
-
-Unfortunately, things are not quite that simple with negative numbers. Lets
-calculate the square of a few positive and negative numbers:
-
-TABLE
-
-For every value of x^2, there are _em_ two  different corresponding values of x.
-For example, if x^2 = ${x^2}{x|4|2,10,1}, we could have x = ${x} or x = ${-x}.
-There is a special symbol to express this: x = ${'+-'+x} ("x equals plus-minus four").
-
----
-
-While linear equations always have a single solution, quadratic equations can
-have _two_ solutions. Whenever we take square roots of an equation, we have to
-remember to add a +-, because squaring ignores the sign.
-
-  p x^2 = 36
-  p /(x^2) = +- /(36)   // remember to add +- when taking square roots of an equation
-  p x = +- 6
-
----
-
-If you look at the table above, you'll also notice that `x^2` is always positive
-(remember that "minus times minus is plus"). This also means that equations like
-x^2 = -10 have _no solution at all_. There is no number x which, when squared,
-is negative.
-
-  x-coordinate-sketch(validate="quadratic:2,-4,1")
-
----
-
-Here are some more examples of quadratic equations with different numbers of
-solutions. The number of solutions can be visualised using the graph of the
-quadratic function.
-
-  p   x^2 - 9 = 0
-  p   x^2 = 9
-  p x = +- /9
-  p x = +- 3
-
-  p graph
-  p two solutions
-
----
-
-If we need to solve slightly more complex equations, we just need to bring them
-into the form x^2 = something, and take square roots like above:
-
-  p 3 * x^2 - 11 = 7
-  p 3 * x^2      = 18
-  p x^2      = 6
-  p x        = /6
-  p x        = 2.45
+{.eqn-system}
+| `3` | `x^2` | `-11` | `=` | `7`           | {.eqn-comment} add 11 to both sides |
+| `3` | `x^2` |       | `=` | `18`          | {.eqn-comment} divide both sides by 3 |
+|     | `x^2` |       | `=` | `6`           | {.eqn-comment} take square roots of both sides |
+|     | `x`   |       | `=` | `\pm\sqrt{6}` |
+|     |       |       | `=` | `\pm2.45`     |
 
 Here are some more examples for you to try:
 
+{.todo} Exercises under development
+
 ---
+
+## Factorising
+
+We've looked at lots of different ways to factorise quadratic equations, where we find the highest common factor between algebraic terms.
+
+Once we can factorise, we can solve equations algebraically to find the unknown value. To do this, we generally look for the values where $x=0$x=0. There is a great benefit to factorising quadratics in order to solve them, in order to understand why, we need to think about ZERO.
+
+The property of $0$0 is very special.  The ONLY way two things that are being multiplied can have the answer of $0$0, is if one, or both of those things are $0$0 themselves.  
+
+So if I have $2$2 factors, like $a$a and $b$b , and I multiply them together and they equal $0$0. Then one of those factors $a$a or $b$b MUST be $0$0.  A written solution to a question like this would be similar to the following, 
+
+If $a\times b=0$a×b=0 then $a=0$a=0   or  $b=0$b=0
+
+
+
+THE PROCESS
+
+Move all terms over to one side of the equation so one side equals $0$0.
+Factorise the terms.
+Solve for when $x=0$x=0.
+Let's look at this process with some examples.
+
+If $6x=0$6x=0, the solution would be $x=0$x=0 because $6\times0=0$6×0=0.
+
+If $x\left(x+4\right)=0$x(x+4)=0, there are two possible solution because either $x=0$x=0 or $x+4=0$x+4=0. So the solutions to this equation are $x=0$x=0 or $-4$−4.
+
+
+
+
 
 All equations in the previous section has something in common: they contained an
 x^2, but no x (without square). If an equation contains both, solving it is much
@@ -321,10 +250,7 @@ These are particularly easy to solve – we can just factorise  on its own:
 
 What are the two solutions of the equation above?
 
-
 ---
-
-## Factorising
 
 {.todo} Find solutions to, $\left(x-6\right)\left(x-2\right)=0$(x−6)(x−2)=0 The property of $0$0 is very special.  The ONLY way two things that are being multiplied can have the answer of $0$0, is if one, or both of those things are $0$0 themselves. So if I have $2$2 factors, like $\left(x-6\right)$(x−6) and $\left(x-2\right)$(x−2) above, and I multiply them together and they equal $0$0. Then one of those factors $\left(x-6\right)$(x−6) or $\left(x-2\right)$(x−2) MUST be $0$0.  A written solution to a question like this would be similar to the following, 
 
@@ -342,13 +268,150 @@ The result
 
 ## Completing the Square
 
-In some cases, factorising doesn't work: there simply aren't any
+In some cases, factorising doesn't work – sometimes there simply aren't numbers
+`p` and `q`. In these cases, there is a different way to solve quadratic
+equations: it is more work, but it is guaranteed to work.
+
+The basic idea is to use the binomial expansion
+
+{.text-center} `(x+m)^2 = x^2 + 2mx + m^2`
+
+Let's look at an example. The following quadratic equation can't be easily
+solved using factoring:
+
+{.text-center} `x^2 + 8x - 12 = 0`
+
+However, we can try making it look at bit more like the binomial expansion. The
+`x^2` term already matches. The `8x` term is `2mx` when `m=4`. Unfortunately
+the last term doesn't match: we'd want `m^2=4^2 = 16` but we have –12. However,
+we can just subtract the difference:
+
+{.text-center} `x^2 + 2×4×x + 4^2 - 4^2 - 12 = 0`
+
+The `+4^2` and `-4^2` simply cancel each other out, so we are not actually
+changing the equation. However, the first part now exactly matches the binomial
+expansion, so we can factor it:
+
+{.text-center} `(x+4)^2 - 4^2 - 12 = 0`
+
+Now we can simplify the equation and take square roots, almost like above:
+
+{.eqn-system}
+| `(x+4)^2` | `-28` | `=` | `0`            |
+| `(x+4)^2` |       | `=` | `28`           | {.eqn-comment} remember the ± when taking square roots! |
+| `x + 4`   |       | `=` | `\pm\sqrt{28}` |
+|           | `x`   | `=` | `\pm\sqrt{6} - 4` |
 
 ---
 
 ## The Quadratic Formula
 
-Todo
+Completing the square is long and complicated, and it is easy to make mistakes.
+Luckily, there is a shortcut that makes it a lot simpler!
+
+To find it, we need to repeat the process of completing the square, but leaving the coefficients
+as _a_, _b_ and _c_ rather than actual numbers. We'll 
+
+
+{.todo} The quadratic formula might seem quite complex when you first come across it, but it can be broken down into smaller parts.
+The ± allows for the possibility of two solutions
+The $b^2-4ac$b2−4ac under the square root sign is important as it will tell us how many solutions there are. This is known as the discriminant.
+The quadratic formula will come into use very often and so it is something you will need to remember.  Lots of people have different ways to remember it. One of them is in the quadratic formula song!
+
+---
+
+## Solving Quadratic Equations – Summary
+
+We now saw multiple different ways to solve quadratic equations, all of which
+have advantages and disadvantages:
+
+* __Basic Algebra__
+  This is the easiest way, but it only works for quadratic equations that don't
+  contain an _x_-term.
+  
+* __Factoring__
+  Also quite simply, but it takes some guesswork and it doesn't always work.
+  
+* __Completing the Square__
+  Very long and complicated. It is easy to make mistakes. In addition to finding
+  the solutions of an equation, it also tells us the vertex of the corresponding
+  parabola.
+  
+* __Quadratic Formula__
+  Straightforward formula that always work, but it sometimes feels like "magic"
+  and it is easy to forget why and how it works.
+  
+
+
+What We Already Know
+As we have seen with quadratic functions there can be 2, 1 or no real solutions.
+
+If we think about the graphs of quadratics, this means that there can be 2, 1 or no x-intercepts. As the solutions to a function are the places where the function crosses the x-axis, the x-intercepts.
+
+When we talk about solutions to quadratics, you will learn later of a condition of polynomials that says for a polynomial of degree n, there will be n roots. This means for quadratics we should always be expecting 2 solutions. How is it that we can have 1 and 0 solutions?
+
+Well,  the 1 solution is actually a representation of 2 equal roots, (sneaky, but still 2 roots).
+
+And the 0, well that would launch us into the world of complex numbers, because if there are no real solutions, such as if the roots were plus/minus $\sqrt{-3}$√−3 then this actually means 0 real solutions but that we would have 2 complex roots.  
+
+Suffice to say, that's a lot of maths you don't really need right now but you do need to understand that for
+
+2 real solutions, these are the 2 roots (the two $x$x-intercepts, where the quadratic passes through each point)
+1 real solution, provides the location of 2 equal roots, (the one $x$x-intercept where the quadratic just touches it at the turning point)
+0 real solutions, means there are no x-intercepts or real roots.  But there do exist 2 complex roots that you will learn to find out in later studies of mathematics.  
+Finding the number of solutions
+Finding the number of solutions to a quadratic, or usually if there are solutions at all can be done without having to work through all the algebra required to solve the function. 
+
+Lets look again at the quadratic formula
+
+
+
+Specifically lets look at what happens if the square root part ($\sqrt{b^2-4ac}$√b2−4ac) takes on different values. 
+
+
+
+If $b^2-4ac=0$b2−4ac=0, then the square root is 0, and then the quadratic equation becomes just $x=\frac{-b}{2a}$x=
+−b
+2a​.  One single root
+
+If $b^2-4ac>0$b2−4ac>0, then the square root will have two values, one for $+$+$\sqrt{b^2-4ac}$√b2−4ac and one for $-\sqrt{b^2-4ac}$−√b2−4ac.  The quadratic formula will then generate for us 2 distinct real roots.
+
+If  $b^2-4ac<0$b2−4ac<0, then the square root is negative.  And we know that we cannot take the square root of a negative number and get real solutions.  This is the case where we have 0 real roots.
+
+This component of the quadratic formula, ($b^2-4ac$b2−4ac) is called the discriminant, (also known as the  determinant),  determines the number of real solutions a quadratic function will have.
+
+Discriminant of a Quadratic
+$b^2-4ac=0$b2−4ac=0, 1 real solution, 2 equal roots, the quadratic touches the axis (looks like it bounced off)
+
+$b^2-4ac>0$b2−4ac>0, 2 real solutions, 2 distinct roots, the quadratic passes through each of the points on the axis
+
+$b^2-4ac<0$b2−4ac<0, 0 real solutions, 2 complex roots, the quadratic has no x-intercepts.  
+
+Here are some worked example questions.
+
+
+
+
+The quadratic formula states that x = \frac{}{}///
+
+The part of this formula under the square root sign is called the discriminant.
+The discriminant in a quadratic equation tells us important information about
+the nature of the roots/solutions in this equation.
+
+The discriminant is found using the following formula:
+$\Delta=b^2-4ac$Δ=b2−4ac
+
+Positive discriminant that's a perfect square
+Positive definite: two real rational solutions
+
+Positive discriminant that's not a perfect square
+Positive indefinite: two real irrational solutions
+
+Discriminant is 0	One real solution (may be rational or irrational)
+Negative discriminant	Indefinite: no real solutions (two imaginary solutions)
+
+
+
 
 ---
 
@@ -359,6 +422,8 @@ Let’s now design a small skate park, to try out our new SquareBoads. We’ve g
 and of course we want to make it as large as possible.
 
 {.todo} interactive diagram
+
+  // x-coordinate-sketch(validate="quadratic:2,-4,1")
 
 If we call the horizontal part of the fence _x_, then the vertical part has
 length [{x-equation.var(vars="x", fns="+ -")}]. The total area of the skate
@@ -402,6 +467,10 @@ want to find it’s _maximum_.
 ---
 
 ## Other stuff
+
+{.todo} Solve fractional equations that result in quadratics
+
+{.todo} quadratic substitutions
 
 {.todo} quadratic inequalities
 
@@ -457,6 +526,17 @@ basketballs, jets of water, or even rockets.
 ---
 
 ## More Applications
+
+
+
+Quadratic functions are used widely in science, business and engineering to model physical phenomena and how quantities change over time.  The physical parabolic shape of a quadratic can describe the movement of water in a fountain, the movement of a ball (and in fact any object thrown into the air), or the shape of satellite dishes.  
+
+In avalanche control, triggers are often fired onto a mountain face from an adjacent face to create an avalanche. What height does the trigger reach and where does it land? A quadratic can model this perfectly.
+
+Maximum and minimum values of quadratics are used in the study of moving objects and in acceleration and volume problems.  Business models also include quadratic functions and are used to help forecast profit and loss.  
+
+
+
 
 Many equations in physics or economics contain multiplication, and these
 multiplications often lead to squares. That’s why it should come at no surprise
