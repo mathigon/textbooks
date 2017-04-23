@@ -6,6 +6,7 @@
 
 import { $, $$, $C, $N } from 'elements';
 import Expression from 'expression';
+import { nearlyEquals } from 'arithmetic';
 import xEquation from 'equation';
 import xEquationSystem from 'equation-system';
 import xCoordinateSystem from 'coordinate-system';
@@ -41,6 +42,24 @@ export const hints = { };
 
 // -----------------------------------------------------------------------------
 // Functions
+
+function q(x, a, b, c) {
+  return a*x*x + b*x + c;
+}
+
+function zeros(a,b,c) {
+  let disc = b * b - 4 * a * c;
+  if (disc < 0) return '';
+
+  if (nearlyEquals(disc, 0, 0.1)) {
+    let x = -b/(2*a);
+    return `${x},${q(x,a,b,c)}`
+  }
+
+  let x1 = (-b + Math.sqrt(disc))/(2*a);
+  let x2 = (-b - Math.sqrt(disc))/(2*a);
+  return `${x1},${q(x1,a,b,c)}|${x2},${q(x2,a,b,c)}`
+}
 
 let PROPERTIES = {
   quadratic: [{
@@ -104,6 +123,16 @@ fns.s1 = function(section, chapter) {
   };
 
 };
+
+fns.s3 = function(section) {
+  section.model.set('zeros', zeros);
+
+  let $actions = section.$el.$$('.action');
+  $actions[0].on('click', function() { section.model.set('a', 1); section.model.set('b', -2); section.model.set('c', 2) });
+  $actions[1].on('click', function() { section.model.set('a', 1); section.model.set('b', 2); section.model.set('c', 1) });
+  $actions[2].on('click', function() { section.model.set('a', 1); section.model.set('b', -4); section.model.set('c', 2) });
+};
+
 
 
 export const sections = fns;

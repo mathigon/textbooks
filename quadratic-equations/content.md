@@ -18,19 +18,17 @@ start production. However building the skateboards is not cheap:
 
 The new skateboards are highly anticipated, but if the price is too high, fewer
 people will actually buy one. We can show this relationship on a simple chart
-with the cost of a skateboard on the x-axis, and the corresponding number of
-people who will buy one on the y-axis.
+with the cost of a skateboard on the _x_-axis, and the corresponding number of
+people who will buy one (the _demand_) on the _y_-axis.
 
-Pick the chart that you think makes most sense:
+{.todo} Multiple choice interactive  
+Pick the chart that you think makes most sense:  
+Exactly! Higher cost means lower demand, so the graph of the function moves downwards.
 
-{.todo} Multiple choice interactive
-
-{.todo} Higher cost means lower demand, so the graph of the function moves downwards.
-
----{#s1}
+---
 
 Economists did some market research and came up with the following equation that
-relates the price of skateboards to the demand:
+relates the _{.b.orange}price_ of skateboards to the _{.b.purple}demand_:
 
 {.text-center} _{.b.purple}demand_ = 5000 – 30 × _{.b.orange}price_
 
@@ -42,17 +40,22 @@ _{.b.green}revenue_ they make from selling skateboards, minus the _{.b.red}cost_
 which they have to spend to produce them. We can come up with equations for all
 of these values.
 
-The revenue is the number of units sold (the demand) times the price of each:
+The _{.b.green}revenue_ is the income they receive from selling skateboards:
+the number of units sold (the _{.b.purple}<demand|profit|cost>_) times the
+_{.b.orange}price_ of each:
 
-{.text-center} _{.b.green}revenue_ = _{.b.purple}demand_ × _{.b.orange}price_
+{.text-center.subsection(blank-1)}
+_{.b.green}revenue_ = _{.b.purple}demand_ × _{.b.orange}price_
 
-The cost is $2000 for buying tools and machines plus the $60 for every
+---{#s1}
+
+The _{.b.red}cost_ is $2000 for buying tools and machines plus the $60 for every
 skateboard they produce – and ideally this number should be equal to the demand:
 
 {.text-center} _{.b.red}cost_ = 2000 + 60 × _{.b.purple}demand_
 
-Finally, the profit is the difference between those two values. We can
-substitute the variables we have previously determined, and express total
+Finally, the profit is the difference between _{.b.green}revenue_ and
+_{.b.red}cost_. We can substitute the expressions above, and express total
 _{.b.yellow}profit_ just in terms of the _{.b.orange}price_ of every skateboard:
 
   x-equation-system
@@ -66,24 +69,26 @@ _{.b.yellow}profit_ just in terms of the _{.b.orange}price_ of every skateboard:
         td= '='
         td: x-equation.var(vars="profit revenue cost demand price", fns="+ - * ^")
 
-Notice that this equation contains _price_ as well as _price_[{sup}2]. Therefore
-it is called a __Quadratic Equation__.
+{.subsection(equation-1)} Notice that this equation contains _{.b.orange}price_
+as well as _{.b.orange}price_[{sup}2]. Therefore it is called a
+__Quadratic Equation__.
 
----
+---{#s2}
 
-We want to find the value of price that produces the largest profit. We can
-start by creating a graph that shows the profit (on the _y_-axis) for a range of
-possible different prices (on the _x_-axis):
+Now we want to find the value of _{.b.orange}price_ that produces the largest
+profit. Let's start by creating a graph that shows the _{.b.yellow}profit_ (on
+the _y_-axis) for a range of possible different _{.b.orange}prices_ (on the
+_x_-axis):
 
-  x-coordinate-system(x="-20 180 20" x-label="price" y="-100 100 20" y-label="profit" y-suffix="k" fn="-0.03 * x^2 + 6.8 * x - 302")
+  x-coordinate-system(x="-20 180 20" x-label="price" y="-100 100 20" y-label="profit" y-suffix="k" fn="-0.03 * x^2 + 6.8 * x - 302" regions="-20,0;60,-100|120,80;180,-20" crosshairs)
 
-If the price is 0, the “profit” is negative, because we’re just giving away
-expensive skateboards. As the price increases, our profit rises. However, if
-the skateboards become too expensive, people no longer want to buy them and the
-profit falls again. SkateSum can maximise its profit by pricing the skateboards
-at approximately $<110>.
+If the [price is 0](->#s2 .r1), the “profit” is negative, because we’re
+just giving away expensive skateboards for free. As the price increases, our
+profit rises, too. However, if the skateboards become [too expensive](->#s2 .r2),
+people no longer want to buy them and the profit falls again. SkateSum can
+maximise its profit by pricing the skateboards at approximately $<110>.
 
----
+---{#s3}
 
 ## Quadratic Equations
 
@@ -91,42 +96,40 @@ Quadratic equations are of the form
   
 {.text-center} `ax^2 + bx + c = 0`,
   
-where `x` is a variable and `a`, `b` and `c` can be any numbers (including
-negative ones). Both `b` and `c` could be 0, but `a` can’t be 0 because then we
-would just have a linear equation.
-
-{.todo} The variables, or pronumeral, are the letters or unknowns in an expression or equation.
-The coefficient is the number (whole, rational, irrational, real) in front of a variable.
+where `x` is a __variable__ and `a`, `b` and `c` can be any numbers (including
+negative ones), called __coefficients__. Both `b` and `c` could be 0, but
+`a` can’t be 0 because then we would just have <a linear equation|zero|no solution>.
 
 The graph of a quadratic equation always has a “curved” shape like the
-one we saw before. This shape is called a __Parabola__.
+one we saw before. This shape is called a __Parabola__. The simplest quadratic
+function is `y = x^2`. If we plot this on a diagram, we get a simple, upward
+pointing parabola:
 
-The simplest quadratic function is `y = x^2`. If we plot this on a
-diagram, we get a simple, upward pointing parabola.
-
-  x-coordinate-system.var(x="-5 5 1" y="-3 5 1" fn="${a}*x^2+(${b})*x+(${c})")
+  x-coordinate-system.var(x="-5 5 1" y="-3 5 1" fn="${a}*x^2+(${b})*x+(${c})" points="${zeros(a,b,c)}")
 
 Now try changing the values of _a_, _b_ and _c_ in the quadratic equation and
 see how the parabola changes:
 
-{.text-center} _y_ = ${a}{a|1|-4,4,0.1} _x_ 2 + ${b}{b|0|-4,4,0.1} _x_ +
-${c}{c|0|-4,4,0.1}
+{.text-center} `y =`${a}{a|1|-4,4,0.1} `x^2+`${b}{b|0|-4,4,0.1} `x+`${c}{c|0|-4,4,0.1}
 
+{.subsection(.var-1 .var-2 .var-3)}
 To solve a quadratic equation, we have to find the points where _y_ = 0. These
-are the points where the graph of the parabola crosses the _x_-axis.
+are the points where the graph of the parabola <crosses the x-axis|crosses the y-axis|turns around>.
+While linear equations always have exactly one solution, we can see from the
+diagram that quadratic equations can sometimes have and [{span.action}no solution],
+[{span.action}one solution], or even [{span.action}two solutions].
 
-{.todo} While linear equations always have exactly one solution, we can see from the
-diagram that quadratic equations can sometimes have no solution, or even two
-solutions.
+---
 
-This interesting fact has to do with the properties of squares:
+The different possible number of solutions has to do with the properties of squares:
 
-* For every value of `x^2`, there are <two|three|one> possible values of `x` – a positive and a negative one.
-  For example, this means that if `x^2=`${x*x}{x|4|2,10,1}, we don't know if `x=`${x} or `x=`${-x}. In this case,
-  the quadratic equation has __two solutions__. As an abbreviation, we sometimes write `x=\pm`${x} ("x equals plus-minus ${x}").
+* For every value of `x^2`, there are <two|three|one> possible values of `x`: a positive and a negative one.
+  For example, if `x^2=`${x*x}{x|4|2,10,1}, we don't know if `x=`${x} or `x=`${'–'+x}. In this case,
+  the quadratic equation has __two solutions__. As an abbreviation, we sometimes write `x=\pm`${x} (“_x_ equals plus-minus ${x}”).
 
-* Square numbers are always positive. This means that there is no number `x` that could satisfy `x^2 = -9`. This equation has __no solutions__.
+* {.subsection(blank-0)} Square numbers are always positive. This means that there <is no number|are multiple numbers> `x` that could satisfy `x^2 = -9`. This equation has __no solutions__.
 
+{.subsection(blank-1)}
 In the following sections we will learn a few different ways to solve quadratic
 equations and interpret their graphs.
 
@@ -137,16 +140,25 @@ equations and interpret their graphs.
 
 ## Taking Square Roots
 
-{.todo} When trying to solve equations, we often use _opposites_ of mathematical
+When trying to solve equations, we often use _opposites_ of mathematical
 operators. For example, addition and subtraction are opposites, and
-multiplication and division are opposites. The opposite of taking squares are
+multiplication and <division|addition|square roots> are opposites. The opposite
+of squaring a number is taking the square root. For example, `5^2 = 25`, so `\sqrt{25} = 5`.
 
-{.todo}
-The opposite of squaring a number is taking the square root. For example,
-5^2 = 25, so /25 = 5.
+This can help us to solve some simple quadratic equations:
 
-For slightly more complex quadratic equations, we first need to isolate `x^2` on
-one side of the equation before taking square roots:
+{.text-center} `x^2 - 25 = 0`
+
+First, we isolate `x^2` on one side of the equation:
+
+{.text-center} `x^2 = 25`
+
+Now we take square roots of both sides, remembering to add a ±:
+
+{.text-center} `x = \pm \sqrt{25}`  
+`x = \pm 5`
+
+Sometimes we have to do a bit more work to isolate `x^2`:
 
 {.eqn-system}
 | `3` | `x^2` | `-11` | `=` | `7`           | {.eqn-comment} add 11 to both sides |
@@ -155,114 +167,93 @@ one side of the equation before taking square roots:
 |     | `x`   |       | `=` | `\pm\sqrt{6}` |
 |     |       |       | `=` | `\pm2.45`     |
 
-Here are some more examples for you to try:
-
-{.todo} Exercises under development
+{.todo} Something about exactness and how to express solutions
 
 ---
 
 ## Factorising
 
-We've looked at lots of different ways to factorise quadratic equations, where we find the highest common factor between algebraic terms.
+Let's have a look at a slightly more complex quadratic equation
 
-Once we can factorise, we can solve equations algebraically to find the unknown value. To do this, we generally look for the values where $x=0$x=0. There is a great benefit to factorising quadratics in order to solve them, in order to understand why, we need to think about ZERO.
+{.text-center} `x^2 - 4x = 0`
 
-The property of $0$0 is very special.  The ONLY way two things that are being multiplied can have the answer of $0$0, is if one, or both of those things are $0$0 themselves.  
+This equation contains an x-term (target) as well as an x^2 term,
+which means that our previous method of isolating x^2 on one side
+and then taking square roots will no longer work.
 
-So if I have $2$2 factors, like $a$a and $b$b , and I multiply them together and they equal $0$0. Then one of those factors $a$a or $b$b MUST be $0$0.  A written solution to a question like this would be similar to the following, 
+But there is a different trick to help us - we can factorise one "x"
+out of both `x^2` and `4x`:
 
-If $a\times b=0$a×b=0 then $a=0$a=0   or  $b=0$b=0
+{.text-center} `x (x - 4) = 0`
 
+Now we can use a useful property of multiplication: if the product of
+two terms is 0, then one of the two terms must also be zero. There is
+no way you can get 0 by multiplying two numbers which are _both not 0_.
 
+{.todo} Image
 
-THE PROCESS
+In our example, this means that either `x = 0`, or `(x-4) = 0`. Therefore
+the quadratic equation has two solutions: `x=0` and `x=`<4>.
 
-Move all terms over to one side of the equation so one side equals $0$0.
-Factorise the terms.
-Solve for when $x=0$x=0.
-Let's look at this process with some examples.
+{.todo} Exercises
 
-If $6x=0$6x=0, the solution would be $x=0$x=0 because $6\times0=0$6×0=0.
+Here is another quadratic equation that can be solved using factoring:
 
-If $x\left(x+4\right)=0$x(x+4)=0, there are two possible solution because either $x=0$x=0 or $x+4=0$x+4=0. So the solutions to this equation are $x=0$x=0 or $-4$−4.
+{.text-center} `x^2 - 6x + 5 = 0`
 
+Unlike before, we cannot just factor out _x_, because we'd still have the
+5 at the end left over. Our solution needs to be a bit more clever:
 
+{.text-center} `(x - 3)(x - 2) = 0`
 
+If you expand those brackets, you will find that it is exactly the same.
+But now we can use the same trick for a product that is 0, to find that
+the quadratic equation has two solutions: `x=`<3> or `x=`<2>.
 
+Unfortunately, this doesn't explain how we found two numbers 2 and 3 that
+just _happened_ to work in the equation above. To work that out, we can
+work backwards:
 
-All equations in the previous section has something in common: they contained an
-x^2, but no x (without square). If an equation contains both, solving it is much
-harder:
+{.eqn-system}
+| `(x - P)(x - Q)` | `= 0` |
+| `x^2 - Qx - Px + P*Q` | `= 0` |
+| `x^2 - (P+Q)x + P*Q` | `= 0` |
 
-  p x^2 - 4x + 3 = 0
-  p x^2 = 4x - 3
-  p x = +- sqrt(4x - 3)
+{.todo} Let's start by revising how to simplify terms with brackets. For example
+The trick is simply to add up all possible pairs of numbers, while taking
+care to respect all minus signs:
 
-But this doesn't help us much - there is no way to simplify the
+Now, if we have a quadratic equation like `x^2-8x+15=0`, we can just compare
+the coefficient to see that we want P+Q=8 and P*Q=15. After a little bit of
+guesswork and trying different possibilities, we might find that one possible
+solution is P=3 and Q=5. Therefore,
 
-Let's start by revising how to simplify terms with brackets. For example
-x(2x + 3) = 2x^2 + 3x
+{.eqn-system}
+| `x^2-8x+15` | `= 0` |
+| `(x-3)(x-5)` | `= 0` |
+| `x-3=0` or `x-5` | `= 0` |
+| `x=3` or `x` | `= 5` |
 
-The trick is simply to add up all possible pairs of numbers, while taking care
-to respect all minus signs:
-ARROW IMAGE
+Finding the numbers P and Q always takes a little bit of guesswork, but in
+all the examples below it should be relatively straightforward.
 
-Try to expand this product and simplify the answer:
-(x + 5)(x - 2)
+{.todo} Exercises!
 
-This answer looks like part of a quadratic equation, and we can revert our work
-to solve quadratic equations:
-  
-  p x^2 + 3x - 10 = 0
-  p is the same as
-  p (x + 5)(x - 2)
+Try to find the missing number in these factorisation examples:
 
-Now comes the clever part: if the product of two numbers is 0, then at least one
-of these numbers has to be 0. If both are non-zero, then the product is also
-always non-zero. This means that either  or .
+{.text-center}
+x^2 + 3x + 2 = (x+1)(x+<1>)  
+x^2 + 5x + 4 = (x+4)(x+<1>)  
+x^2 - 8x + 15 = (x-3)(x-<1>)  
+x^2 - 5x - 14 = (x+2)(x-<1>)
 
-And thus possible solutions of the quadratic equation are
+{.todo} Some quadratic equations look completely ordinary to start with,
+but when we factorise them, we're only left with a single bracket:
+In these cases there is just a single solution for the quadratic equation.
 
-It is interesting to observe that quadratic equations, unlike linear equations,
-can have multiple solutions. You have to find them all to fully solve the
-equation. Here is a summary of what we've done:
-
-  p Start with a quadratic equation like .
-  p Find a way to write the equation as a product of two terms: .
-  p The product is 0, so one of the two factors has to be zero:  or .
-  p These are now both linear equations which we can solve: x = –5 or x = 2.
-  p And now it is your turn…
-
-The difficult part when factorising these quadratic equations is finding two
-numbers that work. However there is a simple pattern:
-
-This means that if we have a quadratic equation  then we have to find two
-numbers  and  so that  and .
-
-For example, in our original example we had . We can see that  and .
-
-Finding A and B can take some guesswork, but with a bit of practice it becomes
-quite easy. Try factorising this examples:
-
-Other quadratic equations contain both  and , but no constant term:
-
-These are particularly easy to solve – we can just factorise  on its own:
-
-What are the two solutions of the equation above?
-
----
-
-{.todo} Find solutions to, $\left(x-6\right)\left(x-2\right)=0$(x−6)(x−2)=0 The property of $0$0 is very special.  The ONLY way two things that are being multiplied can have the answer of $0$0, is if one, or both of those things are $0$0 themselves. So if I have $2$2 factors, like $\left(x-6\right)$(x−6) and $\left(x-2\right)$(x−2) above, and I multiply them together and they equal $0$0. Then one of those factors $\left(x-6\right)$(x−6) or $\left(x-2\right)$(x−2) MUST be $0$0.  A written solution to a question like this would be similar to the following, 
-
-{.todo} The property of $0$0 is very special.  The ONLY way two things that are being multiplied can have the answer of $0$0, is if one, or both of those things are $0$0 themselves. So if I have $2$2 factors, like $a$a and $b$b , and I multiply them together and they equal $0$0. Then one of those factors $a$a or $b$b MUST be $0$0.  A written solution to a question like this would be similar to the following, If $a\times b=0$a×b=0 then $a=0$a=0   or  $b=0$b=0
-
-
-Here is a simple term containing the product of two sums. To simplify it, we
-have to match up all possible terms and add them up:
-
-{.text-center} `(x+5)*(2x-1) = x*2x + 5*2x - x*1 - 5*1`
-
-The result
+{.todo} And finally, some quadratic equations actually have a coefficient
+in front of . This makes the factorisation a bit more difficult,
+but it still works the same way:
 
 ---
 
@@ -306,17 +297,57 @@ Now we can simplify the equation and take square roots, almost like above:
 
 ## The Quadratic Formula
 
+Completing the square can be tricky, and it is easy to make mistakes along the
+way.
+
+{.todo} Let's follow the steps when completing the square, but use _a_, _b_ and _c_
+as coefficients for the quadratic equation, rather than actual numbers:
+
+
 Completing the square is long and complicated, and it is easy to make mistakes.
 Luckily, there is a shortcut that makes it a lot simpler!
 
 To find it, we need to repeat the process of completing the square, but leaving the coefficients
 as _a_, _b_ and _c_ rather than actual numbers. We'll 
 
+{.eqn-system}
+| `ax^2 + bx +` |   | `c` | `= 0` |
+| `ax^2 + bx + \frac{b^2}{4a} - ` | `\frac{b^2}{4a} +` | `c` | `= 0` |
+| `a ( x^2 + \frac{b}{a}x + (\frac{b}{2a})^2) - ` | `\frac{b^2}{4a} +` | `c` | `= 0` |
+| `a ( x + \frac{b}{2a} )^2 - ` | `\frac{b^2}{4a} +` | `c` | `= 0` |
+| `a ( x + \frac{b}{2a} )^2 ` |   |   | `= \frac{b^2}{4a} - c` |
+| `a ( x + \frac{b}{2a} )^2 ` |   |   | `= \frac{b^2 - 4ac}{4a}` |
+| `( x + \frac{b}{2a} )^2 ` |   |   | `= \frac{b^2 - 4ac}{4a^2}` |
+| `x + \frac{b}{2a} ` |   |   | `= \pm \sqrt{\frac{b^2 - 4ac}{4a^2}}` |
 
-{.todo} The quadratic formula might seem quite complex when you first come across it, but it can be broken down into smaller parts.
-The ± allows for the possibility of two solutions
-The $b^2-4ac$b2−4ac under the square root sign is important as it will tell us how many solutions there are. This is known as the discriminant.
-The quadratic formula will come into use very often and so it is something you will need to remember.  Lots of people have different ways to remember it. One of them is in the quadratic formula song!
+| `x + \frac{b}{2a} ` |   |   | `= \pm \frac{\sqrt{b^2 - 4ac}}{2a}` |
+| `x ` |   |   | `= - \frac{b}{2a} \pm \frac{\sqrt{b^2 - 4ac}}{2a}` |
+| `x ` |   |   | `= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}` |
+
+These steps were ugly, painful, and you don't need to remember them (even
+though it was just the same as completing the square, just with variables).
+The result, however, was worth it: a single equation that tells us the
+solutions of _any_ quadratic equation. It is often called the __Quadratic Formula__:
+
+{.text-center#qformula} `x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}`
+
+To solve a quadratic equation, we just have to replace _a_, _b_ and _c_ with
+the actual numbers in our case, and then simplify the fraction.
+
+One particularly important part of the quadratic equation is
+the [term under the square root](->#qformula sqrt), which is often called
+the __discriminant__. Depending on the value of `b^2-4ac`, you can tell a lot
+about the solutions of a quadratic equation, without ever actually soling it.
+
+* If `b^2-4ac<0`, the quadratic equation has _no solutions_, because we cannot
+  take square roots of negative numbers.
+* If `b^2-4ac=0`, the quadratic equation has _one solution_, because `+\sqrt{0}`
+  and `-\sqrt{0}` are the same.
+* If `b^2-4ac>0`, the quadratic equation has _two solutions_ like before, one
+  when evaluating the quadratic formula with +, and one when evaluating it
+  with –.
+
+{.todo} Exercises
 
 ---
 
@@ -325,105 +356,125 @@ The quadratic formula will come into use very often and so it is something you w
 We now saw multiple different ways to solve quadratic equations, all of which
 have advantages and disadvantages:
 
-* __Basic Algebra__
+* __Basic Algebra__  
   This is the easiest way, but it only works for quadratic equations that don't
   contain an _x_-term.
   
-* __Factoring__
+* __Factoring__  
   Also quite simply, but it takes some guesswork and it doesn't always work.
   
-* __Completing the Square__
+* __Completing the Square__  
   Very long and complicated. It is easy to make mistakes. In addition to finding
   the solutions of an equation, it also tells us the vertex of the corresponding
   parabola.
   
-* __Quadratic Formula__
+* __Quadratic Formula__  
   Straightforward formula that always work, but it sometimes feels like "magic"
   and it is easy to forget why and how it works.
-  
+
+{.todo} Final Exercises
+
+---
+
+## Transformations of Quadratic Functions
+
+To better understand the relationship between quadratic equations and their
+corresponding graphs, we have to think about __transformations__. Any 
+
+All parabolas can be thought of as some transformation of the standard parabola which has the equation $y=x^2$y=x2.
 
 
-What We Already Know
-As we have seen with quadratic functions there can be 2, 1 or no real solutions.
+If we compare $y=x^2$y=x2 (whose vertex is at $\left(0,0\right)$(0,0)) to $y=a\left(x-h\right)^2+k$y=a(x−h)2+k, then we can think of the second equation and its graph as a transformation of $y=x^2$y=x2:
 
-If we think about the graphs of quadratics, this means that there can be 2, 1 or no x-intercepts. As the solutions to a function are the places where the function crosses the x-axis, the x-intercepts.
+$h$h represents the number of units that $y=x^2$y=x2 is translated horizontally, and
+$k$k represents the number of units that $y=x^2$y=x2 is translated vertically.  
+Note that with the direction of the translation:
 
-When we talk about solutions to quadratics, you will learn later of a condition of polynomials that says for a polynomial of degree n, there will be n roots. This means for quadratics we should always be expecting 2 solutions. How is it that we can have 1 and 0 solutions?
-
-Well,  the 1 solution is actually a representation of 2 equal roots, (sneaky, but still 2 roots).
-
-And the 0, well that would launch us into the world of complex numbers, because if there are no real solutions, such as if the roots were plus/minus $\sqrt{-3}$√−3 then this actually means 0 real solutions but that we would have 2 complex roots.  
-
-Suffice to say, that's a lot of maths you don't really need right now but you do need to understand that for
-
-2 real solutions, these are the 2 roots (the two $x$x-intercepts, where the quadratic passes through each point)
-1 real solution, provides the location of 2 equal roots, (the one $x$x-intercept where the quadratic just touches it at the turning point)
-0 real solutions, means there are no x-intercepts or real roots.  But there do exist 2 complex roots that you will learn to find out in later studies of mathematics.  
-Finding the number of solutions
-Finding the number of solutions to a quadratic, or usually if there are solutions at all can be done without having to work through all the algebra required to solve the function. 
-
-Lets look again at the quadratic formula
+if the equation is $y=\left(x+1\right)^2-3$y=(x+1)2−3, the horizontal translation is 1 unit to the left. 
+if the equation is $y=\left(x-1\right)^2-3$y=(x−1)2−3, the horizontal translation is 1 unit to the right.
 
 
-
-Specifically lets look at what happens if the square root part ($\sqrt{b^2-4ac}$√b2−4ac) takes on different values. 
-
+These movements are called transformations.  Transform means change, and these transformations change the simple quadratic $y=x^2$y=x2 into other quadratics by moving (translations), flipping (reflecting) and making the graph appear more or less steep (dilating).
 
 
-If $b^2-4ac=0$b2−4ac=0, then the square root is 0, and then the quadratic equation becomes just $x=\frac{-b}{2a}$x=
-−b
-2a​.  One single root
+$y=a\left(x-h\right)^2+k$y=a(x−h)2+k
+Is called turning point form.  
 
-If $b^2-4ac>0$b2−4ac>0, then the square root will have two values, one for $+$+$\sqrt{b^2-4ac}$√b2−4ac and one for $-\sqrt{b^2-4ac}$−√b2−4ac.  The quadratic formula will then generate for us 2 distinct real roots.
+it tells us the turning point immediately, and knowing the turning point we can draw a pretty good sketch of any quadratic
+it explains to us a number of transformations that have occurred to the quadratic from the simple quadratic $y=x^2$y=x2.
+Identifying transformations
 
-If  $b^2-4ac<0$b2−4ac<0, then the square root is negative.  And we know that we cannot take the square root of a negative number and get real solutions.  This is the case where we have 0 real roots.
+The form $y=a\left(x-h\right)^2+k$y=a(x−h)2+k shows us:
 
-This component of the quadratic formula, ($b^2-4ac$b2−4ac) is called the discriminant, (also known as the  determinant),  determines the number of real solutions a quadratic function will have.
+This lesson focuses on the connection between the equations of quadratics and their graphs, and how we can use the idea of  transformations to more easily identify and make sense of these quadratics.
 
-Discriminant of a Quadratic
-$b^2-4ac=0$b2−4ac=0, 1 real solution, 2 equal roots, the quadratic touches the axis (looks like it bounced off)
+The concavity of a parabola is determined by the $a$a value in the equation $y=ax^2$y=ax2.
 
-$b^2-4ac>0$b2−4ac>0, 2 real solutions, 2 distinct roots, the quadratic passes through each of the points on the axis
+$y=-x^2$y=−x2 vs $y=x^2$y=x2 : The sign of the coefficient $a$a determines whether the parabola is concave up or concave down. 
+ 
+$y=a\left(x-h\right)^2+k$y=a(x−h)2+k
 
-$b^2-4ac<0$b2−4ac<0, 0 real solutions, 2 complex roots, the quadratic has no x-intercepts.  
+$a$a determines concavity
 
-Here are some worked example questions.
+$k$k represents the vertical shift upwards or downwards (look at its sign to determine the direction)
+
+$h$h represents the horizontal shift to the right or to the left (look at its sign to determine the direction)
+
+Given a quadratic function and it's equation, there are many different questions
+we could ask about their properties:
+
+* Does the parabola point up or down?
+* What are the coordinates of the turning point?
+* Where does the parabola cross the x-axis (the _Zeros_)?
+* Where does the parabola cross the y-axis?
+* How stretched or squashed is the parabola?
+
+{.todo} Sketching a parabola from the equation
+
+  x-coordinate-sketch(validate="quadratic:2,-4,1")
+
+{.todo} Extracting the equation from a sketch
 
 
+Graphing the quadratic
+Let's look at the quadratic $y=-2\left(x-3\right)^2-3$y=−2(x−3)2−3
 
+Shape - we can see that the quadratic will be concave down because $a=-2$a=−2 which is < $0$0
 
-The quadratic formula states that x = \frac{}{}///
+Vertex - we can see that the quadratic will have turning point at $\left(3,-3\right)$(3,−3).  
 
-The part of this formula under the square root sign is called the discriminant.
-The discriminant in a quadratic equation tells us important information about
-the nature of the roots/solutions in this equation.
+With just these two pieces of information we can roughly sketch the curve.
 
-The discriminant is found using the following formula:
-$\Delta=b^2-4ac$Δ=b2−4ac
+But many parabolas are concave down and have a vertex at $\left(3,-3\right)$(3,−3). To be able to graph the parabola more accurately with the correct amount of steepness, we need another piece of information. We need another point on the graph. 
 
-Positive discriminant that's a perfect square
-Positive definite: two real rational solutions
+A common point to use would be the $y$y intercept.  
 
-Positive discriminant that's not a perfect square
-Positive indefinite: two real irrational solutions
+Remember
+$x$x intercept occurs where the value of $y$y is $0$0
+$y$y intercept occurs where the value of $x$x is $0$0
 
-Discriminant is 0	One real solution (may be rational or irrational)
-Negative discriminant	Indefinite: no real solutions (two imaginary solutions)
+Now we can sketch the curve.
+
+Using vertex $\left(3,-3\right)$(3,−3), the concave down shape and a $y$y intercept of $-21$−21 :
+
+As a hand drawn sketch, this shows all the information we need to sketch the quadratic.  
 
 
 
 
 ---
 
-## Geometric interpretation
+## Features of Quadratic Functions
 
-Let’s now design a small skate park, to try out our new SquareBoads. We’ve got
-50m of fence, as well as two existing walls we can use to enclose the area –
-and of course we want to make it as large as possible.
+Remember the skateboards we built at the beginning of this chapter? Some of the
+first prototypes are ready, so let's build a small skate park to try them out!
+We’ve got 50m of fence, as well as two existing walls of the factory building
+we can use to enclose the area.
 
 {.todo} interactive diagram
 
-  // x-coordinate-sketch(validate="quadratic:2,-4,1")
+Using mathematics we can work out what _x_ has to be, so that the area of the
+skate park is as large as possible.
 
 If we call the horizontal part of the fence _x_, then the vertical part has
 length [{x-equation.var(vars="x", fns="+ -")}]. The total area of the skate
@@ -434,6 +485,8 @@ park is
 Once again, we have a quadratic equation! Except, rather than solving it, we
 want to find it’s _maximum_.
 
+{.todo} Definition of vertex and turning point
+
 {.todo} Diagram, numeric solution
 
 {.todo} Scheitelpunktform und Grundform
@@ -442,41 +495,6 @@ want to find it’s _maximum_.
     .box-title: h3 Finding maxima and minima of quadratic functions
     .box-body
       p.todo Exercises under development…
-
-{.todo} Nullstellen
-
-  .box.problem-box
-    .box-title: h3 Finding the zeros of quadratic functions
-    .box-body
-      p.todo Exercises under development…
-
-{.todo} Vertex & axis of symmetry of a parabola
-
-{.todo} Forms & features of quadratic functions
-
-{.todo} Finding the vertex of a parabola in standard form
-
-{.todo} Comparing features of quadratic functions
-
-{.todo} Comparing maximum points of quadratic functions
-
-{.todo} Graphing parabolas
-
-{.todo} Intro to parabola transformations
-
----
-
-## Other stuff
-
-{.todo} Solve fractional equations that result in quadratics
-
-{.todo} quadratic substitutions
-
-{.todo} quadratic inequalities
-
-{.todo} absolute value equations
-
-{.todo} systems of quadratic equations
 
 ---
 
@@ -527,16 +545,11 @@ basketballs, jets of water, or even rockets.
 
 ## More Applications
 
-
-
 Quadratic functions are used widely in science, business and engineering to model physical phenomena and how quantities change over time.  The physical parabolic shape of a quadratic can describe the movement of water in a fountain, the movement of a ball (and in fact any object thrown into the air), or the shape of satellite dishes.  
 
 In avalanche control, triggers are often fired onto a mountain face from an adjacent face to create an avalanche. What height does the trigger reach and where does it land? A quadratic can model this perfectly.
 
 Maximum and minimum values of quadratics are used in the study of moving objects and in acceleration and volume problems.  Business models also include quadratic functions and are used to help forecast profit and loss.  
-
-
-
 
 Many equations in physics or economics contain multiplication, and these
 multiplications often lead to squares. That’s why it should come at no surprise
@@ -580,3 +593,10 @@ which the parabola and hyperbola are open and infinite.
 
 Quadratic equations are hidden everywhere in our world. Can you think of any
 other examples?
+
+
+  // Solve fractional equations that result in quadratics
+  // quadratic substitutions
+  // quadratic inequalities
+  // absolute value equations
+  // systems of quadratic equations
