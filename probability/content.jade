@@ -32,12 +32,12 @@ mixin dice(n)
     if n==2 || n==3 || n==4 || n == 5
       circle(r=2, cx=15, cy=15)
     if n == 6
-      circle(r=2, cx=6, cy=4)
-      circle(r=2, cx=6, cy=10)
-      circle(r=2, cx=6, cy=16)
-      circle(r=2, cx=14, cy=4)
-      circle(r=2, cx=14, cy=10)
-      circle(r=2, cx=14, cy=16)
+      circle(r=2, cx=5, cy=4)
+      circle(r=2, cx=5, cy=10)
+      circle(r=2, cx=5, cy=16)
+      circle(r=2, cx=15, cy=4)
+      circle(r=2, cx=15, cy=10)
+      circle(r=2, cx=15, cy=16)
 
 
 //- ---------------------------------------------------------------------------
@@ -126,7 +126,7 @@ section
   p Tossing a (fair) coin has two possible outcomes, #[em heads] and #[em tails], which are both equally likely. According to the equation above, the probability of a coin landing #[em heads] must be #[+frac(1, 2, true)] = 0.5, or 50%.
   //- TODO However, the equation is not very helpful if the different outcomes are not all equally likely, or if there are infinitely many possible outcomes.
 
-  p Note that this probability is #[em in between] 0 and 1, even though only one of the outcomes can actually happen. But probabilities have very little to fo with actual results: if we toss a coin many times we know that #[+blank('approximately half|exactly half|all|none')] of the results are heads – but we have no way of predicting #[em exactly which] tosses landed heads.
+  p Note that this probability is #[em in between] 0 and 1, even though only one of the outcomes can actually happen. But probabilities have very little to do with actual results: if we toss a coin many times we know that #[+blank('approximately half|exactly half|all|none')] of the results are heads – but we have no way of predicting #[em exactly which] tosses landed heads.
 
   p Even events with tiny probabilities (like winning the lottery #[+emoji('1f389')]) #[em can still happen] – and they #[em do happen] all the time (but to a very small proportion of the people who participate).
 
