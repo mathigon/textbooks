@@ -9,7 +9,7 @@ include ../mixins
 section
   h2 Introduction
   p #[strong Information] is everywhere around us, but it is difficult to define what exactly "information" #[em means]. Instead we can give examples of things that contain information: books and newspapers, numbers and charts, images, sound or film clips.
-  div(row)
+  div.row
     div(style="width: 80px"): img(width="100", height="100", src="xyz")
     div(style="width: 80px"): img(width="100", height="100", src="xyz")
     div(style="width: 80px"): img(width="100", height="100", src="xyz")
@@ -50,7 +50,7 @@ section
 
 
 
-section(data-id="CC_caesar")
+section#caesar_cipher
   h2 The Caesar Cipher
   p.todo TODO
 
@@ -75,11 +75,11 @@ section(data-id="CC_caesar")
             each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
               .freq-col: .letter.cipher= l
 
-    div(row)
-      .code-area(grow)
+    .row
+      .code-area.grow
         h3.code-title Plain Text
         .plain-text(contenteditable="true", placeholder="Start typing to create your first cypher …")
-      .code-area(grow)
+      .code-area.grow
         h3.code-title Enciphered Text
         .cipher-text
 
@@ -196,9 +196,4 @@ section
   Information entropy
   Compression codes
   Error correction
-
-
-
-
-
 

@@ -180,26 +180,28 @@
 #primefactor .td-border-bottom + tr td { padding-top: .5em; }
 
 
-#twins .twin { display: inline-block; }
-#twins .number-ball {
-    margin: 2px 0 2px 8px;
+.twin {
+    display: inline-block;
 
-    &:nth-child(odd):after {
-        content: "";
-        display: block;
-        width: 10px;
-        height: 4px;
-        position: absolute;
-        right: -9px;
-        top: 13px;
-        background: @red;
+    .number-ball {
+        margin: 2px 0 2px 8px;
+
+        &:nth-child(odd):after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 4px;
+            position: absolute;
+            right: -9px;
+            top: 13px;
+            background: @red;
+        }
+
+        &.blue:nth-child(odd):after { background: @blue; }
+        &.green:nth-child(odd):after { background: @green; }
+        &.yellow:nth-child(odd):after { background: @yellow; }
     }
-
-    &.blue:nth-child(odd):after { background: @blue; }
-    &.green:nth-child(odd):after { background: @green; }
-    &.yellow:nth-child(odd):after { background: @yellow; }
 }
-
 
 .bubble-pop {
     height: 300px;

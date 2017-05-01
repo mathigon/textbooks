@@ -106,7 +106,7 @@ export const gloss = {
 
     complete: {
         title: "Complete Graph",
-        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <span class='frac inline white'><span><em>n</em> × (<em>n</em> – 1)</span><span>2</span></span> edges.</p>"
+        text: "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <mfrac class='inline white'><mrow><mi>n</mi> × (<mi>n</mi> – 1)</mrow><mrow>2</mrow></mfrac> edges.</p>"
     },
 
     bipartite: {
@@ -343,9 +343,9 @@ fns.GT_2_0 = function(section, chapter) {
     section.addGoals('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3');
     let previousErrors = [];
 
-    $$C('slide', section.$el).forEach(function($el, i) {
+    section.$el.$$('.slide').forEach(function($el, i) {
 
-        let $svg = $el.children('svg')[0];
+        let $svg = $el.$('svg.frame');
         let $paths = $C('paths', $svg);
         let $water = $C('water', $svg);
         let $bridges = $$C('bridge', $svg);
@@ -357,7 +357,7 @@ fns.GT_2_0 = function(section, chapter) {
         let totalCrossed = 0;
         $error.exit();
 
-        var map = new Drawing($svg, { paths: $paths });
+        let map = new Drawing($svg, { paths: $paths });
         map.on('start', map.clear.bind(map));
         $el.find('.btn').on('click', function() { map.clear(); });
 
@@ -381,20 +381,20 @@ fns.GT_2_0 = function(section, chapter) {
             afterError = false;
         });
 
-        $water.on('pointerEnter', function(e) {
+        $water.on('pointerenter', function(e) {
             if (!map.drawing) return;
             map.stop();
-            var p = svgPointerPosn(e, $svg);
+            let p = svgPointerPosn(e, $svg);
             $error.translate(p.x - 20, p.y - 20);
             $error.enter('pop', 300);
             error('crossWater');
         });
 
         $bridges.forEach(function($bridge) {
-            var enter = null;
-            var crossed = false;
+            let enter = null;
+            let crossed = false;
 
-            $bridge.on('pointerEnter', function(e) {
+            $bridge.on('pointerenter', function(e) {
                 if (map.drawing) {
                     enter = svgPointerPosn(e, $svg);
                     if (crossed) {
@@ -406,7 +406,7 @@ fns.GT_2_0 = function(section, chapter) {
                 }
             });
 
-            $bridge.on('pointerLeave', function(e) {
+            $bridge.on('pointerleave', function(e) {
                 if (map.drawing) {
                     let out = svgPointerPosn(e, $svg);
                     if (Point.distance(enter || out, out) < 40) {
@@ -582,12 +582,12 @@ fns.GT_3_0 = function(section, chapter) {
     section.$el.find('button').on('click', clear);
 
     section.$el.findAll('.utility').forEach(function($ut) {
-        let $c = $ut.children(0);
+        let $c = $ut.children[0];
         let p = { x: +$c.attr('cx'), y: +$c.attr('cy') };
         let onThis = false;
         let dataType = $ut.attr('data-type');
 
-        $ut.on('pointerStart', function(e) {
+        $ut.on('pointerdown', function(e) {
             currentUtility = $ut;
             startUtility = $ut;
             e.preventDefault();
@@ -602,13 +602,13 @@ fns.GT_3_0 = function(section, chapter) {
             onThis = true;
         });
 
-        $ut.on('pointerLeave', function() {
+        $ut.on('pointerleave', function() {
             if (!onThis) return;
             map.drawing = true;
             onThis = false;
         });
 
-        $ut.on('pointerEnter', function() {
+        $ut.on('pointerenter', function() {
             if (!map.drawing || currentUtility == $ut) return;
             map.addPoint(p);
             map.stop();
@@ -879,7 +879,7 @@ fns.GT_5_1 = function(section, chapter) {
 
     section.$el.findAll('.slide').forEach(function($map, i) {
         let $count = $map.find('.colour-count');
-        let $countries = $map.find('.frame').children();
+        let $countries = $map.find('.frame').children;
         let $solve = $map.find('.solve');
 
         let countryIds = [];
@@ -980,6 +980,10 @@ fns.GT_6_2 = function(section, chapter) {
         return list(x, 1).join(' × ') + ' = ' + numberFormat(factorial(x));
     });
 
+};
+
+fns.GT_6_3 = function(section, chapter) {
+  section.model.set('factorial', x => numberFormat(factorial(x)));
 };
 
 fns.GT_6_4 = function(section, chapter) {

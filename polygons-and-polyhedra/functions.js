@@ -8,7 +8,7 @@ import { $, $$, $C, $N } from 'elements';
 import Draggable from 'draggable';
 import { Point, angle } from 'geometry';
 import { numberFormat, roundTo } from 'arithmetic';
-import setPicker from 'components/set-picker';
+import setPicker from 'set-picker';
 
 
 // -----------------------------------------------------------------------------

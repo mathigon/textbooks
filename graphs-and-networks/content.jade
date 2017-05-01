@@ -20,22 +20,22 @@ section#GT_0_0(data-gloss="graph vertex edge")
 
   x-gallery(slide-width="300")
     div
-      x-media(src="/resources/graphs-and-networks/images/network1.jpg", credit="© Depositphotos / chungking", width="200", height="200", lightbox)
+      x-media(src="/resources/graphs-and-networks/images/network1.jpg", credit="© Depositphotos / chungking", width="260", height="260", lightbox)
       p.caption Road and Rail Networks
     div
-      x-media(src="/resources/graphs-and-networks/images/network6.jpg", credit="© Depositphotos / anterovium", width="200", height="200", lightbox)
+      x-media(src="/resources/graphs-and-networks/images/network6.jpg", credit="© Depositphotos / anterovium", width="260", height="260", lightbox)
       p.caption Integrated Circuits
     div
-      x-media(src="/resources/graphs-and-networks/images/network3.jpg", credit="© Depositphotos / Klanneke", width="200", height="200", lightbox)
+      x-media(src="/resources/graphs-and-networks/images/network3.jpg", credit="© Depositphotos / Klanneke", width="260", height="260", lightbox)
       p.caption Supply Chains
     div
-      x-media(src="/resources/graphs-and-networks/images/network2.jpg", credit="© Depositphotos / Paha_L", width="200", height="200", lightbox)
+      x-media(src="/resources/graphs-and-networks/images/network2.jpg", credit="© Depositphotos / Paha_L", width="260", height="260", lightbox)
       p.caption Friendships
     div
-      x-media(src="/resources/graphs-and-networks/images/network7.jpg", credit="© Depositphotos / Leonardi", width="200", height="200", lightbox)
+      x-media(src="/resources/graphs-and-networks/images/network7.jpg", credit="© Depositphotos / Leonardi", width="260", height="260", lightbox)
       p.caption Neural Connections
     div
-      x-media(src="/resources/graphs-and-networks/images/network4.jpg", credit="© Depositphotos / kubais", width="200", height="200", lightbox)
+      x-media(src="/resources/graphs-and-networks/images/network4.jpg", credit="© Depositphotos / kubais", width="260", height="260", lightbox)
       p.caption The Internet
     // div
       x-media(src="/resources/graphs-and-networks/images/network5.jpg", lightbox)
@@ -117,7 +117,7 @@ section#GT_1_2
   p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] × #[+var n-1] = #[+var n * (n-1)] handshakes in total.
   p.var ${ handshakeTable(n) }
   .subsection
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[span.frac.inline #[span #[+var n] × #[+var n-1]]#[span 2]] = #[+var n*(n-1)/2].
+    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[mfrac.inline #[mrow #[+var n] × #[+var n-1]]#[mrow 2]] = #[+var n*(n-1)/2].
 
 
 section#GT_1_3
@@ -127,7 +127,7 @@ section#GT_1_3
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
-  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> × (<em>n</em> &#8211; 1)', '2')] edges.
+  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> × (<em>n</em> – 1)', '2')] edges.
 
 
 section#GT_1_4
@@ -146,8 +146,8 @@ section#GT_2_0
     .grow
       p One of the first mathematicians to think about graphs and networks was #[x-bio#euler Leonhard Euler]. Euler was intrigued by an old problem regarding the town of K&ouml;nigsberg near the Baltic Sea. #[span.lgrey (Today, the city is called Kaliningrad and located in Russia.)]
       p.quote The river Pregel divides Königsberg into four separate parts, which are connected by seven Bridges. Is it possible to walk around the city crossing every one of the bridges exactly once – but not more than once? You can start and finish anywhere, not necessarily in the same place.
-    div(style="width: 250px; margin-top: -5em;")
-      img(src="/resources/graphs-and-networks/images/konigsberg1.jpg" width="250" height="350" style="margin-top: 2.4em")
+    .konigsberg-img(style="width: 250px;")
+      img(src="/resources/graphs-and-networks/images/konigsberg1.jpg" width="250" height="350")
   p Try to find a valid route by drawing on this map:
   x-slideshow
     .slide
@@ -184,7 +184,7 @@ section
 
 
 section#GT_2_3
-  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss#order order]:
+  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss#degree degree]:
 
   .frame.fill(style="padding: 20px")
     .frame-body(style="margin-bottom: -18px;"): strong These graphs are possible:
@@ -455,7 +455,7 @@ section
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[span.frac.inline #[span #[+var tsn] × (#[+var tsn] – 1)]#[span 2]] = #[+var tsn*(tsn-1)/2} edges in total.
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[mfrac.inline #[mrow #[+var tsn] × (#[+var tsn] – 1)]#[mrow 2]] = #[+var tsn*(tsn-1)/2} edges in total.
 
       p The delivery truck has to visit all cities, in any order. In the Königsberg bridges problem we wanted to find paths which travel along #[em every edge] exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
 
@@ -478,11 +478,11 @@ section#GT_6_2
   p.subsection You could imagine that it might not be possible to travel directly between two cities - without going via another city. In that case we no longer have a complete graph, and finding the number of Hamiltonian cycles, if they exist at all, becomes much more difficult.
 
 
-section
+section#GT_6_3
   .row.right
     .grow
       p So far we have ignored the fact that some cities might be further apart than others. In real life, however, this is a very important consideration: we don&rsquo;t just want to find <em>any</em> path but we want to find the shortest one. This is called the <strong>Travelling Salesman Problem</strong>. It has to be solved not only in transportation and logistics, but also when positioning transistors on microchips, to make faster computers, or when analysing the structure of #[x-gloss#dna DNA].
-      p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just <i data-var="tsn2|10|2,20,1">tsn2</i> cities there are <i>tsn2</i>! = <i>M.numberFormat(M.factorial(tsn2))</i> possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
+      p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just #[+var("tsn2|10|2,20,1") tsn2] cities there are #[+var tsn2]! = #[+var factorial(tsn2)] possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
     div(style="width: 220px"): x-media(lightbox, src="/resources/graphs-and-networks/images/microchip.jpg", width="210", height="365", credit="© Depositphotos / claudiodivizia")
 
 
