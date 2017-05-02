@@ -1,5 +1,5 @@
 // =============================================================================
-// Mathigon.org | Codes and Ciphers
+// Mathigon | Codes and Ciphers
 // (c) 2017 Mathigon
 // =============================================================================
 
@@ -7,25 +7,7 @@
 import Evented from 'evented';
 import { clamp } from 'utilities';
 import { letterFrequency, caesarCipher } from 'cryptography';
-import { $, $$, $N } from 'elements';
-
-
-// -----------------------------------------------------------------------------
-// Biographies
-
-export const bio = { };
-
-
-// -----------------------------------------------------------------------------
-// Glossary
-
-export const gloss = { };
-
-
-// -----------------------------------------------------------------------------
-// Hints
-
-export const hints = { };
+import { $, $N } from 'elements';
 
 
 // -----------------------------------------------------------------------------
@@ -99,12 +81,9 @@ class CodeBox extends Evented {
 
 
 // -----------------------------------------------------------------------------
-// Functions
+// Section Functions
 
-const fns = {};
-
-fns.caesar_cipher = function(section) {
-
+export function caesar_cipher(section) {
   let $plain = $('.plain-text', section.$el);
   let $cipher = $('.cipher-text', section.$el);
 
@@ -129,7 +108,4 @@ fns.caesar_cipher = function(section) {
     shift = clamp(Math.round(-x/26) % 26, 0, 25);
     codeBox.set('cipher', caesarCipher(text, shift, 26));
   });
-
-};
-
-export const sections = fns;
+}

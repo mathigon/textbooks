@@ -1,6 +1,10 @@
 # Quadratic Equations
 
-(c) 2017 Mathigon
+stage: foundations
+description: Quadratic equations and functions are key concepts not only in mathematics but also in physics, engineering and technology.
+icon: courses/f-quadratics.png
+hero: images/hero.jpg
+tile: images/og-tile.jpg
 
 ---
 

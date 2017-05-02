@@ -1,0 +1,50 @@
+{
+  "factor": {
+    "title": "Factor",
+    "text": "<p>A number <em>a</em> is a factor (or divisor) of a number <em>b</em>, if you can divide <em>b</em> by <em>a</em> without remainder.</p>"
+  },
+  "divisor": {
+    "title": "Divisor",
+    "text": "<p>Divisor is just another name for <em>factor</em>.</p>"
+  },
+  "multiple": {
+    "title": "Multiple",
+    "text": "<p>A number <em>a</em> is a multiple of a number <em>b</em>, if <em>b</em> is a factor of <em>a</em>.</p>"
+  },
+  "prime": {
+    "title": "Prime Number",
+    "text": "<p>A prime number is an integer that has no divisors other than 1 and itself.</p>"
+  },
+  "primefactor": {
+    "title": "Prime Factor",
+    "text": "<p>A prime factor of a number is simply a factor which is prime.</p>"
+  },
+  "factorisation": {
+    "title": "Prime Factorisation",
+    "text": "<p>The prime factorisation of a number is a way to write it as a product of prime numbers.</p>"
+  },
+  "fta": {
+    "title": "Fundamental Theorem of Arithemtic",
+    "text": "<p>The FTA says that every integer has a unique prime factorisation.</p>"
+  },
+  "proof": {
+    "title": "Proof",
+    "text": "<p>A proof is a logical argument that shows beyond any doubt that a certain statement is true or false.</p>"
+  },
+  "lcm": {
+    "title": "Lowest Common Multiple",
+    "text": "<p>The lcm of two numbers <em>a</em> and <em>b</em> is the smallest integer that is a multiple of both <em>a</em> and <em>b</em>.</p>"
+  },
+  "gcd": {
+    "title": "Greatest Common Divisor",
+    "text": "<p>The gcd of two numbers <em>a</em> and <em>b</em> is the largest integer that is a divisor of both <em>a</em> and <em>b</em>.</p>"
+  },
+  "cryptography": {
+    "title": "Cryptography",
+    "text": "<p>Cryptography is an area of mathematics that‘s about enciphering and deciphering secret messages.</p>"
+  },
+  "twins": {
+    "title": "Twin Primes",
+    "text": "<p>Twin primes are pairs of prime numbers like 17 and 19 which are just 2 apart.</p>"
+  }
+}

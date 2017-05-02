@@ -1,0 +1,70 @@
+{
+  "graph": {
+    "title": "Graph",
+    "text": "<p>A graph is a collection of vertices connected by edges.</p>"
+  },
+  "vertex": {
+    "title": "Vertex",
+    "text": "<p>A vertex is a point or node that is part of a graph.</p>"
+  },
+  "edge": {
+    "title": "Edge",
+    "text": "<p>Edges are the lines that connect vertices (points) in a graph.</p>"
+  },
+  "directed": {
+    "title": "Directed Graph",
+    "text": "<p>In a directed graph, every edge as an arrow, i.e. a start vertex and an end vertex.</p>"
+  },
+  "subgraph": {
+    "title": "Subgraph",
+    "text": "<p>A graph is a subgraph of another graph, if it is formed by a subset of the larger graphs edges and vertices.</p>"
+  },
+  "complete": {
+    "title": "Complete Graph",
+    "text": "<p>In complete graphs, every vertex is connected to every other vertex. A complete graph with <em>n</em> vertices has <mfrac class='inline white'><mrow><mi>n</mi> × (<mi>n</mi> – 1)</mrow><mrow>2</mrow></mfrac> edges.</p>"
+  },
+  "bipartite": {
+    "title": "Bipartite Graph",
+    "text": "<p>Bipartite graphs consists of two sets of vertices. Every vertex is connected to all the vertices in the opposite set, but none of the vertices in its own set.</p>"
+  },
+  "proof": {
+    "title": "Proof",
+    "text": "<p>A proof is a logical argument that shows beyond any doubt that a certain statement is true or false.</p>"
+  },
+  "polyhedron": {
+    "title": "Polyhedron",
+    "text": "<p>A polyhedron is a three-dimensional solid that only has (flat) polygons as faces. For example, a cube and a pyramid are polyhedra, but a sphere is not.</p>"
+  },
+  "polygon": {
+    "title": "Polygon",
+    "text": "<p>A polygon is a shape which is bounded by straight lines. For example, a square is a polygon but a circle is not.</p><p>If all the sides of a polygon have the same length, it is called a <em>regular polygon</em>.</p>"
+  },
+  "dna": {
+    "title": "DNA",
+    "text": "<p>DNA (Deoxyribonucleic Acid) is a molceule that contains the genetic blueprint of all living organisms. Most DNAs consist of two strands forming a <em>double helix</em>.</p><p>Genetic information is encoded in the order of four nucleic acids (A, G, C and T) which make up the DNA.</p><p><em>DNA sequencing</em> is the process of extracting this information &#8211; an essential technique in biology, medicine, genetics and biotechnology.</p>"
+  },
+  "np": {
+    "title": "NP Hard Problems",
+    "text": "<p><em>Computational complexity theory</em> is about determining how &#8220;difficult&#8221; problems are to be solved by a computer.</p><p>&#8220;NP hard&#8221; (Non-deterministic Polynomial-time hard) is the class of the most difficult problems.</p>"
+  },
+  "order": {
+    "title": "Order",
+    "text": "<p>The <em>order</em> of a graph is the number of vertices in it.</p>"
+  },
+  "degree": {
+    "title": "Degree",
+    "text": "<p>The <em>degree</em> of a vertex is the number of edges that meet at that vertex.</p>"
+  },
+  "cycle": {
+    "title": "Cycle",
+    "text": "<p>Cycles are graphs that consist of a single ring of vertices.</p>"
+  },
+  "subdivision": {
+    "title": "Subdivisions",
+    "text": "<p>To create a <em>subdivision</em> of a graph you add additional vertices along its edges.</p>"
+  },
+  "millennium-prize": {
+    "title": "Millennium Prize Problems",
+    "text": "<p>There are seven Millennium Prize Problems which were stated in 2000 by the Clay Mathematics Institute:</p><ul><li>P vs NP</li><li>The Hodge Conjecture</li><li>The Poincar&eacute; Conjecture</li><li>The Riemann Hypothesis</li><li>Yang-Mills Existence and Mass Gap</li><li>Navier-Stokes Existence and Smoothness</li><li>The Birch and Swinnerton-Dyer Conjecture</li></ul><p>Each problem holds $1m prize money. Only one, the Poincar&eacute; Conjecture, was solved so far, but the mathematician Grigori Perelman declined the award.</p>"
+  }
+}

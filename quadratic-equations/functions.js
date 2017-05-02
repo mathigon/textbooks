@@ -1,6 +1,6 @@
 // =============================================================================
-// Mathigon | Quadratic Equations Functions
-// (c) 2016 Mathigon
+// Mathigon | Quadratic Equations
+// (c) 2017 Mathigon
 // =============================================================================
 
 
@@ -14,34 +14,7 @@ import xCoordinateSketch from 'coordinate-sketch';
 
 
 // -----------------------------------------------------------------------------
-// Biographies
-
-export const bio = { };
-
-
-// -----------------------------------------------------------------------------
-// Glossary
-
-export const gloss = {
-
-  term: {},
-  variable: {},
-  coefficient: {},
-  degree: {},
-  quadratic: {}
-
-
-};
-
-
-// -----------------------------------------------------------------------------
-// Hints
-
-export const hints = { };
-
-
-// -----------------------------------------------------------------------------
-// Functions
+// Shared Utilities
 
 function q(x, a, b, c) {
   return a*x*x + b*x + c;
@@ -101,12 +74,9 @@ function compare(params, paramsExp, type) {
 
 
 // -----------------------------------------------------------------------------
-// Sections
+// Section Functions
 
-const fns = {};
-
-fns.s1 = function(section, chapter) {
-
+export function s1(section) {
   let correct = new Expression('-30 price^2 + 6800 price - 302000');
 
   let substitutions = {
@@ -121,18 +91,13 @@ fns.s1 = function(section, chapter) {
     let substituted = expr.substitute(substitutions);
     if (!substituted.numEquals(correct)) return {error: true};
   };
+}
 
-};
-
-fns.s3 = function(section) {
+export function s3(section) {
   section.model.set('zeros', zeros);
 
   let $actions = section.$el.$$('.action');
   $actions[0].on('click', function() { section.model.set('a', 1); section.model.set('b', -2); section.model.set('c', 2) });
   $actions[1].on('click', function() { section.model.set('a', 1); section.model.set('b', 2); section.model.set('c', 1) });
   $actions[2].on('click', function() { section.model.set('a', 1); section.model.set('b', -4); section.model.set('c', 2) });
-};
-
-
-
-export const sections = fns;
+}

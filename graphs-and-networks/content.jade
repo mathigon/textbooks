@@ -1,13 +1,44 @@
 //- ============================================================================
-//- Mathigon | Graphs and Networks Content
-//- (c) 2016 Mathigon
+//- Mathigon | Graphs and Networks
+//- (c) 2017 Mathigon
 //- ============================================================================
 
 
-include ../mixins
+mixin frac(a,b,inline)
+  if inline
+    mfrac.inline
+      mrow!= a
+      mrow!= b
+  else
+    mfrac
+      mrow!= a
+      mrow!= b
+
+mixin blank(choices)
+  x-blank(choices=choices)
+
+mixin var(bind)
+  if bind
+    x-var(bind=bind)
+      | ${
+      block
+      | }
+  else
+    span.var
+      | ${
+      block
+      | }
+
+mixin input(answer)
+  x-blank(input=answer)
+
 
 section#GT_0_0(data-gloss="graph vertex edge")
-  +intro
+
+  .chapter-intro
+    span.user Remember to #[x-target(to=".nav-link.dropdown-title") login] to save your progress and get personalised content.
+    | &nbsp;
+    span.size This textbook works best on larger devices like tablets or laptops.
 
   h2 Introduction
 
@@ -648,3 +679,19 @@ section
       p In 1967, #[x-bio#milgram Stanley Milgram] conducted a first empirical experiment, where 296 participants living in Nebraska and Kansas were asked to deliver a letter to a particular person living in Boston, Massachusetts. They all had to choose a friend to send the letter to, who then picked another friend. At every step, the letter moved closer to Boston. Milgram found that there were, on average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
 
   p Today, every one of us is part of countless invisible graphs, which underly our social interactions, travel, internet and technology, science, and so much more.
+
+
+//- TODOs
+
+  - Graph Scale Parameters
+  - Bridges of Konigsberg: Graph Drawing Interactive
+  - Hamiltonian Cycles diagrams
+  - Travelling Salesman Interactive
+  - Greedy and 2-opt algorithm diagrams
+  - Ant algorithm diagrams
+
+  Subgraphs (It was not immediately clear to me how the graphs were related to one another in the interactive section. Small labels could help or perhaps it would be useful as a matching game. Line the 3 graphs on one side facing the 3 subgraphs and ask the reader to match the subgraph to its graph.)
+
+  This may have been intentional, but the proof really glosses over many details. Reading as someone with a solid math background, I was not satisfied with the proof as it is laid out and I think that someone who is really trying to understand what's going on will also be left feeling duped. Even if it is too complicated to show the entire proof, perhaps there should be a link to an easy-to-read account of the proof? And/or be upfront about how many details are missing so the reader knows there is more to the story. "We have shown that, whichever way we add new vertices, Euler’s equation is valid. Therefore it is valid for all graphs." But we really only saw a few possible cases and this account does not prove the theorem.
+
+  I think this part could be explained in a bit more detail: "Finding a fast and exact algorithm would have serious implications in the field of computer science: it would mean that there are fast algorithms for all NP-hard problems. " ie, why does it imply a fast algorithm for all NP-hard problems and how many NP-hard problems are there?

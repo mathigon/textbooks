@@ -1,0 +1,78 @@
+{
+  "polygon": {
+    "title": "Polygon",
+    "text": "<p>A geometric shape that is made up of straight line segments.</p>"
+  },
+  "regpoly": {
+    "title": "Regular Polygon",
+    "text": "<p>A polygon in which all edges have the same length.</p>"
+  },
+  "square": {
+    "title": "Square",
+    "text": "<p>A regular quadrilateral: all edges and all angles have the same size.</p>"
+  },
+  "equilateral": {
+    "title": "Equilateral Triangle",
+    "text": "<p>A regular triangle: all sides have the same size.</p>"
+  },
+  "intangle": {
+    "title": "Internal Angle",
+    "text": "<p>The angles on the inside at every vertex of a polygon.</p>"
+  },
+  "quadrilateral": {
+    "title": "Quadrilateral",
+    "text": "<p>A polygon with four sides.</p>"
+  },
+  "trapezium": {
+    "title": "Trapezium",
+    "text": "<p>A quadrilateral in which a pair of opposite edges are parallel.</p>"
+  },
+  "parallelogram": {
+    "title": "Parallelogram",
+    "text": "<p>A quadrilateral in which both pairs of opposite edges are parallel.</p>"
+  },
+  "kite": {
+    "title": "Kite",
+    "text": "<p>A quadrilateral in which two pairs of adjacent edges have the same length.</p>"
+  },
+  "rectangle": {
+    "title": "Rectangle",
+    "text": "<p>A quadrilateral in which all angles are 90°.</p>"
+  },
+  "rhombus": {
+    "title": "Rhombus",
+    "text": "<p>A quadrilateral in which all edges have the same length.</p>"
+  },
+  "edge": {
+    "title": "Edge",
+    "text": "<p>The “sides” of a polygon or “lines” of a polyhedron.</p>"
+  },
+  "vertex": {
+    "title": "Vertex",
+    "text": "<p>The “corners” of a polygon or polyhedron.</p>"
+  },
+  "face": {
+    "title": "Face",
+    "text": "<p>The polygons which are “sides” of a polyhedron.</p>"
+  },
+  "tessellation": {
+    "title": "Tessellation",
+    "text": "<p>A geometric pattern that covers a surface without gaps or overlaps.</p>"
+  },
+  "penrose": {
+    "title": "Penrose tilings",
+    "text": "<p>A non-periodic, self-similar tessellation.</p>"
+  },
+  "polyhedron": {
+    "title": "Polyhedron",
+    "text": "<p>A 3-dimensional solids in which all faces are polygons.</p>"
+  },
+  "platonic": {
+    "title": "Platonic Solid",
+    "text": "<p>A polyhedron made up of only one kind of regular polygon, that looks the same from every direction.</p>"
+  },
+  "archimedean": {
+    "title": "Archimedean Solid",
+    "text": "<p>A polyhedron made up of different kinds of regular polygons, that looks the same from every direction.</p>"
+  }
+}

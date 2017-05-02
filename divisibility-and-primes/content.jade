@@ -1,10 +1,8 @@
 //- ============================================================================
-//- Mathigon | Divisibility and Primes Content
-//- (c) 2016 Mathigon
+//- Mathigon | Divisibility and Primes
+//- (c) 2017 Mathigon
 //- ============================================================================
 
-
-include ../mixins
 
 mixin grid(n, fn)
   .number-grid
@@ -34,11 +32,34 @@ mixin divisor-table(divisors, pairs)
         if i
           td(colspan=i)
 
+mixin blank(choices)
+  x-blank(choices=choices)
+
+mixin var(bind)
+  if bind
+    x-var(bind=bind)
+      | ${
+      block
+      | }
+  else
+    span.var
+      | ${
+      block
+      | }
+
+mixin input(answer)
+  x-blank(input=answer)
+
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
 section#divisibility1(data-gloss="factor multiple divisor")
-  +intro
+
+  .chapter-intro
+    span.user Remember to #[x-target(to=".nav-link.dropdown-title") login] to save your progress and get personalised content.
+    | &nbsp;
+    span.size This textbook works best on larger devices like tablets or laptops.
+
   h2 Factors and Multiples
 
   p By now you should be comfortable with basic integer arithmetic and addition, subtraction and multiplication. Division is slightly different, because you  can’t always divide any integer by any other. For example 17 divided by 3 is not a whole number – it is somewhere in between 5 and 6. You either have to give a remainder (2), or express the answer as a decimal number (5.66).
@@ -690,7 +711,7 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section#goldbach
+section#goldbach1
 
   h2 Mysteries and Unsolved Problems
 

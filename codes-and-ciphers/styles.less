@@ -1,6 +1,8 @@
-// =================================================================================================
-// GRAPH THEORY
-// =================================================================================================
+// =============================================================================
+// Mathigon | Codes and Ciphers
+// (c) 2017 Mathigon
+// =============================================================================
+
 
 @red:    #b30469;  // Ruby
 @blue:   #1f7aff;  // Blue Ribbon
@@ -10,19 +12,19 @@
 
 [contenteditable] { outline: none; }
 
-// =================================================================================================
+// =============================================================================
 
 .letter, .word {
-    display: inline-block;
-    background: @blue;
-    color: #FFF;
-    font-weight: 600;
-    text-align: center;
-    height: 20px;
-    box-sizing: border-box;
-    font-size: 14px;
-    border-radius: 2px;
-    padding: 1px 0 0;
+  display: inline-block;
+  background: @blue;
+  color: #FFF;
+  font-weight: 600;
+  text-align: center;
+  height: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 1px 0 0;
 }
 
 .letter { width: 20px; }
@@ -32,11 +34,11 @@
 .letter.cipher, .word.cipher { background: @red; }
 
 .letter-bar {
-    position: absolute;
-    bottom: 3px;
-    opacity: 0.6;
-    width: 8px;
-    left: 5px;
+  position: absolute;
+  bottom: 3px;
+  opacity: 0.6;
+  width: 8px;
+  left: 5px;
 }
 
 .letter-bar.plain { background: @blue; }
@@ -46,46 +48,46 @@
 .cipher-letter { display: inline-block; }
 
 .cipher-letter.hover {
-    color: #000;
-    padding: 0 3px;
-    margin: 0 -3px;
-    border-radius: 2px;
+  color: #000;
+  padding: 0 3px;
+  margin: 0 -3px;
+  border-radius: 2px;
 }
 
 .plain-text .cipher-letter.hover { background: fade(@blue, 30%); }
 .cipher-text .cipher-letter.hover { background: fade(@red, 30%); }
 
-// =================================================================================================
+// =============================================================================
 
 .code-play {
-    background: #E9E9EA;
-    padding: 1em 1em 1px;
-    margin: 1.5em 0;
+  background: #E9E9EA;
+  padding: 1em 1em 1px;
+  margin: 1.5em 0;
 }
 
 .freq-table-wrap {
-    margin: 0 0 1em;
-    overflow: auto;
+  margin: 0 0 1em;
+  overflow: auto;
 }
 
 .freq-table {
-    width: 676px;
-    margin: 0 auto;
+  width: 676px;
+  margin: 0 auto;
 }
 
 .freq-table-chart {
-    height: 80px;
+  height: 80px;
 }
 
 .freq-table-plain, .freq-table-cipher {
-    height: 26px;
-    overflow: hidden;
+  height: 26px;
+  overflow: hidden;
 }
 
 .freq-col {
-    float: left;
-    width: 26px;
-    position: relative;
+  float: left;
+  width: 26px;
+  position: relative;
 }
 
 .freq-col.hover { background: #CCC; }
@@ -99,33 +101,32 @@
 .freq-table .gallery-slide { padding: 0; }
 
 .code-area {
-    border: 1px solid #FFF;
-    background: fade(#FFF, 50%);
-    border-radius: 0;
-    min-height: 150px; 
-    padding: 3px 6px;
+  border: 1px solid #FFF;
+  background: fade(#FFF, 50%);
+  border-radius: 0;
+  min-height: 150px;
+  padding: 3px 6px;
 }
 
 .code-title {
-    color: #999;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin: 3px 0 5px;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 3px 0 5px;
 }
 
 .code-play textarea {
-    width: 100%;
-    background: 0;
-    padding: 0;
-    min-height: 130px;
-    resize: none;
+  width: 100%;
+  background: 0;
+  padding: 0;
+  min-height: 130px;
+  resize: none;
 }
 
 #letter-slider {
-    width: 100%;
-    height: 26px;
-    position: absolute;
-    top: 0;
+  width: 100%;
+  height: 26px;
+  position: absolute;
+  top: 0;
 }
-
