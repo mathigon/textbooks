@@ -346,7 +346,7 @@ section(data-gloss="primefactor factorisation fta")
 section#eratosthenes
   h2 The Sieve of Eratosthenes
 
-  p It turned out to be quite difficult to determine if a number is prime: you always had to find #[em all] its prime factors, which gets more and more challenging as the numbers get bigger. Instead, the Greek mathematician #[x-bio#eratosthenes Eratosthenes of Cyrene] came up with a simple algorithm to find all prime numbers up to 100: the #[strong Sieve of Eratosthenes].
+  p It turned out to be quite difficult to determine if a number is prime: you always had to find #[em all] its prime factors, which gets more and more challenging as the numbers get bigger. Instead, the Greek mathematician #[x-bio(xid='eratosthenes') Eratosthenes of Cyrene] came up with a simple algorithm to find all prime numbers up to 100: the #[strong Sieve of Eratosthenes].
 
   x-slideshow
     .stage
@@ -371,7 +371,7 @@ section(data-gloss="proof")
     .grow
       p Of course we can also use the Sieve of Eratosthenes to find larger prime numbers. There are 21 primes between 100 and 200, 16 primes between 200 and 300, 17 primes between 400 and 500 and only 11 between 10,000 and 10,100.
       p The primes seem to keep getting more and more spread out, but do they ever stop? Is there a #[em biggest] or a #[em last] prime number?
-      p The ancient Greek mathematician #[x-bio#euclid Euclid of Alexandria] first proved that there are infinitely many prime numbers, using the following argument:
+      p The ancient Greek mathematician #[x-bio(xid='euclid') Euclid of Alexandria] first proved that there are infinitely many prime numbers, using the following argument:
     div(style="width: 220px;")
       x-media(lightbox, width="220", height="300", src="/resources/divisibility-and-primes/images/euclid.jpg")
 
@@ -408,7 +408,7 @@ section#primeTest
 section
   .row
     .grow
-      p Throughout history, people have tried to calculate larger and larger primes. In 1460, the largest known prime number was 131,071. In 1772, #[x-bio#euler Leonard Euler] showed that 2,147,483,647 is prime.
+      p Throughout history, people have tried to calculate larger and larger primes. In 1460, the largest known prime number was 131,071. In 1772, #[x-bio(xid='euler') Leonard Euler] showed that 2,147,483,647 is prime.
       p With the arrival of computers in the 20th century, calculating large primes became much faster and easier. Currently, the largest known prime number has 22,338,618 digits – you would need 5000 sheets of paper to print it out! It was discovered in September 2015 using a network of many thousands of computers around the world, run by volunteers, students and universities.
 
     div(style="width: 300px")
@@ -431,7 +431,7 @@ section#primeGenerator
 
 section#ulam
   //- Stanislaw M. Ulam was doodling during the presentation of a "long and very boring paper" at a scientific meeting in 1963.
-  p The Polish mathematician #[x-bio#ulam Stanisław Ulam] came up with a cool way to show the distribution of large prime numbers, while doodling during a #[em "long and very boring"] meeting in 1963.
+  p The Polish mathematician #[x-bio(xid='ulam') Stanisław Ulam] came up with a cool way to show the distribution of large prime numbers, while doodling during a #[em "long and very boring"] meeting in 1963.
 
   .number-grid(style="max-width: 392px")
     for x in [37, 36, 35, 34, 33, 32, 31]
@@ -715,7 +715,7 @@ section#goldbach1
 
   h2 Mysteries and Unsolved Problems
 
-  p In 1742, the German mathematician #[x-bio#goldbach Christian Goldbach] made a curious discovery: he noticed that all even integers (except 2) can be written as the sum of two prime numbers. For example, 8 = 5 + 3 and 24 = 13 + 11. This is quite surprising, because primes are defined using multiplication and factors – and shouldn’t have much to do with addition.
+  p In 1742, the German mathematician #[x-bio(xid='goldbach') Christian Goldbach] made a curious discovery: he noticed that all even integers (except 2) can be written as the sum of two prime numbers. For example, 8 = 5 + 3 and 24 = 13 + 11. This is quite surprising, because primes are defined using multiplication and factors – and shouldn’t have much to do with addition.
 
   .calculator
     h3 Goldbach Calculator
@@ -724,7 +724,7 @@ section#goldbach1
     input(class="form-field", type="number", min=4, step=2)
     p.result.var ${result}
 
-  p Goldbach wrote about his observation in a letter to the famous mathematician #[x-bio#euler Leonhard Euler], but neither of them was able to prove it. It became known as the #[strong Goldbach Conjecture].
+  p Goldbach wrote about his observation in a letter to the famous mathematician #[x-bio(xid='euler') Leonhard Euler], but neither of them was able to prove it. It became known as the #[strong Goldbach Conjecture].
 
   p Computers have checked that the Goldbach Conjecture works for every even number up to 4 × 10#[sup 18] (that’s a 4 with 18 zeros), but mathematicians have still not found a proof that it works for #[em all] even integers. And that is a big difference, because there are infinitely many integers, so we couldn’t possible check all of them.
 
@@ -777,7 +777,7 @@ section#riemann
 
   p Mathematicians have spent many centuries exploring the pattern and distribution of prime numbers. They seem to appear completely randomly – sometimes there are huge gaps in between consecutive primes, and sometimes we find #[x-gloss#twins twin primes] right next to each other.
 
-  p When only 15 years old, the German mathematician #[x-bio#gauss Carl Friedrich Gauss] had a groundbreaking new idea: he counted the number of primes up to a certain point, and showed the results in a chart:
+  p When only 15 years old, the German mathematician #[x-bio(xid='gauss') Carl Friedrich Gauss] had a groundbreaking new idea: he counted the number of primes up to a certain point, and showed the results in a chart:
 
   .img-block(style="max-width:680px;position:relative;")
     svg(width=680, height=300, viewBox="0 0 680 300")
@@ -794,6 +794,6 @@ section#riemann
   p.subsection(data-needs="zoom") Gauss noticed that the shape of this function looks very similar to the function #[mfrac.inline.m-red #[mrow #[mi x]]#[mrow log(#[mi x])]]. He predicted that the two functions are always “approximately similar”, and this was proven in 1896.
 
 section
-  p However, as you can see above, there is still a significant error between the actual number of primes, and Gauss’s approximation. In 1859, the mathematician #[x-bio#riemann Bernhard Riemann] discovered an approximation that looked much better, but he wasn’t able to prove that that would #[em always] work. His idea became known as the #[strong Riemann Hypothesis].
+  p However, as you can see above, there is still a significant error between the actual number of primes, and Gauss’s approximation. In 1859, the mathematician #[x-bio(xid='riemann') Bernhard Riemann] discovered an approximation that looked much better, but he wasn’t able to prove that that would #[em always] work. His idea became known as the #[strong Riemann Hypothesis].
 
   p Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all without success. It is often considered one of the most difficult and most important unsolved problems in mathematics. In 2000, the Clay Mathematics Institute named it one of six #[strong Millennium Prize Problems] and promised $1,000,000 to any mathematician who solves it.

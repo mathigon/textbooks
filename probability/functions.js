@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import { $, $$, $C, $N, table } from 'elements';
+import { $, $N, table } from 'elements';
 import { slide } from 'events';
 import { roundTo } from 'arithmetic';
 import { square, clamp } from 'utilities';

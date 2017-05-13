@@ -36,7 +36,7 @@ relates the _{.b.orange}price_ of skateboards to the _{.b.purple}demand_:
 
 {.text-center} _{.b.purple}demand_ = 5000 – 30 × _{.b.orange}price_
 
-For example, if the skateboard costs $100, the demand will be <2000> units. This
+For example, if the skateboard costs $100, the demand will be [[2000]] units. This
 is called a __linear equation__, because its graph is just a straight line.
 
 The company wants to maximise its _{.b.yellow}profit_, which is the
@@ -45,7 +45,7 @@ which they have to spend to produce them. We can come up with equations for all
 of these values.
 
 The _{.b.green}revenue_ is the income they receive from selling skateboards:
-the number of units sold (the _{.b.purple}<demand|profit|cost>_) times the
+the number of units sold (the _{.b.purple}[[demand|profit|cost]]_) times the
 _{.b.orange}price_ of each:
 
 {.text-center.subsection(blank-1)}
@@ -90,7 +90,7 @@ If the [price is 0](->#s2 .r1), the “profit” is negative, because we’re
 just giving away expensive skateboards for free. As the price increases, our
 profit rises, too. However, if the skateboards become [too expensive](->#s2 .r2),
 people no longer want to buy them and the profit falls again. SkateSum can
-maximise its profit by pricing the skateboards at approximately $<110>.
+maximise its profit by pricing the skateboards at approximately $[[110]].
 
 ---{#s3}
 
@@ -99,10 +99,10 @@ maximise its profit by pricing the skateboards at approximately $<110>.
 Quadratic equations are of the form
   
 {.text-center} `ax^2 + bx + c = 0`,
-  
+
 where `x` is a __variable__ and `a`, `b` and `c` can be any numbers (including
 negative ones), called __coefficients__. Both `b` and `c` could be 0, but
-`a` can’t be 0 because then we would just have <a linear equation|zero|no solution>.
+`a` can’t be 0 because then we would just have [[a linear equation|zero|no solution]].
 
 The graph of a quadratic equation always has a “curved” shape like the
 one we saw before. This shape is called a __Parabola__. The simplest quadratic
@@ -116,9 +116,9 @@ see how the parabola changes:
 
 {.text-center} `y =`${a}{a|1|-4,4,0.1} `x^2+`${b}{b|0|-4,4,0.1} `x+`${c}{c|0|-4,4,0.1}
 
-{.subsection(.var-1 .var-2 .var-3)}
+{.subsection(var-1 var-2 var-3)}
 To solve a quadratic equation, we have to find the points where _y_ = 0. These
-are the points where the graph of the parabola <crosses the x-axis|crosses the y-axis|turns around>.
+are the points where the graph of the parabola [[crosses the x-axis|crosses the y-axis|turns around]].
 While linear equations always have exactly one solution, we can see from the
 diagram that quadratic equations can sometimes have and [{span.action}no solution],
 [{span.action}one solution], or even [{span.action}two solutions].
@@ -127,11 +127,13 @@ diagram that quadratic equations can sometimes have and [{span.action}no solutio
 
 The different possible number of solutions has to do with the properties of squares:
 
-* For every value of `x^2`, there are <two|three|one> possible values of `x`: a positive and a negative one.
+* For every value of `x^2`, there are [[two|three|one]] possible values of `x`: a positive and a negative one.
   For example, if `x^2=`${x*x}{x|4|2,10,1}, we don't know if `x=`${x} or `x=`${'–'+x}. In this case,
-  the quadratic equation has __two solutions__. As an abbreviation, we sometimes write `x=\pm`${x} (“_x_ equals plus-minus ${x}”).
+  the quadratic equation has __two solutions__. As an abbreviation, we sometimes write `x = +-`${x} (“_x_ equals plus-minus ${x}”).
 
-* {.subsection(blank-0)} Square numbers are always positive. This means that there <is no number|are multiple numbers> `x` that could satisfy `x^2 = -9`. This equation has __no solutions__.
+* {.subsection(blank-0)} Square numbers are always positive. This means that
+there [[is no number|are multiple numbers]] `x` that could satisfy `x^2 = -9`.
+This equation has __no solutions__.
 
 {.subsection(blank-1)}
 In the following sections we will learn a few different ways to solve quadratic
@@ -146,8 +148,8 @@ equations and interpret their graphs.
 
 When trying to solve equations, we often use _opposites_ of mathematical
 operators. For example, addition and subtraction are opposites, and
-multiplication and <division|addition|square roots> are opposites. The opposite
-of squaring a number is taking the square root. For example, `5^2 = 25`, so `\sqrt{25} = 5`.
+multiplication and [[division|addition|square roots]] are opposites. The opposite
+of squaring a number is taking the square root. For example, `5^2 = 25`, so `sqrt(25) = 5`.
 
 This can help us to solve some simple quadratic equations:
 
@@ -159,8 +161,8 @@ First, we isolate `x^2` on one side of the equation:
 
 Now we take square roots of both sides, remembering to add a ±:
 
-{.text-center} `x = \pm \sqrt{25}`  
-`x = \pm 5`
+{.text-center} `x = +- sqrt(25)`  
+`x = +- 5`
 
 Sometimes we have to do a bit more work to isolate `x^2`:
 
@@ -168,8 +170,8 @@ Sometimes we have to do a bit more work to isolate `x^2`:
 | `3` | `x^2` | `-11` | `=` | `7`           | {.eqn-comment} add 11 to both sides |
 | `3` | `x^2` |       | `=` | `18`          | {.eqn-comment} divide both sides by 3 |
 |     | `x^2` |       | `=` | `6`           | {.eqn-comment} take square roots of both sides |
-|     | `x`   |       | `=` | `\pm\sqrt{6}` |
-|     |       |       | `=` | `\pm2.45`     |
+|     | `x`   |       | `=` | `+-sqrt(6)` |
+|     |       |       | `=` | `+-2.45`     |
 
 {.todo} Something about exactness and how to express solutions
 
@@ -197,7 +199,7 @@ no way you can get 0 by multiplying two numbers which are _both not 0_.
 {.todo} Image
 
 In our example, this means that either `x = 0`, or `(x-4) = 0`. Therefore
-the quadratic equation has two solutions: `x=0` and `x=`<4>.
+the quadratic equation has two solutions: `x=0` and `x=`[[4]].
 
 {.todo} Exercises
 
@@ -212,7 +214,7 @@ Unlike before, we cannot just factor out _x_, because we'd still have the
 
 If you expand those brackets, you will find that it is exactly the same.
 But now we can use the same trick for a product that is 0, to find that
-the quadratic equation has two solutions: `x=`<3> or `x=`<2>.
+the quadratic equation has two solutions: `x=`[[3]] or `x=`[[2]].
 
 Unfortunately, this doesn't explain how we found two numbers 2 and 3 that
 just _happened_ to work in the equation above. To work that out, we can
@@ -246,10 +248,10 @@ all the examples below it should be relatively straightforward.
 Try to find the missing number in these factorisation examples:
 
 {.text-center}
-x^2 + 3x + 2 = (x+1)(x+<1>)  
-x^2 + 5x + 4 = (x+4)(x+<1>)  
-x^2 - 8x + 15 = (x-3)(x-<1>)  
-x^2 - 5x - 14 = (x+2)(x-<1>)
+x^2 + 3x + 2 = (x+1)(x+[[1]])  
+x^2 + 5x + 4 = (x+4)(x+[[1]])  
+x^2 - 8x + 15 = (x-3)(x-[[1]])  
+x^2 - 5x - 14 = (x+2)(x-[[1]])
 
 {.todo} Some quadratic equations look completely ordinary to start with,
 but when we factorise them, we're only left with a single bracket:
@@ -292,10 +294,10 @@ expansion, so we can factor it:
 Now we can simplify the equation and take square roots, almost like above:
 
 {.eqn-system}
-| `(x+4)^2` | `-28` | `=` | `0`            |
-| `(x+4)^2` |       | `=` | `28`           | {.eqn-comment} remember the ± when taking square roots! |
-| `x + 4`   |       | `=` | `\pm\sqrt{28}` |
-|           | `x`   | `=` | `\pm\sqrt{6} - 4` |
+| `(x+4)^2` | `-28` | `=` | `0`             |
+| `(x+4)^2` |       | `=` | `28`            | {.eqn-comment} remember the ± when taking square roots! |
+| `x + 4`   |       | `=` | `+-sqrt(28)`    |
+|           | `x`   | `=` | `+-sqrt(6) - 4` |
 
 ---
 
@@ -316,37 +318,37 @@ as _a_, _b_ and _c_ rather than actual numbers. We'll
 
 {.eqn-system}
 | `ax^2 + bx +` |   | `c` | `= 0` |
-| `ax^2 + bx + \frac{b^2}{4a} - ` | `\frac{b^2}{4a} +` | `c` | `= 0` |
-| `a ( x^2 + \frac{b}{a}x + (\frac{b}{2a})^2) - ` | `\frac{b^2}{4a} +` | `c` | `= 0` |
-| `a ( x + \frac{b}{2a} )^2 - ` | `\frac{b^2}{4a} +` | `c` | `= 0` |
-| `a ( x + \frac{b}{2a} )^2 ` |   |   | `= \frac{b^2}{4a} - c` |
-| `a ( x + \frac{b}{2a} )^2 ` |   |   | `= \frac{b^2 - 4ac}{4a}` |
-| `( x + \frac{b}{2a} )^2 ` |   |   | `= \frac{b^2 - 4ac}{4a^2}` |
-| `x + \frac{b}{2a} ` |   |   | `= \pm \sqrt{\frac{b^2 - 4ac}{4a^2}}` |
+| `ax^2 + bx + (b^2)/(4a) - ` | `(b^2)/(4a) +` | `c` | `= 0` |
+| `a ( x^2 + b/a x + (b/(2a))^2) - ` | `(b^2)/(4a) +` | `c` | `= 0` |
+| `a ( x + b/(2a) )^2 - ` | `(b^2)/(4a) +` | `c` | `= 0` |
+| `a ( x + b/(2a) )^2 ` |   |   | `= (b^2)/(4a) - c` |
+| `a ( x + b/(2a) )^2 ` |   |   | `= (b^2 - 4ac)/(4a)` |
+| `( x + b/(2a) )^2 ` |   |   | `= (b^2 - 4ac)/(4a^2)` |
+| `x + b/(2a) ` |   |   | `= +- sqrt((b^2 - 4ac)/(4a^2))` |
 
-| `x + \frac{b}{2a} ` |   |   | `= \pm \frac{\sqrt{b^2 - 4ac}}{2a}` |
-| `x ` |   |   | `= - \frac{b}{2a} \pm \frac{\sqrt{b^2 - 4ac}}{2a}` |
-| `x ` |   |   | `= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}` |
+| `x + b/(2a) ` |   |   | `= +- sqrt(b^2 - 4ac)/(2a)` |
+| `x ` |   |   | `= - b/(2a) +- sqrt(b^2 - 4ac)/(2a)` |
+| `x ` |   |   | `= (-b +- sqrt(b^2 - 4ac))/(2a)` |
 
 These steps were ugly, painful, and you don't need to remember them (even
 though it was just the same as completing the square, just with variables).
 The result, however, was worth it: a single equation that tells us the
 solutions of _any_ quadratic equation. It is often called the __Quadratic Formula__:
 
-{.text-center#qformula} `x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}`
+{.text-center#qformula} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`
 
 To solve a quadratic equation, we just have to replace _a_, _b_ and _c_ with
 the actual numbers in our case, and then simplify the fraction.
 
 One particularly important part of the quadratic equation is
-the [term under the square root](->#qformula sqrt), which is often called
+the [term under the square root](->#qformula msqrt), which is often called
 the __discriminant__. Depending on the value of `b^2-4ac`, you can tell a lot
 about the solutions of a quadratic equation, without ever actually soling it.
 
 * If `b^2-4ac<0`, the quadratic equation has _no solutions_, because we cannot
   take square roots of negative numbers.
-* If `b^2-4ac=0`, the quadratic equation has _one solution_, because `+\sqrt{0}`
-  and `-\sqrt{0}` are the same.
+* If `b^2-4ac=0`, the quadratic equation has _one solution_, because `+sqrt(0)`
+  and `-sqrt(0)` are the same.
 * If `b^2-4ac>0`, the quadratic equation has _two solutions_ like before, one
   when evaluating the quadratic formula with +, and one when evaluating it
   with –.

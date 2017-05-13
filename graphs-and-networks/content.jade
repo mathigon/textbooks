@@ -175,7 +175,7 @@ section#GT_2_0
   h2 The Bridges of Königsberg
   .row
     .grow
-      p One of the first mathematicians to think about graphs and networks was #[x-bio#euler Leonhard Euler]. Euler was intrigued by an old problem regarding the town of K&ouml;nigsberg near the Baltic Sea. #[span.lgrey (Today, the city is called Kaliningrad and located in Russia.)]
+      p One of the first mathematicians to think about graphs and networks was #[x-bio(xid='euler') Leonhard Euler]. Euler was intrigued by an old problem regarding the town of K&ouml;nigsberg near the Baltic Sea. #[span.lgrey (Today, the city is called Kaliningrad and located in Russia.)]
       p.quote The river Pregel divides Königsberg into four separate parts, which are connected by seven Bridges. Is it possible to walk around the city crossing every one of the bridges exactly once – but not more than once? You can start and finish anywhere, not necessarily in the same place.
     .konigsberg-img(style="width: 250px;")
       img(src="/resources/graphs-and-networks/images/konigsberg1.jpg" width="250" height="350")
@@ -321,7 +321,7 @@ section#GT_4_1
 
 
 section
-  p When comparing these numbers, you will notice that the number of edges is always #[+blank("one less|bigger|the same")] than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio#euler mathematician] who solved the K&ouml;nigsberg Bridges problem.
+  p When comparing these numbers, you will notice that the number of edges is always #[+blank("one less|bigger|the same")] than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio(xid='euler') mathematician] who solved the K&ouml;nigsberg Bridges problem.
   p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss#proof proof] that works for any graph&hellip;
 
 
@@ -452,7 +452,7 @@ section
     div(style="width: 240px;")
       x-media(lightbox, credit="© Depositphotos / sergeyussr", width="240", height="320", src="/resources/graphs-and-networks/images/england-counties.jpg")
     .grow
-      p In 1852, the botany student #[x-bio#guthrie Francis Guthrie] had to colour a map of counties in England. He observed that four colours seemed to suffice for any map he tried, but he was not able to find a proof that worked for #[em all] maps. This turned out to be an extremely difficult problem, and became known as the #[strong four colour theorem].
+      p In 1852, the botany student #[x-bio(xid='guthrie') Francis Guthrie] had to colour a map of counties in England. He observed that four colours seemed to suffice for any map he tried, but he was not able to find a proof that worked for #[em all] maps. This turned out to be an extremely difficult problem, and became known as the #[strong four colour theorem].
       p During the following 100 years, many mathematicians published &#8220;proofs&#8221; to the four colour theorem, only for mistakes to be found later. Some of these invalid proofs were so convincing that it took more than 10 years to discover errors.
       p For a long time, mathematicians were unable to either prove that four colours are enough, or to find a map that needed more than four colours.
 
@@ -460,7 +460,7 @@ section
 section
   x-parallax(background='/resources/graphs-and-networks/images/ibm-360.jpg')
     .feature-text.right
-      p Little progress was made on the four colour problem until 1976, when #[x-bio#haken Wolfgang Haken] and #[x-bio#appel Kenneth Appel] used a computer to finally solve it. They reduced infinitely many possible maps to 1936 special cases, which were each checked by a computer taking over 1000 hours in total.
+      p Little progress was made on the four colour problem until 1976, when #[x-bio(xid='haken') Wolfgang Haken] and #[x-bio(xid='appel') Kenneth Appel] used a computer to finally solve it. They reduced infinitely many possible maps to 1936 special cases, which were each checked by a computer taking over 1000 hours in total.
 
 
 section
@@ -675,23 +675,19 @@ section
   .row
     div(style="width: 200px;"): x-media(credit="© Metro-Goldwyn-Mayer, 1993", src="/resources/graphs-and-networks/images/six-degrees.jpg", width="200", height="265", style="border: 1px solid #CCC")
     .grow
-      p In 1929, when the Hungarian author #[x-bio#karinthy Frigyes Karinthy] first proposed the idea of &#8220;six degrees of Separation&#8221;, there was no internet or social media, but the world had already started to become more interconnected.
-      p In 1967, #[x-bio#milgram Stanley Milgram] conducted a first empirical experiment, where 296 participants living in Nebraska and Kansas were asked to deliver a letter to a particular person living in Boston, Massachusetts. They all had to choose a friend to send the letter to, who then picked another friend. At every step, the letter moved closer to Boston. Milgram found that there were, on average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
+      p In 1929, when the Hungarian author #[x-bio(xid='karinthy') Frigyes Karinthy] first proposed the idea of &#8220;six degrees of Separation&#8221;, there was no internet or social media, but the world had already started to become more interconnected.
+      p In 1967, #[x-bio(xid='milgram') Stanley Milgram] conducted a first empirical experiment, where 296 participants living in Nebraska and Kansas were asked to deliver a letter to a particular person living in Boston, Massachusetts. They all had to choose a friend to send the letter to, who then picked another friend. At every step, the letter moved closer to Boston. Milgram found that there were, on average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
 
   p Today, every one of us is part of countless invisible graphs, which underly our social interactions, travel, internet and technology, science, and so much more.
 
 
 //- TODOs
-
   - Graph Scale Parameters
   - Bridges of Konigsberg: Graph Drawing Interactive
   - Hamiltonian Cycles diagrams
   - Travelling Salesman Interactive
   - Greedy and 2-opt algorithm diagrams
   - Ant algorithm diagrams
-
   Subgraphs (It was not immediately clear to me how the graphs were related to one another in the interactive section. Small labels could help or perhaps it would be useful as a matching game. Line the 3 graphs on one side facing the 3 subgraphs and ask the reader to match the subgraph to its graph.)
-
   This may have been intentional, but the proof really glosses over many details. Reading as someone with a solid math background, I was not satisfied with the proof as it is laid out and I think that someone who is really trying to understand what's going on will also be left feeling duped. Even if it is too complicated to show the entire proof, perhaps there should be a link to an easy-to-read account of the proof? And/or be upfront about how many details are missing so the reader knows there is more to the story. "We have shown that, whichever way we add new vertices, Euler’s equation is valid. Therefore it is valid for all graphs." But we really only saw a few possible cases and this account does not prove the theorem.
-
   I think this part could be explained in a bit more detail: "Finding a fast and exact algorithm would have serious implications in the field of computer science: it would mean that there are fast algorithms for all NP-hard problems. " ie, why does it imply a fast algorithm for all NP-hard problems and how many NP-hard problems are there?

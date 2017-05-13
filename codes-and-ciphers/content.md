@@ -33,14 +33,19 @@ algorithms to encode and decode messages.
 ---
 
 ## Simple Codes
+
 {.todo} Morse
+
 {.todo} Binary and Computers
 
 ---
 
 ## Error Correction and Error Detection
+
 {.todo} Bar Code
+
 {.todo} Satellite Communications
+
 {.todo} CDs and DVDs
 
 ---
@@ -170,7 +175,6 @@ using substitution ciphers:
 {.todo} TODO
 
 
-================================================================================
 
 // SOURCES:
 // http://plus.maths.org/content/cracking-codes
