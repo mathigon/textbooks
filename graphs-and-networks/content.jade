@@ -215,7 +215,7 @@ section
 
 
 section#GT_2_3
-  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss#degree degree]:
+  p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss(xid="degree") degree]:
 
   .frame.fill(style="padding: 20px")
     .frame-body(style="margin-bottom: -18px;"): strong These graphs are possible:
@@ -281,8 +281,8 @@ section#GT_3_1
 
 
 section
-  p The #[x-gloss#complete complete graph] <em>K<sub>5</sub></em> is the smallest graph that is not planar. Any other graph that contains <em>K<sub>5</sub></em> as a subgraph in some way is also not planar. This includes <em>K<sub>6</sub></em>, <em>K<sub>7</sub></em>, and all larger complete graphs.
-  p The graph in the three utilities puzzle is the #[x-gloss#bipartite bipartite graph] <em>K<sub>3,3</sub></em>. It turns out that any non-planar graph must contain a <em>K<sub>5</sub></em> or a <em>K<sub>3,3</sub></em> or a #[x-gloss#subdivision subdivision] of these two graphs as a subgraph.
+  p The #[x-gloss(xid="complete") complete graph] <em>K<sub>5</sub></em> is the smallest graph that is not planar. Any other graph that contains <em>K<sub>5</sub></em> as a subgraph in some way is also not planar. This includes <em>K<sub>6</sub></em>, <em>K<sub>7</sub></em>, and all larger complete graphs.
+  p The graph in the three utilities puzzle is the #[x-gloss(xid="bipartite") bipartite graph] <em>K<sub>3,3</sub></em>. It turns out that any non-planar graph must contain a <em>K<sub>5</sub></em> or a <em>K<sub>3,3</sub></em> or a #[x-gloss#subdivision subdivision] of these two graphs as a subgraph.
 
 
 section#GT_3_3
@@ -322,7 +322,7 @@ section#GT_4_1
 
 section
   p When comparing these numbers, you will notice that the number of edges is always #[+blank("one less|bigger|the same")] than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio(xid='euler') mathematician] who solved the K&ouml;nigsberg Bridges problem.
-  p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss#proof proof] that works for any graph&hellip;
+  p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss(xid="proof") proof] that works for any graph&hellip;
 
 
 section#GT_4_2
@@ -365,7 +365,7 @@ section#GT_4_3
 
 
 section
-  p Many planar graphs look very similar to the nets of #[x-gloss#polyhedron polyhedra], three dimensional shapes with #[x-gloss#polygon polygonal] faces. If we think of polyhedra as made of elastic bands, we can imagine stretching them out until they become flat, planar graphs:
+  p Many planar graphs look very similar to the nets of #[x-gloss(xid="polyhedron") polyhedra], three dimensional shapes with #[x-gloss#polygon polygonal] faces. If we think of polyhedra as made of elastic bands, we can imagine stretching them out until they become flat, planar graphs:
   .row
     .grow: x-img-sequence(src="/resources/graphs-and-networks/images/cube/cube#.png", pages="32", width="300", height="300")
     .grow: x-img-sequence(src="/resources/graphs-and-networks/images/dodecahedron/dodeca#.png", pages="32", width="300", height="300")
@@ -512,7 +512,7 @@ section#GT_6_2
 section#GT_6_3
   .row.right
     .grow
-      p So far we have ignored the fact that some cities might be further apart than others. In real life, however, this is a very important consideration: we don&rsquo;t just want to find <em>any</em> path but we want to find the shortest one. This is called the <strong>Travelling Salesman Problem</strong>. It has to be solved not only in transportation and logistics, but also when positioning transistors on microchips, to make faster computers, or when analysing the structure of #[x-gloss#dna DNA].
+      p So far we have ignored the fact that some cities might be further apart than others. In real life, however, this is a very important consideration: we don&rsquo;t just want to find <em>any</em> path but we want to find the shortest one. This is called the <strong>Travelling Salesman Problem</strong>. It has to be solved not only in transportation and logistics, but also when positioning transistors on microchips, to make faster computers, or when analysing the structure of #[x-gloss(xid="dna") DNA].
       p One simple method would be to try all possible paths, finding the length of each, and then picking the shortest one. However we have just shown that, even with just #[+var("tsn2|10|2,20,1") tsn2] cities there are #[+var tsn2]! = #[+var factorial(tsn2)] possible paths. Once you have hundreds or thousands of vertices, trying all possible paths becomes impossible, even using powerful computers.
     div(style="width: 220px"): x-media(lightbox, src="/resources/graphs-and-networks/images/microchip.jpg", width="210", height="365", credit="© Depositphotos / claudiodivizia")
 
@@ -570,9 +570,9 @@ section
   .row
     div(style="width: 140px"): img(src="/resources/graphs-and-networks/images/binary.jpg", width="140", height="320")
     .grow
-      p The Travelling Salesman problem is #[x-gloss#np NP-hard], which means that it is very difficult to be solved by computers (at least for large numbers of cities).
+      p The Travelling Salesman problem is #[x-gloss(xid="np") NP-hard], which means that it is very difficult to be solved by computers (at least for large numbers of cities).
       p Finding a fast and exact algorithm would have serious implications in the field of computer science: it would mean that there are fast algorithms for <em>all</em> NP-hard problems. It would also render most of internet security useless, which relies on the fact that certain problems are believed to be very difficult for computers.
-      p Finding a fast algorithm to solve the travelling salesman problem would also solve one of the most famous open problems in mathematics and computer science, the <strong>P vs NP</strong> problem. It is one of the seven #[x-gloss.wide#millennium-prize Millennium Prize Problems], each carrying a $1m prize.
+      p Finding a fast algorithm to solve the travelling salesman problem would also solve one of the most famous open problems in mathematics and computer science, the <strong>P vs NP</strong> problem. It is one of the seven #[x-gloss.wide(xid="millennium-prize") Millennium Prize Problems], each carrying a $1m prize.
 
 //- ----------------------------------------------------------------------------------------------
 

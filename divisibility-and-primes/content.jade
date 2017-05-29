@@ -383,7 +383,7 @@ section(data-gloss="proof")
     li.subsection Now let’s think about #[em N] + 1. Any prime number that divides #[em N] can’t also  divide #[em N] + 1. And since all prime numbers we have found so far divide #[em N], none of these can also divide #[em N] + 1.
       .text-center #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[.number-ball.blue P] #[span.divides] #[em.number-ball N]
       .text-center #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[.number-ball.blue.cross P] #[span.divides] #[em.number-ball N] + 1
-    li.subsection We know from the #[x-gloss#fta Fundamental Theorem of Arithmetic] that #[em N] + 1, must have a prime factor. Either #[em N] + 1 is itself prime, or there is some other new prime #[em P’] that divides #[em N] + 1.
+    li.subsection We know from the #[x-gloss(xid="fta") Fundamental Theorem of Arithmetic] that #[em N] + 1, must have a prime factor. Either #[em N] + 1 is itself prime, or there is some other new prime #[em P’] that divides #[em N] + 1.
       .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
     li.subsection In both cases we’ve found a new prime not in our original list – but we assumed that #[em all] primes were in this list.
     li.subsection Clearly something went wrong! But since steps #[span.proof-step 2]–#[span.proof-step 4] were definitely valid, the only possibility is that our initial assumption in #[span.proof-step 1] was wrong. This means there must actually be infinitely many primes.
@@ -510,7 +510,7 @@ section
   p This is easy to verify: if a prime factor divides #[strong.m-yellow a], and #[strong.m-yellow a] divides #[strong.m-green b], then that prime factor must #[em also] divide #[strong.m-green b].
 
 section
-  p To find the lcm of #[strong.m-green 40] and #[strong.m-blue 60], we first need to find the #[x-gloss#factorisation prime factorisation] of both:
+  p To find the lcm of #[strong.m-green 40] and #[strong.m-blue 60], we first need to find the #[x-gloss(xid="factorisation") prime factorisation] of both:
 
   table.table-tiny
     tr
@@ -607,7 +607,7 @@ section
   p Just like before, this question is not about geometry - it is about divisibility. The length of the sides of the tiles has to divide both 18 and 30, and the largest possible number with that property is #[+input(6)]. This is called the #[strong Greatest Common Divisor] or #[strong gcd] of 18 and 30.
 
 section
-  p Once again, we can use the #[x-gloss#factorisation prime factorisation] to calculate the gcd of any two numbers. Remember that any divisor of a number must have some of the prime factors of that number.
+  p Once again, we can use the #[x-gloss(xid="factorisation") prime factorisation] to calculate the gcd of any two numbers. Remember that any divisor of a number must have some of the prime factors of that number.
 
   table.table-tiny
     tr
@@ -775,7 +775,7 @@ section#riemann
 
   p.text-center •
 
-  p Mathematicians have spent many centuries exploring the pattern and distribution of prime numbers. They seem to appear completely randomly – sometimes there are huge gaps in between consecutive primes, and sometimes we find #[x-gloss#twins twin primes] right next to each other.
+  p Mathematicians have spent many centuries exploring the pattern and distribution of prime numbers. They seem to appear completely randomly – sometimes there are huge gaps in between consecutive primes, and sometimes we find #[x-gloss(xid="twins") twin primes] right next to each other.
 
   p When only 15 years old, the German mathematician #[x-bio(xid='gauss') Carl Friedrich Gauss] had a groundbreaking new idea: he counted the number of primes up to a certain point, and showed the results in a chart:
 
