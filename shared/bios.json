@@ -38,13 +38,13 @@
     "name": "Leonhard Euler",
     "birth": "1707",
     "death": "1783",
-    "bio": "<p>Leonhard Euler is one the greatest mathematicians of all times. His work spans all areas of mathematics, and he wrote 80 volumes of research.</p><p>Euler was born in Switzerland and studied in Basel, but lived most of his life in Berlin, Prussia, and St. Petersburg, Russia.</p><p>Euler invented most of the modern mathematical terminology and notation, and made important discoveries in calculus, analysis, graph theory, physics, astronomy, and many other topics.</p>"
+    "bio": "<p>Leonhard Euler is one the greatest mathematicians of all times. His work spans all areas of mathematics, and he wrote 80 volumes of research.</p><p>Euler was born in Switzerland and studied in Basel, but lived most of his life in Berlin, Prussia, and St. Petersburg, Russia.</p><p>Euler invented much of the modern mathematical terminology and notation, and made important discoveries in calculus, analysis, graph theory, physics, astronomy, and many other topics.</p>"
   },
   "fermat": {
     "name": "Pierre de Fermat",
     "birth": "1607",
     "death": "1665",
-    "bio": "<p>Pierre de Fermat was a French mathematician and Lawyer. He was one of the early pioneers of calculus, as well as working on number theory, probability, geometry and optics.</p><p>In 1637, he wrote a short note in the margin of one od his textbooks, claiming that the equation <em>a<sup>n</sup></em> + <em>b<sup>n</sup></em> = <em>c<sup>n</sup></em> has no integer solutions for <em>n</em> > 2, and that he had a “marvelous proof, which this margin is too narrow to contain”. This became known as <em>Fermat's Last Theorem</em>, and became one of the most famous unsolved problems in mathematics – until it was finally proven in 1994.</p>"
+    "bio": "<p>Pierre de Fermat was a French mathematician and Lawyer. He was one of the early pioneers of calculus, as well as working on number theory, probability, geometry and optics.</p><p>In 1637, he wrote a short note in the margin of one of his textbooks, claiming that the equation <em>a<sup>n</sup></em> + <em>b<sup>n</sup></em> = <em>c<sup>n</sup></em> has no integer solutions for <em>n</em> > 2, and that he had a “marvelous proof, which this margin is too narrow to contain”. This became known as <em>Fermat's Last Theorem</em>, and became one of the most famous unsolved problems in mathematics – until it was finally proven in 1994.</p>"
   },
   "gauss": {
     "name": "Carl Friedrich Gauss",
