@@ -1,15 +1,12 @@
 // =============================================================================
-// Mathigon | Probability
-// (c) 2017 Mathigon
+// Probability
+// (c) Mathigon
 // =============================================================================
 
 
-import { $, $N, table } from 'elements';
-import { slide } from 'events';
-import { roundTo } from 'arithmetic';
-import { square, clamp } from 'utilities';
-import { list, tabulate, flatten, last, total } from 'arrays';
-import { weighted, shuffle, exponential, chiCDF } from 'probability';
+import { list, tabulate, flatten, last, total, square, clamp } from '@mathigon/core';
+import { roundTo, random } from '@mathigon/fermat';
+import { $, $N, table, slide } from '@mathigon/boost';
 
 
 function animate(callback, precision = 0.0001) {
@@ -135,7 +132,7 @@ export function randomSequence(section) {
       let chi = total(observed.map(o => square(o - sum / count) / sum * count));
       let deg = count - 1;
 
-      result = Math.min(result, chiCDF(chi, deg));
+      result = Math.min(result, random.chiCDF(chi, deg));
     }
 
     return clamp(result, 0, 1);
@@ -189,7 +186,7 @@ export function diceSimulation(section) {
 
   function rollDice() {
     let d = section.model.d;
-    let x = weighted(probabilities[d]);
+    let x = random.weighted(probabilities[d]);
 
     scores[x] += 1;
     let maxScore = Math.max(...scores);
@@ -251,7 +248,7 @@ export function montyhall(section) {
 
   let $sure = section.$el.find('.sure');
   let sureBtn = new OneTimeButton($sure, function() {
-    [car, opened] = shuffle([0, 1, 2].filter(i => i != selected));
+    [car, opened] = random.shuffle([0, 1, 2].filter(i => i !== selected));
     $doors[car].addClass('car');
     decided = true;
     $monty.removeClass('selectable');
@@ -264,7 +261,7 @@ export function montyhall(section) {
 
   let $swap = section.$el.findAll('.swap');
   let swapBtn = new OneTimeButton($swap, function(i) {
-    if (i == 1) {
+    if (i === 1) {
       $doors[selected].removeClass('selected');
       selected = car;
       $doors[selected].addClass('selected');
@@ -311,12 +308,12 @@ export function radioactive(section) {
   let $box = section.$el.find('.radioactive');
 
   let $atoms = tabulate((x, y) => $N('circle', { cx: x * 20 + 10, cy: y * 20 + 10, r: 6 }, $box), 15, 10);
-  $atoms = shuffle(flatten($atoms));
+  $atoms = random.shuffle(flatten($atoms));
 
   function decay() {
     let $atom = $atoms.pop();
     $atom.addClass('off');
-    if ($atoms.length) setTimeout(decay, exponential($atoms.length / 20000));
+    if ($atoms.length) setTimeout(decay, random.exponential($atoms.length / 20000));
   }
 
   section.$el.find('.btn').one('click', decay);

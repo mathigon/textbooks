@@ -1,18 +1,13 @@
 // =============================================================================
-// Mathigon | Codes and Ciphers
-// (c) 2017 Mathigon
+// Codes and Ciphers
+// (c) Mathigon
 // =============================================================================
 
 
-@red:    #b30469;  // Ruby
-@blue:   #1f7aff;  // Blue Ribbon
-@green:  #31b304;  // La Palma
-@yellow: #ff941f;  // Neon Carrot
-@grey:   #242430;  // Charade
+@import 'styles/variables';
+
 
 [contenteditable] { outline: none; }
-
-// =============================================================================
 
 .letter, .word {
   display: inline-block;
@@ -56,8 +51,6 @@
 
 .plain-text .cipher-letter.hover { background: fade(@blue, 30%); }
 .cipher-text .cipher-letter.hover { background: fade(@red, 30%); }
-
-// =============================================================================
 
 .code-play {
   background: #E9E9EA;

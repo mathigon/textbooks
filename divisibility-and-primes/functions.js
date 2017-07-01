@@ -1,17 +1,13 @@
 // =============================================================================
-// Mathigon | Divisibility and Primes
-// (c) 2017 Mathigon
+// Divisibility and Primes
+// (c) Mathigon
 // =============================================================================
 
 
-import { $N } from 'elements';
-import { total, sortByFn, list } from 'arrays';
-import { animate } from 'animate';
-import thread from 'thread';
-import { numberFormat } from 'arithmetic';
-import { isPrime, lcm, goldbach, generatePrime } from 'number-theory';
-import { isOneOf, delay } from 'utilities';
-import { integer, smart } from 'probability';
+
+import { $N, animate, thread } from '@mathigon/boost';
+import { isPrime, lcm, goldbach, generatePrime, numberFormat, random } from '@mathigon/fermat';
+import { total, sortByFn, list, isOneOf, delay } from '@mathigon/core';
 
 
 // -----------------------------------------------------------------------------
@@ -43,17 +39,17 @@ export function divisibilitygame(section) {
   });
 
   section.gameplay._el.slideGenerator = function($el, success, error) {
-    let answer = smart(3, 'divisibility-game');
-    let n1 = smart(9, 'divisibility-game-number') + 2;
-    let n2 = smart(9, 'divisibility-game-number') + 2;
+    let answer = random.smart(3, 'divisibility-game');
+    let n1 = random.smart(9, 'divisibility-game-number') + 2;
+    let n2 = random.smart(9, 'divisibility-game-number') + 2;
 
     let x, y;
     switch(answer) {
       case 0: x = n1; y = n1 * n2; break;  // factor
       case 1: x = n1 * n2; y = n1; break;  // multiple
       case 2:
-        x = n1; y = (n1 * n2) + [1, -1][integer(1)];  // neither
-        if (integer(1)) [x, y] = [y, x];
+        x = n1; y = (n1 * n2) + [1, -1][random.integer(1)];  // neither
+        if (random.integer(1)) [x, y] = [y, x];
     }
 
     $el.model({ x, y });

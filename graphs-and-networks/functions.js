@@ -1,24 +1,16 @@
 // =============================================================================
-// Mathigon | Graphs and Networks Functions
-// (c) 2016 Mathigon
+// Graphs and Networks
+// (c) Mathigon
 // =============================================================================
 
 
-import Graph from 'graph';
-import Colour from 'colour';
-import Draggable from 'draggable';
-import Drawing from 'drawing';
-import { last } from 'arrays';
-import { factorial } from 'combinatorics';
-import { integer } from 'probability';
-import { numberFormat, toOrdinal } from 'arithmetic'
-import { svgPointerPosn } from 'events';
-import { animate } from 'animate';
-import { Point, travellingSalesman, lineLineIntersect } from 'geometry';
-import { tabulate, list } from 'arrays';
-import { subsets } from 'combinatorics';
-import { $, $I, $$, $T, $C, $$C, $$T, $N } from 'elements';
-import { isOneOf } from 'utilities';
+
+import { last, tabulate, list, isOneOf } from '@mathigon/core';
+import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, lineLineIntersect, subsets } from '@mathigon/fermat';
+import { $I, $T, $C, $$C, $$T, $N, Colour, svgPointerPosn, animate } from '@mathigon/boost';
+import { Draggable } from '../node_modules/@mathigon/slate/src/draggable/draggable';
+import { Drawing } from '../node_modules/@mathigon/slate/src/drawing/drawing';
+import { Graph } from './graph';
 
 
 // -----------------------------------------------------------------------------
@@ -57,14 +49,14 @@ export function GT_0_0(section, chapter) {
   section.onScore('blank-0 blank-1', function() { chapter.addHint(hints.firstGraphSolved); });
 }
 
-export function GT_0_1(section, chapter) {
+export function GT_0_1(section, _chapter) {
   let graphs = $$C('graph', section.$el);
   new Graph(graphs[0], 7, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,5],[6,3]], { directed: true });
   new Graph(graphs[1], 9, [[0,1],[1,2],[2,3],[3,0],[1,3],[4,5],[5,6],[6,4],[7,8]]);
   new Graph(graphs[2], 4, [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,0],[0,3],[0,0],[1,1],[2,2],[3,3]], { arc: true });
 }
 
-export function GT_0_2(section, chapter) {
+export function GT_0_2(section) {
   let graphs = $$C('graph', section.$el);
 
   new Graph(graphs[0], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[2,5]], { vertex: BLUE, edge: BLUE });
@@ -73,21 +65,21 @@ export function GT_0_2(section, chapter) {
 
   new Graph(graphs[1], 8, [[0,1],[1,2],[2,3],[3,0],[1,3],[1,4],[4,6],[6,2],[3,5],[5,7],[7,0]], {
     vertex: (v) => (v < 6 ? BLUE : '#DDD'),
-    edge: function(u, v) { return (u < 6 && v < 6 && !(u == 1 && v == 3)) ? BLUE : '#DDD'; }
+    edge: function(u, v) { return (u < 6 && v < 6 && !(u === 1 && v === 3)) ? BLUE : '#DDD'; }
   });
 
   new Graph(graphs[3], 7, [[0,1],[1,2],[2,3],[3,4],[4,0],[0,3],[1,3],[2,5],[5,3],[5,6],[6,3],[6,4]], {
     vertex: (v) => (v < 5 ? GREEN : '#DDD'),
-    edge: function(u, v) { return (u < 5 && v < 5 && !(v == 3 && (u == 0 || u == 1))) ? GREEN : '#DDD'; }
+    edge: function(u, v) { return (u < 5 && v < 5 && !(v === 3 && (u === 0 || u === 1))) ? GREEN : '#DDD'; }
   });
 
   new Graph(graphs[5], 8, [[0,1],[1,2],[2,3],[3,0],[0,4],[4,5],[5,1],[1,3],[1,4],[3,6],[6,0],[4,7],[7,0]], {
     vertex: (v) => (v < 6 ? YELLOW : '#DDD'),
-    edge: function(u, v) { return (u < 6 && v < 6 && !(u == 1 && (v == 3 || v == 4))) ? YELLOW : '#DDD'; }
+    edge: function(u, v) { return (u < 6 && v < 6 && !(u === 1 && (v === 3 || v === 4))) ? YELLOW : '#DDD'; }
   });
 }
 
-export function GT_0_3(section, chapter) {
+export function GT_0_3(section) {
   let graphs = $$C('graph', section.$el);
 
   new Graph(graphs[0], 5, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,2]]);
@@ -100,7 +92,7 @@ export function GT_0_3(section, chapter) {
     { vertex: (v) => (v ? '#DDD' : RED) });
 }
 
-export function GT_0_4(section, chapter) {
+export function GT_0_4(section) {
   let graphs = $$C('graph', section.$el);
   new Graph(graphs[0], 3, [[0,1],[1,2],[2,0]]);
   new Graph(graphs[1], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]]);
@@ -192,8 +184,8 @@ export function GT_2_0(section, chapter) {
       if (previousErrors.indexOf(name) < 0) chapter.addHint(hints[name]);
       previousErrors.push(name);
       attempts += 1;
-      if (!success && attempts == 2) chapter.addHint(hints.tryDifferentStartPoint);
-      if (!success && isOneOf(i, 0, 3) && attempts == 4) {
+      if (!success && attempts === 2) chapter.addHint(hints.tryDifferentStartPoint);
+      if (!success && isOneOf(i, 0, 3) && attempts === 4) {
         chapter.addHint(hints.tryDifferentMap);
         section.score('bridge-' + i);
       }
@@ -259,7 +251,7 @@ export function GT_2_0(section, chapter) {
   });
 }
 
-export function GT_2_1(section, chapter) {
+export function GT_2_1(section) {
 
   let $svg = $T('svg', section.$el);
 
@@ -322,7 +314,7 @@ export function GT_2_4(section) {
   let $text   = $T('text', $svg);
   let $trace  = $T('path', $svg);
 
-  for (var i=0; i<6; ++i) $edges[i].hide();
+  for (let i=0; i<6; ++i) $edges[i].hide();
   $trace.hide();
 
   section.slides.on('next', function(x) {
@@ -377,7 +369,7 @@ export function GT_3_0(section, chapter) {
   let attempts = 0;
   function resolve(hint) {
     attempts += 1;
-    if (attempts == 3) {
+    if (attempts === 3) {
       section.score('try-three-times');
       chapter.addHint('I think this puzzle might also be impossible… Sorry I tricked you :1f61c:');
     } else if (hint) {
@@ -435,20 +427,20 @@ export function GT_3_0(section, chapter) {
     });
 
     $ut.on('pointerenter', function() {
-      if (!map.drawing || currentUtility == $ut) return;
+      if (!map.drawing || currentUtility === $ut) return;
       map.addPoint(p);
       map.stop();
       $ut.effect('pulse-down');
-      if (startUtility.attr('data-type') == dataType) {
+      if (startUtility.attr('data-type') === dataType) {
         last(map.paths).css('stroke','#C00');
         errors.push(last(map.paths));
-        if (dataType == 'house') {
+        if (dataType === 'house') {
           chapter.addHint(hints.housesToEachOther);
         } else {
           chapter.addHint(hints.factoriesToEachOther);
         }
       } else {
-        let sector = (startUtility.attr('data-type') == 'house') ?
+        let sector = (startUtility.attr('data-type') === 'house') ?
           $C($ut.attr('data-utility'), currentUtility) : $C(currentUtility.attr('data-utility'), $ut);
         sector.css('opacity', 1);
         sectors.set(last(map.paths), sector);
@@ -458,7 +450,7 @@ export function GT_3_0(section, chapter) {
   });
 }
 
-export function GT_3_1(section, chapter) {
+export function GT_3_1(section) {
   let graphs = $$C('graph', section.$el);
 
   let p3 = [[100, 35], [170, 155], [30, 155]];
@@ -493,7 +485,7 @@ export function GT_3_1(section, chapter) {
   });
 }
 
-export function GT_3_3(section, chapter) {
+export function GT_3_3(section) {
   let $svg = $$T('svg', section.$el)[1];
   let $newBtn = $T('button', section.$el);
   let creating = false;
@@ -510,11 +502,11 @@ export function GT_3_3(section, chapter) {
     creating = true;
     section.solveds[0]._el.hide();
 
-    var points = shuffle(n);
-    var edges = [];
+    let points = shuffle(n);
+    let edges = [];
 
     function addEdge(u, v) {
-      if (u == v) return;
+      if (u === v) return;
       let edge = { p1: points[u], p2: points[v] };
       for (let i=0; i<edges.length; ++i)
         if (lineLineIntersect(edge, { p1: points[edges[i][0]], p2: points[edges[i][1]] }))
@@ -522,7 +514,7 @@ export function GT_3_3(section, chapter) {
       edges.push([u,v]);
     }
 
-    for (let i=0; i<n; ++i) addEdge(i, integer(n));
+    for (let i=0; i<n; ++i) addEdge(i, random.integer(n));
     for (let i=0; i<n; ++i) for (let j=i+1; j<n; ++j) addEdge(i, j);
 
     graph.load(n, edges, shuffle(n));
@@ -569,7 +561,7 @@ export function GT_3_3(section, chapter) {
   section.model.change(function() { generateGraph(section.model.n); });
 }
 
-export function GT_4_1(section, chapter) {
+export function GT_4_1(section) {
   let $svgs = section.$el.findAll('svg');
   let $notes = section.$el.findAll('.euler-sum');
 
@@ -577,12 +569,12 @@ export function GT_4_1(section, chapter) {
     let x = i%3;
     let $svg = $svgs[(i-x)/3];
     section.onScore('blank-' + i, function() {
-      if (x == 0) {
+      if (x === 0) {
         $svg.findAll('circle').forEach(function($c) { $c.animate({ fill: Colour.green }); })
-      } else if (x == 1) {
+      } else if (x === 1) {
         $svg.findAll('polygon').forEach(function($c) { $c.animate({ opacity: .3 }); });
         $notes[(i-x)/3].fadeIn();
-      } else if (x == 2) {
+      } else if (x === 2) {
         $svg.findAll('line').forEach(function($c) { $c.animate({ stroke: Colour.red }); });
       }
     });
@@ -622,28 +614,28 @@ export function GT_4_2(section) {
   });
 
   section.slides.on('next', function(s) {
-    if (s == 1) {
+    if (s === 1) {
       $vertices[3].enter('pop', 1);
-    } else if (s == 2) {
+    } else if (s === 2) {
       $vertices[1].enter('pop', 400, 400);
       $edges[0].enter('fade', 400, 400); $edges[2].enter('fade', 400, 400);
-    } else if (s == 3) {
+    } else if (s === 3) {
       $edges[2].exit('fade', 400);
-    } else if (s == 4) {
+    } else if (s === 4) {
       $vertices[2].enter('pop', 400);
       $edges[1].enter('draw', 400); $edges[2].enter('draw', 400);
     }
   });
 
   section.slides.on('back', function(s) {
-    if (s == 0) {
+    if (s === 0) {
       $vertices[3].exit('pop', 400)
-    } else if (s == 1) {
+    } else if (s === 1) {
       $vertices[1].exit('pop', 400);
       $edges[0].exit('fade', 400); $edges[2].exit('fade', 400);
-    } else if (s == 2) {
+    } else if (s === 2) {
       $edges[2].enter('draw', 400);
-    } else if (s == 3) {
+    } else if (s === 3) {
       $vertices[2].exit('pop');
       $edges[1].exit('fade', 400); $edges[2].exit('fade', 400);
     }
@@ -657,8 +649,7 @@ export function GT_4_2(section) {
   });
 }
 
-export function GT_4_3(section, chapter) {
-
+export function GT_4_3() {
   let $svg = $I('dominoes');
   let $gs = $svg.findAll('g');
 
@@ -727,7 +718,7 @@ export function GT_5_1(section, chapter) {
       });
 
       $c.on('click', function() {
-        for (let n of neighbours) if (countryColours[n] == activeColour) {
+        for (let n of neighbours) if (countryColours[n] === activeColour) {
           if (!warned) chapter.addHint('You can’t use this colour here because it is already in one of the neighbouring areas.');
           warned = true;
           return;

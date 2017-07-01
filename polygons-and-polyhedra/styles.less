@@ -6,6 +6,22 @@
 
 @import "styles/variables";
 
+.set-picker {
+  .set-item {
+    .bouncy();
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background .2s, opacity .2s;
+    &:hover { }
+  }
+
+  .row > .set-item { width: 120px; }
+
+  &.working .set-item { opacity: 0.2; }
+  &.working .set-item.selected { opacity: 1; }
+}
+
+// -----------------------------------------------------------------------------
 
 .geopad { margin: 2em 0; }
 .geopad svg {

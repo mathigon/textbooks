@@ -1,14 +1,14 @@
 // =============================================================================
-// Mathigon | Polygons and Polyhedra
-// (c) 2017 Mathigon
+// Polygons and Polyhedra
+// (c) Mathigon
 // =============================================================================
 
 
-import { $, $N } from 'elements';
-import Draggable from 'draggable';
-import { Point, angle } from 'geometry';
-import { numberFormat, roundTo } from 'arithmetic';
-import setPicker from 'set-picker';
+
+import { $, $N } from '@mathigon/boost';
+import { Draggable } from '../node_modules/@mathigon/slate/src/draggable/draggable';
+import { Point, angle, numberFormat, roundTo } from '@mathigon/fermat';
+import { setPicker } from './set-picker';
 
 
 // -----------------------------------------------------------------------------
@@ -73,12 +73,12 @@ function deg(a, b, c) {
 
 export function polygon1(section, chapter) {
   chapter.addGloss('polygon');
-  setPicker(section.$el.find('.set-picker'), section);
+  setPicker(section.$el.find('.set-picker'), section, chapter.Tutor);
 }
 
 export function polygon2(section, chapter) {
   chapter.addGloss('regpoly', 'equilateral', 'square', 'edge', 'vertex');
-  setPicker(section.$el.find('.set-picker'), section);
+  setPicker(section.$el.find('.set-picker'), section, chapter.Tutor);
 }
 
 export function triangles(section, chapter) {

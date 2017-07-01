@@ -1,13 +1,12 @@
 // =============================================================================
-// Mathigon | Codes and Ciphers
-// (c) 2017 Mathigon
+// Codes and Ciphers
+// (c) Mathigon
 // =============================================================================
 
 
-import Evented from 'evented';
-import { clamp } from 'utilities';
-import { letterFrequency, caesarCipher } from 'cryptography';
-import { $, $N } from 'elements';
+import { Evented, clamp } from '@mathigon/core';
+import { letterFrequency, caesarCipher } from '@mathigon/fermat';
+import { $, $N } from '@mathigon/boost';
 
 
 // -----------------------------------------------------------------------------

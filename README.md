@@ -4,9 +4,9 @@
 
 Welcome to Mathigon! This repository contains all the textbook content for http://mathigon.org, including text, code, custom styles as well as image and media resources.
 
-All text and code in this repo is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike license (CC BY-NC-SA) version 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Some third-party images and media resources may have more restrictive licenses. Please [contact us](mailto:rights@mathigon.org).
+All text and code in this repo is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives license (CC BY-NC-ND) version 4.0](https://spdx.org/licenses/CC-BY-NC-ND-4.0.html). Some third-party images and media resources may have more restrictive licenses. Please [contact us](mailto:rights@mathigon.org).
 
-![Creative Commons Attribution-ShareAlike license](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png "CC BY-NC-SA")
+![Creative Commons Attribution-NoDerivatives license](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png "CC BY-NC-SA")
 
 
 ## Contributing

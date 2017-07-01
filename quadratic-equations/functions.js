@@ -1,16 +1,11 @@
 // =============================================================================
-// Mathigon | Quadratic Equations
-// (c) 2017 Mathigon
+// Quadratic Equations
+// (c) Mathigon
 // =============================================================================
 
 
-import { $, $$, $C, $N } from 'elements';
-import Expression from 'expression';
-import { nearlyEquals } from 'arithmetic';
-import xEquation from 'equation';
-import xEquationSystem from 'equation-system';
-import xCoordinateSystem from 'coordinate-system';
-import xCoordinateSketch from 'coordinate-sketch';
+import { square } from '@mathigon/core';
+import { Expression, nearlyEquals } from '@mathigon/fermat';
 
 
 // -----------------------------------------------------------------------------
@@ -39,22 +34,22 @@ let PROPERTIES = {
     name: 'Direction',
     fn(params) { return params[2]; },
     error(val, exp) { return `The parabola should point ${exp > 0 ? 'up' : 'down'}.`; },
-    hint(val, exp) { return todo; }
+    hint(val, exp) { return 'todo'; }
   }, {
     name: 'Turning point X',
     fn(params) { return params[0] - square(params[1]/2/params[2]); },
-    error(val, exp) { return `The turning point should be ${exp > 0 ? 'right of' : exp == 0 ? 'on' : 'left of'} the y-axis.`; },
-    hint(val, exp) { return todo; }
+    error(val, exp) { return `The turning point should be ${exp > 0 ? 'right of' : exp === 0 ? 'on' : 'left of'} the y-axis.`; },
+    hint(val, exp) { return 'todo'; }
   }, {
     name: 'Turning point Y',
-    fn(params) { return todo; },
-    error(val, exp) { return `The turning point should be ${exp > 0 ? 'above' : exp == 0 ? 'on' : 'below'} the x-axis.`; },
-    hint(val, exp) { return todo; }
+    fn(params) { return 'todo'; },
+    error(val, exp) { return `The turning point should be ${exp > 0 ? 'above' : exp === 0 ? 'on' : 'below'} the x-axis.`; },
+    hint(val, exp) { return 'todo'; }
   }, {
     name: 'Y axis intercept',
-    fn(params) { return todo; },
-    error(val, exp) { return `The function should intersect the y-axis ${exp > 0 ? 'above' : exp == 0 ? 'on' : 'below'} the x-axis.`; },
-    hint(val, exp) { return todo; }
+    fn(params) { return 'todo'; },
+    error(val, exp) { return `The function should intersect the y-axis ${exp > 0 ? 'above' : exp === 0 ? 'on' : 'below'} the x-axis.`; },
+    hint(val, exp) { return 'todo'; }
   }]
 };
 
