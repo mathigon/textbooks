@@ -2,7 +2,8 @@
 
 ![](https://mathigon.org/images/hero.png)
 
-Welcome to Mathigon! This repository contains all the textbook content for http://mathigon.org, including text, code, custom styles as well as image and media resources.
+Welcome to Mathigon! This repository contains all the textbook content for
+http://mathigon.org, including text, code, custom styling and media resources.
 
 All text and code in this repo is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives license (CC BY-NC-ND) version 4.0](https://spdx.org/licenses/CC-BY-NC-ND-4.0.html). Some third-party images and media resources may have more restrictive licenses. Please [contact us](mailto:rights@mathigon.org).
 
@@ -11,16 +12,31 @@ All text and code in this repo is licensed under a [Creative Commons Attribution
 
 ## Contributing
 
-Thanks for your interest in contributing to Mathigon. There are many ways how you can help provide amazing educational content to students all around the world:
-* Research and write new chapters.
-* Create graphics and diagrams.
-* Write code for interactive problems and animations.
+Thanks for your interest in contributing to Mathigon. There are many ways in
+which you could help create amazing educational content for students all around
+the world:
+
+* Research and write new chapters,
+* Create graphics and diagrams,
+* Write code for interactive problems and animations,
 * Test and proofread chapters, and fix bugs and mistakes.
 
-To contribute, you need to create a GitHub account, _fork_ this repository and create a _local clone_ on your computer. Now you can make changes to the code and content, _commit_ your changes, _push_ your changes to GitHub and finally create a _pull request_ back into our central repo. We will review all your pull requests with changes and then merge them back into our master.
 
-To test your changes, install all module dependencies using `npm install`. Then you can run `npm start` to start a local development server at https://localhost:5000.
+## Getting Started
 
-If you have ideas for new chapters, please [email us](mailto:dev@mathigon.org) before starting your work.
+After forking and cloning this repository, install all dependencies using
+`npm install`.
 
-Our chapters are written in a custom _Markdown_ format. Documentation about this and other parts of the code can be found in the [Wiki](https://github.com/mathigon/textbooks/wiki), which we are continuously working to expand.
+Now you can run a local development server using `npm start`. As you make
+changes, the server will automatically watch for file changes and update.
+The completed courses can be seen at
+[localhost:5000/course/<course_name>](http://localhost:5000/course/probability).
+
+Feel free to send us pull requests with corrections, improvements or additional
+content. If you have ideas for new chapters, please
+[email us](mailto:dev@mathigon.org) before starting your work.
+
+Our chapters are written in a custom _Markdown_ format. Documentation about
+this and other parts of the code can be found in the
+[Wiki](https://github.com/mathigon/textbooks/wiki), which we are still working
+to improve and expand.
