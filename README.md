@@ -19,6 +19,8 @@ Thanks for your interest in contributing to Mathigon. There are many ways how yo
 
 To contribute, you need to create a GitHub account, _fork_ this repository and create a _local clone_ on your computer. Now you can make changes to the code and content, _commit_ your changes, _push_ your changes to GitHub and finally create a _pull request_ back into our central repo. We will review all your pull requests with changes and then merge them back into our master.
 
+To test your changes, install all module dependencies using `npm install`. Then you can run `npm start` to start a local development server at https://localhost:5000.
+
 If you have ideas for new chapters, please [email us](mailto:dev@mathigon.org) before starting your work.
 
 Our chapters are written in a custom _Markdown_ format. Documentation about this and other parts of the code can be found in the [Wiki](https://github.com/mathigon/textbooks/wiki), which we are continuously working to expand.

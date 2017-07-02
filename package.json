@@ -1,21 +1,22 @@
 {
-  "name": "textbooks",
-  "version": "0.1.0",
+  "name": "@mathigon/textbooks",
+  "version": "0.1.1",
   "description": "Mathigon Textbooks",
   "homepage": "http://mathigon.org/",
   "repository": "mathigon/textbooks",
   "license": "CC-BY-NC-ND-4.0",
   "scripts": {
-    "start": "",
-    "text": "eslint **/*.js"
+    "start": "cd node_modules/@mathigon/textbooks-server && npm start",
+    "test": "eslint */*.js"
   },
   "dependencies": {
-    "@mathigon/boost": "^0.1.3",
-    "@mathigon/core": "^0.1.4",
-    "@mathigon/fermat": "^0.1.3",
-    "@mathigon/slate": "^0.1.1"
+    "@mathigon/boost": "^0.1.4",
+    "@mathigon/core": "^0.1.5",
+    "@mathigon/fermat": "^0.1.4",
+    "@mathigon/slate": "^0.1.2"
   },
   "devDependencies": {
+    "@mathigon/textbooks-server": "^0.1.6",
     "eslint": "^4.1.1"
   }
 }
