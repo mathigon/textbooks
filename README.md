@@ -3,7 +3,7 @@
 ![](https://mathigon.org/images/hero.png)
 
 Welcome to Mathigon! This repository contains all the textbook content for
-http://mathigon.org, including text, code, custom styling and media resources.
+https://mathigon.org, including text, code, custom styling and media resources.
 
 All text and code in this repo is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives license (CC BY-NC-ND) version 4.0](https://spdx.org/licenses/CC-BY-NC-ND-4.0.html). Some third-party images and media resources may have more restrictive licenses. Please [contact us](mailto:rights@mathigon.org).
 

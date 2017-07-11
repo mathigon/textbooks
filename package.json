@@ -2,7 +2,7 @@
   "name": "@mathigon/textbooks",
   "version": "0.1.1",
   "description": "Mathigon Textbooks",
-  "homepage": "http://mathigon.org/",
+  "homepage": "https://mathigon.org/",
   "repository": "mathigon/textbooks",
   "license": "CC-BY-NC-ND-4.0",
   "scripts": {
