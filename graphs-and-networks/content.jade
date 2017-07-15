@@ -373,7 +373,7 @@ section
 
 section
   p This means that we can use Euler&rsquo;s formula not only for planar graphs but also for all polyhedra &#8211; with one small difference. When transforming the polyhedra into graphs, one of the faces disappears: the topmost face of the polyhedra becomes the &#8220;outside&#8221; of the graphs.
-  p In other words, if you count the number of <strong class="red">edges</strong>, <strong class="blue">faces</strong> and <strong class="green">vertices</strong> of <em>any</em> polyhedron, you will find that <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + <span class="blank input" data-answer="2"></span>.
+  p In other words, if you count the number of <strong class="red">edges</strong>, <strong class="blue">faces</strong> and <strong class="green">vertices</strong> of <em>any</em> polyhedron, you will find that <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + #[+blank("2")].
   .row
     div(style="width: 200px")
       x-media(width="200", height="200", src="/resources/graphs-and-networks/images/icosahedron.mp4")
@@ -486,7 +486,7 @@ section
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by streets, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[mfrac.inline #[mrow #[+var tsn] × (#[+var tsn] – 1)]#[mrow 2]] = #[+var tsn*(tsn-1)/2} edges in total.
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by roads, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[mfrac.inline #[mrow #[+var tsn] × (#[+var tsn] – 1)]#[mrow 2]] = #[+var tsn*(tsn-1)/2} edges in total.
 
       p The delivery truck has to visit all cities, in any order. In the Königsberg bridges problem we wanted to find paths which travel along #[em every edge] exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
 
