@@ -20,7 +20,8 @@ const hints = {
   firstGraphSolved: 'Well done! All <x-target to="#graph0">graph diagrams</x-target> in this chapter are interactive: try moving the vertices around.',
   crossWater: "Careful – you are not allowed to enter the water.",
   bridgeCrossedBefore: "You’ve already crossed this bridge before. Try to find a different route.",
-  tryDifferentMap: 'Maybe there is no solution for this city… You could try <x-target to="#GT_2_0 .next">another map</x-target>!',
+  tryDifferentMapA: 'It is possible that there is no solution for this city! Why not try <x-target to="#GT_2_0 .next">another map</x-target>.',
+  tryDifferentMapB: 'Maybe this map also has no solution. Let’s move on!',
   tryDifferentStartPoint: "The starting location might be important. See what happens if you start on a different island.",
   housesToEachOther: "You only need to connect the houses to the factories, but not the houses to each other.",
   factoriesToEachOther: "You only need to connect the factories to the houses, but not the factories to each other.",
@@ -110,7 +111,7 @@ export function GT_1_1(section) {
 }
 
 export function GT_1_2(section) {
-  section.onScore('blank-0', function() {
+  section.onScore('blank-1', function() {
     setTimeout(function() { section.$el.addClass('complete'); }, 1000);
   });
 
@@ -170,33 +171,45 @@ export function GT_2_0(section, chapter) {
     let $error = $C('error', $svg);
 
     let success = false;
-    let afterError = true;
     let attempts = 0;
     let totalCrossed = 0;
     $error.exit();
 
     let map = new Drawing($svg, { paths: $paths });
-    map.on('start', map.clear.bind(map));
+    map.on('start', function() {
+      map.clear();
+      attempts += 1;
+    });
     $el.find('.btn').on('click', function() { map.clear(); });
 
     function error(name) {
-      afterError = true;
       if (previousErrors.indexOf(name) < 0) chapter.addHint(hints[name]);
       previousErrors.push(name);
-      attempts += 1;
-      if (!success && attempts === 2) chapter.addHint(hints.tryDifferentStartPoint);
-      if (!success && isOneOf(i, 0, 3) && attempts === 4) {
-        chapter.addHint(hints.tryDifferentMap);
-        section.score('bridge-' + i);
-      }
     }
+
+    map.on('end', function() {
+      if (success) return;
+      if (attempts === 2 && i < 2) chapter.addHint(hints.tryDifferentStartPoint);
+      if (attempts !== 4) return;
+
+      switch(i) {
+        case 0:
+          chapter.addHint(hints.tryDifferentMapA);
+          section.score('bridge-' + i);
+          break;
+        case 3:
+          chapter.addHint(hints.tryDifferentMapA);
+          section.score('bridge-' + i);
+          break;
+        default:
+          chapter.addHint('Keep trying!');
+      }
+    });
 
     map.on('clear', function() {
       totalCrossed = 0;
       $error.exit('pop', 300);
       section.solveds[i]._el.hide();
-      if (!afterError) attempts += 1;
-      afterError = false;
     });
 
     $water.on('pointerenter', function(e) {

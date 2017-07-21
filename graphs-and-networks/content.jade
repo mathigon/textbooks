@@ -14,8 +14,11 @@ mixin frac(a,b,inline)
       mrow!= a
       mrow!= b
 
-mixin blank(choices)
-  x-blank(choices=choices)
+mixin blank(choices, wide)
+  if wide
+    x-blank.wide(choices=choices)
+  else
+    x-blank(choices=choices)
 
 mixin var(bind)
   if bind
@@ -120,7 +123,7 @@ section#GT_0_3(data-gloss='order degree')
 
 
 section#GT_0_4(data-gloss="cycle")
-  p.grow Graphs which consist of a single ring of vertices are called #[strong cycles] All cycles have #[+blank("the same number of edges and vertices|more edges than vertices|fewer edges than vertices")]. Most graphs have many cycles as subgraphs.
+  p.grow Graphs which consist of a single ring of vertices are called #[strong cycles] All cycles have #[+blank("the same number of edges and vertices|more edges than vertices|fewer edges than vertices", true)]. Most graphs have many cycles as subgraphs.
   .row
     svg.graph(style='width: 90px; height: 90px;')
     svg.graph(style='width: 90px; height: 90px;')
@@ -139,35 +142,35 @@ section#GT_1_1
   .row
     .grow
       p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[+var('hnd|5|2,15,1') hnd] people present. Now it is easy to count the number of edges, and we find that there #[+var (hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')].
-      p.subsection(data-needs='blank-0 blank-1') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
+      p.subsection(data-needs='blank-0 blank-1 var-0') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
     div(style='width: 220px;')
       svg.graph(style='width: 220px; height: 220px;')
 
 
 section#GT_1_2
-  p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] × #[+var n-1] = #[+var n * (n-1)] handshakes in total.
+  p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] × #[+var n-1] = #[+var n * (n-1)] handshakes in total. More generally, it looks like the number of handshakes for a group of #[em n] people is #[+blank('<em>n</em> × (<em>n</em> – 1)|<em>n</em> × (<em>n</em> + 1)|<em>n</em><sup>2</sup>')].
   p.var ${ handshakeTable(n) }
-  .subsection
-    p Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. Therefore, the correct number of handshakes for #[+var n] guests is #[mfrac.inline #[mrow #[+var n] × #[+var n-1]]#[mrow 2]] = #[+var n*(n-1)/2].
+  p.subsection(data-needs="blank-0 var-0") Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. For example, #[x-target(to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)") the first two entries on the top row] are the same. When 1 shakes hands with 2, then 2 automatically shakes hands with 1.
+  p.subsection(data-needs="blank-1") Therefore, the correct number of handshakes for #[+var n] guests is #[mfrac.inline #[mrow #[+var n] × #[+var n-1]]#[mrow 2]] = #[+var n*(n-1)/2].
 
 
 section#GT_1_3
-  p The handshake graphs are special because every vertex is connected to every other vertex. Graphs with this property are called #[strong complete graphs]. The complete graph with #[+var('comp|5|2,12,1') comp] vertices is often abbreviated as #[em K#[sub #[+var comp]]].
+  p The handshake graphs are special because every vertex is connected to every other vertex. Graphs with this property are called #[strong complete graphs]. The complete graph with 4 vertices is often abbreviated as #[em K]#[sub 4], the complete graph with 5 vertices is known as #[em K]#[sub 5], and so on.
+  p We have just shown that a complete graph with #[em n] vertices, #[em K#[sub n]], has #[+frac('<em>n</em> × (<em>n</em> – 1)', '2', true)] edges.
   .row
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
     svg.graph(style="width: 90px; height: 90px;")
-  p We have just shown that a complete graph with #[em n] vertices has #[+frac('<em>n</em> × (<em>n</em> – 1)', '2')] edges.
 
 
 section#GT_1_4
   p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
   p On a different day, you are invited to a speed dating event for #[+var('m|5|2,8,1') m] boys and #[+var('f|4|2,8,1') f] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
-  .row.subsection
+  .row.subsection(data-needs="var-0 var-1")
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
     div(style="width: 300px;"): svg.graph(style="width: 300px; height: 140px;")
-  p.subsection(data-needs="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("x × y|x + y|2x - y")] edges, which means that in the above example there are #[+var m] × #[+var f] = #[+var m*f] dates.
+  p.subsection(data-needs="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("<em>x</em> × <em>y</em>|<em>x</em> + <em>y</em>|2<em>x</em> – <em>y</em>")] edges, #[span.subsection(data-needs="blank-2") which means that in the above example there are #[+var m] × #[+var f] = #[+var m*f] dates.]
 
 //- ----------------------------------------------------------------------------------------------
 
@@ -210,8 +213,9 @@ section#GT_2_1
 
 
 section
-  p Try drawing these graphs with one continuous stroke:
-  p.todo Interactive coming soon…
+  p On paper, come up with a few different graphs and then try to work out which ones can be drawn with a single, continuous stroke.
+  //- p Try drawing these graphs with one continuous stroke:
+  //- p.todo Interactive coming soon…
 
 
 section#GT_2_3
@@ -231,7 +235,7 @@ section#GT_2_3
 
 
 section#GT_2_4
-  p Comparing these numbers for graphs which are possible and those which are not possible, it seems that a graph can be drawn if it <span class="blank wide" data-choices="has no more than two &#8220;odd&#8221; vertices|only has &#8220;even&#8221; vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3"></span>. This condition can be explained if we look at just a single vertex in the graph:
+  p Comparing these numbers for graphs which are possible and those which are not possible, it seems that a graph can be drawn if it #[+blank('has no more than two &#8220;odd&#8221; vertices|only has &#8220;even&#8221; vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3', true)]. This condition can be explained if we look at just a single vertex in the graph:
   x-slideshow
     .stage
       include svg/konigsberg-proof.svg
