@@ -1,0 +1,25 @@
+# Quadratic Equations Glossary
+
+term:
+  title: Term
+  text: A term (or expression) is an
+
+variable:
+  title: Variable
+  text: A variable is an unknown quantity in an [algebraic expression](gloss:term), which is usually represented by a letter like _x_.
+
+coefficient:
+  title: Coefficient
+  text: A coefficient is the number by which a [variable](gloss:variable) or a power of a variable is multiplied. For exmple, the coefficient of `5x^2` is 5, and the coefficient of `7y` is 7.
+
+polynomial:
+  text: Polynomial
+  text: A polynomial is an [algebraic expression](gloss:term) that consists of multiple powers of a [variable](gloss:variable), for example `5x^3 - 2x^2 + x + 4`.
+
+degree:
+  title: Degree
+  text: The degree of a [polynomial](gloss:polynomial) is the highest power of any [variables](gloss:variable) in it. For example, the degree of `5x^3 + 2x - 4` is 3.
+
+quadratic:
+  title: Quadratic
+  text: A quadratic is a [polynomial(gloss:polynomial) of [degree](gloss:degree) 2. For example, `x^2 - 2x + 3` is a quadratic.
