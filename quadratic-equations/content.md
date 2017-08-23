@@ -104,10 +104,6 @@ where `x` is a __variable__ and `a`, `b` and `c` can be any numbers (including
 negative ones), called __coefficients__. Both `b` and `c` could be 0, but
 `a` can’t be 0 because then we would just have [[a linear equation|zero|no solution]].
 
-{.showif(<-0.1)} Solving quadratic equations is much more difficult than solving
-linear equations, because you take square roots of `x^2` without taking square
-roots of `x`.
-
 The graph of a quadratic equation always has a “curved” shape like the
 one we saw before. This shape is called a __Parabola__. The simplest quadratic
 function is `y = x^2`. If we plot this on a diagram, we get a simple, upward
