@@ -1,7 +1,6 @@
 {
     "title": "Probability",
-    "stage": "foundations",
+    "stage": "intermediate",
     "description": "Cards, dice, roulette and game shows: probability is one of the most fun areas of mathematics, full of surprises and real life applications.",
-    "icon": "courses/f-probability.png",
     "hero": "images/hero.jpg"
 }

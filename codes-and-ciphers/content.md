@@ -1,8 +1,7 @@
 # Codes and Ciphers
 
-stage: foundations  
-description:   
-icon: courses/f-codes.png  
+stage: intermediate  
+description: abc
 hero: images/hero.jpg
 
 ---

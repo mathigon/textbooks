@@ -1,7 +1,6 @@
 {
     "title": "Polygons and Polyhedra",
-    "stage": "foundations",
+    "stage": "intermediate",
     "description": "Shapes and geometry is everywhere around us, is nature, architecture, technology or science. Here you will learn about angels, polygons, tessellations and polyhedra.",
-    "icon": "courses/f-polyhedra.png",
     "hero": "images/hero.jpg"
 }

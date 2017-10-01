@@ -1,7 +1,6 @@
 {
     "title": "Graphs and Networks",
-    "stage": "foundations",
+    "stage": "intermediate",
     "description": "Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks.",
-    "icon": "courses/f-graphs.png",
     "hero": "images/hero.jpg"
 }
