@@ -528,7 +528,7 @@ Speed, on the other hand, is the rate of change of position. The ball started
 at a height 0 when we threw it, and we can calculate its height after every
 subsequent second by adding the speed at that time.
 
-  p.todo. table
+  p.todo.
     time             0    1s    2s    3s    4s    5s    6s    7s    8s    9s
     acceleration   -10   -10   -10   -10   -10   -10   -10   -10   -10   -10
     speed           50    40    30    20    10     0   -10   -20   -30   -40

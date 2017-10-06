@@ -5,11 +5,9 @@
 
 
 
-import { last, tabulate, list, isOneOf } from '@mathigon/core';
+import { last, tabulate, list } from '@mathigon/core';
 import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, lineLineIntersect, subsets } from '@mathigon/fermat';
-import { $I, $T, $C, $$C, $$T, $N, Colour, svgPointerPosn, animate } from '@mathigon/boost';
-import { Draggable } from '../node_modules/@mathigon/slate/src/draggable/draggable';
-import { Drawing } from '../node_modules/@mathigon/slate/src/drawing/drawing';
+import { $I, $T, $C, $$C, $$T, $N, Colour, svgPointerPosn, animate, Draggable, Sketch } from '@mathigon/boost';
 import { Graph } from './graph';
 
 
@@ -175,7 +173,7 @@ export function GT_2_0(section, chapter) {
     let totalCrossed = 0;
     $error.exit();
 
-    let map = new Drawing($svg, { paths: $paths });
+    let map = new Sketch($svg, { paths: $paths });
     map.on('start', function() {
       map.clear();
       attempts += 1;
@@ -371,9 +369,8 @@ export function GT_3_0(section, chapter) {
   let startUtility;
 
   let errors = [];
-  let remove = false;
 
-  let map = new Drawing($I('map-utilities'), {
+  let map = new Sketch($I('map-utilities'), {
     noStart: true,
     paths: $I('utility-paths'),
     intersect: true
@@ -397,8 +394,6 @@ export function GT_3_0(section, chapter) {
     map.stop();
     resolve('Careful: the lines are not allowed to cross.');
   });
-
-  map.on('end', function() { if (map.drawing) remove = true; });
 
   let allUtilities = section.$el.findAll('.utility1, .utility2, .utility3');
   let sectors = new WeakMap();

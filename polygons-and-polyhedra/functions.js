@@ -5,9 +5,8 @@
 
 
 
-import { $, $N } from '@mathigon/boost';
-import { Draggable } from '../node_modules/@mathigon/slate/src/draggable/draggable';
 import { Point, angle, numberFormat, roundTo } from '@mathigon/fermat';
+import { $, $N, Draggable } from '@mathigon/boost';
 import { setPicker } from './set-picker';
 
 

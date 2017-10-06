@@ -12,8 +12,7 @@
   "dependencies": {
     "@mathigon/boost": "^0.1.4",
     "@mathigon/core": "^0.1.5",
-    "@mathigon/fermat": "^0.1.4",
-    "@mathigon/slate": "^0.1.2"
+    "@mathigon/fermat": "^0.1.4"
   },
   "devDependencies": {
     "@mathigon/textbooks-server": "^0.1.6",

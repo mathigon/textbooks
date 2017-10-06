@@ -83,12 +83,12 @@ we can write down an equation for the amount left after time `t`:
 
 {.eqn-system}
 | `"amount"` | `= 1000 × (1/2)^(t/6000)` |
-|          | `= 1000 × 2^(-t/6000)`    |
+|            | `= 1000 × 2^((-t)/6000)`  |
 
 Of course 1,000 and 6,000 were just arbitrary numbers. A more general equation
 is:
 
-{.text-center} `"amount" = "initial" × 2^(-t/"half life")`
+{.text-center} `"amount" = "initial" × 2^((-t)/"half life")`
 
 ---
 
@@ -98,10 +98,10 @@ of C12 and C14, they would estimate there would have been 100 atoms when the
 animal died.
 
 {.eqn-system}
-| `10`         | `= 100 × 2^(-t/6000)`  |
-| `0.1`        | `= 2^(-t/6000)`        |
-| `log_2(0.1)` | `= -t/6000`            |
-| `t`          | `= -6000 × log_2(0.1)` |
+|         `10` | `= 100 × 2^((-t)/6000)`  |
+|        `0.1` | `= 2^((-t)/6000)`      |
+| `log_2(0.1)` | `= (-t)/6000`          |
+|          `t` | `= -6000 × log_2(0.1)` |
 |              | `= 19932 "years"`      |
 
 Using the mathematics of logarithms and the properties of radioactive decay, we
@@ -132,6 +132,9 @@ Here are a few examples of processes in nature or everyday life. Try to decide
 which ones are exponential or linear. (Note that some models are increasing, 
 and others are decreasing.)
 
+cell division
+interest
+speed of computers, Moore's Law
 {.todo} interactive
 
 ---

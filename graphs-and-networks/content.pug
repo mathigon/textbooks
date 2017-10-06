@@ -490,7 +490,7 @@ section
 
   .row.right
     .grow
-      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by roads, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[mfrac.inline #[mrow #[+var tsn] × (#[+var tsn] – 1)]#[mrow 2]] = #[+var tsn*(tsn-1)/2} edges in total.
+      p Let us think, once more, about networks and maps. Imagine that a delivery service has to visit #[+var('tsn|8|2,50,1') tsn] different cities to distribute parcels. We can think of these cities as the vertices in a graph. If all of the cities are connected by roads, this is a #[+blank("complete graph|cycle|bipartite graph")], so there are #[mfrac.inline #[mrow #[+var tsn] × (#[+var tsn] – 1)]#[mrow 2]] = #[+var tsn*(tsn-1)/2] edges in total.
 
       p The delivery truck has to visit all cities, in any order. In the Königsberg bridges problem we wanted to find paths which travel along #[em every edge] exactly one. Now we want to find paths which visit <em>every vertex</em> exactly once. These paths are called <strong>Hamiltonian cycles</strong>.
 
