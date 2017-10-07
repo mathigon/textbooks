@@ -222,16 +222,15 @@ section#GT_2_3
   p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss(xid="degree") degree]:
 
   .frame.fill(style="padding: 20px")
-    .frame-body(style="margin-bottom: -18px;"): strong These graphs are possible:
+    p(style="margin: 0"): strong These graphs are possible:
     include svg/vertex-orders-1.svg
-    .frame-body(style="margin-bottom: -24px;"): strong These graphs are not possible:
+    p(style="margin: 1em 0 0"): strong These graphs are not possible:
     include svg/vertex-orders-2.svg
-    .frame-body Colour vertices by&nbsp;&nbsp;
-      select.btn
-        option(value="val", selected) value
-        option(value="size") small and large
-        option(value="prime") prime and composite
-        option(value="eo") even and odd
+    p: select.btn
+      option(value="val", selected) Colour by value
+      option(value="size") Colour by small and large
+      option(value="prime") Colour by prime and composite
+      option(value="eo") Colour by even and odd
 
 
 section#GT_2_4
