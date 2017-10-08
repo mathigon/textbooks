@@ -5,7 +5,7 @@ description: description
 hero: images/hero.jpg
 tile: images/og-tile.jpg
 
----
+---{#cd1}
 
 ## Carbon Dating
 
@@ -17,13 +17,16 @@ different isotopes:
   .row.img-block
     .text-center(style="width: 170px")
       include svg/atom-1.svg
-      p #[strong Carbon 12]#[br]6 Protons, 6 Neutrons#[br]98.8%
+      div #[strong Carbon 12]
+      .small 6 Protons, 6 Neutrons#[br]98.8%
     .text-center(style="width: 170px")
       include svg/atom-2.svg
-      p #[strong Carbon 13]#[br]6 Protons, 7 Neutrons#[br]1.1%
+      div #[strong Carbon 13]
+      .small 6 Protons, 7 Neutrons#[br]1.1%
     .text-center(style="width: 170px")
       include svg/atom-3.svg
-      p #[strong Carbon 14]#[br]6 Protons, 8 Neutrons#[br]0.1%
+      div #[strong Carbon 14]
+      .small 6 Protons, 8 Neutrons#[br]0.1%
 
 One amazing fact is that the proportions of these isotopes is almost exactly the
 same, anywhere on Earth – almost everything is C12, but approximately 0.1% of
@@ -34,7 +37,7 @@ decays: it breaks apart into other element. We are actually surrounded by many
 different radioactive materials, but they are all much, much weaker than
 nuclear power stations or atomic bombs.
 
----
+---{#cd2}
 
 During our life, as we eat or breathe, all living things – plants, animals or
 humans – absorb these materials, which means that our body contains some
@@ -44,37 +47,34 @@ that we have already absorbed start to [[decay|multiply|disappear]].
   .img-block
     include svg/chart.svg
 
----
+---{#cd3}
 
   img.text-wrap(src="images/fossil.jpg" style="shape-outside: url(images/fossil.png)" width=320 height=295)
 
 This can be used by geologists, when the’re trying to determine the age of
 fossils: they take a small sample of fossil and “count” the number of C12 and
-C14 atoms in the sample. By looking at the ratio, they can
-work out how much C14 must have decayed since the dinosaur died. Finally, they
-can calculate how long it takes for that much C14 to decay, and that’s precisely
-the time since the dinosaur died!
+C14 atoms in the sample. By looking at the ratio, they can work out how much C14
+must have decayed since the animal died. Finally, they can calculate how long it
+takes for that much C14 to decay, and that’s precisely the age of the fossil!
 
 This process is called __Carbon Dating__, and it relies on some interesting
 mathematics. The key concept to understand is that radioactive materials always
 decay at a constant rate, which is usually indicated by their __half life__.
 
+---{#cd4}
+
 C14, for example, has a half life of approximately 6,000 years. This means that
 if I have a block of C14, it will take 6,000 years for half of it to decay into
-other elements. After another 6,000, half of the remaining atoms will have
-decayed, so I'm left with [[a quarter|a third|nothing]] of the original amount.
-And so on:
+other elements. After another 6,000 years, half of the remaining atoms will have
+decayed, so I’m left with [[a quarter|a third|nothing]] of the original amount.
 
-{.todo} animation
-
----
-
-Let’s assume we start with 1,000 Carbon 14 atoms, and summarise the remaining
+Let’s assume we start with 1,200 Carbon 14 atoms, and summarise the remaining
 amount over time in a table:
 
-{.grid}
-| __time__   | 0    | 6000    | 12000   | 18000   |
-| __amount__ | 1000 | [[500]] | [[250]] | [[125]] |
+{.grid.col-grid}
+|            | <div class="col"></div> | <div class="col c1"></div> | <div class="col c2"></div> | <div class="col c3"></div> | <div class="col c4"></div> |
+| __time__   | 0    | 6000    | 12000   | 18000   | 24000  |
+| __amount__ | 1200 | [[600]] | [[300]] | [[150]] | [[75]] |
 
 ---
 
@@ -98,11 +98,11 @@ of C12 and C14, they would estimate there would have been 100 atoms when the
 animal died.
 
 {.eqn-system}
-|         `10` | `= 100 × 2^((-t)/6000)`  |
-|        `0.1` | `= 2^((-t)/6000)`      |
-| `log_2(0.1)` | `= (-t)/6000`          |
-|          `t` | `= -6000 × log_2(0.1)` |
-|              | `= 19932 "years"`      |
+|         `10` | `= 100 × 2^((-t)/6000)` |
+|        `0.1` | `= 2^((-t)/6000)`       |
+| `log_2(0.1)` | `= (-t)/6000`           |
+|          `t` | `= -6000 × log_2(0.1)`  |
+|              | `= 19932 "years"`       |
 
 Using the mathematics of logarithms and the properties of radioactive decay, we
 have worked out that the fossil is around 20 thousand years old!
