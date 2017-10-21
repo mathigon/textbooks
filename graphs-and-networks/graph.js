@@ -5,11 +5,9 @@
 
 
 import { square, run, clamp, list, Evented } from '@mathigon/core';
-import { nearlyEquals, Point, Vector } from '@mathigon/fermat';
+import { nearlyEquals, Point, V } from '@mathigon/fermat';
 import { $N, slide } from '@mathigon/boost';
 
-
-function V(...args) { return new Vector(...args); }
 
 export class Graph extends Evented {
 

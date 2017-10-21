@@ -188,6 +188,15 @@ day (times 2). On day `x`, you'll get `2^x` cents.
 
 ---
 
+Let's represent it in a chart:
+
+  x-coordinate-system.var(x="-2 20 2" y="-10 100 10" fn="${a}*x,${b}*2^(x-1)")
+
+{.text-center} One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
+gets ${b}{b|1|1,10,1}¢ every day.
+
+---
+
 As you can see, your daily payment start low but then grow rapidly. After 15
 days you’ve reached $100. After less than a month you’re making more than 1
 million per day, and after 2 months you'd have made more than _all the money
