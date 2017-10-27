@@ -15,7 +15,7 @@ import { Graph } from './graph';
 // Hints
 
 const hints = {
-  firstGraphSolved: 'Well done! All <x-target to="#graph0">graph diagrams</x-target> in this chapter are interactive: try moving the vertices around.',
+  firstGraphSolved: 'All <x-target to="#graph0">graph diagrams</x-target> in this chapter are interactive: try moving the vertices around.',
   crossWater: "Careful – you are not allowed to enter the water.",
   bridgeCrossedBefore: "You’ve already crossed this bridge before. Try to find a different route.",
   tryDifferentMapA: 'It is possible that there is no solution for this city! Why not try <x-target to="#GT_2_0 .next">another map</x-target>.',
