@@ -1,15 +1,13 @@
 # Quadratic Equations
 
-stage: intermediate
-description: Quadratic equations and functions are key concepts not only in mathematics but also in physics, engineering and technology.
-hero: images/hero.jpg
-tile: images/og-tile.jpg
+> stage: intermediate
+> description: Quadratic equations and functions are key concepts not only in mathematics but also in physics, engineering and technology.
 
 ---
 
 ## Introduction
 
-  img.text-wrap(src="images/skater-1.jpg", style="shape-outside: url(images/skater-1-mask.png)", width=300, height=393)
+    img.text-wrap(src="images/skater-1.jpg", style="shape-outside: url(images/skater-1-mask.png)", width=300, height=393)
 
 Welcome to SkateSum, a small company that produces skateboards. Engineers have
 been working on a brand new model, the _SquareBoard_, which is finally ready to
@@ -50,7 +48,8 @@ _{.b.orange}price_ of each:
 {.text-center.subsection(blank-1)}
 _{.b.green}revenue_ = _{.b.purple}demand_ × _{.b.orange}price_
 
----{#s1}
+---
+> id: s1
 
 The _{.b.red}cost_ is $2000 for buying tools and machines plus the $60 for every
 skateboard they produce – and ideally this number should be equal to the demand:
@@ -61,29 +60,30 @@ Finally, the profit is the difference between _{.b.green}revenue_ and
 _{.b.red}cost_. We can substitute the expressions above, and express total
 _{.b.yellow}profit_ just in terms of the _{.b.orange}price_ of every skateboard:
 
-  x-equation-system
-    table
-      tr
-        td #[em.b.yellow profit]
-        td= '='
-        td #[em.b.green revenue] – #[em.b.red cost]
-      tr
-        td
-        td= '='
-        td: x-equation.var(vars="profit revenue cost demand price", fns="+ - * ^")
+    x-equation-system
+      table
+        tr
+          td #[em.b.yellow profit]
+          td= '='
+          td #[em.b.green revenue] – #[em.b.red cost]
+        tr
+          td
+          td= '='
+          td: x-equation.var(vars="profit revenue cost demand price", fns="+ - * ^")
 
 {.subsection(equation-1)} Notice that this equation contains _{.b.orange}price_
-as well as _{.b.orange}price_[{sup}2]. Therefore it is called a
+as well as _{.b.orange}price_^2^. Therefore it is called a
 __Quadratic Equation__.
 
----{#s2}
+---
+> id: s2
 
-Now we want to find the value of _{.b.orange}price_ that produces the largest
+Now we want to find the value of _price_{.b.orange} that produces the largest
 profit. Let's start by creating a graph that shows the _{.b.yellow}profit_ (on
 the _y_-axis) for a range of possible different _{.b.orange}prices_ (on the
 _x_-axis):
 
-  x-coordinate-system(x="-20 180 20" x-label="price" y="-100 100 20" y-label="profit" y-suffix="k" fn="-0.03 * x^2 + 6.8 * x - 302" regions="-20,0;60,-100|120,80;180,-20" crosshairs)
+    x-coordinate-system(x="-20 180 20" x-label="price" y="-100 100 20" y-label="profit" y-suffix="k" fn="-0.03 * x^2 + 6.8 * x - 302" regions="-20,0;60,-100|120,80;180,-20" crosshairs)
 
 If the [price is 0](->#s2 .r1), the “profit” is negative, because we’re
 just giving away expensive skateboards for free. As the price increases, our
@@ -91,7 +91,8 @@ profit rises, too. However, if the skateboards become [too expensive](->#s2 .r2)
 people no longer want to buy them and the profit falls again. SkateSum can
 maximise its profit by pricing the skateboards at approximately $[[110]].
 
----{#s3}
+---
+> id: s3
 
 ## Quadratic Equations
 
@@ -108,7 +109,7 @@ one we saw before. This shape is called a __Parabola__. The simplest quadratic
 function is `y = x^2`. If we plot this on a diagram, we get a simple, upward
 pointing parabola:
 
-  x-coordinate-system.var(x="-5 5 1" y="-3 5 1" fn="${a}*x^2+(${b})*x+(${c})" points="${zeros(a,b,c)}")
+    x-coordinate-system.var(x="-5 5 1" y="-3 5 1" fn="${a}*x^2+(${b})*x+(${c})" points="${zeros(a,b,c)}")
 
 Now try changing the values of _a_, _b_ and _c_ in the quadratic equation and
 see how the parabola changes:
@@ -119,8 +120,8 @@ see how the parabola changes:
 To solve a quadratic equation, we have to find the points where _y_ = 0. These
 are the points where the graph of the parabola [[crosses the x-axis|crosses the y-axis|turns around]].
 While linear equations always have exactly one solution, we can see from the
-diagram that quadratic equations can sometimes have and [{span.action}no solution],
-[{span.action}one solution], or even [{span.action}two solutions].
+diagram that quadratic equations can sometimes have and _{span.action}no solution_,
+_{span.action}one solution_, or even _{span.action}two solutions_.
 
 ---
 
@@ -138,8 +139,8 @@ This equation has __no solutions__.
 In the following sections we will learn a few different ways to solve quadratic
 equations and interpret their graphs.
 
-  .img-block
-    x-media(src="images/skater-2.jpg", width="400", height="352", credit="© Depositphotos")
+    .img-block
+      x-media(src="images/skater-2.jpg", width="400", height="352", credit="© Depositphotos")
 
 ---
 
@@ -160,7 +161,8 @@ First, we isolate `x^2` on one side of the equation:
 
 Now we take square roots of both sides, remembering to add a ±:
 
-{.text-center} `x = +- sqrt(25)`  
+{.text-center}
+`x = +- sqrt(25)`  
 `x = +- 5`
 
 Sometimes we have to do a bit more work to isolate `x^2`:
@@ -496,10 +498,10 @@ want to find it’s _maximum_.
 
 {.todo} Scheitelpunktform und Grundform
 
-  .box.problem-box
-    .box-title: h3 Finding maxima and minima of quadratic functions
-    .box-body
-      p.todo Exercises under development…
+    .box.problem-box
+      .box-title: h3 Finding maxima and minima of quadratic functions
+      .box-body
+        p.todo Exercises under development…
 
 ---
 
@@ -528,23 +530,23 @@ Speed, on the other hand, is the rate of change of position. The ball started
 at a height 0 when we threw it, and we can calculate its height after every
 subsequent second by adding the speed at that time.
 
-  p.todo.
-    time             0    1s    2s    3s    4s    5s    6s    7s    8s    9s
-    acceleration   -10   -10   -10   -10   -10   -10   -10   -10   -10   -10
-    speed           50    40    30    20    10     0   -10   -20   -30   -40
-    position         0    50    90   120   140   150   150   140   120    90
+    p.todo.
+      time             0    1s    2s    3s    4s    5s    6s    7s    8s    9s
+      acceleration   -10   -10   -10   -10   -10   -10   -10   -10   -10   -10
+      speed           50    40    30    20    10     0   -10   -20   -30   -40
+      position         0    50    90   120   140   150   150   140   120    90
 
 Notice how the height of the ball increases quickly, then slows down, and then
 decreases, as it falls back towards the ground. Let’s visualise this motion in
 a diagram:
 
-  p.todo diagram
+    p.todo diagram
 
 This shape looks just like a parabola. If we ignore things like air resistance,
 then all objects we throw into the air follow a parabolic path: including
 basketballs, jets of water, or even rockets.
 
-  p.todo example images
+    p.todo example images
 
 ---
 
@@ -600,8 +602,8 @@ Quadratic equations are hidden everywhere in our world. Can you think of any
 other examples?
 
 
-  // Solve fractional equations that result in quadratics
-  // quadratic substitutions
-  // quadratic inequalities
-  // absolute value equations
-  // systems of quadratic equations
+    // Solve fractional equations that result in quadratics
+    // quadratic substitutions
+    // quadratic inequalities
+    // absolute value equations
+    // systems of quadratic equations
