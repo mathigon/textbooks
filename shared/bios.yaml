@@ -1,0 +1,220 @@
+appel:
+  name: Kenneth Appel
+  birth: '1932'
+  death: '2013'
+  bio: |
+    Kenneth Appel was an American mathematician, known for his proof of the
+    Four Colour Theorem with Wolfgang Haken.
+
+    In recognition, he and Haken received the Fulkerson Prize of the American
+    Mathematical Society.
+
+    Appel studied at Queens College, New York, and the University of Michigan.
+    He taught at the University of Illinois, and the University of New Hampshire.
+
+archimedes:
+  name: Archimedes
+  birth: c. 287
+  death: c. 212 BC
+  bio: |
+    Archimedes was an ancient Greek scientist and engineer, and one of the
+    greatest mathematicians of all time. He discovered many concepts of
+    calculus, and worked in geometry, analysis and mechanics.
+
+    While taking a bath, Archimedes discovered a way to determine the volume of
+    irregular objects using the amount of water they displaced when submerged.
+    He was so excited by this discovery that he run out on the street, still
+    undressed, yelling _“Eureka!”_ (Greek for _“I have found it!”_).
+
+    As engineer he built ingenious defence machines during the siege of his home
+    city Syracuse in Sicily. After two years, the Romans finally managed to
+    enter and Archimedes as killed. His last words were _“Do not disturb my
+    circles”_ – which he was studying at the time.
+
+dirac:
+  name: Paul Dirac
+  birth: '1898'
+  death: '1972'
+  bio: "<p>Paul Dirac was an English theoretical physicist, who shared the 1933 Nobel
+    Prize with Erwin Schrödinger. Dirac was one of the pioneers of Quantum Mechanics,
+    formulated the famous <em>Dirac equation</em> and first predicted the existence
+    of antimatter.</p><p>He taught at Cambridge University, before moving to America.
+    Dirac was famously shy and, according to Einstein, <em>“balancing on the dizzying
+    path between genius and madness”</em>.</p>"
+
+eratosthenes:
+  name: Eratosthenes of Cyrene
+  birth: c. 276 BC
+  death: c. 195 BC
+  bio: "<p>Eratosthenes was a Greek mathematician, geographer, astronomer and poet.
+    He first calculated the circumference of the Earth and the distance from Earth
+    to the sun, and he drew some of the first world maps. He also discovered the Sieve
+    of Eratosthenes, an efficient way to determine which numbers are prime.</p>"
+
+escher:
+  name: M. C. Escher
+  birth: '1898'
+  death: '1972'
+  bio: "<p>Maurits Cornelis Escher was a Dutch artist who created sketches, woodcuts
+    and lithographs of mathematically inspired objects and shapes: including polyhedra,
+    tessellations and impossible shapes. He graphically explored concepts like symmetry,
+    infinity, perspective and non-euclidean geometry.</p>"
+euclid:
+  name: Euclid of Alexandria
+  birth: around 300 BCE
+  bio: "<p>Euclid was a Greek mathematician and is often called the <em>father of
+    geometry</em>. He published a book <em>Elements</em> that first introduced Euclidean
+    geometry and contained many important proofs in geometry and number theory. It
+    was the main textbook for teaching mathematics until the 19th century. Very little
+    else is known about his life.</p>"
+euler:
+  name: Leonhard Euler
+  birth: '1707'
+  death: '1783'
+  bio: "<p>Leonhard Euler is one the greatest mathematicians of all times. His work
+    spans all areas of mathematics, and he wrote 80 volumes of research.</p><p>Euler
+    was born in Switzerland and studied in Basel, but lived most of his life in Berlin,
+    Prussia, and St. Petersburg, Russia.</p><p>Euler invented much of the modern mathematical
+    terminology and notation, and made important discoveries in calculus, analysis,
+    graph theory, physics, astronomy, and many other topics.</p>"
+fermat:
+  name: Pierre de Fermat
+  birth: '1607'
+  death: '1665'
+  bio: "<p>Pierre de Fermat was a French mathematician and Lawyer. He was one of the
+    early pioneers of calculus, as well as working on number theory, probability,
+    geometry and optics.</p><p>In 1637, he wrote a short note in the margin of one
+    of his textbooks, claiming that the equation <em>a<sup>n</sup></em> + <em>b<sup>n</sup></em>
+    = <em>c<sup>n</sup></em> has no integer solutions for <em>n</em> > 2, and that
+    he had a “marvelous proof, which this margin is too narrow to contain”. This became
+    known as <em>Fermat's Last Theorem</em>, and became one of the most famous unsolved
+    problems in mathematics – until it was finally proven in 1994.</p>"
+gauss:
+  name: Carl Friedrich Gauss
+  birth: '1777'
+  death: '1855'
+  bio: "<p>Carl Friedrich Gauss is arguably the greatest mathematician of all times.
+    He made groundbreaking discoveries in just about ever field of mathematics, from
+    algebra and number theory to statistics, calculus, geometry, geology and astronomy.</p><p>According
+    to legend, he corrected a mistake in his father‘s accounting at the age of 3,
+    and found a way to easily add up all integers from 1 to 100 at the age of 8. He
+    made his first important discoveries while still a teenager, and later tutored
+    many other famous mathematicians as Professor.</p>"
+goldbach:
+  name: Christian Goldbach
+  birth: '1690'
+  death: '1764'
+  bio: "<p>Christian Goldbach was a Prussian mathematician and contemporary of Euler,
+    Leibniz and Bernoulli. He was tutor of Russian Tsar Peter II, and is remembered
+    for his “Goldbach Conjecture“.</p>"
+guthrie:
+  name: Francis Guthrie
+  birth: '1831'
+  death: '1899'
+  bio: "<p>Francis Guthrie was a South African botanist and mathematician, who first
+    stated the Four Colour Problem in 1852.</p><p>He was a student of Augustus De
+    Morgan, one of the greatest British mathematicians.</p><p>In addition to being
+    a mathematics professor and teacher, Guthrie worked as a lawyer and did research
+    in solar power and aeronautics.</p>"
+haken:
+  name: Wolfgang Haken
+  birth: '1928'
+  death: ''
+  bio: "<p>Wolfgang Haken is a German mathematician, known for his proof the Four
+    Colour Theorem with Kenneth Appel.</p><p>In recognition, he and Appell received
+    the Fulkerson Prize of the American Mathematical Society.</p><p>In 1990, Haken
+    became a member of the Center for Advanced Study at the University of Illinois,
+    where he is now an Emeritus Professor.</p>"
+karinthy:
+  name: Frigyes Karinthy
+  birth: '1887'
+  death: '1938'
+  bio: "<p>Frigyes Karinthy was a Hungarian author, poet and journalist.</p><p>He
+    is best known for the 1929 short story &#8220;Chains&#8221;, which first introduced
+    the concept of <em>six degrees of separation</em>.</p>"
+milgram:
+  name: Stanley Milgram
+  birth: '1933'
+  death: '1984'
+  bio: "<p>Stanley Milgram was a famous social psychologist.</p><p>He is best known
+    for experiments on <em>obedience</em>, testing how willing adults are to follow
+    orders, even when hurting others, and for the <em>small-world experiment</em>,
+    which tests the degree of connectedness of societies.</p>"
+pascal:
+  name: Blaise Pascal
+  birth: '1623'
+  death: '1662'
+  bio: "<p>Blaise Pascal was a French mathematician, physicist and philosopher. He
+    invented some of the first mechanical calculators, as well as working on projective
+    geometry, probability and the physics of the vacuum.</p><p>Most famously, Pascal
+    is remembered for naming <em>Pascal’s Triangle</em>, an infinite triangle of numbers
+    with some amazing properties.</em></p>"
+pearson:
+  name: Karl Pearson
+  birth: '1857'
+  death: '1936'
+  bio: "<p>Karl Pearson was an English mathematician and statistician. He worked on
+    biometrics, meteorology, and eugenics, among many other topics, and founded the
+    world’s first university statistics department, at University College London.</p>"
+penrose:
+  name: Sir Roger Penrose
+  birth: '1931'
+  bio: "<p>Roger Penrose is a British mathematician and physicist who is known for
+    his groundbreaking work in general relativity and cosmology – often collaborating
+    with other famous scientists like Stephen Hawking and Michael Atiyah. He also
+    discovered <em>Penrose Tilings</em>: self-similar, non-periodic tessellations.</p>"
+planck:
+  name: Max Plank
+  birth: '1858'
+  death: '1947'
+  bio: "<p>Max Plank was a German physicist and one of the original developers of
+    Quantum Mechanics – for which received the Nobel Prize in 1918.</p>"
+plato:
+  name: Plato
+  birth: c. 425
+  death: c. 347 BC
+  bio: "<p>Plato was a philosopher in ancient Greece, and – together with his teacher
+    Socrates and his student Archimedes – laid the very foundation of Western philosophy
+    and science.</p><p>Plato founded the Academy of Athens, the first higher learning
+    institution in the Western world. His many writings on philosophy and theology,
+    science and mathematics, politics and justice, make him one of the most influential
+    thinkers of all time.</p>"
+riemann:
+  name: Bernhard Riemann
+  birth: '1826'
+  death: '1866'
+  bio: "<p>Bernhard Riemann was a German mathematician working in the fields of analysis
+    and number theory. He came up with the first rigorous definition of integration,
+    studied differential geometry which laid the foundation for general relativity,
+    and made groundbreaking discoveries regarding the distribution of prime numbers.</p>"
+shannon:
+  name: Claude Shannon
+  birth: '1898'
+  death: '1972'
+  bio: "<p>Claude Shannon was an American mathematician and electrical engineer, remembered
+    as the “father of information theory”. He worked on cryptography, including codebreaking
+    for national defense during World War II, but he was also interested in juggling,
+    unicycling and chess. In his spare times, he built machines that could juggle
+    or solve the Rubik’s Cube puzzle.</p>"
+thorp:
+  name: Edward Thorp
+  birth: '1932'
+  bio: "<p>Edward Thorp is an American hedge fund manager and blackjack player, known
+    for inventing <em>card counting</em> and for building the first <em>wearable computer</em>
+    to beat casinos at Roulette. He worked at MIT, is a professor of mathematics,
+    and pioneered modern applications of probability theory.</p>"
+ulam:
+  name: Stanisław Ulam
+  birth: '1909'
+  death: '1984'
+  bio: "<p>Stanislaw Ulam was a Polish-American mathematician. He played an important
+    part in the American <em>Manhatten Project</em> that developed the first nuclear
+    weapons. He also worked on rocket propulsion using nuclear pulses, and developed
+    the <em>Monte Carlo method</em> – and important concept in statistics.</p>"
+venn:
+  name: John Venn
+  birth: '1834'
+  death: '1923'
+  bio: "<p>John Venn was an English mathematician and philosopher who introduced the
+    <em>Venn diagram</em> used in set theory and probability. He taught at Cambridge
+    University and was a Fellow of the Royal Society in London.</p>"

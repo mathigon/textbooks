@@ -1,8 +1,8 @@
 # Codes and Ciphers
 
-stage: intermediate  
-description: abc
-hero: images/hero.jpg
+> stage: intermediate  
+> description: abc
+> hero: images/hero.jpg
 
 ---
 
@@ -13,13 +13,13 @@ exactly "information" _means_. Instead we can give examples of things that
 contain information: books and newspapers, numbers and charts, images, sound or
 film clips.
 
-  div.row
-    div(style="width: 80px"): img(width="100", height="100", src="xyz")
-    div(style="width: 80px"): img(width="100", height="100", src="xyz")
-    div(style="width: 80px"): img(width="100", height="100", src="xyz")
-    div(style="width: 80px"): img(width="100", height="100", src="xyz")
-    div(style="width: 80px"): img(width="100", height="100", src="xyz")
-    div(style="width: 80px"): img(width="100", height="100", src="xyz")
+    .row
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
     
 __Codes__ are rules or algorithms to express information in certain formats. Our
 alphabet is a example of a code can can be used to express _language_ in the
@@ -74,7 +74,8 @@ When designing ciphers, there are several possible objectives:
 
 Length of security (hours, years), level of security
 
----{#caesar_cipher}
+---
+> id: caesar_cipher
 
 ## The Caesar Cipher
 
@@ -84,30 +85,30 @@ The diagram below shows how plaintext letters [{.letter.plain} *] are converted
 into cipher letters [{.letter.cipher} *]. The chart also shows the relative
 frequency of every letter in your text, as well as the entire english language.
 
-  .code-play
-    .freq-table-wrap
-      .freq-table
-        .freq-table-chart
-          each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-            .freq-col
-              .letter-bar.plain
-              .letter-bar.real
-        .freq-table-plain
-          each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-            .freq-col: .letter.plain= l
-        .freq-table-cipher
-          each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-            .freq-col
-          #letter-slider(data-slide-width="26")
-            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-              .freq-col: .letter.cipher= l
-    .row
-      .code-area.grow
-        h3.code-title Plain Text
-        .plain-text(contenteditable="true", placeholder="Start typing to create your first cypher …")
-      .code-area.grow
-        h3.code-title Enciphered Text
-        .cipher-text
+    .code-play
+      .freq-table-wrap
+        .freq-table
+          .freq-table-chart
+            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+              .freq-col
+                .letter-bar.plain
+                .letter-bar.real
+          .freq-table-plain
+            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+              .freq-col: .letter.plain= l
+          .freq-table-cipher
+            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+              .freq-col
+            #letter-slider(data-slide-width="26")
+              each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
+                .freq-col: .letter.cipher= l
+      .row
+        .code-area.grow
+          h3.code-title Plain Text
+          .plain-text(contenteditable="true", placeholder="Start typing to create your first cypher …")
+        .code-area.grow
+          h3.code-title Enciphered Text
+          .cipher-text
 
 Once you know the pattern the Caesar cipher is very easy to break: you just have
 to try all <25> possibilities. Try to decode the following secret messages:
@@ -172,7 +173,6 @@ using substitution ciphers:
 
 ## Quantum Cryptography
 {.todo} TODO
-
 
 
 // SOURCES:
