@@ -5,7 +5,7 @@
 
 
 
-import { Point, angle, numberFormat, roundTo } from '@mathigon/fermat';
+import { Point, Angle, numberFormat, roundTo } from '@mathigon/fermat';
 import { $, $N, Draggable } from '@mathigon/boost';
 import { setPicker } from './set-picker';
 
@@ -62,7 +62,7 @@ function svgLineThrough(a, b, c) {
 }
 
 function deg(a, b, c) {
-  let x = angle(a, b, c) * 180 / Math.PI;
+  let x = new Angle(a, b, c).deg;
   return Math.round(Math.min(x, 360 - x));
 }
 
@@ -82,7 +82,7 @@ export function polygon2(section, chapter) {
 
 export function triangles(section, chapter) {
   chapter.addGloss('intangle');
-  section.model.load({ angle, svgAngle, svgLine, svgPolygon, deg, x: 'max' });
+  section.model.load({svgAngle, svgLine, svgPolygon, deg, x: 'max' });
 
   let initial = [{ x: 160, y: 70 }, { x: 500, y: 180 }, { x: 110, y: 320 }];
   let $geopad = section.$el.find('.geopad');
@@ -107,7 +107,7 @@ export function triangles(section, chapter) {
 }
 
 export function triangleProof(section) {
-  section.model.load({ angle, svgAngle, svgLine, svgLineThrough, svgCorrespondingAngle,
+  section.model.load({ svgAngle, svgLine, svgLineThrough, svgCorrespondingAngle,
     svgOppositeAngle, svgPolygon, deg });
 
   let initial = [{ x: 100, y: 80 }, { x: 250, y: 300 }, { x: 50, y: 300 }];

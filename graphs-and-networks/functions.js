@@ -6,7 +6,7 @@
 
 
 import { last, tabulate, list } from '@mathigon/core';
-import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, lineLineIntersect, subsets } from '@mathigon/fermat';
+import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, Line, subsets } from '@mathigon/fermat';
 import { $I, $T, $C, $$C, $$T, $N, Colour, svgPointerPosn, animate, Draggable, Sketch } from '@mathigon/boost';
 import { Graph } from './graph';
 
@@ -517,7 +517,7 @@ export function GT_3_3(section) {
       if (u === v) return;
       let edge = { p1: points[u], p2: points[v] };
       for (let i=0; i<edges.length; ++i)
-        if (lineLineIntersect(edge, { p1: points[edges[i][0]], p2: points[edges[i][1]] }))
+        if (Line.intersect(edge, { p1: points[edges[i][0]], p2: points[edges[i][1]] }))
           return;
       edges.push([u,v]);
     }
@@ -552,7 +552,7 @@ export function GT_3_3(section) {
       let e1 = { p1: edges[i].vertices[0].posn, p2: edges[i].vertices[1].posn };
       for (let j=i+1; j<edges.length; ++j) {
         let e2 = { p1: edges[j].vertices[0].posn, p2: edges[j].vertices[1].posn };
-        if (lineLineIntersect(e1, e2)) {
+        if (Line.intersect(e1, e2)) {
           edges[i].intersect = edges[j].intersect = edges[i].vertices[0].intersect =
             edges[i].vertices[1].intersect = edges[j].vertices[0].intersect =
               edges[j].vertices[1].intersect = true;
