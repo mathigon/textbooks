@@ -1,0 +1,202 @@
+collinear:
+  title: Collinear points
+  description: Three or more points are collinear if they lie on the same line.
+
+line-segment:
+  title: Line Segment
+  description: A line segment is a part of a line that has two endpoints.
+
+point:
+  title: Point
+  description: A point is a location in space that does not have size or shape.
+
+congruent:
+  title: Congruent
+  description: Congruent figures are identical in size, shape and measure.
+
+angle-bisector:
+  title: Angle Bisector
+  description: An angle bisector is a ray that splits an angle into two
+    congruent, smaller angles.
+
+midpoint:
+  title: Midpoint
+  description: The midpoint of a line segment is the point on the line segment
+    that splits the segment into two congruent parts. The midpoint formula says
+    that for endpoints `(x_1, y_1)` and `(x_2,y_2)`, the midpoint is
+    `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
+
+perpendicular-bisector:
+  title: Perpendicular Bisector
+  description: A perpendicular bisector of a line segment passes through the
+    midpoint of the line segment and intersects the line segment at 90°.
+
+protractor:
+  title: Protractor
+  description: A protractor is a tool used to measure an angle in terms of degrees.
+
+
+Acute Angle	An acute angle is an angle with a measure of less than 90 degrees.
+Obtuse angle	An obtuse angle is an angle greater than 90 degrees but less than 180 degrees.
+Perpendicular	Perpendicular lines are lines that intersect at a 90∘ angle. The product of the slopes of two perpendicular lines is -1.
+Right Angle	A right angle is an angle equal to 90 degrees.
+
+complementary-angles:
+  title: Complementary Angles
+  description: Two angles are complementary when they add up to 90°.
+
+Supplementary angles	Supplementary angles are two angles whose sum is 180 degrees.
+
+Adjacent Angles	Two angles are adjacent if they share a side and vertex. The word 'adjacent' means 'beside' or 'next-to'.
+
+Vertical Angles	Vertical angles are a pair of opposite angles created by intersecting lines.
+Vertical Angles Theorem	The Vertical Angles Theorem states that if two angles are vertical, then they are congruent.
+
+
+Acute Triangle	An acute triangle has three angles that each measure less than 90 degrees.
+Interior angles	Interior angles are the angles inside a figure.
+Isosceles Triangle	An isosceles triangle is a triangle in which exactly two sides are the same length.
+Obtuse Triangle	An obtuse triangle is a triangle with one angle that is greater than 90 degrees.
+Right Angle	A right angle is an angle equal to 90 degrees.
+Scalene Triangle	A scalene triangle is a triangle in which all three sides are different lengths.
+Equilateral	A polygon is equilateral if all of its sides are the same length.
+Equiangular	A polygon is equiangular if all angles are the same measure.
+
+Concave	A concave polygon has at least one interior angle greater than 180 degrees. A common way to identify a concave polygon is to look for a "caved-in" side of the polygon.
+Convex	A convex polygon contains no interior angles greater than 180 degrees.
+Diagonal	A diagonal is a line segment in a polygon that connects nonconsecutive vertices
+Exterior angles	An exterior angle is the angle formed by one side of a polygon and the extension of the adjacent side.
+Interior angles	Interior angles are the angles inside a figure.
+Polygon	A polygon is a simple closed figure with at least three straight sides.
+Regular Polygon	A regular polygon is a polygon with all sides the same length and all angles the same measure.
+Vertices	Vertices are points where line segments intersect.
+Equilateral	A polygon is equilateral if all of its sides are the same length.
+
+Parallel	Two or more lines are parallel when they lie in the same plane and never intersect. These lines will always have the same slope.
+Skew	To skew a given set means to cause the trend of data to favor one end or the other
+transversal	A transversal is a line that intersects two other lines.
+
+Corresponding Angles	Corresponding angles are two angles that are in the same position with respect to the transversal, but on different lines.
+alternate exterior angles	Alternate exterior angles are two angles that are on the exterior of two different lines, but on the opposite sides of the transversal.
+alternate interior angles	Alternate interior angles are two angles that are on the interior of two different lines, but on the opposite sides of the transversal.
+
+Third Angle Theorem	If two angles in one triangle are congruent to two angles in another triangle, then the third pair of angles is also congruent.
+
+
+Polygon	A polygon is a simple closed figure with at least three straight sides.
+Sphere	A sphere is a round, three-dimensional solid. All points on the surface of a sphere are equidistant from the center of the sphere.
+Tetrahedron	A tetrahedron is a shape with a triangular base and sides, also correctly described as a triangular pyramid. There are 4 faces, 6 edges and 4 vertices in a regular tetrahedron.
+
+cross section	A cross section is the intersection of a three-dimensional solid with a plane.
+Polyhedron	A polyhedron is a solid with no curves surfaces or edges. All faces are polygons and all edges are line segments.
+Volume	Volume is the amount of space inside the bounds of a three-dimensional object.
+
+
+lateral edges	Edges between the lateral faces of a prism.
+lateral faces	The non-base faces of a prism.
+Cone	A cone is a solid three-dimensional figure with a circular base and one vertex.
+Pyramid	A pyramid is a three-dimensional object with a base that is a polygon and triangular faces that meet at one vertex.
+Vertex	A vertex is a point of intersection of the lines or rays that form an angle.
+Volume	Volume is the amount of space inside the bounds of a three-dimensional object.
+Cavalieri's Principle	States that if two solids have the same height and the same cross-sectional area at every level, then they will have the same volume.
+Base Edge	The base edge is the edge between the base and the lateral faces of a prism.
+Slant Height	The slant height is the height of a lateral face of a pyramid.
+Apothem	The apothem of a regular polygon is a perpendicular segment from the center point of the polygon to the midpoint of one of its sides.
+
+Surface Area	Surface area is the total area of all of the surfaces of a three-dimensional object.
+Volume	Volume is the amount of space inside the bounds of a three-dimensional object.
+Cavalieri's Principle	States that if two solids have the same height and the same cross-sectional area at every level, then they will have the same volume.
+Oblique Cylinder	An oblique cylinder is a cylinder with bases that are not directly above one another.
+
+
+Congruent	Congruent figures are identical in size, shape and measure.
+Isosceles Triangle	An isosceles triangle is a triangle in which exactly two sides are the same length.
+Line of Symmetry	A line of symmetry is a line that can be drawn to divide a figure into equal halves.
+Line Symmetry	A figure has line symmetry or reflection symmetry when it can be divided into equal halves that match.
+reflection symmetry	A figure has reflection symmetry if it can be reflected across a line and look exactly the same as it did before the reflection.
+Symmetry	A figure has symmetry if it can be transformed and still look the same.
+
+arc	A single section of the circle, that describes a particular angle.
+central angle	An angle formed by two radii and whose vertex is at the center of the circle.
+major arc	An arc that is greater than 180∘.
+minor arc	An arc that is less than 180∘.
+semicircle	An arc that measures 180∘.
+Arc Addition Postulate	Arc addition postulate states that the measure of the arc formed by two adjacent arcs is the sum of the measures of the two arcs.
+Diameter	Diameter is the measure of the distance across the center of a circle. The diameter is equal to twice the measure of the radius.
+
+central angle	An angle formed by two radii and whose vertex is at the center of the circle.
+chord	A line segment whose endpoints are on a circle.
+diameter	A chord that passes through the center of the circle. The length of a diameter is two times the length of a radius.
+inscribed angle	An angle with its vertex on the circle and whose sides are chords.
+intercepted arc	The arc that is inside an inscribed angle and whose endpoints are on the angle.
+point of tangency	The point where the tangent line touches the circle.
+Chord/Tangent Angle Theorem	The Chord/Tangent Angle Theorem states that the measure of an angle formed by a chord and a tangent that intersect on a circle is half the measure of the intercepted arc.
+Intersecting Chords Angle Theorem	The Intersecting Chords Angle Theorem states that the measure of the angle formed by two chords that intersect inside a circle is the average of the measures of the intercepted arcs.
+
+Adjacent Angles	Two angles are adjacent if they share a side and vertex. The word 'adjacent' means 'beside' or 'next-to'.
+Conic	Conic sections are those curves that can be created by the intersection of a double cone and a plane. They include circles, ellipses, parabolas, and hyperbolas.
+cosine	The cosine of an angle in a right triangle is a value found by dividing the length of the side adjacent the given angle by the length of the hypotenuse.
+Hypotenuse	The hypotenuse of a right triangle is the longest side of the right triangle. It is across from the right angle.
+Pythagorean Theorem	The Pythagorean Theorem is a mathematical relationship between the sides of a right triangle, given by a2+b2=c2, where a and b are legs of the triangle and c is the hypotenuse of the triangle.
+sine	The sine of an angle in a right triangle is a value found by dividing the length of the side opposite the given angle by the length of the hypotenuse.
+Slope	Slope is a measure of the steepness of a line. A line can have positive, negative, zero (horizontal), or undefined (vertical) slope. The slope of a line can be found by calculating “rise over run” or “the change in the y over the change in the x.” The symbol for slope is m
+Tangent	The tangent of an angle in a right triangle is a value found by dividing the length of the side opposite the given angle by the length of the side adjacent to the given angle.
+
+
+Isosceles Triangle	An isosceles triangle is a triangle in which exactly two sides are the same length.
+Line of Symmetry	A line of symmetry is a line that can be drawn to divide a figure into equal halves.
+Line Symmetry	A figure has line symmetry or reflection symmetry when it can be divided into equal halves that match.
+reflection symmetry	A figure has reflection symmetry if it can be reflected across a line and look exactly the same as it did before the reflection.
+Symmetry	A figure has symmetry if it can be transformed and still look the same.
+
+centroid	The centroid is the point of intersection of the medians in a triangle.
+Median	The median of a triangle is the line segment that connects a vertex to the opposite side's midpoint.
+
+
+Circle	A circle is the set of all points at a specific distance from a given point in two dimensions.
+Conic	Conic sections are those curves that can be created by the intersection of a double cone and a plane. They include circles, ellipses, parabolas, and hyperbolas.
+degenerate conic	A degenerate conic is a conic that does not have the usual properties of a conic section. Since some of the coefficients of the general conic equation are zero, the basic shape of the conic is merely a point, a line or a pair of intersecting lines.
+Ellipse	Ellipses are conic sections that look like elongated circles. An ellipse represents all locations in two dimensions that are the same distance from two specified points called foci.
+hyperbola	A hyperbola is a conic section formed when the cutting plane intersects both sides of the cone, resulting in two infinite “U”-shaped curves.
+Hypotenuse	The hypotenuse of a right triangle is the longest side of the right triangle. It is across from the right angle.
+Legs of a Right Triangle	The legs of a right triangle are the two shorter sides of the right triangle. Legs are adjacent to the right angle.
+Parabola	A parabola is the characteristic shape of a quadratic function graph, resembling a "U".
+Pythagorean number triple	A Pythagorean number triple is a set of three whole numbers a,b and c that satisfy the Pythagorean Theorem, a2+b2=c2.
+Pythagorean Theorem	The Pythagorean Theorem is a mathematical relationship between the sides of a right triangle, given by a2+b2=c2, where a and b are legs of the triangle and c is the hypotenuse of the triangle.
+Right Triangle	A right triangle is a triangle with one 90 degree angle.
+
+Dilation	To reduce or enlarge a figure according to a scale factor is a dilation.
+Quadrilateral	A quadrilateral is a closed figure with four sides and four vertices.
+Ratio	A ratio is a comparison of two quantities that can be written in fraction form, with a colon or with the word “to”.
+Scale Factor	A scale factor is a ratio of the scale to the original or actual dimension written in simplest form.
+Transformation	A transformation moves a figure in some way on the coordinate plane.
+Vertex	A vertex is a point of intersection of the lines or rays that form an angle.
+Rigid Transformation	A rigid transformation is a transformation that preserves distance and angles, it does not change the size or shape of the figure.
+
+
+
+chord:
+  title: Chord
+  description: A line segment whose endpoints are on a circle.
+
+concentric:
+  title: Concentric Circles
+  description: Two or more circles that have the same center, but different radii.
+
+congruent circles	Two or more circles with the same radius, but different centers.
+
+Diameter	Diameter is the measure of the distance across the center of a circle. The diameter is equal to twice the measure of the radius.
+
+point of tangency	The point where the tangent line touches the circle.
+
+Tangent Circles	Tangent Circles are two or more circles that intersect at one point.
+
+Circle	A circle is the set of all points at a specific distance from a given point in two dimensions.
+
+Circumference	The circumference of a circle is the measure of the distance around the outside edge of a circle.
+
+Radius	The radius of a circle is the distance from the center of the circle to the edge of the circle.
+
+Secant	The secant of an angle in a right triangle is the value found by dividing length of the hypotenuse by the length of the side adjacent the given angle. The secant ratio is the reciprocal of the cosine ratio.
+
+Tangent	The tangent of an angle in a right triangle is a value found by dividing the length of the side opposite the given angle by the length of the side adjacent to the given angle.
