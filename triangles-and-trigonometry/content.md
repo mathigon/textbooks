@@ -42,12 +42,16 @@ You already know that the sum of the interior angles in a triangle is always
 180°. We can classify triangles by the size of their angles:
 
 ::: .row
-  ::: .grow
-    Right Triangle: When a triangle has one right angle.
-  ::: .grow
-    Obtuse Triangle: When a triangle has one obtuse angle.
-  ::: .grow
-    Acute Triangle: When all three angles in the triangle are acute.
+::: .grow
+Right Triangle: When a triangle has one right angle.
+:::
+::: .grow
+Obtuse Triangle: When a triangle has one obtuse angle.
+:::
+::: .grow
+Acute Triangle: When all three angles in the triangle are acute.
+:::
+:::
 
 We usually label the vertices of a triangle with capital letters _A_, _B_ and
 _C_ and the sides with lowercase lettera _a_, _b_ and _c_. The side that lies
@@ -60,48 +64,51 @@ does not matter).
 
 ### Medians
 
-::: .row
-  ::: .grow(style="width: 300px")
+::: .row.padded
+::: .grow(style="width: 300px")
 
-        x-geopad(style="width:300px; height: 300px;"): svg
-          path.thin.red(x="line(a,b).perpendicularBisector")
-          path.thin.blue(x="line(a,c).perpendicularBisector")
-          path.thin.green(x="line(b,c).perpendicularBisector")
+    x-geopad(style="width:300px; height: 300px;"): svg
+      path.thin.red(x="line(a,b).perpendicularBisector")
+      path.thin.blue(x="line(a,c).perpendicularBisector")
+      path.thin.green(x="line(b,c).perpendicularBisector")
 
-          path(x="triangle(a,b,c)")
-          path.yellow(x="triangle(a,b,c).circumcircle")
-          circle.yellow(x="triangle(a,b,c).circumcircle.c", r=6)
+      path(x="triangle(a,b,c)")
+      path.yellow(x="triangle(a,b,c).circumcircle")
+      circle.yellow(x="triangle(a,b,c).circumcircle.c", r=6)
 
-          circle.red(x="line(a,b).midpoint", r=6)
-          circle.blue(x="line(a,c).midpoint", r=6)
-          circle.green(x="line(b,c).midpoint", r=6)
+      circle.red(x="line(a,b).midpoint", r=6)
+      circle.blue(x="line(a,c).midpoint", r=6)
+      circle.green(x="line(b,c).midpoint", r=6)
 
-          circle.move(var="a" cx=150, cy=50, r=6 label="A")
-          circle.move(var="b" cx=50, cy=250, r=6 label="B")
-          circle.move(var="c" cx=250, cy=250, r=6 label="C")
-        
-  ::: .grow(style="width: 300px")
+      circle.move(var="a" cx=150, cy=50, r=6 label="A")
+      circle.move(var="b" cx=50, cy=250, r=6 label="B")
+      circle.move(var="c" cx=250, cy=250, r=6 label="C")
+
+:::
+::: .grow(style="width: 300px")
   
-        x-geopad(style="width:300px; height: 300px;"): svg
-          path.thin.red(x="angle(a,b,c)")
-          path.thin.blue(x="angle(b,c,a)")
-          path.thin.green(x="angle(c,a,b)")
+    x-geopad(style="width:300px; height: 300px;"): svg
+      path.thin.red(x="angle(a,b,c)")
+      path.thin.blue(x="angle(b,c,a)")
+      path.thin.green(x="angle(c,a,b)")
 
-          path.thin.blue(x="angle(a,b,c).bisector")
-          path.thin.green(x="angle(b,c,a).bisector")
-          path.thin.red(x="angle(c,a,b).bisector")
+      path.thin.blue(x="angle(a,b,c).bisector")
+      path.thin.green(x="angle(b,c,a).bisector")
+      path.thin.red(x="angle(c,a,b).bisector")
 
-          path(x="segment(a,b)" label="a")
-          path(x="segment(a,c)" label="b")
-          path(x="segment(b,c)" label="c")
+      path(x="segment(a,b)" label="a")
+      path(x="segment(a,c)" label="b")
+      path(x="segment(b,c)" label="c")
 
-          path.yellow(x="triangle(a,b,c).incircle")
-          circle.yellow(x="triangle(a,b,c).incircle.c", r=6)
+      path.yellow(x="triangle(a,b,c).incircle")
+      circle.yellow(x="triangle(a,b,c).incircle.c", r=6)
 
-          circle.move(var="a" cx=150, cy=50, r=6 label="A")
-          circle.move(var="b" cx=50, cy=250, r=6 label="B")
-          circle.move(var="c" cx=250, cy=250, r=6 label="C")
+      circle.move(var="a" cx=150, cy=50, r=6 label="A")
+      circle.move(var="b" cx=50, cy=250, r=6 label="B")
+      circle.move(var="c" cx=250, cy=250, r=6 label="C")
 
+:::
+:::
 
 A median is the line segment that joins a vertex and the midpoint of the
 opposite side (of a triangle). The three medians of a triangle intersect at one

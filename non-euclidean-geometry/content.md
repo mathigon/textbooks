@@ -42,6 +42,26 @@ article we will explore a few of them.
 
 ---
 
+## Euclidean Geometry
+
+The entire framework of geometry that is based on Euclid's five postulates is
+called "Euclidean Geometry". You can extend it from two dimensions to three
+dimensions, in which case it seems to match our intuition for the space and
+shape of the everyday world.
+
+However that doesn't mean that it's the _only_ kind of geometry: different sets
+of initial postulates 
+
+
+
+
+Spacetime is non-euclidean
+
+Construct regular hexagon
+
+
+---
+
 ## Metric Spaces
 
 One of the most fundamental concepts in geometry is that of _distance_.
