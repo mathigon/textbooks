@@ -5,6 +5,9 @@
 
 ---
 
+https://plus.maths.org/content/secrets-bathroom-floor
+https://plus.maths.org/content/eulers-polyhedron-formula
+
 Classification and properties of quadrilaterals
 Constructing regular polygons
 PolyhedraEuler’s Formula

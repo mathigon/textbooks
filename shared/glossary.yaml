@@ -1,3 +1,27 @@
+
+
+
+supplementary-angle:
+  title: Supplementary Angles
+  description: Two angles are _supplementary_ if they add up to 180°.
+
+complementary-angle:
+  title: Complementary Angles
+  description: Two angles are _complementary_ if they add up to 180°.
+
+
+verticle-angle:
+  title: Verticle angles
+
+
+alternate interior angles	Alternate interior angles are two angles that are on the interior of two different lines, but on the opposite sides of the transversal.
+Corresponding Angles	Corresponding angles are two angles that are in the same position with respect to the transversal, but on different lines.
+perpendicular bisector	A perpendicular bisector of a line segment passes through the midpoint of the line segment and intersects the line segment at 90∘.
+postulate	A postulate is a statement that is accepted as true without proof.
+transversal	A transversal is a line that intersects two other lines.
+
+
+
 collinear:
   title: Collinear points
   description: Three or more points are collinear if they lie on the same line.

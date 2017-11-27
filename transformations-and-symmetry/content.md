@@ -5,253 +5,54 @@
 
 ---
 
-## Congruent Triangles
+## Introduction
 
-Reflection, rotation, translation and scaling
-Congruence and similarity
-Requirements for triangle congruence
-Combinations and invariance of transformations
-Symmetry and groups
+Many geometric concepts, like lines and points, were "invented" by
+mathematicians. Symmetry, on the other hand, is everywhere around us in nature.
+Almost all plants, animals, and even we humans are symmetric.
 
-Two figures are congruent if and only if they have exactly the same size and
-shape. If two triangles are congruent, they will have exactly the same three
-sides and exactly the same three angles. In other words, two triangles are
-congruent if you can turn, flip, and/or slide one so it fits exactly on the
-other.
+{.todo} Symmetry in nature
 
-Notice that when two triangles are congruent their three pairs of corresponding
-angles and their three pairs of corresponding sides are congruent.
+Over time, we've imitated nature's symmetry in art, architecture, technology
+and design. It just seems to look _more beautiful_ than other shapes.
 
-When referring to corresponding congruent parts of congruent triangles, you can
-use the phrase Corresponding Parts of Congruent Triangles are Congruent, or its
-abbreviation CPCTC.
+{.todo} Symmetry in art and design
 
+Symmetry even lies at the foundation of important concepts in Physics, like the
+conservation of energy: you can change energy from different froms into others
+(e.g. electricity into light), but you can never _create_ or _destroy_ energy.
 
-## Properties of Congruence
+Properties of different kinds of symmetry can be described using mathematics,
+and that's what we'll try to do in this chapter.
 
-Reflexive Property of Congruence: Any shape is congruent to itself.
-`bar(AB) ~= bar(AB)` or `△ABC ~= △ABC`
 
-Symmetric Property of Congruence: If two shapes are congruent, the statement can
-be written with either shape on either side of the `~=` sign.
-∠EFG≅∠XYZ and ∠XYZ≅∠EFG or △ABC≅△DEF and △DEF≅△ABC
 
-Transitive Property of Congruence: If two shapes are congruent and one of those
-is congruent to a third, the first and third shapes are also congruent.
-△ABC≅△DEF and △DEF≅△GHI, then △ABC≅△GHI
 
-These three properties will be very important when you begin to prove that two
-triangles are congruent.
+## Transformations
 
+In order to understand symmetry, we first have to think about transformations.
+A transformation is basically a specific set of rules that convert one geometric
+figure into another one. Here are a few examples:
 
-## Determining Congruency by the Reflexive Property 
+{.todo} examples: rigid and non-rigid
 
-In order to say that `△ABD ~= △ABC`, you must determine that the three
-corresponding angles and sides are congruent. Which pair of sides is congruent
-by the Reflexive Property?
+In this section we will only think about transformations that don't change the
+original figure's size and shape. Imagine it is made out of a solid material
+like wood or metal: we can move, turn or flip it, but we can't stretch or
+otherwise deform it. These transformations are called rigid transformations
+or isometries.
 
-The side `bar(AB)` is shared by both triangles. So, in a geometric proof,
-`bar(AB) ~= bar(AB)` by the Reflexive Property of Congruence.
+The result of a transformation is called the [image](gloss:transform-image).
+The image of a figure `A` is usually denoted by `A'`, pronounced as "A prime".
+For rigid transformations, the result is always congruent to the original.
 
+There are three different kinds of rigid transformations
 
-## Understanding Congruency
+{.todo} translations, reflections, and rotations table
 
-If all three pairs of angles for two given triangles are congruent does that
-mean that the triangles are congruent?
+---
 
-Without knowing anything about the lengths of the sides you cannot tell whether
-or not two triangles are congruent. The two triangles described above might be
-congruent, but we would need more information to know for sure.
-
-
-## Third Angle Theorem
-
-Third Angle Theorem: If two angles in one triangle are congruent to two angles
-in another triangle, then the third pair of angles must also congruent.
-
-In other words, for triangles △ABC and △DEF, if ∠A≅∠D and ∠B≅∠E, then ∠C≅∠F.
-
-Notice that this theorem does not state that the triangles are congruent. That
-is because if two sets of angles are congruent, the sides could be different
-lengths. See the picture below.
-
-The Third Angle Theorem states that if two angles in one triangle are congruent
-to two angles in another triangle, then the third pair of angles must also
-congruent. What additional information would you need to know in order to be
-able to determine that the triangles are congruent?
-
-In order for the triangles to be congruent, you need some information about the
-sides. If you know two pairs of angles are congruent and at least one pair of
-corresponding sides are congruent, then the triangles will be congruent.
-
-
---------------
-
-## Similar Polygons and Scale Factors 
-
-Similar polygons are two polygons with the same shape, but not necessarily the
-same size. Similar polygons have corresponding angles that are congruent, and
-corresponding sides that are proportional.
-
-Think about similar polygons as enlarging or shrinking the same shape. The
-symbol ∼ is used to represent similarity. Specific types of triangles,
-quadrilaterals, and polygons will always be similar. For example, all
-equilateral triangles are similar and all squares are similar. If two polygons
-are similar, we know the lengths of corresponding sides are proportional. In
-similar polygons, the ratio of one side of a polygon to the corresponding side
-of the other is called the scale factor. The ratio of all parts of a polygon 
-including the perimeters, diagonals, medians, midsegments, altitudes) is the
-same as the ratio of the sides.
-
-Understanding a Similarty Statement 
-
-Suppose △ABC∼△JKL. Based on the similarity statement, which angles are congruent
-and which sides are proportional?
-
-Just like in a congruence statement, the congruent angles line up within the
-similarity statement. So, ∠A≅∠J,∠B≅∠K, and ∠C≅∠L. Write the sides in a
-proportion: ABJK=BCKL=ACJL. Note that the proportion could be written in
-different ways. For example, ABBC=JKKL is also true.
-
-
-## Triangle AA Similarity
-
-The Third Angle Theorem states if two angles are congruent to two angles in
-another triangle, the third angles are congruent too. Because a triangle has
-180∘, the third angle in any triangle is 180∘ minus the other two angle
-measures. Let’s investigate what happens when two different triangles have the
-same angle measures.
-
-AA Similarity Postulate: If two angles in one triangle are congruent to two
-angles in another triangle, the two triangles are similar.
-
-The AA Similarity Postulate is a shortcut for showing that two triangles are
-similar. If you know that two angles in one triangle are congruent to two angles
-in another, which is now enough information to show that the two triangles are
-similar. Then, you can use the similarity to find the lengths of the sides.
-
-
-## Indirect Measurement 
-
-An application of similar triangles is to measure lengths indirectly. The length
-to be measured would be some feature that was not easily accessible to a person,
-such as the width of a river or canyon and the height of a tall object. To
-measure something indirectly, you need to set up a pair of similar triangles.
-
-1. A tree outside Ellie’s building casts a 125 foot shadow. At the same time of
-day, Ellie casts a 5.5 foot shadow. If Ellie is 4 feet 10 inches tall, how tall
-is the tree? Draw a picture. From the picture to the right, we see that the
-tree and Ellie are parallel, therefore the two triangles are similar to each
-other. Write a proportion.
-
-
-## Similarity on Rays
-
-When an angle within a triangle is bisected, the bisector divides the triangle
-proportionally
-
-By definition, AC−→− divides ∠BAD equally, so ∠BAC≅∠CAD. The proportional
-relationship is BCCD=ABAD.
-
-Theorem: If a ray bisects an angle of a triangle, then it divides the opposite
-side into segments that are proportional to the lengths of the other two sides.
-
-
-The Triangle Proportionality Theorem states that if a line parallel to one side
-of a triangle intersects the other two sides, then it divides those sides
-proportionally. We can extend this theorem to a situation outside of triangles
-where we have multiple parallel lines cut by transverals.
-
-Theorem: If three or more parallel lines are cut by two transversals, then they
-divide the transversals proportionally.
-
-Think about a midsegment of a triangle. A midsegment is parallel to one side of
-a triangle and divides the other two sides into congruent halves. The midsegment
-divides those two sides proportionally.
-
-Triangle Proportionality Theorem: If a line parallel to one side of a triangle
-intersects the other two sides, then it divides those sides proportionally.
-
-Triangle Proportionality Theorem Converse: If a line divides two sides of a
-triangle proportionally, then it is parallel to the third side.
-
-
-
-## Self Similarity
-
-When one part of an object can be enlarged (or shrunk) to look like the whole
-object it is self-similar.
-
-To explore self-similarity, we will go through some examples. Typically, each
-step of a process is called an iteration. The first level is called Stage 0.
-
-Sierpinksi Triangle
-The Sierpinski triangle iterates a triangle by connecting the midpoints of the
-sides and shading the central triangle (Stage 1). Repeat this process for the
-unshaded triangles in Stage 1 to get Stage 2.
-
-Fractals
-Like the Sierpinski triangle, a fractal is another self-similar object that is
-repeated at smaller scales. Below are the first three stages of the Koch
-snowflake.
-
-The Cantor Set 
-The Cantor set is another example of a fractal. It consists of dividing a
-segment into thirds and then erasing the middle third.
-
-
---------------
-
-
-## Reflection Symmetry
-
-A line of symmetry is a line that passes through a figure such that it splits
-the figure into two congruent halves. Many figures have a line of symmetry, but
-some do not have any lines of symmetry. Figures can also have more than one line
-of symmetry. A shape has reflection symmetry when it has one or more lines of
-symmetry.
-
-### Finding Lines of Symmetry 
-Find all lines of symmetry for the shape below.
-
-### Recognizing Reflection Symmetry 
-Does the figure below have reflection symmetry?
-
-
-
-## Rotation Symmetry
-
-A figure exhibits rotational symmetry if it can be rotated (less than 360) and
-look the same as it did before the rotation. The center of rotation is the point
-that the figure is rotated around such that the rotational symmetry holds.
-Typically, the center of rotation is the center of the figure. Along with
-rotational symmetry and a center of rotation is the angle of rotation that tells
-us how many degrees to rotate the figure so that it still looks the same. In
-general, if a shape can be rotated n times, the angle of rotation is 360° n.
-Multiply the angle of rotation by 1, 2, 3...n to find the additional angles of
-rotation. The number of rotations may be referred to as the order.
-
-### Recognizing Rotational Symmetry
-Determine if the figure below has rotational symmetry. Find the angle of
-rotational symmetry and the order.
-
-A regular pentagon can be rotated 5 times to demonstrate rotational symmetry, so
-it is order 5. Because there are 5 lines of rotational symmetry, the angle would
-be 360∘5=72∘.
-
-
-
-## Translations
-
-A transformation is an operation that moves, flips, or changes a figure to
-create a new figure. A rigid transformation is a transformation that preserves
-size and shape. The rigid transformations are: translations (discussed here),
-reflections, and rotations. The new figure created by a transformation is called
-the image. The original figure is called the preimage. Another word for a rigid
-transformation is an isometry. Rigid transformations are also called congruence
-transformations. If the preimage is A, then the image would be labeled A′, said
-“a prime.” If there is an image of A′, that would be labeled A′′, said “a double
-prime.”
+### Translation
 
 A translation is a transformation that moves every point in a figure the same
 distance in the same direction. In the coordinate plane, we say that a
@@ -269,12 +70,18 @@ vertical distance traveled. We write the component form of AB⇀ as ⟨3,7⟩ be
 AB⇀ travels 3 units to the right and 7 units up. Notice the brackets are
 pointed, ⟨3,7⟩, not curved.
 
+---
 
+### Reflections
 
-## Transformations
+A reflection is a transformation that turns a figure into its mirror image by
+flipping it over a line. Another way to describe a reflection is a “flip.” The
+line of reflection is the line that a figure is reflected over. If a point is
+on the line of reflection then the image is the same as the original point.
 
+---
 
-## Rotation
+### Rotation
 
 A transformation is an operation that moves, flips, or changes a figure to
 create a new figure. A rigid transformation is a transformation that preserves
@@ -309,24 +116,9 @@ This is the process you would follow to rotate any figure 100∘ counterclockwis
 If it was a different angle measure, then in Step 3, you would mark a different
 angle. You will need to repeat steps 2-4 for every vertex of the shape.
 
-## Reflection
+---
 
-A transformation is an operation that moves, flips, or changes a figure to
-create a new figure. A rigid transformation is a transformation that preserves
-size and shape. The rigid transformations are: translations, reflections
-(discussed here), and rotations. The new figure created by a transformation is
-called the image. The original figure is called the preimage. Another word for
-a rigid transformation is an isometry. Rigid transformations are also called
-congruence transformations. If the preimage is A, then the image would be
-labeled A′, said “a prime.” If there is an image of A′, that would be labeled
-A′′, said “a double prime.”
-
-A reflection is a transformation that turns a figure into its mirror image by
-flipping it over a line. Another way to describe a reflection is a “flip.” The
-line of reflection is the line that a figure is reflected over. If a point is
-on the line of reflection then the image is the same as the original point.
-
-## Composition
+### Composition of Transformations
 
 A transformation is an operation that moves, flips, or otherwise changes a
 figure to create a new figure. A rigid transformation (also known as an isometry
@@ -371,42 +163,90 @@ transformations, but here are some of the most common compositions.
    over lines that intersect at x∘, then the resulting image is a rotation of
    2x∘, where the center of rotation is the point of intersection. 
 
+---
 
-## Dilation
+## Symmetry
 
-A transformation is an operation that moves, flips, or changes a figure to
-create a new figure. Transformations that preserve size are rigid and ones that
-do not are non-rigid. A dilation makes a figure larger or smaller, but has the
-same shape as the original. In other words, the dilation is similar to the
-original. All dilations have a center and a scale factor. The center is the
-point of reference for the dilation (like the vanishing point in a perspective
-drawing) and scale factor tells us how much the figure stretches or shrinks. A
-scale factor is typically labeled k and is always greater than zero. Also, if
-the original figure is labeled △ABC, for example, the dilation would be △A'B'C'.
-The ' indicates that it is a copy. This tic mark is said “prime,” so A' is read
-“A prime.” A second dilation would be A'', read “A double-prime.”
+__Reflection Symmetry__
 
-If the dilated image is smaller than the original, then the scale factor is 0 < k < 1.
-If the dilated image is larger than the original, then the scale factor is k > 1.
+A line of symmetry is a line that passes through a figure such that it splits
+the figure into two congruent halves. Many figures have a line of symmetry, but
+some do not have any lines of symmetry. Figures can also have more than one line
+of symmetry. A shape has reflection symmetry when it has one or more lines of
+symmetry.
 
-Dilating a Point
-1. The center of dilation is P and the scale factor is 3. Find Q'.
+Find all lines of symmetry for the shape below.
 
-If the scale factor is 3 and Q is 6 units away from P, then Q′ is going to be
-6×3=18 units away from P. Because we are only dilating a point, the dilation
-will be collinear with the original and center.
+Does the figure below have reflection symmetry?
 
-2. Using the picture above, change the scale factor to 13. Find Q''.
+__Rotation Symmetry__
 
-Now the scale factor is 13, so Q'' is going to be 13 the distance away from P
-as Q is. In other words, Q'' is going to be 6×13=2 units away from P. Q'' will
-also be collinear with Q and center.
+A figure exhibits rotational symmetry if it can be rotated (less than 360) and
+look the same as it did before the rotation. The center of rotation is the point
+that the figure is rotated around such that the rotational symmetry holds.
+Typically, the center of rotation is the center of the figure. Along with
+rotational symmetry and a center of rotation is the angle of rotation that tells
+us how many degrees to rotate the figure so that it still looks the same. In
+general, if a shape can be rotated n times, the angle of rotation is 360° n.
+Multiply the angle of rotation by 1, 2, 3...n to find the additional angles of
+rotation. The number of rotations may be referred to as the order.
 
+Determine if the figure below has rotational symmetry. Find the angle of
+rotational symmetry and the order.
 
-----
+A regular pentagon can be rotated 5 times to demonstrate rotational symmetry, so
+it is order 5. Because there are 5 lines of rotational symmetry, the angle would
+be 360∘5=72∘.
 
+---
 
-## Tessellation
+## Symmetry Groups
+
+Let us consider the square as a simple example. To recognise different configurations, we need to highlight the four corners in different colours. Here is a list of all possible rotations and reflections:
+
+identity	90 degrees	180 degrees	270 degrees
+do nothing	rotate by 90°	rotate by 180°	rotate by 270°
+reflection1	reflection2	reflection3	reflection4
+reflect horizontally	reflect diagonally (1)	reflect vertically	reflect diagonally (2)
+
+This collection of symmetries of a square has very special properties. In many ways, the symmetries behave like numbers: we can add symmetries by applying one first and then the other. We can subtract a symmetry by applying its opposite. And there is a ‘0’ value, called the identity: doing nothing.
+
+reflection1 + 90 degrees  =  reflection2	270 degrees – 90 degrees  =  180 degrees
+reflection1 + reflection3  =  180 degrees	180 degrees + reflection3  =  reflection1
+
+Note that whenever we add or subtract two rotations or two reflections we get a rotation. But if we add or subtract one reflection and one rotation we get a reflection. This behaviour is very similar to even and odd numbers: adding two even or two odd numbers gives an even number, but adding one odd and one even number gives an odd number.
+
+When adding more than two symmetries, we can use brackets to specify the order. For example, 90 degrees + 90 degrees + reflection1 could mean ( 90 degrees + 90 degrees ) + reflection1, or it could mean 90 degrees + ( 90 degrees + reflection1 ). It is not clear why both ways should give the same result – but if we try it we can see that they do. This not only true for this example but for all possible additions. If a, b and c are any symmetries, then a + (b + c) = (a + b) + c. The property that the order of addition does not matter is called associativity.
+
+It does however matter which way round we add two symmetries – they are not commutative. For example,
+
+There is another interesting property of this set of symmetries: all symmetries can be created by adding just two of them, such as 90 degrees and reflection1. We have
+
+We say that 90 degrees and reflection1 are generators for this collection of symmetries – they can be used to generate all the others.
+
+We can repeat the previous section using triangles or pentagons, or three-dimensional objects like a cube. In each case we would get a similar collection of symmetries, and we would discover that many of their properties are the same. But in mathematics it is often easier to think about one general concept, rather than many different individual cases. We are looking for an overarching idea that describes all these different collections of symmetries at once. This idea is called a Group.
+
+A group, in mathematics, is a collection of “objects” (like symmetries of a cube) together with an operation “∗” (like the addition + of symmetries), which satisfies the following properties:
+
+We have shown that the symmetries of a square form a group, and similarly do the symmetries of any other regular shape. Some groups have more elements, others have fewer, but they always satisfy the four axioms.
+
+The “objects” in the group don’t have to be symmetries, they could be integers … –2, –1, 0, 1, 2, … Whenever we add two integers, we get another integer. It doesn’t matter in which order we add them, so they are associative. The identity is 0, and the inverse of any element is just its negative value. The inverse of 2, for example, would be –2, and the inverse of –10 is 10. Therefore the integers are a group (under addition).
+
+The symmetry groups of polygons all have a finite number of elements, but the group of integers is infinite. There are countless other finite and infinite groups, but their behaviour is very similar.
+
+Groups appear not only when thinking about symmetries or integers, but in many different areas of mathematics. They were first used by the French mathematician Évariste Galois (1811 – 1832) in order to determine whether polynomial equations can be solved. At the age of twenty Galois was shot in a duel, the reason most likely being a love affair. He stayed up all night before his death, writing down some of his ground-breaking mathematical ideas.
+
+In the following years, mathematicians working in many different fields started to use groups: including the geometric groups above and groups of numbers. They had a profound impact on the way we can describe structures and patterns in mathematics, and gave rise to what is called abstract algebra.
+
+Mathematicians started to notice that groups arising in different contexts can behave in very similar ways. Although the elements in the groups may be symmetries in one case and numbers in the other, they behave and interact exactly the same (these groups are called isomorphic). In abstract algebra we therefore think about the structure of groups as a whole, rather than the individual elements.
+
+Since symmetry underlies many effects in nature, group theory is an essential tool in many areas of science, from the symmetries of molecular structures in chemistry to force fields in particle physics.
+
+Every symmetry in nature leads to a particular physical quantity being conserved. “Time” is symmetric and this causes energy to be conserved. “Space” is symmetric and this causes momentum to be conserved. The symmetries of fundamental particles (actually of their associated “fields”) lead to many other quantities and forces being conserved. Understanding the symmetry groups associated with these particles helps physicists understand how our universe works.
+
+---
+
+__Wallpaper Groups__
 
 You have probably seen tessellations before, even though you did not call them
 that. Examples of tessellations are: a tile floor, a brick or block wall, a
@@ -427,6 +267,141 @@ will tessellate.
 
 Tessellations can also be much more complicated. Here are a couple of examples.
 
+A tessellation is a pattern that can cover a flat surface without any gaps or overlaps. Most tessellations are very symmetric: they can have translational, rotational or reflectional symmetries. They can also have a symmetry called glide reflection, a combination of reflection and translation.
+
+These symmetries represent the transformations we can do to a tessellation, so that it looks exactly the same as it did before. They are called the Isometries of the Plane.
+
+All tessellations have a symmetry group, similar to the square we investigated above. These symmetry groups don’t tell you about the pattern that underlies a tessellations, but how the pattern is repeated. Therefore many different tessellations can have the same symmetry group:
+
+It turns out that, among the millions of different patterns and tilings, there are only 17 kinds of symmetry groups a tessellation can have – these are called the Wallpaper Groups. There is no intuitive reason why there are exactly seventeen wallpaper groups, or why any tessellation must have one of those 17 symmetries. Proving it requires more advanced group theory.
+
+Every wallpaper group is defined by a combination of translations, rotations, reflections and glide reflections. Try to find the points of rotation and axes of reflection in the 17 examples below.
+
+Just like we listed all possible symmetry groups of two-dimensional space above, we could list all symmetry groups of three-dimensional space. These are called crystallographic groups and are defined by symmetries of three-dimensional space: translations, glide planes and screw axes (think about the motion when unscrewing a bottle). There are not only 17 of these groups but a total of 219. We shall not list them here…
+
+__Finite Simple Groups__
+
+We have seen that it is possible to add or multiply elements in a group to make a new element in that group. In fact, it is also possible to multiply and divide entire groups to create new groups. And just like prime numbers can’t be divided, there are certain groups which cannot be divided any further. These are called Simple Groups.
+
+One of the biggest achievements of mathematics research in the second half of the 20th century was to find and classify all simple groups which are finite. Unlike randomly distributed prime numbers, finite simple groups have well-defined structures.
+
+Most finite simple groups fall into certain classes, but there are a few that don’t follow a systematic pattern: the Sporadic Groups. The largest of these sporadic groups wasn’t discovered until 1973: the Monster. It has 808 017 424 794 512 875 886 459 904 961 710 757 005 754 368 000 000 000 elements.
+
+It is very surprising, and maybe even discomforting, that very simple ideas like the four group axioms can create objects so huge and bizarre as the Monster group.
+
+---
+
+## Similarity
+
+Finally, lets look at an example of a transformation that is non-rigid: a
+[__dilation__](gloss:dilation) is a transformation that changes a shape's size
+by making it larger or smaller.
+
+In this case, the result of the transformation is no longer congruent to the
+original (which was the case for rigid transformations). Instead we say that
+the two shapes are [__similar__](gloss:similar): they have the same shape but
+not necessarily the same size.
+
+All dilations have a center and a scale factor. The center is the point of
+reference for the dilation (like the vanishing point in a perspective drawing)
+and scale factor tells us how much the figure stretches or shrinks. A scale
+factor is typically labeled k and is always greater than zero.
+
+If the dilated image is smaller than the original, then the scale factor is 0 < k < 1.
+If the dilated image is larger than the original, then the scale factor is k > 1.
 
 
 
+Similar polygons have corresponding angles that are congruent, and corresponding
+sides that are proportional.
+
+Think about similar polygons as enlarging or shrinking the same shape. The
+symbol ∼ is used to represent similarity. Specific types of triangles,
+quadrilaterals, and polygons will always be similar. For example, all
+equilateral triangles are similar and all squares are similar. If two polygons
+are similar, we know the lengths of corresponding sides are proportional. In
+similar polygons, the ratio of one side of a polygon to the corresponding side
+of the other is called the scale factor. The ratio of all parts of a polygon 
+including the perimeters, diagonals, medians, midsegments, altitudes) is the
+same as the ratio of the sides.
+
+__Understanding a Similarty Statement__
+
+Suppose △ABC∼△JKL. Based on the similarity statement, which angles are congruent
+and which sides are proportional?
+
+Just like in a congruence statement, the congruent angles line up within the
+similarity statement. So, ∠A≅∠J,∠B≅∠K, and ∠C≅∠L. Write the sides in a
+proportion: ABJK=BCKL=ACJL. Note that the proportion could be written in
+different ways. For example, ABBC=JKKL is also true.
+
+__Triangle AA Similarity__
+
+The Third Angle Theorem states if two angles are congruent to two angles in
+another triangle, the third angles are congruent too. Because a triangle has
+180∘, the third angle in any triangle is 180∘ minus the other two angle
+measures. Let’s investigate what happens when two different triangles have the
+same angle measures.
+
+AA Similarity Postulate: If two angles in one triangle are congruent to two
+angles in another triangle, the two triangles are similar.
+
+The AA Similarity Postulate is a shortcut for showing that two triangles are
+similar. If you know that two angles in one triangle are congruent to two angles
+in another, which is now enough information to show that the two triangles are
+similar. Then, you can use the similarity to find the lengths of the sides.
+
+__Indirect Measurement__
+
+An application of similar triangles is to measure lengths indirectly. The length
+to be measured would be some feature that was not easily accessible to a person,
+such as the width of a river or canyon and the height of a tall object. To
+measure something indirectly, you need to set up a pair of similar triangles.
+
+1. A tree outside Ellie’s building casts a 125 foot shadow. At the same time of
+day, Ellie casts a 5.5 foot shadow. If Ellie is 4 feet 10 inches tall, how tall
+is the tree? Draw a picture. From the picture to the right, we see that the
+tree and Ellie are parallel, therefore the two triangles are similar to each
+other. Write a proportion.
+
+__Similarity on Rays__
+
+When an angle within a triangle is bisected, the bisector divides the triangle
+proportionally
+
+By definition, AC−→− divides ∠BAD equally, so ∠BAC≅∠CAD. The proportional
+relationship is BCCD=ABAD.
+
+Theorem: If a ray bisects an angle of a triangle, then it divides the opposite
+side into segments that are proportional to the lengths of the other two sides.
+
+
+The Triangle Proportionality Theorem states that if a line parallel to one side
+of a triangle intersects the other two sides, then it divides those sides
+proportionally. We can extend this theorem to a situation outside of triangles
+where we have multiple parallel lines cut by transverals.
+
+Theorem: If three or more parallel lines are cut by two transversals, then they
+divide the transversals proportionally.
+
+Think about a midsegment of a triangle. A midsegment is parallel to one side of
+a triangle and divides the other two sides into congruent halves. The midsegment
+divides those two sides proportionally.
+
+Triangle Proportionality Theorem: If a line parallel to one side of a triangle
+intersects the other two sides, then it divides those sides proportionally.
+
+Triangle Proportionality Theorem Converse: If a line divides two sides of a
+triangle proportionally, then it is parallel to the third side.
+
+---
+
+### Self Similarity
+
+There are some curious mathematical shapes that are similar to a smaller part
+_of themselves_. An example is the __Sierpinksi Triangle__: the entire triangle
+is similar to any one of the smaller triangles it consists on. You could zoom
+in and infinitely many smaller and smaller triangles.
+
+Shapes with this property are called __Fractals__. They have some surprising
+and truly XXX properties, which you will learn about more in the future.

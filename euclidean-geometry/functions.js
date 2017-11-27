@@ -8,12 +8,35 @@
 import { Point } from '@mathigon/fermat';
 
 
-export function thales(section) {
-  const $geopad = section.$el.$('x-geopad');
-  const model = $geopad._el.model;
+function semicircle(a, b, arc) {
+  const c = Point.average(a, b);
+  return arc(c, Point.difference(a, c), Point.difference(b, c));
+}
 
-  model.set('semicircle', function(a, b) {
-    const c = Point.average(a, b);
-    return model.arc(c, Point.difference(a, c), Point.difference(b, c));
+export function thales(section) {
+  section.addGoals('p1', 'p2', 'p3');
+  const $geopad = section.$el.$('x-geopad');
+
+  // $geopad.setTool('point');
+  let a = null, b = null, c = null;
+
+  $geopad.on('addPoint', function(point) {
+    if (!a) {
+      a = point.name;
+      section.score('p1');
+
+    } else if (!b) {
+      b = point.name;
+      $geopad._el.addPath(m => m.segment(m[a], m[b]), {animate: 1000});
+      $geopad._el.addPath(m => semicircle(m[a], m[b], m.arc), {animate: 1000, target: 'circumf'});
+      section.score('p2');
+
+    } else if (!c) {
+      c = point.name;
+      point.force(m => m.circle(m.line(m[a], m[b]).midpoint, m.line(m[a], m[b]).length/2).project(m[c]));
+      $geopad._el.addPath(m => m.triangle(m[a], m[c], m[b]), {animate: 2000, target: 'triangle', classes: 'red'});
+      $geopad._el.addPath(m => m.angle(m[a], m[c], m[b]), {animate: 2000, target: 'angle', classes: 'thin red'});
+      section.score('p3');
+    }
   });
 }
