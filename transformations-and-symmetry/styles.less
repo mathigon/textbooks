@@ -5,3 +5,33 @@
 
 
 @import "styles/variables";
+@import "./components/wallpaper";
+
+
+.stars {
+  position: relative;
+  color: white;
+  h2, strong { color: white; }
+}
+
+.stars .wrapped {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  clip: rect(0, auto, auto, 0);
+
+  &:before {
+    background: blue url('/resources/transformations-and-symmetry/images/universe.jpg');
+    background-size: cover;
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    will-change: transform;
+  }
+}

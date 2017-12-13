@@ -1,126 +1,29 @@
 // =============================================================================
-// Mathigon | Polygons and Polyhedra
-// (c) 2017 Mathigon
+// Polygons and Polyhedra
+// (c) Mathigon
 // =============================================================================
 
 
 @import "styles/variables";
 
-.set-picker {
-  .set-item {
-    .bouncy();
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background .2s, opacity .2s;
-    &:hover { }
+.quadrilateral {
+  width: 210px !important;
+  margin: 12px !important;
+  position: relative;
+  padding: 16px 12px;
+  background: #eee;
+
+  x-geopad { background: transparent; }
+
+  &:before, &:after {
+    content: ""; height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0% 0%, 5%  100%, 10% 0%, 15%  100%, 20% 0%, 25% 100%,
+      30% 0%, 35%  100%, 40% 0%, 45%  100%, 50% 0%, 55%  100%, 60% 0%, 65%
+      100%, 70% 0%, 75%  100%, 80% 0%, 85%  100%, 90% 0%, 95%  100%, 100% 0%);
   }
-
-  .row > .set-item { width: 120px; }
-
-  &.working .set-item { opacity: 0.2; }
-  &.working .set-item.selected { opacity: 1; }
-}
-
-// -----------------------------------------------------------------------------
-
-.geopad { margin: 2em 0; }
-.geopad svg {
-  width: 100%;
-  height: 400px;
-  touch-action: none;
-}
-
-.geo-edge, .geo-polygon {
-  stroke: @grey;
-  stroke-width: 4px;
-  fill: none;
-}
-
-.geo-line {
-  stroke: @light-grey;
-  stroke-width: 2px;
-}
-
-.geo-vertex {
-  fill: @dark-grey;
-  cursor: move;
-  stroke: transparent;
-  stroke-width: 40px;
-  // This seems to break in a recent Chrome update: when moving, the transform center
-  // is the original center before starting to move...
-  &:hover { /* transform: scale(1.2); */ r: 12px; }
-  transition: r .2s;
-}
-
-.geo-angle {
-  opacity: 0.6;
-  fill: @red;
-  &.m-blue { fill: @blue; }
-  &.m-green { fill: @green; }
-  &.m-yellow { fill: @yellow; }
-}
-
-// -----------------------------------------------------------------------------
-
-.angle-values { margin-top: -44px; text-align: center; }
-
-.angle-value {
-  display: inline-block;
-  margin: 0 4px;
-  border-radius: 40px;
-  background: @light-grey;
-  padding: 3px 15px;
-  font-weight: bold;
-  font-size: 1.2em;
-  height: 36px;
-  box-sizing: border-box;
-
-  &.m-red { background: @red; color: white; }
-  &.m-blue { background: @blue; color: white; }
-  &.m-green { background: @green; color: white; }
-  &.m-yellow { background: @yellow; color: white; }
-}
-
-select.angle-value {
-  -webkit-appearance: none;
-  margin-right: 0;
-  border-radius: 40px 0 0 40px;
-  background-image: data-uri('svg/dropdown.svg');
-  background-size: 15px 8px;
-  background-position: right 9px top 15px;
-  background-repeat: no-repeat;
-  padding-right: 32px;
-
-  vertical-align: -1px;  // this works in Chrome...
-
-  & + .angle-value { margin-left: 2px; border-radius: 0 40px 40px 0; }
-}
-
-.quadrilaterals { table-layout: fixed; width: 600px; }
-.quadrilaterals tr:nth-child(n+2) td { padding-top: 40px; }
-.quadrilaterals td { position: relative; }
-.quadrilaterals .line { position: absolute; width: 2px; height: 40px; background: @light-grey; left: 50%; top: 0; }
-.quadrilaterals .line.left { transform: rotate(45deg); margin-left: 50px; height: 45px; }
-.quadrilaterals .line.right { transform: rotate(-45deg);  margin-left: -50px; height: 45px; }
-.quadrilaterals svg { margin: 0 -10px; width: 240px; }
-
-#classifyquadriateral line { transition: stroke .4s; }
-
-// -----------------------------------------------------------------------------
-
-.tessellation-canvas {
-  height: 450px;
-  svg { height: 450px; width: 100%; position: relative; }
-  polygon { cursor: move; stroke: #eee; transition: transform .1s; }
-}
-
-// -----------------------------------------------------------------------------
-
-table.plato {
-  max-width: 580px;
-  margin: 1em auto;
-  td { padding: 10px; border-bottom: 1px solid @border-light; }
-  p { text-align: left !important }
-  img, x-media { width: 80px; display: block; }
-  tr:last-child td { border: none; }
+  &:before { background-color: white; top: 0; }
+  &:after { background-color: #eee; bottom: -2px; }
 }

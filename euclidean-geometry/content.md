@@ -13,7 +13,7 @@ Mathematics has been studied for many thousands of years – to predict the
 seasons, calculate taxes, or estimate the size of farming land.
 
     .img-block
-      x-media(src="images/rhind.jpg", width="660", height="110", credit="(c) British Museum")
+      x-media(src="images/rhind.jpg", width="660", height="110", credit="© British Museum")
       p.caption The Rhind Papyrus found in Thebes (Egypt) is one of the oldest examples of mathematical work.
 
 Ancient Greek mathematicians were the first to study mathematics just for its
@@ -24,31 +24,35 @@ around with geometric shapes:
 
 ::: column(width=440)
 
-    x-geopad.sticky(style="width:440px; height: 320px;"): svg
+    x-geopad.sticky(style="width:440px; height: 320px;" tools="point|move"): svg
 
-::: column
+::: column.grow
 Start by picking two points anywhere in the box on the left.
 
-{.subsection(data-needs="p1 p2")} Let's draw a semicircle around your points.
+{.subsection(needs="p1 p2")} Let's draw a semicircle around your points.
 
-{.subsection(data-needs="p1 p2")} Pick another point that lies anywhere on the
+{.subsection(needs="p1 p2")} Pick another point that lies anywhere on the
 [circumference](target:circumf) of the semicircle.
 
-{.subsection(data-needs="p3")} Now let's draw the triangle that connects the
+{.subsection(needs="p3")} Now let's draw the triangle that connects the
 endpoints of the diameter of the semicircle, as well as the point you picked on
 the circumference.
 
-{.subsection(data-needs="p3")} Finally, look at the [angle](target:angle) at the
+{.subsection(needs="p3")} Finally, look at the [angle](target:angle) at the
 top of the triangle. No matter which points you picked, it always seems to be
-[[90]]°. _{span.subsection(data-needs="blank-0")} This means that the triangle
+[[90]]°. _{span.subsection(needs="blank-0")} This means that the triangle
 is [[right-angled|equilateral|acute]]._
 :::
 
 ---
 
-This is a pretty amazing result – why should circles and right-angled triangles
-be related in any way? In fact, Thales was so surprised by his discovery, that –
-according to legend – he sacrificed an ox to thank the gods.
+For Thales, this was a pretty spectacular result – why should circles and
+right-angled triangles, two completely different shapes, be linked in this
+fundamental way? In fact, he was so awed by his discovery that – according to
+legend – he sacrificed an ox to thank the gods.
+
+    .img-block
+      x-media(src="images/temple.svg" width=400 height=170 credit="© Depositphotos")
 
 However, simply _observing_ a relationship like this was not enough for Thales.
 he wanted to explain _why_ it was true, and to verify that it is _always_ true
@@ -59,6 +63,8 @@ An argument that verified a statement like "" is called a __proof__. And once
 The notion of proof marked a significant change in the history of mathematics.
 Rather than just XXXXXX
 
+    .img-block: img(src="images/divider-1.svg" width=760 height=42)
+
 ---
 
 To come up with proofs, we need some XXXX terminology or __definitions__:
@@ -67,7 +73,7 @@ To come up with proofs, we need some XXXX terminology or __definitions__:
 
     x-geopad.sticky(style="width:240px; height: 160px;"): svg
 
-::: column
+::: column.grow
 A __point__ is a specific location in space. Points describe a position, but
 have no _size_ in itself. They are labelled using capital letters.
 :::
@@ -76,7 +82,7 @@ have no _size_ in itself. They are labelled using capital letters.
 
     x-geopad.sticky(style="width:240px; height: 160px;"): svg
 
-::: column
+::: column.grow
 A __line__ ZZZZ. The line from point `A` to point `B` is labelled `bar("AB")`.
 A line is a set of infinitely many points that extend forever in both directions.
 A line, like a point, does not take up space. It has direction, location and is
@@ -103,7 +109,7 @@ end of the ray and the arrow indicates the direction that the ray continues.
 
     x-geopad.sticky(style="width:240px; height: 160px;"): svg
 
-::: column
+::: column.grow
 A __circle__ is the collection of points that 
 :::
 
@@ -117,155 +123,13 @@ rays cross each other.
 When making geometric drawings, be sure to be clear and label all points and lines.
 
 ---
-> id: euclid
-
-## Euclid's Postulates
-
-::: column(width=220)
-
-    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
-
-::: column
-Greek mathematicians realised that to write formal proofs, you need some sort of
-_starting point_: simple, intuitive XXXX that can be used to prove new ones.
-These statements are called __postulates__ or __axioms__. 
-
-[Euclid of Alexandria](bio:euclid) published the five axioms that form the
-foundation of all of geometry in his book "Elements". Euclid is often called the
-father of Geometry, and his works were used as mathematics textbooks for
-thousands of years, until the 20th century.
-:::
-
-::: column(width=240)
-
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-      path.red(x="segment(a,b)" target="1_line")
-      circle.move(name="a" cx=30 cy=130 r=6 target="1_point")
-      circle.move(name="b" cx=210 cy=30 r=6 target="1_point")
-
-::: column
-### First Axiom
-You can join any [two points](target:1_point) using exactly one straight
-[line segment](target:1_line).
-:::
-
-::: column(width=240)
-
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-      path.red(x="line(a,b)" target="2_line")
-      path(x="segment(a,b)" target="2_line 2_segment")
-      circle.move(name="a" cx=60 cy=100 r=6)
-      circle.move(name="b" cx=180 cy=60 r=6)
-
-::: column
-### Second Axiom
-You can extend any [line segment](target:2_segment) to an
-[infinite line](target:2_line).
-:::
-
-::: column(width=240)
-
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-      path(x="segment(a,b)" target="3_radius")
-      path.red(x="circle(a,distance(a,b))" target="3_circle")
-      circle.move(name="a" cx=120 cy=80 r=6 target="3_center")
-      circle.move(name="b" cx=170 cy=130 r=6)
-
-::: column
-### Third Axiom
-Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
-can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
-:::
-
-::: column(width=240)
-
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-
-::: column
-### Fourth Axiom
-Any two right angles are congruent.
-:::
-
-::: column(width=240)
-
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-      path.red(x="line(a,b).parallel(c)" target="5_parallel")
-      path(x="line(a,b)" target="5_line")
-      circle.move(name="a" cx=20 cy=80 r=6)
-      circle.move(name="b" cx=120 cy=140 r=6)
-      circle.move(name="c" cx=180 cy=60 r=6 target="5_point")
-
-::: column
-### Fifth Axiom
-Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
-there is exactly [one line](target:5_parallel) which goes through _P_ and never
-meets _L_.
-:::
-
-Each of these axioms looks obvious and trivial, but XXXX
-
-::: note
-The fifth axiom, also called the Parallel Postulate, is a slightly different
-but equivalent version of the original postulate that appears in Euclids books.
-:::
-
----
-
-## Parallel and Perpendicular Lines
-
-Two or more lines are parallel when they lie in the same plane and never
-intersect. The symbol for parallel is `||`. To mark lines parallel, draw arrows
-(>) on each parallel line. If there are more than one pair of parallel lines,
-use two arrows (>>) for the second pair. The two lines below would be labeled
-AB←→ || MN←→− or l || m.
-
-For a line and a point not on the line, there is exactly one line parallel to
-this line through the point. There are infinitely many lines that pass through
-A, but only one is parallel to l.
-
-The Parallel Lines Property is a transitive property that can be applied to
-parallel lines. It states that if lines l || m and m || n, then l || n.
-
-Railroad Tracks
-
-Two lines are perpendicular if they meet at a 90°, or right, angle. For a line
-and a point not on the line, there is exactly one line perpendicular to the
-line that passes through the point. There are infinitely many lines that pass
-through A, but only one that is perpendicular to l. Recall that complementary
-angles add up to 90∘. If complementary angles are adjacent, their nonadjacent
-sides are perpendicular rays. What you learn about perpendicular lines can also
-be applied to this situation.
-
-### Perpendicular Line Construction; through a Point NOT on the Line
-* Draw a horizontal line and a point above that line. Label the line l and the point A.
-* Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
-* Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
-* Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
-
-### Perpendicular Line Construction; through a Point on the Line
-* Draw a horizontal line and a point on that line.
-Label the line l and the point A.
-* Take the compass and put the pointer on A. Open the compass so that it reaches out horizontally along the line. Draw two arcs that intersect the line on either side of the point.
-* Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc above or below the line. Repeat this on the other side so that the two arc marks intersect.
-* Take your straightedge and draw a line from point A to the arc intersections above the line. This line is perpendicular to l and passes through A.
-
-Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
-
-Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
-
-Distance Between Parallel Lines 
-The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
-
-Notice that all of the pink segments are the same length. So, when picking a perpendicular segment, be sure to pick one with endpoints that are integers.
-
----
 
 ## Congruence
 
 Before we begin, we must introduce the concept of congruency. Angles are congruent if their measures, in degrees, are equal. Note: "congruent" does not mean "equal." While they seem quite similar, congruent angles do not have to point in the same direction. The only way to get equal angles is by piling two angles of equal measure on top of each other.
 
 
-:::  column
+::: column.grow
 The two shapes on the right basically look equal. They have the same size and
 shape, and we could [turn and slide](action:move) one of them to exactly match
 up with the other. In geometry, we say that the two shapes are
@@ -329,6 +193,147 @@ or expressions in algebra. For example:
     // use the phrase Corresponding Parts of Congruent Triangles are Congruent, or its
     // abbreviation CPCTC.
 
+---
+> id: euclid
+
+## Euclid's Postulates
+
+::: column.grow
+Greek mathematicians realised that to write formal proofs, you need some sort of
+_starting point_: simple, intuitive XXXX that can be used to prove new ones.
+These statements are called __postulates__ or __axioms__. 
+
+[Euclid of Alexandria](bio:euclid) published the five axioms that form the
+foundation of all of geometry in his book "Elements". Euclid is often called the
+father of Geometry, and his works were used as mathematics textbooks for
+thousands of years, until the 20th century.
+::: column(width=220)
+
+    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+
+:::
+
+::: column(width=240)
+
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+      path.red(x="segment(a,b)" target="1_line")
+      circle.move(name="a" cx=30 cy=130 r=6 target="1_point")
+      circle.move(name="b" cx=210 cy=30 r=6 target="1_point")
+
+::: column.grow
+### First Axiom
+You can join any [two points](target:1_point) using exactly one straight
+[line segment](target:1_line).
+:::
+
+::: column(width=240)
+
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+      path.red(x="line(a,b)" target="2_line")
+      path(x="segment(a,b)" target="2_line 2_segment")
+      circle.move(name="a" cx=60 cy=100 r=6)
+      circle.move(name="b" cx=180 cy=60 r=6)
+
+::: column.grow
+### Second Axiom
+You can extend any [line segment](target:2_segment) to an
+[infinite line](target:2_line).
+:::
+
+::: column(width=240)
+
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+      path(x="segment(a,b)" target="3_radius")
+      path.red(x="circle(a,distance(a,b))" target="3_circle")
+      circle.move(name="a" cx=120 cy=80 r=6 target="3_center")
+      circle.move(name="b" cx=170 cy=130 r=6)
+
+::: column.grow
+### Third Axiom
+Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
+can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
+:::
+
+::: column(width=240)
+
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+
+::: column.grow
+### Fourth Axiom
+Any two right angles are congruent.
+:::
+
+::: column(width=240)
+
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+      path.red(x="line(a,b).parallel(c)" target="5_parallel")
+      path(x="line(a,b)" target="5_line")
+      circle.move(name="a" cx=20 cy=80 r=6)
+      circle.move(name="b" cx=120 cy=140 r=6)
+      circle.move(name="c" cx=180 cy=60 r=6 target="5_point")
+
+::: column.grow
+### Fifth Axiom
+Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
+there is exactly [one line](target:5_parallel) which goes through _P_ and never
+meets _L_.
+:::
+
+Each of these axioms looks obvious and trivial, but XXXX
+
+::: note
+The fifth axiom, also called the Parallel Postulate, is a slightly different
+but equivalent version of the original postulate that appears in Euclids books.
+:::
+
+---
+
+## Parallel and Perpendicular Lines
+
+Two or more lines are parallel when they lie in the same plane and never
+intersect. The symbol for parallel is `||`. To mark lines parallel, draw arrows
+(>) on each parallel line. If there are more than one pair of parallel lines,
+use two arrows (>>) for the second pair. The two lines below would be labeled
+AB←→ || MN←→− or l || m.
+
+For a line and a point not on the line, there is exactly one line parallel to
+this line through the point. There are infinitely many lines that pass through
+A, but only one is parallel to l.
+
+The Parallel Lines Property is a transitive property that can be applied to
+parallel lines. It states that if lines l || m and m || n, then l || n.
+
+Railroad Tracks
+
+Two lines are perpendicular if they meet at a 90°, or right, angle. For a line
+and a point not on the line, there is exactly one line perpendicular to the
+line that passes through the point. There are infinitely many lines that pass
+through A, but only one that is perpendicular to l. Recall that complementary
+angles add up to 90∘. If complementary angles are adjacent, their nonadjacent
+sides are perpendicular rays. What you learn about perpendicular lines can also
+be applied to this situation.
+
+### Perpendicular Line Construction; through a Point NOT on the Line
+* Draw a horizontal line and a point above that line. Label the line l and the point A.
+* Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
+* Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
+* Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
+
+### Perpendicular Line Construction; through a Point on the Line
+* Draw a horizontal line and a point on that line.
+Label the line l and the point A.
+* Take the compass and put the pointer on A. Open the compass so that it reaches out horizontally along the line. Draw two arcs that intersect the line on either side of the point.
+* Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc above or below the line. Repeat this on the other side so that the two arc marks intersect.
+* Take your straightedge and draw a line from point A to the arc intersections above the line. This line is perpendicular to l and passes through A.
+
+Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
+
+Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
+
+Distance Between Parallel Lines 
+The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
+
+Notice that all of the pink segments are the same length. So, when picking a perpendicular segment, be sure to pick one with endpoints that are integers.
 
 ---
 

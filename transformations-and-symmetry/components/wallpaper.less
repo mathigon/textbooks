@@ -1,0 +1,45 @@
+// =============================================================================
+// Wallpaper Component
+// (c) Mathigon
+// =============================================================================
+
+
+@import "styles/variables";
+
+
+x-wallpaper {
+  display: block;
+  position: relative;
+  margin: 1.5rem 0;
+
+  canvas { width: 100%; height: auto; background: @grey-background; }
+
+  .groups { display: flex; margin-bottom: 1px; }
+
+  .group {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    margin-right: 1px;
+    background: @grey-background;
+    &.active { border: 4px solid @grey; padding: 0; }
+  }
+
+  .colours {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .colour {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 10px;
+    opacity: 0.7;
+    border: 2px solid white;
+    &.active { border-width: 4px; width: 28px; height: 28px; opacity: 1; }
+  }
+
+  .btn-row { position: absolute; bottom: 12px; left: 12px }
+}

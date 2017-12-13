@@ -5,7 +5,7 @@
 
 
 
-import { Point } from '@mathigon/fermat';
+import { Point, Arc } from '@mathigon/fermat';
 
 
 function semicircle(a, b, arc) {
@@ -28,14 +28,15 @@ export function thales(section) {
     } else if (!b) {
       b = point.name;
       $geopad._el.addPath(m => m.segment(m[a], m[b]), {animate: 1000});
-      $geopad._el.addPath(m => semicircle(m[a], m[b], m.arc), {animate: 1000, target: 'circumf'});
+      $geopad._el.addPath(m => semicircle(m[a], m[b], m.arc), {animate: 2000, target: 'circumf'});
+      $geopad._el.drawCompass(semicircle($geopad._el.model[a], $geopad._el.model[b], $geopad._el.model.arc), 2000);
       section.score('p2');
 
     } else if (!c) {
       c = point.name;
       point.force(m => m.circle(m.line(m[a], m[b]).midpoint, m.line(m[a], m[b]).length/2).project(m[c]));
       $geopad._el.addPath(m => m.triangle(m[a], m[c], m[b]), {animate: 2000, target: 'triangle', classes: 'red'});
-      $geopad._el.addPath(m => m.angle(m[a], m[c], m[b]), {animate: 2000, target: 'angle', classes: 'thin red'});
+      $geopad._el.addPath(m => m.angle(m[a], m[c], m[b]), {animate: 500, target: 'angle', classes: 'thin red'});
       section.score('p3');
     }
   });

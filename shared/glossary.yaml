@@ -14,6 +14,93 @@ verticle-angle:
   title: Verticle angles
 
 
+rigid-transformation: |
+  A __rigid transformation__, or __isometry__ is a transformation that doesn't
+  change a shape's size and shape.
+
+
+laws-of-nature: |
+  The "laws of nature" is the name given collectively to a set of rules (usually
+  expressed as mathematical equations) that are supposed to explain everything
+  we observe in the universe.
+
+polygon: |
+  A __polygon__ is geometric shape that is made up of straight line segments.
+
+regular-polygon: |
+  A __regular polygon__ is a polygon in which all sides have the same length.
+
+square: |
+  A regular quadrilateral: all edges and all angles have the same size.
+
+  },
+  "equilateral": {
+    "title": "Equilateral Triangle",
+    "text": "<p>A regular triangle: all sides have the same size.</p>"
+  },
+  "intangle": {
+    "title": "Internal Angle",
+    "text": "<p>The angles on the inside at every vertex of a polygon.</p>"
+  },
+  "quadrilateral": {
+    "title": "Quadrilateral",
+    "text": "<p>A polygon with four sides.</p>"
+  },
+  "trapezium": {
+    "title": "Trapezium",
+    "text": "<p>A quadrilateral in which a pair of opposite edges are parallel.</p>"
+  },
+  "parallelogram": {
+    "title": "Parallelogram",
+    "text": "<p>A quadrilateral in which both pairs of opposite edges are parallel.</p>"
+  },
+  "kite": {
+    "title": "Kite",
+    "text": "<p>A quadrilateral in which two pairs of adjacent edges have the same length.</p>"
+  },
+  "rectangle": {
+    "title": "Rectangle",
+    "text": "<p>A quadrilateral in which all angles are 90°.</p>"
+  },
+  "rhombus": {
+    "title": "Rhombus",
+    "text": "<p>A quadrilateral in which all edges have the same length.</p>"
+  },
+  "edge": {
+    "title": "Edge",
+    "text": "<p>The “sides” of a polygon or “lines” of a polyhedron.</p>"
+  },
+  "vertex": {
+    "title": "Vertex",
+    "text": "<p>The “corners” of a polygon or polyhedron.</p>"
+  },
+  "face": {
+    "title": "Face",
+    "text": "<p>The polygons which are “sides” of a polyhedron.</p>"
+  },
+  "tessellation": {
+    "title": "Tessellation",
+    "text": "<p>A geometric pattern that covers a surface without gaps or overlaps.</p>"
+  },
+  "penrose": {
+    "title": "Penrose tilings",
+    "text": "<p>A non-periodic, self-similar tessellation.</p>"
+  },
+  "polyhedron": {
+    "title": "Polyhedron",
+    "text": "<p>A 3-dimensional solids in which all faces are polygons.</p>"
+  },
+  "platonic": {
+    "title": "Platonic Solid",
+    "text": "<p>A polyhedron made up of only one kind of regular polygon, that looks the same from every direction.</p>"
+  },
+  "archimedean": {
+    "title": "Archimedean Solid",
+    "text": "<p>A polyhedron made up of different kinds of regular polygons, that looks the same from every direction.</p>"
+  }
+}
+
+
 alternate interior angles	Alternate interior angles are two angles that are on the interior of two different lines, but on the opposite sides of the transversal.
 Corresponding Angles	Corresponding angles are two angles that are in the same position with respect to the transversal, but on different lines.
 perpendicular bisector	A perpendicular bisector of a line segment passes through the midpoint of the line segment and intersects the line segment at 90∘.

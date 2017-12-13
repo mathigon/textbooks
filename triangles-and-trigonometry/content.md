@@ -8,18 +8,33 @@
 ## Introduction
 
 By the early 19th century, explorers had discovered most of the Earth, and
-filled in the remaining blank areas of the map: from the arctic to 
+filled in the remaining blank areas of the map: from the arctic to the African
+rainforest. It now was the task of geographers and surveyors to _measure_ the
+world, and produce accurate maps.
 
-– but how do you even measure the height of a mountain?
+One of the most XXX of 
 
-    x-geopad(style="width:300px; height: 300px;"): svg
+Of particular interest 
+
+Of particular interest was finding the highest mountain on Earth – but how do
+you measure the height of a mountain?
+
+This was the challenge Andrew Waugh, who worked on the _Great Trigonometrical
+Survey_, a century-long project to measure all of India and produce accurate
+maps, including the Himalayan mountain range.
+
+They had a few different candidates for the world's highest mountain, but from
+hundreds of kilometers away, it was impossible to tell which one was 
+
+
+    include svg/mountain.svg
 
 Today, we can use satellites to measure the height of mountains to within a few
-centimeters. Unfortunately satellites were not available to XXX in 1850.
+centimeters – but these did not exist 200 years ago.
 
-Climbers can use Altimeters to determine their altitude – these use the
-difference in atmospheric pressure at different heights. However this would
-have required XXX to actually climb to the top of Mount Everest. This was not
+Climbers can use _Altimeters_ to determine their altitude – these use the
+difference in air pressure at different heights. However this would have
+required to actually climb to the top of the mountain
 
 Finally, you might try to do something similar to how Erathostenes measured
 the diameter of Earth, using shadows and angles. Unfortunately, the base of the
@@ -28,6 +43,15 @@ mountain is under kilometers of rock, and not very accessible.
 But there are other geometric ticks that XXX used to calculate the height of
 Mount Everest, accurately to within a few meters of today's official height.
 And by the end of this chapter, you will be able to do the same!
+
+{.todo} Triangles are rigid, mesh grid in 3d graphics
+
+
+BELOW
+This explanation greatly simplifies the extraordinary work done by the
+geographers working on the Great Trigonometrical Survey. 
+
+
 
 ---
 
@@ -41,16 +65,18 @@ at each vertex). All of the following shapes are triangles.
 You already know that the sum of the interior angles in a triangle is always
 180°. We can classify triangles by the size of their angles:
 
-::: .row
-::: .grow
+::: column.grow
+{.todo} image
+
 Right Triangle: When a triangle has one right angle.
-:::
-::: .grow
+::: column.grow
+{.todo} image
+
 Obtuse Triangle: When a triangle has one obtuse angle.
-:::
-::: .grow
+::: column.grow
+{.todo} image
+
 Acute Triangle: When all three angles in the triangle are acute.
-:::
 :::
 
 We usually label the vertices of a triangle with capital letters _A_, _B_ and
@@ -60,55 +86,8 @@ triangle can be labeled `△ABC` (or, for example, `△BAC` – the order of ver
 does not matter).
 
 ---
-> id: medians
 
 ### Medians
-
-::: .row.padded
-::: .grow(style="width: 300px")
-
-    x-geopad(style="width:300px; height: 300px;"): svg
-      path.thin.red(x="line(a,b).perpendicularBisector")
-      path.thin.blue(x="line(a,c).perpendicularBisector")
-      path.thin.green(x="line(b,c).perpendicularBisector")
-
-      path(x="triangle(a,b,c)")
-      path.yellow(x="triangle(a,b,c).circumcircle")
-      circle.yellow(x="triangle(a,b,c).circumcircle.c", r=6)
-
-      circle.red(x="line(a,b).midpoint", r=6)
-      circle.blue(x="line(a,c).midpoint", r=6)
-      circle.green(x="line(b,c).midpoint", r=6)
-
-      circle.move(var="a" cx=150, cy=50, r=6 label="A")
-      circle.move(var="b" cx=50, cy=250, r=6 label="B")
-      circle.move(var="c" cx=250, cy=250, r=6 label="C")
-
-:::
-::: .grow(style="width: 300px")
-  
-    x-geopad(style="width:300px; height: 300px;"): svg
-      path.thin.red(x="angle(a,b,c)")
-      path.thin.blue(x="angle(b,c,a)")
-      path.thin.green(x="angle(c,a,b)")
-
-      path.thin.blue(x="angle(a,b,c).bisector")
-      path.thin.green(x="angle(b,c,a).bisector")
-      path.thin.red(x="angle(c,a,b).bisector")
-
-      path(x="segment(a,b)" label="a")
-      path(x="segment(a,c)" label="b")
-      path(x="segment(b,c)" label="c")
-
-      path.yellow(x="triangle(a,b,c).incircle")
-      circle.yellow(x="triangle(a,b,c).incircle.c", r=6)
-
-      circle.move(var="a" cx=150, cy=50, r=6 label="A")
-      circle.move(var="b" cx=50, cy=250, r=6 label="B")
-      circle.move(var="c" cx=250, cy=250, r=6 label="C")
-
-:::
-:::
 
 A median is the line segment that joins a vertex and the midpoint of the
 opposite side (of a triangle). The three medians of a triangle intersect at one
@@ -145,7 +124,7 @@ Orthocenter: The point of concurrency for the altitudes of triangle.
 Here is what the orthocenter looks like for the three triangles. It has three
 different locations, much like the perpendicular bisectors.
 
-Acute Triangle		
+Acute Triangle
 The orthocenter is inside the triangle.
 
 Right Triangle
@@ -158,6 +137,49 @@ The orthocenter is outside the triangle.
 ---
 
 ## Incircle and Circumcircle
+
+::: column.grow(width=300)
+
+    x-geopad(style="width:300px; height: 300px;" tools="move|point|line|circle|perpBisector|angleBisector"): svg
+      path.thin.red(x="line(a,b).perpendicularBisector")
+      path.thin.blue(x="line(a,c).perpendicularBisector")
+      path.thin.green(x="line(b,c).perpendicularBisector")
+
+      path(x="triangle(a,b,c)")
+      path.yellow(x="triangle(a,b,c).circumcircle")
+      circle.yellow(x="triangle(a,b,c).circumcircle.c", r=6)
+
+      circle.red(x="line(a,b).midpoint", r=6)
+      circle.blue(x="line(a,c).midpoint", r=6)
+      circle.green(x="line(b,c).midpoint", r=6)
+
+      circle.move(name="a" cx=150, cy=50, r=6 label="A")
+      circle.move(name="b" cx=50, cy=250, r=6 label="B")
+      circle.move(name="c" cx=250, cy=250, r=6 label="C")
+
+::: column.grow(width=300)
+  
+    x-geopad(style="width:300px; height: 300px;"): svg
+      path.thin.red(x="angle(a,b,c)")
+      path.thin.blue(x="angle(b,c,a)")
+      path.thin.green(x="angle(c,a,b)")
+
+      path.thin.blue(x="angle(a,b,c).bisector")
+      path.thin.green(x="angle(b,c,a).bisector")
+      path.thin.red(x="angle(c,a,b).bisector")
+
+      path(x="segment(a,b)" label="a")
+      path(x="segment(a,c)" label="b")
+      path(x="segment(b,c)" label="c")
+
+      path.yellow(x="triangle(a,b,c).incircle")
+      circle.yellow(x="triangle(a,b,c).incircle.c", r=6)
+
+      circle.move(name="a" cx=150, cy=50, r=6 label="A")
+      circle.move(name="b" cx=50, cy=250, r=6 label="B")
+      circle.move(name="c" cx=250, cy=250, r=6 label="C")
+
+:::
 
 ### Perpendicular Bisectors
 
@@ -696,3 +718,15 @@ the equal sign.
 Use Law of Cosines when given:
 * Two sides and the included angle.
 * All three sides.
+
+---
+
+## Applications
+
+But triangles aren't just mathematically significant, they are also fundamental to the way we build in our environments, both physical and virtual. Triangles are special because they are exceptionally strong. Out of all the two-dimensional shapes we can make out of straight struts of metal, only a triangle is rigid. All other shapes can be deformed with a simple push if the shape is hinged at the corners (eg. a rectangle could be pushed over into a parallelogram). But not the trusty triangle, which explains its ubiquitous use in construction from pylons to bracing.
+
+Triangles are also special because they are the simplest polygon — it is a common approach to a tricky geometrical problem, such as analysing a complex surface, to instead approximate it by a mesh of triangles. This approach is also used in the real world to achieve some of the exotic shapes we now see in modern architecture, such as the curved shape of 30 St Mary's Axe, aka the Gherkin, or the canopy over the courtyard in the British Museum.
+
+This method of triangulation also is vital in building our virtual world. The fluid forms of the CGI characters we see in film and on TV are actually an incredibly fine mesh of triangles, in order that they can be stored and manipulated digitally.
+
+![](https://plus.maths.org/issue50/features/dench/zoom.jpg)
