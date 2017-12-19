@@ -7,51 +7,44 @@
 
 ## Introduction
 
-By the early 19th century, explorers had discovered most of the Earth, and
-filled in the remaining blank areas of the map: from the arctic to the African
-rainforest. It now was the task of geographers and surveyors to _measure_ the
-world, and produce accurate maps.
+By the early 19th century, explorers had discovered most of the Earth. Trade and
+transportation was booming between distant countries and colonies, and this
+created a need for _accurate maps_ of the entire planet.
 
-One of the most XXX of 
+Today we have satellites that can take photos from above – but 200 years ago,
+creating maps was a difficult and time consuming task.
 
-Of particular interest 
+It was done by mathematicians like [Radhanath Sikdar](bio:sikdar), who worked on
+the _Great Trigonometrical Survey_: a century-long project to measure all of
+India, including the Himalayan mountain range.
 
-Of particular interest was finding the highest mountain on Earth – but how do
-you measure the height of a mountain?
-
-This was the challenge Andrew Waugh, who worked on the _Great Trigonometrical
-Survey_, a century-long project to measure all of India and produce accurate
-maps, including the Himalayan mountain range.
-
-They had a few different candidates for the world's highest mountain, but from
-hundreds of kilometers away, it was impossible to tell which one was 
-
+Of particular interest was the quest to find the highest mountain on Earth.
+There were a few different candidates, but from hundreds of kilometers away, it
+was difficult to tell which one was the highest. So how to you measure the
+height of a mountain?
 
     include svg/mountain.svg
 
-Today, we can use satellites to measure the height of mountains to within a few
-centimeters – but these did not exist 200 years ago.
+Today, we can use satellites and GPS to measure the height of mountains to
+within a few centimeters – but these did not exist when Radhanath was surveying
+India.
 
-Climbers can use _Altimeters_ to determine their altitude – these use the
+Climbers use _altimeters_ to determine their altitude. These devices use the
 difference in air pressure at different heights. However this would have
-required to actually climb to the top of the mountain
+required someone to actually climb to the top of every mountain – an extremely
+difficult feat that was not achieved until a century later.
 
-Finally, you might try to do something similar to how Erathostenes measured
-the diameter of Earth, using shadows and angles. Unfortunately, the base of the
-mountain is under kilometers of rock, and not very accessible.
+You could also try using similar triangles, like we did in the
+[previous chapter](/course/transformations-and-symmetry). However method
+requires knowing the distance to the [base of the mountain](target:base), the
+point at sea level, directly below its summit. We can do this for lighthouses
+or flag poles, but for Mount Everest, this point is hidden underneath hundreds
+of meters of rock.
 
-But there are other geometric ticks that XXX used to calculate the height of
-Mount Everest, accurately to within a few meters of today's official height.
-And by the end of this chapter, you will be able to do the same!
-
-{.todo} Triangles are rigid, mesh grid in 3d graphics
-
-
-BELOW
-This explanation greatly simplifies the extraordinary work done by the
-geographers working on the Great Trigonometrical Survey. 
-
-
+But there are more advanced geometric XXX, which you will learn about in this
+chapter. Radhanath used these to discover the highest mountain on Earth, which
+is now called Mount Everest. His measurement is only a few meters off today's
+official height: 8848 meters.
 
 ---
 
@@ -87,58 +80,47 @@ does not matter).
 
 ---
 
-### Medians
+### Medians 
 
-A median is the line segment that joins a vertex and the midpoint of the
+{.todo} A median is the line segment that joins a vertex and the midpoint of the
 opposite side (of a triangle). The three medians of a triangle intersect at one
-point, just like the perpendicular bisectors and angle bisectors. This point is
-called the centroid, and is the point of concurrency for the medians of a
-triangle. Unlike the circumcenter and incenter, the centroid does not have
-anything to do with circles. It has a different property.
+point, called the centroid. The centroid is also the “balancing point” of a
+triangle. This means that the triangle will balance when placed on a pencil at
+this point.
 
-Concurrency of Medians Theorem: The medians of a triangle intersect in a point
-that is two-thirds of the distance from the vertices to the midpoint of the
-opposite side. The centroid is also the “balancing point” of a triangle.
-
-In addition to these ratios, G is also the balance point of △ACE. This means
-that the triangle will balance when placed on a pencil at this point.
-
-### Altitudes
-
-An altitude is a line segment in a triangle from a vertex and perpendicular to
-the opposite side, it is also known as the height of a triangle. All of the red
-lines are examples of altitudes:
-
-As you can see, an altitude can be a side of a triangle or outside of the
-triangle. When a triangle is a right triangle, the altitude, or height, is the
-leg. To construct an altitude, construct a perpendicular line through a point
-not on the given line. Think of the vertex as the point and the given line as
-the opposite side.
-
-As was true with perpendicular bisectors, angle bisectors, and medians, the
-altitudes of a triangle are also concurrent. Unlike the other three, the point
-does not have any special properties.
-
-Orthocenter: The point of concurrency for the altitudes of triangle.
-
-Here is what the orthocenter looks like for the three triangles. It has three
-different locations, much like the perpendicular bisectors.
-
-Acute Triangle
-The orthocenter is inside the triangle.
-
-Right Triangle
-The legs of the triangle are two of the altitudes.
-The orthocenter is the vertex of the right angle.
-
-Obtuse Triangle
-The orthocenter is outside the triangle.
+{.todo}  Concurrency of Medians Theorem: The medians of a triangle intersect in
+a point that is two-thirds of the distance from the vertices to the midpoint of
+the opposite side. 
 
 ---
 
-## Incircle and Circumcircle
+### Altitudes
 
-::: column.grow(width=300)
+{.todo} An altitude is a line segment in a triangle from a vertex and
+perpendicular to the opposite side, it is also known as the height of a
+triangle.
+
+{.todo} As you can see, an altitude can be a side of a triangle or outside of
+the triangle. When a triangle is a right triangle, the altitude, or height, is
+the leg. To construct an altitude, construct a perpendicular line through a
+point not on the given line. Think of the vertex as the point and the given line
+as the opposite side.
+
+{.todo} Like medians, the altitudes of a triangle also meet in a single point,
+called the Orthocenter.
+
+{.todo} Acute Triangle: The orthocenter is inside the triangle.
+
+{.todo} Right Triangle: The legs of the triangle are two of the altitudes. The
+orthocenter is the vertex of the right angle.
+
+{.todo} Obtuse Triangle: The orthocenter is outside the triangle.
+
+---
+
+### Perpendicular Bisectors and Circumcircle
+
+::: column(width=300)
 
     x-geopad(style="width:300px; height: 300px;" tools="move|point|line|circle|perpBisector|angleBisector"): svg
       path.thin.red(x="line(a,b).perpendicularBisector")
@@ -157,7 +139,33 @@ The orthocenter is outside the triangle.
       circle.move(name="b" cx=50, cy=250, r=6 label="B")
       circle.move(name="c" cx=250, cy=250, r=6 label="C")
 
-::: column.grow(width=300)
+::: column .grow
+Recall that the perpendicular bisector of a line is the perpendicular line that
+goes through its midpoint. Let's draw the perpendicular bisector of all three
+sides of a triangle.
+
+Like medians and altitudes, the three perpendicular bisectors meet in a single
+point. And again, this point has a special property: it is the centre of a
+circle that goes through all three vertices of the triangle.
+
+The intersection point of the perpendicular bisectors is called the
+__circumcenter__ of the triangle, and the circle is called the __circumcircle__.
+
+{.todo} But why does this happen? Recall that any point on a perpendicular
+bisector is equidistant from the two endpoints of the line it bisects.
+
+{.todo} MORE EXPLANATION
+:::
+
+---
+
+{.todo} Find the circle that goes through any three points
+
+---
+
+### Angle Bisectors and Incircle
+
+::: column(width=300)
   
     x-geopad(style="width:300px; height: 300px;"): svg
       path.thin.red(x="angle(a,b,c)")
@@ -179,61 +187,166 @@ The orthocenter is outside the triangle.
       circle.move(name="b" cx=50, cy=250, r=6 label="B")
       circle.move(name="c" cx=250, cy=250, r=6 label="C")
 
-:::
+::: column.grow
+{.todo} Construct the angle bisector of each angle.
+Erase the arc marks and the angle bisectors after the incenter. Draw or
+construct the perpendicular lines to each side, through the incenter.
+Erase the arc marks from #2 and the perpendicular lines beyond the sides of
+the triangle. Place the pointer of the compass on the incenter. Open the 
+compass to intersect one of the three perpendicular lines drawn in #2. Draw a
+circle.
 
-### Perpendicular Bisectors
-
-Recall that a perpendicular bisector intersects a line segment at its midpoint
-and is perpendicular. Let’s analyze this figure.
-
-CD←→ is the perpendicular bisector of AB. If we were to draw in AC and CB, we
-would find that they are equal. Therefore, any point on the perpendicular
-bisector of a segment is the same distance from each endpoint.
-
-Perpendicular Bisector Theorem: If a point is on the perpendicular bisector of a
-segment, then it is equidistant from the endpoints of the segment.
-
-The three perpendicular bisectors all intersect at the same point, called the
-circumcenter.
-
-Circumcenter: The point of concurrency for the perpendicular bisectors of the
-sides of a triangle.
-
-The circumcenter is the center of a circle that passes through all the vertices
-of the triangle. We say that this circle circumscribes the triangle. This means
-that the circumcenter is equidistant to the vertices.
-
-Concurrency of Perpendicular Bisectors Theorem: The perpendicular bisectors of
-the sides of a triangle intersect in a point that is equidistant from the
-vertices.
-
-
-### Angle Bisectors
-
-Incenter: The point of concurrency for the angle bisectors of a triangle.
-
-1. Draw a scalene triangle. Construct the angle bisector of each angle.
-2. Erase the arc marks and the angle bisectors after the incenter. Draw or
-   construct the perpendicular lines to each side, through the incenter.
-3. Erase the arc marks from #2 and the perpendicular lines beyond the sides of
-   the triangle. Place the pointer of the compass on the incenter. Open the 
-   ompass to intersect one of the three perpendicular lines drawn in #2. Draw a
-   circle.
-
-Notice that the circle touches all three sides of the triangle. We say that this
+{.todo} Notice that the circle touches all three sides of the triangle. We say that this
 circle is inscribed in the triangle because it touches all three sides. The
 incenter is on all three angle bisectors, so the incenter is equidistant from
 all three sides of the triangle.
 
-Concurrency of Angle Bisectors Theorem: The angle bisectors of a triangle
+{.todo} Concurrency of Angle Bisectors Theorem: The angle bisectors of a triangle
 intersect in a point that is equidistant from the three sides of the triangle.
 
-If AG, BG, and GC are the angle bisectors of the angles in the triangle, then
+{.todo} If AG, BG, and GC are the angle bisectors of the angles in the triangle, then
 EG=GF=GD. In other words, EG, FG, and DG are the radii of the inscribed circle.
+:::
+
+---
+
+## Triangle Inequality
+
+Can any three lengths make a triangle? The answer is no. There are limits on
+what the lengths can be. For example, the lengths 1, 2, 3 cannot make a triangle
+because 1+2=3, so they would all lie on the same line. The lengths 4, 5, 10 also
+cannot make a triangle because 4+5=9.
+
+The arc marks show that the two sides would never meet to form a triangle. The
+Triangle Inequality Theorem states that the sum of the lengths of any two sides
+of a triangle must be greater than the length of the third.
+
+Determining if Three Lengths make a Triangle 
+Do the lengths 4, 11, 8 make a triangle?
+To solve this problem, check to make sure that the smaller two numbers add up to
+be greater than the biggest number. 4+8=12 and 12>11 so yes these lengths make a
+triangle
+
+Solving for an Unknown Length 
+Find the length of the third side of a triangle if the other two sides are 10 and 6.
+
+The Triangle Inequality Theorem can also help you find the range of the third
+side. The two given sides are 6 and 10, so the third side, s, can either be the
+shortest side or the longest side. For example s could be 5 because 6+5>10. It
+could also be 15 because 6+10>15. Therefore, the range of values for s is 4<s<16.
+
+Notice the range is no less than 4, and not equal to 4. The third side could be
+4.1 because 4.1+6>10. For the same reason, s cannot be greater than 16, but it
+could 15.9, 10+6>15.9.
+
+Making Conclusions about the Length of Legs 
+
+The base of an isosceles triangle has length 24. What can you say about the
+length of each leg?
+
+To solve this problem, remember that an isosceles triangle has two congruent
+sides (the legs). We have to make sure that the sum of the lengths of the legs
+is greater than 24. In other words, if x is the length of a leg:
+
+x+x2xx>24>24>12
+
+Each leg must have a length greater than 12.
+
+
+    // ### Comparing Angles and Sides in Triangles
+    // 
+    // Theorem: If one side of a triangle is longer than another side, then the angle
+    // opposite the longer side will be larger than the angle opposite the shorter side.
+    // 
+    // The SAS Inequality Theorem (Hinge Theorem): If two sides of a triangle are
+    // congruent to two sides of another triangle, but the included angle of one
+    // triangle has greater measure than the included angle of the other triangle,
+    // then the third side of the first triangle is longer than the third side of the
+    // second triangle.
+    // 
+    // SSS Inequality Theorem (also called the Converse of the Hinge Theorem): If two
+    // sides of a triangle are congruent to two sides of another triangle, but the
+    // third side of the first triangle is longer than the third side of the second
+    // triangle, then the included angle of the first triangle is greater in measure
+    // than the included angle of the second triangle.
+
+    // ## Midsegment Theorem
+
+    // A midsegment is a line segment that connects two midpoints of adjacent sides of
+    // a triangle. For every triangle there are three midsegments. The Midsegment
+    // Theorem states that the midsegment of a triangle is half the length of the side
+    // it is parallel to.
+
+    // Let’s draw two different triangles, one for the congruent sides, and one for
+    // the parallel lines.
+
+    // Because the midsegments are half the length of the sides they are parallel to,
+    // they are congruent to half of each of those sides (as marked). Also, this means
+    // that all four of the triangles in △ABC, created by the midsegments are congruent
+    // by SSS.
+
+    // As for the parallel midsegments and sides, several congruent angles are formed.
+    // In the picture to the right, the pink and teal angles are congruent because they
+    // are corresponding or alternate interior angles. Then, the purple angles are
+    // congruent by the 3rd Angle Theorem.
+
+    // ## Inscribed Similar Triangles 
+
+    // If two objects are similar, corresponding angles are congruent and their sides
+    // are proportional in length. Let’s look at a right triangle, with an altitude
+    // drawn from the right angle. There are three right triangles in this picture,
+    // △ADB,△CDA, and △CAB. Both of the two smaller triangles are similar to the larger
+    // triangle because they each share an angle with △ADB. That means all three
+    // triangles are similar to each other.
+    // 
+    // Inscribed Triangle Theorem: If an altitude is drawn from the right angle of any
+    // right triangle, then the two triangles formed are similar to the original
+    // triangle and all three triangles are similar to each other.
+    // 
+    // You are probably familiar with the arithmetic mean, which divides the sum of n
+    // numbers by n. This is commonly used to determine the average test score for a
+    // group of students. The geometric mean is a different sort of average, which
+    // takes the nth root of the product of n numbers. In this text, we will primarily
+    // compare two numbers, so we would be taking the square root of the product of two
+    // numbers. This mean is commonly used with rates of increase or decrease.
+    // 
+    // Geometric Mean: The geometric mean of two positive numbers a and b is the number
+    // x, such that ax=xb or x2=ab and x=ab−−√.
+    // 
+    // Geometric Mean Theorem #1: In a right triangle, the altitude drawn from the
+    // right angle to the hypotenuse divides the hypotenuse into two segments. The
+    // length of the altitude is the geometric mean of these two segments. In other
+    // words, BCAC=ACDC.
+    // 
+    // Geometric Mean Theorem #2: In a right triangle, the altitude drawn from the
+    // right angle to the hypotenuse divides the hypotenuse into two segments. The
+    // length of each leg of the right triangle is the geometric mean of the lengths
+    // of the hypotenuse and the segment of the hypotenuse that is adjacent to the leg.
+    // In other words, BCAB=ABDB and DCAD=ADDB.
+    // 
+    // Both of these theorems are proved using similar triangles.
 
 ---
 
 ## Constructing Triangles
+
+In the previous section 
+
+    // The Third Angle Theorem states that if two angles in one triangle are congruent
+    // to two angles in another triangle, then the third pair of angles must also
+    // congruent. What additional information would you need to know in order to be
+    // able to determine that the triangles are congruent?
+
+    // In order for the triangles to be congruent, you need some information about the
+    // sides. If you know two pairs of angles are congruent and at least one pair of
+    // corresponding sides are congruent, then the triangles will be congruent.
+
+    // Notice that when two triangles are congruent their three pairs of corresponding
+    // angles and their three pairs of corresponding sides are congruent.
+
+    // When referring to corresponding congruent parts of congruent triangles, you can
+    // use the phrase Corresponding Parts of Congruent Triangles are Congruent, or its
+    // abbreviation CPCTC.
 
 ### SSS
 
@@ -414,136 +527,25 @@ Theorem #2: The acute angles in a right triangle are always complementary.
 
 ---
 
-## Triangle Inequality
-
-Can any three lengths make a triangle? The answer is no. There are limits on
-what the lengths can be. For example, the lengths 1, 2, 3 cannot make a triangle
-because 1+2=3, so they would all lie on the same line. The lengths 4, 5, 10 also
-cannot make a triangle because 4+5=9.
-
-The arc marks show that the two sides would never meet to form a triangle. The
-Triangle Inequality Theorem states that the sum of the lengths of any two sides
-of a triangle must be greater than the length of the third.
-
-Determining if Three Lengths make a Triangle 
-Do the lengths 4, 11, 8 make a triangle?
-To solve this problem, check to make sure that the smaller two numbers add up to
-be greater than the biggest number. 4+8=12 and 12>11 so yes these lengths make a
-triangle
-
-Solving for an Unknown Length 
-Find the length of the third side of a triangle if the other two sides are 10 and 6.
-
-The Triangle Inequality Theorem can also help you find the range of the third
-side. The two given sides are 6 and 10, so the third side, s, can either be the
-shortest side or the longest side. For example s could be 5 because 6+5>10. It
-could also be 15 because 6+10>15. Therefore, the range of values for s is 4<s<16.
-
-Notice the range is no less than 4, and not equal to 4. The third side could be
-4.1 because 4.1+6>10. For the same reason, s cannot be greater than 16, but it
-could 15.9, 10+6>15.9.
-
-Making Conclusions about the Length of Legs 
-
-The base of an isosceles triangle has length 24. What can you say about the
-length of each leg?
-
-To solve this problem, remember that an isosceles triangle has two congruent
-sides (the legs). We have to make sure that the sum of the lengths of the legs
-is greater than 24. In other words, if x is the length of a leg:
-
-x+x2xx>24>24>12
-
-Each leg must have a length greater than 12.
-
-
-### Comparing Angles and Sides in Triangles
-
-Theorem: If one side of a triangle is longer than another side, then the angle
-opposite the longer side will be larger than the angle opposite the shorter side.
-
-The SAS Inequality Theorem (Hinge Theorem): If two sides of a triangle are
-congruent to two sides of another triangle, but the included angle of one
-triangle has greater measure than the included angle of the other triangle,
-then the third side of the first triangle is longer than the third side of the
-second triangle.
-
-SSS Inequality Theorem (also called the Converse of the Hinge Theorem): If two
-sides of a triangle are congruent to two sides of another triangle, but the
-third side of the first triangle is longer than the third side of the second
-triangle, then the included angle of the first triangle is greater in measure
-than the included angle of the second triangle.
-
-    // ## Midsegment Theorem
-
-    // A midsegment is a line segment that connects two midpoints of adjacent sides of
-    // a triangle. For every triangle there are three midsegments. The Midsegment
-    // Theorem states that the midsegment of a triangle is half the length of the side
-    // it is parallel to.
-
-    // Let’s draw two different triangles, one for the congruent sides, and one for
-    // the parallel lines.
-
-    // Because the midsegments are half the length of the sides they are parallel to,
-    // they are congruent to half of each of those sides (as marked). Also, this means
-    // that all four of the triangles in △ABC, created by the midsegments are congruent
-    // by SSS.
-
-    // As for the parallel midsegments and sides, several congruent angles are formed.
-    // In the picture to the right, the pink and teal angles are congruent because they
-    // are corresponding or alternate interior angles. Then, the purple angles are
-    // congruent by the 3rd Angle Theorem.
-
-    // ## Inscribed Similar Triangles 
-
-    // If two objects are similar, corresponding angles are congruent and their sides
-    // are proportional in length. Let’s look at a right triangle, with an altitude
-    // drawn from the right angle. There are three right triangles in this picture,
-    // △ADB,△CDA, and △CAB. Both of the two smaller triangles are similar to the larger
-    // triangle because they each share an angle with △ADB. That means all three
-    // triangles are similar to each other.
-    // 
-    // Inscribed Triangle Theorem: If an altitude is drawn from the right angle of any
-    // right triangle, then the two triangles formed are similar to the original
-    // triangle and all three triangles are similar to each other.
-    // 
-    // You are probably familiar with the arithmetic mean, which divides the sum of n
-    // numbers by n. This is commonly used to determine the average test score for a
-    // group of students. The geometric mean is a different sort of average, which
-    // takes the nth root of the product of n numbers. In this text, we will primarily
-    // compare two numbers, so we would be taking the square root of the product of two
-    // numbers. This mean is commonly used with rates of increase or decrease.
-    // 
-    // Geometric Mean: The geometric mean of two positive numbers a and b is the number
-    // x, such that ax=xb or x2=ab and x=ab−−√.
-    // 
-    // Geometric Mean Theorem #1: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of the altitude is the geometric mean of these two segments. In other
-    // words, BCAC=ACDC.
-    // 
-    // Geometric Mean Theorem #2: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of each leg of the right triangle is the geometric mean of the lengths
-    // of the hypotenuse and the segment of the hypotenuse that is adjacent to the leg.
-    // In other words, BCAB=ABDB and DCAD=ADDB.
-    // 
-    // Both of these theorems are proved using similar triangles.
-
----
-
 ## Pythagoras' Theorem 
 
-The sides of a right triangle are called legs (the sides of the right angle) and
-the side opposite the right angle is the hypotenuse. For the Pythagorean Theorem,
-the legs are “a” and “b” and the hypotenuse is “c”.
+We now hab reached an important point in geometry – being able to state and
+understand one of the most famous theorems in all of mathematics: __Pythagoras'
+Theorem__. It is named after
 
-Pythagorean Theorem: Given a right triangle with legs of lengths a and b and a
-hypotenuse of length c, then a2+b2=c2.
+::: theorem
+In a right angles triangle with hypotenuse _c_ and legs _a_ and _b_, the lengths
+of the three sides satisfy:
 
-Pythagorean Theorem Converse: If the square of the longest side of a triangle is
-equal to the sum of the squares of the other two sides, then the triangle is a
-right triangle.
+{.text-center} `a^2 + b^2 = c^2`
+:::
+
+The converse is also true: if the three sides in a triangle satisfy
+`a^2 + b^2 = c^2`, then it must be right-angled.
+
+{.todo} different proofs
+
+
 
 PROOF
 
@@ -718,6 +720,22 @@ the equal sign.
 Use Law of Cosines when given:
 * Two sides and the included angle.
 * All three sides.
+
+---
+
+## The Great Trigonometric Survey
+
+
+
+
+{.todo} Triangles are rigid, mesh grid in 3d graphics
+
+
+BELOW
+This explanation greatly simplifies the extraordinary work done by the
+geographers working on the Great Trigonometrical Survey. 
+
+
 
 ---
 

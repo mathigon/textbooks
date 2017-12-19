@@ -1,0 +1,17 @@
+// =============================================================================
+// Tessellation Component
+// (c) Mathigon
+// =============================================================================
+
+
+@import "styles/variables";
+
+
+x-tessellation {
+  display: block;
+  height: 450px;
+  background: @grey-background;
+
+  svg { height: 450px; width: 100%; position: relative; }
+  polygon { cursor: move; stroke: #eee; transition: transform .1s; }
+}

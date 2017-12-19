@@ -8,15 +8,15 @@
 ## Introduction
 
 Many geometric concepts, like lines and points, were "invented" by
-mathematicians. Symmetry, on the other hand, is everywhere around us in nature.
-Almost all plants, animals, and even we humans are symmetric.
+mathematicians. Symmetry, on the other hand, is everywhere around us. Almost all
+plants, animals, and even we humans are symmetric.
 
 ::: column(width=200)
-{.todo} IMAGE
+    x-media(src="images/butterfly.jpg" credit="© Depositphotos / okiepony" width=200 height=200 lightbox)
 ::: column(width=200)
-{.todo} IMAGE
+    x-media(src="images/lion.jpg" credit="© Depositphotos / DeborahKolb" width=200 height=200 lightbox)
 ::: column(width=200)
-{.todo} IMAGE
+    x-media(src="images/starfish.jpg" credit="© Depositphotos / EcoPic" width=200 height=200 lightbox)
 :::
 
 Over time, we've imitated nature's symmetry in art, architecture, technology
@@ -24,16 +24,16 @@ and design. Symmetric shapes and patterns just seems to look _more beautiful_
 than non-symmetric ones.
 
 ::: column(width=200)
-{.todo} IMAGE
+    x-media(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox)
 ::: column(width=200)
-{.todo} IMAGE
+    x-media(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox)
 ::: column(width=200)
-{.todo} IMAGE
+    x-media(src="images/window.jpg" width=200 height=200 lightbox)
 :::
 
 But symmetry is much more important that simply _looking beautiful_. It lies at
-the very foundations of our universe, and can explain the fundamental laws of
-nature.
+the very foundations of our universe, and can even explain the most fundamental
+laws of physics.
 
 Symmetry is a very intuitive concept, but describing it mathematically is more
 difficult than you might think. To start with, we have to learn about
@@ -47,49 +47,49 @@ A [__transformation__](gloss:transformation) is a specific set of rules that
 convert one geometric figure into another one. Here are a few examples:
 
 ::: column(width=220)
-{.todo} EXAMPLE
+{.todo} ANIMATION
 ::: column(width=220)
-{.todo} EXAMPLE
+{.todo} ANIMATION
 ::: column(width=220)
-{.todo} EXAMPLE
+{.todo} ANIMATION
 :::
 
 The result of a transformation is called the __image__. The image of a figure
-`A` is usually denoted by `A'`, pronounced as "A prime". 
+`A` is usually denoted by `A'` (pronounced as “A prime”).
 
-In this section we will just think about transformations that don't change the
-original figure's size and shape. Imagine it is made out of a solid material
-like wood or metal: we can move, turn or flip it, but we can't stretch or
-otherwise deform it. These transformations are called
+Initially, we will just think about transformations that don’t change the
+original figure’s size and shape. Imagine that it is made out of a solid
+material like wood or metal: we can move, turn and flip it, but we can’t stretch
+or otherwise deform it. These transformations are called
 [__rigid transformations__](gloss:rigid-transformation).
 
-For rigid transformations, the image is always
-[[congruent to|the same as|opposite to]] the original.
+Select all of these transformations which are rigid:
 
-Select all of these transformations that are rigid:
-
-{.todo} SELECT EXAMPLE
+{.todo} SELECT EXERCISE
 
 ---
 
-There are three different types of rigid transformations:
+For rigid transformations, the image is always
+[[congruent to|the same as|opposite to]] the original. There are three different
+types of rigid transformations:
 
 ::: column.grow(width=220)
-{.todo} example
+{.todo} ANIMATION
 
 {.text-center} A transformation that _moves_ a shape around is called a
-__translation__.
+[__translation__](gloss:translation).
 
 ::: column.grow(width=220)
-{.todo} example
+{.todo} ANIMATION
 
 {.text-center} A transformation that _flips_ a shape over is called a
-__reflection__.
+[__reflection__](gloss:reflection).
 
 ::: column.grow(width=220)
-{.todo} example
+{.todo} ANIMATION
 
-{.text-center} A transformation that _spins_ a shape is called a __rotation__.
+{.text-center} A transformation that _spins_ a shape is called a
+[__rotation__](gloss:rotation).
 :::
 
 We can also combine multiple types of transformation to create more complex
@@ -99,25 +99,57 @@ But first, let's have a look at each of these transformations in more detail.
 
 ---
 
-### Translation
+### Translations
 
-A translation is a transformation that moves every point of a figure the same
-distance in the same direction.
+A [__translation__](gloss:translation) is a transformation that moves every
+point of a figure by the same distance in the same direction.
 
 In the coordinate plane, we can specify a translation by how far the shape is
 moved along the _x_-axis and the _y_-axis. For example, a transformation by
 (3, 5) moves a shape by 3 along the _x_-axis and by 5 along the _y_-axis.
 
-{.todo} EXERCISES - find (x,y) for translations
+::: column(width=220)
 
-{.todo} EXERCISES - draw translations on grid
+    x-geopad(style="width:220px; height: 140px;" grid=20): svg
+
+{.caption} Translated by ([[2]], [[3]])
+::: column(width=220)
+
+    x-geopad(style="width:220px; height: 140px;" grid=20): svg
+
+{.caption} Translated by ([[4]], [[-1]])
+::: column(width=220)
+
+    x-geopad(style="width:220px; height: 140px;" grid=20): svg
+
+{.caption} Translated by ([[-2]], [[3]])
+:::
+
+---
+
+Now it’s your turn – translate the following shapes as shown:
+
+::: column(width=220)
+{.todo} EXERCISE
+
+{.caption} Translated by (3, 1)
+::: column(width=220)
+{.todo} EXERCISE
+
+{.caption} Translated by (-2 -4)
+::: column(width=220)
+{.todo} EXERCISE
+
+{.caption} Translated by (-1, 5)
+:::
 
 ---
 
 ### Reflections
 
-A reflection is a transformation that “flips” a shape over a line, called the
-__line of reflection__, turning it into its mirror image. 
+A [__reflection__](gloss:reflection) is a transformation that “flips” a shape
+over a line, turning it into its mirror image. The line is called the __line of
+reflection__.
 
 Draw the line of reflection in each of these examples:
 
@@ -131,7 +163,7 @@ Draw the line of reflection in each of these examples:
 
 ---
 
-Now it's your turn: draw the reflection of each of these shapes:
+Now it’s your turn – draw the reflection of each of these shapes:
 
 ::: column(width=220)
 {.todo} EXAMPLE
@@ -143,55 +175,108 @@ Now it's your turn: draw the reflection of each of these shapes:
 
 ---
 
-If a point lies on the line of reflection, its image is
+Notice that if a point lies on the line of reflection, its image is
 [[the same as|congruent to|smaller than]] the original point.
-
-{.todo} constructing more complex reflections
 
 ---
 
-### Rotation
+In all of the examples above, the line of reflection was horizontal or vertical,
+which made it easy to draw the reflections. If that is not the case, the
+construction becomes more complicated:
 
-A rotation is a transformation that “turns” a shape around a fixed point, called
-the __center of rotation__.
+::: column(width=300)
+{.todo} INTERACTIVE ANIMATION
+::: column.grow
+We have to reflect every point individually, and then connect them again with
+lines. To start with, lets draw a line perpendicular to the line of reflection,
+that goes through the first point.
 
-{.todo} In this Lesson, our center of rotation will always be the origin. Rotations can
-also be clockwise or counterclockwise. We will only do counterclockwise
-rotations, to go along with the way the quadrants are numbered.
+The image of the point will lie on this perpendicular as well. It will have the
+same distance from the line of reflection as the original point, but on the
+opposite side. We can use a compass (or a ruler) to find it.
 
-{.todo} Investigation: Drawing a Rotation of 100∘
-Tools Needed: pencil, paper, protractor, ruler
-Draw △ABC and a point R outside the circle. 
-Draw the line segment RB. 
-Take your protractor, place the center on R and the initial side on RB. Mark a 100∘ angle. 
-Find B′ such that RB=RB′.
-Repeat steps 2-4 with points A and C.
-Connect A′,B′, and C′ to form △A′B′C′.
+Now let’s do the same for all the other points.
+
+The rest should be easy: you just need to connect the points in the image, so
+that they match the original shape.
+:::
+
+---
+
+### Rotations
+
+A [__rotation__](gloss:rotation) is a transformation that “turns” a shape by a
+certain angle around a fixed point. That point is called the __center of
+rotation__. Rotations can be clockwise or counterclockwise.
+
+Use the protractor tool to find the angle of these rotations:
+
+::: column(width=220)
+{.todo} EXAMPLE
+::: column(width=220)
+{.todo} EXAMPLE
+::: column(width=220)
+{.todo} EXAMPLE
+:::
+
+---
+
+Drawing a rotation is a bit more difficult. Like for reflections, we first have
+to rotate every point in a shape individually, and then connect the lines in the
+image.
+
+::: column(width=300)
+{.todo} INTERACTIVE ANIMATION
+::: column.grow
+We want to rotate this shape by 60° anti-clockwise around the center of
+rotation C.
+
+Let's start with point A. First, we line up a protractor along the center of
+rotation and A.
+
+We have to mark the angle at 60°, and draw a line towards C.
+
+The image of A must lie on this line, and have the same distance from the
+center of rotation as A. We can use a compass (or a ruler) to find it.
+
+For simplicity, we can remove the previous line and point. Let's do the same
+for all the other points.
+
+The rest should be easy: like before, you just need to connect the points in the
+image, to match the original shape.
+:::
 
 ---
 
 ### Composition of Transformations
 
-We can combine translations, reflections and rotations to create more complex
-transformations.
+Of course, we can combine multiple translations, reflections and rotations to
+create more complex transformations.
 
-{.todo} A composition of transformations is to perform more than one rigid
-transformation on a figure. One of the interesting things about compositions is
-that they can always be written as one rule. What this means is you don’t
-necessarily have to perform one transformation followed by the next. You can
-write a rule and perform them at the same time. You can compose any
-transformations, but here are some of the most common compositions.
+{.todo} EXAMPLE
 
-{.todo} Reflections over Parallel Lines Theorem: If you compose two reflections over
-parallel lines that are h units apart, it is the same as a single translation
-of 2h units. Be careful with this theorem. Notice, it does not say which
-direction the translation is in. So, to apply this theorem, you would still
-need to visualize, or even do, the reflections to see in which direction the
-translation would be.
+However, as it turns out, it doesn’t matter how many different transformations
+you combine: you can always find another transformation that does the same in
+one go!
 
-{.todo} Reflection over Intersecting Lines Theorem: If you compose two reflections
-over lines that intersect at x∘, then the resulting image is a rotation of
-2x∘, where the center of rotation is the point of intersection. 
+{.todo} EXAMPLE
+
+Combining two reflections is particularly interesting. There are two different
+cases we need to consider:
+
+::: column.grow
+If the two lines of reflection are parallel, the result is a single translation.
+The direction of the translation is perpendicular to the lines of reflection,
+and the distance is twice the distance between the lines of reflection.
+
+{.todo} ANIMATION
+::: column.grow
+If the two lines of reflection intersect, the result is a single rotation. The
+center of rotation is the intersection between the lines of reflection, and the
+angle is twice the angle between the lines of reflection.
+
+{.todo} ANIMATION
+:::
 
 ---
 
@@ -231,20 +316,51 @@ say that it has __rotational symmetry__.
 
 ### Reflectional Symmetry
 
-{.todo} intro
-
-The line of reflection is called the __axis of symmetry__. It splits the object
-into two [[congruent|equal|similar]] halves. Some figures can even have more
-than one axis of symmetry. 
-
-{.todo} EXERCISE Draw all axes of symmetry in these shapes:
-
-{.todo} Letters with reflectional symmetry
+A shape has __reflectional symmetry__ if it looks the same after being
+reflected. The line of reflection is called the __axis of symmetry__, and it
+splits the shape into two [[congruent|equal|similar]] halves. Some figures can
+also have more than one axis of symmetry. 
 
 ---
 
-Shapes and images can have reflectional symmetry, but so can numbers, words and
-sentences!
+Draw the axes of symmetry in all of these shapes:
+
+::: column(width=220)
+{.todo} example
+::: column(width=220)
+{.todo} example
+::: column(width=220)
+{.todo} example
+:::
+
+---
+
+Many letters in the alphabet have reflectional symmetry. Select all the ones
+that do:
+
+    x-select
+      for l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split()
+        .letter= l
+
+{.todo} SELECT INTERACTIVE
+
+---
+
+Here are some more shapes. Complete them so that they have reflectional
+symmetry:
+
+::: column(width=220)
+{.todo} example
+::: column(width=220)
+{.todo} example
+::: column(width=220)
+{.todo} example
+:::
+
+---
+
+Shapes, letters and images can have reflectional symmetry, but so can entire
+numbers, words and sentences!
 
 For example "25352" and "ANNA" both read the same from back to front. Numbers
 or words like this are called __Palindromes__.
@@ -253,48 +369,70 @@ or words like this are called __Palindromes__.
 
 ---
 
-There are even entire sentences that are palindromes (if we ignore spaces and
-punctuation).
+If we ignore spaces and punctuation, these letters also have reflectional
+symmetry. Can you come up with your own?
 
 {.text-center} Never odd or even.  
 A nut for a jar of tuna.
 Yo, banana boy!
 
-While coming up with these sentences might be a fun, it turns out that
-palindromes do actually have practical importance. Just a few years ago,
-scientists discovered that parts of our [DNA](gloss:dna) are palindromic. This
-makes that more resilient to mutations or damage – because there is a second
-backup copy of every piece.
+---
+
+But Palindromes are not just fun, they actually have practical importance. A few
+years ago, scientists discovered that parts of our [DNA](gloss:dna) are
+palindromic. This makes that more resilient to mutations or damage – because
+there is a second backup copy of every piece.
 
 ---
 
 ### Rotational Symmetry
 
-{.todo} flower, snowflake
+::: column.grow
+A shape has __reflectional symmetry__ if it looks the same after being rotated
+(by less than 360°). The center of rotation is usually just the middle of the
+shape.
 
-{.todo} A figure exhibits rotational symmetry if it can be rotated (less than 360) and
-look the same as it did before the rotation. The center of rotation is the point
-that the figure is rotated around such that the rotational symmetry holds.
-Typically, the center of rotation is the center of the figure. Along with
-rotational symmetry and a center of rotation is the angle of rotation that tells
-us how many degrees to rotate the figure so that it still looks the same. In
-general, if a shape can be rotated n times, the angle of rotation is 360° / n.
-Multiply the angle of rotation by 1, 2, 3...n to find the additional angles of
-rotation. The number of rotations may be referred to as the order.
+The __order of symmetry__ is the number of distinct orientations in which the
+shape looks the same. You can also think about it as the _number of times we
+can rotate the shape_, before we get back to the start. For example, this
+snowflake has order [[6]].
 
-{.todo} Determine if the figure below has rotational symmetry. Find the angle of
-rotational symmetry and the order.
+The angle of each rotation is `"360°"/"order"`. In the snowflake, this is
+`"360°"/6` = [[60]]°.
+::: column(width=240)
+{.todo} graphic
+:::
 
-{.todo} A regular pentagon can be rotated 5 times to demonstrate rotational symmetry, so
-it is order 5. Because there are 5 lines of rotational symmetry, the angle would
-be `360° / 5 = 72°`.
+---
+
+Find the order and the angle of rotation, for each of these shapes:
+
+::: column(width=220)
+{.todo} flower
+::: column(width=220)
+{.todo} snowflake
+::: column(width=220)
+{.todo} kleeblatt
+:::
+
+---
+
+Now complete these shapes, so that they have rotational symmetry:
+
+::: column(width=220)
+{.todo} EXERCISE
+::: column(width=220)
+{.todo} EXERCISE
+::: column(width=220)
+{.todo} EXERCISE
+:::
 
 ---
 
 ## Symmetry Groups
 
-{.hint} To recognise different configurations, we need to highlight the four
-corners in different colours.
+    // HINT: To recognise different configurations, we need to highlight the
+    // four corners in different colours.
 
 Some shapes have more than one symmetry – let's have a look at the
 [square](gloss:square) as a simple example.
@@ -311,30 +449,97 @@ You have already shown above that a square has [[4]] axes of reflection.
 {.subsection(needs="blank-1 blank-2 blank-3")} And finally, we can think
 about "doing nothing" as another special kind of symmetry – because the result
 is (obviously) the same as before. This is sometimes called the _identity_.
+
+In total, we have found [[8]] different "symmetries of the square".
 :::
 
-In total, we have found 8 different symmetries of the square.
+---
 
-The collection of symmetries has some interesting properties: for example, we
-can add two different symmetries, and we get a new one:
+Now that we've found all symmetries of the square, we can start doing some more
+interesting mathematics with them. For example, we can _add_ different
+symmetries to get new ones:
 
 {.todo} animated example
 
-{.todo} more on group theory
+---
 
-{.todo} applications: viruses, molecules, etc.
+Whenever you add two symmetries of a square, you get a new one. Here is a
+"symmetry calculator" where you can try it yourself:
+
+{.todo} symmetry calculator
+
+---
+
+You might have noticed that adding symmetries is very similar to adding
+integers:
+
+{.text-center} (1) Adding two __{.orange}symmetries__/__{.cyan}numbers__ always
+gives another __{.orange}symmetry__/__{.cyan}number__.
+
+::: column.grow
+{.todo} animation
+::: column.grow
+{.numbers} `12 + 7 = 19`
+:::
+
+{.text-center} (2) Adding __{.orange}symmetries__/__{.cyan}numbers__ is
+[_associative_](gloss:associative).
+
+::: column.grow
+{.todo} animation
+::: column.grow
+{.numbers} `(4 + 2) + 5 = 4 + (2 + 5)`
+:::
+
+{.text-center} (3) Every __{.orange}symmetry__/__{.cyan}number__ has an
+_inverse_:  
+another __{.orange}symmetry__/__{.cyan}number__ which, when added, gives the
+identity.
+
+::: column.grow
+{.todo} animation
+::: column.grow
+{.numbers} `4 + (-4) = 0`
+:::
+
+---
+
+In mathematics, any collection that has these properties is called a __group__.
+Some groups (like the symmetries of a square) only have a finite number of
+elements. Others (like the integers) are infinite.
+
+Above we started with the symmetries of the square. Every geometric shape has
+its own _symmetry group_ with different elements – but they all satisfy the
+same three rules.
+
+Groups seem to appear everywhere in mathematics and in nature. The elements can
+be numbers or symmetries, but also polynomials, permutations, matrices,
+functions … _anything_ that obeys the rules above.
+
+---
+
+The key idea of _group theory_ is that we are not interested in the individual
+elements, just in _how they interact with each other_.
+
+::: column.grow
+For example, chemists can use properties of the symmetry group of different
+molecules to predict some of their chemical properties. Groups can be used to
+analyse musical harmonies, fundamental particles in nature, the winning moves in
+board games, the behaviour of viruses in medicine, and much more…
+::: column(width=300)
+{.todo} IMAGE
+:::
 
 ---
 
 ## Wallpaper Groups
 
-So far, we have seen two different kinds of symmetry, that correspond to two
-different transformations: rotations and reflections. 
+We have now seen two different kinds of symmetry, that correspond to two
+different transformations: rotations and reflections. But there is also a
+symmetry for the third kind of transformation: [[translations|spins|flips]].
 
-But there is also a symmetry for the third kind of transformation,
-[[translations|spins|flips]]: __translational symmetry__ does not work for
-isolated objects like flowers or butterflies, but for patterns that extend into
-every direction:
+__Translational symmetry__ does not work for isolated objects like flowers or
+butterflies, but for patterns that extend into every direction:
 
 ::: column.grow
 {.todo} honeycomb
@@ -348,10 +553,10 @@ And there even is a fourth kind of symmetry, __glide reflections__, which is a
 combination of a translation and a reflection. _The translation is in a direction
 parallel to the line of reflection._
 
-::: column.grow(width=220)
+::: column.grow
 {.todo} footsteps
 ![](https://plus.maths.org/issue38/features/livio/figure5.jpg)
-::: column.grow(width=220)
+::: column.grow
 {.todo} wallpaper
 :::
 
@@ -360,11 +565,15 @@ parallel to the line of reflection._
 Just like we did for the square above, we can find the [symmetry group](gloss:symmetry-group)
 of a certain pattern, that contains all of its symmetries.
 
-These groups don't tell you anything about what exactly the pattern _looks_
-like, just how it is _repeated_. Therefore multiple different patterns can have
-the same symmetry group:
+These groups don't tell you anything about what exactly the pattern _looks_ like
+(e.g. its colours and shapes), just how it is _repeated_. Therefore multiple
+different patterns can have the same symmetry group:
 
-{.todo} patterns and symmetry group examples
+::: column.grow
+{.todo} two shapes with the same group
+::: column.grow
+{.todo} two shapes with the same group
+:::
 
 It turns out that, while there are infinitely many possible patterns, they all
 have one of just 17 different symmetry groups. These are called the __Wallpaper
@@ -374,7 +583,58 @@ Every wallpaper group is defined by a combination of translations, rotations,
 reflections and glide reflections. Try to find the points of rotation and axes
 of reflection in the 17 examples below:
 
-{.todo} slideshow
+    x-gallery(slide-width="320")
+      div
+        img(src="images/wallpapers/p1.svg" width=360, height=240)
+        p.caption <strong>Type P1</strong><br>Just translations
+      div
+        img(src="images/wallpapers/p2.svg" width=360, height=240)
+        p.caption <strong>Type P2</strong><br>Rotations of order 2
+      div
+        img(src="images/wallpapers/p3.svg" width=360, height=240)
+        p.caption <strong>Type P3</strong><br>Four rotations of order 2 (180°)
+      div
+        img(src="images/wallpapers/p4.svg" width=360, height=240)
+        p.caption <strong>Type P4</strong><br>Rotations of order 3 (120°)
+      div
+        img(src="images/wallpapers/p6.svg" width=360, height=240)
+        p.caption <strong>Type P6</strong><br>Rotations of order 6 (60°), order 3, and order 2
+      div
+        img(src="images/wallpapers/pm.svg" width=360, height=240)
+        p.caption <strong>Type PM</strong><br>Parallel axes of reflection
+      div
+        img(src="images/wallpapers/pmm.svg" width=360, height=240)
+        p.caption <strong>Type PMM</strong><br>Perpendicular reflections and rotations of order 2
+      div
+        img(src="images/wallpapers/p4m.svg" width=360, height=240)
+        p.caption <strong>Type P4M</strong><br>Rotations of order 2 and order 4 (90°), reflections, and glide reflections
+      div
+        img(src="images/wallpapers/p6m.svg" width=360, height=240)
+        p.caption <strong>Type P6M</strong><br>Rotations of order 2 and order 6, reflections, and glide reflections
+      div
+        img(src="images/wallpapers/p3m1.svg" width=360, height=240)
+        p.caption <strong>Type P3M1</strong><br>Rotations of order 3, reflections in three directions, and glide reflections
+      div
+        img(src="images/wallpapers/p31m.svg" width=360, height=240)
+        p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections in three directions, and glide reflections
+      div
+        img(src="images/wallpapers/p4g.svg" width=360, height=240)
+        p.caption <strong>Type P4G</strong><br>Rotations of order 2 and order 4, perpendicular reflections, and reflections 
+      div
+        img(src="images/wallpapers/cmm.svg" width=360, height=240)
+        p.caption <strong>Type CMM</strong><br>Perpendicular reflections and rotations of order 2
+      div
+        img(src="images/wallpapers/pmg.svg" width=360, height=240)
+        p.caption <strong>Type PMG</strong><br>Reflections, glide reflections, and rotations of order 2
+      div
+        img(src="images/wallpapers/pg.svg" width=360, height=240)
+        p.caption <strong>Type PG</strong><br>Just parallel glide reflections
+      div
+        img(src="images/wallpapers/cm.svg" width=360, height=240)
+        p.caption <strong>Type CM</strong><br>Reflections and glide reflections
+      div
+        img(src="images/wallpapers/pgg.svg" width=360, height=240)
+        p.caption <strong>Type PGG</strong><br>Perpendicular glide reflections, and rotations of order 2
 
 Unfortunately there is no simple reason why the number is _seventeen_, and
 proving it requires much more advanced mathematics.
@@ -389,14 +649,18 @@ wallpaper groups:
 
 ---
 
+::: column.grow
 The Wallpaper groups were all about flat, two-dimensional patterns. We can do
 something similar for three-dimensional patterns: these are called
 crystallographic groups, and there are 219 of them. In addition to translation,
 reflection, rotation, and glide reflection, they include symmetries like glide
 planes and screw axes (think about the motion when unscrewing a bottle).
+::: column(width=300)
+{.todo} crystal image
+:::
 
 ---
-> wrap: stars
+> class: fill dark stars
 
 ## Symmetry in Physics
 
@@ -408,36 +672,48 @@ For example, if you like apple juice just as much as you like orange juice, then
 your preference is "symmetric" under the transformation that swaps apples and
 oranges.
 
-In 1915, the German mathematician Emmy Noether observed that something similar
-is true for the [laws of nature](gloss:laws-of-nature).
+In 1915, the German mathematician [Emmy Noether](bio:noether) observed that
+something similar is true for the [laws of nature](gloss:laws-of-nature).
 
+::: column.grow
 For example, our experience tells us that the laws of motion are the same
 everywhere in the universe. It doesn't matter if you conduct a physics
 experiment in London, or in New York, or on Mars – the laws of motion should
 always be the same. In a way, they have [[translational symmetry|reflectional symmetry]].
+::: column(width=300)
+{.todo} IMAGE
+:::
 
 ---
-> wrap: stars
+> class: fill dark stars
 
+::: column.grow
 Similarly, it shouldn't matter if we conduct an experiment while facing North,
 or South, or East or West: the laws of nature have [[rotational symmetry|glide reflection symmetry]].
 
----
-> wrap: stars
-
 And finally, it shouldn't matter if we conduct an experiment today, or tomorrow,
 or in a year. The laws of nature are "time-symmetric".
+::: column(width=300)
+{.todo} IMAGE
+:::
+
+---
+> class: fill dark stars
 
 These symmetries might all seem meaningless and obvious, but they can actually
 tell us a lot about how the corresponding laws of nature must look like. Emmy
 Noether managed to prove that every symmetry corresponds to a certain physical
 quantity that is _conserved_. One example is Energy: the universe will always
 contain the same amount of energy. You cannot create or destroy energy, just
-convert it between different types (like Heat or Light).
+convert it between different types (like heat or light).
+
+{.todo} conservation of energy image
 
 Just knowing about symmetry allows physicists to derive most of the laws of
 nature that govern the entire universe – without ever actually having to do an
 experiment.
+
+{.todo} large hardon collider image
 
 Symmetry can even predict the existence of fundamental particles. One example is
 the famous Higgs Boson. It was predicted in the 1960s by theoretical physicists,
@@ -447,15 +723,15 @@ but not discovered experimentally until 2012.
 
 ## Similarity
 
-So far, all of the transformations we looked at were [[rigid|congruent|visual]].
-Now, lets think about one that is not: a [__dilation__](gloss:dilation) changes
-a shape's size by making it larger or smaller.
-
-All dilations have a center and a scale factor. The center is the point of
-reference for the dilation and scale factor tells us how much the figure
-stretches or shrinks.
+So far, all we have only looked at [[rigid|congruent|visual]] transformations.
+Now, let’s think about one that is not: a [__dilation__](gloss:dilation) changes
+a shape’s size by making it larger or smaller.
 
 ::: column.grow
+All dilations have a __center__ and a __scale factor__. The center is the point
+of reference for the dilation and scale factor tells us how much the figure
+stretches or shrinks.
+
 If the scale factor is between 0 and 1, the image is [[smaller|larger]] than the
 original. If the scale factor is larger than 1, the image is [[larger|smaller]]
 than the original.
@@ -463,49 +739,110 @@ than the original.
 {.todo} move the center, slider for scale factor
 :::
 
-{.todo} constructing a dilation using rays
+Here is how we can construct the dilation of a geometric shape:
 
-{.todo} perspective drawing, vanishing point
+::: column(width=300)
+{.todo} ANIMATION
+::: column.grow
+First we draw rays from the center of dilation to every point in the shape.
+
+Now let's measure the distance of all these points from the center of dilation.
+Then we can multiply the distance by the scale factor, and the measure the
+image of the point along the same ray.
+
+All that's left is to connect the transformed points in the image … all done!
+:::
 
 ---
 
-For rigid transformations, the image is always [[congruent|larger|smaller]] than
-the original. However this is no longer true for dilations.
-
 ::: column.grow
-Instead, we say that two shapes are [__similar__](gloss:similar) if they have
-the same overall shape, but not necessarily the same size.
+For rigid transformations, the image is always [[congruent|larger|smaller]] than
+the original. However this is no longer true for dilations. Instead, we say that
+two shapes are [__similar__](gloss:similar) if they have the same overall shape,
+but not necessarily the same size.
 
 The symbol for similarity is "~". (Contrast this with the symbol for congruence,
 which was `~=`.) For example, in this image, `A ~ A'`.
 
 ::: column(width=240)
-{.todo} image
+{.todo} IMAGE
 :::
+
+---
+
+### Perspective Drawings
+
+You might have noticed that these dilations with the connecting rays almost look
+like __perspective drawings__. The center of dilation is called the __vanishing
+point__, because it looks like this is where everything is "vanishing in the
+distance".
+
+Find the vanishing point in the figure below:
+
+{.todo} image
 
 ---
 
 ### Similar Polygons
 
-{.todo} squares and circles are always similar
+Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
+[squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
+are [[always|sometimes|never]] similar. They might have different sizes, but
+always have the same general shape.
 
-{.todo} If two polygons are similar, all of its pairs angles are
-[congruent](gloss:congruent-angles).
+::: column.grow
+The two quadrilaterals `M` and `M'` on the right are similar. We write `M ~ M'`.
 
-{.todo} lengths of corresponding sides are proportional: the ratio of one side
-of a polygon to the corresponding side of the other is called the scale factor.
-The ratio of all parts of a polygon  including the perimeters, diagonals,
-medians, midsegments, altitudes) is the same as the ratio of the sides.
+In similar polygons, all corresponding pairs angles are
+[congruent](gloss:congruent-angles). In our example this means that
 
-{.todo} If △ABC∼△JKL, then the congruent angles line up within the similarity statement.
-So, ∠A≅∠J,∠B≅∠K, and ∠C≅∠L. Write the sides in a proportion: ABJK=BCKL=ACJL.
+{.text-center} [∠ABC](target:abc) ≅ [∠EFG](target:efg), [∠BCD](target:abc) ≅
+[∠EFG](target:fgh)`, and so on.
+
+In addition, all sides are scaled by the same factor – the scale factor of the
+corresponding dilation:
+
+{.todo} equations
+
+Let's have a look at an example: If we know the length of the sides of the
+smaller quadrilateral, and one side of the larger one, we can work out all the
+others:
+
+{.todo} equations
+
+The scale factor in this example is [[2]].
+::: column(width=240)
+{.todo} GRAPHIC
+:::
 
 ---
 
 ### Similar Triangles
 
-{.todo} We know that the sum of angles in a triangle is always 180°. This means
-that if we know two angles in a triangle, we can always work out the third one.
+Third Angle Theorem: If two angles in one triangle are congruent to two angles
+in another triangle, then the third pair of angles must also congruent.
+
+In other words, for triangles △ABC and △DEF, if ∠A≅∠D and ∠B≅∠E, then ∠C≅∠F.
+
+Notice that this theorem does not state that the triangles are congruent. That
+is because if two sets of angles are congruent, the sides could be different
+lengths. See the picture below.
+
+We know that the sum of angles in a triangle is always [[180]]°. This means that
+if we know two angles in a triangle, we can always work out the third one.
+
+
+
+
+For triangles, similarity is particularly useful. Two triangles are similar if
+all of its angles are equal. But since we can always work out the third angle
+if we are given the other two:
+
+Two triangles are similar 
+
+
+
+
 
 {.todo} Let’s investigate what happens when two different triangles have the
 same angle measures. If two angles in one triangle are congruent to two

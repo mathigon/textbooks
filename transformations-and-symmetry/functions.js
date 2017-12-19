@@ -4,4 +4,8 @@
 // =============================================================================
 
 
-import { Wallpaper } from './components/wallpaper';
+import './components/wallpaper';
+
+export function step($section) {
+
+}

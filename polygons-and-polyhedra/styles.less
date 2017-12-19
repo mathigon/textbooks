@@ -5,6 +5,7 @@
 
 
 @import "styles/variables";
+@import "./components/tessellation";
 
 .quadrilateral {
   width: 210px !important;
@@ -13,7 +14,11 @@
   padding: 16px 12px;
   background: #eee;
 
-  x-geopad { background: transparent; }
+  x-geopad {
+    background: transparent;
+    overflow: hidden;
+    svg { overflow: visible; }
+  }
 
   &:before, &:after {
     content: ""; height: 2px;

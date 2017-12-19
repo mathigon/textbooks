@@ -68,6 +68,16 @@ Heptagon
 
 {.caption} 8 vertices  
 Octagon
+::: column(width=150)
+{.todo} image
+
+{.caption} 9 vertices  
+Nonagon
+::: column(width=150)
+{.todo} image
+
+{.caption} 10 vertices  
+Decagon
 :::
 
 ---
@@ -195,9 +205,22 @@ length, and all of its angles are equal.
 
 ::: column.quadrilateral
 
-    include svg/quadrilaterals/square.svg
+    x-geopad(style="width:210px; height: 120px;"): svg
+      path.fill.blue(x="polygon(a,b,a.rotate(Math.PI/2,b),b.rotate(-Math.PI/2,a))")
+      
+      path.white(x="angle(a,b,a.rotate(Math.PI/2, b))" target="s_angle")
+      
+      path.red(x="segment(a,b,'bar')" target="s_side")
+      path.red(x="segment(b,a.rotate(Math.PI/2,b),'bar')" target="s_side")
+      path.red(x="segment(a.rotate(Math.PI/2,b),b.rotate(-Math.PI/2,a),'bar')" target="s_side")
+      path.red(x="segment(b.rotate(-Math.PI/2,a),a,'bar')" target="s_side")
+      
+      circle.move(name="a" cx=60 cy=15 r=6)
+      circle.move(name="b" cx=60 cy=105 r=6)
+      circle(x="a.rotate(Math.PI/2, b)" cy=100 r=4)
+      circle(x="b.rotate(-Math.PI/2, a)" r=4)
 
-{.caption} A __square__ is a quadrilateral with four equal sides and four equal angles.
+{.caption} A __square__ is a quadrilateral with [four equal sides](target:s_side) and [four equal angles](target:s_angle).
 :::
 
 For slightly "less regular" quadrilaterals, we have two options. If we keep
@@ -222,16 +245,16 @@ certain important properties:
 
 ::: column.quadrilateral
 
-    x-geopad.sticky(style="width:210px; height: 120px;"): svg
+    x-geopad(style="width:210px; height: 120px;"): svg
       path.fill.blue(x="polygon(a,b,b.add(c).subtract(a),c)")
-      path.red(x="segment(a,b)" target="p_line")
-      path.red(x="segment(c,b.add(c).subtract(a))" target="p_line")
-      path.yellow(x="segment(a,c)" target="p_line")
-      path.yellow(x="segment(b,b.add(c).subtract(a))" target="p_line")
+      path.red(x="segment(a,b,'arrow')" target="p_line")
+      path.red(x="segment(c,b.add(c).subtract(a),'arrow')" target="p_line")
+      path.yellow(x="segment(a,c,'arrow2')" target="p_line")
+      path.yellow(x="segment(b,b.add(c).subtract(a),'arrow2')" target="p_line")
       circle.move(name="a" cx=20 cy=20 r=6)
       circle.move(name="b" cx=160 cy=20 r=6)
       circle.move(name="c" cx=50 cy=100 r=6)
-      circle.move(x="b.add(c).subtract(a)" r=6)
+      circle(x="b.add(c).subtract(a)" r=4)
 
 {.caption} If _both_ pairs of opposite sides are parallel, we have a __Parallelogram__.
 ::: column.quadrilateral
@@ -246,153 +269,135 @@ certain important properties:
 {.caption} If a pair of opposite sides are parallel, we have a __Trapezium__.
 :::
 
-Quadrilaterals can fall into multiple of these categories – for example, every
-rectangle is also a [[parallelogram|rhombus|square]]. We can visualise the
+Quadrilaterals can fall into multiple of these categories. We can visualise the
 hierarchy of different types of quadrilaterals as a Venn diagram:
 
-    include svg/venn.svg
+    figure: include svg/venn.svg
+
+{.todo} Every rectangle is also a [[parallelogram|rhombus|square]]. 
+{.todo} A rhombus is [[sometimes|always|never]] a square.
 
 To avoid any ambiguity, we usually just specify the most specific type of
 quadrilateral.
-
-
 
 ---
 
 ## Parallelograms
 
-    .row
-      div(style="width: 260px; margin-top: -20px")
-        include svg/quadrilaterals/area-parallelogram.svg
-      .grow
-        p Notice how the overlap on the left is exactly the same as the gap on the right. Therefore the area of the #[strong.m-blue blue parallelogram] is [[the same as|smaller than|larger than]] the area of the #[strong.m-red red rectangle]. This means that the area of any parallelogram is simply
-        p.text-center #[strong.i.m-green base] × #[strong.i.m-yellow height].
+Recall that a __parallelogram__ is a quadrilateral that has
+[[two pairs of parallel sides|four congruent angles]].
 
-A parallelogram is a quadrilateral with two pairs of parallel sides.
+{.todo} area of parallelograms
 
-Notice that each pair of sides is marked parallel. As is the case with the
-rectangle and square, recall that two lines are parallel when they are
-perpendicular to the same line. Once we know that a quadrilateral is a
-parallelogram, we can discover some additional properties.
+::: column(width=320)
 
-Opposite Sides Theorem: If a quadrilateral is a parallelogram, then the opposite
+    include svg/quadrilaterals/area-parallelogram.svg
+
+::: column.grow
+{.todo} Notice how the overlap on the left is exactly the same as the gap on the
+right. Therefore the area of the [blue parallelogram](target:parallelogram) is
+[[the same as|smaller than|larger than]] the area of the [red rectangle](target:rectangle).
+This means that the area of any parallelogram is simply
+
+{.text-center} __{.i.m-green}base__ × __{.i.m-yellow}height__.
+
+_But be careful! The height of a parallelogram is necessarily perpendicular to
+the base. This means that the height is not the same as the sides._
+:::
+
+---
+
+{.todo} Opposite Sides Theorem: If a quadrilateral is a parallelogram, then the opposite
 sides are congruent.
 
-IMPORTANT
-Opposite Angles Theorem: If a quadrilateral is a parallelogram, then the
+{.todo} Opposite Angles Theorem: If a quadrilateral is a parallelogram, then the
 opposite angles are congruent.
 
-IMPORTANT
-Consecutive Angles Theorem: If a quadrilateral is a parallelogram, then the
+{.todo} Consecutive Angles Theorem: If a quadrilateral is a parallelogram, then the
 consecutive angles are supplementary.
 
-IMPORTANT
-Parallelogram Diagonals Theorem: If a quadrilateral is a parallelogram, then
+{.todo} Parallelogram Diagonals Theorem: If a quadrilateral is a parallelogram, then
 the diagonals bisect each other.
 
-Recall that a parallelogram is a quadrilateral with two pairs of parallel sides.
-Even if a quadrilateral is not marked with having two pairs of sides, it still
-might be a parallelogram. The following is a list of theorems that will help
-you decide if a quadrilateral is a parallelogram or not.
-
-Opposite Sides Theorem Converse: If the opposite sides of a quadrilateral are
+{.todo} Opposite Sides Theorem Converse: If the opposite sides of a quadrilateral are
 congruent, then the figure is a parallelogram.
 
-Opposite Angles Theorem Converse: If the opposite angles of a quadrilateral are
+{.todo} Opposite Angles Theorem Converse: If the opposite angles of a quadrilateral are
 congruent, then the figure is a parallelogram.
 
-Parallelogram Diagonals Theorem Converse: If the diagonals of a quadrilateral
+{.todo} Parallelogram Diagonals Theorem Converse: If the diagonals of a quadrilateral
 bisect each other, then the figure is a parallelogram.
 
-Theorem: If a quadrilateral has one set of parallel lines that are also
+{.todo} Theorem: If a quadrilateral has one set of parallel lines that are also
 congruent, then it is a parallelogram.
 
-Rectangles, rhombuses (the plural is also rhombi) and squares are all more
+{.todo} Rectangles, rhombuses (the plural is also rhombi) and squares are all more
 specific versions of parallelograms.
 
-Rectangle Theorem: A quadrilateral is a rectangle if and only if it has four
+{.todo} Rectangle Theorem: A quadrilateral is a rectangle if and only if it has four
 right (congruent) angles.
 
-Rhombus Theorem: A quadrilateral is a rhombus if and only if it has four
+{.todo} Rhombus Theorem: A quadrilateral is a rhombus if and only if it has four
 congruent sides. 
 
-Square Theorem: A quadrilateral is a square if and only if it has four right
+{.todo} Square Theorem: A quadrilateral is a square if and only if it has four right
 angles and four congruent sides.
 
-From the Square Theorem, we can also conclude that a square is a rectangle
+{.todo} From the Square Theorem, we can also conclude that a square is a rectangle
 and a rhombus.
 
-Recall that diagonals in a parallelogram bisect each other. Therefore, the
+{.todo} Recall that diagonals in a parallelogram bisect each other. Therefore, the
 diagonals of a rectangle, square and rhombus also bisect each other. The
 diagonals of these parallelograms also have additional properties.
 
-### Area
-Recall that a parallelogram is a quadrilateral whose opposite sides are parallel.
-
-To find the area of a parallelogram, make it into a rectangle.
-
-From this, we see that the area of a parallelogram is the same as the area of a
-rectangle. The area of a parallelogram is A=bh. Be careful! The height of a
-parallelogram is always perpendicular to the base. This means that the sides are
-not the height.
-
-### Classification
-Rectangles, rhombuses (the plural is also rhombi) and squares are all more
-specific versions of parallelograms.
-Rectangle Theorem: A quadrilateral is a rectangle if and only if it has four
+{.todo} Rectangle Theorem: A quadrilateral is a rectangle if and only if it has four
 right (congruent) angles.
 
-Rhombus Theorem: A quadrilateral is a rhombus if and only if it has four
+{.todo} Rhombus Theorem: A quadrilateral is a rhombus if and only if it has four
 congruent sides. 
 
-Square Theorem: A quadrilateral is a square if and only if it has four right
+{.todo} Square Theorem: A quadrilateral is a square if and only if it has four right
 angles and four congruent sides. From the Square Theorem, we can also conclude
 that a square is a rectangle and a rhombus.
 
-Recall that diagonals in a parallelogram bisect each other. Therefore, the
+{.todo} Recall that diagonals in a parallelogram bisect each other. Therefore, the
 diagonals of a rectangle, square and rhombus also bisect each other. The
 diagonals of these parallelograms also have additional properties.
 
+{.todo} A parallelogram is a rectangle if and only if the diagonals are congruent.
 
-Investigation: Drawing a Rectangle
-Draw two lines on either side of your ruler, to ensure they are parallel.
-Make these lines 3 inches long. 
-Remove the ruler and mark two 90∘ angles, 2.5 inches apart on the bottom line
-drawn in Step 1. Then, draw the angles to intersect the top line. This will
-ensure that all four angles are 90∘. Depending on your ruler, the sides should
-be 2.5 inches and 1 inch. 
-Draw in the diagonals and measure them. What do you discover? 
-Theorem: A parallelogram is a rectangle if and only if the diagonals are congruent.
+{.todo} Theorem: A parallelogram is a rhombus if and only if the diagonals are perpendicular.
 
-Theorem: A parallelogram is a rhombus if and only if the diagonals are perpendicular.
+{.todo} Theorem: A parallelogram is a rhombus if and only if the diagonals bisect each angle.
 
-Theorem: A parallelogram is a rhombus if and only if the diagonals bisect each angle.
-We know that a square is a rhombus and a rectangle. So, the diagonals of a square
-have the properties of a rhombus and a rectangle.
+---
 
-Understanding the Definition of a Rhombus 
-Is a rhombus SOMETIMES, ALWAYS, or NEVER a square? Explain your reasoning.
+::: column(width=400)
 
-If we connect the centers of the four sides of a quadrilateral, we get
-[[another quadrilateral|a triangle|a rectangle]]. Try to move the vertices of
-the outer quadrilateral to change the shape on the inside.
-
-    x-geopad: svg
+    x-geopad(style="height: 300px"): svg
       path(x="polygon(a,b,c,d)")
       path.red(x="polygon(line(a,b).midpoint,line(b,c).midpoint,line(c,d).midpoint,line(d,a).midpoint)")
-      circle(name="a" cx=170 cy=40 r=6)
-      circle(name="b" cx=480 cy=140 r=6)
-      circle(name="c" cx=540 cy=320 r=6)
-      circle(name="d" cx=120 cy=270 r=6)
-      circle.red(x="line(a,b).midpoint" r=6)
-      circle.red(x="line(a,b).midpoint" r=6)
-      circle.red(x="line(a,b).midpoint" r=6)
-      circle.red(x="line(a,b).midpoint" r=6)
+      circle.move(name="a" cx=120 cy=40 r=6)
+      circle.move(name="b" cx=320 cy=140 r=6)
+      circle.move(name="c" cx=380 cy=270 r=6)
+      circle.move(name="d" cx=60 cy=250 r=6)
+      circle.red(x="line(a,b).midpoint" r=4)
+      circle.red(x="line(a,b).midpoint" r=4)
+      circle.red(x="line(a,b).midpoint" r=4)
+      circle.red(x="line(a,b).midpoint" r=4)
 
-    .subsection
-      p It looks like the quadrilateral on the inside is always a [[parallelogram|trapezium|rectangle]]!
-      p.todo Explanation coming soon…
+::: column.grow
+{.todo} Let's start by drawing any quadrilateral.
 
+Now let's find the midpoint of each of the four sides of the quadrilateral. If
+we connect the four midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
+
+However it looks like the new shape is not just _any_ quadrilateral, it is
+always a [[parallelogram|trapezium|rectangle]]! Try to move the vertices of the
+original quadrilateral to check.
+
+{.todo} TODO Explanation
+:::
 
 ---
 
@@ -520,6 +525,12 @@ half the product of the diagonals.
 
 ---
 
+## Hexagons
+
+Construct regular hexagon
+
+---
+
 ## Tessellations
 
 Polygons appear everywhere in nature. They are especially useful if you want to
@@ -587,8 +598,8 @@ Here you can create your own tessellations with regular polygons. See if there
 are any shapes that tessellate well or not at all, and try to create interesting
 patterns.
 
-    .tessellation-canvas.frame.fill: svg
-    //- TODO rotate, add new, delete, snap to corner, export to png, clear canvas, save to db
+    include ./components/tessellation
+    x-tessellation
 
 ---
 > id: possible
@@ -665,8 +676,6 @@ As you can see, each of them consists of copies of just one convex pentagon. Obs
 
 How many kinds of convex pentagons can tile the plane? We know of 14 different kinds of pentagons, but no one has been able to find more, or prove that there are no others – yet.  In other words, the problem of tiling with copies of one convex pentagon remains open.
 
-
-
 ---
 
 And of course we can make tessellations out of non-regular polygons as well:
@@ -694,7 +703,6 @@ First, recall how many degrees are in a circle, and then figure out how many
 degrees are in each angle of a square. There are 360∘ in a circle and 90∘ in
 each interior angle of a square, so 36090=4 squares will fit around one point.
 
-
     .row
       div(style="width: 320px")
         p.todo Interactive diagram coming soon…
@@ -714,7 +722,7 @@ each interior angle of a square, so 36090=4 squares will fit around one point.
 Many artists came up with much more complicated tessellations, most famously
 [M. C. Escher](bio:escher). Here are a few examples:
 
-    .img-block
+    figure
       .row
         .grow.shrink(style="width: 226px; flex-grow: 2.17; flex-shrink: 2.17"): x-media(credit="© M. C. Escher", src="images/escher/mirror.jpg", width="509", height="315")
         .grow.shrink(style="width: 104px"): x-media(credit="© M. C. Escher", src="images/escher/knights.jpg", width="234", height="315")
@@ -738,7 +746,7 @@ create one:
 
 The British mathematician and cosmologist Roger Penrose, for example, has designed non-repeating tilings that now seem to agree with the internal structure of real materials, such as some combinations using aluminum. In a lighter note, Penrose's designs have also caught the attention of a toilet paper manufacturer, because paper embossed with a non-repeating pattern can be rolled without leaving bulging spots. But Penrose had copyrighted the pattern and the manufacturer got a legal spank.
 
-    .img-block
+    figure
       include svg/penrose.svg
       x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
       p.caption Move the slider to reveal the underlying structure of this tessellation. Notice how you have the same patterns at various scales: the small yellow pentagons, blue stars, orange rhombi and green ‘ships’ appear in their original size, in a #[strong.blue slightly larger size] and an #[strong.red even larger size]. This #[em self-similarity] can be used to prove that this Penrose tiling is non-periodic.

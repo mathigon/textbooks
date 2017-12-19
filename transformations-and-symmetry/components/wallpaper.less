@@ -17,28 +17,36 @@ x-wallpaper {
   .groups { display: flex; margin-bottom: 1px; }
 
   .group {
-    width: 32px;
-    height: 32px;
-    padding: 4px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
     margin-right: 1px;
-    background: @grey-background;
-    &.active { border: 4px solid @grey; padding: 0; }
+    line-height: 40px;
+    text-align: center;
+    background: @light-grey;
+    font-size: 22px;
+    font-weight: 600;
+    transition: color .2s, background .2s;
+    &:hover { color: white; background: mix(@light-grey, @grey); }
+    &.active { color: white; background: @grey; }
   }
 
   .colours {
+    display: block;
     position: absolute;
     bottom: 0;
     right: 0;
   }
 
   .colour {
+    cursor: pointer;
     width: 30px;
     height: 30px;
     border-radius: 100%;
     margin: 10px;
     opacity: 0.7;
     border: 2px solid white;
-    &.active { border-width: 4px; width: 28px; height: 28px; opacity: 1; }
+    &.active { border-width: 4px; width: 26px; height: 26px; opacity: 1; }
   }
 
   .btn-row { position: absolute; bottom: 12px; left: 12px }
