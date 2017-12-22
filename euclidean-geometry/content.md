@@ -9,22 +9,27 @@
 
 ## Introduction
 
+::: column.grow
 Mathematics has been studied for many thousands of years – to predict the
 seasons, calculate taxes, or estimate the size of farming land.
 
-    figure
-      x-media(src="images/rhind.jpg", width="660", height="110", credit="© British Museum")
-      p.caption The Rhind Papyrus found in Thebes (Egypt) is one of the oldest examples of mathematical work.
+It wasn't until around 500 BC that mathematicians in ancient Greece started to
+study mathematics just “for fun”, without a specific application in mind. They
+were amazed by mathematical patterns, and wanted to explore and explain them.
+::: column(width=300)
 
-Ancient Greek mathematicians were the first to study mathematics just for its
-own sake, without a specific application in mind. They were amazed by
-mathematical patterns, and wanted to explore and explain them. One of them was
-[Thales of Miletus](bio:thales) who made a surprising discovery when playing
-around with geometric shapes:
+    x-media.shift-1(src="images/tablet.jpg" width=300 height=210)
 
-::: column(width=440)
+{.caption} A Babylonian clay tablet, dated 1800 BC, that contains geometric
+calculations.
+:::
 
-    x-geopad.sticky(style="width:440px; height: 320px;"): svg
+One of these mathematicians was [Thales of Miletus](bio:thales), who made a
+surprising discovery when playing around with geometric shapes:
+
+::: column(width=420)
+
+    x-geopad.sticky(style="width:420px; height: 320px;"): svg
 
 ::: column.grow
 Start by picking two points anywhere in the box on the left.
@@ -40,52 +45,55 @@ the circumference.
 
 {.reveal(when="p3")} Finally, look at the [angle](target:angle) at the
 top of the triangle. No matter which points you picked, it always seems to be
-[[90]]°. _{span.reveal(when="blank-0")} This means that the triangle
-is [[right-angled|equilateral|acute]]._
+[[90]]°. _{span.reveal(when="blank-0")} This means that the triangle is
+[[right-angled|equilateral|acute]]._
 :::
 
 ---
 
-For Thales, this was a pretty spectacular result – why should circles and
-right-angled triangles, two completely different shapes, be linked in this
-fundamental way? In fact, he was so awed by his discovery that – according to
-legend – he sacrificed an ox to thank the gods.
+For Thales, this was a pretty spectacular result. Why should _semicircles_ and
+_right-angled triangles_, two completely different shapes, be linked in this
+fundamental way? In fact, he was so awed by his discovery that, according to
+legend, he sacrificed an entire ox to thank the gods.
 
     figure
       x-media(src="images/temple.svg" width=400 height=170 credit="© Depositphotos")
 
 However, simply _observing_ a relationship like this was not enough for Thales.
-he wanted to explain _why_ it was true, and to verify that it is _always_ true
+he wanted to explain _why_ it is true, and to verify that it is _always_ true
 – not just in the specific examples he happened to try.
 
-An argument that verified a statement like "" is called a __proof__. And once 
+An argument that logically explains, beyond and doubt, why something must be
+true, is called a __proof__. During the following chapters we will build up a
+number of geometric techniques, that will allow us to prove _Thales' theorem_.
 
-The notion of proof marked a significant change in the history of mathematics.
-Rather than just XXXXXX
+---
+> class: no-border
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
----
+## Definitions
 
-### Definitions
-
-Before we can write any proofs, we need some common terminology, or
-_definitions_, that will make it easier to talk about geometric objects. These
-are not particularly exciting, but you should already know most of them:
+Before we can write any proofs, we need some common terminology that will make
+it easier to talk about geometric objects. These are not particularly exciting,
+but you should already know most of them:
 
 ::: column(width=240)
 
     x-geopad.sticky(style="width:240px; height: 160px;"): svg
       circle.move(cx=100 cy=30 r=8 target="move")
       circle.move(cx=150 cy=100 r=8 target="move")
-      circle(cx=200 cy=50 r=4 target="move")
+      circle.move(cx=40 cy=75 r=8 target="move")
+      circle(cx=200 cy=50 r=4 target="no-move")
+      circle(cx=70 cy=120 r=4 target="no-move")
 
 ::: column.grow
 A __point__ is a specific location in space. Points describe a position, but
 have no _size_ in itself. They are labelled using capital letters.
 
-In Mathigon, large solid dots indicate interactive points you can move around,
-while smaller, outlined dots indicate fixed points.
+In Mathigon, [large, solid dots](target:move) indicate interactive points you
+can move around, while [smaller, outlined dots](target:no-move) indicate fixed
+points which you can't move.
 :::
 
 ---
@@ -95,44 +103,57 @@ while smaller, outlined dots indicate fixed points.
     x-geopad.sticky(style="width:240px; height: 160px;"): svg
 
 ::: column.grow
-A __line__ ZZZZ. The line from point `A` to point `B` is labelled `bar("AB")`.
-A line is a set of infinitely many points that extend forever in both directions.
-A line, like a point, does not take up space. It has direction, location and is
-always straight. Lines are one-dimensional because they only have length (no
-width). A line can by named or identified using any two points on that line or
-with a lower-case, italicized letter.
-This line can be labeled `vec(PQ)`, `vec(QP)` or just g. You would say “line PQ,”
-“line QP,” or “line g,” respectively. Notice that the line over the PQ and QP
-has arrows over both the P and Q. The order of P and Q does not matter.
+A __line__ is a set of infinitely many points that extend forever in both
+directions. Like a point, lines don't take up any space – they have no _width_.
+They have a location and a direction, and they are always straight.
 
-A __line segment__
-An endpoint is a point at the end of a line segment. Line segments are labeled
-by their endpoints, `bar(AB)` or `bar(BA)`. Notice that the bar over the
-endpoints has NO arrows. Order does not matter.
-
-A __ray__  is a part of a line with one endpoint that extends forever in the
-direction opposite that endpoint. A ray is labeled by its endpoint and one other
-point on the line. When labeling rays, always write the endpoint under the side
-WITHOUT the arrow, as in `vec(CD)` or `vec(DC)`,since that letter represents the
-end of the ray and the arrow indicates the direction that the ray continues.
+Lines are labeled using lower-case letters. We can also refer to them using two
+points that lie on the line, for example
+<span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
+<span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
+order of the points does not matter.
 :::
+
+---
 
 ::: column(width=240)
 
     x-geopad.sticky(style="width:240px; height: 160px;"): svg
 
 ::: column.grow
-A __circle__ is the collection of points that 
+A __line segment__ is the part of a line between two points, without extending
+to infinity. For example, the sides of a triangle are all line segments.
+
+We can label them just like lines, but without arrows on the bar above:
+`bar(AB)` or `bar(BA)`. Like, before the order of the points does not matter.
 :::
 
-Points that lie on the same line are collinear. P,Q,R,S, and T are collinear
-because they are all on line w. If a point U were located above or below line w,
-it would be non-collinear.
+---
 
-An intersection is a point or set of points where lines, planes, segments, or
-rays cross each other.
+::: column(width=240)
 
-When making geometric drawings, be sure to be clear and label all points and lines.
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+
+::: column.grow
+A __ray__  is something in between a _line_ and a _line segment_: it only
+extends to infinity on one side. You can think of it like _sunrays_: they start
+at a point (the sun) and then keep going forever.
+
+When labelling rays, the arrow shows the direction where it extends to infinity,
+for example `vec(AB)`. Here, the order of points _does_ matter.
+:::
+
+---
+
+::: column(width=240)
+
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+
+::: column.grow
+A __circle__ is the collection of points that all have the same distance from a
+point in the center. This distance is called the __radius__.
+:::
+
 
 ### Congruence
 
@@ -142,191 +163,201 @@ When making geometric drawings, be sure to be clear and label all points and lin
 
 ::: column.grow
 The two shapes on the right basically look equal. They have the same size and
-shape, and we could [turn and slide](action:move) one of them to exactly match
+shape, and we could [turn and slide](target:move) one of them to exactly match
 up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
 
-The symbol for congruence is ≅, so we would say that `A ≅ B`.
+The symbol for congruence is `≅`, so we would say that `A ≅ B`.
 :::
 
-Here are a few more geometric objects: connect the ones that are congruent.
-(Note that sometimes more than two shapes can be congruent to each other.)
+Here are a few different geometric objects. Connect the ones that are congruent,
+but note that more than two shapes can be congruent to each other:
 
 {.todo} interactive
 
-Two line segments are congruent of they have the same length. Two angles are
-congruent if they have the same size, in degrees. Note the that "congruent"
-does not mean "equal": congruent lines and angles don't have to point in the
-same direction.
+---
 
-Still, _congruence_ has many of the same properties of _equality_:
+Two line segments are congruent if they [[have the same length|intersect]]. Two
+angles are congruent if they [[have the same size|meet at a point]], in degrees.
+
+Note the that _“congruent”_ does not mean _“equal”_. For example, congruent
+lines and angles don’t have to point in the same direction. Still, congruence
+has many of the same properties of equality:
 
 * Congruence is __symmetric__: if `X ≅ Y` then also `Y ≅ X`.
 * Congruence is __reflexive__: any shape is congruent to itself. For example, `A ≅ A`.
 * Congruence is __transitive__: if `X ≅ Y` and `Y ≅ Z` then also `X ≅ Z`.
 
 ---
-> id: euclid
 
-## Euclid's Postulates
+### Parallel and Perpendicular
+
+::: column(width=240)
+    x-geopad.sticky(style="width:240px; height: 200px;"): svg
+::: column.grow
+Two straight lines that never intersect are called [__parallel__](gloss:parallel).
+They point into the same direction, and the distance between them will always
+be the same. You can think of parallel lines as _railroad tracks_.
+
+In diagrams, we denote parallel lines by adding one or more
+[small arrows](target:line). In this example we would write `a ∥ b` and `c ∥ d`.
+The `∥` symbol simply means _“is parallel to”_.
+
+Note that more than two lines can be parallel to each other!
+:::
+
+---
+
+::: column(width=240)
+    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+::: column.grow
+The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
+These lines are called __perpendicular__.
+
+Note that when marking right angles in a diagram, we use [small squares](target:angle)
+rather than curves. In this example, we would write `a _|_ b`. The `_|_` symbol
+simply means _“is perpendicular to”_.
+:::
+
+---
+> id: euclid
+> class: no-border
+
+    figure: img(src="images/divider-1.svg" width=760 height=42)
+
+## Euclid’s Postulates
 
 ::: column.grow
 Greek mathematicians realised that to write formal proofs, you need some sort of
-_starting point_: simple, intuitive XXXX that can be used to prove new ones.
-These statements are called __postulates__ or __axioms__. 
+_starting point_: simple, intuitive statements, that everyone agrees are true.
+These are called __axioms__ (or _postulates_), and can then be used to prove
+more complex results using the rules of logic.
 
-Euclid himself presumed them to be so obvious as to be self-evident
+The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
+the _father of geometry_, published the five axioms of geometry:
+::: column(width=220)
 
-[Euclid of Alexandria](bio:euclid) published the five axioms that form the
-foundation of all of geometry in his book "Elements". Euclid is often called the
-_father of geometry_, and his works were used as mathematics textbooks for
-thousands of years, until the 20th century.
+    img.shift-2(src="images/euclid.jpg" width=220 height=269)
 
-An axiom is a logical principle which is assumed to be true rather than proven, and which can be used as a premise in a deductive argument.
+{.caption} Euclid of Alexandria
+:::
 
 ::: column(width=220)
 
-    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
-
-:::
-
-::: column(width=240)
-
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+    x-geopad(style="width:220px; height: 160px;"): svg
       path.red(x="segment(a,b)" target="1_line")
       circle.move(name="a" cx=30 cy=130 r=8 target="1_point")
-      circle.move(name="b" cx=210 cy=30 r=8 target="1_point")
+      circle.move(name="b" cx=190 cy=30 r=8 target="1_point")
 
-::: column.grow
-### First Axiom
+{.text-center }__First Axiom__  
 You can join any [two points](target:1_point) using exactly one straight
 [line segment](target:1_line).
-:::
 
----
+::: column(width=220)
 
-::: column(width=240)
+    x-geopad(style="width:220px; height: 160px;"): svg
+      path.red(x="line(c,d)" target="2_line")
+      path(x="segment(c,d)" target="2_line 2_segment")
+      circle.move(name="c" cx=60 cy=100 r=8)
+      circle.move(name="d" cx=180 cy=60 r=8)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-      path.red(x="line(a,b)" target="2_line")
-      path(x="segment(a,b)" target="2_line 2_segment")
-      circle.move(name="a" cx=60 cy=100 r=8)
-      circle.move(name="b" cx=180 cy=60 r=8)
-
-::: column.grow
-### Second Axiom
+{.text-center }__Second Axiom__  
 You can extend any [line segment](target:2_segment) to an
 [infinite line](target:2_line).
-:::
 
----
+::: column(width=220)
 
-::: column(width=240)
+    x-geopad(style="width:220px; height: 160px;"): svg
+      path(x="segment(e,f)" target="3_radius")
+      path.red(x="circle(e,distance(e,f))" target="3_circle")
+      circle.move(name="e" cx=120 cy=80 r=8 target="3_center")
+      circle.move(name="f" cx=170 cy=130 r=8)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-      path(x="segment(a,b)" target="3_radius")
-      path.red(x="circle(a,distance(a,b))" target="3_circle")
-      circle.move(name="a" cx=120 cy=80 r=8 target="3_center")
-      circle.move(name="b" cx=170 cy=130 r=8)
-
-::: column.grow
-### Third Axiom
+{.text-center }__Third Axiom__  
 Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
 can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
-:::
 
----
+::: column(width=220)
 
-::: column(width=240)
+    x-geopad(style="width:220px; height: 160px;"): svg
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-
-::: column.grow
-### Fourth Axiom
+{.text-center }__Fourth Axiom__  
 Any two right angles are congruent.
-:::
 
----
+::: column(width=220)
 
-::: column(width=240)
+    x-geopad(style="width:240px; height: 160px;"): svg
+      path.red(x="line(g,h).parallel(i)" target="5_parallel")
+      path(x="line(g,h)" target="5_line")
+      circle.move(name="g" cx=20 cy=80 r=8)
+      circle.move(name="h" cx=120 cy=140 r=8)
+      circle.move(name="i" cx=180 cy=60 r=8 target="5_point")
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
-      path.red(x="line(a,b).parallel(c)" target="5_parallel")
-      path(x="line(a,b)" target="5_line")
-      circle.move(name="a" cx=20 cy=80 r=8)
-      circle.move(name="b" cx=120 cy=140 r=8)
-      circle.move(name="c" cx=180 cy=60 r=8 target="5_point")
-
-::: column.grow
-### Fifth Axiom
+{.text-center }__Fifth Axiom__  
 Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
 there is exactly [one line](target:5_parallel) which goes through _P_ and never
 meets _L_.
 :::
 
-Each of these axioms looks obvious and trivial, but XXXX
-
-Newton famously wrote, "it's the glory of geometry that from so few principles it can accomplish so much."
-
-Euclid's work is the earliest example we have of a systematic approach to geometry. When you make a general statement in geometry, such as Pythagoras' theorem, you should prove this statement by deriving it from statements you're convinced are self-evident, using the rules of logic.
-
-
-The idea that you build up a complex framework starting with just a few, simple,
-self-evident axioms, far expanded beyond just mathematics.
-
-In fact, the American Declaration of Independence was inspired by Euclid
-
-And here's one more example of Euclid's influence. The American Declaration of Independence is designed to inspire faith in its certainty by using the Euclidean form. Thomas Jefferson, who knew more of the mathematics of his time than any other American president, began his argument, "We hold these truths to be self-evident: that all men are created equal." There are also other self-evident truths in the document, he uses the word "prove", and the actual declaration that founded the United States is stated explicitly as the conclusion of a logical argument, beginning with a "therefore": "We, therefore ... declare, that these United Colonies are, and of right ought to be, free and independent states".
-
-So in philosophy, theology, science, and politics, the idealised Euclidean model of reasoning has shaped conceptions of proof, truth, and certainty.
-
-    // If a triangle has two congruent angles, the sides subtend those angles are also congruent.
-    // Let ABC be a triangle having the angle ABC equal to the angle ACB;
-    // I say the side AB is also equal to the side AC. For, if AB is unequal to AC, one of them is greater. Let AB be greater; and from AB the greater, let DB be cut off equal to AC the less; let DC be joined.
-    // Then, since DB is equal to AC, and BC is common, the two sides DB, BC are equal to the two sides AC, CB respectively, and the angle DBC is equal to the angle ACB.
-    // Therefore, the base DC is equal to the base AB, and the triangle DBC will be equal to the triangle ACB, the less to the greater, which is absurd. Therefore AB is not unequal to AC; it is therefore equal to it."
-
 ---
 
-## Parallel and Perpendicular Lines
+::: column.grow
+Each of these axioms looks pretty obvious and self-evident, but together they
+form the foundation of geometry, and can be used to derive almost everything
+else. According to none less than [Isaak Newton](bio:newton), _“it’s the glory
+of geometry that from so few principles it can accomplish so much”_.
 
-{.todo} Two or more lines are parallel when they lie in the same plane and never
-intersect. The symbol for parallel is `||`. To mark lines parallel, draw arrows
-(>) on each parallel line. If there are more than one pair of parallel lines,
-use two arrows (>>) for the second pair. The two lines below would be labeled
-AB←→ || MN←→− or l || m.
+Euclid published the five axioms in a book _“Elements”_. It is the earliest
+example in history of a systematic approach to mathematics, and was used as the
+standard mathematics textbook for thousands of years, until the 20th century.
 
-{.todo} For a line and a point not on the line, there is exactly one line parallel to
-this line through the point. There are infinitely many lines that pass through
-A, but only one is parallel to l.
+::: column(width=220)
+    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+:::
 
-{.todo} The Parallel Lines Property is a transitive property that can be applied to
-parallel lines. It states that if lines l || m and m || n, then l || n.
+One of the people who studied Euclid’s work was the American President [Thomas
+Jefferson](bio:jefferson). When writing the Declaration of Independence in 1776,
+he wanted to follow a similar approach. He begins by stating a few, simple
+“axioms” and then “proves” more complex results:
 
-{.todo} Railroad Tracks
+    .parchment “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
 
-{.todo} Two lines are perpendicular if they meet at a 90°, or right, angle. For a line
-and a point not on the line, there is exactly one line perpendicular to the
-line that passes through the point. There are infinitely many lines that pass
-through A, but only one that is perpendicular to l. Recall that complementary
-angles add up to 90∘. If complementary angles are adjacent, their nonadjacent
-sides are perpendicular rays. What you learn about perpendicular lines can also
-be applied to this situation.
+{.text-center.follows} `=>`
+
+    .parchment We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
+
+This is just one example where Euclid’s ideas in mathematics have inspired
+completely different subjects.
 
 ---
+> class: no-border
+
+    figure: img(src="images/divider-1.svg" width=760 height=42)
 
 ## Geometric Construction
 
-In classical geometric construction, your goal is to construct various shapes
-and XXXX suing nothing but a __compass__ and a __straight-edge__.
-RELATION TO AXIOMS
+Let’s get back to geometry … to apply Euclid’s five axioms on paper, you need
+just two tools:
 
-{.todo} A compass allows you 
+::: column.grow
+{.todo} image
 
-{.todo} A Straight-edge is like a ruler without markings
+A __straight-edge__ is like a ruler but without any markings. You can use it to
+connect two points (Axiom 1), or to extend a line segment (Axiom 2).
+::: column.grow
+{.todo} image
 
-These tools seem pretty primitive and useless, but actually allow you to
-construct a great number of complex geometric shapes. Here is an example:
+A __compass__ allows you to draw circles of a given size around points
+(Axiom 4).
+:::
+
+In classical geometric construction, our goal is to construct various shapes
+using nothing but compass and straight-edge. No rulers and protractors are
+allowed to measure distances or angles.
+
+Just like Euclid’s axioms, these tools might initially seem very primitive and
+useless – but actually allow you to construct a great number of geometric
+shapes. Here is an example:
 
 {.todo} construct equilateral triangle
 
@@ -405,9 +436,9 @@ Draw a horizontal line and a point above that line. Label the line l and the poi
 {.todo} Perpendicular Line Construction; through a Point on the Line
 Draw a horizontal line and a point on that line.
 Label the line l and the point A.
-* Take the compass and put the pointer on A. Open the compass so that it reaches out horizontally along the line. Draw two arcs that intersect the line on either side of the point.
-* Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc above or below the line. Repeat this on the other side so that the two arc marks intersect.
-* Take your straightedge and draw a line from point A to the arc intersections above the line. This line is perpendicular to l and passes through A.
+Take the compass and put the pointer on A. Open the compass so that it reaches out horizontally along the line. Draw two arcs that intersect the line on either side of the point.
+Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc above or below the line. Repeat this on the other side so that the two arc marks intersect.
+Take your straightedge and draw a line from point A to the arc intersections above the line. This line is perpendicular to l and passes through A.
 
 {.todo} Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
 
@@ -423,22 +454,53 @@ The shortest distance between two parallel lines is the length of the perpendicu
 ### Impossible Constructions
 
 In the following chapters we will see even more shapes that can be constructed
-using like this. However, it turns out that there is a limit to Euclidean
-geometry: some constructions that are impossible using just Euclid's Axioms.
+using like this. However, there is a limit to Euclidean geometry: some
+constructions are simply impossible using just Euclid's Axioms.
 
+::: column.grow
 According to legend, the city of Delos was once faced with a terrible plague.
 The oracle in Delphi told them that this was a punishment from the gods, and the
 plague would fo away if they build a new altar for their temple that was
 _exactly twice_ the volume of their existing altar.
 
-Unfortunately, _doubling the cube_ is one of these constructions that are impossible
-in Euclidean geometry. Of course, we can use calculators to find the width of
-the new compass, but it is impossible using just straight edge and compass which
-were available to the ancient Greeks.
+{.todo} graphic
+::: column(width=300)
+    x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
+    
+{.caption} A reconstruction of a temple in Delphi
+:::
 
-There are three other impossible constructions
+While it sounds simple enough, _doubling the cube_ is one of the geometric
+constructions that is impossible in Euclidean geometry. For the citizens of
+Delos this meant that all hope was lost…
 
-{.todo} TODO
+There are two other famously impossible construction problems. Mathematicians
+spent great amounts of time trying to solve them – of course without any
+success:
+
+::: column(width=220)
+{.todo} GRAPHIC
+
+{.text-center} __Trisecting the angle__  
+We already know how to bisect angles. However it is impossible to similarly
+split an angle into _three_ equal parts.
+::: column(width=220)
+{.todo} GRAPHIC
+
+{.text-center} __Doubling the cube__  
+Given the edge of a cube, it is impossible to construct the edge of a cube that
+is exactly twice the volume.
+:::
+
+::: column(width=220)
+{.text-center} __Squaring the circle__  
+Given a circle, it is impossible to construct a square that has exactly the same
+area.
+:::
+
+Note that these problems can all be solved quite easily with algebra, and using
+marked rules and protractors, but they are impossible if you are only allowed to
+use straight-edge and compass.
 
 ---
 > class: fill dark
@@ -448,25 +510,24 @@ There are three other impossible constructions
 Ruler and compass are not the only tools we can use to construct geometric
 shapes. Another technique uses no tools at all: __Origami__.
 
-The word _Origami_ (折り紙) comes from the Japanese words _oru_ (which means to
-fold) and _kami_ (which means paper). The goal is to create objects out of one
-or more sheets of paper, without any additional tools like glue or scissors. 
+The word _Origami_ (折り紙) comes from the Japanese _oru_ (to fold) and _kami_
+(paper). The goal is to create objects out of one or more sheets of paper,
+without any additional tools like glue or scissors. You can still create
+incredibly beautiful and impressive designs – all of these figures were built
+using nothing but rectangular sheets of paper:
 
-But you can still create incredibly beautiful and impressive designs – all of
-these figures were built using nothing but rectangular sheets of paper:
-
 ::: column(width=186)
-    x-media(src="images/origami/origami1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+    x-media(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+    x-media(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-media(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+    x-media(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+    x-media(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
 :::
 
 ---
@@ -477,8 +538,10 @@ extremely accurate. But with a bit of practice, you can do it yourself!
 
 {.todo} ORIGAMI INSTRUCTIONS
 
-We have many more [Origami models and instructions](/origami) on Mathigon, if
+We have [models and instructions](/origami) for many other Origami models, if
 you want to try more.
+
+    figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > class: fill dark
@@ -502,7 +565,7 @@ the [[perpendicular bisector|angle bisector|midpoint]] of the line `vec(PQ)`.
 {.todo} IMAGE
 
 {.text-center} We can fold any two lines onto each other. If the lines
-intersect, this creates [[the angle bisector|perpendicular bisector|midpoint]]
+intersect, this creates the [[angle bisector|perpendicular bisector|midpoint]]
 of the angle between the two lines.
 
 ::: column(width=220)
@@ -536,13 +599,14 @@ It is possible to trisect angles and double cubes using just paper folding!
 Of course, it is impossible to fold any _curved_ lines, and you still can't
 square the circle with origami.
 
+    figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
+
 ---
 > class: fill dark
 
-Origami is an ancient art – and for the longest time, it was mostly a
-recreational pursuit, without useful applications. But it turns out that
-techniques developed for Origami can be incredibly useful in technology and
-engineering:
+Origami is an ancient art, and for the longest time it was mostly a recreational
+pursuit, without real life applications. However, it turns out, that techniques
+developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column(width=300)
 {.todo} image
@@ -555,10 +619,14 @@ allows a large ‘map’ to be opened and closed in one single motion.
 It was invented by _Korio Miura_, to simplify the folding and unfolding of the
 solar panels of satellites. With fewer motors and mechanical components, it
 can makes satellites smaller, lighter, and cheaper.
+
+The same is true for the mirrors of telescopes deployed in space. Large mirrors
+give better images, but are much harder to fit into a rocket. Instead, they can
+unfold once in space.
 :::
 
 ::: column(width=300)
-{.todo} image
+    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
 ::: column.grow
 ### Foldable Bridges
 
@@ -567,11 +635,12 @@ bridges. These were important for quickly crossing rivers or anti tank ditches,
 and could be deployed much faster than previous design.
 
 They can also be used for disaster relief, to quickly give emergency vehicles
-access after earthquakes or tsunamis.
+access after earthquakes or tsunamis. This image is of a prototype designed at
+Hiroshima University in Japan.
 :::
 
 ::: column(width=300)
-{.todo} image
+    x-media(src="images/stadium.mp4" width=300 height=225 credit="© Mercedes Benz Stadium")
 ::: column.grow
 ### Stadium Roofs
 
@@ -584,7 +653,7 @@ modules that can twist to open or close.
 :::
 
 ::: column(width=300)
-{.todo} image
+    x-media(src="images/stents.mp4" width=300 height=225 credit="© Virtual Point")
 ::: column.grow
 ### Origami in Medicine
 
@@ -602,12 +671,49 @@ clogged arteries or veins.
 
 And there are even more applications that are still being researched: from
 houses that – like Origami – will compress rather than crumble during an
-earthquake, to telescope mirrors that can unfold in space, self-assembling
-robots, and more efficient packaging.
+earthquake, to unfolding airbags in cars, self-assembling robots, and more
+efficient packaging.
 
 ---
 
 ## Applications of Geometry
 
-It is obvious that geometry is an extremely useful area of mathematics: measuring,
-architecture, navigation
+Geometry is around us, wherever we look. In nature, architecture, technology and
+design. We need geometry for measuring distances, as well as constructing
+skyscrapers or sending satellites into space.
+
+::: column(width=200)
+    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+
+{.caption} Geometry allowed the ancient Egyptians to construct gigantic,
+perfectly regular pyramids, that align to patterns in the stars.
+::: column(width=200)
+    x-media(src="images/sextant.jpg" credit="© Depositphotos / scorpp" width=200 height=200)
+
+{.caption} Sailors use sextants to determine their location while at sea, using 
+angles formed by the sun or stars.
+::: column(width=200)
+    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
+
+{.caption} Geometry is needed to create realistic video game or movie graphics.
+::: column(width=200)
+    x-media(src="images/plane.jpg" credit="© Depositphotos / nmcandre" width=200 height=200)
+
+{.caption} Geometry can help design and test new airplane models, making them
+safer and more efficient.
+::: column(width=200)
+    x-media(src="images/cctv.jpg" lightbox credit="© Depositphotos / junrong" width=200 height=200)
+
+{.caption} Geometry was key when designing the Chinese TV building in Beijing –
+and to make sure it won't fall over.
+::: column(width=200)
+    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
+
+{.caption} Geometry allows us to predict the position of stars, planets and
+satellites orbiting Earth.
+:::
+
+In the next chapters, we will learn about tools and techniques in geometry, that
+were discovered by mathematicians over the course of many centuries. And, of
+course, we will see how these techniques can be used to solve important
+problems in the real world.

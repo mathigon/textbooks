@@ -756,13 +756,13 @@ All that's left is to connect the transformed points in the image … all done!
 ---
 
 ::: column.grow
-For rigid transformations, the image is always [[congruent|larger|smaller]] than
-the original. However this is no longer true for dilations. Instead, we say that
-two shapes are [__similar__](gloss:similar) if they have the same overall shape,
-but not necessarily the same size.
+For rigid transformations, the image is always [[congruent|larger|smaller]] to
+the original – but this is [[no longer|still]] true for dilations. Instead, we
+say that two shapes are [__similar__](gloss:similar). They have the same overall
+shape, but not necessarily the same size.
 
-The symbol for similarity is "~". (Contrast this with the symbol for congruence,
-which was `~=`.) For example, in this image, `A ~ A'`.
+The symbol for similarity is `∼`. (Contrast this with the symbol for congruence,
+which was `≅`.) In this example, we would write `A ∼ A'`.
 
 ::: column(width=240)
 {.todo} IMAGE
@@ -781,6 +781,8 @@ Find the vanishing point in the figure below:
 
 {.todo} image
 
+Now can you draw another house that matches the existing ones?
+
 ---
 
 ### Similar Polygons
@@ -791,33 +793,90 @@ are [[always|sometimes|never]] similar. They might have different sizes, but
 always have the same general shape.
 
 ::: column.grow
-The two quadrilaterals `M` and `M'` on the right are similar. We write `M ~ M'`.
-
-In similar polygons, all corresponding pairs angles are
+The two quadrilaterals on the right are also similar: we write `M ∼ M'`. In
+similar polygons, all the matching pairs of angles are
 [congruent](gloss:congruent-angles). In our example this means that
 
-{.text-center} [∠ABC](target:abc) ≅ [∠EFG](target:efg), [∠BCD](target:abc) ≅
-[∠EFG](target:fgh)`, and so on.
+{.text-center} [_{.m-red}`∡ABC`_ `≅` _{.m-red}`∡A'B'C'`_](target:a)_{.space}_
+[_{.m-blue}`∡BCD`_ `≅` _{.m-blue}`∡B'C'D'`_](target:b)  
+[_{.m-green}`∡CDE`_ `≅` _{.m-green}`∡C'D'E'`_](target:c)_{.space}_
+[_{.m-yellow}`∡DEA`_ `≅` _{.m-yellow}`∡D'E'A'`_](target:d)  
+[_`∡EAB`_ `≅` _∡E'A'B'_](target:e)
 
-In addition, all sides are scaled by the same factor – the scale factor of the
-corresponding dilation:
-
-{.todo} equations
-
-Let's have a look at an example: If we know the length of the sides of the
-smaller quadrilateral, and one side of the larger one, we can work out all the
-others:
+All sides are scaled by the same factor – the scale factor of the corresponding
+dilation. If the scale factor is ${k}{k|1.5|0.5,2,0.1}, then
 
 {.todo} equations
 
-The scale factor in this example is [[2]].
+If we don't know the scale factor, we can instead rearrange the equations like
+this:
+
+{.todo} equations
+
+{.todo} This means that, if we know the lengths of the sides of the of the polygon, as
+well as the scale factor, we can work out the sides of the other polygon.
 ::: column(width=240)
-{.todo} GRAPHIC
+
+    x-geopad.sticky(style="width:240px; height: 360px;"): svg
+      - var x = ['a', 'b', 'c', 'd', 'e']
+      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160], e:[90,130]}
+      - var next = {a:'b', b:'c', c:'d', d:'e', e:'a'}
+      - var prev = {a:'e', b:'a', c:'b', d:'c', e:'d'}
+      - var classes = {a:'red', b:'blue', c:'green', d:'yellow', e:''}
+      each l in x
+        circle(name=l cx=initial[l][0] cy=initial[l][1] r=4 target=l)
+        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
+        path(x=`segment(${l},${next[l]})` target="${l} ${next[l]}")
+        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(0.3).add({x:120,y:270})` target=l)
+        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
+        path(x=`segment(${l}1,${next[l]}1)` target="${l} ${next[l]}")
 :::
 
 ---
 
 ### Similar Triangles
+
+Similarity is particularly powerful with triangles – as the following examples
+will shows.
+
+::: column(width=240)
+{.todo} IMAGE
+
+::: column.grow
+Here you can see the image of a large lighthouse. Our goal is to measure its
+height, but unfortunately we cannot climb to the top.
+
+It turns out that, very well hidden, the diagram contains two similar triangles.
+Imagine drawing a line from the top of the light house and over the top of the
+head of one of your friends. Now you have two triangles: a large one that is the
+size of the lighthouse, and a small one that is the size of your friend.
+
+You can easily measure the length of the bases of these triangles, for example
+by counting the number steps between your friend and the lighthouse. And you
+also know the height of your friend.
+
+Together with what you know about similar polygons, this should be enough to
+calculate the height of the lighthouse:
+
+{.todo} equation
+
+Therefore the lighthouse is [[1.5]]m tall.
+:::
+
+::: column.grow
+We can use the same technique to measure distances on the ground. Here we want
+to find the width of a large river. Try drawing another two similar triangles.
+
+
+::: column(width=240)
+{.todo} IMAGE
+:::
+
+But how do we know 
+
+In both these examples
+
+
 
 Third Angle Theorem: If two angles in one triangle are congruent to two angles
 in another triangle, then the third pair of angles must also congruent.
@@ -855,14 +914,6 @@ similar. Then, you can use the similarity to find the lengths of the sides.
 
 ---
 
-We can use this fact to measure very large objects, like the height of a tower,
-or the width of a river.
-
-{.todo} A tree outside Ellie’s building casts a 125 foot shadow. At the same time of
-day, Ellie casts a 5.5 foot shadow. If Ellie is 4 feet 10 inches tall, how tall
-is the tree? Draw a picture. From the picture to the right, we see that the
-tree and Ellie are parallel, therefore the two triangles are similar to each
-other.
 
     // __Similarity on Rays__
     // 

@@ -104,25 +104,28 @@ We already know that the sum of ine internal angles in a triangle is always
       circle.move(name="c" cx=250 cy=250 r=6)
       circle.move(name="d" cx=50 cy=250 r=6)
 
-{.todo.text-center} a + b + c + d = 360°
+{.todo.text-center} __{.red.var}${angle(d,a,b).deg}__ + 
+__{.blue.var}${angle(a,b,c).deg}__+ __{.green.var}${angle(b,c,d).deg}__ +
+__{.yellow.var}${angle(c,d,a).deg}__ = 360°
+
 ::: column.grow
 
     x-geopad(style="width:300px; height: 300px;"): svg
-      path.red(x="angle(e,a,b)")
-      path.blue(x="angle(a,b,c)")
-      path.green(x="angle(b,c,d)")
-      path.yellow(x="angle(c,d,e)")
-      path.yellow(x="angle(d,e,a)")
-      path(x="segment(a,b)")
-      path(x="segment(b,c)")
-      path(x="segment(c,d)")
-      path(x="segment(d,e)")
-      path(x="segment(e,a)")
-      circle.move(name="a" cx=50 cy=50 r=6)
-      circle.move(name="b" cx=250 cy=50 r=6)
-      circle.move(name="c" cx=250 cy=250 r=6)
-      circle.move(name="d" cx=50 cy=250 r=6)
-      circle.move(name="e" cx=50 cy=150 r=6)
+      path.red(x="angle(i,e,f)")
+      path.blue(x="angle(e,f,g)")
+      path.green(x="angle(f,g,h)")
+      path.yellow(x="angle(g,h,i)")
+      path.yellow(x="angle(h,i,e)")
+      path(x="segment(e,f)")
+      path(x="segment(f,g)")
+      path(x="segment(g,h)")
+      path(x="segment(h,i)")
+      path(x="segment(i,e)")
+      circle.move(name="e" cx=50 cy=50 r=6)
+      circle.move(name="f" cx=250 cy=50 r=6)
+      circle.move(name="g" cx=250 cy=250 r=6)
+      circle.move(name="h" cx=50 cy=250 r=6)
+      circle.move(name="i" cx=50 cy=150 r=6)
       
 {.todo.text-center} a + b + c + d + e = 540°
 :::

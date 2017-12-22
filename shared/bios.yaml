@@ -74,6 +74,8 @@ euclid:
     geometry and contained many important proofs in geometry and number theory.
     It was the main textbook for teaching mathematics until the 19th century.
     Very little else is known about his life.
+  # Euclid was born about 365 BC in Alexandria, Egypt, and died about 300 BC.
+  # Little is known of his life other than that he taught mathematics in Alexandria.
 
 euler:
   name: Leonhard Euler
