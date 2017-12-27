@@ -9,78 +9,54 @@
 
 A [polygon](gloss:polygon) is a closed, flat shape that has only straight sides.
 Polygons can have any number of sides and angles, but the sides cannot be
-curved. The easiest way to recognise polygons is to identify which shapes are
-not polygons:
+curved. Which of the shapes below are polygons?
 
-::: column(width=100)
-{.todo} image
-
-{.caption} This [[is|is not]] a polygon.
-::: column(width=100)
-{.todo} image
-
-{.caption} This [[is not|is]] a polygon, because it contains curved sides.
-::: column(width=100)
-{.todo} image
-
-{.caption} This is not polygon, because it is not closed.
-::: column(width=100)
-{.todo} image
-
-{.caption} This is not a polygon, because it contains a hole.
-::: column(width=100)
-{.todo} image
-
-{.caption} This is not a polygon, because it is not a flat.
-:::
+    x-picker
+      .item: svg(width=100 height=100)
+      .item(data-error="not-a-polygon-1"): svg(width=100 height=100)
+      .item(data-error="not-a-polygon-2"): svg(width=100 height=100)
+      .item: svg(width=100 height=100)
+      .item(data-error="not-a-polygon-3"): svg(width=100 height=100)
+      .item: svg(width=100 height=100)
 
 ---
 
 We give different names to polygons, depending on the number of sides:
 
-::: column(width=150)
+::: column(width=100)
 {.todo} image
 
 {.caption} 3 vertices  
 Triangle
-::: column(width=150)
+::: column(width=100)
 {.todo} image
 
 {.caption} 4 vertices  
 Quadrilateral
-::: column(width=150)
+::: column(width=100)
 {.todo} image
 
 {.caption} 5 vertices  
 Pentagon
-::: column(width=150)
+::: column(width=100)
 {.todo} image
 
 {.caption} 6 vertices  
 Hexagon
-::: column(width=150)
+::: column(width=100)
 {.todo} image
 
 {.caption} 7 vertices  
 Heptagon
-::: column(width=150)
+::: column(width=100)
 {.todo} image
 
 {.caption} 8 vertices  
 Octagon
-::: column(width=150)
-{.todo} image
-
-{.caption} 9 vertices  
-Nonagon
-::: column(width=150)
-{.todo} image
-
-{.caption} 10 vertices  
-Decagon
 :::
 
 ---
+> id: angles
 
 ### Angles in Polygons
 
@@ -104,9 +80,9 @@ We already know that the sum of ine internal angles in a triangle is always
       circle.move(name="c" cx=250 cy=250 r=6)
       circle.move(name="d" cx=50 cy=250 r=6)
 
-{.todo.text-center} __{.red.var}${angle(d,a,b).deg}__ + 
-__{.blue.var}${angle(a,b,c).deg}__+ __{.green.var}${angle(b,c,d).deg}__ +
-__{.yellow.var}${angle(c,d,a).deg}__ = 360°
+{.text-center.var} __{.red}${round(angle(d,a,b).deg)}__ +
+__{.blue}${round(angle(a,b,c).deg)}__+ __{.green}${round(angle(b,c,d).deg)}__ +
+__{.yellow}${round(angle(c,d,a).deg)}__ = 360°
 
 ::: column.grow
 
@@ -181,6 +157,8 @@ ${Math.round(180-360/x)}°.
 sides in a regular polygon, then the perimeter is P=ns.
 
 {.todo} Area of regular polygons
+
+{.todo} all regular polygons with the same number of sides are similar.
 
 ---
 

@@ -355,6 +355,8 @@ In classical geometric construction, our goal is to construct various shapes
 using nothing but compass and straight-edge. No rulers and protractors are
 allowed to measure distances or angles.
 
+{.todo} drawing in sand with no tools
+
 Just like Euclid’s axioms, these tools might initially seem very primitive and
 useless – but actually allow you to construct a great number of geometric
 shapes. Here is an example:

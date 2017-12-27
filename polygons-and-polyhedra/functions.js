@@ -4,4 +4,5 @@
 // =============================================================================
 
 
-import { Tessellation } from './components/tessellation';
+import './components/tessellation';
+

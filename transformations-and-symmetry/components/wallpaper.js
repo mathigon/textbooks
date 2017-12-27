@@ -50,8 +50,9 @@ export class Wallpaper extends CustomElement {
       activeGroup = $active.data.value;
     });
 
-    let activeColour;
-    this.$('.colours').on('change', $active => {
+    const $colours = this.$('.colours');
+    let activeColour = $colours.$active.css('background-color');
+    $colours.on('change', $active => {
       activeColour = $active.css('background-color');
     });
 

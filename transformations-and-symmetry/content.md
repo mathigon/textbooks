@@ -761,8 +761,8 @@ the original – but this is [[no longer|still]] true for dilations. Instead, we
 say that two shapes are [__similar__](gloss:similar). They have the same overall
 shape, but not necessarily the same size.
 
-The symbol for similarity is `∼`. (Contrast this with the symbol for congruence,
-which was `≅`.) In this example, we would write `A ∼ A'`.
+The symbol for similarity is `∼` (similar to the symbol for congruence, which
+was `≅`). In this example, we would write `A ∼ A'`.
 
 ::: column(width=240)
 {.todo} IMAGE
@@ -790,147 +790,148 @@ Now can you draw another house that matches the existing ones?
 Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
 [squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
 are [[always|sometimes|never]] similar. They might have different sizes, but
-always have the same general shape.
+always the same general shape.
 
 ::: column.grow
-The two quadrilaterals on the right are also similar: we write `M ∼ M'`. In
-similar polygons, all the matching pairs of angles are
-[congruent](gloss:congruent-angles). In our example this means that
+The two quadrilaterals on the right are similar. Our first important observation
+is that in similar polygons, all the matching pairs of angles are
+[congruent](gloss:congruent-angles). This means that
 
 {.text-center} [_{.m-red}`∡ABC`_ `≅` _{.m-red}`∡A'B'C'`_](target:a)_{.space}_
 [_{.m-blue}`∡BCD`_ `≅` _{.m-blue}`∡B'C'D'`_](target:b)  
 [_{.m-green}`∡CDE`_ `≅` _{.m-green}`∡C'D'E'`_](target:c)_{.space}_
-[_{.m-yellow}`∡DEA`_ `≅` _{.m-yellow}`∡D'E'A'`_](target:d)  
-[_`∡EAB`_ `≅` _∡E'A'B'_](target:e)
+[_{.m-yellow}`∡DEA`_ `≅` _{.m-yellow}`∡D'E'A'`_](target:d)
 
-All sides are scaled by the same factor – the scale factor of the corresponding
-dilation. If the scale factor is ${k}{k|1.5|0.5,2,0.1}, then
+The second important fact is that in similar polygons, all sides are scaled
+__proportionally__ by the scale factor of the corresponding dilation. If the
+scale factor is ${k}{k|1.5|0.5,2,0.1}, then
 
-{.todo} equations
+{.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
+`|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
 
-If we don't know the scale factor, we can instead rearrange the equations like
-this:
+We can instead rearrange these equations and eliminate the scale factor
+entirely:
 
-{.todo} equations
+{.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
 
-{.todo} This means that, if we know the lengths of the sides of the of the polygon, as
-well as the scale factor, we can work out the sides of the other polygon.
+    // This proportional relationship is true not just for the sides of the
+    // polygon, but also for properties like diagonals.
+
+We can use this to solve real life problems that involve similar polygons – for
+example finding the length of missing sides, if we know some of the other sides.
+In the following section you will see a few examples.
 ::: column(width=240)
 
     x-geopad.sticky(style="width:240px; height: 360px;"): svg
-      - var x = ['a', 'b', 'c', 'd', 'e']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160], e:[90,130]}
-      - var next = {a:'b', b:'c', c:'d', d:'e', e:'a'}
-      - var prev = {a:'e', b:'a', c:'b', d:'c', e:'d'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow', e:''}
+      - var x = ['a', 'b', 'c', 'd']
+      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
+      - var next = {a:'b', b:'c', c:'d', d:'a'}
+      - var prev = {a:'d', b:'a', c:'b', d:'c'}
+      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
       each l in x
-        circle(name=l cx=initial[l][0] cy=initial[l][1] r=4 target=l)
+        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
         path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target="${l} ${next[l]}")
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(0.3).add({x:120,y:270})` target=l)
+        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
+        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
         path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target="${l} ${next[l]}")
+        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
 :::
 
 ---
 
 ### Similar Triangles
 
-Similarity is particularly powerful with triangles – as the following examples
-will shows.
+The concept of similarity is particularly powerful with triangles. We already
+know that the corresponding internal angles in similar polygons are equal.
 
-::: column(width=240)
+For triangles, the opposite is also true: this means that if you have two
+triangles with the same three angle sizes, then the triangles must be similar.
+
+And it gets even better! We know that the internal angles in a triangle always
+add up to [[180]]°. This means that if we know two angles in a triangle, we can
+always work out the third one.
+
+For similarity, this means that we also just need to check _two angles_ to
+determine if triangles are similar. If two triangles have two angles of the same
+size, then the third angle must also be the same in both.
+
+This result is sometimes called the [__AA Similarity Condition__](gloss:triangle-aa)
+for triangles. (The two _As_ stand for the two _angles_ we compare.)
+
+::: .theorem
+If two angles in one triangle are congruent to two angles in another triangle,
+the two triangles are similar.
+:::
+
+---
+
+Let's have a look at a few examples where this is useful:
+
+::: column(width=320)
 {.todo} IMAGE
 
 ::: column.grow
-Here you can see the image of a large lighthouse. Our goal is to measure its
-height, but unfortunately we cannot climb to the top.
+Here you can see the image of a large lighthouse. Together with a friend, you
+want to measure the height of the lighthouse, but unfortunately we cannot climb
+to the top.
 
-It turns out that, very well hidden, the diagram contains two similar triangles.
-Imagine drawing a line from the top of the light house and over the top of the
-head of one of your friends. Now you have two triangles: a large one that is the
-size of the lighthouse, and a small one that is the size of your friend.
+It turns out that, very well hidden, the diagram contains two similar triangles:
+one is formed by the lighthouse and its shadow, and one is formed by your friend
+and her shadow.
 
-You can easily measure the length of the bases of these triangles, for example
-by counting the number steps between your friend and the lighthouse. And you
-also know the height of your friend.
+Both triangles have one right angle at the bottom. The sun rays are parallel,
+which means that the other two angles at the bottom are
+[[corresponding|supplementary|opposite]] angles, and also equal. By the AA
+condition for triangles, these two must be similar.
 
-Together with what you know about similar polygons, this should be enough to
-calculate the height of the lighthouse:
+We can easily measure the length of the shadows, and we also know the height of
+your friend. Now we can use the proportionality of sides in similar triangles
+to find the height of the lighthouse:
 
 {.todo} equation
 
 Therefore the lighthouse is [[1.5]]m tall.
 :::
 
+---
+
+::: column(width=320)
+{.todo} IMAGE
 ::: column.grow
 We can use the same technique to measure distances on the ground. Here we want
-to find the width of a large river. Try drawing another two similar triangles.
+to find the width of a large river. There is a big tree on one side of the
+river, and I've got a stick that is one meter long.
 
+Try drawing another two similar triangles in this diagram.
 
-::: column(width=240)
-{.todo} IMAGE
+You can mark the point along the side of the river, that lies directly on the
+line of sight from the end of the stick to the tree. Then we can measure the
+distances to the stick, and to the point directly opposite the tree.
+
+Once again, these two triangles are similar because of the AA condition. They
+both have a right angle, and on pair of opposite angles.
+
+According to the proportionality rule, this means that
+
+{.todo} equation
+
+Therefore the width of the river is [[45]] meters.
 :::
-
-But how do we know 
-
-In both these examples
-
-
-
-Third Angle Theorem: If two angles in one triangle are congruent to two angles
-in another triangle, then the third pair of angles must also congruent.
-
-In other words, for triangles △ABC and △DEF, if ∠A≅∠D and ∠B≅∠E, then ∠C≅∠F.
-
-Notice that this theorem does not state that the triangles are congruent. That
-is because if two sets of angles are congruent, the sides could be different
-lengths. See the picture below.
-
-We know that the sum of angles in a triangle is always [[180]]°. This means that
-if we know two angles in a triangle, we can always work out the third one.
-
-
-
-
-For triangles, similarity is particularly useful. Two triangles are similar if
-all of its angles are equal. But since we can always work out the third angle
-if we are given the other two:
-
-Two triangles are similar 
-
-
-
-
-
-{.todo} Let’s investigate what happens when two different triangles have the
-same angle measures. If two angles in one triangle are congruent to two
-angles in another triangle, the two triangles are similar.
-
-{.todo} This is a shortcut for showing that two triangles are
-similar. If you know that two angles in one triangle are congruent to two angles
-in another, which is now enough information to show that the two triangles are
-similar. Then, you can use the similarity to find the lengths of the sides.
 
 ---
 
+Triangles are not just useful for measuring distances. In the next chapter we
+will learn a lot more about triangles and their properties.
 
-    // __Similarity on Rays__
+
+    // ### Similarity on Rays
+    //
+    // Theorem: If a ray bisects an angle of a triangle, then it divides the
+    // opposite side into segments that are proportional to the lengths of the
+    // other two sides.
     // 
-    // When an angle within a triangle is bisected, the bisector divides the triangle
-    // proportionally
-    // 
-    // By definition, AC−→− divides ∠BAD equally, so ∠BAC≅∠CAD. The proportional
-    // relationship is BCCD=ABAD.
-    // 
-    // Theorem: If a ray bisects an angle of a triangle, then it divides the opposite
-    // side into segments that are proportional to the lengths of the other two sides.
-    // 
-    // 
-    // The Triangle Proportionality Theorem states that if a line parallel to one side
-    // of a triangle intersects the other two sides, then it divides those sides
-    // proportionally. We can extend this theorem to a situation outside of triangles
-    // where we have multiple parallel lines cut by transverals.
+    // We can extend this theorem to a situation outside of triangles where we
+    // have multiple parallel lines cut by transverals.
     // 
     // Theorem: If three or more parallel lines are cut by two transversals, then they
     // divide the transversals proportionally.
