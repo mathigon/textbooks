@@ -7,13 +7,7 @@
 @import "styles/variables";
 
 
-// This fixes overflowing gloss bubbles at the very beginning.
-.article-wrap { margin-top: -120px; padding-top: 120px; }
-.chapter-hero { z-index: 0; }
-
-
-.fixed { position: relative; }
-.fixed-bg {
+x-step .background {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -39,8 +33,8 @@
 }
 
 
-.casino-felt {
-    .fixed-bg:before {
+.casino {
+    .background:before {
         background-image: url('/resources/probability/images/felt.png'), -webkit-radial-gradient(50% 40%, circle farthest-corner, #527C14, #243a0a);
         background-size: 180px 180px, auto;
     }
@@ -181,15 +175,11 @@ p .black { color: black; }
 
 
 
-.gameshow-lights {
-    .fixed-bg:before {
+.gameshow {
+    .background:before {
         background: url('/resources/probability/images/lights.jpg') no-repeat center top;
         background-size: cover;
     }
-
-    color: white;
-    h2, strong { color: white; }
-    .section-wrap { background: none; }
 
     .btn {
         background: fade(white, 80%);

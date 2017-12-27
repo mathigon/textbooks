@@ -15,7 +15,7 @@ Hydrogen, Iron, and many others. Many of these elements can have different types
 of atoms, called __isotopes__. For example, the element Carbon occurs in three
 different isotopes:
 
-    .row.img-block
+    figure.row
       .text-center(style="width: 170px")
         include svg/atom-1.svg
         div #[strong Carbon 12]
@@ -46,8 +46,7 @@ humans – absorb these materials, which means that our body contains some
 radioactive atoms. When we die, we no longer absorb any new atoms, and the ones
 that we have already absorbed start to [[decay|multiply|disappear]].
 
-    .img-block
-      include svg/chart.svg
+    figure: include svg/chart.svg
 
 ---
 > id: cd3
@@ -134,8 +133,7 @@ This information can give crucial information to geologists, archaeologists and
 biologists: to determine the age of mummies, the evolutinary ancestry between
 extinct animals, or when certain layers of rock in our Earth's crust formed.
 
-    .img-block
-      x-media(src="images/dinosaur.jpg" width=760, height=360)
+    figure: x-media(src="images/dinosaur.jpg" width=760, height=360)
 
 ---
 

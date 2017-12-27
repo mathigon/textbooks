@@ -44,7 +44,7 @@ export class Graph extends Evented {
     }
 
     slide($svg, {
-      start: function(posn) {
+      start(posn) {
         for (let v of _this.vertices) {
           if (Point.distance(posn, v.posn) < 18) {
             _this.dragging = v;
@@ -55,13 +55,13 @@ export class Graph extends Evented {
           }
         }
       },
-      move: function(posn) {
+      move(posn) {
         if (!_this.dragging) return;
         _this.dragging.posn = posn;
         _this.redraw();
         _this.stable = false;
       },
-      end: function() {
+      end() {
         _this.dragging = null;
       }
     });
@@ -70,35 +70,33 @@ export class Graph extends Evented {
   }
 
   load(vertices, edges, posn) {
-    let _this = this;
+    this.repulsion = 50 / Math.sqrt(vertices);
+    this.attraction = 0.1 * Math.sqrt(vertices) / edges.length * 200 / (this.width + this.height);
+    this.gravity = vertices/4;
+    this.damping = 0.9;
 
-    this.repulsion  = 50 / Math.sqrt(vertices);
-    this.attraction = 0.1 * Math.sqrt(vertices) / edges.length * 200 /(this.width + this.height);
-    this.gravity    = vertices/4;
-    this.damping    = 0.9;
+    this.$vertices.removeChildren();
+    this.$edges.removeChildren();
 
-    this.$vertices.clear();
-    this.$edges.clear();
+    this.vertices = list(vertices).map((v) => {
+      let x = posn ? (posn[v][0] || posn[v].x) : this.width  * (0.3 + 0.4 * Math.random());
+      let y = posn ? (posn[v][1] || posn[v].y) : this.height * (0.3 + 0.4 * Math.random());
 
-    this.vertices = list(vertices).map(function(v) {
-      let x = posn ? (posn[v][0] || posn[v].x) : _this.width  * (0.3 + 0.4 * Math.random());
-      let y = posn ? (posn[v][1] || posn[v].y) : _this.height * (0.3 + 0.4 * Math.random());
-
-      let $el = _this.options.icon ?
-        $N('path', { 'class': 'node', d: _this.options.icon }, _this.$vertices) :
-        $N('circle', { 'class': 'node', r: _this.options.r || 5 }, _this.$vertices);
-      if (_this.options.vertex) $el.css('fill', run(_this.options.vertex, v));
+      let $el = this.options.icon ?
+        $N('path', { 'class': 'node', d: this.options.icon }, this.$vertices) :
+        $N('circle', { 'class': 'node', r: this.options.r || 5 }, this.$vertices);
+      if (this.options.vertex) $el.css('fill', run(this.options.vertex, v));
       return { $el: $el, posn: { x: x, y: y }, neighbours: [], v: { x: 0, y: 0 } };
     });
 
-    this.edges = edges.map(function(e) {
-      let v1 = _this.vertices[e[0]];
-      let v2 = _this.vertices[e[1]];
+    this.edges = edges.map((e) => {
+      let v1 = this.vertices[e[0]];
+      let v2 = this.vertices[e[1]];
 
-      let type = (v1 === v2) || _this.options.arc ? 'path' : 'line';
-      let $el = $N(type, { 'class': 'link' }, _this.$edges);
-      if (_this.options.directed) $el.attr('marker-end', 'url(#arrow-head)');
-      if (_this.options.edge) $el.css('stroke', run(_this.options.edge, e[0], e[1]));
+      let type = (v1 === v2) || this.options.arc ? 'path' : 'line';
+      let $el = $N(type, { 'class': 'link' }, this.$edges);
+      if (this.options.directed) $el.setAttr('marker-end', 'url(#arrow-head)');
+      if (this.options.edge) $el.css('stroke', run(this.options.edge, e[0], e[1]));
 
       let edge = { $el: $el, vertices: [v1, v2] };
 
@@ -193,8 +191,7 @@ export class Graph extends Evented {
       if (_this.options.icon) {
         v.$el.translate(v.posn.x, v.posn.y);
       } else {
-        v.$el.attr('cx', v.posn.x);
-        v.$el.attr('cy', v.posn.y);
+        v.$el.setCenter(v.posn);
       }
     });
 
@@ -208,7 +205,7 @@ export class Graph extends Evented {
         let v0 = V(v[0] + v[1], v[1] - v[0]).scale(40);
         let v1 = V(v[0] - v[1], v[1] + v[0]).scale(40);
 
-        e.$el.attr('d', 'M'+e.vertices[0].posn.x+','+e.vertices[0].posn.y+
+        e.$el.setAttr('d', 'M'+e.vertices[0].posn.x+','+e.vertices[0].posn.y+
           'c'+v0[0]+','+v0[1]+','+v1[0]+','+v1[1]+',0,0');
 
         // arcs
@@ -217,14 +214,11 @@ export class Graph extends Evented {
         let dy = e.vertices[1].posn.y - e.vertices[0].posn.y;
         let dr = Math.sqrt(dx * dx + dy * dy);
 
-        e.$el.attr('d', 'M'+e.vertices[0].posn.x+','+e.vertices[0].posn.y+'A'+dr+','+
+        e.$el.setAttr('d', 'M'+e.vertices[0].posn.x+','+e.vertices[0].posn.y+'A'+dr+','+
           dr+' 0 0,1 '+e.vertices[1].posn.x+','+e.vertices[1].posn.y);
 
       } else {
-        e.$el.attr('x1', e.vertices[0].posn.x);
-        e.$el.attr('y1', e.vertices[0].posn.y);
-        e.$el.attr('x2', e.vertices[1].posn.x);
-        e.$el.attr('y2', e.vertices[1].posn.y);
+        e.$el.setLine(e.vertices[0].posn, e.vertices[1].posn);
       }
     });
 

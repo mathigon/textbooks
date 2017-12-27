@@ -81,7 +81,7 @@ mixin emoji(n)
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section(data-gloss="probability")
+x-step
 
   h2 Introduction
 
@@ -93,10 +93,10 @@ section(data-gloss="probability")
       p To distract from the difficult mathematical theories they were discussing, they  often played a simple game: they repeatedly tossed a coin – every #[em heads] was a point for Pascal and every #[em tails] was a point for Fermat. Whoever had more points after three coin tosses had to pay the bill.
     div(style="width: 360px"): img(src="/resources/probability/images/paris.jpg", width="360", height="254")
 
-section
+x-step
   p One day, however, they get interrupted after the first coin toss and Fermat has to leave urgently. Later, they wonder who should pay the bill, or if there is a fair way to split it. The first coin landed #[em heads] (a point for Pascal), so maybe Fermat should pay everything. However, there is a small chance that Fermat could have still won if the #[+blank('two next tosses|next coin toss')] would have been #[em tails].
 
-section
+x-step
   p Pascal and Fermat decided to write down all possible ways the game could have continued:
 
   .row
@@ -113,10 +113,10 @@ section
       img(src="/resources/probability/images/coins-4.png" width=136 height=48 alt="HTT")
       p.caption Fermat wins
 
-  p All four possible outcomes are equally likely, and Pascal wins in #[+blank('three|four|two')] of them. #[span.subsection(data-needs="blank-0") Thus they decided that Fermat should pay 3/4 of the bill and Pascal should pay 1/4].
+  p All four possible outcomes are equally likely, and Pascal wins in #[+blank('three|four|two')] of them. #[span.reveal(data-when="blank-0") Thus they decided that Fermat should pay 3/4 of the bill and Pascal should pay 1/4].
 
 
-section
+x-step
   p Pascal and Fermat had discovered the first important equation of probability: if an experiment has multiple possible outcomes which are all equally likely, then
 
   p.text-center Probability of an event = #[mfrac #[mrow Number of ways the event could happen]#[mrow Total number of possible outcomes]].
@@ -126,14 +126,14 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section#probLine
+x-step#probLine
   h2 What are Probabilities
 
   p A #[strong probability] is a number between 0 and 1 which describes the likelihood of a certain #[strong event]. A probability of 0 means that something is #[em impossible]; a probability of 1 means that something is #[em certain].
 
   p For example, it is #[+blank('impossible|certain')] that you will meet a real life dragon, and it is #[+blank('certain|impossible')] that the sun will rise tomorrow. The probability of a coin landing #[em heads] is exactly #[+blank('in the middle|the same')].
 
-  p.subsection(data-needs="blank-0 blank-1 blank-2") The probability of rolling a 6 on a die, or picking a particular suit from a deck of cards is #[+blank('less|more')] than 0.5 – which means unlikely. The probability of a good football team winning a match, or of a train arriving on time is #[+blank('more|less')] than 0.5 – which means likely.
+  p.x-step-step(data-needs="blank-0 blank-1 blank-2") The probability of rolling a 6 on a die, or picking a particular suit from a deck of cards is #[+blank('less|more')] than 0.5 – which means unlikely. The probability of a good football team winning a match, or of a train arriving on time is #[+blank('more|less')] than 0.5 – which means likely.
 
   .p-line.clearfix
     img(src="/resources/probability/images/line-1.png", width=140, height=140, style="width: 18.42%; opacity: 0", alt="dragon")
@@ -145,7 +145,7 @@ section#probLine
     img(src="/resources/probability/images/line-7.png", width=140, height=140, style="width: 14.47%; opacity: 0", alt="sun")
     img(src="/resources/probability/images/line-8.png", width=760, height=40, style="width: 100%", alt="line")
 
-section
+x-step
   p Here are some more events: drag them into the correct order, from likely to unlikely:
 
   x-sortable
@@ -159,7 +159,7 @@ section
   p We often use probabilities and likelihoods in everyday life, usually without thinking about it. What is the chance of rain tomorrow? How likely is it that I will miss the bus? What is the probability I will win this game?
 
 
-section
+x-step
   p Tossing a (fair) coin has two possible outcomes, #[em heads] and #[em tails], which are both equally likely. According to the equation above, the probability of a coin landing #[em heads] must be #[+frac(1, 2, true)] = 0.5, or 50%.
   //- TODO However, the equation is not very helpful if the different outcomes are not all equally likely, or if there are infinitely many possible outcomes.
 
@@ -167,12 +167,12 @@ section
 
   p Even events with tiny probabilities (like winning the lottery #[+emoji('1f389')]) #[em can still happen] – and they #[em do happen] all the time (but to a very small proportion of the people who participate).
 
-section
+x-step
   p Probabilities also depend on how much each of us knows about the event. For example, you might estimate that the chance of rain today is about 70%, while a meteorologist with detailed weather data might say the chance of rain is 64.2%.
 
   p Or suppose that I toss a coin and cover it up with my hands – the probability of tails is 50%. Now I peek at the result, but don't tell you. I know for certain what has happened, but for you the probability is #[+blank('still 50%|100%|not 50%')].
 
-section
+x-step
   p There are many different ways to think about probabilities, but in practice they often give the same results:
 
   .row
@@ -196,110 +196,107 @@ section
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-.fixed.casino-felt
-  .fixed-bg
+x-step#roulette.fill.dark.casino
+  h2 Analysing Roulette
 
-  section#roulette(data-gloss="roulette")
-    h2 Analysing Roulette
+  .roulette-wheel
+    .layer-2.wheel
+    .layer-3
+    .layer-4.wheel
+    .layer-5
+    .ball
+    svg(width=380, height=380): circle(cx=190, cy=190, r=190)
 
-    .roulette-wheel
-      .layer-2.wheel
-      .layer-3
-      .layer-4.wheel
-      .layer-5
-      .ball
-      svg(width=380, height=380): circle(cx=190, cy=190, r=190)
+  p Soon after their initial discovery, mathematicians started applying the laws of probability to many different parts of life – including casino games.
 
-    p Soon after their initial discovery, mathematicians started applying the laws of probability to many different parts of life – including casino games.
+  p One of these mathematicians was #[x-bio(xid='pearson') Karl Pearson] who analysed the results of roulette games published in the French newspaper #[em Le Monaco].
 
-    p One of these mathematicians was #[x-bio(xid='pearson') Karl Pearson] who analysed the results of roulette games published in the French newspaper #[em Le Monaco].
+  p Roulette consists of a wheel with the numbers from 1 to 36 coloured in #[strong.red red] and #[strong.black black], as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour. Their potential winning depends on the likelihood of each of these outcomes.
 
-    p Roulette consists of a wheel with the numbers from 1 to 36 coloured in #[strong.red red] and #[strong.black black], as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour. Their potential winning depends on the likelihood of each of these outcomes.
+x-step.fill.dark.casino
+  p Here is one of the many hundreds of newspaper extracts which Pearson collected and analysed. At first sight, it looks pretty random:
 
-  section
-    p Here is one of the many hundreds of newspaper extracts which Pearson collected and analysed. At first sight, it looks pretty random:
+  .newspaper
+    p Roulette results on 19 August 1823, Table 5:
+    div
+      for x in [13, 12, 30, 33, 3, 12, 29, 5, 8, 22, 23, 13, 5, 18, 14, 31, 36, 15, 18, 28, 32, 29, 11, 34, 23, 36, 8, 16, 2, 3, 9, 20, 16, 14, 15, 26, 31, 21, 15, 3, 33, 22, 12, 14, 9, 6, 30, 13, 33, 5, 28, 17, 27, 6, 5, 34, 11, 18, 32, 6, 9, 31, 29, 2, 18, 35, 6, 1, 34, 28, 1, 10]
+        span(class=colour(x))= x
 
-    .newspaper
-      p Roulette results on 19 August 1823, Table 5:
-      div
-        for x in [13, 12, 30, 33, 3, 12, 29, 5, 8, 22, 23, 13, 5, 18, 14, 31, 36, 15, 18, 28, 32, 29, 11, 34, 23, 36, 8, 16, 2, 3, 9, 20, 16, 14, 15, 26, 31, 21, 15, 3, 33, 22, 12, 14, 9, 6, 30, 13, 33, 5, 28, 17, 27, 6, 5, 34, 11, 18, 32, 6, 9, 31, 29, 2, 18, 35, 6, 1, 34, 28, 1, 10]
-          span(class=colour(x))= x
+  p A roulette wheel has the same number of red and black numbers. If we ignore the green 0 (which means the casino wins) we would expect the number of red and black numbers to be #[+blank('approximately the same|exactly equal')]. Let’s check that this is indeed the case for the set of results above.
 
-    p A roulette wheel has the same number of red and black numbers. If we ignore the green 0 (which means the casino wins) we would expect the number of red and black numbers to be #[+blank('approximately the same|exactly equal')]. Let’s check that this is indeed the case for the set of results above.
+  +barchart([['Red', 37, 'r'], ['Black', 35, 'b']])
 
-    +barchart([['Red', 37, 'r'], ['Black', 35, 'b']])
+x-step.fill.dark.casino
+  p This looks pretty evenly distributed – there is a small difference between the number of red and black results, but that is always to be expected in probability.
 
-  section
-    p This looks pretty evenly distributed – there is a small difference between the number of red and black results, but that is always to be expected in probability.
+  p However, Pearson didn’t stop here. He realised that if the results were completely random, then each of the four possible pairs of two consecutive colours should also be equally likely. Again we can count the number of occurrences in our example:
 
-    p However, Pearson didn’t stop here. He realised that if the results were completely random, then each of the four possible pairs of two consecutive colours should also be equally likely. Again we can count the number of occurrences in our example:
+  +barchart([['RR', 14, 'r'], ['RB', 24, 'rb'], ['BR', 24, 'rb'], ['BB', 9, 'b']])
 
-    +barchart([['RR', 14, 'r'], ['RB', 24, 'rb'], ['BR', 24, 'rb'], ['BB', 9, 'b']])
+x-step.fill.dark.casino
+  p For some reasons, it seems that #[strong.red RR] and #[strong.black BB] happen much #[+blank('less frequently|more frequently')] than #[strong.red R]#[strong.black B] and #[strong.red B]#[strong.black R], even though they should all have the same probability. Of course, we might have just been #[em unlucky] in this particular sequence of results – but Pearson tested many thousands of results and always found the same.
 
-  section
-    p For some reasons, it seems that #[strong.red RR] and #[strong.black BB] happen much #[+blank('less frequently|more frequently')] than #[strong.red R]#[strong.black B] and #[strong.red B]#[strong.black R], even though they should all have the same probability. Of course, we might have just been #[em unlucky] in this particular sequence of results – but Pearson tested many thousands of results and always found the same.
+x-step.fill.dark.casino
+  p It gets even worse if we look at triples of results. Each of the 8 possible triples of colours should be equally likely, but that is clearly not the case here:
 
-  section
-    p It gets even worse if we look at triples of results. Each of the 8 possible triples of colours should be equally likely, but that is clearly not the case here:
+  +barchart([['RRR', 3, 'r'], ['RRB', 10, 'rrb'], ['BRR', 10, 'rrb'], ['RBR', 15, 'rrb'], ['BRB', 14, 'bbr'], ['RBB', 8, 'bbr'], ['BBR', 8, 'bbr'], ['BBB', 2, 'b']])
 
-    +barchart([['RRR', 3, 'r'], ['RRB', 10, 'rrb'], ['BRR', 10, 'rrb'], ['RBR', 15, 'rrb'], ['BRB', 14, 'bbr'], ['RBB', 8, 'bbr'], ['BBR', 8, 'bbr'], ['BBB', 2, 'b']])
+  p It seems that in this particular casino, the colours alternate much more often than one would expect. There are hardly any long sequences of the same colour (#[strong.red RRR] or #[strong.black BBB]).
 
-    p It seems that in this particular casino, the colours alternate much more often than one would expect. There are hardly any long sequences of the same colour (#[strong.red RRR] or #[strong.black BBB]).
+  p Pearson calculated that the probability of seeing results which were this skewed was less than 1 in 100,000,000! He assumed that the Roulette wheels were rigged to create higher profits for the Casino – and wrote many angry letters to expose this scam.
 
-    p Pearson calculated that the probability of seeing results which were this skewed was less than 1 in 100,000,000! He assumed that the Roulette wheels were rigged to create higher profits for the Casino – and wrote many angry letters to expose this scam.
+x-step.fill.dark.casino
+  .row
+    div(style="width: 300px")
+      x-media(src="/resources/probability/images/cocktails.jpg", credit="© Depositphotos / serrnovik", width=300, height=185)
+    .grow
+      p When he finally travelled to Monte Carlo, he discovered that the reason for the skewed results was of a very different nature: the journalists who were supposed to be recording the results were instead just sitting in the bar of the casino, drinking, and making up random colours…
 
-  section
-    .row
-      div(style="width: 300px")
-        x-media(src="/resources/probability/images/cocktails.jpg", credit="© Depositphotos / serrnovik", width=300, height=185)
-      .grow
-        p When he finally travelled to Monte Carlo, he discovered that the reason for the skewed results was of a very different nature: the journalists who were supposed to be recording the results were instead just sitting in the bar of the casino, drinking, and making up random colours…
+x-step#randomSequence.fill.dark.casino
+  p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour) and overestimate likely ones (alternating colours). This can be used effectively to detect fraud in banking and insurance.
 
-  section#randomSequence
-    p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour) and overestimate likely ones (alternating colours). This can be used effectively to detect fraud in banking and insurance.
+  p Here you can try for yourself if you are better than the journalists: write down a sequence of Rs and Bs, and find out how random it really is:
 
-    p Here you can try for yourself if you are better than the journalists: write down a sequence of Rs and Bs, and find out how random it really is:
+  label.newspaper: input(type="text", placeholder="RBBRRBBBRRRBRBRRB")
+  p.text-center(style="margin-top: -1em; font-family: monospace") Randomness Score: #[span.score 100]/100
 
-    label.newspaper: input(type="text", placeholder="RBBRRBBBRRRBRBRRB")
-    p.text-center(style="margin-top: -1em; font-family: monospace") Randomness Score: #[span.score 100]/100
+x-step.fill.dark.casino
+  h2 Beat the Dealer
 
-  section(data-gloss="blackjack")
-    h2 Beat the Dealer
+  .row
+    .grow
+      p While Pearson only analysed previous Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio(xid="thorp") Edward Thorp], who invented #[em card counting] – a technique that allowed him to beat casinos at #[x-gloss(xid="blackjack") Blackjack].
 
-    .row
-      .grow
-        p While Pearson only analysed previous Roulette results, others tried to use mathematics to increase their chances of winning in casinos. One of these was #[x-bio(xid="thorp") Edward Thorp], who invented #[em card counting] – a technique that allowed him to beat casinos at #[x-gloss(xid="blackjack") Blackjack].
+      p He later turned his focus to Roulette: believing that, if you knew the exact position and speed of the ball in a Roulette wheel, you should be able to use Physics to approximately predict the outcome. After the dealer sets the roulette wheel spinning, there are just a few seconds when you are still allowed to place new bets. Unfortunately this time is much too short for humans to calculate the outcome in their head.
 
-        p He later turned his focus to Roulette: believing that, if you knew the exact position and speed of the ball in a Roulette wheel, you should be able to use Physics to approximately predict the outcome. After the dealer sets the roulette wheel spinning, there are just a few seconds when you are still allowed to place new bets. Unfortunately this time is much too short for humans to calculate the outcome in their head.
-
-      div(style="width: 150px")
-        .book
-          img(src="/resources/probability/images/beat-the-dealer.jpg", width=150, height=250)
+    div(style="width: 150px")
+      .book
+        img(src="/resources/probability/images/beat-the-dealer.jpg", width=150, height=250)
 
 
-  section(data-gloss="information")
-    img.computer(src="/resources/probability/images/wearable-computer.png", width=275, height=364)
+x-step.fill.dark.casino
+  img.computer(src="/resources/probability/images/wearable-computer.png", width=275, height=364)
 
-    p At the Massachusetts Institute of Technology, Thorp discussed his ideas with #[x-bio(xid="shannon") Claude Shannon], another mathematician and the father of #[x-gloss(xid="information") information theory]. Together they decided to build the first ever #[em wearable computer], decades before the likes of Google Glass or Apple Watch.
+  p At the Massachusetts Institute of Technology, Thorp discussed his ideas with #[x-bio(xid="shannon") Claude Shannon], another mathematician and the father of #[x-gloss(xid="information") information theory]. Together they decided to build the first ever #[em wearable computer], decades before the likes of Google Glass or Apple Watch.
 
-    p The computer was roughly the size of a pack of cigarettes and strapped around their waist. A set of wires ran down to their shoe, which they tapped whenever the ball crossed a certain marker on the roulette wheel. That allowed the computer to calculate its speed, and predict where it would end up. Another set of wires led from the computer to an earpiece, which produced different tones based on different outcomes.
+  p The computer was roughly the size of a pack of cigarettes and strapped around their waist. A set of wires ran down to their shoe, which they tapped whenever the ball crossed a certain marker on the roulette wheel. That allowed the computer to calculate its speed, and predict where it would end up. Another set of wires led from the computer to an earpiece, which produced different tones based on different outcomes.
 
-  section
-    .img-block
-      x-media(src="/resources/probability/images/las-vegas.jpg", credit="© Depositphotos / kobbydagan", width=760, height=345)
+x-step.fill.dark.casino
+  figure
+    x-media(src="/resources/probability/images/las-vegas.jpg", credit="© Depositphotos / kobbydagan", width=760, height=345)
 
-    p During the summer of 1961, Thorp and Shannon successfully tried their computer in Las Vegas. But while they made some money, the computer – which even contained parts of model airplanes – was not robust enough to be used at a larger scale.
+  p During the summer of 1961, Thorp and Shannon successfully tried their computer in Las Vegas. But while they made some money, the computer – which even contained parts of model airplanes – was not robust enough to be used at a larger scale.
 
-    p Thorp wrote about their results in a scientific paper, and of course, computers were later forbidden in casinos. Thorp even got banned from all casinos in Las Vegas, but by then he had already moved on to yet more profitable ventures: using mathematics and computers on the stock market.
+  p Thorp wrote about their results in a scientific paper, and of course, computers were later forbidden in casinos. Thorp even got banned from all casinos in Las Vegas, but by then he had already moved on to yet more profitable ventures: using mathematics and computers on the stock market.
 
-    //- p Shannon cryptography and code-breaking during World War II, and would go on to become known as the father of information theory -- and, indeed, the information age. Shannon taught him to juggle three balls, and that he rode a unicycle on a steel cable strung between two tree stumps. "He later reached his goal," he wrote, "which was to juggle the balls while riding the unicycle on the tightrope."
+  //- p Shannon cryptography and code-breaking during World War II, and would go on to become known as the father of information theory -- and, indeed, the information age. Shannon taught him to juggle three balls, and that he rode a unicycle on a steel cable strung between two tree stumps. "He later reached his goal," he wrote, "which was to juggle the balls while riding the unicycle on the tightrope."
 
-    p After this short trip through history, let’s get back to some actual mathematics…
+  p After this short trip through history, let’s get back to some actual mathematics…
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section(data-gloss="probTree")
+x-step
   h2 Probability Trees
 
   p In real life, coins never have exactly a probability of 0.5. It might be 0.4932 or 0.500012, depending on their exact shape or physical properties. In mathematics we don’t have to worry about these tiny inaccuracies: we can simply assume that our “mathematical model” of a coin has exactly a 0.5 probability of landing heads and is truly random. With this simplification, we can start answering much more interesting questions.
@@ -330,7 +327,7 @@ section(data-gloss="probTree")
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section(data-gloss="venn")
+x-step
   h2 Venn Diagrams
   p.todo More coming soon…
 
@@ -342,7 +339,7 @@ section(data-gloss="venn")
 
   // p There are 200 kids in a school. 140 students are taking Mathematics, and 100 students are taking Biology. 80 students are studying both Maths and Biology.
 
-  // p The corresponding Venn Diagram corresponds to two overlapping circles for Maths and Biology. We can write 80 in their intersection.
+  // p The corresponding Venn Diagram corresponds to two overlapping circles for Maths and Biology. We can write 80 in their interx-step.
 
   // p There are 140 - 80 = 60 students studying just Mathematics, so we write than in the remaining part of the Maths circle.  There are 100 - 80 = 20 students studying just Biology so we write that in the remaining part of the Biology circle.
 
@@ -351,7 +348,7 @@ section(data-gloss="venn")
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+x-step
   h2 Predicting the Future
 
   p If we roll two dice at once and add up their scores we could get results from #[+input(2)] up to #[+input(12)]. However, not all outcomes are equally likely: some results can only happen one way (for example, to get #[span.dice.outline 12] you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (for example, to get #[span.dice.outline 5]) you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
@@ -425,12 +422,12 @@ section
       td(colspan=5)
 
 
-  p The most likely result when rolling two dice is #[span.dice.outline 7]. There are #[+input(6)] outcomes where the sum is 7, and #[+input(36)] outcomes in total, #[span.subsection(data-needs="blank-0 blank-1") so the probability of getting a 7 is #[+frac(6, 36, true)] = 0.1666.]
+  p The most likely result when rolling two dice is #[span.dice.outline 7]. There are #[+input(6)] outcomes where the sum is 7, and #[+input(36)] outcomes in total, #[span.reveal(data-when="blank-0 blank-1") so the probability of getting a 7 is #[+frac(6, 36, true)] = 0.1666.]
 
   p The least likely outcomes are #[span.dice.outline 2] and #[span.dice.outline 12], each with a probability of #[+frac(1, 36, true)] = 0.0277.
 
 
-section#diceSimulation
+x-step#diceSimulation
 
   p It is impossible to forecast the outcome of a single coin toss or die roll. However, using probability we can very accurately predict the outcome of #[em many] dice.
 
@@ -456,62 +453,59 @@ section#diceSimulation
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-.fixed.gameshow-lights
-  .fixed-bg
+x-step#montyhall.fill.dark.gameshow
+  h2 Monty Hall
 
-  section#montyhall
-    h2 Monty Hall
+  p Welcome to the most spectacular game show on the planet! You now have a once-in-a-lifetime chance of winning a fantastic sports car which is hidden behind one of these three doors. Unfortunately, there are only goats behind the other two doors. Simply tap on one to make your choice!
 
-    p Welcome to the most spectacular game show on the planet! You now have a once-in-a-lifetime chance of winning a fantastic sports car which is hidden behind one of these three doors. Unfortunately, there are only goats behind the other two doors. Simply tap on one to make your choice!
+  .monty-hall.selectable
+    .door-box: .door
+    .door-box: .door
+    .door-box: .door
+    .floor
 
-    .monty-hall.selectable
-      .door-box: .door
-      .door-box: .door
-      .door-box: .door
-      .floor
+  .reveal(data-when="door-select")
+    p Are you sure about that? You can still change your mind by tapping a different door…
+    p.text-center: button.btn.btn-bounce.sure I’m sure!
 
-    .subsection(data-needs="door-select")
-      p Are you sure about that? You can still change your mind by tapping a different door…
-      p.text-center: button.btn.btn-bounce.sure I’m sure!
+  .reveal(data-when="door-sure")
+    p A great choice, but let me make life a little easier for you. I'll open one of the other doors with a goat, so that there are only two doors left for you to pick from. Do you want to stick with your choice, or do you want to swap?
+    p.text-center
+      button.btn.btn-bounce.swap I want to stay!
+      button.btn.btn-bounce.swap I want to swap!
 
-    .subsection(data-needs="door-sure")
-      p A great choice, but let me make life a little easier for you. I'll open one of the other doors with a goat, so that there are only two doors left for you to pick from. Do you want to stick with your choice, or do you want to swap?
-      p.text-center
-        button.btn.btn-bounce.swap I want to stay!
-        button.btn.btn-bounce.swap I want to swap!
+  .reveal(data-when="door-swap")
+    p Ok – let's see how you did…
+    p.text-center: button.btn.btn-bounce.show Open the doors…
 
-    .subsection(data-needs="door-swap")
-      p Ok – let's see how you did…
-      p.text-center: button.btn.btn-bounce.reveal Open the doors…
+  .reveal(data-when="door-revealed")
+    p.monty-choice-right(style="display: none") Looks like swapping doors was a good choice. Congratulations, you just won a beautiful new sports car!
+    p.monty-choice-wrong Sorry – it seems like time time you only won a goat. But don't worry, you can play again!
+    p.text-center: button.btn.btn-bounce.reset Replay game
 
-    .subsection(data-needs="door-revealed")
-      p.monty-choice-right(style="display: none") Looks like swapping doors was a good choice. Congratulations, you just won a beautiful new sports car!
-      p.monty-choice-wrong Sorry – it seems like time time you only won a goat. But don't worry, you can play again!
-      p.text-center: button.btn.btn-bounce.reset Replay game
+x-step.fill.dark.gameshow
+  p If you play this game many times, you’ll notice that you’re more likely to win if you #[+blank('swap|don’t swap')] after the first door is opened#[span.required(data-needs="blank-0") , rather than sticking with your initial choice.]
 
-  section
-    p If you play this game many times, you’ll notice that you’re more likely to win if you #[+blank('swap|don’t swap')] after the first door is opened#[span.required(data-needs="blank-0") , rather than sticking with your initial choice.]
+  .reveal(data-when="blank-0")
+    p But how can this be – surely the car is equally likely to be behind each of the two remaining doors?
 
-    .subsection(data-needs="blank-0")
-      p But how can this be – surely the car is equally likely to be behind each of the two remaining doors?
+x-step.fill.dark.gameshow
+  p The explanation is very subtle. When you pick the initial door, the probability of being correct is #[+frac(1,3, true)] and the probability of being wrong is #[+frac(2,3, true)].
+  p.text-center: include svg/monty-1.svg
 
-  section
-    p The explanation is very subtle. When you pick the initial door, the probability of being correct is #[+frac(1,3, true)] and the probability of being wrong is #[+frac(2,3, true)].
-    p.text-center: include svg/monty-1.svg
+x-step.fill.dark.gameshow
+  p After the game master opens one of the other doors, the probability of being wrong is #[em still] #[+frac(2,3, true)], except now all this probability is on just one door. This means that swapping doors #[+blank('doubles|triples|halves')] your chance of winning.
+  p.text-center: include svg/monty-2.svg
 
-  section
-    p After the game master opens one of the other doors, the probability of being wrong is #[em still] #[+frac(2,3, true)], except now all this probability is on just one door. This means that swapping doors #[+blank('doubles|triples|halves')] your chance of winning.
-    p.text-center: include svg/monty-2.svg
-
-  section
-    p Even if this doesn't seem very intuitive, we can prove that it is correct – simply by listing all different possibilities:
-    .img-block: img(src="/resources/probability/images/monty.png", width="694", height="468")
-    p Out of the 9 possibilities #[+input(6)] need you to switch doors, to win. This gives a chance of #[+frac(6,9, true)] = #[+frac(2,3, true)] like before.
+x-step.fill.dark.gameshow
+  p Even if this doesn't seem very intuitive, we can prove that it is correct – simply by listing all different possibilities:
+  figure: img(src="/resources/probability/images/monty.png", width="694", height="468")
+  p Out of the 9 possibilities #[+input(6)] need you to switch doors, to win. This gives a chance of #[+frac(6,9, true)] = #[+frac(2,3, true)] like before.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-section
+x-step
   h2 True Randomness
 
   .row
@@ -523,12 +517,12 @@ section
     div(style="width: 240px")
       x-media(src="/resources/probability/images/coins.jpg", width=240, height=343, credit="© Depositphotos / Whiterabbit83")
 
-section
+x-step
   p One could argue that tossing a coin really isn’t random at all – it is #[em chaotic]. That means that the underlying physical principles are so complex that even tiny changes to the starting conditions (speed, angle) can have a dramatic effect on the final outcome. We can use coins in games and gambling not because they are random, but because it is so incredibly difficult (and for practical purposes impossible) to predict the result.
 
   p The same principle applies to many other “random” events in life, including dice and roulette wheels. They are not really #[em random], we simply don’t have the tools to do the mathematical calculations accurately enough to predict the outcome.
 
-section#radioactive(data-gloss="radioactivity")
+x-step#radioactive
   .row
     .grow
       p But #[em true randomness] does exists – at the very foundations of matter. A block of radioactive material consists of millions of atoms which decay over time: they fall apart into smaller atoms while emitting dangerous radiation.
@@ -540,16 +534,16 @@ section#radioactive(data-gloss="radioactivity")
 
   //- TODO Possible probability distributions of the position of an electron in a hydrogen atom. Lighter areas represent more likely locations of the electron.
 
-section(data-gloss="quantum")
+x-step
   p #[x-gloss(xid="radioactive") Radioactive decay] of atoms is caused by forces which act at much smaller scales within atoms, and which can be explained using #[x-gloss(xid="quantum") Quantum mechanics]. During the last century, physicists like #[x-bio(xid='planck') Max Planck] and #[x-bio(xid='dirac') Paul Dirac] discovered that fundamental particles have a mindblowing property: they can be in multiple different places #[em at the same time]. They don't have a fixed position, but instead a probability distribution (or wave function) which tells us how likely it is we are going to find them at a particular position.
 
   p This incredible property is used by Quantum computers. Conventional computers can only ever do one computation at a time. Quantum computers can use the properties of subatomic particles to do many calculations at the same time – and that makes them significantly faster.
 
-  .img-block
+  figure
     x-media(lightbox, src="/resources/probability/images/quantum.jpg", width="760", height="390", credit="© Depositphotos / agsandrew")
     p.caption The crazy world of subatomic particles
 
-section
+x-step
   p We can’t really #[em understand] or #[em explain] quantum mechanics – we just have to accept that it is what is predicted by mathematical theory and confirmed by physical observations. The curious quantum effects have only ever been observed on tiny scales of a few atoms, and it is not clear how they affect us in everyday life. But it is the only known effect in nature that produces #[em true randomness].
 
   //- TODO Lotto: Tickets needed to guarantee 2/3 matches

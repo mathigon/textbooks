@@ -27,14 +27,12 @@ function animate(callback, precision = 0.0001) {
 
 // -----------------------------------------------------------------------------
 
-export function roulette(section, chapter) {
-  section.one('enter', function() {
-    chapter.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
-  });
+export function roulette($section) {
+  $section.$chapter.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
 
-  let $wheels = section.$el.findAll('.wheel');
-  let $ball = section.$el.find('.ball');
-  let $target = section.$el.find('circle');
+  let $wheels = $section.$$('.wheel');
+  let $ball = $section.$('.ball');
+  let $target = $section.$('circle');
 
   let center, history, animation;
   let tapAngle = 0;
@@ -55,7 +53,7 @@ export function roulette(section, chapter) {
     let ballOffset;
     let ballAngle = 0;
 
-    animation = animate(function (t, dt) {
+    animation = animate((t, dt) => {
       wheelSpeed *= 0.995;
       wheelAngle = (wheelAngle + dt * wheelSpeed) % (2 * Math.PI);
 
@@ -74,21 +72,21 @@ export function roulette(section, chapter) {
   }
 
   slide($target, {
-    start: function(posn) {
+    start(posn) {
       if (animation) animation.cancel();
-      center = $wheels[0].clientCenter;
+      center = $wheels[0].boxCenter;
       tapAngle = Math.atan2(posn.y - center.y, posn.x - center.x);
       history = [[tapAngle, Date.now()]];
       $ball.hide();
     },
-    move: function (posn) {
+    move(posn) {
       let dragAngle = Math.atan2(posn.y - center.y, posn.x - center.x);
       let angle = wheelAngle + dragAngle - tapAngle;
       draw(angle);
       history.push([angle, Date.now()]);
       if (history.length > 5) history.shift();
     },
-    end: function (posn) {
+    end(posn) {
       let dragAngle = Math.atan2(posn.y - center.y, posn.x - center.x);
       wheelAngle += (dragAngle - tapAngle);
       if (history.length >= 5) {
@@ -100,7 +98,7 @@ export function roulette(section, chapter) {
 
 // -----------------------------------------------------------------------------
 
-export function randomSequence(section) {
+export function randomSequence($section) {
 
   function generatePossibilities(len) {
     if (len <= 1) return [['R', 'B']];
@@ -138,26 +136,26 @@ export function randomSequence(section) {
     return clamp(result, 0, 1);
   }
 
-  let $score = section.$el.find('.score');
-  section.$el.find('input').change(function(str) {
+  let $score = $section.$('.score');
+  $section.$('input').change(str => {
     $score.text = Math.round(compute(str.toUpperCase()) * 100);
   });
 }
 
 
-export function probLine(section) {
-  let items = section.$el.findAll('.p-line img');
+export function probLine($section) {
+  let items = $section.$$('.p-line img');
 
-  section.onScore('blank-0', function() { items[0].enter('pop'); });
-  section.onScore('blank-1', function() { items[6].enter('pop'); });
-  section.onScore('blank-2', function() { items[3].enter('pop'); });
-  section.onScore('blank-3', function() { items[1].enter('pop'); items[2].enter('pop', 500, 300); });
-  section.onScore('blank-4', function() { items[4].enter('pop'); items[5].enter('pop', 500, 300); });
+  $section.onScore('blank-0', () => { items[0].enter('pop'); });
+  $section.onScore('blank-1', () => { items[6].enter('pop'); });
+  $section.onScore('blank-2', () => { items[3].enter('pop'); });
+  $section.onScore('blank-3', () => { items[1].enter('pop'); items[2].enter('pop', 500, 300); });
+  $section.onScore('blank-4', () => { items[4].enter('pop'); items[5].enter('pop', 500, 300); });
 }
 
 // -----------------------------------------------------------------------------
 
-export function diceSimulation(section) {
+export function diceSimulation($section) {
 
   let scores = [];
 
@@ -171,7 +169,7 @@ export function diceSimulation(section) {
     6:  [0, 0, 0, 0, 0, 0, 0.000021, 0.00013, 0.00045, 0.0012, 0.0027, 0.0054, 0.0098, 0.016, 0.025, 0.036, 0.048, 0.061, 0.074, 0.084, 0.090, 0.093, 0.090, 0.084, 0.074, 0.061, 0.048, 0.036, 0.025, 0.016, 0.0098, 0.0054, 0.0027, 0.0012, 0.00045, 0.00013, 0.000021]
   };
 
-  section.model.set('probTable', function(d) {
+  $section.model.set('probTable', function(d) {
     let pmax  = probabilities[d][Math.round(7 * d/2)];
     let keys = list(d, d * 6);
 
@@ -185,7 +183,7 @@ export function diceSimulation(section) {
   });
 
   function rollDice() {
-    let d = section.model.d;
+    let d = $section.model.d;
     let x = random.weighted(probabilities[d]);
 
     scores[x] += 1;
@@ -197,10 +195,10 @@ export function diceSimulation(section) {
     }
   }
 
-  let buttons = section.$el.findAll('.btn');
-  buttons[0].on('click', function() { rollDice(); });
-  buttons[1].on('click', function() { for (let i = 0; i < 100; ++i) setTimeout(rollDice, 100 * i); });
-  buttons[2].on('click', function() { for (let i = 0; i < 1000; ++i) setTimeout(rollDice, 10 * i); });
+  let buttons = $section.$$('.btn');
+  buttons[0].on('click', rollDice);
+  buttons[1].on('click', () => { for (let i = 0; i < 100; ++i) setTimeout(rollDice, 100 * i); });
+  buttons[2].on('click', () => { for (let i = 0; i < 1000; ++i) setTimeout(rollDice, 10 * i); });
 }
 
 // -----------------------------------------------------------------------------
@@ -214,39 +212,39 @@ class OneTimeButton {
     $els.forEach(($el, i) => {
       $el.on('click', () => {
         callback(i);
-        for (let $el of $els) $el.attr('disabled', true);
+        for (let $el of $els) $el.setAttr('disabled', true);
       });
     });
   }
 
   reset() {
-    for (let $el of this.$els) $el.attr('disabled', null);
+    for (let $el of this.$els) $el.removeAttr('disabled');
   }
 }
 
-export function montyhall(section) {
+export function montyhall($section) {
   let selected = null;
   let decided = false;
   let opened = null;
   let car = null;
   let attempt = 0;
 
-  let $monty = section.$el.find('.monty-hall');
-  let $doors = $monty.findAll('.door-box');
+  let $monty = $section.$('.monty-hall');
+  let $doors = $monty.$$('.door-box');
 
   $doors.forEach(function($d, i) {
-    $d.find('.door').on('click', function() {
+    $d.$('.door').on('click', function() {
       if (i === selected || decided) return;
       if (selected !== null) $doors[selected].removeClass('selected');
 
       selected = i;
       $d.addClass('selected');
-      section.score('door-select');
-      section.subsections[0].$el.addClass('on');
+      $section.score('door-select');
+      $section.$reveals[0].addClass('visible');
     });
   });
 
-  let $sure = section.$el.find('.sure');
+  let $sure = $section.$('.sure');
   let sureBtn = new OneTimeButton($sure, function() {
     [car, opened] = random.shuffle([0, 1, 2].filter(i => i !== selected));
     $doors[car].addClass('car');
@@ -254,58 +252,58 @@ export function montyhall(section) {
     $monty.removeClass('selectable');
     setTimeout(function() {
       $doors[opened].addClass('open');
-      section.score('door-sure');
-      section.subsections[1].$el.addClass('on');
+      $section.score('door-sure');
+      $section.$reveals[1].addClass('visible');
     }, 1000);
   });
 
-  let $swap = section.$el.findAll('.swap');
+  let $swap = $section.$$('.swap');
   let swapBtn = new OneTimeButton($swap, function(i) {
     if (i === 1) {
       $doors[selected].removeClass('selected');
       selected = car;
       $doors[selected].addClass('selected');
-      section.$el.find('.monty-choice-right').show();
-      section.$el.find('.monty-choice-wrong').hide();
+      $section.$('.monty-choice-right').show();
+      $section.$('.monty-choice-wrong').hide();
     }
     setTimeout(function() {
-      section.score('door-swap');
-      section.subsections[2].$el.addClass('on');
+      $section.score('door-swap');
+      $section.$reveals[2].addClass('visible');
     }, 1000);
   });
 
-  let $reveal = section.$el.find('.reveal');
+  let $reveal = $section.$('.show');
   let revealBtn = new OneTimeButton($reveal, function() {
     $doors.forEach($d => { $d.addClass('open'); });
     setTimeout(function() {
-      section.score('door-revealed');
-      section.subsections[3].$el.addClass('on');
+      $section.score('door-revealed');
+      $section.$reveals[3].addClass('visible');
     }, 1000);
   });
 
-  section.$el.find('.reset').on('click', function() {
+  $section.$('.reset').on('click', function() {
     for (let b of [sureBtn, swapBtn, revealBtn]) b.reset();
-    for (let s of section.subsections) s.$el.removeClass('on');
+    for (let $r of $section.$reveals) $r.removeClass('visible');
     for (let $d of $doors) $d.removeClass('car selected open');
-    section.$el.find('.monty-choice-right').hide();
-    section.$el.find('.monty-choice-wrong').show();
+    $section.$('.monty-choice-right').hide();
+    $section.$('.monty-choice-wrong').show();
     selected = opened = car = null;
     decided = false;
     $monty.addClass('selectable');
     attempt += 1;
   });
 
-  setTimeout(function() {
-    if (section.completed) {
-      for (let s of section.subsections) s.$el.removeClass('on');
+  setTimeout(() => {
+    if ($section.isCompleted) {
+      for (let $r of $section.$reveals) $r.removeClass('visible');
     }
-  });
+  }, 100);
 }
 
 // -----------------------------------------------------------------------------
 
-export function radioactive(section) {
-  let $box = section.$el.find('.radioactive');
+export function radioactive($section) {
+  let $box = $section.$('.radioactive');
 
   let $atoms = tabulate((x, y) => $N('circle', { cx: x * 20 + 10, cy: y * 20 + 10, r: 6 }, $box), 15, 10);
   $atoms = random.shuffle(flatten($atoms));
@@ -316,5 +314,5 @@ export function radioactive(section) {
     if ($atoms.length) setTimeout(decay, random.exponential($atoms.length / 20000));
   }
 
-  section.$el.find('.btn').one('click', decay);
+  $section.$('.btn').one('click', decay);
 }

@@ -87,11 +87,11 @@ export function caesar_cipher(section) {
   let $cipher = $('.cipher-text', section.$el);
 
   let codeBox = new CodeBox($plain, $cipher, {
-    chartCols:  section.$el.findAll('.freq-table-chart  .freq-col'),
-    plainCols:  section.$el.findAll('.freq-table-plain  .freq-col'),
-    cipherCols: section.$el.findAll('.freq-table-cipher .freq-col'),
-    plainBars:  section.$el.findAll('.letter-bar.plain'),
-    realBars:   section.$el.findAll('.letter-bar.real')
+    chartCols:  section.$el.$$('.freq-table-chart  .freq-col'),
+    plainCols:  section.$el.$$('.freq-table-plain  .freq-col'),
+    cipherCols: section.$el.$$('.freq-table-cipher .freq-col'),
+    plainBars:  section.$el.$$('.letter-bar.plain'),
+    realBars:   section.$el.$$('.letter-bar.real')
   });
 
   let shift = 0;

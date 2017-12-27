@@ -7,8 +7,9 @@
 
 import { last, tabulate, list } from '@mathigon/core';
 import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, Line, subsets } from '@mathigon/fermat';
-import { $I, $T, $C, $$C, $$T, $N, Colour, svgPointerPosn, animate, Draggable, Sketch } from '@mathigon/boost';
+import { $, $$, $N, Colour, svgPointerPosn, animate, Draggable } from '@mathigon/boost';
 import { Graph } from './graph';
+import { Sketch } from './sketch';
 
 
 // -----------------------------------------------------------------------------
@@ -39,24 +40,24 @@ const BLUE = '#1f7aff';
 const GREEN = '#31b304';
 const YELLOW = '#ff941f';
 
-export function GT_0_0(section, chapter) {
-  let $graph = $C('graph', section.$el);
+export function GT_0_0($section) {
+  let $graph = $section.$('.graph');
   new Graph($graph, 8, [[0,4],[4,5],[5,2],[5,1],[1,2],[2,3],[3,4],[3,6],[6,7],[7,3],[2,7]]);
 
-  section.onScore('blank-0', function() { $graph.removeClass('novertices'); });
-  section.onScore('blank-1', function() { $graph.removeClass('noedges'); });
-  section.onScore('blank-0 blank-1', function() { chapter.addHint(hints.firstGraphSolved); });
+  $section.onScore('blank-0', function() { $graph.removeClass('novertices'); });
+  $section.onScore('blank-1', function() { $graph.removeClass('noedges'); });
+  $section.onScore('blank-0 blank-1', function() { $section.$chapter.addHint(hints.firstGraphSolved); });
 }
 
-export function GT_0_1(section, _chapter) {
-  let graphs = $$C('graph', section.$el);
+export function GT_0_1($section) {
+  let graphs = $section.$$('.graph');
   new Graph(graphs[0], 7, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,5],[6,3]], { directed: true });
   new Graph(graphs[1], 9, [[0,1],[1,2],[2,3],[3,0],[1,3],[4,5],[5,6],[6,4],[7,8]]);
   new Graph(graphs[2], 4, [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,0],[0,3],[0,0],[1,1],[2,2],[3,3]], { arc: true });
 }
 
-export function GT_0_2(section) {
-  let graphs = $$C('graph', section.$el);
+export function GT_0_2($section) {
+  let graphs = $section.$$('.graph');
 
   new Graph(graphs[0], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[2,5]], { vertex: BLUE, edge: BLUE });
   new Graph(graphs[2], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]], { vertex: GREEN, edge: GREEN });
@@ -78,8 +79,8 @@ export function GT_0_2(section) {
   });
 }
 
-export function GT_0_3(section) {
-  let graphs = $$C('graph', section.$el);
+export function GT_0_3($section) {
+  let graphs = $section.$$('.graph');
 
   new Graph(graphs[0], 5, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,2]]);
   new Graph(graphs[1], 8, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,0],[0,2],[1,3],[2,4],[3,5],[4,6],[5,7],[6,0],[7,1]]);
@@ -91,30 +92,30 @@ export function GT_0_3(section) {
     { vertex: (v) => (v ? '#DDD' : RED) });
 }
 
-export function GT_0_4(section) {
-  let graphs = $$C('graph', section.$el);
+export function GT_0_4($section) {
+  let graphs = $section.$$('.graph');
   new Graph(graphs[0], 3, [[0,1],[1,2],[2,0]]);
   new Graph(graphs[1], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]]);
   new Graph(graphs[2], 7, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]);
 }
 
-export function GT_1_1(section) {
-  let g = new Graph($C('graph', section.$el), 5, [], { icon: person });
+export function GT_1_1($section) {
+  let g = new Graph($('.graph', $section), 5, [], { icon: person });
 
-  section.model.change(function() {
-    g.load(section.model.hnd, subsets(list(section.model.hnd), 2));
+  $section.model.watch((state) => {
+    g.load(state.hnd, subsets(list(state.hnd), 2));
     g.attraction /= 2;
     g.repulsion *= 2;
   });
 }
 
-export function GT_1_2(section) {
-  section.onScore('blank-1', function() {
-    setTimeout(function() { section.$el.addClass('complete'); }, 1000);
+export function GT_1_2($section) {
+  $section.onScore('blank-1', function() {
+    setTimeout(function() { $section.addClass('complete'); }, 1000);
   });
 
-  section.model.set('handshakeTable', function(n) {
-    let colours = Colour.rainbow(section.model.n);
+  $section.model.set('handshakeTable', function(n) {
+    let colours = Colour.rainbow($section.model.n);
 
     function makePerson(x, y) {
       let newX= (x>=y ? x+1 : x);
@@ -129,21 +130,21 @@ export function GT_1_2(section) {
   });
 }
 
-export function GT_1_3(section) {
-  let graphs = $$C('graph', section.$el);
+export function GT_1_3($section) {
+  let graphs = $$('.graph', $section);
   new Graph(graphs[0], 4, subsets(list(4), 2));
   new Graph(graphs[1], 5, subsets(list(5), 2));
   new Graph(graphs[2], 6, subsets(list(6), 2));
   new Graph(graphs[3], 7, subsets(list(7), 2));
 }
 
-export function GT_1_4(section) {
-  let g = new Graph($C('graph', section.$el), 0, [],
+export function GT_1_4($section) {
+  let g = new Graph($('.graph', $section), 0, [],
     { static: true, icon: person, bound: true });
 
-  section.model.change(function() {
-    let m = section.model.m;
-    let f = section.model.f;
+  $section.model.watch(function(state) {
+    let m = state.m;
+    let f = state.f;
 
     let mPoints = tabulate(x => ({ x: (x+1) / (m+1) * 300, y:  30 }), m);
     let fPoints = tabulate(x => ({ x: (x+1) / (f+1) * 300, y: 110 }), f);
@@ -156,17 +157,17 @@ export function GT_1_4(section) {
   });
 }
 
-export function GT_2_0(section, chapter) {
-  section.addGoals('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3');
+export function GT_2_0($section) {
+  $section.goals.push('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3');
   let previousErrors = [];
 
-  section.$el.$$('.slide').forEach(function($el, i) {
+  $section.$$('.slide').forEach(function($el, i) {
 
     let $svg = $el.$('svg.frame');
-    let $paths = $C('paths', $svg);
-    let $water = $C('water', $svg);
-    let $bridges = $$C('bridge', $svg);
-    let $error = $C('error', $svg);
+    let $paths = $('.paths', $svg);
+    let $water = $('.water', $svg);
+    let $bridges = $$('.bridge', $svg);
+    let $error = $('.error', $svg);
 
     let success = false;
     let attempts = 0;
@@ -178,36 +179,36 @@ export function GT_2_0(section, chapter) {
       map.clear();
       attempts += 1;
     });
-    $el.find('.btn').on('click', function() { map.clear(); });
+    $el.$('.btn').on('click', () => map.clear());
 
     function error(name) {
-      if (previousErrors.indexOf(name) < 0) chapter.addHint(hints[name]);
+      if (previousErrors.indexOf(name) < 0) $section.addHint(hints[name]);
       previousErrors.push(name);
     }
 
     map.on('end', function() {
       if (success) return;
-      if (attempts === 2 && i < 2) chapter.addHint(hints.tryDifferentStartPoint);
+      if (attempts === 2 && i < 2) $section.addHint(hints.tryDifferentStartPoint);
       if (attempts !== 4) return;
 
       switch(i) {
         case 0:
-          chapter.addHint(hints.tryDifferentMapA);
-          section.score('bridge-' + i);
+          $section.addHint(hints.tryDifferentMapA);
+          $section.score('bridge-' + i);
           break;
         case 3:
-          chapter.addHint(hints.tryDifferentMapA);
-          section.score('bridge-' + i);
+          $section.addHint(hints.tryDifferentMapA);
+          $section.score('bridge-' + i);
           break;
         default:
-          chapter.addHint('Keep trying!');
+          $section.addHint('Keep trying!');
       }
     });
 
     map.on('clear', function() {
       totalCrossed = 0;
       $error.exit('pop', 300);
-      section.solveds[i]._el.hide();
+      $section.$solveds[i].hide();
     });
 
     $water.on('pointerenter', function(e) {
@@ -244,8 +245,8 @@ export function GT_2_0(section, chapter) {
             $bridge.css('fill', Colour.green);
             totalCrossed += 1;
             if (totalCrossed === $bridges.length) {
-              section.solveds[i]._el.show();
-              section.score('bridge-' + i);
+              $section.$solveds[i].show();
+              $section.score('bridge-' + i);
               success = true;
             }
           }
@@ -262,38 +263,37 @@ export function GT_2_0(section, chapter) {
   });
 }
 
-export function GT_2_1(section) {
+export function GT_2_1($section) {
+  let $svg = $section.$('svg');
 
-  let $svg = $T('svg', section.$el);
+  let $water   = $('.water', $svg);
+  let $bg      = $('.background', $svg);
+  let $bridges = $$('.bridge', $svg);
 
-  let $water   = $C('water', $svg);
-  let $bg      = $C('background', $svg);
-  let $bridges = $$C('bridge', $svg);
-
-  let $edges    = $$C('edge', $svg);
-  let $vertices = $$C('vertex', $svg);
-  let $trace    = $C('trace', $svg);
+  let $edges    = $$('.edge', $svg);
+  let $vertices = $$('.vertex', $svg);
+  let $trace    = $('.trace', $svg);
 
   $edges.forEach($e => { $e.hide(); });
   $vertices.forEach($e => { $e.hide(); });
   $trace.hide();
 
-  section.blanks[0].on('valid', function() {
-    $vertices.forEach($v => { $v.enter('pop', 400); });
+  $section.onScore('blank-0', () => {
+    $vertices.forEach($v => $v.enter('pop', 400));
   });
 
-  section.blanks[1].on('valid', function() {
-    setTimeout(() => { [$water, $bg].concat($bridges).forEach($x => { $x.exit('fade', 800); }); }, 1600);
-    $edges.forEach($e => { $e.enter('draw', 800); });
+  $section.onScore('blank-1', () => {
+    setTimeout(() => { for (let $x of [$water, $bg, ...$bridges]) $x.exit('fade', 800); }, 1600);
+    $edges.forEach($e => $e.enter('draw', 800));
   });
 
-  section.subsections[0].on('show', function() {
-    setTimeout(() => { $trace.enter('draw', 4000); }, 2000);
+  $section.onScore('blank-0 blank-1', () => {
+    setTimeout(() => $trace.enter('draw', 4000), 2000);
   });
 }
 
-export function GT_2_3(section) {
-  section.addGoals('c-eo', 'c-prime', 'c-size');
+export function GT_2_3($section) {
+  $section.goals.push('c-eo', 'c-prime', 'c-size');
 
   let g = Colour.green, r = Colour.red, b = Colour.blue, o = Colour.orange;
   let colours = {
@@ -303,32 +303,32 @@ export function GT_2_3(section) {
     size: [b,b,o,o,o,o,o]
   };
 
-  let $circles = $$T('circle', section.$el);
+  let $circles = $section.$$('circle');
 
   function colour(x) {
     $circles.forEach(function($c) {
       let y = +$c.attr('data-value');
       $c.css('fill', colours[x][y-2]);  // -2 because no 0s and 1s
     });
-    section.score('c-' + x);
+    $section.score('c-' + x);
   }
 
-  $T('select', section.$el).change(colour);
+  $section.$('select').change(colour);
   colour('val');
 }
 
-export function GT_2_4(section) {
-  let $svg    = $T('svg', section.$el);
-  let $g      = $T('g', section.$el);
-  let $edges  = $$T('line', $svg);
-  let $vertex = $T('circle', $svg);
-  let $text   = $T('text', $svg);
-  let $trace  = $T('path', $svg);
+export function GT_2_4($section) {
+  let $svg    = $('svg', $section);
+  let $g      = $('g', $section);
+  let $edges  = $$('line', $svg);
+  let $vertex = $('circle', $svg);
+  let $text   = $('text', $svg);
+  let $trace  = $('path', $svg);
 
   for (let i=0; i<6; ++i) $edges[i].hide();
   $trace.hide();
 
-  section.slides.on('next', function(x) {
+  $section.$slides.on('next', function(x) {
     if (x < 4) {
       $edges[2 * x - 2].enter('draw', 600).then(function() {
         $text.text = 2 * x - 1;
@@ -346,7 +346,7 @@ export function GT_2_4(section) {
     }
   });
 
-  section.slides.on('back', function(x) {
+  $section.$slides.on('back', function(x) {
     if (x < 3) {
       $edges[2 * x + 1].exit('draw').then(function() {
         return $edges[2 * x  ].exit('draw', 400);
@@ -362,17 +362,17 @@ export function GT_2_4(section) {
   });
 }
 
-export function GT_3_0(section, chapter) {
-  section.addGoals('try-three-times');
+export function GT_3_0($section) {
+  $section.goals.push('try-three-times');
 
   let currentUtility;
   let startUtility;
 
   let errors = [];
 
-  let map = new Sketch($I('map-utilities'), {
+  let map = new Sketch($('#map-utilities'), {
     noStart: true,
-    paths: $I('utility-paths'),
+    paths: $('#utility-paths'),
     intersect: true
   });
 
@@ -380,10 +380,10 @@ export function GT_3_0(section, chapter) {
   function resolve(hint) {
     attempts += 1;
     if (attempts === 3) {
-      section.score('try-three-times');
-      chapter.addHint('I think this puzzle might also be impossible… Sorry I tricked you :1f61c:');
+      $section.score('try-three-times');
+      $section.addHint('I think this puzzle might also be impossible… Sorry I tricked you :1f61c:');
     } else if (hint) {
-      chapter.addHint(hints[hint]);
+      $section.addHint(hints[hint]);
     }
   }
 
@@ -395,7 +395,7 @@ export function GT_3_0(section, chapter) {
     resolve('Careful: the lines are not allowed to cross.');
   });
 
-  let allUtilities = section.$el.findAll('.utility1, .utility2, .utility3');
+  let allUtilities = $section.$$('.utility1, .utility2, .utility3');
   let sectors = new WeakMap();
 
   function clear() {
@@ -405,13 +405,13 @@ export function GT_3_0(section, chapter) {
     resolve();
   }
 
-  section.$el.find('button').on('click', clear);
+  $section.$('button').on('click', clear);
 
-  section.$el.findAll('.utility').forEach(function($ut) {
+  $section.$$('.utility').forEach(function($ut) {
     let $c = $ut.children[0];
     let p = { x: +$c.attr('cx'), y: +$c.attr('cy') };
     let onThis = false;
-    let dataType = $ut.attr('data-type');
+    let dataType = $ut.data.type;
 
     $ut.on('pointerdown', function(e) {
       currentUtility = $ut;
@@ -439,17 +439,17 @@ export function GT_3_0(section, chapter) {
       map.addPoint(p);
       map.stop();
       $ut.effect('pulse-down');
-      if (startUtility.attr('data-type') === dataType) {
+      if (startUtility.data.type === dataType) {
         last(map.paths).css('stroke','#C00');
         errors.push(last(map.paths));
         if (dataType === 'house') {
-          chapter.addHint(hints.housesToEachOther);
+          $section.addHint(hints.housesToEachOther);
         } else {
-          chapter.addHint(hints.factoriesToEachOther);
+          $section.addHint(hints.factoriesToEachOther);
         }
       } else {
-        let sector = (startUtility.attr('data-type') === 'house') ?
-          $C($ut.attr('data-utility'), currentUtility) : $C(currentUtility.attr('data-utility'), $ut);
+        let sector = (startUtility.data.type === 'house') ?
+          $('.' + $ut.data.utility, currentUtility) : $('.' + currentUtility.data.utility, $ut);
         sector.css('opacity', 1);
         sectors.set(last(map.paths), sector);
       }
@@ -458,8 +458,8 @@ export function GT_3_0(section, chapter) {
   });
 }
 
-export function GT_3_1(section) {
-  let graphs = $$C('graph', section.$el);
+export function GT_3_1($section) {
+  let graphs = $section.$$('.graph');
 
   let p3 = [[100, 35], [170, 155], [30, 155]];
   new Graph(graphs[0], 3, subsets(list(3), 2), { r: 8, static: true, posn: p3 });
@@ -482,20 +482,20 @@ export function GT_3_1(section) {
     }, 800);
   }
 
-  section.onScore('blank-0', function() {
+  $section.onScore('blank-0', function() {
     transition(k4, p4x);
   });
 
-  section.onScore('blank-1', function() {
+  $section.onScore('blank-1', function() {
     transition(k5, p5x);
     k5.edges[1].$el.animate({ stroke: '#C00' }, 800);
     k5.edges[4].$el.animate({ stroke: '#C00' }, 800);
   });
 }
 
-export function GT_3_3(section) {
-  let $svg = $$T('svg', section.$el)[1];
-  let $newBtn = $T('button', section.$el);
+export function GT_3_3($section) {
+  let $svg = $section.$$('svg')[1];
+  let $newBtn = $('button', $section);
   let creating = false;
 
   let graph = new Graph($svg, 0, [], { r: 12, static: true, bound: true });
@@ -508,7 +508,7 @@ export function GT_3_3(section) {
 
   function generateGraph(n) {
     creating = true;
-    section.solveds[0]._el.hide();
+    $section.$solveds[0].hide();
 
     let points = shuffle(n);
     let edges = [];
@@ -535,7 +535,7 @@ export function GT_3_3(section) {
 
   graph.on('update', function() {
     let count = intersect(graph.edges);
-    if (!creating && !count) section.solveds[0]._el.show();
+    if (!creating && !count) $section.$solveds[0].show();
 
     graph.vertices.forEach(function(v) { v.$el.setClass('intersect', v.intersect); });
     graph.edges.forEach(function(e) { e.$el.setClass('intersect', e.intersect); });
@@ -565,37 +565,37 @@ export function GT_3_3(section) {
     return count;
   }
 
-  $newBtn.on('click', function() { generateGraph(section.model.n); });
-  section.model.change(function() { generateGraph(section.model.n); });
+  $newBtn.on('click', function() { generateGraph($section.model.n); });
+  $section.model.watch(function() { generateGraph($section.model.n); });
 }
 
-export function GT_4_1(section) {
-  let $svgs = section.$el.findAll('svg');
-  let $notes = section.$el.findAll('.euler-sum');
+export function GT_4_1($section) {
+  let $svgs = $section.$$('svg');
+  let $notes = $section.$$('.euler-sum');
 
   list(9).forEach(function(i) {
     let x = i%3;
     let $svg = $svgs[(i-x)/3];
-    section.onScore('blank-' + i, function() {
+    $section.onScore('blank-' + i, function() {
       if (x === 0) {
-        $svg.findAll('circle').forEach(function($c) { $c.animate({ fill: Colour.green }); })
+        $svg.$$('circle').forEach(function($c) { $c.animate({ fill: Colour.green }); })
       } else if (x === 1) {
-        $svg.findAll('polygon').forEach(function($c) { $c.animate({ opacity: .3 }); });
+        $svg.$$('polygon').forEach(function($c) { $c.animate({ opacity: .3 }); });
         $notes[(i-x)/3].fadeIn();
       } else if (x === 2) {
-        $svg.findAll('line').forEach(function($c) { $c.animate({ stroke: Colour.red }); });
+        $svg.$$('line').forEach(function($c) { $c.animate({ stroke: Colour.red }); });
       }
     });
   });
 }
 
-export function GT_4_2(section) {
-  let $vertices = section.$el.findAll('circle');
-  let $edges = section.$el.findAll('line');
+export function GT_4_2($section) {
+  let $vertices = $section.$$('circle');
+  let $edges = $section.$$('line');
 
-  let $f = section.$el.findAll('.xf');
-  let $e = section.$el.findAll('.xe');
-  let $v = section.$el.findAll('.xv');
+  let $f = $section.$$('.xf');
+  let $e = $section.$$('.xe');
+  let $v = $section.$$('.xv');
 
   let positions = [
     [{x: 300, y: 100}, {x: 270, y: 170}, {x: 270, y: 170}, {x: 300, y: 100}],  // show 0
@@ -606,22 +606,22 @@ export function GT_4_2(section) {
   ];
 
   let slide = 0;
-  $vertices.forEach(($v, i) => { $v.center(positions[0][i]); });
-  $edges.forEach(($e, i) => { $e.line(positions[0][i], positions[0][(i+1)%4]); });
+  $vertices.forEach(($v, i) => { $v.setCenter(positions[0][i]); });
+  $edges.forEach(($e, i) => { $e.setLine(positions[0][i], positions[0][(i+1)%4]); });
 
-  section.slides.on('next back', function(s) {
+  $section.$slides.on('next back', function(s) {
     let start = positions[slide];
     let end = positions[s];
     slide = s;
 
     animate(function(x) {
-      $vertices.forEach(($v, i) => { $v.center(Point.interpolate(start[i], end[i], x)); });
-      $edges.forEach(($e, i) => { $e.line(Point.interpolate(start[i], end[i], x),
+      $vertices.forEach(($v, i) => { $v.setCenter(Point.interpolate(start[i], end[i], x)); });
+      $edges.forEach(($e, i) => { $e.setLine(Point.interpolate(start[i], end[i], x),
         Point.interpolate(start[(i+1)%4], end[(i+1)%4], x)); });
     }, 400);
   });
 
-  section.slides.on('next', function(s) {
+  $section.$slides.on('next', function(s) {
     if (s === 1) {
       $vertices[3].enter('pop', 1);
     } else if (s === 2) {
@@ -635,7 +635,7 @@ export function GT_4_2(section) {
     }
   });
 
-  section.slides.on('back', function(s) {
+  $section.$slides.on('back', function(s) {
     if (s === 0) {
       $vertices[3].exit('pop', 400)
     } else if (s === 1) {
@@ -650,16 +650,16 @@ export function GT_4_2(section) {
   });
 
   let values = [[0,1,0], [0,2,1], [1,3,3], [0,3,2], [1,4,4]];
-  section.slides.on('step', function(s) {
+  $section.$slides.on('step', function(s) {
     $f.forEach(x => { x.text = values[s][0]; });
     $v.forEach(x => { x.text = values[s][1]; });
     $e.forEach(x => { x.text = values[s][2]; });
   });
 }
 
-export function GT_4_3() {
-  let $svg = $I('dominoes');
-  let $gs = $svg.findAll('g');
+export function GT_4_3($section) {
+  let $svg = $section.$('#dominoes');
+  let $gs = $svg.$$('g');
 
   let hasClicked = false;
   $svg.on('click', function() {
@@ -678,11 +678,11 @@ export function GT_4_3() {
   });
 }
 
-export function GT_5_1(section, chapter) {
-  section.addGoals('map-1', 'map-2', 'map-3', 'map-4');
+export function GT_5_1($section) {
+  $section.goals.push('map-1', 'map-2', 'map-3', 'map-4');
 
   let colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', Colour.violet, Colour.orange, Colour.cyan];
-  let $colours = section.$el.findAll('.four-colour-icon');
+  let $colours = $section.$$('.four-colour-icon');
   let activeColour = 0;
   let warned = false;
 
@@ -702,10 +702,10 @@ export function GT_5_1(section, chapter) {
     {"Northumberland":["Cumbria","County_Durham","Tyne_and_Wear"],"Tyne_and_Wear":["Northumberland","County_Durham"],"Cumbria":["Northumberland","North_Yorkshire","County_Durham","Lancashire"],"County_Durham":["Tyne_and_Wear","Northumberland","Cumbria","North_Yorkshire"],"North_Yorkshire":["County_Durham","Cumbria","Lancashire","West_Yorkshire","South_Yorkshire","East_Riding_of_Yorkshire"],"Lancashire":["Cumbria","North_Yorkshire","West_Yorkshire","Greater_Manchester","Merseyside"],"West_Yorkshire":["Greater_Manchester","Lancashire","North_Yorkshire","South_Yorkshire","Derbyshire"],"East_Riding_of_Yorkshire":["North_Yorkshire","South_Yorkshire","Lincolnshire"],"Greater_Manchester":["Merseyside","Lancashire","West_Yorkshire","Derbyshire","Cheshire"],"Merseyside":["Lancashire","Greater_Manchester","Cheshire"],"South_Yorkshire":["West_Yorkshire","North_Yorkshire","East_Riding_of_Yorkshire","Lincolnshire","Nottinghamshire","Derbyshire"],"Cheshire":["Merseyside","Greater_Manchester","Derbyshire","Staffordshire","Shropshire"],"Derbyshire":["Cheshire","Greater_Manchester","West_Yorkshire","South_Yorkshire","Nottinghamshire","Leicestershire","Warwickshire","Staffordshire"],"Nottinghamshire":["Derbyshire","South_Yorkshire","Lincolnshire","Rutland","Leicestershire"],"Lincolnshire":["East_Riding_of_Yorkshire","South_Yorkshire","Nottinghamshire","Leicestershire","Rutland","Cambridgeshire","Norfolk"],"Staffordshire":["Shropshire","Cheshire","Derbyshire","Leicestershire","Warwickshire","West_Midlands"],"Leicestershire":["Derbyshire","Nottinghamshire","Lincolnshire","Rutland","Northamptonshire","Warwickshire","Staffordshire"],"Rutland":["Leicestershire","Lincolnshire","Cambridgeshire","Northamptonshire"],"Norfolk":["Lincolnshire","Cambridgeshire","Suffolk"],"Shropshire":["Cheshire","Staffordshire","Worcestershire","Herefordshire"],"West_Midlands":["Staffordshire","Warwickshire","Worcestershire"],"Warwickshire":["Staffordshire","Derbyshire","Leicestershire","Northamptonshire","Oxfordshire","Gloucestershire","Worcestershire","West_Midlands"],"Northamptonshire":["Warwickshire","Leicestershire","Rutland","Cambridgeshire","Bedfordshire","Buckinghamshire","Oxfordshire"],"Cambridgeshire":["Northamptonshire","Rutland","Lincolnshire","Norfolk","Suffolk","Essex","Hertfordshire","Bedfordshire"],"Suffolk":["Norfolk","Cambridgeshire","Essex"],"Essex":["Suffolk","Cambridgeshire","Hertfordshire","Greater_London","Kent"],"Greater_London":["Buckinghamshire","Hertfordshire","Essex","Kent","Surrey","Berkshire"],"Buckinghamshire":["Oxfordshire","Northamptonshire","Bedfordshire","Hertfordshire","Greater_London","Berkshire"],"Bedfordshire":["Northamptonshire","Cambridgeshire","Hertfordshire","Buckinghamshire"],"East_Sussex":["West_Sussex","Kent","Surrey"],"Surrey":["Hampshire","Berkshire","Greater_London","Kent","East_Sussex","West_Sussex"],"West_Sussex":["East_Sussex","Kent","Surrey","Hampshire"],"Berkshire":["Oxfordshire","Buckinghamshire","Greater_London","Surrey","Hampshire","Wiltshire"],"Oxfordshire":["Gloucestershire","Warwickshire","Northamptonshire","Buckinghamshire","Berkshire","Wiltshire"],"Gloucestershire":["Herefordshire","Worcestershire","Warwickshire","Oxfordshire","Wiltshire","Somerset"],"Wiltshire":["Somerset","Gloucestershire","Oxfordshire","Berkshire","Hampshire","Dorset"],"Hampshire":["Dorset","Wiltshire","Berkshire","Surrey","West_Sussex"],"Dorset":["Devon","Somerset","Wiltshire","Hampshire"],"Somerset":["Devon","Dorset","Wiltshire","Gloucestershire"],"Devon":["Cornwall","Somerset","Dorset"],"Cornwall":["Devon"],"Worcestershire":["Herefordshire","Shropshire","Staffordshire","West_Midlands","Warwickshire","Gloucestershire"],"Hertfordshire":["Bedfordshire","Cambridgeshire","Essex","Greater_London","Buckinghamshire"],"Herefordshire":["Shropshire","Worcestershire","Gloucestershire"],"Kent":["Essex","Greater_London","Surrey","East_Sussex"]}
   ];
 
-  section.$el.findAll('.slide').forEach(function($map, i) {
-    let $count = $map.find('.colour-count');
-    let $countries = $map.find('.frame').children;
-    let $solve = $map.find('.solve');
+  $section.$$('.slide').forEach(function($map, i) {
+    let $count = $map.$('.colour-count');
+    let $countries = $map.$('.frame').children;
+    let $solve = $map.$('.solve');
 
     let countryIds = [];
     let countryColours = {};
@@ -714,7 +714,7 @@ export function GT_5_1(section, chapter) {
     let used = 0;
 
     $countries.forEach(function($c, j) {
-      let id = $c.attr('id');
+      let id = $c.id;
       let neighbours = borders[i][id] || [];
       countryIds.push(id);
 
@@ -727,7 +727,7 @@ export function GT_5_1(section, chapter) {
 
       $c.on('click', function() {
         for (let n of neighbours) if (countryColours[n] === activeColour) {
-          if (!warned) chapter.addHint('You can’t use this colour here because it is already in one of the neighbouring areas.');
+          if (!warned) $section.addHint('You can’t use this colour here because it is already in one of the neighbouring areas.');
           warned = true;
           return;
         }
@@ -742,20 +742,20 @@ export function GT_5_1(section, chapter) {
         if (used < completed && countryIds.every(id => countryColours[id] != null)) {
           completed = used;
           if (used <= 4) {
-            section.solveds[i]._el.show();
-            section.score('map-' + i);
+            $section.$solveds[i].show();
+            $section.score('map-' + i);
           } else {
-            chapter.addHint(`Well done! Can you colour this map with fewer than ${used} colours?`);
+            $section.addHint(`Well done! Can you colour this map with fewer than ${used} colours?`);
           }
         }
       });
     });
 
-    $map.find('.clear').on('click', function() {
+    $map.$('.clear').on('click', function() {
       $count.text = used = 0;
       countryColours = {};
       $countries.forEach($c => { $c.css('fill', '#CCC'); });
-      section.solveds[i]._el.hide();
+      $section.$solveds[i].hide();
       colourUses = [0,0,0,0,0,0,0];
     });
 
@@ -769,29 +769,28 @@ export function GT_5_1(section, chapter) {
   });
 }
 
-export function GT_5_2(section) {
-
-  let $svg       = $T('svg', section.$el);
-  let $countries = $$T('polygon', $svg);
-  let $edges     = $$T('path', $svg);
-  let $vertices  = $$T('circle', $svg);
+export function GT_5_2($section) {
+  let $svg = $section.$('svg');
+  let $countries = $svg.$$('polygon');
+  let $edges = $svg.$$('path');
+  let $vertices = $svg.$$('circle');
 
   $edges.forEach($e => { $e.exit(); });
   $vertices.forEach($e => { $e.exit(); });
 
-  section.onScore('blank-0', function() {
+  $section.onScore('blank-0', function() {
     $vertices.forEach($v => { $v.enter('pop', 600); });
     $countries.forEach($c => { $c.animate({ opacity: [1, .4] }, 800) })
   });
 
-  section.onScore('blank-1', function() {
+  $section.onScore('blank-1', function() {
     $edges.forEach($e => { $e.enter('draw', 800); });
     $countries.forEach($c => { $c.animate({ opacity: .1 }, 800) })
   });
 }
 
-export function GT_6_2(section) {
-  section.model.set('tsmString', function(x) {
+export function GT_6_2($section) {
+  $section.model.set('tsmString', function(x) {
     let a = [`There are <strong>${x}</strong> choices for the first city.`];
     if (x > 2) a.push(`After picking the first city, there are only <strong>${x-1}</strong> choices left for the second city.`);
     for (let i = 3; i < Math.min(6,x); ++i) a.push(`Then there are <strong>${x-i+1}</strong> choices for the ${toOrdinal(i)} city.`);
@@ -801,18 +800,18 @@ export function GT_6_2(section) {
     return '<li style="margin-bottom: 0">' + a.join('</li><li style="margin-bottom: 0">') + '</li>';
   });
 
-  section.model.set('tsnPaths', function(x) {
+  $section.model.set('tsnPaths', function(x) {
     return list(x, 1).join(' × ') + ' = ' + numberFormat(factorial(x));
   });
 }
 
-export function GT_6_3(section) {
-  section.model.set('factorial', x => numberFormat(factorial(x)));
+export function GT_6_3($section) {
+  $section.model.set('factorial', x => numberFormat(factorial(x)));
 }
 
-export function GT_6_4(section) {
-  let $box = $C('tsm-box', section.$el);
-  let $svg = $T('svg', $box);
+export function GT_6_4($section) {
+  let $box = $section.$('.tsm-box');
+  let $svg = $('svg', $box);
   let $path = $N('path', { class: 'tsm-path' }, $svg);
 
   let coords = [{ x: 150, y: 110 }, { x: 360, y: 240 }, { x: 520, y: 170 },
