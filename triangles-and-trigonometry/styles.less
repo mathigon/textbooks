@@ -13,3 +13,56 @@
 }
 
 @media screen and (min-width: 680px) { .shift-1 { margin-top: -70px; } }
+
+.task {
+  color: @blue;
+  border-bottom: 1px solid @blue;
+  padding-bottom: .5em;
+  margin-bottom: .7em;
+  font-weight: 600;
+}
+
+.middle {
+  width:300px;
+  height: 300px;
+  top: calc(~"50vh - 150px");
+}
+
+#triangleInequality {
+  .labels text {
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 600;
+    stroke-width: 5px;
+  }
+
+  .item {
+    .clearfix();
+    margin-bottom: 16px;
+    border-radius: 17px;
+    padding: 3px;
+    background: @grey-background;
+    .check { float: right; margin: 4px; }
+  }
+
+  .number {
+    font-size: 24px;
+    font-weight: 300;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    transition: background .2s;
+    border-radius: 100%;
+    float: left;
+    margin-right: 3px;
+
+    &.isRed { background: fade(@red, 50%); }
+    &.isBlue { background: fade(@blue, 50%); }
+    &.isYellow { background: fade(@yellow, 50%); }
+  }
+
+
+
+}

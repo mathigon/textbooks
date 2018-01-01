@@ -5,4 +5,4 @@
 
 
 import './components/tessellation';
-
+import './components/polyhedron';

@@ -34,7 +34,7 @@ export function thales(section) {
 
     } else if (!c) {
       c = point.name;
-      point.force(m => m.circle(m.line(m[a], m[b]).midpoint, m.line(m[a], m[b]).length/2).project(m[c]));
+      point.project(m => m.circle(m.line(m[a], m[b]).midpoint, m.line(m[a], m[b]).length/2));
       $geopad.addPath(m => m.triangle(m[a], m[c], m[b]), {animate: 2000, target: 'triangle', classes: 'red'});
       $geopad.addPath(m => m.angle(m[a], m[c], m[b]), {animate: 500, target: 'angle', classes: 'thin red'});
       section.score('p3');
