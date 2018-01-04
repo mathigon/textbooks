@@ -1,7 +1,7 @@
 # Polygons and Polyhedra
 
 > stage: intermediate
-> description: 
+> description: Geometric shapes are everywhere around us. In this chapter you will learn about angels, polygons, tessellations, polyhedra and nets.
 > script: https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js
 
 ---
@@ -190,23 +190,46 @@ ${Math.round(180-360/x)}°.
 
 ---
 
+::: column(width=300)
+
+    x-geopad.sticky(style="width: 300px; height: 480px; top: calc(50vh - 240px)"): svg
+
 ::: column.grow
-{.todo} Now imagine we have a regular polygon with _n_ sides, and each side has length
-_s_. To find the total area of the polygon, we can divide it into many
-[[equilateral|isosceles|right-amgled]] triangles.
+Here you can see a regular polygon with ${n}{n|5|4,12,1} sides. Every side has
+length ${s}{s|3|1,5,0.5}cm. Let’s try to calculate its area!
 
-{.todo} We can find the height of these isosceles triangles using trigonometry:
+First, we can split the polygon into ${n} [[isosceles|equilateral|right-amgled]]
+triangles that are all congruent.
 
-{.todo.text-center} `sin(a) = "height"/(s//2)`
+We already know the [[base|height|area]] of these triangles, but we also need
+the [height](target:apothem) to be able to calculate its area. In regular
+polygons, the height is sometimes called the __apothem__.
 
-{.todo} The angle a is have the size of an internal angle of 
+Here, trigonometry can help! The internal angle of this polygon
+is <span class="math"><mn>180°</mn><mo>−</mo><mfrac><mn>360°</mn><mn>${n}</mn></mfrac><mo>=</mo><mn>${round(180-360/n, 2)}°</mn></span>.
+The [base angle](target:base-angle) of the isosceles triangle is [[half|twice]]
+as big: ${90-180/n}°.
 
-{.todo} area
-::: column(width=240)
+Notice that there is a [right angled triangle](target:right-triangle) formed by
+the apothem and half the base of the isosceles triangle. Now we can use the
+definition of tangents:
+
+{.text-center} `tan(α) = "opposite"/"adjacent"`  
+`tan(α) = "apothem"/(s//2)`  
+`=> "apothem" = 1/2 s xx tan(α)`
+
+The are of the isosceles triangle is
+
+{.text-center} `1/2` base × height = `1/2` × ${s} ×
+${round(Math.tan(Math.PI/2-Math.PI/n)×s/2,2)} =
+${round(Math.tan(Math.PI/2-Math.PI/n)×s×s/4,2)}cm.
+
+But the polygon consists of ${n} of these isosceles triangles, which all have
+the same area. Therefore, the total area is
+
+{.text-center} _A_ = _n_ × ${round(Math.tan(Math.PI/2-Math.PI/n)×s×s/4,2)} =
+${round(n×Math.tan(Math.PI/2-Math.PI/n)×s×s/4,2)}cm<sup>3</sup>
 :::
-
-
-
 
 ---
 
@@ -346,7 +369,7 @@ To avoid any ambiguity, we usually use just the most specific type.
 
 ## Parallelograms
 
-Recall that a __parallelogram__ is a quadrilateral that has
+{.todo} Recall that a __parallelogram__ is a quadrilateral that has
 [[two pairs of parallel sides|four congruent angles]].
 
 {.todo} area of parallelograms
@@ -451,10 +474,10 @@ diagonals of these parallelograms also have additional properties.
 ::: column.grow
 {.todo} Let's start by drawing any quadrilateral.
 
-Now let's find the midpoint of each of the four sides of the quadrilateral. If
+{.todo} Now let's find the midpoint of each of the four sides of the quadrilateral. If
 we connect the four midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
 
-However it looks like the new shape is not just _any_ quadrilateral, it is
+{.todo} However it looks like the new shape is not just _any_ quadrilateral, it is
 always a [[parallelogram|trapezium|rectangle]]! Try to move the vertices of the
 original quadrilateral to check.
 
@@ -470,7 +493,7 @@ original quadrilateral to check.
     include svg/quadrilaterals/area-trapezium.svg
 
 ::: column.grow
-Notice how the gaps on the left and right are each exactly as big as the overlap
+{.todo} Notice how the gaps on the left and right are each exactly as big as the overlap
 on that side. The width of the __{m.red}red rectangle__ is the average of the
 widths of the top side and the bottom side of the __{.m-blue}blue trapezium__.
 Therefore the area of a trapezium is
@@ -478,47 +501,48 @@ Therefore the area of a trapezium is
 {.text-center} #[mfrac #[mrow #[strong.i.m-green top] + #[strong.i.m-green bottom]]#[mrow 2]] × #[strong.i.m-yellow height].
 :::
 
-A trapezoid is a quadrilateral with exactly one pair of parallel sides.
+{.todo} A trapezoid is a quadrilateral with exactly one pair of parallel sides.
 
-An isosceles trapezoid is a trapezoid where the non-parallel sides are
+{.todo} An isosceles trapezoid is a trapezoid where the non-parallel sides are
 congruent. The third trapezoid above is an example of an isosceles trapezoid.
 Think of it as an isosceles triangle with the top cut off. Isosceles trapezoids
 also have parts that are labeled much like an isosceles triangle. Both parallel
 sides are called bases.
 
-Recall that in an isosceles triangle, the two base angles are congruent. This
+{.todo} Recall that in an isosceles triangle, the two base angles are congruent. This
 property holds true for isosceles trapezoids.
 
-Theorem: The base angles of an isosceles trapezoid are congruent.
+{.todo} Theorem: The base angles of an isosceles trapezoid are congruent.
 
-The converse is also true: If a trapezoid has congruent base angles, then it is
+{.todo} The converse is also true: If a trapezoid has congruent base angles, then it is
 an isosceles trapezoid. Next, we will investigate the diagonals of an isosceles
 trapezoid. Recall, that the diagonals of a rectangle are congruent AND they
 bisect each other. The diagonals of an isosceles trapezoid are also congruent,
 but they do NOT bisect each other.
 
-Isosceles Trapezoid Diagonals Theorem: The diagonals of an isosceles trapezoid
+{.todo} Isosceles Trapezoid Diagonals Theorem: The diagonals of an isosceles trapezoid
 are congruent.
 
-The midsegment (of a trapezoid) is a line segment that connects the midpoints
+{.todo} The midsegment (of a trapezoid) is a line segment that connects the midpoints
 of the non-parallel sides. There is only one midsegment in a trapezoid. It will
 be parallel to the bases because it is located halfway between them. Similar to
 the midsegment in a triangle, where it is half the length of the side it is
 parallel to, the midsegment of a trapezoid also has a link to the bases.
 
-Midsegment Theorem: The length of the midsegment of a trapezoid is the average
+{.todo} Midsegment Theorem: The length of the midsegment of a trapezoid is the average
 of the lengths of the bases, or EF=AB+CD2.
 
 ### Area and perimeter
-Recall that a trapezoid is a quadrilateral with one pair of parallel sides.
+
+{.todo} Recall that a trapezoid is a quadrilateral with one pair of parallel sides.
 The lengths of the parallel sides are the bases. The perpendicular distance
 between the parallel sides is the height, or altitude, of the trapezoid.
 
-To find the area of the trapezoid, let’s turn it into a parallelogram. To do
+{.todo} To find the area of the trapezoid, let’s turn it into a parallelogram. To do
 this, make a copy of the trapezoid and then rotate the copy 180∘. Now, this is
 a parallelogram with height h and base b1+b2. Let’s find the area of this shape.
 
-A=h(b1+b2)
+{.todo} A=h(b1+b2)
 Because the area of this parallelogram is made up of two congruent trapezoids,
 the area of one trapezoid would be A=12h(b1+b2). The formula for the area of a
 trapezoid could also be written as the average of the bases time the height.
@@ -532,64 +556,58 @@ trapezoid could also be written as the average of the bases time the height.
     include svg/quadrilaterals/area-kite.svg
 
 ::: column.grow
-Each the four smaller rectangles are exactly half blue. Therefore the area of
+{.todo} Each the four smaller rectangles are exactly half blue. Therefore the area of
 the __{.m-blue}blue kite__ is half the area of the __{.m-red}red rectangle__. In
 other words, the area of a kite or rhombus is always
 
 {.text-center} `1/2` __{.i.m-green}width__ × __{.i.m-yellow}height__.
 :::
 
-A kite is a quadrilateral with two sets of distinct, adjacent congruent sides.
+{.todo} A kite is a quadrilateral with two sets of distinct, adjacent congruent sides.
 
-From the definition, a kite is the only quadrilateral that we have discussed
+{.todo} From the definition, a kite is the only quadrilateral that we have discussed
 that could be concave, as with the case of the last kite. If a kite is concave,
 it is called a dart. The angles between the congruent sides are called vertex
 angles. The other angles are called non-vertex angles. If we draw the diagonal
 through the vertex angles, we would have two congruent triangles.
 
-Theorem: The non-vertex angles of a kite are congruent.
+{.todo} Theorem: The non-vertex angles of a kite are congruent.
 
-IMPORTANT
-Theorem: The diagonal through the vertex angles is the angle bisector for both angles.
+{.todo} Theorem: The diagonal through the vertex angles is the angle bisector for both angles.
 The proof of this theorem is very similar to the proof above for the first
 theorem. If we draw in the other diagonal in KITE we find that the two diagonals
 are perpendicular.
 
-Kite Diagonals Theorem: The diagonals of a kite are perpendicular.
+{.todo} Kite Diagonals Theorem: The diagonals of a kite are perpendicular.
 To prove that the diagonals are perpendicular, look at △KET and △KIT. Both of
 these triangles are isosceles triangles, which means EI is the perpendicular
 bisector of KT (the Isosceles Triangle Theorem). Use this information to help
 you prove the diagonals are perpendicular in the practice questions.
 
 ### Area and Perimeter
-Recall that a rhombus is an equilateral quadrilateral and a kite has adjacent
+
+{.todo} Recall that a rhombus is an equilateral quadrilateral and a kite has adjacent
 congruent sides. Both of these quadrilaterals have perpendicular diagonals,
 which is how we are going to find their areas.
 
-Notice that the diagonals divide each quadrilateral into 4 triangles. In the
+{.todo} Notice that the diagonals divide each quadrilateral into 4 triangles. In the
 rhombus, all 4 triangles are congruent and in the kite there are two sets of
 congruent triangles. If we move the two triangles on the bottom of each
 quadrilateral so that they match up with the triangles above the horizontal
 diagonal, we would have two rectangles.
 
-So, the height of these rectangles is half of one of the diagonals and the
+{.todo} So, the height of these rectangles is half of one of the diagonals and the
 base is the length of the other diagonal.
 
-The area of a rhombus or a kite is A=12d1d2 if the diagonals of the rhombus or
+{.todo} The area of a rhombus or a kite is A=12d1d2 if the diagonals of the rhombus or
 kite are d1 and d2. You could also say that the area of a kite and rhombus are
 half the product of the diagonals.
 
----
+    // ## Cyclic quadrilaterals
+    // {.todo} TODO
 
-## Cyclic quadrilaterals
-
-{.todo} TODO
-
----
-
-## Hexagons
-
-Construct regular hexagon
+    // ## Hexagons
+    // Construct regular hexagon
 
 ---
 
@@ -597,56 +615,58 @@ Construct regular hexagon
 
 Polygons appear everywhere in nature. They are especially useful if you want to
 tile a large area, because you can fit polygons together without any gaps or
-overlaps – these patterns are called __tessellations__.
+overlaps. Patterns like that are called __tessellations__.
 
-    .row
-      div(style="width: 200px")
-        x-media(lightbox, credit="© Depositphotos / Irochka", src="images/tessellations/honeycomb.jpg", width="200", height="200")
-        p.caption Hexagonal honeycomb
-      div(style="width: 200px")
-        x-media(lightbox, credit="© Depositphotos / Tiukay", src="images/tessellations/snake.jpg", width="200", height="200")
-        p.caption Sinaloan milk snake skin
-      div(style="width: 200px")
-        x-media(lightbox, credit="© Depositphotos / SuradechK", src="images/tessellations/leaf.jpg", width="200", height="200")
-        p.caption Cellular structure of leafs
-      div(style="width: 200px")
-        x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width="200", height="200")
-        p.caption Basalt columns at Giant's Causeway in Northern Ireland
-      div(style="width: 200px")
-        x-media(lightbox, credit="© Depositphotos / Kostia777", src="images/tessellations/pineapple.jpg", width="200", height="200")
-        p.caption Pineapple skin
-      div(style="width: 200px")
-        x-media(lightbox, credit="© Depositphotos / cbenjasuwan", src="images/tessellations/tortoise.jpg", width="200", height="200")
-        p.caption Shell of a tortoise
+::: column(width=200)
+    x-media(lightbox, credit="© Depositphotos / Irochka", src="images/tessellations/honeycomb.jpg", width=200 height=200)
+        
+{.caption} [[Hexagonal|Triangular|Quadratic]] honeycomb
+::: column(width=200)
+    x-media(lightbox, credit="© Depositphotos / Tiukay", src="images/tessellations/snake.jpg", width=200 height=200)
+        
+{.caption} Sinaloan Milk Snake skin
+::: column(width=200)
+    x-media(lightbox, credit="© Depositphotos / SuradechK", src="images/tessellations/leaf.jpg", width=200 height=200)
+        
+{.caption} Cellular structure of leafs
+::: column(width=200)
+    x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
+        
+{.caption} Basalt columns at Giant's Causeway in Northern Ireland
+::: column(width=200)
+    x-media(lightbox, credit="© Depositphotos / Kostia777", src="images/tessellations/pineapple.jpg", width=200 height=200)
+        
+{.caption} Pineapple skin
+::: column(width=200)
+    x-media(lightbox, credit="© Depositphotos / cbenjasuwan", src="images/tessellations/tortoise.jpg", width=200 height=200)
+        
+{.caption} Shell of a tortoise
+:::
 
-And, of course, humans have copied many of these natural patterns in architecture and technology:
+---
 
-{.todo} Tilings have adorned buildings from ancient Rome to the Islamic world, from
-Victorian England to colonial Mexico. In general, the word tiling refers to any
-pattern that covers a flat surface, like a painting on a canvas, using non-
-overlapping repetitions of one or more shapes, so that the design does not leave
-any empty spaces. Contemporary tilings can be found in African-American quilts,
-Indonesian batiks, molas from the San Blas de Cuna Islands, and Aboriginal paintings.
+Humans have copied many of these natural patterns in art, architecture and
+technology – from ancient Rome to the present. Here are a few examples:
 
-    .row
-      div(style="width: 200px")
-        x-media(lightbox, credit="© Depositphotos / kelifamily", src="images/tessellations/pavement.jpg", width="200", height="200")
-        p.caption Rectangular pavement pattern
-      div(style="width: 200px")
-        x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
-        p.caption Greenhouse at the Eden project
-      div(style="width: 200px")
-        x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
-        p.caption Mosaic at Alhambra
-      div(style="width: 200px")
-        x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
-        p.caption Great Court Roof at the British Museum in London
-      div(style="width: 200px")
-        x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
-        p.caption Cellular tessellation pavilion in Sydney
-      div(style="width: 200px")
-        x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
-        p.caption Study of Regular Division of the Plane with Reptiles, M. C. Escher
+::: column(width=200)
+    x-media(lightbox, credit="© Depositphotos / kelifamily", src="images/tessellations/pavement.jpg", width="200", height="200")
+{.caption} [[Rectangular|Quadratic|Hexagonal]] pavement pattern
+::: column(width=200)
+    x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
+{.caption} Greenhouse at the Eden Project in England
+::: column(width=200)
+    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
+{.caption} Mosaic at Alhambra
+::: column(width=200)
+    x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
+{.caption} [[Triangular|Hexagonal|Rectangular]] roof at the British Museum in London
+::: column(width=200)
+    x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
+{.caption} Cellular tessellation pavilion in Sydney
+::: column(width=200)
+    x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
+{.caption} _Study of Regular Division of the Plane with Reptiles_, M. C. Escher
+:::
 
     // TODO Carbon Nanotube
     // application: https://en.wikipedia.org/wiki/Carbon_nanotube
@@ -656,458 +676,752 @@ Indonesian batiks, molas from the San Blas de Cuna Islands, and Aboriginal paint
 ---
 > id: drawing
 
-Here you can create your own tessellations with regular polygons. See if there
-are any shapes that tessellate well or not at all, and try to create interesting
-patterns.
+Here you can create your own tessellations using regular polygons. Simply drag
+new shapes from the sidebar onto the canvas.
+
+Which shapes tessellate well? Are there any shapes that don't tessellate at all?
+Try to create interesting patterns!
 
     include ./components/tessellation
     x-tessellation
 
+{.todo} work from other students
+
 ---
 > id: possible
 
-When creating tessellations with regular polygons, you'll have noticed that some
-kinds of polygons tessellate easily, while others don’t tessellate at all.
+### Tessellations from regular polygons
 
-    .row
-      div(style="width: 160px")
-        include svg/triangles.svg
-        p.caption Triangles [[tessellate|don’t tessellate]] because 6 × 60° = 360°.
-      div(style="width: 160px")
-        include svg/squares.svg
-        p.caption Squares [[tessellate|don’t tessellate]] because 4 × 90° = 360°.
-      div(style="width: 160px")
-        include svg/pentagons.svg
-        p.caption Pentagons [[don’t tessellate|tessellate]] because multiples of 108° don't add up to 360°.
-      div(style="width: 160px")
-        include svg/hexagons.svg
-        p.caption Hexagons [[tessellate|don’t tessellate]] because 3 × 120° = 360°.
-
-This has to do with the size of their internal angles, which we leaned to
-calculate before. If you can make multiples of their internal angle add up to
-[[360]]°, the shape will tessellate. Otherwise there will either be a gap or an
-overlap.
-
-With any polygon with more than 7 sides, it's not possible. Therefore triangle,
-squares and hexagons are the only regular hexagons that tessellate.
+You might have noticed that some regular polygons (like [[squares|pentagons]])
+tessellate very easily, while others (like [[pentagons|triangles|hexagons]])
+don't seem to tessellate at all.
 
 ---
 
-You can also make tessellations out of multiple different kinds of regular polygons, provided their combined internal angles make 360°:
+This has to do with the size of their internal angles, which we learned to
+calculate before. At every vertex in the tessellation, the internal angles of
+multiple different polygons meet. We need all of these angles to add up to
+[[360]]°, otherwise there will either be a gap or an overlap.
+
+::: column(width=160 parent="padded-thin")
+    include svg/tessellations/triangles.svg
+
+{.caption} Triangles [[tessellate|don’t tessellate]] because 6 × 60° = 360°.
+::: column(width=160)
+    include svg/tessellations/squares.svg
+
+{.caption} Squares [[tessellate|don’t tessellate]] because 4 × 90° = 360°.
+::: column(width=160)
+    include svg/tessellations/pentagons.svg
+
+{.caption} Pentagons [[don’t tessellate|tessellate]] because multiples of 108°
+don't add up to 360°.
+
+    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
+::: column(width=160)
+    include svg/tessellations/hexagons.svg
+
+{.caption} Hexagons [[tessellate|don’t tessellate]] because 3 × 120° = 360°.
+:::
+
+---
+
+You can check that, like pentagons, any regular polygon with 7 or more sides
+won't tessellate. This means that the only regular polygons that tessellate are
+triangles, squares and hexagons!
+
+---
+
+Of course you could combine different kinds of regular polygons in a
+tessellation, provided that their internal angles can add up to 360°:
 
     x-gallery(slide-width="520")
       div
-        include svg/tessellations/tessellation_1.svg
-        p.caption equilateral triangles and squares
+        img(src="images/tessellations/regular-1.svg" width=360 height=240)
+        p.caption Squares and triangles#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
-        include svg/tessellations/tessellation_3.svg
-        p.caption equilateral triangles and squares
+        img(src="images/tessellations/regular-3.svg" width=360 height=240)
+        p.caption Squares and triangles#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
-        include svg/tessellations/tessellation_4.svg
-        p.caption equilateral triangles and regular hexagons
+        img(src="images/tessellations/regular-4.svg" width=360 height=240)
+        p.caption Hexagons and triangles#[br]#[strong.m-red 120°] + #[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
-        include svg/tessellations/tessellation_5.svg
-        p.caption equilateral triangles and regular hexagons
+        img(src="images/tessellations/regular-5.svg" width=360 height=240)
+        p.caption Hexagons and triangles#[br]#[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
-        include svg/tessellations/tessellation_2.svg
-        p.caption equilateral triangles, squares and regular hexagons
+        img(src="images/tessellations/regular-2.svg" width=360 height=240)
+        p.caption Hexagons, squares and triangles#[br]#[strong.m-red 120°] + #[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] = 360°
       div
-        include svg/tessellations/tessellation_6.svg
-        p.caption squares and octagons (8-gons)
+        img(src="images/tessellations/regular-6.svg" width=360 height=240)
+        p.caption Octagons and squares#[br]#[strong.m-green 135°] + #[strong.m-green 135°] + #[strong.m-blue 90°] = 360°
       div
-        include svg/tessellations/tessellation_7.svg
-        p.caption equilateral triangles and dodecagons (12-gons)
+        img(src="images/tessellations/regular-7.svg" width=360 height=240)
+        p.caption Dodecagons (12-gons) and triangles#[br]#[strong.m-green 150°] + #[strong.m-green 150°] + #[strong.m-yellow 60°] = 360°
       div
-        include svg/tessellations/tessellation_8.svg
-        p.caption equilateral triangles, squares and dodecagons
-
-Notice, however, that none of these tessellations contain a regular
-[[pentagon|hexagon|octagon]]…
+        img(src="images/tessellations/regular-8.svg" width=360 height=240)
+        p.caption Dodecagons, hexagons and squares#[br]#[strong.m-green 150°] + #[strong.m-red 120°] + #[strong.m-blue 90°] = 360°
 
 ---
 
-But what about pentagons? We already saw that _regular_ pentagons don't tessalate,
-but what about non-regular ones?
+### Tessellations from irregular polygons
 
-![](https://plus.maths.org/issue52/features/alvarez/penta_tilings.jpg)
-![](https://plus.maths.org/issue52/features/alvarez/penta_tiles.jpg)
+We can also try making tessellations out of irregular polygons – as long as we
+are careful when rotating and arranging them.
 
-What if we just want to tile with copies of one convex pentagon, which means a five sided shape with all its inner angles less that 180°? If we do, a very different and interesting story will unfold, because there are quite a few convex pentagons that will tile a plane. For instance, how would you like to have one of these patterns on your bathroom floor?
+::: column(width=360)
 
-As you can see, each of them consists of copies of just one convex pentagon. Observe that the third tiling is not vertex to vertex, which is fine. For each of these tilings, we highlight in figure 9 the shape of the convex pentagon tiler and the conditions on its sides and angles.
+    x-geopad(style="width: 360px; height: 300px"): svg
+      circle.move(name="a" cx=220 cy=90)
+      circle.move(name="b" cx=145 cy=180)
+      circle.move(name="c" cx=225 cy=200)
 
-How many kinds of convex pentagons can tile the plane? We know of 14 different kinds of pentagons, but no one has been able to find more, or prove that there are no others – yet.  In other words, the problem of tiling with copies of one convex pentagon remains open.
+      path.red.fill(name="x" x="polygon(a,b,c)")
+      path.yellow.fill(name="y" x="x.rotate(Math.PI,line(b,c).midpoint)")
+
+      for x in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+        for y in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+          if x || y
+            path.red.fill(x=`x.translate(c.subtract(a).scale(${x}).add(b.subtract(a).scale(${y})))`)
+            path.yellow.fill(x=`y.translate(c.subtract(a).scale(${x}).add(b.subtract(a).scale(${y})))`)
+
+::: column.grow
+It turns out that you can tessellate not just equilateral triangles, but _any
+triangle_! Try moving the vertices in this diagram.
+ 
+The sum of the internal angles in a triangle is [[180]]°. If we use each angle
+[[twice|once|three times]] at every vertex in the tessellation, we get 360°:
+
+    x-geopad(style="width: 200px; height: 160px"): svg
+      circle(name="m" x="point(100,80)")
+      circle(name="p" x="point(100,150)")
+      circle.move(name="q" cx=175 cy=130)
+      circle(name="r" x="p.rotate(Math.PI,line(m,q).midpoint)")
+      circle(name="s" x="p.rotate(Math.PI,m)")
+      circle(name="t" x="q.rotate(Math.PI,m)")
+      circle(name="u" x="q.rotate(Math.PI,line(m,p).midpoint)")
+
+      path(x="segment(m,p)")
+      path(x="segment(m,q)")
+      path(x="segment(m,r)")
+      path(x="segment(m,s)")
+      path(x="segment(m,t)")
+      path(x="segment(m,u)")
+      path(x="polygon(p,q,r,s,t,u)")
+
+      path.fill.red(x="angle(p,m,q)" size=20)
+      path.fill.blue(x="angle(q,m,r)" size=20)
+      path.fill.green(x="angle(r,m,s)" size=20)
+      path.fill.red(x="angle(s,m,t)" size=20)
+      path.fill.blue(x="angle(t,m,u)" size=20)
+      path.fill.green(x="angle(u,m,p)" size=20)
+
+      path.fill.red.light(x="angle(m,q,r)" size=20)
+      path.fill.red.light(x="angle(r,s,m)" size=20)
+      path.fill.red.light(x="angle(m,t,u)" size=20)
+      path.fill.red.light(x="angle(u,p,m)" size=20)
+      path.fill.blue.light(x="angle(p,q,m)" size=20)
+      path.fill.blue.light(x="angle(m,r,s)" size=20)
+      path.fill.blue.light(x="angle(s,t,m)" size=20)
+      path.fill.blue.light(x="angle(m,u,p)" size=20)
+      path.fill.green.light(x="angle(m,p,q)" size=20)
+      path.fill.green.light(x="angle(q,r,m)" size=20)
+      path.fill.green.light(x="angle(m,s,t)" size=20)
+      path.fill.green.light(x="angle(t,u,m)" size=20)
+
+:::
 
 ---
 
-And of course we can make tessellations out of non-regular polygons as well:
+::: column(width=360)
 
-Tessellating Quadrilaterals 
-Tessellate the quadrilateral below.
+    x-geopad(style="width: 360px; height: 300px"): svg
+      circle.move(name="a" cx=100 cy=105)
+      circle.move(name="b" cx=115 cy=200)
+      circle.move(name="c" cx=180 cy=170)
+      circle.move(name="d" cx=200 cy=120)
 
-To tessellate any image you will need to reflect and rotate the image so that
-the sides all fit together. First, start by matching up each side with itself
-around the quadrilateral.
+      path.blue.fill(name="x" x="polygon(a,b,c,d)")
+      path.green.fill(name="y" x="x.rotate(Math.PI,line(c,d).midpoint)")
 
-This is the final tessellation. You can continue to tessellate this shape
-forever. Now, continue to fill in around the figures with either the original
-or the rotation.
+      for x in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+        for y in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+          if x || y
+            path.blue.fill(x=`x.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
+            path.green.fill(x=`y.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
 
-Determining if an Object Tessellates 
-Does a regular pentagon tessellate?
-First, recall that there are (5−2)180∘=540∘ in a pentagon and each angle is
-540∘÷5=108∘. From this, we know that a regular pentagon will not tessellate by
-itself because 108∘×3=324∘ and 108∘×4=432∘.
 
-Applying Knowledge about Tessellations
-How many squares will fit around one point?
-First, recall how many degrees are in a circle, and then figure out how many
-degrees are in each angle of a square. There are 360∘ in a circle and 90∘ in
-each interior angle of a square, so 36090=4 squares will fit around one point.
+::: column.grow    
+More surprisingly, _any quadrilaterals_ also tessellate! Their internal angle sum
+is [[360]]°, so if we use each angle [[once|twice|three times]] at every vertex
+in the tessellation, we we get 360°.
+
+    x-geopad(style="width: 200px; height: 160px"): svg
+      circle(name="m" x="point(100,80)")
+      circle(name="p" x="point(100,150)")
+      circle.move(name="q" cx=180 cy=140)
+      circle.move(name="r" cx=165 cy=90)
+      circle(name="s" x="p.rotate(Math.PI,line(m,r).midpoint)")
+      circle(name="t" x="q.rotate(Math.PI,line(m,r).midpoint)")
+      circle(name="u" x="r.rotate(Math.PI,line(m,t).midpoint)")
+      circle(name="v" x="q.rotate(Math.PI,line(m,p).midpoint)")
+      circle(name="w" x="r.rotate(Math.PI,line(m,p).midpoint)")
+
+      path(x="segment(m,p)")
+      path(x="segment(m,r)")
+      path(x="segment(m,t)")
+      path(x="segment(m,v)")
+      path(x="polygon(p,q,r,s,t,u,v,w)")
+
+      path.fill.red(x="angle(p,m,r)" size=20)
+      path.fill.blue(x="angle(r,m,t)" size=20)
+      path.fill.green(x="angle(t,m,v)" size=20)
+      path.fill.yellow(x="angle(v,m,p)" size=20)
+
+      path.fill.red.light(x="angle(m,r,s)" size=20)
+      path.fill.red.light(x="angle(t,u,v)" size=20)
+      path.fill.red.light(x="angle(w,p,m)" size=20)
+      path.fill.blue.light(x="angle(q,r,m)" size=20)
+      path.fill.blue.light(x="angle(m,t,u)" size=20)
+      path.fill.blue.light(x="angle(v,w,p)" size=20)
+      path.fill.green.light(x="angle(p,q,r)" size=20)
+      path.fill.green.light(x="angle(s,t,m)" size=20)
+      path.fill.green.light(x="angle(m,v,w)" size=20)
+      path.fill.yellow.light(x="angle(m,p,q)" size=20)
+      path.fill.yellow.light(x="angle(r,s,t)" size=20)
+      path.fill.yellow.light(x="angle(u,v,m)" size=20)
+
+:::
+
+---
+
+Pentagons are a bit trickier. We already saw that _regular_ pentagons don't
+tessellate, but what about non-regular ones?
+
+::: column(width=220)
+    include svg/tessellations/pentagons-1.svg
+::: column(width=220)
+    include svg/tessellations/pentagons-2.svg
+::: column(width=220)
+    include svg/tessellations/pentagons-3.svg
+:::
+
+Here are three different examples of tessellations with pentagons. They are not
+_regular_, but they are perfectly valid 5-sided polygons.
+
+So far, 14 different kinds of tessellations with (convex) pentagons have been
+found. But no one knows if there are others, or if those 14 are all of them. In
+other words, the problem of finding tessellations of pentagons is still open…
+
+---
+> id: escher
+
+### Tessellations in Art
+
+Tessellations we both a tool and inspiration for many artists, architects and 
+designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher's
+work contains strange, mutating creatures, patterns and landscapes:
 
     .row
-      div(style="width: 320px")
-        p.todo Interactive diagram coming soon…
-      .grow: p Triangles always tessellate. Their internal angle sum is [[180]]°, so if we use every angle twice at a vertex, we get 360°.
-      div(style="width: 320px")
-        p.todo Interactive diagram coming soon…
-      .grow: p Quadrilaterals always tessellate. Their internal angle sum is [[360]]°, so if we use every angle at a vertex, we get 360°.
-      div(style="width: 320px")
-        p.todo Diagram coming soon…
-      .grow: p Pentagons sometimes tessellate, but only if they have particular shapes.
+      div(style="width: 220px")
+        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
+        p.caption “Sky and Water I” (1938)
+      div(style="width: 220px")
+        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
+        p.caption “Lizard” (1942)
+      div(style="width: 220px")
+        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
+        p.caption “Lizard, Fish, Bat” (1952)
+      div(style="width: 220px")
+        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
+        p.caption “Butterfly” (1948)
+      div(style="width: 220px")
+        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
+        p.caption “Two Fish” (1942)
+      div(style="width: 220px")
+        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
+        p.caption “Shells and Starfish” (1941)
+
+These artworks often look fun and effortless, but the underlying mathematical
+principles are the same as before: angles, rotations, translations and polygons.
+If the maths isn't right, the tessellation is not going to work!
+
+    .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
+    p.caption “Metamorphosis II” by M. C. Escher (1940)
 
 ---
+> id: penrose
 
-{.todo} Tiling was a favorite means of expression for the Dutch artist M. C. Escher (1898-1972), who repeatedly expressed his love for this art form, acknowledging at the same time the influence on his work of the mosaics he admired and sketched from Moorish buildings in Southern Spain. In spite of this influence, Escher's art went far beyond anything seen before. He produced enigmatic tilings, with strange creatures and mutating landscapes that suggest a craft free from any worldly limitation. This perception however, owned to Escher's mastery, is far from true. Tiling is a very precise art, where not much can be left to chance. Even the simplest tilings fall to the spell of mathematical principles. We can push and turn and wriggle, but if the maths is not right, it isn't going to tile.
-
-
-Many artists came up with much more complicated tessellations, most famously
-[M. C. Escher](bio:escher). Here are a few examples:
-
-    figure
-      .row
-        .grow.shrink(style="width: 226px; flex-grow: 2.17; flex-shrink: 2.17"): x-media(credit="© M. C. Escher", src="images/escher/mirror.jpg", width="509", height="315")
-        .grow.shrink(style="width: 104px"): x-media(credit="© M. C. Escher", src="images/escher/knights.jpg", width="234", height="315")
-      .row
-        .grow(style="width: 161px; flex-grow: 1.15; flex-shrink: 1.15"): x-media(credit="© M. C. Escher", src="images/escher/reptiles.jpg", width="397", height="346")
-        .grow(style="width: 140px"): x-media(credit="© M. C. Escher", src="/resources/polygons-and-polyhedra/images/escher/sky_water.jpg", width="346", height="346")
-      p.caption(style="max-width: 500px; margin: 0 auto;") #[em Magic Mirror] (top left), #[em Regular Division of the Plane III] (top right), #[em Reptiles] (bottom left) and #[em Sky and Water I] (bottom right) were all created by M. C. Escher.
-
----
+### Penrose Tilings
 
 All the tessellations we saw so far have one thing in common: they are
-_periodic_. This means that they consist of a regular pattern that is repeated
+__periodic__. That means they consist of a regular pattern that is repeated
 again and again. They can continue forever in all directions and they will look
 the same everywhere.
 
-In the 1970s, the English mathematician [Sir Roger Penrose](bio:penrose)
+In the 1970s, the British mathematician and physicist [Sir Roger Penrose](bio:penrose)
 discovered _non-periodic_ tessellations – they still continue infinitely in all
-directions, but it will _never_ look exactly the same. These are called
-__Penrose tilings__, and you only need a few different kinds of polygons to
+directions, but _never_ look exactly the same. These are called __Penrose
+tilings__, and you only need a few different kinds of polygons to
 create one:
-
-The British mathematician and cosmologist Roger Penrose, for example, has designed non-repeating tilings that now seem to agree with the internal structure of real materials, such as some combinations using aluminum. In a lighter note, Penrose's designs have also caught the attention of a toilet paper manufacturer, because paper embossed with a non-repeating pattern can be rolled without leaving bulging spots. But Penrose had copyrighted the pattern and the manufacturer got a legal spank.
 
     figure
       include svg/penrose.svg
       x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
       p.caption Move the slider to reveal the underlying structure of this tessellation. Notice how you have the same patterns at various scales: the small yellow pentagons, blue stars, orange rhombi and green ‘ships’ appear in their original size, in a #[strong.blue slightly larger size] and an #[strong.red even larger size]. This #[em self-similarity] can be used to prove that this Penrose tiling is non-periodic.
 
+Penrose was exploring tessellations purely for fun, but it turns out that the
+internal structure of some real materials (like aluminium) follow a similar
+pattern. The pattern was even used on toilet paper, because the manufacturers
+noticed that a non-periodic pattern can be rolled up without any bulges.
+
 ---
 
 ## Polyhedra
 
-A polyhedron is a 3-dimensional figure that is formed by polygons that enclose
-a region in space. Each polygon in a polyhedron is called a face. The line
-segment where two faces intersect is called an edge and the point of
-intersection of two edges is a vertex. There are no gaps between the edges or
-vertices in a polyhedron. Examples of polyhedrons include a cube, prism, or
-pyramid. Non-polyhedrons are cones, spheres, and cylinders because they have
-sides that are not polygons.
+Up to now we have just looked at what we can do with polygons in a flat,
+two-dimensional world. A __polyhedron__ is a 3-dimensional object that is made
+up of polygons. Here are few examples:
 
-::: column(width=200)
-    x-polyhedron(size=200 shape="Dodecahedron")
-::: column(width=200)
-    x-polyhedron(size=200 shape="Icosahedron")
-::: column(width=200)
-    x-polyhedron(size=200 shape="Icosidodecahedron")
+::: column.padded-thin(width=220)
+    x-polyhedron(size=220 shape="PentagonalPrism")
+::: column(width=220)
+    x-polyhedron(size=220 shape="PentagonalRotunda")
+::: column(width=220)
+    x-polyhedron(size=220 shape="TruncatedOctahedron")
 :::
 
-A polyhedron consists of just one piece. It cannot, for example, be made up of two (or more) basically separate parts joined by only an edge or a vertex. This means that neither of the following objects is a true polyhedron.
+Polyhedra cannot contain curved surfaces – spheres or cylinders, for example,
+are not polyhedra.
 
-A prism is a polyhedron with two congruent bases, in parallel planes, and the
-lateral sides are rectangles. Prisms are explored in further detail in another
-Concept.
+The polygons that make up a polyhedron are called its __faces__. The lines
+where two faces are connected are called __edges__, and the corners where the
+edges meet are called __vertices__.
 
-A pyramid is a polyhedron with one base and all the lateral sides meet at a
-common vertex. The lateral sides are triangles. Pyramids are explored in further
-detail in another Concept.
+{.todo} There are countless more polyhedra: some looking like stars, some
+consisting of non-regular polygons, and some having holes inside.
 
-All prisms and pyramids are named by their bases. So, the first prism would be
-a triangular prism and the second would be an octagonal prism. The first pyramid
-would be a hexagonal pyramid and the second would be a square pyramid. The
-lateral faces of a pyramid are always triangles.
+---
 
-Euler’s Theorem states that the number of faces, vertices V, and edges E of a
-polyhedron can be related such that F + V = E + 2.
+### Nets
 
-A regular polyhedron is a polyhedron where all the faces are congruent regular
-polygons. There are five regular polyhedra called the Platonic solids, after the
-Greek philosopher Plato. These five solids are significant because they are the
-only five regular polyhedra. There are only five because the sum of the measures
-of the angles that meet at each vertex must be less than 360°. Therefore the
-only combinations are 3, 4 or 5 triangles at each vertex, 3 squares at each
-vertex or 3 pentagons. Each of these polyhedra have a name based on the number
-of sides, except the cube.
+{.todo} What if you wanted to expand your thinking of geometric shapes beyond the flat
+two-dimensional ones to three dimensional (3D) ones?
 
-* Regular Tetrahedron: A 4-faced polyhedron where all the faces are equilateral triangles.
-* Cube: A 6-faced polyhedron where all the faces are squares.
-* Regular Octahedron: An 8-faced polyhedron where all the faces are equilateral triangles.
-* Regular Dodecahedron: A 12-faced polyhedron where all the faces are regular pentagons.
-* Regular Icosahedron: A 20-faced polyhedron where all the faces are equilateral triangles.
+{.todo} Try this experiment to gee how nets relate to 3D figures: Sketch or print the
+equilateral triangle in the image below onto a piece of paper and cut it out.
+Fold on the dotted lines. What shape do these four attached equilateral
+triangles make? If you place two of these equilateral triangles next to each
+other, as in the second image, and fold them on the dotted lines, what 3D figure
+would you make? 
 
+{.todo} While our world is three dimensional, we are used to modeling and thinking about
+three dimensional objects on paper (in two dimensions). There are a few common
+ways to help think about three dimensions in two dimensions. One way to “view”
+a three-dimensional figure in a two-dimensional plane, like this text, is to use
+cross-sections. A cross-section is the intersection of a plane with a solid.
+Another way to represent a three-dimensional figure in a two dimensional plane
+is to use a net. A net is an unfolded, flat representation of the sides of a
+three-dimensional shape.
+
+{.todo} Identifying Figures Created by Nets
+
+{.todo} Drawing Nets
+
+### Cross-Sections 
+{.todo} Describe the cross section formed by the intersection of the plane and the solid.
+
+---
 
 ## Euler's Formula
 
-Before we examine what Euler's formula tells us, let's look at polyhedra in a bit more detail. A polyhedron is a solid object whose surface is made up of a number of flat faces which themselves are bordered by straight lines. Each face is in fact a polygon
+{.todo} Euler’s Theorem states that the number of faces, vertices V, and edges
+E of a polyhedron can be related such that F + V = E + 2.
 
-Up to now we have looked at what you can do with polygons in a flat,
-two-dimensional world. We can also connect polygons to form three-dimensional
-solids – these are called __Polyhedra__.
+{.todo} Notice that the number of faces plus the number of vertices always seems
+to be 2 more that the number of edges. In other words, F + V = E + 2. This
+formula was discovered by Leonhard Euler (1707 – 1783). We have just shown that
+it works for all Platonic solids, but in fact it is true for any polyhedron.
+There is a very similar formula for the number of faces, edges and vertices of
+planar graphs.
 
-The sides of a polyhedron are called __faces__, the lines where faces meet are
-called __edges__, and the corners where edges meet are called __vertices__.
+{.todo} Euler's formula is true for the cube and the icosahedron. It turns out,
+rather beautifully, that it is true for pretty much every polyhedron. The only
+polyhedra for which it doesn't work are those that have holes running through
+them like the one shown in the figure below.
 
-{.todo} Diagrams and Euler’s Formula coming soon…
+{.todo} These polyhedra are called non-simple, in contrast to the ones that
+don't have holes, which are called simple. Non-simple polyhedra might not be the
+first to spring to mind, but there are many of them out there, and we can't get
+away from the fact that Euler's Formula doesn't work for any of them. However,
+even this awkward fact has become part of a whole new theory about space and shape.
 
-There are countless more polyhedra: some looking like stars, some consisting of
-non-regular polygons, and some having holes inside.
+{.todo} Playing around with various simple polyhedra will show you that Euler's
+formula always holds true. But if you're a mathematician, this isn't enough.
+You'll want a proof, a water-tight logical argument that shows you that it
+really works for all polyhedra, including the ones you'll never have the time to
+check.
 
-Notice that the number of faces plus the number of vertices always seems to be 2
-more that the number of edges. In other words, F + V = E + 2. This formula was
-discovered by Leonhard Euler (1707 – 1783). We have just shown that it works for
-all Platonic solids, but in fact it is true for any polyhedron. There is a very
-similar formula for the number of faces, edges and vertices of planar graphs.
+{.todo} Computer chips are integrated circuits, made up of millions of minute
+components linked by millions of conducting tracks. These are reminiscent of our
+networks above, except that usually it is not possible to lay them out in a
+plane without some of the conducting tracks — the edges — crossing. Crossings
+are a bad thing in circuit design, so their number should be kept down, but
+figuring out a suitable arrangement is no easy task. Euler's polyhedron formula,
+with its information on networks, is an essential ingredient in finding solutions.
 
-Euler's formula is true for the cube and the icosahedron. It turns out, rather beautifully, that it is true for pretty much every polyhedron. The only polyhedra for which it doesn't work are those that have holes running through them like the one shown in the figure below.
-
-These polyhedra are called non-simple, in contrast to the ones that don't have holes, which are called simple. Non-simple polyhedra might not be the first to spring to mind, but there are many of them out there, and we can't get away from the fact that Euler's Formula doesn't work for any of them. However, even this awkward fact has become part of a whole new theory about space and shape.
-
-
-PROOF
-
-Playing around with various simple polyhedra will show you that Euler's formula always holds true. But if you're a mathematician, this isn't enough. You'll want a proof, a water-tight logical argument that shows you that it really works for all polyhedra, including the ones you'll never have the time to check.
-
-Adrien-Marie Legendre, (1752 - 1833) 
-Adrien-Marie Legendre, (1752 - 1833)
-Despite the formula's name, it wasn't in fact Euler who came up with the first complete proof. Its history is complex, spanning 200 years and involving some of the greatest names in maths, including René Descartes (1596 - 1650), Euler himself, Adrien-Marie Legendre (1752 - 1833) and Augustin-Louis Cauchy (1789 - 1857).
-
-Augustin-Louis Cauchy (1789 - 1857)
-Augustin-Louis Cauchy, (1789 - 1857)
-It's interesting to note that all these mathematicians used very different approaches to prove the formula, each striking in its ingenuity and insight. It's Cauchy's proof, though, that I'd like to give you a flavour of here. His method consists of several stages and steps. The first stage involves constructing what is called a network.
-
-
-
-I will finish by mentioning some consequences of Euler's formula beyond the world of polyhedra. I'll start with something very small: computer chips. Computer chips are integrated circuits, made up of millions of minute components linked by millions of conducting tracks. These are reminiscent of our networks above, except that usually it is not possible to lay them out in a plane without some of the conducting tracks — the edges — crossing. Crossings are a bad thing in circuit design, so their number should be kept down, but figuring out a suitable arrangement is no easy task. Euler's polyhedron formula, with its information on networks, is an essential ingredient in finding solutions.
-
-Now let's move to the very large: our universe. To this day cosmologists have not agreed on its exact shape. Pivotal to their consideration is topology, the mathematical study of shape and space. In the 19th century mathematicians discovered that all surfaces in three-dimensional space are essentially characterised by the number of holes they have: our simple polyhedra have no holes, a doughnut has one hole, etc. Euler's formula does not work for polyhedra with holes, but mathematicians discovered an exciting generalisation. For any polyhedron, V - E +  F is exactly 2 minus 2 times the number of holes! It turns out that this number, called the Euler characteristic, is crucial to the study of all three-dimensional surfaces, not just polyhedra. Euler's formula can be viewed as the catalyst for a whole new way of thinking about shape and space.
-
-
+{.todo} Now let's move to the very large: our universe. To this day cosmologists
+have not agreed on its exact shape. Pivotal to their consideration is topology,
+the mathematical study of shape and space. In the 19th century mathematicians
+discovered that all surfaces in three-dimensional space are essentially
+characterised by the number of holes they have: our simple polyhedra have no
+holes, a doughnut has one hole, etc. Euler's formula does not work for polyhedra
+with holes, but mathematicians discovered an exciting generalisation. For any
+polyhedron, V - E +  F is exactly 2 minus 2 times the number of holes! It turns
+out that this number, called the Euler characteristic, is crucial to the study
+of all three-dimensional surfaces, not just polyhedra. Euler's formula can be
+viewed as the catalyst for a whole new way of thinking about shape and space.
 
 ---
 
 ## Platonic Solids
 
-Just like we defined _regular polygons_ as particularly symmetric polygons, we
-can create particularly “regular” polyhedra – for example, only using just a
-single kind of regular polygon:
+Remember when we defined _regular polygons_ as particularly "symmetric"
+polygons, where all sides and angles are them same? We can do something similar
+for polyhedra:
 
-To create a 3-dimensional object, we need at least [[3]] faces to meet at every
-vertex. Let’s start with equilateral triangles:
+In a _regular polyhedron_ all faces are all the same kind of regular polygon,
+and the same number of faces meet at every vertex. Polyhedra with these two
+properties are called __Platonic solids__, named after the Greek philosopher
+[Plato](bio:plato).
 
-    table.plato.subsection(needs="blank-0")
-      tr
-        td(style="width: 80px"): include svg/platonic/triangle-1.svg
-        td(style="width: 80px"): x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/tetrahedron.gif")
-        td: p We can create a polyhedron where three equilateral triangles meet at every vertex. The result is called a #[strong Tetrahedron].
-      tr
-        td: include svg/platonic/triangle-2.svg
-        td: x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/octahedron.gif")
-        td: p If four triangles meet at every vertex, we get a different polyhedron called #[strong Octahedron].
-      tr
-        td: include svg/platonic/triangle-3.svg
-        td: x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/icosahedron.gif")
-        td: p If five triangles meet at every vertex, we get another polyhedron called #[strong Icosahedron].
-      tr(style="background: #eee")
-        td: include svg/platonic/triangle-4.svg
-        td
-        td: p If six triangles meet at every vertex we don’t get a polyhedron: just a flat [[tessellation|angle|quadrilateral]].
-      tr(style="background: #eee")
-        td(colspan=3): p We always need a [[gap|overlap]] to create a 3-dimensional shape. Therefore seven or more triangles at every vertex also can’t produce new polyhedra.
+    //- The pyramid on the right of not a Platonic solid. It consists of two
+    //- different kinds of polygons (squares and triangles), and it has [[4]]
+    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 ---
 
-We can do the same with squares:
+So what do the Platonic solids look like – and how many of them are there? To
+make a 3-dimensional shape, we need at least [[3]] faces to meet at every
+vertex. Let's start systematically with the smallest regular polygon:
+equilateral triangles:
 
-    table.plato
-      tr
-        td(style="width: 80px"): include svg/platonic/square-1.svg
-        td(style="width: 80px"): x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/cube.gif")
-        td: p If three squares meet at every vertex, we get a #[strong cube], sometimes also called #[em Hexahedron].
-      tr(style="background: #eee")
-        td: include svg/platonic/square-2.svg
-        td
-        td: p If four squares meet at every vertex, we get another tessellation. Like above, five or more squares also won’t work.
+::: column(width=120 parent="padded-thin")
 
----
+    x-polyhedron(size=120 shape="Tetrahedron")
 
-Next, let’s try pentagons:
+::: column(width=200)
 
-    table.plato
-      tr
-        td(style="width: 80px"): include svg/platonic/pentagon-1.svg
-        td(style="width: 80px"): x-media(width="80", height="80", src="/resources/polygons-and-polyhedra/images/polyhedra/dodecahedron.gif")
-        td: p If three pentagons meet at every vertex, we get a polyhedron called #[strong Dodecahedron].
-      tr(style="background: #eee")
-        td(style="width: 80px"): include svg/platonic/pentagon-2.svg
-        td
-        td: p Like above, four or more pentagons [[don’t work|are possible]] because there is no gap we can fold.
+    img(src="images/platonic/tetrahedron.svg" width=200 height=120)
+
+::: column.grow
+If we create a polyhedron where three equilateral triangles meet at every
+vertex, we get the shape on the left. It is called a __Tetrahedron__ and has
+[[four]] faces. ("Tetra" means "four" in Greek).
+:::
 
 ---
 
-And similarly for hexagons:
+::: column(width=120 parent="padded-thin")
 
-    table.plato
-      tr
-        td(style="width: 80px"): include svg/platonic/hexagon.svg
-        td: p If three hexagons meet at every vertex we get a flat tessellation but no polyhedron. And again, four or more hexagons also don’t work.
+    x-polyhedron(size=120 shape="Octahedron")
+
+::: column(width=200)
+
+    img(src="images/platonic/octahedron.svg" width=200 height=120)
+
+::: column.grow
+If four equilateral triangles meet at every vertex, we get a different Platonic
+solid. It is called the __Octahedron__ and has [[eight]] faces. ("Octa" means
+"eight" in Greek. Just like "Octagon" means 8-sided shape, "Octahedron" means
+8-faced solid.)
+:::
+
+---
+
+::: column(width=120 parent="padded-thin")
+
+    x-polyhedron(size=120 shape="Icosahedron")
+
+::: column(width=200)
+
+    img(src="images/platonic/icosahedron.svg" width=200 height=120)
+
+::: column.grow
+If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
+[[twenty]] faces. ("Icosa" means "twenty" in Greek.)
+:::
+
+---
+
+::: column(width=120 parent="padded-thin")
+::: column(width=200)
+
+    img(src="images/platonic/triangles-6.svg" width=200 height=120)
+
+::: column.grow
+If [[six]] triangles meet at every vertex, something different happens: we
+simply get [[a tessellation|a quadrilateral|another Icosahedron]], instead of
+a 3-dimensional polyhedron.
+:::
+
+---
+
+::: column(width=120 parent="padded-thin")
+::: column(width=200)
+
+    img(src="images/platonic/triangles-7.svg" width=200 height=120)
+
+::: column.grow
+And seven or more triangles at every vertex also don’t produce new polyhedra:
+there is not enough space around a vertex, for that many triangles.
+:::
+
+---
+
+This means we've found three Platonic solids consisting of triangles. Let's
+move on to the next regular polygon: squares.
+
+::: column(width=120 parent="padded-thin")
+
+    x-polyhedron(size=120 shape="Cube")
+
+::: column(width=200)
+
+    img(src="images/platonic/cube.svg" width=200 height=120)
+
+::: column.grow
+If [[three]] squares meet at every vertex, we get the __cube__. Just like dice,
+it has [[6]] faces. The cube is sometimes also called _Hexahedron_, after the
+Greek word "hexa" for "six".
+:::
+
+---
+
+::: column(width=120 parent="padded-thin")
+::: column(width=200)
+
+    img(src="images/platonic/squares.svg" width=200 height=120)
+
+::: column.grow
+If [[four]] squares meet at every vertex, we get another tessellation. And like
+before, five or more squares also won’t work.
+:::
+
+---
+
+Next, let’s try regular pentagons:
+
+::: column(width=120 parent="padded-thin")
+
+    x-polyhedron(size=120 shape="Dodecahedron")
+
+::: column(width=200)
+
+    img(src="images/platonic/dodecahedron.svg" width=200 height=120)
+
+::: column.grow
+If [[three]] pentagons meet at every vertex, we get the __Dodecahedron__. It has
+[[12]] faces. ("Dodeca" means "twelve" in Greek.)
+:::
+
+---
+
+::: column(width=120 parent="padded-thin")
+::: column(width=200)
+
+    img(src="images/platonic/pentagons.svg" width=200 height=120)
+
+::: column.grow
+Like before, four or more pentagons [[don’t work|are possible]] because there is
+not enough space.
+:::
+
+---
+
+The next regular polygon to try are hexagons:
+
+::: column(width=120 parent="padded-thin")
+::: column(width=200)
+
+    img(src="images/platonic/hexagons.svg" width=200 height=120)
+
+::: column.grow
+If three hexagons meet at every vertex, we immediately get a tessellation.
+Since there is no space for more than three, it seems like there are no Platonic
+solids consisting of hexagons.
+:::
 
 ---
 
 The same also happens for all regular polygons with more than six sides. They
 don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
 
-Thus, there are[[5]] different polyhedra consisting of just one kind of
-[[regular polygon|triangle|polygon]]. These are called __Platonic Solids__,
-named after the Greek philosopher [Plato](bio:plato) who discovered them. Their
-individual names are derived from the Greek name for their number of faces:
-“tetra”, for example, means “four”.
+This means that there are just [[five]] Platonic solids! Let's have a look at
+all of them together:
 
----
+{.todo} hint -> use euler's formula
 
-Plato believed that all matter in the Universe consists of four elements: air,
-earth, water and fire, and that these correspond to different Platonic solids.
-The fifth, he thought, was the shape of the entire Universe. Today we know that
-there are more than 100 elements which consist of spherical atoms, not polyhedra.
+::: column.grow.text-center(width=120 parent="plato padded-thin")
+__Tetrahedron__
 
-Try to fill in the following table with properties about the platonic solids:
+    x-polyhedron(size=120 shape="Tetrahedron")
 
+[[4]] Faces  
+[[4]] Vertices  
+[[6]] Edges
 
-| Tetrahedron  | Cube  | Octahedron  | Dodecahedron | Icosahedron |
-| ------------- | ----- | ------- | --- | --- |
-| x-media(width=100, height=100, src="images/polyhedra/tetrahedron.gif") | x-media(width=100, height=100, src="images/polyhedra/cube.gif") | x-media(width=100, height=100, src="images/polyhedra/octahedron.gif") | x-media(width=100, height=100, src="images/polyhedra/dodecahedron.gif") | x-media(width=100, height=100, src="images/polyhedra/icosahedron.gif") |
-| Fire | Earth | Air | The Universe | Water |
-| [[4]] Faces<br>[[4]] Vertices<br>[[6]] Edges | [[6]] Faces<br>[[8]] Vertices<br>[[12]] Edges | [[8]] Faces<br>[[6]] Vertices<br>12 Edges | [[12]] Faces<br>20 Vertices<br>30 Edges| [[20]] Faces<br>12 Vertices<br>30 Edges |
+::: column.grow.text-center(width=120)
+__Cube__
+
+    x-polyhedron(size=120 shape="Cube")
+
+[[6]] Faces  
+[[8]] Vertices  
+[[12]] Edges
+
+::: column.grow.text-center(width=120)
+__Octahedron__
+
+    x-polyhedron(size=120 shape="Octahedron")
+
+[[8]] Faces  
+[[6]] Vertices  
+[[12]] Edges
+
+::: column.grow.text-center(width=120)
+__Dodecahedron__
+
+    x-polyhedron(size=120 shape="Dodecahedron")
+
+[[12]] Faces  
+20 Vertices  
+30 Edges
+
+::: column.grow.text-center(width=120)
+__Icosahedron__
+
+    x-polyhedron(size=120 shape="Icosahedron")
+
+[[20]] Faces  
+12 Vertices  
+30 Edges
+:::
 
 ---
 
 Notice how the number of faces and vertices are [[swapped around|the same]] for
-cube an octahedron, and dodecahedron and icosahedron, while the number of edges
-[[stays the same|are different]]. These pairs of Platonic solids are called
-__dual solids__.
+[cube an octahedron](target:a), as well as [dodecahedron and icosahedron](target:b),
+while the number of edges [[stays the same|are different]]. These pairs of
+Platonic solids are called __dual solids__.
 
-We can even turn one into each other, by “replacing” every face with a vertex,
-and vice versa:
+We can turn a polyhedron into its dual, by “replacing” every face with a vertex,
+and every vertex with a face. These animations show how:
 
     .row
       .grow: x-img-sequence(src="images/dual1/d#.png", pages="24", width="300", height="300")
       .grow: x-img-sequence(src="images/dual2/d#.png", pages="24", width="300", height="300")
 
-The tetrahedron is dual with itself. If we were to do the same kind of
-intersection, we would simply get two tetrahedra.
+The tetrahedron is dual with itself. Since it has the same number of faces and
+vertices, swapping them wouldn't change anything.
+
+---
+
+Plato believed that all matter in the Universe consists of four elements: Air,
+Earth, Water and Fire. He thought that they each correspond to one of the
+Platonic solids. The fifth one would represent the universe as a whole. Today we
+know that there are more than 100 different elements which consist of spherical
+atoms, not polyhedra.
+
+    figure
+      img(src="images/elements.jpg" width=600 height=153)
+      p.caption Images from Johannes Kepler’s book "Harmonices Mundi" (1619)
 
 ---
 
 ## More on Polyhedra
 
-__Archimedean solids__ are slightly less regular. They are like Platonic solids,
-but they can consist of more than one type of regular polygon. They are named
-after another ancient Greek mathematician: [Archimedes of Syracuse](bio:archimedes).
-In total there are 13 Archimedean solids:
+Platonic solids are the most regular polyhedra – but there are countless others.
 
-::: column(width=200)
-    x-polyhedron(size=200 shape="TruncatedTetrahedron")
+__Archimedean solids__, for example, still have to be made up of regular
+polygons, but you can use multiple different ones. They are named after another
+Greek mathematician, [Archimedes of Syracuse](bio:archimedes), and there are
+13 of them:
+
+::: column(width=220 parent="padded-thin")
+    x-polyhedron(size=220 shape="TruncatedTetrahedron")
     
 {.caption} __Truncated Tetrahedron__  
 8 faces, 12 vertices, 18 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="Cuboctahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="Cuboctahedron")
 
 {.caption} __Cuboctahedron__  
 14 faces, 12 vertices, 24 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="TruncatedCube")
+::: column(width=220)
+    x-polyhedron(size=220 shape="TruncatedCube")
 
 {.caption} __Truncated Cube__  
 14 faces, 24 vertices, 36 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="TruncatedOctahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="TruncatedOctahedron")
 
 {.caption} __Truncated Octahedron__  
 14 faces, 24 vertices, 36 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="Rhombicuboctahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="Rhombicuboctahedron")
 
 {.caption} __Rhombicuboctahedron__  
 26 faces, 24 vertices, 48 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="TruncatedCuboctahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="TruncatedCuboctahedron")
 
 {.caption} __Truncated Cuboctahedron__  
 26 faces, 48 vertices, 72 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="SnubCube")
+::: column(width=220)
+    x-polyhedron(size=220 shape="SnubCube")
 
 {.caption} __Snub Cube__  
 38 faces, 24 vertices, 60 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="Icosidodecahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="Icosidodecahedron")
 
 {.caption} __Icosidodecahedron__  
 32 faces, 30 vertices, 60 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="TruncatedDodecahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="TruncatedDodecahedron")
 
 {.caption} __Truncated Dodecahedron__  
 32 faces, 60 vertices, 90 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="TruncatedIcosahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="TruncatedIcosahedron")
 
 {.caption} __Truncated Icosahedron__  
 32 faces, 60 vertices, 90 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="Rhombicosidodecahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="Rhombicosidodecahedron")
 
 {.caption} __Rhombicosidodecahedron__  
 62 faces, 60 vertices, 120 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="TruncatedIcosidodecahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="TruncatedIcosidodecahedron")
 
 {.caption} __Truncated Icosidodecahedron__  
 62 faces, 120 vertices, 180 edges
-::: column(width=200)
-    x-polyhedron(size=200 shape="SnubDodecahedron")
+::: column(width=220)
+    x-polyhedron(size=220 shape="SnubDodecahedron")
 
 {.caption} __Snub Dodecahedron__  
 92 faces, 60 vertices, 150 edges
 :::
 
-    // TODO Prisms and antiprisms, whose symmetry groups are the dihedral groups, are generally not considered to be Archimedean solids, despite meeting the above definition. With this restriction, there are only finitely many Archimedean solids. All but the elongated square gyrobicupola can be made via Wythoff constructions from the Platonic solids with tetrahedral, octahedral and icosahedral symmetry.
+    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
+    // generally not considered to be Archimedean solids, despite meeting the
+    // above definition.
 
 ---
 
-Plato was wrong in believing that matter consists of Platonic solids. But
-regular polyhedra have many special properties that make them appear everywhere
+Plato was wrong in believing that all elements consists of Platonic solids. But
+regular polyhedra have many special properties that make them appear elsewhere
 in nature – and we can copy these properties in science and engineering.
 
 ### Viruses and Bacteria
@@ -1123,7 +1437,7 @@ in nature – and we can copy these properties in science and engineering.
     p.caption Icosahedral virus
 
 ::: column.grow
-Many viruses, bacteria and other tiny organisms are shaped like icosahedra.
+Many viruses, bacteria and other tiny organisms are shaped like Icosahedra.
 Viruses, for example, must enclose their genetic material inside a shell of many
 identical protein units. The icosahedron is the most efficient way to do this –
 because it consists of a few regular elements but is almost shaped like a sphere.
@@ -1145,8 +1459,8 @@ because it consists of a few regular elements but is almost shaped like a sphere
       
 ::: column.grow
 Many molecules are shaped like regular polyhedra. The most famous example is
-C~~60~~ which consists of 60 carbon atoms arranged in the shape of a [truncated
-icosahedron](gloss:trucated-icosahedron). It was discovered in 1985 when
+C~~60~~ which consists of 60 carbon atoms arranged in the shape of a [Truncated
+Icosahedron](gloss:trucated-icosahedron). It was discovered in 1985 when
 scientists researched interstellar dust. They named it “Buckyball” (or
 Buckminsterfullerene) after the architect Buckminster Fuller, famous for
 constructing similar-looking geodesic domes.
@@ -1168,8 +1482,8 @@ constructing similar-looking geodesic domes.
       
 ::: column.grow
 Most crystals have their atoms arranged in a regular grids consisting of
-tetrahedra, cubes, octahedra and many other polyhedra. When they crack or
-shatter, you can see these patterns on a much larger scale.
+Tetrahedra, Cubes or Octahedra. When they crack or shatter, you can see these
+patterns on a much larger scale.
 :::
 
 ---
@@ -1210,38 +1524,6 @@ large roofs and heavy bridges.
 Because of their symmetry, Platonic solids are often used to create dice. Every
 side has the probability of landing facing up, so the dice are always fair.
 
-The truncated icosahedron is probably the most famous polyhedron in the world:
+The Truncated Icosahedron is probably the most famous polyhedron in the world:
 it is the shape of the football.
 :::
-
----
-
-## Cross-Sections and Nets of 3D Solids
-
-What if you wanted to expand your thinking of geometric shapes beyond the flat
-two-dimensional ones to three dimensional (3D) ones?
-
-Try this experiment to gee how nets relate to 3D figures: Sketch or print the
-equilateral triangle in the image below onto a piece of paper and cut it out.
-Fold on the dotted lines. What shape do these four attached equilateral
-triangles make? If you place two of these equilateral triangles next to each
-other, as in the second image, and fold them on the dotted lines, what 3D figure
-would you make? 
-
-While our world is three dimensional, we are used to modeling and thinking about
-three dimensional objects on paper (in two dimensions). There are a few common
-ways to help think about three dimensions in two dimensions. One way to “view”
-a three-dimensional figure in a two-dimensional plane, like this text, is to use
-cross-sections. A cross-section is the intersection of a plane with a solid.
-Another way to represent a three-dimensional figure in a two dimensional plane
-is to use a net. A net is an unfolded, flat representation of the sides of a
-three-dimensional shape.
-
-### Identifying Figures Created by Nets
-What kind of figure does this net create?
-
-### Drawing Nets
-Draw a net of the right triangular prism below.
-
-### Describing Cross-Sections 
-Describe the cross section formed by the intersection of the plane and the solid.

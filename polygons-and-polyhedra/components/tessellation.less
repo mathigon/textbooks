@@ -11,7 +11,23 @@ x-tessellation {
   display: block;
   height: 450px;
   background: @grey-background;
+  position: relative;
+  margin: 1.5em 0;
 
-  svg { height: 450px; width: 100%; position: relative; }
-  polygon { cursor: move; stroke: #eee; transition: transform .1s; }
+  svg { height: 450px; width: 100%; }
+  polygon { cursor: move; }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .add {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-row { position: absolute; bottom: 12px; left: 12px }
 }
