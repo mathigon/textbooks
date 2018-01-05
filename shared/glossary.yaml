@@ -3,23 +3,35 @@
 # ==============================================================================
 
 
-term: TODO
+term:
+  title: Term (Algebra)
+  text: TODO
 
-variable: A __variable__ is an unknown quantity in an algebraic expression,
-  which is usually represented by a letter like _x_.
+variable:
+  title: Variable
+  text: A __variable__ is an unknown quantity in an algebraic expression, which
+    is usually represented by a letter like _x_.
 
-coefficient: A __coefficient__ is the number by which a variable or a power of a
-  variable is multiplied. For exmple, the coefficient of `5x^2` is 5, and the
-  coefficient of `7y` is 7.
+coefficient:
+  title: Coefficient
+  text: A __coefficient__ is the number by which a variable or a power of a
+    variable is multiplied. For exmple, the coefficient of `5x^2` is 5, and the
+    coefficient of `7y` is 7.
 
-polynomial: A __polynomial__ is an algebraic expression that consists of
-  multiple powers of a variable, for example `5x^3 - 2x^2 + x + 4`.
+polynomial:
+  title: Polynomial
+  text: A __polynomial__ is an algebraic expression that consists of multiple
+    powers of a variable, for example `5x^3 - 2x^2 + x + 4`.
 
-degree: The degree of a polynomial is the highest power of any variables in it.
-  For example, the degree of `5x^3 + 2x - 4` is 3.
+degree:
+  title: Degree
+  text: The degree of a polynomial is the highest power of any variables in it.
+    For example, the degree of `5x^3 + 2x - 4` is 3.
 
-quadratic: A __quadratic__ is a [polynomial(gloss:polynomial) of degree 2. For
-  example, `x^2 - 2x + 3` is a quadratic.
+quadratic:
+  title: Quadratic
+  text: A __quadratic__ is a [polynomial(gloss:polynomial) of degree 2. For
+    example, `x^2 - 2x + 3` is a quadratic.
 
 
 
@@ -28,85 +40,139 @@ quadratic: A __quadratic__ is a [polynomial(gloss:polynomial) of degree 2. For
 # ==============================================================================
 
 
-point: A __point__ is a location in space that does not have size or shape.
+point:
+  title: Point
+  text: A __point__ is a location in space that does not have size or shape.
+  id: euclidean-geometry#point
 
-line: TODO
+line:
+  title: Line
+  text: TODO
 
-ray: TODO
+ray:
+  title: Ray
+  text: TODO
 
-line-segment: A __line segment__ is a part of a line that has two endpoints.
+line-segment:
+  title: Line segment
+  text: A __line segment__ is a part of a line that has two endpoints.
 
-collinear: Three or more points are __collinear__ if they lie on the same line.
+collinear:
+  title: Collinear points
+  text: Three or more points are __collinear__ if they lie on the same line.
 
-congruent: In geometry, two figures are __congruent__ if are identical in size,
-  shape and measure.
+congruent:
+  title: Congruence
+  text: In geometry, two figures are __congruent__ if are identical in size,
+    shape and measure.
 
-angle-bisector: An angle bisector is a ray that splits an angle in the middle,
-  into two congruent, smaller angles.
+angle-bisector:
+  title: Angle bisector
+  text: An __angle bisector__ is a ray that splits an angle in the middle, into
+    two congruent, smaller angles.
 
-midpoint: The midpoint of a line segment is the point on the line segment that
-  splits the segment in the middle, into two congruent parts. The midpoint
-  formula says that for endpoints `(x_1, y_1)` and `(x_2,y_2)`, the midpoint is
-  `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
+midpoint:
+  title: Midpoint
+  text: The __midpoint__ of a line segment is the point on the line segment that
+    splits the segment in the middle, into two congruent parts. The midpoint
+    formula says that for endpoints `(x_1, y_1)` and `(x_2,y_2)`, the midpoint
+    is `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
 
-perpendicular-bisector: A perpendicular bisector of a line segment passes
-  through the midpoint of the line segment and intersects the line segment at
-  90°.
+perpendicular-bisector:
+  title: Perpendicular bisector
+  text: A perpendicular bisector of a line segment passes through the midpoint
+    of the line segment and intersects the line segment at 90°.
 
-protractor: A protractor is a tool used to measure an angle in degrees.
+protractor:
+  title: Protractor
+  text: A protractor is a tool used to measure an angle in degrees.
 
-postulate: A postulate is a statement that is accepted as true without proof.
+postulate:
+  title: Postulate
+  text: A postulate is a statement that is accepted as true without proof.
 
-transversal: A transversal is a line that intersects two other lines.
+transversal:
+  title: Traversal
+  text: A transversal is a line that intersects two other lines.
 
-parallel: Two or more lines are __parallel__ when they lie in the same plane and
-  never intersect. These lines will always have the same slope.
+parallel:
+  title: Parallel lines
+  text: Two or more lines are __parallel__ when they lie in the same plane and
+    never intersect. These lines will always have the same slope.
 
 
 # ------------------------------------------------------------------------------
 # Angles
 
-acute-angle: An __acute angle__ is an angle of size less than 90°.
+acute-angle:
+  title: Acute angle
+  text: An __acute angle__ is an angle of size less than 90°.
 
-obtuse-angle: An __obtuse angle__ is an angle of size greater than 90° but less
-  than 180°
+obtuse-angle:
+  title: Obtuse angle
+  text: An __obtuse angle__ is an angle of size greater than 90° but less than
+    180°
 
-right-angle: A __right angle__ is an angle equal to 90°.
+right-angle:
+  title: Right angle
+  text: A __right angle__ is an angle equal to 90°.
 
-perpendicular: Two lines are __perpendicular__ if they intersect at a 90° angle.
+perpendicular:
+  title: Perpendicular line
+  text: Two lines are __perpendicular__ if they intersect at a 90° angle.
 
-supplementary-angles: Two angles are __supplementary__ if they add up to 180°.
+supplementary-angles:
+  title: Supplementary angles
+  text: Two angles are __supplementary__ if they add up to 180°.
 
-complementary-angles: Two angles are __complementary__ if they add up to 90°.
+complementary-angles:
+  title: Complementary angles
+  text: Two angles are __complementary__ if they add up to 90°.
 
-verticle-angles: __Vertical angles__ are pairs of opposite angles created by
-  intersecting lines. Vertical angles are always _congruent_.
+verticle-angles:
+  title: Vertical angles
+  text: __Vertical angles__ are pairs of opposite angles created by
+    intersecting lines. Vertical angles are always _congruent_.
 
-corresponding-angles: __Corresponding angles__ are two angles that are in the
-  same position with respect to the transversal, but on different lines.
+corresponding-angles:
+  title: Corresponding angles
+  text: __Corresponding angles__ are two angles that are in the same position
+    with respect to the transversal, but on different lines.
 
-alternate-angles: __Alternate angles__ are two angles that are on the interior
-  of two different lines, but on the opposite sides of the transversal.
+alternate-angles:
+  title: Alternate angles
+  text: __Alternate angles__ are two angles that are on the interior of two
+    different lines, but on the opposite sides of the transversal.
 
-adjacent-angles: Two angles are __adjacent__ if they share a side and vertex.
-  The word _adjacent_ means "beside" or "next-to".
+adjacent-angles:
+  title: Anjacent Angles
+  text: Two angles are __adjacent__ if they share a side and vertex. The word
+    _adjacent_ means "beside" or "next-to".
 
 
 # ------------------------------------------------------------------------------
 # Transformations
 
-transformation: TODO
+transformation:
+  title: Transformation
+  text: TODO
 
-rigid-transformation: |
-  A __rigid transformation__ (or __isometry__) is a transformation that doesn't
-  change the size or shape of a geometric figure.
+rigid-transformation:
+  title: Rigid transformation
+  text: A __rigid transformation__ (or __isometry__) is a transformation that
+    doesn't change the size or shape of a geometric figure.
 
-laws-of-nature: |
-  The "laws of nature" is the name given collectively to a set of rules (usually
-  expressed as mathematical equations) that are supposed to explain everything
-  we observe in the universe.
+laws-of-nature:
+  title: Laws of Nature
+  text: The "laws of nature" is the name given collectively to a set of rules
+    (usually expressed as mathematical equations) that are supposed to explain
+    everything we observe in the universe.
 
-# Symmetry	A figure has symmetry if it can be transformed and still look the same.
+symmetry:
+  title: Symmetry
+  text: A figure or shape has __symmetry__ if it can be transformed, and still
+    look the same afterwards.
+
 # Line of Symmetry	A line of symmetry is a line that can be drawn to divide a figure into equal halves.
 # Line Symmetry	A figure has line symmetry or reflection symmetry when it can be divided into equal halves that match.
 # reflection symmetry	A figure has reflection symmetry if it can be reflected across a line and look exactly the same as it did before the reflection.
@@ -117,128 +183,201 @@ laws-of-nature: |
 # ------------------------------------------------------------------------------
 # Triangles
 
-equilateral-triangle: |
-  An __equilateral triangle__ is a triangle in which all three sides have the
-  same length.
+equilateral-triangle:
+  title: Equilateral triangle
+  text: An __equilateral triangle__ is a triangle in which all three sides have
+    the same length.
 
-acute-triangle: In an __acute triangle__, all three angles are _acute_ (less
-  than 90°).
+acute-triangle:
+  title: Acute triangle
+  text: In an __acute triangle__, all three angles are _acute_ (less than 90°).
 
-isosceles-triangle: In an __isosceles triangle__, exactly two sides have the
-  same length.
+isosceles-triangle:
+  title: isosceles triangle
+  text: In an __isosceles triangle__, exactly two sides have the same length.
 
-obtuse-triangle: In an __obtuse triangle__, one angle is larger than 90°.
+obtuse-triangle:
+  title: Obtuse triangle
+  text: In an __obtuse triangle__, one angle is larger than 90°.
 
-right-triangle: In a __right-angled triangle__, one angle is exactly 90°.
+right-triangle:
+  title: Right-angled triangle
+  text: In a __right-angled triangle__, one angle is exactly 90°.
 
-scalene-triangle: In a __scalene triangle__, all three sides have different
-  lengths.
+scalene-triangle:
+  title: Scalene Triangle
+  text: In a __scalene triangle__, all three sides have different lengths.
 
-median: The __median__ of a triangle is the line that connects a vertex to the
-  midpoint of the opposite side.
+median:
+  title: Median
+  text: The __median__ of a triangle is the line that connects a vertex to the
+    midpoint of the opposite side.
 
-centroid: The __centroid__ of a triangle is the point where its three medians
-  intersect. It is the "center of gravity" of the triangle.
+centroid:
+  title: Centroid
+  text: The __centroid__ of a triangle is the point where its three medians
+    intersect. It is the "center of gravity" of the triangle.
 
-hypotenuse: The __hypotenuse__ of a right triangle is its longest side. It it
-  always oppsite to the right angle.
+hypotenuse:
+  title: Hypotenuse
+  text: The __hypotenuse__ of a right triangle is its longest side. It it
+    always oppsite to the right angle.
 
-triangle-legs: The two __legs__ of a right-angled triangle are the two shorter
-  sides (not the hypotenuse). They are adjacent to the right angle.
+triangle-legs:
+  title: Legs of a triangle
+  text: The two __legs__ of a right-angled triangle are the two shorter sides
+    (not the hypotenuse). They are adjacent to the right angle.
 
-pythagoras-theorem: __Pythagoras's Theorem__ states that in every right-angled
-  triangle, `a^2 + b^2 = c^2`, where _a_ and _b_ are lengths of the two legs,
-  and _c_ is the length of the hypotenuse.
+pythagoras-theorem:
+  title: Pythagoras's theorem
+  text: __Pythagoras's Theorem__ states that in every right-angled triangle,
+    `a^2 + b^2 = c^2`, where _a_ and _b_ are lengths of the two legs, and _c_
+    is the length of the hypotenuse.
 
-pythagorean-triple: A __Pythagorean triple__ is a set of three whole numbers
-  _a_, _b_ and _c_ that satisfy __Pythagoras's Theorem `a^2 + b^2 = c^2`.
+pythagorean-triple:
+  title: Pythagorean triple
+  text: A __Pythagorean triple__ is a set of three whole numbers _a_, _b_ and
+    _c_ that satisfy __Pythagoras's Theorem `a^2 + b^2 = c^2`.
 
 
 # ------------------------------------------------------------------------------
 # Polygons
 
-polygon: A __polygon__ is geometric shape that is made up of straight line
-  segments.
+polygon:
+  title: Polygon
+  text: A __polygon__ is geometric shape that is made up of straight line
+    segments.
 
-polygon-vertex: The __vertices__ of a polygon are the points where its sides
-  meet (its "corners").
+polygon-vertex:
+  title: Vertex of a polygon
+  text: The __vertices__ of a polygon are the points where its sides meet (its
+    "corners").
 
-internal-angle: The __internal angles__ of the polygon are the angles on the
-  inside, at every vertex.
+internal-angle:
+  title: Internal angles
+  text: The __internal angles__ of the polygon are the angles on the inside, at
+    every vertex.
 
-regular-polygon: A __regular polygon__ is a polygon in which all sides have the
-  same length and all angles have the same size.
+regular-polygon:
+  title: Regular polygon
+  text: A __regular polygon__ is a polygon in which all sides have the same
+    length and all angles have the same size.
 
-concave: A __concave__ polygon has at least one internal angle greater than
-  180°. A common way to identify a concave polygon is to look for a "caved-in"
-  side of the polygon.
+concave:
+  title: Concave polygon
+  text: A __concave__ polygon has at least one internal angle greater than 180°.
+    A common way to identify a concave polygon is to look for a "caved-in"
+    side of the polygon.
 
-convex: A __convex__ polygon contains no internal angles greater than 180°.
+convex:
+  title: Convex polygon
+  text: A __convex__ polygon contains no internal angles greater than 180°.
 
-diagonal: A __diagonal__ of a polygon is a line segment that connects two
-  vertices that are not next to each other.
+diagonal:
+  title: Diagonal
+  text: A __diagonal__ of a polygon is a line segment that connects two vertices
+    that are not next to each other.
 
-quadrilateral: A __quadrilateral__ is a polygon with four sides.
+quadrilateral:
+  title: Quadrilateral
+  text: A __quadrilateral__ is a polygon with four sides.
 
-square: A __square__ is a regular quadrilateral: all sides have the same length,
-  and all angles have the same size.
+square:
+  title: Square
+  text: A __square__ is a regular quadrilateral: all sides have the same length,
+    and all angles have the same size.
 
-rectangle: A __rectangle__ is a [quadrilateral](gloss:quadrilateral) in which
-  all angles are 90°.
+rectangle:
+  title: Rectangle
+  text: A __rectangle__ is a [quadrilateral](gloss:quadrilateral) in which all
+    angles are 90°.
 
-parallelogram: A __parallelogram__ is a quadrilateral in which both pairs of
-  opposite edges are [parallel](gloss:parallel).
+parallelogram:
+  title: Parallelogram
+  text: A __parallelogram__ is a quadrilateral in which both pairs of
+    opposite edges are [parallel](gloss:parallel).
 
-trapezium: A __trapezium__ is a quadrilateral in which a pair of opposite edges
-  are parallel.
+trapezium:
+  title: Trapezium
+  text: A __trapezium__ is a quadrilateral in which a pair of opposite edges
+    are parallel.
 
-rhombus: A __rhombus__ is a quadrilateral in which all edges have the same
-  length.
+rhombus:
+  title: Rhombus
+  text: A __rhombus__ is a quadrilateral in which all edges have the same
+    length.
 
-kite: A __kite__ is a quadrilateral in which two pairs of adjacent sides have
-  the same length.
+kite:
+  title: Kite
+  text: A __kite__ is a quadrilateral in which two pairs of adjacent sides have
+    the same length.
 
-tessellation:  A __tessellation__ is a geometric pattern that covers a surface
-  without gaps or overlaps.
+tessellation:
+  title: Tessellation
+  text: A __tessellation__ is a geometric pattern that covers a surface without
+    gaps or overlaps.
 
-penrose: A __Penrose tiling__ is a non-periodic, self-similar tessellation.
+penrose:
+  title: Penrose tiling
+  text: A __Penrose tiling__ is a non-periodic, self-similar tessellation.
 
 
 # ------------------------------------------------------------------------------
 # Polyhedrons
 
-polyhedron: A __polyhedron__ is a 3-dimensional solid with no curves surfaces or
-  edges. All faces of a polyhedron are polygons.
+polyhedron:
+  title: Polyhedron
+  text: A __polyhedron__ (the plural is _polyhedra_) is a 3-dimensional solid
+    with no curves surfaces or edges. All faces of a polyhedron are polygons.
 
-polyhedron-edge: TODO
+polyhedron-edge:
+  title: Edge of a polyhedron
+  text: TODO
 
-polyhedron-vertex: The "corners" of a polyhedron are called its __vertices__.
+polyhedron-vertex:
+  title: Vertex of a polyhedron
+  text: The "corners" of a polyhedron are called its __vertices__.
 
-polyhedron-face: The polygons which are “sides” of a polyhedron.
+polyhedron-face:
+  title: Face of a polyhedron
+  text: The polygons which are “sides” of a polyhedron.
 
-platonic-solid: A __Platonic solid__ is a polyhedron made up of only one kind of
-  regular polygon, that looks the same from every direction.
+platonic-solid:
+  title: Platonic solid
+  text: A __Platonic solid__ is a polyhedron made up of only one kind of
+    regular polygon, that looks the same from every direction.
 
-archimedean-solid: An __Archimedean solid__ is a polyhedron made up of different
-  kinds of regular polygons, that looks the same from every direction.
+archimedean-solid:
+  title: Archimedean solid
+  text: An __Archimedean solid__ is a polyhedron made up of different kinds of
+    regular polygons, that looks the same from every direction.
 
-cross-section: A __cross section__ is the intersection of a three-dimensional
-  solid with a plane.
+cross-section:
+  title: Cross section
+  text: A __cross section__ is the intersection of a three-dimensional solid
+    with a plane.
 
 
 # ------------------------------------------------------------------------------
 # Circles
 
-circle: A __circle__ is the set of all points at a specific distance from a
-  given point in two dimensions.
+circle:
+  title: Circle
+  text: A __circle__ is the set of all points at a specific distance from a
+    given point in two dimensions.
 
-diameter: The __diameter__ of a circle is the distance across the center of a
-  circle. It is equal to twice the radius of the circle.
+diameter:
+  title: Diameter (circle)
+  text: The __diameter__ of a circle is the distance across the center of a
+    circle. It is equal to twice the radius of the circle.
 
-radius: The __radius__ of a circle is the distance from its center to its edge.
+radius:
+  title: Radius
+  text: The __radius__ of a circle is the distance from its center to its edge.
 
-circumference: The __circumference__ of a circle is the length around its
-  outside edge.
+circumference:
+  title: Circumference (circle)
+  text: The __circumference__ of a circle is the length around its outside edge.
 
 # Sphere	A sphere is a round, three-dimensional solid. All points on the surface of a sphere are equidistant from the center of the sphere.
 # Surface Area	Surface area is the total area of all of the surfaces of a three-dimensional object.
