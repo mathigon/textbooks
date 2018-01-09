@@ -26,7 +26,6 @@ function getRenderer(size) {
   return renderers[size] = renderer;
 }
 
-
 // -----------------------------------------------------------------------------
 // Polygon WebGL Setup
 
@@ -107,21 +106,28 @@ function setupWebGL($el, $canvas, shape, size, shift) {
   const renderer = getRenderer(size);
   const context = $canvas.getContext();
 
+  let dragging = false;
+  let visible = false;
+
+  $el.on('enterViewport', () => { visible = true; render(); });
+  $el.on('exitViewport', () => { visible = false; });
+
   function render() {
-    // requestAnimationFrame(render);
+    if (visible) requestAnimationFrame(render);
     renderer.render(scene, camera);
     context.drawImage(renderer.domElement, 0, 0);
+    if (!dragging) polyhedron.rotation.y += 0.012;
   }
-  render();
 
   slide($el, {
+    start() { dragging = true; },
     move(posn, start, last) {
       const d = posn.subtract(last);
       const q = new THREE.Quaternion().setFromEuler(
         new THREE.Euler(d.y * Math.PI / 180, d.x * Math.PI / 180, 0, 'XYZ'));
       polyhedron.quaternion.multiplyQuaternions(q, polyhedron.quaternion);
-      render();
-    }
+    },
+    end() { dragging = false; }
   });
 }
 

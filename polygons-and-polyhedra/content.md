@@ -13,12 +13,14 @@ Polygons can have any number of sides and angles, but the sides cannot be
 curved. Which of the shapes below are polygons?
 
     x-picker
-      .item: include svg/polygons/polygon-1.svg
+      .item#item1: include svg/polygons/polygon-1.svg
       .item(data-error="not-a-polygon-1"): include svg/polygons/polygon-2.svg
       .item(data-error="not-a-polygon-2"): include svg/polygons/polygon-3.svg
       .item: include svg/polygons/polygon-4.svg
       .item(data-error="not-a-polygon-3"): include svg/polygons/polygon-5.svg
       .item: include svg/polygons/polygon-6.svg
+
+    x-gesture(target="#item1")
 
 ---
 
@@ -119,12 +121,15 @@ can split a pentagon into [[3]] triangles, so its internal angle sum is
 internal angle sum is `4 × 180° =` [[720]]°.
 
 ---
+> id: internalAngleSum
 
-A polygon with ${x}{x|8|8,12,1'} sides will have an internal angle sum of
-180° × ${x-2} = ${(x-2)*180}. More generally, a polygon with _n_ sides can be
+A polygon with ${x}{x|7|3,15,1} sides will have an internal angle sum of
+180° × ${x-2} = ${(x-2)*180}°. More generally, a polygon with _n_ sides can be
 split into [[n – 2|n – 1|n]] triangles. Therefore,
  
-{.text-center} `"Sum of internal angles in an n-gon" = (n - 2) × 180°`.
+{.text-center} Sum of internal angles in an _n_-gon `= (n - 2) × 180°`.
+
+    x-gesture(target="#internalAngleSum x-var" slide="100,0")
 
 ---
 
@@ -141,7 +146,7 @@ least one [diagonal that lies _outside_ the polygon](target:diagonal). In convex
 polygons, all internal angles are less than 180°, and all diagonals lie inside
 the polygon.
 ::: column(width=200)
-{.todo}
+{.todo} image
 :::
 
 Which of these polygons are concave?
@@ -233,7 +238,7 @@ ${round(n×Math.tan(Math.PI/2-Math.PI/n)×s×s/4,2)}cm<sup>3</sup>
 
 ---
 
-## Classifying Quadrilaterals
+## Quadrilaterals
 
 In the previous chapter we investigated many different properties of triangles.
 Now lets have a look at quadrilaterals.
@@ -367,247 +372,315 @@ To avoid any ambiguity, we usually use just the most specific type.
 
 ---
 
-## Parallelograms
+::: column(width=300)
 
-{.todo} Recall that a __parallelogram__ is a quadrilateral that has
-[[two pairs of parallel sides|four congruent angles]].
+    x-geopad.sticky(style="width: 300px; height: 300px; top: calc(50vh - 150px)"): svg
+      circle.move(name="a" cx=80 cy=30)
+      circle.move(name="b" cx=270 cy=100)
+      circle.move(name="c" cx=270 cy=250)
+      circle.move(name="d" cx=30 cy=270)
+      circle.red(name="e" x="line(a,b).midpoint")
+      circle.red(name="f" x="line(b,c).midpoint")
+      circle.red(name="g" x="line(c,d).midpoint")
+      circle.red(name="h" x="line(d,a).midpoint")
+      path(x="polygon(a,b,c,d)")
+      path.red(x="polygon(e,f,g,h)")
 
-{.todo} area of parallelograms
+::: column.grow
+Now pick any four points in the the grey box on the left. Let's connect all of
+them to form a quadrilateral.
 
+Let's find the midpoint of each of the four sides. If we connect the
+midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
+
+Try moving the vertices of the outer quadrilateral and observe what happens to
+the smaller one. It looks like it is mnot just _any_ quadrilateral, but always a
+[[parallelogram|trapezium|rectangle]]!
+
+Let's think about what that's the case. If we draw one of the diagonals of the
+original quadrilateral, it splits it into two triangles.
+
+Now, two of the sides of the inner quadrilateral are actually [[midsegments]]
+of these two triangles!
+
+In the [previous chapter](/coursr/triangles-and-trigonometry) we showed that
+[midsegments](gloss:midsegment) of a triangle are always parallel its base. In
+this case, both bases are the diagonal of the quadrilateral. Since the two sides
+of the parallelogram are both parallel to the diagonal, they must also be
+parallel to each other.
+
+We can do exactly the same with the second diagonal of the quadrilateral, to
+show that both pairs of opposite sides are parallel. And this is all we need
+for the inner quadrilatera to be a parallelogram.
+:::
+
+---
+
+### Parallelograms
+
+It turns out that parallelograms have many other interesting properties, other
+than opposite sides being parallel. Which of the following six statements are
+true?
+
+::: column.grow
+
+    x-picker.list
+      .item The opposite sides are congruent.
+      .item(data-error="parall-error-1") The angles are always less that 90°.
+      .item The opposite angles are congruent.
+      .item(data-error="parall-error-2") Both diagonals are congruent.
+      .item(data-error="parall-error-3") Adjacent sides have the same length
+      .item The two diagonals bisect each other in the middle.
+
+::: column(width=300)
+{.todo} geopad
+:::
+
+---
+
+Of course, simply "observing" these properties is not enough. To be sure that
+they are _always_ true, we need to _prove_ them:
+
+::: tab
+#### Opposite Sides and Angles
+
+::: column(width=300)
+
+    x-geopad.sticky(style="width:300px; height: 300px;"): svg
+      circle.move(name="a" cx=80 cy=80)
+      circle.move(name="b" cx=20 cy=220)
+      circle.move(name="c" cx=220 cy=220)
+      circle(name="d" x="b.rotate(Math.PI, line(a,c).midpoint)")
+
+      path.fill.light.yellow.transparent(x="polygon(a,b,d)" target="triangles")
+      path.fill.light.green.transparent(x="polygon(b,c,d)" target="triangles")
+
+      path.fill.red(x="angle(a,b,d)" target="angles")
+      path.fill.red(x="angle(b,d,c)" target="angles")
+      path.fill.blue(x="angle(d,b,c)" target="angles")
+      path.fill.blue(x="angle(b,d,a)" target="angles")
+      
+      path(x="polygon(a,b,c,d)")
+      path(x="segment(b,d)" target="diagonal")
+      
+
+::: column.grow
+{.task} Let's try to prove that the opposite sides and angles in a parallelogram
+are always congruent.
+
+First, we draw one of the diagonals. This creates four new angles with the sides
+of the of the parallelogram.
+
+The red angles and the blue angles are [alternate angles](gloss:alternate-angles),
+so they must both be [[congruent]].
+
+Now if we look at the [two triangles](target:triangles) created by the diagonal,
+we see that they have [to congruent angles](target:angles), and [one congruent
+side](target:diagonal). By the [[ASA|AAS|AA]] congruence condition, both
+triangles must be congruent.
+
+And this means that the other parts of the triangles must also me congruent to
+each other: both pairs of opposite sies are congruent, and both pairs of
+opposite angles are congruent. _{span.qed}_
+:::
+
+It turns out that the converse is also true: if both pairs of opposite sides (or
+angles) in a quadrilateral are congruent, then the quadrilateral has to be a
+parallelogram.
+
+    //- Adjacent angles are supplementary.
+
+::: tab
+#### Diagonals
+
+::: column(width=300)
+{.todo} image
+::: column.grow
+{.task} Now let's prove that the two diagonals in a parallelogram bisect
+each other.
+
+Once again, we'll need to draw the diagonals of the parallelogram. Now, if you
+look at [two of the triangles](target:triangles) generated by the diagonals,
+you'll find that they are congruent, because of the [[ASA]] condition:
+
+* The outer sides of the triangle are congruent, because we have just proven
+  that opposite sides of a parallelogram are.
+* The two angles are congruent because they are alternate interiour angles.
+
+Now we can use the fact the corresponding parts of congruent triangles are also
+congruent, to conclude that `bar(AM) = bar(CM)` and `bar(BC) = bar(DM)`. In
+other words, the two diagonals intersect in their midpoints. _{span.qed}_
+:::
+
+Like before, the opposite is also true: if the two diagonals of a quadrilateral
+bisect each other, then the quadrilateral is a parallelogram.
+:::
+
+---
+
+### Kites
+
+::: column.grow
+We showed above that the two pairs of [[opposite|adjacent]] sides of a
+parallelogram are congruent. In a kite, two pairs of _adjacent_ sides are
+parallel.
+
+The name _Kite_ clearly comes from its shape: it looks like the kites you can
+fly in the sky. However, of all the special quadrilaterals we have seen so far,
+the Kite is the only one that can also be concave: if it is shaped like a dart
+or arrow:
 ::: column(width=320)
 
-    include svg/quadrilaterals/area-parallelogram.svg
+    x-media(src="images/kite.jpg" credit="© Depositphotos / chagall")
 
-::: column.grow
-{.todo} Notice how the overlap on the left is exactly the same as the gap on the
-right. Therefore the area of the [blue parallelogram](target:parallelogram) is
-[[the same as|smaller than|larger than]] the area of the [red rectangle](target:rectangle).
-This means that the area of any parallelogram is simply
+:::
 
-{.text-center} __{.i.m-green}base__ × __{.i.m-yellow}height__.
-
-_But be careful! The height of a parallelogram is necessarily perpendicular to
-the base. This means that the height is not the same as the sides._
+::: column(width=240)
+{.todo} convex kite
+::: column(width=240)
+{.todo} concave kite
 :::
 
 ---
 
-{.todo} Opposite Sides Theorem: If a quadrilateral is a parallelogram, then the opposite
-sides are congruent.
-
-{.todo} Opposite Angles Theorem: If a quadrilateral is a parallelogram, then the
-opposite angles are congruent.
-
-{.todo} Consecutive Angles Theorem: If a quadrilateral is a parallelogram, then the
-consecutive angles are supplementary.
-
-{.todo} Parallelogram Diagonals Theorem: If a quadrilateral is a parallelogram, then
-the diagonals bisect each other.
-
-{.todo} Opposite Sides Theorem Converse: If the opposite sides of a quadrilateral are
-congruent, then the figure is a parallelogram.
-
-{.todo} Opposite Angles Theorem Converse: If the opposite angles of a quadrilateral are
-congruent, then the figure is a parallelogram.
-
-{.todo} Parallelogram Diagonals Theorem Converse: If the diagonals of a quadrilateral
-bisect each other, then the figure is a parallelogram.
-
-{.todo} Theorem: If a quadrilateral has one set of parallel lines that are also
-congruent, then it is a parallelogram.
-
-{.todo} Rectangles, rhombuses (the plural is also rhombi) and squares are all more
-specific versions of parallelograms.
-
-{.todo} Rectangle Theorem: A quadrilateral is a rectangle if and only if it has four
-right (congruent) angles.
-
-{.todo} Rhombus Theorem: A quadrilateral is a rhombus if and only if it has four
-congruent sides. 
-
-{.todo} Square Theorem: A quadrilateral is a square if and only if it has four right
-angles and four congruent sides.
-
-{.todo} From the Square Theorem, we can also conclude that a square is a rectangle
-and a rhombus.
-
-{.todo} Recall that diagonals in a parallelogram bisect each other. Therefore, the
-diagonals of a rectangle, square and rhombus also bisect each other. The
-diagonals of these parallelograms also have additional properties.
-
-{.todo} Rectangle Theorem: A quadrilateral is a rectangle if and only if it has four
-right (congruent) angles.
-
-{.todo} Rhombus Theorem: A quadrilateral is a rhombus if and only if it has four
-congruent sides. 
-
-{.todo} Square Theorem: A quadrilateral is a square if and only if it has four right
-angles and four congruent sides. From the Square Theorem, we can also conclude
-that a square is a rectangle and a rhombus.
-
-{.todo} Recall that diagonals in a parallelogram bisect each other. Therefore, the
-diagonals of a rectangle, square and rhombus also bisect each other. The
-diagonals of these parallelograms also have additional properties.
-
-{.todo} A parallelogram is a rectangle if and only if the diagonals are congruent.
-
-{.todo} Theorem: A parallelogram is a rhombus if and only if the diagonals are perpendicular.
-
-{.todo} Theorem: A parallelogram is a rhombus if and only if the diagonals bisect each angle.
-
----
-
-::: column(width=400)
-
-    x-geopad(style="height: 300px"): svg
-      path(x="polygon(a,b,c,d)")
-      path.red(x="polygon(line(a,b).midpoint,line(b,c).midpoint,line(c,d).midpoint,line(d,a).midpoint)")
-      circle.move(name="a" cx=120 cy=40 r=6)
-      circle.move(name="b" cx=320 cy=140 r=6)
-      circle.move(name="c" cx=380 cy=270 r=6)
-      circle.move(name="d" cx=60 cy=250 r=6)
-      circle.red(x="line(a,b).midpoint" r=4)
-      circle.red(x="line(a,b).midpoint" r=4)
-      circle.red(x="line(a,b).midpoint" r=4)
-      circle.red(x="line(a,b).midpoint" r=4)
-
+::: column(width=300)
+{.todo} geopad
 ::: column.grow
-{.todo} Let's start by drawing any quadrilateral.
+You might notice that all kites are [[symmetric|similar]], and the axis of
+symmetry is one of the diagonals.
 
-{.todo} Now let's find the midpoint of each of the four sides of the quadrilateral. If
-we connect the four midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
+The diagonal splits the kite into two congruent triangles. We know that they are
+congruent from the SSS condition: both triangles have the same three sides.
+Cosing CPOCT, we know that all of the corresponding angles in the two triangles
+must have the same size.
 
-{.todo} However it looks like the new shape is not just _any_ quadrilateral, it is
-always a [[parallelogram|trapezium|rectangle]]! Try to move the vertices of the
-original quadrilateral to check.
+This means, for example, that the diagonal is a [[bisector]] of the two angles
+at its ends. (These angles are called the __vertex angles__ of a kite).
 
-{.todo} TODO Explanation
+But we can go even further: if we draw the other diagonal, we get two more,
+smaller triangles. These must also be congruent, because of the SAS condition:
+the have the same two sides and included angle.
+
+This means that angle a must be the same as angle b. They are also supplementary
+angles on a straight line, so they must add up to 180°. Therefore, both a and b
+must be 90°.
+
+In other words, the diagonals of a kite are always [[perpendicular|parallel]].
 :::
 
 ---
 
-## Trapezium
+### Area of Quadrilaterals
 
-::: column(width=260)
+When calculating the area of triangles in the previous chapter, we used the
+trick of converting it into a [[rectangle|square|pentagon]]. It turns out that
+we can also do that for some quadrilaterals:
 
-    include svg/quadrilaterals/area-trapezium.svg
+::: tab
+#### Parallelogram
 
+::: column(width=300)
+{.todo} geopad
 ::: column.grow
-{.todo} Notice how the gaps on the left and right are each exactly as big as the overlap
-on that side. The width of the __{m.red}red rectangle__ is the average of the
-widths of the top side and the bottom side of the __{.m-blue}blue trapezium__.
-Therefore the area of a trapezium is
+On the left, try to draw a rectangle that has the same area as the
+parallelogram.
 
-{.text-center} #[mfrac #[mrow #[strong.i.m-green top] + #[strong.i.m-green bottom]]#[mrow 2]] × #[strong.i.m-yellow height].
+Can you see that the missing triangle on the left is
+[[exactly the same as|smaller than|bigger than]] the overlapping triangle on the
+right? Therefore the area of a parallelogram is
+
+{.text-center} Area = __{.i.m-green}base__ × __{.i.m-yellow}height__
+
+_Be careful when measuring the height of a parallelogram: it is usually not the
+same as the of the two sides._
 :::
 
-{.todo} A trapezoid is a quadrilateral with exactly one pair of parallel sides.
+::: tab
+#### Trapezium
 
-{.todo} An isosceles trapezoid is a trapezoid where the non-parallel sides are
-congruent. The third trapezoid above is an example of an isosceles trapezoid.
-Think of it as an isosceles triangle with the top cut off. Isosceles trapezoids
-also have parts that are labeled much like an isosceles triangle. Both parallel
-sides are called bases.
+Recall that trapeziums are quadrilaterals with one pair of parallel sides. These
+parallel sides are called the __bases__ of the trapezium.
 
-{.todo} Recall that in an isosceles triangle, the two base angles are congruent. This
-property holds true for isosceles trapezoids.
-
-{.todo} Theorem: The base angles of an isosceles trapezoid are congruent.
-
-{.todo} The converse is also true: If a trapezoid has congruent base angles, then it is
-an isosceles trapezoid. Next, we will investigate the diagonals of an isosceles
-trapezoid. Recall, that the diagonals of a rectangle are congruent AND they
-bisect each other. The diagonals of an isosceles trapezoid are also congruent,
-but they do NOT bisect each other.
-
-{.todo} Isosceles Trapezoid Diagonals Theorem: The diagonals of an isosceles trapezoid
-are congruent.
-
-{.todo} The midsegment (of a trapezoid) is a line segment that connects the midpoints
-of the non-parallel sides. There is only one midsegment in a trapezoid. It will
-be parallel to the bases because it is located halfway between them. Similar to
-the midsegment in a triangle, where it is half the length of the side it is
-parallel to, the midsegment of a trapezoid also has a link to the bases.
-
-{.todo} Midsegment Theorem: The length of the midsegment of a trapezoid is the average
-of the lengths of the bases, or EF=AB+CD2.
-
-### Area and perimeter
-
-{.todo} Recall that a trapezoid is a quadrilateral with one pair of parallel sides.
-The lengths of the parallel sides are the bases. The perpendicular distance
-between the parallel sides is the height, or altitude, of the trapezoid.
-
-{.todo} To find the area of the trapezoid, let’s turn it into a parallelogram. To do
-this, make a copy of the trapezoid and then rotate the copy 180∘. Now, this is
-a parallelogram with height h and base b1+b2. Let’s find the area of this shape.
-
-{.todo} A=h(b1+b2)
-Because the area of this parallelogram is made up of two congruent trapezoids,
-the area of one trapezoid would be A=12h(b1+b2). The formula for the area of a
-trapezoid could also be written as the average of the bases time the height.
-
----
-
-## Rhombus and Kites
-
-::: column(width=260)
-
-    include svg/quadrilaterals/area-kite.svg
-
+::: column(width=300)
+{.todo} geopad
 ::: column.grow
-{.todo} Each the four smaller rectangles are exactly half blue. Therefore the area of
-the __{.m-blue}blue kite__ is half the area of the __{.m-red}red rectangle__. In
-other words, the area of a kite or rhombus is always
+Like before, try to draw a rectangle that has the same area as this trapezium.
+Can you see how the missing and triangles on the left and the right cancel out?
 
-{.text-center} `1/2` __{.i.m-green}width__ × __{.i.m-yellow}height__.
+The height of this rectangle is the distance between the two parallel sides of
+the trapezium. The width of the rectangle is the distance between the midpoints
+of the two non-parallel sides of the trapezium. This is called the
+__midsegment__ of the trapezium.
+
+Like with triangles, the midsegment of a trapezium is parallel to its two bases.
+The length of the midsegment is the average of the lengths of the bases:
+`(a+c)/2`.
+
+If we combine all of this, we get an equation for the area of a trapezium with
+parallel sides _a_ and _c_, and height _h_:
+
+{.text-center} `A = h xx ((a+c) / 2)`
 :::
 
-{.todo} A kite is a quadrilateral with two sets of distinct, adjacent congruent sides.
+::: tab
+#### Kite
 
-{.todo} From the definition, a kite is the only quadrilateral that we have discussed
-that could be concave, as with the case of the last kite. If a kite is concave,
-it is called a dart. The angles between the congruent sides are called vertex
-angles. The other angles are called non-vertex angles. If we draw the diagonal
-through the vertex angles, we would have two congruent triangles.
+::: column(width=300)
+{.todo} geopad
+::: column.grow
+In this kite, the two diagonals form the width and the height of another
+rectangle that surrounds the kite.
 
-{.todo} Theorem: The non-vertex angles of a kite are congruent.
+The area of this rectangle is [[twice|the same as|three times]] the area of the
+kite. Can you how each of the [four triangles inside the kite](target:inside) is
+the same as one of the [four gaps outside](target:outside)?
 
-{.todo} Theorem: The diagonal through the vertex angles is the angle bisector for both angles.
-The proof of this theorem is very similar to the proof above for the first
-theorem. If we draw in the other diagonal in KITE we find that the two diagonals
-are perpendicular.
+This means that the area of a kite with diagonals __{.i.m-green}d1__ and
+__{.i.m-yellow}d2__ is
 
-{.todo} Kite Diagonals Theorem: The diagonals of a kite are perpendicular.
-To prove that the diagonals are perpendicular, look at △KET and △KIT. Both of
-these triangles are isosceles triangles, which means EI is the perpendicular
-bisector of KT (the Isosceles Triangle Theorem). Use this information to help
-you prove the diagonals are perpendicular in the practice questions.
+{.text-center} Area = `1/2` __{.i.m-green}d1__ × __{.i.m-yellow}d2__.
+:::
 
-### Area and Perimeter
+::: tab
+#### Rhombus
 
-{.todo} Recall that a rhombus is an equilateral quadrilateral and a kite has adjacent
-congruent sides. Both of these quadrilaterals have perpendicular diagonals,
-which is how we are going to find their areas.
+::: column(width=300)
+{.todo} geopad
+::: column.grow
+A Rhombus is a quadrilateral that has four congruent sides.
 
-{.todo} Notice that the diagonals divide each quadrilateral into 4 triangles. In the
-rhombus, all 4 triangles are congruent and in the kite there are two sets of
-congruent triangles. If we move the two triangles on the bottom of each
-quadrilateral so that they match up with the triangles above the horizontal
-diagonal, we would have two rectangles.
+You might remember that every rhombus is also a [[parallelogram]] – and also a
+[[kite]]! This means that to find the area of a parallelogram, we can use either
+the equation for the area of parallelograms, or that for the area of kites:
 
-{.todo} So, the height of these rectangles is half of one of the diagonals and the
-base is the length of the other diagonal.
+{.text-center} Area = __{.i.m-red}base__ × __{.i.m-blue}height__.
+= `1/2` __{.i.m-green}d1__ × __{.i.m-yellow}d2__.
 
-{.todo} The area of a rhombus or a kite is A=12d1d2 if the diagonals of the rhombus or
-kite are d1 and d2. You could also say that the area of a kite and rhombus are
-half the product of the diagonals.
+In different contexts, you might be given different sides/height/diagonals of a
+Rhombus, and you can pick whichever equation for the area is more convenient.
+:::
 
-    // ## Cyclic quadrilaterals
-    // {.todo} TODO
+:::
 
-    // ## Hexagons
-    // Construct regular hexagon
+    //- ### Cyclic quadrilaterals
+
+    //- ### Isosceles Trapeziums
+    //- 
+    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
+    //- congruent. The third trapezoid above is an example of an isosceles
+    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
+    //- Isosceles trapezoids also have parts that are labeled much like an
+    //- isosceles triangle. Both parallel sides are called bases.
+    //- 
+    //- In an isosceles triangle, the two base angles are congruent. This
+    //- property holds true for isosceles trapezoids.
+    //- 
+    //- The converse is also true: If a trapezoid has congruent base angles,
+    //- then it is an isosceles trapezoid.
+    //-
+    //- That the diagonals of a rectangle are congruent AND they isect each
+    //- other. The diagonals of an isosceles trapezoid are also congruent, but
+    //- they do NOT bisect each other.
 
 ---
 
@@ -684,6 +757,7 @@ Try to create interesting patterns!
 
     include ./components/tessellation
     x-tessellation
+    x-gesture(target="x-tessellation .menu" slide="-300, 140")
 
 {.todo} work from other students
 

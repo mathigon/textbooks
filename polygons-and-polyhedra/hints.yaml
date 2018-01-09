@@ -1,3 +1,8 @@
-not-a-polygon-1: This is not a polygon, because it has curved sides.
-not-a-polygon-2: This is not a polygon, because it contains a hole.
-not-a-polygon-3: This is not a polygon, because it is not a flat.
+not-a-polygon-1: One of the sides of this shape is curved, so it's not a polygon.
+not-a-polygon-2: This shape is not a polygon, because it contains a hole.
+not-a-polygon-3: This shape has a curved side, so it can't be a polygon.
+
+parall-error-1: That's not true – the angles can have any size, as long as they add up to 360°.
+parall-error-2: This is correct if the parallelogram happens to be a rectangle, but not for _any_ parallelogram.
+parall-error-3: No: adjaced sides in a parallelogram don't have to have the same length.
+
