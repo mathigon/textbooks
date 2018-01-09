@@ -26,6 +26,9 @@ mixin frac(a,b,inline)
 mixin blank(choices)
   x-blank(choices=choices)
 
+mixin input(answer)
+  x-blank-input(solution=answer)
+
 mixin var(bind)
   if bind
     x-var(bind=bind)
@@ -37,9 +40,6 @@ mixin var(bind)
       | ${
       block
       | }
-
-mixin input(answer)
-  x-blank(input=answer)
 
 mixin barchart(data)
   - var max = 100/Math.max.apply(none, data.map(function(d) { return d[1] }))
@@ -81,7 +81,7 @@ mixin emoji(n)
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#intro
 
   h2 Introduction
 
@@ -93,10 +93,9 @@ x-step
       p To distract from the difficult mathematical theories they were discussing, they  often played a simple game: they repeatedly tossed a coin – every #[em heads] was a point for Pascal and every #[em tails] was a point for Fermat. Whoever had more points after three coin tosses had to pay the bill.
     div(style="width: 360px"): img(src="/resources/probability/images/paris.jpg", width="360", height="254")
 
-x-step
   p One day, however, they get interrupted after the first coin toss and Fermat has to leave urgently. Later, they wonder who should pay the bill, or if there is a fair way to split it. The first coin landed #[em heads] (a point for Pascal), so maybe Fermat should pay everything. However, there is a small chance that Fermat could have still won if the #[+blank('two next tosses|next coin toss')] would have been #[em tails].
 
-x-step
+x-step#intro1
   p Pascal and Fermat decided to write down all possible ways the game could have continued:
 
   .row
@@ -113,10 +112,10 @@ x-step
       img(src="/resources/probability/images/coins-4.png" width=136 height=48 alt="HTT")
       p.caption Fermat wins
 
-  p All four possible outcomes are equally likely, and Pascal wins in #[+blank('three|four|two')] of them. #[span.reveal(data-when="blank-0") Thus they decided that Fermat should pay 3/4 of the bill and Pascal should pay 1/4].
+  p All four possible outcomes are equally likely, and Pascal wins in #[+blank('three|four|two')] of them. #[span.reveal(data-when="blank-0") Thus they decided that Fermat should pay 3/4 of the bill and Pascal should pay 1/4.]
 
 
-x-step
+x-step#intro2
   p Pascal and Fermat had discovered the first important equation of probability: if an experiment has multiple possible outcomes which are all equally likely, then
 
   p.text-center Probability of an event = #[mfrac #[mrow Number of ways the event could happen]#[mrow Total number of possible outcomes]].
@@ -145,7 +144,7 @@ x-step#probLine
     img(src="/resources/probability/images/line-7.png", width=140, height=140, style="width: 14.47%; opacity: 0", alt="sun")
     img(src="/resources/probability/images/line-8.png", width=760, height=40, style="width: 100%", alt="line")
 
-x-step
+x-step#probLine1
   p Here are some more events: drag them into the correct order, from likely to unlikely:
 
   x-sortable
@@ -159,7 +158,7 @@ x-step
   p We often use probabilities and likelihoods in everyday life, usually without thinking about it. What is the chance of rain tomorrow? How likely is it that I will miss the bus? What is the probability I will win this game?
 
 
-x-step
+x-step#probLine2
   p Tossing a (fair) coin has two possible outcomes, #[em heads] and #[em tails], which are both equally likely. According to the equation above, the probability of a coin landing #[em heads] must be #[+frac(1, 2, true)] = 0.5, or 50%.
   //- TODO However, the equation is not very helpful if the different outcomes are not all equally likely, or if there are infinitely many possible outcomes.
 
@@ -167,12 +166,12 @@ x-step
 
   p Even events with tiny probabilities (like winning the lottery #[+emoji('1f389')]) #[em can still happen] – and they #[em do happen] all the time (but to a very small proportion of the people who participate).
 
-x-step
+x-step#probLine3
   p Probabilities also depend on how much each of us knows about the event. For example, you might estimate that the chance of rain today is about 70%, while a meteorologist with detailed weather data might say the chance of rain is 64.2%.
 
   p Or suppose that I toss a coin and cover it up with my hands – the probability of tails is 50%. Now I peek at the result, but don't tell you. I know for certain what has happened, but for you the probability is #[+blank('still 50%|100%|not 50%')].
 
-x-step
+x-step#probLine4
   p There are many different ways to think about probabilities, but in practice they often give the same results:
 
   .row
@@ -213,7 +212,7 @@ x-step#roulette.fill.dark.casino
 
   p Roulette consists of a wheel with the numbers from 1 to 36 coloured in #[strong.red red] and #[strong.black black], as well as a green 0. A ball rolls around the outside and randomly lands on one of the numbers. Gamblers can bet on a single number, a set of multiple numbers, or just a colour. Their potential winning depends on the likelihood of each of these outcomes.
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#roulette1
   p Here is one of the many hundreds of newspaper extracts which Pearson collected and analysed. At first sight, it looks pretty random:
 
   .newspaper
@@ -226,17 +225,17 @@ x-step.fill.dark.casino
 
   +barchart([['Red', 37, 'r'], ['Black', 35, 'b']])
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#roulette2
   p This looks pretty evenly distributed – there is a small difference between the number of red and black results, but that is always to be expected in probability.
 
   p However, Pearson didn’t stop here. He realised that if the results were completely random, then each of the four possible pairs of two consecutive colours should also be equally likely. Again we can count the number of occurrences in our example:
 
   +barchart([['RR', 14, 'r'], ['RB', 24, 'rb'], ['BR', 24, 'rb'], ['BB', 9, 'b']])
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#roulette3
   p For some reasons, it seems that #[strong.red RR] and #[strong.black BB] happen much #[+blank('less frequently|more frequently')] than #[strong.red R]#[strong.black B] and #[strong.red B]#[strong.black R], even though they should all have the same probability. Of course, we might have just been #[em unlucky] in this particular sequence of results – but Pearson tested many thousands of results and always found the same.
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#roulette4
   p It gets even worse if we look at triples of results. Each of the 8 possible triples of colours should be equally likely, but that is clearly not the case here:
 
   +barchart([['RRR', 3, 'r'], ['RRB', 10, 'rrb'], ['BRR', 10, 'rrb'], ['RBR', 15, 'rrb'], ['BRB', 14, 'bbr'], ['RBB', 8, 'bbr'], ['BBR', 8, 'bbr'], ['BBB', 2, 'b']])
@@ -245,7 +244,7 @@ x-step.fill.dark.casino
 
   p Pearson calculated that the probability of seeing results which were this skewed was less than 1 in 100,000,000! He assumed that the Roulette wheels were rigged to create higher profits for the Casino – and wrote many angry letters to expose this scam.
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#roulette5
   .row
     div(style="width: 300px")
       x-media(src="/resources/probability/images/cocktails.jpg", credit="© Depositphotos / serrnovik", width=300, height=185)
@@ -260,7 +259,7 @@ x-step#randomSequence.fill.dark.casino
   label.newspaper: input(type="text", placeholder="RBBRRBBBRRRBRBRRB")
   p.text-center(style="margin-top: -1em; font-family: monospace") Randomness Score: #[span.score 100]/100
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#randomSequence1
   h2 Beat the Dealer
 
   .row
@@ -274,14 +273,14 @@ x-step.fill.dark.casino
         img(src="/resources/probability/images/beat-the-dealer.jpg", width=150, height=250)
 
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#randomSequence2
   img.computer(src="/resources/probability/images/wearable-computer.png", width=275, height=364)
 
   p At the Massachusetts Institute of Technology, Thorp discussed his ideas with #[x-bio(xid="shannon") Claude Shannon], another mathematician and the father of #[x-gloss(xid="information") information theory]. Together they decided to build the first ever #[em wearable computer], decades before the likes of Google Glass or Apple Watch.
 
   p The computer was roughly the size of a pack of cigarettes and strapped around their waist. A set of wires ran down to their shoe, which they tapped whenever the ball crossed a certain marker on the roulette wheel. That allowed the computer to calculate its speed, and predict where it would end up. Another set of wires led from the computer to an earpiece, which produced different tones based on different outcomes.
 
-x-step.fill.dark.casino
+x-step.fill.dark.casino#randomSequence3
   figure
     x-media(src="/resources/probability/images/las-vegas.jpg", credit="© Depositphotos / kobbydagan", width=760, height=345)
 
@@ -296,7 +295,7 @@ x-step.fill.dark.casino
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#trees
   h2 Probability Trees
 
   p In real life, coins never have exactly a probability of 0.5. It might be 0.4932 or 0.500012, depending on their exact shape or physical properties. In mathematics we don’t have to worry about these tiny inaccuracies: we can simply assume that our “mathematical model” of a coin has exactly a 0.5 probability of landing heads and is truly random. With this simplification, we can start answering much more interesting questions.
@@ -327,7 +326,7 @@ x-step
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#venn
   h2 Venn Diagrams
   p.todo More coming soon…
 
@@ -348,11 +347,13 @@ x-step
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#future
   h2 Predicting the Future
 
   p If we roll two dice at once and add up their scores we could get results from #[+input(2)] up to #[+input(12)]. However, not all outcomes are equally likely: some results can only happen one way (for example, to get #[span.dice.outline 12] you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (for example, to get #[span.dice.outline 5]) you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
 
+
+x-step#futurea
   p This table shows all possible outcomes:
 
   table.dice-table
@@ -483,21 +484,21 @@ x-step#montyhall.fill.dark.gameshow
     p.monty-choice-wrong Sorry – it seems like time time you only won a goat. But don't worry, you can play again!
     p.text-center: button.btn.btn-bounce.reset Replay game
 
-x-step.fill.dark.gameshow
+x-step.fill.dark.gameshow#montyhall1
   p If you play this game many times, you’ll notice that you’re more likely to win if you #[+blank('swap|don’t swap')] after the first door is opened#[span.required(data-needs="blank-0") , rather than sticking with your initial choice.]
 
   .reveal(data-when="blank-0")
     p But how can this be – surely the car is equally likely to be behind each of the two remaining doors?
 
-x-step.fill.dark.gameshow
+x-step.fill.dark.gameshow#montyhall2
   p The explanation is very subtle. When you pick the initial door, the probability of being correct is #[+frac(1,3, true)] and the probability of being wrong is #[+frac(2,3, true)].
   p.text-center: include svg/monty-1.svg
 
-x-step.fill.dark.gameshow
+x-step.fill.dark.gameshow#montyhall3
   p After the game master opens one of the other doors, the probability of being wrong is #[em still] #[+frac(2,3, true)], except now all this probability is on just one door. This means that swapping doors #[+blank('doubles|triples|halves')] your chance of winning.
   p.text-center: include svg/monty-2.svg
 
-x-step.fill.dark.gameshow
+x-step.fill.dark.gameshow#montyhall4
   p Even if this doesn't seem very intuitive, we can prove that it is correct – simply by listing all different possibilities:
   figure: img(src="/resources/probability/images/monty.png", width="694", height="468")
   p Out of the 9 possibilities #[+input(6)] need you to switch doors, to win. This gives a chance of #[+frac(6,9, true)] = #[+frac(2,3, true)] like before.
@@ -505,7 +506,7 @@ x-step.fill.dark.gameshow
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#quantum
   h2 True Randomness
 
   .row
@@ -517,7 +518,7 @@ x-step
     div(style="width: 240px")
       x-media(src="/resources/probability/images/coins.jpg", width=240, height=343, credit="© Depositphotos / Whiterabbit83")
 
-x-step
+x-step#quantum1
   p One could argue that tossing a coin really isn’t random at all – it is #[em chaotic]. That means that the underlying physical principles are so complex that even tiny changes to the starting conditions (speed, angle) can have a dramatic effect on the final outcome. We can use coins in games and gambling not because they are random, but because it is so incredibly difficult (and for practical purposes impossible) to predict the result.
 
   p The same principle applies to many other “random” events in life, including dice and roulette wheels. They are not really #[em random], we simply don’t have the tools to do the mathematical calculations accurately enough to predict the outcome.
@@ -534,7 +535,7 @@ x-step#radioactive
 
   //- TODO Possible probability distributions of the position of an electron in a hydrogen atom. Lighter areas represent more likely locations of the electron.
 
-x-step
+x-step#radioactive1
   p #[x-gloss(xid="radioactive") Radioactive decay] of atoms is caused by forces which act at much smaller scales within atoms, and which can be explained using #[x-gloss(xid="quantum") Quantum mechanics]. During the last century, physicists like #[x-bio(xid='planck') Max Planck] and #[x-bio(xid='dirac') Paul Dirac] discovered that fundamental particles have a mindblowing property: they can be in multiple different places #[em at the same time]. They don't have a fixed position, but instead a probability distribution (or wave function) which tells us how likely it is we are going to find them at a particular position.
 
   p This incredible property is used by Quantum computers. Conventional computers can only ever do one computation at a time. Quantum computers can use the properties of subatomic particles to do many calculations at the same time – and that makes them significantly faster.
@@ -543,7 +544,7 @@ x-step
     x-media(lightbox, src="/resources/probability/images/quantum.jpg", width="760", height="390", credit="© Depositphotos / agsandrew")
     p.caption The crazy world of subatomic particles
 
-x-step
+x-step#radioactive2
   p We can’t really #[em understand] or #[em explain] quantum mechanics – we just have to accept that it is what is predicted by mathematical theory and confirmed by physical observations. The curious quantum effects have only ever been observed on tiny scales of a few atoms, and it is not clear how they affect us in everyday life. But it is the only known effect in nature that produces #[em true randomness].
 
   //- TODO Lotto: Tickets needed to guarantee 2/3 matches

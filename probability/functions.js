@@ -28,7 +28,7 @@ function animate(callback, precision = 0.0001) {
 // -----------------------------------------------------------------------------
 
 export function roulette($section) {
-  $section.$chapter.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
+  $section.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
 
   let $wheels = $section.$$('.wheel');
   let $ball = $section.$('.ball');

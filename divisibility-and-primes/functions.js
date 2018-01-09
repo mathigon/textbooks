@@ -77,14 +77,14 @@ export function divisibility5($section) {
   numberGrid($section.$('.number-grid'), 1000, 'green', i => (i % 5 === 0));
 }
 
-export function divisibility31($section) {
+export function divisibility3a($section) {
   $section.model.assign({
     digitSum(n) { return total(n.toString().split('').map(x => +x)); },
     digitSumString(n) { return n.toString().split('').join(' + '); }
   });
 }
 
-export function divisibility32($section) {
+export function divisibility3b($section) {
   numberGrid($section.$('.number-grid'), 1000, 'red', i => (i % 3 === 0));
 
   setTimeout(() => {

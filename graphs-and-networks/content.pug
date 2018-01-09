@@ -4,6 +4,17 @@
 //- ============================================================================
 
 
+//- TODOs
+  - Graph Scale Parameters
+  - Bridges of Konigsberg: Graph Drawing Interactive
+  - Hamiltonian Cycles diagrams
+  - Travelling Salesman Interactive
+  - Greedy and 2-opt algorithm diagrams
+  - Ant algorithm diagrams
+  Subgraphs (It was not immediately clear to me how the graphs were related to one another in the interactive section. Small labels could help or perhaps it would be useful as a matching game. Line the 3 graphs on one side facing the 3 subgraphs and ask the reader to match the subgraph to its graph.)
+  This may have been intentional, but the proof really glosses over many details. Reading as someone with a solid math background, I was not satisfied with the proof as it is laid out and I think that someone who is really trying to understand what's going on will also be left feeling duped. Even if it is too complicated to show the entire proof, perhaps there should be a link to an easy-to-read account of the proof? And/or be upfront about how many details are missing so the reader knows there is more to the story. "We have shown that, whichever way we add new vertices, Euler’s equation is valid. Therefore it is valid for all graphs." But we really only saw a few possible cases and this account does not prove the theorem.
+  I think this part could be explained in a bit more detail: "Finding a fast and exact algorithm would have serious implications in the field of computer science: it would mean that there are fast algorithms for all NP-hard problems. " ie, why does it imply a fast algorithm for all NP-hard problems and how many NP-hard problems are there?
+
 mixin frac(a,b,inline)
   if inline
     mfrac.inline
@@ -14,11 +25,11 @@ mixin frac(a,b,inline)
       mrow!= a
       mrow!= b
 
-mixin blank(choices, wide)
-  if wide
-    x-blank.wide(choices=choices)
-  else
-    x-blank(choices=choices)
+mixin blank(choices)
+  x-blank(choices=choices)
+
+mixin input(answer)
+  x-blank-input(solution=answer)
 
 mixin var(bind)
   if bind
@@ -31,9 +42,6 @@ mixin var(bind)
       | ${
       block
       | }
-
-mixin input(answer)
-  x-blank(input=answer)
 
 
 x-step#GT_0_0
@@ -125,7 +133,7 @@ x-step#GT_0_4
     svg.graph(style='width: 90px; height: 90px;')
 
 
-x-step
+x-step#GT_0_5
   h2 Handshakes and Dates
   .row
     .grow
@@ -137,7 +145,7 @@ x-step#GT_1_1
   .row
     .grow
       p We can represent the handshakes using a graph: every person is #[+blank('a vertex|an edge')], and every handshake is #[+blank('an edge|a vertex')]. Suppose that, including yourself and the host, there are #[+var('hnd|5|2,15,1') hnd] people present. Now it is easy to count the number of edges, and we find that there #[+var (hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')].
-      p.reveal(data-when='blank-0 blank-1 var-0') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
+      p.reveal(data-when='blank-0 blank-1') Rather than counting many edges for large numbers of guests, we could also try to find a simple formula that tells us the result for #[em any] number of guests.
     div(style='width: 220px;')
       svg.graph(style='width: 220px; height: 220px;')
 
@@ -145,7 +153,7 @@ x-step#GT_1_1
 x-step#GT_1_2
   p Each of the #[+var('n|5|2,8,1') n] people at the party shakes hands with #[+var n-1] others. That makes #[+var n] × #[+var n-1] = #[+var n * (n-1)] handshakes in total. More generally, it looks like the number of handshakes for a group of #[em n] people is #[+blank('<em>n</em> × (<em>n</em> – 1)|<em>n</em> × (<em>n</em> + 1)|<em>n</em><sup>2</sup>')].
   p.var ${ handshakeTable(n) }
-  p.reveal(data-when="blank-0 var-0") Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. For example, #[x-target(to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)") the first two entries on the top row] are the same. When 1 shakes hands with 2, then 2 automatically shakes hands with 1.
+  p.reveal(data-when="blank-0") Unfortunately this answer is not quite right: we have counted every handshake #[+blank("twice|once|three times")], once for each of the two people involved. For example, #[x-target(to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)") the first two entries on the top row] are the same. When 1 shakes hands with 2, then 2 automatically shakes hands with 1.
   p.reveal(data-when="blank-1") Therefore, the correct number of handshakes for #[+var n] guests is #[mfrac.inline #[mrow #[+var n] × #[+var n-1]]#[mrow 2]] = #[+var n*(n-1)/2].
 
 
@@ -162,7 +170,7 @@ x-step#GT_1_3
 x-step#GT_1_4
   p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
   p On a different day, you are invited to a speed dating event for #[+var('m|5|2,8,1') m] boys and #[+var('f|4|2,8,1') f] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
-  .row.reveal(data-when="var-0 var-1")
+  .row
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
     div(style="width: 300px;"): svg.graph(style="width: 300px; height: 140px;")
   p.reveal(data-when="blank-0 blank-1") The bipartite graph with two sets of size #[em x] and #[em y] is often written as #[em K#[sub x,y]]. It has #[+blank("<em>x</em> × <em>y</em>|<em>x</em> + <em>y</em>|2<em>x</em> – <em>y</em>")] edges, #[span.reveal(data-when="blank-2") which means that in the above example there are #[+var m] × #[+var f] = #[+var m*f] dates.]
@@ -207,7 +215,7 @@ x-step#GT_2_1
       include svg/konigsberg.svg
 
 
-x-step
+x-step#GT_2_2
   p On paper, come up with a few different graphs and then try to work out which ones can be drawn with a single, continuous stroke.
   //- p Try drawing these graphs with one continuous stroke:
   //- p.todo Interactive coming soon…
@@ -241,7 +249,7 @@ x-step#GT_2_4
     .legend(slot="legend") The only two exceptions are the vertices where the path starts, and where it ends &#8211; these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
 
 
-x-step
+x-step#GT_2_5
   .row.right
     .grow
       p If you scroll back to the map of Königsberg, you will find that there are more than two islands with an odd number of bridges. Therefore a route that crosses every bridge exactly once is indeed impossible &#8211; and this is what Leonard Euler discovered.
@@ -278,7 +286,7 @@ x-step#GT_3_1
       p.text-center #[em K]#[sub 5] #[+blank("is not planar|is planar")].
 
 
-x-step
+x-step#GT_3_2
   p The #[x-gloss(xid="complete") complete graph] <em>K<sub>5</sub></em> is the smallest graph that is not planar. Any other graph that contains <em>K<sub>5</sub></em> as a subgraph in some way is also not planar. This includes <em>K<sub>6</sub></em>, <em>K<sub>7</sub></em>, and all larger complete graphs.
   p The graph in the three utilities puzzle is the #[x-gloss(xid="bipartite") bipartite graph] <em>K<sub>3,3</sub></em>. It turns out that any non-planar graph must contain a <em>K<sub>5</sub></em> or a <em>K<sub>3,3</sub></em> or a #[x-gloss(xid="subdivision") subdivision] of these two graphs as a subgraph.
 
@@ -318,7 +326,7 @@ x-step#GT_4_1
       p.text-center.euler-sum 25 Vertices + Faces
 
 
-x-step
+x-step#GT_4_1a
   p When comparing these numbers, you will notice that the number of edges is always #[+blank("one less|bigger|the same")] than the number of faces plus the number of vertices. In other words, <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + 1. This result is called <strong>Euler&rsquo;s equation</strong> and is named after the same #[x-bio(xid='euler') mathematician] who solved the K&ouml;nigsberg Bridges problem.
   p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss(xid="proof") proof] that works for any graph&hellip;
 
@@ -362,16 +370,16 @@ x-step#GT_4_3
   .svg-block: include svg/dominoes.svg
 
 
-x-step
+x-step#GT_4_4
   p Many planar graphs look very similar to the nets of #[x-gloss(xid="polyhedron") polyhedra], three dimensional shapes with #[x-gloss(xid="polygon") polygonal] faces. If we think of polyhedra as made of elastic bands, we can imagine stretching them out until they become flat, planar graphs:
   .row
     .grow: x-img-sequence(src="/resources/graphs-and-networks/images/cube/cube#.png", pages="32", width="300", height="300")
     .grow: x-img-sequence(src="/resources/graphs-and-networks/images/dodecahedron/dodeca#.png", pages="32", width="300", height="300")
 
 
-x-step
+x-step#GT_4_5
   p This means that we can use Euler&rsquo;s formula not only for planar graphs but also for all polyhedra &#8211; with one small difference. When transforming the polyhedra into graphs, one of the faces disappears: the topmost face of the polyhedra becomes the &#8220;outside&#8221; of the graphs.
-  p In other words, if you count the number of <strong class="red">edges</strong>, <strong class="blue">faces</strong> and <strong class="green">vertices</strong> of <em>any</em> polyhedron, you will find that <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + #[+blank("2")].
+  p In other words, if you count the number of <strong class="red">edges</strong>, <strong class="blue">faces</strong> and <strong class="green">vertices</strong> of <em>any</em> polyhedron, you will find that <em><strong class="blue">F</strong></em> + <em><strong class="green">V</strong></em> = <em><strong class="red">E</strong></em> + #[+input(2)].
   .row
     div(style="width: 200px")
       x-media(width="200", height="200", src="/resources/graphs-and-networks/images/icosahedron.mp4")
@@ -385,7 +393,7 @@ x-step
 
 //- ----------------------------------------------------------------------------------------------
 
-x-step
+x-step#GT_5_0
   h2 Map Colouring
   .row
     .grow
@@ -445,7 +453,7 @@ x-step#GT_5_2
   p.reveal(data-when="blank-0 blank-1") Now we want to colour the vertices of a graph, and two vertices must have a different colour if they are connected by an edge.
 
 
-x-step
+x-step#GT_5_3
   .row.right
     div(style="width: 240px;")
       x-media(lightbox, credit="© Depositphotos / sergeyussr", width="240", height="320", src="/resources/graphs-and-networks/images/england-counties.jpg")
@@ -455,21 +463,21 @@ x-step
       p For a long time, mathematicians were unable to either prove that four colours are enough, or to find a map that needed more than four colours.
 
 
-x-step.feature
+x-step.feature#GT_5_4
   x-parallax(background='/resources/graphs-and-networks/images/ibm-360.jpg')
     .feature-text-wrap
       .feature-text.right
         p Little progress was made on the four colour problem until 1976, when #[x-bio(xid='haken') Wolfgang Haken] and #[x-bio(xid='appel') Kenneth Appel] used a computer to finally solve it. They reduced infinitely many possible maps to 1936 special cases, which were each checked by a computer taking over 1000 hours in total.
 
 
-x-step
+x-step#GT_5_5
   p The four colour theorem is the first well-known mathematical theorem to be proven using a computer, something that has become much more common and less controversial since. Faster computers and a more efficient algorithm mean that today you can solve the four colour theorem on a laptop in just a few hours.
   figure
     x-media(src="/resources/graphs-and-networks/images/suffice.jpg", width="320", height="80", credit="http://www.math.illinois.edu/History/postmarks.pdf")
     p.caption Postmark for the Department of Mathematics at the University of<br/>Illinois Urbana-Champaign, where Haken and Appel worked.
 
 
-x-step
+x-step#GT_5_6
   .row
     .grow
       p The four colour theorem only works for maps on a flat plane or a sphere, and where all countries consist of a single area.
@@ -480,7 +488,7 @@ x-step
 
 //- ----------------------------------------------------------------------------------------------
 
-x-step
+x-step#GT_6_0
   h2 The Travelling Salesman Problem
 
   .row.right
@@ -492,7 +500,7 @@ x-step
     div(style="width: 260px"): x-media(credit="© Depositphotos / ilfede", src="/resources/graphs-and-networks/images/truck.jpg", width="260", height="280")
 
 
-x-step
+x-step#GT_6_1
   p There are countless different possibilities for Hamiltonian cycles in complete graphs. In fact, we can pick any vertex as starting vertex and then pick any of the remaining cities in any order:
   .row
     //- Table Diagram
@@ -523,7 +531,7 @@ x-step#GT_6_4
     .tsm-box: svg
 
 
-x-step
+x-step#GT_6_5
   .row
     .grow
       p The #[strong Greedy Algorithm] (or Nearest Neighbour Algorithm) is very simple: you start in a random city and consecutively move to the closest city you haven&rsquo;t visited before. Once you have visited all cities, you stop.
@@ -532,7 +540,7 @@ x-step
   p You can show that, on average, paths found using the greedy algorithm are 25% longer than the shortest possible path.
 
 
-x-step
+x-step#GT_6_6
   .row
     .grow
       p The #[strong 2-Opt Algorithm] starts with a random possible path. Then you repeatedly pick two edges and swap them around if that would reduce the length of the path. You stop when you can't reduce the length further by swapping any pairs of edges.
@@ -540,7 +548,7 @@ x-step
     div(style="width: 300px"): p.todo Animation coming soon…
 
 
-x-step.feature
+x-step.feature#GT_6_7
   x-parallax(background="/resources/graphs-and-networks/images/ants.jpg")
     .feature-credit © Depositphotos / dovapi
     .feature-text-wrap
@@ -549,7 +557,7 @@ x-step.feature
         p Ants want to find the shortest possible routes between their nest and possible food sources. They can communicate with each other through chemicals which they leave along their trail, and which other ants can follow.
 
 
-x-step
+x-step#GT_6_8
   .row
     .grow: ul
       li The ant colony sends out many scouts which initially travel in random directions. Once they find food, they return, leaving behind a trail of pheromone.
@@ -558,7 +566,7 @@ x-step
     div(style="width: 240px"): p.todo Diagram coming soon…
 
 
-x-step
+x-step#GT_6_9
   .row.right
     div(style="width: 220px"): x-media(style="margin-top: 5px", credit="© Depositphotos / lifeonwhite", src="/resources/graphs-and-networks/images/ant.jpg", width="220", height="220")
     .grow
@@ -566,7 +574,7 @@ x-step
       p One particularly useful property of ACS algorithms is that they can run continuously and adapt in real time to changes to the graph. These changes could be caused by car accidents and road closures on street networks, or by traffic spikes to web servers on computer networks.
 
 
-x-step
+x-step#GT_6_10
   .row
     div(style="width: 140px"): img(src="/resources/graphs-and-networks/images/binary.jpg", width="140", height="320")
     .grow
@@ -576,7 +584,7 @@ x-step
 
 //- ----------------------------------------------------------------------------------------------
 
-x-step
+x-step#GT_7_0
   h2 Graph Theory in Everyday Life
   p Throughout this chapter we have seen many applications of graph theory, though some were somehow contrived. It turns out, however, that graphs are at the very heart of many objects and concepts in everyday life.
   .row
@@ -585,11 +593,11 @@ x-step
       p Some websites, like Wikipedia or Facebook, have lots of incoming links, while many smaller websites may have very few incoming links. This is the underlying concept which Google uses to sort search results.
     div(style="width: 240px"): img(credit="© various", src="/resources/graphs-and-networks/images/internet.png", width="240", height="240")
 
-x-step
+x-step#GT_7_1
   p Websites with more incoming links tend to be of higher quality and should be shown at the top of the search results. For example, when searching for &#8220;London&#8221;, official tourist information sites are shown before small shops in London, or blogs of people who live in London. This simple idea from Graph theory, the <strong>Page Rank Algorithm</strong>, made Google significantly better than other early search engines.
 
 
-x-step.feature
+x-step.feature#GT_7_2
   x-parallax(background="/resources/graphs-and-networks/images/internet.jpg")
     .feature-credit © LyonLabs, LLC and Barrett Lyon, 2014
     .feature-text-wrap
@@ -597,19 +605,19 @@ x-step.feature
         p The internet is the largest network ever created by mankind. This image shows a very small proportion of all the computers and devices connected to the internet.
 
 
-x-step
+x-step#GT_7_3
   p While websites and hyperlinks form a <em>virtual</em> graph, there is also the <em>physical</em> network of computers, servers, routers, phone lines and cables.
   .row.right
     .grow: p Every time you make a phone call or load a website, network operators have to find a way to connect sender and receiver, without exceeding the capacity of any individual cable or connection. Graph theory and probability make it possible to guarantee a reliable service, for example by finding diversions when a particular connection is busy.
     div(style="width: 220px"): x-media(lightbox src="/resources/graphs-and-networks/images/phone.jpg", width="220", height="166", credit="© Depositphotos / Asiana")
 
 
-x-step
+x-step#GT_7_4
   p Graphs also play an important role in transportation and navigation. All flight, train and subway networks form graphs, which can be used when creating efficient schedules. One of the most recognisable graphs is the London Underground map:
   p: x-media(lightbox, src="/resources/graphs-and-networks/images/tube-map.png", width="720", height="480", credit="© Transport for London, 2014")
 
 
-x-step
+x-step#GT_7_5
   .row
     .grow: p All roads and motorways also form a large network, which is used by navigation services like Google Maps when working out the shortest route between two given points.
     div(style="width: 60px"): x-media(credit="© Google", src="/resources/graphs-and-networks/images/google-maps.jpg", width="70", height="70")
@@ -619,14 +627,14 @@ x-step
       p In the future, <strong>Intelligent Transportation Systems</strong> will reduce congestion and accidents by routing cars more efficiently, using location data collected from smartphones and self-driving cars. This could save millions of hours lost on the road every year, significantly reduce pollution, and allow emergency services to travel faster.
 
 
-x-step.feature
+x-step.feature#GT_7_6
   x-parallax(background="/resources/graphs-and-networks/images/flights.jpg")
     .feature-credit © Depositphotos / Antartis
     .feature-text-wrap
       .feature-text: p This image shows the network of commercial airline flights across northern Europe.
 
 
-x-step
+x-step#GT_7_7
   p There are countless other graphs in science, engineering or everyday life:
   .row.graph-applications
     div(style="width: 200px")
@@ -650,14 +658,14 @@ x-step
 
 //- ----------------------------------------------------------------------------------------------
 
-x-step
+x-step#GT_8_0
   h2 Social Networks
   p Finally, let us think about one particularly good example of graphs which exist in everyday life: social media. Here, vertices represent #[+blank("people|friends|networks")] and edges represent friendships, likes, subscriptions or followers.
   p When we start drawing social media graphs, we can clearly see certain <strong>clusters</strong> of mutual friends, who may have gone to the same school or live in the same city. We can also determine people's <strong>centrality</strong>, which depends on how well-connected a vertex is, and which may be a measure of a person&rsquo;s popularity in social media.
   figure: x-media(lightbox, src="/resources/graphs-and-networks/images/social-network.png", width="720", height="500")
 
 
-x-step
+x-step#GT_8_1
   .row
     .grow
       p In 2014, Facebook had 1.4 billion active users and a total of more than 200 billion friendships. Half of all Facebook users have more than 200 friends, and since most of our friends have a similar number of friends, we could easily have tens of thousands of <em>friends of friends</em>.
@@ -665,7 +673,7 @@ x-step
     div(style="width: 200px"): x-media(credit="© Depositphotos / Mikado767", src="/resources/graphs-and-networks/images/facebook-like.png", width="200", height="200")
 
 
-x-step
+x-step#GT_8_2
   p Based on a <a href="https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/" target="_blank">study</a> which Facebook conducted in 2016, you are, on average, connected to anyone else on Facebook through at most 3.57 other people: we say there are 3.57 #[strong Degrees of separation].
   p In other words, if you pick any one of the billions of Facebook users all around the world, they will have a friend of a friend who knows a friend of one of your friends. And this includes celebrities, politicians or royalty…
   figure
@@ -673,7 +681,7 @@ x-step
     p.caption Geographic visualisation of all Facebook friendships in 2010.
 
 
-x-step
+x-step#GT_8_3
   .row
     div(style="width: 200px;"): x-media(credit="© Metro-Goldwyn-Mayer, 1993", src="/resources/graphs-and-networks/images/six-degrees.jpg", width="200", height="265", style="border: 1px solid #CCC")
     .grow
@@ -681,15 +689,3 @@ x-step
       p In 1967, #[x-bio(xid='milgram') Stanley Milgram] conducted a first empirical experiment, where 296 participants living in Nebraska and Kansas were asked to deliver a letter to a particular person living in Boston, Massachusetts. They all had to choose a friend to send the letter to, who then picked another friend. At every step, the letter moved closer to Boston. Milgram found that there were, on average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
 
   p Today, every one of us is part of countless invisible graphs, which underly our social interactions, travel, internet and technology, science, and so much more.
-
-
-//- TODOs
-  - Graph Scale Parameters
-  - Bridges of Konigsberg: Graph Drawing Interactive
-  - Hamiltonian Cycles diagrams
-  - Travelling Salesman Interactive
-  - Greedy and 2-opt algorithm diagrams
-  - Ant algorithm diagrams
-  Subgraphs (It was not immediately clear to me how the graphs were related to one another in the interactive section. Small labels could help or perhaps it would be useful as a matching game. Line the 3 graphs on one side facing the 3 subgraphs and ask the reader to match the subgraph to its graph.)
-  This may have been intentional, but the proof really glosses over many details. Reading as someone with a solid math background, I was not satisfied with the proof as it is laid out and I think that someone who is really trying to understand what's going on will also be left feeling duped. Even if it is too complicated to show the entire proof, perhaps there should be a link to an easy-to-read account of the proof? And/or be upfront about how many details are missing so the reader knows there is more to the story. "We have shown that, whichever way we add new vertices, Euler’s equation is valid. Therefore it is valid for all graphs." But we really only saw a few possible cases and this account does not prove the theorem.
-  I think this part could be explained in a bit more detail: "Finding a fast and exact algorithm would have serious implications in the field of computer science: it would mean that there are fast algorithms for all NP-hard problems. " ie, why does it imply a fast algorithm for all NP-hard problems and how many NP-hard problems are there?

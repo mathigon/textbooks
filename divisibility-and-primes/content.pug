@@ -35,6 +35,9 @@ mixin divisor-table(divisors, pairs)
 mixin blank(choices)
   x-blank(choices=choices)
 
+mixin input(answer)
+  x-blank-input(solution=answer)
+
 mixin var(bind)
   if bind
     x-var(bind=bind)
@@ -46,9 +49,6 @@ mixin var(bind)
       | ${
       block
       | }
-
-mixin input(answer)
-  x-blank(input=answer)
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -108,7 +108,7 @@ x-step#divisibility5
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#divisibility5a
   p The reason why these rules for 2 and 5 are so simple has to do with our number system. The base of our number system is 10, which means that every digit in a number is worth 10 times as much as the next one to the right. If we take the number 6382 as an example,
 
   table.base-10.base-10-fixed
@@ -153,13 +153,13 @@ x-step#divisibility4
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#divisibility4a
   p The divisibility rules for 8 get even more difficult, because 100 is not divisible by 8. Instead we have to go up to #[+blank("1000|800|108")] and look at the last #[+input(3)] digits of a number.
   p For example, #[strong.m-green 120] is divisible by 8 so #[strong.m-red 271]#[strong.m-green 120] is also divisible by 8.
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#divisibility4b
   p The easiest is the divisibility rule for 10: we just need to check if the #[+blank("last digit is a 0|first digit is a 1|last digit is even")].
 
   p Lets practice these divisibility rules for 2, 4, 5, 8 and 10 in this simple game:
@@ -171,14 +171,14 @@ x-step
 
 //- ---------------------------------------------------------------------------
 
-x-step#divisibility31
+x-step#divisibility3a
   h3 Divisibility by 3, 6and 9
 
   p The divisibility rule for 3 is rather more difficult. 3 doesn’t divide 10, and it also doesn’t divide 100, or 1000, or any larger power of 10. Simply looking at the last few digits of a number isn’t going to work.
 
   p Instead we need to use the #[strong digit sum] of a number, which is simply the sum of all its individual digits. For example, the digit sum of #[+var('n|3|0,20,1') 13*n+123] is #[+var digitSumString(123 + 13*n)] = #[+var digitSum(123 + 13*n)] and the digit sum of 3524 is #[+input(14)].
 
-x-step#divisibility32
+x-step#divisibility3b
   +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
   p Here we’ve highlighted all numbers which are multiples of three. You can see that their digit sums are always #[+blank("a multiple of 3|either 0 or 3|odd numbers")].
@@ -201,7 +201,7 @@ x-step#divisibility9
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#divisibility9a
   p Of course, these curious patterns for numbers divisible by 3 and 9 must have some reason – and like before it has to do with our base 10 numbers system. As we saw, writing the number #[strong.m-red 6]#[strong.m-blue 3]#[strong.m-green 8]#[strong.m-yellow 4] really means
 
   p.text-center #[strong.m-red 6 × 1000] + #[strong.m-blue 3 × 100] + #[strong.m-green 8 × 10] + #[strong.m-yellow 4].
@@ -226,7 +226,7 @@ x-step#divisibility6
     button.btn.btn-small.btn-bounce Show multiple of 3
   p To check if a number is divisible by 6 we just have to check that it is divisible by 2 #[+blank("and also|or")] divisible by 3. Note that this happens to work for 6, but certainly not for #[em any] number that is the product of two others. More on that later…
 
-x-step
+x-step#divisibility7
   p Unfortunately there is no simple divisibility rule for 7. However we now know the rules for all other numbers from 1 to 10, so let’s try a more advanced version of the divisibility game!
   .box.problem-box
     .box-title: h3 Find the Divisor
@@ -237,7 +237,7 @@ x-step
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#factors
   h2 Finding Factors
 
   p In many cases, it is not enough to find if a number is divisible by another – we need a list of #[em all] its divisors. For example, the divisors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60.
@@ -246,7 +246,7 @@ x-step
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#factors1
   p In the case of 60 we have 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 = 6 × 10. Or, in a different notation,
 
   +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
@@ -270,7 +270,7 @@ x-step#factors2
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#factors3
   .box.problem-box
     .box-title: h3 Factorisation
     .box-body: p.todo Exercises under development…
@@ -278,7 +278,7 @@ x-step
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#primes
   h2 Prime Numbers
 
   p When calculating these divisor pairs, it can happen that a number doesn’t have any divisors except for the first pair. One example is 13 – its only divisors are 1 and 13 itself. These special numbers are called #[strong Prime numbers]. They can’t be broken up into products of smaller numbers, which, in a way, makes them the “atoms of numbers”.
@@ -291,7 +291,7 @@ x-step
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#primes1
 
   p Any number which is not prime can be written as the product of prime numbers: we simply keep dividing it into more parts until all factors are prime. For example,
 
@@ -359,7 +359,7 @@ x-step#eratosthenes
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#primes3
   h2 How many Prime Numbers are there?
 
   .row
@@ -385,7 +385,7 @@ x-step
 
   //- Notice that any prime that divides N cannot divide N + 1. (If it would, it also had to divide the difference between N and N + 1 which is 1. But the only number that divides 1 is 1 itself.)
 
-x-step
+x-step#primes4
   p Euclid’s explanation is one of the first examples in history of a formal mathematical #[strong proof] – a logical argument that shows a statement must definitely be true. This example is often called #[em proof by contradiction]: we start with an assumption, deduce something impossible, and thus know that our assumption must be incorrect.
 
 //- ---------------------------------------------------------------------------
@@ -400,7 +400,7 @@ x-step#primeTest
     input(class="form-field", type="number" min="2")
     p.result.var ${result}
 
-x-step
+x-step#primeTest1
   .row
     .grow
       p Throughout history, people have tried to calculate larger and larger primes. In 1460, the largest known prime number was 131,071. In 1772, #[x-bio(xid='euler') Leonard Euler] showed that 2,147,483,647 is prime.
@@ -446,7 +446,7 @@ x-step#ulam
 
   p We write down all integers in a rectangular grid, starting with 1 in the middle and then spiralling outwards. Then we highlight all numbers which are prime.
 
-x-step
+x-step#ulam1
   p So far, the Ulam spiral doesn’t look particularly exciting. But if we zoom out, interesting patterns emerge. Here are the primes up to 160,000:
   figure: img(src="/resources/divisibility-and-primes/images/ulam.png", width="399", height="399")
 
@@ -469,14 +469,14 @@ x-step#race
 
   figure: include svg/race.svg
 
-x-step
+x-step#race1
   p This question really isn’t about the geometry of the race track, or about velocity and speed – it is about multiples and divisibility.
 
   p The first runner crosses the start line after 60s, 120s, 180s, 240s, and so on. These are simply the #[+blank("multiples|factors")] of #[strong.m-blue 60]. The second runner crosses the start line after 40s, 80s, 120s, 160s, and so on. The first time both runners are back at the start line is after #[+input(120)] seconds.
 
   p.reveal(data-when="blank-0 blank-1") What we’ve just found is the smallest number which is both a multiple of #[strong.m-green 40] and a multiple of #[strong.m-blue 60]. This is called the #[strong least common multiple] or #[strong lcm].
 
-x-step
+x-step#race2
 
   p To find the lcm of any two numbers, it is important to realise that if #[strong.m-yellow a] divides #[strong.m-blue b], then #[strong.m-blue b] needs to have all the prime factors of #[strong.m-yellow a] (plus some more):
 
@@ -504,7 +504,7 @@ x-step
 
   p This is easy to verify: if a prime factor divides #[strong.m-yellow a], and #[strong.m-yellow a] divides #[strong.m-green b], then that prime factor must #[em also] divide #[strong.m-green b].
 
-x-step
+x-step#race3
   p To find the lcm of #[strong.m-green 40] and #[strong.m-blue 60], we first need to find the #[x-gloss(xid="factorisation") prime factorisation] of both:
 
   table.table-tiny
@@ -531,14 +531,14 @@ x-step
 
   p Suppose that #[strong.m-red X] is the lcm of #[strong.m-green 40] and #[strong.m-blue 60]. Then #[strong.m-green 40] divides #[strong.m-red X], so #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 5] must be prime factors of #[strong.m-red X]. Also, #[strong.m-blue 60] divides #[strong.m-red X], so #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5] must be prime factors of #[strong.m-red X].
 
-x-step
+x-step#race4
   p To find #[strong.m-red X], we simply combine all the prime factors of #[strong.m-green 40] and #[strong.m-blue 60], but any duplicates we only need once:
 
   p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] × #[span.number-ball.l-blue-green 2] × #[span.number-ball.l-blue 2] × #[span.number-ball.l-green 3] × #[span.number-ball.l-blue-green 5]
 
   p This gives us that #[strong.m-red X] = 120, just like we saw above. Notice that if the same prime factor appears multiple times, like 2 above, we need to keep the maximum occurrences in one of the two numbers (3 times in #[strong.m-green 40] is more than 2 times in #[strong.m-blue 60]).
 
-x-step
+x-step#race5
   p Now we have a simple method for finding the lcm of two numbers:
 
   ol.proof
@@ -576,7 +576,7 @@ x-step
 
   p Therefore the lcm of #[strong.m-blue 12], #[strong.m-green 30] and #[strong.m-yellow 45] is 2 × #[+input(2)] × 3 × 3 × #[+input(5)] = 180.
 
-x-step
+x-step#race6
   p A special case are prime numbers: the lcm of two different primes is simply their #[+blank("product|sum|difference")], because they don’t have any common prime factors which would get “canceled”.
 
 //- x-step
@@ -598,10 +598,10 @@ x-step#gcd
     include svg/floorplan.svg
     p.text-center The tiles have a size of #[+var('x|3|1,18,1') x]m.#[br]#[+var result]
 
-x-step
+x-step#gcd1
   p Just like before, this question is not about geometry - it is about divisibility. The length of the sides of the tiles has to divide both 18 and 30, and the largest possible number with that property is #[+input(6)]. This is called the #[strong Greatest Common Divisor] or #[strong gcd] of 18 and 30.
 
-x-step
+x-step#gcd2
   p Once again, we can use the #[x-gloss(xid="factorisation") prime factorisation] to calculate the gcd of any two numbers. Remember that any divisor of a number must have some of the prime factors of that number.
 
   table.table-tiny
@@ -624,12 +624,12 @@ x-step
 
   p Suppose that #[strong.m-red X] is the gcd of #[strong.m-green 18] and #[strong.m-blue 30]. Then #[strong.m-red X] divides #[strong.m-green 18] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-blue 2], #[span.number-ball.small.l-blue 2] and #[span.number-ball.small.l-blue 3]. Also, #[strong.m-red X] divides #[strong.m-blue 30] so the prime factors of #[strong.m-red X] must be among #[span.number-ball.small.l-green 2], #[span.number-ball.small.l-green 3] and #[span.number-ball.small.l-green 5].
 
-x-step
+x-step#gcd3
   p To find #[strong.m-red X], we simply need to multiply all numbers which are  prime factors of #[+blank("both|one of")] #[strong.m-green 18] and #[strong.m-blue 30]:
 
   p.text-center #[strong.m-red X] &nbsp;=&nbsp; #[span.number-ball.l-blue-green 2] × #[span.number-ball.l-blue-green 3] &nbsp;=&nbsp; 6.
 
-x-step
+x-step#gcd4
   p Now we have a simple method for finding the gcd of two numbers:
 
   ol.proof
@@ -658,12 +658,12 @@ x-step#cicadas
     include svg/cicadas.svg
     p.caption Time until cicadas and predators meet, for various different cicada cycle lengths.
 
-x-step
+x-step#cicadas1
   p  This number seems to be much larger if the cicada cycle is a prime number like 13 and 17. That‘s is because prime numbers don‘t share any factors with 6, so when calculating the lcm we don‘t cancel any duplicate factors.
 
   p Of course, cicadas have no idea what prime numbers are – but over millions of years, evolution has worked out that prime cycles are the safest. The predator animal seems to have gone extinct over time, but the prime number cycles remain.
 
-x-step
+x-step#cicadas2
   p There are many other applications of lcm and gcd in nature, technology or everyday life…
   .box.problem-box
     .box-title: h3 LCM and GCD Word Problems
@@ -672,7 +672,7 @@ x-step
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#crypto
   h2 Primes in Cryptography
 
   .row
@@ -696,7 +696,7 @@ x-step
 
   p You only need to know N to encrypt the message, but to revert it back to readable text you also need to know the original factors p and q. Since only Bob knows the original factors, and no one can calculate them quickly, Bob is the only one who can read Alice’s method.
 
-x-step
+x-step#crypto1
   p.todo RSA example with Alice and Bob coming soon…
 
   p This encryption algorithm is called #[strong RSA Cryptography], after its three inventors, Ron Rivest, Adi Shamir and Leonard Adleman who published it in 1977. It turns out that a very similar method was known to the British Secret Service since 1973, but remained classified until much later.
@@ -709,6 +709,8 @@ x-step
 x-step#goldbach1
 
   h2 Mysteries and Unsolved Problems
+
+  h3 The Goldbach Conjecture
 
   p In 1742, the German mathematician #[x-bio(xid='goldbach') Christian Goldbach] made a curious discovery: he noticed that all even integers (except 2) can be written as the sum of two prime numbers. For example, 8 = 5 + 3 and 24 = 13 + 11. This is quite surprising, because primes are defined using multiplication and factors – and shouldn’t have much to do with addition.
 
@@ -727,9 +729,9 @@ x-step#goldbach1
 
 //- ---------------------------------------------------------------------------
 
-x-step
+x-step#twinPrimes
 
-  p.text-center •
+  h3 Twin Primes
 
   p We have already seen that prime numbers get more spread out as they get bigger. But they always seem to appear completely random, and occasionally we find two primes right next to each other, just one number apart: these are called #[strong Twin Primes].
 
@@ -768,7 +770,7 @@ x-step
 
 x-step#riemann
 
-  p.text-center •
+  h3 The Riemann Hypothesis
 
   p Mathematicians have spent many centuries exploring the pattern and distribution of prime numbers. They seem to appear completely randomly – sometimes there are huge gaps in between consecutive primes, and sometimes we find #[x-gloss(xid="twins") twin primes] right next to each other.
 
@@ -788,7 +790,7 @@ x-step#riemann
 
   p.reveal(data-when="zoom") Gauss noticed that the shape of this function looks very similar to the function #[mfrac.inline.m-red #[mrow #[mi x]]#[mrow log(#[mi x])]]. He predicted that the two functions are always “approximately similar”, and this was proven in 1896.
 
-x-step
+x-step#riemann1
   p However, as you can see above, there is still a significant error between the actual number of primes, and Gauss’s approximation. In 1859, the mathematician #[x-bio(xid='riemann') Bernhard Riemann] discovered an approximation that looked much better, but he wasn’t able to prove that that would #[em always] work. His idea became known as the #[strong Riemann Hypothesis].
 
   p Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all without success. It is often considered one of the most difficult and most important unsolved problems in mathematics. In 2000, the Clay Mathematics Institute named it one of six #[strong Millennium Prize Problems] and promised $1,000,000 to any mathematician who solves it.

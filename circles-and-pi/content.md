@@ -1,7 +1,7 @@
 # Circles and Pi
 
-% id: circles-and-pi
-% description: 
+> id: circles-and-pi
+> description: 
 
 ---
 % id: intro-1

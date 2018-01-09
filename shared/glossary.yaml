@@ -299,13 +299,13 @@ parallelogram:
 
 trapezium:
   title: Trapezium
-  text: A __trapezium__ is a quadrilateral in which a pair of opposite edges
-    are parallel.
+  text: A __trapezium__ (or __trapezoid__) is a quadrilateral in which a pair of
+    opposite edges are parallel.
 
 rhombus:
   title: Rhombus
-  text: A __rhombus__ is a quadrilateral in which all edges have the same
-    length.
+  text: A __rhombus__ (the plural is _rhombuses_ or _rhombi_) is a quadrilateral
+    in which all edges have the same length.
 
 kite:
   title: Kite

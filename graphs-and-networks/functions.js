@@ -46,7 +46,7 @@ export function GT_0_0($section) {
 
   $section.onScore('blank-0', function() { $graph.removeClass('novertices'); });
   $section.onScore('blank-1', function() { $graph.removeClass('noedges'); });
-  $section.onScore('blank-0 blank-1', function() { $section.$chapter.addHint(hints.firstGraphSolved); });
+  $section.onScore('blank-0 blank-1', function() { $section.addHint(hints.firstGraphSolved); });
 }
 
 export function GT_0_1($section) {
@@ -110,10 +110,6 @@ export function GT_1_1($section) {
 }
 
 export function GT_1_2($section) {
-  $section.onScore('blank-1', function() {
-    setTimeout(function() { $section.addClass('complete'); }, 1000);
-  });
-
   $section.model.set('handshakeTable', function(n) {
     let colours = Colour.rainbow($section.model.n);
 
