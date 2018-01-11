@@ -408,3 +408,218 @@ circumference:
 # concentric  Two or more circles that have the same center, but different radii.
 # Secant	The secant of an angle in a right triangle is the value found by dividing length of the hypotenuse by the length of the side adjacent the given angle. The secant ratio is the reciprocal of the cosine ratio.
 # Tangent	The tangent of an angle in a right triangle is a value found by dividing the length of the side opposite the given angle by the length of the side adjacent to the given angle.
+
+
+
+
+# ==============================================================================
+# GRAPH THEORY
+# ==============================================================================
+
+graph:
+  title: Graph
+  text: A __graph__ is a collection of vertices connected by edges.
+
+vertex:
+  title: Vertex
+  text: A __vertex__ is a point or node that is part of a graph.
+
+edge:
+  title: Edge
+  text: __Edges__ are the lines that connect vertices (points) in a graph.
+
+directed:
+  title: Directed Graph
+  text: In a __directed graph__, every edge as an arrow, i.e. a start vertex and
+    an end vertex.
+
+subgraph:
+  title: Subgraph
+  text: A graph is a __subgraph__ of another graph, if it is formed by a subset
+    of the larger graphs edges and vertices.
+
+complete:
+  title: Complete Graph
+  text: In __complete graphs__, every vertex is connected to every other vertex.
+    A complete graph with _n_ vertices has <mfrac class='inline'><mrow><mi>n</mi>
+    × (<mi>n</mi> – 1)</mrow><mrow>2</mrow></mfrac> edges.
+
+bipartite:
+  title: Bipartite Graph
+  text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is
+    connected to all the vertices in the opposite set, but none of the vertices
+    in its own set.
+
+proof:
+  title: Proof
+  text: A __proof__ is a logical argument that shows beyond any doubt that a
+    certain statement is true or false.
+
+polyhedron:
+  title: Polyhedron
+  text: A __polyhedron__ is a three-dimensional solid that only has (flat)
+    polygons as faces. For example, a cube and a pyramid are polyhedra, but a
+    sphere is not.
+
+polygon:
+  title: Polygon
+  text: A __polygon__ is a shape which is bounded by straight lines. For example, a
+    square is a polygon but a circle is not. If all the sides of a polygon have
+    the same length, it is called a <em>regular polygon</em>.</p>"
+
+dna:
+  title: DNA
+  text: __DNA__ (Deoxyribonucleic Acid) is a molceule that contains the genetic
+    blueprint of all living organisms. Most DNAs consist of two strands forming
+    a _double helix_. Genetic information is encoded in the order of four
+    nucleic acids (A, G, C and T) which make up the DNA. _DNA sequencing_ is the
+    process of extracting this information – an essential technique in biology,
+    medicine, genetics and biotechnology.
+
+np:
+  title: NP Hard Problems
+  text: _Computational complexity theory_ is about determining how “difficult”
+    problems are to be solved by a computer. __NP hard__ (non-deterministic
+    polynomial-time hard) is the class of the most difficult problems.
+
+order:
+  title: Order
+  text: The __order__ of a graph is the number of vertices in it.
+
+degree:
+  title: Degree
+  text: The __degree__ of a vertex is the number of edges that meet at that vertex.
+
+cycle:
+  title: Cycle
+  text: __Cycles__ are graphs that consist of a single ring of vertices.
+
+subdivision:
+  title: Subdivisions
+  text: To create a __subdivision__ of a graph you add additional vertices along
+    its edges.
+
+millennium-prize:
+  title: Millennium Prize Problems
+  text: |
+    There are seven Millennium Prize Problems which were stated in 2000 by the
+    _Clay Mathematics Institute_:
+
+    * P vs NP
+    * The Hodge Conjecture
+    * The Poincaré Conjecture
+    * The Riemann Hypothesis
+    * Yang-Mills Existence and Mass Gap
+    * Navier-Stokes Existence and Smoothness
+    * The Birch and Swinnerton-Dyer Conjecture
+
+    Each problem holds $1m prize money. Only one, the Poincaré Conjecture, was
+    solved so far, but the mathematician Grigori Perelman declined the award.
+
+
+# ==============================================================================
+# DIVISIBILITY AND PRIMES
+# ==============================================================================
+
+factor:
+  title: Factor
+  text: A number _a_ is a __factor__ (or divisor) of a number _b_, if you can
+    divide _b_ by _a_ without remainder.
+
+divisor:
+  title: Divisor
+  text: __Divisor__ is just another name for _factor_.
+
+multiple:
+  title: Multiple
+  text: A number _a_ is a __multiple__ of a number _b_, if _b_ is a factor of _a_.
+
+prime:
+  title: Prime Number
+  text: A __prime number__ is an integer that has no divisors other than 1 and
+    itself.
+
+primefactor:
+  title: Prime Factor
+  text: A __prime factor__ of a number is simply a factor which is prime.
+
+factorisation:
+  title: Prime Factorisation
+  text: The __prime factorisation__ of a number is a way to write it as a
+    product of prime numbers.
+
+fta:
+  title: Fundamental Theorem of Arithemtic
+  text: The __Fundamental Theorem of Arithemtic__ (FTA) says that every integer
+    has a unique prime factorisation.
+
+proof:
+  title: Proof
+  text: A __proof__ is a logical argument that shows beyond any doubt that a
+    certain statement is true or false.
+
+lcm:
+  title: Lowest Common Multiple
+  text: The __Lowest Common Multiple__ (lcm) of two numbers _a_ and _b_ is the
+    smallest integer that is a multiple of both _a_ and _b_.
+
+gcd:
+  title: Greatest Common Divisor
+  text: The __Greatest Common Divisor__ (gcd) of two numbers _a_ and _b_ is the
+    largest integer that is a divisor of both _a_ and _b_.
+
+cryptography:
+  title: Cryptography
+  text: __Cryptography__ is an area of mathematics that‘s about enciphering and
+    deciphering secret messages.
+
+twins:
+  title: Twin Primes
+  text: __Twin primes__ are pairs of prime numbers like 17 and 19 which are just
+    2 apart.
+
+
+# ==============================================================================
+# PROBABILITY
+# ==============================================================================
+
+probability:
+  title: Probability
+  text: A __probability__ is number between 0 and 1 that quantifies the
+    likelihood of a certain event.
+
+blackjack:
+  title: Blackjack
+  text: __Blackjack__ is a card game in which you add up the value of multiple
+    cards to get as close to 21 – but not above.
+
+roulette:
+  title: Roulette
+  text: __Roulette__ is a casino game in which you bet on where a spinning ball
+    is going to land. It contains 36 numbers as well as one or two 0s.
+
+information:
+  title: Information Theory
+  text: __Information Theory__ is the study of quantification, storage and
+    communication of data and information. It is used in logic, cryptography
+    and computer science.
+
+probTree:
+  title: Probability Tree
+  text: A __probability tree__ is a tree diagram representing the combined
+    probability of multiple sequential events.
+
+venn:
+  title: Venn Diagram
+  text: A __venn diagram__ diagram that visualises multiple overlapping events,
+    and their probabilities.
+
+quantum:
+  title: Quantum Mechanics
+  text: __Quantum Mechanics__ is a branch of Physics that explains the strange
+    behaviour of fundamental particles.
+
+radioactive:
+  title: Radioactive Decay
+  text: __Radioactive Decay__ is a physical process by which unstable atoms
+    break apart and release energy.

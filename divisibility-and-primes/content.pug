@@ -75,8 +75,6 @@ x-step#divisibilitygame
 
   .box.problem-box
     .box-title: h3 Factors and Multiples Quiz
-    //- .box-body
-      p.todo Exercises under development…
     x-gameplay.box-body
       .factors-row
         .factor-number ${x}
@@ -88,7 +86,7 @@ x-step#divisibilitygame
         | of
         .factor-number ${y}
 
-  p In the next x-step we will learn various techniques to easily check if a number is divisible by another.
+  p In the next step we will learn various techniques to easily check if a number is divisible by another.
 
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
@@ -218,7 +216,7 @@ x-step#divisibility9a
 
 //- ---------------------------------------------------------------------------
 
-x-step#divisibility6
+x-step#divisibility6(goals="btn2 btn3")
   p We’ve still skipped number 6 – but we’ve already done all the hard work. Remember that 6 = 2 × 3.
   +grid(40)
   p.btn-row.text-center(style="margin-bottom:1em")
@@ -390,7 +388,7 @@ x-step#primes4
 
 //- ---------------------------------------------------------------------------
 
-x-step#primeTest
+x-step#primeTest(goals="calculator")
   h2 Large Primes
 
   p It is quite easy for a computer to check if a number is prime – simply by trying to divide it by all smaller numbers. But of course there are much cleverer and faster algorithms. Here you can try it yourself:
@@ -410,7 +408,7 @@ x-step#primeTest1
       img(src="/resources/divisibility-and-primes/images/network.jpg", width="300", height="200")
       p.caption The GIMPS Project (#[em Great Internet Mersenne Prime Search]) uses a network of computers around the world to find large prime numbers.
 
-x-step#primeGenerator
+x-step#primeGenerator(goals="calculator")
   p You might think that calculating these primes is just a waste of time – but, as we will see below, it turns out to be incredibly useful for computers to be able to quickly find large prime numbers.
 
   p Rather than checking if a large number is definitely prime, there are also much faster algorithms that tell you that a number is #[em almost certainly] prime. Here you can generate your own, large prime numbers:
@@ -462,7 +460,7 @@ x-step#ulam1
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step#race
+x-step#race(goals="race")
   h2 The Least Common Multiple
 
   p Two runners are training on a circular racing track. The #[strong.m-blue first runner] takes #[strong.m-blue 60] seconds for one lap. The #[strong.m-green second runner] only takes #[strong.m-green 40] seconds for one lap. If both leave at the same time from the start line, when will they meet again at the start?
@@ -589,14 +587,14 @@ x-step#race6
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step#gcd
+x-step#gcd(goals="size-6")
   h2 The Greatest Common Factor
 
   p An architect is planning the floor for a large courtyard that measures 18m by 30m. She wants it to be covered in quadratic tiles, without any gaps or overlaps along the sides. What is the largest size of squares she can use?
 
   figure
     include svg/floorplan.svg
-    p.text-center The tiles have a size of #[+var('x|3|1,18,1') x]m.#[br]#[+var result]
+    p.text-center The tiles have a size of #[+var('x|3|1,18,1') x]m.#[br]#[span.result.var]
 
 x-step#gcd1
   p Just like before, this question is not about geometry - it is about divisibility. The length of the sides of the tiles has to divide both 18 and 30, and the largest possible number with that property is #[+input(6)]. This is called the #[strong Greatest Common Divisor] or #[strong gcd] of 18 and 30.
@@ -641,7 +639,7 @@ x-step#gcd4
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step#cicadas
+x-step#cicadas(goals="bound-low bound-high")
   h2 LCM and GCD Applications
 
   .row
@@ -706,7 +704,7 @@ x-step#crypto1
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step#goldbach1
+x-step#goldbach1(goals="calculator")
 
   h2 Mysteries and Unsolved Problems
 
@@ -768,7 +766,7 @@ x-step#twinPrimes
 
 //- ---------------------------------------------------------------------------
 
-x-step#riemann
+x-step#riemann(goals="zoom")
 
   h3 The Riemann Hypothesis
 

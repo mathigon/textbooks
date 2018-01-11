@@ -251,7 +251,7 @@ x-step.fill.dark.casino#roulette5
     .grow
       p When he finally travelled to Monte Carlo, he discovered that the reason for the skewed results was of a very different nature: the journalists who were supposed to be recording the results were instead just sitting in the bar of the casino, drinking, and making up random colours…
 
-x-step#randomSequence.fill.dark.casino
+x-step#randomSequence.fill.dark.casino(goals="random")
   p This story shows that we humans tend to be quite bad at coming up with random-looking data: we often underestimate unlikely events (long sequences of the same colour) and overestimate likely ones (alternating colours). This can be used effectively to detect fraud in banking and insurance.
 
   p Here you can try for yourself if you are better than the journalists: write down a sequence of Rs and Bs, and find out how random it really is:
@@ -428,7 +428,7 @@ x-step#futurea
   p The least likely outcomes are #[span.dice.outline 2] and #[span.dice.outline 12], each with a probability of #[+frac(1, 36, true)] = 0.0277.
 
 
-x-step#diceSimulation
+x-step#diceSimulation(goals="roll")
 
   p It is impossible to forecast the outcome of a single coin toss or die roll. However, using probability we can very accurately predict the outcome of #[em many] dice.
 
@@ -454,7 +454,7 @@ x-step#diceSimulation
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step#montyhall.fill.dark.gameshow
+x-step#montyhall.fill.dark.gameshow(goals="game")
   h2 Monty Hall
 
   p Welcome to the most spectacular game show on the planet! You now have a once-in-a-lifetime chance of winning a fantastic sports car which is hidden behind one of these three doors. Unfortunately, there are only goats behind the other two doors. Simply tap on one to make your choice!
@@ -523,7 +523,7 @@ x-step#quantum1
 
   p The same principle applies to many other “random” events in life, including dice and roulette wheels. They are not really #[em random], we simply don’t have the tools to do the mathematical calculations accurately enough to predict the outcome.
 
-x-step#radioactive
+x-step#radioactive(goals="decay")
   .row
     .grow
       p But #[em true randomness] does exists – at the very foundations of matter. A block of radioactive material consists of millions of atoms which decay over time: they fall apart into smaller atoms while emitting dangerous radiation.

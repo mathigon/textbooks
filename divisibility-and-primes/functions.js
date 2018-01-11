@@ -5,7 +5,7 @@
 
 
 
-import { $N, animate, thread } from '@mathigon/boost';
+import { $N, animate, thread, observable } from '@mathigon/boost';
 import { isPrime, lcm, goldbach, generatePrime, numberFormat, random } from '@mathigon/fermat';
 import { total, sortByFn, list, isOneOf, delay } from '@mathigon/core';
 
@@ -27,7 +27,8 @@ function numberGrid($grid, time, className, filter) {
 // Section Functions
 
 export function divisibilitygame(section) {
-  section.$gameplay.setFirstSlide($el => $el.setObservable({ x: '?', y: '?' }));
+  section.$gameplay.setFirstSlide($el =>
+    $el.bindObservable(observable({ x: '?', y: '?' })));
 
   section.$gameplay.slideGenerator = function($el, success, error) {
     let answer = random.smart(3, 'divisibility-game');
@@ -43,7 +44,7 @@ export function divisibilitygame(section) {
         if (random.integer(1)) [x, y] = [y, x];
     }
 
-    $el.model({ x, y });
+    $el.bindObservable(observable({ x, y }));
 
     let $buttons = $el.$$('.factor-bubble');
     $buttons[0].on('click', answer === 0 ? success : error);
@@ -107,7 +108,6 @@ export function divisibility6($section) {
   let $grid = $section.$('.number-grid');
 
   $buttons.forEach(function($b) { $b.noDisplayChange = true; });
-  $section.goals.push('btn2', 'btn3');
 
   $section.on('score-btn2', function() {
     $buttons[0].exit('pop');
@@ -132,10 +132,8 @@ export function factors2($section) {
   let $pairs = $section.$$('.divisor-pair').reverse();
   let $numbers = $section.$$('.divisor-number');
 
-  $numbers.forEach($p => { $p.noDisplayChange = true; });
-
-  $pairs.slice(1).forEach($p => { $p.hide(); });
-  $numbers.forEach(($n, i) => { if (i > 0 && i < 7) $n.hide(); });
+  $pairs.slice(1).forEach($p => { $p.invisible(); });
+  $numbers.forEach(($n, i) => { if (i > 0 && i < 7) $n.invisible(); });
 
   $section.$slides.on('next', (x) => {
     switch(x) {
@@ -193,7 +191,9 @@ export function primeTest($section) {
     let v = +$input.value;
     if (!v) { $section.model.set('result', ''); }
     if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', 'That number is too large :('); return; }
+
     $section.model.set('result', '<span class="loading"></span>');
+    $section.score('calculator');
 
     thread(isPrime, v).then(function({ data }) {
       $section.model.set('result', data ? 'is prime' : 'is not prime');
@@ -207,6 +207,7 @@ export function primeGenerator($section) {
   $section.$('button').on('click', function() {
     let d = +$section.model.d;
     $section.model.set('result', '<span class="loading"></span>');
+    $section.score('calculator');
 
     thread(generatePrime, d, 10000).then(function({ data, time }) {
       $section.model.set('result', numberFormat(data));
@@ -221,7 +222,7 @@ export function ulam($section) {
   let $cells = $section.$$('.number-cell');
   sortByFn($cells, function($c) { return +$c.text; });
 
-  $cells.forEach($c => { $c.css('visibility', 'hidden'); });
+  $cells.forEach($c => { $c.invisible(); });
   $cells.forEach(($c, i) => setTimeout(() => $c.enter('pop'), i * 80));
 
   setTimeout(function() {
@@ -248,6 +249,8 @@ export function race($section) {
   function run() {
     if (running) return;
     running = true;
+    $section.score('race');
+
     $lapTimes.forEach($g => { $g.forEach($l => { $l.exit('pop', 200); }); });
 
     animate(function(p) {
@@ -277,10 +280,13 @@ export function race($section) {
 
 export function gcd($section) {
   let $tiles = $section.$('.tiles');
+  let $result = $section.$('.result');
 
   $section.model.watch((state) => {
-    $section.model.set('result', isOneOf(state.x, 1, 2, 3, 6) ?
-      'It works!' : 'That doesn‘t seem to fit…');
+    $result.html = isOneOf(state.x, 1, 2, 3, 6) ?
+      'It works!' : 'That doesn‘t seem to fit…';
+
+    if (state.x === 6) $section.score('size-6');
 
     $tiles.removeChildren();
 
@@ -301,8 +307,6 @@ export function gcd($section) {
 }
 
 export function cicadas($section) {
-  $section.goals.push('bound-low', 'bound-high');
-
   $section.model.set('isPrime', isPrime);
   $section.model.set('lcm', lcm);
 
@@ -331,7 +335,9 @@ export function goldbach1($section) {
     if (!v) { $section.model.set('result', ''); return; }
     if (v % 2) { $section.model.set('result', 'Pick an even number.'); return; }
     if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', 'That number is too large :('); return; }
+
     $section.model.set('result', '<span class="loading"></span>');
+    $section.score('calculator');
 
     // hard: 12345678902468024
     thread(goldbach, v, 10000).then(function({ data }) {
@@ -374,5 +380,9 @@ export function riemann($section) {
 
   let $svg = $section.$('svg');
   let $zoom = $section.$('.zoom-icon');
-  $zoom.on('click', () => { $section.score('zoom'); $svg.toggleClass('zoom'); });
+
+  $zoom.on('click', () => {
+    $section.score('zoom');
+    $svg.toggleClass('zoom');
+  });
 }

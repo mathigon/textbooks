@@ -167,7 +167,7 @@ x-step#GT_1_3
     svg.graph(style="width: 90px; height: 90px;")
 
 
-x-step#GT_1_4
+x-step#GT_1_4.no-overflow
   p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
   p On a different day, you are invited to a speed dating event for #[+var('m|5|2,8,1') m] boys and #[+var('f|4|2,8,1') f] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
   .row
@@ -177,7 +177,7 @@ x-step#GT_1_4
 
 //- ----------------------------------------------------------------------------------------------
 
-x-step#GT_2_0
+x-step#GT_2_0(goals="bridge-0 bridge-1 bridge-2 bridge-3")
   h2 The Bridges of Königsberg
   .row
     .grow
@@ -186,24 +186,27 @@ x-step#GT_2_0
     .konigsberg-img(style="width: 250px;")
       img(src="/resources/graphs-and-networks/images/konigsberg1.jpg" width="250" height="350")
   p Try to find a valid route by drawing on this map:
-  x-slideshow
-    .slide(slot="slide")
+  x-tabbox.full-width
+    .tab
+      h4 Map 1#[span.check.incorrect(data-when="bridge-0")]
       x-solved
       include svg/bridges-1.svg
       button.btn.btn-bounce Clear
-    .slide(data-needs="bridge-0" slot="slide")
+    .tab
+      h4 Map 2#[span.check(data-when="bridge-1")]
       x-solved
       include svg/bridges-2.svg
       button.btn.btn-bounce Clear
-    .slide(data-needs="bridge-1" slot="slide")
+    .tab
+      h4 Map 3#[span.check(data-when="bridge-2")]
       x-solved
       include svg/bridges-3.svg
       button.btn.btn-bounce Clear
-    .slide(data-needs="bridge-2" slot="slide")
+    .tab
+      h4 Map 4 #[span.check.incorrect(data-when="bridge-3")]
       x-solved
       include svg/bridges-4.svg
       button.btn.btn-bounce Clear
-
 
 x-step#GT_2_1
   p In the case of Königsberg it seems to be impossible to find a valid route, but some of the other cities do work. Euler managed to find a simple rule that can be applied to any city, without having to try lots of possibilities – using graph theory.
@@ -221,7 +224,7 @@ x-step#GT_2_2
   //- p.todo Interactive coming soon…
 
 
-x-step#GT_2_3
+x-step#GT_2_3(goals="c-eo c-prime c-size")
   p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss(xid="degree") degree]:
 
   .frame.fill(style="padding: 20px")
@@ -236,7 +239,7 @@ x-step#GT_2_3
       option(value="eo") Colour by even and odd
 
 
-x-step#GT_2_4
+x-step#GT_2_4.no-overflow
   p Comparing these numbers for graphs which are possible and those which are not possible, it seems that a graph can be drawn if it #[+blank('has no more than two &#8220;odd&#8221; vertices|only has &#8220;even&#8221; vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3', true)]. This condition can be explained if we look at just a single vertex in the graph:
   x-slideshow
     .stage(slot="stage")
@@ -258,7 +261,7 @@ x-step#GT_2_5
 
 //- ----------------------------------------------------------------------------------------------
 
-x-step#GT_3_0
+x-step#GT_3_0(goals="try-three-times")
   h2 The Three Utilities Problem
   .row
     .grow
@@ -291,7 +294,7 @@ x-step#GT_3_2
   p The graph in the three utilities puzzle is the #[x-gloss(xid="bipartite") bipartite graph] <em>K<sub>3,3</sub></em>. It turns out that any non-planar graph must contain a <em>K<sub>5</sub></em> or a <em>K<sub>3,3</sub></em> or a #[x-gloss(xid="subdivision") subdivision] of these two graphs as a subgraph.
 
 
-x-step#GT_3_3
+x-step#planarity(goals="planarity")
   .box.problem-box
     .box-title: h3 Planarity
     .box-body
@@ -331,7 +334,7 @@ x-step#GT_4_1a
   p Unfortunately, there are infinitely many graphs and we can&rsquo;t check every one to see if Euler’s equation works. Instead we can try to find a simple #[x-gloss(xid="proof") proof] that works for any graph&hellip;
 
 
-x-step#GT_4_2
+x-step#GT_4_2.no-overflow
   x-slideshow
     .stage(slot="stage")
       svg(x="0px" y="0px" viewBox="0 0 640 200" class="frame")
@@ -404,7 +407,7 @@ x-step#GT_5_0
       x-media(credit="© Depositphotos / elenathewise", src="/resources/graphs-and-networks/images/globe.jpg", width="240", height="320")
 
 
-x-step#GT_5_1
+x-step#GT_5_1(goals="map-0 map-1 map-2 map-3")
   p When colouring the map of US states, 50 colours are obviously enough, but far fewer are necessary. Try colouring the maps below with as few colours as possible:
   p.text-center
     span.four-colour-icon.on
@@ -415,33 +418,36 @@ x-step#GT_5_1
     span.four-colour-icon
     span.four-colour-icon
 
-  x-slideshow.four-colours
-    .slide(slot="slide")
+  x-tabbox.four-colours.full-width
+    .tab
+      h4 United States #[span.check(data-when="map-0")]
       x-solved
       include svg/colours-1.svg
-      .colour-count 0
-      button.btn.btn-bounce.clear Clear
-      button.btn.btn-bounce.solve Solve
-      p.small.lgrey.text-center Note that states or countries which only share a #[em corner] are allowed to have the same colour.#[br]Alaska and Hawaii are isolated from all of the other states and can have any colour.
-    .slide(slot="slide")
+      .colour-count Number of colours: #[span 0]
+      button.btn.clear Clear
+      button.btn.solve Solution
+      //- p.small.lgrey.text-center Note that states or countries which only share a #[em corner] are allowed to have the same colour.#[br]Alaska and Hawaii are isolated from all of the other states and can have any colour.
+    .tab
+      h4 South America #[span.check(data-when="map-1")]
       x-solved
       include svg/colours-2.svg
-      .colour-count 0
-      button.btn.btn-bounce.clear Clear
-      button.btn.btn-bounce.solve Solve
-    .slide(slot="slide")
+      .colour-count Number of colours: #[span 0]
+      button.btn.clear Clear
+      button.btn.solve Solution
+    .tab
+      h4 Germany #[span.check(data-when="map-2")]
       x-solved
       include svg/colours-3.svg
-      .colour-count 0
-      button.btn.btn-bounce.clear Clear
-      button.btn.btn-bounce.solve Solve
-    .slide(slot="slide")
+      .colour-count Number of colours: #[span 0]
+      button.btn.clear Clear
+      button.btn.solve Solution
+    .tab
+      h4 England #[span.check(data-when="map-3")]
       x-solved
       include svg/colours-4.svg
-      .colour-count 0
-      button.btn.btn-bounce.clear Clear
-      button.btn.btn-bounce.solve Solve
-
+      .colour-count Number of colours: #[span 0]
+      button.btn.clear Clear
+      button.btn.solve Solution
 
 x-step#GT_5_2
   .row

@@ -6,6 +6,7 @@
 
 ---
 > id: thales
+> goals: p1 p2 p3
 
 ## Introduction
 

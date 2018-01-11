@@ -138,6 +138,7 @@ export function randomSequence($section) {
 
   let $score = $section.$('.score');
   $section.$('input').change(str => {
+    if (str.length > 10) $section.score('random');
     $score.text = Math.round(compute(str.toUpperCase()) * 100);
   });
 }
@@ -198,7 +199,10 @@ export function diceSimulation($section) {
   let buttons = $section.$$('.btn');
   buttons[0].on('click', rollDice);
   buttons[1].on('click', () => { for (let i = 0; i < 100; ++i) setTimeout(rollDice, 100 * i); });
-  buttons[2].on('click', () => { for (let i = 0; i < 1000; ++i) setTimeout(rollDice, 10 * i); });
+  buttons[2].on('click', () => {
+    $section.score('roll');
+    for (let i = 0; i < 1000; ++i) setTimeout(rollDice, 10 * i);
+  });
 }
 
 // -----------------------------------------------------------------------------
@@ -227,7 +231,7 @@ export function montyhall($section) {
   let decided = false;
   let opened = null;
   let car = null;
-  let attempt = 0;
+  // let attempt = 0;
 
   let $monty = $section.$('.monty-hall');
   let $doors = $monty.$$('.door-box');
@@ -274,6 +278,7 @@ export function montyhall($section) {
 
   let $reveal = $section.$('.show');
   let revealBtn = new OneTimeButton($reveal, function() {
+    $section.score('game');
     $doors.forEach($d => { $d.addClass('open'); });
     setTimeout(function() {
       $section.score('door-revealed');
@@ -290,7 +295,7 @@ export function montyhall($section) {
     selected = opened = car = null;
     decided = false;
     $monty.addClass('selectable');
-    attempt += 1;
+    // attempt += 1;
   });
 
   setTimeout(() => {
@@ -309,6 +314,7 @@ export function radioactive($section) {
   $atoms = random.shuffle(flatten($atoms));
 
   function decay() {
+    $section.score('decay');
     let $atom = $atoms.pop();
     $atom.addClass('off');
     if ($atoms.length) setTimeout(decay, random.exponential($atoms.length / 20000));

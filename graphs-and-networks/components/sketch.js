@@ -6,7 +6,7 @@
 
 
 import { Evented, last } from '@mathigon/core';
-import { Point, Line } from '@mathigon/fermat';
+import { Point, Segment } from '@mathigon/fermat';
 import { $N, svgPointerPosn, stopEvent } from '@mathigon/boost';
 
 
@@ -91,14 +91,14 @@ export class Sketch extends Evented {
 
     let path1 = last(this.paths);
     let points1 = path1.points;
-    let line1 = new Line(points1[points1.length-2], points1[points1.length-1]);
+    let line1 = new Segment(points1[points1.length-2], points1[points1.length-1]);
 
     for (let i = 0; i < this.paths.length - 1; ++i) {
       let path2 = this.paths[i];
       let points2 = path2.points;
       for (let j = 1; j < points2.length - 2; ++j) {
-        let line2 = new Line(points2[j], points2[j + 1]);
-        let t = Line.intersect(line1, line2);
+        let line2 = new Segment(points2[j], points2[j + 1]);
+        let t = Segment.intersect(line1, line2);
         if (t) {
           this.trigger('intersect', { point: t, paths: [path1, path2] });
           return;

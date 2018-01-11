@@ -531,7 +531,7 @@ the Kite is the only one that can also be concave: if it is shaped like a dart
 or arrow:
 ::: column(width=320)
 
-    x-media(src="images/kite.jpg" credit="© Depositphotos / chagall")
+    x-media(src="images/kites.jpg" credit="© Depositphotos / chagall")
 
 :::
 

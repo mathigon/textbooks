@@ -11,67 +11,67 @@
 <polygon fill="none" stroke="#999" stroke-width="4" points="483,75 483,124 533.6,99.7 "/>
 <polygon fill="none" stroke="#999" stroke-width="4" points="583,75 583,124 533.1,99.7 "/>
 
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="107" cy="28" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="107" cy="28" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 101.8698 34.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="153" cy="77" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="153" cy="77" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 147.8698 83.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="153" cy="170" r="12" data-value="3"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="153" cy="170" r="12" data-value="3"/>
 <text transform="matrix(1 0 0 1 147.8698 176.3269)">3</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="60" cy="170" r="12" data-value="3"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="60" cy="170" r="12" data-value="3"/>
 <text transform="matrix(1 0 0 1 54.8698 176.3269)">3</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="60" cy="77" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="60" cy="77" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 54.8698 83.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="107" cy="123" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="107" cy="123" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 101.8698 129.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="25" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="295" cy="25" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 289.8698 31.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="25" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="345" cy="25" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 339.8698 31.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="75" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="295" cy="75" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 289.8698 81.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="75" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="345" cy="75" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 339.8698 81.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="245" cy="75" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="245" cy="75" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 239.8698 81.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="395" cy="75" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="395" cy="75" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 389.8698 81.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="245" cy="125" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="245" cy="125" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 239.8698 131.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="125" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="295" cy="125" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 289.8698 131.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="125" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="345" cy="125" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 339.8698 131.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="395" cy="125" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="395" cy="125" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 389.8698 131.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="295" cy="175" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="295" cy="175" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 289.8698 181.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="345" cy="175" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="345" cy="175" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 339.8698 181.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="483" cy="75" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="483" cy="75" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 477.8698 81.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="509" cy="49" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="509" cy="49" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 503.8698 55.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="533" cy="25" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="533" cy="25" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 527.8698 31.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="558" cy="49" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="558" cy="49" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 552.8698 55.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="583" cy="74" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="583" cy="74" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 577.8698 80.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="533" cy="100" r="12" data-value="8"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="533" cy="100" r="12" data-value="8"/>
 <text transform="matrix(1 0 0 1 527.8698 106.3269)">8</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="458" cy="100" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="458" cy="100" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 452.8698 106.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="608" cy="99" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="608" cy="99" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 602.8698 105.3269)">2</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="583" cy="124" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="583" cy="124" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 577.8698 130.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="483" cy="124" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="483" cy="124" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 477.8698 130.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="508" cy="149" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="508" cy="149" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 502.8698 155.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="558" cy="149" r="12" data-value="4"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="558" cy="149" r="12" data-value="4"/>
 <text transform="matrix(1 0 0 1 552.8698 155.3269)">4</text>
-<circle fill="#FFFFFF" stroke="#EEE" stroke-width="3" cx="533" cy="175" r="12" data-value="2"/>
+<circle fill="#FFFFFF" stroke="#f7f7f8" stroke-width="3" cx="533" cy="175" r="12" data-value="2"/>
 <text transform="matrix(1 0 0 1 527.8698 181.3269)">2</text>
 
 </svg>

@@ -14,7 +14,6 @@ function semicircle(a, b, arc) {
 }
 
 export function thales(section) {
-  section.goals.push('p1', 'p2', 'p3');
   const $geopad = section.$('x-geopad');
 
   $geopad.setActiveTool('point');

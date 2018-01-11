@@ -6,31 +6,12 @@
 
 
 import { last, tabulate, list } from '@mathigon/core';
-import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, Line, subsets } from '@mathigon/fermat';
+import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, Segment, subsets } from '@mathigon/fermat';
 import { $, $$, $N, Colour, svgPointerPosn, animate, Draggable } from '@mathigon/boost';
-import { Graph } from './graph';
-import { Sketch } from './sketch';
+import { Graph } from './components/graph';
+import { Sketch } from './components/sketch';
+import { borders } from './components/four-colour-maps';
 
-
-// -----------------------------------------------------------------------------
-// Hints
-
-const hints = {
-  firstGraphSolved: 'All <x-target to="#graph0">graph diagrams</x-target> in this chapter are interactive: try moving the vertices around.',
-  crossWater: "Careful – you are not allowed to enter the water.",
-  bridgeCrossedBefore: "You’ve already crossed this bridge before. Try to find a different route.",
-  tryDifferentMapA: 'It is possible that there is no solution for this city! Why not try <x-target to="#GT_2_0 .next">another map</x-target>.',
-  tryDifferentMapB: 'Maybe this map also has no solution. Let’s move on!',
-  tryDifferentStartPoint: "The starting location might be important. See what happens if you start on a different island.",
-  housesToEachOther: "You only need to connect the houses to the factories, but not the houses to each other.",
-  factoriesToEachOther: "You only need to connect the factories to the houses, but not the factories to each other.",
-  linesCross: "Careful – your lines are not allowed to cross.",
-  edgeDrawnBefore: "Watch out, you’ve already drawn this edge once."
-};
-
-
-// -----------------------------------------------------------------------------
-// Section Functions
 
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,' +
   '14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';
@@ -46,7 +27,7 @@ export function GT_0_0($section) {
 
   $section.onScore('blank-0', function() { $graph.removeClass('novertices'); });
   $section.onScore('blank-1', function() { $graph.removeClass('noedges'); });
-  $section.onScore('blank-0 blank-1', function() { $section.addHint(hints.firstGraphSolved); });
+  $section.onScore('blank-0 blank-1', function() { $section.addHint('firstGraphSolved'); });
 }
 
 export function GT_0_1($section) {
@@ -154,16 +135,13 @@ export function GT_1_4($section) {
 }
 
 export function GT_2_0($section) {
-  $section.goals.push('bridge-0', 'bridge-1', 'bridge-2', 'bridge-3');
-  let previousErrors = [];
-
-  $section.$$('.slide').forEach(function($el, i) {
-
+  $section.$$('.tab').forEach(function($el, i) {
     let $svg = $el.$('svg.frame');
     let $paths = $('.paths', $svg);
     let $water = $('.water', $svg);
     let $bridges = $$('.bridge', $svg);
     let $error = $('.error', $svg);
+    let $solveds = $section.$$('x-solved');
 
     let success = false;
     let attempts = 0;
@@ -177,23 +155,18 @@ export function GT_2_0($section) {
     });
     $el.$('.btn').on('click', () => map.clear());
 
-    function error(name) {
-      if (previousErrors.indexOf(name) < 0) $section.addHint(hints[name]);
-      previousErrors.push(name);
-    }
-
     map.on('end', function() {
       if (success) return;
-      if (attempts === 2 && i < 2) $section.addHint(hints.tryDifferentStartPoint);
+      if (attempts === 2 && i < 2) $section.addHint('tryDifferentStartPoint');
       if (attempts !== 4) return;
 
       switch(i) {
         case 0:
-          $section.addHint(hints.tryDifferentMapA);
+          $section.addHint('tryDifferentMapA');
           $section.score('bridge-' + i);
           break;
         case 3:
-          $section.addHint(hints.tryDifferentMapA);
+          $section.addHint('tryDifferentMapA');
           $section.score('bridge-' + i);
           break;
         default:
@@ -204,7 +177,7 @@ export function GT_2_0($section) {
     map.on('clear', function() {
       totalCrossed = 0;
       $error.exit('pop', 300);
-      $section.$solveds[i].hide();
+      $solveds[i].exit();
     });
 
     $water.on('pointerenter', function(e) {
@@ -213,7 +186,7 @@ export function GT_2_0($section) {
       let p = svgPointerPosn(e, $svg);
       $error.translate(p.x - 20, p.y - 20);
       $error.enter('pop', 300);
-      error('crossWater');
+      $section.addHint('crossWater');
     });
 
     $bridges.forEach(function($bridge) {
@@ -226,7 +199,7 @@ export function GT_2_0($section) {
           if (crossed) {
             map.stop();
             $bridge.css('fill', Colour.red);
-            error('bridgeCrossedBefore');
+            $section.addHint('bridgeCrossedBefore');
           }
           crossed = true;
         }
@@ -241,7 +214,7 @@ export function GT_2_0($section) {
             $bridge.css('fill', Colour.green);
             totalCrossed += 1;
             if (totalCrossed === $bridges.length) {
-              $section.$solveds[i].show();
+              $solveds[i].enter();
               $section.score('bridge-' + i);
               success = true;
             }
@@ -289,8 +262,6 @@ export function GT_2_1($section) {
 }
 
 export function GT_2_3($section) {
-  $section.goals.push('c-eo', 'c-prime', 'c-size');
-
   let g = Colour.green, r = Colour.red, b = Colour.blue, o = Colour.orange;
   let colours = {
     val: Colour.rainbow(8),
@@ -359,8 +330,6 @@ export function GT_2_4($section) {
 }
 
 export function GT_3_0($section) {
-  $section.goals.push('try-three-times');
-
   let currentUtility;
   let startUtility;
 
@@ -377,9 +346,9 @@ export function GT_3_0($section) {
     attempts += 1;
     if (attempts === 3) {
       $section.score('try-three-times');
-      $section.addHint('I think this puzzle might also be impossible… Sorry I tricked you :1f61c:');
+      $section.addHint('utilitiesImpossible');
     } else if (hint) {
-      $section.addHint(hints[hint]);
+      $section.addHint(hint);
     }
   }
 
@@ -388,7 +357,7 @@ export function GT_3_0($section) {
     e.paths[1].css('stroke','#C00');
     errors.push(...e.paths);
     map.stop();
-    resolve('Careful: the lines are not allowed to cross.');
+    resolve('linesCross');
   });
 
   let allUtilities = $section.$$('.utility1, .utility2, .utility3');
@@ -439,9 +408,9 @@ export function GT_3_0($section) {
         last(map.paths).css('stroke','#C00');
         errors.push(last(map.paths));
         if (dataType === 'house') {
-          $section.addHint(hints.housesToEachOther);
+          $section.addHint('housesToEachOther');
         } else {
-          $section.addHint(hints.factoriesToEachOther);
+          $section.addHint('factoriesToEachOther');
         }
       } else {
         let sector = (startUtility.data.type === 'house') ?
@@ -489,12 +458,14 @@ export function GT_3_1($section) {
   });
 }
 
-export function GT_3_3($section) {
+export function planarity($section) {
   let $svg = $section.$$('svg')[1];
   let $newBtn = $('button', $section);
   let creating = false;
+  let $solveds = $section.$$('x-solved');
 
   let graph = new Graph($svg, 0, [], { r: 12, static: true, bound: true });
+  let isSolved = false;
 
   function shuffle(n) {
     return tabulate(function() {
@@ -504,7 +475,8 @@ export function GT_3_3($section) {
 
   function generateGraph(n) {
     creating = true;
-    $section.$solveds[0].hide();
+    $solveds[0].exit();
+    isSolved = false
 
     let points = shuffle(n);
     let edges = [];
@@ -512,9 +484,11 @@ export function GT_3_3($section) {
     function addEdge(u, v) {
       if (u === v) return;
       let edge = { p1: points[u], p2: points[v] };
-      for (let i=0; i<edges.length; ++i)
-        if (Line.intersect(edge, { p1: points[edges[i][0]], p2: points[edges[i][1]] }))
-          return;
+      for (let i=0; i<edges.length; ++i) {
+        const e2 = {p1: points[edges[i][0]], p2: points[edges[i][1]]};
+        if (Segment.equals(edge, e2) || Segment.intersect(edge, e2)) return;
+      }
+
       edges.push([u,v]);
     }
 
@@ -531,10 +505,14 @@ export function GT_3_3($section) {
 
   graph.on('update', function() {
     let count = intersect(graph.edges);
-    if (!creating && !count) $section.$solveds[0].show();
+    if (!isSolved && !creating && !count) {
+      $section.score('planarity');
+      $solveds[0].enter();
+      isSolved = true;
+    }
 
-    graph.vertices.forEach(function(v) { v.$el.setClass('intersect', v.intersect); });
-    graph.edges.forEach(function(e) { e.$el.setClass('intersect', e.intersect); });
+    graph.vertices.forEach(v => v.$el.setClass('intersect', v.intersect));
+    graph.edges.forEach(e => e.$el.setClass('intersect', e.intersect));
   });
 
   function intersect(edges) {
@@ -548,7 +526,7 @@ export function GT_3_3($section) {
       let e1 = { p1: edges[i].vertices[0].posn, p2: edges[i].vertices[1].posn };
       for (let j=i+1; j<edges.length; ++j) {
         let e2 = { p1: edges[j].vertices[0].posn, p2: edges[j].vertices[1].posn };
-        if (Line.intersect(e1, e2)) {
+        if (Segment.intersect(e1, e2)) {
           edges[i].intersect = edges[j].intersect = edges[i].vertices[0].intersect =
             edges[i].vertices[1].intersect = edges[j].vertices[0].intersect =
               edges[j].vertices[1].intersect = true;
@@ -675,8 +653,6 @@ export function GT_4_3($section) {
 }
 
 export function GT_5_1($section) {
-  $section.goals.push('map-1', 'map-2', 'map-3', 'map-4');
-
   let colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', Colour.violet, Colour.orange, Colour.cyan];
   let $colours = $section.$$('.four-colour-icon');
   let activeColour = 0;
@@ -691,17 +667,11 @@ export function GT_5_1($section) {
     });
   });
 
-  let borders = [
-    {"AK":["WA"],"WA":["AK","ID","OR"],"AL":["FL","GA","MS","TN"],"FL":["AL","GA"],"GA":["AL","FL","NC","SC","TN"],"MS":["AL","AR","LA","TN"],"TN":["AL","AR","GA","KY","MO","MS","NC","VA"],"AR":["LA","MO","MS","OK","TN","TX"],"LA":["AR","MS","TX"],"MO":["AR","IA","IL","KS","KY","NE","OK","TN"],"OK":["AR","CO","KS","MO","NM","TX"],"TX":["AR","LA","NM","OK"],"AZ":["CA","NM","NV","UT"],"CA":["AZ","HI","NV","OR"],"CO":["KS","NE","NM","OK","UT","WY"],"NM":["AZ","CO","OK","TX"],"NV":["AZ","CA","ID","OR","UT"],"UT":["AZ","CO","ID","NV","WY"],"HI":["CA"],"OR":["CA","ID","NV","WA"],"KS":["CO","MO","NE","OK"],"NE":["CO","IA","KS","MO","SD","WY"],"WY":["CO","ID","MT","NE","SD","UT"],"CT":["MA","NY","RI"],"MA":["CT","NH","NY","RI","VT"],"NY":["CT","MA","NJ","PA","VT"],"RI":["CT","MA"],"DC":["MD","VA"],"MD":["DC","DE","PA","VA","WV"],"VA":["DC","KY","MD","NC","TN","WV"],"DE":["MD","NJ","PA"],"NJ":["DE","NY","PA"],"PA":["DE","MD","NJ","NY","OH","WV"],"NC":["GA","SC","TN","VA"],"SC":["GA","NC"],"IA":["IL","MN","MO","NE","SD","WI"],"IL":["IA","IN","KY","MO","WI"],"MN":["IA","ND","SD","WI"],"SD":["IA","MN","MT","ND","NE","WY"],"WI":["IA","IL","MI","MN"],"ID":["MT","NV","OR","UT","WA","WY"],"MT":["ID","ND","SD","WY"],"IN":["IL","KY","MI","OH"],"KY":["IL","IN","MO","OH","TN","VA","WV"],"MI":["IN","OH","WI"],"OH":["IN","KY","MI","PA","WV"],"WV":["KY","MD","OH","PA","VA"],"NH":["MA","ME","VT"],"VT":["MA","NH","NY"],"ME":["NH"],"ND":["MN","MT","SD"]},
-    {"Colombia": ["Venezuela","Brazil","Peru","Ecuador"],"Venezuela": ["Colombia","Brazil","Guyana"],"Guyana": ["Venezuela","Brazil","Suriname"],"Suriname": ["Guyana","Brazil","FrenchGuiana"],"FrenchGuiana": ["Suriname","Brazil"],"Ecuador": ["Peru","Colombia"],"Peru": ["Ecuador","Colombia","Brazil","Bolivia","Chile"],"Bolivia": ["Peru","Brazil","Paraguay","Argentina","Chile"],"Paraguay": ["Argentina","Bolivia","Brazil"],"Chile": ["Peru","Bolivia","Argentina"],"Argentina": ["Chile","Bolivia","Paraguay","Brazil","Uruguay"],"Uruguay": ["Argentina","Brazil"],"Brazil": ["FrenchGuiana","Suriname","Guyana","Venezuela","Colombia","Peru","Bolivia","Paraguay","Argentina","Uruguay"]},
-    {"Schleswig-Holstein":["Niedersachsen","Hamburg","Mecklenburg-Vorpommern"],"Hamburg":["Niedersachsen","Schleswig-Holstein"],"Brandenburg":["Mecklenburg-Vorpommern","Niedersachsen","Sachsen-Anhalt","Sachsen","Berlin"],"Berlin":["Brandenburg"],"Mecklenburg-Vorpommern":["Schleswig-Holstein","Niedersachsen","Brandenburg"],"Niedersachsen":["Schleswig-Holstein","Hamburg","Mecklenburg-Vorpommern","Brandenburg","Sachsen-Anhalt","Thüringen","Hessen","Nordrhein-Westfalen","Bremen"],"Bremen":["Niedersachsen"],"Sachsen-Anhalt":["Niedersachsen","Brandenburg","Sachsen","Thüringen"],"Sachsen":["Brandenburg","Sachsen-Anhalt","Thüringen","Bayern"],"Thüringen":["Hessen","Niedersachsen","Sachsen-Anhalt","Sachsen","Bayern"],"Nordrhein-Westfalen":["Niedersachsen","Hessen","Rheinland-Pfalz"],"Hessen":["Rheinland-Pfalz","Nordrhein-Westfalen","Niedersachsen","Thüringen","Bayern","Baden_Württemberg"],"Rheinland-Pfalz":["Nordrhein-Westfalen","Hessen","Baden_Württemberg","Saarland"],"Saarland":["Rheinland-Pfalz"],"Baden_Württemberg":["Rheinland-Pfalz","Hessen","Bayern"],"Bayern":["Baden_Württemberg","Hessen","Thüringen"]},
-    {"Northumberland":["Cumbria","County_Durham","Tyne_and_Wear"],"Tyne_and_Wear":["Northumberland","County_Durham"],"Cumbria":["Northumberland","North_Yorkshire","County_Durham","Lancashire"],"County_Durham":["Tyne_and_Wear","Northumberland","Cumbria","North_Yorkshire"],"North_Yorkshire":["County_Durham","Cumbria","Lancashire","West_Yorkshire","South_Yorkshire","East_Riding_of_Yorkshire"],"Lancashire":["Cumbria","North_Yorkshire","West_Yorkshire","Greater_Manchester","Merseyside"],"West_Yorkshire":["Greater_Manchester","Lancashire","North_Yorkshire","South_Yorkshire","Derbyshire"],"East_Riding_of_Yorkshire":["North_Yorkshire","South_Yorkshire","Lincolnshire"],"Greater_Manchester":["Merseyside","Lancashire","West_Yorkshire","Derbyshire","Cheshire"],"Merseyside":["Lancashire","Greater_Manchester","Cheshire"],"South_Yorkshire":["West_Yorkshire","North_Yorkshire","East_Riding_of_Yorkshire","Lincolnshire","Nottinghamshire","Derbyshire"],"Cheshire":["Merseyside","Greater_Manchester","Derbyshire","Staffordshire","Shropshire"],"Derbyshire":["Cheshire","Greater_Manchester","West_Yorkshire","South_Yorkshire","Nottinghamshire","Leicestershire","Warwickshire","Staffordshire"],"Nottinghamshire":["Derbyshire","South_Yorkshire","Lincolnshire","Rutland","Leicestershire"],"Lincolnshire":["East_Riding_of_Yorkshire","South_Yorkshire","Nottinghamshire","Leicestershire","Rutland","Cambridgeshire","Norfolk"],"Staffordshire":["Shropshire","Cheshire","Derbyshire","Leicestershire","Warwickshire","West_Midlands"],"Leicestershire":["Derbyshire","Nottinghamshire","Lincolnshire","Rutland","Northamptonshire","Warwickshire","Staffordshire"],"Rutland":["Leicestershire","Lincolnshire","Cambridgeshire","Northamptonshire"],"Norfolk":["Lincolnshire","Cambridgeshire","Suffolk"],"Shropshire":["Cheshire","Staffordshire","Worcestershire","Herefordshire"],"West_Midlands":["Staffordshire","Warwickshire","Worcestershire"],"Warwickshire":["Staffordshire","Derbyshire","Leicestershire","Northamptonshire","Oxfordshire","Gloucestershire","Worcestershire","West_Midlands"],"Northamptonshire":["Warwickshire","Leicestershire","Rutland","Cambridgeshire","Bedfordshire","Buckinghamshire","Oxfordshire"],"Cambridgeshire":["Northamptonshire","Rutland","Lincolnshire","Norfolk","Suffolk","Essex","Hertfordshire","Bedfordshire"],"Suffolk":["Norfolk","Cambridgeshire","Essex"],"Essex":["Suffolk","Cambridgeshire","Hertfordshire","Greater_London","Kent"],"Greater_London":["Buckinghamshire","Hertfordshire","Essex","Kent","Surrey","Berkshire"],"Buckinghamshire":["Oxfordshire","Northamptonshire","Bedfordshire","Hertfordshire","Greater_London","Berkshire"],"Bedfordshire":["Northamptonshire","Cambridgeshire","Hertfordshire","Buckinghamshire"],"East_Sussex":["West_Sussex","Kent","Surrey"],"Surrey":["Hampshire","Berkshire","Greater_London","Kent","East_Sussex","West_Sussex"],"West_Sussex":["East_Sussex","Kent","Surrey","Hampshire"],"Berkshire":["Oxfordshire","Buckinghamshire","Greater_London","Surrey","Hampshire","Wiltshire"],"Oxfordshire":["Gloucestershire","Warwickshire","Northamptonshire","Buckinghamshire","Berkshire","Wiltshire"],"Gloucestershire":["Herefordshire","Worcestershire","Warwickshire","Oxfordshire","Wiltshire","Somerset"],"Wiltshire":["Somerset","Gloucestershire","Oxfordshire","Berkshire","Hampshire","Dorset"],"Hampshire":["Dorset","Wiltshire","Berkshire","Surrey","West_Sussex"],"Dorset":["Devon","Somerset","Wiltshire","Hampshire"],"Somerset":["Devon","Dorset","Wiltshire","Gloucestershire"],"Devon":["Cornwall","Somerset","Dorset"],"Cornwall":["Devon"],"Worcestershire":["Herefordshire","Shropshire","Staffordshire","West_Midlands","Warwickshire","Gloucestershire"],"Hertfordshire":["Bedfordshire","Cambridgeshire","Essex","Greater_London","Buckinghamshire"],"Herefordshire":["Shropshire","Worcestershire","Gloucestershire"],"Kent":["Essex","Greater_London","Surrey","East_Sussex"]}
-  ];
-
-  $section.$$('.slide').forEach(function($map, i) {
-    let $count = $map.$('.colour-count');
+  $section.$$('.tab').forEach(function($map, i) {
+    let $count = $map.$('.colour-count span');
     let $countries = $map.$('.frame').children;
     let $solve = $map.$('.solve');
+    let $solveds = $section.$$('x-solved');
 
     let countryIds = [];
     let countryColours = {};
@@ -719,6 +689,7 @@ export function GT_5_1($section) {
       $solve.on('click', function() {
         countryColours[id] = initial;
         setTimeout(() => { $c.css('fill', colours[initial]); }, j * 10);
+        $section.score('map-' + i);
       });
 
       $c.on('click', function() {
@@ -738,7 +709,7 @@ export function GT_5_1($section) {
         if (used < completed && countryIds.every(id => countryColours[id] != null)) {
           completed = used;
           if (used <= 4) {
-            $section.$solveds[i].show();
+            $solveds[i].enter();
             $section.score('map-' + i);
           } else {
             $section.addHint(`Well done! Can you colour this map with fewer than ${used} colours?`);
@@ -751,7 +722,7 @@ export function GT_5_1($section) {
       $count.text = used = 0;
       countryColours = {};
       $countries.forEach($c => { $c.css('fill', '#CCC'); });
-      $section.$solveds[i].hide();
+      $solveds[i].exit();
       colourUses = [0,0,0,0,0,0,0];
     });
 
