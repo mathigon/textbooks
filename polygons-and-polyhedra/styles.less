@@ -6,7 +6,7 @@
 
 @import "styles/variables";
 @import "./components/tessellation";
-@import "./components/polyhedron";
+@import "./components/anibutton";
 
 .quadrilateral {
   width: 210px !important;
@@ -48,4 +48,10 @@
 .plato {
   margin: 0 -12px 1.5em !important;
   p:first-child, x-polyhedron { margin-bottom: .5em; }
+}
+
+x-polyhedron, x-folding {
+  display: block;
+  margin: 0 auto;
+  canvas { width: 100%; height: 100%; }
 }

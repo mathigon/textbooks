@@ -22,13 +22,13 @@ mixin divisor-table(divisors, pairs)
     tr
       td.td-border-right(width="24")= last
       for i in divisors
-        td.divisor-number(width="24")= i + (i == last ? '' : ',')
+        td.divisor-number(width="24" data-display="visibility")= i + (i == last ? '' : ',')
     for i in pairs
       tr
         td
         if i
           td(colspan=i)
-        td(colspan=len - 2 * i): .divisor-pair(style="height: " + (len/2 - i) + "00%")
+        td(colspan=len - 2 * i): .divisor-pair(style="height: " + (len/2 - i) + "00%" data-display="visibility")
         if i
           td(colspan=i)
 
@@ -220,8 +220,8 @@ x-step#divisibility6(goals="btn2 btn3")
   p We’ve still skipped number 6 – but we’ve already done all the hard work. Remember that 6 = 2 × 3.
   +grid(40)
   p.btn-row.text-center(style="margin-bottom:1em")
-    button.btn.btn-small.btn-bounce Show multiple of 2
-    button.btn.btn-small.btn-bounce Show multiple of 3
+    button.btn.btn-small.btn-bounce(data-display="visibility") Show multiple of 2
+    button.btn.btn-small.btn-bounce(data-display="visibility") Show multiple of 3
   p To check if a number is divisible by 6 we just have to check that it is divisible by 2 #[+blank("and also|or")] divisible by 3. Note that this happens to work for 6, but certainly not for #[em any] number that is the product of two others. More on that later…
 
 x-step#divisibility7
@@ -253,7 +253,7 @@ x-step#factors1
 
 //- ---------------------------------------------------------------------------
 
-x-step#factors2
+x-step#factors2.no-overflow
   x-slideshow
     .stage(slot="stage")
       +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
@@ -336,7 +336,7 @@ x-step#primes1
 //- ---------------------------------------------------------------------------
 //- ---------------------------------------------------------------------------
 
-x-step#eratosthenes
+x-step#eratosthenes.no-overflow
   h2 The Sieve of Eratosthenes
 
   p It turned out to be quite difficult to determine if a number is prime: you always had to find #[em all] its prime factors, which gets more and more challenging as the numbers get bigger. Instead, the Greek mathematician #[x-bio(xid='eratosthenes') Eratosthenes of Cyrene] came up with a simple algorithm to find all prime numbers up to 100: the #[strong Sieve of Eratosthenes].
@@ -371,15 +371,15 @@ x-step#primes3
   ol.proof
     li Suppose there were only finitely many prime numbers.
       .text-center #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P]
-    li.reveal Let us multiply all of them together, to get a very large number which we call #[em N].
+    li Let us multiply all of them together, to get a very large number which we call #[em N].
       .text-center #[em.number-ball N] = #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P]
-    li.reveal Now let’s think about #[em N] + 1. Any prime number that divides #[em N] can’t also  divide #[em N] + 1. And since all prime numbers we have found so far divide #[em N], none of these can also divide #[em N] + 1.
+    li Now let’s think about #[em N] + 1. Any prime number that divides #[em N] can’t also  divide #[em N] + 1. And since all prime numbers we have found so far divide #[em N], none of these can also divide #[em N] + 1.
       .text-center #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[.number-ball.blue P] #[span.divides] #[em.number-ball N]
       .text-center #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[.number-ball.blue.cross P] #[span.divides] #[em.number-ball N] + 1
-    li.reveal We know from the #[x-gloss(xid="fta") Fundamental Theorem of Arithmetic] that #[em N] + 1, must have a prime factor. Either #[em N] + 1 is itself prime, or there is some other new prime #[em P’] that divides #[em N] + 1.
+    li We know from the #[x-gloss(xid="fta") Fundamental Theorem of Arithmetic] that #[em N] + 1, must have a prime factor. Either #[em N] + 1 is itself prime, or there is some other new prime #[em P’] that divides #[em N] + 1.
       .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
-    li.reveal In both cases we’ve found a new prime not in our original list – but we assumed that #[em all] primes were in this list.
-    li.reveal Clearly something went wrong! But since steps #[span.proof-step 2]–#[span.proof-step 4] were definitely valid, the only possibility is that our initial assumption in #[span.proof-step 1] was wrong. This means there must actually be infinitely many primes.
+    li In both cases we’ve found a new prime not in our original list – but we assumed that #[em all] primes were in this list.
+    li Clearly something went wrong! But since steps #[span.proof-step 2]–#[span.proof-step 4] were definitely valid, the only possibility is that our initial assumption in #[span.proof-step 1] was wrong. This means there must actually be infinitely many primes.
 
   //- Notice that any prime that divides N cannot divide N + 1. (If it would, it also had to divide the difference between N and N + 1 which is 1. But the only number that divides 1 is 1 itself.)
 
@@ -428,19 +428,19 @@ x-step#ulam
 
   .number-grid(style="max-width: 392px")
     for x in [37, 36, 35, 34, 33, 32, 31]
-      .number-cell= x
+      .number-cell(data-display="visibility")= x
     for x in [38, 17, 16, 15, 14, 13, 30]
-      .number-cell= x
+      .number-cell(data-display="visibility")= x
     for x in [39, 18,  5,  4,  3, 12, 29]
-      .number-cell= x
+      .number-cell(data-display="visibility")= x
     for x in [40, 19,  6,  1,  2, 11, 28]
-      .number-cell= x
+      .number-cell(data-display="visibility")= x
     for x in [41, 20,  7,  8,  9, 10, 27]
-      .number-cell= x
+      .number-cell(data-display="visibility")= x
     for x in [42, 21, 22, 23, 24, 25, 26]
-      .number-cell= x
+      .number-cell(data-display="visibility")= x
     for x in [43, 44, 45, 46, 47, 48, 49]
-      .number-cell= x
+      .number-cell(data-display="visibility")= x
 
   p We write down all integers in a rectangular grid, starting with 1 in the middle and then spiralling outwards. Then we highlight all numbers which are prime.
 

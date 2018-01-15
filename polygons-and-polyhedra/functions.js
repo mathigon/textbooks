@@ -9,7 +9,23 @@ import { Browser, slide } from '@mathigon/boost';
 
 import './components/tessellation';
 import './components/polyhedron';
+import './components/folding';
+import './components/anibutton';
 
+
+export function angles($section) {
+  const totals = [360, 540];
+
+  $section.$$('x-anibutton').forEach(($b, i) => {
+    $section.model.watch(() => $b.setAttr('text', '???'));
+    $b.on('click', () => {
+      // TODO warning if lines overlap
+      $b.play();
+      $b.setAttr('text', totals[i] + '°');
+      $section.score('angle-' + i);
+    });
+  });
+}
 
 export function escher($section) {
   const $img = $section.$('.metamorph img');

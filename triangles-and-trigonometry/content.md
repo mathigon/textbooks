@@ -974,7 +974,7 @@ Opposite (which is opposite angle _α_).
 :::
 
 There are lots of triangles that have angles α and 90°, but from the
-[AA condition](gloss:triangle:aa) we know that they are all
+[AA condition](gloss:triangle-aa) we know that they are all
 [[similar|congruent]]:
 
 {.todo} image of lots of similar triangles

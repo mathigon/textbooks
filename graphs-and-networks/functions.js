@@ -166,7 +166,7 @@ export function GT_2_0($section) {
           $section.score('bridge-' + i);
           break;
         case 3:
-          $section.addHint('tryDifferentMapA');
+          $section.addHint('tryDifferentMapB');
           $section.score('bridge-' + i);
           break;
         default:
@@ -351,6 +351,13 @@ export function GT_3_0($section) {
       $section.addHint(hint);
     }
   }
+
+  setTimeout(() => {
+    if ($section.isReady || $section.$chapter.$activeStep !== $section) return;
+    $section.score('try-three-times');
+    $section.addHint('utilitiesImpossible');
+    attempts = 4;
+  }, 45000);
 
   map.on('intersect', function(e) {
     e.paths[0].css('stroke','#C00');

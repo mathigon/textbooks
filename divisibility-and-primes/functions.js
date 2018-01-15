@@ -22,7 +22,6 @@ function numberGrid($grid, time, className, filter) {
 }
 
 
-
 // -----------------------------------------------------------------------------
 // Section Functions
 
@@ -107,8 +106,6 @@ export function divisibility6($section) {
   let $buttons = $section.$$('.btn');
   let $grid = $section.$('.number-grid');
 
-  $buttons.forEach(function($b) { $b.noDisplayChange = true; });
-
   $section.on('score-btn2', function() {
     $buttons[0].exit('pop');
     numberGrid($grid, 200, 'yellow', i => (i % 2 === 0));
@@ -132,8 +129,8 @@ export function factors2($section) {
   let $pairs = $section.$$('.divisor-pair').reverse();
   let $numbers = $section.$$('.divisor-number');
 
-  $pairs.slice(1).forEach($p => { $p.invisible(); });
-  $numbers.forEach(($n, i) => { if (i > 0 && i < 7) $n.invisible(); });
+  $pairs.slice(1).forEach($p => { $p.hide(); });
+  $numbers.forEach(($n, i) => { if (i > 0 && i < 7) $n.hide(); });
 
   $section.$slides.on('next', (x) => {
     switch(x) {
@@ -189,9 +186,9 @@ export function primeTest($section) {
 
   $input.on('blur', function() {
     let v = +$input.value;
-    if (!v) { $section.model.set('result', ''); }
-    if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', 'That number is too large :('); return; }
+    if (!v) return $section.model.set('result', '');
 
+    if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', 'That number is too large :('); return; }
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
@@ -206,6 +203,8 @@ export function primeTest($section) {
 export function primeGenerator($section) {
   $section.$('button').on('click', function() {
     let d = +$section.model.d;
+    if (!d) return $section.model.set('result', '');
+
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
@@ -222,8 +221,8 @@ export function ulam($section) {
   let $cells = $section.$$('.number-cell');
   sortByFn($cells, function($c) { return +$c.text; });
 
-  $cells.forEach($c => { $c.invisible(); });
-  $cells.forEach(($c, i) => setTimeout(() => $c.enter('pop'), i * 80));
+  $cells.forEach($c => { $c.hide(); });
+  $cells.forEach($c => setTimeout(() => $c.enter('pop'), (+$c.text) * 80));
 
   setTimeout(function() {
     let delay = 1;
@@ -332,7 +331,8 @@ export function goldbach1($section) {
 
   $input.on('blur', function() {
     let v = +$input.value;
-    if (!v) { $section.model.set('result', ''); return; }
+    if (!v) return $section.model.set('result', '');
+
     if (v % 2) { $section.model.set('result', 'Pick an even number.'); return; }
     if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', 'That number is too large :('); return; }
 

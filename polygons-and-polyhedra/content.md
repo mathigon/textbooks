@@ -48,6 +48,7 @@ We give different names to polygons, depending on how many sides they have:
 
 ---
 > id: angles
+> goals: angle-0 angle-1
 
 ### Angles in Polygons
 
@@ -72,9 +73,11 @@ We already know that the sum of the internal angles in a triangle is always
       path(x="segment(d,a)")
 
 {.text-center.var} _{span.circled.red}${round(angle(b,a,d).deg)}°_ +
-_{span.circled.blue}${round(angle(c,b,a).deg)}°_+
+_{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
 _{span.circled.green}${round(angle(d,c,b).deg)}°_ +
-_{span.circled.yellow}${round(angle(a,d,c).deg)}°_ = _{span.circled}360°_
+_{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+    
+    x-gesture(target="x-anibutton")
 
 ::: column.grow
 
@@ -84,11 +87,11 @@ _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ = _{span.circled}360°_
       circle.move(name="g" cx=220 cy=270)
       circle.move(name="h" cx=80 cy=240)
       circle.move(name="i" cx=30 cy=150)
-      path.fill.red(x="angle(f,e,i)" sweep)
-      path.fill.blue(x="angle(g,f,e)" sweep)
-      path.fill.green(x="angle(h,g,f)" sweep)
-      path.fill.yellow(x="angle(i,h,g)" sweep)
-      path.fill(x="angle(e,i,h)" sweep)
+      path.fill.red(x="angle(f,e,i)" sweep label="${round(angle(f,e,i).deg)}°")
+      path.fill.blue(x="angle(g,f,e)" sweep label="${round(angle(g,f,e).deg)}°")
+      path.fill.green(x="angle(h,g,f)" sweep label="${round(angle(h,g,f).deg)}°")
+      path.fill.yellow(x="angle(i,h,g)" sweep label="${round(angle(i,h,g).deg)}°")
+      path.fill(x="angle(e,i,h)" sweep label="${round(angle(e,i,h).deg)}°")
       path(x="segment(e,f)")
       path(x="segment(f,g)")
       path(x="segment(g,h)")
@@ -96,10 +99,10 @@ _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ = _{span.circled}360°_
       path(x="segment(i,e)")
 
 {.text-center.var} _{span.circled.red}${round(angle(i,e,f).deg)}°_ +
-_{span.circled.blue}${round(angle(e,f,g).deg)}°_+
+_{span.circled.blue}${round(angle(e,f,g).deg)}°_ +
 _{span.circled.green}${round(angle(f,g,h).deg)}°_ +
 _{span.circled.yellow}${round(angle(g,h,i).deg)}°_ +
-_{span.circled}${round(angle(h,i,e).deg)}°_ = _{span.circled}360°_      
+_{span.circled}${round(angle(h,i,e).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
@@ -325,7 +328,7 @@ certain important properties:
       path.yellow(x="segment(a,c,'arrow2')")
       path.yellow(x="segment(b,d,'arrow2')")
 
-{.caption} If both pairs of _opposite_ sides are parallel, we have a __Parallelogram__.
+{.caption} If both pairs of _opposite_ sides are parallel, we get a __Parallelogram__.
 ::: column.quadrilateral
 
     x-geopad(style="width:210px; height: 120px;"): svg
@@ -339,7 +342,7 @@ certain important properties:
       path.yellow(x="segment(g,h,'bar2')")
       path.red(x="segment(h,e,'bar')")
 
-{.caption} If two pairs of _adjacent_ sides have the same length, we have a __Kite__.
+{.caption} If two pairs of _adjacent_ sides have the same length, we get a __Kite__.
 ::: column.quadrilateral
 
     x-geopad(style="width:210px; height: 120px;"): svg
@@ -353,7 +356,7 @@ certain important properties:
       path(x="segment(k,l)")
       path.red(x="segment(i,l,'arrow')")
 
-{.caption} If just one pair of opposite sides is parallel, we have a __Trapezium__.
+{.caption} If just one pair of opposite sides is parallel, we get a __Trapezium__.
 :::
 
 ---
@@ -1078,8 +1081,11 @@ consisting of non-regular polygons, and some having holes inside.
 
 ### Nets
 
-{.todo} What if you wanted to expand your thinking of geometric shapes beyond the flat
-two-dimensional ones to three dimensional (3D) ones?
+    x-folding(shape="Tetrahedron" size=400)
+    x-folding(shape="Cube" size=400)
+    x-folding(shape="Octahedron" size=400)
+    x-folding(shape="Dodecahedron" size=400)
+    x-folding(shape="Icosahedron" size=400)
 
 {.todo} Try this experiment to gee how nets relate to 3D figures: Sketch or print the
 equilateral triangle in the image below onto a piece of paper and cut it out.
