@@ -30,8 +30,8 @@ degree:
 
 quadratic:
   title: Quadratic
-  text: A __quadratic__ is a [polynomial(gloss:polynomial) of degree 2. For
-    example, `x^2 - 2x + 3` is a quadratic.
+  text: A __quadratic__ is a polynomial of degree 2. For example, `x^2 - 2x + 3`
+    is a quadratic.
 
 
 
@@ -61,15 +61,16 @@ collinear:
   title: Collinear points
   text: Three or more points are __collinear__ if they lie on the same line.
 
-congruent:
+congruent: # <<<
   title: Congruence
   text: In geometry, two figures are __congruent__ if are identical in size,
     shape and measure.
 
-angle-bisector:
+angle-bisector: # <<<
   title: Angle bisector
   text: An __angle bisector__ is a ray that splits an angle in the middle, into
     two congruent, smaller angles.
+  image: angle-bisector.svg
 
 midpoint:
   title: Midpoint
@@ -95,7 +96,7 @@ transversal:
   title: Traversal
   text: A transversal is a line that intersects two other lines.
 
-parallel:
+parallel: # <<<
   title: Parallel lines
   text: Two or more lines are __parallel__ when they lie in the same plane and
     never intersect. These lines will always have the same slope.
@@ -139,10 +140,11 @@ corresponding-angles:
   text: __Corresponding angles__ are two angles that are in the same position
     with respect to the transversal, but on different lines.
 
-alternate-angles:
+alternate-angles: # <<<
   title: Alternate angles
   text: __Alternate angles__ are two angles that are on the interior of two
     different lines, but on the opposite sides of the transversal.
+  image: alternate-angles.svg
 
 adjacent-angles:
   title: Anjacent Angles
@@ -173,17 +175,36 @@ symmetry:
   text: A figure or shape has __symmetry__ if it can be transformed, and still
     look the same afterwards.
 
-# Line of Symmetry	A line of symmetry is a line that can be drawn to divide a figure into equal halves.
-# Line Symmetry	A figure has line symmetry or reflection symmetry when it can be divided into equal halves that match.
-# reflection symmetry	A figure has reflection symmetry if it can be reflected across a line and look exactly the same as it did before the reflection.
-# Dilation	To reduce or enlarge a figure according to a scale factor is a dilation.
-# Scale Factor	A scale factor is a ratio of the scale to the original or actual dimension written in simplest form.
+axis-of-symmetry:  # <<<
+  title: Axis of Symmetry
+  text: A line of symmetry is a line that can be drawn to divide a figure into
+    equal halves.
+
+rotational-symmetry:
+  title: TITLE
+  text: TODO
+
+reflectional-symmetry:
+  title: TITLE
+  text: TODO
+
+dilation:
+  title: TITLE
+  text: TODO
+
+similar:
+  title: TITLE
+  text: TODO
+
+scale-factor:
+  title: TITLE
+  text: TODO
 
 
 # ------------------------------------------------------------------------------
 # Triangles
 
-equilateral-triangle:
+equilateral-triangle: # <<<
   title: Equilateral triangle
   text: An __equilateral triangle__ is a triangle in which all three sides have
     the same length.
@@ -213,6 +234,10 @@ median:
   text: The __median__ of a triangle is the line that connects a vertex to the
     midpoint of the opposite side.
 
+triangle-midsegment: # <<<
+  title: Midsegment
+  text: TODO
+
 centroid:
   title: Centroid
   text: The __centroid__ of a triangle is the point where its three medians
@@ -227,6 +252,14 @@ triangle-legs:
   title: Legs of a triangle
   text: The two __legs__ of a right-angled triangle are the two shorter sides
     (not the hypotenuse). They are adjacent to the right angle.
+
+triangle-sss: # <<<
+  title: SSS Condition for Triangles
+  text: TODO
+
+cpoct: # <<<
+  title: CPOCT
+  text: TODO
 
 pythagoras-theorem:
   title: Pythagoras's theorem
@@ -243,66 +276,75 @@ pythagorean-triple:
 # ------------------------------------------------------------------------------
 # Polygons
 
-polygon:
+polygon: # <<<
   title: Polygon
   text: A __polygon__ is geometric shape that is made up of straight line
     segments.
+  image: polygon.svg
 
-polygon-vertex:
+polygon-vertex: # <<<
   title: Vertex of a polygon
   text: The __vertices__ of a polygon are the points where its sides meet (its
     "corners").
 
-internal-angle:
+internal-angle: # <<<
   title: Internal angles
   text: The __internal angles__ of the polygon are the angles on the inside, at
     every vertex.
 
-regular-polygon:
+regular-polygon: # <<<
   title: Regular polygon
   text: A __regular polygon__ is a polygon in which all sides have the same
     length and all angles have the same size.
+  image: regular-polygon.svg
 
-concave:
+irregular-polygon: # <<<
+  title: Irregular Polygon
+  text: TODO
+
+concave: # <<<
   title: Concave polygon
   text: A __concave__ polygon has at least one internal angle greater than 180°.
     A common way to identify a concave polygon is to look for a "caved-in"
     side of the polygon.
 
-convex:
+convex: # <<<
   title: Convex polygon
   text: A __convex__ polygon contains no internal angles greater than 180°.
 
-diagonal:
+polygon-diagonal: # <<<
   title: Diagonal
   text: A __diagonal__ of a polygon is a line segment that connects two vertices
     that are not next to each other.
 
-quadrilateral:
+quadrilateral: # <<<
   title: Quadrilateral
   text: A __quadrilateral__ is a polygon with four sides.
+
+apothem: # <<<
+  title: Apothem
+  text: TODO
 
 square:
   title: Square
   text: A __square__ is a regular quadrilateral: all sides have the same length,
     and all angles have the same size.
 
-rectangle:
+rectangle: # <<<
   title: Rectangle
-  text: A __rectangle__ is a [quadrilateral](gloss:quadrilateral) in which all
-    angles are 90°.
+  text: A __rectangle__ is a quadrilateral in which all angles are 90°.
 
-parallelogram:
+parallelogram: # <<<
   title: Parallelogram
   text: A __parallelogram__ is a quadrilateral in which both pairs of
-    opposite edges are [parallel](gloss:parallel).
+    opposite edges are parallel.
 
 trapezium:
   title: Trapezium
   text: A __trapezium__ (or __trapezoid__) is a quadrilateral in which a pair of
     opposite edges are parallel.
 
-rhombus:
+rhombus: # <<<
   title: Rhombus
   text: A __rhombus__ (the plural is _rhombuses_ or _rhombi_) is a quadrilateral
     in which all edges have the same length.
@@ -312,7 +354,7 @@ kite:
   text: A __kite__ is a quadrilateral in which two pairs of adjacent sides have
     the same length.
 
-tessellation:
+tessellation: # <<<
   title: Tessellation
   text: A __tessellation__ is a geometric pattern that covers a surface without
     gaps or overlaps.
@@ -325,32 +367,64 @@ penrose:
 # ------------------------------------------------------------------------------
 # Polyhedrons
 
-polyhedron:
+polyhedron: # <<<
   title: Polyhedron
   text: A __polyhedron__ (the plural is _polyhedra_) is a 3-dimensional solid
     with no curves surfaces or edges. All faces of a polyhedron are polygons.
 
-polyhedron-edge:
+polyhedron-edge: # <<<
   title: Edge of a polyhedron
   text: TODO
 
-polyhedron-vertex:
+polyhedron-vertex: # <<<
   title: Vertex of a polyhedron
   text: The "corners" of a polyhedron are called its __vertices__.
 
-polyhedron-face:
+polyhedron-face: # <<<
   title: Face of a polyhedron
   text: The polygons which are “sides” of a polyhedron.
 
-platonic-solid:
+platonic-solid: # <<<
   title: Platonic solid
   text: A __Platonic solid__ is a polyhedron made up of only one kind of
     regular polygon, that looks the same from every direction.
 
-archimedean-solid:
+archimedean-solid: # <<<
   title: Archimedean solid
   text: An __Archimedean solid__ is a polyhedron made up of different kinds of
     regular polygons, that looks the same from every direction.
+
+polyhedron-dual: # <<<
+  title: Dual of a polyhedron
+  text: TODO
+
+tetrahedron: # <<<
+  title: Tetrahedron
+  text: TODO
+
+cube: # <<<
+  title: Cube
+  text: TODO
+
+octahedron: # <<<
+  title: Octahedron
+  text: TODO
+
+dodecahedron: # <<<
+  title: Dodecahedron
+  text: TODO
+
+icosahedron: # <<<
+  title: Icosahedron
+  text: TODO
+
+truncated-icosahedron: # <<<
+  title: Truncated Icosahedron
+  text: TODO
+
+net:
+  title: Nets of Polyhedrons
+  text: TODO
 
 cross-section:
   title: Cross section
@@ -384,7 +458,6 @@ circumference:
 # Volume	Volume is the amount of space inside the bounds of a three-dimensional object.
 # Cone	A cone is a solid three-dimensional figure with a circular base and one vertex.
 # Pyramid	A pyramid is a three-dimensional object with a base that is a polygon and triangular faces that meet at one vertex.
-# Vertex	A vertex is a point of intersection of the lines or rays that form an angle.
 # Volume	Volume is the amount of space inside the bounds of a three-dimensional object.
 # Cavalieri's Principle	States that if two solids have the same height and the same cross-sectional area at every level, then they will have the same volume.
 # Apothem	The apothem of a regular polygon is a perpendicular segment from the center point of the polygon to the midpoint of one of its sides.
@@ -411,10 +484,10 @@ circumference:
 
 
 
-
 # ==============================================================================
 # GRAPH THEORY
 # ==============================================================================
+
 
 graph:
   title: Graph
@@ -517,9 +590,11 @@ millennium-prize:
     solved so far, but the mathematician Grigori Perelman declined the award.
 
 
+
 # ==============================================================================
 # DIVISIBILITY AND PRIMES
 # ==============================================================================
+
 
 factor:
   title: Factor
@@ -579,9 +654,11 @@ twins:
     2 apart.
 
 
+
 # ==============================================================================
 # PROBABILITY
 # ==============================================================================
+
 
 probability:
   title: Probability
@@ -609,10 +686,11 @@ probTree:
   text: A __probability tree__ is a tree diagram representing the combined
     probability of multiple sequential events.
 
-venn:
+venn: # <<<
   title: Venn Diagram
   text: A __venn diagram__ diagram that visualises multiple overlapping events,
     and their probabilities.
+  image: venn.svg
 
 quantum:
   title: Quantum Mechanics

@@ -1,10 +1,8 @@
 appel:
   name: Kenneth Appel
-  birth: 1932
-  death: 2013
   bio: |
-    Kenneth Appel was an American mathematician, known for his proof of the
-    Four Colour Theorem with Wolfgang Haken.
+    __Kenneth Appel__ (1932 – 2013) was an American mathematician, known for his
+    proof of the Four Colour Theorem with Wolfgang Haken.
 
     In recognition, he and Haken received the Fulkerson Prize of the American
     Mathematical Society.
@@ -15,12 +13,10 @@ appel:
 
 archimedes:
   name: Archimedes
-  birth: c. 287
-  death: c. 212 BC
   bio: |
-    Archimedes was an ancient Greek scientist and engineer, and one of the
-    greatest mathematicians of all time. He discovered many concepts of
-    calculus, and worked in geometry, analysis and mechanics.
+    __Archimedes__ (c. 287 – c. 212 BC) was an ancient Greek scientist and
+    engineer, and one of the greatest mathematicians of all time. He discovered
+    many concepts of calculus, and worked in geometry, analysis and mechanics.
 
     While taking a bath, Archimedes discovered a way to determine the volume of
     irregular objects using the amount of water they displaced when submerged.
@@ -34,13 +30,11 @@ archimedes:
 
 dirac:
   name: Paul Dirac
-  birth: 1898
-  death: 1972
   bio: |
-    Paul Dirac was an English theoretical physicist, who shared the 1933 Nobel
-    Prize with Erwin Schrödinger. Dirac was one of the pioneers of Quantum
-    Mechanics, formulated the famous _Dirac equation_ and first predicted the
-    existence of antimatter.
+    __Paul Dirac__ (1898 – 1972) was an English theoretical physicist, who
+    shared the 1933 Nobel Prize with Erwin Schrödinger. Dirac was one of the
+    pioneers of Quantum Mechanics, formulated the famous _Dirac equation_ and
+    first predicted the existence of antimatter.
 
     He taught at Cambridge University, before moving to America. Dirac was
     famously shy and, according to Einstein, _“balancing on the dizzying path
@@ -48,42 +42,36 @@ dirac:
 
 eratosthenes:
   name: Eratosthenes of Cyrene
-  birth: c. 276 BC
-  death: c. 195 BC
-  bio: Eratosthenes was a Greek mathematician, geographer, astronomer and poet.
-    He first calculated the circumference of the Earth and the distance from
-    Earth to the sun, and he drew some of the first world maps. He also
-    discovered the Sieve of Eratosthenes, an efficient way to determine which
-    numbers are prime.
+  bio: __Eratosthenes__ (c. 276 BC – c. 195 BC) was a Greek mathematician,
+    geographer, astronomer and poet. He first calculated the circumference of
+    the Earth and the distance from Earth to the sun, and he drew some of the
+    first world maps. He also discovered the Sieve of Eratosthenes, an efficient
+    way to determine which numbers are prime.
 
 escher:
   name: M. C. Escher
-  birth: 1898
-  death: 1972
   bio: |
-    Maurits Cornelis Escher was a Dutch artist who created sketches, woodcuts
-    and lithographs of mathematically inspired objects and shapes: including
-    polyhedra, tessellations and impossible shapes. He graphically explored
-    concepts like symmetry, infinity, perspective and non-euclidean geometry.
+    __Maurits Cornelis Escher__ (1898 – 1972) was a Dutch artist who created
+    sketches, woodcuts and lithographs of mathematically inspired objects and
+    shapes: including polyhedra, tessellations and impossible shapes. He
+    graphically explored concepts like symmetry, infinity, perspective and
+    non-euclidean geometry.
 
 euclid:
   name: Euclid of Alexandria
-  birth: around 300 BCE
-  bio: Euclid was a Greek mathematician and is often called the _father of
-    geometry_. He published a book _Elements_ that first introduced Euclidean
-    geometry and contained many important proofs in geometry and number theory.
-    It was the main textbook for teaching mathematics until the 19th century.
-    Very little else is known about his life.
-  # Euclid was born about 365 BC in Alexandria, Egypt, and died about 300 BC.
-  # Little is known of his life other than that he taught mathematics in Alexandria.
+  bio: __Euclid of Alexandria__ (around 350 BCE) was a Greek mathematician and
+    is often called the _father of geometry_. He published a book _Elements_
+    that first introduced Euclidean geometry and contained many important proofs
+    in geometry and number theory. It was the main mathematics textbook until
+    the 19th century. He taught mathematics in Alexandria, but very little else
+    is known about his life.
 
 euler:
   name: Leonhard Euler
-  birth: 1707
-  death: 1783
   bio: |
-    Leonhard Euler is one the greatest mathematicians of all times. His work
-    spans all areas of mathematics, and he wrote 80 volumes of research.
+    __Leonhard Euler__ (1707 – 1783) is one the greatest mathematicians of all
+    times. His work spans all areas of mathematics, and he wrote 80 volumes of
+    research.
 
     Euler was born in Switzerland and studied in Basel, but lived most of his
     life in Berlin, Prussia, and St. Petersburg, Russia.
@@ -94,12 +82,10 @@ euler:
 
 fermat:
   name: Pierre de Fermat
-  birth: 1607
-  death: 1665
   bio: |
-    Pierre de Fermat was a French mathematician and Lawyer. He was one of the
-    early pioneers of calculus, as well as working on number theory,
-    probability, geometry and optics.
+    __Pierre de Fermat__ (1607 – 1665) was a French mathematician and Lawyer. He
+    was one of the early pioneers of calculus, as well as working on number
+    theory, probability, geometry and optics.
 
     In 1637, he wrote a short note in the margin of one of his textbooks,
     claiming that the equation `a^n + b^n = c^n` has no integer solutions for
@@ -108,15 +94,20 @@ fermat:
     the most famous unsolved problems in mathematics – until it was finally
     proven in 1994.
 
+fuller:
+  name: Buckminster Fuller
+  bio: __Richard Buckminster "Bucky" Fuller__ (1895 – 1983) was an American
+    architect, designer and inventor. He is famous for constructing _geodesic
+    dome_ – large, spherical structures. Similar looking Carbon molecules, the
+    _fullerenes_, were later named after him.
+
 gauss:
   name: Carl Friedrich Gauss
-  birth: 1777
-  death: 1855
   bio: |
-    Carl Friedrich Gauss is arguably the greatest mathematician of all times.
-    He made groundbreaking discoveries in just about ever field of mathematics,
-    from algebra and number theory to statistics, calculus, geometry, geology
-    and astronomy.
+    __Carl Friedrich Gauss__ (1777 – 1855) is arguably the greatest
+    mathematician of all times. He made groundbreaking discoveries in just about
+    ever field of mathematics, from algebra and number theory to statistics,
+    calculus, geometry, geology and astronomy.
 
     According to legend, he corrected a mistake in his father‘s accounting at
     the age of 3, and found a way to easily add up all integers from 1 to 100 at
@@ -125,148 +116,187 @@ gauss:
 
 goldbach:
   name: Christian Goldbach
-  birth: 1690
-  death: 1764
-  bio: Christian Goldbach was a Prussian mathematician and contemporary of
-    Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar Peter II, and is
-    remembered for his “Goldbach Conjecture“.
+  bio: __Christian Goldbach__ (1690 – 1764) was a Prussian mathematician and
+    contemporary of Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar
+    Peter II, and is remembered for his “Goldbach Conjecture“.
 
 guthrie:
   name: Francis Guthrie
-  birth: 1831
-  death: 1899
-  bio: Francis Guthrie was a South African botanist and mathematician, who first
-    stated the Four Colour Problem in 1852. He was a student of Augustus De
-    Morgan, one of the greatest British mathematicians. In addition to being a
-    mathematics professor and teacher, Guthrie worked as a lawyer and did
-    research in solar power and aeronautics.
+  bio: __Francis Guthrie__ (1831 – 1899) was a South African botanist and
+    mathematician, who first stated the Four Colour Problem in 1852. He was a
+    student of Augustus De Morgan, one of the greatest British mathematicians.
+    In addition to being a mathematics professor and teacher, Guthrie worked as
+    a lawyer and did research in solar power and aeronautics.
 
 haken:
   name: Wolfgang Haken
-  birth: 1928
-  bio: Wolfgang Haken is a German mathematician, known for his proof the Four
-    Colour Theorem with Kenneth Appel. In recognition, he and Appell received
-    the Fulkerson Prize of the American Mathematical Society. In 1990, Haken
-    became a member of the Center for Advanced Study at the University of
-    Illinois, where he is now an Emeritus Professor.
+  bio: __Wolfgang Haken__ (born 1928) is a German mathematician, known for his
+    proof the _Four Colour Theorem_ with Kenneth Appel. In recognition, he and
+    Appell received the Fulkerson Prize of the American Mathematical Society. In
+    1990, Haken became a member of the Center for Advanced Study at the
+    University of Illinois, where he is now an Emeritus Professor.
+
+jefferson:
+  name: Thomas Jefferson
+  bio: |
+    __Thomas Jefferson__ (1743 – 1826), was one of the Founding fathers of the
+    United States, their third president, and the principal author of the
+    Declaration of Independence.
+
+    In addition to his work in politics, he studied mathematics, horticulture,
+    mechanics, and worked as an architect. After retiring from public office,
+    Jefferson founded the University of Virginia.
 
 karinthy:
   name: Frigyes Karinthy
-  birth: 1887
-  death: 1938
-  bio: Frigyes Karinthy was a Hungarian author, poet and journalist. He is best
-    known for the 1929 short story “Chains”, which first introduced the concept
-    of _six degrees of separation_.
+  bio: __Frigyes Karinthy__ (1887 – 1938) was a Hungarian author, poet and
+    journalist. He is best known for the 1929 short story “Chains”, which first
+    introduced the concept of _six degrees of separation_.
 
 milgram:
   name: Stanley Milgram
-  birth: 1933
-  death: 1984
-  bio: Stanley Milgram was a famous social psychologist. He is best known for
-    experiments on _obedience_, testing how willing adults are to follow orders,
-    even when hurting others, and for the _small-world experiment_, which tests
-    the degree of connectedness of societies.
+  bio: __Stanley Milgram was__ (1933 – 1984) a famous social psychologist. He is
+    best known for experiments on _obedience_, testing how willing adults are to
+    follow orders, even when hurting others, and for the _small-world
+    experiment_, which tests the degree of connectedness of societies.
+
+newton:
+  name: Isaak Newton
+  bio: |
+    __Sir Isaac Newton__ (1642 – 1726) was an English mathematician,
+    astronomer and physicist, and one of the most influential scientists of all
+    time. He was a fellow of Trinity College at the University of Cambridge, and
+    president of the Royal Society in London.
+
+    In his book _Principia Mathematica_, Newton formulated the laws of motion
+    and gravity, which laid the foundations for classical physics and dominated
+    our view of the universe for the next three centuries.
+
+    Among many other things, Newton was one of the inventors of calculus, built
+    the first reflecting telescope, calculated the speed of sound, studied the
+    motion of fluids, and developed a theory of colour based on how prisms split
+    sunlight into a rainbow-coloured spectrum.
+
+noether:
+  name: Emmy Noether
+  bio: __Amalie Emmy Noether__ (1882 – 1935) was a German mathematician who made
+    important discoveries in abstract algebra and theoretical physics, including
+    the connection between symmetry and conservation laws. She is often
+    described as the most influential female mathematician.
 
 pascal:
   name: Blaise Pascal
-  birth: 1623
-  death: 1662
   bio: |
-    Blaise Pascal was a French mathematician, physicist and philosopher. He
-    invented some of the first mechanical calculators, as well as working on
-    projective geometry, probability and the physics of the vacuum.
+    __Blaise Pascal__ (1623 – 1662) was a French mathematician, physicist and
+    philosopher. He invented some of the first mechanical calculators, as well
+    as working on projective geometry, probability and the physics of the
+    vacuum.
 
     Most famously, Pascal is remembered for naming _Pascal’s Triangle_, an
     infinite triangle of numbers with some amazing properties.
 
 pearson:
   name: Karl Pearson
-  birth: 1857
-  death: 1936
-  bio: Karl Pearson was an English mathematician and statistician. He worked on
-    biometrics, meteorology, and eugenics, among many other topics, and founded
-    the world’s first university statistics department, at University College
-    London.
+  bio: __Karl Pearson__ (1857 – 1936) was an English mathematician and
+    statistician. He worked on biometrics, meteorology, and eugenics, among many
+    other topics, and founded the world’s first university statistics
+    department, at University College London.
 
 penrose:
-  name: Sir Roger Penrose
-  birth: '1931'
+  name: Roger Penrose
   bio: |
-    Roger Penrose is a British mathematician and physicist who is known for his
-    groundbreaking work in general relativity and cosmology – often
-    collaborating with other famous scientists like Stephen Hawking and Michael
-    Atiyah. He also discovered _Penrose Tilings_: self-similar, non-periodic
-    tessellations.
+    __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
+    who is known for his groundbreaking work in general relativity and cosmology
+    – often collaborating with other famous scientists like Stephen Hawking and
+    Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
+    non-periodic tessellations.
 
 planck:
   name: Max Plank
-  birth: 1858
-  death: 1947
-  bio: Max Plank was a German physicist and one of the original developers of
-    Quantum Mechanics – for which received the Nobel Prize in 1918.
+  bio: __Max Plank__ (1858 – 1947) was a German physicist and one of the
+    original developers of Quantum Mechanics – for which received the Nobel
+    Prize in 1918.
 
 plato:
   name: Plato
-  birth: c. 425
-  death: c. 347 BC
   bio: |
-    Plato was a philosopher in ancient Greece, and – together with his teacher
-    Socrates and his student Archimedes – laid the very foundation of Western
-    philosophy and science.
+    __Plato__ (c. 425 – 347 BC) was a philosopher in ancient Greece, and –
+    together with his teacher Socrates and his student Archimedes – laid the
+    very foundation of Western philosophy and science.
 
     Plato founded the Academy of Athens, the first higher learning institution
     in the Western world. His many writings on philosophy and theology, science
     and mathematics, politics and justice, make him one of the most influential
     thinkers of all time.
 
+pythagoras:
+  name: Pythagoras
+  bio: |
+    __Pythagoras of Samos__ (c. 570 – 495 BC) was a Greek philosopher and
+    mathematician. He is best known for proving _Pythagoras’ Theorem_, but made
+    many other mathematical and scientific discoveries.
+
+    Pythagoras tried to explain music in a mathematical way, and discovered that
+    two tones sound “nice” together (consonant) if the ratio of their
+    frequencies is a simple fraction.
+
+    He also founded a school in Italy where he and his students worshipped
+    mathematics almost like a religion, while following a number of bizzare
+    rules – but the school was eventually burned down by their adversaries.
+
 riemann:
   name: Bernhard Riemann
-  birth: 1826
-  death: 1866
-  bio: Bernhard Riemann was a German mathematician working in the fields of
-    analysis and number theory. He came up with the first rigorous definition of
-    integration, studied differential geometry which laid the foundation for
-    general relativity, and made groundbreaking discoveries regarding the
-    distribution of prime numbers.
+  bio: __Bernhard Riemann__ (1826 – 1866) was a German mathematician working in
+    the fields of analysis and number theory. He came up with the first rigorous
+    definition of integration, studied differential geometry which laid the
+    foundation for general relativity, and made groundbreaking discoveries
+    regarding the distribution of prime numbers.
 
 shannon:
   name: Claude Shannon
-  birth: 1898
-  death: 1972
-  bio: Claude Shannon was an American mathematician and electrical engineer,
-    remembered as the “father of information theory”. He worked on cryptography,
-    including codebreaking for national defense during World War II, but he was
-    also interested in juggling, unicycling and chess. In his spare times, he
-    built machines that could juggle or solve the Rubik’s Cube puzzle.
+  bio: __Claude Shannon__ (1898 – 1972) was an American mathematician and
+    electrical engineer, remembered as the “father of information theory”. He
+    worked on cryptography, including codebreaking for national defense during
+    World War II, but he was also interested in juggling, unicycling and chess.
+    In his spare times, he built machines that could juggle or solve the Rubik’s
+    Cube puzzle.
+
+sikdar:
+  name: Radhanath Sikdar
+  bio: __Radhanath Sikdar__ (1813 – 1870) was an Indian mathematician. He was
+    the first to measure the height of Mount Everest, and to show that it is
+    the tallest mountain on Earth.
 
 thales:
-  name: Thales of Miletus
-  birth: c. 624
-  death: c. 546 BC
-  bio: TODO
+  name: Thales
+  bio: |
+    __Thales of Miletus__ (c. 624 – 546 BC) was a Greek mathematician and
+    philosopher.
+
+    Thales is often recognised as the first scientist in Western civilisation:
+    rather than using religion or mythology, he tried to explain natural
+    phenomena using a scientific approach. He is also the first individual in
+    history that has a mathematical discovery named after him: Thales’ theorem.
 
 thorp:
   name: Edward Thorp
-  birth: 1932
-  bio: Edward Thorp is an American hedge fund manager and blackjack player,
-    known for inventing _card counting_ and for building the first _wearable
-    computer_ to beat casinos at Roulette. He worked at MIT, is a professor of
-    mathematics, and pioneered modern applications of probability theory.
+  bio: __Edward Thorp__ (born 1932) is an American hedge fund manager and
+    blackjack player, known for inventing _card counting_ and for building the
+    first _wearable computer_ to beat casinos at Roulette. He worked at MIT, is
+    a professor of mathematics, and pioneered modern applications of probability
+    theory.
 
 ulam:
   name: Stanisław Ulam
-  birth: 1909
-  death: 1984
-  bio: Stanislaw Ulam was a Polish-American mathematician. He played an
-    important part in the American _Manhatten Project_ that developed the first
-    nuclear weapons. He also worked on rocket propulsion using nuclear pulses,
-    and developed the _Monte Carlo method_ – and important concept in
+  bio: __Stanisław Ulam__ (1909 – 1984) was a Polish-American mathematician. He
+    played an important part in the American _Manhatten Project_ that developed
+    the first nuclear weapons. He also worked on rocket propulsion using nuclear
+    pulses, and developed the _Monte Carlo method_ – and important concept in
     statistics.
 
 venn:
   name: John Venn
-  birth: 1834
-  death: 1923
-  bio: John Venn was an English mathematician and philosopher who introduced the
-    _Venn diagram_ used in set theory and probability. He taught at Cambridge
-    University and was a Fellow of the Royal Society in London.
+  bio: __John Venn__ (1834 – 1923) was an English mathematician and philosopher
+    who introduced the _Venn diagram_ used in set theory and probability. He
+    taught at Cambridge University and was a Fellow of the Royal Society in
+    London.
