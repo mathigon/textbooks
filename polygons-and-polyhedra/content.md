@@ -739,30 +739,71 @@ shaped like a dart or arrow:
 
 ---
 > id: kites-1
+> goals: next-0 next-1 next-2
 
 ::: column(width=300)
-{.todo} geopad
+
+    x-geopad.sticky(width=300): svg
+      circle.move(name="a" cx=30 cy=150)
+      circle.move(name="b" cx=110 cy=250)
+      circle.move(name="c" cx=270 cy=150)
+      circle(name="d" x="b.reflect(line(a,c))")
+      circle.transparent(name="m" x="line(a,c).project(b)")
+
+      path.fill.blue.reveal(when="next-0" x="angle(b,a,d)" target="angles vAngle sas")
+      path.fill.green.reveal(when="next-0" x="angle(b,c,d)" target="angles vAngle")
+      path.fill.red.reveal(when="next-0" x="angle(a,d,c)" target="angles")
+      path.fill.red.reveal(when="next-0" x="angle(a,b,c)" target="angles")
+      path.fill.yellow.reveal(when="next-3" x="angle(a,m,d)" target="alpha" label="α")
+      path.fill.yellow.reveal(when="next-3" x="angle(b,m,a)" target="beta" label="β")
+            
+      path.fill.red.transparent(x="polygon(a,b,c)" target="triangle1")
+      path.fill.yellow.transparent(x="polygon(a,c,d)" target="triangle1")
+      path.fill.red.transparent(x="polygon(a,m,d)" target="triangle2")
+      path.fill.yellow.transparent(x="polygon(a,m,b)" target="triangle2")
+
+      path.green(x="segment(a,b)" target="sss sas")
+      path.green(x="segment(a,d)" target="sss sas")
+      path.blue(x="segment(d,c)" target="sss")
+      path.blue(x="segment(b,c)" target="sss")
+      
+      path.red.thin.reveal(when="blank-1" x="line(a,c)" target="symmetry")
+      path.red.reveal(when="blank-1" x="segment(a,c)" target="symmetry sss d1")
+      path.red.transparent(x="segment(a,m)" target="sas")
+      path.red.reveal(when="next-2" x="segment(b,d)")
+
 ::: column.grow
-You might notice that all kites are [[symmetric|similar]], and the [axis of
-symmetry](gloss:axis-of-symmetry) is one of the diagonals.
+You might have noticed that all kites are [[symmetric|similar]].
+_{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
+[[one of the diagonals|one of the sides|a midsegment]]._
 
-The diagonal splits the kite into two congruent triangles. We know that they are
-congruent from the [SSS](gloss:triangle-sss) condition: both triangles have the
-same three sides. Using [CPOCT](gloss:cpoct), we know that all of the
-corresponding angles in the two triangles must have the same size.
+{.reveal(when="blank-1")} The diagonal splits the kite into [two congruent
+triangles](target:triangle1). We know that they are congruent from the
+[SSS](gloss:triangle-sss) condition: both triangles have [three congruent
+sides](target:sss) (red, green and blue).
+_{button.btn.btn-red.next-btn} Next_
 
-This means, for example, that the diagonal is a [[bisector]] of the two angles
-at its ends. (These angles are called the __vertex angles__ of a kite).
+{.reveal(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
+[corresponding angles](target:angles) must also be congruent.
+_{button.btn.btn-red.next-btn} Next_
 
-But we can go even further: if we draw the other diagonal, we get two more,
-smaller triangles. These must also be congruent, because of the [SAS](gloss:triangle-sss)
-condition: the have the same two sides and included angle.
+{.reveal(when="next-1")} This means, for example, that the [diagonal](target:d1)
+is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
+ends.
+_{button.btn.btn-red.next-btn} Next_
 
-This means that angle a must be the same as angle b. They are also supplementary
-angles on a straight line, so they must add up to 180°. Therefore, both a and b
-must be 90°.
+{.reveal(when="next-2")} We can go even further: if we draw the other diagonal,
+we get [two more, smaller triangles](target:triangle2). These must also be
+congruent, because of the [SAS](gloss:triangle-sss) condition: the have the same
+[two sides and included angle](target:sas).
+_{button.btn.btn-red.next-btn} Next_
 
-In other words, the diagonals of a kite are always [[perpendicular|parallel]].
+{.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
+the same as [angle β](target:beta). Since they are adjacent, [supplementary
+angles](gloss:supplementary-angles) both α and β must be [[90]]°.
+
+{.reveal(when="blank-3")} In other words, the diagonals of a kite are always
+[[perpendicular|parallel]].
 :::
 
 ---

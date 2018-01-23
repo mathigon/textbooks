@@ -184,6 +184,14 @@ export function parallelogramsProof($step) {
   });
 }
 
+export function kites1($step) {
+  $step.$$('.next-btn').forEach(($n, i) => {
+    $n.one('click', () => $step.score('next-' + i));
+    $step.onScore('next-' + i, () => $n.exit('pop'));
+    $step.on('complete', () => $step.score('next-' + i));
+  });
+}
+
 // -----------------------------------------------------------------------------
 
 export function tessellationDrawing($step) {
