@@ -5,11 +5,12 @@
 > script: https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js
 
 ---
+> id: polygons
 
 ## Polygons
 
-A [polygon](gloss:polygon) is a closed, flat shape that has only straight sides.
-Polygons can have any number of sides and angles, but the sides cannot be
+A [__polygon__](gloss:polygon) is a closed, flat shape that has only straight
+sides. Polygons can have any number of sides and angles, but the sides cannot be
 curved. Which of the shapes below are polygons?
 
     x-picker
@@ -23,6 +24,7 @@ curved. Which of the shapes below are polygons?
     x-gesture(target="#item1")
 
 ---
+> id: polygons-1
 
 We give different names to polygons, depending on how many sides they have:
 
@@ -58,7 +60,7 @@ We already know that the sum of the internal angles in a triangle is always
 
 ::: column.grow(width=300)
 
-    x-geopad(style="width:300px; height: 300px;"): svg
+    x-geopad(width=300 height=300): svg
       circle.move(name="a" cx=40 cy=40)
       circle.move(name="b" cx=260 cy=80)
       circle.move(name="c" cx=240 cy=220)
@@ -81,7 +83,7 @@ _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(
 
 ::: column.grow
 
-    x-geopad(style="width:300px; height: 300px;"): svg
+    x-geopad(width=300 height=300): svg
       circle.move(name="e" cx=120 cy=30)
       circle.move(name="f" cx=270 cy=100)
       circle.move(name="g" cx=220 cy=270)
@@ -106,51 +108,72 @@ _{span.circled}${round(angle(h,i,e).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="?
 :::
 
 ---
+> id: angles-1
 
 It looks like the sum of internal angles in a quadrilateral is always [[360]]°
 – exactly [[twice|three times|half]] the sum of angles in a triangle.
-_{span.subsection(needs="blank-0")} This is no coincidence: every quadrilateral
+_{span.reveal(when="blank-0 blank-1")} This is no coincidence: every quadrilateral
 can be split into two triangles._
 
     .row.padded-thin
-      div(style="width: 140px"): include svg/polygons/triangles-1.svg
-      div(style="width: 140px"): include svg/polygons/triangles-2.svg
-      div(style="width: 140px"): include svg/polygons/triangles-3.svg
-      div(style="width: 140px"): include svg/polygons/triangles-4.svg
+      .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
+      .reveal(when="blank-2" style="width: 140px"): include svg/polygons/triangles-1.svg
+      .reveal(when="blank-4" style="width: 140px"): include svg/polygons/triangles-2.svg
+      .reveal(when="blank-4" delay=500 style="width: 140px"): include svg/polygons/triangles-3.svg
 
-{.subsection(needs="blank-1")} The same also works for larger polygons. We
-can split a pentagon into [[3]] triangles, so its internal angle sum is
-`3 × 180° =` [[540]]°. And we can split a hexagon into [[4]] triangles, so its
-internal angle sum is `4 × 180° =` [[720]]°.
+{.reveal(when="blank-0 blank-1")} The same also works for larger polygons.
+We can split a pentagon into [[3]] triangles, so its internal angle sum is
+`3 × 180° =` [[540]]°. _{span.reveal(when="blank-2 blank-3")} And we can split
+a hexagon into [[4]] triangles, so its internal angle sum is `4 × 180° =` [[720]]°._
 
 ---
-> id: internalAngleSum
+> id: internal-angle-sum
 
 A polygon with ${x}{x|7|3,15,1} sides will have an internal angle sum of
 180° × ${x-2} = ${(x-2)*180}°. More generally, a polygon with _n_ sides can be
 split into [[n – 2|n – 1|n]] triangles. Therefore,
  
-{.text-center} Sum of internal angles in an _n_-gon `= (n - 2) × 180°`.
+{.text-center.reveal(when="blank-0")} Sum of internal angles in an _n_-gon
+`= (n - 2) × 180°`.
 
-    x-gesture(target="#internalAngleSum x-var" slide="100,0")
+    x-gesture(target="#internal-angle-sum x-var" slide="100,0")
 
 ---
+> id: concave
 
 ### Convex and Concave Polygons
 
 ::: column.grow
-We say that a polygon is __concave__ if it has a section that “points inwards”.
-You can imagine that is part has "caved in". Polygons that are _not_ concave
-are called __convex__.
+We say that a polygon is [__concave__](gloss:concave) if it has a section that
+“points inwards”. You can imagine that is part has [“caved in”](target:cave).
+Polygons that are _not_ concave are called [__convex__](gloss:convex).
 
 There are two ways you can easily identify concave polygons: they have at least
 one [internal angle that is bigger than 180°](target:angle). They also have at
-least one [diagonal that lies _outside_ the polygon](target:diagonal). In convex
-polygons, all internal angles are less than 180°, and all diagonals lie inside
-the polygon.
-::: column(width=200)
-{.todo} image
+least one [diagonal that lies _outside_ the polygon](target:diagonal).
+
+In convex polygons, on the other hand, all internal angles are less than
+[[180]]°, and all diagonals lie [[inside|outside]] the polygon.
+::: column(width=240)
+
+    x-geopad(width=240): svg
+      circle(hidden name="a" x="point(40,70)")
+      circle(hidden name="b" x="point(60,170)")
+      circle(hidden name="c" x="point(160,200)")
+      circle(hidden name="d" x="point(150,130)")
+      circle(hidden name="e" x="point(190,40)")
+      path.fill.blue(x="polygon(a,b,c,d,e)" target="cave diagonal angle")
+      path.transparent.red.fill(x="polygon(c,d,e)" target="cave")
+      path.red.fill.transparent(x="angle(c,d,e)" sweep target="angle")
+      path.transparent(x="segment(a,c)" target="diagonal" style="stroke: #f7f7f8")
+      path.transparent(x="segment(a,d)" target="diagonal" style="stroke: #f7f7f8")
+      path.transparent(x="segment(b,d)" target="diagonal" style="stroke: #f7f7f8")
+      path.transparent(x="segment(b,e)" target="diagonal" style="stroke: #f7f7f8")
+      path.transparent.red(x="segment(c,e)" target="diagonal")
 :::
+
+---
+> id: concave-1
 
 Which of these polygons are concave?
 
@@ -163,6 +186,7 @@ Which of these polygons are concave?
       .item: include svg/polygons/concave-6.svg
 
 ---
+> id: regular-polygons
 
 ### Regular Polygons
 
@@ -179,79 +203,164 @@ these shapes are regular polygons?
       .item: include svg/polygons/regular-6.svg
 
 ---
+> id: regular-1
 
 Regular polygons can come in many different sizes – but all regular polygons
 with the same number of sides [[are similar|are congruent|have the same area]]!
 
 ---
+> id: regular-2
 
-We already know the sum of all internal angles in polygons. For regular
-polygons all these angles have [[the same size|are alternate angles]], so we
-can work out the size of a single internal angle:
+We already know the sum of all [internal angles](gloss:internal-angle) in
+polygons. For regular polygons all these angles have [[the same size|are alternate angles]],
+so we can work out the size of a single internal angle:
 
-{.text-center} angle = <mfrac><mrow>[[sum of all angles|number of angles]]</mrow><mrow>[[number of angles|sum of all angles]]</mrow></mfrac> = `(180° × (x-2))/x = 180° - (360°)/x`.
+{.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[sum of all angles|number of angles]]</mrow><mrow>[[number of angles|sum of all angles]]</mrow></mfrac>
+_{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
-For `n=3` we get the same angle size we already know for equilateral triangles:
-[[60]]°. In a regular polygon with ${x}{x|6|3,12,1} sides, every internal angle
-is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
-${Math.round(180-360/x)}°.
+{.reveal(when="blank-1 blank-2" delay=1000)} If `n=3` we get the size of the
+internal angles of an equilateral triangle – we already know that it must be
+[[60]]°. _{span.reveal(when="blank-3")} In a regular polygon with ${x}{x|6|3,12,1}
+sides, every internal angle is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
+${Math.round(180-360/x)}°._
 
 ---
+> id: regular-area
 
-::: column(width=300)
+### The Area of Regular Polygons
 
-    x-geopad.sticky(style="width: 300px; height: 480px; top: calc(50vh - 240px)"): svg
+::: column(width=320)
+
+    x-geopad.sticky(width=320 height=320): svg
+      circle.reveal(name="m" x="point(160, 160)" when="blank-0")
+      path(name="p" x="regular(m, 140, n)")
+      circle(name="p0" x="p.points[0]")
+      circle(name="p1" x="p.points[1]")
+      circle(name="k" x="segment(p1,p0).midpoint" hidden)
+
+      path.blue.fill.light.transparent(x="polygon(p0,m,p1)" target="isosceles-triangle")
+      path.blue.fill.light.transparent(x="polygon(p0,m,k)" target="right-triangle")
+      path.blue.fill.transparent(x="angle(m,k,p0)" size=15 target="right-triangle")
+      path.blue.fill.reveal(when="blank-1 blank-2" x="angle(k,p0,m)" size=25 target="base-angle right-triangle alpha isosceles-triangle" label="α")
+      path.blue.fill.reveal(when="blank-1 blank-2" x="angle(m,p1,k)" size=25 target="base-angle isosceles-triangle")
+
+      for i in [0,1,2,3,4,5,6,7,8,9,10,11]
+        path.thin.reveal(when="blank-0" delay=i*150 hidden x=`segment(p.points[${i}%n],m)`)
+
+      path.yellow.reveal(when="blank-2" x="segment(m,k)" target="apothem" label="apothem")
+      path.green(x="segment(p1,p0)" target="base" label="s = 1m")
+      path.green(x="segment(k,p0)" target="base half-base")
+
+      for i in [0,1,2,3,4,5,6,7,8,9,10,11]
+        path.red.fill.transparent(x=`angle(p.points[${i}%n],p.points[${i+1}%n],p.points[${i+2}%n])` size=18 target="int-angle")
 
 ::: column.grow
-Here you can see a regular polygon with ${n}{n|5|4,12,1} sides. Every side has
-length ${s}{s|3|1,5,0.5}cm. Let’s try to calculate its area!
+Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
+sides. Every side has length [{.step-target.pill.green}1m](target:base). Let’s
+try to calculate its area!
 
-First, we can split the polygon into ${n} [[isosceles|equilateral|right-amgled]]
-triangles that are all congruent.
+First, we can split the polygon into ${toWord(n)} congruent,
+[[isosceles|equilateral|right-angled]] triangles.
 
-We already know the [[base|height|area]] of these triangles, but we also need
-the [height](target:apothem) to be able to calculate its area. In regular
-polygons, the height is sometimes called the __apothem__.
+{.reveal(when="blank-0")} We already know the [[base|height|area]] of these
+triangles, but we also need the [[height|legs|medians]] to be able to calculate
+its area. _{span.reveal(when="blank-2")} In regular polygons, this height
+is sometimes called the [{.step-target.pill.yellow}apothem](target:apothem)._
 
-Here, trigonometry can help! The internal angle of this polygon
-is <span class="math"><mn>180°</mn><mo>−</mo><mfrac><mn>360°</mn><mn>${n}</mn></mfrac><mo>=</mo><mn>${round(180-360/n, 2)}°</mn></span>.
-The [base angle](target:base-angle) of the isosceles triangle is [[half|twice]]
-as big: ${90-180/n}°.
+{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [right angled
+triangle](target:right-triangle) formed by the apothem and half the base of the
+isosceles triangle. This means that we can use trigonometry!
 
-Notice that there is a [right angled triangle](target:right-triangle) formed by
-the apothem and half the base of the isosceles triangle. Now we can use the
-definition of tangents:
+{.reveal(when="blank-1 blank-2" delay=2000)} The [{.step-target.pill.blue}base angles](target:base-angle)
+of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
+size of the [internal angles](target:int-angle) of the polygon:
 
-{.text-center} `tan(α) = "opposite"/"adjacent"`  
-`tan(α) = "apothem"/(s//2)`  
-`=> "apothem" = 1/2 s xx tan(α)`
+    p.text-center.reveal(when="blank-3"): span.math
+      mn.pill.blue.step-target(data-to="alpha") α
+      mo(value="=") =
+      mfrac #[mn 1]#[mn 2]
+      mfenced
+        mn 180°
+        mo –
+        mfrac
+          mn 360°
+          mrow: mn.var ${n}
+      mo(value="=") =
+      mn.var ${round(90-180/n,2)}°
 
-The are of the isosceles triangle is
+{.reveal(when="blank-3")} To find the apothem, we can use the definition of
+[[tangents|sine|cosine]]:
 
-{.text-center} `1/2` base × height = `1/2` × ${s} ×
-${round(Math.tan(Math.PI/2-Math.PI/n)×s/2,2)} =
-${round(Math.tan(Math.PI/2-Math.PI/n)×s×s/4,2)}cm.
+    p.text-center.reveal(when="blank-4"): span.math
+      mtext tan
+      mn.step-target.pill.blue(data-to="alpha") α
+      mo(value="=") =
+      mfrac
+        mtext: span.step-target(data-to="apothem") opposite
+        mtext: span.step-target(data-to="half-base") adjacent
+      mo(value="=") =
+      mfrac
+        mtext: x-blank(choices="apothem|s|s/2")
+        mtext: x-blank(choices="s/2|s|apothem")
 
-But the polygon consists of ${n} of these isosceles triangles, which all have
-the same area. Therefore, the total area is
+    p.text-center.reveal(when="blank-5 blank-6"): span.math
+      mo ⇒
+      mtext.step-target.pill.yellow(data-to="apothem") apothem
+      mo(value="=") =
+      mfrac #[mn 1]#[mn 2]
+      mi.step-target.pill.green(data-to="base") s
+      mo ×
+      mtext tan
+      mn.step-target.pill.blue(data-to="alpha") α
+      mo(value="=") =
+      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/2,2)}]°
 
-{.text-center} _A_ = _n_ × ${round(Math.tan(Math.PI/2-Math.PI/n)×s×s/4,2)} =
-${round(n×Math.tan(Math.PI/2-Math.PI/n)×s×s/4,2)}cm<sup>3</sup>
+{.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
+[isosceles triangle](target:isosceles-triangle) is
+
+    p.text-center.reveal(when="blank-5 blank-6" delay=2000): span.math
+      mfrac #[mn 1]#[mn 2]
+      mtext base
+      mo ×
+      mtext height
+      mo =
+      mfrac #[mn 1]#[mn 2]
+      mtext.pill.green.step-target(data-to="base") 1m
+      mo ×
+      mtext.var.pill.yellow.step-target(data-to="apothem") ${round(Math.tan(Math.PI/2-Math.PI/n)/2,2)}
+      mo =
+      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/4,2)}]m.
+
+{.reveal(when="blank-5 blank-6" delay=4000)} The polygon consists of ${toWord(n)}
+of these isosceles triangles, all of which have the same area. Therefore, the
+total area of the polygon is
+
+    p.text-center.reveal(when="blank-5 blank-6" delay=4000): span.math
+      mi A
+      mo =
+      mn.var ${n}
+      mo ×
+      mn.var ${round(Math.tan(Math.PI/2-Math.PI/n)/4,2)}
+      mo =
+      msup
+        mn #[span.var ${round(n×Math.tan(Math.PI/2-Math.PI/n)/4,2)}]cm
+        mn 3
 :::
 
 ---
+> id: quadrilaterals
 
 ## Quadrilaterals
 
-In the previous chapter we investigated many different properties of triangles.
-Now lets have a look at quadrilaterals.
+In the [previous chapter](/course/triangles-and-trigonometry) we investigated
+many different properties of triangles. Now lets have a look at quadrilaterals.
 
 A _regular quadrilateral_ is called a [[square|reactangle|equilateral quadrilateral]].
 All of its sides have the same length, and all of its angles are equal.
 
-::: column.quadrilateral
+::: column.quadrilateral.reveal(when="blank-0")
 
-    x-geopad(style="width:210px; height: 120px;"): svg
+    x-geopad(width=210 height=120): svg
       circle.move(name="a" cx=60 cy=15)
       circle.move(name="b" cx=60 cy=105)
       circle(name="c" x="a.rotate(Math.PI/2,b)")
@@ -271,14 +380,15 @@ and [four equal angles](target:angle).
 :::
 
 ---
+> id: quadrilaterals-1
 
-For slightly "less regular" quadrilaterals, we have two options. If we remove
-the condition for sides to be equal, we get a __rectangle__. If we remove the
-condition for angles to be equal, we get a __rhombus__.
+For slightly “less regular” quadrilaterals, we have two options. If we just want
+the _angles_ to be equal, we get a [__rectangle__](gloss:rectangle). If we just
+want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
 
 ::: column.quadrilateral
 
-    x-geopad(style="width:210px; height: 120px;"): svg
+    x-geopad(width=210 height=120): svg
       circle.move(name="a" cx=40 cy=15)
       circle.move(name="b" cx=40 cy=105)
       circle.move(name="c" cx=180 cy=105 project="line(a,b).perpendicular(b)")
@@ -296,7 +406,7 @@ condition for angles to be equal, we get a __rhombus__.
 {.caption} A __Rectangle__ is a quadrilateral with [four equal angles](target:angle).
 ::: column.quadrilateral
 
-    x-geopad(style="width:210px; height: 120px;"): svg
+    x-geopad(width=210 height=120): svg
       circle.move(name="e" cx=50 cy=60)
       circle.move(name="f" cx=105 cy=15)
       circle.move(name="h" cx=105 cy=105 project="circle(e,distance(e,f))")
@@ -311,13 +421,14 @@ condition for angles to be equal, we get a __rhombus__.
 :::
 
 ---
+> id: quadrilaterals-2
 
 There are a few other quadrilaters, that are even less regular but still have
 certain important properties:
 
 ::: column.quadrilateral
 
-    x-geopad(style="width:210px; height: 120px;"): svg
+    x-geopad(width=210 height=120): svg
       circle.move(name="a" cx=20 cy=20)
       circle.move(name="b" cx=160 cy=20)
       circle.move(name="c" cx=50 cy=100)
@@ -328,10 +439,11 @@ certain important properties:
       path.yellow(x="segment(a,c,'arrow2')")
       path.yellow(x="segment(b,d,'arrow2')")
 
-{.caption} If both pairs of _opposite_ sides are parallel, we get a __Parallelogram__.
+{.caption} If both pairs of _opposite_ sides are [parallel](gloss:parallel), we
+get a __Parallelogram__.
 ::: column.quadrilateral
 
-    x-geopad(style="width:210px; height: 120px;"): svg
+    x-geopad(width=210 height=120): svg
       circle.move(name="e" cx=20 cy=60)
       circle.move(name="f" cx=140 cy=15)
       circle.move(name="g" cx=190 cy=60)
@@ -345,7 +457,7 @@ certain important properties:
 {.caption} If two pairs of _adjacent_ sides have the same length, we get a __Kite__.
 ::: column.quadrilateral
 
-    x-geopad(style="width:210px; height: 120px;"): svg
+    x-geopad(width=210 height=120): svg
       circle.move(name="i" cx=60 cy=15)
       circle.move(name="j" cx=20 cy=105)
       circle.move(name="k" cx=190 cy=105)
@@ -360,9 +472,10 @@ certain important properties:
 :::
 
 ---
+> id: quadrilaterals-venn
 
 Quadrilaterals can fall into multiple of these categories. We can visualise the
-hierarchy of different types of quadrilaterals as a Venn diagram:
+hierarchy of different types of quadrilaterals as a [Venn diagram](gloss:venn):
 
     figure: include svg/venn.svg
 
@@ -371,53 +484,51 @@ every [[rhombus|trapezium|parallelogram]] is also a kite. A rhombus is
 [[sometimes|always|never]] a square and a rectangle is [[always|sometimes|never]]
 a trapezium.
 
-To avoid any ambiguity, we usually use just the most specific type.
+{.reveal(when="blank-0 blank-1 blank-2 blank-3")} To avoid any ambiguity, we
+usually use just the most specific type.
 
 ---
+> id: midsegments
 
 ::: column(width=300)
 
-    x-geopad.sticky(style="width: 300px; height: 300px; top: calc(50vh - 150px)"): svg
-      circle.move(name="a" cx=80 cy=30)
-      circle.move(name="b" cx=270 cy=100)
-      circle.move(name="c" cx=270 cy=250)
-      circle.move(name="d" cx=30 cy=270)
-      circle.red(name="e" x="line(a,b).midpoint")
-      circle.red(name="f" x="line(b,c).midpoint")
-      circle.red(name="g" x="line(c,d).midpoint")
-      circle.red(name="h" x="line(d,a).midpoint")
-      path(x="polygon(a,b,c,d)")
-      path.red(x="polygon(e,f,g,h)")
+    x-geopad.sticky(width=300 height=300): svg
 
 ::: column.grow
-Now pick any four points in the the grey box on the left. Let's connect all of
-them to form a quadrilateral.
+Now pick four points, anywhere in the the grey box on the left.
+_{span.reveal(when="points")} We can connect all of them to form a quadrilateral._
 
-Let's find the midpoint of each of the four sides. If we connect the
-midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
+{.reveal(when="points" delay=1000)} Let’s find the midpoint of each of the four
+sides. If we connect the midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
 
-Try moving the vertices of the outer quadrilateral and observe what happens to
-the smaller one. It looks like it is mnot just _any_ quadrilateral, but always a
-[[parallelogram|trapezium|rectangle]]!
+{.reveal(when="blank-0")} Try moving the vertices of the outer quadrilateral and
+observe what happens to the smaller one. It looks like it is not just _any_
+quadrilateral, but always a [[parallelogram|trapezium|rectangle]]!
 
-Let's think about what that's the case. If we draw one of the diagonals of the
-original quadrilateral, it splits it into two triangles.
+{.reveal(when="blank-1")} But why is that the case? Why should the the result
+for _any_ quadrilateral always end up being a parallelogram? To help us explain,
+we need to draw one of the [diagonals](gloss:polygon-diagonal) of the original
+quadrilateral.
 
-Now, two of the sides of the inner quadrilateral are actually [[midsegments]]
-of these two triangles!
+{.reveal(when="diagonal")} The diagonal splits the quadrilateral into [two
+triangles](target:triangle). And now you can see that [two of the sides](target:midsegment)
+of the inner quadrilateral are actually [[midsegments|medians|perpendicular bisectors]]
+of these triangles.
 
-In the [previous chapter](/coursr/triangles-and-trigonometry) we showed that
-[midsegments](gloss:midsegment) of a triangle are always parallel its base. In
-this case, both bases are the diagonal of the quadrilateral. Since the two sides
-of the parallelogram are both parallel to the diagonal, they must also be
-parallel to each other.
+{.reveal(when="blank-2")} In the [previous chapter](/course/triangles-and-trigonometry)
+we showed that [midsegments](gloss:triangle-midsegment) of a triangle are always
+parallel its base. In this case, it means that [both these sides](target:parallel)
+are parallel to the diagonal – therefore they must also be
+[[parallel to each other|the same length|perpendicular to each other]].
 
-We can do exactly the same with the second diagonal of the quadrilateral, to
-show that both pairs of opposite sides are parallel. And this is all we need
-for the inner quadrilatera to be a parallelogram.
+{.reveal(when="blank-3" delay=2000)} We can do exactly the same with the [second
+diagonal](target:other) of the quadrilateral, to show that both pairs of
+opposite sides are parallel. And this is all we need to prove that the inner
+quadrilateral is a [parallelogram](gloss:parallelogram). _{span.qed}_
 :::
 
 ---
+> id: parallelograms
 
 ### Parallelograms
 
@@ -428,110 +539,168 @@ true?
 ::: column.grow
 
     x-picker.list
-      .item The opposite sides are congruent.
-      .item(data-error="parall-error-1") The angles are always less that 90°.
+      .item The opposite sides are #[x-gloss(xid="congruent") congruent].
+      .item(data-error="parall-error-1") The internal angles are always less that 90°.
+      .item(data-error="parall-error-2") The diagonals #[x-gloss(xid="angle-bisector") bisect] the internal angles.
       .item The opposite angles are congruent.
-      .item(data-error="parall-error-2") Both diagonals are congruent.
-      .item(data-error="parall-error-3") Adjacent sides have the same length
+      .item(data-error="parall-error-3") Both diagonals are congruent.
+      .item(data-error="parall-error-4") Adjacent sides have the same length
       .item The two diagonals bisect each other in the middle.
 
 ::: column(width=300)
-{.todo} geopad
+
+    x-geopad(width=300 height=240): svg
+      circle.move(name="a" cx=80 cy=50)
+      circle.move(name="b" cx=20 cy=190)
+      circle.move(name="c" cx=220 cy=190)
+      circle(name="d" x="b.rotate(Math.PI, line(a,c).midpoint)")
+
+      path.red(x="segment(a,b)")
+      path.red(x="segment(c,d)")
+      path.blue(x="segment(b,c)")
+      path.blue(x="segment(a,d)")
+      path.thin.light(x="segment(a,c)")
+      path.thin.light(x="segment(b,d)")
+
+      path.thin.light(x="angle(a,b,c)")
+      path.thin.light(x="angle(b,c,d)")
+      path.thin.light(x="angle(c,d,a)")
+      path.thin.light(x="angle(d,a,b)")
+
 :::
 
 ---
+> id: parallelograms-proof
 
-Of course, simply "observing" these properties is not enough. To be sure that
+Of course, simply “observing” these properties is not enough. To be sure that
 they are _always_ true, we need to _prove_ them:
 
 ::: tab
-#### Opposite Sides and Angles
+#### Opposite Sides and Angles _{span.check(when="diagonal blank-0 blank-1")}_
 
 ::: column(width=300)
 
-    x-geopad.sticky(style="width:300px; height: 300px;"): svg
+    x-geopad.sticky(width=300 height=300): svg
       circle.move(name="a" cx=80 cy=80)
       circle.move(name="b" cx=20 cy=220)
       circle.move(name="c" cx=220 cy=220)
       circle(name="d" x="b.rotate(Math.PI, line(a,c).midpoint)")
 
-      path.fill.light.yellow.transparent(x="polygon(a,b,d)" target="triangles")
-      path.fill.light.green.transparent(x="polygon(b,c,d)" target="triangles")
+      path.reveal.fill.red(when="diagonal" x="angle(a,o?c:b,d)" target="red-angle")
+      path.reveal.fill.red(when="diagonal" x="angle(b,o?a:d,c)" target="red-angle")
+      path.reveal.fill.blue(when="diagonal" x="angle(d,o?a:b,c)" target="blue-angle")
+      path.reveal.fill.blue(when="diagonal" x="angle(b,o?c:d,a)" target="blue-angle")
 
-      path.fill.red(x="angle(a,b,d)" target="angles")
-      path.fill.red(x="angle(b,d,c)" target="angles")
-      path.fill.blue(x="angle(d,b,c)" target="angles")
-      path.fill.blue(x="angle(b,d,a)" target="angles")
-      
+      path.fill.yellow.transparent(x="polygon(a,b,o?c:d)" target="triangles")
+      path.fill.green.transparent(x="polygon(o?a:b,c,d)" target="triangles")
       path(x="polygon(a,b,c,d)")
-      path(x="segment(b,d)" target="diagonal")
       
+      path.green.transparent(x="segment(a,b)" target="sides")
+      path.green.transparent(x="segment(c,d)" target="sides")
+      path.yellow.transparent(x="segment(b,c)" target="sides")
+      path.yellow.transparent(x="segment(a,d)" target="sides")
+      path.fill.green.transparent(x="angle(a,b,c)" target="angles")
+      path.fill.green.transparent(x="angle(c,d,a)" target="angles")
+      path.fill.yellow.transparent(x="angle(b,c,d)" target="angles")
+      path.fill.yellow.transparent(x="angle(d,a,b)" target="angles")
 
 ::: column.grow
-{.task} Let's try to prove that the opposite sides and angles in a parallelogram
+{.task} Let’s try to prove that the opposite sides and angles in a parallelogram
 are always congruent.
 
-First, we draw one of the diagonals. This creates four new angles with the sides
-of the of the parallelogram.
+Start by drawing one of the diagonals of the parallelogram.
 
-The red angles and the blue angles are [alternate angles](gloss:alternate-angles),
-so they must both be [[congruent]].
+{.reveal(when="diagonal")} The diagonal creates four new angles with the sides
+of the of the parallelogram. The two [red angles](target:red-angle) and the two
+[blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
+so they must each be [[congruent|adjacent|supplementary]].
 
-Now if we look at the [two triangles](target:triangles) created by the diagonal,
-we see that they have [to congruent angles](target:angles), and [one congruent
-side](target:diagonal). By the [[ASA|AAS|AA]] congruence condition, both
-triangles must be congruent.
+{.reveal(when="blank-0")} Now if we look at the [two triangles](target:triangles)
+created by the diagonal, we see that they have two congruent angles,
+and [one congruent side](target:diagonal). By the [[ASA|AAS|AA]] congruence
+condition, both triangles must be congruent.
 
-And this means that the other parts of the triangles must also me congruent to
-each other: both pairs of opposite sies are congruent, and both pairs of
-opposite angles are congruent. _{span.qed}_
+{.reveal(when="blank-1")} This means that the other corresponding parts of the
+triangles must also be congruent: in particular, both [pairs of opposite
+sides](target:sides) are congruent, and both [pairs of opposite
+angles](target:angles) are congruent. _{span.qed}_
 :::
 
-It turns out that the converse is also true: if both pairs of opposite sides (or
-angles) in a quadrilateral are congruent, then the quadrilateral has to be a
-parallelogram.
+{.reveal(when="blank-1")} It turns out that the converse is also true: if both
+pairs of opposite sides (or angles) in a quadrilateral are congruent, then the
+quadrilateral has to be a parallelogram.
 
     //- Adjacent angles are supplementary.
 
 ::: tab
-#### Diagonals
+#### Diagonals _{span.check(when="diagonal blank-2 blank-3")}_
 
 ::: column(width=300)
-{.todo} image
+
+    x-geopad.sticky(width=300 height=300): svg
+      circle.move(name="a1" cx=80 cy=80 label="A")
+      circle.move(name="b1" cx=20 cy=220 label="B")
+      circle.move(name="c1" cx=220 cy=220 label="C")
+      circle(name="d1" x="b1.rotate(Math.PI, line(a1,c1).midpoint)" label="D")
+      circle(name="m1" x="polygon(a1,b1,c1,d1).centroid" label="M")
+
+      path.fill.yellow.light(x="polygon(b1,m1,c1)" target="triangles1")
+      path.fill.yellow.light(x="polygon(a1,m1,d1)" target="triangles1")
+
+      path.fill.red(x="angle(c1,a1,d1)" target="anglesR")
+      path.fill.red(x="angle(b1,c1,a1)" target="anglesR")
+      path.fill.blue(x="angle(a1,d1,b1)" target="anglesB")
+      path.fill.blue(x="angle(d1,b1,c1)" target="anglesB")
+      
+      path(x="polygon(a1,b1,c1,d1)")
+      path(x="segment(a1,c1)")
+      path(x="segment(b1,d1)")
+      path.green(x="segment(a1,d1)" target="side1")
+      path.green(x="segment(b1,c1)" target="side1")
+      
+      path.yellow.tick.transparent(x="segment(a1,m1)" target="AM")
+      path.yellow.tick.transparent(x="segment(b1,m1)" target="BM")
+      path.yellow.tick.transparent(x="segment(c1,m1)" target="CM")
+      path.yellow.tick.transparent(x="segment(d1,m1)" target="DM")
+
 ::: column.grow
-{.task} Now let's prove that the two diagonals in a parallelogram bisect
-each other.
+{.task} Now prove that the two diagonals in a parallelogram bisect each other.
 
-Once again, we'll need to draw the diagonals of the parallelogram. Now, if you
-look at [two of the triangles](target:triangles) generated by the diagonals,
-you'll find that they are congruent, because of the [[ASA]] condition:
+Let’s think about the two yellow triangles generated by the diagonals:
 
-* The outer sides of the triangle are congruent, because we have just proven
-  that opposite sides of a parallelogram are.
-* The two angles are congruent because they are alternate interiour angles.
+* We have just proved that the [two green sides](target:side1) are congruent,
+  because they are opposite sides of a parallelogram.
+* The [two red angles](target:anglesR) and [two blue angles](target:anglesB) are
+  congruent, because they are [[alternate angles|opposite angles|right angles]].
 
-Now we can use the fact the corresponding parts of congruent triangles are also
-congruent, to conclude that `bar(AM) = bar(CM)` and `bar(BC) = bar(DM)`. In
-other words, the two diagonals intersect in their midpoints. _{span.qed}_
+{.reveal(when="blank-2")} By the [[ASA|SSS|AAS]] condition, both of the yellow
+triangles must therefore also be congruent.
+
+{.reveal(when="blank-3")} Now we can use the fact the corresponding parts of
+congruent triangles are also congruent, to conclude that [`bar(AM)`](target:AM)
+= [`bar(CM)`](target:CM) and [`bar(BC)`](target:BM) = [`bar(DM)`](target:DM). In
+other words, the two diagonals intersect at their midpoints. _{span.qed}_
 :::
 
-Like before, the opposite is also true: if the two diagonals of a quadrilateral
-bisect each other, then the quadrilateral is a parallelogram.
+{.reveal(when="blank-3")} Like before, the opposite is also true: if the two
+diagonals of a quadrilateral bisect each other, then the quadrilateral is a
+parallelogram.
 :::
 
 ---
+> id: kites
 
 ### Kites
 
 ::: column.grow
 We showed above that the two pairs of [[opposite|adjacent]] sides of a
 parallelogram are congruent. In a kite, two pairs of _adjacent_ sides are
-parallel.
+congruent.
 
 The name _Kite_ clearly comes from its shape: it looks like the kites you can
 fly in the sky. However, of all the special quadrilaterals we have seen so far,
-the Kite is the only one that can also be concave: if it is shaped like a dart
-or arrow:
+the Kite is the only one that can also be [concave](gloss:concave): if it is
+shaped like a dart or arrow:
 ::: column(width=320)
 
     x-media(src="images/kites.jpg" credit="© Depositphotos / chagall")
@@ -539,30 +708,55 @@ or arrow:
 :::
 
 ::: column(width=240)
-{.todo} convex kite
+
+    x-geopad(width=240 height=180): svg
+      circle(name="a" x="point(20,90)")
+      circle(name="b" x="point(90,20)")
+      circle.move(name="c" cx=200 cy=90 project="segment(point(100,90),point(220,90))")
+      circle(name="d" x="point(90,160)")
+      path.fill.yellow.light(x="polygon(a,b,c,d)")
+      path.red(x="segment(a,b)")
+      path.red(x="segment(a,d)")
+      path.blue(x="segment(b,c)")
+      path.blue(x="segment(d,c)")
+
+{.caption} A convex kite
 ::: column(width=240)
-{.todo} concave kite
+
+    x-geopad(width=240 height=180): svg
+      circle(name="a1" x="point(20,90)")
+      circle(name="b1" x="point(220,20)")
+      circle.move(name="c1" cx=150 cy=90 project="segment(point(70,90),point(210,90))")
+      circle(name="d1" x="point(220,160)")
+      path.fill.green.light(x="polygon(a1,b1,c1,d1)")
+      path.red(x="segment(a1,b1)")
+      path.red(x="segment(a1,d1)")
+      path.blue(x="segment(b1,c1)")
+      path.blue(x="segment(d1,c1)")
+
+{.caption} A concave kite that looks like an arrow
 :::
 
 ---
+> id: kites-1
 
 ::: column(width=300)
 {.todo} geopad
 ::: column.grow
-You might notice that all kites are [[symmetric|similar]], and the axis of
-symmetry is one of the diagonals.
+You might notice that all kites are [[symmetric|similar]], and the [axis of
+symmetry](gloss:axis-of-symmetry) is one of the diagonals.
 
 The diagonal splits the kite into two congruent triangles. We know that they are
-congruent from the SSS condition: both triangles have the same three sides.
-Cosing CPOCT, we know that all of the corresponding angles in the two triangles
-must have the same size.
+congruent from the [SSS](gloss:triangle-sss) condition: both triangles have the
+same three sides. Using [CPOCT](gloss:cpoct), we know that all of the
+corresponding angles in the two triangles must have the same size.
 
 This means, for example, that the diagonal is a [[bisector]] of the two angles
 at its ends. (These angles are called the __vertex angles__ of a kite).
 
 But we can go even further: if we draw the other diagonal, we get two more,
-smaller triangles. These must also be congruent, because of the SAS condition:
-the have the same two sides and included angle.
+smaller triangles. These must also be congruent, because of the [SAS](gloss:triangle-sss)
+condition: the have the same two sides and included angle.
 
 This means that angle a must be the same as angle b. They are also supplementary
 angles on a straight line, so they must add up to 180°. Therefore, both a and b
@@ -572,6 +766,7 @@ In other words, the diagonals of a kite are always [[perpendicular|parallel]].
 :::
 
 ---
+> id: quadrilaterals-area
 
 ### Area of Quadrilaterals
 
@@ -583,7 +778,17 @@ we can also do that for some quadrilaterals:
 #### Parallelogram
 
 ::: column(width=300)
-{.todo} geopad
+
+    x-geopad(width=300 height=240 grid=20): svg
+      circle.transparent(name="a1" x="point(4,3)")
+      circle.transparent(name="b1" x="point(12,3)")
+      circle.transparent(name="c1" x="point(10,9)")
+      circle.transparent(name="d1" x="point(2,9)")
+      path.fill.blue.light(x="polygon(a1,b1,c1,d1)")
+      path.fill.red.light(x="polygon(point(2,3),a1,d1)")
+      path.fill.red.light(x="polygon(point(10,3),b1,c1)")
+      path.blue(x="polygon(a1,b1,c1,d1)")
+
 ::: column.grow
 On the left, try to draw a rectangle that has the same area as the
 parallelogram.
@@ -605,7 +810,15 @@ Recall that trapeziums are quadrilaterals with one pair of parallel sides. These
 parallel sides are called the __bases__ of the trapezium.
 
 ::: column(width=300)
-{.todo} geopad
+
+    x-geopad(width=300 height=240 tools="rectangle" grid=20): svg
+      circle.transparent(name="a2" x="point(4,3)")
+      circle.transparent(name="b2" x="point(9,3)")
+      circle.transparent(name="c2" x="point(13,9)")
+      circle.transparent(name="d2" x="point(2,9)")
+      path.fill.blue.light(x="polygon(a2,b2,c2,d2)")
+      path.blue(x="polygon(a2,b2,c2,d2)")
+
 ::: column.grow
 Like before, try to draw a rectangle that has the same area as this trapezium.
 Can you see how the missing and triangles on the left and the right cancel out?
@@ -615,9 +828,9 @@ the trapezium. The width of the rectangle is the distance between the midpoints
 of the two non-parallel sides of the trapezium. This is called the
 __midsegment__ of the trapezium.
 
-Like with triangles, the midsegment of a trapezium is parallel to its two bases.
-The length of the midsegment is the average of the lengths of the bases:
-`(a+c)/2`.
+Like with [triangles](gloss:triangle-midsegment), the midsegment of a trapezium
+is parallel to its two bases. The length of the midsegment is the average of the
+lengths of the bases: `(a+c)/2`.
 
 If we combine all of this, we get an equation for the area of a trapezium with
 parallel sides _a_ and _c_, and height _h_:
@@ -626,41 +839,91 @@ parallel sides _a_ and _c_, and height _h_:
 :::
 
 ::: tab
-#### Kite
+#### Kite _{span.check(when="blank-2")}_
 
 ::: column(width=300)
-{.todo} geopad
+
+    x-geopad(width=300 height=220 grid=20): svg
+      circle.transparent(name="a3" x="point(1,5)")
+      circle.transparent(name="b3" x="point(5,1)")
+      circle.transparent(name="c3" x="point(13,5)")
+      circle.transparent(name="d3" x="point(5,9)")
+      
+      path.fill.blue.light(x="polygon(a3,b3,c3,d3)")
+      path.green(x="segment(a3,c3)" label="d1" target="diag3 d31")
+      path.yellow(x="segment(b3,d3)" label="d2" target="diag3 d32")
+      path(x="polygon(point(1,1),point(13,1),point(13,9),point(1,9))" target="rect4")
+      path.blue(x="polygon(a3,b3,c3,d3)")
+      
+      path.fill.red.transparent(x="polygon(a3,b3,point(5,5))" target="inside")
+      path.fill.blue.transparent(x="polygon(b3,c3,point(5,5))" target="inside")
+      path.fill.green.transparent(x="polygon(c3,d3,point(5,5))" target="inside")
+      path.fill.yellow.transparent(x="polygon(d3,a3,point(5,5))" target="inside")
+      
+      path.fill.red.transparent(x="polygon(a3,b3,point(1,1))" target="outside")
+      path.fill.blue.transparent(x="polygon(b3,c3,point(13,1))" target="outside")
+      path.fill.green.transparent(x="polygon(c3,d3,point(13,9))" target="outside")
+      path.fill.yellow.transparent(x="polygon(d3,a3,point(1,9))" target="outside")
+
 ::: column.grow
-In this kite, the two diagonals form the width and the height of another
-rectangle that surrounds the kite.
+In this kite, the [two diagonals](target:diag3) form the width and the height of
+a large [rectangle](target:rect4) that surrounds the kite.
 
 The area of this rectangle is [[twice|the same as|three times]] the area of the
-kite. Can you how each of the [four triangles inside the kite](target:inside) is
-the same as one of the [four gaps outside](target:outside)?
+kite. _{span.reveal(when="blank-2")} Can you see how each of the [four
+triangles](target:inside) that make up the kite are the same as the
+[four gaps](target:outside) outside it?_
 
-This means that the area of a kite with diagonals __{.i.m-green}d1__ and
-__{.i.m-yellow}d2__ is
+{.reveal(when="blank-2")} This means that the area of a kite with diagonals
+[{.step-target.i.pill.green}d1](target:d31) and
+[{.step-target.i.pill.yellow}d2](target:d32) is
 
-{.text-center} Area = `1/2` __{.i.m-green}d1__ × __{.i.m-yellow}d2__.
+{.text-center.reveal(when="blank-2")} _Area_ = `1/2`
+[{.step-target.i.pill.green}d1](target:d31) ×
+[{.step-target.i.pill.yellow}d2](target:d32).
 :::
 
 ::: tab
-#### Rhombus
+#### Rhombus _{span.check(when="blank-3 blank-4")}_
 
 ::: column(width=300)
-{.todo} geopad
+
+    x-geopad(width=300 height=240): svg
+      circle.move(name="a4" cx=40 cy=120)
+      circle.move(name="b4" cx=150 cy=50)
+      circle.move(name="d4" cx=150 cy=190 project="circle(a4,distance(a4,b4))")
+      circle(name="c4" x="d4.add(b4).subtract(a4)")
+      
+      path.fill.blue.light(x="polygon(a4,b4,c4,d4)")
+
+      path.thin(x="line(c4,d4)")
+      circle(name="q4" x="line(c4,d4).project(a4)")
+      path.thin(x="angle(a4,q4,d4)" size=15)
+      path.red(x="segment(q4,a4)" label="height" target="height")
+      
+      path.green(x="segment(a4,c4)" label="d1" target="d41")
+      path.yellow(x="segment(b4,d4)" label="d2" target="d42")
+      path.blue(x="polygon(a4,b4,c4,d4)")
+      path.blue(x="segment(c4,d4)" target="base")
+
 ::: column.grow
-A Rhombus is a quadrilateral that has four congruent sides.
+A [Rhombus](gloss:rhombus) is a quadrilateral that has four congruent sides. You
+might remember that every rhombus is a [[parallelogram|rectangle|square]] – and
+also a [[kite|hexagon|concave polygon]].
 
-You might remember that every rhombus is also a [[parallelogram]] – and also a
-[[kite]]! This means that to find the area of a parallelogram, we can use either
-the equation for the area of parallelograms, or that for the area of kites:
+{.reveal(when="blank-3 blank-4")} This means that to find the area of a rhombus,
+we can use either the equation for the area of a parallelogram, or that for the
+area of a kite:
 
-{.text-center} Area = __{.i.m-red}base__ × __{.i.m-blue}height__.
-= `1/2` __{.i.m-green}d1__ × __{.i.m-yellow}d2__.
+{.text-center.reveal(when="blank-3 blank-4")} _Area_ =
+[{.step-target.i.pill.blue}base](target:base) ×
+[{.step-target.i.pill.red}height](target:height) = `1/2`
+[{.step-target.i.pill.green}d1](target:d41) ×
+[{.step-target.i.pill.yellow}d2](target:d42).
 
-In different contexts, you might be given different sides/height/diagonals of a
-Rhombus, and you can pick whichever equation for the area is more convenient.
+{.reveal(when="blank-3 blank-4")} _In different contexts, you might be given
+different parts of a Rhombus (sides, height, diagonals), and you should pick
+whichever equation is more convenient._
 :::
 
 :::
@@ -686,12 +949,14 @@ Rhombus, and you can pick whichever equation for the area is more convenient.
     //- they do NOT bisect each other.
 
 ---
+> id: tessellations
 
 ## Tessellations
 
-Polygons appear everywhere in nature. They are especially useful if you want to
-tile a large area, because you can fit polygons together without any gaps or
-overlaps. Patterns like that are called __tessellations__.
+[Polygons](gloss:polygon) appear everywhere in nature. They are especially
+useful if you want to tile a large area, because you can fit polygons together
+without any gaps or overlaps. Patterns like that are called
+[__tessellations__](gloss:tessellation).
 
 ::: column(width=200)
     x-media(lightbox, credit="© Depositphotos / Irochka", src="images/tessellations/honeycomb.jpg", width=200 height=200)
@@ -708,7 +973,7 @@ overlaps. Patterns like that are called __tessellations__.
 ::: column(width=200)
     x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
         
-{.caption} Basalt columns at Giant's Causeway in Northern Ireland
+{.caption} Basalt columns at Giant’s Causeway in Northern Ireland
 ::: column(width=200)
     x-media(lightbox, credit="© Depositphotos / Kostia777", src="images/tessellations/pineapple.jpg", width=200 height=200)
         
@@ -720,6 +985,7 @@ overlaps. Patterns like that are called __tessellations__.
 :::
 
 ---
+> id: tessellations-1
 
 Humans have copied many of these natural patterns in art, architecture and
 technology – from ancient Rome to the present. Here are a few examples:
@@ -750,64 +1016,72 @@ technology – from ancient Rome to the present. Here are a few examples:
     // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
 
 ---
-> id: drawing
+> id: tessellation-drawing
+> goals: shapes0 shapes1
 
 Here you can create your own tessellations using regular polygons. Simply drag
-new shapes from the sidebar onto the canvas.
-
-Which shapes tessellate well? Are there any shapes that don't tessellate at all?
-Try to create interesting patterns!
+new shapes from the sidebar onto the canvas. Which shapes tessellate well? Are
+there any shapes that don’t tessellate at all? Try to create interesting
+patterns!
 
     include ./components/tessellation
     x-tessellation
     x-gesture(target="x-tessellation .menu" slide="-300, 140")
-
-{.todo} work from other students
+    .other-students.reveal(when="shapes0")
+      h4 Examples of other students’ tessellations
+      .row.padded-thin
+        div(style="width: 224px"): img(src="images/user/tess-1.png" width=240 height=160)
+        div(style="width: 224px"): img(src="images/user/tess-2.png" width=240 height=160)
+        div(style="width: 224px"): img(src="images/user/tess-3.png" width=240 height=160)
 
 ---
-> id: possible
+> id: tessellation-regular
 
 ### Tessellations from regular polygons
 
-You might have noticed that some regular polygons (like [[squares|pentagons]])
-tessellate very easily, while others (like [[pentagons|triangles|hexagons]])
-don't seem to tessellate at all.
+You might have noticed that some [regular polygons](gloss:regular-polygon) (like
+[[squares|pentagons]]) tessellate very easily, while others (like
+[[pentagons|triangles|hexagons]]) don’t seem to tessellate at all.
 
 ---
+> id: tessellation-regular-1
 
-This has to do with the size of their internal angles, which we learned to
-calculate before. At every vertex in the tessellation, the internal angles of
-multiple different polygons meet. We need all of these angles to add up to
-[[360]]°, otherwise there will either be a gap or an overlap.
+This has to do with the size of their [internal angles](gloss:internal-angle),
+which we learned to calculate before. At every [vertex](gloss:polygon-vertex) in
+the tessellation, the internal angles of multiple different polygons meet. We
+need all of these angles to add up to [[360]]°, otherwise there will either be
+a gap or an overlap.
+
+---
+> id: tessellation-regular-2
 
 ::: column(width=160 parent="padded-thin")
     include svg/tessellations/triangles.svg
 
-{.caption} Triangles [[tessellate|don’t tessellate]] because 6 × 60° = 360°.
+{.caption} Triangles [[tessellate|don’t tessellate]] _{span.reveal(when="blank-0")} because 6 × 60° = 360°._
 ::: column(width=160)
     include svg/tessellations/squares.svg
 
-{.caption} Squares [[tessellate|don’t tessellate]] because 4 × 90° = 360°.
+{.caption} Squares [[tessellate|don’t tessellate]] _{span.reveal(when="blank-1")} because 4 × 90° = 360°._
 ::: column(width=160)
     include svg/tessellations/pentagons.svg
 
-{.caption} Pentagons [[don’t tessellate|tessellate]] because multiples of 108°
-don't add up to 360°.
+{.caption} Pentagons [[don’t tessellate|tessellate]] _{span.reveal(when="blank-2")} because multiples of 108°
+don’t add up to 360°._
 
     //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
 ::: column(width=160)
     include svg/tessellations/hexagons.svg
 
-{.caption} Hexagons [[tessellate|don’t tessellate]] because 3 × 120° = 360°.
+{.caption} Hexagons [[tessellate|don’t tessellate]] _{span.reveal(when="blank-3")} because 3 × 120° = 360°._
 :::
 
 ---
+> id: tessellation-regular-3
 
-You can check that, like pentagons, any regular polygon with 7 or more sides
-won't tessellate. This means that the only regular polygons that tessellate are
-triangles, squares and hexagons!
-
----
+You can similarly check that, just like pentagons, any regular polygon with 7 or
+more sides doesn’t tessellate. This means that the only regular polygons that
+tessellate are triangles, squares and hexagons!
 
 Of course you could combine different kinds of regular polygons in a
 tessellation, provided that their internal angles can add up to 360°:
@@ -839,18 +1113,19 @@ tessellation, provided that their internal angles can add up to 360°:
         p.caption Dodecagons, hexagons and squares#[br]#[strong.m-green 150°] + #[strong.m-red 120°] + #[strong.m-blue 90°] = 360°
 
 ---
+> id: tessellation-triangles
 
 ### Tessellations from irregular polygons
 
-We can also try making tessellations out of irregular polygons – as long as we
-are careful when rotating and arranging them.
+We can also try making tessellations out of [irregular polygons](gloss:irregular-polygon)
+– as long as we are careful when rotating and arranging them.
 
 ::: column(width=360)
 
-    x-geopad(style="width: 360px; height: 300px"): svg
-      circle.move(name="a" cx=220 cy=90)
-      circle.move(name="b" cx=145 cy=180)
-      circle.move(name="c" cx=225 cy=200)
+    x-geopad(width=360 height300): svg
+      circle.move(name="a" cx=220 cy=90 target="vertex")
+      circle.move(name="b" cx=145 cy=180 target="vertex")
+      circle.move(name="c" cx=225 cy=200 target="vertex")
 
       path.red.fill(name="x" x="polygon(a,b,c)")
       path.yellow.fill(name="y" x="x.rotate(Math.PI,line(b,c).midpoint)")
@@ -863,12 +1138,12 @@ are careful when rotating and arranging them.
 
 ::: column.grow
 It turns out that you can tessellate not just equilateral triangles, but _any
-triangle_! Try moving the vertices in this diagram.
+triangle_! Try moving the [vertices](target:vertex) in this diagram.
  
 The sum of the internal angles in a triangle is [[180]]°. If we use each angle
 [[twice|once|three times]] at every vertex in the tessellation, we get 360°:
 
-    x-geopad(style="width: 200px; height: 160px"): svg
+    x-geopad(width=200 height=160).reveal(when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
       circle(name="p" x="point(100,150)")
       circle.move(name="q" cx=175 cy=130)
@@ -876,14 +1151,6 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
       circle(name="s" x="p.rotate(Math.PI,m)")
       circle(name="t" x="q.rotate(Math.PI,m)")
       circle(name="u" x="q.rotate(Math.PI,line(m,p).midpoint)")
-
-      path(x="segment(m,p)")
-      path(x="segment(m,q)")
-      path(x="segment(m,r)")
-      path(x="segment(m,s)")
-      path(x="segment(m,t)")
-      path(x="segment(m,u)")
-      path(x="polygon(p,q,r,s,t,u)")
 
       path.fill.red(x="angle(p,m,q)" size=20)
       path.fill.blue(x="angle(q,m,r)" size=20)
@@ -905,13 +1172,21 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
       path.fill.green.light(x="angle(m,s,t)" size=20)
       path.fill.green.light(x="angle(t,u,m)" size=20)
 
+      path(x="segment(m,p)")
+      path(x="segment(m,q)")
+      path(x="segment(m,r)")
+      path(x="segment(m,s)")
+      path(x="segment(m,t)")
+      path(x="segment(m,u)")
+      path(x="polygon(p,q,r,s,t,u)")
 :::
 
 ---
+> id: tessellation-quadrilaterals
 
 ::: column(width=360)
 
-    x-geopad(style="width: 360px; height: 300px"): svg
+    x-geopad(width=360 height=300): svg
       circle.move(name="a" cx=100 cy=105)
       circle.move(name="b" cx=115 cy=200)
       circle.move(name="c" cx=180 cy=170)
@@ -928,11 +1203,11 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
 
 
 ::: column.grow    
-More surprisingly, _any quadrilaterals_ also tessellate! Their internal angle sum
-is [[360]]°, so if we use each angle [[once|twice|three times]] at every vertex
-in the tessellation, we we get 360°.
+More surprisingly, _any quadrilateral_ also tessellates! Their internal angle
+sum is [[360]]°, so if we use each angle [[once|twice|three times]] at every
+vertex in the tessellation, we we get 360°.
 
-    x-geopad(style="width: 200px; height: 160px"): svg
+    x-geopad(width=200 height=160).reveal(when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
       circle(name="p" x="point(100,150)")
       circle.move(name="q" cx=180 cy=140)
@@ -942,12 +1217,6 @@ in the tessellation, we we get 360°.
       circle(name="u" x="r.rotate(Math.PI,line(m,t).midpoint)")
       circle(name="v" x="q.rotate(Math.PI,line(m,p).midpoint)")
       circle(name="w" x="r.rotate(Math.PI,line(m,p).midpoint)")
-
-      path(x="segment(m,p)")
-      path(x="segment(m,r)")
-      path(x="segment(m,t)")
-      path(x="segment(m,v)")
-      path(x="polygon(p,q,r,s,t,u,v,w)")
 
       path.fill.red(x="angle(p,m,r)" size=20)
       path.fill.blue(x="angle(r,m,t)" size=20)
@@ -967,12 +1236,21 @@ in the tessellation, we we get 360°.
       path.fill.yellow.light(x="angle(r,s,t)" size=20)
       path.fill.yellow.light(x="angle(u,v,m)" size=20)
 
+      path(x="segment(m,p)")
+      path(x="segment(m,r)")
+      path(x="segment(m,t)")
+      path(x="segment(m,v)")
+      path(x="polygon(p,q,r,s,t,u,v,w)")
 :::
 
 ---
+> id: tessellation-pentagons
 
-Pentagons are a bit trickier. We already saw that _regular_ pentagons don't
-tessellate, but what about non-regular ones?
+Pentagons are a bit trickier. We already saw that _regular_ pentagons [[don’t
+tessellate|tessellate]], but what about non-regular ones?
+
+---
+> id: tessellation-pentagons-1
 
 ::: column(width=220)
     include svg/tessellations/pentagons-1.svg
@@ -985,9 +1263,10 @@ tessellate, but what about non-regular ones?
 Here are three different examples of tessellations with pentagons. They are not
 _regular_, but they are perfectly valid 5-sided polygons.
 
-So far, 14 different kinds of tessellations with (convex) pentagons have been
-found. But no one knows if there are others, or if those 14 are all of them. In
-other words, the problem of finding tessellations of pentagons is still open…
+So far, mathematicians have found 14 different kinds of tessellations with
+(convex) pentagons. But no one knows if there are others, or if those 14 are all
+of them. In other words, the problem of finding tessellations of pentagons is
+still open…
 
 ---
 > id: escher
@@ -995,7 +1274,7 @@ other words, the problem of finding tessellations of pentagons is still open…
 ### Tessellations in Art
 
 Tessellations we both a tool and inspiration for many artists, architects and 
-designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher's
+designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher’s
 work contains strange, mutating creatures, patterns and landscapes:
 
     .row
@@ -1020,13 +1299,14 @@ work contains strange, mutating creatures, patterns and landscapes:
 
 These artworks often look fun and effortless, but the underlying mathematical
 principles are the same as before: angles, rotations, translations and polygons.
-If the maths isn't right, the tessellation is not going to work!
+If the maths isn’t right, the tessellation is not going to work!
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
 
 ---
 > id: penrose
+> goals: slide
 
 ### Penrose Tilings
 
@@ -1035,7 +1315,7 @@ __periodic__. That means they consist of a regular pattern that is repeated
 again and again. They can continue forever in all directions and they will look
 the same everywhere.
 
-In the 1970s, the British mathematician and physicist [Sir Roger Penrose](bio:penrose)
+In the 1970s, the British mathematician and physicist [Roger Penrose](bio:penrose)
 discovered _non-periodic_ tessellations – they still continue infinitely in all
 directions, but _never_ look exactly the same. These are called __Penrose
 tilings__, and you only need a few different kinds of polygons to
@@ -1046,144 +1326,93 @@ create one:
       x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
       p.caption Move the slider to reveal the underlying structure of this tessellation. Notice how you have the same patterns at various scales: the small yellow pentagons, blue stars, orange rhombi and green ‘ships’ appear in their original size, in a #[strong.blue slightly larger size] and an #[strong.red even larger size]. This #[em self-similarity] can be used to prove that this Penrose tiling is non-periodic.
 
+---
+> id: penrose-1
+
 Penrose was exploring tessellations purely for fun, but it turns out that the
 internal structure of some real materials (like aluminium) follow a similar
 pattern. The pattern was even used on toilet paper, because the manufacturers
 noticed that a non-periodic pattern can be rolled up without any bulges.
 
 ---
+> id: polyhedra
 
 ## Polyhedra
 
 Up to now we have just looked at what we can do with polygons in a flat,
-two-dimensional world. A __polyhedron__ is a 3-dimensional object that is made
-up of polygons. Here are few examples:
+two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
+object that is made up of polygons. Here are some examples:
 
 ::: column.padded-thin(width=220)
-    x-polyhedron(size=220 shape="PentagonalPrism")
+    x-polyhedron#poly1(size=220 shape="PentagonalPrism")
 ::: column(width=220)
-    x-polyhedron(size=220 shape="PentagonalRotunda")
+    x-polyhedron(size=220 shape="Hebesphenorotunda")
 ::: column(width=220)
-    x-polyhedron(size=220 shape="TruncatedOctahedron")
+    x-polyhedron(size=220 shape="StellatedDodecahedron")
 :::
 
-Polyhedra cannot contain curved surfaces – spheres or cylinders, for example,
+Polyhedra cannot contain curved surfaces – spheres and cylinders, for example,
 are not polyhedra.
 
-The polygons that make up a polyhedron are called its __faces__. The lines
-where two faces are connected are called __edges__, and the corners where the
-edges meet are called __vertices__.
-
-{.todo} There are countless more polyhedra: some looking like stars, some
-consisting of non-regular polygons, and some having holes inside.
+The polygons that make up a polyhedron are called its [__faces__](gloss:polyhedron-face).
+The lines where two faces are connected are called [__edges__](gloss:polyhedron-edge),
+and the corners where the edges meet are called [__vertices__](gloss:polyhedron-vertex).
 
 ---
+> id: euler
 
-### Nets
+Polyhedra come in many different shapes and sizes – from simple cubes or
+pyramids with just a few faces, to complex objects like the star above, which
+has 60 triangular faces. It turns out, however, that _all_ polyhedra have one
+important property in common:
 
-    x-folding(shape="Tetrahedron" size=400)
-    x-folding(shape="Cube" size=400)
-    x-folding(shape="Octahedron" size=400)
-    x-folding(shape="Dodecahedron" size=400)
-    x-folding(shape="Icosahedron" size=400)
+::: .theorem
+__Euler’s Polyhedron Formula__  
+In every polyhedron, the number of faces (_F_) plus the number of vertices (_V_)
+is two more than the number of edges (_E_). In other words,
 
-{.todo} Try this experiment to gee how nets relate to 3D figures: Sketch or print the
-equilateral triangle in the image below onto a piece of paper and cut it out.
-Fold on the dotted lines. What shape do these four attached equilateral
-triangles make? If you place two of these equilateral triangles next to each
-other, as in the second image, and fold them on the dotted lines, what 3D figure
-would you make? 
+{.text-center} `F + V = E + 2`
+:::
 
-{.todo} While our world is three dimensional, we are used to modeling and thinking about
-three dimensional objects on paper (in two dimensions). There are a few common
-ways to help think about three dimensions in two dimensions. One way to “view”
-a three-dimensional figure in a two-dimensional plane, like this text, is to use
-cross-sections. A cross-section is the intersection of a plane with a solid.
-Another way to represent a three-dimensional figure in a two dimensional plane
-is to use a net. A net is an unfolded, flat representation of the sides of a
-three-dimensional shape.
-
-{.todo} Identifying Figures Created by Nets
-
-{.todo} Drawing Nets
-
-### Cross-Sections 
-{.todo} Describe the cross section formed by the intersection of the plane and the solid.
+For example, if a polyhedron has 12 faces and 18 vertices, we know that it must
+have [[28]] edges.
 
 ---
+> id: euler-1
 
-## Euler's Formula
+This equation was discovered by the famous Swiss mathematician [Leonard Euler](bio:euler).
+It is true for any polyhedron, as long as it doesn’t contain any holes.
 
-{.todo} Euler’s Theorem states that the number of faces, vertices V, and edges
-E of a polyhedron can be related such that F + V = E + 2.
-
-{.todo} Notice that the number of faces plus the number of vertices always seems
-to be 2 more that the number of edges. In other words, F + V = E + 2. This
-formula was discovered by Leonhard Euler (1707 – 1783). We have just shown that
-it works for all Platonic solids, but in fact it is true for any polyhedron.
-There is a very similar formula for the number of faces, edges and vertices of
-planar graphs.
-
-{.todo} Euler's formula is true for the cube and the icosahedron. It turns out,
-rather beautifully, that it is true for pretty much every polyhedron. The only
-polyhedra for which it doesn't work are those that have holes running through
-them like the one shown in the figure below.
-
-{.todo} These polyhedra are called non-simple, in contrast to the ones that
-don't have holes, which are called simple. Non-simple polyhedra might not be the
-first to spring to mind, but there are many of them out there, and we can't get
-away from the fact that Euler's Formula doesn't work for any of them. However,
-even this awkward fact has become part of a whole new theory about space and shape.
-
-{.todo} Playing around with various simple polyhedra will show you that Euler's
-formula always holds true. But if you're a mathematician, this isn't enough.
-You'll want a proof, a water-tight logical argument that shows you that it
-really works for all polyhedra, including the ones you'll never have the time to
-check.
-
-{.todo} Computer chips are integrated circuits, made up of millions of minute
-components linked by millions of conducting tracks. These are reminiscent of our
-networks above, except that usually it is not possible to lay them out in a
-plane without some of the conducting tracks — the edges — crossing. Crossings
-are a bad thing in circuit design, so their number should be kept down, but
-figuring out a suitable arrangement is no easy task. Euler's polyhedron formula,
-with its information on networks, is an essential ingredient in finding solutions.
-
-{.todo} Now let's move to the very large: our universe. To this day cosmologists
-have not agreed on its exact shape. Pivotal to their consideration is topology,
-the mathematical study of shape and space. In the 19th century mathematicians
-discovered that all surfaces in three-dimensional space are essentially
-characterised by the number of holes they have: our simple polyhedra have no
-holes, a doughnut has one hole, etc. Euler's formula does not work for polyhedra
-with holes, but mathematicians discovered an exciting generalisation. For any
-polyhedron, V - E +  F is exactly 2 minus 2 times the number of holes! It turns
-out that this number, called the Euler characteristic, is crucial to the study
-of all three-dimensional surfaces, not just polyhedra. Euler's formula can be
-viewed as the catalyst for a whole new way of thinking about shape and space.
+If you play around the different polyhedra, like the ones above, you’ll find
+that Euler’s formula always works. In [a following chapters](/course/graphs-and-networks#GT_4_1)
+you’ll learn how to actually prove it mathematically.
 
 ---
+> id: platonic
 
 ## Platonic Solids
 
-Remember when we defined _regular polygons_ as particularly "symmetric"
-polygons, where all sides and angles are them same? We can do something similar
-for polyhedra:
+At the beginning of this chapter, we defined [regular polygons](gloss:regular-polygon)
+as particularly “symmetric” polygons, where all sides and angles are them same.
+We can do something similar for polyhedra.
 
-In a _regular polyhedron_ all faces are all the same kind of regular polygon,
-and the same number of faces meet at every vertex. Polyhedra with these two
-properties are called __Platonic solids__, named after the Greek philosopher
-[Plato](bio:plato).
+In a _regular polyhedron_ all [faces](gloss:polyhedron-face) are all the same
+kind of regular polygon, and the same number of faces meet at every
+[vertex](gloss:polyhedron-vertex). Polyhedra with these two properties are
+called [__Platonic solids__](gloss:platonic-solid), named after the Greek
+philosopher [Plato](bio:plato).
 
     //- The pyramid on the right of not a Platonic solid. It consists of two
     //- different kinds of polygons (squares and triangles), and it has [[4]]
     //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
----
-
 So what do the Platonic solids look like – and how many of them are there? To
 make a 3-dimensional shape, we need at least [[3]] faces to meet at every
-vertex. Let's start systematically with the smallest regular polygon:
+vertex. Let’s start systematically with the smallest regular polygon:
 equilateral triangles:
+
+---
+> id: platonic-tetrahedron
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1194,12 +1423,14 @@ equilateral triangles:
     img(src="images/platonic/tetrahedron.svg" width=200 height=120)
 
 ::: column.grow
-If we create a polyhedron where three equilateral triangles meet at every
-vertex, we get the shape on the left. It is called a __Tetrahedron__ and has
-[[four]] faces. ("Tetra" means "four" in Greek).
+If we create a polyhedron where three [equilateral triangles](gloss:equilateral-triangle)
+meet at every vertex, we get the shape on the left. It is called a
+__Tetrahedron__ and has [[4]] faces. _{.reveal(when="blank-0")}(“Tetra” means
+“four” in Greek)._
 :::
 
 ---
+> id: platonic-octahedron
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1211,12 +1442,13 @@ vertex, we get the shape on the left. It is called a __Tetrahedron__ and has
 
 ::: column.grow
 If four equilateral triangles meet at every vertex, we get a different Platonic
-solid. It is called the __Octahedron__ and has [[eight]] faces. ("Octa" means
-"eight" in Greek. Just like "Octagon" means 8-sided shape, "Octahedron" means
-8-faced solid.)
+solid. It is called the __Octahedron__ and has [[8]] faces.
+_{.reveal(when="blank-0")}(“Octa” means “eight” in Greek. Just like “Octagon”
+means 8-sided shape, “Octahedron” means 8-faced solid.)_
 :::
 
 ---
+> id: platonic-icosahedron
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1228,23 +1460,25 @@ solid. It is called the __Octahedron__ and has [[eight]] faces. ("Octa" means
 
 ::: column.grow
 If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
-[[twenty]] faces. ("Icosa" means "twenty" in Greek.)
+[[20]] faces. _{.reveal(when="blank-1")}(“Icosa” means “twenty” in Greek.)_
 :::
 
 ---
+> id: platonic-6-triangles
 
 ::: column(width=120 parent="padded-thin")
 ::: column(width=200)
 
-    img(src="images/platonic/triangles-6.svg" width=200 height=120)
+    img.reveal(when="blank-1" src="images/platonic/triangles-6.svg" width=200 height=120)
 
 ::: column.grow
 If [[six]] triangles meet at every vertex, something different happens: we
-simply get [[a tessellation|a quadrilateral|another Icosahedron]], instead of
-a 3-dimensional polyhedron.
+simply get [[a tessellation|a quadrilateral|another Icosahedron]],
+_{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
 :::
 
 ---
+> id: platonic-7-triangles
 
 ::: column(width=120 parent="padded-thin")
 ::: column(width=200)
@@ -1253,13 +1487,14 @@ a 3-dimensional polyhedron.
 
 ::: column.grow
 And seven or more triangles at every vertex also don’t produce new polyhedra:
-there is not enough space around a vertex, for that many triangles.
+there is not enough space around a vertex, to fit that many triangles.
 :::
 
----
-
-This means we've found three Platonic solids consisting of triangles. Let's
+This means we’ve found [[three]] Platonic solids consisting of triangles. Let’s
 move on to the next regular polygon: squares.
+
+---
+> id: platonic-cube
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1271,23 +1506,25 @@ move on to the next regular polygon: squares.
 
 ::: column.grow
 If [[three]] squares meet at every vertex, we get the __cube__. Just like dice,
-it has [[6]] faces. The cube is sometimes also called _Hexahedron_, after the
-Greek word "hexa" for "six".
+it has [[6]] faces. _{span.reveal(when="blank-1")}The cube is sometimes also
+called *Hexahedron*, after the Greek word “hexa" for “six”._
 :::
 
 ---
+> id: platonic-4-squares
 
 ::: column(width=120 parent="padded-thin")
 ::: column(width=200)
 
-    img(src="images/platonic/squares.svg" width=200 height=120)
+    img.reveal(when="blank-1" src="images/platonic/squares.svg" width=200 height=120)
 
 ::: column.grow
-If [[four]] squares meet at every vertex, we get another tessellation. And like
-before, five or more squares also won’t work.
+If [[four]] squares meet at every vertex, we get [[another tessellation|a tetrahedron|another cube]].
+_{span.reveal(when="blank-1")}And like before, five or more squares also won’t work._
 :::
 
 ---
+> id: platonic-dodecahedron
 
 Next, let’s try regular pentagons:
 
@@ -1301,10 +1538,11 @@ Next, let’s try regular pentagons:
 
 ::: column.grow
 If [[three]] pentagons meet at every vertex, we get the __Dodecahedron__. It has
-[[12]] faces. ("Dodeca" means "twelve" in Greek.)
+[[12]] faces. _{.reveal(when="blank-1")} (“Dodeca” means “twelve” in Greek.)_
 :::
 
 ---
+> id: platonic-4-pentagons
 
 ::: column(width=120 parent="padded-thin")
 ::: column(width=200)
@@ -1317,178 +1555,187 @@ not enough space.
 :::
 
 ---
+> id: platonic-hexagons
 
 The next regular polygon to try are hexagons:
 
 ::: column(width=120 parent="padded-thin")
 ::: column(width=200)
 
-    img(src="images/platonic/hexagons.svg" width=200 height=120)
+    img.reveal(when="blank-0" src="images/platonic/hexagons.svg" width=200 height=120)
 
 ::: column.grow
-If three hexagons meet at every vertex, we immediately get a tessellation.
-Since there is no space for more than three, it seems like there are no Platonic
-solids consisting of hexagons.
+If three hexagons meet at every vertex, we immediately get a [[tessellation|polyhedron|hexahedron]].
+_{span.reveal(when="blank-0")} Since there is no space for more than three, it
+seems like there are no Platonic solids consisting of hexagons._
 :::
 
 ---
+> id: platonic-final
 
 The same also happens for all regular polygons with more than six sides. They
 don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
 
-This means that there are just [[five]] Platonic solids! Let's have a look at
+This means that there are just [[five]] Platonic solids! Let’s have a look at
 all of them together:
 
-{.todo} hint -> use euler's formula
+---
+> id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 __Tetrahedron__
 
-    x-polyhedron(size=120 shape="Tetrahedron")
+    x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-[[4]] Faces  
-[[4]] Vertices  
-[[6]] Edges
+_{span.dual}[[4]] Faces_  
+_{span.dual}[[4]] Vertices_  
+_{span.dual}[[6]] Edges_
 
 ::: column.grow.text-center(width=120)
 __Cube__
 
-    x-polyhedron(size=120 shape="Cube")
+    x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-[[6]] Faces  
-[[8]] Vertices  
-[[12]] Edges
+_{span.dual(target="dual1")}[[6]] Faces_  
+_{span.dual(target="dual1")}[[8]] Vertices_  
+_{span.dual}[[12]] Edges_
 
 ::: column.grow.text-center(width=120)
 __Octahedron__
 
-    x-polyhedron(size=120 shape="Octahedron")
+    x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-[[8]] Faces  
-[[6]] Vertices  
-[[12]] Edges
+_{span.dual(target="dual1")}[[8]] Faces_  
+_{span.dual(target="dual1")}[[6]] Vertices_  
+_{span.dual}[[12]] Edges_
 
 ::: column.grow.text-center(width=120)
 __Dodecahedron__
 
-    x-polyhedron(size=120 shape="Dodecahedron")
+    x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-[[12]] Faces  
-20 Vertices  
-30 Edges
+_{span.dual(target="dual2")}[[12]] Faces_  
+_{span.dual(target="dual2")}20 Vertices_  
+_{span.dual}30 Edges_
 
 ::: column.grow.text-center(width=120)
 __Icosahedron__
 
-    x-polyhedron(size=120 shape="Icosahedron")
+    x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-[[20]] Faces  
-12 Vertices  
-30 Edges
+_{span.dual(target="dual2")}[[20]] Faces_  
+_{span.dual(target="dual2")}12 Vertices_  
+_{span.dual}30 Edges_
 :::
 
----
-
-Notice how the number of faces and vertices are [[swapped around|the same]] for
-[cube an octahedron](target:a), as well as [dodecahedron and icosahedron](target:b),
+{.reveal(when="blank-3 blank-4 blank-6 blank-7 blank-9 blank-10")} Notice how
+the number of faces and vertices are [[swapped around|the same]] for [cube and
+octahedron](target:dual1), as well as [dodecahedron and icosahedron](target:dual2),
 while the number of edges [[stays the same|are different]]. These pairs of
-Platonic solids are called __dual solids__.
+Platonic solids are called [__dual solids__](gloss:polyhedron-dual).
+
+---
+> id: platonic-dual
+> goals: slide-0 slide-1
 
 We can turn a polyhedron into its dual, by “replacing” every face with a vertex,
 and every vertex with a face. These animations show how:
 
     .row
-      .grow: x-img-sequence(src="images/dual1/d#.png", pages="24", width="300", height="300")
-      .grow: x-img-sequence(src="images/dual2/d#.png", pages="24", width="300", height="300")
+      .grow: x-img-sequence(src="images/dual1/d#.png" pages=24 width=300 height=300)
+      .grow: x-img-sequence(src="images/dual2/d#.png" pages=24 width=300 height=300)
 
 The tetrahedron is dual with itself. Since it has the same number of faces and
-vertices, swapping them wouldn't change anything.
+vertices, swapping them wouldn’t change anything.
 
 ---
+> id: platonic-elements
 
-Plato believed that all matter in the Universe consists of four elements: Air,
-Earth, Water and Fire. He thought that they each correspond to one of the
-Platonic solids. The fifth one would represent the universe as a whole. Today we
-know that there are more than 100 different elements which consist of spherical
-atoms, not polyhedra.
+[Plato](bio:plato) believed that all matter in the Universe consists of four
+elements: Air, Earth, Water and Fire. He thought that every element correspond
+to one of the Platonic solids, while the fifth one would represent the universe
+as a whole. Today we know that there are more than 100 different elements which
+consist of spherical atoms, not polyhedra.
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
-      p.caption Images from Johannes Kepler’s book "Harmonices Mundi" (1619)
+      p.caption Images from Johannes Kepler’s book “Harmonices Mundi” (1619)
 
 ---
+> id: archimedean
 
 ## More on Polyhedra
 
-Platonic solids are the most regular polyhedra – but there are countless others.
+Platonic solids are particularly important polyhedra, but there are countless
+others.
 
-__Archimedean solids__, for example, still have to be made up of regular
-polygons, but you can use multiple different ones. They are named after another
-Greek mathematician, [Archimedes of Syracuse](bio:archimedes), and there are
-13 of them:
+[__Archimedean solids__](gloss:archimedean-solid), for example, still have to be
+made up of [regular polygons](gloss:regular-polygon), but you can use multiple
+different types. They are named after another Greek mathematician, [Archimedes
+of Syracuse](bio:archimedes), and there are 13 of them:
 
-::: column(width=220 parent="padded-thin")
-    x-polyhedron(size=220 shape="TruncatedTetrahedron")
+::: column(width=170 parent="padded-thin")
+    x-polyhedron(size=170 shape="TruncatedTetrahedron")
     
 {.caption} __Truncated Tetrahedron__  
 8 faces, 12 vertices, 18 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="Cuboctahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="Cuboctahedron")
 
 {.caption} __Cuboctahedron__  
 14 faces, 12 vertices, 24 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="TruncatedCube")
+::: column(width=170)
+    x-polyhedron(size=170 shape="TruncatedCube")
 
 {.caption} __Truncated Cube__  
 14 faces, 24 vertices, 36 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="TruncatedOctahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="TruncatedOctahedron")
 
 {.caption} __Truncated Octahedron__  
 14 faces, 24 vertices, 36 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="Rhombicuboctahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
 {.caption} __Rhombicuboctahedron__  
 26 faces, 24 vertices, 48 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="TruncatedCuboctahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
 {.caption} __Truncated Cuboctahedron__  
 26 faces, 48 vertices, 72 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="SnubCube")
+::: column(width=170)
+    x-polyhedron(size=170 shape="SnubCube")
 
 {.caption} __Snub Cube__  
 38 faces, 24 vertices, 60 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="Icosidodecahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="Icosidodecahedron")
 
 {.caption} __Icosidodecahedron__  
 32 faces, 30 vertices, 60 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="TruncatedDodecahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="TruncatedDodecahedron")
 
 {.caption} __Truncated Dodecahedron__  
 32 faces, 60 vertices, 90 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="TruncatedIcosahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
 {.caption} __Truncated Icosahedron__  
 32 faces, 60 vertices, 90 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="Rhombicosidodecahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
 {.caption} __Rhombicosidodecahedron__  
 62 faces, 60 vertices, 120 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="TruncatedIcosidodecahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
 {.caption} __Truncated Icosidodecahedron__  
 62 faces, 120 vertices, 180 edges
-::: column(width=220)
-    x-polyhedron(size=220 shape="SnubDodecahedron")
+::: column(width=170)
+    x-polyhedron(size=170 shape="SnubDodecahedron")
 
 {.caption} __Snub Dodecahedron__  
 92 faces, 60 vertices, 150 edges
@@ -1499,12 +1746,13 @@ Greek mathematician, [Archimedes of Syracuse](bio:archimedes), and there are
     // above definition.
 
 ---
+> id: polyhedra-applications
+
+### Applications of Polyhedra
 
 Plato was wrong in believing that all elements consists of Platonic solids. But
 regular polyhedra have many special properties that make them appear elsewhere
 in nature – and we can copy these properties in science and engineering.
-
-### Viruses and Bacteria
 
 ::: column(width=180)
 
@@ -1517,15 +1765,12 @@ in nature – and we can copy these properties in science and engineering.
     p.caption Icosahedral virus
 
 ::: column.grow
-Many viruses, bacteria and other tiny organisms are shaped like Icosahedra.
-Viruses, for example, must enclose their genetic material inside a shell of many
-identical protein units. The icosahedron is the most efficient way to do this –
-because it consists of a few regular elements but is almost shaped like a sphere.
+Many __viruses__, __bacteria__ and other small __organisms__ are shaped like
+[icosahedra](gloss:icosahedron). Viruses, for example, must enclose their
+genetic material inside a shell of many identical protein units. The icosahedron
+is the most efficient way to do this, because it consists of a few regular
+elements but is almost shaped like a sphere.
 :::
-
----
-
-### Molecules
 
 ::: column(width=180)
 
@@ -1538,17 +1783,14 @@ because it consists of a few regular elements but is almost shaped like a sphere
     p.caption Montreal Biosphere
       
 ::: column.grow
-Many molecules are shaped like regular polyhedra. The most famous example is
+Many __molecules__ are shaped like regular polyhedra. The most famous example is
 C~~60~~ which consists of 60 carbon atoms arranged in the shape of a [Truncated
-Icosahedron](gloss:trucated-icosahedron). It was discovered in 1985 when
-scientists researched interstellar dust. They named it “Buckyball” (or
-Buckminsterfullerene) after the architect Buckminster Fuller, famous for
-constructing similar-looking geodesic domes.
+Icosahedron](gloss:truncated-icosahedron).
+
+It was discovered in 1985 when scientists researched interstellar dust. They
+named it “Buckyball” (or Buckminsterfullerene) after the architect [Buckminster
+Fuller](bio:fuller), famous for constructing similar-looking buildings.
 :::
-
----
-
-### Crystals
 
 ::: column(width=180)
 
@@ -1561,19 +1803,15 @@ constructing similar-looking geodesic domes.
     p.caption Pyrite cube
       
 ::: column.grow
-Most crystals have their atoms arranged in a regular grids consisting of
-Tetrahedra, Cubes or Octahedra. When they crack or shatter, you can see these
-patterns on a much larger scale.
+Most __crystals__ have their atoms arranged in a regular grids consisting of
+[tetrahedra](gloss:tetrahedron), [cubes](gloss:cube) or [octahedra](gloss:octahedron).
+When they crack or shatter, you can see these shapes on a larger scale.
 :::
-
----
-
-### Construction
 
 ::: column(width=180)
 
     x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
-    p.caption Octagonal Space Frames
+    p.caption Octagonal space frames
 
 ::: column(width=180)
 
@@ -1581,14 +1819,10 @@ patterns on a much larger scale.
     p.caption Louvre museum in Paris
 
 ::: column.grow
-Tetrahedra and Octahedra are incredibly rigid and stable, which makes them very
-useful in construction. _Space frames_ are polygonal structures that can support
-large roofs and heavy bridges.
+Tetrahedra and octahedra are incredibly rigid and stable, which makes them very
+useful in __construction__. _Space frames_ are polygonal structures that can
+support large roofs and heavy bridges.
 :::
-
----
-
-### Games
 
 ::: column(width=180)
 
@@ -1601,9 +1835,47 @@ large roofs and heavy bridges.
     p.caption Polygonal role-playing dice
 
 ::: column.grow
-Because of their symmetry, Platonic solids are often used to create dice. Every
-side has the probability of landing facing up, so the dice are always fair.
+Platonic solids are also used to create __dice__. because of their summetry,
+every side has the [probability](gloss:probability) of landing facing up – so
+the dice are fair.
 
-The Truncated Icosahedron is probably the most famous polyhedron in the world:
-it is the shape of the football.
+The [Truncated Icosahedron](gloss:truncated-icosahedron) is probably the most
+famous polyhedron in the world: it is the shape of the football.
 :::
+
+---
+> id: nets
+
+## Nets and Cross Sections
+
+Our entire world is 3-dimensional – but it is often much easier to draw or
+visualise flat, 2-dimensional objects. And there are a few different ways to
+view 3-dimensional polyhedra in a 2-dimensional way.
+
+    //- x-folding(shape="Tetrahedron" size=400)
+    //- x-folding(shape="Cube" size=400)
+    //- x-folding(shape="Octahedron" size=400)
+    //- x-folding(shape="Dodecahedron" size=400)
+    //- x-folding(shape="Icosahedron" size=400)
+
+{.todo} COMING SOON!
+
+    //- Which of these nets makes a cube
+    //- Match the net to the object
+    //- Drawing Nets
+
+---
+> id: cross-sections
+
+### Cross-Sections 
+
+{.todo} COMING SOON!
+
+    //- Describe the cross section formed by the intersection of the plane and the solid.
+
+    //- A cross-section is the intersection of a plane with a solid.
+    //- Another way to represent a three-dimensional figure in a two dimensional plane
+    //- is to use a net. A net is an unfolded, flat representation of the sides of a
+    //- three-dimensional shape.
+
+    //- rotate a cube to make a hexagonal cross-section

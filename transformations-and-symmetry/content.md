@@ -110,17 +110,17 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 
 ::: column(width=220)
 
-    x-geopad(style="width:220px; height: 140px;" grid=20): svg
+    x-geopad(width=220 height=140 grid=20): svg
 
 {.caption} Translated by ([[2]], [[3]])
 ::: column(width=220)
 
-    x-geopad(style="width:220px; height: 140px;" grid=20): svg
+    x-geopad(width=220 height=140 grid=20): svg
 
 {.caption} Translated by ([[4]], [[-1]])
 ::: column(width=220)
 
-    x-geopad(style="width:220px; height: 140px;" grid=20): svg
+    x-geopad(width=220 height=140 grid=20): svg
 
 {.caption} Translated by ([[-2]], [[3]])
 :::
@@ -822,7 +822,7 @@ example finding the length of missing sides, if we know some of the other sides.
 In the following section you will see a few examples.
 ::: column(width=240)
 
-    x-geopad.sticky(style="width:240px; height: 360px;"): svg
+    x-geopad.sticky(width=240 height=360): svg
       - var x = ['a', 'b', 'c', 'd']
       - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
       - var next = {a:'b', b:'c', c:'d', d:'a'}

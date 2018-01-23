@@ -4,11 +4,11 @@
 // =============================================================================
 
 
-// TODO Nicer add buttons
+// TODO Fix collision detection with rotations
 // TODO Nicer rotate circles (show on hover)
 // TODO Don't allow overlapping shapes
-// TODO Export to png
 // TODO Save progress to db
+// TODO Export to png
 
 import { Point, Polygon, roundTo } from '@mathigon/fermat';
 import { CustomElement, registerElement, $N, slide } from '@mathigon/boost';
@@ -23,9 +23,8 @@ const SHAPES = {
   8: {points: '30,-72.5 -30,-72.5 -72.5,-30 -72.5,30 -30,72.5 30,72.5 72.5,30 72.5,-30 30,-72.5', colour: '#693fb4'}
 };
 
-const INITIAL = []; /* [{ x: 150, y: 110, p: 3 }, { x: 360, y: 240, p: 4 },
-  { x: 520, y: 170, p: 5 }, { x: 420, y: 400, p: 4 }, { x: 120, y: 340, p: 6 },
-  { x: 330, y: 60, p: 6 }] ;*/
+const INITIAL = [{x: 130, y: 140, p: 6}, {x: 213, y: 92, p: 3},
+  {x: 213, y: 140, p: 4}, {x: 287, y: 140, angle: 18, p: 5}];
 
 // -----------------------------------------------------------------------------
 
@@ -45,14 +44,14 @@ class Shape {
     $parent.shapes.push(this);
 
     this.$el = $N('g', {class: 'shape'}, $parent.$svg);
-    const $shape = $N('polygon', {points: shape.points, fill: shape.colour}, this.$el);
+    this.$shape = $N('polygon', {points: shape.points, fill: shape.colour}, this.$el);
     const $rotate = $N('circle', {r: 8, cy: -30}, this.$el);
 
     this.polygon = polygonFromPoints(shape.points);
     this.setPosition(new Point(initial.x, initial.y), initial.angle || 0);
 
     let offset = null;
-    slide($shape, {
+    slide(this.$shape, {
       start: p => {
         $parent.$svg.append(this.$el);  // Move element to the front.
         offset = p.subtract(this.posn);  // If you're not clicking in the center.
@@ -67,7 +66,8 @@ class Shape {
 
   setPosition(p, a) {
     const polygon = this.polygon.rotate(a).shift(p.x, p.y);
-    if (this.hasIntersects(polygon)) return;
+
+    this.$shape.setClass('overlap', this.hasIntersects(polygon));
 
     this.transformed = polygon;
     this.posn = p;
@@ -93,10 +93,29 @@ export class Tessellation extends CustomElement {
 
     for (let c of INITIAL) new Shape(SHAPES[c.p], c, this);
 
-    for (let a of this.$$('.add')) {
-      const shape = SHAPES[a.data.shape];
-      a.css('background', shape.colour);
-      a.on('click', () => new Shape(shape, {x: 200, y: 200}, this));
+    for (let $a of this.$$('.add')) {
+      const s = +$a.data.shape;
+      const shape = SHAPES[s];
+
+      $a.css('background', shape.colour);
+      const transform = `transform: translate(25px, 25px) scale(${1/(1+.4*s)})`;
+      $N('polygon', {points: shape.points, style: transform}, $a.$('svg'));
+
+      let instance = null;
+      let offset = null;
+
+      slide($a, {
+        start: (p) => {
+          offset = new Point(this.bounds.left, this.bounds.top);
+          instance = new Shape(shape, p.subtract(offset), this);
+          this.trigger('add-shape');
+        },
+        move: p => instance.setPosition(p.subtract(offset), 0),
+        end: (a, b) => {
+          if (Point.distance(a, b) < 10)
+            instance.setPosition(new Point(this.width/2, this.height/2), 0);
+        }
+      });
     }
 
     this.$('.clear').on('click', () => {

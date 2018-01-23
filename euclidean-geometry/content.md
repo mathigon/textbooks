@@ -30,7 +30,7 @@ surprising discovery when playing around with geometric shapes:
 
 ::: column(width=420)
 
-    x-geopad.sticky(style="width:420px; height: 320px;"): svg
+    x-geopad.sticky(width=42 height=320): svg
 
 ::: column.grow
 Start by picking two points anywhere in the box on the left.
@@ -81,7 +81,7 @@ but you should already know most of them:
 
 ::: column(width=240)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+    x-geopad.sticky(width=240 height=160): svg
       circle.move(cx=100 cy=30 r=8 target="move")
       circle.move(cx=150 cy=100 r=8 target="move")
       circle.move(cx=40 cy=75 r=8 target="move")
@@ -101,7 +101,7 @@ points which you can't move.
 
 ::: column(width=240)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+    x-geopad.sticky(width=240 height=160): svg
 
 ::: column.grow
 A __line__ is a set of infinitely many points that extend forever in both
@@ -119,7 +119,7 @@ order of the points does not matter.
 
 ::: column(width=240)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+    x-geopad.sticky(width=240 height=160): svg
 
 ::: column.grow
 A __line segment__ is the part of a line between two points, without extending
@@ -133,7 +133,7 @@ We can label them just like lines, but without arrows on the bar above:
 
 ::: column(width=240)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+    x-geopad.sticky(width=240 height=160): svg
 
 ::: column.grow
 A __ray__  is something in between a _line_ and a _line segment_: it only
@@ -148,7 +148,7 @@ for example `vec(AB)`. Here, the order of points _does_ matter.
 
 ::: column(width=240)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+    x-geopad.sticky(width=240 height=160): svg
 
 ::: column.grow
 A __circle__ is the collection of points that all have the same distance from a
@@ -160,7 +160,7 @@ point in the center. This distance is called the __radius__.
 
 ::: column(width=240)
 
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+    x-geopad.sticky(width=240 height=160): svg
 
 ::: column.grow
 The two shapes on the right basically look equal. They have the same size and
@@ -194,7 +194,9 @@ has many of the same properties of equality:
 ### Parallel and Perpendicular
 
 ::: column(width=240)
-    x-geopad.sticky(style="width:240px; height: 200px;"): svg
+
+    x-geopad.sticky(width=240 height=200): svg
+
 ::: column.grow
 Two straight lines that never intersect are called [__parallel__](gloss:parallel).
 They point into the same direction, and the distance between them will always
@@ -210,7 +212,9 @@ Note that more than two lines can be parallel to each other!
 ---
 
 ::: column(width=240)
-    x-geopad.sticky(style="width:240px; height: 160px;"): svg
+
+    x-geopad.sticky(width=240 height=160): svg
+
 ::: column.grow
 The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
 These lines are called __perpendicular__.
@@ -245,7 +249,7 @@ the _father of geometry_, published the five axioms of geometry:
 
 ::: column(width=220)
 
-    x-geopad(style="width:220px; height: 160px;"): svg
+    x-geopad(width=220 height=160): svg
       path.red(x="segment(a,b)" target="1_line")
       circle.move(name="a" cx=30 cy=130 r=8 target="1_point")
       circle.move(name="b" cx=190 cy=30 r=8 target="1_point")
@@ -256,7 +260,7 @@ You can join any [two points](target:1_point) using exactly one straight
 
 ::: column(width=220)
 
-    x-geopad(style="width:220px; height: 160px;"): svg
+    x-geopad(width=220 height=160): svg
       path.red(x="line(c,d)" target="2_line")
       path(x="segment(c,d)" target="2_line 2_segment")
       circle.move(name="c" cx=60 cy=100 r=8)
@@ -268,7 +272,7 @@ You can extend any [line segment](target:2_segment) to an
 
 ::: column(width=220)
 
-    x-geopad(style="width:220px; height: 160px;"): svg
+    x-geopad(width=220 height=160): svg
       path(x="segment(e,f)" target="3_radius")
       path.red(x="circle(e,distance(e,f))" target="3_circle")
       circle.move(name="e" cx=120 cy=80 r=8 target="3_center")
@@ -280,14 +284,14 @@ can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
 
 ::: column(width=220)
 
-    x-geopad(style="width:220px; height: 160px;"): svg
+    x-geopad(width=220 height=160): svg
 
 {.text-center }__Fourth Axiom__  
 Any two right angles are congruent.
 
 ::: column(width=220)
 
-    x-geopad(style="width:240px; height: 160px;"): svg
+    x-geopad(width=220 height=160): svg
       path.red(x="line(g,h).parallel(i)" target="5_parallel")
       path(x="line(g,h)" target="5_line")
       circle.move(name="g" cx=20 cy=80 r=8)
@@ -468,6 +472,7 @@ _exactly twice_ the volume of their existing altar.
 
 {.todo} graphic
 ::: column(width=300)
+
     x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
     
 {.caption} A reconstruction of a temple in Delphi
@@ -487,15 +492,17 @@ success:
 {.text-center} __Trisecting the angle__  
 We already know how to bisect angles. However it is impossible to similarly
 split an angle into _three_ equal parts.
+
 ::: column(width=220)
 {.todo} GRAPHIC
 
 {.text-center} __Doubling the cube__  
 Given the edge of a cube, it is impossible to construct the edge of a cube that
 is exactly twice the volume.
-:::
 
 ::: column(width=220)
+{.todo} GRAPHIC
+
 {.text-center} __Squaring the circle__  
 Given a circle, it is impossible to construct a square that has exactly the same
 area.

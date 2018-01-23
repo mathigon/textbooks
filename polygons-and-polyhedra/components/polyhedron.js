@@ -42,6 +42,12 @@ function getPolyhedron(data) {
 
 // -----------------------------------------------------------------------------
 
+const cameraOffset = {
+  StellatedDodecahedron: 3.4,
+  Octahedron: 5,
+  Tetrahedron: 6
+};
+
 export class Polyhedron extends CustomElement {
 
   ready() {
@@ -59,8 +65,8 @@ export class Polyhedron extends CustomElement {
     setTimeout(() => {
       const polyhedron = getPolyhedron(data);
       const {camera} = drawShape($canvas, polyhedron, size, true);
-      camera.position.z = (shape === 'Octahedron') ? 5 : (shape === 'Tetrahedron') ? 6 : 4;
-    });
+      camera.position.z = cameraOffset[shape] ||  4;
+    }, 100);
   }
 }
 

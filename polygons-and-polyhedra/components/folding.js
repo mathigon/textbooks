@@ -97,7 +97,7 @@ export class Folding extends CustomElement {
         camera.lookAt(0,0,0);
       });
 
-    });
+    }, 100);
 
   }
 }

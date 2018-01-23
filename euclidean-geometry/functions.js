@@ -19,7 +19,7 @@ export function thales(section) {
   $geopad.setActiveTool('point');
   let a = null, b = null, c = null;
 
-  $geopad.on('addPoint', function(point) {
+  $geopad.on('add:point', function(point) {
     if (!a) {
       a = point.name;
       section.score('p1');

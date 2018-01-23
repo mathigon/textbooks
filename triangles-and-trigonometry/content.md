@@ -105,7 +105,7 @@ The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
 works for _B_ and _C_.
 ::: column(width=220)
 
-    x-geopad.sticky(style="width: 220px; height: 200px"): svg
+    x-geopad.sticky(width=220 height=200): svg
       circle.move.red(name="a" cx=80 cy=20 label="A" target="vertex X Y")
       circle.move.blue(name="b" cx=20 cy=180 label="B" target="vertex")
       circle.move.green(name="c" cx=200 cy=160 label="C" target="vertex")
@@ -392,7 +392,7 @@ lengths? Why not give it a try:
         .item #[.number 4,]#[.number 6,]#[.number 7] #[span.check]
         .item #[.number 1,]#[.number 2,]#[.number 6]
       .grow
-        x-geopad(style="height: 360px"): svg
+        x-geopad(height=360): svg
           circle.move(name="a" cx=75 cy=75)
           circle.move(name="b" cx=50 cy=250)
           circle.move(name="c" cx=250 cy=200)
@@ -464,7 +464,7 @@ Now you can see that the rubber band will always be [longer than](target:small)
 `6-4=2` and [shorter than](target:big) `6+4=10`.
 ::: column(width=300)
 
-    x-geopad(style="width: 300px; height: 200px"): svg
+    x-geopad(width=300 height=200): svg
       radialGradient#wood
         stop(offset="0%" stop-color="#925313")
         stop(offset="100%" stop-color="#5D3D1D")
@@ -534,7 +534,7 @@ Two triangles are congruent if any of the following conditions are met:
     .row.padded-thin
       div(style="width: 150px")
         .text-center: strong SSS
-        x-geopad(style="width: 150px; height: 120px"): svg
+        x-geopad(width=150 height=120): svg
           circle(name="a" x="point(60,10)")
           circle(name="b" x="point(10,110)")
           circle(name="c" x="point(140,80)")
@@ -545,7 +545,7 @@ Two triangles are congruent if any of the following conditions are met:
         
       div(style="width: 150px")
         .text-center: strong SAS
-        x-geopad(style="width: 150px; height: 120px"): svg
+        x-geopad(width=150 height=120): svg
           circle(name="a" x="point(60,10)")
           circle(name="b" x="point(10,110)")
           circle(name="c" x="point(140,80)")
@@ -557,7 +557,7 @@ Two triangles are congruent if any of the following conditions are met:
         
       div(style="width: 150px")
         .text-center: strong ASA
-        x-geopad(style="width: 150px; height: 120px"): svg
+        x-geopad(width=150 height=120): svg
           circle(name="a" x="point(60,10)")
           circle(name="b" x="point(10,110)")
           circle(name="c" x="point(140,80)")
@@ -570,7 +570,7 @@ Two triangles are congruent if any of the following conditions are met:
         
       div(style="width: 150px")
         .text-center: strong AAS
-        x-geopad(style="width: 150px; height: 120px"): svg
+        x-geopad(width=150 height=120): svg
           circle(name="a" x="point(60,10)")
           circle(name="b" x="point(10,110)")
           circle(name="c" x="point(140,80)")
@@ -770,7 +770,7 @@ This is the original proof that Pythagoras came up with.
 
 ::: column(width=240)
 
-    x-geopad(style="width: 240px; height: 240px"): svg
+    x-geopad(width=240): svg
     
       circle(name="a" x="point(20,20)")
       circle(name="b" x="point(220,20)")
@@ -1099,7 +1099,7 @@ beginning of the chapter? With Trigonometry, we finally have the tools to do it!
 ::: .sticky-wrap
 
     figure.sticky.mountain
-      x-geopad(style="width: 760px; height: 250px; background: white"): svg
+      x-geopad(width=760 height250 style="background: white"): svg
         image(href="images/mountain.svg" height=240 width=760 y=5)
         circle(name="a" x="point(25, 230)" target="points t1 t2")
         circle(name="b" x="point(185, 230)" target="points compl t1")

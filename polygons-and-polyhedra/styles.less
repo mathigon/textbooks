@@ -55,3 +55,15 @@ x-polyhedron, x-folding {
   margin: 0 auto;
   canvas { width: 100%; height: 100%; }
 }
+
+#platonic-overview .dual { transition: opacity .3s; }
+#platonic-overview.focus .dual:not(.focus) { opacity: 0.1; }
+
+.qed {
+  display: block;
+  float: right;
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+  margin-top: 8px;
+}
