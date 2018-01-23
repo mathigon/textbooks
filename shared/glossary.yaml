@@ -70,7 +70,6 @@ angle-bisector: # <<<
   title: Angle bisector
   text: An __angle bisector__ is a ray that splits an angle in the middle, into
     two congruent, smaller angles.
-  image: angle-bisector.svg
 
 midpoint:
   title: Midpoint
@@ -236,7 +235,8 @@ median:
 
 triangle-midsegment: # <<<
   title: Midsegment
-  text: TODO
+  text: The __midsegment__ of a triangle is a line segment that connects the
+    midpoints of two different sides of the triangle.
 
 centroid:
   title: Centroid
@@ -255,11 +255,15 @@ triangle-legs:
 
 triangle-sss: # <<<
   title: SSS Condition for Triangles
-  text: TODO
+  text: The __SSS condition__ for triangles means that two triangles are
+    congruent of they have the sides of the same length.
 
 cpoct: # <<<
   title: CPOCT
-  text: TODO
+  text: CPOCT stands for __corresponding parts of congruent triangles__. It
+    means that if two triangles are congruent, then all of their corresponding
+    components (angles, sides, midsegments, …) must also be congruent to each
+    other.
 
 pythagoras-theorem:
   title: Pythagoras's theorem
@@ -279,7 +283,7 @@ pythagorean-triple:
 polygon: # <<<
   title: Polygon
   text: A __polygon__ is geometric shape that is made up of straight line
-    segments.
+    segments. Polygons cannot contain any curved sides, or holes.
   image: polygon.svg
 
 polygon-vertex: # <<<
@@ -300,17 +304,21 @@ regular-polygon: # <<<
 
 irregular-polygon: # <<<
   title: Irregular Polygon
-  text: TODO
+  text: An __irregular polygon__ is one that is _not regular_. This means that
+    either the sides or the angles don’t all have the same size.
 
 concave: # <<<
   title: Concave polygon
   text: A __concave__ polygon has at least one internal angle greater than 180°.
-    A common way to identify a concave polygon is to look for a "caved-in"
-    side of the polygon.
+    At least one of the diagonals lies _outside_ the polygon. A common way to
+    identify a concave polygon is to look for a “caved-in” side of the polygon.
+    _Concave_ is the opposite of _convex_ polygons.
 
 convex: # <<<
   title: Convex polygon
-  text: A __convex__ polygon contains no internal angles greater than 180°.
+  text: A __convex__ polygon contains no internal angles greater than 180°. All
+    diagonals lie inside the polygon. This is the opposite of _concave_
+    polygons.
 
 polygon-diagonal: # <<<
   title: Diagonal
@@ -323,7 +331,8 @@ quadrilateral: # <<<
 
 apothem: # <<<
   title: Apothem
-  text: TODO
+  text: The __apothem__ of a regular polygon is the distance from the midpoint
+    of one of its sides to its center.
 
 square:
   title: Square
@@ -374,15 +383,17 @@ polyhedron: # <<<
 
 polyhedron-edge: # <<<
   title: Edge of a polyhedron
-  text: TODO
+  text: The __edges__ of a polyhedron are the line segments where two of its
+    faces are connected.
 
 polyhedron-vertex: # <<<
   title: Vertex of a polyhedron
-  text: The "corners" of a polyhedron are called its __vertices__.
+  text: The “corners” of a polyhedron are called its __vertices__.
 
 polyhedron-face: # <<<
   title: Face of a polyhedron
-  text: The polygons which are “sides” of a polyhedron.
+  text: The __faces__ of a polyhedron are the polygons which make up its
+    surface.
 
 platonic-solid: # <<<
   title: Platonic solid
@@ -400,33 +411,40 @@ polyhedron-dual: # <<<
 
 tetrahedron: # <<<
   title: Tetrahedron
-  text: TODO
+  text: The __Tetrahedron__ is a Platonic solid made up of four equilateral
+    triangles. It has four vertices and six edges.
 
 cube: # <<<
   title: Cube
-  text: TODO
+  text: The __Cube__ is a Platonic solid made up of six squares. It has 8
+    vertices and 12 edges.
 
 octahedron: # <<<
   title: Octahedron
-  text: TODO
+  text: The __Octahedron__ is a Platonic solid made up of 8 triangles. It has
+    6 vertices and 12 edges.
 
 dodecahedron: # <<<
   title: Dodecahedron
-  text: TODO
+  text: The __Dodecahedron__ is a Platonic solid made up of 12 regular
+    pentagons. It has 20 vertices and 30 edges.
 
 icosahedron: # <<<
   title: Icosahedron
-  text: TODO
+  text: The __Icosahedron__ is a Platonic solid made up of 20 triangles. It has
+    12 vertices and 30 edges.
 
 truncated-icosahedron: # <<<
   title: Truncated Icosahedron
-  text: TODO
+  text: The __Truncated Icosahedron__ is an _Archimedean solid__ consisting of
+    12 regular pentagons and 20 regular hexagons.
 
-net:
+net: # <<<
   title: Nets of Polyhedrons
-  text: TODO
+  text: The __net__ of a polyhedron is what you get when you “unfold” its
+    polygonal faces onto a flat surface.
 
-cross-section:
+cross-section: # <<<
   title: Cross section
   text: A __cross section__ is the intersection of a three-dimensional solid
     with a plane.
@@ -688,8 +706,8 @@ probTree:
 
 venn: # <<<
   title: Venn Diagram
-  text: A __venn diagram__ diagram that visualises multiple overlapping events,
-    and their probabilities.
+  text: A __venn diagram__ diagram that visualises multiple properties or events
+    that overlap.
   image: venn.svg
 
 quantum:

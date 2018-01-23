@@ -21,7 +21,7 @@ const BLUE = '#1f7aff';
 const GREEN = '#31b304';
 const YELLOW = '#ff941f';
 
-export function GT_0_0($section) {
+export function intro($section) {
   let $graph = $section.$('.graph');
   new Graph($graph, 8, [[0,4],[4,5],[5,2],[5,1],[1,2],[2,3],[3,4],[3,6],[6,7],[7,3],[2,7]]);
 
@@ -30,14 +30,14 @@ export function GT_0_0($section) {
   $section.onScore('blank-0 blank-1', function() { $section.addHint('firstGraphSolved'); });
 }
 
-export function GT_0_1($section) {
+export function intro1($section) {
   let graphs = $section.$$('.graph');
   new Graph(graphs[0], 7, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,5],[6,3]], { directed: true });
   new Graph(graphs[1], 9, [[0,1],[1,2],[2,3],[3,0],[1,3],[4,5],[5,6],[6,4],[7,8]]);
   new Graph(graphs[2], 4, [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,0],[0,3],[0,0],[1,1],[2,2],[3,3]], { arc: true });
 }
 
-export function GT_0_2($section) {
+export function intro2($section) {
   let graphs = $section.$$('.graph');
 
   new Graph(graphs[0], 6, [[0,1],[1,2],[2,3],[3,0],[0,4],[2,5]], { vertex: BLUE, edge: BLUE });
@@ -60,7 +60,7 @@ export function GT_0_2($section) {
   });
 }
 
-export function GT_0_3($section) {
+export function intro3($section) {
   let graphs = $section.$$('.graph');
 
   new Graph(graphs[0], 5, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,0],[4,2]]);
@@ -73,14 +73,14 @@ export function GT_0_3($section) {
     { vertex: (v) => (v ? '#DDD' : RED) });
 }
 
-export function GT_0_4($section) {
+export function intro4($section) {
   let graphs = $section.$$('.graph');
   new Graph(graphs[0], 3, [[0,1],[1,2],[2,0]]);
   new Graph(graphs[1], 5, [[0,1],[1,2],[2,3],[3,4],[4,0]]);
   new Graph(graphs[2], 7, [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,0]]);
 }
 
-export function GT_1_1($section) {
+export function handshakes1($section) {
   let g = new Graph($('.graph', $section), 5, [], { icon: person });
 
   $section.model.watch((state) => {
@@ -90,7 +90,7 @@ export function GT_1_1($section) {
   });
 }
 
-export function GT_1_2($section) {
+export function handshakes2($section) {
   $section.model.set('handshakeTable', function(n) {
     let colours = Colour.rainbow($section.model.n);
 
@@ -107,7 +107,7 @@ export function GT_1_2($section) {
   });
 }
 
-export function GT_1_3($section) {
+export function handshakes3($section) {
   let graphs = $$('.graph', $section);
   new Graph(graphs[0], 4, subsets(list(4), 2));
   new Graph(graphs[1], 5, subsets(list(5), 2));
@@ -115,7 +115,7 @@ export function GT_1_3($section) {
   new Graph(graphs[3], 7, subsets(list(7), 2));
 }
 
-export function GT_1_4($section) {
+export function handshakes4($section) {
   let g = new Graph($('.graph', $section), 0, [],
     { static: true, icon: person, bound: true });
 
@@ -134,7 +134,7 @@ export function GT_1_4($section) {
   });
 }
 
-export function GT_2_0($section) {
+export function bridges($section) {
   $section.$$('.tab').forEach(function($el, i) {
     let $svg = $el.$('svg.frame');
     let $paths = $('.paths', $svg);
@@ -232,7 +232,7 @@ export function GT_2_0($section) {
   });
 }
 
-export function GT_2_1($section) {
+export function bridges1($section) {
   let $svg = $section.$('svg');
 
   let $water   = $('.water', $svg);
@@ -261,7 +261,7 @@ export function GT_2_1($section) {
   });
 }
 
-export function GT_2_3($section) {
+export function bridges3($section) {
   let g = Colour.green, r = Colour.red, b = Colour.blue, o = Colour.orange;
   let colours = {
     val: Colour.rainbow(8),
@@ -284,7 +284,7 @@ export function GT_2_3($section) {
   colour('val');
 }
 
-export function GT_2_4($section) {
+export function bridges4($section) {
   let $svg    = $('svg', $section);
   let $g      = $('g', $section);
   let $edges  = $$('line', $svg);
@@ -329,7 +329,7 @@ export function GT_2_4($section) {
   });
 }
 
-export function GT_3_0($section) {
+export function utilities($section) {
   let currentUtility;
   let startUtility;
 
@@ -430,7 +430,7 @@ export function GT_3_0($section) {
   });
 }
 
-export function GT_3_1($section) {
+export function utilities1($section) {
   let graphs = $section.$$('.graph');
 
   let p3 = [[100, 35], [170, 155], [30, 155]];
@@ -550,7 +550,7 @@ export function planarity($section) {
   $section.model.watch(function() { generateGraph($section.model.n); });
 }
 
-export function GT_4_1($section) {
+export function euler($section) {
   let $svgs = $section.$$('svg');
   let $notes = $section.$$('.euler-sum');
 
@@ -570,7 +570,7 @@ export function GT_4_1($section) {
   });
 }
 
-export function GT_4_2($section) {
+export function euler2($section) {
   let $vertices = $section.$$('circle');
   let $edges = $section.$$('line');
 
@@ -638,7 +638,7 @@ export function GT_4_2($section) {
   });
 }
 
-export function GT_4_3($section) {
+export function euler3($section) {
   let $svg = $section.$('#dominoes');
   let $gs = $svg.$$('g');
 
@@ -659,7 +659,7 @@ export function GT_4_3($section) {
   });
 }
 
-export function GT_5_1($section) {
+export function maps1($section) {
   let colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', Colour.violet, Colour.orange, Colour.cyan];
   let $colours = $section.$$('.four-colour-icon');
   let activeColour = 0;
@@ -743,7 +743,7 @@ export function GT_5_1($section) {
   });
 }
 
-export function GT_5_2($section) {
+export function maps2($section) {
   let $svg = $section.$('svg');
   let $countries = $svg.$$('polygon');
   let $edges = $svg.$$('path');
@@ -763,7 +763,7 @@ export function GT_5_2($section) {
   });
 }
 
-export function GT_6_2($section) {
+export function salesman2($section) {
   $section.model.set('tsmString', function(x) {
     let a = [`There are <strong>${x}</strong> choices for the first city.`];
     if (x > 2) a.push(`After picking the first city, there are only <strong>${x-1}</strong> choices left for the second city.`);
@@ -779,11 +779,11 @@ export function GT_6_2($section) {
   });
 }
 
-export function GT_6_3($section) {
+export function salesman3($section) {
   $section.model.set('factorial', x => numberFormat(factorial(x)));
 }
 
-export function GT_6_4($section) {
+export function salesman4($section) {
   let $box = $section.$('.tsm-box');
   let $svg = $('svg', $box);
   let $path = $N('path', { class: 'tsm-path' }, $svg);

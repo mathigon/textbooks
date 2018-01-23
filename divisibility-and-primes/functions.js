@@ -25,7 +25,7 @@ function numberGrid($grid, time, className, filter) {
 // -----------------------------------------------------------------------------
 // Section Functions
 
-export function divisibilitygame(section) {
+export function divisibilityGame(section) {
   section.$gameplay.setFirstSlide($el =>
     $el.bindObservable(observable({ x: '?', y: '?' })));
 

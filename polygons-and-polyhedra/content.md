@@ -1384,7 +1384,7 @@ This equation was discovered by the famous Swiss mathematician [Leonard Euler](b
 It is true for any polyhedron, as long as it doesn’t contain any holes.
 
 If you play around the different polyhedra, like the ones above, you’ll find
-that Euler’s formula always works. In [a following chapters](/course/graphs-and-networks#GT_4_1)
+that Euler’s formula always works. In [a following chapters](/course/graphs-and-networks#euler)
 you’ll learn how to actually prove it mathematically.
 
 ---

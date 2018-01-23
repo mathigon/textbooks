@@ -70,7 +70,7 @@ x-step#divisibility1
   p If you can divide a number #[strong.red A] by a number #[strong.blue B], without remainder, we say that #[strong.blue B] is a #[strong factor] (or #[strong divisor]) of #[strong.red A], and that #[strong.red A] is a #[strong multiple] of #[strong.blue B]. We often write #[strong.blue B]|#[strong.red A], where the vertical bar simply means #[em “divides”].
   p For example, #[strong.green 7] × 3 = #[strong.orange 21], so #[strong.green 7] is a #[+blank("factor|multiple")] of #[strong.orange 21], #[strong.orange 21] is a #[+blank("multiple|factor")] of #[strong.green 7], and #[strong.green 7]|#[strong.orange 21].
 
-x-step#divisibilitygame
+x-step#divisibility-game
   p In this short game you have to determine which numbers are factors or multiples, as fast as possible. Click the #[x-target(to="#divisibilitygame .toggle") play button] to start.
 
   .box.problem-box
@@ -388,7 +388,7 @@ x-step#primes4
 
 //- ---------------------------------------------------------------------------
 
-x-step#primeTest(goals="calculator")
+x-step#prime-test(goals="calculator")
   h2 Large Primes
 
   p It is quite easy for a computer to check if a number is prime – simply by trying to divide it by all smaller numbers. But of course there are much cleverer and faster algorithms. Here you can try it yourself:
@@ -398,7 +398,7 @@ x-step#primeTest(goals="calculator")
     input(class="form-field", type="number" min="2")
     p.result.var ${result}
 
-x-step#primeTest1
+x-step#prime-test-1
   .row
     .grow
       p Throughout history, people have tried to calculate larger and larger primes. In 1460, the largest known prime number was 131,071. In 1772, #[x-bio(xid='euler') Leonard Euler] showed that 2,147,483,647 is prime.
@@ -408,7 +408,7 @@ x-step#primeTest1
       img(src="/resources/divisibility-and-primes/images/network.jpg", width="300", height="200")
       p.caption The GIMPS Project (#[em Great Internet Mersenne Prime Search]) uses a network of computers around the world to find large prime numbers.
 
-x-step#primeGenerator(goals="calculator")
+x-step#prime-generator(goals="calculator")
   p You might think that calculating these primes is just a waste of time – but, as we will see below, it turns out to be incredibly useful for computers to be able to quickly find large prime numbers.
 
   p Rather than checking if a large number is definitely prime, there are also much faster algorithms that tell you that a number is #[em almost certainly] prime. Here you can generate your own, large prime numbers:
@@ -727,7 +727,7 @@ x-step#goldbach1(goals="calculator")
 
 //- ---------------------------------------------------------------------------
 
-x-step#twinPrimes
+x-step#twin-primes
 
   h3 Twin Primes
 

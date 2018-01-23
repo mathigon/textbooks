@@ -226,7 +226,7 @@ class OneTimeButton {
   }
 }
 
-export function montyhall($section) {
+export function montyHall($section) {
   let selected = null;
   let decided = false;
   let opened = null;
