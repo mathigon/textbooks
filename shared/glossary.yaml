@@ -593,8 +593,9 @@ subdivision:
 millennium-prize:
   title: Millennium Prize Problems
   text: |
-    There are seven Millennium Prize Problems which were stated in 2000 by the
-    _Clay Mathematics Institute_:
+    The seven __Millennium Prize Problems__ are some of the most difficult open
+    problems in Mathematics. They were listed in 2000 by the _Clay Mathematics
+    Institute_, and each hold a $1m reward:
 
     * P vs NP
     * The Hodge Conjecture
@@ -604,8 +605,9 @@ millennium-prize:
     * Navier-Stokes Existence and Smoothness
     * The Birch and Swinnerton-Dyer Conjecture
 
-    Each problem holds $1m prize money. Only one, the Poincaré Conjecture, was
-    solved so far, but the mathematician Grigori Perelman declined the award.
+    So far, just one of the problems, the _Poincaré Conjecture_, was solved.
+    However the mathematician who solved it, Grigori Perelman, declined the
+    award.
 
 
 
