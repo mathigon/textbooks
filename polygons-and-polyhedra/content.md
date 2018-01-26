@@ -808,6 +808,7 @@ angles](gloss:supplementary-angles) both α and β must be [[90]]°.
 
 ---
 > id: quadrilaterals-area
+> goals: draw-1 draw-2 next-0
 
 ### Area of Quadrilaterals
 
@@ -816,7 +817,7 @@ trick of converting it into a [[rectangle|square|pentagon]]. It turns out that
 we can also do that for some quadrilaterals:
 
 ::: tab
-#### Parallelogram
+#### Parallelogram _{span.check(when="draw-1 blank-1")}_
 
 ::: column(width=300)
 
@@ -826,61 +827,77 @@ we can also do that for some quadrilaterals:
       circle.transparent(name="c1" x="point(10,9)")
       circle.transparent(name="d1" x="point(2,9)")
       path.fill.blue.light(x="polygon(a1,b1,c1,d1)")
-      path.fill.red.light(x="polygon(point(2,3),a1,d1)")
-      path.fill.red.light(x="polygon(point(10,3),b1,c1)")
+      path.fill.red.transparent(x="polygon(point(2,3),a1,d1)" target="triangle-1")
+      path.fill.red.transparent(x="polygon(point(10,3),b1,c1)" target="triangle-2")
       path.blue(x="polygon(a1,b1,c1,d1)")
 
 ::: column.grow
 On the left, try to draw a rectangle that has the same area as the
 parallelogram.
 
-Can you see that the missing triangle on the left is
-[[exactly the same as|smaller than|bigger than]] the overlapping triangle on the
-right? Therefore the area of a parallelogram is
+{.reveal(when="draw-1")} Can you see that the [missing triangle on the left](target:triangle-1)
+is [[exactly the same as|smaller than|bigger than]] the [overlapping triangle on the
+right](target:triangle-2)? _{span.reveal(when="blank-1")}Therefore the area of a parallelogram is_
 
-{.text-center} Area = __{.i.m-green}base__ × __{.i.m-yellow}height__
+{.text-center.reveal(when="blank-1")} Area = __{.i.m-green}base__ × __{.i.m-yellow}height__
 
-_Be careful when measuring the height of a parallelogram: it is usually not the
-same as the of the two sides._
+{.reveal(when="blank-1" delay=1000)} _Be careful when measuring the height of a
+parallelogram: it is usually not the same as the of the two sides._
 :::
 
 ::: tab
-#### Trapezium
+#### Trapezium _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
 
-Recall that trapeziums are quadrilaterals with one pair of parallel sides. These
-parallel sides are called the __bases__ of the trapezium.
+Recall that trapeziums are quadrilaterals with one pair of [parallel sides](target:bases).
+These parallel sides are called the __bases__ of the trapezium.
 
 ::: column(width=300)
 
-    x-geopad(width=300 height=240 tools="rectangle" grid=20): svg
+    x-geopad.sticky(width=300 height=240 grid=20): svg
       circle.transparent(name="a2" x="point(4,3)")
       circle.transparent(name="b2" x="point(9,3)")
       circle.transparent(name="c2" x="point(13,9)")
       circle.transparent(name="d2" x="point(2,9)")
       path.fill.blue.light(x="polygon(a2,b2,c2,d2)")
+      path.fill.red.transparent(x="polygon(a2,point(3,3),point(3,9),d2)" target="triangles-3")
+      path.fill.yellow.transparent(x="polygon(b2,point(11,3),point(11,9),c2)" target="triangles-3")
       path.blue(x="polygon(a2,b2,c2,d2)")
+      path.blue(x="segment(a2,b2)" target="bases base-1")
+      path.blue(x="segment(d2,c2)" target="bases base-2")
+      path.green.transparent(x="segment(point(2,3),d2)" target="t-height")
+      path.yellow.transparent(x="segment(point(3,6),point(11,6))" target="t-width")
+      circle.reveal(when="blank-3" x="line(a2,d2).midpoint" target="t-width")
+      circle.reveal(when="blank-3" x="line(b2,c2).midpoint" target="t-width")
 
 ::: column.grow
 Like before, try to draw a rectangle that has the same area as this trapezium.
-Can you see how the missing and triangles on the left and the right cancel out?
+_{span.reveal(when="draw-2")} Can you see how the [missing and triangles on the
+left and the right](target:triangles-3) cancel out?_
 
-The height of this rectangle is the distance between the two parallel sides of
-the trapezium. The width of the rectangle is the distance between the midpoints
-of the two non-parallel sides of the trapezium. This is called the
-__midsegment__ of the trapezium.
+{.reveal(when="draw-2" delay=2000)} The [{.step-target.pill.green} height](target:t-height)
+of this rectangle is the [[distance between|average of|length of]] the [parallel
+sides](target:bases) of the trapezium.
 
-Like with [triangles](gloss:triangle-midsegment), the midsegment of a trapezium
-is parallel to its two bases. The length of the midsegment is the average of the
-lengths of the bases: `(a+c)/2`.
+{.reveal(when="blank-2")} The [{.step-target.pill.yellow} width](target:t-width)
+of the rectangle is the distance between the [[midpoints|endpoints]] of the two
+non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
+called the __midsegment__ of the trapezium._
+_{button.btn.btn-red.next-btn.reveal(when="blank-3")} Next_
 
-If we combine all of this, we get an equation for the area of a trapezium with
-parallel sides _a_ and _c_, and height _h_:
+{.reveal(when="next-0")} Like with [triangles](gloss:triangle-midsegment), the
+midsegment of a trapezium is [[parallel to|perpendicular to|the same length as]]
+its two bases. The length of the midsegment is the average of the lengths of the
+bases: `(a+c)/2`.
 
-{.text-center} `A = h xx ((a+c) / 2)`
+{.reveal(when="blank-4")} If we combine all of this, we get an equation for the
+area of a trapezium with parallel sides [_a_](target:base-2) and [_c_](target:base-1),
+and height [_h_](target:t-height):
+
+{.text-center.reveal(when="blank-4")} `A = h xx ((a+c) / 2)`
 :::
 
 ::: tab
-#### Kite _{span.check(when="blank-2")}_
+#### Kite _{span.check(when="blank-5")}_
 
 ::: column(width=300)
 
@@ -911,21 +928,21 @@ In this kite, the [two diagonals](target:diag3) form the width and the height of
 a large [rectangle](target:rect4) that surrounds the kite.
 
 The area of this rectangle is [[twice|the same as|three times]] the area of the
-kite. _{span.reveal(when="blank-2")} Can you see how each of the [four
+kite. _{span.reveal(when="blank-5")} Can you see how each of the [four
 triangles](target:inside) that make up the kite are the same as the
 [four gaps](target:outside) outside it?_
 
-{.reveal(when="blank-2")} This means that the area of a kite with diagonals
+{.reveal(when="blank-5")} This means that the area of a kite with diagonals
 [{.step-target.i.pill.green}d1](target:d31) and
 [{.step-target.i.pill.yellow}d2](target:d32) is
 
-{.text-center.reveal(when="blank-2")} _Area_ = `1/2`
+{.text-center.reveal(when="blank-5")} _Area_ = `1/2`
 [{.step-target.i.pill.green}d1](target:d31) ×
 [{.step-target.i.pill.yellow}d2](target:d32).
 :::
 
 ::: tab
-#### Rhombus _{span.check(when="blank-3 blank-4")}_
+#### Rhombus _{span.check(when="blank-6 blank-7")}_
 
 ::: column(width=300)
 
@@ -952,19 +969,19 @@ A [Rhombus](gloss:rhombus) is a quadrilateral that has four congruent sides. You
 might remember that every rhombus is a [[parallelogram|rectangle|square]] – and
 also a [[kite|hexagon|concave polygon]].
 
-{.reveal(when="blank-3 blank-4")} This means that to find the area of a rhombus,
+{.reveal(when="blank-6 blank-7")} This means that to find the area of a rhombus,
 we can use either the equation for the area of a parallelogram, or that for the
 area of a kite:
 
-{.text-center.reveal(when="blank-3 blank-4")} _Area_ =
+{.text-center.reveal(when="blank-6 blank-7")} _Area_ =
 [{.step-target.i.pill.blue}base](target:base) ×
 [{.step-target.i.pill.red}height](target:height) = `1/2`
 [{.step-target.i.pill.green}d1](target:d41) ×
 [{.step-target.i.pill.yellow}d2](target:d42).
 
-{.reveal(when="blank-3 blank-4")} _In different contexts, you might be given
-different parts of a Rhombus (sides, height, diagonals), and you should pick
-whichever equation is more convenient._
+{.reveal(when="blank-6 blank-7" delay=1000)} _In different contexts, you might
+be given different parts of a Rhombus (sides, height, diagonals), and you should
+pick whichever equation is more convenient._
 :::
 
 :::
@@ -1903,6 +1920,7 @@ view 3-dimensional polyhedra in a 2-dimensional way.
 
     //- Which of these nets makes a cube
     //- Match the net to the object
+    //- https://github.com/polymake/matchthenet
     //- Drawing Nets
 
 ---

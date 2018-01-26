@@ -192,6 +192,44 @@ export function kites1($step) {
   });
 }
 
+export function quadrilateralsArea($step) {
+  const $geopads = $step.$$('x-geopad');
+
+  $geopads[0].setActiveTool('rectangle');
+  $geopads[0].on('add:path', path => {
+    if (path.val.w * path.val.h === 48) {
+      // TODO shift to correct location
+      $step.addHint('correct');
+      $step.score('draw-1');
+    } else {
+      $step.addHint('incorrect');
+      path.remove();
+    }
+  });
+  $step.onScore('draw-1', () => $geopads[0].setActiveTool('move'));
+
+
+  $geopads[1].setActiveTool('rectangle');
+  $geopads[1].on('add:path', path => {
+    console.log(path);
+    if (path.val.w * path.val.h === 48) {
+      // TODO shift to correct location
+      $step.addHint('correct');
+      $step.score('draw-2');
+    } else {
+      $step.addHint('incorrect');
+      path.remove();
+    }
+  });
+  $step.onScore('draw-2', () => $geopads[1].setActiveTool('move'));
+
+  $step.$$('.next-btn').forEach(($n, i) => {
+    $n.one('click', () => $step.score('next-' + i));
+    $step.onScore('next-' + i, () => $n.exit('pop'));
+    $step.on('complete', () => $step.score('next-' + i));
+  });
+}
+
 // -----------------------------------------------------------------------------
 
 export function tessellationDrawing($step) {
