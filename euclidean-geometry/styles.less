@@ -39,3 +39,67 @@
 
 .follows { margin: -8px 0 -10px; }
 .follows .math { transform: rotate(90deg); font-size: 1.6em; }
+
+.task {
+  color: @blue;
+  border-bottom: 1px solid @blue;
+  padding-bottom: .5em;
+  margin-bottom: .7em;
+  font-weight: 600;
+}
+
+// -----------------------------------------------------------------------------
+
+.congruence {
+  .obj { cursor: pointer; fill: @grey; stroke: @grey; }
+
+  polygon, path, ellipse, rect { stroke: none; }
+  line, polyline { fill: white; stroke-width: 4px; }
+  polyline + path { stroke: inherit; fill: none; stroke-width: 8px; }
+
+  .lines line { stroke: @grey; stroke-width: 4px; transition: stroke-width .2s; }
+  .lines .correct { stroke-width: 8px; }
+}
+
+// -----------------------------------------------------------------------------
+
+.video-wrap {
+  position: sticky;
+  top: calc(~"50vh - 180px");
+  padding-bottom: 100%;
+  cursor: pointer;
+
+  video { position: absolute; width: 100%; height: 100%; }
+
+  .play {
+    top: 50%;
+    left: 50%;
+    margin: -24px;
+    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    background: fade(#222, 70%);
+    fill: fade(white, 80%);
+    pointer-events: none;
+  }
+
+  .progress { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: fade(white, 40%); transition: height .2s; }
+  .bar { width: 0; height: 100%; background: @red; }
+  .handle { position: absolute; width: 14px; height: 14px; top: 50%; margin: -7px; border-radius: 8px; background: @red; transition: transform .2s; transform: scale(0); }
+
+  &:hover, &:active {
+    .progress { height: 5px; }
+    .handle { transform: none; }
+  }
+}
+
+#crane .step {
+  display: none;
+  cursor: pointer;
+  color: fade(white, 30%);
+  transition: color .2s;
+  &:hover { color: fade(white, 60%); }
+  &.active { color: white; }
+  &:first-child { display: block; }
+}
