@@ -90,9 +90,11 @@ export function handshakes1($section) {
   });
 }
 
-export function handshakes2($section) {
-  $section.model.set('handshakeTable', function(n) {
-    let colours = Colour.rainbow($section.model.n);
+export function handshakes2($step) {
+  $step.onScore('blank-1', () => $step.addClass('complete'));
+
+  $step.model.set('handshakeTable', function(n) {
+    let colours = Colour.rainbow($step.model.n);
 
     function makePerson(x, y) {
       let newX= (x>=y ? x+1 : x);
