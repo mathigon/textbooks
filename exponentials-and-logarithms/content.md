@@ -2,8 +2,7 @@
 
 > stage: advanced  
 > description: description  
-> hero: images/hero.jpg  
-> tile: images/og-tile.jpg
+> warning: true
 
 ---
 > id: cd1
@@ -37,9 +36,6 @@ Another amazing fact is that C14 is radioactive :radioactive:. That means that
 over time, it decays: it breaks apart into other element. We are actually
 surrounded by many different radioactive materials, but they are all much, much
 weaker than nuclear power stations or atomic bombs.
-
----
-> id: cd2
 
 During our life, as we eat or breathe, all living things – plants, animals or
 humans – absorb these materials, which means that our body contains some

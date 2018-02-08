@@ -1,7 +1,10 @@
 # Transformations and Symmetry
 
 > stage: intermediate
-> description: xxxxx
+> description: Symmetry can be seen everywhere in nature – but it even underlies
+>   completely invisible laws of nature. The mathematical properties of symmetry
+>   explain why that is the case.
+> warning: true
 
 ---
 

@@ -313,7 +313,7 @@ size of the [internal angles](target:int-angle) of the polygon:
       mtext tan
       mn.step-target.pill.blue(data-to="alpha") α
       mo(value="=") =
-      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/2,2)}]°
+      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/2,2)}]m
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
 [isosceles triangle](target:isosceles-triangle) is
@@ -329,7 +329,8 @@ size of the [internal angles](target:int-angle) of the polygon:
       mo ×
       mtext.var.pill.yellow.step-target(data-to="apothem") ${round(Math.tan(Math.PI/2-Math.PI/n)/2,2)}
       mo =
-      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/4,2)}]m.
+      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/4,2)}]
+      msup #[mtext m]#[mn 2]
 
 {.reveal(when="blank-5 blank-6" delay=4000)} The polygon consists of ${toWord(n)}
 of these isosceles triangles, all of which have the same area. Therefore, the
@@ -342,9 +343,8 @@ total area of the polygon is
       mo ×
       mn.var ${round(Math.tan(Math.PI/2-Math.PI/n)/4,2)}
       mo =
-      msup
-        mn #[span.var ${round(n×Math.tan(Math.PI/2-Math.PI/n)/4,2)}]cm
-        mn 3
+      mn #[span.var ${round(n×Math.tan(Math.PI/2-Math.PI/n)/4,2)}]
+      msup #[mtext m]#[mn 2]
 :::
 
 ---

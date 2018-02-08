@@ -1,7 +1,8 @@
 # Triangles and Trigonometry
 
 > stage: intermediate
-> description: xxxxx
+> description: descriptions
+> warning: true
 
     // http://www.livemint.com/Leisure/9tK3aB8EJvHxsWmqc8UxuI/The-men-who-measured-Earths-curves.html
 

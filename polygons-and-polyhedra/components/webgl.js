@@ -18,10 +18,8 @@ export function getRenderer(size) {
   if (renderers[size]) return renderers[size];
 
   const renderer = new THREE.WebGLRenderer({antialias: true});
-  renderer.setSize(size, size);
-  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(2 * size, 2 * size);
   renderer.setClearColor(0xffffff, 1);
-  // $el._el.appendChild(renderer.domElement);
   return renderers[size] = renderer;
 }
 

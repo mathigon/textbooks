@@ -3,6 +3,7 @@
 > stage: intermediate
 > description: Metric spaces, Spherical geometry, Hyperbolic geometry
 >   Projections, Higher dimensions, Topology, Möbius strip and Klein bottle
+> warning: true
 
 ---
 

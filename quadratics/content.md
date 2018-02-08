@@ -1,7 +1,9 @@
 # Quadratic Equations
 
 > stage: intermediate
-> description: Quadratic equations and functions are key concepts not only in mathematics but also in physics, engineering and technology.
+> description: Quadratic equations and functions are key concepts not only in
+>   mathematics but also in physics, engineering and technology.
+> warning: true
 
 ---
 
@@ -25,8 +27,6 @@ people who will buy one (the _demand_) on the _y_-axis.
 {.todo} Multiple choice interactive  
 Pick the chart that you think makes most sense:  
 Exactly! Higher cost means lower demand, so the graph of the function moves downwards.
-
----
 
 Economists did some market research and came up with the following equation that
 relates the _{.b.orange}price_ of skateboards to the _{.b.purple}demand_:
