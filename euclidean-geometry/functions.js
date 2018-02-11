@@ -5,7 +5,8 @@
 
 
 
-import { Point } from '@mathigon/fermat';
+import { wait } from '@mathigon/core';
+import { Point, nearlyEquals } from '@mathigon/fermat';
 import { $N, Draggable, slide } from '@mathigon/boost';
 
 // -----------------------------------------------------------------------------
@@ -101,11 +102,81 @@ export function congruence($step) {
 
 // -----------------------------------------------------------------------------
 
+export function tools($step) {
+  const $geopads = $step.$$('x-geopad');
+  const names = ['l1', 'c1'];
+
+  $geopads.forEach(($g, i) => {
+    const $play = $g.$('.play-btn');
+    $play.on('click', () => {
+      $play.exit('pop');
+      wait(500)
+        .then(() => $g.animateConstruction(names[i]))
+        .then(() => {
+          $play.enter('pop');
+          $step.score('play-' + names[i]);
+        });
+    });
+  });
+}
+
+// -----------------------------------------------------------------------------
+
+export function equilateral($step) {
+  const $geopad = $step.$('x-geopad');
+
+  $geopad.setActiveTool('line');
+  $geopad.showGesture('point(60,200)', 'point(260,200)');
+  let segment0 = null;
+
+  $geopad.on('add:path', function(path) {
+    if (!path.val) return;
+
+    if (path.val.p1 && path.val.p2) {
+      if (!segment0) {
+        segment0 = path;
+        path.$el.setAttr('target', 'a b');
+        $geopad.setActiveTool('circle');
+        $geopad.animatePoint(path.points[0].name, new Point(60, 260));
+        $geopad.animatePoint(path.points[1].name, new Point(260, 260));
+        return $step.score('segment0')
+
+      } else if (nearlyEquals(segment0.val.length, path.val.length)) {
+        if (path.val.p1.equals(segment0.val.p1) || path.val.p2.equals(segment0.val.p1)) {
+          path.$el.setAttr('target', 'a');
+          return $step.score('segment1');
+        } else if (path.val.p1.equals(segment0.val.p2) || path.val.p2.equals(segment0.val.p2)) {
+          path.$el.setAttr('target', 'b');
+          return $step.score('segment2');
+        }
+      }
+
+    } else if (segment0 && path.val.c && path.val.r) {
+      if (nearlyEquals(segment0.val.length, path.val.r)) {
+        if (path.val.c.equals(segment0.val.p1)) {
+          return $step.score('circle1')
+        } else if (path.val.c.equals(segment0.val.p2)) {
+          return $step.score('circle2')
+        }
+      }
+    }
+
+    $step.addHint('incorrect');
+    path.remove();
+  });
+
+  $geopad.on('add:point', path => { if (segment0) path.remove(); });
+  $step.onScore('circle1 circle2', () => $geopad.setActiveTool('line'));
+  $step.onScore('segment1 segment2', () => $geopad.setActiveTool('move'));
+}
+
+// -----------------------------------------------------------------------------
+
 export function crane($step) {
   // TODO Check buffering issues
 
   const $video = $step.$('video');
-  const $play = $step.$('.play');
+  const $play = $step.$('.play-btn');
   const $progress = $step.$('.progress');
   const $bar = $step.$('.bar');
   const $steps = $step.$$('.step');

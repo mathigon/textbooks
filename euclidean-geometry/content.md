@@ -4,7 +4,6 @@
 > description: Geometry is one of the oldest parts of mathematics – and one of
 >   the most useful. Its logical, systematic approach has been copied in many
 >   other areas.
-> warning: true
 
 ---
 > id: thales
@@ -36,12 +35,12 @@ surprising discovery when playing around with geometric shapes:
 
 ::: column.grow
 Start by picking two points anywhere in the box on the left.
-_{span.reveal(when="p1 p2")} Let's draw a semicircle around these points._
+_{span.reveal(when="p1 p2")} Let’s draw a semicircle around these points._
 
 {.reveal(when="p1 p2")} Now pick a third point that lies somewhere on the
 [circumference](target:circumf) of the semicircle.
 
-{.reveal(when="p3")} Let's draw the [triangle](target:triangle) formed by the
+{.reveal(when="p3")} Let’s draw the [triangle](target:triangle) formed by the
 two corners of the semicircle, as well as the point you picked on the
 circumference.
 
@@ -53,6 +52,7 @@ _{span.reveal(when="blank-0")} This means that the triangle is
 :::
 
 ---
+> id: thales-1
 
 For Thales, this was a pretty spectacular result. Why should _semicircles_ and
 _right-angled triangles_, two completely different shapes, be linked in this
@@ -68,9 +68,10 @@ he wanted to understand _why_ it is true, and verify that it is _always_ true
 
 An argument that logically explains, beyond and doubt, why something must be
 true, is called a __proof__. During the following chapters we will build up a
-number of geometric techniques, that will allow us to prove _Thales' theorem_.
+number of geometric techniques, that will allow us to prove _Thales’ theorem_.
 
 ---
+> id: points
 > class: no-border
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
@@ -88,77 +89,111 @@ but you should already know most of them:
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
-      circle.move(cx=100 cy=30 r=8 target="move")
-      circle.move(cx=150 cy=100 r=8 target="move")
-      circle.move(cx=40 cy=75 r=8 target="move")
-      circle(cx=200 cy=50 r=4 target="no-move")
-      circle(cx=70 cy=120 r=4 target="no-move")
+      circle.move(cx=100 cy=30 target="move" label="P")
+      circle.move(cx=150 cy=100 target="move" label="Q")
+      circle.move(cx=40 cy=75 target="move")
+      circle(x="point(200,50)" target="no-move")
+      circle(x="point(70,120)" target="no-move" label="R")
 
 ::: column.grow
 A __point__ is a specific location in space. Points describe a position, but
 have no _size_ in itself. They are labelled using capital letters.
 
-In Mathigon, [large, solid dots](target:move) indicate interactive points you
-can move around, while [smaller, outlined dots](target:no-move) indicate fixed
-points which you can't move.
+{.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
+you can move around, while [smaller, outlined dots](target:no-move) indicate
+fixed points which you can’t move.
+_{button.next-step} Next_
 :::
 
 ---
+> id: lines
 
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
+      path(x="line(point(60,100),point(90,40))" label="a")
+      path(x="line(point(50,120),point(150,150))" label="b")
+      circle.move(name="P" cx=170 cy=55 label="P")
+      circle.move(name="Q" cx=200 cy=130 label="Q")
+      path(x="line(P,Q)")
 
 ::: column.grow
 A __line__ is a set of infinitely many points that extend forever in both
-directions. Like a point, lines don't take up any space – they have no _width_.
+directions. Like a point, lines don’t take up any space – they have no _width_.
 They have a location and a direction, and they are always straight.
 
-Lines are labeled using lower-case letters. We can also refer to them using two
-points that lie on the line, for example
+{.r} Lines are labeled using lower-case letters. We can also refer to them using
+two points that lie on the line, for example
 <span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
 <span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
 order of the points does not matter.
+_{button.next-step} Next_
 :::
 
 ---
+> id: segments
 
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
+      circle.move(name="a" cx=50 cy=50 label="A")
+      circle.move(name="b" cx=90 cy=120 label="B")
+      path(x="segment(a,b)")
+      circle.move(name="c" cx=120 cy=40 label="C")
+      circle.move(name="d" cx=210 cy=110 label="D")
+      path(x="segment(c,d)")
 
 ::: column.grow
 A __line segment__ is the part of a line between two points, without extending
 to infinity. For example, the sides of a triangle are all line segments.
 
-We can label them just like lines, but without arrows on the bar above:
+{.r} We can label them just like lines, but without arrows on the bar above:
 `bar(AB)` or `bar(BA)`. Like, before the order of the points does not matter.
+_{button.next-step} Next_
 :::
 
 ---
+> id: rays
 
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
+      circle.move(name="c" cx=40 cy=120)
+      circle.move(name="d" cx=60 cy=40)
+      path(x="ray(c,d)")
+      circle.move(name="a" cx=90 cy=90 label="A")
+      circle.move(name="b" cx=190 cy=130 label="B")
+      path(x="ray(a,b)")
 
 ::: column.grow
 A __ray__  is something in between a _line_ and a _line segment_: it only
 extends to infinity on one side. You can think of it like _sunrays_: they start
 at a point (the sun) and then keep going forever.
 
-When labelling rays, the arrow shows the direction where it extends to infinity,
-for example `vec(AB)`. Here, the order of points _does_ matter.
+{.r} When labelling rays, the arrow shows the direction where it extends to
+infinity, for example `vec(AB)`. This time, the order of points _does_ matter.
+_{button.next-step} Next_
 :::
 
 ---
+> id: circles
 
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
+      circle.move(name="a" cx=50 cy=60)
+      path(x="segment(a,a.add(point(1,1).normal.scale(40)))" target="radius")
+      path.red(x="circle(a,40)")
+
+      circle.move(name="b" cx=170 cy=90)
+      path(x="segment(b,b.shift(60,0))" target="radius")
+      path.red(x="circle(b,60)")
 
 ::: column.grow
-A __circle__ is the collection of points that all have the same distance from a
-point in the center. This distance is called the __radius__.
+{.r} A __circle__ is the collection of points that all have the same
+[distance](target:radius) from a point in the center. This distance is called
+the __radius__.
+_{button.next-step} Next_
 :::
 
 ---
@@ -170,9 +205,12 @@ point in the center. This distance is called the __radius__.
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
+      path.fill.green(name="x" x="polygon(point(30,30),point(80,20),point(100,80),point(70,110),point(30,90))" label="A" label-colour="white" target="move")
+      path.fill.green.light(x="x.rotate(1).shift(190,10)" target="move")
+      path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-colour="white")
 
 ::: column.grow
-The two shapes on the right basically look equal. They have the same size and
+The two shapes on the right basically look the same. They have the same size and
 shape, and we could [turn and slide](target:move) one of them to exactly match
 up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
@@ -183,7 +221,7 @@ The symbol for congruence is `≅`, so we would say that `A ≅ B`.
 Here are a few different geometric objects. Connect all the ones that are
 congruent:
 
-    svg.congruence(width=760 height=320)
+    svg.congruence(width=760 height=320 viewBox="0 0 760 320")
       g.lines
       g.obj(data-q="a" cx="145.2" cy="166.1")
     	polygon(points="119.6,146.6 131.7,186.9 170.9,175.1 139.7,159.5 154.4,145.2")
@@ -222,6 +260,7 @@ congruent:
     	path(d="M362.1,291.2c4.3-5.6,6.9-12.6,6.9-20.2c0-13.4-8-25-19.5-30.1")
 
 ---
+> id: congruence-1
 
 Two line segments are congruent if they [[have the same length|intersect]]. Two
 angles are congruent if they [[have the same size|meet at a point]], in degrees.
@@ -235,38 +274,51 @@ has many of the same properties of equality:
 * Congruence is __transitive__: if `X ≅ Y` and `Y ≅ Z` then also `X ≅ Z`.
 
 ---
+> id: parallel
 
 ### Parallel and Perpendicular
 
 ::: column(width=240)
 
-    x-geopad.sticky(width=240 height=200): svg
+    x-geopad(width=240 height=200): svg
+      path.red(x="line(point(30,100),point(70,20))" name="l1" mark="arrow" label="a")
+      path.red(x="l1.shift(40,10)" mark="arrow" label="b")
+      path.red(x="l1.shift(100,30)" mark="arrow" label="c")
+      path.yellow(x="line(point(30,120),point(160,140))" name="l2" mark="arrow2" label="d")
+      path.yellow(x="l2.shift(-30,40)" mark="arrow2" label="e")
 
 ::: column.grow
 Two straight lines that never intersect are called [__parallel__](gloss:parallel).
-They point into the same direction, and the distance between them will always
-be the same. You can think of parallel lines as _railroad tracks_.
+They point into the same direction, and the distance between them is always
+[[the same|increasing|decreasing]].
 
-In diagrams, we denote parallel lines by adding one or more
-[small arrows](target:line). In this example we would write `a ∥ b` and `c ∥ d`.
-The `∥` symbol simply means _“is parallel to”_.
+{.reveal(when="blank-0")} A good example of parallel lines in real life are
+_railroad tracks_. But note that more than two lines can be parallel to each
+other!
 
-Note that more than two lines can be parallel to each other!
+{.reveal(when="blank-0")} In diagrams, we denote parallel lines by adding one or
+more small arrows. In this example, __{.m-red}`a ∥ b ∥ c`__ and
+__{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
 :::
 
 ---
+> id: perpendicular
 
 ::: column(width=240)
 
-    x-geopad.sticky(width=240 height=160): svg
+    x-geopad(width=240 height=160): svg
+      path(x="angle(point(100,110),point(50,100),point(60,50))")
+      path.blue(x="line(point(50,100),point(100,110))" label="a")
+      path.green(x="line(point(50,100),point(70,0))" label="b")
 
 ::: column.grow
 The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
 These lines are called __perpendicular__.
 
-Note that when marking right angles in a diagram, we use [small squares](target:angle)
-rather than curves. In this example, we would write `a _|_ b`. The `_|_` symbol
-simply means _“is perpendicular to”_.
+{.r} In this example, we would write  _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. The
+`_|_` symbol simply means _“is perpendicular to”_.
+_{button.next-step} Next_
+
 :::
 
 ---
@@ -296,8 +348,8 @@ the _father of geometry_, published the five axioms of geometry:
 
     x-geopad(width=220 height=160): svg
       path.red(x="segment(a,b)" target="1_line")
-      circle.move(name="a" cx=30 cy=130 r=8 target="1_point")
-      circle.move(name="b" cx=190 cy=30 r=8 target="1_point")
+      circle.move(name="a" cx=30 cy=130 target="1_point")
+      circle.move(name="b" cx=190 cy=30 target="1_point")
 
 {.text-center }__First Axiom__  
 You can join any [two points](target:1_point) using exactly one straight
@@ -306,22 +358,22 @@ You can join any [two points](target:1_point) using exactly one straight
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="line(c,d)" target="2_line")
-      path(x="segment(c,d)" target="2_line 2_segment")
-      circle.move(name="c" cx=60 cy=100 r=8)
-      circle.move(name="d" cx=180 cy=60 r=8)
+      path.red(x="line(c,d)")
+      path(x="segment(c,d)" target="2_segment")
+      circle.move(name="c" cx=60 cy=100 target="2_segment")
+      circle.move(name="d" cx=180 cy=60 target="2_segment")
 
 {.text-center }__Second Axiom__  
-You can extend any [line segment](target:2_segment) to an
-[infinite line](target:2_line).
+You can extend any [line segment](target:2_segment) to an<br>
+infinite line.
 
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path(x="segment(e,f)" target="3_radius")
+      path(x="segment(e,f)" label="r" target="3_radius")
       path.red(x="circle(e,distance(e,f))" target="3_circle")
-      circle.move(name="e" cx=120 cy=80 r=8 target="3_center")
-      circle.move(name="f" cx=170 cy=130 r=8)
+      circle.move(name="e" cx=120 cy=80 target="3_center" label="P")
+      circle.move(name="f" cx=170 cy=130)
 
 {.text-center }__Third Axiom__  
 Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
@@ -330,6 +382,19 @@ can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
+      circle.move(name="x" cx=50 cy=100)
+      circle(hidden name="xa" x="x.translate(point(110,80).subtract(x).rotate(pi/4).normal.scale(50))")
+      circle(hidden name="xb" x="x.translate(point(110,80).subtract(x).rotate(-pi/4).normal.scale(50))")
+      path.fill.red(x="angle(xa,x,xb)")
+      path.dark(x="segment(x,xa)")
+      path.dark(x="segment(x,xb)")
+
+      circle.move(name="y" cx=190 cy=60)
+      circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).normal.scale(50))")
+      circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).normal.scale(50))")
+      path.fill.red(x="angle(ya,y,yb)")
+      path.dark(x="segment(y,ya)")
+      path.dark(x="segment(y,yb)")
 
 {.text-center }__Fourth Axiom__  
 Any two right angles are congruent.
@@ -337,19 +402,17 @@ Any two right angles are congruent.
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="line(g,h).parallel(i)" target="5_parallel")
-      path(x="line(g,h)" target="5_line")
-      circle.move(name="g" cx=20 cy=80 r=8)
-      circle.move(name="h" cx=120 cy=140 r=8)
-      circle.move(name="i" cx=180 cy=60 r=8 target="5_point")
+      circle.move(name="g" cx=170 cy=60 target="5_point" label="P")
+      path.red(x="line5.parallel(g)" target="5_parallel")
+      path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
 
 {.text-center }__Fifth Axiom__  
 Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
-there is exactly [one line](target:5_parallel) which goes through _P_ and never
-meets _L_.
+there is exactly [one line](target:5_parallel) through _P_ that is parallel to _L_.
 :::
 
 ---
+> id: jefferson
 
 ::: column.grow
 Each of these axioms looks pretty obvious and self-evident, but together they
@@ -380,6 +443,7 @@ This is just one example where Euclid’s ideas in mathematics have inspired
 completely different subjects.
 
 ---
+> id: measuring
 > class: no-border
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
@@ -418,35 +482,47 @@ take up some space, and lines will always have some width. This is why our
 drawings are always just “approximations”.
 
 ---
-> id: geo-tools
-> goals: straightedge compass
+> id: tools
+> goals: play-l1 play-c1
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
-Euclids axioms basically tell us _what's possible_ in his version of geometry.
-It turns out that we just need two very simple tools to be able to draw
-_{span.l-grey}(approximations of)_ all of that on paper:
+Euclid’ axioms basically tell us _what’s possible_ in his version of geometry.
+It turns out that we just need two very simple tools to be able to sketch all of
+that on paper:
 
 ::: column(width=320)
 
-    x-geopad(width=320 height=240): svg
+    x-geopad(width=300 height=240 style="position: relative;")
+      svg
+        circle.move(name="a" cx=50 cy=190)
+        circle.move(name="b" cx=250 cy=50)
+        path.red(name="l1" x="segment(a,b)" style="display: none")
+      .play-btn
 
 {.text-center} A __straight-edge__ is like a ruler but without any markings. You
 can use it to connect two points (as in Axiom 1), or to extend a line segment
 (as in Axiom 2).
 
-::: column.reveal(width=320 when="straightedge")
+::: column.reveal(width=300 when="play-l1")
 
-    x-geopad(width=300 height=240): svg
+    x-geopad(width=300 height=240 style="position: relative;")
+      svg
+        circle.move(name="c" cx=150 cy=120)
+        circle.move(name="d" cx=250 cy=150)
+        path(x="segment(c,d)")
+        path.red(name="c1" x="arc(c,d,1.99*pi)" style="display: none")
+      .play-btn
 
 {.text-center} A __compass__ allows you to draw a circle of a given size around
 a point (as in Axiom 3).
 :::
 
 ---
+> id: construction
 
-Axioms 4 and 5 are not about _drawing_ anything, but comparing properties of
-existing shapes.
+Axioms 4 and 5 are about comparing properties of shapes, rather than drawing
+anything. Therefore they don’t need specific tools.
 
 ::: column.grow
 You can imagine that Greek mathematicians were thinking about Geometry on the
@@ -456,7 +532,7 @@ straight-edge and pieces of string as compass.
 Even though these tools look very primitive, you can actually draw a great
 number of shapes with them. This became almost like a puzzle game for
 mathematicians: tying to find ways to “construct” different geometric shapes
-using just straight-edge and compass.
+using just a straight-edge and compass.
 
 ::: column(width=340)
     x-media(src="images/archimedes.jpg" width=340 height=265)
@@ -467,127 +543,106 @@ disturb my circles”.
 :::
 
 ---
-> id: construct-equilateral
+> id: equilateral
+> goals: segment0 segment1 segment2 circle1 circle2
 
-::: column(width=300)
+::: column(width=320)
 
-    x-geopad.sticky(width=300): svg
-      path(x="segment(e,f)" target="3_radius")
-      path.red(x="circle(e,distance(e,f))" target="3_circle")
-      circle.move(name="e" cx=120 cy=80 r=8 target="3_center")
-      circle.move(name="f" cx=170 cy=130 r=8)
+    x-geopad.sticky(width=320 tools="move|line|circle"): svg
 
 ::: column.grow
 {.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
 straight-edge and compass.
 
-To start with, draw a line segment any where in a box on the right. With the
-[line tool](target:line-tool) selected, simply drag from start to end. This
-line will be one of the sides of the triangle.
+To start with, draw a line segment any where in a box on the right. With
+the <x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target> selected,
+simply drag from start to end. This line will be one of the sides of the triangle.
 
-Next, draw two circles that have one of the endpoints of the line segments as
-center, and go through the other endpoint. With the [circle tool](target:circle-tool)
-selected, simply drag from one endpoint to the other.
+{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
+of the line segments as center, and go through the other endpoint. With
+the <x-target no-margins to="#equilateral .tool:nth-child(5)">circle tool</x-target> selected,
+simply drag from one endpoint to the other.
 
-We already have two vertices of the triangle, and the third one is the
-intersection of the two circles. Use the line tool again to draw the two missing
-sides and complete the triangle.
+{.reveal(when="circle1 circle2")} We already have two vertices of the triangle,
+and the third one is the intersection of the two circles. Use the line tool
+again to draw the two missing sides and complete the triangle.
 
-Now [these two sides](target:a) and [these two sides](target:b) are each a
-[[radius]] of the same circle, so they must have the same length. In other
-words, all three sides of the triangle are congruent – therefore it must be
-equilateral.
+{.reveal(when="segment1 segment2")} Now [these two sides](target:a) and
+[these two sides](target:b) are each [[radii|diameters|circumferences]] of the
+same circle, _{span.reveal(when="blank-0")} so they must have the same length.
+In other words, all three sides of the triangle are congruent – and therefore it
+is indeed an equilateral triangle._
 :::
 
 ---
+> id: perp-bisector
 
 ### Midpoints and Perpendicular Bisectors
 
-{.todo} A midpoint is a point on a line segment that divides it into two congruent
-segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
-`bar(AC)`.
+{.todo} TODO – Constructing Midpoints and Perpendicular Bisectors
 
-{.todo} A line, segment, or ray that passes through a midpoint of another segment 
-at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
-perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) _|_ bar(DE)`.
-
-{.todo} Constructing a Perpendicular Bisector
-Draw a line that is at least 6 cm long, about halfway down your page. 
-Place the pointer of the compass at an endpoint. Open the compass to be
-greater than half of the segment. Make arc marks above and below the segment.
-Repeat on the other endpoint. Make sure the arc marks intersect. 
-Use your straight edge to draw a line connecting the arc intersections. 
-This constructed line bisects the line you drew in #1 and intersects it at
-90°. So, this construction also works to create a right angle.
-
-{.todo} constructing a square
+    // {.todo} A midpoint is a point on a line segment that divides it into two congruent
+    // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
+    // `bar(AC)`.
+    // 
+    // {.todo} A line, segment, or ray that passes through a midpoint of another segment 
+    // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
+    // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) _|_ bar(DE)`.
 
 ---
+> id: angle-bisector
 
 ### Angle Bisectors
 
-{.todo} When two rays have the same endpoint, an angle is created.
+{.todo} TODO – Constructing Angle Bisectors
 
-{.todo} Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
-“∠” symbol in front of the three letters used to label it. This angle can be
-labeled `/_ABC` or `/_CBA`. Always put the vertex (the common endpoint of the
-two rays) in the middle of the three points. It doesn’t matter which side point
-is written first.
-
-{.todo} An __angle bisector__ is a ray that divides an angle into two congruent angles,
-each having a measure exactly half of the original angle. Every angle has
-exactly one angle bisector.
-
-{.todo} `bar(BD)` is the angle bisector of `/_ABC`
-∠ABDm∠ABD≅∠DBC=12m∠ABC
-
-{.todo} Constructing an Angle Bisector
-
-{.todo} Draw an angle on your paper. Make sure one side is horizontal. 
-Place the pointer on the vertex. Draw an arc that intersects both sides. 
-Move the pointer to the arc intersection with the horizontal side. Make a
-second arc mark on the interior of the angle. Repeat on the other side. Make
-sure they intersect. 
-Connect the arc intersections from #3 with the vertex of the angle.
-
-{.todo} Angle Bisector Theorem: If a point is on the bisector of an angle, then the
-point is equidistant from the sides of the angle.
-In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
+    // {.todo} When two rays have the same endpoint, an angle is created.
+    // 
+    // {.todo} Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
+    // “∠” symbol in front of the three letters used to label it. This angle can be
+    // labeled `/_ABC` or `/_CBA`. Always put the vertex (the common endpoint of the
+    // two rays) in the middle of the three points. It doesn’t matter which side point
+    // is written first.
+    // 
+    // {.todo} An __angle bisector__ is a ray that divides an angle into two congruent angles,
+    // each having a measure exactly half of the original angle. Every angle has
+    // exactly one angle bisector.
+    // 
+    // {.todo} Angle Bisector Theorem: If a point is on the bisector of an angle, then the
+    // point is equidistant from the sides of the angle.
+    // In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
 
 ---
+> id: parallel-perp
 
-### Perpendicular Lines
+### Parallel and Perpendicular Lines
 
-{.todo} Perpendicular Line Construction; through a Point NOT on the Line
-Draw a horizontal line and a point above that line. Label the line l and the point A.
+{.todo} TODO – Constructing Parallel and Perpendicular Lines
 
-* {.todo}Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
-* {.todo}Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
-* {.todo}Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
+{.todo} TODO – Constructing a Square
 
-{.todo} Perpendicular Line Construction; through a Point on the Line
-Draw a horizontal line and a point on that line.
-Label the line l and the point A.
-Take the compass and put the pointer on A. Open the compass so that it reaches out horizontally along the line. Draw two arcs that intersect the line on either side of the point.
-Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc above or below the line. Repeat this on the other side so that the two arc marks intersect.
-Take your straightedge and draw a line from point A to the arc intersections above the line. This line is perpendicular to l and passes through A.
-
-{.todo} Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
-
-{.todo} Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
-
-{.todo} Distance Between Parallel Lines 
-The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
-
-{.todo} Notice that all of the pink segments are the same length. So, when picking a perpendicular segment, be sure to pick one with endpoints that are integers.
+    // {.todo} Perpendicular Line Construction; through a Point NOT on the Line
+    // Draw a horizontal line and a point above that line. Label the line l and the point A.
+    // 
+    // * {.todo}Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
+    // * {.todo}Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
+    // * {.todo}Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
+    // 
+    // {.todo} Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
+    // 
+    // {.todo} Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
+    // 
+    // {.todo} Distance Between Parallel Lines 
+    // The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
 
 ---
+> id: impossible
 
 ### Impossible Constructions
 
 In the following chapters we will see even more shapes that can be constructed
-using like this. However, there is a limit to Euclidean geometry: some
-constructions are simply impossible using just Euclid's Axioms.
+like this. However, there is a limit to Euclidean geometry: some constructions
+are simply impossible using just Euclid’s Axioms.
 
 ::: column.grow
 According to legend, the city of Delos in ancient Greece was once faced with a
@@ -610,6 +665,7 @@ increases by a factor of 2, the [[1-dimensional|3-dimensional|2-dimensional]]
 side of the cube will increase by a factor of `root(3)(2)`.
 
 ---
+> id: impossible-1
 
 This still sounds pretty simple, but doubling the cube is actually impossible
 using just straight-edge and compass. For the citizens of Delos this meant that
@@ -642,7 +698,7 @@ area.
 :::
 
 Note that these problems can all be solved quite easily with algebra, or using
-marked rules and protractors. But they are impossible if you are just allowed to
+marked rulers and protractors. But they are impossible if you are just allowed to
 use straight-edge and compass.
 
 ---
@@ -686,7 +742,7 @@ extremely accurate. But with a bit of practice, you can do it yourself!
 
     .video-wrap
       video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="/resources/euclidean-geometry/images/crane.jpg" width=400 height=400 muted playsinline)
-      .play: svg(width=48 height=48): path(d="M14,38V10L38,24Z")
+      .play-btn
       .progress
         .bar
         .handle
@@ -705,9 +761,9 @@ fold the sheet along its two diagonals.
 
 {.step(data-t=99)} This one is difficult: take the bottom corner of the paper and fold it all the way up, along the horizontal line you just created. Some of the folds you made before will be inverted. Then turn over and repeat.
 
-{.step(data-t=135)} Make sure the two "legs" are pointing down. Then take the left and right corner and fold them towards the center line. Turn over and repeat.
+{.step(data-t=135)} Make sure the two “legs" are pointing down. Then take the left and right corner and fold them towards the center line. Turn over and repeat.
 
-{.step(data-t=172)} You're almost done! Slightly open the right side, and fold the head up towards the top. You will have to turn it inside out. Then repeat the same with the tail on the left.
+{.step(data-t=172)} You’re almost done! Slightly open the right side, and fold the head up towards the top. You will have to turn it inside out. Then repeat the same with the tail on the left.
 
 {.step(data-t=203)} Reverse the fold as shown to create a beak. You can decide how long you want it to be by picking the location of the fold.
 
@@ -715,15 +771,13 @@ fold the sheet along its two diagonals.
 :::
 
 ---
+> id: origami-axioms
 > class: fill dark
 
 This _crane_ is one of the oldest and most famous Origami models. We have many
 more [instructions](/origami) for Origami models, if you want to try!
 
     figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
-
----
-> class: fill dark
 
 Just like drawing with straight-edge and compass, there are a few axioms of
 different _folds_ that are possible with origami. They were first listed in
@@ -775,12 +829,13 @@ perpendicular to _K_ that places _P_ onto _L_.
 
 It turns out that these axioms are even more powerful than the Euclidean ones.
 It is possible to trisect angles and double cubes using just paper folding!
-Of course, it is impossible to fold any _curved_ lines, and you still can't
+Of course, it is impossible to fold any _curved_ lines, and you still can’t
 square the circle with origami.
 
     figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
 ---
+> id: origami-applications
 > class: fill dark
 
 Origami is an ancient art, and for the longest time it was mostly a recreational
@@ -836,9 +891,9 @@ modules that can twist to open or close.
 ::: column.grow
 ### Origami in Medicine
 
-Let's move from the very large to the very small: In 2003, researchers developed
+Let’s move from the very large to the very small: In 2003, researchers developed
 _Origami Stents_, tiny tubes that can be inserted into blood vessels. They are
-initially folded up, but can expand inside patients' blood in oder to enlarge
+initially folded up, but can expand inside patients’ blood in oder to enlarge
 clogged arteries or veins.
 :::
 
@@ -854,6 +909,7 @@ earthquake, to unfolding airbags in cars, self-assembling robots, and more
 efficient packaging.
 
 ---
+> id: applications
 
 ## Applications of Geometry
 
@@ -884,7 +940,7 @@ safer and more efficient.
     x-media(src="images/cctv.jpg" lightbox credit="© Depositphotos / junrong" width=200 height=200)
 
 {.caption} Geometry was key when designing the Chinese TV building in Beijing –
-and to make sure it won't fall over.
+and to make sure it won’t fall over.
 ::: column(width=200)
     x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
