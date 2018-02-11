@@ -313,7 +313,7 @@ size of the [internal angles](target:int-angle) of the polygon:
       mtext tan
       mn.step-target.pill.blue(data-to="alpha") α
       mo(value="=") =
-      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/2,2)}]m
+      mn #[span.var ${round(Math.tan(pi/2-pi/n)/2,2)}]m
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
 [isosceles triangle](target:isosceles-triangle) is
@@ -327,9 +327,9 @@ size of the [internal angles](target:int-angle) of the polygon:
       mfrac #[mn 1]#[mn 2]
       mtext.pill.green.step-target(data-to="base") 1m
       mo ×
-      mtext.var.pill.yellow.step-target(data-to="apothem") ${round(Math.tan(Math.PI/2-Math.PI/n)/2,2)}
+      mtext.var.pill.yellow.step-target(data-to="apothem") ${round(Math.tan(pi/2-pi/n)/2,2)}
       mo =
-      mn #[span.var ${round(Math.tan(Math.PI/2-Math.PI/n)/4,2)}]
+      mn #[span.var ${round(Math.tan(pi/2-pi/n)/4,2)}]
       msup #[mtext m]#[mn 2]
 
 {.reveal(when="blank-5 blank-6" delay=4000)} The polygon consists of ${toWord(n)}
@@ -341,9 +341,9 @@ total area of the polygon is
       mo =
       mn.var ${n}
       mo ×
-      mn.var ${round(Math.tan(Math.PI/2-Math.PI/n)/4,2)}
+      mn.var ${round(Math.tan(pi/2-pi/n)/4,2)}
       mo =
-      mn #[span.var ${round(n×Math.tan(Math.PI/2-Math.PI/n)/4,2)}]
+      mn #[span.var ${round(n×Math.tan(pi/2-pi/n)/4,2)}]
       msup #[mtext m]#[mn 2]
 :::
 
@@ -363,17 +363,17 @@ All of its sides have the same length, and all of its angles are equal.
     x-geopad(width=210 height=120): svg
       circle.move(name="a" cx=60 cy=15)
       circle.move(name="b" cx=60 cy=105)
-      circle(name="c" x="a.rotate(Math.PI/2,b)")
-      circle(name="d" x="b.rotate(-Math.PI/2,a)")
+      circle(name="c" x="a.rotate(pi/2,b)")
+      circle(name="d" x="b.rotate(-pi/2,a)")
       path.fill.blue.light(x="polygon(a,b,c,d)")
       path.yellow(x="angle(a,b,c)" target="angle")
       path.yellow(x="angle(b,c,d)" target="angle")
       path.yellow(x="angle(c,d,a)" target="angle")
       path.yellow(x="angle(d,a,b)" target="angle")
-      path.red(x="segment(a,b,'bar')" target="side")
-      path.red(x="segment(b,c,'bar')" target="side")
-      path.red(x="segment(c,d,'bar')" target="side")
-      path.red(x="segment(d,a,'bar')" target="side")
+      path.red(x="segment(a,b)" target="side" mark="bar")
+      path.red(x="segment(b,c)" target="side" mark="bar")
+      path.red(x="segment(c,d)" target="side" mark="bar")
+      path.red(x="segment(d,a)" target="side" mark="bar")
 
 {.caption} A __square__ is a quadrilateral with [four equal sides](target:side)
 and [four equal angles](target:angle).
@@ -412,10 +412,10 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       circle.move(name="h" cx=105 cy=105 project="circle(e,distance(e,f))")
       circle(name="g" x="h.add(f).subtract(e)")
       path.fill.blue.light(x="polygon(e,f,g,h)")
-      path.red(x="segment(e,f,'bar')" target="side")
-      path.red(x="segment(f,g,'bar')" target="side")
-      path.red(x="segment(g,h,'bar')" target="side")
-      path.red(x="segment(h,e,'bar')" target="side")
+      path.red(x="segment(e,f)" target="side" mark="bar")
+      path.red(x="segment(f,g)" target="side" mark="bar")
+      path.red(x="segment(g,h)" target="side" mark="bar")
+      path.red(x="segment(h,e)" target="side" mark="bar")
 
 {.caption} A __Rhombus__ is a quadrilateral with [four equal sides](target:side).
 :::
@@ -434,10 +434,10 @@ certain important properties:
       circle.move(name="c" cx=50 cy=100)
       circle(name="d" x="b.add(c).subtract(a)")
       path.fill.blue.light(x="polygon(a,b,d,c)")
-      path.red(x="segment(a,b,'arrow')")
-      path.red(x="segment(c,d,'arrow')")
-      path.yellow(x="segment(a,c,'arrow2')")
-      path.yellow(x="segment(b,d,'arrow2')")
+      path.red(x="segment(a,b)" mark="arrow")
+      path.red(x="segment(c,d)" mark="arrow")
+      path.yellow(x="segment(a,c)" mark="arrow2")
+      path.yellow(x="segment(b,d)" mark="arrow2")
 
 {.caption} If both pairs of _opposite_ sides are [parallel](gloss:parallel), we
 get a __Parallelogram__.
@@ -449,10 +449,10 @@ get a __Parallelogram__.
       circle.move(name="g" cx=190 cy=60)
       circle(name="h" x="f.reflect(line(e,g))")
       path.fill.blue.light(x="polygon(e,f,g,h)")
-      path.red(x="segment(e,f,'bar')")
-      path.yellow(x="segment(f,g,'bar2')")
-      path.yellow(x="segment(g,h,'bar2')")
-      path.red(x="segment(h,e,'bar')")
+      path.red(x="segment(e,f,)" mark="bar")
+      path.yellow(x="segment(f,g)" mark="bar2")
+      path.yellow(x="segment(g,h)" mark="bar2")
+      path.red(x="segment(h,e,)" mark="bar")
 
 {.caption} If two pairs of _adjacent_ sides have the same length, we get a __Kite__.
 ::: column.quadrilateral
@@ -464,9 +464,9 @@ get a __Parallelogram__.
       circle.move(name="l" cx=160 cy=15 project="line(j,k).parallel(i)")
       path.fill.blue.light(x="polygon(i,j,k,l)")
       path(x="segment(i,j)")
-      path.red(x="segment(j,k,'arrow')")
+      path.red(x="segment(j,k)" mark="arrow")
       path(x="segment(k,l)")
-      path.red(x="segment(i,l,'arrow')")
+      path.red(x="segment(i,l)" mark="arrow")
 
 {.caption} If just one pair of opposite sides is parallel, we get a __Trapezium__.
 :::
@@ -553,7 +553,7 @@ true?
       circle.move(name="a" cx=80 cy=50)
       circle.move(name="b" cx=20 cy=190)
       circle.move(name="c" cx=220 cy=190)
-      circle(name="d" x="b.rotate(Math.PI, line(a,c).midpoint)")
+      circle(name="d" x="b.rotate(pi,line(a,c).midpoint)")
 
       path.red(x="segment(a,b)")
       path.red(x="segment(c,d)")
@@ -584,7 +584,7 @@ they are _always_ true, we need to _prove_ them:
       circle.move(name="a" cx=80 cy=80)
       circle.move(name="b" cx=20 cy=220)
       circle.move(name="c" cx=220 cy=220)
-      circle(name="d" x="b.rotate(Math.PI, line(a,c).midpoint)")
+      circle(name="d" x="b.rotate(pi,line(a,c).midpoint)")
 
       path.reveal.fill.red(when="diagonal" x="angle(a,o?c:b,d)" target="red-angle")
       path.reveal.fill.red(when="diagonal" x="angle(b,o?a:d,c)" target="red-angle")
@@ -641,7 +641,7 @@ quadrilateral has to be a parallelogram.
       circle.move(name="a1" cx=80 cy=80 label="A")
       circle.move(name="b1" cx=20 cy=220 label="B")
       circle.move(name="c1" cx=220 cy=220 label="C")
-      circle(name="d1" x="b1.rotate(Math.PI, line(a1,c1).midpoint)" label="D")
+      circle(name="d1" x="b1.rotate(pi,line(a1,c1).midpoint)" label="D")
       circle(name="m1" x="polygon(a1,b1,c1,d1).centroid" label="M")
 
       path.fill.yellow.light(x="polygon(b1,m1,c1)" target="triangles1")
@@ -739,7 +739,6 @@ shaped like a dart or arrow:
 
 ---
 > id: kites-1
-> goals: next-0 next-1 next-2
 
 ::: column(width=300)
 
@@ -777,26 +776,26 @@ You might have noticed that all kites are [[symmetric|similar]].
 _{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
 [[one of the diagonals|one of the sides|a midsegment]]._
 
-{.reveal(when="blank-1")} The diagonal splits the kite into [two congruent
+{.reveal.r(when="blank-1")} The diagonal splits the kite into [two congruent
 triangles](target:triangle1). We know that they are congruent from the
 [SSS](gloss:triangle-sss) condition: both triangles have [three congruent
 sides](target:sss) (red, green and blue).
-_{button.btn.btn-red.next-btn} Next_
+_{button.next-step} Next_
 
-{.reveal(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
+{.reveal.r(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
 [corresponding angles](target:angles) must also be congruent.
-_{button.btn.btn-red.next-btn} Next_
+_{button.next-step} Next_
 
-{.reveal(when="next-1")} This means, for example, that the [diagonal](target:d1)
+{.reveal.r(when="next-1")} This means, for example, that the [diagonal](target:d1)
 is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
 ends.
-_{button.btn.btn-red.next-btn} Next_
+_{button.next-step} Next_
 
-{.reveal(when="next-2")} We can go even further: if we draw the other diagonal,
+{.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
 we get [two more, smaller triangles](target:triangle2). These must also be
 congruent, because of the [SAS](gloss:triangle-sss) condition: the have the same
 [two sides and included angle](target:sas).
-_{button.btn.btn-red.next-btn} Next_
+_{button.next-step} Next_
 
 {.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
 the same as [angle β](target:beta). Since they are adjacent, [supplementary
@@ -808,7 +807,7 @@ angles](gloss:supplementary-angles) both α and β must be [[90]]°.
 
 ---
 > id: quadrilaterals-area
-> goals: draw-1 draw-2 next-0
+> goals: draw-1 draw-2
 
 ### Area of Quadrilaterals
 
@@ -878,11 +877,11 @@ left and the right](target:triangles-3) cancel out?_
 of this rectangle is the [[distance between|average of|length of]] the [parallel
 sides](target:bases) of the trapezium.
 
-{.reveal(when="blank-2")} The [{.step-target.pill.yellow} width](target:t-width)
+{.reveal.r(when="blank-2")} The [{.step-target.pill.yellow} width](target:t-width)
 of the rectangle is the distance between the [[midpoints|endpoints]] of the two
 non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
 called the __midsegment__ of the trapezium._
-_{button.btn.btn-red.next-btn.reveal(when="blank-3")} Next_
+_{button.next-step.reveal(when="blank-3")} Next_
 
 {.reveal(when="next-0")} Like with [triangles](gloss:triangle-midsegment), the
 midsegment of a trapezium is [[parallel to|perpendicular to|the same length as]]
@@ -1186,7 +1185,7 @@ We can also try making tessellations out of [irregular polygons](gloss:irregular
       circle.move(name="c" cx=225 cy=200 target="vertex")
 
       path.red.fill(name="x" x="polygon(a,b,c)")
-      path.yellow.fill(name="y" x="x.rotate(Math.PI,line(b,c).midpoint)")
+      path.yellow.fill(name="y" x="x.rotate(pi,line(b,c).midpoint)")
 
       for x in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
         for y in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
@@ -1205,10 +1204,10 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
       circle(name="m" x="point(100,80)")
       circle(name="p" x="point(100,150)")
       circle.move(name="q" cx=175 cy=130)
-      circle(name="r" x="p.rotate(Math.PI,line(m,q).midpoint)")
-      circle(name="s" x="p.rotate(Math.PI,m)")
-      circle(name="t" x="q.rotate(Math.PI,m)")
-      circle(name="u" x="q.rotate(Math.PI,line(m,p).midpoint)")
+      circle(name="r" x="p.rotate(pi,line(m,q).midpoint)")
+      circle(name="s" x="p.rotate(pi,m)")
+      circle(name="t" x="q.rotate(pi,m)")
+      circle(name="u" x="q.rotate(pi,line(m,p).midpoint)")
 
       path.fill.red(x="angle(p,m,q)" size=20)
       path.fill.blue(x="angle(q,m,r)" size=20)
@@ -1251,7 +1250,7 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
       circle.move(name="d" cx=200 cy=120)
 
       path.blue.fill(name="x" x="polygon(a,b,c,d)")
-      path.green.fill(name="y" x="x.rotate(Math.PI,line(c,d).midpoint)")
+      path.green.fill(name="y" x="x.rotate(pi,line(c,d).midpoint)")
 
       for x in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
         for y in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
@@ -1270,11 +1269,11 @@ vertex in the tessellation, we we get 360°.
       circle(name="p" x="point(100,150)")
       circle.move(name="q" cx=180 cy=140)
       circle.move(name="r" cx=165 cy=90)
-      circle(name="s" x="p.rotate(Math.PI,line(m,r).midpoint)")
-      circle(name="t" x="q.rotate(Math.PI,line(m,r).midpoint)")
-      circle(name="u" x="r.rotate(Math.PI,line(m,t).midpoint)")
-      circle(name="v" x="q.rotate(Math.PI,line(m,p).midpoint)")
-      circle(name="w" x="r.rotate(Math.PI,line(m,p).midpoint)")
+      circle(name="s" x="p.rotate(pi,line(m,r).midpoint)")
+      circle(name="t" x="q.rotate(pi,line(m,r).midpoint)")
+      circle(name="u" x="r.rotate(pi,line(m,t).midpoint)")
+      circle(name="v" x="q.rotate(pi,line(m,p).midpoint)")
+      circle(name="w" x="r.rotate(pi,line(m,p).midpoint)")
 
       path.fill.red(x="angle(p,m,r)" size=20)
       path.fill.blue(x="angle(r,m,t)" size=20)

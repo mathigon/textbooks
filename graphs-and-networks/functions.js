@@ -279,7 +279,7 @@ export function bridges3($section) {
       let y = +$c.attr('data-value');
       $c.css('fill', colours[x][y-2]);  // -2 because no 0s and 1s
     });
-    $section.score('c-' + x);
+    if (x === 'eo') $section.score('dropdown');
   }
 
   $section.$('select').change(colour);

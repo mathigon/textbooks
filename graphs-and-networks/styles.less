@@ -30,8 +30,6 @@
 #graph0 .link { stroke-dasharray: 70px 70px; stroke-dashoffset: 140px; transition: stroke-dashoffset 1.6s; }
 #graph0.noedges .link { stroke-dashoffset: 70px; }
 
-#gt_flags { max-width: none; margin-left: 50%; transform: translateX(-50%); }
-
 @media screen and (min-width: 600px) { .konigsberg-img { margin-top: -2em; } }
 @media screen and (min-width: 720px) { .konigsberg-img { margin-top: -3em; } }
 
@@ -70,11 +68,16 @@
 
 .frame .btn, .slide .btn, .tab .btn { position: absolute; bottom: 10px; left: 10px; }
 .frame select {
-  background-image: data-uri('svg/dropdown.svg');
+  .button();
+  background: @dark-grey data-uri('svg/dropdown.svg') no-repeat right 10px top 14px;
   background-size: 15px 8px;
-  background-position: right 10px top 14px;
-  background-repeat: no-repeat;
-  padding-right: 36px;
+  padding: 0 36px 0 1em;
+  height: 2em;
+  line-height: 2em;
+  font-weight: 600;
+  letter-spacing: .2px;
+  appearance: none;
+  &:hover, &:focus, &:active { background-color: lighten(@dark-grey, 15%); }
 }
 
 .four-colour-icon { width: 40px; height: 40px; padding: 8px; display: inline-block; margin: 0 5px; cursor: pointer; }

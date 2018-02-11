@@ -167,8 +167,8 @@ x-step#handshakes-3
     svg.graph(style="width: 90px; height: 90px;")
 
 
-x-step#handshakes-4.no-overflow
-  p: img#gt_flags(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
+x-step#handshakes-4
+  figure: img(src="/resources/graphs-and-networks/images/flags.jpg", width="855", height="100")/
   p On a different day, you are invited to a speed dating event for #[+var('m|5|2,8,1') m] boys and #[+var('f|4|2,8,1') f] girls. There are many small tables and every boy spends 5 minutes with each of the girls. How many individual &#8220;dates&#8221; are there in total?
   .row
     .grow: p In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is connected to all the vertices in #[+blank("the opposite|its own")] set, but none of the vertices in #[+blank("its own|the opposite")] set. Graphs which have this layout are called #[strong bipartite graphs].
@@ -224,7 +224,7 @@ x-step#bridges-2
   //- p.todo Interactive coming soon…
 
 
-x-step#bridges-3(goals="c-eo c-prime c-size")
+x-step#bridges-3(goals="dropdown")
   p Just like for the city maps before, we find that some graphs are possible while others are not. To help us understand why, let us label every vertex with its #[x-gloss(xid="degree") degree]:
 
   .frame.fill(style="padding: 20px")
@@ -232,7 +232,7 @@ x-step#bridges-3(goals="c-eo c-prime c-size")
     include svg/vertex-orders-1.svg
     p(style="margin: 1em 0 0"): strong These graphs are not possible:
     include svg/vertex-orders-2.svg
-    p: select.btn
+    p: select
       option(value="val", selected) Colour by value
       option(value="size") Colour by small and large
       option(value="prime") Colour by prime and composite

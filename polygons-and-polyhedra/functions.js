@@ -184,14 +184,6 @@ export function parallelogramsProof($step) {
   });
 }
 
-export function kites1($step) {
-  $step.$$('.next-btn').forEach(($n, i) => {
-    $n.one('click', () => $step.score('next-' + i));
-    $step.onScore('next-' + i, () => $n.exit('pop'));
-    $step.on('complete', () => $step.score('next-' + i));
-  });
-}
-
 export function quadrilateralsArea($step) {
   const $geopads = $step.$$('x-geopad');
 
@@ -222,12 +214,6 @@ export function quadrilateralsArea($step) {
     }
   });
   $step.onScore('draw-2', () => $geopads[1].setActiveTool('move'));
-
-  $step.$$('.next-btn').forEach(($n, i) => {
-    $n.one('click', () => $step.score('next-' + i));
-    $step.onScore('next-' + i, () => $n.exit('pop'));
-    $step.on('complete', () => $step.score('next-' + i));
-  });
 }
 
 // -----------------------------------------------------------------------------
