@@ -1,0 +1,23 @@
+<svg width="240" height="260">
+  <path d="M212.8,80.5l-9.5-5.6L177.4,88.7V70.1l-6.9-3.9L164,70.1V99l-17.7,9.1V88.2l-17.7,10V79.6l26.8-13.4v-9L145.9,52l-17.3,9.1V33L120,27l-8.6,6V61.1L96.3,52l-7.4,4.7v10l22.5,12.9V98.2L93.7,88.7v19.4L77.3,98.6l.4-27.2-8.6-5.2-6.5,5.2V89.1l-25-13.8L27.2,80V91.3l24.6,13.3-16,9.1v9.9l9.1,4.3,22.9-13.3,15.9,9-15.9,10,16.4,9.5h.4l-16,9.4L45.3,138.7l-9.5,5.2v10.4L52.2,162l-25,14.3v11.2L38,191.8,62.6,178v17.7l6,4.8,7.4-5.2V168.5l17.7-9v19.4l17.7-10.8v18.5l-22.5,13v9.9l7.4,4.8,15.1-9.1v28l8.6,6.1,8.6-6.1v-28l15.1,9.1,7.4-3.9V199.6l-22.5-13V168.1l17.7,9.9V159.9l17.7,9.5v26.7l6.9,4.8,6.5-4.8V178.4l24.2,13.4,11.2-4.7V176.3L189.5,162l14.7-8.2v-9.5l-8.2-5.1-23.8,12.9-16.8-8.6,16.4-9.5-15.5-9.9,15.9-10.4L196,127.5l8.2-4.3v-9.9l-15.6-8.7,24.2-13.8Zm-84.2,66H113.1l-8.2-12.9,7.8-13.9h15.5l7.3,13.9Z" fill="#7fcdee"/>
+
+  <line class="reveal" data-when="blank-0" data-animation="draw"                  x1="120" y1="133.1" x2="227.7" y2="70.9" stroke="#000" stroke-width="2"/>
+  <line class="reveal" data-when="blank-0" data-animation="draw" data-delay="150" x1="120" y1="133.1" x2="120" y2="8.7" stroke="#000" stroke-width="2"/>
+  <line class="reveal" data-when="blank-0" data-animation="draw" data-delay="300" x1="120" y1="133.1" x2="12.3" y2="70.9" stroke="#000" stroke-width="2"/>
+  <line class="reveal" data-when="blank-0" data-animation="draw" data-delay="450" x1="120" y1="133.1" x2="12.3" y2="195.3" stroke="#000" stroke-width="2"/>
+  <line class="reveal" data-when="blank-0" data-animation="draw" data-delay="600" x1="120" y1="133.1" x2="120" y2="257.5" stroke="#000" stroke-width="2"/>
+  <line class="reveal" data-when="blank-0" data-animation="draw" data-delay="750" x1="120" y1="133.1" x2="227.7" y2="195.3" stroke="#000" stroke-width="2"/>
+
+  <text class="reveal" data-when="blank-0"                  fill="rgba(0,0,0,.5)" transform="translate(144.9 90.6)" font-size="36" font-weight="700">1</text>
+  <text class="reveal" data-when="blank-0" data-delay="150" fill="rgba(0,0,0,.5)" transform="translate(77.3 90.6)" font-size="36" font-weight="700">2</text>
+  <text class="reveal" data-when="blank-0" data-delay="300" fill="rgba(0,0,0,.5)" transform="translate(51.5 144.3)" font-size="36" font-weight="700">3</text>
+  <text class="reveal" data-when="blank-0" data-delay="450" fill="rgba(0,0,0,.5)" transform="translate(77.2 195.7)" font-size="36" font-weight="700">4</text>
+  <text class="reveal" data-when="blank-0" data-delay="600" fill="rgba(0,0,0,.5)" transform="translate(144.8 195.7)" font-size="36" font-weight="700">5</text>
+  <text class="reveal" data-when="blank-0" data-delay="750" fill="rgba(0,0,0,.5)" transform="translate(170.6 145.3)" font-size="36" font-weight="700">6</text>
+
+  <g class="reveal" data-when="blank-1">
+    <path d="M216.9,67.7a116.9,116.9,0,0,0-72.6-48.9" fill="none" stroke="#b30469" stroke-width="6"/>
+    <polygon points="127.5 16.5 152.5 10.3 145.5 19.1 149.7 29.6 127.5 16.5" fill="#b30469"/>
+    <text transform="translate(187.5 30.4)" font-size="26" font-weight="700" fill="#b30469">60°</text>
+  </g>
+</svg>

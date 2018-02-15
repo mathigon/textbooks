@@ -7,6 +7,7 @@
 > warning: true
 
 ---
+> id: intro
 
 ## Introduction
 
@@ -43,22 +44,31 @@ difficult than you might think. To start with, we have to learn about
 _transformations_.
 
 ---
+> id: transformations
+> goals: t1 t2 t3
 
 ## Transformations
 
 A [__transformation__](gloss:transformation) is a specific set of rules that
 convert one geometric figure into another one. Here are a few examples:
 
-::: column(width=220)
-{.todo} ANIMATION
-::: column(width=220)
-{.todo} ANIMATION
-::: column(width=220)
-{.todo} ANIMATION
+::: column.r(width=200)
+    include svg/transform-1.svg
+    .play-btn
+::: column.r(width=200)
+    include svg/transform-2.svg
+    .play-btn
+::: column.r(width=200)
+    include svg/transform-3.svg
+    .play-btn
 :::
 
-The result of a transformation is called the __image__. The image of a figure
-`A` is usually denoted by `A'` (pronounced as “A prime”).
+{.reveal(when="t1 t2 t3")} The result of a transformation is called the
+__image__. The image of a figure `A` is usually denoted by `A'` (pronounced as
+“A prime”).
+
+---
+> id: rigid
 
 Initially, we will just think about transformations that don’t change the
 original figure’s size and shape. Imagine that it is made out of a solid
@@ -66,34 +76,47 @@ material like wood or metal: we can move, turn and flip it, but we can’t stret
 or otherwise deform it. These transformations are called
 [__rigid transformations__](gloss:rigid-transformation).
 
-Select all of these transformations which are rigid:
+Which of these transformations are rigid?
 
-{.todo} SELECT EXERCISE
+    x-picker.rigid
+      .item: img(src="images/picker-1.svg" width=130 height=240)
+      .item(data-error="not-rigid-1"): img(src="images/picker-2.svg" width=130 height=240)
+      .item: img(src="images/picker-3.svg" width=130 height=240)
+      .item(data-error="not-rigid-2"): img(src="images/picker-4.svg" width=130 height=240)
+      .item: img(src="images/picker-5.svg" width=130 height=240)
 
 ---
+> id: rigid-1
+> goals: t1 t2 t3
 
 For rigid transformations, the image is always
 [[congruent to|the same as|opposite to]] the original. There are three different
 types of rigid transformations:
 
-::: column.grow(width=220)
-{.todo} ANIMATION
+::: column.grow.r(width=200)
+    figure: include svg/rigid-1.svg
+    .play-btn
 
 {.text-center} A transformation that _moves_ a shape around is called a
 [__translation__](gloss:translation).
 
-::: column.grow(width=220)
-{.todo} ANIMATION
+::: column.grow.r(width=200)
+    figure: include svg/rigid-2.svg
+    .play-btn
 
 {.text-center} A transformation that _flips_ a shape over is called a
 [__reflection__](gloss:reflection).
 
-::: column.grow(width=220)
-{.todo} ANIMATION
+::: column.grow.r(width=200)
+    figure: include svg/rigid-3.svg
+    .play-btn
 
 {.text-center} A transformation that _spins_ a shape is called a
 [__rotation__](gloss:rotation).
 :::
+
+---
+> id: rigid-2
 
 We can also combine multiple types of transformation to create more complex
 ones – for example, first a translation and then a rotation.
@@ -101,6 +124,7 @@ ones – for example, first a translation and then a rotation.
 But first, let's have a look at each of these transformations in more detail.
 
 ---
+> id: translations
 
 ### Translations
 
@@ -114,39 +138,57 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20): svg
+      path.fill(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" style="fill: #d94c44; opacity: 0.6" label-colour="white")
+      path.fill(x="s1.shift(5,-1)" style="fill: #d94c44" label="A'" label-colour="white")
+      path.reveal(x="segment(point(4,5),point(9,5))" mark="arrow" when="blank-0" animation="draw")
+      path.reveal(x="segment(point(9,5),point(9,4))" mark="arrow" when="blank-1" animation="draw")
 
-{.caption} Translated by ([[2]], [[3]])
+{.caption} Translated by ([[5]], [[1]])
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20): svg
+      path.fill.red(x="circle(point(7,4),1.5)" name="s2" label="B" style="opacity: 0.6" label-colour="white")
+      path.fill.red(x="s2.shift(-4,-2)" label="B'" label-colour="white")
+      path.reveal(x="segment(point(6,5),point(2,5))" mark="arrow" when="blank-2" animation="draw")
+      path.reveal(x="segment(point(2,5),point(2,3))" mark="arrow" when="blank-3" animation="draw")
 
-{.caption} Translated by ([[4]], [[-1]])
+{.caption} Translated by ([[-4]], [[2]])
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20): svg
+      path.fill(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C" style="fill: #822b9b; opacity: 0.6" label-colour="white")
+      path.fill(x="s3.shift(4,2)" style="fill: #822b9b" label="C'" label-colour="white")
+      path.reveal(x="segment(point(2,6),point(6,6))" mark="arrow" when="blank-4" animation="draw")
+      path.reveal(x="segment(point(2,4),point(2,6))" mark="arrow" when="blank-5" animation="draw")
 
-{.caption} Translated by ([[-2]], [[3]])
+{.caption} Translated by ([[4]], [[-2]])
 :::
 
 ---
+> id: translations-1
 
 Now it’s your turn – translate the following shapes as shown:
 
 ::: column(width=220)
-{.todo} EXERCISE
 
-{.caption} Translated by (3, 1)
+    x-geopad(width=220 height=140 grid=20): svg
+      path.fill.drag(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" style="fill: #d94c44")
+
+{.caption} Translate by (3, 1)
 ::: column(width=220)
-{.todo} EXERCISE
 
-{.caption} Translated by (-2 -4)
+    x-geopad(width=220 height=140 grid=20): svg
+
+{.caption} Translate by (-2 -4)
 ::: column(width=220)
-{.todo} EXERCISE
 
-{.caption} Translated by (-1, 5)
+    x-geopad(width=220 height=140 grid=20): svg
+
+{.caption} Translate by (-1, 5)
 :::
 
 ---
+> id: reflections
 
 ### Reflections
 
@@ -165,6 +207,7 @@ Draw the line of reflection in each of these examples:
 :::
 
 ---
+> id: reflections-1
 
 Now it’s your turn – draw the reflection of each of these shapes:
 
@@ -177,11 +220,13 @@ Now it’s your turn – draw the reflection of each of these shapes:
 :::
 
 ---
+> id: reflections-2
 
 Notice that if a point lies on the line of reflection, its image is
 [[the same as|congruent to|smaller than]] the original point.
 
 ---
+> id: reflections-3
 
 In all of the examples above, the line of reflection was horizontal or vertical,
 which made it easy to draw the reflections. If that is not the case, the
@@ -205,6 +250,7 @@ that they match the original shape.
 :::
 
 ---
+> id: rotations
 
 ### Rotations
 
@@ -223,6 +269,7 @@ Use the protractor tool to find the angle of these rotations:
 :::
 
 ---
+> id: rotations-1
 
 Drawing a rotation is a bit more difficult. Like for reflections, we first have
 to rotate every point in a shape individually, and then connect the lines in the
@@ -250,6 +297,7 @@ image, to match the original shape.
 :::
 
 ---
+> id: composition
 
 ### Composition of Transformations
 
@@ -282,6 +330,7 @@ angle is twice the angle between the lines of reflection.
 :::
 
 ---
+> id: composition-1
 
 Transformations are an important concept in many parts of mathematics, not just
 geometry. For example, you can transform [_functions_](gloss:function) by
@@ -290,6 +339,8 @@ don't even have a visual representation at all. You'll learn more about these
 transformations in future chapters, but for now let's move on to symmetry.
 
 ---
+> id: symmetry
+> goals: play-0 play-1
 
 ## Symmetry
 
@@ -302,14 +353,20 @@ a certain transformation.
 
 ::: column.grow
 
-    p.todo animation
+    .symmetry
+      img(src="images/symmetry-1.png" width=320 height=240)
+      img(src="images/symmetry-1.png" width=320 height=240)
+      .play-btn
 
 {.text-center} We can reflect this butterfly, and it looks the same afterwards.
 We say that it has __reflectional symmetry__.
 
 ::: column.grow
 
-    p.todo animation
+    .symmetry
+      img(src="images/symmetry-2.jpg" width=320 height=240)
+      img(src="images/symmetry-2.jpg" width=320 height=240)
+      .play-btn
 
 {.text-center} We can rotate this flower, and it looks the same afterwards. We
 say that it has __rotational symmetry__.
@@ -337,15 +394,18 @@ Draw the axes of symmetry in all of these shapes:
 :::
 
 ---
+> id: alphabet
 
 Many letters in the alphabet have reflectional symmetry. Select all the ones
 that do:
 
-    x-select
-      for l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split()
-        .letter= l
-
-{.todo} SELECT INTERACTIVE
+    x-picker.letters
+      - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
+      for l, i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+        if 'FGJKLNPQRSZ'.indexOf(l) < 0
+          .item(style=`color: ${c[i%12]}`)= l
+        else
+          .item(data-error="letter-not-symmetric" style=`color: ${c[i%12]}`)= l
 
 ---
 
@@ -387,6 +447,7 @@ palindromic. This makes that more resilient to mutations or damage – because
 there is a second backup copy of every piece.
 
 ---
+> id: rotational-symmetry
 
 ### Rotational Symmetry
 
@@ -403,7 +464,9 @@ snowflake has order [[6]].
 The angle of each rotation is `"360°"/"order"`. In the snowflake, this is
 `"360°"/6` = [[60]]°.
 ::: column(width=240)
-{.todo} graphic
+
+    include svg/snowflake.svg
+
 :::
 
 ---
@@ -411,11 +474,17 @@ The angle of each rotation is `"360°"/"order"`. In the snowflake, this is
 Find the order and the angle of rotation, for each of these shapes:
 
 ::: column(width=220)
-{.todo} flower
+    img(src="images/clover.jpg" width=200 height=200)
+
+{.caption} Order [[4]], angle [[90]]°
 ::: column(width=220)
-{.todo} snowflake
+    img(src="images/playing-card.jpg" width=200 height=200)
+
+{.caption} Order [[2]], angle [[180]]°
 ::: column(width=220)
-{.todo} kleeblatt
+    img(src="images/flower.jpg" width=200 height=200)
+
+{.caption} Order [[8]], angle [[45]]°
 :::
 
 ---
@@ -431,6 +500,7 @@ Now complete these shapes, so that they have rotational symmetry:
 :::
 
 ---
+> id: groups
 
 ## Symmetry Groups
 
@@ -441,68 +511,134 @@ Some shapes have more than one symmetry – let's have a look at the
 [square](gloss:square) as a simple example.
 
 ::: column(width=400)
-{.todo} images
+
+    .cubes
+      img.cube.reveal(src="images/cube-0.svg" width=80 height=80 when="blank-1 blank-2 blank-3" delay=1000 animation="pop")
+      img.cube.reveal(src="images/cube-1.svg" width=80 height=80 when="blank-1" animation="pop")
+      img.cube.reveal(src="images/cube-2.svg" width=80 height=80 when="blank-2" animation="pop")
+      img.cube.reveal(src="images/cube-3.svg" width=80 height=80 when="blank-3" animation="pop")
+      img.cube.reveal(src="images/cube-4.svg" width=80 height=80 when="blank-0" animation="pop")
+      img.cube.reveal(src="images/cube-5.svg" width=80 height=80 when="blank-0" delay=200 animation="pop")
+      img.cube.reveal(src="images/cube-6.svg" width=80 height=80 when="blank-0" delay=400 animation="pop")
+      img.cube.reveal(src="images/cube-7.svg" width=80 height=80 when="blank-0" delay=600 animation="pop")
 
 ::: column.grow(width=200)
 You have already shown above that a square has [[4]] axes of reflection.
 
-{.subsection(needs="blank-0")} It also has rotational symmetry by [[90]]°,
-[[180]]° and [[270°]].
+{.reveal(when="blank-0")} It also has rotational symmetry by [[90]]°,
+[[180]]° and [[270]]°.
 
-{.subsection(needs="blank-1 blank-2 blank-3")} And finally, we can think
+{.reveal(when="blank-1 blank-2 blank-3")} And finally, we can think
 about "doing nothing" as another special kind of symmetry – because the result
-is (obviously) the same as before. This is sometimes called the _identity_.
+is (obviously) the same as before. This is sometimes called the __identity__.
 
-In total, we have found [[8]] different "symmetries of the square".
+{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} In total, we have found [[8]]
+different "symmetries of the square".
 :::
 
 ---
 
-Now that we've found all symmetries of the square, we can start doing some more
-interesting mathematics with them. For example, we can _add_ different
-symmetries to get new ones:
+Now we can actually start doing some arithmetic with these symmetries. For
+example, we can _add_ two symmetries to get new ones:
 
-{.todo} animated example
+::: column.grow
+
+    p
+      img.cube.reveal(src="images/cube-1.svg" width=40 height=40)
+      | +
+      img.cube.reveal(src="images/cube-1.svg" width=40 height=40)
+      | =
+      img.cube.reveal(src="images/cube-2.svg" width=40 height=40)
+
+::: column.grow
+
+    p
+      img.cube.reveal(src="images/cube-2.svg" width=40 height=40)
+      | +
+      img.cube.reveal(src="images/cube-6.svg" width=40 height=40)
+      | =
+      img.cube.reveal(src="images/cube-4.svg" width=40 height=40)
+
+:::
+
+{.todo} animate
 
 ---
+> id: calculator
+> goals: calculate
 
 Whenever you add two symmetries of a square, you get a new one. Here is a
 "symmetry calculator" where you can try it yourself:
 
-{.todo} symmetry calculator
+    .calculator
+      .display
+        .clear ×
+      .button + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
+      .button + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
+      .button + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
+      .button + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
+      .button + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
+      .button + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
+      .button + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
+      .button + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
 
 ---
 
-You might have noticed that adding symmetries is very similar to adding
-integers:
+Spend some time playing around with the symmetry calculator, and try to find any
+patterns. For example, adding two rotations will always give
+[[a rotation|a reflection]] (or the identity), and adding two reflections will
+always give [[another rotation|a reflection]] (or the identity).
 
-{.text-center} (1) Adding two __{.orange}symmetries__/__{.cyan}numbers__ always
-gives another __{.orange}symmetry__/__{.cyan}number__.
+In addition, changing the order in which you add two symmetries gives
+[[a different|the same]] result!
+
+{.todo} example
+
+---
+
+In summary, adding symmetries is actually very similar to adding integers:
+
+{.text-center} (1) Adding two __{.orange}symmetries__/__{.cyan}integers__ always
+gives another __{.orange}symmetry__/__{.cyan}integers__:
 
 ::: column.grow
-{.todo} animation
+
+    p.text-center
+      img.cube.reveal(src="images/cube-2.svg" width=40 height=40)
+      | +
+      img.cube.reveal(src="images/cube-6.svg" width=40 height=40)
+      | =
+      img.cube.reveal(src="images/cube-4.svg" width=40 height=40)
+
 ::: column.grow
-{.numbers} `12 + 7 = 19`
+{.text-center} `12 + 7 = 19`
 :::
 
-{.text-center} (2) Adding __{.orange}symmetries__/__{.cyan}numbers__ is
-[_associative_](gloss:associative).
+{.text-center} (2) Adding __{.orange}symmetries__/__{.cyan}integers__ is
+[_associative_](gloss:associative):
 
 ::: column.grow
 {.todo} animation
 ::: column.grow
-{.numbers} `(4 + 2) + 5 = 4 + (2 + 5)`
+{.text-center} `(4 + 2) + 5 = 4 + (2 + 5)`
 :::
 
-{.text-center} (3) Every __{.orange}symmetry__/__{.cyan}number__ has an
-_inverse_:  
-another __{.orange}symmetry__/__{.cyan}number__ which, when added, gives the
-identity.
+{.text-center} (3) Every __{.orange}symmetry__/__{.cyan}integer__ has an
+_inverse_,  
+another __{.orange}symmetry__/__{.cyan}integer__ which, when added,
+gives the identity.
 
 ::: column.grow
-{.todo} animation
+
+    p.text-center
+      img.cube.reveal(src="images/cube-1.svg" width=40 height=40)
+      | +
+      img.cube.reveal(src="images/cube-3.svg" width=40 height=40)
+      | =
+      img.cube.reveal(src="images/cube-0.svg" width=40 height=40)
+
 ::: column.grow
-{.numbers} `4 + (-4) = 0`
+{.text-center} `4 + (-4) = 0`
 :::
 
 ---
@@ -534,6 +670,7 @@ board games, the behaviour of viruses in medicine, and much more…
 :::
 
 ---
+> id: wallpaper-groups
 
 ## Wallpaper Groups
 
@@ -545,38 +682,67 @@ __Translational symmetry__ does not work for isolated objects like flowers or
 butterflies, but for patterns that extend into every direction:
 
 ::: column.grow
-{.todo} honeycomb
+
+    .symmetry(style="width: 320px; height: 240px;")
+      img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
+      img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
+      .play-btn
+
+{.caption} Hexagonal honyecomb
 ::: column.grow
-{.todo} wallpaper
+
+    .symmetry(style="width: 320px; height: 240px;")
+      img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
+      img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
+      .play-btn
+
+{.caption} Ceramic wall tiling
 :::
 
 ---
+> id: footsteps
+> goals: slider
 
-And there even is a fourth kind of symmetry, __glide reflections__, which is a
-combination of a translation and a reflection. _The translation is in a direction
-parallel to the line of reflection._
+In addition to reflectional, rotational and translational symmetry, there even
+is a fourth kind: __glide reflections__. This is a combination of a reflection
+and a translation in the same direction as the axis of reflection.
 
-::: column.grow
-{.todo} footsteps
-![](https://plus.maths.org/issue38/features/livio/figure5.jpg)
-::: column.grow
-{.todo} wallpaper
-:::
+    figure
+      .footsteps
+         img(src="images/footsteps.svg" width=650 height=120)
+         img(src="images/footsteps.svg" width=650 height=120)
+      x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
 
 ---
 
-Just like we did for the square above, we can find the [symmetry group](gloss:symmetry-group)
-of a certain pattern, that contains all of its symmetries.
+A patterns can have more than one type of symmetry. And just like we did squares,
+we can find the [symmetry group](gloss:symmetry-group), which contains all its
+different symmetries.
 
-These groups don't tell you anything about what exactly the pattern _looks_ like
-(e.g. its colours and shapes), just how it is _repeated_. Therefore multiple
-different patterns can have the same symmetry group:
+These groups don't tell you much about exactly how the pattern _looks_ like
+(e.g. its colours and shapes), just how it is _repeated_. Multiple different
+patterns can have the same symmetry group – as long are arranged and repeated
+in the same way.
 
 ::: column.grow
-{.todo} two shapes with the same group
+
+    .text-center
+      img(src="images/wallpaper-1.svg" width=150 height=150 style="margin: 0 10px")
+      img(src="images/wallpaper-2.svg" width=150 height=150 style="margin: 0 10px")
+
+{.caption} These two patterns have the same symmetries, even though they look
+very different. But symmetries are not about colours, or superficial shapes.
 ::: column.grow
-{.todo} two shapes with the same group
+
+    .text-center
+      img(src="images/wallpaper-3.svg" width=150 height=150 style="margin: 0 10px")
+      img(src="images/wallpaper-4.svg" width=150 height=150 style="margin: 0 10px")
+
+{.caption} These two patterns also have the same symmetries – even though they
+look more similar to the corresponding patterns on the left, than to each other.
 :::
+
+---
 
 It turns out that, while there are infinitely many possible patterns, they all
 have one of just 17 different symmetry groups. These are called the __Wallpaper
@@ -642,33 +808,48 @@ of reflection in the 17 examples below:
 Unfortunately there is no simple reason why the number is _seventeen_, and
 proving it requires much more advanced mathematics.
 
+---
+> id: drawing
+> goals: draw-1 draw-2 switch
+
 Instead, you can try drawing your own repeated patterns for each of the 17
 wallpaper groups:
 
     include ./components/wallpaper
     x-wallpaper
-
-{.todo} drawings by other students
+    .other-students.reveal(when="draw-1 switch")
+      h4 Examples of other students’ tessellations
+      .row.padded-thin
+        div(style="width: 224px"): img(src="images/user/wallpaper-1.png" width=240 height=160)
+        div(style="width: 224px"): img(src="images/user/wallpaper-2.png" width=240 height=160)
+        div(style="width: 224px"): img(src="images/user/wallpaper-3.png" width=240 height=160)
 
 ---
 
 ::: column.grow
 The Wallpaper groups were all about flat, two-dimensional patterns. We can do
 something similar for three-dimensional patterns: these are called
-crystallographic groups, and there are 219 of them. In addition to translation,
-reflection, rotation, and glide reflection, they include symmetries like glide
-planes and screw axes (think about the motion when unscrewing a bottle).
+crystallographic groups, and there are 219 of them!
+
+In addition to translation, reflection, rotation, and glide reflection, these
+groups include symmetries like __glide planes__ and __screw axes__ (think about
+the motion when unscrewing a bottle).
 ::: column(width=300)
-{.todo} crystal image
+
+    img(src="images/crystal.jpg" width=300 height=240)
+
+{.caption} Boron-nitride has its molecules arranged in this crystal lattice,
+which has a 3-dimensional symmetry group.
 :::
 
 ---
+> id: planets
 > class: fill dark stars
 
 ## Symmetry in Physics
 
-All of the symmetries we looked at so far were _visual_ in some sense: shapes,
-images or patterns we can see. In fact, symmetry can be a much wider concept –
+All of the symmetries we looked at so far were _visual_ in some sense – shapes,
+images or patterns we can see. In fact, symmetry can be a much wider concept:
 _immunity to change_.
 
 For example, if you like apple juice just as much as you like orange juice, then
@@ -683,50 +864,56 @@ For example, our experience tells us that the laws of motion are the same
 everywhere in the universe. It doesn't matter if you conduct a physics
 experiment in London, or in New York, or on Mars – the laws of motion should
 always be the same. In a way, they have [[translational symmetry|reflectional symmetry]].
+
+{.reveal(when="blank-0")} Similarly, it shouldn't matter if we conduct an
+experiment while facing North, or South, or East or West: the laws of nature
+have [[rotational symmetry|glide reflection symmetry]].
+
+{.reveal(when="blank-1")} And finally, it shouldn't matter if we conduct an
+experiment today, or tomorrow, or in a year. The laws of nature are
+"time-symmetric".
 ::: column(width=300)
-{.todo} IMAGE
+
+    include svg/planets.svg
+
 :::
 
 ---
 > class: fill dark stars
+
+These symmetries might initially seem quite meaningless, but they can actually
+tell us a lot about our universe. Emmy Noether managed to prove that every
+symmetry corresponds to a certain physical quantity that is _conserved_.
+
+For example, time-symmetry implies that _Energy_ must be conserved in our
+Universe: you can convert energy from one type to another (e.g. light, or heat
+or electricity), but you can never create or destroy energy. The total amount
+of energy in the Universe will always stay constant.
+
+    figure
+      x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
+      p.caption CERN is the world's largest particle accellerator. Scientists smash together fundamental particles at enourmous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
+
+::: column(width=220)
+
+    x-media(src="images/higgs.png" width=220 height=150)
+    p.caption The paths taken by particle fragments after a collision.
 
 ::: column.grow
-Similarly, it shouldn't matter if we conduct an experiment while facing North,
-or South, or East or West: the laws of nature have [[rotational symmetry|glide reflection symmetry]].
-
-And finally, it shouldn't matter if we conduct an experiment today, or tomorrow,
-or in a year. The laws of nature are "time-symmetric".
-::: column(width=300)
-{.todo} IMAGE
-:::
-
----
-> class: fill dark stars
-
-These symmetries might all seem meaningless and obvious, but they can actually
-tell us a lot about how the corresponding laws of nature must look like. Emmy
-Noether managed to prove that every symmetry corresponds to a certain physical
-quantity that is _conserved_. One example is Energy: the universe will always
-contain the same amount of energy. You cannot create or destroy energy, just
-convert it between different types (like heat or light).
-
-{.todo} conservation of energy image
-
-Just knowing about symmetry allows physicists to derive most of the laws of
-nature that govern the entire universe – without ever actually having to do an
-experiment.
-
-{.todo} large hardon collider image
+It turns ou that, just by knowing about symmetry, physicists can derive most
+laws of nature that govern out universe – without ever having to do an
+experiment or observation.
 
 Symmetry can even predict the existence of fundamental particles. One example is
-the famous Higgs Boson. It was predicted in the 1960s by theoretical physicists,
-but not discovered experimentally until 2012.
+the famous __Higgs Boson__: it was predicted in the 1960s by theoretical
+physicists, but not observed in the real world until 2012.
+:::
 
 ---
 
 ## Similarity
 
-So far, all we have only looked at [[rigid|congruent|visual]] transformations.
+So far, all we have just looked at [[rigid|congruent|visual]] transformations.
 Now, let’s think about one that is not: a [__dilation__](gloss:dilation) changes
 a shape’s size by making it larger or smaller.
 

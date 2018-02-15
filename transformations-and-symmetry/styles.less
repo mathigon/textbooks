@@ -8,6 +8,126 @@
 @import "./components/wallpaper";
 
 
+.play-btn {
+  .svgBackground('<path d="M14,38V10L38,24Z" fill="white"/>', 48, 48, fade(#222, 70%));
+  top: 50%;
+  left: 50%;
+  margin: -24px;
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  cursor: pointer;
+  transition: transform .2s;
+  &:hover { transform: scale(1.1); }
+}
+
+x-geopad .paths path.drag { cursor: move; pointer-events: none; }
+
+// -----------------------------------------------------------------------------
+
+.letters {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letters .item {
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  color: black;
+  margin: 0 6px;
+}
+
+// -----------------------------------------------------------------------------
+
+.symmetry {
+  position: relative;
+  overflow: hidden;
+  max-width: 320px;
+  margin: 0 auto;
+  img:nth-child(2) { position: absolute; left: 0; top: 0; opacity: 0.5; }
+}
+
+// -----------------------------------------------------------------------------
+
+p .cube { margin: 0 4px; }
+
+.cubes {
+  .clearfix();
+  .cube { display: block; float: left; margin: 10px; }
+}
+
+.calculator {
+  .clearfix();
+  background: @grey;
+  max-width: 420px;
+  padding: 8px;
+  margin: 2em auto;
+  border-radius: 6px;
+  user-select: none;
+
+  .display {
+    background: @light-grey;
+    border-radius: 4px;
+    padding: 8px;
+    height: 40px;
+    position: relative;
+    margin: 6px 6px 12px 6px;
+    img { width: 40px; height: 40px; position: absolute; }
+  }
+
+  .clear {
+    width: 24px;
+    height: 24px;
+    background: @grey;
+    color: @light-grey;
+    position: absolute;
+    right: 12px;
+    border-radius: 12px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 24px;
+    top: 16px;
+  }
+
+  .button {
+    background: lighten(@grey, 15%);
+    border-radius: 4px;
+    float: left;
+    width: 70px;
+    height: 40px;
+    padding: 8px;
+    margin: 6px;
+    line-height: 40px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 3px 0 @dark-grey;
+    cursor: pointer;
+    transition: background .1s, box-shadow .1s, transform .1s;
+    &:hover { background: lighten(@grey, 20%); }
+    &:active { box-shadow: none; transform: translateY(3px); }
+    .cube { margin: 0 4px; }
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.footsteps {
+  width: 600px;
+  height: 120px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(to right, #f2994a, #f2c94c);
+
+  img { max-width: none; opacity: .4; position: absolute; top: 0; left: -50px; }
+}
+
+// -----------------------------------------------------------------------------
+
 .stars .background {
   position: absolute;
   width: 100%;
