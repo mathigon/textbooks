@@ -33,6 +33,18 @@ quadratic:
   text: A __quadratic__ is a polynomial of degree 2. For example, `x^2 - 2x + 3`
     is a quadratic.
 
+associative:  # <<<
+  title: Associativity
+  text: TODO
+
+function:  # <<<
+  title: Function
+  text: TODO
+
+function-graph:  # <<<
+  title: Graphs of Functions
+  text: TODO
+
 
 
 # ==============================================================================
@@ -65,6 +77,10 @@ congruent: # <<<
   title: Congruence
   text: In geometry, two figures are __congruent__ if are identical in size,
     shape and measure.
+
+congruent-angles: # <<<
+  title: Congruent Angles
+  text: TODO
 
 angle-bisector: # <<<
   title: Angle bisector
@@ -163,6 +179,18 @@ rigid-transformation:
   text: A __rigid transformation__ (or __isometry__) is a transformation that
     doesn't change the size or shape of a geometric figure.
 
+translation:  # <<<
+  title: Translation
+  text: TODO
+
+reflection:  # <<<
+  title: Reflection
+  text: TODO
+
+rotation:  # <<<
+  title: Rotation
+  text: TODO
+
 laws-of-nature:
   title: Laws of Nature
   text: The "laws of nature" is the name given collectively to a set of rules
@@ -178,6 +206,10 @@ axis-of-symmetry:  # <<<
   title: Axis of Symmetry
   text: A line of symmetry is a line that can be drawn to divide a figure into
     equal halves.
+
+symmetry-group:  # <<<
+  title: Symmetry Group
+  text: TODO
 
 rotational-symmetry:
   title: TITLE
@@ -252,6 +284,10 @@ triangle-legs:
   title: Legs of a triangle
   text: The two __legs__ of a right-angled triangle are the two shorter sides
     (not the hypotenuse). They are adjacent to the right angle.
+
+triangle-aa: # <<<
+  title: AA Similarity Condition for Triangles
+  text: TODO
 
 triangle-sss: # <<<
   title: SSS Condition for Triangles

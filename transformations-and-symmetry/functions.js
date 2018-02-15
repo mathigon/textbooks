@@ -7,178 +7,198 @@
 import './components/wallpaper';
 import { Draggable, $N } from '@mathigon/boost';
 
+
+// -----------------------------------------------------------------------------
+
+function play($step, $el, duration, score, callback) {
+  const $play = $el.$('.play-btn');
+  let playing = false;
+
+  $el.on('click', () => {
+    if (playing) return;
+    playing = true;
+
+    $play.exit('pop');
+    setTimeout(callback, 500);
+    setTimeout(() => {
+      $step.score(score);
+      $play.enter('pop');
+      playing = false;
+    }, 1000 + duration);
+  });
+}
+
 export function transformations($step) {
-  const $play = $step.$$('.play-btn');
-  const $image = $step.$$('.image');
+  const $animations = $step.$$('.animation');
+  const $images = $step.$$('.image');
 
-  $play[0].on('click', () => {
-    $play[0].exit('pop');
-    $image[0].animate({transform: ['none', 'translate(95px,45px) rotate(18deg) scale(1.2)']}, 1000, 500);
-    setTimeout(() => $step.score('t1'), 1500);
-    setTimeout(() => $play[0].enter('pop'), 2000);
+  play($step, $animations[0], 1000, 't1', () => {
+    $images[0].animate({transform: ['none', 'translate(95px,45px) rotate(18deg) scale(1.2)']}, 1000);
   });
 
-  $play[1].on('click', () => {
-    $play[1].exit('pop');
-    $image[1].animate({transform: ['none', 'translate(80px,100px) scale(0.9,1.3) rotate(-30deg)']}, 1000, 500);
-    setTimeout(() => $step.score('t2'), 1500);
-    setTimeout(() => $play[1].enter('pop'), 2000);
+  play($step, $animations[1], 1000, 't2', () => {
+    $images[1].animate({transform: ['none', 'translate(80px,100px) scale(0.9,1.3) rotate(-30deg)']}, 1000);
   });
 
-  $play[2].on('click', () => {
-    $play[2].exit('pop');
-    $image[2].animate({transform: ['translate(-20px,40px) rotate(-30deg)', 'rotate(30deg) translate(135px,0) scale(0.8)'], rx: ['50px', 0], ry: ['50px', 0]}, 1000, 500);
-    setTimeout(() => $step.score('t3'), 1500);
-    setTimeout(() => $play[2].enter('pop'), 2000);
+  play($step, $animations[2], 1000, 't3', () => {
+    $images[2].animate({transform: ['translate(-20px,40px) rotate(-30deg)', 'rotate(30deg) translate(135px,0) scale(0.8)'], rx: ['50px', 0], ry: ['50px', 0]}, 1000);
   });
 }
 
 export function rigid1($step) {
-  const $play = $step.$$('.play-btn');
-  const $image = $step.$$('.image');
+  const $animations = $step.$$('.animation');
+  const $images = $step.$$('.image');
   const $lines = $step.$$('line');
+  const $arrow = $step.$('.arrow-head');
 
-  $play[0].on('click', () => {
-    $play[0].exit('pop');
-    $image[0].animate({transform: ['none', 'translate(90px,-40px)']}, 1000, 500);
-    $lines[0].enter('draw', 1000, 500);
-    setTimeout(() => $step.score('t1'), 1500);
-    setTimeout(() => $play[0].enter('pop'), 2000);
+  play($step, $animations[0], 1000, 't1', () => {
+    $arrow.hide();
+    $images[0].animate({transform: ['none', 'translate(90px,-40px)']}, 1000, 0, 'linear');
+    $lines[0].enter('draw', 1000);
+    $arrow.enter('fade', 400, 900);
   });
 
-  $play[1].on('click', () => {
-    $play[1].exit('pop');
-    $lines[0].enter('draw', 1000, 500);
-    $image[1].animate({transform: ['none', 'rotate(54deg) translate(230px,-118px) scaleX(-1)']}, 1000, 1500);
-    setTimeout(() => $step.score('t2'), 2500);
-    setTimeout(() => $play[1].enter('pop'), 3000);
+  play($step, $animations[1], 2000, 't2', () => {
+    $images[1].transform = 'none';
+    $lines[1].enter('draw', 1000);
+    $images[1].animate({transform: 'rotate(54deg) translate(230px,-118px) scaleX(-1)'}, 1000, 1000);
   });
 
-  $play[2].on('click', () => {
-    $play[2].exit('pop');
-    for (let i=2; i<6; ++i) $lines[i].enter('draw', 500, 500);
-    $image[2].animate({transform: 'translate(-202px,-71px) rotate(-84deg)', }, 1000, 1000);
-    setTimeout(() => $step.score('t3'), 2000);
-    setTimeout(() => $play[2].enter('pop'), 2500);
+  play($step, $animations[2], 2000, 't3', () => {
+    $images[2].transform = 'none';
+    for (let i=2; i<6; ++i) $lines[i].enter('draw', 500);
+    $images[2].animate({transform: 'rotate(84deg)', }, 1000, 1000);
   });
 }
 
 export function translations1($step) {
-  const $svgs = $step.$$('x-geopad svg');
-  const $paths = $step.$$('path.fill');
+  const initial = [{x: 40, y: 40}, {x: 120, y: 0}, {x: 20, y: 20}];
+  const correct = [{x: 100, y: 20}, {x: 40, y: 40}, {x: 120, y: 40}];
 
-  let d1 = new Draggable($paths[0], $svgs[0], '', 10, true, 20);
-  d1.on('move', e => console.log(e));
-  console.log(d1);
+  $step.$$('svg').forEach(($s, i) => {
+    const $polygons = $s.$$('polygon');
+    $polygons[0].transform = `translate(${initial[i].x}px, ${initial[i].y}px)`;
+
+    const drag = new Draggable($polygons[1], $s, 'xy', 10, true, 20);
+    drag.position = initial[i];
+    drag.on('end', () => {
+      if (drag.position.x === correct[i].x && drag.position.y === correct[i].y) {
+        drag.disabled = true;
+        $step.score('drag-' + i);
+        $step.addHint('correct');
+        $polygons[1].css('cursor', 'default');
+      }
+    });
+  });
 }
 
 export function symmetry($step) {
-  const $play = $step.$$('.play-btn');
+  const $symmetries = $step.$$('.symmetry');
   const $images = $step.$$('img:nth-child(2)');
 
-  $play[0].on('click', () => {
-    $play[0].exit('pop');
-    $images[0].animate({transform: ['none', 'scaleX(-1)']}, 2000, 500);
-    setTimeout(() => {
-      $play[0].enter('pop');
-      $step.score('play-0')
-    }, 2500);
+  play($step, $symmetries[0], 1500, 'play-0', () => {
+    $images[0].animate({transform: ['none', 'scaleX(-1)']}, 1500);
   });
 
-  $play[1].on('click', () => {
-    $play[1].exit('pop');
-    $images[1].animate({transform: ['none', 'rotate(60deg)']}, 2000, 500);
-    setTimeout(() => {
-      $play[1].enter('pop');
-      $step.score('play-1')
-    }, 2500);
+  play($step, $symmetries[1], 1500, 'play-1', () => {
+    $images[1].animate({transform: ['none', 'rotate(60deg)']}, 1500);
   });
 }
 
 // -----------------------------------------------------------------------------
 
-function addSymmetry(a, b) {
+export function addSymmetries($step) {
+  $step.$$('.sym-sum').forEach(($s, i) => {
+    $s.one('click', () => {
+      $step.score('sum-' + i);
+      $s.removeClass('pending');
+    });
+  });
+}
+
+function add(a, b) {
   if (a < 4 && b < 4) return (a + b) % 4;  // rotation + rotation
   if (a >= 4 && b >= 4) return (a - b + 4) % 4;  // reflection + reflection
   if (a > b) return 4 + ((a - b) % 4);  // reflection + rotation
   return 4 + ((a + b) % 4);  // rotation + reflection
 }
 
-function makeSquare(i, x, $parent) {
+function makeSquare(i, x, $parent, delay=0) {
   let $el = $N('img', {
     src: `/resources/transformations-and-symmetry/images/cube-${i}.svg`,
-    style: `transform: translateX(${x}px)`
+    style: `left: ${8 + x*70}px;`
   }, $parent);
-  // $el.enter('pop');
+  $el.enter('pop', 200, delay);
   return $el;
 }
 
 export function calculator($step) {
   const $buttons = $step.$$('.button');
   const $display = $step.$('.display');
+  const $clear = $display.$('.clear');
 
   let a = null, b = null, answer = null;
-  const $results = [];
+  let $results = [];
+  let locked = false;
 
   $buttons.forEach(($b, i) => {
     $b.on('click', () => {
-
       if (a === null) {
         a = i;
         $results.push(makeSquare(i, 0, $display));
+        $clear.enter('pop');
 
       } else if (b === null) {
         b = i;
-        answer = addSymmetry(a, b);
-        $results.push(makeSquare(b, 60, $display));
-        $results.push(makeSquare(answer, 120, $display));
+        answer = add(a, b);
+        $results.push(makeSquare(b, 1, $display));
+        $results.push(makeSquare(answer, 2, $display, 200));
 
-      } else {
+      } else if (!locked) {
+        locked = true;
+        setTimeout(() => locked = false, 800);
+
         a = answer;
         b = i;
-        answer = addSymmetry(a, b);
+        answer = add(a, b);
 
-        $results.shift().remove();
-        $results.shift().remove();
-        $results[0].animate({transform: 'translateX(0)'});
+        $results.shift().exit('pop', 200);
+        $results.shift().exit('pop', 200);
+        $results[0].animate({left: '8px'}, 400);
 
-        setTimeout(() => {
-          $results.push(makeSquare(b, 60, $display));
-          $results.push(makeSquare(answer, 120, $display));
-        }, 400);
+        $results.push(makeSquare(b, 1, $display, 400));
+        $results.push(makeSquare(answer, 2, $display, 600));
+        $step.score('calculate');
       }
 
     });
   });
 
+  $clear.on('click', () => {
+    for (let $r of $results) $r.exit('pop', 200);
+    $results = [];
+    a = b = answer = null;
+    $clear.exit('pop');
+  });
+}
 
-  // TODO clear button
+export function symmetryArithmetic($step) {
+  $step.onScore('blank-2', () => $step.addHint('not-commutative'));
 }
 
 // -----------------------------------------------------------------------------
 
 export function wallpaperGroups($step) {
-  const $play = $step.$$('.play-btn');
+  const $symmetries = $step.$$('.symmetry');
   const $images = $step.$$('img:nth-child(2)');
 
-  $play[0].on('click', () => {
-    $play[0].exit('pop');
-    $images[0].animate({transform: ['none', 'translate(56px,-34px)']}, 2000, 500);
-    setTimeout(() => {
-      $play[0].enter('pop');
-      $step.score('play-0')
-    }, 2500);
+  play($step, $symmetries[0], 1500, 'play-0', () => {
+    $images[0].animate({transform: ['none', 'translate(56px,-34px)']}, 1500);
   });
 
-  $play[1].on('click', () => {
-    $play[1].exit('pop');
-    $images[1].animate({transform: ['none', 'translateX(55px)']}, 2000, 500);
-    setTimeout(() => {
-      $play[1].enter('pop');
-      $step.score('play-1')
-    }, 2500);
+  play($step, $symmetries[1], 1500, 'play-1', () => {
+    $images[1].animate({transform: ['none', 'translateX(55px)']}, 1500);
   });
-
 }
 
 export function footsteps($step) {
@@ -202,8 +222,6 @@ export function drawing($step) {
     setTimeout(() => $step.score('switch'), 500);
   });
 }
-
-// -----------------------------------------------------------------------------
 
 export function planets($step) {
   const $rockets = $step.$$('.rocket');

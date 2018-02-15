@@ -232,7 +232,7 @@ ${Math.round(180-360/x)}°._
 ::: column(width=320)
 
     x-geopad.sticky(width=320 height=320): svg
-      circle.reveal(name="m" x="point(160, 160)" when="blank-0")
+      circle.reveal(name="m" x="point(160, 160)" when="blank-0" animation="pop")
       path(name="p" x="regular(m, 140, n)")
       circle(name="p0" x="p.points[0]")
       circle(name="p1" x="p.points[1]")
@@ -245,9 +245,9 @@ ${Math.round(180-360/x)}°._
       path.blue.fill.reveal(when="blank-1 blank-2" x="angle(m,p1,k)" size=25 target="base-angle isosceles-triangle")
 
       for i in [0,1,2,3,4,5,6,7,8,9,10,11]
-        path.thin.reveal(when="blank-0" delay=i*150 hidden x=`segment(p.points[${i}%n],m)`)
+        path.thin.reveal(when="blank-0" delay=i*150 hidden x=`segment(p.points[${i}%n],m)` animation="draw")
 
-      path.yellow.reveal(when="blank-2" x="segment(m,k)" target="apothem" label="apothem")
+      path.yellow.reveal(when="blank-2" x="segment(m,k)" target="apothem" label="apothem" animation="draw")
       path.green(x="segment(p1,p0)" target="base" label="s = 1m")
       path.green(x="segment(k,p0)" target="base half-base")
 
@@ -766,10 +766,10 @@ shaped like a dart or arrow:
       path.blue(x="segment(d,c)" target="sss")
       path.blue(x="segment(b,c)" target="sss")
       
-      path.red.thin.reveal(when="blank-1" x="line(a,c)" target="symmetry")
-      path.red.reveal(when="blank-1" x="segment(a,c)" target="symmetry sss d1")
-      path.red.transparent(x="segment(a,m)" target="sas")
-      path.red.reveal(when="next-2" x="segment(b,d)")
+      path.red.thin.reveal(when="blank-1" x="line(a,c)" target="symmetry" animation="draw")
+      path.red.reveal(when="blank-1" x="segment(a,c)" target="symmetry sss d1" animation="draw")
+      path.red.transparent(x="segment(a,m)" target="sas" animation="draw")
+      path.red.reveal(when="next-2" x="segment(b,d)" animation="draw")
 
 ::: column.grow
 You might have noticed that all kites are [[symmetric|similar]].
@@ -865,8 +865,8 @@ These parallel sides are called the __bases__ of the trapezium.
       path.blue(x="segment(d2,c2)" target="bases base-2")
       path.green.transparent(x="segment(point(2,3),d2)" target="t-height")
       path.yellow.transparent(x="segment(point(3,6),point(11,6))" target="t-width")
-      circle.reveal(when="blank-3" x="line(a2,d2).midpoint" target="t-width")
-      circle.reveal(when="blank-3" x="line(b2,c2).midpoint" target="t-width")
+      circle.reveal(when="blank-3" x="line(a2,d2).midpoint" target="t-width" animation="pop")
+      circle.reveal(when="blank-3" x="line(b2,c2).midpoint" target="t-width" animation="pop")
 
 ::: column.grow
 Like before, try to draw a rectangle that has the same area as this trapezium.

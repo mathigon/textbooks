@@ -17,7 +17,6 @@
   width: 48px;
   height: 48px;
   position: absolute;
-  cursor: pointer;
   transition: transform .2s;
   &:hover { transform: scale(1.1); }
 }
@@ -42,17 +41,32 @@ x-geopad .paths path.drag { cursor: move; pointer-events: none; }
 
 // -----------------------------------------------------------------------------
 
-.symmetry {
+.animation, .symmetry {
   position: relative;
-  overflow: hidden;
-  max-width: 320px;
+  cursor: pointer;
   margin: 0 auto;
-  img:nth-child(2) { position: absolute; left: 0; top: 0; opacity: 0.5; }
 }
+
+.animation { width: 200px; }
+.symmetry { width: 320px; overflow: hidden; }
+.symmetry img:nth-child(2) { position: absolute; left: 0; top: 0; opacity: 0.5; }
 
 // -----------------------------------------------------------------------------
 
-p .cube { margin: 0 4px; }
+.sym-sum {
+  .bouncy();
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  background: @light-grey;
+  vertical-align: middle;
+  img { display: block; transition: opacity .3s; }
+
+  &.pending {
+    cursor: pointer;
+    img { opacity: 0; }
+  }
+}
 
 .cubes {
   .clearfix();
@@ -75,13 +89,22 @@ p .cube { margin: 0 4px; }
     height: 40px;
     position: relative;
     margin: 6px 6px 12px 6px;
-    img { width: 40px; height: 40px; position: absolute; }
+    img { width: 40px; height: 40px; position: absolute; display: none; }
+  }
+
+  .operator {
+    font-size: 24px;
+    position: absolute;
+    color: @grey;
+    top: 10px;
+    &:first-child { left: 56px; }
+    &:nth-child(2) { left: 127px; }
   }
 
   .clear {
     width: 24px;
     height: 24px;
-    background: @grey;
+    background: fade(@grey, 60%);
     color: @light-grey;
     position: absolute;
     right: 12px;
@@ -90,6 +113,10 @@ p .cube { margin: 0 4px; }
     text-align: center;
     font-size: 24px;
     top: 16px;
+    cursor: pointer;
+    display: none;
+    transition: background .2s;
+    &:hover { background: @grey; }
   }
 
   .button {
@@ -110,6 +137,22 @@ p .cube { margin: 0 4px; }
     &:hover { background: lighten(@grey, 20%); }
     &:active { box-shadow: none; transform: translateY(3px); }
     .cube { margin: 0 4px; }
+  }
+}
+
+.axiom {
+  margin: 1em 0;
+
+  .cube { margin: 2px 0; }
+  .space { display: inline-block; width: 40px; }
+  mn {
+    background: #00b200;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 15px;
+    line-height: 28px;
+    margin: 0 2px;
   }
 }
 

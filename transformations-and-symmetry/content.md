@@ -53,14 +53,17 @@ A [__transformation__](gloss:transformation) is a specific set of rules that
 convert one geometric figure into another one. Here are a few examples:
 
 ::: column.r(width=200)
-    include svg/transform-1.svg
-    .play-btn
+    .animation
+      include svg/transform-1.svg
+      .play-btn
 ::: column.r(width=200)
-    include svg/transform-2.svg
-    .play-btn
+    .animation
+      include svg/transform-2.svg
+      .play-btn
 ::: column.r(width=200)
-    include svg/transform-3.svg
-    .play-btn
+    .animation
+      include svg/transform-3.svg
+      .play-btn
 :::
 
 {.reveal(when="t1 t2 t3")} The result of a transformation is called the
@@ -94,22 +97,25 @@ For rigid transformations, the image is always
 types of rigid transformations:
 
 ::: column.grow.r(width=200)
-    figure: include svg/rigid-1.svg
-    .play-btn
+    .animation
+      include svg/rigid-1.svg
+      .play-btn
 
 {.text-center} A transformation that _moves_ a shape around is called a
 [__translation__](gloss:translation).
 
 ::: column.grow.r(width=200)
-    figure: include svg/rigid-2.svg
-    .play-btn
+    .animation
+      include svg/rigid-2.svg
+      .play-btn
 
 {.text-center} A transformation that _flips_ a shape over is called a
 [__reflection__](gloss:reflection).
 
 ::: column.grow.r(width=200)
-    figure: include svg/rigid-3.svg
-    .play-btn
+    .animation
+      include svg/rigid-3.svg
+      .play-btn
 
 {.text-center} A transformation that _spins_ a shape is called a
 [__rotation__](gloss:rotation).
@@ -166,25 +172,43 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 
 ---
 > id: translations-1
+> goals: drag-0 drag-1 drag-2
 
 Now it’s your turn – translate the following shapes as shown:
 
 ::: column(width=220)
 
-    x-geopad(width=220 height=140 grid=20): svg
-      path.fill.drag(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" style="fill: #d94c44")
+    svg(width=220 height=140)
+      each i in [10,30,50,70,90,110,130,150,170,190,210]
+        line(x1=i x2=i y1=0 y2=140 stroke="#e4e4e6" stroke-width=2)
+      each i in [10,30,50,70,90,110,130]
+        line(x1=0 x2=220 y1=i y2=i stroke="#e4e4e6" stroke-width=2)
+      polygon(points="30,10 10,70 70,70 50,10" style="fill: #289782; opacity: .5;")
+      polygon(points="30,10 10,70 70,70 50,10" style="fill: #289782; cursor: move")
 
-{.caption} Translate by (3, 1)
+{.caption} Translate by (3, 1) _{span.check(when="drag-0")}_
 ::: column(width=220)
 
-    x-geopad(width=220 height=140 grid=20): svg
+    svg(width=220 height=140)
+      each i in [10,30,50,70,90,110,130,150,170,190,210]
+        line(x1=i x2=i y1=0 y2=140 stroke="#e4e4e6" stroke-width=2)
+      each i in [10,30,50,70,90,110,130]
+        line(x1=0 x2=220 y1=i y2=i stroke="#e4e4e6" stroke-width=2)
+      polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; opacity: .5;")
+      polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; cursor: move")
 
-{.caption} Translate by (-2 -4)
+{.caption} Translate by (–4 –2) _{span.check(when="drag-1")}_
 ::: column(width=220)
 
-    x-geopad(width=220 height=140 grid=20): svg
+    svg(width=220 height=140)
+      each i in [10,30,50,70,90,110,130,150,170,190,210]
+        line(x1=i x2=i y1=0 y2=140 stroke="#e4e4e6" stroke-width=2)
+      each i in [10,30,50,70,90,110,130]
+        line(x1=0 x2=220 y1=i y2=i stroke="#e4e4e6" stroke-width=2)
+      polygon(points="10,10 30,10 30,50 50,50 50,10 70,10 70,70 10,70" style="fill: #2ea92e; opacity: .5;")
+      polygon(points="10,10 30,10 30,50 50,50 50,10 70,10 70,70 10,70" style="fill: #2ea92e; cursor: move")
 
-{.caption} Translate by (-1, 5)
+{.caption} Translate by (5, –1) _{span.check(when="drag-2")}_
 :::
 
 ---
@@ -510,7 +534,7 @@ Now complete these shapes, so that they have rotational symmetry:
 Some shapes have more than one symmetry – let's have a look at the
 [square](gloss:square) as a simple example.
 
-::: column(width=400)
+::: column(width=400 parent="padded-thin")
 
     .cubes
       img.cube.reveal(src="images/cube-0.svg" width=80 height=80 when="blank-1 blank-2 blank-3" delay=1000 animation="pop")
@@ -537,31 +561,32 @@ different "symmetries of the square".
 :::
 
 ---
+> id: add-symmetries
+> goals: sum-0 sum-1
 
 Now we can actually start doing some arithmetic with these symmetries. For
 example, we can _add_ two symmetries to get new ones:
 
-::: column.grow
+::: column(width=260)
 
-    p
-      img.cube.reveal(src="images/cube-1.svg" width=40 height=40)
-      | +
-      img.cube.reveal(src="images/cube-1.svg" width=40 height=40)
-      | =
-      img.cube.reveal(src="images/cube-2.svg" width=40 height=40)
+    .text-center
+      img.cube(src="images/cube-1.svg" width=54 height=54)
+      mo +
+      img.cube(src="images/cube-1.svg" width=54 height=54)
+      mo =
+      span.sym-sum.pending: img.cube(src="images/cube-2.svg" width=54 height=54)
+    x-gesture(target=".sym-sum")
 
-::: column.grow
+::: column(width=260)
 
-    p
-      img.cube.reveal(src="images/cube-2.svg" width=40 height=40)
-      | +
-      img.cube.reveal(src="images/cube-6.svg" width=40 height=40)
-      | =
-      img.cube.reveal(src="images/cube-4.svg" width=40 height=40)
+    .text-center
+      img.cube(src="images/cube-2.svg" width=54 height=54)
+      mo +
+      img.cube(src="images/cube-6.svg" width=54 height=54)
+      mo =
+      span.sym-sum.pending: img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
 
 :::
-
-{.todo} animate
 
 ---
 > id: calculator
@@ -572,6 +597,8 @@ Whenever you add two symmetries of a square, you get a new one. Here is a
 
     .calculator
       .display
+        .operator +
+        .operator =
         .clear ×
       .button + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
       .button + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
@@ -583,82 +610,98 @@ Whenever you add two symmetries of a square, you get a new one. Here is a
       .button + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
 
 ---
+> id: symmetry-arithmetic
 
 Spend some time playing around with the symmetry calculator, and try to find any
-patterns. For example, adding two rotations will always give
-[[a rotation|a reflection]] (or the identity), and adding two reflections will
-always give [[another rotation|a reflection]] (or the identity).
+patterns. Can you complete these observations?
 
-In addition, changing the order in which you add two symmetries gives
-[[a different|the same]] result!
-
-{.todo} example
+* Adding two rotations will always give [[a rotation|a reflection]] (or the identity).
+* Adding two reflections will always give [[a rotation|a reflection]] (or the identity).
+* Adding the same two symmetries in the opposite order
+  [[sometimes gives a different|always gives a different|always gives the same]] result.
+* Adding the identity [[doesn't do anything|returns a reflection|returns the opposite]].
 
 ---
+> id: group-axioms
 
-In summary, adding symmetries is actually very similar to adding integers:
+You might have realised already that adding symmetries is actually very similar
+to adding integers:
 
-{.text-center} (1) Adding two __{.orange}symmetries__/__{.cyan}integers__ always
-gives another __{.orange}symmetry__/__{.cyan}integers__:
-
-::: column.grow
-
-    p.text-center
-      img.cube.reveal(src="images/cube-2.svg" width=40 height=40)
-      | +
-      img.cube.reveal(src="images/cube-6.svg" width=40 height=40)
-      | =
-      img.cube.reveal(src="images/cube-4.svg" width=40 height=40)
-
-::: column.grow
-{.text-center} `12 + 7 = 19`
-:::
-
-{.text-center} (2) Adding __{.orange}symmetries__/__{.cyan}integers__ is
-[_associative_](gloss:associative):
-
-::: column.grow
-{.todo} animation
-::: column.grow
-{.text-center} `(4 + 2) + 5 = 4 + (2 + 5)`
-:::
-
-{.text-center} (3) Every __{.orange}symmetry__/__{.cyan}integer__ has an
-_inverse_,  
-another __{.orange}symmetry__/__{.cyan}integer__ which, when added,
-gives the identity.
-
-::: column.grow
-
-    p.text-center
-      img.cube.reveal(src="images/cube-1.svg" width=40 height=40)
-      | +
-      img.cube.reveal(src="images/cube-3.svg" width=40 height=40)
-      | =
-      img.cube.reveal(src="images/cube-0.svg" width=40 height=40)
-
-::: column.grow
-{.text-center} `4 + (-4) = 0`
-:::
+    ol.proof
+      
+      li.r
+        | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
+        .text-center.axiom 
+          img.cube(src="images/cube-2.svg" width=32 height=32)
+          mo +
+          img.cube(src="images/cube-6.svg" width=32 height=32)
+          mo(value="=") =
+          img.cube(src="images/cube-4.svg" width=32 height=32)
+        .text-center.axiom 
+          mn 12
+          mo +
+          mn 7
+          mo =
+          mn 19
+        .next-step Next
+      
+      li.r.reveal(when="next-0")
+        | Adding #[strong.orange symmetries]/#[strong.green integers] is #[x-gloss(xid="associative") associative]:
+        .text-center.axiom 
+          mfenced
+            img.cube(src="images/cube-1.svg" width=32 height=32)
+            mo +
+            img.cube(src="images/cube-4.svg" width=32 height=32)
+          mo +
+          img.cube(src="images/cube-3.svg" width=32 height=32)
+          mo(value="=") =
+          img.cube(src="images/cube-1.svg" width=32 height=32)
+          mo +
+          mfenced
+            img.cube(src="images/cube-4.svg" width=32 height=32)
+            mo +
+            img.cube(src="images/cube-3.svg" width=32 height=32)
+        .text-center.axiom
+          mfenced #[mn 4]#[mo +]#[mn 2]
+          mo +
+          mn 5
+          mo =
+          mn 4
+          mo +
+          mfenced #[mn 2]#[mo +]#[mn 5]
+        .next-step Next
+      
+      li.r.reveal(when="next-1")
+        | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
+        .text-center.axiom 
+          img.cube(src="images/cube-1.svg" width=32 height=32)
+          mo +
+          img.cube(src="images/cube-3.svg" width=32 height=32)
+          mo(value="=") =
+          img.cube(src="images/cube-0.svg" width=32 height=32)
+        .text-center.axiom 
+          mn 4
+          mo +
+          mn –4
+          mo(value="=") =
+          mn 0
+        .next-step Next
 
 ---
 
 In mathematics, any collection that has these properties is called a __group__.
-Some groups (like the symmetries of a square) only have a finite number of
-elements. Others (like the integers) are infinite.
+Some groups (like the __{.orange}symmetries__ of a square) only have a finite
+number of elements. Others (like the __{.green}integer__) are infinite.
 
-Above we started with the symmetries of the square. Every geometric shape has
-its own _symmetry group_ with different elements – but they all satisfy the
-same three rules.
+Before, we started with the symmetries of the square. In fact, every geometric
+shape has its own __symmetry group__. They all different elements, but they
+always satisfy the three rules above.
 
-Groups seem to appear everywhere in mathematics and in nature. The elements can
-be numbers or symmetries, but also polynomials, permutations, matrices,
-functions … _anything_ that obeys the rules above.
-
----
-
-The key idea of _group theory_ is that we are not interested in the individual
-elements, just in _how they interact with each other_.
+Groups appear everywhere in mathematics. The elements can be numbers or
+symmetries, but also polynomials, permutations, matrices, functions … _anything_
+that obeys the three rules. The key idea of _group theory_ is that we are not
+interested in the individual elements, just in _how they interact with each
+other_.
 
 ::: column.grow
 For example, chemists can use properties of the symmetry group of different
@@ -679,7 +722,7 @@ different transformations: rotations and reflections. But there is also a
 symmetry for the third kind of transformation: [[translations|spins|flips]].
 
 __Translational symmetry__ does not work for isolated objects like flowers or
-butterflies, but for patterns that extend into every direction:
+butterflies, but it does for regular patterns that extend into every direction:
 
 ::: column.grow
 
