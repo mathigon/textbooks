@@ -4,9 +4,10 @@
 // =============================================================================
 
 
-import './components/wallpaper';
+import { isPalindrome } from '@mathigon/core';
+import { Point } from '@mathigon/fermat';
 import { Draggable, $N } from '@mathigon/boost';
-
+import './components/wallpaper';
 
 // -----------------------------------------------------------------------------
 
@@ -27,6 +28,44 @@ function play($step, $el, duration, score, callback) {
     }, 1000 + duration);
   });
 }
+
+function expandSegment($geopad, [e1, e2], line) {
+  let swap = Point.distance(e1.val, line.p1) > Point.distance(e2.val, line.p1);
+  $geopad.animatePoint(swap ? e2.name : e1.name, line.p1);
+  $geopad.animatePoint(swap ? e1.name : e2.name, line.p2);
+}
+
+function drawShape($step, $geopad, goal, shape, expand=false) {
+  // `shape` should be the name of a polygon, segment or line.
+  const lines = $geopad.model[shape].edges || [$geopad.model[shape]];
+  const solved = new Set();
+
+  $geopad.setActiveTool('line');
+
+  $geopad.on('add:path', path => {
+
+    for (let e of lines) {
+      if (e.equals(path.val)) {
+        solved.add(e);
+
+        if (solved.size === lines.length) {
+          $step.score(goal);
+          $step.addHint('correct');
+          $geopad.setActiveTool('move');
+          $geopad.css('cursor', 'default');
+          if (expand) expandSegment($geopad, path.points, lines[0]);
+        }
+
+        return;
+      }
+    }
+
+    path.remove();
+    $step.addHint('incorrect');
+  });
+}
+
+// -----------------------------------------------------------------------------
 
 export function transformations($step) {
   const $animations = $step.$$('.animation');
@@ -92,6 +131,16 @@ export function translations1($step) {
   });
 }
 
+export function reflections($step) {
+  const $geopads = $step.$$('x-geopad');
+  // TODO
+}
+
+export function reflections1($step) {
+  const $geopads = $step.$$('x-geopad');
+  // TODO
+}
+
 export function symmetry($step) {
   const $symmetries = $step.$$('.symmetry');
   const $images = $step.$$('img:nth-child(2)');
@@ -103,6 +152,46 @@ export function symmetry($step) {
   play($step, $symmetries[1], 1500, 'play-1', () => {
     $images[1].animate({transform: ['none', 'rotate(60deg)']}, 1500);
   });
+}
+
+export function reflectionalSymmetry1($step) {
+  const $geopads = $step.$$('x-geopad');
+
+  drawShape($step, $geopads[0], 'r0', 'line0', true);
+  drawShape($step, $geopads[1], 'r1', 'line1', true);
+  drawShape($step, $geopads[2], 'r2', 'line2', true);
+}
+
+export function reflectionalSymmetry2($step) {
+  const $geopads = $step.$$('x-geopad');
+  // TODO
+}
+
+export function rotationalSymmetry2($step) {
+  const $geopads = $step.$$('x-geopad');
+  // TODO
+}
+
+export function palindromes($step) {
+  const $inputs = $step.$$('input');
+
+  for (let i=0; i<3; ++i) {
+    $inputs[i].onKeyDown('enter', () => $inputs[i].blur());
+    $inputs[i].on('blur', () => {
+      let str = '' + $inputs[i].value;
+      if (!str.length) {
+        // Do nothing
+      } else if (str.length < 3) {
+        $step.addHint('short-palindrome');
+      } else if (isPalindrome(str)) {
+        $step.addHint('correct');
+        $step.score('p' + i);
+        $inputs[i].addClass('correct');
+      } else {
+        $step.addHint('incorrect');
+      }
+    });
+  }
 }
 
 // -----------------------------------------------------------------------------

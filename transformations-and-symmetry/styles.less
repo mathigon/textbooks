@@ -22,6 +22,10 @@
 }
 
 x-geopad .paths path.drag { cursor: move; pointer-events: none; }
+x-geopad x-media { position: absolute; z-index: -1; }
+
+.draw { cursor: pointer; }
+.draw.reflection[grid] .paths path { stroke: @red; stroke-width: 6px; }
 
 // -----------------------------------------------------------------------------
 
@@ -37,6 +41,13 @@ x-geopad .paths path.drag { cursor: move; pointer-events: none; }
   font-size: 40px;
   color: black;
   margin: 0 6px;
+}
+
+.palindromes {
+  margin: 2em 0;
+  .check { margin: -3px 30px 0 -30px; }
+  input { text-align: center; width: 180px; padding: .3em .6em !important; }
+  input.correct { border-color: @green; pointer-events: none; }
 }
 
 // -----------------------------------------------------------------------------

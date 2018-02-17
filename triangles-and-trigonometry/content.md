@@ -98,11 +98,11 @@ has three acute angles.
 For convenience, we usually label triangles in the same way. The vertices are
 labelled with capital letters [_A_, _B_ and _C_](target:vertex), the sides are
 labelled with lowercase letters [_a_, _b_ and _c_](target:side), and the angles
-are labelled with Greek letters [_α_, _β_ and _γ_](target:angle) ("alpha",
+are labelled with Greek letters [α, β and γ](target:angle) ("alpha",
 "beta" and "gamma").
  
 The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
-[angle that lies right next to _A_](target:Y) is labelled _α_. The same pattern
+[angle that lies right next to _A_](target:Y) is labelled α. The same pattern
 works for _B_ and _C_.
 ::: column(width=220)
 
@@ -115,7 +115,7 @@ works for _B_ and _C_.
       path.green(x="angle(b,c,a)" label="γ" target="angle")
       path.red(x="segment(b,c)" label="a" target="side X")
       path.blue(x="segment(a,c)" label="b" target="side")
-      path.green(x="segment(a,b)" label="c" target="side")
+      path.green(x="segment(b,a)" label="c" target="side")
 
 :::
 
@@ -1100,7 +1100,7 @@ beginning of the chapter? With Trigonometry, we finally have the tools to do it!
 ::: .sticky-wrap
 
     figure.sticky.mountain
-      x-geopad(width=760 height250 style="background: white"): svg
+      x-geopad(width=760 height=250 style="background: white"): svg
         image(href="images/mountain.svg" height=240 width=760 y=5)
         circle(name="a" x="point(25, 230)" target="points t1 t2")
         circle(name="b" x="point(185, 230)" target="points compl t1")

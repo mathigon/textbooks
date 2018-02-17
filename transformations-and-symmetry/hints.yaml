@@ -1,7 +1,9 @@
 not-rigid-1: This transformation enlarges the ellipse, so it is not rigid.
 not-rigid-2: This transformation stretches the middle bar, so it is not rigid.
 
-letter-not-symmetric: This letter doesn't have reflectional symmetry…
+letter-not-symmetric: This letter doesn’t have reflectional symmetry…
 
 not-commutative: This actually means that, unlike numbers, adding symmetries
   is _not commutative_. In other words, `a + b != b + a`.
+
+short-palindrome: Try to pick a slightly longer string…
