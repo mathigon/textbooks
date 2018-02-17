@@ -1200,7 +1200,7 @@ triangle_! Try moving the [vertices](target:vertex) in this diagram.
 The sum of the internal angles in a triangle is [[180]]°. If we use each angle
 [[twice|once|three times]] at every vertex in the tessellation, we get 360°:
 
-    x-geopad(width=200 height=160).reveal(when="blank-0 blank-1"): svg
+    x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
       circle(name="p" x="point(100,150)")
       circle.move(name="q" cx=175 cy=130)
@@ -1264,7 +1264,7 @@ More surprisingly, _any quadrilateral_ also tessellates! Their internal angle
 sum is [[360]]°, so if we use each angle [[once|twice|three times]] at every
 vertex in the tessellation, we we get 360°.
 
-    x-geopad(width=200 height=160).reveal(when="blank-0 blank-1"): svg
+    x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
       circle(name="p" x="point(100,150)")
       circle.move(name="q" cx=180 cy=140)

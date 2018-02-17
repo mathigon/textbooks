@@ -51,8 +51,7 @@ function drawShape($step, $geopad, goal, shape, expand=false) {
         if (solved.size === lines.length) {
           $step.score(goal);
           $step.addHint('correct');
-          $geopad.setActiveTool('move');
-          $geopad.css('cursor', 'default');
+          $geopad.css({'pointer-events': 'none', cursor: 'default'});
           if (expand) expandSegment($geopad, path.points, lines[0]);
         }
 
@@ -61,7 +60,7 @@ function drawShape($step, $geopad, goal, shape, expand=false) {
     }
 
     path.remove();
-    $step.addHint('incorrect');
+    if (path.val.length >= 1) $step.addHint('incorrect');
   });
 }
 
@@ -133,12 +132,22 @@ export function translations1($step) {
 
 export function reflections($step) {
   const $geopads = $step.$$('x-geopad');
-  // TODO
+
+  drawShape($step, $geopads[0], 'r0', 'line0', true);
+  drawShape($step, $geopads[1], 'r1', 'line1', true);
+  drawShape($step, $geopads[2], 'r2', 'line2', true);
 }
 
 export function reflections1($step) {
   const $geopads = $step.$$('x-geopad');
-  // TODO
+
+  drawShape($step, $geopads[0], 'r0', 'to0');
+  drawShape($step, $geopads[1], 'r1', 'to1');
+  drawShape($step, $geopads[2], 'r2', 'to2');
+
+  $step.onScore('r0', () => $step.$('[name="to0"]').enter('fade', 600));
+  $step.onScore('r1', () => $step.$('[name="to1"]').enter('fade', 600));
+  $step.onScore('r2', () => $step.$('[name="to2"]').enter('fade', 600));
 }
 
 export function symmetry($step) {

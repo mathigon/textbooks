@@ -225,17 +225,23 @@ Draw the line of reflection in each of these examples:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+      path(x="polygon(point(2,1),point(1,2),point(2,3),point(8,2))" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)" name="from0")
       path(hidden name="line0" x="line(point(-1,4),point(11,4))")
+      path(x="from0.reflect(line0)" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20): svg
-      path(hidden name="line1" x="line(point(-1,4),point(11,4))")
+      path(x="polygon(point(1,1),point(1,5),point(3,5),point(2,3),point(4,1))" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)" name="from1")
+      path(hidden name="line1" x="line(point(9,-1),point(-1,9))")
+      path(x="from1.reflect(line1)" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
-      path(hidden name="line2" x="line(point(-1,4),point(11,4))")
+    x-geopad.draw.reflection(width=220 height=180 grid=20)
+      x-media.background(src="images/rorschach.jpg" width=220 height=180)
+      svg
+        path(hidden name="line2" x="line(point(5,-1),point(5,9))")
 
 :::
 
@@ -247,20 +253,24 @@ Now it’s your turn – draw the reflection of each of these shapes:
 
 ::: column(width=220)
 
-    x-geopad(width=220 height=180 grid=20): svg
-      path(x="polygon(point(2,2),point(3,1),point(4,3),point(3,6),point(1,4))" name="from0")
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      path(x="polygon(point(1,2),point(3,1),point(4,3),point(4,5),point(2,6),point(1,4))" name="from0" style="fill: rgba(105,63,180,0.4)")
       path.red(x="line(point(5,0), point(5,1))" name="line0")
-      path(hidden x="from0.reflect(line0)" name="to0")
+      path(hidden x="from0.reflect(line0)" name="to0" style="fill: rgba(105,63,180,0.4)")
 
 ::: column(width=220)
 
-    x-geopad(width=220 height=180 grid=20): svg
-      path.red(x="line(point(2,1), point(3,2))")
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      path(x="polygon(point(2,6),point(6,4),point(8,6),point(5,7))" name="from1" style="fill: rgba(80,83,205,0.4)")
+      path.red(x="line(point(-1,4), point(11,4))" name="line1")
+      path(hidden x="from1.reflect(line1)" name="to1" style="fill: rgba(80,83,205,0.4)")
 
 ::: column(width=220)
 
-    x-geopad(width=220 height=180 grid=20): svg
-      path.red(x="line(point(5,0), point(5,1))")
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      path(x="polygon(point(2,3),point(3,3),point(3,5),point(5,5),point(5,6),point(2,6))" name="from2" style="fill: rgba(56,102,230,0.4)")
+      path.red(x="line(point(2,1), point(3,2))" name="line2")
+      path(hidden x="from2.reflect(line2)" name="to2" style="fill: rgba(56,102,230,0.4)")
 
 :::
 

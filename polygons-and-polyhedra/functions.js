@@ -203,7 +203,6 @@ export function quadrilateralsArea($step) {
 
   $geopads[1].setActiveTool('rectangle');
   $geopads[1].on('add:path', path => {
-    console.log(path);
     if (path.val.w * path.val.h === 48) {
       // TODO shift to correct location
       $step.addHint('correct');
