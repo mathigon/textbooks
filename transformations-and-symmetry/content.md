@@ -256,21 +256,21 @@ Now it’s your turn – draw the reflection of each of these shapes:
     x-geopad.draw(width=220 height=180 grid=20): svg
       path(x="polygon(point(1,2),point(3,1),point(4,3),point(4,5),point(2,6),point(1,4))" name="from0" style="fill: rgba(105,63,180,0.4)")
       path.red(x="line(point(5,0), point(5,1))" name="line0")
-      path(hidden x="from0.reflect(line0)" name="to0" style="fill: rgba(105,63,180,0.4)")
+      path.finished(hidden x="from0.reflect(line0)" name="to0" style="fill: rgba(105,63,180,0.4)")
 
 ::: column(width=220)
 
     x-geopad.draw(width=220 height=180 grid=20): svg
       path(x="polygon(point(2,6),point(6,4),point(8,6),point(5,7))" name="from1" style="fill: rgba(80,83,205,0.4)")
       path.red(x="line(point(-1,4), point(11,4))" name="line1")
-      path(hidden x="from1.reflect(line1)" name="to1" style="fill: rgba(80,83,205,0.4)")
+      path.finished(hidden x="from1.reflect(line1)" name="to1" style="fill: rgba(80,83,205,0.4)")
 
 ::: column(width=220)
 
     x-geopad.draw(width=220 height=180 grid=20): svg
       path(x="polygon(point(2,3),point(3,3),point(3,5),point(5,5),point(5,6),point(2,6))" name="from2" style="fill: rgba(56,102,230,0.4)")
       path.red(x="line(point(2,1), point(3,2))" name="line2")
-      path(hidden x="from2.reflect(line2)" name="to2" style="fill: rgba(56,102,230,0.4)")
+      path.finished(hidden x="from2.reflect(line2)" name="to2" style="fill: rgba(56,102,230,0.4)")
 
 :::
 
@@ -306,6 +306,7 @@ that they match the original shape.
 
 ---
 > id: rotations
+> goals: r0 r1 r2
 
 ### Rotations
 
@@ -313,25 +314,43 @@ A [__rotation__](gloss:rotation) is a transformation that “turns” a shape by
 certain angle around a fixed point. That point is called the __center of
 rotation__. Rotations can be clockwise or counterclockwise.
 
-Use the protractor tool to find the angle of these rotations:
+Try to rotate the shapes below around the red center of rotation:
 
 ::: column(width=220)
-{.todo} EXAMPLE
+
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      path(x="polygon(point(2,2),point(2,5),point(5,5),point(5,2))" name="from0" style="fill: rgba(34,132,213,0.4)")
+      circle.red(x="point(5,6)" name="c0")
+      path.finished(hidden x="from0.rotate(pi/2,c0)" name="to0" style="fill: rgba(34,132,213,0.4)")
+
+{.caption} Rotate by 90° clockwise.
 ::: column(width=220)
-{.todo} EXAMPLE
+
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      path(x="polygon(point(3,2),point(8,1),point(9,4))" name="from1" style="fill: rgba(40,151,130,0.4)")
+      circle.red(x="point(5,4)" name="c1")
+      path.finished(hidden x="from1.rotate(pi,c1)" name="to1" style="fill: rgba(40,151,130,0.4)")
+
+{.caption} Rotate by 180°.
 ::: column(width=220)
-{.todo} EXAMPLE
+
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      path(x="polygon(point(3,0),point(8,0),point(8,4),point(1,4))" name="from2" style="fill: rgba(46,169,46,0.4)")
+      circle.red(x="point(6,3)" name="c2")
+      path.finished(hidden x="from2.rotate(-pi/2,c2)" name="to2" style="fill: rgba(46,169,46,0.4)")
+
+{.caption} Rotate by 90° anti-clockwise.
 :::
 
 ---
 > id: rotations-1
 
-Drawing a rotation is a bit more difficult. Like for reflections, we first have
-to rotate every point in a shape individually, and then connect the lines in the
-image.
+It is more difficult to draw rotations that are not exactly 90° or 180°. Just
+like for reflections, we first have to rotate every point in a shape
+individually, and then connect the lines in the image.
 
 ::: column(width=300)
-{.todo} INTERACTIVE ANIMATION
+{.todo} TODO Step-by-step animation
 ::: column.grow
 We want to rotate this shape by 60° anti-clockwise around the center of
 rotation C.
@@ -359,13 +378,13 @@ image, to match the original shape.
 Of course, we can combine multiple translations, reflections and rotations to
 create more complex transformations.
 
-{.todo} EXAMPLE
+{.todo} TODO Example
 
 However, as it turns out, it doesn’t matter how many different transformations
 you combine: you can always find another transformation that does the same in
 one go!
 
-{.todo} EXAMPLE
+{.todo} TODO Transformation composition calculator
 
 Combining two reflections is particularly interesting. There are two different
 cases we need to consider:
@@ -375,13 +394,13 @@ If the two lines of reflection are parallel, the result is a single translation.
 The direction of the translation is perpendicular to the lines of reflection,
 and the distance is twice the distance between the lines of reflection.
 
-{.todo} ANIMATION
+{.todo} TODO Animation
 ::: column.grow
 If the two lines of reflection intersect, the result is a single rotation. The
 center of rotation is the intersection between the lines of reflection, and the
 angle is twice the angle between the lines of reflection.
 
-{.todo} ANIMATION
+{.todo} TODO Animation
 :::
 
 ---
@@ -439,9 +458,9 @@ also have more than one axis of symmetry.
 
 ---
 > id: reflectional-symmetry-1
-> goals: r0, r1, r2
+> goals: r0 r1 r2 r3 r4 r5
 
-Draw the axes of symmetry in all of these images:
+Draw all axes of symmetry in these six images and shapes:
 
 ::: column(width=220)
 
@@ -464,6 +483,32 @@ Draw the axes of symmetry in all of these images:
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
+::: column(width=220)
+
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+      path(x="polygon(point(2,2),point(5,1),point(8,2),point(9,4),point(8,6),point(5,7),point(2,6),point(1,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(255,148,31,0.4)")
+      path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
+      path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
+
+{.caption} This shape has [[2]] axes of symmetry.
+::: column(width=220)
+
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+      path(x="polygon(point(3,2),point(7,2),point(7,6),point(3,6))" style="stroke: #363644; stroke-width: 3px; fill: rgba(242,124,43,0.4)")
+      path(hidden name="line4a" x="line(point(-1,4),point(11,4))")
+      path(hidden name="line4b" x="line(point(5,-1),point(5,9))")
+      path(hidden name="line4c" x="line(point(0,-1),point(10,9))")
+      path(hidden name="line4d" x="line(point(10,-1),point(0,9))")
+
+{.caption} A square has [[4]] axes of symmetry.
+::: column(width=220)
+
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+      path(x="polygon(point(3,1),point(9,3),point(8,6),point(2,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(230,100,56,0.4)")
+      path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
+      path(hidden name="line5b" x="line(point(7,-1),point(3,11))")
+
+{.caption} This shape has [[2]] axes of symmetry.
 :::
 
 ---
@@ -490,14 +535,27 @@ symmetry:
 ::: column(width=220)
 
     x-geopad.draw(width=220 height=180 grid=20): svg
+      path.fill.finished(hidden x="polygon(point(8,5),point(9,3),point(9,2),point(8,1),point(6,1),point(5,2),point(4,1),point(2,1),point(1,2),point(1,3),point(2,5),point(5,7))" style="fill: rgba(179,4,105,0.4)")
+      path(x="polyline(point(5,2),point(4,1),point(2,1),point(1,2),point(1,3),point(2,5),point(5,7))" name="from0")
+      path.red(x="line(point(5,-1),point(5,9))" name="line0")
+      path(hidden x="from0.reflect(line0)" name="to0")
 
 ::: column(width=220)
 
     x-geopad.draw(width=220 height=180 grid=20): svg
+      path.fill.finished(hidden x="polygon(point(1,5),point(1,3),point(6,3),point(4,1),point(5,0),point(9,4),point(5,8),point(4,7),point(6,5))" style="fill: rgba(154,24,130,0.4)")
+      path(x="polyline(point(1,4),point(1,3),point(6,3),point(4,1),point(5,0),point(9,4))" name="from1")
+      path.red(x="line(point(-1,4),point(11,4))" name="line1")
+      path(hidden x="from1.reflect(line1)" name="to1")
 
 ::: column(width=220)
 
     x-geopad.draw(width=220 height=180 grid=20): svg
+      path.fill.finished(hidden x="polygon(point(2,1),point(8,1),point(9,2),point(9,6),point(8,7),point(2,7),point(1,6),point(1,2))" style="fill: rgba(130,43,155,0.4)")
+      path(x="polyline(point(5,1),point(8,1),point(9,2),point(9,4))")
+      path.red(x="line(point(5,-1),point(5,9))" name="line2")
+      path.red(x="line(point(-1,4),point(11,4))" name="line2")
+      path(hidden x="polyline(point(5,1),point(2,1),point(1,2),point(1,6),point(2,7),point(8,7),point(9,6),point(9,4))" name="to2")
 
 :::
 
@@ -583,21 +641,42 @@ Find the order and the angle of rotation, for each of these shapes:
 
 ---
 > id: rotational-symmetry-2
+> goals: r0 r1 r2
 
 Now complete these shapes, so that they have rotational symmetry:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      circle.red(x="point(5,4)")
+      path.fill.finished(hidden x="polygon(point(5,0),point(6,3),point(9,4),point(6,5),point(5,8),point(4,5),point(1,4),point(4,3))" style="fill: rgba(56,102,230,0.4)")
+      path(x="polyline(point(5,0),point(6,3),point(9,4))")
+      path.red(x="segment(point(5,-1),point(5,4))")
+      path.red(x="segment(point(5,4),point(11,4))")
+      path(hidden x="polyline(point(9,4),point(6,5),point(5,8),point(4,5),point(1,4),point(4,3),point(5,0))" name="to0")
 
+{.caption} Order 4
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      circle.red(x="point(5,4)" name="c1")
+      path.fill.finished(hidden x="polygon(point(6,2),point(1,2),point(1,4),point(4,6),point(9,6),point(9,4))" style="fill: rgba(40,151,130,0.4)")
+      path(x="polyline(point(5,2),point(1,2),point(1,4),point(4,6),point(5,6))" name="from1")
+      path.red(x="segment(point(5,-1),point(5,9))")
+      path(hidden x="from1.rotate(pi,c1)" name="to1")
 
+{.caption} Order 2
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20): svg
+      circle.red(x="point(5,4)")
+      path.fill.finished(hidden x="polygon(point(4,4),point(2,6),point(3,7),point(5,5),point(7,7),point(8,6),point(6,4),point(8,2),point(7,1),point(5,3),point(3,1),point(2,2))" style="fill: rgba(83,174,9,0.4)")
+      path(x="polyline(point(5,3),point(3,1),point(2,2),point(4,4))")
+      path.red(x="segment(point(5,-1),point(5,4))")
+      path.red(x="segment(point(5,4),point(-1,4))")
+      path(hidden x="polyline(point(4,4),point(2,6),point(3,7),point(5,5),point(7,7),point(8,6),point(6,4),point(8,2),point(7,1),point(5,3))" name="to2")
 
+{.caption} Order 4
 :::
 
 ---
@@ -799,6 +878,7 @@ Adenovirus (right) are determined by their symmetries.
 
 ---
 > id: wallpaper-groups
+> goals: play-0 play-1
 
 ## Wallpaper Groups
 

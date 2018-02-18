@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import { isPalindrome } from '@mathigon/core';
+import { isPalindrome, words, flatten } from '@mathigon/core';
 import { Point } from '@mathigon/fermat';
 import { Draggable, $N } from '@mathigon/boost';
 import './components/wallpaper';
@@ -36,9 +36,16 @@ function expandSegment($geopad, [e1, e2], line) {
 }
 
 function drawShape($step, $geopad, goal, shape, expand=false) {
-  // `shape` should be the name of a polygon, segment or line.
-  const lines = $geopad.model[shape].edges || [$geopad.model[shape]];
+  // `shape` should be names of a polygon, segment or line.
+  const lines = flatten(words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));
+
   const solved = new Set();
+  let errors = 0;
+
+  function complete() {
+    $step.score(goal);
+    $geopad.css({'pointer-events': 'none', cursor: 'default'});
+  }
 
   $geopad.setActiveTool('line');
 
@@ -47,20 +54,31 @@ function drawShape($step, $geopad, goal, shape, expand=false) {
     for (let e of lines) {
       if (e.equals(path.val)) {
         solved.add(e);
-
+        if (expand) expandSegment($geopad, path.points, e);
+        errors = 0;
         if (solved.size === lines.length) {
-          $step.score(goal);
           $step.addHint('correct');
-          $geopad.css({'pointer-events': 'none', cursor: 'default'});
-          if (expand) expandSegment($geopad, path.points, lines[0]);
+          complete();
         }
-
         return;
       }
     }
 
     path.remove();
-    if (path.val.length >= 1) $step.addHint('incorrect');
+    if (path.val.length < 1) return;
+    errors += 1;
+
+    if (errors >= 4) {
+      let hint = lines.find(l => !solved.has(l));
+      $geopad.drawPath(() => hint, {animate: 400});
+      solved.add(hint);
+      $step.addHint('draw-hint', {force: true});
+      if (solved.size === lines.length) complete();
+      errors = 0;
+    } else {
+      $step.addHint('incorrect');
+    }
+
   });
 }
 
@@ -138,18 +156,6 @@ export function reflections($step) {
   drawShape($step, $geopads[2], 'r2', 'line2', true);
 }
 
-export function reflections1($step) {
-  const $geopads = $step.$$('x-geopad');
-
-  drawShape($step, $geopads[0], 'r0', 'to0');
-  drawShape($step, $geopads[1], 'r1', 'to1');
-  drawShape($step, $geopads[2], 'r2', 'to2');
-
-  $step.onScore('r0', () => $step.$('[name="to0"]').enter('fade', 600));
-  $step.onScore('r1', () => $step.$('[name="to1"]').enter('fade', 600));
-  $step.onScore('r2', () => $step.$('[name="to2"]').enter('fade', 600));
-}
-
 export function symmetry($step) {
   const $symmetries = $step.$$('.symmetry');
   const $images = $step.$$('img:nth-child(2)');
@@ -169,17 +175,28 @@ export function reflectionalSymmetry1($step) {
   drawShape($step, $geopads[0], 'r0', 'line0', true);
   drawShape($step, $geopads[1], 'r1', 'line1', true);
   drawShape($step, $geopads[2], 'r2', 'line2', true);
+  drawShape($step, $geopads[3], 'r3', 'line3a line3b', true);
+  drawShape($step, $geopads[4], 'r4', 'line4a line4b line4c line4d', true);
+  drawShape($step, $geopads[5], 'r5', 'line5a line5b', true);
 }
 
-export function reflectionalSymmetry2($step) {
+function drawThreeShapes($step) {
   const $geopads = $step.$$('x-geopad');
-  // TODO
+
+  drawShape($step, $geopads[0], 'r0', 'to0');
+  drawShape($step, $geopads[1], 'r1', 'to1');
+  drawShape($step, $geopads[2], 'r2', 'to2');
+
+  const finished = $step.$$('.finished');
+  $step.onScore('r0', () => finished[0].enter('fade', 600));
+  $step.onScore('r1', () => finished[1].enter('fade', 600));
+  $step.onScore('r2', () => finished[2].enter('fade', 600));
 }
 
-export function rotationalSymmetry2($step) {
-  const $geopads = $step.$$('x-geopad');
-  // TODO
-}
+export const reflections1 = drawThreeShapes;
+export const rotations = drawThreeShapes;
+export const reflectionalSymmetry2 = drawThreeShapes;
+export const rotationalSymmetry2 = reflectionalSymmetry2;
 
 export function palindromes($step) {
   const $inputs = $step.$$('input');
