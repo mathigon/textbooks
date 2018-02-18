@@ -2,7 +2,6 @@
 
 > stage: intermediate  
 > description: abc
-> hero: images/hero.jpg
 
 ---
 
