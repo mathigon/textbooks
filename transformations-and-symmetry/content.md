@@ -4,6 +4,7 @@
 > description: Symmetry can be seen everywhere in nature – but it even underlies
 >   completely invisible laws of nature. The mathematical properties of symmetry
 >   explain why that is the case.
+> next: triangles-and-trigonometry
 
 ---
 > id: intro
@@ -288,7 +289,7 @@ which made it easy to draw the reflections. If that is not the case, the
 construction becomes more complicated:
 
 ::: column(width=300)
-{.todo} INTERACTIVE ANIMATION
+{.todo} TODO Interactive Animation
 ::: column.grow
 We have to reflect every point individually, and then connect them again with
 lines. To start with, lets draw a line perpendicular to the line of reflection,
@@ -1139,13 +1140,13 @@ If the scale factor is between 0 and 1, the image is [[smaller|larger]] than the
 original. If the scale factor is larger than 1, the image is [[larger|smaller]]
 than the original.
 ::: column(width=300)
-{.todo} move the center, slider for scale factor
+{.todo} TODO Move the center, Slider for scale factor
 :::
 
 Here is how we can construct the dilation of a geometric shape:
 
 ::: column(width=300)
-{.todo} ANIMATION
+{.todo} TODO Animation
 ::: column.grow
 First we draw rays from the center of dilation to every point in the shape.
 
@@ -1169,7 +1170,7 @@ The symbol for similarity is `∼` (similar to the symbol for congruence, which
 was `≅`). In this example, we would write `A ∼ A'`.
 
 ::: column(width=240)
-{.todo} IMAGE
+{.todo} TODO Image
 :::
 
 ---
@@ -1184,7 +1185,7 @@ distance”.
 
 Find the vanishing point in the figure below:
 
-{.todo} image
+{.todo} TODO Image
 
 Now can you draw another house that matches the existing ones?
 
@@ -1276,7 +1277,7 @@ the two triangles are similar.
 Let’s have a look at a few examples where this is useful:
 
 ::: column(width=320)
-{.todo} IMAGE
+{.todo} TODO Image
 
 ::: column.grow
 Here you can see the image of a large lighthouse. Together with a friend, you
@@ -1296,7 +1297,7 @@ We can easily measure the length of the shadows, and we also know the height of
 your friend. Now we can use the proportionality of sides in similar triangles
 to find the height of the lighthouse:
 
-{.todo} equation
+{.todo} TODO Equation
 
 Therefore the lighthouse is [[1.5]]m tall.
 :::
@@ -1305,7 +1306,7 @@ Therefore the lighthouse is [[1.5]]m tall.
 > id: similar-triangles-2
 
 ::: column(width=320)
-{.todo} IMAGE
+{.todo} TODO Image
 ::: column.grow
 We can use the same technique to measure distances on the ground. Here we want
 to find the width of a large river. There is a big tree on one side of the
@@ -1322,7 +1323,7 @@ both have a right angle, and on pair of opposite angles.
 
 According to the proportionality rule, this means that
 
-{.todo} equation
+{.todo} TODO Equation
 
 Therefore the width of the river is [[45]] meters.
 :::

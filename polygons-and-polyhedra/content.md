@@ -3,6 +3,7 @@
 > stage: intermediate
 > description: Geometric shapes are everywhere around us. In this chapter you will learn about angels, polygons, tessellations, polyhedra and nets.
 > script: https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js
+> next: graphs-and-networks
 
 ---
 > id: polygons

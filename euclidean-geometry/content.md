@@ -4,6 +4,7 @@
 > description: Geometry is one of the oldest parts of mathematics – and one of
 >   the most useful. Its logical, systematic approach has been copied in many
 >   other areas.
+> next: transformations-and-symmetry
 
 ---
 > id: thales
@@ -939,8 +940,8 @@ safer and more efficient.
 ::: column(width=200)
     x-media(src="images/cctv.jpg" lightbox credit="© Depositphotos / junrong" width=200 height=200)
 
-{.caption} Geometry was key when designing the Chinese TV building in Beijing –
-and to make sure it won’t fall over.
+{.caption} Geometry was key when designing this skyscraper in Beijing – and to
+make sure it won’t fall over.
 ::: column(width=200)
     x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
