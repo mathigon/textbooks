@@ -6,7 +6,7 @@
 
 
 /* global THREE */
-import { slide } from '@mathigon/boost';
+import { slide, Browser } from '@mathigon/boost';
 
 
 // -----------------------------------------------------------------------------
@@ -89,8 +89,13 @@ export function drawShape($canvas, polyhedron, size, rotate) {
   let dragging = false;
   let visible = false;
 
-  $canvas.on('enterViewport', () => { visible = true; render(); });
-  $canvas.on('exitViewport', () => { visible = false; });
+  // TODO Only Chrome is fast enough to support interactivity and rotation.
+  if (Browser.isChrome) {
+    $canvas.on('enterViewport', () => { visible = true; render(); });
+    $canvas.on('exitViewport', () => { visible = false; });
+  } else {
+    setTimeout(render);
+  }
 
   function render() {
     if (visible) requestAnimationFrame(render);
@@ -106,6 +111,7 @@ export function drawShape($canvas, polyhedron, size, rotate) {
       const q = new THREE.Quaternion().setFromEuler(
         new THREE.Euler(d.y * Math.PI / 180, d.x * Math.PI / 180, 0, 'XYZ'));
       polyhedron.quaternion.multiplyQuaternions(q, polyhedron.quaternion);
+      if (!Browser.isChrome) render();  // TODO For non-Chrome browsers
     },
     end() { dragging = false; }
   });
