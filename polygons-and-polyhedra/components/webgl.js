@@ -86,11 +86,13 @@ export function drawShape($canvas, polyhedron, size, rotate) {
   const renderer = getRenderer(size);
   const context = $canvas.getContext();
 
+  // TODO Only Chrome is fast enough to support auto-rotation.
+  const autoRotate = rotate && Browser.isChrome && !Browser.isMobile;
+
   let dragging = false;
   let visible = false;
 
-  // TODO Only Chrome is fast enough to support interactivity and rotation.
-  if (Browser.isChrome) {
+  if (autoRotate) {
     $canvas.on('enterViewport', () => { visible = true; render(); });
     $canvas.on('exitViewport', () => { visible = false; });
   } else {
@@ -98,10 +100,10 @@ export function drawShape($canvas, polyhedron, size, rotate) {
   }
 
   function render() {
-    if (visible) requestAnimationFrame(render);
+    if (visible && autoRotate) requestAnimationFrame(render);
     renderer.render(scene, camera);
     context.drawImage(renderer.domElement, 0, 0);
-    if (rotate && !dragging) polyhedron.rotation.y += 0.012;
+    if (!dragging) polyhedron.rotation.y += 0.012;
   }
 
   slide($canvas, {
@@ -111,7 +113,7 @@ export function drawShape($canvas, polyhedron, size, rotate) {
       const q = new THREE.Quaternion().setFromEuler(
         new THREE.Euler(d.y * Math.PI / 180, d.x * Math.PI / 180, 0, 'XYZ'));
       polyhedron.quaternion.multiplyQuaternions(q, polyhedron.quaternion);
-      if (!Browser.isChrome) render();  // TODO For non-Chrome browsers
+      if (!autoRotate) render();
     },
     end() { dragging = false; }
   });
