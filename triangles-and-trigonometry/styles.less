@@ -6,13 +6,13 @@
 
 @import "styles/variables";
 
+@media screen and (min-width: 680px) { .shift-1 { margin-top: -70px !important; } }
+
 .mountain {
   background: white;
   z-index: 100;
   box-shadow: 0 0 30px 10px white;
 }
-
-@media screen and (min-width: 680px) { .shift-1 { margin-top: -70px; } }
 
 .task {
   color: @blue;
@@ -28,13 +28,8 @@
   top: calc(~"50vh - 150px");
 }
 
-#triangleInequality {
-  .labels text {
-    font-style: normal;
-    font-size: 24px;
-    font-weight: 600;
-    stroke-width: 5px;
-  }
+#triangle-inequality {
+  .labels text { font-weight: 600; }
 
   .item {
     .clearfix();
@@ -57,10 +52,7 @@
     border-radius: 100%;
     float: left;
     margin-right: 3px;
-
-    &.isRed { background: fade(@red, 50%); }
-    &.isBlue { background: fade(@blue, 50%); }
-    &.isYellow { background: fade(@yellow, 50%); }
+    &.correct { background: fade(@green, 50%); }
   }
 
 

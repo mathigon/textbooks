@@ -8,6 +8,7 @@
     // http://www.livemint.com/Leisure/9tK3aB8EJvHxsWmqc8UxuI/The-men-who-measured-Earths-curves.html
 
 ---
+> id: intro
 
 ## Introduction
 
@@ -39,22 +40,28 @@ But how to you measure the height of a mountain?
 
     figure.sticky.mountain: include svg/mountain.svg
 
-Today we can use satellites and GPS to measure the height of mountains to
+{.r} Today we can use satellites and GPS to measure the height of mountains to
 within a few centimeters – but these did not exist when Radhanath was surveying
 India.
+_{button.next-step} Next_
 
-Climbers use _altimeters_ to determine their altitude. These devices use the
+{.r.reveal(when="next-0")} Climbers use _altimeters_ to determine their altitude. These devices use the
 difference in air pressure at different heights. However this would have
 required someone to actually climb to the top of every mountain – an extremely
 difficult feat that was not achieved until a century later.
+_{button.next-step} Next_
 
-You could also try using similar triangles, like we did in the
+{.r.reveal(when="next-1")} You could also try using similar triangles, like we did in the
 [previous chapter](/course/transformations-and-symmetry#similar-triangles).
 This method requires knowing the distance to the [base of the mountain](target:base):
 the point at sea level that directly below its summit. We can do this for trees
 or lighthouses, but for mountains this point is hidden underneath hundreds
 of meters of rock.
+_{button.next-step} Next_
 :::
+
+---
+> id: intro-2
 
 But there are more advanced geometric techniques, which Radhanath used to
 discover the highest mountain on Earth – it is now called _Mount Everest_. His
@@ -66,6 +73,7 @@ but they are also of fundamental importance in many other areas of mathematics
 and science.
 
 ---
+> id: angle-sum
 
 ## Properties of Triangles
 
@@ -74,26 +82,50 @@ are line segments) and three vertices (the points where the sides meet). It also
 has three internal angles, and we already know that the sum of them is always
 [[180]]°.
 
+---
+> id: classification
+
 We can classify triangles by the size of their angles:
 
 ::: column(width=220)
-{.todo} image
+
+    x-geopad(width=220): svg
+      circle(name="a1" x="point(40,60)")
+      circle(name="b1" x="point(40,140)")
+      circle(name="c1" x="point(180,140)")
+      path.fill.red(x="angle(a1,b1,c1)")
+      path(x="polygon(a1,b1,c1)")
 
 {.caption} A __right-angled triangle__  
-has one right angle.
+has one [right angle](gloss:right-angle).
 ::: column(width=220)
-{.todo} image
+
+    x-geopad(width=220): svg
+      circle(name="a2" x="point(30,30)")
+      circle(name="b2" x="point(150,60)")
+      circle(name="c2" x="point(190,190)")
+      path.fill.blue(x="angle(a2,b2,c2)")
+      path(x="polygon(a2,b2,c2)")
 
 {.caption} An __obtuse triangle__  
-has one obtuse angle.
+has one [obtuse angle](gloss:obtuse-angle).
 ::: column(width=220)
-{.todo} image
+
+    x-geopad(width=220): svg
+      circle(name="a3" x="point(60,50)")
+      circle(name="b3" x="point(30,180)")
+      circle(name="c3" x="point(190,130)")
+      path.fill.green(x="angle(a3,b3,c3)")
+      path.fill.green(x="angle(b3,c3,a3)")
+      path.fill.green(x="angle(c3,a3,b3)")
+      path(x="polygon(a3,b3,c3)")
 
 {.caption} An __acute triangle__  
-has three acute angles.
+has [[three]] [acute angles](gloss:acute-angle).
 :::
 
 ---
+> id: labels
 
 ::: column.grow
 For convenience, we usually label triangles in the same way. The vertices are
@@ -104,13 +136,13 @@ are labelled with Greek letters [α, β and γ](target:angle) ("alpha",
  
 The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
 [angle that lies right next to _A_](target:Y) is labelled α. The same pattern
-works for _B_ and _C_.
+works for _B_/_b_/β and for _C_/_c_/γ.
 ::: column(width=220)
 
-    x-geopad.sticky(width=220 height=200): svg
-      circle.move.red(name="a" cx=80 cy=20 label="A" target="vertex X Y")
-      circle.move.blue(name="b" cx=20 cy=180 label="B" target="vertex")
-      circle.move.green(name="c" cx=200 cy=160 label="C" target="vertex")
+    x-geopad(width=220 height=200): svg
+      circle.move.red(name="a" cx=80 cy=30 label="A" target="vertex X Y")
+      circle.move.blue(name="b" cx=30 cy=170 label="B" target="vertex")
+      circle.move.green(name="c" cx=190 cy=150 label="C" target="vertex")
       path.red(x="angle(c,a,b)" label="α" target="angle Y")
       path.blue(x="angle(a,b,c)" label="β" target="angle")
       path.green(x="angle(b,c,a)" label="γ" target="angle")
@@ -121,117 +153,136 @@ works for _B_ and _C_.
 :::
 
 ---
+> id: medians
+> goals: s0 s1 s2 move
 
 ### Medians 
 
 ::: column(width=300)
 
-    x-geopad.sticky.middle(tools="move|point|line"): svg
-      circle.move(name="a" cx=75 cy=75 label="A")
-      circle.move(name="b" cx=50 cy=250 label="B")
-      circle.move(name="c" cx=250 cy=200 label="C")
+    x-geopad.sticky(width=300 tools="move|line"): svg
+      circle.move(name="a" cx=75 cy=75 target="ratio")
+      circle.move(name="b" cx=50 cy=250)
+      circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-
+      
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
-      circle.red(name="bc" x="line(b,c).midpoint")
+      circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
       
-      path.red(x="segment(a,bc)")
-      path.blue(x="segment(b,ac)")
-      path.green(x="segment(c,ab)")
+      circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
       
-      circle.yellow(x="triangle(a,b,c).centroid")
+      path.red.transparent(x="segment(a,d)" label="2" target="ratio")
+      path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
+      
 
 ::: column.grow
 Here you can see a triangle as well as the midpoints of its three sides.
 
 A __median__ of a triangle is a line segment that joins a vertex and the
-midpoint of the opposite side. Draw the three medians of this triangle. What
-happens as you move the vertices of the triangle?
+midpoint of the opposite side. Draw the three medians of this triangle.
+_{span.reveal(when="s0 s1 s2")}What happens as you move the vertices of the
+triangle?_
 
-It seems like the medians always [[intersect in one point|have the same length|divide each other in the middle]].
+{.reveal(when="move")} It seems like the medians always [[intersect in one
+point|have the same length|divide each other in the middle]].
 _{span.reveal(when="blank-0")}This point is called the __centroid__._
 
-Medians always divide each other in the [ratio 2:1](target:ratio). For each of
-the three medians, the distance from the vertex to the centroid is always twice
-as long as the distance from the centroid to the midpoint.
+{.reveal(when="blank-0")} Medians always divide each other in the
+[ratio 2:1](target:ratio). For each of the three medians, the distance from the
+vertex to the centroid is always [[twice|three times|exactly]] as long as the
+distance from the centroid to the midpoint.
 :::
 
 ---
+> id: center-of-mass
+> goals: move
 
-The centroid is also the “balancing point” of a triangle. If you cut a triangle
-out of cardboard, you can balance it on a pencil if you place it exactly over
-the centroid. Or you could hang it perfectly level from a piece of string, if
-you attach it to the centroid:
- 
-::: column(width=260)
-{.todo} image
-::: column(width=260)
-{.todo} image
-:::
+The centroid is also the “balancing point” of a triangle. Draw a triangle on
+some cardboard, cut it out, and find the three medians. If you were accurate,
+you can now balance the triangle on the trip of a pencil, or hang it perfectly
+level from a piece of string that's attached to its centroid:
+
+    figure: img(src="images/center-of-mass.jpg" width=600 height=190)
 
 ::: column.grow
 This works because the weight of the triangle is evenly distributed around the
-centroid. In physics, this point is often called the _center of mass_.
+centroid. In physics, this point is often called the __center of mass__.
 
 Any straight line that goes through the centroid divides the triangle into two
-parts that have exactly the same area.
+parts that have exactly the same area. Move the [blue point](target:move) in the
+figure on the right. The red and green areas will always have the same area.
 ::: column(width=220)
-{.todo} interactive
+
+    x-geopad(width=220): svg
+      circle.move(name="a" cx=70 cy=50)
+      circle.move(name="b" cx=60 cy=160)
+      circle.move(name="c" cx=180 cy=130)
+      circle.yellow(x="triangle(a,b,c).centroid" name="d")
+      circle.move.blue(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
+      circle(hidden name="q" x="p.rotate(pi,d)")
+
+      path.dark(x="triangle(a,b,c)" name="t")
+      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
+      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
+      path.blue(x="line(p,d)")
+
 :::
 
 ---
+> id: circumcircle
+> goals: s0 s1 s2
 
 ### Perpendicular Bisectors and Circumcircle
 
 ::: column(width=300)
 
-    x-geopad.sticky.middle(tools="move|point|line|perpBisector"): svg
-      circle.move(name="a" cx=75 cy=75 label="A")
-      circle.move(name="b" cx=50 cy=250 label="B")
-      circle.move(name="c" cx=250 cy=200 label="C")
-    
-      path.thin.red(x="line(a,b).perpendicularBisector")
-      path.thin.blue(x="line(a,c).perpendicularBisector")
-      path.thin.green(x="line(b,c).perpendicularBisector")
-
+    x-geopad.sticky(tools="move|perpBisector"): svg
+      circle.move(name="a" cx=75 cy=75 label="A" target="b-blue b-red")
+      circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
+      circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
       path(x="triangle(a,b,c)")
-      path.yellow(x="triangle(a,b,c).circumcircle")
-      circle.yellow(x="triangle(a,b,c).circumcircle.c", r=4)
 
-      circle.red(x="line(a,b).midpoint")
-      circle.blue(x="line(a,c).midpoint")
-      circle.green(x="line(b,c).midpoint")
+      circle.reveal.red(x="line(a,b).midpoint" when="blank-0")
+      circle.reveal.blue(x="line(a,c).midpoint" when="blank-0")
+      circle.reveal.green(x="line(b,c).midpoint" when="blank-0")
 
+      circle.reveal.yellow(x="triangle(a,b,c).circumcircle.c" name="d" when="s0 s1 s2" target="center")
+      path.yellow(hidden x="arc(d,c,1.99*pi)" name="circumcircle")
 
 ::: column.grow
-You already know that the perpendicular bisector of a line is the perpendicular
-line that goes through its [[midpoint|endpoints]]. Draw the perpendicular
-bisector of all three sides of a triangle.
+Recall that the [perpendicular bisector](gloss:perp-bisector) of a line is the perpendicular
+line that goes through its [[midpoint|endpoints]]. _{span.reveal(when="blank-0")}Draw
+the perpendicular bisector of all three sides of a triangle._
 
-{.reveal(when="draw")} Like before, the three perpendicular bisectors meet in a
+{.reveal(when="s0 s1 s2")} Like before, the three perpendicular bisectors meet in a
 single point. And again, this point has a special property.
 
-Any point on a perpendicular bisector has the same distance from the endpoints
-of the lines it bisects. For example, any point on the [blue bisector](target:bisector-a)
-has the same distance from A and B and any point on the [red bisector](target:bisector-b)
-has the same distance from B and C.
+{.reveal(when="s0 s1 s2")} Remember that any point on a perpendicular bisector
+has the same distance from the endpoints of the lines it bisects. For example,
+any point on the [blue bisector](target:b-blue) has the same distance from
+points _A_ and _C_ and any point on the [red bisector](target:b-red) has
+the same distance from points [[A and B|A and C|B and C]].
 
-The intersection point lies on all three perpendicular bisectors, so it must
-have the same distance from all vertices of the triangle.
+{.reveal(when="blank-1")} The [intersection point](target:center) lies on all
+three perpendicular bisectors, so it must have the same distance from all three
+[[vertices|sides]] of the triangle.
 
-This means we can draw a circle around it that touches all the vertices. This
-circle is called the __circumcircle__ of the triangle, and the center is called
-the __circumcenter__.
+{.reveal(when="blank-2")} This means we can draw a circle around it that
+perfectly touches all the vertices. This circle is called the __circumcircle__
+of the triangle, and the center is called the __circumcenter__.
 :::
 
 ---
+> id: circumcircle-1
 
-This also means that if we are given _any_ three points, we can always find a
-circle that goes through all three of them. (Unless the points are collinear,
-in which case they all lie on a straight line.)
+In fact, this means that if you are given any three points, you can use the
+circumcenter to find a circle that goes through all three of them. (Unless the
+points are [[collinear|parallel]], in which case they all lie on a straight line.)
 
 ---
+> id: incircle
+> goals: s0 s1 s2
 
 ### Angle Bisectors and Incircle
 
@@ -241,137 +292,180 @@ what's special about their intersection.
 
 ::: column(width=300)
   
-    x-geopad.sticky.middle(tools="move|point|line|angleBisector"): svg
-      circle.move(name="a" cx=75 cy=75 label="A")
-      circle.move(name="b" cx=50 cy=250 label="B")
-      circle.move(name="c" cx=250 cy=200 label="C")
-    
-      path.thin.red(x="angle(a,b,c)")
-      path.thin.blue(x="angle(b,c,a)")
-      path.thin.green(x="angle(c,a,b)")
+    x-geopad.sticky(tools="move|angleBisector"): svg
+      circle.move(name="a" cx=75 cy=75)
+      circle.move(name="b" cx=50 cy=250 target="b-blue")
+      circle.move(name="c" cx=250 cy=200 target="b-red")
 
-      path.thin.blue(x="angle(a,b,c).bisector")
-      path.thin.green(x="angle(b,c,a).bisector")
-      path.thin.red(x="angle(c,a,b).bisector")
+      path.thin.red(x="angle(c,a,b)" name="xa")
+      path.thin.blue(x="angle(a,b,c)" name="xb")
+      path.thin.green(x="angle(b,c,a)" name="xc")
 
-      path(x="segment(a,b)" label="a")
-      path(x="segment(a,c)" label="b")
-      path(x="segment(b,c)" label="c")
+      path(x="segment(a,b)" label="a" target="b-blue b-red")
+      path(x="segment(a,c)" label="b" target="b-red")
+      path(x="segment(b,c)" label="c" target="b-blue")
 
-      path.yellow(x="triangle(a,b,c).incircle")
-      circle.yellow(x="triangle(a,b,c).incircle.c")
-
+      circle.reveal.yellow(x="triangle(a,b,c).incircle.c" when="s0 s1 s2" target="center")
+      path.yellow(hidden x="arc(triangle(a,b,c).incircle.c,triangle(a,b,c).incircle.at(0),1.999*pi)" name="incircle")
 
 ::: column.grow
-You already know that the angle bisector divides an angle exactly in the middle.
-Draw the angle bisector of the three angles in this triangle.
+Recall that the [angle bisector](gloss:angle-bisector) divides an angle exactly
+in the middle. Draw the angle bisector of the three angles in this triangle.
 
-{.reveal(when="draw")} And – once again – all three lines intersect in one
-point. You probably expected something like this, but it is important to notice
-that there is no obvious reason why this should happen!
+{.r.reveal(when="s0 s1 s2")} Once again, all three lines intersect at one point.
+You probably expected something like this, but it is important to notice that
+there is no obvious reason why this should happen – triangles are just very
+special shapes!
+_{button.next-step} Next_
 
-Points that lie on an angle bisector have the same distance from the two lines
-that form the angle. For example any point on the blue bisector has the same
-distance from side _a_ and side _b_. The same is true for the other bisectors.
+{.reveal(when="next-0")} Points that lie on an angle bisector have the same
+distance from the two lines that form the angle. For example any point on the
+[blue bisector](target:b-blue) has the same distance from side _a_ and side _c_,
+and any point on the [red bisector](target:b-red) has the same distance from
+sides [[a and b|a and c|b and c]].
 
-The intersection point lies on all three bisectors. Therefore it must have the
-same distance from all three sides of the triangle.
+{.reveal(when="blank-0")} The [intersection point](target:center) lies on all
+three bisectors. Therefore it must have the same distance from all three sides
+of the triangle.
 
-This means we can draw a circle around it that just touches all three sides.
-This circle is called the __incircle__ of the triangle, and the center is called
-the __incenter__.
+{.reveal(when="blank-0")} This means we can draw a circle around it, that lies
+inside the triangle and just touches its three sides. This circle is called the
+__incircle__ of the triangle, and the center is called the __incenter__.
 :::
 
 ---
+> id: area
 
 ### Area and Altitudes
 
-Finding the area of a rectangle is easy: you simply multiply width by height.
-Finding the area of a triangle is a bit less obvious…
-
 ::: column.grow
-Let's start by simply "trapping" a triangle inside a rectangle. The width of
-the rectangle is the length of the bottom side (which is called the _base_).
+{.r} Finding the area of a rectangle is easy: you simply multiply width by height.
+Finding the area of a triangle is a bit less obvious. Let's start by simply
+"trapping" a triangle inside a rectangle.
+_{button.next-step} Next_
 
-The height of the triangle is the perpendicular distance from the base to the
-opposite vertex.
+{.reveal.r(when="next-0")} The width of the rectangle is the length of the
+[bottom side](target:base) of the triangle (which is called the _base_). The
+height of the rectangle is the [perpendicular distance](target:height) from the
+base to the opposite vertex.
+_{button.next-step} Next_
 
-The height divides the triangle into two smaller parts. Notice how each of the
-smaller triangles exactly fills the remaining gaps in the rectangle. This means
-that the rectangle is twice as large as the triangle.
+{.reveal(when="next-1")} The height divides the triangle into two parts. Notice
+how the [two gaps in the rectangle](target:gap) are exactly as big as the two
+parts of the triangle. This means that the rectangle is
+[[twice as|three times as|exactly as]] large as the triangle.
 
-We can easily work out the area of the rectangle, so the area of the triangle
-must be half that:
+{.reveal(when="blank-0")} We can easily work out the area of the rectangle, so
+the area of the triangle must be half that:
 
-{.text-center} `A = 1/2 xx "base" xx "height"`
-::: column(width=260)
-{.todo} image
+{.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.step-target.pill.red} base](target:base)
+`×` [{.step-target.pill.blue} height](target:height)
+::: column(width=300)
+
+    x-geopad.sticky(width=300): svg
+      circle.move(name="a" cx=40 cy=220)
+      circle.move(name="b" cx=260 cy=220)
+      circle.move(name="c" cx=190 cy=80)
+      circle(hidden x="line(a,b).project(c)" name="d")
+      circle(hidden x="a.add(c).subtract(d)" name="e")
+      circle(hidden x="b.add(c).subtract(d)" name="f")
+
+      path.fill.green.reveal(x="polygon(a,d,c)" when="next-1" target="gap")
+      path.fill.green.transparent(x="polygon(a,e,c)" target="gap")
+
+      path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
+      path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
+      
+      path.dark(x="polygon(a,b,c)")
+      path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
+      path.blue.reveal(x="segment(c,d)" label="height" when="next-0" delay="1000" target="height")
+      path.blue.reveal(x="angle(c,d,b)" when="next-0" delay="1000" target="height")
+      path.red.reveal(x="segment(a,b)" label="base" when="next-0" delay="1000" target="base")
+
 :::
 
-The lines that go through a vertex of a triangle and are perpendicular to the
-opposite side are called the __altitudes__ the triangle.
+---
+> id: altitudes
 
-Every triangle has three altitudes, depending on which of the three sides you
-pick as base. You can use any altitude to calculate the area of a triangle, and
-they all give the same result.
+To calculate the area of a triangle, you can pick any of the three sides as
+__base__, and the find the corresponding __height__, which is the line that is
+[[perpendicular|parallel]] to the base and goes through the opposite vertex.
+
+{.reveal(when="blank-0")} In triangles, the _heights_ are often called
+__altitudes__. Every triangle has [[three]] altitudes.
+
+---
+> id: altitudes-1
 
 ::: column(width=300)
 
-    x-geopad.sticky.middle(tools="move|point|line"): svg
+    x-geopad(width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
       
       path(x="triangle(a,b,c)")
-      path.red(x="line(a,b).perpendicular(c)")
-      path.blue(x="line(a,c).perpendicular(b)")
-      path.green(x="line(b,c).perpendicular(a)")
-      circle.yellow(x="triangle(a,b,c).orthocenter")
+      path.altitude.red(hidden x="line(a,b).perpendicular(c)")
+      path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
+      path.altitude.green(hidden x="line(b,c).perpendicular(a)")
+      circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
 Like the medians, perpendicular bisectors and angle bisectors, the three
 altitudes of a triangle intersect in a single point. This is called the
-__orthocenter__ of the triangle.
+[__orthocenter__](target:center) of the triangle.
 
-In acute triangles, the orthocenter [[lies inside|lies outside|is a vertex of]]
-the triangle.
+In [acute triangles](gloss:acute-triangle), the orthocenter
+[[lies inside|lies outside|is a vertex of]] the triangle.
 
-In right-angled triangles, the orthocenter [[is a vertex of|lies inside|lies outside]]
-the triangle. Two of the altitudes are actually just sides of the triangle.
+{.reveal(when="blank-0")} In [obtuse triangles](gloss:obtuse-triangle), the
+orthocenter [[lies outside|lies inside|is a vertex of]] the triangle.
 
-In obtuse triangles, the orthocenter [[lies outside|lies inside|is a vertex of]]
-the triangle.
+{.reveal(when="blank-1")} In [right-angled triangles](gloss:right-triangle), the
+orthocenter [[is a vertex of|lies inside|lies outside]] the triangle. Two of the
+altitudes are actually just sides of the triangle.
 :::
 
 ---
+> id: midsegments
+> goals: s0 s1 s2
 
 ### Triangle Midsegments
 
 ::: column(width=300)
 
-    x-geopad.sticky.middle(tools="move|point|line"): svg
+    x-geopad.sticky.middle(tools="move|line"): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
-      path(x="triangle(a,b,c)")
-
       circle.red(name="p" x="line(a,b).midpoint")
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
-      path.red(x="triangle(p,q,r)")
+      path(x="triangle(a,b,c)")
+      
+      path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
+      path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
+      path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
+      path.transparent.fill.green(x="polygon(p,q,r)" target="triangles")
+      path.transparent.fill.red(x="polygon(a,b,c)" target="large")
 
 ::: column.grow
-A __midsegment__ is a line segment that connects two midpoints of a triangle.
-Draw the three midsegments of this triangle.
+A __midsegment__ is a line segment that connects the midpoints of two sides of a
+triangle. Draw the three midsegments of this triangle.
 
-As you can see, the midsegments split the triangle into [[4]] smaller ones. It
-turns out that all of them are congruent – even the upside down one. They are
-also all similar to the original, large triangle (with a scale factor of 2).
+{.reveal(when="s0 s1 s2")} As you can see, the midsegments split the triangle
+into [four smaller triangles](target:triangles).
 
-This allows us to deduce some important facts about the midsegments of
-triangles, which can be summarised un the __Midsegment Theorem__:
+{.reveal(when="s0 s1 s2")} It turns out that all of these smaller triangles are
+[[congruent|overlapping|different sizes]] – even the upside down one in the
+middle. _{span.reveal(when="blank-0")} They are also all [[similar|congruent]]
+to the [original triangle](target:large),_ _{span.reveal(when="blank-1")}with a
+scale factor of `1/2`._
 
-::: .theorem
+{.reveal(when="blank-1")} This allows us to deduce some important facts about
+the midsegments of triangles:
+
+::: .theorem.reveal(when="blank-1")
 __Midsegment Theorem__  
 A midsegment of a triangle is parallel to its opposite side, and exactly half
 the length of that side.
@@ -379,20 +473,26 @@ the length of that side.
 :::
 
 ---
-> id: triangleInequality
+> id: triangle-inequality
+> goals: s0 s1 s3 s5
 
 ## The Triangle Inequality
 
-If I give you any three numbers, can you make a triangle that has those side
-lengths? Why not give it a try:
+Having studied many of the properties and components of triangles, let's think
+about _creating_ triangles. In particular, if I give you any three numbers, can
+you make a triangle that has those side lengths?
+
+Here are a some examples – move the vertices of the triangle until the three
+sides match one of the rows on the left.
 
     .inequality.row
       div(style="width:160px")
-        .item #[.number 5,]#[.number 6,]#[.number 7] #[span.check]
-        .item #[.number 3,]#[.number 9,]#[.number 9] #[span.check]
+        .item #[.number 5,]#[.number 6,]#[.number 7] #[span.check(when="s0")]
+        .item #[.number 3,]#[.number 9,]#[.number 9] #[span.check(when="s1")]
         .item #[.number 2,]#[.number 4,]#[.number 8]
-        .item #[.number 4,]#[.number 6,]#[.number 7] #[span.check]
+        .item #[.number 4,]#[.number 6,]#[.number 7] #[span.check(when="s3")]
         .item #[.number 1,]#[.number 2,]#[.number 6]
+        .item #[.number 3,]#[.number 5,]#[.number 7] #[span.check(when="s5")]
       .grow
         x-geopad(height=360): svg
           circle.move(name="a" cx=75 cy=75)
