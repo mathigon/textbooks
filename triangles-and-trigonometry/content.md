@@ -483,26 +483,27 @@ about _creating_ triangles. In particular, if I give you any three numbers, can
 you make a triangle that has those side lengths?
 
 Here are a some examples – move the vertices of the triangle until the three
-sides match one of the rows on the left.
+sides match one of the triples on the left.
 
     .inequality.row
-      div(style="width:160px")
-        .item #[.number 5,]#[.number 6,]#[.number 7] #[span.check(when="s0")]
-        .item #[.number 3,]#[.number 9,]#[.number 9] #[span.check(when="s1")]
-        .item #[.number 2,]#[.number 4,]#[.number 8]
-        .item #[.number 4,]#[.number 6,]#[.number 7] #[span.check(when="s3")]
-        .item #[.number 1,]#[.number 2,]#[.number 6]
-        .item #[.number 3,]#[.number 5,]#[.number 7] #[span.check(when="s5")]
+      div(style="width:150px")
+        .item #[.t-num 5]#[.t-num 6]#[.t-num 7] #[span.check(when="s0")]
+        .item #[.t-num 3]#[.t-num 9]#[.t-num 9] #[span.check(when="s1")]
+        .item #[.t-num 2]#[.t-num 4]#[.t-num 8]
+        .item #[.t-num 4]#[.t-num 6]#[.t-num 7] #[span.check(when="s3")]
+        .item #[.t-num 1]#[.t-num 2]#[.t-num 6]
+        .item #[.t-num 3]#[.t-num 5]#[.t-num 7] #[span.check(when="s5")]
       .grow
         x-geopad(height=360): svg
-          circle.move(name="a" cx=75 cy=75)
-          circle.move(name="b" cx=50 cy=250)
-          circle.move(name="c" cx=250 cy=200)
-          path.red(x="segment(a,b)" label="${round(distance(a,b)/50)}")
-          path.blue(x="segment(b,c)" label="${round(distance(b,c)/50)}")
-          path.yellow(x="segment(a,c)" label="${round(distance(a,c)/50)}")
+          circle.move(name="a" cx=175 cy=75)
+          circle.move(name="b" cx=150 cy=250)
+          circle.move(name="c" cx=350 cy=200)
+          path.red(x="segment(a,b)" label="${roundD(a,b)}")
+          path.blue(x="segment(b,c)" label="${roundD(b,c)}")
+          path.yellow(x="segment(a,c)" label="${roundD(a,c)}")
 
 ---
+> id: triangle-inequality-1
 
 It seems like there are a few cases where three numbers simply _cannot_ make a
 triangle. This particularly happens when one side is much longer than the
@@ -510,13 +511,37 @@ other two.
 
 ::: column.grow
 Think about the three sides of a triangle as metal rods, connected with hinges.
-Let's place the longest rod in the middle and the shorter ones on either side.
+Let's place the [longest rod](target:long) in the middle and the [shorter
+ones](target:short) on either side.
 
-Now it is easy to see that it is impossible to link up the ends of the shorter
-rods, if their combined length is less than the length of the larger rod.
+{.r} Now it is easy to see that it is impossible to link up the ends of the
+shorter rods, if their combined length is less than the length of the larger rod.
+_{button.next-step} Next_
+
 ::: column(width=300)
-{.todo} image
+
+    x-geopad(width=300 height=180): svg
+      radialGradient#metal
+        stop(offset="0%" stop-color="#ddd")
+        stop(offset="100%" stop-color="#999")
+      
+      circle(name="a" x="point(90,90)")
+      circle(name="b" x="point(210,90)")
+      
+      circle.move(name="c" cx=150 cy=50 project="circle(a,60)")
+      circle.move(name="d" cx=150 cy=50 project="circle(b,40)")
+
+      path.blue(x="circle(a,60)" style="stroke-dasharray: 8px 10px")
+      path.blue(x="circle(b,40)" style="stroke-dasharray: 8px 10px")
+      
+      path(x="segment(a,b)" style="stroke-width: 5px" target="long")
+      path(x="segment(a,c)" style="stroke-width: 5px" target="short")
+      path(x="segment(b,d)" style="stroke-width: 5px" target="short")
+
 :::
+
+---
+> id: inequality-picker
 
 Let's rewrite this observation in mathematical terms:
 
@@ -527,22 +552,21 @@ length of the third.
 :::
 
 In other words, if a triangle has sides _a_, _b_ and _c_, then we know that
-`a+b>c`, `a+c>b` and `b+c>a`.
-
----
+`a+b>c` and `a+c>b` and `b+c>a`.
 
 The triangle inequality allows us to quickly check if three numbers can make a
-triangle. Which of these ones do?
+triangle. Which of these triples of numbers are possible?
 
     x-picker
-      .item.text-center 4, 6, 9
-      .item.text-center(error="This can't be a triangle, because 1 + 2 is not bigger than 3.") 1, 2, 3
-      .item.text-center 3, 7, 8
-      .item.text-center 2, 3, 4
-      .item.text-center 2, 4, 7
-      .item.text-center 1, 5, 8
+      .item.text-center #[.t-num 4]#[.t-num 6]#[.t-num 9]
+      .item.text-center(data-error="inequality-error-1") #[.t-num 1]#[.t-num 2]#[.t-num 3]
+      .item.text-center #[.t-num 3]#[.t-num 7]#[.t-num 8]
+      .item.text-center(data-error="inequality-error-2") #[.t-num 2]#[.t-num 4]#[.t-num 7]
+      .item.text-center(data-error="inequality-error-3") #[.t-num 1]#[.t-num 5]#[.t-num 8]
+      .item.text-center #[.t-num 2]#[.t-num 3]#[.t-num 4]
 
 ---
+> id: triangle-inequality-2
 
 The triangle inequality also allows us to estimate the length of the third side
 of a triangle, if we know the length of the other two.
@@ -550,32 +574,31 @@ of a triangle, if we know the length of the other two.
 Imagine that a triangle has two sides of length 4 and 6. Let's call _c_ the
 length of the third side. Then we know that
 
-{.text-center} `4+6>c`, `4+c>6` and `6+c>4`
+{.text-center} `4+6>c`, _{span.space}_ `4+c>6` _{span.space}_ and _{span.space}_ `6+c>4`
 
-We can rearrange these inequalities to give [[2]] `<c<` [[10]]. The length of
-side _c_ has to be between 2 and 10.
+We can rearrange these inequalities to give [[2]] `<c<` [[10]].
+_{span.reveal(when="blank-0 blank-1")}The length of side *c* has to be between 2 and 10._
 
 ---
+> id: triangle-inequality-3
+> goals: target-0 target-1
 
 ::: column.grow
-We can think of this again using physical objects: two sides of the triangle are
-metal rods of length 4 and 6, and the third side is a rubber band that can
-expand or contract.
+Once again, we can think about this using physical objects: two sides of the
+triangle are metal rods of length 4 and 6, and the third side is a rubber band
+that can expand or contract.
 
-Now you can see that the rubber band will always be [longer than](target:small)
-`6-4=2` and [shorter than](target:big) `6+4=10`.
+Now you can see that the rubber band will always be _{span.hover-target} longer than_
+`6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
 ::: column(width=300)
 
     x-geopad(width=300 height=200): svg
-      radialGradient#wood
-        stop(offset="0%" stop-color="#925313")
-        stop(offset="100%" stop-color="#5D3D1D")
       circle.move(name="a" cx=150 cy=150)
       circle.move(name="b" cx=70 cy=150 project="circle(a,80)")
       circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
-      path(x="segment(a,b)" style="stroke: url(#wood); stroke-width: 5px" label="4")
-      path(x="segment(a,c)" style="stroke: url(#wood); stroke-width: 5px" label="6")
-      path.rubber(x="segment(b,c)" style="stroke: #00cca6; stroke-width: ${200/distance(b,c)}px" label="${round(distance(b,c)/20)}")
+      path(x="segment(a,b)" style="stroke-width: 5px" label="4")
+      path(x="segment(a,c)" style="stroke-width: 5px" label="6")
+      path.rubber(x="segment(b,c)" style="stroke: #00cca6; stroke-width: ${350/distance(b,c)}px" label="${round(distance(b,c)/20)}")
 
 :::
 
@@ -610,9 +633,6 @@ The circles actually intersect [[twice]]: once at the top and once at the
 bottom. We can pick either of these intersections, and the resulting two
 triangles are congruent.
 :::
-
-Can you see how this example relates to the triangle inequality? If the first
-side is longer than the sum of the others, the two circles would never intersect.
 
 ---
 

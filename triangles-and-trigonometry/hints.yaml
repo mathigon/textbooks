@@ -1,0 +1,5 @@
+inequality-impossible: Maybe some of the number triples are impossible. If you're stuck, try one of the others!
+
+inequality-error-1: This is not a valid triangle, since 1 + 2 is not bigger than 3.
+inequality-error-2: This is not a valid triangle, since 2 + 4 is not bigger than 7.
+inequality-error-3: This is not a valid triangle, since 1 + 6 is not bigger than 8.

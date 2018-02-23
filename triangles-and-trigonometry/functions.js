@@ -93,17 +93,16 @@ export function midsegments($step) {
 // -----------------------------------------------------------------------------
 
 export function triangleInequality($step) {
+  function round(a, b) { return Math.round(Point.distance(a, b) / 25) / 2; }
+  $step.model.set('roundD', round);
 
-  const targets = $step.$$('.item').map($el => {
-    return $el.$$('.number').map($el => ({$el, val: +$el.text[0]}));
-  });
+  const $items = $step.$$('.item');
+  const targets = $items.map($el => $el.$$('.t-num').map($el => ({$el, val: +$el.text})));
+
+  $step.delayedHint(() => $step.addHint('inequality-impossible'), 15000);
 
   $step.model.watch(s => {
-    const a = Math.round(Point.distance(s.a, s.b) / 50);
-    const b = Math.round(Point.distance(s.b, s.c) / 50);
-    const c = Math.round(Point.distance(s.a, s.c) / 50);
-    const active = [a,b,c].sort();
-
+    const active = [round(s.a, s.b), round(s.b, s.c), round(s.a, s.c)].sort();
     targets.forEach((t, i) => {
       let correctCount = 0;
       for (let x=0; x<3; ++x) {
@@ -111,15 +110,38 @@ export function triangleInequality($step) {
         t[x].$el.setClass('correct', isCorrect);
         correctCount += isCorrect;
       }
-      if (correctCount === 3) $step.score('s' + i);
+      if (correctCount === 3) {
+        $step.score('s' + i);
+        $items[i].addClass('correct');
+      }
     });
   });
-
 }
 
+export function triangleInequality3($step) {
+  const $targets = $step.$$('.hover-target');
+  const $geopad =$step.$('x-geopad');
 
+  $targets[0].on('hover', {
+    enter() {
+      $geopad.animatePoint('a', $geopad.model.point(90, 110), 1200);
+      $geopad.animatePoint('b', $geopad.model.point(165, 105), 1200);
+      $geopad.animatePoint('c', $geopad.model.point(210, 110), 1200);
+      $step.score('target-0');
+    }
+  });
 
+  $targets[1].on('hover', {
+    enter() {
+      $geopad.animatePoint('b', $geopad.model.point(50, 105), 1200);
+      $geopad.animatePoint('a', $geopad.model.point(130, 110), 1200);
+      $geopad.animatePoint('c', $geopad.model.point(250, 105), 1200);
+      $step.score('target-1');
+    }
+  });
+}
 
+// -----------------------------------------------------------------------------
 
 export function pythagorasProof($section) {
 
