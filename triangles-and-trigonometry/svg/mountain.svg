@@ -2,15 +2,15 @@
 
     <polygon class="reveal" data-when="next-1" points="502 235.5 7 235.5 502 19.5 502 235.5" fill="none" stroke="#fbb03b" stroke-linejoin="round" stroke-width="4"/>
     <polygon class="reveal" data-when="next-1" points="117 235.5 7 235.5 117 187.5 117 235.5" fill="none" stroke="#fbb03b" stroke-linejoin="round" stroke-width="4"/>
-    <line hidden="hidden" x1="7" y1="235.5" x2="502" y2="235.5" fill="none" stroke="#fbb03b" stroke-linejoin="round" stroke-width="4"/>
+    <line class="reveal mountain-distance" data-when="next-1" x1="7" y1="235.5" x2="502" y2="235.5" fill="none" stroke="#fbb03b" stroke-linejoin="round" stroke-width="4"/>
 
-    <g class="reveal" data-when="next-0" data-animation="pop">
+    <g class="reveal mountain-top" data-when="next-0" data-animation="pop">
       <circle cx="502" cy="18.5" r="11" fill="#fff"/>
       <path d="M502,9.5a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-4a13,13,0,1,0,13,13,13,13,0,0,0-13-13Z" fill="#c1272d"/>
       <line x1="494.8" y1="25.7" x2="509.3" y2="11.2" fill="none" stroke="#c1272d" stroke-miterlimit="10" stroke-width="4"/>
     </g>
 
-    <g class="reveal" data-when="next-1" data-animation="pop">
+    <g class="reveal mountain-base" data-when="next-1" data-animation="pop">
       <circle cx="502" cy="234.5" r="11" fill="#fff"/>
       <path d="M502,225.5a9,9,0,1,1-9,9,9,9,0,0,1,9-9m0-4a13,13,0,1,0,13,13,13,13,0,0,0-13-13Z" fill="#c1272d"/>
       <line x1="494.8" y1="241.7" x2="509.3" y2="227.2" fill="none" stroke="#c1272d" stroke-miterlimit="10" stroke-width="4"/>

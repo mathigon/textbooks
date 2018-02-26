@@ -5,7 +5,8 @@
 
 
 
-import { Point } from '@mathigon/fermat';
+import { square, isInteger, delay, isOneOf } from '@mathigon/core';
+import { Point, round } from '@mathigon/fermat';
 
 // -----------------------------------------------------------------------------
 
@@ -143,12 +144,74 @@ export function triangleInequality3($step) {
 
 // -----------------------------------------------------------------------------
 
-export function pythagorasProof($section) {
+export function pythagorasProof($step) {
+  const $labels = $step.$$('.label');
+  const model = $step.model;
 
-  $section.model.set('x', 0);
-  const $slider = $section.$('.proof-1 x-slider');
-  $slider.on('move', n => $section.model.set('x', n/100));
+  function updateLabels() {
+    $labels[0].setClass('visible', $step.scores.has('blank-0') && model.x < 0.1);
+    $labels[1].setClass('visible', $step.scores.has('blank-1') && model.x > 0.9);
+    $labels[2].setClass('visible', $step.scores.has('blank-1') && model.x > 0.9);
+  }
 
-  window.m = $section.model;
+  model.set('x', 0);
+  const $slider = $step.$('.proof-1 x-slider');
+  $slider.on('move', n => {
+    model.set('x', n/100);
+    updateLabels();
+  });
+
+  $step.onScore('blank-0', () => { updateLabels(); delay(() => $slider.play(), 2000); });
+  $step.onScore('blank-1', updateLabels);
+
+  const $targets = $step.$$('.hover-target');
+  $targets[0].on('hover', {enter: () => $slider.set(0)});
+  $targets[1].on('hover', {enter: () => $slider.set(100)});
+
+  // -----
+
+  model.set('B1', model.point(40, 100));
+  model.set('X1', model.point(170,100));
+  model.set('C1', model.point(170,20));
+  model.set('A2', model.point(220,100));
+  model.set('X2', model.point(170,100));
+  model.set('C2', model.point(170,20));
+
+  let $geopad = $step.$('.similar-triangle');
+  $step.onScore('next-0', () => {
+    $geopad.animatePoint('B1', model.point(10, 210), 1000);
+    $geopad.animatePoint('X1', model.point(120, 142), 1000);
+    $geopad.animatePoint('C1', model.point(162, 210), 1000);
+    $geopad.animatePoint('A2', model.point(250, 170), 1000);
+    $geopad.animatePoint('X2', model.point(224, 128), 1000);
+    $geopad.animatePoint('C2', model.point(156, 170), 1000);
+  });
+
+}
+
+export function pythagoreanTriplesGrid($step) {
+  const $geopad = $step.$('x-geopad');
+  const found = new Set();
+
+  const sqrtDistance = p => round(Math.sqrt(square(p.x) + square(17 - p.y)), 3);
+  $step.model.set('sqrtDistance', sqrtDistance);
+
+  $step.model.watch(m => {
+    let p = m.a;
+    let d = sqrtDistance(p);
+
+    const valid = p.x > 0 && p.y < 17 && isInteger(d);
+    $geopad.setClass('triple', valid);
+    if (!valid) return;
+
+    if (found.has(p.x + '-' + p.y)) return;
+
+    $step.score('p' + found.size);
+    found.add(p.x + '-' + p.y);
+
+    $geopad.drawPoint(() => p, {classes: 'green'});
+    if (isOneOf(found.size, 1, 6, 12)) $step.addHint('correct');
+  });
+
 
 }
