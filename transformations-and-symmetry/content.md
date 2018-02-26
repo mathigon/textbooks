@@ -143,7 +143,7 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 
 ::: column(width=220)
 
-    x-geopad(width=220 height=140 grid=20): svg
+    x-geopad(width=220 height=140 grid=20 no-points): svg
       path.fill(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" style="fill: #d94c44; opacity: 0.6" label-colour="white")
       path.fill(x="s1.shift(5,-1)" style="fill: #d94c44" label="A'" label-colour="white")
       path.reveal(x="segment(point(4,5),point(9,5))" mark="arrow" when="blank-0" animation="draw")
@@ -152,7 +152,7 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 {.caption} Translated by ([[5]], [[1]])
 ::: column(width=220)
 
-    x-geopad(width=220 height=140 grid=20): svg
+    x-geopad(width=220 height=140 grid=20 no-points): svg
       path.fill.red(x="circle(point(7,4),1.5)" name="s2" label="B" style="opacity: 0.6" label-colour="white")
       path.fill.red(x="s2.shift(-4,-2)" label="B'" label-colour="white")
       path.reveal(x="segment(point(6,5),point(2,5))" mark="arrow" when="blank-2" animation="draw")
@@ -161,7 +161,7 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 {.caption} Translated by ([[-4]], [[2]])
 ::: column(width=220)
 
-    x-geopad(width=220 height=140 grid=20): svg
+    x-geopad(width=220 height=140 grid=20 no-points): svg
       path.fill(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C" style="fill: #822b9b; opacity: 0.6" label-colour="white")
       path.fill(x="s3.shift(4,2)" style="fill: #822b9b" label="C'" label-colour="white")
       path.reveal(x="segment(point(2,6),point(6,6))" mark="arrow" when="blank-4" animation="draw")
@@ -225,21 +225,21 @@ Draw the line of reflection in each of these examples:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,1),point(1,2),point(2,3),point(8,2))" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)" name="from0")
       path(hidden name="line0" x="line(point(-1,4),point(11,4))")
       path(x="from0.reflect(line0)" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(1,1),point(1,5),point(3,5),point(2,3),point(4,1))" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)" name="from1")
       path(hidden name="line1" x="line(point(9,-1),point(-1,9))")
       path(x="from1.reflect(line1)" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/rorschach.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
@@ -254,21 +254,21 @@ Now it’s your turn – draw the reflection of each of these shapes:
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(1,2),point(3,1),point(4,3),point(4,5),point(2,6),point(1,4))" name="from0" style="fill: rgba(105,63,180,0.4)")
       path.red(x="line(point(5,0), point(5,1))" name="line0")
       path.finished(hidden x="from0.reflect(line0)" name="to0" style="fill: rgba(105,63,180,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,6),point(6,4),point(8,6),point(5,7))" name="from1" style="fill: rgba(80,83,205,0.4)")
       path.red(x="line(point(-1,4), point(11,4))" name="line1")
       path.finished(hidden x="from1.reflect(line1)" name="to1" style="fill: rgba(80,83,205,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,3),point(3,3),point(3,5),point(5,5),point(5,6),point(2,6))" name="from2" style="fill: rgba(56,102,230,0.4)")
       path.red(x="line(point(2,1), point(3,2))" name="line2")
       path.finished(hidden x="from2.reflect(line2)" name="to2" style="fill: rgba(56,102,230,0.4)")
@@ -319,7 +319,7 @@ Try to rotate the shapes below around the red center of rotation:
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,2),point(2,5),point(5,5),point(5,2))" name="from0" style="fill: rgba(34,132,213,0.4)")
       circle.red(x="point(5,6)" name="c0")
       path.finished(hidden x="from0.rotate(pi/2,c0)" name="to0" style="fill: rgba(34,132,213,0.4)")
@@ -327,7 +327,7 @@ Try to rotate the shapes below around the red center of rotation:
 {.caption} Rotate by 90° clockwise.
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,2),point(8,1),point(9,4))" name="from1" style="fill: rgba(40,151,130,0.4)")
       circle.red(x="point(5,4)" name="c1")
       path.finished(hidden x="from1.rotate(pi,c1)" name="to1" style="fill: rgba(40,151,130,0.4)")
@@ -335,7 +335,7 @@ Try to rotate the shapes below around the red center of rotation:
 {.caption} Rotate by 180°.
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,0),point(8,0),point(8,4),point(1,4))" name="from2" style="fill: rgba(46,169,46,0.4)")
       circle.red(x="point(6,3)" name="c2")
       path.finished(hidden x="from2.rotate(-pi/2,c2)" name="to2" style="fill: rgba(46,169,46,0.4)")
@@ -465,28 +465,28 @@ Draw all axes of symmetry in these six images and shapes:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/lake.jpg" width=220 height=180)
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/beijing.jpg" width=220 height=180)
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,2),point(5,1),point(8,2),point(9,4),point(8,6),point(5,7),point(2,6),point(1,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(255,148,31,0.4)")
       path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
@@ -494,7 +494,7 @@ Draw all axes of symmetry in these six images and shapes:
 {.caption} This shape has [[2]] axes of symmetry.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,2),point(7,2),point(7,6),point(3,6))" style="stroke: #363644; stroke-width: 3px; fill: rgba(242,124,43,0.4)")
       path(hidden name="line4a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line4b" x="line(point(5,-1),point(5,9))")
@@ -504,7 +504,7 @@ Draw all axes of symmetry in these six images and shapes:
 {.caption} A square has [[4]] axes of symmetry.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,1),point(9,3),point(8,6),point(2,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(230,100,56,0.4)")
       path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
       path(hidden name="line5b" x="line(point(7,-1),point(3,11))")
@@ -535,7 +535,7 @@ symmetry:
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path.fill.finished(hidden x="polygon(point(8,5),point(9,3),point(9,2),point(8,1),point(6,1),point(5,2),point(4,1),point(2,1),point(1,2),point(1,3),point(2,5),point(5,7))" style="fill: rgba(179,4,105,0.4)")
       path(x="polyline(point(5,2),point(4,1),point(2,1),point(1,2),point(1,3),point(2,5),point(5,7))" name="from0")
       path.red(x="line(point(5,-1),point(5,9))" name="line0")
@@ -543,7 +543,7 @@ symmetry:
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path.fill.finished(hidden x="polygon(point(1,5),point(1,3),point(6,3),point(4,1),point(5,0),point(9,4),point(5,8),point(4,7),point(6,5))" style="fill: rgba(154,24,130,0.4)")
       path(x="polyline(point(1,4),point(1,3),point(6,3),point(4,1),point(5,0),point(9,4))" name="from1")
       path.red(x="line(point(-1,4),point(11,4))" name="line1")
@@ -551,7 +551,7 @@ symmetry:
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path.fill.finished(hidden x="polygon(point(2,1),point(8,1),point(9,2),point(9,6),point(8,7),point(2,7),point(1,6),point(1,2))" style="fill: rgba(130,43,155,0.4)")
       path(x="polyline(point(5,1),point(8,1),point(9,2),point(9,4))")
       path.red(x="line(point(5,-1),point(5,9))" name="line2")
@@ -648,7 +648,7 @@ Now complete these shapes, so that they have rotational symmetry:
 
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       circle.red(x="point(5,4)")
       path.fill.finished(hidden x="polygon(point(5,0),point(6,3),point(9,4),point(6,5),point(5,8),point(4,5),point(1,4),point(4,3))" style="fill: rgba(56,102,230,0.4)")
       path(x="polyline(point(5,0),point(6,3),point(9,4))")
@@ -659,7 +659,7 @@ Now complete these shapes, so that they have rotational symmetry:
 {.caption} Order 4
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       circle.red(x="point(5,4)" name="c1")
       path.fill.finished(hidden x="polygon(point(6,2),point(1,2),point(1,4),point(4,6),point(9,6),point(9,4))" style="fill: rgba(40,151,130,0.4)")
       path(x="polyline(point(5,2),point(1,2),point(1,4),point(4,6),point(5,6))" name="from1")
@@ -669,7 +669,7 @@ Now complete these shapes, so that they have rotational symmetry:
 {.caption} Order 2
 ::: column(width=220)
 
-    x-geopad.draw(width=220 height=180 grid=20): svg
+    x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       circle.red(x="point(5,4)")
       path.fill.finished(hidden x="polygon(point(4,4),point(2,6),point(3,7),point(5,5),point(7,7),point(8,6),point(6,4),point(8,2),point(7,1),point(5,3),point(3,1),point(2,2))" style="fill: rgba(83,174,9,0.4)")
       path(x="polyline(point(5,3),point(3,1),point(2,2),point(4,4))")

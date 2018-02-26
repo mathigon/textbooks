@@ -821,7 +821,7 @@ we can also do that for some quadrilaterals:
 
 ::: column(width=300)
 
-    x-geopad(width=300 height=240 grid=20): svg
+    x-geopad(width=300 height=240 grid=20 no-points): svg
       circle.transparent(name="a1" x="point(4,3)")
       circle.transparent(name="b1" x="point(12,3)")
       circle.transparent(name="c1" x="point(10,9)")
@@ -853,7 +853,7 @@ These parallel sides are called the __bases__ of the trapezium.
 
 ::: column(width=300)
 
-    x-geopad.sticky(width=300 height=240 grid=20): svg
+    x-geopad.sticky(width=300 height=240 grid=20 no-points): svg
       circle.transparent(name="a2" x="point(4,3)")
       circle.transparent(name="b2" x="point(9,3)")
       circle.transparent(name="c2" x="point(13,9)")
@@ -901,7 +901,7 @@ and height [_h_](target:t-height):
 
 ::: column(width=300)
 
-    x-geopad(width=300 height=220 grid=20): svg
+    x-geopad(width=300 height=220 grid=20 no-points): svg
       circle.transparent(name="a3" x="point(1,5)")
       circle.transparent(name="b3" x="point(5,1)")
       circle.transparent(name="c3" x="point(13,5)")
