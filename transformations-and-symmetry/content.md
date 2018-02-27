@@ -11,9 +11,9 @@
 
 ## Introduction
 
-Many geometric concepts, like lines and points, were “invented” by
-mathematicians. Symmetry, on the other hand, is everywhere around us. Almost all
-plants, animals, and even we humans are symmetric.
+Many geometric concepts, like [lines](gloss:line) and [points](gloss:point),
+were “invented” by mathematicians. Symmetry, on the other hand, is everywhere
+around us. Almost all plants, animals, and even we humans are symmetric.
 
 ::: column(width=200)
     x-media(src="images/butterfly.jpg" credit="© Depositphotos / okiepony" width=200 height=200 lightbox)
@@ -39,7 +39,7 @@ But symmetry is much more important that simply _looking beautiful_. It lies at
 the very foundations of our universe, and can even explain the most fundamental
 laws of physics.
 
-Symmetry is a very intuitive concept, but describing it mathematically is more
+While symmetry is a very intuitive concept, describing it mathematically is more
 difficult than you might think. To start with, we have to learn about
 _transformations_.
 
@@ -67,8 +67,8 @@ convert one geometric figure into another one. Here are a few examples:
 :::
 
 {.reveal(when="t1 t2 t3")} The result of a transformation is called the
-__image__. The image of a figure `A` is usually denoted by `A'` (pronounced as
-“A prime”).
+[__image__](gloss:transformation-image). The image of a figure `A` is usually
+denoted by `A'` (pronounced as “A prime”).
 
 ---
 > id: rigid
@@ -101,7 +101,7 @@ types of rigid transformations:
       include svg/rigid-1.svg
       .play-btn
 
-{.text-center} A transformation that _moves_ a shape around is called a
+{.text-center} A transformation that simply _moves_ a shape is called a
 [__translation__](gloss:translation).
 
 ::: column.grow.r(width=200)
@@ -127,7 +127,8 @@ types of rigid transformations:
 We can also combine multiple types of transformation to create more complex
 ones – for example, first a translation and then a rotation.
 
-But first, let’s have a look at each of these transformations in more detail.
+But first, let’s have a look at each of these types of transformations in more
+detail.
 
 ---
 > id: translations
@@ -217,29 +218,28 @@ Now it’s your turn – translate the following shapes as shown:
 
 ### Reflections
 
-A [__reflection__](gloss:reflection) is a transformation that “flips” a shape
-over a line, turning it into its mirror image. The line is called the __line of
-reflection__.
+A [__reflection__](gloss:reflection) is a transformation that “flips” or
+“mirrors” a shape across a line. This line is called the __line of reflection__.
 
 Draw the line of reflection in each of these examples:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
       path(x="polygon(point(2,1),point(1,2),point(2,3),point(8,2))" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)" name="from0")
       path(hidden name="line0" x="line(point(-1,4),point(11,4))")
       path(x="from0.reflect(line0)" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
       path(x="polygon(point(1,1),point(1,5),point(3,5),point(2,3),point(4,1))" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)" name="from1")
       path(hidden name="line1" x="line(point(9,-1),point(-1,9))")
       path(x="from1.reflect(line1)" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
+    x-geopad.draw.reflection(width=220 height=180 grid=20)
       x-media.background(src="images/rorschach.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
@@ -279,7 +279,7 @@ Now it’s your turn – draw the reflection of each of these shapes:
 > id: reflections-2
 
 Notice that if a point lies on the line of reflection, its image is
-[[the same as|congruent to|smaller than]] the original point.
+[[the same as|smaller than|opposite to]] the original point.
 
 ---
 > id: reflections-3
@@ -288,22 +288,24 @@ In all of the examples above, the line of reflection was horizontal or vertical,
 which made it easy to draw the reflections. If that is not the case, the
 construction becomes more complicated:
 
-::: column(width=300)
-{.todo} TODO Interactive Animation
-::: column.grow
-We have to reflect every point individually, and then connect them again with
-lines. To start with, lets draw a line perpendicular to the line of reflection,
-that goes through the first point.
+{.todo} TODO – Step-by-step explanation
 
-The image of the point will lie on this perpendicular as well. It will have the
-same distance from the line of reflection as the original point, but on the
-opposite side. We can use a compass (or a ruler) to find it.
-
-Now let’s do the same for all the other points.
-
-The rest should be easy: you just need to connect the points in the image, so
-that they match the original shape.
-:::
+    // ::: column(width=300)
+    //
+    // ::: column.grow
+    // We have to reflect every point individually, and then connect them again with
+    // lines. To start with, lets draw a line perpendicular to the line of reflection,
+    // that goes through the first point.
+    // 
+    // The image of the point will lie on this perpendicular as well. It will have the
+    // same distance from the line of reflection as the original point, but on the
+    // opposite side. We can use a compass (or a ruler) to find it.
+    // 
+    // Now let’s do the same for all the other points.
+    // 
+    // The rest should be easy: you just need to connect the points in the image, so
+    // that they match the original shape.
+    // :::
 
 ---
 > id: rotations
@@ -312,8 +314,9 @@ that they match the original shape.
 ### Rotations
 
 A [__rotation__](gloss:rotation) is a transformation that “turns” a shape by a
-certain angle around a fixed point. That point is called the __center of
-rotation__. Rotations can be clockwise or counterclockwise.
+certain angle around a fixed point. That point is called the [__center of
+rotation__](gloss:center-of-rotation). Rotations can be clockwise or
+counterclockwise.
 
 Try to rotate the shapes below around the red center of rotation:
 
@@ -348,61 +351,65 @@ Try to rotate the shapes below around the red center of rotation:
 
 It is more difficult to draw rotations that are not exactly 90° or 180°. Just
 like for reflections, we first have to rotate every point in a shape
-individually, and then connect the lines in the image.
+individually, and then connect the lines in the image:
 
-::: column(width=300)
-{.todo} TODO Step-by-step animation
-::: column.grow
-We want to rotate this shape by 60° anti-clockwise around the center of
-rotation C.
+{.todo} TODO – Step-by-step explanation
 
-Let’s start with point A. First, we line up a protractor along the center of
-rotation and A.
-
-We have to mark the angle at 60°, and draw a line towards C.
-
-The image of A must lie on this line, and have the same distance from the
-center of rotation as A. We can use a compass (or a ruler) to find it.
-
-For simplicity, we can remove the previous line and point. Let’ do the same
-for all the other points.
-
-The rest should be easy: like before, you just need to connect the points in the
-image, to match the original shape.
-:::
+    // ::: column(width=300)
+    // {.todo} TODO Step-by-step animation
+    // ::: column.grow
+    // We want to rotate this shape by 60° anti-clockwise around the center of
+    // rotation C.
+    // 
+    // Let’s start with point A. First, we line up a protractor along the center of
+    // rotation and A.
+    // 
+    // We have to mark the angle at 60°, and draw a line towards C.
+    // 
+    // The image of A must lie on this line, and have the same distance from the
+    // center of rotation as A. We can use a compass (or a ruler) to find it.
+    // 
+    // For simplicity, we can remove the previous line and point. Let’ do the same
+    // for all the other points.
+    // 
+    // The rest should be easy: like before, you just need to connect the points in the
+    // image, to match the original shape.
+    // :::
 
 ---
 > id: composition
 
 ### Composition of Transformations
 
-Of course, we can combine multiple translations, reflections and rotations to
-create more complex transformations.
+{.todo} TODO – Composition of transformations
 
-{.todo} TODO Example
-
-However, as it turns out, it doesn’t matter how many different transformations
-you combine: you can always find another transformation that does the same in
-one go!
-
-{.todo} TODO Transformation composition calculator
-
-Combining two reflections is particularly interesting. There are two different
-cases we need to consider:
-
-::: column.grow
-If the two lines of reflection are parallel, the result is a single translation.
-The direction of the translation is perpendicular to the lines of reflection,
-and the distance is twice the distance between the lines of reflection.
-
-{.todo} TODO Animation
-::: column.grow
-If the two lines of reflection intersect, the result is a single rotation. The
-center of rotation is the intersection between the lines of reflection, and the
-angle is twice the angle between the lines of reflection.
-
-{.todo} TODO Animation
-:::
+    // Of course, we can combine multiple translations, reflections and rotations to
+    // create more complex transformations.
+    // 
+    // {.todo} TODO Example
+    // 
+    // However, as it turns out, it doesn’t matter how many different transformations
+    // you combine: you can always find another transformation that does the same in
+    // one go!
+    // 
+    // {.todo} TODO Transformation composition calculator
+    // 
+    // Combining two reflections is particularly interesting. There are two different
+    // cases we need to consider:
+    // 
+    // ::: column.grow
+    // If the two lines of reflection are parallel, the result is a single translation.
+    // The direction of the translation is perpendicular to the lines of reflection,
+    // and the distance is twice the distance between the lines of reflection.
+    // 
+    // {.todo} TODO Animation
+    // ::: column.grow
+    // If the two lines of reflection intersect, the result is a single rotation. The
+    // center of rotation is the intersection between the lines of reflection, and the
+    // angle is twice the angle between the lines of reflection.
+    // 
+    // {.todo} TODO Animation
+    // :::
 
 ---
 > id: composition-1
@@ -419,9 +426,10 @@ transformations in future chapters, but for now let’s move on to symmetry.
 
 ## Symmetry
 
-Symmetry is everywhere around us, and an intuitive concept: different parts of
-an object look _the same_ in some way. But using transformations, we can give a
-much more precise, mathematical representation of what symmetry _really_ means:
+[__Symmetry__](gloss:symmetry) is everywhere around us, and an intuitive
+concept: different parts of an object look _the same_ in some way. But using
+transformations, we can give a much more precise, mathematical definition of
+what symmetry _really_ means:
 
 {.definition} An object is _symmetric_ if it looks the same, even after applying
 a certain transformation.
@@ -452,10 +460,11 @@ say that it has __rotational symmetry__.
 
 ### Reflectional Symmetry
 
-A shape has __reflectional symmetry__ if it looks the same after being
-reflected. The line of reflection is called the __axis of symmetry__, and it
-splits the shape into two [[congruent|equal|similar]] halves. Some figures can
-also have more than one axis of symmetry. 
+A shape has [__reflectional symmetry__](gloss:rotational-symmetry) if it looks
+the same after being reflected. The line of reflection is called the [__axis of
+symmetry__](gloss:axis-of-symmetry), and it splits the shape into two
+[[congruent|equal|similar]] halves. Some figures can also have more than one
+axis of symmetry.
 
 ---
 > id: reflectional-symmetry-1
@@ -465,28 +474,28 @@ Draw all axes of symmetry in these six images and shapes:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
+    x-geopad.draw.reflection(width=220 height=180 grid=20)
       x-media.background(src="images/lake.jpg" width=220 height=180)
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
+    x-geopad.draw.reflection(width=220 height=180 grid=20)
       x-media.background(src="images/beijing.jpg" width=220 height=180)
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
+    x-geopad.draw.reflection(width=220 height=180 grid=20)
       x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
       path(x="polygon(point(2,2),point(5,1),point(8,2),point(9,4),point(8,6),point(5,7),point(2,6),point(1,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(255,148,31,0.4)")
       path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
@@ -494,7 +503,7 @@ Draw all axes of symmetry in these six images and shapes:
 {.caption} This shape has [[2]] axes of symmetry.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
       path(x="polygon(point(3,2),point(7,2),point(7,6),point(3,6))" style="stroke: #363644; stroke-width: 3px; fill: rgba(242,124,43,0.4)")
       path(hidden name="line4a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line4b" x="line(point(5,-1),point(5,9))")
@@ -504,7 +513,7 @@ Draw all axes of symmetry in these six images and shapes:
 {.caption} A square has [[4]] axes of symmetry.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
       path(x="polygon(point(3,1),point(9,3),point(8,6),point(2,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(230,100,56,0.4)")
       path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
       path(hidden name="line5b" x="line(point(7,-1),point(3,11))")
@@ -568,8 +577,8 @@ Shapes, letters and images can have reflectional symmetry, but so can entire
 numbers, words and sentences!
 
 For example “25352” and “ANNA” both read the same from back to front. Numbers
-or words like this are called __Palindromes__. Can you think of any other
-palindromes?
+or words like this are called [__Palindromes__](gloss:palindrome). Can you think
+of any other palindromes?
 
     form.palindromes.text-center
       input.form-field(type="text")
@@ -586,16 +595,13 @@ If we ignore spaces and punctuation, these letters also have reflectional
 symmetry. Can you come up with your own?
 
 {.text-center} Never odd or even.  
-A nut for a jar of tuna.
-Yo, banana boy!
+A [[nut]] for a jar of tuna.  
+Yo, banana [[boy]]!
 
----
-> id: palindromes-2
-
-But Palindromes are not just fun, they actually have practical importance. A few
-years ago, scientists discovered that parts of our [DNA](gloss:dna) are
-palindromic. This makes that more resilient to mutations or damage – because
-there is a second backup copy of every piece.
+{.reveal(when="blank-0 blank-1")} But Palindromes are not just fun, they
+actually have practical importance. A few years ago, scientists discovered that
+parts of our [DNA](gloss:dna) are palindromic. This makes that more resilient to
+mutations or damage – because there is a second backup copy of every piece.
 
 ---
 > id: rotational-symmetry
@@ -603,17 +609,17 @@ there is a second backup copy of every piece.
 ### Rotational Symmetry
 
 ::: column.grow
-A shape has __reflectional symmetry__ if it looks the same after being rotated
-(by less than 360°). The center of rotation is usually just the middle of the
-shape.
+A shape has [__rotational symmetry__](gloss:rotational-symmetry) if it looks the
+same after being rotated (by less than 360°). The [center of
+rotation](gloss:center-of-rotation) is usually just the middle of the shape.
 
-The __order of symmetry__ is the number of distinct orientations in which the
-shape looks the same. You can also think about it as the _number of times we
-can rotate the shape_, before we get back to the start. For example, this
-snowflake has order [[6]].
+The [__order of symmetry__](gloss:order-of-symmetry) is the number of distinct
+orientations in which the shape looks the same. You can also think about it as
+the _number of times we can rotate the shape_, before we get back to the start.
+For example, this snowflake has order [[6]].
 
-The angle of each rotation is `"360°"/"order"`. In the snowflake, this is
-`"360°"/6` = [[60]]°.
+{.reveal(when="blank-0")} The angle of each rotation is `"360°"/"order"`. In the
+snowflake, this is `"360°"/6` = [[60]]°.
 
 ::: column(width=240)
 
@@ -750,7 +756,7 @@ example, we can _add_ two symmetries to get new ones:
 > goals: calculate
 
 Whenever you add two symmetries of a square, you get a new one. Here is a
-"symmetry calculator" where you can try it yourself:
+“symmetry calculator” where you can try it yourself:
 
     .calculator
       .display
@@ -781,8 +787,8 @@ patterns. Can you complete these observations?
 ---
 > id: group-axioms
 
-You might have realised already that adding symmetries is actually very similar
-to adding integers:
+You might have realised already that adding __{.orange}symmetries__ is actually
+very similar to adding __{.green}integers__:
 
     ol.proof
       
@@ -847,13 +853,14 @@ to adding integers:
 ---
 > id: groups-1
 
-In mathematics, any collection that has these properties is called a __group__.
-Some groups (like the __{.orange}symmetries__ of a square) only have a finite
-number of elements. Others (like the __{.green}integer__) are infinite.
+In mathematics, any collection that has these properties is called a
+[__group__](gloss:group). Some groups (like the __{.orange}symmetries__ of a
+square) only have a finite number of elements. Others (like the
+__{.green}integers__) are infinite.
 
-Before, we started with the symmetries of the square. In fact, every geometric
-shape has its own __symmetry group__. They all different elements, but they
-always satisfy the three rules above.
+In this example, we started with the eight symmetries of the square. In fact,
+every geometric shape has its own __symmetry group__. They all have different
+elements, but they always satisfy the three rules above.
 
 Groups appear everywhere in mathematics. The elements can be numbers or
 symmetries, but also polynomials, permutations, matrices, functions … _anything_
@@ -878,8 +885,6 @@ Adenovirus (right) are determined by their symmetries.
 :::
 
 ---
-> id: wallpaper-groups
-> goals: play-0 play-1
 
 ## Wallpaper Groups
 
@@ -887,8 +892,13 @@ We have now seen two different kinds of symmetry, that correspond to two
 different transformations: rotations and reflections. But there is also a
 symmetry for the third kind of transformation: [[translations|spins|flips]].
 
-__Translational symmetry__ does not work for isolated objects like flowers or
-butterflies, but it does for regular patterns that extend into every direction:
+---
+> id: wallpaper-groups-1
+> goals: play-0 play-1
+
+[__Translational symmetry__](gloss:translational-symmetry) does not work for
+isolated objects like flowers or butterflies, but it does for regular patterns
+that extend into every direction:
 
 ::: column.grow
 
@@ -913,8 +923,9 @@ butterflies, but it does for regular patterns that extend into every direction:
 > goals: slider
 
 In addition to reflectional, rotational and translational symmetry, there even
-is a fourth kind: __glide reflections__. This is a combination of a reflection
-and a translation in the same direction as the axis of reflection.
+is a fourth kind: [__glide reflections__](gloss:glide-reflection). This is a
+combination of a reflection and a translation in the same direction as the axis
+of reflection.
 
     figure
       .footsteps
@@ -923,16 +934,16 @@ and a translation in the same direction as the axis of reflection.
       x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
 
 ---
-> id: wallpaper-groups-1
+> id: wallpaper-groups-2
 
-A patterns can have more than one type of symmetry. And just like we did squares,
-we can find the [symmetry group](gloss:symmetry-group), which contains all its
-different symmetries.
+A pattern can have more than one type of symmetry. And just like for squares,
+we can find the [symmetry group](gloss:symmetry-group) of a pattern, which
+contains all its different symmetries.
 
-These groups don’t tell you much about exactly how the pattern _looks_ like
-(e.g. its colours and shapes), just how it is _repeated_. Multiple different
-patterns can have the same symmetry group – as long are arranged and repeated
-in the same way.
+These groups don’t tell you much about how the pattern _looks_ like (e.g. its
+colours and shapes), just how it is _repeated_. Multiple different patterns can
+have the same symmetry group – as long are arranged and repeated in the same
+way.
 
 ::: column.grow
 
@@ -953,15 +964,14 @@ look more similar to the corresponding patterns on the left, than to each other.
 :::
 
 ---
-> id: wallpaper-groups-2
+> id: wallpaper-groups-3
 
 It turns out that, while there are infinitely many possible patterns, they all
 have one of just 17 different symmetry groups. These are called the __Wallpaper
-Groups__.
-
-Every wallpaper group is defined by a combination of translations, rotations,
-reflections and glide reflections. Try to find the points of rotation and axes
-of reflection in the 17 examples below:
+Groups__. Every wallpaper group is defined by a combination of translations,
+rotations, reflections and glide reflections. Can you see the [centers of
+rotation](gloss:center-of-rotation) and the [axes of
+reflection](gloss:axis-of-symmetry) in these examples?
 
     x-gallery(slide-width="320")
       div
@@ -999,7 +1009,7 @@ of reflection in the 17 examples below:
         p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections in three directions, and glide reflections
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Type P4G</strong><br>Rotations of order 2 and order 4, perpendicular reflections, and reflections 
+        p.caption <strong>Type P4G</strong><br>Rotations of order 2 and order 4, reflections, and glide reflections 
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
         p.caption <strong>Type CMM</strong><br>Perpendicular reflections and rotations of order 2
@@ -1016,8 +1026,8 @@ of reflection in the 17 examples below:
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
         p.caption <strong>Type PGG</strong><br>Perpendicular glide reflections, and rotations of order 2
 
-Unfortunately there is no simple reason why the number is _seventeen_, and
-proving it requires much more advanced mathematics.
+Unfortunately there is no simple reason why there are _17_ of these groups.
+Proving it requires much more advanced mathematics…
 
 ---
 > id: drawing
@@ -1039,18 +1049,18 @@ wallpaper groups:
 > id: crystallographic-groups
 
 ::: column.grow
-The Wallpaper groups were all about flat, two-dimensional patterns. We can do
+The wallpaper groups were all about flat, two-dimensional patterns. We can do
 something similar for three-dimensional patterns: these are called
 crystallographic groups, and there are 219 of them!
 
-In addition to translation, reflection, rotation, and glide reflection, these
-groups include symmetries like __glide planes__ and __screw axes__ (think about
-the motion when unscrewing a bottle).
+In addition to translations, reflections, rotations, and glide reflections,
+these groups include symmetries like __glide planes__ and __screw axes__ (think
+about the motion when unscrewing a bottle).
 ::: column(width=300)
 
     img(src="images/crystal.jpg" width=300 height=240)
 
-{.caption} Boron-nitride has its molecules arranged in this crystal lattice,
+{.caption} Boron-Nitride has its molecules arranged in this crystal lattice,
 which has a 3-dimensional symmetry group.
 :::
 
@@ -1060,8 +1070,8 @@ which has a 3-dimensional symmetry group.
 
 ## Symmetry in Physics
 
-All of the symmetries we looked at so far were _visual_ in some sense – shapes,
-images or patterns we can see. In fact, symmetry can be a much wider concept:
+So far, all the symmetries we looked at were _visual_ in some sense: visible
+shapes, images or patterns. In fact, symmetry can be a much wider concept:
 _immunity to change_.
 
 For example, if you like apple juice just as much as you like orange juice, then
@@ -1072,10 +1082,10 @@ In 1915, the German mathematician [Emmy Noether](bio:noether) observed that
 something similar is true for the [laws of nature](gloss:laws-of-nature).
 
 ::: column.grow
-For example, our experience tells us that the laws of motion are the same
-everywhere in the universe. It doesn’t matter if you conduct a physics
-experiment in London, or in New York, or on Mars – the laws of motion should
-always be the same. In a way, they have [[translational symmetry|reflectional symmetry]].
+For example, our experience tells us that the laws of Physics are the same
+everywhere in the universe. It doesn’t matter if you conduct an experiment in
+London, or in New York, or on Mars – the laws of Physics should always be the
+same. In a way, they have [[translational symmetry|reflectional symmetry]].
 
 {.reveal(when="blank-0")} Similarly, it shouldn’t matter if we conduct an
 experiment while facing North, or South, or East or West: the laws of nature
@@ -1083,7 +1093,7 @@ have [[rotational symmetry|glide reflection symmetry]].
 
 {.reveal(when="blank-1")} And finally, it shouldn’t matter if we conduct an
 experiment today, or tomorrow, or in a year. The laws of nature are
-"time-symmetric".
+“time-symmetric”.
 ::: column(width=300)
 
     include svg/planets.svg
@@ -1094,14 +1104,14 @@ experiment today, or tomorrow, or in a year. The laws of nature are
 > id: planets-1
 > class: fill dark stars
 
-These symmetries might initially seem quite meaningless, but they can actually
+These “symmetries” might initially seem quite meaningless, but they can actually
 tell us a lot about our universe. Emmy Noether managed to prove that every
 symmetry corresponds to a certain physical quantity that is _conserved_.
 
-For example, time-symmetry implies that _Energy_ must be conserved in our
-Universe: you can convert energy from one type to another (e.g. light, or heat
+For example, time-symmetry implies that __Energy__ must be conserved in our
+universe: you can convert energy from one type to another (e.g. light, or heat
 or electricity), but you can never create or destroy energy. The total amount
-of energy in the Universe will always stay constant.
+of energy in the universe will always stay constant.
 
     figure
       x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
@@ -1110,7 +1120,7 @@ of energy in the Universe will always stay constant.
 ::: column(width=220)
 
     x-media(src="images/higgs.png" width=220 height=150)
-    p.caption The paths taken by particle fragments after a collision.
+    p.caption The paths taken by particle fragments after a collision
 
 ::: column.grow
 It turns ou that, just by knowing about symmetry, physicists can derive most
@@ -1127,26 +1137,31 @@ physicists, but not observed in the real world until 2012.
 
 ## Similarity
 
-So far, all we have just looked at [[rigid|congruent|visual]] transformations.
-Now, let’s think about one that is not: a [__dilation__](gloss:dilation) changes
-a shape’s size by making it larger or smaller.
+{.todo} THIS SECTION IS NOT YET FINISHED!
+
+So far, we have just looked at [[rigid|congruent|visual]] transformations. Now
+let’s think about one that is not: a [__dilation__](gloss:dilation) changes a
+shape’s size by making it larger or smaller.
 
 ::: column.grow
-All dilations have a __center__ and a __scale factor__. The center is the point
-of reference for the dilation and scale factor tells us how much the figure
-stretches or shrinks.
+All dilations have a __center__ and a [__scale factor__](gloss:scale-factor).
+The center is the point of reference for the dilation and scale factor tells us
+how much the figure stretches or shrinks.
 
 If the scale factor is between 0 and 1, the image is [[smaller|larger]] than the
 original. If the scale factor is larger than 1, the image is [[larger|smaller]]
 than the original.
 ::: column(width=300)
-{.todo} TODO Move the center, Slider for scale factor
+{.todo} TODO – Illustration (drag the center, slider for scale factor)
 :::
+
+---
+> id: dilations-1
 
 Here is how we can construct the dilation of a geometric shape:
 
 ::: column(width=300)
-{.todo} TODO Animation
+{.todo} TODO – Animation
 ::: column.grow
 First we draw rays from the center of dilation to every point in the shape.
 
@@ -1170,7 +1185,7 @@ The symbol for similarity is `∼` (similar to the symbol for congruence, which
 was `≅`). In this example, we would write `A ∼ A'`.
 
 ::: column(width=240)
-{.todo} TODO Image
+{.todo} TODO – Illustration
 :::
 
 ---
@@ -1185,7 +1200,7 @@ distance”.
 
 Find the vanishing point in the figure below:
 
-{.todo} TODO Image
+{.todo} TODO – Interactive
 
 Now can you draw another house that matches the existing ones?
 
@@ -1277,7 +1292,7 @@ the two triangles are similar.
 Let’s have a look at a few examples where this is useful:
 
 ::: column(width=320)
-{.todo} TODO Image
+{.todo} TODO – Animation
 
 ::: column.grow
 Here you can see the image of a large lighthouse. Together with a friend, you
@@ -1289,24 +1304,23 @@ one is formed by the lighthouse and its shadow, and one is formed by your friend
 and her shadow.
 
 Both triangles have one right angle at the bottom. The sun rays are parallel,
-which means that the other two angles at the bottom are
-[[corresponding|supplementary|opposite]] angles, and also equal. By the AA
-condition for triangles, these two must be similar.
+which means that the other two angles at the bottom are corresponding angles,
+and also equal. By the AA condition for triangles, these two must be similar.
 
 We can easily measure the length of the shadows, and we also know the height of
 your friend. Now we can use the proportionality of sides in similar triangles
 to find the height of the lighthouse:
 
-{.todo} TODO Equation
+{.todo} TODO – Equation
 
-Therefore the lighthouse is [[1.5]]m tall.
+Therefore the lighthouse is 1.5m tall.
 :::
 
 ---
 > id: similar-triangles-2
 
 ::: column(width=320)
-{.todo} TODO Image
+{.todo} TODO – Animation
 ::: column.grow
 We can use the same technique to measure distances on the ground. Here we want
 to find the width of a large river. There is a big tree on one side of the
@@ -1323,13 +1337,13 @@ both have a right angle, and on pair of opposite angles.
 
 According to the proportionality rule, this means that
 
-{.todo} TODO Equation
+{.todo} TODO – Equation
 
-Therefore the width of the river is [[45]] meters.
+Therefore the width of the river is 45 meters.
 :::
 
 ---
-> id: similar-triangles-3
+> id: outro
 
 Triangles are not just useful for measuring distances. In the next chapter we
 will learn a lot more about triangles and their properties.

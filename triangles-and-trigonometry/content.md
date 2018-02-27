@@ -14,9 +14,9 @@
 ## Introduction
 
 ::: column.grow
-By the early 19th century, explorers had discovered most of the Earth. Trade and
-transportation was booming between distant countries and colonies, and this
-created a need for _accurate maps_ of the entire planet.
+By the early 19th century, explorers had discovered most of the world. Trade and
+transportation was booming between distant countries, and this created a need
+for _accurate maps_ of the entire planet.
 
 Today we have satellites that can take photos from above – but 200 years ago,
 creating maps was a difficult and time consuming task. It was done by
@@ -26,7 +26,7 @@ including the Himalayan mountain range.
 
 ::: column(width=240)
 
-    x-media.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science&Society Picture Library")
+    x-media.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
 
 {.caption} The _theodolite_, a surveying instrument
 :::
@@ -85,9 +85,10 @@ engineering.
 ## Properties of Triangles
 
 Let’s start simple: a triangle is a closed shape that has three sides (which
-are line segments) and three vertices (the points where the sides meet). It also
-has three internal angles, and we already know that the sum of them is always
-[[180]]°.
+are [line segments](gloss:line-segment)) and three vertices (the
+[points](gloss:point) where the sides meet). It also has three [internal
+angles](gloss:internal-angle), and we already know that the sum of them is
+always [[180]]°.
 
 ---
 > id: classification
@@ -135,7 +136,7 @@ has [[three]] [acute angles](gloss:acute-angle).
 > id: labels
 
 ::: column.grow
-For convenience, we usually label triangles in the same way. The vertices are
+For convenience, we always label triangles in the same way. The vertices are
 labelled with capital letters [_A_, _B_ and _C_](target:vertex), the sides are
 labelled with lowercase letters [_a_, _b_ and _c_](target:side), and the angles
 are labelled with Greek letters [α, β and γ](target:angle) (“alpha”, “beta” and
@@ -184,16 +185,18 @@ works for _B_/_b_/β and for _C_/_c_/γ.
       
 
 ::: column.grow
-Here you can see a triangle as well as the midpoints of its three sides.
+Here you can see a triangle as well as the [midpoints](gloss:midpoint) of its
+three sides.
 
-A __median__ of a triangle is a line segment that joins a vertex and the
-midpoint of the opposite side. Draw the three medians of this triangle.
+A [__median__](gloss:median) of a triangle is a line segment that joins a vertex
+and the midpoint of the opposite side. Draw the three medians of this triangle.
 _{span.reveal(when="s0 s1 s2")}What happens as you move the vertices of the
 triangle?_
 
 {.reveal(when="move")} It seems like the medians always [[intersect in one
 point|have the same length|divide each other in the middle]].
-_{span.reveal(when="blank-0")}This point is called the __centroid__._
+_{span.reveal(when="blank-0")}This point is called the
+[__centroid__](gloss:centroid)._
 
 {.reveal(when="blank-0")} Medians always divide each other in the
 [ratio 2:1](target:ratio). For each of the three medians, the distance from the
@@ -261,24 +264,25 @@ figure on the right. The red and green areas will always have the same area.
 Recall that the [perpendicular bisector](gloss:perpendicular-bisector) of a line
 is the perpendicular line that goes through its [[midpoint|endpoints]].
 _{span.reveal(when="blank-0")}Draw the perpendicular bisector of all three sides
-of a triangle._
+of this triangle._
 
 {.reveal(when="s0 s1 s2")} Like before, the three perpendicular bisectors meet in a
 single point. And again, this point has a special property.
 
-{.reveal(when="s0 s1 s2")} Remember that any point on a perpendicular bisector
-has the same distance from the endpoints of the lines it bisects. For example,
-any point on the [blue bisector](target:b-blue) has the same distance from
-points _A_ and _C_ and any point on the [red bisector](target:b-red) has
-the same distance from points [[A and B|A and C|B and C]].
+{.reveal(when="s0 s1 s2")} Any point on a perpendicular bisector has the same
+distance from the two endpoints of the lines it bisects. For example, any point
+on the [blue bisector](target:b-blue) has the same distance from points _A_ and
+_C_ and any point on the [red bisector](target:b-red) has the same distance from
+points [[A and B|A and C|B and C]].
 
 {.reveal(when="blank-1")} The [intersection point](target:center) lies on all
 three perpendicular bisectors, so it must have the same distance from all three
 [[vertices|sides]] of the triangle.
 
 {.reveal(when="blank-2")} This means we can draw a circle around it that
-perfectly touches all the vertices. This circle is called the __circumcircle__
-of the triangle, and the center is called the __circumcenter__.
+perfectly touches all the vertices. This circle is called the
+[__circumcircle__](gloss:circumcircle) of the triangle, and the center is called
+the __circumcenter__.
 :::
 
 ---
@@ -333,10 +337,10 @@ and any point on the [red bisector](target:b-red) has the same distance from
 sides [[a and b|a and c|b and c]].
 
 {.reveal(when="blank-0")} The [intersection point](target:center) lies on all
-three bisectors. Therefore it must have the same distance from all three sides
-of the triangle.
+three bisectors. Therefore it must have the same distance from all three
+[[sides|vertices]] of the triangle.
 
-{.reveal(when="blank-0")} This means we can draw a circle around it, that lies
+{.reveal(when="blank-1")} This means we can draw a circle around it, that lies
 inside the triangle and just touches its three sides. This circle is called the
 __incircle__ of the triangle, and the center is called the __incenter__.
 :::
@@ -347,13 +351,13 @@ __incircle__ of the triangle, and the center is called the __incenter__.
 ### Area and Altitudes
 
 ::: column.grow
-{.r} Finding the area of a rectangle is easy: you simply multiply width by height.
-Finding the area of a triangle is a bit less obvious. Let’s start by simply
-"trapping" a triangle inside a rectangle.
+{.r} Finding the area of a [[rectangle]](gloss:rectangle) is easy: you simply
+multiply its width by its height. Finding the area of a triangle is a bit less
+obvious. Let’s start by “trapping” a triangle inside a rectangle.
 _{button.next-step} Next_
 
 {.reveal.r(when="next-0")} The width of the rectangle is the length of the
-[bottom side](target:base) of the triangle (which is called the _base_). The
+[bottom side](target:base) of the triangle (which is called the __base__). The
 height of the rectangle is the [perpendicular distance](target:height) from the
 base to the opposite vertex.
 _{button.next-step} Next_
@@ -399,8 +403,8 @@ To calculate the area of a triangle, you can pick any of the three sides as
 __base__, and the find the corresponding __height__, which is the line that is
 [[perpendicular|parallel]] to the base and goes through the opposite vertex.
 
-{.reveal(when="blank-0")} In triangles, the _heights_ are often called
-__altitudes__. Every triangle has [[three]] altitudes.
+{.reveal(when="blank-0")} In triangles, these _heights_ are often called
+[__altitudes__](gloss:triangle-altitude). Every triangle has [[three]] altitudes.
 
 ---
 > id: altitudes-1
@@ -419,9 +423,10 @@ __altitudes__. Every triangle has [[three]] altitudes.
       circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
-Like the medians, perpendicular bisectors and angle bisectors, the three
-altitudes of a triangle intersect in a single point. This is called the
-[__orthocenter__](target:center) of the triangle.
+Like the [medians](gloss:median), [perpendicular bisectors](gloss:perpendicular-bisector)
+and [angle bisectors](gloss:angle-bisector), the three altitudes of a triangle
+intersect in a single point. This is called the [__orthocenter__](target:center)
+of the triangle.
 
 In [acute triangles](gloss:acute-triangle), the orthocenter
 [[lies inside|lies outside|is a vertex of]] the triangle.
@@ -458,8 +463,9 @@ altitudes are actually just sides of the triangle.
       path.transparent.fill.red(x="polygon(a,b,c)" target="large")
 
 ::: column.grow
-A __midsegment__ is a line segment that connects the midpoints of two sides of a
-triangle. Draw the three midsegments of this triangle.
+A [__midsegment__](gloss:triangle-midsegment) is a line segment that connects
+the midpoints of two sides of a triangle. Draw the three midsegments of this
+triangle.
 
 {.reveal(when="s0 s1 s2")} As you can see, the midsegments split the triangle
 into [four smaller triangles](target:triangles).
@@ -510,12 +516,12 @@ sides match one of the triples on the left.
           path.blue(x="segment(b,c)" label="${roundD(b,c)}")
           path.yellow(x="segment(a,c)" label="${roundD(a,c)}")
 
+{.reveal(when="s0 s1 s3 s5")} It seems like there are a few cases where three
+numbers simply _cannot_ make a triangle. This particularly happens when one side
+[[is much longer than|is much shorter than|is the same length as]] the other two.
+
 ---
 > id: triangle-inequality-1
-
-It seems like there are a few cases where three numbers simply _cannot_ make a
-triangle. This particularly happens when one side is much longer than the
-other two.
 
 ::: column.grow
 Think about the three sides of a triangle as metal rods, connected with hinges.
@@ -529,22 +535,16 @@ _{button.next-step} Next_
 ::: column(width=300)
 
     x-geopad(width=300 height=180): svg
-      radialGradient#metal
-        stop(offset="0%" stop-color="#ddd")
-        stop(offset="100%" stop-color="#999")
-      
       circle(name="a" x="point(90,90)")
       circle(name="b" x="point(210,90)")
-      
       circle.move(name="c" cx=150 cy=50 project="circle(a,60)")
       circle.move(name="d" cx=150 cy=50 project="circle(b,40)")
 
       path.blue(x="circle(a,60)" style="stroke-dasharray: 8px 10px")
       path.blue(x="circle(b,40)" style="stroke-dasharray: 8px 10px")
-      
-      path(x="segment(a,b)" style="stroke-width: 5px" target="long")
-      path(x="segment(a,c)" style="stroke-width: 5px" target="short")
-      path(x="segment(b,d)" style="stroke-width: 5px" target="short")
+      path.thick(x="segment(a,b)" target="long")
+      path.thick(x="segment(a,c)" target="short")
+      path.thick(x="segment(b,d)" target="short")
 
 :::
 
@@ -606,7 +606,7 @@ Now you can see that the rubber band will always be _{span.hover-target} longer 
       circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
       path(x="segment(a,b)" style="stroke-width: 5px" label="4")
       path(x="segment(a,c)" style="stroke-width: 5px" label="6")
-      path.rubber(x="segment(b,c)" style="stroke: #00cca6; stroke-width: ${350/distance(b,c)}px" label="${round(distance(b,c)/20)}")
+      path(x="segment(b,c)" style="stroke: #00cca6; stroke-width: ${350/distance(b,c)}px" label="${round(distance(b,c)/20)}")
 
 :::
 
@@ -623,22 +623,22 @@ Now that we can check if three sides can form a triangle, let’s think about ho
 we would actually _construct_ a triangle with these sides.
 
 ::: column(width=300)
-{.todo} image
+{.todo} TODO – Animation
 ::: column.grow
 {.task} Draw the triangle with sides 4cm, 5cm and 6cm.
 
 First, let’s use a ruler to draw one of the sides (usually the longest one). Now
-we already have [[two|one|three]] of the vertices of the triangle – the
+we already have two of the vertices of the triangle – the
 challenge is to find the third one.
 
 Let’s use the ruler to widen our compass to exactly 4cm, and draw a circle
 around one of the vertices. Then, let’s widen the compass to 5cm, and draw a
 circle around the other vertex.
 
-The third vertex of the triangle is the [[intersection|center|overlap]] of the
+The third vertex of the triangle is the intersection of the
 two circles. Now we can simply connect them to form a triangle.
 
-The circles actually intersect [[twice]]: once at the top and once at the
+The circles actually intersect twice: once at the top and once at the
 bottom. We can pick either of these intersections, and the resulting two
 triangles are congruent.
 :::
@@ -659,6 +659,9 @@ called the [__SSS Congruence Condition__](gloss:triangle-sss) for triangles
 We now have two conditions for triangles: “AA” means that two triangles are
 [[similar|congruent|transformations]], and “SSS” means that two triangles are
 [[congruent|similar|equal]]. There are a few more congruence conditions:
+
+---
+> id: congruence-1
 
 ::: .theorem
 Two triangles are congruent if any of the following conditions are met:
@@ -715,17 +718,18 @@ Two triangles are congruent if any of the following conditions are met:
 :::
 
 ---
-> id: cpctc
+> id: cpoct
 
 You can think of these conditions as “shortcuts”: to check if two triangles are
 congruent, you just need to check one of the conditions above.
 
-Once you know that two triangles are congruent, you know that _all_ of their
-corresponding sides and angles are congruent. This is often called __CPCTC__, or
-"Corresponding Parts of Congruent Triangles are Congruent".
+Once you _know_ that two triangles are congruent, you know that _all_ of their
+corresponding sides and angles are congruent. This is often called
+[__CPOCT__](gloss:cpoct), or “Corresponding Parts of Congruent Triangles are
+Congruent”.
 
-It is interesting to note that all conditions consists of [[3]] different values
-(either sides or angles)!
+It is interesting to note that all conditions consists of [[three]] different
+values (either sides or angles)!
 
 ---
 > id: contruction
@@ -740,7 +744,7 @@ the congruence conditions above.
 #### SAS
 
 ::: column(width=300)
-{.todo} image
+{.todo} TODO – Animation
 ::: column.grow
 {.task} Draw the triangle that has sides of 5cm and 3cm, and an included
 angle of 40°.
@@ -767,7 +771,7 @@ triangles would have been congruent to this one.
 #### ASA
 
 ::: column(width=300)
-{.todo} image
+{.todo} TODO – Animation
 ::: column.grow
 {.task} Draw the triangle that has angles of 70° and 50°, and an included
 side of length 5cm.
@@ -785,7 +789,7 @@ Connecting the angle marks to the endpoints completes the triangle.
 #### AAS
 
 ::: column(width=300)
-{.todo} image
+{.todo} TODO – Animation
 ::: column.grow
 {.task} Draw the triangle that has angles of 40° and 50°, and an included
 side of length 5cm.
@@ -817,7 +821,7 @@ was not in the list of congruence conditions above, so comparing SSA is two
 triangles is not enough to confirm they are congruent. This will show you why:
 
 ::: column(width=300)
-{.todo} image
+{.todo} TODO – Animation
 ::: column.grow
 {.task} Draw the triangle that has sides of 4cm and 5cm, and a non-included
 angle of 50°.
@@ -833,7 +837,7 @@ The third side has o be 4cm long. Using a protractor we can draw a circle of
 radius 4cm around the other endpoint of the original side.
 
 The final vertex of the triangle is formed by the intersection of the circle and
-the second line. However, in this case, there are [[2]] intersections!
+the second line. However, in this case, there are two intersections!
 
 These two triangles are clearly not congruent. This means that there are two
 different triangles that have sides of 4cm and 5cm, as well as a non-included
@@ -848,16 +852,16 @@ angle of 50°. SSA is not enough to confirm two triangles are congruent.
 ## Pythagoras’ Theorem 
 
 We have now reached an important point in geometry – being able to state and
-understand one of the most famous theorems in all of mathematics: __Pythagoras’
-Theorem__. It is named after the ancient Greek mathematician [Pythagoras of
-Samos](bio:pythagoras).
+understand one of the most famous [theorems](gloss:theorem) in all of
+mathematics: __Pythagoras’ Theorem__. It is named after the ancient Greek
+mathematician [Pythagoras of Samos](bio:pythagoras).
 
 ::: .theorem
 ::: column.grow
 __Pythagoras’ Theorem__  
-In any right-angled triangle, the square of the length of the [__hypotenuse__](target:hypot)
-(the side that lies opposite the right angle) is equal to the sum of the squares
-of the other two sides. In other words,
+In any right-angled triangle, the square of the length of the
+[__hypotenuse__](target:hypot) (the side that lies opposite the right angle) is
+equal to the sum of the squares of the other two sides. In other words,
  
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
@@ -891,7 +895,7 @@ a*{sup}2* + b*{sup}2* = c*{sup}2*, then it must be [[right-angled|acute|obtuse]]
     img(src="images/ladder.svg" width=220 height=300)
 
 ::: column.grow
-Right angles are everywhere, and that is why Pythagoras’ Theorem is so useful.
+Right angles are everywhere, and that’s why Pythagoras’ Theorem is so useful.
 
 Here you can see a __{.m-red}6m__ long ladder learning on a wall. The bottom of
 the ladder is __{.m-blue}1m__ away from the wall. How far does it reach up the
@@ -1197,6 +1201,8 @@ If we draw those two lines, we get a [right-angled triangle](target:triangle).
 ---
 > id: distance-formula-1
 
+This method works for _any_ two points:
+
 ::: .theorem
 __The Distance Formula__  
 If you are given two points with coordinates  (`x_1`,`y_1`) and (`x_2`,`y_2`),
@@ -1234,9 +1240,9 @@ of lengths 3, 4 and 5 to measure perfect right angles.
 
 :::
 
-Three integers like this are called __Pythagorean Triples__. (3, 4, 5) is one
-example of a Pythagorean triple. If we multiply every number by 2, we get
-another Pythagorean triple: (6, 8, [[10]]).
+Three integers like this are called [__Pythagorean Triples__](gloss:pythagorean-triple).
+(3, 4, 5) is one example of a Pythagorean triple. If we multiply every number
+by 2, we get another Pythagorean triple: (6, 8, [[10]]).
 
 ---
 > id: pythagorean-triples-grid
@@ -1280,64 +1286,70 @@ special properties. In this section we’ll have a look at some of them.
 
 ### Isosceles Triangles
 
-We say that a triangle is __isosceles__ if it has two congruent sides. These
-congruent sides are called the __legs__ of the triangle, while the third side
-is called the __base__.
+We say that a triangle is [__isosceles__](gloss:isosceles-triangle) if it has
+two congruent sides. These congruent sides are called the __legs__ of the
+triangle, while the third side is called the __base__.
 
-{.todo} The angles between the base and the congruent sides are
-called base angles. The angle made by the two legs of the isosceles triangle is
-called the vertex angle.
+{.todo} TODO – Base angles theorem
 
-{.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
-To prove the Base Angles Theorem, we will construct the angle bisector through
-the vertex angle of an isosceles triangle.
+{.todo} TODO – Find the height of an Isosceles Triangles using Pythagoras
 
-{.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
-isosceles triangle is also the perpendicular bisector to the base.
-
-{.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
-both true. If two angles in a triangle are congruent, then
-the opposite sides are also congruent. And if the perpendicular bisector of the base of
-an isosceles triangle is also the angle bisector of the vertex angle.
-
-{.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-
-{.todo} Find the Height of an Isosceles Triangle
-One way to use The Pythagorean Theorem is to identify the heights in isosceles
-triangles so you can calculate the area.
+    // {.todo} The angles between the base and the congruent sides are
+    // called base angles. The angle made by the two legs of the isosceles triangle is
+    // called the vertex angle.
+    // 
+    // {.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
+    // To prove the Base Angles Theorem, we will construct the angle bisector through
+    // the vertex angle of an isosceles triangle.
+    // 
+    // {.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
+    // isosceles triangle is also the perpendicular bisector to the base.
+    // 
+    // {.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
+    // both true. If two angles in a triangle are congruent, then
+    // the opposite sides are also congruent. And if the perpendicular bisector of the base of
+    // an isosceles triangle is also the angle bisector of the vertex angle.
+    // 
+    // {.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
+    // 
+    // {.todo} Find the Height of an Isosceles Triangle
+    // One way to use The Pythagorean Theorem is to identify the heights in isosceles
+    // triangles so you can calculate the area.
 
 ---
 > id: equilateral
 
 ### Equilateral Triangles
 
-We say that a triangle is __equilateral__ if all of its sides  have the same
-length. You’ve [already seen](/course/euclidean-geometry) how to construct an
-equilateral triangle using straight edge and compass.
+We say that a triangle is [__equilateral__](todo:equilateral-triangle) if all of
+its sides  have the same length. You’ve [already seen](/course/euclidean-geometry#equilateral)
+how to construct an equilateral triangle using straight-edge and compass.
 
-Any equilateral triangle is always also isosceles. From the base angle theorem
-we know that angles opposite congruent sides in a triangle are also congruent.
-In an equilateral triangle, all of the sides are congruent, so all of the angles
-must also be congruent.
+    // Any equilateral triangle is always also isosceles. From the base angle theorem
+    // we know that angles opposite congruent sides in a triangle are also congruent.
+    // In an equilateral triangle, all of the sides are congruent, so all of the angles
+    // must also be congruent.
+    // 
+    // Since we know that the sum of all three angles is 180°, every individual angle
+    // in an equilateral triangle must be [[60]]°.
 
-Since we know that the sum of all three angles is 180°, every individual angle
-in an equilateral triangle must be [[60]]°.
+{.todo} TODO – Size of angles in an equilateral triangle
 
-{.todo} Area of an equilateral triangle
+{.todo} TODO – Area of an equilateral triangle
 
 ----
 > id: trigonometry
 
 ## Trigonometry
 
-So far we have seen relationships between the angles of triangles (e.g.
-they always sum up to 180°) and relationships between the sides of triangles
-(e.g. Pythagoras). But there is nothing that _combines_ the size angles and
+So far we have seen relationships between the __angles__ of triangles (e.g.
+they always sum up to 180°) and relationships between the __sides__ of triangles
+(e.g. Pythagoras). But there is nothing that _connects_ the size of angles and
 sides.
 
 For example, if I know the three sides of a triangle, how do I find the size of
 its angles – without drawing the triangle and measuring them using a protractor?
-This is where Trigonometry comes in!
+This is where __Trigonometry__ comes in!
 
     figure: img(src="images/trig-om-nom.jpg" width=200 height=200)
 
@@ -1374,7 +1386,7 @@ from the [AA condition](gloss:triangle-aa) we know that they are all
 > id: trig-functions
 
 Since all of these triangles are similar, we know that their sides are
-proportional. In particular, the following ratios are the same for all of the
+proportional. In particular, the following ratios are the same for all of these
 triangles:
 
     p.text-center
@@ -1452,43 +1464,36 @@ a 3-letter abbreviation:
 ---
 > id: trig-functions-1
 
-{.todo} abbreviations: sin x, cos y
+{.todo} TODO – Abbreviations: sin x, cos y
 
-{.todo} Usually you won’t be asked to calculate trigonometric functions yourself
-– just use the sin, cos and tan keys on a calculator.
+{.todo} TODO – Using calculators
 
-{.todo} Let’s have a look at a few examples:
+{.todo} TODO – Examples
 
-{.todo} examples
+{.todo} TODO – Radians vs degrees, swapping the angles
 
-{.todo} radians not degrees, swapping the angles
-
-{.todo} Use the Pythagorean Theorem to find the missing side (if there is one).
-The tangent ratio can be bigger than 1 (the other two cannot).
-If there is a radical in the denominator, rationalize the denominator.
+{.todo} TODO – Rationalize the denominator.
 
 ---
 > id: inverse-trig
 
 ### Inverse Trignometric Functions 
 
-{.todo} The word inverse is probably familiar to you. In mathematics, once you learn how
-to do an operation, you also learn how to “undo” it. For example, you may
-remember that addition and subtraction are considered inverse operations.
-Multiplication and division are also inverse operations. In algebra you used
-inverse operations to solve equations and inequalities. When we apply the word
-inverse to the trigonometric ratios, we can find the acute angle measures within
-a right triangle. Normally, if you are given an angle and a side of a right
-triangle, you can find the other two sides, using sine, cosine or tangent. With
-the inverse trig ratios, you can find the angle measure, given two sides.
+{.todo} TODO – Inverse functions
 
-{.todo} Inverse Tangent: tan−1 or arctan. The “-1” indicates inverse.
-Inverse Sine: sin−1 or arcsin.
-Inverse Cosine: cos−1 or arccos.
+    // The word inverse is probably familiar to you. In mathematics, once you learn how
+    // to do an operation, you also learn how to “undo” it. For example, you may
+    // remember that addition and subtraction are considered inverse operations.
+    // Multiplication and division are also inverse operations. In algebra you used
+    // inverse operations to solve equations and inequalities. When we apply the word
+    // inverse to the trigonometric ratios, we can find the acute angle measures within
+    // a right triangle. Normally, if you are given an angle and a side of a right
+    // triangle, you can find the other two sides, using sine, cosine or tangent. With
+    // the inverse trig ratios, you can find the angle measure, given two sides.
 
-{.todo} On most scientific and graphing calculators, the buttons look like
-[SIN−1],[COS−1], and [TAN−1]. Typically, you might have to hit a shift
-button to access these functions.
+    // On most scientific and graphing calculators, the buttons look like
+    // [SIN−1],[COS−1], and [TAN−1]. Typically, you might have to hit a shift
+    // button to access these functions.
 
 ---
 > id: sine-cosine-rule
@@ -1507,9 +1512,11 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 {.text-center} `(sin a)/a = (sin b)/b = (sin c)/c`
 :::
 
-{.todo} Use Law of Sines when given:
-An angle and its opposite side.
-Any two angles and one side.
+{.todo} TODO – Explanation
+
+    // {.todo} Use Law of Sines when given:
+    // An angle and its opposite side.
+    // Any two angles and one side.
 
 ::: column.grow
 ::: .theorem
@@ -1521,21 +1528,23 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 `c^2 = a^2 + b^2 - 2ab cos(C)`
 :::
 
-{.todo} Even though there are three formulas, they are all very similar. First, notice
-that whatever angle is in the cosine, the opposite side is on the other side of
-the equal sign.
+{.todo} TODO – Explanation
 
-{.todo} Use Law of Cosines when given:
-Two sides and the included angle.
-All three sides.
+    // {.todo} Even though there are three formulas, they are all very similar. First, notice
+    // that whatever angle is in the cosine, the opposite side is on the other side of
+    // the equal sign.
+    // 
+    // {.todo} Use Law of Cosines when given:
+    // Two sides and the included angle.
+    // All three sides.
 :::
 
 ---
 > id: trigonometry-4
 
-{.todo} applications
+{.todo} TODO – Examples and applications
 
-{.todo} future stuff about trigonometry
+{.todo} TODO – Future stuff about trigonometry
 
 ---
 > id: mountains
@@ -1614,9 +1623,9 @@ polygon that, when made out of wooden beams and hinges, will be completely
 _rigid_ – unlike rectangles, for example, which you can easily push over.
 
 ::: column(width=240)
-{.todo} images
+{.todo} TODO – Animation
 ::: column(width=240)
-{.todo} images
+{.todo} TODO – Animation
 :::
 
 ---

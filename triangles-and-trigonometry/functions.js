@@ -64,7 +64,7 @@ export function incircle($step) {
 
   $geopad.setActiveTool('angleBisector');
   $step.onScore('s0 s1 s2', () => $geopad.setActiveTool('move'));
-  $step.onScore('blank-0', () => $geopad.animateConstruction('incircle'));
+  $step.onScore('blank-1', () => $geopad.animateConstruction('incircle'));
 
   waitToDraw($step, $geopad,
     ['xa.bisector', 'xb.bisector', 'xc.bisector'],
@@ -100,7 +100,9 @@ export function triangleInequality($step) {
   const $items = $step.$$('.item');
   const targets = $items.map($el => $el.$$('.t-num').map($el => ({$el, val: +$el.text})));
 
-  $step.delayedHint(() => $step.addHint('inequality-impossible'), 15000);
+  $step.one('score', () => {
+    $step.delayedHint(() => $step.addHint('inequality-impossible'), 20000);
+  });
 
   $step.model.watch(s => {
     const active = [round(s.a, s.b), round(s.b, s.c), round(s.a, s.c)].sort();
@@ -111,7 +113,8 @@ export function triangleInequality($step) {
         t[x].$el.setClass('correct', isCorrect);
         correctCount += isCorrect;
       }
-      if (correctCount === 3) {
+      if (correctCount === 3 && !$step.scores.has('s' + i)) {
+        $step.addHint('correct');
         $step.score('s' + i);
         $items[i].addClass('correct');
       }
@@ -161,7 +164,7 @@ export function pythagorasProof($step) {
     updateLabels();
   });
 
-  $step.onScore('blank-0', () => { updateLabels(); delay(() => $slider.play(), 2000); });
+  $step.onScore('blank-0', () => { updateLabels(); delay(() => $slider.play(), 1000); });
   $step.onScore('blank-1', updateLabels);
 
   const $targets = $step.$$('.hover-target');

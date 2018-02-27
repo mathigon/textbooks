@@ -255,9 +255,13 @@ export function calculator($step) {
   let a = null, b = null, answer = null;
   let $results = [];
   let locked = false;
+  let count = 0;
 
   $buttons.forEach(($b, i) => {
     $b.on('click', () => {
+      count += 1;
+      if (count === 3) $step.score('calculate');
+
       if (a === null) {
         a = i;
         $results.push(makeSquare(i, 0, $display));
@@ -283,7 +287,6 @@ export function calculator($step) {
 
         $results.push(makeSquare(b, 1, $display, 400));
         $results.push(makeSquare(answer, 2, $display, 600));
-        $step.score('calculate');
       }
 
     });
@@ -303,7 +306,7 @@ export function symmetryArithmetic($step) {
 
 // -----------------------------------------------------------------------------
 
-export function wallpaperGroups($step) {
+export function wallpaperGroups1($step) {
   const $symmetries = $step.$$('.symmetry');
   const $images = $step.$$('img:nth-child(2)');
 
