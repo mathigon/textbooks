@@ -45,6 +45,10 @@ function-graph:  # <<<
   title: Graphs of Functions
   text: TODO
 
+irrational:  # <<<
+  title: Irrational Numbers
+  text: TODO
+
 
 
 # ==============================================================================
@@ -52,20 +56,28 @@ function-graph:  # <<<
 # ==============================================================================
 
 
-point:
+axiom: # <<<
+  title: Line
+  text: TODO
+
+euclidean-geometry: # <<<
+  title: Line
+  text: TODO
+
+point: # <<<
   title: Point
   text: A __point__ is a location in space that does not have size or shape.
   id: euclidean-geometry#point
 
-line:
+line: # <<<
   title: Line
   text: TODO
 
-ray:
+ray: # <<<
   title: Ray
   text: TODO
 
-line-segment:
+line-segment: # <<<
   title: Line segment
   text: A __line segment__ is a part of a line that has two endpoints.
 
@@ -115,6 +127,10 @@ parallel: # <<<
   title: Parallel lines
   text: Two or more lines are __parallel__ when they lie in the same plane and
     never intersect. These lines will always have the same slope.
+
+perpendicular: # <<<
+  title: Perpendicular lines
+  text: TODO
 
 
 # ------------------------------------------------------------------------------

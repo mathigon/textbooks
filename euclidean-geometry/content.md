@@ -13,10 +13,10 @@
 ## Introduction
 
 ::: column.grow
-Mathematics has been studied for many thousands of years – to predict the
-seasons, calculate taxes, or estimate the size of farming land.
+Mathematics has been studied for thousands of years – to predict the seasons,
+calculate taxes, or estimate the size of farming land.
 
-Around 500 BC, mathematicians in ancient Greece started to study mathematics
+But around 500 BC, mathematicians in ancient Greece started to study mathematics
 just “for fun”, without a specific application in mind. They were amazed by
 mathematical patterns, and wanted to explore and explain them.
 ::: column(width=300)
@@ -68,7 +68,7 @@ he wanted to understand _why_ it is true, and verify that it is _always_ true
 – not just in the specific examples he happened to try.
 
 An argument that logically explains, beyond and doubt, why something must be
-true, is called a __proof__. During the following chapters we will build up a
+true, is called a __proof__. During the following chapters, you will learn a
 number of geometric techniques, that will allow us to prove _Thales’ theorem_.
 
 ---
@@ -78,10 +78,6 @@ number of geometric techniques, that will allow us to prove _Thales’ theorem_.
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
 ## Definitions
-
-It is important to think about the kinds of tools the ancient Greeks had
-available when doing geometry. Rulers
-
 
 Before we can write any proofs, we need some common terminology that will make
 it easier to talk about geometric objects. These are not particularly exciting,
@@ -97,8 +93,8 @@ but you should already know most of them:
       circle(x="point(70,120)" target="no-move" label="R")
 
 ::: column.grow
-A __point__ is a specific location in space. Points describe a position, but
-have no _size_ in itself. They are labelled using capital letters.
+A [__point__](gloss:point) is a specific location in space. Points describe a
+position, but have no _size_ in itself. They are labelled using capital letters.
 
 {.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
 you can move around, while [smaller, outlined dots](target:no-move) indicate
@@ -112,16 +108,16 @@ _{button.next-step} Next_
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
-      path(x="line(point(60,100),point(90,40))" label="a")
-      path(x="line(point(50,120),point(150,150))" label="b")
+      path.green(x="line(point(60,100),point(90,40))" label="a")
+      path.red(x="line(point(50,120),point(150,150))" label="b")
       circle.move(name="P" cx=170 cy=55 label="P")
       circle.move(name="Q" cx=200 cy=130 label="Q")
-      path(x="line(P,Q)")
+      path.yellow(x="line(P,Q)")
 
 ::: column.grow
-A __line__ is a set of infinitely many points that extend forever in both
-directions. Like a point, lines don’t take up any space – they have no _width_.
-They have a location and a direction, and they are always straight.
+A [__line__](gloss:line) is a set of infinitely many points that extend forever
+in both directions. Lines are always straight and, just like points, they don’t
+take up any space – they have no _width_.
 
 {.r} Lines are labeled using lower-case letters. We can also refer to them using
 two points that lie on the line, for example
@@ -139,17 +135,16 @@ _{button.next-step} Next_
     x-geopad(width=240 height=160): svg
       circle.move(name="a" cx=50 cy=50 label="A")
       circle.move(name="b" cx=90 cy=120 label="B")
-      path(x="segment(a,b)")
+      path.red(x="segment(a,b)")
       circle.move(name="c" cx=120 cy=40 label="C")
       circle.move(name="d" cx=210 cy=110 label="D")
-      path(x="segment(c,d)")
+      path.blue(x="segment(c,d)")
 
 ::: column.grow
-A __line segment__ is the part of a line between two points, without extending
-to infinity. For example, the sides of a triangle are all line segments.
-
-{.r} We can label them just like lines, but without arrows on the bar above:
-`bar(AB)` or `bar(BA)`. Like, before the order of the points does not matter.
+{.r} A [__line segment__](gloss:line-segment) is the part of a line between two
+points, without extending to infinity. We can label them just like lines, but
+without arrows on the bar above: `bar(AB)` or `bar(BA)`. Like, before the order
+of the points does not matter.
 _{button.next-step} Next_
 :::
 
@@ -161,18 +156,18 @@ _{button.next-step} Next_
     x-geopad(width=240 height=160): svg
       circle.move(name="c" cx=40 cy=120)
       circle.move(name="d" cx=60 cy=40)
-      path(x="ray(c,d)")
+      path.green(x="ray(c,d)")
       circle.move(name="a" cx=90 cy=90 label="A")
       circle.move(name="b" cx=190 cy=130 label="B")
-      path(x="ray(a,b)")
+      path.yellow(x="ray(a,b)")
 
 ::: column.grow
-A __ray__  is something in between a _line_ and a _line segment_: it only
-extends to infinity on one side. You can think of it like _sunrays_: they start
-at a point (the sun) and then keep going forever.
+A [__ray__](gloss:ray)  is something in between a _line_ and a _line segment_:
+it only extends to infinity on one side. You can think of it like _sunrays_:
+they start at a point (the sun) and then keep going forever.
 
 {.r} When labelling rays, the arrow shows the direction where it extends to
-infinity, for example `vec(AB)`. This time, the order of points _does_ matter.
+infinity, for example `vec(AB)`. This time, the order of the points _does_ matter.
 _{button.next-step} Next_
 :::
 
@@ -188,12 +183,12 @@ _{button.next-step} Next_
 
       circle.move(name="b" cx=170 cy=90)
       path(x="segment(b,b.shift(60,0))" target="radius")
-      path.red(x="circle(b,60)")
+      path.blue(x="circle(b,60)")
 
 ::: column.grow
-{.r} A __circle__ is the collection of points that all have the same
-[distance](target:radius) from a point in the center. This distance is called
-the __radius__.
+{.r} A [__circle__](gloss:circle) is the collection of points that all have the
+same [distance](target:radius) from a point in the center. This distance is
+called the [__radius__](gloss:radius).
 _{button.next-step} Next_
 :::
 
@@ -264,11 +259,11 @@ congruent:
 > id: congruence-1
 
 Two line segments are congruent if they [[have the same length|intersect]]. Two
-angles are congruent if they [[have the same size|meet at a point]], in degrees.
+angles are congruent if they [[have the same size|meet at a point]] (in degrees).
 
 Note the that _“congruent”_ does not mean _“equal”_. For example, congruent
-lines and angles don’t have to point in the same direction. Still, congruence
-has many of the same properties of equality:
+lines and angles don’t have to point in the same direction. Still, _congruence_
+has many of the same properties of _equality_:
 
 * Congruence is __symmetric__: if `X ≅ Y` then also `Y ≅ X`.
 * Congruence is __reflexive__: any shape is congruent to itself. For example, `A ≅ A`.
@@ -314,7 +309,7 @@ __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
 
 ::: column.grow
 The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
-These lines are called __perpendicular__.
+These lines are called [__perpendicular__](gloss:perpendicular).
 
 {.r} In this example, we would write  _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. The
 `_|_` symbol simply means _“is perpendicular to”_.
@@ -333,8 +328,8 @@ _{button.next-step} Next_
 ::: column.grow
 Greek mathematicians realised that to write formal proofs, you need some sort of
 _starting point_: simple, intuitive statements, that everyone agrees are true.
-These are called __axioms__ (or _postulates_), and can then be used to prove
-more complex results using the rules of logic.
+These are called [__axioms__](gloss:axiom) (or _postulates_), and can then be
+used to prove more complex results using the rules of logic.
 
 The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
 the _father of geometry_, published the five axioms of geometry:
@@ -409,7 +404,8 @@ Any two right angles are congruent.
 
 {.text-center }__Fifth Axiom__  
 Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
-there is exactly [one line](target:5_parallel) through _P_ that is parallel to _L_.
+there is exactly [one line](target:5_parallel) through _P_ that is
+[parallel](gloss:parallel) to _L_.
 :::
 
 ---
@@ -417,16 +413,18 @@ there is exactly [one line](target:5_parallel) through _P_ that is parallel to _
 
 ::: column.grow
 Each of these axioms looks pretty obvious and self-evident, but together they
-form the foundation of geometry, and can be used to derive almost everything
-else. According to none less than [Isaak Newton](bio:newton), _“it’s the glory
+form the foundation of geometry, and can be used to deduce almost everything
+else. According to none less than [Isaac Newton](bio:newton), _“it’s the glory
 of geometry that from so few principles it can accomplish so much”_.
 
-Euclid published the five axioms in a book _“Elements”_. It is the earliest
-example in history of a systematic approach to mathematics, and was used as the
-standard mathematics textbook for thousands of years, until the 20th century.
+Euclid published the five axioms in a book _“Elements”_. It is the first example
+in history of a systematic approach to mathematics, and was used as mathematics
+textbook for thousands of years.
 
 ::: column(width=220)
+
     x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+
 :::
 
 One of the people who studied Euclid’s work was the American President [Thomas
@@ -458,22 +456,24 @@ geometry, for example to calculate areas and volumes.
 ::: column.grow
 However, at the times of Thales or Euclid, there wasn’t a universal framework of
 units like we have today. Distances were often measured using body parts, for
-example finger widths, or arm lengths. These are not very accurate and they even
-vary for different people.
+example finger widths, or arm lengths. These are not very accurate and they vary
+for different people.
 
 To measure longer distances, architects or surveyors used _knotted cords_: long
 pieces of string that contained many knots at equal intervals. But these were
-also not perfectly accurate, and every string had the knots places at slightly
-different distances.
+also not perfectly accurate, and different string had the knots placed at
+slightly different distances.
 
     figure: x-media(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
 ::: column(width=200)
+
     x-media(src="images/units.png" width=200 height=336)
+
 :::
 
 Greek mathematicians didn’t want to deal with these approximations. They were
-much more interested in the underlying laws of geometry, than their practical
+much more interested in the underlying laws of geometry, than in their practical
 applications.
 
 That’s why they came up with a much more idealised version of our universe: one
@@ -489,8 +489,8 @@ drawings are always just “approximations”.
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
 Euclid’ axioms basically tell us _what’s possible_ in his version of geometry.
-It turns out that we just need two very simple tools to be able to sketch all of
-that on paper:
+It turns out that we just need two very simple tools to be able to sketch this
+on paper:
 
 ::: column(width=320)
 
@@ -530,12 +530,13 @@ You can imagine that Greek mathematicians were thinking about Geometry on the
 beach, and drawing different shapes in the sand: using long planks as
 straight-edge and pieces of string as compass.
 
-Even though these tools look very primitive, you can actually draw a great
-number of shapes with them. This became almost like a puzzle game for
-mathematicians: tying to find ways to “construct” different geometric shapes
-using just a straight-edge and compass.
+Even though these tools look very primitive, you can draw a great number of
+shapes with them. This became almost like a puzzle game for mathematicians:
+tying to find ways to “construct” different geometric shapes using just a
+straight-edge and compass.
 
 ::: column(width=340)
+
     x-media(src="images/archimedes.jpg" width=340 height=265)
 
 {.caption} The Greek Mathematician [Archimedes](bio:archimedes) was studying
@@ -555,9 +556,10 @@ disturb my circles”.
 {.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
 straight-edge and compass.
 
-To start with, draw a line segment any where in a box on the right. With
-the <x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target> selected,
-simply drag from start to end. This line will be one of the sides of the triangle.
+To begin, draw a line segment anywhere in a box on the right. With the
+<x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target>
+selected, simply drag from start to end. This segment will be one of the sides
+of the triangle.
 
 {.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
 of the line segments as center, and go through the other endpoint. With
@@ -582,11 +584,11 @@ is indeed an equilateral triangle._
 
 {.todo} TODO – Constructing Midpoints and Perpendicular Bisectors
 
-    // {.todo} A midpoint is a point on a line segment that divides it into two congruent
+    // A midpoint is a point on a line segment that divides it into two congruent
     // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
     // `bar(AC)`.
     // 
-    // {.todo} A line, segment, or ray that passes through a midpoint of another segment 
+    // A line, segment, or ray that passes through a midpoint of another segment 
     // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
     // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) _|_ bar(DE)`.
 
@@ -597,19 +599,19 @@ is indeed an equilateral triangle._
 
 {.todo} TODO – Constructing Angle Bisectors
 
-    // {.todo} When two rays have the same endpoint, an angle is created.
+    // When two rays have the same endpoint, an angle is created.
     // 
-    // {.todo} Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
+    // Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
     // “∠” symbol in front of the three letters used to label it. This angle can be
     // labeled `/_ABC` or `/_CBA`. Always put the vertex (the common endpoint of the
     // two rays) in the middle of the three points. It doesn’t matter which side point
     // is written first.
     // 
-    // {.todo} An __angle bisector__ is a ray that divides an angle into two congruent angles,
+    // An __angle bisector__ is a ray that divides an angle into two congruent angles,
     // each having a measure exactly half of the original angle. Every angle has
     // exactly one angle bisector.
     // 
-    // {.todo} Angle Bisector Theorem: If a point is on the bisector of an angle, then the
+    // Angle Bisector Theorem: If a point is on the bisector of an angle, then the
     // point is equidistant from the sides of the angle.
     // In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
 
@@ -622,18 +624,18 @@ is indeed an equilateral triangle._
 
 {.todo} TODO – Constructing a Square
 
-    // {.todo} Perpendicular Line Construction; through a Point NOT on the Line
+    // Perpendicular Line Construction; through a Point NOT on the Line
     // Draw a horizontal line and a point above that line. Label the line l and the point A.
     // 
-    // * {.todo}Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
-    // * {.todo}Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
-    // * {.todo}Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
+    // * Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
+    // * Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
+    // * Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
     // 
-    // {.todo} Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
+    // Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
     // 
-    // {.todo} Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
+    // Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
     // 
-    // {.todo} Distance Between Parallel Lines 
+    // Distance Between Parallel Lines 
     // The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
 
 ---
@@ -641,9 +643,9 @@ is indeed an equilateral triangle._
 
 ### Impossible Constructions
 
-In the following chapters we will see even more shapes that can be constructed
+In the following chapters, we will see even more shapes that can be constructed
 like this. However, there is a limit to Euclidean geometry: some constructions
-are simply impossible using just Euclid’s Axioms.
+are simply impossible using just straight-edge and compass.
 
 ::: column.grow
 According to legend, the city of Delos in ancient Greece was once faced with a
@@ -669,14 +671,13 @@ side of the cube will increase by a factor of `root(3)(2)`.
 > id: impossible-1
 
 This still sounds pretty simple, but doubling the cube is actually impossible
-using just straight-edge and compass. For the citizens of Delos this meant that
-all hope was lost.
-
-There are two other constructions that are famously impossible in Euclidean
-geometry. Mathematicians spent great amounts of time trying to find a solution –
-but without any success:
+in [Euclidean geometry](gloss:euclidean-geometry)! For the citizens of Delos
+this unfortunately meant that all hope was lost. There are two other
+constructions that are famously impossible. Mathematicians spent great amounts
+of time trying to find a solution – but without success:
 
 ::: column(width=220)
+
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
 {.text-center} __{.m-red} Trisecting the angle__  
@@ -684,13 +685,15 @@ We already know how to bisect angles. However it is impossible to similarly
 split an angle into _three_ equal parts.
 
 ::: column(width=220)
+
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
 {.text-center} __{.m-blue} Doubling the cube__  
-Given the edge of a cube, it is impossible to construct the edge of a cube that
-is exactly twice the volume.
+Given the edge of a cube, it is impossible to construct the edge of another cube
+that has exactly twice the volume.
 
 ::: column(width=220)
+
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
 {.text-center} __{.m-green} Squaring the circle__  
@@ -708,14 +711,14 @@ use straight-edge and compass.
 
 ## Origami and Paper Folding
 
-Ruler and compass are not the only tools we can use to construct geometric
+Using straight-edge and compass is not the only way to construct geometric
 shapes. Another technique uses no tools at all: __Origami__.
 
 The word _Origami_ (折り紙) comes from the Japanese _oru_ (to fold) and _kami_
-(paper). The goal is to create objects out of one or more sheets of paper,
-without any additional tools like glue or scissors. You can still create
-incredibly beautiful and impressive designs – all of these figures were built
-using nothing but rectangular sheets of paper:
+(paper). The goal is to make objects out of one or more sheets of paper,
+without any additional tools like glue or scissors. You can create incredibly
+beautiful and impressive designs – all of these figures were built using nothing
+but rectangular sheets of paper:
 
 ::: column(width=186)
     x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
@@ -752,21 +755,32 @@ extremely accurate. But with a bit of practice, you can do it yourself!
 {.step.active(data-t=0)} You just need a quadratic sheet of paper. To start,
 fold the sheet along its two diagonals.
 
-{.step(data-t=16)} Next, fold it along its horizontal and vertical middles – but in the opposite direction.
+{.step(data-t=16)} Next, fold it along its horizontal and vertical centers – but
+in the opposite direction.
 
-{.step(data-t=38)} Now take two opposite corners of the sheet and bring them together as shown. This forms a smaller square which is open at the bottom.
+{.step(data-t=38)} Now take two opposite corners of the sheet and bring them
+together as shown. This forms a smaller square which is open at the bottom.
 
-{.step(data-t=51)} Fold the left and right corners of the square towards its center line. Then turn it over and repeat the same.
+{.step(data-t=51)} Fold the left and right corners of the square towards its
+center line. Then turn it over and repeat the same.
 
-{.step(data-t=83)} Now fold the top triangle down, along the horizontal line, and then open up the folds from the last two steps.
+{.step(data-t=83)} Now fold the top triangle down, along the horizontal line,
+and then open up the folds from the last two steps.
 
-{.step(data-t=99)} This one is difficult: take the bottom corner of the paper and fold it all the way up, along the horizontal line you just created. Some of the folds you made before will be inverted. Then turn over and repeat.
+{.step(data-t=99)} This one is difficult: take the bottom corner of the paper
+and fold it all the way up, along the horizontal line you just created. Some of
+the folds you made before will be inverted. Then turn over and repeat.
 
-{.step(data-t=135)} Make sure the two “legs" are pointing down. Then take the left and right corner and fold them towards the center line. Turn over and repeat.
+{.step(data-t=135)} Make sure the two “legs” are pointing down. Then take the
+left and right corner and fold them towards the center line. Turn over and
+repeat.
 
-{.step(data-t=172)} You’re almost done! Slightly open the right side, and fold the head up towards the top. You will have to turn it inside out. Then repeat the same with the tail on the left.
+{.step(data-t=172)} You’re almost done! Slightly open the right side, and fold
+the head up towards the top. You will have to turn it inside out. Then repeat
+the same with the tail on the left.
 
-{.step(data-t=203)} Reverse the fold as shown to create a beak. You can decide how long you want it to be by picking the location of the fold.
+{.step(data-t=203)} Reverse the fold as shown to create a beak. You can decide
+how long you want it to be by picking the location of the fold.
 
 {.step(data-t=215)} Finally, fold down the two wings, and pull them apart.
 :::
@@ -785,43 +799,44 @@ different _folds_ that are possible with origami. They were first listed in
 1992, by the Italian-Japanese mathematician Humiaki Huzita.
 
 ::: column(width=220)
+
     x-media(src="images/origami/axiom-1.mp4" width=220 height=220)
 
 {.text-center} You can fold a line connecting any two points.
-
 ::: column(width=220)
+
     x-media(src="images/origami/axiom-2.mp4" width=220 height=220)
 
 {.text-center} You can fold any point _P_ onto any other point _Q_. This creates
 the [[perpendicular bisector|angle bisector|midpoint]] of the line `bar(PQ)`.
-
 ::: column(width=220)
+
     x-media(src="images/origami/axiom-3.mp4" width=220 height=220)
 
 {.text-center} We can fold any two lines onto each other. If the lines
 intersect, this creates the [[angle bisector|perpendicular bisector|midpoint]]
 of the angle between the two lines.
-
 ::: column(width=220)
+
     x-media(src="images/origami/axiom-4.mp4" width=220 height=220)
 
 {.text-center} Given a point _P_ and a line _L_, we can make a fold
 perpendicular to _L_ passing through _P_.
-
 ::: column(width=220)
+
     x-media(src="images/origami/axiom-5.mp4" width=220 height=220)
 
 {.text-center} Given two points _P_ and _Q_ and a line _L_, we can make a fold 
 that passes through _P_ and places _Q_ onto _L_.
-
 ::: column(width=220)
+
     x-media(src="images/origami/axiom-6.mp4" width=220 height=220)
 
 {.text-center} Given any two points _P_ and _Q_ and any two lines _K_ and _L_,
 we can make a fold that places point _P_ onto line _K_ and at the same time
 places point _Q_ onto line _L_.
-
 ::: column(width=220)
+
     x-media(src="images/origami/axiom-7.mp4" width=220 height=220)
 
 {.text-center} Given a point _P_ and two lines _K_ and _L_, we can fold a line
@@ -840,11 +855,11 @@ square the circle with origami.
 > class: fill dark
 
 Origami is an ancient art, and for the longest time it was mostly a recreational
-pursuit, without real life applications. However, it turns out, that techniques
+pursuit, without real life applications. However, it turns out that techniques
 developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column(width=300)
-{.todo} image
+{.todo} TODO – Images/videos
 ::: column.grow
 ### Origami in Space
 
@@ -861,7 +876,9 @@ unfold once in space.
 :::
 
 ::: column(width=300)
+
     x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
+
 ::: column.grow
 ### Foldable Bridges
 
@@ -875,7 +892,9 @@ Hiroshima University in Japan.
 :::
 
 ::: column(width=300)
+
     x-media(src="images/stadium.mp4" width=300 height=225 credit="© Mercedes Benz Stadium")
+
 ::: column.grow
 ### Stadium Roofs
 
@@ -888,7 +907,9 @@ modules that can twist to open or close.
 :::
 
 ::: column(width=300)
+
     x-media(src="images/stents.mp4" width=300 height=225 credit="© Virtual Point")
+
 ::: column.grow
 ### Origami in Medicine
 
@@ -905,7 +926,7 @@ clogged arteries or veins.
     // airbag. This can be modelled using Origami
 
 And there are even more applications that are still being researched: from
-houses that – like Origami – will compress rather than crumble during an
+houses that, like Origami, will compress rather than crumble during an
 earthquake, to unfolding airbags in cars, self-assembling robots, and more
 efficient packaging.
 
@@ -914,42 +935,48 @@ efficient packaging.
 
 ## Applications of Geometry
 
-Geometry is around us, wherever we look. In nature, architecture, technology and
+Geometry is everywhere around us – in nature, architecture, technology and
 design. We need geometry for measuring distances, as well as constructing
 skyscrapers or sending satellites into space.
 
 ::: column(width=200)
+
     x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
 {.caption} Geometry allowed the ancient Egyptians to construct gigantic,
 perfectly regular pyramids, that align to patterns in the stars.
 ::: column(width=200)
+
     x-media(src="images/sextant.jpg" credit="© Depositphotos / scorpp" width=200 height=200)
 
 {.caption} Sailors use sextants to determine their location while at sea, using 
 angles formed by the sun or stars.
 ::: column(width=200)
+
     x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
 
 {.caption} Geometry is needed to create realistic video game or movie graphics.
 ::: column(width=200)
+
     x-media(src="images/plane.jpg" credit="© Depositphotos / nmcandre" width=200 height=200)
 
 {.caption} Geometry can help design and test new airplane models, making them
 safer and more efficient.
 ::: column(width=200)
+
     x-media(src="images/cctv.jpg" lightbox credit="© Depositphotos / junrong" width=200 height=200)
 
 {.caption} Geometry was key when designing this skyscraper in Beijing – and to
 make sure it won’t fall over.
 ::: column(width=200)
+
     x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
 {.caption} Geometry allows us to predict the position of stars, planets and
 satellites orbiting Earth.
 :::
 
-In the next chapters, we will learn about tools and techniques in geometry, that
-were discovered by mathematicians over the course of many centuries. And, of
-course, we will see how these techniques can be used to solve important
-problems in the real world.
+In the following chapters, we will learn about tools and techniques in geometry
+that were discovered by mathematicians over the course of many centuries. We
+will also see how these techniques can be used to solve important problems in
+the real world.

@@ -35,7 +35,7 @@ export function thales($step) {
       $geopad.drawPath(m => m.angle(m[a], m[c], m[b]), {animate: 500, target: 'angle', classes: 'red thin'});
       $step.score('p3');
       $geopad.setActiveTool('move');
-      $step.model.watch(() => setTimeout(() => $step.score('move'), 1000), true);
+      $geopad.on('moveEnd', () => $step.score('move'));
     }
   });
 }

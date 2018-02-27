@@ -258,9 +258,10 @@ figure on the right. The red and green areas will always have the same area.
       path.yellow(hidden x="arc(d,c,1.99*pi)" name="circumcircle")
 
 ::: column.grow
-Recall that the [perpendicular bisector](gloss:perp-bisector) of a line is the perpendicular
-line that goes through its [[midpoint|endpoints]]. _{span.reveal(when="blank-0")}Draw
-the perpendicular bisector of all three sides of a triangle._
+Recall that the [perpendicular bisector](gloss:perpendicular-bisector) of a line
+is the perpendicular line that goes through its [[midpoint|endpoints]].
+_{span.reveal(when="blank-0")}Draw the perpendicular bisector of all three sides
+of a triangle._
 
 {.reveal(when="s0 s1 s2")} Like before, the three perpendicular bisectors meet in a
 single point. And again, this point has a special property.
@@ -1345,32 +1346,54 @@ This is where Trigonometry comes in!
 
 ::: column.grow
 Imagine we have a right-angled triangle, and we also know one of the two other
-angles, _α_. We already know that the longest side is called the hypotenuse. The
-other two are usually called the Adjacent (which is next to angle _α_) and the
-Opposite (which is opposite angle _α_).
+angles, __{.m-red}α__. We already know that the longest side is called the
+[__{.m-yellow}hypotenuse__](target:hyp). The other two are usually called the
+[__{.m-green}adjacent__](target:adj) (which is next to angle __{.m-red}α__) and
+the [__{.m-blue}opposite__](target:opp) (which is opposite angle __{.m-red}α__).
 ::: column(width=240)
-{.todo} image
+
+    x-geopad(width=240 height=160): svg
+      circle(name="a" x="point(30,120)")
+      circle(name="b" x="point(210,40)")
+      circle(name="c" x="point(210,120)")
+      path(x="angle(b,c,a)")
+      path.red(x="angle(b,a,c)" label="α")
+      path.yellow(x="segment(a,b)" label="Hypotenuse" target="hyp")
+      path.blue(x="segment(b,c)" label="Opposite" target="opp")
+      path.green(x="segment(a,c)" label="Adjacent" target="adj")
+
 :::
 
-There are lots of triangles that have angles α and 90°, but from the
-[AA condition](gloss:triangle-aa) we know that they are all
+There are many different triangles that have angles __{.m-red}α__ and 90°, but
+from the [AA condition](gloss:triangle-aa) we know that they are all
 [[similar|congruent]]:
 
-{.todo} image of lots of similar triangles
+    figure: img(src="images/triangles.svg" width=600 height=240)
 
 ---
 > id: trig-functions
 
 Since all of these triangles are similar, we know that their sides are
-proportional. In particular, the following ratios are the same for all of them:
+proportional. In particular, the following ratios are the same for all of the
+triangles:
 
-{.text-center} `"Opposite"/"Hypotenuse"`, `"Adjacent"/"Hypotenuse"`, 
-`"Opposite"/"Adjacent"`
+    p.text-center
+      mfrac
+        mrow: mtext.m-blue.b Opposite
+        mrow: mtext.m-yellow.b Hypotenuse
+      span.space
+      mfrac
+        mrow: mtext.m-green.b Adjacent
+        mrow: mtext.m-yellow.b Hypotenuse
+      span.space
+      mfrac
+        mrow: mtext.m-blue.b Opposite
+        mrow: mtext.m-green.b Adjacent
 
-So let’s summarise: we pick a certain value for _α_, and we get lots of similar,
-right-angled triangles. All of these triangles have the same ratios of sides.
-Since _α_ was the only variable, there must be some relationship between _α_ and
-those ratios.
+Let’s try to summarise this: we picked a certain value for __{.m-red}α__, and
+got lots of similar, right-angled triangles. All of these triangles have the
+same ratios of sides. Since __{.m-red}α__ was our only variable, there must be
+some relationship between __{.m-red}α__ and those ratios.
 
 These relationships are the __Trigonometric functions__ – and there are three of
 them:
@@ -1381,11 +1404,48 @@ ratios of sides in a right-angles triangle. They each have a name, as well as
 a 3-letter abbreviation:
 
 ::: column.grow
-* Sine: `sin(α) = "Opposite"/"Hypotenuse"`
-* Cosine: `sin(α) = "Adjacent"/"Hypotenuse"`
-* Tangent: `sin(α) = "Opposite"/"Adjacent"`
+
+    ul
+      li
+        strong Sine:
+        .space
+        mtext sin
+        mfenced: mtext.m-red.b α
+        mo =
+        mfrac
+          mrow: mtext.m-blue.b Opposite
+          mrow: mtext.m-yellow.b Hypotenuse
+      li
+        strong Cosine:
+        .space
+        mtext cos
+        mfenced: mtext.m-red.b α
+        mo =
+        mfrac
+          mrow: mtext.m-green.b Adjacent
+          mrow: mtext.m-yellow.b Hypotenuse
+      li
+        strong Tangent:
+        .space
+        mtext tan
+        mfenced: mtext.m-red.b α
+        mo =
+        mfrac
+          mrow: mtext.m-blue.b Opposite
+          mrow: mtext.m-green.b Adjacent
+
 ::: column(width=240)
-{.todo} image
+
+    x-geopad(width=240 height=160): svg
+      circle(name="a" x="point(30,120)")
+      circle(name="b" x="point(210,40)")
+      circle(name="c" x="point(210,120)")
+      path(x="angle(b,c,a)")
+      path.red(x="angle(b,a,c)" label="α")
+      path.yellow(x="segment(a,b)" label="Hypotenuse")
+      path.blue(x="segment(b,c)" label="Opposite")
+      path.green(x="segment(a,c)" label="Adjacent")
+
 :::
 :::
 
