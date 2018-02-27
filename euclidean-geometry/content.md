@@ -94,7 +94,8 @@ but you should already know most of them:
 
 ::: column.grow
 A [__point__](gloss:point) is a specific location in space. Points describe a
-position, but have no _size_ in itself. They are labelled using capital letters.
+position, but have no _size_ or _shape_ themselves. They are labelled using
+capital letters.
 
 {.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
 you can move around, while [smaller, outlined dots](target:no-move) indicate
@@ -162,7 +163,7 @@ _{button.next-step} Next_
       path.yellow(x="ray(a,b)")
 
 ::: column.grow
-A [__ray__](gloss:ray)  is something in between a _line_ and a _line segment_:
+A [__ray__](gloss:ray) is something in between a _line_ and a _line segment_:
 it only extends to infinity on one side. You can think of it like _sunrays_:
 they start at a point (the sun) and then keep going forever.
 

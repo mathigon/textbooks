@@ -1,4 +1,26 @@
 # ==============================================================================
+# GENERAL
+# ==============================================================================
+
+
+axiom:
+  title: Axiomn
+  text: An __axiom__ of (__postulate__) postulate is a statement that is
+    accepted as true without requiring proof.
+
+theorem:
+  title: Theorem
+  text: A __theorem__ is a particularly important statement or observation in
+    mathematics.
+
+proof:
+  title: Proof
+  text: A __proof__ is a logical argument that shows beyond any doubt that a
+    certain statement is true.
+
+
+
+# ==============================================================================
 # ALGEBRA
 # ==============================================================================
 
@@ -23,7 +45,7 @@ polynomial:
   text: A __polynomial__ is an algebraic expression that consists of multiple
     powers of a variable, for example `5x^3 - 2x^2 + x + 4`.
 
-degree:
+polynomial-degree:
   title: Degree
   text: The degree of a polynomial is the highest power of any variables in it.
     For example, the degree of `5x^3 + 2x - 4` is 3.
@@ -33,21 +55,27 @@ quadratic:
   text: A __quadratic__ is a polynomial of degree 2. For example, `x^2 - 2x + 3`
     is a quadratic.
 
-associative:  # <<<
+associative:
   title: Associativity
-  text: TODO
+  text: An operation • is associative if `a•(b•c) = (a•b)•c`. For example,
+    addition (+) and multiplication (×) of numbers is associative.
 
-function:  # <<<
+function:
   title: Function
-  text: TODO
+  text: A __function__ is a mathematical relation that converts inputs (_x_)
+    into outputs (_y_). They are often expressed as mathematical equations of
+    the form `f(x)`.
 
-function-graph:  # <<<
+function-graph:
   title: Graphs of Functions
-  text: TODO
+  text: We can plot mathematical functions of the form `f(x)` in a coordinate
+    system. The result is called the __graph__ of the function.
 
-irrational:  # <<<
+irrational:
   title: Irrational Numbers
-  text: TODO
+  text: A number is __irrational__ if it cannot be expressed as a fraction. For
+    example, 0.333333… = `1/3` is _rational_, but `sqrt(2)` = 1.41421… cannot be
+    expressed as a fraction and is _irrational_
 
 
 
@@ -56,81 +84,84 @@ irrational:  # <<<
 # ==============================================================================
 
 
-axiom: # <<<
-  title: Line
-  text: TODO
+euclidean-geometry:
+  title: Euclidean Geometry
+  text: __Euclidean geometry__ is the kind of geometry envisioned by the
+    mathematician _Euclid_. It dependes on just five _axiom_, the sort of “laws”
+    of geometry, that describe everything that you’re allowed to do.
 
-euclidean-geometry: # <<<
-  title: Line
-  text: TODO
-
-point: # <<<
+point:
   title: Point
-  text: A __point__ is a location in space that does not have size or shape.
+  text: A __point__ is a specific location in space. Points describe a position,
+    but have no size or shape themselves.
   id: euclidean-geometry#point
 
-line: # <<<
+line:
   title: Line
-  text: TODO
+  text: A __line__ is a set of infinitely many points that extend forever in
+    both directions. Lines are always straight and have no _width_.
 
-ray: # <<<
+ray:
   title: Ray
-  text: TODO
+  text: A __ray__ is the part of a line that only extends to infinity in one
+    direction. We can label rays as `vec(AB)`.
 
-line-segment: # <<<
+line-segment:
   title: Line segment
-  text: A __line segment__ is a part of a line that has two endpoints.
+  text: A __line segment__ is the part of a line that lies between two points,
+    without extending to infinity. We can label line segments as `bar(AB)`.
 
 collinear:
   title: Collinear points
   text: Three or more points are __collinear__ if they lie on the same line.
 
-congruent: # <<<
+congruent:
   title: Congruence
   text: In geometry, two figures are __congruent__ if are identical in size,
-    shape and measure.
+    shape and measure. This means we could move, flip or rotate them to exactly
+    fit on top of each other.
 
-congruent-angles: # <<<
+congruent-angles:
   title: Congruent Angles
-  text: TODO
-
-angle-bisector: # <<<
-  title: Angle bisector
-  text: An __angle bisector__ is a ray that splits an angle in the middle, into
-    two congruent, smaller angles.
+  text: Two angles are __congruent__ if they have the same size.
 
 midpoint:
   title: Midpoint
   text: The __midpoint__ of a line segment is the point on the line segment that
-    splits the segment in the middle, into two congruent parts. The midpoint
-    formula says that for endpoints `(x_1, y_1)` and `(x_2,y_2)`, the midpoint
+    splits the segment in the middle, into two congruent parts. The __midpoint
+    formula__ says that for endpoints `(x_1, y_1)` and `(x_2,y_2)`, the midpoint
     is `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
 
 perpendicular-bisector:
   title: Perpendicular bisector
-  text: A perpendicular bisector of a line segment passes through the midpoint
-    of the line segment and intersects the line segment at 90°.
+  text: The __perpendicular bisector__ of a line segment passes through its
+    midpoint and intersects it at an angle of 90°.
+  image: perpendicular-bisector.svg
+
+angle-bisector:
+  title: Angle bisector
+  text: An __angle bisector__ is a line that splits an angle in the middle, into
+    two congruent, smaller angles.
+  image: angle-bisector.svg
 
 protractor:
   title: Protractor
   text: A protractor is a tool used to measure an angle in degrees.
 
-postulate:
-  title: Postulate
-  text: A postulate is a statement that is accepted as true without proof.
-
 transversal:
   title: Traversal
   text: A transversal is a line that intersects two other lines.
 
-parallel: # <<<
+parallel:
   title: Parallel lines
-  text: Two or more lines are __parallel__ when they lie in the same plane and
-    never intersect. These lines will always have the same slope.
+  text: Two or more lines are __parallel__ if they never intersect. They have
+    the same slope and the distance between them is always constant.
+  image: parallel.svg
 
-perpendicular: # <<<
+perpendicular:
   title: Perpendicular lines
-  text: TODO
+  text: Two lines are __perpendicular__ if they intersect at a right angle.
+  image: perpendicular.svg
 
 
 # ------------------------------------------------------------------------------
@@ -149,10 +180,6 @@ right-angle:
   title: Right angle
   text: A __right angle__ is an angle equal to 90°.
 
-perpendicular:
-  title: Perpendicular line
-  text: Two lines are __perpendicular__ if they intersect at a 90° angle.
-
 supplementary-angles:
   title: Supplementary angles
   text: Two angles are __supplementary__ if they add up to 180°.
@@ -169,18 +196,21 @@ verticle-angles:
 corresponding-angles:
   title: Corresponding angles
   text: __Corresponding angles__ are two angles that are in the same position
-    with respect to the transversal, but on different lines.
+    with respect to the transversal, but on different lines. They are always
+    congruent.
+  image: corresponding-angles.svg
 
-alternate-angles: # <<<
+alternate-angles:
   title: Alternate angles
   text: __Alternate angles__ are two angles that are on the interior of two
-    different lines, but on the opposite sides of the transversal.
+    different lines, but on the opposite sides of the transversal. They are
+    always congruent.
   image: alternate-angles.svg
 
 adjacent-angles:
-  title: Anjacent Angles
+  title: Anjacent angles
   text: Two angles are __adjacent__ if they share a side and vertex. The word
-    _adjacent_ means "beside" or "next-to".
+    _adjacent_ means “beside” or “next-to”.
 
 
 # ------------------------------------------------------------------------------
@@ -188,70 +218,130 @@ adjacent-angles:
 
 transformation:
   title: Transformation
-  text: TODO
+  text: A __transformation__ converts one geometric shape into another. There
+    are many different types of transformations, like _reflections_ or
+    _dilations_.
+
+transformation-image:
+  title: Image of a Transformation
+  text: After transforming a geometric shape, the result is called its
+    __image__. It is often denoted by adding a ’ to the end of its label.
 
 rigid-transformation:
   title: Rigid transformation
   text: A __rigid transformation__ (or __isometry__) is a transformation that
     doesn't change the size or shape of a geometric figure.
 
-translation:  # <<<
+translation:
   title: Translation
-  text: TODO
+  text: A __translation__ is a transformation that moves a figure in a specific
+    direction.
 
-reflection:  # <<<
+reflection:
   title: Reflection
-  text: TODO
+  text: A __reflection__ is a transformation that “flips” or “mirrors” a shape
+    across a line.
 
-rotation:  # <<<
+rotation:
   title: Rotation
-  text: TODO
+  text: A __rotation__ is a transformation that “turns” a shape by a certain
+    angle around a fixed point.
 
-laws-of-nature:
-  title: Laws of Nature
-  text: The "laws of nature" is the name given collectively to a set of rules
-    (usually expressed as mathematical equations) that are supposed to explain
-    everything we observe in the universe.
+glide-reflection:
+  title: Glide Reflections
+  text: A __glide reflection__ is a special kind of transformation. It is a
+    combination of a _reflection_ and a _translation_ in the same direction as
+    the axis of reflection.
+
+center-of-rotation:
+  title: Center of Rotation
+  text: The __center of rotation__ is the point around which a shape is being
+    rotated.
 
 symmetry:
   title: Symmetry
-  text: A figure or shape has __symmetry__ if it can be transformed, and still
-    look the same afterwards.
-
-axis-of-symmetry:  # <<<
-  title: Axis of Symmetry
-  text: A line of symmetry is a line that can be drawn to divide a figure into
-    equal halves.
-
-symmetry-group:  # <<<
-  title: Symmetry Group
-  text: TODO
-
-rotational-symmetry:
-  title: TITLE
-  text: TODO
+  text: A figure or shape has __symmetry__, if it looks the same after being
+    transformed in some way (e.g. reflection or rotation).
 
 reflectional-symmetry:
-  title: TITLE
-  text: TODO
+  title: Reflectional Symmetry
+  text: A shape has reflectional symmetry if it looks the same after being
+    reflected.
+  image: reflectional-symmetry.svg
+
+axis-of-symmetry:
+  title: Axis of Symmetry
+  text: If a shape has reflectional symmetry, the __axis of symmetry__ is the
+    line that divides it into two equal halves.
+  image: reflectional-symmetry.svg
+
+rotational-symmetry:
+  title: Rotational Symmetry
+  text: A shape has rotational symmetry if it looks the same after being rotated
+    (by less than 360°).
+  image: rotational-symmetry.svg
+
+order-of-symmetry:
+  title: Order of Symmetry
+  text: If a shape has rotational symmetry, the __order of symmetry__ is the
+    number of orientations in which the shape looks the same. (Or, it is the
+    number of times you can rotate the shape, before we get back to the start.)
+
+translational-symmetry:
+  title: Translational Symmetry
+  text: A repeated pattern (like a wallpaper) has __translational symmetry__ if
+    it looks the same after being translated by a specific distance.
+
+palindrome:
+  title: Palindrome
+  text: A __palindrome__ is a word or number that reads the same from back to
+    front as it does from front to back. For example, 25752 and “ANNA” are both
+    palindromes.
+
+group:
+  title: Group
+  text: |
+    A group is a collection of “things” (like numbers or symmetries) that follow
+    three different rules:
+
+    1. You you add/combine two of the things, to get another one that is also
+       in the group.
+    2. The things are _associative_, which means that `a+(b+c) + (a+b)+c`.
+    3. There is an _identity_, and every “thing” has an _inverse_ which, when
+       added, gives the identity.
+
+symmetry-group:
+  title: Symmetry Group
+  text: The __symmetry group__ of a geometric object is the collection of all of
+    its _symmetries_ (as well as the _identity_).
+
+laws-of-nature:
+  title: Laws of Nature
+  text: The __laws of nature__ are the name given collectively to the physical
+    rules (usually expressed as mathematical equations) that try to explain
+    everything we observe in the universe.
 
 dilation:
-  title: TITLE
-  text: TODO
+  title: Dilation
+  text: A __dilation__ is a transformation that resizes a geometric shape, by
+    making it bigger or smaller.
 
 similar:
-  title: TITLE
-  text: TODO
+  title: Similar
+  text: Two geometric shapes are __similar__ if they have the same shape but a
+    different size. We can move, rotate, reflect and resize one shape to match
+    up with the other one.
 
 scale-factor:
-  title: TITLE
-  text: TODO
+  title: Scale Factor
+  text: The __scale factor__ of a dilation is the amount by which the shape is
+    stretched or squashed.
 
 
 # ------------------------------------------------------------------------------
 # Triangles
 
-equilateral-triangle: # <<<
+equilateral-triangle:
   title: Equilateral triangle
   text: An __equilateral triangle__ is a triangle in which all three sides have
     the same length.
@@ -262,7 +352,7 @@ acute-triangle:
 
 isosceles-triangle:
   title: isosceles triangle
-  text: In an __isosceles triangle__, exactly two sides have the same length.
+  text: In an __isosceles triangle__, two sides have the same length.
 
 obtuse-triangle:
   title: Obtuse triangle
@@ -271,6 +361,7 @@ obtuse-triangle:
 right-triangle:
   title: Right-angled triangle
   text: In a __right-angled triangle__, one angle is exactly 90°.
+  image: right-triangle.svg
 
 scalene-triangle:
   title: Scalene Triangle
@@ -278,39 +369,55 @@ scalene-triangle:
 
 median:
   title: Median
-  text: The __median__ of a triangle is the line that connects a vertex to the
-    midpoint of the opposite side.
+  text: The __medians__ of a triangle are the lines that connect each vertex to
+    the midpoint of their opposite sides.
 
-triangle-midsegment: # <<<
+triangle-midsegment:
   title: Midsegment
-  text: The __midsegment__ of a triangle is a line segment that connects the
-    midpoints of two different sides of the triangle.
+  text: The __midsegments__ of a triangle are the lines that connect the
+    midpoints of different sides of the triangle.
+  image: triangle-midsegment.svg
 
 centroid:
   title: Centroid
   text: The __centroid__ of a triangle is the point where its three medians
-    intersect. It is the "center of gravity" of the triangle.
+    intersect. It is also the “center of mass” of the triangle.
+
+circumcircle:
+  title: Circumcircle of a triangle
+  text: The __circumcircle__ of a triangle is the circle that goes through all
+    three of its vertices.
+  image: circumcircle.svg
+
+triangle-altitude:
+  title: Altitudes of triangles
+  text: An __altitude__ (or __height__) of a triangle is a line perpendicular to
+    one of the sides, that goes through the opposite vertex. Every triangle has
+    three altitudes.
+  image: triangle-altitude.svg
 
 hypotenuse:
   title: Hypotenuse
-  text: The __hypotenuse__ of a right triangle is its longest side. It it
-    always oppsite to the right angle.
+  text: The __hypotenuse__ of a right-angled triangle is its longest side, which
+    lies oppsite the right angle.
+  image: right-triangle.svg
 
 triangle-legs:
   title: Legs of a triangle
   text: The two __legs__ of a right-angled triangle are the two shorter sides
-    (not the hypotenuse). They are adjacent to the right angle.
+    (not the _hypotenuse_). They are next to the right angle.
 
-triangle-aa: # <<<
-  title: AA Similarity Condition for Triangles
-  text: TODO
+triangle-aa:
+  title: AA condition for triangles
+  text: Two triangles are __similar__ if two of their angles have the same size.
+    This is called the __AA similarity condition__ for triangles.
 
-triangle-sss: # <<<
-  title: SSS Condition for Triangles
-  text: The __SSS condition__ for triangles means that two triangles are
-    congruent of they have the sides of the same length.
+triangle-sss:
+  title: SSS condition for triangles
+  text: Two triangles are __congruent__ if their three sides have the same
+    length. This is called the __SSS congruence condition__ for triangles.
 
-cpoct: # <<<
+cpoct:
   title: CPOCT
   text: CPOCT stands for __corresponding parts of congruent triangles__. It
     means that if two triangles are congruent, then all of their corresponding
@@ -318,70 +425,72 @@ cpoct: # <<<
     other.
 
 pythagoras-theorem:
-  title: Pythagoras's theorem
-  text: __Pythagoras's Theorem__ states that in every right-angled triangle,
-    `a^2 + b^2 = c^2`, where _a_ and _b_ are lengths of the two legs, and _c_
-    is the length of the hypotenuse.
+  title: Pythagoras’ theorem
+  text: __Pythagora’ Theorem__ states that in every right-angled triangle,
+    `a^2 + b^2 = c^2`, where _c_ is the length of the hypotenuse and _a_ and _b_
+    are the lengths of the other two sides.
 
 pythagorean-triple:
   title: Pythagorean triple
   text: A __Pythagorean triple__ is a set of three whole numbers _a_, _b_ and
-    _c_ that satisfy __Pythagoras's Theorem `a^2 + b^2 = c^2`.
+    _c_ that satisfy Pythagoras’ Theorem `a^2 + b^2 = c^2`.
 
 
 # ------------------------------------------------------------------------------
 # Polygons
 
-polygon: # <<<
+polygon:
   title: Polygon
   text: A __polygon__ is geometric shape that is made up of straight line
-    segments. Polygons cannot contain any curved sides, or holes.
+    segments. Polygons cannot contain any curved sides, or holes. For example, a
+    square is a polygon but a circle is not.
   image: polygon.svg
 
-polygon-vertex: # <<<
+polygon-vertex:
   title: Vertex of a polygon
   text: The __vertices__ of a polygon are the points where its sides meet (its
-    "corners").
+    “corners”).
 
-internal-angle: # <<<
+internal-angle:
   title: Internal angles
-  text: The __internal angles__ of the polygon are the angles on the inside, at
+  text: The __internal angles__ of a polygon are the angles on the inside, at
     every vertex.
+  image: internal-angle.svg
 
-regular-polygon: # <<<
+regular-polygon:
   title: Regular polygon
   text: A __regular polygon__ is a polygon in which all sides have the same
     length and all angles have the same size.
   image: regular-polygon.svg
 
-irregular-polygon: # <<<
+irregular-polygon:
   title: Irregular Polygon
   text: An __irregular polygon__ is one that is _not regular_. This means that
     either the sides or the angles don’t all have the same size.
 
-concave: # <<<
+concave:
   title: Concave polygon
   text: A __concave__ polygon has at least one internal angle greater than 180°.
     At least one of the diagonals lies _outside_ the polygon. A common way to
     identify a concave polygon is to look for a “caved-in” side of the polygon.
     _Concave_ is the opposite of _convex_ polygons.
 
-convex: # <<<
+convex:
   title: Convex polygon
   text: A __convex__ polygon contains no internal angles greater than 180°. All
     diagonals lie inside the polygon. This is the opposite of _concave_
     polygons.
 
-polygon-diagonal: # <<<
+polygon-diagonal:
   title: Diagonal
   text: A __diagonal__ of a polygon is a line segment that connects two vertices
     that are not next to each other.
 
-quadrilateral: # <<<
+quadrilateral:
   title: Quadrilateral
   text: A __quadrilateral__ is a polygon with four sides.
 
-apothem: # <<<
+apothem:
   title: Apothem
   text: The __apothem__ of a regular polygon is the distance from the midpoint
     of one of its sides to its center.
@@ -391,112 +500,117 @@ square:
   text: A __square__ is a regular quadrilateral: all sides have the same length,
     and all angles have the same size.
 
-rectangle: # <<<
+rectangle:
   title: Rectangle
   text: A __rectangle__ is a quadrilateral in which all angles are 90°.
 
-parallelogram: # <<<
+parallelogram:
   title: Parallelogram
   text: A __parallelogram__ is a quadrilateral in which both pairs of
-    opposite edges are parallel.
+    opposite sides are parallel.
 
 trapezium:
   title: Trapezium
-  text: A __trapezium__ (or __trapezoid__) is a quadrilateral in which a pair of
-    opposite edges are parallel.
+  text: A __trapezium__ (or __trapezoid__) is a quadrilateral in which one pair
+    of opposite sides are parallel.
 
-rhombus: # <<<
+rhombus:
   title: Rhombus
   text: A __rhombus__ (the plural is _rhombuses_ or _rhombi_) is a quadrilateral
-    in which all edges have the same length.
+    in which all sides have the same length.
 
 kite:
   title: Kite
   text: A __kite__ is a quadrilateral in which two pairs of adjacent sides have
     the same length.
 
-tessellation: # <<<
+tessellation:
   title: Tessellation
   text: A __tessellation__ is a geometric pattern that covers a surface without
     gaps or overlaps.
 
 penrose:
   title: Penrose tiling
-  text: A __Penrose tiling__ is a non-periodic, self-similar tessellation.
+  text: A __Penrose tiling__ is a _non-periodic_, _self-similar_ tessellation.
+    It only consists of a few different shapes, but never repeats itself.
 
 
 # ------------------------------------------------------------------------------
 # Polyhedrons
 
-polyhedron: # <<<
+polyhedron:
   title: Polyhedron
   text: A __polyhedron__ (the plural is _polyhedra_) is a 3-dimensional solid
     with no curves surfaces or edges. All faces of a polyhedron are polygons.
+    For example, a cube and a pyramid are polyhedra, but a sphere is not.
 
-polyhedron-edge: # <<<
+polyhedron-edge:
   title: Edge of a polyhedron
   text: The __edges__ of a polyhedron are the line segments where two of its
     faces are connected.
 
-polyhedron-vertex: # <<<
+polyhedron-vertex:
   title: Vertex of a polyhedron
   text: The “corners” of a polyhedron are called its __vertices__.
 
-polyhedron-face: # <<<
+polyhedron-face:
   title: Face of a polyhedron
   text: The __faces__ of a polyhedron are the polygons which make up its
     surface.
 
-platonic-solid: # <<<
+platonic-solid:
   title: Platonic solid
   text: A __Platonic solid__ is a polyhedron made up of only one kind of
-    regular polygon, that looks the same from every direction.
+    regular polygon, that looks the same from every direction. (In other words,
+    the same number of faces meet at every vertex.) There are only five
+    different Platonic solids.
 
-archimedean-solid: # <<<
+archimedean-solid:
   title: Archimedean solid
   text: An __Archimedean solid__ is a polyhedron made up of different kinds of
-    regular polygons, that looks the same from every direction.
+    regular polygons, that looks the same from every direction. There are 13
+    different Archimedean solids.
 
-polyhedron-dual: # <<<
+polyhedron-dual:
   title: Dual of a polyhedron
   text: TODO
 
-tetrahedron: # <<<
+tetrahedron:
   title: Tetrahedron
   text: The __Tetrahedron__ is a Platonic solid made up of four equilateral
     triangles. It has four vertices and six edges.
 
-cube: # <<<
+cube:
   title: Cube
   text: The __Cube__ is a Platonic solid made up of six squares. It has 8
     vertices and 12 edges.
 
-octahedron: # <<<
+octahedron:
   title: Octahedron
   text: The __Octahedron__ is a Platonic solid made up of 8 triangles. It has
     6 vertices and 12 edges.
 
-dodecahedron: # <<<
+dodecahedron:
   title: Dodecahedron
   text: The __Dodecahedron__ is a Platonic solid made up of 12 regular
     pentagons. It has 20 vertices and 30 edges.
 
-icosahedron: # <<<
+icosahedron:
   title: Icosahedron
   text: The __Icosahedron__ is a Platonic solid made up of 20 triangles. It has
     12 vertices and 30 edges.
 
-truncated-icosahedron: # <<<
+truncated-icosahedron:
   title: Truncated Icosahedron
-  text: The __Truncated Icosahedron__ is an _Archimedean solid__ consisting of
+  text: The __Truncated Icosahedron__ is an _Archimedean solid_ consisting of
     12 regular pentagons and 20 regular hexagons.
 
-net: # <<<
-  title: Nets of Polyhedrons
+net:
+  title: Nets of Polyhedra
   text: The __net__ of a polyhedron is what you get when you “unfold” its
     polygonal faces onto a flat surface.
 
-cross-section: # <<<
+cross-section:
   title: Cross section
   text: A __cross section__ is the intersection of a three-dimensional solid
     with a plane.
@@ -593,23 +707,6 @@ bipartite:
     connected to all the vertices in the opposite set, but none of the vertices
     in its own set.
 
-proof:
-  title: Proof
-  text: A __proof__ is a logical argument that shows beyond any doubt that a
-    certain statement is true or false.
-
-polyhedron:
-  title: Polyhedron
-  text: A __polyhedron__ is a three-dimensional solid that only has (flat)
-    polygons as faces. For example, a cube and a pyramid are polyhedra, but a
-    sphere is not.
-
-polygon:
-  title: Polygon
-  text: A __polygon__ is a shape which is bounded by straight lines. For example, a
-    square is a polygon but a circle is not. If all the sides of a polygon have
-    the same length, it is called a <em>regular polygon</em>.</p>"
-
 dna:
   title: DNA
   text: __DNA__ (Deoxyribonucleic Acid) is a molceule that contains the genetic
@@ -700,11 +797,6 @@ fta:
   text: The __Fundamental Theorem of Arithemtic__ (FTA) says that every integer
     has a unique prime factorisation.
 
-proof:
-  title: Proof
-  text: A __proof__ is a logical argument that shows beyond any doubt that a
-    certain statement is true or false.
-
 lcm:
   title: Lowest Common Multiple
   text: The __Lowest Common Multiple__ (lcm) of two numbers _a_ and _b_ is the
@@ -758,10 +850,10 @@ probTree:
   text: A __probability tree__ is a tree diagram representing the combined
     probability of multiple sequential events.
 
-venn: # <<<
+venn:
   title: Venn Diagram
-  text: A __venn diagram__ diagram that visualises multiple properties or events
-    that overlap.
+  text: A __venn diagram__ visualises multiple properties or events that
+    overlap.
   image: venn.svg
 
 quantum:
