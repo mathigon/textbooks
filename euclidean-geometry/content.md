@@ -100,7 +100,7 @@ capital letters.
 {.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
 you can move around, while [smaller, outlined dots](target:no-move) indicate
 fixed points which you can’t move.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 :::
 
 ---
@@ -125,7 +125,7 @@ two points that lie on the line, for example
 <span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
 <span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
 order of the points does not matter.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 :::
 
 ---
@@ -146,7 +146,7 @@ _{button.next-step} Next_
 points, without extending to infinity. We can label them just like lines, but
 without arrows on the bar above: `bar(AB)` or `bar(BA)`. Like, before the order
 of the points does not matter.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 :::
 
 ---
@@ -169,7 +169,7 @@ they start at a point (the sun) and then keep going forever.
 
 {.r} When labelling rays, the arrow shows the direction where it extends to
 infinity, for example `vec(AB)`. This time, the order of the points _does_ matter.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 :::
 
 ---
@@ -190,7 +190,7 @@ _{button.next-step} Next_
 {.r} A [__circle__](gloss:circle) is the collection of points that all have the
 same [distance](target:radius) from a point in the center. This distance is
 called the [__radius__](gloss:radius).
-_{button.next-step} Next_
+_{button.next-step} Continue_
 :::
 
 ---
@@ -314,7 +314,7 @@ These lines are called [__perpendicular__](gloss:perpendicular).
 
 {.r} In this example, we would write  _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. The
 `_|_` symbol simply means _“is perpendicular to”_.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 :::
 

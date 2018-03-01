@@ -41,14 +41,14 @@ So how to you measure the height of a mountain?
 
 {.r} Today we can use satellites to measure the height of mountains to within a
 few centimeters – but these did not exist when Radhanath was surveying India.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 {.r.reveal(when="next-0")} Climbers use _altimeters_ to determine their altitude.
 These devices use the difference in air pressure at different heights. However
 this would have required someone to actually climb to the [top of every
 mountain](-> .mountain-top) – an extremely difficult feat that was not achieved
 until a century later.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 {.r.reveal(when="next-1")} You could also try using similar triangles, like we
 did in the [previous chapter](/course/transformations-and-symmetry#similar-triangles).
@@ -56,7 +56,7 @@ This method requires knowing the [distance](-> .mountain-distance) to the [base
 of the mountain](-> .mountain-base): the point at sea level that directly below
 its summit. We can do this for trees or tall buildings, but for mountains this
 point is hidden underneath hundreds of meters of rock.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 ---
 > id: intro-2
@@ -328,7 +328,7 @@ in the middle. Draw the angle bisector of the three angles in this triangle.
 You probably expected something like this, but it is important to notice that
 there is no obvious reason why this should happen – triangles are just very
 special shapes!
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 {.reveal(when="next-0")} Points that lie on an angle bisector have the same
 distance from the two lines that form the angle. For example any point on the
@@ -354,13 +354,13 @@ __incircle__ of the triangle, and the center is called the __incenter__.
 {.r} Finding the area of a [[rectangle]](gloss:rectangle) is easy: you simply
 multiply its width by its height. Finding the area of a triangle is a bit less
 obvious. Let’s start by “trapping” a triangle inside a rectangle.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 {.reveal.r(when="next-0")} The width of the rectangle is the length of the
 [bottom side](target:base) of the triangle (which is called the __base__). The
 height of the rectangle is the [perpendicular distance](target:height) from the
 base to the opposite vertex.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 {.reveal(when="next-1")} The height divides the triangle into two parts. Notice
 how the [two gaps in the rectangle](target:gap) are exactly as big as the two
@@ -530,7 +530,7 @@ ones](target:short) on either side.
 
 {.r} Now it is easy to see that it is impossible to link up the ends of the
 shorter rods, if their combined length is less than the length of the larger rod.
-_{button.next-step} Next_
+_{button.next-step} Continue_
 
 ::: column(width=300)
 
@@ -1063,11 +1063,11 @@ altitudes, it splits the triangle into two smaller triangle.
 It also divides the hypotenuse _c_ into [two smaller parts](target:hypotenuse)
 which we’ll call [{.step-target.i.pill.blue}x](target:x) and
 [{.step-target.i.pill.green}y](target:y).
-_{span.next-step} Next_
+_{span.next-step} Continue_
 
 {.r.reveal(when="next-0")} Let’s separate out the two smaller triangles, so that
 it’s clearer to see how they are related…
-_{span.next-step} Next_
+_{span.next-step} Continue_
 
 {.reveal(when="next-1")} Both smaller triangles [share one angle](target:angle)
 with the original triangle. They also all have [one right angle](target:right).
@@ -1124,7 +1124,7 @@ similar polygons:
           <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
           <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
 
-{.r.reveal(when="blank-5")} _{span.next-step} Next_
+{.r.reveal(when="blank-5")} _{span.next-step} Continue_
 
 {.reveal(when="next-2")} But remember that _c_ = [{.step-target.i.pill.blue}x](target:x) +
 [{.step-target.i.pill.green}y](target:y). Therefore
@@ -1167,7 +1167,7 @@ distances.
 {.r} On the right you can see two points in a coordinate system. We could
 measure their distance using a ruler, but that is not particularly accurate.
 Instead, let’s try using Pythagoras.
-_{span.next-step} Next_
+_{span.next-step} Continue_
 
 {.reveal(when="next-0")} We can easily count the [horizontal distance](target:dx)
 along the _x_-axis, and the [vertical distance](target:dy) along the _y_-axis.
