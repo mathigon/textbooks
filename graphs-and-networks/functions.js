@@ -355,7 +355,7 @@ export function utilities($section) {
   }
 
   setTimeout(() => {
-    if ($section.isReady || $section.$chapter.$activeStep !== $section) return;
+    if ($section.isReady) return;
     $section.score('try-three-times');
     $section.addHint('utilitiesImpossible');
     attempts = 4;

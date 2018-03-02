@@ -753,6 +753,7 @@ example, we can _add_ two symmetries to get new ones:
 
 ---
 > id: calculator
+> title: Symmetry Calculator
 > goals: calculate
 
 Whenever you add two symmetries of a square, you get a new one. Here is a
@@ -885,6 +886,7 @@ Adenovirus (right) are determined by their symmetries.
 :::
 
 ---
+> id: wallpaper-groups
 
 ## Wallpaper Groups
 
@@ -1029,12 +1031,13 @@ reflection](gloss:axis-of-symmetry) in these examples?
 Unfortunately there is no simple reason why there are _17_ of these groups.
 Proving it requires much more advanced mathematics…
 
----
-> id: drawing
-> goals: draw-1 draw-2 switch
-
 Instead, you can try drawing your own repeated patterns for each of the 17
 wallpaper groups:
+
+---
+> id: drawing
+> title: Drawing Wallpaper Symmetries
+> goals: draw-1 draw-2 switch
 
     include ./components/wallpaper
     x-wallpaper
