@@ -14,6 +14,8 @@ import { $N, Draggable, slide } from '@mathigon/boost';
 export function thales($step) {
   const $geopad = $step.$('x-geopad');
 
+  $geopad.showGesture('point(200,160)');
+
   $geopad.setActiveTool('point');
   let a = null, b = null, c = null;
 
