@@ -65,7 +65,7 @@ class Shape {
   }
 
   setPosition(p, a) {
-    const polygon = this.polygon.rotate(a).shift(p.x, p.y);
+    const polygon = this.polygon.rotate(a * Math.PI/180).shift(p.x, p.y);
 
     this.$shape.setClass('overlap', this.hasIntersects(polygon));
 
