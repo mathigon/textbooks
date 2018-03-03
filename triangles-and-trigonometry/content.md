@@ -623,7 +623,7 @@ Now that we can check if three sides can form a triangle, let’s think about ho
 we would actually _construct_ a triangle with these sides.
 
 ::: column(width=300)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column.grow
 {.task} Draw the triangle with sides 4cm, 5cm and 6cm.
 
@@ -744,7 +744,7 @@ the congruence conditions above.
 #### SAS
 
 ::: column(width=300)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column.grow
 {.task} Draw the triangle that has sides of 5cm and 3cm, and an included
 angle of 40°.
@@ -771,7 +771,7 @@ triangles would have been congruent to this one.
 #### ASA
 
 ::: column(width=300)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column.grow
 {.task} Draw the triangle that has angles of 70° and 50°, and an included
 side of length 5cm.
@@ -789,7 +789,7 @@ Connecting the angle marks to the endpoints completes the triangle.
 #### AAS
 
 ::: column(width=300)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column.grow
 {.task} Draw the triangle that has angles of 40° and 50°, and an included
 side of length 5cm.
@@ -821,7 +821,7 @@ was not in the list of congruence conditions above, so comparing SSA is two
 triangles is not enough to confirm they are congruent. This will show you why:
 
 ::: column(width=300)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column.grow
 {.task} Draw the triangle that has sides of 4cm and 5cm, and a non-included
 angle of 50°.
@@ -1290,9 +1290,9 @@ We say that a triangle is [__isosceles__](gloss:isosceles-triangle) if it has
 two congruent sides. These congruent sides are called the __legs__ of the
 triangle, while the third side is called the __base__.
 
-{.todo} TODO – Base angles theorem
+{.todo} COMING SOON – Base angles theorem
 
-{.todo} TODO – Find the height of an Isosceles Triangles using Pythagoras
+{.todo} COMING SOON – Find the height of an Isosceles Triangles using Pythagoras
 
     // {.todo} The angles between the base and the congruent sides are
     // called base angles. The angle made by the two legs of the isosceles triangle is
@@ -1333,9 +1333,9 @@ how to construct an equilateral triangle using straight-edge and compass.
     // Since we know that the sum of all three angles is 180°, every individual angle
     // in an equilateral triangle must be [[60]]°.
 
-{.todo} TODO – Size of angles in an equilateral triangle
+{.todo} COMING SOON – Size of angles in an equilateral triangle
 
-{.todo} TODO – Area of an equilateral triangle
+{.todo} COMING SOON – Area of an equilateral triangle
 
 ----
 > id: trigonometry
@@ -1464,22 +1464,22 @@ a 3-letter abbreviation:
 ---
 > id: trig-functions-1
 
-{.todo} TODO – Abbreviations: sin x, cos y
+{.todo} COMING SOON – Abbreviations: sin x, cos y
 
-{.todo} TODO – Using calculators
+{.todo} COMING SOON – Using calculators
 
-{.todo} TODO – Examples
+{.todo} COMING SOON – Examples
 
-{.todo} TODO – Radians vs degrees, swapping the angles
+{.todo} COMING SOON – Radians vs degrees, swapping the angles
 
-{.todo} TODO – Rationalize the denominator.
+{.todo} COMING SOON – Rationalize the denominator.
 
 ---
 > id: inverse-trig
 
 ### Inverse Trignometric Functions 
 
-{.todo} TODO – Inverse functions
+{.todo} COMING SOON – Inverse functions
 
     // The word inverse is probably familiar to you. In mathematics, once you learn how
     // to do an operation, you also learn how to “undo” it. For example, you may
@@ -1512,7 +1512,7 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 {.text-center} `(sin a)/a = (sin b)/b = (sin c)/c`
 :::
 
-{.todo} TODO – Explanation
+{.todo} COMING SOON – Explanation
 
     // {.todo} Use Law of Sines when given:
     // An angle and its opposite side.
@@ -1528,7 +1528,7 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 `c^2 = a^2 + b^2 - 2ab cos(C)`
 :::
 
-{.todo} TODO – Explanation
+{.todo} COMING SOON – Explanation
 
     // {.todo} Even though there are three formulas, they are all very similar. First, notice
     // that whatever angle is in the cosine, the opposite side is on the other side of
@@ -1542,9 +1542,9 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 ---
 > id: trigonometry-4
 
-{.todo} TODO – Examples and applications
+{.todo} COMING SOON – Examples and applications
 
-{.todo} TODO – Future stuff about trigonometry
+{.todo} COMING SOON – Future stuff about trigonometry
 
 ---
 > id: mountains
@@ -1623,9 +1623,9 @@ polygon that, when made out of wooden beams and hinges, will be completely
 _rigid_ – unlike rectangles, for example, which you can easily push over.
 
 ::: column(width=240)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column(width=240)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 :::
 
 ---

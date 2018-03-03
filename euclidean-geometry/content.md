@@ -583,7 +583,7 @@ is indeed an equilateral triangle._
 
 ### Midpoints and Perpendicular Bisectors
 
-{.todo} TODO – Constructing Midpoints and Perpendicular Bisectors
+{.todo} COMING SOON – Constructing Midpoints and Perpendicular Bisectors
 
     // A midpoint is a point on a line segment that divides it into two congruent
     // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
@@ -598,7 +598,7 @@ is indeed an equilateral triangle._
 
 ### Angle Bisectors
 
-{.todo} TODO – Constructing Angle Bisectors
+{.todo} COMING SOON – Constructing Angle Bisectors
 
     // When two rays have the same endpoint, an angle is created.
     // 
@@ -621,9 +621,9 @@ is indeed an equilateral triangle._
 
 ### Parallel and Perpendicular Lines
 
-{.todo} TODO – Constructing Parallel and Perpendicular Lines
+{.todo} COMING SOON – Constructing Parallel and Perpendicular Lines
 
-{.todo} TODO – Constructing a Square
+{.todo} COMING SOON – Constructing a Square
 
     // Perpendicular Line Construction; through a Point NOT on the Line
     // Draw a horizontal line and a point above that line. Label the line l and the point A.
@@ -860,7 +860,7 @@ pursuit, without real life applications. However, it turns out that techniques
 developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column(width=300)
-{.todo} TODO – Images/videos
+{.todo} COMING SOON – Images/videos
 ::: column.grow
 ### Origami in Space
 

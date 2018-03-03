@@ -288,7 +288,7 @@ In all of the examples above, the line of reflection was horizontal or vertical,
 which made it easy to draw the reflections. If that is not the case, the
 construction becomes more complicated:
 
-{.todo} TODO – Step-by-step explanation
+{.todo} COMING SOON – Step-by-step explanation
 
     // ::: column(width=300)
     //
@@ -353,7 +353,7 @@ It is more difficult to draw rotations that are not exactly 90° or 180°. Just
 like for reflections, we first have to rotate every point in a shape
 individually, and then connect the lines in the image:
 
-{.todo} TODO – Step-by-step explanation
+{.todo} COMING SOON – Step-by-step explanation
 
     // ::: column(width=300)
     // {.todo} TODO Step-by-step animation
@@ -381,7 +381,7 @@ individually, and then connect the lines in the image:
 
 ### Composition of Transformations
 
-{.todo} TODO – Composition of transformations
+{.todo} COMING SOON – Composition of transformations
 
     // Of course, we can combine multiple translations, reflections and rotations to
     // create more complex transformations.
@@ -1155,7 +1155,7 @@ If the scale factor is between 0 and 1, the image is [[smaller|larger]] than the
 original. If the scale factor is larger than 1, the image is [[larger|smaller]]
 than the original.
 ::: column(width=300)
-{.todo} TODO – Illustration (drag the center, slider for scale factor)
+{.todo} COMING SOON – Illustration (drag the center, slider for scale factor)
 :::
 
 ---
@@ -1164,7 +1164,7 @@ than the original.
 Here is how we can construct the dilation of a geometric shape:
 
 ::: column(width=300)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column.grow
 First we draw rays from the center of dilation to every point in the shape.
 
@@ -1188,7 +1188,7 @@ The symbol for similarity is `∼` (similar to the symbol for congruence, which
 was `≅`). In this example, we would write `A ∼ A'`.
 
 ::: column(width=240)
-{.todo} TODO – Illustration
+{.todo} COMING SOON – Illustration
 :::
 
 ---
@@ -1203,7 +1203,7 @@ distance”.
 
 Find the vanishing point in the figure below:
 
-{.todo} TODO – Interactive
+{.todo} COMING SOON – Interactive
 
 Now can you draw another house that matches the existing ones?
 
@@ -1295,7 +1295,7 @@ the two triangles are similar.
 Let’s have a look at a few examples where this is useful:
 
 ::: column(width=320)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 
 ::: column.grow
 Here you can see the image of a large lighthouse. Together with a friend, you
@@ -1314,7 +1314,7 @@ We can easily measure the length of the shadows, and we also know the height of
 your friend. Now we can use the proportionality of sides in similar triangles
 to find the height of the lighthouse:
 
-{.todo} TODO – Equation
+{.todo} COMING SOON – Equation
 
 Therefore the lighthouse is 1.5m tall.
 :::
@@ -1323,7 +1323,7 @@ Therefore the lighthouse is 1.5m tall.
 > id: similar-triangles-2
 
 ::: column(width=320)
-{.todo} TODO – Animation
+{.todo} COMING SOON – Animation
 ::: column.grow
 We can use the same technique to measure distances on the ground. Here we want
 to find the width of a large river. There is a big tree on one side of the
@@ -1340,7 +1340,7 @@ both have a right angle, and on pair of opposite angles.
 
 According to the proportionality rule, this means that
 
-{.todo} TODO – Equation
+{.todo} COMING SOON – Equation
 
 Therefore the width of the river is 45 meters.
 :::
