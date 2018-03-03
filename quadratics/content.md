@@ -1,9 +1,7 @@
 # Quadratic Equations
 
 > stage: intermediate
-> description: Quadratic equations and functions are key concepts not only in
->   mathematics but also in physics, engineering and technology.
-> warning: true
+> description: UNDER DEVELOPMENT
 
 ---
 

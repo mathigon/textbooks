@@ -1,8 +1,7 @@
 # Exponentials and Logarithms
 
 > stage: advanced  
-> description: description  
-> warning: true
+> description: UNDER DEVELOPMENT  
 
 ---
 > id: cd1

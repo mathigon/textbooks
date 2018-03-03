@@ -1,17 +1,17 @@
 # Circles and Pi
 
 > id: circles-and-pi
-> description: 
+> description: UNDER DEVELOPMENT
 
 ---
-% id: intro-1
+> id: intro-1
 
-# Introduction
+## Introduction
 
-For as long as human beings exist, they have looked to the sky and tried to
-explain life on earth using the motion of stars, planets and the moon. The
-Greeks were among the first to discover that all celestial objects move on
-regular paths, called __orbits__.
+For as long as human beings exist, we have looked to the sky and tried to
+explain life on Earth using the motion of stars, planets and the moon. The
+Greeks were the first to discover that all celestial objects move on regular
+paths, called __orbits__.
 
 Greek astronomers like Claudius Ptolemy believed that the orbits of stars and
 planets are circular. 

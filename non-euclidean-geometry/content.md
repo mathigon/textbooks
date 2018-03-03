@@ -1,13 +1,11 @@
 # Non-Euclidean Geometry
 
 > stage: intermediate
-> description: Metric spaces, Spherical geometry, Hyperbolic geometry
->   Projections, Higher dimensions, Topology, Möbius strip and Klein bottle
-> warning: true
+> description: UNDER DEVELOPMENT
 
 ---
 
-# The Hunter and the Bear
+## The Hunter and the Bear
 
     .rbox
       img(src="resources/Dimensions_and_Distortions/bear.jpg" width="300" height="218")
