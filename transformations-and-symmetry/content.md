@@ -1042,7 +1042,7 @@ wallpaper groups:
     include ./components/wallpaper
     x-wallpaper
     .other-students.reveal(when="draw-1 switch")
-      h4 Examples of other students’ tessellations
+      h4 Examples of other students’ drawings
       .row.padded-thin
         div(style="width: 224px"): img(src="images/user/wallpaper-1.png" width=240 height=160)
         div(style="width: 224px"): img(src="images/user/wallpaper-2.png" width=240 height=160)

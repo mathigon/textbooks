@@ -1842,7 +1842,7 @@ elements but is almost shaped like a sphere.
       
 ::: column.grow
 Many __molecules__ are shaped like regular polyhedra. The most famous example is
-C~~60~~ which consists of 60 carbon atoms arranged in the shape of a [Truncated
+`C_60` which consists of 60 carbon atoms arranged in the shape of a [Truncated
 Icosahedron](gloss:truncated-icosahedron).
 
 It was discovered in 1985 when scientists researched interstellar dust. They

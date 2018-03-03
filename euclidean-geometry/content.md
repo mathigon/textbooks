@@ -21,7 +21,7 @@ just “for fun”, without a specific application in mind. They were amazed by
 mathematical patterns, and wanted to explore and explain them.
 ::: column(width=300)
 
-    x-media.shift-1(src="images/tablet.jpg" width=300 height=210)
+    x-media.shifted(src="images/tablet.jpg" width=300 height=210)
 
 {.caption} A Babylonian clay tablet, dated 1800 BC, that contains geometric
 calculations.
@@ -336,7 +336,7 @@ The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
 the _father of geometry_, published the five axioms of geometry:
 ::: column(width=220)
 
-    img.shift-2(src="images/euclid.jpg" width=220 height=269)
+    img.shifted(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclid of Alexandria
 :::

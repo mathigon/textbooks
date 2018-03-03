@@ -722,11 +722,11 @@ np:
     problems are to be solved by a computer. __NP hard__ (non-deterministic
     polynomial-time hard) is the class of the most difficult problems.
 
-order:
+graph-order:
   title: Order
   text: The __order__ of a graph is the number of vertices in it.
 
-degree:
+graph-degree:
   title: Degree
   text: The __degree__ of a vertex is the number of edges that meet at that vertex.
 

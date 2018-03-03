@@ -143,17 +143,6 @@ export function randomSequence($section) {
   });
 }
 
-
-export function probLine($section) {
-  let items = $section.$$('.p-line img');
-
-  $section.onScore('blank-0', () => { items[0].enter('pop'); });
-  $section.onScore('blank-1', () => { items[6].enter('pop'); });
-  $section.onScore('blank-2', () => { items[3].enter('pop'); });
-  $section.onScore('blank-3', () => { items[1].enter('pop'); items[2].enter('pop', 500, 300); });
-  $section.onScore('blank-4', () => { items[4].enter('pop'); items[5].enter('pop', 500, 300); });
-}
-
 // -----------------------------------------------------------------------------
 
 export function diceSimulation($section) {
@@ -278,7 +267,6 @@ export function montyHall($section) {
 
   let $reveal = $section.$('.show');
   let revealBtn = new OneTimeButton($reveal, function() {
-    $section.score('game');
     $doors.forEach($d => { $d.addClass('open'); });
     setTimeout(function() {
       $section.score('door-revealed');
