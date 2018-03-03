@@ -197,7 +197,7 @@ example, you might estimate that the chance of rain today is about 70%, while a
 meteorologist with detailed weather data might say the chance of rain is 64.2%.
 
 Or suppose that I toss a coin and cover it up with my hands – the probability of
-tails is 50%. Now I peek at the result, but don't tell you. I know for certain
+tails is 50%. Now I peek at the result, but don’t tell you. I know for certain
 what has happened, but for you the probability is [[still 50%|100%|not 50%]].
 
 ---
@@ -275,7 +275,7 @@ and analysed. At first sight, it looks pretty random:
 
 A roulette wheel has the same number of red and black numbers. If we ignore the
 green 0 (which means the casino wins) we would expect the number of red and
-black numbers to be [[xapproximately the same|exactly equal]]. Let’s check that
+black numbers to be [[approximately the same|exactly equal]]. Let’s check that
 this is indeed the case for the set of results above.
 
     +barchart([['Red', 37, 'r'], ['Black', 35, 'b']])
@@ -623,14 +623,14 @@ do you want to swap?
       button.btn.swap I want to stay!
       button.btn.swap I want to swap!
 
-{.reveal(when="door-swap")} Ok – let's see how you did…
+{.reveal(when="door-swap")} Ok – let’s see how you did…
 
     p.text-center.reveal(when="door-swap"): button.btn.show Open the doors…
 
 {.reveal(when="door-revealed")} _{span.monty-choice-right}Looks like swapping
 doors was a good choice. Congratulations, you just won a beautiful new sports
 car!_*{span.monty-choice-wrong} Sorry – it seems like time time you only won a
-goat. But don't worry, you can play again!*
+goat. But don’t worry, you can play again!*
 
     p.text-center.reveal(when="door-revealed"): button.btn.reset Replay game
 
@@ -747,7 +747,7 @@ much smaller scales within atoms, and which can be explained using [Quantum
 mechanics](gloss:quantum). During the last century, physicists like [Max
 Planck](bio:planck) and [Paul Dirac](bio:dirac) discovered that fundamental
 particles have a mind-blowing property: they can be in multiple different places
-_at the same time_. They don't have a fixed position, but instead a probability
+_at the same time_. They don’t have a fixed position, but instead a probability
 distribution (or wave function) which tells us how likely it is we are going to
 find them at a particular position.
 

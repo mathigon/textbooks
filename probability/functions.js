@@ -90,7 +90,8 @@ export function roulette($section) {
       let dragAngle = Math.atan2(posn.y - center.y, posn.x - center.x);
       wheelAngle += (dragAngle - tapAngle);
       if (history.length >= 5) {
-        spin((history[2][0] - history[0][0]) / (history[2][1] - history[0][1]));
+        const speed = (history[2][0] - history[0][0]) / (history[2][1] - history[0][1]);
+        spin(clamp(speed, -0.01, 0.01));
       }
     }
   });

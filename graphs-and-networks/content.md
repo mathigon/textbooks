@@ -5,17 +5,6 @@
 >   shaking hands to travel and navigation, colouring maps and social networks.
 > next: probability
 
-    // TODOs:
-    // Better Graph Scaling
-    // Bridges of Konigsberg: Graph Drawing Interactive
-    // Hamiltonian Cycles diagrams
-    // Travelling Salesman Interactive
-    // Greedy and 2-opt algorithm diagrams
-    // Ant algorithm diagrams
-    // Subgraphs (It was not immediately clear to me how the graphs were related to one another in the interactive section. Small labels could help or perhaps it would be useful as a matching game. Line the 3 graphs on one side facing the 3 subgraphs and ask the reader to match the subgraph to its graph.)
-    // The proof for Euler's formula glosses over many details. Perhaps there should be a link to an easy-to-read account of the proof? And/or be upfront about how many details are missing so the reader knows there is more to the story.
-    // The part on NP-hard problems could be explained in a bit more detail. Why does it imply a fast algorithm for all NP-hard problems and how many NP-hard problems are there?
-
 ---
 > id: intro
 
