@@ -594,7 +594,8 @@ __Normal Distribution__.
 ---
 > id: monty-hall
 > class: fill dark gameshow
-> goals: door-select door-sure door-swap door-revealed
+> goals: game
+> title: The Monty Hall Problem
 
 ## Monty Hall
 
@@ -609,30 +610,30 @@ other two doors. Simply tap on one to make your choice!
       .door-box: .door
       .floor
 
-{.reveal(when="door-select")} Are you sure about that? You can still change your
-mind by tapping a different door…
+{.monty-reveal} Are you sure about that? You can still change your mind by tapping a
+different door…
 
-    p.text-center.reveal(when="door-select"): button.btn.sure I’m sure!
+    p.text-center.monty-reveal: button.btn.sure I’m sure!
   
-{.reveal(when="door-sure")} A great choice, but let me make life a little easier
-for you. I’ll open one of the other doors with a goat, so that there are only
-two doors left for you to pick from. Do you want to stick with your choice, or
-do you want to swap?
+{.monty-reveal} A great choice, but let me make life a little easier for you. I’ll
+open one of the other doors with a goat, so that there are only two doors left
+for you to pick from. Do you want to stick with your choice, or do you want to
+swap?
 
-    p.reveal(when="door-sure").text-center
+    p.text-center.monty-reveal
       button.btn.swap I want to stay!
       button.btn.swap I want to swap!
 
-{.reveal(when="door-swap")} Ok – let’s see how you did…
+{.monty-reveal} Ok – let’s see how you did…
 
-    p.text-center.reveal(when="door-swap"): button.btn.show Open the doors…
+    p.text-center.monty-reveal: button.btn.show Open the doors…
 
-{.reveal(when="door-revealed")} _{span.monty-choice-right}Looks like swapping
-doors was a good choice. Congratulations, you just won a beautiful new sports
-car!_*{span.monty-choice-wrong} Sorry – it seems like time time you only won a
-goat. But don’t worry, you can play again!*
+{.monty-reveal} _{span.monty-option}Looks like you made the right choice.
+Congratulations, you just won a beautiful new sports car!_
+_{span.monty-option.hidden} Sorry – it seems like time time you only won a
+goat. But don’t worry, you can play again!_
 
-    p.text-center.reveal(when="door-revealed"): button.btn.reset Replay game
+    p.text-center.monty-reveal: button.btn.reset Replay game
 
 ---
 > id: monty-hall-1

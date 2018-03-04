@@ -216,82 +216,91 @@ class OneTimeButton {
   }
 }
 
-export function montyHall($section) {
-  let selected = null;
-  let decided = false;
-  let opened = null;
-  let car = null;
-  // let attempt = 0;
+export function montyHall($step) {
+  let attempt = 0;
+  let decided = false;  // Has the student confirmed their choice?
 
-  let $monty = $section.$('.monty-hall');
-  let $doors = $monty.$$('.door-box');
+  let selected = null;  // The door selected by the student
+  let opened = null;  // The door opened by the host
+  let car = null;  // The door that has the car
 
-  $doors.forEach(function($d, i) {
-    $d.$('.door').on('click', function() {
+  const $monty = $step.$('.monty-hall');
+  const $doors = $monty.$$('.door-box');
+  const $reveals = $step.$$('.monty-reveal');
+  const $options = $step.$$('.monty-option');
+
+  $doors.forEach(($d, i) => {
+    $d.$('.door').on('click', () => {
       if (i === selected || decided) return;
       if (selected !== null) $doors[selected].removeClass('selected');
 
       selected = i;
       $d.addClass('selected');
-      $section.score('door-select');
-      $section.$reveals[0].addClass('visible');
+      $reveals[0].addClass('visible');
+      $reveals[1].addClass('visible');
     });
   });
 
-  let $sure = $section.$('.sure');
-  let sureBtn = new OneTimeButton($sure, function() {
-    [car, opened] = random.shuffle([0, 1, 2].filter(i => i !== selected));
-    $doors[car].addClass('car');
+  const sureBtn = new OneTimeButton($step.$('.sure'), () => {
+    if (!attempt) {
+      // The first time, we cheat and force the "more likely" event
+      [car, opened] = random.shuffle([0, 1, 2].filter(i => i !== selected));
+    } else {
+      car = random.integer(3);
+      opened = random.shuffle([0, 1, 2].filter(i => i !== car && i !== selected))[0];
+    }
+
     decided = true;
     $monty.removeClass('selectable');
-    setTimeout(function() {
+    $doors[car].addClass('car');
+
+    setTimeout(() => {
       $doors[opened].addClass('open');
-      $section.score('door-sure');
-      $section.$reveals[1].addClass('visible');
+      $reveals[2].addClass('visible');
+      $reveals[3].addClass('visible');
     }, 1000);
   });
 
-  let $swap = $section.$$('.swap');
-  let swapBtn = new OneTimeButton($swap, function(i) {
+  const swapBtn = new OneTimeButton($step.$$('.swap'), (i) => {
     if (i === 1) {
       $doors[selected].removeClass('selected');
-      selected = car;
+      selected = [0, 1, 2].filter(i => i !== selected && i !== opened)[0];
       $doors[selected].addClass('selected');
-      $section.$('.monty-choice-right').show();
-      $section.$('.monty-choice-wrong').hide();
     }
-    setTimeout(function() {
-      $section.score('door-swap');
-      $section.$reveals[2].addClass('visible');
+
+    $options[0].setClass('hidden', selected !== car);
+    $options[1].setClass('hidden', selected === car);
+
+    setTimeout(() => {
+      $reveals[4].addClass('visible');
+      $reveals[5].addClass('visible');
     }, 1000);
   });
 
-  let $reveal = $section.$('.show');
-  let revealBtn = new OneTimeButton($reveal, function() {
-    $doors.forEach($d => { $d.addClass('open'); });
-    setTimeout(function() {
-      $section.score('door-revealed');
-      $section.$reveals[3].addClass('visible');
+  let revealBtn = new OneTimeButton($step.$('.show'), () => {
+    $doors.forEach($d => $d.addClass('open'));
+
+    if (selected === car) {
+      $step.tools.confetti();
+      $step.addHint('correct');
+    }
+
+    setTimeout(() => {
+      $step.score('game');
+      $reveals[6].addClass('visible');
+      $reveals[7].addClass('visible');
     }, 1000);
   });
 
-  $section.$('.reset').on('click', function() {
+  $step.$('.reset').on('click', () => {
     for (let b of [sureBtn, swapBtn, revealBtn]) b.reset();
-    for (let $r of $section.$reveals) $r.removeClass('visible');
+    for (let $r of $reveals) $r.removeClass('visible');
     for (let $d of $doors) $d.removeClass('car selected open');
-    $section.$('.monty-choice-right').hide();
-    $section.$('.monty-choice-wrong').show();
     selected = opened = car = null;
     decided = false;
     $monty.addClass('selectable');
-    // attempt += 1;
+    attempt += 1;
   });
-
-  setTimeout(() => {
-    if ($section.isCompleted) {
-      for (let $r of $section.$reveals) $r.removeClass('visible');
-    }
-  }, 100);
 }
 
 // -----------------------------------------------------------------------------
