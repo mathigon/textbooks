@@ -540,9 +540,9 @@ true?
 ::: column.grow
 
     x-picker.list
-      .item The opposite sides are #[x-gloss(xid="congruent") congruent].
+      .item.md The opposite sides are [congruent](gloss:congruent).
       .item(data-error="parall-error-1") The internal angles are always less that 90°.
-      .item(data-error="parall-error-2") The diagonals #[x-gloss(xid="angle-bisector") bisect] the internal angles.
+      .item.md(data-error="parall-error-2") The diagonals [bisect](gloss:angle-bisector) the internal angles.
       .item The opposite angles are congruent.
       .item(data-error="parall-error-3") Both diagonals are congruent.
       .item(data-error="parall-error-4") Adjacent sides have the same length

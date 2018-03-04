@@ -602,7 +602,7 @@ __Normal Distribution__.
 Welcome to the most spectacular game show on the planet! You now have a
 once-in-a-lifetime chance of winning a fantastic sports car which is hidden
 behind one of these three doors. Unfortunately, there are only goats behind the
-other two doors. Simply tap on one to make your choice!
+other two doors. Select one to make your choice!
 
     .monty-hall.selectable
       .door-box: .door
@@ -610,15 +610,15 @@ other two doors. Simply tap on one to make your choice!
       .door-box: .door
       .floor
 
-{.monty-reveal} Are you sure about that? You can still change your mind by tapping a
-different door…
+{.monty-reveal} Are you sure about that? You can still change your mind and
+select a different door…
 
     p.text-center.monty-reveal: button.btn.sure I’m sure!
   
-{.monty-reveal} A great choice, but let me make life a little easier for you. I’ll
-open one of the other doors with a goat, so that there are only two doors left
-for you to pick from. Do you want to stick with your choice, or do you want to
-swap?
+{.monty-reveal} A great choice, but let me make life a little easier for you.
+I’ll open one of the other doors with a goat, so that there are only two doors
+left for you to pick from. Do you want to stick with your choice, or do you want
+to swap?
 
     p.text-center.monty-reveal
       button.btn.swap I want to stay!
@@ -630,7 +630,7 @@ swap?
 
 {.monty-reveal} _{span.monty-option}Looks like you made the right choice.
 Congratulations, you just won a beautiful new sports car!_
-_{span.monty-option.hidden} Sorry – it seems like time time you only won a
+_{span.monty-option.hidden} Sorry – it seems like this time you only won a
 goat. But don’t worry, you can play again!_
 
     p.text-center.monty-reveal: button.btn.reset Replay game

@@ -826,7 +826,7 @@ Both 13 and 17 are prime numbers – and that has a very good reason. Imagine th
 there are predators in the forest which kill cicadas. These predators also
 appear in regular intervals, say every 6 years.
 
-Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1'} years
+Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1} years
 (${isPrime(n) ? 'prime' : 'not prime'}). The two animals would meet every
 ${lcm(n, 6)} years, which is the [[lcm|gcd|product]] of 6 and ${n}.
 

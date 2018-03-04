@@ -810,7 +810,7 @@ very similar to adding __{.green}integers__:
         .next-step Next
       
       li.r.reveal(when="next-0")
-        | Adding #[strong.orange symmetries]/#[strong.green integers] is #[x-gloss(xid="associative") associative]:
+        span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
         .text-center.axiom 
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
