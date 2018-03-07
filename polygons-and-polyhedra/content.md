@@ -1183,7 +1183,7 @@ We can also try making tessellations out of [irregular polygons](gloss:irregular
     x-geopad(width=360 height300): svg
       circle.move(name="a" cx=220 cy=90 target="vertex")
       circle.move(name="b" cx=145 cy=180 target="vertex")
-      circle.move(name="c" cx=225 cy=200 target="vertex")
+      circle.move.pulsate(name="c" cx=225 cy=200 target="vertex")
 
       path.red.fill(name="x" x="polygon(a,b,c)")
       path.yellow.fill(name="y" x="x.rotate(pi,line(b,c).midpoint)")
@@ -1247,7 +1247,7 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
     x-geopad(width=360 height=300): svg
       circle.move(name="a" cx=100 cy=105)
       circle.move(name="b" cx=115 cy=200)
-      circle.move(name="c" cx=180 cy=170)
+      circle.move.pulsate(name="c" cx=180 cy=170)
       circle.move(name="d" cx=200 cy=120)
 
       path.blue.fill(name="x" x="polygon(a,b,c,d)")

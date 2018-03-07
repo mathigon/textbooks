@@ -39,46 +39,23 @@ function drawShape($step, $geopad, goal, shape, expand=false) {
   // `shape` should be names of a polygon, segment or line.
   const lines = flatten(words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));
 
-  const solved = new Set();
-  let errors = 0;
-
-  function complete() {
-    $step.score(goal);
-    $geopad.css({'pointer-events': 'none', cursor: 'default'});
-  }
-
   $geopad.setActiveTool('line');
 
-  $geopad.on('add:path', path => {
-
-    for (let e of lines) {
-      if (e.equals(path.val)) {
-        solved.add(e);
-        if (expand) expandSegment($geopad, path.points, e);
-        errors = 0;
-        if (solved.size === lines.length) {
-          $step.addHint('correct');
-          complete();
-        }
-        return;
-      }
-    }
-
-    path.remove();
-    if (path.val.length < 1) return;
-    errors += 1;
-
-    if (errors >= 4) {
-      let hint = lines.find(l => !solved.has(l));
-      $geopad.drawPath(() => hint, {animate: 400});
-      solved.add(hint);
+  $geopad.waitForPaths(lines, {
+    onCorrect(path, i) {
+      if (expand) expandSegment($geopad, path.points, lines[i]);
+    },
+    onIncorrect() {
+      $step.addHint('incorrect', {force: true});
+    },
+    onHint() {
       $step.addHint('draw-hint', {force: true});
-      if (solved.size === lines.length) complete();
-      errors = 0;
-    } else {
-      $step.addHint('incorrect');
+    },
+    onComplete(afterError) {
+      if (!afterError) $step.addHint('correct');
+      $step.score(goal);
+      $geopad.css({'pointer-events': 'none', cursor: 'default'});
     }
-
   });
 }
 

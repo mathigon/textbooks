@@ -147,7 +147,7 @@ The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
 works for _B_/_b_/β and for _C_/_c_/γ.
 ::: column(width=220)
 
-    x-geopad(width=220 height=200): svg
+    x-geopad.label-halo(width=220 height=200): svg
       circle.move.red(name="a" cx=80 cy=30 label="A" target="vertex X Y")
       circle.move.blue(name="b" cx=30 cy=170 label="B" target="vertex")
       circle.move.green(name="c" cx=190 cy=150 label="C" target="vertex")
@@ -229,7 +229,7 @@ figure on the right. The red and green areas will always have the same area.
       circle.move(name="b" cx=60 cy=160)
       circle.move(name="c" cx=180 cy=130)
       circle.yellow(x="triangle(a,b,c).centroid" name="d")
-      circle.move.blue(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
+      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
       circle(hidden name="q" x="p.rotate(pi,d)")
 
       path.dark(x="triangle(a,b,c)" name="t")
@@ -247,7 +247,7 @@ figure on the right. The red and green areas will always have the same area.
 
 ::: column(width=300)
 
-    x-geopad.sticky(tools="move|perpBisector"): svg
+    x-geopad.sticky.label-halo(tools="move|perpBisector"): svg
       circle.move(name="a" cx=75 cy=75 label="A" target="b-blue b-red")
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
@@ -303,8 +303,8 @@ it three times for all sides/angles of the triangles, and then we work out
 what’s special about their intersection.
 
 ::: column(width=300)
-  
-    x-geopad.sticky(tools="move|angleBisector"): svg
+
+    x-geopad.sticky.label-halo(tools="move|angleBisector"): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
@@ -323,6 +323,8 @@ what’s special about their intersection.
 ::: column.grow
 Recall that the [angle bisector](gloss:angle-bisector) divides an angle exactly
 in the middle. Draw the angle bisector of the three angles in this triangle.
+_{.lgrey} To draw an angle bisector, you have to click on three points that form
+the angle you want to bisect._
 
 {.r.reveal(when="s0 s1 s2")} Once again, all three lines intersect at one point.
 You probably expected something like this, but it is important to notice that
@@ -351,7 +353,7 @@ __incircle__ of the triangle, and the center is called the __incenter__.
 ### Area and Altitudes
 
 ::: column.grow
-{.r} Finding the area of a [[rectangle]](gloss:rectangle) is easy: you simply
+{.r} Finding the area of a [rectangle](gloss:rectangle) is easy: you simply
 multiply its width by its height. Finding the area of a triangle is a bit less
 obvious. Let’s start by “trapping” a triangle inside a rectangle.
 _{button.next-step} Continue_
@@ -411,7 +413,7 @@ __base__, and the find the corresponding __height__, which is the line that is
 
 ::: column(width=300)
 
-    x-geopad(width=300): svg
+    x-geopad.label-halo(width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
@@ -447,7 +449,7 @@ altitudes are actually just sides of the triangle.
 
 ::: column(width=300)
 
-    x-geopad.sticky.middle(tools="move|line"): svg
+    x-geopad.label-halo.sticky(tools="move|line"): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
@@ -508,8 +510,8 @@ sides match one of the triples on the left.
         .item #[.t-num 1]#[.t-num 2]#[.t-num 6]
         .item #[.t-num 3]#[.t-num 5]#[.t-num 7] #[span.check(when="s5")]
       .grow
-        x-geopad(height=360): svg
-          circle.move(name="a" cx=175 cy=75)
+        x-geopad.label-halo(height=360): svg
+          circle.move.pulsate(name="a" cx=175 cy=75)
           circle.move(name="b" cx=150 cy=250)
           circle.move(name="c" cx=350 cy=200)
           path.red(x="segment(a,b)" label="${roundD(a,b)}")
@@ -537,8 +539,8 @@ _{button.next-step} Continue_
     x-geopad(width=300 height=180): svg
       circle(name="a" x="point(90,90)")
       circle(name="b" x="point(210,90)")
-      circle.move(name="c" cx=150 cy=50 project="circle(a,60)")
-      circle.move(name="d" cx=150 cy=50 project="circle(b,40)")
+      circle.move.pulsate(name="c" cx=150 cy=50 project="circle(a,60)")
+      circle.move.pulsate(name="d" cx=150 cy=50 project="circle(b,40)")
 
       path.blue(x="circle(a,60)" style="stroke-dasharray: 8px 10px")
       path.blue(x="circle(b,40)" style="stroke-dasharray: 8px 10px")
@@ -600,13 +602,13 @@ Now you can see that the rubber band will always be _{span.hover-target} longer 
 `6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
 ::: column(width=300)
 
-    x-geopad(width=300 height=200): svg
+    x-geopad.label-halo(width=300 height=200): svg
       circle.move(name="a" cx=150 cy=150)
       circle.move(name="b" cx=70 cy=150 project="circle(a,80)")
       circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
       path(x="segment(a,b)" style="stroke-width: 5px" label="4")
       path(x="segment(a,c)" style="stroke-width: 5px" label="6")
-      path(x="segment(b,c)" style="stroke: #00cca6; stroke-width: ${350/distance(b,c)}px" label="${round(distance(b,c)/20)}")
+      path.rubber(x="segment(b,c)" style="stroke: #00cca6" label="${round(distance(b,c)/20)}")
 
 :::
 
@@ -616,6 +618,7 @@ enough to form a triangle.
 
 ---
 > id: sss-construction
+> goals: draw-base draw-c1 draw-c2
 
 ## Triangles Congruence
 
@@ -623,24 +626,30 @@ Now that we can check if three sides can form a triangle, let’s think about ho
 we would actually _construct_ a triangle with these sides.
 
 ::: column(width=300)
-{.todo} COMING SOON – Animation
+
+    x-geopad.sticky.label-halo(width=300 tools="move|line|circle"): svg
+
 ::: column.grow
 {.task} Draw the triangle with sides 4cm, 5cm and 6cm.
 
-First, let’s use a ruler to draw one of the sides (usually the longest one). Now
-we already have two of the vertices of the triangle – the
-challenge is to find the third one.
+{.r} First, draw one of the sides of the triangle (usually the longest one).
+_{span.reveal(when="draw-base")} Now we already have [two of the
+vertices](target:base) – the challenge is to find the third one.
+*{button.next-step} Continue*_
 
-Let’s use the ruler to widen our compass to exactly 4cm, and draw a circle
-around one of the vertices. Then, let’s widen the compass to 5cm, and draw a
-circle around the other vertex.
+{.reveal(when="next-0")} Now, draw a circle of radius 4cm around one of the
+vertices, _{span.reveal(when="draw-c1")} and a circle of radius 5cm around the
+other one._
 
-The third vertex of the triangle is the intersection of the
-two circles. Now we can simply connect them to form a triangle.
+{.reveal(when="draw-c2")} The third vertex of the triangle is the
+[[intersection|center|radius]] of the two circles. _{span.reveal(when="blank-0")}
+Now we can simply connect them to form a triangle._
 
-The circles actually intersect twice: once at the top and once at the
-bottom. We can pick either of these intersections, and the resulting two
-triangles are congruent.
+{.reveal(when="blank-0" delay="3000")} The circles actually intersect
+[[twice|three times|infinitely many times]]: _{span.reveal(when="blank-1")}once
+[at the top](target:top) and once [at the bottom](target:bottom). We can pick
+either of these intersections, and the resulting two triangles are
+[[congruent|equilateral|perpendicular]]._
 :::
 
 ---
@@ -1075,7 +1084,7 @@ By the AA condition, all thee triangles must be [[similar|congruent|right-angled
 
 ::: column(width=260)
 
-    x-geopad.similar-triangle(width=260): svg              
+    x-geopad.similar-triangle.label-halo(width=260): svg
       circle(x="B1")
       circle(x="X1")
       circle(x="C1")
@@ -1188,9 +1197,9 @@ If we draw those two lines, we get a [right-angled triangle](target:triangle).
 
 ::: column(width=300)
 
-    x-geopad(width=300 height=300 grid="25"): svg
-      circle.move(name="a" cx="2" cy="6" label="(${x},${11-y})")
-      circle.move(name="b" cx="9" cy="1" label="(${x},${11-y})")
+    x-geopad.label-halo(width=300 height=300 grid="25"): svg
+      circle.move.pulsate(name="a" cx="2" cy="6" label="(${x},${11-y})")
+      circle.move.pulsate(name="b" cx="9" cy="1" label="(${x},${11-y})")
       path(x="segment(a,b)" label="d")
       path.blue.reveal(x="segment(a,point(b.x,a.y))" label="${b.x-a.x}" mark="arrow" when="next-0" target="dx")
       path.red.reveal(x="segment(point(b.x,a.y),b)" label="${a.y-b.y}" mark="arrow" when="next-0" target="dy")
@@ -1253,18 +1262,18 @@ valid Pythagorean triples, the distance from the origin to the grid point has to
 be a whole number. Using the coordinate system below, can you find any other
 Pythagorean triples?
 
-    figure: x-geopad.r(width=450 height=450 grid=25)
+    figure: x-geopad.r.label-halo(width=450 height=450 grid=25)
       svg
         path(x="line(o,point(0,16))")
         path(x="line(o,point(1,17))")
 
-        circle.move(cx=4 cy=10 name="a")
+        circle.move.pulsate(cx=4 cy=10 name="a")
         circle(x="point(0,17)" name="o")
         path.thick(x="polygon(o,a,point(a.x,o.y))")
-      
-      .label(x-style="left:${12.5+12.5*a.x}px; top:440px") ${a.x}
-      .label(x-style="left:${12.5+25*a.x}px; top:${225+12.5*a.y}px") ${17-a.y}
-      .label(x-style="left:${12.5+12.5*a.x}px; top:${225+12.5*a.y}px") ${sqrtDistance(a)}
+
+      .label.var(x-style="left:${12.5+12.5*a.x}px; top:440px") ${a.x}
+      .label.var(x-style="left:${12.5+25*a.x}px; top:${225+12.5*a.y}px") ${17-a.y}
+      .label.var(x-style="left:${12.5+12.5*a.x}px; top:${225+12.5*a.y}px") ${sqrtDistance(a)}
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Do you notice any pattern in the
 distribution of these points? 
@@ -1544,7 +1553,7 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
 {.todo} COMING SOON – Examples and applications
 
-{.todo} COMING SOON – Future stuff about trigonometry
+    // TODO Future stuff about trigonometry
 
 ---
 > id: mountains
@@ -1559,46 +1568,109 @@ beginning of the chapter? With Trigonometry, we finally have the tools to do it!
     figure.sticky.mountain
       x-geopad(width=760 height=250 style="background: white"): svg
         image(href="images/mountain.svg" height=240 width=760 y=5)
-        circle(name="a" x="point(25, 230)" target="points t1 t2")
-        circle(name="b" x="point(185, 230)" target="points compl t1")
-        circle(name="x" x="point(573, 7)" target="t1 t2")
-        circle(name="y" x="point(573, 230)" target="t2")
-        path.red(x="angle(b,a,x)" target="t1 t2")
-        path.blue(x="angle(y,b,x)" target="compl")
-        path.blue(x="angle(a,x,b)" target="t1")
-        path(x="angle(a,b,x)" target="compl t1")
+        circle(name="a" x="point(25, 230)" target="points")
+        circle(name="b" x="point(185, 230)" target="points")
+        circle(name="x" x="point(573, 7)" target="")
+        circle(name="y" x="point(573, 230)" target="")
+
+        path.fill.red(x="angle(x,a,b)" label="23°" target="angles ang" size=60)
+        path.fill.blue(x="angle(x,b,y)" label="29°" target="ang1" size=50)
+        path.fill(name="angle-b" x="angle(b,x,a)" label="β" target="b angles" size=100)
+        path.fill.green(name="angle-a" x="angle(a,b,x)" label="α" target="a angles" size=25)
         path(x="angle(b,y,x)")
-        path.yellow(x="segment(a,b)" target="compl t1 t2" label="20km")
-        path.yellow(x="segment(b,x)" target="compl t1")
-        path.yellow(x="segment(a,x)" target="t1 t2" label="d")
-        path.yellow(x="segment(b,y)" target="compl t2")
-        path.yellow(x="segment(x,y)" label="h" target="t2")
 
-The surveyors in India measured the angle of a mountain from [two different
-positions](target:points) – and then they measured the distance between those
-positions.
+        path.yellow(x="segment(a,b)" target="base right" label="5km")
+        path.yellow(x="segment(b,x)" target="")
+        path.yellow(name="side-d" x="segment(a,x)" target="d right" label="d")
+        path.yellow(x="segment(b,y)" target="right")
+        path.yellow(x="segment(x,y)" target="right" label="height")
 
-Angle A is a [complementary angle](target:compl), so it must be [[123]]°. Now
-we can use the sum of the [internal angles of a triangle](target:t1) to
-work out that angle B is is [[12]]°.
+The surveyors in India measured the angle of the top of a mountain from [two
+different positions](target:points), _{span.pill.step-target.yellow(data-to="base")}5km apart_.
+The results were _{span.pill.step-target.red(data-to="ang")}23°_ and
+_{span.pill.step-target.blue(data-to="ang1")}29°_.
 
-Now we know all three angles, as well as one of the sides in the [left
-triangle](target:t1). This is enough to use the [[sine rule|cosine rule]]
-to find the distance _d_:
+Because _{span.pill.step-target.green(data-to="a")}angle α_ is a [complementary
+angle](gloss:complementary-angles), we know that it must be [[151]]°.
+_{span.reveal(when="blank-0")}Now we can use the sum of the internal angles of
+a triangle to work out that *{span.pill.step-target(data-to="b")}angle β* is [[6]]°._
 
-{.text-center} `(sin(123))/d = (sin(12))/12`  
-`=> d = ` [[21754]]
+{.reveal(when="blank-1")} Now we know [all three angles](target:angles) of the
+triangle, as well as _{span.pill.step-target.yellow(data-to="base")}one of the
+sides_. This is enough to use the [[sine rule|cosine rule]] to find the distance
+[_d_](target:d):
 
-There is one final step: let’s have a look at the [big, right-angled
-triangle](target:t2). We already know the length of the hypotenuse, but what we
-really need is the [[opposite|adjacent]] side. We can find it using the
-definition of _sin_:
+    table.eqn-system
+      tr.reveal(when="blank-2")
+        td
+          mfrac
+            mrow
+              mo sin
+              mn.pill.step-target.green(data-to="a") 151°
+            mrow.md [[d|5]]
+        td
+          mo =
+          mfrac
+            mrow
+              mo sin
+              mn.pill.step-target(data-to="b") 6°
+            mrow.md [[5|d]]
+      tr.reveal(when="blank-3 blank-4")
+        td: mi d
+        td
+          mo =
+          mo sin
+          mn.pill.step-target.green(data-to="a") 151°
+          mo ×
+          mfrac
+            mrow: mn.pill.step-target.yellow(data-to="base") 5
+            mrow
+              mo sin
+              mn.pill.step-target(data-to="b") 6°
 
-{.text-center} `sin(24) = "height"/21754`  
-`=> "height" = ` [[8848]]
+      tr.reveal(when="blank-3 blank-4" delay=1000)
+        td
+        td
+          mo =
+          mn.pill.yellow.step-target(data-to="d") 23.2 km
 
-And that is Mount Everest – the highest mountain on Earth.
+{.reveal(when="blank-3 blank-4" delay=2000)} There is one final step: let’s have
+a look at the [big, right-angled triangle](target:right). We already know the
+length of the hypotenuse, but what we really need is the [[opposite|adjacent]]
+side. _{span.reveal(when="blank-5")}We can find it using the definition of
+*sin*:_
+
+    table.eqn-system
+      tr.reveal(when="blank-5" delay=1000)
+        td
+          mo sin
+          mn.pill.step-target.red(data-to="ang") 23°
+        td
+          mo =
+          mfrac
+            mrow.md [[height|23]]
+            mrow.md [[23|height]]
+      tr.reveal(when="blank-6 blank-7")
+        td: mtext height
+        td
+          mo =
+          mo sin
+          mn.pill.step-target.red(data-to="ang") 23°
+          mo ×
+          mn.pill.step-target.yellow(data-to="d") 23
+
+      tr.reveal(when="blank-6 blank-7" delay=1000)
+        td
+        td
+          mo =
+          mn.pill.step-target.yellow(data-to="height") 8.987 km
+
+{.reveal(when="blank-6 blank-7" delay=2000)} And that is very close to the
+actual height of Mount Everest, the highest mountain on Earth: 8,848m.
 :::
+
+---
+> id: mountains-1
 
 This explanation greatly simplifies the extraordinary work done by the
 mathematicians and geographers working on the Great Trigonometrical Survey. They

@@ -11,18 +11,22 @@ import { Point, round } from '@mathigon/fermat';
 // -----------------------------------------------------------------------------
 
 function waitToDraw($step, $geopad, shapes, classes, targets) {
-  $geopad.on('add:path', e => {
-    for (let i=0; i<3; ++i) {
-      if ($geopad.eval(shapes[i]).equals(e.val)) {
-        e.$el.addClass(classes[i]);
-        $step.score('s' + i);
-        $step.addHint('correct');
-        e.$el.setAttr('target', targets[i]);
-        return;
-      }
+  $geopad.waitForPaths(shapes, {
+    onCorrect(path, i) {
+      $step.addHint('correct');
+      path.$el.addClass(classes[i]);
+      path.$el.setAttr('target', targets[i]);
+      $step.score('s' + i);
+    },
+    onIncorrect() {
+      $step.addHint('incorrect');
+    },
+    onHint(path, i) {
+      $step.addHint('draw-hint', {force: true});
+      path.$el.addClass(classes[i]);
+      path.$el.setAttr('target', targets[i]);
+      $step.score('s' + i);
     }
-    e.remove();
-    $step.addHint('incorrect');
   });
   $geopad.on('add:point', e => e.remove(0));
 }
@@ -143,6 +147,88 @@ export function triangleInequality3($step) {
       $step.score('target-1');
     }
   });
+
+  const $rubber = $step.$('.rubber');
+  $geopad.model.watch(state => {
+    $rubber.css('stroke-width', 350/Point.distance(state.b, state.c) + 'px');
+  })
+}
+
+// -----------------------------------------------------------------------------
+
+export async function sssConstruction($step) {
+  const $geopad = $step.$('x-geopad');
+
+  $geopad.on('begin:path', path => {
+    if (path.val instanceof $geopad.model.segment().constructor) {  // TODO
+      path.setLabel(`\${round(${path.name}.length/36,1)||''}`);
+    } else {
+      path.setLabel(`\${round(${path.name}.r/36,1)||''}`); // TODO better label position
+    }
+  });
+
+  $geopad.showGesture('point(50,200)', 'point(250,200)');
+  $geopad.setActiveTool('line');
+
+  const base = await $geopad.waitForPath(path =>
+     round(path.val.length/36, 1) === 6);
+
+  $step.score('draw-base');
+  base.$el.addClass('green');
+
+  for (let i=0; i<2; ++i) {
+    base.points[i].lock();
+    base.points[i].$el.addClass('green');
+  }
+
+  $step.onScore('next-0', () => {
+    $geopad.animatePoint(base.points[0].name, $geopad.model.point(42, 220));
+    $geopad.animatePoint(base.points[1].name, $geopad.model.point(258, 220));
+  });
+
+  $geopad.setActiveTool('circle');
+
+  const circle1 =  await $geopad.waitForPath(path =>
+      round(path.val.r/36, 1) === 4 && isOneOf(path.points[0], ...base.points));
+
+  $step.score('draw-c1');
+  circle1.$el.addClass('green light');
+  circle1.points[1].remove(0);
+  // TODO remove label, fix radius to 4
+
+  const circle2 =  await $geopad.waitForPath(path =>
+      round(path.val.r/36, 1) === 5 &&  isOneOf(path.points[0], ...base.points) &&
+      path.points[0] !== circle1.points[0]);
+
+  $step.score('draw-c2');
+  circle2.$el.addClass('green light');
+  circle2.points[1].remove(0);
+  // TODO remove label, fix radius to 5
+
+  $step.onScore('blank-0', () => {
+    $geopad.drawPoint(() => $geopad.model.intersections(circle1.val, circle2.val)[0],
+      {target: 'top', name: 'c'});
+    // TODO check which way round
+
+    $geopad.drawPath(`segment(${base.points[0].name},c)`, {name: 'side1', classes: 'green'}); // TODO add label
+    $geopad.drawPath(`segment(c,${base.points[1].name})`, {name: 'side2', classes: 'green hidden'}); // TODO add label
+
+    $geopad.animateConstruction('side1', 1000)
+      .then(() => $geopad.animateConstruction('side2', 1000));
+  });
+
+  $step.onScore('blank-1', () => {
+    $geopad.animatePoint(base.points[0].name, $geopad.model.point(41, 150));
+    $geopad.animatePoint(base.points[1].name, $geopad.model.point(259, 150));
+
+    $geopad.drawPoint(() => $geopad.model.intersections(circle1.val, circle2.val)[1],
+      {target: 'bottom', name: 'd'}); // TODO delay
+  });
+
+  $step.onScore('blank-2', () => {
+    $geopad.drawPath(`polyline(${base.points[0].name},d,${base.points[1].name})`,
+      {animate: 1000, classes: 'green'});
+  });
 }
 
 // -----------------------------------------------------------------------------
@@ -215,6 +301,14 @@ export function pythagoreanTriplesGrid($step) {
     $geopad.drawPoint(() => p, {classes: 'green'});
     if (isOneOf(found.size, 1, 6, 12)) $step.addHint('correct');
   });
+}
 
+// -----------------------------------------------------------------------------
 
+export function mountains($step) {
+  const $geopad = $step.$('x-geopad');
+
+  $step.onScore('blank-0', () => { $geopad.elements.get('angle-a').setLabel('151°'); $geopad.model.update(); });
+  $step.onScore('blank-1', () => { $geopad.elements.get('angle-b').setLabel('β = 6°'); $geopad.model.update(); });
+  $step.onScore('blank-3 blank-4', () => { $geopad.elements.get('side-d').setLabel('d = 23km'); $geopad.model.update(); });
 }

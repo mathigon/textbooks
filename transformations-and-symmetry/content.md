@@ -288,24 +288,62 @@ In all of the examples above, the line of reflection was horizontal or vertical,
 which made it easy to draw the reflections. If that is not the case, the
 construction becomes more complicated:
 
-{.todo} COMING SOON – Step-by-step explanation
+::: column(width=300)
 
-    // ::: column(width=300)
-    //
-    // ::: column.grow
-    // We have to reflect every point individually, and then connect them again with
-    // lines. To start with, lets draw a line perpendicular to the line of reflection,
-    // that goes through the first point.
-    // 
-    // The image of the point will lie on this perpendicular as well. It will have the
-    // same distance from the line of reflection as the original point, but on the
-    // opposite side. We can use a compass (or a ruler) to find it.
-    // 
-    // Now let’s do the same for all the other points.
-    // 
-    // The rest should be easy: you just need to connect the points in the image, so
-    // that they match the original shape.
-    // :::
+    x-geopad.sticky(width=300): svg
+      circle.move.pulsate(name="l1" cx="180" cy="30" target="refl")
+      circle.move.pulsate(name="l2" cx="120" cy="270" target="refl")
+      path.dark(name="refl" x="line(l1,l2)" target="refl")
+
+      circle.reveal(name="a" x="point(60,50)" when="next-0" animation="pop" target="circ")
+      circle.reveal(name="b" x="point(120,100)" when="next-2" animation="pop")
+      circle.reveal(name="c" x="point(110,170)" when="next-2" animation="pop" delay=100)
+      circle.reveal(name="d" x="point(65,200)" when="next-2" animation="pop" delay=200)
+      circle.reveal(name="e" x="point(30,120)" when="next-2" animation="pop" delay=300)
+
+      circle.reveal(name="a1" x="a.reflect(refl)" when="next-1" animation="pop" target="circ")
+      circle.reveal(name="b1" x="b.reflect(refl)" when="next-2" animation="pop" delay=1000)
+      circle.reveal(name="c1" x="c.reflect(refl)" when="next-2" animation="pop" delay=1100)
+      circle.reveal(name="d1" x="d.reflect(refl)" when="next-2" animation="pop" delay=1200)
+      circle.reveal(name="e1" x="e.reflect(refl)" when="next-2" animation="pop" delay=1300)
+
+      path.fill.blue(x="polygon(a,b,c,d,e)")
+      path.fill.reveal.blue1(x="polygon(a1,b1,c1,d1,e1)" when="next-3")
+
+      path.thin.reveal(x="line(a,a1)" when="next-0" animation="draw" delay=1000)
+      path.thin.reveal(x="segment(b,b1)" when="next-2" animation="draw" delay=400)
+      path.thin.reveal(x="segment(c,c1)" when="next-2" animation="draw" delay=500)
+      path.thin.reveal(x="segment(d,d1)" when="next-2" animation="draw" delay=600)
+      path.thin.reveal(x="segment(e,e1)" when="next-2" animation="draw" delay=700)
+
+      circle.transparent(name="ax" x="refl.project(a)" target="circ")
+      path.dark.transparent(x="segment(a,ax)" target="d1 circ")
+      path.dark.transparent(x="segment(a1,ax)" target="d2 circ")
+      path.dark.transparent(x="circle(ax,distance(a,ax))" target="circ")
+
+::: column.grow
+{.r} To reflect this shape across the [line of reflection](target:refl), we have
+to reflect every [vertex](gloss:polygon-vertex) individually and then connect
+them again.
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-0")} Let’s pick one of the vertices and draw the line
+through this vertex that is perpendicular to the line of reflection.
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-1")} Now we can measure the [distance](target:d1) from the
+vertex to the line of the reflection, and make the point that has the [same
+distance](target:d2) on the other side. _{span.lgrey}(We can either use a ruler
+or a [compass](target:circ) to do this.)_
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-2")} We can do the same for all the other vertices of our
+shape.
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-3")} Now we just have to connect the reflected vertices in
+the correct order, and we’ve found the reflection!
+:::
 
 ---
 > id: rotations
@@ -349,40 +387,79 @@ Try to rotate the shapes below around the red center of rotation:
 ---
 > id: rotations-1
 
-It is more difficult to draw rotations that are not exactly 90° or 180°. Just
-like for reflections, we first have to rotate every point in a shape
-individually, and then connect the lines in the image:
+::: column(width=300)
 
-{.todo} COMING SOON – Step-by-step explanation
+    x-geopad.sticky(width=300): svg
+      circle.move.pulsate(name="rot" cx="150" cy="250" target="rot angle compass protractor")
 
-    // ::: column(width=300)
-    // {.todo} TODO Step-by-step animation
-    // ::: column.grow
-    // We want to rotate this shape by 60° anti-clockwise around the center of
-    // rotation C.
+      circle.reveal(name="a" x="point(270,190)" when="next-0" animation="pop" target="compass")
+      circle.reveal(name="b" x="point(280,110)" when="next-3" animation="pop")
+      circle.reveal(name="c" x="point(210,80)" when="next-3" animation="pop" delay=100)
+      circle.reveal(name="d" x="point(190,170)" when="next-3" animation="pop" delay=200)
+      circle.reveal(name="e" x="point(220,200)" when="next-3" animation="pop" delay=300)
+
+      circle.reveal(name="a1" x="a.rotate(-ang/18*pi,rot)" when="next-2" animation="pop" target="a1 compass")
+      circle.reveal(name="b1" x="b.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1200)
+      circle.reveal(name="c1" x="c.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1300)
+      circle.reveal(name="d1" x="d.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1400)
+      circle.reveal(name="e1" x="e.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1500)
+
+      path.fill.green(x="polygon(a,b,c,d,e)")
+      path.fill.reveal.green1(x="polygon(a1,b1,c1,d1,e1)" when="next-4")
+
+      path.transparent.red.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
+      path.thin.reveal(x="angle(a,rot,a1)" when="next-1" animation="draw" target="angle protractor")
+
+      path.thin.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
+      path.thin.reveal(x="segment(rot,b)" when="next-3" animation="draw" delay=400)
+      path.thin.reveal(x="segment(rot,c)" when="next-3" animation="draw" delay=500)
+      path.thin.reveal(x="segment(rot,d)" when="next-3" animation="draw" delay=600)
+      path.thin.reveal(x="segment(rot,e)" when="next-3" animation="draw" delay=700)
+
+      path.thin.reveal(x="ray(rot,a1)" when="next-1" animation="draw" delay=500 target="angle l2")
+      path.thin.reveal(x="segment(rot,b1)" when="next-3" animation="draw" delay=800)
+      path.thin.reveal(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
+      path.thin.reveal(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
+      path.thin.reveal(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
+      
+      path.transparent(x="segment(rot,a1)" target="compass protractor")
+      path.transparent.dark(x="circle(rot,distance(rot,a))" target="compass")
+
+
+::: column.grow
+It is more difficult to draw rotations that are not exactly 90° or 180°. Let's
+try to rotate this shape by ${10*ang}{ang|6|-18,18,1}° around the [center of
+rotation](target:rot).
+
+{.r} Like for reflections, we have to rotate every point in a shape individually.
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-0")} We start by picking one of the vertices and drawing a line to the center of 
+rotation.
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-1")} Using a [protractor](target:protractor), we can
+measure an [angle of ${ang*10}°](target:angle) around the center of rotation.
+Let’s draw a [second line](target:l2) at that angle.
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-2")} Using a [compass](target:compass) or ruler, we can
+find a [point](target:a1) on this line that has the same distance from the
+center of rotation as the original point.
+_{button.next-step} Continue_
+
+{.r.reveal(when="next-3")} Now we have to repeat these steps for all other vertices of our shape.
+_{button.next-step} Continue_
+
+{.reveal(when="next-4")} And finally, like before, we can connect the individual
+vertices to get the rotated image of our original shape.
+:::
+
+    // ---
+    // > id: composition
     // 
-    // Let’s start with point A. First, we line up a protractor along the center of
-    // rotation and A.
+    // ### Composition of Transformations
     // 
-    // We have to mark the angle at 60°, and draw a line towards C.
-    // 
-    // The image of A must lie on this line, and have the same distance from the
-    // center of rotation as A. We can use a compass (or a ruler) to find it.
-    // 
-    // For simplicity, we can remove the previous line and point. Let’ do the same
-    // for all the other points.
-    // 
-    // The rest should be easy: like before, you just need to connect the points in the
-    // image, to match the original shape.
-    // :::
-
----
-> id: composition
-
-### Composition of Transformations
-
-{.todo} COMING SOON – Composition of transformations
-
     // Of course, we can combine multiple translations, reflections and rotations to
     // create more complex transformations.
     // 
@@ -807,7 +884,7 @@ very similar to adding __{.green}integers__:
           mn 7
           mo =
           mn 19
-        .next-step Next
+        .next-step Continue
       
       li.r.reveal(when="next-0")
         span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
@@ -833,7 +910,7 @@ very similar to adding __{.green}integers__:
           mn 4
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
-        .next-step Next
+        .next-step Continue
       
       li.r.reveal(when="next-1")
         | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
@@ -849,7 +926,7 @@ very similar to adding __{.green}integers__:
           mn –4
           mo(value="=") =
           mn 0
-        .next-step Next
+        .next-step Continue
 
 ---
 > id: groups-1
@@ -1140,210 +1217,233 @@ physicists, but not observed in the real world until 2012.
 
 ## Similarity
 
-{.todo} THIS SECTION IS NOT YET FINISHED!
-
-So far, we have just looked at [[rigid|congruent|visual]] transformations. Now
-let’s think about one that is not: a [__dilation__](gloss:dilation) changes a
-shape’s size by making it larger or smaller.
-
-::: column.grow
-All dilations have a __center__ and a [__scale factor__](gloss:scale-factor).
-The center is the point of reference for the dilation and scale factor tells us
-how much the figure stretches or shrinks.
-
-If the scale factor is between 0 and 1, the image is [[smaller|larger]] than the
-original. If the scale factor is larger than 1, the image is [[larger|smaller]]
-than the original.
-::: column(width=300)
-{.todo} COMING SOON – Illustration (drag the center, slider for scale factor)
-:::
+So far, we have just looked at [[rigid|congruent|visual]] transformations.
+_{span.reveal(when="blank-0")} Now let’s think about one that is not: a
+[__dilation__](gloss:dilation) changes a shape’s size by making it larger or
+smaller._
 
 ---
 > id: dilations-1
 
-Here is how we can construct the dilation of a geometric shape:
+::: column.grow
+All dilations have a [__center__](target:center) and a [__scale factor__](->.scale-target).
+The center is the point of reference for the dilation and scale factor tells us
+how much the figure stretches or shrinks.
 
+If the [scale factor](gloss:scale-factor) is between 0 and 1, the image is
+[[smaller|larger]] than the original. If the scale factor is larger than 1, the
+image is [[larger|smaller]] than the original.
 ::: column(width=300)
-{.todo} COMING SOON – Animation
-::: column.grow
-First we draw rays from the center of dilation to every point in the shape.
 
-Now let’s measure the distance of all these points from the center of dilation.
-Then we can multiply the distance by the scale factor, and the measure the
-image of the point along the same ray.
+    x-geopad(width=300 height=240): svg
+      circle.move(name="C" cx=40 cy=35 target="center")
 
-All that’s left is to connect the transformed points in the image … all done!
+      circle(hidden name="a" x="point(140,55)")
+      circle(hidden name="b" x="point(160,115)")
+      circle(hidden name="c" x="point(60,130)")
+
+      circle(hidden name="a1" x="a.subtract(C).scale(s).add(C)")
+      circle(hidden name="b1" x="b.subtract(C).scale(s).add(C)")
+      circle(hidden name="c1" x="c.subtract(C).scale(s).add(C)")
+
+      path.fill.green(x="polygon(a,b,c)" label="A" label-colour="white")
+      path.fill.blue(x="polygon(a1,b1,c1)" label="A’" label-colour="white")
+
+      path.light.thin(x="segment(C,s<1?a:a1)")
+      path.light.thin(x="segment(C,s<1?b:b1)")
+      path.light.thin(x="segment(C,s<1?c:c1)")
+    
+{.text-center.scale-target} Scale factor: ${s}{s|2|0,3,0.1}
 :::
 
----
-> id: similarity
+{.todo} COMING SOON – More on Dilations and Similarity
 
-::: column.grow
-For rigid transformations, the image is always [[congruent|larger|smaller]] to
-the original – but this is [[no longer|still]] true for dilations. Instead, we
-say that two shapes are [__similar__](gloss:similar). They have the same overall
-shape, but not necessarily the same size.
-
-The symbol for similarity is `∼` (similar to the symbol for congruence, which
-was `≅`). In this example, we would write `A ∼ A'`.
-
-::: column(width=240)
-{.todo} COMING SOON – Illustration
-:::
-
----
-> id: perspective
-
-### Perspective Drawings
-
-You might have noticed that these dilations with the connecting rays almost look
-like __perspective drawings__. The center of dilation is called the __vanishing
-point__, because it looks like this is where everything is “vanishing in the
-distance”.
-
-Find the vanishing point in the figure below:
-
-{.todo} COMING SOON – Interactive
-
-Now can you draw another house that matches the existing ones?
-
----
-> id: similar-polygons
-
-### Similar Polygons
-
-Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
-[squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
-are [[always|sometimes|never]] similar. They might have different sizes, but
-always the same general shape.
-
-::: column.grow
-The two quadrilaterals on the right are similar. Our first important observation
-is that in similar polygons, all the matching pairs of angles are
-[congruent](gloss:congruent-angles). This means that
-
-{.text-center} [_{.m-red}`∡ABC`_ `≅` _{.m-red}`∡A'B'C'`_](target:a)_{.space}_
-[_{.m-blue}`∡BCD`_ `≅` _{.m-blue}`∡B'C'D'`_](target:b)  
-[_{.m-green}`∡CDE`_ `≅` _{.m-green}`∡C'D'E'`_](target:c)_{.space}_
-[_{.m-yellow}`∡DEA`_ `≅` _{.m-yellow}`∡D'E'A'`_](target:d)
-
-The second important fact is that in similar polygons, all sides are scaled
-__proportionally__ by the scale factor of the corresponding dilation. If the
-scale factor is ${k}{k|1.5|0.5,2,0.1}, then
-
-{.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
-`|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
-
-We can instead rearrange these equations and eliminate the scale factor
-entirely:
-
-{.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
-
-We can use this to solve real life problems that involve similar polygons – for
-example finding the length of missing sides, if we know some of the other sides.
-In the following section you will see a few examples.
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-:::
-
----
-> id: similar-triangles
-
-### Similar Triangles
-
-The concept of similarity is particularly powerful with triangles. We already
-know that the corresponding internal angles in similar polygons are equal.
-
-For triangles, the opposite is also true: this means that if you have two
-triangles with the same three angle sizes, then the triangles must be similar.
-
-And it gets even better! We know that the internal angles in a triangle always
-add up to [[180]]°. This means that if we know two angles in a triangle, we can
-always work out the third one.
-
-For similarity, this means that we also just need to check _two angles_ to
-determine if triangles are similar. If two triangles have two angles of the same
-size, then the third angle must also be the same in both.
-
-This result is sometimes called the [__AA Similarity Condition__](gloss:triangle-aa)
-for triangles. (The two _As_ stand for the two _angles_ we compare.)
-
-::: .theorem
-If two angles in one triangle are congruent to two angles in another triangle,
-the two triangles are similar.
-:::
-
----
-> id: similar-triangles-1
-
-Let’s have a look at a few examples where this is useful:
-
-::: column(width=320)
-{.todo} COMING SOON – Animation
-
-::: column.grow
-Here you can see the image of a large lighthouse. Together with a friend, you
-want to measure the height of the lighthouse, but unfortunately we cannot climb
-to the top.
-
-It turns out that, very well hidden, the diagram contains two similar triangles:
-one is formed by the lighthouse and its shadow, and one is formed by your friend
-and her shadow.
-
-Both triangles have one right angle at the bottom. The sun rays are parallel,
-which means that the other two angles at the bottom are corresponding angles,
-and also equal. By the AA condition for triangles, these two must be similar.
-
-We can easily measure the length of the shadows, and we also know the height of
-your friend. Now we can use the proportionality of sides in similar triangles
-to find the height of the lighthouse:
-
-{.todo} COMING SOON – Equation
-
-Therefore the lighthouse is 1.5m tall.
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-{.todo} COMING SOON – Animation
-::: column.grow
-We can use the same technique to measure distances on the ground. Here we want
-to find the width of a large river. There is a big tree on one side of the
-river, and I’ve got a stick that is one meter long.
-
-Try drawing another two similar triangles in this diagram.
-
-You can mark the point along the side of the river, that lies directly on the
-line of sight from the end of the stick to the tree. Then we can measure the
-distances to the stick, and to the point directly opposite the tree.
-
-Once again, these two triangles are similar because of the AA condition. They
-both have a right angle, and on pair of opposite angles.
-
-According to the proportionality rule, this means that
-
-{.todo} COMING SOON – Equation
-
-Therefore the width of the river is 45 meters.
-:::
+    // ---
+    // > id: dilations-1
+    // 
+    // Here is how we can construct the dilation of a geometric shape:
+    // 
+    // ::: column(width=300)
+    // {.todo} COMING SOON – Animation
+    // ::: column.grow
+    // First we draw rays from the center of dilation to every point in the shape.
+    // 
+    // Now let’s measure the distance of all these points from the center of dilation.
+    // Then we can multiply the distance by the scale factor, and the measure the
+    // image of the point along the same ray.
+    // 
+    // All that’s left is to connect the transformed points in the image … all done!
+    // :::
+    // 
+    // ---
+    // > id: similarity
+    // 
+    // ::: column.grow
+    // For rigid transformations, the image is always [[congruent|larger|smaller]] to
+    // the original – but this is [[no longer|still]] true for dilations. Instead, we
+    // say that two shapes are [__similar__](gloss:similar). They have the same overall
+    // shape, but not necessarily the same size.
+    // 
+    // The symbol for similarity is `∼` (similar to the symbol for congruence, which
+    // was `≅`). In this example, we would write `A ∼ A'`.
+    // 
+    // ::: column(width=240)
+    // {.todo} COMING SOON – Illustration
+    // :::
+    // 
+    // ---
+    // > id: perspective
+    // 
+    // ### Perspective Drawings
+    // 
+    // You might have noticed that these dilations with the connecting rays almost look
+    // like __perspective drawings__. The center of dilation is called the __vanishing
+    // point__, because it looks like this is where everything is “vanishing in the
+    // distance”.
+    // 
+    // Find the vanishing point in the figure below:
+    // 
+    // {.todo} COMING SOON – Interactive
+    // 
+    // Now can you draw another house that matches the existing ones?
+    // 
+    // ---
+    // > id: similar-polygons
+    // 
+    // ### Similar Polygons
+    // 
+    // Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
+    // [squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
+    // are [[always|sometimes|never]] similar. They might have different sizes, but
+    // always the same general shape.
+    // 
+    // ::: column.grow
+    // The two quadrilaterals on the right are similar. Our first important observation
+    // is that in similar polygons, all the matching pairs of angles are
+    // [congruent](gloss:congruent-angles). This means that
+    // 
+    // {.text-center} [_{.m-red}`∡ABC`_ `≅` _{.m-red}`∡A'B'C'`_](target:a)_{.space}_
+    // [_{.m-blue}`∡BCD`_ `≅` _{.m-blue}`∡B'C'D'`_](target:b)  
+    // [_{.m-green}`∡CDE`_ `≅` _{.m-green}`∡C'D'E'`_](target:c)_{.space}_
+    // [_{.m-yellow}`∡DEA`_ `≅` _{.m-yellow}`∡D'E'A'`_](target:d)
+    // 
+    // The second important fact is that in similar polygons, all sides are scaled
+    // __proportionally__ by the scale factor of the corresponding dilation. If the
+    // scale factor is ${k}{k|1.5|0.5,2,0.1}, then
+    // 
+    // {.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
+    // `|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
+    // 
+    // We can instead rearrange these equations and eliminate the scale factor
+    // entirely:
+    // 
+    // {.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
+    // 
+    //     // This proportional relationship is true not just for the sides of the
+    //     // polygon, but also for properties like diagonals.
+    // 
+    // We can use this to solve real life problems that involve similar polygons – for
+    // example finding the length of missing sides, if we know some of the other sides.
+    // In the following section you will see a few examples.
+    // ::: column(width=240)
+    // 
+    //     x-geopad.sticky(width=240 height=360): svg
+    //       - var x = ['a', 'b', 'c', 'd']
+    //       - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
+    //       - var next = {a:'b', b:'c', c:'d', d:'a'}
+    //       - var prev = {a:'d', b:'a', c:'b', d:'c'}
+    //       - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
+    //       each l in x
+    //         circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
+    //         path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
+    //         path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
+    //         circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
+    //         path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
+    //         path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
+    // :::
+    // 
+    // ---
+    // > id: similar-triangles
+    // 
+    // ### Similar Triangles
+    // 
+    // The concept of similarity is particularly powerful with triangles. We already
+    // know that the corresponding internal angles in similar polygons are equal.
+    // 
+    // For triangles, the opposite is also true: this means that if you have two
+    // triangles with the same three angle sizes, then the triangles must be similar.
+    // 
+    // And it gets even better! We know that the internal angles in a triangle always
+    // add up to [[180]]°. This means that if we know two angles in a triangle, we can
+    // always work out the third one.
+    // 
+    // For similarity, this means that we also just need to check _two angles_ to
+    // determine if triangles are similar. If two triangles have two angles of the same
+    // size, then the third angle must also be the same in both.
+    // 
+    // This result is sometimes called the [__AA Similarity Condition__](gloss:triangle-aa)
+    // for triangles. (The two _As_ stand for the two _angles_ we compare.)
+    // 
+    // ::: .theorem
+    // If two angles in one triangle are congruent to two angles in another triangle,
+    // the two triangles are similar.
+    // :::
+    // 
+    // ---
+    // > id: similar-triangles-1
+    // 
+    // Let’s have a look at a few examples where this is useful:
+    // 
+    // ::: column(width=320)
+    // {.todo} COMING SOON – Animation
+    // 
+    // ::: column.grow
+    // Here you can see the image of a large lighthouse. Together with a friend, you
+    // want to measure the height of the lighthouse, but unfortunately we cannot climb
+    // to the top.
+    // 
+    // It turns out that, very well hidden, the diagram contains two similar triangles:
+    // one is formed by the lighthouse and its shadow, and one is formed by your friend
+    // and her shadow.
+    // 
+    // Both triangles have one right angle at the bottom. The sun rays are parallel,
+    // which means that the other two angles at the bottom are corresponding angles,
+    // and also equal. By the AA condition for triangles, these two must be similar.
+    // 
+    // We can easily measure the length of the shadows, and we also know the height of
+    // your friend. Now we can use the proportionality of sides in similar triangles
+    // to find the height of the lighthouse:
+    // 
+    // {.todo} COMING SOON – Equation
+    // 
+    // Therefore the lighthouse is 1.5m tall.
+    // :::
+    // 
+    // ---
+    // > id: similar-triangles-2
+    // 
+    // ::: column(width=320)
+    // {.todo} COMING SOON – Animation
+    // ::: column.grow
+    // We can use the same technique to measure distances on the ground. Here we want
+    // to find the width of a large river. There is a big tree on one side of the
+    // river, and I’ve got a stick that is one meter long.
+    // 
+    // Try drawing another two similar triangles in this diagram.
+    // 
+    // You can mark the point along the side of the river, that lies directly on the
+    // line of sight from the end of the stick to the tree. Then we can measure the
+    // distances to the stick, and to the point directly opposite the tree.
+    // 
+    // Once again, these two triangles are similar because of the AA condition. They
+    // both have a right angle, and on pair of opposite angles.
+    // 
+    // According to the proportionality rule, this means that
+    // 
+    // {.todo} COMING SOON – Equation
+    // 
+    // Therefore the width of the river is 45 meters.
+    // :::
 
 ---
 > id: outro

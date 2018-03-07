@@ -86,9 +86,9 @@ but you should already know most of them:
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
-      circle.move(cx=100 cy=30 target="move" label="P")
-      circle.move(cx=150 cy=100 target="move" label="Q")
-      circle.move(cx=40 cy=75 target="move")
+      circle.move.pulsate(cx=100 cy=30 target="move" label="P")
+      circle.move.pulsate(cx=150 cy=100 target="move" label="Q")
+      circle.move.pulsate(cx=40 cy=75 target="move")
       circle(x="point(200,50)" target="no-move")
       circle(x="point(70,120)" target="no-move" label="R")
 
