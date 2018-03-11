@@ -630,16 +630,16 @@ we would actually _construct_ a triangle with these sides.
     x-geopad.sticky.label-halo(width=300 tools="move|line|circle"): svg
 
 ::: column.grow
-{.task} Draw the triangle with sides 4cm, 5cm and 6cm.
+{.task} Draw a triangle that has sides of lengths 4cm, 5cm and 6cm.
 
-{.r} First, draw one of the sides of the triangle (usually the longest one).
-_{span.reveal(when="draw-base")} Now we already have [two of the
-vertices](target:base) – the challenge is to find the third one.
+{.r} In the box of the length, draw the longest side of the triangle, which is
+__6cm__. _{span.reveal(when="draw-base")} Now we already have [two](target:base)
+of the three vertices of the triangle – the challenge is to find the last one.
 *{button.next-step} Continue*_
 
-{.reveal(when="next-0")} Now, draw a circle of radius 4cm around one of the
-vertices, _{span.reveal(when="draw-c1")} and a circle of radius 5cm around the
-other one._
+{.reveal(when="next-0")} Next, draw a circle of radius __4cm__ around one of the
+vertices, _{span.reveal(when="draw-c1")} and a circle of radius __5cm__ around
+the other one._
 
 {.reveal(when="draw-c2")} The third vertex of the triangle is the
 [[intersection|center|radius]] of the two circles. _{span.reveal(when="blank-0")}
@@ -663,7 +663,7 @@ sides?
 We already saw two triangles above, but they where both congruent. In fact, any
 two triangles that have the same three side lengths are congruent. This is
 called the [__SSS Congruence Condition__](gloss:triangle-sss) for triangles
-("Side-Side-Side").
+(“Side-Side-Side”).
 
 We now have two conditions for triangles: “AA” means that two triangles are
 [[similar|congruent|transformations]], and “SSS” means that two triangles are
@@ -673,7 +673,7 @@ We now have two conditions for triangles: “AA” means that two triangles are
 > id: congruence-1
 
 ::: .theorem
-Two triangles are congruent if any of the following conditions are met:
+Two triangles are congruent if any one of the following conditions is met:
 
     .row.padded-thin
       div(style="width: 150px")
@@ -998,8 +998,8 @@ see that
         path.dark.square.transparent(x="polygon(e,f,g,h)" target="square")
 
       .label(style="left: 120px; top: 120px;") c²
-      .label(x-style="left: ${10 + e.x/2}px; top: ${230 - e.x/2}px;") a²
-      .label(x-style="left: ${110 + e.x/2}px; top: ${130 - e.x/2}px;") b²
+      .label.var(x-style="left: ${10 + e.x/2}px; top: ${230 - e.x/2}px;") a²
+      .label.var(x-style="left: ${110 + e.x/2}px; top: ${130 - e.x/2}px;") b²
 
     x-slider(steps=100)
 

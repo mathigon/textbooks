@@ -5,10 +5,12 @@
 
 
 
-import { square, isInteger, delay, isOneOf } from '@mathigon/core';
+import { square, isInteger, delay, isOneOf, isString } from '@mathigon/core';
 import { Point, round } from '@mathigon/fermat';
 
+
 // -----------------------------------------------------------------------------
+// Triangle Properties
 
 function waitToDraw($step, $geopad, shapes, classes, targets) {
   $geopad.waitForPaths(shapes, {
@@ -95,7 +97,9 @@ export function midsegments($step) {
     ['red', 'red', 'red'], ['', '', '']);
 }
 
+
 // -----------------------------------------------------------------------------
+// Triangle Inequality
 
 export function triangleInequality($step) {
   function round(a, b) { return Math.round(Point.distance(a, b) / 25) / 2; }
@@ -154,84 +158,110 @@ export function triangleInequality3($step) {
   })
 }
 
+
 // -----------------------------------------------------------------------------
+// Triangle Congruence and Construction
+// TODO Refactor these functions (use async?)
 
-export async function sssConstruction($step) {
+function waterfall($step, functions) {
+  function handle(i, arg) {
+    const fn = functions[i];
+    if (!fn) return;
+    if (isString(fn)) return $step.onScore(fn, () => handle(i + 1));
+    if (fn.then) return fn.then(x => handle(i + 1, x));
+    Promise.resolve(fn(arg)).then(x => handle(i + 1, x));
+  }
+  handle(0);
+}
+
+export function sssConstruction($step) {
   const $geopad = $step.$('x-geopad');
+  const model = $geopad.model;
 
-  $geopad.on('begin:path', path => {
-    if (path.val instanceof $geopad.model.segment().constructor) {  // TODO
-      path.setLabel(`\${round(${path.name}.length/36,1)||''}`);
-    } else {
-      path.setLabel(`\${round(${path.name}.r/36,1)||''}`); // TODO better label position
-    }
-  });
+  let base, circle1, circle2, circles;
 
+  const getLength = (x) => round(x/36, 1);
+  const intersects = () => model.intersections(circles[0].val, circles[1].val);
+  model.set('getLength', getLength);
+
+  $geopad.on('add:path', () => $geopad.setActiveTool('move'));
   $geopad.showGesture('point(50,200)', 'point(250,200)');
   $geopad.setActiveTool('line');
 
-  const base = await $geopad.waitForPath(path =>
-     round(path.val.length/36, 1) === 6);
-
-  $step.score('draw-base');
-  base.$el.addClass('green');
-
-  for (let i=0; i<2; ++i) {
-    base.points[i].lock();
-    base.points[i].$el.addClass('green');
-  }
-
-  $step.onScore('next-0', () => {
-    $geopad.animatePoint(base.points[0].name, $geopad.model.point(42, 220));
-    $geopad.animatePoint(base.points[1].name, $geopad.model.point(258, 220));
+  $geopad.on('begin:path', path => {
+    if (path.val instanceof model.segment().constructor) {
+      path.setLabel(`\${getLength(${path.name}.length)||''}`);
+    } else {
+      path.setLabel(`\${getLength(${path.name}.r)||''}`, null,
+        `${path.name}.c.shift(0,-${path.name}.r/2)`);
+    }
   });
 
-  $geopad.setActiveTool('circle');
+  waterfall($step, [
+    $geopad.waitForPath(path => getLength(path.val.length) === 6),
+    (path) => {
+      base = path;
+      $step.score('draw-base');
+      base.$el.addClass('green');
+      for (let p of base.points) { p.lock(); p.$el.setAttr('target', 'base'); }
+      if (base.points[0].val.x > base.points[1].val.x) base.points.reverse();
+    },
+    'next-0',
+    () => {
+      $geopad.animatePoint(base.points[0].name, model.point(42, 220));
+      $geopad.animatePoint(base.points[1].name, model.point(258, 220));
+      $geopad.setActiveTool('circle');
+    },
+    $geopad.waitForPath(path => (getLength(path.val.r) === 4 &&
+        isOneOf(path.points[0], ...base.points))),
+    (path) => {
+      circle1 = path;
+      $step.score('draw-c1');
+      circle1.$el.addClass('green light thin');
+      circle1.points[1].remove(0);
+      $geopad.setActiveTool('circle');
+    },
+    $geopad.waitForPath(path => (round(path.val.r/36, 1) === 5 &&
+        path.points[0] === base.points.filter(p => p !== circle1.points[0])[0])),
+    (path) => {
+      circle2 = path;
+      $step.score('draw-c2');
+      circle2.$el.addClass('green light thin');
+      circle2.points[1].remove(0);
+    },
+    'blank-0',
+    () => {
+    circles = [circle1, circle2];
+      if (circle1.points[0] === base.points[1]) circles.reverse();
+      $geopad.drawPoint(() => intersects()[0], {target: 'top', name: 'c'});
+      $geopad.drawPath(`segment(${base.points[0].name},c)`, {name: 'side1', classes: 'green'});
+      return $geopad.animateConstruction('side1', 1000);
+    },
+    () => {
+      $geopad.drawPath(`segment(c,${base.points[1].name})`, {name: 'side2', classes: 'green'});
+      return $geopad.animateConstruction('side2', 1000);
+    },
+    'blank-1',
+    () => {
+      circle1.x = () => model.circle(model[circle1.points[0].name], 4 * 36);
+      circle2.x = () => model.circle(model[circle2.points[0].name], 5 * 36);
 
-  const circle1 =  await $geopad.waitForPath(path =>
-      round(path.val.r/36, 1) === 4 && isOneOf(path.points[0], ...base.points));
+      $geopad.animatePoint(base.points[0].name, model.point(42, 150));
+      $geopad.animatePoint(base.points[1].name, model.point(258, 150));
 
-  $step.score('draw-c1');
-  circle1.$el.addClass('green light');
-  circle1.points[1].remove(0);
-  // TODO remove label, fix radius to 4
-
-  const circle2 =  await $geopad.waitForPath(path =>
-      round(path.val.r/36, 1) === 5 &&  isOneOf(path.points[0], ...base.points) &&
-      path.points[0] !== circle1.points[0]);
-
-  $step.score('draw-c2');
-  circle2.$el.addClass('green light');
-  circle2.points[1].remove(0);
-  // TODO remove label, fix radius to 5
-
-  $step.onScore('blank-0', () => {
-    $geopad.drawPoint(() => $geopad.model.intersections(circle1.val, circle2.val)[0],
-      {target: 'top', name: 'c'});
-    // TODO check which way round
-
-    $geopad.drawPath(`segment(${base.points[0].name},c)`, {name: 'side1', classes: 'green'}); // TODO add label
-    $geopad.drawPath(`segment(c,${base.points[1].name})`, {name: 'side2', classes: 'green hidden'}); // TODO add label
-
-    $geopad.animateConstruction('side1', 1000)
-      .then(() => $geopad.animateConstruction('side2', 1000));
-  });
-
-  $step.onScore('blank-1', () => {
-    $geopad.animatePoint(base.points[0].name, $geopad.model.point(41, 150));
-    $geopad.animatePoint(base.points[1].name, $geopad.model.point(259, 150));
-
-    $geopad.drawPoint(() => $geopad.model.intersections(circle1.val, circle2.val)[1],
-      {target: 'bottom', name: 'd'}); // TODO delay
-  });
-
-  $step.onScore('blank-2', () => {
-    $geopad.drawPath(`polyline(${base.points[0].name},d,${base.points[1].name})`,
-      {animate: 1000, classes: 'green'});
-  });
+      $geopad.drawPoint(() => intersects()[1], {target: 'bottom', name: 'd'});
+    },
+    'blank-2',
+    () => {
+      $geopad.drawPath(`polyline(${base.points[0].name},d,${base.points[1].name})`,
+          {animate: 1000, classes: 'green'});
+    }
+  ]);
 }
 
+
 // -----------------------------------------------------------------------------
+// Pythagoras
 
 export function pythagorasProof($step) {
   const $labels = $step.$$('.label');
@@ -303,7 +333,9 @@ export function pythagoreanTriplesGrid($step) {
   });
 }
 
+
 // -----------------------------------------------------------------------------
+// Trigonometry
 
 export function mountains($step) {
   const $geopad = $step.$('x-geopad');
