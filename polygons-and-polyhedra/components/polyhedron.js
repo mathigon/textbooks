@@ -6,9 +6,9 @@
 
 
 /* global THREE */
-import { colours, faceMaterial, edgeMaterial, drawShape } from './webgl';
+import { colours, faceMaterial, edgeMaterial, drawShape, loadTHREE } from './webgl';
 import { PolyhedronData } from './polyhedron-data';
-import { $N, CustomElement, registerElement } from '@mathigon/boost';
+import { $N, CustomElement, registerElement, script } from '@mathigon/boost';
 
 
 function getPolyhedron(data) {
@@ -20,20 +20,20 @@ function getPolyhedron(data) {
   for (let f of data.face) {
     for (let i = 1; i < f.length - 1; i++) {
       const face = new THREE.Face3(f[0], f[i], f[i+1]);
-      face.color = colours[f.length];
+      face.color = colours()[f.length];
       faceGeometry.faces.push(face);
     }
   }
   faceGeometry.computeFaceNormals();
   faceGeometry.computeVertexNormals();
 
-  const faces = new THREE.Mesh(faceGeometry, faceMaterial);
+  const faces = new THREE.Mesh(faceGeometry, faceMaterial());
   polyhedron.add(faces);
 
   for (let e of data.edge) {
     const edgeGeometry = new THREE.Geometry();
     edgeGeometry.vertices = [vertices[e[0]], vertices[e[1]]];
-    const edge = new THREE.Line(edgeGeometry, edgeMaterial);
+    const edge = new THREE.Line(edgeGeometry, edgeMaterial());
     polyhedron.add(edge);
   }
 
@@ -51,8 +51,10 @@ const cameraOffset = {
 export class Polyhedron extends CustomElement {
 
   ready() {
-    if (!window.THREE) return;
+    loadTHREE().then(() => this.setUp());
+  }
 
+  setUp() {
     const shape = this.attr('shape');
     const data = PolyhedronData[shape];
     if (!data) return console.error('Unknown polyhedron:', shape);

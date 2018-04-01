@@ -6,7 +6,17 @@
 
 
 /* global THREE */
-import { slide, Browser } from '@mathigon/boost';
+import { cache } from '@mathigon/core';
+import { slide, Browser, script } from '@mathigon/boost';
+
+
+const url = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js';
+let threePromise = null;
+
+export function loadTHREE() {
+  if (!threePromise) threePromise = script(url);
+  return threePromise
+}
 
 
 // -----------------------------------------------------------------------------
@@ -27,25 +37,31 @@ export function getRenderer(size) {
 // -----------------------------------------------------------------------------
 // Colours and Materials
 
-export const colours = {
-  3: new THREE.Color(0xff941f),  // yellow FBC600
-  4: new THREE.Color(0x1f7aff),  // blue 0095FF
-  5: new THREE.Color(0x31b304),  // green 00A826
-  6: new THREE.Color(0xb30469),  // red CE001C
-  8: new THREE.Color(0x693fb4),  // violet 8600A9
-  10: new THREE.Color(0x289782)  // teal FF710E
-};
-
-export const faceMaterial = new THREE.MeshPhongMaterial({
-  vertexColors: THREE.FaceColors,
-  side: THREE.DoubleSide,
-  transparent: true,
-  opacity: 0.9,
-  specular: new THREE.Color(0x222222),
-  flatShading: true
+export const colours = cache(() => {
+  return {
+    3: new THREE.Color(0xff941f),  // yellow FBC600
+    4: new THREE.Color(0x1f7aff),  // blue 0095FF
+    5: new THREE.Color(0x31b304),  // green 00A826
+    6: new THREE.Color(0xb30469),  // red CE001C
+    8: new THREE.Color(0x693fb4),  // violet 8600A9
+    10: new THREE.Color(0x289782)  // teal FF710E
+  };
 });
 
-export const edgeMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
+export const faceMaterial = cache(() => {
+  return new THREE.MeshPhongMaterial({
+    vertexColors: THREE.FaceColors,
+    side: THREE.DoubleSide,
+    transparent: true,
+    opacity: 0.9,
+    specular: new THREE.Color(0x222222),
+    flatShading: true
+  });
+});
+
+export const edgeMaterial = cache(() => {
+  return new THREE.LineBasicMaterial({color: 0xffffff});
+});
 
 
 // -----------------------------------------------------------------------------
@@ -56,7 +72,7 @@ export function drawFace(face, vertices) {
   faceGeometry.vertices = vertices;
   for (let i = 1; i < face.length - 1; i++) {
     const faceObj = new THREE.Face3(face[0], face[i], face[i+1]);
-    faceObj.color = colours[face.length];
+    faceObj.color = colours()[face.length];
     faceGeometry.faces.push(faceObj);
   }
   faceGeometry.computeFaceNormals();

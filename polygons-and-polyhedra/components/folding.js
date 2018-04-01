@@ -6,7 +6,7 @@
 
 
 /* global THREE */
-import { faceMaterial, drawShape, drawFace } from './webgl';
+import { faceMaterial, drawShape, drawFace, loadTHREE } from './webgl';
 import { FoldingData } from './folding-data';
 import { $N, CustomElement, registerElement } from '@mathigon/boost';
 
@@ -21,7 +21,7 @@ function getFolding(data) {
 
     const face = data.net[f];
     const faceGeometry = drawFace(face, vertices);
-    node.add(new THREE.Mesh(faceGeometry, faceMaterial));
+    node.add(new THREE.Mesh(faceGeometry, faceMaterial()));
 
     let s1 = face[side];
     let s2 = face[(side + 1) % face.length];
@@ -68,8 +68,10 @@ function updateHinges(polyhedron, p) {
 export class Folding extends CustomElement {
 
   ready() {
-    if (!window.THREE) return;
+    loadTHREE().then(() => this.setUp());
+  }
 
+  setUp() {
     const shape = this.attr('shape');
     const data = FoldingData[shape];
     if (!data) return console.error('Unknown folding:', shape);
@@ -98,7 +100,6 @@ export class Folding extends CustomElement {
       });
 
     }, 100);
-
   }
 }
 
