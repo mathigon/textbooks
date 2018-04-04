@@ -258,7 +258,12 @@ p .black { color: black; }
 }
 
 .monty-hall {
-  margin: 3em 0 2em;
+  padding: 21% 0 2em;
+  position: sticky;
+  top: 40px;
+  z-index: 1;
+  background: url('/resources/probability/images/doorframe.png') no-repeat top left;
+  background-size: contain;
 
   .door-box {
     float: left;
@@ -267,7 +272,7 @@ p .black { color: black; }
     padding-bottom: 24%;
     position: relative;
     perspective: 450px;
-    background: url('/resources/probability/images/goat.png');
+    background: fade(black, 50%) url('/resources/probability/images/goat.png');
     background-size: contain;
 
     &.car { background-image: url('/resources/probability/images/car.png'); }
