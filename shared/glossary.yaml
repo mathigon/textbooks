@@ -351,7 +351,7 @@ acute-triangle:
   text: In an __acute triangle__, all three angles are _acute_ (less than 90°).
 
 isosceles-triangle:
-  title: isosceles triangle
+  title: Isosceles triangle
   text: In an __isosceles triangle__, two sides have the same length.
 
 obtuse-triangle:

@@ -263,8 +263,10 @@ figure on the right. The red and green areas will always have the same area.
 ::: column.grow
 Recall that the [perpendicular bisector](gloss:perpendicular-bisector) of a line
 is the perpendicular line that goes through its [[midpoint|endpoints]].
-_{span.reveal(when="blank-0")}Draw the perpendicular bisector of all three sides
-of this triangle._
+
+{.reveal(when="blank-0")}Draw the perpendicular bisector of all three sides of
+this triangle. _{.lgrey} To draw the perpendicular bisector of a side of the
+triangle, simply click and drag from one of its endpoints to the other._
 
 {.reveal(when="s0 s1 s2")} Like before, the three perpendicular bisectors meet in a
 single point. And again, this point has a special property.

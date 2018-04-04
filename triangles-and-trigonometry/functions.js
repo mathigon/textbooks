@@ -55,7 +55,11 @@ export function centerOfMass($step) {
 export function circumcircle($step) {
   const $geopad = $step.$('x-geopad');
 
-  $step.onScore('blank-0', () => $geopad.setActiveTool('perpBisector'));
+  $step.onScore('blank-0', () => {
+    $geopad.setActiveTool('perpBisector');
+    $geopad.showGesture('a', 'c');
+  });
+
   $step.onScore('s0 s1 s2', () => $geopad.setActiveTool('move'));
   $step.onScore('blank-2', () => $geopad.animateConstruction('circumcircle'));
 
