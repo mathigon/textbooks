@@ -125,7 +125,7 @@ types of rigid transformations:
 > id: rigid-2
 
 We can also combine multiple types of transformation to create more complex
-ones – for example, first a translation and then a rotation.
+ones – for example, a translation followed by a rotation.
 
 But first, let’s have a look at each of these types of transformations in more
 detail.
