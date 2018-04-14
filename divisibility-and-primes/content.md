@@ -976,6 +976,7 @@ problems surrounding the primes.
 ---
 > id: riemann
 > goals: zoom
+> title: Distribution of the Primes
 
 ### The Riemann Hypothesis
 
@@ -1010,6 +1011,7 @@ was proven in 1896.
 
 ---
 > id: riemann1
+> title: The Riemann Hypothesis
 
 However, as you can see above, there is still a significant error between the
 actual number of primes, and Gauss’s approximation. In 1859, the mathematician

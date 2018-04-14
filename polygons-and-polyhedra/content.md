@@ -1720,6 +1720,7 @@ consist of spherical atoms, not polyhedra.
 
 ---
 > id: archimedean
+> title: Archimedean Solids
 
 ## More on Polyhedra
 

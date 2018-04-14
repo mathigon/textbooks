@@ -651,8 +651,8 @@ are simply impossible using just straight-edge and compass.
 ::: column.grow
 According to legend, the city of Delos in ancient Greece was once faced with a
 terrible plague. The oracle in Delphi told them that this was a punishment from
-the gods, and the plague would fo away if they build a new altar for their
-temple that was _exactly twice_ the volume of their existing altar.
+the gods, and the plague would go away if they built a new altar for their
+temple that was _exactly twice_ the volume of the existing one.
 
     figure: img(src="images/altar.svg" width=320 height=140)
 
