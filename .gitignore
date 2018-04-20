@@ -26,4 +26,4 @@ nbproject
 
 # Folders to ignore
 node_modules
-build
+server/assets/resources

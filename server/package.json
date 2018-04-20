@@ -1,0 +1,22 @@
+{
+  "name": "@mathigon/textbooks-server",
+  "version": "0.1.6",
+  "description": "Development server for Mathigon's interactive textbooks.",
+  "author": {
+    "name": "Philipp Legner",
+    "email": "dev@mathigon.org",
+    "url": "https://mathigon.org"
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "main": "app.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "server": "node app.js --use-strict & grunt concurrent",
+    "start": "grunt"
+  },
+  "repository": "mathigon/textbooks-server",
+  "dependencies": {
+  }
+}
