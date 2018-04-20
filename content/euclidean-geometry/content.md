@@ -860,20 +860,24 @@ pursuit, without real life applications. However, it turns out that techniques
 developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column(width=300)
-{.todo} COMING SOON – Images/videos
+
+    x-media(src="images/space.mp4" width=300 height=225 credit="© Brigham Young University")
+
 ::: column.grow
 ### Origami in Space
 
-One of the most spectacular Origami folds is the __Miura Map Fold__, which
-allows a large ‘map’ to be opened and closed in one single motion.
+Satellites need large solar panels to generate power. Unfortunately, the rockets
+that carry satellites into space only have very limited space for cargo, and
+any additional weight costs a lot of fuel.
 
-It was invented by _Korio Miura_, to simplify the folding and unfolding of the
-solar panels of satellites. With fewer motors and mechanical components, it
-can makes satellites smaller, lighter, and cheaper.
+Origami techniques allow solar panels to “unfold” when they reach space. Some
+particularly clever folds are incredibly compact and require very few motors
+and other mechanical components.
 
-The same is true for the mirrors of telescopes deployed in space. Large mirrors
-give better images, but are much harder to fit into a rocket. Instead, they can
-unfold once in space.
+    // One of these is the __Miura Map Fold__, which was invented by _Korio Miura_.
+    // The same is also true for the mirrors of telescopes in space. Larger mirrors
+    // can take better images. Engineers can use Origami to build large mirrors that
+    // can be folded up very efficiently when loaded onto rockets.
 :::
 
 ::: column(width=300)
@@ -900,8 +904,8 @@ Hiroshima University in Japan.
 ### Stadium Roofs
 
 Bridges are difficult to construct because they have to span large distances
-without intermediate support. This also is the case for the roofs of stadium,
-which have to cover a large area without being supported by pillars.
+without intermediate support. This also is the case for the roofs of sports
+stadiums, which have to cover a large area without being supported by pillars.
 
 The roof of the new Falcons Stadium in Atlanta consists of eight enormous
 modules that can twist to open or close.
