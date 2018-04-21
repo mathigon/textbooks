@@ -22,8 +22,9 @@ Now you can start a local development server by running `npm start`. Wait for
 the assets to be compiled and then open [localhost:5000](http://localhost:5000).
 The server will automatically watch for file changes.
 
-Every chapter is a subfolder in the [content](tree/master/content) directory.
-The corresponding URL is `localhost:5000/course/<chapter_name>`.
+Every chapter is a subfolder in the [content](content) directory. The URL of the
+[Probability chapter](content/probability), for example, will be
+[localhost:5000/course/probability](localhost:5000/course/probability).
 
 ![](https://mathigon.org/images/unused/divider-2.png)
 
@@ -33,7 +34,7 @@ The corresponding URL is `localhost:5000/course/<chapter_name>`.
 Every chapter consists of a few different components:
 
 * `content.md` contains the source code and metadata for every chapter. It is
-  written in a [custom extension](wiki/content.md) of
+  written in a [custom extension](/mathigon/textbooks/wiki/content.md) of
   [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 * `functions.js` contains all chapter-specific JavaScript code.
 * `styles.less` contains all chapter-specific styles, in
@@ -43,12 +44,15 @@ Every chapter consists of a few different components:
 * `concepts.yaml` (optional) contains parts of Mathigon's internal knowledge
   tree for this topic.
 
-The [shared folder](tree/master/content/shared) contains biographies, glossary
-and assets used by multiple chapters.
+The [shared directory](content/shared) contains biographies, glossary and assets
+used by multiple chapters.
 
 Every chapter is divided into multiple steps, each with a unique ID. These IDs
 are used as function names in `functions.js` when exporting the setup code
 for every section.
+
+The [server directory](server) contains a simplified version of Mathigon's web
+server. It is used for local testing, but should not usually be modified.
 
 ![](https://mathigon.org/images/unused/divider-3.png)
 
@@ -57,7 +61,7 @@ for every section.
 
 We welcome any contributions to Mathigon – from bug fixes and correcting typos
 to creating entirely new chapters. If you find any errors or problems, please
-[file an issue](issues). For larger changes, please
+[file an issue](/mathigon/textbooks/issues). For larger changes, please
 [contact us](mailto:dev@mathigon.org) before starting your work.
 
 You can find out more on [Mathigon’s contributions
