@@ -15,11 +15,11 @@
   },
   "dependencies": {
     "@mathigon/boost": "^0.2.0",
-    "@mathigon/core": "^0.2.0",
+    "@mathigon/core": "^0.2.1",
     "@mathigon/fermat": "^0.2.0"
   },
   "devDependencies": {
-    "@mathigon/textbooks-parser": "^0.2.0",
+    "@mathigon/parser": "^0.2.4",
     "emojione-assets": "^3.1.1",
     "eslint": "^4.19.1",
     "express": "^4.16.3",

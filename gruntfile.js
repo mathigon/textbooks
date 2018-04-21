@@ -17,7 +17,7 @@ grunt.loadNpmTasks('grunt-autoprefixer');
 grunt.loadNpmTasks('grunt-concurrent');
 grunt.loadNpmTasks('grunt-contrib-less');
 grunt.loadNpmTasks('grunt-contrib-watch');
-require('@mathigon/textbooks-parser')(grunt);
+require('@mathigon/parser')(grunt);
 
 grunt.registerMultiTask('rollup', '', function() {
   const done = this.async();
