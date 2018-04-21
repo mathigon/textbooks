@@ -6,11 +6,12 @@
 
 
 import { last, tabulate, list } from '@mathigon/core';
-import { factorial, random, numberFormat, toOrdinal, Point, travellingSalesman, Segment, subsets } from '@mathigon/fermat';
+import { factorial, random, numberFormat, toOrdinal, Point, Segment, subsets } from '@mathigon/fermat';
 import { $, $$, $N, Colour, svgPointerPosn, animate, Draggable } from '@mathigon/boost';
 import { Graph } from './components/graph';
 import { Sketch } from './components/sketch';
 import { borders } from './components/four-colour-maps';
+import { travellingSalesman } from './components/geometry';
 
 
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,' +
