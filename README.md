@@ -34,8 +34,8 @@ Every chapter is a subfolder in the [content](content) directory. The URL of the
 Every chapter consists of a few different components:
 
 * `content.md` contains the source code and metadata for every chapter. It is
-  written in a [custom extension](https://github.com/mathigon/textbooks/wiki/content.md)
-  of [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+  written in a [custom extension](http://mathigon.io/markdown) of
+  [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 * `functions.js` contains all chapter-specific JavaScript code.
 * `styles.less` contains all chapter-specific styles, in
   [LESS](http://lesscss.org/) format.
@@ -64,8 +64,7 @@ to creating entirely new chapters. If you find any errors or problems, please
 [file an issue](https://github.com/mathigon/textbooks/issues). For larger
 changes, please [contact us](mailto:dev@mathigon.org) before starting your work.
 
-You can find out more on [Mathigon’s contributions
-page](https://mathigon.org/contribute).
+You can find out more on [Mathigon.io](http://mathigon.io).
 
 ![](https://mathigon.org/images/unused/divider-4.png)
 
