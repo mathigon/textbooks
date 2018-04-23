@@ -6,8 +6,6 @@
 >   and technology.
 > next: polygons-and-polyhedra
 
-    // http://www.livemint.com/Leisure/9tK3aB8EJvHxsWmqc8UxuI/The-men-who-measured-Earths-curves.html
-
 ---
 > id: intro
 
@@ -1133,7 +1131,7 @@ similar polygons:
           <p class="text-center"><mi class="step-target pill blue" data-to="x">x</mi><mo>=</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
         td
           <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
-          <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
+          <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
 
 {.r.reveal(when="blank-5")} _{span.next-step} Continue_
 
@@ -1535,8 +1533,8 @@ __Cosine Rule__
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
 {.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
-`c^2 = a^2 + b^2 - 2ab cos(C)`  
-`c^2 = a^2 + b^2 - 2ab cos(C)`
+`b^2 = c^2 + a^2 - 2ca cos(B)`  
+`a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
 {.todo} COMING SOON – Explanation
