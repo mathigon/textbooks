@@ -6,8 +6,8 @@
 
 
 import { Evented, last } from '@mathigon/core';
-import { Point, Segment } from '@mathigon/fermat';
-import { $N, svgPointerPosn, stopEvent } from '@mathigon/boost';
+import { Point, Segment, isBetween } from '@mathigon/fermat';
+import { $N, slide } from '@mathigon/boost';
 
 
 export class Sketch extends Evented {
@@ -25,22 +25,18 @@ export class Sketch extends Evented {
 
     $svg.css('touch-action', 'none');
 
-    if (!options.noStart) {
-      $svg.on('pointerdown', e => {
-        stopEvent(e);
-        this.start(svgPointerPosn(e, $svg));
-      });
-    }
+    slide($svg, {
+      start: p => this.start(p),
+      move: p => {
+        if (!this.drawing) return;
 
-    $svg.on('pointermove', e => {
-      if (!this.drawing) return;
-      stopEvent(e);
-      this.addPoint(svgPointerPosn(e, $svg));
-    });
+        const box = $svg.viewBox;
+        if (!isBetween(p.x, 0, box.width) || !isBetween(p.y, 0, box.height))
+          return this.stop();
 
-    $svg.on('pointerstop', () => {
-      this.trigger('end');
-      this.drawing = false;
+        this.addPoint(p);
+      },
+      end: () => this.stop(),
     });
   }
 
@@ -71,6 +67,7 @@ export class Sketch extends Evented {
   }
 
   stop() {
+    if (this.drawing) this.trigger('end');
     this.drawing = false;
     this.p = null;
   }

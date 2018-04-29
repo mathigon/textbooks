@@ -201,7 +201,7 @@ export class Graph extends Evented {
       if (e.vertices[0] === e.vertices[1]) {
         if (!center) center = Point.average(..._this.vertices.map(v => v.posn));
 
-        let v = V(e.vertices[0].posn.x - center.x, e.vertices[0].posn.y - center.y).normalise();
+        let v = V(e.vertices[0].posn.x - center.x, e.vertices[0].posn.y - center.y).normal;
         let v0 = V(v[0] + v[1], v[1] - v[0]).scale(40);
         let v1 = V(v[0] - v[1], v[1] + v[0]).scale(40);
 

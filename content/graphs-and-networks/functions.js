@@ -392,7 +392,6 @@ export function utilities($section) {
       currentUtility = $ut;
       startUtility = $ut;
       e.preventDefault();
-      e.stopPropagation();
 
       map.clearPaths(errors);
       errors.forEach(e => { if (sectors.has(e)) sectors.get(e).css('opacity', 0); });
