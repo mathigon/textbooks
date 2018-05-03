@@ -32,7 +32,7 @@ white.
 
 A surprising observation is that the triangle seems to have two right angles –
 in the two bottom corners. Therefore the sum of all three angles is greater than
-180°, something that we a [proved to be impossible](https://mathigon.org/course/polygons-and-polyhedra#angles-in-triangles").
+180°, something that we a [proved to be impossible](https://mathigon.org/course/polygons-and-polyhedra#angles-in-triangles).
 
 All these things are based on that fact geometry works differently in flat space
 than it does on curved surfaces like a sphere. There are many other kinds of
