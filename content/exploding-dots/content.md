@@ -1,11 +1,62 @@
 # Exploding Dots
 
 > stage: recreational
+> icon: /resources/exploding-dots/images/icon.png
 > description: UNDER DEVELOPMENT
 
 ---
 
+## Achilles and the Tortoise
+
+Maybe you've heard of Achilles – in Greek Mythology, he was one of the greatest
+heroes and (almost) invulnerable.
+
+On one day, Achilles was challenged to paricipate in a 500m race. His opponent
+was … a tortoise. Archilles knew that he could run _ten times_ as fast as the
+tortoise. He felt bad, and decided to give it a 100m headstart.
+
+And the race began: when Achilles started running, the tortoise was already at
+the 100m mark.
+
+In the time it took Achilles to reach the 100m mark, the tortoise moved by
+[[10]]m: it was now at 110m.
+
+When Achilles arrived at 110m, the tortoise had moved by [[one]] additional
+meter: it was now at 111m.
+
+In the time it took Archilles to XXXXX
+
+This shows that, over time, Achilles would get closer and closer to the
+Tortoise, but never be able to over take it!
+
+[mind blown]
+
+It seems pretty clear that something in this argument went wrong. From practical
+experience we _know_ that Achilles _would_ overtake the tortoise. But it also is
+difficult to exactly pinpoint an error in the explanation.
+
+It turns out that saying "and so on, forever" can be pretty dubious in
+mathematics. Whenever something infinite is involved, things tend to behave
+very differently from our intuition.
+
+But we can think about infinity using the exploding dots machines.
+
+
+
 ## A Troubling Number for our Usual Mathematics
+
+We can try to use Exploding dots to think more easily about infinity. Let's
+switch to one of the oldest questions asked by mathematics students around the
+world:
+
+{.text-center} Is 0.999999… equal to 1 or not?
+
+Like before, we have 
+
+
+
+
+    x-dot-machine(cells="1.5")
 
 Our number notation is incredibly powerful, and has allowed us to make amazing
 discoveries in mathematics, science and engineering.
@@ -18,7 +69,6 @@ from 101, and so on.
 Well – almost. Like for every rule, there might be a few exceptions to this one.
 For example, here is one age-old question asked by students around the world:
 
-{.text-center} Is 0.999999… equal to 1 or not?
 
 Note that the "…" means that there are _infinitely many_ 9s to the right of the
 decimal point. If the answer to this question is "yes", it would mean that there

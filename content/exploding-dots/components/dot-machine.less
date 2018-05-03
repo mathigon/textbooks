@@ -1,0 +1,23 @@
+// =============================================================================
+// Dot Machine Component
+// (c) Mathigon
+// =============================================================================
+
+
+@import "styles/variables";
+
+x-dot-machine {
+  display: block;
+  height: 100px;
+  margin: 1.5em 0;
+
+  .dot-wrap { display: flex; flex-direction: row; justify-content: center; }
+  .dot-cell { width: 100px; height: 100px; margin: 2px; background: #eee; position: relative; }
+
+  .dot-decimal { width: 40px; font-size: 30px; text-align: center; }
+  .dot-decimal:before { content: "."; }
+
+  .dot { width: 6px; height: 6px; border-radius: 100%; background: red; position: absolute; top: 0; left: 0; }
+
+
+}
