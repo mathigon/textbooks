@@ -464,7 +464,7 @@ faster algorithms. Here you can try it yourself:
 
     .calculator
       h3 Prime Checker
-      input(class="form-field", type="number" min="2")
+      input(type="number" min="2")
       p.result.var ${result}
 
 ---
@@ -657,7 +657,7 @@ _{span.number-ball.small.l-green}5_ must be prime factors of __{.m-red}X__.
 ---
 > id: race4
 
-To find __{.m-red}X__, we simply combine all the prime factors of __{.m-green}40_
+To find __{.m-red}X__, we simply combine all the prime factors of __{.m-green}40__
 and __{.m-blue}60__, but any duplicates we only need once:
 
 {.text-center} __{.m-red}X__ &nbsp;=&nbsp; _{span.number-ball.l-blue-green}2_ ×
@@ -674,9 +674,9 @@ more than 2 times in __{.m-blue}60__).
 
 Now we have a simple method for finding the lcm of two numbers:
 
-  ol.proof
-    li Find the prime factorisation of each number.
-    li Combine all prime factors, but only count duplicates once.
+    ol.proof
+      li Find the prime factorisation of each number.
+      li Combine all prime factors, but only count duplicates once.
 
 We can use the same method to find the lcm of three or more numbers at once,
 like __{.m-blue}12__, __{.m-green}30__ and __{.m-yellow}45__:
@@ -906,7 +906,7 @@ is quite surprising, because primes are defined using multiplication and factors
     .calculator
       h3 Goldbach Calculator
       p Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
-      input(class="form-field", type="number", min=4, step=2)
+      input(type="number", min=4, step=2)
       p.result.var ${result}
 
 Goldbach wrote about his observation in a letter to the famous mathematician

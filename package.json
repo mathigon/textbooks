@@ -23,14 +23,14 @@
     "emojione-assets": "^3.1.1",
     "eslint": "^4.19.1",
     "express": "^4.16.3",
-    "express-validator": "^5.1.2",
+    "express-validator": "^5.2.0",
     "grunt": "^1.0.2",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-less": "^1.4.1",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "pug": "^2.0.3",
-    "rollup": "^0.58.1",
+    "rollup": "^0.59.2",
     "rollup-plugin-node-resolve": "^3.3.0"
   }
 }

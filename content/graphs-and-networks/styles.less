@@ -33,12 +33,12 @@ x-parallax.full-width {
 .node { stroke: white; fill: @red; stroke-width: 2px; cursor: move; }
 .link { stroke: @light-grey; stroke-width: 2px; fill: transparent; }
 .arrow { fill: @light-grey; }
-.graph { border: 1px solid #eee; }
+.graph { border: 1px solid #eee; box-sizing: border-box; }
 
 #graph0 .node { transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: scale(1); transform-origin: center; }
 #graph0.novertices .node { transform: scale(0); cursor: default; }
 
-#graph0 .link { stroke-dasharray: 70px 70px; stroke-dashoffset: 140px; transition: stroke-dashoffset 1.6s; }
+#graph0 .link { stroke-dasharray: 70px; stroke-dashoffset: 140px; transition: stroke-dashoffset 1.6s; }
 #graph0.noedges .link { stroke-dashoffset: 70px; }
 
 .person { display: inline-block; width: 24px; height: 24px; text-align: center; color: #FFF; border-radius: 20px; line-height: 24px; }

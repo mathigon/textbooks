@@ -76,7 +76,7 @@ _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(
     
     x-gesture(target="x-anibutton")
 
-::: column.grow
+::: column.grow(width=300)
 
     x-geopad(width=300 height=300): svg
       circle.move(name="e" cx=120 cy=30)

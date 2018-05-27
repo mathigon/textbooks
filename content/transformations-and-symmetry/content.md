@@ -650,12 +650,12 @@ For example “25352” and “ANNA” both read the same from back to front. Nu
 or words like this are called [__Palindromes__](gloss:palindrome). Can you think
 of any other palindromes?
 
-    form.palindromes.text-center
-      input.form-field(type="text")
+    form.palindromes.text-center.form-field
+      input(type="text")
       span.check(when="p0")
-      input.form-field(type="text")
+      input(type="text")
       span.check(when="p1")
-      input.form-field(type="text")
+      input(type="text")
       span.check(when="p2")
 
 ---

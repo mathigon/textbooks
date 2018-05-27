@@ -26,7 +26,7 @@ export class Sketch extends Evented {
     $svg.css('touch-action', 'none');
 
     slide($svg, {
-      start: p => this.start(p),
+      start: p => { if (!this.options.noStart) this.start(p) },
       move: p => {
         if (!this.drawing) return;
 
@@ -69,7 +69,6 @@ export class Sketch extends Evented {
   stop() {
     if (this.drawing) this.trigger('end');
     this.drawing = false;
-    this.p = null;
   }
 
   clear() {

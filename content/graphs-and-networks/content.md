@@ -138,7 +138,7 @@ Most graphs have many cycles as subgraphs.
 ---
 > id: handshakes
 
-## Handshakes and Dates
+## Parties and Dating
 
 ::: column.grow
 You have been invited to an extravagant birthday party. After a rousing
@@ -368,15 +368,15 @@ between two locations. We will discover more of these applications later.
 > id: utilities
 > goals: try-three-times
 
-## The Three Utilities Problem
+## Planar Graphs
 
 ::: column.grow
-Let us try another simple puzzle that is related to graph theory.
+Here is another puzzle that is related to graph theory.
 
-In a small village there are three utility plants, producing water, electricity
-and gas respectively, and three houses which need to be served. Unfortunately,
-due to the city’s layout, the pipes or cables for every product are not allowed
-to cross.
+In a small village there are three utility plants producing water, electricity
+and gas respectively. There are also three houses which need to be served.
+Unfortunately, due to the city’s layout, the pipes or cables for every product
+are not allowed to cross.
 ::: column(width=300)
 
     x-media(credit="© Depositphotos, Grossinge" width=300 height=169 src="images/factory.mp4")
@@ -460,7 +460,7 @@ _{span.euler-sum} 11 Vertices + Faces_
 {.text-center} [[8]] Vertices  
 [[7]] Faces  
 [[14]] Edges  
-_{span.euler-sum} 115 Vertices + Faces_
+_{span.euler-sum} 15 Vertices + Faces_
 ::: column(width=200)
 
     include svg/euler-3.svg
@@ -926,7 +926,7 @@ Problems](gloss:millennium-prize), each carrying a $1m prize.
 ---
 > id: applications
 
-## Graph Theory in Everyday Life
+## Graphs in Everyday Life
 
 Throughout this chapter we have seen many applications of graph theory, though
 some were somehow contrived. It turns out, however, that graphs are at the very
@@ -1071,7 +1071,7 @@ theory__ and __financial mathematics__.
 ---
 > id: social
 
-## Social Networks
+### Social Networks
 
 Finally, let us think about one particularly good example of graphs which exist
 in everyday life: social media. Here, vertices represent [[people|friends|networks]]
