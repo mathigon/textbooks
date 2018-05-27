@@ -1,10 +1,8 @@
 # Divisibility and Primes
 
-> stage: foundations
-> description: Prime numbers represent both the most basic properties and the
->   most complex unsolved problems. Here you can learn about the building blocks
->   of mathematics.
-> next: euclidean-geometry
+## Factors and Multiples
+
+> id: divisibility1
 
     mixin grid(n, fn)
       .number-grid
@@ -33,11 +31,6 @@
             td(colspan=len - 2 * i): .divisor-pair(style="height: " + (len/2 - i) + "00%" data-display="visibility")
             if i
               td(colspan=i)
-
----
-> id: divisibility1
-
-## Factors and Multiples
 
 By now you should be comfortable with basic integer arithmetic and addition,
 subtraction and multiplication. Division is slightly different, because you

@@ -1,10 +1,5 @@
 # Non-Euclidean Geometry
 
-> stage: intermediate
-> description: UNDER DEVELOPMENT
-
----
-
 ## The Hunter and the Bear
 
     .rbox

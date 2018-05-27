@@ -1,9 +1,6 @@
 # Probability
 
-> stage: intermediate
-> description: Cards, dice, roulette and game shows: probability is one of the
->   most fun areas of mathematics, full of surprises and real life applications.
-> next: graphs-and-networks
+## Introduction
 
     // SOURCES
     // http://onlineroulette.org.uk/stories/karl-pearson/
@@ -46,10 +43,7 @@
           circle(r=2, cx=15, cy=10)
           circle(r=2, cx=15, cy=16)
 
----
 > id: intro
-
-## Introduction
 
 Probabilities and likelihoods are everywhere around us, from weather forecasting
 to games, insurance or election polls. However, in the history of mathematics,
@@ -236,7 +230,7 @@ Now let’s have a look at some fun applications of probability.
 
 ---
 > id: roulette
-> class: fill dark casino
+> sectionBackground: dark casino
 
 ## Analysing Roulette
 
@@ -262,7 +256,6 @@ winning depends on the likelihood of each of these outcomes.
 
 ---
 > id: roulette-1
-> class: fill dark casino
 
 Here is one of the many hundreds of newspaper extracts which Pearson collected
 and analysed. At first sight, it looks pretty random:
@@ -282,7 +275,6 @@ this is indeed the case for the set of results above.
 
 ---
 > id: roulette-2
-> class: fill dark casino
 
 This looks pretty evenly distributed – there is a small difference between the
 number of red and black results, but that is always to be expected in
@@ -297,7 +289,6 @@ occurrences in our example:
 
 ---
 > id: roulette-3
-> class: fill dark casino
 
 For some reasons, it seems that __{.red}RR__ and __{.black}BB__ happen much
 [[less frequently|more frequently]] than __{.red}R__**{.black}B** and
@@ -307,7 +298,6 @@ results – but Pearson tested many thousands of results and always found the sa
 
 ---
 > id: roulette-4
-> class: fill dark casino
 
 It gets even worse if we look at triples of results. Each of the 8 possible
 triples of colours should be equally likely, but that is clearly not the case
@@ -326,7 +316,6 @@ this scam.
 
 ---
 > id: roulette-5
-> class: fill dark casino
 
 ::: column(width=300)
 
@@ -341,7 +330,6 @@ drinking, and making up random colours…
 
 ---
 > id: random-sequence
-> class: fill dark casino
 > goals: random
 
 This story shows that we humans tend to be quite bad at coming up with
@@ -357,7 +345,7 @@ down a sequence of Rs and Bs, and find out how random it really is:
 
 ---
 > id: dealer
-> class: fill dark casino
+> sectionBackground: dark casino
 
 ## Beat the Dealer
 
@@ -381,7 +369,6 @@ outcome in their head.
 
 ---
 > id: dealer-1
-> class: fill dark casino
 
     img.computer(src="images/wearable-computer.png" width=275 height=364)
 
@@ -400,7 +387,6 @@ based on different outcomes.
 
 ---
 > id: dealer-2
-> class: fill dark casino
 
     figure: x-media(src="images/las-vegas.jpg" credit="© Depositphotos, kobbydagan" width=760 height=345)
 
@@ -593,7 +579,7 @@ __Normal Distribution__.
 
 ---
 > id: monty-hall
-> class: fill dark gameshow
+> sectionBackground: dark gameshow
 > goals: game
 > title: The Monty Hall Problem
 
@@ -637,7 +623,6 @@ goat. But don’t worry, you can play again!_
 
 ---
 > id: monty-hall-1
-> class: fill dark gameshow
 
 If you play this game many times, you’ll notice that you’re more likely to win
 if you [[swap|don’t swap]] after the first door is opened,
@@ -648,7 +633,6 @@ to be behind each of the two remaining doors?
 
 ---
 > id: monty-hall-2
-> class: fill dark gameshow
 
 The explanation is very subtle. When you pick the initial door, the probability
 of being correct is `1/3` and the probability of being wrong is `2/3`.
@@ -657,7 +641,6 @@ of being correct is `1/3` and the probability of being wrong is `2/3`.
 
 ---
 > id: monty-hall-3
-> class: fill dark gameshow
 
 After the game master opens one of the other doors, the probability of being
 wrong is _still_ `2/3`, except now all this probability is on just one door.
@@ -667,7 +650,6 @@ This means that swapping doors [[doubles|triples|halves]] your chance of winning
 
 ---
 > id: monty-hall-4
-> class: fill dark gameshow
 
 Even if this doesn’t seem very intuitive, we can prove that it is correct –
 simply by listing all different possibilities:

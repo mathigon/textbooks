@@ -1,13 +1,8 @@
 # Polygons and Polyhedra
 
-> stage: intermediate
-> description: Geometric shapes are everywhere around us. In this chapter you will learn about angels, polygons, tessellations, polyhedra and nets.
-> next: graphs-and-networks
-
----
-> id: polygons
-
 ## Polygons
+
+> id: polygons
 
 A [__polygon__](gloss:polygon) is a closed, flat shape that has only straight
 sides. Polygons can have any number of sides and angles, but the sides cannot be

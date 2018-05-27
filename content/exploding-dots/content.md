@@ -1,11 +1,5 @@
 # Exploding Dots
 
-> stage: recreational
-> icon: /resources/exploding-dots/images/icon.png
-> description: UNDER DEVELOPMENT
-
----
-
 ## Achilles and the Tortoise
 
 Maybe you've heard of Achilles – in Greek Mythology, he was one of the greatest
@@ -41,7 +35,7 @@ very differently from our intuition.
 
 But we can think about infinity using the exploding dots machines.
 
-
+---
 
 ## A Troubling Number for our Usual Mathematics
 
@@ -52,9 +46,6 @@ world:
 {.text-center} Is 0.999999… equal to 1 or not?
 
 Like before, we have 
-
-
-
 
     x-dot-machine(cells="1.5")
 
@@ -137,6 +128,7 @@ This feels unlikely since all the numbers 0.9, 0.99, 0.999, … sit to the left 
 
 But if we feel uneasy about a geometric argument, we can always turn to an algebraic one.
 
+---
 
 ### An Algebraic Argument
 
@@ -173,6 +165,8 @@ But let me be clear on what we have established here.
 IF you choose to believe that 0.9999… is a meaningful quantity in USUAL MATHEMATICS, then you must conclude that it equals 1.
 
 I say this because this algebraic argument can lead to philosophical woes, as we’ll see in the next lesson.
+
+---
 
 ### Final Thought 
 
@@ -275,6 +269,4 @@ If you prefer, imagine what happens if you triple the count of dots in each of t
 
 ![](http://gdaymath.com/wp-content/uploads/2018/03/p5-1-768x213.jpg)
 
-
 Extra: What “number” behaves like 23?
-

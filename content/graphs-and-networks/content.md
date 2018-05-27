@@ -1,14 +1,8 @@
 # Graphs and Networks
 
-> stage: intermediate
-> description: Discover the mathematical principles that connect our world: from
->   shaking hands to travel and navigation, colouring maps and social networks.
-> next: probability
-
----
-> id: intro
-
 ## Introduction
+
+> id: intro
 
 ::: column.grow
 Every day we are surrounded by countless connections and networks: roads and
@@ -704,11 +698,13 @@ are enough, or to find a map that needed more than four colours.
 
 ---
 > id: maps-4
-> class: feature
 
-    x-parallax(background="images/ibm-360.jpg")
-      .feature-text-wrap
-        .feature-text.right.md Little progress was made on the four colour problem until 1976, when [Wolfgang Haken](bio:haken) and [Kenneth Appel](bio:appel) used a computer to finally solve it. They reduced infinitely many possible maps to 1936 special cases, which were each checked by a computer taking over 1000 hours in total.
+    x-parallax.full-width(background="images/ibm-360.jpg")
+
+Little progress was made on the four colour problem until 1976, when [Wolfgang
+Haken](bio:haken) and [Kenneth Appel](bio:appel) used a computer to finally
+solve it. They reduced infinitely many possible maps to 1936 special cases,
+which were each checked by a computer taking over 1000 hours in total.
 
 ---
 > id: maps-5
@@ -855,14 +851,16 @@ edges.
 
 ---
 > id: ants
-> class: feature
 
-    x-parallax(background="images/ants.jpg")
-      .feature-credit © Depositphotos / dovapi
-      .feature-text-wrap
-        .feature-text(style="background-color: rgba(0,0,0,.8)")
-          p It turns out that, long before computers even existed, Nature had found a clever way to find optimal paths between different locations: in ant colonies.
-          p Ants want to find the shortest possible routes between their nest and possible food sources. They can communicate with each other through chemicals which they leave along their trail, and which other ants can follow.
+    x-parallax.full-width(background="images/ants.jpg")
+      .credit © Depositphotos / dovapi
+
+It turns out that, long before computers even existed, Nature had found a clever
+way to find optimal paths between different locations: in ant colonies.
+
+Ants want to find the shortest possible routes between their nest and possible
+food sources. They can communicate with each other through chemicals which they
+leave along their trail, and which other ants can follow.
 
 ---
 > id: ants-1
@@ -962,13 +960,12 @@ search engines.
 
 ---
 > id: applications-2
-> class: feature
 
-    x-parallax(background="images/internet.jpg")
-      .feature-credit © LyonLabs, LLC and Barrett Lyon, 2014
-      .feature-text-wrap
-        .feature-text
-          p The internet is the largest network ever created by mankind. This image shows a very small proportion of all the servers connected to the internet.
+    x-parallax.full-width(background="images/internet.jpg")
+      .credit © LyonLabs, LLC and Barrett Lyon, 2014
+
+The internet is the largest network ever created by mankind. This image shows a
+very small proportion of all the servers connected to the internet.
 
 ---
 > id: applications-3
@@ -1024,12 +1021,11 @@ travel faster.
 
 ---
 > id: applications-6
-> class: feature
 
-    x-parallax(background="images/flights.jpg")
-      .feature-credit © Depositphotos, Antartis
-      .feature-text-wrap
-        .feature-text: p This image shows the network of commercial airline flights across northern Europe.
+    x-parallax.full-width(background="images/flights.jpg")
+      .credit © Depositphotos, Antartis
+
+This image shows the network of commercial airline flights across northern Europe.
 
 ---
 > id: applications-7

@@ -1,15 +1,8 @@
 # Transformations and Symmetry
 
-> stage: intermediate
-> description: Symmetry can be seen everywhere in nature – but it even underlies
->   completely invisible laws of nature. The mathematical properties of symmetry
->   explain why that is the case.
-> next: triangles-and-trigonometry
-
----
-> id: intro
-
 ## Introduction
+
+> id: intro
 
 Many geometric concepts, like [lines](gloss:line) and [points](gloss:point),
 were “invented” by mathematicians. Symmetry, on the other hand, is everywhere
@@ -1146,7 +1139,7 @@ which has a 3-dimensional symmetry group.
 
 ---
 > id: planets
-> class: fill dark stars
+> sectionBackground: dark stars
 
 ## Symmetry in Physics
 
@@ -1182,7 +1175,6 @@ experiment today, or tomorrow, or in a year. The laws of nature are
 
 ---
 > id: planets-1
-> class: fill dark stars
 
 These “symmetries” might initially seem quite meaningless, but they can actually
 tell us a lot about our universe. Emmy Noether managed to prove that every

@@ -7,38 +7,28 @@
 @import "styles/variables";
 
 
-x-step .background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  clip: rect(0, auto, auto, 0);
-
-  &:before {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height:100%;
-    will-change: transform;
-  }
+.page-background {
+  transform: translate3D(0,0,0);
 }
+
+.casino .page-background {
+  background-image: url('/resources/probability/images/felt.png'), -webkit-radial-gradient(50% 40%, circle farthest-corner, #527C14, #243a0a);
+  background-size: 180px 180px, auto;
+}
+
+
+.gameshow .page-background {
+  background: url('/resources/probability/images/lights.jpg') no-repeat center top;
+  background-size: cover;
+  background-position: center;
+}
+
+
+// -----------------------------------------------------------------------------
 
 .p-line img {
   float: left;
   display: block;
-}
-
-.casino {
-  .background:before {
-    background-image: url('/resources/probability/images/felt.png'), -webkit-radial-gradient(50% 40%, circle farthest-corner, #527C14, #243a0a);
-    background-size: 180px 180px, auto;
-  }
-  color: white;
-  h2, strong { color: white; }
 }
 
 .roulette-wheel {
@@ -243,18 +233,11 @@ p .black { color: black; }
 
 // -----------------------------------------------------------------------------
 
-.gameshow {
-  .background:before {
-    background: url('/resources/probability/images/lights.jpg') no-repeat center top;
-    background-size: cover;
-  }
-
-  .btn {
-    background: fade(white, 80%);
-    color: #5f034d;
-    &:hover, &:focus { background: white; color: #5f034d; }
-    &.disabled, &:disabled { color: #5f034d !important; background: white !important; opacity: 0.2; }
-  }
+.gameshow .btn {
+  background: fade(white, 80%);
+  color: #5f034d;
+  &:hover, &:focus { background: white; color: #5f034d; }
+  &.disabled, &:disabled { color: #5f034d !important; background: white !important; opacity: 0.2; }
 }
 
 .monty-hall {

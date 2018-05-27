@@ -1,10 +1,5 @@
 # Codes and Ciphers
 
-> stage: intermediate  
-> description: UNDER DEVELOPMENT
-
----
-
 ## Introduction
 
 __Information__ is everywhere around us, but it is difficult to define what

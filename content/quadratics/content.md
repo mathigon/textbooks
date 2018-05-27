@@ -1,10 +1,5 @@
 # Quadratic Equations
 
-> stage: intermediate
-> description: UNDER DEVELOPMENT
-
----
-
 ## Introduction
 
     img.text-wrap(src="images/skater-1.jpg", style="shape-outside: url(images/skater-1-mask.png)", width=300, height=393)

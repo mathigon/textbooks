@@ -1,15 +1,8 @@
 # Triangles and Trigonometry
 
-> stage: intermediate
-> description: Triangles are some of the most important shapes in geometry: they
->   have countless interesting properties, and appear everywhere in engineering
->   and technology.
-> next: polygons-and-polyhedra
-
----
-> id: intro
-
 ## Introduction
+
+> id: intro
 
 ::: column.grow
 By the early 19th century, explorers had discovered most of the world. Trade and

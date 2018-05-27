@@ -1,13 +1,8 @@
-# Exponentials and Logarithms
-
-> level: intermediate
-> description: UNDER DEVELOPMENT
-> color: #d94211
-
----
-> id: cd1
+# Exponential and Rational Functions
 
 ## Carbon Dating
+
+> id: cd1
 
 Everything in our world is made up of different chemical elements: Oxygen,
 Hydrogen, Iron, and many others. Many of these elements can have different types

@@ -1,12 +1,8 @@
 # Circles and Pi
 
-> id: circles-and-pi
-> description: UNDER DEVELOPMENT
-
----
-> id: intro-1
-
 ## Introduction
+
+> id: intro-1
 
 For as long as human beings exist, we have looked to the sky and tried to
 explain life on Earth using the motion of stars, planets and the moon. The

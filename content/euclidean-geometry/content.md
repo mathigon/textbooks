@@ -1,16 +1,9 @@
 # Euclidean Geometry
 
-> stage: intermediate
-> description: Geometry is one of the oldest parts of mathematics – and one of
->   the most useful. Its logical, systematic approach has been copied in many
->   other areas.
-> next: transformations-and-symmetry
+## Introduction
 
----
 > id: thales
 > goals: p1 p2 p3 move
-
-## Introduction
 
 ::: column.grow
 Mathematics has been studied for thousands of years – to predict the seasons,
@@ -73,7 +66,6 @@ number of geometric techniques, that will allow us to prove _Thales’ theorem_.
 
 ---
 > id: points
-> class: no-border
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
@@ -320,9 +312,6 @@ _{button.next-step} Continue_
 
 ---
 > id: euclid
-> class: no-border
-
-    figure: img(src="images/divider-1.svg" width=760 height=42)
 
 ## Euclid’s Axioms
 
@@ -444,9 +433,6 @@ completely different subjects.
 
 ---
 > id: measuring
-> class: no-border
-
-    figure: img(src="images/divider-1.svg" width=760 height=42)
 
 ## Geometric Construction
 
@@ -708,7 +694,7 @@ use straight-edge and compass.
 
 ---
 > id: origami
-> class: fill dark
+> sectionBackground: dark
 
 ## Origami and Paper Folding
 
@@ -737,7 +723,6 @@ but rectangular sheets of paper:
 
 ---
 > id: crane
-> class: fill dark
 > goals: video
 
 Building shapes like this can take a lot of time, and it is important to be
@@ -788,7 +773,6 @@ how long you want it to be by picking the location of the fold.
 
 ---
 > id: origami-axioms
-> class: fill dark
 
 This _crane_ is one of the oldest and most famous Origami models. We have many
 more [instructions](/origami) for Origami models, if you want to try!
@@ -853,7 +837,6 @@ square the circle with origami.
 
 ---
 > id: origami-applications
-> class: fill dark
 
 Origami is an ancient art, and for the longest time it was mostly a recreational
 pursuit, without real life applications. However, it turns out that techniques

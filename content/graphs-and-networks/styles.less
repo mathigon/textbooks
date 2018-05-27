@@ -8,6 +8,17 @@
 
 .svg-block { margin: 0 0 1em 0; }
 
+x-parallax.full-width {
+  position: relative;
+  left: calc(~"520px - 50vw");
+  height: 480px;
+  margin: 1.5em 0;
+  width: calc(~"100vw - 280px");
+  @media screen and (max-width: 1120px) { left: -40px; }
+  @media screen and (max-width: 840px) { width: 100vw; }
+  .credit { position: absolute; bottom: 0; right: 0; background: fade(black, 50%); color: white; font-size: 11px; padding: 1px 8px; }
+}
+
 // -----------------------------------------------------------------------------
 
 .drawing-path {
