@@ -1,7 +1,8 @@
 # Exponentials and Logarithms
 
-> stage: advanced  
-> description: UNDER DEVELOPMENT  
+> level: intermediate
+> description: UNDER DEVELOPMENT
+> color: #d94211
 
 ---
 > id: cd1
