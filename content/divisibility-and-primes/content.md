@@ -68,9 +68,9 @@ as fast as possible. Click the [play button](-> #divisibilitygame .toggle) to st
           .factor-number ${x}
           | is a
           .factor-value
-            .factor-bubble: .btn.btn-blue.btn-bounce factor
-            .factor-bubble: .btn.btn-blue.btn-bounce multiple
-            .factor-bubble: .btn.btn-blue.btn-bounce neither
+            .factor-bubble: .btn.btn-blue factor
+            .factor-bubble: .btn.btn-blue multiple
+            .factor-bubble: .btn.btn-blue neither
           | of
           .factor-number ${y}
 
@@ -503,7 +503,7 @@ you can generate your own, large prime numbers:
     .calculator
       h3 Prime Generator
       p.md Number of digits: ${d}{d|6|2,16,1}
-      p(style="margin: 10px 0"): button.btn.btn-bounce.btn-white Generate
+      p(style="margin: 10px 0"): button.btn.btn-white Generate
       p.result.var ${result}
 
 ---

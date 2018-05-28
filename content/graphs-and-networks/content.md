@@ -259,22 +259,22 @@ Try to find a valid route by drawing on these maps:
         h4 Map 1#[span.check.incorrect(when="bridge-0")]
         x-solved
         include svg/bridges-1.svg
-        button.btn.btn-bounce Clear
+        button.btn Clear
       .tab
         h4 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
-        button.btn.btn-bounce Clear
+        button.btn Clear
       .tab
         h4 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
-        button.btn.btn-bounce Clear
+        button.btn Clear
       .tab
         h4 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
-        button.btn.btn-bounce Clear
+        button.btn Clear
 
 ---
 > id: bridges-1
@@ -387,7 +387,7 @@ Try to connect each of the plants below to each of the houses, without any of yo
 
     .frame.fill
       include svg/utilities.svg
-      button.btn.btn-bounce Clear
+      button.btn Clear
 
 ---
 > id: utilities-1
@@ -435,7 +435,7 @@ subgraph.
         x-solved
         svg#planarity.frame(viewBox="0 0 640 320")
         p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-        button.btn.btn-bounce New Random Graph
+        button.btn New Random Graph
 
 ---
 > id: euler

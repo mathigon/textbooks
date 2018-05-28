@@ -562,9 +562,9 @@ results compare to the predicted probabilities:
         .probTable.var ${ probTable(d) }
         p.md We roll ${d}{d|2|1,6,1} dice at once and record the #[span.dice(style="width: auto; padding: 0 4px;") SUM] of their scores. The #[strong.m-green green lines] represent the probabilities of every possible outcome predicted by probability theory and the #[strong.m-blue blue bars] show how often each outcome happened in this computer generated experiment.
         p.btn-row
-          button.btn.btn-bounce Roll once
-          button.btn.btn-bounce Roll 100 times
-          button.btn.btn-bounce Roll 1000 times
+          button.btn Roll once
+          button.btn Roll 100 times
+          button.btn Roll 1000 times
 
 {.reveal(when="roll")} Notice how, as we roll more and more dice, the observed
 frequencies become closer and closer to the frequencies we predicted using
