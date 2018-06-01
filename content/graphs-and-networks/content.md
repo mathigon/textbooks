@@ -260,22 +260,22 @@ Try to find a valid route by drawing on these maps:
 
     x-tabbox.full-width
       .tab
-        h4 Map 1#[span.check.incorrect(when="bridge-0")]
+        h3 Map 1#[span.check.incorrect(when="bridge-0")]
         x-solved
         include svg/bridges-1.svg
         button.btn Clear
       .tab
-        h4 Map 2#[span.check(when="bridge-1")]
+        h3 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
         button.btn Clear
       .tab
-        h4 Map 3#[span.check(when="bridge-2")]
+        h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
         button.btn Clear
       .tab
-        h4 Map 4 #[span.check.incorrect(when="bridge-3")]
+        h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
         button.btn Clear
@@ -624,7 +624,7 @@ possible:
 
     x-tabbox.four-colours.full-width
       .tab
-        h4 United States #[span.check(when="map-0")]
+        h3 United States #[span.check(when="map-0")]
         x-solved
         include svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
@@ -633,21 +633,21 @@ possible:
         // Note that states or countries which only share a corner are allowed to have the same colour.
         // Alaska and Hawaii are isolated from all of the other states and can have any colour.
       .tab
-        h4 South America #[span.check(when="map-1")]
+        h3 South America #[span.check(when="map-1")]
         x-solved
         include svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
         button.btn.solve Solution
       .tab
-        h4 Germany #[span.check(when="map-2")]
+        h3 Germany #[span.check(when="map-2")]
         x-solved
         include svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
         button.btn.solve Solution
       .tab
-        h4 England #[span.check(when="map-3")]
+        h3 England #[span.check(when="map-3")]
         x-solved
         include svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
