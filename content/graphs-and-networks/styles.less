@@ -30,10 +30,10 @@ x-parallax.full-width {
   pointer-events: none;
 }
 
-.node { stroke: white; fill: @red; stroke-width: 2px; cursor: move; }
+.node { stroke: @grey-background; fill: @red; stroke-width: 2px; cursor: move; }
 .link { stroke: @light-grey; stroke-width: 2px; fill: transparent; }
 .arrow { fill: @light-grey; }
-.graph { border: 1px solid #eee; box-sizing: border-box; }
+.graph { background: @grey-background; border-radius: 4px; }
 
 #graph0 .node { transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: scale(1); transform-origin: center; }
 #graph0.novertices .node { transform: scale(0); cursor: default; }

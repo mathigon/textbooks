@@ -163,6 +163,9 @@ ${(hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : '
 {.reveal(when='blank-0 blank-1')} Rather than counting many edges for large
 numbers of guests, we could also try to find a simple formula that tells us the
 result for _any_ number of guests.
+
+    x-gesture(target="x-var" slide="100,0")
+
 ::: column(width=220)
 
     svg.graph(style='width: 220px; height: 220px;')
@@ -234,6 +237,7 @@ are ${m} × ${f} = ${m×f} dates._
 > id: bridges
 > goals: bridge-0 bridge-1 bridge-2 bridge-3
 > title: The Bridges of Königsberg
+> section: bridges-of-koenigsberg
 
 ## The Bridges of Königsberg
 
