@@ -1554,7 +1554,8 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 ### The Great Trigonometric Survey
 
 Do you still remember the quest to find the highest mountain on Earth from the
-beginning of the chapter? With Trigonometry, we finally have the tools to do it!
+[introduction](/course/triangles-and-trigonometry/introduction)? With
+Trigonometry, we finally have the tools to do it!
 
 ::: .sticky-wrap
 
@@ -1687,11 +1688,7 @@ Triangles are special because they are particularly _strong_. They are the only
 polygon that, when made out of wooden beams and hinges, will be completely
 _rigid_ – unlike rectangles, for example, which you can easily push over.
 
-::: column(width=240)
-{.todo} COMING SOON – Animation
-::: column(width=240)
-{.todo} COMING SOON – Animation
-:::
+{.todo} COMING SOON – Animations
 
 ---
 > id: applications-1

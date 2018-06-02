@@ -6,11 +6,11 @@
 
 ::: column.grow
 Every day we are surrounded by countless connections and networks: roads and
-rail tracks, phone lines and the internet, electronic circuits and even
-molecular bonds. There are also _social networks_ between friends and families.
-All these systems consist of certain points, called [[vertices|circles|crossings]],
-connected by lines, called [[edges|boundaries|pairs]]. In mathematics, all these
-networks are called __graphs__.
+rail tracks, phone lines, the internet, electronic circuits and even molecular
+bonds. There are also _social networks_ between friends and families. All these
+systems consist of certain _points_ called [[vertices|circles|crossings]], some
+of which are connected by [[edges|boundaries|pairs]]. In mathematics, this is
+called a [__graphs__](gloss:graph).
 ::: column(width=160)
 
     svg#graph0.graph.novertices.noedges(width="160" height="130")
@@ -19,7 +19,7 @@ networks are called __graphs__.
 
 __Graph theory__ is the study of graphs and their properties. It is one of the
 most exciting and visual areas of mathematics, and has countless important
-applications.
+applications:
 
     x-gallery(slide-width="300")
       div
@@ -44,28 +44,29 @@ applications.
 ---
 > id: intro-1
 
-We can sketch the layout of simple graphs using points and lines. The position
-of points and the length of the lines are irrelevant – we only care about how
-they are connected to each other. The lines can even cross each other, and don’t
-have to be straight.
+We can sketch the layout of simple graphs using circles and lines. The position
+of the circles and the length of the lines is irrelevant – we only care about
+_how they are connected_ to each other. The lines can even cross each other, and
+don’t have to be straight.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-In some graphs, the edges only go one way. These are called __directed graphs__.
+{.text-center} In some graphs, the edges only go one way. These are called
+__directed graphs__.
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-Some graphs consist of multiple distinct segments which are not connected by
-edges. These graphs are __disconnected__.
+{.text-center} Some graphs consist of multiple distinct segments which are not
+connected by edges. These graphs are __disconnected__.
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-Other graphs may contain multiple edges between the same pairs of vertices, or
-vertices which are connected to themselves (loops).
+{.text-center} Other graphs may contain multiple edges between the same pairs of
+vertices, or vertices which are connected to themselves (loops).
 :::
 
 For simplicity, in this chapter, we will only think about undirected and
@@ -98,8 +99,9 @@ graphs and subgraphs:
 ---
 > id: intro-3
 
-The __order__ of a graph is its number of vertices. The __degree__ of a vertex
-in a graph is the number of edges which meet at that vertex.
+The [__order__](gloss:graph-order) of a graph is its number of vertices. The
+[__degree__](gloss:graph-degree) of a vertex in a graph is the number of edges
+which meet at that vertex.
 
 ::: column(width=130)
 
@@ -127,8 +129,8 @@ in a graph is the number of edges which meet at that vertex.
 > id: intro-4
 
 Graphs which consist of a single ring of vertices are called __cycles__. All
-cycles have [[the same number of edges and vertices|more edges than vertices|fewer edges than vertices]].
-Most graphs have many cycles as subgraphs.
+cycles have [[the same number of edges and vertices|more edges than
+vertices|fewer edges than vertices]].
 
     .row
       svg.graph(style='width: 90px; height: 90px;')
@@ -136,60 +138,56 @@ Most graphs have many cycles as subgraphs.
       svg.graph(style='width: 90px; height: 90px;')
 
 ---
-> id: handshakes
+> id: handshakes-1
 
 ## Parties and Dating
 
 ::: column.grow
-You have been invited to an extravagant birthday party. After a rousing
-celebration the guests get ready to leave, and everyone shakes hands with
+You have been invited to an extravagant birthday party. Including yourself and
+the host, there are ${hnd}{hnd|5|3,15,1} people present.
+
+In the evening, as guests get ready to leave, everyone shakes hands with
 everyone else. How many handshakes are there in total?
-::: column.s-hide(width=260)
 
-    img.shifted(src="images/party.jpg" width=260 height165)
-
-:::
-
----
-> id: handshakes-1
-
-::: column.grow
 We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
-and every handshake is [[an edge|a vertex]]. Suppose that, including yourself
-and the host, there are ${hnd}{hnd|5|2,15,1} people present. Now it is easy to
-count the number of edges, and we find that there
-${(hnd == 2 ? 'is ' : 'are ') + hnd * (hnd-1) / 2 + (hnd == 2 ? ' handshake' : ' handshakes')}.
+and every handshake is [[an edge|a vertex]].
+ 
+{.reveal(when='blank-0 blank-1')}  Now it is easy to count the number of edges
+in the graph. We find that there with ${hnd} people, there are ${hnd*(hnd-1)/2}
+handshakes.
 
-{.reveal(when='blank-0 blank-1')} Rather than counting many edges for large
-numbers of guests, we could also try to find a simple formula that tells us the
-result for _any_ number of guests.
+::: column.s-hide(width=240)
 
-    x-gesture(target="x-var" slide="100,0")
-
-::: column(width=220)
-
-    svg.graph(style='width: 220px; height: 220px;')
+    img.shifted(src="images/party.jpg" width=240 height152)
+    svg.graph(style='width: 240px; height: 240px;')
 
 :::
 
 ---
 > id: handshakes-2
 
+Rather than counting all the edges in large graphs, we could also try to find a
+simple formula that tells us the result for _any_ number of guests.
+
 Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
-That makes ${n} × ${n-1} = ${n*(n-1)} handshakes in total. More generally, it
-looks like the number of handshakes for a group of _n_ people is
-[[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
+That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
+number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
 
     p.var ${handshakeTable(n)}
+    x-gesture(target="#handshakes-2 x-var" slide="100,0")
 
-{.reveal(when="blank-0")} Unfortunately this answer is not quite right: we have
-counted every handshake [[twice|once|three times]], once for each of the two
-people involved. For example,<x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">the
-first two entries on the top row</x-target> are the same. When 1 shakes hands
-with 2, then 2 automatically shakes hands with 1.
+---
+> id: handshakes-2a
 
-{.reveal(when="blank-1")} Therefore, the correct number of handshakes for ${n}
-guests is <mfrac><mrow>${n} × ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
+Unfortunately this answer is not quite right: we have counted every handshake
+[[twice|once|three times]], _{span.reveal(when="blank-0")}once for each of the
+two people involved._
+
+{.reveal(when="blank-0")} For example, <x-target to=".handshakes tr:first-child
+td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two
+entries on the top row</x-target> are actually the same. The correct number of
+handshakes for ${n}{n|5|2,25,1} guests is <mfrac><mrow>${n} ×
+${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
 
 ---
 > id: handshakes-3

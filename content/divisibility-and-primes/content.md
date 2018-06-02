@@ -32,11 +32,11 @@
             if i
               td(colspan=i)
 
-By now you should be comfortable with basic integer arithmetic and addition,
-subtraction and multiplication. Division is slightly different, because you
-can’t always divide any integer by any other. For example 17 divided by 3 is not
-a whole number – it is somewhere in between 5 and 6. You either have to give a
-remainder (2), or express the answer as a decimal number (5.66).
+By now you should be comfortable with addition, subtraction and multiplication
+of integers. Division is slightly different, because you can’t always divide any
+integer by any other. For example 17 divided by 3 is not a whole number – it is
+somewhere in between 5 and 6. You either have to give a remainder (2), or
+express the answer as a decimal number (5.66).
 
     .row.padded
       .grow
@@ -59,7 +59,7 @@ of __{.green}7__, and __{.green}7__|__{.orange}21__.
 > id: divisibility-game
 
 In this short game you have to determine which numbers are factors or multiples,
-as fast as possible. Click the [play button](-> #divisibilitygame .toggle) to start.
+as fast as possible. Click the [play button](-> #divisibility-game .toggle) to start.
 
     .box.problem-box
       .box-title: h3 Factors and Multiples Quiz
@@ -74,13 +74,56 @@ as fast as possible. Click the [play button](-> #divisibilitygame .toggle) to st
           | of
           .factor-number ${y}
 
-In the next step we will learn various techniques to easily check if a number is
-divisible by another.
+---
+> id: factors
+
+It is often useful to find _all_ the divisors of a number. For example, the
+divisors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60.
+
+Of course, you don’t want to check all numbers up to 60 if they are divisors.
+Instead, there is a simple technique which relies on the fact that divisors
+always appear in [[pairs|triples|halves]].
+
+---
+> id: factors1
+
+In the case of 60 we have 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 =
+6 × 10. Or, in a different notation,
+
+    +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
+
+To find all divisors of a number we simply start at both ends of this list,
+until we meet in the middle.
+
+---
+> id: factors2
+> class: no-overflow
+
+    x-slideshow
+      .stage(slot="stage")
+        +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
+      .legend(slot="legend") For example, the first divisor pair of 42 is simply 1 and 42, and we write them down with much space in between.
+      .legend(slot="legend") After 1 at the beginning, we check if 2 divides 42. It does, and the corresponding pair is 42 ÷ 2 = 21.
+      .legend(slot="legend") Next, we check if 3 divides 42. It does, and the corresponding pair if 42 ÷ 3 = 14.
+      .legend(slot="legend") Now we check if 4 divides 42. It does not, however, so we move on.
+      .legend(slot="legend") 5 also doesn’t divide 42 so we move on.
+      .legend(slot="legend") 6 does divide 42 again. Its pair is 42 ÷ 6 = 7. Notice how we’ve met in the middle after only a few attempts, without having to test all numbers from 7 to 42.
+
+The only special case with this method is for square number: in that case, you
+will meet at just a single number in the middle, like 64 = 8 × 8.
+
+    //- TODO Factorisation exercises
 
 ---
 > id: divisibility2
 
 ## Divisibility Rules
+
+There are a few different rules that can make it surprisingly easy to check if a
+number is divisible by another. In this section we will have a look at some of
+them…
+
+
 ### Divisibility by 2 and 5
 
 Every number is divisible by 1. To determine if a number is divisible by 2, we
@@ -141,42 +184,40 @@ divisible by 2. If __{.m-green}d__ is divisible by 5 then the whole number is
 divisible by 5.
 
 ---
+> id: divisibility4b
+
+The easiest is the divisibility rule for 10: we just need to check if the
+[[last digit is a 0|first digit is a 1|last digit is even]].
+
+---
 > id: divisibility4
 
 ### Divisibility by 4 and 8
 
-Unfortunately 4 doesn’t divide 10, so we can‘t just look at the last number –
+Unfortunately 4 doesn’t divide 10, so we can’t just look at the last number –
 but 4 _does_ divide 100, so we just have to slightly modify our rule from above.
 Now we write __{.m-red}ab__**{.m-green}cd** = __{.m-red}ab × 100__ +
 __{.m-green}cd__. We know that 4 will always divide __{.m-red}ab × 100__, so we
-have to look at the last [[2]] digits to check if a number if divisible by 4.
+have to look at the last [[two]] digits to check if a number if divisible by 4.
 
 For example, __{.m-green}24__ is divisible by 4 so __{.m-red}2735__**{.m-green}24**
 [[is also|is not]] divisible by 4, and __{.m-green}18__ is not divisible by 4 so
-__{.m-red}1947__**{.m-green}18** [[is also not|is]] divisible by 4.
+__{.m-red}1947__**{.m-green}18** [[is also not|is also]] divisible by 4.
 
 ---
 > id: divisibility4a
 
 The divisibility rules for 8 get even more difficult, because 100 is not
 divisible by 8. Instead we have to go up to [[1000|800|108]] and look at the
-last [[3]] digits of a number.
+last [[three]] digits of a number.
 
 For example, __{.m-green}120__ is divisible by 8 so
 __{.m-red}271__**{.m-green}120** is also divisible by 8.
 
 ---
-> id: divisibility4b
-
-The easiest is the divisibility rule for 10: we just need to check if the
-[[last digit is a 0|first digit is a 1|last digit is even]].
-
-{.todo} Practice exercises coming soon …
-
----
 > id: divisibility3a
 
-### Divisibility by 3, 6and 9
+### Divisibility by 3 and 9
 
 The divisibility rule for 3 is rather more difficult. 3 doesn’t divide 10, and
 it also doesn’t divide 100, or 1000, or any larger power of 10. Simply looking
@@ -245,6 +286,8 @@ is a multiple of 3, then the result must also be a multiple of 3.
 > id: divisibility6
 > goals: btn2 btn3
 
+### Divisibility by 6
+
 We’ve still skipped number 6 – but we’ve already done all the hard work.
 Remember that 6 = 2 × 3.
 
@@ -258,58 +301,7 @@ divisible by 2 [[and also|or]] divisible by 3. Note that this happens to work
 for 6, but certainly not for _any_ number that is the product of two others.
 More on that later…
 
----
-> id: divisibility7
-
-Unfortunately there is no simple divisibility rule for 7. However we now know
-the rules for all other numbers from 1 to 10, so let’s try a more advanced
-version of the divisibility game!
-
-
-{.todo} Practice exercises coming soon …
-
----
-> id: factors
-
-## Finding Factors
-
-In many cases, it is not enough to find if a number is divisible by another – we
-need a list of _all_ its divisors. For example, the divisors of 60 are 1, 2, 3,
-4, 5, 6, 10, 12, 15, 20, 30 and 60.
-
-But we don’t want to have to try 60 different numbers and check which one is a
-divisor. Instead we can use a simple technique, which relies on the fact that
-divisors always appear in pairs.
-
----
-> id: factors1
-
-In the case of 60 we have 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 =
-6 × 10. Or, in a different notation,
-
-    +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
-
-To find all divisors of a number we simply start at both ends of this list,
-until we meet in the middle.
-
----
-> id: factors2
-> class: no-overflow
-
-    x-slideshow
-      .stage(slot="stage")
-        +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
-      .legend(slot="legend") For example, the first divisor pair of 42 is simply 1 and 42, and we write them down with much space in between.
-      .legend(slot="legend") After 1 at the beginning, we check if 2 divides 42. It does, and the corresponding pair is 42 ÷ 2 = 21.
-      .legend(slot="legend") Next, we check if 3 divides 42. It does, and the corresponding pair if 42 ÷ 3 = 14.
-      .legend(slot="legend") Now we check if 4 divides 42. It does not, however, so we move on.
-      .legend(slot="legend") 5 also doesn’t divide 42 so we move on.
-      .legend(slot="legend") 6 does divide 42 again. Its pair is 42 ÷ 6 = 7. Notice how we’ve met in the middle after only a few attempts, without having to test all numbers from 7 to 42.
-
-The only special case with this method is for square number: in that case, you
-will meet at just a single number in the middle, like 64 = 8 × 8.
-
-    //- TODO Factorisation exercises
+    //- TODO Practice exercises
 
 ---
 > id: primes
@@ -384,7 +376,7 @@ solve the initial problem.
 > id: eratosthenes
 > class: no-overflow
 
-## The Sieve of Eratosthenes
+### The Sieve of Eratosthenes
 
 It turned out to be quite difficult to determine if a number is prime: you
 always had to find _all_ its prime factors, which gets more and more challenging
@@ -408,7 +400,7 @@ Now we can count that, in total, there are [[25]] prime numbers less than 100.
 ---
 > id: primes3
 
-## How many Prime Numbers are there?
+### How many Prime Numbers are there?
 
 ::: column.grow
 Of course we can also use the Sieve of Eratosthenes to find larger prime
@@ -456,7 +448,7 @@ assumption must be incorrect.
 > id: prime-test
 > goals: calculator
 
-## Large Primes
+## The Distribution of Primes
 
 It is quite easy for a computer to check if a number is prime – simply by trying
 to divide it by all smaller numbers. But of course there are much cleverer and
@@ -511,6 +503,8 @@ you can generate your own, large prime numbers:
 
     //- Stanislaw M. Ulam was doodling during the presentation of a "long and very boring paper" at a scientific meeting in 1963.
 
+### The Ulam Spiral
+
 The Polish mathematician [Stanisław Ulam](bio:ulam) came up with a cool way to
 show the distribution of large prime numbers, while doodling during a _“long and
 very boring”_ meeting in 1963.
@@ -558,10 +552,137 @@ it is unknown why that would be the case…_
 :::
 
 ---
+> id: goldbach1
+> goals: calculator
+
+### The Goldbach Conjecture
+
+In 1742, the German mathematician [Christian Goldbach](bio:goldbach) made a
+curious discovery: he noticed that all even integers (except 2) can be written
+as the sum of two prime numbers. For example, 8 = 5 + 3 and 24 = 13 + 11. This
+is quite surprising, because primes are defined using multiplication and factors
+– and shouldn’t have much to do with addition.
+
+    .calculator
+      h3 Goldbach Calculator
+      p Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
+      input(type="number", min=4, step=2)
+      p.result.var ${result}
+
+Goldbach wrote about his observation in a letter to the famous mathematician
+[Leonhard Euler](bio:euler), but neither of them was able to prove it. It became
+known as the __Goldbach Conjecture__.
+
+Computers have checked that the Goldbach Conjecture works for every even number
+up to 4 × 10<sup>18</sup> (that’s a 4 with 18 zeros), but mathematicians have still
+not found a proof that it works for _all_ even integers. And that is a big
+difference, because there are infinitely many integers, so we couldn’t possibly
+check all of them.
+
+Its apparent simplicity made the Goldbach conjecture one of the most famous
+unsolved problems in mathematics.
+
+---
+> id: twin-primes
+
+### Twin Primes
+
+We have already seen that prime numbers get more spread out as they get bigger.
+But they always seem to appear completely random, and occasionally we find two
+primes right next to each other, just one number apart: these are called __Twin
+Primes__.
+
+    p.text-center
+      span.twin
+        span.number-ball 3
+        span.number-ball 5
+      | ,
+      span.twin
+        span.number-ball.blue 11
+        span.number-ball.blue 13
+      | ,
+      span.twin
+        span.number-ball.green 41
+        span.number-ball.green 43
+      | ,
+      span.twin
+        span.number-ball.yellow 101
+        span.number-ball.yellow 103
+      | ,
+      span.twin
+        span.number-ball 2027
+        span.number-ball 2029
+      | ,
+      span.twin
+        span.number-ball.blue 108,377
+        span.number-ball.blue 108,379
+      | ,
+      span.twin
+        span.number-ball.green 1,523,651
+        span.number-ball.green 1,523,653
+
+The largest known pair of twin primes has an incredible 58,711 digits! But are
+there infinitely many twin primes, just like there are infinitely many primes?
+Nobody knows – the _Twin Prime conjecture_ is another one of the many unsolved
+problems surrounding the primes.
+
+---
+> id: riemann
+> goals: zoom
+> title: Distribution of the Primes
+
+### The Riemann Hypothesis
+
+Mathematicians have spent many centuries exploring the pattern and distribution
+of prime numbers. They seem to appear completely randomly – sometimes there are
+huge gaps in between consecutive primes, and sometimes we find [twin
+primes](gloss:twins) right next to each other.
+
+When only 15 years old, the German mathematician [Carl Friedrich Gauss](bio:gauss)
+had a groundbreaking new idea: he counted the number of primes up to a certain
+point, and showed the results in a chart:
+
+    figure(style="max-width:680px; position:relative;")
+      svg(width=680 height=300 viewBox="0 0 680 300")
+        line.axis(x1=0 y1=280 x2=680 y2=280)
+        g.chart
+          path.pi(fill="none" stroke="#1f7aff")
+          path.log(fill="none" stroke="#b30469")
+          g.small-primes
+        g.numbers
+      .zoom-icon: svg(viewBox="0 0 32 32" class="icon" width=32 height=32)
+        use(xlink:href="/icons.svg#search")
+
+Along the x-axis you can see all integers. Whenever there is a prime, the
+_{.m-blue}Prime Counting Function_ increases by one. As we
+[zoom out](-> #riemann .zoom-icon), the blue line becomes very smooth.
+
+{.reveal(when="zoom")} Gauss noticed that the shape of this function looks very
+similar to the function <mfrac class="m-red"><mi>x</mi><mrow>log(<mi>x</mi>)</mrow></mfrac>.
+He predicted that the two functions are always “approximately similar”, and this
+was proven in 1896.
+
+---
+> id: riemann1
+> title: The Riemann Hypothesis
+
+However, as you can see above, there is still a significant error between the
+actual number of primes, and Gauss’s approximation. In 1859, the mathematician
+[Bernhard Riemann](bio:riemann) discovered an approximation that looked much
+better, but he wasn’t able to prove that that would _always_ work. His idea
+became known as the __Riemann Hypothesis__.
+
+Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all
+without success. It is often considered one of the most difficult and most
+important unsolved problems in mathematics. In 2000, the Clay Mathematics
+Institute named it one of six __Millennium Prize Problems__ and promised
+$1,000,000 to any mathematician who solves it.
+
+---
 > id: race
 > goals: race
 
-## The Least Common Multiple
+## Least Common Multiples
 
 Two runners are training on a circular racing track. The __{.m-blue}first runner__
 takes __{.m-blue}60__ seconds for one lap. The __{.m-green}second runner__ only
@@ -724,7 +845,7 @@ factors which would get “canceled”.
 > id: gcd
 > goals: size-6
 
-## The Greatest Common Factor
+## Greatest Common Factors
 
 An architect is planning the floor for a large courtyard that measures 18m by
 30m. She wants it to be covered in quadratic tiles, without any gaps or overlaps
@@ -799,7 +920,9 @@ Once again prime numbers are special: the gcd of two different primes is always
 > id: cicadas
 > goals: bound-low bound-high
 
-## LCM and GCD Applications
+## Real Life Applications
+
+### Cicadas
 
 ::: column.grow
 North America is home to various broods of cicadas. These have the curious
@@ -843,7 +966,7 @@ animal seems to have gone extinct over time, but the prime number cycles remain.
 ---
 > id: crypto
 
-## Primes in Cryptography
+### Cryptography
 
 ::: column.grow
 One of the most important modern applications of prime numbers is in a field of
@@ -888,132 +1011,3 @@ Today, prime numbers are used by computers all over the world to exchange data.
 Whenever you send an email or visit a secure website, your phone or laptop
 quietly generates large prime numbers and exchanges public keys with other
 computers.
-
----
-> id: goldbach1
-> goals: calculator
-
-## Mysteries and Unsolved Problems
-
-### The Goldbach Conjecture
-
-In 1742, the German mathematician [Christian Goldbach](bio:goldbach) made a
-curious discovery: he noticed that all even integers (except 2) can be written
-as the sum of two prime numbers. For example, 8 = 5 + 3 and 24 = 13 + 11. This
-is quite surprising, because primes are defined using multiplication and factors
-– and shouldn’t have much to do with addition.
-
-    .calculator
-      h3 Goldbach Calculator
-      p Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
-      input(type="number", min=4, step=2)
-      p.result.var ${result}
-
-Goldbach wrote about his observation in a letter to the famous mathematician
-[Leonhard Euler](bio:euler), but neither of them was able to prove it. It became
-known as the __Goldbach Conjecture__.
-
-Computers have checked that the Goldbach Conjecture works for every even number
-up to 4 × 10<sup>18</sup> (that’s a 4 with 18 zeros), but mathematicians have still
-not found a proof that it works for _all_ even integers. And that is a big
-difference, because there are infinitely many integers, so we couldn’t possibly
-check all of them.
-
-Its apparent simplicity made the Goldbach conjecture one of the most famous
-unsolved problems in mathematics.
-
----
-> id: twin-primes
-
-### Twin Primes
-
-We have already seen that prime numbers get more spread out as they get bigger.
-But they always seem to appear completely random, and occasionally we find two
-primes right next to each other, just one number apart: these are called __Twin
-Primes__.
-
-    p.text-center
-      span.twin
-        span.number-ball 3
-        span.number-ball 5
-      | ,
-      span.twin
-        span.number-ball.blue 11
-        span.number-ball.blue 13
-      | ,
-      span.twin
-        span.number-ball.green 41
-        span.number-ball.green 43
-      | ,
-      span.twin
-        span.number-ball.yellow 101
-        span.number-ball.yellow 103
-      | ,
-      span.twin
-        span.number-ball 2027
-        span.number-ball 2029
-      | ,
-      span.twin
-        span.number-ball.blue 108,377
-        span.number-ball.blue 108,379
-      | ,
-      span.twin
-        span.number-ball.green 1,523,651
-        span.number-ball.green 1,523,653
-
-The largest known pair of twin primes has an incredible 58,711 digits! But are
-there infinitely many twin primes, just like there are infinitely many primes?
-Nobody knows – the _Twin Prime conjecture_ is another one of the many unsolved
-problems surrounding the primes.
-
----
-> id: riemann
-> goals: zoom
-> title: Distribution of the Primes
-
-### The Riemann Hypothesis
-
-Mathematicians have spent many centuries exploring the pattern and distribution
-of prime numbers. They seem to appear completely randomly – sometimes there are
-huge gaps in between consecutive primes, and sometimes we find [twin
-primes](gloss:twins) right next to each other.
-
-When only 15 years old, the German mathematician [Carl Friedrich Gauss](bio:gauss)
-had a groundbreaking new idea: he counted the number of primes up to a certain
-point, and showed the results in a chart:
-
-    figure(style="max-width:680px; position:relative;")
-      svg(width=680 height=300 viewBox="0 0 680 300")
-        line.axis(x1=0 y1=280 x2=680 y2=280)
-        g.chart
-          path.pi(fill="none" stroke="#1f7aff")
-          path.log(fill="none" stroke="#b30469")
-          g.small-primes
-        g.numbers
-      .zoom-icon: svg(viewBox="0 0 32 32" class="icon" width=32 height=32)
-        use(xlink:href="/icons.svg#search")
-
-Along the x-axis you can see all integers. Whenever there is a prime, the
-_{.m-blue}Prime Counting Function_ increases by one. As we
-[zoom out](-> #riemann .zoom-icon), the blue line becomes very smooth.
-
-{.reveal(when="zoom")} Gauss noticed that the shape of this function looks very
-similar to the function <mfrac class="m-red"><mi>x</mi><mrow>log(<mi>x</mi>)</mrow></mfrac>.
-He predicted that the two functions are always “approximately similar”, and this
-was proven in 1896.
-
----
-> id: riemann1
-> title: The Riemann Hypothesis
-
-However, as you can see above, there is still a significant error between the
-actual number of primes, and Gauss’s approximation. In 1859, the mathematician
-[Bernhard Riemann](bio:riemann) discovered an approximation that looked much
-better, but he wasn’t able to prove that that would _always_ work. His idea
-became known as the __Riemann Hypothesis__.
-
-Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all
-without success. It is often considered one of the most difficult and most
-important unsolved problems in mathematics. In 2000, the Clay Mathematics
-Institute named it one of six __Millennium Prize Problems__ and promised
-$1,000,000 to any mathematician who solves it.

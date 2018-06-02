@@ -1918,13 +1918,6 @@ view 3-dimensional polyhedra in a 2-dimensional way.
     //- https://github.com/polymake/matchthenet
     //- Drawing Nets
 
----
-> id: cross-sections
-
-### Cross-Sections 
-
-{.todo} COMING SOON!
-
     //- Describe the cross section formed by the intersection of the plane and the solid.
 
     //- A cross-section is the intersection of a plane with a solid.

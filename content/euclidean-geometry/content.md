@@ -9,12 +9,12 @@
 Mathematics has been studied for thousands of years – to predict the seasons,
 calculate taxes, or estimate the size of farming land.
 
-But around 500 BC, mathematicians in ancient Greece started to study mathematics
-just “for fun”, without a specific application in mind. They were amazed by
-mathematical patterns, and wanted to explore and explain them.
+Mathematicians in ancient Greece, around 500 BC, were amazed by mathematical
+patterns, and wanted to explore and explain them. For the first time, they began
+to study mathematics just “for fun”, without a specific application in mind. 
 ::: column(width=300)
 
-    x-media.shifted(src="images/tablet.jpg" width=300 height=210)
+    x-media(src="images/tablet.jpg" width=300 height=210)
 
 {.caption} A Babylonian clay tablet, dated 1800 BC, that contains geometric
 calculations.
@@ -50,26 +50,26 @@ _{span.reveal(when="blank-0")} This means that the triangle is
 
 For Thales, this was a pretty spectacular result. Why should _semicircles_ and
 _right-angled triangles_, two completely different shapes, be linked in this
-fundamental way? In fact, he was so awed by his discovery that, according to
-legend, he sacrificed an entire ox to thank the gods.
+fundamental way? He was so awed by his discovery that, according to legend, he
+sacrificed an entire ox to thank the gods.
 
     figure
       x-media(src="images/temple.svg" width=400 height=170 credit="© Depositphotos")
 
 However, simply _observing_ a relationship like this was not enough for Thales.
-he wanted to understand _why_ it is true, and verify that it is _always_ true
-– not just in the specific examples he happened to try.
+He wanted to understand _why_ it is true, and verify that it is _always_ true
+– not just in the few examples he tried.
 
 An argument that logically explains, beyond and doubt, why something must be
 true, is called a __proof__. During the following chapters, you will learn a
-number of geometric techniques, that will allow us to prove _Thales’ theorem_.
+number of geometric techniques, that will eventually allow us to prove _Thales’
+theorem_.
 
 ---
 > id: points
+> sectionId: definitions
 
-    figure: img(src="images/divider-1.svg" width=760 height=42)
-
-## Definitions
+## Geometric Definitions
 
 Before we can write any proofs, we need some common terminology that will make
 it easier to talk about geometric objects. These are not particularly exciting,
@@ -199,9 +199,9 @@ _{button.next-step} Continue_
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-colour="white")
 
 ::: column.grow
-The two shapes on the right basically look the same. They have the same size and
-shape, and we could [turn and slide](target:move) one of them to exactly match
-up with the other. In geometry, we say that the two shapes are
+The two shapes on the right basically look identical. They have the same size
+and shape, and we could [turn and slide](target:move) one of them to exactly
+match up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
 
 The symbol for congruence is `≅`, so we would say that `A ≅ B`.
@@ -318,14 +318,16 @@ _{button.next-step} Continue_
 ::: column.grow
 Greek mathematicians realised that to write formal proofs, you need some sort of
 _starting point_: simple, intuitive statements, that everyone agrees are true.
-These are called [__axioms__](gloss:axiom) (or _postulates_), and can then be
-used to prove more complex results using the rules of logic.
+These are called [__axioms__](gloss:axiom) (or _postulates_).
+
+A key part of mathematics is combining different axioms to prove more complex
+results, using the rules of logic.
 
 The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
 the _father of geometry_, published the five axioms of geometry:
 ::: column(width=220)
 
-    img.shifted(src="images/euclid.jpg" width=220 height=269)
+    img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclid of Alexandria
 :::

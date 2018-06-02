@@ -16,6 +16,10 @@ around us. Almost all plants, animals, and even we humans are symmetric.
     x-media(src="images/starfish.jpg" credit="© Depositphotos / EcoPic" width=200 height=200 lightbox)
 :::
 
+_{button.next-step} Continue_
+
+---
+
 Over time, we’ve imitated nature’s symmetry in art, architecture, technology
 and design. Symmetric shapes and patterns just seems to look _more beautiful_
 than non-symmetric ones.
@@ -960,9 +964,10 @@ Adenovirus (right) are determined by their symmetries.
 
 ## Wallpaper Groups
 
-We have now seen two different kinds of symmetry, that correspond to two
-different transformations: rotations and reflections. But there is also a
-symmetry for the third kind of transformation: [[translations|spins|flips]].
+In the previous sections we have now seen two different kinds of symmetry, that
+correspond to two different transformations: rotations and reflections. But
+there is also a symmetry for the third kind of rigid transformation:
+[[translations|spins|flips]].
 
 ---
 > id: wallpaper-groups-1
@@ -1069,19 +1074,19 @@ reflection](gloss:axis-of-symmetry) in these examples?
         p.caption <strong>Type PMM</strong><br>Perpendicular reflections and rotations of order 2
       div
         img(src="images/wallpapers/p4m.svg" width=360, height=240)
-        p.caption <strong>Type P4M</strong><br>Rotations of order 2 and order 4 (90°), reflections, and glide reflections
+        p.caption <strong>Type P4M</strong><br>Rotations of order 2 and order 4 (90°), reflections, glide reflections
       div
         img(src="images/wallpapers/p6m.svg" width=360, height=240)
-        p.caption <strong>Type P6M</strong><br>Rotations of order 2 and order 6, reflections, and glide reflections
+        p.caption <strong>Type P6M</strong><br>Rotations of order 2 and order 6, reflections, glide reflections
       div
         img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-        p.caption <strong>Type P3M1</strong><br>Rotations of order 3, reflections in three directions, and glide reflections
+        p.caption <strong>Type P3M1</strong><br>Rotations of order 3, reflections in three directions, glide reflections
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections in three directions, and glide reflections
+        p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections in three directions, glide reflections
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Type P4G</strong><br>Rotations of order 2 and order 4, reflections, and glide reflections 
+        p.caption <strong>Type P4G</strong><br>Rotations of order 2 and order 4, reflections, glide reflections 
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
         p.caption <strong>Type CMM</strong><br>Perpendicular reflections and rotations of order 2

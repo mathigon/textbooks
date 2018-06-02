@@ -232,7 +232,7 @@ Now let’s have a look at some fun applications of probability.
 > id: roulette
 > sectionBackground: dark casino
 
-## Analysing Roulette
+## Casino Mathematics
 
     .roulette-wheel
       .layer-2.wheel
@@ -345,9 +345,6 @@ down a sequence of Rs and Bs, and find out how random it really is:
 
 ---
 > id: dealer
-> sectionBackground: dark casino
-
-## Beat the Dealer
 
 ::: column.grow
 While Pearson only analysed previous Roulette results, others tried to use
