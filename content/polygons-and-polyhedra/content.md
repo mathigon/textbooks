@@ -347,7 +347,7 @@ total area of the polygon is
 
 ## Quadrilaterals
 
-In the [previous chapter](/course/triangles-and-trigonometry) we investigated
+In the [previous course](/course/triangles-and-trigonometry) we investigated
 many different properties of triangles. Now lets have a look at quadrilaterals.
 
 A _regular quadrilateral_ is called a [[square|reactangle|equilateral quadrilateral]].
@@ -510,11 +510,12 @@ triangles](target:triangle). And now you can see that [two of the sides](target:
 of the inner quadrilateral are actually [[midsegments|medians|perpendicular bisectors]]
 of these triangles.
 
-{.reveal(when="blank-2")} In the [previous chapter](/course/triangles-and-trigonometry)
-we showed that [midsegments](gloss:triangle-midsegment) of a triangle are always
-parallel its base. In this case, it means that [both these sides](target:parallel)
-are parallel to the diagonal – therefore they must also be
-[[parallel to each other|the same length|perpendicular to each other]].
+{.reveal(when="blank-2")} In the [previous
+course](/course/triangles-and-trigonometry/properties-of-triangles) we showed
+that [midsegments](gloss:triangle-midsegment) of a triangle are always parallel
+its base. In this case, it means that [both these sides](target:parallel) are
+parallel to the diagonal – therefore they must also be [[parallel to each
+other|the same length|perpendicular to each other]].
 
 {.reveal(when="blank-3" delay=2000)} We can do exactly the same with the [second
 diagonal](target:other) of the quadrilateral, to show that both pairs of
@@ -806,7 +807,7 @@ angles](gloss:supplementary-angles) both α and β must be [[90]]°.
 
 ### Area of Quadrilaterals
 
-When calculating the area of triangles in the previous chapter, we used the
+When calculating the area of triangles in the previous course, we used the
 trick of converting it into a [[rectangle|square|pentagon]]. It turns out that
 we can also do that for some quadrilaterals:
 
@@ -1436,7 +1437,7 @@ This equation was discovered by the famous Swiss mathematician [Leonard Euler](b
 It is true for any polyhedron, as long as it doesn’t contain any holes.
 
 If you play around the different polyhedra, like the ones above, you’ll find
-that Euler’s formula always works. In [a following chapters](/course/graphs-and-networks#euler)
+that Euler’s formula always works. In [a later course](/course/graphs-and-networks/eulers-formula)
 you’ll learn how to actually prove it mathematically.
 
 ---
@@ -1444,7 +1445,7 @@ you’ll learn how to actually prove it mathematically.
 
 ## Platonic Solids
 
-At the beginning of this chapter, we defined [regular polygons](gloss:regular-polygon)
+At the beginning of this course we defined [regular polygons](gloss:regular-polygon)
 as particularly “symmetric” polygons, where all sides and angles are them same.
 We can do something similar for polyhedra.
 

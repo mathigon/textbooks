@@ -69,8 +69,8 @@ connected by edges. These graphs are __disconnected__.
 vertices, or vertices which are connected to themselves (loops).
 :::
 
-For simplicity, in this chapter, we will only think about undirected and
-connected graphs without multiple edges and loops.
+For simplicity we will only think about undirected and connected graphs without
+multiple edges and loops in this course
 
 ---
 > id: intro-2
@@ -563,14 +563,14 @@ _{.b.green}V_ = _{.b.red}E_ + [[2]].
     x-media(width=200 height=200 src="images/icosahedron.mp4")
 
 {.caption} __Icosahedron__  
-one of the 5 [Platonic Solids](/course/polygons-and-polyhedra#platonic-solids)  
+one of the 5 [Platonic Solids](/course/polygons-and-polyhedra/platonic-solids)  
 __{.blue}20__ Faces, __{.green}12__ Vertices and __{.red}30__ Edges
 ::: column(width=200)
 
     x-media(width=200 height=200 src="images/rhombi.mp4")
 
 {.caption} __Small Rhombicosidodecahedron__  
-one of the 13 [Archimedean Solids](/course/polygons-and-polyhedra#more-on-polyhedra)  
+one of the 13 [Archimedean Solids](/course/polygons-and-polyhedra/more-on-polyhedra)  
 __{.blue}62__ Faces, __{.green}60__ Vertices and __{.red}120__ Edges
 ::: column(width=200)
 
@@ -930,7 +930,7 @@ Problems](gloss:millennium-prize), each carrying a $1m prize.
 
 ## Graphs in Everyday Life
 
-Throughout this chapter we have seen many applications of graph theory, though
+Throughout this course we have seen many applications of graph theory, though
 some were somehow contrived. It turns out, however, that graphs are at the very
 heart of many objects and concepts in everyday life.
 

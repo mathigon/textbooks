@@ -662,7 +662,7 @@ chance of `6/9 = 2/3` like before.
 ## True Randomness
 
 ::: column.grow
-Most of this chapter relied on the fact that things like coins, or dice, or
+Most of this course relied on the fact that things like coins, or dice, or
 roulette wheels are completely random. However, that is not really true – we
 already learned that Edward Thorpe managed to predict the outcome of roulette.
 

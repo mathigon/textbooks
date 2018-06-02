@@ -20,7 +20,7 @@ alphabet is a example of a code can can be used to express _language_ in the
 form of _letters_.
 
 Sometimes letters are not the best format to express information, and we can use
-other codes. In this chapter we will discover some of these codes as well as the
+other codes. In this course we will discover some of these codes as well as the
 algorithms to encode and decode messages.
 
 ---

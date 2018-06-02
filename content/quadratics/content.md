@@ -465,7 +465,7 @@ As a hand drawn sketch, this shows all the information we need to sketch the qua
 
 ## Features of Quadratic Functions
 
-Remember the skateboards we built at the beginning of this chapter? Some of the
+Remember the skateboards we built at the beginning of this course? Some of the
 first prototypes are ready, so let's build a small skate park to try them out!
 We’ve got 50m of fence, as well as two existing walls of the factory building
 we can use to enclose the area.

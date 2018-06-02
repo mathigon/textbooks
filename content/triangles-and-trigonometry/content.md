@@ -42,7 +42,7 @@ until a century later.
 _{button.next-step} Continue_
 
 {.r.reveal(when="next-1")} You could also try using similar triangles, like we
-did in the [previous chapter](/course/transformations-and-symmetry#similar-triangles).
+did in the [previous course](/course/transformations-and-symmetry/similarity).
 This method requires knowing the [distance](-> .mountain-distance) to the [base
 of the mountain](-> .mountain-base): the point at sea level that directly below
 its summit. We can do this for trees or tall buildings, but for mountains this
@@ -64,7 +64,7 @@ But there are more advanced geometric techniques, which [Radhanath](bio:sikdar)
 used to discover the highest mountain on Earth: it is now called _Mount Everest_.
 His measurement is only a few meters off today’s official height of 8848 meters.
 
-In this chapter you will learn about many different features and properties of
+In this course you will learn about many different features and properties of
 triangles. These will allow you to measure the height of mountains, but they are
 also of fundamental importance in many other areas of mathematics, science and
 engineering.
@@ -809,7 +809,7 @@ the triangle and measure an angle of 50°.
 As you can see, this doesn’t quite work: the third side does not yet link up
 with the vertex A. To fix this, we simply have to shift it: we draw a parallel
 line that goes through A. (You already learned how to construct parallel lines
-in a previous chapter.)
+in a [previous course](/course/euclidean-geometry/geometric-construction).)
 
 Now the two angles at the top are alternate angles, so they must be congruent
 and both 50°. We can erase the incorrect, first line to get our completed AAS
@@ -1324,8 +1324,9 @@ triangle, while the third side is called the __base__.
 ### Equilateral Triangles
 
 We say that a triangle is [__equilateral__](todo:equilateral-triangle) if all of
-its sides  have the same length. You’ve [already seen](/course/euclidean-geometry#equilateral)
-how to construct an equilateral triangle using straight-edge and compass.
+its sides  have the same length. You’ve [already
+seen](/course/euclidean-geometry/geometric-construction) how to construct an
+equilateral triangle using straight-edge and compass.
 
     // Any equilateral triangle is always also isosceles. From the base angle theorem
     // we know that angles opposite congruent sides in a triangle are also congruent.
@@ -1747,8 +1748,8 @@ calculate their colour and texture.
 ---
 > id: applications-3
 
-Many results from this chapter will be useful when studying bigger polygons like
-quadrilaterals or pentagons – which we will do in the next chapter.
+Many results from this course will be useful when studying bigger polygons like
+quadrilaterals or pentagons in the future.
 
 
     // ### Euler Line

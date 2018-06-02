@@ -27,7 +27,7 @@ white.
 
 A surprising observation is that the triangle seems to have two right angles –
 in the two bottom corners. Therefore the sum of all three angles is greater than
-180°, something that we a [proved to be impossible](https://mathigon.org/course/polygons-and-polyhedra#angles-in-triangles).
+180°, something that we already proved to be impossible.
 
 All these things are based on that fact geometry works differently in flat space
 than it does on curved surfaces like a sphere. There are many other kinds of
@@ -262,7 +262,7 @@ similar to the ones above.
   </tr>
 </table>
 
-<p>These projections are called Poincar&eacute; disks, named after the French mathematician Henri Poincar&eacute; (1854 &#8211; 1912). In hyperbolic space all the triangles (left) would have &#8220;straight&#8221; edges as well as the same size and shape. In the projection, space is distorted in a way that makes triangles towards the centre look  bigger and triangles towards the edge look much smaller. There are infinitely many of these triangles, forming an infinite regular <a href="/course/polygons-and-polyhedra#tessellations">tessellation</a> in hyperbolic space.</p>
+<p>These projections are called Poincar&eacute; disks, named after the French mathematician Henri Poincar&eacute; (1854 &#8211; 1912). In hyperbolic space all the triangles (left) would have &#8220;straight&#8221; edges as well as the same size and shape. In the projection, space is distorted in a way that makes triangles towards the centre look  bigger and triangles towards the edge look much smaller. There are infinitely many of these triangles, forming an infinite regular <a href="/course/polygons-and-polyhedra/tessellations">tessellation</a> in hyperbolic space.</p>
 
 <div class="box">
   <div id="hyperboxwrap" style="width:400px; height:400px; margin: 0 auto; position: relative;">
@@ -289,7 +289,7 @@ similar to the ones above.
 
 <h2>Topology</h2>
 
-<p >When defining Metric spaces at the beginning of this chapter, the key concept was that of <em>distance</em>. In contrast, in Topology we don&rsquo;t care about the distance between two points, only whether it is <em>possible</em> to move from one point to the other. Two objects are <em>topologically equivalent</em>, or <em>homeomorphic</em> if we can transform one into the other by continuously bending and stretching it, without having to cut holes or glue boundaries together.</p>
+<p >When defining Metric spaces at the beginning of this course, the key concept was that of <em>distance</em>. In contrast, in Topology we don&rsquo;t care about the distance between two points, only whether it is <em>possible</em> to move from one point to the other. Two objects are <em>topologically equivalent</em>, or <em>homeomorphic</em> if we can transform one into the other by continuously bending and stretching it, without having to cut holes or glue boundaries together.</p>
 
 <p>Many letters in the alphabet are topologically equivalent. Imagine they are made of rubber and can be easily stretched, but not cut or glued together.</p>
 

@@ -61,9 +61,8 @@ He wanted to understand _why_ it is true, and verify that it is _always_ true
 – not just in the few examples he tried.
 
 An argument that logically explains, beyond and doubt, why something must be
-true, is called a __proof__. During the following chapters, you will learn a
-number of geometric techniques, that will eventually allow us to prove _Thales’
-theorem_.
+true, is called a __proof__. In the following courses you will learn a number of
+geometric techniques, that will eventually allow us to prove _Thales’ theorem_.
 
 ---
 > id: points
@@ -632,7 +631,7 @@ is indeed an equilateral triangle._
 
 ### Impossible Constructions
 
-In the following chapters, we will see even more shapes that can be constructed
+In the following courses, we will see even more shapes that can be constructed
 like this. However, there is a limit to Euclidean geometry: some constructions
 are simply impossible using just straight-edge and compass.
 
@@ -966,7 +965,7 @@ make sure it won’t fall over.
 satellites orbiting Earth.
 :::
 
-In the following chapters, we will learn about tools and techniques in geometry
+In the following courses, we will learn about tools and techniques in geometry
 that were discovered by mathematicians over the course of many centuries. We
 will also see how these techniques can be used to solve important problems in
 the real world.

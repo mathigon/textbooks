@@ -295,7 +295,7 @@ major arc.
 Two arcs are congruent if their central angles are congruent. The measure of
 the arc formed by two adjacent arcs is the sum of the measures of the two arcs
 (Arc Addition Postulate). An arc can be measured in degrees or in a linear
-measure (cm, ft, etc.). In this chapter we will use degree measure. The measure
+measure (cm, ft, etc.). In this course we will use degree measure. The measure
 of the minor arc is the same as the measure of the central angle that
 corresponds to it. The measure of the major arc equals to 360∘ minus the
 measure of the minor arc. In order to prevent confusion, major arcs are always

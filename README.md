@@ -22,22 +22,22 @@ Now you can start a local development server by running `npm start`. Wait for
 the assets to be compiled and then open [localhost:5000](http://localhost:5000).
 The server will automatically watch for file changes.
 
-Every chapter is a subfolder in the [content](content) directory. The URL of the
-[Probability chapter](content/probability), for example, will be
+Every course is a subfolder in the [content](content) directory. The URL of the
+[Probability course](content/probability), for example, will be
 [localhost:5000/course/probability](http://localhost:5000/course/probability).
 
 ![](https://mathigon.org/images/unused/divider-2.png)
 
 
-## Chapter Structure
+## Course Structure
 
-Every chapter consists of a few different components:
+Every course consists of a few different components:
 
-* `content.md` contains the source code and metadata for every chapter. It is
+* `content.md` contains the source code and metadata for a course. It is
   written in a [custom extension](https://mathigon.io/markdown) of
   [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-* `functions.js` contains all chapter-specific JavaScript code.
-* `styles.less` contains all chapter-specific styles, in
+* `functions.js` contains all course-specific JavaScript code.
+* `styles.less` contains all course-specific styles, in
   [LESS](http://lesscss.org/) format.
 * `hints.yaml` (optional) contains any messages that can be sent by Mathigon's
   virtual personal tutor.
@@ -45,9 +45,9 @@ Every chapter consists of a few different components:
   tree for this topic.
 
 The [shared directory](content/shared) contains biographies, glossary and assets
-used by multiple chapters.
+used by multiple courses.
 
-Every chapter is divided into multiple steps, each with a unique ID. These IDs
+Every course is divided into multiple steps, each with a unique ID. These IDs
 are used as function names in `functions.js` when exporting the setup code
 for every section.
 
@@ -60,7 +60,7 @@ server. It is used for local testing, but should not usually be modified.
 ## Contributing
 
 We welcome any contributions to Mathigon – from bug fixes and correcting typos
-to creating entirely new chapters. If you find any errors or problems, please
+to creating entirely new courses. If you find any errors or problems, please
 [file an issue](https://github.com/mathigon/textbooks/issues). For larger
 changes, please [contact us](mailto:dev@mathigon.org) before starting your work.
 

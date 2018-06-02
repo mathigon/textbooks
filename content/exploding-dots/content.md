@@ -69,7 +69,7 @@ What do you think?
 
 ---
 
-Of course we'll resolve the question later in this chapter – but if we are
+Of course we'll resolve the question later in this course – but if we are
 honest, this sounds like a dubious problem to start with. There is no way we
 could actually write down infinitely manny 9s: tt would take infinitely long.
 We have to cheat and write an ellipsis (dots) to say “imagine this going on

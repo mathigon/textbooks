@@ -492,7 +492,7 @@ Transformations are an important concept in many parts of mathematics, not just
 geometry. For example, you can transform [_functions_](gloss:function) by
 shifting or rotating their [graphs](gloss:function-graph). Other transformations
 don’t even have a visual representation at all. You’ll learn more about these
-transformations in future chapters, but for now let’s move on to symmetry.
+transformations in future courses, but for now let’s move on to symmetry.
 
 ---
 > id: symmetry
@@ -1445,7 +1445,7 @@ image is [[larger|smaller]] than the original.
 ---
 > id: outro
 
-Triangles are not just useful for measuring distances. In the next chapter we
+Triangles are not just useful for measuring distances. In the next course we
 will learn a lot more about triangles and their properties.
 
 
