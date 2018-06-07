@@ -412,6 +412,7 @@ export function utilities($section) {
       if (!map.drawing || currentUtility === $ut) return;
       map.addPoint(p);
       map.stop();
+      map.p = null;
       $ut.effect('pulse-down');
       if (startUtility.data.type === dataType) {
         last(map.paths).css('stroke','#C00');
