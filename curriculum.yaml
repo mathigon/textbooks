@@ -1,0 +1,769 @@
+# ==============================================================================
+# Mathigon Curriculum Overview
+# ==============================================================================
+
+
+# ------------------------------------------------------------------------------
+# Foundations
+
+# Numbers and Arithmetic
+
+integers:
+  name: The Integers
+  topics:
+    - Whole number arithmetic  # Addition, subtraction, multiplication, division
+    - Negative numbers
+    - The number line
+    - Absolute value
+    - Inverse operations
+    - Order of operations
+    - Associative, commutative and distributive law
+    - Division by zero
+  cc: [6.NS.B.2, 6.NS.C.5]
+  color: 31b304
+
+divisibility-and-primes:
+  name: Divisibility and Primes
+  status: Updated
+  description: Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.
+  topics:
+    - Factors and multiples
+    - Prime numbers and prime factorisationn
+    - LCM and HCF
+    - Divisibility rules
+  cc: [6.NS.B.4]
+  color: 4ab706
+  next: euclidean-geometry
+
+fractions:
+  name: Fractions
+  topics:
+    - Comparing fractions
+    - Simplifying fractions
+    - Addition and subtraction
+    - Multiplication and division
+    - Mixed numbers and improper fractions
+  cc: [6.NS.A.1, 7.NS.A.1, 7.NS.A.2, 7.NS.A.3]
+  color: 63bb08
+
+decimals:
+  name: Decimals
+  topics:
+    - Decimal notation
+    - Decimals on the number line
+    - Addition and subtraction
+    - Multiplication and division
+    - Converting between fractions and decimals
+  cc: [6.NS.B.3, 6.NS.C.6, 7.NS.A.3]
+  color: 7cc00a
+
+percentages-and-ratios:
+  name: Percentages and Ratios
+  topics:
+    - Percentages
+    - Percentage change
+    - Ratio notation
+    - Calculating ratios
+  cc: [6.RP.A.1, 6.RP.A.2, 6.RP.A.3, 7.RP.A.1]
+  color: 94c40c
+
+exponents-and-roots:
+  name: Exponents and Roots
+  topics:
+    - Exponents
+    - Exponent laws
+    - Roots, negative and fractional exponents
+    - Rationalising the denominator
+    - Rational and irrational numbers
+    - Approximating irrational numbers using rationals
+  cc: [6.EE.A.1, 8.EE.A.1, 8.EE.A.2, 8.NS.A.1, 8.NS.A.2, HSN-RN.A.1, HSN-RN.A.2, HSN-RN.B.3]
+  color: adc80e
+
+place-value-and-rounding:
+  name: Place Value and Rounding
+  topics:
+    - Place value
+    - Big and small numbers
+    - Ordering
+    - Rounding integers and decimals
+    - Scientific notation
+    - Different bases
+  cc: [6.NS.C.7, 8.EE.A.3, 8.EE.A.4, HSN.Q.A.3]
+  color: c6cc10
+
+
+# Equations and Functions
+
+proportional-relationships:
+  name: Proportional Relationships
+  topics:
+    - Direct and inverse proportions
+    - Graphs of proportional relationships
+    - Scale factors
+    - Rate of change
+  cc: [7.RP.A.2, 7.RP.A.3, 8.F.B.4, 8.EE.B.5]
+  color: ff941f
+
+intro-to-algebra:
+  name: Introduction to Algebra
+  topics:
+    - Introduction and history
+    - Variables
+    - Writing, manipulating and evaluating algebraic expressions
+    - Modelling using algebra
+  cc: [6.EE.A.2, 6.EE.A.3, 6.EE.A.4, 6.EE.C.9, 7.EE.A.1, 7.EE.A.2, 7.EE.B.4, HSA-SSE.A.1, HSA-CED.A.4]
+  color: f2791a
+
+linear-equations:
+  name: Linear Equations
+  topics:
+    - Equations and identities
+    - Manipulating and rearranging equations
+    - Linear equations in one variable
+    - Solve simultaneous linear equations
+    - Linear inequalities
+  cc: [6.EE.B.5, 6.EE.B.6, 6.EE.B.7, 6.EE.B.8, 7.EE.B.3, 8.EE.C.7, 8.EE.C.8, HSA-REI.A.1, HSA-REI.B.3]
+  color: e65d16
+
+linear-functions:
+  name: Linear Functions
+  topics:
+    - Introduction to functions
+    - Graphs of linear equations
+    - Intercepts and slope
+    - Parallel and perpendicular lines
+  cc: [8.F.A.1, 8.F.A.3, 8.EE.B.6, HSF-IF.C.7.a]
+  color: d94211
+
+
+# Geometry
+
+lines-and-angles:
+  name: Lines and Angles
+  topics:
+    - Points, lines, segments and rays
+    - Parallel and perpendicular lines
+    - Angles and classification (acute, right, obtuse)
+    - Adjacent, opposite, alternate and corresponding angles
+    # - Shortest distance between points and lines
+    - The coordinate plane
+  cc: [6.NS.C.8, 6.G.A.3, 7.G.B.5]
+  color: 1f7aff
+
+2d-shapes:
+  name: 2D Shapes
+  topics:
+    - Area and perimeter of triangles and quadrilaterals
+    - Area and circumference of circles
+    - Sum of angles in polygons
+    - Ruler and compass construction
+    - Pythagoras’ theorem
+    - Congruence and similarity  # transformations
+  cc: [6.G.A.1, 7.G.A.2, 7.G.B.4, 7.G.B.6, 8.G.A.1, 8.G.A.2, 8.G.A.3, 8.G.A.4, 8.G.A.5, 8.G.B.6, 8.G.B.7, 8.G.B.8, HSG.GMD.A.1, HSG.CO.C.10]
+  color: 3559e3
+
+3d-solids:
+  name: 3D Solids
+  topics:
+    - Cuboids, prisms and pyramids
+    - Cones, cylinders and spheres
+    - Cavalieri’s principle
+    - Density and weights
+    - Nets of 3D solids
+    - Cross-sections of 3D objects
+    - Modelling the real world
+  cc: [6.G.A.2, 6.G.A.4, 7.G.A.3, 7.G.B.6, 8.G.C.9, HSG.GMD.A.2, HSG.GMD.A.3, HSG.GMD.B.4, HSG.MG.A.1, HSG.MG.A.2, HSG.MG.A.3]
+  color: 4b39c8
+
+units-and-measuring:
+  name: Units and Measuring
+  topics:
+    - Space, time and weight units
+    - Unit conversion
+    - Measuring angles distances in geometric figures
+    - Scale drawings
+  cc: [7.G.A.1, HSN.Q.A.1, HSN.Q.A.2]
+  color: 6118ac
+
+
+# Probability and Statistics
+
+basic-probability:
+  name: Basic Probability
+  topics:
+    - Introduction
+    - Simple probability experiments
+    - Unions, intersections and Venn diagrams
+    - Independent and mutually exclusive events
+    - Calculating probabilities
+    - Tree diagrams
+  cc: [7.SP.C.5, 7.SP.C.6, 7.SP.C.7, 7.SP.C.8]
+  color: b30469
+
+combinatorics:
+  name: Combinatorics
+  world: Combinatorics
+  topics:
+    - Factorials
+    - Permutations and combinations
+    - Probability
+    - Random Walks
+  cc: [HSS.CP.B.9]
+  color: ab0741
+
+data-and-statistics:
+  name: Data and Statistics
+  topics:
+    # - Questions about data
+    - Mean, meadian and mode
+    - Range, quartiles, standard deviation and outliers
+    - Sampling and estimation
+    - Bar charts, pie charts, scatter plots and frequency tables
+    - Stem-and-leaf plots, box plots and histograms
+    # - Relationships between variables
+    - Misleading statistics
+  cc: [6.SP.A.1, 6.SP.A.2, 6.SP.A.3, 6.SP.B.4, 6.SP.B.5, 7.SP.A.1, 7.SP.A.2, 7.SP.B.3, 7.SP.B.4, HSS-ID.A.1]
+  color: a20918
+
+
+# ------------------------------------------------------------------------------
+# Intermediate
+
+# Algebra
+
+sequences:
+  name: Sequences and Patterns
+  world: Sequences
+  topics:
+    - Triangle, square and cube numbers
+    - Linear and quadratic sequences
+    - Fibonacci numbers
+    - Perfect numbers
+    - Arithmetic and geometric sequences
+    - Recursive equations
+    - Pascal’s triangle
+  cc: [HSF.IF.A.3, HSF.BF.A.2, HSF.LE.A.2]
+  color: ff941f
+
+functions:
+  name: Functions
+  topics:
+    - Function notation  # input and output
+    - Domain and range
+    - Absolute value and piecewise functions
+    - Increasing, decreasing, maxima and minima
+    - Recognising and interpreting functions
+    - Approximate solutions to equations
+    - Graphing two-variable equations
+    - Average rate of change
+    - Area under a curve
+  cc: [8.F.A.2, 8.F.B.5, HSF.IF.A.1, HSF.IF.A.2, HSF.IF.B.4, HSF.IF.B.5, HSF.IF.B.6, HSF.IF.C.7.b, HSF.IF.C.9, HSF.BF.A.1 , HSA.CED.A.2, HSA.REI.D.10, HSA.REI.D.11]
+  color: f7841c
+
+polynomials-and-factorisation:
+  name: Polynomials and Factorisation
+  topics:
+    - Adding, subtracting and multiplying polynomials
+    - Binomials
+    - Difference of squares
+    - Factoring simple polynomials
+  cc: [HSA.SSE.A.2, HSA.SSE.B.3.a]
+  color: f07319
+
+quadratics:
+  name: Quadratics
+  topics:
+    - Solving quadratic equations
+    - Completing the square
+    - The quadratic formula
+    - Parabolae
+    - Standard and vertex form
+    - Transforming parabolae
+  cc: [HSA.REI.B.4, HSA.SSE.B.3.b, HSF.IF.C.7.a, HSF.IF.C.8.a]
+  color: e86317
+
+inequalities-and-systems:
+  name: Inequalities and Systems of Equations
+  topics:
+    - Linear inequalities
+    - Quadratic inequalities
+    - Graphing two-variable inequalities
+    - Systems of equations with two unknowns
+    - Elimination and substitution methods
+  cc: [HSA.CED.A.1, HSA.CED.A.3, HSA.REI.B.3, HSA.REI.C.5, HSA.REI.C.6, HSA.REI.C.7, HSA.REI.D.12]
+  color: e15214
+
+exponential-and-rational-functions:
+  name: Exponential and Rational Functions
+  topics:
+    - Exponents, radicals and rational expressions
+    - Square and cube root equations
+    - Radical functions
+    - Exponential growth and decay
+    - Linear vs exponential models
+  cc: [HSA.REI.A.2, HSA.SSE.B.3.c, HSF.IF.C.8.b, HSF.LE.A.1, HSF.LE.A.2, HSF.LE.A.3, HSF.LE.B.5]
+  color: d94211
+
+
+# Geometry
+
+euclidean-geometry:
+  name: Euclidean Geometry
+  description: Geometry is one of the oldest parts of mathematics – and one of the most useful. Its logical, systematic approach has been copied in many other areas.
+  status: Updated
+  topics:
+    - History and definitions
+    - Congruence
+    - Euclid’s postulates
+    - Straight-edge and compass constructions
+    - Origami
+    - Applications
+    # - Bearings and simple vectors
+  cc: [HSG.CO.A.1, HSG.CO.C.9, HSG.CO.D.12]
+  color: 1f7aff
+  next: transformations-and-symmetry
+
+transformations-and-symmetry:
+  name: Transformations and Symmetry
+  description: Symmetry can be seen everywhere in nature – but it also underlies completely invisible laws of nature. Mathematics can explain why that is the case.
+  status: Updated
+  topics:
+    - Reflections, rotations and translations
+    - Reflectional and rotational symmetry
+    - Symmetry groups
+    - Wallpaper symmetries
+    - Similarity
+  cc: [HSG.CO.A.2, HSG.CO.A.3, HSG.CO.A.4, HSG.CO.A.5, HSG.CO.B.6, HSG.CO.B.7, HSG.CO.B.8, HSG.SRT.A.1, HSG.SRT.A.2, HSG.SRT.A.3, HSG.SRT.B.5]
+  color: 2c66ee
+  next: triangles-and-trigonometry
+
+triangles-and-trigonometry:
+  name: Triangles and Trigonometry
+  description: Triangles are some of the most important shapes in geometry: they have countless interesting properties and appear everywhere in engineering and technology.
+  status: Updated
+  topics:
+    - Triangle properties
+    - Medians, midsegments, incircle and circumcircle
+    - Triangle inequality
+    - Triangle congruence
+    - Pythagoras’ theorem
+    - Isosceles and equilateral triangles
+    - Trigonometry
+    - Sine and cosine rules
+  cc: [HSG.CO.C.10, HSG.C.A.3, HSG.SRT.B.4, HSG.SRT.C.6, HSG.SRT.C.7, HSG.SRT.C.8, HSG.SRT.D.9, HSG.SRT.D.10, HSG.SRT.D.11]
+  color: 3953de
+  next: polygons-and-polyhedra
+
+polygons-and-polyhedra:
+  name: Polygons and Polyhedra
+  description: Geometric shapes are everywhere around us. In this course you will learn about angels, polygons, tessellations, polyhedra and nets.
+  status: Updated
+  topics:
+    - Angles in polygons
+    - Polygons properties
+    - Quadrilaterals
+    - Tessellations
+    - Polyhedra
+    - Euler’s Formula
+    - Platonic and Archimedean solids
+  cc: [HSG-CO.C.11]
+  color: 473fcd
+  next: graphs-and-networks
+
+circles-and-pi:
+  name: Circles and Pi
+  world: Conic_Sections
+  topics:
+    - Circles and Pi
+    - Tangents
+    - Circle theorems
+    - Radians
+    - Sectors and arcs
+    - Inscribed shapes and angles
+    - Spheres, cones and cylinders
+  cc: [HSG.C.A.1, HSG.C.A.2, HSG.C.A.4, HSG.C.B.5, HSF.TF.A.1, HSG.C.B.5, HSG.CO.D.13, HSG.GMD.A.1]
+  color: 542cbd
+
+non-euclidean-geometry:
+  name: Non-Euclidean Geometry
+  world: Dimensions_and_Distortions
+  topics:
+    - Metric spaces
+    - Spherical geometry
+    - Hyperbolic geometry
+    - Projections
+    - Higher dimensions
+    - Topology
+    - Möbius strip and Klein bottle
+  cc: []
+  color: 6118ac
+
+
+# Probability and Discrete Mathematics
+
+probability:
+  name: Probability
+  description: Cards, dice, roulette and game shows: probability is one of the most fun areas of mathematics, full of surprises and real life applications.
+  status: Updated
+  topics:
+    - Introduction
+    - Coins, dice and roulette
+    - Venn diagrams and probability trees  # set operations, combined events
+    - Independent and mutually exclusive events
+    - Conditional probability
+    # - Addition and multiplication rule
+    - The Monty Hall problem
+    - Randomness
+  cc: [HSS.CP.A.2, HSS.CP.A.3, HSS.CP.A.4, HSS.CP.A.5, HSS.CP.B.6, HSS.CP.B.7, HSS.CP.B.8, HSS.MD.B.6]
+  color: b30469
+  next: graphs-and-networks
+
+statistics:
+  name: Statistics
+  topics:
+    - Sampling and estimation
+    - Tables, graphs and histograms
+    - Central tendency and spread
+    - Scatter plots and regression
+    - Correlation vs causation
+    - Comparing models and data sets
+  cc: [HSS.IC.A.1, HSS.IC.A.2, HSS.IC.B.3, HSS.IC.B.4, HSS.IC.B.5, HSS.IC.B.6, HSS.ID.A.2, HSS.ID.A.3, HSS.ID.B.5, HSS.ID.B.6 , HSS.ID.C.8, HSS.ID.C.9]
+  color: b00559
+
+graphs-and-networks:
+  name: Graphs and Networks
+  description: Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks.
+  status: Updated
+  topics:
+    - Introduction
+    - Complete and bipartite graphs
+    - Königsberg bridges
+    - Planar graphs
+    # - Euler’s formula
+    - Map colouring
+    - Travelling salesman problem
+    - Social networks and other applications
+  cc: []
+  color: ac0649
+  next: probability
+
+codes-and-ciphers:
+  name: Codes and Ciphers
+  topics:
+    - Simple codes and Morse
+    - Error detection and correction
+    - One time pads
+    - The Caesar and Vigenère cipher
+    - The Enigma
+    - RSA cryptography
+  cc: []
+  color: a90738
+
+game-theory:
+  name: Game Theory
+  world: Game_Theory
+  topics:
+    - Combinatorial games and Nim
+    - Tree diagrams
+    - Prisoners’ paradox
+    - Games based on chance
+    - The lottery
+  cc: [HSS.MD.B.5.a, HSS.MD.B.5.a]
+  color: a50828
+
+algorithms-and-computing:
+  name: Algorithms and Computing
+  topics:
+    - Introduction to computing
+    - Computational complexity and the O() notation
+    - Sorting algorithms
+    - Linear programming and the simplex algorithm
+    - Data structures
+    - Graphs, trees and networks
+  cc: []
+  color: a20918
+
+
+# ------------------------------------------------------------------------------
+# Advanced
+
+# Algebra and Analysis
+
+advanced-algebra:
+  name: Advanced Algebra
+  topics:
+    - Manipulating rational expressions
+    - Systems of quadratic equations
+    - Linear and quadratic inequalities
+    - Partial fraction expansion
+    - Polynomials
+    - Polynomial division
+    - Factor and remainder theorem
+    - Binomial theorem
+    - Fundamental theorem of algebra
+    - Solve polynomial equations up to quartics
+  cc: [HSA.APR.A.1, HSA.APR.B.2, HSA.APR.B.3, HSA.APR.C.4, HSA.APR.C.5, HSA.APR.D.6, HSA.APR.D.7, HSA.SSE.A.2, HSN.CN.C.9]
+  color: ff941f
+
+advanced-functions:
+  name: Advanced Functions
+  topics:
+    - Combining and composing functions
+    - Inverse functions
+    - Function transformations (shifting and stretching)
+    - Polynomial functions
+    - Rational functions and discontinuities
+    - Limit behaviour of polynomial and rational functions
+    - Graph sketching
+  cc: [HSF.BF.A.1.c, HSF.BF.B.3, HSF.BF.B.4, HSA.APR.B.3, HSF.IF.B.4, HSF.IF.C.7.c, HSF.IF.C.7.d]
+  color: f6801b
+
+exponentials-and-logarithms:
+  name: Exponentials and Logarithms
+  topics:
+    - Exponential equations
+    - Exponential growth and decay
+    - Introduction to Logarithms
+    - The natural logarithm and e
+    - Logarithmic equations
+    - Graphs of exponential and logarithmic functions
+    - Logarithmic scale
+  cc: [HSF.IF.C.8.b, HSF.BF.B.5, HSF.LE.A.4]
+  color: ec6b18
+
+numerical-methods:
+  name: Numerical Methods
+  topics:
+    - Change of sign methods
+    - Interval bisection
+    - Newton­-Raphson method
+  cc: []
+  color: e35715
+
+sequences-and-series:
+  name: Sequences and series
+  topics:
+    - Binomial expansion of (a + bx)^n
+    - Recurrence relations
+    - Arithmetic and geometric series
+    - Sigma notation
+    - Maclaurin series
+    - Convergence and divergence
+  cc: [HSA-SSE.B.4]
+  color: d94211
+
+
+# The Language of Mathematics
+
+logic-sets-and-proof:
+  name: Logic, Sets and Proof
+  world: Axioms_and_Proof
+  topics:
+    - Set theory
+    - Logic and proof
+    - Proof by contradiction
+    - Proof by induction
+  cc: []
+  color: 31b304
+
+imaginary-and-complex-numbers:
+  name: Imaginary and Complex Numbers
+  world: Real_Irrational_Imaginary
+  topics:
+    - Introduction
+    - Complex algebra
+    - The complex plane
+    - Modulus and argument form
+    - Complex conjugates
+    - Quadratic, cubic and quartic equations
+    - De Moivre’s theorem
+    - Euler’s identity
+    - Complex roots of unity
+  cc: [HSN.CN.A.1, HSN.CN.A.2, HSN.CN.A.3, HSN.CN.B.4, HSN.CN.B.5, HSN.CN.B.6, HSN.CN.C.7, HSN.CN.C.8]
+  color: 7cc00a
+
+infinity:
+  name: Infinity
+  world: Infinity
+  topics:
+    - Hilbert’s hotel
+    - Countability
+    - Cantor’s diagonal
+    - The continuum hypothesis
+  cc: []
+  color: c6cc10
+
+
+# Geometry, Trigonometry and Matrices
+
+coordinate-geometry:
+  name: Coordinate Geometry
+  topics:
+    - Equation of lines and circles
+    - Distances and midpoints
+    - Parallel and perpendicular lines
+    - Quadrilaterals and polygons
+  cc: [HSG.GPE.A.1, HSG.GPE.B.4, HSG.GPE.B.5, HSG.GPE.B.6, HSG.GPE.B.7]
+  color: 1f7aff
+
+conic-sections:
+  name: Conic Sections
+  world: Conic_Sections
+  topics:
+    - Equation of a circle
+    - Ellipses
+    - Parabolae and hyperbolae
+    - Kepler’s laws and planetary orbits
+  cc: [HSG.GPE.A.1, HSG.GPE.A.2, HSG.GPE.A.3]
+  color: 2a6af1
+
+trigonometry:
+  name: Trigonometry
+  topics:
+    - Unit circle definitions
+    - Trigonometric functions and their graphs
+    - Amplitude and frequency
+    # - Trigonometric values of special angles
+    - Pythagorean identities
+    # - Sine and cosine rules
+    - Double angle and addition formulae
+    - Secant, cosecant and cotangent
+    - Inverse trigonometric functions
+    - Simple trigonometric equations
+    # - Small angle approximation
+    - Hyperbolic functions
+  cc: [HSF.TF.A.2, HSF.TF.A.3, HSF.TF.A.4, HSF.TF.B.5, HSF.TF.B.6, HSF.TF.B.7, HSF.TF.C.8, HSF.TF.C.9]
+  color: 3559e3
+
+vectors:
+  name: Vectors
+  topics:
+    - Introduction
+    - Magnitude and direction
+    - Vector arithmetic
+    - Position vectors
+    - Scalar product
+    - Equation of lines and planes
+  cc: [HSN.VM.A.1, HSN.VM.A.2, HSN.VM.A.3, HSN.VM.B.4, HSN.VM.B.5]
+  color: 4049d6
+
+matrices:
+  name: Matrices
+  topics:
+    - Introduction
+    - Matrix arithmetic
+    - Matrix multipliction
+    - Matrices as transformations
+    - Determinants
+    - Matrix inverses
+    - Linear systems of equations
+    - Gaussian elimination
+  cc: [HSN.VM.C.6, HSN.VM.C.7, HSN.VM.C.8, HSN.VM.C.9, HSN.VM.C.10, HSN.VM.C.11, HSN.VM.C.12, HSA.REI.C.8, HSA.REI.C.9]
+  color: 4b39c8
+
+parametric-and-polar-coordinates:
+  name: Parametric and Polar Coordinates
+  topics:
+    - Parametric curves
+    - Conversion between polar and cartesian
+    - Sketching polar curves
+    - Area enclosed by a polar curve
+  cc: []
+  color: 5628ba
+
+fractals:
+  name: Fractals
+  world: Fractals
+  topics:
+    - Dimension of fractals
+    - The Sierpinski gasket
+    - Mandelbrot set
+    - Fractals in nature and technology
+  cc: []
+  color: 6118ac
+
+
+# Calculus
+
+differentiation:
+  name: Differentiation
+  topics:
+    - Differentiation as gradient of tangents
+    - Limits and rate of change
+    - Simple derivatives
+    - Product rule, quotient rule and chain rule
+    - Implicit differentiation
+    - Increasing, decreasing, convex and concave functions
+    - Equations of tangents and normals
+    - Stationary points and optimisation problems
+    - Derivatives of inverse functions
+    - Mean value theorem
+    - L’Hôpital’s rule
+  cc: []
+  color: ff941f
+
+integration:
+  name: Integration
+  topics:
+    - Integrals as anti-derivatives
+    - Integrals as areas under a curve
+    - Fundamental theorem of calculus
+    - Trapezium rule
+    - Integration by parts or substitution
+    - Integration using partial fraction expansions
+    - Integration using trigonometric identities
+    - Improper integrals
+    - Arc length
+    - Volumes of revolution
+  cc: []
+  color: ec6b18
+
+differential-equations:
+  name: Differential Equations
+  topics:
+    - First order differential equations
+    - Separable equations
+    - Logistic map
+    - Second order differential equations
+    - Homogenous equations and particular integral
+    - Coupled differential equations
+    - Simple harmonic motion and dampened oscillators
+  cc: []
+  color: d94211
+
+
+# Probability and Statistics
+
+advanced-probability:
+  name: Advanced Probability
+  topics:
+    - Populations and sample spaces
+    - Random variables and distributions
+    - Binomial distribution
+    - Poisson distribution
+    - Normal distribution
+    - Expectation and variance
+    - Law of large numbers
+    - Modelling
+  cc: [HSS.CP.A.1, HSS.MD.A.1, HSS.MD.A.3, HSS.ID.A.4, HSS.MD.A.2, HSS.MD.B.5, HSS.MD.B.7]
+  color: b30469
+
+hypothesis-tests:
+  name: Hypothesis Tests
+  topics:
+    - Designing statistical experiments
+    - Hypothesis tests
+    - Estimating population mean
+  cc: [HSS.ID.A.4]
+  color: ab0741
+
+data-representation:
+  name: Data Representation
+  topics:
+    - Histograms and frequency tables
+    - Scatter plots and regression
+    - Mean and standard deviation
+    - Data collection
+    - Data visualisation
+  cc: [HSS.ID.B.6, HSS.ID.C.7, HSS.ID.C.8, HSS.MD.A.4]
+  color: a20918
