@@ -68,7 +68,6 @@ app.get('/', function(req, res) {
 app.get('/course/:course', function(req, res, next) {
   const course = Courses[req.params.course];
   if (!course) return next();
-  console.log(course.sections);
   res.redirect(`/course/${course.id}/${course.sections[0].id}`);
 });
 
