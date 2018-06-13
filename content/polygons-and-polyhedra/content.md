@@ -348,7 +348,7 @@ total area of the polygon is
 ## Quadrilaterals
 
 In the [previous course](/course/triangles-and-trigonometry) we investigated
-many different properties of triangles. Now lets have a look at quadrilaterals.
+many different properties of triangles. Now let’s have a look at quadrilaterals.
 
 A _regular quadrilateral_ is called a [[square|reactangle|equilateral quadrilateral]].
 All of its sides have the same length, and all of its angles are equal.
@@ -536,7 +536,7 @@ true?
 
     x-picker.list
       .item.md The opposite sides are [congruent](gloss:congruent).
-      .item(data-error="parall-error-1") The internal angles are always less that 90°.
+      .item(data-error="parall-error-1") The internal angles are always less than 90°.
       .item.md(data-error="parall-error-2") The diagonals [bisect](gloss:angle-bisector) the internal angles.
       .item The opposite angles are congruent.
       .item(data-error="parall-error-3") Both diagonals are congruent.
@@ -837,7 +837,7 @@ right](target:triangle-2)? _{span.reveal(when="blank-1")}Therefore the area of a
 {.text-center.reveal(when="blank-1")} Area = __{.i.m-green}base__ × __{.i.m-yellow}height__
 
 {.reveal(when="blank-1" delay=1000)} _Be careful when measuring the height of a
-parallelogram: it is usually not the same as the of the two sides._
+parallelogram: it is usually not the same as one of the two sides._
 :::
 
 ::: tab

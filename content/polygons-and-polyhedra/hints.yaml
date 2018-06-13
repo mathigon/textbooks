@@ -19,7 +19,7 @@ not-regular-3: This is a circle, not a polygon!
 parall-error-1: That’s not true – the angles can have any size, as long as they add up to 360°.
 parall-error-2: This is true if the paralellogram also happens to be a rhombus, but not for _any_ parallelogram.
 parall-error-3: This is correct if the parallelogram happens to be a rectangle, but not for _any_ parallelogram.
-parall-error-4: No: adjaced sides in a parallelogram don’t have to have the same length.
+parall-error-4: No: adjacent sides in a parallelogram don’t have to have the same length.
 
 move-polyhedra: "The [3-dimensional polyhedra](-> #poly1) are interactive. Try rotating them!"
 use-euler: Remember that you can use __Euler’s Formula__ to find the number of faces, vertices or edges.
