@@ -8,18 +8,47 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 
-function loadJSON(path) {
-  try {
-    return fs.readFileSync(path);
-  } catch(e) {
-    return '{}';
+
+// -----------------------------------------------------------------------------
+// Course Class
+
+const COURSE_PATH = path.join(__dirname, 'assets/resources/');
+
+class Course {
+
+  constructor(id) {
+    const data = require(path.join(COURSE_PATH, id, 'data.json'));
+    this.id = id;
+    this.sections = data.sections;
+    this.title = data.title;
   }
+
+  readFile(name) {
+    try {
+      return fs.readFileSync(path.join(COURSE_PATH, this.id, name));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  getNextLink(sectionId) {
+    const sectionIndex = this.sections.findIndex(s => s.id === sectionId);
+    return this.sections[sectionIndex + 1];
+  }
+
+  getJSON(type) { return this.readFile(type + '.json'); }
+  getSection(section) { return this.sections.find(s => s.id === section); }
+  getSectionHTML(section) { return this.readFile(`sections/${section}.html`); }
 }
 
-const coursePath = path.join(__dirname, 'assets/resources/');
-const courseNames = fs.readdirSync(coursePath)
-  .filter(f => fs.statSync(coursePath + '/' + f).isDirectory())
-  .filter(f => f !== 'shared');
+const Courses = {};
+const courseIds = fs.readdirSync(COURSE_PATH).filter(f => f !== 'shared')
+    .filter(f => fs.statSync(COURSE_PATH + '/' + f).isDirectory());
+for (let c of courseIds) Courses[c] = new Course(c);
+
+
+// -----------------------------------------------------------------------------
+// Web Server
 
 const app = express();
 app.set('port', 5000);
@@ -29,26 +58,32 @@ app.set('view engine', 'pug');
 
 app.use(express.static(path.join(__dirname, 'assets')));
 app.use('/resources', express.static(path.join(__dirname, '../content')));
-app.use('/images/emoji', express.static(path.join(__dirname, '../node_modules/emojione-assets/png/64')));
+app.use('/images/emoji', express.static(path.join(
+    __dirname, '../node_modules/emojione-assets/png/64')));
 
 app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/course/:id', function(req, res, next) {
-  let id = req.params.id;
-  if (!courseNames.includes(id)) return next();
-  let data = require(path.join(coursePath, id, 'data.json'));
+app.get('/course/:course', function(req, res, next) {
+  const course = Courses[req.params.course];
+  if (!course) return next();
+  console.log(course.sections);
+  res.redirect(`/course/${course.id}/${course.sections[0].id}`);
+});
 
-  res.render('course', {
-    id,
-    title: data.title,
-    description: data.description,
-    glossary: loadJSON(path.join(coursePath, id, 'glossary.json')),
-    hints: loadJSON(path.join(coursePath, id, 'hints.json')),
-    bios: loadJSON(path.join(coursePath, id, 'bios.json')),
-    html: fs.readFileSync(path.join(coursePath, id, 'content.html'))
-  });
+app.get('/course/:course/:section', function(req, res, next) {
+  const course = Courses[req.params.course];
+  if (!course) return next();
+
+  const section = course.getSection(req.params.section);
+  if (!section) return next();
+
+  res.render('course', {course, section});
+});
+
+app.post('/course/:course/ask', function(req, res) {
+  res.type('txt').send(JSON.stringify([{content: '[NOT IMPLEMENTED]'}]));
 });
 
 app.listen(5000, function() {

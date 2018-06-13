@@ -7,11 +7,11 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    title= title
-    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    title= course.title
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,400italic' rel='stylesheet' type='text/css')
     link(href='/course.css', rel='stylesheet')
-    link(href='/resources/' + id + '/styles.css', rel='stylesheet')
+    link(href='/resources/' + course.id + '/styles.css', rel='stylesheet')
 
   body
     include components.html
@@ -22,38 +22,54 @@ html
         +icon('title', 100, 36)
 
     .body
-      x-chapter(data-id=id)
+      x-course(id=course.id)
+        .sidebar
+          .sidebar-hero(style=`background-image: url(/resources/${course.id}/hero.jpg)`)
+            .sidebar-title= course.title
 
-        x-parallax.hero(background=`/resources/${id}/images/hero.jpg`)
-          .hero-shadow
-          .hero-wrap: .container: .hero-title
-            h1
-              img(width=80, height=80, src=`/images/courses/${id}.png`)
-              | #{title}
-            .subtitle= description
+          .sidebar-body
+            for s in course.sections
+              if s.id === section.id
+                .sidebar-row.on
+                  x-progress(r=10 p=0)
+                  | #{s.title}
+                  .connection
+              else
+                a.sidebar-row(href=`/course/${course.id}/${s.id}`)
+                  x-progress(r=10 p=0)
+                  | #{s.title}
+                  .connection
 
-        article!= html
+        .sidebar-shadow
+        .sidebar-toggle: +icon('progress', 24)
 
-        footer.chapter-footer: .container
-          .completed-box
-            .certificate
-              svg(viewBox="0 0 100 100" class="sketch sketch-scroll", width=100, height=100)
-                use(xlink:href="/sketch.svg#scroll")
-              div
-                p Outstanding!
-                p Chapter completed
-          p.next-banner
-            | To reveal more content, you have to complete all the activities and exercises above.&nbsp;
-            br
-            strong Are you stuck? #[a.skip Skip to the next step]
-            svg(width=72 height=10): path(d="M1 1L36 9L71 1" fill="none" stroke="#aaa" stroke-width=2)
+        article(class=section.background)
+          if section.background
+            .page-background
+          h1= section.title
+          div!= course.getSectionHTML(section.id)
 
-        script(type="application/json")#glossary!= glossary
-        script(type="application/json")#bios!= bios
-        script(type="application/json")#hints!= hints
+          footer
+            p.skip-step
+              | To reveal more content, you have to complete all the activities and exercises above.&nbsp;
+              br
+              strong Are you stuck? #[a.skip Skip to the next step]
+              svg(width=72 height=10): path(d="M1 1L36 9L71 1" fill="none" stroke="#aaa" stroke-width=2)
+
+            - var next = course.getNextLink(section.id)
+            if next
+              a.next-section(href=`/course/${course.id}/${next.id}` title=next.title)
+                .small Next up:
+                .title= next.title
+
+        x-tutor
+
+        script(type="application/json")#glossary!= course.getJSON('glossary')
+        script(type="application/json")#bios!= course.getJSON('bios')
+        script(type="application/json")#hints!= course.getJSON('hints')
         script(type="application/json")#userdata {}
 
     script user = null;
     script(src='/polyfill.js')
-    script(src='/resources/' + id + '/functions.js')
+    script(src='/resources/' + course.id + '/functions.js')
     script(src='/course.js')
