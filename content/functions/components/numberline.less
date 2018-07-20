@@ -1,0 +1,75 @@
+// =============================================================================
+// Numberline Component
+// (c) Mathigon
+// =============================================================================
+
+
+@import "styles/variables";
+
+
+x-numberline {
+  display: block;
+  position: relative;
+  margin: 1.5rem 0;
+
+  .line {
+    position: relative;
+    height: 60px;
+    &.top { border-bottom: 1px solid @light-grey; }
+    &.bottom { border-top: 1px solid @light-grey; }
+  }
+
+  .connections {
+    display: block;
+    height: 60px;
+    width: 100%;
+    path { stroke-width: 4px; fill: none; stroke: black; }
+  }
+
+  .tick {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    border-right: 1px solid @light-grey;
+    &.major { height: 8px; }
+  }
+  .bottom .tick { bottom: auto; top: 0; }
+
+  .label {
+    position: absolute;
+    bottom: 8px;
+    font-size: 14px;
+    color: @light-grey;
+    width: 30px;
+    margin-left: -15px;
+    text-align: center;
+  }
+  .bottom .label { bottom: auto; top: 8px; }
+
+
+  .slider {
+    background: @red;
+    padding: 2px 8px;
+    position: absolute;
+    width: 40px;
+    margin-left: -28px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    z-index: 1;
+  }
+  .bottom .slider { bottom: 0; background: @blue; }
+
+  .slider:after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    background: @red;
+    top: 30px;
+    left: 26px;
+  }
+  .bottom .slider:after { background: @blue; top: -26px; }
+
+
+}

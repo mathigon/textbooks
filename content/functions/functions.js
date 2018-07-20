@@ -1,14 +1,10 @@
 // =============================================================================
-// Circles and Pi
+// Functions
 // (c) Mathigon
 // =============================================================================
 
 
-@import "styles/variables";
+import './components/numberline';
 
-
-.pi-box {
-  height: 300px;
-  overflow: scroll;
-  p { word-wrap: break-word; }
+export function s1(step) {
 }

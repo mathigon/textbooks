@@ -2,8 +2,6 @@
 
 ## Introduction
 
-> id: intro-1
-
 For as long as human beings exist, we have looked to the sky and tried to
 explain life on Earth using the motion of stars, planets and the moon. The
 Greeks were the first to discover that all celestial objects move on regular
@@ -15,51 +13,23 @@ planets are circular.
 
 Circles and Pi are at the very heart of nature. This is because the circle is very often the most efficient shape possible. For example, given a fixed circumference, the circle is the shape which encloses the largest area. <span class="lgrey">Other shapes, like a square, always have a smaller area than a circle with the same circumference.</span> Objects in nature can <em>save energy</em> by becoming circular or spherical &#8211; and nature always wants to minimise the energy used.</p>
 
+---
+> id: digits
 
+Here are the digits of pi:
 
+    .box
+      .box-title: h3 The Digits of Pi
+      .box-body.pi-box
+        p.digits 3.141592653589793238462643383279502884197169399375105…
 
-
-Circles and Pi
-Tangents
-Circle theorems
-Radians
-Sectors and arcs
-Inscribed shapes and angles
-Spheres, cones and cylinders
-
-
-
-
-
-## Parts of Circles 
-
-A circle is the set of all points in the plane that are the same distance away
-from a specific point, called the center. The center of the circle below is
-point A. We call this circle “circle A,” and it is labeled ⨀A.
+Find your birthday in Pi
 
 * Radius: The distance from the center of the circle to its outer rim.
-* Chord: A line segment whose endpoints are on a circle.
 * Diameter: A chord that passes through the center of the circle. The length of
   a diameter is two times the length of a radius.
-* Secant: A line that intersects a circle in two points.
-* Tangent: A line that intersects a circle in exactly one point.
-* Point of Tangency: The point where a tangent line touches the circle.
 
-The tangent ray TP and tangent segment TP are also called tangents.
-Tangent Circles: Two or more circles that intersect at one point.
-Two circles can be tangent to each other in two different ways, either
-internally tangent or externally tangent.
-
-If the circles are not tangent, they can share a tangent line, called a common
-tangent. Common tangents can be internally tangent and externally tangent too.
-Notice that the common internal tangent passes through the space between the
-two circles. Common external tangents stay on the top or bottom of both circles.
-
-Concentric Circles: Two or more circles that have the same center, but different radii.
-Congruent Circles: Two or more circles with the same radius, but different centers.
-
-
-## Circumference and Area
+### Circumerence and Area
 
 Circumference is the distance around a circle. The circumference can also be
 called the perimeter of a circle. However, we use the term circumference for
@@ -84,9 +54,32 @@ A=bh=πr⋅r=πr2. The formula for the area of a circle is A=πr2 where r is the
 radius of the circle.
 
 
+--------------------------------------------------------------------------------
+
+
+## Degrees and Radians
+
+
+--------------------------------------------------------------------------------
 
 
 ## Tangents
+
+* Tangent: A line that intersects a circle in exactly one point.
+* Point of Tangency: The point where a tangent line touches the circle.
+
+The tangent ray TP and tangent segment TP are also called tangents.
+Tangent Circles: Two or more circles that intersect at one point.
+Two circles can be tangent to each other in two different ways, either
+internally tangent or externally tangent.
+
+If the circles are not tangent, they can share a tangent line, called a common
+tangent. Common tangents can be internally tangent and externally tangent too.
+Notice that the common internal tangent passes through the space between the
+two circles. Common external tangents stay on the top or bottom of both circles.
+
+Concentric Circles: Two or more circles that have the same center, but different radii.
+Congruent Circles: Two or more circles with the same radius, but different centers.
 
 The tangent line and the radius drawn to the point of tangency have a unique
 relationship. Let’s investigate it here.
@@ -112,11 +105,17 @@ _Two Tangents Theorem_: If two tangent segments are drawn from the same external
 point, then the segments are equal.
 
 
-## Chords
+--------------------------------------------------------------------------------
+
+
+## Chords, Arcs, Sectors and Segments
 
 A chord is a line segment whose endpoints are on a circle. A diameter is the
 longest chord in a circle. There are several theorems that explore the
 properties of chords.
+
+* Chord: A line segment whose endpoints are on a circle.
+* Secant: A line that intersects a circle in two points.
 
 Chord Theorem #1: In the same circle or congruent circles, minor arcs are
 congruent if and only if their corresponding chords are congruent.
@@ -158,8 +157,70 @@ from any point to a line is the perpendicular line between them. In this
 theorem, the fact that FE=EG means that AB and CD are equidistant to the center
 and AB≅CD.
 
+---
 
-## Circle Theorems
+### Arcs
+
+A central angle is the angle formed by two radii of the circle with its vertex
+at the center of the circle. In the picture below, the central angle would be
+∠BAC. Every central angle divides a circle into two arcs (an arc is a section
+of the circle). In this case the arcs are BCˆ and BDCˆ. Notice the arc above the
+letters. To label an arc, always use this curve above the letters. Do not
+confuse BC and BC.
+
+If D was not on the circle, we would not be able to tell the difference between
+BCˆ and BDCˆ. There are 360∘ in a circle, where a semicircle is half of a
+circle, or 180∘. m∠EFG=180∘, because it is a straight angle, so mEHGˆ=180∘ and
+mEJGˆ=180∘.
+
+Semicircle: An arc that measures 180∘.
+
+Minor Arc: An arc that is less than 180∘.
+
+Major Arc: An arc that is greater than 180∘. Always use 3 letters to label a
+major arc.
+
+Two arcs are congruent if their central angles are congruent. The measure of
+the arc formed by two adjacent arcs is the sum of the measures of the two arcs
+(Arc Addition Postulate). An arc can be measured in degrees or in a linear
+measure (cm, ft, etc.). In this course we will use degree measure. The measure
+of the minor arc is the same as the measure of the central angle that
+corresponds to it. The measure of the major arc equals to 360∘ minus the
+measure of the minor arc. In order to prevent confusion, major arcs are always
+named with three letters; the letters that denote the endpoints of the arc and
+any other point on the major arc. When referring to the measure of an arc,
+always place an “m” in from of the label.
+
+One way to measure arcs is in degrees. This is called the “arc measure” or
+“degree measure.” Arcs can also be measured in length, as a portion of the
+circumference. Arc length is the length of an arc or a portion of a circle’s
+circumference. The arc length is directly related to the degree arc measure.
+
+Arc Length Formula: If d is the diameter or r is the radius, the length of
+ABˆ=mABˆ360∘⋅πd or mABˆ360∘⋅2πr.
+
+---
+
+### Sectors and Segments
+
+A sector of a circle is the area bounded by two radii and the arc between the
+endpoints of the radii.
+
+The area of a sector is a fractional part of the area of the circle, just like
+arc length is a fractional portion of the circumference. The Area of a sector
+is A=mABˆ360∘⋅πr2 where r is the radius and ABˆ is the arc bounding the sector.
+Another way to write the sector formula is A=central angle360∘⋅πr2.
+
+The last part of a circle that we can find the area of is called a segment, not
+to be confused with a line segment. A segment of a circle is the area of a
+circle that is bounded by a chord and the arc with the same endpoints as the
+chord. The area of a segment is Asegment=Asector−A△ABC
+
+
+--------------------------------------------------------------------------------
+
+
+## The Circle Theorems
 
 An inscribed angle is an angle with its vertex is the circle and its sides
 contain chords. The intercepted arc is the arc that is on the interior of the
@@ -254,6 +315,9 @@ means that the product of the outside segment of the secant and the whole is
 equal to the square of the tangent segment.
 
 
+--------------------------------------------------------------------------------
+
+
 ## Inscribed Polygons
 
 An inscribed polygon is a polygon where every vertex is on a circle. Note, that
@@ -269,66 +333,9 @@ formed a linear pair when matched up.
 Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
 and only if the opposite angles are supplementary.
 
----
 
-## Arcs
+--------------------------------------------------------------------------------
 
-A central angle is the angle formed by two radii of the circle with its vertex
-at the center of the circle. In the picture below, the central angle would be
-∠BAC. Every central angle divides a circle into two arcs (an arc is a section
-of the circle). In this case the arcs are BCˆ and BDCˆ. Notice the arc above the
-letters. To label an arc, always use this curve above the letters. Do not
-confuse BC and BC.
-
-If D was not on the circle, we would not be able to tell the difference between
-BCˆ and BDCˆ. There are 360∘ in a circle, where a semicircle is half of a
-circle, or 180∘. m∠EFG=180∘, because it is a straight angle, so mEHGˆ=180∘ and
-mEJGˆ=180∘.
-
-Semicircle: An arc that measures 180∘.
-
-Minor Arc: An arc that is less than 180∘.
-
-Major Arc: An arc that is greater than 180∘. Always use 3 letters to label a
-major arc.
-
-Two arcs are congruent if their central angles are congruent. The measure of
-the arc formed by two adjacent arcs is the sum of the measures of the two arcs
-(Arc Addition Postulate). An arc can be measured in degrees or in a linear
-measure (cm, ft, etc.). In this course we will use degree measure. The measure
-of the minor arc is the same as the measure of the central angle that
-corresponds to it. The measure of the major arc equals to 360∘ minus the
-measure of the minor arc. In order to prevent confusion, major arcs are always
-named with three letters; the letters that denote the endpoints of the arc and
-any other point on the major arc. When referring to the measure of an arc,
-always place an “m” in from of the label.
-
-One way to measure arcs is in degrees. This is called the “arc measure” or
-“degree measure.” Arcs can also be measured in length, as a portion of the
-circumference. Arc length is the length of an arc or a portion of a circle’s
-circumference. The arc length is directly related to the degree arc measure.
-
-Arc Length Formula: If d is the diameter or r is the radius, the length of
-ABˆ=mABˆ360∘⋅πd or mABˆ360∘⋅2πr.
-
-
-## Sectors and Segments
-
-A sector of a circle is the area bounded by two radii and the arc between the
-endpoints of the radii.
-
-The area of a sector is a fractional part of the area of the circle, just like
-arc length is a fractional portion of the circumference. The Area of a sector
-is A=mABˆ360∘⋅πr2 where r is the radius and ABˆ is the arc bounding the sector.
-Another way to write the sector formula is A=central angle360∘⋅πr2.
-
-The last part of a circle that we can find the area of is called a segment, not
-to be confused with a line segment. A segment of a circle is the area of a
-circle that is bounded by a chord and the arc with the same endpoints as the
-chord. The area of a segment is Asegment=Asector−A△ABC
-
-
----
 
 ## Spheres, Cones and Cylinders
 
@@ -357,6 +364,7 @@ then it will have the same volume. This is due to Cavalieri’s Principle, which
 states that if two solids have the same height and the same cross-sectional
 area at every level, then they will have the same volume.
 
+---
 
 ### Spheres
 
@@ -393,6 +401,8 @@ this quantity into the equation above.
 In the picture above, we can see that the height of each pyramid is the radius, so h=r.
 =43r(πr2)=43πr3
 Volume of a Sphere: If a sphere has a radius r, then the volume of a sphere is V=43πr3.
+
+---
 
 ### Cones
 

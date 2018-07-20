@@ -5,7 +5,7 @@
 
 
 import { square } from '@mathigon/core';
-import { Expression, nearlyEquals } from '@mathigon/fermat';
+import { Expression, nearlyEquals, sign } from '@mathigon/fermat';
 
 
 // -----------------------------------------------------------------------------
@@ -58,8 +58,8 @@ function compare(params, paramsExp, type) {
 
   for (let p of properties) {
     let val = p.fn(params);
-    let exp = p.pn(paramsExp);
-    if (!sameSign(val, exp)) {
+    let exp = p.fn(paramsExp);
+    if (sign(val) !== sign(exp)) {
       return {error: p.error(val, exp), hint: p.hint(val, exp)}
     }
   }
@@ -71,7 +71,7 @@ function compare(params, paramsExp, type) {
 // -----------------------------------------------------------------------------
 // Section Functions
 
-export function s1(section) {
+export function s1($step) {
   let correct = new Expression('-30 price^2 + 6800 price - 302000');
 
   let substitutions = {
@@ -80,7 +80,7 @@ export function s1(section) {
     demand: '5000 - 30 price'
   };
 
-  section.$el.$('x-equation').props.validate = function(expr) {
+  $step.$('x-equation').props.validate = function(expr) {
     if (expr.same(correct)) return {final: true};
 
     let substituted = expr.substitute(substitutions);
@@ -88,11 +88,11 @@ export function s1(section) {
   };
 }
 
-export function s3(section) {
-  section.model.set('zeros', zeros);
+export function s3($step) {
+  $step.model.set('zeros', zeros);
 
-  let $actions = section.$el.$$('.action');
-  $actions[0].on('click', function() { section.model.set('a', 1); section.model.set('b', -2); section.model.set('c', 2) });
-  $actions[1].on('click', function() { section.model.set('a', 1); section.model.set('b', 2); section.model.set('c', 1) });
-  $actions[2].on('click', function() { section.model.set('a', 1); section.model.set('b', -4); section.model.set('c', 2) });
+  let $actions = $step.$$('.action');
+  $actions[0].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -2); $step.model.set('c', 2) });
+  $actions[1].on('click', function() { $step.model.set('a', 1); $step.model.set('b', 2); $step.model.set('c', 1) });
+  $actions[2].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -4); $step.model.set('c', 2) });
 }
