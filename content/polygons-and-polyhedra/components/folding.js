@@ -6,7 +6,7 @@
 
 
 /* global THREE */
-import { faceMaterial, drawShape, drawFace, loadTHREE } from './webgl';
+import { faceMaterial, drawShape, drawFace, loadTHREE } from '../../shared/components/webgl';
 import { FoldingData } from './folding-data';
 import { $N, CustomElement, registerElement } from '@mathigon/boost';
 

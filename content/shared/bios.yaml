@@ -94,6 +94,18 @@ fermat:
     the most famous unsolved problems in mathematics – until it was finally
     proven in 1994.
 
+fibonacci:
+  name: Leonardo Pisano (Fibonacci)
+  bio: |
+    __Leonardo Pisano__, commonly known as __Fibonacci__ (1175 – 1250) was an
+    Italian mathematician. He is best known for the number sequence named after
+    him: 1, 1, 2, 3, 5, 8, 13, …
+
+    Fibonacci is also responsible for popularising the Arabic numerals (0, 1, 2, 3,
+    4, …) in Europe, which was still using Roman numberals (I, V, X, D, …) in
+    the 12th century AD. He explained the decimal system in a book called "Liber
+    Abaci", which was a practical textbook for merchants.
+
 fuller:
   name: Buckminster Fuller
   bio: __Richard Buckminster "Bucky" Fuller__ (1895 – 1983) was an American

@@ -6,7 +6,7 @@
 
 
 /* global THREE */
-import { colours, faceMaterial, edgeMaterial, drawShape, loadTHREE } from './webgl';
+import { colours, faceMaterial, edgeMaterial, drawShape, loadTHREE } from '../../shared/components/webgl';
 import { PolyhedronData } from './polyhedron-data';
 import { $N, CustomElement, registerElement, script } from '@mathigon/boost';
 

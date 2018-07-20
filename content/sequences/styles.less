@@ -1,0 +1,156 @@
+// =============================================================================
+// Sequences
+// (c) Mathigon
+// =============================================================================
+
+
+@import "styles/variables";
+
+@orange: mix(@yellow, @red);
+@purple: mix(@red, @blue);
+@teal: mix(@blue, @green);
+@lime: mix(@yellow, @green);
+
+
+.n {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  color: white;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  margin: 12px 1px;
+  font-style: normal;
+
+  &:before, &:after { content: ""; display: block; border: 20px solid transparent; position: absolute; }
+  &:before { border-bottom: 12px solid; border-top: none; top: -12px; }
+  &:after { border-top: 12px solid; border-bottom: none; bottom: -12px; }
+
+  x-blank-input input { min-width: 0; }
+
+  .s-orange & { background: @orange; }
+  .s-orange &:before { border-bottom-color: @orange; }
+  .s-orange &:after { border-top-color: @orange; }
+
+  .s-purple & { background: @purple; }
+  .s-purple &:before { border-bottom-color: @purple; }
+  .s-purple &:after { border-top-color: @purple; }
+
+  .s-teal & { background: @teal; }
+  .s-teal &:before { border-bottom-color: @teal; }
+  .s-teal &:after { border-top-color: @teal; }
+
+  .s-lime & { background: @lime; }
+  .s-lime &:before { border-bottom-color: @lime; }
+  .s-lime &:after { border-top-color: @lime; }
+}
+
+.pattern {
+  display: block;
+  font-size: 80%;
+  color: @text-medium;
+}
+
+
+
+
+
+
+
+x-tetrahedron { display: block; margin: 0 auto; }
+x-tetrahedron canvas { width: 100%; height: auto; }
+
+
+.pascal-grid {
+  width: 760px;
+  padding: 1.5em 0;
+
+  &.sticky { background: white; position: relative; z-index: 1; }
+
+  .r {
+    display: flex;
+    justify-content: center;
+  }
+
+  .c {
+    width: 45px;
+    font-size: 16px;
+    background-color: #ddd;
+    margin: 1px;
+    text-align: center;
+    position: relative;
+    line-height: 24px;
+    border-radius: 3px;
+    transition: color .4s, background .4s, box-shadow .4s;
+    box-shadow: inset 0 -2px rgba(0,0,0,0.2);
+    padding-bottom: 2px;
+  }
+
+  .c:after {
+    content: "+";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: -8px;
+    top: 5px;
+    z-index: 1;
+    background: @grey;
+    color: white;
+    line-height: 14px;
+    text-align: center;
+    border-radius: 7px;
+    transform: scale(0);
+    transition: transform .2s;
+  }
+
+  .c.plus:after { transform: none; }
+
+  x-blank-input { display: block; }
+  x-blank-input .target { display: block; margin: 0 0 -2px 0; height: 26px; }
+  x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
+  x-blank-input.done, x-blank-input.done label { display: inline; line-height: inherit; }
+
+  &.small .c {
+    width: 26px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .c.yellow, .c.orange, .c.red, .c.purple, .c.blue, .c.teal, .c.green {
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0 -2px rgba(0,0,0,0.4);
+  }
+
+  .c.yellow { background-color: @yellow; }
+  .c.orange { background-color: @orange; }
+  .c.red { background-color: @red; }
+  .c.purple { background-color: @purple; }
+  .c.blue { background-color: @blue; }
+  .c.teal { background-color: @teal; }
+  .c.green { background-color: @green; }
+}
+
+.pascal-btn {
+  display: inline-block;
+  margin: 6px 12px -12px -20px;
+  border-radius: 8px;
+  color: #242436;
+  background: currentColor;
+  position: relative;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+
+  &:after {
+    content: "";
+    border-left: 6px currentColor solid;
+    border-top: 12px transparent solid;
+    border-bottom: 12px transparent solid;
+    position: absolute;
+    top: 6px;
+    right: -6px;
+  }
+}
