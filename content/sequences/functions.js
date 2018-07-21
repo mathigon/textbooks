@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import { flatten, delay, list } from '@mathigon/core'
+import { flatten, delay, list, throttle } from '@mathigon/core'
 import { isPrime } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
@@ -40,35 +40,88 @@ export function squareNumbers($step) {
 
 // -----------------------------------------------------------------------------
 
+export function goldenSpiral($step) {
+  const $squares = $step.$$('svg rect').slice(2);
+  const $lines = $step.$$('svg path');
 
+  for (let $e of [...$squares, ...$lines]) $e.hide();
 
+  $step.$slides.on('next', (x) => {
+    if (x <= 3) {
+      $squares[x - 1].enter('fade');
+    } else if (x === 4) {
+      $squares[3].enter('fade');
+      $squares[4].enter('fade', 400, 1000);
+      $squares[5].enter('fade', 400, 2000);
+    } else if (x === 5) {
+      for (let $l of $lines) $l.enter('draw', 2000);
+    }
+  });
 
+  $step.$slides.on('back', (x) => {
+    if (x <= 2) {
+      $squares[x].exit('fade');
+    } else if (x === 3) {
+      $squares[3].exit('fade');
+      $squares[4].exit('fade');
+      $squares[5].exit('fade');
+    } else if (x === 4) {
+      for (let $l of $lines) $l.exit('draw', 1000);
+    }
+  });
+}
 
-
-
-
-export function spiral($step) {
+export function sunflowerGrowing($step) {
+  const $petals = $step.$$('svg path');
+  const $bulb = $step.$('svg circle');
   const $slider = $step.$('x-slider');
-  const $svg = $step.$('.fib-spiral');
-  const $circles = list(100).map(() => $N('circle', {r: 3}, $svg));
+  const count = $petals.length;  // Should be the same as $slider.steps - 1;
 
   $slider.on('move', (x) => {
-    for (let i=0; i<100; ++i) {
-      let t = i * (x / $slider.steps * Math.PI * 2);
-      let r = Math.sqrt(i) * 20;
+    for (let i = 0; i <= x; ++i) {
+      let t = 3.883222 * i;
+      let r = Math.sqrt((x - i)/count);
+      let cx = r * 70 * Math.cos(t);
+      let cy = r * 70 * Math.sin(t);
+      $petals[i].transform = `translate(${cx}px,${cy}px) scale(${1.5 + r}) rotate(${t}rad)`;
+    }
+
+    for (let i = x + 1; i < count; ++i) {
+      let t = 3.883222 * i;
+      $petals[i].transform = `scale(0.05) rotate(${t}rad)`;
+    }
+
+    $bulb.transform = `scale(${0.2 + 0.8 * x/count})`
+  });
+
+  $slider.set(0);  // TODO <- fix
+}
+
+export function sunflowerSpiral($step) {
+  const count = 500;
+
+  const $slider = $step.$('x-slider');
+  const $svg = $step.$('.fib-spiral');
+  const $circles = list(count).map(() => $N('circle', {r: 3}, $svg));
+
+  $slider.on('move', (x) => {
+    for (let i = 0; i < count; ++i) {
+      let t = i * Math.PI * 2 * x / $slider.steps;
+      let r = Math.sqrt(i) / Math.sqrt(count) * 200;
       $circles[i].setCenter({
         x: 200 + r * Math.cos(t),
         y: 200 + r * Math.sin(t)
       });
     }
   });
+
+  $slider.set(0.6180339 * $slider.steps);
 }
 
+// -----------------------------------------------------------------------------
 
 function colourPascal($rows, $cells, fn) {
-  // TODO Animate this function cell-by-cell
   for (let $c of $cells) $c.setAttr('class', 'c');
-
   let t = 0;
 
   for (let i = 0; i < $rows.length; ++i) {

@@ -52,15 +52,40 @@
   color: @text-medium;
 }
 
-
-
-
-
-
+// -----------------------------------------------------------------------------
 
 x-tetrahedron { display: block; margin: 0 auto; }
 x-tetrahedron canvas { width: 100%; height: auto; }
 
+// -----------------------------------------------------------------------------
+
+.stage svg {
+  margin: 0 auto 32px;
+}
+
+.spirals {
+  padding-bottom: 100%;
+  position: relative;
+  background-size: cover;
+  .clockwise, .counterclockwise { width: 100%; height: 100%; top: 0; position: absolute; background-size: cover; }
+}
+
+
+.petals circle { fill: darken(@green, 25%); }
+
+.petals path {
+  transition: transform .3s;
+  transform-origin: 0 center;
+  fill: @green;
+  stroke: darken(@green, 10%);
+  // vector-effect: non-scaling-stroke;
+}
+
+.fib-spiral {
+  margin: 1.5em auto 0;
+}
+
+// -----------------------------------------------------------------------------
 
 .pascal-grid {
   width: 760px;

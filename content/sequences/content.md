@@ -74,16 +74,25 @@ Pattern: “Multiply the previous number by 2, to get the next one.”_
 
 ---
 
-{.todo} There are different ways in which we can describe the pattern underlying a sequence mathematically. First let us represent every term in a sequence by a variable: let us call the nth term in the sequence xn. The first term of the sequence is represented by x1, the second term by x2, and so on. The x’s are simply place holders until we have calculated their actual value.
+When referring to sequences like this in mathematics, we often represent every
+term by a variable: the nth term in the sequence is `x_n`:
 
-{.todo} In general, you describe a sequence with subscripts that are used to index the terms. The kth term in the sequence is ak.
+    p.text-center.s-orange
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        span.math.n
+          msub
+            mi x
+            mn= i
+        | ,&nbsp;
+      | …
 
-{.todo} a1,a2,a3,a4,…,ak,…
+Just like in equations, these variables are simply placeholders, until we have
+calculated their value.
 
 ---
 > id: triangle-numbers
 
-### Geometric Sequences
+### Triangle and Square Numbers
 
 All of the sequences above could be continued forever, up to infinity. But
 sequences in mathematics don't always have to be numbers. Here is a sequence
@@ -167,13 +176,21 @@ The next square numbers will be [[64]], [[81]], [[100]], and so on.
 
 ---
 
-{.todo} explicit equation
+For the triangle numbers we found a recursive equation that tells you the next
+term of the sequence in terms of its previous ones. For square numbers we can do
+even better – an equation that tells you the nth term directly, without first
+having to calculate all the previous ones:
+
+{.text-center} `x_n = n^2`
+
+Equations like this are called __explicit equations__. Later in this course,
+you will learn how to convert between recursive and explicit equations.
 
 ---
 
 ### Action Sequence Photography
 
-Remember the ley words we have defined so far: [terms](gloss:sequence-term) and
+Remember the key words we have defined so far: [terms](gloss:sequence-term) and
 [sequences](gloss:sequence), [recursive equations](gloss:sequence-recursive) and
 [explicit equations](gloss:sequence-explicit). They will appear again and again
 throughout this course.
@@ -378,7 +395,9 @@ For each of these geometric sequences, find the eighth term in the sequence.
 a) 1, 2, 4,...
 
 
+
 --------------------------------------------------------------------------------
+
 
 
 ## Famous Sequences
@@ -526,101 +545,312 @@ Most amazing of all is Conway’s Cosmological Theorem: no matter what the start
 {.todo} TODO
 
 
+
 --------------------------------------------------------------------------------
-> id: spiral
+
 
 
 ## Fibonacci Numbers
 
-In the previous sections we have seen sequences made from numbers as well as
-geometric shapes.
+Imagine that you've received a pair of baby rabbits, one male and one female.
+They are very special rabbits, because they never die, and the female one gives
+birth to a new pair of rabbits every month (always one male and one female.)
 
     x-slideshow
       .stage(slot="stage"): include svg/rabbits.svg
-      .legend(slot="legend") Let's start with just one pair of baby rabbits.
-      .legend(slot="legend") After one month, the rabbits have grown up and start mating.
-      .legend(slot="legend") After another month, they will give birth to their first X.
+      .legend(slot="legend") In the first month, the rabbits are very small and can't do much, but they grow very quickly.
+      .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
+      .legend(slot="legend") – and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
+      .legend(slot="legend") In the next month, your pair of rabbits will give birth to another couple. Meanwhile, the first pair of kids have grown up. You now have three pairs in total.
+      .legend(slot="legend") In the fourth month, your original pair of rabbits will give birth to a new pair of kids. At the same time, their first pair of kids is now old enough to give birth to grandkids. You now have five pairs of rabbits.
+      .legend(slot="legend") Can you see what's going on? In the fifth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
 
-Here is a Fibonacci Spiral
+---
+
+Can you detect a pattern in this sequence of numbers? If we keep on going like
+this, how many rabbits will there be after a year?
+
+{.todo} The number of rabbits in a particular month is [[sum of the two previous
+numbers|twice the previous number]].
+In other words, the recurrence relation for the sequence is
+In every month, the number of rabbits (xn) is the number of rabbits in the previous month (xn-1), plus the
+In other words, add the _previous two_ terms in the sequence, to get the next
+one. The [recursive equation](gloss:sequence-recursive) is
+xn = xn-1 + xn-2
+
+Can you calculate the number of rabbits after a few more months?
+
+{.text-center.s-orange} _{.n}1_, _{.n}1_, _{.n}2_, _{.n}3_, _{.n}5_, _{.n}8_,
+_{.n}[[13]]_, _{.n}[[21]]_, _{.n}[[34]]_, _{.n}[[55]]_, _{.n}[[89]]_,
+_{.n}[[144]]_, …
+
+So in the 12th month, you'll have 144 pairs of rabbits!
+
+    figure: x-media(src="images/rabbits.jpg" width=600 height=230)
+
+---
+
+These numbers are called the __Fibonacci Sequence__, named after the Italian
+mathematician [Leonardo Fibonacci](bio:fibonacci).
+
+When Fibonacci was born in XXX, most people in Europe still used the Roman
+numeral system when writing numbers: IVX. Fibonacci's father was a merchant,
+and together they travelled to Northern Africa as well as the Middle East. It is
+there that Fibonacci first heard about the Arabic numeral system, which is
+essentially what we use today: 0, 1, 2, 3, …
+
+When he returned to Italy, Fibonacci wrote a book called _Liber Abaci_ (Latin
+for "The Book of Calculations"). In it, he first introduced the new Arabic
+numerals to European merchants, and they were an immediate success.
+
+On one of the pages of his book, he also investigated the breeding patterns of
+rabbits, and that's why the Fibonacci numbers are named after him.
+
+    figure
+      x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
+      p.caption Pages from Fibonacci's _Liber Abaci_
+
+---
+
+Of course, the Fibonacci numbers are not _actually_ how rabbits populate in real
+life. Usually, rabbits have more than two offspring per month, and we haven't accounted for
+rabbits dying eventually.
+
+But it turns out that there are many other places where Fibonacci numbers _do_
+appear in nature. One example are the spirals in sunflowers or pine codes:
+
+::: column(width=320)
+
+    .spirals(style="background-image: url(images/pinecone.jpg)")
+      .clockwise(style="background-image: url(images/pinecone-1.jpg)")
+      .counterclockwise(style="background-image: url(images/pinecone-2.jpg)")
+
+::: column(width=320)
+
+    .spirals(style="background-image: url(images/sunflower.jpg)")
+      .clockwise(style="background-image: url(images/sunflower-1.jpg)")
+      .counterclockwise(style="background-image: url(images/sunflower-2.jpg)")
+
+:::
+
+{.todo} graphic always consecutive Fibonacci numbers
+
+---
+
+Similarly, if you count the number of petals in a flower, you will often find
+that it is a Fibonacci number. Next time you're outside, have a look!
+
+{.todo} Bees
+
+---
+> id: golden-spiral
+
+### The Golden Ratio
+
+Like for many of the sequences before, there is a geometric representation of the
+Fibonacci numbers:
+
+    x-slideshow
+      .stage(slot="stage"): include svg/spiral.svg
+      .legend(slot="legend") We start with two small squares of size 1.
+      .legend(slot="legend") Next, we add a new square of size 2, to form a large rectangle.
+      .legend(slot="legend") Next, we add a square of size 3, to form an even larger rectangle.
+      .legend(slot="legend") The next square has size 5. Can you see that we're recreating the Fibonacci numbers?
+      .legend(slot="legend") If we continue adding squares, they will have size 8, 13, 21, and so on.
+      .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start "spiraling" outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
+
+---
+> id: golden
+
+{.todo} the proportions of the rectangle are consecutive fibonacci numbers
+
+::: column(width=80 parent="padded-thin")
+
+    include svg/golden-1.svg
+
+{.text-center} `2/1 = 2`
+::: column(width=80)
+
+    include svg/golden-2.svg
+
+{.text-center} `3/2 = 1.5`
+::: column(width=80)
+
+    include svg/golden-3.svg
+
+{.text-center} `5/3 = 1.666…`
+::: column(width=80)
+
+    include svg/golden-4.svg
+
+{.text-center} `8/5 = 1.6`
+::: column(width=80)
+
+    include svg/golden-5.svg
+
+{.text-center} `13/8 = 1.625`
+::: column(width=80)
+
+    include svg/golden-6.svg
+
+{.text-center} `21/13 = 1.615…`
+::: column(width=20)
+
+{.text-center} …
+
+::: column(width=80)
+
+    include svg/golden-7.svg
+
+{.text-center} `phi = 1.618…`
+:::
+
+If we divide consecutive Fibonacci numbers, you can see that their ratio seems
+to get closer and closer to some specific number around 1.6. This number is
+called the [__Golden Ratio__](gloss:golden-ratio), and represented by the Greek
+letter p ("phi). The corresponding rectangle that has these proportions is
+called the __Golden Rectangle__.
+
+Even through all of the ratios in the sequence are rational numbers, the Golden
+Ratio is __irrational__ – just like Pi, `sqrt(2)` and other numbers you've seen
+before.
+
+Many people believe that the Golden Ratio is particularly beautiful and
+aesthetically pleasing, which is why it seems to appear everywhere in art and
+architecture:
+
+{.todo} It has a value of $(\sqrt 5 + 1)/2$ ( approximately 1.618034) and is often represented by a Greek letter Phi, written as $\Phi $. The closely related value which we write as $\phi $, a lowercase phi, is just the decimal part of Phi, namely 0.618034... ($(\sqrt 5 - 1)/2$), the number that accounts for the spirals in the seedheads and the arrangements of leaves in many plants. But why do we see phi in so many plants?
+{.todo} The number Phi (1.618034...), and therefore also phi (0.618034...), are irrational numbers: they can't be written as a simple fraction. 
+
+{.todo} examples
+
+---
+> id: sunflower-growing
+
+### Fibonacci Spirals
+
+The golden ratio also explains why Fibonacci numbers appear in Nature, like the
+sunflower and pinecone you saw above.
+
+::: column.grow
+
+Both these plants grow outwards from the center – a part of the plant called the
+_meristem_. As new seeds, leaves or petals are added, the push the existing ones
+bit further outside.
+
+As you move the slider on the right, notice how every new leaf is added at a
+slightly different rotation than the previous one. The angle between consecutive
+leafs is always constant.
+
+::: column(width=300)
+
+    svg.petals(width=300 height=300)
+      circle(r=60 cx=150 cy=150)
+      - var i = 0
+      while i < 40
+        path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
+        - i += 1
+
+    x-slider(steps=39)
+
+:::
+
+---
+> id: sunflower-spiral
+
+Picking a suitable angle is very important for flowers: they want all leaves
+(or seeds) to be approximately equally spaces. That way, they all get a similar
+amount of sunlight and nutrients, which is much more efficient than crowing
+all leaves in a few specific areas.
+
+In the diagram below you can explore what the flower will end up looking like
+for different angles.
 
     svg.fib-spiral(width=400 height=400 viewBox="0 0 400 400")
     x-slider(steps=1000)
 
----
+{.todo} If the angle is 0, all seeds will grow in a single long row away from the
+center. If the angle is `1/2` of a full a rotation, the seeds will alternate
+between two separate "arms" that move away from the center.
 
-Of course, this is not _actually_ how rabbits populate in real life. Usually,
-rabbits have more than two offspring per month, and we haven't accounted for
-rabbits dying eventually.
+{.todo} Something similar happens for any other simple fraction of a turn: seeds
+grow in spiral arms that leave a lot of space between them (the number of arms
+is the denominator of the fraction). So the best value for the turns between
+seeds will be an irrational number. But not just any irrational number will do.
+For example, the seed head created with pi turns per seed seems to have seven
+spiralling arms of seeds. This is because 22/7 is a very good rational
+approximation of pi. What is needed in order not to waste space is an irrational
+number that is not well approximated by a rational number.
+ 
+{.todo} It turns out that the Golden Ratio Phi is the "most irrational" of all
+irrational numbers. If the rotation is `1/phi` of a full circle, we always get
+the most optimal distribution of seeds, leaves or petals.
 
-But as you can see, the number of rabbits per month form a new kind of sequence:
+It is important to remember that nature doesn’t know about Fibonacci numbers,
+and nature can't solve equations to calculate the golden ratio. But over the
+course of millions of years, plants had plenty of time to try out different
+angles – and to discover the best one.
 
-{.text-center} 1,  1,  2,  3,  5,  8,  13,  21,  34,  55,  89, …
-
-Think about those numbers and try to find another pattern. Every number is the
-[[sum of the two previous numbers|twice the previous number]], so the next
-number in the sequence would be [[144]].
-
----
-
-These numbers are called __Fibonacci numbers__, named after the Italian
-mathematician [Leonardo Fibonacci](bio:fibonacci). We start with two 1s, and
-every new number is the sum of the two previous numbers.
-
-It is quite easy to write down the [recurrence relation](gloss:recurrence) for
-the Fibonacci numbers is `x_n` = [[x_(n–1) + x_(n–2)|abc]].
-
----
-
-### The Golden Ratio
-
-{.todo} While adding more squares, the proportions of the rectangle become closer to a very special shape: the Golden rectangle. The ratio of the sides of the golden rectangle is called the Golden ratio. It is the limit of the ratio of consecutive Fibonacci Numbers.
-
-{.todo} You can see that these ratios get closer and closer to a particular number around 1.6. This is the Golden ratio and its actual value is 1.61803… Some believe that this ratio is particularly pleasing to humans, and that it underlies the proportions of many buildings, animals or plants.
-
-{.todo} It is important to remember that nature doesn’t know about Fibonacci numbers or the Golden ratio. Plants and animal populations always grow in the most efficient way, and in some cases it results in these regular patterns.
+Plants and animals always want grow in the most efficient way, and that is why
+nature if full of regular, mathematical patterns.
 
 ---
 
-### Fibonacci Spirals
+### Fibonacci Puzzles
 
-{.todo} As before, there is a geometric representation of this sequence. We start with two squares of size 1. Along one edge, we add a new square of size 2, and then another square of size 3. We keep adding squares to the longest edge of the rectangle as shown below. Since the edge of every new square is the sum of the edges of the two previous squares, we get the Fibonacci numbers. If we trace a curve along the corners of these squares, we can make a spiral. This spiral approximates the Golden Spiral. Many similar logarithmic spirals appear in nature, for example Nautilus shells.
+There are many other puzzles, patterns and applications related to Fibonacci
+numbers. Here are a few examples, which you can try to solve yourself:
 
-{.todo} Golden Rectangle	Golden Spiral	Nautilus Shell
+Fibonacci Factors
 
-{.todo} SPIRALS IN PLANTS
+Where do the even numbers come in the sequence? 
+Is there a pattern? Why? 
+Which Fibonacci numbers are divisible by 3? 
+Solution: https://nrich.maths.org/2046/solution
 
-{.todo} Spiral generator / Ben  Sparks
+Try adding together any three consecutive Fibonacci numbers.
+What do you notice? Can you explain it?
 
----
+Choose any four consecutive Fibonacci numbers. Add the first and last, and divide by two.
+What do you notice? Can you explain it?
 
-### Lucas Numbers
+Add together any six consecutive Fibonacci numbers and divide by four.
+What do you notice? Can you explain it?
 
-{.todo} TODO
+It's a long way to the top
+
+Every time I come home I have to climb a flight of stairs. When I'm feeling energetic I sometimes take two steps at a time. This gives me a number of ways to climb the stairs. For example, if there are ten steps, I could climb them taking five leaps of two, giving the pattern
+2, 2, 2, 2, 2.
+Or I could only use a leap of two at the beginning and the end, giving the patter
+2, 1, 1, 1, 1, 1, 1, 2.
+How many ways are there all together of climbing the ten steps?
+Can you find a formula to express the number of ways there of climbing $n$ steps using leaps of one and two?
+
+    // Solution
+    // Let’s write $S(n)$ for the number of ways to climb a flight of stairs with $n$ steps. There are two possibilities for starting my climb: I could start it using a single step or a leap of two steps. If it’s the former, then there are $n-1$ steps left to climb, which I can do in $S(n-1)$ ways. If it’s the latter, there are $n-2$ steps left to climb, which I can do in $S(n-2)$ ways. This means that
+    // 
+    // \[ S(n) = S(n-1) + S(n-2). \]
+    // This is a recurrence relation. If I know $S(1)$ and $S(2)$ then I can work out $S(3)$, which I can then use to work out $S(4)$, then $S(5)$, etc.
+    // 
+    // Clearly $S(1) = 1.$ There is only one way I can climb up one step and that’s using, well, one step. It’s also easy to see that $S(2) = 2.$ I can climb up two steps using two single steps or one leap of two. This gives
+    // 
+    // \[ S(3) = S(2)+S(1) = 2+1 = 3, \]
+    // \[ S(4) = S(3)+S(2) = 3+2 = 5, \]
+    // \[ S(5) = S(4)+S(3) = 5+3 = 8, \]
+    // \[ S(6) = S(5)+S(4) = 8+5 = 13, \]
+    // and so on. This sequence of numbers might start to look familiar. It's the Fibonacci sequence, which happens to be defined via a recurrence relation in exactly the same way as we defined it here: each number is the sum of the two previous ones. (To be totally accurate, the Fibonacci sequence actually has the first two terms being equal to 1 and 1, rather than 1 and 2, so what we have here is the sequence displaced by a term.)
+    // 
+    // Carrying on with the calculations we see
+    // 
+    // \[ S(7) = S(6)+S(5) = 13+8 = 21, \]
+    // \[ S(8) = S(7)+S(6) = 21+13 = 34, \]
+    // \[ S(9) = S(8)+S(7) = 34+21 = 55, \]
+    // \[ S(10) = S(9)+S(8) = 55+34 = 89. \]
+    // So there are 89 ways of climbing a flight of ten steps using steps of one and two!
 
 
-  Fibonacci is one of the most famous names in mathematics. This would come as a surprise to Leonardo Pisano, the mathematician we now know by that name. And he might have been equally surprised that he has been immortalised in the famous sequence – 0, 1, 1, 2, 3, 5, 8, 13, ... – rather than for what is considered his far greater mathematical achievement – helping to popularise our modern number system in the Latin-speaking world.
+    // TODO Lucas Numbers
 
-  The Roman Empire left Europe with the Roman numeral system which we still see, amongst other places, in the copyright notices after films and TV programmes (2013 is MMXIII). The Roman numerals were not displaced until the mid 13th Century AD, and Leonardo Pisano's book, Liber Abaci (which means "The Book of Calculations"), was one of the first Western books to describe their eventual replacement.
-
-  Leonardo Pisano was born late in the twelfth century in Pisa, Italy: Pisano in Italian indicated that he was from Pisa, in the same way Mancunian indicates that I am from Manchester. His father was a merchant called Guglielmo Bonaccio and it's because of his father's name that Leonardo Pisano became known as Fibonacci. Centuries later, when scholars were studying the hand written copies of Liber Abaci (as it was published before printing was invented), they misinterpreted part of the title – "filius Bonacci" meaning "son of Bonaccio" – as his surname, and Fibonacci was born.
-
-
-The problem with rabbits
-
-One of the mathematical problems Fibonacci investigated in Liber Abaci was about how fast rabbits could breed in ideal circumstances. Suppose a newly-born pair of rabbits, one male, one female, are put in a field. Rabbits are able to mate at the age of one month so that at the end of its second month a female can produce another pair of rabbits. Suppose that our rabbits never die and that the female always produces one new pair (one male, one female) every month from the second month on. The puzzle that Fibonacci posed was... How many pairs will there be in one year?
-
-At the end of the first month, they mate, but there is still only 1 pair.
-At the end of the second month the female produces a new pair, so now there are 2 pairs of rabbits.
-At the end of the third month, the original female produces a second pair, making 3 pairs in all.
-At the end of the fourth month, the original female has produced yet another new pair, the female born two months ago produced her first pair also, making 5 pairs.
-
-Now imagine that there are $x_ n$ pairs of rabbits after $n$ months. The number of pairs in month n+1 will be $x_ n$ (in this problem, rabbits never die) plus the number of new pairs born. But new pairs are only born to pairs at least 1 month old, so there will be $x_{n-1}$ new pairs. So we have
-
-x_n+1 = x_ n + x_n-1
-
-which is simply the rule for generating the Fibonacci numbers: add the last two to get the next. Following this through you'll find that after 12 months (or 1 year), there will be 233 pairs of rabbits.
-
-    //- Bees are better
     //- The rabbit problem is obviously very contrived, but the Fibonacci sequence does occur in real populations. Honeybees provide an example. In a colony of honeybees there is one special female called the queen. The other females are worker bees who, unlike the queen bee, produce no eggs. The male bees do no work and are called drone bees.
     //- Males are produced by the queen's unfertilised eggs, so male bees only have a mother but no father. All the females are produced when the queen has mated with a male and so have two parents. Females usually end up as worker bees but some are fed with a special substance called royal jelly which makes them grow into queens ready to go off to start a new colony when the bees form a swarm and leave their home (a hive) in search of a place to build a new nest. So female bees have two parents, a male and a female whereas male bees have just one parent, a female.
     //- Let's look at the family tree of a male drone bee.
@@ -636,108 +866,14 @@ which is simply the rule for generating the Fibonacci numbers: add the last two 
     //- of a MALE bee	1	2	3	5	8
     //- of a FEMALE bee	2	3	5	8	13
 
-Spirals and shells
-
-They also appear in the beautiful shapes of shells. To see this, let's build up a picture starting with two small squares of size 1 next to each other. On top of both of these draw a square of size 2 (=1+1). We can now draw a new square – touching both one of the unit squares and the latest square of side 2 – so having sides 3 units long; and then another touching both the 2-square and the 3-square (which has sides of 5 units). We can continue adding squares around the picture, each new square having a side which is as long as the sum of the latest two square's sides. This set of rectangles whose sides are two successive Fibonacci numbers in length and which are composed of squares with sides which are Fibonacci numbers, we will call the Fibonacci Rectangles.
-
-If we now draw a quarter of a circle in each square, we can build up a sort of spiral. The spiral is not a true mathematical spiral (since it is made up of fragments which are parts of circles and does not go on getting smaller and smaller) but it is a good approximation to a kind of spiral that does appear often in nature. Such spirals are seen in the shape of shells of snails and sea shells. The image below of a cross-section of a nautilus shell shows the spiral curve of the shell and the internal chambers that the animal using it adds on as it grows.
-
-Fibonacci numbers also appear in plants and flowers. Some plants branch in such a way that they always have a Fibonacci number of growing points. Flowers often have a Fibonacci number of petals, daisies can have 34, 55 or even as many as 89 petals!
-
-A particularly beautiful appearance of fibonacci numbers is in the spirals of seeds in a seed head. The next time you see a sunflower, look at the arrangements of the seeds at its centre. They appear to be spiralling outwards both to the left and the right.
-
-At the edge of this picture of a sunflower, if you count those curves of seeds spiralling to the left as you go outwards, there are 55 spirals. At the same point there are 34 spirals of seeds spiralling to the right. A little further towards the centre and you can count 34 spirals to the left and 21 spirals to the right. The pair of numbers (counting spirals curving left and curving right) are (almost always) neighbours in the Fibonacci series.
-
-The same happens in many seed and flower heads in nature. The reason seems to be that this arrangement forms an optimal packing of the seeds so that, no matter how large the seed head, they are uniformly packed at any stage, all the seeds being the same size, no crowding in the centre and not too sparse at the edges.
-
-Nature seems to use the same pattern to arrange petals around the edge of a flower and to place leaves round a stem. What is more, all of these maintain their efficiency as the plant continues to grow and that's a lot to ask of a single process! So just how do plants grow to maintain this optimality of design?
-
-Golden growth
-
-Botanists have shown that plants grow from a single tiny group of cells right at the tip of any growing plant, called the meristem. There is a separate meristem at the end of each branch or twig where new cells are formed. Once formed, they grow in size, but new cells are only formed at such growing points. Cells earlier down the stem expand and so the growing point rises. Also, these cells grow in a spiral fashion: it's as if the meristem turns by an angle, produces a new cell, turns again by the same angle, produces a new cell, and so on. These cells may then become a seed, a new leaf, a new branch, or perhaps on a flower become petals and stamens.
-
-The amazing thing is that a single fixed angle of rotation can produce the optimal design no matter how big the plant grows. The principle that a single angle produces uniform packings no matter how much growth appears was suspected as early as last century but only proved mathematically in 1993 by Stéphane Douady and Yves Couder, two French mathematicians. Making 0.618 of a turn before producing a new seed (or leaf, petal, etc) produces the optimal packing of seeds no matter the size of the seed head. But where does this magic number 0.618 come from?
-
-The golden ratio
-
-If we take the ratio of two successive numbers in Fibonacci's series, dividing each by the number before it, we will find the following series of numbers:
-
-1/1 = 1, 2/1 = 2, 3/2 = 1.5, 5/3 = 1.666..., 8/5 = 1.6, 13/8 = 1.625, 21/13 = 1.61538...
-
-If you plot a graph of these values you'll see that they seem to be tending to a limit, which we call the golden ratio (also known as the golden number and golden section).
-
-It has a value of $(\sqrt 5 + 1)/2$ ( approximately 1.618034) and is often represented by a Greek letter Phi, written as $\Phi $. The closely related value which we write as $\phi $, a lowercase phi, is just the decimal part of Phi, namely 0.618034... ($(\sqrt 5 - 1)/2$), the number that accounts for the spirals in the seedheads and the arrangements of leaves in many plants. But why do we see phi in so many plants?
-
-The number Phi (1.618034...), and therefore also phi (0.618034...), are irrational numbers: they can't be written as a simple fraction. Let's see what would happen if the meristem in a seed head instead turned by some simpler number, for example the fraction 1/2. After two turns through half of a circle we would be back to where the first seed was produced. Over time, turning by half a turn between seeds would produce a seed head with two arms radiating from a central point, leaving lots of wasted space.
-
-Something similar happens for any other simple fraction of a turn: seeds grow in spiral arms that leave a lot of space between them (the number of arms is the denominator of the fraction). So the best value for the turns between seeds will be an irrational number. But not just any irrational number will do. For example, the seed head created with pi turns per seed seems to have seven spiralling arms of seeds. This is because 22/7 is a very good rational approximation of pi.
-
-What is needed in order not to waste space is an irrational number that is not well approximated by a rational number. And it turns out that Phi (1.618034...) and its decimal part phi (0.618034...) are the "most irrational" of all irrational numbers. (You can find out why in Chaos in number land: the secret life of continued fractions.) This is why a turn of Phi gives the optimal packing of seeds and leaves in plants. It also explains why the Fibonacci numbers appear in the leaf arrangements and as the number of spirals in seedheads. Adjacent Fibonacci numbers give the best approximations of the golden ratio. They take turns at being the denominator of the approximations and define the number or spirals as the seed heads increase in size.
-
-How did so many plants discover this beautiful and useful number, Phi? Obviously not from solving the maths as Fibonacci did. Instead we assume that, just as the ratio of successive Fibonacci numbers eventually settles on the golden ratio, evolution gradually settled on the right number too. The legacy of Leonardo Pisano, aka Fibonacci, lies in the heart of every flower, as well as in the heart of our number system.
-
-
-Fibonacci Factors
-
-Where do the even numbers come in the sequence? 
-Is there a pattern? Why? 
-Which Fibonacci numbers are divisible by 3? 
-solution: https://nrich.maths.org/2046/solution
-
-Try adding together any three consecutive Fibonacci numbers.
-What do you notice? Can you explain it?
-
-Choose any four consecutive Fibonacci numbers. Add the first and last, and divide by two.
-What do you notice? Can you explain it?
-
-Add together any six consecutive Fibonacci numbers and divide by four.
-What do you notice? Can you explain it?
-
-Can you discover any Fibonacci Surprises of your own?
-
-
-Puzzle - It's a long way to the top
-
-Every time I come home I have to climb a flight of stairs. When I'm feeling energetic I sometimes take two steps at a time. This gives me a number of ways to climb the stairs. For example, if there are ten steps, I could climb them taking five leaps of two, giving the pattern
-
-2, 2, 2, 2, 2.
-
-Or I could only use a leap of two at the beginning and the end, giving the patter
-
-2, 1, 1, 1, 1, 1, 1, 2.
-
-How many ways are there all together of climbing the ten steps?
-
-Being a mathematician, I don’t have ten steps of course, but I have $n$ steps. Can you find a formula to express the number of ways there of climbing $n$ steps using leaps of one and two?
-
-Solution
-Let’s write $S(n)$ for the number of ways to climb a flight of stairs with $n$ steps. There are two possibilities for starting my climb: I could start it using a single step or a leap of two steps. If it’s the former, then there are $n-1$ steps left to climb, which I can do in $S(n-1)$ ways. If it’s the latter, there are $n-2$ steps left to climb, which I can do in $S(n-2)$ ways. This means that
-
-\[ S(n) = S(n-1) + S(n-2). \]
-This is a recurrence relation. If I know $S(1)$ and $S(2)$ then I can work out $S(3)$, which I can then use to work out $S(4)$, then $S(5)$, etc.
-
-Clearly $S(1) = 1.$ There is only one way I can climb up one step and that’s using, well, one step. It’s also easy to see that $S(2) = 2.$ I can climb up two steps using two single steps or one leap of two. This gives
-
-\[ S(3) = S(2)+S(1) = 2+1 = 3, \]
-\[ S(4) = S(3)+S(2) = 3+2 = 5, \]
-\[ S(5) = S(4)+S(3) = 5+3 = 8, \]
-\[ S(6) = S(5)+S(4) = 8+5 = 13, \]
-and so on. This sequence of numbers might start to look familiar. It's the Fibonacci sequence, which happens to be defined via a recurrence relation in exactly the same way as we defined it here: each number is the sum of the two previous ones. (To be totally accurate, the Fibonacci sequence actually has the first two terms being equal to 1 and 1, rather than 1 and 2, so what we have here is the sequence displaced by a term.)
-
-Carrying on with the calculations we see
-
-\[ S(7) = S(6)+S(5) = 13+8 = 21, \]
-\[ S(8) = S(7)+S(6) = 21+13 = 34, \]
-\[ S(9) = S(8)+S(7) = 34+21 = 55, \]
-\[ S(10) = S(9)+S(8) = 55+34 = 89. \]
-So there are 89 ways of climbing a flight of ten steps using steps of one and two!
 
 
 --------------------------------------------------------------------------------
 
-> id: pascal-intro
+
 
 ## Pascal’s Triangle
+> id: pascal-intro
 
 Below you can see a number pyramid that is created using a simple pattern: it
 starts with a single '1' in first top, and every following cells is the sum of

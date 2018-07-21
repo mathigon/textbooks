@@ -77,6 +77,21 @@ irrational:
     example, 0.333333… = `1/3` is _rational_, but `sqrt(2)` = 1.41421… cannot be
     expressed as a fraction and is _irrational_
 
+sequence:
+  title: Sequence
+  text: TODO
+
+sequence-term:
+  title: Terms of a Sequence
+  text: TODO
+
+sequence-recursive:
+  title: Recursie Equation
+  text: TODO
+
+sequence-explicit:
+  title: Explicit Equation
+  text: TODO
 
 
 # ==============================================================================
