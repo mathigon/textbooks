@@ -9,11 +9,11 @@ were “invented” by mathematicians. Symmetry, on the other hand, is everywher
 around us. Almost all plants, animals, and even we humans are symmetric.
 
 ::: column(width=200)
-    x-media(src="images/butterfly.jpg" credit="© Depositphotos / okiepony" width=200 height=200 lightbox)
+    x-media(src="images/butterfly.jpg" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/lion.jpg" credit="© Depositphotos / DeborahKolb" width=200 height=200 lightbox)
+    x-media(src="images/lion.jpg" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/starfish.jpg" credit="© Depositphotos / EcoPic" width=200 height=200 lightbox)
+    x-media(src="images/starfish.jpg" width=200 height=200 lightbox)
 :::
 
 _{button.next-step} Continue_

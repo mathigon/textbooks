@@ -699,7 +699,7 @@ the Kite is the only one that can also be [concave](gloss:concave): if it is
 shaped like a dart or arrow:
 ::: column(width=320)
 
-    x-media(src="images/kites.jpg" credit="© Depositphotos / chagall")
+    x-media(src="images/kites.jpg")
 
 :::
 
@@ -1012,28 +1012,34 @@ without any gaps or overlaps. Patterns like that are called
 [__tessellations__](gloss:tessellation).
 
 ::: column(width=200)
-    x-media(lightbox, credit="© Depositphotos / Irochka", src="images/tessellations/honeycomb.jpg", width=200 height=200)
-        
+
+    x-media(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
+
 {.caption} [[Hexagonal|Triangular|Quadratic]] honeycomb
 ::: column(width=200)
-    x-media(lightbox, credit="© Depositphotos / Tiukay", src="images/tessellations/snake.jpg", width=200 height=200)
-        
+
+    x-media(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
+
 {.caption} Sinaloan Milk Snake skin
 ::: column(width=200)
-    x-media(lightbox, credit="© Depositphotos / SuradechK", src="images/tessellations/leaf.jpg", width=200 height=200)
-        
+
+    x-media(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
+
 {.caption} Cellular structure of leafs
 ::: column(width=200)
+
     x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
-        
+
 {.caption} Basalt columns at Giant’s Causeway in Northern Ireland
 ::: column(width=200)
-    x-media(lightbox, credit="© Depositphotos / Kostia777", src="images/tessellations/pineapple.jpg", width=200 height=200)
-        
+
+    x-media(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
+
 {.caption} Pineapple skin
 ::: column(width=200)
-    x-media(lightbox, credit="© Depositphotos / cbenjasuwan", src="images/tessellations/tortoise.jpg", width=200 height=200)
-        
+
+    x-media(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
+
 {.caption} Shell of a tortoise
 :::
 
@@ -1044,22 +1050,34 @@ Humans have copied many of these natural patterns in art, architecture and
 technology – from ancient Rome to the present. Here are a few examples:
 
 ::: column(width=200)
-    x-media(lightbox, credit="© Depositphotos / kelifamily", src="images/tessellations/pavement.jpg", width="200", height="200")
+
+    x-media(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
+
 {.caption} [[Rectangular|Quadratic|Hexagonal]] pavement pattern
 ::: column(width=200)
+
     x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
+
 {.caption} Greenhouse at the Eden Project in England
 ::: column(width=200)
+
     x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
+
 {.caption} Mosaic at Alhambra
 ::: column(width=200)
+
     x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
+
 {.caption} [[Triangular|Hexagonal|Rectangular]] roof at the British Museum in London
 ::: column(width=200)
+
     x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
+
 {.caption} Cellular tessellation pavilion in Sydney
 ::: column(width=200)
+
     x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
+
 {.caption} _Study of Regular Division of the Plane with Reptiles_, M. C. Escher
 :::
 
@@ -1869,7 +1887,7 @@ When they crack or shatter, you can see these shapes on a larger scale.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="© Depositphotos, anyaberkut", width="180", height="180", src="images/louvre.jpg")
+    x-media(lightbox width="180", height="180", src="images/louvre.jpg")
     p.caption Louvre museum in Paris
 
 ::: column.grow
@@ -1880,12 +1898,12 @@ support large roofs and heavy bridges.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="© Depositphotos / ssuaphoto", width="180", height="180", src="images/football.jpg")
+    x-media(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Football
     
 ::: column(width=180)
 
-    x-media(lightbox, credit="© Depositphotos / blackregis2", width="180", height="180", src="images/dice.jpg")
+    x-media(lightbox width="180", height="180", src="images/dice.jpg")
     p.caption Polygonal role-playing dice
 
 ::: column.grow

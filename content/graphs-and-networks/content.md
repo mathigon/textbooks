@@ -23,22 +23,22 @@ applications:
 
     x-gallery(slide-width="300")
       div
-        x-media(src="images/network1.jpg" credit="© Depositphotos, chungking" width=260 height=260 lightbox)
+        x-media(src="images/network1.jpg" width=260 height=260 lightbox)
         p.caption Road and Rail Networks
       div
-        x-media(src="images/network6.jpg" credit="© Depositphotos, anterovium" width=260 height=260 lightbox)
+        x-media(src="images/network6.jpg" width=260 height=260 lightbox)
         p.caption Integrated Circuits
       div
-        x-media(src="images/network3.jpg" credit="© Depositphotos, Klanneke" width=260 height=260 lightbox)
+        x-media(src="images/network3.jpg" width=260 height=260 lightbox)
         p.caption Supply Chains
       div
-        x-media(src="images/network2.jpg" credit="© Depositphotos, Paha_L" width=260 height=260 lightbox)
+        x-media(src="images/network2.jpg" width=260 height=260 lightbox)
         p.caption Friendships
       div
-        x-media(src="images/network7.jpg" credit="© Depositphotos, Leonardi" width=260 height=260 lightbox)
+        x-media(src="images/network7.jpg" width=260 height=260 lightbox)
         p.caption Neural Connections
       div
-        x-media(src="images/network4.jpg" credit="© Depositphotos, kubais" width=260 height=260 lightbox)
+        x-media(src="images/network4.jpg" width=260 height=260 lightbox)
         p.caption The Internet
 
 ---
@@ -362,7 +362,7 @@ at the foundation of many other geographic problems, such as finding directions
 between two locations. We will discover more of these applications later.
 ::: column(width=240)
 
-    x-media(lightbox credit="© Depositphotos, DmitryRukhlenko" width=240 height=260 src="images/prague.jpg")
+    x-media(lightbox width=240 height=260 src="images/prague.jpg")
 
 :::
 
@@ -381,7 +381,7 @@ Unfortunately, due to the city’s layout, the pipes or cables for every product
 are not allowed to cross.
 ::: column(width=300)
 
-    x-media(credit="© Depositphotos, Grossinge" width=300 height=169 src="images/factory.mp4")
+    x-media(width=300 height=169 src="images/factory.mp4")
 
 :::
 
@@ -598,7 +598,7 @@ Some simple “maps”, like a chessboard, only need two colours (black and whit
 but most complex maps need more.
 ::: column(width=240 style="margin-top: -10px")
 
-    x-media.shifted(credit="© Depositphotos, elenathewise" src="images/globe.jpg" width=240 height=320)
+    x-media.shifted(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -681,7 +681,7 @@ and two vertices must have a different colour if they are connected by an edge.
 
 ::: column(width=240 parent="right")
 
-    x-media(lightbox credit="© Depositphotos, sergeyussr" width=240 height=320 src="images/england-counties.jpg")
+    x-media(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
 In 1852, the botany student [Francis Guthrie](bio:guthrie) had to colour a map
@@ -757,7 +757,7 @@ one. Now we want to find paths which visit _every vertex_ exactly once. These
 paths are called __Hamiltonian cycles__.
 ::: column(width=260)
 
-    x-media(credit="© Depositphotos, ilfede" src="images/truck.jpg" width=260 height=280)
+    x-media(src="images/truck.jpg" width=260 height=280)
 
 :::
 
@@ -807,7 +807,7 @@ possible paths. Once you have hundreds or thousands of vertices, trying all
 possible paths becomes impossible, even using powerful computers.
 ::: column(width=220)
 
-    x-media(lightbox src="images/microchip.jpg" width=210 height=365 credit="© Depositphotos, claudiodivizia")
+    x-media(lightbox src="images/microchip.jpg" width=210 height=365)
 
 :::
 
@@ -858,7 +858,6 @@ It turns out that, long before computers even existed, Nature had found a clever
 way to find optimal paths between different locations: in ant colonies.
 
     x-parallax.full-width(background="images/ants.jpg")
-      .credit © Depositphotos / dovapi
 
 Ants want to find the shortest possible routes between their nest and possible
 food sources. They can communicate with each other through chemicals which they
@@ -889,7 +888,7 @@ leave along their trail, and which other ants can follow.
 
 ::: column(width=220 parent="right")
 
-    x-media(style="margin-top: 5px" credit="© Depositphotos, lifeonwhite" src="images/ant.jpg" width=220 height=220)
+    x-media(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
 
 ::: column.grow
 Ant Colony System (ACS) algorithms try to replicate this behaviour on computers,
@@ -983,7 +982,7 @@ guarantee a reliable service, for example by finding diversions when a
 particular connection is busy.
 ::: column(width=220)
 
-    x-media(lightbox src="images/phone.jpg" width=220 height=166 credit="© Depositphotos, Asiana")
+    x-media(lightbox src="images/phone.jpg" width=220 height=166)
 
 :::
 
@@ -1011,7 +1010,7 @@ points.
 
 ::: column(width=280)
 
-    x-media(lightbox credit="© Depositphotos, Paha_L" src="images/congestion.jpg" width=280 height=170)
+    x-media(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
 In the future, __Intelligent Transportation Systems__ will reduce congestion and
@@ -1027,7 +1026,6 @@ travel faster.
 This image shows the network of commercial airline flights across northern Europe.
 
     x-parallax.full-width(background="images/flights.jpg")
-      .credit © Depositphotos, Antartis
 
 ---
 > id: applications-7
@@ -1036,35 +1034,35 @@ There are countless other graphs in science, engineering or everyday life:
 
 ::: column(width=200)
 
-    x-media(lightbox credit="© Depositphotos, digiart" src="images/molecules.jpg" width=200 height=200)
+    x-media(lightbox src="images/molecules.jpg" width=200 height=200)
 
 {.caption} The links between atoms in __molecules__ and crystal grids form a graph.
 ::: column(width=200)
 
-    x-media(lightbox credit="© Depositphotos, angellodeco" src="images/epidemic.jpg" width=200 height=200)
+    x-media(lightbox src="images/epidemic.jpg" width=200 height=200)
 
 {.caption} The __spread of diseases__ and epidemics can be modelled using a network.
 ::: column(width=200)
 
-    x-media(lightbox credit="© Depositphotos, CoreyFord" src="images/evolution.jpg" width=200 height=200)
+    x-media(lightbox src="images/evolution.jpg" width=200 height=200)
 
 {.caption} In Biology, the __evolutionary trees__ that show the ancestry of
 species form a graph.
 ::: column(width=200)
 
-    x-media(lightbox credit="© Depositphotos, anterovium" src="images/network6.jpg" width=200 height=200)
+    x-media(lightbox src="images/network6.jpg" width=200 height=200)
 
 {.caption} The different components of __electric circuits__ and computer chips
 form a network.
 ::: column(width=200)
 
-    x-media(lightbox credit="© Depositphotos, franckito" src="images/letters.jpg" width=200 height=200)
+    x-media(lightbox src="images/letters.jpg" width=200 height=200)
 
 {.caption} The grammatical structure of __languages__ can be modelled using
 graphs, for example to create translation algorithms.
 ::: column(width=200)
 
-    x-media(lightbox credit="© Depositphotos, Yermek" src="images/finance.jpg" width=200 height=200)
+    x-media(lightbox src="images/finance.jpg" width=200 height=200)
 
 {.caption} Graphs also have many applications in __probability__, __game
 theory__ and __financial mathematics__.
@@ -1102,7 +1100,7 @@ other? For example, the distance between friends is [[1]], the distance between
 friends of friends is [[2]], and so on.
 ::: column(width=200)
 
-    x-media(credit="© Depositphotos, Mikado767" src="images/facebook-like.png" width=200 height=200)
+    x-media(src="images/facebook-like.png" width=200 height=200)
 
 :::
 

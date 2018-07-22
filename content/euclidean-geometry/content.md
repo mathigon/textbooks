@@ -54,7 +54,7 @@ fundamental way? He was so awed by his discovery that, according to legend, he
 sacrificed an entire ox to thank the gods.
 
     figure
-      x-media(src="images/temple.svg" width=400 height=170 credit="© Depositphotos")
+      x-media(src="images/temple.svg" width=400 height=170)
 
 However, simply _observing_ a relationship like this was not enough for Thales.
 He wanted to understand _why_ it is true, and verify that it is _always_ true
@@ -936,7 +936,7 @@ skyscrapers or sending satellites into space.
 perfectly regular pyramids, that align to patterns in the stars.
 ::: column(width=200)
 
-    x-media(src="images/sextant.jpg" credit="© Depositphotos / scorpp" width=200 height=200)
+    x-media(src="images/sextant.jpg" width=200 height=200)
 
 {.caption} Sailors use sextants to determine their location while at sea, using 
 angles formed by the sun or stars.
@@ -947,13 +947,13 @@ angles formed by the sun or stars.
 {.caption} Geometry is needed to create realistic video game or movie graphics.
 ::: column(width=200)
 
-    x-media(src="images/plane.jpg" credit="© Depositphotos / nmcandre" width=200 height=200)
+    x-media(src="images/plane.jpg" width=200 height=200)
 
 {.caption} Geometry can help design and test new airplane models, making them
 safer and more efficient.
 ::: column(width=200)
 
-    x-media(src="images/cctv.jpg" lightbox credit="© Depositphotos / junrong" width=200 height=200)
+    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
 
 {.caption} Geometry was key when designing this skyscraper in Beijing – and to
 make sure it won’t fall over.

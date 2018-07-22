@@ -934,7 +934,7 @@ cicadas in Illinois and Iowa only appear every 17 years. But there are no
 cicadas with 12, 14, 15 or 16 year cycles.
 ::: column(width=360)
 
-    x-media(credit="© Depositphotos" width=360 height=240 src="images/cicadas.jpg")
+    x-media(width=360 height=240 src="images/cicadas.jpg")
 
 :::
 
