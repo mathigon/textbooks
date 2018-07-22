@@ -15,9 +15,9 @@ one specific aspect: _finding patterns_. Here are a few examples
 
 In the last decade, police departments around the world have started to rely
 more any more on mathematics. Special algorithms can use the data of past
-crimes to predict when and where crimes might occur in the future. The _PredPol_
-system (short for "predictive policing"), for example, helped decrease the crime
-rate in parts of Los Angeles by 12%!
+crimes to predict when and where crimes might occur in the future. For example,
+the _PredPol_ system (short for "predictive policing"), helped decrease the
+crime rate in parts of Los Angeles by 12%!
 
 ::: column(width=160)
 
@@ -40,8 +40,8 @@ complex TODO
 
 :::
 
-While scientists and bankers use highly complex algorithms to find these
-patterns, we are going to start with something much simpler.
+Scientists and bankers use highly complex algorithms to find these patterns, but
+we are going to start with something a bit simpler.
 
 ---
 > id: definitions
@@ -129,15 +129,11 @@ that consists of geometric shapes – triangles of increasing size:
 At every step, we are adding one more row to the previous triangle. The length
 of the new rows is also increasing by one every time.
 
-{.todo} An equation that expresses xn in terms of previous values is called a recurrence relation, and these are very useful for calculating the terms of the sequence step by step. However if we were only interested in the 100th term of the sequence, we would have to calculate all terms up to 100. It would be much easier if we had an equation that tells us any term of the sequence, without calculating all the previous ones.
-
-{.todo} Let us think again about the multiples of 3. Above we found the recurrence relation xn = xn–1 + 3. But it is clear that the nth term of the sequence has to be 3 × n. For example, the 4th term is 3 × 4 = 12. An expression for xn = 3n which only depends on n and not any other x’s is called a closed form solution. It has the advantage that we can quickly find very large terms of the sequence without having to calculate all previous terms. The 55th term, for example, is 3 × 55 = 165.
+{.todo} An equation that expresses xn in terms of previous values is called a recurrence relation, and these are very useful for calculating the terms of the sequence step by step. 
 
 {.todo} A recursive definition must always have two parts, the base case(the starting number) and the recursive case (the pattern to get more terms). Note that the base case may include more than one statement as is the case with the Fibonacci sequence.
 
 {.todo} A recursive rule for a sequence is a formula which tells us how to progress from one term to the next in a sequence. Generally, the variable n is used to represent the term number. In other words, n takes on the values 1 (first term), 2 (second term), 3 (third term), etc. The variable, an represents the nth term and an−1 represents the term preceding an.
-
-{.todo} Recursive rules can help us generate multiple sequential terms in a sequence but are not helpful in determining a particular single term. Consider the sequence: 3,5,7,…,an. The recursive rule for this sequence is an=an−1+2. What if we want to find the 100th term? The recursive rule only allows us to find a term in the sequence if we know the previous term. An nth term or general rule, however, will allow us to find the 100th term by replacing n in the formula with 100.
 
 ---
 > id: square-numbers
@@ -186,6 +182,8 @@ having to calculate all the previous ones:
 Equations like this are called __explicit equations__. Later in this course,
 you will learn how to convert between recursive and explicit equations.
 
+{.todo} Recursive rules can help us generate multiple sequential terms in a sequence but are not helpful in determining a particular single term. Consider the sequence: 3,5,7,…,an. The recursive rule for this sequence is an=an−1+2. What if we want to find the 100th term? The recursive rule only allows us to find a term in the sequence if we know the previous term. An nth term or general rule, however, will allow us to find the 100th term by replacing n in the formula with 100. However if we were only interested in the 100th term of the sequence, we would have to calculate all terms up to 100. It would be much easier if we had an equation that tells us any term of the sequence, without calculating all the previous ones.
+
 ---
 
 ### Action Sequence Photography
@@ -195,22 +193,49 @@ Remember the key words we have defined so far: [terms](gloss:sequence-term) and
 [explicit equations](gloss:sequence-explicit). They will appear again and again
 throughout this course.
 
-First, though, here is a completely different kind of sequence. The pattern is
-not addition, subtraction or multiplication, but geometric
-[transformations](gloss:rigid-transformation). Here is an examples of
-__action sequence photography__, where the photographer takes many shots in
-quick succession, and then merges them into a single image:
+First, though, let's talk about a completely different kind of sequence:
+__action sequence photography__. A photographer takes many shots in quick
+succession, and then merges them into a single image:
 
-{.todo} Image
+    figure: x-media(src="images/action-1.jpg" width=640 height=320)
 
-Can you see how the snowboarder forms a sequence? Here, the pattern between
-consecutive steps is a combination between translation and rotation.
+Can you see how the skier forms a sequence? The pattern is not addition or
+multiplication, but a geometric [transformation](gloss:rigid-transformation).
+Between consecutive steps, the skier is both translated and
+[[rotated|reflected|dilated]].
 
 ---
 
 Here are a few more examples of action sequence photography, for your enjoyment:
 
-{.todo} More Images
+::: column(width=320 parent="padded-thin")
+
+    x-media(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+
+::: column(width=320)
+
+    x-media(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+
+::: column(width=320)
+
+    x-media(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
+
+::: column(width=320)
+
+    x-media(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+
+::: column(width=320)
+
+    x-media(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+
+::: column(width=320)
+
+    x-media(src="images/action-7.jpg" width=320 height=160 lightbox)
+
+:::
+
+In the following sections we will discover many different sequences, surprising
+patterns, and unexpected applications.
 
 
 
@@ -554,16 +579,17 @@ Most amazing of all is Conway’s Cosmological Theorem: no matter what the start
 
 Imagine that you've received a pair of baby rabbits, one male and one female.
 They are very special rabbits, because they never die, and the female one gives
-birth to a new pair of rabbits every month (always one male and one female.)
+birth to a new pair of rabbits exactly once every month (always one male and one
+female.)
 
     x-slideshow
       .stage(slot="stage"): include svg/rabbits.svg
       .legend(slot="legend") In the first month, the rabbits are very small and can't do much, but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
-      .legend(slot="legend") – and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
+      .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
       .legend(slot="legend") In the next month, your pair of rabbits will give birth to another couple. Meanwhile, the first pair of kids have grown up. You now have three pairs in total.
-      .legend(slot="legend") In the fourth month, your original pair of rabbits will give birth to a new pair of kids. At the same time, their first pair of kids is now old enough to give birth to grandkids. You now have five pairs of rabbits.
-      .legend(slot="legend") Can you see what's going on? In the fifth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
+      .legend(slot="legend") In the fifth month, your original pair of rabbits will give birth to a new pair of kids. At the same time, their first pair of kids is now old enough to give birth to grandkids. You now have five pairs of rabbits.
+      .legend(slot="legend") In the sixth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
 
 ---
 
@@ -593,15 +619,22 @@ So in the 12th month, you'll have 144 pairs of rabbits!
 These numbers are called the __Fibonacci Sequence__, named after the Italian
 mathematician [Leonardo Fibonacci](bio:fibonacci).
 
+::: column.grow
 When Fibonacci was born in XXX, most people in Europe still used the Roman
 numeral system when writing numbers: IVX. Fibonacci's father was a merchant,
-and together they travelled to Northern Africa as well as the Middle East. It is
-there that Fibonacci first heard about the Arabic numeral system, which is
+and together they travelled to Northern Africa as well as the Middle East. It
+was there, that Fibonacci first heard about the Arabic numeral system, which is
 essentially what we use today: 0, 1, 2, 3, …
 
 When he returned to Italy, Fibonacci wrote a book called _Liber Abaci_ (Latin
 for "The Book of Calculations"). In it, he first introduced the new Arabic
 numerals to European merchants, and they were an immediate success.
+::: column(width=300)
+
+    x-media(src="images/fibonacci.jpg" width=300 height=300)
+    .caption Portrait of Leonardo Fibonacci
+
+:::
 
 On one of the pages of his book, he also investigated the breeding patterns of
 rabbits, and that's why the Fibonacci numbers are named after him.
@@ -611,6 +644,8 @@ rabbits, and that's why the Fibonacci numbers are named after him.
       p.caption Pages from Fibonacci's _Liber Abaci_
 
 ---
+> id: spirals
+> goals:
 
 Of course, the Fibonacci numbers are not _actually_ how rabbits populate in real
 life. Usually, rabbits have more than two offspring per month, and we haven't accounted for
@@ -621,19 +656,32 @@ appear in nature. One example are the spirals in sunflowers or pine codes:
 
 ::: column(width=320)
 
+    x-select.spiral-tabs
+      div Original
+      div(data-value="cw") Clockwise
+      div(data-value="ccw") Countercw.
     .spirals(style="background-image: url(images/pinecone.jpg)")
       .clockwise(style="background-image: url(images/pinecone-1.jpg)")
-      .counterclockwise(style="background-image: url(images/pinecone-2.jpg)")
+      .anticlockwise(style="background-image: url(images/pinecone-2.jpg)")
 
 ::: column(width=320)
 
+    x-select.spiral-tabs
+      div Original
+      div(data-value="cw") Clockwise
+      div(data-value="ccw") Countercw.
     .spirals(style="background-image: url(images/sunflower.jpg)")
       .clockwise(style="background-image: url(images/sunflower-1.jpg)")
-      .counterclockwise(style="background-image: url(images/sunflower-2.jpg)")
-
+      .anticlockwise(style="background-image: url(images/sunflower-2.jpg)")
 :::
 
-{.todo} graphic always consecutive Fibonacci numbers
+---
+
+Both the pinecone and the sunflower have two sets of spirals: one in the
+clockwise direction, and one in the anticlockwise direction. Let's count how
+many there are:
+
+{.todo} always consecutive Fibonacci numbers
 
 ---
 
@@ -798,14 +846,38 @@ nature if full of regular, mathematical patterns.
 
 ### Fibonacci Puzzles
 
+So far, we have only used the recursive equation for Fibonacci numbers. There
+actually is an explicit equation, too – but it is much more difficult to
+find:
+
+{.text-center} `F_n = 1/sqrt(5) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
+
+For example, the 8th Fibonacci number is `F_8 = `
+
+
 There are many other puzzles, patterns and applications related to Fibonacci
 numbers. Here are a few examples, which you can try to solve yourself:
 
-Fibonacci Factors
+::: tab
+#### Investigate
 
-Where do the even numbers come in the sequence? 
-Is there a pattern? Why? 
+__(1) Fibonacci Factors__
+
+In the Fibonacci sequence, which numbers are even? Is there a pattern to how
+they are positioned? And can you explain why?
+
+What happens if you look at numbers divisible by 3, or numbers divisible by 4?
+
+
 Which Fibonacci numbers are divisible by 3? 
+
+::: tab
+#### Hints and Solutions
+
+
+:::
+
+
 Solution: https://nrich.maths.org/2046/solution
 
 Try adding together any three consecutive Fibonacci numbers.

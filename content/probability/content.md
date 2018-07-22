@@ -319,7 +319,7 @@ this scam.
 
 ::: column(width=300)
 
-    x-media(src="images/cocktails.jpg" credit="© Depositphotos, serrnovik" width=300 height=185)
+    x-media(src="images/cocktails.jpg" width=300 height=185)
 
 ::: column.grow
 When he finally travelled to Monte Carlo, he discovered that the reason for the
@@ -385,7 +385,7 @@ based on different outcomes.
 ---
 > id: dealer-2
 
-    figure: x-media(src="images/las-vegas.jpg" credit="© Depositphotos, kobbydagan" width=760 height=345)
+    figure: x-media(src="images/las-vegas.jpg" width=760 height=345)
 
 During the summer of 1961, Thorp and Shannon successfully tried their computer
 in Las Vegas. But while they made some money, the computer – which even
@@ -676,7 +676,7 @@ position of every atom in the coin and of all the air molecules surrounding it,
 we could create a computer simulation to accurately predict what will happen.
 ::: column(width=240)
 
-    x-media(src="images/coins.jpg" width=240 height=343 credit="© Depositphotos, Whiterabbit83")
+    x-media(src="images/coins.jpg" width=240 height=343)
 
 :::
 
@@ -736,7 +736,7 @@ can only ever do one computation at a time. Quantum computers can use the
 properties of subatomic particles to do many calculations at the same time – and
 that makes them significantly faster.
 
-    figure: x-media(lightbox src="images/quantum.jpg" width=760 height=390 credit="© Depositphotos, agsandrew")
+    figure: x-media(lightbox src="images/quantum.jpg" width=760 height=390)
 
 ---
 > id: radioactive-2

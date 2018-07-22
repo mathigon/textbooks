@@ -132,7 +132,7 @@ This equation has __no solutions__.
 In the following sections we will learn a few different ways to solve quadratic
 equations and interpret their graphs.
 
-    figure: x-media(src="images/skater-2.jpg", width="400", height="352", credit="© Depositphotos")
+    figure: x-media(src="images/skater-2.jpg" width=400 height=352)
 
 ---
 

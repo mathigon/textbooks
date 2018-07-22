@@ -63,13 +63,42 @@ x-tetrahedron canvas { width: 100%; height: auto; }
   margin: 0 auto 32px;
 }
 
+.spiral-tabs {
+  display: flex;
+  margin-bottom: .5em;
+
+  > * {
+    width: 33%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid @red;
+    border-left: none;
+    transition: color .2s, background .2s;
+    cursor: pointer;
+
+    &:first-child { border-radius: 6px 0 0 6px; border-left: 1px solid @red; }
+    &:last-child { border-radius: 0 6px 6px 0; }
+    &:hover { background: fade(@red, 20%);  }
+    &.active { color: white; background: @red; cursor: default; }
+  }
+}
+
 .spirals {
   padding-bottom: 100%;
   position: relative;
   background-size: cover;
-  .clockwise, .counterclockwise { width: 100%; height: 100%; top: 0; position: absolute; background-size: cover; }
-}
 
+  .clockwise, .anticlockwise {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-size: cover;
+    transition: opacity .5s;
+    opacity: 0;
+    &.active { opacity: 1; }
+  }
+}
 
 .petals circle { fill: darken(@green, 25%); }
 

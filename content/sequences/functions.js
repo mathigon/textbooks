@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import { flatten, delay, list, throttle } from '@mathigon/core'
+import { flatten, delay, list } from '@mathigon/core'
 import { isPrime } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
@@ -39,6 +39,22 @@ export function squareNumbers($step) {
 }
 
 // -----------------------------------------------------------------------------
+
+export function spirals($step) {
+
+
+  for (let $s of $step.$$('x-select')) {
+    const $cw = $s.next.$('.clockwise');
+    const $ccw = $s.next.$('.anticlockwise');
+    $s.on('change',($el) => {
+      $cw.setClass('active', $el.data.value === 'cw');
+      $ccw.setClass('active', $el.data.value === 'ccw');
+    });
+  }
+
+
+
+}
 
 export function goldenSpiral($step) {
   const $squares = $step.$$('svg rect').slice(2);
