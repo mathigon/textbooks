@@ -4,16 +4,17 @@
 
 > sectionId: applications
 
-Many professions that use mathematics in their everyday life are interested in
-one specific aspect: _finding patterns_. Here are a few examples
+Many professions that use mathematics are interested in one specific aspect –
+_finding patterns_, and being able to predict the future. Here are a few
+examples:
 
 ::: column(width=160 parent="padded-thin")
 
     x-media(src="images/crime.jpg" width=160 height=160)
-    
+
 ::: column(width=400)
 
-In the last decade, police departments around the world have started to rely
+In the last decade, __police departments__ around the world have started to rely
 more any more on mathematics. Special algorithms can use the data of past
 crimes to predict when and where crimes might occur in the future. For example,
 the _PredPol_ system (short for "predictive policing"), helped decrease the
@@ -22,26 +23,29 @@ crime rate in parts of Los Angeles by 12%!
 ::: column(width=160)
 
     x-media(src="images/volcanoes.jpg" width=160 height=160)
-    
+
 ::: column(width=400)
 
-It turns out that earthquakes follow similar patterns as crimes. Just like one
-crime might trigger retaliations, an earthquake might trigger aftershocks. In
-mathematics, this is called a "self-exciting Hawkes processes", and there are
-complex TODO
+It turns out that __earthquakes__ follow similar patterns as crimes. Just like
+one crime might trigger retaliations, an earthquake might trigger aftershocks.
+In mathematics, this is called a "self-exciting Hawkes processes", and there are
+equations that help predict when the next one might happen.
 
 ::: column(width=160)
 
     x-media(src="images/finance.jpg" width=160 height=160)
-    
+
 ::: column(width=400)
 
-{.todo} Mathematicians have
+Bankers also look at historic data of stock prices, interest rates and currency
+exchange rates, to estimate how __financial markets__ might change in the
+future. Being able to predict if the value of a stock will go up or down can be
+extremely lucrative!
 
 :::
 
-Scientists and bankers use highly complex algorithms to find these patterns, but
-we are going to start with something a bit simpler.
+Professional mathematicians use highly complex algorithms to find and analyse
+all these patterns, but we are going to start with something a bit simpler.
 
 ---
 > id: definitions
@@ -75,7 +79,7 @@ Pattern: “Multiply the previous number by 2, to get the next one.”_
 ---
 
 When referring to sequences like this in mathematics, we often represent every
-term by a variable: the nth term in the sequence is `x_n`:
+term by a special variable:
 
     p.text-center.s-orange
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -86,7 +90,9 @@ term by a variable: the nth term in the sequence is `x_n`:
         | ,&nbsp;
       | …
 
-Just like in equations, these variables are simply placeholders, until we have
+The small, subscript number after the _x_ is simply the position of the term in
+the sequence. For example, the *n*th term in the sequence is `x_n`. Just like in
+equations, these variables are simply [[placeholders|xxx]], until we have
 calculated their value.
 
 ---
@@ -247,9 +253,12 @@ patterns, and unexpected applications.
 
 ::: column.grow
 
-Halley's Comet appears in the sky approximately every 76 years. The comet was first spotted in the year 1531. Find the nth term rule and the 10th term for the sequence represented by this situation.
+In 1683, the astronomer Edmond Halley observed an unusual phenomenon in the sky:
+It was a comet, a small
 
-In this concept we will begin looking at a specific type of sequence called an arithmetic sequence. In an arithmetic sequence the difference between any two consecutive terms is constant. This constant difference is called the common difference. We can generalize the equation for an arithmetic sequence below:
+Halley remembered that other astronomers had observed almost identical comets
+much earlier: one in 1531 and another in 1607. Notice that the time difference
+between all three observations is the same: [[76]] years.
 
 ::: column(width=320)
 
@@ -258,30 +267,48 @@ In this concept we will begin looking at a specific type of sequence called an a
 
 :::
 
-{.todo} Halley's Comet explanation
+---
+
+Halley concluded that all three observations were in fact of the same comet –
+which is now called Halley's comet. It is orbiting around the sun and passes by
+Earth approximately every 76 years. He also predicted when the comet would be
+visible next:
+
+{.text-center.s-orange} _{.n}1531_, _{.n}1607_, _{.n}1683_, _{.n}1759_, _{.n}1835_,
+_{.n}1911_, _{.n}1987_, _{.n}2063_, …
+
+{.lgrey} (Actually, the time interval is not always _exactly_ 76 years.
+Sometimes it varies by 1 or 2 years, as the comet's orbit is interrupted by
+other planets.)
+
+---
 
 {.todo} Geometric sequence explanation
 
 ---
 
-If we compare both of these problems, we notice that there are lots of
-similarities. The sequence of Halley's Comet has the same difference between
-all consecutive terms – 76 years. The sequence of XXXX has the same ratio
-between consecutive terms – xxx.
+If you compare both these problems, you might notice that there are lots of
+similarities: the sequence of Halley's Comet has the same
+[[difference|ratio|product]] between all consecutive terms (76 years) while the
+sequence of XXXX has the same [[ratio|difference|product]] between consecutive terms – xxx.
 
 All sequences with these properties have a special name:
 
 ::: column.grow
 
-An __arithmetic sequence__ has a constant difference _d_ between consecutive
-terms. The same number is added (or subtracted) to every term, to produce the
-next one.
+{.todo} illustration
+
+{.text-center} An __{.m-red} arithmetic sequence__ has a __{.m-red} constant
+difference *d*__ between consecutive terms. The same number is added (or
+subtracted) to every term, to produce the next one.
 
 ::: column.grow
 
-A __geometric sequence__ has a constant ratio _r_ between consecutive terms.
-Every term is multiplied (or divided) by the same number, to produce the next
-term.
+{.todo} illustration
+
+{.text-center} A __{.m-green} geometric sequence__ has a __{.m-green} constant
+ratio *r*__ between consecutive terms. Every term is multiplied (or divided) by
+the same number, to produce the next one.
 
 :::
 
@@ -446,6 +473,8 @@ How did you decide?
 Do any triangle numbers end 000?
 
 https://challenges.wolfram.com/challenge/three-triangular-numbers
+
+Bowling, billiard/pool balls
 
 ---
 
