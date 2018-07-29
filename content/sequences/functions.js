@@ -12,6 +12,7 @@ import './components/tetrahedron'
 
 
 // -----------------------------------------------------------------------------
+// Introduction
 
 function fadeInElements($step, className) {
   let t = 500;
@@ -27,7 +28,6 @@ function fadeInElements($step, className) {
       t += 100;
     }
   }
-
 }
 
 export function triangleNumbers($step) {
@@ -38,11 +38,11 @@ export function squareNumbers($step) {
   fadeInElements($step, 'rect');
 }
 
+
 // -----------------------------------------------------------------------------
+// Fibonacci Numbers
 
 export function spirals($step) {
-
-
   for (let $s of $step.$$('x-select')) {
     const $cw = $s.next.$('.clockwise');
     const $ccw = $s.next.$('.anticlockwise');
@@ -51,9 +51,6 @@ export function spirals($step) {
       $ccw.setClass('active', $el.data.value === 'ccw');
     });
   }
-
-
-
 }
 
 export function goldenSpiral($step) {
@@ -134,7 +131,9 @@ export function sunflowerSpiral($step) {
   $slider.set(0.6180339 * $slider.steps);
 }
 
+
 // -----------------------------------------------------------------------------
+// Pascal's Triangle
 
 function colourPascal($rows, $cells, fn) {
   for (let $c of $cells) $c.setAttr('class', 'c');
@@ -148,7 +147,7 @@ function colourPascal($rows, $cells, fn) {
   }
 }
 
-const colours = ['yellow', 'orange', 'red', 'purple', 'blue', 'teal', 'green'];
+const colours = ['yellow', 'orange', 'red', 'purple', 'blue', 'teal', 'green', 'lime'];
 
 const colourFunctions = {
   ones: (i, j) => { if (j === 0 || j === i) return 'red'; },
@@ -159,7 +158,8 @@ const colourFunctions = {
     if (j === 1 || j === i - 1) return 'red';
     if (j > 1 && j < i-1) return 'purple';
   }},
-  fibonacci: (i, j) => colours[(i + j) % 7],
+  powers: (i, j) => { if (j) return (j > i) ? 'visible plus teal' : 'plus'; },
+  fibonacci: (i, j) => (colours[(i + i - j) % 8] + ((j > i) ? ' visible' : '')),
 };
 
 export function pascalIntro($step) {
@@ -170,13 +170,13 @@ export function pascalIntro($step) {
       $rows[i][j].on('hover', {
         enter() {
           $rows[i][j].addClass('red');
-          $rows[i-1][j-1].addClass('yellow plus');
-          $rows[i-1][j].addClass('yellow');
+          $rows[i-1][j-1].addClass('yellow');
+          $rows[i-1][j].addClass('yellow plus');
         },
         exit() {
           $rows[i][j].removeClass('red');
-          $rows[i-1][j-1].removeClass('yellow plus');
-          $rows[i-1][j].removeClass('yellow');
+          $rows[i-1][j-1].removeClass('yellow');
+          $rows[i-1][j].removeClass('yellow plus');
         }
       });
 

@@ -11,23 +11,26 @@
 @teal: mix(@blue, @green);
 @lime: mix(@yellow, @green);
 
+.row x-media { margin: 0 auto; }
+
+
+// -----------------------------------------------------------------------------
+// Introduction
 
 .n {
   display: inline-block;
-  width: 40px;
+  width: 44px;
   text-align: center;
   color: white;
-  height: 24px;
-  line-height: 24px;
+  height: 26px;
+  line-height: 26px;
   position: relative;
-  margin: 12px 1px;
+  margin: 16px 2px;
   font-style: normal;
 
-  &:before, &:after { content: ""; display: block; border: 20px solid transparent; position: absolute; }
-  &:before { border-bottom: 12px solid; border-top: none; top: -12px; }
-  &:after { border-top: 12px solid; border-bottom: none; bottom: -12px; }
-
-  x-blank-input input { min-width: 0; }
+  &:before, &:after { content: ""; display: block; border: 22px solid transparent; position: absolute; }
+  &:before { border-bottom: 14px solid; border-top: none; top: -14px; }
+  &:after { border-top: 14px solid; border-bottom: none; bottom: -14px; z-index: -1; }
 
   .s-orange & { background: @orange; }
   .s-orange &:before { border-bottom-color: @orange; }
@@ -44,6 +47,31 @@
   .s-lime & { background: @lime; }
   .s-lime &:before { border-bottom-color: @lime; }
   .s-lime &:after { border-top-color: @lime; }
+
+  .with-arrows & { margin-top: 32px; }
+
+  .arrow {
+    .iconBackground(@text-light, transparent, 'M41,41,33,30.86l0,4.49A32.45,32.45,0,0,0,21,33,33.71,33.71,0,0,0,1.77,39.2l1.14,1.65A31.65,31.65,0,0,1,21,35a30.53,30.53,0,0,1,11.06,2.09l-3.85,2.25Z', @size: 32, @box: 42);
+    position: absolute;
+    font-size: 14px;
+    color: @text-light;
+    top: -40px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    left: -23px;
+  }
+
+  .s-large & { width: 48px; height: 28px; margin: 18px 3px; line-height: 28px; }
+  .s-large.with-arrows & { margin-top: 40px; }
+  .s-large &:before, .s-large &:after { border-width: 24px; }
+  .s-large &:before { border-bottom-width: 15px; top: -15px; }
+  .s-large &:after { border-top-width: 15px; bottom: -15px; }
+
+  x-blank-input { display: block; margin: 1px 3px;  }
+  x-blank-input .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px fade(white, 75%); }
+  x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
+  x-blank-input.done, x-blank-input.done .target { display: inline; line-height: inherit; box-shadow: none; color: mix(@blue, white); }
 }
 
 .pattern {
@@ -52,12 +80,39 @@
   color: @text-medium;
 }
 
+
 // -----------------------------------------------------------------------------
+// Arithmetic and Geometric Series
+
+.text-wrap {
+  display: block;
+  float: right;
+  shape-margin: 24px;
+  margin: 0 0 24px 24px;
+  @media (max-width: 560px) { float: none !important; margin: 0 auto 1em; }
+}
+
+.money-grid td {
+  width: 100px;
+  padding: 2px 10px;
+}
+
+.def-box {
+  background: fade(@red, 25%);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+// -----------------------------------------------------------------------------
+// Famous Series
 
 x-tetrahedron { display: block; margin: 0 auto; }
 x-tetrahedron canvas { width: 100%; height: auto; }
 
+
 // -----------------------------------------------------------------------------
+// Fibonacci Numbers
 
 .stage svg {
   margin: 0 auto 32px;
@@ -114,13 +169,15 @@ x-tetrahedron canvas { width: 100%; height: auto; }
   margin: 1.5em auto 0;
 }
 
+
 // -----------------------------------------------------------------------------
+// Pascal's Triangle
 
 .pascal-grid {
   width: 760px;
   padding: 1.5em 0;
 
-  &.sticky { background: white; position: relative; z-index: 1; }
+  &.sticky { background: fade(white, 90%); position: sticky; z-index: 1; top: 32px; }
 
   .r {
     display: flex;
@@ -147,7 +204,7 @@ x-tetrahedron canvas { width: 100%; height: auto; }
     position: absolute;
     width: 14px;
     height: 14px;
-    right: -8px;
+    left: -8px;
     top: 5px;
     z-index: 1;
     background: @grey;
@@ -161,6 +218,10 @@ x-tetrahedron canvas { width: 100%; height: auto; }
 
   .c.plus:after { transform: none; }
 
+  &.sums .c:last-child { transform: scale(0); transition: transform .2s; }
+  &.sums .c:last-child.visible { transform: none; }
+  &.sums .c:last-child:after { content: "="; }
+
   x-blank-input { display: block; }
   x-blank-input .target { display: block; margin: 0 0 -2px 0; height: 26px; }
   x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
@@ -172,9 +233,8 @@ x-tetrahedron canvas { width: 100%; height: auto; }
     line-height: 14px;
   }
 
-  .c.yellow, .c.orange, .c.red, .c.purple, .c.blue, .c.teal, .c.green {
+  .c.yellow, .c.orange, .c.red, .c.purple, .c.blue, .c.teal, .c.green, c.lime {
     color: white;
-    font-weight: bold;
     box-shadow: inset 0 -2px rgba(0,0,0,0.4);
   }
 
@@ -185,6 +245,7 @@ x-tetrahedron canvas { width: 100%; height: auto; }
   .c.blue { background-color: @blue; }
   .c.teal { background-color: @teal; }
   .c.green { background-color: @green; }
+  .c.lime { background-color: @lime; }
 }
 
 .pascal-btn {
@@ -207,4 +268,12 @@ x-tetrahedron canvas { width: 100%; height: auto; }
     top: 6px;
     right: -6px;
   }
+
+  .c.yellow { color: @yellow; }
+  .c.orange { color: @orange; }
+  .c.red { color: @red; }
+  .c.purple { color: @purple; }
+  .c.blue { color: @blue; }
+  .c.teal { color: @teal; }
+  .c.green { color: @green; }
 }

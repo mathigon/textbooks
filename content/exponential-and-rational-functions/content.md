@@ -27,6 +27,8 @@ One amazing fact is that the proportions of these isotopes is almost exactly the
 same, anywhere on Earth – almost everything is C12, but approximately 0.1% of
 all carbon atoms are C14.
 
+{.todo} use mummies!
+
 Another amazing fact is that C14 is radioactive :radioactive:. That means that
 over time, it decays: it breaks apart into other element. We are actually
 surrounded by many different radioactive materials, but they are all much, much
@@ -144,79 +146,8 @@ Here are a few examples of processes in nature or everyday life. Try to decide
 which ones are exponential or linear. (Note that some models are increasing, 
 and others are decreasing.)
 
-cell division
-interest
-speed of computers, Moore's Law
-{.todo} interactive
+{.todo} cell division
 
----
+{.todo} interest
 
-## Who wants to be a Millionaire
-
-    img.text-wrap(src="images/dishes.jpg" style="shape-outside: url(images/dishes.png)" width=280 height=276)
-
-In order to make some additional pocket money, you decided to make a deal with
-your parents: for appropriate payment, you’ll do every possible chore around
-the house – washing the dishes, laundry, taking out the trash or walking the
-dog.
-
-The payment system works like this: on the first day, you get 1 cent. On the
-second day, you get 2 cents – twice as much as before. On the next day you'll
-get 4 cents. Every day, your payment doubles.
-
-1¢ is not a lot of money – and neither are 2¢ or 4¢, especially
-considering how much work you're doing. But the amount will slowly increase.
-How long do you think will it take until you've made $100? How long until
-you’ve made it to 1 Million?
-
-guess fields {.todo}
-
----
-
-Let’s try to calculate it mathematically! Just like before, your salary
-follows an exponential model, because it changes by a constant ratio every
-day (times 2). On day `x`, you'll get `2^x` cents.
-
-| __day__ | __payment__  |
-| 1       | $ 0.01       |
-| 2       | $ 0.02       |
-| 3       | $ 0.04       |
-| 4       | $ [[0.08]]   |
-| 5       | $ [[0.16]]   |
-| 6       | $ [[0.32]]   |
-| 7       | $ [[0.64]]   |
-| 8       | $ 1.28       |
-| 9       | $ 2.56       |
-| 10      | $ 5.12       |
-| 11      | $ 10.24      |
-| 12      | $ [[20.48]]  |
-| 13      | $ [[40.96]]  |
-| 14      | $ [[81.92]]  |
-| 15      | $ [[163.84]] |
-| 16      | $ 327.68     |
-| 17      | $ 655.36     |
-| 18      | $ 1,310.72   |
-{.grid.money-grid}
-
----
-
-Let's represent it in a chart:
-
-    x-coordinate-system.var(x="-2 20 2" y="-10 100 10" fn="${a}*x,${b}*2^(x-1)")
-
-One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
-gets ${b}{b|1|1,10,1}¢ every day. {.text-center}
-
----
-
-As you can see, your daily payment start low but then grow rapidly. After 15
-days you’ve reached $100. After less than a month you’re making more than 1
-million per day, and after 2 months you'd have made more than _all the money
-on Earth_. :1f4b0: :1f37e: :1f911:
-
-Exponential models can be truly XXXXX. Even if they start really slowly, they
-will eventually speed up a lot, and overtake any possible linear model. Most
-importantly, us humans tend to be very bad at estimating just _how fast_
-exponential models can grow. Or are we?
-
-interactive {.todo}
+{.todo} speed of computers, Moore's Law

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> sectionId: applications
+> section: introduction
 
 Many professions that use mathematics are interested in one specific aspect –
 _finding patterns_, and being able to predict the future. Here are a few
@@ -15,10 +15,10 @@ examples:
 ::: column(width=400)
 
 In the last decade, __police departments__ around the world have started to rely
-more any more on mathematics. Special algorithms can use the data of past
-crimes to predict when and where crimes might occur in the future. For example,
-the _PredPol_ system (short for "predictive policing"), helped decrease the
-crime rate in parts of Los Angeles by 12%!
+more on mathematics. Special algorithms can use the data of past crimes to
+predict when and where crimes might occur in the future. For example, the
+_PredPol_ system (short for "predictive policing"), helped decrease the crime
+rate in parts of Los Angeles by 12%!
 
 ::: column(width=160)
 
@@ -26,9 +26,9 @@ crime rate in parts of Los Angeles by 12%!
 
 ::: column(width=400)
 
-It turns out that __earthquakes__ follow similar patterns as crimes. Just like
+It turns out that __earthquakes__ follow similar patterns to crimes. Just like
 one crime might trigger retaliations, an earthquake might trigger aftershocks.
-In mathematics, this is called a "self-exciting Hawkes processes", and there are
+In mathematics, this is called a "self-exciting processes", and there are
 equations that help predict when the next one might happen.
 
 ::: column(width=160)
@@ -45,41 +45,44 @@ extremely lucrative!
 :::
 
 Professional mathematicians use highly complex algorithms to find and analyse
-all these patterns, but we are going to start with something a bit simpler.
+all these patterns, but we are going to start with something a bit more basic.
 
 ---
 > id: definitions
 
 ### Simple Sequences
 
-In mathematics, a [__sequence__](gloss:sequence) is a string of numbers (or
+In mathematics, a [__sequence__](gloss:sequence) is a collection of numbers (or
 other objects) that follow a particular pattern. The individual elements in a
 sequence are called [__terms__](gloss:sequence-term).
 
 Here are a few examples of sequences. Can you find the pattern and fill in
 the next two terms?
 
-{.text-center.s-orange} _{.n}3_, _{.n}6_, _{.n}9_, _{.n}12_, _{.n}15_,
-_{.n}[[18]]_, _{.n}[[21]]_, … _{span.pattern.reveal(when="blank-0 blank-1")}
-Pattern: “Add 3 to the previous number to get the next one.”_
+{.text-center.s-orange.with-arrows} _{.n}3_, _{.n}6*{span.arrow}+3*_,
+_{.n}9*{span.arrow}+3*_, _{.n}12*{span.arrow}+3*_, _{.n}15*{span.arrow}+3*_,
+_{.n}[[18]]*{span.arrow}+3*_, _{.n}[[21]]*{span.arrow}+3*_, …
+_{span.pattern.reveal(when="blank-0 blank-1")}Pattern: “Add 3 to the previous
+number to get the next one.”_
 
-{.text-center.s-teal} _{.n}4_, _{.n}10_, _{.n}16_, _{.n}22_, _{.n}28_,
-_{.n}[[34]]_, _{.n}[[40]]_, … _{span.pattern.reveal(when="blank-2 blank-3")}
+{.text-center.s-teal.with-arrows} _{.n}4_, _{.n}10*{span.arrow}+6*_, _{.n}16*{span.arrow}+6*_, _{.n}22*{span.arrow}+6*_, _{.n}28*{span.arrow}+6*_,
+_{.n}[[34]]*{span.arrow}+6*_, _{.n}[[40]]*{span.arrow}+6*_, … _{span.pattern.reveal(when="blank-2 blank-3")}
 Pattern: “Add 6 to the previous number to get the next one.”_
 
-{.text-center.s-purple} _{.n}3_, _{.n}4_, _{.n}7_, _{.n}8_, _{.n}11_,
-_{.n}[[12]]_, _{.n}[[15]]_, … _{span.pattern.reveal(when="blank-4 blank-5")}
+{.text-center.s-purple.with-arrows} _{.n}3_, _{.n}4*{span.arrow}+1*_, _{.n}7*{span.arrow}+3*_, _{.n}8*{span.arrow}+1*_, _{.n}11*{span.arrow}+3*_,
+_{.n}[[12]]*{span.arrow}+1*_, _{.n}[[15]]*{span.arrow}+3*_, … _{span.pattern.reveal(when="blank-4 blank-5")}
 Pattern: “Alternatingly add 1 and add 3 to the previous number, to get the next
 one.”_
 
-{.text-center.s-lime} _{.n}1_, _{.n}2_, _{.n}4_, _{.n}8_, _{.n}16_,
-_{.n}[[32]]_, _{.n}[[64]]_, … _{span.pattern.reveal(when="blank-6 blank-7")}
+{.text-center.s-lime.with-arrows} _{.n}1_, _{.n}2*{span.arrow}×2*_, _{.n}4*{span.arrow}×2*_, _{.n}8*{span.arrow}×2*_, _{.n}16*{span.arrow}×2*_,
+_{.n}[[32]]*{span.arrow}×2*_, _{.n}[[64]]*{span.arrow}×2*_, … _{span.pattern.reveal(when="blank-6 blank-7")}
 Pattern: “Multiply the previous number by 2, to get the next one.”_
 
 ---
 
-When referring to sequences like this in mathematics, we often represent every
-term by a special variable:
+The dots (…) at the end simply mean that the sequence can go on forever. When
+referring to sequences like this in mathematics, we often represent every term
+by a special variable:
 
     p.text-center.s-orange
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -90,10 +93,13 @@ term by a special variable:
         | ,&nbsp;
       | …
 
-The small, subscript number after the _x_ is simply the position of the term in
-the sequence. For example, the *n*th term in the sequence is `x_n`. Just like in
-equations, these variables are simply [[placeholders|xxx]], until we have
-calculated their value.
+The small number after the _x_ is called a __subscript__, and indicates the
+position of the term in the sequence. For example, the *n*th term in the
+sequence will be represented by the variable `x_n`.
+
+You might think that it would be easier to label the terms in the sequence as
+_a_, _b_, _c_, _d_, and so on. However you'll eventually [[run out of letters|xxx]],
+while the sequence might go on forever…
 
 ---
 > id: triangle-numbers
@@ -178,14 +184,14 @@ The next square numbers will be [[64]], [[81]], [[100]], and so on.
 
 ---
 
-For the triangle numbers we found a recursive equation that tells you the next
+For the triangle numbers we found a recursive formula that tells you the next
 term of the sequence in terms of its previous ones. For square numbers we can do
 even better – an equation that tells you the nth term directly, without first
 having to calculate all the previous ones:
 
 {.text-center} `x_n = n^2`
 
-Equations like this are called __explicit equations__. Later in this course,
+Equations like this are called __explicit formula__. Later in this course,
 you will learn how to convert between recursive and explicit equations.
 
 {.todo} Recursive rules can help us generate multiple sequential terms in a sequence but are not helpful in determining a particular single term. Consider the sequence: 3,5,7,…,an. The recursive rule for this sequence is an=an−1+2. What if we want to find the 100th term? The recursive rule only allows us to find a term in the sequence if we know the previous term. An nth term or general rule, however, will allow us to find the 100th term by replacing n in the formula with 100. However if we were only interested in the 100th term of the sequence, we would have to calculate all terms up to 100. It would be much easier if we had an equation that tells us any term of the sequence, without calculating all the previous ones.
@@ -251,14 +257,19 @@ patterns, and unexpected applications.
 
 ## Arithmetic and Geometric Sequences
 
+> section: arithmetic-geometric
+> id: halley
+
 ::: column.grow
 
-In 1683, the astronomer Edmond Halley observed an unusual phenomenon in the sky:
-It was a comet, a small
+In 1683, the astronomer [Edmond Halley](gloss:halley) observed an unusual
+phenomenon: a glowing white object with a long tail that moved across the night
+sky. It was a __comet__, a small, icy rock that is flying through space and
+while leaving behind a trail of dust and ice.
 
-Halley remembered that other astronomers had observed almost identical comets
-much earlier: one in 1531 and another in 1607. Notice that the time difference
-between all three observations is the same: [[76]] years.
+Halley remembered that other astronomers had observed similar comets much
+earlier: one in 1530 and another in 1606. Notice that the gap between these
+observations is both times the same: [[76]] years.
 
 ::: column(width=320)
 
@@ -268,69 +279,113 @@ between all three observations is the same: [[76]] years.
 :::
 
 ---
+> id: halley-1
 
 Halley concluded that all three observations were in fact of the same comet –
 which is now called Halley's comet. It is orbiting around the sun and passes by
 Earth approximately every 76 years. He also predicted when the comet would be
 visible next:
 
-{.text-center.s-orange} _{.n}1531_, _{.n}1607_, _{.n}1683_, _{.n}1759_, _{.n}1835_,
-_{.n}1911_, _{.n}1987_, _{.n}2063_, …
+{.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
+_{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
+_{.n}[[1758]]*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
+_{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_,
+_{.n}[[2062]]*{span.arrow}+76*_, …
 
-{.lgrey} (Actually, the time interval is not always _exactly_ 76 years.
-Sometimes it varies by 1 or 2 years, as the comet's orbit is interrupted by
-other planets.)
+---
+> id: halley-2
+
+Actually, the time interval is not always _exactly_ 76 years: it can vary by one
+or two years, as the comet's orbit is interrupted by other planets. Today we
+know that Halley's comet was observed by ancient astronomers as early as 240 BC!
+
+    figure
+      .row
+        x-media(src="images/halley-1.jpg" width=160 height=180)
+        x-media(src="images/halley-2.jpg" width=173 height=180 lightbox)
+        x-media(src="images/halley-3.jpg" width=200 height=180 lightbox)
+        x-media(src="images/halley-4.jpg" width=130 height=180 lightbox)
+      p.caption Depections of Halley's comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
 
-{.todo} Geometric sequence explanation
+A different group of scientists is investigating the behaviour of a bouncing
+tennis ball. With every bounce, the ball loses some of its original height:
+
+{.todo} >>> interactive
+
+    x-slider(steps=100)
 
 ---
 
-If you compare both these problems, you might notice that there are lots of
-similarities: the sequence of Halley's Comet has the same
-[[difference|ratio|product]] between all consecutive terms (76 years) while the
-sequence of XXXX has the same [[ratio|difference|product]] between consecutive terms – xxx.
+The scientists noticed that the ball loses 20% of its height with every bounce.
+In other words, the maximum height of every bounce is 80% of the previous one.
+This allowed them to predict the height of every bounce:
+
+{.text-center.s-teal.s-large.with-arrows} _{span.n}10_, _{span.n}8*{span.arrow}×0.8*_,
+_{.n}6.4*{span.arrow}×0.8*_, _{.n}5.12*{span.arrow}×0.8*_,
+_{.n}4.10*{span.arrow}×0.8*_, _{.n}3.28*{span.arrow}×0.8*_,
+_{.n}2.62*{span.arrow}×0.8*_, _{.n}2.10*{span.arrow}×0.8*_, …
+
+---
+
+### Definitions
+
+If you compare both these problems, you might notice that there are many
+similarities: the sequence of Halley's comet has the same
+[[difference|ratio|product]] between consecutive terms while the
+sequence of tennis ball bounces has the same [[ratio|difference|product]]
+between consecutive terms.
+
+---
 
 All sequences with these properties have a special name:
 
-::: column.grow
+::: column.grow.def-box
 
-{.todo} illustration
+    p.text-center: img(src="images/comet.svg" width=80 height=50)
 
-{.text-center} An __{.m-red} arithmetic sequence__ has a __{.m-red} constant
-difference *d*__ between consecutive terms. The same number is added (or
-subtracted) to every term, to produce the next one.
+{.text-center} An [__arithmetic sequence__](gloss:arithmetic-sequence) has a
+__constant difference__ _d_ between consecutive terms. The same number is added
+(or subtracted) to every term, to produce the next one.
 
-::: column.grow
+::: column.grow.def-box
 
-{.todo} illustration
+    p.text-center: img(src="images/ball.svg" width=80 height=50)
 
-{.text-center} A __{.m-green} geometric sequence__ has a __{.m-green} constant
-ratio *r*__ between consecutive terms. Every term is multiplied (or divided) by
-the same number, to produce the next one.
+{.text-center} A [__geometric sequence__](gloss:geometric-sequence) has a
+__constant ratio__ _r_ between consecutive terms. Every term is multiplied (or
+divided) by the same number, to produce the next one.
 
 :::
+
+---
 
 Here are a few different sequences. Can you determine which ones are arithmetic,
 geometric or neither, and what the values of _d_ and _r_ are?
 
-{.todo} interactive
+{.todo} >>> interactive
+
+---
 
 To define an arithmetic or geometric sequence, we have to know not just the
 common difference or ratio, but also the initial value `a_0`. Here you can
 generate your own sequences by changing the values of `a_0`, _d_ and _r_:
 
-{.todo} interactive
+{.todo} >>> interactive
 
 ---
 
-### Explicit and Recursive Formulae
+### Recursive and Explicit Formulae
 
 Remember that a __recursive formula__ for a sequence is an equation for the
 value
 
 {.todo} recursive formulae
+
+One problem with recursive formulae is that to find the 100th term, for example,
+you first have to calculate the previous 99 terms – and that might take a long
+time.
 
 Finding an __explicit formula__ is a bit harder.
 
@@ -344,35 +399,91 @@ Finding an __explicit formula__ is a bit harder.
 
 ---
 
-### Computer Memory
+### Who wants to be a Millionaire?
 
-The amount of memory that computer chips can hold in the same amount of space doubles every year. In 1992, they could hold 1MB. Chart the next 15 years in a table of values and show the amount of memory on the same size chip in 2007.
+Two siblings, Anna and Thomas, are receiving pocket money from their parents.
+They can choose between two different options:
 
-First, create a table showing the 15 year span. The amount of space doubles every year so the common ratio is 2. This means to get the next term in the sequence you multiply the previous term by 2.
-
----
-
-### Pocket Money
-
-Which would you prefer, being given one million dollars, or one penny the first day, double that penny the next day, and then double the previous day's pennies and so on for a month?
-
-At first glance it’s easy to say "Give me the million!" But why don’t we do a few calculations to see how the other choice stacks up?
-
-You start with a penny the first day and keep doubling each day. Doubling means that we keep multiplying by 2 each day for one month (30 days).
-
-On the first day, you get 1 penny, or 20 pennies.
-
-On the second day, you get 2 pennies, or 21 pennies.
-
-On the third day, you get 4 pennies, or 22 pennies. Do you see the pattern yet?
-
-On the fourth day, you get 8 pennies, or 23 pennies. Each day, the exponent is one less than the number of that day.
+* Thomas is receiving $1 in the first month, $2s in the second month, $3 in the
+  third month, and so on. Every month, he receives $1 more than in the previous
+  one.
+* Anna receives 1¢ in the first month, 2¢ in the second month
 
 So on the thirtieth day, you get 229 pennies, which is 536,870,912 pennies, or $5,368,709.12. That’s a lot more than a million dollars, even just counting the amount you get on that one day!
 
 A geometric sequence is a sequence of numbers in which each number in the sequence is found by multiplying the previous number by a fixed amount called the common ratio. In other words, the ratio between any term and the term before it is always the same. In the previous example the common ratio was 2, as the number of pennies doubled each day.
 
 The common ratio, r, in any geometric sequence can be found by dividing any term by the preceding term.
+
+---
+
+    img.text-wrap(src="images/dishes.jpg" style="shape-outside: url(images/dishes.png)" width=280 height=276)
+
+In order to make some additional pocket money, you decided to make a deal with
+your parents: for appropriate payment, you’ll do every possible chore around
+the house – washing the dishes, laundry, taking out the trash or walking the
+dog.
+
+The payment system works like this: on the first day, you get 1 cent. On the
+second day, you get 2 cents – twice as much as before. On the next day you'll
+get 4 cents. Every day, your payment doubles.
+
+1¢ is not a lot of money – and neither are 2¢ or 4¢, especially
+considering how much work you're doing. But the amount will slowly increase.
+How long do you think will it take until you've made $100? How long until
+you’ve made it to 1 Million?
+
+guess fields {.todo}
+
+---
+
+Let’s try to calculate it mathematically! Just like before, your salary
+follows an exponential model, because it changes by a constant ratio every
+day (times 2). On day `x`, you'll get `2^x` cents.
+
+| __day__ | __payment__  |
+| ------- | ------------ |
+| 1       | $ 0.01       |
+| 2       | $ 0.02       |
+| 3       | $ 0.04       |
+| 4       | $ [[0.08]]   |
+| 5       | $ [[0.16]]   |
+| 6       | $ [[0.32]]   |
+| 7       | $ [[0.64]]   |
+| 8       | $ 1.28       |
+| 9       | $ 2.56       |
+| 10      | $ 5.12       |
+| 11      | $ 10.24      |
+| 12      | $ [[20.48]]  |
+| 13      | $ [[40.96]]  |
+| 14      | $ [[81.92]]  |
+| 15      | $ [[163.84]] |
+| 16      | $ 327.68     |
+| 17      | $ 655.36     |
+| 18      | $ 1,310.72   |
+
+---
+
+Let's represent it in a chart:
+
+    x-coordinate-system.var(x="-2 20 2" y="-10 100 10" fn="${a}*x,${b}*2^(x-1)")
+
+One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
+gets ${b}{b|1|1,10,1}¢ every day. {.text-center}
+
+---
+
+As you can see, your daily payment start low but then grow rapidly. After 15
+days you’ve reached $100. After less than a month you’re making more than 1
+million per day, and after 2 months you'd have made more than _all the money
+on Earth_. :1f4b0: :1f37e: :1f911:
+
+Exponential models can be truly XXXXX. Even if they start really slowly, they
+will eventually speed up a lot, and overtake any possible linear model. Most
+importantly, us humans tend to be very bad at estimating just _how fast_
+exponential models can grow. Or are we?
+
+interactive {.todo}
 
 ---
 
@@ -403,48 +514,14 @@ mountain on Earth.
 
 ---
 
-### Bouncing Ball
-
-A ball has a 75% rebound ratio — that is, when it bounces repeatedly, each
-bounce is 75% as high as the previous bounce.
-
-We can write a geometric sequence that gives the height of each bounce with the common ratio of r=0.75:
-
-When you drop it from a height of 20 feet:
-
-How high does the ball bounce after it strikes the ground for the third time?
-
-The ball starts at a height of 20 feet; after the first bounce it reaches a height of 20⋅34=15 feet.
-After the second bounce it reaches a height of 20⋅(34)2=11.25 feet.
-After the third bounce it reaches a height of 20⋅(34)3=8.44 feet.
-
-Here is a graph that represents this information. (The heights at points other
-than the top of each bounce are just approximations.)
-
-What if you didn’t know what the rebound ratio was, but had an actual ball? In
-my trial, I have a tennis ball, and I dropped it from a height of 200 cm. When
-measuring its height after the first bounce, I measured the height at 111 cm.
-
-Using the geometric sequence formula, we have 111=200(r)(2−1). 200 represents
-the initial height, and (2, 111) represents the second height after the first
-bounce. 1111110.555=200(r)1=200×r=r
-
----
-
-### Interest
-
-Rebecca inherited some land worth $50,000 that has increased in value by an
-average of 5% per year for the last 5 years. If this rate of appreciation
-continues, about how much will the land be worth in another 10 years?
-
----
-
 Fill in the missing terms in each geometric sequence.
 a) 1, ___, 25. 125, ___
 b) 20, ___, 5, ____. 1.25
 
 For each of these geometric sequences, find the eighth term in the sequence.
 a) 1, 2, 4,...
+
+Pay it Forward Movie
 
 
 
@@ -454,72 +531,95 @@ a) 1, 2, 4,...
 
 ## Famous Sequences
 
-There are infinitely many different arithmetic and geometric series – some of
-which we saw in the previous section. However there are also lots of sequences
-that are neither arithmetic or geometric.
+> section: famous
 
-One example we have already seen are the triangle numbers:
+There are infinitely many different arithmetic and geometric series – some of
+which we saw in the previous section. However there are also many interesting
+sequences that are neither arithmetic or geometric, and in this section we will
+look at some of them. The first example you've already seen in the
+[Introduction](/course/sequences/introduction):
+
+---
+
+### Triangle numbers
 
 {.todo} diagram
 
-Imagine two copies of a triangular array of squares. Can you picture how to fit them together to make a rectangle? What is special about the dimensions of your rectangle?
-What do you notice about doubling triangular numbers?
-Experiment with different triangle numbers and explain what is special about the rectangles made from two identical triangle numbers.
-Can you write down the dimensions of the rectangle made from two copies of the 250th triangle number? Can you use this to work out the 250th triangle number?
+{.todo} explicit formula: Imagine two copies of a triangular array of squares. Can you picture how to fit them together to make a rectangle? What is special about the dimensions of your rectangle?
 
-Consider the following numbers: 4851,6214,3655,7626,8656.
+{.todo} Consider the following numbers: 4851,6214,3655,7626,8656.
 Which are triangle numbers?
 How did you decide?
 Do any triangle numbers end 000?
 
-https://challenges.wolfram.com/challenge/three-triangular-numbers
+{.todo} https://challenges.wolfram.com/challenge/three-triangular-numbers
 
-Bowling, billiard/pool balls
+{.todo} Bowling, billiard/pool balls
 
 ---
 
-### Polygon Numbers
+### Square and Polygon Numbers
 
-Square numbers
+{.todo} Square numbers
 What is the sum of the first 30 odd numbers?
 What is the sum of the first 60 odd numbers?
 
-http://demonstrations.wolfram.com/PolygonalNumbers/
+{.todo} http://demonstrations.wolfram.com/PolygonalNumbers/
 
-Tetrahedral Numbers
+---
+
+### Tetrahedral and Cubic Numbers
+
+{.todo} Tetrahedral Numbers
 
     x-tetrahedron(size=200)
+
+{.todo} cubic numbers
 
 ---
 
 ### Prime Numbers
 
-You already know another famous sequence of numbers: the __Prime numbers__.
-Unfortunately, prime numbers don't follow a simple pattern or recurrence
-relation. Instead,
+Let's think about another sequence you've seen before, but that doesn't have a
+geometric representation like the ones above: [__Prime numbers__](gloss:primes).
+
+Remember that a number is _prime_ if it has no factors [[other than 1 and
+itself|other than 1 and 2|and no multiples]].
+
+---
+
+Here are the first few prime numbers:
+
+{.text-center.s-lime} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_, _{.n}13_,
+_{.n}[[17]]_, _{.n}[[19]]_, …
+
+---
+
+{.todo} Unfortunately, prime numbers don't follow a simple pattern or recurrence
+relation.
 
 ---
 
 ### Perfect Numbers
 
-If you have read the article on Prime Numbers, you will know that a divisor of a number n is another number which divides n without remainder. Usually we want to multiply these divisors to get the original number, but let us think about what happens if we instead add them:
+{.todo} If you have read the article on Prime Numbers, you will know that a divisor of a number n is another number which divides n without remainder. Usually we want to multiply these divisors to get the original number, but let us think about what happens if we instead add them:
 
-number	divisors	sum of divisors	 
+{.todo} number	divisors	sum of divisors	 
 6	1	2	3	 	 	6	perfect number
 15	1	3	5	 	 	9	deficient number
 20	1	2	4	5	10	22	abundant number
 If the sum of the divisors is bigger than the number itself, we call it an abundant number (relatively many divisors). If the sum of the divisors is smaller than the number itself, we call it a deficient number (relatively few divisors). If the sum of the divisors is equal to the number itself, we call it a perfect number.
 
-Perfect numbers are extremely rare: the smallest six are 6, 28, 496, 8128, 33550336 and 8589869056. All these perfect numbers are even – nobody knows whether there are any odd perfect numbers, but we know that there aren’t any below 101500 (that’s a 1 with 1500 zeros)!
+{.todo} Perfect numbers are extremely rare: the smallest six are 6, 28, 496, 8128, 33550336 and 8589869056. All these perfect numbers are even – nobody knows whether there are any odd perfect numbers, but we know that there aren’t any below 101500 (that’s a 1 with 1500 zeros)!
 
 ---
 
 ### The Hailstone Sequence
 
-Many of the sequences we have seen so far have _one specific_ rule or pattern.
-But there is no reason why we can't combine multiple different ones. For
-example, you could start with any integer `x_0`, and then use the following
-recursive rule:
+Most of the sequences we have seen so far have a single rule or pattern. But
+there is no reason why we can't combine multiple different ones. For example,
+you could start with any integer `x_0`, and then use the following recursive
+rule:
 
 * If `x_n` is even, we divide it by 2 to give `x_(n+1) = x_n // 2`.
 * If `x_n` is odd, we can't divide by 2. Instead, we multiply by 3 and add 1.
@@ -605,6 +705,8 @@ Most amazing of all is Conway’s Cosmological Theorem: no matter what the start
 
 
 ## Fibonacci Numbers
+
+> section: fibonacci
 
 Imagine that you've received a pair of baby rabbits, one male and one female.
 They are very special rabbits, because they never die, and the female one gives
@@ -974,15 +1076,14 @@ Can you find a formula to express the number of ways there of climbing $n$ steps
 
 
 ## Pascal’s Triangle
+
+> section: pascals-triangle
 > id: pascal-intro
 
 Below you can see a number pyramid that is created using a simple pattern: it
 starts with a single '1' in first top, and every following cells is the sum of
-the two cells directly above.
-
-You could continue this triangle forever, but this diagram only shows the first
-15 rows. Hover over some of the cells to see how they are calculated, and then
-fill in the missing ones:
+the two cells directly above. Hover over some of the cells to see how they are
+calculated, and then fill in the missing ones:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1002,30 +1103,65 @@ fill in the missing ones:
 
 ---
 
-It is [[symmetric|right-angled|euilateral]].
+This diagram only showed the first twelve rows, but we could continue forever,
+adding new rows at the bottom. Notice that the triangle is
+[[symmetric|right-angled|euilateral]], which can help you calculate some of the
+cells.
 
-The triangle is called __Pascal’s triangle__ named after the French
-Mathematician [Blaise Pascal](bio:pascal). He was one of the first European
-mathematicians _{.todo} MORE_
+---
+
+The triangle is called __Pascal’s triangle__, named after the French
+mathematician [Blaise Pascal](bio:pascal). He was one of the first European
+mathematicians to investigate its patterns and properties, but it was known to
+other civilisations, many centuries earlier:
+
+::: column(width=200)
+
+    x-media(src="images/pascal-1.jpg" width=130 height=280)
+
+{.caption} In 450BC, the Indian mathematician [Pingala](bio:pingala) called the
+triangle the __“Staircase of Mount Meru”__, named after a sacred Hindu mountain.
+
+::: column(width=200)
+
+    x-media(src="images/pascal-2.jpg" width=200 height=280)
+
+{.caption} In Iran, it was known as the __“Khayyam triangle”__ (مثلث خیام),
+named after the Persian poet and mathematician [Omar Khayyám](bio:khayyam).
+
+::: column(width=200)
+
+    x-media(src="images/pascal-3.jpg" width=200 height=280)
+
+{.caption} In China, the mathematician Jia Xian also discovered the triangle.
+It was named after his successor, as __“Yang Hui's triangle”__ (杨辉三角).
+
+:::
+
+Pascal’s triangle can be created using a very simple pattern, but it is filled
+filled with surprising patters and properties. That's why it has fascinated
+mathematicians across the world, for hundreds of years.
 
 ---
 > id: pascal-sequences
 
-One of the reasons why mathematicians are so fascinated by Pascal’s triangle
-is that it has some amazing properties:
+### Finding Sequences
 
+In the previous sections, you have learned about many different sequences. It
+turns out that many of them can also be found in Pascal's triangle:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
 
-    .pascal-grid.sticky
+    .pascal-grid.sticky.sums
       - var i = 0;
-      while i < 16
+      while i < 15
         - var j = 0
         .r
           while j <= i
             .c= bin(i, j)
             - j += 1;
+          .c.sum
         - i += 1;
 
 * _{div.pascal-btn(data-value="ones")}_ The numbers in the first diagonal on
@@ -1038,24 +1174,47 @@ is that it has some amazing properties:
   diagonal are the tetrahedral numbers.
 * _{div.pascal-btn(data-value="powers")}_ If you add up all the numbers in a
   row, their sums for the sequence of powers of two.
-* _{div.pascal-btn(data-value="fibonacci")}_ The numbers in the third diagonal on
-  either side are the triangle numbers.
-* _{div.pascal-btn(data-value="primes")}_ The numbers in the third diagonal on
-  either side are the triangle numbers.
+* _{div.pascal-btn(data-value="fibonacci")}_ If you add up all the numbers in
+  'shallow' diagonals, you get the Fibonacci numbers.
+* _{div.pascal-btn(data-value="primes")}_ In every row that starts with a prime
+  number in its second cell, all following numbers are divisible by that prime.
 
 ---
 
-Pascal’s Triangle is an infinite symmetric number pyramid. It has been known since the 10th century to Indian and Arabic mathematicians and the French mathematician Blaise Pascal (1623 – 1662) explored it in more detail and discovered its relation to combinatorics.
+{.todo} Remember that Pascal’s Triangle was created using nothing but addition.
+Therefore it is surprising that we can find patterns like the powers of 2 or the
+multiples of Prime numbers, which are intrinsically linked to multiplication. Of
+course all these patterns occur because of particular mathematical reasons, and
+it is not hard to prove them.
 
-In many ways we can think of it as a two-dimensional sequence: we start with a single 1 at the top, and every number in one of the following rows is the sum of the two numbers above. Here is what the first 15 rows look like:
+{.todo} Note that the numbers along the edges are always 1’s, but the numbers
+towards the centre increase very quickly. We might now ask: how often does every
+number appear in Pascal's triangle?
 
-Note that the numbers along the edges are always 1’s, but the numbers towards the centre increase very quickly. Like so many other examples before, Pascal’s Triangle is a very complex and interesting object which can be created using a simple pattern. You can find many different sequences in the rows and diagonals of the triangle, and here are a few examples:
+{.todo} Every number appears at least twice, in the second diagonal on either
+side. Some numbers in the middle of the triangle also appear three of four times.
 
+{.todo} A few numbers appear five or more times. For example, we can see 120
+four times in the triangle above (rows 10 and 16) and we know that it will also
+appear twice in row 120. This makes six occurrences in total.
 
-Remember that Pascal’s Triangle was created using nothing but addition. Therefore it is surprising that we can find patterns like the powers of 2 or the multiples of Prime numbers, which are intrinsically linked to multiplication. Of course all these patterns occur because of particular mathematical reasons, and it is not hard to prove them.
+{.todo} Another example is 3003: it appears twice in rows 14 and 15 each and it
+will also appear twice in row 3003. But 3003 appears two more times, in the
+third diagonal on either side of the triangle. Remember that these diagonals are
+the triangle numbers, and that all triangle numbers are of the form n (n + 1) / 2.
+We know that 77 × 78 / 2 = 3003, so 3003 is a triangle number. In total, we have
+found eight occurrences of 3003 in the triangle.
+
+{.todo} We don’t know any other number which appears eight times in Pascal’s
+triangle, or whether any number appears more than eight times. The Singmaster
+conjecture, named after the American mathematician David Singmaster (*1939),
+postulates that there is a fixed limit on how often numbers can appear in
+Pascal’s triangle – but this limit might be larger than eight.
 
 ---
 > id: modular
+
+### Divisibility
 
 Another thing we can try is to highlight all cells in the triangle which are divisible by a certain number.
 
@@ -1078,22 +1237,25 @@ Another thing we can try is to highlight all cells in the triangle which are div
       .pascal-btn(data-value="4") Div 4
       .pascal-btn(data-value="5") Div 5
 
-If we were to do the same for even bigger numbers, we would find more and more triangles of increasing size. The patterns are very similar to the Sierpinski Gasket fractal.
+{.todo} If we were to do the same for even bigger numbers, we would find more
+and more triangles of increasing size. The patterns are very similar to the
+Sierpinski Gasket fractal.
 
-As we calculate more rows in Pascal’s triangle, two simple questions arise: which numbers appear in the triangle, and how often does every number appear?
+---
 
-The first question is easily answered: 1 appears infinitely often and every other whole number will eventually appear in the second diagonal on either side. Some numbers also appear in the middle, either twice on either side or once in the centre. These numbers now appear either three or four times in total.
+### Binomial Coefficients
 
-A few numbers appear five or more times. For example, we can see 120 four times in the triangle above (rows 10 and 16) and we know that it will also appear twice in row 120. This makes six occurences in total.
+{.todo} Combinatorics, etc.
 
-Another example is 3003: it appears twice in rows 14 and 15 each and it will also appear twice in row 3003. But 3003 appears two more times, in the third diagonal on either side of the triangle. Remember that these diagonals are the triangle numbers, and that all triangle numbers are of the form n (n + 1) / 2. We know that 77 × 78 / 2 = 3003, so 3003 is a triangle number. In total, we have found eight occurences of 3003 in the triangle.
-
-We don’t know any other number which appears eigth times in Pascal’s triangle, or whether any number appears more than eigth times. The Singmaster conjecture, named after the American mathematician David Singmaster (*1939), postulates that there is a fixed limit on how often numbers can appear in Pascal’s triangle – but this limit might be larger than eight.
 
 
 --------------------------------------------------------------------------------
 
+
+
 ## The In-and-out Puzzle
+
+> section: in-and-out
 
 http://mathworld.wolfram.com/JosephusProblem.html
 
@@ -1129,6 +1291,9 @@ p +2. However, this number may be larger than n+1, so we have to reduce it mod n
 
 
 ## Limits and Convergence
+
+> section: limits-and-convergence
+> sectionDev: true
 
 {.todo} TODO
 
