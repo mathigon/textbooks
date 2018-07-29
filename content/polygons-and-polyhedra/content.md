@@ -1334,10 +1334,9 @@ tessellate|tessellate]], but what about non-regular ones?
 Here are three different examples of tessellations with pentagons. They are not
 _regular_, but they are perfectly valid 5-sided polygons.
 
-So far, mathematicians have found 14 different kinds of tessellations with
-(convex) pentagons. But no one knows if there are others, or if those 14 are all
-of them. In other words, the problem of finding tessellations of pentagons is
-still open…
+So far, mathematicians have only found 15 different kinds of tessellations with
+(convex) pentagons – the most recent of which was discovered in 2015. No one
+knows if there are any others, or if these 15 are the only ones…
 
 ---
 > id: escher
