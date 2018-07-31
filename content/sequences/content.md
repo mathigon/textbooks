@@ -154,7 +154,7 @@ Another sequence which consists of geometric shapes are the __square numbers__,
 which you probably already know. Every term is formed by increasingly large
 squares:
 
-::: column(width=24 parent="padded-thin")
+::: column(width=24 parent="padded-thin squares")
 {.text-center} 1
 
     include svg/square-1.svg
@@ -707,6 +707,7 @@ Most amazing of all is Conway’s Cosmological Theorem: no matter what the start
 ## Fibonacci Numbers
 
 > section: fibonacci
+> id: rabbits
 
 Imagine that you've received a pair of baby rabbits, one male and one female.
 They are very special rabbits, because they never die, and the female one gives
@@ -714,7 +715,63 @@ birth to a new pair of rabbits exactly once every month (always one male and one
 female.)
 
     x-slideshow
-      .stage(slot="stage"): include svg/rabbits.svg
+      .stage.rabbits(slot="stage")
+        .rabbits-wrap.s-orange
+          svg(width=760 height=456 viewBox="0 0 760 456")
+            line(y1=51  x2=760 y2=51)
+            line(y1=130 x2=760 y2=130)
+            line(y1=209 x2=760 y2=209)
+            line(y1=287 x2=760 y2=287)
+            line(y1=366 x2=760 y2=366)
+            path(d="M84,91c223.68,0,405,7,405,45")
+            path(d="M84,170c124.82,0,226,14,226,45")
+            path(d="M84,248c74.56,0,135,20.15,135,45")
+            path(d="M534,248c74.56,0,135,20.15,135,45")
+            path(d="M84,327a45,45,0,0,1,45,45")
+            path(d="M354,327a45,45,0,0,1,45,45")
+            path(d="M534,327a45,45,0,0,1,45,45")
+            polygon(points="489 150 481 130 489 135 497 130 489 150")
+            polygon(points="310 229 302 209 310 214 318 209 310 229")
+            polygon(points="219 307 211 287 219 292 227 287 219 307")
+            polygon(points="669 307 661 287 669 292 677 287 669 307")
+            polygon(points="129 386 121 366 129 371 137 366 129 386")
+            polygon(points="399 386 391 366 399 371 407 366 399 386")
+            polygon(points="579 386 571 366 579 371 587 366 579 386")
+    
+          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
+    
+          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
+    
+          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
+          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
+    
+          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
+          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
+          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
+    
+          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
+          img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
+          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
+          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
+          img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
+    
+          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
+          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
+          img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
+          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 81%")
+          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 49%; top: 85%; width: 7%")
+          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
+          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
+          img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
+    
+          .n(style="top: 0%") 1
+          .n(style="top: 14%") 1
+          .n(style="top: 31%") 2
+          .n(style="top: 49%") 3
+          .n(style="top: 66%") 5
+          .n(style="top: 83%") 8
+
+      include svg/rabbits.svg
       .legend(slot="legend") In the first month, the rabbits are very small and can't do much, but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
       .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
@@ -724,8 +781,10 @@ female.)
 
 ---
 
-Can you detect a pattern in this sequence of numbers? If we keep on going like
-this, how many rabbits will there be after a year?
+In the following month you would have 13 couples of rabbits: the 8 ones from the
+previous month, plus 5 new babies. Can you detect a pattern in this sequence of
+numbers? If we keep on going like this, how many rabbits will there be after a
+year?
 
 {.todo} The number of rabbits in a particular month is [[sum of the two previous
 numbers|twice the previous number]].
@@ -975,7 +1034,7 @@ nature if full of regular, mathematical patterns.
 
 ---
 
-### Fibonacci Puzzles
+### Fibonachos
 
 So far, we have only used the recursive equation for Fibonacci numbers. There
 actually is an explicit equation, too – but it is much more difficult to
@@ -1028,6 +1087,11 @@ Or I could only use a leap of two at the beginning and the end, giving the patte
 2, 1, 1, 1, 1, 1, 1, 2.
 How many ways are there all together of climbing the ten steps?
 Can you find a formula to express the number of ways there of climbing $n$ steps using leaps of one and two?
+
+    figure
+      x-media(src="images/fibonachos.jpg" width=600 height=282)
+      p.caption © FoxTrot, by Bill Amend
+
 
     // Solution
     // Let’s write $S(n)$ for the number of ways to climb a flight of stairs with $n$ steps. There are two possibilities for starting my climb: I could start it using a single step or a leap of two steps. If it’s the former, then there are $n-1$ steps left to climb, which I can do in $S(n-1)$ ways. If it’s the latter, there are $n-2$ steps left to climb, which I can do in $S(n-2)$ ways. This means that
@@ -1139,8 +1203,11 @@ It was named after his successor, as __“Yang Hui's triangle”__ (杨辉三角
 :::
 
 Pascal’s triangle can be created using a very simple pattern, but it is filled
-filled with surprising patters and properties. That's why it has fascinated
+filled with surprising patterns and properties. That's why it has fascinated
 mathematicians across the world, for hundreds of years.
+
+_{button.next-step} Continue_
+
 
 ---
 > id: pascal-sequences
@@ -1153,70 +1220,113 @@ turns out that many of them can also be found in Pascal's triangle:
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
 
-    .pascal-grid.sticky.sums
+    .pascal-grid.sums
       - var i = 0;
-      while i < 15
+      while i < 17
+        - var j = 0
+        .r
+          while j <= i
+            - b = bin(i, j)
+            if b == 120
+              .c: span.s120= b
+            else if b == 120
+              .c: span.s3003= b
+            else
+              .c= b
+            - j += 1;
+          .c.sum
+        - i += 1;
+
+::: tab(parent="pascal-tabs")
+#### {.btn.yellow} _{span.check(when="blank-0")}_
+The numbers in the first diagonal on either side are all
+[[ones|increasing|even]].
+::: tab
+#### {.btn.orange} _{span.check(when="blank-1")}_
+The numbers in the second diagonal on either side are the
+[[integers|primes|square numbers]].
+::: tab
+#### {.btn.red} _{span.check(when="blank-2")}_
+The numbers in the third diagonal on either side are the [[triangle
+numbers|square numbers|Fibonacci numbers]].
+::: tab
+#### {.btn.purple} _{span.check(when="blank-3")}_
+The numbers in the fourth diagonal are the [[tetrahedral numbers|cubic
+numbers|powers of 2]].
+::: tab
+#### {.btn.blue} _{span.check(when="blank-4")}_
+If you add up all the numbers in a row, their sums for another sequence: the
+[[powers of two|perfect numbers|prime numbers]].
+::: tab
+#### {.btn.teal} _{span.check(when="blank-5")}_
+In every row that starts with a prime number in its second cell, all following
+numbers are [[multiples|factors|inverses]] of that prime.
+::: tab
+#### {.btn.green} _{span.check(when="blank-6")}_
+The diagram above highlights the 'shallow' diagonals in different colours. If
+we add up the numbers in every diagonal, we get the [[Fibonacci
+numbers|Hailstone numbers|geometric sequence]].
+:::
+
+---
+
+Of course, each of these patterns has a mathematical reason that explains why it
+appears. Maybe you can find some of them!
+
+Another question you might ask is how often a number appears in Pascal's
+triangle. Clearly there are infinitely many 1s, and every other number appears
+[[at least twice|at least once|exactly twice]], _{span.reveal(when="blank-0")}
+in the second diagonal on either side._
+
+---
+
+Some numbers in the middle of the triangle also appear three or four times.
+There are even a few that appear six times: you can see both [120](-> .s120) and
+[3003](-> .s3003) four times in the triangle above, and they'll appear two more
+times each in rows 120 and 3003.
+
+Since 3003 is a triangle number, it actually appears two more times in the third
+diagonals of the triangle – that makes eight occurrences in total.
+
+It is unknown if there are other numbers that appear eight times in the
+triangle, or if there are numbers that appear more than eight times. The
+American mathematician [David Singmaster](bio:singmaster) hypothesised that
+there is a fixed limed on how often numbers can appear in Pascal’s triangle –
+but it hasn't been proven yet.
+
+---
+> id: modular
+> goals: select
+
+### Divisibility
+
+Some patterns in Pascal's triangle are not quite as easy to detect. In the
+diagram below, highlight all the cells which are even:
+
+    - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
+    - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
+
+    .pascal-grid#pascal-select
+      - var i = 0;
+      while i < 8
         - var j = 0
         .r
           while j <= i
             .c= bin(i, j)
             - j += 1;
-          .c.sum
         - i += 1;
+    x-gesture(target="#pascal-select .r:nth-child(3) .c:nth-child(2)")
 
-* _{div.pascal-btn(data-value="ones")}_ The numbers in the first diagonal on
-  either side are all ones.
-* _{div.pascal-btn(data-value="integers")}_ The numbers in the second diagonal
-  on either side are the integers in increasing order.
-* _{div.pascal-btn(data-value="triangle")}_ The numbers in the third diagonal on
-  either side are the triangle numbers.
-* _{div.pascal-btn(data-value="tetrahedral")}_ The numbers in the fourth
-  diagonal are the tetrahedral numbers.
-* _{div.pascal-btn(data-value="powers")}_ If you add up all the numbers in a
-  row, their sums for the sequence of powers of two.
-* _{div.pascal-btn(data-value="fibonacci")}_ If you add up all the numbers in
-  'shallow' diagonals, you get the Fibonacci numbers.
-* _{div.pascal-btn(data-value="primes")}_ In every row that starts with a prime
-  number in its second cell, all following numbers are divisible by that prime.
+{.reveal(when="select")} It looks like the even number in Pascal's triangle form
+another, smaller [[triangle|matrix|square]].
 
 ---
+> id: modular-1
+> goals: c2 c3 c4 c5
 
-{.todo} Remember that Pascal’s Triangle was created using nothing but addition.
-Therefore it is surprising that we can find patterns like the powers of 2 or the
-multiples of Prime numbers, which are intrinsically linked to multiplication. Of
-course all these patterns occur because of particular mathematical reasons, and
-it is not hard to prove them.
-
-{.todo} Note that the numbers along the edges are always 1’s, but the numbers
-towards the centre increase very quickly. We might now ask: how often does every
-number appear in Pascal's triangle?
-
-{.todo} Every number appears at least twice, in the second diagonal on either
-side. Some numbers in the middle of the triangle also appear three of four times.
-
-{.todo} A few numbers appear five or more times. For example, we can see 120
-four times in the triangle above (rows 10 and 16) and we know that it will also
-appear twice in row 120. This makes six occurrences in total.
-
-{.todo} Another example is 3003: it appears twice in rows 14 and 15 each and it
-will also appear twice in row 3003. But 3003 appears two more times, in the
-third diagonal on either side of the triangle. Remember that these diagonals are
-the triangle numbers, and that all triangle numbers are of the form n (n + 1) / 2.
-We know that 77 × 78 / 2 = 3003, so 3003 is a triangle number. In total, we have
-found eight occurrences of 3003 in the triangle.
-
-{.todo} We don’t know any other number which appears eight times in Pascal’s
-triangle, or whether any number appears more than eight times. The Singmaster
-conjecture, named after the American mathematician David Singmaster (*1939),
-postulates that there is a fixed limit on how often numbers can appear in
-Pascal’s triangle – but this limit might be larger than eight.
-
----
-> id: modular
-
-### Divisibility
-
-Another thing we can try is to highlight all cells in the triangle which are divisible by a certain number.
+Colouring each cell manually takes a long time, but here you can see what
+happens if you would do this for many more rows. And what about cells divisible
+by other numbers?
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -1227,23 +1337,46 @@ Another thing we can try is to highlight all cells in the triangle which are div
         - var j = 0
         .r
           while j <= i
-            .c= bin(i, j)
+            - b = bin(i, j)
+            if b > 99999
+              .c: span.small= b
+            else
+              .c= b
             - j += 1;
         - i += 1;
+      .pascal-buttons
+        button.btn.btn-red(data-value="2") Divisible by 2
+        button.btn.btn-blue(data-value="3") Divisible by 3
+        button.btn.btn-green(data-value="4") Divisible by 4
+        button.btn.btn-yellow(data-value="5") Divisible by 5
 
-    p
-      .pascal-btn(data-value="2") Div 2
-      .pascal-btn(data-value="3") Div 3
-      .pascal-btn(data-value="4") Div 4
-      .pascal-btn(data-value="5") Div 5
+---
+> id: modular-2
 
-{.todo} If we were to do the same for even bigger numbers, we would find more
-and more triangles of increasing size. The patterns are very similar to the
-Sierpinski Gasket fractal.
+::: column.grow
+Wow! The coloured cells always appear in triangles (except as single cells,
+which could be seen as triangles of size 1).
+
+If we continue the pattern of cells divisible by 2, we get one that is very
+similar to the __Sierpinski triangle__ which you can see on the right. Shapes
+like this, which consist of a simple pattern that seems to continue forever
+while getting smaller and smaller, are called __Fractals__. You will learn more
+about them in the future…
+
+::: column.width(280)
+
+    img(src="images/sierpinski.svg" width=280 height=243 alt="Sierpinski Triangle")
+    p.caption The Sierpinski Triangle
+
+:::
 
 ---
 
 ### Binomial Coefficients
+
+There is one more important property of Pascal's triangle that we need to talk
+about. To see it, we will try to solve the same problem with two completely
+different methods, and then see how they are related.
 
 {.todo} Combinatorics, etc.
 

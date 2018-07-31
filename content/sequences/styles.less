@@ -29,8 +29,8 @@
   font-style: normal;
 
   &:before, &:after { content: ""; display: block; border: 22px solid transparent; position: absolute; }
-  &:before { border-bottom: 14px solid; border-top: none; top: -14px; }
-  &:after { border-top: 14px solid; border-bottom: none; bottom: -14px; z-index: -1; }
+  &:before { border-bottom: 13px solid; border-top: none; top: -13px; }
+  &:after { border-top: 13px solid; border-bottom: none; bottom: -13px; z-index: -1; }
 
   .s-orange & { background: @orange; }
   .s-orange &:before { border-bottom-color: @orange; }
@@ -62,16 +62,17 @@
     left: -23px;
   }
 
-  .s-large & { width: 48px; height: 28px; margin: 18px 3px; line-height: 28px; }
+  .s-large & { width: 50px; height: 30px; margin: 18px 3px; line-height: 30px; }
   .s-large.with-arrows & { margin-top: 40px; }
-  .s-large &:before, .s-large &:after { border-width: 24px; }
-  .s-large &:before { border-bottom-width: 15px; top: -15px; }
-  .s-large &:after { border-top-width: 15px; bottom: -15px; }
+  .s-large &:before, .s-large &:after { border-width: 25px; }
+  .s-large &:before { border-bottom-width: 16px; top: -16px; }
+  .s-large &:after { border-top-width: 16px; bottom: -16px; }
 
-  x-blank-input { display: block; margin: 1px 3px;  }
+  x-blank-input { display: block; margin: 1px 3px; }
   x-blank-input .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px fade(white, 75%); }
   x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
   x-blank-input.done, x-blank-input.done .target { display: inline; line-height: inherit; box-shadow: none; color: mix(@blue, white); }
+  .s-large & x-blank-input { margin: 3px; }
 }
 
 .pattern {
@@ -79,6 +80,8 @@
   font-size: 80%;
   color: @text-medium;
 }
+
+.squares rect { transform-origin: center; transform-box: fill-box; }
 
 
 // -----------------------------------------------------------------------------
@@ -113,6 +116,24 @@ x-tetrahedron canvas { width: 100%; height: auto; }
 
 // -----------------------------------------------------------------------------
 // Fibonacci Numbers
+
+.rabbits {
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  transition: padding-bottom .8s;
+  padding-bottom: 10%;
+
+  .rabbits-wrap { position: absolute; width: 100%; padding-bottom: 60%; }
+
+  svg { position: absolute; width: 100%; height: 100%; }
+  line { stroke: @light-grey; stroke-width: 2px; }
+  path { stroke: @dark-grey; stroke-width: 2px; fill: none; }
+  polygon { fill: @dark-grey; }
+
+  img.rabbit { position: absolute; width: 10%; height: auto; }
+  .n { position: absolute; right: 0; margin: 0; z-index: 1; margin-top: 13px; }
+}
 
 .stage svg {
   margin: 0 auto 32px;
@@ -175,9 +196,8 @@ x-tetrahedron canvas { width: 100%; height: auto; }
 
 .pascal-grid {
   width: 760px;
-  padding: 1.5em 0;
-
-  &.sticky { background: fade(white, 90%); position: sticky; z-index: 1; top: 32px; }
+  margin: 1.5em 0;
+  position: relative;
 
   .r {
     display: flex;
@@ -185,7 +205,7 @@ x-tetrahedron canvas { width: 100%; height: auto; }
   }
 
   .c {
-    width: 45px;
+    width: 40px;
     font-size: 16px;
     background-color: #ddd;
     margin: 1px;
@@ -193,7 +213,7 @@ x-tetrahedron canvas { width: 100%; height: auto; }
     position: relative;
     line-height: 24px;
     border-radius: 3px;
-    transition: color .4s, background .4s, box-shadow .4s;
+    transition: color .4s, background .4s, box-shadow .4s, opacity .4s;
     box-shadow: inset 0 -2px rgba(0,0,0,0.2);
     padding-bottom: 2px;
   }
@@ -228,12 +248,18 @@ x-tetrahedron canvas { width: 100%; height: auto; }
   x-blank-input.done, x-blank-input.done label { display: inline; line-height: inherit; }
 
   &.small .c {
-    width: 26px;
+    width: 28px;
     font-size: 10px;
-    line-height: 14px;
+    line-height: 16px;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+    padding-bottom: 1px;
+    margin: 1px;
+    .small { font-size: 8px; line-height: 8px; }
   }
 
-  .c.yellow, .c.orange, .c.red, .c.purple, .c.blue, .c.teal, .c.green, c.lime {
+  .c.light { opacity: 0.5; }
+
+  .c.yellow, .c.orange, .c.red, .c.purple, .c.blue, .c.teal, .c.green, .c.lime {
     color: white;
     box-shadow: inset 0 -2px rgba(0,0,0,0.4);
   }
@@ -248,32 +274,57 @@ x-tetrahedron canvas { width: 100%; height: auto; }
   .c.lime { background-color: @lime; }
 }
 
-.pascal-btn {
-  display: inline-block;
-  margin: 6px 12px -12px -20px;
-  border-radius: 8px;
-  color: #242436;
-  background: currentColor;
-  position: relative;
-  cursor: pointer;
-  width: 36px;
-  height: 36px;
+#pascal-select .c:not(.red) { cursor: pointer; }
 
-  &:after {
-    content: "";
-    border-left: 6px currentColor solid;
-    border-top: 12px transparent solid;
-    border-bottom: 12px transparent solid;
-    position: absolute;
-    top: 6px;
-    right: -6px;
+.pascal-buttons {
+  position: absolute;
+  top: 10px;
+  .btn { display: block; width: 150px; margin-bottom: 8px; font-size: 18px; }
+}
+
+.pascal-tabs {
+  margin-top: 0;
+  .titles { justify-content: center; }
+
+  h3 {
+    border-radius: 6px !important;
+    padding: 0;
+    width: 40px;
+    height: 44px;
+    margin: 8px 4px;
+    position: relative;
+    background: currentColor;
+    opacity: 0.5;
+    min-width: 0;
+    &:hover { background: currentColor; opacity: 0.7; }
+    &.active { background: currentColor; opacity: 1; }
+    .check { margin: 0; background-color: transparent; background-size: contain; }
   }
 
-  .c.yellow { color: @yellow; }
-  .c.orange { color: @orange; }
-  .c.red { color: @red; }
-  .c.purple { color: @purple; }
-  .c.blue { color: @blue; }
-  .c.teal { color: @teal; }
-  .c.green { color: @green; }
+  h3:after {
+    content: "";
+    border-bottom: 6px currentColor solid;
+    border-left: 15px transparent solid;
+    border-right: 15px transparent solid;
+    position: absolute;
+    left: 5px;
+    top: -6px;
+  }
+
+  .yellow { color: @yellow; }
+  .orange { color: @orange; }
+  .red { color: @red; }
+  .purple { color: @purple; }
+  .blue { color: @blue; }
+  .teal { color: @teal; }
+  .green { color: @green; }
+
+  .body { border-radius: 4px; transition: background .6s; text-align: center; }
+  .body.s-yellow { background: fade(@yellow, 20%); }
+  .body.s-orange { background: fade(@orange, 20%); }
+  .body.s-red { background: fade(@red, 20%); }
+  .body.s-purple { background: fade(@purple, 20%); }
+  .body.s-blue { background: fade(@blue, 20%); }
+  .body.s-teal { background: fade(@teal, 20%); }
+  .body.s-green { background: fade(@green, 20%); }
 }
