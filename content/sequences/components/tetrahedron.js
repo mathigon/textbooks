@@ -6,16 +6,31 @@
 
 
 /* global THREE */
-import { faceMaterial, drawShape, loadTHREE } from '../../shared/components/webgl';
+import { faceMaterial, drawShape, colour, loadTHREE } from '../../shared/components/webgl';
 import { $N, CustomElement, registerElement } from '@mathigon/boost';
+import { trianglePoints, triangleOffset } from './polygons'
 
 
-function getTetrahedron(index) {
+const COLOURS = [0xff941f, 0xec7031, 0xd94c44, 0xc62857, 0xb30469];
+
+function getTetrahedron(layers) {
   const tetrahedron = new THREE.Object3D();
-  const geometry = new THREE.SphereGeometry(5, 32, 32);
-  const material = new THREE.MeshNormalMaterial();  // faceMaterial()
-  const sphere = new THREE.Mesh(geometry, material);
-  tetrahedron.add(sphere);
+  const geometry = new THREE.SphereGeometry(0.5, 128, 128);
+
+  for (let i=0; i <= layers; ++i) {
+    const points = trianglePoints(i);
+    const dz = triangleOffset(i, layers);
+
+    const material = faceMaterial().clone();
+    material.color = colour(COLOURS[i]);
+
+    for (let p of points) {
+      const sphere = new THREE.Mesh(geometry, material);
+      sphere.translateX(p.x).translateY(p.y).translateZ(-dz);
+      tetrahedron.add(sphere);
+    }
+  }
+
   return tetrahedron;
 }
 
@@ -24,19 +39,20 @@ function getTetrahedron(index) {
 export class Tetrahedron extends CustomElement {
 
   ready() {
+    this.size = +this.attr('size');
+    this.css({width: this.size + 'px', height: this.size + 'px'});
+
     loadTHREE().then(() => this.setUp());
   }
 
   setUp() {
-    const size = +this.attr('size');
-    this.css({width: size + 'px', height: size + 'px'});
-
-    const $canvas = $N('canvas', {width: 2*size, height: 2*size}, this);
+    const size2 = 2 * this.size;
+    const $canvas = $N('canvas', {width: size2, height: size2}, this);
+    const layers = +this.attr('layers');
 
     setTimeout(() => {
-      const shpheres = getTetrahedron(+this.attr('layers'));
-      const {camera} = drawShape($canvas, shpheres, size, true);
-      camera.position.z = 30;
+      const spheres = getTetrahedron(layers -  1);
+      drawShape($canvas, spheres, this.size, layers > 1);
     }, 100);
   }
 }

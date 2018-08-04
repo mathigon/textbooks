@@ -8,11 +8,25 @@ import { flatten, delay, list, last, cache, tabulate } from '@mathigon/core'
 import { isPrime } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
+import { trianglePoints, polygonPoints } from './components/polygons'
 import './components/tetrahedron'
 
 
 // -----------------------------------------------------------------------------
 // Introduction
+
+function showArrows($arrows) {
+  $arrows.forEach(($a, i) => $a.enter('pop', 400, i*200));
+}
+
+export function simplePatterns($step) {
+  const $arrows = $step.$$('.with-arrows').map($x => $x.$$('.arrow[hidden]'));
+
+  $step.onScore('blank-0 blank-1', () => showArrows($arrows[0]));
+  $step.onScore('blank-2 blank-3', () => showArrows($arrows[1]));
+  $step.onScore('blank-4 blank-5', () => showArrows($arrows[2]));
+  $step.onScore('blank-6 blank-7', () => showArrows($arrows[3]));
+}
 
 function fadeInElements($step, tagName) {
   let t = 500;
@@ -21,22 +35,93 @@ function fadeInElements($step, tagName) {
     t += 500;
     $svg.prev.data.display = 'visibility';
     $svg.prev.hide();
-    delay(() => $svg.prev.enter('pop'), t);
+    $svg.prev.enter('pop', 400, t);
 
     for (let $c of $svg.$$(tagName).reverse()) {
       $c.hide();
-      delay(() => $c.enter('pop'), t);
+      $c.enter('pop', 400, t);
       t += 100;
     }
   }
 }
 
-export function triangleNumbers($step) {
+export function triangle($step) {
   fadeInElements($step, 'circle');
 }
 
-export function squareNumbers($step) {
+export function square($step) {
   fadeInElements($step, 'rect');
+}
+
+
+// -----------------------------------------------------------------------------
+// Arithmetic and Geometric Sequences
+
+
+// -----------------------------------------------------------------------------
+// Famous Sequences
+
+export function triangleNumbers($step) {
+  setTimeout(() => fadeInElements($step, 'circle'), 100);
+}
+
+export function triangleProof($step) {
+  const $g = $step.$('svg g');
+
+  $step.model.watch((m) => {
+    $g.removeChildren();
+    const points = trianglePoints(m.x - 1);
+    const scale = 200/m.x;
+    const r = 30 / Math.sqrt(m.x);
+    for (let p of points) {
+      $N('circle', {cx: 150 + scale * p.x, cy: 150 + scale * p.y, r}, $g);
+    }
+  });
+
+}
+
+export function polygonNumbers($step) {
+  const $g = $step.$('svg g');
+
+  $step.model.watch((m) => {
+    $g.removeChildren();
+    const points = polygonPoints(m.k, m.x);
+    for (let p of points) {
+      $N('circle', {cx: 150 + 50 * p.x, cy: 10 + 50 * p.y, r: 5}, $g);
+    }
+  });
+
+}
+
+function hailstones(n) {
+  const list = [n];
+  let last = n;
+
+  while(true) {
+    if (last % 2) {
+      last = 3 * last + 1;
+    } else {
+      last /= 2;
+    }
+    if (last === 4) return list;
+    list.push(last);
+  }
+}
+
+export function hailstone1($step) {
+  $step.model.set('hailstones', (n) => hailstones(n)
+      .map(i => `<span class="n">${i}</span>`).join(','));
+}
+
+export function hailstone2($step) {
+
+  const cached = cache(hailstones);
+  const $plot = $step.$('x-coordinate-system');
+
+  $step.model.watch((m) => {
+    const data = [...cached(m.n), 4, 2, 1, 4, 2, 1];
+    $plot.setSeries(data);
+  });
 }
 
 
@@ -62,7 +147,7 @@ export function rabbits($step) {
     $dividers[x - 1].enter('draw', 800);
     $numbers[x - 1].enter('pop', 400, 800);
     for (let i = cum[x]; i < cum[x + 1]; ++i) {
-      $rabbits[i - 1].enter('descend', 400, 600 + (i - cum[x]) * 50)
+      $rabbits[i - 1].enter('descend', 400, 600 + (i - cum[x]) * 60)
     }
     for (let i = cum[x - 2] || 0; i < cum[x - 1]; ++i) {
       $paths[i].enter('draw', 400, 400);
@@ -270,7 +355,7 @@ export function pascalSequences($step) {
   }
 }
 
-export function modular($step) {
+export function pascalModular($step) {
   const $cells = $step.$$('.c');
   let count = 0;
 
@@ -291,7 +376,7 @@ export function modular($step) {
   }
 }
 
-export function modular1($step) {
+export function pascalModular1($step) {
   const $rows = $step.$$('.r').map($r => $r.$$('.c'));
   const $cells = flatten($rows);
 

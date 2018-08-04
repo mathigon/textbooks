@@ -12,7 +12,7 @@
 @lime: mix(@yellow, @green);
 
 .row x-media { margin: 0 auto; }
-
+.overflow-wrap { overflow: auto; margin: 0 -24px; padding: 0 24px; }
 
 // -----------------------------------------------------------------------------
 // Introduction
@@ -28,27 +28,48 @@
   margin: 16px 2px;
   font-style: normal;
 
-  &:before, &:after { content: ""; display: block; border: 22px solid transparent; position: absolute; }
-  &:before { border-bottom: 13px solid; border-top: none; top: -13px; }
-  &:after { border-top: 13px solid; border-bottom: none; bottom: -13px; z-index: -1; }
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 13px solid;
+  }
+
+  &:before { top: -13px; }
+  &:after { transform: rotate(180deg); bottom: -13px; }
 
   .s-orange & { background: @orange; }
-  .s-orange &:before { border-bottom-color: @orange; }
-  .s-orange &:after { border-top-color: @orange; }
+  .s-orange &:before, .s-orange &:after { border-bottom-color: @orange; }
 
   .s-purple & { background: @purple; }
-  .s-purple &:before { border-bottom-color: @purple; }
-  .s-purple &:after { border-top-color: @purple; }
+  .s-purple &:before, .s-purple &:after { border-bottom-color: @purple; }
 
   .s-teal & { background: @teal; }
-  .s-teal &:before { border-bottom-color: @teal; }
-  .s-teal &:after { border-top-color: @teal; }
+  .s-teal &:before, .s-teal &:after { border-bottom-color: @teal; }
 
   .s-lime & { background: @lime; }
-  .s-lime &:before { border-bottom-color: @lime; }
-  .s-lime &:after { border-top-color: @lime; }
+  .s-lime &:before, .s-lime &:after { border-bottom-color: @lime; }
+
+  .s-vertical & { width: auto; padding: 3px 10px; margin: 5px 6px; }
+  .s-vertical &:before, .s-vertical &:after { border-width: 0 16px 5px 16px; transform-origin: top left; }
+  .s-vertical &:before { top: 32px; left: -5px; transform: rotate(-90deg); }
+  .s-vertical &:after { top: 0; right: -77px; transform: rotate(90deg); }
+
+  .s-large & { width: 50px; height: 30px; margin: 18px 3px; line-height: 30px; }
+  .s-large &:before, .s-large &:after { border-width: 0 25px 15px 25px; }
+  .s-large &:before { top: -15px; }
+  .s-large &:after { bottom: -15px; }
 
   .with-arrows & { margin-top: 32px; }
+  .s-large.with-arrows & { margin-top: 40px; }
+
+  x-blank-input { display: block; margin: 1px 3px; }
+  x-blank-input .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px fade(white, 75%); }
+  x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
+  x-blank-input.done, x-blank-input.done .target { display: inline; line-height: inherit; box-shadow: none; color: mix(@blue, white); }
+  .s-large & x-blank-input { margin: 3px; }
 
   .arrow {
     .iconBackground(@text-light, transparent, 'M41,41,33,30.86l0,4.49A32.45,32.45,0,0,0,21,33,33.71,33.71,0,0,0,1.77,39.2l1.14,1.65A31.65,31.65,0,0,1,21,35a30.53,30.53,0,0,1,11.06,2.09l-3.85,2.25Z', @size: 32, @box: 42);
@@ -61,18 +82,6 @@
     text-align: center;
     left: -23px;
   }
-
-  .s-large & { width: 50px; height: 30px; margin: 18px 3px; line-height: 30px; }
-  .s-large.with-arrows & { margin-top: 40px; }
-  .s-large &:before, .s-large &:after { border-width: 25px; }
-  .s-large &:before { border-bottom-width: 16px; top: -16px; }
-  .s-large &:after { border-top-width: 16px; bottom: -16px; }
-
-  x-blank-input { display: block; margin: 1px 3px; }
-  x-blank-input .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px fade(white, 75%); }
-  x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
-  x-blank-input.done, x-blank-input.done .target { display: inline; line-height: inherit; box-shadow: none; color: mix(@blue, white); }
-  .s-large & x-blank-input { margin: 3px; }
 }
 
 .pattern {
@@ -110,8 +119,15 @@
 // -----------------------------------------------------------------------------
 // Famous Series
 
-x-tetrahedron { display: block; margin: 0 auto; }
+x-tetrahedron { display: block; }
 x-tetrahedron canvas { width: 100%; height: auto; }
+
+.perfect-table {
+  td { width: 36px; padding: .3em .2em; }
+  td:first-child { text-align: left; padding-right: .4em; }
+  .small { font-size: 13px; color: @light-grey; line-height: 1.2; }
+  input { min-width: 36px; }
+}
 
 
 // -----------------------------------------------------------------------------

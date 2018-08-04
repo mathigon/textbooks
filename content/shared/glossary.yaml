@@ -77,6 +77,12 @@ irrational:
     example, 0.333333… = `1/3` is _rational_, but `sqrt(2)` = 1.41421… cannot be
     expressed as a fraction and is _irrational_
 
+
+# ==============================================================================
+# SEQUENCES
+# ==============================================================================
+
+
 sequence:
   title: Sequence
   text: TODO
@@ -86,12 +92,24 @@ sequence-term:
   text: TODO
 
 sequence-recursive:
-  title: Recursie Equation
+  title: Recursie Formula
   text: TODO
 
 sequence-explicit:
-  title: Explicit Equation
+  title: Explicit Formula
   text: TODO
+
+arithmetic-sequence:
+  title: Arithmetic Sequence
+  text: An __arithmetic sequence__ (sometimes called __arithmetic progression__)
+    is a sequence of numbers in which the difference _d_ between consecutive
+    terms is always the same.
+
+geometric-sequence:
+  title: Geometric Sequence
+  text: A geometric sequence__ (sometimes called __geometric progression__)
+    is a sequence of numbers in which the ratio _r_ between consecutive terms
+    is always the same.
 
 
 # ==============================================================================
