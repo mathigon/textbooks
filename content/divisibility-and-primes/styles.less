@@ -7,101 +7,104 @@
 @import "styles/variables";
 
 
+.td-border-right { border-right: 1px solid @grey; }
+.td-border-bottom { border-bottom: 1px solid @grey; }
+
 .factors-row {
-    margin-top: 120px;
-    font-size: 1.2em;
-    text-align: center;
+  margin-top: 120px;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .factor-number {
-    background: @grey;
-    width: 2em;
-    height: 2em;
-    line-height: 2em;
-    margin: 0 .4em;
-    display: inline-block;
-    border-radius: 100%;
-    color: white;
+  background: @grey;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  margin: 0 .4em;
+  display: inline-block;
+  border-radius: 100%;
+  color: white;
 }
 
 .factor-value {
-    display: inline-block;
-    position: relative;
-    width: 6em;
-    height: 2em;
-    margin: 0 .5em -.6em;
+  display: inline-block;
+  position: relative;
+  width: 6em;
+  height: 2em;
+  margin: 0 .5em -.6em;
 }
 
 .factor-bubble {
-    width: 6em;
-    height: 2em;
-    padding: 0;
-    line-height: 2em;
-    top: 0;
-    left: 0;
-    position: absolute;
+  width: 6em;
+  height: 2em;
+  padding: 0;
+  line-height: 2em;
+  top: 0;
+  left: 0;
+  position: absolute;
 
-    transition: transform .2s;
-    transition-delay: .1s;
-    &:first-child { transform: translateY(-120%); }
-    &:last-child { transform: translateY(120%); }
+  transition: transform .2s;
+  transition-delay: .1s;
+  &:first-child { transform: translateY(-120%); }
+  &:last-child { transform: translateY(120%); }
 
-    &.success .btn { pointer-events: none; background: @green; z-index: 10; box-shadow: none; color: white; }
-    &.error .btn { pointer-events: none; background: @red; z-index: 10; box-shadow: none; color: white; }
+  &.success .btn { pointer-events: none; background: @green; z-index: 10; box-shadow: none; color: white; }
+  &.error .btn { pointer-events: none; background: @red; z-index: 10; box-shadow: none; color: white; }
 }
 
 .number-grid {
-    max-width: 560px;
-    margin: 1em auto;
-    display: flex;
-    flex-wrap: wrap;
-    .stage & { margin-bottom: 32px; }
+  max-width: 560px;
+  margin: 1em auto;
+  display: flex;
+  flex-wrap: wrap;
+  .stage & { margin-bottom: 32px; }
 
-    @media (max-width: 620px) { max-width: 440px; }
-    @media (max-width: 500px) { max-width: 360px; }
-    @media (max-width: 420px) { max-width: 280px; }
+  @media (max-width: 620px) { max-width: 440px; }
+  @media (max-width: 500px) { max-width: 360px; }
+  @media (max-width: 420px) { max-width: 280px; }
 }
 
 .number-cell {
-    width: 44px;
-    height: 44px;
-    line-height: 44px;
-    margin: 6px;
-    background: @light-grey;
-    text-align: center;
-    font-size: 20px;
-    border-radius: 100%;
-    position: relative;
-    transition: color .2s, background .2s, opacity .4s, box-shadow .8s;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  margin: 6px;
+  background: @light-grey;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 100%;
+  position: relative;
+  transition: color .2s, background .2s, opacity .4s, box-shadow .8s;
 
-    @media (max-width: 620px) { width: 36px; height: 36px; line-height: 36px; margin: 4px; font-size: 18px; }
-    @media (max-width: 500px) { width: 30px; height: 30px; line-height: 30px; margin: 3px; font-size: 16px; }
-    @media (max-width: 420px) { width: 24px; height: 24px; line-height: 24px; margin: 2px; font-size: 12px; }
+  @media (max-width: 620px) { width: 36px; height: 36px; line-height: 36px; margin: 4px; font-size: 18px; }
+  @media (max-width: 500px) { width: 30px; height: 30px; line-height: 30px; margin: 3px; font-size: 16px; }
+  @media (max-width: 420px) { width: 24px; height: 24px; line-height: 24px; margin: 2px; font-size: 12px; }
 
-    &.off { opacity: 0.05; }
+  &.off { opacity: 0.05; }
 
-    &.red { color: white; background: @red; }
-    &.blue { color: white; background: @blue; }
-    &.green { color: white; background: @green; }
-    &.yellow { color: white; background: @yellow; }
+  &.red { color: white; background: @red; }
+  &.blue { color: white; background: @blue; }
+  &.green { color: white; background: @green; }
+  &.yellow { color: white; background: @yellow; }
 
-    #divisibility6 &.blue.yellow { background: linear-gradient(to bottom right, #1f7aff 50%, #FF9418 50%); }
-    #divisibility6 &.blue.yellow.green { box-shadow: inset 0 0 0 30px #31b304; }
+  #divisibility6 &.blue.yellow { background: linear-gradient(to bottom right, #1f7aff 50%, #FF9418 50%); }
+  #divisibility6 &.blue.yellow.green { box-shadow: inset 0 0 0 30px #31b304; }
 }
 
 .number-badge {
-    font-size: 15px;
-    line-height: 22px;
-    width: 22px;
-    position: absolute;
-    background: @grey;
-    border-radius: 100%;
-    top: -7px;
-    right: -7px;
-    color: white;
-    display: none;
+  font-size: 15px;
+  line-height: 22px;
+  width: 22px;
+  position: absolute;
+  background: @grey;
+  border-radius: 100%;
+  top: -7px;
+  right: -7px;
+  color: white;
+  display: none;
 
-    @media (max-width: 500px) { width: 18px; line-height: 18px; top: -6px; right: -6px; font-size: 12px; }
+  @media (max-width: 500px) { width: 18px; line-height: 18px; top: -6px; right: -6px; font-size: 12px; }
 }
 
 
@@ -109,66 +112,66 @@
 .divisor-table td { position: relative; padding: .5em .5em; }
 
 .divisor-pair {
-    left: 20px;
-    right: 20px;
-    bottom: 2px;
-    position: absolute;
-    border: 3px solid @light-grey;
-    border-radius: ~"50% / 100%";
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-top: none;
+  left: 20px;
+  right: 20px;
+  bottom: 2px;
+  position: absolute;
+  border: 3px solid @light-grey;
+  border-radius: ~"50% / 100%";
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
 }
 
 
 .number-ball {
-    display: inline-block;
-    text-align: center;
-    line-height: 30px;
-    min-width: 20px;
-    padding: 0 5px;
-    border-radius: 20px;
-    background: @red;
-    color: white;
-    position: relative;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  min-width: 20px;
+  padding: 0 5px;
+  border-radius: 20px;
+  background: @red;
+  color: white;
+  position: relative;
 
-    &.blue { background: @blue; }
-    &.green { background: @green; }
-    &.yellow { background: @yellow; }
+  &.blue { background: @blue; }
+  &.green { background: @green; }
+  &.yellow { background: @yellow; }
 
-    &.l-blue { background: fade(@blue, 40%); }
-    &.l-green { background: fade(@green, 40%); }
-    &.l-yellow { background: fade(@yellow, 40%); }
-    &.l-blue-green { background: linear-gradient(to bottom right, fade(@blue, 40%) 50%, fade(@green, 40%) 50%); }
+  &.l-blue { background: fade(@blue, 40%); }
+  &.l-green { background: fade(@green, 40%); }
+  &.l-yellow { background: fade(@yellow, 40%); }
+  &.l-blue-green { background: linear-gradient(to bottom right, fade(@blue, 40%) 50%, fade(@green, 40%) 50%); }
 
-    &.small { padding: 0; width: 24px; line-height: 24px; font-size: 1em; margin: -6px 1px; }
+  &.small { padding: 0; width: 24px; line-height: 24px; font-size: 1em; margin: -6px 1px; }
 
-    &.blue.cross { position: relative; background: fade(@blue, 30%); }
-    &.cross:after {
-        content: "";
-        width: 150%;
-        height: 2px;
-        background: #c00;
-        position: absolute;
-        left: -25%;
-        top: 50%;
-        transform: rotate(-45deg);
-        margin-top: -1px;
-    }
+  &.blue.cross { position: relative; background: fade(@blue, 30%); }
+  &.cross:after {
+    content: "";
+    width: 150%;
+    height: 2px;
+    background: #c00;
+    position: absolute;
+    left: -25%;
+    top: 50%;
+    transform: rotate(-45deg);
+    margin-top: -1px;
+  }
 
-    &.legs:before, &.legs:after {
-        content: " ";
-        display: block;
-        position: absolute;
-        width: 40px;
-        height: 2px;
-        background: @light-grey;
-    }
-    &.legs:before { transform: rotate(-45deg); top: 37px; right: 21px; }
-    &.legs:after { transform: rotate(45deg); top: 37px; left: 21px; }
+  &.legs:before, &.legs:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: @light-grey;
+  }
+  &.legs:before { transform: rotate(-45deg); top: 37px; right: 21px; }
+  &.legs:after { transform: rotate(45deg); top: 37px; left: 21px; }
 
-    &.legs.b:before { transform: rotate(-30deg); top: 33px; right: 24px; }
-    &.legs.a:after { transform: rotate(30deg); top: 33px; left: 24px; }
+  &.legs.b:before { transform: rotate(-30deg); top: 33px; right: 24px; }
+  &.legs.a:after { transform: rotate(30deg); top: 33px; left: 24px; }
 }
 
 
@@ -181,69 +184,69 @@
 
 
 .twin {
-    display: inline-block;
+  display: inline-block;
 
-    .number-ball {
-        margin: 2px 0 2px 8px;
+  .number-ball {
+    margin: 2px 0 2px 8px;
 
-        &:nth-child(odd):after {
-            content: "";
-            display: block;
-            width: 10px;
-            height: 4px;
-            position: absolute;
-            right: -9px;
-            top: 13px;
-            background: @red;
-        }
-
-        &.blue:nth-child(odd):after { background: @blue; }
-        &.green:nth-child(odd):after { background: @green; }
-        &.yellow:nth-child(odd):after { background: @yellow; }
+    &:nth-child(odd):after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 4px;
+      position: absolute;
+      right: -9px;
+      top: 13px;
+      background: @red;
     }
+
+    &.blue:nth-child(odd):after { background: @blue; }
+    &.green:nth-child(odd):after { background: @green; }
+    &.yellow:nth-child(odd):after { background: @yellow; }
+  }
 }
 
 .bubble-pop {
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-    padding: 0;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
 }
 
 .bubble-number {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    line-height: 160px;
-    font-size: 40px;
-    text-align: center;
-    color: white;
-    border-radius: 100px;
-    left: 40px;
-    top: 100%;
-    background : radial-gradient(circle farthest-corner at 60% 60%, darken(@blue, 10%), lighten(@blue, 10%));
-    animation: bubble 5s infinite linear;
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  border-radius: 100px;
+  left: 40px;
+  top: 100%;
+  background : radial-gradient(circle farthest-corner at 60% 60%, darken(@blue, 10%), lighten(@blue, 10%));
+  animation: bubble 5s infinite linear;
 }
 
 .bubble-number:before, .bubble-number:after {
-    content: " ";
-    width: 60px;
-    height: 20px;
-    background: fade(white, 20%);
-    transform: rotate(-30deg);
-    position: absolute;
-    border-radius: ~"30px/10px";
+  content: " ";
+  width: 60px;
+  height: 20px;
+  background: fade(white, 20%);
+  transform: rotate(-30deg);
+  position: absolute;
+  border-radius: ~"30px/10px";
 }
 
 .bubble-number:before { top: 16px; left: 18px; }
 .bubble-number:after { bottom: 16px; right: 18px; }
 
 @keyframes bubble {
-    0% { transform: translate(   0,      0) scale(.97,1.03); }
-    25% { transform: translate(40px, -125px) scale(1.03,.97); }
-    50% { transform: translate(   0, -230px) scale(.97,1.03); }
-    75% { transform: translate(40px, -345px) scale(1.03,.97); }
-    to  { transform: translate(   0, -460px) scale(.97,1.03); }
+  0% { transform: translate(   0,      0) scale(.97,1.03); }
+  25% { transform: translate(40px, -125px) scale(1.03,.97); }
+  50% { transform: translate(   0, -230px) scale(.97,1.03); }
+  75% { transform: translate(40px, -345px) scale(1.03,.97); }
+  to  { transform: translate(   0, -460px) scale(.97,1.03); }
 }
 
 
@@ -251,107 +254,107 @@
 
 
 .factor-game {
-    align-items: center;
+  align-items: center;
 }
 
 .factor-game-text {
-    text-align: center;
-    width: 200px;
-    .column { margin: -70px 0; display: inline-block; width: 117px; }
-    .btn { width: 100px;}
+  text-align: center;
+  width: 200px;
+  .column { margin: -70px 0; display: inline-block; width: 117px; }
+  .btn { width: 100px;}
 }
 
 .factor-game-number {
-    width: 140px !important; height: 140px;
-    line-height: 140px;
-    text-align: center;
-    background: @red;
-    border-radius: 100%;
-    color: white;
-    font-size: 36px;
+  width: 140px !important; height: 140px;
+  line-height: 140px;
+  text-align: center;
+  background: @red;
+  border-radius: 100%;
+  color: white;
+  font-size: 36px;
 }
 
 
 .calculator {
-    max-width: 400px;
-    background: @grey;
-    border-radius: 8px;
-    margin: 2em auto;
-    padding: 20px;
+  max-width: 400px;
+  background: @grey;
+  border-radius: 8px;
+  margin: 2em auto;
+  padding: 20px;
+  text-align: center;
+
+  h3 { margin: 0 0 1em; color: white; }
+
+  p { margin: 0; color: fade(white, 60%); font-size: .9em; }
+  .result { font-size: 1.2em; color: white; margin: 0; height: 30px; line-height: 1.2; }
+
+  input {
+    display: block;
+    margin: 10px auto;
+    background: @light-grey;
     text-align: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+  }
 
-    h3 { margin: 0 0 1em; color: white; }
-
-    p { margin: 0; color: fade(white, 60%); font-size: .9em; }
-    .result { font-size: 1.2em; color: white; margin: 0; height: 30px; line-height: 1.2; }
-
-    input {
-        display: block;
-        margin: 10px auto;
-        background: @light-grey;
-        text-align: center;
-        padding: 6px 12px;
-        border-radius: 4px;
-        color: black;
-    }
-
-    .loading {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background: url('/images/loading-white.gif');
-        background-size: 20px 20px;
-    }
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('/images/loading-white.gif');
+    background-size: 20px 20px;
+  }
 }
 
 #riemann {
-    svg { stroke-width: 2px; }
-    line, path { vector-effect: non-scaling-stroke; }
-    .axis { stroke: @light-grey; }
+  svg { stroke-width: 2px; }
+  line, path { vector-effect: non-scaling-stroke; }
+  .axis { stroke: @light-grey; }
 
-    .chart {
-        transform-origin: bottom left;
-        transition: transform 2s cubic-bezier(0.950, 0.050, 0.795, 0.035);
-    }
+  .chart {
+    transform-origin: bottom left;
+    transition: transform 2s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+  }
 
-    .small-primes {
-        stroke: @blue;
-        opacity: 0.3;
-        transition: opacity .5s;
-    }
+  .small-primes {
+    stroke: @blue;
+    opacity: 0.3;
+    transition: opacity .5s;
+  }
 
-    text {
-        fill: #999;
-        text-anchor: middle;
-        transition: opacity .5s;
-        font-size: 14px;
-        &.prime { fill: black; font-weight: bold; }
-    }
+  text {
+    fill: #999;
+    text-anchor: middle;
+    transition: opacity .5s;
+    font-size: 14px;
+    &.prime { fill: black; font-weight: bold; }
+  }
 
-    .zoom .chart {
-        transform: scale(0.029,0.06);;
-        transition: transform 2s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    }
-    .zoom .small-primes, .zoom text { opacity: 0; }
+  .zoom .chart {
+    transform: scale(0.029,0.06);;
+    transition: transform 2s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  }
+  .zoom .small-primes, .zoom text { opacity: 0; }
 
-    .zoom-icon {
-        width: 36px;
-        height: 36px;
-        position: absolute;
-        top: 0;
-        background: rgba(0, 0, 0, 0.7);
-        opacity: 0.5;
-        transition: opacity .2s, background .2s;
-        cursor: pointer;
-        &:hover { opacity: 0.9; }
-        .icon { fill: #FFF; margin: 2px; }
-    }
+  .zoom-icon {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0.5;
+    transition: opacity .2s, background .2s;
+    cursor: pointer;
+    &:hover { opacity: 0.9; }
+    .icon { fill: #FFF; margin: 2px; }
+  }
 }
 
 .divides {
-    display: inline-block;
-    width: 1px;
-    background: currentColor;
-    margin: -10px 5px;
-    height: 2em;
+  display: inline-block;
+  width: 1px;
+  background: currentColor;
+  margin: -10px 5px;
+  height: 2em;
 }

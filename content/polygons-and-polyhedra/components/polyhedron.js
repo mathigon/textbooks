@@ -8,7 +8,7 @@
 /* global THREE */
 import { colours, faceMaterial, edgeMaterial, drawShape, loadTHREE } from '../../shared/components/webgl';
 import { PolyhedronData } from './polyhedron-data';
-import { $N, CustomElement, registerElement, script } from '@mathigon/boost';
+import { $N, CustomElement, registerElement } from '@mathigon/boost';
 
 
 function getPolyhedron(data) {
@@ -51,6 +51,9 @@ const cameraOffset = {
 export class Polyhedron extends CustomElement {
 
   ready() {
+    this.size = +this.attr('size');
+    this.css({width: this.size + 'px', height: this.size + 'px'});
+
     loadTHREE().then(() => this.setUp());
   }
 
@@ -59,15 +62,13 @@ export class Polyhedron extends CustomElement {
     const data = PolyhedronData[shape];
     if (!data) return console.error('Unknown polyhedron:', shape);
 
-    const size = +this.attr('size');
-    this.css({width: size + 'px', height: size + 'px'});
-
-    const $canvas = $N('canvas', {width: 2*size, height: 2*size}, this);
+    const size2 = 2 * this.size;
+    const $canvas = $N('canvas', {width: size2, height: size2}, this);
 
     setTimeout(() => {
       const polyhedron = getPolyhedron(data);
-      const {camera} = drawShape($canvas, polyhedron, size, true);
-      camera.position.z = cameraOffset[shape] ||  4;
+      const {camera} = drawShape($canvas, polyhedron, this.size, true);
+      camera.position.y = cameraOffset[shape] ||  4;
     }, 100);
   }
 }

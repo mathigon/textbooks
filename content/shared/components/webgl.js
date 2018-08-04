@@ -48,6 +48,10 @@ export const colours = cache(() => {
   };
 });
 
+export function colour(hex) {
+  return new THREE.Color(hex);
+}
+
 export const faceMaterial = cache(() => {
   return new THREE.MeshPhongMaterial({
     vertexColors: THREE.FaceColors,
@@ -81,20 +85,22 @@ export function drawFace(face, vertices) {
 }
 
 export function drawShape($canvas, polyhedron, size, rotate) {
-  // TODO Damping
-  // TODO Auto-rotate
+  // TODO Damping after mouse movement
   // TODO Better mouse-to-point mapping
 
   const scene = new THREE.Scene();
 
-  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 20000);
+  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 1000);
+  camera.position.y = 10;
+  camera.up = new THREE.Vector3(0,0,1);
+  camera.lookAt(0, 0, 0);
   scene.add(camera);
 
   const light1 = new THREE.AmbientLight(0x404040);
   scene.add(light1);
 
   const light2 = new THREE.PointLight(0xffffff);
-  light2.position.set(3, 6, 12);
+  light2.position.set(3, 12, 6);
   scene.add(light2);
 
   scene.add(polyhedron);
@@ -119,7 +125,7 @@ export function drawShape($canvas, polyhedron, size, rotate) {
     if (visible && autoRotate) requestAnimationFrame(render);
     renderer.render(scene, camera);
     context.drawImage(renderer.domElement, 0, 0);
-    if (!dragging) polyhedron.rotation.y += 0.012;
+    if (!dragging) polyhedron.rotation.z += 0.012;
   }
 
   slide($canvas, {
@@ -127,12 +133,12 @@ export function drawShape($canvas, polyhedron, size, rotate) {
     move(posn, start, last) {
       const d = posn.subtract(last);
       const q = new THREE.Quaternion().setFromEuler(
-        new THREE.Euler(d.y * Math.PI / 180, d.x * Math.PI / 180, 0, 'XYZ'));
+        new THREE.Euler(-d.y * Math.PI / 180, 0, d.x * Math.PI / 180, 'XYZ'));
       polyhedron.quaternion.multiplyQuaternions(q, polyhedron.quaternion);
       if (!autoRotate) render();
     },
     end() { dragging = false; }
   });
 
-  return {scene, camera, renderer};
+  return {scene, camera, renderer, light1, light2};
 }
