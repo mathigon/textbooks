@@ -381,7 +381,7 @@ Unfortunately, due to the city’s layout, the pipes or cables for every product
 are not allowed to cross.
 ::: column(width=300)
 
-    x-media(width=300 height=169 src="images/factory.mp4")
+    x-media(width=300 height=200 src="images/power-plant.jpg")
 
 :::
 

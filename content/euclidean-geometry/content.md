@@ -732,7 +732,7 @@ extremely accurate. But with a bit of practice, you can do it yourself!
 ::: column(width=360)
 
     .video-wrap
-      video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="/resources/euclidean-geometry/images/crane.jpg" width=400 height=400 muted playsinline)
+      video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=400 height=400 muted playsinline)
       .play-btn
       .progress
         .bar
@@ -845,7 +845,7 @@ developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column(width=300)
 
-    x-media(src="images/space.mp4" width=300 height=225 credit="© Brigham Young University")
+    x-media(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
 ### Origami in Space
@@ -882,7 +882,7 @@ Hiroshima University in Japan.
 
 ::: column(width=300)
 
-    x-media(src="images/stadium.mp4" width=300 height=225 credit="© Mercedes Benz Stadium")
+    x-media(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
 
 ::: column.grow
 ### Stadium Roofs
@@ -897,7 +897,7 @@ modules that can twist to open or close.
 
 ::: column(width=300)
 
-    x-media(src="images/stents.mp4" width=300 height=225 credit="© Virtual Point")
+    x-media(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
 ### Origami in Medicine
