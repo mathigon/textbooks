@@ -443,6 +443,19 @@ generate your own sequences by changing the values of `a_0`, _d_ and _r_:
 {.todo} >>> interactive
 
 ---
+> id: arithmetic-geometric-graph
+
+To XXX the pattern of these sequences, we can visualise them in a chart:
+arithmetic ${a}{a|1|-10,10,1}, ${d}{d|1|-10,10,1}
+geometric ${b}{b|1|-10,10,1}, ${r}{r|1|-10,10,1}
+
+    x-coordinate-system(margins="12 12 24 40")
+
+---
+
+Converge / diverge
+
+---
 > id: arithmetic-geometric-recursive
 
 ### Recursive and Explicit Formulae
@@ -546,12 +559,8 @@ day (times 2). On day `x`, you’ll get `2^x` cents.
 ---
 > id: millionaire-3
 
-Let’s represent it in a chart:
-
-    x-coordinate-system.var(x="-2 20 2" y="-10 100 10" fn="${a}*x,${b}*2^(x-1)")
-
 One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
-gets ${b}{b|1|1,10,1}¢ every day. {.text-center}
+gets ${b}{b|1|1,10,1}¢ every day.
 
 ---
 > id: millionaire-4
@@ -646,7 +655,7 @@ You've already seen the recursive formula for triangle numbers:
 ---
 > id: billiard-pool
 
-It is no coincidence that there are always 10 pins when bowling or 16 balls when
+It is no coincidence that there are always 10 pins when bowling or 15 balls when
 playing billiard: it's because they are both triangle numbers!
 
 ::: column(width=320)
@@ -936,12 +945,12 @@ end up in a 4, 2, 1 cycle.
 
 It is interesting to visualise the terms of the sequence in a chart:
 
-    x-coordinate-system(margins="8 8 24 40")
+    x-coordinate-system(margins="12 12 24 40")
     p.md ${n}{n|12|1,50,1}
 
 ---
 
-{.todo} Hailstones image
+::: column.grow
 
 All sequences that follow this recursive formula are called __Hailstone
 Sequences__, because they randomly seem to go up and down before eventually
@@ -951,16 +960,23 @@ cloud before crashing to Earth.
 In 1937, the mathematician Lothar Collatz proposed that _every_ hailstone
 sequence sequence eventually ends in a 4, 2, 1 cycle – whatever starting value
 you pick. You've already checked a few starting points above, and computers have
-actually tried all numbers up to `10^20` – that’s a 1 followed by twenty zeros
-(or 100 billion billion).
+actually tried all numbers up to `10^20` – that’s 100 billion billion or a 1
+followed by twenty zeros.
+
+::: column(width=240)
+
+    x-media(src="images/storm.jpg" width=240 height=340)
+
+:::
 
 However, there are infinitely many integers. It is impossible to check each of
 them, and no one has been able to find a [proof](gloss:proof) that works for
 all.
 
 Just like the search for odd perfect numbers, this is still an open problem in
-mathematics. It is amazing that even these simple patterns for sequences can
-lead to questions that have mystified even the best mathematicians in the world!
+mathematics. It is amazing that these simple patterns for sequences can lead to
+questions that have mystified even the best mathematicians in the world for
+centuries!
 
 ---
 > id: quiz
@@ -1099,7 +1115,6 @@ female.)
           .n(style="top: 66%") 5
           .n(style="top: 83%") 8
 
-      include svg/rabbits.svg
       .legend(slot="legend") In the first month, the rabbits are very small and can’t do much, but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
       .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
@@ -1541,7 +1556,7 @@ turns out that many of them can also be found in Pascal’s triangle:
             - b = bin(i, j)
             if b == 120
               .c: span.s120= b
-            else if b == 120
+            else if b == 3003
               .c: span.s3003= b
             else
               .c= b
@@ -1674,8 +1689,8 @@ which could be seen as triangles of size 1).
 If we continue the pattern of cells divisible by 2, we get one that is very
 similar to the __Sierpinski triangle__ which you can see on the right. Shapes
 like this, which consist of a simple pattern that seems to continue forever
-while getting smaller and smaller, are called __Fractals__. You will learn more
-about them in the future…
+while getting smaller and smaller, are called [__Fractals__](gloss:fractal).
+You will learn more about them in the future…
 
 ::: column.width(280)
 
@@ -1704,6 +1719,7 @@ different methods, and then see how they are related.
 ## The In-and-out Puzzle
 
 > section: in-and-out
+> sectionStatus: dev
 > id: in-and-out-intro
 
 {.todo} COMING SOON
@@ -1752,6 +1768,7 @@ different methods, and then see how they are related.
 ## Limits and Convergence
 
 > section: limits-and-convergence
+> sectionStatus: dev
 > id: convergence-intro
 
 {.todo} COMING SOON

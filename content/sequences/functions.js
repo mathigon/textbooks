@@ -5,7 +5,7 @@
 
 
 import { flatten, delay, list, last, cache, tabulate } from '@mathigon/core'
-import { isPrime } from '@mathigon/fermat'
+import { isPrime, nearlyEquals } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -57,6 +57,22 @@ export function square($step) {
 // -----------------------------------------------------------------------------
 // Arithmetic and Geometric Sequences
 
+function arithmetic(a, d, n) {
+  return tabulate((i) => a + i * d, n);
+}
+
+function geometric(a, r, n) {
+  if (nearlyEquals(r, 0)) return [a];
+  return tabulate((i) => a * Math.pow(r, i), n);
+}
+
+export function arithmeticGeometricGraph($step) {
+  const $plot = $step.$('x-coordinate-system');
+
+  $step.model.watch((m) => {
+    $plot.setSeries(arithmetic(m.a, m.d, 10), geometric(m.b, m.r, 10));
+  });
+}
 
 // -----------------------------------------------------------------------------
 // Famous Sequences
@@ -114,12 +130,11 @@ export function hailstone1($step) {
 }
 
 export function hailstone2($step) {
-
   const cached = cache(hailstones);
   const $plot = $step.$('x-coordinate-system');
 
   $step.model.watch((m) => {
-    const data = [...cached(m.n), 4, 2, 1, 4, 2, 1];
+    const data = [...cached(m.n), 4, 2, 1];
     $plot.setSeries(data);
   });
 }
