@@ -5,7 +5,7 @@
 
 
 import { flatten, delay, list, last, cache, tabulate } from '@mathigon/core'
-import { isPrime, nearlyEquals } from '@mathigon/fermat'
+import { isPrime, nearlyEquals, Point } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -109,6 +109,45 @@ export function polygonNumbers($step) {
 
 }
 
+function eratosthenes($step, $numbers, $gesture, primes, classes) {
+  const p = primes.pop();
+  const c = classes.pop();
+
+  $numbers[p - 1].addClass(c);
+  $gesture.$target = $numbers[p - 1];
+  $gesture.start();
+
+  $numbers[p - 1].one('click', () => {
+    $gesture.stop();
+    $step.score('p' + p);
+    for (let i = 2; i <= 100 / p; ++i) {
+      delay(() => $numbers[i * p - 1].addClass(c + ' deleted'), i * 50);
+    }
+    if (primes.length) {
+      delay(() => eratosthenes($step, $numbers, $gesture, primes, classes), 1500);
+    }
+  });
+}
+
+export function primes2($step) {
+  const $numbers = $step.$$('.eratosthenes *');
+  const $gesture = $step.$('x-gesture');
+  eratosthenes($step, $numbers, $gesture, [7, 5, 3, 2],
+      ['l-yellow', 'l-green', 'l-blue', 'l-red']);
+
+  const $plot = $step.$('x-coordinate-system');
+  const primes = [new Point(2, 1)];
+  let n = 1;
+  for (let i=3; i < 247; ++i) {
+    primes.push(new Point(i, n));
+    if (isPrime(i)) {
+      n += 1;
+      primes.push(new Point(i, n));
+    }
+  }
+  $plot.setSeries(primes);
+}
+
 function hailstones(n) {
   const list = [n];
   let last = n;
@@ -127,6 +166,10 @@ function hailstones(n) {
 export function hailstone1($step) {
   $step.model.set('hailstones', (n) => hailstones(n)
       .map(i => `<span class="n">${i}</span>`).join(','));
+
+  $step.model.watch((state) => {
+    if (state.n === 30) $step.score('var-max');
+  });
 }
 
 export function hailstone2($step) {
@@ -135,7 +178,8 @@ export function hailstone2($step) {
 
   $step.model.watch((m) => {
     const data = [...cached(m.n), 4, 2, 1];
-    $plot.setSeries(data);
+    $plot.setPoints(data);
+    if (m.n === 40) $step.score('var-max');
   });
 }
 

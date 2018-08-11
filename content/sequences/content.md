@@ -407,7 +407,7 @@ between consecutive terms.
 
 All sequences with these properties have a special name:
 
-::: column.grow.def-box
+::: column.grow.theorem
 
     p.text-center: img(src="images/comet.svg" width=80 height=50)
 
@@ -415,7 +415,7 @@ All sequences with these properties have a special name:
 __constant difference__ _d_ between consecutive terms. The same number is added
 (or subtracted) to every term, to produce the next one.
 
-::: column.grow.def-box
+::: column.grow.theorem
 
     p.text-center: img(src="images/ball.svg" width=80 height=50)
 
@@ -793,31 +793,57 @@ numbers__](gloss:primes). We say that a number is _prime_ if it has no
 [factors](gloss:factor) [[other than 1 and itself|other than 1 and 2|and no
 multiples]].
 
-Here are the first few prime numbers:
-
-{.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_, _{.n}13_,
-_{.n}[[17]]_, _{.n}[[19]]_, …
-
 ---
 > id: primes-1
 
-Unfortunately, prime numbers don’t follow a simple pattern or recursive
-formula. Sometimes they appear directly next to each other ([Twin
-primes](gloss:twin-prime)), and sometimes there are huge gaps. They seem to
-distributed almost randomly!
+Here are the first few prime numbers:
+
+{.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
+_{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 ---
 > id: primes-2
+> goals: p2 p3 p5 p7
 
-Prime numbers also don't have a geometric representation like triangle or square
-numbers, but we can reveal interesting patterns 
+Unfortunately, prime numbers don’t follow a simple pattern or recursive
+formula. Sometimes they appear directly next to each other (these are called
+[twin primes](gloss:twin-prime)), and sometimes there are huge gaps between
+them. They seem to be distributed almost randomly!
+
+Prime numbers also don't have a simple geometric representation like triangle or
+square numbers, but with a bit of work we can reveal interesting patterns:
+
+::: column(width=320)
+
+    .eratosthenes
+      .deleted 1
+      .l-red 2
+      - var i = 3
+      while i <= 100
+        div= i
+        - i += 1
+    x-gesture(target=".eratosthenes .l-red")
+
+{.caption} If we cross out all multiples of small integers, all the remaining
+ones must be prime. This method is called the [__Sieve of
+Eratosthenes__](gloss:sieve-eratosthenes).
+
+::: column(width=320)
+
+    x-coordinate-system(width=320 height=320 margins="8 8 20 24")
+
+{.caption} If we draw a chart that increases by 1 whenever there is a prime
+number, we get a “stepped” function with fascinating properties.
+:::
 
 ---
 > id: primes-3
 
-Prime numbers are some of the most important and most mysterious concepts in
-mathematics. You can learn more about them in our course on [Divisibility and
-Primes](/course/divisibility-and-primes).
+You can learn more about these and other properties of prime numbers in our
+course on [Divisibility and Primes](/course/divisibility-and-primes). They are
+some of the most important and most mysterious concepts in mathematics!
+
+    figure: img(src="images/primes.svg" width=480 height=156) 
 
 ---
 > id: perfect
@@ -831,40 +857,50 @@ factors, we could also try adding them up:
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-    - numbers = list(12).slice(1);
+    - numbers = list(20).slice(1);
 
-    .overflow-wrap.todo.perfect-table: table.grid
-      tr
-        td: strong Number
+    .perfect-grid
+      .perfect-labels
+        .perfect-cell: strong Number
+        .perfect-cell: strong Factors
+        .perfect-cell: strong Sum of factors
+      .perfect-values
         for i in numbers
-          td= i
-      tr
-        td: strong Sum of factors
-        for i in numbers
-          td
-            div.small= factors(i).join('+')
+          .perfect-col
+            .perfect-cell: strong= i
+            .perfect-cell= factors(i).join(', ')
             if i >= 6
-              .md [[#{total(factors(i))}]]
+              .perfect-cell.md [[#{total(factors(i))}]]
             else
-              div= total(factors(i))
+              .perfect-cell= total(factors(i))
 
 ---
 > id: perfect-1
 
-{.todo} For most numbers, the sum of its factors is [[less than|greater than|equal to]]
-itself: these numbers are called [__deficient numbers__](gloss:deficient-number).
-For some numbers, the sum of its factors is greater than itself: these numbers
+Let's have a look at these sums of factors:
+
+::: column.perfect-box(width=220 parent="padded-thin")
+
+For most numbers, the sum of its factors is [[less than|greater than|equal to]]
+itself. These numbers are called [__deficient numbers__](gloss:deficient-number).
+
+::: column.reveal.perfect-box(when="blank-0" width=220)
+
+For some numbers, the sum of its factors is greater than itself. These numbers
 are called [__abundant numbers__](gloss:abundant-number).
 
-Only one number in the list above had the sum of its factors _equal_ to itself:
-[[6]].
+::: column.reveal.perfect-box(when="blank-0" delay=500 width=220)
+
+Only one number in the list above has the sum of its factors _equal_ to itself:
+[[6]]. These numbers are called [__perfect numbers__](gloss:perfect-number).
+
+:::
 
 ---
 > id: perfect-2
 
-These numbers are called [__perfect numbers__](gloss:perfect-number). The next
-perfect number is 28, because `1 + 2 + 4 + 7 + 14 = 28`. After that, they become
-much rarer:
+The next perfect number is 28, because if we add up all its factors we get
+`1 + 2 + 4 + 7 + 14 = 28`. After that, they become much rarer:
 
 {.text-center.s-purple.s-vertical} _{.n}6_, _{.n}28_, _{.n}496_, _{.n}8,128_,
 _{.n}33,550,336_, _{.n}858,986,9056_, _{.n}137,438,691,328_,
@@ -905,13 +941,13 @@ Most of the sequences we have seen so far had a single rule or pattern. But
 there is no reason why we can’t combine multiple different ones – for example
 a recursive formula like this:
 
-    table.grid
+    table.grid.text-left
       tr
-        td: strong.md If `x_n` is even
+        td: strong.md If `x_n` is even:
         td.md `x_(n+1) = x_n // 2`
       tr
-        td: strong.md If `x_n` is off
-        td.md `x_(n+1) = 3 × x_n + 1`
+        td: strong.md If `x_n` is odd:
+        td.md `x_(n+1) = 3 x_n + 1`
 
 Let's start with `x_1 = 5` and see what happens:
 
@@ -926,7 +962,7 @@ _{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 
 ---
 > id: hailstone-1
-> goals: vmin vmax
+> goals: var-max
 
 It looks like after a few terms, the sequence reaches a "cycle": 4, 2, 1 will
 continue to repeat over and over again, forever.
@@ -939,16 +975,18 @@ _{.n}2_, _{.n}1_, _{.n}4_, _{.n}2_, _{.n}1_, …*
 
 ---
 > id: hailstone-2
+> goals: var-max
 
-It seems like, whatever we pick as the first value, the sequence will always
-end up in a 4, 2, 1 cycle.
+It seems like the length of the sequence varies a lot, but it will always end up
+in a 4, 2, 1 cycle – no matter what first number we pick.
 
-It is interesting to visualise the terms of the sequence in a chart:
+We can visualise the terms of the sequence in a chart:
 
     x-coordinate-system(margins="12 12 24 40")
-    p.md ${n}{n|12|1,50,1}
+      .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 ---
+> id: hailstone-3
 
 ::: column.grow
 
@@ -957,11 +995,11 @@ Sequences__, because they randomly seem to go up and down before eventually
 hitting the 4, 2, 1 cycle – just like hailstones that move up and down in a
 cloud before crashing to Earth.
 
-In 1937, the mathematician Lothar Collatz proposed that _every_ hailstone
-sequence sequence eventually ends in a 4, 2, 1 cycle – whatever starting value
-you pick. You've already checked a few starting points above, and computers have
-actually tried all numbers up to `10^20` – that’s 100 billion billion or a 1
-followed by twenty zeros.
+In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
+hailstone sequence sequence eventually ends in a 4, 2, 1 cycle – whatever
+starting value you pick. You've already checked a few starting points above, and
+computers have actually tried all numbers up to `10^20` – that’s 100 billion
+billion or a 1 followed by twenty zeros.
 
 ::: column(width=240)
 
