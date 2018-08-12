@@ -113,7 +113,7 @@ _a_, _b_, _c_, _d_, and so on. However you’ll eventually [[run out of
 letters|reach 100|forget a letter]], while the sequence might go on forever!
 
 ---
-> id: triangle
+> id: triangles
 
 ### Triangle and Square Numbers
 
@@ -186,7 +186,7 @@ the [[first term|last term|second term]] in the sequence, you can calculate all
 the following terms.
 
 ---
-> id: square
+> id: squares
 
     hr
 
@@ -321,7 +321,7 @@ Here are a few more examples of action sequence photography, for your enjoyment:
 
 ::: column.grow
 
-In 1683, the astronomer [Edmond Halley](gloss:halley) observed an unusual
+In 1683, the astronomer [Edmond Halley](bio:halley) observed an unusual
 phenomenon: a glowing white object with a long tail that moved across the night
 sky. It was a __comet__, a small, icy rock that is flying through space and
 while leaving behind a trail of dust and ice.
@@ -368,28 +368,33 @@ know that Halley’s comet was observed by ancient astronomers as early as 240 B
 
 ---
 > id: ball
+> goals: bounce
 
 A different group of scientists is investigating the behaviour of a bouncing
-tennis ball. With every bounce, the ball loses some of its original height:
+tennis ball. They dropped the ball from a height of 10 meters and measured its
+position over time. With every bounce, the ball loses some of its original
+height:
 
-{.todo} >>> interactive
-
-    x-slider(steps=100)
+    x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|6|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
+      .tennis-ball
+      .tennis-ball
+    x-slider(steps=400 speed=0.5)
 
 ---
 > id: ball-1
+> goals: reveals
 
-The scientists noticed that the ball loses 20% of its height with every bounce.
+The scientists noticed that the ball loses 20% of its height after every bounce.
 In other words, the maximum height of every bounce is 80% of the previous one.
-This allowed them to predict the height of every bounce:
+This allowed them to predict the height of every following bounce:
 
 {.text-center.s-teal.s-large.with-arrows} _{span.n}10_,
 _{span.n}8*{span.arrow}×0.8*_, _{.n}[[6.4]]*{span.arrow}×0.8*_,
-_{.n}[[5.12]]*{span.arrow}×0.8*_,
-_{.n.reveal(when="blank-0 blank-1" delay=100)}4.096*{span.arrow}×0.8*_,
-_{.n.reveal(when="blank-0 blank-1" delay=400)}3.277*{span.arrow}×0.8*_,
-_{.n.reveal(when="blank-0 blank-1" delay=700)}2.621*{span.arrow}×0.8*_,
-_{.n.reveal(when="blank-0 blank-1" delay=1000)}2.097*{span.arrow}×0.8*_, …
+_{span.n}[[5.12]]*{span.arrow}×0.8*_,
+_{span.n.reveal}4.096*{span.arrow}×0.8*_*{span.reveal},*
+_{span.n.reveal}3.277*{span.arrow}×0.8*_*{span.reveal},*
+_{span.n.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
+_{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ---
 > id: arithmetic-geometric
@@ -446,10 +451,10 @@ generate your own sequences by changing the values of `a_0`, _d_ and _r_:
 > id: arithmetic-geometric-graph
 
 To XXX the pattern of these sequences, we can visualise them in a chart:
-arithmetic ${a}{a|1|-10,10,1}, ${d}{d|1|-10,10,1}
-geometric ${b}{b|1|-10,10,1}, ${r}{r|1|-10,10,1}
+arithmetic ${a}{a|0|-6,6,1}, ${d}{d|5|-5,5,0.2}
+geometric ${b}{b|2|-6,6,1}, ${r}{r|1.4|-5,5,0.2}
 
-    x-coordinate-system(margins="12 12 24 40")
+    x-coordinate-system(margins="12 12 24 40" type="points")
 
 ---
 
@@ -478,15 +483,51 @@ Finding an __explicit formula__ is a bit harder.
 
 ---
 > id: pay-it-forward
+> goal: watch
 
 ### Pay it Forward
 
-{.todo} Powers Series, exponential growth
+Here is a short clip from the movie _Pay it Forward_, where 12-year-old Trevor
+explains his idea for making the world a better place:
 
-{.todo} Exponential models can be truly XXXXX. Even if they start really slowly, they
-will eventually speed up a lot, and overtake any possible linear model. Most
-importantly, us humans tend to be very bad at estimating just _how fast_
-exponential models can grow. Or are we?
+    figure
+      .video-wrap
+        .video-padding
+          video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls playsinline)
+      .caption Extract from "Pay It Forward" (2000), © Warner Bros. Entertainment
+
+---
+
+The essence of this idea is that, if everyone "pays it forward", a single person
+can affect a huge impact on the world:
+
+    figure: img(src="images/pay-it-forward.png" width=700 height=220)
+
+Notice how the number of people at every step forms a [[geometric sequence|arithmetic
+sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
+
+{.text-center.reveal(when="blank-1").s-orange.s-large.with-arrows} _{span.n}1_,
+_{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
+_{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
+_{span.n}[[243]]*{span.arrow}×3*_, …
+
+---
+
+Using the [explicit formula](gloss:sequence-explicit) for geometric sequences,
+we can work out how many new people are affected at any step:
+
+{.todo} equation
+
+---
+
+The number of people increases incredibly quickly. In the 10th step, you would
+reach 19,683 new ones, and after 22 steps you would have reached more people
+than currently alive on Earth.
+
+This sequence of numbers has a special name: the __powers of 3__. As you can
+see, every term is actually just a different power of 3:
+
+{.todo} `3^0`, `3^1`, `3^2`, `3^3`, …
 
 ---
 > id: millionaire
@@ -500,12 +541,6 @@ They can choose between two different options:
   third month, and so on. Every month, he receives $1 more than in the previous
   one.
 * Anna receives 1¢ in the first month, 2¢ in the second month
-
-So on the thirtieth day, you get 229 pennies, which is 536,870,912 pennies, or $5,368,709.12. That’s a lot more than a million dollars, even just counting the amount you get on that one day!
-
-A geometric sequence is a sequence of numbers in which each number in the sequence is found by multiplying the previous number by a fixed amount called the common ratio. In other words, the ratio between any term and the term before it is always the same. In the previous example the common ratio was 2, as the number of pennies doubled each day.
-
-The common ratio, r, in any geometric sequence can be found by dividing any term by the preceding term.
 
 ---
 > id: millionaire-1
@@ -569,6 +604,11 @@ gets ${b}{b|1|1,10,1}¢ every day.
 days you’ve reached $100. After less than a month you’re making more than 1
 million per day, and after 2 months you’d have made more than _all the money
 on Earth_. :1f4b0: :1f37e: :1f911:
+
+{.todo} Exponential growth can be truly XXXXX. Even if they start really slowly, they
+will eventually speed up a lot, and overtake any possible linear model. Most
+importantly, us humans tend to be very bad at estimating just _how fast_
+exponential models can grow. Or are we?
 
 ---
 > id: chessboard
@@ -789,7 +829,7 @@ and the resulting sequence [__Tetrahedral numbers__](gloss:tetrahedral-numbers).
 ### Prime Numbers
 
 Another sequence that you’ve seen before are the [__Prime
-numbers__](gloss:primes). We say that a number is _prime_ if it has no
+numbers__](gloss:prime). We say that a number is _prime_ if it has no
 [factors](gloss:factor) [[other than 1 and itself|other than 1 and 2|and no
 multiples]].
 
@@ -850,9 +890,8 @@ some of the most important and most mysterious concepts in mathematics!
 
 ### Perfect Numbers
 
-To determine if a number is prime, we have check if it has any
-[factors](gloss:factor) other than 1 or itself. Rather than multiplying those
-factors, we could also try adding them up:
+To determine if a number is prime, we have to find all of its [factors](gloss:factor).
+Rather than multiplying those factors, we could also try adding them up:
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
@@ -967,33 +1006,37 @@ _{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 It looks like after a few terms, the sequence reaches a "cycle": 4, 2, 1 will
 continue to repeat over and over again, forever.
 
-Of course, we could have picked a different starting point, like ${n}{n|6|5,40,1}.
-Then the sequence would be
+Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
+Then the sequence would look like this:
 
-{.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-purple}_{.n}4_,
-_{.n}2_, _{.n}1_, _{.n}4_, _{.n}2_, _{.n}1_, …*
+{.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-red}_{.n}4_,
+_{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
+*{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
 
 ---
 > id: hailstone-2
-> goals: var-max
+> goals: var-max var-min
 
 It seems like the length of the sequence varies a lot, but it will always end up
-in a 4, 2, 1 cycle – no matter what first number we pick.
-
-We can visualise the terms of the sequence in a chart:
+in a 4, 2, 1 cycle – no matter what first number we pick. We can visualise the
+terms of the sequence in a chart:
 
     x-coordinate-system(margins="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
+
+{.reveal(when="var-min")} Notice how some starting points end very quickly,
+while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
+than one hundreds steps before they eventually reach the 4, 2, 1 cycle.
 
 ---
 > id: hailstone-3
 
 ::: column.grow
 
-All sequences that follow this recursive formula are called __Hailstone
-Sequences__, because they randomly seem to go up and down before eventually
-hitting the 4, 2, 1 cycle – just like hailstones that move up and down in a
-cloud before crashing to Earth.
+All sequences that follow this recursive formula are called [__Hailstone
+Sequences__](gloss:hailstone-sequence), because they seem to move randomly up
+and down before hitting the 4, 2, 1 cycle – just like hailstones that move up
+and down in a cloud before crashing to Earth.
 
 In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
 hailstone sequence sequence eventually ends in a 4, 2, 1 cycle – whatever
@@ -1747,6 +1790,8 @@ about. To see it, we will try to solve the same problem with two completely
 different methods, and then see how they are related.
 
 {.todo} COMING SOON
+
+    // Galton Board, normal distribution
 
 
 

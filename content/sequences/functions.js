@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import { flatten, delay, list, last, cache, tabulate } from '@mathigon/core'
-import { isPrime, nearlyEquals, Point } from '@mathigon/fermat'
+import { flatten, delay, list, last, cache, tabulate, square } from '@mathigon/core'
+import { isPrime, nearlyEquals, Point, Bounds } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -45,17 +45,73 @@ function fadeInElements($step, tagName) {
   }
 }
 
-export function triangle($step) {
+export function triangles($step) {
   fadeInElements($step, 'circle');
 }
 
-export function square($step) {
+export function squares($step) {
   fadeInElements($step, 'rect');
 }
 
 
 // -----------------------------------------------------------------------------
 // Arithmetic and Geometric Sequences
+
+const BOUNCE_RATE = 0.8;
+function bounce(x) {
+  const y = [];
+
+  let y0 = 10;
+  let x0 = 0;
+
+  while (x0 < 25) {
+    y.push(y0 - square(x*4 - x0));
+    x0 = 0.1 + x0 + Math.sqrt(y0) + Math.sqrt(BOUNCE_RATE * y0);
+    y0 = BOUNCE_RATE * y0;
+  }
+
+  return 0.7 + 0.93 * Math.max(0, ...y);
+}
+
+function setPosition ($el, p, width, height, r) {
+  $el.css({left: p.x / width * 100 + '%', top: p.y / height * 100 + '%',
+    transform: `rotate(${r}deg)`});
+}
+
+export function ball($step) {
+  const $chart = $step.$('x-coordinate-system');
+  const $slider = $step.$('x-slider');
+  const $balls = $step.$$('.tennis-ball');
+
+  $chart.setFunctions(bounce);
+  $chart.$xAxis.setAttr('x1', '2');
+  const $fn = $chart.$plot.$('path');
+
+  function tick(n) {
+    const x = 6.65 * n / $slider.steps;
+    const p = $chart.mathToPlotCoords(new Point(x, bounce(x)));
+
+    const right = $chart.plotBounds.xMax - p.x;
+    $fn.css('clip-path', `inset(-2px ${right}px -2px -2px)`);
+
+    setPosition($balls[0], p, 640, 320, x * 90);
+    setPosition($balls[1], new Point(40, p.y), 640, 320, x * 90);
+    if (x >= 6) $step.score('bounce');
+  }
+
+  $slider.on('move', tick);
+  tick(0);
+}
+
+export function ball1($step) {
+  const $reveals = $step.$$('.reveal');
+  for (let $r of $reveals) $r.hide();
+
+  $step.onScore('blank-0 blank-1', () => {
+    $reveals.forEach(($r, i) => $r.enter('fade', 400, 100 + i * 100));
+    delay(() => $step.score('reveals'), 900);
+  });
+}
 
 function arithmetic(a, d, n) {
   return tabulate((i) => a + i * d, n);
@@ -70,7 +126,9 @@ export function arithmeticGeometricGraph($step) {
   const $plot = $step.$('x-coordinate-system');
 
   $step.model.watch((m) => {
-    $plot.setSeries(arithmetic(m.a, m.d, 10), geometric(m.b, m.r, 10));
+    const p1 = arithmetic(m.a, m.d, 10).map((p, i) => new Point(1 + i, p));
+    const p2 = geometric(m.b, m.r, 10).map((p, i) => new Point(1 + i, p));
+    $plot.setSeries(p1, p2);
   });
 }
 
@@ -165,7 +223,7 @@ function hailstones(n) {
 
 export function hailstone1($step) {
   $step.model.set('hailstones', (n) => hailstones(n)
-      .map(i => `<span class="n">${i}</span>`).join(','));
+      .map(i => `<span class="n">${i}</span>`).join(', '));
 
   $step.model.watch((state) => {
     if (state.n === 30) $step.score('var-max');
@@ -179,8 +237,13 @@ export function hailstone2($step) {
   $step.model.watch((m) => {
     const data = [...cached(m.n), 4, 2, 1];
     $plot.setPoints(data);
-    if (m.n === 40) $step.score('var-max');
+    if (m.n >= 25) $step.score('var-min');
+    if (m.n >= 40) $step.score('var-max');
   });
+
+  const $actions = $step.$$('.var-action');
+  $actions[0].on('click', () => $step.model.set('n', 31));
+  $actions[1].on('click', () => $step.model.set('n', 47));
 }
 
 

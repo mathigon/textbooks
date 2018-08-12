@@ -107,7 +107,7 @@ arithmetic-sequence:
 
 geometric-sequence:
   title: Geometric Sequence
-  text: A geometric sequence__ (sometimes called __geometric progression__)
+  text: A __geometric sequence__ (sometimes called __geometric progression__)
     is a sequence of numbers in which the ratio _r_ between consecutive terms
     is always the same.
 

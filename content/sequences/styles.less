@@ -52,6 +52,12 @@
   .s-lime & { background: @lime; }
   .s-lime &:before, .s-lime &:after { border-bottom-color: @lime; }
 
+  .s-red & { background: @red; }
+  .s-red &:before, .s-red &:after { border-bottom-color: @red; }
+
+  .s-blue & { background: @blue; }
+  .s-blue &:before, .s-blue &:after { border-bottom-color: @blue; }
+
   .s-vertical & { width: auto; padding: 3px 10px; margin: 5px 6px; }
   .s-vertical &:before, .s-vertical &:after { border-width: 0 16px 5px 16px; transform-origin: top left; }
   .s-vertical &:before { top: 32px; left: -5px; transform: rotate(-90deg); }
@@ -96,12 +102,32 @@
 // -----------------------------------------------------------------------------
 // Arithmetic and Geometric Series
 
+.tennis-ball {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid white;
+  background: url(/resources/sequences/images/tennis.svg);
+  position: absolute;
+  margin: -15px;
+  pointer-events: none;
+}
+
 .text-wrap {
   display: block;
   float: right;
   shape-margin: 24px;
   margin: 0 0 24px 24px;
   @media (max-width: 560px) { float: none !important; margin: 0 auto 1em; }
+}
+
+.video-wrap {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .video-padding { height: 0; padding-bottom: 56.25%; position: relative; }
+  video { position: absolute; width: 100%; height: 100%; border-radius: 4px; }
 }
 
 .money-grid td {
