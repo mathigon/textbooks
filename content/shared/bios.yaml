@@ -28,6 +28,12 @@ archimedes:
     enter and Archimedes as killed. His last words were _“Do not disturb my
     circles”_ – which he was studying at the time.
 
+collatz:
+  name: Lothar Collatz
+  bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
+    differential equations and optimisation problems. The _Collatz conjecture_
+    or `3x+1` problem is named after him – and still unsolved.
+
 dirac:
   name: Paul Dirac
   bio: |
@@ -148,6 +154,12 @@ haken:
     1990, Haken became a member of the Center for Advanced Study at the
     University of Illinois, where he is now an Emeritus Professor.
 
+halley:
+  name: Edmond Halley
+  bio: __Edmond Halley__ (1656 – 1742) was an English mathematician and
+    physicist, and the second _Astronomer Royal_. He calculated the orbit of
+    Halley’s Comet, which is named after him.
+
 jefferson:
   name: Thomas Jefferson
   bio: |
@@ -164,6 +176,14 @@ karinthy:
   bio: __Frigyes Karinthy__ (1887 – 1938) was a Hungarian author, poet and
     journalist. He is best known for the 1929 short story “Chains”, which first
     introduced the concept of _six degrees of separation_.
+
+khayyam:
+  name: Omar Khayyam
+  bio: __Omar Khayyam__ (عمر خیّام‎, 1048 – 1131) was a Persian mathematician,
+    astronomer and poet. He managed to classify and solve all cubic equations,
+    and found new ways to understand Euclid's _parallel axiom_. Khayyam also
+    designed the _Jalali calendar_, a precise solar calendar that is still used
+    in some countries.
 
 milgram:
   name: Stanley Milgram
@@ -188,6 +208,13 @@ newton:
     the first reflecting telescope, calculated the speed of sound, studied the
     motion of fluids, and developed a theory of colour based on how prisms split
     sunlight into a rainbow-coloured spectrum.
+
+nicomachus:
+  name: Nicomachus of Gerasa
+  bio: __Nicomachus of Gerasa__ (c. 60 – 120) was an ancient Greek mathematician
+    who also spent much time thinking about the mystical properties of numbers.
+    His book _Introduction to Arithmetic_ contains the first mention of perfect
+    numbers.
 
 noether:
   name: Emmy Noether
@@ -222,6 +249,14 @@ penrose:
     – often collaborating with other famous scientists like Stephen Hawking and
     Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
     non-periodic tessellations.
+
+pingala:
+  name: Pingala
+  bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
+    lived around 300BC, but very little is known about his life. He wrote the
+    Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
+    contained the first known explanations of binary numbers, Fibonacci numbers
+    and Pascal’s triangle.
 
 planck:
   name: Max Plank
@@ -278,6 +313,13 @@ sikdar:
   bio: __Radhanath Sikdar__ (1813 – 1870) was an Indian mathematician. He was
     the first to measure the height of Mount Everest, and to show that it is
     the tallest mountain on Earth.
+
+singmaster:
+  name: David Singmaster
+  bio: __David Singmaster__ (born 1939) is an American mathematician who is
+    particularly well known for his mathematical puzzles and brain teasers. He
+    was the first to come up with mathematical algorithms for analysing and
+    solving the _Rubik’s Cube_.
 
 thales:
   name: Thales
