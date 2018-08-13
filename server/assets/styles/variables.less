@@ -112,3 +112,12 @@
   cursor: pointer;
   &:hover { color: fade(black, 80%); box-shadow: @shadow-1; background: @color; }
 }
+
+.circled(@size) {
+  text-align: center;
+  display: inline-block;
+  width: @size;
+  height: @size;
+  line-height: @size;
+  border-radius: @size/2;
+}

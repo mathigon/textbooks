@@ -58,9 +58,9 @@
   .s-blue & { background: @blue; }
   .s-blue &:before, .s-blue &:after { border-bottom-color: @blue; }
 
-  .s-vertical & { width: auto; padding: 3px 10px; margin: 5px 6px; }
-  .s-vertical &:before, .s-vertical &:after { border-width: 0 16px 5px 16px; transform-origin: top left; }
-  .s-vertical &:before { top: 32px; left: -5px; transform: rotate(-90deg); }
+  .s-vertical & { width: auto; padding: 3px 8px; margin: 5px 8px; }
+  .s-vertical &:before, .s-vertical &:after { border-width: 0 16px 8px 16px; transform-origin: top left; }
+  .s-vertical &:before { top: 32px; left: -8px; transform: rotate(-90deg); }
   .s-vertical &:after { top: 0; right: -77px; transform: rotate(90deg); }
 
   .s-large & { width: 50px; height: 30px; margin: 18px 3px; line-height: 30px; }
@@ -174,26 +174,12 @@ x-tetrahedron canvas { width: 100%; height: auto; }
 
 x-coordinate-system + .caption { margin-top: -1em; }
 
-.perfect-grid {
-  display: flex;
-  margin: 1em 0;
+.perfect-table {
   line-height: 1.4;
-  font-size: 16px;
-  padding: 0 16px;
-
-  .perfect-labels { width: 112px; text-align: right; flex-shrink: 0; }
-  .perfect-values { flex: 1 1; display: flex; flex-wrap: wrap; }
-
-  .perfect-col, .perfect-labels { margin: 12px 0; }
-  .perfect-col { min-width: 60px; text-align: center; border-left: 1px solid @light-grey; }
-  .perfect-col:nth-child(2n-1) { background: #f3f3f3; }
-
-  .perfect-cell { padding: 4px 2px; border-bottom: 1px solid @light-grey; white-space: nowrap; }
-  .perfect-cell:last-child { border: none; }
-  .perfect-labels .perfect-cell { padding-right: 8px; }
-
-  input { min-width: 36px; }
-  strong { color: @text-dark; }
+  td { padding: 3px 12px; }
+  tr:nth-child(2n) td { background: #f4f4f4; }
+  .c { .circled(30px); background: @red; color: white; }
+  .c.small { .circled(22px); font-size: 15px; background: @orange; margin: 2px; }
 }
 
 .perfect-box {
@@ -205,6 +191,8 @@ x-coordinate-system + .caption { margin-top: -1em; }
   &:nth-child(2) { background: mix(@blue, white, 10%); }
   &:nth-child(3) { background: mix(@green, white, 10%); }
 }
+
+.perfect-list { max-width: 660px; margin: 0 auto 1em; }
 
 .hailstone-slider {
   position: absolute;

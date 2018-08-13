@@ -890,33 +890,35 @@ some of the most important and most mysterious concepts in mathematics!
 
 ### Perfect Numbers
 
-To determine if a number is prime, we have to find all of its [factors](gloss:factor).
-Rather than multiplying those factors, we could also try adding them up:
+To determine if a number is [prime](gloss:prime), we have to find all of its
+[factors](gloss:factor). Usually we would _multiply_ these factors to get back
+the original number, but let's see what happens if we _add up_ all factors
+of a number:
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-    - numbers = list(20).slice(1);
 
-    .perfect-grid
-      .perfect-labels
-        .perfect-cell: strong Number
-        .perfect-cell: strong Factors
-        .perfect-cell: strong Sum of factors
-      .perfect-values
-        for i in numbers
-          .perfect-col
-            .perfect-cell: strong= i
-            .perfect-cell= factors(i).join(', ')
-            if i >= 6
-              .perfect-cell.md [[#{total(factors(i))}]]
-            else
-              .perfect-cell= total(factors(i))
+    table.grid.perfect-table
+      tr
+        td: strong Number
+        td: strong Factors
+        td: strong Sum of Factors
+      for i in [5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+        tr
+          td: .c= i
+          td
+            for j in factors(i)
+              .c.small= j
+          if i >= 10
+            td.md [[#{total(factors(i))}]]
+          else
+            td= total(factors(i))
 
 ---
 > id: perfect-1
 
-Let's have a look at these sums of factors:
+Let’s compare these numbers with their sum of factors:
 
 ::: column.perfect-box(width=220 parent="padded-thin")
 
@@ -925,13 +927,13 @@ itself. These numbers are called [__deficient numbers__](gloss:deficient-number)
 
 ::: column.reveal.perfect-box(when="blank-0" width=220)
 
-For some numbers, the sum of its factors is greater than itself. These numbers
+For a few numbers, the sum of its factors is greater than itself. These numbers
 are called [__abundant numbers__](gloss:abundant-number).
 
 ::: column.reveal.perfect-box(when="blank-0" delay=500 width=220)
 
-Only one number in the list above has the sum of its factors _equal_ to itself:
-[[6]]. These numbers are called [__perfect numbers__](gloss:perfect-number).
+Only one number in the list above has a sum of factors that is _equal_ to itself:
+[[6]]. This is called a [__perfect number__](gloss:perfect-number).
 
 :::
 
@@ -941,9 +943,9 @@ Only one number in the list above has the sum of its factors _equal_ to itself:
 The next perfect number is 28, because if we add up all its factors we get
 `1 + 2 + 4 + 7 + 14 = 28`. After that, they become much rarer:
 
-{.text-center.s-purple.s-vertical} _{.n}6_, _{.n}28_, _{.n}496_, _{.n}8,128_,
-_{.n}33,550,336_, _{.n}858,986,9056_, _{.n}137,438,691,328_,
-_{.n}2,305,843,008,139,952,128_, …
+{.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
+_{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}858,986,9056_,
+_{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 
 Notice that all of these numbers are [[even|multiples of 3|2 more than a square
 number]]. _{span.reveal(when="blank-0")}It turns out that they are also all
@@ -959,10 +961,11 @@ Perfect numbers were first studied by ancient Greek mathematicians like
 more than 2000 years ago. They calculated the first few perfect numbers, and
 wondered if there might be any _odd_ ones.
 
-More recently, mathematicians have used computers to check the first
-10<sup>1500</sup> numbers (that's a 1 followed by 1500 zeros), but without
-success. To this day, it is still unknown whether there are any odd perfect
-numbers, making it the _oldest unsolved problem in all of mathematics_!
+Today, mathematicians have used computers to check the first 10<sup>1500</sup>
+numbers (that’s a 1 followed by 1500 zeros), but without success: all perfect
+numbers they found were even. To this day, it is still unknown whether there are
+any odd perfect numbers, making it the oldest unsolved problem in _all of
+mathematics_!
 
 ::: column(width=220)
 
