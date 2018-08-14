@@ -348,3 +348,7 @@ export function mountains($step) {
   $step.onScore('blank-1', () => { $geopad.elements.get('angle-b').setLabel('β = 6°'); $geopad.model.update(); });
   $step.onScore('blank-3 blank-4', () => { $geopad.elements.get('side-d').setLabel('d = 23km'); $geopad.model.update(); });
 }
+
+export function applications2($step) {
+  $step.$('x-video').on('end', () => $step.score('video'));
+}

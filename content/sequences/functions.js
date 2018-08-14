@@ -132,6 +132,11 @@ export function arithmeticGeometricGraph($step) {
   });
 }
 
+export function payItForward($step) {
+  $step.$('x-video').on('end', () => $step.score('video'));
+}
+
+
 // -----------------------------------------------------------------------------
 // Famous Sequences
 

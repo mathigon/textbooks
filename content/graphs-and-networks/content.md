@@ -560,21 +560,21 @@ _{.b.green}V_ = _{.b.red}E_ + [[2]].
 
 ::: column(width=200)
 
-    x-media(width=200 height=200 src="images/icosahedron.mp4")
+    x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
 {.caption} __Icosahedron__  
 one of the 5 [Platonic Solids](/course/polygons-and-polyhedra/platonic-solids)  
 __{.blue}20__ Faces, __{.green}12__ Vertices and __{.red}30__ Edges
 ::: column(width=200)
 
-    x-media(width=200 height=200 src="images/rhombi.mp4")
+    x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
 {.caption} __Small Rhombicosidodecahedron__  
 one of the 13 [Archimedean Solids](/course/polygons-and-polyhedra/more-on-polyhedra)  
 __{.blue}62__ Faces, __{.green}60__ Vertices and __{.red}120__ Edges
 ::: column(width=200)
 
-    x-media(width=200 height=200 src="images/football.mp4" credit="pond5.com")
+    x-video(width=200 height=200 src="images/football.mp4" credit="pond5.com" hover loop)
 
 {.caption} __Football, or *Truncated Icosahedron*__  
 __{.blue}32__ Faces (12 black and 20 white),  
@@ -733,7 +733,7 @@ differently-shaped planets, such as a torus (doughnut shape). In these cases you
 may need more than four colours and the proofs become even more difficult.
 ::: column(width=300)
 
-    x-media(width=300 height=220 src="images/torus.mp4")
+    x-video(width=300 height=220 src="images/torus.mp4" hover loop)
     p.caption This map on a torus requires seven colours.
 
 :::

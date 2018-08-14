@@ -483,7 +483,7 @@ Finding an __explicit formula__ is a bit harder.
 
 ---
 > id: pay-it-forward
-> goal: watch
+> goals: video
 
 ### Pay it Forward
 
@@ -491,12 +491,11 @@ Here is a short clip from the movie _Pay it Forward_, where 12-year-old Trevor
 explains his idea for making the world a better place:
 
     figure
-      .video-wrap
-        .video-padding
-          video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls playsinline)
+      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption Extract from "Pay It Forward" (2000), © Warner Bros. Entertainment
 
 ---
+> id: pay-it-forward-1
 
 The essence of this idea is that, if everyone "pays it forward", a single person
 can affect a huge impact on the world:
@@ -512,6 +511,7 @@ _{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
 _{span.n}[[243]]*{span.arrow}×3*_, …
 
 ---
+> id: pay-it-forward-2
 
 Using the [explicit formula](gloss:sequence-explicit) for geometric sequences,
 we can work out how many new people are affected at any step:
@@ -519,6 +519,7 @@ we can work out how many new people are affected at any step:
 {.todo} equation
 
 ---
+> id: pay-it-forward-3
 
 The number of people increases incredibly quickly. In the 10th step, you would
 reach 19,683 new ones, and after 22 steps you would have reached more people

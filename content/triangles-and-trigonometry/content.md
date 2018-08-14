@@ -1713,6 +1713,7 @@ can carry heavy weights.
 
 ---
 > id: applications-2
+> goals: video
 
 Triangles are also the simplest polygon, with the fewest sides. This makes them
 particularly well suited to approximating complex curved surfaces. This is done
@@ -1742,7 +1743,7 @@ calculate their colour and texture.
     x-media(src="images/dolphin.jpg" width=220 height=135)
 :::
 
-    figure: x-media(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
+    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
     //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
 
 ---

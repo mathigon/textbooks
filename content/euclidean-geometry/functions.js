@@ -175,24 +175,14 @@ export function equilateral($step) {
 // -----------------------------------------------------------------------------
 
 export function crane($step) {
-  // TODO Check buffering issues
-
-  const $video = $step.$('video');
-  const $play = $step.$('.play-btn');
-  const $progress = $step.$('.progress');
-  const $bar = $step.$('.bar');
+  const $video = $step.$('x-video');
   const $steps = $step.$$('.step');
 
-  const drag = new Draggable($step.$('.handle'), $step.$('.progress'), 'x');
   const times = $steps.map($s => +$s.data.t);
-  const duration = 234;
-
-  let playing = false;
   let step = 0;
 
-  function setProgress(time) {
+  $video.on('timeupdate', (time) => {
     let s = times.findIndex(t => t > time) - 1;
-    $bar.css('width', 100 * time / duration + '%');
 
     if (s < 0) {
       s = times.length - 1;
@@ -205,47 +195,9 @@ export function crane($step) {
       $steps[s].addClass('active');
       step = s;
     }
-  }
-
-  function updatePosition(x) {
-    const time = x / $video.width * duration;
-    $video._el.currentTime = time;
-    setProgress(time);
-  }
-
-  $video.on('timeupdate', () => {
-    const time = $video._el.currentTime;
-    drag.position = {x: time / duration * $video.width, y: 0};
-    setProgress(time);
   });
 
-  $video.on('ended', () => {
-    $play.enter('pop', 200);
-    playing = false;
-  });
-
-  $video.on('click', () => {
-    if (playing) {
-      $video._el.pause();
-      $play.enter('pop', 200);
-    } else {
-      $video._el.play();
-      $play.exit('pop', 200);
-    }
-    playing = !playing;
-  });
-
-  drag.on('drag', () => updatePosition(drag.position.x));
-
-  $progress.on('click', (e) => {
-    if (e.target !== $progress._el || !('offsetX' in e)) return;
-    e.stopPropagation();
-    drag.position = {x: e.offsetX, y: 0};
-    updatePosition(e.offsetX);
-  });
-
-  for (let $s of $steps)
-    $s.on('click', () => updatePosition(+$s.data.t / duration * $video.width));
+  for (let $s of $steps) $s.on('click', () => $video.setTime(+$s.data.t));
 
   $step.on('complete', () => {
     for (let $s of $steps) {
@@ -253,3 +205,11 @@ export function crane($step) {
     }
   });
 }
+
+function scoreOnVideo($step) {
+  $step.$('x-video').on('end', () => $step.score('video'));
+}
+
+export const origamiApplications = scoreOnVideo;
+export const origamiApplications1 = scoreOnVideo;
+export const origamiApplications3 = scoreOnVideo;

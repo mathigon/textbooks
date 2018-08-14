@@ -81,25 +81,6 @@
   cursor: pointer;
 }
 
-.video-wrap {
-  position: sticky;
-  top: calc(~"50vh - 180px");
-  padding-bottom: 100%;
-  cursor: pointer;
-
-  .play-btn { pointer-events: none; }
-  video { position: absolute; width: 100%; height: 100%; }
-
-  .progress { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: fade(white, 40%); transition: height .2s; }
-  .bar { width: 0; height: 100%; background: @red; }
-  .handle { position: absolute; width: 14px; height: 14px; top: 50%; margin: -7px; border-radius: 8px; background: @red; transition: transform .2s; transform: scale(0); }
-
-  &:hover, &:active {
-    .progress { height: 5px; }
-    .handle { transform: none; }
-  }
-}
-
 #crane .step {
   display: none;
   cursor: pointer;
@@ -109,3 +90,5 @@
   &.active { color: white; }
   &:first-child { display: block; }
 }
+
+#crane x-video { position: sticky; top: calc(~"50vh - 180px"); }

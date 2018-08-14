@@ -731,12 +731,7 @@ extremely accurate. But with a bit of practice, you can do it yourself!
 
 ::: column(width=360)
 
-    .video-wrap
-      video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=400 height=400 muted playsinline)
-      .play-btn
-      .progress
-        .bar
-        .handle
+    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=400 height=400 controls)
 
 ::: column.grow
 {.step.active(data-t=0)} You just need a quadratic sheet of paper. To start,
@@ -786,48 +781,51 @@ different _folds_ that are possible with origami. They were first listed in
 
 ::: column(width=220)
 
-    x-media(src="images/origami/axiom-1.mp4" width=220 height=220)
+    x-video(src="images/origami/axiom-1.mp4" width=220 height=220)
 
 {.text-center} You can fold a line connecting any two points.
 ::: column(width=220)
 
-    x-media(src="images/origami/axiom-2.mp4" width=220 height=220)
+    x-video(src="images/origami/axiom-2.mp4" width=220 height=220)
 
 {.text-center} You can fold any point _P_ onto any other point _Q_. This creates
 the [[perpendicular bisector|angle bisector|midpoint]] of the line `bar(PQ)`.
 ::: column(width=220)
 
-    x-media(src="images/origami/axiom-3.mp4" width=220 height=220)
+    x-video(src="images/origami/axiom-3.mp4" width=220 height=220)
 
 {.text-center} We can fold any two lines onto each other. If the lines
 intersect, this creates the [[angle bisector|perpendicular bisector|midpoint]]
 of the angle between the two lines.
 ::: column(width=220)
 
-    x-media(src="images/origami/axiom-4.mp4" width=220 height=220)
+    x-video(src="images/origami/axiom-4.mp4" width=220 height=220)
 
 {.text-center} Given a point _P_ and a line _L_, we can make a fold
 perpendicular to _L_ passing through _P_.
 ::: column(width=220)
 
-    x-media(src="images/origami/axiom-5.mp4" width=220 height=220)
+    x-video(src="images/origami/axiom-5.mp4" width=220 height=220)
 
 {.text-center} Given two points _P_ and _Q_ and a line _L_, we can make a fold 
 that passes through _P_ and places _Q_ onto _L_.
 ::: column(width=220)
 
-    x-media(src="images/origami/axiom-6.mp4" width=220 height=220)
+    x-video(src="images/origami/axiom-6.mp4" width=220 height=220)
 
 {.text-center} Given any two points _P_ and _Q_ and any two lines _K_ and _L_,
 we can make a fold that places point _P_ onto line _K_ and at the same time
 places point _Q_ onto line _L_.
 ::: column(width=220)
 
-    x-media(src="images/origami/axiom-7.mp4" width=220 height=220)
+    x-video(src="images/origami/axiom-7.mp4" width=220 height=220)
 
 {.text-center} Given a point _P_ and two lines _K_ and _L_, we can fold a line
 perpendicular to _K_ that places _P_ onto _L_.
 :::
+
+---
+> id: origami-axioms-1
 
 It turns out that these axioms are even more powerful than the Euclidean ones.
 It is possible to trisect angles and double cubes using just paper folding!
@@ -838,6 +836,7 @@ square the circle with origami.
 
 ---
 > id: origami-applications
+> goals: video
 
 Origami is an ancient art, and for the longest time it was mostly a recreational
 pursuit, without real life applications. However, it turns out that techniques
@@ -845,7 +844,7 @@ developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column(width=300)
 
-    x-media(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
+    x-video(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
 ### Origami in Space
@@ -864,6 +863,9 @@ and other mechanical components.
     // can be folded up very efficiently when loaded onto rockets.
 :::
 
+---
+> id: origami-applications-1
+
 ::: column(width=300)
 
     x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
@@ -880,9 +882,13 @@ access after earthquakes or tsunamis. This image is of a prototype designed at
 Hiroshima University in Japan.
 :::
 
+---
+> id: origami-applications-2
+> goals: video
+
 ::: column(width=300)
 
-    x-media(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
+    x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
 
 ::: column.grow
 ### Stadium Roofs
@@ -895,9 +901,13 @@ The roof of the new Falcons Stadium in Atlanta consists of eight enormous
 modules that can twist to open or close.
 :::
 
+---
+> id: origami-applications-3
+> goals: video
+
 ::: column(width=300)
 
-    x-media(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
+    x-video(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
 ### Origami in Medicine
