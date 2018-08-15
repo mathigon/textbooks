@@ -5,7 +5,7 @@
 
 
 import { flatten, delay, list, last, cache, tabulate, square } from '@mathigon/core'
-import { isPrime, nearlyEquals, Point, Bounds } from '@mathigon/fermat'
+import { isPrime, nearlyEquals, Point } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -118,22 +118,50 @@ function arithmetic(a, d, n) {
 }
 
 function geometric(a, r, n) {
-  if (nearlyEquals(r, 0)) return [a];
   return tabulate((i) => a * Math.pow(r, i), n);
 }
 
+export function arithmeticGeometricSelect($step) {
+  const $cols = $step.$('.row').children.map($c => $c.$('p'));
+
+  $step.onScore('blank-0', () => $cols[0].addClass('s-green'));
+  $step.onScore('blank-2', () => $cols[2].addClass('s-red'));
+  $step.onScore('blank-4', () => $cols[4].addClass('s-red'));
+  $step.onScore('blank-7', () => $cols[8].addClass('s-green'));
+}
+
 export function arithmeticGeometricGraph($step) {
-  const $plot = $step.$('x-coordinate-system');
+  const $plots = $step.$$('x-coordinate-system');
+
+  $step.model.set('arithmetic', (a, d) =>
+      arithmetic(a, d, 6).map(n => `<span class="n">${n}</span>`).join(', '));
+
+  $step.model.set('geometric', (a, d) =>
+      geometric(a, d, 6).map(n => `<span class="n">${n}</span>`).join(', '));
 
   $step.model.watch((m) => {
     const p1 = arithmetic(m.a, m.d, 10).map((p, i) => new Point(1 + i, p));
     const p2 = geometric(m.b, m.r, 10).map((p, i) => new Point(1 + i, p));
-    $plot.setSeries(p1, p2);
+
+    $plots[0].setSeries(p1);
+    $plots[1].setSeries(p2);
+
+    if (m.a >= 4) $step.score('v1');
+    if (m.d >= 3) $step.score('v2');
+    if (m.b >= 4) $step.score('v3');
+    if (m.r >= 3) $step.score('v4');
   });
 }
 
 export function payItForward($step) {
   $step.$('x-video').on('end', () => $step.score('video'));
+}
+
+export function payItForward2($step) {
+  $step.model.set('eqn', (expr) => {
+    // TODO
+    return {error: true};
+  });
 }
 
 

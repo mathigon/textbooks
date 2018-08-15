@@ -375,7 +375,7 @@ tennis ball. They dropped the ball from a height of 10 meters and measured its
 position over time. With every bounce, the ball loses some of its original
 height:
 
-    x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|6|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
+    x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|7|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)
@@ -412,53 +412,134 @@ between consecutive terms.
 
 All sequences with these properties have a special name:
 
-::: column.grow.theorem
+::: column.grow
+::: .theorem.s-red
 
-    p.text-center: img(src="images/comet.svg" width=80 height=50)
+    p.text-center: include svg/comet.svg
 
-{.text-center} An [__arithmetic sequence__](gloss:arithmetic-sequence) has a
-__constant difference__ _d_ between consecutive terms. The same number is added
-(or subtracted) to every term, to produce the next one.
+An [__arithmetic sequence__](gloss:arithmetic-sequence) has a constant
+__{.m-red}difference *d*__ between consecutive terms.
 
-::: column.grow.theorem
+The same number is added or subtracted to every term, to produce the next one.
 
-    p.text-center: img(src="images/ball.svg" width=80 height=50)
+:::
+::: column.grow
+::: .theorem.s-green
 
-{.text-center} A [__geometric sequence__](gloss:geometric-sequence) has a
-__constant ratio__ _r_ between consecutive terms. Every term is multiplied (or
-divided) by the same number, to produce the next one.
+    p.text-center: include svg/ball.svg
 
+A [__geometric sequence__](gloss:geometric-sequence) has a constant
+__{.m-green}ratio *r*__ between consecutive terms.
+
+Every term is multiplied or divided by the same number, to produce the next.
+
+:::
 :::
 
 ---
 > id: arithmetic-geometric-select
 
 Here are a few different sequences. Can you determine which ones are arithmetic,
-geometric or neither, and what the values of _d_ and _r_ are?
+geometric or neither, and what the values of _{.b.m-red}d_ and _{.b.m-green}r_
+are?
 
-{.todo} >>> interactive
+::: column(width=330 parent="ag-select")
 
----
-> id: arithmetic-geometric-compute
+{.text-center.s-grey.s-small} _{span.n}2_, _{span.n}4_, _{span.n}8_,
+_{span.n}16_, _{span.n}32_, _{span.n}64_, …
 
-To define an arithmetic or geometric sequence, we have to know not just the
-common difference or ratio, but also the initial value `a_0`. Here you can
-generate your own sequences by changing the values of `a_0`, _d_ and _r_:
+::: column(width=320)
 
-{.todo} >>> interactive
+is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-0")}, with
+ratio [[2]]._
+
+::: column(width=330)
+
+{.text-center.s-grey.s-small} _{span.n}2_, _{span.n}5_, _{span.n}8_,
+_{span.n}11_, _{span.n}14_, _{span.n}17_, …
+
+::: column(width=320)
+
+is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-2")}, with
+difference [[3]]._
+
+::: column(width=330)
+
+{.text-center.s-grey.s-small} _{span.n}17_, _{span.n}13_, _{span.n}9_,
+_{span.n}5_, _{span.n}1_, _{span.n}–3_, …
+
+::: column(width=320)
+
+is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-4")}, with
+difference [[-4]]._
+
+::: column(width=330)
+
+{.text-center.s-grey.s-small} _{span.n}2_, _{span.n}4_, _{span.n}7_,
+_{span.n}11_, _{span.n}16_, _{span.n}22_, …
+
+::: column(width=320)
+
+is [[neither|arithmetic|geometric]]_{span.reveal(when="blank-6")}._
+
+::: column(width=330)
+
+{.text-center.s-grey.s-small} _{span.n}40_, _{span.n}20_, _{span.n}10_,
+_{span.n}5_, _{span.n}2.5_, _{span.n}1.25_, …
+
+::: column(width=320)
+
+is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-7")}, with
+ratio [[0.5]]._
+
+:::
 
 ---
 > id: arithmetic-geometric-graph
+> goals: v1 v2 v3 v4
 
-To XXX the pattern of these sequences, we can visualise them in a chart:
-arithmetic ${a}{a|0|-6,6,1}, ${d}{d|5|-5,5,0.2}
-geometric ${b}{b|2|-6,6,1}, ${r}{r|1.4|-5,5,0.2}
+To define an arithmetic or geometric sequence, we have to know not just the
+common difference or ratio, but also the initial value `a_0`. Here you can
+generate your own sequences and plot their values on a graph, by changing the
+values of `a_0`, _d_ and _r_. Can you find any patterns?
 
-    x-coordinate-system(margins="12 12 24 40" type="points")
+::: column(width=320)
+
+#### {.m-red} Arithmetic Series
+
+{.text-center} *{span.ag-slider} `a_0=`${a}{a|0|-6,6,1}*,
+*{span.ag-slider} `d=`${d}{d|5|-5,5,0.2}*
+
+{.text-center.s-red.s-small} ${arithmetic(a, d)}, …
+
+    x-coordinate-system(margins="12 12 24 40" width=320 height=240 plot-type="points")
+
+::: column(width=320)
+
+#### {.m-green} Geometric Series
+
+{.text-center.s-green} *{span.ag-slider.s-green} `a_0=`${b}{b|2|-6,6,1}*,
+*{span.ag-slider.s-green} `r=`${r}{r|1.4|-5,5,0.2}*
+
+{.text-center.s-green.s-small} ${geometric(b, r)}, …
+
+    x-coordinate-system(margins="12 12 24 40" width=320 height=240 plot-type="points" plot-style="green")
+
+:::
 
 ---
+> id: arithmetic-geometric-limits
 
-Converge / diverge
+Notice how arithmetic series all look very similar: if the difference is
+positive they steadily increase, and if the difference is negative, they
+steadily decrease. Geometric series, on the other hand, can behave completely
+differently based on the values of `a_0` and _r_:
+
+{.todo} TODO
+
+You'll learn more about convergence and divergence in the [last
+section](/course/sequences/limits-and-convergence) of this course.
+
 
 ---
 > id: arithmetic-geometric-recursive
@@ -505,18 +586,19 @@ can affect a huge impact on the world:
 Notice how the number of people at every step forms a [[geometric sequence|arithmetic
 sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
 
-{.text-center.reveal(when="blank-1").s-orange.s-large.with-arrows} _{span.n}1_,
+{.text-center.s-orange.with-arrows.reveal(when="blank-1")} _{span.n}1_,
 _{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
 _{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
 _{span.n}[[243]]*{span.arrow}×3*_, …
 
 ---
 > id: pay-it-forward-2
+> goals: eqn
 
 Using the [explicit formula](gloss:sequence-explicit) for geometric sequences,
 we can work out how many new people are affected at any step:
 
-{.todo} equation
+{.text-center} `x_n` = _{x-equation(vars="n" fns="^ -" validate="eqn")}_
 
 ---
 > id: pay-it-forward-3
@@ -526,9 +608,10 @@ reach 19,683 new ones, and after 22 steps you would have reached more people
 than currently alive on Earth.
 
 This sequence of numbers has a special name: the __powers of 3__. As you can
-see, every term is actually just a different power of 3:
+see, every term is actually just a different [power](gloss:power) of 3:
 
-{.todo} `3^0`, `3^1`, `3^2`, `3^3`, …
+{.text-center.s-orange} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
+_{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 ---
 > id: millionaire
@@ -1790,8 +1873,8 @@ You will learn more about them in the future…
 ### Binomial Coefficients
 
 There is one more important property of Pascal’s triangle that we need to talk
-about. To see it, we will try to solve the same problem with two completely
-different methods, and then see how they are related.
+about. To understand it, we will try to solve the same problem with two
+completely different methods, and then see how they are related.
 
 {.todo} COMING SOON
 
