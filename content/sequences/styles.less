@@ -27,6 +27,7 @@
   position: relative;
   margin: 16px 2px;
   font-style: normal;
+  white-space: nowrap;
 
   &:before, &:after {
     content: "";
@@ -139,17 +140,24 @@
   > *:nth-child(2n) { margin-bottom: 2em; }
 }
 
-#arithmetic-geometric-graph h3 { text-align: center; margin-bottom: .3em; }
+.row .ag-chart {
+  h3 { text-align: center; margin-bottom: .4em; }
+  p { margin: 0; }
+  .var { color: inherit;font-size: 16px; }
+  x-coordinate-system { margin: 0.5em 0 0 0; }
+  hr { margin: .5em 0; }
 
-.ag-slider {
-  span { display: inline-block; background: @red; line-height: 28px; height: 28px;
-    border-radius: 14px 0 0 14px; color: fade(white, 80%); padding: 0 8px 0 12px; margin: 0; }
-  x-var { border-radius: 0 14px 14px 0; }
-  &.s-green span, &.s-green x-var, &.s-green .bubble-box { background: @green; }
+  &.s-green x-var, &.s-green .bubble-box { background: @green; }
   &.s-green .bubble-arrow { border-top-color: @green; }
 }
 
-
+.ag-limit-box {
+  text-align: center;
+  padding: 16px 12px;
+  border-radius: 6px;
+  background: mix(@blue, white, 10%);
+  box-sizing: border-box;
+}
 
 .money-grid td {
   width: 100px;

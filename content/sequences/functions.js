@@ -5,7 +5,7 @@
 
 
 import { flatten, delay, list, last, cache, tabulate, square } from '@mathigon/core'
-import { isPrime, nearlyEquals, Point } from '@mathigon/fermat'
+import { isPrime, numberFormat, Point } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -133,11 +133,8 @@ export function arithmeticGeometricSelect($step) {
 export function arithmeticGeometricGraph($step) {
   const $plots = $step.$$('x-coordinate-system');
 
-  $step.model.set('arithmetic', (a, d) =>
-      arithmetic(a, d, 6).map(n => `<span class="n">${n}</span>`).join(', '));
-
-  $step.model.set('geometric', (a, d) =>
-      geometric(a, d, 6).map(n => `<span class="n">${n}</span>`).join(', '));
+  $step.model.set('arithmetic', (a, d, i) => numberFormat(a + i * d, 4));
+  $step.model.set('geometric', (a, r, i) => numberFormat(a * Math.pow(r, i), 4));
 
   $step.model.watch((m) => {
     const p1 = arithmetic(m.a, m.d, 10).map((p, i) => new Point(1 + i, p));
@@ -146,11 +143,16 @@ export function arithmeticGeometricGraph($step) {
     $plots[0].setSeries(p1);
     $plots[1].setSeries(p2);
 
-    if (m.a >= 4) $step.score('v1');
+    if (m.a >= 3) $step.score('v1');
     if (m.d >= 3) $step.score('v2');
-    if (m.b >= 4) $step.score('v3');
+    if (m.b >= 3) $step.score('v3');
     if (m.r >= 3) $step.score('v4');
   });
+
+  const $actions = $step.$$('.var-action');
+  $actions[0].on('click', () => $step.model.assign({b: 2, r: 2}));
+  $actions[1].on('click', () => $step.model.assign({b: 10, r: 0.6}));
+  $actions[2].on('click', () => $step.model.assign({b: 3, r: -1.4}));
 }
 
 export function payItForward($step) {

@@ -503,42 +503,68 @@ common difference or ratio, but also the initial value `a_0`. Here you can
 generate your own sequences and plot their values on a graph, by changing the
 values of `a_0`, _d_ and _r_. Can you find any patterns?
 
-::: column(width=320)
+::: column.ag-chart(width=320)
 
 #### {.m-red} Arithmetic Series
 
-{.text-center} *{span.ag-slider} `a_0=`${a}{a|0|-6,6,1}*,
-*{span.ag-slider} `d=`${d}{d|5|-5,5,0.2}*
+{.text-center} `a_0` = ${a}{a|2|-10,10,0.2}, _d_ = ${d}{d|2|-10,10,0.2}
 
-{.text-center.s-red.s-small} ${arithmetic(a, d)}, …
+    hr
+
+{.text-center.s-red.s-small} _{span.n}${arithmetic(a,d,0)}_,
+_{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
+_{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
+_{span.n}${arithmetic(a,d,5)}_, …
 
     x-coordinate-system(margins="12 12 24 40" width=320 height=240 plot-type="points")
+    x-gesture(target="#arithmetic-geometric-graph x-var" slide="100,0")
 
-::: column(width=320)
+::: column.ag-chart.s-green(width=320)
 
 #### {.m-green} Geometric Series
 
-{.text-center.s-green} *{span.ag-slider.s-green} `a_0=`${b}{b|2|-6,6,1}*,
-*{span.ag-slider.s-green} `r=`${r}{r|1.4|-5,5,0.2}*
+{.text-center} `a_0` = ${b}{b|2|-10,10,0.2}, _r_ = ${r}{r|2|-10,10,0.2}
 
-{.text-center.s-green.s-small} ${geometric(b, r)}, …
+    hr
+
+{.text-center.s-red.s-small} _{span.n}${geometric(b,r,0)}_,
+_{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
+_{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
+_{span.n}${geometric(b,r,5)}_, …
 
     x-coordinate-system(margins="12 12 24 40" width=320 height=240 plot-type="points" plot-style="green")
 
 :::
 
----
-> id: arithmetic-geometric-limits
+{.reveal(when="v1 v2 v3 v4")} Notice how all arithmetic series all look very
+similar: if the difference is positive, they steadily [[increase|decrease]], and
+if the difference is negative, they steadily [[decrease|increase]].
 
-Notice how arithmetic series all look very similar: if the difference is
-positive they steadily increase, and if the difference is negative, they
-steadily decrease. Geometric series, on the other hand, can behave completely
-differently based on the values of `a_0` and _r_:
+{.reveal(when="blank-0 blank-1")} Geometric series, on the other hand, can
+behave completely differently based on the values of `a_0` and *r*:
 
-{.todo} TODO
+::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-You'll learn more about convergence and divergence in the [last
-section](/course/sequences/limits-and-convergence) of this course.
+If _{span.var-action}`r > 1`_, the term will [[quickly get bigger|quickly
+decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
+Mathematicians say that the sequence [__diverges__](gloss:divergence)._
+
+::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+
+If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
+closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
+We say that the sequence [__converges__](gloss:converges)._
+
+::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+
+If _{span.var-action}`r < -1`_, the terms will alternate between positive and
+negative, while their [[absolute value|inverse|difference]] gets bigger.
+
+:::
+
+{.reveal(when="blank-4 blank-5")} You'll learn more about convergence and
+divergence in the [last section](/course/sequences/limits-and-convergence) of
+this course.
 
 
 ---
@@ -1009,12 +1035,12 @@ Let’s compare these numbers with their sum of factors:
 For most numbers, the sum of its factors is [[less than|greater than|equal to]]
 itself. These numbers are called [__deficient numbers__](gloss:deficient-number).
 
-::: column.reveal.perfect-box(when="blank-0" width=220)
+::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
 
 For a few numbers, the sum of its factors is greater than itself. These numbers
 are called [__abundant numbers__](gloss:abundant-number).
 
-::: column.reveal.perfect-box(when="blank-0" delay=500 width=220)
+::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
 
 Only one number in the list above has a sum of factors that is _equal_ to itself:
 [[6]]. This is called a [__perfect number__](gloss:perfect-number).
@@ -1937,7 +1963,7 @@ completely different methods, and then see how they are related.
 
 ## Limits and Convergence
 
-> section: limits-and-convergence
+> section: convergence
 > sectionStatus: dev
 > id: convergence-intro
 
