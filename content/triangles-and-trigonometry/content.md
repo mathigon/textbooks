@@ -1280,6 +1280,7 @@ distribution of these points?
 
 ----
 > id: isosceles
+> sectionStatus: dev
 
 ## Isosceles and Equilateral Triangles
 

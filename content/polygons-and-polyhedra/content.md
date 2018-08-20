@@ -1916,6 +1916,7 @@ famous polyhedron in the world: it is the shape of the football.
 
 ---
 > id: nets
+> sectionStatus: dev
 
 ## Nets and Cross Sections
 
