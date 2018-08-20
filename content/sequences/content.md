@@ -121,27 +121,27 @@ Sequences in mathematics don’t always have to be numbers. Here is a sequence
 that consists of geometric shapes – triangles of increasing size:
 
 ::: column(width=24 parent="padded-thin")
-{.text-center} 1
+{.text-center} __1__
 
     include svg/triangle-1.svg
 ::: column(width=52)
-{.text-center} 3
+{.text-center} __3__
 
     include svg/triangle-2.svg
 ::: column(width=80)
-{.text-center} 6
+{.text-center} __6__
 
     include svg/triangle-3.svg
 ::: column(width=108)
-{.text-center} [[10]]
+{.text-center.b} [[10]]
 
     include svg/triangle-4.svg
 ::: column(width=136)
-{.text-center} [[15]]
+{.text-center.b} [[15]]
 
     include svg/triangle-5.svg
 ::: column(width=164)
-{.text-center} [[21]]
+{.text-center.b} [[21]]
 
     include svg/triangle-6.svg
 :::
@@ -161,29 +161,27 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 ---
 > id: recursive
 
-In mathematics, we can also express this pattern using algebra (variables and
-equations):
+In mathematics, we can describe this pattern using a [formula](gloss:formula):
 
     p.text-center.s-orange
-      span#t1.n.md `x_n`
+      span.n.md `x_n`
       | &nbsp;=&nbsp;
-      span#t2.n.md `x_(n-1)`
+      span.n.md `x_(n-1)`
       | &nbsp;+&nbsp;
       em#t3 n
 
-This equation essentially means that, to get the [*n*th triangle number](-> #t1),
-we take the [previous triangle number](-> #t2) and [add _n_](-> #t3).
-
-{.todo} For example, if _n_ = ${n}{n|5|2,20,1}, the equation becomes
-_{msub}*{mi}x* *{mn}${n}*_ = _{msub}*{mi}x* *{mn}${n-1}*_ + ${n}.
+To get the _n_-th triangle number, we take the [[previous|first|last]] triangle
+number and add _n_. For example, if _n_&nbsp;=&nbsp;${n}{n|5|2,20,1}, the
+formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
+= <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
 
 ---
 > id: recursive-1
 
-An equation that expresses `x_n` in terms of previous terms in the sequence is
+A formula that expresses `x_n` in terms of previous terms in the sequence is
 called a [__recursive formula__](gloss:sequence-recursive). As long as you know
 the [[first term|last term|second term]] in the sequence, you can calculate all
-the following terms.
+the following ones.
 
 ---
 > id: squares
@@ -194,27 +192,27 @@ Another sequence which consists of geometric shapes are the __square numbers__.
 Every term is formed by increasingly large squares:
 
 ::: column(width=24 parent="padded-thin squares")
-{.text-center} 1
+{.text-center} __1__
 
     include svg/square-1.svg
 ::: column(width=50)
-{.text-center} 4
+{.text-center} __4__
 
     include svg/square-2.svg
 ::: column(width=76)
-{.text-center} 9
+{.text-center} __9__
 
     include svg/square-3.svg
 ::: column(width=102)
-{.text-center} [[16]]
+{.text-center.b} [[16]]
 
     include svg/square-4.svg
 ::: column(width=128)
-{.text-center} [[25]]
+{.text-center.b} [[25]]
 
     include svg/square-5.svg
 ::: column(width=154)
-{.text-center} [[36]]
+{.text-center.b} [[36]]
 
     include svg/square-6.svg
 :::
@@ -227,14 +225,14 @@ term of the sequence in terms of its previous terms. For square numbers we can
 do even better – an equation that tells you the *n*th term directly, without
 first having to calculate all the previous ones:
 
-{.todo.text-center.s-purple} *{.n}`x_n`* = `n^2`
+{.text-center.s-purple} *{.n}`x_n`* = _{x-equation(solution="n^2")}_
 
 ---
 > id: explicit
 
-An equations like this is called an [__explicit formula__](gloss:sequence-explicit).
-We can use it, for example, to calculate that the 13th square number is [[169]],
-without first finding the previous 12 square numbers.
+Equations like this are called [__explicit formulas__](gloss:sequence-explicit).
+In this case we can use it, for example, to calculate that the 13th square
+number is [[169]], without first finding the previous 12 square numbers.
 
 ---
 > id: definitions
@@ -570,14 +568,14 @@ this course.
 ---
 > id: arithmetic-geometric-recursive
 
-### Recursive and Explicit Formulae
+### Recursive and Explicit Formulas
 
 {.todo} Remember that a __recursive formula__ for a sequence is an equation for the
 value
 
-{.todo} recursive formulae
+{.todo} recursive formulas
 
-{.todo} One problem with recursive formulae is that to find the 100th term, for example,
+{.todo} One problem with recursive formulas is that to find the 100th term, for example,
 you first have to calculate the previous 99 terms – and that might take a long
 time.
 
@@ -586,7 +584,7 @@ time.
 
 Finding an __explicit formula__ is a bit harder.
 
-{.todo} explicit formulae explanation - `a_n = a_1 + d*(n-1)` and `a_n = a_1 * r^(n-10`
+{.todo} explicit formulas explanation - `a_n = a_1 + d*(n-1)` and `a_n = a_1 * r^(n-10`
 
 ---
 > id: pay-it-forward
@@ -619,12 +617,11 @@ _{span.n}[[243]]*{span.arrow}×3*_, …
 
 ---
 > id: pay-it-forward-2
-> goals: eqn
 
 Using the [explicit formula](gloss:sequence-explicit) for geometric sequences,
 we can work out how many new people are affected at any step:
 
-{.text-center} `x_n` = _{x-equation(vars="n" fns="^ -" validate="eqn")}_
+{.text-center} `x_n` = _{x-equation(solution="3^(n-1)" validate="check")}_
 
 ---
 > id: pay-it-forward-3

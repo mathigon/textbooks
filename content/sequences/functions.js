@@ -5,7 +5,7 @@
 
 
 import { flatten, delay, list, last, cache, tabulate, square } from '@mathigon/core'
-import { isPrime, numberFormat, Point } from '@mathigon/fermat'
+import { isPrime, numberFormat, Point, Expression } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -160,9 +160,9 @@ export function payItForward($step) {
 }
 
 export function payItForward2($step) {
-  $step.model.set('eqn', (expr) => {
-    // TODO
-    return {error: true};
+  const almost = new Expression('3^n');
+  $step.model.set('check', (expr) => {
+    if (expr.numEquals(almost)) return {error: 'pay-it-forward-close'};
   });
 }
 
