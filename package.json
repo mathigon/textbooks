@@ -1,6 +1,6 @@
 {
   "name": "@mathigon/textbooks",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "Mathigon Textbooks",
   "homepage": "https://mathigon.org/",
   "repository": "mathigon/textbooks",
@@ -14,23 +14,23 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@mathigon/boost": "^0.2.2",
-    "@mathigon/core": "^0.2.2",
-    "@mathigon/fermat": "^0.2.2"
+    "@mathigon/boost": "^0.2.3",
+    "@mathigon/core": "^0.2.3",
+    "@mathigon/fermat": "^0.2.3"
   },
   "devDependencies": {
-    "@mathigon/parser": "^0.2.5",
+    "@mathigon/parser": "^0.2.6",
     "emojione-assets": "^3.1.1",
-    "eslint": "^4.19.1",
+    "eslint": "^5.4.0",
     "express": "^4.16.3",
-    "express-validator": "^5.2.0",
-    "grunt": "^1.0.2",
+    "express-validator": "^5.3.0",
+    "grunt": "^1.0.3",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-concurrent": "^2.3.1",
-    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "pug": "^2.0.3",
-    "rollup": "^0.59.2",
+    "rollup": "^0.64.1",
     "rollup-plugin-node-resolve": "^3.3.0"
   }
 }
