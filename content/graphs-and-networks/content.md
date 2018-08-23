@@ -906,7 +906,7 @@ spikes to web servers on computer networks.
 
 ::: column(width=140)
 
-    img(src="/resources/graphs-and-networks/images/binary.jpg" width=140 height=320)
+    img(src="images/binary.jpg" width=140 height=320)
 
 ::: column.grow
 The Travelling Salesman problem is [NP-hard](gloss:np), which means that it is
