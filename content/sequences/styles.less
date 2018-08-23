@@ -254,17 +254,16 @@ x-coordinate-system + .caption { margin-top: -1em; }
   .n { position: absolute; right: 0; margin: 0; z-index: 1; margin-top: 13px; }
 }
 
-.stage svg {
-  margin: 0 auto 32px;
-}
+.golden-spiral .stage { overflow: hidden; }
+.golden-spiral svg { margin: 0 auto 32px; transition: transform .4s linear; }
 
 .spiral-tabs {
   display: flex;
-  margin-bottom: .5em;
+  margin: 0 auto .5em;
+  width: fit-content;
 
   > * {
-    width: 33%;
-    box-sizing: border-box;
+    width: 100px;
     text-align: center;
     border: 1px solid @red;
     border-left: none;
@@ -282,6 +281,7 @@ x-coordinate-system + .caption { margin-top: -1em; }
   padding-bottom: 100%;
   position: relative;
   background-size: cover;
+  margin-bottom: 1em;
 
   .clockwise, .anticlockwise {
     width: 100%;

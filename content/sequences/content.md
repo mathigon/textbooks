@@ -1243,6 +1243,7 @@ _{.n}[[1113213211]]_, …
 
 > section: fibonacci
 > id: rabbits
+> class: no-overflow
 
 Imagine that you’ve received a pair of baby rabbits, one male and one female.
 They are very special rabbits, because they never die, and the female one gives
@@ -1251,7 +1252,7 @@ female.)
 
     x-slideshow
       .stage.rabbits(slot="stage")
-        .rabbits-wrap.s-orange
+        .rabbits-wrap.s-orange.s-small
           svg(width=760 height=456 viewBox="0 0 760 456")
             line(y1=51  x2=760 y2=51)
             line(y1=130 x2=760 y2=130)
@@ -1316,18 +1317,24 @@ female.)
 ---
 > id: rabbits-1
 
-In the following month you would have 13 couples of rabbits: the 8 ones from the
-previous month, plus 5 new babies. Can you detect a pattern in this sequence of
-numbers? If we keep on going like this, how many rabbits will there be after a
-year?
+{.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
+previous month, plus 5 new sets of babies. Can you detect a pattern in this
+sequence? _{button.next-step} Continue_
 
-{.todo} The number of rabbits in a particular month is [[sum of the two previous
-numbers|twice the previous number]].
-In other words, the recurrence relation for the sequence is
-In every month, the number of rabbits (xn) is the number of rabbits in the previous month (xn-1), plus the
-In other words, add the _previous two_ terms in the sequence, to get the next
-one. The [recursive equation](gloss:sequence-recursive) is
-xn = xn-1 + xn-2
+---
+> id: rabbits-2
+
+The number of rabbits in a particular month is [[sum of the two previous
+numbers|twice the previous number]]. _{span.reveal(when="blank-0")}In other
+words, you have to add the *previous two* terms in the sequence, to get the
+next one. The sequence starts with two 1s, and the [recursive
+formula](gloss:sequence-recursive) is_
+
+{.text-center.s-orange.reveal(when="blank-0")} *{span.n}`x_n`* =
+*{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
+
+---
+> id: rabbits-3
 
 Can you calculate the number of rabbits after a few more months?
 
@@ -1335,26 +1342,29 @@ Can you calculate the number of rabbits after a few more months?
 _{.n}[[13]]_, _{.n}[[21]]_, _{.n}[[34]]_, _{.n}[[55]]_, _{.n}[[89]]_,
 _{.n}[[144]]_, …
 
-So in the 12th month, you’ll have 144 pairs of rabbits!
+{.reveal(when="blank-5")} So after 12th months, you’ll have 144 pairs of rabbits!
 
-    figure: x-media(src="images/rabbits.jpg" width=600 height=230)
+    figure.reveal(when="blank-5")
+      x-media(src="images/rabbits.jpg" width=600 height=230)
 
 ---
 > id: fibonacci
 
-These numbers are called the __Fibonacci Sequence__, named after the Italian
-mathematician [Leonardo Fibonacci](bio:fibonacci).
+This sequence of numbers is called the [__Fibonacci Sequence__](gloss:fibonacci),
+named after the Italian mathematician [Leonardo Fibonacci](bio:fibonacci).
 
 ::: column.grow
-When Fibonacci was born in XXX, most people in Europe still used the Roman
-numeral system when writing numbers: IVX. Fibonacci’ father was a merchant,
-and together they travelled to Northern Africa as well as the Middle East. It
-was there, that Fibonacci first heard about the Arabic numeral system, which is
-essentially what we use today: 0, 1, 2, 3, …
+When Fibonacci was born in 1175, most people in Europe still used the [Roman
+numeral system](gloss:roman-numerals) for numbers (e.g. IVX or MCMLIV).
+Fibonacci’s father was a merchant, and together they travelled to Northern
+Africa as well as the Middle East. It was there that Fibonacci first learned the
+[Arabic numeral system](gloss:arabic-numerals).
 
 When he returned to Italy, Fibonacci wrote a book called _Liber Abaci_ (Latin
-for “The Book of Calculations”). In it, he first introduced the new Arabic
-numerals to European merchants, and they were an immediate success.
+for “The Book of Calculations”), where he first introduced the new Arabic
+numerals to European merchants. They were an immediate success – and we still
+use them today.
+
 ::: column(width=300)
 
     x-media(src="images/fibonacci.jpg" width=300 height=300)
@@ -1362,23 +1372,23 @@ numerals to European merchants, and they were an immediate success.
 
 :::
 
-On one of the pages of his book, he also investigated the breeding patterns of
-rabbits, and that’s why the Fibonacci numbers are named after him.
+On one of the pages in his book, he also investigated the breeding patterns of
+rabbits – that’s why the Fibonacci numbers were named after him.
 
     figure
       x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
-      p.caption Pages from Fibonacci’s _Liber Abaci_
+      p.caption Pages from Fibonacci’s #[em Liber Abaci]
 
 ---
 > id: spirals
-> goals: s11 s12 s21 s22
 
-Of course, the Fibonacci numbers are not _actually_ how rabbits populate in real
-life. Usually, rabbits have more than two offspring per month, and we haven’t accounted for
-rabbits dying eventually.
+Of course, the Fibonacci numbers are not how rabbits _actually_ populate in real
+life. Rabbits don't have exactly one male and one female offspring every single
+month, and we haven’t accounted for rabbits dying eventually.
 
-But it turns out that there are many other places where Fibonacci numbers _do_
-appear in nature. One example are the spirals in sunflowers or pine codes:
+But it turns out that there are many other places in nature where Fibonacci
+numbers _do_ appear: for example are the spirals in plants. Can you count how
+many spirals there are in each direction?
 
 ::: column(width=320)
 
@@ -1390,6 +1400,9 @@ appear in nature. One example are the spirals in sunflowers or pine codes:
       .clockwise(style="background-image: url(images/pinecone-1.jpg)")
       .anticlockwise(style="background-image: url(images/pinecone-2.jpg)")
 
+{.text-center} This pine code has [[8]] clockwise spirals and [[13]]
+counterclockwise spirals.
+
 ::: column(width=320)
 
     x-select.spiral-tabs
@@ -1399,49 +1412,60 @@ appear in nature. One example are the spirals in sunflowers or pine codes:
     .spirals(style="background-image: url(images/sunflower.jpg)")
       .clockwise(style="background-image: url(images/sunflower-1.jpg)")
       .anticlockwise(style="background-image: url(images/sunflower-2.jpg)")
+
+{.text-center.reveal(when="blank-0 blank-1")} This sunflower has 34 clockwise
+spirals and 55 counterclockwise spirals.
+
 :::
 
 ---
 > id: spirals-1
 
-Both the pinecone and the sunflower have two sets of spirals: one in the
-clockwise direction, and one in the anticlockwise direction. Let’s count how
-many there are:
+Notice how, in both cases, the numbers of spirals are consecutive [[Fibonacci
+numbers|triangle numbers|geometric sequences]]! _{span.reveal(when="blank-0")}
+Similarly, if you count the number of petals in a flower, you will often find
+that it is a Fibonacci number. Next time you’re outside, have a look!_
 
-{.todo} always consecutive Fibonacci numbers
+{.reveal(when="blank-0")} Of course, it is not just a coincidence that nature
+decided to always pick Fibonacci numbers. There are interesting underlying
+reasons, which you'll learn more about later in this section.
 
 ---
-> id: spirals-2
+> id: bees
 
-Similarly, if you count the number of petals in a flower, you will often find
-that it is a Fibonacci number. Next time you’re outside, have a look!
+::: column(width=320)
 
-{.todo} Bees
+    x-select.spiral-tabs   
+      div(data-value="male") Male
+      div(data-value="female") Female
+    .bees
+      img(src="images/bees-male.png")
+      img(hidden src="images/bees-female.png")
 
-    //- The rabbit problem is obviously very contrived, but the Fibonacci sequence does occur in real populations. Honeybees provide an example. In a colony of honeybees there is one special female called the queen. The other females are worker bees who, unlike the queen bee, produce no eggs. The male bees do no work and are called drone bees.
-    //- Males are produced by the queen’s unfertilised eggs, so male bees only have a mother but no father. All the females are produced when the queen has mated with a male and so have two parents. Females usually end up as worker bees but some are fed with a special substance called royal jelly which makes them grow into queens ready to go off to start a new colony when the bees form a swarm and leave their home (a hive) in search of a place to build a new nest. So female bees have two parents, a male and a female whereas male bees have just one parent, a female.
-    //- Let’s look at the family tree of a male drone bee.
-    //- He has 1 parent, a female.
-    //- He has 2 grandparents, since his mother had two parents, a male and a female.
-    //- He has 3 great-grandparents: his grandmother had two parents but his grandfather had only one.
-    //- How many great-great-grandparents did he have?
-    //- Again we see the Fibonacci numbers : 
-    //- Number of	parents	grandparents	great-
-    //- grandparents	great-great-
-    //- grandparents	great-great-great-
-    //- grandparents
-    //- of a MALE bee	1	2	3	5	8
-    //- of a FEMALE bee	2	3	5	8	13
+::: column.grow
+
+Fibonacci numbers also appear in the populations of honeybees.
+
+In every bee colony there is a single _queen_ that lays eggs. Male bees grow out
+of unfertilised eggs, while female bees grow out of eggs that are laid after the
+queen mates with a male. This means that female bees have two parents, while
+male bees only have one.
+
+If we draw the ancestry tree of a bee, the number of parents, grandparents,
+great-grandparents, and earlier generations are always Fibonacci numbers!
+
+:::
 
 ---
 > id: golden-spiral
+> class: no-overflow
 
 ### The Golden Ratio
 
 Like for many of the sequences before, there is a geometric representation of the
 Fibonacci numbers:
 
-    x-slideshow
+    x-slideshow.golden-spiral
       .stage(slot="stage"): include svg/spiral.svg
       .legend(slot="legend") We start with two small squares of size 1.
       .legend(slot="legend") Next, we add a new square of size 2, to form a large rectangle.

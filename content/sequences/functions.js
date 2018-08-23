@@ -337,13 +337,31 @@ export function spirals($step) {
   }
 }
 
+export function bees($step) {
+  const $img = $step.$$('img');
+  $step.$('x-select').on('change', ($el) => {
+    if ($el.data.value === 'female') {
+      $img[0].exit('fade', 200).then(() => $img[1].enter('fade', 200));
+    } else {
+      $img[1].exit('fade', 200).then(() => $img[0].enter('fade', 200));
+    }
+  });
+}
+
 export function goldenSpiral($step) {
-  const $squares = $step.$$('svg rect').slice(2);
-  const $lines = $step.$$('svg path');
+  const $svg = $step.$('svg');
+  const $squares = $svg.$$('rect').slice(2);
+  const $lines = $svg.$$('path');
+
+  const transforms = ['scale(4) translate(-160px,-100px)',
+    'scale(3.5) translate(-160px,-80px)', 'scale(3) translate(-120px,-80px)',
+    'scale(1.5) translate(-100px,-110px)', 'none', 'none'];
+  $svg.transform = transforms[0];
 
   for (let $e of [...$squares, ...$lines]) $e.hide();
 
   $step.$slides.on('next', (x) => {
+    $svg.transform = transforms[x];
     if (x <= 3) {
       $squares[x - 1].enter('fade');
     } else if (x === 4) {
@@ -356,6 +374,7 @@ export function goldenSpiral($step) {
   });
 
   $step.$slides.on('back', (x) => {
+    $svg.transform = transforms[x];
     if (x <= 2) {
       $squares[x].exit('fade');
     } else if (x === 3) {
