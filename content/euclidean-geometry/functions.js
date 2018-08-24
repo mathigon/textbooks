@@ -7,7 +7,7 @@
 
 import { wait } from '@mathigon/core';
 import { Point, nearlyEquals } from '@mathigon/fermat';
-import { $N, Draggable, slide } from '@mathigon/boost';
+import { $N, slide } from '@mathigon/boost';
 
 // -----------------------------------------------------------------------------
 
@@ -211,5 +211,5 @@ function scoreOnVideo($step) {
 }
 
 export const origamiApplications = scoreOnVideo;
-export const origamiApplications1 = scoreOnVideo;
+export const origamiApplications2 = scoreOnVideo;
 export const origamiApplications3 = scoreOnVideo;

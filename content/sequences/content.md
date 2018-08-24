@@ -1301,11 +1301,11 @@ female.)
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
     
           .n(style="top: 0%") 1
-          .n(style="top: 14%") 1
-          .n(style="top: 31%") 2
+          .n(style="top: 15%") 1
+          .n(style="top: 32%") 2
           .n(style="top: 49%") 3
           .n(style="top: 66%") 5
-          .n(style="top: 83%") 8
+          .n(style="top: 84%") 8
 
       .legend(slot="legend") In the first month, the rabbits are very small and can’t do much, but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
@@ -1421,14 +1421,13 @@ spirals and 55 counterclockwise spirals.
 ---
 > id: spirals-1
 
-Notice how, in both cases, the numbers of spirals are consecutive [[Fibonacci
-numbers|triangle numbers|geometric sequences]]! _{span.reveal(when="blank-0")}
-Similarly, if you count the number of petals in a flower, you will often find
-that it is a Fibonacci number. Next time you’re outside, have a look!_
+In both cases, the numbers of spirals are consecutive Fibonacci numbers. The
+same is true for many other plants: next time you go outside, count the number
+of petals in a flower or the number of leaves on a stem. Very often you'll find
+that they are Fibonacci numbers!
 
-{.reveal(when="blank-0")} Of course, it is not just a coincidence that nature
-decided to always pick Fibonacci numbers. There are interesting underlying
-reasons, which you'll learn more about later in this section.
+Of course, this is not just a coincidence. There is an important reason why
+nature likes the Fibonacci sequence, which you'll learn more about later…
 
 ---
 > id: bees
@@ -1446,13 +1445,20 @@ reasons, which you'll learn more about later in this section.
 
 Fibonacci numbers also appear in the populations of honeybees.
 
-In every bee colony there is a single _queen_ that lays eggs. Male bees grow out
-of unfertilised eggs, while female bees grow out of eggs that are laid after the
-queen mates with a male. This means that female bees have two parents, while
-male bees only have one.
+In every bee colony there is a single _queen_ that lays many eggs. If an egg is
+fertilised by a male bee, it hatches into a __female__ bee. If it is not
+fertilised, it hatches into a __male__ bee (called a drone).
 
-If we draw the ancestry tree of a bee, the number of parents, grandparents,
-great-grandparents, and earlier generations are always Fibonacci numbers!
+This means that female bees have [[two parents|one parent]], while male bees
+only have [[one parent|two parents]].
+
+{.reveal(when="blank-0 blank-1")} If we draw the ancestry tree of a bee, the
+number of parents, grandparents, great-grandparents, and earlier generations are
+always Fibonacci numbers!
+
+{.i.lgrey.reveal(when="blank-0 blank-1" delay=400)} Occasionally, young female
+bees are fed with special food called "royal jelly". In that case, they turn
+into queens and will fly away to start a new hive.
 
 :::
 
