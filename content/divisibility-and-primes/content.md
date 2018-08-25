@@ -97,7 +97,6 @@ until we meet in the middle.
 
 ---
 > id: factors2
-> class: no-overflow
 
     x-slideshow
       .stage(slot="stage")
@@ -374,7 +373,6 @@ solve the initial problem.
 
 ---
 > id: eratosthenes
-> class: no-overflow
 
 ### The Sieve of Eratosthenes
 

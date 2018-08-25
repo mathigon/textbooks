@@ -331,7 +331,6 @@ others are not. To help us understand why, let us label every vertex with its
 
 ---
 > id: bridges-4
-> class: no-overflow
 
 Comparing these numbers for graphs which are possible and those which are not
 possible, it seems that a graph can be drawn if it [[has no more than two “odd”
@@ -488,7 +487,6 @@ see if Euler’s equation works. Instead we can try to find a simple
 
 ---
 > id: euler-2
-> class: no-overflow
 
     x-slideshow
       .stage(slot="stage")

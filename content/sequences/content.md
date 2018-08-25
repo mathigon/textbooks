@@ -1243,7 +1243,6 @@ _{.n}[[1113213211]]_, …
 
 > section: fibonacci
 > id: rabbits
-> class: no-overflow
 
 Imagine that you’ve received a pair of baby rabbits, one male and one female.
 They are very special rabbits, because they never die, and the female one gives
@@ -1464,7 +1463,6 @@ into queens and will fly away to start a new hive.
 
 ---
 > id: golden-spiral
-> class: no-overflow
 
 ### The Golden Ratio
 
