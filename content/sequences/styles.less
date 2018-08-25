@@ -295,7 +295,15 @@ x-coordinate-system + .caption { margin-top: -1em; }
   }
 }
 
-.petals circle { fill: darken(@green, 25%); }
+.golden-rect svg { margin: 0 auto 8px; }
+.golden-rect x-blank-input.done .target { line-height: inherit; }
+
+.golden-art { position: relative; cursor: pointer; }
+.golden-art > img { position: absolute; top: 0; opacity: 0; transition: opacity .2s; }
+.golden-art:hover > img { opacity: 0.5; }
+.golden-art.active > img { opacity: 1; }
+
+.petals circle { fill: darken(@green, 25%); transition: transform .3s; }
 
 .petals path {
   transition: transform .3s;

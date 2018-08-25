@@ -1468,82 +1468,102 @@ into queens and will fly away to start a new hive.
 
 ### The Golden Ratio
 
-Like for many of the sequences before, there is a geometric representation of the
-Fibonacci numbers:
+Just like the triangle and square numbers, and other sequences we've seen
+before, the Fibonacci numbers can be visualised using a geometric pattern:
 
     x-slideshow.golden-spiral
       .stage(slot="stage"): include svg/spiral.svg
       .legend(slot="legend") We start with two small squares of size 1.
       .legend(slot="legend") Next, we add a new square of size 2, to form a large rectangle.
       .legend(slot="legend") Next, we add a square of size 3, to form an even larger rectangle.
-      .legend(slot="legend") The next square has size 5. Can you see that we’re recreating the Fibonacci numbers?
+      .legend(slot="legend") The next square has size 5. Can you see that we’re recreating the Fibonacci sequence?
       .legend(slot="legend") If we continue adding squares, they will have size 8, 13, 21, and so on.
       .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
 
 ---
 > id: golden-ratio
 
-{.todo} the proportions of the rectangle are consecutive fibonacci numbers
+At every step, the squares form a larger rectangle. Its width and height are
+always two consecutive Fibonacci numbers. The __aspect ratio__ of the rectangle
+is the ratio of its width and its height:
 
-::: column(width=80 parent="padded-thin")
+::: column(width=100 parent="padded-thin golden-rect")
 
     include svg/golden-1.svg
 
-{.text-center} `2/1 = 2`
-::: column(width=80)
+{.text-center} `2/1` = 2
+::: column(width=100)
 
     include svg/golden-2.svg
 
-{.text-center} `3/2 = 1.5`
-::: column(width=80)
+{.text-center} `3/2` = 1.5
+::: column(width=100)
 
     include svg/golden-3.svg
 
-{.text-center} `5/3 = 1.666…`
-::: column(width=80)
+{.text-center} `5/3` = 1.666…
+::: column(width=100)
 
     include svg/golden-4.svg
 
-{.text-center} `8/5 = 1.6`
-::: column(width=80)
+{.text-center} `8/5` = 1.6
+::: column(width=100)
 
     include svg/golden-5.svg
 
-{.text-center} `13/8 = 1.625`
-::: column(width=80)
+{.text-center} <mfrac><mn>[[13]]</mn><mn>[[8]]</mn></mfrac> _{span.reveal(when="blank-0 blank-1")}= 1.625_
+::: column(width=100)
 
     include svg/golden-6.svg
 
-{.text-center} `21/13 = 1.615…`
-::: column(width=20)
-
-{.text-center} …
-
-::: column(width=80)
-
-    include svg/golden-7.svg
-
-{.text-center} `phi = 1.618…`
+{.text-center} <mfrac><mn>[[21]]</mn><mn>[[13]]</mn></mfrac> _{span.reveal(when="blank-2 blank-3")}= 1.62…_
 :::
 
-If we divide consecutive Fibonacci numbers, you can see that their ratio seems
-to get closer and closer to some specific number around 1.6. This number is
-called the [__Golden Ratio__](gloss:golden-ratio), and represented by the Greek
-letter p ("phi). The corresponding rectangle that has these proportions is
-called the __Golden Rectangle__.
+---
+> id: golden-ratio-1
+> goals: img-0 img-1
 
-Even through all of the ratios in the sequence are rational numbers, the Golden
-Ratio is __irrational__ – just like Pi, `sqrt(2)` and other numbers you’ve seen
-before.
+Notice how, as we add more and more squares, the aspect ratio seems to get
+closer and closer to a specific number around 1.6. This number is called the
+[__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
+letter φ (“phi”). Its exact value is 1.61803398875…
 
-Many people believe that the Golden Ratio is particularly beautiful and
-aesthetically pleasing, which is why it seems to appear everywhere in art and
-architecture:
+Many people believe that the golden ratio is particularly aesthetically
+pleasing. That's why it is often used by artists and architects – like in these
+two examples:
 
-{.todo} It has a value of $(\sqrt 5 + 1)/2$ ( approximately 1.618034) and is often represented by a Greek letter Phi, written as $\Phi $. The closely related value which we write as $\phi $, a lowercase phi, is just the decimal part of Phi, namely 0.618034... ($(\sqrt 5 - 1)/2$), the number that accounts for the spirals in the seedheads and the arrangements of leaves in many plants. But why do we see phi in so many plants?
-{.todo} The number Phi (1.618034...), and therefore also phi (0.618034...), are irrational numbers: they can’t be written as a simple fraction. 
+::: column(width=320)
 
-{.todo} examples
+    .golden-art
+      x-media(src="images/pantheon.jpg" width=320 height=198)
+      img(src="images/pantheon.png" width=320 height=198)
+    x-gesture(target=".golden-art")
+
+{.caption} The Greek sculptor Phidias is said to have used the Golden ratio
+when designing the _Parthenon_ in Athens. The first letter of his name, φ, is
+the symbol we now use for the golden ratio.
+
+::: column(width=320)
+
+    .golden-art
+      x-media(src="images/dali.jpg" width=320 height=198)
+      img(src="images/dali.png" width=320 height=198)
+
+{.caption} _The Sacrament of the Last Supper_, by Spanish artist Salvador Dalí,
+is one of many paintings in the Golden ratio. In the background, you can also
+see a [Dodecahedron](gloss:dodecahedron).
+
+:::
+
+---
+> id: golden-ratio-2
+
+We can approximate the golden ratio by [[dividing|adding|subtracting]] two
+consecutive Fibonacci numbers.
+
+{.reveal(when="blank-0")} However, it turns out that the exact value of φ can't
+be written as a simple fraction: it is an [__irrational number__](gloss:irrational),
+just like π and `sqrt(2)` and some other numbers you’ve seen before.
 
 ---
 > id: sunflower-growing
@@ -1566,13 +1586,13 @@ leafs is always constant.
 ::: column(width=300)
 
     svg.petals(width=300 height=300)
-      circle(r=60 cx=150 cy=150)
+      circle(r=1 cx=150 cy=150)
       - var i = 0
       while i < 40
         path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
         - i += 1
 
-    x-slider(steps=39)
+    x-slider(steps=39 speed=0.5)
 
 :::
 
@@ -1588,7 +1608,7 @@ In the diagram below you can explore what the flower will end up looking like
 for different angles.
 
     svg.fib-spiral(width=400 height=400 viewBox="0 0 400 400")
-    x-slider(steps=1000)
+    x-slider(steps=1000 speed=0.5)
 
 {.todo} If the angle is 0, all seeds will grow in a single long row away from the
 center. If the angle is `1/2` of a full a rotation, the seeds will alternate

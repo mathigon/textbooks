@@ -366,8 +366,8 @@ export function goldenSpiral($step) {
       $squares[x - 1].enter('fade');
     } else if (x === 4) {
       $squares[3].enter('fade');
-      $squares[4].enter('fade', 400, 1000);
-      $squares[5].enter('fade', 400, 2000);
+      $squares[4].enter('fade', 400, 400);
+      $squares[5].enter('fade', 400, 800);
     } else if (x === 5) {
       for (let $l of $lines) $l.enter('draw', 2000);
     }
@@ -384,6 +384,15 @@ export function goldenSpiral($step) {
     } else if (x === 4) {
       for (let $l of $lines) $l.exit('draw', 1000);
     }
+  });
+}
+
+export function goldenRatio1($step) {
+  $step.$$('.golden-art').forEach(($img, i) => {
+    $img.on('click', () => {
+      $img.toggleClass('active');
+      $step.score('img-' + i);
+    });
   });
 }
 
@@ -407,7 +416,7 @@ export function sunflowerGrowing($step) {
       $petals[i].transform = `scale(0.05) rotate(${t}rad)`;
     }
 
-    $bulb.transform = `scale(${0.2 + 0.8 * x/count})`
+    $bulb.transform = `scale(${70 * Math.sqrt(x/count)})`
   });
 
   $slider.set(0);  // TODO <- fix
