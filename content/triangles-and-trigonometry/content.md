@@ -130,12 +130,12 @@ has [[three]] [acute angles](gloss:acute-angle).
 For convenience, we always label triangles in the same way. The vertices are
 labelled with capital letters [_A_, _B_ and _C_](target:vertex), the sides are
 labelled with lowercase letters [_a_, _b_ and _c_](target:side), and the angles
-are labelled with Greek letters [α, β and γ](target:angle) (“alpha”, “beta” and
+are labelled with Greek letters [`α`, `β` and `γ`](target:angle) (“alpha”, “beta” and
 “gamma”).
  
 The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
-[angle that lies right next to _A_](target:Y) is labelled α. The same pattern
-works for _B_/_b_/β and for _C_/_c_/γ.
+[angle that lies right next to _A_](target:Y) is labelled `α`. The same pattern
+works for _B_/_b_/`β` and for _C_/_c_/`γ`.
 ::: column(width=220)
 
     x-geopad.label-halo(width=220 height=200): svg
