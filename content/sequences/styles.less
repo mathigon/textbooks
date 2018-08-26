@@ -168,6 +168,15 @@
 // -----------------------------------------------------------------------------
 // Famous Series
 
+.triangle-sum {
+  x-step &.padded { margin: 2em 0; }
+  &.padded > * { margin: 0; text-align: center; }
+
+  .red circle, circle.red { fill: @yellow; }
+  .blue circle, circle.blue { fill: @blue; }
+  .green circle, circle.green { fill: @green; }
+}
+
 x-tetrahedron { display: block; }
 x-tetrahedron canvas { width: 100%; height: auto; }
 

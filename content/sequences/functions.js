@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import { flatten, delay, list, last, cache, tabulate, square } from '@mathigon/core'
-import { isPrime, numberFormat, Point, Expression } from '@mathigon/fermat'
+import { flatten, delay, list, last, cache, tabulate, square, sortByFn, total } from '@mathigon/core'
+import { isPrime, numberFormat, Point, Expression, toOrdinal } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -96,7 +96,6 @@ export function ball($step) {
 
     setPosition($balls[0], p, 640, 320, x * 90);
     setPosition($balls[1], new Point(40, p.y), 640, 320, x * 90);
-    if (x >= 6) $step.score('bounce');
   }
 
   $slider.on('move', tick);
@@ -142,11 +141,6 @@ export function arithmeticGeometricGraph($step) {
 
     $plots[0].setSeries(p1);
     $plots[1].setSeries(p2);
-
-    if (m.a >= 3) $step.score('v1');
-    if (m.d >= 3) $step.score('v2');
-    if (m.b >= 3) $step.score('v3');
-    if (m.r >= 3) $step.score('v4');
   });
 
   const $actions = $step.$$('.var-action');
@@ -186,20 +180,108 @@ export function triangleProof($step) {
       $N('circle', {cx: 150 + scale * p.x, cy: 150 + scale * p.y, r}, $g);
     }
   });
+}
 
+function triangleNumber(n) {
+  return n * (n + 1) / 2;
+}
+
+// Split any integer into a sum of 3 triangle numbers.
+const triangularSum = cache(function(x) {
+  const results = [];
+
+  let n0 = Math.floor((Math.sqrt(8 * x + 1) - 1) / 2);
+  while (n0 > 0) {
+    let r1 = x - triangleNumber(n0);
+    if (!r1) return [n0, 0, 0];
+    let n1 = Math.min(n0, Math.floor((Math.sqrt(8 * r1 + 1) - 1) / 2));
+    while (n1 > 0) {
+      let r2 = r1 - triangleNumber(n1);
+      if (!r2) results.push([n0, n1, 0]);
+      let n2 = Math.min(n1, Math.floor((Math.sqrt(8 * r2 + 1) - 1) / 2));
+      if (r2 === triangleNumber(n2)) results.push([n0, n1, n2]);
+      n1 -= 1;
+    }
+    n0 -= 1;
+  }
+
+  sortByFn(results, r => total(r.map(x => square(x))));
+  return last(results);
+});
+
+export function triangleSums($step) {
+  const $svgs = $step.$$('svg.t-sum');
+  const $sums = $step.$$('strong.t-sum');
+
+  $step.model.watch((model) => {
+    const t = triangularSum(model.n);
+    const tx = t.map(x => triangleNumber(x));
+
+    for (let i of [0, 1, 2]) {
+      $sums[i].text = tx[i];
+      $svgs[i+1].removeChildren();
+      const s = t[i] <= 9 ? 1 : (1.9 - t[i] / 10);
+      for (let p of trianglePoints(t[i] - 1)) {
+        $N('circle', {cx: 70 + 15 * s * p.x, cy: 80 + 15 * s * p.y, r: 6 * s},
+            $svgs[i+1]);
+      }
+    }
+
+    $svgs[0].removeChildren();
+    for (let i = 0; i < model.n; ++i) {
+      $N('circle', {
+        class: (i < tx[0]) ? 'red' : (i < tx[0] + tx[1]) ? 'blue' : 'green',
+        cx: 7 + 14 * (i % 10),
+        cy: 7 + 14 * Math.floor(i / 10),
+        r: 6
+      }, $svgs[0]);
+    }
+  });
+}
+
+export function squareNumbers1($step) {
+  const $groups = $step.$$('svg g');
+  const $slider = $step.$('x-slider');
+
+  $slider.on('move', (x) => {
+    for (let i = 0; i < 7; ++i) {
+      $groups[i].css('display', (i <= x) ? 'block' : 'none');
+    }
+  });
+  $slider.set(6);
 }
 
 export function polygonNumbers($step) {
-  const $g = $step.$('svg g');
+  const POLYGONS = ['triangle', 'square', 'pentagonal', 'hexagonal',
+      'heptagonal', 'octagonal', 'nonagonal', 'decagonal'];
+  const COLOURS = ['#ff941f', '#ec7031', '#d94c44', '#c62857', '#b30469',
+    '#8e228f', '#693fb4', '#445dda', '#1f7aff', '#2488c0', '#289782', '#2da543'];
 
-  $step.model.watch((m) => {
-    $g.removeChildren();
-    const points = polygonPoints(m.k, m.x);
+  const $svg = $step.$('svg');
+  const $slider = $step.$('x-slider');
+  const $mn = $step.$$('mn');
+  $step.model.assign({polygonName: (x) => POLYGONS[x - 3]});
+
+  function update(k, x) {
+    $svg.removeChildren();
+    const points = polygonPoints(k, x);
+    const scale = Math.max(...points.map(p => p.y)) / 2;
+    $mn[0].text = x;
+    $mn[1].text = points.length;
+
     for (let p of points) {
-      $N('circle', {cx: 150 + 50 * p.x, cy: 10 + 50 * p.y, r: 5}, $g);
+      $N('circle', {
+        cx: 150 + (60 + 5 * x) * (scale ? p.x / scale : 0),
+        cy: 130 + (60 + 5 * x) * (scale ? (p.y / scale - 1) : 0),
+        r: Math.min(70, 1 + (250 / k / x)),
+        fill: COLOURS[p.m]
+      }, $svg);
     }
-  });
+  }
 
+  $step.model.watch((m) => update(m.k, $slider.current + 1));
+  $slider.on('move', (x) => update($step.model.k, x + 1));
+  $slider.set(3);
 }
 
 function eratosthenes($step, $numbers, $gesture, primes, classes) {
@@ -259,22 +341,13 @@ function hailstones(n) {
 export function hailstone1($step) {
   $step.model.set('hailstones', (n) => hailstones(n)
       .map(i => `<span class="n">${i}</span>`).join(', '));
-
-  $step.model.watch((state) => {
-    if (state.n === 30) $step.score('var-max');
-  });
 }
 
 export function hailstone2($step) {
   const cached = cache(hailstones);
   const $plot = $step.$('x-coordinate-system');
 
-  $step.model.watch((m) => {
-    const data = [...cached(m.n), 4, 2, 1];
-    $plot.setPoints(data);
-    if (m.n >= 25) $step.score('var-min');
-    if (m.n >= 40) $step.score('var-max');
-  });
+  $step.model.watch((m) => $plot.setPoints([...cached(m.n), 4, 2, 1]));
 
   const $actions = $step.$$('.var-action');
   $actions[0].on('click', () => $step.model.set('n', 31));
