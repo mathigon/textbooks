@@ -997,7 +997,6 @@ that extend into every direction:
 
 ---
 > id: footsteps
-> goals: slider
 
 In addition to reflectional, rotational and translational symmetry, there even
 is a fourth kind: [__glide reflections__](gloss:glide-reflection). This is a

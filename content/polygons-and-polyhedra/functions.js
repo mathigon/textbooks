@@ -253,7 +253,6 @@ export function penrose($step) {
     $g[0].setAttr('opacity', n < 50 ? 1-n/77 : 0.35);
     $g[1].setAttr('opacity', n < 50 ? n/50 : 1.5-n/100);
     $g[2].setAttr('opacity', n < 50 ? 0 : n/50-1);
-    if (n >= 90) $step.score('slide');
   });
 }
 
@@ -265,10 +264,4 @@ export function polyhedra($step) {
 
 export function platonicOverview($step) {
   $step.addHint('use-euler');
-}
-
-export function platonicDual($step) {
-  $step.$$('x-img-sequence').forEach(($img, i) => {
-    $img.on('last', () => $step.score('slide-' + i));
-  });
 }

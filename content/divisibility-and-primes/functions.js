@@ -285,8 +285,6 @@ export function gcd($section) {
     $result.html = isOneOf(state.x, 1, 2, 3, 6) ?
       'It works!' : 'That doesn‘t seem to fit…';
 
-    if (state.x === 6) $section.score('size-6');
-
     $tiles.removeChildren();
 
     for (let x = 0; x < 30; x += state.x) {

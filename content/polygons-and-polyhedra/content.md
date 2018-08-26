@@ -1376,7 +1376,6 @@ If the maths isn’t right, the tessellation is not going to work!
 
 ---
 > id: penrose
-> goals: slide
 
 ### Penrose Tilings
 
@@ -1706,7 +1705,6 @@ Platonic solids are called [__dual solids__](gloss:polyhedron-dual).
 
 ---
 > id: platonic-dual
-> goals: slide-0 slide-1
 
 We can turn a polyhedron into its dual, by “replacing” every face with a vertex,
 and every vertex with a face. These animations show how:

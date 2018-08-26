@@ -841,7 +841,6 @@ factors which would get “canceled”.
 
 ---
 > id: gcd
-> goals: size-6
 
 ## Greatest Common Factors
 

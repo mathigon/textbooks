@@ -300,7 +300,6 @@ export function footsteps($step) {
   const $img = $step.$('img:nth-child(2)');
   $step.$('x-slider').on('move', (n) => {
     $img.css('transform', `translateX(${n/2}px) scaleY(${1-n/50})`);
-    if (n >= 90) $step.score('slider');
   });
 }
 
