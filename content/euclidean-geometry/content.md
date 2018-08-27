@@ -180,7 +180,7 @@ _{button.next-step} Continue_
 ::: column.grow
 {.r} A [__circle__](gloss:circle) is the collection of points that all have the
 same [distance](target:radius) from a point in the center. This distance is
-called the [__radius__](gloss:radius).
+called the [__radius__](gloss:circle-radius).
 _{button.next-step} Continue_
 :::
 

@@ -470,7 +470,8 @@ get a __Parallelogram__.
 > id: quadrilaterals-venn
 
 Quadrilaterals can fall into multiple of these categories. We can visualise the
-hierarchy of different types of quadrilaterals as a [Venn diagram](gloss:venn):
+hierarchy of different types of quadrilaterals as a [Venn
+diagram](gloss:venn-diagram):
 
     figure: include svg/venn.svg
 

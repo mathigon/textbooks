@@ -5,18 +5,70 @@
 
 axiom:
   title: Axiom
-  text: An __axiom__ of (__postulate__) postulate is a statement that is
-    accepted as true without requiring proof.
+  text: An __axiom__ (sometimes also called __postulate__) is a mathematical
+    statement that is regarded as “self-evident” and accepted without proof.
+    Axioms form the foundation of mathematics and can be used to prove other
+    results.
 
 theorem:
   title: Theorem
-  text: A __theorem__ is a particularly important statement or observation in
-    mathematics.
+  text: A __theorem__ is a particularly important result or observation in
+    mathematics, that has been proven using axioms and previous theorems.
 
 proof:
   title: Proof
   text: A __proof__ is a logical argument that shows beyond any doubt that a
     certain statement is true.
+
+formula:
+  title: Formula
+  text: A __formula__ is a rule or equation that describes the relationship
+    between two or more variables. An example is `A = πr^2`.
+
+
+
+# ==============================================================================
+# NUMBERS AND ARITHMETIC
+# ==============================================================================
+
+
+integer:
+  title: Integer
+  text: "The __integers__ are the positive and negative whole numbers including
+    zero: …, –3, –2, –1, 0, 1, 2, 3, …"
+
+natural-numbers:
+  title: Natural Numbers
+  text: The __natural numbers__ are the positive whole numbers starting at 1:
+    1, 2, 3, 4, …
+
+rational-numbers:
+  title: Rational Numbers
+  text: __Rational numbers__ are numbers that can be expressed as a fraction (or
+    ratio) of two integers. Examples include `1/2`, `-5/7`, 12.7 and 9.
+
+irrational-numbers:
+  title: Irrational Numbers
+  text: __Irrational numbers__ are numbers that cannot be expressed as fractions
+    of integers (_rational numbers_). For example, 0.333333… = `1/3` is
+    _rational_ but `π`, `sqrt(2)` and _e_ are all _irrational_.
+
+infinity:
+  title: Infinity
+  text: __Infinity__ is a quantity without limit or end. In matematics, it is
+    represented by te symbol `∞`.
+
+powers:
+  title: Exponentiation
+  text: __Exponentiation__ (or __powers__) is the mathematical operation where a
+    number (the _base_) is multiplied by itself a specified number of times (the
+    _exponent_). This is usually written as a superscript `a^x`, where _a_ is
+    the base and _x_ is the exponent. For example, `4^3=4×4×4`.
+
+associative:
+  title: Associativity
+  text: An operation • is associative if `a•(b•c) = (a•b)•c`. For example,
+    addition (+) and multiplication (×) of numbers are associative.
 
 
 
@@ -27,7 +79,9 @@ proof:
 
 term:
   title: Term (Algebra)
-  text: TODO
+  text: A __term__ in an algebraic expression or equation is a single number or
+    variable, or the product of several numbers and variables separated from
+    another term by a + or – sign.
 
 variable:
   title: Variable
@@ -36,14 +90,15 @@ variable:
 
 coefficient:
   title: Coefficient
-  text: A __coefficient__ is the number by which a variable or a power of a
-    variable is multiplied. For exmple, the coefficient of `5x^2` is 5, and the
-    coefficient of `7y` is 7.
+  text: __Coefficients__ are the numbers in front of the variables in a
+    mathematical expression or equation. For example, in the expression
+    `4x + 5y^2 + 3z`, the coefficients of `x`, `y^2` and `z` are 4, 5 and 3.
 
 polynomial:
   title: Polynomial
-  text: A __polynomial__ is an algebraic expression that consists of multiple
-    powers of a variable, for example `5x^3 - 2x^2 + x + 4`.
+  text: A __polynomial__ is an algebraic expression that consists of constants
+    and multiples of variables and teir powers. An example would be
+    `5x^3 - 2x^2 + x + 4`.
 
 polynomial-degree:
   title: Degree
@@ -54,11 +109,6 @@ quadratic:
   title: Quadratic
   text: A __quadratic__ is a polynomial of degree 2. For example, `x^2 - 2x + 3`
     is a quadratic.
-
-associative:
-  title: Associativity
-  text: An operation • is associative if `a•(b•c) = (a•b)•c`. For example,
-    addition (+) and multiplication (×) of numbers is associative.
 
 function:
   title: Function
@@ -71,11 +121,6 @@ function-graph:
   text: We can plot mathematical functions of the form `f(x)` in a coordinate
     system. The result is called the __graph__ of the function.
 
-irrational:
-  title: Irrational Numbers
-  text: A number is __irrational__ if it cannot be expressed as a fraction. For
-    example, 0.333333… = `1/3` is _rational_, but `sqrt(2)` = 1.41421… cannot be
-    expressed as a fraction and is _irrational_
 
 
 # ==============================================================================
@@ -85,31 +130,104 @@ irrational:
 
 sequence:
   title: Sequence
-  text: TODO
+  text: A __sequence__ is an ordered list of numbers of elements that are
+    usually detemined using some function or patterns. Sequences can be both
+    finite and infinite.
 
 sequence-term:
   title: Terms of a Sequence
-  text: TODO
+  text: The __terms__ of a sequence are all the individual elements.
 
 sequence-recursive:
   title: Recursie Formula
-  text: TODO
+  text: A __recursive formula__ for a sequence expresses the value of every
+    term `x_n` as a function of its previous terms.
 
 sequence-explicit:
   title: Explicit Formula
-  text: TODO
+  text: An __explicit formula__ for a sequence expresses the value of the *n*th
+    term `x_n` as a function of _n_.
+
+sequence-convergence:
+  title: Convergence
+  text: A sequence __converges__ if, over time, its terms get closer and closer
+    to a specific __limit__.
+
+sequence-divergence:
+  title: Divergence
+  text: A sequence __diverges__ if, over time, its terms get bigger and bigger,
+    towards infinity (or negative infinity).
 
 arithmetic-sequence:
   title: Arithmetic Sequence
   text: An __arithmetic sequence__ (sometimes called __arithmetic progression__)
     is a sequence of numbers in which the difference _d_ between consecutive
-    terms is always the same.
+    terms is always constant.
 
 geometric-sequence:
   title: Geometric Sequence
   text: A __geometric sequence__ (sometimes called __geometric progression__)
     is a sequence of numbers in which the ratio _r_ between consecutive terms
-    is always the same.
+    is always constant.
+
+triangle-numbers:
+  title: Triangle Numbers
+  text: A __triangle number__ is an integer that can be represented as an
+    equilateral triangle of dots. The formula for the *n*th triangle number is
+    `(n*(n+1))/ 2`, and the first triangle numbers are 1, 3, 6, 10, 15, …
+  image: triangle-numbers.svg
+
+square-numbers:
+  title: Square Numbers
+  text: A __square number__ is a number that can be expressed as the square of
+    another integer. The first square numbers are 1, 4, 9, 16, 25, …
+
+tetrahedral-numbers:
+  title: Tetrahedral Numbers
+  text: A __tetrahedral number__
+
+fibonacci-numbers:
+  title: Fibonacci Numbers
+  text: The sequence of __Fibonacci numbers__ starts with 1, 1. Every following
+    term if the sum of the two previous terms, which means that the recursive
+    formula is `x_n = x_(n-1) + x_(n-2)`.
+
+perfect-numbers:
+  title: Perfect Numbers
+  text: A __perfect number__ is a number that is equal to the sum of its
+    divisors (excluding itself). For example, `28 = 1 + 2 + 4 + 7 + 14` is
+    a perfect number.
+
+figurate-numbers:
+  title: Firgurate Numbers
+  text: __Figurate numbers__ are numbers that can be represented using geometric
+    shapes. Examples include square, triangle and tetrahedral numbers.
+
+hailstone-sequence:
+  title: Hailstone Sequence
+  text: |
+    __Hailstone sequences__ can be generated by picking any integer as starting
+    point, and then following these rules:
+
+    * If `x_n` is even, `x_(n+1) = x_n / 2`.
+    * If `x_n` is odd, `x_(n+1) = 3 * x_n + 1`
+
+golden-ratio:
+  title: Golden Ratio
+  text: |
+    The golden ratio is a specific irrational number with value
+    `φ = 1.61803398875…`. It can be approximated by dividing two consecutive
+    Fibonacci numbers.
+
+    The golden ratio is often seen as particularly aesthetically pleasing in art
+    and architecture, and it appears in the spirals of many plants.
+
+pascals-triangle:
+  title: Pascal’s Triangle
+  text: Pascal’s triangle is a number pyramid in which every cell is the sum of
+    the two cells directly above. It contains all binomial coefficients, as well
+    as many other number sequences and patterns.
+
 
 
 # ==============================================================================
@@ -347,12 +465,6 @@ symmetry-group:
   title: Symmetry Group
   text: The __symmetry group__ of a geometric object is the collection of all of
     its _symmetries_ (as well as the _identity_).
-
-laws-of-nature:
-  title: Laws of Nature
-  text: The __laws of nature__ are the name given collectively to the physical
-    rules (usually expressed as mathematical equations) that try to explain
-    everything we observe in the universe.
 
 dilation:
   title: Dilation
@@ -652,149 +764,34 @@ cross-section:
 # ------------------------------------------------------------------------------
 # Circles
 
+pi:
+  title: Pi
+  text: __Pi__, often written as the Greek letter `π`, if the ratio of the
+    circumference and te diameter of a circle. Its value is approximately
+    3.14159265...
+
 circle:
   title: Circle
   text: A __circle__ is the set of all points at a specific distance from a
     given point in two dimensions.
 
-diameter:
+circle-diameter:
   title: Diameter (circle)
   text: The __diameter__ of a circle is the distance across the center of a
     circle. It is equal to twice the radius of the circle.
 
-radius:
+circle-radius:
   title: Radius
   text: The __radius__ of a circle is the distance from its center to its edge.
 
-circumference:
+circle-circumference:
   title: Circumference (circle)
   text: The __circumference__ of a circle is the length around its outside edge.
 
-# Sphere	A sphere is a round, three-dimensional solid. All points on the surface of a sphere are equidistant from the center of the sphere.
-# Surface Area	Surface area is the total area of all of the surfaces of a three-dimensional object.
-# Volume	Volume is the amount of space inside the bounds of a three-dimensional object.
-# Cone	A cone is a solid three-dimensional figure with a circular base and one vertex.
-# Pyramid	A pyramid is a three-dimensional object with a base that is a polygon and triangular faces that meet at one vertex.
-# Volume	Volume is the amount of space inside the bounds of a three-dimensional object.
-# Cavalieri's Principle	States that if two solids have the same height and the same cross-sectional area at every level, then they will have the same volume.
-# Apothem	The apothem of a regular polygon is a perpendicular segment from the center point of the polygon to the midpoint of one of its sides.
-# arc	A single section of the circle, that describes a particular angle.
-# central angle	An angle formed by two radii and whose vertex is at the center of the circle.
-# major arc	An arc that is greater than 180∘.
-# minor arc	An arc that is less than 180∘.
-# semicircle	An arc that measures 180∘.
-# Arc Addition Postulate	Arc addition postulate states that the measure of the arc formed by two adjacent arcs is the sum of the measures of the two arcs.
-# chord	A line segment whose endpoints are on a circle.
-# diameter	A chord that passes through the center of the circle. The length of a diameter is two times the length of a radius.
-# inscribed angle	An angle with its vertex on the circle and whose sides are chords.
-# intercepted arc	The arc that is inside an inscribed angle and whose endpoints are on the angle.
-# point of tangency	The point where the tangent line touches the circle.
-# Chord/Tangent Angle Theorem	The Chord/Tangent Angle Theorem states that the measure of an angle formed by a chord and a tangent that intersect on a circle is half the measure of the intercepted arc.
-# Intersecting Chords Angle Theorem	The Intersecting Chords Angle Theorem states that the measure of the angle formed by two chords that intersect inside a circle is the average of the measures of the intercepted arcs.
-# Conic	Conic sections are those curves that can be created by the intersection of a double cone and a plane. They include circles, ellipses, parabolas, and hyperbolas.
-# Ellipse	Ellipses are conic sections that look like elongated circles. An ellipse represents all locations in two dimensions that are the same distance from two specified points called foci.
-# hyperbola	A hyperbola is a conic section formed when the cutting plane intersects both sides of the cone, resulting in two infinite “U”-shaped curves.
-# Parabola	A parabola is the characteristic shape of a quadratic function graph, resembling a "U".
-# concentric  Two or more circles that have the same center, but different radii.
-# Secant	The secant of an angle in a right triangle is the value found by dividing length of the hypotenuse by the length of the side adjacent the given angle. The secant ratio is the reciprocal of the cosine ratio.
-# Tangent	The tangent of an angle in a right triangle is a value found by dividing the length of the side opposite the given angle by the length of the side adjacent to the given angle.
-
 
 
 # ==============================================================================
-# GRAPH THEORY
-# ==============================================================================
-
-
-graph:
-  title: Graph
-  text: A __graph__ is a collection of vertices connected by edges.
-
-vertex:
-  title: Vertex
-  text: A __vertex__ is a point or node that is part of a graph.
-
-edge:
-  title: Edge
-  text: __Edges__ are the lines that connect vertices (points) in a graph.
-
-directed:
-  title: Directed Graph
-  text: In a __directed graph__, every edge as an arrow, i.e. a start vertex and
-    an end vertex.
-
-subgraph:
-  title: Subgraph
-  text: A graph is a __subgraph__ of another graph, if it is formed by a subset
-    of the larger graphs edges and vertices.
-
-complete:
-  title: Complete Graph
-  text: In __complete graphs__, every vertex is connected to every other vertex.
-    A complete graph with _n_ vertices has <mfrac class='inline'><mrow><mi>n</mi>
-    × (<mi>n</mi> – 1)</mrow><mrow>2</mrow></mfrac> edges.
-
-bipartite:
-  title: Bipartite Graph
-  text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is
-    connected to all the vertices in the opposite set, but none of the vertices
-    in its own set.
-
-dna:
-  title: DNA
-  text: __DNA__ (Deoxyribonucleic Acid) is a molceule that contains the genetic
-    blueprint of all living organisms. Most DNAs consist of two strands forming
-    a _double helix_. Genetic information is encoded in the order of four
-    nucleic acids (A, G, C and T) which make up the DNA. _DNA sequencing_ is the
-    process of extracting this information – an essential technique in biology,
-    medicine, genetics and biotechnology.
-
-np:
-  title: NP Hard Problems
-  text: _Computational complexity theory_ is about determining how “difficult”
-    problems are to be solved by a computer. __NP hard__ (non-deterministic
-    polynomial-time hard) is the class of the most difficult problems.
-
-graph-order:
-  title: Order
-  text: The __order__ of a graph is the number of vertices in it.
-
-graph-degree:
-  title: Degree
-  text: The __degree__ of a vertex is the number of edges that meet at that vertex.
-
-cycle:
-  title: Cycle
-  text: __Cycles__ are graphs that consist of a single ring of vertices.
-
-subdivision:
-  title: Subdivisions
-  text: To create a __subdivision__ of a graph you add additional vertices along
-    its edges.
-
-millennium-prize:
-  title: Millennium Prize Problems
-  text: |
-    The seven __Millennium Prize Problems__ are some of the most difficult open
-    problems in Mathematics. They were listed in 2000 by the _Clay Mathematics
-    Institute_, and each hold a $1m reward:
-
-    * P vs NP
-    * The Hodge Conjecture
-    * The Poincaré Conjecture
-    * The Riemann Hypothesis
-    * Yang-Mills Existence and Mass Gap
-    * Navier-Stokes Existence and Smoothness
-    * The Birch and Swinnerton-Dyer Conjecture
-
-    So far, just one of the problems, the _Poincaré Conjecture_, was solved.
-    However the mathematician who solved it, Grigori Perelman, declined the
-    award.
-
-
-
-# ==============================================================================
-# DIVISIBILITY AND PRIMES
+# NUMBER THEORY
 # ==============================================================================
 
 
@@ -816,7 +813,7 @@ prime:
   text: A __prime number__ is an integer that has no divisors other than 1 and
     itself.
 
-primefactor:
+prime-factor:
   title: Prime Factor
   text: A __prime factor__ of a number is simply a factor which is prime.
 
@@ -840,20 +837,21 @@ gcd:
   text: The __Greatest Common Divisor__ (gcd) of two numbers _a_ and _b_ is the
     largest integer that is a divisor of both _a_ and _b_.
 
-cryptography:
-  title: Cryptography
-  text: __Cryptography__ is an area of mathematics that‘s about enciphering and
-    deciphering secret messages.
-
-twins:
+twin-primes:
   title: Twin Primes
-  text: __Twin primes__ are pairs of prime numbers like 17 and 19 which are just
-    2 apart.
+  text: __Twin primes__ are pairs of prime numbers like 17 and 19, which are
+    exactly two apart. It is unknown if there are infinitely many pairs of twin
+    primes.s
+
+sieve-eratosthenes:
+  title: Sieve of Eratostenes
+  text: The __Sieve of Eratostenes__ is a procedure for finding prime numbers,
+    by continuoulsy eliminating numbers that are _not_ prime.
 
 
 
 # ==============================================================================
-# PROBABILITY
+# PROBABILITY AND STATISTICS
 # ==============================================================================
 
 
@@ -872,29 +870,170 @@ roulette:
   text: __Roulette__ is a casino game in which you bet on where a spinning ball
     is going to land. It contains 36 numbers as well as one or two 0s.
 
-information:
-  title: Information Theory
-  text: __Information Theory__ is the study of quantification, storage and
-    communication of data and information. It is used in logic, cryptography
-    and computer science.
-
-probTree:
+probability-tree:
   title: Probability Tree
   text: A __probability tree__ is a tree diagram representing the combined
     probability of multiple sequential events.
 
-venn:
+venn-diagram:
   title: Venn Diagram
   text: A __venn diagram__ visualises multiple properties or events that
     overlap.
   image: venn.svg
 
+
+
+# ==============================================================================
+# GRAPH THEORY
+# ==============================================================================
+
+
+graph:
+  title: Graph
+  text: A __graph__ is a collection of vertices connected by edges.
+
+graph-vertex:
+  title: Vertex
+  text: A __vertex__ is a point or node that is part of a graph.
+
+graph-edge:
+  title: Edge
+  text: __Edges__ are the lines that connect vertices (points) in a graph.
+
+directed-graph:
+  title: Directed Graph
+  text: In a __directed graph__, every edge as an arrow, i.e. a start vertex and
+    an end vertex.
+
+subgraph:
+  title: Subgraph
+  text: A graph is a __subgraph__ of another graph, if it is formed by a subset
+    of the larger graphs edges and vertices.
+
+complete-graph:
+  title: Complete Graph
+  text: In __complete graphs__, every vertex is connected to every other vertex.
+    A complete graph with _n_ vertices has <mfrac class='inline'><mrow><mi>n</mi>
+    × (<mi>n</mi> – 1)</mrow><mrow>2</mrow></mfrac> edges.
+
+bipartite-graph:
+  title: Bipartite Graph
+  text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is
+    connected to all the vertices in the opposite set, but none of the vertices
+    in its own set.
+
+graph-order:
+  title: Order
+  text: The __order__ of a graph is the number of vertices in it.
+
+graph-degree:
+  title: Degree
+  text: The __degree__ of a vertex is the number of edges that meet at that vertex.
+
+graph-cycle:
+  title: Cycle
+  text: __Cycles__ are graphs that consist of a single ring of vertices.
+
+subdivision:
+  title: Subdivisions
+  text: To create a __subdivision__ of a graph you add additional vertices along
+    its edges.
+
+
+
+# ==============================================================================
+# MISCELLANEOUS
+# ==============================================================================
+
+
+millennium-prize:
+  title: Millennium Prize Problems
+  text: |
+    The seven __Millennium Prize Problems__ are some of the most difficult open
+    problems in Mathematics. They were listed in 2000 by the _Clay Mathematics
+    Institute_, and each hold a $1m reward:
+
+    * P vs NP
+    * The Hodge Conjecture
+    * The Poincaré Conjecture
+    * The Riemann Hypothesis
+    * Yang-Mills Existence and Mass Gap
+    * Navier-Stokes Existence and Smoothness
+    * The Birch and Swinnerton-Dyer Conjecture
+
+    So far, just one of the problems, the _Poincaré Conjecture_, was solved.
+    However the mathematician who solved it, Grigori Perelman, declined the
+    award.
+
+dna:
+  title: DNA
+  text: __DNA__ (Deoxyribonucleic Acid) is a molceule that contains the genetic
+    blueprint of all living organisms. Most DNAs consist of two strands forming
+    a _double helix_. Genetic information is encoded in the order of four
+    nucleic acids (A, G, C and T) which make up the DNA. _DNA sequencing_ is the
+    process of extracting this information – an essential technique in biology,
+    medicine, genetics and biotechnology.
+
+np:
+  title: NP Hard Problems
+  text: _Computational complexity theory_ is about determining how “difficult”
+    problems are to be solved by a computer. __NP hard__ (non-deterministic
+    polynomial-time hard) is the class of the most difficult problems.
+
+fractal:
+  title: Fractal
+  text: A __fractal__ is a _self-similar_ geometric shape, e.g. one that looks
+    the same at different levels of magnification. Fractals a created by
+    repeating a procedure or equation infinitely often.
+
+roman-numerals:
+  title: Roman Numerals
+  text: |
+    The __Roman numeral system__ was developed in ancient Rome and used in
+    Europe until the 14th century. It allowed you to write any integer by
+    combining seven different letters:
+
+    * I = 1
+    * V = 5
+    * X = 10
+    * L = 50
+    * C = 100
+    * D = 500
+    * M = 1000
+
+arabic-numerals:
+  title: Arabic Numerals
+  text: |
+    The __Arabic numeral system__ uses ten different digits (0, 1, 2, 3, 4, 5,
+    6, 7, 8, 9) together with a decimal place-value system, to write any number.
+
+    It was first developed in India, then adapted by Arabic mathematicians,
+    before being brought to Europe by the Italian mathematician Leonardo
+    Fibonacci.
+
+cryptography:
+  title: Cryptography
+  text: __Cryptography__ is an area of mathematics that‘s about enciphering and
+    deciphering secret messages.
+
 quantum:
   title: Quantum Mechanics
-  text: __Quantum Mechanics__ is a branch of Physics that explains the strange
+  text: __Quantum mechanics__ is a branch of Physics that explains the strange
     behaviour of fundamental particles.
 
 radioactive:
   title: Radioactive Decay
-  text: __Radioactive Decay__ is a physical process by which unstable atoms
+  text: __Radioactive decay__ is a physical process by which unstable atoms
     break apart and release energy.
+
+laws-of-nature:
+  title: Laws of Nature
+  text: The __laws of nature__ are the name given collectively to the physical
+    rules (usually expressed as mathematical equations) that try to explain
+    everything we observe in the universe.
+
+information:
+  title: Information Theory
+  text: __Information theory__ is the study of quantification, storage and
+    communication of data and information. It is used in logic, cryptography
+    and computer science.

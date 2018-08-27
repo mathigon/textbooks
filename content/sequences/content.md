@@ -543,13 +543,13 @@ behave completely differently based on the values of `a` and *r*:
 
 If _{span.var-action}`r > 1`_, the term will [[quickly get bigger|quickly
 decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
-Mathematicians say that the sequence [__diverges__](gloss:divergence)._
+Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
 
 ::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
 
 If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
 closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
-We say that the sequence [__converges__](gloss:converges)._
+We say that the sequence [__converges__](gloss:sequence-convergence)._
 
 ::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
 
@@ -1141,8 +1141,9 @@ _{.n}[[144]]_, …
 ---
 > id: fibonacci
 
-This sequence of numbers is called the [__Fibonacci Sequence__](gloss:fibonacci),
-named after the Italian mathematician [Leonardo Fibonacci](bio:fibonacci).
+This sequence of numbers is called the [__Fibonacci
+Sequence__](gloss:fibonacci-numbers), named after the Italian mathematician
+[Leonardo Fibonacci](bio:fibonacci).
 
 ::: column.grow
 When Fibonacci was born in 1175, most people in Europe still used the [Roman
@@ -1351,9 +1352,10 @@ see a [Dodecahedron](gloss:dodecahedron).
 We can approximate the golden ratio by [[dividing|adding|subtracting]] two
 consecutive Fibonacci numbers.
 
-{.reveal(when="blank-0")} However, it turns out that the exact value of `φ` can’t
-be written as a simple fraction: it is an [__irrational number__](gloss:irrational),
-just like `π` and `sqrt(2)` and some other numbers you’ve seen before.
+{.reveal(when="blank-0")} However, it turns out that the exact value of `φ`
+can’t be written as a simple fraction: it is an [__irrational
+number__](gloss:irrational-numbers), just like [`π`](gloss:pi) and `sqrt(2)` and
+some other numbers you’ve seen before.
 
 ---
 > id: sunflower-growing
@@ -1503,8 +1505,8 @@ Can you find a formula to express the number of ways there of climbing $n$ steps
 
 
 In addition to [arithmetic](gloss:arithmetic-sequence) and [geometric
-sequences](gloss:geometric-sequence), [Fibonacci numbers](gloss:fibonacci)
-and [figurate numbers](gloss:figurate-sequence), there are countless interesting
+sequences](gloss:geometric-sequence), [Fibonacci numbers](gloss:fibonacci-numbers)
+and [figurate numbers](gloss:figurate-numbers), there are countless interesting
 sequences that don’t follow a certain, regular pattern.
 
 ---
@@ -1607,17 +1609,17 @@ Let’s compare these numbers with their sum of factors:
 ::: column.perfect-box(width=220 parent="padded-thin")
 
 For most numbers, the sum of its factors is [[less than|greater than|equal to]]
-itself. These numbers are called [__deficient numbers__](gloss:deficient-number).
+itself. These numbers are called __deficient numbers__.
 
 ::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
 
 For a few numbers, the sum of its factors is greater than itself. These numbers
-are called [__abundant numbers__](gloss:abundant-number).
+are called __abundant numbers__.
 
 ::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
 
 Only one number in the list above has a sum of factors that is _equal_ to itself:
-[[6]]. This is called a [__perfect number__](gloss:perfect-number).
+[[6]]. This is called a [__perfect number__](gloss:perfect-numbers).
 
 :::
 

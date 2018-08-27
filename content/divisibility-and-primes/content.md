@@ -634,7 +634,7 @@ problems surrounding the primes.
 Mathematicians have spent many centuries exploring the pattern and distribution
 of prime numbers. They seem to appear completely randomly – sometimes there are
 huge gaps in between consecutive primes, and sometimes we find [twin
-primes](gloss:twins) right next to each other.
+primes](gloss:twin-primes) right next to each other.
 
 When only 15 years old, the German mathematician [Carl Friedrich Gauss](bio:gauss)
 had a groundbreaking new idea: he counted the number of primes up to a certain

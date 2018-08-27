@@ -1148,9 +1148,9 @@ and followed a variety of other bizarre customs.
 
 ::: column.grow
 The Pythagoreans are credited with many mathematical discoveries, including
-finding the first [irrational number](gloss:irrational), `sqrt(2)`. Irrational
-numbers cannot be expressed as a simple fraction – a concept the Pythagoreans
-found deeply troubling and (unsuccessfully) tried to cover up!
+finding the first [irrational number](gloss:irrational-numbers), `sqrt(2)`.
+Irrational numbers cannot be expressed as a simple fraction – a concept the
+Pythagoreans found deeply troubling and (unsuccessfully) tried to cover up!
 ::: column(width=400)
     x-media(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 

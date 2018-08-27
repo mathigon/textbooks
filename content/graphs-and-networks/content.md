@@ -54,7 +54,7 @@ don’t have to be straight.
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
 {.text-center} In some graphs, the edges only go one way. These are called
-__directed graphs__.
+[__directed graphs__](gloss:directed-graph).
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
@@ -76,8 +76,8 @@ multiple edges and loops in this course
 > id: intro-2
 
 We can create new graphs from an existing graph by removing some of the vertices
-and edges. The result is called a __subgraph__. Here are a few examples of
-graphs and subgraphs:
+and edges. The result is called a [__subgraph__](gloss:subgraph). Here are a few
+examples of graphs and subgraphs:
 
 ::: column(width=200)
 
@@ -128,9 +128,9 @@ which meet at that vertex.
 ---
 > id: intro-4
 
-Graphs which consist of a single ring of vertices are called __cycles__. All
-cycles have [[the same number of edges and vertices|more edges than
-vertices|fewer edges than vertices]].
+Graphs which consist of a single ring of vertices are called
+[__cycles__](gloss:graph-cycle). All cycles have [[the same number of edges and
+vertices|more edges than vertices|fewer edges than vertices]].
 
     .row
       svg.graph(style='width: 90px; height: 90px;')
@@ -417,14 +417,14 @@ edges – these are called __planar graphs__ – but others cannot.
 ---
 > id: utilities-2
 
-The [complete graph](gloss:complete) `K_5` is the smallest graph that is not
-planar. Any other graph that contains `K_5` as a subgraph in some way is also
-not planar. This includes `K_6`, `K_7`, and all larger complete graphs.
+The [complete graph](gloss:complete-graph) `K_5` is the smallest graph that is
+not planar. Any other graph that contains `K_5` as a subgraph in some way is
+also not planar. This includes `K_6`, `K_7`, and all larger complete graphs.
 
-The graph in the three utilities puzzle is the [bipartite graph](gloss:bipartite)
-`K_"3,3"`. It turns out that any non-planar graph must contain a `K_5` or a
-`K_"3,3"` or a [subdivision](gloss:subdivision) of these two graphs as a
-subgraph.
+The graph in the three utilities puzzle is the [bipartite
+graph](gloss:bipartite-graph) `K_"3,3"`. It turns out that any non-planar graph
+must contain a `K_5` or a `K_"3,3"` or a [subdivision](gloss:subdivision) of
+these two graphs as a subgraph.
 
 ---
 > id: planarity
