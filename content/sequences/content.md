@@ -568,21 +568,99 @@ this course.
 
 ### Recursive and Explicit Formulas
 
-{.todo} Remember that a __recursive formula__ for a sequence is an equation for the
-value
+In the previous section, you learned that a [__recursive
+formula__](gloss:sequence-recursive) tells you the value of each term as a
+function of previous terms. Here are the recursive formulas for arithmetic and
+geometric sequences:
 
-{.todo} recursive formulas
+::: column.grow
 
-{.todo} One problem with recursive formulas is that to find the 100th term, for example,
-you first have to calculate the previous 99 terms – and that might take a long
-time.
+{.text-center} `x_n =` [[`x_(n-1) + d`|`x_(n-1) × d`|`x_d + n`]]
+
+::: column.grow
+
+{.text-center} `x_n =` [[`x_(n-1) × r`|`x_(n-1) - r`|`x_n - r + n`]]
+
+:::
 
 ---
 > id: arithmetic-geometric-explicit
 
-Finding an __explicit formula__ is a bit harder.
+One problem with recursive formulas is that to find the 100th term, for example,
+we first have to calculate the previous 99 terms – and that might take a long
+time. Instead, we can try to find an [__explicit formula__](gloss:sequence-explicit),
+that tells us the value of the *n*th term directly.
 
-{.todo} explicit formulas explanation - `a_n = a_1 + d*(n-1)` and `a_n = a_1 * r^(n-10`
+::: column.grow
+
+For __{.m-red}arithmetic sequences__, we have to add _d_ at every step:
+
+{.ag-equation} `x_1 =` `a`
+
+{.ag-equation} `x_2 =` `a + d`
+
+{.ag-equation} `x_3 =` `a + d + d`
+
+{.ag-equation} `x_4 =` *{x-equation(solution="a+d+d+d")}*
+
+{.ag-equation.reveal(when="eqn-0")} `x_5 =` *{x-equation(solution="a+d+d+d+d")}*
+
+{.reveal(when="eqn-1")} At the *n*th term, we are adding [[`n-1`|`n`|`n+1`]]
+copies of _d_, so the general formula is
+
+{.ag-equation.reveal(when="blank-0")} `x_n = a + d × (n-1)`.
+
+::: column.grow
+
+For __{.m-green}geometric sequences__, we have to multiply _r_ at every step:
+
+{.ag-equation} `x_1 = a`
+
+{.ag-equation} `x_2 = a × r`
+
+{.ag-equation} `x_3 = a × r × r`
+
+{.ag-equation} `x_4 =` *{x-equation(solution="a×r×r×r")}*
+
+{.ag-equation.reveal(when="eqn-2")} `x_5 =` *{x-equation(solution="a×r×r×r×r")}*
+
+{.reveal(when="eqn-3")} At the *n*th term, we are multiplying [[`n-1`|`n`|`n+1`]]
+copies of _r_, so the general formula is
+
+{.ag-equation.reveal(when="blank-1")} `x_n = a × r^(n-1)`.
+
+:::
+
+---
+> id: arithmetic-geometric-explicit-1
+
+Here is a summary of all the definitions and formulas you’ve seen so far:
+
+::: column.grow
+::: .theorem.s-red
+
+An __{.m-red}arithmetic sequence__ has first term `a` and common difference `d`
+between consecutive terms.
+
+{.text-center} __Recursive formula__: `x_n = x_(n-1) + d`
+
+{.text-center} __Explicit formula__: `x_n = a + d × (n-1)`
+
+:::
+::: column.grow
+::: .theorem.s-green
+
+A __{.m-green}geometric sequence__ has first term `a` and common ratio `r`
+between consecutive terms.
+
+{.text-center} __Recursive formula__: `x_n = x_(n-1) × r`
+
+{.text-center} __Explicit formula__: `x_n = a × r^(n-1)`
+
+:::
+:::
+
+Now let’s have a look at some examples where we can use all this!
 
 ---
 > id: pay-it-forward
@@ -629,7 +707,7 @@ reach 19,683 new ones, and after 22 steps you would have reached more people
 than currently alive on Earth.
 
 This sequence of numbers has a special name: the __powers of 3__. As you can
-see, every term is actually just a different [power](gloss:power) of 3:
+see, every term is actually just a different [power](gloss:powers) of 3:
 
 {.text-center.s-orange} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
 _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
@@ -639,109 +717,101 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 ### Who wants to be a Millionaire?
 
-Two siblings, Anna and Thomas, are receiving pocket money from their parents.
-They can choose between two different options:
+{.todo} COMING SOON!
 
-* Thomas is receiving $1 in the first month, $2s in the second month, $3 in the
-  third month, and so on. Every month, he receives $1 more than in the previous
-  one.
-* Anna receives 1¢ in the first month, 2¢ in the second month
+    // Two siblings, Anna and Thomas, are receiving pocket money from their parents.
+    // They can choose between two different options:
 
----
-> id: millionaire-1
+    // * Thomas is receiving $1 in the first month, $2s in the second month, $3 in the
+    //   third month, and so on. Every month, he receives $1 more than in the previous
+    //   one.
+    // * Anna receives 1¢ in the first month, 2¢ in the second month
 
-    img.text-wrap(src="images/dishes.jpg" style="shape-outside: url(images/dishes.png)" width=280 height=276)
+    // img.text-wrap(src="images/dishes.jpg" style="shape-outside: url(images/dishes.png)" width=280 height=276)
 
-In order to make some additional pocket money, you decided to make a deal with
-your parents: for appropriate payment, you’ll do every possible chore around
-the house – washing the dishes, laundry, taking out the trash or walking the
-dog.
+    // In order to make some additional pocket money, you decided to make a deal with
+    // your parents: for appropriate payment, you’ll do every possible chore around
+    // the house – washing the dishes, laundry, taking out the trash or walking the
+    // dog.
 
-The payment system works like this: on the first day, you get 1 cent. On the
-second day, you get 2 cents – twice as much as before. On the next day you’ll
-get 4 cents. Every day, your payment doubles.
+    // The payment system works like this: on the first day, you get 1 cent. On the
+    // second day, you get 2 cents – twice as much as before. On the next day you’ll
+    // get 4 cents. Every day, your payment doubles.
 
-1¢ is not a lot of money – and neither are 2¢ or 4¢, especially
-considering how much work you’re doing. But the amount will slowly increase.
-How long do you think will it take until you’ve made $100? How long until
-you’ve made it to 1 Million?
+    // 1¢ is not a lot of money – and neither are 2¢ or 4¢, especially
+    // considering how much work you’re doing. But the amount will slowly increase.
+    // How long do you think will it take until you’ve made $100? How long until
+    // you’ve made it to 1 Million?
 
-{.todo} guess fields
+    // guess fields
 
----
-> id: millionaire-2
+    // Let’s try to calculate it mathematically! Just like before, your salary
+    // follows an exponential model, because it changes by a constant ratio every
+    // day (times 2). On day `x`, you’ll get `2^x` cents.
 
-Let’s try to calculate it mathematically! Just like before, your salary
-follows an exponential model, because it changes by a constant ratio every
-day (times 2). On day `x`, you’ll get `2^x` cents.
+    // | __day__ | __payment__  |
+    // | ------- | ------------ |
+    // | 1       | $ 0.01       |
+    // | 2       | $ 0.02       |
+    // | 3       | $ 0.04       |
+    // | 4       | $ [[0.08]]   |
+    // | 5       | $ [[0.16]]   |
+    // | 6       | $ [[0.32]]   |
+    // | 7       | $ [[0.64]]   |
+    // | 8       | $ 1.28       |
+    // | 9       | $ 2.56       |
+    // | 10      | $ 5.12       |
+    // | 11      | $ 10.24      |
+    // | 12      | $ [[20.48]]  |
+    // | 13      | $ [[40.96]]  |
+    // | 14      | $ [[81.92]]  |
+    // | 15      | $ [[163.84]] |
+    // | 16      | $ 327.68     |
+    // | 17      | $ 655.36     |
+    // | 18      | $ 1,310.72   |
 
-| __day__ | __payment__  |
-| ------- | ------------ |
-| 1       | $ 0.01       |
-| 2       | $ 0.02       |
-| 3       | $ 0.04       |
-| 4       | $ [[0.08]]   |
-| 5       | $ [[0.16]]   |
-| 6       | $ [[0.32]]   |
-| 7       | $ [[0.64]]   |
-| 8       | $ 1.28       |
-| 9       | $ 2.56       |
-| 10      | $ 5.12       |
-| 11      | $ 10.24      |
-| 12      | $ [[20.48]]  |
-| 13      | $ [[40.96]]  |
-| 14      | $ [[81.92]]  |
-| 15      | $ [[163.84]] |
-| 16      | $ 327.68     |
-| 17      | $ 655.36     |
-| 18      | $ 1,310.72   |
+    // One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
+    // gets ${b}{b|1|1,10,1}¢ every day.
 
----
-> id: millionaire-3
+    // As you can see, your daily payment start low but then grow rapidly. After 15
+    // days you’ve reached $100. After less than a month you’re making more than 1
+    // million per day, and after 2 months you’d have made more than _all the money
+    // on Earth_. :1f4b0: :1f37e: :1f911:
 
-One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
-gets ${b}{b|1|1,10,1}¢ every day.
-
----
-> id: millionaire-4
-
-{.todo} As you can see, your daily payment start low but then grow rapidly. After 15
-days you’ve reached $100. After less than a month you’re making more than 1
-million per day, and after 2 months you’d have made more than _all the money
-on Earth_. :1f4b0: :1f37e: :1f911:
-
-{.todo} Exponential growth can be truly XXXXX. Even if they start really slowly, they
-will eventually speed up a lot, and overtake any possible linear model. Most
-importantly, us humans tend to be very bad at estimating just _how fast_
-exponential models can grow. Or are we?
+    // Exponential growth can be truly XXXXX. Even if they start really slowly, they
+    // will eventually speed up a lot, and overtake any possible linear model. Most
+    // importantly, us humans tend to be very bad at estimating just _how fast_
+    // exponential models can grow. Or are we?
 
 ---
 > id: chessboard
 
-### The Chessboard
+### The Chessboard Problem
 
-{.todo} The game of chess was invented in India, many hundreds of years ago. According
-to legend, the Indian king loved the game so much that he invited its inventor
-to his palace and promised him any present they ask for.
+{.todo} COMING SOON!
 
-{.todo} The inventor had just one simple request: rice. He wanted the king to place
-one grain of rice on the first square of the chess board, two grains on the
-second, four grains of the third, eight grains on the fourth, and so on. Every
-new square should have twice as many grains of rice as the previous one.
+    // The game of chess was invented in India, many hundreds of years ago. According
+    // to legend, the Indian king loved the game so much that he invited its inventor
+    // to his palace and promised him any present they ask for.
 
-{.todo} The king, who was very wealthy, agreed immediately and asked his servants to
-fetch bags of rice. A chessboard has 64 squares, so how many grains of rice
-does the king need in total?
+    // The inventor had just one simple request: rice. He wanted the king to place
+    // one grain of rice on the first square of the chess board, two grains on the
+    // second, four grains of the third, eight grains on the fourth, and so on. Every
+    // new square should have twice as many grains of rice as the previous one.
 
-{.todo} You might have noticed that the number of grains of rice form a geometric sequence.
-The first term is [[1]], and the common ratio is [[2]]. Using the results from
-above, we can calculate how many grains of rice there will be on the last square:
+    // The king, who was very wealthy, agreed immediately and asked his servants to
+    // fetch bags of rice. A chessboard has 64 squares, so how many grains of rice
+    // does the king need in total?
 
-{.todo.text-center} `a_64 = 1 * 2^63 =` 9 223 372 036 854 775 808
+    // You might have noticed that the number of grains of rice form a geometric sequence.
+    // The first term is [[1]], and the common ratio is [[2]]. Using the results from
+    // above, we can calculate how many grains of rice there will be on the last square:
 
-{.todo} That’s 9 billion billion grains of rice! In total, they would weight about
-100 billion tonnes – or 100 times the weight of Mount Everest, the tallest
-mountain on Earth.
+    // {.text-center} `a_64 = 1 * 2^63 =` 9 223 372 036 854 775 808
+
+    // That’s 9 billion billion grains of rice! In total, they would weight about
+    // 100 billion tonnes – or 100 times the weight of Mount Everest, the tallest
+    // mountain on Earth.
 
 
 
@@ -819,6 +889,7 @@ playing billiard: it’s because they are both triangle numbers!
 
 ---
 > id: triangle-proof
+> class: todo
 
 Unfortunately, the recursive formula is not very helpful if we want to find the
 100th or 5000th triangle number, without first calculating all the previous
@@ -827,25 +898,25 @@ find an explicit formula for the triangle numbers:
 
 ::: column(width=300)
 
-{.todo} Animated diagram
-
     svg(width=300 height=300)
       g
 
 ::: column.grow
 Let’s start with a triangle of size ${x}{x|5|1,10,1}.
 
-First, we need to make a second copy of the triangle.
+{.todo} COMING SOON: Animated Proof for the Triangle Number Formula
 
-Now we can rearrange the two triangles, to fit together in a rectangle.
+    // First, we need to make a second copy of the triangle.
 
-The size of the rectangle is ${x} × ${x + 1}, so it must have an area of
-${x * (x + 1)}
+    // Now we can rearrange the two triangles, to fit together in a rectangle.
 
-Since the rectangle is twice as large as the original triangle, we know that
-the ${n}th triangle number must be ${x*(x+1)/2}.
+    // The size of the rectangle is ${x} × ${x + 1}, so it must have an area of
+    // ${x * (x + 1)}
 
-In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
+    // Since the rectangle is twice as large as the original triangle, we know that
+    // the ${n}th triangle number must be ${x*(x+1)/2}.
+
+    // In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
 :::
 
 ---
@@ -1533,7 +1604,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 Unfortunately, prime numbers don’t follow a simple pattern or recursive
 formula. Sometimes they appear directly next to each other (these are called
-[twin primes](gloss:twin-prime)), and sometimes there are huge gaps between
+[twin primes](gloss:twin-primes)), and sometimes there are huge gaps between
 them. They seem to be distributed almost randomly!
 
 Prime numbers also don’t have a simple geometric representation like triangle or
@@ -2140,6 +2211,7 @@ completely different methods, and then see how they are related.
 
 
 --------------------------------------------------------------------------------
+
 
 
 ## Limits and Convergence
