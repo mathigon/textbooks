@@ -161,7 +161,7 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 ---
 > id: recursive
 
-In mathematics, we can describe this pattern using a [formula](gloss:formula):
+We can also describe this pattern using a special [formula](gloss:formula):
 
     p.text-center.s-orange
       span.n.md `x_n`
@@ -178,10 +178,10 @@ formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
 ---
 > id: recursive-1
 
-A formula that expresses `x_n` in terms of previous terms in the sequence is
-called a [__recursive formula__](gloss:sequence-recursive). As long as you know
-the [[first term|last term|second term]] in the sequence, you can calculate all
-the following ones.
+A formula that expresses `x_n` as a function of previous terms in the sequence
+is called a [__recursive formula__](gloss:sequence-recursive). As long as you
+know the [[first term|last term|second term]] in the sequence, you can calculate
+all the following ones.
 
 ---
 > id: squares
@@ -220,10 +220,10 @@ Every term is formed by increasingly large squares:
 ---
 > id: square-1
 
-For the triangle numbers we found a recursive formula that tells you the next
-term of the sequence in terms of its previous terms. For square numbers we can
-do even better – an equation that tells you the *n*th term directly, without
-first having to calculate all the previous ones:
+For the triangle numbers we found a recursive formula that tells you the _next_
+term of the sequence as a function of of its _previous_ terms. For square
+numbers we can do even better: an equation that tells you the *n*th term
+directly, without first having to calculate all the previous ones:
 
 {.text-center.s-purple} *{.n}`x_n`* = _{x-equation(solution="n^2")}_
 
@@ -231,8 +231,8 @@ first having to calculate all the previous ones:
 > id: explicit
 
 Equations like this are called [__explicit formulas__](gloss:sequence-explicit).
-In this case we can use it, for example, to calculate that the 13th square
-number is [[169]], without first finding the previous 12 square numbers.
+We can use it, for example, to calculate that the 13th square number is [[169]],
+without first finding the previous 12 square numbers.
 
 ---
 > id: definitions
@@ -242,14 +242,14 @@ number is [[169]], without first finding the previous 12 square numbers.
 Let’s summarise all the definitions we have seen so far:
 
 ::: .theorem
-A [__sequence__](gloss:sequence) is a progression of numbers, geometric shapes
-or other objects, that follow a specific pattern. The individual items in the
-sequence are called [__terms__](gloss:sequence-term), and represented by
-variables like `x_n`.
+A [__sequence__](gloss:sequence) is a list of numbers, geometric shapes or other
+objects, that follow a specific pattern. The individual items in the sequence
+are called [__terms__](gloss:sequence-term), and represented by variables like
+`x_n`.
 
 A [__recursive formula__](gloss:sequence-recursive) for a sequence tells you the
 value of the *n*th term as a function of [[its previous terms|the first term]].
-You always have to specify the first term(s), too.
+You also have to specify the first term(s).
 
 An [__explicit formula__](gloss:sequence-explicit) for a sequence tells you the
 value of the *n*th term as a function of [[just _n_|the previous term]],
@@ -264,9 +264,9 @@ without referring to other terms in the sequence.
 In the following sections you will learn about many different mathematical
 sequences, surprising patterns, and unexpected applications.
 
-First, though, let’s talk about something completely different: __action
-sequence photography__. A photographer takes many shots in quick succession, and
-then merges them into a single image:
+First, though, let’s look at something completely different: __action sequence
+photography__. A photographer takes many shots in quick succession, and then
+merges them into a single image:
 
     figure: x-media(src="images/action-1.jpg" width=640 height=320)
 
@@ -278,7 +278,7 @@ Between consecutive steps, the skier is both translated and
 ---
 > id: action-sequence-1
 
-Here are a few more examples of action sequence photography, for your enjoyment:
+Here are a few more examples of action sequence photography for your enjoyment:
 
 ::: column(width=320 parent="padded-thin")
 
@@ -321,8 +321,8 @@ Here are a few more examples of action sequence photography, for your enjoyment:
 
 In 1683, the astronomer [Edmond Halley](bio:halley) observed an unusual
 phenomenon: a glowing white object with a long tail that moved across the night
-sky. It was a __comet__, a small, icy rock that is flying through space and
-while leaving behind a trail of dust and ice.
+sky. It was a __comet__, a small, icy rock that is flying through space, while
+leaving behind a trail of dust and ice.
 
 Halley remembered that other astronomers had observed similar comets much
 earlier: one in 1530 and another in 1606. Notice that the gap between these
@@ -339,15 +339,14 @@ observations is both times the same: [[76]] years.
 > id: halley-1
 
 Halley concluded that all three observations were in fact of the same comet –
-which is now called Halley’s comet. It is orbiting around the sun and passes by
+which is now called _Halley’s comet_. It is orbiting around the sun and passes
 Earth approximately every 76 years. He also predicted when the comet would be
 visible next:
 
 {.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
 _{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
 _{.n}[[1758]]*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
-_{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_,
-_{.n}[[2062]]*{span.arrow}+76*_, …
+_{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
 ---
 > id: halley-2
@@ -400,14 +399,14 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 If you compare both these problems, you might notice that there are many
 similarities: the sequence of Halley’s comet has the same
-[[difference|ratio|product]] between consecutive terms while the
+[[difference|ratio|product]] between consecutive terms, while the
 sequence of tennis ball bounces has the same [[ratio|difference|product]]
 between consecutive terms.
 
 ---
 > id: arithmetic-geometric-1
 
-All sequences with these properties have a special name:
+Sequences with these properties have a special name:
 
 ::: column.grow
 ::: .theorem.s-red
@@ -495,9 +494,9 @@ ratio [[0.5]]._
 > id: arithmetic-geometric-graph
 
 To define an arithmetic or geometric sequence, we have to know not just the
-common difference or ratio, but also the initial value `a`. Here you can
-generate your own sequences and plot their values on a graph, by changing the
-values of `a`, _d_ and _r_. Can you find any patterns?
+common difference or ratio, but also the initial value (called `a`). Here you
+can generate your own sequences and plot their values on a graph, by changing
+the values of `a`, _d_ and _r_. Can you find any patterns?
 
 ::: column.ag-chart(width=320)
 
@@ -532,16 +531,17 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="v1 v2 v3 v4")} Notice how all arithmetic sequences all look very
-similar: if the difference is positive, they steadily [[increase|decrease]], and
-if the difference is negative, they steadily [[decrease|increase]].
+{.reveal(when="var-0 var-1 var-2 var-3")} Notice how all __{.m-red}arithmetic
+sequences__ look very similar: if the difference is positive, they steadily
+[[increase|decrease]], and if the difference is negative, they steadily
+[[decrease|increase]].
 
 {.reveal(when="blank-0 blank-1")} Geometric sequences, on the other hand, can
 behave completely differently based on the values of `a` and *r*:
 
 ::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-If _{span.var-action}`r > 1`_, the term will [[quickly get bigger|quickly
+If _{span.var-action}`r > 1`_, the terms will [[quickly get bigger|quickly
 decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
 Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
 
@@ -559,8 +559,7 @@ negative, while their [[absolute value|inverse|difference]] gets bigger.
 :::
 
 {.reveal(when="blank-4 blank-5")} You’ll learn more about convergence and
-divergence in the [last section](/course/sequences/limits-and-convergence) of
-this course.
+divergence in the [last section](/course/sequences/convergence) of this course.
 
 
 ---
@@ -678,8 +677,8 @@ explains his idea for making the world a better place:
 ---
 > id: pay-it-forward-1
 
-The essence of this idea is that, if everyone “pays it forward”, a single person
-can affect a huge impact on the world:
+The essence of Trevor’s idea is that, if everyone “pays it forward”, a single
+person can have a huge impact on the world:
 
     figure: img(src="images/pay-it-forward.png" width=700 height=220)
 
@@ -830,17 +829,17 @@ name was developed hundreds of years ago, when mathematicians thought about
 _multiplication_ and _square roots_ in a much more geometric way.
 
 However, there are many other sequences that _are_ based on certain geometric
-shapes – some of which you already saw in the [Introduction](/course/sequences/introduction).
-These sequences are often called __Figurate numbers__, and in this section we
-will ave a closer look at some of them.
+shapes – some of which you already saw in the [introduction](/course/sequences/introduction).
+These sequences are often called [__figurate numbers__](gloss:figurate-numbers),
+and in this section we will ave a closer look at some of them.
 
 ---
 > id: triangle-numbers
 
 ### Triangle Numbers
 
-The triangle numbers are generated by creating triangles of progressively larger
-size:
+The __triangle numbers__ are generated by creating triangles of progressively
+larger size:
 
 ::: column(width=24 parent="padded-thin")
 {.text-center} __1__
@@ -875,7 +874,7 @@ You’ve already seen the recursive formula for triangle numbers:
 > id: billiard-pool
 
 It is no coincidence that there are always 10 pins when bowling or 15 balls when
-playing billiard: it’s because they are both triangle numbers!
+playing billiard: they are both triangle numbers!
 
 ::: column(width=320)
 
@@ -893,7 +892,7 @@ playing billiard: it’s because they are both triangle numbers!
 Unfortunately, the recursive formula is not very helpful if we want to find the
 100th or 5000th triangle number, without first calculating all the previous
 ones. But, like we did with arithmetic and geometric sequences, we can try to
-find an explicit formula for the triangle numbers:
+find an explicit formula for the triangle numbers.
 
 ::: column(width=300)
 
@@ -921,9 +920,9 @@ Let’s start with a triangle of size ${x}{x|5|1,10,1}.
 ---
 > id: triangle-sums
 
-Triangle numbers seem to pop up everywhere in Mathematics, and you’ll see them
+Triangle numbers seem to pop up everywhere in mathematics, and you’ll see them
 again throughout this course. One particularly interesting fact is that _any_
-integer can be written as the sum of at most three triangle numbers:
+whole number can be written as the sum of at most three triangle numbers:
 
 ::: column(width=140 parent="triangle-sum")
 {.text-center} ${n}{n|42|1,100,1}
@@ -954,9 +953,9 @@ integer can be written as the sum of at most three triangle numbers:
 
 :::
 
-{.reveal(when="slide")} The fact that this works for _all_ integers was first
-proven in 1796 by the mathematician [Carl Friendrich Gauss](bio:gauss) – at the
-age of 19!
+{.reveal(when="slide")} The fact that this works for _all_ whole numbers was
+first proven in 1796 by the German mathematician [Carl Friendrich
+Gauss](bio:gauss) – at the age of 19!
 
 ---
 > id: triangle-investigate
@@ -965,12 +964,14 @@ age of 19!
     .box-title: h3 Problem Solving
 ::: .box-body
 
-What is the sum of the first 100 integers? In other words, what is the value of
+What is the sum of the first 100 positive [integers](gloss:integer)? In other
+words, what is the value of
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
-Rather than manually adding up everything, can you use the triangle numbers to
-help you? What about the sum of the first 1000 integers?
+Rather than manually adding up everything, can you use the [triangle
+numbers](gloss:triangle-numbers) to help you? What about the sum of the first
+1000 positive integers?
 
 :::
 :::
@@ -992,7 +993,7 @@ _{.n}[[49]]*{span.arrow.reveal(when="blank-4")}+13*_,
 _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} You can calculate the numbers
-is this sequence by squaring every integer (`1^2`, `2^2`, `3^2`, …), but it
+is this sequence by squaring every whole number (`1^2`, `2^2`, `3^2`, …), but it
 turns out that there is another pattern: the differences between consecutive
 square numbers are the [[odd numbers|triangle numbers|integers]] in increasing
 order!
@@ -1003,7 +1004,7 @@ order!
 ::: column.grow
 
 The reason for this pattern becomes apparent if we actually draw a square. Every
-step adds one row and onw column. The size of these “corners” starts at 1 and
+step adds one row and one column. The size of these “corners” starts at 1 and
 increases by 2 at every step – thereby forming the sequence of odd numbers.
 
 This also means that the *n*th square number is just the sum of the first *n*
@@ -1021,10 +1022,10 @@ odd numbers! For example, the sum of the first 6 odd numbers is
 ---
 > id: square-numbers-2
 
-In addition, every square number is also the sum of two consecutive triangle
-numbers. For example, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}.
-Can you see how we can split every square along its diagonal, into two
-triangles?
+In addition, every square number is also the sum of two consecutive [triangle
+numbers](gloss:triangle-numbers). For example, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2}
++ ${n×(n-1)/2}. Can you see how we can split every square along its diagonal,
+into two triangles?
 
 ---
 > id: polygon-numbers
@@ -1045,7 +1046,7 @@ For example, if we use polygons with ${k}{k|5|3,10,1} sides, we get the sequence
 of __${polygonName(k)} numbers__.
 
 Can you find recursive and explicit formulas for the *n*th polygonal number
-that as _k_ sides? And do you notice any other interesting patterns for larger
+that has _k_ sides? And do you notice any other interesting patterns for larger
 polygons?
 
 :::
@@ -1055,7 +1056,7 @@ polygons?
 
 ### Tetrahedral and Cubic Numbers
 
-Of course, we don’t have to limit ourselves to 2-dimensional shapes and
+Of course, we also don’t have to limit ourselves to 2-dimensional shapes and
 patterns. We could stack spheres to form small pyramids, just like how you would
 stack oranges in a supermarket:
 
@@ -1089,8 +1090,8 @@ stack oranges in a supermarket:
 ---
 > id: tetrahedral-1
 
-Mathematicians often call these pyramids [__Tetrahedra__](gloss:tetrahedron),
-and the resulting sequence [__Tetrahedral numbers__](gloss:tetrahedral-numbers).
+Mathematicians often call these pyramids [__tetrahedra__](gloss:tetrahedron),
+and the resulting sequence [__tetrahedral numbers__](gloss:tetrahedral-numbers).
 
 {.todo} COMING SOON: More on Tetrahedral numbers, Cubic numbers, and the 12
 days of Christmas.
@@ -1108,8 +1109,8 @@ days of Christmas.
 
 Imagine that you’ve received a pair of baby rabbits, one male and one female.
 They are very special rabbits, because they never die, and the female one gives
-birth to a new pair of rabbits exactly once every month (always one male and one
-female.)
+birth to a new pair of rabbits exactly once every month (always another pair of
+male and female).
 
     x-slideshow
       .stage.rabbits(slot="stage")
@@ -1168,11 +1169,11 @@ female.)
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
 
-      .legend(slot="legend") In the first month, the rabbits are very small and can’t do much, but they grow very quickly.
+      .legend(slot="legend") In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
       .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
       .legend(slot="legend") In the next month, your pair of rabbits will give birth to another couple. Meanwhile, the first pair of kids have grown up. You now have three pairs in total.
-      .legend(slot="legend") In the fifth month, your original pair of rabbits will give birth to a new pair of kids. At the same time, their first pair of kids is now old enough to give birth to grandkids. You now have five pairs of rabbits.
+      .legend(slot="legend") In the fifth month, your original pair of rabbits will give birth to a new pair. At the same time, their first pair of kids is now old enough to give birth to grandchildren. You now have five pairs of rabbits.
       .legend(slot="legend") In the sixth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
 
 ---
@@ -1249,8 +1250,8 @@ life. Rabbits don’t have exactly one male and one female offspring every singl
 month, and we haven’t accounted for rabbits dying eventually.
 
 But it turns out that there are many other places in nature where Fibonacci
-numbers _do_ appear: for example are the spirals in plants. Can you count how
-many spirals there are in each direction?
+numbers _do_ appear: for example the spirals in plants. Can you count how many
+spirals there are in each direction?
 
 ::: column(width=320)
 
@@ -1289,7 +1290,7 @@ of petals in a flower or the number of leaves on a stem. Very often you’ll fin
 that they are Fibonacci numbers!
 
 Of course, this is not just a coincidence. There is an important reason why
-nature likes the Fibonacci sequence, which you’ll learn more about later…
+nature likes the Fibonacci sequence, which you’ll learn more about later.
 
 ---
 > id: bees
@@ -1329,15 +1330,16 @@ into queens and will fly away to start a new hive.
 
 ### The Golden Ratio
 
-Just like the triangle and square numbers, and other sequences we’ve seen
-before, the Fibonacci numbers can be visualised using a geometric pattern:
+Just like the [triangle](gloss:triangle-numbers) and [square
+numbers](gloss:square-numbers), and other sequences we’ve seen before, the
+Fibonacci sequence can be visualised using a geometric pattern:
 
     x-slideshow.golden-spiral
       .stage(slot="stage"): include svg/spiral.svg
       .legend(slot="legend") We start with two small squares of size 1.
-      .legend(slot="legend") Next, we add a new square of size 2, to form a large rectangle.
+      .legend(slot="legend") Next, we add a new square of size 2, to form a larger rectangle.
       .legend(slot="legend") Next, we add a square of size 3, to form an even larger rectangle.
-      .legend(slot="legend") The next square has size 5. Can you see that we’re recreating the Fibonacci sequence?
+      .legend(slot="legend") The next square has size 5. Can you see that we’re recreating the Fibonacci numbers?
       .legend(slot="legend") If we continue adding squares, they will have size 8, 13, 21, and so on.
       .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
 
@@ -1403,7 +1405,7 @@ two examples:
     x-gesture(target=".golden-art")
 
 {.caption} The Greek sculptor Phidias is said to have used the Golden ratio
-when designing the _Parthenon_ in Athens. The first letter of his name, φ, is
+when designing the _Parthenon_ in Athens. The first letter of his name, `φ`, is
 the symbol we now use for the golden ratio.
 
 ::: column(width=320)
@@ -1413,8 +1415,8 @@ the symbol we now use for the golden ratio.
       img(src="images/dali.png" width=320 height=198)
 
 {.caption} _The Sacrament of the Last Supper_, by Spanish artist Salvador Dalí,
-is one of many paintings in the Golden ratio. In the background, you can also
-see a [Dodecahedron](gloss:dodecahedron).
+is one of many paintings in the golden ratio. In the background, you can also
+see a large [dodecahedron](gloss:dodecahedron).
 
 :::
 
@@ -1436,8 +1438,8 @@ some other numbers you’ve seen before.
 
 ::: column.grow
 
-The golden ratio also explains why Fibonacci numbers appear in nature, like the
-sunflower and pine cone you saw at the beginning of this chapter.
+The golden ratio explains why Fibonacci numbers appear in nature, like the
+sunflower and pine cone you saw at the beginning of this section.
 
 Both these plants grow outwards from their center (a part of the plant called
 the _meristem_). As new seeds, leaves or petals are added, they push the
@@ -1465,7 +1467,7 @@ two consecutive leafs is always the same.
 
 It is important for flowers to pick a suitable angle: the leaves or seeds have
 to be approximately equally spaced so that they get the largest amount of
-sunlight and nutrients. In the diagram below you can explore what a sunflower
+sunlight and nutrients. In the diagram below, you can explore what a sunflower
 might look like with different angles between its seeds:
 
     // Notice how even tiny changes to the angle can produce a completely different arrangement:
@@ -1497,10 +1499,9 @@ let’s try [irrational numbers](gloss:irrational-numbers)!
 
 {div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi).
 But if the angle between seeds is _{span.fib-action(data-value=0.31831)}`1/pi`_
-of 360°, you still seem to get arms: 22 of them. This is because the fraction
-`22/7 = 3.1429…` is actually a pretty good approximation for `pi`. What we
-really need is an irrational number that _can’t_ be closely approximated by a
-simple fraction.
+of 360°, we still seem to get arms: 22 of them. That’s because the fraction
+`22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really need is
+an irrational number that _can’t_ be closely approximated by a simple fraction.
 
 {div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio)
 is just that: the “most irrational” of all irrational numbers. If the angle
@@ -1516,18 +1517,18 @@ around the world are using.
 
 ::: column(width=240)
 
-    x-media(src="images/flowers.jpg" width=240 heigt=400)
+    x-media(src="images/flowers.jpg" width=240 height=400)
 
 ::: column.grow
 
 You might remember from above that the ratios of consecutive Fibonacci numbers
 get closer and closer to te golden ratio – and that’s why, if you count the
-number of spirals in a plant, you will often get a Fibonacci number.
+number of spirals in a plant, you will often find a Fibonacci number.
 
 It is important to remember that nature doesn’t know about Fibonacci numbers.
 Nature also can’t solve equations to calculate the golden ratio – but over the
 course of millions of years, plants had plenty of time to try out different
-angles, and to discover the best one.
+angles and discover the best one.
 
 Plants and animals always want grow in the most efficient way, and that is why
 nature is full of regular, mathematical patterns.
@@ -1545,9 +1546,9 @@ find:
 
 {.text-center} `x_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
 
-We could also pick different starting points for the Fibonacci numbers (i.e. not
-two 1s). The resulting sequences are called __Lucas numbers__ and have many
-similar properties.
+We could also try picking different starting points for the Fibonacci numbers
+(i.e. not two 1s). The resulting sequences are called __Lucas numbers__ and have
+many similar properties.
 
 {.text-center.s-purple.s-small}
 ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
@@ -1565,8 +1566,8 @@ numbers. Here are a few examples, which you can try yourself:
 
 __1. Fibonacci Divisibility__
 
-(a) Which Fibonacci numbers are even? Is there a pattern to how they are
-positioned in the sequence? Can you explain why?
+(a) Which Fibonacci numbers are even? Is there a pattern to where they are
+positioned along the sequence? Can you explain why?
 
 (b) Which Fibonacci numbers are divisible by 3 (or divisible by 4)? What do you
 notice?
@@ -1611,10 +1612,11 @@ a pattern? And how is this related to the Fibonacci numbers?
 > id: special-intro
 
 
-In addition to [arithmetic](gloss:arithmetic-sequence) and [geometric
-sequences](gloss:geometric-sequence), [Fibonacci numbers](gloss:fibonacci-numbers)
-and [figurate numbers](gloss:figurate-numbers), there are countless interesting
-sequences that don’t follow a certain, regular pattern.
+In addition to [arithmetic](gloss:arithmetic-sequence) and
+[geometric](gloss:geometric-sequence) sequences, [Fibonacci
+numbers](gloss:fibonacci-numbers) and [figurate numbers](gloss:figurate-numbers),
+there are countless interesting sequences that don’t follow a similar, regular
+pattern.
 
 ---
 > id: primes
@@ -1643,8 +1645,9 @@ formula. Sometimes they appear directly next to each other (these are called
 [twin primes](gloss:twin-primes)), and sometimes there are huge gaps between
 them. They seem to be distributed almost randomly!
 
-Prime numbers also don’t have a simple geometric representation like triangle or
-square numbers, but with a bit of work we can reveal interesting patterns:
+Prime numbers also don’t have a simple geometric representation like
+[triangle](gloss:triangle-numbers) or [square numbers](gloss:square-numbers),
+but with a bit of work we can reveal interesting patterns:
 
 ::: column(width=320)
 
@@ -1657,8 +1660,8 @@ square numbers, but with a bit of work we can reveal interesting patterns:
         - i += 1
     x-gesture(target=".eratosthenes .l-red")
 
-{.caption} If we cross out all multiples of small integers, all the remaining
-ones must be prime. This method is called the [__Sieve of
+{.caption} If we cross out all multiples of small integers, the remaining
+numbers must all be prime. This method is called the [__Sieve of
 Eratosthenes__](gloss:sieve-eratosthenes).
 
 ::: column(width=320)
@@ -1734,7 +1737,7 @@ Only one number in the list above has a sum of factors that is _equal_ to itself
 > id: perfect-2
 
 The next perfect number is 28, because if we add up all its factors we get
-`1 + 2 + 4 + 7 + 14 = 28`. After that, they become much rarer:
+`1 + 2 + 4 + 7 + 14 = 28`. After that, perfect numbers become much rarer:
 
 {.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
 _{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}858,986,9056_,
@@ -1812,15 +1815,15 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 > id: hailstone-2
 
 It seems like the length of the sequence varies a lot, but it will always end up
-in a 4, 2, 1 cycle – no matter what first number we pick. We can visualise the
-terms of the sequence in a chart:
+in a 4, 2, 1 cycle – no matter what first number we pick. We can even visualise
+the terms of the sequence in a chart:
 
     x-coordinate-system(margins="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Notice how some starting points end very quickly,
 while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
-than one hundreds steps before they eventually reach the 4, 2, 1 cycle.
+than one hundreds steps before they reach the 4, 2, 1 cycle.
 
 ---
 > id: hailstone-3
@@ -1829,7 +1832,7 @@ than one hundreds steps before they eventually reach the 4, 2, 1 cycle.
 
 All sequences that follow this recursive formula are called [__Hailstone
 Sequences__](gloss:hailstone-sequence), because they seem to move randomly up
-and down before hitting the 4, 2, 1 cycle – just like hailstones that move up
+and down before reaching the 4, 2, 1 cycle – just like hailstones that move up
 and down in a cloud before crashing to Earth.
 
 In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
@@ -1957,14 +1960,14 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 > id: pascal-intro
 
 Below you can see a number pyramid that is created using a simple pattern: it
-starts with a single “1” in first top, and every following cells is the sum of
+starts with a single “1” at the top, and every following cells is the sum of
 the two cells directly above. Hover over some of the cells to see how they are
 calculated, and then fill in the missing ones:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
 
-    .pascal-grid
+    .overflow-wrap: .pascal-grid(style="width: 560px")
       - var i = 0;
       while i < 13
         - var j = 0
@@ -1987,10 +1990,10 @@ cells.
 ---
 > id: pascal-triangle
 
-The triangle is called __Pascal’s triangle__, named after the French
-mathematician [Blaise Pascal](bio:pascal). He was one of the first European
-mathematicians to investigate its patterns and properties, but it was known to
-other civilisations, many centuries earlier:
+The triangle is called [__Pascal’s triangle__](gloss:pascals-triangle), named
+after the French mathematician [Blaise Pascal](bio:pascal). He was one of the
+first European mathematicians to investigate its patterns and properties, but it
+was known to other civilisations many centuries earlier:
 
 ::: column(width=200)
 
@@ -2011,7 +2014,7 @@ named after the Persian poet and mathematician [Omar Khayyám](bio:khayyam).
     x-media(src="images/pascal-3.jpg" width=200 height=280)
 
 {.caption} In China, the mathematician Jia Xian also discovered the triangle.
-It was named after his successor, as __“Yang Hui’s triangle”__ (杨辉三角).
+It was named after his successor, __“Yang Hui’s triangle”__ (杨辉三角).
 
 :::
 
@@ -2027,13 +2030,13 @@ _{button.next-step} Continue_
 
 ### Finding Sequences
 
-In the previous sections, you have learned about many different sequences. It
+In the previous sections you saw countless different mathematical sequences. It
 turns out that many of them can also be found in Pascal’s triangle:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
 
-    .pascal-grid.sums
+    .overflow-wrap: .pascal-grid.sums(style="width: 760px")
       - var i = 0;
       while i < 17
         - var j = 0
@@ -2068,12 +2071,12 @@ The numbers in the fourth diagonal are the [[tetrahedral numbers|cubic
 numbers|powers of 2]].
 ::: tab
 #### {.btn.blue} _{span.check(when="blank-4")}_
-If you add up all the numbers in a row, their sums for another sequence: the
+If you add up all the numbers in a row, their sums form another sequence: the
 [[powers of two|perfect numbers|prime numbers]].
 ::: tab
 #### {.btn.teal} _{span.check(when="blank-5")}_
-In every row that starts with a prime number in its second cell, all following
-numbers are [[multiples|factors|inverses]] of that prime.
+In every row that has a prime number in its second cell, all following numbers
+are [[multiples|factors|inverses]] of that prime.
 ::: tab
 #### {.btn.green} _{span.check(when="blank-6")}_
 The diagram above highlights the “shallow” diagonals in different colours. If
@@ -2100,14 +2103,14 @@ There are even a few that appear six times: you can see both [120](-> .s120) and
 [3003](-> .s3003) four times in the triangle above, and they’ll appear two more
 times each in rows 120 and 3003.
 
-Since 3003 is a triangle number, it actually appears two more times in the third
-diagonals of the triangle – that makes eight occurrences in total.
+Since 3003 is a triangle number, it actually appears two more times in the
+_third_ diagonals of the triangle – that makes eight occurrences in total.
 
-It is unknown if there are other numbers that appear eight times in the
-triangle, or if there are numbers that appear more than eight times. The
-American mathematician [David Singmaster](bio:singmaster) hypothesised that
-there is a fixed limed on how often numbers can appear in Pascal’s triangle –
-but it hasn’t been proven yet.
+It is unknown if there are any other numbers that appear eight times in the
+triangle, or if there numbers that appear more than eight times. The American
+mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
+fixed limed on how often numbers can appear in Pascal’s triangle – but it hasn’t
+been proven yet.
 
 ---
 > id: pascal-modular
@@ -2116,12 +2119,12 @@ but it hasn’t been proven yet.
 ### Divisibility
 
 Some patterns in Pascal’s triangle are not quite as easy to detect. In the
-diagram below, highlight all the cells which are even:
+diagram below, highlight all the cells that are even:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
 
-    .pascal-grid#pascal-select
+    .overflow-wrap: .pascal-grid#pascal-select(style="width: 340px")
       - var i = 0;
       while i < 8
         - var j = 0
@@ -2146,7 +2149,7 @@ by other numbers?
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
 
-    .pascal-grid.small
+    .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25
         - var j = 0
@@ -2169,14 +2172,14 @@ by other numbers?
 > id: pascal-modular-2
 
 ::: column.grow
-Wow! The coloured cells always appear in triangles (except as single cells,
-which could be seen as triangles of size 1).
+Wow! The coloured cells always appear in [[triangles|squares|pairs]] (except for
+a few single cells, which could be seen as triangles of size 1).
 
 If we continue the pattern of cells divisible by 2, we get one that is very
-similar to the __Sierpinski triangle__ which you can see on the right. Shapes
-like this, which consist of a simple pattern that seems to continue forever
-while getting smaller and smaller, are called [__Fractals__](gloss:fractal).
-You will learn more about them in the future…
+similar to the __Sierpinski triangle__ on the right. Shapes like this, which
+consist of a simple pattern that seems to continue forever while getting smaller
+and smaller, are called [__Fractals__](gloss:fractal). You will learn more about
+them in the future…
 
 ::: column.width(280)
 

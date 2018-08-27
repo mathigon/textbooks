@@ -184,7 +184,9 @@ square-numbers:
 
 tetrahedral-numbers:
   title: Tetrahedral Numbers
-  text: A __tetrahedral number__
+  text: A __tetrahedral number__ is a number that is created by stacking
+    multiple spheres into a _tetrahedron_. The first tetrahedral numbers are
+    1, 4, 10, 20, 35, …
 
 fibonacci-numbers:
   title: Fibonacci Numbers

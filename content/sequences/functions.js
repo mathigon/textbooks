@@ -138,7 +138,6 @@ export function arithmeticGeometricGraph($step) {
   $step.model.watch((m) => {
     const p1 = arithmetic(m.a, m.d, 10).map((p, i) => new Point(1 + i, p));
     const p2 = geometric(m.b, m.r, 10).map((p, i) => new Point(1 + i, p));
-
     $plots[0].setSeries(p1);
     $plots[1].setSeries(p2);
   });
