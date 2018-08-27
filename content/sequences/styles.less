@@ -65,6 +65,9 @@
   .s-green & { background: @green; }
   .s-green &:before, .s-green &:after { border-bottom-color: @green; }
 
+  .s-yellow & { background: @yellow; }
+  .s-yellow &:before, .s-yellow &:after { border-bottom-color: @yellow; }
+
   .s-vertical & { width: auto; padding: 3px 8px; margin: 5px 8px; }
   .s-vertical &:before, .s-vertical &:after { border-width: 0 16px 8px 16px; transform-origin: top left; }
   .s-vertical &:before { top: 32px; left: -8px; transform: rotate(-90deg); }
@@ -83,11 +86,12 @@
   .with-arrows & { margin-top: 32px; }
   .s-large.with-arrows & { margin-top: 40px; }
 
-  x-blank-input { display: block; margin: 1px 3px; }
+  x-blank-input { display: block; margin: 1px 3px; max-width: 120px; }
   x-blank-input .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px fade(white, 75%); }
   x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
   x-blank-input.done, x-blank-input.done .target { display: inline; line-height: inherit; box-shadow: none; color: mix(@blue, white); }
   .s-large & x-blank-input { margin: 3px; }
+  .s-yellow &, .s-green & { x-blank-input.done .target { color: @blue; } }
 
   .arrow {
     .iconBackground(@text-light, transparent, 'M41,41,33,30.86l0,4.49A32.45,32.45,0,0,0,21,33,33.71,33.71,0,0,0,1.77,39.2l1.14,1.65A31.65,31.65,0,0,1,21,35a30.53,30.53,0,0,1,11.06,2.09l-3.85,2.25Z', @size: 32, @box: 42);

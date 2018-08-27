@@ -162,7 +162,7 @@ export function payItForward2($step) {
 
 
 // -----------------------------------------------------------------------------
-// Famous Sequences
+// Figurate Numbers
 
 export function triangleNumbers($step) {
   setTimeout(() => fadeInElements($step, 'circle'), 100);
@@ -284,6 +284,10 @@ export function polygonNumbers($step) {
   $slider.set(3);
 }
 
+
+// -----------------------------------------------------------------------------
+// Special Sequences
+
 function eratosthenes($step, $numbers, $gesture, primes, classes) {
   const p = primes.pop();
   const c = classes.pop();
@@ -352,6 +356,14 @@ export function hailstone2($step) {
   const $actions = $step.$$('.var-action');
   $actions[0].on('click', () => $step.model.set('n', 31));
   $actions[1].on('click', () => $step.model.set('n', 47));
+}
+
+export function quiz($step) {
+  const goals = list(14).map(x => 'blank-' + x).join(' ');
+  $step.onScore(goals, () => {
+    if ($step.$course && !$step.$course.isReady) return;
+    $step.tools.confetti();
+  });
 }
 
 

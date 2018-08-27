@@ -532,11 +532,11 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="v1 v2 v3 v4")} Notice how all arithmetic series all look very
+{.reveal(when="v1 v2 v3 v4")} Notice how all arithmetic sequences all look very
 similar: if the difference is positive, they steadily [[increase|decrease]], and
 if the difference is negative, they steadily [[decrease|increase]].
 
-{.reveal(when="blank-0 blank-1")} Geometric series, on the other hand, can
+{.reveal(when="blank-0 blank-1")} Geometric sequences, on the other hand, can
 behave completely differently based on the values of `a` and *r*:
 
 ::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
@@ -558,7 +558,7 @@ negative, while their [[absolute value|inverse|difference]] gets bigger.
 
 :::
 
-{.reveal(when="blank-4 blank-5")} You'll learn more about convergence and
+{.reveal(when="blank-4 blank-5")} You’ll learn more about convergence and
 divergence in the [last section](/course/sequences/limits-and-convergence) of
 this course.
 
@@ -595,12 +595,12 @@ explains his idea for making the world a better place:
 
     figure
       x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
-      .caption Extract from "Pay It Forward" (2000), © Warner Bros. Entertainment
+      .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
 > id: pay-it-forward-1
 
-The essence of this idea is that, if everyone "pays it forward", a single person
+The essence of this idea is that, if everyone “pays it forward”, a single person
 can affect a huge impact on the world:
 
     figure: img(src="images/pay-it-forward.png" width=700 height=220)
@@ -733,7 +733,7 @@ new square should have twice as many grains of rice as the previous one.
 fetch bags of rice. A chessboard has 64 squares, so how many grains of rice
 does the king need in total?
 
-{.todo} You might have noticed that the number of grains of rice form a geometric series.
+{.todo} You might have noticed that the number of grains of rice form a geometric sequence.
 The first term is [[1]], and the common ratio is [[2]]. Using the results from
 above, we can calculate how many grains of rice there will be on the last square:
 
@@ -749,16 +749,20 @@ mountain on Earth.
 
 
 
-## Famous Sequences
+## Figurate Numbers
 
-> section: famous
-> id: famous-intro
+> section: figurate
+> id: figurate
 
-There are infinitely many different arithmetic and geometric series – some of
-which we saw in the previous section. However there are also many interesting
-sequences that are neither arithmetic nor geometric, and in this section we will
-look at some of them. The first example you’ve already seen in the
-[Introduction](/course/sequences/introduction):
+The name for [geometric sequences](gloss:geometric-sequence) is pretty
+confusing, because they don’t have anything to do with geometry. In fact, the
+name was developed hundreds of years ago, when mathematicians thought about
+_multiplication_ and _square roots_ in a much more geometric way.
+
+However, there are many other sequences that _are_ based on certain geometric
+shapes – some of which you already saw in the [Introduction](/course/sequences/introduction).
+These sequences are often called __Figurate numbers__, and in this section we
+will ave a closer look at some of them.
 
 ---
 > id: triangle-numbers
@@ -794,14 +798,14 @@ size:
     include svg/triangle-6.svg
 :::
 
-You've already seen the recursive formula for triangle numbers:
+You’ve already seen the recursive formula for triangle numbers:
 `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
 
 ---
 > id: billiard-pool
 
 It is no coincidence that there are always 10 pins when bowling or 15 balls when
-playing billiard: it's because they are both triangle numbers!
+playing billiard: it’s because they are both triangle numbers!
 
 ::: column(width=320)
 
@@ -829,7 +833,7 @@ find an explicit formula for the triangle numbers:
       g
 
 ::: column.grow
-Let's start with a triangle of size ${x}{x|5|1,10,1}.
+Let’s start with a triangle of size ${x}{x|5|1,10,1}.
 
 First, we need to make a second copy of the triangle.
 
@@ -847,7 +851,7 @@ In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
 ---
 > id: triangle-sums
 
-Triangle numbers seem to pop up everywhere in Mathematics, and you'll see them
+Triangle numbers seem to pop up everywhere in Mathematics, and you’ll see them
 again throughout this course. One particularly interesting fact is that _any_
 integer can be written as the sum of at most three triangle numbers:
 
@@ -929,7 +933,7 @@ order!
 ::: column.grow
 
 The reason for this pattern becomes apparent if we actually draw a square. Every
-step adds one row and onw column. Te size of these "corners" starts at 1 and
+step adds one row and onw column. The size of these “corners” starts at 1 and
 increases by 2 at every step – thereby forming the sequence of odd numbers.
 
 This also means that the *n*th square number is just the sum of the first *n*
@@ -981,7 +985,7 @@ polygons?
 
 ### Tetrahedral and Cubic Numbers
 
-Of course, we don't have to limit ourselves to 2-dimensional shapes and
+Of course, we don’t have to limit ourselves to 2-dimensional shapes and
 patterns. We could stack spheres to form small pyramids, just like how you would
 stack oranges in a supermarket:
 
@@ -1020,307 +1024,6 @@ and the resulting sequence [__Tetrahedral numbers__](gloss:tetrahedral-numbers).
 
 {.todo} COMING SOON: More on Tetrahedral numbers, Cubic numbers, and the 12
 days of Christmas.
-
----
-> id: primes
-
-### Prime Numbers
-
-Another sequence that you’ve seen before are the [__Prime
-numbers__](gloss:prime). We say that a number is _prime_ if it has no
-[factors](gloss:factor) [[other than 1 and itself|other than 1 and 2|and no
-multiples]].
-
----
-> id: primes-1
-
-Here are the first few prime numbers:
-
-{.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
-_{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
-
----
-> id: primes-2
-> goals: p2 p3 p5 p7
-
-Unfortunately, prime numbers don’t follow a simple pattern or recursive
-formula. Sometimes they appear directly next to each other (these are called
-[twin primes](gloss:twin-prime)), and sometimes there are huge gaps between
-them. They seem to be distributed almost randomly!
-
-Prime numbers also don't have a simple geometric representation like triangle or
-square numbers, but with a bit of work we can reveal interesting patterns:
-
-::: column(width=320)
-
-    .eratosthenes
-      .deleted 1
-      .l-red 2
-      - var i = 3
-      while i <= 100
-        div= i
-        - i += 1
-    x-gesture(target=".eratosthenes .l-red")
-
-{.caption} If we cross out all multiples of small integers, all the remaining
-ones must be prime. This method is called the [__Sieve of
-Eratosthenes__](gloss:sieve-eratosthenes).
-
-::: column(width=320)
-
-    x-coordinate-system(width=320 height=320 margins="8 8 20 24")
-
-{.caption} If we draw a chart that increases by 1 whenever there is a prime
-number, we get a “stepped” function with fascinating properties.
-:::
-
----
-> id: primes-3
-
-You can learn more about these and other properties of prime numbers in our
-course on [Divisibility and Primes](/course/divisibility-and-primes). They are
-some of the most important and most mysterious concepts in mathematics!
-
-    figure: img(src="images/primes.svg" width=480 height=156) 
-
----
-> id: perfect
-
-### Perfect Numbers
-
-To determine if a number is [prime](gloss:prime), we have to find all of its
-[factors](gloss:factor). Usually we would _multiply_ these factors to get back
-the original number, but let's see what happens if we _add up_ all factors
-of a number:
-
-    - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
-    - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
-    - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-
-    table.grid.perfect-table
-      tr
-        td: strong Number
-        td: strong Factors
-        td: strong Sum of Factors
-      for i in [5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-        tr
-          td: .c= i
-          td
-            for j in factors(i)
-              .c.small= j
-          if i >= 10
-            td.md [[#{total(factors(i))}]]
-          else
-            td= total(factors(i))
-
----
-> id: perfect-1
-
-Let’s compare these numbers with their sum of factors:
-
-::: column.perfect-box(width=220 parent="padded-thin")
-
-For most numbers, the sum of its factors is [[less than|greater than|equal to]]
-itself. These numbers are called [__deficient numbers__](gloss:deficient-number).
-
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
-
-For a few numbers, the sum of its factors is greater than itself. These numbers
-are called [__abundant numbers__](gloss:abundant-number).
-
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
-
-Only one number in the list above has a sum of factors that is _equal_ to itself:
-[[6]]. This is called a [__perfect number__](gloss:perfect-number).
-
-:::
-
----
-> id: perfect-2
-
-The next perfect number is 28, because if we add up all its factors we get
-`1 + 2 + 4 + 7 + 14 = 28`. After that, they become much rarer:
-
-{.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
-_{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}858,986,9056_,
-_{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
-
-Notice that all of these numbers are [[even|multiples of 3|2 more than a square
-number]]. _{span.reveal(when="blank-0")}It turns out that they are also all
-triangle numbers!_
-
----
-> id: perfect-3
-
-::: column.grow
-
-Perfect numbers were first studied by ancient Greek mathematicians like
-[Euclid](bio:euclid), [Pythagoras](bio:pythagoras) and [Nicomachus](bio:nicomachus),
-more than 2000 years ago. They calculated the first few perfect numbers, and
-wondered if there might be any _odd_ ones.
-
-Today, mathematicians have used computers to check the first 10<sup>1500</sup>
-numbers (that’s a 1 followed by 1500 zeros), but without success: all perfect
-numbers they found were even. To this day, it is still unknown whether there are
-any odd perfect numbers, making it the oldest unsolved problem in _all of
-mathematics_!
-
-::: column(width=220)
-
-    x-media(src="images/euclid.jpg" width=220 height=269)
-
-{.caption} Euclid of Alexandria
-:::
-
----
-> id: hailstone
-
-### The Hailstone Sequence
-
-Most of the sequences we have seen so far had a single rule or pattern. But
-there is no reason why we can’t combine multiple different ones – for example
-a recursive formula like this:
-
-    table.grid.text-left
-      tr
-        td: strong.md If `x_n` is even:
-        td.md `x_(n+1) = x_n // 2`
-      tr
-        td: strong.md If `x_n` is odd:
-        td.md `x_(n+1) = 3 x_n + 1`
-
-Let's start with `x_1 = 5` and see what happens:
-
-{.text-center.s-orange.with-arrows} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
-_{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
-_{.n}[[4]]*{span.arrow.reveal(when="blank-1")}÷2*_,
-_{.n}[[2]]*{span.arrow.reveal(when="blank-2")}÷2*_,
-_{.n}[[1]]*{span.arrow.reveal(when="blank-3")}÷2*_,
-_{.n}[[4]]*{span.arrow.reveal(when="blank-4")}×3 +1*_,
-_{.n}[[2]]*{span.arrow.reveal(when="blank-5")}÷2*_,
-_{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
-
----
-> id: hailstone-1
-
-It looks like after a few terms, the sequence reaches a "cycle": 4, 2, 1 will
-continue to repeat over and over again, forever.
-
-Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
-Then the sequence would look like this:
-
-{.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-red}_{.n}4_,
-_{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
-*{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
-
----
-> id: hailstone-2
-
-It seems like the length of the sequence varies a lot, but it will always end up
-in a 4, 2, 1 cycle – no matter what first number we pick. We can visualise the
-terms of the sequence in a chart:
-
-    x-coordinate-system(margins="12 12 24 40")
-      .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
-
-{.reveal(when="var-0")} Notice how some starting points end very quickly,
-while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
-than one hundreds steps before they eventually reach the 4, 2, 1 cycle.
-
----
-> id: hailstone-3
-
-::: column.grow
-
-All sequences that follow this recursive formula are called [__Hailstone
-Sequences__](gloss:hailstone-sequence), because they seem to move randomly up
-and down before hitting the 4, 2, 1 cycle – just like hailstones that move up
-and down in a cloud before crashing to Earth.
-
-In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
-hailstone sequence sequence eventually ends in a 4, 2, 1 cycle – whatever
-starting value you pick. You've already checked a few starting points above, and
-computers have actually tried all numbers up to `10^20` – that’s 100 billion
-billion or a 1 followed by twenty zeros.
-
-::: column(width=240)
-
-    x-media(src="images/storm.jpg" width=240 height=340)
-
-:::
-
-However, there are infinitely many integers. It is impossible to check each of
-them, and no one has been able to find a [proof](gloss:proof) that works for
-all.
-
-Just like the search for odd perfect numbers, this is still an open problem in
-mathematics. It is amazing that these simple patterns for sequences can lead to
-questions that have mystified even the best mathematicians in the world for
-centuries!
-
----
-> id: quiz
-
-### The Sequence Quiz
-
-{.todo} You've now seen many different mathematical sequences, some with geometric
-patterns, xxx
-
-In this quiz you have just one goal: find the pattern in the sequence and
-calculate the next two terms:
-
-::: .box.problem-box
-    .box-title: h3 The Next Number
-::: .box-body
-
-{.text-center.s-teal} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
-_{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
-
-{.text-center.s-teal} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
-_{.n}36_, _{.n}[[44]]_, _{.n}[[53]]_, …
-
-{.text-center.s-teal} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
-_{.n}13_, _{.n}[[12]]_, _{.n}[[16]]_, …
-
-{.text-center.s-teal} _{span.n}5_, _{span.n}8_, _{.n}10_, _{.n}14_, _{.n}12_,
-_{.n}17_, _{.n}[[15]]_, _{.n}[[21]]_, …
-
-{.text-center.s-teal} _{span.n}5_, _{span.n}8_, _{.n}10_, _{.n}14_, _{.n}12_,
-_{.n}17_, _{.n}[[15]]_, _{.n}[[21]]_, …
-
-
-
-:::
-:::
-
----
-> id: look-and-say
-
-Here is one more sequence that is a bit different from all the ones you've seen
-above. Can you find the pattern?
-
-{.text-center.s-teal.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
-_{.n}1211_, _{.n}111221_, _{.n}312211_, …
-
-_{button.next-step} Continue_
-
----
-> id: look-and-say-1
-
-This sequence is called the __Look-and-Say__ sequence, and the pattern is just
-what the name says: you start with a 1, and every following term is what you
-get if you "read out loud" the previous one. Here is an example:
-
-{.todo} image
-
-Can you now find the next terms?
-
-{.text-center.s-teal.s-vertical} …, _{.n}312211_, _{.n}[[13112221]]_,
-_{.n}[[1113213211]]_, …
-
-    // This sequence is often used as a ‘guess the next term’ puzzle, designed to trip up mathematicians due to its apparently non-mathematical recurrence relation, yet perhaps surprisingly, there are a wealth of mathematically interesting facts about the sequence.
-    // For instance, every term ends in one, and no digit over 3 ever gets used (can you see why this is?). Also, the word lengths exhibit a pattern: the nth root of the length of the nth number tends to a limit, namely 1.303577..., which has been proved to be an algebraic number of degree 71. This is true regardless of what the first term is, except for one degenerate case, in which the starting term repeats ad infinitum. (Can you find this term? It has only 2 digits).
-    // Most amazing of all is Conway’s Cosmological Theorem: no matter what the starting value for the sequence is, it eventually splits into a sequence of ‘elements’ which don’t interact with their neighbours in later terms of the sequence. (There are exactly 94 such elements, named Hydrogen, Helium, ..., Plutonium by Conway).
 
 
 
@@ -1471,7 +1174,7 @@ rabbits – that’s why the Fibonacci numbers were named after him.
 > id: spirals
 
 Of course, the Fibonacci numbers are not how rabbits _actually_ populate in real
-life. Rabbits don't have exactly one male and one female offspring every single
+life. Rabbits don’t have exactly one male and one female offspring every single
 month, and we haven’t accounted for rabbits dying eventually.
 
 But it turns out that there are many other places in nature where Fibonacci
@@ -1511,11 +1214,11 @@ spirals and 55 counterclockwise spirals.
 
 In both cases, the numbers of spirals are consecutive Fibonacci numbers. The
 same is true for many other plants: next time you go outside, count the number
-of petals in a flower or the number of leaves on a stem. Very often you'll find
+of petals in a flower or the number of leaves on a stem. Very often you’ll find
 that they are Fibonacci numbers!
 
 Of course, this is not just a coincidence. There is an important reason why
-nature likes the Fibonacci sequence, which you'll learn more about later…
+nature likes the Fibonacci sequence, which you’ll learn more about later…
 
 ---
 > id: bees
@@ -1545,7 +1248,7 @@ number of parents, grandparents, great-grandparents, and earlier generations are
 always Fibonacci numbers!
 
 {.i.lgrey.reveal(when="blank-0 blank-1" delay=400)} Occasionally, young female
-bees are fed with special food called "royal jelly". In that case, they turn
+bees are fed with special food called “royal jelly”. In that case, they turn
 into queens and will fly away to start a new hive.
 
 :::
@@ -1555,7 +1258,7 @@ into queens and will fly away to start a new hive.
 
 ### The Golden Ratio
 
-Just like the triangle and square numbers, and other sequences we've seen
+Just like the triangle and square numbers, and other sequences we’ve seen
 before, the Fibonacci numbers can be visualised using a geometric pattern:
 
     x-slideshow.golden-spiral
@@ -1613,10 +1316,10 @@ is the ratio of its width and its height:
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
 [__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
-letter φ (“phi”). Its exact value is 1.61803398875…
+letter `φ` (“phi”). Its exact value is 1.61803398875…
 
 Many people believe that the golden ratio is particularly aesthetically
-pleasing. That's why it is often used by artists and architects – like in these
+pleasing. That’s why it is often used by artists and architects – like in these
 two examples:
 
 ::: column(width=320)
@@ -1648,7 +1351,7 @@ see a [Dodecahedron](gloss:dodecahedron).
 We can approximate the golden ratio by [[dividing|adding|subtracting]] two
 consecutive Fibonacci numbers.
 
-{.reveal(when="blank-0")} However, it turns out that the exact value of φ can't
+{.reveal(when="blank-0")} However, it turns out that the exact value of `φ` can’t
 be written as a simple fraction: it is an [__irrational number__](gloss:irrational),
 just like `π` and `sqrt(2)` and some other numbers you’ve seen before.
 
@@ -1786,6 +1489,352 @@ Can you find a formula to express the number of ways there of climbing $n$ steps
     figure
       x-media(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+## Special Sequences
+
+> section: special
+> id: special-intro
+
+
+In addition to [arithmetic](gloss:arithmetic-sequence) and [geometric
+sequences](gloss:geometric-sequence), [Fibonacci numbers](gloss:fibonacci)
+and [figurate numbers](gloss:figurate-sequence), there are countless interesting
+sequences that don’t follow a certain, regular pattern.
+
+---
+> id: primes
+
+### Prime Numbers
+
+One example that you’ve already seen before are the [__Prime
+numbers__](gloss:prime). We say that a number is _prime_ if it has no
+[factors](gloss:factor) [[other than 1 and itself|other than 1 and 2|and no
+multiples]].
+
+---
+> id: primes-1
+
+Here are the first few prime numbers:
+
+{.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
+_{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
+
+---
+> id: primes-2
+> goals: p2 p3 p5 p7
+
+Unfortunately, prime numbers don’t follow a simple pattern or recursive
+formula. Sometimes they appear directly next to each other (these are called
+[twin primes](gloss:twin-prime)), and sometimes there are huge gaps between
+them. They seem to be distributed almost randomly!
+
+Prime numbers also don’t have a simple geometric representation like triangle or
+square numbers, but with a bit of work we can reveal interesting patterns:
+
+::: column(width=320)
+
+    .eratosthenes
+      .deleted 1
+      .l-red 2
+      - var i = 3
+      while i <= 100
+        div= i
+        - i += 1
+    x-gesture(target=".eratosthenes .l-red")
+
+{.caption} If we cross out all multiples of small integers, all the remaining
+ones must be prime. This method is called the [__Sieve of
+Eratosthenes__](gloss:sieve-eratosthenes).
+
+::: column(width=320)
+
+    x-coordinate-system(width=320 height=320 margins="8 8 20 24")
+
+{.caption} If we draw a chart that increases by 1 whenever there is a prime
+number, we get a “stepped” function with fascinating properties.
+:::
+
+---
+> id: primes-3
+
+You can learn more about these and other properties of prime numbers in our
+course on [Divisibility and Primes](/course/divisibility-and-primes). They are
+some of the most important and most mysterious concepts in mathematics!
+
+    figure: img(src="images/primes.svg" width=480 height=156) 
+
+---
+> id: perfect
+
+### Perfect Numbers
+
+To determine if a number is [prime](gloss:prime), we have to find all of its
+[factors](gloss:factor). Usually we would _multiply_ these factors to get back
+the original number, but let’s see what happens if we _add up_ all factors
+of a number:
+
+    - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
+    - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
+    - total = function(a) { return a.reduce((a, c) => a + c, 0); }
+
+    table.grid.perfect-table
+      tr
+        td: strong Number
+        td: strong Factors
+        td: strong Sum of Factors
+      for i in [5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+        tr
+          td: .c= i
+          td
+            for j in factors(i)
+              .c.small= j
+          if i >= 10
+            td.md [[#{total(factors(i))}]]
+          else
+            td= total(factors(i))
+
+---
+> id: perfect-1
+
+Let’s compare these numbers with their sum of factors:
+
+::: column.perfect-box(width=220 parent="padded-thin")
+
+For most numbers, the sum of its factors is [[less than|greater than|equal to]]
+itself. These numbers are called [__deficient numbers__](gloss:deficient-number).
+
+::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+
+For a few numbers, the sum of its factors is greater than itself. These numbers
+are called [__abundant numbers__](gloss:abundant-number).
+
+::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+
+Only one number in the list above has a sum of factors that is _equal_ to itself:
+[[6]]. This is called a [__perfect number__](gloss:perfect-number).
+
+:::
+
+---
+> id: perfect-2
+
+The next perfect number is 28, because if we add up all its factors we get
+`1 + 2 + 4 + 7 + 14 = 28`. After that, they become much rarer:
+
+{.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
+_{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}858,986,9056_,
+_{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
+
+Notice that all of these numbers are [[even|multiples of 3|2 more than a square
+number]]. _{span.reveal(when="blank-0")}It turns out that they are also all
+triangle numbers!_
+
+---
+> id: perfect-3
+
+::: column.grow
+
+Perfect numbers were first studied by ancient Greek mathematicians like
+[Euclid](bio:euclid), [Pythagoras](bio:pythagoras) and [Nicomachus](bio:nicomachus),
+more than 2000 years ago. They calculated the first few perfect numbers, and
+wondered if there might be any _odd_ ones.
+
+Today, mathematicians have used computers to check the first 10<sup>1500</sup>
+numbers (that’s a 1 followed by 1500 zeros), but without success: all perfect
+numbers they found were even. To this day, it is still unknown whether there are
+any odd perfect numbers, making it the oldest unsolved problem in _all of
+mathematics_!
+
+::: column(width=220)
+
+    x-media(src="images/euclid.jpg" width=220 height=269)
+
+{.caption} Euclid of Alexandria
+:::
+
+---
+> id: hailstone
+
+### The Hailstone Sequence
+
+Most of the sequences we have seen so far had a single rule or pattern. But
+there is no reason why we can’t combine multiple different ones – for example
+a recursive formula like this:
+
+    table.grid.text-left
+      tr
+        td: strong.md If `x_n` is even:
+        td.md `x_(n+1) = x_n // 2`
+      tr
+        td: strong.md If `x_n` is odd:
+        td.md `x_(n+1) = 3 x_n + 1`
+
+Let’s start with `x_1 = 5` and see what happens:
+
+{.text-center.s-orange.with-arrows} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
+_{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
+_{.n}[[4]]*{span.arrow.reveal(when="blank-1")}÷2*_,
+_{.n}[[2]]*{span.arrow.reveal(when="blank-2")}÷2*_,
+_{.n}[[1]]*{span.arrow.reveal(when="blank-3")}÷2*_,
+_{.n}[[4]]*{span.arrow.reveal(when="blank-4")}×3 +1*_,
+_{.n}[[2]]*{span.arrow.reveal(when="blank-5")}÷2*_,
+_{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
+
+---
+> id: hailstone-1
+
+It looks like after a few terms, the sequence reaches a “cycle”: 4, 2, 1 will
+continue to repeat over and over again, forever.
+
+Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
+Then the sequence would look like this:
+
+{.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-red}_{.n}4_,
+_{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
+*{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
+
+---
+> id: hailstone-2
+
+It seems like the length of the sequence varies a lot, but it will always end up
+in a 4, 2, 1 cycle – no matter what first number we pick. We can visualise the
+terms of the sequence in a chart:
+
+    x-coordinate-system(margins="12 12 24 40")
+      .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
+
+{.reveal(when="var-0")} Notice how some starting points end very quickly,
+while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
+than one hundreds steps before they eventually reach the 4, 2, 1 cycle.
+
+---
+> id: hailstone-3
+
+::: column.grow
+
+All sequences that follow this recursive formula are called [__Hailstone
+Sequences__](gloss:hailstone-sequence), because they seem to move randomly up
+and down before hitting the 4, 2, 1 cycle – just like hailstones that move up
+and down in a cloud before crashing to Earth.
+
+In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
+hailstone sequence sequence eventually ends in a 4, 2, 1 cycle – whatever
+starting value you pick. You’ve already checked a few starting points above, and
+computers have actually tried all numbers up to `10^20` – that’s 100 billion
+billion or a 1 followed by twenty zeros.
+
+::: column(width=240)
+
+    x-media(src="images/storm.jpg" width=240 height=340)
+
+:::
+
+However, there are infinitely many integers. It is impossible to check each of
+them, and no one has been able to find a [proof](gloss:proof) that works for
+all.
+
+Just like the search for odd perfect numbers, this is still an open problem in
+mathematics. It is amazing that these simple patterns for sequences can lead to
+questions that have mystified even the best mathematicians in the world for
+centuries!
+
+
+---
+> id: look-and-say
+
+### The Look-and-Say Sequence
+
+Here is one more sequence that is a bit different from all the ones you’ve seen
+above. Can you find the pattern?
+
+{.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
+_{.n}1211_, _{.n}111221_, _{.n}312211_, …
+
+_{button.next-step} Continue_
+
+---
+> id: look-and-say-1
+
+This sequence is called the __Look-and-Say__ sequence, and the pattern is just
+what the name says: you start with a 1, and every following term is what you
+get if you “read out loud” the previous one. Here is an example:
+
+    p: x-media(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
+
+Can you now find the next terms?
+
+{.text-center.s-lime.s-vertical} …, _{.n}312211_, _{.n}[[13112221]]_,
+_{.n}[[1113213211]]_, …
+
+---
+> id: look-and-say-2
+
+This sequence is often used as a puzzle to trip up mathematicians – because the
+pattern appears to be completely non-mathematical. However, as it turns out,
+the sequence has many interesting properties. For example, every term ends in
+[[1]], and no digit larger than [[3]] ever gets used.
+
+---
+> id: look-and-say-3
+
+The British mathematician [John Conway](bio:conway) discovered that, no matter
+what number you pick as starting value, the sequence will eventually split into
+distinct “sections” that no longer interact with each other. Conway called this
+the _Cosmological Theorem_, and named the different sections using the chemical
+elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_. 
+
+---
+> id: quiz
+
+### The Sequence Quiz
+
+You’ve now seen countless different mathematical sequences – some based on
+geometric shapes, some that follow specific formulas, and others that seem
+to behave almost randomly.
+
+In this quiz you can combine all your knowledge about sequences. There is just
+one goal: find the pattern and calculate the next two terms!
+
+::: .box.problem-box
+    .box-title: h3 Find the next number
+::: .box-body
+
+{.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
+_{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
+_{span.pattern.reveal(when="blank-0 blank-1")} Pattern: Always +4_
+
+{.text-center.s-orange} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
+_{.n}36_, _{.n}[[44]]_, _{.n}[[53]]_, …
+_{span.pattern.reveal(when="blank-2 blank-3")} Pattern: +3, +4, +5, +6, …_
+
+{.text-center.s-red} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
+_{.n}13_, _{.n}[[12]]_, _{.n}[[16]]_, …
+_{span.pattern.reveal(when="blank-4 blank-5")} Pattern: +4, –1, +4, –1, …_
+
+{.text-center.s-purple} _{span.n}2_, _{span.n}4_, _{.n}6_, _{.n}12_, _{.n}14_,
+_{.n}28_, _{.n}[[30]]_, _{.n}[[60]]_, …
+_{span.pattern.reveal(when="blank-6 blank-7")} Pattern: ×2, +2, ×2, +2, …_
+
+{.text-center.s-blue} _{span.n}1_, _{span.n}1_, _{.n}2_, _{.n}3_, _{.n}5_,
+_{.n}8_, _{.n}[[13]]_, _{.n}[[21]]_, …
+_{span.pattern.reveal(when="blank-8 blank-9")} Pattern: Fibonacci Numbers_
+
+{.text-center.s-teal} _{span.n}27_, _{span.n}28_, _{.n}30_, _{.n}15_, _{.n}16_,
+_{.n}18_, _{.n}[[9]]_, _{.n}[[10]]_, …
+_{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, ÷2, …_
+
+{.text-center.s-green} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
+_{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
+_{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
+
+:::
+:::
 
 
 
@@ -2042,17 +2091,13 @@ completely different methods, and then see how they are related.
 
 
 
---------------------------------------------------------------------------------
+    // -------------------------------------------------------------------------
 
-
-
-## The In-and-out Puzzle
-
-> section: in-and-out
-> sectionStatus: dev
-> id: in-and-out-intro
-
-{.todo} COMING SOON
+    // ## The In-and-out Puzzle
+    // 
+    // > section: in-and-out
+    // > sectionStatus: dev
+    // > id: in-and-out-intro
 
     // http://mathworld.wolfram.com/JosephusProblem.html
 

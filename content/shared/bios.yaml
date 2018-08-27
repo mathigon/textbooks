@@ -34,6 +34,17 @@ collatz:
     differential equations and optimisation problems. The _Collatz conjecture_
     or `3x+1` problem is named after him – and still unsolved.
 
+conway:
+  name: John Horton Conway
+  bio: |
+    __John Horton Conway__ (born 1937) is a British matematician and currently
+    Professor Emeritus at Princeton University.
+
+    He is best known for inventing “Conway’s Game of Life”, a _cellular
+    automaton_ with fascinating properties. He explored the underlying
+    mathematics of everyday objects like knots and games, as well as contibuting
+    to group theory, number theory and many other areas of mathematics.
+
 dirac:
   name: Paul Dirac
   bio: |
