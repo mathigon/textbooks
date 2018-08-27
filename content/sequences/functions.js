@@ -5,7 +5,7 @@
 
 
 import { flatten, delay, list, last, cache, tabulate, square, sortByFn, total } from '@mathigon/core'
-import { isPrime, numberFormat, Point, Expression, toOrdinal } from '@mathigon/fermat'
+import { isPrime, numberFormat, Point, Expression, round } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -487,7 +487,7 @@ export function sunflowerGrowing($step) {
   const $slider = $step.$('x-slider');
   const count = $petals.length;  // Should be the same as $slider.steps - 1;
 
-  $slider.on('move', (x) => {
+  function move(x) {
     for (let i = 0; i <= x; ++i) {
       let t = 3.883222 * i;
       let r = Math.sqrt((x - i)/count);
@@ -501,31 +501,48 @@ export function sunflowerGrowing($step) {
       $petals[i].transform = `scale(0.05) rotate(${t}rad)`;
     }
 
-    $bulb.transform = `scale(${70 * Math.sqrt(x/count)})`
-  });
+    $bulb.transform = `scale(${1 + 69 * Math.sqrt(x/count)})`
+  }
 
-  $slider.set(0);  // TODO <- fix
+  $slider.on('move', move);
+  move(0);
 }
 
 export function sunflowerSpiral($step) {
-  const count = 500;
+  const COUNT = 500;
 
   const $slider = $step.$('x-slider');
-  const $svg = $step.$('.fib-spiral');
-  const $circles = list(count).map(() => $N('circle', {r: 3}, $svg));
+  const $slideshow = $step.$('x-slideshow');
+  const $svg = $step.$('svg');
+  const $value = $step.$('.value');
+  const $circles = list(COUNT).map(() => $N('circle', {r: 3}, $svg));
 
   $slider.on('move', (x) => {
-    for (let i = 0; i < count; ++i) {
+    for (let i = 0; i < COUNT; ++i) {
       let t = i * Math.PI * 2 * x / $slider.steps;
-      let r = Math.sqrt(i) / Math.sqrt(count) * 200;
+      let r = Math.sqrt(i) / Math.sqrt(COUNT) * 196;
       $circles[i].setCenter({
         x: 200 + r * Math.cos(t),
         y: 200 + r * Math.sin(t)
       });
     }
+    $value.text = `${round(x/1000*360, 1)}° (${x/1000} rotations)`;
   });
 
-  $slider.set(0.6180339 * $slider.steps);
+  $slideshow.on('next back', (x) => {
+    if (x === 0) $slider.moveTo(0);
+    if (x === 1) $slider.moveTo($slider.steps / 2);
+    if (x === 2) $slider.moveTo($slider.steps * 0.4);
+    if (x === 4) $slider.moveTo($slider.steps / Math.PI);
+    if (x === 5) $slider.moveTo($slider.steps * 0.6180339);
+  });
+
+  for (let $a of $step.$$('.fib-action')) {
+    const x = $slider.steps * $a.data.value;
+    $a.on('click', () => $slider.moveTo(x));
+  }
+
+  $slider.set(0.411 * $slider.steps);
 }
 
 

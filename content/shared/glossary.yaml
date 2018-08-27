@@ -215,7 +215,7 @@ hailstone-sequence:
 golden-ratio:
   title: Golden Ratio
   text: |
-    The golden ratio is a specific irrational number with value
+    The __golden ratio__ is a specific irrational number with value
     `φ = 1.61803398875…`. It can be approximated by dividing two consecutive
     Fibonacci numbers.
 
@@ -224,9 +224,9 @@ golden-ratio:
 
 pascals-triangle:
   title: Pascal’s Triangle
-  text: Pascal’s triangle is a number pyramid in which every cell is the sum of
-    the two cells directly above. It contains all binomial coefficients, as well
-    as many other number sequences and patterns.
+  text: __Pascal’s triangle__ is a number pyramid in which every cell is the sum
+    of the two cells directly above. It contains all binomial coefficients, as
+    well as many other number sequences and patterns.
 
 
 
@@ -766,7 +766,7 @@ cross-section:
 
 pi:
   title: Pi
-  text: __Pi__, often written as the Greek letter `π`, if the ratio of the
+  text: __Pi__, often written as the Greek letter `π`, is the ratio of the
     circumference and te diameter of a circle. Its value is approximately
     3.14159265...
 

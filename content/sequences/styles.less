@@ -93,6 +93,8 @@
   .s-large & x-blank-input { margin: 3px; }
   .s-yellow &, .s-green & { x-blank-input.done .target { color: @blue; } }
 
+  .var { color: white; }
+
   .arrow {
     .iconBackground(@text-light, transparent, 'M41,41,33,30.86l0,4.49A32.45,32.45,0,0,0,21,33,33.71,33.71,0,0,0,1.77,39.2l1.14,1.65A31.65,31.65,0,0,1,21,35a30.53,30.53,0,0,1,11.06,2.09l-3.85,2.25Z', @size: 32, @box: 42);
     position: absolute;
@@ -328,8 +330,21 @@ x-coordinate-system + .caption { margin-top: -1em; }
   // vector-effect: non-scaling-stroke;
 }
 
-.fib-spiral {
-  margin: 1.5em auto 0;
+.sunflower-spiral {
+  padding: 10px 0 60px;
+  background: url(/resources/sequences/images/sunflower-bg.jpg) center no-repeat;
+  background-size: 760px 560px;
+  .value { height: 34px; text-align: center; font-size: 20px; color: fade(black, 80%); font-weight: 600; }
+  svg { margin: 0 auto; fill: mix(@yellow, white); }
+  x-slider { margin: 12px auto 40px; }
+  x-slider .bar { background: fade(@grey, 60%); }
+}
+.fib-action {
+  .inline-block(@red);
+  margin: -3px 2px;
+  color: fade(white, 80%);
+  transition: color .2s, box-shadow .2s;
+  &:hover, &:focus { background: lighten(@red, 10%); color: white; box-shadow: @shadow-1; }
 }
 
 

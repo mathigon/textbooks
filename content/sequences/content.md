@@ -889,7 +889,6 @@ playing billiard: it’s because they are both triangle numbers!
 
 ---
 > id: triangle-proof
-> class: todo
 
 Unfortunately, the recursive formula is not very helpful if we want to find the
 100th or 5000th triangle number, without first calculating all the previous
@@ -1388,7 +1387,9 @@ is the ratio of its width and its height:
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
 [__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
-letter `φ` (“phi”). Its exact value is 1.61803398875…
+letter `φ` (“phi”). Its exact value is
+
+{.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
 
 Many people believe that the golden ratio is particularly aesthetically
 pleasing. That’s why it is often used by artists and architects – like in these
@@ -1433,18 +1434,18 @@ some other numbers you’ve seen before.
 
 ### Fibonacci Spirals
 
-The golden ratio also explains why Fibonacci numbers appear in Nature, like the
-sunflower and pinecone you saw above.
-
 ::: column.grow
 
-Both these plants grow outwards from the center – a part of the plant called the
-_meristem_. As new seeds, leaves or petals are added, the push the existing ones
-bit further outside.
+The golden ratio also explains why Fibonacci numbers appear in nature, like the
+sunflower and pine cone you saw at the beginning of this chapter.
 
-As you move the slider on the right, notice how every new leaf is added at a
-slightly different rotation than the previous one. The angle between consecutive
-leafs is always constant.
+Both these plants grow outwards from their center (a part of the plant called
+the _meristem_). As new seeds, leaves or petals are added, they push the
+existing ones further outside.
+
+Move the slider on the right to visualise how a plant grows. Notice how every
+leaf is added at a different rotation than the previous one. The angle between
+two consecutive leafs is always the same.
 
 ::: column(width=300)
 
@@ -1462,44 +1463,79 @@ leafs is always constant.
 ---
 > id: sunflower-spiral
 
-Picking a suitable angle is very important for flowers: they want all leaves
-(or seeds) to be approximately equally spaces. That way, they all get a similar
-amount of sunlight and nutrients, which is much more efficient than crowing
-all leaves in a few specific areas.
+It is important for flowers to pick a suitable angle: the leaves or seeds have
+to be approximately equally spaced so that they get the largest amount of
+sunlight and nutrients. In the diagram below you can explore what a sunflower
+might look like with different angles between its seeds:
 
-In the diagram below you can explore what the flower will end up looking like
-for different angles.
+    // Notice how even tiny changes to the angle can produce a completely different arrangement:
 
-    svg.fib-spiral(width=400 height=400 viewBox="0 0 400 400")
-    x-slider(steps=1000 speed=0.5)
+::: x-slideshow
 
-{.todo} If the angle is 0, all seeds will grow in a single long row away from the
-center. If the angle is `1/2` of a full a rotation, the seeds will alternate
-between two separate “arms” that move away from the center.
+    .sunflower-spiral(slot="stage")
+      .value
+      x-slider(steps=1000 speed=0.1 no-play)
+      svg(width=400 height=400 viewBox="0 0 400 400")
 
-{.todo} Something similar happens for any other simple fraction of a turn: seeds
-grow in spiral arms that leave a lot of space between them (the number of arms
-is the denominator of the fraction). So the best value for the turns between
-seeds will be an irrational number. But not just any irrational number will do.
-For example, the seed head created with pi turns per seed seems to have seven
-spiralling arms of seeds. This is because 22/7 is a very good rational
-approximation of pi. What is needed in order not to waste space is an irrational
-number that is not well approximated by a rational number.
- 
-{.todo} It turns out that the Golden Ratio Phi is the “most irrational” of all
-irrational numbers. If the rotation is `1/phi` of a full circle, we always get
-the most optimal distribution of seeds, leaves or petals.
+{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
+all seeds will grow in a single long row away from the center.
 
-It is important to remember that nature doesn’t know about Fibonacci numbers,
-and nature can’t solve equations to calculate the golden ratio. But over the
-course of millions of years, plants had plenty of time to try out different
-angles – and to discover the best one.
+{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0.5)}`1/2`_
+of a full a rotation (180°), the seeds will alternate between two separate
+“arms” that move away from the center.
 
-Plants and animals always want grow in the most efficient way, and that is why
-nature if full of regular, mathematical patterns.
+{div.inline(slot="legend")} If the rotation is another fractional proportion of
+360°, for example _{span.fib-action(data-value=2/5)}`2/5`_ or
+_{span.fib-action(data-value=1/3)}`1/3`_ or _{span.fib-action(data-value=3/8)}`3/8`_,
+then the number of “arms” will be the same as the [[denominator|numerator|prime
+factor]] of that fraction.
+
+{div.inline(slot="legend")} Unfortunately “arms” are bad, because they mean that
+the seeds are not evenly distributed: all of the space between the arms is
+wasted. But if [rational numbers](gloss:rational-numbers) aren’t going to work,
+let’s try [irrational numbers](gloss:irrational-numbers)!
+
+{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi).
+But if the angle between seeds is _{span.fib-action(data-value=0.31831)}`1/pi`_
+of 360°, you still seem to get arms: 22 of them. This is because the fraction
+`22/7 = 3.1429…` is actually a pretty good approximation for `pi`. What we
+really need is an irrational number that _can’t_ be closely approximated by a
+simple fraction.
+
+{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio)
+is just that: the “most irrational” of all irrational numbers. If the angle
+between seeds is _{span.fib-action(data-value=0.6180339)}`1/phi`_ of 360°, they
+seem to be almost perfectly spaced. And this is precisely the angle that plants
+around the world are using.
+:::
+
+    x-gesture(target=".fib-action")
 
 ---
-> id: fibonacci-puzzles
+> id: sunflower-spiral-1
+
+::: column(width=240)
+
+    x-media(src="images/flowers.jpg" width=240 heigt=400)
+
+::: column.grow
+
+You might remember from above that the ratios of consecutive Fibonacci numbers
+get closer and closer to te golden ratio – and that’s why, if you count the
+number of spirals in a plant, you will often get a Fibonacci number.
+
+It is important to remember that nature doesn’t know about Fibonacci numbers.
+Nature also can’t solve equations to calculate the golden ratio – but over the
+course of millions of years, plants had plenty of time to try out different
+angles, and to discover the best one.
+
+Plants and animals always want grow in the most efficient way, and that is why
+nature is full of regular, mathematical patterns.
+
+:::
+
+---
+> id: lucas-numbers
 
 ### Fibonachos
 
@@ -1507,57 +1543,57 @@ So far, we have only used the recursive equation for Fibonacci numbers. There
 actually is an explicit equation, too – but it is much more difficult to
 find:
 
-{.text-center} `F_n = 1/sqrt(5) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
+{.text-center} `x_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
 
-For example, the 8th Fibonacci number is `F_8 = `
+We could also pick different starting points for the Fibonacci numbers (i.e. not
+two 1s). The resulting sequences are called __Lucas numbers__ and have many
+similar properties.
 
-
-There are many other puzzles, patterns and applications related to Fibonacci
-numbers. Here are a few examples, which you can try to solve yourself:
-
-::: tab
-#### Investigate
-
-__(1) Fibonacci Factors__
-
-In the Fibonacci sequence, which numbers are even? Is there a pattern to how
-they are positioned? And can you explain why?
-
-What happens if you look at numbers divisible by 3, or numbers divisible by 4?
-
-
-Which Fibonacci numbers are divisible by 3? 
-
-::: tab
-#### Hints and Solutions
-
-
-:::
-
-Solution: https://nrich.maths.org/2046/solution
-
-Try adding together any three consecutive Fibonacci numbers.
-What do you notice? Can you explain it?
-
-Choose any four consecutive Fibonacci numbers. Add the first and last, and divide by two.
-What do you notice? Can you explain it?
-
-Add together any six consecutive Fibonacci numbers and divide by four.
-What do you notice? Can you explain it?
-
-It’s a long way to the top
-
-Every time I come home I have to climb a flight of stairs. When I’m feeling energetic I sometimes take two steps at a time. This gives me a number of ways to climb the stairs. For example, if there are ten steps, I could climb them taking five leaps of two, giving the pattern
-2, 2, 2, 2, 2.
-Or I could only use a leap of two at the beginning and the end, giving the patter
-2, 1, 1, 1, 1, 1, 1, 2.
-How many ways are there all together of climbing the ten steps?
-Can you find a formula to express the number of ways there of climbing $n$ steps using leaps of one and two?
-
-    // TODO Lucas Numbers
+{.text-center.s-purple.s-small}
+${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
+_{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_, …
 
 ---
-> id: fibonachos
+> id: fibonacci-puzzles
+
+There are many other puzzles, patterns and applications related to Fibonacci
+numbers. Here are a few examples, which you can try yourself:
+
+::: .box.problem-box
+    .box-title: h3 Problem solving
+::: .box-body
+
+__1. Fibonacci Divisibility__
+
+(a) Which Fibonacci numbers are even? Is there a pattern to how they are
+positioned in the sequence? Can you explain why?
+
+(b) Which Fibonacci numbers are divisible by 3 (or divisible by 4)? What do you
+notice?
+
+    hr
+
+__2. Fibonacci Sums__
+
+What happens if you add up any three consecutive Fibonacci numbers? Can you
+explain why?
+
+    hr
+
+__3. Fibonacci Staircases__
+
+When walking up the stairs, I can either take single steps or leap over two
+steps at a time. This means that there are many different possibilities how I
+could go up a staircase. For example, if there are 5 steps, I have 8 different
+choices:
+
+    figure: x-media(src="images/stairs.svg" width=530 height=200)
+
+How many choices are there for staircase with 6, 7 or 8 steps? Can you detect
+a pattern? And how is this related to the Fibonacci numbers?
+
+:::
+:::
 
     figure
       x-media(src="images/fibonachos.jpg" width=600 height=282)
