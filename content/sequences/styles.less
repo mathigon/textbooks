@@ -11,8 +11,8 @@
 @teal: mix(@blue, @green);
 @lime: mix(@yellow, @green);
 
-.row x-media { margin: 0 auto; }
-.overflow-wrap { overflow: auto; margin: 0 -24px; padding: 0 24px; }
+figure .row x-media { margin: 8px; }
+.overflow-wrap { overflow: auto; margin: 0 -24px; padding: 0 24px; -webkit-overflow-scrolling: touch; }
 
 // -----------------------------------------------------------------------------
 // Introduction
@@ -338,7 +338,10 @@ x-coordinate-system + .caption { margin-top: -1em; }
   svg { margin: 0 auto; fill: mix(@yellow, white); }
   x-slider { margin: 12px auto 40px; }
   x-slider .bar { background: fade(@grey, 60%); }
+
+  @media screen and (max-width: 440px) { background-size: 170vw 125vw; }
 }
+
 .fib-action {
   .inline-block(@red);
   margin: -3px 2px;

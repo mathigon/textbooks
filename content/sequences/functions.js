@@ -91,8 +91,8 @@ export function ball($step) {
     const x = 6.65 * n / $slider.steps;
     const p = $chart.mathToPlotCoords(new Point(x, bounce(x)));
 
-    const right = $chart.plotBounds.xMax - p.x;
-    $fn.css('clip-path', `inset(-2px ${right}px -2px -2px)`);
+    const right = ($chart.plotBounds.xMax - p.x) / $chart.plotBounds.dx * 100;
+    $fn.css('clip-path', `inset(-2px ${right}% -2px -2px)`);
 
     setPosition($balls[0], p, 640, 320, x * 90);
     setPosition($balls[1], new Point(40, p.y), 640, 320, x * 90);
@@ -437,9 +437,9 @@ export function goldenSpiral($step) {
   const $squares = $svg.$$('rect').slice(2);
   const $lines = $svg.$$('path');
 
-  const transforms = ['scale(4) translate(-160px,-100px)',
-    'scale(3.5) translate(-160px,-80px)', 'scale(3) translate(-120px,-80px)',
-    'scale(1.5) translate(-100px,-110px)', 'none', 'none'];
+  const transforms = ['scale(4) translate(-23%,-23%)',
+    'scale(3.5) translate(-23%,-18%)', 'scale(3) translate(-18%,-18%)',
+    'scale(1.5) translate(-18%,-23%)', 'none', 'none'];
   $svg.transform = transforms[0];
 
   for (let $e of [...$squares, ...$lines]) $e.hide();
@@ -641,7 +641,7 @@ export function pascalSequences($step) {
   }
 }
 
-export function pascalModular($step) {
+export function modular($step) {
   const $cells = $step.$$('.c');
   let count = 0;
 
@@ -662,7 +662,7 @@ export function pascalModular($step) {
   }
 }
 
-export function pascalModular1($step) {
+export function modular1($step) {
   const $rows = $step.$$('.r').map($r => $r.$$('.c'));
   const $cells = flatten($rows);
 

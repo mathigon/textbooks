@@ -345,7 +345,7 @@ visible next:
 
 {.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
 _{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
-_{.n}[[1758]]*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
+_{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
 _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
 ---
@@ -894,15 +894,15 @@ Unfortunately, the recursive formula is not very helpful if we want to find the
 ones. But, like we did with arithmetic and geometric sequences, we can try to
 find an explicit formula for the triangle numbers.
 
-::: column(width=300)
+{.todo} COMING SOON: Animated Proof for the Triangle Number Formula
 
-    svg(width=300 height=300)
+    // ::: column(width=300)
+
+    // svg(width=300 height=300)
       g
 
-::: column.grow
-Let’s start with a triangle of size ${x}{x|5|1,10,1}.
-
-{.todo} COMING SOON: Animated Proof for the Triangle Number Formula
+    // ::: column.grow
+    // Let’s start with a triangle of size ${x}{x|5|1,10,1}.
 
     // First, we need to make a second copy of the triangle.
 
@@ -915,7 +915,7 @@ Let’s start with a triangle of size ${x}{x|5|1,10,1}.
     // the ${n}th triangle number must be ${x*(x+1)/2}.
 
     // In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
-:::
+    // :::
 
 ---
 > id: triangle-sums
@@ -1023,9 +1023,9 @@ odd numbers! For example, the sum of the first 6 odd numbers is
 > id: square-numbers-2
 
 In addition, every square number is also the sum of two consecutive [triangle
-numbers](gloss:triangle-numbers). For example, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2}
-+ ${n×(n-1)/2}. Can you see how we can split every square along its diagonal,
-into two triangles?
+numbers](gloss:triangle-numbers). For example, ${n×n}{n|4|1,20,1} =
+${n×(n+1)/2} + ${n×(n-1)/2}. Can you see how we can split every square along
+its diagonal, into two triangles?
 
 ---
 > id: polygon-numbers
@@ -1984,7 +1984,7 @@ calculated, and then fill in the missing ones:
 
 This diagram only showed the first twelve rows, but we could continue forever,
 adding new rows at the bottom. Notice that the triangle is
-[[symmetric|right-angled|euilateral]], which can help you calculate some of the
+[[symmetric|right-angled|equilateral]], which can help you calculate some of the
 cells.
 
 ---
@@ -2113,7 +2113,7 @@ fixed limed on how often numbers can appear in Pascal’s triangle – but it ha
 been proven yet.
 
 ---
-> id: pascal-modular
+> id: modular
 > goals: select
 
 ### Divisibility
@@ -2139,7 +2139,7 @@ diagram below, highlight all the cells that are even:
 another, smaller [[triangle|matrix|square]].
 
 ---
-> id: pascal-modular-1
+> id: modular-1
 > goals: c2 c3 c4 c5
 
 Colouring each cell manually takes a long time, but here you can see what
@@ -2169,7 +2169,7 @@ by other numbers?
         button.btn.btn-yellow(data-value="5") Divisible by 5
 
 ---
-> id: pascal-modular-2
+> id: modular-2
 
 ::: column.grow
 Wow! The coloured cells always appear in [[triangles|squares|pairs]] (except for
