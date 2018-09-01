@@ -15,8 +15,8 @@ x-parallax.full-width {
   margin: 1.5em 0;
   width: calc(~"100vw - 280px");
   @media screen and (max-width: 1120px) { left: -40px; }
-  @media screen and (max-width: 840px) { width: 100vw; }
-  @media screen and (max-width: 540px) { left: -24px; }
+  @media screen and (max-width: @browser-medium) { width: 100vw; }
+  @media screen and (max-width: @browser-small) { left: -24px; }
   .credit { position: absolute; bottom: 0; right: 0; background: fade(black, 50%); color: white; font-size: 11px; padding: 1px 8px; }
 }
 
