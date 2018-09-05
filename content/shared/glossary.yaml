@@ -843,7 +843,7 @@ twin-primes:
   title: Twin Primes
   text: __Twin primes__ are pairs of prime numbers like 17 and 19, which are
     exactly two apart. It is unknown if there are infinitely many pairs of twin
-    primes.s
+    primes.
 
 sieve-eratosthenes:
   title: Sieve of Eratostenes

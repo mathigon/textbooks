@@ -1479,7 +1479,7 @@ might look like with different angles between its seeds:
       x-slider(steps=1000 speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
+{div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
 all seeds will grow in a single long row away from the center.
 
 {div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0.5)}`1/2`_
@@ -1492,7 +1492,7 @@ _{span.fib-action(data-value=1/3)}`1/3`_ or _{span.fib-action(data-value=3/8)}`3
 then the number of “arms” will be the same as the [[denominator|numerator|prime
 factor]] of that fraction.
 
-{div.inline(slot="legend")} Unfortunately “arms” are bad, because they mean that
+{div(slot="legend")} Unfortunately “arms” are bad, because they mean that
 the seeds are not evenly distributed: all of the space between the arms is
 wasted. But if [rational numbers](gloss:rational-numbers) aren’t going to work,
 let’s try [irrational numbers](gloss:irrational-numbers)!
