@@ -1546,9 +1546,13 @@ find:
 
 {.text-center} `x_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
 
-We could also try picking different starting points for the Fibonacci numbers
-(i.e. not two 1s). The resulting sequences are called __Lucas numbers__ and have
-many similar properties.
+We could also try picking different starting points for the Fibonacci numbers.
+For example, if we start with 2, 1, … rather than 1, 1, … we get a sequence
+called the __Lucas numbers__.
+
+It turns out that, whatever two starting numbers you pick, the resulting
+sequences share many properties. For example, te ratios of consecutive terms
+will _always_ [converge](gloss:sequence-convergence) to the golden ratio.
 
 {.text-center.s-purple.s-small}
 ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
