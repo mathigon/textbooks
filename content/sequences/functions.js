@@ -164,10 +164,11 @@ export function payItForward2($step) {
 // Figurate Numbers
 
 export function triangleNumbers($step) {
-  setTimeout(() => fadeInElements($step, 'circle'), 100);
+  for (let $c of $step.$$('svg circle')) $c.hide();
+  setTimeout(() => fadeInElements($step, 'circle'), 200);
 }
 
-export function triangleProof($step) {
+/* export function triangleProof($step) {
   const $g = $step.$('svg g');
 
   $step.model.watch((m) => {
@@ -179,7 +180,7 @@ export function triangleProof($step) {
       $N('circle', {cx: 150 + scale * p.x, cy: 150 + scale * p.y, r}, $g);
     }
   });
-}
+} */
 
 function triangleNumber(n) {
   return n * (n + 1) / 2;

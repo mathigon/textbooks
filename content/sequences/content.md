@@ -983,7 +983,7 @@ numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 
 Another sequence that is based on geometric shapes are the __square numbers__:
 
-{.text-center.s-lime.with-arrows} _{.n}1_,
+{.text-center.s-purple.with-arrows} _{.n}1_,
 _{.n}4*{span.arrow.reveal(when="blank-4")}+3*_,
 _{.n}9*{span.arrow.reveal(when="blank-4")}+5*_,
 _{.n}16*{span.arrow.reveal(when="blank-4")}+7*_,
@@ -1985,6 +1985,7 @@ calculated, and then fill in the missing ones:
         - i += 1;
 
 ---
+> id: pascal-intro-1
 
 This diagram only showed the first twelve rows, but we could continue forever,
 adding new rows at the bottom. Notice that the triangle is

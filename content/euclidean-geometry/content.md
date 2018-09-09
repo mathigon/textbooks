@@ -61,12 +61,13 @@ He wanted to understand _why_ it is true, and verify that it is _always_ true
 – not just in the few examples he tried.
 
 An argument that logically explains, beyond and doubt, why something must be
-true, is called a __proof__. In the following courses you will learn a number of
-geometric techniques, that will eventually allow us to prove _Thales’ theorem_.
+true, is called a [__proof__](gloss:proof). In the following courses you will
+learn a number of geometric techniques, that will eventually allow us to prove
+_Thales’ theorem_.
 
 ---
 > id: points
-> sectionId: definitions
+> section: definitions
 
 ## Geometric Definitions
 
@@ -695,6 +696,7 @@ use straight-edge and compass.
 
 ---
 > id: origami
+> section: origami
 > sectionBackground: dark
 
 ## Origami and Paper Folding
