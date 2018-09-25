@@ -97,7 +97,7 @@ coefficient:
 polynomial:
   title: Polynomial
   text: A __polynomial__ is an algebraic expression that consists of constants
-    and multiples of variables and teir powers. An example would be
+    and multiples of variables and their powers. An example would be
     `5x^3 - 2x^2 + x + 4`.
 
 polynomial-degree:
