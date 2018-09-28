@@ -448,9 +448,13 @@ assumption must be incorrect.
 
 ## The Distribution of Primes
 
-It is quite easy for a computer to check if a number is prime – simply by trying
-to divide it by all smaller numbers. But of course there are much cleverer and
-faster algorithms. Here you can try it yourself:
+The easiest way to check if a number is prime, is to try to divide it by all
+smaller integers. Computers can do this very quickly and efficiently. For _very
+large_ numbers, with hundreds of digits, there are also more efficient
+algorithms. Some of these even use probability to determine if a number is
+_almost certainly_ prime.
+
+Here is a calculator that allows you to check if any number is prime:
 
     .calculator
       h3 Prime Checker
@@ -461,15 +465,15 @@ faster algorithms. Here you can try it yourself:
 > id: prime-test-1
 
 ::: column.grow
-Throughout history, people have tried to calculate larger and larger primes. In
-1460, the largest known prime number was 131,071. In 1772, [Leonard Euler](bio:euler)
-showed that 2,147,483,647 is prime.
+Throughout history, people have tried to find larger and larger prime numbers.
+In 1460, the largest known prime was 131,071. In 1772, [Leonard Euler](bio:euler)
+showed that 2,147,483,647 is also prime.
 
 With the arrival of computers in the 20th century, calculating large primes
-became much faster and easier. Currently, the largest known prime number has
-22,338,618 digits – you would need 5000 sheets of paper to print it out! It was
-discovered in September 2015 using a network of many thousands of computers
-around the world, run by volunteers, students and universities.
+became much easier. Currently, the largest known prime number has
+22,338,618 digits. You would need 5000 sheets of paper to print it out! It was
+discovered in September 2015 using a network of thousands of computers around
+the world, run by volunteers, students and universities.
 ::: column(width=300)
 
     img(src="images/network.jpg" width=300 height=200)
@@ -482,13 +486,11 @@ network of computers around the world to find large prime numbers.
 > id: prime-generator
 > goals: calculator
 
-You might think that calculating these primes is just a waste of time – but, as
-we will see below, it turns out to be incredibly useful for computers to be able
-to quickly find large prime numbers.
+Calculating these large prime numbers might seem like just a waste of time, but
+later in this course you’ll learn about various real life applications where
+computers have to use large primes.
 
-Rather than checking if a large number is definitely prime, there are also much
-faster algorithms that tell you that a number is _almost certainly_ prime. Here
-you can generate your own, large prime numbers:
+Here you can generate your own prime numbers with a given number of digits:
 
     .calculator
       h3 Prime Generator
@@ -673,8 +675,8 @@ became known as the __Riemann Hypothesis__.
 Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all
 without success. It is often considered one of the most difficult and most
 important unsolved problems in mathematics. In 2000, the Clay Mathematics
-Institute named it one of six __Millennium Prize Problems__ and promised
-$1,000,000 to any mathematician who solves it.
+Institute named it one of six [__Millennium Prize Problems__](gloss:millennium-prize)
+and promised $1,000,000 to any mathematician who solves it.
 
 ---
 > id: race
