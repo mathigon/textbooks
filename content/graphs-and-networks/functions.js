@@ -92,8 +92,6 @@ export function handshakes1($section) {
 }
 
 export function handshakes2($step) {
-  $step.onScore('blank-1', () => $step.addClass('complete'));
-
   $step.model.set('handshakeTable', function(n) {
     let colours = Colour.rainbow($step.model.n);
 
@@ -108,6 +106,10 @@ export function handshakes2($step) {
       tabulate(makePerson, n-1, n).map(x => `<tr>${ x.join('') }</tr>`).join('') +
       '</table>';
   });
+}
+
+export function handshakes2a($step) {
+  $step.onScore('blank-0', () => $step.prev.addClass('complete'));
 }
 
 export function handshakes3($section) {
