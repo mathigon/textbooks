@@ -6,7 +6,7 @@
 
 
 import { Point } from '@mathigon/fermat';
-import {list} from "../../../../core.js/index";
+import { list } from '@mathigon/core';
 
 
 const SQRT32 = Math.sqrt(3) / 2;
