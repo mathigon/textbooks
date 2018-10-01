@@ -14,12 +14,12 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@mathigon/boost": "^0.2.3",
+    "@mathigon/boost": "^0.2.4",
     "@mathigon/core": "^0.2.3",
-    "@mathigon/fermat": "^0.2.3"
+    "@mathigon/fermat": "^0.2.4"
   },
   "devDependencies": {
-    "@mathigon/parser": "^0.2.6",
+    "@mathigon/parser": "^0.2.7",
     "emojione-assets": "^3.1.1",
     "eslint": "^5.4.0",
     "express": "^4.16.3",
