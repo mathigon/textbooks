@@ -12,12 +12,29 @@ x-dot-machine {
   margin: 1.5em 0;
 
   .dot-wrap { display: flex; flex-direction: row; justify-content: center; }
-  .dot-cell { width: 100px; height: 100px; margin: 2px; background: #eee; position: relative; }
+  .dot-cell { width: 100px; height: 100px; margin: 2px; background: @grey-background; position: relative; border-radius: 4px; }
 
   .dot-decimal { width: 40px; font-size: 30px; text-align: center; }
   .dot-decimal:before { content: "."; }
 
-  .dot { width: 6px; height: 6px; border-radius: 100%; background: red; position: absolute; top: 0; left: 0; }
+  .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: @blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background .2s, box-shadow .2s;
+    margin: -8px;
+    box-sizing: border-box;
 
+    &.glowing { background: @yellow; box-shadow: 0 0 0 4px fade(@yellow, 30%); }
+    &.warning { background: @red; box-shadow: 0 0 0 4px fade(@red, 30%); }
+
+    &.anti { background: @grey-background; border: 2px solid @blue; }
+    &.anti.warning { border-color: @red; }
+    &.anti.glowing { border-color: @yellow; }
+  }
 
 }

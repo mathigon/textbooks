@@ -6,3 +6,16 @@
 
 @import "styles/variables";
 @import "./components/dot-machine";
+
+.race {
+  position: relative;
+  padding-bottom: 40px;
+  line { stroke-linecap: round; stroke: @yellow; stroke-width: 2; }
+  text { font-size: 14px; text-anchor: middle; }
+  img { position: absolute; top: 0; width: 10.5%; height: auto; transition: left .5s; }
+  g { display: none }
+}
+
+svg.square {
+  polygon { stroke: white; stroke-width: 2px; }
+}
