@@ -32,7 +32,7 @@ class Cell extends Evented {
       let stopped = false;
       this.trigger('add', {stop: () => stopped = true });
       if (stopped) return;
-      this.addDotAntidot(pointerPosition(e).subtract(this.$el.clientPoint));
+      this.addDotAntidot(pointerPosition(e).subtract(this.$el.topLeftPosition));
       enterAudio.play();
     });
 
@@ -97,7 +97,8 @@ class Cell extends Evented {
     if (!next) return;
 
     const target = next.getDotPosition(next.$dots.length);
-    const transform = target.add(next.$el.clientPoint).subtract(this.$el.clientPoint);
+    const transform = target.add(next.$el.topLeftPosition)
+        .subtract(this.$el.topLeftPosition);
 
     for (let $r of $remove) {
       $r.animate({transform: `translate(${transform.x}px,${transform.y}px) scale(2)`}, 400, 400)
@@ -156,6 +157,8 @@ export class DotMachine extends CustomElement {
       $N('div', {class: 'dot-decimal'}, this.$wrap);
       for (let c of cells[1]) this.cells.push(new Cell(this, +c));
     }
+
+    $N('div', {class: 'dot-ellipses'}, this.$wrap);
 
     for (let i = 0; i < this.cells.length; ++i) {
       this.cells[i].on('add', (e) => {

@@ -1138,3 +1138,46 @@ information:
   text: __Information theory__ is the study of quantification, storage and
     communication of data and information. It is used in logic, cryptography
     and computer science.
+
+dot-machine:
+  title: Dot Machine
+  text: A __dot machine__ consists of multiple cells containing dots. You can
+    manipulate these dots according to specific rules. For example, in a `1←3`
+    machine, 3 dots in one cell can be converted into 1 dot in the next cell to
+    the _left_. Similarly, 1 dot can be converted into 3 dots in the next cell
+    to the _right_. This is called an “explosion”.
+
+anti-dot:
+  title: Anti-Dot
+  text: The cells in a dot machine can contain __anti-dots__, which you can
+    think of as “holes” or “negative dots”. They have a value of –1. You can
+    always add a dot and an anti-dot to the same cell, without changing its
+    value.
+
+dot-annihilation:
+  title: Annihilation
+  text: If you have both a dot and an anti-dot in the same cell, they cancel
+    out, or __annihilate__ each other. Think about `–1 + 1 = 0`.
+
+adic:
+  title: N-adic Numbers
+  text: __*N*-adic__ numbers, for some integer _n_, are a special number system,
+    with a definition of “closeness” that is different from usual arithmetic.
+    Two _n_-adic numbers are _close_ if their difference is divisible by a high
+    power of _n_.
+
+fermat-last:
+  title: Fermat’s Last Theorem
+  text: |
+    __Fermat’s Last Theorem__ states that the equation `x^n + y^n = z^n` has no
+    integer solutions for `n>2`. If `n=2`, we get _Pythagoras’ theorem_ which
+    has many integer solutions, but for _n_ = 3, 4, 5, … there are none.
+
+    In 1637, the mathematician Pierre de Fermat made a note in a textbook,
+    claiming that he had a proof, but that it was too large to fit in the
+    margin. For over 350 years, other mathematicians tried to find this proof,
+    and Fermat’s Last Theorem was even in the _Guinness Book of World Records_
+    as the “most difficult mathematical problem”.
+
+    In 1994, after many years of work, Andrew Wiles finally managed to prove it.
+    He later received the Abel Prize, one of the highest honours in mathematics.

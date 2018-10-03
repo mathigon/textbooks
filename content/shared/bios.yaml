@@ -198,10 +198,16 @@ khayyam:
 
 milgram:
   name: Stanley Milgram
-  bio: __Stanley Milgram was__ (1933 – 1984) a famous social psychologist. He is
+  bio: __Stanley Milgram__ (1933 – 1984) was a famous social psychologist. He is
     best known for experiments on _obedience_, testing how willing adults are to
     follow orders, even when hurting others, and for the _small-world
     experiment_, which tests the degree of connectedness of societies.
+
+monsky:
+  name: Paul Monsky
+  bio: __Paul Monsky__ (born 1936) is an American mathematician and professor at
+    Brandeis University. He proved that a square cannot be divided into an odd
+    number of equal-area triangles – this is known as “Monsky’s theorem”.
 
 newton:
   name: Isaak Newton

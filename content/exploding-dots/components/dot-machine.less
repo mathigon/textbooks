@@ -14,8 +14,9 @@ x-dot-machine {
   .dot-wrap { display: flex; flex-direction: row; justify-content: center; }
   .dot-cell { width: 100px; height: 100px; margin: 2px; background: @grey-background; position: relative; border-radius: 4px; }
 
-  .dot-decimal { width: 40px; font-size: 30px; text-align: center; }
+  .dot-decimal, .dot-ellipses { font-size: 44px; text-align: center; padding: 0 12px; color: @dark-grey; }
   .dot-decimal:before { content: "."; }
+  .dot-ellipses:before { content: "…"; }
 
   .dot {
     width: 16px;

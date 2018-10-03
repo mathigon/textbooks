@@ -16,6 +16,24 @@
   g { display: none }
 }
 
+.btn-row.done { pointer-events: none; }
+.btn-row.done button:not(.selected) { opacity: 0.2; }
+
+.convergence {
+  margin: 1.5em auto;
+  text-align: right;
+  max-width: 270px;
+}
+
+.ivar {
+  .circled(1.4em);
+  background: @green;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  margin: 0 .2em;
+}
+
 svg.square {
   polygon { stroke: white; stroke-width: 2px; }
 }
