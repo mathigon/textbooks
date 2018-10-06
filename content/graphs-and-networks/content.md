@@ -10,7 +10,7 @@ rail tracks, phone lines, the internet, electronic circuits and even molecular
 bonds. There are also _social networks_ between friends and families. All these
 systems consist of certain _points_ called [[vertices|circles|crossings]], some
 of which are connected by [[edges|boundaries|pairs]]. In mathematics, this is
-called a [__graphs__](gloss:graph).
+called a [__graph__](gloss:graph).
 ::: column(width=160)
 
     svg#graph0.graph.novertices.noedges(width="160" height="130")
@@ -70,7 +70,7 @@ vertices, or vertices which are connected to themselves (loops).
 :::
 
 For simplicity we will only think about undirected and connected graphs without
-multiple edges and loops in this course
+multiple edges and loops in this course.
 
 ---
 > id: intro-2
