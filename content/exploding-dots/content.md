@@ -26,7 +26,7 @@ invulnerable. On one day, he was challenged to race … by a tortoise!
         g: line(x1=709 y1=113 x2=709 y2=121)
         g: line(x1=720 y1=113 x2=720 y2=121)
       img(src="images/achilles.png" width=80 height=110 style="left: 0%; z-index: 1;")
-      img(src="images/tortoise.png" width=80 height=50 style="left: 54%; margin-top: 60px;")
+      img(src="images/tortoise.png" width=80 height=50 style="left: 54%; margin-top: 8%;")
 
 {div(slot="legend")} Achilles knew that he could run _ten times_ as fast as
 the tortoise. He felt very confident, and decided to give it a 100m head start.
@@ -178,7 +178,7 @@ _equal_ to 1.
 If you’re not satisfied with this explanation, let’s have a look at what 0.9999…
 would look like in a [`1←10` machine](gloss:dot-machine):
 
-    x-dot-machine(cells="0.9999")
+    x-dot-machine(cells="0.9999…")
     p.text-center.reveal(when="d1"): button.btn.btn-small.btn-red Explode
 
 Click anywhere in the [first decimal box](-> #dots .dot-decimal + .dot-cell)
@@ -234,488 +234,329 @@ section…
 ## Unusual Numbers
 
 > section: unusual
-> sectionStatus: dev
 
-The number 0.9999…  (if you choose to believe it is a one) has infinitely many
-9s to the right of the decimal point. What if we consider the “number” with
-infinitely many 9s to the left of the decimal point instead?
+In the [previous section](/course/exploding-dots/infinity), we looked at a
+number with infinitely many 9s to the right of the decimal point:
 
-…9999
+{.text-center} __0.999999…__
 
-This is a number that ends with nine. Actually it ends with ninety-nine.
-Actually it ends with nine-hundred-and-ninety-nine. And so on.
+Now, let’s see what happens if we add infinitely many 9s to the _left_ of the
+decimal point:
 
-Let’s apply our algebraic argument to see what value it must have.
-
-STEP 1: Give the quantity a name.
-We’ll call it A for Allistaire.
-A=…9999.
-
-STEP 2: Multiply by ten
-We obtain
-10A=…99990.
-
-STEP 3: Subtract
-
-We see that A and 10A differ by nine (it is only their final digits that
-differ). Looking at A−10A we get
-
-−9A=9
-giving
-
-A=−1.
-
-That is, our mathematics establishes that
-
-…9999=−1.
-
-Apparently, if we pulled out a calculator and computed the sum 9+90+900+9000+⋯
-the calculator will show at the end of time the answer −1!
-
-Do you believe that?
-
-Putting it another way: On a number line, do you believe that the numbers 9, 99,
-999, …. are marching closer and closer to the number −1?
-
-![](http://gdaymath.com/wp-content/uploads/2018/03/P1-1.jpg)
-
-Challenge: Let’s make matters worse! Consider the “number” with infinitely many
-9s both to the left and to the right of the decimal point: …9999.9999…. Use the
-same algebraic argument to show that this equals zero. (And this makes sense,
-because …9999.9999…=…9999+.9999…=−1+1=0.)
-
-It is hard to believe that …9999 is a meaningful number and, moreover, it has
-the value −1, at least in our usual way of think about arithmetic. But remember,
-all we proved here is that IF we choose to say that …9999 is a meaningful
-number, then it has value −1.  It is up to us to decide whether or not it is
-meaningful quantity in the first place. Most people say it is not and stop there
-and that is fine.
-
-But this begs the question:
-
-Is there an UNUSUAL system of arithmetic for which …9999 is meaningful (for
-which it has value −1)?
-
-Challenge: One might be able to argue that …9999 does behave like −1 in ordinary
-arithmetic to some degree. For example, consider performing the (very) long
-addition shown. Do you see the answer zero results?
-
-![](http://gdaymath.com/wp-content/uploads/2018/03/p2-1.jpg)
-
-If you prefer, imagine what happens if you add one dot to this loaded 1←10
-machine.
-
-![](http://gdaymath.com/wp-content/uploads/2018/03/p3-1-768x220.jpg)
-
-Challenge: Try this (very) long multiplication problem. Do you see that …66667
-is behaving like the fraction 13?
-
-![](http://gdaymath.com/wp-content/uploads/2018/03/p4-1.jpg)
-
-If you prefer, imagine what happens if you triple the count of dots in each of
-these boxes.
-
-![](http://gdaymath.com/wp-content/uploads/2018/03/p5-1-768x213.jpg)
-
-Extra: What “number” behaves like 23?
+{.text-center} __…999999__
 
 ---
 
-It is possible to develop an arithmetic system of numbers for which a quantity
-like …9999 actually is meaningful (and by what we proved in the previous section
-has value −1).
+If we assume that this is a meaningful number (and not, for example, just
+“infinity”), we can try to use the same algebraic argument as before, to work
+out its value:
 
-Here’s one such system, one that requires we change our sense of distance
-between numbers on the number line. It is a system that will allow us to say,
-for instance, that the numbers 9, 99, 999, …  are indeed marching closer and
-closer to −1 on the number line despite what our geometric training says!
+    ol.proof.s-yellow
+      li Let’s start by giving the number a name, say #[.ivar A] for #[strong.m-yellow Allistaire]:
+        .text-center.r #[.ivar A] = …999999#[button.next-step Continue]
+      li.reveal(when="next-0") Now multiply it by 10. This gives us
+        .text-center.r 10#[.ivar A] = …99s9990#[button.next-step Continue]
+      li.reveal(when="next-1") Notice that #[.ivar A] and 10#[.ivar A] only differ in their final digit. Therefore, if we subtract the equation in step 1 from the equation in step 2, we get
+        .text-center.r 9#[.ivar A] = –9#[button.next-step Continue]
+      li.reveal(when="next-2") Finally, if we divide both sides by 9, we get
+        .text-center.md #[.ivar A] = [[-1]]
 
-![](http://gdaymath.com/wp-content/uploads/2018/03/P1-2.jpg)
+---
 
+In other words, we have just shown that _{strong.m-yellow.nowrap}…999999_ = −1.
+Apparently, if we pulled out an infinite calculator and computed the sum of 9 +
+90 + 900 + 9000 + …, the result would be −1!
 
-### Warping Normal Distance on the Number Line
+_Do you believe that?_
 
-We usually say the number 5, for instance, is a distance five from 0 on the
-number line because 5 is five unit lengths away from the zero. (We usually use
-absolute value notation for this distance: |5|=5.)
+    figure: x-media(src="images/confused.gif" width=200 height=200)
 
-![](http://gdaymath.com/wp-content/uploads/2018/03/p2-2.jpg)
+---
 
-And 3.7 is a distance 3.7 from 0, |3.7|=3.7,  because three-and-seven-tenths of
-a unit fit between 0 and 3.7 on the number line. And so on.
+### Unusual Arithmetic
 
-This is a very additive way of thinking about distance: adding five 1s gets you
-from 0  to 5; adding  3.7 1s get you from 0 to  3.7; and so on.  We can say that
-the distance of a point a on the number line, in this thinking, is the number of
-1s that go additively into a.
+Even though …9999999 is clearly not a “normal” number, let’s assume for now that
+it exists, and that it follows the basic laws of arithmetic. If that is the
+case, we'd expect …9999999 + 1 = [[0]].
 
-But much of mathematics is not only concerned with the additive properties of
-numbers, but also the multiplicative properties of numbers. For example, many
-people are interested in the prime factorizations of numbers (for example,
-1000=2353 and 105=3⋅5⋅7). There are so many unanswered questions about the prime
-numbers and prime factorizations still in mathematics today. These questions
-are, in general, very hard!
+---
+> id: dots-1
+> goals: dot
 
-Is there are way to bring the geometry of the number line into play to possibly
-help with multiplicative questions? Is there a way to think about the number
-line itself as perhaps structured multiplicatively rather than additively?
+Let's use a [`1←10` machine](gloss:dot-machine) to see if that is actually the
+case. Click somewhere in the [first cell](-> #dots-1 .dot-cell:last-child) to
+add 1:
 
-To think about this, rather than focus on all possible factor of numbers, let’s
-focus on one possible factors of numbers. And to keep matters relevant to our
-base-ten arithmetic thinking, let’s focus on the number 10.
+    x-dot-machine(cells="…99999")
 
-In our additive thinking for distance on the number line we use the unit of 1
-and ask how many ones (additively) go into each number for its distance from 0.
-We now want to use the unit of 10 and ask how many times ten goes
-multiplicatively into each number.
+---
 
-What could that mean?
+Looks like this actually worked! If we add 1 to _{span.nowrap}…9999999_, the
+result is 0.
 
-In the world of integers the number 0 is the most divisible number of all: it
-can be divided by any integer any number of times and still give an integer
-result (namely 0) each and every time. Focusing on our chosen factor of ten, we
-can divide 0 by ten once, or twice, or thirty-seven times, and still have an
-integer.
+But remember: all we have shown is that __IF__ we choose to believe that …999999
+is a meaningful number that follows our usual laws of arithmetic, __THEN__ it
+must have value –1. Most people simply say that it _isn’t_ a number and stop
+there – and that is a perfectly valid view.
 
-The number 40 is a little bit “zero-like” in this sense in that we can divide it
-by ten once and still have an integer. The number 1700 is more zero-like as it
-can be divided by ten twice and still give an integer result. A googol is very
-much more zero-like: it can be divided by ten one hundred times and still stay
-an integer.
+This begs the question: is there an _unusual_ system of arithmetic for which
+…999999 is a meaningful number?
 
-The integer 5 is not very zero-like at all: one can’t divide it by ten even once
-and stay an integer.
+::: .box.problem-box
+    .box-title: h3 Challenge
+::: .box-body
 
-In this setting the more times ten “goes into” into a number multiplicatively,
-the more zero-like it is. So in this sense, a googol is much closer to zero than
-5 is.
+Let’s make matters worse! Consider the number with infinitely many 9s both to
+the left _and_ to the right of the decimal point: __{.m-red.nowrap}…9999.9999…__.
+Try to use the same algebraic argument to show that this equals __{.m-red}zero__.
 
-So let’s develop a distance formula that regards numbers with large powers of
-ten as factors as closer to zero than numbers with less counts of powers of ten
-as factors. There are a number of ways one might think to do this, but let’s
-try to mimic the additive properties of the number line we are familiar with.
+*Somehow this makes sense, because __{.m-red.nowrap}…9999.9999…__ =
+__{.m-green.nowrap}…9999__ + __{.m-yellow.nowrap}0.9999…__ = __{.m-green}−1__ +
+__{.m-yellow}1__ = __{.m-red}0__.*
 
-Normally we would say that 850 is further from zero than 85 is, and, in fact, we
-might even say 850 is ten times further from zero as 85 is.  In our
-multiplicative thinking,  850 is now closer to zero than 85 is and it would be
-natural to have it as ten times closer.
+:::
+:::
 
-The following formula seems a natural way to have this happen.
+_{button.next-step} Continue_
 
-If  a can be divided by ten a maximum of k times and remain an integer, then set
-|a|ten=110k.
+---
+> id: warp-1
 
-For example, then, |850|ten=1101=0.1 and |8500|ten=1102=0.01 and |8500000|ten=
-1105=0.00001. Also, since |85|ten=1100=1. we see, indeed, that 850 is ten times
-closer to zero than 85 is.
+### Warping the Number Line
 
-We can also measure the distance between any two numbers in this multiplicative
-way. For example, the distance between 3 and 33 is |33−3|ten=|30|ten=1101=0.1.
+In the previous chapter, we saw that _{span.nowrap}0.999999… = 1_. This seems
+somewhat plausible, because the sequence of approximations 0.9, 0.99, 0.999,
+0.9999, and so on, get closer and closer to 1.
 
-With this new way to measure distance, we see that
+In this example, the exact opposite happens: the numbers 9, 99, 999, 9999, and
+so on, are marching further and further away from –1. That’s why it is so
+abstruse to think that _{span.nowrap}…999999_ could possibly equal 1.
 
-1, 10, 100, 1000, … is a sequence of numbers getting closer and closer to zero.
-We have |1|ten=1 and |10|ten=0.1 and |100|ten=0.01 and |1000|ten=0.001, and so
-on, indeed approaching a distance of zero from 0.
+    figure: include svg/number-line-1.svg
 
-In terms of values in a 1←10 machine, we see that boxes far to the left in the
-machine, representing high powers of ten, are representing values very close to
-zero. (Before, in our additive thinking, boxes to the far right for decimals
-represented values very closer and closer to zero.)
+_{button.next-step} Continue_
 
-![](http://gdaymath.com/wp-content/uploads/2018/03/p3-2.jpg)
+---
+> id: warp-2
+
+It turns out, however, that it _is_ possible to develop a new arithmetic system
+in which numbers like _{span.nowrap}…999999_ are meaningful. To do that, we just
+have to change how we measure “distance” between numbers on the number line.
+
+Usually, _distance_ is defined using __addition__ and __subtraction__. For
+example, the distance between 2 and 6 is [[4]],
+_{span.reveal(when="blank-0")}because `2 + 4 = 6`._
+
+    figure: include svg/number-line-2.svg
+
+---
+
+Instead, we can define a “different kind” of distance using __multiplication__
+and __division__.
+
+{.r} In the world of integers, 0 is the _most divisible_ number of all. It can
+be divided any number of times by any integer, and still give an integer result
+(namely 0). If we focus on our number base of 10, we can see that 0 can be
+divided by 10 once, or twice, or thirty-seven times, or a million times.
+_{button.next-step} Continue_
+
+---
+> id: zero-list
+
+* The number __40__ is a little bit “zero-like”, in this sense in that we can
+  divide it by ten and still have an integer.
+* The number __1700__ is more zero-like: it can be divided [[twice|three
+  times|four times]] by 10, and still give an integer result.
+* {.reveal(when="blank-0")} The number __230,000__ is even more zero-like. It
+  can be divided [[four]] times by 10, and still stay an integer.
+* {.reveal(when="blank-1")} The number __5__, on the other and, it not very
+  zero-like. We can’t divide it by ten even once, and have it stay an integer.
+
+---
+
+We can now develop a __distance formula__, based on how often 10 “goes into”
+into a number multiplicatively. If we can divide a number _a_ by ten a maximum
+of _k_ times while remaining an integer, let’s write
+
+{.text-center} `|a|_(ten) = 1/10^k`
+
+For example, `|850|_(ten) = 1/(10^1) = 0.1`, and `|8500|_(ten) = 1/(10^2) = 0.01`,
+and `|850000|_(ten) =` [[0.0001]].
+
+---
+
+We can also measure the distance between any two different numbers. For example,
+the distance between 3 and 33 is `|33−3|_(ten) = |30|_(ten) = 1/(10^1) = 0.1`.
+
+With this new way to measure distance, 1, 10, 100, 1000, … is a sequence of
+numbers getting closer and closer to [[zero|1|–1|infinity]]. Similarly, 9, 99,
+999, 9999, … is getting closer and closer to [[-1]], just like we saw above.
+
+---
+> id: p-adic
 
 Mathematicians call this way of viewing distances between the non-negative
-integers ten-adic arithmetic. (The suffix adic means “a counting of operations”
-and here we are counting factors of ten.) It is fun to think how to extend this
-notion of distance to fractions too, and then to all real numbers.
+integers [__ten-adic arithmetic__](gloss:adic). The suffix “adic” means “a
+counting of operations”. Here we are counting factors of ten.
 
+---
+> id: dots-2
+> goals: dots
 
-### The number …9999
+### Negative Numbers and Fractions
 
-Let’s look now at the sequence of numbers 9 and 99 and 999 and so on marching
-off to the right on the number line. Could they possibly be marching closer and
-closer to the value −1?
+We’ve already seen that our new, ten-adic system supports negative integers:
+_{span.nowrap}…999999 = –1_. We can do something similar for other negative numbers. How much
+do you have to add to _{span.nowrap}…999998_, to get it to explode?
 
-![](http://gdaymath.com/wp-content/uploads/2018/03/p4-2.jpg)
-
-
-Yes, if by “closer” we mean this new multiplicative way to think of distance.
-
-We have
-
-![](http://gdaymath.com/wp-content/uploads/2018/03/P1-3.jpg)
-
-The numbers 9, 99, 999, 9999, … are indeed approaching the value 0−1=−1.
-
-Challenge: Show that in a 2←3 machine that ⋯|1|1|1|1|2 is negative one! Show
-that ⋯|0|1|0|1|0|1|0|2 when multiplied by 5 gives 1, and so represents 15.
-(What measure of distance might we be using on the number line this time for
-these “numbers” to make sense?)
- 
-
-### Constructing Negative Integers
-
-In our base-ten thinking with our multiplicative notion of distance on the
-number line, we set
-
-|a|ten=110k where k is the largest count of times a can be divided by ten and
-remain an integer.
-
-And we have made sense of ⋯9999 as a meaningful number with value −1.
-
-So what’s −2  in this unusual system of arithmetic?
-
-Let’s think in terms of a 1←10 machine. Since −1=⋯9|9|9|9 , and −2 is double −1,
-we should have
-
-−2=⋯18|18|18|18.
-
-With explosions we get
-
-−2=⋯18|18|18|18
-=⋯18|18|19|8
-=⋯18|19|9|8
-=⋯19|9|9|8
-=⋯9|9|9|8.
-
-And one can check that this long addition does give zero.
-
-![](http://gdaymath.com/wp-content/uploads/2018/03/P1-4.jpg)
-
-We can see now how to readily construct any negative integer. For example, we
-can see that adding 47 to ⋯999953 will give zero and so this latter quantity
-must be −47, and that adding 3000 to ⋯9997000 gives zero and so this quantity must be −3000.
-
-Challenge: What is −2 in a 2←3 machine? What is −5?
- 
-
-### Constructing Fractions
-
-We saw that ⋯66667 is the fraction 13: multiply this quantity by three and you
-get 1.
-
-The 1←10 machine provides a natural way to compute such fractions. For example,
-let’s find the ten-adic representation of 47 . That is, let’s find a number x
-such that 7×x=4. Start by writing
-
-x=⋯h|g|f|e|d|c|b|a
-
-as for a 1←10 machine. Then
-
-7x=⋯7h|7g|7f|7e|7d|7c|7b|7a.
-
-We want 7a ,after explosions, to leave a 4. So we need a multiple of 7 four
-greater than a multiple of 10. We see that 7a=14 is good. So let’s set a=2.
-
-x=⋯h|g|f|e|d|c|b|2
-7x=⋯7h|7g|7f|7e|7d|7c|7b|14
-=⋯7h|7g|7f|7e|7d|7c|7b+1|4
- 
-Now we want 7b+1 to be a multiple of 10 so that all dots in that box explode to
-leave zero behind. This suggests b=7.
-
-x=⋯h|g|f|e|d|c|7|2
-7x=⋯7h|7g|7f|7e|7d|7c|50|4
-=⋯7h|7g|7f|7e|7d|7c+5|0|4
-
-Now we need 7c+5 a multiple of 10. Choose c=5.
-
-x=⋯h|g|f|e|d|5|7|2
-7x=⋯7h|7g|7f|7e|7d|40|0|4
-=⋯7h|7g|7f|7e|7d+4|0|0|4
-
-Now choose d=8.
-
-x=⋯h|g|f|e|8|5|7|2
-7x=⋯7h|7g|7f|7e|60|0|0|4
-=⋯7h|7g|7f|7e+6|0|0|0|4
-
-And then e=2.
-
-x=⋯h|g|f|2|8|5|7|2
-7x=⋯7h|7g|7f|20|0|0|0|4
-=⋯7h|7g|7f+2|0|0|0|0|4
-
-And f=4.
-
-x=⋯h|g|4|2|8|5|7|2
-7x=⋯7h|7g|30|0|0|0|0|4
-=⋯7h|7g+3|0|0|0|0|0|4
-
-And g=1.
-
-x=⋯h|1|4|2|8|5|7|2
-7x=⋯7h|10|0|0|0|0|0|4
-=⋯7h+1|0|0|0|0|0|0|4
-
-And now I am doing the same work as I did for a value b, making 7b+1 a multiple
-of 10. We are in a cycle and so x=47 is represented as
-
-⋯1428571428571428572=142857¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯2.
-
-
-Challenge: This process felt reminiscent of the task of writing 47 as a decimal
-in ordinary arithmetic using a 1←10 machine with decimals. We argued there too
-that the decimal represent had to fall into a cycle.
-
-Can you argue that the fraction 213 will also have a repeating ten-adic expansion?
-
-
-### A Glitch
-
-Let’s try to compute the ten-adic representation of the fraction 12. Here we
-seek a number
-
-x=⋯h|g|f|e|d|c|b|a
-so that
-
-2x=⋯2h|2g|2f|2e|2d|2c|2b|2a
-equals 1.
-
-This means we a number a so that, after explosions, 2a leaves a single dot. That
-is, we need 2a to be one more than a multiple of ten. This is not possible!
-
-
-Challenge: Contemplate the ten-adic expansions for 15 and 310 and 235.
-In general, which fractions pq seem to be problematic?
-
-
-Challenge: Develop a general theory that if pq is a reduced fraction with q
-sharing no factor in common with ten (other than 1), then it is for certain
-possible to express pq as a ten-adic number ⋯hgfedcba. Show further that its
-expression is sure to fall into a repeating cycle.
- 
-
-### Broadening our Definition a Tad
-
-It seems we have defined a ten-adic value to be an expression of the form
-⋯edcba with each digit one of the standard digits 0 through 9, allowing for
-non-zero digits to appear infinitely far to the left.
-
-In this system we have the ordinary positive integers,
-eg 5 is ⋯00005,
-
-the negative numbers
-eg −5 is ⋯99995
-
-and some fractions
-eg 13 is ⋯66667.
-
-But not all fractions. It turns out that the troublesome fractions are the ones
-pq which, when written in reduced form, have a denominator a multiple of 2 or 5
-or both.
-
-We can obviate this problem if we allow a ten-adic number to extend finitely far
-into the decimal places on the right.  That is, set a ten-adic expression to be
-one of the form ⋯edcba.xy…z with each digit one of the standard digits 0 through
-9, allowing for non-zero digits to appear infinitely far to the left of the
-decimal point, and only finitely far to its right. (After all, we do the
-analogous thing in ordinary arithmetic by writing 33.3333⋯, for example, for
-thirty-three and a third.)
-
-Now we have
-12=0.5 is ⋯0000.5
-
-and
-23100=0.23 is ⋯0000.23.
-
-We can also handle 235 by thinking of this as 27×5=2×27×10=4/710. Since 47 is
-142857¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯2 we must have 235=142857¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯.2.
-
-Challenge: Show that 16=⋯3333.5 and hence find the ten-adic expression for
-512=16+14. What is the ten-adic expression for 112?
-
-Challenge: Explain why every fraction is now sure to have a ten-adic
-representation.
-
-Challenge: Explore a theory of “3/2-adic” representations of fractions using a
-2←3 machine.
+    x-dot-machine(cells="…99998")
+    x-gesture(target="#dots-2 .dot-cell:last-child")
 
 ---
 
-### A Serious Flaw of Our Ten-adic Numbers
+In other words, _{span.nowrap}…999998 = [[-2]]_. _{span.reveal(when="blank-0")}
+We can similarly calculate that *{span.nowrap}…999997 = [[-3]]*,
+*{span.nowrap}…999953 = [[-47]]*, *{span.nowrap}…999700 = –300*
+and so on. Every negative integer has a ten-adic equivalent._
 
-With the ten-adic numbers we can represent all integers and fractions. But did
-you notice that all the numbers we presented so far have repeating cycles?
+---
+> id: dots-3
+> goals: dots
 
-We can also consider numbers in this system, with infinitely many digits to the
-left, that don’t fall into repeating cycles. These must correspond to irrational
-numbers. (And possibly other new types of numbers?)
+{.text-center} •
 
-We can add and multiply ten-adic numbers. For example, we have seen ⋯66667 is 13
-and ⋯9999  is −1.  We can compute their sum to see an answer indeed one less
-than ⋯6667. (And ⋯6666  is −69=−23=13−1.)
+Constructing ten-adic fractions is a bit more difficult. Let’s see what happens
+if we multiply _{span.nowrap}…6666667_ by 3:
 
-![](http://gdaymath.com/wp-content/uploads/2018/03/P1-5.jpg)
+    x-dot-machine.tiny(cells="…66667")
+    p.text-center: button.btn.btn-small.btn-red Multiply by 3
+    x-gesture(target="#dots-3 button")
 
-And we can compute their product to see the answer ⋯3333, which is indeed −1/3.
+---
 
-![](http://gdaymath.com/wp-content/uploads/2018/03/p2-4.jpg)
+Since _{span.nowrap}…6666667_ × 3 = [[1]], *{span.reveal(when="blank-0")}we
+know that _{span.nowrap}…6666667_ = `1/3`.*
 
-And since we know how to make negative ten-adic numbers and fractions as
-ten-adic numbers, we can also subtract (add the negative) and divide (multiply
-by a fraction) ten-adic numbers.
+---
 
-Well, almost. We can’t divide by some ten-adic numbers. There’s a flaw in the
-ten-adic system.
+::: .box.problem-box
+    .box-title: h3 Challenge
+::: .box-body
 
-Here’s an example of the problem. We have that
+Can you work out which ten-adic number behaves like `2/3`?
 
-2×5=10 is a number close to zero.
-22×52=100 is a number closer to zero.
-23×53=1000 is a number even closer to zero.
+What about other fractions like `4/7` or `2/13`?
 
-And so on.
+:::
+:::
 
-It is possible to construct a non-zero ten-adic number N that behaves like an
-infinitely large power of two and a non-zero ten-adic number M that behaves like
-an infinitely large power of five, so their product then, N×M, is so close to
-zero that it actually is zero!
+_It turns out that there are a few fractions that cannot be expressed in our
+ten-adic number system: all fractions that, in their reduced form, have a
+[denominator](gloss:denominator) that is a multiple of 2 or 5 (or both). You
+can fix this by allowing ten-adic numbers to have a finite number of decimal
+places. Now, every [rational number](gloss:rational-numbers) as a ten-adic
+equivalent._
 
-N×M=0
+---
+> id: flaw
 
-Non-zero numbers that multiply to zero don’t exist ordinary arithmetic, but they
-do in the ten-adic system. This means we can’t divide by some non-zero numbers,
-like N and M in this arithmetic. (If dividing by N is possible, then divide the
-equation  N×M=0 through by N and get the contradictory statement that M=0.)
+### A Serious Flaw
 
-How might one construct these numbers N and M? It’s a bit tricky, but here’s the
-gist of it.
+We’ve now seen that every integer an fraction has a ten-adic equivalent, and
+that we can add, subtract and multiply ten-adic numbers, just like we would
+normal integers. Unfortunately there is one serious flaw: we cannot _divide_ by
+all ten-adic numbers.
 
-Here are the first few powers of five:
-5, 25, 125, 625, 3125, 15625, 78125, …
+To see why that’s the case, we need to look at the powers of 2 and 5:
 
-All of these powers end in 5.
+::: column(width=180)
 
-Infinitely of them actually end in 25.
+{.text-center} `2^1` = 2<br>
+`2^2` = 4<br>
+`2^3` = 8<br>
+`2^4` = 16<br>
+`2^5` = [[32]]<br>
+`2^6` = [[64]]<br>
+`2^7` = 128<br>
+…
 
-Actually, one can verify that infinitely of then actually end in 125. (Multiply
-any one that does by 25 to get another one.)
+::: column(width=180)
 
-Actually, infinitely many of them end in 3125. (Multiply any on that does by 625
-to find another one that does.)
+{.text-center} `5^1` = 5<br>
+`5^2` = 25<br>
+`5^3` = [[125]]<br>
+`5^4` = [[625]]<br>
+`5^5` = 3,_{span.po2}125_<br>
+`5^6` = 15,_{span.po2}625_<br>
+`5^7` = 78,_{span.po2}125_<br>
+…
 
-And so on.
+:::
 
-In principle, we can construct a ten-adic number M=⋯3125 for which there are
-infinitely many powers of five that end with the same set of digits as M does,
-for any size set of digits you want. (There are infinitely many powers of five
-that end with the final set of one-hundred digits as M does, and there are
-infinitely many powers of five that end with the same million final digits, and
-so on.)
+---
+> id: flaw-1
 
+Notice how many of the powers of 5 end in <x-target to=".po2" no-margins>other,
+smaller powers of 5</x-target>. The same is also true for powers of 2. It turns
+out that we can create two infinite, 10-adic numbers, that always end in powers
+of 2 or 5 respectively:
 
-We can do the same construction for the powers of two and construct a ten-adic
-number N=⋯832 for which there exist infinitely many powers of two that end with
-any final set of digits of N.
+::: column(width=140)
 
-Now look what happens when you multiply N and M. You do indeed get zero.
+{.text-right} `2^1` = 2<br>
+`2^5` = 32<br>
+`2^25` = 33554432<br>
+__{.i.m-red}M__ = …33554432
 
-![](http://gdaymath.com/wp-content/uploads/2018/03/p3-4.jpg)
+::: column(width=140)
 
-The problem is that 10 is a composite number. One can prove that this annoyance
-will never arise if one works in base that is a prime number instead!
+{.text-right} `5^1` = 5<br>
+`5^2` = 25<br>
+`5^3` = 125<br>
+__{.i.m-yellow}N__ = …1953125
+
+:::
+
+_{button.next-step} Continue_
+
+---
+> id: flaw-2
+
+If we try to multiple powers of 2 and 5, we get a sequence of products that get
+closer and closer to zero (in our 10-adic sense):
+
+|    |   |     |   |           |
+| -: | - | --: | - | --------: |
+|  2 | × |   5 | = |        10 |
+|  4 | × |  25 | = |       100 |
+|  8 | × | 125 | = |  [[1000]] |
+| 16 | × | 625 | = | [[10000]] |
+
+---
+> id: flaw-3
+
+The same happens if we try to multiply __{.i.m-red}M__ and __{.i.m-yellow}N__:
+
+|   |   |    |    |    |    |
+| - | - | -- | -- | -- | -- |
+|   | … |  3 |  1 |  2 |  5 |
+| × | … |  4 |  4 |  3 |  2 |
+|   | … |  6 |  2 |  4 | 10 |
+|   | … |  3 |  6 | 15 |    |
+|   | … |  8 | 20 |    |    |
+| + | … | 20 |    |    |    |
+| = | … | 37 | 28 | 19 | 10 |
+| = | … |  0 |  0 |  0 |  0 |
+
+---
+
+In other words, we have found two non-zero numbers __{.i.m-red}M__ and
+__{.i.m-yellow}N__ so that __{.i.m-red}M__ × __{.i.m-yellow}N__ = 0.
+
+This means that in ten-adic arithmetic, it is impossible to divide by
+__{.i.m-red}M__ or __{.i.m-yellow}N__. (If it were possible, we could divide the
+equation __{.i.m-red}M__ × __{.i.m-yellow}N__ = 0 by __{.i.m-yellow}N__, and get
+__{.i.m-red}M__ = 0. That is a contradiction.)
 
 
 
@@ -728,28 +569,34 @@ will never arise if one works in base that is a prime number instead!
 > section: p-adic
 > id: p-adic
 
-In the [previous section](), we managed to construct two [10-adic
-numbers](gloss:adic) _M_ and _N_ that were both not zero, so that `M×N=0`. This
-is very different from how normal multiplication works, and would be a serious
-flaw in the number system.
+In the [previous section](/course/exploding-dots/unusual), we managed to
+construct two non-zero [10-adic numbers](gloss:adic) _M_ and _N_, so that
+`M×N=0`. This means that it is impossible to divide by numbers like _M_ and _N_
+– a serious flaw in any number system.
 
 It turns out, however, that this problem only occurs if the number base is not a
 [prime number](gloss:prime). Since 10 [[is not prime|is prime]],
-_{span.reveal(when="blank-0")}the 10-adic numbers contain a glitch. 2-adic or
-3-adic numbers, on the other hand, don’t._
+_{span.reveal(when="blank-0")}the 10-adic numbers are flawed. 2-adic or 3-adic
+numbers, on the other hand, are not._
+
+---
+
+Mathematicians call these numbers __*p*-adic numbers__, where the *p* stands for
+“prime”. Even though they don't seem particularly relevant in everyday life,
+_p_-adic numbers turn out to be very useful in certain parts of mathematics.
+
+For example, many unanswered problems in mathematics are related to prime
+numbers and [prime factorizations](gloss:factorisation). Since _p_-adic numbers
+were defined using _multiplication_ rather than _addition_, they are perfect for
+analysing these problems. *P*-adic numbers were even used in Andrew Wiles’
+famous proof of [Fermat’s Last Theorem](gloss:fermat-last).
 
 ---
 > id: square
 
-These number systems are called __*p*-adic numbers__, where the *p* stands for
-“prime”. It turns out that they are incredibly useful in mathematics: they
-provide a powerful tool for analyzing the properties of prime numbers and [prime
-factorizations](gloss:factorisation) of numbers. *P*-adic numbers were even used
-in Andrew Wiles’ famous proof of [Fermat’s Last Theorem](gloss:fermat-last).
-
-But one of the must surprising applications of p-adic numbers is actually in
-geometry. Here you can see a square that is divided into ${2*x}{x|9|1,50,1}
-small triangles of equal area:
+One of the must surprising applications of p-adic numbers is in geometry. Here
+you can see a square that is divided into ${2*x}{x|9|1,50,1} small triangles of
+equal area:
 
     figure: svg.square(width=320 height=320)
     x-gesture(target="x-var" slide="100,0")

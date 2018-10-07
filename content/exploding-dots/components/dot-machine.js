@@ -5,8 +5,8 @@
 
 
 
-import { Evented, defer } from '@mathigon/core';
-import { Point } from '@mathigon/fermat';
+import { Evented, defer, last } from '@mathigon/core';
+import { Point, numberFormat } from '@mathigon/fermat';
 import { CustomElement, registerElement, $N, pointerPosition } from '@mathigon/boost';
 import { Audio } from '../../shared/components/audio'
 
@@ -18,7 +18,7 @@ const annihilateAudio = new Audio('/resources/exploding-dots/audio/annihilate.m4
 
 class Cell extends Evented {
 
-  constructor($dotMachine, initial=0) {
+  constructor($dotMachine, initial=0, index=0) {
     super();
 
     this.$dotMachine = $dotMachine;
@@ -28,17 +28,15 @@ class Cell extends Evented {
     this.dotCols = 1;
     this.dotRows = 1;
 
-    this.$el.on('click', e => {
-      let stopped = false;
-      this.trigger('add', {stop: () => stopped = true });
-      if (stopped) return;
-      this.addDotAntidot(pointerPosition(e).subtract(this.$el.topLeftPosition));
-      enterAudio.play();
-    });
+    this.value = initial;
+    this.$value = $N('div', {class: 'cell-value', html: initial}, this.$el);
+
+    const order = numberFormat(Math.pow($dotMachine.type, index));
+    $N('div', {class: 'cell-order', html: order}, this.$el);
 
     if (initial) {
       this.rearrange(initial);
-      for (let i = 0; i < initial; ++i) this.addDot();
+      for (let i = 0; i < initial; ++i) this.addDot(null, {count: false});
     }
   }
 
@@ -46,8 +44,9 @@ class Cell extends Evented {
   get $antiDots() { return this.$dots.filter($d => $d.data.anti); }
 
   getDotPosition(i) {
-    const x = 60 - this.dotCols * 10 + (i % this.dotCols) * 20;
-    const y = 60 - this.dotRows * 10 + Math.floor(i / this.dotCols) * 20;
+    const s = this.$dotMachine.spacing;
+    const x = 60 - this.dotCols * s/2 + (i % this.dotCols) * s;
+    const y = 60 - this.dotRows * s/2 + Math.floor(i / this.dotCols) * s;
     return new Point(x, y);
   }
 
@@ -64,9 +63,9 @@ class Cell extends Evented {
     }
   }
 
-
-  addDot(posn=null, {className='', dx=0}={}) {
+  addDot(posn=null, {className='', dx=0, audio=false, count=true}={}) {
     if (!posn) posn = this.getDotPosition(this.$dots.length);
+    if (audio) enterAudio.play();
 
     const $dot = $N('div', {class: 'dot ' + className}, this.$el);
     this.$dots.push($dot);
@@ -74,18 +73,24 @@ class Cell extends Evented {
     $dot.animate({transform: [`translate(${posn.x}px, ${posn.y}px) scale(0.1)`,
         `translate(${posn.x + dx}px, ${posn.y}px)`]}, 400, 0, 'bounce-in');
 
+    if (count) {
+      this.value += 1;
+      this.$value.text = this.value;
+    }
+
     setTimeout(() => this.rearrange(), 400);
     return $dot;
   }
 
   addDotAntidot(posn) {
-    this.addDot(posn, {dx: -10});
-    const $antiDot = this.addDot(posn, {className: 'anti', dx: 10});
+    this.addDot(posn, {dx: -10, audio: true, count: false});
+    const $antiDot = this.addDot(posn, {className: 'anti', dx: 10, count: false});
     $antiDot.data.anti = true;
   }
 
-  explode(n, recursive=false) {
-    if (this.$fullDots.length < n) return;
+  explode(recursive=false) {
+    const n = this.$dotMachine.type;
+    if (this.$fullDots.length < n) return Promise.resolve();
 
     const $remove = this.$dots.slice(0, n);
     this.$dots = this.$dots.slice(n);
@@ -94,11 +99,10 @@ class Cell extends Evented {
 
     const nextIndex = this.$dotMachine.cells.indexOf(this) - 1;
     const next = this.$dotMachine.cells[nextIndex];
-    if (!next) return;
 
-    const target = next.getDotPosition(next.$dots.length);
-    const transform = target.add(next.$el.topLeftPosition)
-        .subtract(this.$el.topLeftPosition);
+    const target = next ? next.getDotPosition(next.$dots.length) : null;
+    const transform = next ? target.add(next.$el.topLeftPosition)
+        .subtract(this.$el.topLeftPosition) : new Point(-54, 50);
 
     for (let $r of $remove) {
       $r.animate({transform: `translate(${transform.x}px,${transform.y}px) scale(2)`}, 400, 400)
@@ -107,16 +111,19 @@ class Cell extends Evented {
 
     setTimeout(() => explodeAudio.play(), 100);
     setTimeout(() => this.rearrange(), 400);
-    setTimeout(() => next.addDot(target), 800);
+
+    setTimeout(() => {
+      if (next) next.addDot(target);
+      this.value -= n;
+      this.$value.text = this.value;
+    }, 800);
 
     const deferred = defer();
     setTimeout(() => {
-      if (recursive) {
-        const cell = (this.$fullDots.length < n) ? next : this;
-        cell.explode(n, recursive);
-      }
-      deferred.resolve();
-    }, 1800);
+      const cell = (this.$fullDots.length < n) ? next : this;
+      if (!recursive || !cell) return deferred.resolve();
+      cell.explode(n, recursive).then(() => deferred.resolve());
+    }, 1200);
     return deferred.promise;
   }
 
@@ -147,24 +154,40 @@ class Cell extends Evented {
 export class DotMachine extends CustomElement {
 
   ready() {
-    const cells = (this.attr('cells') || '000').split('.');
+    const cellString = (this.attr('cells') || '000');
+    const cells = cellString.replace('…', '').split('.');
+
+    this.type = (+this.attr('type') || 10);
+    this.spacing = this.hasClass('tiny') ? 14 : 20;
 
     this.$wrap = $N('div', {class: 'dot-wrap'}, this);
     this.cells = [];
 
-    for (let c of cells[0]) this.cells.push(new Cell(this, +c));
+    if (cellString[0] === '…') $N('div', {class: 'dot-ellipses'}, this.$wrap);
+
+    for (let i=0; i<cells[0].length; ++i) {
+      this.cells.push(new Cell(this, +cells[0][i], cells[0].length - 1 - i));
+    }
+
     if (cells[1]) {
       $N('div', {class: 'dot-decimal'}, this.$wrap);
-      for (let c of cells[1]) this.cells.push(new Cell(this, +c));
+      for (let i=0; i<cells[1].length; ++i) {
+        this.cells.push(new Cell(this, +cells[1][i], -1 - i));
+      }
     }
 
-    $N('div', {class: 'dot-ellipses'}, this.$wrap);
+    if (last(cellString) === '…') $N('div', {class: 'dot-ellipses'}, this.$wrap);
 
-    for (let i = 0; i < this.cells.length; ++i) {
-      this.cells[i].on('add', (e) => {
-        this.trigger('add', {i, stop: e.stop});
+    this.cells.forEach((cell, i) => {
+      cell.$el.on('click', (e) => {
+        const point = pointerPosition(e).subtract(cell.$el.topLeftPosition);
+        this.trigger('add', {i, point, cell});
       });
-    }
+    });
+  }
+
+  explode() {
+    return last(this.cells).explode(true);
   }
 }
 

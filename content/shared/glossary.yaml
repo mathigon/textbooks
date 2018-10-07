@@ -25,6 +25,16 @@ formula:
   text: A __formula__ is a rule or equation that describes the relationship
     between two or more variables. An example is `A = πr^2`.
 
+numerator:
+  title: Numerator
+  text: The __numerator__ is the top number in a fraction. For example, in
+    `4/7`, the number 4 is the numerator.
+
+denominator:
+  title: Denominator
+  text: The __denominator__ is the bottom number in a fraction. For example, in
+    `4/7`, the number 7 is the denominator.
+
 
 
 # ==============================================================================
@@ -1141,11 +1151,13 @@ information:
 
 dot-machine:
   title: Dot Machine
-  text: A __dot machine__ consists of multiple cells containing dots. You can
-    manipulate these dots according to specific rules. For example, in a `1←3`
-    machine, 3 dots in one cell can be converted into 1 dot in the next cell to
-    the _left_. Similarly, 1 dot can be converted into 3 dots in the next cell
-    to the _right_. This is called an “explosion”.
+  text: |
+    A __dot machine__ consists of multiple cells containing dots. You can
+    manipulate these dots according to specific rules.
+
+    For example, in a `1←3` machine, 3 dots in one cell can be converted into 1
+    dot in the next cell to the _left_. Similarly, 1 dot can be converted into
+    3 dots in the next cell to the _right_. This is called an “explosion”.
 
 anti-dot:
   title: Anti-Dot

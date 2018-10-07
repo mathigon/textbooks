@@ -6,13 +6,15 @@
 
 @import "styles/variables";
 
+@background: mix(mix(@blue, @green), white, 25%);
+
 x-dot-machine {
   display: block;
-  height: 100px;
   margin: 1.5em 0;
+  padding: 20px 0 16px;
 
-  .dot-wrap { display: flex; flex-direction: row; justify-content: center; }
-  .dot-cell { width: 100px; height: 100px; margin: 2px; background: @grey-background; position: relative; border-radius: 4px; }
+  .dot-wrap { display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; }
+  .dot-cell { width: 100px; height: 100px; margin: 2px; background: @background; position: relative; border-radius: 4px; }
 
   .dot-decimal, .dot-ellipses { font-size: 44px; text-align: center; padding: 0 12px; color: @dark-grey; }
   .dot-decimal:before { content: "."; }
@@ -30,12 +32,30 @@ x-dot-machine {
     margin: -8px;
     box-sizing: border-box;
 
-    &.glowing { background: @yellow; box-shadow: 0 0 0 4px fade(@yellow, 30%); }
-    &.warning { background: @red; box-shadow: 0 0 0 4px fade(@red, 30%); }
+    // background-image: radial-gradient(circle, transparent, fade(black, 20%));
+    // background-position: -2px -2px;
 
-    &.anti { background: @grey-background; border: 2px solid @blue; }
+    &.dark { background-color: mix(@blue, @green); }
+    &.light { background-color: mix(@blue, @red); }
+
+    &.glowing { background-color: @yellow; box-shadow: 0 0 0 4px fade(@yellow, 30%); }
+    &.warning { background-color: @red; box-shadow: 0 0 0 4px fade(@red, 30%); }
+
+    &.anti { background-color: @background; border: 2px solid @blue; }
     &.anti.warning { border-color: @red; }
     &.anti.glowing { border-color: @yellow; }
   }
+  &.tiny .dot { width: 12px; height: 12px; }
 
+  .cell-value, .cell-order {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cell-value { font-size: 24px; color: @blue; top: -34px; }
+  .cell-order { font-size: 14px; color: @background; bottom: -20px; }
 }

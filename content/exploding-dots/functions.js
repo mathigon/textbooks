@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import { repeat } from '@mathigon/core';
+import { repeat, wait } from '@mathigon/core';
 import { Rectangle, Point, random, numberFormat } from '@mathigon/fermat';
 import { $N, Colour } from '@mathigon/boost';
 import './components/dot-machine';
@@ -48,8 +48,6 @@ export function choice($step) {
 export function numberline($step) {
   const $limit = $step.$('span.hidden');
 
-  console.log(repeat);
-
   $step.model.set('nines', n => '0.' + repeat('9', n));
   $step.model.watch(state => {
     if (state.n === 2) $step.score('n2');
@@ -72,29 +70,95 @@ export function dots($step) {
   const $btn = $step.$('button');
 
   let dStep = 0;
-  $machine.on('add', ({i, stop}) => {
-    if (i !== xStep + 1) {
-      stop();
-      $step.addHint('This is not the correct cell…', {className: 'incorrect'});
-      return;
-    }
+  $machine.on('add', ({i, cell, point}) => {
+    if (i !== xStep + 1)
+      return $step.addHint('incorrectCell', {className: 'incorrect'});
 
+    cell.addDotAntidot(point);
     dStep = xStep + 1;
     $step.score('d' + dStep);
   });
 
   let xStep = 0;
   $btn.on('click', async function() {
-    if (dStep <= xStep) {
-      $step.addHint('Remember to add the dot/anti-dot pairs before exploding.',
-          {className: 'incorrect'});
-      return;
-    }
+    if (dStep <= xStep)
+      return $step.addHint('addPairFirst', {className: 'incorrect'});
 
-    await $machine.cells[dStep].explode(10);
+    await $machine.cells[dStep].explode();
     await $machine.cells[dStep - 1].annihilate();
     xStep = dStep;
     $step.score('x' + xStep);
+  });
+}
+
+// -----------------------------------------------------------------------------
+
+export function dots1($step) {
+  const $machine = $step.$('x-dot-machine');
+  let added = false;
+
+  $machine.on('add', ({i, cell, point}) => {
+    if (added) return;
+    if (i !== 4) return $step.addHint('incorrectCell', {className: 'incorrect'});
+    added = true;
+
+    cell.addDot(point, {audio: true});
+    wait(1000).then(() => cell.explode(true))
+        .then(() => $step.score('dot'));
+  });
+}
+
+function svgs($step) {
+  let t = 1200;
+  for (let $g of $step.$$('svg g')) {
+    $g.hide();
+    $g.enter('fade', 400, t);
+    t += 800;
+  }
+}
+
+export const warp1 = svgs;
+export const warp2 = svgs;
+
+export function dots2($step) {
+  const $machine = $step.$('x-dot-machine');
+  let added = 0;
+
+  $machine.on('add', ({i, cell, point}) => {
+    if (added >= 2) return;
+    if (i !== 4) return $step.addHint('incorrectCell', {className: 'incorrect'});
+    added += 1;
+
+    cell.addDot(point, {audio: true});
+
+    if (added === 2) {
+      wait(1000).then(() => cell.explode(true))
+          .then(() => $step.score('dots'));
+    }
+  });
+}
+
+function addDots($machine, className) {
+  for (let i=0; i<=4; ++i) {
+    for (let x=0; x<6; ++x) {
+      const $dot = $machine.cells[i].addDot();
+      $dot.addClass(className);
+    }
+  }
+
+  const $dot = $machine.cells[4].addDot(null, {audio: true});
+  $dot.addClass(className);
+}
+
+export function dots3($step) {
+  const $machine = $step.$('x-dot-machine');
+  const $button = $step.$('button');
+
+  $button.one('click', () => {
+    addDots($machine, 'dark');
+    setTimeout(() => addDots($machine, 'light'), 1000);
+
+    setTimeout(() => $machine.explode().then(() => $step.score('dots')), 2000);
   });
 }
 

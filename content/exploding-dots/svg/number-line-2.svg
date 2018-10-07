@@ -1,0 +1,45 @@
+<svg width="700" height="100" viewBox="0 0 700 100">
+  <line x1="10" y1="68" x2="690" y2="68" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="582" y1="24" x2="582" y2="52.7" fill="none" stroke="#1f7aff" stroke-linecap="round" stroke-width="2"/>
+  <polygon points="582 64 575.5 48.08 582 51.86 588.5 48.08 582 64" fill="#1f7aff"/>
+  <text transform="translate(577.71 16.89)" font-size="16" fill="#1f7aff" font-weight="700">6</text>
+  <line x1="210" y1="24" x2="210" y2="52.7" fill="none" stroke="#1f7aff" stroke-linecap="round" stroke-width="2"/>
+  <polygon points="210 64 203.5 48.08 210 51.86 216.5 48.08 210 64" fill="#1f7aff"/>
+  <text transform="translate(205.71 16.89)" font-size="16" fill="#1f7aff" font-weight="700">2</text>
+  <text transform="translate(19.2 92.89)" font-size="18" font-weight="700">0</text>
+  <text transform="translate(112.2 92.89)" font-size="18" font-weight="700">1</text>
+  <text transform="translate(205.2 92.89)" font-size="18" font-weight="700">2</text>
+  <text transform="translate(298.2 92.89)" font-size="18" font-weight="700">3</text>
+  <text transform="translate(391.2 92.89)" font-size="18" font-weight="700">4</text>
+  <text transform="translate(484.2 92.89)" font-size="18" font-weight="700">5</text>
+  <text transform="translate(577.2 92.89)" font-size="18" font-weight="700">6</text>
+  <text transform="translate(670.2 92.89)" font-size="18" font-weight="700">7</text>
+  <line x1="24" y1="68" x2="24" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="117" y1="68" x2="117" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="210" y1="68" x2="210" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="303" y1="68" x2="303" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="396" y1="68" x2="396" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="582" y1="68" x2="582" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="489" y1="68" x2="489" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <line x1="675" y1="68" x2="675" y2="76" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  <g>
+    <path d="M291.38,55.91a72.52,72.52,0,0,0-32.25-7.41c-17.09,0-32.61,5.7-44.17,15" fill="none" stroke="#ff941f" stroke-linecap="round" stroke-width="5"/>
+    <polygon points="303.29 63.5 290.62 46.14 290.37 55.54 282.09 59.98 303.29 63.5" fill="#ff941f"/>
+    <text transform="translate(253.68 40.89)" font-size="20" fill="#ff941f" font-weight="700">1</text>
+  </g>
+  <g>
+    <path d="M382.62,55.91a72.57,72.57,0,0,0-32.26-7.41c-17.08,0-32.6,5.7-44.16,15" fill="none" stroke="#ff941f" stroke-linecap="round" stroke-width="5"/>
+    <polygon points="394.53 63.5 381.85 46.14 381.61 55.54 373.32 59.98 394.53 63.5" fill="#ff941f"/>
+    <text transform="translate(345.68 40.89)" font-size="20" fill="#ff941f" font-weight="700">2</text>
+  </g>
+  <g>
+    <path d="M473.85,55.91A72.52,72.52,0,0,0,441.6,48.5c-17.08,0-32.61,5.7-44.16,15" fill="none" stroke="#ff941f" stroke-linecap="round" stroke-width="5"/>
+    <polygon points="485.76 63.5 473.09 46.14 472.84 55.54 464.56 59.98 485.76 63.5" fill="#ff941f"/>
+    <text transform="translate(436.68 40.89)" font-size="20" fill="#ff941f" font-weight="700">3</text>
+  </g>
+  <g>
+    <path d="M565.09,55.91a72.52,72.52,0,0,0-32.25-7.41c-17.09,0-32.61,5.7-44.17,15" fill="none" stroke="#ff941f" stroke-linecap="round" stroke-width="5"/>
+    <polygon points="577 63.5 564.33 46.14 564.08 55.54 555.79 59.98 577 63.5" fill="#ff941f"/>
+    <text transform="translate(527.68 40.89)" font-size="20" fill="#ff941f" font-weight="700">4</text>
+  </g>
+</svg>
