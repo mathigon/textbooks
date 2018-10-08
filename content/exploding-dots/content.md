@@ -143,6 +143,7 @@ As humans, we can only ever write a finite number of 9s, say ${n}{n|1|1,15,1}:
         text(transform="translate(637.59 14.62)" font-size="16") 0.999
         line(x1="655" y1="68.53" x2="655" y2="19" stroke="#1f7aff" stroke-linecap="round" stroke-width="2")
         polygon(points="655 77 659.88 65.06 655 67.89 650.12 65.06 655 77")
+    x-gesture(target="x-var" slide="100,0")
 
 {.convergence} **{.m-yellow}0.9** is less than 1.  
 _{span.reveal(when="n2")} **{.m-green}0.99** is less than 1._  
@@ -188,7 +189,7 @@ number.
 {.reveal(when="d1")} Now click the [explode button](-> #dots button) to simplify
 the number using the `1←10` rule.
 
-{.reveal(when="x1")} Let's do the same thing for the [second decimal
+{.reveal(when="x1")} Let’s do the same thing for the [second decimal
 box](-> #dots .dot-decimal + .dot-cell + .dot-cell). First add a dot and
 anti-dot pair, and then explode.
 
@@ -277,17 +278,17 @@ _Do you believe that?_
 
 Even though …9999999 is clearly not a “normal” number, let’s assume for now that
 it exists, and that it follows the basic laws of arithmetic. If that is the
-case, we'd expect …9999999 + 1 = [[0]].
+case, we’d expect …9999999 + 1 = [[0]].
 
 ---
 > id: dots-1
 > goals: dot
 
-Let's use a [`1←10` machine](gloss:dot-machine) to see if that is actually the
-case. Click somewhere in the [first cell](-> #dots-1 .dot-cell:last-child) to
-add 1:
+Let’s use a [`1←10` machine](gloss:dot-machine) to see if that is actually the
+case. Click somewhere in the 1s cell to add 1:
 
     x-dot-machine(cells="…99999")
+    x-gesture(target="#dots-1 .dot-cell:last-child")
 
 ---
 
@@ -582,7 +583,7 @@ numbers, on the other hand, are not._
 ---
 
 Mathematicians call these numbers __*p*-adic numbers__, where the *p* stands for
-“prime”. Even though they don't seem particularly relevant in everyday life,
+“prime”. Even though they don’t seem particularly relevant in everyday life,
 _p_-adic numbers turn out to be very useful in certain parts of mathematics.
 
 For example, many unanswered problems in mathematics are related to prime
