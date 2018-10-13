@@ -2096,9 +2096,9 @@ Of course, each of these patterns has a mathematical reason that explains why it
 appears. Maybe you can find some of them!
 
 Another question you might ask is how often a number appears in Pascal’s
-triangle. Clearly there are infinitely many 1s, and every other number appears
-[[at least twice|at least once|exactly twice]], _{span.reveal(when="blank-0")}
-in the second diagonal on either side._
+triangle. Clearly there are infinitely many 1s, one 2, and every other number
+appears [[at least twice|at least once|exactly twice]],
+_{span.reveal(when="blank-0")} in the second diagonal on either side._
 
 ---
 > id: pascal-sequences-2
