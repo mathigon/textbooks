@@ -1,84 +1,69 @@
-# Graphs and Networks
+# Đồ thị và Mạng lưới
 
-## Introduction
+## Giới thiệu
 
 > id: intro
 > section: introduction
 
 ::: column.grow
-Every day we are surrounded by countless connections and networks: roads and
-rail tracks, phone lines, the internet, electronic circuits and even molecular
-bonds. There are also _social networks_ between friends and families. All these
-systems consist of certain _points_ called [[vertices|circles|crossings]], some
-of which are connected by [[edges|boundaries|pairs]]. In mathematics, this is
-called a [__graph__](gloss:graph).
+Mỗi ngày chúng ta tiếp xúc với muôn vàn những mạng lưới và kết nối khác nhau: hệ thống đường xá, đường ray, mạng điện thoại, internet, mạch điện tử và ngay cả liên kết phân tử. Chúng ta cũng có những kết nối xã hội với bạn bè và gia đình. Tất cả những hệ thống này chứa đựng những điểm gọi là [[đỉnh|vòng tròn|giao điểm]], trong đó một số điểm được nối với nhau bởi [[cạnh|giới hạn|cặp]]. Trong toán học hệ thống này được gọi là [__đồ thị__](gloss:graph).
 ::: column(width=160)
 
     svg#graph0.graph.novertices.noedges(width="160" height="130")
 
 :::
-
-__Graph theory__ is the study of graphs and their properties. It is one of the
-most exciting and visual areas of mathematics, and has countless important
-applications:
+__Lý thuyết về đồ thị __ là môn học về đồ thị và các đặc tính của nó. Đây là một trong những vấn đề thú vị và trực quan nhất trong toán học, và nó có muôn vàn những ứng dụng quan trọng khác nhau trong đời sống: 
 
     x-gallery(slide-width="300")
       div
         x-media(src="images/network1.jpg" width=260 height=260 lightbox)
-        p.caption Road and Rail Networks
+        p.caption Hệ thống đường giao thông và đường ray
       div
         x-media(src="images/network6.jpg" width=260 height=260 lightbox)
-        p.caption Integrated Circuits
+        p.caption Tổ hợp mạch điện
       div
         x-media(src="images/network3.jpg" width=260 height=260 lightbox)
-        p.caption Supply Chains
+        p.caption Hệ thống phân phối
       div
         x-media(src="images/network2.jpg" width=260 height=260 lightbox)
-        p.caption Friendships
+        p.caption Mối quan hệ bạn bè
       div
         x-media(src="images/network7.jpg" width=260 height=260 lightbox)
-        p.caption Neural Connections
+        p.caption Mạng tế bào thần kinh
       div
         x-media(src="images/network4.jpg" width=260 height=260 lightbox)
-        p.caption The Internet
+        p.caption Mạng Internet
 
 ---
 > id: intro-1
 
-We can sketch the layout of simple graphs using circles and lines. The position
-of the circles and the length of the lines is irrelevant – we only care about
-_how they are connected_ to each other. The lines can even cross each other, and
-don’t have to be straight.
+Chúng ta có thể vẽ một đồ thị đơn giản sử dụng các đường và vòng tròn. Vị trí của các vòng tròn hay chiều dài của mỗi đường không quan trọng – chúng ta chỉ quan tâm cách chúng kết nối với nhau như thế nào. Các đường có thể cắt nhau và không cần phải là đường thẳng.
+
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} In some graphs, the edges only go one way. These are called
-[__directed graphs__](gloss:directed-graph).
+{.text-center} Trong một vài biểu đồ, cạnh chỉ đi theo một hướng nhất định. Chúng được gọi là
+[__đồ thị có hướng__](gloss:directed-graph).
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Some graphs consist of multiple distinct segments which are not
-connected by edges. These graphs are __disconnected__.
+{.text-center} Trong những đồ thị khác có chứa nhiều mảng khác nhau không được kết nối bởi cạnh biên. Những đồ thị này _gián đoạn_.
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Other graphs may contain multiple edges between the same pairs of
-vertices, or vertices which are connected to themselves (loops).
+{.text-center} Một số đồ thị khác có thể có nhiều cạnh kết nối cùng hai đỉnh (đa biên), hay những đỉnh kết nối với chính nó (vòng/khuyên).
 :::
 
-For simplicity we will only think about undirected and connected graphs without
-multiple edges and loops in this course.
+Để đơn giản, chúng ta chỉ chú trọng tìm hiểu về những đồ thị kết nối và không định hướng trong bài này, tạm gác qua đồ thị đa biên hay vòng/khuyên.  
 
 ---
 > id: intro-2
 
-We can create new graphs from an existing graph by removing some of the vertices
-and edges. The result is called a [__subgraph__](gloss:subgraph). Here are a few
-examples of graphs and subgraphs:
+Chúng ta có thể tạo nhiều đồ thị từ một đồ thị có sẵn bằng cách di chuyển các đỉnh và cạnh. Kết quả có được gọi là [__đồ thị con__](gloss:subgraph). Đây là một số ví dụ về đồ thị và đồ thị con:
 
 ::: column(width=200)
 
@@ -100,38 +85,35 @@ examples of graphs and subgraphs:
 ---
 > id: intro-3
 
-The [__order__](gloss:graph-order) of a graph is its number of vertices. The
-[__degree__](gloss:graph-degree) of a vertex in a graph is the number of edges
-which meet at that vertex.
+Đồ thị có [__cấp số__](gloss:graph-order) chính là số đỉnh của nó. Đồ thị cũng có 
+[__cấp độ__](gloss:graph-degree) là số cạnh gặp nhau ở đỉnh đó. 
 
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Order: [[5]]
+{.text-center} Cấp số: [[5]]
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Order: [[8]]
+{.text-center} Cấp số: [[8]]
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Degree: [[3]]
+{.text-center} Cấp độ: [[3]]
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Degree: [[6]]
+{.text-center} Cấp độ: [[6]]
 :::
 
 ---
 > id: intro-4
 
-Graphs which consist of a single ring of vertices are called
-[__cycles__](gloss:graph-cycle). All cycles have [[the same number of edges and
-vertices|more edges than vertices|fewer edges than vertices]].
+Các đồ thị có một vòng nối các đỉnh được gọi là [__vòng__]. Mọi đồ thị vòng đều có [[cùng một số lượng đỉnh và cạnh|nhiều cạnh hơn đỉnh|ít cạnh hơn đỉnh]].
 
     .row
       svg.graph(style='width: 90px; height: 90px;')
@@ -142,21 +124,18 @@ vertices|more edges than vertices|fewer edges than vertices]].
 > id: handshakes-1
 > section: parties-and-dating
 
-## Parties and Dating
+## Tiệc tùng và hẹn hò
 
 ::: column.grow
-You have been invited to an extravagant birthday party. Including yourself and
-the host, there are ${hnd}{hnd|5|3,15,1} people present.
+Hãy tưởng tượng bạn được mời tham dự một buổi tiệc sang trọng. Tính thêm cả bạn và chủ tiệc thì có tổng cộng
+ ${hnd}{hnd|5|3,15,1} người tham dự.
 
-In the evening, as guests get ready to leave, everyone shakes hands with
-everyone else. How many handshakes are there in total?
+Cuối buổi tiệc khi mọi người chuẩn bị ra về, mọi người bắt tay nhau. Vậy có tất cả bao nhiêu cái bắt tay? 
 
-We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
-and every handshake is [[an edge|a vertex]].
+Nếu minh họa những cái bắt tay bằng một đồ thị thì mỗi người tham gia là [[một đỉnh|một cạnh]],
+và mỗi cái bắt tay là [[một cạnh|một đỉnh]].
  
-{.reveal(when='blank-0 blank-1')}  Now it is easy to count the number of edges
-in the graph. We find that there with ${hnd} people, there are ${hnd*(hnd-1)/2}
-handshakes.
+{.reveal(when='blank-0 blank-1')}  Vậy giờ ta có thể dếm dễ dàng số lượng cạnh của đồ thị, với ${hnd} người, có tất cả ${hnd*(hnd-1)/2} cái bắt tay.
 
 ::: column.s-hide(width=240)
 
@@ -168,12 +147,10 @@ handshakes.
 ---
 > id: handshakes-2
 
-Rather than counting all the edges in large graphs, we could also try to find a
-simple formula that tells us the result for _any_ number of guests.
+Thay vì đếm tất cả các cạnh trong một đồ thị lớn, ta cũng có thể tìm một công thức đơn giản để tính ra kết quả với bất kỳ số lượng nào của người tham dự tiệc. 
 
-Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
-That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
-number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
+Mỗi người trong số ${n}{n|5|2,8,1} người đến tham dự tiệc bắt tay với ${n-1} người khác.
+Vậy là có  ${n} × ${n-1} = ${n×(n-1)} cái bắt tay tất cả. Cho số _n_ người, số cái bắt tay sẽ là [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
 
     p.var ${handshakeTable(n)}
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -181,11 +158,10 @@ number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</s
 ---
 > id: handshakes-2a
 
-Unfortunately this answer is not quite right: we have counted every handshake
-[[twice|once|three times]], _{span.reveal(when="blank-0")}once for each of the
-two people involved._
+Tuy nhiên thật ra kết quả này là không đúng: bởi chúng ta đã đếm mỗi cái bắt tay
+[[hai lần|một lần|ba lần]], _{span.reveal(when="blank-0")}vì hai người tham gia chỉ bắt tay một lần với nhau._
 
-{.reveal(when="blank-0")} For example, <x-target to=".handshakes tr:first-child
+{.reveal(when="blank-0")} Ví dụ, <x-target to=".handshakes tr:first-child
 td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two
 entries on the top row</x-target> are actually the same. The correct number of
 handshakes for ${n}{n|5|2,25,1} guests is <mfrac><mrow>${n} ×

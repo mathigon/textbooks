@@ -8,6 +8,8 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 
+const locales = ['en', 'vn'];
+
 
 // -----------------------------------------------------------------------------
 // Course Class
@@ -16,16 +18,17 @@ const COURSE_PATH = path.join(__dirname, 'assets/resources/');
 
 class Course {
 
-  constructor(id) {
-    const data = require(path.join(COURSE_PATH, id, 'data.json'));
+  constructor(id, locale) {
+    const data = require(path.join(COURSE_PATH, id, locale, 'data.json'));
     this.id = id;
     this.sections = data.sections;
     this.title = data.title;
+    this.locale = locale;
   }
 
   readFile(name) {
     try {
-      return fs.readFileSync(path.join(COURSE_PATH, this.id, name));
+      return fs.readFileSync(path.join(COURSE_PATH, this.id, this.locale, name));
     } catch (e) {
       return null;
     }
@@ -44,7 +47,12 @@ class Course {
 const Courses = {};
 const courseIds = fs.readdirSync(COURSE_PATH).filter(f => f !== 'shared')
     .filter(f => fs.statSync(COURSE_PATH + '/' + f).isDirectory());
-for (let c of courseIds) Courses[c] = new Course(c);
+for (let c of courseIds) {
+  Courses[c] = {};
+  for (let l of locales) {
+    Courses[c][l] = new Course(c, l);
+  }
+}
 
 
 // -----------------------------------------------------------------------------
@@ -72,8 +80,11 @@ app.get('/course/:course', function(req, res, next) {
 });
 
 app.get('/course/:course/:section', function(req, res, next) {
-  const course = Courses[req.params.course];
-  if (!course) return next();
+  const courseList = Courses[req.params.course];
+  if (!courseList) return next();
+
+  const locale = req.query.hl || 'en';
+  const course = courseList[locale] || courseList.en;
 
   const section = course.getSection(req.params.section);
   if (!section) return next();
