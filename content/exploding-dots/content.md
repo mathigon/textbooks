@@ -256,7 +256,7 @@ out its value:
       li Let’s start by giving the number a name, say #[.ivar A] for #[strong.m-yellow Allistaire]:
         .text-center.r #[.ivar A] = …999999#[button.next-step Continue]
       li.reveal(when="next-0") Now multiply it by 10. This gives us
-        .text-center.r 10#[.ivar A] = …99s9990#[button.next-step Continue]
+        .text-center.r 10#[.ivar A] = …999990#[button.next-step Continue]
       li.reveal(when="next-1") Notice that #[.ivar A] and 10#[.ivar A] only differ in their final digit. Therefore, if we subtract the equation in step 1 from the equation in step 2, we get
         .text-center.r 9#[.ivar A] = –9#[button.next-step Continue]
       li.reveal(when="next-2") Finally, if we divide both sides by 9, we get
