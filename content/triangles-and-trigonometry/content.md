@@ -238,7 +238,7 @@ figure on the right. The red and green areas will always have the same area.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|perpBisector"): svg
+    x-geopad.sticky.label-halo(tools="move|perpBisector" width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A" target="b-blue b-red")
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
@@ -297,7 +297,7 @@ what’s special about their intersection.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|angleBisector"): svg
+    x-geopad.sticky.label-halo(tools="move|angleBisector" width=300): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
@@ -442,7 +442,7 @@ altitudes are actually just sides of the triangle.
 
 ::: column(width=300)
 
-    x-geopad.label-halo.sticky(tools="move|line"): svg
+    x-geopad.label-halo.sticky(tools="move|line" width=300): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
