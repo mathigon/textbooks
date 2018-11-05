@@ -6,6 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const yaml = require('yamljs');
 const express = require('express');
 
 const locales = ['en', 'vn'];
@@ -15,6 +16,7 @@ const locales = ['en', 'vn'];
 // Course Class
 
 const COURSE_PATH = path.join(__dirname, 'assets/resources/');
+const CURRICULUM = yaml.load(path.join(__dirname, `../curriculum.yaml`));
 
 class Course {
 
@@ -24,6 +26,7 @@ class Course {
     this.sections = data.sections;
     this.title = data.title;
     this.locale = locale;
+    this.color = '#' + (CURRICULUM[id] || {}).color;
   }
 
   readFile(name) {
@@ -76,7 +79,7 @@ app.get('/', function(req, res) {
 app.get('/course/:course', function(req, res, next) {
   const course = Courses[req.params.course];
   if (!course) return next();
-  res.redirect(`/course/${course.id}/${course.sections[0].id}`);
+  res.redirect(`/course/${course.en.id}/${course.en.sections[0].id}`);
 });
 
 app.get('/course/:course/:section', function(req, res, next) {

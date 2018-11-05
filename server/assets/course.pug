@@ -23,8 +23,9 @@ html
 
     .body
       x-course(id=course.id)
-        .sidebar
+        .sidebar(style=`background-color: ${course.color}`)
           .sidebar-hero(style=`background-image: url(/resources/${course.id}/hero.jpg)`)
+            .sidebar-hero-gradient
             .sidebar-title= course.title
 
           .sidebar-body

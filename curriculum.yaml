@@ -19,6 +19,7 @@ integers:
     - Order of operations
     - Associative, commutative and distributive law
     - Division by zero
+  color: 31b304
 
 divisibility-and-primes:
   name: Divisibility and Primes
@@ -27,6 +28,7 @@ divisibility-and-primes:
     - Prime numbers and prime factorisationn
     - LCM and HCF
     - Divisibility rules
+  color: 4ab706
 
 fractions:
   name: Fractions
@@ -36,6 +38,7 @@ fractions:
     - Addition and subtraction
     - Multiplication and division
     - Mixed numbers and improper fractions
+  color: 63bb08
 
 decimals:
   name: Decimals
@@ -45,6 +48,7 @@ decimals:
     - Addition and subtraction
     - Multiplication and division
     - Converting between fractions and decimals
+  color: 7cc00a
 
 percentages-and-ratios:
   name: Percentages and Ratios
@@ -53,6 +57,7 @@ percentages-and-ratios:
     - Percentage change
     - Ratio notation
     - Calculating ratios
+  color: 94c40c
 
 exponents-and-roots:
   name: Exponents and Roots
@@ -63,6 +68,7 @@ exponents-and-roots:
     - Rationalising the denominator
     - Rational and irrational numbers
     - Approximating irrational numbers using rationals
+  color: adc80e
 
 place-value-and-rounding:
   name: Place Value and Rounding
@@ -73,6 +79,7 @@ place-value-and-rounding:
     - Rounding integers and decimals
     - Scientific notation
     - Different bases
+  color: c6cc10
 
 
 # Equations and Functions
@@ -84,6 +91,7 @@ proportional-relationships:
     - Graphs of proportional relationships
     - Scale factors
     - Rate of change
+  color: ff941f
 
 intro-to-algebra:
   name: Introduction to Algebra
@@ -92,6 +100,7 @@ intro-to-algebra:
     - Variables
     - Writing, manipulating and evaluating algebraic expressions
     - Modelling using algebra
+  color: f2791a
 
 linear-equations:
   name: Linear Equations
@@ -101,6 +110,7 @@ linear-equations:
     - Linear equations in one variable
     - Solve simultaneous linear equations
     - Linear inequalities
+  color: e65d16
 
 linear-functions:
   name: Linear Functions
@@ -109,6 +119,7 @@ linear-functions:
     - Graphs of linear equations
     - Intercepts and slope
     - Parallel and perpendicular lines
+  color: d94211
 
 
 # Geometry
@@ -122,6 +133,7 @@ lines-and-angles:
     - Adjacent, opposite, alternate and corresponding angles
     # - Shortest distance between points and lines
     - The coordinate plane
+  color: 1f7aff
 
 2d-shapes:
   name: 2D Shapes
@@ -132,6 +144,7 @@ lines-and-angles:
     - Ruler and compass construction
     - Pythagoras’ theorem
     - Congruence and similarity  # transformations
+  color: 3559e3
 
 3d-solids:
   name: 3D Solids
@@ -143,6 +156,7 @@ lines-and-angles:
     - Nets of 3D solids
     - Cross-sections of 3D objects
     - Modelling the real world
+  color: 4b39c8
 
 units-and-measuring:
   name: Units and Measuring
@@ -151,6 +165,7 @@ units-and-measuring:
     - Unit conversion
     - Measuring angles distances in geometric figures
     - Scale drawings
+  color: 6118ac
 
 
 # Probability and Statistics
@@ -164,6 +179,7 @@ basic-probability:
     - Independent and mutually exclusive events
     - Calculating probabilities
     - Tree diagrams
+  color: b30469
 
 combinatorics:
   name: Combinatorics
@@ -172,6 +188,7 @@ combinatorics:
     - Permutations and combinations
     - Probability
     - Random Walks
+  color: ab0741
 
 data-and-statistics:
   name: Data and Statistics
@@ -184,6 +201,7 @@ data-and-statistics:
     - Stem-and-leaf plots, box plots and histograms
     - Relationships between variables
     - Misleading statistics
+  color: a20918
 
 
 # ------------------------------------------------------------------------------
@@ -201,6 +219,7 @@ sequences:
     - Arithmetic and geometric sequences
     - Recursive equations
     - Pascal’s triangle
+  color: ff941f
 
 functions:
   name: Functions
@@ -214,6 +233,7 @@ functions:
     - Graphing two-variable equations
     - Average rate of change
     - Area under a curve
+  color: f7841c
 
 polynomials-and-factorisation:
   name: Polynomials and Factorisation
@@ -222,6 +242,7 @@ polynomials-and-factorisation:
     - Binomials
     - Difference of squares
     - Factoring simple polynomials
+  color: f07319
 
 quadratics:
   name: Quadratics
@@ -232,6 +253,7 @@ quadratics:
     - Parabolae
     - Standard and vertex form
     - Transforming parabolae
+  color: e86317
 
 inequalities-and-systems:
   name: Inequalities and Systems of Equations
@@ -241,8 +263,9 @@ inequalities-and-systems:
     - Graphing two-variable inequalities
     - Systems of equations with two unknowns
     - Elimination and substitution methods
+  color: e15214
 
-exponential-and-rational-functions:
+exponential-and-rational:
   name: Exponential and Rational Functions
   topics:
     - Exponents, radicals and rational expressions
@@ -250,6 +273,7 @@ exponential-and-rational-functions:
     - Radical functions
     - Exponential growth and decay
     - Linear vs exponential models
+  color: d94211
 
 
 # Geometry
@@ -263,6 +287,7 @@ euclidean-geometry:
     - Straight-edge and compass constructions
     - Origami
     - Applications
+  color: 1f7aff
 
 transformations-and-symmetry:
   name: Transformations and Symmetry
@@ -272,6 +297,7 @@ transformations-and-symmetry:
     - Symmetry groups
     - Wallpaper symmetries
     - Similarity
+  color: 2c66ee
 
 triangles-and-trigonometry:
   name: Triangles and Trigonometry
@@ -284,6 +310,7 @@ triangles-and-trigonometry:
     - Isosceles and equilateral triangles
     - Trigonometry
     - Sine and cosine rules
+  color: 3953de
 
 polygons-and-polyhedra:
   name: Polygons and Polyhedra
@@ -295,6 +322,7 @@ polygons-and-polyhedra:
     - Polyhedra
     - Euler’s Formula
     - Platonic and Archimedean solids
+  color: 473fcd
 
 circles-and-pi:
   name: Circles and Pi
@@ -306,6 +334,7 @@ circles-and-pi:
     - Sectors and arcs
     - Inscribed shapes and angles
     - Spheres, cones and cylinders
+  color: 542cbd
 
 non-euclidean-geometry:
   name: Non-Euclidean Geometry
@@ -317,6 +346,7 @@ non-euclidean-geometry:
     - Higher dimensions
     - Topology
     - Möbius strip and Klein bottle
+  color: 6118ac
 
 
 # Probability and Discrete Mathematics
@@ -332,6 +362,7 @@ probability:
     - Addition and multiplication rule
     - The Monty Hall problem
     - Randomness
+  color: b30469
 
 statistics:
   name: Statistics
@@ -342,6 +373,7 @@ statistics:
     - Scatter plots and regression
     - Correlation vs causation
     - Comparing models and data sets
+  color: b00559
 
 graphs-and-networks:
   name: Graphs and Networks
@@ -354,6 +386,7 @@ graphs-and-networks:
     - Map colouring
     - Travelling salesman problem
     - Social networks and other applications
+  color: ac0649
 
 codes-and-ciphers:
   name: Codes and Ciphers
@@ -364,6 +397,7 @@ codes-and-ciphers:
     - The Caesar and Vigenère cipher
     - The Enigma
     - RSA cryptography
+  color: a90738
 
 game-theory:
   name: Game Theory
@@ -373,6 +407,7 @@ game-theory:
     - Prisoners’ paradox
     - Games based on chance
     - The lottery
+  color: a50828
 
 algorithms-and-computing:
   name: Algorithms and Computing
@@ -383,6 +418,7 @@ algorithms-and-computing:
     - Linear programming and the simplex algorithm
     - Data structures
     - Graphs, trees and networks
+  color: a20918
 
 
 # ------------------------------------------------------------------------------
@@ -403,6 +439,7 @@ advanced-algebra:
     - Binomial theorem
     - Fundamental theorem of algebra
     - Solve polynomial equations up to quartics
+  color: ff941f
 
 advanced-functions:
   name: Advanced Functions
@@ -414,6 +451,7 @@ advanced-functions:
     - Rational functions and discontinuities
     - Limit behaviour of polynomial and rational functions
     - Graph sketching
+  color: f6801b
 
 exponentials-and-logarithms:
   name: Exponentials and Logarithms
@@ -425,6 +463,7 @@ exponentials-and-logarithms:
     - Logarithmic equations
     - Graphs of exponential and logarithmic functions
     - Logarithmic scale
+  color: ec6b18
 
 numerical-methods:
   name: Numerical Methods
@@ -432,6 +471,7 @@ numerical-methods:
     - Change of sign methods
     - Interval bisection
     - Newton-Raphson method
+  color: e35715
 
 sequences-and-series:
   name: Sequences and series
@@ -442,6 +482,7 @@ sequences-and-series:
     - Sigma notation
     - Maclaurin series
     - Convergence and divergence
+  color: d94211
 
 
 # The Language of Mathematics
@@ -453,6 +494,7 @@ logic-sets-and-proof:
     - Logic and proof
     - Proof by contradiction
     - Proof by induction
+  color: 31b304
 
 imaginary-and-complex-numbers:
   name: Imaginary and Complex Numbers
@@ -466,6 +508,7 @@ imaginary-and-complex-numbers:
     - De Moivre’s theorem
     - Euler’s identity
     - Complex roots of unity
+  color: 7cc00a
 
 infinity:
   name: Infinity
@@ -474,6 +517,7 @@ infinity:
     - Countability
     - Cantor’s diagonal
     - The continuum hypothesis
+  color: c6cc10
 
 
 # Geometry, Trigonometry and Matrices
@@ -485,6 +529,7 @@ coordinate-geometry:
     - Distances and midpoints
     - Parallel and perpendicular lines
     - Quadrilaterals and polygons
+  color: 1f7aff
 
 conic-sections:
   name: Conic Sections
@@ -493,6 +538,7 @@ conic-sections:
     - Ellipses
     - Parabolae and hyperbolae
     - Kepler’s laws and planetary orbits
+  color: 2a6af1
 
 trigonometry:
   name: Trigonometry
@@ -509,6 +555,7 @@ trigonometry:
     - Simple trigonometric equations
     - Small angle approximation
     - Hyperbolic functions
+  color: 3559e3
 
 vectors:
   name: Vectors
@@ -519,6 +566,7 @@ vectors:
     - Position vectors
     - Scalar product
     - Equation of lines and planes
+  color: 4049d6
 
 matrices:
   name: Matrices
@@ -531,6 +579,7 @@ matrices:
     - Matrix inverses
     - Linear systems of equations
     - Gaussian elimination
+  color: 4b39c8
 
 parametric-and-polar-coordinates:
   name: Parametric and Polar Coordinates
@@ -539,6 +588,7 @@ parametric-and-polar-coordinates:
     - Conversion between polar and cartesian
     - Sketching polar curves
     - Area enclosed by a polar curve
+  color: 5628ba
 
 fractals:
   name: Fractals
@@ -548,6 +598,7 @@ fractals:
     - The Sierpinski gasket
     - Mandelbrot set
     - Fractals in nature and technology
+  color: 6118ac
 
 
 # Calculus
@@ -566,6 +617,7 @@ differentiation:
     - Derivatives of inverse functions
     - Mean value theorem
     - L’Hôpital’s rule
+  color: ff941f
 
 integration:
   name: Integration
@@ -580,6 +632,7 @@ integration:
     - Improper integrals
     - Arc length
     - Volumes of revolution
+  color: ec6b18
 
 differential-equations:
   name: Differential Equations
@@ -591,6 +644,7 @@ differential-equations:
     - Homogenous equations and particular integral
     - Coupled differential equations
     - Simple harmonic motion and dampened oscillators
+  color: d94211
 
 
 # Probability and Statistics
@@ -606,6 +660,7 @@ advanced-probability:
     - Expectation and variance
     - Law of large numbers
     - Modelling
+  color: b30469
 
 hypothesis-tests:
   name: Hypothesis Tests
@@ -613,6 +668,7 @@ hypothesis-tests:
     - Designing statistical experiments
     - Hypothesis tests
     - Estimating population mean
+  color: ab0741
 
 data-representation:
   name: Data Representation
@@ -622,3 +678,4 @@ data-representation:
     - Mean and standard deviation
     - Data collection
     - Data visualisation
+  color: a20918

@@ -31,6 +31,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "pug": "^2.0.3",
     "rollup": "^0.64.1",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "yamljs": "^0.3.0"
   }
 }
