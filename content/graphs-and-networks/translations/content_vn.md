@@ -215,7 +215,7 @@ are ${m} × ${f} = ${m×f} dates._
 > title: The Bridges of Königsberg
 > section: bridges-of-koenigsberg
 
-## The Bridges of Königsberg
+## Những cây cầu ở Königsberg
 
 ::: column.grow
 One of the first mathematicians to think about graphs and networks was [Leonhard
