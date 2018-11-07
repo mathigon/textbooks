@@ -2104,8 +2104,8 @@ _{span.reveal(when="blank-0")} in the second diagonal on either side._
 > id: pascal-sequences-2
 
 Some numbers in the middle of the triangle also appear three or four times.
-There are even a few that appear six times: you can see both [120](-> .s120) and
-[3003](-> .s3003) four times in the triangle above, and they’ll appear two more
+There are even a few that appear six times: you can see both [120](->.s120) and
+[3003](->.s3003) four times in the triangle above, and they’ll appear two more
 times each in rows 120 and 3003.
 
 Since 3003 is a triangle number, it actually appears two more times in the

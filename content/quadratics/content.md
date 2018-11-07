@@ -78,9 +78,9 @@ _x_-axis):
 
     x-coordinate-system(x="-20 180 20" x-label="price" y="-100 100 20" y-label="profit" y-suffix="k" fn="-0.03 * x^2 + 6.8 * x - 302" regions="-20,0;60,-100|120,80;180,-20" crosshairs)
 
-If the [price is 0](->#s2 .r1), the “profit” is negative, because we’re
+If the [price is 0](->#s2_.r1), the “profit” is negative, because we’re
 just giving away expensive skateboards for free. As the price increases, our
-profit rises, too. However, if the skateboards become [too expensive](->#s2 .r2),
+profit rises, too. However, if the skateboards become [too expensive](->#s2_.r2),
 people no longer want to buy them and the profit falls again. SkateSum can
 maximise its profit by pricing the skateboards at approximately $[[110]].
 

@@ -59,7 +59,7 @@ of __{.green}7__, and __{.green}7__|__{.orange}21__.
 > id: divisibility-game
 
 In this short game you have to determine which numbers are factors or multiples,
-as fast as possible. Click the [play button](-> #divisibility-game .toggle) to start.
+as fast as possible. Click the [play button](->#divisibility-game_.toggle) to start.
 
     .box.problem-box
       .box-title: h3 Factors and Multiples Quiz
@@ -655,7 +655,7 @@ point, and showed the results in a chart:
 
 Along the x-axis you can see all integers. Whenever there is a prime, the
 _{.m-blue}Prime Counting Function_ increases by one. As we
-[zoom out](-> #riemann .zoom-icon), the blue line becomes very smooth.
+[zoom out](->#riemann_.zoom-icon), the blue line becomes very smooth.
 
 {.reveal(when="zoom")} Gauss noticed that the shape of this function looks very
 similar to the function <mfrac class="m-red"><mi>x</mi><mrow>log(<mi>x</mi>)</mrow></mfrac>.

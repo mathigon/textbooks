@@ -21,5 +21,5 @@ parall-error-2: This is true if the paralellogram also happens to be a rhombus, 
 parall-error-3: This is correct if the parallelogram happens to be a rectangle, but not for _any_ parallelogram.
 parall-error-4: No: adjacent sides in a parallelogram don’t have to have the same length.
 
-move-polyhedra: "The [3-dimensional polyhedra](-> #poly1) are interactive. Try rotating them!"
+move-polyhedra: "The [3-dimensional polyhedra](->#poly1) are interactive. Try rotating them!"
 use-euler: Remember that you can use __Euler’s Formula__ to find the number of faces, vertices or edges.

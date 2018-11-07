@@ -182,15 +182,15 @@ would look like in a [`1←10` machine](gloss:dot-machine):
     x-dot-machine(cells="0.9999…")
     p.text-center.reveal(when="d1"): button.btn.btn-small.btn-red Explode
 
-Click anywhere in the [first decimal box](-> #dots .dot-decimal + .dot-cell)
+Click anywhere in the [first decimal box](->#dots_.dot-decimal+.dot-cell)
 to create a [dot and anti-dot pair](gloss:anti-dot). This doesn’t change the
 number.
 
-{.reveal(when="d1")} Now click the [explode button](-> #dots button) to simplify
+{.reveal(when="d1")} Now click the [explode button](->#dots_button) to simplify
 the number using the `1←10` rule.
 
 {.reveal(when="x1")} Let’s do the same thing for the [second decimal
-box](-> #dots .dot-decimal + .dot-cell + .dot-cell). First add a dot and
+box](->#dots_.dot-decimal+.dot-cell+.dot-cell). First add a dot and
 anti-dot pair, and then explode.
 
 {.reveal(when="d2 x2")} Notice how the dot/anti-dot pair canceled out! This is

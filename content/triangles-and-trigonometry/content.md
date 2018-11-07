@@ -37,14 +37,14 @@ _{button.next-step} Continue_
 {.r.reveal(when="next-0")} Climbers use _altimeters_ to determine their altitude.
 These devices use the difference in air pressure at different heights. However
 this would have required someone to actually climb to the [top of every
-mountain](-> .mountain-top) – an extremely difficult feat that was not achieved
+mountain](->.mountain-top) – an extremely difficult feat that was not achieved
 until a century later.
 _{button.next-step} Continue_
 
 {.r.reveal(when="next-1")} You could also try using similar triangles, like we
 did in the [previous course](/course/transformations-and-symmetry/similarity).
-This method requires knowing the [distance](-> .mountain-distance) to the [base
-of the mountain](-> .mountain-base): the point at sea level that directly below
+This method requires knowing the [distance](->.mountain-distance) to the [base
+of the mountain](->.mountain-base): the point at sea level that directly below
 its summit. We can do this for trees or tall buildings, but for mountains this
 point is hidden underneath hundreds of meters of rock.
 _{button.next-step} Continue_
