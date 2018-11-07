@@ -310,7 +310,7 @@ others are not. To help us understand why, let us label every vertex with its
 ---
 > id: bridges-4
 
-Comparing these numbers for graphs which are possible and those which are not
+Comparing  these numbers for graphs which are possible and those which are not
 possible, it seems that a graph can be drawn if it [[has no more than two “odd”
 vertices|only has “even” vertices|has no vertices with an order larger than
 4|has an odd number of vertices|has no vertices of order 3]]. This condition can
