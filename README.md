@@ -64,6 +64,9 @@ to creating entirely new courses. If you find any errors or problems, please
 [file an issue](https://github.com/mathigon/textbooks/issues). For larger
 changes, please [contact us](mailto:dev@mathigon.org) before starting your work.
 
+Before submitting a pull request, you will need to sign the [Mathigon Individual
+Contributor License Agreement](https://gist.github.com/plegner/5ad5b7be2948a4ad073c50b15ac01d39).
+
 You can find out more on [Mathigon.io](https://mathigon.io).
 
 ![](https://mathigon.org/images/unused/divider-4.png)
