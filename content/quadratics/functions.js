@@ -7,11 +7,13 @@
 import { square } from '@mathigon/core';
 import { Expression, nearlyEquals, sign } from '@mathigon/fermat';
 
+import './components/conic-section';
+
 
 // -----------------------------------------------------------------------------
 // Shared Utilities
 
-function q(x, a, b, c) {
+/* function q(x, a, b, c) {
   return a*x*x + b*x + c;
 }
 
@@ -65,13 +67,18 @@ function compare(params, paramsExp, type) {
   }
 
   return {error: null};
-}
+} */
 
 
 // -----------------------------------------------------------------------------
 // Section Functions
 
-export function s1($step) {
+export function graphing1($step) {
+  const $chart = $step.$('x-coordinate-system');
+  $chart.setFunctions(x => x*x);
+}
+
+/* export function s1($step) {
   let correct = new Expression('-30 price^2 + 6800 price - 302000');
 
   let substitutions = {
@@ -95,4 +102,4 @@ export function s3($step) {
   $actions[0].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -2); $step.model.set('c', 2) });
   $actions[1].on('click', function() { $step.model.set('a', 1); $step.model.set('b', 2); $step.model.set('c', 1) });
   $actions[2].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -4); $step.model.set('c', 2) });
-}
+} */

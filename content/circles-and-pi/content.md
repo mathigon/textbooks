@@ -423,3 +423,27 @@ If the bases of a cone and a cylinder are the same, then the volume of a cone
 will be one-third the volume of the cylinder. Volume of a Cone: If r is the
 radius of a cone and h is the height, then the volume is V=13πr2h.
 
+
+
+
+The Greek scholars of ancient times, naturally curious about the world, wondered
+if it was possible to describe the shapes that arise this way mathematically.
+They realized that these shapes are slices of a cone, and they gave the different
+forms of slices they saw the following names: ellipse, parabola, and hyperbola.
+
+The Greeks of antiquity studied these curves with no practical applications in
+mind. They were naturally curious and pursued the topic solely for its beauty
+and its intellectual rewards.
+
+APOLLONIUS OF PERGA (ca 225 B.C.E.) wrote a series of eight books, titled Conic
+sections, in which he thoroughly investigated these curves. He was the one to
+introduce the names parabola, ellipse and hyperbola. ARCHIMEDES OF SYRACUSE (ca.
+287–212 B.C.E.) also wrote about these curves.
+
+In 1604 Galileo discovered that objects thrown in the air follow parabolic paths
+(if air resistance can be neglected). In 1609 astronomer JOHANNES KEPLER discovered
+that the orbit of Mars is an ellipse. He conjectured that all planetary bodies
+have elliptical orbits, which, 60 years later, ISAAC NEWTON was able to prove
+using his newly developed law of gravitation. Recently scientists have discovered
+that the path of an alpha particle in the electrical field of an atomic nucleus
+is a hyperbola.
