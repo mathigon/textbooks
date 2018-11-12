@@ -162,21 +162,17 @@ Tuy nhiên thật ra kết quả này là không đúng: bởi chúng ta đã đ
 [[hai lần|một lần|ba lần]], _{span.reveal(when="blank-0")}vì hai người tham gia chỉ bắt tay một lần với nhau._
 
 {.reveal(when="blank-0")} Ví dụ, <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two
-entries on the top row</x-target> are actually the same. The correct number of
-handshakes for ${n}{n|5|2,25,1} guests is <mfrac><mrow>${n} ×
+td:first-child, .handshakes tr:first-child td:nth-child(2)"> hai cái bắt tay đầu tiên
+ở hàng trên cùng </x-target> thực ra là một. Số cái bắt tay đúng cho ${n}{n|5|2,25,1} người tham dự là <mfrac><mrow>${n} ×
 ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
 
 ---
 > id: handshakes-3
 
-The handshake graphs are special because every vertex is connected to every
-other vertex. Graphs with this property are called __complete graphs__. The
-complete graph with 4 vertices is often abbreviated as `K_4`, the complete graph
-with 5 vertices is known as `K_5`, and so on.
+Đồ thị minh họa những cái bắt tay rất đặc biệt vì các đỉnh đều kết nối với các đỉnh còn lại. Đồ thị với đặc tính này được gọi là __đồ thị hoàn chỉnh__. Đồ thị hoàn chỉnh có 4 đỉnh được viết tắt là `K_4`, đồ thị hoàn chỉnh  với 5 đỉnh được ký hiệu là `K_5`, v...v...
 
-We have just shown that a complete graph with `n` vertices, `K_n`, has
-`(n × (n-1))/2` edges.
+Chúng ta vừa thấy rằng đồ thị có `n` đỉnh, ký hiệu `K_n`, có tất cả
+`(n × (n-1))/2` cạnh.
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -189,25 +185,21 @@ We have just shown that a complete graph with `n` vertices, `K_n`, has
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
-On a different day, you are invited to a speed dating event for ${m}{m|5|2,8,1}
-boys and ${f}{f|4|2,8,1} girls. There are many small tables and every boy spends
-5 minutes with each of the girls. How many individual “dates” are there in total?
+Vào một ngày đẹp trời khác, bạn được mời đến tham dự một buổi hẹn hò tốc hành (speed dating) cho ${m}{m|5|2,8,1}
+bạn nam và ${f}{f|4|2,8,1} bạn nữ. Ban tổ chức sắp đặt những cái bàn nhỏ để mỗi bạn nam có thể có 5 phút với mỗi bạn nữ.
+Vậy tổng cộng có bao nhiêu "cuộc gặp gỡ" đã diễn ra? 
 
 ::: column.grow
-In this case, the corresponding graph consists of two separate sets of vertices.
-Every vertex is connected to all the vertices in [[the opposite|its own]] set,
-but none of the vertices in [[its own|the opposite]] set. Graphs which have this
-layout are called __bipartite graphs__.
+Trong trường hợp này, đồ thì tương ứng có hai tập đỉnh khác nhau. Mỗi đỉnh được kết nối với tất cả các đỉnh [[của nhóm đối diện|của chính nhóm đó]], nhưng không kết nối với các đỉnh của [[chính nhóm đó|nhóm đối diện]]. Đồ thị với đặc tính này được gọi là __đồ thị hai phía__.
 ::: column(width=300)
 
     svg.graph(style="width: 300px; height: 140px;")
 
 :::
 
-{.reveal(when="blank-0 blank-1")} The bipartite graph with two sets of size _x_
-and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
-edges, _{span.reveal(when="blank-2")}which means that in the above example there
-are ${m} × ${f} = ${m×f} dates._
+{.reveal(when="blank-0 blank-1")} Đồ thị hai phía với hai tập đỉnh _x_
+và _y_ thường được ký hiệu là `K_"x,y"`. Đồ thị này có [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
+cạnh, _{span.reveal(when="blank-2")} nghĩa là trong ví dụ trên có tất cả ${m} × ${f} = ${m×f} cuộc gặp gỡ._
 
 ---
 > id: bridges
@@ -215,20 +207,15 @@ are ${m} × ${f} = ${m×f} dates._
 > title: The Bridges of Königsberg
 > section: bridges-of-koenigsberg
 
-## The Bridges of Königsberg
+## Những cây cầu ở Königsberg
 
 ::: column.grow
-One of the first mathematicians to think about graphs and networks was [Leonhard
-Euler](bio:euler). Euler was intrigued by an old problem regarding the town of
-Königsberg near the Baltic Sea.
+Một trong những nhà Toán học đầu tiên nghĩ về đồ thị và mạng lưới là [Leonhard
+Euler](bio:euler). Euler rất hứng thú về một bài toán lâu đời ở thị trấn Königsberg gần Biể Baltic.
 
-The river Pregel divides Königsberg into four separate parts, which are
-connected by seven Bridges. Is it possible to walk around the city crossing all
-of the bridges exactly once – but not more than once? (You can start and finish
-anywhere, not necessarily in the same place.)
+Con sông Pregel phân chia thị trấn Königsberg thành 4 khu vực khác nhau, được kết nối bởi 7 cây cầu. Liệu có thể có cách nào đi một vòng thành phố và đi qua tất cả 7 cây cầu – và chỉ đi qua mỗi cây cầu đúng 1 lần không? ( Bạn có thể bắt đầu và kết thúc ở bất kỳ điểm nào, không nhất thiết phải cùng một chỗ.) 
 
-Try to find a valid route by drawing on these maps:
-::: column(width=250)
+Tìm giải pháp bằng cách vẽ đường đi trên bản đồ dưới đây: ::: column(width=250)
 
     img.shifted(src="images/konigsberg1.jpg" width=250 height=350)
 
@@ -259,20 +246,14 @@ Try to find a valid route by drawing on these maps:
 ---
 > id: bridges-1
 
-In the case of Königsberg it seems to be impossible to find a valid route, but
-some of the other cities do work. Euler managed to find a simple rule that can
-be applied to any city, without having to try lots of possibilities – using
-graph theory.
+Trong trường hợp của thị trấn Königsberg dường như không có giải pháp nào khả thi cả, nhưng với một số thành phố khác thì có thể thực hiện được. Euler đã tìm ra quy tắc đơn giản sử dụng phương pháp đồ thị để tìm lời giải và có thể áp dụng cho tất cả khác thành phố mà không phải ngồi vẽ nháp thử đi thử lại nhiều lần. 
 
 ::: column.grow
-First, we need to convert the city maps into graphs with edges and vertices.
-Every island or region of land is represented by [[a vertex|an edge|an area]]
-and every bridge connecting two regions is represented by a corresponding
-[[edge|vertex|street]].
+Đầu tiên chúng ta cần chuyển đổi bản đồ thành phố thành đỉnh và cạnh của đồ thị. Mỗi vùng đất được đại diện bởi [[một đỉnh|một cạnh|một vùng]]
+và mỗi cây cầu kết nối hai vùng đất khác nhau được đại diện bởi
+[[một cạnh|một đỉnh|đường phố]] tương ứng.
 
-{.reveal(when="blank-0 blank-1")} Now the problem of “touring a city while
-crossing every bridge exactly once” has become a problem of “drawing a graph
-with one continuous stroke while tracing every edge exactly once”.
+{.reveal(when="blank-0 blank-1")} Bây giờ bài toán từ “ đi một vòng thành phố qua tất cả các cây cầu đúng một lần" thành bài toán “vẽ lại đồ thị với một đường duy nhất đi qua các cạnh đúng một lần"
 ::: column(width=200)
 
     include svg/konigsberg.svg
@@ -282,9 +263,7 @@ with one continuous stroke while tracing every edge exactly once”.
 ---
 > id: bridges-2
 
-On paper, come up with a few different graphs and then try to work out which
-ones can be drawn with a single, continuous stroke.
-
+Trên giấy nháp, bạn hãy thử vẽ các đồ thị khác nhau dưới đây và xem đồ thị nào có thể vẽ được bằng một đường liên tục duy nhất. 
     // p Try drawing these graphs with one continuous stroke:
     // p.todo Interactive coming soon…
 
@@ -292,51 +271,41 @@ ones can be drawn with a single, continuous stroke.
 > id: bridges-3
 > goals: dropdown
 
-Just like for the city maps before, we find that some graphs are possible while
-others are not. To help us understand why, let us label every vertex with its
-[degree](gloss:graph-degree):
+Cũng như bản đồ ở trên, ta thấy rằng một số đồ thị có giải pháp khả thi trong khi một số khác thì không. Để hiểu vì sao chúng ta có thể đánh số [cấp độ](gloss:graph-degree) của mỗi đỉnh trong đồ thị.
+:
 
     .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong These graphs are possible:
+      p(style="margin: 0"): strong Những đồ thị này khả thi:
       include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong These graphs are not possible:
+      p(style="margin: 1em 0 0"): strong Những đồ thị này không khả thi:
       include svg/vertex-orders-2.svg
       p: select
-        option(value="val", selected) Colour by value
-        option(value="size") Colour by small and large
-        option(value="prime") Colour by prime and composite
-        option(value="eo") Colour by even and odd
+        option(value="val", selected) Phân màu theo giá trị
+        option(value="size") Phân màu theo nhỏ và lớn
+        option(value="prime") Phân màu theo số nguyên tố và số đa hợp
+        option(value="eo") Phân màu theo chẵn lẽ
 
 ---
 > id: bridges-4
 
-Comparing  these numbers for graphs which are possible and those which are not
-possible, it seems that a graph can be drawn if it [[has no more than two “odd”
-vertices|only has “even” vertices|has no vertices with an order larger than
-4|has an odd number of vertices|has no vertices of order 3]]. This condition can
-be explained if we look at just a single vertex in the graph:
+Khi so sánh các số giữa nhóm đồ thị khả thi và không khả thi, ta thấy dường như có phương án khả thi nếu đồ thị [[không có nhiều hơn hai đỉnh có cấp độ "lẻ"|chỉ có số cạnh là "chẵn"|không có đỉnh nào có cấp độ lớn hơn 4|không có đỉnh nào có cấp độ 3]]. Điều này có thể giải thích được bằng cách nhìn vào mỗi cạnh trong đồ thị: 
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
-      .legend(slot="legend") Here you can see a single, magnified vertex in a graph.
-      .legend(slot="legend") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
-      .legend(slot="legend") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
-      .legend(slot="legend") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
-      .legend(slot="legend") Notice that, either way, there always is an even number of edges meeting at the vertex.
-      .legend(slot="legend") The only two exceptions are the vertices where the path starts, and where it ends – these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+      .legend(slot="legend") Ở đây bạn có một đỉnh của đồ thị được đơn giản hóa và phóng to.
+      .legend(slot="legend") Nếu bạn vẽ đồ thị, sẽ có cạnh đi vào đỉnh này và có một cạnh khác đi ra khỏi đỉnh. Điều này tạo nên hai cạnh gặp nhau ở đỉnh. 
+      .legend(slot="legend") Có thể đỉnh này không nằm ở góc mà là điểm giao nhau. Lúc này sẽ có hai cạnh khác đi vào và đi ra khỏi đỉnh. Vậy ta có 4 cạnh. 
+      .legend(slot="legend") Và trong một số đồ thị, sẽ có cặp cạnh thứ 3 đi vào và đi ra khỏi đỉnh. Lúc này ta có 6 cạnh. 
+      .legend(slot="legend") Hãy để ý rằng dù như thế nào, sẽ luôn có một số chẵn các cạnh gặp nhau ở đỉnh. 
+      .legend(slot="legend") Chỉ có hai trường hợp ngoại lệ là đỉnh nơi cạnh bắt đầu và đỉnh nơi cạnh kết thúc nếu khác nhau thì hai đỉnh này có thể có cấp độ lẻ. Nếu đỉnh bắt đầu và đỉnh kết thúc là một cấp độ của các đỉnh là số chẵn.
 
 ---
 > id: bridges-5
 
 ::: column.grow(parent="right")
-If you scroll back to the map of Königsberg, you will find that there are more
-than two islands with an odd number of bridges. Therefore a route that crosses
-every bridge exactly once is indeed impossible – and this is what Leonard Euler
-discovered.
+Nếu bạn quay lại với bản đồ của thị trấn Königsberg, bạn sẽ thấy rằng có hơn hai khu đất với số lẻ những cây cầu. Do đó việc đi qua các cây cầu duy nhất một lần là bất khả thi, và đây chính là quy luật mà Leonard Euler đã phát hiện ra.
 
-Euler’s discovery may not seem particularly useful in real life, but graphs are
-at the foundation of many other geographic problems, such as finding directions
-between two locations. We will discover more of these applications later.
+Phát hiện này của Euler có vẻ như không hữu ích gì nhiều trong cuộc sống, nhưng đồ thị là nền tảng để giải quyết rất nhiều vấn đề về địa lý, ví dụ như tìm kiếm đường đi giữa hai địa điểm. Chúng ta sẽ khám phá thêm về những ứng dụng này sau. 
 ::: column(width=240)
 
     x-media(lightbox width=240 height=260 src="images/prague.jpg")
@@ -348,22 +317,19 @@ between two locations. We will discover more of these applications later.
 > goals: try-three-times
 > section: planar-graphs
 
-## Planar Graphs
+## Đồ thị phẳng
 
 ::: column.grow
-Here is another puzzle that is related to graph theory.
+Sau đây là một bài toán khác liên quan đến lý thuyết đồ thị.
 
-In a small village there are three utility plants producing water, electricity
-and gas respectively. There are also three houses which need to be served.
-Unfortunately, due to the city’s layout, the pipes or cables for every product
-are not allowed to cross.
+Trong một ngôi làng nhỏ có 3 nhà máy sản xuất nước, gas và điện. Trong làng cũng có 3 ngôi nhà là khách hàng tiềm năng. Do kết cấu xây dựng của làng, các ống dẫn không được phép cắt ngang nhau.
 ::: column(width=300)
 
     x-media(width=300 height=200 src="images/power-plant.jpg")
 
 :::
 
-Try to connect each of the plants below to each of the houses, without any of your lines crossing:
+Hãy thử kết nối các nhà máy với nhà của khách hàng sao cho các đường dẫn không cắt ngang nhau:
 
     .frame.fill
       include svg/utilities.svg
@@ -372,38 +338,31 @@ Try to connect each of the plants below to each of the houses, without any of yo
 ---
 > id: utilities-1
 
-Just like the Königsberg bridges before, you quickly discover that this problem
-is also impossible. It seems that some graphs can be drawn without overlapping
-edges – these are called __planar graphs__ – but others cannot.
+Cũng như bài toán của thị trấn Königsberg ở trên, bạn nhận ra rằng không có cách nào là khả thi. Dường như một số đồ thị có các cạnh không cắt nhau – gọi là __đồ thị phẳng__ – còn một số đồ thị khác như bài toán ở trên thì không thể. 
 
 ::: column(width=200)
 
     svg.graph(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center} `K_3` is planar.
+{.text-center} `K_3` là đồ thị phẳng.
 ::: column(width=200)
 
     svg.graph#planar-2(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center} `K_4` [[is planar|is not planar]].
+{.text-center} `K_4` [[là đồ thị phẳng| không là đồ thị phẳng]].
 ::: column(width=200)
 
     svg.graph#planar-3(width=200 height=200 style="margin-bottom: .4em;")
 
-{.text-center} `K_5` [[is not planar|is planar]].
+{.text-center} `K_5` [[là đồ thị phẳng|không là đồ thị phẳng]].
 :::
 
 ---
 > id: utilities-2
 
-The [complete graph](gloss:complete-graph) `K_5` is the smallest graph that is
-not planar. Any other graph that contains `K_5` as a subgraph in some way is
-also not planar. This includes `K_6`, `K_7`, and all larger complete graphs.
+[Đồ thị hoàn chỉnh](gloss:complete-graph) `K_5`  là đồ thị phẳng nhỏ nhất. Tất cả những đồ thị nào có đồ thị con là `K_5` thì không phải là đồ thị phẳng. Bao gồm `K_6`, `K_7`, và tất cả các đồ thị lớn hơn khác.
 
-The graph in the three utilities puzzle is the [bipartite
-graph](gloss:bipartite-graph) `K_"3,3"`. It turns out that any non-planar graph
-must contain a `K_5` or a `K_"3,3"` or a [subdivision](gloss:subdivision) of
-these two graphs as a subgraph.
+Đồ thị trong bài toán đố về các nhà máy ở trên là [đồ thị hai phía](gloss:bipartite-graph) `K_"3,3"`. Hóa ra rằng tất cả các đồ thị không phẳng nào cũng có đồ thị con là `K_5` hoặc `K_"3,3"` hoặc có đồ thị con là [đồ thị phân chia](gloss:subdivision) của hai đồ thị này.
 
 ---
 > id: planarity
@@ -414,14 +373,14 @@ these two graphs as a subgraph.
       .box-body
         x-solved
         svg#planarity.frame(viewBox="0 0 640 320")
-        p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-        button.btn New Random Graph
+        p.md Đây là đồ thị phẳng nhưng ${n}{n|7|5,20,1} đỉnh đã bị xáo trộn. Hãy sắp xếp lại các cạnh này sao cho chúng không cắt nhau. 
+        button.btn Thử đồ thị khác
 
 ---
 > id: euler
 > section: eulers-formula
 
-## Euler’s Formula
+## Công thức Euler
 
 All planar graphs divide the plane they are drawn on into a number of areas,
 called __faces__.
@@ -563,7 +522,7 @@ __{.green}60__ Vertices and__{.red}90__ Edges
 > id: maps
 > section: map-colouring
 
-## Map Colouring
+## Tô màu bản đồ
 
 ::: column.grow
 We have already used graph theory with certain maps. As we zoom out, individual
@@ -721,7 +680,7 @@ may need more than four colours and the proofs become even more difficult.
 > id: salesman
 > section: the-travelling-salesman-problem
 
-## The Travelling Salesman Problem
+## Bài toán đường đi của người bán hàng 
 
 ::: column.grow(parent="right")
 Let us think, once more, about networks and maps. Imagine that a delivery
@@ -908,7 +867,7 @@ Problems](gloss:millennium-prize), each carrying a $1m prize.
 > id: applications
 > section: graphs-in-everyday-life
 
-## Graphs in Everyday Life
+## Đồ thị trong cuộc sống hằng ngày
 
 Throughout this course we have seen many applications of graph theory, though
 some were somehow contrived. It turns out, however, that graphs are at the very
@@ -1053,7 +1012,7 @@ theory__ and __financial mathematics__.
 > id: social
 > section: social-networks
 
-### Social Networks
+### Mạng xã hội
 
 Finally, let us think about one particularly good example of graphs which exist
 in everyday life: social media. Here, vertices represent [[people|friends|networks]]
