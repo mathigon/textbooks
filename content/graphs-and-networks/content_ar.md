@@ -1,84 +1,64 @@
-# Graphs and Networks
+# المخططات و الشبكات
 
-## Introduction
+## المقدمة
 
 > id: intro
-> section: introduction
 
 ::: column.grow
-Every day we are surrounded by countless connections and networks: roads and
-rail tracks, phone lines, the internet, electronic circuits and even molecular
-bonds. There are also _social networks_ between friends and families. All these
-systems consist of certain _points_ called [[vertices|circles|crossings]], some
-of which are connected by [[edges|boundaries|pairs]]. In mathematics, this is
-called a [__graph__](gloss:graph).
+نحاط كل يوم بعدد غير منته من الترابطات والشبكات : الطرق ، مسارات القطارات ، خطوط الهاتف ، الإنترنت ، الدوائر الكهربية و حتى الروابط الجزيئية. هناك أيضا _روابط اجتماعية_  بين الأصدقاء و العائلات.  كل هذه النظم تتكون من _نقاط_ محددة تسمى [[ رؤوس | دوائر | تقاطعات]] . فى الرياضيات هذا يطلق عليه [__مخطط__](gloss:graph).
 ::: column(width=160)
 
     svg#graph0.graph.novertices.noedges(width="160" height="130")
 
 :::
 
-__Graph theory__ is the study of graphs and their properties. It is one of the
-most exciting and visual areas of mathematics, and has countless important
-applications:
-
+__نظرية المخططات__ هى الدراسة للمخططات و خصائصها. إنها أحد أكثر المجالات الرياضية إثارة و إمتاعا بصريا، ولها عدد لا متناه من التطبيقات المهمة:
     x-gallery(slide-width="300")
       div
         x-media(src="images/network1.jpg" width=260 height=260 lightbox)
-        p.caption Road and Rail Networks
+        p.caption شبكات النقل و السكك الحديد
       div
         x-media(src="images/network6.jpg" width=260 height=260 lightbox)
-        p.caption Integrated Circuits
+        p.caption الدوائر المتكاملة
       div
         x-media(src="images/network3.jpg" width=260 height=260 lightbox)
-        p.caption Supply Chains
+        p.caption سلاسل الإمدادات
       div
         x-media(src="images/network2.jpg" width=260 height=260 lightbox)
-        p.caption Friendships
+        p.caption الصداقات
       div
         x-media(src="images/network7.jpg" width=260 height=260 lightbox)
-        p.caption Neural Connections
+        p.caption الروابط العصبية
       div
         x-media(src="images/network4.jpg" width=260 height=260 lightbox)
-        p.caption The Internet
+        p.caption الانترنت
 
 ---
 > id: intro-1
 
-We can sketch the layout of simple graphs using circles and lines. The position
-of the circles and the length of the lines is irrelevant – we only care about
-_how they are connected_ to each other. The lines can even cross each other, and
-don’t have to be straight.
-
+يمكننا رسم مخطط بسيط باستخدام الدوائر و الخطوط. وليس مهما مكان الدوائر ولا طول الخطوط ، بل ما يهمنا فقط هو _كيف يتم توصيلهم_ بعضهم ببعض. بل ليس شرطا أن تكون الخطوط مستقيمة و يمكنها أيضا أن تتقاطع.
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} In some graphs, the edges only go one way. These are called
-[__directed graphs__](gloss:directed-graph).
+{.text-center} فى بعض المخططات، تكون الحواف متجهة لاتجاه محدد. هذه المخططات يطلق عليها [__المخططات الموجهة__] (gloss:directed-graph).
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Some graphs consist of multiple distinct segments which are not
-connected by edges. These graphs are __disconnected__.
+{.text-center} بعض المخططات تتكون من عدة قطع منفصلة والتى لا ترتبط بحافة. هذه المخططات يطلق عليها __منفصلة__.
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Other graphs may contain multiple edges between the same pairs of
-vertices, or vertices which are connected to themselves (loops).
+{.text-center} بعض المخططات الأخرى قد تحتوى على العديد من الحواف بين نفس الزوج من الرؤوس، أو تحتوى على رؤوس متصلة بنفسها (حلقة) .
 :::
 
-For simplicity we will only think about undirected and connected graphs without
-multiple edges and loops in this course.
-
+للتبسيط ،ففى هذا المساق سنفكر فقط فى المخططات المتصلة و الغير موجهة  و تكون بدون عدة حواف أو حلقات.
 ---
 > id: intro-2
 
-We can create new graphs from an existing graph by removing some of the vertices
-and edges. The result is called a [__subgraph__](gloss:subgraph). Here are a few
-examples of graphs and subgraphs:
+للتبسيط ،ففى هذا المساق سنفكر فقط فى المخططات المتصلة و الغير موجهة  و تكون بدون عدة حواف أو حلقات.  [__المخطط الجزئى__](gloss:subgraph). هنا بعض الأمثلة على المخططات والمخططات الجزئية:
 
 ::: column(width=200)
 
@@ -100,38 +80,35 @@ examples of graphs and subgraphs:
 ---
 > id: intro-3
 
-The [__order__](gloss:graph-order) of a graph is its number of vertices. The
-[__degree__](gloss:graph-degree) of a vertex in a graph is the number of edges
-which meet at that vertex.
+[__مرتبة__](gloss:graph-order) المخطط هى عدد رؤوسه.
+[__درجة__](gloss:graph-degree) الرأس فى المخطط هى عدد الحواف التى تتلاقى عند هذه الرأس.
 
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Order: [[5]]
+{.text-center} مرتبة: [[5]]
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Order: [[8]]
+{.text-center} مرتبة: [[8]]
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Degree: [[3]]
+{.text-center} درجة: [[3]]
 ::: column(width=130)
 
     svg.graph(height=100 width=100 style='margin: 0 auto .8em')
 
-{.text-center} Degree: [[6]]
+{.text-center} درجة: [[6]]
 :::
 
 ---
 > id: intro-4
 
-Graphs which consist of a single ring of vertices are called
-[__cycles__](gloss:graph-cycle). All cycles have [[the same number of edges and
-vertices|more edges than vertices|fewer edges than vertices]].
+المخططات التى تتكون من حلقة وحيدة من الرؤوس يطلق عليها [__حلقيات__](gloss:graph-cycle). كل الحلقيات لديها [[نفس عدد الحواف والرؤوس|عدد حواف أكثر من الرؤوس|عدد حواف أقل من الرؤوس]].
 
     .row
       svg.graph(style='width: 90px; height: 90px;')
@@ -140,23 +117,19 @@ vertices|more edges than vertices|fewer edges than vertices]].
 
 ---
 > id: handshakes-1
-> section: parties-and-dating
 
-## Parties and Dating
+## الحفلات
 
 ::: column.grow
-You have been invited to an extravagant birthday party. Including yourself and
-the host, there are ${hnd}{hnd|5|3,15,1} people present.
+لقد تم دعوتك إلى حفل عيد ميلاد. إذا عددنا عدد الحاضرين (و من ضمنهم أنت و مضيف الحفلة) سيكون عدد الحاضرين   ${hnd}{hnd|5|3,15,1}.
 
-In the evening, as guests get ready to leave, everyone shakes hands with
-everyone else. How many handshakes are there in total?
+فى المساء ، وبينما يهم الضيوف بالرحيل، كل الحاضرين قاموا بالمصافحة مع بعضهم البعض. كم عدد المصافحات التى تمت فى المجمل؟
 
-We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
-and every handshake is [[an edge|a vertex]].
+يمكننا تمثيل المصافحات باستخدام مخطط ، حيث كل شحص هو [[رأس|حافة]],
+وكل مصافحة هى [[حافة|رأس]].
  
-{.reveal(when='blank-0 blank-1')}  Now it is easy to count the number of edges
-in the graph. We find that there with ${hnd} people, there are ${hnd*(hnd-1)/2}
-handshakes.
+{.reveal(when='blank-0 blank-1')}  الآن يسهل علينا عد عدد الحواف فى المخطط. وجدنا أنه هناك ${hnd} أشخاص، و هناك ${hnd*(hnd-1)/2}
+مصافحات.
 
 ::: column.s-hide(width=240)
 
@@ -168,12 +141,10 @@ handshakes.
 ---
 > id: handshakes-2
 
-Rather than counting all the edges in large graphs, we could also try to find a
-simple formula that tells us the result for _any_ number of guests.
+بدلا من عد كل الحواف فى المخططات الكبيرة، يمكننا أن نحاول إيجاد صيغة رياضية تخبرنا ناتج المصافحات _لأى_ عدد من الضيوف.
 
-Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
-That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
-number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
+فكل من ال ${n}{n|5|2,8,1} أشخاص فى حفلة سيصافح ${n-1} أخرون.
+وهذا سيكون ${n} × ${n-1} = ${n×(n-1)} مصافحة فى المجموع. لكل _ن_ شخص، سيكون عدد المصافحات [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
 
     p.var ${handshakeTable(n)}
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -370,7 +341,6 @@ between two locations. We will discover more of these applications later.
 ---
 > id: utilities
 > goals: try-three-times
-> section: planar-graphs
 
 ## Planar Graphs
 
@@ -443,7 +413,6 @@ these two graphs as a subgraph.
 
 ---
 > id: euler
-> section: eulers-formula
 
 ## Euler’s Formula
 
@@ -585,7 +554,6 @@ __{.green}60__ Vertices and__{.red}90__ Edges
 
 ---
 > id: maps
-> section: map-colouring
 
 ## Map Colouring
 
@@ -743,7 +711,6 @@ may need more than four colours and the proofs become even more difficult.
 
 ---
 > id: salesman
-> section: the-travelling-salesman-problem
 
 ## The Travelling Salesman Problem
 
@@ -930,7 +897,6 @@ Problems](gloss:millennium-prize), each carrying a $1m prize.
 
 ---
 > id: applications
-> section: graphs-in-everyday-life
 
 ## Graphs in Everyday Life
 
@@ -1075,7 +1041,6 @@ theory__ and __financial mathematics__.
 
 ---
 > id: social
-> section: social-networks
 
 ### Social Networks
 
