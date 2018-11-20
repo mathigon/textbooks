@@ -597,9 +597,7 @@ và hai đỉnh phải có màu khác nhau nếu chúng được kết nối b�
     x-media(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
-Năm 1852, một sinh viên thực vật học [Francis Guthrie](bio:guthrie) phải tô màu các vùng của nước Anh. Ông quan sát được rằng hầu như chỉ cần 4 màu là đủ với bất kỳ bản đồ nào Ông thử, nhưng Ông tìm được minh chứng rằng quy tắc 4 màu này áp dụng được cho _tất cả_ các bản đồ. Điều này thực ra là một bài toán cực kỳ khó, được biết đến với cái tên
-This turned out to be an extremely difficult problem, and became known as the
-__định lý bốn màu__.
+Năm 1852, một sinh viên thực vật học [Francis Guthrie](bio:guthrie) phải tô màu các vùng của nước Anh. Ông quan sát được rằng hầu như chỉ cần 4 màu là đủ với bất kỳ bản đồ nào Ông thử, nhưng Ông tìm được minh chứng rằng quy tắc 4 màu này áp dụng được cho _tất cả_ các bản đồ. Điều này thực ra là một bài toán cực kỳ khó, được biết đến với cái tên __định lý bốn màu__.
 
 Trong suốt 100 năm sau đó, rất nhiều nhà toán học tìm cách công bố các chứng minh khác nhau cho định lý này, để rồi sau đó phát hiện ra nhiều lỗi. Trong số đó có những cách chứng minh có vẻ hết sức thuyết phục khiến phải mất hơn 10 năm mới phát hiện ra lỗi của nó. 
 
@@ -609,8 +607,7 @@ Trong một thời gian dài, nhiều nhà toán học không tìm được các
 ---
 > id: maps-4
 
-Không có gì tiến triển về bài toán 4 màu cho đến năm 1976, khi [Wolfgang
-Haken](bio:haken) và [Kenneth Appel](bio:appel) sử dụng máy tính để giải bài toán này. Họ gom vô vàn kiểu bản đồ khác nhau thành 1936 kiểu bản đồ cụ thể, mỗi bản đồ được kiểm tra bởi máy tính, tổng cộng hết tất cả 1000 giờ đồng hồ.
+Không có gì tiến triển về bài toán 4 màu cho đến năm 1976, khi [Wolfgang Haken](bio:haken) và [Kenneth Appel](bio:appel) sử dụng máy tính để giải bài toán này. Họ gom vô vàn kiểu bản đồ khác nhau thành 1936 kiểu bản đồ cụ thể, mỗi bản đồ được kiểm tra bởi máy tính, tổng cộng hết tất cả 1000 giờ đồng hồ.
 
     x-parallax.full-width(background="images/ibm-360.jpg")
 
@@ -768,8 +765,7 @@ Bài toán vận chuyển của người bán hàng khó ở mức độ NP [NP-
 
 Tìm ra được thuật toán nhanh và chính xác sẽ có tác động rất lớn vào ngành khoa học máy tính: nghĩa là sẽ có thuật toán nhanh cho _tất cả_ các bài toán khó mức độ NP-hard. Nó cũng làm cho hầu hết các hệ thống an ninh internet vô dụng, vốn được xây dựng dựa trên nền tảng có những bài toán phức tạp máy tính không giải được.
 
-Tìm được một thuật toán nhanh giải quyết bài toán vận chuyển của người giao hàng cũng giúp giải quyết một trong những bài toán khó nổi tiếng trong toán học và khoa học máy tính, bài toán __P vs NP__. Đây là một trong 7 [Millennium Prize
-Problems](gloss:millennium-prize), mỗi bài toán có giải thưởng 1 triệu đô.
+Tìm được một thuật toán nhanh giải quyết bài toán vận chuyển của người giao hàng cũng giúp giải quyết một trong những bài toán khó nổi tiếng trong toán học và khoa học máy tính, bài toán __P vs NP__. Đây là một trong 7 [Bài toán khó thế kỷ](gloss:millennium-prize) (Millenium Prize Problems), mỗi bài toán có giải thưởng 1 triệu đô.
 :::
 
 ---
@@ -811,7 +807,7 @@ Trong khi các trang web và đường dẫn tạo nên một đồ thị _ảo_
 đồ thị _vật lý_ của các máy tính, servers, routers, đường điện thoại và đường cáp.
 
 ::: column.grow(parent="right")
-Mỗi lần bạn thực hiện một cuộc gọi hay mở một trang web, các tổng đài trong mạng lưới phải tìm cách kết nối người gửi và người nhận, mà không làm quá tải từng đường cáp hay đường truyền kết nối. Lý thuyết đồ thị và lý thuyết xác xuất giúp ta có được dịch vụ tin cậy, ví dụ như tìm đường dẫn khác khi một số kết nối bị bận. 
+Mỗi lần bạn thực hiện một cuộc gọi hay mở một trang web, các tổng đài trong mạng lưới phải tìm cách kết nối người gửi và người nhận, mà không làm quá tải từng đường cáp hay đường truyền kết nối. Lý thuyết đồ thị và lý thuyết xác suất giúp ta có được dịch vụ tin cậy, ví dụ như tìm đường dẫn khác khi một số kết nối bị bận. 
 ::: column(width=220)
 
     x-media(lightbox src="images/phone.jpg" width=220 height=166)
