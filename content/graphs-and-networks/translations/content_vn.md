@@ -382,47 +382,41 @@ Cũng như bài toán của thị trấn Königsberg ở trên, bạn nhận ra 
 
 ## Công thức Euler
 
-All planar graphs divide the plane they are drawn on into a number of areas,
-called __faces__.
+Tất cả các đồ thị phẳng chia mặt phẳng thành nhiều vùng khác nhau,
+được gọi là __các mặt__.
 
 ::: column(width=200)
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Vertices  
-[[5]] Faces  
-[[10]] Edges  
+{.text-center} [[6]] Đỉnh  
+[[5]] Mặt  
+[[10]] Cạnh  
 _{span.euler-sum} 11 Vertices + Faces_
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Vertices  
-[[7]] Faces  
-[[14]] Edges  
+{.text-center} [[8]] Đỉnh  
+[[7]] Mặt  
+[[14]] Cạnh 
 _{span.euler-sum} 15 Vertices + Faces_
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Vertices  
-[[13]] Faces  
-[[24]] Edges  
+{.text-center} [[12]] Đỉnh  
+[[13]] Mặt 
+[[24]] Cạnh  
 _{span.euler-sum} 25 Vertices + Faces_
 :::
 
 ---
 > id: euler-1
 
-When comparing these numbers, you will notice that the number of edges is always
-[[one less|bigger|the same]] than the number of faces plus the number of
-vertices. In other words, _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1. This
-result is called __Euler’s equation__ and is named after the same
-[mathematician](bio:euler) who solved the Königsberg Bridges problem.
+Khi so sánh các con số này, bạn sẽ nhận thấy rằng số cạnh luôn [[ít hơn một|lớn hơn|bằng]] số mặt cộng với số đỉnh. Hay nói cách khác,_{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1. Kết quả này được gọi là __phương trình Euler__ đặt theo tên của [nhà toán học](bio:euler) đã giải bài toán những cây cầu ở Königsberg.
 
-Unfortunately, there are infinitely many graphs and we can’t check every one to
-see if Euler’s equation works. Instead we can try to find a simple
-[proof](gloss:proof) that works for any graph…
+Đáng tiếc là có vô vàn các đồ thị và chúng ta không thể kiểm chứng hết tất cả để chứng minh phương trình của Euler. Thay vào đó chúng ta có thể cố gắng tìm ra một [bằng chứng](gloss:proof) đơn giản có thể áp dụng cho bất kỳ đồ thị nào…
 
 ---
 > id: euler-2
@@ -451,33 +445,26 @@ see if Euler’s equation works. Instead we can try to find a simple
               td.xe 0
           p #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
 
-      .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler&rsquo;s equation works.
-      .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler&rsquo;s equation still works.
-      .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
-      .legend(slot="legend") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler&rsquo;s equation works.
-      .legend(slot="legend") Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face. Euler’s equation still works.
+      .legend(slot="legend") Bắt đầu từ đồ thị đơn giản nhất chứa duy nhất một đỉnh. Chúng ta có thể dễ dàng kiểm tra theo phép tính ở trên đây cho thấy phương trình Euler đúng.
+      .legend(slot="legend") Cho vào thêm một đỉnh. Chúng ta thêm vào 1 cạnh, và phương trình Euler vẫn đúng.
+      .legend(slot="legend") Nếu chúng ta thêm vào đỉnh thứ 3 thì có hai khả năng xảy ra. Chúng ta có thể tạo một tam giác nhỏ: vậy là có thêm một đỉnh, một mặt và hai cạnh, phương trình Euler vẫn đúng. 
+      .legend(slot="legend") Hoặc chỉ đơn giản là nối dài đường sẵn có: vậy là có thêm một đỉnh và một cạnh, phương trình Euler đúng.
+      .legend(slot="legend") Cứ tiếp tục như vậy: lúc này chúng ta tạo nên một tứ giác nghĩa là có thêm một đỉnh, hai cạnh và một mặt.Phương trình Euler vẫn đúng.
 
 ---
 > id: euler-3
 
-Any (finite) graph can be constructed by starting with one vertex and adding
-more vertices one by one. We have shown that, whichever way we add new vertices,
+Bất kỳ đồ thị (có giới hạn) nào đều có thể bắt đầu từ một đỉnh và thêm từng đỉnh mới vào. Chúng ta đã thấy rằng dù thêm đỉnh vào theo cách nào, phương trình Euler vẫn đúng. Do đó phương trình Euler cũng đúng với mọi loại đồ thị.
 Euler’s equation is valid. Therefore it is valid for all graphs.
 
-The process we have used is called __mathematical induction__. It is a very
-useful technique for proving results in infinitely many cases, simply by
-starting with the simplest case, and showing that the result holds at every
-step when constructing more complex cases.
-
+Quy trình chúng ta vừa sử dụng để chứng minh phương trình Euler được gọi là __phương pháp quy nạp Toán học__. Đây là kỹ năng rất hữu dụng sử dụng để chứng minh kết quả của nhiều bài toán khác nhau, đơn giản chỉ bằng khởi điểm từ trường hợp đơn giản nhất, chứng minh kết quả vẫn đúng với mỗi bước phát triển lên thành trường hợp phức tạp hơn. 
     .svg-block: include svg/dominoes.svg
 
 ---
 > id: euler-4
 
-Many planar graphs look very similar to the nets of [polyhedra](gloss:polyhedron),
-three dimensional shapes with [polygonal](gloss:polygon) faces. If we think of
-polyhedra as made of elastic bands, we can imagine stretching them out until
-they become flat, planar graphs:
+Rất nhiều đồ thị phẳng trông tương tự như mạng lưới của [hình đa diện](gloss:polyhedron),
+là những hình không gian ba chiều với [đa diện](gloss:polygon) các mặt. Nếu ta xem hình đa diện được làm từ những sợi dây cao su, chúng ta có thể tưởng tượng ra việc kéo chúng về một mặt phẳng, thành các đồ thị phẳng:
 
     .row
       .grow: x-img-sequence(src="images/cube/cube#.png" pages=32 width=300 height=300)
@@ -486,36 +473,33 @@ they become flat, planar graphs:
 ---
 > id: euler-5
 
-This means that we can use Euler&rsquo;s formula not only for planar graphs but
-also for all polyhedra – with one small difference. When transforming the
-polyhedra into graphs, one of the faces disappears: the topmost face of the
-polyhedra becomes the “outside”; of the graphs.
+Điều này có nghĩa là chúng ta không những có thể sử dụng công thức Euler cho đồ thị phẳng mà còn có thể dùng cho tất cả các hình đa diện - với một điểm khác biệt nhỏ. Khi chúng ta chuyển hình đa diện thành đồ thị, một trong các mặt sẽ biến mất: đó là mặt trên cùng trở thành "vòng ngoài" của đồ thị. 
 
-In other words, if you count the number of __{.red}edges__, __{.blue}faces__ and
-__{.green}vertices__ of _any_ polyhedron, you will find that _{.b.blue}F_ +
+Nói cách khác, nếu bạn đếm số __{.red}cạnh__, __{.blue}mặt__ and
+__{.green}đỉnh__ của _bất kỳ_ hình đa diện nào, bạn sẽ thấy rằng _{.b.blue}F_ +
 _{.b.green}V_ = _{.b.red}E_ + [[2]].
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Icosahedron__  
-one of the 5 [Platonic Solids](/course/polygons-and-polyhedra/platonic-solids)  
-__{.blue}20__ Faces, __{.green}12__ Vertices and __{.red}30__ Edges
+{.caption} __Khối hai mươi mặt__  
+một trong 5 [Khối đa diện Platon](/course/polygons-and-polyhedra/platonic-solids)  
+__{.blue}20__ Mặt, __{.green}12__ Đỉnh and __{.red}30__ Cạnh
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Small Rhombicosidodecahedron__  
-one of the 13 [Archimedean Solids](/course/polygons-and-polyhedra/more-on-polyhedra)  
-__{.blue}62__ Faces, __{.green}60__ Vertices and __{.red}120__ Edges
+{.caption} __Khối 60 mặt__  
+một trong 13 [Khối đa diện Archimedean](/course/polygons-and-polyhedra/more-on-polyhedra)  
+__{.blue}62__ Mặt, __{.green}60__ Đỉnh and __{.red}120__ Cạnh
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" credit="pond5.com" hover loop)
 
-{.caption} __Football, or *Truncated Icosahedron*__  
-__{.blue}32__ Faces (12 black and 20 white),  
-__{.green}60__ Vertices and__{.red}90__ Edges
+{.caption} __Bóng đá, hay *Khối 20 mặt cụt*__  
+__{.blue}32__ Mặt (12 black and 20 white),  
+__{.green}60__ Đỉnh và__{.red}90__ Cạnh
 :::
 
 ---
