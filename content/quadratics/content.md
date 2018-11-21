@@ -1,204 +1,126 @@
 # Quadratic Equations
 
 ## Introduction
+> id: intro1
+> section: introduction
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
 
 Welcome to SkateSum, a small company that produces skateboards. Engineers have
 been working on a brand new model, the _SquareBoard_, which is finally ready to
-start production. However building the skateboards is not cheap:
+start production. You've been put in charge of finding the optimal resale price
+for the skateboards – and it turns out that building them is not cheap:
 
-* The tools and machines required to construct skateboards cost $2,000.
-* Every skateboard costs additional $60 worth of of wood and other materials,
-  as well as the salary for employees.
+* The tools and machines required to construct skateboards cost $2,000. This is
+  often called a __fixed cost__.
+* Every skateboard costs additional $60 worth of of wood, other materials,
+  and salary for the employees. This is often called a __variable cost__,
 
-The new skateboards are highly anticipated, but if the price is too high, fewer
-people will actually buy one. We can show this relationship on a simple chart
-with the cost of a skateboard on the _x_-axis, and the corresponding number of
-people who will buy one (the _demand_) on the _y_-axis.
+In other words, the __cost__ of producing _x_ skateboards is
 
-{.todo} Multiple choice interactive  
-Pick the chart that you think makes most sense:  
-Exactly! Higher cost means lower demand, so the graph of the function moves downwards.
-
-Economists did some market research and came up with the following equation that
-relates the _{.b.orange}price_ of skateboards to the _{.b.purple}demand_:
-
-{.text-center} _{.b.purple}demand_ = 5000 – 30 × _{.b.orange}price_
-
-For example, if the skateboard costs $100, the demand will be [[2000]] units. This
-is called a __linear equation__, because its graph is just a straight line.
-
-The company wants to maximise its _{.b.yellow}profit_, which is the
-_{.b.green}revenue_ they make from selling skateboards, minus the _{.b.red}cost_
-which they have to spend to produce them. We can come up with equations for all
-of these values.
-
-The _{.b.green}revenue_ is the income they receive from selling skateboards:
-the number of units sold (the _{.b.purple}[[demand|profit|cost]]_) times the
-_{.b.orange}price_ of each:
-
-{.text-center.subsection(blank-1)}
-_{.b.green}revenue_ = _{.b.purple}demand_ × _{.b.orange}price_
+{.text-center} _{.pill.orange}cost_ = _{x-equation(solution="2000+60*x")}_.
 
 ---
-> id: s1
+> id: intro2
 
-The _{.b.red}cost_ is $2000 for buying tools and machines plus the $60 for every
-skateboard they produce – and ideally this number should be equal to the demand:
+The new skateboards are highly anticipated, but if the price is too high, fewer
+people will actually buy one. We can show this on a chart with the price of a
+skateboard along the _x_-axis, and the corresponding number of people who want
+buy one (the __demand__) on the _y_-axis.
 
-{.text-center} _{.b.red}cost_ = 2000 + 60 × _{.b.purple}demand_
+Which of these charts makes most sense for the relationship between price and
+demand?
 
-Finally, the profit is the difference between _{.b.green}revenue_ and
-_{.b.red}cost_. We can substitute the expressions above, and express total
-_{.b.yellow}profit_ just in terms of the _{.b.orange}price_ of every skateboard:
+    x-picker
+      .item(data-error="wrong-chart-1") TODO
+      .item#item1 TODO
+      .item(data-error="wrong-chart-1") TODO 
 
-    //- x-equation-system
+---
+> id: intro3
+
+Exactly! A higher price means that fewer people want to buy a skateboards, so
+the graph of the function has to move downwards. Economists did some market
+research and came up with the following equation:
+
+{.text-center} _{.pill.teal}demand_ = 5000 – 30 × _{.pill.purple}price_
+
+For example, if a skateboard costs $100, the demand will be [[2000]] units.
+
+---
+> id: intro4
+
+The __revenue__ of our company is the total amount of money we make. It is the
+number of skateboards sold (the _demand_) times the price of each:
+
+{.text-center} _{.pill.green}revenue_ = _{.pill.teal}demand_ × _{.pill.purple}price_
+
+But the number we are most interested in is our __profit__: the revenue we make
+from selling skateboards, minus the cost of producing them.
+
+Using all of this information, can you find an equation that expresses our 
+_{.pill.yellow}profit_ in terms of just the _{.pill.purple}price_ of every
+skateboard?
+
+    x-equation-system
       table
         tr
-          td #[em.b.yellow profit]
+          td: em.pill.yellow profit
           td= '='
-          td #[em.b.green revenue] – #[em.b.red cost]
+          td #[em.pill.green revenue] – #[em.pill.orange cost]
         tr
           td
           td= '='
-          td: x-equation.var(vars="profit revenue cost demand price", fns="+ - * ^")
-
-{.subsection(equation-1)} Notice that this equation contains _{.b.orange}price_
-as well as _{.b.orange}price_^2^. Therefore it is called a
-__Quadratic Equation__.
+          td.todo TODO
 
 ---
-> id: s2
+> id: intro-table
 
-Now we want to find the value of _price_{.b.orange} that produces the largest
-profit. Let's start by creating a graph that shows the _{.b.yellow}profit_ (on
-the _y_-axis) for a range of possible different _{.b.orange}prices_ (on the
-_x_-axis):
+Notice that this equation contains _{.pill.purple}price_ as well as
+_{.pill.purple}`price^2`_. It is called a [__Quadratic
+Equation__](gloss:quadratic-equation), named after the Latin word "quadratus"
+for square.
 
-    x-coordinate-system(x="-20 180 20" x-label="price" y="-100 100 20" y-label="profit" y-suffix="k" fn="-0.03 * x^2 + 6.8 * x - 302" regions="-20,0;60,-100|120,80;180,-20" crosshairs)
+To work out how to maximise our profit, let's calculate the profit for a few
+different prices:
 
-If the [price is 0](->#s2_.r1), the “profit” is negative, because we’re
-just giving away expensive skateboards for free. As the price increases, our
-profit rises, too. However, if the skateboards become [too expensive](->#s2_.r2),
-people no longer want to buy them and the profit falls again. SkateSum can
-maximise its profit by pricing the skateboards at approximately $[[110]].
+| _{.pill.purple}price_  | 20$ | 40$ | 60$ | 80$ | 100$ | 120$ | 140$ | 160$ |
+| _{.pill.yellow}profit_ | 
+{.grid}
 
 ---
+> id: intro-chart
 
+Now we can draw all of these points in a coordinate system, and connect them
+with a line:
 
-Here’s a question that is designed to give the impression that quadratics are
-used in the “real world.” The trouble is that companies rarely know a formula
-for their revenues, and if they did, it is very unlikely that the formula would
-be a perfect quadratic equation.
+    x-coordinate-system(width=640 height=400 x-axis="-20|180|20" x-label="price" y-axis="-100000|100000|20000" y-label="profit")
+      .region.r1(style="")
+      .region.r2(style="")
 
-I would guess these questions are designed more to test if you can think about
-formulas and apply meaning to their properties: What does the vertex mean? What
-does an intercept mean? And so on.
+The graph of [linear functions](gloss:linear-function) is always a straight
+line. As you can see above, the graph of [quadratic function](gloss:quadratic-function)
+is curved. It even has a specific name: a [__Parabola__](gloss:parabola).
 
-Just to acknowledge the silliness of the “real world” meaning of these
-questions, I’ve designed a question here about floogle.
+If the [price is 0](->.r1), our profit is negative, because we’re just
+giving away expensive skateboards for free. As the price increases, our
+profits rise, too. However, if the skateboards become [too expensive](->.r2),
+people no longer want to buy them and the profit falls again.
 
-EXAMPLE 97: A company produces and sells floogle by the pound. Its revenue R
-and cost C functions are given by:
+We can maximise our profit by pricing the skateboards at approximately $[[110]].
 
-R(x)=−2x(x−600)
+---
+> id: intro-final
 
-C(x)=200x+80,000
+    figure: x-media(src="images/skater-2.jpg" width=400 height=352)
 
-where x represents the number of pounds of floogle produced per day and R and
-C are each in units of dollars.
+In the real word, it can be very hard for companies to determine a precise
+equation for their profit – and it is likely to me much more complicated than
+this example.
 
-a) Give rough sketches of these two functions on the same set of axes.
-
-b) What is the “break even” point for the company?
-
-c) For which value of x is the revenue R at a maximum?
-
-d) For which value of x is the profit the company makes at a maximum? What is
-that maximum profit?
-
-Answer: Firstly we should make clear as to what “revenue” and “cost” mean.
-Revenue usually means “how much money is brought in.” So R(x) is the number of
-dollars brought in by making and selling x pounds of floogle. Of course there
-are costs involved in producing floogle, and C(x) is the number of dollars it
-costs to make x pounds of floogle.
-
-Apparently, R(x) is given by a downward facing parabola. I guess this means
-that if you start making too much floogle you flood the market and can’t sell
-as much. The revenue starts going down after some point.
-
-The cost function C(x) is a straight-line formula: C(x)=200x+80000. Before you
-make any floogle, you have a cost of $80,000. (The cost of the factory?)
-Thereafter it costs an additional $200 for every pound of floogle you make.
-(Expensive stuff!)
-
-Okay … On to the mathematics. As part a) suggests, pictures are always good.
-
-a) R(x)=−2x(x−600) has x=0 and x=600 as interesting, each giving an output of
-zero. The vertex must occur at x=300 and here R(300)=−2⋅300(−300)=180,000.
-
-C(x)=200x+80,000. This has a straight-line graph of slope 200 starting on the
-y-axis at position 80,000. Just to be clear, at x=300, we have
-C(300)=200⋅300+80000=140,000, which is lower than the vertex of the quadratic.
-
-The graphs look like:
-
-![](http://gdaymath.com/wp-content/uploads/2013/03/Q4_5_pic4.png)
-
-b) “Break even” must be the point when the revenue starts to outweigh the costs.
-This is a very important thing for companies to know: How many pounds must they
-sell in order to start making a profit. We see from the picture that there is a
-point after which R(x) starts to be larger than C(x).
-
-To find this point we must solve:
-
-R(x)=C(x)
-−2x(x−600)=200x+80,000
-−2x2+1200x=200x+80,000
-−2x2+1000x=80,000
-
-Dividing through by −2 gives:
-
-x2−500x=−40,000
-
-The box method (check this!) suggests to add 62,500 to each side:
-
-x2−500x+62500=22500
-(x−250)2=22500
-x−250=150  or  x−250=−150
-x=400  or x=100
-
-From the graph we expect two answer to this, but it is the left answer, x=100,
-that is the break even point.
-
-c) The revenue is at a maximum for x=300.
-
-d) Now here is a surprise for students: The profit is not a maximum at x=300!
-
-The amount of profit P the company makes is given by revenue minus cost:
-
-P(x)=R(x)−C(x)
-and this is its own formula:
-
-P(x)=−2x(x−600)−(200x−80000)
-        =−2x(x−600)−200x−80000
-        =−2x2+1200x−200x−80000
-        −2x2+1000x−80000
-
-It is a downward facing U with two interesting x-values:
-
-P(x)=−2x(x−500)−80000.
-
-Its vertex occurs halfway between the two interesting x-values, at x=250.
-
-The maximum profit is:
-
-P(250)=−2⋅250(−250)−80000=$45,000.   □
-
-In part c) we found that the R(x) and C(x) curves cross at x=100 and x=400, and
-in part d) we found that the maximum profit occurs at x=250. Notice that 250 is
-halfway between 100 and 400. Is this a coincidence?
+Still, quadratic equations appear everywhere in nature, engineering and
+economics. In this course you will learn many different methods for solving
+them and understanding their graphs.
 
 
 
@@ -206,71 +128,50 @@ halfway between 100 and 400. Is this a coincidence?
 
 
 ## Solving Quadratic Equations
-> id: s3
+> id: definitions
 
-Let's start with a few definition. An equation of the form
+You already know how to solve [_linear equations_](gloss:linear-equation):
+equations of the form `ax + b`, where _x_ is a [variable](gloss:variable), and
+_a_ and _b_ are some specific numbers.
+
+Now let's think about a more complex class of equations which also contain
+`x^2`. A [__quadratic equation__](gloss:quadratic-equation) is an equation of
+the form
   
 {.text-center} `ax^2 + bx + c = 0`,
 
-In a beginning algebra course one studies linear equations, that is equations that involve expressions of the form ax+b with x the variable and a and b specific numbers. A natural next question is to wonder about expressions and equations that involve x2.
+where _x_ is a variable and _a_, _b_, and _c_ are some specific numbers (called
+_coefficients_). Both `b` and `c` could be 0, but `a` can’t be 0 because then
+we would just have [[a linear equation|zero|no solution]].
 
-Jargon: An expression of the form ax2+bx+c with x the variable and a, b , and c fixed values (with a≠0) is called quadratic. To solve a quadratic equation means to solve an equation that can be written in the form ax2+bx+c=d.
+---
+> id: parabola
 
-where `x` is a __variable__ and `a`, `b` and `c` can be any numbers (including
-negative ones), called __coefficients__. Both `b` and `c` could be 0, but
-`a` can’t be 0 because then we would just have [[a linear equation|zero|no solution]].
+Like you saw in the [introduction](/course/quadratics/introduction), plotting
+the graph of a quadratic function in a coordinate system gives a curved shape
+called a __Parabola__:
 
-The graph of a quadratic equation always has a “curved” shape like the
-one we saw before. This shape is called a __Parabola__. The simplest quadratic
-function is `y = x^2`. If we plot this on a diagram, we get a simple, upward
-pointing parabola:
+    x-coordinate-system.var(x-axis="-5|5|1" y-axis="-3|5|1")
 
-    x-coordinate-system.var(x="-5 5 1" y="-3 5 1" fn="${a}*x^2+(${b})*x+(${c})" points="${zeros(a,b,c)}")
+{.text-center} `y =`${a}{a|1|-5,5,0.1} `x^2+`${b}{b|0|-5,5,0.1} `x+`${c}{c|0|-5,5,0.1}
 
-Now try changing the values of _a_, _b_ and _c_ in the quadratic equation and
-see how the parabola changes:
-
-{.text-center} `y =`${a}{a|1|-4,4,0.1} `x^2+`${b}{b|0|-4,4,0.1} `x+`${c}{c|0|-4,4,0.1}
-
-{.subsection(var-1 var-2 var-3)}
-To solve a quadratic equation, we have to find the points where _y_ = 0. These
-are the points where the graph of the parabola [[crosses the x-axis|crosses the y-axis|turns around]].
-While linear equations always have exactly one solution, we can see from the
-diagram that quadratic equations can sometimes have and _{span.action}no solution_,
-_{span.action}one solution_, or even _{span.action}two solutions_.
+Try changing the values of _a_, _b_ and _c_, and see how the parabola changes.
 
 ---
 
-The different possible number of solutions has to do with the properties of squares:
+To solve a quadratic equation, we have to find the points where `y = 0`. These
+are the points where the graph of the parabola [[crosses the x-axis|crosses the
+y-axis|turns around]].
 
-* For every value of `x^2`, there are [[two|three|one]] possible values of `x`: a positive and a negative one.
-  For example, if `x^2=`${x*x}{x|4|2,10,1}, we don't know if `x=`${x} or `x=`${'–'+x}. In this case,
-  the quadratic equation has __two solutions__. As an abbreviation, we sometimes write `x = +-`${x} (“_x_ equals plus-minus ${x}”).
-
-* {.subsection(blank-0)} Square numbers are always positive. This means that
-there [[is no number|are multiple numbers]] `x` that could satisfy `x^2 = -9`.
-This equation has __no solutions__.
-
-{.subsection(blank-1)}
-In the following sections we will learn a few different ways to solve quadratic
-equations and interpret their graphs.
-
-    figure: x-media(src="images/skater-2.jpg" width=400 height=352)
+{.reveal(when="blank-0")} While linear equations always have exactly one
+solution, we can see from the diagram that quadratic equations can sometimes
+have and _{span.var-action}no solution_, _{span.var-action}one solution_, or
+even _{span.var-action}two solutions_.
 
 
-ASIDE:
-It is interesting to note that the name "quadratic" for equations that contain
-x^2 is actually quite weird. The prefix "quad" means “four”, but quadratic
-expressions are ones that involve powers of x up to the second power, not the
-fourth power.
-
-It turns out that Quadratic equations are intimately connected with problems
-about squares and quadrangles. (In fact, the word quadratic is derived from the
-Latin word quadratus for square.) 
-
-As we shall soon see, solving a quadratic equation involves making use of the
-geometry of a square. It is really for this reason that equations of this form
-became known as the ones “solvable by a quadrangle method.”
+{.reveal(when="blank-1")} In the following sections we will discover why that
+is the case, learn several different methods to find all solutions of a
+quadratic equation.
 
 ---
 
@@ -297,6 +198,15 @@ Now we take square roots of both sides, remembering to add a ±:
 
 Sometimes we have to do a bit more work to isolate `x^2`:
 
+* For every value of `x^2`, there are [[two|three|one]] possible values of `x`:
+  a positive and a negative one. For example, if `x^2=`${x*x}{x|4|2,10,1}, we
+  don't know if `x=`${x} or `x=`${'–'+x}. In this case, the quadratic equation
+  has two solutions.
+
+* {.reveal(when="blank-0")} Square numbers are always positive. This means that
+  there [[is no number|are multiple numbers]] `x` that could satisfy `x^2 = -9`.
+  This equation has __no solutions__.
+
 {.eqn-system}
 | `3` | `x^2` | `-11` | `=` | `7`           | {.eqn-comment} add 11 to both sides |
 | `3` | `x^2` |       | `=` | `18`          | {.eqn-comment} divide both sides by 3 |
@@ -305,6 +215,8 @@ Sometimes we have to do a bit more work to isolate `x^2`:
 |     |       |       | `=` | `+-2.45`     |
 
 {.todo} Something about exactness and how to express solutions
+
+As an abbreviation, we sometimes write `x = +-`${x} (“_x_ equals plus-minus ${x}”).
 
 EXAMPLE 11: Solve `x^2=100`.
 Answer: Easy. `x=10` or `x=−10`.
@@ -1222,44 +1134,6 @@ In these cases there is just a single solution for the quadratic equation.
 {.todo} And finally, some quadratic equations actually have a coefficient
 in front of . This makes the factorisation a bit more difficult,
 but it still works the same way:
-
----
-
-### Completing the Square
-
-In some cases, factorising doesn't work – sometimes there simply aren't numbers
-`p` and `q`. In these cases, there is a different way to solve quadratic
-equations: it is more work, but it is guaranteed to work.
-
-The basic idea is to use the binomial expansion
-
-{.text-center} `(x+m)^2 = x^2 + 2mx + m^2`
-
-Let's look at an example. The following quadratic equation can't be easily
-solved using factoring:
-
-{.text-center} `x^2 + 8x - 12 = 0`
-
-However, we can try making it look at bit more like the binomial expansion. The
-`x^2` term already matches. The `8x` term is `2mx` when `m=4`. Unfortunately
-the last term doesn't match: we'd want `m^2=4^2 = 16` but we have –12. However,
-we can just subtract the difference:
-
-{.text-center} `x^2 + 2×4×x + 4^2 - 4^2 - 12 = 0`
-
-The `+4^2` and `-4^2` simply cancel each other out, so we are not actually
-changing the equation. However, the first part now exactly matches the binomial
-expansion, so we can factor it:
-
-{.text-center} `(x+4)^2 - 4^2 - 12 = 0`
-
-Now we can simplify the equation and take square roots, almost like above:
-
-{.eqn-system}
-| `(x+4)^2` | `-28` | `=` | `0`             |
-| `(x+4)^2` |       | `=` | `28`            | {.eqn-comment} remember the ± when taking square roots! |
-| `x + 4`   |       | `=` | `+-sqrt(28)`    |
-|           | `x`   | `=` | `+-sqrt(6) - 4` |
 
 
 

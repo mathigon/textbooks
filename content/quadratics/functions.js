@@ -5,7 +5,7 @@
 
 
 import { square } from '@mathigon/core';
-import { Expression, nearlyEquals, sign } from '@mathigon/fermat';
+import { Expression, nearlyEquals, sign, Point } from '@mathigon/fermat';
 
 import './components/conic-section';
 
@@ -13,25 +13,22 @@ import './components/conic-section';
 // -----------------------------------------------------------------------------
 // Shared Utilities
 
-/* function q(x, a, b, c) {
-  return a*x*x + b*x + c;
+function q(a, b, c) {
+  return (x) => (a*x*x + b*x + c);
 }
 
 function zeros(a,b,c) {
   let disc = b * b - 4 * a * c;
-  if (disc < 0) return '';
+  if (disc < 0) return [];
 
-  if (nearlyEquals(disc, 0, 0.1)) {
-    let x = -b/(2*a);
-    return `${x},${q(x,a,b,c)}`
-  }
+  if (nearlyEquals(disc, 0, 0.1)) return [-b / (2*a)];
 
   let x1 = (-b + Math.sqrt(disc))/(2*a);
   let x2 = (-b - Math.sqrt(disc))/(2*a);
-  return `${x1},${q(x1,a,b,c)}|${x2},${q(x2,a,b,c)}`
+  return [x1, x2];
 }
 
-let PROPERTIES = {
+/* let PROPERTIES = {
   quadratic: [{
     name: 'Direction',
     fn(params) { return params[2]; },
@@ -71,12 +68,35 @@ function compare(params, paramsExp, type) {
 
 
 // -----------------------------------------------------------------------------
-// Section Functions
+// Introduction
 
-export function graphing1($step) {
+export function introChart($step) {
   const $chart = $step.$('x-coordinate-system');
-  $chart.setFunctions(x => x*x);
+  const f = (x => -30*x*x + 6800*x - 302000);
+
+  $chart.setFunctions(f);
+  $chart.drawPoints([20, 40, 60, 80, 100, 120, 140, 160].map(p => new Point(p, f(p))));
 }
+
+export function introTable($step) {
+  $step.addHint('calculator');
+}
+
+
+// -----------------------------------------------------------------------------
+// Solving Quadratic Equations
+
+export function parabola($step) {
+  const $chart = $step.$('x-coordinate-system');
+
+  $step.model.watch((s) => {
+    const fn = q(s.a, s.b, s.c);
+    $chart.setFunctions(fn);
+    $chart.drawPoints(zeros(s.a, s.b, s.c).map(p => new Point(p, fn(p))));
+  });
+}
+
+
 
 /* export function s1($step) {
   let correct = new Expression('-30 price^2 + 6800 price - 302000');
