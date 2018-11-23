@@ -211,5 +211,7 @@ function scoreOnVideo($step) {
 }
 
 export const origamiApplications = scoreOnVideo;
-export const origamiApplications2 = scoreOnVideo;
 export const origamiApplications3 = scoreOnVideo;
+export const origamiApplications4 = scoreOnVideo;
+export const origamiWings = scoreOnVideo;
+export const origamiDna = scoreOnVideo;

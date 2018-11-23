@@ -60,10 +60,60 @@ However, simply _observing_ a relationship like this was not enough for Thales.
 He wanted to understand _why_ it is true, and verify that it is _always_ true
 – not just in the few examples he tried.
 
-An argument that logically explains, beyond and doubt, why something must be
+An argument that logically explains, beyond any doubt, why something must be
 true, is called a [__proof__](gloss:proof). In the following courses you will
 learn a number of geometric techniques, that will eventually allow us to prove
 _Thales’ theorem_.
+
+---
+> id: applications
+
+But geometry is not just useful for proving theorems – it is everywhere around
+us, in nature, architecture, technology and design. We need geometry for
+everything from measuring distances to constructing skyscrapers or sending
+satellites into space. Here are a few more examples:
+
+::: column(width=200)
+
+    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+
+{.caption} Geometry allowed the ancient Egyptians to construct gigantic,
+perfectly regular pyramids, that align to patterns in the stars.
+::: column(width=200)
+
+    x-media(src="images/sextant.jpg" width=200 height=200)
+
+{.caption} Sailors use sextants to determine their location while at sea, using 
+angles formed by the sun or stars.
+::: column(width=200)
+
+    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
+
+{.caption} Geometry is needed to create realistic video game or movie graphics.
+::: column(width=200)
+
+    x-media(src="images/plane.jpg" width=200 height=200)
+
+{.caption} Geometry can help design and test new airplane models, making them
+safer and more efficient.
+::: column(width=200)
+
+    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
+
+{.caption} Geometry was key when designing this skyscraper in Beijing – and to
+make sure it won’t fall over.
+::: column(width=200)
+
+    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
+
+{.caption} Geometry allows us to predict the position of stars, planets and
+satellites orbiting Earth.
+:::
+
+In this and the following courses, you will learn about many different tools and
+techniques in geometry, that were discovered by mathematicians over the course
+of many centuries. We will also see how these techniques can be used to solve
+important problems in the real world.
 
 ---
 > id: points
@@ -770,18 +820,23 @@ how long you want it to be by picking the location of the fold.
 :::
 
 ---
-> id: origami-axioms
+> id: crane-1
 
 This _crane_ is one of the oldest and most famous Origami models. We have many
-more [instructions](/origami) for Origami models, if you want to try!
+more [instructions for Origami models](/origami) you can try!
 
     figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
+
+---
+> id: origami-axioms
+
+### Origami Axioms
 
 Just like drawing with straight-edge and compass, there are a few axioms of
 different _folds_ that are possible with origami. They were first listed in
 1992, by the Italian-Japanese mathematician Humiaki Huzita.
 
-::: column(width=220)
+::: column(width=220 parent="padded-thin origami-axioms")
 
     x-video(src="images/origami/axiom-1.mp4" width=220 height=220)
 
@@ -840,8 +895,10 @@ square the circle with origami.
 > id: origami-applications
 > goals: video
 
-Origami is an ancient art, and for the longest time it was mostly a recreational
-pursuit, without real life applications. However, it turns out that techniques
+### Applications of Origami
+
+Origami is an ancient art, and for the longest time, it was mostly a recreational
+pursuit, without real-life applications. However, it turns out that techniques
 developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column(width=300)
@@ -849,7 +906,8 @@ developed for Origami can be incredibly useful in technology and engineering:
     x-video(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
-### Origami in Space
+
+#### Origami in Space
 
 Satellites need large solar panels to generate power. Unfortunately, the rockets
 that carry satellites into space only have very limited space for cargo, and
@@ -863,44 +921,7 @@ and other mechanical components.
     // The same is also true for the mirrors of telescopes in space. Larger mirrors
     // can take better images. Engineers can use Origami to build large mirrors that
     // can be folded up very efficiently when loaded onto rockets.
-:::
 
----
-> id: origami-applications-1
-
-::: column(width=300)
-
-    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
-
-::: column.grow
-### Foldable Bridges
-
-The British and American military used Origami to develop foldable, mobile
-bridges. These were important for quickly crossing rivers or anti tank ditches,
-and could be deployed much faster than previous design.
-
-They can also be used for disaster relief, to quickly give emergency vehicles
-access after earthquakes or tsunamis. This image is of a prototype designed at
-Hiroshima University in Japan.
-:::
-
----
-> id: origami-applications-2
-> goals: video
-
-::: column(width=300)
-
-    x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
-
-::: column.grow
-### Stadium Roofs
-
-Bridges are difficult to construct because they have to span large distances
-without intermediate support. This also is the case for the roofs of sports
-stadiums, which have to cover a large area without being supported by pillars.
-
-The roof of the new Falcons Stadium in Atlanta consists of eight enormous
-modules that can twist to open or close.
 :::
 
 ---
@@ -912,72 +933,145 @@ modules that can twist to open or close.
     x-video(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
-### Origami in Medicine
 
-Let’s move from the very large to the very small: In 2003, researchers developed
-_Origami Stents_, tiny tubes that can be inserted into blood vessels. They are
-initially folded up, but can expand inside patients’ blood in oder to enlarge
-clogged arteries or veins.
+#### Origami in Medicine
+
+In medicine, similar ideas from Origami are used on a much smaller scale. In
+2003, researchers developed _Origami Stents_: tiny tubes that can be inserted
+into blood vessels. They are initially folded up but can expand inside patients’
+blood in order to enlarge clogged arteries or veins.
+
 :::
-
-    // Before an airbag inflates during a crash, it is folded tightly into a
-    // compartment within the steering wheel or dashboard. Engineers designing
-    // airbags start by modelling the inflation process on computers. In order
-    // to do this, they need an algorithm by which to "fold" the fully inflated
-    // airbag. This can be modelled using Origami
-
-And there are even more applications that are still being researched: from
-houses that, like Origami, will compress rather than crumble during an
-earthquake, to unfolding airbags in cars, self-assembling robots, and more
-efficient packaging.
 
 ---
-> id: applications
+> id: origami-applications-1
 
-## Applications of Geometry
+::: column(width=300)
 
-Geometry is everywhere around us – in nature, architecture, technology and
-design. We need geometry for measuring distances, as well as constructing
-skyscrapers or sending satellites into space.
+    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
 
-::: column(width=200)
+::: column.grow
 
-    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+#### Foldable Bridges
 
-{.caption} Geometry allowed the ancient Egyptians to construct gigantic,
-perfectly regular pyramids, that align to patterns in the stars.
-::: column(width=200)
+The British and American military used Origami to develop foldable, mobile
+bridges. These were important for quickly crossing rivers or anti-tank ditches,
+and could be deployed much faster than previous designs.
 
-    x-media(src="images/sextant.jpg" width=200 height=200)
+They can also be used for disaster relief, to quickly give emergency vehicles
+access after earthquakes or tsunamis. This image is of a prototype designed at
+Hiroshima University in Japan.
 
-{.caption} Sailors use sextants to determine their location while at sea, using 
-angles formed by the sun or stars.
-::: column(width=200)
-
-    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
-
-{.caption} Geometry is needed to create realistic video game or movie graphics.
-::: column(width=200)
-
-    x-media(src="images/plane.jpg" width=200 height=200)
-
-{.caption} Geometry can help design and test new airplane models, making them
-safer and more efficient.
-::: column(width=200)
-
-    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
-
-{.caption} Geometry was key when designing this skyscraper in Beijing – and to
-make sure it won’t fall over.
-::: column(width=200)
-
-    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
-
-{.caption} Geometry allows us to predict the position of stars, planets and
-satellites orbiting Earth.
 :::
 
-In the following courses, we will learn about tools and techniques in geometry
-that were discovered by mathematicians over the course of many centuries. We
-will also see how these techniques can be used to solve important problems in
-the real world.
+    // ---
+    // > id: origami-applications-2
+    // > goals: video
+    // 
+    // ::: column(width=300)
+    // 
+    // x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
+    // 
+    // ::: column.grow
+    // #### Stadium Roofs
+    // 
+    // Bridges are difficult to construct because they have to span large distances
+    // without intermediate support. This also is the case for the roofs of sports
+    // stadiums, which have to cover a large area without being supported by pillars.
+    // 
+    // The roof of the new Falcons Stadium in Atlanta consists of eight enormous
+    // modules that can twist to open or close.
+    // :::
+
+---
+> id: origami-applications-4
+> goals: video
+
+::: column(width=300)
+
+    x-video(src="https://storage.googleapis.com/mathigon-videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
+
+::: column.grow
+
+#### Origami under the Sea
+
+The depths of the oceans are some of the least explored areas on Earth. Animals
+that live there are often squishy and delicate, which makes them very hard
+to examine.
+
+Here you can see a “trap” in the shape of a [dodecahedron](gloss:dodecahedron)
+that can fold around marine organisms, allowing them to be studied. It is
+remotely controlled and only needs a single motor to drive the complex folding
+motion of its five arms.
+
+:::
+
+---
+> id: origami-applications-5
+
+And there are many more applications of Origami in everyday life: houses
+that will compress rather than crumble during an earthquake, unfolding airbags
+in cars, self-assembling robots, more efficient packaging, and lightweight
+aircraft.
+
+---
+> id: origami-wings
+> goals: video
+
+### Origami in Nature
+
+It turns out that we humans are not the only ones harnessing the power of
+Origami: nature has been doing so for millions of years.
+
+Here you can see the wing of an __earwig__ that can be folded up using an
+ingenious pattern. When opened, the size of the wing expands by a factor of 10 –
+the highest “folding ratio” in the animal kingdom:
+
+::: column(width=300)
+
+    x-media(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
+
+::: column(width=300)
+
+    x-video(src="https://storage.googleapis.com/mathigon-videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
+
+:::
+
+---
+> id: origami-wings-1
+
+When expanded, the large wings snap into a stable position that allows the
+insects to fly. But it only takes the lightest touch for the wings to retract.
+When folded up, they are compact enough to allow earwigs to tunnel underground.
+Many other insects, bats, leaves and flowers use similar folding patterns to fit
+large surfaces into small spaces.
+
+Scientists are studying these plants and animals, hoping to mimic their abilities
+in engineering and technology. Potential applications could include foldable
+electronics in smartphones, expanding solar panels for satellites, or even
+self-folding camping tents.
+
+---
+> id: origami-dna
+> goals: video
+
+::: column(width=320)
+
+    x-video(src="https://storage.googleapis.com/mathigon-videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
+
+::: column.grow
+
+A similar principle is used by [DNA](gloss:dna), the molecules that carry the
+genetic information in your body. 
+
+Every human cell contains about 2 meters of DNA. If you could combine the
+strands of DNA from all the cells in your body, their length would be more than
+140 times the distance between Earth and the sun!
+
+:::
+
+Nature found a clever way to fit all that DNA into your body, without it getting
+twisted or torn. Every strand of DNA is curled, folded, and held in place by
+special molecules. This process, called _protein folding_ is one of the most
+complex problems in biology. Understanding it better can help scientists develop
+new drugs in the future.
