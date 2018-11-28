@@ -122,18 +122,66 @@ quadratic:
 
 function:
   title: Function
-  text: A __function__ is a mathematical relation that converts inputs (_x_)
-    into outputs (_y_). They are often expressed as mathematical equations of
-    the form `f(x)`.
+  text: A __function__ is a mathematical relation that converts an input (_x_)
+    into exactly one output (_y_). They are often expressed as mathematical
+    equations of the form `f(x)`.
 
 function-graph:
   title: Graphs of Functions
   text: We can plot mathematical functions of the form `f(x)` in a coordinate
     system. The result is called the __graph__ of the function.
 
+linear-equation:
+  title: Linear Equation
+  text: A __linear equation__ is of the form `ax + b = 0`, where _x_ is a
+    variable, and _a_ and _b_ are numbers. When graphed in a coordinate system,
+    the values of `ax+b` form a straight line.
+
+quadratic-equation:
+  title: Quadratic Equation
+  text: A __quadratic equation__ is an equation that contains a single variable
+    of degree 2. It is often written as `ax^2 + bx + c = 0`, where _x_ is a
+    variable, _a_, _b_ and _c_ are numbers, and _c_ is not equal to zero.
+
+linear-function:
+  title: Linear Function
+  text: A __linear function__ is a function whose graph is a straight line. It
+    is defined using `f(x) = mx + c`, where _m_ is the slope of the line, and
+    _c_ is its _y_-axis intercept.
+
+quadratic-function:
+  title: Quadratic Function
+  text: A __quadratic function__ is a function of the form `f(x) = ax^2+bx+c`,
+    where _a_, _b_, and _c_ are numbers, and _a_ is not equal to zero. The graph
+    of a quadratic function is a U-shaped curve called a __parabola__.
+
+coordinate-system:
+  title: Coordinate System
+  text: A __cordinate sytem__ is a 2-dimensional plane that contains two
+    perpendicular axes. Every point on the plane can be defined using two
+    numbers (coordinates), that specify its distance from the two axes. The
+    __origin__ of a coordinate system is the point with coordinates (0, 0).
+
+parabola:
+  title: Parabola
+  text: A __parabola__ is the shape of the graph of a quadratic function. It is
+    symmetric, U-shaped and can point either upwards or downwards.
+
+cone:
+  title: Cone
+  text: |
+    A __cone__ is a solid, 3-dimensional object that has a circular base joined
+    to a single point (called the _vertex_) by a curved side. Its volume is
+    given by the formula
+
+    `V =  1/3 π r^2 h`,
+
+    where _r_ is the radius of the circular base, and _h_ is the height of the
+    cone (the perpendicular distance from the base to the vertex).
 
 
-# ==============================================================================
+
+  # ==============================================================================
 # SEQUENCES
 # ==============================================================================
 
