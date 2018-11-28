@@ -12,7 +12,7 @@ Mỗi ngày chúng ta tiếp xúc với muôn vàn những mạng lưới và k�
     svg#graph0.graph.novertices.noedges(width="160" height="130")
 
 :::
-__Lý thuyết về đồ thị __ là môn học về đồ thị và các đặc tính của nó. Đây là một trong những vấn đề thú vị và trực quan nhất trong toán học, và nó có muôn vàn những ứng dụng quan trọng khác nhau trong đời sống: 
+__Lý thuyết về đồ thị__ là môn học về đồ thị và các đặc tính của nó. Đây là một trong những vấn đề thú vị và trực quan nhất trong toán học, và nó có muôn vàn những ứng dụng quan trọng khác nhau trong đời sống: 
 
     x-gallery(slide-width="300")
       div
@@ -215,7 +215,9 @@ Euler](bio:euler). Euler rất hứng thú về một bài toán lâu đời ở
 
 Con sông Pregel phân chia thị trấn Königsberg thành 4 khu vực khác nhau, được kết nối bởi 7 cây cầu. Liệu có thể có cách nào đi một vòng thành phố và đi qua tất cả 7 cây cầu – và chỉ đi qua mỗi cây cầu đúng 1 lần không? ( Bạn có thể bắt đầu và kết thúc ở bất kỳ điểm nào, không nhất thiết phải cùng một chỗ.) 
 
-Tìm giải pháp bằng cách vẽ đường đi trên bản đồ dưới đây: ::: column(width=250)
+Tìm giải pháp bằng cách vẽ đường đi trên bản đồ dưới đây:
+
+::: column(width=250)
 
     img.shifted(src="images/konigsberg1.jpg" width=250 height=350)
 
@@ -392,29 +394,29 @@ Tất cả các đồ thị phẳng chia mặt phẳng thành nhiều vùng khá
 {.text-center} [[6]] Đỉnh  
 [[5]] Mặt  
 [[10]] Cạnh  
-_{span.euler-sum} 11 Vertices + Faces_
+_{span.euler-sum} 11 Đỉnh + Mặt_
 ::: column(width=200)
 
     include svg/euler-1.svg
 
 {.text-center} [[8]] Đỉnh  
 [[7]] Mặt  
-[[14]] Cạnh 
-_{span.euler-sum} 15 Vertices + Faces_
+[[14]] Cạnh  
+_{span.euler-sum} 15 Đỉnh + Mặt_
 ::: column(width=200)
 
     include svg/euler-3.svg
 
 {.text-center} [[12]] Đỉnh  
-[[13]] Mặt 
+[[13]] Mặt  
 [[24]] Cạnh  
-_{span.euler-sum} 25 Vertices + Faces_
+_{span.euler-sum} 25 Đỉnh + Mặt_
 :::
 
 ---
 > id: euler-1
 
-Khi so sánh các con số này, bạn sẽ nhận thấy rằng số cạnh luôn [[ít hơn một|lớn hơn|bằng]] số mặt cộng với số đỉnh. Hay nói cách khác,_{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1. Kết quả này được gọi là __phương trình Euler__ đặt theo tên của [nhà toán học](bio:euler) đã giải bài toán những cây cầu ở Königsberg.
+Khi so sánh các con số này, bạn sẽ nhận thấy rằng số cạnh luôn [[ít hơn một|lớn hơn|bằng]] số mặt cộng với số đỉnh. Hay nói cách khác, _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1. Kết quả này được gọi là __phương trình Euler__ đặt theo tên của [nhà toán học](bio:euler) đã giải bài toán những cây cầu ở Königsberg.
 
 Đáng tiếc là có vô vàn các đồ thị và chúng ta không thể kiểm chứng hết tất cả để chứng minh phương trình của Euler. Thay vào đó chúng ta có thể cố gắng tìm ra một [bằng chứng](gloss:proof) đơn giản có thể áp dụng cho bất kỳ đồ thị nào…
 
