@@ -1199,7 +1199,7 @@ of energy in the universe will always stay constant.
     p.caption The paths taken by particle fragments after a collision
 
 ::: column.grow
-It turns ou that, just by knowing about symmetry, physicists can derive most
+It turns out that, just by knowing about symmetry, physicists can derive most
 laws of nature that govern out universe – without ever having to do an
 experiment or observation.
 

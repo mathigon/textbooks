@@ -1586,8 +1586,8 @@ different positions](target:points), _{span.pill.step-target.yellow(data-to="bas
 The results were _{span.pill.step-target.red(data-to="ang")}23°_ and
 _{span.pill.step-target.blue(data-to="ang1")}29°_.
 
-Because _{span.pill.step-target.green(data-to="a")}angle α_ is a [complementary
-angle](gloss:complementary-angles), we know that it must be [[151]]°.
+Because _{span.pill.step-target.green(data-to="a")}angle α_ is a [supplementary
+angle](gloss:supplementary-angles), we know that it must be [[151]]°.
 _{span.reveal(when="blank-0")}Now we can use the sum of the internal angles of
 a triangle to work out that *{span.pill.step-target(data-to="b")}angle β* is [[6]]°._
 

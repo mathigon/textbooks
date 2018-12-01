@@ -170,7 +170,7 @@ We can also describe this pattern using a special [formula](gloss:formula):
       | &nbsp;+&nbsp;
       em#t3 n
 
-To get the _n_-th triangle number, we take the [[previous|first|last]] triangle
+To get the _n_-th triangle number, we take the [[previous|first|next]] triangle
 number and add _n_. For example, if _n_&nbsp;=&nbsp;${n}{n|5|2,20,1}, the
 formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
 = <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
