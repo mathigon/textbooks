@@ -71,4 +71,6 @@ You can find out more on [Mathigon.io](https://mathigon.io).
 
 ![](https://mathigon.org/images/unused/divider-4.png)
 
+---
+
 © Mathigon 2016–2018, All rights reserved
