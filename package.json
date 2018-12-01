@@ -4,7 +4,8 @@
   "description": "Mathigon Textbooks",
   "homepage": "https://mathigon.org/",
   "repository": "mathigon/textbooks",
-  "license": "CC-BY-NC-ND-4.0",
+  "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "server": "node server/app.js --use-strict & grunt concurrent",
     "start": "grunt && npm run server",

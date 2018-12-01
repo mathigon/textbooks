@@ -71,13 +71,4 @@ You can find out more on [Mathigon.io](https://mathigon.io).
 
 ![](https://mathigon.org/images/unused/divider-4.png)
 
-
-## License
-
-All original text and code is licensed under a [Creative Commons
-Attribution-NonCommercial-NoDerivatives license (CC BY-NC-ND)
-version 4.0](https://spdx.org/licenses/CC-BY-NC-ND-4.0.html). Third-party images
-and media resources may have more restrictive licenses.
-
-![Creative Commons Attribution-NoDerivatives
-license](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png "CC BY-NC-SA")
+© Mathigon 2016–2018, All rights reserved
