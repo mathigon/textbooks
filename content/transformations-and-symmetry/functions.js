@@ -112,10 +112,10 @@ export function translations1($step) {
     const $polygons = $s.$$('polygon');
     $polygons[0].transform = `translate(${initial[i].x}px, ${initial[i].y}px)`;
 
-    const drag = new Draggable($polygons[1], $s, 'xy', 10, true, 20);
-    drag.position = initial[i];
+    const drag = new Draggable($polygons[1], $s, {useTransform: true, snap: 20});
+    drag.setPosition(initial[i].x, initial[i].y);
     drag.on('end', () => {
-      if (drag.position.x === correct[i].x && drag.position.y === correct[i].y) {
+      if (drag.position.equals(correct[i])) {
         drag.disabled = true;
         $step.score('drag-' + i);
         $step.addHint('correct');

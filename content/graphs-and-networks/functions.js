@@ -788,13 +788,13 @@ export function salesman3($section) {
   $section.model.set('factorial', x => numberFormat(factorial(x)));
 }
 
-export function salesman4($section) {
-  let $box = $section.$('.tsm-box');
-  let $svg = $('svg', $box);
-  let $path = $N('path', { class: 'tsm-path' }, $svg);
+export function salesman4($step) {
+  const $box = $step.$('.tsm-box');
+  const $svg = $('svg', $box);
+  const $path = $N('path', {class: 'tsm-path'}, $svg);
 
-  let coords = [{ x: 150, y: 110 }, { x: 360, y: 240 }, { x: 520, y: 170 },
-    { x: 420, y: 400 }, { x: 120, y: 340 }, { x: 330, y: 60 }];
+  const coords = [{x: 150, y: 110}, {x: 360, y: 240}, {x: 520, y: 170},
+    {x: 420, y: 400}, {x: 120, y: 340}, {x: 330, y: 60}];
 
   let matrix = tabulate(null, coords.length, coords.length);
 
@@ -805,22 +805,17 @@ export function salesman4($section) {
       }
     }
 
-    let tsm = travellingSalesman(matrix);
+    const tsm = travellingSalesman(matrix);
     $path.points = tsm.path.map(i => coords[i]);
   }
 
-  function makeCity($c, i) {
-    let drag = new Draggable($c, $box);
+  coords.forEach((c, i) => {
+    const $c = $N('div', { class: 'tsm-city' }, $box);
+    const drag = new Draggable($c, $box);
     drag.on('move', function(e) {
       coords[i] = e;
       redraw();
     });
-    return drag;
-  }
-
-  coords.forEach(function(c, i) {
-    let $city = $N('div', { class: 'tsm-city' }, $box);
-    let drag = makeCity($city, i);
-    drag.position = c;
+    drag.setPosition(c.x, c.y);
   });
 }

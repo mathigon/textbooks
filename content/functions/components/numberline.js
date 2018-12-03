@@ -44,7 +44,7 @@ export class Numberline extends CustomElement {
       }
     });
 
-    const slider = new Draggable($slider, $top, 'x');
+    const slider = new Draggable($slider, $top, {moveY: false});
     slider.on('drag', update);
     update();
 
