@@ -699,16 +699,20 @@ outcome.
 > id: radioactive
 > goals: decay
 
-::: column.grow
 But _true randomness_ does exists – at the very foundations of matter. A block
 of radioactive material consists of millions of atoms which decay over time:
 they fall apart into smaller atoms while emitting dangerous radiation.
 
-Physicists know the probability that a particular atom will decay in a certain
-period of time. In fact, for a large block of radioactive material, the overall
-rate of decay is so steady that it is used in atomic clocks. But even knowing
-the exact properties of every atom, it is impossible to work out _which one_
-will decay next – this is completely random.
+::: column.grow
+
+Physicists can calculate the probability that a particular atom will decay in a
+certain period of time, but it is impossible to work out _which one_ will decay
+next – even if you know the exact properties of every atom.
+
+The overall rate of decay, on the other hand, is to steady that it can be used
+to calculate the age of fossils that died thousands of years ago on Earth. This
+process is called __Carbon dating__.
+
 ::: column(width=300)
 
     p: svg.radioactive(width=300 height=200 viewBox="0 0 300 200")
@@ -728,8 +732,8 @@ mechanics](gloss:quantum). During the last century, physicists like [Max
 Planck](bio:planck) and [Paul Dirac](bio:dirac) discovered that fundamental
 particles have a mind-blowing property: they can be in multiple different places
 _at the same time_. They don’t have a fixed position, but instead a probability
-distribution (or wave function) which tells us how likely it is we are going to
-find them at a particular position.
+distribution (also called _wave function_) which tells us how likely it is that
+we’ll find them at a particular position.
 
 This incredible property is used by Quantum computers. Conventional computers
 can only ever do one computation at a time. Quantum computers can use the
