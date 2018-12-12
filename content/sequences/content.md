@@ -1744,7 +1744,7 @@ The next perfect number is 28, because if we add up all its factors we get
 `1 + 2 + 4 + 7 + 14 = 28`. After that, perfect numbers become much rarer:
 
 {.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
-_{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}858,986,9056_,
+_{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}8,589,869,056_,
 _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 
 Notice that all of these numbers are [[even|multiples of 3|2 more than a square
