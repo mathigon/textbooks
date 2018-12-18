@@ -159,8 +159,18 @@ coordinate-system:
   title: Coordinate System
   text: A __cordinate sytem__ is a 2-dimensional plane that contains two
     perpendicular axes. Every point on the plane can be defined using two
-    numbers (coordinates), that specify its distance from the two axes. The
-    __origin__ of a coordinate system is the point with coordinates (0, 0).
+    numbers (coordinates), that specify its distance from the two axes.
+
+coordinate-system-origin:
+  title: Coordinate System
+  text: The __origin__ of a coordinate system is the point with coordinates
+    (0, 0). It is usually the point where the two axes cross.
+
+line-slope:
+  title: Slope of a Line
+  text: The __slope__ of a line measures its “steepness”, and is usually denoted
+    by the letter _m_. It is the change in _y_ for a unit change in _x_ along
+    the line.
 
 parabola:
   title: Parabola

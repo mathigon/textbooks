@@ -7,6 +7,11 @@
 @import "styles/variables";
 @import "./components/numberline";
 
+.c-system {
+  position: sticky;
+  top: calc(~"50vh - 220px");
+}
+
 .chart-point {
   width: 24px;
   height: 24px;
@@ -14,6 +19,60 @@
   background: @red;
   position: absolute;
   margin: -12px;
-  // transition: transform .2s;
-  // &.off { transform: scale(0); }
+  transition: transform .2s, background .2s;
+  cursor: pointer;
+
+  pointer-events: none;
+  transform: scale(0);
+  &.visible { transform: scale(0.5); }
+  &.fixed { transform: none; pointer-events: all; }
+  &:hover, &:active { background: lighten(@red, 10%); transform: scale(1.4); }
 }
+
+.chart-label {
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  background: white;
+  line-height: 1;
+  border-radius: 4px;
+  padding: 1px 2px;
+  display: none;
+  &.blue { color: @blue; transform: translateX(-50%); margin-top: 2px; }
+  &.green { color: @green; margin: -10px 0 0 5px; }
+}
+
+.triangle { display: none; fill: fade(@red, 20%); transition: fill .2s; }
+.line-x { display: none; stroke: @blue; stroke-width: 4px; stroke-linecap: round; }
+.line-y { display: none; stroke: @green; stroke-width: 4px; stroke-linecap: round; }
+
+x-coordinate-system {
+  margin: 0 auto .5em;
+
+  .grid, .axis, .plot, .labels { transition: opacity .2s; }
+  .focus & { .grid, .axis, .plot, .labels { opacity: 0.3; } }
+  .focus & .triangle { fill: fade(@red, 5%); }
+  .focus & .chart-point { background: mix(@red, white, 30%); }
+
+  .line-x, .line-y { transition: stroke .2s; }
+  .focus & .line-x:not(.focus) { stroke: mix(@blue, white, 30%); }
+  .focus & .line-y:not(.focus) { stroke: mix(@green, white, 30%); }
+
+  .chart-label { transition: color .2s; }
+  .focus & .chart-label.blue:not(.focus) { color: mix(@blue, white, 30%); }
+  .focus & .chart-label.green:not(.focus) { color: mix(@green, white, 30%); }
+}
+
+#intercept .arrow {
+  marker-start: url(#blue-circle);
+  marker-end: url(#blue-arrow);
+  stroke-width: 4px;
+  stroke: @yellow;
+}
+
+.pill {
+  line-height: 26px;
+  min-width: 26px;
+  box-sizing: border-box;
+}
+mn + mi.pill { margin-left: 5px; }
