@@ -50,7 +50,7 @@ function getPlaneGeo() {
 
 function getTubeGeo(angle=0) {
   const points = tabulate((i) => getPointAt(i/100, angle), 101);
-  const curve = new THREE.SplineCurve3(points);
+  const curve = new THREE.CatmullRomCurve3(points, false);
   return new THREE.TubeGeometry(curve, 100, 0.3, 8, false);
 }
 
@@ -130,7 +130,7 @@ export class ConicSection extends CustomElement {
     let a = 0;
     slide(this.$canvas, {
       move: (posn, start, last) => {
-        a = clamp(a + (posn.x - last.x) / 400, 0, 1.25);
+        a = clamp(a + (posn.x - last.x) / 800, 0, 1.25);
         tube.geometry = getTubeGeo(a);
         sphere.rotation.z = a;
         cone.rotation.z = a;

@@ -5,30 +5,55 @@
 
 
 @import "styles/variables";
+@import "./components/pi-scroll";
 
 
-.pi-box {
+.circle-area {
+  overflow: visible;
+  path { stroke: white; stroke-width: 1.5px; }
+  g:first-child { opacity: 0.5; }
+
+  &.red path { fill: @red; }
+  &.red path:nth-child(2n) { fill: darken(@red, 10%); }
+
+  &.yellow path { fill: @yellow; }
+  &.yellow path:nth-child(2n) { fill: darken(@yellow, 10%); }
+}
+
+.pi-controls {
+  margin-bottom: 1px;
+  border-radius: 0 4px 0 0;
+  padding: 12px 20px 11px;
+  .clearfix();
+  input { background: white; padding: 4px 8px; margin: -4px 0 -4px 8px; border-radius: 4px; width: 120px; }
+  .pi-warning { color: @red; font-style: italic; float: right; visibility: hidden; }
+}
+
+x-pi-scroll.box-body {
   height: 300px;
-  overflow: scroll;
-  p { word-wrap: break-word; }
+  border-radius: 0 0 4px 4px;
+  padding: 12px 20px 12px 40px;
+  .first-row { position: absolute; left: 16px; }
 }
 
-.circle-area path {
-  stroke: white;
-  stroke-width: 1.5px;
-}
-
-.circle-area.red path {
-  fill: @red;
-  &:nth-child(2n) { fill: darken(@red, 10%); }
-}
-
-.circle-area.yellow path {
-  fill: @yellow;
-  &:nth-child(2n) { fill: darken(@yellow, 10%); }
-}
+// -----------------------------------------------------------------------------
 
 x-conic-section {
   display: block;
-  margin: 2em auto;
+  margin: 2em auto 0;
+}
+
+x-step .row.padded-thin.conics { margin-bottom: 2em; }
+.conics > * {
+  background: fade(@yellow, 80%);
+  border-radius: 6px;
+  padding: 10px 16px;
+  text-align: center;
+  box-sizing: border-box;
+  opacity: 0.4;
+  transition: opacity .3s, transform .3s;
+  &.hide { opacity: 0; pointer-events: none; }
+  &.active { opacity: 1; transform: translateY(-10px); }
+  p { margin: 0; }
+  svg { display: block; margin: 0 auto; }
 }

@@ -6,17 +6,32 @@
 
 
 import { Point, toWord } from '@mathigon/fermat';
-import { $N, ease } from '@mathigon/boost';
+import { $N } from '@mathigon/boost';
 
 import '../shared/components/conic-section';
+import './components/pi-scroll';
 
+// -----------------------------------------------------------------------------
 
 export function digits($step) {
-  const $digits = $step.$('.digits');
+  const $scroller = $step.$('x-pi-scroll');
+  const $input = $step.$('.pi-controls input');
+  const $warning = $step.$('.pi-warning');
+
   fetch('/resources/circles-and-pi/images/pi-100k.txt')
       .then(response => response.text())
-      .then(data => $digits.text = data + '…');
+      .then(data => $scroller.setUp(data + '…'))
+      .then(() => fetch('/resources/circles-and-pi/images/pi-1m.txt'))
+      .then(response => response.text())
+      .then(data => $scroller.setUp(data + '…'));
+
+  $input.change((str) => {
+    const index = $scroller.findString(str);
+    $warning.css('visibility', index < 0 ? 'visible' : 'hidden');
+  });
 }
+
+// -----------------------------------------------------------------------------
 
 function deg(rad) { return rad / Math.PI * 180; }
 
@@ -46,7 +61,6 @@ function ring(cx, cy, r1, r2, fromAngle, toAngle) {
          `L ${B.x * r2 + cx} ${B.y * r2 + cy}` +
          `A ${r2} ${r2} 0 ${flag} 1 ${A.x * r2 + cx} ${A.y * r2 + cy} Z`;
 }
-
 
 export function area($step) {
   const $svgs = $step.$$('.circle-area');
@@ -98,16 +112,14 @@ export function area($step) {
   function drawRings(element, p) {
     const $rings = element.children;
 
-    const cx = 180 + p * (10 - 175);
-    const cy = 65 + p * (-20000 - 115);
-
-    const rmin = p * 20205;
+    const rmin = Math.pow(20 + p * 100, 1 + p) - 20;
     const dr = r / $step.model.n2;
 
+    const cx = 180 + p * (10 - 175);
+    const cy = 65 + p * (150 - 65) - rmin;
+
     for (let i = 0; i < $step.model.n2; ++i) {
-
       const angle = Math.PI - 1.999 * Math.PI * ((i + 0.5) * dr) / (rmin + (i + 0.5) * dr);
-
       const d = ring(cx, cy, rmin + i * dr, rmin + (i + 1) * dr, Math.PI, angle);
       $rings[i].setAttr('d', d);
     }
@@ -128,4 +140,22 @@ export function area($step) {
   });
 
   $sliders[1].on('move', (x) => drawRings(triangle, x / $sliders[1].steps));
+}
+
+// -----------------------------------------------------------------------------
+
+export function conics($step) {
+  const $conics = $step.$('x-conic-section');
+  const $labels = $step.$('.conics').children;
+  let $activeLabel = $labels[0];
+
+  $conics.on('rotate', (a) => {
+    const active = (a < 0.05) ? 0 : (a < 1.1) ? 1 : (a < 1.15) ? 2 : 3;
+    if ($activeLabel === $labels[active]) return;
+    $activeLabel.removeClass('active');
+    $activeLabel = $labels[active];
+    $activeLabel.removeClass('hide');
+    $activeLabel.addClass('active');
+    $step.score(['circle', 'ellipse', 'parabola', 'hyperbola'][active]);
+  });
 }

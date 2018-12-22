@@ -169,9 +169,13 @@ will appear somewhere in the decimal expansion of Pi. Here you can search the
 first 1 million digits of Pi – does it contain your birthday?
 
     .box
-      .box-title: h3 The Digits of Pi
-      .box-body.pi-box
-        p.digits 3.141592653589793238462643383279502884197169399375105…
+      .box-title: h3 One Million Digits of Pi
+      .box-body.pi-controls
+        | Search for a string of digits:
+        input(type="text" pattern="[0-9]*" maxlength=12)
+        .pi-warning Not found in the first 1 million digits
+      x-pi-scroll.box-body
+        .first-row 3.
 
 ---
 > id: pi-day
@@ -590,18 +594,45 @@ radius of a cone and h is the height, then the volume is V=13πr2h.
 
 
 --------------------------------------------------------------------------------
-> sectionId: conic-sections
 
 
 
 ## Conic Sections
+
+> sectionId: conic-sections
+> id: conics
+> goals: ellipse parabola hyperbola
 
 The circle is one of four different shapes which can be created using “slices”
 through a cone. This can be demonstrated using the light cone of a torch:
 
     x-conic-section
 
+::: column.active(parent="padded-thin conics" width=160)
 
+__Circle__
+
+    include svg/circle.svg
+
+::: column.hide(width=160)
+
+__Ellipse__
+
+    include svg/ellipse.svg
+
+::: column.hide(width=160)
+
+__Parabola__
+
+    include svg/parabola.svg
+
+::: column.hide(width=160)
+
+__Hyperbola__
+
+    include svg/hyperbola.svg
+
+:::
 
 ---
 
