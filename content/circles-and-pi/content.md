@@ -2,6 +2,11 @@
 
 ## Introduction
 
+> section: introduction
+> id: orbits
+
+::: column.grow
+
 For as long as human beings exist, we have looked to the sky and tried to
 explain life on Earth using the motion of stars, planets and the moon. The
 Greeks were the first to discover that all celestial objects move on regular
@@ -9,61 +14,206 @@ paths, called __orbits__.
 
 Greek astronomers like Claudius Ptolemy believed that the orbits of stars and
 planets are circular. 
-<p>Circles are symmetric in every direction, and all points on a circle have the same distance from its centre &#8211; this distance is called the <strong>radius</strong>. The ratio between the circumference and the diameter is the same for circles of <em>any</em> size: it is a mysterious number called <strong>Pi</strong>.</p>
 
-Circles and Pi are at the very heart of nature. This is because the circle is very often the most efficient shape possible. For example, given a fixed circumference, the circle is the shape which encloses the largest area. <span class="lgrey">Other shapes, like a square, always have a smaller area than a circle with the same circumference.</span> Objects in nature can <em>save energy</em> by becoming circular or spherical &#8211; and nature always wants to minimise the energy used.</p>
+::: column(width=320)
+
+    x-media(src="images/geocentric.jpg" width=320 height=272)
+    p.caption
+
+:::
+
+In some sense, circles are the most perfect of all shapes – they are symmetric
+in every direction. This is why they seem like a good choice 
+
+---
+> id: radius
+
+Every point on a circle has the same distance from its center, which is why they
+can be drawn using a compass:
+
+::: column(width=320)
+
+{.todo} image
+
+::: column.grow
+
+There are three important measurements related to circles that you need to know:
+
+* The __{.pill.red}radius__ is the distance from the center of a circle to its
+  outer rim.
+* The __{.pill.blue}diameter__ if the distance between two opposite points on
+  a circle. It goes through its center, and its length is [[twice]] the radius.
+* The __{.pill.green}circumference__ is the distance around a circle.
+
+:::
+
+---
+
+{.todo} Proof that all circles are similar
+
+You might remember that, for similar polygons, the ratios between corresponding
+sides are always equal. The same is true for circles: the ratio between the
+circumference and the diameter is equal for _all circles_: approximately 3.1415.
+This number is called [__Pi__](gloss:pi), and often denoted by the Greek letter
+_π_ for “p”.
+
+---
+
+{.todo} Circumference formula, uncurl animation (circle with radius 1)
+
+---
+
+{.todo} images
+
+Circles and the number Pi can be found everywhere in nature.
+
+It turns out that a circle is also the shape with the largest area for a given
+circumference. For example, if you are given a fence of length 100m, you can
+enclose the largest space if you form a circle (rather than, for example, a
+rectangle or triangle). Similarly, objects in nature can _save energy_ by
+becoming circular or spherical.
+
+---
+> id: area
+> goals: slider-1 slider-2
+
+### Area of Circles
+
+But how do we actually calculate the area of a circle? Let's try using a similar
+technique to what we did for other polygons before: cut the shape into multiple
+different parts, and then rearrange them to form a shape that we already know
+the area of (e.g. a rectangle or a triangle). Unfortunately, since a circle is
+curved, we have to use some approximations.
+
+::: column(width=340)
+
+{.text-center} Here you can see a circle that was divided into ${toWord(n1)}
+wedges.
+
+    svg.circle-area.red(width=340 height=240)
+    x-slider(steps=400)
+
+{.text-center} Move the slider to line up the wedges in a row.
+
+{.text-center.reveal(when="slider-1")} If we increase the number of wedges to
+${n1}{n1|6|5,30,1}, this shape starts to look more and more like a
+[[rectangle|circle|square]].
+
+{.text-center.reveal(when="blank-0")} The base of the rectangle is `pi*r` and
+its height is _r_. Therefore the area of the rectangle is `pi r^2`.
+
+::: column(width=360)
+
+{.text-center} Here you can see a circle that was divided into ${toWord(n2)}
+rings.
+
+    svg.circle-area.yellow(width=360 height=240)
+    x-slider(steps=400)
+
+{.text-center} Like before, you can move the slider to “uncurl” the rings.
+
+{.text-center.reveal(when="slider-1")} If we increase the number of wedges to
+${n2}{n2|4|2,10,1}, this shape starts to look more and more like a
+[[triangle|rectangle|trapezium]].
+
+{.text-center.reveal(when="blank-1")} The base of the rectangle is `2 pi r` and
+its height is _r_. Therefore the total area of the triangle is `pi r^2`.
+
+:::
+
+---
+
+If we could user infinitely many wedges or rings, the approximations above would
+be perfect – and they both give use the same formula for the area of a circle:
+
+{.text-center} `A = pi r^2`.
+
+---
+> id: approximations
+
+### Calculating Pi
+
+As you saw above, `π = 3.1415926…` is not a simple integer, and its decimal
+digits go on forever, without any repeating pattern. Numbers with this property
+are called [__irrational numbers__](gloss:irrational), and it means that `π`
+cannot be expressed as a simple fraction `a/b`.
+
+It also means that we can never write down _all_ the digits of Pi – after all,
+there are infinitely many. Ancient Greek and Chinese mathematicians managed to
+calculate the first four decimal digits of Pi, and [Isaac Newton](bio:newton)
+calculated 15 digits of Pi in 1665.
+
+Today, we can use powerful computers to calculate the value of Pi to a much
+greater accuracy. The current record is 22 trillion digits. A printed book
+containing all these digits would be over 400km thick – approximately the height
+of the orbit of the International Space Station.
+
+One approach for calculating Pi is using infinite sequences of numbers. Here is
+one example which was discovered by [Gottfried Wilhelm Leibniz](bio:leibnitz) in
+1676:
+
+{.text-center} `π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + …`
+
+As we calculate more and more terms of this series (always following the same
+pattern), the result will get closer and closer to Pi.
 
 ---
 > id: digits
 
-Here are the digits of pi:
+Many mathematicians believe that Pi has an even more curious property: that it
+is a __normal number__. This means that the digits from 0 to 9 appear completely
+at random, as if nature had rolled a 10-sided dice infinitely many times.
+
+If this is true, it means that you can think of any string of digits, and it
+will appear somewhere in the decimal expansion of Pi. Here you can search the
+first 1 million digits of Pi – does it contain your birthday?
 
     .box
       .box-title: h3 The Digits of Pi
       .box-body.pi-box
         p.digits 3.141592653589793238462643383279502884197169399375105…
 
-Find your birthday in Pi
+---
+> id: pi-day
 
-* Radius: The distance from the center of the circle to its outer rim.
-* Diameter: A chord that passes through the center of the circle. The length of
-  a diameter is two times the length of a radius.
+We could even convert an entire book, like Harry Potter, into a very long string
+of digits (a = 01, b = 02, and so on). If Pi in normal, this string must also
+appear somewhere in its digits – but it would take millions of years to
+calculate enough digits to find it.
 
-### Circumerence and Area
+{.todo} Pi day images
 
-Circumference is the distance around a circle. The circumference can also be
-called the perimeter of a circle. However, we use the term circumference for
-circles because they are round. The term perimeter is reserved for figures with
-straight sides. In order to find the formula for the circumference of a circle,
-we first need to determine the ratio between the circumference and diameter of
-a circle.
+Pi is very easy to understand, but of fundamental important in many areas in
+mathematics – and that's why it has become unusually popular in our culture
+(at least, compared to other areas of mathematics). There even is a _Pi day_
+every year, which either falls on 14 March (because `Pi = 3.14`) or on 22 July
+(because `pi = 22/7`).
 
-Recall that π is the ratio between the circumference of a circle and its
-diameter. We are going to use the formula for circumference to derive the
-formula for area.
-
-First, take a circle and divide it up into several wedges, or sectors. Then,
-unfold the wedges so they are all on one line, with the points at the top.
-
-Notice that the height of the wedges is r, the radius, and the length is the
-circumference of the circle. Now, we need to take half of these wedges and flip
-them upside-down and place them in the other half so they all fit together.
-
-Now our circle looks like a parallelogram. The area of this parallelogram is
-A=bh=πr⋅r=πr2. The formula for the area of a circle is A=πr2 where r is the
-radius of the circle.
 
 
 --------------------------------------------------------------------------------
+> sectionStatus: dev
+> section: radians
+
 
 
 ## Degrees and Radians
 
+__[CC] Understand radian measure of an angle as the length of the arc on the unit circle subtended by the angle.__
 
 --------------------------------------------------------------------------------
+> sectionStatus: dev
+> section: tangets-chords-arcs
 
 
-## Tangents
+## Tangents, Chords and Arcs
+
+
+__[CC] Construct a tangent line from a point outside a given circle to the circle.__
+
+__[CC] Identify and describe relationships among inscribed angles, radii, and chords. \nInclude the relationship between central, inscribed, and circumscribed angles; inscribed angles on a diameter are right angles; the radius of a circle is perpendicular to the tangent where the radius intersects the circle.__
+
+__[CC] Derive using similarity the fact that the length of the arc intercepted by an angle is proportional to the radius, and define the radian measure of the angle as the constant of proportionality; derive the formula for the area of a sector.__
 
 * Tangent: A line that intersects a circle in exactly one point.
 * Point of Tangency: The point where a tangent line touches the circle.
@@ -105,10 +255,8 @@ _Two Tangents Theorem_: If two tangent segments are drawn from the same external
 point, then the segments are equal.
 
 
---------------------------------------------------------------------------------
+---
 
-
-## Chords, Arcs, Sectors and Segments
 
 A chord is a line segment whose endpoints are on a circle. A diameter is the
 longest chord in a circle. There are several theorems that explore the
@@ -217,7 +365,11 @@ circle that is bounded by a chord and the arc with the same endpoints as the
 chord. The area of a segment is Asegment=Asector−A△ABC
 
 
+
 --------------------------------------------------------------------------------
+> sectionStatus: dev
+> section: circle-theorems
+
 
 
 ## The Circle Theorems
@@ -315,10 +467,16 @@ means that the product of the outside segment of the secant and the whole is
 equal to the square of the tangent segment.
 
 
+
 --------------------------------------------------------------------------------
+> sectionStatus: dev
+> section: inscribed-polygons
+
 
 
 ## Inscribed Polygons
+
+__[CC] Construct an equilateral triangle, a square, and a regular hexagon inscribed in a circle.__
 
 An inscribed polygon is a polygon where every vertex is on a circle. Note, that
 not every quadrilateral or polygon can be inscribed in a circle. Inscribed
@@ -334,10 +492,16 @@ Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
 and only if the opposite angles are supplementary.
 
 
+
 --------------------------------------------------------------------------------
+> sectionStatus: dev
+> section: spheres-cones-cylinders
+
 
 
 ## Spheres, Cones and Cylinders
+
+__[CC] Give an informal argument for the formulas for the volume of a cylinder and cone. Use dissection arguments, Cavalieri’s principle, and informal limit arguments.__
 
 ### Cylinders
 
@@ -425,25 +589,89 @@ radius of a cone and h is the height, then the volume is V=13πr2h.
 
 
 
+--------------------------------------------------------------------------------
+> sectionId: conic-sections
 
-The Greek scholars of ancient times, naturally curious about the world, wondered
-if it was possible to describe the shapes that arise this way mathematically.
-They realized that these shapes are slices of a cone, and they gave the different
-forms of slices they saw the following names: ellipse, parabola, and hyperbola.
 
-The Greeks of antiquity studied these curves with no practical applications in
-mind. They were naturally curious and pursued the topic solely for its beauty
-and its intellectual rewards.
 
-APOLLONIUS OF PERGA (ca 225 B.C.E.) wrote a series of eight books, titled Conic
+## Conic Sections
+
+The circle is one of four different shapes which can be created using “slices”
+through a cone. This can be demonstrated using the light cone of a torch:
+
+    x-conic-section
+
+
+
+---
+
+If you point the torch vertically downwards, you see a [[circle|ellipse|oval]]
+of light. _{span.reveal(when="blank-0")}If you tilt the cone, you get an
+[__ellipse__](gloss:ellipse). If you tilt it even further, you get a
+[__parabola__](gloss:parabola) or a [__hyperbola__](gloss:hyperbola). These four
+shapes are called [__conic sections__](gloss:conic-section)._
+
+Even though they all look very different, the four conic sections are closely
+related. In fact, they can all be generated using the same equation!
+
+{.todo} APOLLONIUS OF PERGA (ca 225 B.C.E.) wrote a series of eight books, titled Conic
 sections, in which he thoroughly investigated these curves. He was the one to
 introduce the names parabola, ellipse and hyperbola. ARCHIMEDES OF SYRACUSE (ca.
 287–212 B.C.E.) also wrote about these curves.
 
-In 1604 Galileo discovered that objects thrown in the air follow parabolic paths
-(if air resistance can be neglected). In 1609 astronomer JOHANNES KEPLER discovered
-that the orbit of Mars is an ellipse. He conjectured that all planetary bodies
-have elliptical orbits, which, 60 years later, ISAAC NEWTON was able to prove
-using his newly developed law of gravitation. Recently scientists have discovered
-that the path of an alpha particle in the electrical field of an atomic nucleus
-is a hyperbola.
+In later courses, you'll learn much more about parabolas and hyperbolas, but
+let's have a closer look at ellipses.
+
+---
+
+### Ellipses
+
+{.todo} The ellipse is a particularly interesting shape. We could think about it
+as a circle with “two centres” – these are called the foci. If both foci are in
+the same place, we get a circle. If they move further apart, the shape becomes
+more and more elliptical.
+
+{.todo} Just like the distance between points on a circle and its centre is
+constant, the sum of the distances from points on an ellipse to its two foci is
+constant. This means that we can easily create an ellipe using a piece of string:
+
+{.todo} Ellipses diagrams
+
+---
+
+### Planetary Orbits
+
+You might remember from the very beginning of this course, that ancient Greek
+astronomers believed that the Earth is at the centre of the universe and that
+the sun, moon and planets move around Earth on circular orbits.
+
+Unfortunately, astronomical observation showed that the sun appeared larger
+during some parts of the year and smaller during others. This was surprising,
+since every point on a circle should have the same distance from its center.
+
+{.todo} Therefore astronomers added Epicycles to the orbits: all objects in the
+sky move on a large circle around the Earth, but at the same time they move
+along a smaller circle around themselves. And, though complicated, this was the
+most widely accepted model of our universe for more than 1000 years.
+
+{.todo} In 1543, Nicolaus Copernicus published “On the Revolutions of the
+Celestial Spheres”, a book in which he explained what many astronomers had
+suspected for some time: that the sun is at the centre of the universe and that
+the Earth moves around the sun on a circle, like all the other planets. This is
+called the Heliocentric Model. At that time, the heliocentric model still had
+many errors, and it still couldn’t explain why the sun sometimes appears larger
+and sometimes smaller.
+
+It wasn't until 1609 that the astronomer Johannes Kepler discovered that planets
+actually move on elliptical orbits, and that the sun is in one of its two foci.
+This is the first of his three Laws of Planetary Motion, which we know to be
+true today.
+
+A few decades later, Isaac Newton was able to prove Kepler's discovery, using
+his newly developed laws of gravity.
+
+{.todo} Between any two masses in the universe there is a force, similar to the attraction between two magnets. This force is called gravity. Gravity is what makes everything fall to the ground and gravity is what makes the planets move around the sun. It is only the great speed at which planets move, that prevents them from falling into the sun.
+
+{.todo} Using Newton’s laws, one can derive an equation that describes the motion of objects moving under the force of gravity. This equation happens to be the same as the equation for conic sections (see above). Planets move on ellipses, but other objects, such as comets, can travel on parabolic or hyperbolic paths: they come close to the sun before turning around and shooting off into the universe, never to come back.
+
+{.todo} Newton lived and worked at Trinity College Cambridge, where a falling apple is said to have inspired him to think about gravity. His description of classical mechanics, among many other discoveries, makes Newton the greatest and most influential scientist of all times. His ideas shaped our understanding of the world for nearly 300 years, until Albert Einstein discovered the laws of relativity in 1905.

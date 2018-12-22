@@ -7,7 +7,7 @@
 import { square } from '@mathigon/core';
 import { Expression, nearlyEquals, sign, Point } from '@mathigon/fermat';
 
-import './components/conic-section';
+import '../shared/components/conic-section';
 
 
 // -----------------------------------------------------------------------------
