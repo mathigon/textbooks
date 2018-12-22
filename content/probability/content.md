@@ -406,6 +406,13 @@ using mathematics and computers on the stock market.
 
 After this short trip through history, let’s get back to some actual mathematics…
 
+
+---
+> section: trees-venn
+> sectionStatus: dev
+
+## Venn Diagrams and Probability Trees
+
     // TODO – Probability Trees
     // In real life, coins never have exactly a probability of 0.5. It might be 0.4932
     // or 0.500012, depending on their exact shape or physical properties. In
