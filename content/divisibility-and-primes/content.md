@@ -465,21 +465,23 @@ Here is a calculator that allows you to check if any number is prime:
 > id: prime-test-1
 
 ::: column.grow
+
 Throughout history, people have tried to find larger and larger prime numbers.
 In 1460, the largest known prime was 131,071. In 1772, [Leonard Euler](bio:euler)
 showed that 2,147,483,647 is also prime.
 
 With the arrival of computers in the 20th century, calculating large primes
-became much easier. Currently, the largest known prime number has
-22,338,618 digits. You would need 5000 sheets of paper to print it out! It was
-discovered in September 2015 using a network of thousands of computers around
-the world, run by volunteers, students and universities.
+became much easier. The largest currently known prime was discovered in
+December 2018 and has 24,862,048 digits. You would need 8000 sheets of paper to
+print it out!
+
 ::: column(width=300)
 
     img(src="images/network.jpg" width=300 height=200)
 
-{.caption} The GIMPS Project (_Great Internet Mersenne Prime Search_) uses a
-network of computers around the world to find large prime numbers.
+{.caption} GIMPS (_Great Internet Mersenne Prime Search_) is a collaborative
+project, where volunteers can find primes using free software.
+
 :::
 
 ---
