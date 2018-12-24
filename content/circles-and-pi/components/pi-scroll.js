@@ -18,7 +18,8 @@ export class PiScroll extends CustomElement {
   ready() {
     this.$wrap = $N('div', {class: 'pi-wrap'}, this);
     this.$rows = tabulate(() => $N('div', {class: 'pi-row'}, this.$wrap), NUM_ELS);
-    this.$highlight = $N('div', {class: 'pi-highlight'}, this.$wrap);
+    this.$highlight1 = $N('div', {class: 'pi-highlight'}, this.$wrap);
+    this.$highlight2 = $N('div', {class: 'pi-highlight'}, this.$wrap);
     this.$rows[0].text = INITIAL;
 
     this.string = '';
@@ -66,27 +67,41 @@ export class PiScroll extends CustomElement {
 
   findString(str) {
     if (!str) {
-      this.$highlight.hide();
+      this.$highlight1.hide();
+      this.$highlight2.hide();
       return 0;
     }
 
     const index = this.string.indexOf(str);
 
     if (index < 0) {
-      this.$highlight.hide();
+      this.$highlight1.hide();
+      this.$highlight2.hide();
       return -1;
     }
 
-    this.$highlight.show();
+    this.$highlight1.show();
 
-    const top = Math.floor(index / this.numColumns) * ROW_HEIGHT;
-    this.$highlight.css({
-      top: top + 'px',
-      left: (index % this.numColumns) * this.letterWidth + 'px',
-      width: this.letterWidth * str.length + 'px'
+    const top = Math.floor(index / this.numColumns);
+    const left = index % this.numColumns;
+
+    this.$highlight1.css({
+      top: top * ROW_HEIGHT + 'px',
+      left: left * this.letterWidth + 'px',
+      width: this.letterWidth * Math.min(str.length, this.numColumns - left) + 'px'
     });
 
-    this.scrollTo(top - 50);
+    if (left + str.length > this.numColumns) {
+      this.$highlight2.show();
+      this.$highlight2.css({
+        top: (top + 1) * ROW_HEIGHT + 'px',
+        width: this.letterWidth * (left + str.length - this.numColumns) + 'px'
+      });
+    } else {
+      this.$highlight2.hide();
+    }
+
+    this.scrollTo(top * ROW_HEIGHT - 50);
     return index;
   }
 
