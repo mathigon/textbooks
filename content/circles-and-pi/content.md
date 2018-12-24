@@ -178,20 +178,42 @@ first 1 million digits of Pi – does it contain your birthday?
         .first-row 3.
 
 ---
-> id: pi-day
+> id: pop-culture
 
 We could even convert an entire book, like Harry Potter, into a very long string
 of digits (a = 01, b = 02, and so on). If Pi in normal, this string must also
 appear somewhere in its digits – but it would take millions of years to
 calculate enough digits to find it.
 
-{.todo} Pi day images
-
 Pi is very easy to understand, but of fundamental important in many areas in
 mathematics – and that's why it has become unusually popular in our culture
-(at least, compared to other areas of mathematics). There even is a _Pi day_
-every year, which either falls on 14 March (because `Pi = 3.14`) or on 22 July
-(because `pi = 22/7`).
+(at least, compared to other areas of mathematics).
+
+::: column(width=220 parent="padded-thin")
+
+    x-video(src="images/museum.mp4" poster="images/museum.jpg" width=220 height=140 audio)
+    .caption Pi is the secret combination for the tablet in “Night at the Museum 2”.
+
+::: column(width=220)
+
+    x-video(src="images/simpsons.mp4" poster="images/simpsons.jpg" width=220 height=140 audio)
+    .caption Professor Frink (“Simpsons”) silences a room of scientists by saying that Pi equals 3.
+
+::: column(width=220)
+
+    x-video(src="images/star-treck.mp4" poster="images/star-treck.jpg" width=220 height=140 audio)
+    .caption Spock (“Star Treck”) disables an evil computer by asking it to calculate the last digit of Pi.
+
+:::
+
+---
+> id: pi-day
+
+There even is a _Pi day_
+every year, which either falls on 14 March, because `pi ≈ 3.14`, or on 22 July,
+because `pi ≈ 22/7`.
+
+    figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
 
 
