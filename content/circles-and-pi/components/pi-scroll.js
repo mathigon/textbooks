@@ -30,7 +30,6 @@ export class PiScroll extends CustomElement {
 
     Browser.resize(() => {
       this.numColumns = Math.floor(this.innerWidth / this.letterWidth);
-      console.log('resize', this.numColumns);
       this.setUp(this.string);
     });
 
