@@ -196,6 +196,18 @@ khayyam:
     designed the _Jalali calendar_, a precise solar calendar that is still used
     in some countries.
 
+leibniz:
+  name: Gottfried Wilhelm Leibniz
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646 – 1716) was a German mathematician
+    and philosopher. Among many other achievements, he was one of the inventors
+    of calculus, and created some of the first mechanical calculators.
+
+    Leibniz believed that our universe is the “best possible universe” that God
+    could have created, while allowing us to have a free will. He was a great
+    advocate of _rationalism_, and also made contributions to physics, medicine,
+    linguistics, law, history, and many other subjects.
+
 milgram:
   name: Stanley Milgram
   bio: __Stanley Milgram__ (1933 – 1984) was a famous social psychologist. He is

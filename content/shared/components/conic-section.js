@@ -15,7 +15,7 @@ import { loadTHREE } from './webgl';
 // Constants
 
 const width = 760 * 4;
-const height = 280 * 4;
+const height = 300 * 4;
 const coneHeight = 200;
 const coneTop = 8;
 const bounds = [[-6, 50], [-25, 25]];
@@ -26,8 +26,8 @@ const centerX = (bounds[0][0] + bounds[0][1]) / 2;
 // Utilities
 
 function getPointAt(s, angle) {
-  const min = angle < 1.12 ? 0 : angle < 1.3 ? 0.8 * angle : angle;
-  const max = angle < 1.12 ? 2 * Math.PI : angle < 1.3 ? 2 * Math.PI - 0.8 * angle : 2 * Math.PI - angle;
+  const min = angle < 1 ? 0 : 4.5 * (angle - 1);
+  const max = 2 * Math.PI - min;
   const u = min + s * (max - min);
 
   const d = 2 * Math.cos(angle) - Math.cos(u) * Math.sin(angle);
@@ -49,9 +49,9 @@ function getPlaneGeo() {
 }
 
 function getTubeGeo(angle=0) {
-  const points = tabulate((i) => getPointAt(i/100, angle), 101);
+  const points = tabulate((i) => getPointAt(i/120, angle), 121);
   const curve = new THREE.CatmullRomCurve3(points, false);
-  return new THREE.TubeGeometry(curve, 100, 0.3, 8, false);
+  return new THREE.TubeGeometry(curve, 120, 0.3, 8, false);
 }
 
 
@@ -70,8 +70,8 @@ export class ConicSection extends CustomElement {
     const scene = new THREE.Scene();
 
     // Set up Camera
-    const camera = new THREE.PerspectiveCamera(30, width/height, 0.1, 1000);
-    camera.position.set(centerX, 20, 60);
+    const camera = new THREE.PerspectiveCamera(25, width/height, 0.1, 1000);
+    camera.position.set(centerX, 32, 66);
     camera.lookAt(centerX, 0, 0);
     scene.add(camera);
 
@@ -89,17 +89,20 @@ export class ConicSection extends CustomElement {
     const right = new THREE.Plane(new THREE.Vector3(-1, 0, 0), bounds[0][1]);
 
     // Cone
-    const coneGeo = new THREE.ConeGeometry(100, coneHeight, 100, 1, true);
+    const coneGeo = new THREE.ConeGeometry(100, coneHeight, 150, 1, true);
     const coneMaterial = new THREE.MeshPhongMaterial({
-      color: 0xff941f, transparent: true, opacity: 0.7,
+      color: 0xff941f, transparent: true, opacity: 0.7, shininess: 40,
       side: THREE.DoubleSide, clippingPlanes: [bottom, right]
     });
     const cone = new THREE.Mesh(coneGeo, coneMaterial);
     cone.position.y = coneTop - coneHeight/2;
     scene.add(cone);
 
-    // Bottom Plane
-    const planeMaterial = new THREE.MeshPhongMaterial({color: 0xcccccc, emissive: 0xcccccc, emissiveIntensity: 0.3});
+    // Bottom Plane (set in background)
+    const planeMaterial = new THREE.MeshPhongMaterial({
+      color: 0xdddddd, emissive: 0xdddddd, emissiveIntensity: 0.2,
+      flatShading: true
+    });
     const plane = new THREE.Mesh(getPlaneGeo(), planeMaterial);
     scene.add(plane);
 
@@ -108,12 +111,12 @@ export class ConicSection extends CustomElement {
     const tube = new THREE.Mesh(getTubeGeo(), tubeMaterial);
     scene.add(tube);
 
-    // Torch Sphere
-    const sphereGeo = new THREE.CylinderGeometry(1, 1, 3, 32);
-    const sphereMaterial = new THREE.MeshPhongMaterial({color: 0x363648});
-    const sphere = new THREE.Mesh(sphereGeo, sphereMaterial);
-    sphere.position.y = coneTop;
-    scene.add(sphere);
+    // Torch Cylinder
+    const torchGeo = new THREE.CylinderGeometry(1.2, 1.2, 3.5, 32);
+    const torchMaterial = new THREE.MeshPhongMaterial({color: 0x363648});
+    const torch = new THREE.Mesh(torchGeo, torchMaterial);
+    torch.position.y = coneTop;
+    scene.add(torch);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer();
@@ -132,11 +135,12 @@ export class ConicSection extends CustomElement {
       move: (posn, start, last) => {
         a = clamp(a + (posn.x - last.x) / 800, 0, 1.25);
         tube.geometry = getTubeGeo(a);
-        sphere.rotation.z = a;
+        torch.rotation.z = a;
         cone.rotation.z = a;
         cone.position.x = coneHeight * Math.sin(a) / 2;
         cone.position.y = coneTop - coneHeight * Math.cos(a) / 2;
         renderer.render(scene, camera);
+        context.clearRect(0, 0, width, height);
         context.drawImage(renderer.domElement, 0, 0);
         this.trigger('rotate', a);
       }
