@@ -5,15 +5,81 @@
 
 
 
+import { clamp, list } from '@mathigon/core';
 import { Point, toWord } from '@mathigon/fermat';
-import { $N } from '@mathigon/boost';
+import { $N, slide, Colour } from '@mathigon/boost';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
 
 // -----------------------------------------------------------------------------
 
-export function digits($step) {
+export function piDefinition($step) {
+  const $digits = $step.$('.pi-digits').children;
+  const colours = Colour.rainbow($digits.length);
+
+  $digits.forEach(($d, i) => {
+    $d.css('color', colours[$digits.length - 1 - i]);
+    setTimeout(() => $d.enter('pop', 400, i * 100), 500);
+    setTimeout(() => $step.score('digits'), 18 * 100 + 400);
+  });
+}
+
+export function wheel($step) {
+  const $svg = $step.$('svg');
+  const $wheel = $svg.$('.wheel');
+  const $line =  $svg.$('.outline');
+  const $pi = $svg.$('.pi');
+
+  let p = 0.01;
+  let done = false;
+
+  function redraw() {
+    const a = p * Math.PI;
+    const dx = 60 + a * 100;
+    const end = Point.fromPolar(2 * a + Math.PI / 2, 50).shift(dx, 55);
+
+    $wheel.transform = `translateX(${a*100}px) rotate(${2*a}rad)`;
+    $line.setAttr('d', `M ${60} ${105} L ${dx} ${105}` +
+        `A 50 50 0 ${p < 0.5 ? 1 : 0} 0 ${end.x} ${end.y}`);
+  }
+
+  slide($wheel, {
+    move(posn, start, last) {
+      p = clamp(p + (posn.x - last.x)/314, 0.01, 1);
+      redraw();
+      if (p > 0.95 && !done) {
+        $step.score('unroll');
+        $pi.enter('pop');
+        done = true;
+      }
+    }
+  });
+
+  redraw();
+}
+
+export function piColours($step) {
+  const colours = ['#ff941f', '#e66438', '#cc3450', '#b30469', '#822b9b',
+    '#5053cd', '#1f7aff', '#258dab', '#2ba058', '#31b304'];
+
+  const $cells = $step.$$('.pi-cell');
+  for (let $c of $cells) $c.css('background', colours[+$c.text]);
+  const $filter = list(10).map(i => $cells.filter($c => +$c.text !== i));
+
+  for (let $c of $cells) {
+    const i = +$c.text;
+    $c.on('hover', {
+      enter() {
+        for (let $c of $filter[i]) $c.addClass('hide');
+        $step.score('hover');
+      },
+      exit() { for (let $c of $filter[i]) $c.removeClass('hide'); }
+    });
+  }
+}
+
+export function piDigits($step) {
   const $scroller = $step.$('x-pi-scroll');
   const $input = $step.$('.pi-controls input');
   const $warning = $step.$('.pi-warning');
@@ -28,6 +94,7 @@ export function digits($step) {
   $input.change((str) => {
     const index = $scroller.findString(str);
     $warning.css('visibility', index < 0 ? 'visible' : 'hidden');
+    if (str.length >= 4) $step.score('search');
   });
 }
 
@@ -82,6 +149,8 @@ export function area($step) {
       const y = i % 2 ? 90 : 90 + dy;
       wedges[i].setAttr('transform', `translate(${p*x},${p*y}) rotate(${p*a})`);
     }
+
+    if (p > 0.95) $step.score('slider-1');
   }
 
   $step.model.watch((state) => {
@@ -123,6 +192,8 @@ export function area($step) {
       const d = ring(cx, cy, rmin + i * dr, rmin + (i + 1) * dr, Math.PI, angle);
       $rings[i].setAttr('d', d);
     }
+
+    if (p > 0.95) $step.score('slider-2');
   }
 
   $step.model.watch((state) => {

@@ -7,105 +7,193 @@
 
 ::: column.grow
 
-For as long as human beings exist, we have looked to the sky and tried to
-explain life on Earth using the motion of stars, planets and the moon. The
-Greeks were the first to discover that all celestial objects move on regular
-paths, called __orbits__.
+For as long as humans exist, we have looked to the sky and tried to explain life
+on Earth using the motion of stars, planets and the moon.
 
-Greek astronomers like Claudius Ptolemy believed that the orbits of stars and
-planets are circular. 
+Ancient Greek astronomers were the first to discover that all celestial objects
+move on regular paths, called __orbits__. They believed that these orbits are
+always circular. After all, circles are the “most perfect” of all shapes,
+symmetric in every direction, and thus a fitting choice for the underlying
+order of our universe.
 
 ::: column(width=320)
 
     x-media(src="images/geocentric.jpg" width=320 height=272)
-    p.caption
+
+{.caption} Earth is at the center of the _Ptolemaic universe_.
 
 :::
-
-In some sense, circles are the most perfect of all shapes – they are symmetric
-in every direction. This is why they seem like a good choice 
 
 ---
 > id: radius
+> goals: compass
 
-Every point on a circle has the same distance from its center, which is why they
-can be drawn using a compass:
+Every point on a [__circle__](gloss:circle) has the same distance from its
+center. This means that they can be drawn using a [compass](gloss:compass):
 
 ::: column(width=320)
 
-{.todo} image
+{.todo} Interactive diagram
 
 ::: column.grow
 
-There are three important measurements related to circles that you need to know:
+{.reveal(when="compass")} There are three important measurements related to
+circles that you need to know:
 
-* The __{.pill.red}radius__ is the distance from the center of a circle to its
-  outer rim.
-* The __{.pill.blue}diameter__ if the distance between two opposite points on
-  a circle. It goes through its center, and its length is [[twice]] the radius.
-* The __{.pill.green}circumference__ is the distance around a circle.
+* {.reveal(when="compass" delay="1000")} The __{.pill.red}radius__ is the
+  distance from the center of a circle to its outer rim.
+* {.reveal(when="compass" delay="2500")} The __{.pill.blue}diameter__ is the
+  distance between two opposite points on a circle. It goes through its center,
+  and its length is [[twice|half|the same as]] the radius.
+* {.reveal(when="blank-0")} The __{.pill.green}circumference__ is the distance
+  around a circle.
 
 :::
 
 ---
+> id: similar
+> goals: similar-0 similar-1 similar-2
 
-{.todo} Proof that all circles are similar
+One important property of circles is that all circles are
+[similar](gloss:similar). You can prove that by showing how all circles can
+be matched up using simply [translations](gloss:translation) and
+[dilations](gloss:dilation):
 
-You might remember that, for similar polygons, the ratios between corresponding
-sides are always equal. The same is true for circles: the ratio between the
+{.todo} Similar circles exercise
+
+---
+> id: pi-definition
+> goals: digits
+
+You might remember that, for similar polygons, the ratio between corresponding
+sides is always constant. The same is true for circles: the ratio between the
 circumference and the diameter is equal for _all circles_: approximately 3.1415.
 This number is called [__Pi__](gloss:pi), and often denoted by the Greek letter
 _π_ for “p”.
 
+    .pi-digits
+      div #[em π]
+      div =
+      for d in '3.1415926535897…'.split('')
+        div= d
+
 ---
+> id: wheel
+> goals: unroll
 
-{.todo} Circumference formula, uncurl animation (circle with radius 1)
+Here you can see a wheel with diameter 1. As you “unroll” the circumference,
+you can see that its length is exactly [[`pi`|`2 xx pi`|3]]
+
+    figure: include svg/wheel.svg
+    x-gesture(target="#wheel figure svg" slide="100,0")
 
 ---
+> id: circumference
 
-{.todo} images
+For a circle with diameter _d_, the circumference is `C = pi * d`. Similarly,
+for a circle with radius _r_, the circumference is
 
-Circles and the number Pi can be found everywhere in nature.
+{.text-center} `C =` [[`2 * pi * r`|`pi * r`|`pi * r^2`]].
 
-It turns out that a circle is also the shape with the largest area for a given
-circumference. For example, if you are given a fence of length 100m, you can
-enclose the largest space if you form a circle (rather than, for example, a
-rectangle or triangle). Similarly, objects in nature can _save energy_ by
-becoming circular or spherical.
+---
+> id: nature
+
+Circles are perfectly symmetric, and they don’t have any “weak points” like the
+corners of a polygon. This is one of the reasons why they can be found
+everywhere in nature:
+
+::: column(width=130 parent="padded-thin")
+
+    x-media(src="images/flower.jpg" width=130 height=130)
+
+{.caption} Flowers
+
+::: column(width=130)
+
+    x-media(src="images/earth.jpg" width=130 height=130)
+
+{.caption} Planets
+
+::: column(width=130)
+
+    x-media(src="images/tree.jpg" width=130 height=130)
+
+{.caption} Trees
+
+::: column(width=130)
+
+    x-media(src="images/orange.jpg" width=130 height=130)
+
+{.caption} Fruit
+
+::: column(width=130)
+
+    x-media(src="images/soap.jpg" width=130 height=130)
+
+{.caption} Soap Bubbles
+
+:::
+
+{.r} And there are so many other examples: from rainbows to water ripples. Can
+you think of anything else? _{button.next-step} Continue_
+
+---
+> id: max-area
+> goals: area-circle
+
+::: column.grow
+
+It also turns out that a circle is the shape with the largest area for a given
+circumference. For example, if you have a fence of length 100m, you can enclose
+the largest space if you form a circle – rather than, for example, a rectangle
+or triangle. Similarly, objects in nature can _save energy_ by becoming circular
+or spherical.
+
+::: column(width=325)
+
+    x-select.area-tabs
+      div(data-value="3") Triangle
+      div(data-value="4") Square
+      div(data-value="5") Pentagon
+      div(data-value="0") Circle
+
+{.todo} Diagram
+
+:::
 
 ---
 > id: area
 > goals: slider-1 slider-2
 
-### Area of Circles
+### The Area of a Circle
 
-But how do we actually calculate the area of a circle? Let's try using a similar
-technique to what we did for other polygons before: cut the shape into multiple
-different parts, and then rearrange them to form a shape that we already know
-the area of (e.g. a rectangle or a triangle). Unfortunately, since a circle is
-curved, we have to use some approximations.
+But how do we actually calculate the area of a circle? Let’s try using a similar
+technique to what we previously did [for quadrilaterals](/course/polygons-and-polyhedra/quadrilaterals):
+cut the shape into multiple different parts, and then rearrange them to form a
+shape that we already know the area of (e.g. a rectangle or a triangle).
+
+The only difference is that, because circles are curved, we have to start with
+some approximations:
 
 ::: column(width=340)
 
-{.text-center} Here you can see a circle that was divided into ${toWord(n1)}
-wedges.
+{.text-center} Here is a circle divided into ${toWord(n1)} wedges:
 
     svg.circle-area.red(width=340 height=240)
     x-slider(steps=400)
 
-{.text-center} Move the slider to line up the wedges in a row.
+{.text-center} Move the slider above, to line up the wedges in one row.
 
 {.text-center.reveal(when="slider-1")} If we increase the number of wedges to
 ${n1}{n1|6|5,30,1}, this shape starts to look more and more like a
 [[rectangle|circle|square]].
 
-{.text-center.reveal(when="blank-0")} The base of the rectangle is `pi*r` and
+{.text-center.reveal(when="blank-0")} The base of the rectangle is `pi*r`, and
 its height is _r_. Therefore the area of the rectangle is `pi r^2`.
 
 ::: column(width=360)
 
-{.text-center} Here you can see a circle that was divided into ${toWord(n2)}
-rings.
+{.text-center} Here is a circle divided into ${toWord(n2)} rings:
 
     svg.circle-area.yellow(width=360 height=240)
     x-slider(steps=400)
@@ -116,7 +204,7 @@ rings.
 ${n2}{n2|4|2,10,1}, this shape starts to look more and more like a
 [[triangle|rectangle|trapezium]].
 
-{.text-center.reveal(when="blank-1")} The base of the rectangle is `2 pi r` and
+{.text-center.reveal(when="blank-1")} The base of the triangle is `2 pi r`, and
 its height is _r_. Therefore the total area of the triangle is `pi r^2`.
 
 :::
@@ -124,70 +212,134 @@ its height is _r_. Therefore the total area of the triangle is `pi r^2`.
 ---
 
 If we could user infinitely many wedges or rings, the approximations above would
-be perfect – and they both give use the same formula for the area of a circle:
+be perfect – and they both give us the same formula for the area of a circle:
 
 {.text-center} `A = pi r^2`.
 
 ---
-> id: approximations
+> id: pi-approximations
 
 ### Calculating Pi
 
 As you saw above, `π = 3.1415926…` is not a simple integer, and its decimal
 digits go on forever, without any repeating pattern. Numbers with this property
-are called [__irrational numbers__](gloss:irrational), and it means that `π`
-cannot be expressed as a simple fraction `a/b`.
+are called [__irrational numbers__](gloss:irrational-numbers), and it means that
+`π` cannot be expressed as a simple fraction `a/b`.
 
 It also means that we can never write down _all_ the digits of Pi – after all,
-there are infinitely many. Ancient Greek and Chinese mathematicians managed to
-calculate the first four decimal digits of Pi, and [Isaac Newton](bio:newton)
-calculated 15 digits of Pi in 1665.
+there are infinitely many. Ancient Greek and Chinese mathematicians calculated
+the first four decimal digits of Pi by approximating circles using regular
+polygons. Notice how, as you add more sides, the polygon starts to look
+[[more and more|less|exactly]] like a circle:
 
-Today, we can use powerful computers to calculate the value of Pi to a much
-greater accuracy. The current record is 22 trillion digits. A printed book
-containing all these digits would be over 400km thick – approximately the height
-of the orbit of the International Space Station.
-
-One approach for calculating Pi is using infinite sequences of numbers. Here is
-one example which was discovered by [Gottfried Wilhelm Leibniz](bio:leibnitz) in
-1676:
-
-{.text-center} `π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + …`
-
-As we calculate more and more terms of this series (always following the same
-pattern), the result will get closer and closer to Pi.
+    figure: x-media(src="images/polygons.svg" width=460 height=110)
 
 ---
-> id: digits
+> id: pi-record
+
+::: column(width=280)
+
+    x-media(src="images/iss.jpg" width=280 height=330 credit="NASA")
+
+::: column.grow
+
+In 1665, [Isaac Newton](bio:newton) managed to calculated 15 digits. Today, we
+can use powerful computers to calculate the value of Pi to much higher
+accuracy.
+
+The current record is 22 trillion digits. A printed book containing all these
+digits would be approximately 400&nbsp;km thick – that’s the height at which the
+International Space Station orbits Earth!
+
+Of course, you don’t need to remember that many digits of Pi. In fact, the
+fraction `22/7 = 3.142…` is a great approximation.
+
+:::
+
+---
+> id: pi-sequence
+
+One approach for calculating Pi is using infinite sequences of numbers. Here is
+one example which was discovered by [Gottfried Wilhelm Leibniz](bio:leibniz) in
+1676:
+
+    p.text-center: span.math
+      mi π
+      mo(value="=") =
+      mfrac #[mn 4]#[mn 1]
+      mo –
+      mfrac #[mn 4]#[mn 3]
+      mo +
+      mfrac #[mn 4]#[mn 5]
+      mo –
+      mfrac #[mn 4]#[mn 7]
+      mo +
+      mfrac #[mn 4]#[mn 9]
+      mo –
+      mfrac
+        mn 4
+        mrow.md [[11]]
+      mo +
+      mo …
+
+{.reveal(when="blank-0")} As we calculate more and more terms of this series,
+always following the same pattern, the result will get closer and closer to Pi.
+
+---
+> id: pi-colours
+> goals: hover
+
+::: column.grow
 
 Many mathematicians believe that Pi has an even more curious property: that it
 is a __normal number__. This means that the digits from 0 to 9 appear completely
-at random, as if nature had rolled a 10-sided dice infinitely many times.
+at random, as if nature had rolled a 10-sided dice infinitely many times, to
+determine the value of Pi.
 
-If this is true, it means that you can think of any string of digits, and it
-will appear somewhere in the decimal expansion of Pi. Here you can search the
-first 1 million digits of Pi – does it contain your birthday?
+Here you can see the first 100 digits of Pi. Move over some of the cells, to see
+how the digits are distributed.
+
+::: column(width=330)
+
+    .pi-grid
+      .pi-left
+        .pi-cell 3
+        .pi-operator .
+      .pi-mid
+        for d in '1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'.split('')
+          .pi-cell= d
+      .pi-right: .pi-operator …
+
+:::
+
+---
+> id: pi-digits
+> goals: search
+
+If Pi is normal, it means that you can think of _any_ string of digits, and it
+will appear somewhere in its digits. Here you can search the first one
+million digits of Pi – do they contain your birthday?
 
     .box
       .box-title: h3 One Million Digits of Pi
       .box-body.pi-controls
         | Search for a string of digits:
         input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning Not found in the first 1 million digits
+        .pi-warning Not found in the first one million digits
       x-pi-scroll.box-body
         .first-row 3.
 
 ---
-> id: pop-culture
+> id: pi-movies
 
 We could even convert an entire book, like Harry Potter, into a very long string
-of digits (a = 01, b = 02, and so on). If Pi in normal, this string must also
-appear somewhere in its digits – but it would take millions of years to
-calculate enough digits to find it.
+of digits (a = 01, b = 02, and so on). If Pi is normal, this string will appear
+somewhere in its digits – but it would take millions of years to calculate
+enough digits to find it.
 
-Pi is very easy to understand, but of fundamental important in many areas in
-mathematics – and that's why it has become unusually popular in our culture
-(at least, compared to other areas of mathematics).
+Pi is easy to understand, but of fundamental importance in science and
+mathematics. That might be a reason why Pi has become unusually popular in our
+culture (at least, compared to other topics of mathematics):
 
 ::: column(width=220 parent="padded-thin")
 
@@ -201,8 +353,8 @@ mathematics – and that's why it has become unusually popular in our culture
 
 ::: column(width=220)
 
-    x-video(src="images/star-treck.mp4" poster="images/star-treck.jpg" width=220 height=140 audio)
-    .caption Spock (“Star Treck”) disables an evil computer by asking it to calculate the last digit of Pi.
+    x-video(src="images/star-trek.mp4" poster="images/star-trek.jpg" width=220 height=140 audio)
+    .caption Spock (“Star Trek”) disables an evil computer by asking it to calculate the last digit of Pi.
 
 :::
 

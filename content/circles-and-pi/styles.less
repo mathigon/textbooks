@@ -8,6 +8,38 @@
 @import "./components/pi-scroll";
 
 
+.pi-digits {
+  text-align: center;
+  font-size: 60px;
+  margin: .5em 0;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  div { display: none; }
+  :nth-child(2) { margin: 0 12px; }
+}
+
+.area-tabs {
+  display: flex;
+  margin: 0 auto .5em;
+  width: fit-content;
+
+  > * {
+    width: 80px;
+    text-align: center;
+    border: 1px solid @red;
+    border-left: none;
+    transition: color .2s, background .2s;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:first-child { border-radius: 6px 0 0 6px; border-left: 1px solid @red; }
+    &:last-child { border-radius: 0 6px 6px 0; }
+    &:hover { background: fade(@red, 20%);  }
+    &.active { color: white; background: @red; cursor: default; }
+  }
+}
+
 .circle-area {
   overflow: visible;
   path { stroke: white; stroke-width: 1.5px; }
@@ -18,6 +50,28 @@
 
   &.yellow path { fill: @yellow; }
   &.yellow path:nth-child(2n) { fill: darken(@yellow, 10%); }
+}
+
+@cell: 24px;
+.pi-grid { display: flex; }
+.pi-left { display: flex; }
+.pi-mid { display: flex; flex-wrap: wrap; width: 10 * (@cell + 2px); }
+.pi-right { display: flex; flex-direction: column; justify-content: flex-end; }
+.pi-cell { width: @cell; color: fade(white, 50%); transition: opacity .2s; }
+.pi-cell.hide { opacity: 0.2; }
+.pi-operator { padding: 0 4px; }
+
+.pi-cell, .pi-operator {
+  height: @cell;
+  line-height: @cell;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.pi-legend {
+  display: flex;
+  justify-content: center;
+  .pi-cell { color: white; margin: 20px 3px 0 3px; }
 }
 
 .pi-controls {
@@ -40,20 +94,33 @@ x-pi-scroll.box-body {
 
 x-conic-section {
   display: block;
-  margin: 2em auto 0;
+  margin: 1em auto 2em;
 }
 
 x-step .row.padded-thin.conics { margin-bottom: 2em; }
 .conics > * {
-  background: fade(@yellow, 80%);
+  background: @light-grey;
   border-radius: 6px;
-  padding: 10px 16px;
+  padding: 4px 16px 12px;
   text-align: center;
   box-sizing: border-box;
   opacity: 0.4;
   transition: opacity .3s, transform .3s;
+  position: relative;
+
   &.hide { opacity: 0; pointer-events: none; }
-  &.active { opacity: 1; transform: translateY(-10px); }
+  &.active { opacity: 1; transform: translateY(-12px); }
   p { margin: 0; }
   svg { display: block; margin: 0 auto; }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 15px solid @light-grey;
+    left: 5px;
+    top: -15px;
+  }
 }
