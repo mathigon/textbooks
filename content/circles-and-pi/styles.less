@@ -20,6 +20,17 @@
   cursor: pointer;
 }
 
+.similar-circles {
+  background: @grey-background;
+  border-radius: 4px;
+
+  .handle:not(.fixed) { cursor: move; transition: r .2s; fill: @red; }
+  .handle:not(.fixed):hover { r: 20 }
+  .outline { fill: none; stroke: @red; stroke-width: 4px; pointer-events: none; transition: r .2s; }
+  .outline-halo { fill: none; stroke: transparent; stroke-width: 40px; cursor: ew-resize; }
+  .burst { fill: none; stroke: @green; }
+}
+
 .pi-digits {
   text-align: center;
   font-size: 60px;

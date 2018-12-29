@@ -5,9 +5,10 @@
 
 
 
-import {clamp, list, wait} from '@mathigon/core';
-import { Point, toWord } from '@mathigon/fermat';
-import { $N, slide, Colour, animate } from '@mathigon/boost';
+import { clamp, list, wait } from '@mathigon/core';
+import { Point, toWord, roundTo } from '@mathigon/fermat';
+import { $N, slide, Colour, animate, Draggable } from '@mathigon/boost';
+import { Burst } from '../shared/components/burst';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
@@ -25,11 +26,68 @@ export function radius($step) {
         .then(() => {
           $step.score('compass');
           $geopad.$('.red').enter('draw-reverse', 1500, 1000);
-          $geopad.$('.blue').enter('draw-reverse', 1500, 4000);
+          $geopad.$('.blue').enter('draw-reverse', 2000, 4000);
         });
   });
 
-  $step.onScore('blank-0', () => $geopad.$('.green').enter('draw-reverse', 1500));
+  $step.onScore('blank-0', () => $geopad.$('.green').enter('draw-reverse', 2000));
+}
+
+export function similar($step) {
+  const $svg = $step.$('svg.similar-circles');
+  const $strokes = $N('g', {}, $svg);
+  const burst = new Burst($N('g', {class: 'burst'}, $svg), 20);
+
+  $N('circle', {class: 'handle fixed', r: 10, cx: 320, cy: 180, style: 'fill: #31b304'}, $svg);
+  $N('circle', {class: 'outline', r: 60, cx: 320, cy: 180, style: 'stroke: #31b304'}, $strokes);
+
+  const circles = [[140, 120, 100, 0], [220, 300, 40, 1], [500, 240, 120, 2]];
+  const isCompleted = [false, false, false];
+
+  function complete(i, $handle, $outline, $outlineHalo) {
+    if (isCompleted[i]) return;
+    isCompleted[i] = true;
+
+    $handle.exit('fade');
+    $outline.exit('fade');
+    $outlineHalo.exit('fade');
+    $step.score('circle-' + i);
+    $step.addHint('correct');
+    burst.play(1000, [320, 180], [70, 50]);
+  }
+
+  for (let c of circles) {
+    let rReady = false, cReady = false;
+
+    const $handle = $N('circle', {class: 'handle', r: 10}, $svg);
+    const $outlineHalo = $N('circle', {class: 'outline-halo', r: c[2]}, $strokes);
+    const $outline = $N('circle', {class: 'outline', r: c[2]}, $strokes);
+    const drag = new Draggable($handle, $svg, {snap: 20, useTransform: true});
+
+    drag.on('move', (p) => {
+      $outline.setCenter(p);
+      $outlineHalo.setCenter(p);
+      cReady = (p.x === 320 && p.y === 180);
+      if (rReady && cReady) complete(c[3], $handle, $outline, $outlineHalo);
+    });
+
+    slide($outlineHalo, {
+      move(p) {
+        let r = roundTo(p.subtract(drag.position).length, 20);
+        $outline.setAttr('r', r + 'px');
+        $outlineHalo.setAttr('r', r + 'px');
+        rReady = (r === 60);
+        if (rReady && cReady) complete(c[3], $handle, $outline, $outlineHalo);
+      }
+    });
+
+    drag.setPosition(c[0], c[1]);
+  }
+
+  const $gesture = $N('x-gesture', {}, $step);
+  /* this.$gesture.from = from;
+  this.$gesture.start(to);
+  this.one('click mouseover pointerdown', () => this.$gesture.stop()); */
 }
 
 export function piDefinition($step) {

@@ -60,14 +60,14 @@ circles that you need to know:
 
 ---
 > id: similar
-> goals: similar-0 similar-1 similar-2
+> goals: circle-0 circle-1 circle-2
 
 One important property of circles is that all circles are
 [similar](gloss:similar). You can prove that by showing how all circles can
 be matched up using simply [translations](gloss:translation) and
 [dilations](gloss:dilation):
 
-{.todo} Similar circles exercise
+    figure: svg.similar-circles(width=640 height=380)
 
 ---
 > id: pi-definition
@@ -94,7 +94,7 @@ Here you can see a wheel with diameter 1. As you “unroll” the circumference,
 you can see that its length is exactly [[`pi`|`2 xx pi`|3]]
 
     figure: include svg/wheel.svg
-    x-gesture(target="#wheel figure svg" slide="100,0")
+    x-gesture(target="#wheel .wheel" slide="100,0")
 
 ---
 > id: circumference
@@ -977,7 +977,7 @@ ellipses.
 > id: newton
 
 A few decades later, [Isaac Newton](bio:newton) was able to prove Kepler’s
-laws, using his newly developed laws of [__gravity__](gloss:gravity). Newton
+ideas, using his newly developed laws of [__gravity__](gloss:gravity). Newton
 realised that there is a force between any two masses in the universe – similar
 to the attraction between two magnets. 
 
