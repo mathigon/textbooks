@@ -1,3 +1,8 @@
+apollonius:
+  name: Apollonius of Perga
+  bio: __Apollonius of Perga__ (c. 200 BC) was a Greek mathematician and
+    astronomer best known for his work on the four _conic sections_.
+
 appel:
   name: Kenneth Appel
   bio: |
@@ -187,6 +192,13 @@ karinthy:
   bio: __Frigyes Karinthy__ (1887 – 1938) was a Hungarian author, poet and
     journalist. He is best known for the 1929 short story “Chains”, which first
     introduced the concept of _six degrees of separation_.
+
+kepler:
+  name: Johannes Kepler
+  bio: __Johannes Kepler__ (1571 – 1630) was a German astronomer and
+    mathematician. He was the _imperial mathematician_ in Prague, and he is best
+    known for his three _laws of planetary motion_. Kepler also worked in
+    optics, and invented an improved telescope for his obeservations.
 
 khayyam:
   name: Omar Khayyam

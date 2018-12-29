@@ -129,20 +129,26 @@ export class ConicSection extends CustomElement {
     const context = this.$canvas.getContext();
     context.drawImage(renderer.domElement, 0, 0);
 
+    // Update Function
+    this.angle = 0;
+    this.update = (a) => {
+      this.angle = a;
+      tube.geometry = getTubeGeo(a);
+      torch.rotation.z = a;
+      cone.rotation.z = a;
+      cone.position.x = coneHeight * Math.sin(a) / 2;
+      cone.position.y = coneTop - coneHeight * Math.cos(a) / 2;
+      renderer.render(scene, camera);
+      context.clearRect(0, 0, width, height);
+      context.drawImage(renderer.domElement, 0, 0);
+      this.trigger('rotate', a);
+    };
+
     // Sliding Animation
-    let a = 0;
     slide(this.$canvas, {
       move: (posn, start, last) => {
-        a = clamp(a + (posn.x - last.x) / 800, 0, 1.25);
-        tube.geometry = getTubeGeo(a);
-        torch.rotation.z = a;
-        cone.rotation.z = a;
-        cone.position.x = coneHeight * Math.sin(a) / 2;
-        cone.position.y = coneTop - coneHeight * Math.cos(a) / 2;
-        renderer.render(scene, camera);
-        context.clearRect(0, 0, width, height);
-        context.drawImage(renderer.domElement, 0, 0);
-        this.trigger('rotate', a);
+        const a = clamp(this.angle + (posn.x - last.x) / 800, 0, 1.25);
+        this.update(a);
       }
     });
   }

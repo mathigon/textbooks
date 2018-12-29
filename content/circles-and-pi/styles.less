@@ -8,6 +8,18 @@
 @import "./components/pi-scroll";
 
 
+.play-btn {
+  .svgBackground('<path d="M14,38V10L38,24Z" fill="white"/>', 48, 48, fade(#222, 70%));
+  top: 50%;
+  left: 50%;
+  margin: -24px;
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  cursor: pointer;
+}
+
 .pi-digits {
   text-align: center;
   font-size: 60px;
@@ -95,6 +107,7 @@ x-pi-scroll.box-body {
 x-conic-section {
   display: block;
   margin: 1em auto 2em;
+  cursor: ew-resize;
 }
 
 x-step .row.padded-thin.conics { margin-bottom: 2em; }
@@ -107,9 +120,11 @@ x-step .row.padded-thin.conics { margin-bottom: 2em; }
   opacity: 0.4;
   transition: opacity .3s, transform .3s;
   position: relative;
+  cursor: pointer;
 
   &.hide { opacity: 0; pointer-events: none; }
-  &.active { opacity: 1; transform: translateY(-12px); }
+  &:hover { opacity: 0.6; transform: translateY(-6px); }
+  &.active { opacity: 1; transform: translateY(-12px); cursor: default; }
   p { margin: 0; }
   svg { display: block; margin: 0 auto; }
 

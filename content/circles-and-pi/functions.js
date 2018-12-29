@@ -5,14 +5,32 @@
 
 
 
-import { clamp, list } from '@mathigon/core';
+import {clamp, list, wait} from '@mathigon/core';
 import { Point, toWord } from '@mathigon/fermat';
-import { $N, slide, Colour } from '@mathigon/boost';
+import { $N, slide, Colour, animate } from '@mathigon/boost';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
 
 // -----------------------------------------------------------------------------
+
+export function radius($step) {
+  const $play = $step.$('.play-btn');
+  const $geopad = $step.$('x-geopad');
+
+  $play.one('click', () => {
+    $play.exit('pop');
+    wait(500)
+        .then(() => $geopad.animateConstruction('c1'))
+        .then(() => {
+          $step.score('compass');
+          $geopad.$('.red').enter('draw-reverse', 1500, 1000);
+          $geopad.$('.blue').enter('draw-reverse', 1500, 4000);
+        });
+  });
+
+  $step.onScore('blank-0', () => $geopad.$('.green').enter('draw-reverse', 1500));
+}
 
 export function piDefinition($step) {
   const $digits = $step.$('.pi-digits').children;
@@ -56,6 +74,7 @@ export function wheel($step) {
     }
   });
 
+  $wheel.css('cursor', 'ew-resize');
   redraw();
 }
 
@@ -228,5 +247,53 @@ export function conics($step) {
     $activeLabel.removeClass('hide');
     $activeLabel.addClass('active');
     $step.score(['circle', 'ellipse', 'parabola', 'hyperbola'][active]);
+  });
+
+  $labels.forEach(($l, i) => {
+    $l.on('click', () => {
+      if ($l.hasClass('active')) return;
+      $conics.update([0, 0.9, 1.12, 1.2][i])
+    });
+  });
+}
+
+export function ellipses2($step) {
+  $step.$$('x-video').forEach(($v, i) => {
+    $v.one('play', () => $step.score('v' + i));
+  });
+}
+
+export function epicycles($step) {
+  const smallCircle = $step.$('.small-circle');
+  const earth = $step.$('.earth');
+  const $path = $step.$('svg path');
+  const $play = $step.$('.play-btn');
+
+  const BIG_R = 120;
+  const SMALL_R = 30;
+  let points = [];
+  let lastP = 0;
+
+  $step.model.watch((state) => {
+    points = list(401).map((i) => {
+      const a = i/400 * 2 * Math.PI;
+      return Point.fromPolar(a * state.n, SMALL_R)
+          .add(Point.fromPolar(a, BIG_R)).shift(160, 160);
+    });
+    $path.points = points.slice(0, lastP * 401);
+  });
+
+  $play.on('click', () => {
+    $play.exit('pop').then(() => $play.enter('pop', 400, 5000));
+    $step.score('play');
+
+    animate((p) => {
+      const a = p * 2 * Math.PI;
+      const c1 = Point.fromPolar(a, BIG_R).shift(160, 160);
+      smallCircle.setCenter(c1);
+      earth.setCenter(Point.fromPolar(a * $step.model.n, SMALL_R).add(c1));
+      $path.points = points.slice(0, p * 401);
+      lastP = p;
+    }, 5000);
   });
 }

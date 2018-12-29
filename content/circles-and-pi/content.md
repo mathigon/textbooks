@@ -3,7 +3,7 @@
 ## Introduction
 
 > section: introduction
-> id: orbits
+> id: intro
 
 ::: column.grow
 
@@ -33,20 +33,28 @@ center. This means that they can be drawn using a [compass](gloss:compass):
 
 ::: column(width=320)
 
-{.todo} Interactive diagram
+    x-geopad(width=320 height=300 style="position: relative;")
+      svg(style="stroke-linecap: round; stroke-linejoin: round")
+        circle.move(name="a" cx=160 cy=150 target="r d")
+        circle.move.reveal(name="b" cx=250 cy=240 project="circle(a, 120)" target="r" when="compass")
+        path.red(x="segment(a,b).contract(0.08)" target="r" arrows="both" hidden)
+        path(name="c1" x="arc(a,b,1.99*pi)" hidden)
+        path.blue(x="segment(b.rotate(Math.PI/3,a),b.rotate(-2*Math.PI/3,a)).contract(0.01)" target="d" arrows="both" hidden)
+        path.green(x="arc(a,b.add(b.subtract(a).normal.scale(12)),1.99*pi).contract(0.02)" target="c" arrows="start" hidden)
+      .play-btn
 
 ::: column.grow
 
 {.reveal(when="compass")} There are three important measurements related to
 circles that you need to know:
 
-* {.reveal(when="compass" delay="1000")} The __{.pill.red}radius__ is the
-  distance from the center of a circle to its outer rim.
-* {.reveal(when="compass" delay="2500")} The __{.pill.blue}diameter__ is the
-  distance between two opposite points on a circle. It goes through its center,
-  and its length is [[twice|half|the same as]] the radius.
-* {.reveal(when="blank-0")} The __{.pill.green}circumference__ is the distance
-  around a circle.
+* {.reveal(when="compass" delay="1000")} The [{.step-target.pill.b.red}radius](target:r)
+  is the distance from the center of a circle to its outer rim.
+* {.reveal(when="compass" delay="4000")} The [{.step-target.pill.b.blue}diameter](target:d)
+  is the distance between two opposite points on a circle. It goes through its
+  center, and its length is [[twice|half|the same as]] the radius.
+* {.reveal(when="blank-0")} The [{.step-target.pill.b.green}circumference](target:c) 
+  (or perimeter) is the distance around a circle.
 
 :::
 
@@ -69,7 +77,8 @@ You might remember that, for similar polygons, the ratio between corresponding
 sides is always constant. The same is true for circles: the ratio between the
 circumference and the diameter is equal for _all circles_: approximately 3.1415.
 This number is called [__Pi__](gloss:pi), and often denoted by the Greek letter
-_π_ for “p”.
+_π_ for “p”. Pi has infinitely many decimal digits, that go on forever without
+any specific pattern.
 
     .pi-digits
       div #[em π]
@@ -146,8 +155,10 @@ you think of anything else? _{button.next-step} Continue_
 It also turns out that a circle is the shape with the largest area for a given
 circumference. For example, if you have a fence of length 100m, you can enclose
 the largest space if you form a circle – rather than, for example, a rectangle
-or triangle. Similarly, objects in nature can _save energy_ by becoming circular
-or spherical.
+or triangle.
+
+In nature, objects like water drops or air bubbles can _save energy_ by becoming
+circular or spherical, and reducing their surface area.
 
 ::: column(width=325)
 
@@ -343,18 +354,18 @@ culture (at least, compared to other topics of mathematics):
 
 ::: column(width=220 parent="padded-thin")
 
-    x-video(src="images/museum.mp4" poster="images/museum.jpg" width=220 height=140 audio)
-    .caption Pi is the secret combination for the tablet in “Night at the Museum 2”.
+    x-video(src="images/museum.mp4" poster="images/museum.jpg" width=220 height=140 audio credit="© 20th Century Fox")
+    p.caption Pi is the secret combination for the tablet in “Night at the Museum 2”.
 
 ::: column(width=220)
 
-    x-video(src="images/simpsons.mp4" poster="images/simpsons.jpg" width=220 height=140 audio)
-    .caption Professor Frink (“Simpsons”) silences a room of scientists by saying that Pi equals 3.
+    x-video(src="images/simpsons.mp4" poster="images/simpsons.jpg" width=220 height=140 audio credit="© Fox")
+    p.caption Professor Frink (“Simpsons”) silences a room of scientists by saying that Pi equals 3.
 
 ::: column(width=220)
 
-    x-video(src="images/star-trek.mp4" poster="images/star-trek.jpg" width=220 height=140 audio)
-    .caption Spock (“Star Trek”) disables an evil computer by asking it to calculate the last digit of Pi.
+    x-video(src="images/star-trek.mp4" poster="images/star-trek.jpg" width=220 height=140 audio credit="© NBC")
+    p.caption Spock (“Star Trek”) disables an evil computer by asking it to calculate the last digit of Pi.
 
 :::
 
@@ -778,7 +789,8 @@ radius of a cone and h is the height, then the volume is V=13πr2h.
 > goals: ellipse parabola hyperbola
 
 The circle is one of four different shapes which can be created using “slices”
-through a cone. This can be demonstrated using the light cone of a torch:
+through a [cone](gloss:cone). This can be demonstrated using the light cone of
+a torch:
 
     x-conic-section
 
@@ -809,74 +821,185 @@ __Hyperbola__
 :::
 
 ---
+> id: conics-1
 
 If you point the torch vertically downwards, you see a [[circle|ellipse|oval]]
 of light. _{span.reveal(when="blank-0")}If you tilt the cone, you get an
 [__ellipse__](gloss:ellipse). If you tilt it even further, you get a
-[__parabola__](gloss:parabola) or a [__hyperbola__](gloss:hyperbola). These four
-shapes are called [__conic sections__](gloss:conic-section)._
-
-Even though they all look very different, the four conic sections are closely
-related. In fact, they can all be generated using the same equation!
-
-{.todo} APOLLONIUS OF PERGA (ca 225 B.C.E.) wrote a series of eight books, titled Conic
-sections, in which he thoroughly investigated these curves. He was the one to
-introduce the names parabola, ellipse and hyperbola. ARCHIMEDES OF SYRACUSE (ca.
-287–212 B.C.E.) also wrote about these curves.
-
-In later courses, you'll learn much more about parabolas and hyperbolas, but
-let's have a closer look at ellipses.
+[__parabola__](gloss:parabola) or a [__hyperbola__](gloss:hyperbola)._
 
 ---
+> id: conics-2
+
+::: column.grow
+
+Collectively, these four shapes are called [__conic sections__](gloss:conic-section).
+Even though they all look very different, they are closely related: in fact,
+they can all be generated using the same equation!
+
+Conic sections were first studied by the ancient Greek mathematician [Apollonius
+of Perga](bio:apollonius), who also gave them their unusual names.
+
+In later courses, you’ll learn much more about parabolas and hyperbolas. For
+now, let’s have a closer look at the ellipse.
+
+::: column(width=300)
+
+    x-media(src="images/conics.svg" width=300 height=340)
+
+:::
+
+---
+> id: ellipses
 
 ### Ellipses
 
-{.todo} The ellipse is a particularly interesting shape. We could think about it
-as a circle with “two centres” – these are called the foci. If both foci are in
-the same place, we get a circle. If they move further apart, the shape becomes
-more and more elliptical.
+An ellipse just looks almost like an “elongated circle”. In fact, you could
+think about it as a circle with _two centers_ – these are called __focal
+points__. Just like every point on a circle has the same distance from its
+center, every point on an ellipse has the same _sum of distances_ to its two
+focal points.
 
-{.todo} Just like the distance between points on a circle and its centre is
-constant, the sum of the distances from points on an ellipse to its two foci is
-constant. This means that we can easily create an ellipe using a piece of string:
+If you have a long string connected to two fixed points, you can draw a perfect
+ellipse by tracing the maximum reach of the strings:
 
-{.todo} Ellipses diagrams
+{.todo} Coming soon: Ellipses drawing interactive
 
 ---
+> id: ellipses-1
+
+You can also move the focal points around. Notice how, if they are further
+apart, the ellipse will be [[more|less]] elongated. If they are close together,
+it will look almost like a [[circle|parabola|trapezium]].
+
+---
+> id: ellipses-2
+> goals: v0 v1 v2 v3
+
+There are many other physical representations of how you could draw an ellipse:
+
+::: column(width=320 parent="padded-thin")
+
+    x-video(src="images/gears.mp4" poster="images/gears.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
+    p.caption Gears
+
+::: column(width=320)
+
+    x-video(src="images/trammel.mp4" poster="images/trammel.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
+    p.caption Trammel
+
+::: column(width=320)
+
+    x-video(src="images/disk.mp4" poster="images/disk.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
+    p.caption Disk
+
+::: column(width=320)
+
+    x-video(src="images/swing.mp4" poster="images/swing.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
+    p.caption Swing
+
+:::
+
+---
+> id: orbits
 
 ### Planetary Orbits
+
+::: column.grow
 
 You might remember from the very beginning of this course, that ancient Greek
 astronomers believed that the Earth is at the centre of the universe and that
 the sun, moon and planets move around Earth on circular orbits.
 
-Unfortunately, astronomical observation showed that the sun appeared larger
-during some parts of the year and smaller during others. This was surprising,
-since every point on a circle should have the same distance from its center.
+Unfortunately, astronomical observation of the sky didn’t quite support this.
+For example, the sun appeared larger during some parts of the year and smaller
+during others. On a circle, every point should have [[the same|an increasing|a
+decreasing]] distance from its center.
 
-{.todo} Therefore astronomers added Epicycles to the orbits: all objects in the
-sky move on a large circle around the Earth, but at the same time they move
-along a smaller circle around themselves. And, though complicated, this was the
-most widely accepted model of our universe for more than 1000 years.
+::: column(width=330)
 
-{.todo} In 1543, Nicolaus Copernicus published “On the Revolutions of the
-Celestial Spheres”, a book in which he explained what many astronomers had
-suspected for some time: that the sun is at the centre of the universe and that
-the Earth moves around the sun on a circle, like all the other planets. This is
-called the Heliocentric Model. At that time, the heliocentric model still had
-many errors, and it still couldn’t explain why the sun sometimes appears larger
-and sometimes smaller.
+    x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
-It wasn't until 1609 that the astronomer Johannes Kepler discovered that planets
-actually move on elliptical orbits, and that the sun is in one of its two foci.
-This is the first of his three Laws of Planetary Motion, which we know to be
-true today.
+{.caption} Greek astronomer Hipparchus of Nicaea
 
-A few decades later, Isaac Newton was able to prove Kepler's discovery, using
-his newly developed laws of gravity.
+:::
 
-{.todo} Between any two masses in the universe there is a force, similar to the attraction between two magnets. This force is called gravity. Gravity is what makes everything fall to the ground and gravity is what makes the planets move around the sun. It is only the great speed at which planets move, that prevents them from falling into the sun.
+---
+> id: epicycles
+> goals: play
 
-{.todo} Using Newton’s laws, one can derive an equation that describes the motion of objects moving under the force of gravity. This equation happens to be the same as the equation for conic sections (see above). Planets move on ellipses, but other objects, such as comets, can travel on parabolic or hyperbolic paths: they come close to the sun before turning around and shooting off into the universe, never to come back.
+To fix this, astronomers added __Epicycles__ to their model of the solar system:
+planets move on a large circle around Earth, while simultaneously rotating on
+a smaller circle. While very complicated, this was the most widely accepted
+model of our universe for more than 1000 years:
 
-{.todo} Newton lived and worked at Trinity College Cambridge, where a falling apple is said to have inspired him to think about gravity. His description of classical mechanics, among many other discoveries, makes Newton the greatest and most influential scientist of all times. His ideas shaped our understanding of the world for nearly 300 years, until Albert Einstein discovered the laws of relativity in 1905.
+::: column(width=320)
+
+    .r
+      svg(width=320 height=320)
+        circle.large-circle(cx=160 cy=160 r=120 fill="none" stroke="#ccc" stroke-width="2px")
+        circle.small-circle(cx=280 cy=160 r=30 fill="none" stroke="#ccc" stroke-width="2px")
+        path(fill="none" stroke="#ff941f" stroke-width="3px" opacity="0.8" stroke-linejoin="round")
+        circle.sun(cx=160 cy=160 r=15 fill="#1f7aff")
+        circle.earth(cx=310 cy=160 r=10 fill="#ff941f")
+      .play-btn
+
+{.caption} This planet makes ${n}{n|6|2,12,1} rotations around the small circle
+(the __epicycle__) during one rotation around the large circle (the
+__deferent__).
+
+::: column(width=320)
+
+    x-media(src="images/epicycles.jpg" width=320 height=320)
+
+{.caption} A 16-century drawing of epicycles in the __Geocentric model__. The
+Greek word “planetes” means “wanderers”.
+:::
+
+---
+> id: kepler
+
+::: column.grow
+
+Over time, people realised that Earth was actually just one of many planets
+orbiting the sun (the __Heliocentric model__), but it wasn’t until 1609, that
+the astronomer [Johannes Kepler](bio:kepler) discovered that planets actually
+move on _elliptical orbits_. The sun is in one of the two focal points of these
+ellipses.
+
+::: column(width=320)
+
+{.todo} Planets Diagram
+
+:::
+
+---
+> id: newton
+
+A few decades later, [Isaac Newton](bio:newton) was able to prove Kepler’s
+laws, using his newly developed laws of [__gravity__](gloss:gravity). Newton
+realised that there is a force between any two masses in the universe – similar
+to the attraction between two magnets. 
+
+Gravity is what makes everything fall to the ground and gravity is what makes
+the planets move around the sun. It is only the great speed at which planets
+move, that prevents them from falling directly into the sun.
+
+::: column(width=280)
+
+{.todo} Newton Image
+
+::: column.grow
+
+Using Newton’s laws, you can derive the path that objects take when moving under
+the force of gravity. It turns out that Planets move on ellipses, but other
+objects like comets can travel on [parabolic](gloss:parabola) or
+[hyperbolic](gloss:hyperbola) paths: they come close to the sun before turning
+around and shooting off into the universe, never to come back.
+
+According to legend, a falling apple inspired Newton to think about gravity. He
+was one of the most influential scientist of all time, and his ideas shaped our
+understanding of the world for nearly 300 years – until Albert Einstein
+discovered the laws of relativity in 1905.
+
+:::
