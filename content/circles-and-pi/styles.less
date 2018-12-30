@@ -31,16 +31,7 @@
   .burst { fill: none; stroke: @green; }
 }
 
-.pi-digits {
-  text-align: center;
-  font-size: 60px;
-  margin: .5em 0;
-  line-height: 1;
-  display: flex;
-  justify-content: center;
-  div { display: none; }
-  :nth-child(2) { margin: 0 12px; }
-}
+.pi-spiral { margin: 1em auto; }
 
 .area-tabs {
   display: flex;
@@ -61,6 +52,11 @@
     &:hover { background: fade(@red, 20%);  }
     &.active { color: white; background: @red; cursor: default; }
   }
+}
+
+#max-area  {
+  path { fill: fade(@blue, 10%); stroke: @green; stroke-width: 8px; stroke-linejoin: round; }
+  .var { color: @blue; }
 }
 
 .circle-area {
@@ -149,4 +145,25 @@ x-step .row.padded-thin.conics { margin-bottom: 2em; }
     left: 5px;
     top: -15px;
   }
+}
+
+.newton {
+  position: relative;
+  &.interactive { cursor: pointer; }
+  img { display: block; }
+  .over { position: absolute; top: 0; }
+  .apple { position: absolute; top: 38px; left: 144px; }
+
+  .credit {
+    position: absolute;
+    bottom: 0;
+    background: fade(black, 80%);
+    padding: 1px 8px;
+    font-size: 10px;
+    color: white;
+    opacity: 0;
+    transition: opacity .2s;
+    border-bottom-left-radius: 4px;
+  }
+  &:hover .credit { opacity: .8; }
 }

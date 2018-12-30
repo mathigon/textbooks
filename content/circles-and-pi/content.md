@@ -67,31 +67,28 @@ One important property of circles is that all circles are
 be matched up using simply [translations](gloss:translation) and
 [dilations](gloss:dilation):
 
-    figure: svg.similar-circles(width=640 height=380)
+    figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
 ---
 > id: pi-definition
 > goals: digits
 
 You might remember that, for similar polygons, the ratio between corresponding
-sides is always constant. The same is true for circles: the ratio between the
-circumference and the diameter is equal for _all circles_: approximately 3.1415.
-This number is called [__Pi__](gloss:pi), and often denoted by the Greek letter
-_π_ for “p”. Pi has infinitely many decimal digits, that go on forever without
-any specific pattern.
+sides is always constant. Something similar works for circles: the ratio between
+the [circumference](gloss:circle-circumference) and the
+[diameter](gloss:circle-diameter) is equal for _all circles_. It is always
+3.14159… – a mysterious number called [__Pi__](gloss:pi), which is often written
+as the Greek letter _π_ for “p”. Pi has infinitely many decimal digits that go
+on forever without any specific pattern:
 
-    .pi-digits
-      div #[em π]
-      div =
-      for d in '3.1415926535897…'.split('')
-        div= d
+    canvas.pi-spiral(width=800 height=760 style="max-width: 400px")
 
 ---
 > id: wheel
 > goals: unroll
 
-Here you can see a wheel with diameter 1. As you “unroll” the circumference,
-you can see that its length is exactly [[`pi`|`2 xx pi`|3]]
+Here is a wheel with diameter 1. As you “unroll” the circumference, you can see
+that its length is exactly [[`pi`|`2 * pi`|3]]:
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -100,7 +97,7 @@ you can see that its length is exactly [[`pi`|`2 xx pi`|3]]
 > id: circumference
 
 For a circle with diameter _d_, the circumference is `C = pi * d`. Similarly,
-for a circle with radius _r_, the circumference is
+for a circle with [radius](gloss:circle-radius) _r_, the circumference is
 
 {.text-center} `C =` [[`2 * pi * r`|`pi * r`|`pi * r^2`]].
 
@@ -153,22 +150,23 @@ you think of anything else? _{button.next-step} Continue_
 ::: column.grow
 
 It also turns out that a circle is the shape with the largest area for a given
-circumference. For example, if you have a fence of length 100m, you can enclose
-the largest space if you form a circle – rather than, for example, a rectangle
-or triangle.
+circumference. For example, if you have a rope of length 100&nbsp;m, you can use
+it to enclose the largest space if you form a circle (rather than other shapes
+like a rectangle or triangle).
 
 In nature, objects like water drops or air bubbles can _save energy_ by becoming
 circular or spherical, and reducing their surface area.
 
-::: column(width=325)
+::: column(width=320)
 
     x-select.area-tabs
-      div(data-value="3") Triangle
-      div(data-value="4") Square
-      div(data-value="5") Pentagon
-      div(data-value="0") Circle
+      div(data-value="0") Triangle
+      div(data-value="1") Square
+      div(data-value="2") Pentagon
+      div(data-value="3") Circle
+    svg(width=320 height=200)
 
-{.todo} Diagram
+{.caption} _Circumference_ = __{.m-green}100__, _Area_ = __${area}__
 
 :::
 
@@ -940,7 +938,7 @@ model of our universe for more than 1000 years:
         circle.large-circle(cx=160 cy=160 r=120 fill="none" stroke="#ccc" stroke-width="2px")
         circle.small-circle(cx=280 cy=160 r=30 fill="none" stroke="#ccc" stroke-width="2px")
         path(fill="none" stroke="#ff941f" stroke-width="3px" opacity="0.8" stroke-linejoin="round")
-        circle.sun(cx=160 cy=160 r=15 fill="#1f7aff")
+        circle(cx=160 cy=160 r=15 fill="#1f7aff")
         circle.earth(cx=310 cy=160 r=10 fill="#ff941f")
       .play-btn
 
@@ -958,28 +956,39 @@ Greek word “planetes” means “wanderers”.
 
 ---
 > id: kepler
+> goals: play
 
 ::: column.grow
 
 Over time, people realised that Earth was actually just one of many planets
 orbiting the sun (the __Heliocentric model__), but it wasn’t until 1609, that
 the astronomer [Johannes Kepler](bio:kepler) discovered that planets actually
-move on _elliptical orbits_. The sun is in one of the two focal points of these
-ellipses.
+move on _elliptical orbits_.
+
+The sun is in one of the two focal points of these ellipses. The planets speed
+up as they get closer to the sun, and slow down as they move further away.
 
 ::: column(width=320)
 
-{.todo} Planets Diagram
+    .r
+      svg(width=320 height=240)
+        path.sweep(fill="#1f7aff" opacity="0.25")
+        path.orbit(fill="none" stroke="#ccc" stroke-width="3px" opacity="0.8" stroke-linejoin="round")
+        circle.earth(cx=280 cy=120 r=10 fill="#1f7aff")
+        circle(cx=220 cy=120 r=15 fill="#ff941f")
+        circle(cx=100 cy=120 r=4 fill="#ccc")
+      .play-btn
 
 :::
 
 ---
 > id: newton
+> goals: apple
 
 A few decades later, [Isaac Newton](bio:newton) was able to prove Kepler’s
-ideas, using his newly developed laws of [__gravity__](gloss:gravity). Newton
-realised that there is a force between any two masses in the universe – similar
-to the attraction between two magnets. 
+observations, using his newly developed laws of [__gravity__](gloss:gravity).
+Newton realised that there is a force between any two masses in the universe –
+similar to the attraction between two magnets. 
 
 Gravity is what makes everything fall to the ground and gravity is what makes
 the planets move around the sun. It is only the great speed at which planets
@@ -987,19 +996,24 @@ move, that prevents them from falling directly into the sun.
 
 ::: column(width=280)
 
-{.todo} Newton Image
+    .newton.interactive
+      img(src="images/newton-2.jpg" width=280 height=370)
+      img.over(src="images/newton-1.jpg" width=280 height=370)
+      img.apple(src="images/newton-apple.png" width=30 height=40)
+      .credit Frits Ahlefeldt
+    x-gesture(target=".newton" offset="20,-120")
 
 ::: column.grow
 
 Using Newton’s laws, you can derive the path that objects take when moving under
 the force of gravity. It turns out that Planets move on ellipses, but other
 objects like comets can travel on [parabolic](gloss:parabola) or
-[hyperbolic](gloss:hyperbola) paths: they come close to the sun before turning
+[hyperbolic](gloss:hyperbola) paths: they fly close to the sun before turning
 around and shooting off into the universe, never to come back.
 
 According to legend, a falling apple inspired Newton to think about gravity. He
 was one of the most influential scientist of all time, and his ideas shaped our
 understanding of the world for nearly 300 years – until Albert Einstein
-discovered the laws of relativity in 1905.
+discovered relativity in 1905.
 
 :::

@@ -932,8 +932,8 @@ circle:
 
 circle-diameter:
   title: Diameter (circle)
-  text: The __diameter__ of a circle is the distance across the center of a
-    circle. It is equal to twice the radius of the circle.
+  text: The __diameter__ of a circle is the distance across its center. It is
+    equal to twice its radius.
 
 circle-radius:
   title: Radius
@@ -941,7 +941,8 @@ circle-radius:
 
 circle-circumference:
   title: Circumference (circle)
-  text: The __circumference__ of a circle is the length around its outside edge.
+  text: The __circumference__ of a circle is the distance around its outside
+    edge. A circle with radius _r_ has circumference `C = 2 * pi * r`.
 
 conic-section:
   title: Conic Section
