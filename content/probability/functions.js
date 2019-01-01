@@ -6,93 +6,44 @@
 
 import { list, tabulate, flatten, last, total, square, clamp } from '@mathigon/core';
 import { roundTo, random } from '@mathigon/fermat';
-import { $, $N, table, slide } from '@mathigon/boost';
+import { $, $N, table } from '@mathigon/boost';
+import { rotateDisk } from '../shared/components/disk';
 
 
-function animate(callback, precision = 0.0001) {
-  let startTime = Date.now();
-  let lastTime = 0;
-  let running = true;
+export function roulette($step) {
+  const $wheels = $step.$$('.wheel');
+  const $ball = $step.$('.ball');
+  const $target = $step.$('circle');
+  let ballSpeed, ballAngle, ballOffset;
 
-  function tick() {
-    let time = Date.now() - startTime;
-    let value = callback(time, time - lastTime);
-    lastTime = time;
-    if (running && (time < 10 || Math.abs(value) > precision)) window.requestAnimationFrame(tick);
-  }
-
-  tick();
-  return { cancel: function() { running = false; } };
-}
-
-// -----------------------------------------------------------------------------
-
-export function roulette($section) {
-  $section.addHint('The <x-target to=".roulette-wheel">Roulette wheel</x-target> is interactive – simply drag it to start.');
-
-  let $wheels = $section.$$('.wheel');
-  let $ball = $section.$('.ball');
-  let $target = $section.$('circle');
-
-  let center, history, animation;
-  let tapAngle = 0;
-  let wheelAngle = 0;
-
-  function draw(wheelAngle, ballAngle = null, ballRadius = null) {
-    for (let $w of $wheels) $w.transform = `rotate(${wheelAngle}rad)`;
-    if (ballAngle != null) {
-      let x = ballRadius * Math.sin(ballAngle);
-      let y = -ballRadius * Math.cos(ballAngle);
-      $ball.transform = `translate(${x}px, ${y}px)`;
-    }
-  }
-
-  function spin(wheelSpeed) {
-    $ball.show();
-    let ballSpeed = -0.8 * wheelSpeed;
-    let ballOffset;
-    let ballAngle = 0;
-
-    animation = animate((t, dt) => {
-      wheelSpeed *= 0.995;
-      wheelAngle = (wheelAngle + dt * wheelSpeed) % (2 * Math.PI);
+  rotateDisk($target, {
+    $disk: $wheels[0],
+    start() {
+      $ball.hide();
+      $step.score('rotate');
+    },
+    momentumStart(speed) {
+      $ball.show();
+      ballSpeed = -0.8 * speed;
+      ballAngle = 0;
+      ballOffset = null;
+    },
+    draw(angle, isMomentum, dt) {
+      for (let $w of $wheels) $w.transform = `rotate(${angle}rad)`;
+      if (!isMomentum) return;
 
       ballSpeed *= 0.985;
       if (Math.abs(ballSpeed) > 0.00032) {
         ballAngle = (ballAngle + dt * ballSpeed) % (2 * Math.PI);
       } else {
-        if (!ballOffset) ballOffset = roundTo(ballAngle - wheelAngle, 2 * Math.PI/ 37);
-        ballAngle = wheelAngle + ballOffset;
+        if (!ballOffset) ballOffset = roundTo(ballAngle - angle, 2 * Math.PI/ 37);
+        ballAngle = angle + ballOffset;
       }
 
-      let ballRadius = Math.min(116 + 87500 * Math.abs(ballSpeed), 165);
-      draw(wheelAngle, ballAngle, ballRadius);
-      return wheelSpeed;
-    });
-  }
-
-  slide($target, {
-    start(posn) {
-      if (animation) animation.cancel();
-      center = $wheels[0].boxCenter;
-      tapAngle = Math.atan2(posn.y - center.y, posn.x - center.x);
-      history = [[tapAngle, Date.now()]];
-      $ball.hide();
-    },
-    move(posn) {
-      let dragAngle = Math.atan2(posn.y - center.y, posn.x - center.x);
-      let angle = wheelAngle + dragAngle - tapAngle;
-      draw(angle);
-      history.push([angle, Date.now()]);
-      if (history.length > 5) history.shift();
-    },
-    end(posn) {
-      let dragAngle = Math.atan2(posn.y - center.y, posn.x - center.x);
-      wheelAngle += (dragAngle - tapAngle);
-      if (history.length >= 5) {
-        const speed = (history[2][0] - history[0][0]) / (history[2][1] - history[0][1]);
-        spin(clamp(speed, -0.01, 0.01));
-      }
+      const ballRadius = Math.min(116 + 87500 * Math.abs(ballSpeed), 165);
+      const x = ballRadius * Math.sin(ballAngle);
+      const y = -ballRadius * Math.cos(ballAngle);
+      $ball.transform = `translate(${x}px, ${y}px)`;
     }
   });
 }
