@@ -6,12 +6,16 @@
 
 
 import { clamp, list, wait, tabulate } from '@mathigon/core';
-import { Point, toWord, roundTo, Polygon } from '@mathigon/fermat';
+import { Point, toWord, roundTo, Polygon, subsets, permutations } from '@mathigon/fermat';
 import { $N, slide, Colour, animate, Draggable } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
+import { rotateDisk } from '../shared/components/disk';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
+
+window.subsets = subsets;
+window.permutations = permutations;
 
 // -----------------------------------------------------------------------------
 
@@ -112,7 +116,6 @@ const piString = 'π=3.1415926535897932384626433832795028841971693993751058209' 
     '381830119491298336733624406566430860213949463952247371907021798609437027' +
     '705392171762931767523846748184676694051320005681271452635608277857713427' +
     '577896091736371787214684409012249534301465495853710507922796892589235420…';
-
 
 export function piDefinition($step) {
   const context = $step.$('canvas').getContext();
@@ -281,18 +284,18 @@ function ring(cx, cy, r1, r2, fromAngle, toAngle) {
 }
 
 export function area($step) {
-  const $svgs = $step.$$('.circle-area');
-  const $sliders = $step.$$('x-slider');
-  $step.model.set('toWord', toWord);
+  const $svg = $step.$('.circle-area');
+  const $slider = $step.$('x-slider');
+  const $rect = $N('g', {class: 'circle'}, $svg);
+  const $circle = $N('g', {class: 'circle'}, $svg);
+
   const r = 60;
-
   let angle, dx, dy;
-  const rect = $N('g', {}, $svgs[0]);
-  const circle1 = $N('g', {}, $svgs[0]);
+  $step.model.set('toWord', toWord);
 
-  function applyTransforms1() {
-    const wedges = circle1.children;
-    const p = $sliders[0].current / $sliders[0].steps;
+  function applyTransforms() {
+    const wedges = $circle.children;
+    const p = $slider.current / $slider.steps;
 
     for (let i = 0; i < $step.model.n1; ++i) {
       const a = deg(-i * angle) + ((i % 2) ? 180 : 0);
@@ -301,33 +304,37 @@ export function area($step) {
       wedges[i].setAttr('transform', `translate(${p*x},${p*y}) rotate(${p*a})`);
     }
 
-    if (p > 0.95) $step.score('slider-1');
+    if (p > 0.95) $step.score('slider');
   }
 
   $step.model.watch((state) => {
-    // TODO Reuse elements for better performance.
-    circle1.removeChildren();
-    rect.removeChildren();
+    $circle.removeChildren();
+    $rect.removeChildren();
 
     angle = 2 * Math.PI / state.n1;
     dx = r * Math.sqrt(2 - 2 * Math.cos(angle)) / 2;
     dy = r * Math.cos(angle / 2);
 
     for (let i = 0; i < state.n1; ++i) {
-      const d = circleSector(170, 65, r, (i-0.5) * angle, (i+0.5) * angle);
-      $N('path', {d}, rect);
-      $N('path', {d}, circle1);
+      const d = circleSector(170, 65, r, (i - 0.5) * angle, (i + 0.5) * angle);
+      $N('path', {d}, $rect);
+      $N('path', {d}, $circle);
     }
 
-    applyTransforms1();
+    applyTransforms();
   });
 
-  $sliders[0].on('move', applyTransforms1);
+  $slider.on('move', applyTransforms);
+}
 
-  // ---------------------
+export function area1($step) {
+  const $svg = $step.$('.circle-area');
+  const $slider = $step.$('x-slider');
+  const $circle = $N('g', {class: 'circle'}, $svg);
+  const triangle = $N('g', {class: 'circle'}, $svg);
 
-  const circle2 = $N('g', {}, $svgs[1]);
-  const triangle = $N('g', {}, $svgs[1]);
+  const r = 60;
+  $step.model.set('toWord', toWord);
 
   function drawRings(element, p) {
     const $rings = element.children;
@@ -335,7 +342,7 @@ export function area($step) {
     const rmin = Math.pow(20 + p * 100, 1 + p) - 20;
     const dr = r / $step.model.n2;
 
-    const cx = 180 + p * (10 - 175);
+    const cx = 170 + p * (10 - 175);
     const cy = 65 + p * (150 - 65) - rmin;
 
     for (let i = 0; i < $step.model.n2; ++i) {
@@ -344,27 +351,69 @@ export function area($step) {
       $rings[i].setAttr('d', d);
     }
 
-    if (p > 0.95) $step.score('slider-2');
+    triangle.css('transform', `scale(${1 - 0.2 * p})`);
+    if (p > 0.95) $step.score('slider');
   }
 
   $step.model.watch((state) => {
     // TODO Reuse elements for better performance.
     triangle.removeChildren();
-    circle2.removeChildren();
+    $circle.removeChildren();
 
     for (let i = 0; i < state.n2; ++i) {
       $N('path', {}, triangle);
-      $N('path', {}, circle2);
+      $N('path', {}, $circle);
     }
 
-    drawRings(circle2, 0);
-    drawRings(triangle, $sliders[1].current / $sliders[1].steps);
+    drawRings($circle, 0);
+    drawRings(triangle, $slider.current / $slider.steps);
   });
 
-  $sliders[1].on('move', (x) => drawRings(triangle, x / $sliders[1].steps));
+  $slider.on('move', (x) => drawRings(triangle, x / $slider.steps));
 }
 
+
 // -----------------------------------------------------------------------------
+// Degrees and Radians
+
+export function degrees($step) {
+  const angles = [1.999, 1, 0.5];
+  const $geopad = $step.$('x-geopad');
+
+  const start = $geopad.eval('point(150,80)');
+  $step.model.set('c0', start);
+  $step.model.set('c1', start);
+  $step.model.set('c2', start);
+
+  for (let i of [0, 1, 2]) {
+    $step.onScore('blank-' + i, () => {
+      animate((t) => {
+        const a = t * Math.PI * angles[i];
+        const p = `point(${80 + 70 * Math.cos(a)}, ${80 - 70 * Math.sin(a)})`;
+        $step.model.set(['c' + i], $geopad.eval(p));
+      }, angles[i] * 750);
+    });
+  }
+}
+
+export function constellations($step) {
+  const $box = $step.$('.constellations');
+  const $wheel = $box.children[1];
+
+  rotateDisk($box, {
+    resistance: 0.85,
+    maxSpeed: 0.01,
+    $disk: $wheel,
+    draw(angle) {
+      // TODO update 360 ticks, $step.score
+      $wheel.transform = `rotate(${angle}rad)`;
+    }
+  });
+}
+
+
+// -----------------------------------------------------------------------------
+// Conic Sections
 
 export function conics($step) {
   const $conics = $step.$('x-conic-section');

@@ -12,7 +12,7 @@ on Earth using the motion of stars, planets and the moon.
 
 Ancient Greek astronomers were the first to discover that all celestial objects
 move on regular paths, called __orbits__. They believed that these orbits are
-always circular. After all, circles are the “most perfect” of all shapes,
+always circular. After all, circles are the “most perfect” of all shapes:
 symmetric in every direction, and thus a fitting choice for the underlying
 order of our universe.
 
@@ -172,58 +172,92 @@ circular or spherical, and reducing their surface area.
 
 ---
 > id: area
-> goals: slider-1 slider-2
+> goals: slider
 
 ### The Area of a Circle
 
-But how do we actually calculate the area of a circle? Let’s try using a similar
-technique to what we previously did [for quadrilaterals](/course/polygons-and-polyhedra/quadrilaterals):
-cut the shape into multiple different parts, and then rearrange them to form a
-shape that we already know the area of (e.g. a rectangle or a triangle).
+But how do we actually calculate the area of a circle? Let’s try the same
+technique we used for [finding the area quadrilaterals](/course/polygons-and-polyhedra/quadrilaterals):
+we cut the shape into multiple different parts, and then rearrange them into a
+different shape we already know the area of (e.g. a rectangle or a triangle).
 
-The only difference is that, because circles are curved, we have to start with
-some approximations:
+The only difference is that, because circles are curved, we have to use some
+approximations:
 
 ::: column(width=340)
 
-{.text-center} Here is a circle divided into ${toWord(n1)} wedges:
-
-    svg.circle-area.red(width=340 height=240)
+    svg.circle-area.red(width=340 height=245)
+      defs
+        marker#area-arrow(refX=4 refY=4 markerWidth=5 markerHeight=8 orient="auto-start-reverse")
+          path(d="M 1 1 L 4 4 L 1 7" stroke-width=1)
+      g.labels
+        line.reveal(x1=62 y1=158 x2=62 y2=212 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-1")
+        line.reveal(x1=80 y1=226 x2=268 y2=226 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-2")
+        text.reveal(x=50 y=190 when="blank-1") r
+        text.reveal(x=165 y=241 when="blank-2") πr
     x-slider(steps=400)
 
-{.text-center} Move the slider above, to line up the wedges in one row.
+::: column.grow
 
-{.text-center.reveal(when="slider-1")} If we increase the number of wedges to
-${n1}{n1|6|5,30,1}, this shape starts to look more and more like a
-[[rectangle|circle|square]].
+Here you can see a circle divided into ${toWord(n1)} wedges. Move the slider,
+to line up the wedges in one row.
 
-{.text-center.reveal(when="blank-0")} The base of the rectangle is `pi*r`, and
-its height is _r_. Therefore the area of the rectangle is `pi r^2`.
+{.reveal(when="slider")} If we increase the number of wedges to ${n1}{n1|6|6,30,2},
+this shape starts to look more and more like a [[rectangle|circle|square]].
 
-::: column(width=360)
+{.reveal(when="blank-0")} The height of the rectangle is equal to the
+[[radius|circumference|diameter]] of the circle.
+_{span.reveal(when="blank-1")} The width of the rectangle is equal to
+[[half the circumference|the circumference|twice the radius]] of the circle._
+_{span.reveal(when="blank-2")} (Notice how half of the wedges face down and
+half of them face up.)_
 
-{.text-center} Here is a circle divided into ${toWord(n2)} rings:
-
-    svg.circle-area.yellow(width=360 height=240)
-    x-slider(steps=400)
-
-{.text-center} Like before, you can move the slider to “uncurl” the rings.
-
-{.text-center.reveal(when="slider-1")} If we increase the number of wedges to
-${n2}{n2|4|2,10,1}, this shape starts to look more and more like a
-[[triangle|rectangle|trapezium]].
-
-{.text-center.reveal(when="blank-1")} The base of the triangle is `2 pi r`, and
-its height is _r_. Therefore the total area of the triangle is `pi r^2`.
+{.reveal(when="blank-2" delay=1000)} Therefore the total area of the rectangle
+is approximately `A = pi * r^2`.
 
 :::
 
 ---
+> id: area-1
+> goals: slider
 
-If we could user infinitely many wedges or rings, the approximations above would
+::: column(width=340)
+
+    svg.circle-area.blue(width=340 height=245)
+      g.labels
+        line.reveal(x1=28 y1=158 x2=28 y2=202 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-1")
+        line.reveal(x1=40 y1=216 x2=322 y2=216 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-2")
+        text.reveal(x=16 y=185 when="blank-1") r
+        text.reveal(x=165 y=234 when="blank-2") 2πr
+    x-slider(steps=400)
+
+::: column.grow
+
+Here you can see a circle divided into ${toWord(n)} rings. Like before, you can
+move the slider to “uncurl” the rings.
+
+{.reveal(when="slider")} If we increase the number of wedges to ${n2}{n2|4|2,12,1},
+this shape starts to look more and more like a [[triangle|rectangle|trapezium]].
+
+{.reveal(when="blank-0")} The height of the triangle is equal to the 
+[[radius|diameter|circumference]] of the circle.
+_{span.reveal(when="blank-1")} The base of the triangle is equal to [[the
+circumference|twice the diameter]] of the circle._
+_{span.reveal(when="blank-2")} Therefore the total area of the triangle is
+approximately_
+
+{.text-center.reveal(when="blank-2")} `A = 1/2 "base" * "height" = pi * r^2`.
+
+:::
+
+---
+> id: area-2
+
+If we could user infinitely many rings or wedges, the approximations above would
 be perfect – and they both give us the same formula for the area of a circle:
 
-{.text-center} `A = pi r^2`.
+{.text-center.r} `A = pi * r^2`.
+_{button.next-step} Continue_
 
 ---
 > id: pi-approximations
@@ -379,14 +413,223 @@ because `pi ≈ 22/7`.
 
 
 --------------------------------------------------------------------------------
-> sectionStatus: dev
-> section: radians
 
 
 
 ## Degrees and Radians
 
-__[CC] Understand radian measure of an angle as the length of the arc on the unit circle subtended by the angle.__
+> sectionStatus: dev
+> section: radians
+> id: degrees
+
+So far in geometry, we've always measured angles in [degrees](gloss:degrees). A
+__{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
+[[180]]°, a __{.m-yellow}quarter circle__ is [[90]]°, and so on.
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a0" hidden)
+      circle(x="point(80,80)" name="b0")
+      circle(x="c0" hidden)
+      path.red.fill(x="angle(c0,b0,a0)" sweep round size=40)
+      path(x="segment(a0,b0)")
+      path(x="segment(b0,c0)")
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a1" hidden)
+      circle(x="point(80,80)" name="b1")
+      circle(x="c1" hidden)
+      path.green.fill(x="angle(a1,b1,c1)" round size=40)
+      path(x="segment(a1,b1)")
+      path(x="segment(b1,c1)")
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a2" hidden)
+      circle(x="point(80,80)" name="b2")
+      circle(x="c2" hidden)
+      path.yellow.fill(x="angle(a2,b2,c2)" round size=40)
+      path(x="segment(a2,b2)")
+      path(x="segment(b2,c2)")
+
+:::
+
+---
+> id: degrees-1
+
+{.r} The number 360 is very convenient because it is divisible by so many other
+numbers: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, and so on. This means that many
+fractions of one circle are also whole numbers. But have you ever wondered
+where the number 360 comes from?
+_{button.next-step} Continue_
+
+---
+> id: babylon
+
+::: column.grow
+
+As it happens, 360 degrees are one of the oldest concepts in mathematics we
+still use today. They were developed in ancient Babylon, more than 5000 years
+ago!
+
+At that time, one of the most important applications of mathematics was in
+astronomy. The _sun_ determines the four seasons, which farmers have to know
+about when growing crops. Similarly, the _moon_ determines the tides, which
+was important for fishers. People also studied the stars to predict the
+future, or to communicate with gods.
+
+::: column(width=260)
+
+    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+
+{.caption} A Babylonian tablet for calculating `sqrt(2)`
+
+:::
+
+---
+> id: constellations
+
+Astronomers noticed that the constellations visible at a specific time during
+the night shifted a tiny bit every day – until, after approximately 360 days,
+they had rotated back to their starting point. And this might have been the
+reason why they divided the circle into 360 degrees.
+
+    .constellations
+      .bg
+      .wheel
+      .fg
+
+---
+
+Of course, there are actually 365 days in one year (well, 365.242199 to be
+exact), but Babylonian mathematicians worked with simple sundials, and this
+approximation was perfectly adequate.
+
+It also worked well with their existing base-60 number system (since
+`6 xx 60 = 360`). This system is the reason why we still have 60 seconds in a
+minute, and 60 minutes in an hour – even though most other units are measured
+in base 10 (e.g. 10 years in a decade, or 100 years in a century).
+
+::: column.grow
+
+For many of us, measuring angles in degrees is second nature: there is 360°
+video, skateboarders can pull 540s, and someone changing their decision might
+make a 180° turn.
+
+But from a mathematical point of view, the choice of 360 is completely
+arbitrary. If we were living on Mars, a circle might have 670°, and a year on
+Jupiter even has 10,475 days.
+
+::: column(width=280)
+
+    x-video(src="images/skateboard.mp4" poster="images/skateboard.jpg" width=280 height=200 credit="© RIDE Channel, from YouTube")
+
+{.caption} The 540 McFlip, a 540° rotation
+
+:::
+
+---
+
+### Radians
+
+Rather than dividing a circle into some number of segments (like 360 degrees),
+mathematicians often prefer to measure angles using the circumference of a
+[__unit circle__](gloss:unit-circle) – a circle with radius 1.
+
+::: column(width=280)
+
+{.todo diagram}
+
+::: column.grow
+
+* A _{span.var-action}full circle_ has circumference [[2 pi]]
+* For a _{span.var-action}half circle rotation_, the distance along the
+  circumference is [[pi]].
+* For a _{span.var-action}quarter circle rotation_, the distance along the
+  circumference is [[pi/2]].
+* And so on.
+
+:::
+
+---
+
+This way of measuring angles is called [__radians__](gloss:radians) (you could
+remember this as “radius units”).
+
+Every angle in degrees has an equivalent size in radians. Converting between the
+two is very easy – just like you can convert between other units like meters and
+kilometers, or Celsius and Fahrenheit:
+
+{.todo} 360 degrees = 2pi radians equivalence
+
+---
+
+You can write the radians value either as a multiple of pi, or as just a single
+decimal number. Can you fill in this table of equivalent angle sizes in degrees
+and radians?
+
+{.todo} TABLE
+
+---
+
+### Distance Travelled
+
+You can think of radians as the “distance traveled” along the circumference of
+a unit circle. This is particularly useful when working with objects that are
+moving on a circular path.
+
+::: column.grow
+
+For example, the International Space Station orbits Earth once every 90 minutes
+(or 1.5 hours). This means its radial speed is `(2 pi)/1.5` radians per hour.
+
+The radius of its orbit is 6800 km. It is 6800 times as big as a unit circle,
+so the
+
+In other words, the speed of the ISS is `(2 pi)/1.5 * 6800 = 28483` km per hour.
+
+Can you see that in this example, radians are a much more natural unit for
+measuring angles, rather than degrees?
+
+::: column(width=280)
+
+{.todo} TODO
+
+:::
+
+---
+
+::: column(width=280)
+
+{.todo} TODO
+
+::: column.grow
+
+Here is another example: your car has wheels with radius 0.25 m. You're driving
+at 50 m/s, this means that the wheels of your car rotate at 50/0.3 = 0.25
+radians per second.
+
+:::
+
+---
+
+### Trigonometry
+
+For most simple geometry problems, degrees and radians are completely
+interchangeable – you can pick which one you prefer, or sometimes a question
+might tell you which unit to give your answer in. However, once you start doing
+[trigonometry](gloss:trigonometry) or [calculus](gloss:calculus)) radians tend
+to be much more convenient than degrees.
+
+{.todo} CALCULATOR BUTTON
+
+{.todo} SMALL ANGEL APPROXIMATION
+
+
 
 --------------------------------------------------------------------------------
 > sectionStatus: dev
@@ -990,12 +1233,13 @@ observations, using his newly developed laws of [__gravity__](gloss:gravity).
 Newton realised that there is a force between any two masses in the universe –
 similar to the attraction between two magnets. 
 
-Gravity is what makes everything fall to the ground and gravity is what makes
-the planets move around the sun. It is only the great speed at which planets
-move, that prevents them from falling directly into the sun.
+Gravity is what makes everything fall to the ground and gravity is also what
+makes the planets move around the sun. It is only the great speed at which
+planets move, that prevents them from falling directly into the sun.
 
 ::: column(width=280)
 
+    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

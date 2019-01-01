@@ -8,6 +8,9 @@
 @import "./components/pi-scroll";
 
 
+// -----------------------------------------------------------------------------
+// Shared
+
 .play-btn {
   .svgBackground('<path d="M14,38V10L38,24Z" fill="white"/>', 48, 48, fade(#222, 70%));
   top: 50%;
@@ -19,6 +22,10 @@
   position: absolute;
   cursor: pointer;
 }
+
+
+// -----------------------------------------------------------------------------
+// Introduction
 
 .similar-circles {
   background: @grey-background;
@@ -61,14 +68,22 @@
 
 .circle-area {
   overflow: visible;
-  path { stroke: white; stroke-width: 1.5px; }
-  g:first-child { opacity: 0.5; }
+  .circle path { stroke: white; stroke-width: 1.5px; }
+  .circle:first-child { opacity: 0.5; }
 
-  &.red path { fill: @red; }
-  &.red path:nth-child(2n) { fill: darken(@red, 10%); }
+  &.red .circle path {
+    fill: @red;
+    &:nth-child(2n) { fill: darken(@red, 10%); }
+  }
 
-  &.yellow path { fill: @yellow; }
-  &.yellow path:nth-child(2n) { fill: darken(@yellow, 10%); }
+  &.blue .circle path {
+    fill: @blue;
+    &:nth-child(2n) { fill: darken(@blue, 10%); }
+  }
+
+  .labels line, marker path { fill: none; stroke: @light-grey; stroke-linecap: round; }
+  .labels line { stroke-width: 2px; }
+  .labels text { fill: @light-grey; font-size: 16px; font-style: italic; }
 }
 
 @cell: 24px;
@@ -109,7 +124,27 @@ x-pi-scroll.box-body {
   .first-row { position: absolute; left: 16px; }
 }
 
+
 // -----------------------------------------------------------------------------
+// Radians and Degrees
+
+.constellations {
+  position: relative;
+  overflow: hidden;
+  margin: 2em 0;
+  cursor: ew-resize;
+
+  .bg, .wheel, .fg { background-size: cover; }
+  .wheel, .fg { position: absolute; top: 0; width: 100%; }
+
+  .bg { padding-bottom: 63%; background-image: url(/resources/circles-and-pi/images/star-wheel-1.svg); }
+  .wheel { padding-bottom: 100%; background-image: url(/resources/circles-and-pi/images/star-wheel-2.svg); will-change: transform; }
+  .fg {  padding-bottom: 63%; background-image: url(/resources/circles-and-pi/images/star-wheel-3.svg); }
+}
+
+
+// -----------------------------------------------------------------------------
+// Conic Sections
 
 x-conic-section {
   display: block;

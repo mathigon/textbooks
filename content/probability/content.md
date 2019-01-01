@@ -231,6 +231,7 @@ Now let’s have a look at some fun applications of probability.
 ---
 > id: roulette
 > sectionBackground: dark casino
+> goals: rotate
 
 ## Casino Mathematics
 
@@ -241,6 +242,7 @@ Now let’s have a look at some fun applications of probability.
       .layer-5
       .ball
       svg(width=380 height=380): circle(cx=190 cy=190 r=190)
+    x-gesture(target=".roulette-wheel" offset="-90,-100" slide="0,200")
 
 Soon after their initial discovery, mathematicians started applying the laws of
 probability to many different parts of life – including casino games.
