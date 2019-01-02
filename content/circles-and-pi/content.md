@@ -81,7 +81,7 @@ the [circumference](gloss:circle-circumference) and the
 as the Greek letter _π_ for “p”. Pi has infinitely many decimal digits that go
 on forever without any specific pattern:
 
-    canvas.pi-spiral(width=800 height=760 style="max-width: 400px")
+    canvas.pi-spiral(width=800 height=760)
 
 ---
 > id: wheel
@@ -504,6 +504,7 @@ reason why they divided the circle into 360 degrees.
       .fg
 
 ---
+> id: constellations-1
 
 Of course, there are actually 365 days in one year (well, 365.242199 to be
 exact), but Babylonian mathematicians worked with simple sundials, and this
@@ -511,8 +512,8 @@ approximation was perfectly adequate.
 
 It also worked well with their existing base-60 number system (since
 `6 xx 60 = 360`). This system is the reason why we still have 60 seconds in a
-minute, and 60 minutes in an hour – even though most other units are measured
-in base 10 (e.g. 10 years in a decade, or 100 years in a century).
+minute and 60 minutes in an hour – even though most other units are measured
+in [base 10](gloss:base-10) (e.g. 10 years in a decade, or 100 years in a century).
 
 ::: column.grow
 
@@ -533,12 +534,13 @@ Jupiter even has 10,475 days.
 :::
 
 ---
+> id: radians
 
 ### Radians
 
 Rather than dividing a circle into some number of segments (like 360 degrees),
-mathematicians often prefer to measure angles using the circumference of a
-[__unit circle__](gloss:unit-circle) – a circle with radius 1.
+mathematicians often prefer to measure angles using the [circumference](gloss:circle-circumference)
+of a [__unit circle__](gloss:unit-circle) – a circle with radius 1.
 
 ::: column(width=280)
 
@@ -556,6 +558,7 @@ mathematicians often prefer to measure angles using the circumference of a
 :::
 
 ---
+> id: radians-1
 
 This way of measuring angles is called [__radians__](gloss:radians) (you could
 remember this as “radius units”).
@@ -567,6 +570,7 @@ kilometers, or Celsius and Fahrenheit:
 {.todo} 360 degrees = 2pi radians equivalence
 
 ---
+> id: radians-2
 
 You can write the radians value either as a multiple of pi, or as just a single
 decimal number. Can you fill in this table of equivalent angle sizes in degrees
@@ -1106,12 +1110,11 @@ ellipse by tracing the maximum reach of the strings:
 
 {.todo} Coming soon: Ellipses drawing interactive
 
----
-> id: ellipses-1
-
-You can also move the focal points around. Notice how, if they are further
-apart, the ellipse will be [[more|less]] elongated. If they are close together,
-it will look almost like a [[circle|parabola|trapezium]].
+    // ---
+    // > id: ellipses-1
+    // You can also move the focal points around. Notice how, if they are further
+    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
+    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
