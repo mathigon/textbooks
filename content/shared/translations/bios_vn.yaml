@@ -1,3 +1,12 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+apollonius:
+  name: Apollonius of Perga
+  bio: __Apollonius of Perga__ (c. 200 BC) was a Greek mathematician and
+    astronomer best known for his work on the four _conic sections_.
+
 appel:
   name: Kenneth Appel
   bio: |
@@ -188,6 +197,13 @@ karinthy:
     journalist. He is best known for the 1929 short story “Chains”, which first
     introduced the concept of _six degrees of separation_.
 
+kepler:
+  name: Johannes Kepler
+  bio: __Johannes Kepler__ (1571 – 1630) was a German astronomer and
+    mathematician. He was the _imperial mathematician_ in Prague, and he is best
+    known for his three _laws of planetary motion_. Kepler also worked in
+    optics, and invented an improved telescope for his obeservations.
+
 khayyam:
   name: Omar Khayyam
   bio: __Omar Khayyam__ (عمر خیّام‎, 1048 – 1131) was a Persian mathematician,
@@ -195,6 +211,18 @@ khayyam:
     and found new ways to understand Euclid's _parallel axiom_. Khayyam also
     designed the _Jalali calendar_, a precise solar calendar that is still used
     in some countries.
+
+leibniz:
+  name: Gottfried Wilhelm Leibniz
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646 – 1716) was a German mathematician
+    and philosopher. Among many other achievements, he was one of the inventors
+    of calculus, and created some of the first mechanical calculators.
+
+    Leibniz believed that our universe is the “best possible universe” that God
+    could have created, while allowing us to have a free will. He was a great
+    advocate of _rationalism_, and also made contributions to physics, medicine,
+    linguistics, law, history, and many other subjects.
 
 milgram:
   name: Stanley Milgram
@@ -212,10 +240,10 @@ monsky:
 newton:
   name: Isaak Newton
   bio: |
-    __Sir Isaac Newton__ (1642 – 1726) was an English mathematician,
-    astronomer and physicist, and one of the most influential scientists of all
-    time. He was a fellow of Trinity College at the University of Cambridge, and
-    president of the Royal Society in London.
+    __Sir Isaac Newton__ (1642 – 1726) was an English physicist, mathematician,
+    and astronomer, and one of the most influential scientists of all time. He
+    was professor at Cambridge University, and president of the Royal Society in
+    London.
 
     In his book _Principia Mathematica_, Newton formulated the laws of motion
     and gravity, which laid the foundations for classical physics and dominated
