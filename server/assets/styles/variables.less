@@ -124,3 +124,20 @@
   line-height: @size;
   border-radius: @size/2;
 }
+
+.arrow(@color, @a, @b, @c, @size, @height: @size) {
+  background: @color;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    @{a}: 100%;
+    @{b}: 50%;
+    margin-@{b}: -@size;
+    border-@{a}: @height @color solid;
+    border-@{b}: @size transparent solid;
+    border-@{c}: @size transparent solid;
+  }
+}

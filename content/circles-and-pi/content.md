@@ -225,10 +225,10 @@ is approximately `A = pi * r^2`.
 
     svg.circle-area.blue(width=340 height=245)
       g.labels
-        line.reveal(x1=28 y1=158 x2=28 y2=202 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-1")
-        line.reveal(x1=40 y1=216 x2=322 y2=216 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-2")
-        text.reveal(x=16 y=185 when="blank-1") r
-        text.reveal(x=165 y=234 when="blank-2") 2πr
+        line.reveal(x1=20 y1=156 x2=20 y2=206 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-1")
+        line.reveal(x1=34 y1=218 x2=355 y2=218 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-2")
+        text.reveal(x=10 y=185 when="blank-1") r
+        text.reveal(x=165 y=236 when="blank-2") 2πr
     x-slider(steps=400)
 
 ::: column.grow
@@ -286,7 +286,7 @@ polygons. Notice how, as you add more sides, the polygon starts to look
 
 ::: column.grow
 
-In 1665, [Isaac Newton](bio:newton) managed to calculated 15 digits. Today, we
+In 1665, [Isaac Newton](bio:newton) managed to calculate 15 digits. Today, we
 can use powerful computers to calculate the value of Pi to much higher
 accuracy.
 
@@ -492,6 +492,7 @@ future, or to communicate with gods.
 
 ---
 > id: constellations
+> goals: rotate
 
 Astronomers noticed that the constellations visible at a specific time during
 the night shifted a tiny bit every day – until, after approximately 360 days,
@@ -499,9 +500,11 @@ they had rotated back to their starting point. And this might have been the
 reason why they divided the circle into 360 degrees.
 
     .constellations
+      .label.md Midnight on day ${day}
       .bg
-      .wheel
+      .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
       .fg
+    x-gesture(target=".constellations" offset="0,-120", slide="-160,0")
 
 ---
 > id: constellations-1
@@ -544,7 +547,12 @@ of a [__unit circle__](gloss:unit-circle) – a circle with radius 1.
 
 ::: column(width=280)
 
-{.todo diagram}
+    x-geopad(width=280 height=280): svg
+      circle(x="point(140,140)" name="c")
+      path.thin(x="circle(c,100)" name="circ")
+      circle.move(cx=260 cy=140 name="a" project="circ")
+      circle.move(cx=140 cy=20 name="b" project="circ")
+      path.red.thick(x="arc(c,b,angle(b,c,a).rad)" name="circ")
 
 ::: column.grow
 
@@ -576,7 +584,9 @@ You can write the radians value either as a multiple of pi, or as just a single
 decimal number. Can you fill in this table of equivalent angle sizes in degrees
 and radians?
 
-{.todo} TABLE
+| __degrees__ | 0     |   | 60  | 180 | 270 | 360 |
+| __radians__ | [[0]] | 1 |    |     |     |     |
+{.grid}
 
 ---
 
@@ -1038,32 +1048,20 @@ through a [cone](gloss:cone). This can be demonstrated using the light cone of
 a torch:
 
     x-conic-section
-
-::: column.active(parent="padded-thin conics" width=160)
-
-__Circle__
-
-    include svg/circle.svg
-
-::: column.hide(width=160)
-
-__Ellipse__
-
-    include svg/ellipse.svg
-
-::: column.hide(width=160)
-
-__Parabola__
-
-    include svg/parabola.svg
-
-::: column.hide(width=160)
-
-__Hyperbola__
-
-    include svg/hyperbola.svg
-
-:::
+    x-scale-box(width=760).conics
+      .row
+        .active
+          p: strong Circle
+          include svg/circle.svg
+        div
+          p: strong Ellipse
+          include svg/ellipse.svg
+        div
+          p: strong Parabola
+          include svg/parabola.svg
+        div
+          p: strong Hyperbola
+          include svg/hyperbola.svg
 
 ---
 > id: conics-1

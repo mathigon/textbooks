@@ -26,7 +26,7 @@ export function rotateDisk($el, options) {
       speed *= options.resistance;
       angle = (angle + dt * speed) % (2 * Math.PI);
       options.draw(angle, true, dt);
-      if (Math.abs(speed) < 0.0001) animation.cancel();
+      if (animation && Math.abs(speed) < 0.0001) animation.cancel();
     });
   }
 
@@ -39,7 +39,7 @@ export function rotateDisk($el, options) {
       if ('start' in options) options.start();
     },
     move(posn, start) {
-      angle = startAngle - (new Angle(posn, center, start)).rad;
+      angle = startAngle + (new Angle(start, center, posn)).rad;
       options.draw(angle, false, null);
       history.push([angle, Date.now()]);
       if (history.length > 4) history.shift();
@@ -48,6 +48,7 @@ export function rotateDisk($el, options) {
       if (history.length < 4) return;
       const speed = (history[2][0] - history[0][0]) / (history[2][1] - history[0][1]);
       spin(clamp(speed, -options.maxSpeed, options.maxSpeed));
+      if ('end' in options) options.end();
     }
   });
 }

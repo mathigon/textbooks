@@ -6,7 +6,7 @@
 
 
 import { clamp, list, wait, tabulate } from '@mathigon/core';
-import { Point, toWord, roundTo, Polygon, subsets, permutations } from '@mathigon/fermat';
+import { Point, toWord, roundTo, Polygon, Sector, subsets, permutations } from '@mathigon/fermat';
 import { $N, slide, Colour, animate, Draggable } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { rotateDisk } from '../shared/components/disk';
@@ -67,7 +67,7 @@ export function similar($step) {
     const $handle = $N('circle', {class: 'handle', r: 10}, $svg);
     const $outlineHalo = $N('circle', {class: 'outline-halo', r: c[2]}, $strokes);
     const $outline = $N('circle', {class: 'outline', r: c[2]}, $strokes);
-    const drag = new Draggable($handle, $svg, {snap: 20, useTransform: true});
+    const drag = new Draggable($handle, $svg, {snap: 20, useTransform: true, responsive: true});
 
     drag.on('move', (p) => {
       $outline.setCenter(p);
@@ -226,11 +226,11 @@ export function maxArea($step) {
   const square = Polygon.regular(4, R * 1.11072).shift(160, 100);
   const pentagon = Polygon.regular(5, R * 1.06896).shift(160, 100);
 
-  const points = [
-    list(N).map(i => triangle.at(i/N)),
-    list(N).map(i => square.at(i/N)),
-    list(N).map(i => pentagon.at(i/N)),
-    Polygon.regular(N, R).shift(160, 100).points
+  const polygons = [
+    new Polygon(...list(N).map(i => triangle.at(i/N))),
+    new Polygon(...list(N).map(i => square.at(i/N))),
+    new Polygon(...list(N).map(i => pentagon.at(i/N))),
+    Polygon.regular(N, R).shift(160, 100)
   ];
 
   const areas = [481, 625, 688, 796];
@@ -240,7 +240,7 @@ export function maxArea($step) {
   $path.closed = true;
 
   let i = 0;
-  $path.points = points[0];
+  $path.draw(polygons[0]);
   $step.model.set('area', areas[0]);
 
   $select.on('change', ($el) => {
@@ -248,39 +248,10 @@ export function maxArea($step) {
     i = +$el.data.value;
     if (i === 3) $step.score('area-circle');
     animate((p) => {
-      $path.points = list(N).map(k => Point.interpolate(points[j][k], points[i][k], p));
+      $path.draw(Polygon.interpolate(polygons[j], polygons[i], p));
       $step.model.area = Math.round(p * areas[i] + (1-p) * areas[j]);
     }, 400);
   });
-}
-
-function deg(rad) { return rad / Math.PI * 180; }
-
-function circleSector(cx, cy, r, fromAngle, toAngle) {
-  const from = Point.fromPolar(toAngle - Math.PI/2, r).shift(cx, cy);
-  const to = Point.fromPolar(fromAngle - Math.PI/2, r).shift(cx, cy);
-  const flag = (toAngle - fromAngle <= Math.PI) ? 0 : 1;
-
-  const o1 = Point.fromPolar(toAngle + Math.PI/2, r).shift(cx, cy);
-  const o2 = Point.fromPolar((toAngle + fromAngle) / 2 + Math.PI/2, r).shift(cx, cy);
-  const o3 = Point.fromPolar(fromAngle + Math.PI/2, r).shift(cx, cy);
-
-  return `M ${from.x} ${from.y} A ${r} ${r} 0 ${flag} 0 ${to.x} ${to.y} L ${cx} ${cy} Z M ${o1.x} ${o1.y} M ${o2.x} ${o2.y} M ${o3.x} ${o3.y}`;
-}
-
-function ring(cx, cy, r1, r2, fromAngle, toAngle) {
-  if (fromAngle > toAngle) [fromAngle, toAngle] = [toAngle, fromAngle];
-  fromAngle -= Math.PI/2;
-  toAngle -= Math.PI/2;
-
-  const A = Point.fromPolar(toAngle);
-  const B = Point.fromPolar(fromAngle);
-  const flag = (toAngle - fromAngle <= Math.PI) ? 0 : 1;
-
-  return `M ${A.x * r1 + cx} ${A.y * r1 + cy}` +
-         `A ${r1} ${r1} 0 ${flag} 0 ${B.x * r1 + cx} ${B.y * r1 + cy}` +
-         `L ${B.x * r2 + cx} ${B.y * r2 + cy}` +
-         `A ${r2} ${r2} 0 ${flag} 1 ${A.x * r2 + cx} ${A.y * r2 + cy} Z`;
 }
 
 export function area($step) {
@@ -289,19 +260,24 @@ export function area($step) {
   const $rect = $N('g', {class: 'circle'}, $svg);
   const $circle = $N('g', {class: 'circle'}, $svg);
 
+  const c = new Point(170, 65);
   const r = 60;
   let angle, dx, dy;
   $step.model.set('toWord', toWord);
+
+  function sector(center, r, size, angle) {
+    const startAngle = angle - size/2 - Math.PI/2;
+    return new Sector(center, Point.fromPolar(startAngle, r).add(center), size);
+  }
 
   function applyTransforms() {
     const wedges = $circle.children;
     const p = $slider.current / $slider.steps;
 
     for (let i = 0; i < $step.model.n1; ++i) {
-      const a = deg(-i * angle) + ((i % 2) ? 180 : 0);
-      const x = dx * i - ($step.model.n1 - 1) * dx / 2;
-      const y = i % 2 ? 90 : 90 + dy;
-      wedges[i].setAttr('transform', `translate(${p*x},${p*y}) rotate(${p*a})`);
+      const center = c.add(new Point(dx * i - ($step.model.n1 - 1) * dx / 2, i % 2 ? 90 : 90 + dy).scale(p));
+      const rotation = p * ((i % 2) ? Math.PI : 0) + (1 - p) * (i * angle);
+      wedges[i].draw(sector(center, r, angle, rotation));
     }
 
     if (p > 0.95) $step.score('slider');
@@ -316,15 +292,29 @@ export function area($step) {
     dy = r * Math.cos(angle / 2);
 
     for (let i = 0; i < state.n1; ++i) {
-      const d = circleSector(170, 65, r, (i - 0.5) * angle, (i + 0.5) * angle);
-      $N('path', {d}, $rect);
-      $N('path', {d}, $circle);
+      $N('path', {path: sector(c, r, angle, i * angle)}, $rect);
+      $N('path', {}, $circle);
     }
 
     applyTransforms();
   });
 
   $slider.on('move', applyTransforms);
+}
+
+function ring(cx, cy, r1, r2, fromAngle, toAngle) {
+  if (fromAngle > toAngle) [fromAngle, toAngle] = [toAngle, fromAngle];
+  fromAngle -= Math.PI/2;
+  toAngle -= Math.PI/2;
+
+  const A = Point.fromPolar(toAngle);
+  const B = Point.fromPolar(fromAngle);
+  const flag = (toAngle - fromAngle <= Math.PI) ? 0 : 1;
+
+  return `M ${A.x * r1 + cx} ${A.y * r1 + cy}` +
+      `A ${r1} ${r1} 0 ${flag} 0 ${B.x * r1 + cx} ${B.y * r1 + cy}` +
+      `L ${B.x * r2 + cx} ${B.y * r2 + cy}` +
+      `A ${r2} ${r2} 0 ${flag} 1 ${A.x * r2 + cx} ${A.y * r2 + cy} Z`;
 }
 
 export function area1($step) {
@@ -342,7 +332,7 @@ export function area1($step) {
     const rmin = Math.pow(20 + p * 100, 1 + p) - 20;
     const dr = r / $step.model.n2;
 
-    const cx = 170 + p * (10 - 175);
+    const cx = 170 + p * (10 - 165);
     const cy = 65 + p * (150 - 65) - rmin;
 
     for (let i = 0; i < $step.model.n2; ++i) {
@@ -351,7 +341,7 @@ export function area1($step) {
       $rings[i].setAttr('d', d);
     }
 
-    triangle.css('transform', `scale(${1 - 0.2 * p})`);
+    triangle.css('transform', `scale(${1 - 0.1 * p})`);
     if (p > 0.95) $step.score('slider');
   }
 
@@ -378,9 +368,8 @@ export function area1($step) {
 
 export function degrees($step) {
   const angles = [1.999, 1, 0.5];
-  const $geopad = $step.$('x-geopad');
 
-  const start = $geopad.eval('point(150,80)');
+  const start = new Point(150, 80);
   $step.model.set('c0', start);
   $step.model.set('c1', start);
   $step.model.set('c2', start);
@@ -389,24 +378,46 @@ export function degrees($step) {
     $step.onScore('blank-' + i, () => {
       animate((t) => {
         const a = t * Math.PI * angles[i];
-        const p = `point(${80 + 70 * Math.cos(a)}, ${80 - 70 * Math.sin(a)})`;
-        $step.model.set(['c' + i], $geopad.eval(p));
+        const p = new Point(80 + 70 * Math.cos(a), 80 - 70 * Math.sin(a));
+        $step.model.set(['c' + i], p);
       }, angles[i] * 750);
     });
   }
 }
 
+function drawTick(i, $lines) {
+  const a = (i - 90) / 180 * Math.PI;
+  const $l = $N('line', {}, $lines);
+  $l.setLine(Point.fromPolar(a, 362), Point.fromPolar(a, i % 10 ? 370 : 376));
+}
+
 export function constellations($step) {
   const $box = $step.$('.constellations');
-  const $wheel = $box.children[1];
+  const $wheel = $box.$('.wheel');
+  const $lines = $N('g', {transform: 'translate(380, 380)'}, $box.$('svg'));
+  $step.model.set('day', 0);
+  const seen = [0,360];
+  drawTick(0, $lines);
 
   rotateDisk($box, {
     resistance: 0.85,
     maxSpeed: 0.01,
     $disk: $wheel,
     draw(angle) {
-      // TODO update 360 ticks, $step.score
       $wheel.transform = `rotate(${angle}rad)`;
+
+      const d = (720 - Math.round(angle * 180 / Math.PI)) % 360;
+      $step.model.day = d;
+
+      if (d > seen[0] && d < seen[1]) {
+        const isCw = (d - seen[0] < seen[1] - d);
+        const range = isCw ? [seen[0] + 1, d] : [d, seen[1] - 1];
+        for (let i = range[0]; i <= range[1]; ++i) drawTick(i, $lines);
+        seen[isCw ? 0 : 1] = d;
+      }
+    },
+    end() {
+      $step.score('rotate');
     }
   });
 }

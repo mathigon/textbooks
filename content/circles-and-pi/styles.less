@@ -36,6 +36,12 @@
   .outline { fill: none; stroke: @red; stroke-width: 4px; pointer-events: none; transition: r .2s; }
   .outline-halo { fill: none; stroke: transparent; stroke-width: 40px; cursor: ew-resize; }
   .burst { fill: none; stroke: @green; }
+
+  @media screen and (max-width: 480px) {
+    .handle { r: 20; }
+    .handle:hover { r: 40 }
+    .outline-halo { fill: none; stroke: transparent; stroke-width: 40px; cursor: ew-resize; }
+  }
 }
 
 .pi-spiral { margin: 1em auto; max-width: 100%; width: 400px; }
@@ -110,7 +116,8 @@
 
 .pi-controls {
   margin-bottom: 1px;
-  border-radius: 0 4px 0 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding: 12px 20px 11px;
   .clearfix();
   input { background: white; padding: 4px 8px; margin: -4px 0 -4px 8px; border-radius: 4px; width: 120px; }
@@ -119,7 +126,8 @@
 
 x-pi-scroll.box-body {
   height: 300px;
-  border-radius: 0 0 4px 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding: 12px 20px 12px 40px;
   .first-row { position: absolute; left: 16px; }
 }
@@ -135,11 +143,25 @@ x-pi-scroll.box-body {
   cursor: ew-resize;
 
   .bg, .wheel, .fg { background-size: cover; }
-  .wheel, .fg { position: absolute; top: 0; width: 100%; }
+  .wheel, .fg { position: absolute; top: 24px; width: 100%; }
+  svg line { stroke: #001327; stroke-width: 2px; }
 
   .bg { padding-bottom: 63%; background-image: url(/resources/circles-and-pi/images/star-wheel-1.svg); }
-  .wheel { padding-bottom: 100%; background-image: url(/resources/circles-and-pi/images/star-wheel-2.svg); will-change: transform; }
+  .wheel { padding-bottom: 100%; background-image: url(/resources/circles-and-pi/images/star-wheel-2.svg); will-change: transform; height: 0; }
   .fg {  padding-bottom: 63%; background-image: url(/resources/circles-and-pi/images/star-wheel-3.svg); }
+
+  .label {
+    .arrow(#001327, top, left, right, 5px);
+    color: white;
+    width: 160px;
+    margin: 0 auto;
+    border-radius: 4px;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  & + x-gesture { fill: fade(black, 80%); stroke: fade(white, 80%); }
 }
 
 
@@ -148,37 +170,33 @@ x-pi-scroll.box-body {
 
 x-conic-section {
   display: block;
-  margin: 1em auto 2em;
+  margin: 1em auto 0;
   cursor: ew-resize;
+  background: url(/resources/circles-and-pi/images/conics-bg.jpg);
+  background-size: cover;
 }
 
-x-step .row.padded-thin.conics { margin-bottom: 2em; }
-.conics > * {
-  background: @light-grey;
-  border-radius: 6px;
-  padding: 4px 16px 12px;
-  text-align: center;
-  box-sizing: border-box;
-  opacity: 0.4;
-  transition: opacity .3s, transform .3s;
-  position: relative;
-  cursor: pointer;
-
-  &.hide { opacity: 0; pointer-events: none; }
-  &:hover { opacity: 0.6; transform: translateY(-6px); }
-  &.active { opacity: 1; transform: translateY(-12px); cursor: default; }
+.conics {
+  margin: 2em 0;
+  @media screen and (max-width: 640px) { margin: 1.5em 0; }
   p { margin: 0; }
   svg { display: block; margin: 0 auto; }
 
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent;
-    border-bottom: 15px solid @light-grey;
-    left: 5px;
-    top: -15px;
+  .row > * {
+    .arrow(@light-grey, bottom, left, right, 73px, 14px);
+    background: @light-grey;
+    border-radius: 6px;
+    padding: 2px 16px 12px;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0.4;
+    transition: opacity .3s, transform .3s;
+    cursor: pointer;
+    width: 154px;
+    margin: 12px;
+    &.hide { opacity: 0; pointer-events: none; }
+    &:hover { opacity: 0.6; transform: translateY(-6px); }
+    &.active { opacity: 1; transform: translateY(-12px); cursor: default; }
   }
 }
 
