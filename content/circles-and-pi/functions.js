@@ -6,16 +6,13 @@
 
 
 import { clamp, list, wait, tabulate } from '@mathigon/core';
-import { Point, toWord, roundTo, Polygon, Sector, subsets, permutations } from '@mathigon/fermat';
+import { Point, toWord, roundTo, Polygon, Sector, round, Angle } from '@mathigon/fermat';
 import { $N, slide, Colour, animate, Draggable } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { rotateDisk } from '../shared/components/disk';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
-
-window.subsets = subsets;
-window.permutations = permutations;
 
 // -----------------------------------------------------------------------------
 
@@ -420,6 +417,36 @@ export function constellations($step) {
       $step.score('rotate');
     }
   });
+}
+
+export function radians($step) {
+  $step.model.set('rad', (r) => {
+    const a = r / Math.PI;
+    return a > 1.99 ? 2 : round(a, 2);
+  });
+
+  const zero = new Point(240, 140);
+  const center = new Point(140, 140);
+  const ends = [new Point(240, 140.4), new Point(40, 140), new Point(140, 40)];
+
+  function setState(i) {
+    const arc1 = new Angle($step.model.a, center, zero).arc;
+    const arc2 = new Angle($step.model.b, center, ends[i]).arc;
+
+    animate((p) => {
+      $step.model.a = arc1.at(p);
+      $step.model.b = arc2.at(p);
+    }, 600);
+  }
+
+  const $actions = $step.$$('.var-action');
+  $actions[0].on('click', () => setState(0));
+  $actions[1].on('click', () => setState(1));
+  $actions[2].on('click', () => setState(2));
+
+  const $equations = $step.$$('x-equation');
+  $equations[0].on('solve', () => setState(1));
+  $equations[1].on('solve', () => setState(2));
 }
 
 

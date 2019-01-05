@@ -432,7 +432,7 @@ __{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
       circle(x="point(150,80)" name="a0" hidden)
       circle(x="point(80,80)" name="b0")
       circle(x="c0" hidden)
-      path.red.fill(x="angle(c0,b0,a0)" sweep round size=40)
+      path.red.fill(x="angle(c0,b0,a0)" round size=40)
       path(x="segment(a0,b0)")
       path(x="segment(b0,c0)")
 
@@ -442,7 +442,7 @@ __{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
       circle(x="point(150,80)" name="a1" hidden)
       circle(x="point(80,80)" name="b1")
       circle(x="c1" hidden)
-      path.green.fill(x="angle(a1,b1,c1)" round size=40)
+      path.green.fill(x="angle(c1,b1,a1)" round size=40)
       path(x="segment(a1,b1)")
       path(x="segment(b1,c1)")
 
@@ -452,7 +452,7 @@ __{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
       circle(x="point(150,80)" name="a2" hidden)
       circle(x="point(80,80)" name="b2")
       circle(x="c2" hidden)
-      path.yellow.fill(x="angle(a2,b2,c2)" round size=40)
+      path.yellow.fill(x="angle(c2,b2,a2)" round size=40)
       path(x="segment(a2,b2)")
       path(x="segment(b2,c2)")
 
@@ -543,25 +543,34 @@ Jupiter even has 10,475 days.
 
 Rather than dividing a circle into some number of segments (like 360 degrees),
 mathematicians often prefer to measure angles using the [circumference](gloss:circle-circumference)
-of a [__unit circle__](gloss:unit-circle) – a circle with radius 1.
+of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
 
 ::: column(width=280)
 
     x-geopad(width=280 height=280): svg
       circle(x="point(140,140)" name="c")
       path.thin(x="circle(c,100)" name="circ")
-      circle.move(cx=260 cy=140 name="a" project="circ")
-      circle.move(cx=140 cy=20 name="b" project="circ")
-      path.red.thick(x="arc(c,b,angle(b,c,a).rad)" name="circ")
+      circle.move.blue(cx=240 cy=140 name="a" project="circ")
+      circle.move.pulsate.green(cx=240 cy=140.4 name="b" project="circ")
+      path.fill.green(x="angle(b,c,a)" label="${round(ang.deg)}°" name="ang" round)
+      path.red.thick(x="arc(c,b,ang.rad)" label="${rad(ang.rad)}π")
+      path.thin(x="segment(c,a)")
+      path.thin(x="segment(c,b)")
 
 ::: column.grow
 
-* A _{span.var-action}full circle_ has circumference [[2 pi]]
-* For a _{span.var-action}half circle rotation_, the distance along the
-  circumference is [[pi]].
-* For a _{span.var-action}quarter circle rotation_, the distance along the
-  circumference is [[pi/2]].
-* And so on.
+A _{span.var-action}full circle_ has circumference
+_{x-equation.inline(solution="2 π" keys="+ × π" numeric)}_.
+
+{.reveal(when="eqn-0")} For a _{span.var-action}half circle rotation_, the
+corresponding distance along the circumference is
+_{x-equation.inline(solution="π" keys="+ × π" numeric)}_.
+
+{.reveal(when="eqn-1")} For a _{span.var-action}quarter circle rotation_, the
+distance along the circumference is
+_{x-equation.inline(solution="π/2" keys="+ × π frac" numeric)}_.
+
+{.reveal(when="eqn-2")} And so on…
 
 :::
 
@@ -575,12 +584,24 @@ Every angle in degrees has an equivalent size in radians. Converting between the
 two is very easy – just like you can convert between other units like meters and
 kilometers, or Celsius and Fahrenheit:
 
-{.todo} 360 degrees = 2pi radians equivalence
+{.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
+
+::: column(width=200 parent="padded-thin")
+
+{.text-center} _{span.rotate.left}`=>`_  
+__{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
+
+::: column(width=200)
+
+{.text-center} _{span.rotate.right}`=>`_  
+__{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
+
+:::
 
 ---
 > id: radians-2
 
-You can write the radians value either as a multiple of pi, or as just a single
+You can write the radians value either as a multiple of _π_, or as just a single
 decimal number. Can you fill in this table of equivalent angle sizes in degrees
 and radians?
 
@@ -592,56 +613,60 @@ and radians?
 
 ### Distance Travelled
 
-You can think of radians as the “distance traveled” along the circumference of
-a unit circle. This is particularly useful when working with objects that are
-moving on a circular path.
+{.todo} COMING SOON
 
-::: column.grow
+    // You can think of radians as the “distance traveled” along the circumference of
+    // a unit circle. This is particularly useful when working with objects that are
+    // moving on a circular path.
 
-For example, the International Space Station orbits Earth once every 90 minutes
-(or 1.5 hours). This means its radial speed is `(2 pi)/1.5` radians per hour.
+    // ::: column.grow
 
-The radius of its orbit is 6800 km. It is 6800 times as big as a unit circle,
-so the
+    // For example, the International Space Station orbits Earth once every 90 minutes
+    // (or 1.5 hours). This means its radial speed is `(2 pi)/1.5` radians per hour.
 
-In other words, the speed of the ISS is `(2 pi)/1.5 * 6800 = 28483` km per hour.
+    // The radius of its orbit is 6800 km. It is 6800 times as big as a unit circle,
+    // so the
 
-Can you see that in this example, radians are a much more natural unit for
-measuring angles, rather than degrees?
+    // In other words, the speed of the ISS is `(2 pi)/1.5 * 6800 = 28483` km per hour.
 
-::: column(width=280)
+    // Can you see that in this example, radians are a much more natural unit for
+    // measuring angles, rather than degrees?
 
-{.todo} TODO
+    // ::: column(width=280)
 
-:::
+    // {.todo} TODO
 
----
+    // :::
 
-::: column(width=280)
-
-{.todo} TODO
-
-::: column.grow
-
-Here is another example: your car has wheels with radius 0.25 m. You're driving
-at 50 m/s, this means that the wheels of your car rotate at 50/0.3 = 0.25
-radians per second.
-
-:::
+    // ---
+    // 
+    // ::: column(width=280)
+    // 
+    // {.todo} TODO
+    // 
+    // ::: column.grow
+    // 
+    // Here is another example: your car has wheels with radius 0.25 m. You're driving
+    // at 50 m/s, this means that the wheels of your car rotate at 50/0.3 = 0.25
+    // radians per second.
+    // 
+    // :::
 
 ---
 
 ### Trigonometry
 
-For most simple geometry problems, degrees and radians are completely
-interchangeable – you can pick which one you prefer, or sometimes a question
-might tell you which unit to give your answer in. However, once you start doing
-[trigonometry](gloss:trigonometry) or [calculus](gloss:calculus)) radians tend
-to be much more convenient than degrees.
+{.todo} COMING SOON
 
-{.todo} CALCULATOR BUTTON
+    // For most simple geometry problems, degrees and radians are completely
+    // interchangeable – you can pick which one you prefer, or sometimes a question
+    // might tell you which unit to give your answer in. However, once you start doing
+    // [trigonometry](gloss:trigonometry) or [calculus](gloss:calculus)) radians tend
+    // to be much more convenient than degrees.
 
-{.todo} SMALL ANGEL APPROXIMATION
+    // {.todo} CALCULATOR BUTTON
+
+    // {.todo} SMALL ANGEL APPROXIMATION
 
 
 
