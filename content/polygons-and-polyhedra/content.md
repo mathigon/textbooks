@@ -60,10 +60,10 @@ We already know that the sum of the internal angles in a triangle is always
       circle.move(name="b" cx=260 cy=80)
       circle.move(name="c" cx=240 cy=220)
       circle.move(name="d" cx=80 cy=260)
-      path.fill.red(x="angle(b,a,d)" sweep label="${round(angle(b,a,d).deg)}°")
-      path.fill.blue(x="angle(c,b,a)" sweep label="${round(angle(c,b,a).deg)}°")
-      path.fill.green(x="angle(d,c,b)" sweep label="${round(angle(d,c,b).deg)}°")
-      path.fill.yellow(x="angle(a,d,c)" sweep label="${round(angle(a,d,c).deg)}°")
+      path.fill.red(x="angle(b,a,d)" label="${round(angle(b,a,d).deg)}°")
+      path.fill.blue(x="angle(c,b,a)" label="${round(angle(c,b,a).deg)}°")
+      path.fill.green(x="angle(d,c,b)" label="${round(angle(d,c,b).deg)}°")
+      path.fill.yellow(x="angle(a,d,c)" label="${round(angle(a,d,c).deg)}°")
       path(x="segment(a,b)")
       path(x="segment(b,c)")
       path(x="segment(c,d)")
@@ -84,22 +84,22 @@ _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(
       circle.move(name="g" cx=220 cy=270)
       circle.move(name="h" cx=80 cy=240)
       circle.move(name="i" cx=30 cy=150)
-      path.fill.red(x="angle(f,e,i)" sweep label="${round(angle(f,e,i).deg)}°")
-      path.fill.blue(x="angle(g,f,e)" sweep label="${round(angle(g,f,e).deg)}°")
-      path.fill.green(x="angle(h,g,f)" sweep label="${round(angle(h,g,f).deg)}°")
-      path.fill.yellow(x="angle(i,h,g)" sweep label="${round(angle(i,h,g).deg)}°")
-      path.fill(x="angle(e,i,h)" sweep label="${round(angle(e,i,h).deg)}°")
+      path.fill.red(x="angle(f,e,i)" label="${round(angle(f,e,i).deg)}°")
+      path.fill.blue(x="angle(g,f,e)" label="${round(angle(g,f,e).deg)}°")
+      path.fill.green(x="angle(h,g,f)" label="${round(angle(h,g,f).deg)}°")
+      path.fill.yellow(x="angle(i,h,g)" label="${round(angle(i,h,g).deg)}°")
+      path.fill(x="angle(e,i,h)" label="${round(angle(e,i,h).deg)}°")
       path(x="segment(e,f)")
       path(x="segment(f,g)")
       path(x="segment(g,h)")
       path(x="segment(h,i)")
       path(x="segment(i,e)")
 
-{.text-center.var} _{span.circled.red}${round(angle(i,e,f).deg)}°_ +
-_{span.circled.blue}${round(angle(e,f,g).deg)}°_ +
-_{span.circled.green}${round(angle(f,g,h).deg)}°_ +
-_{span.circled.yellow}${round(angle(g,h,i).deg)}°_ +
-_{span.circled}${round(angle(h,i,e).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+{.text-center.var} _{span.circled.red}${round(angle(f,e,i).deg)}°_ +
+_{span.circled.blue}${round(angle(g,f,e).deg)}°_ +
+_{span.circled.green}${round(angle(h,g,f).deg)}°_ +
+_{span.circled.yellow}${round(angle(i,h,g).deg)}°_ +
+_{span.circled}${round(angle(e,i,h).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
@@ -159,7 +159,7 @@ In convex polygons, on the other hand, all internal angles are less than
       circle(hidden name="e" x="point(190,40)")
       path.fill.blue(x="polygon(a,b,c,d,e)" target="cave diagonal angle")
       path.transparent.red.fill(x="polygon(c,d,e)" target="cave")
-      path.red.fill.transparent(x="angle(c,d,e)" sweep target="angle")
+      path.red.fill.transparent(x="angle(c,d,e)" target="angle")
       path.transparent(x="segment(a,c)" target="diagonal" style="stroke: #f7f7f8")
       path.transparent(x="segment(a,d)" target="diagonal" style="stroke: #f7f7f8")
       path.transparent(x="segment(b,d)" target="diagonal" style="stroke: #f7f7f8")
@@ -247,7 +247,7 @@ ${Math.round(180-360/x)}°._
       path.green(x="segment(k,p0)" target="base half-base")
 
       for i in [0,1,2,3,4,5,6,7,8,9,10,11]
-        path.red.fill.transparent(x=`angle(p.points[${i}%n],p.points[${i+1}%n],p.points[${i+2}%n])` size=18 target="int-angle")
+        path.red.fill.transparent(x=`angle(p.points[${i+2}%n],p.points[${i+1}%n],p.points[${i}%n])` size=18 target="int-angle")
 
 ::: column.grow
 Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
@@ -559,10 +559,10 @@ true?
       path.thin.light(x="segment(a,c)")
       path.thin.light(x="segment(b,d)")
 
-      path.thin.light(x="angle(a,b,c)")
-      path.thin.light(x="angle(b,c,d)")
-      path.thin.light(x="angle(c,d,a)")
-      path.thin.light(x="angle(d,a,b)")
+      path.thin.light(x="angle(a,b,c).sup")
+      path.thin.light(x="angle(b,c,d).sup")
+      path.thin.light(x="angle(c,d,a).sup")
+      path.thin.light(x="angle(d,a,b).sup")
 
 :::
 
@@ -583,10 +583,10 @@ they are _always_ true, we need to _prove_ them:
       circle.move(name="c" cx=220 cy=220)
       circle(name="d" x="b.rotate(pi,line(a,c).midpoint)")
 
-      path.reveal.fill.red(when="diagonal" x="angle(a,o?c:b,d)" target="red-angle")
-      path.reveal.fill.red(when="diagonal" x="angle(b,o?a:d,c)" target="red-angle")
-      path.reveal.fill.blue(when="diagonal" x="angle(d,o?a:b,c)" target="blue-angle")
-      path.reveal.fill.blue(when="diagonal" x="angle(b,o?c:d,a)" target="blue-angle")
+      path.reveal.fill.red(when="diagonal" x="angle(a,o?c:b,d).sup" target="red-angle")
+      path.reveal.fill.red(when="diagonal" x="angle(c,o?a:d,b).sup" target="red-angle")
+      path.reveal.fill.blue(when="diagonal" x="angle(d,o?a:b,c).sup" target="blue-angle")
+      path.reveal.fill.blue(when="diagonal" x="angle(b,o?c:d,a).sup" target="blue-angle")
 
       path.fill.yellow.transparent(x="polygon(a,b,o?c:d)" target="triangles")
       path.fill.green.transparent(x="polygon(o?a:b,c,d)" target="triangles")
@@ -596,10 +596,10 @@ they are _always_ true, we need to _prove_ them:
       path.green.transparent(x="segment(c,d)" target="sides")
       path.yellow.transparent(x="segment(b,c)" target="sides")
       path.yellow.transparent(x="segment(a,d)" target="sides")
-      path.fill.green.transparent(x="angle(a,b,c)" target="angles")
-      path.fill.green.transparent(x="angle(c,d,a)" target="angles")
-      path.fill.yellow.transparent(x="angle(b,c,d)" target="angles")
-      path.fill.yellow.transparent(x="angle(d,a,b)" target="angles")
+      path.fill.green.transparent(x="angle(a,b,c).sup" target="angles")
+      path.fill.green.transparent(x="angle(c,d,a).sup" target="angles")
+      path.fill.yellow.transparent(x="angle(b,c,d).sup" target="angles")
+      path.fill.yellow.transparent(x="angle(d,a,b).sup" target="angles")
 
 ::: column.grow
 {.task} Let’s try to prove that the opposite sides and angles in a parallelogram
@@ -644,10 +644,10 @@ quadrilateral has to be a parallelogram.
       path.fill.yellow.light(x="polygon(b1,m1,c1)" target="triangles1")
       path.fill.yellow.light(x="polygon(a1,m1,d1)" target="triangles1")
 
-      path.fill.red(x="angle(c1,a1,d1)" target="anglesR")
-      path.fill.red(x="angle(b1,c1,a1)" target="anglesR")
-      path.fill.blue(x="angle(a1,d1,b1)" target="anglesB")
-      path.fill.blue(x="angle(d1,b1,c1)" target="anglesB")
+      path.fill.red(x="angle(c1,a1,d1).sup" target="anglesR")
+      path.fill.red(x="angle(b1,c1,a1).sup" target="anglesR")
+      path.fill.blue(x="angle(a1,d1,b1).sup" target="anglesB")
+      path.fill.blue(x="angle(d1,b1,c1).sup" target="anglesB")
       
       path(x="polygon(a1,b1,c1,d1)")
       path(x="segment(a1,c1)")
@@ -746,12 +746,12 @@ shaped like a dart or arrow:
       circle(name="d" x="b.reflect(line(a,c))")
       circle.transparent(name="m" x="line(a,c).project(b)")
 
-      path.fill.blue.reveal(when="next-0" x="angle(b,a,d)" target="angles vAngle sas")
-      path.fill.green.reveal(when="next-0" x="angle(b,c,d)" target="angles vAngle")
-      path.fill.red.reveal(when="next-0" x="angle(a,d,c)" target="angles")
-      path.fill.red.reveal(when="next-0" x="angle(a,b,c)" target="angles")
-      path.fill.yellow.reveal(when="next-3" x="angle(a,m,d)" target="alpha" label="α")
-      path.fill.yellow.reveal(when="next-3" x="angle(b,m,a)" target="beta" label="β")
+      path.fill.blue.reveal(when="next-0" x="angle(b,a,d).sup" target="angles vAngle sas")
+      path.fill.green.reveal(when="next-0" x="angle(b,c,d).sup" target="angles vAngle")
+      path.fill.red.reveal(when="next-0" x="angle(a,d,c).sup" target="angles")
+      path.fill.red.reveal(when="next-0" x="angle(a,b,c).sup" target="angles")
+      path.fill.yellow.reveal(when="next-3" x="angle(a,m,d).sup" target="alpha" label="α")
+      path.fill.yellow.reveal(when="next-3" x="angle(b,m,a).sup" target="beta" label="β")
             
       path.fill.red.transparent(x="polygon(a,b,c)" target="triangle1")
       path.fill.yellow.transparent(x="polygon(a,c,d)" target="triangle1")
@@ -952,7 +952,7 @@ triangles](target:inside) that make up the kite are the same as the
 
       path.thin(x="line(c4,d4)")
       circle(name="q4" x="line(c4,d4).project(a4)")
-      path.thin(x="angle(a4,q4,d4)" size=15)
+      path.thin(x="angle(a4,q4,d4).sup" size=15)
       path.red(x="segment(q4,a4)" label="height" target="height")
       
       path.green(x="segment(a4,c4)" label="d1" target="d41")
@@ -1224,25 +1224,25 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
       circle(name="t" x="q.rotate(pi,m)")
       circle(name="u" x="q.rotate(pi,line(m,p).midpoint)")
 
-      path.fill.red(x="angle(p,m,q)" size=20)
-      path.fill.blue(x="angle(q,m,r)" size=20)
-      path.fill.green(x="angle(r,m,s)" size=20)
-      path.fill.red(x="angle(s,m,t)" size=20)
-      path.fill.blue(x="angle(t,m,u)" size=20)
-      path.fill.green(x="angle(u,m,p)" size=20)
+      path.fill.red(x="angle(p,m,q).sup" size=20)
+      path.fill.blue(x="angle(q,m,r).sup" size=20)
+      path.fill.green(x="angle(r,m,s).sup" size=20)
+      path.fill.red(x="angle(s,m,t).sup" size=20)
+      path.fill.blue(x="angle(t,m,u).sup" size=20)
+      path.fill.green(x="angle(u,m,p).sup" size=20)
 
-      path.fill.red.light(x="angle(m,q,r)" size=20)
-      path.fill.red.light(x="angle(r,s,m)" size=20)
-      path.fill.red.light(x="angle(m,t,u)" size=20)
-      path.fill.red.light(x="angle(u,p,m)" size=20)
-      path.fill.blue.light(x="angle(p,q,m)" size=20)
-      path.fill.blue.light(x="angle(m,r,s)" size=20)
-      path.fill.blue.light(x="angle(s,t,m)" size=20)
-      path.fill.blue.light(x="angle(m,u,p)" size=20)
-      path.fill.green.light(x="angle(m,p,q)" size=20)
-      path.fill.green.light(x="angle(q,r,m)" size=20)
-      path.fill.green.light(x="angle(m,s,t)" size=20)
-      path.fill.green.light(x="angle(t,u,m)" size=20)
+      path.fill.red.light(x="angle(m,q,r).sup" size=20)
+      path.fill.red.light(x="angle(r,s,m).sup" size=20)
+      path.fill.red.light(x="angle(m,t,u).sup" size=20)
+      path.fill.red.light(x="angle(u,p,m).sup" size=20)
+      path.fill.blue.light(x="angle(p,q,m).sup" size=20)
+      path.fill.blue.light(x="angle(m,r,s).sup" size=20)
+      path.fill.blue.light(x="angle(s,t,m).sup" size=20)
+      path.fill.blue.light(x="angle(m,u,p).sup" size=20)
+      path.fill.green.light(x="angle(m,p,q).sup" size=20)
+      path.fill.green.light(x="angle(q,r,m).sup" size=20)
+      path.fill.green.light(x="angle(m,s,t).sup" size=20)
+      path.fill.green.light(x="angle(t,u,m).sup" size=20)
 
       path(x="segment(m,p)")
       path(x="segment(m,q)")
@@ -1290,23 +1290,23 @@ vertex in the tessellation, we we get 360°.
       circle(name="v" x="q.rotate(pi,line(m,p).midpoint)")
       circle(name="w" x="r.rotate(pi,line(m,p).midpoint)")
 
-      path.fill.red(x="angle(p,m,r)" size=20)
-      path.fill.blue(x="angle(r,m,t)" size=20)
-      path.fill.green(x="angle(t,m,v)" size=20)
-      path.fill.yellow(x="angle(v,m,p)" size=20)
+      path.fill.red(x="angle(p,m,r).sup" size=20)
+      path.fill.blue(x="angle(r,m,t).sup" size=20)
+      path.fill.green(x="angle(t,m,v).sup" size=20)
+      path.fill.yellow(x="angle(v,m,p).sup" size=20)
 
-      path.fill.red.light(x="angle(m,r,s)" size=20)
-      path.fill.red.light(x="angle(t,u,v)" size=20)
-      path.fill.red.light(x="angle(w,p,m)" size=20)
-      path.fill.blue.light(x="angle(q,r,m)" size=20)
-      path.fill.blue.light(x="angle(m,t,u)" size=20)
-      path.fill.blue.light(x="angle(v,w,p)" size=20)
-      path.fill.green.light(x="angle(p,q,r)" size=20)
-      path.fill.green.light(x="angle(s,t,m)" size=20)
-      path.fill.green.light(x="angle(m,v,w)" size=20)
-      path.fill.yellow.light(x="angle(m,p,q)" size=20)
-      path.fill.yellow.light(x="angle(r,s,t)" size=20)
-      path.fill.yellow.light(x="angle(u,v,m)" size=20)
+      path.fill.red.light(x="angle(m,r,s).sup" size=20)
+      path.fill.red.light(x="angle(t,u,v).sup" size=20)
+      path.fill.red.light(x="angle(w,p,m).sup" size=20)
+      path.fill.blue.light(x="angle(q,r,m).sup" size=20)
+      path.fill.blue.light(x="angle(m,t,u).sup" size=20)
+      path.fill.blue.light(x="angle(v,w,p).sup" size=20)
+      path.fill.green.light(x="angle(p,q,r).sup" size=20)
+      path.fill.green.light(x="angle(s,t,m).sup" size=20)
+      path.fill.green.light(x="angle(m,v,w).sup" size=20)
+      path.fill.yellow.light(x="angle(m,p,q).sup" size=20)
+      path.fill.yellow.light(x="angle(r,s,t).sup" size=20)
+      path.fill.yellow.light(x="angle(u,v,m).sup" size=20)
 
       path(x="segment(m,p)")
       path(x="segment(m,r)")

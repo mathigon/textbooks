@@ -39,7 +39,7 @@ export function rotateDisk($el, options) {
       if ('start' in options) options.start();
     },
     move(posn, start) {
-      angle = startAngle + (new Angle(start, center, posn)).rad;
+      angle = startAngle - (new Angle(posn, center, start)).rad;
       options.draw(angle, false, null);
       history.push([angle, Date.now()]);
       if (history.length > 4) history.shift();

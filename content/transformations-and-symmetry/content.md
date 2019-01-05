@@ -405,7 +405,7 @@ Try to rotate the shapes below around the red center of rotation:
       path.fill.reveal.green1(x="polygon(a1,b1,c1,d1,e1)" when="next-4")
 
       path.transparent.red.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
-      path.thin.reveal(x="angle(a,rot,a1)" when="next-1" animation="draw" target="angle protractor")
+      path.thin.reveal(x="angle(a1,rot,a)" when="next-1" animation="draw" target="angle protractor")
 
       path.thin.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
       path.thin.reveal(x="segment(rot,b)" when="next-3" animation="draw" delay=400)

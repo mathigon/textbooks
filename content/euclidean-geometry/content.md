@@ -346,7 +346,7 @@ __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
-      path(x="angle(point(100,110),point(50,100),point(60,50))")
+      path(x="angle(point(60,50),point(50,100),point(100,110))")
       path.blue(x="line(point(50,100),point(100,110))" label="a")
       path.green(x="line(point(50,100),point(70,0))" label="b")
 
@@ -423,14 +423,14 @@ can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
       circle.move(name="x" cx=50 cy=100)
       circle(hidden name="xa" x="x.translate(point(110,80).subtract(x).rotate(pi/4).normal.scale(50))")
       circle(hidden name="xb" x="x.translate(point(110,80).subtract(x).rotate(-pi/4).normal.scale(50))")
-      path.fill.red(x="angle(xa,x,xb)")
+      path.fill.red(x="angle(xb,x,xa)")
       path.dark(x="segment(x,xa)")
       path.dark(x="segment(x,xb)")
 
       circle.move(name="y" cx=190 cy=60)
       circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).normal.scale(50))")
       circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).normal.scale(50))")
-      path.fill.red(x="angle(ya,y,yb)")
+      path.fill.red(x="angle(yb,y,ya)")
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 

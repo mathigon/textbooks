@@ -34,7 +34,7 @@ export function thales($step) {
       c = point.name;
       point.project(m => m.semicirc.contract(0.2));
       $geopad.drawPath(m => m.triangle(m[a], m[c], m[b]), {animate: 2000, target: 'triangle', classes: 'red'});
-      $geopad.drawPath(m => m.angle(m[a], m[c], m[b]), {animate: 500, target: 'angle', classes: 'red thin'});
+      $geopad.drawPath(m => m.angle(m[b], m[c], m[a]), {animate: 500, target: 'angle', classes: 'red thin'});
       $step.score('p3');
       $geopad.setActiveTool('move');
       $geopad.on('moveEnd', () => $step.score('move'));
