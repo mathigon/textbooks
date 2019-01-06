@@ -418,7 +418,6 @@ because `pi ≈ 22/7`.
 
 ## Degrees and Radians
 
-> sectionStatus: dev
 > section: radians
 > id: degrees
 
@@ -560,25 +559,23 @@ of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
 ::: column.grow
 
 A _{span.var-action}full circle_ has circumference
-_{x-equation.inline(solution="2 π" keys="+ × π" numeric)}_.
+_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
 {.reveal(when="eqn-0")} For a _{span.var-action}half circle rotation_, the
 corresponding distance along the circumference is
-_{x-equation.inline(solution="π" keys="+ × π" numeric)}_.
+_{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
 {.reveal(when="eqn-1")} For a _{span.var-action}quarter circle rotation_, the
 distance along the circumference is
-_{x-equation.inline(solution="π/2" keys="+ × π frac" numeric)}_.
+_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
-{.reveal(when="eqn-2")} And so on…
+{.reveal(when="eqn-2")} And so on: this way of measuring angles is called
+[__radians__](gloss:radians) (you could remember this as “radius units”).
 
 :::
 
 ---
-> id: radians-1
-
-This way of measuring angles is called [__radians__](gloss:radians) (you could
-remember this as “radius units”).
+> id: radians-conversion
 
 Every angle in degrees has an equivalent size in radians. Converting between the
 two is very easy – just like you can convert between other units like meters and
@@ -586,12 +583,12 @@ kilometers, or Celsius and Fahrenheit:
 
 {.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
 
-::: column(width=200 parent="padded-thin")
+::: column(width=180 parent="padded-thin")
 
 {.text-center} _{span.rotate.left}`=>`_  
 __{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
 
-::: column(width=200)
+::: column(width=180)
 
 {.text-center} _{span.rotate.right}`=>`_  
 __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
@@ -599,15 +596,15 @@ __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} 
 :::
 
 ---
-> id: radians-2
+> id: radians-table
 
 You can write the radians value either as a multiple of _π_, or as just a single
 decimal number. Can you fill in this table of equivalent angle sizes in degrees
 and radians?
 
-| __degrees__ | 0     |   | 60  | 180 | 270 | 360 |
-| __radians__ | [[0]] | 1 |    |     |     |     |
-{.grid}
+| __{.m-green}degrees__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
+| __{.m-red}radians__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
 
 ---
 

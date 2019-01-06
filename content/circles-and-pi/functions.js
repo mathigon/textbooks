@@ -455,7 +455,7 @@ export function radians($step) {
 
 export function conics($step) {
   const $conics = $step.$('x-conic-section');
-  const $labels = $step.$('.conics').children;
+  const $labels = $step.$('.row').children;
   let $activeLabel = $labels[0];
 
   $conics.on('rotate', (a) => {
