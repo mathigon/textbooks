@@ -507,6 +507,7 @@ reason why they divided the circle into 360 degrees.
 
 ---
 > id: constellations-1
+> goals: video
 
 Of course, there are actually 365 days in one year (well, 365.242199 to be
 exact), but Babylonian mathematicians worked with simple sundials, and this
@@ -1075,13 +1076,13 @@ a torch:
         .active
           p: strong Circle
           include svg/circle.svg
-        div
+        .hide
           p: strong Ellipse
           include svg/ellipse.svg
-        div
+        .hide
           p: strong Parabola
           include svg/parabola.svg
-        div
+        .hide
           p: strong Hyperbola
           include svg/hyperbola.svg
 

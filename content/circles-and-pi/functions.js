@@ -419,6 +419,10 @@ export function constellations($step) {
   });
 }
 
+export function constellations1($step) {
+  $step.$('x-video').one('play', () => $step.score('video'));
+}
+
 export function radians($step) {
   $step.model.set('rad', (r) => {
     const a = r / Math.PI;
