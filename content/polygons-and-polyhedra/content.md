@@ -44,14 +44,17 @@ We give different names to polygons, depending on how many sides they have:
         p.caption #[strong Octagon]#[br]8 sides
 
 ---
-> id: angles
-> goals: angle-0 angle-1
+> id: angles-0
 
 ### Angles in Polygons
 
 Every polygon with _n_ sides also has _n_ [internal angles](gloss:internal-angle).
 We already know that the sum of the internal angles in a triangle is always
 [[180]]° but what about other polygons?
+
+---
+> id: angles
+> goals: angle-0 angle-1
 
 ::: column.grow(width=300)
 
