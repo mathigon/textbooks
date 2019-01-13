@@ -981,8 +981,8 @@ after some time, they were all broken using yet more advanced algorithms. In the
 Second World War, the German army used the Enigma: a complex machine consisting
 of a keyboard, rotating wheels and plugs. It encrypted messages using one of 158
 million million million possibilities (that’s a 158 followed by 18 zeros!). The
-code was widely belied to be unbreakable, but the British Secret Service, led by
-mathematician Alan Turing, built some of the first computers that managed to
+code was widely believed to be unbreakable, but the British Secret Service, led
+by mathematician Alan Turing, built some of the first computers that managed to
 decode it.
 ::: column(width=240)
 
