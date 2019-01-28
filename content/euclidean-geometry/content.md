@@ -1066,7 +1066,7 @@ genetic information in your body.
 
 Every human cell contains about 2 meters of DNA. If you could combine the
 strands of DNA from all the cells in your body, their length would be more than
-140 times the distance between Earth and the sun!
+140 times the distance from Earth to the sun!
 
 :::
 

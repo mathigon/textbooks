@@ -1179,7 +1179,7 @@ transformation-image:
 translation:
   title: Translation
   text: A __translation__ is a transformation that moves a figure in a specific
-    direction, without changing its rotation or shape.
+    direction, without changing its angle or shape.
   image: translation.svg
   link: /course/transformations-and-symmetry/transformations#translations
 

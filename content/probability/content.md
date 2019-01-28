@@ -98,7 +98,7 @@ continued:
 
     img(src="images/coins-4.png" width=136 height=48 alt="HTT")
 
-} Fermat wins
+{.caption} Fermat wins
 :::
 
 All four possible outcomes are equally likely, and Pascal wins in

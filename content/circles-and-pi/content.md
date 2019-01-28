@@ -608,6 +608,7 @@ and radians?
 {.table-small.grid}
 
 ---
+> id: radians-distance
 
 ### Distance Travelled
 
@@ -637,6 +638,7 @@ and radians?
     // :::
 
     // ---
+    // > id: radians-distance-1
     // 
     // ::: column(width=280)
     // 
@@ -651,6 +653,7 @@ and radians?
     // :::
 
 ---
+> id: radians-trig
 
 ### Trigonometry
 

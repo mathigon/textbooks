@@ -395,7 +395,7 @@ the area of the triangle must be half that:
 > id: altitudes
 
 To calculate the area of a triangle, you can pick any of the three sides as
-__base__, and the find the corresponding __height__, which is the line that is
+__base__, and then find the corresponding __height__, which is the line that is
 [[perpendicular|parallel]] to the base and goes through the opposite vertex.
 
 {.reveal(when="blank-0")} In triangles, these _heights_ are often called
