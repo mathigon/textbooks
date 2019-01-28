@@ -70,6 +70,14 @@ function compare(params, paramsExp, type) {
 // -----------------------------------------------------------------------------
 // Introduction
 
+export function demand($step) {
+  const $charts = $step.$$('x-coordinate-system');
+
+  $charts[0].setFunctions(x => 0.6 * x + 2);
+  $charts[1].setFunctions(x => 8 - 0.6 * x);
+  $charts[2].setFunctions(x => 2.5 * Math.sqrt(x));
+}
+
 export function introChart($step) {
   const $chart = $step.$('x-coordinate-system');
   const f = (x => -30*x*x + 6800*x - 302000);

@@ -1,8 +1,10 @@
 # Quadratic Equations
 
-## Introduction
-> id: intro1
+> id: intro
 > section: introduction
+
+
+## Introduction
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
 
@@ -21,7 +23,7 @@ In other words, the __cost__ of producing _x_ skateboards is
 {.text-center} _{.pill.orange}cost_ = _{x-equation(solution="2000+60*x")}_.
 
 ---
-> id: intro2
+> id: demand
 
 The new skateboards are highly anticipated, but if the price is too high, fewer
 people will actually buy one. We can show this on a chart with the price of a
@@ -31,13 +33,16 @@ buy one (the __demand__) on the _y_-axis.
 Which of these charts makes most sense for the relationship between price and
 demand?
 
-    x-picker
-      .item(data-error="wrong-chart-1") TODO
-      .item#item1 TODO
-      .item(data-error="wrong-chart-1") TODO 
+    x-picker.wrap
+      .item(data-error="wrong-chart-1" style="width: 220px")
+        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels)
+      .item(style="width: 220px")
+        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels)
+      .item(data-error="wrong-chart-2" style="width: 220px")
+        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels) 
 
 ---
-> id: intro3
+> id: demand-1
 
 Exactly! A higher price means that fewer people want to buy a skateboards, so
 the graph of the function has to move downwards. Economists did some market
@@ -84,8 +89,8 @@ for square.
 To work out how to maximise our profit, let's calculate the profit for a few
 different prices:
 
-| _{.pill.purple}price_  | 20$ | 40$ | 60$ | 80$ | 100$ | 120$ | 140$ | 160$ |
-| _{.pill.yellow}profit_ | 
+| _{.pill.purple}price_  | $20 | $40 | $60 | $80 | $100 | $120 | $140 | $160 |
+| _{.pill.yellow}profit_ |     |     |     |     |      |      |      |      |
 {.grid}
 
 ---
@@ -95,8 +100,8 @@ Now we can draw all of these points in a coordinate system, and connect them
 with a line:
 
     x-coordinate-system(width=640 height=400 x-axis="-20|180|20" x-label="price" y-axis="-100000|100000|20000" y-label="profit")
-      .region.r1(style="")
-      .region.r2(style="")
+      .region.r1(style="top: 47%; height: 6%; left: 9%; width: 5%;")
+      .region.r2(style="top: 10%; height: 45%; left: 70%; width: 30%;")
 
 The graph of [linear functions](gloss:linear-function) is always a straight
 line. As you can see above, the graph of [quadratic function](gloss:quadratic-function)
@@ -125,10 +130,12 @@ them and understanding their graphs.
 
 
 --------------------------------------------------------------------------------
+> id: definitions
+> section: solving
+> sectionStatus: dev
 
 
 ## Solving Quadratic Equations
-> id: definitions
 
 You already know how to solve [_linear equations_](gloss:linear-equation):
 equations of the form `ax + b`, where _x_ is a [variable](gloss:variable), and
@@ -1138,7 +1145,8 @@ but it still works the same way:
 
 
 --------------------------------------------------------------------------------
-
+> section: formula
+> sectionStatus: dev
 
 
 ## The Quadratic Formula
@@ -1170,11 +1178,6 @@ Now apply the box method:
 | `2ax` | `4a^2x^2` | `2abx` |
 | `b`   | `2abx`    | `b^2`  |
 {.q-grid}
-
-
-
-
-
 
 These steps were ugly, painful, and you don't need to remember them (even
 though it was just the same as completing the square, just with variables).
@@ -1246,7 +1249,8 @@ have advantages and disadvantages:
 
 
 --------------------------------------------------------------------------------
-
+> sectionStatus: dev
+> section: graphs
 
 
 ## Graphing Quadratics
@@ -2245,6 +2249,8 @@ touches the x-axis.
 
 
 --------------------------------------------------------------------------------
+> section: projectiles
+> sectionStatus: dev
 
 
 
@@ -2326,7 +2332,11 @@ b) At what time is the ball at its maximum height?
 c) When does the ball hit the ground?
 
 
+
 --------------------------------------------------------------------------------
+> section: applications
+> sectionStatus: dev
+
 
 
 ## More Applications of Quadratics
@@ -2334,6 +2344,9 @@ c) When does the ball hit the ground?
 Quadratic functions and equations appear everywhere in science, engineering,
 economics and nature. We've already seen the motion of projectiles in the
 previous section, and here we'll have a look at a few other applications.
+
+http://demonstrations.wolfram.com/TheMultiplicationParabola/
+https://demonstrations.wolfram.com/LiquidInARotatingCylinder/
 
 ---
 
