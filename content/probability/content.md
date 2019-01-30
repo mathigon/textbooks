@@ -58,7 +58,7 @@ in a small cafe in Paris.
 
 To distract from the difficult mathematical theories they were discussing, they
 often played a simple game: they repeatedly tossed a coin – every _heads_ was a
-point for Pascal and every _tails_ was a point for Fermat. Whoever had more
+point for Pascal and every _tails_ was a point for Fermat. Whoever had fewer
 points after three coin tosses had to pay the bill.
 ::: column(width=360)
 
