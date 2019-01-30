@@ -253,7 +253,7 @@ approximately_
 ---
 > id: area-2
 
-If we could user infinitely many rings or wedges, the approximations above would
+If we could use infinitely many rings or wedges, the approximations above would
 be perfect – and they both give us the same formula for the area of a circle:
 
 {.text-center.r} `A = pi * r^2`.
