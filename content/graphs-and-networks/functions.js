@@ -706,7 +706,7 @@ export function maps1($section) {
 
       $c.on('click', function() {
         for (let n of neighbours) if (countryColours[n] === activeColour) {
-          if (!warned) $section.addHint('You can’t use this colour here because it is already in one of the neighbouring areas.');
+          if (!warned) $section.addHint('mapError');
           warned = true;
           return;
         }
@@ -724,7 +724,7 @@ export function maps1($section) {
             $solveds[i].enter();
             $section.score('map-' + i);
           } else {
-            $section.addHint(`Well done! Can you colour this map with fewer than ${used} colours?`);
+            $section.addHint('mapFewer');
           }
         }
       });
