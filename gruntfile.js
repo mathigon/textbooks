@@ -29,7 +29,7 @@ grunt.registerMultiTask('rollup', '', function() {
   const promises = this.files.map(f => {
     return rollup.rollup({input: f.src[0], plugins: [rollupResolve()], onwarn})
       .then(bundle => bundle.generate({format: 'iife', name: '_stepFunctions'}))
-      .then(result => grunt.file.write(f.dest, result.code));
+      .then(result => grunt.file.write(f.dest, result.output[0].code));
   });
 
   Promise.all(promises)
