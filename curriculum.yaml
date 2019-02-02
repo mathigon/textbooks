@@ -409,7 +409,7 @@ game-theory:
     - The lottery
   color: a50828
 
-algorithms-and-computing:
+algorithms:
   name: Algorithms and Computing
   topics:
     - Introduction to computing
@@ -496,7 +496,7 @@ logic-sets-and-proof:
     - Proof by induction
   color: 31b304
 
-imaginary-and-complex-numbers:
+complex-numbers:
   name: Imaginary and Complex Numbers
   topics:
     - Introduction
@@ -581,7 +581,7 @@ matrices:
     - Gaussian elimination
   color: 4b39c8
 
-parametric-and-polar-coordinates:
+parametric-and-polar:
   name: Parametric and Polar Coordinates
   topics:
     - Parametric curves
@@ -632,7 +632,7 @@ integration:
     - Improper integrals
     - Arc length
     - Volumes of revolution
-  color: ec6b18
+  color: f2791a
 
 differential-equations:
   name: Differential Equations
@@ -644,6 +644,17 @@ differential-equations:
     - Homogenous equations and particular integral
     - Coupled differential equations
     - Simple harmonic motion and dampened oscillators
+  color: e65d16
+
+chaos:
+  name: Chaos Theory
+  topics:
+    - Double Pendulums
+    - Three body problem
+    - Logistic Map
+    - Strange Attractors
+    - Butterfly effect
+    - Chaotic scattering
   color: d94211
 
 
