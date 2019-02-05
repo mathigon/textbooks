@@ -255,7 +255,7 @@ corresponding-angles:
 
 cos:
   title: Cosine
-  text: __Cosine__ is a trigonpmetric function written as `cos(θ)`. In a right
+  text: __Cosine__ is a trigonometric function written as `cos(θ)`. In a right
     angled triangle, it is the ratio of the adjacent side and the hypotenuse.
   link: /course/triangles-and-trigonometry/trigonometry#trig-functions
 
@@ -1090,7 +1090,7 @@ similar:
 
 sin:
   title: Sine
-  text: __Sine__ is a trigonpmetric function written as `sin(θ)`. In a right
+  text: __Sine__ is a trigonometric function written as `sin(θ)`. In a right
     angled triangle, it is the ratio of the opposite side and the hypotenuse.
   link: /course/triangles-and-trigonometry/trigonometry#trig-functions
 

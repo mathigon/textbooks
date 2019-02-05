@@ -1,6 +1,11 @@
 # Codes and Ciphers
 
-## Introduction
+    // SOURCES:
+    // http://plus.maths.org/content/cracking-codes
+    // http://plus.maths.org/content/exploring-enigma
+    // http://nrich.maths.org/2198
+
+## Simple Codes
 
 __Information__ is everywhere around us, but it is difficult to define what
 exactly "information" _means_. Instead we can give examples of things that
@@ -25,11 +30,21 @@ algorithms to encode and decode messages.
 
 ---
 
-## Simple Codes
+### Morse Code
 
-{.todo} Morse
+{.todo} TODO
 
-{.todo} Binary and Computers
+---
+
+### Binary Codes
+
+{.todo} TODO
+
+---
+
+### Create your own Codes
+
+{.todo} TODO
 
 ---
 
@@ -43,15 +58,9 @@ algorithms to encode and decode messages.
 
 ---
 
-### Secret Codes and Ciphers
+## Cryptography
 
-Some codes are designed in a way that only t
-
-Mention secret codes, and we immediately think of James Bond. But nearly
-everyone uses secret codes in their daily lives, for normal activities such as
-Internet banking. Our communications with our bank are encrypted so that
-criminals can’t read the messages and gain access to our money. At least, not
-easily.
+Some codes are designed in a way that only
 
 Alice and Bob
 
@@ -71,7 +80,7 @@ Length of security (hours, years), level of security
 ---
 > id: caesar_cipher
 
-## The Caesar Cipher
+### The Caesar Cipher
 
 {.todo} TODO
 
@@ -111,12 +120,7 @@ to try all <25> possibilities. Try to decode the following secret messages:
 
 ---
 
-## Modular arithmetic
-{.todo} TODO
-
----
-
-## Substitution Cipher
+### Substitution Cipher
 
 It is not hard to make the Caesar cipher more secure: rather than shifting the
 letters we could scramble all of them randomly. Now there are not only 25 but
@@ -145,31 +149,30 @@ using substitution ciphers:
 
 ---
 
-## One Time Pads
+### One Time Pads
+
 {.todo} TODO
 
 ---
 
-## The Vigenère Cipher
+### The Vigenère Cipher
+
 {.todo} TODO
 
 ---
 
 ## The Enigma
+
 {.todo} TODO
 
 ---
 
 ## RSA Cryptography
+
 {.todo} TODO
 
 ---
 
 ## Quantum Cryptography
+
 {.todo} TODO
-
-
-// SOURCES:
-// http://plus.maths.org/content/cracking-codes
-// http://plus.maths.org/content/exploring-enigma
-// http://nrich.maths.org/2198

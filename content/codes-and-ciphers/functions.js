@@ -5,7 +5,7 @@
 
 
 import { Evented, clamp } from '@mathigon/core';
-import { letterFrequency, caesarCipher } from '@mathigon/fermat';
+import { letterFrequency, caesarCipher, cipherLetterFreq } from '@mathigon/fermat';
 import { $, $N } from '@mathigon/boost';
 
 
@@ -35,7 +35,7 @@ class CodeBox extends Evented {
       return function(text) {
         let caret = $container.isTextarea ? $container.cursor : 0;
 
-        $container.html('');
+        $container.html = '';
         letters[current] = [];
 
         text.split('').forEach(function(l) {
@@ -47,7 +47,7 @@ class CodeBox extends Evented {
         });
 
         letters[current].forEach(function(l, i) {
-          let letter = l.text().toLowerCase();
+          let letter = l.text.toLowerCase();
 
           l.on('mouseenter', function() {
             l.addClass('hover');
@@ -82,16 +82,16 @@ class CodeBox extends Evented {
 // -----------------------------------------------------------------------------
 // Section Functions
 
-export function caesar_cipher(section) {
-  let $plain = $('.plain-text', section.$el);
-  let $cipher = $('.cipher-text', section.$el);
+export function caesar_cipher($step) {
+  let $plain = $('.plain-text', $step);
+  let $cipher = $('.cipher-text', $step);
 
   let codeBox = new CodeBox($plain, $cipher, {
-    chartCols:  section.$el.$$('.freq-table-chart  .freq-col'),
-    plainCols:  section.$el.$$('.freq-table-plain  .freq-col'),
-    cipherCols: section.$el.$$('.freq-table-cipher .freq-col'),
-    plainBars:  section.$el.$$('.letter-bar.plain'),
-    realBars:   section.$el.$$('.letter-bar.real')
+    chartCols:  $step.$$('.freq-table-chart  .freq-col'),
+    plainCols:  $step.$$('.freq-table-plain  .freq-col'),
+    cipherCols: $step.$$('.freq-table-cipher .freq-col'),
+    plainBars:  $step.$$('.letter-bar.plain'),
+    realBars:   $step.$$('.letter-bar.real')
   });
 
   let shift = 0;
@@ -99,12 +99,12 @@ export function caesar_cipher(section) {
 
   $plain.on('input', function() {
     text = $plain.text;
-    codeBox.set('plain', text);
-    codeBox.set('cipher', caesarCipher(text, shift, 26));
+    codeBox.trigger('plain', text);
+    codeBox.trigger('cipher', caesarCipher(text, shift, 26));
   });
 
   $('#letter-slider').on('move', function(x) {
     shift = clamp(Math.round(-x/26) % 26, 0, 25);
-    codeBox.set('cipher', caesarCipher(text, shift, 26));
+    codeBox.trigger('cipher', caesarCipher(text, shift, 26));
   });
 }
