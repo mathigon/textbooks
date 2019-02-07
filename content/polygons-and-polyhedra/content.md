@@ -517,7 +517,7 @@ of these triangles.
 {.reveal(when="blank-2")} In the [previous
 course](/course/triangles-and-trigonometry/properties-of-triangles) we showed
 that [midsegments](gloss:triangle-midsegment) of a triangle are always parallel
-its base. In this case, it means that [both these sides](target:parallel) are
+to its base. In this case, it means that [both these sides](target:parallel) are
 parallel to the diagonal – therefore they must also be [[parallel to each
 other|the same length|perpendicular to each other]].
 
