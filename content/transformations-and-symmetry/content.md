@@ -52,15 +52,15 @@ convert one geometric figure into another one. Here are a few examples:
 ::: column.r(width=200)
     .animation
       include svg/transform-1.svg
-      .play-btn
+      x-play-btn
 ::: column.r(width=200)
     .animation
       include svg/transform-2.svg
-      .play-btn
+      x-play-btn
 ::: column.r(width=200)
     .animation
       include svg/transform-3.svg
-      .play-btn
+      x-play-btn
 :::
 
 {.reveal(when="t1 t2 t3")} The result of a transformation is called the
@@ -96,7 +96,7 @@ types of rigid transformations:
 ::: column.grow.r(width=200)
     .animation
       include svg/rigid-1.svg
-      .play-btn
+      x-play-btn
 
 {.text-center} A transformation that simply _moves_ a shape is called a
 [__translation__](gloss:translation).
@@ -104,7 +104,7 @@ types of rigid transformations:
 ::: column.grow.r(width=200)
     .animation
       include svg/rigid-2.svg
-      .play-btn
+      x-play-btn
 
 {.text-center} A transformation that _flips_ a shape over is called a
 [__reflection__](gloss:reflection).
@@ -112,7 +112,7 @@ types of rigid transformations:
 ::: column.grow.r(width=200)
     .animation
       include svg/rigid-3.svg
-      .play-btn
+      x-play-btn
 
 {.text-center} A transformation that _spins_ a shape is called a
 [__rotation__](gloss:rotation).
@@ -513,7 +513,7 @@ a certain transformation.
     .symmetry
       img(src="images/symmetry-1.png" width=320 height=240)
       img(src="images/symmetry-1.png" width=320 height=240)
-      .play-btn
+      x-play-btn
 
 {.text-center} We can reflect this butterfly, and it looks the same afterwards.
 We say that it has __reflectional symmetry__.
@@ -523,7 +523,7 @@ We say that it has __reflectional symmetry__.
     .symmetry
       img(src="images/symmetry-2.jpg" width=320 height=240)
       img(src="images/symmetry-2.jpg" width=320 height=240)
-      .play-btn
+      x-play-btn
 
 {.text-center} We can rotate this flower, and it looks the same afterwards. We
 say that it has __rotational symmetry__.
@@ -982,7 +982,7 @@ that extend into every direction:
     .symmetry(style="width: 320px; height: 240px;")
       img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
       img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
-      .play-btn
+      x-play-btn
 
 {.caption} Hexagonal honyecomb
 ::: column.grow
@@ -990,7 +990,7 @@ that extend into every direction:
     .symmetry(style="width: 320px; height: 240px;")
       img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
       img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
-      .play-btn
+      x-play-btn
 
 {.caption} Ceramic wall tiling
 :::

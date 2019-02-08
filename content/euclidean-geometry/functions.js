@@ -5,7 +5,6 @@
 
 
 
-import { wait } from '@mathigon/core';
 import { Point, nearlyEquals } from '@mathigon/fermat';
 import { $N, slide } from '@mathigon/boost';
 
@@ -109,13 +108,11 @@ export function tools($step) {
   const names = ['l1', 'c1'];
 
   $geopads.forEach(($g, i) => {
-    const $play = $g.$('.play-btn');
-    $play.on('click', () => {
-      $play.exit('pop');
-      wait(500)
-        .then(() => $g.animateConstruction(names[i]))
+    const $play = $g.$('x-play-btn');
+    $play.on('play', () => {
+       $g.animateConstruction(names[i])
         .then(() => {
-          $play.enter('pop');
+          $play.reset();
           $step.score('play-' + names[i]);
         });
     });

@@ -18,11 +18,10 @@ import './components/3d-solid';
 // -----------------------------------------------------------------------------
 
 export function radius($step) {
-  const $play = $step.$('.play-btn');
+  const $play = $step.$('x-play-btn');
   const $geopad = $step.$('x-geopad');
 
-  $play.one('click', () => {
-    $play.exit('pop');
+  $play.one('play', () => {
     wait(500)
         .then(() => $geopad.animateConstruction('c1'))
         .then(() => {
@@ -486,12 +485,11 @@ export function radiansTrig($step) {
 }
 
 export function radiansDistance($step) {
-  const $play = $step.$('.play-btn');
+  const $play = $step.$('x-play-btn');
   $step.model.set('p', 0);
   $play.on('click', () => {
-    $play.exit('pop');
     animate((p) => $step.model.p = Math.min(p,0.999), 5000)
-        .then(() => $play.enter('pop', 400));
+        .then(() => $play.reset());
   });
 }
 
@@ -536,7 +534,7 @@ export function epicycles($step) {
   const smallCircle = $step.$('.small-circle');
   const earth = $step.$('.earth');
   const $path = $step.$('svg path');
-  const $play = $step.$('.play-btn');
+  const $play = $step.$('x-play-btn');
 
   const BIG_R = 120;
   const SMALL_R = 30;
@@ -552,9 +550,7 @@ export function epicycles($step) {
     $path.points = points.slice(0, lastP * 401);
   });
 
-  $play.on('click', () => {
-    $play.exit('pop');
-
+  $play.on('play', () => {
     animate((p) => {
       const a = p * 2 * Math.PI;
       const c1 = Point.fromPolar(a, BIG_R).shift(160, 160);
@@ -563,7 +559,7 @@ export function epicycles($step) {
       $path.points = points.slice(0, p * 401);
       lastP = p;
     }, 5000).then(() => {
-      $play.enter('pop', 400, 200);
+      $play.reset();
       $step.score('play');
     });
   });
@@ -592,13 +588,11 @@ export function kepler($step) {
   const $orbit = $step.$('.orbit');
   const $earth = $step.$('.earth');
   const $sweep = $step.$('.sweep');
-  const $play = $step.$('.play-btn');
+  const $play = $step.$('x-play-btn');
 
   $orbit.points = points;
 
-  $play.on('click', () => {
-    $play.exit('pop');
-
+  $play.on('play', () => {
     animate((p) => {
       p = (2 * p) % 1;
       const q = Math.floor(p * 10) / 10;  // sweep start progress
@@ -607,7 +601,7 @@ export function kepler($step) {
       $earth.setCenter(end);
       $sweep.setAttr('d', `M 220 120 L ${start.x} ${start.y} A 120 105 0 0 1 ${end.x} ${end.y} Z`);
     }, 8000).then(() => {
-      $play.enter('pop', 400, 200);
+      $play.reset();
       $step.score('play');
     });
   });

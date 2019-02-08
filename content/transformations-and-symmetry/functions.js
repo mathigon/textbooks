@@ -12,20 +12,13 @@ import './components/wallpaper';
 // -----------------------------------------------------------------------------
 
 function play($step, $el, duration, score, callback) {
-  const $play = $el.$('.play-btn');
-  let playing = false;
-
-  $el.on('click', () => {
-    if (playing) return;
-    playing = true;
-
-    $play.exit('pop');
-    setTimeout(callback, 500);
+  const $play = $el.$('x-play-btn');
+  $play.on('play', () => {
+    callback();
     setTimeout(() => {
       $step.score(score);
-      $play.enter('pop');
-      playing = false;
-    }, 1000 + duration);
+      $play.reset();
+    }, duration);
   });
 }
 

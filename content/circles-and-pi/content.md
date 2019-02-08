@@ -41,7 +41,7 @@ center. This means that they can be drawn using a [compass](gloss:compass):
         path(name="c1" x="arc(a,b,1.99*pi)" hidden)
         path.blue(x="segment(b.rotate(Math.PI/3,a),b.rotate(-2*Math.PI/3,a)).contract(0.01)" target="d" arrows="both" hidden)
         path.green(x="arc(a,b.add(b.subtract(a).normal.scale(12)),1.99*pi).contract(0.02)" target="c" arrows="start" hidden)
-      .play-btn
+      x-play-btn
 
 ::: column.grow
 
@@ -646,7 +646,7 @@ per hour._
         path.red(x="segment(c,b)")
       .var.iss(style="transform: translate(${a.rotate(p*2*pi,c).x}px,${a.rotate(p*2*pi,c).y}px) rotate(${(p+0.25)*2*pi}rad)")
       .time.var ${round(p*1.5,1)}h
-      .play-btn
+      x-play-btn
 
 :::
 
@@ -1365,7 +1365,7 @@ model of our universe for more than 1000 years:
         path(fill="none" stroke="#ff941f" stroke-width="3px" opacity="0.8" stroke-linejoin="round")
         circle(cx=160 cy=160 r=15 fill="#1f7aff")
         circle.earth(cx=310 cy=160 r=10 fill="#ff941f")
-      .play-btn
+      x-play-btn
 
 {.caption} This planet makes ${n}{n|6|2,12,1} rotations around the small circle
 (the __epicycle__) during one rotation around the large circle (the
@@ -1402,7 +1402,7 @@ up as they get closer to the sun, and slow down as they move further away.
         circle.earth(cx=280 cy=120 r=10 fill="#1f7aff")
         circle(cx=220 cy=120 r=15 fill="#ff941f")
         circle(cx=100 cy=120 r=4 fill="#ccc")
-      .play-btn
+      x-play-btn
 
 :::
 

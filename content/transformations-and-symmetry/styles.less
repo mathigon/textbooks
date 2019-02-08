@@ -8,19 +8,6 @@
 @import "./components/wallpaper";
 
 
-.play-btn {
-  .svgBackground('<path d="M14,38V10L38,24Z" fill="white"/>', 48, 48, fade(#222, 70%));
-  top: 50%;
-  left: 50%;
-  margin: -24px;
-  border-radius: 4px;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  transition: transform .2s;
-  &:hover { transform: scale(1.1); }
-}
-
 x-geopad .paths path.drag { cursor: move; pointer-events: none; }
 x-geopad x-media { position: absolute; z-index: -1; }
 
