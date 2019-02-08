@@ -150,7 +150,7 @@ you think of anything else? _{button.next-step} Continue_
 ::: column.grow
 
 It also turns out that a circle is the shape with the largest area for a given
-circumference. For example, if you have a rope of length 100&nbsp;m, you can use
+circumference. For example, if you have a rope of length 100\ m, you can use
 it to enclose the largest space if you form a circle (rather than other shapes
 like a rectangle or triangle).
 
@@ -167,6 +167,7 @@ circular or spherical, and reducing their surface area.
     svg(width=320 height=200)
 
 {.caption} _Circumference_ = __{.m-green}100__, _Area_ = __${area}__
+
 
 :::
 
@@ -291,7 +292,7 @@ can use powerful computers to calculate the value of Pi to much higher
 accuracy.
 
 The current record is 22 trillion digits. A printed book containing all these
-digits would be approximately 400&nbsp;km thick – that’s the height at which the
+digits would be approximately 400\ km thick – that’s the height at which the
 International Space Station orbits Earth!
 
 Of course, you don’t need to remember that many digits of Pi. In fact, the
@@ -550,8 +551,8 @@ of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
     x-geopad(width=280 height=280): svg
       circle(x="point(140,140)" name="c")
       path.thin(x="circle(c,100)" name="circ")
-      circle.move.blue(cx=240 cy=140 name="a" project="circ")
-      circle.move.pulsate.green(cx=240 cy=140.4 name="b" project="circ")
+      circle.move.blue.pulsate(cx=240 cy=140 name="a" project="circ")
+      circle.move.green(cx=240 cy=140.4 name="b" project="circ")
       path.fill.green(x="angle(b,c,a)" label="${round(ang.deg)}°" name="ang" round)
       path.red.thick(x="arc(c,b,ang.rad)" label="${rad(ang.rad)}π")
       path.thin(x="segment(c,a)")
@@ -612,81 +613,164 @@ and radians?
 
 ### Distance Travelled
 
-{.todo} COMING SOON
+You can think of radians as the “distance traveled” along the circumference of
+a unit circle. This is particularly useful when working with objects that are
+moving on a circular path.
 
-    // You can think of radians as the “distance traveled” along the circumference of
-    // a unit circle. This is particularly useful when working with objects that are
-    // moving on a circular path.
+::: column.grow
 
-    // ::: column.grow
+For example, the International Space Station orbits Earth once every 1.5\ hours.
+This means its __speed of rotation__ is [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]]
+radians per hour.
 
-    // For example, the International Space Station orbits Earth once every 90 minutes
-    // (or 1.5 hours). This means its radial speed is `(2 pi)/1.5` radians per hour.
+{.reveal(when="blank-0")} In a [unit circle](gloss:unit-circle), the speed of
+rotation is the same as the _actual_ speed, because the length of the
+circumference is the same as one full rotation in radians (both are `2pi`).
 
-    // The radius of its orbit is 6800 km. It is 6800 times as big as a unit circle,
-    // so the
+{.reveal(when="blank-0" delay=1000)} The radius of the ISS orbit is 6800\ km,
+which means that the _actual_ speed of the ISS has to be [[`(2 pi)/1.5 xx 6800`|
+`(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
+per hour._
 
-    // In other words, the speed of the ISS is `(2 pi)/1.5 * 6800 = 28483` km per hour.
+::: column(width=300)
 
-    // Can you see that in this example, radians are a much more natural unit for
-    // measuring angles, rather than degrees?
+    x-geopad.r(width=300 height=300)
+      .earth
+      svg.r
+        circle(x="point(150,150)" name="c")
+        circle(x="point(280,150)" name="a")
+        circle(x="a.rotate(p*2*pi,c)" name="b" hidden)
+        path.red(x="arc(c,a,p*2*pi)")
+        path.fill(x="angle(a,c,b)" label="${round(2*p,1)}π" round)
+        path.red(x="segment(c,a)")
+        path.red(x="segment(c,b)")
+      .var.iss(style="transform: translate(${a.rotate(p*2*pi,c).x}px,${a.rotate(p*2*pi,c).y}px) rotate(${(p+0.25)*2*pi}rad)")
+      .time.var ${round(p*1.5,1)}h
+      .play-btn
 
-    // ::: column(width=280)
+:::
 
-    // {.todo} TODO
+---
+> id: radians-distance-1
 
-    // :::
+Can you see that, in this example, radians are a much more convenient unit than
+degrees? Once we now the speed of rotation, we simply have to multiply by the
+radius to get the actual speed.
 
-    // ---
-    // > id: radians-distance-1
-    // 
-    // ::: column(width=280)
-    // 
-    // {.todo} TODO
-    // 
-    // ::: column.grow
-    // 
-    // Here is another example: your car has wheels with radius 0.25 m. You're driving
-    // at 50 m/s, this means that the wheels of your car rotate at 50/0.3 = 0.25
-    // radians per second.
-    // 
-    // :::
+Here is another example: your car has wheels with radius 0.25\ m. If you’re
+driving at a speed of 20\ m/s, the wheels of your car rotate at [[`20/0.25 =
+80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] radians per second
+_{span.reveal(when="blank-0")}(or `80/(2pi) = 13` rotations per second)._
 
 ---
 > id: radians-trig
 
 ### Trigonometry
 
-{.todo} COMING SOON
+For most simple geometry problems, degrees and radians are completely
+interchangeable – you can either pick which one you prefer, or a question
+might tell you which unit to give your answer in. However, once you study
+more advanced [trigonometry](gloss:trigonometry) or [calculus](gloss:calculus),
+it turns out that radians are much more convenient than degrees.
 
-    // For most simple geometry problems, degrees and radians are completely
-    // interchangeable – you can pick which one you prefer, or sometimes a question
-    // might tell you which unit to give your answer in. However, once you start doing
-    // [trigonometry](gloss:trigonometry) or [calculus](gloss:calculus)) radians tend
-    // to be much more convenient than degrees.
+::: column.grow
 
-    // {.todo} CALCULATOR BUTTON
+Most calculators have a [special button](->.button.mode) to switch between
+degrees and radians. Trigonometric functions like [__sin__](gloss:sin),
+[__cos__](gloss:cos) and __tan__ take angles as input, and their inverse
+functions __arcsin__, __arccos__ and __arctan__ return angles as output. The
+current calculator setting determines which units are used for these angles.
 
-    // {.todo} SMALL ANGEL APPROXIMATION
+Try using this calculator to calculate that
+
+{.text-center} sin(30°) = [[0.5]] _{span.eqn-gap}_ cos(1°) = [[0.999]]<br>
+sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
+
+::: column(width=300)
+
+    .calculator
+      .display
+        span
+        .setting DEG
+      .button.num 7
+      .button.num 8
+      .button.num 9
+      .button.wide sin
+      .button.num 4
+      .button.num 5
+      .button.num 6
+      .button.wide cos
+      .button.num 1
+      .button.num 2
+      .button.num 3
+      .button.wide tan
+      .button.num 0
+      .button .
+      .button C
+      .button.wide.mode mode
+
+:::
+
+---
+> id: small-angle
+
+Using radians has one particularly interesting advantage when using the [__Sine
+function__](gloss:sin). If `θ` is a very small angle (less than 20° or 0.3 rad),
+then `"sin"(θ) ≈ θ`. For example,
+
+{.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
+
+{.reveal(when="var-0")} This is called the __small angle approximation__, and it
+can greatly simplify certain equations containing trigonometric functions.
+You’ll learn much more about this in the future.
 
 
 
 --------------------------------------------------------------------------------
 > sectionStatus: dev
 > section: tangets-chords-arcs
+> id: circle-parts
 
 
 ## Tangents, Chords and Arcs
 
+In the previous sections, you learned about a few different parts of a circle,
+like the radius, diameter and circumference. However, there are 
+
+::: column.grow
+
+* A __secant__ is a line that intersects a circle in two points.
+
+* A __chord__ is a line segment whose endpoints are on a circle.
+
+* A __tangent__ is a line that intersects a circle at exactly one point.
+
+* An __arc__ is
+
+* A __sector__ is
+
+* A __segment__ is
+
+::: column(width=300)
+
+    x-geopad(width=300 height=300): svg
+
+:::
+
+In this section we will have a closer look at the relationships between these
+XXXX, prove theorems about their properties, and explore how they can be used
+to solve problems in geometry.
+
+---
+
+### Tangents
 
 __[CC] Construct a tangent line from a point outside a given circle to the circle.__
 
-__[CC] Identify and describe relationships among inscribed angles, radii, and chords. \nInclude the relationship between central, inscribed, and circumscribed angles; inscribed angles on a diameter are right angles; the radius of a circle is perpendicular to the tangent where the radius intersects the circle.__
+Point of Tangency: The point where a tangent line touches the circle.
 
-__[CC] Derive using similarity the fact that the length of the arc intercepted by an angle is proportional to the radius, and define the radian measure of the angle as the constant of proportionality; derive the formula for the area of a sector.__
-
-* Tangent: A line that intersects a circle in exactly one point.
-* Point of Tangency: The point where a tangent line touches the circle.
+The tangent line and the radius drawn to the point of tangency have a unique
+relationship. Let’s investigate it here.
 
 The tangent ray TP and tangent segment TP are also called tangents.
 Tangent Circles: Two or more circles that intersect at one point.
@@ -698,13 +782,6 @@ tangent. Common tangents can be internally tangent and externally tangent too.
 Notice that the common internal tangent passes through the space between the
 two circles. Common external tangents stay on the top or bottom of both circles.
 
-Concentric Circles: Two or more circles that have the same center, but different radii.
-Congruent Circles: Two or more circles with the same radius, but different centers.
-
-The tangent line and the radius drawn to the point of tangency have a unique
-relationship. Let’s investigate it here.
-
-### Tangent Line and Radius Property
 1. Using your compass, draw a circle. Locate the center and draw a radius. Label
    the radius AB, with A as the center. 
 2. Draw a tangent line, BC←→, where B is the point of tangency. To draw a
@@ -724,16 +801,13 @@ point. If we were to measure these two segments, we would find that they are equ
 _Two Tangents Theorem_: If two tangent segments are drawn from the same external
 point, then the segments are equal.
 
-
 ---
 
+### Chords
 
 A chord is a line segment whose endpoints are on a circle. A diameter is the
 longest chord in a circle. There are several theorems that explore the
 properties of chords.
-
-* Chord: A line segment whose endpoints are on a circle.
-* Secant: A line that intersects a circle in two points.
 
 Chord Theorem #1: In the same circle or congruent circles, minor arcs are
 congruent if and only if their corresponding chords are congruent.
@@ -775,9 +849,17 @@ from any point to a line is the perpendicular line between them. In this
 theorem, the fact that FE=EG means that AB and CD are equidistant to the center
 and AB≅CD.
 
+    // Concentric Circles: Two or more circles that have the same center, but different radii.
+    // Congruent Circles: Two or more circles with the same radius, but different centers.
+
 ---
 
-### Arcs
+### Arcs and Sectors
+
+__[CC] Derive using similarity the fact that the length of the arc intercepted
+by an angle is proportional to the radius, and define the radian measure of the
+angle as the constant of proportionality; derive the formula for the area of a
+sector.__
 
 A central angle is the angle formed by two radii of the circle with its vertex
 at the center of the circle. In the picture below, the central angle would be
@@ -817,10 +899,6 @@ circumference. The arc length is directly related to the degree arc measure.
 Arc Length Formula: If d is the diameter or r is the radius, the length of
 ABˆ=mABˆ360∘⋅πd or mABˆ360∘⋅2πr.
 
----
-
-### Sectors and Segments
-
 A sector of a circle is the area bounded by two radii and the arc between the
 endpoints of the radii.
 
@@ -828,6 +906,10 @@ The area of a sector is a fractional part of the area of the circle, just like
 arc length is a fractional portion of the circumference. The Area of a sector
 is A=mABˆ360∘⋅πr2 where r is the radius and ABˆ is the arc bounding the sector.
 Another way to write the sector formula is A=central angle360∘⋅πr2.
+
+---
+
+### Segments
 
 The last part of a circle that we can find the area of is called a segment, not
 to be confused with a line segment. A segment of a circle is the area of a
@@ -843,6 +925,11 @@ chord. The area of a segment is Asegment=Asector−A△ABC
 
 
 ## The Circle Theorems
+
+__[CC] Identify and describe relationships among inscribed angles, radii, and
+chords. Include the relationship between central, inscribed, and circumscribed
+angles; inscribed angles on a diameter are right angles; the radius of a circle
+is perpendicular to the tangent where the radius intersects the circle.__
 
 An inscribed angle is an angle with its vertex is the circle and its sides
 contain chords. The intercepted arc is the arc that is on the interior of the
@@ -936,17 +1023,24 @@ the segments are labeled like the picture to the left), then a2=b(b+c). This
 means that the product of the outside segment of the secant and the whole is
 equal to the square of the tangent segment.
 
+---
+
+### Thales' Theorem
+
+{.todo} TODO
+
 
 
 --------------------------------------------------------------------------------
 > sectionStatus: dev
-> section: inscribed-polygons
+> section: cyclic-polygons
 
 
 
-## Inscribed Polygons
+## Cyclic Polygons
 
-__[CC] Construct an equilateral triangle, a square, and a regular hexagon inscribed in a circle.__
+__[CC] Construct an equilateral triangle, a square, and a regular hexagon
+inscribed in a circle.__
 
 An inscribed polygon is a polygon where every vertex is on a circle. Note, that
 not every quadrilateral or polygon can be inscribed in a circle. Inscribed
@@ -971,7 +1065,36 @@ and only if the opposite angles are supplementary.
 
 ## Spheres, Cones and Cylinders
 
-__[CC] Give an informal argument for the formulas for the volume of a cylinder and cone. Use dissection arguments, Cavalieri’s principle, and informal limit arguments.__
+After studying 
+
+::: column(width=220 parent="padded-thin")
+
+    x-3d-solid(size=220 shape="cylinder")
+
+{.todo} TODO
+
+::: column(width=220)
+
+    x-3d-solid(size=220 shape="cone")
+
+{.todo} TODO
+
+::: column(width=220)
+
+    x-3d-solid(size=220 shape="sphere")
+
+{.todo} TODO
+
+:::
+
+---
+
+__[CC] Give an informal argument for the formulas for the volume of a cylinder
+and cone. Use dissection arguments, Cavalieri’s principle, and informal limit
+arguments.__
+
+* https://en.wikipedia.org/wiki/Cavalieri%27s_principle
+* https://www.bbc.com/bitesize/guides/zcsgdxs/revision/9
 
 ### Cylinders
 
@@ -997,6 +1120,27 @@ If an oblique cylinder has the same base area and height as another cylinder,
 then it will have the same volume. This is due to Cavalieri’s Principle, which
 states that if two solids have the same height and the same cross-sectional
 area at every level, then they will have the same volume.
+
+---
+
+### Cones
+
+A cone is a solid with a circular base and sides taper up towards a common
+vertex.
+
+It is said that a cone is generated from rotating a right triangle around one
+leg in a circle. Notice that a cone has a slant height, just like a pyramid.
+
+We know that the base is a circle, but we need to find the formula for the
+curved side that tapers up from the base. Unfolding a cone, we have the net:
+
+From this, we can see that the lateral face’s edge is 2πr and the sector of a
+circle with radius l. We can find the area of the sector by setting up a
+proportion.
+
+If the bases of a cone and a cylinder are the same, then the volume of a cone
+will be one-third the volume of the cylinder. Volume of a Cone: If r is the
+radius of a cone and h is the height, then the volume is V=13πr2h.
 
 ---
 
@@ -1038,24 +1182,35 @@ Volume of a Sphere: If a sphere has a radius r, then the volume of a sphere is V
 
 ---
 
-### Cones
+Finally, we can combine all the equations we derived in this chapter to prove
+one of the most satisfying results in all of geometry. Imagine we have a
+cylinder with the same height as the diameter of its base. We can now fit a
+sphere and a cone perfectly in its inside:
 
-A cone is a solid with a circular base and sides taper up towards a common
-vertex.
+::: column(width=240)
 
-It is said that a cone is generated from rotating a right triangle around one
-leg in a circle. Notice that a cone has a slant height, just like a pyramid.
+{.todo} image
 
-We know that the base is a circle, but we need to find the formula for the
-curved side that tapers up from the base. Unfolding a cone, we have the net:
+{.text-center} This cone has radius `r` and height `2r`, so its volume is
 
-From this, we can see that the lateral face’s edge is 2πr and the sector of a
-circle with radius l. We can find the area of the sector by setting up a
-proportion.
+::: column(width=240)
 
-If the bases of a cone and a cylinder are the same, then the volume of a cone
-will be one-third the volume of the cylinder. Volume of a Cone: If r is the
-radius of a cone and h is the height, then the volume is V=13πr2h.
+{.todo} image
+
+{.text-center} This sphere has radius `r` and height `2r`, so its volume is
+
+:::
+
+---
+
+If we add up the volume of both these shapes, we get XXX, which is exactly the
+volume of the cylinder:
+
+{.todo} Visual Equation
+
+There is no easy way to see why this equation is true (for example by dividing
+the solids into small slices). However, if you had three containers of exactly
+this volume, you could fill them with water and observe tha
 
 
 

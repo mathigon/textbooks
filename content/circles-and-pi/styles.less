@@ -23,6 +23,12 @@
   cursor: pointer;
 }
 
+x-3d-solid {
+  display: block;
+  margin: 0 auto;
+  canvas { width: 100%; height: 100%; }
+}
+
 
 // -----------------------------------------------------------------------------
 // Introduction
@@ -169,6 +175,91 @@ x-pi-scroll.box-body {
   .rotate { display: inline-block; font-size: 1.5em; margin: -.4em 0 0.2em 0; }
   .rotate.left { transform: rotate(135deg); }
   .rotate.right { transform: rotate(45deg); }
+}
+
+#radians-distance {
+  .earth {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 40px;
+    left: 40px;
+    background: url(/resources/circles-and-pi/images/earth.svg);
+    background-size: contain;
+  }
+  .iss {
+    width: 57px;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/resources/circles-and-pi/images/iss.svg);
+    background-size: contain;
+    margin: -17px -29px;
+  }
+  .time { position: absolute; top: 5px; left: 12px; color: @red; font-weight: 600; }
+}
+
+.eqn-gap { display: inline-block; margin: 0 8px; }
+
+.calculator {
+  .clearfix();
+  background: @grey;
+  padding: 8px;
+  border-radius: 6px;
+  user-select: none;
+
+  .display {
+    background: @light-grey;
+    border-radius: 4px;
+    padding: 8px 14px;
+    position: relative;
+    margin: 6px 6px 12px 6px;
+    font-size: 36px;
+    line-height: 40px;
+    height: 40px;
+    img { width: 40px; height: 40px; position: absolute; display: none; }
+  }
+
+  .button {
+    background: lighten(@grey, 15%);
+    border-radius: 4px;
+    float: left;
+    width: 36px;
+    height: 32px;
+    padding: 8px;
+    margin: 6px;
+    line-height: 32px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 3px 0 @dark-grey;
+    cursor: pointer;
+    transition: background .1s, box-shadow .1s, transform .1s;
+    &:hover { background: lighten(@grey, 20%); }
+    &:active { box-shadow: none; transform: translateY(3px); }
+    &.wide { width: 64px; }
+
+    @blue1: mix(@blue, @grey);
+    &.num { background: @blue1; }
+    &.num:hover { background: lighten(mix(@blue, @grey), 10%); }
+
+    @yellow1: mix(@yellow, @grey);
+    &.mode { background: @yellow1; }
+    &.mode:hover { background: lighten(@yellow1, 10%); }
+  }
+
+  .setting {
+    position: absolute;
+    top: 4px;
+    right: 13px;
+    background: @grey;
+    border-radius: 4px;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 2px 6px;
+    color: white;
+  }
 }
 
 

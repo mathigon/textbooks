@@ -5,7 +5,7 @@
 
 
 
-import { clamp, list, wait, tabulate } from '@mathigon/core';
+import { clamp, list, wait, tabulate, isOneOf } from '@mathigon/core';
 import { Point, toWord, roundTo, Polygon, Sector, round, Angle } from '@mathigon/fermat';
 import { $N, slide, Colour, animate, Draggable } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
@@ -13,6 +13,7 @@ import { rotateDisk } from '../shared/components/disk';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
+import './components/3d-solid';
 
 // -----------------------------------------------------------------------------
 
@@ -453,6 +454,51 @@ export function radians($step) {
   $equations[1].on('solve', () => setState(2));
 }
 
+export function radiansTrig($step) {
+  const $value = $step.$('.calculator .display span');
+  const $mode = $step.$('.calculator .setting');
+  let isDegree = true;
+  let reset = false;
+
+  for (let $b of $step.$$('.calculator .button')) {
+    const t = $b.text;
+    $b.on('click', () => {
+      const value = $value.text;
+
+      if (t === 'C') {
+        $value.text = '';
+      } else if (isOneOf(t, 'sin', 'cos', 'tan')) {
+        const n = +value || 0;
+        const r = Math[t](n * (isDegree ? Math.PI / 180 : 1));
+        $value.text = ('' + round(r, 6));
+        reset = true;
+      } else if (t === 'mode') {
+        isDegree = !isDegree;
+        $mode.text = isDegree ? 'DEG' : 'RAD';
+      } else if (reset || value === '0') {
+        $value.text = t;
+        reset = false;
+      } else if (value.length < 10) {
+        $value.text += t;
+      }
+    });
+  }
+}
+
+export function radiansDistance($step) {
+  const $play = $step.$('.play-btn');
+  $step.model.set('p', 0);
+  $play.on('click', () => {
+    $play.exit('pop');
+    animate((p) => $step.model.p = Math.min(p,0.999), 5000)
+        .then(() => $play.enter('pop', 400));
+  });
+}
+
+export function smallAngle($step) {
+  $step.model.set('sin', x => round(Math.sin(x), 4));
+}
+
 
 // -----------------------------------------------------------------------------
 // Conic Sections
@@ -507,8 +553,7 @@ export function epicycles($step) {
   });
 
   $play.on('click', () => {
-    $play.exit('pop').then(() => $play.enter('pop', 400, 5500));
-    $step.score('play');
+    $play.exit('pop');
 
     animate((p) => {
       const a = p * 2 * Math.PI;
@@ -517,7 +562,10 @@ export function epicycles($step) {
       earth.setCenter(Point.fromPolar(a * $step.model.n, SMALL_R).add(c1));
       $path.points = points.slice(0, p * 401);
       lastP = p;
-    }, 5000);
+    }, 5000).then(() => {
+      $play.enter('pop', 400, 200);
+      $step.score('play');
+    });
   });
 }
 
@@ -549,10 +597,7 @@ export function kepler($step) {
   $orbit.points = points;
 
   $play.on('click', () => {
-    $play.exit('pop').then(() => {
-      $play.enter('pop', 400, 8500);
-      $step.score('play');
-    });
+    $play.exit('pop');
 
     animate((p) => {
       p = (2 * p) % 1;
@@ -561,7 +606,10 @@ export function kepler($step) {
       const end = Point.interpolateList(points, p);
       $earth.setCenter(end);
       $sweep.setAttr('d', `M 220 120 L ${start.x} ${start.y} A 120 105 0 0 1 ${end.x} ${end.y} Z`);
-    }, 8000);
+    }, 8000).then(() => {
+      $play.enter('pop', 400, 200);
+      $step.score('play');
+    });
   });
 }
 
