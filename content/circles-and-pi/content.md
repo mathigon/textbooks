@@ -293,7 +293,7 @@ accuracy.
 
 The current record is 22 trillion digits. A printed book containing all these
 digits would be approximately 400\ km thick – that’s the height at which the
-International Space Station orbits Earth!
+[International Space Station](gloss:iss) orbits Earth!
 
 Of course, you don’t need to remember that many digits of Pi. In fact, the
 fraction `22/7 = 3.142…` is a great approximation.
@@ -619,9 +619,9 @@ moving on a circular path.
 
 ::: column.grow
 
-For example, the International Space Station orbits Earth once every 1.5\ hours.
-This means its __speed of rotation__ is [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]]
-radians per hour.
+For example, the [International Space Station](gloss:iss) orbits Earth once
+every 1.5\ hours. This means its __speed of rotation__ is [[`(2 pi)/1.5`|
+`1.5/(2 pi)`|`1.5 * pi`]] radians per hour.
 
 {.reveal(when="blank-0")} In a [unit circle](gloss:unit-circle), the speed of
 rotation is the same as the _actual_ speed, because the length of the

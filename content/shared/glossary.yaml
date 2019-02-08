@@ -584,6 +584,13 @@ isosceles-triangle:
   title: Isosceles triangle
   text: In an __isosceles triangle__, two sides have the same length.
 
+iss:
+  title: International Space Station
+  text: The __International Space Station__ (ISS) was launched in 1998 and
+    orbits Earth at an altitude of approximately 400 km. It is the largest
+    human-made body in low Earth orbit, and has been inhabited continuously
+    since launch. It can be seen with the naked eye from Earth.
+
 kite:
   title: Kite
   text: A __kite__ is a quadrilateral in which two pairs of adjacent sides have
@@ -1096,8 +1103,8 @@ sin:
 
 square:
   title: Square
-  text: A __square__ is a regular quadrilateral: all sides have the same length,
-          and all angles have the same size.
+  text: "A __square__ is a regular quadrilateral: all sides have the same
+    length, and all angles have the same size."
   link: /course/polygons-and-polyhedra/quadrilaterals
 
 square-numbers:

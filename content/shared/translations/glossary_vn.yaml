@@ -255,7 +255,7 @@ corresponding-angles:
 
 cos:
   title: Cosine
-  text: __Cosine__ is a trigonpmetric function written as `cos(θ)`. In a right
+  text: __Cosine__ is a trigonometric function written as `cos(θ)`. In a right
     angled triangle, it is the ratio of the adjacent side and the hypotenuse.
   link: /course/triangles-and-trigonometry/trigonometry#trig-functions
 
@@ -583,6 +583,13 @@ irregular-polygon:
 isosceles-triangle:
   title: Isosceles triangle
   text: In an __isosceles triangle__, two sides have the same length.
+
+iss:
+  title: International Space Station
+  text: The __International Space Station__ (ISS) was launched in 1998 and
+    orbits Earth at an altitude of approximately 400 km. It is the largest
+    human-made body in low Earth orbit, and has been inhabited continuously
+    since launch. It can be seen with the naked eye from Earth.
 
 kite:
   title: Kite
@@ -1090,14 +1097,14 @@ similar:
 
 sin:
   title: Sine
-  text: __Sine__ is a trigonpmetric function written as `sin(θ)`. In a right
+  text: __Sine__ is a trigonometric function written as `sin(θ)`. In a right
     angled triangle, it is the ratio of the opposite side and the hypotenuse.
   link: /course/triangles-and-trigonometry/trigonometry#trig-functions
 
 square:
   title: Square
-  text: A __square__ is a regular quadrilateral: all sides have the same length,
-          and all angles have the same size.
+  text: "A __square__ is a regular quadrilateral: all sides have the same
+    length, and all angles have the same size."
   link: /course/polygons-and-polyhedra/quadrilaterals
 
 square-numbers:
@@ -1179,7 +1186,7 @@ transformation-image:
 translation:
   title: Translation
   text: A __translation__ is a transformation that moves a figure in a specific
-    direction, without changing its rotation or shape.
+    direction, without changing its angle or shape.
   image: translation.svg
   link: /course/transformations-and-symmetry/transformations#translations
 
