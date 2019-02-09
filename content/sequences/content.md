@@ -511,7 +511,7 @@ _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
 
-    x-coordinate-system(margins="12 12 24 40" width=320 height=240 plot-type="points")
+    x-coordinate-system(margins="12 12 24 40" width=320 height=240)
     x-gesture(target="#arithmetic-geometric-graph x-var" slide="100,0")
 
 ::: column.ag-chart.s-green(width=320)
@@ -527,7 +527,7 @@ _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
 
-    x-coordinate-system(margins="12 12 24 40" width=320 height=240 plot-type="points" plot-style="green")
+    x-coordinate-system.green(margins="12 12 24 40" width=320 height=240)
 
 :::
 

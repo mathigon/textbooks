@@ -5,7 +5,7 @@
 
 
 import { flatten, delay, list, last, cache, tabulate, square, sortByFn, total } from '@mathigon/core'
-import { isPrime, numberFormat, Point, Expression, round } from '@mathigon/fermat'
+import { isPrime, numberFormat, Point, round } from '@mathigon/fermat'
 import { $N } from '@mathigon/boost'
 
 import { trianglePoints, polygonPoints } from './components/polygons'
@@ -140,6 +140,8 @@ export function arithmeticGeometricGraph($step) {
     const p2 = geometric(m.b, m.r, 10).map((p, i) => new Point(1 + i, p));
     $plots[0].setSeries(p1);
     $plots[1].setSeries(p2);
+    $plots[0].drawPoints(p1);
+    $plots[1].drawPoints(p2);
   });
 
   const $actions = $step.$$('.var-action');
@@ -153,9 +155,9 @@ export function payItForward($step) {
 }
 
 export function payItForward2($step) {
-  const almost = new Expression('3^n');
-  $step.model.set('check', (expr) => {
-    if (expr.numEquals(almost)) return {error: 'pay-it-forward-close'};
+  $step.model.set('check', (expr, Expression) => {
+    const close = Expression.parse('3^n');
+    if (Expression.numEquals(expr, close)) return {error: 'pay-it-forward-close'};
   });
 }
 
