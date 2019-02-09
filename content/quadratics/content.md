@@ -10,17 +10,17 @@
 
 Welcome to SkateSum, a small company that produces skateboards. Engineers have
 been working on a brand new model, the _SquareBoard_, which is finally ready to
-start production. You've been put in charge of finding the optimal resale price
+start production. You’ve been put in charge of finding the optimal resale price
 for the skateboards – and it turns out that building them is not cheap:
 
-* The tools and machines required to construct skateboards cost $2,000. This is
+* The tools and machines required to construct skateboards cost $5,000. This is
   often called a __fixed cost__.
-* Every skateboard costs additional $60 worth of of wood, other materials,
-  and salary for the employees. This is often called a __variable cost__,
+* Every skateboard costs additional $30 worth of of wood, other materials,
+  and salary for the employees. This is often called a __variable cost__.
 
-In other words, the __cost__ of producing _x_ skateboards is
+In other words, the __cost__ of producing _n_ skateboards is
 
-{.text-center} _{.pill.orange}cost_ = _{x-equation(solution="2000+60*x")}_.
+{.text-center} _{.pill.orange}cost_ = _{x-equation(solution="5000+30*n")}_.
 
 ---
 > id: demand
@@ -35,25 +35,27 @@ demand?
 
     x-picker.wrap
       .item(data-error="wrong-chart-1" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels)
+        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels fns="0.6x + 2")
       .item(style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels)
+        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels fns="8 - 0.6x")
       .item(data-error="wrong-chart-2" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels) 
+        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels fns="2.5 * sqrt(x)") 
 
 ---
 > id: demand-1
 
-Exactly! A higher price means that fewer people want to buy a skateboards, so
-the graph of the function has to move downwards. Economists did some market
-research and came up with the following equation:
+A higher price means that fewer people want to buy a skateboards, so the graph
+of the function has to move downwards. After doing some market research,
+economists came up with the following equation:
 
-{.text-center} _{.pill.teal}demand_ = 5000 – 30 × _{.pill.purple}price_
+{.text-center} _{.pill.teal}demand_ = 2800 – 15 × _{.pill.purple}price_
 
-For example, if a skateboard costs $100, the demand will be [[2000]] units.
+For example, if a skateboard costs $80, the demand will be [[1600]] units.
 
 ---
 > id: intro4
+
+    img.text-wrap.s-hide(src="images/skater-3.jpg" style="shape-outside: url(images/skater-3-mask.png)" width=280 height=480)
 
 The __revenue__ of our company is the total amount of money we make. It is the
 number of skateboards sold (the _demand_) times the price of each:
@@ -76,21 +78,21 @@ skateboard?
         tr
           td
           td= '='
-          td.todo TODO
+          td: x-equation(solution="-15 * price^2 + 3250 * price - 89000" validate="check" fns="" vars="revenue cost demand price" vars-required="")
 
 ---
 > id: intro-table
 
 Notice that this equation contains _{.pill.purple}price_ as well as
 _{.pill.purple}`price^2`_. It is called a [__Quadratic
-Equation__](gloss:quadratic-equation), named after the Latin word "quadratus"
+Equation__](gloss:quadratic-equation), named after the Latin word “quadratus”
 for square.
 
-To work out how to maximise our profit, let's calculate the profit for a few
+To work out how to maximise our profit, let’s calculate the profit for a few
 different prices:
 
-| _{.pill.purple}price_  | $20 | $40 | $60 | $80 | $100 | $120 | $140 | $160 |
-| _{.pill.yellow}profit_ |     |     |     |     |      |      |      |      |
+| _{.pill.purple}price/$_  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
+| _{.pill.yellow}profit/$_ | –30k | –17k | 52k | 75k | 86k | 85k | 72k | 47k | 10k |
 {.grid}
 
 ---
@@ -99,9 +101,9 @@ different prices:
 Now we can draw all of these points in a coordinate system, and connect them
 with a line:
 
-    x-coordinate-system(width=640 height=400 x-axis="-20|180|20" x-label="price" y-axis="-100000|100000|20000" y-label="profit")
-      .region.r1(style="top: 47%; height: 6%; left: 9%; width: 5%;")
-      .region.r2(style="top: 10%; height: 45%; left: 70%; width: 30%;")
+    x-coordinate-system(width=640 height=400 x-axis="-20|200|20" x-label="price/$" y-axis="-100000|100000|20000" y-label="profit/$" margins="10 10 10 10" animate)
+      .region.r1(style="top: 48%; height: 46%; left: 6%; width: 6%;")
+      .region.r2(style="top: 26%; height: 40%; left: 79%; width: 21%;")
 
 The graph of [linear functions](gloss:linear-function) is always a straight
 line. As you can see above, the graph of [quadratic function](gloss:quadratic-function)
@@ -112,7 +114,8 @@ giving away expensive skateboards for free. As the price increases, our
 profits rise, too. However, if the skateboards become [too expensive](->.r2),
 people no longer want to buy them and the profit falls again.
 
-We can maximise our profit by pricing the skateboards at approximately $[[110]].
+We can maximise our profit by pricing the skateboards at approximately
+$[[105...115]].
 
 ---
 > id: intro-final
@@ -141,7 +144,7 @@ You already know how to solve [_linear equations_](gloss:linear-equation):
 equations of the form `ax + b`, where _x_ is a [variable](gloss:variable), and
 _a_ and _b_ are some specific numbers.
 
-Now let's think about a more complex class of equations which also contain
+Now let’s think about a more complex class of equations which also contain
 `x^2`. A [__quadratic equation__](gloss:quadratic-equation) is an equation of
 the form
   

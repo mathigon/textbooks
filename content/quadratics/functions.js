@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import { square } from '@mathigon/core';
-import { Expression, nearlyEquals, sign, Point } from '@mathigon/fermat';
+import { list } from '@mathigon/core';
+import { nearlyEquals, Point } from '@mathigon/fermat';
 
 import '../shared/components/conic-section';
 
@@ -70,24 +70,32 @@ function compare(params, paramsExp, type) {
 // -----------------------------------------------------------------------------
 // Introduction
 
-export function demand($step) {
-  const $charts = $step.$$('x-coordinate-system');
-
-  $charts[0].setFunctions(x => 0.6 * x + 2);
-  $charts[1].setFunctions(x => 8 - 0.6 * x);
-  $charts[2].setFunctions(x => 2.5 * Math.sqrt(x));
-}
-
 export function introChart($step) {
   const $chart = $step.$('x-coordinate-system');
-  const f = (x => -30*x*x + 6800*x - 302000);
+  const f = (x => -15 * x * x + 3250 * x - 89000);
 
   $chart.setFunctions(f);
-  $chart.drawPoints([20, 40, 60, 80, 100, 120, 140, 160].map(p => new Point(p, f(p))));
+  $chart.drawPoints(list(0, 180, 20).map(p => new Point(p, f(p))));
 }
 
 export function introTable($step) {
   $step.addHint('calculator');
+}
+
+export function intro4($step) {
+  $step.model.set('check', (expr, Expression) => {
+    const solution = Expression.parse('-15 * price^2 + 3250 * price - 89000');
+    const vars = {
+      cost: Expression.parse('89000 - 450 price'),
+      demand: Expression.parse('2800 - 15 price'),
+      revenue: Expression.parse('2800 price - 15 price^2')
+    };
+
+    return {
+      isCorrect: Expression.numEquals(expr.substitute(vars), solution),
+      isFinal: expr.variables.length === 1 && expr.functions.indexOf('^') >= 0,
+    };
+  });
 }
 
 
@@ -104,26 +112,7 @@ export function parabola($step) {
   });
 }
 
-
-
-/* export function s1($step) {
-  let correct = new Expression('-30 price^2 + 6800 price - 302000');
-
-  let substitutions = {
-    revenue: '5000 price - 30 price^2',
-    cost: '302000 - 1800 price',
-    demand: '5000 - 30 price'
-  };
-
-  $step.$('x-equation').props.validate = function(expr) {
-    if (expr.same(correct)) return {final: true};
-
-    let substituted = expr.substitute(substitutions);
-    if (!substituted.numEquals(correct)) return {error: true};
-  };
-}
-
-export function s3($step) {
+/* export function s3($step) {
   $step.model.set('zeros', zeros);
 
   let $actions = $step.$$('.action');
