@@ -57,17 +57,15 @@ For example, if a skateboard costs $80, the demand will be [[1600]] units.
 
     img.text-wrap.s-hide(src="images/skater-3.jpg" style="shape-outside: url(images/skater-3-mask.png)" width=280 height=480)
 
-The __revenue__ of our company is the total amount of money we make. It is the
-number of skateboards sold (the _demand_) times the price of each:
+The __revenue__ of our company is the total income we make. It is the number of
+skateboards sold (the _demand_) times the price of each:
 
 {.text-center} _{.pill.green}revenue_ = _{.pill.teal}demand_ × _{.pill.purple}price_
 
-But the number we are most interested in is our __profit__: the revenue we make
-from selling skateboards, minus the cost of producing them.
-
-Using all of this information, can you find an equation that expresses our 
-_{.pill.yellow}profit_ in terms of just the _{.pill.purple}price_ of every
-skateboard?
+But the number we are more interested in is our __profit__: the revenue we make
+from selling skateboards, minus the cost of producing them. Can you find an
+equation that expresses our  _{.pill.yellow}profit_ in terms of just the
+_{.pill.purple}price_ of every skateboard?
 
     x-equation-system
       table
@@ -98,21 +96,22 @@ different prices:
 ---
 > id: intro-chart
 
-Now we can draw all of these points in a coordinate system, and connect them
-with a line:
+Now we can plot all these points in a coordinate system, and connect them with
+a line:
 
     x-coordinate-system(width=640 height=400 x-axis="-20|200|20" x-label="price/$" y-axis="-100000|100000|20000" y-label="profit/$" margins="10 10 10 10" animate)
       .region.r1(style="top: 48%; height: 46%; left: 6%; width: 6%;")
       .region.r2(style="top: 26%; height: 40%; left: 79%; width: 21%;")
 
-The graph of [linear functions](gloss:linear-function) is always a straight
-line. As you can see above, the graph of [quadratic function](gloss:quadratic-function)
-is curved. It even has a specific name: a [__Parabola__](gloss:parabola).
+You’ll remember that the graph of a [linear function](gloss:linear-function) is
+always a straight line. But as you saw above, the graph of a [quadratic
+function](gloss:quadratic-function) is curved. It even has a specific name: a
+[__Parabola__](gloss:parabola).
 
 If the [price is 0](->.r1), our profit is negative, because we’re just
 giving away expensive skateboards for free. As the price increases, our
 profits rise, too. However, if the skateboards become [too expensive](->.r2),
-people no longer want to buy them and the profit falls again.
+people no longer want to buy them and our profit falls again.
 
 We can maximise our profit by pricing the skateboards at approximately
 $[[105...115]].
@@ -122,13 +121,13 @@ $[[105...115]].
 
     figure: x-media(src="images/skater-2.jpg" width=400 height=352)
 
-In the real word, it can be very hard for companies to determine a precise
+In the real word, it can be very difficult for companies to determine a precise
 equation for their profit – and it is likely to me much more complicated than
 this example.
 
 Still, quadratic equations appear everywhere in nature, engineering and
-economics. In this course you will learn many different methods for solving
-them and understanding their graphs.
+economics. In this course you will learn different methods for solving
+quadratic equations and to understand their graphs.
 
 
 
