@@ -155,10 +155,11 @@ export function payItForward($step) {
 }
 
 export function payItForward2($step) {
-  $step.model.set('check', (expr, Expression) => {
+  const $equation = $step.$('x-equation');
+  $equation.validate = (expr, Expression) => {
     const close = Expression.parse('3^n');
     if (Expression.numEquals(expr, close)) return {error: 'pay-it-forward-close'};
-  });
+  };
 }
 
 

@@ -701,10 +701,10 @@ temple that was _exactly twice_ the volume of the existing one.
 {.caption} A reconstruction of a temple in Delphi
 :::
 
-Note that _doubling the volume_ is not the same as _doubling the side of the
+Note that _doubling the volume_ is not the same as _doubling an edge of the
 cube_. In fact, if the [[3-dimensional|2-dimensional|1-dimensional]] volume
 increases by a factor of 2, the [[1-dimensional|3-dimensional|2-dimensional]]
-side of the cube will increase by a factor of `root(3)(2)`.
+edge of the cube will increase by a factor of `root(3)(2)`.
 
 ---
 > id: impossible-1

@@ -1027,6 +1027,10 @@ equal to the square of the tangent segment.
 
 ### Thales' Theorem
 
+Proof using isosceles triangles
+
+Combines all of Euclidean Geometry
+
 {.todo} TODO
 
 

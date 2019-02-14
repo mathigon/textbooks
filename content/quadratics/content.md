@@ -67,16 +67,16 @@ from selling skateboards, minus the cost of producing them. Can you find an
 equation that expresses our  _{.pill.yellow}profit_ in terms of just the
 _{.pill.purple}price_ of every skateboard?
 
-    x-equation-system
+    x-equation-system(steps="demand*price-(5000 + 30*demand) | (2800-15*price)*price-5000-30*(2800-15*price)")
       table
         tr
           td: em.pill.yellow profit
           td= '='
-          td #[em.pill.green revenue] – #[em.pill.orange cost]
+          td #[em.pill.green revenue] − #[em.pill.orange cost]
         tr
           td
           td= '='
-          td: x-equation(solution="-15 * price^2 + 3250 * price - 89000" validate="check" fns="" vars="revenue cost demand price" vars-required="")
+          td: x-equation(solution="-15 × price^2 + 3250 × price - 89000" vars="revenue cost demand price" vars-required="")
 
 ---
 > id: intro-table

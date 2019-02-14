@@ -83,7 +83,9 @@ export function introTable($step) {
 }
 
 export function intro4($step) {
-  $step.model.set('check', (expr, Expression) => {
+  const $system = $step.$('x-equation-system');
+
+  $system.validate = (expr, Expression) => {
     const solution = Expression.parse('-15 * price^2 + 3250 * price - 89000');
     const vars = {
       cost: Expression.parse('89000 - 450 price'),
@@ -93,9 +95,19 @@ export function intro4($step) {
 
     return {
       isCorrect: Expression.numEquals(expr.substitute(vars), solution),
-      isFinal: expr.variables.length === 1 && expr.functions.indexOf('^') >= 0,
+      isFinal: expr.variables.length === 1 && expr.functions.indexOf('sup') >= 0,
     };
+  };
+
+  $system.on('solve-row', ({$math}) => {
+    for (let $mi of $math.$$('mi')) {
+      if ($mi.text === 'revenue') $mi.addClass('pill green');
+      if ($mi.text === 'cost') $mi.addClass('pill orange');
+      if ($mi.text === 'demand') $mi.addClass('pill teal');
+      if ($mi.text === 'price') $mi.addClass('pill purple');
+    }
   });
+
 }
 
 

@@ -696,7 +696,7 @@ _{span.n}[[243]]*{span.arrow}×3*_, …
 Using the [explicit formula](gloss:sequence-explicit) for geometric sequences,
 we can work out how many new people are affected at any step:
 
-{.text-center} `x_n` = _{x-equation(solution="3^(n-1)" validate="check")}_
+{.text-center} `x_n` = _{x-equation(solution="3^(n-1)")}_
 
 ---
 > id: pay-it-forward-3
@@ -954,7 +954,7 @@ whole number can be written as the sum of at most three triangle numbers:
 :::
 
 {.reveal(when="slide")} The fact that this works for _all_ whole numbers was
-first proven in 1796 by the German mathematician [Carl Friendrich
+first proven in 1796 by the German mathematician [Carl Friedrich
 Gauss](bio:gauss) – at the age of 19!
 
 ---

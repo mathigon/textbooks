@@ -1294,6 +1294,7 @@ two congruent sides. These congruent sides are called the __legs__ of the
 triangle, while the third side is called the __base__.
 
 {.todo} COMING SOON – Base angles theorem
+Proof by constructing angle bisector and using SAS result.
 
 {.todo} COMING SOON – Find the height of an Isosceles Triangles using Pythagoras
 
