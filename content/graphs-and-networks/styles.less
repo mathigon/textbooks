@@ -46,6 +46,17 @@ x-parallax.full-width {
 .handshakes .duplicate { opacity: 1; transition: opacity .5s; }
 .complete .handshakes .duplicate { opacity: 0.1; }
 .handshakes td { text-align: center; color: #666; }
+@media screen and (max-width: 1100px) {
+  .handshakes {
+    width: 100%;
+    max-width: 500px;
+    line-height: 1.4;
+  }
+  .handshakes .person {
+    margin-left: calc(50% - 12px);
+    margin-right: calc(50% - 12px);
+  }
+}
 
 .bridge { fill: #F7931E; stroke: transparent; stroke-width: 16px; }
 .water { fill: #6AB0CE; }
