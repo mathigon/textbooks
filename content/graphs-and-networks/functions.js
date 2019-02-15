@@ -789,33 +789,52 @@ export function salesman3($section) {
 }
 
 export function salesman4($step) {
-  const $box = $step.$('.tsm-box');
-  const $svg = $('svg', $box);
-  const $path = $N('path', {class: 'tsm-path'}, $svg);
-
-  const coords = [{x: 150, y: 110}, {x: 360, y: 240}, {x: 520, y: 170},
-    {x: 420, y: 400}, {x: 120, y: 340}, {x: 330, y: 60}];
-
-  let matrix = tabulate(null, coords.length, coords.length);
+  const $svg = $step.$('.tsm svg');
+  const $bg = $N('rect', {width: 760, height: 480}, $svg);
+  const $path = $N('path', {}, $svg);
+  let points = [];
 
   function redraw() {
-    for (let i = 0; i < coords.length; ++i) {
+    if (points.length < 2) return $path.points = [];
+
+    let matrix = tabulate(null, points.length, points.length);
+    for (let i = 0; i < points.length; ++i) {
       for (let j = 0; j < i; ++j) {
-        matrix[i][j] = matrix[j][i] = Point.distance(coords[i], coords[j]);
+        matrix[i][j] = matrix[j][i] = Point.distance(points[i], points[j]);
       }
     }
-
     const tsm = travellingSalesman(matrix);
-    $path.points = tsm.path.map(i => coords[i]);
+    $path.points = tsm.path.map(i => points[i]);
   }
 
-  coords.forEach((c, i) => {
-    const $c = $N('div', { class: 'tsm-city' }, $box);
-    const drag = new Draggable($c, $box);
-    drag.on('move', function(e) {
-      coords[i] = e;
+  function addPoint(posn) {
+    const $c = $N('circle', {r: 15, cx: 0, cy: 0}, $svg);
+    const drag = new Draggable($c, $svg, {useTransform: true, responsive: true});
+
+    drag.on('move', (e) => {
+      posn.x = e.x;
+      posn.y = e.y;
       redraw();
     });
-    drag.setPosition(c.x, c.y);
+
+    drag.on('click', () => {
+      $c.remove();
+      drag.disabled = true;
+      points = points.filter(p => p !== posn);
+      redraw();
+    });
+
+    drag.setPosition(posn.x, posn.y);
+    points.push(posn);
+    redraw();
+  }
+
+  $bg.on('click', (e) => {
+    if ($path.points.length > 7) return;
+    addPoint(svgPointerPosn(e, $svg))
   });
+
+  const initial = [{x: 150, y: 110}, {x: 360, y: 240}, {x: 520, y: 170},
+    {x: 420, y: 400}, {x: 120, y: 340}, {x: 330, y: 60}];
+  for (let p of initial) addPoint(p);
 }

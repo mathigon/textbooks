@@ -824,11 +824,12 @@ various algorithms that find _good_ solutions, even if they may not be the very
 best one. These algorithms, which only give approximate solutions, are called
 __Heuristics__.
 
-Try rearranging the cities on this map. You can remove cities by clicking on
-them, and you can add cities by clicking anywhere on the map.
+Try rearranging the cities on this map, and watch how the shortest path between
+them changes. You can remove cities by tapping them, and you can add cities by
+clicking anywhere on the map:
 
-    .tsm-wrap.frame.fill.clearfix
-      .tsm-box: svg
+    figure: .tsm
+      svg(width=760 height=480 viewBox="0 0 760 480")
 
 ---
 > id: salesman-5

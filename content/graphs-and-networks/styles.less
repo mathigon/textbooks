@@ -111,11 +111,14 @@ x-parallax.full-width {
 #dominoes g text { fill: #F2F2F2; font-size: 18px; letter-spacing: -1px; }
 #dominoes g { transform-origin: bottom right; transition: transform .1s linear; }
 
-.tsm-wrap { height: 450px; padding: 15px; }
-.tsm-box { height: 450px; position: relative; }
-.tsm-box svg { width: 100%; height: 100%; }
-.tsm-city { width: 30px; height: 30px; margin: -15px; background: #C00; position: absolute; top: 0; border-radius: 20px; cursor: move; }
-.tsm-path { fill: none; stroke: #00C; stroke-width: 6; }
+.tsm {
+  background: url(/resources/graphs-and-networks/images/map.jpg);
+  background-size: cover;
+  border-radius: 6px;
+  rect { fill: transparent; cursor: pointer; }
+  circle { fill: @red; cursor: move; }
+  path { fill: none; stroke: @blue; stroke-width: 6; }
+}
 
 .vertex-orders text { font-size: 18px; fill: #FFF; }
 .vertex-orders circle { transition: fill .5s; }
