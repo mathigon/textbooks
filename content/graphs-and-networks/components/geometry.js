@@ -9,23 +9,24 @@ import { list, tabulate } from '@mathigon/core';
 import { permutations } from '@mathigon/fermat';
 
 export function travellingSalesman(dist) {
-  let n = dist.length;
-  let cities = list(n);
+  const n = dist.length;
+  const cities = list(n);
 
   let minLength = Infinity;
   let minPath = null;
 
-  permutations(cities).forEach(function(path) {
+  loop1:
+  for (let path of permutations(cities)) {
     let length = 0;
     for (let i = 0; i < n - 1; ++i) {
       length += dist[path[i]][path[i+1]];
-      if (length > minLength) return;
+      if (length > minLength) continue loop1;
     }
     if (length < minLength) {
       minLength = length;
       minPath = path;
     }
-  });
+  }
 
   return { path: minPath, length: minLength };
 }

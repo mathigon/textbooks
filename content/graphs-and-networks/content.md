@@ -817,6 +817,7 @@ possible paths becomes impossible, even using powerful computers.
 
 ---
 > id: salesman-4
+> goals: move
 
 Unfortunately there is no more efficient algorithm to solve the travelling
 salesman problem. Instead, mathematicians and computer scientists have developed
@@ -826,7 +827,7 @@ __Heuristics__.
 
 Try rearranging the cities on this map, and watch how the shortest path between
 them changes. You can remove cities by tapping them, and you can add cities by
-clicking anywhere on the map:
+clicking anywhere on the map (up to 8):
 
     figure: .tsm
       svg(width=760 height=480 viewBox="0 0 760 480")

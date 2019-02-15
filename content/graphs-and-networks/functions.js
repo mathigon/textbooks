@@ -792,7 +792,9 @@ export function salesman4($step) {
   const $svg = $step.$('.tsm svg');
   const $bg = $N('rect', {width: 760, height: 480}, $svg);
   const $path = $N('path', {}, $svg);
+
   let points = [];
+  let move = 0;
 
   function redraw() {
     if (points.length < 2) return $path.points = [];
@@ -822,6 +824,11 @@ export function salesman4($step) {
       drag.disabled = true;
       points = points.filter(p => p !== posn);
       redraw();
+    });
+
+    drag.on('end', () => {
+      move += 1;
+      if (move >= 3) $step.score('move');
     });
 
     drag.setPosition(posn.x, posn.y);
