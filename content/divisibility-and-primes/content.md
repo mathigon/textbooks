@@ -838,7 +838,7 @@ Therefore the lcm of __{.m-blue}12__, __{.m-green}30__ and __{.m-yellow}45__ is
 > id: race6
 
 A special case are prime numbers: the lcm of two different primes is simply 
-heir [[product|sum|difference]], because they don’t have any common prime
+their [[product|sum|difference]], because they don’t have any common prime
 factors which would get “canceled”.
 
     //- TODO Exercises
@@ -910,9 +910,9 @@ _{span.number-ball.l-blue-green}3_ &nbsp;=&nbsp; 6.
 
 Now we have a simple method for finding the gcd of two numbers:
 
-  ol.proof
-    li Find the prime factorisation of each number.
-    li Multiple the prime factors which are in both numbers.
+    ol.proof
+      li Find the prime factorisation of each number.
+      li Multiple the prime factors which are in both numbers.
 
 Once again prime numbers are special: the gcd of two different primes is always
 [[1]], because they don’t share any prime factors.
@@ -945,7 +945,7 @@ appear in regular intervals, say every 6 years.
 
 Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1} years
 (${isPrime(n) ? 'prime' : 'not prime'}). The two animals would meet every
-${lcm(n, 6)} years, which is the [[lcm|gcd|product]] of 6 and ${n}.
+${lcm(n,6)} years, which is the [[lcm|gcd|product]] of 6 and ${n}.
 
     figure
       include svg/cicadas.svg
