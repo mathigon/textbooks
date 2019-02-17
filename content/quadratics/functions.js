@@ -70,33 +70,13 @@ function compare(params, paramsExp, type) {
 // -----------------------------------------------------------------------------
 // Introduction
 
-export function introChart($step) {
-  const $chart = $step.$('x-coordinate-system');
-  const f = (x => -15 * x * x + 3250 * x - 89000);
-
-  $chart.setFunctions(f);
-  $chart.drawPoints(list(0, 180, 20).map(p => new Point(p, f(p))));
-}
-
-export function introTable($step) {
-  $step.addHint('calculator');
-}
-
 export function intro4($step) {
   const $system = $step.$('x-equation-system');
 
-  $system.validate = (expr, Expression) => {
-    const solution = Expression.parse('-15 * price^2 + 3250 * price - 89000');
-    const vars = {
-      cost: Expression.parse('89000 - 450 price'),
-      demand: Expression.parse('2800 - 15 price'),
-      revenue: Expression.parse('2800 price - 15 price^2')
-    };
-
-    return {
-      isCorrect: Expression.numEquals(expr.substitute(vars), solution),
-      isFinal: expr.variables.length === 1 && expr.functions.indexOf('sup') >= 0,
-    };
+  $system.isFinal = (expr) => {
+    const str = expr.toString();
+    return (expr.variables.length === 1) && expr.functions.includes('sup')
+        && str.includes('89000') && str.includes('3250') && !str.includes('(');
   };
 
   $system.on('solve-row', ({$math}) => {
@@ -107,7 +87,18 @@ export function intro4($step) {
       if ($mi.text === 'price') $mi.addClass('pill purple');
     }
   });
+}
 
+export function introTable($step) {
+  $step.addHint('calculator');
+}
+
+export function introChart($step) {
+  const $chart = $step.$('x-coordinate-system');
+  const f = (x => -15 * x * x + 3250 * x - 89000);
+
+  $chart.setFunctions(f);
+  $chart.drawPoints(list(0, 180, 20).map(p => new Point(p, f(p))));
 }
 
 

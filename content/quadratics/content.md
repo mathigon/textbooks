@@ -20,7 +20,7 @@ for the skateboards – and it turns out that building them is not cheap:
 
 In other words, the __cost__ of producing _n_ skateboards is
 
-{.text-center} _{.pill.orange}cost_ = _{x-equation(solution="5000+30*n")}_.
+{.text-center} _{.pill.orange}cost_ = _{x-equation(solution="5000+30×n")}_.
 
 ---
 > id: demand
@@ -55,7 +55,7 @@ For example, if a skateboard costs $80, the demand will be [[1600]] units.
 ---
 > id: intro4
 
-    img.text-wrap.s-hide(src="images/skater-3.jpg" style="shape-outside: url(images/skater-3-mask.png)" width=280 height=480)
+    //- img.text-wrap.s-hide(src="images/skater-3.jpg" style="shape-outside: url(images/skater-3-mask.png)" width=280 height=480)
 
 The __revenue__ of our company is the total income we make. It is the number of
 skateboards sold (the _demand_) times the price of each:
@@ -67,7 +67,7 @@ from selling skateboards, minus the cost of producing them. Can you find an
 equation that expresses our  _{.pill.yellow}profit_ in terms of just the
 _{.pill.purple}price_ of every skateboard?
 
-    x-equation-system(steps="demand*price-(5000 + 30*demand) | (2800-15*price)*price-5000-30*(2800-15*price)")
+    x-equation-system(steps="demand*price-(5000 + 30*demand) | (2800-15*price)*price-5000-30*(2800-15*price)" hints="intro-1|intro-2|intro-3")
       table
         tr
           td: em.pill.yellow profit
@@ -76,7 +76,7 @@ _{.pill.purple}price_ of every skateboard?
         tr
           td
           td= '='
-          td: x-equation(solution="-15 × price^2 + 3250 × price - 89000" vars="revenue cost demand price" vars-required="")
+          td: x-equation(solution="-15 × price^2 + 3250 × price - 89000" substitutions="cost: 89000 - 450 price | demand: 2800 - 15 price | revenue: 2800 price - 15 price^2")
 
 ---
 > id: intro-table
@@ -89,9 +89,13 @@ for square.
 To work out how to maximise our profit, let’s calculate the profit for a few
 different prices:
 
+::: .overflow-wrap
+
 | _{.pill.purple}price/$_  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
-| _{.pill.yellow}profit/$_ | –30k | –17k | 52k | 75k | 86k | 85k | 72k | 47k | 10k |
+| _{.pill.yellow}profit/$_ | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
 {.grid}
+
+:::
 
 ---
 > id: intro-chart
