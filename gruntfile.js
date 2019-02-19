@@ -71,7 +71,7 @@ grunt.initConfig({
   },
 
   textbooks: {
-    options: {languages: ['en'], cache: true},
+    options: {languages: ['en', 'ru'], cache: true},
     app: {
       files: [{
         expand: true,
@@ -103,7 +103,7 @@ grunt.initConfig({
       tasks: ['rollup']
     },
     textbooks: {
-      files: ['content/*/*.md'],
+      files: ['content/**/*.md'],
       tasks: ['textbooks']
     }
   },
