@@ -511,7 +511,7 @@ The Polish mathematician [Stanisław Ulam](bio:ulam) came up with a cool way to
 show the distribution of large prime numbers, while doodling during a _“long and
 very boring”_ meeting in 1963.
 
-    .number-grid(style="max-width: 392px")
+    .number-grid.ulam-grid
       for x in [37, 36, 35, 34, 33, 32, 31]
         .number-cell(data-display="visibility")= x
       for x in [38, 17, 16, 15, 14, 13, 30]
