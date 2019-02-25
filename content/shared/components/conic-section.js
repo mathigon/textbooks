@@ -7,15 +7,15 @@
 
 /* global THREE */
 import {tabulate, clamp} from '@mathigon/core';
-import {$N, CustomElement, registerElement, slide} from '@mathigon/boost';
-import { loadTHREE } from './webgl';
+import {CustomElement, registerElement, slide} from '@mathigon/boost';
+import {create3D} from './webgl';
 
 
 // -----------------------------------------------------------------------------
 // Constants
 
-const width = 760 * 4;
-const height = 300 * 4;
+const width = 760 * 2;
+const height = 300 * 2;
 const coneHeight = 200;
 const coneTop = 8;
 const bounds = [[-6, 50], [-25, 25]];
@@ -60,20 +60,10 @@ function getTubeGeo(angle=0) {
 
 export class ConicSection extends CustomElement {
 
-  ready() {
-    this.$canvas = $N('canvas', {width, height}, this);
-    this.$canvas.css('max-width', '100%');
-    loadTHREE().then(() => setTimeout(() => this.setUp(), 100));
-  }
-
-  setUp() {
-    const scene = new THREE.Scene();
-
-    // Set up Camera
-    const camera = new THREE.PerspectiveCamera(25, width/height, 0.1, 1000);
-    camera.position.set(centerX, 32, 66);
-    camera.lookAt(centerX, 0, 0);
-    scene.add(camera);
+  async ready() {
+    const scene = await create3D(this, 25, width, height);
+    scene.camera.position.set(centerX, 32, 66);
+    scene.camera.lookAt(centerX, 0, 0);
 
     // Ambient Lights
     const ambientLight = new THREE.AmbientLight(0x888888);
@@ -118,39 +108,28 @@ export class ConicSection extends CustomElement {
     torch.position.y = coneTop;
     scene.add(torch);
 
-    // Renderer
-    const renderer = new THREE.WebGLRenderer();
-    renderer.localClippingEnabled = true;
-    renderer.setClearColor(0xffffff, 1);
-    renderer.setSize(width, height);
-    renderer.render(scene, camera);
-
-    // Context
-    const context = this.$canvas.getContext();
-    context.drawImage(renderer.domElement, 0, 0);
-
     // Update Function
-    this.angle = 0;
+    let angle = 0;
     this.update = (a) => {
-      this.angle = a;
+      angle = a;
       tube.geometry = getTubeGeo(a);
       torch.rotation.z = a;
       cone.rotation.z = a;
       cone.position.x = coneHeight * Math.sin(a) / 2;
       cone.position.y = coneTop - coneHeight * Math.cos(a) / 2;
-      renderer.render(scene, camera);
-      context.clearRect(0, 0, width, height);
-      context.drawImage(renderer.domElement, 0, 0);
+      scene.draw();
       this.trigger('rotate', a);
     };
 
     // Sliding Animation
-    slide(this.$canvas, {
+    slide(scene.$canvas, {
       move: (posn, start, last) => {
-        const a = clamp(this.angle + (posn.x - last.x) / 800, 0, 1.25);
+        const a = clamp(angle + (posn.x - last.x) / 800, 0, 1.25);
         this.update(a);
       }
     });
+
+    scene.draw();
   }
 }
 

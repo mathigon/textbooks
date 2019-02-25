@@ -5,6 +5,7 @@
 
 
 @import "styles/variables";
+@import "../shared/components/solid";
 @import "./components/tessellation";
 @import "./components/anibutton";
 
@@ -48,12 +49,6 @@
 .plato {
   margin: 0 -12px 1.5em !important;
   p:first-child, x-polyhedron { margin-bottom: .5em; }
-}
-
-x-polyhedron, x-folding {
-  display: block;
-  margin: 0 auto;
-  canvas { width: 100%; height: 100%; }
 }
 
 #platonic-overview .dual { transition: opacity .3s; }

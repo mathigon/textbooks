@@ -5,55 +5,43 @@
 
 
 
-/* global THREE */
-import { faceMaterial, drawShape, colour, loadTHREE } from '../../shared/components/webgl';
-import { $N, CustomElement, registerElement } from '@mathigon/boost';
-import { trianglePoints, triangleOffset } from './polygons'
+import {registerElement} from '@mathigon/boost';
+import {Solid} from '../../shared/components/solid';
+import {trianglePoints, triangleOffset} from './polygons'
 
 
 const COLOURS = [0xff941f, 0xec7031, 0xd94c44, 0xc62857, 0xb30469];
 
-function getTetrahedron(layers) {
-  const tetrahedron = new THREE.Object3D();
-  const geometry = new THREE.SphereGeometry(0.5, 128, 128);
+export class Tetrahedron extends Solid {
 
-  for (let i=0; i <= layers; ++i) {
-    const points = trianglePoints(i);
-    const dz = triangleOffset(i, layers);
-
-    const material = faceMaterial().clone();
-    material.color = colour(COLOURS[i]);
-
-    for (let p of points) {
-      const sphere = new THREE.Mesh(geometry, material);
-      sphere.translateX(p.x).translateY(p.y).translateZ(-dz);
-      tetrahedron.add(sphere);
-    }
-  }
-
-  return tetrahedron;
-}
-
-// -----------------------------------------------------------------------------
-
-export class Tetrahedron extends CustomElement {
-
-  ready() {
-    this.size = +this.attr('size');
-    this.css({width: this.size + 'px', height: this.size + 'px'});
-
-    loadTHREE().then(() => this.setUp());
-  }
-
-  setUp() {
-    const size2 = 2 * this.size;
-    const $canvas = $N('canvas', {width: size2, height: size2}, this);
+  created() {
     const layers = +this.attr('layers');
+    if (layers > 1) this.setAttr('rotate', '1');
 
-    setTimeout(() => {
-      const spheres = getTetrahedron(layers -  1);
-      drawShape($canvas, spheres, this.size, layers > 1);
-    }, 100);
+    this.addMesh((scene, THREE) => {
+      const tetrahedron = new THREE.Object3D();
+      const geometry = new THREE.SphereGeometry(0.34, 64, 64);
+
+      for (let i = 0; i < layers; ++i) {
+        const points = trianglePoints(i);
+        const dy = triangleOffset(i, layers) + 0.5;
+
+        const material = new THREE.MeshPhongMaterial({
+          transparent: true,
+          opacity: 0.9,
+          specular: 0x222222,
+          color: COLOURS[i]
+        });
+
+        for (let p of points) {
+          const sphere = new THREE.Mesh(geometry, material);
+          sphere.position.set(p.x * 0.65, -dy * 0.65, p.y * 0.65);
+          tetrahedron.add(sphere);
+        }
+      }
+
+      return [tetrahedron];
+    });
   }
 }
 

@@ -6,10 +6,32 @@
 
 
 /* global THREE */
-import { faceMaterial, drawShape, drawFace, loadTHREE } from '../../shared/components/webgl';
-import { FoldingData } from './folding-data';
-import { $N, CustomElement, registerElement } from '@mathigon/boost';
+import {$N, CustomElement, registerElement} from '@mathigon/boost';
+import {create3D} from '../../shared/components/webgl';
+import {FoldingData} from './folding-data';
 
+
+const colours = {
+  3: 0xff941f,  // yellow
+  4: 0x1f7aff,  // blue
+  5: 0x31b304,  // green
+  6: 0xb30469,  // red
+  8: 0x693fb4,  // violet
+  10: 0x289782  // teal
+};
+
+function drawFace(face, vertices) {
+  const faceGeometry = new THREE.Geometry();
+  faceGeometry.vertices = vertices;
+  for (let i = 1; i < face.length - 1; i++) {
+    const faceObj = new THREE.Face3(face[0], face[i], face[i+1]);
+    faceObj.color = new THREE.Color(colours[face.length]);
+    faceGeometry.faces.push(faceObj);
+  }
+  faceGeometry.computeFaceNormals();
+  faceGeometry.computeVertexNormals();
+  return faceGeometry;
+}
 
 function getFolding(data) {
   const vertices = data.vertices.map(v => new THREE.Vector3(v[0], v[1], v[2]));
@@ -21,7 +43,17 @@ function getFolding(data) {
 
     const face = data.net[f];
     const faceGeometry = drawFace(face, vertices);
-    node.add(new THREE.Mesh(faceGeometry, faceMaterial()));
+
+    const faceMaterial = new THREE.MeshPhongMaterial({
+      vertexColors: THREE.FaceColors,
+      side: THREE.DoubleSide,
+      transparent: true,
+      opacity: 0.9,
+      specular: 0x222222,
+      flatShading: true
+    });
+
+    node.add(new THREE.Mesh(faceGeometry, faceMaterial));
 
     let s1 = face[side];
     let s2 = face[(side + 1) % face.length];
@@ -67,39 +99,32 @@ function updateHinges(polyhedron, p) {
 
 export class Folding extends CustomElement {
 
-  ready() {
-    loadTHREE().then(() => this.setUp());
-  }
-
-  setUp() {
+  async ready() {
+    const size = +this.attr('size');
     const shape = this.attr('shape');
+
+    this.css({width: size + 'px'});
+
     const data = FoldingData[shape];
     if (!data) return console.error('Unknown folding:', shape);
 
-    const size = +this.attr('size');
-    this.css({width: size + 'px' });
+    const scene = await create3D(this, 35, 2 * size);
+    scene.camera.position.set(0, 0, 25);
+    scene.camera.up = new THREE.Vector3(0, -1, 0);
+    scene.camera.lookAt(0, 0, 0);
 
-    const $canvas = $N('canvas', {width: 2*size, height: 2*size}, this);
+    const polyhedron = getFolding(data);
+    scene.add(polyhedron);
+
     const $slider = $N('x-slider', {steps: 100}, this);
+    $slider.on('move', p => {
+      updateHinges(polyhedron, p/100);
 
-    setTimeout(() => {
-      const polyhedron = getFolding(data);
-      const {camera} = drawShape($canvas, polyhedron, size);
-
-      camera.position.set(0, 0, 25);
-      camera.up = new THREE.Vector3(0, -1, 0);
-      camera.lookAt(0, 0, 0);
-
-      $slider.on('move', p => {
-        updateHinges(polyhedron, p/100);
-
-        const a = 0.5 * (p/100) * Math.PI / 2;
-        const r = 25 - p/100 * 15;
-        camera.position.set(0, r * Math.sin(a), r * Math.cos(a));
-        camera.lookAt(0,0,0);
-      });
-
-    }, 100);
+      const a = 0.5 * (p/100) * Math.PI / 2;
+      const r = 25 - p/100 * 15;
+      scene.camera.position.set(0, r * Math.sin(a), r * Math.cos(a));
+      scene.camera.lookAt(0,0,0);
+    });
   }
 }
 
