@@ -1064,66 +1064,192 @@ and only if the opposite angles are supplementary.
 --------------------------------------------------------------------------------
 > sectionStatus: dev
 > section: spheres-cones-cylinders
-
+> id: solids
 
 
 ## Spheres, Cones and Cylinders
 
-After studying 
+In the previous sections, we studied the properties of circles on a flat
+surface. But our world is actually three-dimensional, so lets have a look at
+some 3D solids that are based on circles:
 
 ::: column(width=220 parent="padded-thin")
 
-    x-3d-solid(size=220 shape="cylinder")
+    x-solid(size=220)
 
-{.todo} TODO
-
-::: column(width=220)
-
-    x-3d-solid(size=220 shape="cone")
-
-{.todo} TODO
+{.text-center} A [__cylinder__](gloss:cylinder) consists of two congruent,
+parallel circles joined by a curved surface. 
 
 ::: column(width=220)
 
-    x-3d-solid(size=220 shape="sphere")
+    x-solid(size=220)
 
-{.todo} TODO
+{.text-center} A [__cone__](gloss:cone) has a circular base that is joined to 
+a single point (called the vertex).
+
+::: column(width=220)
+
+    x-solid(size=220)
+
+{.text-center} Every point on the surface of a [__sphere__](gloss:sphere) has
+the same distance from its center.
+
+:::
+
+Notice how the definition of a sphere is almost the same as the definition of a
+[[circle|radius|cube]] – except in three dimensions!
+
+---
+> id: gasometer
+
+### Cylinders
+
+::: column.grow
+
+Here you can see the cylindrical _Gasometer_ in Oberhausen, Germany, which used
+to store natural gas which was used as fuel in nearby factories and power
+plants. It is 120m tall, and its base and ceiling are two large circles with
+radius 35m. There are two important questions that engineers might have to
+answer:
+
+* How much natural gas can be stored? This is the [[volume|area|diameter]] of
+  the cylinder.
+* {.reveal(when="blank-0")} How much steel is needed to build the Gasometer?
+  This is (approximately) the [[surface area|circumference|diagonal]] of the
+  cylinder.
+
+{.reveal(when="blank-0 blank-1")} Let’s try to find formulas for both these
+results!
+
+::: column(width=300)
+
+    x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
+
+{.caption} Gasometer Oberhausen
 
 :::
 
 ---
+> id: cylinder-prism
 
-__[CC] Give an informal argument for the formulas for the volume of a cylinder
-and cone. Use dissection arguments, Cavalieri’s principle, and informal limit
-arguments.__
+#### Volume of a Cylinder
 
-* https://en.wikipedia.org/wiki/Cavalieri%27s_principle
-* https://www.bbc.com/bitesize/guides/zcsgdxs/revision/9
+The top and bottom of a cylinder are two congruent circles, called __bases__.
+The __{.m-blue} height__ of a cylinder is the perpendicular distance between
+these bases, and the __{.m-red} radius__ of a cylinder is simply the radius of
+the circles.
 
-### Cylinders
+We can approximate a cylinder using a ${n}{n|5|3,20,1}-sided
+[__prism__](gloss:prism). As the number of sides increases, the prism starts to
+look more and more like a cylinder:
 
-A cylinder is a solid with congruent circular bases that are in parallel planes.
-The space between the circles is enclosed. Just like a circle, the cylinder has
-a radius for each of the circular bases. Also, like a prism, a cylinder can be
-oblique, like the one to the right.
+::: column(width=240)
 
-Surface area is the sum of the areas of the faces. Let’s find the net of a right
-cylinder. One way for you to do this is to take a label off of a soup can or can
-of vegetables. When you take this label off, we see that it is a rectangle where
-the height is the height of the cylinder and the base is the circumference of
-the base. This rectangle and the two circular bases make up the net of a
-cylinder.
+    x-solid(size=240)
 
-Surface Area of a Cylinder: If r is the radius of the base and h is the
-height of the cylinder, then the surface area is `A = 2πr^2 + 2πrh`.
+::: column(width=240)
 
-Volume of a Cylinder: If the height of a cylinder is h and the radius is r, then
-the volume would be `V = πr^2h`.
+    x-solid(size=240)
 
-If an oblique cylinder has the same base area and height as another cylinder,
-then it will have the same volume. This is due to Cavalieri’s Principle, which
-states that if two solids have the same height and the same cross-sectional
-area at every level, then they will have the same volume.
+:::
+
+---
+> id: cylinder-volume
+
+Even though a cylinder is technically not a prism, they share many properties.
+In both cases, we can find the volume by multiplying the area of their
+__{.m-red} base__ with their __{.m-blue} height__. This means that a
+cylinder with radius _{.b.m-red} r_ and height _{.b.m-blue} h_ has volume
+
+{.text-center} `V =` _{x-equation(solution="π × r^2 h" keys="+ − × ÷ π frac sup brackets")}_
+
+{.reveal(when="eqn-0")} Remember that radius and height must use the same units.
+For example, if _r_ and _h_ are both in cm, then the volume will be in
+[[`"cm"^3`|`"cm"^2`|cm]].
+
+---
+> id: oblique-cylinder
+
+::: column.grow
+
+In the examples above, the two bases of the cylinder were always _directly above
+each other_: this is called a __right cylinder__. If the bases are not directly
+above each other, we have an __oblique cylinder__. The bases are still parallel,
+but the sides seem to “lean over” at an angle that is not 90°.
+
+    x-solid(size=240 static)
+
+::: column(width=300)
+
+    x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
+
+{.caption} The _Tower of Pisa_ in Italy is not quite an oblique cylinder.
+
+:::
+
+---
+> id: cavalieri
+
+The volume of an oblique cylinder turns out to be exactly the same as that of a
+right cylinder with the same radius and height. This is due to [__Cavalieri’s
+Principle__](gloss:cavalieri), named after the Italian mathematician
+[Bonaventura Cavalieri](bio:cavalieri). If two solids have the same
+cross-sectional area at every height, then they will have the same volume.
+
+Imagine slicing a cylinder into lots of thin disks. We can then slide these
+disks horizontal to get an oblique cylinder. The volume of the individual discs
+does not change as you make it oblique, therefore the total volume also remains
+constant:
+
+    .fixme
+      x-solid(size=220)
+      x-slider(steps=100 speed=0.5)
+
+    // TODO You must always use the _perpendicular_ height. This is
+    // the vertical line to left in the figure above.
+
+    // TODO Volume of horizontal cylinder segments
+    // https://www.mathopenref.com/cylindervolpartial.html
+
+---
+> id: cylinder-surface
+
+#### Surface Area of a Cylinder
+
+::: column.grow
+
+To find the surface area of a cylinder, we have to "unroll" it into its flat
+[net](gloss:net). You can try this yourself, for example by peeling off the
+label on can of soup.
+
+There are two [[circles|spheres|squares]], one at the top and one at the bottom
+of the cylinder. The curved side is actually a large [[rectangle|square|ellipse]].
+
+* {.fixme} The two circles each have area _{x-equation(solution="pi r^2")}_.
+* {.fixme} The height of the rectangle is [[h]] and the width of the rectangle if the
+  same as the [[circumference]] of the circles: _{x-equation(solution="2 pi r")}_.
+
+::: column(width=320)
+
+    .fixme
+      x-solid(size=320)
+      x-slider(steps=100 speed=0.5)
+
+:::
+
+{.fixme} This means that the total surface area of a cylinder with radius r and
+height h is `A = 2πr^2 + 2πrh`.
+
+---
+> id: cylinder-real-life
+
+    figure: x-media(src="images/cylinders.jpg" width=460 height=125)
+
+Cylinders can be found everywhere – from soda cans to toilet paper or water
+pipes. Can you think of any other examples?
+
+{.fixme} The _Gasometer_ above had a radius of 35m and a height of 120m. We can now
+calculate that its volume is [[460,000]]m3 and its surface area is [[10]]m2.
 
 ---
 
@@ -1138,6 +1264,11 @@ leg in a circle. Notice that a cone has a slant height, just like a pyramid.
 We know that the base is a circle, but we need to find the formula for the
 curved side that tapers up from the base. Unfolding a cone, we have the net:
 
+---
+> id: cone-surface
+
+::: column.grow
+
 From this, we can see that the lateral face’s edge is 2πr and the sector of a
 circle with radius l. We can find the area of the sector by setting up a
 proportion.
@@ -1145,6 +1276,13 @@ proportion.
 If the bases of a cone and a cylinder are the same, then the volume of a cone
 will be one-third the volume of the cylinder. Volume of a Cone: If r is the
 radius of a cone and h is the height, then the volume is V=13πr2h.
+
+::: column(width=300)
+
+    x-solid(size=300)
+    x-slider(steps=100 speed=0.5)
+
+:::
 
 ---
 
@@ -1215,6 +1353,15 @@ volume of the cylinder:
 There is no easy way to see why this equation is true (for example by dividing
 the solids into small slices). However, if you had three containers of exactly
 this volume, you could fill them with water and observe tha
+
+
+
+__[CC] Give an informal argument for the formulas for the volume of a cylinder
+and cone. Use dissection arguments, Cavalieri’s principle, and informal limit
+arguments.__
+
+* https://en.wikipedia.org/wiki/Cavalieri%27s_principle
+* https://www.bbc.com/bitesize/guides/zcsgdxs/revision/9
 
 
 
