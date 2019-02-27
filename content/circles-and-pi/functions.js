@@ -501,7 +501,7 @@ export function smallAngle($step) {
 // -----------------------------------------------------------------------------
 // Spheres, Cones and Cylinders
 
-export async function solids($step) {
+export function solids($step) {
   const $solids = $step.$$('x-solid');
 
   $solids[0].addMesh((scene, THREE) => {
@@ -520,7 +520,7 @@ export async function solids($step) {
   });
 }
 
-export async function cylinderPrism($step) {
+export function cylinderPrism($step) {
   const $solids = $step.$$('x-solid');
 
   $solids[0].addMesh((scene, THREE) => {
@@ -559,9 +559,9 @@ export async function cylinderPrism($step) {
   $solids[1].on('rotate', (e) => $solids[0].rotate(e.quaternion));
 }
 
-export async function obliqueCylinder($step) {
+export function obliqueCylinder($step) {
   const $solid = $step.$('x-solid');
-  let angle = 1;
+  let angle = 0.5;
 
   $solid.addMesh((scene, THREE) => {
     const geo = new THREE.CylinderGeometry(1.2, 1.2, 4, 64, 1, true);
@@ -586,11 +586,10 @@ export async function obliqueCylinder($step) {
       cylinder.setRotationFromEuler(new THREE.Euler(0, 0, -angle));
       cylinder.scale.set(Math.cos(angle), 1, 1);
       scene.draw();
-      console.log(angle);
     }
 
     slide($solid, {move(p, _, last) {
-      angle += (p.x - last.x) / 100;
+      angle = clamp(angle + (p.x - last.x) / 100, -0.5, 0.5);
       update();
     }});
     update();
@@ -599,7 +598,7 @@ export async function obliqueCylinder($step) {
   });
 }
 
-export async function cavalieri($step) {
+export function cavalieri($step) {
   const $solid = $step.$('x-solid');
   const $slider = $step.$('x-slider');
 
@@ -617,7 +616,7 @@ export async function cavalieri($step) {
   });
 }
 
-export async function cylinderSurface($step) {
+export function cylinderSurface($step) {
   const $solid = $step.$('x-solid');
   const $slider = $step.$('x-slider');
   const PI = Math.PI;
@@ -652,7 +651,7 @@ export async function cylinderSurface($step) {
   });
 }
 
-export async function coneSurface($step) {
+export function coneSurface($step) {
   const $solid = $step.$('x-solid');
   const $slider = $step.$('x-slider');
   const PI = Math.PI;
@@ -693,7 +692,7 @@ export async function coneSurface($step) {
   });
 }
 
-export async function coneInCylinder($step) {
+export function coneInCylinder($step) {
   const $solid = $step.$('x-solid');
   $solid.addMesh((scene, THREE) => {
     const cylinderGeo = new THREE.CylinderGeometry(1, 1, 2, 256, 1);
