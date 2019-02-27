@@ -1,25 +1,4 @@
-welcome: Welcome to Mathigon! I’m Archie, your personal tutor.
-account: Remember to [create an account](->.nav-link.dropdown-title), to save your progress and see personalised content.
-tutorial1: Welcome to Mathigon! The content is divided into small steps, and you have to answer questions or solve puzzles to reveal the next one.
-tutorial2: We will save all your progress, so you can come back later and continue right where you left off.
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
 
-correct:
-  - "Well done :relaxed:"
-  - "Great Work! :relieved:"
-  - "Awesome :grinning:"
-  - "Brilliant :thumbsup:"
-  - "Excellent! :ok_hand:"
-  - "Cool :sunglasses:"
-  - "Nice! :v:"
-  - "Way to go! :blush:"
-  - "Sweet :relaxed:"
-  - "Impressive! :trophy:"
-  - "Outstanding :grin:"
-  - "Superb! :star:"
-  - "Wonderful! :smiley:"
-
-incorrect:
-  - "That’s not quite right :white_frowning_face:"
-  - "Are you sure about that? :thinking_face:"
-  - "That doesn’t look right. :hushed:"
-  - "Try again! :confused:"

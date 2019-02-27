@@ -37,6 +37,16 @@ archimedes:
     enter and Archimedes as killed. His last words were _“Do not disturb my
     circles”_ – which he was studying at the time.
 
+cavalieri:
+  name: Bonaventura Cavalieri
+  bio: |
+    __Bonaventura Cavalieri__ (1598 – 1647) was an Italian mathematician and
+    monk. He developed a precursor to infinitesimal calculus, and is remembered
+    for Cavalieri’s principle to find the volume of solids in geometry.
+
+    Cavalieri also worked optics and motion, introduction logarithms to Italy,
+    and exchanged many letters with Galileo Galilei.
+
 collatz:
   name: Lothar Collatz
   bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
