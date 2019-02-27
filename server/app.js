@@ -9,7 +9,7 @@ const path = require('path');
 const yaml = require('yamljs');
 const express = require('express');
 
-const locales = ['en', 'ru'];
+const locales = ['en', 'ru', 'vn'];
 
 
 // -----------------------------------------------------------------------------
@@ -53,7 +53,9 @@ const courseIds = fs.readdirSync(COURSE_PATH).filter(f => f !== 'shared')
 for (let c of courseIds) {
   Courses[c] = {};
   for (let l of locales) {
-    Courses[c][l] = new Course(c, l);
+    if (fs.existsSync(path.join(COURSE_PATH, c, l, 'data.json'))) {
+      Courses[c][l] = new Course(c, l);
+    }
   }
 }
 
