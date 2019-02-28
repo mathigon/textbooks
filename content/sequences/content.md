@@ -831,7 +831,7 @@ _multiplication_ and _square roots_ in a much more geometric way.
 However, there are many other sequences that _are_ based on certain geometric
 shapes – some of which you already saw in the [introduction](/course/sequences/introduction).
 These sequences are often called [__figurate numbers__](gloss:figurate-numbers),
-and in this section we will ave a closer look at some of them.
+and in this section we will have a closer look at some of them.
 
 ---
 > id: triangle-numbers
