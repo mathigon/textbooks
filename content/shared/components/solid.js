@@ -11,6 +11,9 @@ import {$N, Browser, CustomElement, registerElement, slide} from '@mathigon/boos
 import {create3D} from '../../shared/components/webgl';
 
 const STROKE_COLOR = 0x666666;
+const LINE_RADIUS = 0.012;
+const LINE_SEGMENTS = 4;
+const POINT_RADIUS = 0.08;
 
 
 // -----------------------------------------------------------------------------
@@ -63,7 +66,7 @@ function createEdges(geometry, material, maxAngle) {
 
   for (const edge of points) {
     const curve = new THREE.LineCurve3(edge[0], edge[1]);
-    const geometry = new THREE.TubeGeometry(curve, 1, 0.012, 4);
+    const geometry = new THREE.TubeGeometry(curve, 1, LINE_RADIUS, LINE_SEGMENTS);
     obj.add(new THREE.Mesh(geometry, material));
   }
 
@@ -78,10 +81,13 @@ function createEdges(geometry, material, maxAngle) {
 export class Solid extends CustomElement {
 
   async ready() {
-    const size = +this.attr('size');
-    this.css({width: size + 'px', height: size + 'px'});
+    const size = this.attr('size').split(',');
+    const width = +size[0];
+    const height = size.length > 1 ? +size[1] : width;
 
-    this.scene = await create3D(this, 35, 2 * size);
+    this.css({width: width + 'px', height: height + 'px'});
+
+    this.scene = await create3D(this, 35, 2 * width, 2 * height);
     this.scene.camera.position.set(0, 3, 6);
     this.scene.camera.up = new THREE.Vector3(0, 1, 0);
     this.scene.camera.lookAt(new THREE.Vector3(0, 0, 0));
@@ -168,6 +174,30 @@ export class Solid extends CustomElement {
 
     // obj.renderOrder = 100;
     this.object.add(obj);
+  }
+
+  addCircle(radius, color = STROKE_COLOR, segments = 64) {
+    const path = new THREE.Curve();
+    path.getPoint = function(t) {
+      const a = 2 * Math.PI * t;
+      return new THREE.Vector3(radius * Math.cos(a), radius * Math.sin(a), 0);
+    };
+
+    const material = new THREE.MeshBasicMaterial({color});
+    const geometry = new THREE.TubeGeometry(path, segments, LINE_RADIUS, LINE_SEGMENTS);
+
+    const mesh = new THREE.Mesh(geometry, material);
+    this.object.add(mesh);
+    return mesh;
+  }
+
+  addPoint(position, color = STROKE_COLOR) {
+    const material = new THREE.MeshBasicMaterial({color});
+    const geometry = new THREE.SphereGeometry(POINT_RADIUS, 16, 16);
+
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(...position);
+    this.object.add(mesh);
   }
 
   addSolid(geo, color, maxAngle = 5) {

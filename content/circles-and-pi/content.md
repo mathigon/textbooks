@@ -1135,9 +1135,9 @@ results!
 #### Volume of a Cylinder
 
 The top and bottom of a cylinder are two congruent circles, called __bases__.
-The __{.m-blue} height__ of a cylinder is the perpendicular distance between
-these bases, and the __{.m-red} radius__ of a cylinder is simply the radius of
-the circles.
+The __{.m-blue} height *h*__ of a cylinder is the perpendicular distance between
+these bases, and the __{.m-red} radius *r*__ of a cylinder is simply the radius
+of the circular bases.
 
 We can approximate a cylinder using a ${n}{n|5|3,20,1}-sided
 [__prism__](gloss:prism). As the number of sides increases, the prism starts to
@@ -1169,6 +1169,7 @@ For example, if _r_ and _h_ are both in cm, then the volume will be in
 
 ---
 > id: oblique-cylinder
+> goals: slide
 
 ::: column.grow
 
@@ -1177,7 +1178,8 @@ each other_: this is called a __right cylinder__. If the bases are not directly
 above each other, we have an __oblique cylinder__. The bases are still parallel,
 but the sides seem to “lean over” at an angle that is not 90°.
 
-    x-solid(size=240 static)
+    x-solid(size="300,200" static)
+    x-gesture(target="#oblique-cylinder x-solid" slide="60,0")
 
 ::: column(width=300)
 
@@ -1258,20 +1260,23 @@ calculate that its volume is [[460,000]]m3 and its surface area is [[10]]m2.
 
 ::: column.grow
 
-{.fixme} A cone is a solid with a circular base and sides taper up towards a
-common vertex.
+A [__cone__](gloss:cone) is a 3-dimensional solid that has a circular
+__{.m-red}base__. Its side “tapers upwards” as shown in the diagram, and ends
+in a single point called the __{.m-green}vertex__.
 
-{.fixme} The vertical height (or altitude) which is the perpendicular distance
-from the top down to the base. The radius of the circular base
+The __{.m-red}radius__ of the cone is the radius of the circular base, and the
+__{.m-blue}height__ of the cone is the perpendicular distance from the base
+to the vertex.
 
-::: column(width=240)
+Just like other shapes we met before, cones are everywhere around us: ice cream
+cones, traffic cones, certain roofs, and even christmas trees. What else can you
+think of?
 
-{.fixme} cone image
+::: column(width=280)
+
+    x-solid(size=280)
 
 :::
-
----
-> id: cone-applications
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1294,10 +1299,6 @@ from the top down to the base. The radius of the circular base
     x-media(src="images/tipi.jpg" width=120 height=120 lightbox)
 
 :::
-
-Just like other shapes we met before, cones are everywhere around us: ice cream
-cones, traffic cones, certain roofs, and even christmas trees. What else can you
-think of?
 
 ---
 > id: cone-volume
@@ -1376,21 +1377,22 @@ height using the Pythagorean Theorem.
 
 ::: column.grow
 
-{.fixme}
-A sphere is the set of all points, in three-dimensional space, which are
-equidistant from a point. You can think of a sphere as a three-dimensional
-circle. A sphere has a center, radius and diameter, just like a circle. The
-radius has an endpoint on the sphere and the other is on the center. The
-diameter must contain the center. 
+A [__sphere__](gloss:sphere) is a three-dimensional solid consisting of all
+points that have the same distance from a given  __{.m-green}center *C*__. This
+distance is called the __{.m-red}radius *r*__ of the sphere.
 
-{.fixme} Just like circles, a sphere also has chords, tangents and secants.
+You can think of a sphere as a “three-dimensional [circle](gloss:circle)”. Just
+like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
+[[twice|half]] the length of the radius, as well as chords and secants.
 
 ::: column(width=240)
 
-    .fixme
-      x-solid(size=240)
+    x-solid(size=240)
 
 :::
+
+---
+> id: sphere-1
 
 In a [previous section](/course/circles-and-pi/circle-parts#eratosthenes), you
 learned how the Greek mathematician [Eratosthenes](bio:eratosthenes) calculated

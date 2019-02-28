@@ -206,9 +206,9 @@ concave:
 cone:
   title: Cone
   text: |
-    A __cone__ is a solid, 3-dimensional object that has a circular _base_
-    joined to a single point (called the _vertex_) by a curved side. You could
-    also think of a cone as a “circular pyramid”.
+    A __cone__ is a 3-dimensional solid that has a circular _base_ joined to a
+    single point (called the _vertex_) by a curved side. You could also think of
+    a cone as a “circular pyramid”.
 
     A __right cone__ is a cone with its vertex directly above the center of its
     base.
@@ -306,7 +306,8 @@ cube:
 cylinder:
   title: Cylinder
   text: A __cylinder__ is a three-dimensional solid consisting of two congruent,
-    parallel, circular sides (the _bases_), joined by a curved surface,
+    parallel, circular sides (the _bases_), joined by a curved surface. You
+    could also think of a cylinder as a “circular prism”.
   link: /course/circles-and-pi/spheres-cones-cylinders#cylinder-prism
   image: cylinder.svg
 
@@ -1138,9 +1139,9 @@ sin:
 
 sphere:
   title: Sphere
-  text: A __sphere__ is a three-dimensional solid consisting of all the points
-    that have the same distance from a given point. That point is called the
-    _center_ of the sphere, and the distance is called the _radius_.
+  text: A __sphere__ is a three-dimensional solid consisting of all points
+    that have the same distance from a given _center_. This distance is called
+    the _radius_ of the sphere.
   link: /course/circles-and-pi/spheres-cones-cylinders#sphere
 
 square:
