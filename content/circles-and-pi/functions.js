@@ -559,6 +559,11 @@ export function cylinderPrism($step) {
   $solids[1].on('rotate', (e) => $solids[0].rotate(e.quaternion));
 }
 
+export function cylinderVolume($step) {
+  const $eqn = $step.$('x-equation');
+  $eqn.hints = ['cylinder-volume-hint1', 'cylinder-volume-hint2'];
+}
+
 export function obliqueCylinder($step) {
   const $solid = $step.$('x-solid');
   let angle;
@@ -653,6 +658,12 @@ export function cylinderSurface($step) {
     update(0);
     return [cylinder, top, bottom];
   });
+}
+
+export function cylinderRealLife($step) {
+  const $blanks = $step.$$('x-blank-input');
+  $blanks[0].one('incorrect', () => $step.addHint('use-cylinder-volume'));
+  $blanks[1].one('incorrect', () => $step.addHint('use-cylinder-surface'));
 }
 
 export function cone($step) {

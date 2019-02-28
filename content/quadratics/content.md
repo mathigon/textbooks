@@ -118,7 +118,7 @@ profits rise, too. However, if the skateboards become [too expensive](->.r2),
 people no longer want to buy them and our profit falls again.
 
 We can maximise our profit by pricing the skateboards at approximately
-$[[105...115]].
+$[[108 ± 10]].
 
 ---
 > id: intro-final

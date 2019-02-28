@@ -1089,7 +1089,7 @@ a single point (called the vertex).
 
 ::: column(width=220)
 
-    x-solid(size=220)
+    x-solid(size=220 static)
 
 {.text-center} Every point on the surface of a [__sphere__](gloss:sphere) has
 the same distance from its center.
@@ -1161,7 +1161,7 @@ In both cases, we can find the volume by multiplying the area of their
 __{.m-red} base__ with their __{.m-blue} height__. This means that a
 cylinder with radius _{.b.m-red} r_ and height _{.b.m-blue} h_ has volume
 
-{.text-center} `V =` _{x-equation(solution="π × r^2 h" keys="+ − × ÷ π frac sup brackets")}_
+{.text-center} `V =` _{x-equation(solution="π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var)}_
 
 {.reveal(when="eqn-0")} Remember that radius and height must use the same units.
 For example, if _r_ and _h_ are both in cm, then the volume will be in
@@ -1247,11 +1247,12 @@ height h is `A = 2πr^2 + 2πrh`.
 
     figure: x-media(src="images/cylinders.jpg" width=460 height=125)
 
-Cylinders can be found everywhere – from soda cans to toilet paper or water
-pipes. Can you think of any other examples?
+Cylinders can be found everywhere in our world – from soda cans to toilet paper
+or water pipes. Can you think of any other examples?
 
-{.fixme} The _Gasometer_ above had a radius of 35m and a height of 120m. We can now
-calculate that its volume is [[460,000]]m3 and its surface area is [[10]]m2.
+The _Gasometer_ above had a radius of 35m and a height of 120m. We can now
+calculate that its volume is approximately [[461,000 ± 1000]]`"m"^3` and its
+surface area is approximately [[34,080 ± 100]]`"m"^2`.
 
 ---
 > id: cone
@@ -1313,8 +1314,6 @@ both equal to one third the base area times the height. In fact, you can think
 of a cone as a pyramid with an infinite number of sides.
 
 {.fixme} Such a cylinder is the "circumscribed cylinder" of the cone - the smallest cylinder that can contain the cone.
-
-{.fixme} cone volume proof
 
 {.fixme} If the bases of a cone and a cylinder are the same, then the volume of a cone
 will be one-third the volume of the cylinder. Volume of a Cone: If r is the
