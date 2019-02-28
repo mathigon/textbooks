@@ -1713,9 +1713,17 @@ Platonic solids are called [__dual solids__](gloss:polyhedron-dual).
 We can turn a polyhedron into its dual, by “replacing” every face with a vertex,
 and every vertex with a face. These animations show how:
 
-    .row
-      .grow: x-img-sequence(src="images/dual1/d#.png" pages=24 width=300 height=300)
-      .grow: x-img-sequence(src="images/dual2/d#.png" pages=24 width=300 height=300)
+::: column(width=300)
+
+    x-solid(size=300)
+    x-slider(steps=100)
+
+::: column(width=300)
+
+    x-solid(size=300)
+    x-slider(steps=100)
+
+:::
 
 The tetrahedron is dual with itself. Since it has the same number of faces and
 vertices, swapping them wouldn’t change anything.

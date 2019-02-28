@@ -8,6 +8,9 @@ import { clamp, tabulate } from '@mathigon/core';
 import { toWord, Segment, Point, Angle } from '@mathigon/fermat';
 import { Browser, slide } from '@mathigon/boost';
 
+import { Solid } from '../shared/components/solid'
+import {PolyhedronData} from './components/polyhedron-data';
+
 import './components/tessellation';
 import './components/polyhedron';
 import './components/folding';
@@ -264,4 +267,65 @@ export function polyhedra($step) {
 
 export function platonicOverview($step) {
   $step.addHint('use-euler');
+}
+
+function makePolyhedronGeo(data, THREE) {
+  const vertices = data.vertex.map(v => new THREE.Vector3(v[0], v[1], v[2]));
+  const geometry = new THREE.Geometry();
+  geometry.vertices = vertices;
+  for (let f of data.face) {
+    for (let i = 1; i < f.length - 1; i++) {
+      geometry.faces.push(new THREE.Face3(f[0], f[i], f[i+1]));
+    }
+  }
+  geometry.computeFaceNormals();
+  geometry.computeVertexNormals();
+  return geometry;
+}
+
+export function platonicDual($step) {
+  const $solids = $step.$$('x-solid');
+  const $sliders = $step.$$('x-slider');
+
+  const interpolate = (a, b, p) => a + p * (b - a);
+
+  $solids[0].addMesh((scene, THREE) => {
+    const octahedronGeo = makePolyhedronGeo(PolyhedronData.Octahedron, THREE);
+    const octahedron = $solids[0].addSolid(octahedronGeo, 0xff941f, 5, true);
+
+    const cubeGeo = makePolyhedronGeo(PolyhedronData.Cube, THREE);
+    const cube = $solids[0].addSolid(cubeGeo, 0x31b304, 5, true);
+    cube.setRotationFromEuler(new THREE.Euler(0.71, 0.63, -0.97));
+
+    function update(n) {
+      cube.scale.setScalar(interpolate(1.67, 0.95, n/100));
+      octahedron.scale.setScalar(interpolate(0.83, 1.43, n/100));
+      scene.draw();
+    }
+
+    scene.camera.fov = 45;
+    $solids[0].object.rotateX(0.2).rotateY(-0.6);
+    $sliders[0].on('move', update);
+    update(0);
+  });
+
+  $solids[1].addMesh((scene, THREE) => {
+    const icosahedronGeo = makePolyhedronGeo(PolyhedronData.Icosahedron, THREE);
+    const icosahedron = $solids[1].addSolid(icosahedronGeo, 0xf7aff, 5, true);
+    icosahedron.setRotationFromEuler(new THREE.Euler(-0.47, 0, 0.3));
+
+    const dodecahedronGeo = makePolyhedronGeo(PolyhedronData.Dodecahedron, THREE);
+    const dodecahedron = $solids[1].addSolid(dodecahedronGeo, 0xb30469, 5, true);
+    dodecahedron.setRotationFromEuler(new THREE.Euler(0.17, 0, 0.52));
+
+    function update(n) {
+      dodecahedron.scale.setScalar(interpolate(1.88, 1.48, n/100));
+      icosahedron.scale.setScalar(interpolate(1.35, 1.7, n/100));
+      scene.draw();
+    }
+
+    $solids[1].object.rotateX(0.2).rotateY(-0.25);
+    $sliders[1].on('move', update);
+    update(0);
+  });
 }

@@ -8,6 +8,7 @@
 import { last, tabulate, list } from '@mathigon/core';
 import { factorial, random, numberFormat, toOrdinal, Point, Segment, subsets } from '@mathigon/fermat';
 import { $, $$, $N, Colour, svgPointerPosn, animate, Draggable } from '@mathigon/boost';
+
 import { Graph } from './components/graph';
 import { Sketch } from './components/sketch';
 import { borders } from './components/four-colour-maps';
@@ -662,6 +663,23 @@ export function euler3($section) {
       setTimeout(() => { $g.transform = 'rotate(65.5deg)'; }, i*100 + 500);
     });
   });
+}
+
+export function euler4($step) {
+  const $img = $step.$$('.img-sequence');
+  const $slider = $step.$$('x-slider');
+  const src = $img.map($i => $i.attr('src'));
+
+  for (let i in [0, 1]) {
+    // Preload images
+    for (let j = 1; j < 32; ++j) {
+      const img = new Image();
+      img.src = src[i].replace('0', j);
+    }
+
+    // Update when moving slider
+    $slider[i].on('move', j => $img[i].setAttr('src', src[i].replace('0', j)));
+  }
 }
 
 export function maps1($section) {

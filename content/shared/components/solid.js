@@ -200,13 +200,13 @@ export class Solid extends CustomElement {
     this.object.add(mesh);
   }
 
-  addSolid(geo, color, maxAngle = 5) {
+  addSolid(geo, color, maxAngle = 5, flatShading = false) {
     const edgeMaterial = new THREE.LineBasicMaterial({color: 0xffffff});
     const edges = new THREE.EdgesGeometry(geo, maxAngle);
 
     const obj = new THREE.Object3D();
     obj.add(new THREE.LineSegments(edges, edgeMaterial));
-    obj.add(new THREE.Mesh(geo, Solid.solidMaterial(color)));
+    obj.add(new THREE.Mesh(geo, Solid.solidMaterial(color, flatShading)));
 
     this.object.add(obj);
     return obj;
@@ -263,14 +263,14 @@ export class Solid extends CustomElement {
   // ---------------------------------------------------------------------------
   // Materials
 
-  static solidMaterial(color) {
+  static solidMaterial(color, flatShading = false) {
     return new THREE.MeshPhongMaterial({
       side: THREE.DoubleSide,
       transparent: true,
       opacity: 0.9,
       specular: 0x222222,
       // depthWrite: false,
-      color
+      color, flatShading
     });
   }
 

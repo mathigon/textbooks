@@ -544,9 +544,17 @@ three dimensional shapes with [polygonal](gloss:polygon) faces. If we think of
 polyhedra as made of elastic bands, we can imagine stretching them out until
 they become flat, planar graphs:
 
-    .row
-      .grow: x-img-sequence(src="images/cube/cube#.png" pages=32 width=300 height=300)
-      .grow: x-img-sequence(src="images/dodecahedron/dodeca#.png" pages=32 width=300 height=300)
+::: column(width=300)
+
+    img.img-sequence(src="images/cube/cube0.png" width=300 height=300)
+    x-slider(steps=31)
+
+::: column(width=300)
+
+    img.img-sequence(src="images/dodecahedron/dodeca0.png" width=300 height=300)
+    x-slider(steps=31)
+
+:::
 
 ---
 > id: euler-5
