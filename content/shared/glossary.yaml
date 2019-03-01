@@ -927,6 +927,16 @@ proof:
   text: A __proof__ is a logical argument that shows beyond any doubt that a
     certain statement is true.
 
+pyramid:
+  title: Pyramid
+  text: |
+    A __pyramid__ is a polyhedron that has a polygon as base, and triangular
+    faces around the outside, that taper to a vertex.
+
+    In a __right regular pyramid__, the base is a _regular polygon_ and the
+    vertex is directly above the center of the base.
+  image: pyramid.svg
+
 protractor:
   title: Protractor
   text: A protractor is a tool used to measure an angle in degrees.

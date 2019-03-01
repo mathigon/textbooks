@@ -1203,7 +1203,7 @@ disks horizontal to get an oblique cylinder. The volume of the individual discs
 does not change as you make it oblique, therefore the total volume also remains
 constant:
 
-    .fixme
+    .todo
       x-solid(size=220)
       x-slider(steps=100 speed=0.5)
 
@@ -1220,27 +1220,35 @@ constant:
 
 ::: column.grow
 
-To find the surface area of a cylinder, we have to "unroll" it into its flat
+To find the surface area of a cylinder, we have to “unroll” it into its flat
 [net](gloss:net). You can try this yourself, for example by peeling off the
-label on can of soup.
+label on a can of food.
 
 There are two [[circles|spheres|squares]], one at the top and one at the bottom
 of the cylinder. The curved side is actually a large [[rectangle|square|ellipse]].
 
-* {.fixme} The two circles each have area _{x-equation(solution="pi r^2")}_.
-* {.fixme} The height of the rectangle is [[h]] and the width of the rectangle if the
-  same as the [[circumference]] of the circles: _{x-equation(solution="2 pi r")}_.
+* {.reveal(when="blank-0 blank-1")} The two circles each have area
+  _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
+* {.reveal(when="eqn-0")} The height of the rectangle is
+  _{x-equation.small(solution="h" keys=" " short-var)}_
+  _{span.reveal(when="eqn-1")}and the width of the rectangle is the
+  same as the [[circumference|diameter|tangent]] of the circles:_
+  _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
 
-    .fixme
-      x-solid(size=320)
-      x-slider(steps=100 speed=0.5)
+    x-solid(size=340 style="margin: -10px;")
+    x-slider(steps=100 speed=0.5)
 
 :::
 
-{.fixme} This means that the total surface area of a cylinder with radius r and
-height h is `A = 2πr^2 + 2πrh`.
+---
+> id: cylinder-surface-1
+
+This means that the total surface area of a cylinder with radius _r_ and height
+_h_ is given by
+
+{.text-center} `A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_.
 
 ---
 > id: cylinder-real-life
@@ -1306,33 +1314,49 @@ think of?
 
 #### Volume of a Cone
 
-{.fixme} Just like we can approximate a cylinder using a prism, we can approximate a
+We previously found the volume of a cylinder by approximating it using a prism.
+Similarly, we can find the volume of a cone by approximating it using a
+[__pyramid__](gloss:pyramid).
+
+::: .todo
+
+The volume of a pyramid is given by `1/3 "base" xx "height"`. If we imagine the
+pyramid had infinitely many segments, the base would be a circle, so
+
+Just like we can approximate a cylinder using a prism, we can approximate a
 cone using a [pyramid](gloss:pyramid).
 
-{.fixme} The volume of a cone and a pyramid are calculated in a similar way. They are
+The volume of a cone and a pyramid are calculated in a similar way. They are
 both equal to one third the base area times the height. In fact, you can think
 of a cone as a pyramid with an infinite number of sides.
 
-{.fixme} Such a cylinder is the "circumscribed cylinder" of the cone - the smallest cylinder that can contain the cone.
+Such a cylinder is the "circumscribed cylinder" of the cone - the smallest
+cylinder that can contain the cone.
 
-{.fixme} If the bases of a cone and a cylinder are the same, then the volume of a cone
+If the bases of a cone and a cylinder are the same, then the volume of a cone
 will be one-third the volume of the cylinder. Volume of a Cone: If r is the
 radius of a cone and h is the height, then the volume is V=13πr2h.
+
+:::
 
 ---
 > id: cone-oblique
 
-{.fixme} cavalieri, right vs oblique
+::: .todo
 
-{.fixme} Just like there are oblique cylinders, there are also oblique cones
+cavalieri, right vs oblique
+
+Just like there are oblique cylinders, there are also oblique cones
 where the vertex is not exactly above the center of the base. But like before,
 we can see from Cavalieri's principle that the volume stays the same.
 
-{.fixme}  A right circular cone is a kind of cone in which the axis passing
+A right circular cone is a kind of cone in which the axis passing
 through the center of cone is inclined exactly at right angles to the plane of
 base. In other words, axis and height of a right cone are same.
 
-    // Right Conde
+:::
+
+    // Right Cone
     // You must remember to use the perpendicular height in the formula.
 
 ---
@@ -1340,14 +1364,16 @@ base. In other words, axis and height of a right cone are same.
 
 #### Surface Area of a Cone
 
+::: .todo
+
 ::: column.grow
 
-{.fixme} cone surface animation
+cone surface animation
 
-{.fixme} From this, we can see that the lateral face’s edge is 2πr and the sector of a
+From this, we can see that the lateral face’s edge is 2πr and the sector of a
  circle with radius l. We can find the total surface area by adding these together.
 
-{.fixme} This shaded section is actually part of a larger circle that has a
+This shaded section is actually part of a larger circle that has a
 radius of s, the slant height of the cone.
 
 ::: column(width=300)
@@ -1357,17 +1383,23 @@ radius of s, the slant height of the cone.
 
 :::
 
+:::
+
 ---
 > id: slant-height
 
-{.fixme} The slant height is the distance along the cone surface from the top to
+::: .todo
+The slant height is the distance along the cone surface from the top to
 the bottom rim. If you are given the perpendicular height, you can find the slant
 height using the Pythagorean Theorem.
+:::
 
 ---
 > id: cone-surface-1
 
-{.fixme} surface area derivation
+::: .todo
+surface area derivation
+:::
 
 ---
 > id: sphere
@@ -1403,22 +1435,26 @@ try to find the Earth’s total volume and surface area.
 
 #### Volume of a Sphere
 
-{.fixme} To find the volume of a sphere, we can once again use Cavalieri's Principle.
+::: .todo
+
+To find the volume of a sphere, we can once again use Cavalieri's Principle.
 Let's start with a hemisphere – a sphere cut in half along the equator.
 
-{.fixme} Next, we need a cylinder that has the same radius and height. We then have to
+Next, we need a cylinder that has the same radius and height. We then have to
 "cut out" an inverted cylinder as shown in the diagram.
 
-{.fixme} diagram
+diagram
 
-{.fixme} At a height x, the area of the cross section is
+At a height x, the area of the cross section is
 
-{.fixme} The volume of the cylinder is pi r^2, and the volume of the cone is
+The volume of the cylinder is pi r^2, and the volume of the cone is
 1/3 pi r^2. This means the volume of the shape of the left is 2/3 pi r^2.
 By Cavalieri's principle, the volume of the hemisphere must also be 2/3 pi r^2.
 
-{.fixme} Since the sphere actually consists of two hemispheres, its volume is
+Since the sphere actually consists of two hemispheres, its volume is
 `4/3 pi r^2`
+
+:::
 
 ---
 > id: sphere-sum
@@ -1429,51 +1465,63 @@ you might notice one of the most satisfying relationships in geometry.
 Imagine we have a cylinder with the same height as the diameter of its base. We
 can now fit a sphere and a cone perfectly in its inside:
 
-::: column(width=220)
-
-{.fixme} image
-
-{.fixme} This cylinder has radius `r` and height `2r`, so its volume is
+::: .todo
 
 ::: column(width=220)
 
-{.fixme} image
+image
 
-{.fixme} This cone has radius `r` and height `2r`, so its volume is
+This cylinder has radius `r` and height `2r`, so its volume is
 
 ::: column(width=220)
 
-{.fixme} image
+image
 
-{.fixme} This sphere has radius `r` and height `2r`, so its volume is
+This cone has radius `r` and height `2r`, so its volume is
+
+::: column(width=220)
+
+image
+
+This sphere has radius `r` and height `2r`, so its volume is
+
+:::
 
 :::
 
 ---
 > id: sphere-sum-1
 
-{.fixme} If we add up the volume of both these shapes, we get XXX, which is exactly the
+::: .todo
+
+If we add up the volume of both these shapes, we get XXX, which is exactly the
 volume of the cylinder:
 
-{.fixme} Visual Equation
+Visual Equation
+
+:::
 
 ---
 > id: earth-volume
 
+::: .todo
+
 ::: column.grow
 
-{.fixme} The Earth has radius x. This means that it's volume is [[xx]]km3 or
+The Earth has radius x. This means that it's volume is [[xx]]km3 or
 xxxxx m3.
 
-{.fixme} The average density of the Earth is rho = 5510 kg/m3. This means that its total
+The average density of the Earth is rho = 5510 kg/m3. This means that its total
 mass is
 
-{.fixme.text-center} `"Mass" = "volume" xx "density" = X xx 5510 = X "kg"`!
+{.text-center} `"Mass" = "volume" xx "density" = X xx 5510 = X "kg"`!
 
 ::: column(width=300)
 
-{.fixme} 3D Earth graphic
+3D Earth graphic
 https://codepen.io/qkevinto/pen/EVGrGq
+
+:::
 
 :::
 
@@ -1486,40 +1534,50 @@ Finding a formula for the surface area of a sphere is very difficult. One reason
 is that we can’t open and “flatten” the surface of a sphere, like we did for
 cones and cylinders above.
 
-{.fixme} try flattening yourself
+::: .todo
 
-{.fixme} This is a particular issue when trying to create maps. The Earth has a
+try flattening yourself
+
+This is a particular issue when trying to create maps. The Earth has a
 curved, 3-dimensional surface, but every printed map has to be flat and
 2-dimensional. Geographers has to use various tricks when creating maps, like
 stretching or squishing 
 
-{.fixme} INTERACTIVE MAP IMAGE
+INTERACTIVE MAP IMAGE
+
+:::
 
 ---
 > id: sphere-surface
 
-{.fixme} In this section we'll try to derive a formula 
+::: .todo
 
-{.fixme} Just like cylinder and cone before, we can approximate a sphere using a
+In this section we'll try to derive a formula 
+
+Just like cylinder and cone before, we can approximate a sphere using a
 polyhedron with lots of faces. As we add more faces, the approximation
 starts to look more and more like a sphere.
 
-{.fixme} If we connect the small polygons to the center of the sphere, we get
+If we connect the small polygons to the center of the sphere, we get
 lots of small pyramids pointing inwards. The diagram shows one of these pyramids
 in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
 
-{.fixme} Here is a
+Here is a
 volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
 
-{.fixme} And therefor,
+And therefore,
 surface area = 3 * volume / radius = 
 
-{.fixme} In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
+In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
+
+:::
 
 ---
 > id: earth-surface
 
-{.fixme} surface of earth
+::: .todo
+surface of earth
+:::
 
 
 

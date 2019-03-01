@@ -525,10 +525,10 @@ export function cylinderPrism($step) {
 
   $solids[0].addMesh((scene, THREE) => {
     $solids[0].addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xb30469);
-    $solids[0].addLabel('r', [0.6, -1.3, 0], 0xb30469);
+    $solids[0].addLabel('r', [0.7, -1.4, 0], 0xb30469, '-2px 0 0 -3px');
 
     $solids[0].addArrow([1.55, -1.4, 0], [1.6, 1.4, 0], 0x1f7aff);
-    $solids[0].addLabel('h', [1.65, 0.2, 0], 0x1f7aff);
+    $solids[0].addLabel('h', [1.55, 0, 0], 0x1f7aff, '-10px 0 0 6px');
 
     $solids[0].addWireframe(new THREE.CylinderGeometry(1.4, 1.4, 2.8, 256, 1, true));
 
@@ -579,7 +579,7 @@ export function obliqueCylinder($step) {
     const bottomCircle = $solid.addCircle(1.4);
 
     $solid.addArrow([0, -1.4, 0], [0, 1.4, 0], 0x1f7aff);
-    $solid.addLabel('h', [0.1, 0.2, 0], 0x1f7aff);
+    $solid.addLabel('h', [0, 0, 0], 0x1f7aff, '-10px 0 0 4px');
 
     for (let obj of [top, topCircle, bottom, bottomCircle])
       obj.setRotationFromEuler(new THREE.Euler(Math.PI / 2, 0, 0));
@@ -630,33 +630,51 @@ export function cylinderSurface($step) {
   const $slider = $step.$('x-slider');
   const PI = Math.PI;
 
+  let hasMoved = false;
+  $solid.one('rotate', () => hasMoved = true);
+
   $solid.addMesh((scene, THREE) => {
-    const cylinder = new THREE.Mesh(new THREE.Geometry(), Solid.solidMaterial(0xb30469));
-    const top = new THREE.Mesh(new THREE.CircleGeometry(1, 32), Solid.solidMaterial(0xb30469));
-    const bottom = new THREE.Mesh(new THREE.CircleGeometry(1, 32), Solid.solidMaterial(0xb30469));
+    const cylinder = $solid.addWireframe(new THREE.Geometry(), 0x1f7aff, 45, 0.2);
+    $solid.addArrow([0, -1, -1], [0, 1, -1], 0x1f7aff);
+    $solid.addLabel('h', [0, 0, -1], 0x1f7aff, '-10px 0 0 6px');
+
+    const baseGeo = new THREE.CircleGeometry(1, 64);
+
+    const top = $solid.addOutlined(baseGeo, 0xb30469, 5, 0.2);
+    top.add($solid.addArrow([0, 0, 0], [1, 0, 0], 0xb30469));
+    const topLabel = $solid.addLabel('r', [0.5, 1, 0], 0xb30469, '-1px 0 0 -3px');
+
+    const bottom = $solid.addOutlined(baseGeo, 0xb30469, 5, 0.2);
+    bottom.add($solid.addArrow([0, 0, 0], [1, 0, 0], 0xb30469));
+    const bottomLabel = $solid.addLabel('r', [0.5, -1, 0], 0xb30469, '-1px 0 0 -3px');
 
     function update(n) {
       const angle = PI / 2 * (n/105);
       const radius = 1 / (1 - n/105);
 
-      cylinder.geometry.dispose();
-      cylinder.geometry = new THREE.CylinderGeometry(radius, radius, 2, 32, 1, true, 2 * angle, 2 * PI - 4 * angle);
+      cylinder.updateGeometry(new THREE.CylinderGeometry(radius, radius, 2, 64, 1, true, 2 * angle, 2 * PI - 4 * angle));
       cylinder.position.z = radius - 1;
 
       top.setRotationFromEuler(new THREE.Euler(PI / 2 - angle, 0, 0));
       top.position.y = 1 + Math.sin(angle);
       top.position.z = -1 + Math.cos(angle);
+      topLabel.updatePosition([0.5, 1 + Math.sin(angle), -1 + Math.cos(angle)]);
 
       bottom.setRotationFromEuler(new THREE.Euler(PI / 2 + angle, 0, 0));
       bottom.position.y = -1 - Math.sin(angle);
       bottom.position.z = -1 + Math.cos(angle);
+      bottomLabel.updatePosition([0.5, -1 - Math.sin(angle), -1 + Math.cos(angle)]);
 
+      scene.camera.zoom = 1 - n/250;
+      scene.camera.updateProjectionMatrix();
+
+      if (!hasMoved) $solid.object.setRotationFromEuler(new THREE.Euler(-n/200, 0, 0));
       scene.draw();
     }
 
     $slider.on('move', update);
     update(0);
-    return [cylinder, top, bottom];
+    return [top, bottom];
   });
 }
 
@@ -671,10 +689,10 @@ export function cone($step) {
 
   $solid.addMesh((scene, THREE) => {
     $solid.addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xb30469);
-    $solid.addLabel('r', [0.7, -1.4, 0], 0xb30469);
+    $solid.addLabel('r', [0.7, -1.4, 0], 0xb30469, '-1px 0 0 -3px');
 
     $solid.addArrow([0, -1.4, 0], [0, 1.35, 0], 0x1f7aff);
-    $solid.addLabel('h', [-0.2, 0, 0], 0x1f7aff);
+    $solid.addLabel('h', [0, 0, 0], 0x1f7aff, '-10px 0 0 4px');
 
     $solid.addPoint([0, 1.4, 0], 0x31b304);
     $solid.addWireframe(new THREE.ConeGeometry(1.4, 2.8, 128, 1, true));
