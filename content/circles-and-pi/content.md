@@ -1161,7 +1161,7 @@ In both cases, we can find the volume by multiplying the area of their
 __{.m-red} base__ with their __{.m-blue} height__. This means that a
 cylinder with radius _{.b.m-red} r_ and height _{.b.m-blue} h_ has volume
 
-{.text-center} `V =` _{x-equation(solution="π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var)}_
+{.text-center} `V =` _{x-equation(solution="π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
 
 {.reveal(when="eqn-0")} Remember that radius and height must use the same units.
 For example, if _r_ and _h_ are both in cm, then the volume will be in
@@ -1179,7 +1179,7 @@ above each other, we have an __oblique cylinder__. The bases are still parallel,
 but the sides seem to “lean over” at an angle that is not 90°.
 
     x-solid(size="300,200" static)
-    x-gesture(target="#oblique-cylinder x-solid" slide="60,0")
+    x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
 
 ::: column(width=300)
 
@@ -1314,67 +1314,87 @@ think of?
 
 #### Volume of a Cone
 
+::: column.grow
+
 We previously found the volume of a cylinder by approximating it using a prism.
 Similarly, we can find the volume of a cone by approximating it using a
 [__pyramid__](gloss:pyramid).
 
-::: .todo
+Here you can see a ${n}{n|5|3,18,1}-sided pyramid. As the number of sides
+increases, the pyramid starts to look more and more like a cone. In fact, we
+could think of a cone as a pyramid with _infinitely many_ sides!
 
-The volume of a pyramid is given by `1/3 "base" xx "height"`. If we imagine the
-pyramid had infinitely many segments, the base would be a circle, so
+::: column(width=280)
 
-Just like we can approximate a cylinder using a prism, we can approximate a
-cone using a [pyramid](gloss:pyramid).
-
-The volume of a cone and a pyramid are calculated in a similar way. They are
-both equal to one third the base area times the height. In fact, you can think
-of a cone as a pyramid with an infinite number of sides.
-
-Such a cylinder is the "circumscribed cylinder" of the cone - the smallest
-cylinder that can contain the cone.
-
-If the bases of a cone and a cylinder are the same, then the volume of a cone
-will be one-third the volume of the cylinder. Volume of a Cone: If r is the
-radius of a cone and h is the height, then the volume is V=13πr2h.
+    x-solid(size=280 style="margin: -44px 0 -20px 0")
 
 :::
 
 ---
-> id: cone-oblique
+> id: cone-volume-1
 
-::: .todo
+This also means that we can also use the equation for the volume:
+`V = 1/3 "base" × "height"`. The base of a cone is a circle, so the volume of a
+cone with radius _r_ and height _h_ is
 
-cavalieri, right vs oblique
+{.text-center} `V =` _{x-equation(solution="1/3 π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cone-volume-hint1 cone-volume-hint2")}_
 
-Just like there are oblique cylinders, there are also oblique cones
-where the vertex is not exactly above the center of the base. But like before,
-we can see from Cavalieri's principle that the volume stays the same.
+---
+> id: cone-circumscribed
 
-A right circular cone is a kind of cone in which the axis passing
-through the center of cone is inclined exactly at right angles to the plane of
-base. In other words, axis and height of a right cone are same.
+Notice the similarity with the equation for the volume of a cylinder. Imagine
+drawing a cylinder _around_ the cone, with the same base and height – this is
+called the __circumscribed cylinder__. Now, the cone will take up exactly [[one
+third|half|one quarter]] of the volume of the cylinder:
+
+    figure: x-solid(size=280)
+
+---
+> id: cone-hilbert
+
+{.i.lgrey} Note: You might think that infinitely many tiny sides as an approximation
+is a bit “imprecise”. Mathematics spent a long time trying to find a more
+straightforward way to calculate the volume of a cone. In 1900, the great
+mathematician [David Hilbert](bio:hilbert) even named it as one of the 23 most
+important unsolved problems in mathematics! Today we know that it is actually
+impossible.
+
+---
+> id: oblique-cone
+> goals: slide
+
+::: column.grow
+
+Just like a cylinder, a cone doesn’t have to be “straight”. If the vertex is
+directly over the center of the base, we have a __right cylinder__. Otherwise,
+we call it an __oblique cylinder__.
+
+Once again, we can use Cavalieri’s principle to show that all oblique cylinders
+have the same volume, as long as they have the same base and height.
+
+::: column(width=280)
+
+    x-solid(size="280,240" static)
+    x-gesture(target="#oblique-cone x-solid" slide="60,0")
 
 :::
-
-    // Right Cone
-    // You must remember to use the perpendicular height in the formula.
 
 ---
 > id: cone-surface
 
 #### Surface Area of a Cone
 
-::: .todo
-
 ::: column.grow
 
-cone surface animation
+Finding the surface area of a cone is a bit more tricky. Like before, we can
+unravel a cone into its net. In this case, we get one __{.m-green}circle__ and
+one **[[circle sector|circle segment|circle arc]]**.
 
-From this, we can see that the lateral face’s edge is 2πr and the sector of a
- circle with radius l. We can find the total surface area by adding these together.
+{.reveal(when="blank-0")} To find the surface area of a cone, we just have to
+add up the area of both these components.
 
-This shaded section is actually part of a larger circle that has a
-radius of s, the slant height of the cone.
+The __{.m-green}base__ is a circle with radius _r_, so it’s area is
+_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
 ::: column(width=300)
 
@@ -1383,23 +1403,32 @@ radius of s, the slant height of the cone.
 
 :::
 
-:::
-
 ---
 > id: slant-height
 
-::: .todo
-The slant height is the distance along the cone surface from the top to
-the bottom rim. If you are given the perpendicular height, you can find the slant
-height using the Pythagorean Theorem.
-:::
+{.todo} The radius of the segment is the same as the distance from the rim of a
+cone to its vertex. This is called the slant height of the cone, and not the
+same as the height h. We can find it using Pythagoras:
+
+{.todo} R2 + h2 = s2
+S= ...
 
 ---
 > id: cone-surface-1
 
-::: .todo
-surface area derivation
-:::
+{.todo} The arc of the sector is the same as the circumference of the base : 2pir
+
+{.todo} Now we can find the area of the segment using the formula from the previous section:
+
+{.todo} A = ....
+
+---
+> id: cone-surface-1
+
+Finally, we just have to add up the area of the base and the area of the
+segment, to get the total surface are of the cone:
+
+{.text-center.todo} EQUATION
 
 ---
 > id: sphere

@@ -190,6 +190,20 @@ halley:
     physicist, and the second _Astronomer Royal_. He calculated the orbit of
     Halley’s Comet, which is named after him.
 
+hilbert:
+  name: David Hilbert
+  bio: |
+    __David Hilbert__ (1862 – 1943) was one of the most influential
+    mathematicians of the 20th century. He worked on almost every area of
+    mathematics, and was particulary interested in building a formal, locical
+    foundation for maths.
+
+    Hilbert worked in Göttingen (Germany), where he tutored numerous students
+    who later became famous mathematicians. During the International Congress of
+    Mathematicians in 1900, he presented a list of 23 unsolved problems. These
+    set the course for future research – and four of them are still unsolved
+    today!
+
 jefferson:
   name: Thomas Jefferson
   bio: |

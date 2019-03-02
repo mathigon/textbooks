@@ -1,5 +1,8 @@
 cylinder-volume-hint1: You have to find the area of the base, and then multiply it by _h_.
 cylinder-volume-hint2: The base is a circle with radius _r_, so its area is `π r^2`.
 
+cone-volume-hint1: You have to find the area of the base, and then multiply it by `1/3 h`.
+cone-volume-hint2: The base is a circle with radius _r_, so its area is `π r^2`.
+
 use-cylinder-volume: Try using the formula for the volume of a cylinder.
 use-cylinder-surface: Try using the formula for the surface area of a cylinder.
