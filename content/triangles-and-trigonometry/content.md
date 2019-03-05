@@ -1469,15 +1469,12 @@ a 3-letter abbreviation:
 ---
 > id: trig-functions-1
 
-{.todo} COMING SOON – Abbreviations: sin x, cos y
+{.todo} COMING SOON – More on Trigonometry
 
-{.todo} COMING SOON – Using calculators
-
-{.todo} COMING SOON – Examples
-
-{.todo} COMING SOON – Radians vs degrees, swapping the angles
-
-{.todo} COMING SOON – Rationalize the denominator.
+    // {.todo} COMING SOON – Abbreviations: sin x, cos y
+    // {.todo} COMING SOON – Using calculators
+    // {.todo} COMING SOON – Examples
+    // {.todo} COMING SOON – Rationalize the denominator
 
 ---
 > id: inverse-trig
@@ -1514,10 +1511,8 @@ results that work for all triangles
 __Sine Rule__  
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
-{.text-center} `(sin a)/a = (sin b)/b = (sin c)/c`
+{.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
 :::
-
-{.todo} COMING SOON – Explanation
 
     // {.todo} Use Law of Sines when given:
     // An angle and its opposite side.
@@ -1533,8 +1528,6 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-{.todo} COMING SOON – Explanation
-
     // {.todo} Even though there are three formulas, they are all very similar. First, notice
     // that whatever angle is in the cosine, the opposite side is on the other side of
     // the equal sign.
@@ -1547,7 +1540,7 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 ---
 > id: trigonometry-4
 
-{.todo} COMING SOON – Examples and applications
+{.todo} COMING SOON – Proof, examples and applications
 
     // TODO Future stuff about trigonometry
 
