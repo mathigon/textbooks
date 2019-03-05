@@ -54,7 +54,7 @@ html
             p.skip-step
               | To reveal more content, you have to complete all the activities and exercises above.&nbsp;
               br
-              strong Are you stuck? #[a.skip Skip to the next step]
+              strong Are you stuck? #[a.skip Skip to the next step] or #[a.show-all reveal all steps]
               svg(width=72 height=10): path(d="M1 1L36 9L71 1" fill="none" stroke="#aaa" stroke-width=2)
 
             - var next = course.getNextLink(section.id)
