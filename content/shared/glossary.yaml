@@ -943,7 +943,7 @@ protractor:
 
 pythagoras-theorem:
   title: Pythagoras’ theorem
-  text: __Pythagora’ Theorem__ states that in every right-angled triangle,
+  text: __Pythagoras’ Theorem__ states that in every right-angled triangle,
     `a^2 + b^2 = c^2`, where _c_ is the length of the hypotenuse and _a_ and _b_
     are the lengths of the other two sides.
   link: /course/triangles-and-trigonometry/pythagoras-theorem
