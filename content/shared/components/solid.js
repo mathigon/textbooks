@@ -42,12 +42,14 @@ function rotate($solid, animate = true, speed = 1) {
     setTimeout(frame);
   }
 
+  // The 1.1 creates rotations that are slightly faster than the mouse/finger.
+  const s = Math.PI / 2 / $solid.scene.$canvas.width * 1.1;
+
   slide($solid.scene.$canvas, {
     start() { dragging = true; },
     move(posn, start, last) {
-      const d = posn.subtract(last);
-      const q = new THREE.Quaternion().setFromEuler(
-          new THREE.Euler(d.y * Math.PI / 180, 0, -d.x * Math.PI / 180, 'XYZ'));
+      const d = posn.subtract(last).scale(s);
+      const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
       $solid.object.quaternion.multiplyQuaternions(q, $solid.object.quaternion);
       $solid.trigger('rotate', {quaternion: $solid.object.quaternion});
       if (!autoRotate) frame();
@@ -118,7 +120,11 @@ export class Solid extends CustomElement {
     const items = fn(this.scene, THREE) || [];
     for (let i of items)  this.object.add(i);
 
-    if (!this.hasAttr('static')) rotate(this, this.hasAttr('rotate'), +this.attr('rotate') || 1);
+    if (!this.hasAttr('static')) {
+      const speed = +this.attr('rotate') || 1;
+      rotate(this, this.hasAttr('rotate'), speed);
+    }
+
     this.scene.draw();
   }
 
