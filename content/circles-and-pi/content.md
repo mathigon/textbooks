@@ -96,10 +96,10 @@ that its length is exactly [[`pi`|`2 * pi`|3]]:
 ---
 > id: circumference
 
-For a circle with diameter _d_, the circumference is `C = pi * d`. Similarly,
+For a circle with diameter _d_, the circumference is `C = π × d`. Similarly,
 for a circle with [radius](gloss:circle-radius) _r_, the circumference is
 
-{.text-center} `C =` [[`2 * pi * r`|`pi * r`|`pi * r^2`]].
+{.text-center} `C =` [[`2 π r`|`π r`|`π r^2`]].
 
 ---
 > id: nature
@@ -214,7 +214,7 @@ _{span.reveal(when="blank-2")} (Notice how half of the wedges face down and
 half of them face up.)_
 
 {.reveal(when="blank-2" delay=1000)} Therefore the total area of the rectangle
-is approximately `A = pi * r^2`.
+is approximately `A = π r^2`.
 
 :::
 
@@ -247,7 +247,7 @@ circumference|twice the diameter]] of the circle._
 _{span.reveal(when="blank-2")} Therefore the total area of the triangle is
 approximately_
 
-{.text-center.reveal(when="blank-2")} `A = 1/2 "base" * "height" = pi * r^2`.
+{.text-center.reveal(when="blank-2")} `A = 1/2 "base" × "height" = π r^2`.
 
 :::
 
@@ -257,7 +257,7 @@ approximately_
 If we could use infinitely many rings or wedges, the approximations above would
 be perfect – and they both give us the same formula for the area of a circle:
 
-{.text-center.r} `A = pi * r^2`.
+{.text-center.r} `A = π r^2`.
 _{button.next-step} Continue_
 
 ---
@@ -369,7 +369,7 @@ million digits of Pi – do they contain your birthday?
       .box-body.pi-controls
         | Search for a string of digits:
         input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning Not found in the first one million digits
+        .pi-warning
       x-pi-scroll.box-body
         .first-row 3.
 
@@ -919,7 +919,6 @@ chord. The area of a segment is Asegment=Asector−A△ABC
 
 
 --------------------------------------------------------------------------------
-> sectionStatus: dev
 > section: circle-theorems
 
 
@@ -1106,10 +1105,10 @@ Notice how the definition of a sphere is almost the same as the definition of a
 
 ::: column.grow
 
-Here you can see the cylindrical _Gasometer_ in Oberhausen, Germany, which used
-to store natural gas which was used as fuel in nearby factories and power
-plants. It is 120m tall, and its base and ceiling are two large circles with
-radius 35m. There are two important questions that engineers might have to
+Here you can see the cylindrical _Gasometer_ in Oberhausen, Germany. It used to
+store natural gas which was used as fuel in nearby factories and power plants.
+The Gasometer is 120m tall, and its base and ceiling are two large circles with
+radius 35m. There are two important questions that engineers might want to
 answer:
 
 * How much natural gas can be stored? This is the [[volume|area|diameter]] of
@@ -1185,12 +1184,14 @@ but the sides seem to “lean over” at an angle that is not 90°.
 
     x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
 
-{.caption} The _Tower of Pisa_ in Italy is not quite an oblique cylinder.
+{.caption} The _Leaning Tower of Pisa_ in Italy is not quite an oblique
+cylinder.
 
 :::
 
 ---
 > id: cavalieri
+> goals: slide
 
 The volume of an oblique cylinder turns out to be exactly the same as that of a
 right cylinder with the same radius and height. This is due to [__Cavalieri’s
@@ -1203,9 +1204,16 @@ disks horizontal to get an oblique cylinder. The volume of the individual discs
 does not change as you make it oblique, therefore the total volume also remains
 constant:
 
-    .todo
-      x-solid(size=220)
-      x-slider(steps=100 speed=0.5)
+::: column(width=240)
+
+    x-solid(size=280 style="margin: -20px")
+
+::: column(width=240)
+
+    x-solid.slide-me(size=280 static style="margin: -20px")
+    x-gesture(target=".slide-me" slide="60,0")
+
+:::
 
     // TODO You must always use the _perpendicular_ height. This is
     // the vertical line to left in the figure above.
@@ -1387,18 +1395,18 @@ have the same volume, as long as they have the same base and height.
 ::: column.grow
 
 Finding the surface area of a cone is a bit more tricky. Like before, we can
-unravel a cone into its net. In this case, we get one __{.m-green}circle__ and
-one **[[circle sector|circle segment|circle arc]]**.
+unravel a cone into its net. Move the slider to see what happens: in this
+case, we get one circle and one [[circle sector|circle segment|circle arc]].
 
-{.reveal(when="blank-0")} To find the surface area of a cone, we just have to
-add up the area of both these components.
+{.reveal(when="blank-0")} Now we just have to add up the area of both these
+components. The __{.m-yellow}base__ is a circle with radius _r_, so it’s area is
 
-The __{.m-green}base__ is a circle with radius _r_, so it’s area is
+{.text-center.reveal(when="blank-0")} `§pill(A_"Base","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
-::: column(width=300)
+::: column(width=320)
 
-    x-solid(size=300)
+    x-solid(size=340 style="margin: -32px -10px -10px;")
     x-slider(steps=100 speed=0.5)
 
 :::
@@ -1406,29 +1414,79 @@ _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 ---
 > id: slant-height
 
-{.todo} The radius of the segment is the same as the distance from the rim of a
-cone to its vertex. This is called the slant height of the cone, and not the
-same as the height h. We can find it using Pythagoras:
+::: column.grow
 
-{.todo} R2 + h2 = s2
-S= ...
+The radius of the __{.m-green}sector__ is the same as the distance from the
+rim of a cone to its vertex. This is called the __{.pill.green.step-target(data-to="s")}
+slant height *s*__ of the cone, and not the same as the normal
+__{.pill.blue.step-target(data-to="h")}height *h*__. We can find the slant
+height using [Pythagoras](gloss:pythagoras-theorem):
+
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
+| `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
+
+::: column(width=280)
+
+    x-geopad.sketch(width=280 height=200): svg
+      circle(x="point(140, 10)" name="a" hidden)
+      circle(x="point(140, 170)" name="b" hidden)
+      circle(x="point(220, 170)" name="c" hidden)
+      circle(x="point(60, 170)" name="d" hidden)
+      ellipse(cx=140 cy=172 rx=81 ry=20)
+      path(x="angle(a,b,c)" size=12)
+      path(x="triangle(a,c,d)")
+      path.yellow(x="segment(b,c)" label="r" target="r")
+      path.green(x="segment(a,c)" label="s" target="s")
+      path.blue(x="segment(a,b)" label="h" target="h")
+
+:::
 
 ---
 > id: cone-surface-1
 
-{.todo} The arc of the sector is the same as the circumference of the base : 2pir
+::: column.grow
 
-{.todo} Now we can find the area of the segment using the formula from the previous section:
+The _{span.pill.step-target.red(data-to="arc")}arc length_ of the sector is the
+same as the [[circumference|diameter|arc]] of the of _{span.pill.step-target.yellow(data-to="base")}base_:
+_{span.reveal(when="blank-0")}`2 π r`. Now we can find the area of the sector
+using the [formula](gloss:circle-sector) we derived in a previous section:_
 
-{.todo} A = ....
+::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
+| `§pill(A_"Sector","green","sector")` | `=` | `§pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+|                | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+:::
+
+::: column(width=280)
+
+    x-geopad.sketch(width=280 height=300 style="margin-top: -20px"): svg
+      circle(x="point(140,110)" name="c1" hidden)
+      circle(x="point(140,250)" name="c2" hidden)
+      circle(x="point(235,141.5)" name="a" hidden)
+      circle(x="point(45,141.5)" name="b" hidden)
+
+      path.yellow.fill.light(x="circle(c2, 40)" target="base")
+      path.yellow(x="circle(c2, 40)" target="base")
+      path.yellow(x="segment(c2,point(180, 250))" label="r" target="base")
+      path.red.thick.reveal(when="blank-0" animation="draw" duration=1500 x="circle(c2, 40)")
+
+      path.teal.fill.light(x="circle(c1, 100)" name="circ" target="circle")
+      path.green.fill.light(x="sector(c1, a, 2.5)" target="sector circle")
+
+      path.green(x="segment(c1, a)" label="s")
+      path.green(x="segment(c1, b)" label="s")
+      path.red.thick(x="arc(c1, a, 2.5)" target="arc")
+      path.teal.thick.transparent(x="circle(c1, 100)" target="circumference")
+
+:::
 
 ---
-> id: cone-surface-1
+> id: cone-surface-2
 
-Finally, we just have to add up the area of the base and the area of the
-segment, to get the total surface are of the cone:
+Finally, we just have to add up the area of the __{.m-yellow}base__ and the area
+of the __{.m-green}sector__, to get the total surface are of the cone:
 
-{.text-center.todo} EQUATION
+{.text-center} `A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_
 
 ---
 > id: sphere
@@ -1454,105 +1512,191 @@ like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
 ---
 > id: sphere-1
 
-In a [previous section](/course/circles-and-pi/circle-parts#eratosthenes), you
-learned how the Greek mathematician [Eratosthenes](bio:eratosthenes) calculated
-the radius of Earth using the shadow of a pole – it was 6,371 km. Now, let’s
-try to find the Earth’s total volume and surface area.
+{.r} In a [previous section](/course/circles-and-pi/circle-parts#eratosthenes),
+you learned how the Greek mathematician [Eratosthenes](bio:eratosthenes)
+calculated the radius of Earth using the shadow of a pole – it was 6,371 km.
+Now, let’s try to find the Earth’s total volume and surface area.
+_{button.next-step} Continue_
 
 ---
 > id: sphere-volume
 
 #### Volume of a Sphere
 
-::: .todo
+To find the volume of a sphere, we once again have to use Cavalieri’s Principle.
+Let’s start with a hemisphere – a sphere cut in half along the equator. We also
+need a cylinder with the same radius and height as the hemisphere, but with an
+inverted cone “cut out” in the middle.
 
-To find the volume of a sphere, we can once again use Cavalieri's Principle.
-Let's start with a hemisphere – a sphere cut in half along the equator.
+As you move the slider above, you can see the cross-section of both these
+shapes at a specific height above the base:
 
-Next, we need a cylinder that has the same radius and height. We then have to
-"cut out" an inverted cylinder as shown in the diagram.
+::: column(width=240)
 
-diagram
+    x-solid(size=240 style="margin: -24px 0 10px")
 
-At a height x, the area of the cross section is
+    x-geopad.sketch.r(width=220 height=120): svg
+      circle(x="point(110,110)" name="c1")
+      circle(x="c1.shift(0,-100*h)" name="h1")
+      circle(x="h1.shift(-100 * sqrt(1-h*h),0)" name="a1")
 
-The volume of the cylinder is pi r^2, and the volume of the cone is
-1/3 pi r^2. This means the volume of the shape of the left is 2/3 pi r^2.
-By Cavalieri's principle, the volume of the hemisphere must also be 2/3 pi r^2.
+      path.yellow.fill.light(x="triangle(c1,a1,h1)" target="tri")
+      path(x="arc(c1,point(10,c1.x),pi)")
+      path(x="segment(point(10,c1.x),point(210,c1.x))")
+      path.green.thin(x="segment(c1,a1)" label="r" target="r tri")
+      path.blue.thin(x="segment(c1,h1)" label="h" target="h h1 tri")
+      path.red.thick(x="segment(a1,h1)" label="x" target="x tri")
+      path.red.thick(x="segment(h1,point(220-a1.x,a1.y))")
 
-Since the sphere actually consists of two hemispheres, its volume is
-`4/3 pi r^2`
+::: column(width=240)
+
+    x-solid(size=240 style="margin: -24px 0 10px")
+
+    x-geopad.sketch.r(width=220 height=120): svg
+      circle(x="point(10,10)" name="a2" hidden)
+      circle(x="point(210,10)" name="b2" hidden)
+      path(x="polygon(a2,b2,point(210,110),point(10,110))")
+      
+      circle(x="point(110,110)" name="c2")
+      circle(x="c2.shift(0,-100*h)" name="h2")
+      circle(x="h2.shift(-100*h,0)" name="x2")
+
+      path.thin(x="segment(a2,c2)")
+      path.thin(x="segment(b2,c2)")
+      path.blue.thin(x="segment(c1,h1)" label="h" target="h")
+      path.blue.thin(x="segment(h1,point(110-100*h,h2.y))")
+      path.red.thick(x="segment(point(10,h2.y),point(110-100*h,h2.y))")
+      path.red.thick(x="segment(point(110+100*h,h2.y),point(210,h2.y))")
+
+:::
+
+    x-slider(steps=100)
+
+
+{.reveal(when="slider-0")} Let us try to find the cross-sectional area of both
+these solids, at a distance __{span.pill.blue.step-target(data-to="h")}height *h*__
+above the base.
+
+::: column.grow
+
+{.reveal(when="slider-0")} The cross-section of the hemisphere is always a
+[[circle|ring|cylinder]].
+
+{.reveal(when="blank-0")} The __{span.pill.red.step-target(data-to="x")}radius
+*x*__ of the cross-section is part of a _{span.pill.yellow.step-target(data-to="tri")}
+right-angled triangle_, so we can use [Pythagoras](gloss:pythagoras-theorem):
+
+::: .reveal(when="blank-0")
+{.text-center} `§pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
+
+Now, the area of the cross section is
+
+    x-equation-system(steps="π x^2" hints="circle-cross-sec")
+      table: tr
+        td: em A
+        td =
+        td: x-equation(solution="π * (r^2 - h^2)" substitutions="x: sqrt(r^2 - h^2)" fns="sqrt" keys="+ − × ÷ π sup sqrt brackets" short-var)
+:::
+
+::: column.grow.reveal(when="eqn-0")
+
+The cross-section of the cut-out cylinder is always a [[ring|circle|cone]].
+
+::: .reveal(when="blank-1")
+The radius of the hole is _h_. We can find the area of the ring by subtracting
+the area of the hole from the area of the larger circle:
+
+| _A_ | = | `π r^2 - π h^2` |
+|     | = | `π (r^2 - h^2)` |
+{.eqn-system}
+:::
+
+:::
+
+---
+> id: sphere-volume-1
+
+It looks like both solids have the same cross-sectional area at every level.
+By Cavalieri’s Principle, both solids must also have the same [[volume|surface
+area|circumference]]! _{span.reveal(when="blank-0")}We can find the volume of
+the hemisphere by subtracting the volume of the [cylinder](gloss:cylinder-volume)
+and the volume of the [cone](gloss:cone-volume):_
+
+::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
+| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+|                  | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
+:::
+
+---
+> id: sphere-volume-2
+
+A sphere consists of [[two]] hemispheres, _{span.reveal(when="blank-0")}which
+means that its volume must be_
+
+{.text-center.reveal(when="blank-0")} `V = 4/3 π r^3`.
+
+---
+> id: earth-volume
+> goals: numbers
+
+::: column.grow
+
+The Earth is (approximately) a sphere with a radius of 6,371\ km. Therefore its
+volume is
+
+| `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+|     | `=` | _{span.numbers}1_ `"km"^3` |
+{.eqn-system}
+
+{.reveal(when="numbers")} The average density of the Earth is `5510 "kg/m"^3`.
+This means that its total mass is
+
+{.text-center.reveal(when="numbers")} `"Mass" = "Volume" × "Density" ≈ 6 × 10^24 "kg"`
+
+{.reveal(when="numbers")} That’s a 6 followed by 24 zeros!
+
+::: column(width=280)
+
+    x-solid(size=300 rotate="-0.5" style="margin: -10px")
 
 :::
 
 ---
 > id: sphere-sum
 
-If you compare the equations for the volume of a cylinder, cone and sphere,
-you might notice one of the most satisfying relationships in geometry.
+If you compare the equations for the volume of a cylinder, cone and sphere, you
+might notice one of the most satisfying relationships in geometry. Imagine we
+have a cylinder with the same height as the diameter of its base. We can now fit
+both a cone and a sphere perfectly in its inside:
 
-Imagine we have a cylinder with the same height as the diameter of its base. We
-can now fit a sphere and a cone perfectly in its inside:
+::: column.r(width=220)
 
-::: .todo
+    x-solid(size=220 style="margin-top: -20px")
+    .large-op.reveal(when="blank-0" animation="pop") +
+
+{.text-center} This cone has radius `r` and height `2r`. Its volume is
+_{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
+
+::: column.r(width=220)
+
+    x-solid(size=220 style="margin-top: -20px")
+    .large-op.reveal(when="blank-0" animation="pop") =
+
+{.text-center} This sphere has radius `r`. Its volume is
+_{x-equation.small(solution="4/3 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column(width=220)
 
-image
+    x-solid(size=220 style="margin-top: -20px")
 
-This cylinder has radius `r` and height `2r`, so its volume is
-
-::: column(width=220)
-
-image
-
-This cone has radius `r` and height `2r`, so its volume is
-
-::: column(width=220)
-
-image
-
-This sphere has radius `r` and height `2r`, so its volume is
+{.text-center} This cylinder has radius `r` and height `2r`. Its volume is
+_{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 :::
 
-:::
-
----
-> id: sphere-sum-1
-
-::: .todo
-
-If we add up the volume of both these shapes, we get XXX, which is exactly the
-volume of the cylinder:
-
-Visual Equation
-
-:::
-
----
-> id: earth-volume
-
-::: .todo
-
-::: column.grow
-
-The Earth has radius x. This means that it's volume is [[xx]]km3 or
-xxxxx m3.
-
-The average density of the Earth is rho = 5510 kg/m3. This means that its total
-mass is
-
-{.text-center} `"Mass" = "volume" xx "density" = X xx 5510 = X "kg"`!
-
-::: column(width=300)
-
-3D Earth graphic
-https://codepen.io/qkevinto/pen/EVGrGq
-
-:::
-
-:::
+{.reveal(when="eqn-0 eqn-1 eqn-2")} Notice how, if we [[add
+up|subtract|multiply]] the volume of the cone and the sphere, we get exactly
+the volume of the cylinder!
 
 ---
 > id: sphere-maps
@@ -1561,52 +1705,47 @@ https://codepen.io/qkevinto/pen/EVGrGq
 
 Finding a formula for the surface area of a sphere is very difficult. One reason
 is that we can’t open and “flatten” the surface of a sphere, like we did for
-cones and cylinders above.
+cones and cylinders before.
 
-::: .todo
+This is a particular issue when trying to create maps. Earth has a curved,
+3-dimensional surface, but every printed map has to be flat and 2-dimensional.
+This means that Geographers have to cheat – by stretching or squishing certain
+areas.
 
-try flattening yourself
+Here you can see few different types of maps, called __projections__. Try moving
+the red square, and watch what this area _actually_ looks like on a globe:
 
-This is a particular issue when trying to create maps. The Earth has a
-curved, 3-dimensional surface, but every printed map has to be flat and
-2-dimensional. Geographers has to use various tricks when creating maps, like
-stretching or squishing 
+    .frame.fill
 
-INTERACTIVE MAP IMAGE
-
-:::
+{.todo} COMING SOON: Interactive Map Projections
 
 ---
 > id: sphere-surface
 
-::: .todo
+{.todo} COMING SOON: Sphere Surface Area proof
 
-In this section we'll try to derive a formula 
+    // In this section we'll try to derive a formula 
+    
+    // Just like cylinder and cone before, we can approximate a sphere using a
+    // polyhedron with lots of faces. As we add more faces, the approximation
+    // starts to look more and more like a sphere.
+    
+    // If we connect the small polygons to the center of the sphere, we get
+    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
+    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
+    
+    // Here is a
+    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
+    
+    // And therefore,
+    // surface area = 3 * volume / radius = 
+    
+    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
 
-Just like cylinder and cone before, we can approximate a sphere using a
-polyhedron with lots of faces. As we add more faces, the approximation
-starts to look more and more like a sphere.
-
-If we connect the small polygons to the center of the sphere, we get
-lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
-
-Here is a
-volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
-
-And therefore,
-surface area = 3 * volume / radius = 
-
-In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-
-:::
-
----
-> id: earth-surface
-
-::: .todo
-surface of earth
-:::
+    // ---
+    // > id: earth-surface
+    // 
+    // surface of earth
 
 
 

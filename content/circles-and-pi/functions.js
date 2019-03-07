@@ -6,7 +6,7 @@
 
 
 import { clamp, list, wait, tabulate, isOneOf, square } from '@mathigon/core';
-import { Point, toWord, roundTo, Polygon, Sector, round, Angle } from '@mathigon/fermat';
+import { Point, toWord, roundTo, Polygon, Sector, round, Angle, numberFormat, random } from '@mathigon/fermat';
 import { $N, slide, Colour, animate, Draggable } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { rotateDisk } from '../shared/components/disk';
@@ -15,7 +15,9 @@ import { Solid } from '../shared/components/solid';
 import '../shared/components/conic-section';
 import './components/pi-scroll';
 
+
 // -----------------------------------------------------------------------------
+// Introduction
 
 export function radius($step) {
   const $play = $step.$('x-play-btn');
@@ -209,8 +211,17 @@ export function piDigits($step) {
       .then(data => $scroller.setUp(data + '…'));
 
   $input.change((str) => {
-    const index = $scroller.findString(str);
-    $warning.css('visibility', index < 0 ? 'visible' : 'hidden');
+    const clean = str.replace(/[^0-9]/g, '');
+    const index = $scroller.findString(clean);
+
+    if (index < 0) {
+      $warning.text = 'Not found in the first one million digits';
+    } else if (index === 0) {
+      $warning.text = '';
+    } else {
+      $warning.text = `Found after ${index} digit${index > 1 ? 's' : ''}.`;
+    }
+
     if (str.length >= 4) $step.score('search');
   });
 }
@@ -603,21 +614,31 @@ export function obliqueCylinder($step) {
 }
 
 export function cavalieri($step) {
-  const $solid = $step.$('x-solid');
-  const $slider = $step.$('x-slider');
+  const $solids = $step.$$('x-solid');
+  let shift;
 
-  $solid.addMesh((scene, THREE) => {
+  $solids[0].addMesh((scene, THREE) => {
+    $solids[0].addSolid(new THREE.CylinderGeometry(1.2, 1.2, 2, 64, 1), 0xff941f, 45);
+  });
+
+  $solids[1].addMesh((scene, THREE) => {
     const geo = new THREE.CylinderGeometry(1.2, 1.2, 0.1, 64, 1);
-    const cylinders = tabulate(() => $solid.addSolid(geo, 0xff941f, 45), 20);
+    const cylinders = tabulate(() => $solids[1].addSolid(geo, 0xff941f, 45), 20);
 
-    function update(n) {
-      cylinders.forEach((c, i) => c.position.set((n/50-1) * (i/10-1) / 2, -1 + 0.1 * i, 0));
+    function update(s) {
+      shift = s;
+      cylinders.forEach((c, i) => c.position.set(s * (i/10-1) / 2, -1 + 0.1 * i, 0));
       scene.draw();
     }
 
-    $slider.on('move', update);
+    slide($solids[1], {
+      move: (p, _, last) => update(clamp(shift + (p.x-last.x)/60, -2, 2)),
+      end: () => $step.score('slide')
+    });
     update(0);
   });
+
+  $solids[0].on('rotate', (e) => $solids[1].rotate(e.quaternion));
 }
 
 export function cylinderSurface($step) {
@@ -752,13 +773,21 @@ export function coneSurface($step) {
   const $slider = $step.$('x-slider');
   const PI = Math.PI;
 
+  let hasMoved = false;
+  $solid.one('rotate', () => hasMoved = true);
+
   const r = 1;
   const h = 2;
   const rMax = Math.sqrt(square(r) + square(h));
 
   $solid.addMesh((scene, THREE) => {
-    const cone = new THREE.Mesh(new THREE.Geometry(), Solid.solidMaterial(0x1f7aff));
-    const bottom = new THREE.Mesh(new THREE.CircleGeometry(1, 32), Solid.solidMaterial(0x1f7aff));
+    const cone = $solid.addWireframe(new THREE.Geometry(), 0x31b304, 45, 0.2);
+    const slantArrow = $solid.addArrow([0, -h/2, -r], [0, h/2, 0], 0x31b304);
+    const slantLabel = $solid.addLabel('s', [0, 0, -r/2], 0x31b304, '-10px 0 0 6px');
+
+    const bottom = $solid.addOutlined(new THREE.CircleGeometry(1, 32), 0xff941f, 5, 0.2);
+    bottom.add($solid.addArrow([r, 0, 0], [0, 0, 0], 0xff941f));
+    const radiusLabel = $solid.addLabel('r', [r/2, -h/2, 0], 0xff941f, '-2px 0 0 -3px');
 
     function update(n) {
       const angle = PI / 2 * (n/100.5);
@@ -771,21 +800,46 @@ export function coneSurface($step) {
       const dz = iRad * Math.cos(angle + iAng);
       const dy = iRad * Math.sin(angle + iAng);
 
-      cone.geometry.dispose();
-      cone.geometry = new THREE.ConeGeometry(radius, height, 128, 1, true, theta, 2 * PI - 2 * theta);
+      cone.updateGeometry(new THREE.ConeGeometry(radius, height, 128, 1, true, theta, 2 * PI - 2 * theta));
       cone.setRotationFromEuler(new THREE.Euler(-angle, 0, 0));
       cone.position.set(0, dy - 1, dz - 1);
 
       bottom.setRotationFromEuler(new THREE.Euler(PI / 2 + angle, 0, 0));
       bottom.position.set(0, -1 - Math.sin(angle), -1 + Math.cos(angle));
 
+      const p = new Point(height/2, 0).rotate(-angle).shift(dy - 1, dz - 1);
+      slantArrow.updateEnds([0, -h/2, -r], [0, p.x, p.y]);
+
+      radiusLabel.updatePosition([r/2, -h/2 - r * Math.sin(angle), Math.cos(angle) - 1]);
+      slantLabel.updatePosition([0, (p.x - h/2) / 2, (p.y - r) / 2]);
+
+      scene.camera.zoom = 1.05 - n/600;
+      scene.camera.updateProjectionMatrix();
+      if (!hasMoved) $solid.object.setRotationFromEuler(new THREE.Euler(-n/250, 0, 0));
+
       scene.draw();
     }
 
+    $solid.object.translateY(h/4);
     $slider.on('move', update);
     update(0);
-    return [cone, bottom];
   });
+}
+
+export function slantHeight($step) {
+  const $rows = $step.$$('tr');
+
+  $rows[1].hide();
+  $rows[1].data.display = 'table-row';
+
+  $step.onScore('eqn-0', () => $rows[1].enter('fade'));
+}
+
+export function coneSurface1($step) {
+  const $system = $step.$('x-equation-system');
+  $system.isFinal = (expr) => {
+    return !expr.variables.includes('s') && expr.functions.includes('sqrt');
+  };
 }
 
 export function sphere($step) {
@@ -808,6 +862,132 @@ export function sphere($step) {
     $solid.addWireframe(new THREE.SphereGeometry(1.8, 64, 64), 0xaaaaaa, 45);
     $solid.object.rotateY(-0.5);
   });
+}
+
+export function sphereVolume($step) {
+  const $system = $step.$('x-equation-system');
+  $system.isFinal = (expr) => !expr.variables.includes('x');
+
+  const $solids = $step.$$('x-solid');
+  const $slider = $step.$('x-slider');
+
+  const r = 1.7;
+  const s = 64;
+
+  $solids[0].addMesh((scene, THREE) => {
+    $solids[0].addWireframe(new THREE.SphereGeometry(r, s, s, 0, Math.PI), 0xaaaaaa, 45).rotateX(-Math.PI/2).translateZ(-r/2);
+    $solids[0].addOutlined(new THREE.CircleGeometry(r, s)).rotateX(-Math.PI/2).translateZ(-r/2);
+
+    const cross = $solids[0].addOutlined(new THREE.CircleGeometry(r, s), 0xb30469, 5, 0.4, 0xb30469).rotateX(-Math.PI/2).translateZ(-r/2);
+    $slider.on('move', (n) => {
+      cross.updateGeometry(new THREE.CircleGeometry(Math.max(0.001, Math.sqrt(1 - square(n/100)) * r), s));
+      cross.position.set(0, r * n/100 - r/2, 0);
+      scene.draw();
+    });
+  });
+
+  $solids[1].addMesh((scene, THREE) => {
+    $solids[1].addOutlined(new THREE.CircleGeometry(r, s)).rotateX(-Math.PI/2).translateZ(-r/2);
+    $solids[1].addWireframe(new THREE.CylinderGeometry(r, r, r, s, s, true), 0xaaaaaa, 45);
+    const inside = $solids[1].addOutlined(new THREE.ConeGeometry(r, r, s, s, true), 0xaaaaaa, 45);
+    inside.rotateX(Math.PI);
+
+    const cross = $solids[1].addOutlined(new THREE.RingGeometry(0.001, r, s, 1), 0xb30469, 5, 0.4, 0xb30469).rotateX(-Math.PI/2).translateZ(-r/2);
+    $slider.on('move', (n) => {
+      cross.position.set(0, r * n/100 - r/2, 0);
+      cross.updateGeometry(new THREE.RingGeometry(Math.max(0.001, n/100 * r), r, s, 1));
+      scene.draw();
+    });
+  });
+
+  $solids[0].on('rotate', (e) => $solids[1].rotate(e.quaternion));
+  $solids[1].on('rotate', (e) => $solids[0].rotate(e.quaternion));
+
+  $step.model.set('h', 0);
+  $slider.on('move', (n) => $step.model.h = n/100);
+}
+
+export function sphereVolume1($step) {
+  const $system = $step.$('x-equation-system');
+  $system.isFinal = (expr) => !expr.functions.includes('−');
+}
+
+function numberAnimation(n, $el, t) {
+  const digits = numberFormat(n).split('');
+  const length = digits.length;
+
+  return animate((p) => {
+    const num = digits.map((n, i) => {
+      if (i > p * length + 1) return '';
+      if (isOneOf(n, ',', '.')) return n;
+      if (i > p * length - 1) return random.integer(10);
+      return n;
+    });
+    $el.text = num.join('');
+  }, t);
+}
+
+export function earthVolume($step) {
+  const $solid = $step.$('x-solid');
+  const $rows = $step.$$('tr');
+  const $numbers = $step.$('.numbers');
+
+  $rows[1].hide();
+  $rows[1].data.display = 'table-row';
+
+  $step.onScore('eqn-0', () => {
+    $rows[1].enter('fade');
+    numberAnimation(1083206916846, $numbers, 2000)
+        .then(() => wait(1000))
+        .then(() => $step.score('numbers'));
+  });
+
+  $solid.addMesh((scene, THREE) => {
+    const material = new THREE.MeshPhongMaterial({
+      bumpScale: 0.05,
+      specular: 0xaaaaaa,
+      shininess: 5
+    });
+
+    const textureLoader = new THREE.TextureLoader();
+    function loadTexture(property, url) {
+      textureLoader.load(url, (texture) => {
+        material[property] = texture;
+        material.needsUpdate = true;
+      });
+    }
+    loadTexture('map', '/resources/circles-and-pi/images/textures/map.jpg');
+    loadTexture('bumpMap', '/resources/circles-and-pi/images/textures/bump.jpg');
+    loadTexture('specularMap', '/resources/circles-and-pi/images/textures/spec.jpg');
+
+    const geometry = new THREE.SphereGeometry(1.8, 64, 64);
+    return [new THREE.Mesh(geometry, material)];
+  });
+}
+
+export function sphereSum($step) {
+  const $solids = $step.$$('x-solid');
+
+  $solids[0].addMesh((scene, THREE) => {
+    $solids[0].addSolid(new THREE.ConeGeometry(1.2, 2.4, 64, 1), 0xb30469, 45);
+    $solids[0].addWireframe(new THREE.CylinderGeometry(1.2, 1.2, 2.4, 64, 1), 0xaaaaaa, 45);
+  });
+
+  $solids[1].addMesh((scene, THREE) => {
+    $solids[1].addSolid(new THREE.SphereGeometry(1.2, 64, 64), 0xb30469, 45);
+    $solids[1].addWireframe(new THREE.CylinderGeometry(1.2, 1.2, 2.4, 64, 1), 0xaaaaaa, 45);
+  });
+
+  $solids[2].addMesh((scene, THREE) => {
+    $solids[2].addSolid(new THREE.CylinderGeometry(1.2, 1.2, 2.4, 64, 1), 0xb30469, 20);
+  });
+
+  for (const i of [0, 1, 2]) {
+    $solids[i].on('rotate', (e) => {
+      $solids[(i + 1) % 3].rotate(e.quaternion);
+      $solids[(i + 2) % 3].rotate(e.quaternion);
+    });
+  }
 }
 
 

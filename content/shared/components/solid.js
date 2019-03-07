@@ -19,7 +19,7 @@ const POINT_RADIUS = 0.08;
 // -----------------------------------------------------------------------------
 // Utilities
 
-function rotate($solid, animate = true) {
+function rotate($solid, animate = true, speed = 1) {
   // TODO Damping after mouse movement
   // TODO Better mouse-to-point mapping
 
@@ -32,7 +32,7 @@ function rotate($solid, animate = true) {
   function frame() {
     if (visible && autoRotate) requestAnimationFrame(frame);
     $solid.scene.draw();
-    if (!dragging) $solid.object.rotation.y += 0.012;
+    if (!dragging) $solid.object.rotation.y += speed * 0.012;
   }
 
   if (autoRotate) {
@@ -118,7 +118,7 @@ export class Solid extends CustomElement {
     const items = fn(this.scene, THREE) || [];
     for (let i of items)  this.object.add(i);
 
-    if (!this.hasAttr('static')) rotate(this, this.hasAttr('rotate'));
+    if (!this.hasAttr('static')) rotate(this, this.hasAttr('rotate'), +this.attr('rotate') || 1);
     this.scene.draw();
   }
 
@@ -140,7 +140,8 @@ export class Solid extends CustomElement {
     this.scene.$canvas.insertAfter($label);
 
     this.scene.onDraw(() => {
-      const p = posn1.clone().applyQuaternion(this.object.quaternion).project(this.scene.camera);
+      const p = posn1.clone().applyQuaternion(this.object.quaternion)
+          .add(this.object.position).project(this.scene.camera);
       $label.css('left', (1 + p.x) * this.scene.$canvas.width / 2 + 'px');
       $label.css('top', (1 - p.y) * this.scene.$canvas.height / 2 + 'px');
     });
@@ -149,13 +150,10 @@ export class Solid extends CustomElement {
   }
 
   addArrow(from, to, color = STROKE_COLOR) {
-    from = new THREE.Vector3(...from);
-    to = new THREE.Vector3(...to);
-
     const material = new THREE.MeshBasicMaterial({color});
     const obj = new THREE.Object3D();
 
-    const height = from.distanceTo(to);
+    const height = new THREE.Vector3(...from).distanceTo(new THREE.Vector3(...to));
     const line = new THREE.CylinderGeometry(0.02, 0.02, height - 0.3, 8, 1, true);
     obj.add(new THREE.Mesh(line, material));
 
@@ -168,16 +166,16 @@ export class Solid extends CustomElement {
     end.translate(0, -height/2 + 0.1, 0);
     obj.add(new THREE.Mesh(end, material));
 
-    obj.translateX((from.x + to.x) / 2);
-    obj.translateY((from.y + to.y) / 2);
-    obj.translateZ((from.z + to.z) / 2);
+    obj.updateEnds = function(f, t) {
+      // TODO Support changing the height of the arrow.
+      const q = new THREE.Quaternion();
+      const v = new THREE.Vector3(t[0]-f[0], t[1]-f[1], t[2]-f[2]).normalize();
+      q.setFromUnitVectors(new THREE.Vector3(0, 1, 0), v);
+      obj.setRotationFromQuaternion(q);
+      obj.position.set((f[0]+t[0])/2, (f[1]+t[1])/2, (f[2]+t[2])/2);
+    };
 
-    const q = new THREE.Quaternion();
-    const v = to.clone().sub(from).normalize();
-    q.setFromUnitVectors(new THREE.Vector3(0, 1, 0), v);
-    obj.setRotationFromQuaternion(q);
-
-    // obj.renderOrder = 100;
+    obj.updateEnds(from, to);
     this.object.add(obj);
     return obj;
   }
@@ -218,12 +216,15 @@ export class Solid extends CustomElement {
     return obj;
   }
 
+  // TODO merge addOutlined() and addWireframe(), by looking at
+  //      geometry.isConeGeometry etc.
+
   // A translucent material with a solid border.
-  addOutlined(geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1) {
+  addOutlined(geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1, strokeColor = null) {
     const solidMaterial = Solid.translucentMaterial(color, opacity);
     const solid = new THREE.Mesh(geometry, solidMaterial);
 
-    const edgeMaterial = new THREE.MeshBasicMaterial({color: STROKE_COLOR});
+    const edgeMaterial = new THREE.MeshBasicMaterial({color: strokeColor || STROKE_COLOR});
     let edges = createEdges(geometry, edgeMaterial, maxAngle);
 
     const obj = new THREE.Object3D();

@@ -162,6 +162,17 @@ circle-radius:
   text: The __radius__ of a circle is the distance from its center to its edge.
   link: /course/circles-and-pi/introduction#radius
 
+circle-sector:
+  title: Circle Sector
+  text: |
+    A __sector__ of a circle is a part of its interior, bounded by two
+    radii and an __arc__. Its area is proportional to the internal angle, as
+    well as the length of the arc. This means that
+
+    {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
+  link:  /course/circles-and-pi/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
 circumcircle:
   title: Circumcircle of a triangle
   text: The __circumcircle__ of a triangle is the circle that goes through all
@@ -310,6 +321,17 @@ cylinder:
     could also think of a cylinder as a “circular prism”.
   link: /course/circles-and-pi/spheres-cones-cylinders#cylinder-prism
   image: cylinder.svg
+
+
+cylinder-volume:
+  title: Volume of a Cylinder
+  text: |
+    The volume of a cylinder is given by the equation
+
+    {.text-center} `V = π r^2 h`,
+
+    where _r_ is the radius of the circular base, and _h_ is the height of the
+    cylinder (the perpendicular distance between the two bases).
 
 degrees:
   title: Degrees
