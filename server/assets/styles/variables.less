@@ -79,7 +79,8 @@
 }
 
 .svgBackground(@svg, @width: 24, @height: @width, @background: transparent, @attrs: '') {
-  background: @background url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="@{width}" height="@{height}"@{attrs}>@{svg}</svg>') no-repeat center;
+  @url: escape('<svg xmlns="http://www.w3.org/2000/svg" width="@{width}" height="@{height}"@{attrs}>@{svg}</svg>');
+  background: @background url('data:image/svg+xml;utf8,@{url}') no-repeat center;
 }
 
 .iconBackground(@foreground, @background, @path, @size: 24, @box: 28) {

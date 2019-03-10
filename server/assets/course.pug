@@ -48,6 +48,7 @@ html
           if section.background
             .page-background
           h1= section.title
+          .show-all-steps.off #[+icon('book', 20)] Reveal All Steps
           div!= course.getSectionHTML(section.id)
 
           footer

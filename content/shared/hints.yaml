@@ -2,9 +2,9 @@
 # MATHIGON HINTS
 # ==============================================================================
 
-welcome: Welcome to Mathigon! I’m Archie, your personal tutor.
+welcome: "Welcome to Mathigon! I’m Archie, your personal tutor. :mortar_board:"
 account: You can [create a free account](->.nav-link.dropdown-title) to save your progress.
-tutorial1: Welcome to Mathigon! The content is divided into small steps, and you have to answer questions or solve puzzles to reveal the next one.
+tutorial1: Our content is divided into small steps. You have to complete the activities to reveal what’s next.
 tutorial2: We will save all your progress, so you can come back later and continue right where you left off.
 
 correct:
