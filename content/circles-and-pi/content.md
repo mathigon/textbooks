@@ -141,7 +141,7 @@ everywhere in nature:
 :::
 
 {.r} And there are so many other examples: from rainbows to water ripples. Can
-you think of anything else? _{button.next-step} Continue_
+you think of anything else? [Continue](btn:next)
 
 ---
 > id: max-area
@@ -258,7 +258,7 @@ If we could use infinitely many rings or wedges, the approximations above would
 be perfect – and they both give us the same formula for the area of a circle:
 
 {.text-center.r} `A = π r^2`.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: pi-approximations
@@ -464,8 +464,7 @@ __{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
 {.r} The number 360 is very convenient because it is divisible by so many other
 numbers: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, and so on. This means that many
 fractions of one circle are also whole numbers. But have you ever wondered
-where the number 360 comes from?
-_{button.next-step} Continue_
+where the number 360 comes from? [Continue](btn:next)
 
 ---
 > id: babylon
@@ -727,203 +726,416 @@ You’ll learn much more about this in the future.
 
 
 --------------------------------------------------------------------------------
-> sectionStatus: dev
-> section: tangets-chords-arcs
-> id: circle-parts
+
 
 
 ## Tangents, Chords and Arcs
 
-In the previous sections, you learned about a few different parts of a circle,
-like the radius, diameter and circumference. However, there are 
+> section: tangets-chords-arcs
+> id: circle-parts
+
+In the previous sections, you learned the names given to several different
+parts of a circle – like the center, radius, diameter and circumference.
+However, there are many geometric elements related to a circle, which we’ll
+need to solve more complex problems:
 
 ::: column.grow
 
-* A __secant__ is a line that intersects a circle in two points.
-
-* A __chord__ is a line segment whose endpoints are on a circle.
-
-* A __tangent__ is a line that intersects a circle at exactly one point.
-
-* An __arc__ is
-
-* A __sector__ is
-
-* A __segment__ is
+* {.r} A [{.red} secant](pill:secant) is a line that intersects a circle in two
+  points. [Continue](btn:next)
+* {.r.reveal(when="next-0")} A [{.green} chord](pill:chord) is a line segment
+  whose endpoints lie on the circumference of a circle. [Continue](btn:next)
+* {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) is a line that
+  touched a circle at exactly one point. This is called the __point of
+  tangency__. [Continue](btn:next)
+* {.r.reveal(when="next-2")} An [{.yellow} arc](pill:arc) is a section of the
+  circumference of a circle. [Continue](btn:next)
+* {.r.reveal(when="next-3")} A [{.teal} sector](pill:sector) is a part of the
+  interior of a circle, bounded by an _arc_ and _two radii_.
+  [Continue](btn:next)
+* {.r.reveal(when="next-4")} Finally, a [{.purple} segment](pill:segment) is a
+  part of the interior of a circle, bounded by an _arc_ and _a chord_.
+  [Continue](btn:next)
 
 ::: column(width=300)
 
-    x-geopad(width=300 height=300): svg
+    x-geopad.sticky(width=300 height=300): svg
+      circle(x="point(150,150)" name="x")
+      
+      path.teal.fill.reveal(x="sector(x,d1,Math.PI/2.5)" target="sector" when="next-3" label="Sector" label-colour="white")
+      path.purple.fill.reveal(x="arc(x,b1,Math.PI/2.5)" target="segment" when="next-4" label="Segment")
+      
+      path.black(x="circle(x,100)" name="c")
+      
+      circle.red(x="c.at(0.5)" name="a1" target="secant")
+      circle.red(x="c.at(0.7)" name="a2" target="secant")
+      path.red.thick(x="line(a1,a2)" label="Secant" target="secant")
+      
+      circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
+      circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
+      path.green.thick.reveal(x="segment(b1,b2)" label="Chord" target="chord" when="next-0" animation="draw")
+      
+      circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
+      path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Tangent" target="tangent" when="next-1" animation="draw")
+      
+      circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
+      circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
+      path.yellow.thick.reveal(x="arc(x,d1,Math.PI/2.5)" label="Arc" target="arc" when="next-2" animation="draw")
 
 :::
 
-In this section we will have a closer look at the relationships between these
-XXXX, prove theorems about their properties, and explore how they can be used
-to solve problems in geometry.
+---
+> id: circle-parts-1
+
+In this section, we will look at the relationship between all these elements,
+and prove theorems about their properties. Don't worry about memorising all the
+definitions for now – you can always use the
+[glossary](->.footer-link[data-modal=glossarym]).
 
 ---
 
 ### Tangents
 
-__[CC] Construct a tangent line from a point outside a given circle to the circle.__
+{.todo} COMING SOON!
 
-Point of Tangency: The point where a tangent line touches the circle.
+    // https://www.mathopenref.com/tangentline.html
+    // https://www.mathopenref.com/consttangents.html
+    // https://www.mathopenref.com/consttangent.html
 
-The tangent line and the radius drawn to the point of tangency have a unique
-relationship. Let’s investigate it here.
-
-The tangent ray TP and tangent segment TP are also called tangents.
-Tangent Circles: Two or more circles that intersect at one point.
-Two circles can be tangent to each other in two different ways, either
-internally tangent or externally tangent.
-
-If the circles are not tangent, they can share a tangent line, called a common
-tangent. Common tangents can be internally tangent and externally tangent too.
-Notice that the common internal tangent passes through the space between the
-two circles. Common external tangents stay on the top or bottom of both circles.
-
-1. Using your compass, draw a circle. Locate the center and draw a radius. Label
-   the radius AB, with A as the center. 
-2. Draw a tangent line, BC←→, where B is the point of tangency. To draw a
-   tangent line, take your ruler and line it up with point B. Make sure that B
-   is the only point on the circle that the line passes through. 
-3. Using your protractor, find m∠ABC.
-
-_Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-line is perpendicular to the radius drawn to the point of tangency.
-
-To prove this theorem, the easiest way to do so is indirectly (proof by
-contradiction). Also, notice that this theorem uses the words “if and only if,”
-making it a biconditional statement. Therefore, the converse of this theorem is
-also true. Now let’s look at two tangent segments, drawn from the same external
-point. If we were to measure these two segments, we would find that they are equal.
-
-_Two Tangents Theorem_: If two tangent segments are drawn from the same external
-point, then the segments are equal.
+    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
+    // 
+    // Point of Tangency: The point where a tangent line touches the circle.
+    // 
+    // The tangent line and the radius drawn to the point of tangency have a unique
+    // relationship. Let’s investigate it here.
+    // 
+    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
+    // line is perpendicular to the radius drawn to the point of tangency.
+    // 
+    // To prove this theorem, the easiest way to do so is indirectly (proof by
+    // contradiction). Also, notice that this theorem uses the words “if and only if,”
+    // making it a biconditional statement. Therefore, the converse of this theorem is
+    // also true. Now let’s look at two tangent segments, drawn from the same external
+    // point. If we were to measure these two segments, we would find that they are equal.
+    // 
+    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
+    // point, then the segments are equal.
+    //
+    // Tangents are actually a much more universal concept,
+    // Tangent Circles: Two or more circles that intersect at one point.
+    // Two circles can be tangent to each other in two different ways, either
+    // internally tangent or externally tangent.
 
 ---
 
 ### Chords
 
-A chord is a line segment whose endpoints are on a circle. A diameter is the
-longest chord in a circle. There are several theorems that explore the
-properties of chords.
+{.todo} COMING SOON!
 
-Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-congruent if and only if their corresponding chords are congruent.
-
-Notice the “if and only if” in the middle of the theorem. This means that Chord
-Theorem #1 is a biconditional statement. Taking this theorem one step further,
-any time two central angles are congruent, the chords and arcs from the
-endpoints of the sides of the central angles are also congruent. In both of
-these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-radii (SAS). By CPCTC, BE≅CD.
-
-Investigation: Perpendicular Bisector of a Chord
-1. Draw a circle. Label the center A. 
-2. Draw a chord in ⨀A. Label it BC.
-3. Find the midpoint of BC by using a ruler. Label it D. 
-4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-
-Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-
-Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-bisects the chord and its corresponding arc.
-
-Investigation: Properties of Congruent Chords
-1. Draw a circle with a radius of 2 inches and two chords that are both 3
-   inches. Label as in the picture to the right. This diagram is drawn to scale. 
-2. From the center, draw the perpendicular segment to AB and CD.
-3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-   and E. Find the measure of these segments. What do you notice? 
-
-Chord Theorem #4: In the same circle or congruent circles, two chords are
-congruent if and only if they are equidistant from the center.
-
-Recall that two lines are equidistant from the same point if and only if the
-shortest distance from the point to the line is congruent. The shortest distance
-from any point to a line is the perpendicular line between them. In this
-theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-and AB≅CD.
+    // A chord is a line segment whose endpoints are on a circle. A diameter is the
+    // longest chord in a circle. There are several theorems that explore the
+    // properties of chords.
+    // 
+    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
+    // congruent if and only if their corresponding chords are congruent.
+    // 
+    // Notice the “if and only if” in the middle of the theorem. This means that Chord
+    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
+    // any time two central angles are congruent, the chords and arcs from the
+    // endpoints of the sides of the central angles are also congruent. In both of
+    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
+    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
+    // radii (SAS). By CPCTC, BE≅CD.
+    // 
+    // Investigation: Perpendicular Bisector of a Chord
+    // 1. Draw a circle. Label the center A. 
+    // 2. Draw a chord in ⨀A. Label it BC.
+    // 3. Find the midpoint of BC by using a ruler. Label it D. 
+    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
+    // 
+    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
+    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
+    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
+    // 
+    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
+    // bisects the chord and its corresponding arc.
+    // 
+    // Investigation: Properties of Congruent Chords
+    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
+    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
+    // 2. From the center, draw the perpendicular segment to AB and CD.
+    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
+    //    and E. Find the measure of these segments. What do you notice? 
+    // 
+    // Chord Theorem #4: In the same circle or congruent circles, two chords are
+    // congruent if and only if they are equidistant from the center.
+    // 
+    // Recall that two lines are equidistant from the same point if and only if the
+    // shortest distance from the point to the line is congruent. The shortest distance
+    // from any point to a line is the perpendicular line between them. In this
+    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
+    // and AB≅CD.
 
     // Concentric Circles: Two or more circles that have the same center, but different radii.
     // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
+> id: earth-arc
 
 ### Arcs and Sectors
 
-__[CC] Derive using similarity the fact that the length of the arc intercepted
-by an angle is proportional to the radius, and define the radian measure of the
-angle as the constant of proportionality; derive the formula for the area of a
-sector.__
+::: column.grow
 
-A central angle is the angle formed by two radii of the circle with its vertex
-at the center of the circle. In the picture below, the central angle would be
-∠BAC. Every central angle divides a circle into two arcs (an arc is a section
-of the circle). In this case the arcs are BCˆ and BDCˆ. Notice the arc above the
-letters. To label an arc, always use this curve above the letters. Do not
-confuse BC and BC.
+Most scientists in ancient Greece agreed that the Earth is a sphere. There was
+plenty of evidence: from ships disappearing behind the horizon at sea, to the
+circular motion of stars during the night.
 
-If D was not on the circle, we would not be able to tell the difference between
-BCˆ and BDCˆ. There are 360∘ in a circle, where a semicircle is half of a
-circle, or 180∘. m∠EFG=180∘, because it is a straight angle, so mEHGˆ=180∘ and
-mEJGˆ=180∘.
+Unfortunately, no one knew exactly _how big_ Earth was – until around 200 BC,
+when the mathematician [Eratosthenes](bio:eratosthenes) found an ingenious way
+to measure Earth’s radius, using basic geometry. All we need is a bit more
+knowledge about arcs and sectors of a circle.
 
-Semicircle: An arc that measures 180∘.
+::: column(width=280)
 
-Minor Arc: An arc that is less than 180∘.
+    x-solid(size=280 rotate="0.5")
 
-Major Arc: An arc that is greater than 180∘. Always use 3 letters to label a
-major arc.
+:::
 
-Two arcs are congruent if their central angles are congruent. The measure of
-the arc formed by two adjacent arcs is the sum of the measures of the two arcs
-(Arc Addition Postulate). An arc can be measured in degrees or in a linear
-measure (cm, ft, etc.). In this course we will use degree measure. The measure
-of the minor arc is the same as the measure of the central angle that
-corresponds to it. The measure of the major arc equals to 360∘ minus the
-measure of the minor arc. In order to prevent confusion, major arcs are always
-named with three letters; the letters that denote the endpoints of the arc and
-any other point on the major arc. When referring to the measure of an arc,
-always place an “m” in from of the label.
+---
+> id: arcs
 
-One way to measure arcs is in degrees. This is called the “arc measure” or
-“degree measure.” Arcs can also be measured in length, as a portion of the
-circumference. Arc length is the length of an arc or a portion of a circle’s
-circumference. The arc length is directly related to the degree arc measure.
+::: column(width=280)
 
-Arc Length Formula: If d is the diameter or r is the radius, the length of
-ABˆ=mABˆ360∘⋅πd or mABˆ360∘⋅2πr.
+    x-geopad.sticky(width=280 height=280): svg
+      circle(x="point(140,140)" name="c")
+      path(x="circle(c,100)" name="circ")
+      circle.move(cx=240 cy=140 name="a" project="circ" label="A")
+      circle.move(cx=85 cy=60 name="b" project="circ" label="B")
+      
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-colour="white")
+      path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Arc" target="arc")
+      path.fill.blue.reveal(when="blank-2" x="angle(b,c,a).sup" round target="angle")
+      
+      path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
 
-A sector of a circle is the area bounded by two radii and the arc between the
-endpoints of the radii.
+      path.fill.yellow.transparent(x="circ" target="area")
+      path.thick.red.transparent(x="circ" target="circ")
+      path.blue.fill.transparent(x="circle(c,32)" target="fangle")
 
-The area of a sector is a fractional part of the area of the circle, just like
-arc length is a fractional portion of the circumference. The Area of a sector
-is A=mABˆ360∘⋅πr2 where r is the radius and ABˆ is the arc bounding the sector.
-Another way to write the sector formula is A=central angle360∘⋅πr2.
+::: column.grow
+
+As you can see in the diagram, an [{.red} arc](pill:arc) is a part of the
+[[circumference|diameter|tangent]] of a circle, and a [{.yellow} sector](pill:sector)
+is a part of the [[interior|radius|perimeter]] of a circle.
+
+::: .reveal(when="blank-0 blank-1")
+The arc between two points _A_ and _B_ is often written as `§arc(AB)`. This
+definition is slightly ambiguous: there is a [{.purple} second arc](pill:major)
+that connects _A_ and _B_ but goes the other way around the circle.
+
+The smaller of the two arcs is called the __minor arc__, and the larger one is
+called the __major arc__. If points _A_ and _B_ are exactly opposite each other,
+both arcs have the same length: a [[semicircle|diameter|circumference]].
+:::
+
+{.reveal(when="blank-2")} The length of an arc and the area of a sector both
+depend on the corresponding angle at the center of the circle: this is called
+the [{.blue} central angle](pill:angle).
+
+:::
+
+---
+> id: arcs-1
+
+::: .fixme
+The length of an arc is the distance along the curved line forming the
+arc. It is longer than the straight line distance between its endpoints (which
+would be a chord). It would be measured in distance units, such as meters.
+
+It is important to notice that the arc, sector and central angle all take up
+the same _proportion_ of a full circle. In other words,
+
+{.text-center} `§ pill("arc","red","arc") / pill("circumference","red","circ") = pill("sector","yellow","sector") / pill("area","yellow","area") = pill("angle","blue","angle") / pill(2 pi,"blue","fangle")`
+
+We can rearrange these equations to tell us the size of
+the arc directly:
+
+{.text-center} `§"arc length" = "circumference" xx c/360 = 2 π r xx c/360`
+
+If the central angle is is radians, the formula is simpler: arc length = R C 
+
+And similarly for sectors:
+
+Sector area is proportional to arc length
+The area enclosed by a sector is proportional to the arc length of the sector.
+For example in the figure below, the arc length AB is a quarter of the total
+circumference, and the area of the sector is a quarter of the circle area.
+
+What the formulae are doing is taking the area of the whole circle, and
+then taking a fraction of that depending on what fraction of the circle the
+sector fills. So for example, if the central angle was 90°, then the sector
+would have an area equal to one quarter of the whole circle.
+
+{.text-center} `§A_"sector" = π r^2 c/360`
+
+If you know the arc length Area = R L2
+:::
+
+---
+> id: eratosthenes
+
+Now let’s see how we can use arcs and sectors to calculate the circumference of
+the Earth.
+
+In ancient Egypt, the city of _Swenet_ was located along the Nile river. Swenet was
+famous for a well with a curious property: there was one moment every year when
+the sunlight reached the very bottom of the well – at noon on 21 June, the day
+of the _summer solstice_. At that precise time, the bottom of the well was
+illuminated, but not its sides, meaning that the Sun was standing directly above
+the well.
+
+::: column(width=300)
+
+    x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
+
+{.caption} Ancient Egyptians measured long distances by counting the number of
+steps it took slaves to walk.
+
+::: column(width=300)
+
+    x-media(src="images/well.jpg" width=300 height=300 lightbox)
+
+{.caption} Some sources say the “Well of Eratosthenes” was on _Elephantine
+island_ on the Nile river.
+
+:::
+
+The mathematician [Eratosthenes](bio:eratosthenes) lived in _Alexandria_, about
+800\ km North of Swenet, where he was director of the Great Library. In the city
+centre of Alexandria stood an obelisk, a tall, narrow monument with a
+pyramid-shaped top.
+
+Eratosthenes noticed that at noon on the day of the summer solstice, the obelisk
+was throwing a shadow – meaning that the sun was _not_ directly above it. He
+deduced that this was because of the curvature of the Earth, and realised it
+could be used to calculate our planet’s circumference.
+
+---
+> id: eratosthenes-1
+
+::: column.grow
+
+{.r} Here you can see the well in Swenet as well as the obelisk in Alexandria.
+The sun rays fall directly into the well, but hit the obelisk at an angle and
+cast a shadow. [Continue](btn:next)
+
+::: .reveal(when="next-0")
+Eratosthenes measured that the [{.teal} angle](pill:angle1) of the shadow was
+7.2°. This is the same as the [{.purple} central angle](pill:angle2) of the
+[{.red} arc](pill:arc) from Alexandria to Swenet, because they are
+[[alternating|vertical|corresponding]] angles.
+:::
+
+::: .reveal(when="blank-0")
+Now we can use the equation for arc length that we derived above:
+
+{.text-center} `§pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
+:::
+
+::: .reveal(when="blank-1")
+If we rearrange this, we find that the circumference of the Earth is
+
+{.text-center} `§pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
+:::
+
+::: .reveal(when="blank-2")
+Finally, we know that the circumference of a circle is `C = 2 pi r`, so the
+radius of Earth is
+
+{.text-center} `§r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"`.
+:::
+
+::: column(width=300)
+
+    x-geopad.sticky(width=300 height=400)
+      img.sunrays(src="images/sunlight.png" width=300 height=400)
+      svg.r
+        defs: radialGradient#grad1(cx=200 cy=200 r=200 gradientUnits="userSpaceOnUse")
+          stop(offset=0 stop-color="#63a3ff")
+          stop(offset=1 stop-color="#1f7aff")
+      
+        circle(x="point(150,250)" name="c" hidden)
+        circle(x="point(150,120)" name="a" hidden)
+        circle.move.pulsate(cx=80 cy=140 name="b" project="arc(c,point(64,155),1.47)")
+        circle(x="c.add(b.subtract(c).scale(1.465))" name="d" hidden)
+    
+        path.shadow(x="triangle(c,d,point(d.x,c.y))")
+        path.earth(d="M153,120,152,150h-4l-.95-30a130,130,0,1,0,5.9,0Z" fill="url(#grad1)")
+        path.earth-cover.fill(x="circle(c,130)")
+        
+        path.red.thick.reveal(when="next-0" animation="draw" x="arc(c,b,angle(b,c,a).rad).minor" target="arc")
+        path.fill.teal.reveal(when="next-0" x="angle(c,d,point(d.x,c.y)).sup" target="angle1")
+        path.fill.purple.reveal(when="next-0" x="angle(b,c,a).sup" name="ang" target="angle2")
+        path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
+        path.blue.transparent(x="circle(c,130)" target="circ")
+        
+        image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 x-x="${b.x-4}" x-y="${b.y-60}" style="transform: rotate(-${angle(b,c,a).rad}rad)")
+
+:::
+
+---
+> id: eratosthenes-2
+
+Eratosthenes’ measurement was one of the most important experiments in
+antiquity. His estimate of Earth’s size was surprisingly accurate, especially
+when considering that he only had access to very basic measuring tools.
+
+::: column(width=280)
+
+    x-media(src="images/obelisk.jpg" width=280 height=450 lightbox)
+
+::: column.grow
+
+Of course, it can be difficult to translate his original results into modern
+units like kilometres. In ancient Greece, distance was measured in _stadia_
+(approximately 160 m), but there was no universal standard. Every area had a
+slightly different version, and we don’t know which one Eratosthenes used.
+
+In the following centuries, scientists tried to use other methods to calculate
+the radius of Earth – sometimes with very different, and incorrect results.
+
+It was one of these incorrect measurements that prompted Christopher Columbus to
+sail west from Portugal. He assumed that Earth was much smaller than it actually
+is, and hoped to reach India. In fact, he arrived at an entire continent in
+between: the Americas.
+
+:::
 
 ---
 
 ### Segments
 
-The last part of a circle that we can find the area of is called a segment, not
-to be confused with a line segment. A segment of a circle is the area of a
-circle that is bounded by a chord and the arc with the same endpoints as the
-chord. The area of a segment is Asegment=Asector−A△ABC
+{.todo} COMING SOON!
+
+    // The last part of a circle that we can find the area of is called a segment, not
+    // to be confused with a line segment. A segment of a circle is the area of a
+    // circle that is bounded by a chord and the arc with the same endpoints as the
+    // chord. The area of a segment is Asegment=Asector−A△ABC
 
 
 
 --------------------------------------------------------------------------------
-> section: circle-theorems
 
 
 
 ## The Circle Theorems
+
+> section: circle-theorems
+> sectionStatus: dev
+
+https://www.mathsisfun.com/geometry/circle-theorems.html
+https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/
+http://amsi.org.au/teacher_modules/Circle_Geometry.html
 
 __[CC] Identify and describe relationships among inscribed angles, radii, and
 chords. Include the relationship between central, inscribed, and circumscribed
@@ -1035,12 +1247,13 @@ Combines all of Euclidean Geometry
 
 
 --------------------------------------------------------------------------------
-> sectionStatus: dev
-> section: cyclic-polygons
 
 
 
 ## Cyclic Polygons
+
+> sectionStatus: dev
+> section: cyclic-polygons
 
 __[CC] Construct an equilateral triangle, a square, and a regular hexagon
 inscribed in a circle.__
@@ -1061,12 +1274,13 @@ and only if the opposite angles are supplementary.
 
 
 --------------------------------------------------------------------------------
-> sectionStatus: dev
-> section: spheres-cones-cylinders
-> id: solids
+
 
 
 ## Spheres, Cones and Cylinders
+
+> section: spheres-cones-cylinders
+> id: solids
 
 In the previous sections, we studied the properties of circles on a flat
 surface. But our world is actually three-dimensional, so lets have a look at
@@ -1160,7 +1374,7 @@ In both cases, we can find the volume by multiplying the area of their
 __{.m-red} base__ with their __{.m-blue} height__. This means that a
 cylinder with radius _{.b.m-red} r_ and height _{.b.m-blue} h_ has volume
 
-{.text-center} `V =` _{x-equation(solution="π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
+{.text-center} `V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
 
 {.reveal(when="eqn-0")} Remember that radius and height must use the same units.
 For example, if _r_ and _h_ are both in cm, then the volume will be in
@@ -1516,7 +1730,7 @@ like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
 you learned how the Greek mathematician [Eratosthenes](bio:eratosthenes)
 calculated the radius of Earth using the shadow of a pole – it was 6,371 km.
 Now, let’s try to find the Earth’s total volume and surface area.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: sphere-volume
@@ -1657,7 +1871,7 @@ This means that its total mass is
 
 ::: column(width=280)
 
-    x-solid(size=300 rotate="-0.5" style="margin: -10px")
+    x-solid(size=280 rotate="0.5")
 
 :::
 

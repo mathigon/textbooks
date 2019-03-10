@@ -78,11 +78,16 @@ dirac:
 
 eratosthenes:
   name: Eratosthenes of Cyrene
-  bio: __Eratosthenes__ (c. 276 BC – c. 195 BC) was a Greek mathematician,
-    geographer, astronomer and poet. He first calculated the circumference of
-    the Earth and the distance from Earth to the sun, and he drew some of the
-    first world maps. He also discovered the Sieve of Eratosthenes, an efficient
-    way to determine which numbers are prime.
+  bio: __Eratosthenes of Cyrene__ (c. 276 BC – 195 BC) was a Greek
+    mathematician, geographer, astronomer, historian, and poet. He spent much
+    of his life in Egypt, as head of the library of Alexandria.
+
+    Among many other achievements, Eratosthenes calculated the circumference of
+    the Earth, measured the tilt of the Earth’s axis of rotation, estimated the
+    distance to the sun, and created some of the first maps of the world.
+
+    He also invented the “Sieve of Eratosthenes”, an efficient way to
+    calculate _prime numbers_.
 
 escher:
   name: M. C. Escher

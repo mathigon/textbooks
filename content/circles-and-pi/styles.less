@@ -243,6 +243,22 @@ x-pi-scroll.box-body {
 
 
 // -----------------------------------------------------------------------------
+// Tangents, Chords and Arcs
+
+#eratosthenes-1 {
+  x-geopad { background: none; }
+  .sunrays { display: block; position: absolute; }
+  .shadow { fill: #ccc; transition: fill .2s; }
+  .obelisk { pointer-events: none; transform-origin: center bottom; }
+  .earth-cover.fill { fill: transparent; }
+
+  &.focus .sunrays { opacity: 0.2; }
+  &.focus .shadow { fill: #eee; }
+  &.focus .earth-cover.fill { fill: fade(white, 90%); }
+}
+
+
+// -----------------------------------------------------------------------------
 // Spheres, Cones and Cylinders
 
 .large-op {

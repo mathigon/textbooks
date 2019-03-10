@@ -510,6 +510,44 @@ export function smallAngle($step) {
 
 
 // -----------------------------------------------------------------------------
+// Tangents, Chords and Arcs
+
+function makeEarth($solid) {
+  $solid.addMesh((scene, THREE) => {
+    const material = new THREE.MeshPhongMaterial({
+      bumpScale: 0.04,
+      specular: 0xa2a2a2,
+      shininess: 5
+    });
+
+    const textureLoader = new THREE.TextureLoader();
+    function loadTexture(property, url) {
+      textureLoader.load(url, (texture) => {
+        material[property] = texture;
+        material.needsUpdate = true;
+      });
+    }
+    loadTexture('map', '/resources/circles-and-pi/images/textures/map.jpg');
+    loadTexture('bumpMap', '/resources/circles-and-pi/images/textures/bump.jpg');
+    loadTexture('specularMap', '/resources/circles-and-pi/images/textures/spec.jpg');
+
+    const geometry = new THREE.SphereGeometry(2, 64, 64);
+    return [new THREE.Mesh(geometry, material)];
+  });
+}
+
+export function earthArc($step) {
+  makeEarth($step.$('x-solid'));
+}
+
+export function eratosthenes1($step) {
+  const $geopad = $step.$('x-geopad');
+  $geopad.$('.earth').insertBefore($geopad.$('.shadow'));  // Reorder elements
+  $geopad.$paths.insertAfter($geopad.$('.obelisk'));
+}
+
+
+// -----------------------------------------------------------------------------
 // Spheres, Cones and Cylinders
 
 export function solids($step) {
@@ -863,7 +901,6 @@ export function sphere($step) {
     $solid.object.rotateY(-0.5);
   });
 }
-
 export function sphereVolume($step) {
   const $system = $step.$('x-equation-system');
   $system.isFinal = (expr) => !expr.variables.includes('x');
@@ -928,7 +965,6 @@ function numberAnimation(n, $el, t) {
 }
 
 export function earthVolume($step) {
-  const $solid = $step.$('x-solid');
   const $rows = $step.$$('tr');
   const $numbers = $step.$('.numbers');
 
@@ -942,27 +978,7 @@ export function earthVolume($step) {
         .then(() => $step.score('numbers'));
   });
 
-  $solid.addMesh((scene, THREE) => {
-    const material = new THREE.MeshPhongMaterial({
-      bumpScale: 0.05,
-      specular: 0xaaaaaa,
-      shininess: 5
-    });
-
-    const textureLoader = new THREE.TextureLoader();
-    function loadTexture(property, url) {
-      textureLoader.load(url, (texture) => {
-        material[property] = texture;
-        material.needsUpdate = true;
-      });
-    }
-    loadTexture('map', '/resources/circles-and-pi/images/textures/map.jpg');
-    loadTexture('bumpMap', '/resources/circles-and-pi/images/textures/bump.jpg');
-    loadTexture('specularMap', '/resources/circles-and-pi/images/textures/spec.jpg');
-
-    const geometry = new THREE.SphereGeometry(1.8, 64, 64);
-    return [new THREE.Mesh(geometry, material)];
-  });
+  makeEarth($step.$('x-solid'));
 }
 
 export function sphereSum($step) {
