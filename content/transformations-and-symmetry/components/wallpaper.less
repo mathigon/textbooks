@@ -12,25 +12,17 @@ x-wallpaper {
   position: relative;
   margin: 1.5rem 0;
 
-  canvas { width: 100%; height: auto; background: @grey-background; }
+  canvas {
+    width: 100%;
+    height: auto;
+    background: @grey-background;
+    border-radius: 0 6px 6px 6px;
+  }
 
-  .groups { display: flex; margin-bottom: 1px; }
-
-  .group {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    margin-right: 1px;
-    line-height: 40px;
+  x-select.tabs .group {
+    width: 36px;
     text-align: center;
-    background: @light-grey;
-    font-size: 22px;
-    font-weight: 600;
-    transition: color .2s, background .2s;
-    &:first-child { border-top-left-radius: 5px; }
-    &:last-child { border-top-right-radius: 5px; }
-    &:hover { color: white; background: mix(@light-grey, @grey); }
-    &.active { color: white; background: @grey; }
+    padding: 0;
   }
 
   .colours {

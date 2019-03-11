@@ -238,7 +238,7 @@ export class Wallpaper extends CustomElement {
     const $canvas = this.$('canvas');
     const context = $canvas.getContext();
 
-    const $groups = this.$('.groups');
+    const $groups = this.$('x-select.tabs');
     let activeGroup = $groups.$active.data.value;
     $groups.on('change', $active => {
       context.clearRect(0, 0, 1e10, 1e10);
@@ -246,7 +246,7 @@ export class Wallpaper extends CustomElement {
       this.trigger('switch', activeGroup);
     });
 
-    const $colours = this.$('.colours');
+    const $colours = this.$('x-select.colours');
     context.fillStyle = $colours.$active.css('background-color');
     $colours.on('change', $active => {
       context.fillStyle = $active.css('background-color');
