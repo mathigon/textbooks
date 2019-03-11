@@ -914,13 +914,7 @@ knowledge about arcs and sectors of a circle.
       
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-colour="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Arc" target="arc")
-      path.fill.blue.reveal(when="blank-2" x="angle(b,c,a).sup" round target="angle")
-      
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
-
-      path.fill.yellow.transparent(x="circ" target="area")
-      path.thick.red.transparent(x="circ" target="circ")
-      path.blue.fill.transparent(x="circle(c,32)" target="fangle")
 
 ::: column.grow
 
@@ -935,57 +929,118 @@ that connects _A_ and _B_ but goes the other way around the circle.
 
 The smaller of the two arcs is called the __minor arc__, and the larger one is
 called the __major arc__. If points _A_ and _B_ are exactly opposite each other,
-both arcs have the same length: a [[semicircle|diameter|circumference]].
+both arcs have the same length and are [[semicircles|diameters|circumferences]].
 :::
-
-{.reveal(when="blank-2")} The length of an arc and the area of a sector both
-depend on the corresponding angle at the center of the circle: this is called
-the [{.blue} central angle](pill:angle).
 
 :::
 
 ---
 > id: arcs-1
 
-::: .fixme
-The length of an arc is the distance along the curved line forming the
-arc. It is longer than the straight line distance between its endpoints (which
-would be a chord). It would be measured in distance units, such as meters.
+::: column.grow
 
-It is important to notice that the arc, sector and central angle all take up
-the same _proportion_ of a full circle. In other words,
+To find the length of an arc or the area of a sector, we need to know about the
+corresponding angle at the center of the circle: this is called the
+[{.blue} central angle](pill:angle).
 
-{.text-center} `§ pill("arc","red","arc") / pill("circumference","red","circ") = pill("sector","yellow","sector") / pill("area","yellow","area") = pill("angle","blue","angle") / pill(2 pi,"blue","fangle")`
+Notice how the arc, sector and angle all take up the _same proportion_ of a
+full circle. For example, if the [{.blue} central angle](pill:angle) is
+_{span.var-action}90°_, it takes up [[one quarter|one half|one third]] of a
+[{.teal} full circle](pill:fangle).
 
-We can rearrange these equations to tell us the size of
-the arc directly:
+::: .reveal(when="blank-0")
+This means that the [{.red} length of the arc](pill:arc) is also `1/4` of the
+[{.purple} whole circumference](pill:circ) of the circle, and the [{.yellow} area
+of the sector](pill:sector) is `1/4` of the [{.orange} whole area](pill:area) of
+the circle.
 
-{.text-center} `§"arc length" = "circumference" xx c/360 = 2 π r xx c/360`
+We can express this relationship in an equation:
 
-If the central angle is is radians, the formula is simpler: arc length = R C 
+{.text-center} `§ "arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
+:::
 
-And similarly for sectors:
+::: column(width=280)
 
-Sector area is proportional to arc length
-The area enclosed by a sector is proportional to the arc length of the sector.
-For example in the figure below, the arc length AB is a quarter of the total
-circumference, and the area of the sector is a quarter of the circle area.
+    x-geopad.sticky(width=280 height=280): svg
+      circle(x="point(140,140)" name="c")
+      path(x="circle(c,100)" name="circ")
+      circle.move(cx=240 cy=140 name="a" project="circ")
+      circle.move(cx=85 cy=60 name="b" project="circ")
+      
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sector" target="sector" label-colour="white")
+      path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Arc" target="arc")
+      path.fill.blue(x="angle(b,c,a)" target="angle")
+      
+      path.fill.orange.transparent(x="circ" target="area")
+      path.thick.purple.transparent(x="circ" target="circ")
+      path.teal.fill.transparent(x="circle(c,32)" target="fangle")
 
-What the formulae are doing is taking the area of the whole circle, and
-then taking a fraction of that depending on what fraction of the circle the
-sector fills. So for example, if the central angle was 90°, then the sector
-would have an area equal to one quarter of the whole circle.
+:::
 
-{.text-center} `§A_"sector" = π r^2 c/360`
+---
+> id: arcs-2
 
-If you know the arc length Area = R L2
+Now we can rearrange these equations to find whichever variable we’re interested
+in. For example,
+
+::: column(width=320 parent="padded-thin")
+
+| [{.red}arc length](pill) | = | `"circumference" × c/360` |
+|                          | = | `2 π r × c/360`          |
+{.eqn-system}
+
+::: column(width=320)
+
+| [{.yellow}sector area](pill) | = | `"circle area" × c/360` |
+|                              | = | `π r^2 × c/360`         |
+{.eqn-system}
+
+:::
+
+where _r_ is the radius of the circle, and _c_ is the size of the central
+angle.
+
+    // What the formulae are doing is taking the area of the whole circle, and
+    // then taking a fraction of that depending on what fraction of the circle
+    // the sector fills.
+
+    // The length of an arc is the distance along the curved line of the
+    // circumference of the circle. It is slightly longer than the straight
+    // line connecting the same two points (the chord).
+
+---
+> id: arcs-rad
+
+If the central angle is measured in [radians](gloss:radians) rather than
+[degrees](gloss:degrees), we can use the same equations, but have to replace
+360° with [[`2 π`|`1/2 π`|`π`]]:
+
+::: .reveal(when="blank-0")
+::: column(width=320 parent="padded-thin")
+
+| [{.red}arc length](pill) | = | `2 π r × c/(2π)` |
+|                          | = | `r × c`          |
+{.eqn-system}
+
+::: column(width=320)
+
+| [{.yellow}sector area](pill) | = | `π r^2 × c/(2π)` |
+|                              | = | `1/2 r^2 c`      |
+{.eqn-system}
+
+:::
+
+Notice how the equations become much simpler, and _π_ cancels out everywhere.
+This is because, as you might recall, the [definition of
+radians](/course/circles-and-pi/radians#radians) is basically the length of an
+arc in a circle with radius 1.
+
+Now let’s see how we can use arcs and sectors to calculate the circumference of
+the Earth. [Continue](btn:next)
 :::
 
 ---
 > id: eratosthenes
-
-Now let’s see how we can use arcs and sectors to calculate the circumference of
-the Earth.
 
 In ancient Egypt, the city of _Swenet_ was located along the Nile river. Swenet was
 famous for a well with a curious property: there was one moment every year when
@@ -999,7 +1054,7 @@ the well.
     x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
 
 {.caption} Ancient Egyptians measured long distances by counting the number of
-steps it took slaves to walk.
+steps it took to walk.
 
 ::: column(width=300)
 
@@ -1106,7 +1161,7 @@ the radius of Earth – sometimes with very different, and incorrect results.
 
 It was one of these incorrect measurements that prompted Christopher Columbus to
 sail west from Portugal. He assumed that Earth was much smaller than it actually
-is, and hoped to reach India. In fact, he arrived at an entire continent in
+is, and hoped to reach India. In fact, he arrived at a different continent in
 between: the Americas.
 
 :::
@@ -1726,7 +1781,7 @@ like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
 ---
 > id: sphere-1
 
-{.r} In a [previous section](/course/circles-and-pi/circle-parts#eratosthenes),
+{.r} In a [previous section](/course/circles-and-pi/circle-parts#eratosthenes-1),
 you learned how the Greek mathematician [Eratosthenes](bio:eratosthenes)
 calculated the radius of Earth using the shadow of a pole – it was 6,371 km.
 Now, let’s try to find the Earth’s total volume and surface area.
@@ -1914,6 +1969,7 @@ the volume of the cylinder!
 
 ---
 > id: sphere-maps
+> goals: move projection
 
 #### Surface Area of a Sphere
 
@@ -1923,27 +1979,43 @@ cones and cylinders before.
 
 This is a particular issue when trying to create maps. Earth has a curved,
 3-dimensional surface, but every printed map has to be flat and 2-dimensional.
-This means that Geographers have to cheat – by stretching or squishing certain
+This means that Geographers have to cheat: by stretching or squishing certain
 areas.
 
 Here you can see few different types of maps, called __projections__. Try moving
 the red square, and watch what this area _actually_ looks like on a globe:
 
-    .frame.fill
-
-{.todo} COMING SOON: Interactive Map Projections
+    .sphere-maps
+      x-select.tabs
+        .projection Robinson
+        .projection Cylindrical
+        .projection Mercator
+        .projection Mollweide
+      .map-body
+        .left
+          svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
+            path.outline
+            path.grid
+            path.land
+            path.map-select
+        .right
+          svg.sphere-map#projection(width=440 height=280 viewBox="0 0 440 280")
+            path.outline
+            path.grid
+            path.land
+            rect.map-select(x="-24" y="-24" width=48 height=48 style="cursor: move")
+          p.caption As you move the square on the map, notice how the size and shape of the #[em actual] area changes on the 3-dimensional globe.
+    x-gesture(target="#projection" slide="50, 20")
 
 ---
 > id: sphere-surface
 
-{.todo} COMING SOON: Sphere Surface Area proof
+To find the surface area of a sphere, we can once again approximate it using a
+different shape – for example a polyhedron with lots of faces. As the number of
+faces increases, the polyhedron starts to look more and more like a sphere.
 
-    // In this section we'll try to derive a formula 
-    
-    // Just like cylinder and cone before, we can approximate a sphere using a
-    // polyhedron with lots of faces. As we add more faces, the approximation
-    // starts to look more and more like a sphere.
-    
+{.todo} COMING SOON: Sphere Surface Area Proof
+
     // If we connect the small polygons to the center of the sphere, we get
     // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
     // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.

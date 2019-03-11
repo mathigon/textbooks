@@ -6,11 +6,12 @@
 
 
 import { clamp, list, wait, tabulate, isOneOf, square } from '@mathigon/core';
-import { Point, toWord, roundTo, Polygon, Sector, round, Angle, numberFormat, random } from '@mathigon/fermat';
+import { Point, toWord, roundTo, Polygon, Sector, round, Angle, Rectangle, numberFormat, random } from '@mathigon/fermat';
 import { $N, slide, Colour, animate, Draggable } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { rotateDisk } from '../shared/components/disk';
 import { Solid } from '../shared/components/solid';
+import { loadD3 } from './components/d3-geo';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
@@ -540,6 +541,16 @@ export function earthArc($step) {
   makeEarth($step.$('x-solid'));
 }
 
+export function arcs1($step) {
+  const $action = $step.$('.var-action');
+  const $geopad = $step.$('x-geopad');
+
+  $action.on('click', () => {
+    $geopad.animatePoint('b', new Point(240, 140));
+    $geopad.animatePoint('b', new Point(140, 40));
+  });
+}
+
 export function eratosthenes1($step) {
   const $geopad = $step.$('x-geopad');
   $geopad.$('.earth').insertBefore($geopad.$('.shadow'));  // Reorder elements
@@ -1004,6 +1015,63 @@ export function sphereSum($step) {
       $solids[(i + 2) % 3].rotate(e.quaternion);
     });
   }
+}
+
+export async function sphereMaps($step) {
+  const $svgs = $step.$$('svg.sphere-map');
+  const $grid = $svgs.map($svg => $svg.$('.grid'));
+  const $land = $svgs.map($svg => $svg.$('.land'));
+  const $rect = $svgs.map($svg => $svg.$('.map-select'));
+  const $outline = $svgs.map($svg => $svg.$('.outline'));
+
+  const polygon = new Rectangle(new Point(-24, -24), 48, 48).polygon;
+  const points = tabulate((i) => polygon.at(i/64), 64);
+
+  const drag = new Draggable($rect[1], $svgs[1],
+      {useTransform: true, responsive: true, margin: 26});
+  drag.setPosition(220, 140);
+
+  const {d3, topojson, world} = await loadD3();
+
+  const grid = d3.geoGraticule()();
+  const land = topojson.feature(world, world.objects.land);
+  const projections = {
+    Cylindrical: d3.geoCylindricalEqualArea().scale(90),
+    Mercator: d3.geoMercator().scale(70),
+    Mollweide: d3.geoMollweide().scale(78),
+    Robinson: d3.geoRobinson().scale(70)
+  };
+
+  const globeProjection = d3.geoOrthographic().clipAngle(90)
+      .translate([120, 120]).scale(118);
+  const globePath = d3.geoPath().projection(globeProjection);
+  let mapProjection = null;
+  $outline[0].setAttr('d', globePath({type: "Sphere"}));
+
+  function updateSelection(p) {
+    const center = mapProjection.invert([p.x, p.y]);
+    globeProjection.rotate([-center[0], -center[1]]);
+    $grid[0].setAttr('d', globePath(grid));
+    $land[0].setAttr('d', globePath(land));
+    const x = points.map(q => mapProjection.invert([p.x + q.x, p.y + q.y]));
+    $rect[0].setAttr('d', globePath({type: 'Polygon', coordinates: [x]}));
+  }
+
+  function updateProjection(name) {
+    mapProjection = projections[name].translate([220, 140]);
+    const path = d3.geoPath().projection(mapProjection);
+    $grid[1].setAttr('d', path(grid));
+    $land[1].setAttr('d', path(land));
+    $outline[1].setAttr('d', path({type: "Sphere"}));
+    updateSelection(drag.position);
+  }
+
+  const $select = $step.$('x-select');
+  $select.on('change', ($el) => updateProjection($el.text));
+  $select.one('change', () => $step.score('projection'));
+  drag.on('move', updateSelection);
+  drag.one('end', () => $step.score('move'));
+  updateProjection($select.$active.text);
 }
 
 

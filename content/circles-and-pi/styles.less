@@ -280,6 +280,28 @@ x-geopad.sketch {
   .focus & ellipse { opacity: 0.3; }
 }
 
+.sphere-maps {
+  margin: 1.5rem 0;
+
+  .map-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: @grey-background;
+    border-radius: 0 4px 4px 4px;
+  }
+
+  .left { width: 240px; margin: 12px; }
+  .right { width: 400px; flex-grow: 1; margin: 12px; }
+  svg { width: 100%; }
+
+  .outline { fill: mix(@blue, @grey-background); }
+  .grid { fill: none; stroke: fade(white, 30%); stroke-width: .5px; }
+  .land { fill: mix(@green, @grey-background); stroke: mix(@green, black, 70%); stroke-width: .6px; }
+  .map-select { stroke: @red; stroke-width: 2px; fill: fade(@red, 40%); }
+}
+
 
 // -----------------------------------------------------------------------------
 // Conic Sections
