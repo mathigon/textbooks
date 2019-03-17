@@ -291,7 +291,7 @@ In 1665, [Isaac Newton](bio:newton) managed to calculate 15 digits. Today, we
 can use powerful computers to calculate the value of Pi to much higher
 accuracy.
 
-The current record is 22 trillion digits. A printed book containing all these
+The current record is 31.4 trillion digits. A printed book containing all these
 digits would be approximately 400\ km thick – that’s the height at which the
 [International Space Station](gloss:iss) orbits Earth!
 
@@ -1987,9 +1987,9 @@ the red square, and watch what this area _actually_ looks like on a globe:
 
     .sphere-maps
       x-select.tabs
-        .projection Robinson
-        .projection Cylindrical
         .projection Mercator
+        .projection Cylindrical
+        .projection Robinson
         .projection Mollweide
       .map-body
         .left
@@ -2206,10 +2206,10 @@ Greek word “planetes” means “wanderers”.
 
 ::: column.grow
 
-Over time, people realised that Earth was actually just one of many planets
-orbiting the sun (the __Heliocentric model__), but it wasn’t until 1609, that
-the astronomer [Johannes Kepler](bio:kepler) discovered that planets actually
-move on _elliptical orbits_.
+Over time, people realised that Earth was just one of many planets orbiting the
+sun (the __Heliocentric model__), but it wasn’t until 1609, that the astronomer
+[Johannes Kepler](bio:kepler) discovered that planets actually move on
+_elliptical orbits_.
 
 The sun is in one of the two focal points of these ellipses. The planets speed
 up as they get closer to the sun, and slow down as they move further away.
