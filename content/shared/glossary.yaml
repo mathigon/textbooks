@@ -444,7 +444,7 @@ fermat-last:
 fibonacci-numbers:
   title: Fibonacci Numbers
   text: The sequence of __Fibonacci numbers__ starts with 1, 1. Every following
-    term if the sum of the two previous terms, which means that the recursive
+    term is the sum of the two previous terms, which means that the recursive
     formula is `x_n = x_(n-1) + x_(n-2)`.
   link: /course/sequences/fibonacci#fibonacci
 

@@ -899,7 +899,7 @@ a*{sup}2* + b*{sup}2* = c*{sup}2*, then it must be [[right-angled|acute|obtuse]]
 ::: column.grow
 Right angles are everywhere, and that’s why Pythagoras’ Theorem is so useful.
 
-Here you can see a __{.m-red}6m__ long ladder learning on a wall. The bottom of
+Here you can see a __{.m-red}6m__ long ladder leaning on a wall. The bottom of
 the ladder is __{.m-blue}1m__ away from the wall. How far does it reach up the
 wall?
 

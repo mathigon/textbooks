@@ -319,7 +319,7 @@ Here are a few more examples of action sequence photography for your enjoyment:
 
 ::: column.grow
 
-In 1683, the astronomer [Edmond Halley](bio:halley) observed an unusual
+In 1682, the astronomer [Edmond Halley](bio:halley) observed an unusual
 phenomenon: a glowing white object with a long tail that moved across the night
 sky. It was a __comet__, a small, icy rock that is flying through space, while
 leaving behind a trail of dust and ice.
