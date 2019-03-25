@@ -5,3 +5,48 @@
 
 
 @import "styles/variables";
+
+
+article.casino .page-background {
+  background-image: url('/resources/chaos/images/felt.png'),
+    -webkit-radial-gradient(50% 40%, circle farthest-corner, #527C14, #243a0a);
+  background-size: 180px 180px, auto;
+  transform: translate3D(0,0,0);
+}
+
+x-geopad.pendulum {
+  > svg { position: relative; }
+  canvas { position: absolute; width: 320px; height: 320px; }
+  .btn { position: absolute; top: 6px; right: 6px; }
+}
+
+x-water-canvas canvas { border-radius: 4px; }
+
+.butterfly {
+  width: 60px;
+  height: 43px;
+  background: url('/resources/chaos/images/butterfly.png');
+  background-size: cover;
+  position: absolute;
+  top: 220px;
+  left: 170px;
+  cursor: pointer;
+  transition: transform .2s;
+  transform: rotate(20deg);
+  &.flap { transform: rotate(20deg) scaleX(0.4); }
+}
+
+.tornado {
+  width: 50px;
+  height: 60px;
+  background: url('/resources/chaos/images/tornado.png');
+  background-size: cover;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  transition: transform 1s, opacity 1s;
+  transform: scale(0.4);
+  opacity: 0;
+  transform-origin: center bottom;
+  &.active { transform: scale(1); opacity: 1; }
+}
