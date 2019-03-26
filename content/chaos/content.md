@@ -86,9 +86,10 @@ double pendulum contains no element of chance or probability. It follows the
 precise, deterministic laws of gravity, and nevertheless moves completely
 unpredictably.
 
-Chaos appears in many unexpected places in nature and mathematics. In this
+{.r} Chaos appears in many unexpected places in nature and mathematics. In this
 course, we will explore some of these examples, and discover how mathematics can
 help us understand them.
+_{button.next-step} Continue_
 
 ---
 > id: butterfly
@@ -120,12 +121,13 @@ One day, Lorenz decided to run parts of his simulation a second time, with the
 same input data. To his surprise, the weather predictions created in both cases
 were completely different!
 
-At first, Lorenz thought there must be a bug in the code – but he quickly
+{.r} At first, Lorenz thought there must be a bug in the code – but he quickly
 worked out what was actually going on. When running the simulation a second time,
 he had rounded some of the input values to fewer decimal places (for example
 0.506 instead of 0.506127). Even though the difference is tiny, less than 0.1%,
 it seems to have been enough to cause the simulation to make completely
 different forecasts.
+_{button.next-step} Continue_
 
 ---
 > id: butterfly-1
@@ -157,6 +159,8 @@ forecasts.
 ::: 
 
 ---
+> id: butterfly-2
+> goals: video
 
 There is an important difference between _knowing the physical laws_ of a
 system, and being able to _predict its behaviour_. Newtons laws of gravity tell
@@ -183,6 +187,7 @@ like wind speed, rainfall, humidity, air pressure, and ocean currents.
 
 ---
 > id: dominoes
+> goals: video
 
 Of course, a butterfly doesn’t actually _cause_ a tornado – but it might change
 the conditions of the atmosphere just enough so that a tornado happens _now_
@@ -201,6 +206,7 @@ action that topples the first domino later leads to the largest domino falling:
 
 ---
 > id: applications
+> goals: video
 
 ### More Applications
 
@@ -287,10 +293,11 @@ The weather forecast currently has a prediction horizon of approximately one
 week, and even with much better technology in the future, we might never surpass
 two weeks of accuracy.
 
-Instead, scientists can use probability to predict _averages_: for example how
-often they’d expect certain weather events (like a tornado) to occur in a year.
-These averages can be very accurate, even if we don’t know _when exactly_ a
-tornado might happen.
+{.r} Instead, scientists can use probability to predict _averages_: for example
+how often they’d expect certain weather events (like a tornado) to occur in a
+year. These averages can be very accurate, even if we don’t know _when exactly_
+a tornado might happen.
+_{button.next-step} Continue_
 
 :::
 
@@ -301,14 +308,15 @@ Let’s summarise the key properties of _chaos_ that we have discovered so far:
 
 ::: .theorem
 
-* A __chaotic system__ follows precise, deterministic laws, often described by
-  one or more differential equations.
-* Chaotic systems are highly __sensitive to change__. Tiny initial differences
-  or measurement errors multiply over time and can lead to completely different
-  results in the future.
-* The behaviour is __unpredictable__ and non-repeating, even though it follows
-  deterministic laws. It might even _look random_, but only because it depends
-  on imperceptible differences.
+* A __chaotic system__ follows precise, [[deterministic|probabilistic|unpredictable]]
+  laws, often described by one or more differential equations.
+* {.reveal(when="blank-0")} Chaotic systems are highly __sensitive to change__.
+  [[Tiny|Large]] initial differences multiply over time and can lead to
+  [[huge|small|random]] differences in the result.
+* {.reveal(when="blank-1 blank-2")} The behaviour is __unpredictable__ and
+  non-repeating, even though it follows deterministic laws. It might even _look
+  random_, but only because it depends on imperceptible changes or measurement
+  errors.
 
 :::
 
@@ -323,6 +331,7 @@ change.
 
 ---
 > id: pop-culture
+> goals: video
 
 On the other hand, chaos theory and the butterfly effect were such simple and
 powerful ideas, that they soon started to appear in books, music lyrics, and
