@@ -303,10 +303,10 @@ function eratosthenes($step, $numbers, $gesture, primes, classes) {
     $gesture.stop();
     $step.score('p' + p);
     for (let i = 2; i <= 100 / p; ++i) {
-      delay(() => $numbers[i * p - 1].addClass(c + ' deleted'), i * 50);
+      delay(() => $numbers[i * p - 1].addClass(c + ' deleted'), i * 500);
     }
     if (primes.length) {
-      delay(() => eratosthenes($step, $numbers, $gesture, primes, classes), 1500);
+      delay(() => eratosthenes($step, $numbers, $gesture, primes, classes), (100 * 500)/p);
     }
   });
 }
