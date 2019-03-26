@@ -79,6 +79,19 @@ export function butterfly1($step) {
   });
 }
 
+function videoPlay($step) {
+  $step.$('x-video').on('play', () => $step.score('video'));
+}
+
+function videoEnd($step) {
+  $step.$('x-video').on('end', () => $step.score('video'));
+}
+
+export const butterfly2 = videoPlay;
+export const dominoes = videoEnd;
+export const applications = videoEnd;
+export const popCulture = videoPlay;
+
 
 // -----------------------------------------------------------------------------
 // Mathematical Billiard

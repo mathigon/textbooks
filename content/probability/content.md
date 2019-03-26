@@ -539,14 +539,14 @@ are [[6]] outcomes where the sum is 7, and [[36]] outcomes in total,
 _{span.reveal(when="blank-0 blank-1")}so the probability of getting a 7 is
 `6/36 = 0.1666`._
 
-The least likely outcomes are _{span.dice.outline}2_ and _{span.dice.outline}12_,
-each with a probability of `1/36 = 0.0277`.
-
 ---
 > id: future-2
 
+The least likely outcomes are _{span.dice.outline}2_ and _{span.dice.outline}12_,
+each with a probability of `1/36 = 0.0277`.
+
 It is impossible to forecast the outcome of a single coin toss or die roll.
-However, using probability we can very accurately predict the outcome of_many_
+However, using probability we can very accurately predict the outcome of _many_
 dice.
 
 If we throw a die 30 times, we know that we would get around `1/6 × 30 = 5`
@@ -718,7 +718,7 @@ Physicists can calculate the probability that a particular atom will decay in a
 certain period of time, but it is impossible to work out _which one_ will decay
 next – even if you know the exact properties of every atom.
 
-The overall rate of decay, on the other hand, is to steady that it can be used
+The overall rate of decay, on the other hand, is so steady that it can be used
 to calculate the age of fossils that died thousands of years ago on Earth. This
 process is called __Carbon dating__.
 
