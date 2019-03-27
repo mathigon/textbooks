@@ -301,13 +301,17 @@ function eratosthenes($step, $numbers, $gesture, primes, classes) {
 
   $numbers[p - 1].one('click', () => {
     $gesture.stop();
-    $step.score('p' + p);
+    let time = 0;
+
     for (let i = 2; i <= 100 / p; ++i) {
-      delay(() => $numbers[i * p - 1].addClass(c + ' deleted'), i * 500);
+      const t = 300 + 400 / i;  // Slowly speed up the animation over time.
+      delay(() => $numbers[i * p - 1].addClass(c + ' deleted'), time += t);
     }
-    if (primes.length) {
-      delay(() => eratosthenes($step, $numbers, $gesture, primes, classes), (100 * 500)/p);
-    }
+
+    delay(() => {
+      $step.score('p' + p);
+      if (primes.length) eratosthenes($step, $numbers, $gesture, primes, classes)
+    }, time + 1000);
   });
 }
 
