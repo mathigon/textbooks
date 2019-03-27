@@ -1119,9 +1119,9 @@ scalene-triangle:
 
 sequence:
   title: Sequence
-  text: A __sequence__ is an ordered list of numbers of elements that are
-    usually detemined using some function or patterns. Sequences can be both
-    finite and infinite.
+  text: A __sequence__ is an ordered list of numbers (or other elements like
+    geometric objects), that usually follow a specific pattern or function.
+    Sequences can be both finite and infinite.
   link: /course/sequences/introduction#simple-patterns
 
 sequence-convergence:

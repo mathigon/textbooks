@@ -53,11 +53,11 @@ all these patterns, but we are going to start with something a bit more basic.
 
 ### Simple Sequences
 
-In mathematics, a [__sequence__](gloss:sequence) is a collection of numbers (or
-other objects) that follow a particular pattern. The individual elements in a
+In mathematics, a [__sequence__](gloss:sequence) is a chain of numbers (or other
+objects) that usually follow a particular pattern. The individual elements in a
 sequence are called [__terms__](gloss:sequence-term).
 
-Here are a few examples of sequences. Can you find the pattern and fill in
+Here are a few examples of sequences. Can you find their patterns and calculate
 the next two terms?
 
 {.text-center.s-orange.with-arrows} _{.n}3_, _{.n}6*{span.arrow}+3*_,
@@ -105,12 +105,13 @@ by a special [variable](gloss:variable):
       | …
 
 The small number after the _x_ is called a __subscript__, and indicates the
-position of the term in the sequence. For example, the *n*th term in the
-sequence will be represented by the variable `x_n`.
+position of the term in the sequence. This means that we can represent the *n*th
+term in the sequence by [[`x_n`|`x_i`|`x_2`]].
 
-You might think that it would be easier to label the terms in the sequence as
-_a_, _b_, _c_, _d_, and so on. However you’ll eventually [[run out of
-letters|reach 100|forget a letter]], while the sequence might go on forever!
+    // You might think that it would be easier to label the terms in the
+    // sequence as _a_, _b_, _c_, _d_, and so on. However you’ll eventually
+    // [[run out of letters|reach 100|forget a letter]], while the sequence
+    // might go on forever!
 
 ---
 > id: triangles
