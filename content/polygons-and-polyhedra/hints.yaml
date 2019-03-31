@@ -3,7 +3,7 @@ not-a-polygon-2: This shape is not a polygon, because it contains a hole.
 not-a-polygon-3: This shape has a curved side, so it can’t be a polygon.
 
 no-overlap: Careful – the sides are not allowed to cross, otherwise we no longer have a polygon.
-angles-repeat: Great! Now try moving some of the vertices of the parallelogram and see what happens.
+angles-repeat: Great! Now try moving some of the vertices of the quadrilateral and see what happens.
 
 not-a-diagonal: This is not a diagonal of the quadrilateral.
 not-a-diagonal-1: This is not a diagonal of the parallelogram.
