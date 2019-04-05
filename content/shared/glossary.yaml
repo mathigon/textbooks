@@ -985,7 +985,7 @@ quadratic-equation:
   title: Quadratic Equation
   text: A __quadratic equation__ is an equation that contains a single variable
     of degree 2. It is often written as `ax^2 + bx + c = 0`, where _x_ is a
-    variable, _a_, _b_ and _c_ are numbers, and _c_ is not equal to zero.
+    variable, _a_, _b_ and _c_ are numbers, and _a_ is not equal to zero.
 
 quadratic-function:
   title: Quadratic Function
