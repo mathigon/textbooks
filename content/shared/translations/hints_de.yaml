@@ -1,0 +1,13 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: "Wilkommen bei Mathigon! Ich bin Archie, dein persönlicher Tutor. :mortar_board:"
+
+correct:
+  - "Gut gemacht :relaxed:"
+  - "Super! :relieved:"
+
+incorrect:
+  - "Das stimmt nicht. :white_frowning_face:"
+  - "Bist du sicher? :thinking_face:"

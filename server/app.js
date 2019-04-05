@@ -9,7 +9,7 @@ const path = require('path');
 const yaml = require('yamljs');
 const express = require('express');
 
-const locales = ['en', 'ru', 'vn'];
+const locales = ['en', 'ru', 'vn', 'de'];
 
 
 // -----------------------------------------------------------------------------

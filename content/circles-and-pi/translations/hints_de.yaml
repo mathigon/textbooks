@@ -1,0 +1,2 @@
+cylinder-volume-hint1: Du musst die Fläche der Basis finden, und dann _h_ multiplizieren.
+cylinder-volume-hint2: Die Basis des Zylinders ist ein Kreis mit Radius _r_. Das bedeutet das die Fläche `π r^2` ist.
