@@ -6,6 +6,7 @@
 
 import {Point, Segment} from '@mathigon/fermat';
 
+const PI2 = Math.PI / 2;
 const TAIL_LENGTH = 400;
 
 
@@ -19,14 +20,14 @@ export class PendulumBase {
     this.state = state;
 
     this.tail = new Float32Array(TAIL_LENGTH * 2);
-    this.tailLength = 0;
-    this.tailIndex = 0;
+    this.clearTail();
 
     for (let p of points) model.set(p, null);
     this.drawPoint();
   }
 
   drawPoint() { }
+  reset() { }
 
   pushTail(x, y) {
     this.tail[this.tailIndex * 2] = x;
@@ -51,6 +52,11 @@ export class PendulumBase {
       const opacity = 0.5 * (1 - i / tail.length);
       $canvas.draw(line, {stroke: color, strokeWidth: 3, opacity});
     }
+  }
+
+  clearTail() {
+    this.tailLength = 0;
+    this.tailIndex = 0;
   }
 
   step(dt) {
@@ -87,6 +93,14 @@ export class Pendulum extends PendulumBase {
 
     this.model[this.points[0]] = p;
     this.pushTail(p.x, p.y);
+  }
+
+  reset() {
+    this.clearTail();
+
+    const p = this.model[this.points[0]];
+    this.lengths[0] = Point.distance(p, this.center);
+    this.state = [PI2 - p.angle(this.center), 0];
   }
 }
 
@@ -129,5 +143,15 @@ export class DoublePendulum extends PendulumBase {
     this.model[this.points[0]] = p1;
     this.model[this.points[1]] = p2;
     this.pushTail(p2.x, p2.y);
+  }
+
+  reset() {
+    this.clearTail();
+
+    const q1 = this.model[this.points[0]];
+    const q2 = this.model[this.points[1]];
+
+    this.lengths = [Point.distance(this.center, q1), Point.distance(q1, q2)];
+    this.state = [PI2 - q1.angle(this.center), PI2 - q2.angle(q1), 0, 0];
   }
 }

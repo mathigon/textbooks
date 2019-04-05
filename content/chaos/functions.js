@@ -17,17 +17,17 @@ import './components/water-ripples'
 // Introduction
 
 export function pendulum($step) {
-  const $canvas = $step.$('x-geopad canvas');
+  const $geopad = $step.$('x-geopad');
+  const $canvas = $geopad.$('canvas');
+  const $toggle = $step.$('x-play-toggle');
   let animation = null;
 
-  const p1 = new Pendulum($step.model, $step.model.c, 'p', 120, [3, 0]);
+  const p1 = new Pendulum($step.model, $step.model.c, 'p', 120, [2.4, 0]);
 
-  $step.$('.btn').on('click', () => {
-    if (animation) {
-      animation.cancel();
-      animation = null;
-      return;
-    }
+  $toggle.on('play', () => {
+    $geopad.lock();
+    p1.reset();
+    setTimeout(() => $step.score('play'), 8000);
 
     animation = animate(() => {
       p1.step(0.1125);
@@ -35,32 +35,71 @@ export function pendulum($step) {
       p1.drawTail($canvas, '#b30469', 2);
     });
   });
+
+  $toggle.on('pause', () => {
+    $geopad.unlock();
+    $step.score('play');
+    if (animation) animation.cancel();
+  });
 }
 
 export function doublePendulum($step) {
-  const $canvas = $step.$('x-geopad canvas');
+  const $geopad = $step.$('x-geopad');
+  const $canvas = $geopad.$('canvas');
+  const $toggle = $step.$('x-play-toggle');
+  const $pendulums = $geopad.$$('.paths path');
+
+  const model = $step.model;
+  const length = [80, 60];
+  const state = [2, 2.6, 0, 0];
+
+  const p1 = new DoublePendulum(model, model.c, ['a1', 'a2'], length, state);
+  const p2 = new DoublePendulum(model, model.c, ['b1', 'b2'], length, state);
+  const p3 = new DoublePendulum(model, model.c, ['c1', 'c2'], length, state);
+  const p4 = new DoublePendulum(model, model.c, ['d1', 'd2'], length, state);
+
   let animation = null;
+  let showAll = false;
 
-  const p1 = new DoublePendulum($step.model, $step.model.c, ['a1', 'a2'], [80, 64], [3, 3, 0, 0]);
-  const p2 = new DoublePendulum($step.model, $step.model.c, ['b1', 'b2'], [80, 64], [3, 3.0001, 0, 0]);
-  const p3 = new DoublePendulum($step.model, $step.model.c, ['c1', 'c2'], [80, 64], [3, 3.0002, 0, 0]);
-  const p4 = new DoublePendulum($step.model, $step.model.c, ['d1', 'd2'], [80, 64], [3, 3.0003, 0, 0]);
+  $step.onScore('blank-1', () => {
+    $toggle.pause();
 
-  $step.$('.btn').on('click', () => {
-    if (animation) {
-      animation.cancel();
-      animation = null;
-      return;
-    }
+    model.a1 = model.b1 = model.c1 = model.d1;
+    model.a2 = model.b2 = model.c2 = model.d2;
+
+    for (let $p of $pendulums) $p.show();
+    setTimeout(() => showAll = true, 10);  // Prevent last draw in animation.
+  });
+
+  $toggle.on('play', () => {
+    $geopad.lock();
+    setTimeout(() => $step.score('play1'), 12000);
+    if (showAll) setTimeout(() => $step.score('play2'), 8000);
+
+    model.a1 = model.b1 = model.c1 = model.d1;
+    model.a2 = model.b2 = model.c2 = model.d2;
+    for (let p of [p1, p2, p3, p4]) p.reset();
+
+    // Add a small perturbation to the initial angle.
+    p2.state[1] += 0.0001;
+    p3.state[1] += 0.0002;
+    p4.state[1] += 0.0003;
 
     animation = animate(() => {
       for (let p of [p1, p2, p3, p4]) p.step(0.1125);
       $canvas.clear();
-      p1.drawTail($canvas, '#ff941f', 2);
-      p2.drawTail($canvas, '#31b304', 2);
-      p3.drawTail($canvas, '#1f7aff', 2);
+      if (showAll) p1.drawTail($canvas, '#ff941f', 2);
+      if (showAll) p2.drawTail($canvas, '#31b304', 2);
+      if (showAll) p3.drawTail($canvas, '#1f7aff', 2);
       p4.drawTail($canvas, '#b30469', 2);
     });
+  });
+
+  $toggle.on('pause', () => {
+    $geopad.unlock();
+    $step.score('play1');
+    if (showAll) $step.score('play2');
+    if (animation) animation.cancel();
   });
 }
 

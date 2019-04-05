@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: pendulum
+> goals: play
 
 At the beginning of the 18th century, physicists like [Isaac Newton](bio:newton)
 thought that the universe was a giant clockwork machine. If you had precise
@@ -16,24 +17,25 @@ predict what would happen in the future.
       canvas(width=640 height=640)
       svg
         circle(x="point(160,160)" name="c")
-        circle.red(x="p")
+        circle.move.red(name="p")
         path.thick.red(x="segment(c,p)")
-      button.btn Play
+      x-play-toggle
 
 ::: column.grow
 
 One great example is the pendulum. You’ve already seen how you can use
-gravity and differential equations to find an equation that predicts the
-position of the pendulum at any time in the future.
+differential equations to find an equation that calculates the position of the
+pendulum at any time in the future.
 
-{.fixme} Newtonian, Deterministic
-
-{.fixme} Watch the pendulum for some time, and try to predict what it’ll do next!
+We often say that the motion of the pendulum is __deterministic__: it precisely
+follows Newton’s laws of gravity, and there is no randomness or probability.
+Watch the pendulum swinging, and try to predict what it’ll do next!
 
 :::
 
 ---
 > id: double-pendulum
+> goals: play1 play2
 
 ::: column(width=320)
 
@@ -41,35 +43,37 @@ position of the pendulum at any time in the future.
       canvas(width=640 height=640)
       svg
         circle(x="point(160,160)" name="c")
-        circle.yellow(x="a1")
-        circle.yellow(x="a2")
-        path.thick.yellow(x="polyline(c,a1,a2)")
-        circle.green(x="b1")
-        circle.green(x="b2")
-        path.thick.green(x="polyline(c,b1,b2)")
-        circle.blue(x="c1")
-        circle.blue(x="c2")
-        path.thick.blue(x="polyline(c,c1,c2)")
-        circle.red(x="d1")
-        circle.red(x="d2")
+        path.thick.yellow.rounded(x="polyline(c,a1,a2)" style="stroke-width: 7px; display: none")
+        path.thick.green.rounded(x="polyline(c,b1,b2)" style="stroke-width: 6px; display: none")
+        path.thick.blue.rounded(x="polyline(c,c1,c2)" style="stroke-width: 5px; display: none")
+        circle.move.red(name="d1")
+        circle.move.red(name="d2")
         path.thick.red(x="polyline(c,d1,d2)")
-      button.btn Play
+      x-play-toggle
 
 ::: column.grow
 
-Now let’s try to make things a bit more complicated by adding a second pendulum
-underneath the first one, to make a __double pendulum__.
+Now let’s try to make things a bit more complicated by attaching a second
+pendulum to the first one – this is called a __double pendulum__.
 
-{.fixme} Once again watch the motion of the pendulum, and try to predict what
-it wll do next!
+Once again, watch the motion of the pendulum, and try to predict what it will
+do next. You can even close your eyes for a few seconds … was your prediction
+correct?
 
-{.fixme} The double pendulum still follows Newton’s laws of gravity.
+{.reveal(when="play1")} The double pendulum still follows Newton’s deterministic 
+laws of gravity, and for small swings it moves [[very predictably|randomly|
+unpredictably]]. _{span.reveal(when="blank-0")}However, for large swings, the
+motion of the pendulum [[becomes completely irregular|doesn’t change at all|
+repeats every couple of seconds]]!_
 
-{.fixme} For small swings, the double pendulum behaves very regularly, but for
-larger swings, its behaviour is completely irregular.
+{.fixme.reveal(when="blank-1")} This becomes every more apparent if we show multiple
+pendulums on top of each other. , with tiny differences in their starting
+position. Press play again and watch what happens. The initial angle difference
+is imperceptible to the naked eye – less than 0.1°. 
 
-{.fixme} We can even have multiple double pendulums next to each other, with
-slightly different initial positions. If we let them go simultaneously, 
+{.reveal(when="play2")} At the beginning the four pendulums move along the
+same path – but after a few seconds they [[separate|join up|alternate]]
+_{span.reveal(when="blank-3")} and end up taking completely different paths._
 
 :::
 
@@ -314,9 +318,8 @@ Let’s summarise the key properties of _chaos_ that we have discovered so far:
   [[Tiny|Large]] initial differences multiply over time and can lead to
   [[huge|small|random]] differences in the result.
 * {.reveal(when="blank-1 blank-2")} The behaviour is __unpredictable__ and
-  non-repeating, even though it follows deterministic laws. It might even _look
-  random_, but only because it depends on imperceptible changes or measurement
-  errors.
+  non-repeating. It might even _look random_, but only because it depends on
+  imperceptible changes or measurement errors.
 
 :::
 
@@ -402,6 +405,8 @@ Another fascinating example are billiard tables.
 
 > sectionStatus: dev
 > section: three-bodies
+
+https://evgenii.com/blog/three-body-problem-simulator/
 
 Poincare etc.
 
