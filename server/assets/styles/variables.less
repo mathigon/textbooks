@@ -10,10 +10,10 @@
 @green:  #31b304;  // La Palma
 @yellow: #ff941f;  // Neon Carrot
 
-@orange: mix(@yellow, @red);
-@purple: mix(@red, @blue);
-@teal: mix(@blue, @green);
-@lime: #bcc916;  // mix(@yellow, @green);
+@orange: darken(saturate(mix(@yellow, @red),5%),5%);
+@purple: darken(saturate(mix(@red, @blue),5%),5%);
+@teal: darken(saturate(mix(@blue, @green),5%),5%);
+@lime: lighten(saturate(mix(@yellow, @green),5%),5%);
 
 @dark-grey:   #181824;
 @grey:        #363644;
