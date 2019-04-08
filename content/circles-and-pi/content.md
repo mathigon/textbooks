@@ -653,7 +653,7 @@ per hour._
 > id: radians-distance-1
 
 Can you see that, in this example, radians are a much more convenient unit than
-degrees? Once we now the speed of rotation, we simply have to multiply by the
+degrees? Once we know the speed of rotation, we simply have to multiply by the
 radius to get the actual speed.
 
 Here is another example: your car has wheels with radius 0.25\ m. If you’re

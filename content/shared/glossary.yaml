@@ -561,7 +561,7 @@ group:
     A group is a collection of “things” (like numbers or symmetries) that follow
     three different rules:
 
-    1. You you add/combine two of the things, to get another one that is also
+    1. You can add/combine two of the things, to get another one that is also
        in the group.
     2. The things are _associative_, which means that `a+(b+c) + (a+b)+c`.
     3. There is an _identity_, and every “thing” has an _inverse_ which, when
