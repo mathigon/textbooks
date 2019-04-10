@@ -3,12 +3,14 @@
 # ==============================================================================
 
 apollonius:
-  name: Apollonius of Perga
+  name: Apollonius
+  born: -262  # ???
+  died: -190  # ???
   bio: __Apollonius of Perga__ (c. 200 BC) was a Greek mathematician and
     astronomer best known for his work on the four _conic sections_.
 
 appel:
-  name: Kenneth Appel
+  name: Appel
   bio: |
     __Kenneth Appel__ (1932 – 2013) was an American mathematician, known for his
     proof of the Four Colour Theorem with Wolfgang Haken.
@@ -22,6 +24,8 @@ appel:
 
 archimedes:
   name: Archimedes
+  born: -287
+  died: -212
   bio: |
     __Archimedes__ (c. 287 – c. 212 BC) was an ancient Greek scientist and
     engineer, and one of the greatest mathematicians of all time. He discovered
@@ -38,7 +42,9 @@ archimedes:
     circles”_ – which he was studying at the time.
 
 cavalieri:
-  name: Bonaventura Cavalieri
+  name: Cavalieri
+  born: 1598
+  died: 1647
   bio: |
     __Bonaventura Cavalieri__ (1598 – 1647) was an Italian mathematician and
     monk. He developed a precursor to infinitesimal calculus, and is remembered
@@ -48,13 +54,15 @@ cavalieri:
     and exchanged many letters with Galileo Galilei.
 
 collatz:
-  name: Lothar Collatz
+  name: Collatz
   bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
     differential equations and optimisation problems. The _Collatz conjecture_
     or `3x+1` problem is named after him – and still unsolved.
 
 conway:
-  name: John Horton Conway
+  name: Conway
+  born: 1937
+  died: 2020
   bio: |
     __John Horton Conway__ (born 1937) is a British matematician and currently
     Professor Emeritus at Princeton University.
@@ -65,7 +73,7 @@ conway:
     to group theory, number theory and many other areas of mathematics.
 
 dirac:
-  name: Paul Dirac
+  name: Dirac
   bio: |
     __Paul Dirac__ (1898 – 1972) was an English theoretical physicist, who
     shared the 1933 Nobel Prize with Erwin Schrödinger. Dirac was one of the
@@ -77,7 +85,9 @@ dirac:
     between genius and madness”_.
 
 eratosthenes:
-  name: Eratosthenes of Cyrene
+  name: Eratosthenes
+  born: -276
+  died: -195
   bio: __Eratosthenes of Cyrene__ (c. 276 BC – 195 BC) was a Greek
     mathematician, geographer, astronomer, historian, and poet. He spent much
     of his life in Egypt, as head of the library of Alexandria.
@@ -90,17 +100,22 @@ eratosthenes:
     calculate _prime numbers_.
 
 escher:
-  name: M. C. Escher
+  name: Escher
+  born: 1898
+  died: 1972
   bio: |
     __Maurits Cornelis Escher__ (1898 – 1972) was a Dutch artist who created
     sketches, woodcuts and lithographs of mathematically inspired objects and
     shapes: including polyhedra, tessellations and impossible shapes. He
     graphically explored concepts like symmetry, infinity, perspective and
     non-euclidean geometry.
+  small: true
 
 euclid:
-  name: Euclid of Alexandria
-  bio: __Euclid of Alexandria__ (around 350 BCE) was a Greek mathematician and
+  name: Euclid
+  born: -325  # ???
+  died: -275  # ???
+  bio: __Euclid of Alexandria__ (around 300 BCE) was a Greek mathematician and
     is often called the _father of geometry_. He published a book _Elements_
     that first introduced Euclidean geometry and contained many important proofs
     in geometry and number theory. It was the main mathematics textbook until
@@ -108,7 +123,9 @@ euclid:
     is known about his life.
 
 euler:
-  name: Leonhard Euler
+  name: Euler
+  born: 1707
+  died: 1783
   bio: |
     __Leonhard Euler__ (1707 – 1783) was one the greatest mathematicians of all
     times. His work spans all areas of mathematics, and he wrote 80 volumes of
@@ -120,9 +137,16 @@ euler:
     Euler invented much of the modern mathematical terminology and notation, and
     made important discoveries in calculus, analysis, graph theory, physics,
     astronomy, and many other topics.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graphs-and-networks/bridges-of-koenigsberg
+    - title: Euler’s Formula
+      url: /course/graphs-and-networks/eulers-formula
 
 fermat:
-  name: Pierre de Fermat
+  name: Fermat
+  born: 1607
+  died: 1665
   bio: |
     __Pierre de Fermat__ (1607 – 1665) was a French mathematician and Lawyer. He
     was one of the early pioneers of calculus, as well as working on number
@@ -136,7 +160,9 @@ fermat:
     proven in 1994.
 
 fibonacci:
-  name: Leonardo Pisano (Fibonacci)
+  name: Fibonacci
+  born: 1175
+  died: 1250
   bio: |
     __Leonardo Pisano__, commonly known as __Fibonacci__ (1175 – 1250) was an
     Italian mathematician. He is best known for the number sequence named after
@@ -148,14 +174,16 @@ fibonacci:
     Abaci", a practical textbook for merchants.
 
 fuller:
-  name: Buckminster Fuller
+  name: Fuller
   bio: __Richard Buckminster "Bucky" Fuller__ (1895 – 1983) was an American
     architect, designer and inventor. He is famous for constructing _geodesic
     dome_ – large, spherical structures. Similar looking Carbon molecules, the
     _fullerenes_, were later named after him.
 
 gauss:
-  name: Carl Friedrich Gauss
+  name: Gauss
+  born: 1777
+  died: 1855
   bio: |
     __Carl Friedrich Gauss__ (1777 – 1855) was arguably the greatest
     mathematician of all times. He made groundbreaking discoveries in just about
@@ -168,13 +196,15 @@ gauss:
     teenager, and later tutored many other famous mathematicians as Professor.
 
 goldbach:
-  name: Christian Goldbach
+  name: Goldbach
+  born: 1690
+  died: 1764
   bio: __Christian Goldbach__ (1690 – 1764) was a Prussian mathematician and
     contemporary of Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar
     Peter II, and is remembered for his “Goldbach Conjecture“.
 
 guthrie:
-  name: Francis Guthrie
+  name: Guthrie
   bio: __Francis Guthrie__ (1831 – 1899) was a South African botanist and
     mathematician, who first stated the Four Colour Problem in 1852. He was a
     student of Augustus De Morgan, one of the greatest British mathematicians.
@@ -182,7 +212,7 @@ guthrie:
     a lawyer and did research in solar power and aeronautics.
 
 haken:
-  name: Wolfgang Haken
+  name: Haken
   bio: __Wolfgang Haken__ (born 1928) is a German mathematician, known for his
     proof the _Four Colour Theorem_ with Kenneth Appel. In recognition, he and
     Appell received the Fulkerson Prize of the American Mathematical Society. In
@@ -190,13 +220,15 @@ haken:
     University of Illinois, where he is now an Emeritus Professor.
 
 halley:
-  name: Edmond Halley
+  name: Halley
   bio: __Edmond Halley__ (1656 – 1742) was an English mathematician and
     physicist, and the second _Astronomer Royal_. He calculated the orbit of
     Halley’s Comet, which is named after him.
 
 hilbert:
-  name: David Hilbert
+  name: Hilbert
+  born: 1862
+  died: 1943
   bio: |
     __David Hilbert__ (1862 – 1943) was one of the most influential
     mathematicians of the 20th century. He worked on almost every area of
@@ -210,7 +242,7 @@ hilbert:
     today!
 
 jefferson:
-  name: Thomas Jefferson
+  name: Jefferson
   bio: |
     __Thomas Jefferson__ (1743 – 1826), was one of the Founding fathers of the
     United States, their third president, and the principal author of the
@@ -221,20 +253,24 @@ jefferson:
     Jefferson founded the University of Virginia.
 
 karinthy:
-  name: Frigyes Karinthy
+  name: Karinthy
   bio: __Frigyes Karinthy__ (1887 – 1938) was a Hungarian author, poet and
     journalist. He is best known for the 1929 short story “Chains”, which first
     introduced the concept of _six degrees of separation_.
 
 kepler:
-  name: Johannes Kepler
+  name: Kepler
+  born: 1571
+  died: 1630
   bio: __Johannes Kepler__ (1571 – 1630) was a German astronomer and
     mathematician. He was the _imperial mathematician_ in Prague, and he is best
     known for his three _laws of planetary motion_. Kepler also worked in
     optics, and invented an improved telescope for his obeservations.
 
 khayyam:
-  name: Omar Khayyam
+  name: Khayyam
+  born: 1048
+  died: 1131
   bio: __Omar Khayyam__ (عمر خیّام‎, 1048 – 1131) was a Persian mathematician,
     astronomer and poet. He managed to classify and solve all cubic equations,
     and found new ways to understand Euclid's _parallel axiom_. Khayyam also
@@ -242,7 +278,9 @@ khayyam:
     in some countries.
 
 leibniz:
-  name: Gottfried Wilhelm Leibniz
+  name: Leibniz
+  born: 1646
+  died: 1716
   bio: |
     __Gottfried Wilhelm Leibniz__ (1646 – 1716) was a German mathematician
     and philosopher. Among many other achievements, he was one of the inventors
@@ -254,26 +292,31 @@ leibniz:
     linguistics, law, history, and many other subjects.
 
 lorenz:
-  name: Edward Lorenz
+  name: Lorenz
+  born: 1917
+  died: 2008
   bio: __Edward Lorenz__ (1917 – 2008) was an American mathematician and
     meteorologist. He pioneered _chaos theory_, discovered _strange attractor_,
     and coined the term “butterfly effect”.
+  small: true
 
 milgram:
-  name: Stanley Milgram
+  name: Milgram
   bio: __Stanley Milgram__ (1933 – 1984) was a famous social psychologist. He is
     best known for experiments on _obedience_, testing how willing adults are to
     follow orders, even when hurting others, and for the _small-world
     experiment_, which tests the degree of connectedness of societies.
 
 monsky:
-  name: Paul Monsky
+  name: Monsky
   bio: __Paul Monsky__ (born 1936) is an American mathematician and professor at
     Brandeis University. He proved that a square cannot be divided into an odd
     number of equal-area triangles – this is known as “Monsky’s theorem”.
 
 newton:
-  name: Isaak Newton
+  name: Newton
+  born: 1642
+  died: 1726
   bio: |
     __Sir Isaac Newton__ (1642 – 1726) was an English physicist, mathematician,
     and astronomer, and one of the most influential scientists of all time. He
@@ -290,21 +333,28 @@ newton:
     sunlight into a rainbow-coloured spectrum.
 
 nicomachus:
-  name: Nicomachus of Gerasa
+  name: Nicomachus
+  born: 60
+  died: 120
   bio: __Nicomachus of Gerasa__ (c. 60 – 120) was an ancient Greek mathematician
     who also spent much time thinking about the mystical properties of numbers.
     His book _Introduction to Arithmetic_ contains the first mention of perfect
     numbers.
 
 noether:
-  name: Emmy Noether
+  name: Noether
+  born: 1882
+  died: 1935
   bio: __Amalie Emmy Noether__ (1882 – 1935) was a German mathematician who made
     important discoveries in abstract algebra and theoretical physics, including
     the connection between symmetry and conservation laws. She is often
     described as the most influential female mathematician.
+  small: true
 
 pascal:
-  name: Blaise Pascal
+  name: Pascal
+  born: 1623
+  died: 1662
   bio: |
     __Blaise Pascal__ (1623 – 1662) was a French mathematician, physicist and
     philosopher. He invented some of the first mechanical calculators, as well
@@ -315,14 +365,16 @@ pascal:
     infinite triangle of numbers with some amazing properties.
 
 pearson:
-  name: Karl Pearson
+  name: Pearson
   bio: __Karl Pearson__ (1857 – 1936) was an English mathematician and
     statistician. He worked on biometrics, meteorology, and eugenics, among many
     other topics, and founded the world’s first university statistics
     department, at University College London.
 
 penrose:
-  name: Roger Penrose
+  name: Penrose
+  born: 1931
+  died: 2020
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
     who is known for his groundbreaking work in general relativity and cosmology
@@ -332,6 +384,8 @@ penrose:
 
 pingala:
   name: Pingala
+  born: -325
+  died: -275
   bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
     lived around 300BC, but very little is known about his life. He wrote the
     Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
@@ -339,13 +393,15 @@ pingala:
     and Pascal’s triangle.
 
 planck:
-  name: Max Plank
+  name: Plank
   bio: __Max Plank__ (1858 – 1947) was a German physicist and one of the
     original developers of Quantum Mechanics – for which received the Nobel
     Prize in 1918.
 
 plato:
   name: Plato
+  born: -425
+  died: -347
   bio: |
     __Plato__ (c. 425 – 347 BC) was a philosopher in ancient Greece, and –
     together with his teacher Socrates and his student Archimedes – laid the
@@ -358,6 +414,8 @@ plato:
 
 pythagoras:
   name: Pythagoras
+  born: -570
+  died: -495
   bio: |
     __Pythagoras of Samos__ (c. 570 – 495 BC) was a Greek philosopher and
     mathematician. He is best known for proving _Pythagoras’ Theorem_, but made
@@ -372,7 +430,9 @@ pythagoras:
     rules – but the school was eventually burned down by their adversaries.
 
 riemann:
-  name: Bernhard Riemann
+  name: Riemann
+  born: 1826
+  died: 1866
   bio: __Bernhard Riemann__ (1826 – 1866) was a German mathematician working in
     the fields of analysis and number theory. He came up with the first rigorous
     definition of integration, studied differential geometry which laid the
@@ -380,22 +440,25 @@ riemann:
     regarding the distribution of prime numbers.
 
 shannon:
-  name: Claude Shannon
+  name: Shannon
+  born: 1898
+  died: 1972
   bio: __Claude Shannon__ (1898 – 1972) was an American mathematician and
     electrical engineer, remembered as the “father of information theory”. He
     worked on cryptography, including codebreaking for national defense during
     World War II, but he was also interested in juggling, unicycling and chess.
     In his spare times, he built machines that could juggle or solve the Rubik’s
     Cube puzzle.
+  small: true
 
 sikdar:
-  name: Radhanath Sikdar
+  name: Sikdar
   bio: __Radhanath Sikdar__ (1813 – 1870) was an Indian mathematician. He was
     the first to measure the height of Mount Everest, and to show that it is
     the tallest mountain on Earth.
 
 singmaster:
-  name: David Singmaster
+  name: Singmaster
   bio: __David Singmaster__ (born 1939) is an American mathematician who is
     particularly well known for his mathematical puzzles and brain teasers. He
     was the first to come up with mathematical algorithms for analysing and
@@ -403,6 +466,8 @@ singmaster:
 
 thales:
   name: Thales
+  born: -624
+  died: -546
   bio: |
     __Thales of Miletus__ (c. 624 – 546 BC) was a Greek mathematician and
     philosopher.
@@ -413,7 +478,7 @@ thales:
     history that has a mathematical discovery named after him: Thales’ theorem.
 
 thorp:
-  name: Edward Thorp
+  name: Thorp
   bio: __Edward Thorp__ (born 1932) is an American hedge fund manager and
     blackjack player, known for inventing _card counting_ and for building the
     first _wearable computer_ to beat casinos at Roulette. He worked at MIT, is
@@ -421,7 +486,7 @@ thorp:
     theory.
 
 ulam:
-  name: Stanisław Ulam
+  name: Ulam
   bio: __Stanisław Ulam__ (1909 – 1984) was a Polish-American mathematician. He
     played an important part in the American _Manhatten Project_ that developed
     the first nuclear weapons. He also worked on rocket propulsion using nuclear
@@ -429,7 +494,7 @@ ulam:
     statistics.
 
 venn:
-  name: John Venn
+  name: Venn
   bio: __John Venn__ (1834 – 1923) was an English mathematician and philosopher
     who introduced the _Venn diagram_ used in set theory and probability. He
     taught at Cambridge University and was a Fellow of the Royal Society in
