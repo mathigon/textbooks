@@ -52,13 +52,13 @@ export class PoolTable extends CustomElement {
   ready() {
     const $svg = this.$('svg');
 
-    $N('ellipse', {cx: 380, cy: 220, rx: 360, ry: 200, fill: 'green'}, $svg);
+    $N('ellipse', {cx: 380, cy: 220, rx: 366, ry: 206, class: 'pool-table'}, $svg);
     this.$path = $N('path', {fill: 'transparent', stroke: 'white'}, $svg);
 
-    const $start = $N('circle', {r: 20, fill: 'red'}, $svg);
+    const $start = $N('circle', {r: 20, fill: '#ff941f'}, $svg);
     const drag = new Draggable($start, $svg, {useTransform: true, responsive: true});
 
-    this.$end = $N('circle', {r: 20, fill: 'pink'}, $svg);
+    this.$end = $N('circle', {r: 20, fill: '#1f7aff'}, $svg);
 
     drag.on('move', (p) => this.drawPath(p));
     drag.setPosition(380, 220);

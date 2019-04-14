@@ -4,11 +4,12 @@
 // =============================================================================
 
 
-import {square} from '@mathigon/core';
+import {cube, square} from '@mathigon/core';
 import {Point, isBetween} from '@mathigon/fermat';
 import {$N, animate} from '@mathigon/boost';
 
-import {Pendulum, DoublePendulum} from './components/pendulum'
+import {Simulation} from './components/simulation'
+import {DoublePendulum} from './components/double-pendulum'
 import './components/pool-table'
 import './components/water-ripples'
 
@@ -19,87 +20,89 @@ import './components/water-ripples'
 export function pendulum($step) {
   const $geopad = $step.$('x-geopad');
   const $canvas = $geopad.$('canvas');
-  const $toggle = $step.$('x-play-toggle');
-  let animation = null;
+  const $play = $step.$('x-play-toggle');
 
-  const p1 = new Pendulum($step.model, $step.model.c, 'p', 120, [2.4, 0]);
+  let center = new Point(160, 160);
+  let l = 120;
+  let a = 2.4;
+  let da = 0;
 
-  $toggle.on('play', () => {
-    $geopad.lock();
-    p1.reset();
+  const state = {p: center.shift(Math.sin(a) * l, Math.cos(a) * l)};
+  const trails = [['p', '#b30469']];
+  const sim = new Simulation($geopad, $canvas, state, trails);
+
+  function step(dt) {
+    da -= 5 * Math.sin(a) / l * dt;
+    a = a + da * dt;
+    state.p = center.shift(Math.sin(a) * l, Math.cos(a) * l);
+  }
+
+  $play.on('play', () => {
+    l = Point.distance($step.model.p, center);
+    a = Math.PI / 2 - $step.model.p.angle(center);
+    da = 0;
+
+    sim.play(step, 0.1125, 3);
     setTimeout(() => $step.score('play'), 8000);
-
-    animation = animate(() => {
-      p1.step(0.1125);
-      $canvas.clear();
-      p1.drawTail($canvas, '#b30469', 2);
-    });
   });
 
-  $toggle.on('pause', () => {
-    $geopad.unlock();
+  $play.on('pause', () => {
+    sim.pause();
     $step.score('play');
-    if (animation) animation.cancel();
   });
 }
 
 export function doublePendulum($step) {
   const $geopad = $step.$('x-geopad');
   const $canvas = $geopad.$('canvas');
-  const $toggle = $step.$('x-play-toggle');
-  const $pendulums = $geopad.$$('.paths path');
+  const $play = $step.$('x-play-toggle');
 
   const model = $step.model;
-  const length = [80, 60];
-  const state = [2, 2.6, 0, 0];
-
-  const p1 = new DoublePendulum(model, model.c, ['a1', 'a2'], length, state);
-  const p2 = new DoublePendulum(model, model.c, ['b1', 'b2'], length, state);
-  const p3 = new DoublePendulum(model, model.c, ['c1', 'c2'], length, state);
-  const p4 = new DoublePendulum(model, model.c, ['d1', 'd2'], length, state);
-
-  let animation = null;
+  const center = new Point(160, 160);
+  const state = {};
   let showAll = false;
 
-  $step.onScore('blank-1', () => {
-    $toggle.pause();
+  const pendulums =[new DoublePendulum(state, ['a1', 'a2'], center),
+    new DoublePendulum(state, ['b1', 'b2'], center),
+    new DoublePendulum(state, ['c1', 'c2'], center),
+    new DoublePendulum(state, ['d1', 'd2'], center)];
+
+  const trails = [['d2', '#b30469']];
+  const sim = new Simulation($geopad, $canvas, state, trails);
+
+  function showPendulums() {
+    if (showAll) return;
+    showAll = true;
+    $play.pause();
 
     model.a1 = model.b1 = model.c1 = model.d1;
     model.a2 = model.b2 = model.c2 = model.d2;
 
-    for (let $p of $pendulums) $p.show();
-    setTimeout(() => showAll = true, 10);  // Prevent last draw in animation.
-  });
+    sim.addTrails(['a2', '#ff941f'], ['b2', '#31b304'], ['c2', '#1f7aff']);
+    for (let $p of $geopad.$$('path.thick')) $p.show();
+  }
 
-  $toggle.on('play', () => {
-    $geopad.lock();
+  $step.onScore('blank-0', showPendulums);
+  $step.on('complete', showPendulums);
+
+  $play.on('play', () => {
     setTimeout(() => $step.score('play1'), 12000);
     if (showAll) setTimeout(() => $step.score('play2'), 8000);
 
-    model.a1 = model.b1 = model.c1 = model.d1;
-    model.a2 = model.b2 = model.c2 = model.d2;
-    for (let p of [p1, p2, p3, p4]) p.reset();
+    for (let p of pendulums) p.set(model.d1, model.d2);
 
     // Add a small perturbation to the initial angle.
-    p2.state[1] += 0.0001;
-    p3.state[1] += 0.0002;
-    p4.state[1] += 0.0003;
+    pendulums[1].angles[1] += 0.0001;
+    pendulums[2].angles[1] += 0.0002;
+    pendulums[3].angles[1] += 0.0003;
 
-    animation = animate(() => {
-      for (let p of [p1, p2, p3, p4]) p.step(0.1125);
-      $canvas.clear();
-      if (showAll) p1.drawTail($canvas, '#ff941f', 2);
-      if (showAll) p2.drawTail($canvas, '#31b304', 2);
-      if (showAll) p3.drawTail($canvas, '#1f7aff', 2);
-      p4.drawTail($canvas, '#b30469', 2);
-    });
+    sim.play((dt) => { for (let p of pendulums) p.step(dt); }, 0.1125, 3);
   });
 
-  $toggle.on('pause', () => {
-    $geopad.unlock();
+  $play.on('pause', () => {
     $step.score('play1');
     if (showAll) $step.score('play2');
-    if (animation) animation.cancel();
+    sim.pause();
   });
 }
 
@@ -154,6 +157,7 @@ function playCollision() {
 
 export function pool($step) {
   const $svg = $step.$('svg');
+  const $toggle = $step.$('x-play-toggle');
   const $path = $N('path', {fill: 'transparent', stroke: 'white', d: 'M60,220'}, $svg);
 
   const bounds = [20 + RADIUS, 20 + RADIUS, 740 - RADIUS, 420 - RADIUS];
@@ -163,7 +167,7 @@ export function pool($step) {
 
   for (let i = 0; i < 7; ++i) {
     for (let j = 0; j < 7; ++j) {
-      balls.push(new Ball(690 - i * 50, 70 + j * 50, 'red'));
+      balls.push(new Ball(690 - i * 50, 70 + j * 50, '#ff941f'));
     }
   }
 
@@ -171,7 +175,7 @@ export function pool($step) {
 
   cue.v = new Point(5, -0.25);
 
-  animate(() => {
+  function step() {
     for (let i = 0; i < balls.length; ++i) {
       const b = balls[i];
       if (!isBetween(b.p.x, bounds[0], bounds[2])) {
@@ -203,5 +207,63 @@ export function pool($step) {
     }
 
     $path.addPoint(cue.p);
+  }
+
+  let animation;
+  $toggle.on('play', () => animation = animate(step));
+  $toggle.on('pause', () => animation.cancel());
+}
+
+
+// -----------------------------------------------------------------------------
+// Three Body Problem
+
+export function threeBodies($step) {
+  const $geopad = $step.$('x-geopad');
+  const $canvas = $geopad.$('canvas');
+  const $play = $step.$('x-play-toggle');
+  const $restore = $step.$('.restore');
+
+  const initial = {
+    a: Point.fromPolar(0, 120).shift(240, 240),
+    b: Point.fromPolar(2/3 * Math.PI, 120).shift(240, 240),
+    c: Point.fromPolar(4/3 * Math.PI, 120).shift(240, 240),
+    va: Point.fromPolar(Math.PI/2, 66),
+    vb: Point.fromPolar(2*Math.PI/3 + Math.PI/2, 66),
+    vc: Point.fromPolar(4*Math.PI/3 + Math.PI/2, 66)
+  };
+
+  const state = Object.assign({}, initial);
+  const trails = [['a', '#b30469'], ['b', '#1f7aff'], ['c', '#31b304']];
+
+  function acceleration(i) {
+    let gravity = new Point(0, 0);
+    for (let j of ['a', 'b', 'c']) {
+      if (i === j) continue;
+      const dx = state[j].subtract(state[i]);
+      gravity =  gravity.translate(dx.scale(1600000 / cube(dx.length)));
+    }
+    return gravity;
+  }
+
+  function step(dt) {
+    const acc = {};
+    for (let p of ['a', 'b', 'c']) acc[p] = acceleration(p);
+
+    for (let i of ['a', 'b', 'c']) {
+      state[i] = state[i].translate(state['v' + i].scale(dt));
+      state['v' + i] = state['v' + i].translate(acc[i].scale(dt));
+    }
+  }
+
+  const sim = new Simulation($geopad, $canvas, state, trails);
+  $play.on('play', () => sim.play(step, 0.05, 250));
+  $play.on('pause', () => sim.pause());
+
+  $restore.on('click', () => {
+    $play.pause();
+    Object.assign(state, initial);
+    Object.assign($step.model, initial);
+    sim.$canvas.clear();
   });
 }

@@ -13,7 +13,7 @@ predict what would happen in the future.
 
 ::: column(width=320)
 
-    x-geopad.sticky.pendulum(width=320 height=320)
+    x-geopad.sticky.simulation(width=320 height=320)
       canvas(width=640 height=640)
       svg
         circle(x="point(160,160)" name="c")
@@ -39,7 +39,7 @@ Watch the pendulum swinging, and try to predict what it’ll do next!
 
 ::: column(width=320)
 
-    x-geopad.sticky.pendulum(width=320 height=320)
+    x-geopad.sticky.simulation(width=320 height=320)
       canvas(width=640 height=640)
       svg
         circle(x="point(160,160)" name="c")
@@ -53,27 +53,24 @@ Watch the pendulum swinging, and try to predict what it’ll do next!
 
 ::: column.grow
 
-Now let’s try to make things a bit more complicated by attaching a second
+Now let’s try to make things a bit more interesting by attaching a second
 pendulum to the first one – this is called a __double pendulum__.
 
-Once again, watch the motion of the pendulum, and try to predict what it will
-do next. You can even close your eyes for a few seconds … was your prediction
-correct?
+Once again, watch its motion, and try to predict what it will do next. You can
+even close your eyes for a few seconds … was your prediction correct?
 
 {.reveal(when="play1")} The double pendulum still follows Newton’s deterministic 
-laws of gravity, and for small swings it moves [[very predictably|randomly|
-unpredictably]]. _{span.reveal(when="blank-0")}However, for large swings, the
-motion of the pendulum [[becomes completely irregular|doesn’t change at all|
-repeats every couple of seconds]]!_
+laws of gravity, but the motion seems to [[be completely irregular|behave as if
+there were no gravity|always repeat itself]].
 
-{.fixme.reveal(when="blank-1")} This becomes every more apparent if we show multiple
-pendulums on top of each other. , with tiny differences in their starting
-position. Press play again and watch what happens. The initial angle difference
-is imperceptible to the naked eye – less than 0.1°. 
+{.reveal(when="blank-0")} This becomes every more apparent if we look at
+multiple pendulums. Let’s add three more pendulums behind the first one, each
+with a tiny, imperceptible change in their initial angle (less than 0.1°).
+Press play again and watch what happens!
 
 {.reveal(when="play2")} At the beginning the four pendulums move along the
 same path – but after a few seconds they [[separate|join up|alternate]]
-_{span.reveal(when="blank-3")} and end up taking completely different paths._
+_{span.reveal(when="blank-1")} and end up taking completely different paths._
 
 :::
 
@@ -359,7 +356,6 @@ even in movies:
 > id: pool
 > section: billiard
 > sectionBackground: dark casino
-> sectionStatus: dev
 
 One of the most surprising properties of chaos is that it can appear in really
 simple systems. You've already seen the double-pendulum in the previous section.
@@ -372,12 +368,24 @@ Another fascinating example are billiard tables.
 * http://mathcircle.wustl.edu/uploads/4/9/7/9/49791831/20160306-billiards-presentation.pdf
 * http://people.maths.ox.ac.uk/tanner/Prospects2010/CUlcigraiTalk.pdf
 
-{.fixme} Imagine you are trying to predict the path a ball on a billiard table will take in response to a push. The rules at play simple: the ball's acceleration is equal to the force applied divided by its mass (that's Newton's second law of motion) and when it hits a side, the angle of reflection is equal to the angle of incidence (strictly speaking you also need to include the effect of friction, but that's not too hard to do).
+{.fixme} Imagine you are trying to predict the path a ball on a billiard table
+will take in response to a push. The rules at play simple: the ball's
+acceleration is equal to the force applied divided by its mass (that's Newton's
+second law of motion) and when it hits a side, the angle of reflection is equal
+to the angle of incidence (strictly speaking you also need to include the effect
+of friction, but that's not too hard to do).
 
-{.fixme} The trouble is that in your average pub setting you can't easily measure the exact amount of force applied to the ball, the exact angle with which it hits a side, and so on. As you make your calculations, this small initial uncertainty can snowball, so that pretty soon your prediction may become so uncertain as to be useless. That "sensitivity to ignorance" is the hallmark of mathematical chaos.
+{.fixme} The trouble is that in your average pub setting you can't easily
+measure the exact amount of force applied to the ball, the exact angle with
+which it hits a side, and so on. As you make your calculations, this small
+initial uncertainty can snowball, so that pretty soon your prediction may
+become so uncertain as to be useless. That "sensitivity to ignorance" is the
+hallmark of mathematical chaos.
 
-    svg(width=760 height=440 viewBox="0 0 760 440")
-      rect(x="20" y="20" width="720" height="400" fill="green")
+    figure.r
+      svg(width=760 height=440 viewBox="0 0 760 440")
+        rect.pool-table(x=15 y=15 width=730 height=410 rx=10 ry=10)
+      x-play-toggle(style="position: absolute; top: 30px; left: 30px")
 
 {.fixme} Two billiard tables next to each other, move one ball a small amount
 
@@ -386,6 +394,9 @@ Another fascinating example are billiard tables.
 ---
 
 ### Elliptical Billiard
+
+Move the yellow ball in the center, and see where it ends up after 100
+collisions:
 
     figure: x-pool-table: svg(width=760 height=440 viewBox="0 0 760 440")
 
@@ -405,10 +416,21 @@ Another fascinating example are billiard tables.
 
 > sectionStatus: dev
 > section: three-bodies
-
-https://evgenii.com/blog/three-body-problem-simulator/
+> id: three-bodies
 
 Poincare etc.
+
+    figure: x-geopad.simulation.r(width=480 height=480)
+      canvas(width=960 height=960)
+      svg
+        circle.large.move.red(name="a")
+        circle.large.move.blue(name="b")
+        circle.large.move.green(name="c")        
+        path.thin(x="segment(a, a.translate(va))" arrows="end")
+        path.thin(x="segment(b, b.translate(vb))" arrows="end")
+        path.thin(x="segment(c, c.translate(vc))" arrows="end")
+      x-play-toggle
+      x-icon-btn.restore(icon="restore")
 
 {.fixme} There are two chaotic systems which affect us greatly. The first is the weather. Although weather equations are pretty well understood and are solved by computers every day, it is impossible to take into account all the factors influencing the weather (remember the butterfly). No set of data is perfect, nor are computers perfect at solving the equations. The effects of these small
  errors build up remarkably quickly. After about ten days it is essentially impossible to forecast weather with any degree of accuracy.

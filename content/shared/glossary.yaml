@@ -138,6 +138,10 @@ centroid:
     intersect. It is also the “center of mass” of the triangle.
   link: /course/triangles-and-trigonometry/properties-of-triangles#center-of-mass
 
+chaos:
+  title: Chaos
+  text: todo
+
 circle:
   title: Circle
   text: A __circle__ is the set of all points at a specific distance from a
