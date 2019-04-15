@@ -8,6 +8,9 @@ apollonius:
   died: -190  # ???
   bio: __Apollonius of Perga__ (c. 200 BC) was a Greek mathematician and
     astronomer best known for his work on the four _conic sections_.
+  links:
+    - title: Conic Sections
+      url: /course/circles-and-pi/conic-sections
 
 appel:
   name: Appel
@@ -40,6 +43,69 @@ archimedes:
     city Syracuse in Sicily. After two years, the Romans finally managed to
     enter and Archimedes as killed. His last words were _“Do not disturb my
     circles”_ – which he was studying at the time.
+  links:
+    - title: Archimedean Solids
+      url: /course/polygons-and-polyhedra/more-on-polyhedra
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristotle
+  bio: |
+    __Aristotle__ (Ἀριστοτέλης) was a philosopher in Ancient Greece. Together
+    with his teacher _Plato_, he is considered the "Father of Western
+    Philosophy". He was also the private tutor of Alexander the Great.
+
+    Aristotle wrote about science, mathematics, philosophy, poetry, music,
+    politics, rhetoric, linguistics, and many other subjects. His work was
+    highly influential during the Middle Ages and into the Renaissance, and his
+    views on ethics and other philosophical questions are still being discussed
+    today.
+
+    Aristotle is also the first known person to formally study _logic_,
+    including its applications in science and mathematics.
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: __Aryabhata__ (आर्यभट) was one of the first mathematicians and astronomers
+    in the golden age of Indian mathematics. He defined trigonometric functions,
+    solved simultaneous quadratic equations, found approximations for _π_, and
+    realised that _π_ is irrational.
+  links:
+    - title: Trigonometry
+      url: /course/triangles-and-trigonometry/trigonometry
+    - title: Quadratic Equations
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __Charles Babbage__ (1791 – 1871) was a British mathematician, philosopher
+    and engineer. He is often called the "father of the computer", having
+    invented the first mechanical computer (the _Difference engine_), and an
+    improved, programmable version (the _Analytical Engine_).
+
+    In theory, these machines could automatically perform certain calculations
+    stored on cards or tape. However, due to the high production costs, they
+    were never fully completed during Babbage's lifetime. In 1991, a functional
+    replica was constructed at the Science Museum in London.
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: The Indiam mathematician Brahmagupta (c. 598 – 668 AD) invented the rules
+    for addition, subtraction and multiplication with zero and negative numbers.
+    He was also an astronomer and made many other discoveries in mathematics.
+    Unfortunately, his writings did not contain any proofs, so we don't know
+    how he derived his results.
 
 cavalieri:
   name: Cavalieri
@@ -52,6 +118,9 @@ cavalieri:
 
     Cavalieri also worked optics and motion, introduction logarithms to Italy,
     and exchanged many letters with Galileo Galilei.
+  links:
+    - title: Cavalieri’s Principle
+      url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
 
 collatz:
   name: Collatz
@@ -71,6 +140,53 @@ conway:
     automaton_ with fascinating properties. He explored the underlying
     mathematics of everyday objects like knots and games, as well as contibuting
     to group theory, number theory and many other areas of mathematics.
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+democritus:
+  born: -460
+  died: -370
+  name: Democritus
+  bio: The Greek mathematician __Democritus__ (c. 460 – 370 BC), may be the
+    first person to speculate that all matter was made up of tiny _atoms_ and
+    is considered the "father of modern science". He also made many discoveries
+    in geometry, including the formula for the volume of prisms and cones.
+  links:
+    - title: Volume of a Cone
+      url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio:
+    __René Descartes__ (1596 – 1650) was a French mathematician and philosopher,
+    and one of the key figures in the Scientific Revolution. He refused to
+    accept the authority of previous philosophers, and one of his best known
+    statements is "I think, therefore I am".
+
+    Descartes is the father of _analytical geometry_, which allows use to
+    describe geometric shapes using algebra. This was one of the prerequisites,
+    which allowed Newton and Leibnitz to invent _calculus_ a few decades later.
+
+    He is credited with the first use of superscripts for powers or exponents,
+    and the _cartesian coordinate system_ is named after him.
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantus
+  overflow: true
+  bio: |
+    __Diophantus__ was a hellenistic mathematician who lived in Alexandria.
+    Most of his works are about solving polynomial equations with several
+    unknowns. These are now called _Diophantine equation_ and remain an
+    important area of research today.
+
+    It was while reading one of Diophantus’ books, many centuries later, that
+    _Pierre de Fermat_ proposed one of these equations had no solution. This
+    became known as “Fermat’s Last Theorem”, and was only solved in 1994.
 
 dirac:
   name: Dirac
@@ -98,6 +214,11 @@ eratosthenes:
 
     He also invented the “Sieve of Eratosthenes”, an efficient way to
     calculate _prime numbers_.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility-and-primes/prime-numbers#eratosthenes
 
 escher:
   name: Escher
@@ -110,17 +231,25 @@ escher:
     graphically explored concepts like symmetry, infinity, perspective and
     non-euclidean geometry.
   small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polygons-and-polyhedra/tessellations#escher
 
 euclid:
   name: Euclid
-  born: -325  # ???
-  died: -275  # ???
+  born: -330
+  died: -270
   bio: __Euclid of Alexandria__ (around 300 BCE) was a Greek mathematician and
     is often called the _father of geometry_. He published a book _Elements_
     that first introduced Euclidean geometry and contained many important proofs
     in geometry and number theory. It was the main mathematics textbook until
     the 19th century. He taught mathematics in Alexandria, but very little else
     is known about his life.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility-and-primes/prime-numbers#primes3
 
 euler:
   name: Euler
@@ -142,6 +271,8 @@ euler:
       url: /course/graphs-and-networks/bridges-of-koenigsberg
     - title: Euler’s Formula
       url: /course/graphs-and-networks/eulers-formula
+    - title: Polyhedrons
+      url: /course/polygons-and-polyhedra/polyhedra
 
 fermat:
   name: Fermat
@@ -158,6 +289,9 @@ fermat:
     to contain”. This became known as _Fermat's Last Theorem_, and became one of
     the most famous unsolved problems in mathematics – until it was finally
     proven in 1994.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
 
 fibonacci:
   name: Fibonacci
@@ -172,6 +306,9 @@ fibonacci:
     3, 4, …) in Europe, which was still using Roman numerals (I, V, X, D, …) in
     the 12th century AD. He explained the decimal system in a book called "Liber
     Abaci", a practical textbook for merchants.
+  links:
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
 
 fuller:
   name: Fuller
@@ -179,6 +316,25 @@ fuller:
     architect, designer and inventor. He is famous for constructing _geodesic
     dome_ – large, spherical structures. Similar looking Carbon molecules, the
     _fullerenes_, were later named after him.
+
+galileo:
+  born: 1564
+  died: 1642
+  name: Galileo
+  bio: |
+    __Galileo Galilei__ (1564 – 1642) was an Italian astronomer, physicist and
+    engineer. He used one of the first telescopes to make observations of the
+    night sky, where he discovered the four largest moons of Jupiter, the phases
+    of Venus, sunspots, and much more.
+
+    Galileo, sometimes called the "father of modern science", also studied the
+    motion of objects in free fall, kinematics, material science, and invented
+    the thermoscope (an early thermometer).
+
+    He was a vocal proponent of _Heliocentrism_, the idea that the Sun was at
+    the center of our solar system. This eventually led to him being tried by
+    the Catholic Inquisition: Galileo was forced to recant and spent the rest
+    of his life under house arrest.
 
 gauss:
   name: Gauss
@@ -194,6 +350,13 @@ gauss:
     the age of 3, and found a way to easily add up all integers from 1 to 100 at
     the age of 8. He made his first important discoveries while still a
     teenager, and later tutored many other famous mathematicians as Professor.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
 
 goldbach:
   name: Goldbach
@@ -202,6 +365,9 @@ goldbach:
   bio: __Christian Goldbach__ (1690 – 1764) was a Prussian mathematician and
     contemporary of Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar
     Peter II, and is remembered for his “Goldbach Conjecture“.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
 
 guthrie:
   name: Guthrie
@@ -240,6 +406,25 @@ hilbert:
     Mathematicians in 1900, he presented a list of 23 unsolved problems. These
     set the course for future research – and four of them are still unsolved
     today!
+  links:
+    - title: Hilbert's Hotel
+      url: /world/Infinity
+
+hypatia:
+  born: 360
+  died: 415
+  name: Hypatia
+  overflow: true
+  bio: |
+    __Hypatia__ (c. 360 – 415 AD) was a prominent astronomer and mathematician
+    in ancient Alexandria. She was also the first female mathematician whose
+    life is work is reasonably well recorded. She edited or wrote commentaries
+    on many of the scientific books of her time, and constructed astrolabes and
+    hydrometers.
+
+    She was renowned in her own lifetime as a great teacher, and she advised
+    Orestes, the Roman prefect of Alexandria. Orestes' feud with Cyril, the
+    bishop of Alexandria, led to Hypadia being murdered by a mob of Christians.
 
 jefferson:
   name: Jefferson
@@ -266,6 +451,9 @@ kepler:
     mathematician. He was the _imperial mathematician_ in Prague, and he is best
     known for his three _laws of planetary motion_. Kepler also worked in
     optics, and invented an improved telescope for his obeservations.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles-and-pi/conic-sections#kepler
 
 khayyam:
   name: Khayyam
@@ -276,6 +464,9 @@ khayyam:
     and found new ways to understand Euclid's _parallel axiom_. Khayyam also
     designed the _Jalali calendar_, a precise solar calendar that is still used
     in some countries.
+  links:
+    - title: Pascal's Triangle
+      url: /course/sequences/pascals-triangle
 
 leibniz:
   name: Leibniz
@@ -290,6 +481,26 @@ leibniz:
     could have created, while allowing us to have a free will. He was a great
     advocate of _rationalism_, and also made contributions to physics, medicine,
     linguistics, law, history, and many other subjects.
+
+leonardo:
+  born: 1452
+  died: 1519
+  name: Da Vinci
+  bio: |
+    __Leonardo da Vinci__ (1452 – 1519) was an Italian artist and polymath. His
+    interests ranged from painting, sculpting and architecture to engineering,
+    mathematics, anatomy, astronomy, botany and cartography. He is often seen
+    as the prime example of a "Universal Genius" and was one of the most
+    diversely talented individuals ever to have lived.
+
+    Leonardo was born in Vinci, educated in Florence, and worked in Milan,
+    Rome, Bologna, and Venice. Only 15 of his paintings have survived, but among
+    them are some of the best known and most reproduced works in the world,
+    including the _Mona Lisa_ and _The Last Supper_.
+
+    His notebooks contain a vast number of drawings, inventions, and scientific
+    diagrams – including the first flying machines and helicopters, hydraulic
+    pumps, bridges, and much more.
 
 lorenz:
   name: Lorenz
@@ -313,6 +524,15 @@ monsky:
     Brandeis University. He proved that a square cannot be divided into an odd
     number of equal-area triangles – this is known as “Monsky’s theorem”.
 
+napier:
+  born: 1550
+  died: 1617
+  name: Napier
+  bio: __John Napier__ (1550 – 1617) was a Scottish mathematician, physicist,
+    and astronomer. He invented logarithms, popularized the use of the decimal
+    point, and created "Napier's bones", a manual calculating device that
+    helped with multiplication and division.
+
 newton:
   name: Newton
   born: 1642
@@ -331,15 +551,24 @@ newton:
     the first reflecting telescope, calculated the speed of sound, studied the
     motion of fluids, and developed a theory of colour based on how prisms split
     sunlight into a rainbow-coloured spectrum.
+  links:
+    - title: Gravity
+      url: /course/circles-and-pi/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles-and-pi/introduction#pi-record
 
 nicomachus:
   name: Nicomachus
   born: 60
   died: 120
+  overflow: true
   bio: __Nicomachus of Gerasa__ (c. 60 – 120) was an ancient Greek mathematician
     who also spent much time thinking about the mystical properties of numbers.
     His book _Introduction to Arithmetic_ contains the first mention of perfect
     numbers.
+  links:
+    - title: Perfect Numbers
+      url: /course/sequences/special#perfect
 
 noether:
   name: Noether
@@ -350,6 +579,9 @@ noether:
     the connection between symmetry and conservation laws. She is often
     described as the most influential female mathematician.
   small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations-and-symmetry/symmetry-in-physics
 
 pascal:
   name: Pascal
@@ -363,6 +595,11 @@ pascal:
 
     Most famously, Pascal is remembered for naming _Pascal’s Triangle_, an
     infinite triangle of numbers with some amazing properties.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+    - title: Pascal's Triangle
+      url: /course/sequences/pascals-triangle
 
 pearson:
   name: Pearson
@@ -381,16 +618,22 @@ penrose:
     – often collaborating with other famous scientists like Stephen Hawking and
     Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
     non-periodic tessellations.
+  links:
+    - title: Penrose Tilings
+      url: /course/polygons-and-polyhedra/tessellations#penrose
 
 pingala:
   name: Pingala
-  born: -325
-  died: -275
+  born: -330
+  died: -270
   bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
     lived around 300BC, but very little is known about his life. He wrote the
     Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
     contained the first known explanations of binary numbers, Fibonacci numbers
     and Pascal’s triangle.
+  links:
+    - title: Pascal's Triangle
+      url: /course/sequences/pascals-triangle
 
 planck:
   name: Plank
@@ -411,6 +654,29 @@ plato:
     in the Western world. His many writings on philosophy and theology, science
     and mathematics, politics and justice, make him one of the most influential
     thinkers of all time.
+  links:
+    - title: Platonic Solids
+      url: /course/polygons-and-polyhedra/platonic-solids
+
+ptolemy:
+  born: 90
+  died: 168
+  name: Ptolemy
+  bio: |
+    __Claudius Ptolemy__ (c. 100 – 170 AD) was a Greco-Roman mathematician,
+    astronomer, geographer and astrologer. He is best remembered for the
+    _Ptolemaic_ or _Geocentric_ model of our universe – that Earth is in the
+    center and all planets and the sun revolve around this.
+
+    While we know today this model is incorrect, Ptolemy's scientific impact is
+    indisputable. He developed trigonometric tables with many practical
+    applications, which remained the most accurate for many centures. He also
+    created detailed maps of the Earth, and wrote about music theory and optics.
+  links:
+    - title: Trigonometry
+      url: /course/triangles-and-trigonometry/trigonometry
+    - title: Orbits
+      url: /course/circles-and-pi/introduction
 
 pythagoras:
   name: Pythagoras
@@ -428,16 +694,23 @@ pythagoras:
     He also founded a school in Italy where he and his students worshipped
     mathematics almost like a religion, while following a number of bizzare
     rules – but the school was eventually burned down by their adversaries.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles-and-trigonometry/pythagoras-theorem
 
 riemann:
   name: Riemann
   born: 1826
   died: 1866
+  overflow: true
   bio: __Bernhard Riemann__ (1826 – 1866) was a German mathematician working in
     the fields of analysis and number theory. He came up with the first rigorous
     definition of integration, studied differential geometry which laid the
     foundation for general relativity, and made groundbreaking discoveries
     regarding the distribution of prime numbers.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
 
 shannon:
   name: Shannon
@@ -450,6 +723,9 @@ shannon:
     In his spare times, he built machines that could juggle or solve the Rubik’s
     Cube puzzle.
   small: true
+  links:
+    - title: Computers for Gambling
+      url: /course/probability/casino-mathematics#dealer
 
 sikdar:
   name: Sikdar
@@ -464,6 +740,16 @@ singmaster:
     was the first to come up with mathematical algorithms for analysing and
     solving the _Rubik’s Cube_.
 
+tartaglia:
+  born: 1499
+  died: 1557
+  name: Tartaglia
+  bio: __Niccolò Fontana Tartaglia__ (1499 – 1557) was an Italian mathematician,
+    engineer and bookkeeper. He published the first Italian translations of
+    Archimedes and Euclid, found a formula for solving any cubic equation
+    (including the first real application of complec numbers), and used
+    mathematics to investigate the projectile motion of cannonballs.
+
 thales:
   name: Thales
   born: -624
@@ -476,6 +762,9 @@ thales:
     rather than using religion or mythology, he tried to explain natural
     phenomena using a scientific approach. He is also the first individual in
     history that has a mathematical discovery named after him: Thales’ theorem.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
 
 thorp:
   name: Thorp
@@ -499,3 +788,13 @@ venn:
     who introduced the _Venn diagram_ used in set theory and probability. He
     taught at Cambridge University and was a Fellow of the Royal Society in
     London.
+
+wallis:
+  born: 1616
+  died: 1703
+  name: Wallis
+  bio: The English mathematician __John Wallis__ (1616 – 1703) contributed to
+    the development of calculus, invented the number line and the symbol ∞ for
+    infinity, and served as chief cryptographer for Parliament and the royal
+    court.
+

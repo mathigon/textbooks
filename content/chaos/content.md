@@ -414,7 +414,6 @@ collisions:
 
 ## The Three Body Problem
 
-> sectionStatus: dev
 > section: three-bodies
 > id: three-bodies
 
@@ -448,7 +447,6 @@ Poincare etc.
 
 ## Phase Space and Strange Attractors
 
-> sectionStatus: dev
 > section: attractors
 
 Phase diagram for pendulum:
@@ -491,7 +489,6 @@ Sinaï-Ruelle-Bowen measure / statistics / forecasting
 
 ## The Logistic Map
 
-> sectionStatus: dev
 > section: logistic-map
 
 * https://www.dwitter.net/d/12018
