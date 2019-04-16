@@ -160,7 +160,7 @@ descartes:
   born: 1596
   died: 1650
   name: Descartes
-  bio:
+  bio: |
     __René Descartes__ (1596 – 1650) was a French mathematician and philosopher,
     and one of the key figures in the Scientific Revolution. He refused to
     accept the authority of previous philosophers, and one of his best known
@@ -657,6 +657,33 @@ plato:
   links:
     - title: Platonic Solids
       url: /course/polygons-and-polyhedra/platonic-solids
+
+poincare:
+  born: 1854
+  died: 1912
+  name: Poincaré
+  bio: |
+    The French mathematician __Henri Poincaré__ (1854 – 1912) is often
+    described as _the last universalist_, meaning that he worked in every field
+    of mathematics known during his lifetime.
+
+    Poincaré is one of the founders of the field of _Topology_, and he came up
+    with the _Poincaré conjecture_. This was one of the famous unsolved problems
+    in mathematics, until it was proven in 2003 by Grigori Perelman
+
+    He also found a partial solution for the “three body problem”, and
+    discovered that the motion of three stars or planets in space can be
+    completely unpredictable. This laid the foundation for modern _Chaos
+    theory_.
+
+    Poincaré was the first to propose _gravitational waves_, and his work on
+    Lorentz transformations was the basis upon which Albert Einstein built his
+    theory of special relativity.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+    - title: Topology
+      url: /world/Dimensions_and_Distortions
 
 ptolemy:
   born: 90
