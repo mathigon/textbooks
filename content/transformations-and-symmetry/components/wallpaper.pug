@@ -4,15 +4,8 @@ template#wallpaper
       .group(data-value=i)= i
   canvas(width=1920 height=1280)
   x-select.colours
-    .colour(style="background: #f44336")
-    .colour(style="background: #ff9800")
-    .colour(style="background: #ffeb3b")
-    .colour(style="background: #8bc34a")
-    .colour(style="background: #009688")
-    .colour(style="background: #03a9f4")
-    .colour(style="background: #3f51b5")
-    .colour(style="background: #9c27b0")
-    .colour(style="background: #e91e63")
+    for i in [1, 2, 3, 4, 5, 6, 7, 8]
+      .colour
   .btn-row
     a.btn.save(download target="_blank") Download
     button.btn.clear Clear

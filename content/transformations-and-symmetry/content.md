@@ -1052,55 +1052,55 @@ reflection](gloss:axis-of-symmetry) in these examples?
     x-gallery(slide-width="320")
       div
         img(src="images/wallpapers/p1.svg" width=360, height=240)
-        p.caption <strong>Type P1</strong><br>Just translations
+        p.caption <strong>Type P1</strong><br>Only translations
       div
         img(src="images/wallpapers/p2.svg" width=360, height=240)
-        p.caption <strong>Type P2</strong><br>Rotations of order 2
+        p.caption <strong>Type P2</strong><br>Rotations of order 2, translations
       div
         img(src="images/wallpapers/p3.svg" width=360, height=240)
-        p.caption <strong>Type P3</strong><br>Four rotations of order 2 (180°)
+        p.caption <strong>Type P3</strong><br>Four rotations of order 2 (180°), translations
       div
         img(src="images/wallpapers/p4.svg" width=360, height=240)
-        p.caption <strong>Type P4</strong><br>Rotations of order 3 (120°)
+        p.caption <strong>Type P4</strong><br>Rotations of order 3 (120°), translations
       div
         img(src="images/wallpapers/p6.svg" width=360, height=240)
-        p.caption <strong>Type P6</strong><br>Rotations of order 6 (60°), order 3, and order 2
+        p.caption <strong>Type P6</strong><br>Rotations of order 2, 3 and 6 (60°), translations
       div
         img(src="images/wallpapers/pm.svg" width=360, height=240)
-        p.caption <strong>Type PM</strong><br>Parallel axes of reflection
+        p.caption <strong>Type PM</strong><br>Parallel axes of reflection, translations
       div
         img(src="images/wallpapers/pmm.svg" width=360, height=240)
-        p.caption <strong>Type PMM</strong><br>Perpendicular reflections and rotations of order 2
+        p.caption <strong>Type PMM</strong><br>Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/p4m.svg" width=360, height=240)
-        p.caption <strong>Type P4M</strong><br>Rotations of order 2 and order 4 (90°), reflections, glide reflections
+        p.caption <strong>Type P4M</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p6m.svg" width=360, height=240)
-        p.caption <strong>Type P6M</strong><br>Rotations of order 2 and order 6, reflections, glide reflections
+        p.caption <strong>Type P6M</strong><br>Rotations (ord 2 + 6), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-        p.caption <strong>Type P3M1</strong><br>Rotations of order 3, reflections in three directions, glide reflections
+        p.caption <strong>Type P3M1</strong><br>Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections in three directions, glide reflections
+        p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Type P4G</strong><br>Rotations of order 2 and order 4, reflections, glide reflections 
+        p.caption <strong>Type P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
-        p.caption <strong>Type CMM</strong><br>Perpendicular reflections and rotations of order 2
+        p.caption <strong>Type CMM</strong><br>Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pmg.svg" width=360, height=240)
-        p.caption <strong>Type PMG</strong><br>Reflections, glide reflections, and rotations of order 2
+        p.caption <strong>Type PMG</strong><br>Reflections, glide reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pg.svg" width=360, height=240)
-        p.caption <strong>Type PG</strong><br>Just parallel glide reflections
+        p.caption <strong>Type PG</strong><br>Parallel glide reflections, translations
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>Type CM</strong><br>Reflections and glide reflections
+        p.caption <strong>Type CM</strong><br>Reflections, glide reflections, translations
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
-        p.caption <strong>Type PGG</strong><br>Perpendicular glide reflections, and rotations of order 2
+        p.caption <strong>Type PGG</strong><br>Perpendicular glide reflections, rotations of order 2, translations
 
 Unfortunately there is no simple reason why there are _17_ of these groups.
 Proving it requires much more advanced mathematics…
