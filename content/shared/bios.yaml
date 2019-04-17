@@ -2,6 +2,31 @@
 # MATHIGON BIOGRAPHIES
 # ==============================================================================
 
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  small: true
+  bio: |
+    __Niels Henrik Abel__ (1802 – 1829) was an important Norwegian
+    mathematician. Even though he died at the age of 26, he made groundbreaking
+    contributions to a wide range of topics.
+
+    At the age of 16, Abel proved the binomial theorem. Three years later, he
+    proved that it is impossible to solve quintic equations – by independently
+    inventing group theory. This had been an open problem for over 350 years! He
+    also worked on elliptic functions and discovered _Abelian_ functions.
+
+    Abel spent his live in poverty: he had six siblings, his father died when he
+    was 18, he was unable to find a job at a university, and many mathematicians
+    initially dismissed his work. Today, one of the highest awards in
+    mathematics, the _Abel Prize_ is named after him.
+  links:
+    - title: Group Theory
+      url: /course/transformations-and-symmetry/symmetry-groups
+
 apollonius:
   name: Apollonius
   born: -262  # ???
@@ -53,8 +78,8 @@ aristotle:
   name: Aristotle
   bio: |
     __Aristotle__ (Ἀριστοτέλης) was a philosopher in Ancient Greece. Together
-    with his teacher _Plato_, he is considered the "Father of Western
-    Philosophy". He was also the private tutor of Alexander the Great.
+    with his teacher _Plato_, he is considered the “Father of Western
+    Philosophy”. He was also the private tutor of Alexander the Great.
 
     Aristotle wrote about science, mathematics, philosophy, poetry, music,
     politics, rhetoric, linguistics, and many other subjects. His work was
@@ -87,14 +112,30 @@ babbage:
   small: true
   bio: |
     __Charles Babbage__ (1791 – 1871) was a British mathematician, philosopher
-    and engineer. He is often called the "father of the computer", having
+    and engineer. He is often called the “father of the computer”, having
     invented the first mechanical computer (the _Difference engine_), and an
     improved, programmable version (the _Analytical Engine_).
 
     In theory, these machines could automatically perform certain calculations
     stored on cards or tape. However, due to the high production costs, they
-    were never fully completed during Babbage's lifetime. In 1991, a functional
+    were never fully completed during Babbage’s lifetime. In 1991, a functional
     replica was constructed at the Science Museum in London.
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __János Bolyai__ (1802 – 1860) was a Hungarian mathematician, and one of
+    the founders of non-Euclidean geometry – a geometry in which Euclid’s fifth
+    axiom about parallel lines does not hold. This was a significant
+    breakthrough in mathematics. Unfortunately for Bolyai, the mathematicians
+    Gauss and Lobachevsky discovered similar results at the same time, and
+    received most of the credit.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
 
 brahmagupta:
   born: 598
@@ -104,7 +145,7 @@ brahmagupta:
   bio: The Indiam mathematician Brahmagupta (c. 598 – 668 AD) invented the rules
     for addition, subtraction and multiplication with zero and negative numbers.
     He was also an astronomer and made many other discoveries in mathematics.
-    Unfortunately, his writings did not contain any proofs, so we don't know
+    Unfortunately, his writings did not contain any proofs, so we don’t know
     how he derived his results.
 
 cavalieri:
@@ -150,7 +191,7 @@ democritus:
   name: Democritus
   bio: The Greek mathematician __Democritus__ (c. 460 – 370 BC), may be the
     first person to speculate that all matter was made up of tiny _atoms_ and
-    is considered the "father of modern science". He also made many discoveries
+    is considered the “father of modern science”. He also made many discoveries
     in geometry, including the formula for the volume of prisms and cones.
   links:
     - title: Volume of a Cone
@@ -164,7 +205,7 @@ descartes:
     __René Descartes__ (1596 – 1650) was a French mathematician and philosopher,
     and one of the key figures in the Scientific Revolution. He refused to
     accept the authority of previous philosophers, and one of his best known
-    statements is "I think, therefore I am".
+    quotes is “I think, therefore I am”.
 
     Descartes is the father of _analytical geometry_, which allows use to
     describe geometric shapes using algebra. This was one of the prerequisites,
@@ -219,6 +260,20 @@ eratosthenes:
       url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
     - title: Sieve of Eratosthenes
       url: /course/divisibility-and-primes/prime-numbers#eratosthenes
+
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __Paul Erdős__ (1913 – 1996) was one of the most productive mathematicians
+    in history. Born in Hungarian, he solved countless problems in graph theory,
+    number theory, combinatorics, analysis, probability, and others parts of
+    mathematics.
+
+    During his life, Erdős published around 1,500 papers and collaborated with
+    more than 500 other mathematicians. In fact, he spent most of his life
+    living out of a suitcase, travelling to seminars, and visiting colleagues!
 
 escher:
   name: Escher
@@ -286,7 +341,7 @@ fermat:
     In 1637, he wrote a short note in the margin of one of his textbooks,
     claiming that the equation `a^n + b^n = c^n` has no integer solutions for
     `n > 2`, and that he had a “marvelous proof, which this margin is too narrow
-    to contain”. This became known as _Fermat's Last Theorem_, and became one of
+    to contain”. This became known as _Fermat’s Last Theorem_, and became one of
     the most famous unsolved problems in mathematics – until it was finally
     proven in 1994.
   links:
@@ -304,15 +359,30 @@ fibonacci:
 
     Fibonacci is also responsible for popularising the Arabic numerals (0, 1, 2,
     3, 4, …) in Europe, which was still using Roman numerals (I, V, X, D, …) in
-    the 12th century AD. He explained the decimal system in a book called "Liber
-    Abaci", a practical textbook for merchants.
+    the 12th century AD. He explained the decimal system in a book called “Liber
+    Abaci”, a practical textbook for merchants.
   links:
     - title: Fibonacci Numbers
       url: /course/sequences/fibonacci
 
+fourier:
+  born: 1768
+  died: 1830
+  name: Fourier
+  small: true
+  bio: |
+    __Joseph Fourier__ (1768 – 1830) was a French mathematician, and a friend
+    and advisor of Napoleon. In addition to his mathematical research, he is
+    also credited with the discovery of the greenhouse effect.
+
+    While travelling to Egypt, Fourier became particularly fascinated with
+    _heat_. He studied heat transfer and vibrations, and discovered that any
+    periodic founction can be written as an infinite sum of trigonometric
+    functions: a _Fourier series_.
+
 fuller:
   name: Fuller
-  bio: __Richard Buckminster "Bucky" Fuller__ (1895 – 1983) was an American
+  bio: __Richard Buckminster “Bucky” Fuller__ (1895 – 1983) was an American
     architect, designer and inventor. He is famous for constructing _geodesic
     dome_ – large, spherical structures. Similar looking Carbon molecules, the
     _fullerenes_, were later named after him.
@@ -327,7 +397,7 @@ galileo:
     night sky, where he discovered the four largest moons of Jupiter, the phases
     of Venus, sunspots, and much more.
 
-    Galileo, sometimes called the "father of modern science", also studied the
+    Galileo, sometimes called the “father of modern science”, also studied the
     motion of objects in free fall, kinematics, material science, and invented
     the thermoscope (an early thermometer).
 
@@ -335,6 +405,32 @@ galileo:
     the center of our solar system. This eventually led to him being tried by
     the Catholic Inquisition: Galileo was forced to recant and spent the rest
     of his life under house arrest.
+
+galois:
+  born: 1811
+  died: 1832
+  name: Galois
+  overflow: true
+  bio: |
+    The French mathematician __Évariste Galois__ (1811 – 1832) had a short and
+    tragic life, yet he invented two entirely new fields of mathematics: _Group
+    theory_ and _Galois theory_.
+
+    While still in his teens, Galois proved that there is no general solution
+    for polynomial equations of degree five or higher – simultaneously with
+    Niels Abel.
+
+    Unfortunately, other mathematicians who he shared this discoveries with
+    repeatedly misplaced or simply returned his work, and he failed his school
+    and university exams while concentrating on much more complex work.
+
+    At the age of 21, Galois was shot in a duel (some say a feud over a woman),
+    and later died of his wounds. In the night before his death, he summarised
+    his mathematical discoveries in a letter to a friend. It would take other
+    mathematicians many years to fully realise the true impact of his work.
+  links:
+    - title: Group Theory
+      url: /course/transformations-and-symmetry/symmetry-groups
 
 gauss:
   name: Gauss
@@ -358,6 +454,30 @@ gauss:
     - title: Sums of Triangle Numbers
       url: /course/sequences/figurate#triangle-sums
 
+godel:
+  born: 1906
+  died: 1978
+  name: Gödel
+  bio: |
+    __Kurt Gödel__ (1906 – 1978) was an Austrian mathematician who later
+    immigrated to America, and is considered one of the greatest logicians in
+    history.
+
+    At the age of 25, just after finishing his doctorate in Vienna, he published
+    his two _incompleteness theorems_. These state that any (consisten and
+    sufficiently powerful) mathematical system contains certain statements that
+    are true but cannot be proven. In other words, mathematics contains certain
+    problems that are impossible to solve.
+
+    This result had a profound impact on the development and philosophy of
+    mathematics. Gödel also found an example of these “impossible theorems”:
+    the _continuum hypothesis_.
+  links:
+    - title: Unprovable Theorems
+      url: /world/Axioms_and_Proof
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+
 goldbach:
   name: Goldbach
   born: 1690
@@ -368,6 +488,17 @@ goldbach:
   links:
     - title: Goldbach Conjecture
       url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
+
+grothendieck:
+  born: 1928
+  died: 2014
+  name: Grothendieck
+  small: true
+  bio: The French mathematician __Alexander Grothendieck__ (1928 – 2014) was one
+    of the key figures in the development of _algebraic geometry_. He extended
+    the scope of the field to apply to many new problems in mathematics,
+    including, eventually, Fermat’s last theorem. In 1966, he was awarded the
+    Fields medal.
 
 guthrie:
   name: Guthrie
@@ -407,7 +538,7 @@ hilbert:
     set the course for future research – and four of them are still unsolved
     today!
   links:
-    - title: Hilbert's Hotel
+    - title: Hilbert’s Hotel
       url: /world/Infinity
 
 hypatia:
@@ -423,7 +554,7 @@ hypatia:
     hydrometers.
 
     She was renowned in her own lifetime as a great teacher, and she advised
-    Orestes, the Roman prefect of Alexandria. Orestes' feud with Cyril, the
+    Orestes, the Roman prefect of Alexandria. Orestes’ feud with Cyril, the
     bishop of Alexandria, led to Hypadia being murdered by a mob of Christians.
 
 jefferson:
@@ -461,12 +592,22 @@ khayyam:
   died: 1131
   bio: __Omar Khayyam__ (عمر خیّام‎, 1048 – 1131) was a Persian mathematician,
     astronomer and poet. He managed to classify and solve all cubic equations,
-    and found new ways to understand Euclid's _parallel axiom_. Khayyam also
+    and found new ways to understand Euclid’s _parallel axiom_. Khayyam also
     designed the _Jalali calendar_, a precise solar calendar that is still used
     in some countries.
   links:
-    - title: Pascal's Triangle
+    - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
+
+lambert:
+  born: 1728
+  died: 1777
+  name: Lambert
+  bio: __Johann Lambert__ (1728 – 1777) was a Swiss mathematician, physicist,
+    astronomer and philosopher. He was the first to prove that _π_ is an
+    irrational number, and he introduced hyperbolic trigonometric functions.
+    Lambert also worked on geometry and cartography, created map projections,
+    and foreshadowed the discovery of non-Euclidean spaces.
 
 leibniz:
   name: Leibniz
@@ -490,7 +631,7 @@ leonardo:
     __Leonardo da Vinci__ (1452 – 1519) was an Italian artist and polymath. His
     interests ranged from painting, sculpting and architecture to engineering,
     mathematics, anatomy, astronomy, botany and cartography. He is often seen
-    as the prime example of a "Universal Genius" and was one of the most
+    as the prime example of a “Universal Genius” and was one of the most
     diversely talented individuals ever to have lived.
 
     Leonardo was born in Vinci, educated in Florence, and worked in Milan,
@@ -501,6 +642,19 @@ leonardo:
     His notebooks contain a vast number of drawings, inventions, and scientific
     diagrams – including the first flying machines and helicopters, hydraulic
     pumps, bridges, and much more.
+
+lobachevsky:
+  born: 1792
+  died: 1856
+  name: Lobachevsky
+  small: true
+  bio: __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) was a Russian
+    mathematician, and one of the founders of non-Euclidean geometry. He managed
+    to show that you can build up a consistent type of geometry in which
+    Euclid’s fifth axiom (about parallel lines) does not hold.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
 
 lorenz:
   name: Lorenz
@@ -518,6 +672,33 @@ milgram:
     follow orders, even when hurting others, and for the _small-world
     experiment_, which tests the degree of connectedness of societies.
 
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __Marin Mersenne__ (1588 – 1648) was a French mathematician and priest.
+    Because of the frequent exchanges with his contacts in the scientific world
+    during the 17th century, he has been called the “the post-box of Europe”.
+
+    Today we mostly remember him for the _Mersenne primes_, prime numbers that
+    can be written as `2^n - 1`. Most of the largest known primes are of this
+    type. He also studied acoustics and the harmonics of a vibrating string,
+    and wrote about theology and philosophy.
+  links:
+    - title: Large Primes
+      url: /course/divisibility-and-primes/the-distribution-of-primes#prime-test-1
+
+mirzakhani:
+  born: 1977
+  died: 2017
+  name: Mirzakhani
+  bio: __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
+    mathematician and professor at Standford University. She is the only woman
+    to have received the _Fields Medal_, the highest award in mathematics, for
+    her work on “the dynamics and geometry of Riemann surfaces and their moduli
+    spaces”. At the age of 40, Maryam died of breast cancer.
+
 monsky:
   name: Monsky
   bio: __Paul Monsky__ (born 1936) is an American mathematician and professor at
@@ -530,8 +711,26 @@ napier:
   name: Napier
   bio: __John Napier__ (1550 – 1617) was a Scottish mathematician, physicist,
     and astronomer. He invented logarithms, popularized the use of the decimal
-    point, and created "Napier's bones", a manual calculating device that
+    point, and created “Napier’s bones”, a manual calculating device that
     helped with multiplication and division.
+
+nash:
+  born: 1928
+  died: 2015
+  name: Nash
+  bio: |
+    __John Forbes Nash__ (1928 – 2015) was an American mathematician who worked
+    on game theory, differential geometry and partial differential equations.
+    He showed how mathematics can explain the decision-making in complex,
+    real-life systems – including economics and the military.
+
+    In his 30s, Nash was diagnosed with paranoid schizophrenia, but he managed
+    to recover and return to his academic work. He is the old person to receive
+    both the Nobel Prize for economics, and the _Abel Prize_, one of the highest
+    awards in mathematics.
+  links:
+    - title: Game Theory
+      url: /world/Game_Theory
 
 newton:
   name: Newton
@@ -598,8 +797,26 @@ pascal:
   links:
     - title: Probability
       url: /course/probability/introduction
-    - title: Pascal's Triangle
+    - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
+
+peano:
+  born: 1858
+  died: 1932
+  name: Peano
+  small: true
+  bio: |
+    The Italian mathematician __Giuseppe Peano__ (1858 – 1932) published over
+    200 books and papers about logic and mathematics. He formulated the _Peano
+    axioms_, which became the basis for rigorous algebra and analysis, developed
+    the notation for logic and set theory, constructed continuous, space-filling
+    curves (_Peano curves_), and worked on the method of proof by induction.
+
+    Peano also developed a new, international language, _Latino sine flexione_,
+    which was a simplified version of Latin.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
 
 pearson:
   name: Pearson
@@ -622,6 +839,25 @@ penrose:
     - title: Penrose Tilings
       url: /course/polygons-and-polyhedra/tessellations#penrose
 
+perelman:
+  born: 1966
+  died: 2020
+  name: Perelman
+  bio: |
+    In 2003, the Russian mathematician __Grigori Perelman__ (Григо́рий
+    Перельма́нborn, born 1966) proved the _Poincaré Conjecture_, which, until
+    then, was one of the most famous unsolved problems in mathematics.
+
+    The complex proof was verified by 2006, but Perelman declined two big awards
+    that came with it: the $1 million Clay Millennium Prize, and the _Fields
+    Medal_ which is the highest recognition in mathematics. In fact, he said:
+    _“I’m not interested in money or fame; I don’t want to be on display like an
+    animal in a zoo.”_
+
+    Perelman also made contributions to Riemannian geometry and geometric
+    topology, and the Poincaré Conjecture is still the only one of the seven
+    Millennium Prize problems to have been solved.
+
 pingala:
   name: Pingala
   born: -330
@@ -632,7 +868,7 @@ pingala:
     contained the first known explanations of binary numbers, Fibonacci numbers
     and Pascal’s triangle.
   links:
-    - title: Pascal's Triangle
+    - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
 
 planck:
@@ -695,7 +931,7 @@ ptolemy:
     _Ptolemaic_ or _Geocentric_ model of our universe – that Earth is in the
     center and all planets and the sun revolve around this.
 
-    While we know today this model is incorrect, Ptolemy's scientific impact is
+    While we know today this model is incorrect, Ptolemy’s scientific impact is
     indisputable. He developed trigonometric tables with many practical
     applications, which remained the most accurate for many centures. He also
     created detailed maps of the Earth, and wrote about music theory and optics.
@@ -824,4 +1060,27 @@ wallis:
     the development of calculus, invented the number line and the symbol ∞ for
     infinity, and served as chief cryptographer for Parliament and the royal
     court.
+
+wiles:
+  born: 1953
+  died: 2020
+  name: Wiles
+  bio: |
+    The british mathematician Sir __Andrew Wiles__ is best known for proving
+    Fermat’s Last Theorem, which, until then, was one of the most famous
+    unsolved problems in mathematics.
+
+    In 1637, the mathematician Pierre de Fermat, wrote in the margin of a
+    textbook that he had a wonderful proof that the equation `a^n + b^n = c^n`
+    has no integer solutions, for `n > 2`. Unfortunately, no one was able to
+    find this proof – until Wiles, some 400 years later.
+
+    Wiles had been fascinated by the problem since the age of 10, and he spent
+    seven years working on it in solitude. He announced his solution in 1993,
+    but a small gap in his argument took two more years to fix.
+
+    Wiles was too old to receive the _Firleds medal_, the highest award in
+    mathematics, which has an age limit of 40. Instead, he was awarded a special
+    silver plaque for his work.
+
 
