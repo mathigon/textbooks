@@ -19,7 +19,7 @@ abel:
     inventing group theory. This had been an open problem for over 350 years! He
     also worked on elliptic functions and discovered _Abelian_ functions.
 
-    Abel spent his live in poverty: he had six siblings, his father died when he
+    Abel spent his life in poverty: he had six siblings, his father died when he
     was 18, he was unable to find a job at a university, and many mathematicians
     initially dismissed his work. Today, one of the highest awards in
     mathematics, the _Abel Prize_ is named after him.
@@ -61,7 +61,7 @@ archimedes:
 
     While taking a bath, Archimedes discovered a way to determine the volume of
     irregular objects using the amount of water they displaced when submerged.
-    He was so excited by this discovery that he run out on the street, still
+    He was so excited by this discovery that he ran out on the street, still
     undressed, yelling _“Eureka!”_ (Greek for _“I have found it!”_).
 
     As engineer he built ingenious defence machines during the siege of his home
@@ -142,7 +142,7 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
-  bio: The Indiam mathematician Brahmagupta (c. 598 – 668 AD) invented the rules
+  bio: The Indian mathematician Brahmagupta (c. 598 – 668 AD) invented the rules
     for addition, subtraction and multiplication with zero and negative numbers.
     He was also an astronomer and made many other discoveries in mathematics.
     Unfortunately, his writings did not contain any proofs, so we don’t know
@@ -174,13 +174,14 @@ conway:
   born: 1937
   died: 2020
   bio: |
-    __John Horton Conway__ (born 1937) is a British matematician and currently
+    __John Horton Conway__ (born 1937) is a British mathematician and currently
     Professor Emeritus at Princeton University.
 
     He is best known for inventing “Conway’s Game of Life”, a _cellular
     automaton_ with fascinating properties. He explored the underlying
-    mathematics of everyday objects like knots and games, as well as contibuting
-    to group theory, number theory and many other areas of mathematics.
+    mathematics of everyday objects like knots and games, as well as
+    contributing to group theory, number theory and many other areas of
+    mathematics.
   links:
     - title: Look-and-say Sequence
       url: /course/sequences/special#look-and-say
@@ -204,10 +205,10 @@ descartes:
   bio: |
     __René Descartes__ (1596 – 1650) was a French mathematician and philosopher,
     and one of the key figures in the Scientific Revolution. He refused to
-    accept the authority of previous philosophers, and one of his best known
+    accept the authority of previous philosophers, and one of his best-known
     quotes is “I think, therefore I am”.
 
-    Descartes is the father of _analytical geometry_, which allows use to
+    Descartes is the father of _analytical geometry_, which allows us to
     describe geometric shapes using algebra. This was one of the prerequisites,
     which allowed Newton and Leibnitz to invent _calculus_ a few decades later.
 
@@ -220,7 +221,7 @@ diophantus:
   name: Diophantus
   overflow: true
   bio: |
-    __Diophantus__ was a hellenistic mathematician who lived in Alexandria.
+    __Diophantus__ was a Hellenistic mathematician who lived in Alexandria.
     Most of his works are about solving polynomial equations with several
     unknowns. These are now called _Diophantine equation_ and remain an
     important area of research today.
@@ -268,7 +269,7 @@ erdos:
   bio: |
     __Paul Erdős__ (1913 – 1996) was one of the most productive mathematicians
     in history. Born in Hungarian, he solved countless problems in graph theory,
-    number theory, combinatorics, analysis, probability, and others parts of
+    number theory, combinatorics, analysis, probability, and other parts of
     mathematics.
 
     During his life, Erdős published around 1,500 papers and collaborated with
@@ -340,8 +341,8 @@ fermat:
 
     In 1637, he wrote a short note in the margin of one of his textbooks,
     claiming that the equation `a^n + b^n = c^n` has no integer solutions for
-    `n > 2`, and that he had a “marvelous proof, which this margin is too narrow
-    to contain”. This became known as _Fermat’s Last Theorem_, and became one of
+    `n > 2`, and that he had a “marvellous proof, which this margin is too
+    narrow to contain”. This became known as _Fermat’s Last Theorem_, and one of
     the most famous unsolved problems in mathematics – until it was finally
     proven in 1994.
   links:
@@ -377,7 +378,7 @@ fourier:
 
     While travelling to Egypt, Fourier became particularly fascinated with
     _heat_. He studied heat transfer and vibrations, and discovered that any
-    periodic founction can be written as an infinite sum of trigonometric
+    periodic function can be written as an infinite sum of trigonometric
     functions: a _Fourier series_.
 
 fuller:
@@ -402,7 +403,7 @@ galileo:
     the thermoscope (an early thermometer).
 
     He was a vocal proponent of _Heliocentrism_, the idea that the Sun was at
-    the center of our solar system. This eventually led to him being tried by
+    the centre of our solar system. This eventually led to him being tried by
     the Catholic Inquisition: Galileo was forced to recant and spent the rest
     of his life under house arrest.
 
@@ -420,7 +421,7 @@ galois:
     for polynomial equations of degree five or higher – simultaneously with
     Niels Abel.
 
-    Unfortunately, other mathematicians who he shared this discoveries with
+    Unfortunately, other mathematicians who he shared these discoveries with
     repeatedly misplaced or simply returned his work, and he failed his school
     and university exams while concentrating on much more complex work.
 
@@ -443,8 +444,8 @@ gauss:
     calculus, geometry, geology and astronomy.
 
     According to legend, he corrected a mistake in his father‘s accounting at
-    the age of 3, and found a way to easily add up all integers from 1 to 100 at
-    the age of 8. He made his first important discoveries while still a
+    the age of 3, and found a way to quickly add up all integers from 1 to 1000
+    at the age of 8. He made his first important discoveries while still a
     teenager, and later tutored many other famous mathematicians as Professor.
   links:
     - title: Prime Number Theorem
@@ -464,7 +465,7 @@ godel:
     history.
 
     At the age of 25, just after finishing his doctorate in Vienna, he published
-    his two _incompleteness theorems_. These state that any (consisten and
+    his two _incompleteness theorems_. These state that any (consistent and
     sufficiently powerful) mathematical system contains certain statements that
     are true but cannot be proven. In other words, mathematics contains certain
     problems that are impossible to solve.
@@ -529,7 +530,7 @@ hilbert:
   bio: |
     __David Hilbert__ (1862 – 1943) was one of the most influential
     mathematicians of the 20th century. He worked on almost every area of
-    mathematics, and was particulary interested in building a formal, locical
+    mathematics, and was particularly interested in building a formal, logical
     foundation for maths.
 
     Hilbert worked in Göttingen (Germany), where he tutored numerous students
@@ -553,7 +554,7 @@ hypatia:
     on many of the scientific books of her time, and constructed astrolabes and
     hydrometers.
 
-    She was renowned in her own lifetime as a great teacher, and she advised
+    She was renowned during her life as a great teacher, and she advised
     Orestes, the Roman prefect of Alexandria. Orestes’ feud with Cyril, the
     bishop of Alexandria, led to Hypadia being murdered by a mob of Christians.
 
@@ -581,7 +582,7 @@ kepler:
   bio: __Johannes Kepler__ (1571 – 1630) was a German astronomer and
     mathematician. He was the _imperial mathematician_ in Prague, and he is best
     known for his three _laws of planetary motion_. Kepler also worked in
-    optics, and invented an improved telescope for his obeservations.
+    optics, and invented an improved telescope for his observations.
   links:
     - title: Elliptical Orbits
       url: /course/circles-and-pi/conic-sections#kepler
@@ -710,7 +711,7 @@ napier:
   died: 1617
   name: Napier
   bio: __John Napier__ (1550 – 1617) was a Scottish mathematician, physicist,
-    and astronomer. He invented logarithms, popularized the use of the decimal
+    and astronomer. He invented logarithms, popularised the use of the decimal
     point, and created “Napier’s bones”, a manual calculating device that
     helped with multiplication and division.
 
@@ -726,7 +727,7 @@ nash:
 
     In his 30s, Nash was diagnosed with paranoid schizophrenia, but he managed
     to recover and return to his academic work. He is the old person to receive
-    both the Nobel Prize for economics, and the _Abel Prize_, one of the highest
+    both the Nobel Prize for economics and the _Abel Prize_, one of the highest
     awards in mathematics.
   links:
     - title: Game Theory
@@ -739,8 +740,8 @@ newton:
   bio: |
     __Sir Isaac Newton__ (1642 – 1726) was an English physicist, mathematician,
     and astronomer, and one of the most influential scientists of all time. He
-    was professor at Cambridge University, and president of the Royal Society in
-    London.
+    was a professor at Cambridge University, and president of the Royal Society
+    in London.
 
     In his book _Principia Mathematica_, Newton formulated the laws of motion
     and gravity, which laid the foundations for classical physics and dominated
@@ -929,11 +930,11 @@ ptolemy:
     __Claudius Ptolemy__ (c. 100 – 170 AD) was a Greco-Roman mathematician,
     astronomer, geographer and astrologer. He is best remembered for the
     _Ptolemaic_ or _Geocentric_ model of our universe – that Earth is in the
-    center and all planets and the sun revolve around this.
+    centre and all planets and the sun revolve around this.
 
     While we know today this model is incorrect, Ptolemy’s scientific impact is
     indisputable. He developed trigonometric tables with many practical
-    applications, which remained the most accurate for many centures. He also
+    applications, which remained the most accurate for many centuries. He also
     created detailed maps of the Earth, and wrote about music theory and optics.
   links:
     - title: Trigonometry
@@ -955,7 +956,7 @@ pythagoras:
     frequencies is a simple fraction.
 
     He also founded a school in Italy where he and his students worshipped
-    mathematics almost like a religion, while following a number of bizzare
+    mathematics almost like a religion, while following a number of bizarre
     rules – but the school was eventually burned down by their adversaries.
   links:
     - title: Pythagoras’ Theorem
@@ -981,7 +982,7 @@ shannon:
   died: 1972
   bio: __Claude Shannon__ (1898 – 1972) was an American mathematician and
     electrical engineer, remembered as the “father of information theory”. He
-    worked on cryptography, including codebreaking for national defense during
+    worked on cryptography, including codebreaking for national defence during
     World War II, but he was also interested in juggling, unicycling and chess.
     In his spare times, he built machines that could juggle or solve the Rubik’s
     Cube puzzle.
@@ -1010,7 +1011,7 @@ tartaglia:
   bio: __Niccolò Fontana Tartaglia__ (1499 – 1557) was an Italian mathematician,
     engineer and bookkeeper. He published the first Italian translations of
     Archimedes and Euclid, found a formula for solving any cubic equation
-    (including the first real application of complec numbers), and used
+    (including the first real application of complex numbers), and used
     mathematics to investigate the projectile motion of cannonballs.
 
 thales:
@@ -1066,7 +1067,7 @@ wiles:
   died: 2020
   name: Wiles
   bio: |
-    The british mathematician Sir __Andrew Wiles__ is best known for proving
+    The British mathematician Sir __Andrew Wiles__ is best known for proving
     Fermat’s Last Theorem, which, until then, was one of the most famous
     unsolved problems in mathematics.
 
@@ -1079,7 +1080,7 @@ wiles:
     seven years working on it in solitude. He announced his solution in 1993,
     but a small gap in his argument took two more years to fix.
 
-    Wiles was too old to receive the _Firleds medal_, the highest award in
+    Wiles was too old to receive the _Fields medal_, the highest award in
     mathematics, which has an age limit of 40. Instead, he was awarded a special
     silver plaque for his work.
 
