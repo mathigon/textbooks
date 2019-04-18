@@ -27,6 +27,27 @@ abel:
     - title: Group Theory
       url: /course/transformations-and-symmetry/symmetry-groups
 
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: Al-Khwarizmi
+  overflow: true
+  bio: |
+    The Persian mathematician __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي‎,
+    780 – 850) lived during the golden age of the Muslim Abbasid regime in
+    Baghdad. He worked at the “House of Wisdom”, which contained the first large
+    collection of academic books since the destruction of the Library of
+    Alexandria.
+
+    Al-Khwarizmi has been called the “father of algebra” – in fact, the word
+    _algebra_ comes from the Arabic title of his most important book: “The
+    Compendious Book on Calculation by Completion and Balancing”. In it, he
+    showed how to solve linear and quadratic equations, and for many centuries,
+    it was the main mathematics textbook at European universities.
+
+    Al-Khwarizmi also worked in astronomy and geography, and the word
+    “algorithm” is named after him.
+
 apollonius:
   name: Apollonius
   born: -262  # ???
@@ -148,6 +169,31 @@ brahmagupta:
     Unfortunately, his writings did not contain any proofs, so we don’t know
     how he derived his results.
 
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  small: true
+  bio: |
+    The German mathematician __Georg Cantor__ (1845 – 1918) was the inventor of
+    set theory, and a pioneer in our understanding of infinity. For most of his
+    life, Cantor's discoveries were fiercely opposed by his colleagues. This may
+    have contributed to his depression and nervous breakdowns, and he spent many
+    decades in a mental institution.
+
+    Cantor proved that there are _different sizes_ of infinity. The set of real
+    numbers, for example, is _uncountable_ – meaning that it cannot be paired up
+    with the set of real numbers.
+
+    Only towards the end of his life, Cantor started to receive the recognition
+    he deserved. David Hilbert famously declared that “No one shall expel us
+    from the paradise that Cantor has created”.
+  links:
+    - title: Infinity
+      url: /world/Infinity
+    - title: Set Theory
+      url: /world/Axioms_and_Proof
+
 cavalieri:
   name: Cavalieri
   born: 1598
@@ -185,6 +231,25 @@ conway:
   links:
     - title: Look-and-say Sequence
       url: /course/sequences/special#look-and-say
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __Abraham de Moivre__ (1667 – 1754) was a French mathematician who worked
+    in probability and analytic geometry. He is most remembered for _de Moivre's
+    formula_, which linkes trigonometry and complex numbers.
+
+    De Moivre discovered the formula for the normal distribution in probability,
+    and first conjectured the _central limit theorem_. He also found a
+    non-recursive formula for Fibonacci numbers, linking them to the golden
+    ratio `φ`.
+  links:
+    - title: Probability
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
 
 democritus:
   born: -460
@@ -439,7 +504,7 @@ gauss:
   died: 1855
   bio: |
     __Carl Friedrich Gauss__ (1777 – 1855) was arguably the greatest
-    mathematician of all times. He made groundbreaking discoveries in just about
+    mathematician in history. He made groundbreaking discoveries in just about
     every field of mathematics, from algebra and number theory to statistics,
     calculus, geometry, geology and astronomy.
 
@@ -454,6 +519,23 @@ gauss:
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
       url: /course/sequences/figurate#triangle-sums
+
+germain:
+  born: 1776
+  died: 1831
+  name: Germain
+  small: true
+  bio: |
+    __Marie-Sophie Germain__ (1776 – 1831) decided that we wanted to be a
+    mathematician at the age of 13, after reading about Archimedes.
+    Unfortunately, as a woman, she was faced with significant opposition.
+    Her parents tried to prevent her from studying when she was young, and she
+    never received a post at a university.
+
+    Germain was a pioneer in understanding the mathematics of elastic surfaces,
+    for which she won the grand prize from the Paris Academy of Sciences. She
+    also made considerable progress in solving Fermat's Last Theorem, and
+    regularly corresponded with Carl Friedrich Gauss.
 
 godel:
   born: 1906
@@ -522,6 +604,42 @@ halley:
   bio: __Edmond Halley__ (1656 – 1742) was an English mathematician and
     physicist, and the second _Astronomer Royal_. He calculated the orbit of
     Halley’s Comet, which is named after him.
+
+hamilton:
+  born: 1805
+  died: 1865
+  name: Hamilton
+  small: true
+  bio: |
+    __William Rowan Hamilton__ (1805 – 1865) was an Irish mathematician and
+    child prodigy. He invented _quaternions_, the first example of a
+    “non-commutative algebra”, which has important applications in mathematics,
+    physics and computer science.
+
+    He first came up with the idea while walking along the Royal Canal in
+    Dublin, and carved the fundamental formula into a stone bridge he passed:
+    `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
+
+    Hamilton also made significant contributions to physics, including optics
+    and Newtonian mechanics.
+
+hardy:
+  born: 1877
+  died: 1947
+  name: Hardy
+  small: true
+  bio: |
+    __G.H. Hardy__ (1877 – 1947) was a leading English pure mathematician.
+    Together with _John Littlewood_, he made important discoveries in analysis
+    and number theory, including the distribution of prime numbers.
+
+    In 1913, Hardy received a letter from _Srinivasa Ramanujan_, an unknown,
+    self-taought clerk from India. Hardy immediately recognised his genius, and
+    arranged for Ramanujan to travel to Cambridge where he was working.
+    Together, they made important discoveries and authord numerous paper.
+
+    Hardy always dislkied applied mathematics and expressed this in his personal
+    account of mathematical thinking, the 1940 book _A Mathematician’s Apology_.
 
 hilbert:
   name: Hilbert
@@ -666,12 +784,38 @@ lorenz:
     and coined the term “butterfly effect”.
   small: true
 
-milgram:
-  name: Milgram
-  bio: __Stanley Milgram__ (1933 – 1984) was a famous social psychologist. He is
-    best known for experiments on _obedience_, testing how willing adults are to
-    follow orders, even when hurting others, and for the _small-world
-    experiment_, which tests the degree of connectedness of societies.
+lovelace:
+  born: 1815
+  died: 1852
+  name: Lovelace
+  overflow: true
+  bio: |
+    __Ada Lovelace__ (1815 – 1852) was an English writer and mathematician.
+    Together with Charles Babbage, she worked on the _Analytical Engine_ an
+    early, mechanical computer. She also wrote the first algorithm to run on
+    such a machine (to calculate Bernoulli numbers), making her the first
+    computer programmer in history.
+
+    Ada described her approach as “poetical science”, and spent much time
+    thinking about the impact of technology on society.
+
+mandelbrot:
+  born: 1924
+  died: 2010
+  name: Mandelbrot
+  bio: |
+    The mathematician __Benoît Mandelbrot__ was born in Poland, grew up in
+    France, and eventually moved to the United States. He was one of the
+    pioneers of _fractal geometry_, and particularly interested in how
+    “roughness” and “chaos” appear in the real world (e.g. clouds or
+    coastlines).
+
+    While working at IBM, he used early computers to create graphical
+    representations of fractals, and in 1980 he discovered the famous
+    _Mandelbrot set_.
+  links:
+    - title: Fractals
+      url: /world/Fractals
 
 mersenne:
   born: 1588
@@ -689,6 +833,13 @@ mersenne:
   links:
     - title: Large Primes
       url: /course/divisibility-and-primes/the-distribution-of-primes#prime-test-1
+
+milgram:
+  name: Milgram
+  bio: __Stanley Milgram__ (1933 – 1984) was a famous social psychologist. He is
+    best known for experiments on _obedience_, testing how willing adults are to
+    follow orders, even when hurting others, and for the _small-world
+    experiment_, which tests the degree of connectedness of societies.
 
 mirzakhani:
   born: 1977
@@ -1052,6 +1203,20 @@ venn:
     who introduced the _Venn diagram_ used in set theory and probability. He
     taught at Cambridge University and was a Fellow of the Royal Society in
     London.
+
+viete:
+  born: 1540
+  died: 1603
+  name: Viète
+  bio: |
+    __François Viète__ (1540 – 1603) was a French mathematician, lawyer, and
+    advisor to Kings Henry III and IV of France. He made significant advances
+    in Algebra, and first introduced the use of letters to represent variables.
+
+    Viète discovered the connection between the roots and coefficients of a
+    polynomial, called _Viète's formula_. He also wrote books about geometry
+    and trigonometry, including calculating _π_ to 10 decimal places using a
+    polygon with 393216 sides.
 
 wallis:
   born: 1616
