@@ -142,6 +142,51 @@ babbage:
     were never fully completed during Babbage’s lifetime. In 1991, a functional
     replica was constructed at the Science Museum in London.
 
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __Jacob Bernoulli__ (1655 – 1705) was a Swiss mathematician, and one of the
+    many important scientists in the Bernoulli family. In fact, he had a deep
+    academic rivalry with several of his brothers and sons.
+
+    Jacob made significant advances to the calculus that was invented by Newton
+    and Leibnitz, created the field of _calculus of variations_, discovered the
+    fundamental constant _e_, developed techniques for solving differential
+    equations, and much more.
+
+    He published the first substantial work about probability, including
+    permutations, combinations and the law of large numbers, he proved the
+    binomial theorem, and derived many of the properties of Bernoulli numbers.
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __Daniel Bernoulli__ (1700 – 1782) was a Swiss mathematician and physicist.
+    He was one of the many famous scientists from the Bernoulli family –
+    including his father Johann, his uncle Jacob, and his brother Nicholas.
+
+    Daniel Bernoulli showed that as the speed of a fluid increases, its pressure
+    decreases. Now called _Bernoulli’s principle_, this is the mechanism used by
+    airplane wings and combustion engines. He also made important discoveries
+    in probability and statistics, and first encountered _Bessel functions_.
+
+    At the age of 34, he was banned from his father’s house for beating him at
+    an award from the Paris Academy, for which they both submitted an entry.
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: __Bhaskara II__ (1114 – 1185) was an Indian mathematician and astronomer.
+    He discovered some of the basic concepts of calculus, more than 500 years
+    before Leibnitz and Newton. Bhaskara also established that division by zero
+    yields infinity, and solved various quadratic, cubic, quartic and
+    Diophantine equations.
+
 bolyai:
   born: 1802
   died: 1860
@@ -194,6 +239,21 @@ cantor:
     - title: Set Theory
       url: /world/Axioms_and_Proof
 
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Cauchy__ (1789 – 1857) was a French mathematician and
+    physicist. He contributed to a wide range of areas in mathematics, and
+    dozens of theorems and named after him.
+
+    Cauchy formalised calculus and analysis, by reformulating and proving
+    results where previous mathematicians were much more careless and imprecise.
+    He founded the field of _complex analysis_, studied permutation groups, and
+    worked on optics, fluid dynamics and elasticity theory.
+
 cavalieri:
   name: Cavalieri
   born: 1598
@@ -208,6 +268,20 @@ cavalieri:
   links:
     - title: Cavalieri’s Principle
       url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  small: true
+  bio: __Arthur Cayley__ (1821 – 1895) was a British mathematician and lawyer.
+    He was one of the pioneers of _group theory_, first proposed the modern
+    definition of a “group”, and generalised them to encompass many more
+    applications in mathematics. Cayley also developed matrix algebra, and
+    worked on higher-dimensional geometry.
+  links:
+    - title: Group Theory
+      url: /course/transformations-and-symmetry/symmetry-groups
 
 collatz:
   name: Collatz
@@ -232,6 +306,28 @@ conway:
     - title: Look-and-say Sequence
       url: /course/sequences/special#look-and-say
 
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __Nicolaus Copernicus__ (1473 – 1543) was a Polish mathematician,
+    astronomer and lawyer. During his life, most people believed in the
+    _Heliocentric_ model of the universe, with Earth at the centre and
+    everything else rotating around it.
+
+    Copernicus created a new model, where the sun is at the centre, and Earth
+    moves around it on a circle. He also predicted that Earth rotates around its
+    axis once every day. Afraid that it would upset the Catholic church, he
+    only published the model just before his death – triggering what is now
+    called the _Copernican Revolution_.
+
+    Copernicus also worked as a diplomat and physician, and made important
+    contributions to economist.
+  links:
+    - title: Planetary Orbits
+      url: /course/circles-and-pi/conic-sections#orbits
+
 de-moivre:
   born: 1667
   died: 1754
@@ -250,6 +346,17 @@ de-moivre:
       url: /course/probability/predicting-the-future
     - title: Fibonacci Numbers
       url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: __Richard Dedekind__ (1831 – 1916) was a German mathematician and one of
+    the students of Gauss. He developed many concepts in set theory, and
+    invented _Dedekind cuts_ as the formal definition of real numbers. He also
+    gave the first definitions of _number fields_ and _rings_, two important
+    constructs in abstract algebra.
 
 democritus:
   born: -460
@@ -400,9 +507,9 @@ fermat:
   born: 1607
   died: 1665
   bio: |
-    __Pierre de Fermat__ (1607 – 1665) was a French mathematician and Lawyer. He
-    was one of the early pioneers of calculus, as well as working on number
-    theory, probability, geometry and optics.
+    __Pierre de Fermat__ (1607 – 1665) was a French mathematician and lawyer. He
+    was an early pioneer of calculus, as well as working in number theory,
+    probability, geometry and optics.
 
     In 1637, he wrote a short note in the margin of one of his textbooks,
     claiming that the equation `a^n + b^n = c^n` has no integer solutions for
@@ -718,6 +825,22 @@ khayyam:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
 
+lagrange:
+  born: 1736
+  died: 1813
+  name: Lagrange
+  bio: |
+    __Joseph-Louis Lagrange__ (1736 – 1813) was an Italian mathematician who
+    succeeded Leonard Euler as the director of the Academy of Sciences in
+    Berlin.
+
+    He worked on analysis and the calculus of variations, invented new
+    methods for solving differential equations, proved theorems in number
+    theory, and laid the foundations of group theory.
+
+    Lagrange also wrote about classical and celestial mechanics, and helped
+    establish the metric system in Europe.
+
 lambert:
   born: 1728
   died: 1777
@@ -727,6 +850,24 @@ lambert:
     irrational number, and he introduced hyperbolic trigonometric functions.
     Lambert also worked on geometry and cartography, created map projections,
     and foreshadowed the discovery of non-Euclidean spaces.
+
+laplace:
+  born: 1749
+  died: 1827
+  name: Laplace
+  small: true
+  bio: |
+    __Pierre-Simon Laplace__ (1749 – 1827) was a French mathematician and
+    scientist. He is sometimes called the “Newton of France”, because of his
+    wide range of interests, and the enormous impact of his work.
+
+    In a five-volume book, Laplace translated problems in celestial mechanics
+    from _geometry_ to _calculus_. This opened up a wide range of new strategies
+    for understanding our universe. He proposed that the solar system developed
+    from a rotating disk of dust.
+
+    Laplace also pioneered the field of probability, and showed how probability
+    can help us understand data from the physical world.
 
 leibniz:
   name: Leibniz
@@ -761,6 +902,16 @@ leonardo:
     His notebooks contain a vast number of drawings, inventions, and scientific
     diagrams – including the first flying machines and helicopters, hydraulic
     pumps, bridges, and much more.
+
+lie:
+  born: 1842
+  died: 1899
+  name: Lie
+  small: true
+  bio: The Norwegian mathematician __Marius Sophus Lie__ (1842 – 1899) made
+    significant advances in the study of _continuous transformation groups_ –
+    now called _Lie groups_. He also worked on differential equations and
+    non-Euclidean geometry.
 
 lobachevsky:
   born: 1792
@@ -845,6 +996,7 @@ mirzakhani:
   born: 1977
   died: 2017
   name: Mirzakhani
+  overflow: true;
   bio: __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
     mathematician and professor at Standford University. She is the only woman
     to have received the _Fields Medal_, the highest award in mathematics, for
@@ -1113,6 +1265,28 @@ pythagoras:
     - title: Pythagoras’ Theorem
       url: /course/triangles-and-trigonometry/pythagoras-theorem
 
+ramanujan:
+  born: 1887
+  died: 1920
+  name: Ramanujan
+  overflow: true
+  bio: |
+    __Srinivasa Ramanujan__ (1887 – 1920) grew up in India, where he received
+    very little formal education in mathematics. Yet, he managed to develop new
+    ideas in complete isolation, while working as a clerk in a small shop.
+
+    After a few failed attempts to contact other mathematicians, he wrote a
+    letter to the famous G.H. Hardy. Hardy immediately recognised Ramanujan's
+    genius, and arranged for him to travel to Cambridge in England. Together,
+    they made numerous discoveries in number theory, analysis, and infinite
+    series.
+
+    Unfortunately, Ramanujan soon fell ill and was forced to return to India,
+    where he died at the age of 32. During his short life, Ramanujan proved over
+    3000 theorems and equations, on a wide range of topics. His work created
+    entirely new areas of maths, and his notebooks were studied by other
+    mathematicians for many decades after his death.
+
 riemann:
   name: Riemann
   born: 1826
@@ -1189,6 +1363,27 @@ thorp:
     a professor of mathematics, and pioneered modern applications of probability
     theory.
 
+turing:
+  born: 1912
+  died: 1954
+  name: Turing
+  bio: |
+    __Alan Turing__ (1912 – 1954) was an English mathematician and is often
+    called the “father of computer science”.
+
+    During the Second World War, Turing played a critical role in breaking the
+    Enigma code used by the German military, as part of the “Government Code and
+    Cypher School” at Bletchley Park. This helped the Allies win the war, and
+    may have saved millions of lives.
+
+    He also invented the _Turing machine_, a mathematical model of a general
+    purpose computer, and the _Turing test_, which can be used to judge the
+    ability of artificial intelligence.
+
+    Turing was gay, which was still a crime during his life, and meant that his
+    groundbreaking accomplishments were never fully recognised. He committed
+    suicide at the age of 41.
+
 ulam:
   name: Ulam
   bio: __Stanisław Ulam__ (1909 – 1984) was a Polish-American mathematician. He
@@ -1232,21 +1427,21 @@ wiles:
   died: 2020
   name: Wiles
   bio: |
-    The British mathematician Sir __Andrew Wiles__ is best known for proving
-    Fermat’s Last Theorem, which, until then, was one of the most famous
+    The British mathematician Sir __Andrew Wiles__ (born 1953) is best known for
+    proving Fermat’s Last Theorem, which, until then, was one of the most famous
     unsolved problems in mathematics.
 
-    In 1637, the mathematician Pierre de Fermat, wrote in the margin of a
-    textbook that he had a wonderful proof that the equation `a^n + b^n = c^n`
-    has no integer solutions, for `n > 2`. Unfortunately, no one was able to
-    find this proof – until Wiles, some 400 years later.
+    In 1637, Pierre de Fermat, wrote in the margin of a textbook that he had a
+    wonderful proof that the equation `a^n + b^n = c^n` has no integer
+    solutions for `n > 2`. Unfortunately, no one was able to find a proof –
+    until Wiles, some 400 years later.
 
-    Wiles had been fascinated by the problem since the age of 10, and he spent
+    Wiles had been fascinated by the problem since the age of 10, and spent
     seven years working on it in solitude. He announced his solution in 1993,
-    but a small gap in his argument took two more years to fix.
+    although a small gap in his argument took two more years to fix.
 
-    Wiles was too old to receive the _Fields medal_, the highest award in
-    mathematics, which has an age limit of 40. Instead, he was awarded a special
-    silver plaque for his work.
+    He was too old to receive the _Fields medal_, the highest award in
+    mathematics, which has an age limit of 40. Instead, Wiles was awarded a
+    special silver plaque for his work.
 
 
