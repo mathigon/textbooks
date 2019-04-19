@@ -20,14 +20,16 @@ x-parallax.full-width {
   .credit { position: absolute; bottom: 0; right: 0; background: fade(black, 50%); color: white; font-size: 11px; padding: 1px 8px; }
 }
 
+x-tabbox .titles .check { border: 1px solid white; }
+
 // -----------------------------------------------------------------------------
 
 .drawing-path {
 	fill: none;
-  stroke: fade(#333, 85%);
-  stroke-width: 7px;
+  stroke: fade(black, 70%);
+  stroke-width: 6px;
   stroke-linecap: round;
-  stroke-miterlimit: 0;
+  stroke-linejoin: round;
   pointer-events: none;
 }
 
@@ -46,6 +48,7 @@ x-parallax.full-width {
 .handshakes .duplicate { opacity: 1; transition: opacity .5s; }
 .complete .handshakes .duplicate { opacity: 0.1; }
 .handshakes td { text-align: center; color: #666; }
+
 @media screen and (max-width: 1100px) {
   .handshakes {
     width: 100%;
@@ -58,23 +61,22 @@ x-parallax.full-width {
   }
 }
 
-.bridge { fill: #F7931E; stroke: transparent; stroke-width: 16px; }
-.water { fill: #6AB0CE; }
+.bridge { fill: @yellow; stroke: transparent; stroke-width: 16px; transition: fill .2s; }
+.bridge.green { fill: @green; }
+.bridge.red { fill: @red; }
+.water { fill: mix(@blue, white, 70%); }
 
 // -----------------------------------------------------------------------------
 
-#planarity circle { fill: @blue; cursor: move; stroke: mix(@blue, #FFF, 20%); stroke-width: 2.5px; }
+#planarity circle { fill: @blue; cursor: move; stroke: mix(@blue, white, 20%); stroke-width: 2.5px; }
 #planarity circle.intersect { fill: @red; }
-#planarity line { stroke: fade(#000, 30%); stroke-width: 2.5px; }
+#planarity line { stroke: fade(black, 30%); stroke-width: 2.5px; }
 #planarity line.intersect { stroke: @red; }
 
 // -----------------------------------------------------------------------------
 
 #konigsberg-proof text { font-weight: 600; text-anchor: middle; fill: white; font-size: 32px; }
 
-.m-draw-pointer { cursor: crosshair; }
-.m-draw-path { fill: none; stroke: black; stroke-width: 4px; pointer-events: none; }
-.map-bridge { fill: #F7931E; stroke: rgba(0,0,0,0); stroke-width: 20px; }
 .utility { z-index: 10; }
 .utility1, .utility2, .utility3 { opacity: 0; transition: opacity .3s; }
 
@@ -83,6 +85,8 @@ x-parallax.full-width {
 #planar-1 .link, #planar-2 .link, #planar-3 .link { stroke-width: 3px; }
 
 .frame .btn, .slide .btn, .tab .btn { position: absolute; bottom: 10px; left: 10px; }
+.tab .btn.right { left: auto; right: 10px; }
+
 .frame select {
   .button();
   background: @dark-grey data-uri('svg/dropdown.svg') no-repeat right 10px top 14px;

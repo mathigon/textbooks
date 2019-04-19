@@ -59,7 +59,7 @@ export class Sketch extends Evented {
   }
 
   addPoint(p) {
-    if (Point.distance(this.p, p) > 4) {
+    if (Point.distance(this.p, p) > 3) {
       this.activePath.addPoint(p);
       this.p = p;
       this.checkForIntersects();

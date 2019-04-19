@@ -5,7 +5,7 @@
 
 
 
-import { last, tabulate, list } from '@mathigon/core';
+import { last, tabulate, list, isOneOf } from '@mathigon/core';
 import { factorial, random, numberFormat, toOrdinal, Point, Segment, subsets } from '@mathigon/fermat';
 import { $, $$, $N, Colour, svgPointerPosn, animate, Draggable } from '@mathigon/boost';
 
@@ -141,52 +141,51 @@ export function handshakes4($section) {
 }
 
 export function bridges($section) {
-  $section.$$('.tab').forEach(function($el, i) {
-    let $svg = $el.$('svg.frame');
-    let $paths = $('.paths', $svg);
-    let $water = $('.water', $svg);
-    let $bridges = $$('.bridge', $svg);
-    let $error = $('.error', $svg);
-    let $solveds = $section.$$('x-solved');
+  $section.$$('.tab').forEach(($el, i) => {
+    const $svg = $el.$('svg.frame');
+    const $paths = $('.paths', $svg);
+    const $water = $('.water', $svg);
+    const $bridges = $$('.bridge', $svg);
+    const $error = $('.error', $svg);
+    const $solveds = $section.$$('x-solved');
 
     let success = false;
     let attempts = 0;
     let totalCrossed = 0;
-    $error.exit();
+
+    $error.hide();
 
     let map = new Sketch($svg, { paths: $paths });
-    map.on('start', function() {
+    map.on('start', () => {
       map.clear();
       attempts += 1;
     });
-    $el.$('.btn').on('click', () => map.clear());
 
-    map.on('end', function() {
+    function completeMap() {
+      $skip.exit('pop');
+      if (isOneOf(i, 1, 2)) return $section.addHint('mapKeepTrying');
+      $section.addHint(i === 0 ? 'tryDifferentMapA' : 'tryDifferentMapB');
+      $section.score('bridge-' + i);
+    }
+
+    const [$clear, $skip] = $el.$$('.btn');
+    $clear.on('click', () => map.clear());
+    map.one('end', () => { if (!success) $skip.enter('pop'); });
+    $skip.one('click', completeMap);
+
+    map.on('end', () => {
       if (success) return;
-      if (attempts === 2 && i < 2) $section.addHint('tryDifferentStartPoint');
-      if (attempts !== 4) return;
-
-      switch(i) {
-        case 0:
-          $section.addHint('tryDifferentMapA');
-          $section.score('bridge-' + i);
-          break;
-        case 3:
-          $section.addHint('tryDifferentMapB');
-          $section.score('bridge-' + i);
-          break;
-        default:
-          $section.addHint('Keep trying!');
-      }
+      if (attempts === 3 && i < 2) $section.addHint('tryDifferentStartPoint');
+      if (attempts === 4) completeMap();
     });
 
-    map.on('clear', function() {
+    map.on('clear', () => {
       totalCrossed = 0;
       $error.exit('pop', 300);
       $solveds[i].exit();
     });
 
-    $water.on('pointerenter', function(e) {
+    $water.on('pointerenter', (e) => {
       if (!map.drawing) return;
       map.stop();
       let p = svgPointerPosn(e, $svg);
@@ -195,46 +194,43 @@ export function bridges($section) {
       $section.addHint('crossWater');
     });
 
-    $bridges.forEach(function($bridge) {
+    $bridges.forEach(($bridge) => {
       let enter = null;
       let crossed = false;
 
       $bridge.on('pointerenter', function(e) {
-        if (map.drawing) {
-          enter = svgPointerPosn(e, $svg);
-          if (crossed) {
-            map.stop();
-            $bridge.css('fill', Colour.red);
-            $section.addHint('bridgeCrossedBefore');
+        if (!map.drawing) return;
+        enter = svgPointerPosn(e, $svg);
+        if (crossed) {
+          map.stop();
+          $bridge.addClass('red');
+          $section.addHint('bridgeCrossedBefore');
+        }
+        crossed = true;
+      });
+
+      $bridge.on('pointerleave', (e) => {
+        if (!map.drawing) return;
+        let out = svgPointerPosn(e, $svg);
+        if (Point.distance(enter || out, out) < 40) {
+          crossed = false;
+        } else {
+          $bridge.addClass('green');
+          totalCrossed += 1;
+          if (totalCrossed === $bridges.length) {
+            $solveds[i].enter();
+            $skip.exit('pop');
+            $section.score('bridge-' + i);
+            success = true;
           }
-          crossed = true;
         }
       });
 
-      $bridge.on('pointerleave', function(e) {
-        if (map.drawing) {
-          let out = svgPointerPosn(e, $svg);
-          if (Point.distance(enter || out, out) < 40) {
-            crossed = false;
-          } else {
-            $bridge.css('fill', Colour.green);
-            totalCrossed += 1;
-            if (totalCrossed === $bridges.length) {
-              $solveds[i].enter();
-              $section.score('bridge-' + i);
-              success = true;
-            }
-          }
-        }
-      });
-
-      map.on('clear', function() {
+      map.on('clear', () => {
         crossed = false;
-        $bridge.css('fill', '#F7931E');
+        $bridge.removeClass('red green');
       });
-
     });
-
   });
 }
 

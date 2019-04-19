@@ -4,6 +4,7 @@ bridgeCrossedBefore: You’ve already crossed this bridge before. Try to find a 
 tryDifferentMapA: Maybe there is no solution for this city … try one of the other maps!
 tryDifferentMapB: Maybe this map also has no solution. Let’s move on!
 tryDifferentStartPoint: The starting location might be important. See what happens if you start on a different island.
+mapKeepTrying: Keep trying! Maybe start at a different location.
 housesToEachOther: You only need to connect the houses to the factories, but not the houses to each other.
 factoriesToEachOther: You only need to connect the factories to the houses, but not the factories to each other.
 linesCross: Careful: the lines are not allowed to cross.
