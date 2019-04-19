@@ -331,7 +331,7 @@ somewhat plausible, because the sequence of approximations 0.9, 0.99, 0.999,
 
 In this example, the exact opposite happens: the numbers 9, 99, 999, 9999, and
 so on, are marching further and further away from –1. That’s why it is so
-abstruse to think that _{span.nowrap}…999999_ could possibly equal 1.
+abstruse to think that _{span.nowrap}…999999_ could possibly equal –1.
 
     figure: include svg/number-line-1.svg
 

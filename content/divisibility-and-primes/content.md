@@ -891,7 +891,7 @@ must have some of the prime factors of that number.
 
 Suppose that __{.m-red}X__ is the gcd of __{.m-green}18__ and __{.m-blue}30__.
 Then __{.m-red}X__ divides __{.m-green}18__ so the prime factors of __{.m-red}X__
-must be among _{span.number-ball.small.l-blue}2_, _{span.number-ball.small.l-blue}2_
+must be among _{span.number-ball.small.l-blue}2_, _{span.number-ball.small.l-blue}3_
 and _{span.number-ball.small.l-blue}3_. Also, __{.m-red}X__ divides __{.m-blue}30__
 so the prime factors of __{.m-red}X__ must be among _{span.number-ball.small.l-green}2_,
 _{span.number-ball.small.l-green}3_ and _{span.number-ball.small.l-green}5_.
