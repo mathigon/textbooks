@@ -955,8 +955,8 @@ ${lcm(n,6)} years, which is the [[lcm|gcd|product]] of 6 and ${n}.
 > id: cicadas1
 
 This number seems to be much larger if the cicada cycle is a prime number like
-13 and 17. That‘s is because prime numbers don‘t share any factors with 6, so
-when calculating the lcm we don‘t cancel any duplicate factors.
+13 and 17. That’s because prime numbers don’t share any factors with 6, so
+when calculating the lcm we don’t cancel any duplicate factors.
 
 Of course, cicadas have no idea what prime numbers are – but over millions of
 years, evolution has worked out that prime cycles are the safest. The predator
