@@ -143,7 +143,7 @@ split into [[n – 2|n – 1|n]] triangles. Therefore,
 
 ::: column.grow
 We say that a polygon is [__concave__](gloss:concave) if it has a section that
-“points inwards”. You can imagine that is part has [“caved in”](target:cave).
+“points inwards”. You can imagine that this part has [“caved in”](target:cave).
 Polygons that are _not_ concave are called [__convex__](gloss:convex).
 
 There are two ways you can easily identify concave polygons: they have at least
@@ -421,7 +421,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
 ---
 > id: quadrilaterals-2
 
-There are a few other quadrilaters, that are even less regular but still have
+There are a few other quadrilaterals, that are even less regular but still have
 certain important properties:
 
 ::: column.quadrilateral
@@ -1453,11 +1453,12 @@ have [[28]] edges.
 ---
 > id: euler-1
 
-This equation was discovered by the famous Swiss mathematician [Leonard Euler](bio:euler).
-It is true for any polyhedron, as long as it doesn’t contain any holes.
+This equation was discovered by the famous Swiss mathematician [Leonard
+Euler](bio:euler). It is true for any polyhedron, as long as it doesn’t contain
+any holes.
 
-If you play around the different polyhedra, like the ones above, you’ll find
-that Euler’s formula always works. In [a later course](/course/graphs-and-networks/eulers-formula)
+If you try different polyhedra, like the ones above, you’ll find that Euler’s
+formula always works. In [a late course](/course/graphs-and-networks/eulers-formula)
 you’ll learn how to actually prove it mathematically.
 
 ---
@@ -1466,7 +1467,7 @@ you’ll learn how to actually prove it mathematically.
 ## Platonic Solids
 
 At the beginning of this course we defined [regular polygons](gloss:regular-polygon)
-as particularly “symmetric” polygons, where all sides and angles are them same.
+as particularly “symmetric” polygons, where all sides and angles are the same.
 We can do something similar for polyhedra.
 
 In a _regular polyhedron_ all [faces](gloss:polyhedron-face) are all the same

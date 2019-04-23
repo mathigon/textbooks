@@ -525,7 +525,7 @@ This table shows all possible outcomes:
         td(colspan=3)
       tr
         td(colspan=4)
-        td #[.dice #[+dice(5)]] #[.dice #[+dice(3)]]
+        td #[.dice #[+dice(5)]] #[.dice #[+dice(1)]]
         td #[.dice #[+dice(5)]] #[.dice #[+dice(2)]]
         td #[.dice #[+dice(6)]] #[.dice #[+dice(2)]]
         td(colspan=4)

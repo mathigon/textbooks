@@ -1552,7 +1552,7 @@ For example, if we start with 2, 1, … rather than 1, 1, … we get a sequence
 called the __Lucas numbers__.
 
 It turns out that, whatever two starting numbers you pick, the resulting
-sequences share many properties. For example, te ratios of consecutive terms
+sequences share many properties. For example, the ratios of consecutive terms
 will _always_ [converge](gloss:sequence-convergence) to the golden ratio.
 
 {.text-center.s-purple.s-small}
