@@ -281,9 +281,9 @@ Notice that if a point lies on the line of reflection, its image is
 ---
 > id: reflections-3
 
-In all of the examples above, the line of reflection was horizontal or vertical,
-which made it easy to draw the reflections. If that is not the case, the
-construction becomes more complicated:
+In all of the examples above, the line of reflection was horizontal, vertical,
+or at a 45° angle – which made it easy to draw the reflections. If that is not
+the case, the construction requires a bit more work:
 
 ::: column(width=300)
 
