@@ -2,6 +2,7 @@
 
 ## Factors and Multiples
 
+> section: factors-and-multiples
 > id: divisibility1
 
     mixin grid(n, fn)
@@ -115,6 +116,7 @@ will meet at just a single number in the middle, like 64 = 8 × 8.
 
 ---
 > id: divisibility2
+> section: divisibility-rules
 
 ## Divisibility Rules
 
@@ -304,6 +306,7 @@ More on that later…
 
 ---
 > id: primes
+> section: prime-numbers
 
 ## Prime Numbers
 
@@ -445,6 +448,7 @@ assumption must be incorrect.
 ---
 > id: prime-test
 > goals: calculator
+> section: the-distribution-of-primes
 
 ## The Distribution of Primes
 
@@ -683,6 +687,7 @@ and promised $1,000,000 to any mathematician who solves it.
 ---
 > id: race
 > goals: race
+> section: least-common-multiple
 
 ## Least Common Multiples
 
@@ -845,6 +850,7 @@ factors which would get “canceled”.
 
 ---
 > id: gcd
+> section: greatest-common-factor
 
 ## Greatest Common Factors
 
@@ -920,6 +926,7 @@ Once again prime numbers are special: the gcd of two different primes is always
 ---
 > id: cicadas
 > goals: bound-low bound-high
+> section: real-life-applications
 
 ## Real Life Applications
 
