@@ -414,6 +414,25 @@ dirac:
     famously shy and, according to Einstein, _“balancing on the dizzying path
     between genius and madness”_.
 
+einstein:
+  name: Einstein
+  born: 1879
+  died: 1955
+  small: true
+  bio: |
+    __Albert Einstein__ (1879 – 1955) was a German physicist, and one of the
+    most influential scientists in history. He received the Nobel Prize for
+    physics and TIME magazine called him the _person of the 20th century_.
+
+    Einstein triggered the most significant transformation in our view of the
+    universe since Newton. He realised that classical, _Newtonian_ physics was
+    no longer enough to explain certain physical phenomenons.
+
+    At the age of 26, during his “miracle year”, he published four
+    groundbreaking scientific papers that explained the photoelectric effect
+    and Brownian motion, introduced special relativity, and derived the formula
+    `E = m c^2`, which states that energy (_E_) and mass (_m_) are equivalent.
+
 eratosthenes:
   name: Eratosthenes
   born: -276
