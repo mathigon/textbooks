@@ -356,6 +356,7 @@ even in movies:
 > id: pool
 > section: billiard
 > sectionBackground: dark casino
+> sectionStatus: dev
 
 One of the most surprising properties of chaos is that it can appear in really
 simple systems. You've already seen the double-pendulum in the previous section.
@@ -416,6 +417,7 @@ collisions:
 
 > section: three-bodies
 > id: three-bodies
+> sectionStatus: dev
 
 Poincare etc.
 
@@ -448,6 +450,7 @@ Poincare etc.
 ## Phase Space and Strange Attractors
 
 > section: attractors
+> sectionStatus: dev
 
 Phase diagram for pendulum:
 https://youtu.be/MjPFHWul2J0?t=29
@@ -490,6 +493,7 @@ Sinaï-Ruelle-Bowen measure / statistics / forecasting
 ## The Logistic Map
 
 > section: logistic-map
+> sectionStatus: dev
 
 * https://www.dwitter.net/d/12018
 * https://geoffboeing.com/2015/03/chaos-theory-logistic-map/
