@@ -353,7 +353,7 @@ total area of the polygon is
 In the [previous course](/course/triangles-and-trigonometry) we investigated
 many different properties of triangles. Now let’s have a look at quadrilaterals.
 
-A _regular quadrilateral_ is called a [[square|reactangle|equilateral quadrilateral]].
+A _regular quadrilateral_ is called a [[square|rectangle|equilateral quadrilateral]].
 All of its sides have the same length, and all of its angles are equal.
 
 ::: column.quadrilateral.reveal(when="blank-0")
@@ -834,9 +834,10 @@ we can also do that for some quadrilaterals:
 On the left, try to draw a rectangle that has the same area as the
 parallelogram.
 
-{.reveal(when="draw-1")} Can you see that the [missing triangle on the left](target:triangle-1)
-is [[exactly the same as|smaller than|bigger than]] the [overlapping triangle on the
-right](target:triangle-2)? _{span.reveal(when="blank-1")}Therefore the area of a parallelogram is_
+{.reveal(when="draw-1")} Can you see that the [missing triangle](target:triangle-1)
+on the left is [[exactly the same as|smaller than|bigger than]] the [overlapping
+triangle](target:triangle-2) on the right?
+_{span.reveal(when="blank-1")}Therefore the area of a parallelogram is_
 
 {.text-center.reveal(when="blank-1")} Area = __{.i.m-green}base__ × __{.i.m-yellow}height__
 
@@ -870,8 +871,8 @@ These parallel sides are called the __bases__ of the trapezium.
 
 ::: column.grow
 Like before, try to draw a rectangle that has the same area as this trapezium.
-_{span.reveal(when="draw-2")} Can you see how the [missing and triangles on the
-left and the right](target:triangles-3) cancel out?_
+_{span.reveal(when="draw-2")} Can you see how the [missing and added
+triangles](target:triangles-3) on the left and the right cancel out?_
 
 {.reveal(when="draw-2" delay=2000)} The [{.step-target.pill.green} height](target:t-height)
 of this rectangle is the [[distance between|average of|length of]] the [parallel

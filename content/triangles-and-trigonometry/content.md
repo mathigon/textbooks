@@ -653,7 +653,7 @@ either of these intersections, and the resulting two triangles are
 But is it possible to construct _a different_ triangle with the same three
 sides?
 
-We already saw two triangles above, but they where both congruent. In fact, any
+We already saw two triangles above, but they were both congruent. In fact, any
 two triangles that have the same three side lengths are congruent. This is
 called the [__SSS Congruence Condition__](gloss:triangle-sss) for triangles
 (“Side-Side-Side”).
