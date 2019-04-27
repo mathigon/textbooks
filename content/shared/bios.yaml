@@ -27,6 +27,33 @@ abel:
     - title: Group Theory
       url: /course/transformations-and-symmetry/symmetry-groups
 
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 – 1050)
+    lived in Cairo during the Islamic Golden Age, and studied mathematics,
+    physics, astronomy, philosophy and medicine. He was a proponent of the
+    _scientific method_: the belief that any a scientific hypothesis must be
+    verified using experiments or mathematical logic – centuries before
+    European scientists during the Renaissance.
+
+    Al-Haytham was particularly interested in optics and visual perception. He
+    also derived a formula for the sum of fourth powers (`1^4 + 2^4 + 3^4 + … +
+    n^4`), and he studied the link between algebra and geometry.
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 – 1029) was
+    a Persian mathematician and engineer. He was the first person to use _prove
+    by induction_, which allowed him to prove the binomial theorem.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
 al-khwarizmi:
   born: 780
   died: 850
@@ -219,11 +246,11 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
-  bio: The Indian mathematician Brahmagupta (c. 598 – 668 AD) invented the rules
-    for addition, subtraction and multiplication with zero and negative numbers.
-    He was also an astronomer and made many other discoveries in mathematics.
-    Unfortunately, his writings did not contain any proofs, so we don’t know
-    how he derived his results.
+  bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 AD) invented the
+    rules for addition, subtraction and multiplication with zero and negative
+    numbers. He was also an astronomer and made many other discoveries in
+    mathematics. Unfortunately, his writings did not contain any proofs, so we
+    don’t know how he derived his results.
 
 cantor:
   born: 1845
@@ -249,6 +276,27 @@ cantor:
       url: /world/Infinity
     - title: Set Theory
       url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    The Italian __Gerolamo Cardano__ (1501 – 1576) was one of the most
+    influential mathematicians and scientists of the Renaissance. He
+    investigated hypercycloids, published Tartaglia’s and Ferrari’s solution for
+    cubic and quartic equations, was the first European to systematically use
+    negative numbers, and even acknowledged the existing of imaginary numbers
+    (based on `sqrt(-1)`).
+
+    Cardano also made some early progress in probability theory and introduced
+    binomial coefficients and binomial theorem to Europe. He invented many
+    mechanical devices, including combination locks, gyroscopes with three
+    degrees of freedom, and drive shafts (or Cardan shafts) that are still used
+    in vehicles today.
+  links:
+    - title: Imaginary Numbers
+      url: /world/Real_Irrational_Imaginary
 
 carroll:
   born: 1832
@@ -847,6 +895,15 @@ hypatia:
     Orestes, the Roman prefect of Alexandria. Orestes’ feud with Cyril, the
     bishop of Alexandria, led to Hypadia being murdered by a mob of Christians.
 
+jacobi:
+  born: 1809
+  died: 1851
+  name: Jacobi
+  small: true
+  bio: __Carl Jacobi__ (1804 – 1851) was a German mathematician. He worked on
+    analysis, differential equations and number theory, and was one of the
+    pioneers in the study of _elliptic functions_.
+
 jefferson:
   name: Jefferson
   bio: |
@@ -857,6 +914,26 @@ jefferson:
     In addition to his work in politics, he studied mathematics, horticulture,
     mechanics, and worked as an architect. After retiring from public office,
     Jefferson founded the University of Virginia.
+
+jiushao:
+  born: 1202
+  died: 1261
+  name: Qin Jiushao
+  overflow: true
+  bio: |
+    __Qin Jiushao__ (秦九韶, c. 1202 – 1261) was a Chinese mathematician,
+    inventor and politician. In his book _Shùshū Jiǔzhāng_, he published
+    numerous mathematical discoveries, including the important _Chinese
+    remainder theorem_, and wrote about surveying, meteorology and the military.
+
+    Qin first developed a method for numerically solving polynomial equations,
+    which is now known as _Horner’s method_. He found a formula for the area of
+    a triangle based on the length of its three sides, calculated the sum of
+    arithmetic series, and introduced a symbol for “zero” into Chinese
+    mathematics.
+
+    Qin also invented _Tianchi basins_, which were used to measure rainfall and
+    gather meteorological data important for farming.
 
 karinthy:
   name: Karinthy
@@ -1014,6 +1091,25 @@ lovelace:
     Ada described her approach as “poetical science”, and spent much time
     thinking about the impact of technology on society.
 
+madhava:
+  born: 1340
+  died: 1425
+  name: Madhava
+  bio: |
+    __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and
+    astronomer from southern India. All of his original work has been lost, but
+    he had a great impact on the development of mathematics.
+
+    Madhava first used infinite series to approximate trigonometric functions,
+    which was a significant step towards the development of calculus many
+    centuries later. He also studied geometry and algebra, and found an exact
+    formula for _π_ (also using infinite series).
+  links:
+    - title: Trigonometry
+      url: /course/triangles-and-trigonometry/trigonometry
+    - title: Pi
+      url: /course/circles-and-pi/introduction
+
 mandelbrot:
   born: 1924
   died: 2010
@@ -1066,6 +1162,25 @@ mirzakhani:
     to have received the _Fields Medal_, the highest award in mathematics, for
     her work on “the dynamics and geometry of Riemann surfaces and their moduli
     spaces”. At the age of 40, Maryam died of breast cancer.
+
+monge:
+  born: 1746
+  died: 1818
+  name: Monge
+  bio: |
+    __Gaspard Monge__ (1746 – 1818) was a French mathematician. He is considered
+    the father of _differential geometry_, having introduced the concept of
+    _lines of curvature_ on surfaces in three-dimensional space (e.g. on a
+    sphere). Monge also invented _orthographic projection_ and _descriptive
+    geometry_, which allows the representation of three-dimensional objects
+    using two-dimensional drawings.
+
+    During the French Revolution, Monge served as Minister of the Marine. He
+    helped reform the French education system and found the École Polytechnique.
+  small: true
+  links:
+    - title: Map Projections
+      url: /world/Dimensions_and_Distortions
 
 monsky:
   name: Monsky
@@ -1405,6 +1520,15 @@ ramanujan:
     entirely new areas of maths, and his notebooks were studied by other
     mathematicians for many decades after his death.
 
+regiomontanus:
+  born: 1436
+  died: 1476
+  name: Regiomontanus
+  overflow: true
+  bio: __Johann Müller Regiomontanus__ (1436 – 1476) was a German mathematician
+    and astronomer. He made great advances in both fields, including creating
+    detailed astronomical tables and publishing multiple textbooks.
+
 riemann:
   name: Riemann
   born: 1826
@@ -1434,8 +1558,8 @@ russell:
     significant impact not just on maths and philosophy, but also on
     linguistics, artificial intelligence and metaphysics.
 
-    Russell was a passionate pacifist anti-war activist. In 1950, he received
-    the Nobel Prize in Literature, for his work “in which he champions
+    Russell was a passionate pacifist and anti-war activist. In 1950, he
+    received the Nobel Prize in Literature, for his work “in which he champions
     humanitarian ideals and freedom of thought”.
 
 shannon:
@@ -1453,6 +1577,23 @@ shannon:
     - title: Computers for Gambling
       url: /course/probability/casino-mathematics#dealer
 
+shijie:
+  born: 1249
+  died: 1314
+  name: Zhu Shijie
+  bio: |
+    __Zhu Shijie__ (朱世杰, 1249 – 1314) was one of the greatest Chinese
+    mathematicians. In is book _Jade Mirror of the Four Unknowns_, he showed how
+    to solve 288 different problem using systems of polynomial equations and
+    four variables (called _Heaven_, _Earth_, _Man_ and _Matter_).
+
+    Zhu made extensive use of Pascal’s triangle. He also invented rules for
+    solving systems of linear equations – predating our modern matrix methods
+    by many centuries.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
 sikdar:
   name: Sikdar
   bio: __Radhanath Sikdar__ (1813 – 1870) was an Indian mathematician. He was
@@ -1465,6 +1606,14 @@ singmaster:
     particularly well known for his mathematical puzzles and brain teasers. He
     was the first to come up with mathematical algorithms for analysing and
     solving the _Rubik’s Cube_.
+
+stevin:
+  born: 1548
+  died: 1620
+  name: Stevin
+  bio: __Simon Stevin__ (1548 – 1620) was Flemish mathematician and engineer. He
+    was one of the first people to use and write about decimal fractions, and
+    made many other contributions to science and engineering.
 
 tartaglia:
   born: 1499
@@ -1580,5 +1729,3 @@ wiles:
     He was too old to receive the _Fields medal_, the highest award in
     mathematics, which has an age limit of 40. Instead, Wiles was awarded a
     special silver plaque for his work.
-
-
