@@ -203,6 +203,17 @@ bolyai:
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
 
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: __George Boole__ (1815 – 1864) was an English mathematician. As a child,
+    he taught himself Latin, Greek and mathematics, hoping to escape his lower
+    class life. He created _Boolean algebra_, which uses operators like AND, OR
+    and NOT (rather than addition or multiplication) and can be used when
+    working with sets. This was the foundation for formal mathematical logic,
+    and has many applications in computer science.
+
 brahmagupta:
   born: 598
   died: 668
@@ -238,6 +249,20 @@ cantor:
       url: /world/Infinity
     - title: Set Theory
       url: /world/Axioms_and_Proof
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  small: true
+  bio: |
+    __Charles Lutwidge Dodgson__ (1832 – 1898) is best know under his pen name
+    __Lewis Carroll__, as the author of _Alice’s Adventures in Wonderland_ and
+    its sequel _Through the Looking-Glass_.
+
+    However, Carroll was also a brilliant mathematician. He always tried to
+    incorporate puzzles and logic into his children’s stories, making them more
+    enjoyable and memorable.
 
 cauchy:
   born: 1789
@@ -369,6 +394,26 @@ democritus:
   links:
     - title: Volume of a Cone
       url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  small: true
+  bio: |
+    __Girard Desargues__ (1591 – 1661) was a French mathematician, engineer,
+    and architect. He designed numerous buildings in Paris and Lyon, helped
+    construct a dam, and invented a mechanism for raising water using
+    epicycloids.
+
+    In mathematics, Desargues is considered the father of _projective geometry_.
+    This is a special kind of geometry in which parallel lines meet at at “point
+    at infinity”, the size of shapes does not matter (only their proportions),
+    and all four conic sections (circle, ellipse, parabola and hyperbola) are
+    essentially the same.
+  links:
+    - title: Conic Sections
+      url: /course/circles-and-pi/conic-sections
 
 descartes:
   born: 1596
@@ -1055,6 +1100,22 @@ nash:
     - title: Game Theory
       url: /world/Game_Theory
 
+neumann:
+  born: 1903
+  died: 1957
+  name: von Neumann
+  small: true
+  bio: |
+    __John von Neumann__ (1903 – 1957) was a Hungarian-American mathematician,
+    physicist and computer scientist. He made important contributions to pure
+    mathematics, was a pioneer of quantum mechanics, and developed concepts like
+    game theory, cellular automata, self-replicating machines, and linear
+    programming.
+
+    During World War II, von Neumann was a key member of the _Manhattan
+    Project_, working on the development of the hydrogen bomb. He later
+    consulted for the Atomic Energy Commission and the US Air Force.
+
 newton:
   name: Newton
   born: 1642
@@ -1092,6 +1153,24 @@ nicomachus:
     - title: Perfect Numbers
       url: /course/sequences/special#perfect
 
+nightingale:
+  born: 1820
+  died: 1910
+  name: Nightingale
+  small: true
+  bio: |
+    __Florence Nightingale__ (1820 – 1910) was an English nurse and
+    statistician. During the Crimean War, she nursed wounded British soldiers,
+    and later founded the first training school for nurses. As the “The Lady
+    with the Lamp”, she bacame a cultural icon, and new nurses in the US still
+    take the _Nightingale pledge_.
+
+    One of her most important contributions to medicine was the use of
+    statistics to evaluate treatments. She created numerous infographics, and
+    was one of the first to use pie charts. Nightingale also worked to improve
+    sanitation and hunger relief in India, helped abolish prostitution laws, and
+    promoted new careers for women.
+
 noether:
   name: Noether
   born: 1882
@@ -1104,6 +1183,26 @@ noether:
   links:
     - title: Symmetry in Physics
       url: /course/transformations-and-symmetry/symmetry-in-physics
+
+oresme:
+  born: 1323
+  died: 1382
+  name: Oresme
+  bio: __Nicole Oresme__ (c. 1323 – 1382) was an important French mathematician,
+    philosopher and bishop, living in the late Middle Ages. He invented
+    coordinate geometry, long before Descartes, was the first to use fractional
+    exponents, and worked on infinite series. He wrote about economics, physics,
+    astronomy and theology, and was an advisor to King Charles V of France.
+
+pacioli:
+  born: 1446
+  died: 1517
+  name: Pacioli
+  bio: __Luca Pacioli__ was an influential Italian friar and mathematician, who
+    invented the standard symbols for plus and minus (+ and –). He was one of
+    the first accountants in Europe, where he introduced double-entry
+    book-keeping. Pacioli collaborated with Leonardo da Vinci, and also wrote
+    about arithmetic and geometry.
 
 pascal:
   name: Pascal
@@ -1319,6 +1418,25 @@ riemann:
   links:
     - title: Riemann Hypothesis
       url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+
+russell:
+  born: 1872
+  died: 1970
+  name: Russell
+  small: true
+  bio: |
+    __Bertrand Russell__ (1872 – 1970) was a British philosopher, mathematician
+    and author. He is widely considered to be one of the most important
+    logicians of the 20th century.
+
+    Russell co-wrote the “Principia Mathematica”, where he attempted to create a
+    formal foundation for mathematics using logic. His work has had a
+    significant impact not just on maths and philosophy, but also on
+    linguistics, artificial intelligence and metaphysics.
+
+    Russell was a passionate pacifist anti-war activist. In 1950, he received
+    the Nobel Prize in Literature, for his work “in which he champions
+    humanitarian ideals and freedom of thought”.
 
 shannon:
   name: Shannon
