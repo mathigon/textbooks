@@ -114,7 +114,7 @@ archimedes:
 
     As engineer he built ingenious defence machines during the siege of his home
     city Syracuse in Sicily. After two years, the Romans finally managed to
-    enter and Archimedes as killed. His last words were _“Do not disturb my
+    enter and Archimedes was killed. His last words were _“Do not disturb my
     circles”_ – which he was studying at the time.
   links:
     - title: Archimedean Solids
@@ -1157,11 +1157,19 @@ mirzakhani:
   died: 2017
   name: Mirzakhani
   overflow: true;
-  bio: __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
+  bio: |
+    __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
     mathematician and professor at Standford University. She is the only woman
-    to have received the _Fields Medal_, the highest award in mathematics, for
-    her work on “the dynamics and geometry of Riemann surfaces and their moduli
-    spaces”. At the age of 40, Maryam died of breast cancer.
+    to have received the _Fields Medal_, the highest award in mathematics.
+
+    Maryam worked at the intersection of dynamical systems and geometry. She
+    studied objects like _hyperbolic surfaces_ and _complex manifolds_, but
+    also contributed to many other areas of mathematics.
+
+    When solving problems, Maryam would draw doodles and diagrams on large
+    sheets of paper, to see the underlying patterns and beauty. Her daughter
+    even described Maryam’s work as “painting”. At the age of 40, Maryam died
+    of breast cancer.
 
 monge:
   born: 1746

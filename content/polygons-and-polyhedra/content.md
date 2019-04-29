@@ -1459,7 +1459,7 @@ Euler](bio:euler). It is true for any polyhedron, as long as it doesn’t contai
 any holes.
 
 If you try different polyhedra, like the ones above, you’ll find that Euler’s
-formula always works. In [a late course](/course/graphs-and-networks/eulers-formula)
+formula always works. In [a later course](/course/graphs-and-networks/eulers-formula)
 you’ll learn how to actually prove it mathematically.
 
 ---
