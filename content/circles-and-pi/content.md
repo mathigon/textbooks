@@ -1668,7 +1668,7 @@ unravel a cone into its net. Move the slider to see what happens: in this
 case, we get one circle and one [[circle sector|circle segment|circle arc]].
 
 {.reveal(when="blank-0")} Now we just have to add up the area of both these
-components. The __{.m-yellow}base__ is a circle with radius _r_, so it’s area is
+components. The __{.m-yellow}base__ is a circle with radius _r_, so its area is
 
 {.text-center.reveal(when="blank-0")} `§pill(A_"Base","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
@@ -1717,7 +1717,7 @@ height using [Pythagoras](gloss:pythagoras-theorem):
 ::: column.grow
 
 The _{span.pill.step-target.red(data-to="arc")}arc length_ of the sector is the
-same as the [[circumference|diameter|arc]] of the of _{span.pill.step-target.yellow(data-to="base")}base_:
+same as the [[circumference|diameter|arc]] of the _{span.pill.step-target.yellow(data-to="base")}base_:
 _{span.reveal(when="blank-0")}`2 π r`. Now we can find the area of the sector
 using the [formula](gloss:circle-sector) we derived in a previous section:_
 
