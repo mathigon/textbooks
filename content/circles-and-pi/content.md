@@ -1781,7 +1781,7 @@ like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
 ---
 > id: sphere-1
 
-{.r} In a [previous section](/course/circles-and-pi/circle-parts#eratosthenes-1),
+{.r} In a [previous section](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1),
 you learned how the Greek mathematician [Eratosthenes](bio:eratosthenes)
 calculated the radius of Earth using the shadow of a pole – it was 6,371 km.
 Now, let’s try to find the Earth’s total volume and surface area.
