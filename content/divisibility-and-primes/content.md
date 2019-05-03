@@ -660,13 +660,11 @@ point, and showed the results in a chart:
         use(xlink:href="/icons.svg#search")
 
 Along the x-axis you can see all integers. Whenever there is a prime, the
-_{.m-blue}Prime Counting Function_ increases by one. As we
-[zoom out](->#riemann_.zoom-icon), the blue line becomes very smooth.
-
-{.reveal(when="zoom")} Gauss noticed that the shape of this function looks very
-similar to the function <mfrac class="m-red"><mi>x</mi><mrow>log(<mi>x</mi>)</mrow></mfrac>.
-He predicted that the two functions are always “approximately similar”, and this
-was proven in 1896.
+_{span.m-blue}Prime Counting Function_ (shown in __{.m-blue}blue__) increases by
+one. As we [zoom out](->#riemann_.zoom-icon), the blue line becomes very smooth.
+Gauss noticed that the shape of this function looks very similar to the function
+_{span.m-red}`x/(log(x))`_ (shown in __{.m-red}red__). He predicted that the two
+functions are always “approximately similar”, and this was proven in 1896.
 
 ---
 > id: riemann1
@@ -999,8 +997,8 @@ decode it.
 :::
 
 Today’s computers are much more advanced, capable of trying millions of
-possibilities every second. To develop better encryption algorithms you have to
-find a mathematical operations that is difficult for a powerful computers.
+possibilities every second. To develop better encryption algorithms, you have to
+find a mathematical operation that is difficult even for powerful computers.
 Computers are incredibly fast at addition, subtraction, multiplication and
 division. However, as it turns out, computers are very slow at factorising
 large integers into primes…
@@ -1016,6 +1014,6 @@ It turns out that a very similar method was known to the British Secret Service
 since 1973, but remained classified until much later.
 
 Today, prime numbers are used by computers all over the world to exchange data.
-Whenever you send an email or visit a secure website, your phone or laptop
-quietly generates large prime numbers and exchanges public keys with other
+As you browse the internet or send chat messages, your phone or laptop will
+quietly generate large prime numbers and exchange public keys with other
 computers.

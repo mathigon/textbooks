@@ -182,9 +182,10 @@ export function eratosthenes($section) {
 }
 
 export function primeTest($section) {
-  let $input = $section.$('input');
+  const $input = $section.$('input');
+  $input.onKeyDown('enter', () => $input.blur());
 
-  $input.on('blur', function() {
+  $input.on('blur', () => {
     let v = +$input.value;
     if (!v) return $section.model.set('result', '');
 
@@ -192,11 +193,9 @@ export function primeTest($section) {
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
-    thread(isPrime, v).then(function({ data }) {
-      $section.model.set('result', data ? 'is prime' : 'is not prime');
-    }).catch(function() {
-      $section.model.set('result', `Couldn‘t find a solution :(`);
-    });
+    thread(isPrime, v)
+      .then(({d}) => $section.model.set('result', d ? 'is prime' : 'is not prime'))
+      .catch(() => $section.model.set('result', `Couldn‘t find a solution :(`));
   });
 }
 
@@ -325,24 +324,22 @@ export function cicadas($section) {
 }
 
 export function goldbach1($section) {
-  let $input = $section.$('input');
+  const $input = $section.$('input');
+  $input.onKeyDown('enter', () => $input.blur());
 
-  $input.on('blur', function() {
+  $input.on('blur', () => {
     let v = +$input.value;
     if (!v) return $section.model.set('result', '');
 
-    if (v % 2) { $section.model.set('result', 'Pick an even number.'); return; }
-    if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', 'That number is too large :('); return; }
+    if (v % 2) return $section.model.set('result', 'Pick an even number.');
+    if (v > Number.MAX_SAFE_INTEGER) return $section.model.set('result', 'That number is too large :(');
 
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
-    // hard: 12345678902468024
-    thread(goldbach, v, 10000).then(function({ data }) {
-      $section.model.set('result', `${v} = ${data[0]} + ${data[1]}`);
-    }).catch(function() {
-      $section.model.set('result', `Couldn‘t find a solution :(`);
-    });
+    thread(goldbach, v, 10000)
+      .then(({d}) => $section.model.set('result', `${v} = ${d[0]} + ${d[1]}`))
+      .catch(() => $section.model.set('result', `Couldn‘t find a solution :(`));
   });
 }
 

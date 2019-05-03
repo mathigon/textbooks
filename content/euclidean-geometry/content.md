@@ -78,7 +78,7 @@ satellites into space. Here are a few more examples:
     x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
 {.caption} Geometry allowed the ancient Egyptians to construct gigantic,
-perfectly regular pyramids, that align to patterns in the stars.
+perfectly regular pyramids.
 ::: column(width=200)
 
     x-media(src="images/sextant.jpg" width=200 height=200)
@@ -712,10 +712,11 @@ edge of the cube will increase by a factor of `root(3)(2)`.
 > id: impossible-1
 
 This still sounds pretty simple, but doubling the cube is actually impossible
-in [Euclidean geometry](gloss:euclidean-geometry)! For the citizens of Delos
-this unfortunately meant that all hope was lost. There are two other
-constructions that are famously impossible. Mathematicians spent great amounts
-of time trying to find a solution – but without success:
+in [Euclidean geometry](gloss:euclidean-geometry), using only straight-edge and
+compass! For the citizens of Delos this unfortunately meant that all hope was
+lost. There are two other constructions that are famously impossible.
+Mathematicians devoted a great amount of time trying to find a solution – but
+without success:
 
 ::: column(width=220)
 
@@ -788,8 +789,8 @@ extremely accurate. But with a bit of practice, you can do it yourself!
     x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=400 height=400 controls)
 
 ::: column.grow
-{.step.active(data-t=0)} You just need a quadratic sheet of paper. To start,
-fold the sheet along its two diagonals.
+{.step.active(data-t=0)} You just need a square sheet of paper. To start, fold
+the sheet along its two diagonals.
 
 {.step(data-t=16)} Next, fold it along its horizontal and vertical centers – but
 in the opposite direction.

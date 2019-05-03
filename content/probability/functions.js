@@ -90,7 +90,7 @@ export function randomSequence($section) {
 
   let $score = $section.$('.score');
   $section.$('input').change(str => {
-    if (str.length > 10) $section.score('random');
+    if (str.length > 7) $section.score('random');
     $score.text = Math.round(compute(str.toUpperCase()) * 100);
   });
 }
