@@ -573,7 +573,7 @@ straight-edge and pieces of string as compass.
 
 Even though these tools look very primitive, you can draw a great number of
 shapes with them. This became almost like a puzzle game for mathematicians:
-tying to find ways to “construct” different geometric shapes using just a
+trying to find ways to “construct” different geometric shapes using just a
 straight-edge and compass.
 
 ::: column(width=340)

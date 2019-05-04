@@ -234,8 +234,7 @@ edges, _{span.reveal(when="blank-2")}which means that in the above example there
 are ${m} × ${f} = ${m×f} dates._
 
 ---
-> id: bridges
-> goals: bridge-0 bridge-1 bridge-2 bridge-3
+> id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges-of-koenigsberg
 
@@ -257,6 +256,11 @@ Try to find a valid route by drawing on these maps:
     img.shifted(src="images/konigsberg1.jpg" width=250 height=350)
 
 :::
+
+---
+> id: bridges
+> goals: bridge-0 bridge-1 bridge-2 bridge-3
+> title: The Bridges of Königsberg
 
     x-tabbox.full-width
       .tab
