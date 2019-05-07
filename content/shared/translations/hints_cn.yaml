@@ -1,0 +1,30 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+
+welcome: "歡迎來到Mathigon！ 我是Archie，你的私人導師。 :mortar_board:"
+account: 您可以創建一個免費帳戶來保存進度。
+tutorial1: 我們的內容分為小步驟。 您必須完成活動以揭示下一步。
+tutorial2: 我們將保存您的所有進度，以便您可以稍後返回並繼續前往您離開的地方。
+
+correct:
+  - "做得好 :relaxed:"
+  - "非常棒! :relieved:"
+  - "干得漂亮 :grinning:"
+  - "杰出呀 :thumbsup:"
+  - "卓尔不凡呀! :ok_hand:"
+  - "酷 :sunglasses:"
+  - "漂亮! :v:"
+  - "就这么做! :blush:"
+  - "真香~ :relaxed:"
+  - "映像深刻啊! :trophy:"
+  - "优秀 :grin:"
+  - "卓越! :star:"
+  - "精彩! :smiley:"
+
+incorrect:
+  - "那不太对 :white_frowning_face:"
+  - "你确定吗? :thinking_face:"
+  - "看起来不太对劲. :hushed:"
+  - "再试一次! :confused:"

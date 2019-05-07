@@ -1,0 +1,8 @@
+is-prime: 是素数
+not-prime: 不是素数
+no-solution: 找不到解決方案 :(
+too-large: 這個數字太大了 :(
+not-even: 選一個偶數。
+
+gcd-yes: 它有效!
+gcd-no: 那似乎不适合…

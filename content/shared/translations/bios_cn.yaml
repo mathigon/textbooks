@@ -1,0 +1,96 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+
+eratosthenes:
+  name: Eratosthenes
+  born: -276
+  died: -195
+  bio: __昔兰尼古城的埃拉托色尼__ (公元前 276  – 公元前 195 ) 是一名希腊数学家，
+    地理学家、天文学家、历史学家和诗人。他一生中的大部分时间都在埃及度过，担任
+    亚历山大图书馆馆长。
+
+    在许多其他成就中，埃拉托色尼计算了地球的周长，测量了地球自转轴的倾斜度，估
+    算地球到太阳的距离，并绘制了一些世界上最早的地图。
+
+    他还发明了“埃拉托色尼筛选法”，一种计算__素数__的有效方法。
+  links:
+    - title: 地球半径
+      url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
+    - title: 埃拉托色尼筛选法
+      url: /course/divisibility-and-primes/prime-numbers#eratosthenes
+
+euclid:
+  name: Euclid
+  born: -330  # ???
+  died: -270  # ???
+  bio: __亚历山大的欧几里德__ (约公元前 300 ) 是一个希腊数学家而且通常被称为
+    _几何之父_。他出版了一本书《几何原本》, 其中首先介绍了欧几里得几何学，包含
+    了几何学和数论中的许多重要证明。直到19世纪，它一直是主要的数学教科书。他在
+    亚历山大教数学，但我们对他生活的其它事迹知之甚少。
+  links:
+    - title: 欧几里得公理
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: 无穷多素数
+      url: /course/divisibility-and-primes/prime-numbers#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __莱昂纳多·欧拉__ (1707 – 1783) 是有史以来最伟大的数学家之一。他的工作涉及
+    数学的各个领域，而且他写了80多卷研究论文。
+
+    欧拉出生在瑞士，但是在巴塞尔做学习研究，但他的大部分生活在柏林，普鲁士，
+    圣彼得堡，俄罗斯。
+
+    欧拉发明了许多现代数学术语和符号，并在微积分、分析、图论、物理学、天文学和
+    许多其他课题中做出了重要的发现。
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graphs-and-networks/bridges-of-koenigsberg
+    - title: Euler’s Formula
+      url: /course/graphs-and-networks/eulers-formula
+    - title: Polyhedrons
+      url: /course/polygons-and-polyhedra/polyhedra
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __卡尔·弗里德里希·高斯__ (1777 – 1855) 可以说是有史以来最伟大的数学家。他
+    在几乎所有数学领域都有突破性的发现，从代数和数论到统计学、微积分、几何学、
+    地质学和天文学。
+
+    据传说，他在3岁时纠正了父亲会计上的一个错误; 并在8岁时并找到了一种方法，
+    可以轻松地将1到100之间的所有整数相加; 他十几岁时就有了第一次重要的
+    发现; 后来又以教授的身份辅导了许多著名的数学家。
+  links:
+    - title: 素数定理
+      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+    - title: 非欧几里得几何
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: |
+    __伯恩哈德·黎曼__ (1826 – 1866) 是一位从事分析和数论领域的德国数学家。
+    他提出了第一个严格的积分定义，研究了为广义相对论奠定了基础的微分几何，并
+    对素数的分布作出了开创性的发现。
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+
+ulam:
+  name: Ulam
+  bio: __斯坦利·斯乌兰__ (1909 – 1984) 是一位美籍波兰裔数学家. 在美国开发首
+    枚原子弹的_曼哈顿工程_中，他发挥了重要作用, 而且他发展了_蒙特卡罗方法_和
+    统计学中的重要概念。
