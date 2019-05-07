@@ -1,0 +1,8 @@
+is-prime: is prime
+not-prime: is not prime
+no-solution: Couldn‘t find a solution :(
+too-large: That number is too large :(
+not-even: Pick an even number.
+
+gcd-yes: It works!
+gcd-no: That doesn‘t seem to fit…

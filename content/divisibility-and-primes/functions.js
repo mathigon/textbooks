@@ -189,13 +189,13 @@ export function primeTest($section) {
     let v = +$input.value;
     if (!v) return $section.model.set('result', '');
 
-    if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', 'That number is too large :('); return; }
+    if (v > Number.MAX_SAFE_INTEGER) { $section.model.set('result', $section.getText('too-large')); return; }
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
     thread(isPrime, v)
-      .then(({d}) => $section.model.set('result', d ? 'is prime' : 'is not prime'))
-      .catch(() => $section.model.set('result', `Couldn‘t find a solution :(`));
+      .then(({data}) => $section.model.set('result', $section.getText(data ? 'is-prime' : 'not-prime')))
+      .catch(() => $section.model.set('result', $section.getText('no-solution')));
   });
 }
 
@@ -207,12 +207,9 @@ export function primeGenerator($section) {
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
-    thread(generatePrime, d, 10000).then(function({ data, time }) {
-      $section.model.set('result', numberFormat(data));
-      $section.model.set('time', Math.round(time));
-    }).catch(function() {
-      $section.model.set('result', `Couldn‘t find a prime :(`);
-    });
+    thread(generatePrime, d, 10000)
+        .then(({data}) => $section.model.set('result', numberFormat(data)))
+        .catch(() => $section.model.set('result', `Couldn‘t find a prime :(`));
   });
 }
 
@@ -281,8 +278,8 @@ export function gcd($section) {
   let $result = $section.$('.result');
 
   $section.model.watch((state) => {
-    $result.html = isOneOf(state.x, 1, 2, 3, 6) ?
-      'It works!' : 'That doesn‘t seem to fit…';
+    $result.html = $section.getText(
+        isOneOf(state.x, 1, 2, 3, 6) ? 'gcd-yes' : 'gcd-no');
 
     $tiles.removeChildren();
 
@@ -331,15 +328,15 @@ export function goldbach1($section) {
     let v = +$input.value;
     if (!v) return $section.model.set('result', '');
 
-    if (v % 2) return $section.model.set('result', 'Pick an even number.');
-    if (v > Number.MAX_SAFE_INTEGER) return $section.model.set('result', 'That number is too large :(');
+    if (v % 2) return $section.model.set('result', $section.getText('not-even'));
+    if (v > Number.MAX_SAFE_INTEGER) return $section.model.set('result', $section.getText('too-large'));
 
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
     thread(goldbach, v, 10000)
-      .then(({d}) => $section.model.set('result', `${v} = ${d[0]} + ${d[1]}`))
-      .catch(() => $section.model.set('result', `Couldn‘t find a solution :(`));
+      .then(({data}) => $section.model.set('result', `${v} = ${data[0]} + ${data[1]}`))
+      .catch(() => $section.model.set('result', $section.getText('no-solution')));
   });
 }
 
