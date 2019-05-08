@@ -126,7 +126,7 @@ $[[108 ± 10]].
     figure: x-media(src="images/skater-2.jpg" width=400 height=352)
 
 In the real word, it can be very difficult for companies to determine a precise
-equation for their profit – and it is likely to me much more complicated than
+equation for their profit – and it is likely to be much more complicated than
 this example.
 
 Still, quadratic equations appear everywhere in nature, engineering and
