@@ -1,6 +1,6 @@
-# Sequences and Patterns
+# 序列和模式
 
-## Introduction
+## 介绍
 
 > section: introduction
 > id: intro
