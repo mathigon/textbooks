@@ -1264,7 +1264,7 @@ spirals there are in each direction?
       .clockwise(style="background-image: url(images/pinecone-1.jpg)")
       .anticlockwise(style="background-image: url(images/pinecone-2.jpg)")
 
-{.text-center} This pine code has [[8]] clockwise spirals and [[13]]
+{.text-center} This pine cone has [[8]] clockwise spirals and [[13]]
 counterclockwise spirals.
 
 ::: column(width=320)

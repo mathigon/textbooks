@@ -206,65 +206,56 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 ---
 > id: square-1
 
-For the triangle numbers we found a recursive formula that tells you the _next_
-term of the sequence as a function of of its _previous_ terms. For square
-numbers we can do even better: an equation that tells you the *n*th term
-directly, without first having to calculate all the previous ones:
+对于三角形数，我们发现了一个递归公式，它告诉你序列的_下一项_，作为它_前一项_的
+函数。对于平方数，我们可以做得更好：一个直接告诉你第*n*项的方程，而不需要先计
+算前面的所有项：
 
 {.text-center.s-purple} *{.n}`x_n`* = _{x-equation(solution="n^2")}_
 
 ---
 > id: explicit
 
-Equations like this are called [__explicit formulas__](gloss:sequence-explicit).
-We can use it, for example, to calculate that the 13th square number is [[169]],
-without first finding the previous 12 square numbers.
+像这样的方程被称为[__显示公式__](gloss:sequence-explicit)。例如，我们可以使用
+它来计算第13个平方数是[[169]]，而不需要首先找到前面的12个平方数。
 
 ---
 > id: definitions
 
     hr
 
-Let’s summarise all the definitions we have seen so far:
+让我们总结一下迄今为止我们看到的所有定义：
 
 ::: .theorem
-A [__sequence__](gloss:sequence) is a list of numbers, geometric shapes or other
-objects, that follow a specific pattern. The individual items in the sequence
-are called [__terms__](gloss:sequence-term), and represented by variables like
-`x_n`.
+[__序列__](gloss:sequence)是数字、几何图形或其它对象的列表，它们遵循特定的模
+式。序列中的单个项称为[_项_](gloss:sequence-term)，并用`x_n`等变量表示。
 
-A [__recursive formula__](gloss:sequence-recursive) for a sequence tells you the
-value of the *n*th term as a function of [[its previous terms|the first term]].
-You also have to specify the first term(s).
+序列的[__递归公式__](gloss:sequence-recursive)是把第*n*项的值以[[之前项|首项]]的
+函数的方式告诉你。您还必须指定第一项。
 
-An [__explicit formula__](gloss:sequence-explicit) for a sequence tells you the
-value of the *n*th term as a function of [[just _n_|the previous term]],
-without referring to other terms in the sequence.
+序列的一个[__显示公式__](gloss:sequence-explicit)把第*n*项的值以[[_n_|之前项]]
+的函数的方式告诉你，而不涉及序列中的其它项。
 :::
 
 ---
 > id: action-sequence
 
-### Action Sequence Photography
+### 动作序列摄影
 
-In the following sections you will learn about many different mathematical
-sequences, surprising patterns, and unexpected applications.
+在下面的部分中，您将了解许多不同的数学序列、令人惊讶的模式和意外的应用程序。
 
-First, though, let’s look at something completely different: __action sequence
-photography__. A photographer takes many shots in quick succession, and then
-merges them into a single image:
+首先，让我们来看看完全不同的东西：__动作序列摄影__。摄影师快速连续拍摄许多照
+片，然后将它们合并成一幅图像：
 
     figure: x-media(src="images/action-1.jpg" width=640 height=320)
 
-Can you see how the skier forms a sequence? The pattern is not addition or
-multiplication, but a geometric [transformation](gloss:rigid-transformation).
-Between consecutive steps, the skier is both translated and
-[[rotated|reflected|dilated]].
+你能看到滑雪者是如何形成一个序列的吗？图案不是相加或相乘，而是几何
+[变换](gloss:rigid-transformation)。在两个连续的步骤之间，滑雪者同时被平移和
+[旋转|反射|扩大]了。
 
 ---
 > id: action-sequence-1
 
-Here are a few more examples of action sequence photography for your enjoyment:
+以下是一些动作序列摄影的例子，供您欣赏：
 
 ::: column(width=320 parent="padded-thin")
 
@@ -298,36 +289,32 @@ Here are a few more examples of action sequence photography for your enjoyment:
 
 
 
-## Arithmetic and Geometric Sequences
+## 算术和几何序列
 
 > section: arithmetic-geometric
 > id: halley
 
 ::: column.grow
 
-In 1682, the astronomer [Edmond Halley](bio:halley) observed an unusual
-phenomenon: a glowing white object with a long tail that moved across the night
-sky. It was a __comet__, a small, icy rock that is flying through space, while
-leaving behind a trail of dust and ice.
+在1682年，天文学家埃德蒙·哈雷(bio:halley)发现了一个不寻常的现象：一个发光的白
+色物体，有一条长长的尾巴，在夜空中移动。它是一颗__彗星__，一块小的冰岩石，在
+太空中飞行，留下一道尘埃和冰。
 
-Halley remembered that other astronomers had observed similar comets much
-earlier: one in 1530 and another in 1606. Notice that the gap between these
-observations is both times the same: [[76]] years.
+哈雷记得其他天文学家早就观察到类似的彗星：一次在1530年，另一次在1606年。注意，
+这些观察结果之间的差距是相同的: [[76]]年。
 
 ::: column(width=320)
 
     x-media(width=320 height=256 src="images/halley.jpg")
-    p.caption Image of Halley’s Comet,#[br]taken in 1986 on Easter Island
+    p.caption 哈雷彗星图片，#[br]1986年拍摄于复活节岛
 
 :::
 
 ---
 > id: halley-1
 
-Halley concluded that all three observations were in fact of the same comet –
-which is now called _Halley’s comet_. It is orbiting around the sun and passes
-Earth approximately every 76 years. He also predicted when the comet would be
-visible next:
+哈雷得出结论: 这三次观测结果实际上都是同一颗彗星 — 现在被称为__哈雷彗星__。
+它围绕太阳运行，大约每76年经过一次地球。他还预测了彗星下一次出现的时间：
 
 {.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
 _{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
@@ -337,9 +324,9 @@ _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 ---
 > id: halley-2
 
-Actually, the time interval is not always _exactly_ 76 years: it can vary by one
-or two years, as the comet’s orbit is interrupted by other planets. Today we
-know that Halley’s comet was observed by ancient astronomers as early as 240 BC!
+事实上，该时间间隔不总是__精准__的76年: 它可能有1或2年的变化，因为彗星的运行
+轨道受到其它行星的干扰。今天我们知道哈雷彗星早在公元前240年就被古代天文学家观
+测到了！
 
     figure
       .row
@@ -347,15 +334,13 @@ know that Halley’s comet was observed by ancient astronomers as early as 240 B
         x-media(src="images/halley-2.jpg" width=173 height=180 lightbox)
         x-media(src="images/halley-3.jpg" width=200 height=180 lightbox)
         x-media(src="images/halley-4.jpg" width=130 height=180 lightbox)
-      p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
+      p.caption 哈雷彗星在时间上的分布：巴比伦的石碑（公元前164年）、中世纪的挂毯（1070年代）、科学杂志（1910年）和苏联的邮票（1986年）。
 
 ---
 > id: ball
 
-A different group of scientists is investigating the behaviour of a bouncing
-tennis ball. They dropped the ball from a height of 10 meters and measured its
-position over time. With every bounce, the ball loses some of its original
-height:
+另一组科学家正在调查一个有弹性的网球的行为。他们把球从10米的高度扔下，并测量
+了它随时间变化的位置。每次弹跳，球都会损失原来的一部分高度：
 
     x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|7|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
       .tennis-ball
@@ -366,9 +351,8 @@ height:
 > id: ball-1
 > goals: reveals
 
-The scientists noticed that the ball loses 20% of its height after every bounce.
-In other words, the maximum height of every bounce is 80% of the previous one.
-This allowed them to predict the height of every following bounce:
+科学家们注意到，每次弹跳后，球会失去其高度的20%。换句话说，每次弹跳的最大高度
+是前一次弹跳的80%。这使他们能够预测以下每一次弹跳的高度:
 
 {.text-center.s-teal.s-large.with-arrows} _{span.n}10_,
 _{span.n}8*{span.arrow}×0.8*_, _{.n}[[6.4]]*{span.arrow}×0.8*_,
@@ -381,28 +365,25 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 ---
 > id: arithmetic-geometric
 
-### Definitions
+### 定义
 
-If you compare both these problems, you might notice that there are many
-similarities: the sequence of Halley’s comet has the same
-[[difference|ratio|product]] between consecutive terms, while the
-sequence of tennis ball bounces has the same [[ratio|difference|product]]
 between consecutive terms.
+如果你比较这两个问题，你可能会发现有许多相似之处：哈雷彗星的序列在相邻项之间
+有相同的[[差|比率|积]]，而网球的反弹在相邻次之间有相同的[[比率|差|积]]。
 
 ---
 > id: arithmetic-geometric-1
 
-Sequences with these properties have a special name:
+具有这些属性的序列有个特殊名称：
 
 ::: column.grow
 ::: .theorem.s-red
 
     p.text-center: include svg/comet.svg
 
-An [__arithmetic sequence__](gloss:arithmetic-sequence) has a constant
-__{.m-red}difference *d*__ between consecutive terms.
+一个[__算术序列__](gloss:arithmetic-sequence)在相邻项间有一个常数__{.m-red}差*d*__。
 
-The same number is added or subtracted to every term, to produce the next one.
+各项加上或减去同一个数字后，可以得到它的下一项。
 
 :::
 ::: column.grow
@@ -410,10 +391,9 @@ The same number is added or subtracted to every term, to produce the next one.
 
     p.text-center: include svg/ball.svg
 
-A [__geometric sequence__](gloss:geometric-sequence) has a constant
-__{.m-green}ratio *r*__ between consecutive terms.
+一个[__几何序列__](gloss:geometric-sequence)在相邻项间有一个常数__{.m-green}比率*r*__。
 
-Every term is multiplied or divided by the same number, to produce the next.
+各项乘以或除以同一个数字后，可以得到它的下一项。
 
 :::
 :::
@@ -421,9 +401,8 @@ Every term is multiplied or divided by the same number, to produce the next.
 ---
 > id: arithmetic-geometric-select
 
-Here are a few different sequences. Can you determine which ones are arithmetic,
-geometric or neither, and what the values of _{.b.m-red}d_ and _{.b.m-green}r_
-are?
+下面是几个不同的序列。你能确定哪些是算术序列、哪些是几何序列，哪些两个都不是?
+能进一步确定它们的_{.b.m-red}d_值或_{.b.m-green}r_值吗？
 
 ::: column(width=330 parent="ag-select")
 
@@ -432,8 +411,7 @@ _{span.n}16_, _{span.n}32_, _{span.n}64_, …
 
 ::: column(width=320)
 
-is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-0")}, with
-ratio [[2]]._
+是 [[几何序列|算术序列|都不]]_{span.reveal(when="blank-0")}, 比率为 [[2]]._
 
 ::: column(width=330)
 
@@ -442,8 +420,7 @@ _{span.n}11_, _{span.n}14_, _{span.n}17_, …
 
 ::: column(width=320)
 
-is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-2")}, with
-difference [[3]]._
+是 [[算术序列|几何序列|都不]]_{span.reveal(when="blank-2")}, 差为 [[3]]._
 
 ::: column(width=330)
 
@@ -452,8 +429,7 @@ _{span.n}5_, _{span.n}1_, _{span.n}–3_, …
 
 ::: column(width=320)
 
-is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-4")}, with
-difference [[-4]]._
+是 [[算术序列|几何序列|都不]]_{span.reveal(when="blank-4")}, 差为 [[-4]]._
 
 ::: column(width=330)
 
@@ -462,7 +438,7 @@ _{span.n}11_, _{span.n}16_, _{span.n}22_, …
 
 ::: column(width=320)
 
-is [[neither|arithmetic|geometric]]_{span.reveal(when="blank-6")}._
+是 [[都不|算术序列|几何序列]]_{span.reveal(when="blank-6")}._
 
 ::: column(width=330)
 
@@ -471,22 +447,20 @@ _{span.n}5_, _{span.n}2.5_, _{span.n}1.25_, …
 
 ::: column(width=320)
 
-is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-7")}, with
-ratio [[0.5]]._
+是 [[几何序列|算术序列|都不]]_{span.reveal(when="blank-7")}, 比率为 [[0.5]]._
 
 :::
 
 ---
 > id: arithmetic-geometric-graph
 
-To define an arithmetic or geometric sequence, we have to know not just the
-common difference or ratio, but also the initial value (called `a`). Here you
-can generate your own sequences and plot their values on a graph, by changing
-the values of `a`, _d_ and _r_. Can you find any patterns?
+要定义一个算术或几何序列，我们不仅要知道公有的差或比率，还要知道初项值(称为`a`)。
+在这里，您可以通过更改`a`、_d_和_r_的值来生成自己的序列，并将它们的值绘制在图
+表上。你能找出任何模式吗？
 
 ::: column.ag-chart(width=320)
 
-#### {.m-red} Arithmetic Sequence
+#### {.m-red} 算术序列
 
 {.text-center} `a` = ${a}{a|2|-10,10,0.2}, _d_ = ${d}{d|2|-10,10,0.2}
 
@@ -502,7 +476,7 @@ _{span.n}${arithmetic(a,d,5)}_, …
 
 ::: column.ag-chart.s-green(width=320)
 
-#### {.m-green} Geometric Sequence
+#### {.m-green} 几何序列
 
 {.text-center} `a` = ${b}{b|2|-10,10,0.2}, _r_ = ${r}{r|2|-10,10,0.2}
 
@@ -517,46 +491,40 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="var-0 var-1 var-2 var-3")} Notice how all __{.m-red}arithmetic
-sequences__ look very similar: if the difference is positive, they steadily
-[[increase|decrease]], and if the difference is negative, they steadily
-[[decrease|increase]].
+{.reveal(when="var-0 var-1 var-2 var-3")} 注意，所有__{.m-red}算术序列__看起
+来非常相似: 如果差为正，则它们稳定地[[增加|减少]]；而如果差为负，则它们稳定地
+[[减少|增加]]。
 
-{.reveal(when="blank-0 blank-1")} Geometric sequences, on the other hand, can
-behave completely differently based on the values of `a` and *r*:
+{.reveal(when="blank-0 blank-1")} 另一方面，几何序列会由于`a`和*r*的不同值而
+展现出完全不一样的曲线行为。
 
 ::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-If _{span.var-action}`r > 1`_, the terms will [[quickly get bigger|quickly
-decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
-Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
+如果 _{span.var-action}`r > 1`_, 则后面项将[[快速变大|快速变小|趋近0]]_{span.reveal(when="blank-2")}, 直到无穷。数学家称该序列[__发散__](gloss:sequence-divergence)._
 
 ::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
 
-If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
-closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
-We say that the sequence [__converges__](gloss:sequence-convergence)._
+如果 _{span.var-action}*r* 是介于 –1 和 1_之间, 后面项将总是
+[[趋近0|降至负无穷|变小]]_{span.reveal(when="blank-3")}.
+我们称该序列[__收敛__](gloss:sequence-convergence)._
 
 ::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
 
-If _{span.var-action}`r < -1`_, the terms will alternate between positive and
-negative, while their [[absolute value|inverse|difference]] gets bigger.
+如果_{span.var-action}`r < -1`_，则后面项将在正数和负数之间交替，而它们的
+[[绝对值|相反数|差]]将变大。
 
 :::
 
-{.reveal(when="blank-4 blank-5")} You’ll learn more about convergence and
-divergence in the [last section](/course/sequences/convergence) of this course.
+{.reveal(when="blank-4 blank-5")} 关于收敛和发散你将在本课的[最后一节](/course/sequences/convergence) 学习更多。
 
 
 ---
 > id: arithmetic-geometric-recursive
 
-### Recursive and Explicit Formulas
+### 递归和显式公式
 
-In the previous section, you learned that a [__recursive
-formula__](gloss:sequence-recursive) tells you the value of each term as a
-function of previous terms. Here are the recursive formulas for arithmetic and
-geometric sequences:
+在上一节中，您学到一个[__递归公式__](gloss:sequence-recursive)通过用前面项的函数
+来告知你每个项的值。以下是算术序列和几何序列的递归公式:
 
 ::: column.grow
 
@@ -571,14 +539,12 @@ geometric sequences:
 ---
 > id: arithmetic-geometric-explicit
 
-One problem with recursive formulas is that to find the 100th term, for example,
-we first have to calculate the previous 99 terms – and that might take a long
-time. Instead, we can try to find an [__explicit formula__](gloss:sequence-explicit),
-that tells us the value of the *n*th term directly.
+递归公式有一个问题是找到一个项的值可能会花费很长时间，例如要找到第100项，我们
+首先必须计算前面的99项。相反，我们可以尝试找到一个[__显式公式__](gloss:sequence-explicit), 它直接告诉我们第*n*项的值。
 
 ::: column.grow
 
-For __{.m-red}arithmetic sequences__, we have to add _d_ at every step:
+对于 __{.m-red}算术序列__, 我们需要在每一步加 _d_ :
 
 {.ag-equation} `x_1 =` `a`
 
@@ -590,14 +556,14 @@ For __{.m-red}arithmetic sequences__, we have to add _d_ at every step:
 
 {.ag-equation.reveal(when="eqn-0")} `x_5 =` *{x-equation(solution="a+d+d+d+d")}*
 
-{.reveal(when="eqn-1")} At the *n*th term, we are adding [[`n-1`|`n`|`n+1`]]
-copies of _d_, so the general formula is
+{.reveal(when="eqn-1")} 在第 *n* 项, 我们加了 [[`n-1`|`n`|`n+1`]]
+个同样的 _d_, 所以通项公式是:
 
 {.ag-equation.reveal(when="blank-0")} `x_n = a + d × (n-1)`.
 
 ::: column.grow
 
-For __{.m-green}geometric sequences__, we have to multiply _r_ at every step:
+对于 __{.m-green}几何序列__, 我们每步乘以_r_:
 
 {.ag-equation} `x_1 = a`
 
@@ -609,8 +575,8 @@ For __{.m-green}geometric sequences__, we have to multiply _r_ at every step:
 
 {.ag-equation.reveal(when="eqn-2")} `x_5 =` *{x-equation(solution="a×r×r×r×r")}*
 
-{.reveal(when="eqn-3")} At the *n*th term, we are multiplying [[`n-1`|`n`|`n+1`]]
-copies of _r_, so the general formula is
+{.reveal(when="eqn-3")} 在第*n*项, 我们乘了 [[`n-1`|`n`|`n+1`]]
+个同样的 _r_, 所以通项公式是
 
 {.ag-equation.reveal(when="blank-1")} `x_n = a × r^(n-1)`.
 
@@ -619,13 +585,12 @@ copies of _r_, so the general formula is
 ---
 > id: arithmetic-geometric-explicit-1
 
-Here is a summary of all the definitions and formulas you’ve seen so far:
+以下是到目前为止你所看到的所有定义和公式的摘要：
 
 ::: column.grow
 ::: .theorem.s-red
 
-An __{.m-red}arithmetic sequence__ has first term `a` and common difference `d`
-between consecutive terms.
+一个__{.m-red}算术序列__有个首项`a`，在相邻的项之间有共同的差`d`。
 
 {.text-center} __Recursive formula__: `x_n = x_(n-1) + d`
 
@@ -637,39 +602,38 @@ between consecutive terms.
 
 A __{.m-green}geometric sequence__ has first term `a` and common ratio `r`
 between consecutive terms.
+一个__{.m-green}几何序列__有个首项`a`，在相邻的项之间有共同比率`r`。
 
-{.text-center} __Recursive formula__: `x_n = x_(n-1) × r`
+{.text-center} __递归公式__: `x_n = x_(n-1) × r`
 
-{.text-center} __Explicit formula__: `x_n = a × r^(n-1)`
+{.text-center} __显式公式__: `x_n = a × r^(n-1)`
 
 :::
 :::
 
-Now let’s have a look at some examples where we can use all this!
+现在让我们来看一些能够使用所有这些知识的例子！
 
 ---
 > id: pay-it-forward
 > goals: video
 
-### Pay it Forward
+### 向前付钱
 
-Here is a short clip from the movie _Pay it Forward_, where 12-year-old Trevor
-explains his idea for making the world a better place:
+这是电影_向前付钱_的一个简短片段，12岁的特雷弗在其中解释了他让世界变得更好的想法：
 
     figure
       x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
-      .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
+      .caption 节选自“向前付钱” (2000), ©华纳兄弟娱乐
 
 ---
 > id: pay-it-forward-1
 
-The essence of Trevor’s idea is that, if everyone “pays it forward”, a single
-person can have a huge impact on the world:
+特雷弗的想法的本质是，如果每个人都“向前付出”，那么一个人就可以对世界产生巨大
+的影响：
 
     figure: img(src="images/pay-it-forward.png" width=700 height=220)
 
-Notice how the number of people at every step forms a [[geometric sequence|arithmetic
-sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
+注意每一步的人数是如何形成一个具有比率_{span.reveal(when="blank-0")}[[3]]_的[[几何序列|算术序列|三角形数]]。
 
 {.text-center.s-orange.with-arrows.reveal(when="blank-1")} _{span.n}1_,
 _{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
@@ -679,20 +643,19 @@ _{span.n}[[243]]*{span.arrow}×3*_, …
 ---
 > id: pay-it-forward-2
 
-Using the [explicit formula](gloss:sequence-explicit) for geometric sequences,
-we can work out how many new people are affected at any step:
+使用几何序列的[显式公式](gloss:sequence-explicit)，我们可以计算出在任何步骤中
+有多少新用户受到影响：
 
 {.text-center} `x_n` = _{x-equation(solution="3^(n-1)")}_
 
 ---
 > id: pay-it-forward-3
 
-The number of people increases incredibly quickly. In the 10th step, you would
-reach 19,683 new ones, and after 22 steps you would have reached more people
-than currently alive on Earth.
+人数增长得惊人之快。在第10步中，你将达到19683个新的目标，在22步之后，你将到达
+比现在存活地球的人还多。
 
-This sequence of numbers has a special name: the __powers of 3__. As you can
-see, every term is actually just a different [power](gloss:powers) of 3:
+这个数字序列有一个特殊的名字：__3的幂__。如你所见，每一项实际上只是3的不同
+次[幂](gloss:powers):
 
 {.text-center.s-orange} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
 _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
@@ -700,9 +663,9 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 ---
 > id: millionaire
 
-### Who wants to be a Millionaire?
+### 谁想成为百万富翁？
 
-{.todo} COMING SOON!
+{.todo} 敬请期待!
 
     // Two siblings, Anna and Thomas, are receiving pocket money from their parents.
     // They can choose between two different options:
@@ -771,9 +734,9 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 ---
 > id: chessboard
 
-### The Chessboard Problem
+### 棋盘问题
 
-{.todo} COMING SOON!
+{.todo} 敬请期待!
 
     // The game of chess was invented in India, many hundreds of years ago. According
     // to legend, the Indian king loved the game so much that he invited its inventor
@@ -804,28 +767,25 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 
 
-## Figurate Numbers
+## 形数
 
 > section: figurate
 > id: figurate
 
-The name for [geometric sequences](gloss:geometric-sequence) is pretty
-confusing, because they don’t have anything to do with geometry. In fact, the
-name was developed hundreds of years ago, when mathematicians thought about
-_multiplication_ and _square roots_ in a much more geometric way.
+[几何序列](gloss:geometric-sequence)的名称非常令人困惑，因为它们与几何没有任
+何关系。事实上，这个名字是在几百年前发明的，当时数学家们以更为几何的方式思
+考_乘法_和_平方根_。
 
-However, there are many other sequences that _are_ based on certain geometric
-shapes – some of which you already saw in the [introduction](/course/sequences/introduction).
-These sequences are often called [__figurate numbers__](gloss:figurate-numbers),
-and in this section we will have a closer look at some of them.
+然而，还有许多其他的序列_是_基于特定的几何图形的，其中一些已经在[简介](/course/sequences/introduction)中看到。
+这些序列通常被称为[__形数__](gloss:figurate-numbers)，在本节中，我们将更详细
+地了解其中的一些序列。
 
 ---
 > id: triangle-numbers
 
-### Triangle Numbers
+### 三角形数
 
-The __triangle numbers__ are generated by creating triangles of progressively
-larger size:
+__三角形数__是通过创建逐渐增大的三角形而生成的：
 
 ::: column(width=24 parent="padded-thin")
 {.text-center} __1__
@@ -853,14 +813,13 @@ larger size:
     include svg/triangle-6.svg
 :::
 
-You’ve already seen the recursive formula for triangle numbers:
+经看到了三角形数的递归公式：
 `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
 
 ---
 > id: billiard-pool
 
-It is no coincidence that there are always 10 pins when bowling or 15 balls when
-playing billiard: they are both triangle numbers!
+保龄球总是有10个球，台球总是有15个球，这不是巧合：它们都是三角形的数字！
 
 ::: column(width=320)
 
@@ -875,12 +834,11 @@ playing billiard: they are both triangle numbers!
 ---
 > id: triangle-proof
 
-Unfortunately, the recursive formula is not very helpful if we want to find the
-100th or 5000th triangle number, without first calculating all the previous
-ones. But, like we did with arithmetic and geometric sequences, we can try to
-find an explicit formula for the triangle numbers.
+不幸的是，如果我们不首先计算前面所有的三角形数，就想找到第100个或第5000个三
+角形数，递归公式并不是很有用。但是，就像我们之前对算术序列和几何序列所做的那
+样，我们可以尝试找到一个三角形数的显式公式。
 
-{.todo} COMING SOON: Animated Proof for the Triangle Number Formula
+{.todo} 敬请期待: 三角形数公式的动画证明
 
     // ::: column(width=300)
 
@@ -906,9 +864,8 @@ find an explicit formula for the triangle numbers.
 ---
 > id: triangle-sums
 
-Triangle numbers seem to pop up everywhere in mathematics, and you’ll see them
-again throughout this course. One particularly interesting fact is that _any_
-whole number can be written as the sum of at most three triangle numbers:
+三角形数似乎在数学中随处可见，在这门课程中你会再次看到它们。一个特别有趣的事实是，
+_任意_整数都可以写成最多三个三角形数的和：
 
 ::: column(width=140 parent="triangle-sum")
 {.text-center} ${n}{n|42|1,100,1}
@@ -939,9 +896,8 @@ whole number can be written as the sum of at most three triangle numbers:
 
 :::
 
-{.reveal(when="slide")} The fact that this works for _all_ whole numbers was
-first proven in 1796 by the German mathematician [Carl Friedrich
-Gauss](bio:gauss) – at the age of 19!
+{.reveal(when="slide")} 对_所有_整数都有效的这个事实是由德国数学家
+[卡尔·弗里德里希·高斯](bio:gauss)于1796年证明，那年高斯19岁!
 
 ---
 > id: triangle-investigate
@@ -950,14 +906,12 @@ Gauss](bio:gauss) – at the age of 19!
     .box-title: h3 Problem Solving
 ::: .box-body
 
-What is the sum of the first 100 positive [integers](gloss:integer)? In other
-words, what is the value of
+前100个正[整数](gloss:integer)的和是多少？换句话说，下面式子的结果值是多少:
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
-Rather than manually adding up everything, can you use the [triangle
-numbers](gloss:triangle-numbers) to help you? What about the sum of the first
-1000 positive integers?
+你能不用手工一个个加起来得出结果, 而用[三角形数](gloss:triangle-numbers)辅助
+来求结果吗? 算算前1000个正整数的和怎么样？
 
 :::
 :::
@@ -965,9 +919,9 @@ numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 ---
 > id: square-numbers
 
-### Square and Polygonal Numbers
+### 平方数和多边形数
 
-Another sequence that is based on geometric shapes are the __square numbers__:
+另一个基于几何形状的序列是__平方数__：
 
 {.text-center.s-purple.with-arrows} _{.n}1_,
 _{.n}4*{span.arrow.reveal(when="blank-4")}+3*_,
@@ -978,23 +932,18 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-4")}+11*_,
 _{.n}[[49]]*{span.arrow.reveal(when="blank-4")}+13*_,
 _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
-{.reveal(when="blank-0 blank-1 blank-2 blank-3")} You can calculate the numbers
-is this sequence by squaring every whole number (`1^2`, `2^2`, `3^2`, …), but it
-turns out that there is another pattern: the differences between consecutive
-square numbers are the [[odd numbers|triangle numbers|integers]] in increasing
-order!
+{.reveal(when="blank-0 blank-1 blank-2 blank-3")} 这个序列是通过对每个整数进行平方而得到的(`1^2`, `2^2`, `3^2`, …), 但事实显示
+还有另一种模式：相邻的平方数之间的差是以[[奇数|三角形数|整数]]递增。
 
 ---
 > id: square-numbers-1
 
 ::: column.grow
 
-The reason for this pattern becomes apparent if we actually draw a square. Every
-step adds one row and one column. The size of these “corners” starts at 1 and
-increases by 2 at every step – thereby forming the sequence of odd numbers.
+如果我们真的画一个正方形，这个模式的原因就显而易见了。每一步都添加一行和一列。
+这些“拐角”的大小从1开始，每一步增加2，从而形成奇数序列。
 
-This also means that the *n*th square number is just the sum of the first *n*
-odd numbers! For example, the sum of the first 6 odd numbers is
+这也意味着*n*的平方数只是前*n*个奇数的和！例如，前6个奇数的和是
 
 {.text-center} `1 + 3 + 5 + 7 + 9 + 11 =` [[36]].
 
@@ -1008,10 +957,9 @@ odd numbers! For example, the sum of the first 6 odd numbers is
 ---
 > id: square-numbers-2
 
-In addition, every square number is also the sum of two consecutive [triangle
-numbers](gloss:triangle-numbers). For example, ${n×n}{n|4|1,20,1} =
-${n×(n+1)/2} + ${n×(n-1)/2}. Can you see how we can split every square along
-its diagonal, into two triangles?
+此外，每个平方数也是两个相邻[三角形数](gloss:triangle-numbers)的和。例如，
+${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}。你能看出来我们如何沿着对角线
+把每一个正方形分成两个三角形吗？
 
 ---
 > id: polygon-numbers
@@ -1024,27 +972,23 @@ its diagonal, into two triangles?
 
 ::: column.grow
 
-After triangle and square numbers, we can keep on going with larger
-[polygons](gloss:polygon). The resulting number sequences are called __polygonal
-numbers__.
+在研究三角形和方形数字之后，我们可以继续研究更大的[多边形](gloss:polygon)。产
+生的数字序列称为__多边形数字__。
 
-For example, if we use polygons with ${k}{k|5|3,10,1} sides, we get the sequence
-of __${polygonName(k)} numbers__.
+例如，如果我们使用边为${k}{k|5|3,10,1}的多边形，我们将得到__${polygonName(k)}数__序列。
 
-Can you find recursive and explicit formulas for the *n*th polygonal number
-that has _k_ sides? And do you notice any other interesting patterns for larger
-polygons?
+你能找到具有_k_条边多边形的第_n_个多边形数的递归公式和显式公式吗？你有没有注
+意到大多边形其他有趣的模式？
 
 :::
 
 ---
 > id: tetrahedral
 
-### Tetrahedral and Cubic Numbers
+### 四面体和立方数
 
-Of course, we also don’t have to limit ourselves to 2-dimensional shapes and
-patterns. We could stack spheres to form small pyramids, just like how you would
-stack oranges in a supermarket:
+当然，我们也不必局限于二维的形状和模式。我们可以把球体堆成小金字塔，就像你在
+超市堆橙子一样：
 
 ::: column(width=64 parent="padded-thin")
 {.text-center} __1__
@@ -1076,11 +1020,10 @@ stack oranges in a supermarket:
 ---
 > id: tetrahedral-1
 
-Mathematicians often call these pyramids [__tetrahedra__](gloss:tetrahedron),
-and the resulting sequence [__tetrahedral numbers__](gloss:tetrahedral-numbers).
+数学家通常称这些金字塔为[__四面体__](gloss:tetrahedron)，并将由此产生的序列
+称为[__四面体数__](gloss:tetrahedral-numbers)。
 
-{.todo} COMING SOON: More on Tetrahedral numbers, Cubic numbers, and the 12
-days of Christmas.
+{.todo} 敬请期待: 关于四面体数，立方数和圣诞节的12天的更多内容。
 
 
 
@@ -1088,15 +1031,13 @@ days of Christmas.
 
 
 
-## Fibonacci Numbers
+## 斐波那契数列
 
 > section: fibonacci
 > id: rabbits
 
-Imagine that you’ve received a pair of baby rabbits, one male and one female.
-They are very special rabbits, because they never die, and the female one gives
-birth to a new pair of rabbits exactly once every month (always another pair of
-male and female).
+想象一下，你收到了一对小兔子，一只雄兔和一只雌兔。它们是非常特别的兔子，因为
+它们永远不会死，而雌兔每月正好生一对新的兔子(总是另一对雄兔和雌兔)。
 
     x-slideshow
       .stage.rabbits(slot="stage")
@@ -1155,28 +1096,25 @@ male and female).
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
 
-      .legend(slot="legend") In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
-      .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
-      .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
-      .legend(slot="legend") In the next month, your pair of rabbits will give birth to another couple. Meanwhile, the first pair of kids have grown up. You now have three pairs in total.
-      .legend(slot="legend") In the fifth month, your original pair of rabbits will give birth to a new pair. At the same time, their first pair of kids is now old enough to give birth to grandchildren. You now have five pairs of rabbits.
-      .legend(slot="legend") In the sixth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
+      .legend(slot="legend") 在第一个月, 兔子很小而且不可能繁殖 - 但是它们长得非常快。
+      .legend(slot="legend") 一个月后，兔子长大并开始交配…
+      .legend(slot="legend") … 再过一个月, 它们生下首对兔宝宝。现在你有两对兔子了。
+      .legend(slot="legend") 下一个月，它们将生下另一对兔宝宝。同时，第一对兔宝宝长大。现在你总共有三对兔子了。
+      .legend(slot="legend") 在第五个月，原来那对兔子会再生一对新的兔宝宝。同时，它们的下一代兔宝宝已经长大到可以生下一对兔孙子了。现在你已经有5对兔子了。
+      .legend(slot="legend") 在第六个月，有多达3对兔子能够生兔宝宝：原来那对，已经它们生对前两对。
 
 ---
 > id: rabbits-1
 
-{.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
-previous month, plus 5 new sets of babies. Can you detect a pattern in this
-sequence? _{button.next-step} Continue_
+{.r}在接下来1个月你会有13对兔子：8对是上月已有的，加上5对新生兔宝宝。你能检测出
+这个序列中的模式吗？_{button.next-step} 继续_
 
 ---
 > id: rabbits-2
 
-The number of rabbits in a particular month is [[sum of the two previous
-numbers|twice the previous number]]. _{span.reveal(when="blank-0")}In other
-words, you have to add the *previous two* terms in the sequence, to get the
-next one. The sequence starts with two 1s, and the [recursive
-formula](gloss:sequence-recursive) is_
+某个月内兔子的数量是[[前之两个月的数量和|是之前一个月数量的两倍]]。 
+_{span.reveal(when="blank-0")}换句话说，你必须将序列中*前两*项相加，才能得到
+下一项。序列以都为1的两项开始，[递归公式](gloss:sequence-recursive)是_
 
 {.text-center.s-orange.reveal(when="blank-0")} *{span.n}`x_n`* =
 *{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
@@ -1184,13 +1122,13 @@ formula](gloss:sequence-recursive) is_
 ---
 > id: rabbits-3
 
-Can you calculate the number of rabbits after a few more months?
+再过几个月后，你能计算出兔子的数目吗？
 
 {.text-center.s-orange} _{.n}1_, _{.n}1_, _{.n}2_, _{.n}3_, _{.n}5_, _{.n}8_,
 _{.n}[[13]]_, _{.n}[[21]]_, _{.n}[[34]]_, _{.n}[[55]]_, _{.n}[[89]]_,
 _{.n}[[144]]_, …
 
-{.reveal(when="blank-5")} So after 12th months, you’ll have 144 pairs of rabbits!
+{.reveal(when="blank-5")} 如此12个月后，你将有144对兔子！
 
     figure.reveal(when="blank-5")
       x-media(src="images/rabbits.jpg" width=600 height=230)
@@ -1198,85 +1136,73 @@ _{.n}[[144]]_, …
 ---
 > id: fibonacci
 
-This sequence of numbers is called the [__Fibonacci
-Sequence__](gloss:fibonacci-numbers), named after the Italian mathematician
-[Leonardo Fibonacci](bio:fibonacci).
+这个数字序列称为[斐波那契数列](gloss:fibonacci-numbers)，以意大利数学家[列奥纳多·斐波那契](bio:fibonacci)的名字命名。
 
 ::: column.grow
-When Fibonacci was born in 1175, most people in Europe still used the [Roman
-numeral system](gloss:roman-numerals) for numbers (e.g. IVX or MCMLIV).
-Fibonacci’s father was a merchant, and together they travelled to Northern
-Africa as well as the Middle East. It was there that Fibonacci first learned the
-[Arabic numeral system](gloss:arabic-numerals).
+当斐波那契于1175年出生时，欧洲的大多数人仍然使用[罗马数字系统](gloss:roman-numerals)
+来表示数字（如IVX或MCLIV）。斐波那契的父亲是个商人，他们一起去了北非和中东。
+正是在那里，斐波那契第一次学习了[阿拉伯数字系统](gloss:arabic-numerals)。
 
-When he returned to Italy, Fibonacci wrote a book called _Liber Abaci_ (Latin
-for “The Book of Calculations”), where he first introduced the new Arabic
-numerals to European merchants. They were an immediate success – and we still
-use them today.
+当他回到意大利后，斐波那契写了一本书，名叫《_Liber Abaci_》(拉丁语，意为“计算之书”），
+在那里他首次向欧洲商人介绍了新的阿拉伯数字。它们立即获得了欢迎 — 直到今天我们
+仍在使用它们。
 
 ::: column(width=300)
 
     x-media(src="images/fibonacci.jpg" width=300 height=300)
-    .caption Portrait of Leonardo Fibonacci
+    .caption 莱昂纳多·菲波那契的肖像
 
 :::
 
-On one of the pages in his book, he also investigated the breeding patterns of
-rabbits – that’s why the Fibonacci numbers were named after him.
+在他书中的一页上，他还研究了兔子的繁殖模式 — 这就是为什么斐波那契数是以他的名
+字命名。
 
     figure
       x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
-      p.caption Pages from Fibonacci’s #[em Liber Abaci]
+      p.caption 来自斐波那契的书 #[em Liber Abaci]
 
 ---
 > id: spirals
 
-Of course, the Fibonacci numbers are not how rabbits _actually_ populate in real
-life. Rabbits don’t have exactly one male and one female offspring every single
-month, and we haven’t accounted for rabbits dying eventually.
+当然，斐波那契数并不是兔子在现实生活中的_实际_数量。兔子不是每个月生恰好一个
+雄兔和一个雌兔后代，我们也甚至当作兔子不会死。
 
-But it turns out that there are many other places in nature where Fibonacci
-numbers _do_ appear: for example the spirals in plants. Can you count how many
-spirals there are in each direction?
+但事实证明，自然界中还有许多其它地方_确实_体现出斐波那契数，例如植物的螺旋。
+你能计算出每个方向有多少个螺旋吗？
 
 ::: column(width=320)
 
     x-select.spiral-tabs
-      div Original
-      div(data-value="cw") Clockwise
-      div(data-value="ccw") Countercw.
+      div 原样
+      div(data-value="cw") 顺时针
+      div(data-value="ccw") 逆时针.
     .spirals(style="background-image: url(images/pinecone.jpg)")
       .clockwise(style="background-image: url(images/pinecone-1.jpg)")
       .anticlockwise(style="background-image: url(images/pinecone-2.jpg)")
 
-{.text-center} This pine code has [[8]] clockwise spirals and [[13]]
-counterclockwise spirals.
+{.text-center} 这个松果有[[8]]个顺时针螺旋 同时有[[13]]个逆时针螺旋。
 
 ::: column(width=320)
 
     x-select.spiral-tabs
-      div Original
-      div(data-value="cw") Clockwise
-      div(data-value="ccw") Countercw.
+      div 原样
+      div(data-value="cw") 顺时针
+      div(data-value="ccw") 逆时针.
     .spirals(style="background-image: url(images/sunflower.jpg)")
       .clockwise(style="background-image: url(images/sunflower-1.jpg)")
       .anticlockwise(style="background-image: url(images/sunflower-2.jpg)")
 
-{.text-center.reveal(when="blank-0 blank-1")} This sunflower has 34 clockwise
-spirals and 55 counterclockwise spirals.
+{.text-center.reveal(when="blank-0 blank-1")} 这个太阳花有 34 顺时针螺旋同时
+有 55 个逆时针螺旋。
 
 :::
 
 ---
 > id: spirals-1
 
-In both cases, the numbers of spirals are consecutive Fibonacci numbers. The
-same is true for many other plants: next time you go outside, count the number
-of petals in a flower or the number of leaves on a stem. Very often you’ll find
-that they are Fibonacci numbers!
+在这两种情况下，螺旋的数目都是连续的斐波那契数。其他许多植物也是如此：下次你出去的时候，数一数一朵花的花瓣数，或者一根茎上的叶子数。你经常会发现它们是斐波那契数！
 
-Of course, this is not just a coincidence. There is an important reason why
-nature likes the Fibonacci sequence, which you’ll learn more about later.
+当然，这不仅仅是巧合。自然喜欢斐波那契序列有一个很重要的原因，稍后您将进一步了解。
 
 ---
 > id: bees
@@ -1284,57 +1210,51 @@ nature likes the Fibonacci sequence, which you’ll learn more about later.
 ::: column(width=320)
 
     x-select.spiral-tabs   
-      div(data-value="male") Male
-      div(data-value="female") Female
+      div(data-value="male") 雄性
+      div(data-value="female") 雌性
     .bees
       img(src="images/bees-male.png")
       img(hidden src="images/bees-female.png")
 
 ::: column.grow
 
-Fibonacci numbers also appear in the populations of honeybees.
+斐波那契数也出现在蜜蜂种群中。
 
-In every bee colony there is a single _queen_ that lays many eggs. If an egg is
-fertilised by a male bee, it hatches into a __female__ bee. If it is not
-fertilised, it hatches into a __male__ bee (called a drone).
+在每一个蜂群中，都有一个_蜂后_产下许多卵。如果一个卵被一只雄性蜜蜂受精，它就会
+孵化成一只__雌性__蜜蜂。如果没有受精，它就会孵化成一只__雄性__蜜蜂（被称为雄蜂）。
 
-This means that female bees have [[two parents|one parent]], while male bees
-only have [[one parent|two parents]].
+这意味着雌蜂有[[双亲|单亲]]，而雄蜂只有[[单亲|双亲]]。
 
-{.reveal(when="blank-0 blank-1")} If we draw the ancestry tree of a bee, the
-number of parents, grandparents, great-grandparents, and earlier generations are
-always Fibonacci numbers!
+{.reveal(when="blank-0 blank-1")} 如果我们画出一只蜜蜂的祖先树图，父母、祖父母、
+曾祖父母和前几代的数量总是斐波那契数！
 
-{.i.lgrey.reveal(when="blank-0 blank-1" delay=400)} Occasionally, young female
-bees are fed with special food called “royal jelly”. In that case, they turn
-into queens and will fly away to start a new hive.
+{.i.lgrey.reveal(when="blank-0 blank-1" delay=400)}偶尔，有些年幼的蜜蜂被喂以
+称为“蜂王浆”的特殊食物。在这种情况下，它们会变成蜂后， 然后飞走开始新的蜂巢。
 
 :::
 
 ---
 > id: golden-spiral
 
-### The Golden Ratio
+### 黄金分割率
 
-Just like the [triangle](gloss:triangle-numbers) and [square
-numbers](gloss:square-numbers), and other sequences we’ve seen before, the
-Fibonacci sequence can be visualised using a geometric pattern:
+就像[三角形数](gloss:triangle-numbers)和[平方数](gloss:square-numbers)以及我们
+以前看到的其他序列一样，斐波那契序列可以使用几何图案进行可视化：
 
     x-slideshow.golden-spiral
       .stage(slot="stage"): include svg/spiral.svg
-      .legend(slot="legend") We start with two small squares of size 1.
-      .legend(slot="legend") Next, we add a new square of size 2, to form a larger rectangle.
-      .legend(slot="legend") Next, we add a square of size 3, to form an even larger rectangle.
-      .legend(slot="legend") The next square has size 5. Can you see that we’re recreating the Fibonacci numbers?
-      .legend(slot="legend") If we continue adding squares, they will have size 8, 13, 21, and so on.
-      .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
+      .legend(slot="legend") 我们以两个大小为1的小正方形开始。
+      .legend(slot="legend") 下一步，添加一个大小为2的新正方形，以形成一个大的矩形。
+      .legend(slot="legend") 下一步，添加一个大小为3的正方形，以形成一个更大的矩形。
+      .legend(slot="legend") 下一个添加的正方形大小为5。你能看出来我们正在创建斐波那契数列吗？
+      .legend(slot="legend") 如果我们继续添加方形，它们的大小将为8， 13， 21，如此等等。
+      .legend(slot="legend") 你也许已经注意到，随着矩形变大，它们看起来开启了向外“螺旋”。我们甚至能够将之可视化，通过把方形的角相连来画出完美的螺旋形。
 
 ---
 > id: golden-ratio
 
-At every step, the squares form a larger rectangle. Its width and height are
-always two consecutive Fibonacci numbers. The __aspect ratio__ of the rectangle
-is the ratio of its width and its height:
+在每一步，正方形形成一个更大的矩形。它的宽度和高度总是两个连续的斐波那契数。
+矩形的__纵横比__是其宽度和高度的比：
 
 ::: column(width=100 parent="padded-thin golden-rect")
 
@@ -1372,16 +1292,14 @@ is the ratio of its width and its height:
 > id: golden-ratio-1
 > goals: img-0 img-1
 
-Notice how, as we add more and more squares, the aspect ratio seems to get
-closer and closer to a specific number around 1.6. This number is called the
-[__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
-letter `φ` (“phi”). Its exact value is
+注意，随着我们添加越来越多的正方形，纵横比似乎越来越接近于1.6左右的特定数字。
+这个数字被称为[__黄金分割率__](gloss:golden-ratio)，通常用希腊字母`φ`(“phi”)表示。
+它的准确值是
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
 
-Many people believe that the golden ratio is particularly aesthetically
-pleasing. That’s why it is often used by artists and architects – like in these
-two examples:
+许多人认为黄金分割比在美学上特别令人愉悦。这就是为什么艺术家和建筑师经常使用它，
+就像这两个例子：
 
 ::: column(width=320)
 
@@ -1390,9 +1308,8 @@ two examples:
       img(src="images/pantheon.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
-{.caption} The Greek sculptor Phidias is said to have used the Golden ratio
-when designing the _Parthenon_ in Athens. The first letter of his name, `φ`, is
-the symbol we now use for the golden ratio.
+{.caption} 据说希腊雕塑家菲迪亚斯在雅典设计_帕台农神庙_时使用了黄金比例。他名
+字的第一个字母`φ`是我们现在用来表示黄金分割比的符号。
 
 ::: column(width=320)
 
@@ -1400,40 +1317,35 @@ the symbol we now use for the golden ratio.
       x-media(src="images/dali.jpg" width=320 height=198)
       img(src="images/dali.png" width=320 height=198)
 
-{.caption} _The Sacrament of the Last Supper_, by Spanish artist Salvador Dalí,
-is one of many paintings in the golden ratio. In the background, you can also
-see a large [dodecahedron](gloss:dodecahedron).
+{.caption} 西班牙艺术家萨尔瓦多·达利的 _最后的晚餐圣礼_ 是许多应用了黄金比例
+的画作之一。在背景中，你还可以看到一个大的[十二面体](gloss:dodecahedron)。
 
 :::
 
 ---
 > id: golden-ratio-2
 
-We can approximate the golden ratio by [[dividing|adding|subtracting]] two
-consecutive Fibonacci numbers.
+我们可以用斐波那契数的两个连续项[相除|相加|相减]来近似黄金分割比。
 
-{.reveal(when="blank-0")} However, it turns out that the exact value of `φ`
-can’t be written as a simple fraction: it is an [__irrational
-number__](gloss:irrational-numbers), just like [`π`](gloss:pi) and `sqrt(2)` and
-some other numbers you’ve seen before.
+{.reveal(when="blank-0")} 然而，事实证明，`φ`的精确值不能写成一个简单的分数：
+它是一个[__无理数__](gloss:irrational-numbers)，就像圆周率[`π`](gloss:pi) 和
+`根号2` 以及其它一些你以前见过的数。
 
 ---
 > id: sunflower-growing
 
-### Fibonacci Spirals
+### 斐波那契螺旋
 
 ::: column.grow
 
-The golden ratio explains why Fibonacci numbers appear in nature, like the
-sunflower and pine cone you saw at the beginning of this section.
+黄金分割率解释了为什么斐波那契数出现在自然界中，就像你在本节开头看到的向日葵
+和松果。
 
-Both these plants grow outwards from their center (a part of the plant called
-the _meristem_). As new seeds, leaves or petals are added, they push the
-existing ones further outside.
+这两种植物都从中心(植物上叫做_分生组织_的部分)向外生长。当新的种子、叶子或花瓣
+被添加时，它们将现有的种子、叶子或花瓣进一步推向外部。
 
-Move the slider on the right to visualise how a plant grows. Notice how every
-leaf is added at a different rotation than the previous one. The angle between
-two consecutive leafs is always the same.
+移动右边的滑块来可视化展示植物的生长方式。请注意，每个叶是如何以不同于前一个
+叶的旋转方式添加的。两个连续叶之间的角度总是相同的。
 
 ::: column(width=300)
 
@@ -1451,12 +1363,10 @@ two consecutive leafs is always the same.
 ---
 > id: sunflower-spiral
 
-It is important for flowers to pick a suitable angle: the leaves or seeds have
-to be approximately equally spaced so that they get the largest amount of
-sunlight and nutrients. In the diagram below, you can explore what a sunflower
-might look like with different angles between its seeds:
+对于花来说，选择一个合适的角度是很重要的：叶子或种子必须大致等距分布，这样它们
+才能获得最大的阳光和营养。在下面的图表中，您可以探索向日葵种子之间不同角度的外观：
 
-    // Notice how even tiny changes to the angle can produce a completely different arrangement:
+    // 注意角度的微小变化如何产生完全不同的排列：
 
 ::: x-slideshow
 
@@ -1465,35 +1375,27 @@ might look like with different angles between its seeds:
       x-slider(steps=1000 speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
-all seeds will grow in a single long row away from the center.
+{div(slot="legend")} 如果角度为_{span.fib-action(data-value=0)}0°_，则所有种子
+将在远离中心的一个长条中生长。
 
-{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0.5)}`1/2`_
-of a full a rotation (180°), the seeds will alternate between two separate
-“arms” that move away from the center.
+{div.inline(slot="legend")}如果角度为平角(180°)的_{span.fib-action(data-value=0.5)}`1/2`_，
+则种子将在远离中心的两个独立“臂”之间交替。
 
-{div.inline(slot="legend")} If the rotation is another fractional proportion of
-360°, for example _{span.fib-action(data-value=2/5)}`2/5`_ or
-_{span.fib-action(data-value=1/3)}`1/3`_ or _{span.fib-action(data-value=3/8)}`3/8`_,
-then the number of “arms” will be the same as the [[denominator|numerator|prime
-factor]] of that fraction.
+{div.inline(slot="legend")}如果旋转角度是360°的另一个分数比例，例如
+_{span.fib-action(data-value=2/5)}`2/5`_ 或 _{span.fib-action(data-value=1/3)}`1/3`_
+或 _{span.fib-action(data-value=3/8)}`3/8`_，则“臂数”将与那个分数的[[分母|分子|质因数]]相同。
 
-{div(slot="legend")} Unfortunately “arms” are bad, because they mean that
-the seeds are not evenly distributed: all of the space between the arms is
-wasted. But if [rational numbers](gloss:rational-numbers) aren’t going to work,
-let’s try [irrational numbers](gloss:irrational-numbers)!
+不幸的是，“臂”不好，因为它们意味着种子分布不均匀：臂之间的所有空间都被浪费了。
+但是如果[有理数](gloss:rational-numbers)不起作用，让我们试试[无理数](gloss:irrational-numbers)！
 
-{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi).
-But if the angle between seeds is _{span.fib-action(data-value=0.31831)}`1/pi`_
-of 360°, we still seem to get arms: 22 of them. That’s because the fraction
-`22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really need is
-an irrational number that _can’t_ be closely approximated by a simple fraction.
+{div.inline(slot="legend")}无理数的一个例子是[`pi`](gloss:pi)。但是，如果种子
+之间的夹角为360°的_{span.fib-action(data-value=0.31831)}`1/pi`_，我们仍然可以
+得到这些臂：其中的22只。这是因为分数`22/7=3.1429…`是一个很好的`pi`近似值。我们
+真正需要的是一个无理数，它_不能_用一个简单的分数来近似。
 
-{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio)
-is just that: the “most irrational” of all irrational numbers. If the angle
-between seeds is _{span.fib-action(data-value=0.6180339)}`1/phi`_ of 360°, they
-seem to be almost perfectly spaced. And this is precisely the angle that plants
-around the world are using.
+{div.inline(slot="legend")} 事实证明，[黄金分割率](gloss:golden-ratio)是所有无
+理数字中“最不合理的”。如果种子之间的夹角为360°的_{span.fib-action(data-value=0.6180339)}`1/phi`_，
+则它们看起来几乎是完全间隔的。这正是世界各地植物所使用的角度。
 :::
 
     x-gesture(target=".fib-action")
@@ -1507,38 +1409,31 @@ around the world are using.
 
 ::: column.grow
 
-You might remember from above that the ratios of consecutive Fibonacci numbers
-get closer and closer to te golden ratio – and that’s why, if you count the
-number of spirals in a plant, you will often find a Fibonacci number.
+你可能记得从上面，连续斐波那契数的比率越来越接近黄金比率——这就是为什么，如果
+你计算一个植物的螺旋数，你会经常发现斐波那契数。
 
-It is important to remember that nature doesn’t know about Fibonacci numbers.
-Nature also can’t solve equations to calculate the golden ratio – but over the
-course of millions of years, plants had plenty of time to try out different
-angles and discover the best one.
+重要的是要记住，自然界并不知道斐波那契数。自然也无法解出方程来计算黄金分割
+比——但在数百万年的过程中，植物有足够的时间尝试不同的角度并发现最佳角度。
 
-Plants and animals always want grow in the most efficient way, and that is why
-nature is full of regular, mathematical patterns.
+植物和动物总是希望以最有效的方式生长，这就是为什么自然界充满规则的数学模式。
 
 :::
 
 ---
 > id: lucas-numbers
 
-### Fibonachos
+### 菲波那科斯
 
-So far, we have only used the recursive equation for Fibonacci numbers. There
-actually is an explicit equation, too – but it is much more difficult to
-find:
+到目前为止，我们只使用了斐波那契数的递推方程。实际上，也有一个显式的方程
+式——只是更难找到它：
 
 {.text-center} `x_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
 
-We could also try picking different starting points for the Fibonacci numbers.
-For example, if we start with 2, 1, … rather than 1, 1, … we get a sequence
-called the __Lucas numbers__.
+我们也可以尝试为斐波那契数选择不同的起始点。例如，如果我们从2，1开始, …，而不是
+1，1开始，…，我们得到一个数列，它叫做[卢卡斯数列]。
 
-It turns out that, whatever two starting numbers you pick, the resulting
-sequences share many properties. For example, the ratios of consecutive terms
-will _always_ [converge](gloss:sequence-convergence) to the golden ratio.
+结果表明，无论您选择哪两个起始数字，结果序列都共有许多属性。例如，连续项的
+比将_总是_[收敛](gloss:sequence-convergence)于黄金比率。
 
 {.text-center.s-purple.s-small}
 ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
@@ -1547,41 +1442,34 @@ _{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_, …
 ---
 > id: fibonacci-puzzles
 
-There are many other puzzles, patterns and applications related to Fibonacci
-numbers. Here are a few examples, which you can try yourself:
+还有许多其他的谜题、模式和应用与斐波那契数相关。以下是几个例子，您可以自己尝试：
 
 ::: .box.problem-box
     .box-title: h3 Problem solving
 ::: .box-body
 
-__1. Fibonacci Divisibility__
+__1. 斐波那契整除性__
 
-(a) Which Fibonacci numbers are even? Is there a pattern to where they are
-positioned along the sequence? Can you explain why?
+(a) 哪些斐波那契数是偶数？，它们在序列中的位置是否有一个模式？你能解释为什么吗？
 
-(b) Which Fibonacci numbers are divisible by 3 (or divisible by 4)? What do you
-notice?
+(b) 哪些斐波那契数可被3整除(或可被4整除)？你注意到什么了？
 
     hr
 
-__2. Fibonacci Sums__
+__2. 斐波那契和__
 
-What happens if you add up any three consecutive Fibonacci numbers? Can you
-explain why?
+如果你把三个连续的斐波那契数加起来会怎么样？你能解释为什么吗？
 
     hr
 
-__3. Fibonacci Staircases__
+__3. 斐波那契楼梯__
 
-When walking up the stairs, I can either take single steps or leap over two
-steps at a time. This means that there are many different possibilities how I
-could go up a staircase. For example, if there are 5 steps, I have 8 different
-choices:
+当上楼梯时，我既可以一步上一阶楼梯，也可以一步上两阶楼梯。这意味着上楼梯的方
+式有很多不的可能性。例如，如果有5阶楼梯，我有8个不同的选择：
 
     figure: x-media(src="images/stairs.svg" width=530 height=200)
 
-How many choices are there for staircase with 6, 7 or 8 steps? Can you detect
-a pattern? And how is this related to the Fibonacci numbers?
+对6、7或8阶楼梯有多少种选择？你能发现一个模式吗？这和斐波那契数有什么关系？
 
 :::
 :::
@@ -1596,32 +1484,28 @@ a pattern? And how is this related to the Fibonacci numbers?
 
 
 
-## Special Sequences
+## 特殊序列
 
 > section: special
 > id: special-intro
 
 
-In addition to [arithmetic](gloss:arithmetic-sequence) and
-[geometric](gloss:geometric-sequence) sequences, [Fibonacci
-numbers](gloss:fibonacci-numbers) and [figurate numbers](gloss:figurate-numbers),
-there are countless interesting sequences that don’t follow a similar, regular
-pattern.
+除了[算术](gloss:arithmetic-sequence)和[几何](gloss:geometric-sequence)序列、
+[斐波那契数列](gloss:fibonacci-numbers)和[形数](gloss:figurate-numbers)之外，
+还有无数有趣的序列没有遵循类似的规则和模式。
 
 ---
 > id: primes
 
-### Prime Numbers
+### 素数
 
-One example that you’ve already seen before are the [__Prime
-numbers__](gloss:prime). We say that a number is _prime_ if it has no
-[factors](gloss:factor) [[other than 1 and itself|other than 1 and 2|and no
-multiples]].
+你之前已经看过的一个例子是[__素数__](gloss:prime)。我们说，如果一个数
+[[除了1和它本身|除了1和2|没有倍数]]之外没有其它[因子](gloss:factor)。
 
 ---
 > id: primes-1
 
-Here are the first few prime numbers:
+下面是前几个质数：
 
 {.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
 _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
@@ -1630,14 +1514,12 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 > id: primes-2
 > goals: p2 p3 p5 p7
 
-Unfortunately, prime numbers don’t follow a simple pattern or recursive
-formula. Sometimes they appear directly next to each other (these are called
-[twin primes](gloss:twin-primes)), and sometimes there are huge gaps between
-them. They seem to be distributed almost randomly!
+不幸的是，素数不遵循简单的模式或递归公式。有时它们直接出现在彼此挨着的位置(这
+些称为[孪生素数](gloss:twin-primes))，有时它们之间有巨大的间隔。它们几乎是随
+机分布的！
 
-Prime numbers also don’t have a simple geometric representation like
-[triangle](gloss:triangle-numbers) or [square numbers](gloss:square-numbers),
-but with a bit of work we can reveal interesting patterns:
+素数也没有像[三角形数](gloss:triangle-numbers)或[平方数](gloss:square-numbers)
+这样简单的几何表现，但是通过一些工作，我们可以发现有趣的模式：
 
 ::: column(width=320)
 
@@ -1650,9 +1532,8 @@ but with a bit of work we can reveal interesting patterns:
         - i += 1
     x-gesture(target=".eratosthenes .l-red")
 
-{.caption} If we cross out all multiples of small integers, the remaining
-numbers must all be prime. This method is called the [__Sieve of
-Eratosthenes__](gloss:sieve-eratosthenes).
+{.caption}如果我们把小整数的倍数全都删除， 那么剩下的数必都是质数。这种方法
+被称为[埃拉托森筛选法](gloss:sieve-eratosthenes)。
 
 ::: column(width=320)
 

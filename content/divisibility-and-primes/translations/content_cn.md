@@ -461,9 +461,9 @@ __{.m-yellow.digit-sum-is}4__.
 
     //- Stanislaw M. Ulam was doodling during the presentation of a "long and very boring paper" at a scientific meeting in 1963.
 
-### 乌兰螺旋
+### 乌拉姆螺旋
 
-波兰数学家[斯坦利斯·乌兰](bio:ulam)在1963年的一个_又长又无聊_的会议上涂鸦时，
+波兰数学家[斯坦利斯·乌拉姆](bio:ulam)在1963年的一个_又长又无聊_的会议上涂鸦时，
 想到了个很酷的方法来展示大素数的分布.
 
     .number-grid.ulam-grid
@@ -488,7 +488,7 @@ __{.m-yellow.digit-sum-is}4__.
 ---
 > id: ulam1
 
-到目前为止，乌兰姆螺旋线看起来并不特别令人兴奋。但如果我们缩小，有趣的模式就
+到目前为止，乌拉姆螺旋线看起来并不特别令人兴奋。但如果我们缩小，有趣的模式就
 会出现。这是高达160,000时素数的分布样子:
 
     figure: img(src="images/ulam.png" width=399 height=399)
