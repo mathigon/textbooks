@@ -8,7 +8,6 @@ abel:
   died: 1829
   name: Abel
   overflow: true
-  small: true
   bio: |
     __Niels Henrik Abel__ (1802 – 1829) was an important Norwegian
     mathematician. Even though he died at the age of 26, he made groundbreaking
@@ -125,9 +124,9 @@ aristotle:
   died: -322
   name: Aristotle
   bio: |
-    __Aristotle__ (Ἀριστοτέλης) was a philosopher in Ancient Greece. Together
-    with his teacher _Plato_, he is considered the “Father of Western
-    Philosophy”. He was also the private tutor of Alexander the Great.
+    __Aristotle__ (Ἀριστοτέλης, c. 384 – 322 BC) was a philosopher in Ancient
+    Greece. Together with his teacher _Plato_, he is considered the “Father of
+    Western Philosophy”. He was also the private tutor of Alexander the Great.
 
     Aristotle wrote about science, mathematics, philosophy, poetry, music,
     politics, rhetoric, linguistics, and many other subjects. His work was
@@ -214,6 +213,22 @@ bhaskara:
     yields infinity, and solved various quadratic, cubic, quartic and
     Diophantine equations.
 
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __David Blackwell__ (1919 – 2010) was an American statistician and
+    mathematician. He worked on game theory, probability theory, information
+    theory and dynamic programming, and wrote one of the first textbooks on
+    Bayesian statistics. The _Rao-Blackwell Theorem_ shows how to improve
+    estimators of certain quantities in statistics.
+
+    Blackwell was the first African-American elected to join the American
+    _National Academy of Sciences_, and he was one of the first to receive a
+    PhD in mathematics.
+
 bolyai:
   born: 1802
   died: 1860
@@ -256,7 +271,6 @@ cantor:
   born: 1845
   died: 1918
   name: Cantor
-  small: true
   bio: |
     The German mathematician __Georg Cantor__ (1845 – 1918) was the inventor of
     set theory, and a pioneer in our understanding of infinity. For most of his
@@ -302,7 +316,6 @@ carroll:
   born: 1832
   died: 1898
   name: Carroll
-  small: true
   bio: |
     __Charles Lutwidge Dodgson__ (1832 – 1898) is best know under his pen name
     __Lewis Carroll__, as the author of _Alice’s Adventures in Wonderland_ and
@@ -346,7 +359,6 @@ cayley:
   born: 1821
   died: 1895
   name: Cayley
-  small: true
   bio: __Arthur Cayley__ (1821 – 1895) was a British mathematician and lawyer.
     He was one of the pioneers of _group theory_, first proposed the modern
     definition of a “group”, and generalised them to encompass many more
@@ -447,7 +459,6 @@ desargues:
   born: 1591
   died: 1661
   name: Desargues
-  small: true
   bio: |
     __Girard Desargues__ (1591 – 1661) was a French mathematician, engineer,
     and architect. He designed numerous buildings in Paris and Lyon, helped
@@ -654,7 +665,6 @@ fourier:
   born: 1768
   died: 1830
   name: Fourier
-  small: true
   bio: |
     __Joseph Fourier__ (1768 – 1830) was a French mathematician, and a friend
     and advisor of Napoleon. In addition to his mathematical research, he is
@@ -760,6 +770,7 @@ godel:
   born: 1906
   died: 1978
   name: Gödel
+  small: true
   bio: |
     __Kurt Gödel__ (1906 – 1978) was an Austrian mathematician who later
     immigrated to America, and is considered one of the greatest logicians in
@@ -935,6 +946,23 @@ jiushao:
     Qin also invented _Tianchi basins_, which were used to measure rainfall and
     gather meteorological data important for farming.
 
+johnson:
+  born: 1918
+  died: 2020
+  name: Johnson
+  bio: |
+    __Katherine Johnson__ (born 1918) is an African-American mathematician.
+    While working at NASA, Johnson calculated the orbits taken by American
+    astronauts – including Alan Shepard, the first American in space, the Apollo
+    Moon landing program, and even the Space Shuttle.
+
+    Her extraordinary ability to calculate orbital trajectories, launch windows
+    and emergency return paths was widely known. Even after the arrival of
+    computers, astronaut John Glenn asked her to personally re-check the
+    electronic results.
+
+    In 2015, Johnson received the Presidential Medal of Freedom.
+
 karinthy:
   name: Karinthy
   bio: __Frigyes Karinthy__ (1887 – 1938) was a Hungarian author, poet and
@@ -1074,7 +1102,6 @@ lorenz:
   bio: __Edward Lorenz__ (1917 – 2008) was an American mathematician and
     meteorologist. He pioneered _chaos theory_, discovered _strange attractor_,
     and coined the term “butterfly effect”.
-  small: true
 
 lovelace:
   born: 1815
