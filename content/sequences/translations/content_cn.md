@@ -1505,7 +1505,7 @@ __3. 斐波那契楼梯__
 ---
 > id: primes-1
 
-下面是前几个质数：
+下面是前几个素数：
 
 {.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
 _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
@@ -1532,35 +1532,33 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
         - i += 1
     x-gesture(target=".eratosthenes .l-red")
 
-{.caption}如果我们把小整数的倍数全都删除， 那么剩下的数必都是质数。这种方法
+{.caption}如果我们把小整数的倍数全都删除， 那么剩下的数必都是素数。这种方法
 被称为[埃拉托森筛选法](gloss:sieve-eratosthenes)。
 
 ::: column(width=320)
 
     x-coordinate-system(width=320 height=320 margins="8 8 20 24")
 
-{.caption} If we draw a chart that increases by 1 whenever there is a prime
-number, we get a “stepped” function with fascinating properties.
+{.caption}如果我们画一个这样的图标：每出现一个素数就增加1，我们将得到了一个
+具有迷人性质的“阶梯”函数。
 :::
 
 ---
 > id: primes-3
 
-You can learn more about these and other properties of prime numbers in our
-course on [Divisibility and Primes](/course/divisibility-and-primes). They are
-some of the most important and most mysterious concepts in mathematics!
+在我们的[整除和素数](/course/divisibility-and-primes)课程中，你可以学到更多的
+关于素数的这些和其他性质的知识。它们是数学中最重要和最神秘的概念之一！
 
     figure: img(src="images/primes.svg" width=480 height=156) 
 
 ---
 > id: perfect
 
-### Perfect Numbers
+### 完美数
 
-To determine if a number is [prime](gloss:prime), we have to find all of its
-[factors](gloss:factor). Usually we would _multiply_ these factors to get back
-the original number, but let’s see what happens if we _add up_ all factors
-of a number:
+要确定一个数字是否是[素数](gloss:prime)，我们必须找到它所有的[因子](gloss:factor)。
+通常我们再将这些因子相乘以得到原始的数字，但是让我们看看如果我们把一个数字的
+所有因子加起来会发生什么：
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
@@ -1568,9 +1566,9 @@ of a number:
 
     table.grid.perfect-table
       tr
-        td: strong Number
-        td: strong Factors
-        td: strong Sum of Factors
+        td: strong 数
+        td: strong 因子
+        td: strong 因子的和
       for i in [5,6,7,8,9,10,11,12,13,14,15,16,17,18]
         tr
           td: .c= i
@@ -1585,54 +1583,47 @@ of a number:
 ---
 > id: perfect-1
 
-Let’s compare these numbers with their sum of factors:
+让我们将这些数字与它们的因子之和进行比较：
 
 ::: column.perfect-box(width=220 parent="padded-thin")
 
-For most numbers, the sum of its factors is [[less than|greater than|equal to]]
-itself. These numbers are called __deficient numbers__.
+对于大多数数字，其因子之和是[[小于|大于|等于]]自身。这些数字被称为__亏数__。
 
 ::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
 
-For a few numbers, the sum of its factors is greater than itself. These numbers
-are called __abundant numbers__.
+对于一些数字，其因子之和大于其本身。这些数字被称为__盈数__。
 
 ::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
 
-Only one number in the list above has a sum of factors that is _equal_ to itself:
-[[6]]. This is called a [__perfect number__](gloss:perfect-numbers).
+上面列表中只有一个数的因子之和等于其自身：[[6]]。这被称为一个[完美数字](gloss:perfect-numbers)。
 
 :::
 
 ---
 > id: perfect-2
 
-The next perfect number is 28, because if we add up all its factors we get
-`1 + 2 + 4 + 7 + 14 = 28`. After that, perfect numbers become much rarer:
+下一个完美数是28，因为如果我们把它的所有因子加起来，我们得到`1+2+4+7+14=28`。
+在那之后，完美数字变得更加罕见：
 
 {.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
 _{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}8,589,869,056_,
 _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 
-Notice that all of these numbers are [[even|multiples of 3|2 more than a square
-number]]. _{span.reveal(when="blank-0")}It turns out that they are also all
-triangle numbers!_
+注意，所有这些数都是[[偶数|3的倍数|比平方数大2的数]]。_{span.reveal(when="blank-0")}
+结果显示它们也是三角形数字！_
 
 ---
 > id: perfect-3
 
 ::: column.grow
 
-Perfect numbers were first studied by ancient Greek mathematicians like
-[Euclid](bio:euclid), [Pythagoras](bio:pythagoras) and [Nicomachus](bio:nicomachus),
-more than 2000 years ago. They calculated the first few perfect numbers, and
-wondered if there might be any _odd_ ones.
+2000多年前，古希腊数学家[欧几里得](bio:euclid)、[毕达哥拉斯](bio:pythagoras)和
+[尼科马丘斯](Bio:Nicomachus)首先研究了完美数字。他们计算出了前几个完美数字，
+想知道是否会有一些_奇数_的完美数。
 
-Today, mathematicians have used computers to check the first 10<sup>1500</sup>
-numbers (that’s a 1 followed by 1500 zeros), but without success: all perfect
-numbers they found were even. To this day, it is still unknown whether there are
-any odd perfect numbers, making it the oldest unsolved problem in _all of
-mathematics_!
+今天，数学家们已经用计算机检查了前10<sup>1500</sup>(即1后1500个零)个数字， 但
+没有成功：他们找到的所有完美数字都是偶数。直到今天，仍然不知道是否有奇数的完
+全数，这使它成为_所有数学_最古老的未解决的问题。
 
 ::: column(width=220)
 
@@ -1644,21 +1635,20 @@ mathematics_!
 ---
 > id: hailstone
 
-### The Hailstone Sequence
+### 冰雹序列
 
-Most of the sequences we have seen so far had a single rule or pattern. But
-there is no reason why we can’t combine multiple different ones – for example
-a recursive formula like this:
+到目前为止，我们看到的大多数序列都有一个单一的规则或模式。但是没有理由我们不
+能将多个不同的规则组合起来，例如像这样的递归公式：
 
     table.grid.text-left
       tr
-        td: strong.md If `x_n` is even:
+        td: strong.md 如果 `x_n` 是偶数:
         td.md `x_(n+1) = x_n // 2`
       tr
-        td: strong.md If `x_n` is odd:
+        td: strong.md 如果 `x_n` 是奇数:
         td.md `x_(n+1) = 3 x_n + 1`
 
-Let’s start with `x_1 = 5` and see what happens:
+让我们从`x_1=5`开始，看看会发生什么：
 
 {.text-center.s-orange.with-arrows} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
 _{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
@@ -1672,11 +1662,9 @@ _{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 ---
 > id: hailstone-1
 
-It looks like after a few terms, the sequence reaches a “cycle”: 4, 2, 1 will
-continue to repeat over and over again, forever.
+几项之后，序列似乎达到了一个“循环”：4，2，1将不断重复，直到永远。
 
-Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
-Then the sequence would look like this:
+当然，我们可以选择一个不同的起点，比如${n}{n|10|5,40,1}。然后序列如下：
 
 {.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-red}_{.n}4_,
 _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
@@ -1685,32 +1673,27 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 ---
 > id: hailstone-2
 
-It seems like the length of the sequence varies a lot, but it will always end up
-in a 4, 2, 1 cycle – no matter what first number we pick. We can even visualise
-the terms of the sequence in a chart:
+似乎序列的长度变化很大，但它总是以4、2、1这个循环结束—不管我们选择哪个数作为
+起始。我们甚至可以在图表中可视化序列的项：
 
     x-coordinate-system(margins="12 12 24 40")
-      .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
+      .hailstone-slider.md #[span 起始值:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Notice how some starting points end very quickly,
-while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
-than one hundreds steps before they reach the 4, 2, 1 cycle.
+{.reveal(when="var-0")}注意一些起始点是如何非常快速结束的， 而其他
+(如_{span.var-action}31_或_{span.var-action}47_)在达到4、2、1个循环之前有
+上百步。
 
 ---
 > id: hailstone-3
 
 ::: column.grow
 
-All sequences that follow this recursive formula are called [__Hailstone
-Sequences__](gloss:hailstone-sequence), because they seem to move randomly up
-and down before reaching the 4, 2, 1 cycle – just like hailstones that move up
-and down in a cloud before crashing to Earth.
+所有遵循这一递推公式的序列都被称为[__冰雹序列__](gloss:hailstone-sequence)，
+因为它们似乎在达到4、2、1这个循环之前随机上下移动-就像在撞击地球之前在云中上下移动的冰雹一样。
 
-In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
-hailstone sequence sequence eventually ends in a 4, 2, 1 cycle – whatever
-starting value you pick. You’ve already checked a few starting points above, and
-computers have actually tried all numbers up to `10^20` – that’s 100 billion
-billion or a 1 followed by twenty zeros.
+1937年，数学家[洛塔尔·科拉茨](bio:colatz)提出，_每个_冰雹序列最终以4、2、1个
+循环结束，不管你选择什么起始值。你已经检查了上面的一些起始点，计算机实际上已
+经尝试了所有高达`10^20`的数 - 即100亿亿或1后加上20个零那么大的数。
 
 ::: column(width=240)
 
@@ -1718,39 +1701,34 @@ billion or a 1 followed by twenty zeros.
 
 :::
 
-However, there are infinitely many integers. It is impossible to check each of
-them, and no one has been able to find a [proof](gloss:proof) that works for
-all.
+然而，有无限多的整数。不可能对每一个都进行检查，也没有人能够找到对所有整数都有
+效的[证明](gloss:proof) 。
 
-Just like the search for odd perfect numbers, this is still an open problem in
-mathematics. It is amazing that these simple patterns for sequences can lead to
-questions that have mystified even the best mathematicians in the world for
-centuries!
+就像寻找奇数的完美数一样，这仍然是数学中一个未解的问题。令人惊讶的是，这些简
+单序列模式导致的问题甚至连几个世纪以来的世界上最好的数学家都感到困惑。
 
 
 ---
 > id: look-and-say
 
-### The Look-and-Say Sequence
+### 看和说的序列
 
-Here is one more sequence that is a bit different from all the ones you’ve seen
-above. Can you find the pattern?
+这里还有一个序列，与上面看到的所有序列稍有不同。你能找到模式吗？
 
 {.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
 _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 
-_{button.next-step} Continue_
+_{button.next-step} 继续_
 
 ---
 > id: look-and-say-1
 
-This sequence is called the __Look-and-Say__ sequence, and the pattern is just
-what the name says: you start with a 1, and every following term is what you
-get if you “read out loud” the previous one. Here is an example:
+这个序列被称为__看和说__序列，模式就是名字所说的：从一个1开始，如果你“大声读出”
+前一个数，那么接下来的每一项就是你得到的。下面是一个例子：
 
     p: x-media(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
-Can you now find the next terms?
+你现在能找到后续项吗？
 
 {.text-center.s-lime.s-vertical} …, _{.n}312211_, _{.n}[[13112221]]_,
 _{.n}[[1113213211]]_, …
@@ -1758,63 +1736,59 @@ _{.n}[[1113213211]]_, …
 ---
 > id: look-and-say-2
 
-This sequence is often used as a puzzle to trip up mathematicians – because the
-pattern appears to be completely non-mathematical. However, as it turns out,
-the sequence has many interesting properties. For example, every term ends in
-[[1]], and no digit larger than [[3]] ever gets used.
+这个序列经常被用作困扰数学家的迷题 - 因为这个模式似乎完全是非数学的。然而，
+事实证明，这个序列有许多有趣的特性。例如，每个术语以[[1]]结尾，并且从未使用
+过大于[[3]]的数字。
 
 ---
 > id: look-and-say-3
 
-The British mathematician [John Conway](bio:conway) discovered that, no matter
-what number you pick as starting value, the sequence will eventually split into
-distinct “sections” that no longer interact with each other. Conway called this
-the _Cosmological Theorem_, and named the different sections using the chemical
-elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_. 
+英国数学家[约翰·康威](bio:conway)发现，无论你选择什么数作为起始值，序列最终都
+会分裂成不同的“部分”，不再相互作用。康威称之为_宇宙学定理_，并用化学元素_氢_、
+_氦_、_锂_、... _钚_来命名不同的部分。
 
 ---
 > id: quiz
 
-### The Sequence Quiz
+### 序列测验
 
-You’ve now seen countless different mathematical sequences – some based on
-geometric shapes, some that follow specific formulas, and others that seem
-to behave almost randomly.
+你现在看到了无数不同的数学序列 —— 一些基于几何形状，一些遵循特定的公式，还有
+一些看起来几乎是随机的。
 
-In this quiz you can combine all your knowledge about sequences. There is just
-one goal: find the pattern and calculate the next two terms!
+在这个测验中，你可以结合你对序列的所有知识。只有一个目标：找到模式并计算接下
+来的两项！
 
 ::: .box.problem-box
-    .box-title: h3 Find the next number
+    .box-title: h3 找下个数
 ::: .box-body
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
-_{span.pattern.reveal(when="blank-0 blank-1")} Pattern: Always +4_
+_{span.pattern.reveal(when="blank-0 blank-1")} 模式：总是 +4_
 
 {.text-center.s-orange} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
 _{.n}36_, _{.n}[[44]]_, _{.n}[[53]]_, …
-_{span.pattern.reveal(when="blank-2 blank-3")} Pattern: +3, +4, +5, +6, …_
+_{span.pattern.reveal(when="blank-2 blank-3")} 模式: +3, +4, +5, +6, …_
 
 {.text-center.s-red} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
 _{.n}13_, _{.n}[[12]]_, _{.n}[[16]]_, …
-_{span.pattern.reveal(when="blank-4 blank-5")} Pattern: +4, –1, +4, –1, …_
+_{span.pattern.reveal(when="blank-4 blank-5")} 模式: +4, –1, +4, –1, …_
 
 {.text-center.s-purple} _{span.n}2_, _{span.n}4_, _{.n}6_, _{.n}12_, _{.n}14_,
 _{.n}28_, _{.n}[[30]]_, _{.n}[[60]]_, …
-_{span.pattern.reveal(when="blank-6 blank-7")} Pattern: ×2, +2, ×2, +2, …_
+_{span.pattern.reveal(when="blank-6 blank-7")} 模式: ×2, +2, ×2, +2, …_
 
 {.text-center.s-blue} _{span.n}1_, _{span.n}1_, _{.n}2_, _{.n}3_, _{.n}5_,
 _{.n}8_, _{.n}[[13]]_, _{.n}[[21]]_, …
-_{span.pattern.reveal(when="blank-8 blank-9")} Pattern: Fibonacci Numbers_
+_{span.pattern.reveal(when="blank-8 blank-9")} 模式: 斐波那契数Fibonacci Numbers_
 
 {.text-center.s-teal} _{span.n}27_, _{span.n}28_, _{.n}30_, _{.n}15_, _{.n}16_,
 _{.n}18_, _{.n}[[9]]_, _{.n}[[10]]_, …
-_{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, ÷2, …_
+_{span.pattern.reveal(when="blank-10 blank-11")} 模式: +1, +2, ÷2, +1, +2, ÷2, …_
 
 {.text-center.s-green} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
-_{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
+_{span.pattern.reveal(when="blank-12 blank-13")} 模式: 奇数平方数_
 
 :::
 :::
@@ -1825,15 +1799,14 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
 
 
-## Pascal’s Triangle
+## 帕斯卡三角
 
 > section: pascals-triangle
 > id: pascal-intro
 
-Below you can see a number pyramid that is created using a simple pattern: it
-starts with a single “1” at the top, and every following cells is the sum of
-the two cells directly above. Hover over some of the cells to see how they are
-calculated, and then fill in the missing ones:
+下面您可以看到一个使用简单模式创建的数字金字塔：它从顶部的一个“1”开始，下面
+的每一个单元格都是上面两个单元格的和。将鼠标悬停在某些单元格上，查看它们是如
+何计算的，然后填写缺少的单元格：
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1854,56 +1827,52 @@ calculated, and then fill in the missing ones:
 ---
 > id: pascal-intro-1
 
-This diagram only showed the first twelve rows, but we could continue forever,
-adding new rows at the bottom. Notice that the triangle is
-[[symmetric|right-angled|equilateral]], which can help you calculate some of the
-cells.
+这个图只显示了前12行，但理论上我们可以永远继续，在底部添加新行。请注意，这个
+三角形是[[等腰三角形|直角三角形|等边三角形]]，这可以帮助你计算一些单元格。
 
 ---
 > id: pascal-triangle
 
-The triangle is called [__Pascal’s triangle__](gloss:pascals-triangle), named
-after the French mathematician [Blaise Pascal](bio:pascal). He was one of the
-first European mathematicians to investigate its patterns and properties, but it
-was known to other civilisations many centuries earlier:
+这个三角形叫做[帕斯卡三角形](gloss:pascals-triangle)，以法国数学家
+[布莱斯·帕斯卡](bio:pascal)的名字命名。他是最早研究其模式和性质的欧洲数学家
+之一，但许多世纪前其他文明已经知道这一点：
 
 ::: column(width=200)
 
     x-media(src="images/pascal-1.jpg" width=130 height=280)
 
-{.caption} In 450BC, the Indian mathematician [Pingala](bio:pingala) called the
-triangle the __“Staircase of Mount Meru”__, named after a sacred Hindu mountain.
+{.caption}公元前450年，意大利数学家[宾格拉](bio:pingala)将这个三角称为
+__梅鲁山的楼梯__， 以一座神圣的印度教山命名。
 
 ::: column(width=200)
 
     x-media(src="images/pascal-2.jpg" width=200 height=280)
 
-{.caption} In Iran, it was known as the __“Khayyam triangle”__ (مثلث خیام),
-named after the Persian poet and mathematician [Omar Khayyám](bio:khayyam).
+{.caption}在伊朗，它被称为__哈亚姆三角__(مثلث خیام), 是以波斯诗人和数学家
+[奥玛尔·哈亚姆](bio:khayyam)的名字命名的。
 
 ::: column(width=200)
 
     x-media(src="images/pascal-3.jpg" width=200 height=280)
 
-{.caption} In China, the mathematician Jia Xian also discovered the triangle.
-It was named after his successor, __“Yang Hui’s triangle”__ (杨辉三角).
+{.caption} 在中国，数学家贾宪也发现两这个三角形，但它是以他的继任者杨辉
+命名的:__杨辉三角__。
 
 :::
 
-Pascal’s triangle can be created using a very simple pattern, but it is filled
-filled with surprising patterns and properties. That’s why it has fascinated
-mathematicians across the world, for hundreds of years.
+帕斯卡的三角形可以用一个非常简单的模式来创建，但是它充满了令人惊讶的模式和特性。
+这就是为什么几百年来它一直吸引着世界各地的数学家。
 
-_{button.next-step} Continue_
+_{button.next-step} 继续_
 
 
 ---
 > id: pascal-sequences
 
-### Finding Sequences
+### 查找序列
 
-In the previous sections you saw countless different mathematical sequences. It
-turns out that many of them can also be found in Pascal’s triangle:
+在前面的部分中，您看到了无数不同的数学序列。事实证明，其中许多也可以在帕斯卡
+三角形中找到：
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1927,71 +1896,60 @@ turns out that many of them can also be found in Pascal’s triangle:
 
 ::: tab(parent="pascal-tabs")
 #### {.btn.yellow} _{span.check(when="blank-0")}_
-The numbers in the first diagonal on either side are all
-[[ones|increasing|even]].
+两侧第一个对角线中的数都是[[1|递增|偶数]].
 ::: tab
 #### {.btn.orange} _{span.check(when="blank-1")}_
-The numbers in the second diagonal on either side are the
-[[integers|primes|square numbers]].
+两侧第二个对角线中的数是[[整数|素数|平方数]].
 ::: tab
 #### {.btn.red} _{span.check(when="blank-2")}_
-The numbers in the third diagonal on either side are the [[triangle
-numbers|square numbers|Fibonacci numbers]].
+两侧第三个对角线中的数是[[三角数|平方数|斐波那契数]].
 ::: tab
 #### {.btn.purple} _{span.check(when="blank-3")}_
-The numbers in the fourth diagonal are the [[tetrahedral numbers|cubic
-numbers|powers of 2]].
+第四个对角线中的数是[[四面体数|立方数|2的幂]].
 ::: tab
 #### {.btn.blue} _{span.check(when="blank-4")}_
-If you add up all the numbers in a row, their sums form another sequence: the
-[[powers of two|perfect numbers|prime numbers]].
+如果您将一行中的所有数字相加，它们的和形成另一个序列:[[2的幂|完美数|素数]].
 ::: tab
 #### {.btn.teal} _{span.check(when="blank-5")}_
-In every row that has a prime number in its second cell, all following numbers
-are [[multiples|factors|inverses]] of that prime.
+在第二单元格为素数的行中，数素后面的所有数都是该质数的[[倍数|因子|相反数]]。
 ::: tab
 #### {.btn.green} _{span.check(when="blank-6")}_
-The diagram above highlights the “shallow” diagonals in different colours. If
-we add up the numbers in every diagonal, we get the [[Fibonacci
-numbers|Hailstone numbers|geometric sequence]].
+上图以不同颜色突出显示“浅”对角线。如果我们把每个对角线上的数相加，就得到了:[[斐波那契数
+|冰雹数|几何数列]].
 :::
 
 ---
 > id: pascal-sequences-1
 
-Of course, each of these patterns has a mathematical reason that explains why it
-appears. Maybe you can find some of them!
+当然，这些模式中的每个都有一个数学原因来解释它的出现。也许你能找到一些！
 
-Another question you might ask is how often a number appears in Pascal’s
-triangle. Clearly there are infinitely many 1s, one 2, and every other number
-appears [[at least twice|at least once|exactly twice]],
-_{span.reveal(when="blank-0")} in the second diagonal on either side._
+你可能会问的另一个问题是一个数字在帕斯卡三角形中出现的频率。很明显，有无限
+多的1，一个2，而且其它数字都会[至少两次|至少一次|正好两次]出现在
+_{span.reveal(when="blank-0")} 两边的第二个对角线中。_
 
 ---
 > id: pascal-sequences-2
 
-Some numbers in the middle of the triangle also appear three or four times.
-There are even a few that appear six times: you can see both [120](->.s120) and
-[3003](->.s3003) four times in the triangle above, and they’ll appear two more
-times each in rows 120 and 3003.
+三角形中间的一些数字也会出现三到四次。甚至有几个出现了六次：在上面的三角形中，
+您可以看到[120](->.s120)和[3003](->.s3003)四次，在第120行和第3003行中，它们还
+会再出现两次。
 
-Since 3003 is a triangle number, it actually appears two more times in the
-_third_ diagonals of the triangle – that makes eight occurrences in total.
+因为3003是一个三角形数，它实际上在三角形_第三条_对角线上又出现了两次 — 总共
+出现了八次。
 
-It is unknown if there are any other numbers that appear eight times in the
-triangle, or if there numbers that appear more than eight times. The American
-mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
-fixed limed on how often numbers can appear in Pascal’s triangle – but it hasn’t
-been proven yet.
+// fixed limed (fixed limit ?)
+不知道三角形中是否还有其它出现八次的数字，或者是否有出现八次以上的数。美国
+数学家[大卫·辛格马斯特](bio:singmaster)假设，数字在帕斯卡三角形中出现的频率
+有一个固定的界限，但还没有得到证实。
 
 ---
 > id: modular
 > goals: select
 
 ### Divisibility
+### 整除性
 
-Some patterns in Pascal’s triangle are not quite as easy to detect. In the
-diagram below, highlight all the cells that are even:
+帕斯卡三角形中的一些模式不太容易被发现。把下图中所有偶数单元格点亮显示：
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -2014,9 +1972,8 @@ another, smaller [[triangle|matrix|square]].
 > id: modular-1
 > goals: c2 c3 c4 c5
 
-Colouring each cell manually takes a long time, but here you can see what
-happens if you would do this for many more rows. And what about cells divisible
-by other numbers?
+手动为每个单元格着色需要挺长时间，但在这里，如果你要对更多行执行这样的操作
+你就可以看到会发生什么。单元格里的数被其它数整除又会怎么样呢？
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -2044,32 +2001,30 @@ by other numbers?
 > id: modular-2
 
 ::: column.grow
-Wow! The coloured cells always appear in [[triangles|squares|pairs]] (except for
-a few single cells, which could be seen as triangles of size 1).
+哇哦！着色的单元格总是以[[三角形|正方形|成对]]的形式出现(除了少数单个单元格，
+可以将其视为大小为1的三角形）。
 
-If we continue the pattern of cells divisible by 2, we get one that is very
-similar to the __Sierpinski triangle__ on the right. Shapes like this, which
-consist of a simple pattern that seems to continue forever while getting smaller
-and smaller, are called [__Fractals__](gloss:fractal). You will learn more about
-them in the future…
+如果我们继续将被整除2的单元格模式着色，我们得到一个非常类似于右边的
+__谢尔宾斯基三角形三角形__。像这样的形状，由一个简单的模式组成，它看起来会一
+直延续下去，同时变得越来越小，被称为[__分形__](gloss:fractal)。以后你会学习
+更多关于它们的知识…
 
 ::: column.width(280)
 
-    img(src="images/sierpinski.svg" width=280 height=243 alt="Sierpinski Triangle")
-    p.caption The Sierpinski Triangle
+    img(src="images/sierpinski.svg" width=280 height=243 alt="谢尔宾斯基三角形")
+    p.caption 谢尔宾斯基三角形
 
 :::
 
 ---
 > id: pascal-binomial
 
-### Binomial Coefficients
+### 二项式系数
 
-There is one more important property of Pascal’s triangle that we need to talk
-about. To understand it, we will try to solve the same problem with two
-completely different methods, and then see how they are related.
+帕斯卡三角还有一个更重要的性质，我们需要讨论它。为了理解这一点，我们将尝试用
+两种完全不同的方法来解决同一个问题，然后看看它们之间的关系。
 
-{.todo} COMING SOON
+{.todo} 即将上线，敬请期待
 
     // Galton Board, normal distribution
 
@@ -2125,13 +2080,13 @@ completely different methods, and then see how they are related.
 
 
 
-## Limits and Convergence
+## 极限与收敛
 
 > section: convergence
 > sectionStatus: dev
 > id: convergence-intro
 
-{.todo} COMING SOON
+{.todo} 即将上线，敬请期待
 
     // In some sequences, such as Prime numbers or Perfect numbers, the individual
     // terms are very special and interesting. In other sequences we may only be
