@@ -604,7 +604,7 @@ icosahedron:
 infinity:
   title: Infinity
   text: __Infinity__ is a quantity without limit or end. In matematics, it is
-    represented by te symbol `∞`.
+    represented by the symbol `∞`.
 
 information:
   title: Information Theory
@@ -836,7 +836,7 @@ perpendicular-bisector:
 pi:
   title: Pi
   text: __Pi__, often written as the Greek letter _π_, is the ratio of the
-    circumference and te diameter of a circle. Its value is approximately
+    circumference and the diameter of a circle. Its value is approximately
     3.14159265…
   link: /course/circles-and-pi/introduction#pi-definition
 

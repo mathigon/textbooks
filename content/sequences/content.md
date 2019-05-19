@@ -1523,7 +1523,7 @@ around the world are using.
 ::: column.grow
 
 You might remember from above that the ratios of consecutive Fibonacci numbers
-get closer and closer to te golden ratio – and that’s why, if you count the
+get closer and closer to the golden ratio – and that’s why, if you count the
 number of spirals in a plant, you will often find a Fibonacci number.
 
 It is important to remember that nature doesn’t know about Fibonacci numbers.

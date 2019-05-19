@@ -48,7 +48,7 @@ function lineX(y) { return new Line(new Point(0, y), new Point(1, y)); }
 function lineY(x) { return new Line(new Point(x, 0), new Point(x, 1)); }
 function line(a1, a2, b1, b2) { return new Line(new Point(a1, a2), new Point(b1, b2)); }
 
-const TRANSFORMATIONS = [
+export const TRANSFORMATIONS = [
   null,
 
   p => {  // p1
