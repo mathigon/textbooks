@@ -1,6 +1,6 @@
-# Sequences and Patterns
+# 序列和模式
 
-## Introduction
+## 介绍
 
 > section: introduction
 > id: intro
@@ -1264,7 +1264,7 @@ spirals there are in each direction?
       .clockwise(style="background-image: url(images/pinecone-1.jpg)")
       .anticlockwise(style="background-image: url(images/pinecone-2.jpg)")
 
-{.text-center} This pine code has [[8]] clockwise spirals and [[13]]
+{.text-center} This pine cone has [[8]] clockwise spirals and [[13]]
 counterclockwise spirals.
 
 ::: column(width=320)
@@ -1841,7 +1841,7 @@ and down before reaching the 4, 2, 1 cycle – just like hailstones that move up
 and down in a cloud before crashing to Earth.
 
 In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
-hailstone sequence sequence eventually ends in a 4, 2, 1 cycle – whatever
+hailstone sequence eventually ends in a 4, 2, 1 cycle – whatever
 starting value you pick. You’ve already checked a few starting points above, and
 computers have actually tried all numbers up to `10^20` – that’s 100 billion
 billion or a 1 followed by twenty zeros.
@@ -2025,7 +2025,7 @@ It was named after his successor, __“Yang Hui’s triangle”__ (杨辉三角)
 :::
 
 Pascal’s triangle can be created using a very simple pattern, but it is filled
-filled with surprising patterns and properties. That’s why it has fascinated
+with surprising patterns and properties. That’s why it has fascinated
 mathematicians across the world, for hundreds of years.
 
 _{button.next-step} Continue_
