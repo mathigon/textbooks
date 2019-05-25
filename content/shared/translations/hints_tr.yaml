@@ -1,0 +1,21 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: "Mathigon'a Hoşgeldiniz! Ben Archie, kişisel öğretmeniniz. :mortar_board:"
+account: İlerlemenizi kaydetmek için ücretsiz bir hesap oluşturabilirsiniz.
+tutorial1: İçeriğimiz küçük adımlara ayrılmıştır. Sırada ne olduğunu görmek için etkinlikleri tamamlamanız gerekir.
+tutorial2: Tüm ilerlemenizi kurtaracağız, böylece daha sonra geri dönebilir ve kaldığınız yerden devam edebilirsiniz.
+
+correct:
+  - "Aferin :relaxed:"
+  - "Harika iş! :relieved:"
+  - "Müthiş :grinning:"
+  - "Parlak :thumbsup:"
+  - "Mükemmel! :ok_hand:"
+
+incorrect:
+  - "Bu pek doğru değil :white_frowning_face:"
+  - "Bundan emin misin? :thinking_face:"
+  - "Bu doğru görünmüyor. :hushed:"
+  - "Tekrar deneyin! :confused:"

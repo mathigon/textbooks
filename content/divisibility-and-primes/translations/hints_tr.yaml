@@ -1,0 +1,8 @@
+is-prime: asal
+not-prime: asal değil
+no-solution: Çözüm bulamadım :(
+too-large: Bu sayı çok büyük :(
+not-even: Çift bir sayı seç.
+
+gcd-yes: Uygun.
+gcd-no: Tam oturmuyor...
