@@ -1,6 +1,6 @@
-# 序列和模式
+# Sequences and Patterns
 
-## 介绍
+## Introduction
 
 > section: introduction
 > id: intro
@@ -1841,10 +1841,10 @@ and down before reaching the 4, 2, 1 cycle – just like hailstones that move up
 and down in a cloud before crashing to Earth.
 
 In 1937, the mathematician [Lothar Collatz](bio:collatz) proposed that _every_
-hailstone sequence eventually ends in a 4, 2, 1 cycle – whatever
-starting value you pick. You’ve already checked a few starting points above, and
-computers have actually tried all numbers up to `10^20` – that’s 100 billion
-billion or a 1 followed by twenty zeros.
+hailstone sequence eventually ends in a 4, 2, 1 cycle – whatever starting value
+you pick. You’ve already checked a few starting points above, and computers have
+actually tried all numbers up to `10^20` – that’s 100 billion billion or a 1
+followed by twenty zeros.
 
 ::: column(width=240)
 
