@@ -100,8 +100,7 @@ _{button.next-step} Continue_
 ::: column.grow
 
 In 1962, the mathematician [Edward Lorenz](bio:lorenz) was working at MIT, where
-he was developing computer simulations of the atmosphere, to predict
-the weather.
+he was developing computer simulations of the atmosphere to predict the weather.
 
 Lorenz had developed an algorithm that took current weather data like
 temperature, humidity and wind speed as inputs. It then calculated how these
@@ -148,7 +147,7 @@ Lorenz called this the __butterfly effect__: even the flap of a butterfly’s
 wings in Brazil might change the weather conditions enough to set off a tornado
 in Texas, at some point in the future.
 
-Usually, you’d expect a small change to the input parameters also lead to a
+Usually, you’d expect a small change to the input parameters to also lead to a
 small change in the output. For chaotic systems, like the weather or the double
 pendulum, the opposite is true. Even tiny changes can grow quickly, and lead
 to huge differences.
@@ -164,7 +163,7 @@ forecasts.
 > goals: video
 
 There is an important difference between _knowing the physical laws_ of a
-system, and being able to _predict its behaviour_. Newtons laws of gravity tell
+system, and being able to _predict its behaviour_. Newton’s laws of gravity tell
 us exactly how the double pendulum should move. The differential equations of
 fluid dynamics should, in principle, allow us to calculate the weather at any
 time in the future.

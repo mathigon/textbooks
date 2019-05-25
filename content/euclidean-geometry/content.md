@@ -258,7 +258,8 @@ The symbol for congruence is `≅`, so we would say that `A ≅ B`.
 :::
 
 Here are a few different geometric objects. Connect all the ones that are
-congruent:
+congruent, and remember that more than two shapes might be congruent to each
+other:
 
     svg.congruence(width=760 height=320 viewBox="0 0 760 320")
       g.lines

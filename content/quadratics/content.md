@@ -1157,6 +1157,8 @@ but it still works the same way:
 
 ## The Quadratic Formula
 
+    // https://betterexplained.com/articles/quadratic-formula/
+
 Completing the square can be tricky, and it is easy to make mistakes along the
 way.
 

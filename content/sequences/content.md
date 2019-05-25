@@ -326,8 +326,8 @@ sky. It was a __comet__, a small, icy rock that is flying through space, while
 leaving behind a trail of dust and ice.
 
 Halley remembered that other astronomers had observed similar comets much
-earlier: one in 1530 and another in 1606. Notice that the gap between these
-observations is both times the same: [[76]] years.
+earlier: one in 1530 and another in 1606. Notice that the gap between two
+consecutive observations is the same in both cases: [[76]] years.
 
 ::: column(width=320)
 
