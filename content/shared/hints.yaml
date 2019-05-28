@@ -27,3 +27,11 @@ incorrect:
   - "Are you sure about that? :thinking_face:"
   - "That doesn’t look right. :hushed:"
   - "Try again! :confused:"
+
+welcomeMorning: Good morning!
+welcomeAfternoon: Good afternoon!
+welcomeEvening: Good evening!
+
+welcomeMorningNamed: Good morning, $name!
+welcomeAfternoonNamed: Good afternoon, $name!
+welcomeEveningNamed: Good evening, $name!

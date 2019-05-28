@@ -28,3 +28,11 @@ incorrect:
   - "你确定吗? :thinking_face:"
   - "看起来不太对劲. :hushed:"
   - "再试一次! :confused:"
+
+welcomeMorning: 早上好！
+welcomeAfternoon: 下午好！
+welcomeEvening: 晚上好！
+
+welcomeMorningNamed: 早上好，$name！
+welcomeAfternoonNamed: 下午好，Mathigon！
+welcomeEveningNamed: 晚上好，Mathigon！

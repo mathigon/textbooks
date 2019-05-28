@@ -19,3 +19,11 @@ incorrect:
   - "Bundan emin misin? :thinking_face:"
   - "Bu doğru görünmüyor. :hushed:"
   - "Tekrar deneyin! :confused:"
+
+welcomeMorning: Günaydın!
+welcomeAfternoon: Tünaydın!
+welcomeEvening: İyi akşamlar!
+
+welcomeMorningNamed: Günaydın $name!
+welcomeAfternoonNamed: Tünaydın, $name!
+welcomeEveningNamed: İyi akşamlar $name!
