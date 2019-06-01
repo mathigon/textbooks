@@ -23,13 +23,30 @@ proceed:
       }
 
 ---
+> id: step-1
+
+Here is a self-checking code editor.
+
+    x-code-checker(mode="javascript" theme="midnight")
+      textarea.
+        function gcd(a, b) {
+          // Find Greatest Common Divisor
+        }
+      textarea.
+        // Solution:
+        function gcd(a, b) {
+          while (b) [a, b] = [b, a % b];
+          return a;
+        }
+
+---
 > id: step-2
 
 Here is a read-only editor with a different theme and height. The height is
 measured in number of lines:
 
-    x-code-editor(mode="python" theme="dracula" readonly height="5"): textarea.
-      def isPrime(n):      
+    x-code-editor(mode="python" theme="dracula" readonly height=5): textarea.
+      def isPrime(n):
         for i in range(2,num):
           if (num % i) == 0:
             return true

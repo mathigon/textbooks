@@ -25,6 +25,19 @@ function loadJS(src) {
   return PROMISES[src];
 }
 
+async function loadCodeMirror($el) {
+  loadCSS(STYLE_URL);
+  await loadJS(SCRIPT_URL);
+
+  const mode = $el.attr('mode') || 'javascript';
+  await loadJS(MODES_URL.replace(/abc/g, mode));
+
+  const theme = $el.attr('theme') || 'default';
+  if (theme !== 'default') loadCSS(THEME_URL.replace('abc', theme));
+
+  return [mode, theme];
+}
+
 // -----------------------------------------------------------------------------
 
 export class CodeEditor extends CustomElement {
@@ -35,17 +48,10 @@ export class CodeEditor extends CustomElement {
     const readOnly = this.hasAttr('readonly');
     if (readOnly) $textarea.setAttr('readonly', true);
 
-    const height = this.attr('height') || null;
+    const height = this.attr('height') || $textarea.value.split('\n').length || 10;
     if (height) this.css('height', height * 27 + 5 + 'px');
 
-    loadCSS(STYLE_URL);
-    await loadJS(SCRIPT_URL);
-
-    const mode = this.attr('mode') || 'javascript';
-    await loadJS(MODES_URL.replace(/abc/g, mode));
-
-    const theme = this.attr('theme') || 'default';
-    if (theme !== 'default') loadCSS(THEME_URL.replace('abc', theme));
+    const [mode, theme] = await loadCodeMirror(this);
 
     const cm = CodeMirror.fromTextArea($textarea._el,
         {lineNumbers: true, readOnly, mode, theme});
@@ -62,4 +68,52 @@ export class CodeEditor extends CustomElement {
 
 }
 
+
+// -----------------------------------------------------------------------------
+
+export class CodeChecker extends CustomElement {
+
+  async ready() {
+    const $textareas = this.$$('textarea');
+    if ($textareas.length !== 2)
+      throw new Error('Code Checker elements need to contain two <textarea>s.');
+
+    const $editor1 = $N('div', {class: 'editor'}, this);
+    const $editor2 = $N('div', {class: 'editor', style: 'display: none'}, this);
+
+    const height = this.attr('height') || 10;
+    if (height) {
+      $editor1.css('height', height * 27 + 5 + 'px');
+      $editor2.css('height', height * 27 + 5 + 'px');
+    }
+
+    $editor1.append($textareas[0]);
+    $editor2.append($textareas[1]);
+
+    const [mode, theme] = await loadCodeMirror(this);
+
+    const cm1 = CodeMirror.fromTextArea($textareas[0]._el, {lineNumbers: true, mode, theme});
+    const cm2 = CodeMirror.fromTextArea($textareas[1]._el, {readOnly: true, mode, theme});
+
+    let state = 0;
+    const $button = $N('button', {class: 'btn btn-red', text: 'Reveal Solution'}, this);
+
+    $button.on('click', () => {
+      if (state === 0) {
+        $button.text = 'Continue';
+        $editor2.show();
+        cm1.refresh();
+        cm2.refresh();
+      } else if (state === 1) {
+        $button.exit('pop');
+        this.trigger('continue');
+      }
+      state += 1;
+    });
+  }
+}
+
+// -----------------------------------------------------------------------------
+
 registerElement('x-code-editor', CodeEditor);
+registerElement('x-code-checker', CodeChecker);
