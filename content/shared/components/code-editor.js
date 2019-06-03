@@ -7,11 +7,7 @@
 /* global CodeMirror */
 import { CustomElement, registerElement, script, $N, $ } from '@mathigon/boost';
 
-const SCRIPT_URL = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/codemirror.min.js';
-const STYLE_URL = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/codemirror.min.css';
-const MODES_URL = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/mode/abc/abc.min.js';
-const THEME_URL = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/theme/abc.min.css';
-
+const BASE_URL = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.47.0/';
 const PROMISES = {};
 
 function loadCSS(href) {
@@ -26,14 +22,14 @@ function loadJS(src) {
 }
 
 async function loadCodeMirror($el) {
-  loadCSS(STYLE_URL);
-  await loadJS(SCRIPT_URL);
+  loadCSS(BASE_URL + 'codemirror.min.css');
+  await loadJS(BASE_URL + 'codemirror.min.js');
 
   const mode = $el.attr('mode') || 'javascript';
-  await loadJS(MODES_URL.replace(/abc/g, mode));
+  await loadJS(BASE_URL + `mode/${mode}/${mode}.min.js`);
 
   const theme = $el.attr('theme') || 'default';
-  if (theme !== 'default') loadCSS(THEME_URL.replace('abc', theme));
+  if (theme !== 'default') loadCSS(BASE_URL + `theme/${theme}.min.css`);
 
   return [mode, theme];
 }
@@ -49,7 +45,7 @@ export class CodeEditor extends CustomElement {
     if (readOnly) $textarea.setAttr('readonly', true);
 
     const height = this.attr('height') || $textarea.value.split('\n').length || 10;
-    if (height) this.css('height', height * 27 + 5 + 'px');
+    this.css('height', height * 27 + 4 + 'px');
 
     const [mode, theme] = await loadCodeMirror(this);
 
@@ -82,21 +78,23 @@ export class CodeChecker extends CustomElement {
     const $editor2 = $N('div', {class: 'editor', style: 'display: none'}, this);
 
     const height = this.attr('height') || 10;
-    if (height) {
-      $editor1.css('height', height * 27 + 5 + 'px');
-      $editor2.css('height', height * 27 + 5 + 'px');
-    }
+    $editor1.css('height', height * 27 + 4 + 'px');
+    $editor2.css('height', height * 27 + 4 + 'px');
 
     $editor1.append($textareas[0]);
     $editor2.append($textareas[1]);
 
     const [mode, theme] = await loadCodeMirror(this);
 
-    const cm1 = CodeMirror.fromTextArea($textareas[0]._el, {lineNumbers: true, mode, theme});
-    const cm2 = CodeMirror.fromTextArea($textareas[1]._el, {readOnly: true, mode, theme});
+    const cm1 = CodeMirror.fromTextArea($textareas[0]._el,
+        {lineNumbers: true, mode, theme});
+
+    const cm2 = CodeMirror.fromTextArea($textareas[1]._el,
+        {readOnly: true, mode, theme});
 
     let state = 0;
-    const $button = $N('button', {class: 'btn btn-red', text: 'Reveal Solution'}, this);
+    const $button = $N('button',
+        {class: 'btn btn-red', text: 'Reveal Solution'}, this);
 
     $button.on('click', () => {
       if (state === 0) {

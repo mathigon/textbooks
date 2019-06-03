@@ -280,7 +280,7 @@ cantor:
 
     Cantor proved that there are _different sizes_ of infinity. The set of real
     numbers, for example, is _uncountable_ – meaning that it cannot be paired up
-    with the set of real numbers.
+    with the set of natural numbers.
 
     Only towards the end of his life, Cantor started to receive the recognition
     he deserved. David Hilbert famously declared that “No one shall expel us
@@ -419,8 +419,8 @@ de-moivre:
   name: De Moivre
   bio: |
     __Abraham de Moivre__ (1667 – 1754) was a French mathematician who worked
-    in probability and analytic geometry. He is most remembered for _de Moivre's
-    formula_, which linkes trigonometry and complex numbers.
+    in probability and analytic geometry. He is most remembered for _de Moivre’s
+    formula_, which links trigonometry and complex numbers.
 
     De Moivre discovered the formula for the normal distribution in probability,
     and first conjectured the _central limit theorem_. He also found a
@@ -755,7 +755,7 @@ germain:
   name: Germain
   small: true
   bio: |
-    __Marie-Sophie Germain__ (1776 – 1831) decided that we wanted to be a
+    __Marie-Sophie Germain__ (1776 – 1831) decided that she wanted to be a
     mathematician at the age of 13, after reading about Archimedes.
     Unfortunately, as a woman, she was faced with significant opposition.
     Her parents tried to prevent her from studying when she was young, and she
@@ -763,7 +763,7 @@ germain:
 
     Germain was a pioneer in understanding the mathematics of elastic surfaces,
     for which she won the grand prize from the Paris Academy of Sciences. She
-    also made considerable progress in solving Fermat's Last Theorem, and
+    also made considerable progress in solving Fermat’s Last Theorem, and
     regularly corresponded with Carl Friedrich Gauss.
 
 godel:
@@ -898,7 +898,7 @@ hypatia:
   bio: |
     __Hypatia__ (c. 360 – 415 AD) was a prominent astronomer and mathematician
     in ancient Alexandria. She was also the first female mathematician whose
-    life is work is reasonably well recorded. She edited or wrote commentaries
+    life and work are reasonably well recorded. She edited or wrote commentaries
     on many of the scientific books of her time, and constructed astrolabes and
     hydrometers.
 
@@ -1455,7 +1455,7 @@ plato:
   died: -347
   bio: |
     __Plato__ (c. 425 – 347 BC) was a philosopher in ancient Greece, and –
-    together with his teacher Socrates and his student Archimedes – laid the
+    together with his teacher Socrates and his student Aristotle – laid the
     very foundation of Western philosophy and science.
 
     Plato founded the Academy of Athens, the first higher learning institution
