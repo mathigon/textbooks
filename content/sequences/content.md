@@ -1545,7 +1545,7 @@ So far, we have only used the recursive equation for Fibonacci numbers. There
 actually is an explicit equation, too – but it is much more difficult to
 find:
 
-{.text-center} `x_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
+{.text-center} `F_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n - ((1 - sqrt(5))/2)^n )`
 
 We could also try picking different starting points for the Fibonacci numbers.
 For example, if we start with 2, 1, … rather than 1, 1, … we get a sequence
@@ -1557,7 +1557,8 @@ will _always_ [converge](gloss:sequence-convergence) to the golden ratio.
 
 {.text-center.s-purple.s-small}
 ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
-_{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_, …
+_{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_,
+_{span.n}${8×a+13×b}_, …
 
 ---
 > id: fibonacci-puzzles
