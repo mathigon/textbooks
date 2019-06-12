@@ -1187,7 +1187,7 @@ sequence? _{button.next-step} Continue_
 ---
 > id: rabbits-2
 
-The number of rabbits in a particular month is [[sum of the two previous
+The number of rabbits in a particular month is [[the sum of the two previous
 numbers|twice the previous number]]. _{span.reveal(when="blank-0")}In other
 words, you have to add the *previous two* terms in the sequence, to get the
 next one. The sequence starts with two 1s, and the [recursive
