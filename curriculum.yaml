@@ -144,7 +144,7 @@ lines-and-angles:
     - Ruler and compass construction
     - Pythagoras’ theorem
     - Congruence and similarity  # transformations
-  color: 3559e3
+  color: '3559e3'
 
 3d-solids:
   name: 3D Solids
@@ -511,7 +511,7 @@ complex-numbers:
   color: 7cc00a
 
 infinity:
-  name: Infinity
+  name: 'Infinity'
   topics:
     - Hilbert’s hotel
     - Countability
@@ -555,7 +555,7 @@ trigonometry:
     - Simple trigonometric equations
     - Small angle approximation
     - Hyperbolic functions
-  color: 3559e3
+  color: '3559e3'
 
 vectors:
   name: Vectors
