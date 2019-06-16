@@ -1839,12 +1839,12 @@ in nature – and we can copy these properties in science and engineering.
 
 ::: column(width=180)
 
-    x-media(lightbox, width="180", height="180", src="/resources/polygons-and-polyhedra/images/radiolaria.jpg")
+    x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Radiolaria skeleton
     
 ::: column(width=180)
 
-    x-media(lightbox, width="180", height="180", src="/resources/polygons-and-polyhedra/images/virus.jpg")
+    x-media(lightbox width=180 height=180 src="images/virus.jpg")
     p.caption Icosahedral virus
 
 ::: column.grow
@@ -1877,12 +1877,12 @@ Fuller](bio:fuller), famous for constructing similar-looking buildings.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="Chris Gladis, via Wikipedia", width="180", height="180", src="/resources/polygons-and-polyhedra/images/crystal.jpg")
+    x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Fluorite octahedron
       
 ::: column(width=180)
 
-    x-media(lightbox, credit="Archaeodontosaurus, via Wikipedia", width="180", height="180", src="/resources/polygons-and-polyhedra/images/rock.jpg")
+    x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Pyrite cube
       
 ::: column.grow

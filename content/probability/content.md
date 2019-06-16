@@ -62,7 +62,7 @@ point for Pascal and every _tails_ was a point for Fermat. Whoever had fewer
 points after three coin tosses had to pay the bill.
 ::: column(width=360)
 
-    img(src="/resources/probability/images/paris.jpg" width=360 height=254)
+    img(src="images/paris.jpg" width=360 height=254)
 
 :::
 
