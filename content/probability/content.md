@@ -44,6 +44,7 @@
           circle(r=2, cx=15, cy=16)
 
 > id: intro
+> section: introduction
 
 Probabilities and likelihoods are everywhere around us, from weather forecasting
 to games, insurance or election polls. However, in the history of mathematics,
@@ -118,9 +119,11 @@ In our example, the probability of Pascal winning the game is `3/4 = 0.75`, and
 the probability of Fermat winning the game is `1/4 = 0.25`.
 
 ---
-> id: prob-line
 
 ## What are Probabilities
+
+> id: prob-line
+> section: what-are-probabilities
 
 A __probability__ is a number between 0 and 1 which describes the likelihood of
 a certain __event__. A probability of 0 means that something is _impossible_; a
@@ -229,11 +232,13 @@ can never tell what _actually_ will happen.
 Now let’s have a look at some fun applications of probability.
 
 ---
+
+## Casino Mathematics
+
 > id: roulette
 > sectionBackground: dark casino
 > goals: rotate
-
-## Casino Mathematics
+> section: casino-mathematics
 
     .roulette-wheel
       .layer-2.wheel
@@ -410,10 +415,11 @@ After this short trip through history, let’s get back to some actual mathemati
 
 
 ---
-> section: trees-venn
-> sectionStatus: dev
 
 ## Venn Diagrams and Probability Trees
+
+> section: trees-venn
+> sectionStatus: dev
 
     // TODO – Probability Trees
     // In real life, coins never have exactly a probability of 0.5. It might be 0.4932
@@ -457,9 +463,11 @@ After this short trip through history, let’s get back to some actual mathemati
     // How many students at the school study neither Mathematics nor Biology?
 
 ---
-> id: future
 
 ## Predicting the Future
+
+> id: future
+> section: predicting-the-future
 
     p.md If we roll two dice at once and add up their scores we could get results from [[2]] up to [[12]]. However, not all outcomes are equally likely. Some results can only happen one way (to get #[span.dice.outline 12] you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (to get #[span.dice.outline 5] you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
 
@@ -584,12 +592,14 @@ as the __Central Limit Theorem__, and the bell-shaped curve is called the
 __Normal Distribution__.
 
 ---
+
+## Monty Hall
+
 > id: monty-hall
 > sectionBackground: dark gameshow
 > goals: game
 > title: The Monty Hall Problem
-
-## Monty Hall
+> section: monty-hall
 
 Welcome to the most spectacular game show on the planet! You now have a
 once-in-a-lifetime chance of winning a fantastic sports car which is hidden
@@ -666,9 +676,11 @@ Out of the 9 possibilities [[6]] need you to switch doors, to win. This gives a
 chance of `6/9 = 2/3` like before.
 
 ---
-> id: quantum
 
 ## True Randomness
+
+> id: quantum
+> section: true-randomness
 
 ::: column.grow
 Most of this course relied on the fact that things like coins, or dice, or
