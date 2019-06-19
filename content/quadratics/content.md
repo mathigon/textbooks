@@ -13,9 +13,9 @@ been working on a brand new model, the _SquareBoard_, which is finally ready to
 start production. You’ve been put in charge of finding the optimal resale price
 for the skateboards – and it turns out that building them is not cheap:
 
-* The tools and machines required to construct skateboards cost $5,000. This is
+* The tools and machines required to construct skateboards cost \$5,000. This is
   often called a __fixed cost__.
-* Every skateboard costs additional $30 worth of of wood, other materials,
+* Every skateboard costs additional \$30 worth of of wood, other materials,
   and salary for the employees. This is often called a __variable cost__.
 
 In other words, the __cost__ of producing _n_ skateboards is
@@ -50,7 +50,7 @@ economists came up with the following equation:
 
 {.text-center} _{.pill.teal}demand_ = 2800 – 15 × _{.pill.purple}price_
 
-For example, if a skateboard costs $80, the demand will be [[1600]] units.
+For example, if a skateboard costs \$80, the demand will be [[1600]] units.
 
 ---
 > id: intro4
@@ -91,8 +91,8 @@ different prices:
 
 ::: .overflow-wrap
 
-| _{.pill.purple}price/$_  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
-| _{.pill.yellow}profit/$_ | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
+| _{.pill.purple}price/\$_  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
+| _{.pill.yellow}profit/\$_ | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
 {.grid}
 
 :::
@@ -118,7 +118,7 @@ profits rise, too. However, if the skateboards become [too expensive](->.r2),
 people no longer want to buy them and our profit falls again.
 
 We can maximise our profit by pricing the skateboards at approximately
-$[[108 ± 10]].
+\$[[108 ± 10]].
 
 ---
 > id: intro-final
@@ -1910,7 +1910,7 @@ we could ask about their properties:
 Graphing the quadratic
 Let's look at the quadratic $y=-2\left(x-3\right)^2-3$y=−2(x−3)2−3
 
-Shape - we can see that the quadratic will be concave down because $a=-2$a=−2 which is < $0$0
+Shape - we can see that the quadratic will be concave down because $a=-2$ which is < $0$0
 
 Vertex - we can see that the quadratic will have turning point at $\left(3,-3\right)$(3,−3).  
 
@@ -1921,12 +1921,12 @@ But many parabolas are concave down and have a vertex at $\left(3,-3\right)$(3,�
 A common point to use would be the $y$y intercept.  
 
 Remember
-$x$x intercept occurs where the value of $y$y is $0$0
-$y$y intercept occurs where the value of $x$x is $0$0
+$x$ intercept occurs where the value of $y$y is $0$0
+$y$ intercept occurs where the value of $x$x is $0$0
 
 Now we can sketch the curve.
 
-Using vertex $\left(3,-3\right)$(3,−3), the concave down shape and a $y$y intercept of $-21$−21 :
+Using vertex $\left(3,-3\right)$, the concave down shape and a $y$y intercept of $-21$ :
 
 As a hand drawn sketch, this shows all the information we need to sketch the quadratic.  
 

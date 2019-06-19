@@ -946,7 +946,7 @@ computers.
 Finding a fast algorithm to solve the travelling salesman problem would also
 solve one of the most famous open problems in mathematics and computer science,
 the __P vs NP__ problem. It is one of the seven [Millennium Prize
-Problems](gloss:millennium-prize), each carrying a $1m prize.
+Problems](gloss:millennium-prize), each carrying a \$1m prize.
 :::
 
 ---
