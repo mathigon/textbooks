@@ -1530,7 +1530,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
     x-gesture(target=".eratosthenes .l-red")
 
 {.caption}如果我们把小整数的倍数全都删除， 那么剩下的数必都是素数。这种方法
-被称为[埃拉托森筛选法](gloss:sieve-eratosthenes)。
+被称为[埃拉托色尼筛选法](gloss:sieve-eratosthenes)。
 
 ::: column(width=320)
 
