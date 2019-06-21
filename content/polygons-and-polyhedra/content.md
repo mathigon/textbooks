@@ -298,8 +298,14 @@ size of the [internal angles](target:int-angle) of the polygon:
         mtext: span.step-target(data-to="half-base") adjacent
       mo(value="=") =
       mfrac
-        mtext: x-blank(choices="apothem|s|s/2")
-        mtext: x-blank(choices="s/2|s|apothem")
+        mtext: x-blank
+          span.choice apothem
+          span.choice s
+          span.choice s/2
+        mtext: x-blank
+          span.choice s/2
+          span.choice s
+          span.choice apothem
 
     p.text-center.reveal(when="blank-5 blank-6"): span.math
       mo ⇒
