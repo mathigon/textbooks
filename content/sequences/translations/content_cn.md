@@ -1424,7 +1424,7 @@ _{span.fib-action(data-value=2/5)}`2/5`_ 或 _{span.fib-action(data-value=1/3)}`
 到目前为止，我们只使用了斐波那契数的递推方程。实际上，也有一个显式的方程
 式——只是更难找到它：
 
-{.text-center} `x_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n + ((1 - sqrt(5))/2)^n )`
+{.text-center} `F_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n - ((1 - sqrt(5))/2)^n )`
 
 我们也可以尝试为斐波那契数选择不同的起始点。例如，如果我们从2，1开始, …，而不是
 1，1开始，…，我们得到一个序列，它叫做__卢卡斯序列__。
@@ -1434,7 +1434,8 @@ _{span.fib-action(data-value=2/5)}`2/5`_ 或 _{span.fib-action(data-value=1/3)}`
 
 {.text-center.s-purple.s-small}
 ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
-_{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_, …
+_{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_,
+_{span.n}${8×a+13×b}_, …
 
 ---
 > id: fibonacci-puzzles
@@ -1530,7 +1531,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
     x-gesture(target=".eratosthenes .l-red")
 
 {.caption}如果我们把小整数的倍数全都删除， 那么剩下的数必都是素数。这种方法
-被称为[埃拉托森筛选法](gloss:sieve-eratosthenes)。
+被称为[埃拉托色尼筛选法](gloss:sieve-eratosthenes)。
 
 ::: column(width=320)
 
