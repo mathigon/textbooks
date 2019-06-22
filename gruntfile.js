@@ -103,7 +103,7 @@ grunt.initConfig({
       tasks: ['rollup']
     },
     textbooks: {
-      files: ['content/**/*.md'],
+      files: ['content/**/*.md', 'content/**/*.yaml'],
       tasks: ['textbooks']
     }
   },

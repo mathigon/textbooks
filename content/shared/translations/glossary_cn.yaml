@@ -454,7 +454,7 @@ figurate-numbers:
   link: /course/sequences/figurate#figurate
 
 formula:
-  title: 公式 
+  title: 公式
   text: __公式__是描述两个或多个变量之间关系的规则或方程。例如`a=πr^2`。
 
 fractal:
@@ -1210,10 +1210,6 @@ tessellation:
   link: /course/polygons-and-polyhedra/tessellations
 
 tetrahedral-numbers:
-  title: Tetrahedral Numbers
-  text: A __tetrahedral number__ is a number that is created by stacking
-    multiple spheres into a _tetrahedron_. The first tetrahedral numbers are
-    1, 4, 10, 20, 35, …
   title: 四面体数
   text: __四面体数__是将多个球体堆叠成一个_四面体_所要的数。首批四面体数
     是1，4，10，20，35，…
