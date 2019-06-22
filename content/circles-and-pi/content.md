@@ -498,7 +498,7 @@ the night shifted a tiny bit every day – until, after approximately 360 days,
 they had rotated back to their starting point. And this might have been the
 reason why they divided the circle into 360 degrees.
 
-    .constellations
+    figure: .constellations
       .label.md Midnight on day ${day}
       .bg
       .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
@@ -739,24 +739,6 @@ parts of a circle – like the center, radius, diameter and circumference.
 However, there are many geometric elements related to a circle, which we’ll
 need to solve more complex problems:
 
-::: column.grow
-
-* {.r} A [{.red} secant](pill:secant) is a line that intersects a circle in two
-  points. [Continue](btn:next)
-* {.r.reveal(when="next-0")} A [{.green} chord](pill:chord) is a line segment
-  whose endpoints lie on the circumference of a circle. [Continue](btn:next)
-* {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) is a line that
-  touched a circle at exactly one point. This is called the __point of
-  tangency__. [Continue](btn:next)
-* {.r.reveal(when="next-2")} An [{.yellow} arc](pill:arc) is a section of the
-  circumference of a circle. [Continue](btn:next)
-* {.r.reveal(when="next-3")} A [{.teal} sector](pill:sector) is a part of the
-  interior of a circle, bounded by an _arc_ and _two radii_.
-  [Continue](btn:next)
-* {.r.reveal(when="next-4")} Finally, a [{.purple} segment](pill:segment) is a
-  part of the interior of a circle, bounded by an _arc_ and _a chord_.
-  [Continue](btn:next)
-
 ::: column(width=300)
 
     x-geopad.sticky(width=300 height=300): svg
@@ -781,6 +763,24 @@ need to solve more complex problems:
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
       path.yellow.thick.reveal(x="arc(x,d1,Math.PI/2.5)" label="Arc" target="arc" when="next-2" animation="draw")
+
+::: column.grow(parent="right")
+
+* {.r} A [{.red} secant](pill:secant) is a line that intersects a circle in two
+  points. [Continue](btn:next)
+* {.r.reveal(when="next-0")} A [{.green} chord](pill:chord) is a line segment
+  whose endpoints lie on the circumference of a circle. [Continue](btn:next)
+* {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) is a line that
+  touched a circle at exactly one point. This is called the __point of
+  tangency__. [Continue](btn:next)
+* {.r.reveal(when="next-2")} An [{.yellow} arc](pill:arc) is a section of the
+  circumference of a circle. [Continue](btn:next)
+* {.r.reveal(when="next-3")} A [{.teal} sector](pill:sector) is a part of the
+  interior of a circle, bounded by an _arc_ and _two radii_.
+  [Continue](btn:next)
+* {.r.reveal(when="next-4")} Finally, a [{.purple} segment](pill:segment) is a
+  part of the interior of a circle, bounded by an _arc_ and _a chord_.
+  [Continue](btn:next)
 
 :::
 

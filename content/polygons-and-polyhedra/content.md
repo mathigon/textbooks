@@ -1107,7 +1107,7 @@ there any shapes that don’t tessellate at all? Try to create interesting
 patterns!
 
     include ./components/tessellation
-    x-tessellation
+    figure: x-tessellation
     x-gesture(target="x-tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
       h4 Examples of other students’ tessellations
