@@ -161,21 +161,21 @@ export function eratosthenes($section) {
   let $grid = $section.$('.number-grid');
 
   function colour(n, c) {
-    numberGrid($grid, 1000, c, i => (i % n === 0));
-    numberGrid($grid, 1000, 'off',  i => (i > n && i % n === 0));
+    numberGrid($grid, 500, c, i => (i % n === 0));
+    numberGrid($grid, 500, 'off',  i => (i > n && i % n === 0));
   }
 
-  $section.$slides.on('next', function(x) {
+  $section.$slides.on('next', (x) => {
     switch(x) {
       case 1: $section.$('.number-cell').addClass('off'); break;
       case 2: colour(2, 'red'); break;
       case 3: colour(3, 'blue'); break;
       case 4: colour(5, 'green'); break;
       case 5:
-        if ($section.scores.has()) {
+        if ($section.scores.has('blank-0')) {
           colour(7, 'yellow'); break;
         } else {
-          $section.on('score-blank-0', function() { colour(7, 'yellow'); });
+          $section.onScore('blank-0', () => colour(7, 'yellow'));
         }
     }
   });
