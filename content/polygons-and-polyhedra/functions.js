@@ -7,10 +7,9 @@
 import { clamp, tabulate } from '@mathigon/core';
 import { toWord, Segment, Point, Angle } from '@mathigon/fermat';
 import { Browser, slide } from '@mathigon/boost';
-
-import { Solid } from '../shared/components/solid'
 import {PolyhedronData} from './components/polyhedron-data';
 
+import '../shared/components/solid'
 import './components/tessellation';
 import './components/polyhedron';
 import './components/folding';
