@@ -4,6 +4,7 @@
 
 > id: thales
 > goals: p1 p2 p3 move
+> section: introduction
 
 ::: column.grow
 Mathematics has been studied for thousands of years – to predict the seasons,
@@ -363,6 +364,7 @@ _{button.next-step} Continue_
 
 ---
 > id: euclid
+> section: euclids-axioms
 
 ## Euclid’s Axioms
 
@@ -488,6 +490,7 @@ completely different subjects.
 
 ---
 > id: measuring
+> section: geometric-construction
 
 ## Geometric Construction
 
