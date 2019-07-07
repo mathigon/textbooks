@@ -3,7 +3,7 @@
 # ==============================================================================
 
 welcome: "Welcome to Mathigon! I’m Archie, your personal tutor. :mortar_board:"
-account: You can [create a free account](->.nav-link.dropdown-title) to save your progress.
+account: You can [create a free account](->.nav-link.popup-target) to save your progress.
 tutorial1: Our content is divided into small steps. You have to complete the activities to reveal what’s next.
 tutorial2: We will save all your progress, so you can come back later and continue right where you left off.
 
