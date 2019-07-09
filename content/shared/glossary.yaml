@@ -725,6 +725,16 @@ millennium-prize:
     However the mathematician who solved it, Grigori Perelman, declined the
     award.
 
+molecule:
+  title: Molecule
+  text: |
+    A __molecule__ consists of two ore mole atoms which are held together by
+    chemical bonds. It has no electric charge, unlike __Ions__.
+
+    Examples of molecules include `O_2`, which consists of two connected Oxygen
+    atoms, and `H_2 O`, which consists of two Hydrogen atoms and one Oxygen
+    atom.
+
 multiple:
   title: Multiple
   text: A number _a_ is a __multiple__ of a number _b_, if _b_ is a factor of _a_.
@@ -952,6 +962,14 @@ proof:
   title: Proof
   text: A __proof__ is a logical argument that shows beyond any doubt that a
     certain statement is true.
+
+protein:
+  title: protein
+  text: |
+    A __Protein__ is a large _macromolecule_ that can perfom many different
+    functions within living organisms: from digestion to communicating between
+    cells or replicating DNA. Proteins consist of one or more chains of _amino
+    acid residues_.
 
 pyramid:
   title: Pyramid

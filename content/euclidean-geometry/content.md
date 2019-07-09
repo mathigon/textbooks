@@ -1068,17 +1068,20 @@ self-folding camping tents.
 
 ::: column.grow
 
-A similar principle is used by [DNA](gloss:dna), the molecules that carry the
-genetic information in your body. 
+Origami even appears in your own body: every human cell contains around 2 meters
+of [DNA](gloss:dna), the [molecule](gloss:molecule) that carries all your
+genetic information. If you could combine the DNA from all cells in your body,
+their length would be more than 140 times the distance from Earth to the sun!
 
-Every human cell contains about 2 meters of DNA. If you could combine the
-strands of DNA from all the cells in your body, their length would be more than
-140 times the distance from Earth to the sun!
+To fit all that DNA in your body, without it getting twisted or torn, every
+strand is curled, folded, and held in place by special molecules.
 
 :::
 
-Nature found a clever way to fit all that DNA into your body, without it getting
-twisted or torn. Every strand of DNA is curled, folded, and held in place by
-special molecules. This process, called _protein folding_ is one of the most
+---
+> id: origami-dna-1
+
+A similar process is also used by other complex molecules that appear in living
+organisms. For example, __[protein](gloss:protein) folding__ is one of the most
 complex problems in biology. Understanding it better can help scientists develop
 new drugs in the future.

@@ -831,7 +831,7 @@ Deprem ve tsunami gibi felaket durumlarında da, acil müdahale araçlarına ge�
 
 Okyanusların derinlikleri, yeryüzünde en az keşfedilmiş bölgelerdendir. Oralarda yaşayan hayvanlar genellikle esnek ve narindirler, bu yüzden incelenmeleri epey zordur. 
 
-Bu resimde, deniz canlılarının etrafını sarabilen [düzgün onikiyüzlü](gloss:dodacahedron) şeklinde bir “tuzak” görüyorsunuz. Onun sayesinde bu canlıları çalışabiliriz. Uzaktan kontrol edilebiliyor ve beş kolunun karmaşık bir şekilde katlanması, sadece tek bir motor ile kontrol edilebiliyor.
+Bu resimde, deniz canlılarının etrafını sarabilen [düzgün onikiyüzlü](gloss:dodecahedron) şeklinde bir “tuzak” görüyorsunuz. Onun sayesinde bu canlıları çalışabiliriz. Uzaktan kontrol edilebiliyor ve beş kolunun karmaşık bir şekilde katlanması, sadece tek bir motor ile kontrol edilebiliyor.
 
 :::
 
