@@ -1205,7 +1205,7 @@ Can you calculate the number of rabbits after a few more months?
 _{.n}[[13]]_, _{.n}[[21]]_, _{.n}[[34]]_, _{.n}[[55]]_, _{.n}[[89]]_,
 _{.n}[[144]]_, …
 
-{.reveal(when="blank-5")} So after 12th months, you’ll have 144 pairs of rabbits!
+{.reveal(when="blank-5")} So after 12 months, you’ll have 144 pairs of rabbits!
 
     figure.reveal(when="blank-5")
       x-media(src="images/rabbits.jpg" width=600 height=230)
