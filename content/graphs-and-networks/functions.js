@@ -181,7 +181,7 @@ export function bridges($section) {
 
     map.on('clear', () => {
       totalCrossed = 0;
-      $error.exit('pop', 300);
+      $error.exit('pop', 200);
       $solveds[i].exit();
     });
 
@@ -189,7 +189,7 @@ export function bridges($section) {
       if (!map.drawing) return;
       map.stop();
       let p = svgPointerPosn(e, $svg);
-      $error.translate(p.x - 20, p.y - 20);
+      $error.css('transform', `translate(${p.x - 20}px, ${p.y - 20}px)`);
       $error.enter('pop', 300);
       $section.addHint('crossWater');
     });
