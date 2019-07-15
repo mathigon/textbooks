@@ -385,7 +385,7 @@ dna:
   title: DNA
   text: __DNA__ (Desoxyribonukleinsäure) ist ein Molekül, das den genetischen
     Bauplan aller lebenden Organismen enthält. Die meisten DNAs bestehen aus
-    zwei Strängen, die eine _Doppelhelix_bilden. Die genetische Information wird
+    zwei Strängen, die eine _Doppelhelix_ bilden. Die genetische Information wird
     in der Größenordnung von vier Nukleinsäuren (A, G, C und T) kodiert, aus
     denen sich die DNA zusammensetzt. _DNA-Sequenzierung_ ist der Prozess der
     Extraktion dieser Information - eine wesentliche Technik in Biologie,
@@ -406,12 +406,12 @@ dot-annihilation:
 dot-machine:
   title: Dot Machine
   text: |
-    A __dot machine__ consists of multiple cells containing dots. You can
-    manipulate these dots according to specific rules.
+    Eine __Punkt-Maschine__ besteht aus mehreren Zellen, die Punkte enthalten. 
+    Du kannst diese Punkte verändern, indem du bestimmte Regeln auf sie anwendest.
 
-    For example, in a `1←3` machine, 3 dots in one cell can be converted into 1
-    dot in the next cell to the _left_. Similarly, 1 dot can be converted into
-    3 dots in the next cell to the _right_. This is called an “explosion”.
+    In einer `1←3` Maschine werden z.B. 3 Punkte einer Zelle umgewandelt in einen 
+    Punkt in der Zelle links davon. Ganz ähnlich, wird 1 Punkt in der Zelle umgewandelt
+    in 3 Punkte in der Zelle rechts daneben. Das wird eine "Explosion" genannt.
 
 ellipse:
   title: Ellipse
@@ -721,7 +721,7 @@ line-segment:
 line-slope:
   title: Steigung einer Geraden
   text: Die __Steigung__ einer Geraden gibt ihre "Steilheit“ an und wird in der
-    Regel durch den Buchstaben _k_bezeichnet. Sie entspricht der Änderung in _y_
+    Regel durch den Buchstaben _k_ bezeichnet. Sie entspricht der Änderung in _y_
     für eine Einheitenänderung in _x_ entlang der Geraden.
 
 linear-equation:
@@ -773,8 +773,8 @@ molecule:
   title: Molekül
   text: |
     Ein __Molekül__ besteht aus zwei mehr Atomen, die durch chemische Bindungen
-    zusammengehalten werden. Es hat keine elektrische Ladung, im Gegensatz zu
-    __Ionen__.
+    zusammengehalten werden und dabei über einen längeren Zeitraum stabil sind. 
+    Trägt es eine elektrische Ladung, nennt man es __Ionen__.
 
     Beispiele für Moleküle sind `O_2`, das aus zwei verbundenen Sauerstoffatomen
     besteht, und `H_2 O`, das aus zwei Wasserstoffatomen und einem
@@ -1022,7 +1022,7 @@ protein:
     Ein __Protein__ ist ein großes _Makromolekül_, das in lebenden Organismen
     viele verschiedene Funktionen erfüllen kann: von der Verdauung über die
     Kommunikation zwischen Zellen bis hin zur DNA-Replikation. Proteine bestehen
-    aus einer oder mehreren Ketten von _Aminosäureresten_.
+    aus einer oder mehreren Ketten von _Aminosäuren_.
 
 pyramide:
   title: Pyramide
