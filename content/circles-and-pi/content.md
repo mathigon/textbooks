@@ -2041,7 +2041,7 @@ faces increases, the polyhedron starts to look more and more like a sphere.
 
 ## Conic Sections
 
-> sectionId: conic-sections
+> section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
 

@@ -53,7 +53,7 @@ Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von sei
 Der [{.step-target.pill.b.blue}Durchmesser](target:d)
  ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
  den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
- * {.step-target.pill.b.green}Der [{.reveal(when="blank-0")}Umfang](target:c)
+ * {.reveal(when="blank-0")} Der [{.step-target.pill.b.green}Umfang](target:c)
  ist gleich der Länge der Strecke um einen Kreis.
 
 :::
@@ -805,9 +805,9 @@ Definitionen merken musst - Du kannst jederzeit das
     // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
     // 
     // Point of Tangency: Der Punkt, an dem eine Tangente den Kreis berührt.
- // 
-//  Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
- // Beziehung. Let’s investigate it here.
+    // 
+    //  Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
+    // Beziehung. Let’s investigate it here.
     // 
     // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
     // line is perpendicular to the radius drawn to the point of tangency.
@@ -833,7 +833,7 @@ Definitionen merken musst - Du kannst jederzeit das
 {.todo} KOMMT BALD!
 
     // Eine Sehne ist eine Strecke, deren Endpunkte auf einem Kreis liegen. Der Durchmesser ist die
- // längste Sehne in einem Kreis. There are several theorems that explore the
+    // längste Sehne in einem Kreis. There are several theorems that explore the
     // properties of chords.
     // 
     // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
@@ -2014,7 +2014,7 @@ To find the surface area of a sphere, we can once again approximate it using a
 different shape – for example a polyhedron with lots of faces. As the number of
 faces increases, the polyhedron starts to look more and more like a sphere.
 
-{.todo} KOMMT BALD! Sphere Surface Area Proof
+{.todo} KOMMT BALD!
 
     // If we connect the small polygons to the center of the sphere, we get
     // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
@@ -2041,7 +2041,7 @@ faces increases, the polyhedron starts to look more and more like a sphere.
 
 ## Kegelschnitte
 
-> sectionId: conic-sections
+> section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
 
@@ -2108,7 +2108,7 @@ focal points.
 If you have a long string connected to two fixed points, you can draw a perfect
 ellipse by tracing the maximum reach of the strings:
 
-{.todo} KOMMT BALD! Ellipses drawing interactive
+{.todo} KOMMT BALD!
 
     // ---
     // > id: ellipses-1
