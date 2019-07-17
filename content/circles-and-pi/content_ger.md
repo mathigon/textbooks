@@ -406,8 +406,8 @@ Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissensch
 > id: pi-day
 
 Es gibt sogar jedes Jahr einen _Pi day ("Pi-Tag")_
-, der entweder auf den 14. März fällt, weil `pi ≈ 3.14`, was der Datumschreibweise im englischsprachigen Raum entspricht, oder auf den 22. Juli,
-weil `pi ≈ 22/7`, also 22/7, eine anderen Datumsschreibweise.
+, der entweder auf den 14. März, weil `pi ≈ 3.14`, da das der Datumsschreibweise im englischsprachigen Raum entspricht, oder auf den 22. Juli fällt,
+weil `pi ≈ 22/7`, also 22/7 (eine anderen Datumsschreibweise).
 
     figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -463,8 +463,8 @@ __{.m-red}vollständige Umdrehung__ hat [[360]]°, eine __{.m-green}halbe__ hat
 
 {.r}Die Zahl 360 ist sehr praktisch, da sie durch so viele andere Zahlen
  teilbar ist: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15 und so weiter. Das bedeutet, dass viele 
-Bruchteile eines Kreises auch ganze Zahlen sind. Aber hast du dich jemals gefragt
-, woher die Zahl 360 kommt? [ Weiter](btn:next)
+Bruchteile eines Kreises praktischerweise ganze Zahlen sind. Aber hast du dich jemals gefragt
+, wie man überhaupt auf die Zahl 360 gekommen ist? [ Weiter](btn:next)
 
 ---
 > id: babylon
@@ -744,7 +744,7 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
       
-      path.teal.fill.reveal(x="sector(x,d1,Math.PI/2.5)" target="sector" when="next-3" label="Sector" label-colour="white")
+      path.teal.fill.reveal(x="sector(x,d1,Math.PI/2.5)" target="sector" when="next-3" label="Sektor" label-colour="white")
       path.purple.fill.reveal(x="arc(x,b1,Math.PI/2.5)" target="segment" when="next-4" label="Segment")
       
       path.black(x="circle(x,100)" name="c")
@@ -802,9 +802,9 @@ Definitionen merken musst - Du kannst jederzeit das
     // https://www.mathopenref.com/consttangents.html
     // https://www.mathopenref.com/consttangent.html
 
-    __[CC] Konstruiere eine Tangente von einem Punkt außerhalb eines bestimmten Kreises zum Kreis.__
+    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
     // 
-    // Berührungspunkt: Der Punkt, an dem eine Tangente den Kreis berührt.
+    // Point of Tangency: Der Punkt, an dem eine Tangente den Kreis berührt.
  // 
 //  Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
  // Beziehung. Let’s investigate it here.
@@ -912,7 +912,7 @@ Wissen über die Kreisbögen und Sektoren eines Kreises.
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-colour="white")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sektor" target="sector" label-colour="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Kreisbogen" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
 
@@ -1094,13 +1094,13 @@ Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel]
 ::: .reveal(when="blank-0")
 Nun können wir die Formel für die Kreisbogenlänge verwenden, die wir oben hergeleitet haben:
 
-{.text-center} `§pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
+{.text-center} `§pill("Kreisbogenlänge","red","arc") / pill("Umfang","blue","circ") = (input(7.2)"°") / "360°"`
 :::
 
 ::: .reveal(when="blank-1")
 Wenn wir diese umformen, stellen wir fest, dass der Umfang der Erde sich so berechnen lässt:
 
-{.text-center} `§pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
+{.text-center} `§pill("Erdumfang","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 :::
 
 ::: .reveal(when="blank-2")
