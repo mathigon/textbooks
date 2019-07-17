@@ -498,7 +498,7 @@ Astronomen bemerkten, dass sich die zu einer bestimmten Zeit während
 nach etwa 360 Tagen wieder zu ihrem Ausgangspunkt zurückgekehrt waren. Und das mag der Grund gewesen sein, 
 warum sie den Kreis in 360 Grad unterteilt haben.
 
-    .constellations
+    figure: .constellations
       .label.md Mitternacht am Tag ${day}
       .bg
       .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
@@ -515,8 +515,8 @@ und diese Annäherung war völlig ausreichend.
 
 Es funktionierte auch gut mit dem bestehenden 60er Zahlensystem (weil 
 `6 xx 60 = 360`). Dieses System ist der Grund, warum wir immer noch 60 Sekunden in einer
-Minute und 60 Minuten in einer Stunde verwenden - obwohl die meisten anderen Einheiten im [Dezimalsystem](gloss:base-10) (e.g. 10 years in a decade, or 100 years in a century) angegeben 
-werden.
+Minute und 60 Minuten in einer Stunde verwenden - obwohl die meisten anderen Einheiten im [Dezimalsystem](gloss:base-10) angegeben 
+werden (zB. ein Jahrzent für 10 Jahre, ein Jahrhundert für 100 Jahre).
 
 ::: column.grow
 
@@ -543,7 +543,7 @@ Jupiter sogar 10.475 Tage haben.
 
 Anstatt einen Kreis in eine bestimmte Anzahl von Segmenten (z.B. 360 Grad) aufzuteilen, ziehen
 Mathematiker es oft vor, Winkel mittels des [Umfangs](gloss:circle-circumference)
-eines __Einheitskreises __(gloss:unit-circle) (a circle with radius 1)zu messen.
+eines __Einheitskreises__(gloss:unit-circle) (eines Kreises mit dem Radius 1) zu messen.
 
 ::: column(width=280)
 
@@ -571,7 +571,7 @@ Abstand entlang des Umfangs
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")}Und so weiter: Diese Art der Winkelmessung wird als 
-[__Bogenmaß__](gloss:radians) (you could remember this as “radius units”) bezeichnet.
+[__Radiant („Bogenmaß“)__](gloss:radians) bezeichnet (als Eselsbrücke könntest du dir “Radiusanteile” merken).
 
 :::
 
@@ -653,7 +653,7 @@ pro Stunde betragen muss_
 > id: radians-distance-1
 
 Wie du siehst sind in diesem Beispiel Radiant die viel bequemere Einheit 
-als Grad. Sobald wir die Drehgeschwindigkeit kennen, müssen wir einfach mit dem 
+als Grad. Sobald wir die Drehgeschwindigkeit kennen, müssen wir einfach mit dem
 Radius multiplizieren, um die tatsächliche Drehgeschwindigkeit zu erhalten.
 
 Hier ist ein weiteres Beispiel: Dein Auto hat Räder mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
@@ -668,9 +668,9 @@ _{span.reveal(when="blank-0")}(oder `80/(2pi) = 13` Umdrehungen pro Sekunde)_
 
 Für die meisten einfachen Geometrieaufgaben sind Grad und Radiant völlig 
 austauschbar - Du kannst entweder wählen, welche du bevorzugst, 
-oder in der Frage wird schon festgelegt, in welcher Einheit man antworten soll. Sobald du dich jedoch mit fortgeschrittenerer [Trigonometrie](gloss:trigonometry) or [calculus](gloss:calculus)beschäftigst
-,
- wirst du feststellen, dass Radiant viel bequemer sind als Grad.
+oder in der Frage wird schon festgelegt, in welcher Einheit man antworten soll. Sobald du dich jedoch tiefer
+mit [Trigonometrie](gloss:trigonometry) oder [Infinitesimalrechnung ](gloss:calculus) auseinandersetzt,
+wirst du feststellen, dass Radiant viel bequemer zu handhaben sind als das Gradmaß.
 
 ::: column.grow
 
@@ -715,7 +715,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 Die Verwendung von Radiant hat einen besonders interessanten Vorteil bei der Verwendung 
 der [__Sinus-Funktion__](gloss:sin). Wenn `θ` ein sehr kleiner Winkel ist (weniger als 20° oder 0,3 rad),
-dann gilt `"sin"(θ) ≈ θ`. Zum Beispiel
+dann gilt `"sin"(θ) ≈ θ`. Zum Beispiel,
 
 {.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
@@ -739,24 +739,6 @@ die verschiedenen Teile eines Kreises gelernt - wie Mittelpunkt, Radius, Durchme
 Es gibt jedoch im Zusammenhang mit Kreisen viele geometrische Elemente, 
 die wir zur Lösung komplexerer Aufgaben benötigen:
 
-::: column.grow
-
-* {.r}Eine [{.red}Sekante](pill:secant) ist eine Gerade, die einen Kreis in 
-zwei Punkten schneidet. [Weiter](btn:next)
-* {.r.reveal(when="next-0")}Eine [{.green}Sehne](pill:chord) ist eine Strecke, 
-deren Endpunkte auf dem Umfang eines Kreises liegen. [Weiter](btn:next)
-* {.r.reveal(when="next-1")}Eine [{.blue}Tangente](pill:tangent) ist eine Gerade, die 
-einen Kreis an genau einem Punkt berührt. Man nennt ihn den 
-__Berührungspunkt__. [Weiter](btn:next)
-* {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus 
-dem Umfang eines Kreises. [Weiter](btn:next)
-* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil des 
-Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_. 
-[Weiter](btn:next)
-* {.r.reveal(when="next-4")}Und ein [{.purple} Segment](pill:segment) ist ein
- Teil des Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
-  [Weiter](btn:next)
-
 ::: column(width=300)
 
     x-geopad.sticky(width=300 height=300): svg
@@ -773,14 +755,32 @@ Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
       
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
-      path.green.thick.reveal(x="segment(b1,b2)" label="Chord" target="chord" when="next-0" animation="draw")
+      path.green.thick.reveal(x="segment(b1,b2)" label="Sehne" target="chord" when="next-0" animation="draw")
       
       circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
-      path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Tangent" target="tangent" when="next-1" animation="draw")
+      path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Tangente" target="tangent" when="next-1" animation="draw")
       
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
-      path.yellow.thick.reveal(x="arc(x,d1,Math.PI/2.5)" label="Arc" target="arc" when="next-2" animation="draw")
+      path.yellow.thick.reveal(x="arc(x,d1,Math.PI/2.5)" label="Kreisbogen" target="arc" when="next-2" animation="draw")
+
+::: column.grow(parent="right")
+
+* {.r}Eine [{.red}Sekante](pill:secant) ist eine Gerade, die einen Kreis in 
+zwei Punkten schneidet. [Weiter](btn:next)
+* {.r.reveal(when="next-0")}Eine [{.green}Sehne](pill:chord) ist eine Strecke, 
+deren Endpunkte auf dem Umfang eines Kreises liegen. [Weiter](btn:next)
+* {.r.reveal(when="next-1")}Eine [{.blue}Tangente](pill:tangent) ist eine Gerade, die 
+einen Kreis an genau einem Punkt berührt. Man nennt ihn den 
+__Berührungspunkt__. [Weiter](btn:next)
+* {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus 
+dem Umfang eines Kreises. [Weiter](btn:next)
+* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil des 
+Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_. 
+[Weiter](btn:next)
+* {.r.reveal(when="next-4")}Und ein [{.purple} Segment](pill:segment) ist ein
+ Teil des Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
+  [Weiter](btn:next)
 
 :::
 
@@ -802,9 +802,9 @@ Definitionen merken musst - Du kannst jederzeit das
     // https://www.mathopenref.com/consttangents.html
     // https://www.mathopenref.com/consttangent.html
 
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
+    __[CC] Konstruiere eine Tangente von einem Punkt außerhalb eines bestimmten Kreises zum Kreis.__
     // 
-    // Point of Tangency: Der Punkt, an dem eine Tangente den Kreis berührt.
+    // Berührungspunkt: Der Punkt, an dem eine Tangente den Kreis berührt.
  // 
 //  Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
  // Beziehung. Let’s investigate it here.
@@ -891,7 +891,7 @@ dafür viele Hinweise: von Schiffen, die auf See hinter dem Horizont verschwande
 Kreisbewegung der Sterne in der Nacht.
 
 Leider wusste niemand genau, _wie groß_ die Erde war - bis etwa 200 v. Chr.,
-als der Mathematiker [Eratosthenes](bio:eratosthenes) eine geniale Möglichkeit 
+als der Mathematiker [Eratosthenes](bio:eratosthenes) eine geniale Möglichkeit
 fand, den Erdradius mit Hilfe einfachster Geometrie zu bestimmen. Alles, was wir benötigen, ist etwas mehr
 Wissen über die Kreisbögen und Sektoren eines Kreises.
 
@@ -913,7 +913,7 @@ Wissen über die Kreisbögen und Sektoren eines Kreises.
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
       
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-colour="white")
-      path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Arc" target="arc")
+      path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Kreisbogen" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
 
 ::: column.grow
@@ -967,8 +967,8 @@ Wir können diese Beziehung in einer Gleichung ausdrücken:
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sector" target="sector" label-colour="white")
-      path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Arc" target="arc")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sektor" target="sector" label-colour="white")
+      path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Kreisbogen" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
       
       path.fill.orange.transparent(x="circ" target="area")
@@ -1044,7 +1044,7 @@ Erde zu berechnen. [ Weiter](btn:next)
 
 Im alten Ägypten gab es am Nil eine Stadt namens _Syene_. Syene war
 berühmt für einen Brunnen mit einer seltsamen Eigenschaft: jedes Jahr 
-zu einem bestimmten Zeitpunkt - mittags am 21. Juni, dem Tag der _Sommersonnenwende_, spiegelte sich 
+zu einem bestimmten Zeitpunkt - mittags am 21. Juni, dem Tag der _Sommersonnenwende_ - spiegelte sich 
 das Sonnenlicht am Grund des Brunnens. Zu diesem Zeitpunkt wurde der Boden des Brunnens
 beleuchtet, aber nicht die Seitenwände seines Schachts. Die Sonne stand also direkt über
 dem Brunnen.
@@ -1066,13 +1066,13 @@ im Nil lag.
 :::
 
 Der Mathematiker [Eratosthenes](bio:eratosthenes) lebte in _Alexandria_, etwa
-800\ km nördlich von Syene, wo er Direktor der berühmten Bibliothek war. Im
+800\ km nördlich von Syene, wo er Direktor der berühmten „großen Bibliothek“ war. Im
 Stadtzentrum von Alexandria stand ein Obelisk, ein hohes, schmales Denkmal mit einer
 pyramidenförmigen Spitze.
 
 Eratosthenes bemerkte, dass der Obelisk
-am Mittag des Tages der Sommersonnenwende einen Schatten warf - was bedeutet, dass die Sonne _nicht_ direkt über ihm stand. Er 
-schloss daraus, dass dies an der Krümmung der Erde lag, und erkannte, dass dieser Umstand zur 
+am Mittag des Tages der Sommersonnenwende einen Schatten warf - was bedeutete, dass die Sonne hier _nicht_ direkt über ihm stand. Er 
+schloss daraus, dass dies an der Krümmung der Erde liegen musste, und erkannte, dass dieser Umstand zur 
 Berechnung des Umfangs der Erde verwendet werden konnte.
 
 ---
@@ -1082,12 +1082,12 @@ Berechnung des Umfangs der Erde verwendet werden konnte.
 
 {.r}Hier siehst du den Brunnen in Syene sowie den Obelisken in Alexandria, 
 die Sonnenstrahlen fallen direkt in den Brunnen, treffen aber schräg auf den Obelisken und
-werfen einen Schatten(btn:next)
+werfen einen Schatten. [Weiter](btn:next)
 
 ::: .reveal(when="next-0")
-Eratosthenes hat den [{.teal} Winkel](pill:angle1) des Schattens gemessen. 
-Er betrug 7,2°. Er stimmt mit dem [{.purple} Mittelpunktswinkel](pill:angle2) des
-[{.red}Kreisbogens](pill:arc) von Alexandria nach Syene überein, da es sich bei beiden um
+Eratosthenes machte eine Messung des [{.teal} Winkels](pill:angle1) dieses Schattens. 
+Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel](pill:angle2) des
+[{.red}Kreisbogens](pill:arc) von Alexandria nach Syene übereinstimmen, da es sich bei beiden um
 [[Wechselwinkel|Komplementärwinkel|Supplementärwinkel]] handelt.
 :::
 
@@ -1100,7 +1100,7 @@ Nun können wir die Formel für die Kreisbogenlänge verwenden, die wir oben her
 ::: .reveal(when="blank-1")
 Wenn wir diese umformen, stellen wir fest, dass der Umfang der Erde sich so berechnen lässt:
 
-{.text-center} `§pill("Umfang","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
+{.text-center} `§pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 :::
 
 ::: .reveal(when="blank-2")
@@ -1374,7 +1374,7 @@ Notice how the definition of a sphere is almost the same as the definition of a
 
 ::: column.grow
 
-Hier kannst du die ersten 100 Ziffern von Pi betrachten. It used to
+Here you can see the cylindrical _Gasometer_ in Oberhausen, Germany. It used to
 store natural gas which was used as fuel in nearby factories and power plants.
 The Gasometer is 120m tall, and its base and ceiling are two large circles with
 radius 35m. There are two important questions that engineers might want to
@@ -1668,7 +1668,7 @@ unravel a cone into its net. Move the slider to see what happens: in this
 case, we get one circle and one [[circle sector|circle segment|circle arc]].
 
 {.reveal(when="blank-0")} Now we just have to add up the area of both these
-components. The __{.m-yellow}base__ is a circle with radius _r_, so it’s area is
+components. The __{.m-yellow}base__ is a circle with radius _r_, so its area is
 
 {.text-center.reveal(when="blank-0")} `§pill(A_"Base","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
@@ -1717,7 +1717,7 @@ height using [Pythagoras](gloss:pythagoras-theorem):
 ::: column.grow
 
 The _{span.pill.step-target.red(data-to="arc")}arc length_ of the sector is the
-same as the [[circumference|diameter|arc]] of the of _{span.pill.step-target.yellow(data-to="base")}base_:
+same as the [[circumference|diameter|arc]] of the _{span.pill.step-target.yellow(data-to="base")}base_:
 _{span.reveal(when="blank-0")}`2 π r`. Now we can find the area of the sector
 using the [formula](gloss:circle-sector) we derived in a previous section:_
 
@@ -1764,8 +1764,8 @@ of the __{.m-green}sector__, to get the total surface are of the cone:
 
 ::: column.grow
 
-Eine __Kugel(gloss:sphere) ist ein dreidimensionaler Körper, der aus allen Punkten besteht, die den gleichen Abstand zu einem bestimmten __{.m-green}Mittelpunkt__ haben.
- This
+A [__sphere__](gloss:sphere) is a three-dimensional solid consisting of all
+points that have the same distance from a given  __{.m-green}center *C*__. This
 distance is called the __{.m-red}radius *r*__ of the sphere.
 
 You can think of a sphere as a “three-dimensional [circle](gloss:circle)”. Just
@@ -1781,7 +1781,7 @@ like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
 ---
 > id: sphere-1
 
-{.r} In a [previous section](/course/circles-and-pi/circle-parts#eratosthenes-1),
+{.r} In a [previous section](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1),
 you learned how the Greek mathematician [Eratosthenes](bio:eratosthenes)
 calculated the radius of Earth using the shadow of a pole – it was 6,371 km.
 Now, let’s try to find the Earth’s total volume and surface area.
@@ -2014,7 +2014,7 @@ To find the surface area of a sphere, we can once again approximate it using a
 different shape – for example a polyhedron with lots of faces. As the number of
 faces increases, the polyhedron starts to look more and more like a sphere.
 
-{.todo} COMING SOON: Sphere Surface Area Proof
+{.todo} KOMMT BALD! Sphere Surface Area Proof
 
     // If we connect the small polygons to the center of the sphere, we get
     // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
@@ -2099,7 +2099,7 @@ now, let’s have a closer look at the ellipse.
 
 ### Ellipsen
 
-Eine Ellipse sieht nur fast wie ein "länglicher Kreis" aus. In fact, you could
+An ellipse just looks almost like an “elongated circle”. In fact, you could
 think about it as a circle with _two centers_ – these are called __focal
 points__. Just like every point on a circle has the same distance from its
 center, every point on an ellipse has the same _sum of distances_ to its two
@@ -2108,7 +2108,7 @@ focal points.
 If you have a long string connected to two fixed points, you can draw a perfect
 ellipse by tracing the maximum reach of the strings:
 
-{.todo} Coming soon: Ellipses drawing interactive
+{.todo} KOMMT BALD! Ellipses drawing interactive
 
     // ---
     // > id: ellipses-1
