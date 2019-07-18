@@ -87,7 +87,7 @@ als griechischer Buchstabe _π_ für “p” geschrieben wird. Pi hat unendlich 
 > id: wheel
 > goals: unroll
 
-Wir haben hier ein Rad mit dem Durchmesser 1. Wenn du den Umfang “abrollst”, kannst du sehen, dass seine Länge genau [[`pi`|`2 * pi`|3]]] ist:
+Wir haben hier ein Rad mit dem Durchmesser 1. Wenn du den Umfang “abrollst”, kannst du sehen, dass seine Länge genau [[`pi`|`2 * pi`|3]] ist:
 
 
     figure: include svg/wheel.svg
@@ -238,7 +238,7 @@ Hier siehst du einen Kreis, der in ${toWord(n)} Ringe unterteilt ist. Wie zuvor 
 bewegen, um die Ringe "gerade zu biegen".
 
 {.reveal(when="slider")}Wenn wir die Anzahl der Ringe auf ${n2}{n2|4|2,12,1} erhöhen,
- beginnt diese Form immer mehr wie ein [[Dreieck|Rechteck|Trapez]]] auszusehen.
+ beginnt diese Form immer mehr wie ein [[Dreieck|Rechteck|Trapez]] auszusehen.
 
 {span.reveal(when="blank-1")}Die Höhe des Dreiecks entspricht dem
  [[Radius|Durchmesser|Umfang]] des Kreises. 
@@ -924,12 +924,12 @@ ist ein Teil des [[Kreisinhalts|Radius|Umfangs]] eines Kreises.
 
 ::: .reveal(when="blank-0 blank-1")
 Der Kreisbogen zwischen zwei Punkten _A_ und _B_ wird oft als `§arc(AB)` geschrieben. Diese
-Definition ist etwas zweideutig: Es gibt einen [{.purple} zweiten Kreisbogen](pill:major)
-, der _A_ und _B_ verbindet, aber den anderen Weg um den Kreis herum geht.
+Definition ist etwas zweideutig: Es gibt einen [{.purple} zweiten Kreisbogen](pill:major),
+der _A_ und _B_ verbindet, aber den anderen Weg um den Kreis herum geht.
 
 Der kleinere der beiden Bögen wird als __Minor__ bezeichnet, der größere
 als __Major__. Wenn die Punkte _A_ und _B_ genau gegenüberliegen, haben
-beide Bögen die gleiche Länge und sind [[Halbkreise|Durchmesser|Umfänge]]].
+beide Bögen die gleiche Länge und sind [[Halbkreise|Durchmesser|Umfänge]].
 :::
 
 :::
