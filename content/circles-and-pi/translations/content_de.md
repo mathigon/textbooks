@@ -50,7 +50,7 @@ Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von sei
 
 * {.reveal(when="compass" delay="1000")}Der [{.step-target.pill.b.red}Radius](target:r)
  ist der Abstand vom Mittelpunkt eines Kreises zur Kreislinie.
-Der [{.step-target.pill.b.blue}Durchmesser](target:d)
+* {.reveal(when="compass" delay="4000")}Der [{.step-target.pill.b.blue}Durchmesser](target:d)
  ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
  den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
  * {.step-target.pill.b.green}Der [{.reveal(when="blank-0")}Umfang](target:c)
@@ -238,7 +238,7 @@ Hier siehst du einen Kreis, der in ${toWord(n)} Ringe unterteilt ist. Wie zuvor 
 bewegen, um die Ringe "gerade zu biegen".
 
 {.reveal(when="slider")}Wenn wir die Anzahl der Ringe auf ${n2}{n2|4|2,12,1} erhöhen,
- beginnt diese Form immer mehr wie ein [[Dreieck|Rechteck|Trapez]]] auszusehen.
+ beginnt diese Form immer mehr wie ein [[Dreieck|Rechteck|Trapez]] auszusehen.
 
 {span.reveal(when="blank-1")}Die Höhe des Dreiecks entspricht dem
  [[Radius|Durchmesser|Umfang]] des Kreises. 
@@ -274,7 +274,7 @@ Es bedeutet auch, dass wir nie _alle_ Ziffern von Pi aufschreiben können - schl
 es unendlich viele. Altgriechische und chinesische Mathematiker berechneten die
 ersten vier Dezimalstellen von Pi, indem sie Kreise mit 
 regelmäßigen Vielecken annäherten. Beachte, wie das Vieleck, wenn du mehr Seiten hinzufügst, anfängt, [[
-[immer mehr|immer weniger|genau]] wie ein Kreis auszusehen:
+immer mehr|immer weniger|genau]] wie ein Kreis auszusehen:
 
     figure: x-media(src="images/polygons.svg" width=460 height=110)
 
@@ -377,8 +377,8 @@ Million Ziffern von Pi durchsuchen - enthalten sie deinen Geburtstag?
 > id: pi-movies
 
 Wir könnten sogar ein ganzes Buch, wie Harry Potter, in eine sehr lange 
-Zeichenkette umwandeln (a = 01, b = 02, und so weiter). Wenn Pi normal ist, wird diese Zeichenkette irgendwo in ihren Ziffern erscheinen
-- aber es würde Millionen von Jahren dauern, bis genügend Ziffern berechnet
+Zeichenkette umwandeln (a = 01, b = 02, und so weiter). Wenn Pi normal ist, wird diese Zeichenkette irgendwo in ihren 
+Ziffern erscheinen - aber es würde Millionen von Jahren dauern, bis genügend Ziffern berechnet
 sind, um sie zu finden.
 
 Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissenschaften und Mathematik.
@@ -405,9 +405,9 @@ Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissensch
 ---
 > id: pi-day
 
-Es gibt sogar jedes Jahr einen _Pi day ("Pi-Tag")_
-, der entweder auf den 14. März, weil `pi ≈ 3.14`, da das der Datumsschreibweise im englischsprachigen Raum entspricht, oder auf den 22. Juli fällt,
-weil `pi ≈ 22/7`, also 22/7 (eine anderen Datumsschreibweise).
+Es gibt sogar jedes Jahr einen _Pi Day ("Pi-Tag")_
+, der entweder am 14. März begangen wird, weil `pi ≈ 3.14`, was der Datumsschreibweise im englischsprachigen Raum entspricht, oder der am 22. Juli gefeiert wird,
+weil `pi ≈ 22/7`, also 22/7 (eine andere Datumsschreibweise).
 
     figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -521,7 +521,7 @@ werden (zB. ein Jahrzent für 10 Jahre, ein Jahrhundert für 100 Jahre).
 ::: column.grow
 
 Für viele von uns ist die Winkelmessung in Grad eine Selbstverständlichkeit: Es gibt 
-360°-Video, Skateboarder können 540° Drehungen ausführen, und 
+360°-Videos, Skateboarder können 540° Drehungen ausführen, und 
 jemand, der seine Entscheidung ändert, macht eine Kehrtwendung um 180°.
 
 Aber aus mathematischer Sicht ist die Wahl von 360 
@@ -541,9 +541,9 @@ Jupiter sogar 10.475 Tage haben.
 
 ### Radiant
 
-Anstatt einen Kreis in eine bestimmte Anzahl von Segmenten (z.B. 360 Grad) aufzuteilen, ziehen
+Anstatt einen Kreis in eine bestimmte Anzahl von Teilbereiche (z.B. 360 Grad) aufzuteilen, ziehen
 Mathematiker es oft vor, Winkel mittels des [Umfangs](gloss:circle-circumference)
-eines __Einheitskreises__(gloss:unit-circle) (eines Kreises mit dem Radius 1) zu messen.
+eines [__Einheitskreises__](gloss:unit-circle) (eines Kreises mit dem Radius 1) anzugeben.
 
 ::: column(width=280)
 
@@ -559,7 +559,7 @@ eines __Einheitskreises__(gloss:unit-circle) (eines Kreises mit dem Radius 1) zu
 
 ::: column.grow
 
-Ein _{span.var-action}ganzer Kreis_ hat einen Umfang
+Ein _{span.var-action}ganzer Kreis_ hat dann einen Umfang
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
 {.reveal(when="eqn-0")}Bei einer _{span.var-action}halben Drehung_ beträgt der
@@ -656,8 +656,8 @@ Wie du siehst sind in diesem Beispiel Radiant die viel bequemere Einheit
 als Grad. Sobald wir die Drehgeschwindigkeit kennen, müssen wir einfach mit dem
 Radius multiplizieren, um die tatsächliche Drehgeschwindigkeit zu erhalten.
 
-Hier ist ein weiteres Beispiel: Dein Auto hat Räder mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
-fährst, drehen sich die Räder deines Autos mit [[`20/0.25 =
+Hier ist ein weiteres Beispiel: Dein Auto hat Reifen mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
+fährst, drehen sich die Reifen deines Autos mit [[`20/0.25 =
 80`|`20 xx 0.25 = 5`|`0.25/50 = 0,0125`]] Radiant pro Sekunde
 _{span.reveal(when="blank-0")}(oder `80/(2pi) = 13` Umdrehungen pro Sekunde)_
 
@@ -676,7 +676,7 @@ wirst du feststellen, dass Radiant viel bequemer zu handhaben sind als das Gradm
 
 Die meisten Taschenrechner verfügen über eine [spezielle Taste](->.button.mode), um zwischen
 Grad und Radiant zu wechseln. Trigonometrische Funktionen wie [__sin__](gloss:sin),
-[__cos__] (gloss:cos)und __tan__ nehmen Winkel als Eingabe an, und 
+[__cos__](gloss:cos) und __tan__ nehmen Winkel als Eingabe an, und 
 ihre inversen Funktionen __arcsin__, __arccos__ und __arctan__ geben Winkel zurück. Die 
 Einstellung des aktuellen Taschenrechners bestimmt, welche Einheiten für diese Winkel verwendet werden.
 
@@ -788,9 +788,9 @@ Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
 > id: circle-parts-1
 
 In diesem Abschnitt werden wir uns mit der Beziehung zwischen all diesen Elementen befassen
-und Theoreme zu ihren Eigenschaften beweisen. Machen dir jetzt einmal keine Sorgen, dass du dir alle
-Definitionen merken musst - Du kannst jederzeit das
-[Glossar](->.footer-link[data-modal=glossarym]) verwenden.
+und Sätze zu ihren Eigenschaften beweisen. Mach dir jetzt einmal keine Sorgen, dass du dir alle
+diese Definitionen merken musst - du kannst jederzeit im
+[Glossar](->.footer-link[data-modal=glossarym]) nachschlagen.
 
 ---
 
@@ -1337,35 +1337,35 @@ and only if the opposite angles are supplementary.
 > section: spheres-cones-cylinders
 > id: solids
 
-In the previous sections, we studied the properties of circles on a flat
-surface. But our world is actually three-dimensional, so lets have a look at
-some 3D solids that are based on circles:
+In den vorangegangenen Abschnitten haben wir die Eigenschaften von Kreisen auf einer ebenen
+Fläche untersucht. Aber unsere Welt ist eigentlich dreidimensional, also schauen wir uns
+einige Körper in 3D an, die auf Kreisen basieren:
 
 ::: column(width=220 parent="padded-thin")
 
     x-solid(size=220)
 
-{.text-center} A [__cylinder__](gloss:cylinder) consists of two congruent,
-parallel circles joined by a curved surface. 
+{.text-center}Ein [__Zylinder__](gloss:cylinder)besteht aus zwei kongruenten,
+parallelen Kreisen, die durch eine gekrümmte Oberfläche verbunden sind. 
 
 ::: column(width=220)
 
     x-solid(size=220)
 
-{.text-center} A [__cone__](gloss:cone) has a circular base that is joined to 
-a single point (called the vertex).
+{.text-center}Ein [__Kegel__](gloss:cone)hat eine kreisförmige Grundfläche, die mit 
+einem einzigen Punkt (der sogenannten Spitze) verbunden ist.
 
 ::: column(width=220)
 
     x-solid(size=220 static)
 
-{.text-center} Every point on the surface of a [__sphere__](gloss:sphere) has
-the same distance from its center.
+{.text-center}Jeder Punkt auf der Oberfläche einer [__Kugel__](gloss:sphere)hat
+den gleichen Abstand von ihrem Mittelpunkt.
 
 :::
 
-Notice how the definition of a sphere is almost the same as the definition of a
-[[circle|radius|cube]] – except in three dimensions!
+Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition von einem [
+[Kreis|Radius|Würfel]] - aber in drei Dimensionen!
 
 ---
 > id: gasometer
@@ -1374,26 +1374,26 @@ Notice how the definition of a sphere is almost the same as the definition of a
 
 ::: column.grow
 
-Here you can see the cylindrical _Gasometer_ in Oberhausen, Germany. It used to
-store natural gas which was used as fuel in nearby factories and power plants.
-The Gasometer is 120m tall, and its base and ceiling are two large circles with
-radius 35m. There are two important questions that engineers might want to
-answer:
+Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland. Er wird verwendet um
+Erdgas, das als Brennstoff in nahegelegenen Fabriken und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
+sein Boden und seine Deckfläche sind zwei große Kreise mit einem
+Radius von 35 m. Es gibt zwei wichtige Fragen, die hier für Ingenieure
+von Interesse sein dürften:
 
-* How much natural gas can be stored? This is the [[volume|area|diameter]] of
-  the cylinder.
-* {.reveal(when="blank-0")} How much steel is needed to build the Gasometer?
-  This is (approximately) the [[surface area|circumference|diagonal]] of the
-  cylinder.
+* Wie viel Erdgas kann gespeichert werden? Dabei geht es um [[Volumen|Fläche|Durchmesser]] des
+ Zylinders.
+* {.reveal(when="blank-0")} Wie viel Stahl wird zum Bau des Gasometers benötigt?
+  Dabei geht es (ungefähr) um [[Fläche|Umfang|Diagonale]] des
+ Zylinders.
 
-{.reveal(when="blank-0 blank-1")} Let’s try to find formulas for both these
-results!
+{.reveal(when="blank-0 blank-1")}Wir wollen versuchen, Formeln für diese beiden
+Werte zu finden!
 
 ::: column(width=300)
 
     x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
-{.caption} Gasometer Oberhausen
+{.caption}Gasometer Oberhausen
 
 :::
 
