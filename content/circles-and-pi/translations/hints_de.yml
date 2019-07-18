@@ -1,0 +1,14 @@
+cylinder-volume-hint1: Du musst die Fläche der Grundfläche ermitteln und sie dann mit _h_ multiplizieren.
+cylinder-volume-hint1: Die Grundfläche ist ein Kreis mit Radius _r_, so dass seine Fläche `π r^2` ist.
+
+cone-volume-hint1: Du musst die Fläche der Grundfläche ermitteln und sie dann mit `1/3 h` multiplizieren.
+cone-volume-hint2: Die Grundfläche ist ein Kreis mit Radius _r_, so dass seine Fläche `π r^2` ist.
+
+cone-surface-1: Du musst jeden der obigen Werte mit dem richtigen Wert ersetzen.
+cone-surface-2: Vergiss nicht, den Wert für _s_ zu verwenden, den wir vorher gefunden haben.
+
+circle-cross-sec: Benutze die Gleichung für die Fläche eines Kreises und ersetze den richtigen Wert für `x^2`.
+sphere-volume: Denke daran, dass sowohl der Zylinder als auch der Kegel über beiden Radius _r_ und die Höhe _r_ hatten.
+
+use-cylinder-volume: Versuchs mit der Formel für das Volumen eines Zylinders.
+use-cylinder-surface: Versuchs mit der Formel für die Oberfläche eines Zylinders.
