@@ -53,7 +53,7 @@ Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von sei
 * {.reveal(when="compass" delay="4000")}Der [{.step-target.pill.b.blue}Durchmesser](target:d)
  ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
  den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
- * {.step-target.pill.b.green}Der [{.reveal(when="blank-0")}Umfang](target:c)
+* {.reveal(when="blank-0")}Der [{.step-target.pill.b.green}Umfang](target:c) 
  ist gleich der Länge der Strecke um einen Kreis.
 
 :::
