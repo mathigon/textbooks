@@ -67,23 +67,23 @@ so schnell wie möglich bestimmen, welche Zahlen Teiler oder Vielfache sind. Kli
       x-gameplay.box-body
         .factors-row
           .factor-number ${x}
-          | ist ein
+          | ist
           .factor-value
-            .factor-bubble: .btn.btn-blue factor
-            .factor-bubble: .btn.btn-blue multiple
-            .factor-bubble: .btn.btn-blue neither
+            .factor-bubble: .btn.btn-blue Teiler
+            .factor-bubble: .btn.btn-blue Vielfaches
+            .factor-bubble: .btn.btn-blue Keines
           | von
           .factor-number ${y}
 
 ---
 > id: factors
 
-Es ist oft sinnvoll, _alle_ Teiler einer Zahl zu finden. Zum Beispiel sind die
-Teiler von 60 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 und 60.
+Es ist oft sinnvoll, _alle_ Teiler einer Zahl zu finden. Zum Beispiel sind 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 und 60
+die Teiler von 60.
 
 Natürlich willst du nicht alle Zahlen bis 60 überprüfen, ob es sich um Teiler handelt.
 Es gibt eine einfache Methode, die von der Tatsache ausgeht, dass Teiler
-immer [[in Paaren|zu dritt|als Hälften]] auftreten.
+immer [[paarweise|zu dritt|als Hälften]] auftreten.
 
 ---
 > id: factors1
@@ -120,7 +120,7 @@ nur eine einzige Zahl in der Mitte, wie bei 64 = 8 × 8.
 
 ## Teilbarkeitsregeln
 
-Es gibt ein paar verschiedene Regeln, die es einem überraschend einfach machen können, zu überprüfen, ob eine
+Es gibt ein paar verschiedene Regeln, die es dir überraschend einfach machen können, zu überprüfen, ob eine
 Zahl durch eine andere teilbar ist. In diesem Abschnitt werden wir einen Blick auf einige von
 ihnen werfen....
 
@@ -177,7 +177,7 @@ Jetzt können wir die letzte Ziffer einer Zahl von allen anderen Ziffern trennen
         td +
         td #[strong.m-green 2]
 
-Sowohl 2 als auch 5 sind Faktoren von 10, so dass sie __{.m-red}abc × 10__
+Sowohl 2 als auch 5 sind Teiler von 10, so dass sie __{.m-red}abc × 10__
 [[immer teilen|niemals teilen]], egal welche Werte __{.m-red}a__, __{.m-red}b__
 und __{.m-red}c__ haben. Deshalb müssen wir nur die letzte Ziffer überprüfen: Wenn
 __{.m-green}d__ durch 2 teilbar ist, dann ist [[die ganze Zahl|abc]] auch
