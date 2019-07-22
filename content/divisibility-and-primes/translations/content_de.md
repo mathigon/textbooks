@@ -60,7 +60,7 @@ von __{.green}7__, und __{.green}7__|__{.orange}21__.
 > id: divisibility-game
 
 In diesem kurzen Spiel sollst du
-so schnell wie möglich bestimmen, welche Zahlen Teiler oder Vielfache sind. Klicke auf [play button](->#divisibility-game_.toggle), um zu starten.
+so schnell wie möglich bestimmen, welche Zahlen Teiler oder Vielfache sind. Klicke auf den [Startknopf](->#divisibility-game_.toggle), um zu beginnen.
 
     .box.problem-box
       .box-title: h3 Teiler und Vielfache Quiz
@@ -195,112 +195,112 @@ Am einfachsten ist die Teilbarkeitsregel für 10: Wir müssen nur prüfen, ob di
 
 ### Teilbarkeit durch 4 und 8
 
-Leider teilt 4 nicht 10, also können wir nicht einfach die letzte Zahl betrachten -
-aber 4 __teilt 100, also müssen wir unsere Regel von oben leicht ändern.
-__{.m-red}ab__**{.m-green}cd** = __{.m-red}ab × 100__ +
-__{.m-green}cd__. We know that 4 will always divide __{.m-red}ab × 100__, so we
-have to look at the last [[two]] digits to check if a number if divisible by 4.
+Leider lässt sich 10 nicht durch 4 teilen, also können wir nicht einfach die letzte Zahl betrachten -
+aber 4 _teilt_ 100, also müssen wir unsere Regel von oben nur leicht ändern.
+Wir schreiben jetzt __{.m-red}ab__**{.m-green}cd** = __{.m-red}ab × 100__ +
+__{.m-green}cd__. Wir wissen, dass 4 immer __{.m-red}ab × 100__ teilt, also müssen wir
+uns die letzten [[2]] Ziffern ansehen, um zu überprüfen, ob eine Zahl durch 4 teilbar ist.
 
-For example, __{.m-green}24__ is divisible by 4 so __{.m-red}2735__**{.m-green}24**
-[[is also|is not]] divisible by 4, and __{.m-green}18__ is not divisible by 4 so
-__{.m-red}1947__**{.m-green}18** [[is also not|is also]] divisible by 4.
+Zum Beispiel ist __{.m-green}24__ durch 4 teilbar, also ist __{.m-red}2735__**{.m-green}24**
+[[auch|nicht]] durch 4 teilbar, und __{.m-green}18__ ist nicht durch 4 teilbar, also ist
+__{.m-red}1947__**{.m-green}18** [[auch nicht|auch]] durch 4 teilbar.
 
 ---
 > id: divisibility4a
 
-The divisibility rules for 8 get even more difficult, because 100 is not
-divisible by 8. Instead we have to go up to [[1000|800|108]] and look at the
-last [[three]] digits of a number.
+Die Teilbarkeitsregeln für 8 werden noch etwas schwieriger, da 100 nicht durch 8
+teilbar ist. Stattdessen müssen wir bis zu [[1000|800|108]] gehen und uns die
+letzten [[3]] Ziffern einer Zahl ansehen.
 
-For example, __{.m-green}120__ is divisible by 8 so
-__{.m-red}271__**{.m-green}120** is also divisible by 8.
+Zum Beispiel ist __{.m-green}120__ durch 8 teilbar, also ist
+__{.m-red}271__**{.m-green}120** auch durch 8 teilbar.
 
 ---
 > id: divisibility3a
 
-### Divisibility by 3 and 9
+### Teilbarkeit durch 3 und 9
 
-The divisibility rule for 3 is rather more difficult. 3 doesn’t divide 10, and
-it also doesn’t divide 100, or 1000, or any larger power of 10. Simply looking
-at the last few digits of a number isn’t going to work.
+Die Teilbarkeitsregel für 3 ist etwas komplizierter. 3 teilt 10 nicht, und
+es teilt auch 100 nicht, oder 1000, oder eine andere Potenz von 10. Einfach nur
+die letzten paar Ziffern einer Zahl zu betrachten wird also nicht funktionieren.
 
-Instead we need to use the __digit sum__ of a number, which is simply the sum of
-all its individual digits. For example, the digit sum of ${13×n+123}{n|3|0,20,1}
-is ${digitSumString(123+13×n)} = ${digitSum(123+13×n)} and the digit sum of 3524
-is [[14]].
+Stattdessen müssen wir die __Quersumme__ einer Zahl verwenden, die einfach die Summe
+aller ihrer einzelnen Ziffern ist. Zum Beispiel ist die Quersumme von ${13×n+123}{n|3|0,20,1}
+ist ${digitSumString(123+13×n)} = ${digitSum(123+13×n)} und die Quersumme von 3524
+ist [[14]].
 
 ---
 > id: divisibility3b
 
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
-Here we’ve highlighted all numbers which are multiples of three. You can see
-that their digit sums are always [[a multiple of 3|either 0 or 3|odd numbers]].
+Hier haben wir alle Zahlen hervorgehoben, die ein Vielfaches von drei sind. Wie du siehst
+ sind ihre Quersummen immer [[ein Vielfaches von 3|entweder 0 oder 3|ungerade Zahlen]].
 
-{.reveal(when="blank-0")} So to determine if any number is divisible by 3, you
-just have to calculate its digit sum, and check if the result is also divisible
-by 3.
+{.reveal(when="blank-0")} Um also festzustellen, ob eine Zahl durch 3 teilbar ist, musst du
+nur ihre Quersumme berechnen und prüfen, ob das Ergebnis auch durch 3 teilbar
+ist.
 
 ---
 > id: divisibility9
 
-Next, let’s look at multiples of 9:
+Als nächstes betrachten wir die Vielfachen von 9:
 
     .number-grid
       for x in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
         .number-cell.yellow= x*9
           .number-badge= (x == 11 ? 18 : 9)
 
-It seems that all the numbers divisible by 9 have a digit sum which is
-[[also|not]] divisible by 9. _{span.reveal(when="blank-0")}For example, the
-digit sum of 4752 is [[18]], so 4752 [[is|is not]] divisible by 9._
+Es scheint, dass alle durch 9 teilbaren Zahlen eine Quersumme haben, die
+[[auch|nicht]] durch 9 teilbar ist, _{span.reveal(when="blank-0")}z.B. ist die
+Quersumme von 4752 [[18]], also gilt: 4752 [[ist|ist nicht]] durch 9 teilbar._
 
 ---
 > id: divisibility9a
 
-Of course, these curious patterns for numbers divisible by 3 and 9 must have
-some reason – and like before it has to do with our base 10 numbers system. As
-we saw, writing the number __{.m-red}6__**{.m-blue}3**__{.m-green}8__**{.m-yellow}4**
-really means
+Selbstverständlich gibt es für diese seltsamen Muster für Zahlen, die durch 3 und 9 teilbar sind,
+einen Grund - und wieder hat er mit unserem Zahlensystem auf der Basis von 10 zu tun. Wie
+wir gesehen haben, bedeutet die Schreibweise der Zahl __{.m-red}6__**{.m-blue}3**__{.m-green}8__**{.m-yellow}4**
+eigentlich
 
 {.text-center} __{.m-red}6 × 1000__ + __{.m-blue}3 × 100__ + __{.m-green}8 × 10__ + __{.m-yellow}4__.
 
-We can split up each of these products into two parts:
+Wir können jedes dieser Produkte in zwei Teile aufteilen:
 
 {.text-center} __{.m-red}*{span.digit-sum-else}6 × 999* + *{span.digit-sum-is}6*__ +
 __{.m-blue}*{span.digit-sum-else}3 × 99* + *{span.digit-sum-is}3*__ +
 __{.m-green}*{span.digit-sum-else}8 × 9* + *{span.digit-sum-is}8*__ +
 __{.m-yellow.digit-sum-is}4__.
 
-Of course, __{.m-green}9__, __{.m-blue}99__, __{.m-red}999__, and so on are
-always divisible by 3 (or by 9). All that remains is to check that what’s left
-over is also divisible by 3 (or 9):
+Natürlich sind __{.m-green}9__, __{.m-blue}99__, 999, __{.m-red}999__ usw.
+immer durch 3 (oder durch 9) teilbar. Es bleibt nur noch zu prüfen, ob das, was übrig bleibt
+, auch durch 3 (oder 9) teilbar ist:
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-This just happens to be the digit sum! So if the <x-target no-margins
-to=".digit-sum-is">digit sum</x-target> is a multiple of 3, and we
-know that <x-target no-margins to=".digit-sum-else">everything else</x-target>
-is a multiple of 3, then the result must also be a multiple of 3.
+Das ist zufällig die Quersumme! Wenn also die <x-target no-margins
+to=".digit-sum-is">Quersumme</x-target> ein Vielfaches von 3 ist, und wir
+wissen, dass <x-target no-margins to=".digit-sum-else">alles andere</x-target>
+ein Vielfaches von 3 ist, dann muss das Ergebnis auch ein Vielfaches von 3 sein.
 
 ---
 > id: divisibility6
 > goals: btn2 btn3
 
-### Divisibility by 6
+### Teilbarkeit durch 6
 
-We’ve still skipped number 6 – but we’ve already done all the hard work.
-Remember that 6 = 2 × 3.
+Wir haben jetzt die Nummer 6 übersprungen - aber wir haben bereits die eigentliche Arbeit geleistet.
+Wie du weißt ist 6 = 2 × 3.
 
     +grid(40)
     p.btn-row.text-center(style="margin-bottom:1em")
-      button.btn.btn-small(data-display="visibility") Show multiple of 2
-      button.btn.btn-small(data-display="visibility") Show multiple of 3
+      button.btn.btn-small(data-display="visibility") Vielfache von 2
+      button.btn.btn-small(data-display="visibility") Vielfache von 3
 
-To check if a number is divisible by 6 we just have to check that it is
-divisible by 2 [[and also|or]] divisible by 3. Note that this happens to work
-for 6, but certainly not for _any_ number that is the product of two others.
-More on that later…
+Um zu überprüfen, ob eine Zahl durch 6 teilbar ist, müssen wir nur prüfen, ob sie durch 2 [[und auch|oder]] durch 3
+teilbar ist. Beachte, dass dies
+zwar für 6 funktioniert, aber sicherlich nicht für _jede_ Zahl, die das Produkt von zwei anderen ist.
+Mehr dazu später....
 
     //- TODO Practice exercises
 
