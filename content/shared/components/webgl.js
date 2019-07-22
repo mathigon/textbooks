@@ -9,7 +9,7 @@
 import { script, $N } from '@mathigon/boost';
 
 
-const url = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js';
+const url = '/resources/shared/vendor/three-91.min.js';
 const renderers = {};
 let threePromise = null;
 
