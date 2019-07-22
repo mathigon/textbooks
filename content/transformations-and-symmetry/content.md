@@ -3,6 +3,7 @@
 ## Introduction
 
 > id: intro
+> section: introduction
 
 Many geometric concepts, like [lines](gloss:line) and [points](gloss:point),
 were “invented” by mathematicians. Symmetry, on the other hand, is everywhere
@@ -41,10 +42,12 @@ difficult than you might think. To start with, we have to learn about
 _transformations_.
 
 ---
-> id: transformations
-> goals: t1 t2 t3
 
 ## Transformations
+
+> id: transformations
+> goals: t1 t2 t3
+> section: transformations
 
 A [__transformation__](gloss:transformation) is a specific set of rules that
 convert one geometric figure into another one. Here are a few examples:
@@ -495,10 +498,12 @@ don’t even have a visual representation at all. You’ll learn more about thes
 transformations in future courses, but for now let’s move on to symmetry.
 
 ---
-> id: symmetry
-> goals: play-0 play-1
 
 ## Symmetry
+
+> id: symmetry
+> goals: play-0 play-1
+> section: symmetry
 
 [__Symmetry__](gloss:symmetry) is everywhere around us, and an intuitive
 concept: different parts of an object look _the same_ in some way. But using
@@ -761,9 +766,11 @@ Now complete these shapes, so that they have rotational symmetry:
 :::
 
 ---
-> id: groups
 
 ## Symmetry Groups
+
+> id: groups
+> section: symmetry-groups
 
     // HINT: To recognise different configurations, we need to highlight the
     // four corners in different colours.
@@ -960,9 +967,11 @@ Adenovirus (right) are determined by their symmetries.
 :::
 
 ---
-> id: wallpaper-groups
 
 ## Wallpaper Groups
+
+> id: wallpaper-groups
+> section: wallpaper-groups
 
 In the previous sections we have now seen two different kinds of symmetry, that
 correspond to two different transformations: rotations and reflections. But
@@ -1142,10 +1151,12 @@ which has a 3-dimensional symmetry group.
 :::
 
 ---
-> id: planets
-> sectionBackground: dark stars
 
 ## Symmetry in Physics
+
+> id: planets
+> sectionBackground: dark stars
+> section: symmetry-in-physics
 
 So far, all the symmetries we looked at were _visual_ in some sense: visible
 shapes, images or patterns. In fact, symmetry can be a much wider concept:
@@ -1209,9 +1220,11 @@ physicists, but not observed in the real world until 2012.
 :::
 
 ---
-> id: dilations
 
 ## Similarity
+
+> id: dilations
+> section: similarity
 
 So far, we have just looked at [[rigid|congruent|visual]] transformations.
 _{span.reveal(when="blank-0")} Now let’s think about one that is not: a

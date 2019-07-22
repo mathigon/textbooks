@@ -47,14 +47,13 @@ Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von sei
 
 {.reveal(when="compass")} Es gibt drei wichtige Maße im Zusammenhang mit Kreisen, die du kennen solltest:
 
-
 * {.reveal(when="compass" delay="1000")}Der [{.step-target.pill.b.red}Radius](target:r)
- ist der Abstand vom Mittelpunkt eines Kreises zur Kreislinie.
+  ist der Abstand vom Mittelpunkt eines Kreises zur Kreislinie.
 * {.reveal(when="compass" delay="4000")}Der [{.step-target.pill.b.blue}Durchmesser](target:d)
- ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
- den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
+  ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
+  den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
 * {.reveal(when="blank-0")}Der [{.step-target.pill.b.green}Umfang](target:c) 
- ist gleich der Länge der Strecke um einen Kreis.
+  ist gleich der Länge der Strecke um einen Kreis.
 
 :::
 
@@ -87,7 +86,7 @@ als griechischer Buchstabe _π_ für “p” geschrieben wird. Pi hat unendlich 
 > id: wheel
 > goals: unroll
 
-Wir haben hier ein Rad mit dem Durchmesser 1. Wenn du den Umfang “abrollst”, kannst du sehen, dass seine Länge genau [[`pi`|`2 * pi`|3]]] ist:
+Wir haben hier ein Rad mit dem Durchmesser 1. Wenn du den Umfang “abrollst”, kannst du sehen, dass seine Länge genau [[`pi`|`2 * pi`|3]] ist:
 
 
     figure: include svg/wheel.svg
@@ -805,9 +804,9 @@ diese Definitionen merken musst - du kannst jederzeit im
     // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
     // 
     // Point of Tangency: Der Punkt, an dem eine Tangente den Kreis berührt.
- // 
-//  Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
- // Beziehung. Let’s investigate it here.
+    // 
+    //  Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
+    // Beziehung. Let’s investigate it here.
     // 
     // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
     // line is perpendicular to the radius drawn to the point of tangency.
@@ -833,7 +832,7 @@ diese Definitionen merken musst - du kannst jederzeit im
 {.todo} KOMMT BALD!
 
     // Eine Sehne ist eine Strecke, deren Endpunkte auf einem Kreis liegen. Der Durchmesser ist die
- // längste Sehne in einem Kreis. There are several theorems that explore the
+    // längste Sehne in einem Kreis. There are several theorems that explore the
     // properties of chords.
     // 
     // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
@@ -924,12 +923,12 @@ ist ein Teil des [[Kreisinhalts|Radius|Umfangs]] eines Kreises.
 
 ::: .reveal(when="blank-0 blank-1")
 Der Kreisbogen zwischen zwei Punkten _A_ und _B_ wird oft als `§arc(AB)` geschrieben. Diese
-Definition ist etwas zweideutig: Es gibt einen [{.purple} zweiten Kreisbogen](pill:major)
-, der _A_ und _B_ verbindet, aber den anderen Weg um den Kreis herum geht.
+Definition ist etwas zweideutig: Es gibt einen [{.purple} zweiten Kreisbogen](pill:major),
+der _A_ und _B_ verbindet, aber den anderen Weg um den Kreis herum geht.
 
 Der kleinere der beiden Bögen wird als __Minor__ bezeichnet, der größere
 als __Major__. Wenn die Punkte _A_ und _B_ genau gegenüberliegen, haben
-beide Bögen die gleiche Länge und sind [[Halbkreise|Durchmesser|Umfänge]]].
+beide Bögen die gleiche Länge und sind [[Halbkreise|Durchmesser|Umfänge]].
 :::
 
 :::
@@ -2014,7 +2013,7 @@ Um die Oberfläche einer Kugel zu bestimmen, können wir sie noch einmal mit ein
 anderen Form annähern - zum Beispiel einem Polyeder mit vielen Flächen. Mit zunehmender Anzahl der
 Flächen beginnt das Polyeder immer mehr wie eine Kugel auszusehen.
 
-{.todo} KOMMT BALD! Sphere Surface Area Proof
+{.todo} KOMMT BALD!
 
     // If we connect the small polygons to the center of the sphere, we get
     // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
@@ -2041,7 +2040,7 @@ Flächen beginnt das Polyeder immer mehr wie eine Kugel auszusehen.
 
 ## Kegelschnitte
 
-> sectionId: conic-sections
+> section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
 
@@ -2108,7 +2107,7 @@ focal points.
 If you have a long string connected to two fixed points, you can draw a perfect
 ellipse by tracing the maximum reach of the strings:
 
-{.todo} KOMMT BALD! Ellipses drawing interactive
+{.todo} KOMMT BALD!
 
     // ---
     // > id: ellipses-1

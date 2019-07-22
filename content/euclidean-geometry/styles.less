@@ -69,6 +69,19 @@
 
 // -----------------------------------------------------------------------------
 
+@media screen and (max-width: 747px) {
+  // Sticky video on mobile screens
+  .sticky-video {
+    width: 360px;
+    position: sticky;
+    top: 44px;
+    flex-grow: 1;
+    background: black;
+    border-bottom: 1px solid fade(white, 40%);
+    html.webview & { top: 0; }
+  }
+}
+
 #crane .step {
   display: none;
   cursor: pointer;

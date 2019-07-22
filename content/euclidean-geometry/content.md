@@ -788,9 +788,9 @@ but rectangular sheets of paper:
 Building shapes like this can take a lot of time, and it is important to be
 extremely accurate. But with a bit of practice, you can do it yourself!
 
-::: column(width=360)
+::: column.sticky-video(width=360)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=400 height=400 controls)
+    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
 {.step.active(data-t=0)} You just need a square sheet of paper. To start, fold

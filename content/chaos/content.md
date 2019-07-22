@@ -185,6 +185,8 @@ like wind speed, rainfall, humidity, air pressure, and ocean currents.
 
 :::
 
+    //- TODO Ensemble forecasting, spagetti plots for weather
+
 ---
 > id: dominoes
 > goals: video

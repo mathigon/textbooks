@@ -1,0 +1,1455 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+acute-angle:
+  title: Spitzer Winkel
+  text: Ein __spitzer Winkel__ ist ein Winkel der kleiner als 90° ist.
+
+acute-triangle:
+  title: Spitzwinkliges Dreieck
+  text: In einem __spitzwinkligen Dreieck__sind alle drei Winkel _spitz_
+    (kleiner als 90°).
+  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+
+adic:
+  title: N-adische Zahlen
+  text: __*N*-adische__ Zahlen, für einige ganze Zahlen _n_, sind ein spezielles
+    Zahlensystem, mit einer Definition von "Nähe", die sich von der üblichen
+    Arithmetik unterscheidet. Zwei _n_-adische Zahlen sind _nahe_ beieinander,
+    wenn ihre Differenz durch eine hohe Potenz von _n_teilbar ist.
+
+adjacent-angles:
+  title: Nebenwinkel
+  text: Zwei Winkel nennt man __Nebenwinkel__, wenn sie sich eine Seite und
+    einen Scheitelpunkt teilen. Dies ist der Fall, wenn sich zwei Geraden
+    schneiden und man benachbarte Winkel betrachtet.
+
+
+alternate-angles:
+  title: Wechselwinkel
+  text: __Wechselwinkel__ (Z-Winkel) sind zwei Winkel, die sich im Inneren von
+    zwei verschiedenen parallelen Geraden befinden, aber auf den
+    gegenüberliegenden Seiten einer Transversalen. Sie sind immer kongruent.
+  image: alternate-angles.svg
+
+angle-bisector:
+  title: Winkelsymmetrale
+  text: Eine __Winkelsymmetrale__ ist eine Gerade, die einen Winkel in der Mitte
+    in zwei kongruente, kleinere Winkel teilt.
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: Die Zellen in einer Punktmaschine können __Anti-Punkte__enthalten, die
+    man sich als "Löcher" oder "negative Punkte" vorstellen kann. Sie haben
+    einen Wert von -1. Man kann jederzeit einen Punkt und einen Anti-Punkt zu
+    derselben Zelle hinzufügen, ohne ihren Wert zu ändern.
+
+apothem:
+  title: Inkreisradius
+  text: Der __Inkreisradius__ eines regelmäßigen Vielecks ist der Normalabstand
+    seiner Seiten zu seinem Mittelpunkt.
+
+arabic-numerals:
+  title: Arabische Zahlen
+  text: |
+    Das __arabische Zahlensystem__ verwendet für jede beliebige Zahl zehn
+    verschiedene Ziffern (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) zusammen mit einem
+    dezimalen Stellenwertsystem.
+
+    Es wurde zuerst in Indien entwickelt, dann von arabischen Mathematikern
+    angepasst, bevor es vom italienischen Mathematiker Leonardo Fibonacci nach
+    Europa gebracht wurde.
+
+archimedean-solid:
+  title: Archimedischer Körper
+  text: Ein __archimedischer Körper__ ist ein Polyeder, der aus verschiedenen
+    Arten von regelmäßigen Polygonen besteht, der aus allen Richtungen gleich
+    aussieht. Es gibt 13 verschiedene archimedische Körper.
+  link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
+
+arithmetic-sequence:
+  title: Arithmetische Folge
+  text: Eine __arithmetische Folge__ (manchmal auch __arithmetische
+    Progression__ genannt) ist eine Folge von Zahlen, bei der die Differenz _d_
+    zwischen aufeinanderfolgenden Termen immer konstant ist.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+associative:
+  title: Assoziativgesetz
+  text: Eine Operation • ist assoziativ, wenn `a•(b•c) = (a•b)•c`.
+    Beispielsweise sind Addition (+) und Multiplikation (×) von Zahlen
+    assoziativ.
+
+axiom:
+  title: Axiom:
+  text: Ein __Axiom__ (manchmal auch __Postulat__genannt) ist eine mathematische
+    Aussage, die als "selbstverständlich" angesehen und ohne Beweis akzeptiert
+    wird. Axiome bilden die Grundlage der Mathematik und können zum Beweisen
+    anderer Ergebnisse verwendet werden.
+
+axis-of-symmetry:
+  title: Symmetrieachse
+  text: Wenn eine Form spiegelsymmetrisch ist, ist die __Symmetrieachse__ die
+    Linie, die sie in zwei gleiche Hälften teilt.
+  image: reflectional-symmetry.svg
+  link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
+
+base-10:
+  title: Basis 10
+  text: Das __Dezimalsystem__ (oder __Basis 10__) ist das weltweit am häufigsten
+    verwendete Zahlensystem. Jede Ziffer einer Zahl kann einen von zehn
+    verschiedenen Werten haben, von 0 bis 9.
+
+bipartite-graph:
+  title: Bipartiter Graph
+  text: __Bipartite Graphen__ bestehen aus zwei Mengen von Eckpunkten. Jeder
+    Knoten ist mit allen Knoten in der gegenüberliegenden Menge verbunden, aber
+    keiner der Knoten in seiner eigenen Menge.
+  link: /course/graphs-and-networks/parties-and-dating#handshakes-4
+
+blackjack:
+  title: Blackjack
+  text: __Blackjack__ ist ein Kartenspiel, bei dem du den Wert mehrerer Karten
+    addieren musst, um höchstens 21 zu erreichen - aber ja nicht darüber.
+
+cavalieri:
+  title: Das Prinzip von Cavalieri
+  text: |
+    Das Prinzip__ von __Cavalieri besagt, dass, wenn zwei Festkörper auf jeder
+    Ebene die gleiche Höhe und Querschnittsfläche aufweisen, beide das gleiche
+    Volumen haben.
+
+    Aus dieser Tatsache lässt sich ableiten, dass das Volumen der Prismen und
+    Zylinder die Fläche ihres Querschnitts multipliziert mit ihrer Höhe ist.
+
+calculus:
+  title: Analysis
+  text: Die __Analysis__ ist der Zweig der Mathematik, der sich mit Grenzwerten,
+    Ableitungen, Integralen und Potenzreihen beschäftigt. Häufige
+    Aufgabenstellungen sind die Berechnung der Steigung einer Kurve, von
+    Extremen, der Änderungsrate einer Funktion und der Fläche unter einer Kurve.
+
+center-of-rotation:
+  title: Drehpunkt
+  text: Der __Drehpunkt__ ist der Punkt, um den eine Form gedreht wird.
+  link: /course/transformations-and-symmetry/transformations#rotations
+
+centroid:
+  title: Schwerpunkt
+  text: Der __Schwerpunkt__ eines Dreiecks ist der Punkt, an dem sich seine drei
+    Schwerlinien schneiden. Er ist auch der "Massenschwerpunkt" des Dreiecks.
+  link: /course/triangles-and-trigonometry/properties-of-triangles#center-of-mass
+
+chaos:
+  title: Chaos
+  text: toDo
+
+circle:
+  title: Kreis
+  text: Ein __Kreis__ ist die Menge aller Punkte in einem bestimmten Abstand von
+    einem bestimmten Punkt in einem zweidimensionalen Koordinatensystem.
+  image: circle.svg
+  link: /course/circles-and-pi/introduction#radius
+
+circle-circumference:
+  title: Umfang (Kreis)
+  text: Der __Umfang__ eines Kreises ist die Streckenlänge seiner äußeren
+    Umrandung (Kreislinie). Ein Kreis mit Radius _r_ hat den Umfang
+    `u = 2 * pi * r`.
+  link: /course/circles-and-pi/introduction#radius
+
+circle-diameter:
+  title: Durchmesser (Kreis)
+  text: Der __Durchmesser__ eines Kreises ist der Abstand zweier Punkte über
+    seinen Mittelpunkt. Er entspricht dem doppelten Radius.
+  link: /course/circles-and-pi/introduction#radius
+
+circle-radius:
+  title: Radius
+  text: Der __Radius__ eines Kreises ist der Abstand von seinem Mittelpunkt bis
+    zu seiner Umrandung.
+  link: /course/circles-and-pi/introduction#radius
+
+circle-sector:
+  title: Kreissektor
+  text: |
+    Ein __Sektor__ eines Kreises ist ein Teil seines Inneren, der von zwei
+    Radien und einem __Kreisbogen__begrenzt wird. Seine Fläche ist proportional
+    zum Innenwinkel sowie zur Länge des Kreisbogens. Damit ergibt sich
+
+    {.text-center} `(A_"Sektor")/(A_"Kreis") = "Kreisbogen"/"Umfang" = θ/(2π)`
+  link:  /course/circles-and-pi/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circumcircle:
+  title: Umkreis eines Dreiecks
+  text: Der __Umkreis__ eines Dreiecks ist der Kreis, der durch alle drei seiner
+    Eckpunkte verläuft.
+  image: circumcircle.svg
+  link: /course/triangles-and-trigonometry/properties-of-triangles#circumcircle-1
+
+coefficient:
+  title: Koeffizient
+  text: __Koeffizienten__ sind die Zahlen vor den Variablen in einem
+    mathematischen Ausdruck oder einer Gleichung. So sind beispielsweise im
+    Ausdruck `4x + 5y^2 + 3z` die Koeffizienten von `x`, `y^2` und `z` 4, 5
+    und 3.
+
+collinear:
+  title: Kollineare Punkte
+  text: Drei oder mehr Punkte sind __kollinear__, wenn sie auf der gleichen
+    Geraden liegen.
+
+compass:
+  title: Zirkel
+  text: Ein Zirkel ist ein Zeichenwerkzeug, das zum Erstellen von Kreisen oder
+    Kreisbögen verwendet wird. Er besteht aus zwei Armen - die Spitze an einem
+    Ende wird in der Mitte platziert, während der Stift am anderen Ende die
+    Kreislinie zeichnet.
+
+complementary-angles:
+  title: Komplementäre Winkel
+  text: Zwei Winkel sind __komplementär__ zueinander, wenn sie sich zu 90°
+    ergänzen.
+
+complete-graph:
+  title: Vollständiger Graph
+  text: In __vollständigen Graphen__ist jeder Knoten mit jedem anderen Knoten
+    verbunden. Ein vollständiger Graph mit _n_ Knoten hat `(n×(n-1))/2` Kanten.
+  link: /course/graphs-and-networks/parties-and-dating#handshakes-3
+
+concave:
+  title: Nichtkonvexes Vieleck (Polygon)
+  text: Ein __nichtkonvexes__ Vieleck hat mindestens einen Innenwinkel größer
+    als 180° („konkaves Polygon“). Mindestens eine der Diagonalen liegt
+    _außerhalb_ des Polygons. Eine gängige Methode zur Identifizierung eines
+    nichtkonvexen (=konkaven) Polygons ist die Suche nach einer "eingefallenen"
+    Seite des Polygons, wobei _konkave_ das Gegenteil von _konvexen_ Polygonen
+    sind.
+  link: /course/polygons-and-polyhedra/polygons#concave
+
+cone:
+  title: Kegel
+  text: |
+    Ein __Kegel__ ist ein dreidimensionaler Körper, der eine kreisförmige
+    _Grundfläche_ hat, die mit einem einzigen Punkt (dem sogenannten
+    _Scheitelpunkt_) durch eine gebogene Seite verbunden ist. Man könnte sich
+    auch einen Kegel als "kreisförmige Pyramide" vorstellen.
+
+    Ein __gerader Kegel__ ist ein Kegel mit seinem Scheitelpunkt direkt über dem
+    Mittelpunkt seiner Grundfläche.
+  link: /course/circles-and-pi/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: Volumen eines Kegels
+  text: |
+    Das Volumen eines Kegels ergibt sich aus der Formel
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    wobei _r_ der Radius der kreisförmigen Grundfläche und _h_ die Höhe des
+    Kegels (der senkrechte Abstand von der Basis zum Scheitelpunkt) ist.
+
+congruent:
+  title: Kongruenz
+  text: In der Geometrie sind zwei Figuren __kongruent__ (deckungsgleich), wenn
+    sie in Größe, Form und Maß identisch sind. Das bedeutet, dass wir sie so
+    bewegen, drehen oder wenden können, dass sie exakt übereinander zu liegen
+    kommen.
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: Kongruente Winkel
+  text: Zwei Winkel sind __kongruent__, wenn sie die gleiche Größe haben.
+
+conic-section:
+  title: Kegelschnitt
+  text: |
+    Ein __Kegelschnitt__ ist eine Kurve, die aus den Schnittpunkten der
+    Oberfläche eines Kegels mit einer ebenen Fläche erzeugt wird. Es gibt vier
+    verschiedene Arten von Kegelschnitten, die alle viele gemeinsame
+    Eigenschaften haben:
+
+    * Kreis
+    * Ellipse
+    * Parabel
+    * Hyperbel
+  link: /course/circles-and-pi/conic-sections
+
+convex:
+  title: Konvexes Vieleck (Polygon)
+  text: Ein __konvexes__ Vieleck enthält keine Innenwinkel größer als 180°. Alle
+    Diagonalen liegen innerhalb des Vielecks. Dies ist das Gegenteil von
+    _nichtkonvexen_ Vielecken (konkaven Polygonen).
+  link: /course/polygons-and-polyhedra/polygons#concave
+
+coordinate-system:
+  title: Koordinatensystem
+  text: Ein __Koordinatensystem__ ist eine zweidimensionale Ebene, die zwei
+    aufeinander senkrechte Achsen enthält. Jeder Punkt auf der Ebene kann mit
+    zwei Zahlen (Koordinaten) definiert werden, die seinen Abstand zu den beiden
+    Achsen angeben.
+
+coordinate-system-origin:
+  title: Ursprung eines Koordinatensystem
+  text: Der __Ursprung__ eines Koordinatensystems ist der Punkt mit den
+    Koordinaten (0, 0). Es ist in der Regel der Punkt, an dem sich die beiden
+    Achsen kreuzen.
+
+corresponding-angles:
+  title: Stufenwinkel
+  text: Als __Stufenwinkel__ bezeichnet man zwei Winkel, die sich in den
+    Schnittpunkten einer Transversale mit 2 unterschiedlichen parallelen Geraden
+    ergeben. Sie sind immer kongruent.
+  image: corresponding-angles.svg
+
+cos:
+  title: Kosinus
+  text: Der __Kosinus__ ist eine trigonometrische Funktion, die `cos(θ)`
+    geschrieben wird. In einem rechtwinkligen Dreieck ist es das Verhältnis der
+    Ankathete zur Hypotenuse.
+  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+
+cpoct:
+  title: CPOCT
+  text: CPOCT steht für __entsprechende Teile von kongruenten Dreiecken__. Das
+    heißt, wenn zwei Dreiecke kongruent sind, dann müssen auch alle zugehörigen
+    Komponenten (Winkel, Seiten, Abschnitte,....) kongruent zueinander sein.
+  link: /course/triangles-and-trigonometry/triangles-congruence#cpoct
+
+cross-section:
+  title: Querschnitt
+  text: Ein __Querschnitt__ ist die Schnittfläche eines dreidimensionalen
+    Körpers mit einer Ebene.
+
+cryptography:
+  title: Kryptographie
+  text: Die __Kryptographie__ ist der Bereich der Mathematik, der die
+    Verschlüsselung und Entschlüsselung von geheimen Nachrichten untersucht.
+
+cube:
+  title: Würfel
+  text: Der __Würfel__ ist ein platonischer Körper, der aus sechs Feldern
+    besteht. Er hat 8 Eckpunkte und 12 Kanten.
+  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+
+cylinder:
+  title: Zylinder
+  text: Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei
+    kongruenten, parallelen, kreisförmigen Flächen (den _Grund- und
+    Deckflächen_) besteht, die durch eine gekrümmte Oberfläche verbunden sind.
+    Man könnte sich einen Zylinder auch als „rundes“ Prisma vorstellen.
+  link: /course/circles-and-pi/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+
+cylinder-volume:
+  title: Volumen eines Zylinders
+  text: |
+    Das Volumen eines Zylinders ergibt sich aus der Formel
+
+    {.text-center} `V = π r^2 h`,
+
+    wobei _r_ der Radius der kreisförmigen Grundfläche und _h_ die Höhe des
+    Zylinders (der senkrechte Abstand zwischen Grund- und Deckfläche) ist.
+
+degrees:
+  title: Grad
+  text: __Grade__ sind eine Einheit zur Winkelmessung, die durch das Symbol °
+    gekennzeichnet ist. Eine komplette Umdrehung sind 360°, ein rechter Winkel
+    90°, und so weiter.
+
+denominator:
+  title: Nenner
+  text: Der __Nenner__ ist die Zahl unter dem Bruchstrich. Zum Beispiel, in
+    `4/7`, ist die Zahl 7 der Nenner.
+
+dilation:
+  title: Dilatation (Streckung)
+  text: Eine __Dilatation__ (Streckung, Dehnung, Stauchung) ist eine Abbildung,
+    die die Maße einer geometrischen Form ändert, indem sie diese größer oder
+    kleiner macht.
+  image: dilation.svg
+  link: /course/transformations-and-symmetry/similarity#dilations
+
+directed-graph:
+  title: Gerichteter Graph
+  text: In einem __gerichteten Graphen__, wird jede Kante als Pfeil dargestellt,
+    d.h. es gibt jeweils einen Start- und einen Endknoten.
+  link: /course/graphs-and-networks/introduction#intro-1
+
+dna:
+  title: DNA
+  text: __DNA__ (Desoxyribonukleinsäure) ist ein Molekül, das den genetischen
+    Bauplan aller lebenden Organismen enthält. Die meisten DNAs bestehen aus
+    zwei Strängen, die eine _Doppelhelix_ bilden. Die genetische Information wird
+    in der Größenordnung von vier Nukleinsäuren (A, G, C und T) kodiert, aus
+    denen sich die DNA zusammensetzt. _DNA-Sequenzierung_ ist der Prozess der
+    Extraktion dieser Information - eine wesentliche Technik in Biologie,
+    Medizin, Genetik und Biotechnologie.
+
+dodecahedron:
+  title: Dodekaeder
+  text: Das __Dodekaeder__ ist ein platonischer Körper, der aus 12 regelmäßigen
+    Fünfecken besteht. Er hat 20 Eckpunkte und 30 Kanten.
+  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+
+dot-annihilation:
+  title: Vernichtung
+  text: Wenn Sie sowohl einen Punkt als auch einen Anti-Punkt in derselben Zelle
+    haben, heben sie sich auf oder __vernichten__ sich gegenseitig. Denke an
+    `-1 + 1 = 0`.
+
+dot-machine:
+  title: Dot Machine
+  text: |
+    Eine __Punkt-Maschine__ besteht aus mehreren Zellen, die Punkte enthalten. 
+    Du kannst diese Punkte verändern, indem du bestimmte Regeln auf sie anwendest.
+
+    In einer `1←3` Maschine werden z.B. 3 Punkte einer Zelle umgewandelt in einen 
+    Punkt in der Zelle links davon. Ganz ähnlich, wird 1 Punkt in der Zelle umgewandelt
+    in 3 Punkte in der Zelle rechts daneben. Das wird eine "Explosion" genannt.
+
+ellipse:
+  title: Ellipse
+  text: |
+    Eine __Ellipse__ ist eine gekrümmte Bahn, die um zwei Brennpunkte verläuft.
+    Jeder Punkt am Umfang der Ellipse hat die gleiche _Summe der Abstände_ zu
+    den beiden Brennpunkten.
+
+    Wenn die Brennpunkte sehr nah beieinander liegen, sieht die Ellipse fast wie
+    ein Kreis aus. Wenn sie sich weiter auseinander bewegen, wird die Ellipse
+    länglicher.
+
+    Ellipsen sind eine Art von _Kegelschnitt:_eine Schnittfläche eines Kegels
+    mit einer Ebene.
+  image: ellipse.svg
+  link: /course/circles-and-pi/conic-sections#ellipses
+
+equilateral-triangle:
+  title: Gleichseitiges Dreieck
+  text: Ein __gleichseitiges Dreieck__ ist ein Dreieck, bei dem alle drei Seiten
+    die gleiche Länge haben.
+
+euclidean-geometry:
+  title: Euklidische Geometrie
+  text: Die __euklidische Geometrie__ ist die Art von Geometrie, die der
+    Mathematiker _Euklid_entwickelt hat. Sie fußt auf nur fünf _Axiomen_, einer
+    Art von "Gesetzen" der Geometrie, die alles beschreiben, was man tun darf.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: Faktor
+  text: Eine Zahl _a_ ist ein __Faktor__ (oder __Divisor__) einer Zahl _b_, wenn
+    man _b_ durch _a_ ohne Rest teilen kann.
+  link: /course/divisibility-and-primes/factors-and-multiples
+
+factorisation:
+  title: Primfaktorenzerlegung
+  text: Die __Primfaktorenzerlegung__ einer Zahl ist eine Möglichkeit, sie als
+    Produkt von Primzahlen zu schreiben.
+  link: /course/divisibility-and-primes/prime-numbers
+
+fermat-last:
+  title: Fermat's letzter Satz
+  text: |
+    Der __Letzte Satz von Fermat__ besagt, dass die Gleichung `x^n + y^n = z^n`
+    keine ganzzahligen Lösungen für `n>2` hat. Wenn `n=2`, erhalten wir _den
+    Satz von Pythagoras_, der viele ganzzahlige Lösungen hat, aber für _n_ = 3,
+    4, 5, .... gibt es keine einzige.
+
+    Im Jahr 1637 machte der Mathematiker Pierre de Fermat in einem Lehrbuch eine
+    Notiz und behauptete, er habe einen Beweis dafür, aber dieser sei zu
+    umfangreich, um am Buchrand Platz zu haben. Über 350 Jahre lang versuchten
+    andere Mathematiker, diesen Beweis zu finden, und Fermats letzter Satz war
+    sogar im _Guinness-Buch der Rekorde_ als "schwierigstes mathematisches
+    Problem" aufgeführt.
+
+    1994, nach vielen Jahren Arbeit, gelang es Andrew Wiles endlich, den Satz zu
+    beweisen. Später erhielt er den Abel-Preis, eine der höchsten Auszeichnungen
+    der Mathematik.
+
+fibonacci-numbers:
+  title: Fibonacci-Zahlen
+  text: Die Folge der __Fibonacci-Zahlen__ beginnt mit 1, 1. Jeder folgende
+    Begriff ist die Summe der beiden vorhergehenden Begriffe, was bedeutet, dass
+    für diese die rekursive Formel `x_n = x_(n-1) + x_(n-2)` gilt.
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: Figurierte Zahlen
+  text: __Figurierte Zahlen__ sind Zahlen, die durch geometrische Formen
+    dargestellt werden können. Beispiele sind Quadrat-, Kubik- und
+    Tetraederzahlen.
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: Formel
+  text: Eine __Formel__ ist eine Regel oder Gleichung, die die Beziehung
+    zwischen zwei oder mehreren Variablen beschreibt. Ein Beispiel ist
+    `A = πr^2`.
+
+fractal:
+  title: Fraktal
+  text: Ein __Fraktal__ ist eine _selbstähnliche_ geometrische Form, z.B. eine,
+    die bei verschiedenen Vergrößerungsstufen gleich aussieht. Fraktale werden
+    durch unendliches Wiederholen einer Anleitung oder Gleichung erzeugt.
+  link: /world/Fractals
+
+fta:
+  title: Fundamentalsatz der Arithmetik
+  text: Der __Fundamentalsatz der Arithmetik__ besagt, dass für jede ganze Zahl
+    eine eindeutige Primfaktorzerlegung existiert.
+
+function:
+  title: Funktion
+  text: Eine __Funktion__ ist eine mathematische Beziehung, die einen Eingang
+    (_x_) in genau einen Ausgang (_y_) umwandelt. Funktionen werden oft als
+    mathematische Gleichungen der Form `f(x)` ausgedrückt.
+
+function-graph:
+  title: Funktionsdiagramme
+  text: Wir können mathematische Funktionen der Form `f(x)` in einem
+    Koordinatensystem darstellen. Das Ergebnis wird als __Graph__ der Funktion
+    bezeichnet.
+
+gcd:
+  title: Größter gemeinsamer Teiler
+  text: Der __größte gemeinsame Teiler__ (ggT) von zwei Zahlen _a_ und _b_ ist
+    die größte ganze Zahl, die gleichzeitig ein Divisor von _a_ und von _b_ist.
+  link: /course/divisibility-and-primes/greatest-common-factors
+
+geometric-sequence:
+  title: Geometrische Folge
+  text: Eine __geometrische Folge__ besteht aus einer Folge von Zahlen, bei
+    denen das Verhältnis _r_ zwischen aufeinanderfolgenden Termen immer konstant
+    ist.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+glide-reflection:
+  title: Gleitspiegelung
+  text: Eine __Gleitspiegelung__ ist eine besondere Art der Abbildung. Sie ist
+    eine Kombination aus einer _Spiegelung_ und einer _Translation_ in die
+    gleiche Richtung wie die Spiegelachse.
+  link: /course/transformations-and-symmetry/wallpaper-groups#footsteps
+
+golden-ratio:
+  title: Goldener Schnitt
+  text: |
+    Der __Goldene Schnitt__ ist eine bestimmte irrationale Zahl mit dem Wert
+    `φ = 1,61803398875....`. Sie kann durch Division zweier aufeinanderfolgender
+    Fibonacci-Zahlen angenähert werden.
+
+    Der Goldene Schnitt wird in Kunst und Architektur oft als besonders
+    ästhetisch empfunden und taucht auch in der Natur immer wieder auf
+    (Schneckenhäuser, Pflanzenwuchs, ...).
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: Graph
+  text: Ein __Graph__ ist eine Menge von Knoten, die durch Kanten verbunden
+    sind.
+  link: /course/graphs-and-networks/introduction
+
+graph-cycle:
+  title: Zyklus
+  text: __Zyklen__ sind Graphen, die aus einem geschlossenen Ring von Knoten
+    bestehen.
+  link: /course/graphs-and-networks/introduction#intro-4
+
+graph-degree:
+  title: Grad
+  text: Der __Grad__ eines Knoten ist die Anzahl der Kanten, die sich an diesem
+    Knoten treffen.
+  link: /course/graphs-and-networks/introduction#intro-3
+
+graph-edge:
+  title: Kante
+  text: __Kanten__ sind die Linien, die Knoten (Punkte) in einem Graphen
+    verbinden.
+  link: /course/graphs-and-networks/introduction
+
+graph-order:
+  title: Ordnung
+  text: Die __Ordnung__ eines Graphen entspricht der Anzahl seiner Knoten in
+    ihm.
+  link: /course/graphs-and-networks/introduction#intro-3
+
+graph-vertex:
+  title: Knoten
+  text: Ein __Knoten__ ist ein Punkt oder eine Ecke eines Graphen.
+  link: /course/graphs-and-networks/introduction
+
+gravity:
+  title: Schwerkraft
+  text: |
+    Die __Schwerkraft__ ist eine der vier Grundkräfte der Natur. Isaac Newton
+    entdeckte, dass es zwischen zwei beliebigen Massen `m_1` und `m_2` im
+    Universum eine Kraft wirkt
+
+    {.text-center} `F = (G m_1 m_2) / r^2`,
+
+    wobei _G_ die Gravitationskonstante und _r_ der Abstand zwischen den
+    Massen ist.
+
+group:
+  title: Gruppe
+  text: |
+    Eine Gruppe ist eine Sammlung von „Elementen" (wie Zahlen oder Symmetrien),
+    die drei verschiedenen Regeln folgen:
+
+    1. Du kannst zwei der Elemente addieren/kombinieren, um ein anderes zu
+       erhalten, das ebenfalls Element der Gruppe ist.
+    2. Die Elemente sind _assoziativ_, was bedeutet, dass `a+(b+c) = (a+b)+c`.
+    3. Es gibt ein _neutrales Element_, und jedes Element e hat ein
+       _Umkehr-Element (inverses Element)_, das, wenn es mit e verknüpft wird,
+       das neutrale Element ergibt.
+  link: /course/transformations-and-symmetry/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: Hagelschlagzahlen
+  text: |
+    __Hagelschlagzahlen__ können erzeugt werden, indem man eine beliebige ganze
+    Zahl als Ausgangspunkt wählt und dann diesen Regeln folgt:
+
+    * Wenn `x_n` gerade ist, `x_(n+1) = x_n / 2`.
+    * Wenn `x_n` ungerade ist, `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+hyperbola:
+  title: Hyperbel
+  text: Eine __Hyperbel__ ist die Form des Graphen der Funktion `y = 1/x`. Sie
+    besteht aus zwei getrennten Teilen, die sich beide _Asymptoten_ annähern.
+    Sie gehört auch zu den _Kegelschnitten_.
+  image: hyperbola.svg
+
+hypotenuse:
+  title: Hypotenuse
+  text: Die __Hypotenuse__ eines rechtwinkligen Dreiecks ist seine längste
+    Seite, die dem rechten Winkel gegenüberliegt.
+  image: right-triangle.svg
+
+icosahedron:
+  title: Ikosaeder
+  text: Das __Ikosaeder__ ist ein platonischer Körper, der aus 20 Dreiecken
+    besteht. Es hat 12 Eckpunkte und 30 Kanten.
+  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+
+infinity:
+  title: Unendlichkeit
+  text: __Unendlich__ ist eine Größe ohne Grenze oder Ende. In der Mathematik
+    wird sie durch das Symbol `∞` dargestellt.
+
+information:
+  title: Informationstheorie
+  text: __Die Informationstheorie__ beschäftigt sich mit der Quantifizierung,
+    Speicherung und Kommunikation von Daten und Informationen. Sie findet in der
+    Logik, Kryptographie und Informatik Anwendung.
+
+integer:
+  title: Ganzen Zahlen
+  text: "Die __Ganzen Zahlen__ sind die positiven und negativen natürlichen
+    Zahlen einschließlich Null: …, -3, -2, -1, 0, 1, 2, 3, 3, …"
+
+internal-angle:
+  title: Innenwinkel
+  text: Die __Innenwinkel__ eines Vielecks sind die Winkel auf der Innenseite
+    eines jeden Eckpunkts.
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: Irrationale Zahlen
+  text: __Irrationale Zahlen__ sind Zahlen, die nicht als Bruchzahlen von ganzen
+    Zahlen ("_rationale Zahlen_") ausgedrückt werden können. Zum Beispiel ist
+    0,33333333.... = `1/3` _rational_, aber `π`, `sqrt(2)` und _e_ sind alle
+    _irrational_.
+
+irregular-polygon:
+  title: Unregelmäßiges Vieleck
+  text: Ein __unregelmäßiges Vieleck__ (Polygon) ist eines, das _nicht
+    regelmäßig_ ist. Das bedeutet, dass entweder die Seiten oder die Winkel
+    nicht alle die gleiche Größe haben.
+
+isosceles-triangle:
+  title: Gleichschenkliges Dreieck
+  text: In einem __gleichschenkligen Dreieck__haben zwei Seiten die gleiche
+    Länge.
+
+iss:
+  title: Internationale Raumstation
+  text: Die __Internationale Raumstation__ (ISS) wurde 1998 gestartet und
+    umkreist die Erde in einer Höhe von etwa 400 km. Es ist das größte von
+    Menschenhand geschaffene Bauwerk in der niedrigen Erdumlaufbahn (LEO) und
+    wurde seit dem Start durchgehend bewohnt. Sie kann mit bloßem Auge von der
+    Erde aus gesehen werden.
+
+kite:
+  title: Deltoid (Drachenviereck)
+  text: Ein __Deltoid__ ist ein Viereck, bei dem zwei Paare benachbarter Seiten
+    die gleiche Länge haben.
+  link: /course/polygons-and-polyhedra/quadrilaterals#kites
+
+laws-of-nature:
+  title: Naturgesetze
+  text: Die Bezeichnung __Naturgesetze__ ist ein Sammelbegriff für die
+    physikalischen Regeln (meist als mathematische Gleichungen ausgedrückt), die
+    alles, was wir im Universum beobachten, zu erklären versuchen.
+
+lcm:
+  title: Kleinstes gemeinsames Vielfaches
+  text: Das __kleinste gemeinsame Vielfache__ (kgV) von zwei Zahlen _a_ und _b_
+    ist die kleinste ganze Zahl, die ein Vielfaches von _a_ und _b_ist.
+  link: /course/divisibility-and-primes/least-common-multiples
+
+linie:
+  title: Gerade
+  text: Eine __Gerade__ besteht aus unendlich vielen Punkten, die sich ohne
+    Anfang und Ende in beide Richtungen erstrecken. Geraden sind immer
+    „geradlinig“ und haben keine _Breite_.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Strecke
+  text: Eine __Strecke__ ist der Teil einer Geraden, der zwischen zwei Punkten
+    liegt, ohne sich bis zur Unendlichkeit zu erstrecken. Wir können Strecken
+    mit `bar(AB)` beschriften.
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: Steigung einer Geraden
+  text: Die __Steigung__ einer Geraden gibt ihre "Steilheit“ an und wird in der
+    Regel durch den Buchstaben _k_ bezeichnet. Sie entspricht der Änderung in _y_
+    für eine Einheitenänderung in _x_ entlang der Geraden.
+
+linear-equation:
+  title: Lineare Gleichung
+  text: Eine __lineare Gleichung__ hat die Form `ax + b = 0`, wobei _x_ eine
+    Variable ist und _a_ und _b_ Zahlen sind. In einem Koordinatensystem
+    dargestellt, bilden die Werte von `ax+b` eine gerade Linie.
+
+linear-function:
+  title: Lineare Funktion
+  text: Eine __lineare Funktion__ ist eine Funktion, deren Graph eine gerade
+    Linie ist. Sie ist definiert durch `f(x) = kx + d`, wobei _k_ die Steigung
+    der Linie und _d_ den Schnittpunkt mit der _y_-Achse festlegt.
+
+median:
+  title: Schwerlinie
+  text: Die __Schwerlinien__ eines Dreiecks sind die Linien, die jeden Eckpunkt
+    mit dem Mittelpunkt ihrer gegenüberliegenden Seiten verbinden.
+  link: /course/triangles-and-trigonometry/properties-of-triangles#medians
+
+midpoint:
+  title: Mittelpunkt
+  text: Der __Mittelpunkt__ einer Strecke ist der Punkt auf der Strecke, der sie
+    in der Mitte in zwei kongruente Teile teilt. Die __Mittelpunktformel__
+    besagt, dass für die Endpunkte `(x_1, y_1)` und `(x_2,y_2)` der Mittelpunkt
+    `((x_1 + x_2)/2, (y_1 + y_2)/2)` ist.
+
+millennium-prize:
+  title: Millennium-Probleme
+  text: |
+    Die sieben __Millennium-Probleme__ gehören zu den schwierigsten offenen
+    Problemen in der Mathematik. Sie wurden im Jahr 2000 vom _Clay Mathematics
+    Institute_aufgelistet und mit jeweils einer Belohnung von 1 Million Dollar
+    für die Lösung ausgeschrieben:
+
+    * Lösung des P-NP-Problems
+    * Beweis der Vermutung von Hodge
+    * Beweis der Poincaré-Vermutung
+    * Beweis der Riemannschen Vermutung
+    * Erforschung der Gleichungen von Yang-Mills
+    * Existenz und Regularität von Lösungen der Navier-Stokes-Gleichungen
+    * Beweis der Vermutung von Birch und Swinnerton-Dyer
+
+    Bisher wurde nur eines der Probleme, die _Poincaré-Vermutung_, gelöst.
+    Doch der Mathematiker, der es löste, Grigori Perelman, lehnte die
+    Auszeichnung ab.
+
+molecule:
+  title: Molekül
+  text: |
+    Ein __Molekül__ besteht aus zwei mehr Atomen, die durch chemische Bindungen
+    zusammengehalten werden und dabei über einen längeren Zeitraum stabil sind. 
+    Trägt es eine elektrische Ladung, nennt man es __Ionen__.
+
+    Beispiele für Moleküle sind `O_2`, das aus zwei verbundenen Sauerstoffatomen
+    besteht, und `H_2 O`, das aus zwei Wasserstoffatomen und einem
+    Sauerstoffatom besteht.
+
+multiple:
+  title: Vielfache
+  text: Eine Zahl _a_ ist ein __Vielfaches__ einer Zahl _b_, wenn _b_ ein Faktor
+    von _a_ist.
+  link: /course/divisibility-and-primes/factors-and-multiples
+
+natural-numbers:
+  title: Natürliche Zahlen
+  text: "Die __natürlichen Zahlen__ sind die positiven ganzen Zahlen, die bei 1
+    beginnen: 1, 2, 3, 4,...."
+
+net:
+  title: Netze aus Polyedern
+  text: Das __Netz__ eines Polyeders ist das, was man bekommt, wenn man seine
+    Vieleckflächen auf eine ebene Fläche "entfaltet".
+
+np:
+  title: NP Probleme
+  text: In der _Komplexitätstheorie_ geht es darum, festzustellen, wie
+    "schwierige" Probleme durch einen Computer gelöst werden sollen. __NP hard__
+    (non-deterministic polynomial-time hard) ist die Klasse der schwierigsten
+    Probleme.
+
+numerator:
+  title: Zähler
+  text: Der __Zähler__ ist die Zahl oberhalb des Bruchstrichs. Zum Beispiel, in
+    `4/7`, ist die Zahl 4 der Zähler.
+
+obtuse-angle:
+  title: Stumpfer Winkel
+  text: Ein __stumpfer Winkel__ ist ein Winkel von mehr als 90°, aber weniger
+    als 180°.
+
+obtuse-triangle:
+  title: Stumpfwinkliges Dreieck
+  text: In einem __stumpfwinkligen Dreieck__ist ein Winkel größer als 90°.
+  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+
+octahedron:
+  title: Oktaeder
+  text: Das __Oktaeder__ ist ein platonischer Körper, der aus 8 Dreiecken
+    besteht. Es hat 6 Knoten und 12 Kanten.
+  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+
+order-of-symmetry:
+  title: Zähligkeit
+  text: Wenn eine Form rotationssymmetrisch ist, ist seine __Zähligkeit__ die
+    Anzahl der Orientierungen, in denen die Form gleich aussieht. (Oder, es ist
+    die Anzahl der Male, die man die Form drehen kann, bevor man zum Anfang
+    zurückkehrt.)
+  link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
+
+palindrom:
+  title: Palindrom
+  text: Ein __Palindrom__ ist ein Wort oder eine Zahl, die von hinten nach vorne
+    gleichlautend ist wie von vorne nach hinten. Zum Beispiel sind 25752 und
+    "ANNA" beides Palindrome.
+  link: /course/transformations-and-symmetry/symmetry#palindromes
+
+parabola:
+  title: Parabel
+  text: Eine __Parabel__ ist die Form des Graphen einer quadratischen Funktion
+    wie `y = x^2`. Sie ist symmetrisch, u-förmig und kann entweder nach oben
+    oder nach unten zeigen. Sie gehört auch zu den _Kegelschnitten_.
+  image: parabola.svg
+
+parallel:
+  title: Parallele
+  text: Zwei oder mehr Geraden sind __parallel__, wenn sie sich nie schneiden.
+    Sie haben die gleiche Steigung und der Abstand zwischen ihnen ist immer
+    gleich.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogramm:
+  title: Parallelogramm
+  text: Ein __Parallelogramm__ ist ein Viereck, bei dem beide Paare von
+    gegenüberliegenden Seiten parallel sind.
+  link: /course/polygons-and-polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: Pascalsches Dreieck
+  text: Ein __Pascalsches Dreieck__ ist eine Zahlenpyramide, in der jede Zelle
+    die Summe der beiden Zellen direkt darüber ist. Es enthält alle
+    Binomialkoeffizienten sowie viele andere Zahlenreihen und Muster.
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: Penrose-Parkettierung
+  text: Eine __Penrose-Parkettierung__ ist eine _nicht-periodische_,
+    _selbstähnliche_ Tesselierung. Es besteht nur aus wenigen verschiedenen
+    Formen, wiederholt sich aber nie.
+  link: /course/polygons-and-polyhedra/tessellations#penrose
+
+perfect-numbers:
+  title: Perfekte Zahlen
+  text: Eine __perfekte Zahl__ ist eine Zahl, die gleich der Summe ihrer Teiler
+    ist (ausschließlich sich selbst). Zum Beispiel ist `28 = 1 + 2 + 4 + 7 + 14`
+    eine perfekte Zahl.
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: Senkrechte Geraden
+  text: Zwei Geraden stehen __senkrecht__, wenn sie sich im rechten Winkel
+    schneiden.
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: Streckensymmetrale
+  text: Die __Streckensymmetrale__ einer Strecke durchläuft ihren Mittelpunkt
+    und schneidet sie in einem Winkel von 90°.
+  image: perpendicular-bisector.svg
+
+pi:
+  title: Pi
+  text: __Pi__, oft als griechischer Buchstabe _π_geschrieben, ist das
+    Verhältnis von Umfang und Durchmesser eines Kreises. Ihr Wert ist ungefähr
+    3,14159265
+  link: /course/circles-and-pi/introduction#pi-definition
+
+platonic-solid:
+  title: Platonischer Körper
+  text: Ein __platonischer Körper__ ist ein Polyeder, das aus nur einer Art von
+    regelmäßigen Vielecken besteht, das aus jeder Richtung gleich aussieht. (Mit
+    anderen Worten, die gleiche Anzahl von Flächen trifft an jedem Knoten
+    aufeinander.) Es gibt nur fünf verschiedene platonische Körper.
+  link: /course/polygons-and-polyhedra/platonic-solids
+
+point:
+  title: Punkt
+  text: Ein __Punkt__ ist eine bestimmte Position im Raum. Punkte beschreiben
+    eine Position, haben aber selbst keine Größe oder Form.
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: Vieleck (Polygon)
+  text: Ein __Vieleck__ ist eine geometrische Form, die aus geraden Strecken
+    besteht. Vielecke dürfen keine gekrümmten Seiten oder Unterbrechungen
+    enthalten. Zum Beispiel ist ein Quadrat ein Polygon, ein Kreis aber nicht.
+  image: polygon.svg
+  link: /course/polygons-and-polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: Diagonale
+  text: Eine __Diagonale__ eines Vielecks ist eine Strecke, die zwei Knoten
+    verbindet, die nicht nebeneinander liegen.
+
+polygon-vertex:
+  title: Eckpunkt eines Vielecks
+  text: Die __Eckpunkte__ eines Vielecks sind die Punkte, an denen sich seine
+    Seiten treffen.
+
+polyhedron:
+  title: Polyeder
+  text: Ein __Polyeder__ ist ein dreidimensionaler Körper ohne gekrümmte
+    Oberflächen oder Kanten. Alle Flächen eines Polyeders sind Vielecke. Zum
+    Beispiel sind ein Würfel und eine Pyramide Polyeder, aber eine Kugel nicht.
+  link: /course/polygons-and-polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Dual of a polyhedron
+  text: TODO
+  link: /course/polygons-and-polyhedra/platonic-solids#platonic-dual
+
+polyhedron-edge:
+  title: Kanten eines Polyeders
+  text: Die __Kanten__ eines Polyeders sind die Strecken, durch die zwei seiner
+    Flächen verbunden sind.
+  link: /course/polygons-and-polyhedra/polyhedra
+
+polyhedron-face:
+  title: Oberfläche eines Polyeders
+  text: Die __Oberfläche__ eines Polyeders besteht aus Vielecken.
+  link: /course/polygons-and-polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Eckpunkt eines Polyeders
+  text: Die "Ecken" eines Polyeders werden seine __Eckpunkte__genannt.
+  link: /course/polygons-and-polyhedra/polyhedra
+
+polynomial:
+  title: Polynom
+  text: Ein __Polynom__ ist ein algebraischer Ausdruck, der aus Konstanten und
+    Vielfachen von Variablen und deren Potenzen besteht. Ein Beispiel wäre
+    `5x^3 - 2x^2 + x + 4`.
+
+polynomial-degree:
+  title: Grad
+  text: Der Grad eines Polynoms ist die höchste vorkommende Potenz aller seiner
+    Variablen. Zum Beispiel, der Grad von `5x^3 + 2x - 4` ist 3.
+
+powers:
+  title: Potenzen
+  text: __Potenzieren__ (oder die __Exponentiation__) ist die mathematische
+    Operation, bei der eine Zahl (die _Basis_) mit sich selbst eine bestimmte
+    Anzahl mal (der _Exponent_) multipliziert wird. Dies wird normalerweise als
+    hochgestelltes `a^x` geschrieben, wobei _a_ die Basis und _x_ der Exponent
+    ist. Zum Beispiel `4^3=4×4×4`.
+
+prime:
+  title: Primzahl
+  text: Eine __Primzahl__ ist eine ganze Zahl, die keine anderen Divisoren als
+    1 und sich selbst hat.
+  link: /course/divisibility-and-primes/prime-numbers
+
+prime-factor:
+  title: Primfaktor
+  text: Ein __Primfaktor__ einer Zahl ist einfach ein Faktor, der Primzahl ist.
+  link: /course/divisibility-and-primes/prime-numbers
+
+prism:
+  title: Prisma
+  text: Ein __Prisma__ ist ein dreidimensionaler Körper mit zwei kongruenten
+    vieleckigen Flächen, (_Grund- und Deckfläche_genannt), deren
+    zusammengehörende Eckpunkte durch parallele Kanten verbunden sind. Die
+    verbleibenden Flächen eines Prismas sind alles Rechtecke oder
+    Parallelogramme.
+  image: prism.svg
+
+probability:
+  title: Wahrscheinlichkeit
+  text: Eine __Wahrscheinlichkeit__ ist eine Zahl zwischen 0 und 1, die die
+    Möglichkeit des Eintretens eines bestimmten Ereignisses angibt.
+
+probability-tree:
+  title: Wahrscheinlichkeitsbaum
+  text: Ein __Wahrscheinlichkeitsbaum__ ist ein Baumdiagramm, das die
+    kombinierte Wahrscheinlichkeit mehrerer aufeinanderfolgender Ereignisse
+    darstellt.
+
+proof:
+  title: Beweis
+  text: Ein __Beweis__ ist ein logisches Argument, das ohne Zweifel zeigt, dass
+    eine bestimmte Aussage wahr ist.
+
+protein:
+  title: protein
+  text: |
+    Ein __Protein__ ist ein großes _Makromolekül_, das in lebenden Organismen
+    viele verschiedene Funktionen erfüllen kann: von der Verdauung über die
+    Kommunikation zwischen Zellen bis hin zur DNA-Replikation. Proteine bestehen
+    aus einer oder mehreren Ketten von _Aminosäuren_.
+
+pyramide:
+  title: Pyramide
+  text: |
+    Eine __Pyramide__ ist ein Polyeder, das ein Vieleck als Grundfläche, und
+    dreieckige Flächen, die sich in einem Scheitelpunkt treffen, als Mantel hat.
+
+    Bei einer __regelmäßigen Pyramide__ ist die Grundfläche ein _regelmäßiges
+    Vieleck_ und der Scheitelpunkt liegt direkt über der Mitte dieser
+    Grundfläche.
+  image: pyramid.svg
+
+protractor:
+  title: Winkelmesser
+  text: Ein Winkelmesser ist ein Werkzeug, um einen Winkel in Grad zu messen.
+
+pythagoras-theorem:
+  title: Der Satz des Pythagoras
+  text: __Der Satz des Pythagoras__ besagt, dass in jedem rechtwinkligen Dreieck
+    `a^2 + b^2 = c^2` gilt, wobei _c_ die Länge der Hypotenuse und _a_ und _b_
+    die Längen der beiden Katheten sind.
+  link: /course/triangles-and-trigonometry/pythagoras-theorem
+
+pythagorean-triple:
+  title: pythagoreisches Tripel
+  text: Ein __pythagoreisches Tripel__ sind drei ganze Zahlen _a_, _b_ und
+    _c_, die den Satz des Pythagoras erfüllen `a^2 + b^2 = c^2`.
+  link: /course/triangles-and-trigonometry/pythagoras-theorem#pythagorean-triples
+
+quadratic:
+  title: Quadratische Funktionen
+  text: Eine __quadratische Funktion__ ist ein Polynom 2. Grades. Zum Beispiel
+    ist `x^2 - 2x + 3` eine quadratische Funktion.
+
+quadratic-equation:
+  title: Quadratische Gleichung
+  text: Eine __quadratische Gleichung__ ist eine Gleichung, mit genau einer
+    Variable vom Grad 2. Sie wird oft als `ax^2 + bx + c = 0` geschrieben, wobei
+    _x_ eine Variable ist, _a_, _b_ und _c_ Zahlen sind und _a_ nicht gleich
+    Null ist.
+
+quadratic-function:
+  title: Quadratische Funktion
+  text: Sie wird oft als `ax^2 + bx + c = 0` geschrieben, wobei __x__ eine
+    Variable ist, _a_, _b_ und _c_ Zahlen sind und _a_ nicht gleich Null ist.
+    Der Graph einer quadratischen Funktion ist eine u-förmige Kurve, die als
+    __Parabel__bezeichnet wird.
+
+quadrilateral:
+  title: Viereck
+  text: Ein __Viereck__ ist ein Vieleck (Polygon) mit vier Seiten.
+  link: /course/polygons-and-polyhedra/quadrilaterals
+
+quantum:
+  title: Quantenmechanik
+  text: __Die Quantenmechanik__ ist ein Zweig der Physik, der das seltsame
+    Verhalten von Elementarteilchen erklärt.
+
+radians:
+  title: Radiant
+  text: __Radiant__ ist eine Einheit zur Messung der Größe von Winkeln. Eine
+    vollständige Umdrehung (360°) ist `2π` in Radiant (Bogenmaß) - die Länge
+    des Umfangs eines Einheitskreises.
+  link: /course/circles-and-pi/radians#radians
+
+radioactive:
+  title: Radioaktiver Zerfall
+  text: Der __radioaktive Zerfall__ ist ein physikalischer Prozess, bei dem
+    instabile Atome auseinanderbrechen und Energie freisetzen.
+
+rational-numbers:
+  title: Rationale Zahlen
+  text: __Rationale Zahlen__ sind Zahlen, die als Bruch (oder Verhältnis) von
+    zwei ganzen Zahlen ausgedrückt werden können. Beispiele sind `1/2`, `-5/7`,
+    12.7 und 9.
+
+ray:
+  title: Strahl
+  text: Ein __Strahl__ ist der Teil einer Geraden, der sich nur in eine Richtung
+    bis zur Unendlichkeit erstreckt. Wir schreiben für einen Strahl `vec(AB)`.
+  link: /course/euclidean-geometry/definitions#rays
+
+rectangle:
+  title: Rechteck
+  text: Ein __Rechteck__ ist ein Viereck, bei dem alle Winkel 90° betragen.
+  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: Spiegelung
+  text: Eine __Spiegelung__ ist eine Abbildung, die eine Form entlang einer
+    Linie „rotiert" oder „reflektiert".
+  link: /course/transformations-and-symmetry/transformations#reflections
+
+reflectional-symmetry:
+  title: Spiegelsymmetrie
+  text: Eine Form nennt man spiegelsymmetrisch, wenn sie nach einer Spiegelung
+    gleich aussieht.
+  image: reflectional-symmetry.svg
+  link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
+
+
+regular-polygon:
+  title: Regelmäßiges Vieleck
+  text: Bei einem __regelmäßigen Vieleck__ haben alle Seiten die gleiche Länge
+    und alle Winkel die gleiche Größe.
+  image: regular-polygon.svg
+  link: /course/polygons-and-polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: Raute
+  text: Eine __Raute__ oder Rhombus (der Plural ist _Rhomben_ oder _Rauten_) ist
+    ein Viereck, bei dem alle Seiten die gleiche Länge haben.
+  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: Rechter Winkel
+  text: Ein __rechter Winkel__ ist ein Winkel mit 90°.
+
+right-triangle:
+  title: Rechtwinkliges Dreieck
+  text: In einem __rechtwinkligen Dreieck__hat ein Winkel genau 90°.
+  image: right-triangle.svg
+  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+
+rigid-transformation:
+  title: Längentreue Abbildung
+  text: Eine __längentreue Abbildung__ (oder __Isometrie__) ist eine Abbildung,
+    die die Größe oder Form einer geometrischen Figur nicht verändert.
+  link: /course/transformations-and-symmetry/transformations#rigid
+
+roman-numerals:
+  title: Römische Zahlen
+  text: |
+    Das __römische Zahlensystem__ wurde im alten Rom entwickelt und in Europa
+    bis ins 14. Jahrhundert verwendet. Damit konnte man durch Kombination von
+    sieben verschiedene Buchstaben jede beliebige ganze Zahl schreiben:
+
+    * I = 1
+    * V = 5
+    * X = 10
+    * L = 50
+    * C = 100
+    * D = 500
+    * M = 1000
+
+rotation:
+  title: Drehung
+  text: Eine __Drehung__ ist eine Abbildung, die eine Form um einen bestimmten
+    Winkel um einen Festpunkt „rotieren“ lässt.
+  link: /course/transformations-and-symmetry/transformations#rotations
+
+rotational-symmetry:
+  title: Rotationssymmetrie
+  text: Eine Form nennt man rotationssymmetrisch, wenn sie nach einer Drehung
+    um weniger als 360° gleich aussieht.
+  image: rotational-symmetry.svg
+  link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
+
+roulette:
+  title: Roulette
+  text: __Roulette__ ist ein Casino-Spiel, bei dem man darauf wettet, wo eine
+    in einem Kessel rotierende Kugel landen wird. Ein Roulettekessel enthält 36
+    Zahlen sowie eine oder zwei Nullen.
+
+scale-factor:
+  title: Skalierungsfaktor
+  text: Der __Skalierungsfaktor__ einer Dilatation ist der Betrag, um den die
+    Form gedehnt oder gestaucht wird.
+  link: /course/transformations-and-symmetry/similarity#dilations-1
+
+scalene-triangle:
+  title: Unregelmäßiges Dreieck
+  text: In einem __unregelmäßigen Dreieck__haben alle drei Seiten
+    unterschiedliche Längen.
+
+sequence:
+  title: Folge
+  text: Eine __Folge__ ist eine geordnete Liste von Zahlen (oder anderen
+    Elementen wie geometrischen Objekten), die normalerweise einem bestimmten
+    Muster oder einer bestimmten Funktion folgen. Folgen können sowohl endlich
+    als auch unendlich sein.
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: Konvergenz
+  text: Eine Folge __konvergiert__, wenn sich ihre Glieder im Laufe der Zeit
+    immer mehr einem bestimmten __Grenzwert__annähern.
+
+sequence-divergence:
+  title: Divergenz
+  text: Eine Folge __divergiert__, wenn ihre Glieder im Laufe der Zeit immer
+    größer und größer werden und gegen unendlich gehen (oder in Richtung
+    negativer Unendlichkeit).
+
+sequence-explicit:
+  title: Funktionsvorschrift
+  text: Eine __Funktionsvorschrift__ für eine Folge drückt den Wert des *n*-ten
+    Glieds `x_n` als Funktion von _n_aus.
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: Rekursion
+  text: Eine __rekursive Formel__ für eine Folge drückt den Wert jedes Glieds
+    `x_n` als Funktion seiner vorherigen Glieder aus.
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: Folgenglieder
+  text: Die __Glieder__ einer Folge sind alle ihrer einzelnen Elemente.
+  link: /course/sequences/introduction#simple-patterns
+
+sieve-eratosthenes:
+  title: Das Sieb des Eratosthenes
+  text: Das __Sieb des Eratosthenes__ ist ein Verfahren zum Auffinden von
+    Primzahlen, indem Schritt für Schritt Zahlen eliminiert werden, die _nicht_
+    Primzahlen sind.
+  link: /course/divisibility-and-primes/prime-numbers#eratosthenes
+
+similar:
+  title: Ähnlich
+  text: Zwei geometrische Formen sind __ähnlich__, wenn sie die gleiche Form,
+    aber eine andere Größe haben. Wir können eine der Formen bewegen, drehen,
+    spiegeln und in der Größe verändern, um sie exakt an die andere anzupassen.
+
+sin:
+  title: Sinus
+  text: Der __Sinus__ ist eine trigonometrische Funktion, die `sin(θ)`
+    geschrieben wird. In einem rechtwinkligen Dreieck ist der Sinus das
+    Verhältnis der Gegenkathete zur Hypotenuse.
+  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+
+sphere:
+  title: Kugel
+  text: Eine __Kugel__ ist ein dreidimensionaler Körper, der aus allen Punkten
+    besteht, die den gleichen Abstand zu einem bestimmten _Mittelpunkt_ haben.
+    Dieser Abstand wird als _Radius_ der Kugel bezeichnet.
+  link: /course/circles-and-pi/spheres-cones-cylinders#sphere
+
+square:
+  title: Quadrat
+  text: "Ein __Quadrat__ ist ein regelmäßiges Viereck: Alle Seiten haben die
+    gleiche Länge und alle Winkel haben die gleiche Größe."
+  link: /course/polygons-and-polyhedra/quadrilaterals
+
+square-numbers:
+  title: Quadratzahlen
+  text: Eine __Quadratzahl__ ist eine Zahl, die als Quadrat einer anderen ganzen
+    Zahl ausgedrückt werden kann. Die ersten Quadratzahlen sind 1, 4, 9, 16,
+    25, …
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: Unterteilungsgraphen
+  text: Um einen __Unterteilungsgraphen__ eines Graphen zu erstellen, fügt man
+    zusätzliche Knoten entlang seiner Kanten hinzu.
+
+subgraph:
+  title: Teilgraph
+  text: Ein Graph ist ein __Teilgraph__ eines anderen Graphen, wenn er durch
+    eine Teilmenge von dessen Kanten und Knoten gebildet wird.
+  link: /course/graphs-and-networks/introduction#intro-2
+
+supplementary-angles:
+  title: Supplementwinkel (Ergänzungswinkel)
+  text: Zwei Winkel sind __supplementär__, wenn sie sich zu 180° ergänzen.
+
+symmetry:
+  title: Symmetrie
+  text: Eine Figur oder Form ist __symmetrisch__, wenn sie auch nach einer
+    bestimmten Abbildung (z.B. Spiegelung oder Drehung) gleich aussieht.
+  link: /course/transformations-and-symmetry/symmetry#symmetry
+
+symmetry-group:
+  title: Symmetriegruppe
+  text: Eine __Symmetriegruppe__ eines geometrischen Objekts ist die Sammlung
+    aller seiner _symmetrieerhaltenden Abbildungen_.
+  link: /course/transformations-and-symmetry/symmetry-groups#groups-1
+
+term:
+  title: Term (Algebra)
+  text: Ein __Term__ in einem algebraischen Ausdruck oder einer algebraischen
+    Gleichung ist eine einzelne Zahl oder Variable oder das Produkt aus mehreren
+    Zahlen und Variablen, die durch ein + oder - Zeichen von einem anderen Term
+    getrennt sind.
+
+tessellation:
+  title: Tessellierung
+  text: Eine __Tessellierung__ ist ein geometrisches Muster, das eine Oberfläche
+    ohne Lücken oder Überlappungen bedeckt.
+  link: /course/polygons-and-polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: Tetraederzahlen
+  text: Eine __Tetraederzahl__ ist eine Zahl, die durch das Stapeln einer Anzahl
+    von Kugeln zu einem _Tetraeder_ entsteht. Die ersten Tetraederzahlen sind
+    1, 4, 10, 20, 35, …
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: Tetraeder
+  text: Das __Tetraeder__ ist ein platonischer Körper, der aus vier
+    gleichseitigen Dreiecken besteht. Es hat vier Ecken und sechs Kanten.
+  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+
+theorem:
+  title: Theorem
+  text: Ein __Theorem__ ist ein besonders wichtiges Ergebnis oder eine
+    Beobachtung in der Mathematik, die mit Axiomen und früheren Theoremen
+    nachgewiesen wurde.
+
+transformation:
+  title: Abbildung
+  text: Eine __Abbildung__ wandelt eine geometrische Form in eine andere um. Es
+    gibt viele verschiedene Arten von Abbildungen, wie _Spiegelungen_ oder
+    _Dilatationen_.
+  link: /course/transformations-and-symmetry/transformations#transformations
+
+transformation-image:
+  title: Abbild
+  text: Nach der Anwendung einer Abbildung auf eine geometrische Form wird das
+    Ergebnis als sein __Abbild__bezeichnet. Das wird oft durch das Anhängen
+    eines ' an das Ende ihrer Bezeichnung gekennzeichnet.
+  link: /course/transformations-and-symmetry/transformations#transformations
+
+translation:
+  title: Translation
+  text: Eine __Translation__ ist eine Abbildung, die eine Figur in eine
+    bestimmte Richtung bewegt, ohne ihren Winkel oder ihre Form zu verändern.
+  image: translation.svg
+  link: /course/transformations-and-symmetry/transformations#translations
+
+translational-symmetry:
+  title: Translationssymmetrie
+  text: Ein sich wiederholendes Muster (wie eine Tapete) ist
+    __translationssymmetrisch__, wenn es nach einer Verschiebung um einen
+    bestimmten Abstand gleich aussieht.
+  link: /course/transformations-and-symmetry/wallpaper-groups#wallpaper-groups-1
+
+transversal:
+  title: Transversale
+  text: Eine Transversale ist eine Gerade, die zwei weitere Geraden schneidet.
+
+trapezium:
+  title: Trapez
+  text: Ein __Trapez__ ist ein Viereck, bei dem ein Paar gegenüberliegender
+    Seiten parallel sind.
+  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle-aa:
+  title: WWW-Satz
+  text: Zwei Dreiecke sind __ähnlich__, wenn zwei ihrer Winkel (und somit alle
+    3) die gleiche Größe haben. Dies wird als __WWW-Satz__ für Dreiecke
+    bezeichnet.
+
+triangle-altitude:
+  title: Höhen von Dreiecken
+  text: Die __Höhe__ eines Dreiecks ist eine Strecke senkrecht zu einer der
+    Seiten, die zum gegenüberliegenden Eckpunkt verläuft. Jedes Dreieck hat
+    drei Höhen.
+  image: triangle-altitude.svg
+  link: /course/triangles-and-trigonometry/properties-of-triangles#altitudes
+
+triangle-legs:
+  title: Katheten eines Dreiecks
+  text: Die beiden __Katheten__ eines rechtwinkligen Dreiecks sind die beiden
+    kürzeren Seiten (nicht die _Hypotenuse_). Sie bilden den rechten Winkel.
+
+triangle-midsegment:
+  title: Mittendreieck
+  text: Das __Mittendreieck__ konstruiert man indem man die Mittelpunkte der
+    verschiedenen Seiten eines Dreiecks miteinander verbindet.
+  image: triangle-midsegment.svg
+  link: /course/triangles-and-trigonometry/properties-of-triangles#midsegments
+
+triangle-numbers:
+  title: Dreieckszahlen
+  text: Eine __Dreieckszahl__ ist eine natürliche Zahl, die einer Anzahl an
+    Punkten, mit denen ein gleichseitiges Dreieck gebildet werden kann,
+    entspricht. Die Formel für die *n*-te Dreieckszahl lautet `(n*(n+1))/ 2`,
+    und die ersten Dreieckszahlen sind 1, 3, 6, 10, 15, …
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: SSS-Satz
+  text: Zwei Dreiecke sind __kongruent__, wenn ihre drei Seiten die gleiche
+    Länge haben. Dies wird als __SSS-Satz__ für Dreiecke bezeichnet.
+  link: /course/triangles-and-trigonometry/triangles-congruence#congruence-1
+
+trigonometry:
+  title: Trigonometrie
+  text: Die __Trigonometrie__ ist ein Zweig der Mathematik, der die Beziehungen
+    zwischen den Seiten und Winkeln von Dreiecken untersucht. Es geht in erster
+    Linie um die trigonometrischen Funktionen __Sinus__, __Kosinus__,
+    __Tangens__ und deren Wechselwirkungen.
+  link: /course/triangles-and-trigonometry/trigonometry
+
+truncated-icosahedron:
+  title: Ikosaederstumpf
+  text: Der __Ikosaederstumpf__ ist ein _archimedischer Körper_, der aus 12
+    regelmäßigen Fünfecken und 20 regelmäßigen Sechsecken besteht.
+  link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
+
+twin-Primes:
+  title: Primzahlzwilling
+  text: __Primzahlzwillinge__ sind Paare von Primzahlen wie 17 und 19, deren
+    Abstand 2 ist. Es ist unbekannt, ob es unendlich viele Paare von
+    Primzahlzwillingen gibt.
+  link: /course/divisibility-and-primes/the-distribution-of-primes#twin-primes
+
+unit-circle:
+  title: Einheitskreis
+  text: Ein __Einheitskreis__ ist ein Kreis mit Radius 1.
+
+variable:
+  title: Variable
+  text: Eine __Variable__ ist eine unbekannte Größe in einem algebraischen
+    Ausdruck, die normalerweise durch einen Buchstaben wie _x_dargestellt wird.
+
+venn-diagram:
+  title: Venn-Diagramm
+  text: Ein __Venn-Diagramm__ visualisiert mehrere Eigenschaften oder
+    Ereignisse, die sich überschneiden.
+  image: venn.svg
+
+vertical-angles:
+  title: Scheitelwinkel
+  text: __Scheitelwinkel__ sind Paare von gegenüberliegenden Winkeln, die durch
+    sich schneidende Geraden erzeugt werden. Scheitelwinkel sind immer
+    kongruent.
