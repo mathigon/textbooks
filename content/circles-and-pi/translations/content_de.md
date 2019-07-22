@@ -47,14 +47,13 @@ Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von sei
 
 {.reveal(when="compass")} Es gibt drei wichtige Maße im Zusammenhang mit Kreisen, die du kennen solltest:
 
-
 * {.reveal(when="compass" delay="1000")}Der [{.step-target.pill.b.red}Radius](target:r)
- ist der Abstand vom Mittelpunkt eines Kreises zur Kreislinie.
-Der [{.step-target.pill.b.blue}Durchmesser](target:d)
- ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
- den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
- * {.reveal(when="blank-0")} Der [{.step-target.pill.b.green}Umfang](target:c)
- ist gleich der Länge der Strecke um einen Kreis.
+  ist der Abstand vom Mittelpunkt eines Kreises zur Kreislinie.
+* {.reveal(when="compass" delay="4000")}Der [{.step-target.pill.b.blue}Durchmesser](target:d)
+  ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
+  den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
+* {.reveal(when="blank-0")}Der [{.step-target.pill.b.green}Umfang](target:c) 
+  ist gleich der Länge der Strecke um einen Kreis.
 
 :::
 
@@ -274,7 +273,7 @@ Es bedeutet auch, dass wir nie _alle_ Ziffern von Pi aufschreiben können - schl
 es unendlich viele. Altgriechische und chinesische Mathematiker berechneten die
 ersten vier Dezimalstellen von Pi, indem sie Kreise mit 
 regelmäßigen Vielecken annäherten. Beachte, wie das Vieleck, wenn du mehr Seiten hinzufügst, anfängt, [[
-[immer mehr|immer weniger|genau]] wie ein Kreis auszusehen:
+immer mehr|immer weniger|genau]] wie ein Kreis auszusehen:
 
     figure: x-media(src="images/polygons.svg" width=460 height=110)
 
@@ -377,8 +376,8 @@ Million Ziffern von Pi durchsuchen - enthalten sie deinen Geburtstag?
 > id: pi-movies
 
 Wir könnten sogar ein ganzes Buch, wie Harry Potter, in eine sehr lange 
-Zeichenkette umwandeln (a = 01, b = 02, und so weiter). Wenn Pi normal ist, wird diese Zeichenkette irgendwo in ihren Ziffern erscheinen
-- aber es würde Millionen von Jahren dauern, bis genügend Ziffern berechnet
+Zeichenkette umwandeln (a = 01, b = 02, und so weiter). Wenn Pi normal ist, wird diese Zeichenkette irgendwo in ihren 
+Ziffern erscheinen - aber es würde Millionen von Jahren dauern, bis genügend Ziffern berechnet
 sind, um sie zu finden.
 
 Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissenschaften und Mathematik.
@@ -405,9 +404,9 @@ Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissensch
 ---
 > id: pi-day
 
-Es gibt sogar jedes Jahr einen _Pi day ("Pi-Tag")_
-, der entweder auf den 14. März, weil `pi ≈ 3.14`, da das der Datumsschreibweise im englischsprachigen Raum entspricht, oder auf den 22. Juli fällt,
-weil `pi ≈ 22/7`, also 22/7 (eine anderen Datumsschreibweise).
+Es gibt sogar jedes Jahr einen _Pi Day ("Pi-Tag")_
+, der entweder am 14. März begangen wird, weil `pi ≈ 3.14`, was der Datumsschreibweise im englischsprachigen Raum entspricht, oder der am 22. Juli gefeiert wird,
+weil `pi ≈ 22/7`, also 22/7 (eine andere Datumsschreibweise).
 
     figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -521,7 +520,7 @@ werden (zB. ein Jahrzent für 10 Jahre, ein Jahrhundert für 100 Jahre).
 ::: column.grow
 
 Für viele von uns ist die Winkelmessung in Grad eine Selbstverständlichkeit: Es gibt 
-360°-Video, Skateboarder können 540° Drehungen ausführen, und 
+360°-Videos, Skateboarder können 540° Drehungen ausführen, und 
 jemand, der seine Entscheidung ändert, macht eine Kehrtwendung um 180°.
 
 Aber aus mathematischer Sicht ist die Wahl von 360 
@@ -541,9 +540,9 @@ Jupiter sogar 10.475 Tage haben.
 
 ### Radiant
 
-Anstatt einen Kreis in eine bestimmte Anzahl von Segmenten (z.B. 360 Grad) aufzuteilen, ziehen
+Anstatt einen Kreis in eine bestimmte Anzahl von Teilbereiche (z.B. 360 Grad) aufzuteilen, ziehen
 Mathematiker es oft vor, Winkel mittels des [Umfangs](gloss:circle-circumference)
-eines __Einheitskreises__(gloss:unit-circle) (eines Kreises mit dem Radius 1) zu messen.
+eines [__Einheitskreises__](gloss:unit-circle) (eines Kreises mit dem Radius 1) anzugeben.
 
 ::: column(width=280)
 
@@ -559,7 +558,7 @@ eines __Einheitskreises__(gloss:unit-circle) (eines Kreises mit dem Radius 1) zu
 
 ::: column.grow
 
-Ein _{span.var-action}ganzer Kreis_ hat einen Umfang
+Ein _{span.var-action}ganzer Kreis_ hat dann einen Umfang
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
 {.reveal(when="eqn-0")}Bei einer _{span.var-action}halben Drehung_ beträgt der
@@ -656,8 +655,8 @@ Wie du siehst sind in diesem Beispiel Radiant die viel bequemere Einheit
 als Grad. Sobald wir die Drehgeschwindigkeit kennen, müssen wir einfach mit dem
 Radius multiplizieren, um die tatsächliche Drehgeschwindigkeit zu erhalten.
 
-Hier ist ein weiteres Beispiel: Dein Auto hat Räder mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
-fährst, drehen sich die Räder deines Autos mit [[`20/0.25 =
+Hier ist ein weiteres Beispiel: Dein Auto hat Reifen mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
+fährst, drehen sich die Reifen deines Autos mit [[`20/0.25 =
 80`|`20 xx 0.25 = 5`|`0.25/50 = 0,0125`]] Radiant pro Sekunde
 _{span.reveal(when="blank-0")}(oder `80/(2pi) = 13` Umdrehungen pro Sekunde)_
 
@@ -676,7 +675,7 @@ wirst du feststellen, dass Radiant viel bequemer zu handhaben sind als das Gradm
 
 Die meisten Taschenrechner verfügen über eine [spezielle Taste](->.button.mode), um zwischen
 Grad und Radiant zu wechseln. Trigonometrische Funktionen wie [__sin__](gloss:sin),
-[__cos__] (gloss:cos)und __tan__ nehmen Winkel als Eingabe an, und 
+[__cos__](gloss:cos) und __tan__ nehmen Winkel als Eingabe an, und 
 ihre inversen Funktionen __arcsin__, __arccos__ und __arctan__ geben Winkel zurück. Die 
 Einstellung des aktuellen Taschenrechners bestimmt, welche Einheiten für diese Winkel verwendet werden.
 
@@ -788,9 +787,9 @@ Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
 > id: circle-parts-1
 
 In diesem Abschnitt werden wir uns mit der Beziehung zwischen all diesen Elementen befassen
-und Theoreme zu ihren Eigenschaften beweisen. Machen dir jetzt einmal keine Sorgen, dass du dir alle
-Definitionen merken musst - Du kannst jederzeit das
-[Glossar](->.footer-link[data-modal=glossarym]) verwenden.
+und Sätze zu ihren Eigenschaften beweisen. Mach dir jetzt einmal keine Sorgen, dass du dir alle
+diese Definitionen merken musst - du kannst jederzeit im
+[Glossar](->.footer-link[data-modal=glossarym]) nachschlagen.
 
 ---
 
@@ -1337,35 +1336,35 @@ and only if the opposite angles are supplementary.
 > section: spheres-cones-cylinders
 > id: solids
 
-In the previous sections, we studied the properties of circles on a flat
-surface. But our world is actually three-dimensional, so lets have a look at
-some 3D solids that are based on circles:
+In den vorangegangenen Abschnitten haben wir die Eigenschaften von Kreisen auf einer ebenen
+Fläche untersucht. Aber unsere Welt ist eigentlich dreidimensional, also schauen wir uns
+einige Körper in 3D an, die auf Kreisen basieren:
 
 ::: column(width=220 parent="padded-thin")
 
     x-solid(size=220)
 
-{.text-center} A [__cylinder__](gloss:cylinder) consists of two congruent,
-parallel circles joined by a curved surface. 
+{.text-center}Ein [__Zylinder__](gloss:cylinder)besteht aus zwei kongruenten,
+parallelen Kreisen, die durch eine gekrümmte Oberfläche verbunden sind. 
 
 ::: column(width=220)
 
     x-solid(size=220)
 
-{.text-center} A [__cone__](gloss:cone) has a circular base that is joined to 
-a single point (called the vertex).
+{.text-center}Ein [__Kegel__](gloss:cone)hat eine kreisförmige Grundfläche, die mit 
+einem einzigen Punkt (der sogenannten Spitze) verbunden ist.
 
 ::: column(width=220)
 
     x-solid(size=220 static)
 
-{.text-center} Every point on the surface of a [__sphere__](gloss:sphere) has
-the same distance from its center.
+{.text-center}Jeder Punkt auf der Oberfläche einer [__Kugel__](gloss:sphere)hat
+den gleichen Abstand von ihrem Mittelpunkt.
 
 :::
 
-Notice how the definition of a sphere is almost the same as the definition of a
-[[circle|radius|cube]] – except in three dimensions!
+Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition von einem [
+[Kreis|Radius|Würfel]] - aber in drei Dimensionen!
 
 ---
 > id: gasometer
@@ -1374,26 +1373,26 @@ Notice how the definition of a sphere is almost the same as the definition of a
 
 ::: column.grow
 
-Here you can see the cylindrical _Gasometer_ in Oberhausen, Germany. It used to
-store natural gas which was used as fuel in nearby factories and power plants.
-The Gasometer is 120m tall, and its base and ceiling are two large circles with
-radius 35m. There are two important questions that engineers might want to
-answer:
+Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland. Er wird verwendet um
+Erdgas, das als Brennstoff in nahegelegenen Fabriken und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
+sein Boden und seine Deckfläche sind zwei große Kreise mit einem
+Radius von 35 m. Es gibt zwei wichtige Fragen, die hier für Ingenieure
+von Interesse sein dürften:
 
-* How much natural gas can be stored? This is the [[volume|area|diameter]] of
-  the cylinder.
-* {.reveal(when="blank-0")} How much steel is needed to build the Gasometer?
-  This is (approximately) the [[surface area|circumference|diagonal]] of the
-  cylinder.
+* Wie viel Erdgas kann gespeichert werden? Dabei geht es um [[das Volumen|die Fläche|den Durchmesser]] des
+ Zylinders.
+* {.reveal(when="blank-0")}Wie viel Stahl wird zum Bau des Gasometers benötigt?
+  In diesem Fall geht es (ungefähr) um [[die Fläche|den Umfang|die Diagonale]] des
+ Zylinders.
 
-{.reveal(when="blank-0 blank-1")} Let’s try to find formulas for both these
-results!
+{.reveal(when="blank-0 blank-1")}Wir wollen versuchen, Formeln für diese beiden
+Werte zu finden!
 
 ::: column(width=300)
 
     x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
-{.caption} Gasometer Oberhausen
+{.caption}Gasometer Oberhausen
 
 :::
 
@@ -1402,14 +1401,14 @@ results!
 
 #### Volumen eines Zylinders
 
-The top and bottom of a cylinder are two congruent circles, called __bases__.
-The __{.m-blue} height *h*__ of a cylinder is the perpendicular distance between
-these bases, and the __{.m-red} radius *r*__ of a cylinder is simply the radius
-of the circular bases.
+Oberhalb und unterhalb des Zylinders befinden sich zwei kongruente Kreise, die __Grund- und Deckfläche__.
+Die __{.m-blue}Höhe *h*__ eines Zylinders ist der senkrechte Abstand zwischen
+Grund- und Deckfläche, und der __{.m-red}Radius *r*__ eines Zylinders ist einfach der Radius
+der runden Grundfläche.
 
-We can approximate a cylinder using a ${n}{n|5|3,20,1}-sided
-[__prism__](gloss:prism). As the number of sides increases, the prism starts to
-look more and more like a cylinder:
+Wir können einen Zylinder mit einem ${n}{n|5|3,20,1}-seitigen
+[__Prisma__](gloss:prism) annähern. Mit zunehmender Anzahl der Seiten beginnt das Prisma
+immer mehr wie ein Zylinder auszusehen:
 
 ::: column(width=240)
 
@@ -1424,16 +1423,16 @@ look more and more like a cylinder:
 ---
 > id: cylinder-volume
 
-Even though a cylinder is technically not a prism, they share many properties.
-In both cases, we can find the volume by multiplying the area of their
-__{.m-red} base__ with their __{.m-blue} height__. This means that a
-cylinder with radius _{.b.m-red} r_ and height _{.b.m-blue} h_ has volume
+Auch wenn ein Zylinder technisch gesehen kein Prisma ist, haben sie viele Eigenschaften gemeinsam:
+In beiden Fällen können wir das Volumen bestimmen, indem wir die Fläche ihrer
+__{.m-red}Grundfläche__ mit ihrer __{.m-blue}Höhe__ multiplizieren. Das bedeutet, dass das Volumen eines
+Zylinders mit Radius _{.b.m-red}r_ und Höhe _{.b.m-blue}h_ sich wie folgt berechnen lässt:
 
 {.text-center} `V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
 
-{.reveal(when="eqn-0")} Remember that radius and height must use the same units.
-For example, if _r_ and _h_ are both in cm, then the volume will be in
-[[`"cm"^3`|`"cm"^2`|cm]].
+{.reveal(when="eqn-0")}Beachte, dass Radius und Höhe die gleichen Einheiten haben müssen,
+z.B. wenn _r_ und _h_ beide in cm sind, dann wird das Volumen in
+[[`"cm"^3`|`"cm"^2`|cm]] sein.
 
 ---
 > id: oblique-cylinder
@@ -1441,10 +1440,10 @@ For example, if _r_ and _h_ are both in cm, then the volume will be in
 
 ::: column.grow
 
-In the examples above, the two bases of the cylinder were always _directly above
-each other_: this is called a __right cylinder__. If the bases are not directly
-above each other, we have an __oblique cylinder__. The bases are still parallel,
-but the sides seem to “lean over” at an angle that is not 90°.
+In den obigen Beispielen lagen die beiden Kreisflächen des Zylinders immer _direkt übereinander_
+:Man nennt dies einen __geraden Zylinder__. Wenn die Kreisflächen nicht direkt
+übereinander liegen, reden wir von einem __schiefen Zylinder__. Die Kreisflächen sind noch parallel,
+aber die Seiten scheinen sich in einem Winkel von nicht 90° zu ”lehnen“.
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1453,8 +1452,8 @@ but the sides seem to “lean over” at an angle that is not 90°.
 
     x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
 
-{.caption} The _Leaning Tower of Pisa_ in Italy is not quite an oblique
-cylinder.
+{.caption}Beim _Schiefen Turm von Pisa_ in Italien handelt es sich um keinen
+wirklich schiefen Zylinder.
 
 :::
 
@@ -1462,16 +1461,16 @@ cylinder.
 > id: cavalieri
 > goals: slide
 
-The volume of an oblique cylinder turns out to be exactly the same as that of a
-right cylinder with the same radius and height. This is due to [__Cavalieri’s
-Principle__](gloss:cavalieri), named after the Italian mathematician
-[Bonaventura Cavalieri](bio:cavalieri): if two solids have the same
-cross-sectional area at every height, then they will have the same volume.
+Das Volumen eines schiefen Zylinders erweist sich als genau das gleiche wie bei einem
+geraden Zylinder mit gleichem Radius und gleicher Höhe. Dies ist auf das
+[__Prinzip von Cavalieri]__](gloss:cavalieri) zurückzuführen, benannt nach dem italienischen Mathematiker
+[Bonaventura Cavalieri](bio:cavalieri): Wenn zwei Festkörper in jeder Höhe die gleiche
+Querschnittsfläche haben, dann haben sie das gleiche Volumen.
 
-Imagine slicing a cylinder into lots of thin disks. We can then slide these
-disks horizontal to get an oblique cylinder. The volume of the individual discs
-does not change as you make it oblique, therefore the total volume also remains
-constant:
+Stell dir vor, du schneidest einen Zylinder in viele dünne Scheiben. Wir können diese
+Scheiben dann horizontal verschieben, um einen schiefen Zylinder zu erhalten. Das Volumen der einzelnen Scheiben
+ändert sich nicht, wenn man sie schräg stellt, daher bleibt auch das Gesamtvolumen
+konstant:
 
 ::: column(width=240)
 
@@ -1484,10 +1483,10 @@ constant:
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
+    // TODO Du musst immer die _senkrechte_ Höhe verwenden. Dies ist
+    // die vertikale Linie nach links in der obigen Abbildung.
 
-    // TODO Volume of horizontal cylinder segments
+    // TODO Volumen der horizontalen Zylinderteilstücke
     // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
@@ -1498,18 +1497,18 @@ constant:
 ::: column.grow
 
 Um die Oberfläche eines Zylinders zu bestimmen, müssen wir ihn flach in sein 
-[Netz](gloss:net)"ausrollen". You can try this yourself, for example by peeling off the
-label on a can of food.
+[Netz](gloss:net) “ausbreiten”. Du kannst das selbst ausprobieren, indem du z.B. das
+Etikett auf einer Lebensmitteldose ablöst.
 
-There are two [[circles|spheres|squares]], one at the top and one at the bottom
-of the cylinder. The curved side is actually a large [[rectangle|square|ellipse]].
+Es gibt bei jedem Zylinder zwei [[Kreise|Kugeln|Quadrate]], 
+oberhalb und unterhalb. Die gekrümmte Seitenfläche ist eigentlich ein großes [[Rechteck|Quadrat|Ellipse]].
 
-* {.reveal(when="blank-0 blank-1")} The two circles each have area
+* {.reveal(when="blank-0 blank-1")} Die zwei Kreisflächen haben jeweils eine Fläche von
   _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
-* {.reveal(when="eqn-0")} The height of the rectangle is
+* {.reveal(when="eqn-0")} Die Höhe des Rechtecks ist gleich
   _{x-equation.small(solution="h" keys=" " short-var)}_
-  _{span.reveal(when="eqn-1")}and the width of the rectangle is the
-  same as the [[circumference|diameter|tangent]] of the circles:_
+  _{span.reveal(when="eqn-1")} und die Breite des Rechtecks ist
+ gleich [[dem Umfang|dem Durchmesser|der Tangente]] der Kreise:_
   _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
@@ -1522,8 +1521,8 @@ of the cylinder. The curved side is actually a large [[rectangle|square|ellipse]
 ---
 > id: cylinder-surface-1
 
-This means that the total surface area of a cylinder with radius _r_ and height
-_h_ is given by
+Das bedeutet, dass sich die gesamte Oberfläche eines Zylinders mit Radius _r_ und Höhe 
+_h_ sich wie folgt berechnen lässt:
 
 {.text-center} `A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_.
 
@@ -1532,31 +1531,31 @@ _h_ is given by
 
     figure: x-media(src="images/cylinders.jpg" width=460 height=125)
 
-Cylinders can be found everywhere in our world – from soda cans to toilet paper
-or water pipes. Can you think of any other examples?
+Zylinder sind überall in unserem Alltag zu finden - von der Limonade bis zum Toilettenpapier 
+oder Wasserleitungen. Fallen dir noch ein andere Beispiele ein?
 
-The _Gasometer_ above had a radius of 35m and a height of 120m. We can now
-calculate that its volume is approximately [[461,000 ± 1000]]`"m"^3` and its
-surface area is approximately [[34,080 ± 100]]`"m"^2`.
+Der _Gasometer_ von weiter oben hatte einen Radius von 35m und eine Höhe von 120m. Wir können nun
+berechnen, dass sein Volumen etwa [[461.000 ± 1000]]`"m"^3`und seine
+Oberfläche etwa [[34.080 ± 100]]`"m"^2`betragen.
 
 ---
 > id: cone
 
-### Cones
+### Kegel
 
 ::: column.grow
 
-A [__cone__](gloss:cone) is a 3-dimensional solid that has a circular
-__{.m-red}base__. Its side “tapers upwards” as shown in the diagram, and ends
-in a single point called the __{.m-green}vertex__.
+Ein [__Kegel__](gloss:cone) ist ein dreidimensionaler Körper, der eine kreisförmige
+__{.m-red}Grundfläche__ hat. Seine Seite “verjüngt sich nach oben”, wie im Diagramm dargestellt, und endet
+in einem einzigen Punkt, der __{.m-green}Spitze__.
 
-The __{.m-red}radius__ of the cone is the radius of the circular base, and the
-__{.m-blue}height__ of the cone is the perpendicular distance from the base
-to the vertex.
+Der __{.m-red}Radius__ des Kegels ist der Radius der kreisförmigen Grundfläche, und die
+__{.m-blue}Höhe__ des Kegels ist der senkrechte Abstand von der Grundfläche
+zur Spitze.
 
-Just like other shapes we met before, cones are everywhere around us: ice cream
-cones, traffic cones, certain roofs, and even christmas trees. What else can you
-think of?
+Genau wie andere Formen, die wir vorher betrachtet haben, sind Kegel überall um uns herum zu finden:
+Eistüten, Verkehrskegel, bestimmte Dächer und sogar Weihnachtsbäume. Was fällt dir
+sonst noch ein?
 
 ::: column(width=280)
 
@@ -1593,13 +1592,13 @@ think of?
 
 ::: column.grow
 
-We previously found the volume of a cylinder by approximating it using a prism.
-Similarly, we can find the volume of a cone by approximating it using a
-[__pyramid__](gloss:pyramid).
+Wir haben zuvor das Volumen eines Zylinders ermittelt, indem wir es mit einem Prisma angenähert haben.
+Ebenso können wir beim Volumen eines Kegels vorgehen, nur dass wir es mit einer
+[__Pyramide__](gloss:pyramid) annähern.
 
-Here you can see a ${n}{n|5|3,18,1}-sided pyramid. As the number of sides
-increases, the pyramid starts to look more and more like a cone. In fact, we
-could think of a cone as a pyramid with _infinitely many_ sides!
+Hier siehst du eine ${n}{n|5|3,18,1}-seitige Pyramide. Mit zunehmender Anzahl der Seiten
+beginnt die Pyramide immer mehr wie ein Kegel auszusehen: Tatsächlich
+könnten wir uns einen Kegel als eine Pyramide mit _unendlich vielen_ Seiten vorstellen!
 
 ::: column(width=280)
 
@@ -1610,31 +1609,31 @@ could think of a cone as a pyramid with _infinitely many_ sides!
 ---
 > id: cone-volume-1
 
-This also means that we can also use the equation for the volume:
-`V = 1/3 "base" × "height"`. The base of a cone is a circle, so the volume of a
-cone with radius _r_ and height _h_ is
+Das bedeutet auch, dass wir die Gleichung für das Volumen verwenden können: `V
+= 1/3 "Grundfläche" × "Höhe" `. Die Grundfläche eines Kegels ist ein Kreis, so dass das Volumen eines
+Kegels mit Radius _r_ und Höhe _h_ sich wie folgt berechnet
 
 {.text-center} `V =` _{x-equation(solution="1/3 π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cone-volume-hint1 cone-volume-hint2")}_
 
 ---
 > id: cone-circumscribed
 
-Notice the similarity with the equation for the volume of a cylinder. Imagine
-drawing a cylinder _around_ the cone, with the same base and height – this is
-called the __circumscribed cylinder__. Now, the cone will take up exactly [[one
-third|half|one quarter]] of the volume of the cylinder:
+Beachte die Ähnlichkeit mit der Gleichung für das Volumen eines Zylinders. Stellen dir vor
+, du zeichnest einen Zylinder _um_ den Kegel herum, mit der gleichen Grundfläche und Höhe - man 
+nennt das den __umschriebenen Zylinder__. Wir stellen fest, dass das Volumen des Kegels genau [[ein
+Drittel|die Hälfte|ein Viertel]] des Volumens des Zylinders beträgt:
 
     figure: x-solid(size=280)
 
 ---
 > id: cone-hilbert
 
-{.i.lgrey} Note: You might think that infinitely many tiny sides as an approximation
-is a bit “imprecise”. Mathematics spent a long time trying to find a more
-straightforward way to calculate the volume of a cone. In 1900, the great
-mathematician [David Hilbert](bio:hilbert) even named it as one of the 23 most
-important unsolved problems in mathematics! Today we know that it is actually
-impossible.
+{.i.lgrey}Anmerkung: Man könnte meinen, dass unendlich viele kleine Seiten als Annäherung
+etwas “ungenau” sind. Die Mathematiker haben lange Zeit versucht, einen
+einfacheren Weg zu finden, um das Volumen eines Kegels zu berechnen. Im Jahr 1900 nannte der große
+Mathematiker [David Hilbert](bio:hilbert) das sogar als eines der 23
+wichtigsten ungelösten Probleme in der Mathematik! Heute wissen wir, dass es eigentlich
+unmöglich ist.
 
 ---
 > id: oblique-cone
@@ -1642,12 +1641,12 @@ impossible.
 
 ::: column.grow
 
-Just like a cylinder, a cone doesn’t have to be “straight”. If the vertex is
-directly over the center of the base, we have a __right cylinder__. Otherwise,
-we call it an __oblique cylinder__.
+Genau wie ein Zylinder muss ein Kegel nicht “gerade”sein. Wenn die Spitze 
+direkt über der Mitte der Grundfläche liegt, handelt es sich um einen __geraden Zylinder__. Ansonsten sprechen
+wir von einem __schiefen Zylinder__.
 
-Once again, we can use Cavalieri’s principle to show that all oblique cylinders
-have the same volume, as long as they have the same base and height.
+Noch einmal können wir das [__Prinzip von Cavalieri]__](gloss:cavalieri) anwenden, um zu zeigen, dass alle schiefen Zylinder
+das gleiche Volumen haben, solange sie die gleiche Grundfläche und Höhe haben.
 
 ::: column(width=280)
 
@@ -1663,14 +1662,14 @@ have the same volume, as long as they have the same base and height.
 
 ::: column.grow
 
-Finding the surface area of a cone is a bit more tricky. Like before, we can
-unravel a cone into its net. Move the slider to see what happens: in this
-case, we get one circle and one [[circle sector|circle segment|circle arc]].
+Die Bestimmung der Oberfläche eines Kegels ist etwas komplizierter. Wie zuvor können wir einen Kegel in sein Netz
+entfalten. Bewege den Schieberegler, um zu sehen, was passiert: In diesem
+Fall erhalten wir einen Kreis und [[einen Kreissektor|ein Kreissegment|einen Kreisbogen]].
 
-{.reveal(when="blank-0")} Now we just have to add up the area of both these
-components. The __{.m-yellow}base__ is a circle with radius _r_, so its area is
+{.reveal(when="blank-0")}Nun müssen wir nur noch die Fläche dieser beiden
+Teilstücke addieren. Die __{.m-yellow}Grundfläche__ ist ein Kreis mit dem Radius _r_. Somit ist seine Fläche gleich
 
-{.text-center.reveal(when="blank-0")} `§pill(A_"Base","yellow","circle") =`
+{.text-center.reveal(when="blank-0")} `§pill(A_"Grundfläche","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
@@ -1685,11 +1684,11 @@ _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
 ::: column.grow
 
-The radius of the __{.m-green}sector__ is the same as the distance from the
-rim of a cone to its vertex. This is called the __{.pill.green.step-target(data-to="s")}
-slant height *s*__ of the cone, and not the same as the normal
-__{.pill.blue.step-target(data-to="h")}height *h*__. We can find the slant
-height using [Pythagoras](gloss:pythagoras-theorem):
+Der Radius des __{.m-green}Sektors__ ist gleich dem Abstand vom
+Rand eines Kegels zu seiner Spitze. Dies wird als __{.pill.green.step-target(data-to="s")}
+Mantellinie *s*__ des Kegels bezeichnet und ist nicht gleich der eigentlichen
+__{.pill.blue.step-target(data-to="h")}Höhe *h*__. Wir können die Mantellinie
+mit Hilfe des [Satzes von Pythagoras](gloss:pythagoras-theorem) ermitteln:
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
 | `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1716,13 +1715,13 @@ height using [Pythagoras](gloss:pythagoras-theorem):
 
 ::: column.grow
 
-The _{span.pill.step-target.red(data-to="arc")}arc length_ of the sector is the
-same as the [[circumference|diameter|arc]] of the _{span.pill.step-target.yellow(data-to="base")}base_:
-_{span.reveal(when="blank-0")}`2 π r`. Now we can find the area of the sector
-using the [formula](gloss:circle-sector) we derived in a previous section:_
+Die _{span.pill.step-target.red(data-to="arc")}Bogenlänge_ des Sektors ist
+gleich dem [[Umfang|Durchmesser|Kreisbogen]] der _{span.pill.step-target.yellow(data-to="base")}Grundfläche:_`2
+_{span.reveal(when="blank-0")}π r`. Jetzt können wir die Sektorfläche
+mit Hilfe der [Formel](gloss:circle-sector) berechnen, die wir in einem vorherigen Abschnitt hergeleitet haben_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
-| `§pill(A_"Sector","green","sector")` | `=` | `§pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| `§pill(A_"Sektor","green","sector")` | `=` | `§pill(A_"Kreis","teal","circle") × pill("Kreisbogen","red","arc") / pill("Umfang","teal","circumference")` |
 |                | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 :::
 
@@ -1752,8 +1751,8 @@ using the [formula](gloss:circle-sector) we derived in a previous section:_
 ---
 > id: cone-surface-2
 
-Finally, we just have to add up the area of the __{.m-yellow}base__ and the area
-of the __{.m-green}sector__, to get the total surface are of the cone:
+Schließlich müssen wir nur noch die Fläche der __{.m-yellow}Grundfläche__ und die Fläche
+des __{.m-green}Sektors__addieren, um die Gesamtoberfläche des Kegels zu erhalten:
 
 {.text-center} `A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_
 
@@ -1764,13 +1763,13 @@ of the __{.m-green}sector__, to get the total surface are of the cone:
 
 ::: column.grow
 
-A [__sphere__](gloss:sphere) is a three-dimensional solid consisting of all
-points that have the same distance from a given  __{.m-green}center *C*__. This
-distance is called the __{.m-red}radius *r*__ of the sphere.
+Eine [__Kugel]__(gloss:sphere)ist ein dreidimensionaler Körper, der aus allen
+Punkten besteht, die den gleichen Abstand zu einem gegebenen __{.m-green}Mittelpunkt *M*__ haben . Dieser
+Abstand wird als __{.m-red}Radius *r*__ der Kugel bezeichnet.
 
-You can think of a sphere as a “three-dimensional [circle](gloss:circle)”. Just
-like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
-[[twice|half]] the length of the radius, as well as chords and secants.
+Du kannst dir eine Kugel als einen “dreidimensionalen [Kreis](gloss:circle)” vorstellen. Wie ein
+Kreis hat auch eine Kugel einen __{.m-blue}Durchmesser *d*__, der 
+[[doppelt|halb]] so groß wie der Radius ist, sowie Sektoren und Segmente.
 
 ::: column(width=240)
 
@@ -1781,24 +1780,24 @@ like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
 ---
 > id: sphere-1
 
-{.r} In a [previous section](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1),
-you learned how the Greek mathematician [Eratosthenes](bio:eratosthenes)
-calculated the radius of Earth using the shadow of a pole – it was 6,371 km.
-Now, let’s try to find the Earth’s total volume and surface area.
-[Continue](btn:next)
+{.r}In einem[vorherigen Abschnitt](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1) hast du
+gelernt, wie der griechische Mathematiker [Eratosthenes](bio:eratosthenes) den Radius der Erde mit dem Schatten eines Obelisken
+berechnete - er betrug 6.371 km.
+Nun wollen wir versuchen, das Gesamtvolumen und die Oberfläche der Erde zu berechnen.
+[Weiter](btn:next)
 
 ---
 > id: sphere-volume
 
 #### Volumen einer Kugel
 
-To find the volume of a sphere, we once again have to use Cavalieri’s Principle.
-Let’s start with a hemisphere – a sphere cut in half along the equator. We also
-need a cylinder with the same radius and height as the hemisphere, but with an
-inverted cone “cut out” in the middle.
+Um das Volumen einer Kugel zu bestimmen, müssen wir wieder einmal das [__Prinzip von Cavalieri]__](gloss:cavalieri) anwenden:
+Beginnen wir mit einer Halbkugel - einer Kugel, die entlang des Äquators in zwei Hälften geschnitten ist. Wir betrachten auch
+einen Zylinder mit dem gleichen Radius und der gleichen Höhe wie diese Halbkugel, aber mit einem
+umgekehrten Kegel, der aus seiner Mitte “herausgebohrt” worden ist.
 
-As you move the slider above, you can see the cross-section of both these
-shapes at a specific height above the base:
+Wenn du den Schieberegler nach oben bewegst, kannst du sehen, wie sich der Querschnitt dieser beiden
+Formen in einer bestimmten Höhe über der Grundfläche ändert:
 
 ::: column(width=240)
 
@@ -1842,23 +1841,23 @@ shapes at a specific height above the base:
     x-slider(steps=100)
 
 
-{.reveal(when="slider-0")} Let us try to find the cross-sectional area of both
-these solids, at a distance __{span.pill.blue.step-target(data-to="h")}height *h*__
-above the base.
+Versuchen{.reveal(when="slider-0")} wir, die Querschnittsfläche
+dieser beiden Körper in einem Abstand der __{span.pill.blue.step-target(data-to="h")}Höhe *h*__
+über der Grundfläche zu berechnen.
 
 ::: column.grow
 
-{.reveal(when="slider-0")} The cross-section of the hemisphere is always a
-[[circle|ring|cylinder]].
+{.reveal(when="slider-0")}Der Querschnitt der Halbkugel ist immer ein 
+[[Kreis|Ring|Zylinder]].
 
-{.reveal(when="blank-0")} The __{span.pill.red.step-target(data-to="x")}radius
-*x*__ of the cross-section is part of a _{span.pill.yellow.step-target(data-to="tri")}
-right-angled triangle_, so we can use [Pythagoras](gloss:pythagoras-theorem):
+{.reveal(when="blank-0")}Der __{span.pill.red.step-target(data-to="x")}Radius
+*x*__ des Querschnitts ist Teil eines _{span.pill.yellow.step-target(data-to="tri")}
+rechtwinkligen Dreiecks_, so dass wir den [Satz des Pythagoras](gloss:pythagoras-theorem) anwenden können:
 
 ::: .reveal(when="blank-0")
 {.text-center} `§pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
 
-Now, the area of the cross section is
+Damit ergibt sich die Fläche des Querschnitts
 
     x-equation-system(steps="π x^2" hints="circle-cross-sec")
       table: tr
@@ -1869,11 +1868,11 @@ Now, the area of the cross section is
 
 ::: column.grow.reveal(when="eqn-0")
 
-The cross-section of the cut-out cylinder is always a [[ring|circle|cone]].
+Der Querschnitt des Zylinderauschnitts ist immer ein [[Ring|Kreis|Kegel]].
 
 ::: .reveal(when="blank-1")
-The radius of the hole is _h_. We can find the area of the ring by subtracting
-the area of the hole from the area of the larger circle:
+Der Radius der „Bohrung“ beträgt _h_. Wir können die Fläche des Rings finden, indem wir die Fläche der Bohrung von der Fläche des größeren Kreises abziehen
+:
 
 | _A_ | = | `π r^2 - π h^2` |
 |     | = | `π (r^2 - h^2)` |
@@ -1885,22 +1884,22 @@ the area of the hole from the area of the larger circle:
 ---
 > id: sphere-volume-1
 
-It looks like both solids have the same cross-sectional area at every level.
-By Cavalieri’s Principle, both solids must also have the same [[volume|surface
-area|circumference]]! _{span.reveal(when="blank-0")}We can find the volume of
-the hemisphere by subtracting the volume of the [cylinder](gloss:cylinder-volume)
-and the volume of the [cone](gloss:cone-volume):_
+Es sieht so aus, als hätten beide Körper auf jeder Ebene die gleiche Querschnittsfläche.
+Nach dem Prinzip von Cavalieri müssen beide Körper auch
+[[das gleiche Volumen|die gleiche Oberfläche|den gleichen Umfang]] haben! _{span.reveal(when="blank-0")}Wir können das Volumen
+der Halbkugel finden, indem wir das Volumen des [Zylinders](gloss:cylinder-volume)
+und das Volumen des [Kegels](gloss:cone-volume) voneinander abziehen_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
-| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+| `V_"Halbkugel"` | = | `V_"Zylinder" - V_"Kegel"` |
 |                  | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
 :::
 
 ---
 > id: sphere-volume-2
 
-A sphere consists of [[two]] hemispheres, _{span.reveal(when="blank-0")}which
-means that its volume must be_
+Eine Kugel besteht aus [[zwei]] Halbkugeln, _{span.reveal(when="blank-0")}d.h.
+ihr Volumen ergibt sich zu_
 
 {.text-center.reveal(when="blank-0")} `V = 4/3 π r^3`.
 
@@ -1910,19 +1909,19 @@ means that its volume must be_
 
 ::: column.grow
 
-The Earth is (approximately) a sphere with a radius of 6,371\ km. Therefore its
-volume is
+Die Erde ist (ungefähr) eine Kugel mit einem Radius von 6.371\ km. Daher beträgt ihr
+Volumen
 
 | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 |     | `=` | _{span.numbers}1_ `"km"^3` |
 {.eqn-system}
 
-{.reveal(when="numbers")} The average density of the Earth is `5510 "kg/m"^3`.
-This means that its total mass is
+{.reveal(when="numbers")}Die durchschnittliche Dichte der Erde beträgt `5510 "kg/m"^3`,
+d.h. ihre Gesamtmasse ist
 
-{.text-center.reveal(when="numbers")} `"Mass" = "Volume" × "Density" ≈ 6 × 10^24 "kg"`
+{.text-center.reveal(when="numbers")} `"Masse" = "Volumen" × "Dichte" ≈ 6 × 10^24 "kg"`
 
-{.reveal(when="numbers")} That’s a 6 followed by 24 zeros!
+{.reveal(when="numbers")}Das ist eine 6, gefolgt von 24 Nullen!
 
 ::: column(width=280)
 
@@ -1933,17 +1932,17 @@ This means that its total mass is
 ---
 > id: sphere-sum
 
-If you compare the equations for the volume of a cylinder, cone and sphere, you
-might notice one of the most satisfying relationships in geometry. Imagine we
-have a cylinder with the same height as the diameter of its base. We can now fit
-both a cone and a sphere perfectly in its inside:
+Wenn du die Gleichungen für das Volumen von Zylinder, Kegel und Kugel vergleichst, wirst du
+vielleicht einen der verblüffendsten Zusammenhänge in der Geometrie bemerken. Stelle dir vor, wir
+haben einen Zylinder mit der gleichen Höhe wie der Durchmesser seiner Grundfläche. Wir können nun sowohl einen Kegel
+als auch eine Kugel perfekt in sein Inneres einpassen:
 
 ::: column.r(width=220)
 
     x-solid(size=220 style="margin-top: -20px")
     .large-op.reveal(when="blank-0" animation="pop") +
 
-{.text-center} This cone has radius `r` and height `2r`. Its volume is
+{.text-center}Dieser Kegel hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
 _{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column.r(width=220)
@@ -1951,21 +1950,21 @@ _{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
     x-solid(size=220 style="margin-top: -20px")
     .large-op.reveal(when="blank-0" animation="pop") =
 
-{.text-center} This sphere has radius `r`. Its volume is
+{.text-center}Die Kugel hat den Radius `r`. Ihr Volumen beträgt
 _{x-equation.small(solution="4/3 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column(width=220)
 
     x-solid(size=220 style="margin-top: -20px")
 
-{.text-center} This cylinder has radius `r` and height `2r`. Its volume is
+{.text-center}Der Zylinder hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
 _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 :::
 
-{.reveal(when="eqn-0 eqn-1 eqn-2")} Notice how, if we [[add
-up|subtract|multiply]] the volume of the cone and the sphere, we get exactly
-the volume of the cylinder!
+{.reveal(when="eqn-0 eqn-1 eqn-2")}Beachte, dass, wenn wir das Volumen des Kegels und der Kugel
+[[addieren|subtrahieren|vervielfachen]], wir genau
+das Volumen des Zylinders erhalten!
 
 ---
 > id: sphere-maps
@@ -1973,22 +1972,22 @@ the volume of the cylinder!
 
 #### Oberfläche einer Kugel
 
-Finding a formula for the surface area of a sphere is very difficult. One reason
-is that we can’t open and “flatten” the surface of a sphere, like we did for
-cones and cylinders before.
+Es ist sehr schwierig, eine Formel für die Oberfläche einer Kugel zu finden. Ein Grund
+dafür ist, dass wir die Oberfläche einer Kugel nicht aufschneiden und “ausbreiten” können, wie wir es weiter oben bei
+Kegeln und Zylindern getan haben.
 
-This is a particular issue when trying to create maps. Earth has a curved,
-3-dimensional surface, but every printed map has to be flat and 2-dimensional.
-This means that Geographers have to cheat: by stretching or squishing certain
-areas.
+Dieses Problem stellt sich besonders, wenn man versucht Landkarten zu erstellen. Die Erde hat eine gekrümmte,
+dreidimensionale Oberfläche, aber jede gedruckte Karte muss flach und zweidimensional sein,
+was bedeutet, dass Geographen tricksen müssen: durch Strecken oder Stauchen bestimmter
+Bereiche.
 
-Here you can see few different types of maps, called __projections__. Try moving
-the red square, and watch what this area _actually_ looks like on a globe:
+Hier siehst du einige verschiedene Arten von Karten, die als __Projektionen__ bezeichnet werden. Versuche, das rote Feld zu verschieben
+und beobachte, wie dieser Bereich auf einer Kugel _tatsächlich_ aussieht:
 
     .sphere-maps
       x-select.tabs
         .projection Mercator
-        .projection Cylindrical
+        .projection Zylindrisch
         .projection Robinson
         .projection Mollweide
       .map-body
@@ -2004,15 +2003,15 @@ the red square, and watch what this area _actually_ looks like on a globe:
             path.grid
             path.land
             rect.map-select(x="-24" y="-24" width=48 height=48 style="cursor: move")
-          p.caption As you move the square on the map, notice how the size and shape of the #[em actual] area changes on the 3-dimensional globe.
+          p.caption Wenn du das Feld auf der Karte verschiebst, beachte, wie sich Größe und Form des Bereichs #[em actual] auf dem dreidimensionalen Globus ändern.
     x-gesture(target="#projection" slide="50, 20")
 
 ---
 > id: sphere-surface
 
-To find the surface area of a sphere, we can once again approximate it using a
-different shape – for example a polyhedron with lots of faces. As the number of
-faces increases, the polyhedron starts to look more and more like a sphere.
+Um die Oberfläche einer Kugel zu bestimmen, können wir sie noch einmal mit einer
+anderen Form annähern - zum Beispiel einem Polyeder mit vielen Flächen. Mit zunehmender Anzahl der
+Flächen beginnt das Polyeder immer mehr wie eine Kugel auszusehen.
 
 {.todo} KOMMT BALD!
 
