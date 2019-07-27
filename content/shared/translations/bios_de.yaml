@@ -249,12 +249,12 @@ boole:
   born: 1815
   died: 1864
   name: Boole
-  bio: __George Boole__ (1815 – 1864) was an English mathematician. As a child,
-    he taught himself Latin, Greek and mathematics, hoping to escape his lower
-    class life. He created _Boolean algebra_, which uses operators like AND, OR
-    and NOT (rather than addition or multiplication) and can be used when
-    working with sets. This was the foundation for formal mathematical logic,
-    and has many applications in computer science.
+  bio: __George Boole__ (1815 - 1864) war ein englischer Mathematiker. Als Kind lehrte
+    er sich Latein, Griechisch und Mathematik und hoffte, seinem
+    Unterklassenleben zu entkommen. Er entwickelte die _Boolesche Algebra_, die Operatoren wie UND, ODER
+    und NICHT (statt Addition oder Multiplikation) einführt und die
+    im Zusammenhang mit Mengen verwendet werden kann. Dies war die Grundlage für die formale mathematische Logik
+    und hat viele Anwendungen in der Informatik.
 
 brahmagupta:
   born: 598
