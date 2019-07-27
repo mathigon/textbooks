@@ -1,8 +1,6 @@
 # Always-ignore extensions
 *.diff
 *.err
-*_ger.*
-*.7z
 *.orig
 *.log
 *.rej
@@ -29,6 +27,9 @@ nbproject
 # Folders to ignore
 node_modules
 server/assets/resources
+
+# Translations
+*_ger.*
 *.7z
 *.WinMerge
 package-lock.json
