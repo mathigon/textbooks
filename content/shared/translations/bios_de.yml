@@ -11,12 +11,12 @@ abel:
   bio: |
     __Niels Henrik Abel__ (1802 - 1829) war ein wichtiger norwegischer
     Mathematiker. Obwohl er im Alter von 26 Jahren starb, leistete er bahnbrechende
- Beiträge zu einer Vielzahl von Themen.
+    Beiträge zu einer Vielzahl von Themen.
 
     Im Alter von 16 Jahren bewies Abel den Binomialsatz. Drei Jahre später
     bewies er, dass es unmöglich ist, Gleichungen 5. Grades zu lösen - durch die eigenständige
     Erfindung der Gruppentheorie. Das war seit über 350 Jahren ein ungelöstes Problem gewesen! Er arbeitete
- auch an elliptischen Funktionen und entdeckte _abelsche_ Funktionen.
+    auch an elliptischen Funktionen und entdeckte _abelsche_ Funktionen.
 
     Abel verbrachte sein Leben in Armut: Er hatte sechs Geschwister, sein Vater starb, als er 18 Jahre
     alt war, er konnte keinen Job an einer Universität finden, und viele Mathematiker
@@ -69,7 +69,7 @@ al-khwarizmi:
     _Algebra_ aus dem arabischen Titel seines wichtigsten Buches: “Das
     kurz gefasste Buch über die Rechenverfahren durch Ergänzen und Ausgleichen”. Darin
     zeigte er, wie man lineare und quadratische Gleichungen löst, und viele Jahrhunderte lang war
- es das wichtigste mathematische Lehrbuch an europäischen Universitäten.
+    es das wichtigste mathematische Lehrbuch an europäischen Universitäten.
 
     al-Chwarizmi (latinisiert “Algorismi”) arbeitete auch in der Astronomie und Geographie, und das Wort
     “Algorithmus” ist nach ihm benannt.
@@ -107,14 +107,14 @@ archimedes:
     viele Rechenmethoden und beschäftigte sich mit Geometrie, Analysis und Mechanik.
 
     Beim Baden entdeckte Archimedes eine Möglichkeit, das Volumen
- unregelmäßiger Objekte anhand der Wassermenge zu bestimmen, die sie beim Eintauchen verdrängen.
+    unregelmäßiger Objekte anhand der Wassermenge zu bestimmen, die sie beim Eintauchen verdrängen.
     Er war so begeistert von dieser Entdeckung, dass er, noch immer
- nackt, auf die Straße rannte und laut _“Heureka!”_ (griechisch für _“Ich hab’s gefunden!”_) schrie.
+    nackt, auf die Straße rannte und laut _“Heureka!”_ (griechisch für _“Ich hab’s gefunden!”_) schrie.
 
     Als Ingenieur baute er während der Belagerung seiner
     Heimatstadt Syrakus auf Sizilien geniale Verteidigungsmaschinen. Nach zwei Jahren gelang es den Römern endlich
     sie zu erobern und Archimedes wurde getötet. Seine letzten Worte waren: _“Stört meine
- Kreise nicht”_ - da er diese damals studierte.
+    Kreise nicht”_ - da er diese damals studierte.
   links:
     - title: Archimedische Körper
       url: /course/polygons-and-polyhedra/more-on-polyhedra
@@ -135,7 +135,7 @@ aristotle:
     heute diskutiert.
 
     Aristoteles ist auch die erste bekannte Person, die formell _Logik_ studierte,
- einschließlich ihrer Anwendungen in Naturwissenschaften und Mathematik.
+    einschließlich ihrer Anwendungen in Naturwissenschaften und Mathematik.
 
 aryabhata:
   born: 476
@@ -184,7 +184,7 @@ bernoulli-1:
 
     Er veröffentlichte die erste wesentliche Arbeit über die Wahrscheinlichkeit, einschließlich
     Permutationen, Kombinationen und dem Gesetz der großen Zahlen, er bewies den
- binomischen Lehrsatz, und leitete viele der Eigenschaften der Bernoulli-Zahlen her.
+    binomischen Lehrsatz, und leitete viele der Eigenschaften der Bernoulli-Zahlen her.
 
 bernoulli-2:
   born: 1700
@@ -197,7 +197,7 @@ bernoulli-2:
 
     Daniel Bernoulli zeigte, dass mit zunehmender Geschwindigkeit einer Flüssigkeit ihr Druck
     abnimmt. Das so genannte _Bernoulli-Prinzip_ ist der Mechanismus, der bei
- Flugzeugflügeln und Verbrennungsmotoren zur Anwendung kommt. Er machte auch wichtige Entdeckungen
+    Flugzeugflügeln und Verbrennungsmotoren zur Anwendung kommt. Er machte auch wichtige Entdeckungen
     zu Wahrscheinlichkeit und Statistik und hatte zum ersten Mal mit _Bessel-Funktionen_ zu tun.
 
     Im Alter von 34 Jahren wurde er aus dem Haus seines Vaters verbannt, weil er ihn bei
