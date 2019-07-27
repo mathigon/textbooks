@@ -261,34 +261,34 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
-  bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 AD) invented the
-    rules for addition, subtraction and multiplication with zero and negative
-    numbers. He was also an astronomer and made many other discoveries in
-    mathematics. Unfortunately, his writings did not contain any proofs, so we
-    don’t know how he derived his results.
+  bio: Der indische Mathematiker __Brahmagupta__ (c. 598 - 668 AD) erfand die
+    Regeln für Addition, Subtraktion und Multiplikation mit Null und negativen
+    Zahlen. Er war auch ein Astronom und machte viele andere Entdeckungen in der
+    Mathematik. Leider enthielten seine Schriften keine Beweise, so dass wir
+    nicht wissen, wie er seine Ergebnisse gewonnen hat.
 
 cantor:
   born: 1845
   died: 1918
   name: Cantor
   bio: |
-    The German mathematician __Georg Cantor__ (1845 – 1918) was the inventor of
-    set theory, and a pioneer in our understanding of infinity. For most of his
-    life, Cantor's discoveries were fiercely opposed by his colleagues. This may
-    have contributed to his depression and nervous breakdowns, and he spent many
-    decades in a mental institution.
+    Der deutsche Mathematiker __Georg Cantor__ (1845 - 1918) war der Erfinder der
+    Mengenlehre und ein Pionier was unser Verständnis der Unendlichkeit anbelangt. Die meiste Zeit seines
+    Lebens waren Cantors Entdeckungen von seinen Kollegen heftig bekämpft worden. Dies mag
+    zu seiner Depression und seinen Nervenzusammenbrüchen beigetragen haben, und er verbrachte viele
+    Jahrzehnte in einer psychiatrischen Anstalt.
 
-    Cantor proved that there are _different sizes_ of infinity. The set of real
-    numbers, for example, is _uncountable_ – meaning that it cannot be paired up
-    with the set of natural numbers.
+    Cantor bewies, dass es _verschiedene Größen_ der Unendlichkeit gibt. Die Menge der reellen
+    Zahlen ist beispielsweise _nicht abzählbar_, d.h. sie kann nicht
+    mit der Menge der natürlichen Zahlen paarweise verknüpft werden.
 
-    Only towards the end of his life, Cantor started to receive the recognition
-    he deserved. David Hilbert famously declared that “No one shall expel us
-    from the paradise that Cantor has created”.
+    Erst gegen Ende seines Lebens erhielt Cantor die Anerkennung,
+    die er verdiente. David Hilbert sagte einmal den berühmten Satz: “Aus dem Paradies,
+    das Cantor uns geschaffen, soll uns niemand vertreiben können.”.
   links:
-    - title: Infinity
+    - title: Unendlichkeit
       url: /world/Infinity
-    - title: Set Theory
+    - title: Mengenlehre
       url: /world/Axioms_and_Proof
 
 cardano:
@@ -296,20 +296,20 @@ cardano:
   died: 1576
   name: Cardano
   bio: |
-    The Italian __Gerolamo Cardano__ (1501 – 1576) was one of the most
-    influential mathematicians and scientists of the Renaissance. He
-    investigated hypercycloids, published Tartaglia’s and Ferrari’s solution for
-    cubic and quartic equations, was the first European to systematically use
-    negative numbers, and even acknowledged the existing of imaginary numbers
-    (based on `sqrt(-1)`).
+    Der Italiener __Gerolamo Cardano__ (1501 - 1576) war einer der
+    einflussreichsten Mathematiker und Wissenschaftler der Renaissance. Er
+    untersuchte Hyperzykloide, veröffentlichte Tartaglias und Ferraris Lösung für
+    kubische und quartische Gleichungen, war der erste Europäer, der systematisch
+    negative Zahlen verwendete, und anerkannte sogar die Existenz imaginärer Zahlen
+    (basierend auf `sqrt(-1)`).
 
-    Cardano also made some early progress in probability theory and introduced
-    binomial coefficients and binomial theorem to Europe. He invented many
-    mechanical devices, including combination locks, gyroscopes with three
-    degrees of freedom, and drive shafts (or Cardan shafts) that are still used
-    in vehicles today.
+    Cardano machte auch einige frühe Fortschritte in der Wahrscheinlichkeitstheorie und führte
+    Binomialkoeffizienten und den binomischen Lehrsatz in Europa ein. Er erfand viele
+    mechanische Vorrichtungen, darunter Zahlenschlösser, Gyroskope mit drei
+    Freiheitsgraden und Antriebswellen (oder Kardanwellen), die heute noch
+    in Fahrzeugen eingesetzt werden.
   links:
-    - title: Imaginary Numbers
+    - title: Imaginäre Zahlen
       url: /world/Real_Irrational_Imaginary
 
 carroll:
@@ -317,13 +317,13 @@ carroll:
   died: 1898
   name: Carroll
   bio: |
-    __Charles Lutwidge Dodgson__ (1832 – 1898) is best know under his pen name
-    __Lewis Carroll__, as the author of _Alice’s Adventures in Wonderland_ and
-    its sequel _Through the Looking-Glass_.
+    __Charles Lutwidge Dodgson__ (1832 - 1898) ist unter seinem Künstlernamen
+    __Lewis Carroll__ am besten bekannt, als Autor von _Alice im Wunderland_ und
+    der Fortsetzung _Alice hinter den Spiegeln_.
 
-    However, Carroll was also a brilliant mathematician. He always tried to
-    incorporate puzzles and logic into his children’s stories, making them more
-    enjoyable and memorable.
+    Allerdings war Carroll auch ein brillanter Mathematiker. Er versuchte immer, Rätsel und Logik in seine Kindergeschichten zu
+    integrieren, um sie
+    unterhaltsamer und einprägsamer zu machen.
 
 cauchy:
   born: 1789
@@ -331,62 +331,62 @@ cauchy:
   name: Cauchy
   small: true
   bio: |
-    __Augustin-Louis Cauchy__ (1789 – 1857) was a French mathematician and
-    physicist. He contributed to a wide range of areas in mathematics, and
-    dozens of theorems and named after him.
+    __Augustin-Louis Cauchy__ (1789 - 1857) war ein französischer Mathematiker und
+    Physiker. Er trug zu einem breiten Spektrum an Teilgebieten der Mathematik bei, und
+    Dutzende von Sätze sind nach ihm benannt.
 
-    Cauchy formalised calculus and analysis, by reformulating and proving
-    results where previous mathematicians were much more careless and imprecise.
-    He founded the field of _complex analysis_, studied permutation groups, and
-    worked on optics, fluid dynamics and elasticity theory.
+    Cauchy formalisierte die Infinitesimalrechnung und Analysis, durch die Neuformulierung und Überprüfung der
+    Ergebnisse, wo frühere Mathematiker viel unvorsichtiger und unpräziser waren.
+    Er gründete das Gebiet der _Funktionentheorie (komplexe Analysis)_, studierte Permutationsgruppen und
+    beschäftigte sich mit Optik, Strömungsdynamik und Elastizitätstheorie.
 
 cavalieri:
   name: Cavalieri
   born: 1598
   died: 1647
   bio: |
-    __Bonaventura Cavalieri__ (1598 – 1647) was an Italian mathematician and
-    monk. He developed a precursor to infinitesimal calculus, and is remembered
-    for Cavalieri’s principle to find the volume of solids in geometry.
+    __Bonaventura Cavalieri__ (1598 - 1647) war ein italienischer Mathematiker und
+    Mönch. Er entwickelte einen Vorläufer der Infinitesimalrechnung und ist bekannt
+    für das Prinzip von Cavalieri, mit dem das Volumen von Körpern in der Geometrie bestimmt werden kann.
 
-    Cavalieri also worked optics and motion, introduction logarithms to Italy,
-    and exchanged many letters with Galileo Galilei.
+    Cavalieri arbeitete auch auf den Gebieten der Optik und Bewegung, führte Logarithmen in Italien ein
+    und tauschte viele Briefe mit Galileo Galilei aus.
   links:
-    - title: Cavalieri’s Principle
+    - title: Das Prinzip von Cavalieri
       url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
 
 cayley:
   born: 1821
   died: 1895
   name: Cayley
-  bio: __Arthur Cayley__ (1821 – 1895) was a British mathematician and lawyer.
-    He was one of the pioneers of _group theory_, first proposed the modern
-    definition of a “group”, and generalised them to encompass many more
-    applications in mathematics. Cayley also developed matrix algebra, and
-    worked on higher-dimensional geometry.
+  bio: __Arthur Cayley__ (1821 - 1895) war ein britischer Mathematiker und Jurist.
+    Er war einer der Pioniere der _Gruppentheorie_, schlug zunächst die moderne
+    Definition einer “Gruppe”vor und verallgemeinerte sie, um viele weitere
+    Anwendungen in der Mathematik zu umfassen. Cayley entwickelte auch die Matrixalgebra und
+    arbeitete an einer höherdimensionalen Geometrie.
   links:
     - title: Gruppentheorie
       url: /course/transformations-and-symmetry/symmetry-groups
 
 collatz:
   name: Collatz
-  bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
-    differential equations and optimisation problems. The _Collatz conjecture_
-    or `3x+1` problem is named after him – and still unsolved.
+  bio: __Lothar Collatz__ (1910 - 1990) war ein deutscher Mathematiker, der sich mit
+    Differentialgleichungen und Optimierungsproblemen beschäftigte. Das _Collatz-Problem_
+    oder die `(3n+1)`-Vermutung ist nach ihm benannt - und noch immer ungelöst.
 
 conway:
   name: Conway
   born: 1937
   died: 2020
   bio: |
-    __John Horton Conway__ (born 1937) is a British mathematician and currently
-    Professor Emeritus at Princeton University.
+    __John Horton Conway__ (geb. 1937) ist ein britischer Mathematiker und derzeit
+    Professor Emeritus an der Princeton University.
 
-    He is best known for inventing “Conway’s Game of Life”, a _cellular
-    automaton_ with fascinating properties. He explored the underlying
-    mathematics of everyday objects like knots and games, as well as
-    contributing to group theory, number theory and many other areas of
-    mathematics.
+    Er ist vor allem bekannt für die Erfindung von “Conways Spiel des Lebens”, einem _zellulärem
+    Automaten_ mit faszinierenden Eigenschaften. Er erforschte die zugrundeliegende
+    Mathematik von Alltagsgegenständen wie Knoten und Spielen und trug zur Gruppentheorie, Zahlentheorie und vielen anderen Bereichen der
+    Mathematik
+    bei.
   links:
     - title: Look-and-say Sequence
       url: /course/sequences/special#look-and-say
@@ -396,21 +396,21 @@ copernicus:
   died: 1543
   name: Copernicus
   bio: |
-    __Nicolaus Copernicus__ (1473 – 1543) was a Polish mathematician,
-    astronomer and lawyer. During his life, most people believed in the
-    _Geocentric_ model of the universe, with Earth at the centre and
-    everything else rotating around it.
+    __Nikolaus Kopernikus__ (1473 - 1543) war ein polnischer Mathematiker,
+    Astronom und Jurist. Während seines Lebens glaubten die meisten Menschen an das
+    _geozentrische_ Modell des Universums, mit der Erde im Zentrum
+    um die sich alles andere herum dreht.
 
-    Copernicus created a new model, where the sun is at the centre, and Earth
-    moves around it on a circle. He also predicted that Earth rotates around its
-    axis once every day. Afraid that it would upset the Catholic church, he
-    only published the model just before his death – triggering what is now
-    called the _Copernican Revolution_.
+    Kopernikus schuf ein neues Modell, bei dem die Sonne im Mittelpunkt steht und die Erde
+    sich auf einem Kreis um sie herum bewegt. Er sagte auch voraus, dass sich die Erde einmal täglich um ihre
+    Achse dreht. Aus Angst, dass es die katholische Kirche verärgern könnte, veröffentlichte er
+    das Modell erst kurz vor seinem Tod - und löste damit die so
+    genannte _kopernikanische Wende bzw. Revolution_aus.
 
-    Copernicus also worked as a diplomat and physician, and made important
-    contributions to economist.
+    Kopernikus arbeitete auch als Diplomat und Arzt und leistete wichtige
+    Beiträge zur Ökonomie.
   links:
-    - title: Planetary Orbits
+    - title: Planetenbahnen
       url: /course/circles-and-pi/conic-sections#orbits
 
 de-moivre:
@@ -418,18 +418,18 @@ de-moivre:
   died: 1754
   name: De Moivre
   bio: |
-    __Abraham de Moivre__ (1667 – 1754) was a French mathematician who worked
-    in probability and analytic geometry. He is most remembered for _de Moivre’s
-    formula_, which links trigonometry and complex numbers.
+    __Abraham de Moivre__ (1667 - 1754) war ein französischer Mathematiker, der auf den Gebieten der Wahrscheinlichkeitsrechnung
+    und analytischer Geometrie arbeitete. Er ist vor allem für den _Satz von
+    de Moivre_ bekannt, der Trigonometrie und komplexe Zahlen verbindet.
 
-    De Moivre discovered the formula for the normal distribution in probability,
-    and first conjectured the _central limit theorem_. He also found a
-    non-recursive formula for Fibonacci numbers, linking them to the golden
-    ratio `φ`.
+    De Moivre entdeckte die Formel für die Normalverteilung in der Wahrscheinlichkeitsrechnung,
+    und vermutete zunächst den _zentralen Grenzwertsatz_. Er fand auch eine nicht
+    rekursive Formel für Fibonacci-Zahlen, die sie mit dem Goldenen
+    Schnitt `φ` verbindet.
   links:
-    - title: Probability
+    - title: Wahrscheinlichkeit
       url: /course/probability/predicting-the-future
-    - title: Fibonacci Numbers
+    - title: Fibonacci-Zahlen
       url: /course/sequences/fibonacci
 
 dedekind:
@@ -641,7 +641,7 @@ fermat:
     the most famous unsolved problems in mathematics – until it was finally
     proven in 1994.
   links:
-    - title: Probability
+    - title: Wahrscheinlichkeit
       url: /course/probability/introduction
 
 fibonacci:
@@ -658,7 +658,7 @@ fibonacci:
     the 12th century AD. He explained the decimal system in a book called “Liber
     Abaci”, a practical textbook for merchants.
   links:
-    - title: Fibonacci Numbers
+    - title: Fibonacci-Zahlen
       url: /course/sequences/fibonacci
 
 fourier:
@@ -1367,7 +1367,7 @@ pascal:
     Most famously, Pascal is remembered for naming _Pascal’s Triangle_, an
     infinite triangle of numbers with some amazing properties.
   links:
-    - title: Probability
+    - title: Wahrscheinlichkeit
       url: /course/probability/introduction
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
