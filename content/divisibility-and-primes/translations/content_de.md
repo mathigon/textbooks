@@ -681,7 +681,7 @@ wurde bekannt als die __Riemannsche Hypothese__.
 Hunderte von Mathematikern haben versucht, Riemanns Hypothese zu beweisen, aber alle
 blieben ohne Erfolg. Sie wird oft als eines der schwierigsten und
 wichtigsten ungelösten Probleme in der Mathematik angesehen. Im Jahr 2000 nannte das Clay Mathematics
-Institute sie eines von sechs [__Millennium-Problemen__](gloss:millennium-prize)
+Institute sie eines von sieben [__Millennium-Problemen__](gloss:millennium-prize)
  und versprach 1.000.000.000 Dollar für jeden Mathematiker, der es löst.
 
 ---
