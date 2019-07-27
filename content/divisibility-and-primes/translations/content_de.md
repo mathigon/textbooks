@@ -312,7 +312,7 @@ Mehr dazu später....
 
 Bei der Berechnung dieser Teilerpaare kann es vorkommen, dass eine Zahl außer
 dem ersten Paar keine anderen Teiler mehr hat. Ein Beispiel dafür ist 13 - seine einzigen Teiler
-sind 1 und 13 selbst. Diese besonderen Zahlen werden als __Primzahlen__bezeichnet. Sie
+sind 1 und 13 selbst. Diese besonderen Zahlen werden als __Primzahlen__ bezeichnet. Sie
 können nicht in Produkte mit kleineren Zahlen zerlegt werden, was sie
 gewissermaßen zu “Atomen von Zahlen”macht.
 
@@ -381,7 +381,7 @@ Lösung des anfänglichen Problems.
 
 Es stellte sich heraus, dass es ziemlich schwierig war, festzustellen, ob eine Zahl eine Primzahl ist: Man musste
 immer _alle_ ihre Primfaktoren finden, was
-mit zunehmender Größe der Zahlen immer schwieriger wird. Stattdessen entwickelte der griechische Mathematiker[Eratosthenes von
+mit zunehmender Größe der Zahlen immer schwieriger wird. Stattdessen entwickelte der griechische Mathematiker [Eratosthenes von
 Kyrene](bio:eratosthenes) einen einfachen Algorithmus, um alle
 Primzahlen bis 100 zu finden: das __Sieb des Eratosthenes__.
 
@@ -390,11 +390,11 @@ Primzahlen bis 100 zu finden: das __Sieb des Eratosthenes__.
         +grid(100)
       .legend(slot="legend") Zuerst müssen wir alle Zahlen bis 100 aufschreiben.
       .legend(slot="legend") Wir wissen, dass 1 nicht prim ist, also löschen wir die 1.
-      .legend(slot="legend") Die kleinste Primzahl ist #[strong.m-red 2]. Jedes Vielfache von 2 kann also keine Primzahl sein, da es 2 als Faktor hat. Daher können wir alle Vielfachen von 2.
-      .legend(slot="legend") durchstreichen. Die nächste Zahl in unserer Liste ist #[strong.m-blue 3] - also wieder eine Primzahl. Alle Vielfache von 3 können nicht Primzahlen sein, da sie 3 als Teiler haben. Deshalb können wir diese auch durchstreichen.
-      .legend(slot="legend") Die nächste Zahl, 4, ist bereits durchgestrichen, also gehen wir weiter zu #[strong.m-green 5]: das ist eine Primzahl und wir streichen wieder alle Vielfache von 5.
-      .legend.md(slot="legend") Die nächste Primzahl muss [[7]]sein, da 6 durchgestrichen ist. Und wieder streichen wir alle entsprechenden Vielfachen durch.
-      .legend.md(slot="legend") Die nächste Primzahl ist [[11]]. Beachte jedoch, dass alle seine Vielfache [[bereits durchgestrichen sind|Vielfache von 3 sind]]. Das Gleiche gilt eigentlich für alle anderen verbleibenden Zahlen. Daher müssen alle diese verbleibenden Zahlen Primzahlen sein.
+      .legend(slot="legend") Die kleinste Primzahl ist #[strong.m-red 2]. Jedes Vielfache von 2 kann also keine Primzahl sein, da es 2 als Faktor hat. Daher können wir alle Vielfachen von 2 streichen.
+      .legend(slot="legend") Die nächste Zahl in unserer Liste ist #[strong.m-blue 3] - also wieder eine Primzahl. Alle Vielfache von 3 können nicht Primzahlen sein, da sie 3 als Teiler haben. Deshalb können wir diese auch streichen.
+      .legend(slot="legend") Die nächste Zahl, 4, ist bereits gestrichen, also gehen wir weiter zu #[strong.m-green 5]: das ist eine Primzahl und wir streichen wieder alle Vielfache von 5.
+      .legend.md(slot="legend") Die nächste Primzahl muss [[7]] sein, da 6 durchgestrichen ist. Und wieder streichen wir alle entsprechenden Vielfachen durch.
+      .legend.md(slot="legend") Die nächste Primzahl ist [[11]]. Beachte jedoch, dass alle seine Vielfache [[bereits gestrichen sind|Vielfache von 3 sind]]. Das Gleiche gilt eigentlich für alle anderen verbleibenden Zahlen. Daher müssen alle diese verbleibenden Zahlen Primzahlen sein.
 
 Durch Abzählen sehen wir, dass es insgesamt [[25]] Primzahlen gibt, die kleiner als 100 sind.
 
@@ -411,7 +411,7 @@ Primzahlen zu finden. Es gibt 21 Primzahlen zwischen 100 und 200, 16 Primzahlen 
 Die Primzahlen scheinen in immer größeren Abständen aufzutreten, aber hören sie jemals auf?
 Gibt es eine _größte_ oder eine _letzte_ Primzahl?
 
-Der altgriechische Mathematiker[Euklid von Alexandria](bio:euclid) bewies
+Der altgriechische Mathematiker [Euklid von Alexandria](bio:euclid) bewies
 als erster, dass es unendlich viele Primzahlen gibt, mit dem folgenden Argument:
 ::: column(width=220)
 
@@ -443,7 +443,7 @@ Euklids Erklärung ist eines der ersten Beispiele in der Geschichte für einen f
 mathematischen __Beweis__ - ein logisches Argument, das zeigt, dass eine Aussage
 definitiv wahr sein muss. Dieses Beispiel wird oft als __Widerspruchsbeweis__ bezeichnet: Wir
 beginnen mit einer Annahme, leiten daraus etwas Unmögliches ab und wissen daher, dass unsere
-Annahme falsch sein muss.
+Annahme falsch gewesen sein muss.
 
 ---
 > id: prime-test
@@ -563,7 +563,7 @@ nicht bekannt, was der genaue Hintergrund dafür sein sollte...._
 
 ### Die Goldbachsche Vermutung
 
-1742 machte der deutsche Mathematiker[Christian Goldbach](bio:goldbach) eine
+1742 machte der deutsche Mathematiker [Christian Goldbach](bio:goldbach) eine
 seltsame Entdeckung: Er bemerkte, dass alle geraden Zahlen (außer 2) als Summe zweier Primzahlen geschrieben
 werden können. Zum Beispiel 8 = 5 + 3 und 24 = 13 + 11. Das
 ist ziemlich überraschend, denn Primzahlen werden durch Multiplikation und Teiler
@@ -571,7 +571,7 @@ definiert - und sollten nicht viel mit Addition zu tun haben.
 
     .calculator
       h3 Goldbach Rechner
-      p Wähle eine beliebige gerade Zahl, um zu berechnen, wie sie#[br]als Summe zweier Primzahlen geschrieben werden kann.
+      p Wähle eine beliebige gerade Zahl, um zu berechnen, wie#[br]sie als Summe zweier Primzahlen geschrieben werden kann.
       input(type="number", min=4, step=2)
       p.result.var ${result}
 
@@ -585,7 +585,7 @@ noch keinen Beweis gefunden, dass sie für _alle_ geraden Zahlen zutrifft. Und d
 Unterschied, denn es gibt unendlich viele gerade Zahlen, so dass wir nicht alle
 überprüfen können.
 
-Seine scheinbare Einfachheit machte die Goldbachsche Vermutung zu einem der berühmtesten
+Ihre scheinbare Einfachheit machte die Goldbachsche Vermutung zu einem der berühmtesten
 ungelösten Probleme in der Mathematik.
 
 ---
@@ -594,7 +594,7 @@ ungelösten Probleme in der Mathematik.
 ### Primzahlzwillinge
 
 Wir haben bereits gesehen, dass Primzahlen mit zunehmender Größe immer weiter auseinanderliegen,
-aber sie scheinen immer völlig zufällig zu erscheinen, und gelegentlich finden wir zwei
+aber sie scheinen immer völlig zufällig zu aufzutreten, und gelegentlich finden wir zwei
 Primzahlen direkt nebeneinander, nur eine Zahl auseinander: diese
 werden __Primzahlzwillinge__ genannt.
 
@@ -679,7 +679,7 @@ wurde bekannt als die __Riemannsche Hypothese__.
 Hunderte von Mathematikern haben versucht, Riemanns Hypothese zu beweisen, aber alle
 blieben ohne Erfolg. Sie wird oft als eines der schwierigsten und
 wichtigsten ungelösten Probleme in der Mathematik angesehen. Im Jahr 2000 nannte das Clay Mathematics
-Institute es eines von sechs [__Millennium-Problemen__](gloss:millennium-prize)
+Institute sie eines von sechs [__Millennium-Problemen__](gloss:millennium-prize)
  und versprach 1.000.000.000 Dollar für jeden Mathematiker, der es löst.
 
 ---
@@ -699,7 +699,7 @@ der Startlinie losstarten, wann werden sie sich am Start wieder treffen?
 ---
 > id: race1
 
-Bei dieser Frage geht es wirklich nicht um die Geometrie der Rennstrecke oder um
+Bei dieser Frage geht es in Wirklichkeit nicht um die Geometrie der Rennstrecke oder um
 Geschwindigkeit und Schnelligkeit - es geht um Vielfache und Teilbarkeit.
 
 Der erste Läufer überquert die Startlinie nach 60s, 120s, 180s, 240s usw.
@@ -708,8 +708,8 @@ Dies sind einfach die [[Vielfachen|Teiler]] von __{.m-blue}60__. Der zweite Läu
 beide Läufer wieder an der Startlinie sind, ist nach [[120]] Sekunden.
 
 {.reveal(when="blank-0 blank-1")}Was wir gerade gefunden haben, ist die kleinste Zahl
-, die sowohl ein Vielfaches von __{.m-green}40__ als auch ein Vielfaches von __{.m-blue}60__ist,
-was als das __kleinste gemeinsame Vielfache__ oder __kgV__bezeichnet wird.
+, die sowohl ein Vielfaches von __{.m-green}40__ als auch ein Vielfaches von __{.m-blue}60__ ist,
+was als das __kleinste gemeinsame Vielfache__ oder __kgV__ bezeichnet wird.
 
 ---
 > id: race2
@@ -740,14 +740,14 @@ Primfaktoren von __{.m-yellow}a__ (plus einige mehr) haben muss:
           | &nbsp;×&nbsp;
           .number-ball.l-blue 5
 
-Das ist leicht zu überprüfen: Wenn ein Primfaktor __{.m-yellow}a__, teilt und a
-__{.m-yellow}a__ __{.m-green}b__teilt, dann muss dieser Primfaktor _auch_
+Das ist leicht zu überprüfen: Wenn ein Primfaktor __{.m-yellow}a__ teilt und
+__{.m-yellow}a__ wiederum __{.m-green}b__ teilt, dann muss dieser Primfaktor _auch_
 __{.m-green}b__ teilen.
 
 ---
 > id: race3
 
-Um den kgV von __{.m-green}40__ und __{.m-blue}60__zu finden, müssen wir
+Um den kgV von __{.m-green}40__ und __{.m-blue}60__ zu finden, müssen wir
 zuerst die [Primfaktorzerlegung](gloss:factorisation) von beiden finden:
 
     table.table-tiny
@@ -866,7 +866,7 @@ an den Seiten. Welche Abmessungen haben diese Quadrate?
 Wie zuvor geht es bei dieser Frage nicht um Geometrie, sondern um
 die Teilbarkeit. Die Länge der Seiten der Fliesen muss sowohl 18 als auch 30 teilen,
 und die größtmögliche Zahl die das erfüllt ist [[6]]. Man spricht vom 
-__größten gemeinsamen Teiler__ oder __ggT__ von 18 und 30 bezeichnet.
+__größten gemeinsamen Teiler__ oder __ggT__ von 18 und 30.
 
 ---
 > id: gcd2
@@ -894,17 +894,17 @@ einige der Primfaktoren dieser Zahl beinhalten muss.
         td: .number-ball.l-green 5
 
 Angenommen, __{.m-red}X__ ist der ggT von __{.m-green}18__ und __{.m-blue}30__,
-dann teilt __{.m-red}X__ __{.m-green}18__, so dass die Primfaktoren von __{.m-red}X__
+dann lässt sich __{.m-green}18__ durch __{.m-red}X__ teilen, weshalb die Primfaktoren von __{.m-red}X__
 auch _{span.number-ball.small.l-blue}2_, _{span.number-ball.small.l-blue}3_
-und _{span.number-ball.small.l-blue}3_ beinhalten müssen. Außerdem teilt __{.m-red}X__ __{.m-blue}30__
-, so dass die Primfaktoren von __{.m-red}X__ auch _{span.number-ball.small.l-green}2_,
+und _{span.number-ball.small.l-blue}3_ beinhalten müssen. Außerdem lässt sich __{.m-blue}30__ auch durch __{.m-red}X__
+teilen, weshalb die Primfaktoren von __{.m-red}X__ ebenso _{span.number-ball.small.l-green}2_,
 _{span.number-ball.small.l-green}3_ und _{span.number-ball.small.l-green}5_ beinhalten müssen.
 
 ---
 > id: gcd3
 
-Um __{.m-red}X__zu finden, müssen wir einfach alle Zahlen multiplizieren, die Primfaktoren
-von __{.m-green}18__ [[und|oder]] __{.m-blue}30__sind:
+Um __{.m-red}X__ zu finden, müssen wir einfach alle Zahlen multiplizieren, die Primfaktoren
+von __{.m-green}18__ [[und|oder]] __{.m-blue}30__ sind:
 
 {.text-center} __{.m-red}X__ &nbsp;=&nbsp; _{span.number-ball.l-blue-green}2_ ×
 _{span.number-ball.l-blue-green}3_ &nbsp;=&nbsp; 6.
@@ -926,27 +926,27 @@ Auch hier gilt für Primzahlen etwas Besonderes: Der ggT von zwei verschiedenen 
 > goals: bound-low bound-high
 > section: real-life-applications
 
-## Real Life Applications
+## Anwendungen im richtigen Leben
 
-### Cicadas
+### Zikaden
 
 ::: column.grow
-North America is home to various broods of cicadas. These have the curious
-property that they only emerge every few years during the summer to breed – the
-remaining time they spend underground.
+Nordamerika ist die Heimat verschiedener Zikadenarten. Diese haben die seltsame
+Eigenschaft, dass sie nur alle paar Jahre im Sommer zum Brüten auftauchen - die
+restliche Zeit verbringen sie unter der Erde.
 
-For example, the cicadas in Florida and Mississippi appear every 13 years. The
-cicadas in Illinois and Iowa only appear every 17 years. But there are no
-cicadas with 12, 14, 15 or 16 year cycles.
+So erscheinen beispielsweise die Zikaden in Florida und Mississippi alle 13 Jahre. Die
+Zikaden in Illinois und Iowa erscheinen nur alle 17 Jahre. Aber es gibt keine
+Zikaden mit Jahreszyklen von 12, 14, 15 oder 16 Jahren.
 ::: column(width=360)
 
     x-media(width=360 height=240 src="images/cicadas.jpg")
 
 :::
 
-Both 13 and 17 are prime numbers – and that has a very good reason. Imagine that
-there are predators in the forest which kill cicadas. These predators also
-appear in regular intervals, say every 6 years.
+Sowohl 13 als auch 17 sind Primzahlen - und das hat einen sehr guten Grund. Stell dir vor,
+es gibt Raubtiere im Wald, die Zikaden töten. Diese Raubtiere treten auch
+in regelmäßigen Abständen auf, etwa alle 6 Jahre.
 
 Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1} years
 (${isPrime(n) ? 'prime' : 'not prime'}). The two animals would meet every

@@ -31,3 +31,4 @@ node_modules
 server/assets/resources
 *.7z
 *.WinMerge
+package-lock.json
