@@ -950,7 +950,7 @@ in regelmäßigen Abständen auf, zB alle 6 Jahre.
 
 Stell dir nun vor, dass die Zikaden
 alle ${n}{n|13|4,20,1} Jahre ausbrüten würden (${isPrime(n) ? 'prime' : 'not prime'}). Die beiden Tiere würden alle
-${lcm(n,6)} years, which is the [[lcm|gcd|product]] of 6 and ${n} Jahre aufeinandertreffen.
+${lcm(n,6)} Jahre, was dem [[kgV|ggT|Produkt]] von 6 und ${n} entspricht, aufeinandertreffen.
 
     figure
       include svg/cicadas.svg
