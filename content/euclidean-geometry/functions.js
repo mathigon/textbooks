@@ -70,7 +70,7 @@ export function congruence($step) {
       if (!$line) return;
       const to = centers.findIndex(c => Point.distance(c, posn) < 40);
 
-      if (to < 0) {
+      if (to < 0 || from === to) {
         $line.exit('draw');
         return from = $line = null;
       }

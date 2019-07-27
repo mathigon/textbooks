@@ -5,6 +5,7 @@
 
 
 @import "styles/variables";
+@import "./components/projectile";
 
 x-picker x-coordinate-system { margin: 0; }
 x-coordinate-system .region { position: absolute; pointer-events: none; }
@@ -40,4 +41,14 @@ x-coordinate-system .region { position: absolute; pointer-events: none; }
   tr:first-child td:last-child { border-top-right-radius: 6px; }
   tr:last-child td:first-child { border-bottom-left-radius: 6px; }
   tr:last-child td:last-child { border-bottom-right-radius: 6px; }
+}
+
+// -----------------------------------------------------------------------------
+// Projectiles
+
+article.projectiles {
+  .page-background {
+    background: linear-gradient(to bottom, #7ddedd, #48b6de);
+  }
+  x-step { color: fade(black, 75%); }
 }

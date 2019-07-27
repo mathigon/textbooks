@@ -1,10 +1,9 @@
 # Quadratic Equations
 
+## Introduction
+
 > id: intro
 > section: introduction
-
-
-## Introduction
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
 
@@ -136,12 +135,14 @@ quadratic equations and to understand their graphs.
 
 
 --------------------------------------------------------------------------------
-> id: definitions
-> section: solving
-> sectionStatus: dev
+
 
 
 ## Solving Quadratic Equations
+
+> id: definitions
+> section: solving
+> sectionStatus: dev
 
 You already know how to solve [_linear equations_](gloss:linear-equation):
 equations of the form `ax + b`, where _x_ is a [variable](gloss:variable), and
@@ -1151,11 +1152,13 @@ but it still works the same way:
 
 
 --------------------------------------------------------------------------------
-> section: formula
-> sectionStatus: dev
+
 
 
 ## The Quadratic Formula
+
+> section: formula
+> sectionStatus: dev
 
     // https://betterexplained.com/articles/quadratic-formula/
 
@@ -1257,12 +1260,14 @@ have advantages and disadvantages:
 
 
 --------------------------------------------------------------------------------
-> sectionStatus: dev
-> section: graphs
+
 
 
 ## Graphing Quadratics
+
 > id: graphing-1
+> sectionStatus: dev
+> section: graphs
 
 At the beginning of this chapter, we already saw what happens if we plot the
 function `y=x^2` in a coordinate system.
@@ -2257,78 +2262,132 @@ touches the x-axis.
 
 
 --------------------------------------------------------------------------------
-> section: projectiles
-> sectionStatus: dev
 
 
 
 ## Projectile Motion
 
-Having used quadratic equations to create the optimal business plan for our
-Skateboard company, and to design the largest possible skate park, now lets
-actually XXX.
+> id: penguins
+> section: projectiles
+> sectionStatus: dev
+> sectionBackground: projectiles
 
-When practicing jumps and tricks, it is important to understand how gravity
+As you might know, penguins can't fly – their wings are specially adapted for
+swimming. However, you can help them getting around my sling-shotting them
+across the ice:
 
-{.todo} skateboarding image
+    figure: x-projectile
 
-Let’s start with a simple example: a ball is thrown straight up into the air,
+---
+
+Given the previous chapters, you might notice that the flight paths taken by
+the penguins look suspiciously like a [[parabolas|ellipses|semicircles]].
+_{span.reveal(when="blank-1")}But why?_
+
+---
+
+Let us try to predict the motion of the penguin using the laws physics. The key
+observation is that we can split the curved motion of the penguin into two
+completely separate parts:
+
+::: column.grow
+
+* We can assume that there is no drag because of air resistance. This means that
+  if we just look at the horizontal part of the motion (the "shadow" of the
+  penguin), it seems to move at a constant speed.
+  
+* Vertically (up and down), the speed of the penguin changes. Initially it
+  is positive (upwards), then it slows down and turns negative (downwards).
+
+::: column(width=320)
+
+{.fixme} Graphic
+
+:::
+
+---
+
+The vertical speed changes because the force of gravity is pulling the ball back
+to Earth. The _rate of change_ of speed is often called __acceleration__, and
+on Earth it is always `-10m/s^2` (we use a negative value because gravity acts
+downwards).
+
+| __Time__         |   0 |  1s |  2s |  3s |  4s |  5s |  6s |  7s |  8s |  9s |
+| __Acceleration__ | -10 | -10 | -10 | -10 | -10 | -10 | -10 | -10 | -10 | -10 |
+| __Speed__        |  50 |  40 |  30 |  20 |  10 |   0 | -10 | -20 | -30 | -40 |
+| __Position__     |   0 |  50 |  90 | 120 | 140 | 150 | 150 | 140 | 120 |  90 |
+{.grid}
+
+---
+
+The result, as you can see, is a parabola. Using Calculus
+
+---
+
+Of course, flying penguins are not the only things that move on a parabolic
+path. If we ignore other forces like friction, wind or air resistance, any
+that flies through the air and is affected by gravity 
+then all objects we throw into the air follow a parabolic path: including
+basketballs, jets of water, or even rockets.
+
+Here you can see a few more examples:
+
+::: column(width=320)
+
+{.fixme} video
+
+::: column(width=320)
+
+{.fixme} video
+
+::: column(width=320)
+
+{.fixme} video
+
+::: column(width=320)
+
+{.fixme} video
+
+:::
+
+---
+
+Here are examples:
+
+::: tab
+
+#### Example 1
+
+::: tab
+
+#### Example 2
+
+::: tab
+
+#### Example 3
+
+:::
+
+---
+
+
+{.fixme} Since
+we know the initial speed of the ball, we can easily calculate the speed after
+every subsequent second.
+
+{.fixme} Speed, on the other hand, is the rate of change of position. The ball started
+at a height 0 when we threw it, and we can calculate its height after every
+subsequent second by adding the speed at that time.
+
+{.fixme} Let’s start with a simple example: a ball is thrown straight up into the air,
 with an initial speed of 50m/s. Using the laws of physics, we can predict the
 motion of the ball, and the time it will take for the ball to fall back on the
 ground.
 
-Once in the air, gravity pulls the ball back towards the ground. This force
-causes the ball’s speed to change by a fixed amount every second: approximately
--10m/s[{sup}2]. We use a negative value, because gravity acts downwards. Since
-we know the initial speed of the ball, we can easily calculate the speed after
-every subsequent second.
-
-Speed, on the other hand, is the rate of change of position. The ball started
-at a height 0 when we threw it, and we can calculate its height after every
-subsequent second by adding the speed at that time.
-
-    p.todo.
-      time             0    1s    2s    3s    4s    5s    6s    7s    8s    9s
-      acceleration   -10   -10   -10   -10   -10   -10   -10   -10   -10   -10
-      speed           50    40    30    20    10     0   -10   -20   -30   -40
-      position         0    50    90   120   140   150   150   140   120    90
-
-Notice how the height of the ball increases quickly, then slows down, and then
-decreases, as it falls back towards the ground. Let’s visualise this motion in
-a diagram:
-
-    p.todo diagram
-
-This shape looks just like a parabola. If we ignore things like air resistance,
-then all objects we throw into the air follow a parabolic path: including
-basketballs, jets of water, or even rockets.
-
-    p.todo example images
-
-We have already seen in part 1 of this course that any sequence of numbers that
-has constant double differences is given by a quadratic formula.
-
-For example, the sequence 2, 3, 6, 11, 18, 27, 38, … has constant double differences:
-
-![](http://gdaymath.com/wp-content/uploads/2013/04/Q6_1_pic1.png)
-
-We see that its leading diagonal is given as a combination of the standard leading diagonals:
-
-![](http://gdaymath.com/wp-content/uploads/2013/04/Q6_1_pic2.png)
-
-This suggests that the sequence is given by the quadratic formula n2−2n+3 (and
-one can check that this works).
-
-PRACTICE 118: Find a formula for the sequence 13, 26, 49, 82, 125, 178, 241, … 
-
-And as we saw in that early section, Galileo used this kind of idea to deduce
+Galileo used this kind of idea to deduce
 that because acceleration due to gravity is constant, and acceleration is a kind
 of double difference, all objects propelled through the air follow the paths of
 quadratic graphs.
-
-Air resistance and wind, sadly, ruin this ideal observation. But as a first
-start to understanding the motion of objects it seems helpful to initially
-ignore these effects and study this ideal motion to make some first predictions.
 
 PRACTICE 119: Lizzy throws a ball into the air. Its height, in feet, at time t
 seconds is given by the quadratic formula:
@@ -2339,78 +2398,109 @@ a) Find H(0). What does this number mean?
 b) At what time is the ball at its maximum height?
 c) When does the ball hit the ground?
 
+Having used quadratic equations to create the optimal business plan for our
+Skateboard company, and to design the largest possible skate park, now lets
+actually XXX.
 
+When practicing jumps and tricks, it is important to understand how gravity
 
---------------------------------------------------------------------------------
-> section: applications
-> sectionStatus: dev
-
-
-
-## More Applications of Quadratics
-
-Quadratic functions and equations appear everywhere in science, engineering,
-economics and nature. We've already seen the motion of projectiles in the
-previous section, and here we'll have a look at a few other applications.
-
-http://demonstrations.wolfram.com/TheMultiplicationParabola/
-https://demonstrations.wolfram.com/LiquidInARotatingCylinder/
-
----
-
-### Conic Sections
-
-Have you ever tried creating different shapes using a flashlight? The light rays
-emitted from a flashlight form a [cone](gloss:cone), and if you point it
-directly onto the ground you get a [[circle|ellipse|oval]].
-
-    x-conic-section.todo
-
-Now try tilting the flashlight: the circle becomes an ellipse. If you
-continue turning the flashlight, the ellipse becomes larger and larger, and
-eventually turns into a U-shape that continues forever. It turns out that this
-is a Parabola!
+{.todo} skateboarding image
 
 ---
 
 ::: column.grow
 
-These four shapes are called __conic sections__, because they are essentially
-"slices" through a 3-dimensional cone. 
+You saw above that every object you throw an object into the air follows a
+parabolic path. But what if the fire a ball out of a canon, so fast that it
+flied around the entire planet and comes back to where we started?
 
-It turns out that the four conic sections have some remarkable features. They
-also share many properties, even though they each look very different. (For
-example, the circle and ellipse are "closed" while the parabola and hyperbola
-are "open" and infinite.)
+The ball enters into an "orbit" around Earth, just like the Moon or a satellite,
+and its path has the shape of a [[circle|parabola|hyperbola]].
+
+::: column(width=280)
+
+{.fixme} diagram
+
+:::
+
+It turns out that there are several different types of paths an object can take
+when gravity, and these are called __conic sections__.
+
+---
+
+### Conic Sections
+
+The light rays emitted from a flashlight form a cylinder. If you shine in onto
+a flat surface, you can see the different shapes that can be created by slicing
+though a cone:
+
+    x-conic-section
+    .fixme labels
+
+If you point the flashlight directly onto the ground you get a
+[[circle|ellipse|oval]]. If you tilt it slightly, the circle becomes an ellipse.
+If you continue rotating the flashlight, the ellipse becomes larger and larger,
+and eventually turns into a U-shape that continues forever: this is a Parabola.
+And if you keep going, the parabola will become a hyperbola, a different kind of
+shape that you'll learn more about later.
 
 The parabola is produced by slicing the cone exactly parallel to its edge. You
 can prove that its shape matches the one created by graphing a quadratic
 equation – but that is still a bit too difficult.
 
-::: column(width=280)
-
-{.todo} Slices through cone diagram
-
-:::
+---
 
 We've already seen that parabolae describe the path of objects thrown into the
 air. All planets in our solar system move on elliptical orbits around the sun,
 and the XXXXX.
 
+When NASA was launching the first rockets into space, mathematicians like
+[[Kathrine Johnson]](bio:johnson) had to calculate the exact paths taken by
+the spacecrafts. The first launches were simple parabolas that only took a few
+minutes. Later launches then changed into
+
+https://hackaday.com/2018/02/28/katherine-johnson-computer-to-the-stars/
+
+{.fixme} diagram
+
 ---
 
-### Reflections
+Calculating the transition between parabolic and elliptical orbits was an
+incredibly difficult task – as explained here in the move "Hidden Figures":
+
+{.fixme}
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+## More Applications of Quadratics
+
+> section: applications
+> sectionStatus: dev
+
+Quadratic functions and equations appear not just in the motion of projectiles,
+but have many other applications in science, engineering, economics and nature.
+Let's have a look at a few more applications.
+
+---
+
+### Mirrors and Reflections
 
 Draw two points on a sheet of paper, and make a fold that brings one of the
 points directly on top of the other. You can think of this fold as the "line of
 reflection" between A and B. Every point on the line has the same distance
 between A and B.
 
-We can say, "the set of points equidistant from A and B are precisely the points on the perpendicular bisector of A and B."
+We can say, "the set of points equidistant from A and B are precisely the points
+on the perpendicular bisector of A and B."
 
 ![](http://gdaymath.com/wp-content/uploads/2013/04/Q6_3_pic4.png)
 
-Take a blank piece of paper and draw on it a straight line and a point P not on that line. Use a thick marker to make the point conspicuous.
+Take a blank piece of paper and draw on it a straight line and a point P not on
+that line. Use a thick marker to make the point conspicuous.
 
 ![](http://gdaymath.com/wp-content/uploads/2013/04/Q6_3_pic5.png)
 
@@ -2438,16 +2528,23 @@ Suppose we are given a line L and a point F not on that line. Then the set of
 all points that are equidistant from the point and from the line (see the
 diagram below) give a U-shaped curve.
 
+---
+> id: directrix
+
 The point F is called the focus of this special curve and the line L is called
 its directrix.
+
+    x-geopad(width=300): svg
+      path(x="line(point(0,280),point(300,280))" name="dir")
+      circle.move(cx="30" cy="280" project="dir" name="p")
+      circle(x="point(150,200)" name="f")
+      circle(x="point(p.x,qy(p,d))" name="q")
 
 ![](http://gdaymath.com/wp-content/uploads/2013/04/Q6_3_pic7.png)
 
 This curve looks U-shaped. Is it quadratic?
 
 ---
-
-### Mirrors and Telescopes
 
 Parabolas have the astounding reflection property that all incoming parallel
 rays of light, perpendicular to the directrix, are directed to the focus of the
@@ -2511,9 +2608,15 @@ EXTENDED ACTIVITY: Is the St. Louis Gateway Arch in the shape of a quadratic cur
 
 ---
 
-In avalanche control, triggers are often fired onto a mountain face from an
-adjacent face to create an avalanche. What height does the trigger reach and
-where does it land? A quadratic can model this perfectly.
+### The Multiplication Parabola
+
+http://demonstrations.wolfram.com/TheMultiplicationParabola/
+
+---
+
+### More Applications
+
+https://demonstrations.wolfram.com/LiquidInARotatingCylinder/
 
 Maximum and minimum values of quadratics are used in the study of moving objects
 and in acceleration and volume problems.  Business models also include quadratic
@@ -2525,7 +2628,6 @@ that our world is full of quadratic equations and parabolas.
 
 Quadratic equations are hidden everywhere in our world. Can you think of any
 other examples?
-
 
     // solve fractional equations that result in quadratics
     // quadratic substitutions

@@ -679,7 +679,7 @@ became known as the __Riemann Hypothesis__.
 Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all
 without success. It is often considered one of the most difficult and most
 important unsolved problems in mathematics. In 2000, the Clay Mathematics
-Institute named it one of six [__Millennium Prize Problems__](gloss:millennium-prize)
+Institute named it one of seven [__Millennium Prize Problems__](gloss:millennium-prize)
 and promised $1,000,000 to any mathematician who solves it.
 
 ---

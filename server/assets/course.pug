@@ -66,6 +66,10 @@ html
 
         x-tutor
 
+        x-modal#glossary-modal.light
+          .close: +icon('close', 24)
+          .glossary-body
+
         script(type="application/json")#glossary!= course.getJSON('glossary')
         script(type="application/json")#bios!= course.getJSON('bios')
         script(type="application/json")#hints!= course.getJSON('hints')

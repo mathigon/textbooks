@@ -4,9 +4,10 @@
 // =============================================================================
 
 
-import { list } from '@mathigon/core';
+import { list, square } from '@mathigon/core';
 import { nearlyEquals, Point } from '@mathigon/fermat';
 
+import './components/projectile';
 import '../shared/components/conic-section';
 
 
@@ -123,3 +124,13 @@ export function parabola($step) {
   $actions[1].on('click', function() { $step.model.set('a', 1); $step.model.set('b', 2); $step.model.set('c', 1) });
   $actions[2].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -4); $step.model.set('c', 2) });
 } */
+
+export function directrix($step) {
+
+  $step.model.set('qy', (p, d) => {
+    const num = square(d.x - p.x) + square(d.y) - square(p.y);
+    const den = 2 * p.y + 2 * d.y;
+    return num/den;
+  });
+
+}

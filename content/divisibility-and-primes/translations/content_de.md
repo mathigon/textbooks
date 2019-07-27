@@ -413,6 +413,7 @@ Gibt es eine _größte_ oder eine _letzte_ Primzahl?
 
 Der altgriechische Mathematiker [Euklid von Alexandria](bio:euclid) bewies
 als erster, dass es unendlich viele Primzahlen gibt, mit dem folgenden Argument:
+
 ::: column(width=220)
 
     x-media(lightbox width=220 height=300 src="images/euclid.jpg")
@@ -550,6 +551,7 @@ Diagonalen bei Primzahlen viel beliebter sind als andere. Dadurch entsteht ein m
 _{.lgrey}Es stellt sich heraus, dass diese Diagonalen alle bestimmten quadratischen
 Gleichungen entsprechen, die offenbar häufiger als der Durchschnitt Primzahlen erzeugen. Es ist jedoch
 nicht bekannt, was der genaue Hintergrund dafür sein sollte...._
+
 ::: column(width=200)
 
     x-media(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
