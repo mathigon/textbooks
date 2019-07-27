@@ -946,74 +946,74 @@ Zikaden mit Jahreszyklen von 12, 14, 15 oder 16 Jahren.
 
 Sowohl 13 als auch 17 sind Primzahlen - und das hat einen sehr guten Grund. Stell dir vor,
 es gibt Raubtiere im Wald, die Zikaden töten. Diese Raubtiere treten auch
-in regelmäßigen Abständen auf, etwa alle 6 Jahre.
+in regelmäßigen Abständen auf, zB alle 6 Jahre.
 
-Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1} years
-(${isPrime(n) ? 'prime' : 'not prime'}). The two animals would meet every
-${lcm(n,6)} years, which is the [[lcm|gcd|product]] of 6 and ${n}.
+Stell dir nun vor, dass die Zikaden
+alle ${n}{n|13|4,20,1} Jahre ausbrüten würden (${isPrime(n) ? 'prime' : 'not prime'}). Die beiden Tiere würden alle
+${lcm(n,6)} years, which is the [[lcm|gcd|product]] of 6 and ${n} Jahre aufeinandertreffen.
 
     figure
       include svg/cicadas.svg
-      p.caption Time until cicadas and predators meet, for various different cicada cycle lengths.
+      p.caption Zeit bis sich Zikaden und Raubtiere treffen, für verschiedene Zikadenzykluslängen.
 
 ---
 > id: cicadas1
 
-This number seems to be much larger if the cicada cycle is a prime number like
-13 and 17. That’s because prime numbers don’t share any factors with 6, so
-when calculating the lcm we don’t cancel any duplicate factors.
+Diese Zahl scheint viel größer zu sein, wenn der Zikadenzyklus eine Primzahl wie
+13 und 17 ist. Das liegt daran, dass Primzahlen keine Teiler mit 6 gemeinsam haben, so dass wir
+bei der Berechnung des kgV keine doppelten Teiler zu löschen haben.
 
-Of course, cicadas have no idea what prime numbers are – but over millions of
-years, evolution has worked out that prime cycles are the safest. The predator
-animal seems to have gone extinct over time, but the prime number cycles remain.
+Natürlich haben die Zikaden keine Ahnung, was Primzahlen sind - aber in Millionen von
+Jahren hat die Evolution herausgefunden, dass Primzahlen für sie am sichersten sind. Das Raubtier
+scheint im Laufe der Zeit ausgestorben zu sein, aber die Primzahlzyklen wurden beibehalten.
 
     //- TODO Exercises
 
 ---
 > id: crypto
 
-### Cryptography
+### Kryptographie
 
 ::: column.grow
-One of the most important modern applications of prime numbers is in a field of
-mathematics called __Cryptography__. For thousands of years, people have tried
-to conceal messages so that only the intended recipient could read them – this
-is called encryption. It is used by everyone from generals exchanging secret
-orders during wars to personal emails or online banking details.
+Eine der wichtigsten modernen Anwendungen von Primzahlen liegt in einem
+mathematischen Gebiet namens __Kryptographie__. Seit Jahrtausenden versuchen
+Menschen, Nachrichten so zu geheim zu halten, dass nur der vorgesehene Empfänger sie lesen kann - das
+nennt man Verschlüsselung. Sie wird von allen genutzt, von Generälen, die geheime
+Befehle während des Krieges austauschen, bis hin zu persönlichen E-Mails oder Online-Banking-Details.
 
-People always tried to come up with better, more secure encryption methods, but
-after some time, they were all broken using yet more advanced algorithms. In the
-Second World War, the German army used the Enigma: a complex machine consisting
-of a keyboard, rotating wheels and plugs. It encrypted messages using one of 158
-million million million possibilities (that’s a 158 followed by 18 zeros!). The
-code was widely believed to be unbreakable, but the British Secret Service, led
-by mathematician Alan Turing, built some of the first computers that managed to
-decode it.
+Die Menschen versuchten immer, bessere und sicherere Verschlüsselungsmethoden zu entwickeln, aber
+nach einiger Zeit wurden sie alle mit noch fortschrittlicheren Algorithmen geknackt. Im
+Zweiten Weltkrieg nutzte die deutsche Wehrmacht die Enigma: eine komplexe Maschine,
+die aus einer Tastatur, rotierenden Walzen und Steckern bestand. Sie verschlüsselte Nachrichten mit einer von 158
+Millionen Millionen Millionen Möglichkeiten (also 158 gefolgt von 18 Nullen!). Der
+Code galt allgemein als unknackbar, aber der britische Geheimdienst, angeführt
+vom Mathematiker Alan Turing, baute einige der ersten Computer, die es schafften, ihn zu
+entschlüsseln.
 ::: column(width=240)
 
     x-media(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
-    p.caption German four-rotor Enigma machine
+    p.caption Deutsche Enigma-Maschine mit 4 Walzen
 
 :::
 
-Today’s computers are much more advanced, capable of trying millions of
-possibilities every second. To develop better encryption algorithms, you have to
-find a mathematical operation that is difficult even for powerful computers.
-Computers are incredibly fast at addition, subtraction, multiplication and
-division. However, as it turns out, computers are very slow at factorising
-large integers into primes…
+Die heutigen Computer sind viel fortschrittlicher und in der Lage, jede Sekunde Millionen von
+Möglichkeiten durchzuprobieren. Um bessere Verschlüsselungsalgorithmen zu entwickeln, muss man eine mathematische Operation
+finden, die selbst für leistungsfähige Computer schwierig ist:
+Computer sind unglaublich schnell bei Addition, Subtraktion, Multiplikation und
+Division. Wie sich jedoch herausstellt, sind Computer sehr langsam dabei,
+große Zahlen in Primzahlen zu zerlegen....
 
 ---
 > id: crypto1
 
-{.todo} COMING SOON – RSA example with Alice and Bob
+{.todo} Demnächst - RSA-Beispiel mit Alice und Bob
 
-This encryption algorithm is called __RSA Cryptography__, after its three
-inventors, Ron Rivest, Adi Shamir and Leonard Adleman who published it in 1977.
-It turns out that a very similar method was known to the British Secret Service
-since 1973, but remained classified until much later.
+Dieser Verschlüsselungsalgorithmus heißt __RSA Verschlüsselung__, nach seinen drei
+Erfindern Ron Rivest, Adi Shamir und Leonard Adleman, die ihn 1977 veröffentlichten.
+Es stellte sich heraus, dass dem britischen Geheimdienst
+seit 1973 eine sehr ähnliche Methode bekannt war, die aber lange Zeit geheim gehalten wurde.
 
-Today, prime numbers are used by computers all over the world to exchange data.
-As you browse the internet or send chat messages, your phone or laptop will
-quietly generate large prime numbers and exchange public keys with other
-computers.
+Heute werden Primzahlen von Computern auf der ganzen Welt zum Austausch von Daten verwendet.
+Wenn du im Internet surfst oder Chat-Nachrichten sendest, erzeugt dein Telefon oder Laptop
+im Hintergrund große Primzahlen und tauscht öffentliche Schlüssel mit anderen
+Computern aus.
