@@ -406,10 +406,10 @@ dot-annihilation:
 dot-machine:
   title: Dot Machine
   text: |
-    Eine __Punkt-Maschine__ besteht aus mehreren Zellen, die Punkte enthalten. 
+    Eine __Punkt-Maschine__ besteht aus mehreren Zellen, die Punkte enthalten.
     Du kannst diese Punkte verändern, indem du bestimmte Regeln auf sie anwendest.
 
-    In einer `1←3` Maschine werden z.B. 3 Punkte einer Zelle umgewandelt in einen 
+    In einer `1←3` Maschine werden z.B. 3 Punkte einer Zelle umgewandelt in einen
     Punkt in der Zelle links davon. Ganz ähnlich, wird 1 Punkt in der Zelle umgewandelt
     in 3 Punkte in der Zelle rechts daneben. Das wird eine "Explosion" genannt.
 
@@ -754,7 +754,7 @@ millennium-prize:
   text: |
     Die sieben __Millennium-Probleme__ gehören zu den schwierigsten offenen
     Problemen in der Mathematik. Sie wurden im Jahr 2000 vom _Clay Mathematics
-    Institute_aufgelistet und mit jeweils einer Belohnung von 1 Million Dollar
+    Institute_ aufgelistet und mit jeweils einer Belohnung von 1 Million Dollar
     für die Lösung ausgeschrieben:
 
     * Lösung des P-NP-Problems
@@ -773,7 +773,7 @@ molecule:
   title: Molekül
   text: |
     Ein __Molekül__ besteht aus zwei mehr Atomen, die durch chemische Bindungen
-    zusammengehalten werden und dabei über einen längeren Zeitraum stabil sind. 
+    zusammengehalten werden und dabei über einen längeren Zeitraum stabil sind.
     Trägt es eine elektrische Ladung, nennt man es __Ionen__.
 
     Beispiele für Moleküle sind `O_2`, das aus zwei verbundenen Sauerstoffatomen

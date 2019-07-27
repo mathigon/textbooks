@@ -2406,11 +2406,21 @@ When practicing jumps and tricks, it is important to understand how gravity
 
 {.todo} skateboarding image
 
----
+
+
+--------------------------------------------------------------------------------
+
+
+
+## More Applications of Quadratics
+
+> section: applications
+> sectionStatus: dev
+
 
 ::: column.grow
 
-You saw above that every object you throw an object into the air follows a
+In the previous section, you learned that every object you throw an object into the air follows a
 parabolic path. But what if the fire a ball out of a canon, so fast that it
 flied around the entire planet and comes back to where we started?
 
@@ -2469,17 +2479,6 @@ Calculating the transition between parabolic and elliptical orbits was an
 incredibly difficult task – as explained here in the move "Hidden Figures":
 
 {.fixme}
-
-
-
---------------------------------------------------------------------------------
-
-
-
-## More Applications of Quadratics
-
-> section: applications
-> sectionStatus: dev
 
 Quadratic functions and equations appear not just in the motion of projectiles,
 but have many other applications in science, engineering, economics and nature.
