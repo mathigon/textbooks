@@ -437,22 +437,22 @@ dedekind:
   died: 1916
   name: Dedekind
   small: true
-  bio: __Richard Dedekind__ (1831 – 1916) was a German mathematician and one of
-    the students of Gauss. He developed many concepts in set theory, and
-    invented _Dedekind cuts_ as the formal definition of real numbers. He also
-    gave the first definitions of _number fields_ and _rings_, two important
-    constructs in abstract algebra.
+  bio: __Richard Dedekind__ (1831 - 1916) war ein deutscher Mathematiker und einer der
+    Schüler von Gauß. Er entwickelte viele Konzepte in der Mengenlehre und
+    erfand die _Dedekindschen Schnitte_ als formale Definition von reellen Zahlen. Er erstellte auch
+    die ersten Definitionen von _algebraischen Zahlkörpern_ und _Ringen_, zwei wichtigen
+    Konstrukte in der abstrakten Algebra.
 
 democritus:
   born: -460
   died: -370
-  name: Democritus
-  bio: The Greek mathematician __Democritus__ (c. 460 – 370 BC), may be the
-    first person to speculate that all matter was made up of tiny _atoms_ and
-    is considered the “father of modern science”. He also made many discoveries
-    in geometry, including the formula for the volume of prisms and cones.
+  name: Demokrit
+  bio: Der griechische Mathematiker __Demokrit__ (c. 460 - 370 v. Chr.), dürfte als
+    Erster vermutet haben, dass die gesamte Materie aus winzigen _Atomen_ besteht und
+    gilt als der “Vater der modernen Wissenschaft”. Er machte auch viele Entdeckungen
+    in der Geometrie, einschließlich der Formel für das Volumen von Prismen und Kegeln.
   links:
-    - title: Volume of a Cone
+    - title: Volumen eines Kegels
       url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
 
 desargues:
@@ -460,16 +460,16 @@ desargues:
   died: 1661
   name: Desargues
   bio: |
-    __Girard Desargues__ (1591 – 1661) was a French mathematician, engineer,
-    and architect. He designed numerous buildings in Paris and Lyon, helped
-    construct a dam, and invented a mechanism for raising water using
-    epicycloids.
+    __Gérard Desargues__ (1591 - 1661) war ein französischer Mathematiker, Ingenieur
+    und Architekt. Er entwarf zahlreiche Gebäude in Paris und Lyon, half
+    beim Bau eines Damms und erfand einen Mechanismus zur Wassergewinnung mit Hilfe von
+    Epizykloiden.
 
-    In mathematics, Desargues is considered the father of _projective geometry_.
-    This is a special kind of geometry in which parallel lines meet at at “point
-    at infinity”, the size of shapes does not matter (only their proportions),
-    and all four conic sections (circle, ellipse, parabola and hyperbola) are
-    essentially the same.
+    In der Mathematik gilt Desargues als der Vater der _Projektiven Geometrie_.
+    Dies ist eine spezielle Art von Geometrie, bei der sich parallele Linien in einem “Punkt
+    im Unendlichen”treffen, die Größe der Formen keine Rolle spielt (nur ihre Proportionen),
+    und alle vier Kegelschnitte (Kreis, Ellipse, Parabel und Hyperbel) im
+    Wesentlichen gleich sind.
   links:
     - title: Kegelschnitte
       url: /course/circles-and-pi/conic-sections
@@ -479,32 +479,32 @@ descartes:
   died: 1650
   name: Descartes
   bio: |
-    __René Descartes__ (1596 – 1650) was a French mathematician and philosopher,
-    and one of the key figures in the Scientific Revolution. He refused to
-    accept the authority of previous philosophers, and one of his best-known
-    quotes is “I think, therefore I am”.
+    __René Descartes__ (1596 - 1650) war ein französischer Mathematiker und Philosoph
+    und eine der Schlüsselfiguren der wissenschaftlichen Revolution. Er weigerte sich, die Autorität früherer Philosophen zu
+    akzeptieren, und eines seiner bekanntesten
+    Zitate ist “Ich denke, also bin ich.”.
 
-    Descartes is the father of _analytical geometry_, which allows us to
-    describe geometric shapes using algebra. This was one of the prerequisites,
-    which allowed Newton and Leibnitz to invent _calculus_ a few decades later.
+    Descartes ist der Vater der _analytischen Geometrie_, die es uns ermöglicht, geometrische Formen mit Hilfe von Algebra zu
+    beschreiben. Dies war eine der Voraussetzungen,
+    die es Newton und Leibnitz ermöglichte, einige Jahrzehnte später die _Infinitesimalrechnung_ zu erfinden.
 
-    He is credited with the first use of superscripts for powers or exponents,
-    and the _cartesian coordinate system_ is named after him.
+    Ihm wird die erste Verwendung von hochgestellten Zahlen für Potenzen oder Exponenten zugeschrieben,
+    und das _kartesische Koordinatensystem_ ist nach ihm benannt.
 
 diophantus:
   born: 200
   died: 284
-  name: Diophantus
+  name: Diophantos
   overflow: true
   bio: |
-    __Diophantus__ was a Hellenistic mathematician who lived in Alexandria.
-    Most of his works are about solving polynomial equations with several
-    unknowns. These are now called _Diophantine equation_ and remain an
-    important area of research today.
+    __Diophantos__ war ein antiker griechischer Mathematiker, der in Alexandria lebte.
+    Die meisten seiner Arbeiten befassen sich mit der Lösung von Polynomgleichungen mit mehreren
+    Unbekannten. Diese werden heute als _diophantische Gleichung_ bezeichnet und sind bis heute ein
+    wichtiges Forschungsgebiet.
 
-    It was while reading one of Diophantus’ books, many centuries later, that
-    _Pierre de Fermat_ proposed one of these equations had no solution. This
-    became known as “Fermat’s Last Theorem”, and was only solved in 1994.
+    Es war beim Lesen eines von Diophantos' Büchern, viele Jahrhunderte später, dass
+    _Pierre de Fermat_ vorschlug, eine dieser Gleichungen hätte keine Lösung. Dies
+    wurde bekannt als “Fermat's letzter Satz”, und wurde erst 1994 gelöst.
 
 dirac:
   name: Dirac
@@ -591,8 +591,8 @@ euclid:
   born: -330
   died: -270
   bio: __Euklid von Alexandria__ (um 300 v. Chr.) war ein griechischer Mathematiker und
-    wird oft als _Vater der Geometrie_ bezeichnet. Er veröffentlichte ein Buch namens _Elemente_
-    , indem die euklidische Geometrie erstmals eingeführt wurde und das viele wichtige Beweise
+    wird oft als _Vater der Geometrie_ bezeichnet. Er veröffentlichte ein Buch namens _Elemente_,
+    indem die euklidische Geometrie erstmals eingeführt wurde und das viele wichtige Beweise
     auf den Gebieten der Geometrie und Zahlentheorie enthielt. Es war bis
     ins 19. Jahrhundert das wichtigste mathematische Lehrbuch. Er lehrte Mathematik in Alexandria, aber über sein Leben
     ist nur sehr wenig bekannt.
