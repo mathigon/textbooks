@@ -541,20 +541,20 @@ eratosthenes:
   name: Eratosthenes
   born: -276
   died: -195
-  bio: __Eratosthenes of Cyrene__ (c. 276 BC – 195 BC) was a Greek
-    mathematician, geographer, astronomer, historian, and poet. He spent much
-    of his life in Egypt, as head of the library of Alexandria.
+  bio: __Eratosthene von Kyrene__ (ca. 276 v. Chr. - 195 v. Chr.) war ein griechischer
+    Mathematiker, Geograph, Astronom, Historiker und Dichter. Er verbrachte einen Großteil
+    seines Lebens in Ägypten, als Leiter der Bibliothek von Alexandria.
 
-    Among many other achievements, Eratosthenes calculated the circumference of
-    the Earth, measured the tilt of the Earth’s axis of rotation, estimated the
-    distance to the sun, and created some of the first maps of the world.
+    Neben vielen anderen Errungenschaften berechnete Eratosthenes den Umfang der
+    Erde, maß die Neigung der Drehachse der Erde, schätzte den
+    Abstand zur Sonne und schuf einige der ersten Weltkarten.
 
-    He also invented the “Sieve of Eratosthenes”, an efficient way to
-    calculate _prime numbers_.
+    Er erfand auch das “Sieb des Eratosthenes”, eine effiziente Methode zur
+    Berechnung _von Primzahlen_.
   links:
-    - title: Radius of the Earth
+    - title: Radius der Erde
       url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
-    - title: Sieve of Eratosthenes
+    - title: Sieb des Eratosthenes
       url: /course/divisibility-and-primes/prime-numbers#eratosthenes
 
 erdos:
@@ -590,16 +590,16 @@ euclid:
   name: Euclid
   born: -330
   died: -270
-  bio: __Euclid of Alexandria__ (around 300 BC) was a Greek mathematician and
-    is often called the _father of geometry_. He published a book _Elements_
-    that first introduced Euclidean geometry and contained many important proofs
-    in geometry and number theory. It was the main mathematics textbook until
-    the 19th century. He taught mathematics in Alexandria, but very little else
-    is known about his life.
+  bio: __Euklid von Alexandria__ (um 300 v. Chr.) war ein griechischer Mathematiker und
+    wird oft als _Vater der Geometrie_ bezeichnet. Er veröffentlichte ein Buch namens _Elemente_
+    , indem die euklidische Geometrie erstmals eingeführt wurde und das viele wichtige Beweise
+    auf den Gebieten der Geometrie und Zahlentheorie enthielt. Es war bis
+    ins 19. Jahrhundert das wichtigste mathematische Lehrbuch. Er lehrte Mathematik in Alexandria, aber über sein Leben
+    ist nur sehr wenig bekannt.
   links:
-    - title: Euclid’s Axioms
+    - title: Satz des Euklid
       url: /course/euclidean-geometry/euclids-axioms
-    - title: Infinitely many Primes
+    - title: Unendlich viele Primzahlen
       url: /course/divisibility-and-primes/prime-numbers#primes3
 
 euler:
@@ -607,22 +607,22 @@ euler:
   born: 1707
   died: 1783
   bio: |
-    __Leonhard Euler__ (1707 – 1783) was one the greatest mathematicians in
-    history. His work spans all areas of mathematics, and he wrote 80 volumes of
-    research.
+    __Leonhard Euler__ (1707 - 1783) war einer der größten Mathematiker der
+    Geschichte. Seine Arbeit umfasst alle Bereiche der Mathematik, und er schrieb 80
+    Forschungsbände.
 
-    Euler was born in Switzerland and studied in Basel, but lived most of his
-    life in Berlin, Prussia, and St. Petersburg, Russia.
+    Euler wurde in der Schweiz geboren und studierte in Basel, lebte aber den größten Teil seines
+    Lebens in Berlin, Preußen und St. Petersburg, Russland.
 
-    Euler invented much of the modern mathematical terminology and notation, and
-    made important discoveries in calculus, analysis, graph theory, physics,
-    astronomy, and many other topics.
+    Euler erfand einen Großteil der modernen mathematischen Terminologie und Notation und
+    machte wichtige Entdeckungen in den Bereichen Infinitesimalrechnung, Analysis, Graphentheorie, Physik,
+    Astronomie und vielen anderen Themen.
   links:
-    - title: Königsberg Bridges Problem
+    - title: Königsberger Brückenproblem
       url: /course/graphs-and-networks/bridges-of-koenigsberg
-    - title: Euler’s Formula
+    - title: Eulersche Formel
       url: /course/graphs-and-networks/eulers-formula
-    - title: Polyhedrons
+    - title: Polyeder
       url: /course/polygons-and-polyhedra/polyhedra
 
 fermat:
@@ -630,16 +630,16 @@ fermat:
   born: 1607
   died: 1665
   bio: |
-    __Pierre de Fermat__ (1607 – 1665) was a French mathematician and lawyer. He
-    was an early pioneer of calculus, as well as working in number theory,
-    probability, geometry and optics.
+    __Pierre de Fermat__ (1607 - 1665) war ein französischer Mathematiker und Jurist. Er
+    war ein früher Pionier der Differentialrechnung und arbeitete in den Bereichen Zahlentheorie,
+    Wahrscheinlichkeit, Geometrie und Optik.
 
-    In 1637, he wrote a short note in the margin of one of his textbooks,
-    claiming that the equation `a^n + b^n = c^n` has no integer solutions for
-    `n > 2`, and that he had a “marvellous proof, which this margin is too
-    narrow to contain”. This became known as _Fermat’s Last Theorem_, and one of
-    the most famous unsolved problems in mathematics – until it was finally
-    proven in 1994.
+    1637 schrieb er eine kurze Notiz am Rand eines seiner Lehrbücher und
+    behauptete, dass die Gleichung `a^n + b^n = c^n` keine ganzzahligen Lösungen für `n
+    >2` habe, und dass er einen “wahrhaft wunderbaren Beweis entdeckt habe, der Rand hier aber zu
+    schmal sei, um ihn zu fassen”. Dies wurde bekannt als _Fermat's letzter Satz_, und war eines
+    der berühmtesten ungelösten Probleme in der Mathematik - bis es schließlich 1994
+    bewiesen wurde.
   links:
     - title: Wahrscheinlichkeit
       url: /course/probability/introduction
@@ -732,21 +732,21 @@ gauss:
   born: 1777
   died: 1855
   bio: |
-    __Carl Friedrich Gauss__ (1777 – 1855) was arguably the greatest
-    mathematician in history. He made groundbreaking discoveries in just about
-    every field of mathematics, from algebra and number theory to statistics,
-    calculus, geometry, geology and astronomy.
+    __Carl Friedrich Gauß (1777 - 1855) war wohl der größte
+    Mathematiker der Geschichte. Er machte bahnbrechende Entdeckungen in fast
+    allen Bereichen der Mathematik, von Algebra und Zahlentheorie über Statistik,
+    Analysis, Geometrie, Geologie und Astronomie.
 
-    According to legend, he corrected a mistake in his father‘s accounting at
-    the age of 3, and found a way to quickly add up all integers from 1 to 1000
-    at the age of 8. He made his first important discoveries while still a
-    teenager, and later tutored many other famous mathematicians as Professor.
+    Der Legende nach korrigierte er einen Fehler in der Buchhaltung seines Vaters im
+    Alter von 3 Jahren und fand mit 8 Jahren einen Weg,
+    die Zahlen von 1 bis 100 schnell zu addieren. Schon als
+    Teenager machte er seine ersten wichtigen Entdeckungen und unterrichtete später viele andere berühmte Mathematiker als Professor.
   links:
-    - title: Prime Number Theorem
+    - title: Primzahlsatz
       url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
     - title: Nichteuklidische Geometrie
       url: /world/Dimensions_and_Distortions
-    - title: Sums of Triangle Numbers
+    - title: Summen von Dreieckszahlen
       url: /course/sequences/figurate#triangle-sums
 
 germain:
@@ -795,11 +795,11 @@ goldbach:
   name: Goldbach
   born: 1690
   died: 1764
-  bio: __Christian Goldbach__ (1690 – 1764) was a Prussian mathematician and
-    contemporary of Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar
-    Peter II, and is remembered for his “Goldbach Conjecture“.
+  bio: __Christian Goldbach__ (1690 - 1764) war ein preußischer Mathematiker und
+    Zeitgenosse von Euler, Leibniz und Bernoulli. Er war der Lehrer des russischen Zaren
+    Peter II. und wird für seine “Goldbachsche Vermutung“ in Erinnerung behalten.
   links:
-    - title: Goldbach Conjecture
+    - title: Goldbachsche Vermutung
       url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
 
 grothendieck:
@@ -1160,16 +1160,16 @@ mersenne:
   died: 1648
   name: Mersenne
   bio: |
-    __Marin Mersenne__ (1588 – 1648) was a French mathematician and priest.
-    Because of the frequent exchanges with his contacts in the scientific world
-    during the 17th century, he has been called the “the post-box of Europe”.
+    __Marin Mersenne__ (1588 - 1648) war ein französischer Mathematiker und Priester.
+    Wegen des intensiven Austausches mit seinen Kollegen in der wissenschaftlichen Welt
+    im 17. Jahrhundert wurde er als der “Briefkasten Europas” bezeichnet.
 
-    Today we mostly remember him for the _Mersenne primes_, prime numbers that
-    can be written as `2^n - 1`. Most of the largest known primes are of this
-    type. He also studied acoustics and the harmonics of a vibrating string,
-    and wrote about theology and philosophy.
+    Heute erinnern wir uns hauptsächlich an ihn für die _Mersenne-Primzahlen_, Primzahlen, die in der Form `2^n - 1` geschrieben werden
+     können. Die meisten der größten bekannten Primzahlen sind von diesem
+    Typ. In der Akustik untersuchte er die Obertöne einer schwingenden Saite
+    und er schrieb auch über Theologie und Philosophie.
   links:
-    - title: Large Primes
+    - title: Große Primzahlen
       url: /course/divisibility-and-primes/the-distribution-of-primes#prime-test-1
 
 milgram:
@@ -1271,23 +1271,23 @@ newton:
   born: 1642
   died: 1726
   bio: |
-    __Sir Isaac Newton__ (1642 – 1726) was an English physicist, mathematician,
-    and astronomer, and one of the most influential scientists of all time. He
-    was a professor at Cambridge University, and president of the Royal Society
+    __Sir Isaac Newton__ (1642 - 1726) war ein englischer Physiker, Mathematiker
+    und Astronom und einer der einflussreichsten Wissenschaftler aller Zeiten. Er
+    war Professor an der Cambridge University und Präsident der Royal Society
     in London.
 
-    In his book _Principia Mathematica_, Newton formulated the laws of motion
-    and gravity, which laid the foundations for classical physics and dominated
-    our view of the universe for the next three centuries.
+    In seinem Buch _Principia Mathematica_ formulierte Newton die Gesetze von Bewegung
+    und Schwerkraft, die den Grundstein für die klassische Physik legten und unsere
+    Sicht auf das Universum für die nächsten drei Jahrhunderte dominierten.
 
-    Among many other things, Newton was one of the inventors of calculus, built
-    the first reflecting telescope, calculated the speed of sound, studied the
-    motion of fluids, and developed a theory of colour based on how prisms split
-    sunlight into a rainbow-coloured spectrum.
+    Newton war unter anderem einer der Erfinder der Infinitesimalrechnung, baute
+    das erste Spiegelteleskop, berechnete die Schallgeschwindigkeit, studierte die
+    Bewegung von Flüssigkeiten und entwickelte eine Farbtheorie, die darauf basiert, wie Prismen das
+    Sonnenlicht in ein regenbogenfarbenes Spektrum aufteilen.
   links:
-    - title: Gravity
+    - title: Schwerkraft
       url: /course/circles-and-pi/conic-sections#newton
-    - title: Digits of Pi
+    - title: Ziffern von Pi
       url: /course/circles-and-pi/introduction#pi-record
 
 nicomachus:
@@ -1454,16 +1454,16 @@ plato:
   born: -425
   died: -347
   bio: |
-    __Plato__ (c. 425 – 347 BC) was a philosopher in ancient Greece, and –
-    together with his teacher Socrates and his student Aristotle – laid the
-    very foundation of Western philosophy and science.
+    __Platon__ (ca. 425 - 347 v. Chr.) war ein Philosoph im antiken Griechenland und legte -
+    zusammen mit seinem Lehrer Sokrates und seinem Schüler Aristoteles - den
+    Grundstein für die Philosophie des Abendlandes und die Wissenschaft.
 
-    Plato founded the Academy of Athens, the first higher learning institution
-    in the Western world. His many writings on philosophy and theology, science
-    and mathematics, politics and justice, make him one of the most influential
-    thinkers of all time.
+    Platon gründete die Akademie von Athen, die erste Hochschule
+    der westlichen Welt. Seine vielen Schriften über Philosophie und Theologie, Naturwissenschaften
+    und Mathematik, Politik und Recht machen ihn zu einem der einflussreichsten
+    Denker aller Zeiten.
   links:
-    - title: Platonic Solids
+    - title: Platonische Körper
       url: /course/polygons-and-polyhedra/platonic-solids
 
 poincare:
@@ -1518,19 +1518,19 @@ pythagoras:
   born: -570
   died: -495
   bio: |
-    __Pythagoras of Samos__ (c. 570 – 495 BC) was a Greek philosopher and
-    mathematician. He is best known for proving _Pythagoras’ Theorem_, but made
-    many other mathematical and scientific discoveries.
+    __Pythagoras von Samos__ (ca. 570 - 495 v. Chr.) war ein griechischer Philosoph und
+    Mathematiker. Er ist am besten bekannt für den Nachweis des _Satzes von Pythagoras_, machte aber
+    viele andere mathematische und wissenschaftliche Entdeckungen.
 
-    Pythagoras tried to explain music in a mathematical way, and discovered that
-    two tones sound “nice” together (consonant) if the ratio of their
-    frequencies is a simple fraction.
+    Pythagoras versuchte, Musik mathematisch zu erklären und entdeckte, dass
+    zwei Töne zusammen “schön” klingen (Konsonant), wenn das Verhältnis ihrer
+    Frequenzen ein einfacher Bruch ist.
 
-    He also founded a school in Italy where he and his students worshipped
-    mathematics almost like a religion, while following a number of bizarre
-    rules – but the school was eventually burned down by their adversaries.
+    Er gründete auch eine Schule in Italien, wo er und seine Schüler die Mathematik fast wie eine Religion verehrten
+    , wobei sie einer Reihe bizarrer
+    Regeln folgten - aber die Schule wurde schließlich von ihren Gegnern niedergebrannt.
   links:
-    - title: Pythagoras’ Theorem
+    - title: Der Satz des Pythagoras
       url: /course/triangles-and-trigonometry/pythagoras-theorem
 
 ramanujan:
@@ -1569,13 +1569,13 @@ riemann:
   born: 1826
   died: 1866
   overflow: true
-  bio: __Bernhard Riemann__ (1826 – 1866) was a German mathematician working in
-    the fields of analysis and number theory. He came up with the first rigorous
-    definition of integration, studied differential geometry which laid the
-    foundation for general relativity, and made groundbreaking discoveries
-    regarding the distribution of prime numbers.
+  bio: __Bernhard Riemann__ (1826 - 1866) war ein deutscher Mathematiker, der auf
+    den Gebieten der Analysis und Zahlentheorie arbeitete. Er entwickelte die erste strenge
+    Definition eines Integrals, studierte Differentialgeometrie, die den
+    Grundstein für die allgemeine Relativitätstheorie legte, und machte bahnbrechende Entdeckungen
+    über die Verteilung von Primzahlen.
   links:
-    - title: Riemann Hypothesis
+    - title: Riemannsche Vermutung
       url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
 
 russell:
@@ -1665,15 +1665,15 @@ thales:
   born: -624
   died: -546
   bio: |
-    __Thales of Miletus__ (c. 624 – 546 BC) was a Greek mathematician and
-    philosopher.
+    __Thales von Milet__ (ca. 624 - 546 v. Chr.) war ein griechischer Mathematiker und
+    Philosoph.
 
-    Thales is often recognised as the first scientist in Western civilisation:
-    rather than using religion or mythology, he tried to explain natural
-    phenomena using a scientific approach. He is also the first individual in
-    history that has a mathematical discovery named after him: Thales’ theorem.
+    Thales wird oft als der erste Wissenschaftler in der westlichen Zivilisation anerkannt:
+    Anstatt Religion oder Mythologie zu verwenden, versuchte er, natürliche
+    Phänomene mit einem wissenschaftlichen Ansatz zu erklären. Er ist auch der erste Mensch in der
+    Geschichte, nach dem eine mathematische Entdeckung benannt wurde: Satz des Thales
   links:
-    - title: Thales’ Theorem
+    - title: Satz des Thales
       url: /course/euclidean-geometry/introduction
 
 thorp:
@@ -1707,17 +1707,17 @@ turing:
 
 ulam:
   name: Ulam
-  bio: __Stanisław Ulam__ (1909 – 1984) was a Polish-American mathematician. He
-    played an important part in the American _Manhatten Project_ that developed
-    the first nuclear weapons. He also worked on rocket propulsion using nuclear
-    pulses, and developed the _Monte Carlo method_ – and important concept in
-    statistics.
+  bio: __Stanisław Ulam__ (1909 - 1984) war ein polnisch-amerikanischer Mathematiker. Er
+    spielte eine wichtige Rolle im amerikanischen _Manhattan-Projekt_
+    zur Entwicklung der ersten Atomwaffen. Er beschäftigte sich auch mit dem Raketenantrieb mittels
+    nuklearer Impulse durch Atombombenexplosionen und entwickelte die _Monte-Carlo-Methode_ - ein wichtiges Konzept in der
+    Statistik.
 
 venn:
   name: Venn
-  bio: __John Venn__ (1834 – 1923) was an English mathematician and philosopher
-    who introduced the _Venn diagram_ used in set theory and probability. He
-    taught at Cambridge University and was a Fellow of the Royal Society in
+  bio: __John Venn__ (1834 - 1923) war ein englischer Mathematiker und Philosoph
+    , der das in der Mengenlehre und Wahrscheinlichkeit verwendete _Venn-Diagramm_ einführte. Er
+    lehrte an der Cambridge University und war Fellow der Royal Society in
     London.
 
 viete:

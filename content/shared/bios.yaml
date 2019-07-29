@@ -738,7 +738,7 @@ gauss:
     calculus, geometry, geology and astronomy.
 
     According to legend, he corrected a mistake in his father‘s accounting at
-    the age of 3, and found a way to quickly add up all integers from 1 to 1000
+    the age of 3, and found a way to quickly add up all integers from 1 to 100
     at the age of 8. He made his first important discoveries while still a
     teenager, and later tutored many other famous mathematicians as Professor.
   links:
@@ -1708,9 +1708,9 @@ turing:
 ulam:
   name: Ulam
   bio: __Stanisław Ulam__ (1909 – 1984) was a Polish-American mathematician. He
-    played an important part in the American _Manhatten Project_ that developed
+    played an important part in the American _Manhattan Project_ that developed
     the first nuclear weapons. He also worked on rocket propulsion using nuclear
-    pulses, and developed the _Monte Carlo method_ – and important concept in
+    pulses, and developed the _Monte Carlo method_ – an important concept in
     statistics.
 
 venn:
