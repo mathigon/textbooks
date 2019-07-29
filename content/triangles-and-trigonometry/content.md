@@ -201,7 +201,7 @@ distance from the centroid to the midpoint.
 
 The centroid is also the “balancing point” of a triangle. Draw a triangle on
 some cardboard, cut it out, and find the three medians. If you were accurate,
-you can now balance the triangle on the trip of a pencil, or hang it perfectly
+you can now balance the triangle on the tip of a pencil, or hang it perfectly
 level from a piece of string that’s attached to its centroid:
 
     figure: img(src="images/center-of-mass.jpg" width=600 height=190)
