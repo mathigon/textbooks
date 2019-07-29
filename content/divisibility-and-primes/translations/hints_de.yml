@@ -1,8 +1,8 @@
-is-prime: ist eine Primzahl
-not-prime: ist keine Primzahl
+is-prime: Primzahl
+not-prime: keine Primzahl
 no-solution: Konnte keine Lösung finden :(
 too-large: Diese Zahl ist zu groß :(
 not-even: Wähle eine gerade Zahl.
 
-gcd-yes: Es funktioniert!
-gcd-no: Das scheint nicht zu passen…
+gcd-yes: So geht's!
+gcd-no: Das geht sich nicht aus.
