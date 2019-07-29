@@ -1,0 +1,734 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  bio: |
+    __Niels Henrik Abel__ (1802 - 1829) war ein wichtiger norwegischer
+    Mathematiker. Obwohl er im Alter von 26 Jahren starb, leistete er bahnbrechende
+    Beiträge zu einer Vielzahl von Themen.
+
+    Im Alter von 16 Jahren bewies Abel den Binomialsatz. Drei Jahre später
+    bewies er, dass es unmöglich ist, Gleichungen 5. Grades zu lösen - durch die eigenständige
+    Erfindung der Gruppentheorie. Das war seit über 350 Jahren ein ungelöstes Problem gewesen! Er arbeitete
+    auch an elliptischen Funktionen und entdeckte _abelsche_ Funktionen.
+
+    Abel verbrachte sein Leben in Armut: Er hatte sechs Geschwister, sein Vater starb, als er 18 Jahre
+    alt war, er konnte keinen Job an einer Universität finden, und viele Mathematiker
+    lehnten seine Arbeiten anfangs ab. Heute ist der _Abel-Preis_, eine der
+    höchsten Auszeichnungen in der Mathematik, nach ihm benannt.
+  links:
+    - title: Gruppentheorie
+      url: /course/transformations-and-symmetry/symmetry-groups
+
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __Hasan Ibn al-Haytham (Alhazen)__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 - 1050)
+    lebte während der Blütezeit des Islam in Kairo und studierte Mathematik,
+    Physik, Astronomie, Philosophie und Medizin. Er war ein Verfechter der
+    _wissenschaftlichen Methode_: die Überzeugung, dass jede wissenschaftliche Hypothese durch Experimente oder mathematische Logik
+    verifiziert werden muss - Jahrhunderte vor
+    europäischen Wissenschaftlern in der Renaissance.
+
+    Alhazen interessierte sich besonders für Optik und visuelle Wahrnehmung. Er leitete
+    auch eine Formel für die Summe von vierten Potenzen (`1^4 + 2^4 + 3^4 + 3^4 + .... +
+    n^4`) her, und er studierte die Verbindung zwischen Algebra und Geometrie.
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: __Muhammad al-Karadschi__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029) war
+    ein persischer Mathematiker und Ingenieur. Er war der Erste, der einen _Beweis
+    durch vollständige Induktion_, anwendete und so den Binomialsatz beweisen konnte.
+  links:
+    - title: Beweis durch vollständige Induktion
+      url: /world/Axioms_and_Proof
+
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: al-Chwarizmi (Algorismi)
+  overflow: true
+  bio: |
+    Der persische Mathematiker __Muhammad al-Chwarizmi__ (محمد بن موسى الخوارزمي‎,
+    780 – 850) lebte während der goldenen Zeit des muslimischen Abbasidenregimes in
+    Bagdad. Er arbeitete im “Haus der Weisheit”, das die erste große
+    Sammlung wissenschaftlicher Bücher seit der Zerstörung der Bibliothek von
+    Alexandria enthielt.
+
+    Al-Chwarizmi wurde als “Vater der Algebra” bezeichnet - tatsächlich stammt das Wort
+    _Algebra_ aus dem arabischen Titel seines wichtigsten Buches: “Das
+    kurz gefasste Buch über die Rechenverfahren durch Ergänzen und Ausgleichen”. Darin
+    zeigte er, wie man lineare und quadratische Gleichungen löst, und viele Jahrhunderte lang war
+    es das wichtigste mathematische Lehrbuch an europäischen Universitäten.
+
+    Al-Chwarizmi (latinisiert “Algorismi”) arbeitete auch in der Astronomie und Geographie, und das Wort
+    “Algorithmus” ist nach ihm benannt.
+
+apollonius:
+  name: Apollonius
+  born: -262  # ???
+  died: -190  # ???
+  bio: __Apollonius von Perge__ (c. 200 v. Chr.) war ein griechischer Mathematiker und
+    Astronom, der vor allem für seine Arbeit über die vier _Kegelschnitte_ bekannt ist.
+  links:
+    - title: Kegelschnitte
+      url: /course/circles-and-pi/conic-sections
+
+appel:
+  name: Appel
+  bio: |
+    __Kenneth Appel__ (1932 - 2013) war ein amerikanischer Mathematiker, bekannt
+    für seinen Beweis des Vierfarbensatzes mit Wolfgang Haken. In Anerkennung
+    erhielten er und Haken den Fulkerson Prize der American Mathematical Society.
+
+    Appel studierte am Queens College, New York, und an der University of Michigan.
+    Er lehrte an der University of Illinois und der University of New
+    Hampshire.
+
+archimedes:
+  name: Archimedes
+  born: -287
+  died: -212
+  bio: |
+    __Archimedes__ (c. 287 – c. 212 v. Chr.) war ein altgriechischer Wissenschaftler und
+    Ingenieur sowie einer der größten Mathematiker aller Zeiten. Er entdeckte
+    viele Rechenmethoden und beschäftigte sich mit Geometrie, Analysis und Mechanik.
+
+    Beim Baden entdeckte Archimedes eine Möglichkeit, das Volumen
+    unregelmäßiger Objekte anhand der Wassermenge zu bestimmen, die sie beim Eintauchen verdrängen.
+    Er war so begeistert von dieser Entdeckung, dass er, noch immer
+    nackt, auf die Straße rannte und laut _“Heureka!”_ (griechisch für _“Ich hab’s gefunden!”_) schrie.
+
+    Als Ingenieur baute er während der Belagerung seiner Heimatstadt Syrakus auf
+    Sizilien geniale Verteidigungsmaschinen. Nach zwei Jahren gelang es den Römern endlich
+    sie zu erobern und Archimedes wurde getötet. Seine letzten Worte waren: _“Stört meine
+    Kreise nicht”_ - da er diese damals studierte.
+  links:
+    - title: Archimedische Körper
+      url: /course/polygons-and-polyhedra/more-on-polyhedra
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristoteles
+  bio: |
+    __Aristoteles__ (Ἀριστοτέλης, c. 384 - 322 v. Chr.) war ein Philosoph im antiken
+    Griechenland. Zusammen mit seinem Lehrer _Plato_ gilt er als “Vater der
+    Philosophie des Abendlandes” (der westlichen Philosophie). Er war auch der Privatlehrer von Alexander dem Großen.
+
+    Aristoteles schrieb über Naturwissenschaften, Mathematik, Philosophie, Poesie, Musik,
+    Politik, Rhetorik, Sprachwissenschaft und viele andere Themen. Sein Werk war im Mittelalter und bis in die Renaissance
+    sehr einflussreich, und seine
+    Ansichten über Ethik und andere philosophische Fragen werden bis
+    heute diskutiert.
+
+    Aristoteles ist auch die erste bekannte Person, die formell _Logik_ studierte,
+    einschließlich ihrer Anwendungen in Naturwissenschaften und Mathematik.
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: __Aryabhata__ (476 - ca. 550आर्यभट) war einer der ersten Mathematiker und Astronomen
+    im goldenen Zeitalter der indischen Mathematik. Er definierte trigonometrische Funktionen,
+    löste quadratische Gleichungssysteme, fand Näherungen für _π_ und
+    erkannte, dass _π_ irrational ist.
+  links:
+    - title: Trigonometrie
+      url: /course/triangles-and-trigonometry/trigonometry
+    - title: Quadratische Gleichungen
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __Charles Babbage__ (1791 - 1871) war ein britischer Mathematiker, Philosoph
+    und Ingenieur. Er wird oft als “Vater des Computers” bezeichnet, der den ersten
+    mechanischen Computer (die _Differenzmaschine_) und eine
+    verbesserte, programmierbare Version (die _Analytical Engine - englisch für analytische Maschine_) erfunden hat.
+     Theoretisch könnten diese Maschinen bestimmte Berechnungen,
+    die auf Karten oder Bändern gespeichert sind, automatisch durchführen. Aufgrund der hohen Produktionskosten wurden sie
+    jedoch zu Lebzeiten von Babbage nie vollständig fertig gestellt. Im Jahr 1991 wurde im Science Museum in London eine funktionsfähige
+    Nachbildung gebaut.
+
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __Jakob Bernoulli__ (1655 - 1705) war ein Schweizer Mathematiker und einer der
+    vielen bedeutenden Wissenschaftler der Familie Bernoulli. Tatsächlich hatte er eine tiefe
+    akademische Rivalität mit mehreren seiner Brüder und Söhne.
+
+    Jakob machte bedeutende Fortschritte in Bezug auf die Infinitesimalrechnung, die von Newton
+    und Leibnitz erfunden wurde, schuf das Feld der _Wahrscheinlichkeitsrechnung_, entdeckte die
+    grundlegende Konstante _e_, entwickelte Techniken zur Lösung von Differentialgleichungen
+    und vieles mehr.
+
+    Er veröffentlichte die erste wesentliche Arbeit über die Wahrscheinlichkeit, einschließlich
+    Permutationen, Kombinationen und dem Gesetz der großen Zahlen, er bewies den
+    binomischen Lehrsatz, und leitete viele der Eigenschaften der Bernoulli-Zahlen her.
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __Daniel Bernoulli__ (1700 - 1782) war ein Schweizer Mathematiker und Physiker.
+    Er war einer der vielen berühmten Wissenschaftler aus der Familie Bernoulli -
+    darunter sein Vater Johann, sein Onkel Jakob und sein Bruder Nicholas.
+
+    Daniel Bernoulli zeigte, dass mit zunehmender Geschwindigkeit einer Flüssigkeit ihr Druck
+    abnimmt. Das so genannte _Bernoulli-Prinzip_ ist der Mechanismus, der bei
+    Flugzeugflügeln und Verbrennungsmotoren zur Anwendung kommt. Er machte auch wichtige Entdeckungen
+    zu Wahrscheinlichkeit und Statistik und hatte zum ersten Mal mit _Bessel-Funktionen_ zu tun.
+
+    Im Alter von 34 Jahren wurde er aus dem Haus seines Vaters verbannt, weil er ihn bei
+    einer Auszeichnung der Pariser Akademie, für die sie beide einen Beitrag eingereicht hatten, geschlagen hatte.
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: __Bhaskara II__ (1114 - 1185) war ein indischer Mathematiker und Astronom.
+    Er entdeckte einige der grundlegenden Konzepte der Infinitesimalrechnung, mehr als 500 Jahre
+    vor Leibnitz und Newton. Bhaskara stellte auch fest, dass die Division durch Null
+    Unendlichkeit ergibt, und löste verschiedene quadratische, kubische, quartische und
+    diophantische Gleichungen.
+
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __David Blackwell__ (1919 - 2010) war ein amerikanischer Statistiker und
+    Mathematiker. Er arbeitete an Spieltheorie, Wahrscheinlichkeitstheorie,
+    Informationstheorie und dynamischer Programmierung und schrieb eines der ersten Lehrbücher über
+    Bayes'sche Statistik. Der _Satz von Rao-Blackwell_ zeigt, wie man
+    Abschätzungen für bestimmte Größen in der Statistik verbessert.
+
+    Blackwell war der erste Afroamerikaner, der in die American
+    _National Academy of Sciences_ aufgenommen wurde, und er war einer der ersten, der in Mathematik
+    promovierte.
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __János Bolyai__ (1802 - 1860) war ein ungarischer Mathematiker und einer
+    der Begründer der nichteuklidischen Geometrie - einer Geometrie, in der Euklids fünftes
+    Axiom über parallele Linien nicht gilt. Dies war ein bedeutender
+    Durchbruch in der Mathematik. Leider für Bolyai, entdeckten die Mathematiker
+    Gauß und Lobachevsky ähnliche Ergebnisse zur gleichen Zeit, und
+    so wurde ihnen das meiste zugeschrieben.
+  links:
+    - title: Nichteuklidische Geometrie
+      url: /world/Dimensions_and_Distortions
+
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: __George Boole__ (1815 - 1864) war ein englischer Mathematiker. Als Kind lehrte
+    er sich Latein, Griechisch und Mathematik und hoffte, seinem
+    Unterklassenleben zu entkommen. Er entwickelte die _Boolesche Algebra_, die Operatoren wie UND, ODER
+    und NICHT (statt Addition oder Multiplikation) einführt und die
+    im Zusammenhang mit Mengen verwendet werden kann. Dies war die Grundlage für die formale mathematische Logik
+    und hat viele Anwendungen in der Informatik.
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: Der indische Mathematiker __Brahmagupta__ (c. 598 - 668 AD) erfand die
+    Regeln für Addition, Subtraktion und Multiplikation mit Null und negativen
+    Zahlen. Er war auch ein Astronom und machte viele andere Entdeckungen in der
+    Mathematik. Leider enthielten seine Schriften keine Beweise, so dass wir
+    nicht wissen, wie er seine Ergebnisse gewonnen hat.
+
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  bio: |
+    Der deutsche Mathematiker __Georg Cantor__ (1845 - 1918) war der Erfinder der
+    Mengenlehre und ein Pionier was unser Verständnis der Unendlichkeit anbelangt. Die meiste Zeit seines
+    Lebens waren Cantors Entdeckungen von seinen Kollegen heftig bekämpft worden. Dies mag
+    zu seiner Depression und seinen Nervenzusammenbrüchen beigetragen haben, und er verbrachte viele
+    Jahrzehnte in einer psychiatrischen Anstalt.
+
+    Cantor bewies, dass es _verschiedene Größen_ der Unendlichkeit gibt. Die Menge der reellen
+    Zahlen ist beispielsweise _nicht abzählbar_, d.h. sie kann nicht
+    mit der Menge der natürlichen Zahlen paarweise verknüpft werden.
+
+    Erst gegen Ende seines Lebens erhielt Cantor die Anerkennung,
+    die er verdiente. David Hilbert sagte einmal den berühmten Satz: “Aus dem Paradies,
+    das Cantor uns geschaffen, soll uns niemand vertreiben können.”.
+  links:
+    - title: Unendlichkeit
+      url: /world/Infinity
+    - title: Mengenlehre
+      url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    Der Italiener __Gerolamo Cardano__ (1501 - 1576) war einer der
+    einflussreichsten Mathematiker und Wissenschaftler der Renaissance. Er
+    untersuchte Hyperzykloide, veröffentlichte Tartaglias und Ferraris Lösung für
+    kubische und quartische Gleichungen, war der erste Europäer, der systematisch
+    negative Zahlen verwendete, und anerkannte sogar die Existenz imaginärer Zahlen
+    (basierend auf `sqrt(-1)`).
+
+    Cardano machte auch einige frühe Fortschritte in der Wahrscheinlichkeitstheorie und führte
+    Binomialkoeffizienten und den binomischen Lehrsatz in Europa ein. Er erfand viele
+    mechanische Vorrichtungen, darunter Zahlenschlösser, Gyroskope mit drei
+    Freiheitsgraden und Antriebswellen (oder Kardanwellen), die heute noch
+    in Fahrzeugen eingesetzt werden.
+  links:
+    - title: Imaginäre Zahlen
+      url: /world/Real_Irrational_Imaginary
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  bio: |
+    __Charles Lutwidge Dodgson__ (1832 - 1898) ist unter seinem Künstlernamen
+    __Lewis Carroll__ am besten bekannt, als Autor von _Alice im Wunderland_ und
+    der Fortsetzung _Alice hinter den Spiegeln_.
+
+    Allerdings war Carroll auch ein brillanter Mathematiker. Er versuchte immer,
+    Rätsel und Logik in seine Kindergeschichten zu integrieren, um sie
+    unterhaltsamer und einprägsamer zu machen.
+
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Cauchy__ (1789 - 1857) war ein französischer Mathematiker und
+    Physiker. Er trug zu einem breiten Spektrum an Teilgebieten der Mathematik bei, und
+    Dutzende von Sätze sind nach ihm benannt.
+
+    Cauchy formalisierte die Infinitesimalrechnung und Analysis, durch die Neuformulierung und Überprüfung der
+    Ergebnisse, wo frühere Mathematiker viel unvorsichtiger und unpräziser waren.
+    Er gründete das Gebiet der _Funktionentheorie (komplexe Analysis)_, studierte Permutationsgruppen und
+    beschäftigte sich mit Optik, Strömungsdynamik und Elastizitätstheorie.
+
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598 - 1647) war ein italienischer Mathematiker und
+    Mönch. Er entwickelte einen Vorläufer der Infinitesimalrechnung und ist bekannt
+    für das Prinzip von Cavalieri, mit dem das Volumen von Körpern in der Geometrie bestimmt werden kann.
+     Cavalieri arbeitete auch auf den Gebieten der Optik und Bewegung, führte Logarithmen in Italien ein
+    und tauschte viele Briefe mit Galileo Galilei aus.
+  links:
+    - title: Das Prinzip von Cavalieri
+      url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  bio: __Arthur Cayley__ (1821 - 1895) war ein britischer Mathematiker und Jurist.
+    Er war einer der Pioniere der _Gruppentheorie_, schlug zunächst die moderne
+    Definition einer “Gruppe”vor und verallgemeinerte sie, um viele weitere
+    Anwendungen in der Mathematik zu umfassen. Cayley entwickelte auch die Matrixalgebra und
+    arbeitete an einer höherdimensionalen Geometrie.
+  links:
+    - title: Gruppentheorie
+      url: /course/transformations-and-symmetry/symmetry-groups
+
+collatz:
+  name: Collatz
+  bio: __Lothar Collatz__ (1910 - 1990) war ein deutscher Mathematiker, der sich mit
+    Differentialgleichungen und Optimierungsproblemen beschäftigte. Das _Collatz-Problem_
+    oder die `(3n+1)`-Vermutung ist nach ihm benannt - und noch immer ungelöst.
+
+conway:
+  name: Conway
+  born: 1937
+  died: 2020
+  bio: |
+    __John Horton Conway__ (geb. 1937) ist ein britischer Mathematiker und derzeit
+    Professor Emeritus an der Princeton University.
+
+    Er ist vor allem bekannt für die Erfindung von “Conways Spiel des Lebens”,
+    einem _zellulärem Automaten_ mit faszinierenden Eigenschaften. Er erforschte
+    die zugrundeliegende Mathematik von Alltagsgegenständen wie Knoten und
+    Spielen und trug zur Gruppentheorie, Zahlentheorie und vielen anderen
+    Bereichen der Mathematik bei.
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __Nikolaus Kopernikus__ (1473 - 1543) war ein polnischer Mathematiker,
+    Astronom und Jurist. Während seines Lebens glaubten die meisten Menschen an das
+    _geozentrische_ Modell des Universums, mit der Erde im Zentrum
+    um die sich alles andere herum dreht.
+
+    Kopernikus schuf ein neues Modell, bei dem die Sonne im Mittelpunkt steht und die Erde
+    sich auf einem Kreis um sie herum bewegt. Er sagte auch voraus, dass sich die Erde einmal täglich um ihre
+    Achse dreht. Aus Angst, dass es die katholische Kirche verärgern könnte, veröffentlichte er
+    das Modell erst kurz vor seinem Tod - und löste damit die so
+    genannte _kopernikanische Wende bzw. Revolution_aus.
+    Kopernikus arbeitete auch als Diplomat und Arzt und leistete wichtige
+
+    Beiträge zur Ökonomie.
+  links:
+    - title: Planetenbahnen
+      url: /course/circles-and-pi/conic-sections#orbits
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __Abraham de Moivre__ (1667 - 1754) war ein französischer Mathematiker, der
+    auf den Gebieten der Wahrscheinlichkeitsrechnung und analytischer Geometrie
+    arbeitete. Er ist vor allem für den _Satz von de Moivre_ bekannt, der
+    Trigonometrie und komplexe Zahlen verbindet.
+
+    De Moivre entdeckte die Formel für die Normalverteilung in der Wahrscheinlichkeitsrechnung,
+    und vermutete zunächst den _zentralen Grenzwertsatz_. Er fand auch eine nicht
+    rekursive Formel für Fibonacci-Zahlen, die sie mit dem Goldenen
+    Schnitt `φ` verbindet.
+  links:
+    - title: Wahrscheinlichkeit
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci-Zahlen
+      url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: __Richard Dedekind__ (1831 - 1916) war ein deutscher Mathematiker und einer der
+    Schüler von Gauß. Er entwickelte viele Konzepte in der Mengenlehre und
+    erfand die _Dedekindschen Schnitte_ als formale Definition von reellen Zahlen. Er erstellte auch
+    die ersten Definitionen von _algebraischen Zahlkörpern_ und _Ringen_, zwei wichtigen
+    Konstrukte in der abstrakten Algebra.
+
+democritus:
+  born: -460
+  died: -370
+  name: Demokrit
+  bio: Der griechische Mathematiker __Demokrit__ (c. 460 - 370 v. Chr.), dürfte als
+    Erster vermutet haben, dass die gesamte Materie aus winzigen _Atomen_ besteht und
+    gilt als der “Vater der modernen Wissenschaft”. Er machte auch viele Entdeckungen
+    in der Geometrie, einschließlich der Formel für das Volumen von Prismen und Kegeln.
+  links:
+    - title: Volumen eines Kegels
+      url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  bio: |
+    __Gérard Desargues__ (1591 - 1661) war ein französischer Mathematiker, Ingenieur
+    und Architekt. Er entwarf zahlreiche Gebäude in Paris und Lyon, half
+    beim Bau eines Damms und erfand einen Mechanismus zur Wassergewinnung mit Hilfe von
+    Epizykloiden.
+
+    In der Mathematik gilt Desargues als der Vater der _Projektiven Geometrie_.
+    Dies ist eine spezielle Art von Geometrie, bei der sich parallele Linien in einem “Punkt
+    im Unendlichen”treffen, die Größe der Formen keine Rolle spielt (nur ihre Proportionen),
+    und alle vier Kegelschnitte (Kreis, Ellipse, Parabel und Hyperbel) im
+    Wesentlichen gleich sind.
+  links:
+    - title: Kegelschnitte
+      url: /course/circles-and-pi/conic-sections
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio: |
+    __René Descartes__ (1596 - 1650) war ein französischer Mathematiker und Philosoph
+    und eine der Schlüsselfiguren der wissenschaftlichen Revolution. Er weigerte sich, die Autorität früherer Philosophen zu
+    akzeptieren, und eines seiner bekanntesten
+    Zitate ist “Ich denke, also bin ich.”.
+
+    Descartes ist der Vater der _analytischen Geometrie_, die es uns ermöglicht, geometrische Formen mit Hilfe von Algebra zu
+    beschreiben. Dies war eine der Voraussetzungen,
+    die es Newton und Leibnitz ermöglichte, einige Jahrzehnte später die _Infinitesimalrechnung_ zu erfinden.
+
+    Ihm wird die erste Verwendung von hochgestellten Zahlen für Potenzen oder Exponenten zugeschrieben,
+    und das _kartesische Koordinatensystem_ ist nach ihm benannt.
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantos
+  overflow: true
+  bio: |
+    __Diophantos__ war ein antiker griechischer Mathematiker, der in Alexandria
+    lebte. Die meisten seiner Arbeiten befassen sich mit der Lösung von
+    Polynomgleichungen mit mehreren Unbekannten. Diese werden heute als
+    _diophantische Gleichung_ bezeichnet und sind bis heute ein wichtiges
+    Forschungsgebiet.
+
+    Es war beim Lesen eines von Diophantos' Büchern, viele Jahrhunderte später,
+    dass _Pierre de Fermat_ vorschlug, eine dieser Gleichungen hätte keine
+    Lösung. Dies wurde bekannt als “Fermat's letzter Satz”, und wurde erst 1994
+    gelöst.
+
+eratosthenes:
+  name: Eratosthenes
+  born: -276
+  died: -195
+  bio: |
+    __Eratosthene von Kyrene__ (ca. 276 v. Chr. - 195 v. Chr.) war ein
+    griechischer Mathematiker, Geograph, Astronom, Historiker und Dichter. Er
+    verbrachte einen Großteil seines Lebens in Ägypten, als Leiter der
+    Bibliothek von Alexandria.
+
+    Neben vielen anderen Errungenschaften berechnete Eratosthenes den Umfang der
+    Erde, maß die Neigung der Drehachse der Erde, schätzte den Abstand zur Sonne
+    und schuf einige der ersten Weltkarten.
+
+    Er erfand auch das “Sieb des Eratosthenes”, eine effiziente Methode zur
+    Berechnung _von Primzahlen_.
+  links:
+    - title: Radius der Erde
+      url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
+    - title: Sieb des Eratosthenes
+      url: /course/divisibility-and-primes/prime-numbers#eratosthenes
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: __Euklid von Alexandria__ (um 300 v. Chr.) war ein griechischer
+    Mathematiker und wird oft als _Vater der Geometrie_ bezeichnet. Er
+    veröffentlichte ein Buch namens _Elemente_, indem die euklidische Geometrie
+    erstmals eingeführt wurde und das viele wichtige Beweise auf den Gebieten
+    der Geometrie und Zahlentheorie enthielt. Es war bis ins 19. Jahrhundert das
+    wichtigste mathematische Lehrbuch. Er lehrte Mathematik in Alexandria, aber
+    über sein Leben ist nur sehr wenig bekannt.
+  links:
+    - title: Satz des Euklid
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: Unendlich viele Primzahlen
+      url: /course/divisibility-and-primes/prime-numbers#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707 - 1783) war einer der größten Mathematiker der
+    Geschichte. Seine Arbeit umfasst alle Bereiche der Mathematik, und er
+    schrieb 80 Forschungsbände. Euler wurde in der Schweiz geboren und studierte
+    in Basel, lebte aber den größten Teil seines Lebens in Berlin, Preußen und
+    St. Petersburg, Russland. Euler erfand einen Großteil der modernen
+    mathematischen Terminologie und Notation und machte wichtige Entdeckungen
+    in den Bereichen Infinitesimalrechnung, Analysis, Graphentheorie, Physik,
+    Astronomie und vielen anderen Themen.
+  links:
+    - title: Königsberger Brückenproblem
+      url: /course/graphs-and-networks/bridges-of-koenigsberg
+    - title: Eulersche Formel
+      url: /course/graphs-and-networks/eulers-formula
+    - title: Polyeder
+      url: /course/polygons-and-polyhedra/polyhedra
+
+fermat:
+  name: Fermat
+  born: 1607
+  died: 1665
+  bio: |
+    __Pierre de Fermat__ (1607 - 1665) war ein französischer Mathematiker und
+    Jurist. Er war ein früher Pionier der Differentialrechnung und arbeitete in
+    den Bereichen Zahlentheorie, Wahrscheinlichkeit, Geometrie und Optik. 1637
+    schrieb er eine kurze Notiz am Rand eines seiner Lehrbücher und behauptete,
+    dass die Gleichung `a^n + b^n = c^n` keine ganzzahligen Lösungen für `n>2`
+    habe, und dass er einen “wahrhaft wunderbaren Beweis entdeckt habe, der Rand
+    hier aber zu schmal sei, um ihn zu fassen”. Dies wurde bekannt als _Fermat's
+    letzter Satz_, und war eines der berühmtesten ungelösten Probleme in der
+    Mathematik - bis es schließlich 1994 bewiesen wurde.
+  links:
+    - title: Wahrscheinlichkeit
+      url: /course/probability/introduction
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Friedrich Gauß (1777 - 1855) war wohl der größte Mathematiker der
+    Geschichte. Er machte bahnbrechende Entdeckungen in fast allen Bereichen der
+    Mathematik, von Algebra und Zahlentheorie über Statistik, Analysis,
+    Geometrie, Geologie und Astronomie. Der Legende nach korrigierte er einen
+    Fehler in der Buchhaltung seines Vaters im Alter von 3 Jahren und fand mit
+    8 Jahren einen Weg, die Zahlen von 1 bis 100 schnell zu addieren. Schon als
+    Teenager machte er seine ersten wichtigen Entdeckungen und unterrichtete
+    später viele andere berühmte Mathematiker als Professor.
+  links:
+    - title: Primzahlsatz
+      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+    - title: Nichteuklidische Geometrie
+      url: /world/Dimensions_and_Distortions
+    - title: Summen von Dreieckszahlen
+      url: /course/sequences/figurate#triangle-sums
+
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: __Christian Goldbach__ (1690 - 1764) war ein preußischer Mathematiker und
+    Zeitgenosse von Euler, Leibniz und Bernoulli. Er war der Lehrer des
+    russischen Zaren Peter II. und wird für seine “Goldbachsche Vermutung“ in
+    Erinnerung behalten.
+  links:
+    - title: Goldbachsche Vermutung
+      url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
+
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __Marin Mersenne__ (1588 - 1648) war ein französischer Mathematiker und
+    Priester. Wegen des intensiven Austausches mit seinen Kollegen in der
+    wissenschaftlichen Welt im 17. Jahrhundert wurde er als der “Briefkasten
+    Europas” bezeichnet. Heute erinnern wir uns hauptsächlich an ihn für die
+    _Mersenne-Primzahlen_, Primzahlen, die in der Form `2^n - 1` geschrieben
+    werden können. Die meisten der größten bekannten Primzahlen sind von diesem
+    Typ. In der Akustik untersuchte er die Obertöne einer schwingenden Saite
+    und er schrieb auch über Theologie und Philosophie.
+  links:
+    - title: Große Primzahlen
+      url: /course/divisibility-and-primes/the-distribution-of-primes#prime-test-1
+
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642 - 1726) war ein englischer Physiker, Mathematiker
+    und Astronom und einer der einflussreichsten Wissenschaftler aller Zeiten. Er
+    war Professor an der Cambridge University und Präsident der Royal Society
+    in London.
+     In seinem Buch _Principia Mathematica_ formulierte Newton die Gesetze von Bewegung
+    und Schwerkraft, die den Grundstein für die klassische Physik legten und unsere
+    Sicht auf das Universum für die nächsten drei Jahrhunderte dominierten.
+     Newton war unter anderem einer der Erfinder der Infinitesimalrechnung, baute
+    das erste Spiegelteleskop, berechnete die Schallgeschwindigkeit, studierte die
+    Bewegung von Flüssigkeiten und entwickelte eine Farbtheorie, die darauf basiert, wie Prismen das
+    Sonnenlicht in ein regenbogenfarbenes Spektrum aufteilen.
+  links:
+    - title: Schwerkraft
+      url: /course/circles-and-pi/conic-sections#newton
+    - title: Ziffern von Pi
+      url: /course/circles-and-pi/introduction#pi-record
+
+plato:
+  name: Plato
+  born: -425
+  died: -347
+  bio: |
+    __Platon__ (ca. 425 - 347 v. Chr.) war ein Philosoph im antiken Griechenland
+    und legte - zusammen mit seinem Lehrer Sokrates und seinem Schüler
+    Aristoteles - den Grundstein für die Philosophie des Abendlandes und die
+    Wissenschaft. Platon gründete die Akademie von Athen, die erste Hochschule
+    der westlichen Welt. Seine vielen Schriften über Philosophie und Theologie,
+    Naturwissenschaften und Mathematik, Politik und Recht machen ihn zu einem
+    der einflussreichsten Denker aller Zeiten.
+  links:
+    - title: Platonische Körper
+      url: /course/polygons-and-polyhedra/platonic-solids
+
+pythagoras:
+  name: Pythagoras
+  born: -570
+  died: -495
+  bio: |
+    __Pythagoras von Samos__ (ca. 570 - 495 v. Chr.) war ein griechischer
+    Philosoph und Mathematiker. Er ist am besten bekannt für den Nachweis des
+    _Satzes von Pythagoras_, machte aber viele andere mathematische und
+    wissenschaftliche Entdeckungen. Pythagoras versuchte, Musik mathematisch zu
+    erklären und entdeckte, dass zwei Töne zusammen “schön” klingen (Konsonant),
+    wenn das Verhältnis ihrer Frequenzen ein einfacher Bruch ist. Er gründete
+    auch eine Schule in Italien, wo er und seine Schüler die Mathematik fast wie
+    eine Religion verehrten, wobei sie einer Reihe bizarrer Regeln folgten -
+    aber die Schule wurde schließlich von ihren Gegnern niedergebrannt.
+  links:
+    - title: Der Satz des Pythagoras
+      url: /course/triangles-and-trigonometry/pythagoras-theorem
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: __Bernhard Riemann__ (1826 - 1866) war ein deutscher Mathematiker, der auf
+    den Gebieten der Analysis und Zahlentheorie arbeitete. Er entwickelte die erste strenge
+    Definition eines Integrals, studierte Differentialgeometrie, die den
+    Grundstein für die allgemeine Relativitätstheorie legte, und machte bahnbrechende Entdeckungen
+    über die Verteilung von Primzahlen.
+  links:
+    - title: Riemannsche Vermutung
+      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Thales von Milet__ (ca. 624 - 546 v. Chr.) war ein griechischer Mathematiker und
+    Philosoph.
+     Thales wird oft als der erste Wissenschaftler in der westlichen Zivilisation anerkannt:
+    Anstatt Religion oder Mythologie zu verwenden, versuchte er, natürliche
+    Phänomene mit einem wissenschaftlichen Ansatz zu erklären. Er ist auch der erste Mensch in der
+    Geschichte, nach dem eine mathematische Entdeckung benannt wurde: Satz des Thales
+  links:
+    - title: Satz des Thales
+      url: /course/euclidean-geometry/introduction
+
+ulam:
+  name: Ulam
+  bio: __Stanisław Ulam__ (1909 - 1984) war ein polnisch-amerikanischer Mathematiker. Er
+    spielte eine wichtige Rolle im amerikanischen _Manhattan-Projekt_
+    zur Entwicklung der ersten Atomwaffen. Er beschäftigte sich auch mit dem Raketenantrieb mittels
+    nuklearer Impulse durch Atombombenexplosionen und entwickelte die _Monte-Carlo-Methode_ - ein wichtiges Konzept in der
+    Statistik.
+
+venn:
+  name: Venn
+  bio: __John Venn__ (1834 - 1923) war ein englischer Mathematiker und Philosoph
+    , der das in der Mengenlehre und Wahrscheinlichkeit verwendete _Venn-Diagramm_ einführte. Er
+    lehrte an der Cambridge University und war Fellow der Royal Society in
+    London.

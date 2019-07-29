@@ -310,7 +310,7 @@ Mehr dazu später....
 
 ## Primzahlen
 
-Bei der Berechnung dieser Teilerpaare kann es vorkommen, dass eine Zahl außer
+Bei der Berechnung der Teilerpaare einer Zahl kann es vorkommen, dass die Zahl außer
 dem ersten Paar keine anderen Teiler mehr hat. Ein Beispiel dafür ist 13 - seine einzigen Teiler
 sind 1 und 13 selbst. Diese besonderen Zahlen werden als __Primzahlen__ bezeichnet. Sie
 können nicht in Produkte mit kleineren Zahlen zerlegt werden, was sie
@@ -368,9 +368,9 @@ Produkt von Primzahlen zu schreiben - es sei denn, wir zählen unterschiedliche 
 als der __Fundamentalsatz der Arithmetik__ (FdA) bezeichnet.
 
 Die Anwendung des FdA kann viele Probleme in der Mathematik viel einfacher machen: Wir teilen
-Zahlen in ihre Primfaktoren auf, wir lösen das Problem für die einzelnen
-Primzahlen, was oft viel einfacher sein kann, und dann kombinieren wir diese Ergebnisse zur
-Lösung des anfänglichen Problems.
+Zahlen in ihre Primfaktoren auf, dann lösen wir das Problem für die einzelnen
+Primzahlen, was oft viel einfacher sein kann, kombinieren zum Schluss diese Ergebnisse und
+lösen so das anfängliche Problem.
 
     //- TODO Exercises
 
@@ -581,7 +581,7 @@ Goldbach schrieb über seine Beobachtung in einem Brief an den berühmten Mathem
 [Leonhard Euler](bio:euler), aber keiner von ihnen konnte sie beweisen. So wurde
  sie bekannt als die __Goldbachsche Vermutung__.
 
-Computer haben überprüft, ob die Goldbachsche Vermutung für jede gerade Zahl
+Computer haben überprüft, dass die Goldbachsche Vermutung für jede gerade Zahl
 bis zu 4 × 10<sup>18</sup> gilt (das ist eine 4 mit 18 Nullen), aber Mathematiker haben immer
 noch keinen Beweis gefunden, dass sie für _alle_ geraden Zahlen zutrifft. Und das ist ein großer
 Unterschied, denn es gibt unendlich viele gerade Zahlen, so dass wir nicht alle
@@ -681,8 +681,8 @@ wurde bekannt als die __Riemannsche Hypothese__.
 Hunderte von Mathematikern haben versucht, Riemanns Hypothese zu beweisen, aber alle
 blieben ohne Erfolg. Sie wird oft als eines der schwierigsten und
 wichtigsten ungelösten Probleme in der Mathematik angesehen. Im Jahr 2000 nannte das Clay Mathematics
-Institute sie eines von sechs [__Millennium-Problemen__](gloss:millennium-prize)
- und versprach 1.000.000.000 Dollar für jeden Mathematiker, der es löst.
+Institute sie eines von sieben [__Millennium-Problemen__](gloss:millennium-prize)
+ und versprach 1.000.000 Dollar für jeden Mathematiker, der es löst.
 
 ---
 > id: race
@@ -979,11 +979,11 @@ scheint im Laufe der Zeit ausgestorben zu sein, aber die Primzahlzyklen wurden b
 ::: column.grow
 Eine der wichtigsten modernen Anwendungen von Primzahlen liegt in einem
 mathematischen Gebiet namens __Kryptographie__. Seit Jahrtausenden versuchen
-Menschen, Nachrichten so zu geheim zu halten, dass nur der vorgesehene Empfänger sie lesen kann - das
+Menschen, Nachrichten irgendwie geheim zu halten, sodass nur der vorgesehene Empfänger sie lesen kann - das
 nennt man Verschlüsselung. Sie wird von allen genutzt, von Generälen, die geheime
 Befehle während des Krieges austauschen, bis hin zu persönlichen E-Mails oder Online-Banking-Details.
 
-Die Menschen versuchten immer, bessere und sicherere Verschlüsselungsmethoden zu entwickeln, aber
+Die Menschen versuchten immer bessere und sicherere Verschlüsselungsmethoden zu entwickeln, aber
 nach einiger Zeit wurden sie alle mit noch fortschrittlicheren Algorithmen geknackt. Im
 Zweiten Weltkrieg nutzte die deutsche Wehrmacht die Enigma: eine komplexe Maschine,
 die aus einer Tastatur, rotierenden Walzen und Steckern bestand. Sie verschlüsselte Nachrichten mit einer von 158

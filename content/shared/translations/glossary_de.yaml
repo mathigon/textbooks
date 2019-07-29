@@ -139,7 +139,8 @@ center-of-rotation:
 centroid:
   title: Schwerpunkt
   text: Der __Schwerpunkt__ eines Dreiecks ist der Punkt, an dem sich seine drei
-    Schwerlinien schneiden. Er ist auch der "Massenschwerpunkt" des Dreiecks.
+    Schwerlinien (Seitenhalbierende) schneiden. Er ist auch der
+    "Massenschwerpunkt" des Dreiecks.
   link: /course/triangles-and-trigonometry/properties-of-triangles#center-of-mass
 
 chaos:
@@ -737,9 +738,10 @@ linear-function:
     der Linie und _d_ den Schnittpunkt mit der _y_-Achse festlegt.
 
 median:
-  title: Schwerlinie
-  text: Die __Schwerlinien__ eines Dreiecks sind die Linien, die jeden Eckpunkt
-    mit dem Mittelpunkt ihrer gegenüberliegenden Seiten verbinden.
+  title: Seitenhalbierende
+  text: Die __Seitenhalbierenden (Schwerlinien)__ eines Dreiecks sind die
+    Linien, die jeden Eckpunkt mit dem Mittelpunkt ihrer gegenüberliegenden
+    Seiten verbinden.
   link: /course/triangles-and-trigonometry/properties-of-triangles#medians
 
 midpoint:
@@ -1427,7 +1429,7 @@ truncated-icosahedron:
   link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
 
 twin-Primes:
-  title: Primzahlzwilling
+  title: Primzahlzwillinge
   text: __Primzahlzwillinge__ sind Paare von Primzahlen wie 17 und 19, deren
     Abstand 2 ist. Es ist unbekannt, ob es unendlich viele Paare von
     Primzahlzwillingen gibt.
