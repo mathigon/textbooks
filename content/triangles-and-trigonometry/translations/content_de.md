@@ -131,10 +131,10 @@ Aus Gründen der Übersichtlichkeit beschriften wir Dreiecke immer auf die gleic
 mit Großbuchstaben [_A_, _B_ und _C_](target:vertex), die Seiten mit Kleinbuchstaben [_a_, _b_ und _c_](target:side) und die Winkel
 mit griechischen Buchstaben [`α`, `β` and `γ`](target:angle) (“alpha”, “beta” und
 “gamma”)
- gekennzeichnet.
+ bezeichnet.
  
 Die [Seite, die _gegenüber_ dem Eckpunkt _A ]_(target:X) liegt, ist mit _a_, und der
-[Winkel, der direkt bei _A_](target:Y) anliegt, mit `α` gekennzeichnet. Auf dieselbe Art und Weise
+[Winkel, der direkt bei _A_](target:Y) anliegt, mit `α` bezeichnet. Auf dieselbe Art und Weise
 verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 ::: column(width=220)
 
@@ -264,8 +264,8 @@ einzigen Punkt. Und wieder hat dieser Punkt eine besondere Eigenschaft.
 
 {.reveal(when="s0 s1 s2")} Jeder Punkt auf einer Streckensymmetrale hat den gleichen
 Abstand zu den beiden Endpunkten der Strecke, die er halbiert. So hat beispielsweise jeder Punkt
-auf der [blauen Symmetrale](target:b-blau) den gleichen Abstand zu den Punkten _A_ und
-_C_ und jeder Punkt auf der [roten Symmetrale](target:b-rot) den gleichen Abstand zu den
+auf der [blauen Symmetrale](target:b-blue) den gleichen Abstand zu den Punkten _A_ und
+_C_ und jeder Punkt auf der [roten Symmetrale](target:b-red) den gleichen Abstand zu den
 Punkten [[A und B|A und C|B und C]].
 
 {.reveal(when="blank-1")} Der [Schnittpunkt](target:center) liegt auf allen
@@ -315,8 +315,8 @@ was das Besondere am Schnittpunkt der Geraden ist.
 
 ::: column.grow
 Erinnere dich, dass die [Winkelsymmetrale](gloss:angle-bisector) einen Winkel genau
-in der Mitte teilt. Zeichne die Winkelsymmetrale der drei Winkel in diesem Dreieck.
-_{.lgrey}Um eine Winkelsymmetrale zu zeichnen, musst du auf die drei Punkte klicken, die den Winkel bilden,
+in der Mitte teilt. Zeichne die Winkelhalbierende der drei Winkel in diesem Dreieck.
+_{.lgrey}Um ein Winkelhalbierende zu zeichnen, musst du auf die drei Punkte klicken, die den Winkel bilden,
 den du halbieren möchtest._
 
 {.r.reveal(when="s0 s1 s2")} Auch hier schneiden sich alle drei Linien in einem Punkt.
@@ -328,7 +328,7 @@ _{button.next-step} Weiter_
 {.reveal(when="next-0")} Punkte, die auf einer Winkelhalbierenden liegen, haben den gleichen
 Abstand zu den beiden Linien, die den Winkel bilden. Zum Beispiel hat jeder Punkt auf der
 [blauen Symmetrale](target:b-blue) den gleichen Abstand von Seite _a_ und Seite _c_,
-und jeder Punkt auf der [roten Symmetrale](target:b-rot) hat den gleichen Abstand von den
+und jeder Punkt auf der [roten Symmetrale](target:b-red) hat den gleichen Abstand von den
 Seiten [[a und b|a und c|b und c]].
 
 {.reveal(when="blank-0")} Der [Schnittpunkt](target:center) liegt auf allen
@@ -395,7 +395,7 @@ die Fläche des Dreiecks muss dann also halb so groß sein:
 > id: altitudes
 
 Um die Fläche eines Dreiecks zu berechnen, kannst du eine der drei Seiten als
-__Basis__ auswählen und dann die dazugehörige __Höhe__ bestimmen, d.h. die Strecke, die
+__Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die Strecke, die
 [[senkrecht|parallel]] zur Basis und durch den gegenüberliegenden Eckpunkt verläuft.
 
 {.reveal(when="blank-0")} In Dreiecken spricht man von der 
@@ -521,7 +521,7 @@ Längen einfach _kein Dreieck_ gebildet werden kann. Dies ist insbesondere der F
 ::: column.grow
 Stell dir die drei Seiten eines Dreiecks als Metallstangen vor, die mit Scharnieren verbunden sind, und
 platziere die [längste Stange](target:long) in der Mitte und die [kürzeren
-](target:kurz) an beiden Enden.
+](target:short) an beiden Enden.
 
 {.r} Jetzt ist leicht zu erkennen, dass es unmöglich ist, die Enden der
 kürzeren Stangen zusammen zu bringen, wenn ihre Gesamtlänge kleiner ist als die Länge der größeren Stange ist.
@@ -924,43 +924,43 @@ dem Boden besteht. Mit dem Satz des Pythagoras bekommen wir einen
 
 :::
 
-{.reveal(when="blank-0")} Wann immer du ein rechtwinkliges Dreieck gegeben hast und
-zwei seiner Seiten kennst, kannst du mit der Hilfe von Pythagoras die dritte bestimmen.
+{.reveal(when="blank-0")} Immer wenn du ein rechtwinkliges Dreieck gegeben hast und
+zwei seiner Seiten kennst, kannst du mit dem Satz des Pythagoras die dritte bestimmen.
 
 ---
 > id: pythagoras-proof
 
 ### Beweise für den Satz des Pythagoras
 
-Pythagoras’ theorem was known to ancient Babylonians, Mesopotamians,
-Indians and Chinese – but Pythagoras may have been the first to find a formal,
-mathematical proof.
+Der Satz des Pythagoras war den alten Babyloniern, Mesopotamiern,
+Indern und Chinesen bekannt - aber Pythagoras war wohl der erste, der einen formalen,
+mathematischen Beweis fand.
 
-There are actually many different ways to prove Pythagoras’ theorem. Here you
-can see three different examples that each use a different strategy:
+Es gibt tatsächlich viele verschiedene Möglichkeiten, den Satz des Pythagoras zu beweisen. Hier zeigen wir
+drei verschiedene Beispiele, die jeweils eine andere Strategie verwenden:
 
 ::: tab.proof-1
 
-#### Rearrangement _{span.check(when="blank-0 blank-1")}_
+#### Neuanordnung _{span.check(when="blank-0 blank-1")}_
 
 ::: column.grow
 
-Have a look at the figure on the right. The square has side length _a_ + _b_,
-and contains [four right-angled triangles](target:triangle), as well as a
-[smaller square](target:square) of size [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ – _b_|_a_ + _b_]].
+Schau dir die Abbildung rechts an. Das Quadrat hat die Seitenlänge _a_ + _b_,
+und enthält [vier rechtwinklige Dreiecke](target:triangle), sowie ein
+[kleineres Quadrat](target:square) der Größe [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ - _b_|_a_ + _b_]].
 
-{.reveal(when="blank-0")} Now let’s rearrange the triangles in the square. The
-result still contains the four right-angles triangles, as well as two squares
-of size [[<msup><mi>a</mi><mn>2</mn></msup> and <msup><mi>b</mi><mn>2</mn></msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
+{.reveal(when="blank-0")} Nun ordnen wir die Dreiecke im Quadrat neu an. Das
+Ergebnis enthält noch immer die vier rechtwinkligen Dreiecke sowie zwei Quadrate
+der Größe [[<msup><mi>a</mi><mn>2</mn></msup> und <msup><mi>b</mi><mn>2</mn></msup msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
 
-{.reveal(when="blank-1")} Comparing the size of the red area
-_{span.hover-target}before_ and _{span.hover-target}after_ the rearrangement, we
-see that
+{.reveal(when="blank-1")}Vergleicht man die Größe des roten Bereichs
+_{span.hover-target}vor_ und _{span.hover-target}nach_ der Umstellung, so
+sieht man, dass
 
 {.text-center.reveal(when="blank-1")} `a^2 + b^2 = c^2`.
 
-{.reveal(when="blank-1")} This is the original proof that
-[Pythagoras](bio:pythagoras) came up with. _{span.qed}_
+{.reveal(when="blank-1")} Das ist genau der gleiche Beweis, den sich
+[Pythagoras](bio:pythagoras) ausgedacht hat _{span.qed}_
 
 ::: column(width=240)
 
@@ -1002,17 +1002,17 @@ see that
 #### Algebra _{span.check(when="blank-2 blank-3 blank-4")}_
 
 ::: column.grow
-Here we have the same figure as before, but this time we’ll use _algebra_ rather
-than _rearrangement_ to prove Pythagoras’ theorem.
+Hier haben wir die gleiche Skizze wie zuvor, aber diesmal verwenden wir _Algebra_
+anstatt einer _Neuanordnung_, um den Satz des Pythagoras zu beweisen.
 
-The large square has side length `a + b` and area
-[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2</sup>|_c_<sup>2</sup>]].
+Das große Quadrat hat eine Seitenlänge von `a + b` und eine Fläche
+[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2 /sup + b sup 2</sup>|_c_<sup>2</sup>]].
 
-{.reveal(when="blank-2")} It consists of [four triangles](target:triangle), each
-of size [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
-and [one square](target:square) of size [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
+{.reveal(when="blank-2")} Es besteht aus [vier Dreiecken](target:triangle), mit einer Fläche von
+jeweils [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
+und [einem Quadrat](target:square) der Fläche [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
-{.reveal(when="blank-3 blank-4")} If we combine all of that information, we have
+{.reveal(when="blank-3 blank-4")} Wenn wir alle diese Informationen zusammenführen, bekommen wir folgende Gleichung:
 
     //- Ideal syntax:
     //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
@@ -1030,7 +1030,7 @@ and [one square](target:square) of size [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup
         <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
         <td><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></td>
 
-{.reveal(when="blank-3 blank-4")} And, once again, we get Der Satz des Pythagoras.
+{.reveal(when="blank-3 blank-4")}Und wieder erhalten wir den Satz des Pythagoras.
 _{span.qed}_
 
 ::: column(width=240)
@@ -1057,23 +1057,23 @@ _{span.qed}_
 :::
 ::: tab.proof-3
 
-#### Similar Triangles _{span.check(when="next-0 next-1 next-2 blank-5")}_
+#### Ähnliche Dreiecke _{span.check(when="next-0 next-1 next-2 blank-5")}_
 
 ::: column.grow
-{.r} Here you can see another right-angled triangle. If we draw one of the
-altitudes, it splits the triangle into two smaller triangle.
-It also divides the hypotenuse _c_ into [two smaller parts](target:hypotenuse)
-which we’ll call [{.step-target.i.pill.blue}x](target:x) and
-[{.step-target.i.pill.green}y](target:y).
-_{span.next-step} Continue_
+{.r} Hier haben wir ein weiteres rechtwinkliges Dreieck. Wenn wir eine der
+Höhen einzeichnen, teilt sie das Dreieck in zwei kleinere Dreiecke auf,
+und sie teilt die Hypotenuse _c_ in [zwei kleinere Teile](target:hypotenuse)
+, die wir [{.step-target.i.pill.blue}x](target:x) und [
+{.step-target.i.pill.green}y](target:y) nennen wollen.
+_{span.next-step} Weiter_
 
-{.r.reveal(when="next-0")} Let’s separate out the two smaller triangles, so that
-it’s clearer to see how they are related…
-_{span.next-step} Continue_
+{.r.reveal(when="next-0")} Sehen wir uns die beiden kleineren Dreiecke getrennt an, damit
+klarer wird, wie sie zusammenhängen…
+_{span.next-step} Weiter_
 
-{.reveal(when="next-1")} Both smaller triangles [share one angle](target:angle)
-with the original triangle. They also all have [one right angle](target:right).
-By the AA condition, all thee triangles must be [[similar|congruent|right-angled]].
+{.reveal(when="next-1")} Beide kleineren Dreiecke [teilen sich einen Winkel](target:angle)
+mit dem ursprünglichen Dreieck. Beide haben auch [einen rechten Winkel](target:right).
+Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinklig]].
 
 ::: column(width=260)
 
@@ -1114,8 +1114,8 @@ By the AA condition, all thee triangles must be [[similar|congruent|right-angled
 
 :::
 
-{.reveal(when="blank-5")} Now we can use the equations we already know about
-similar polygons:
+{.reveal(when="blank-5")} Jetzt können wir die Gleichungen verwenden, die wir bereits über
+ähnliche Vielecke kennen:
 
     table.proof-table.reveal(when="blank-5")
       tr
@@ -1126,56 +1126,56 @@ similar polygons:
           <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
           <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
 
-{.r.reveal(when="blank-5")} _{span.next-step} Continue_
+{.r.reveal(when="blank-5")} _{span.next-step} Weiter_
 
-{.reveal(when="next-2")} But remember that _c_ = [{.step-target.i.pill.blue}x](target:x) +
-[{.step-target.i.pill.green}y](target:y). Therefore
+{.reveal(when="next-2")} Aber erinnere dich, dass _c_ = [{.step-target.i.pill.blue}x](target:x) +
+[{.step-target.i.pill.green}y](target:y). Wir setzen ein und erhalten
 
 {.text-center.reveal(when="next-2")} `c = a^2/c + b^2/c`
 
 {.text-center.reveal(when="next-2")} `c^2 = a^2 + b^2`
 
-{.reveal(when="next-2")} Once more, we’ve proven Pythagoras’ theorem! _{span.qed}_
+{.reveal(when="next-2")} Und damit haben wir ein weiteres mal den Satz des Pythagoras bewiesen! _{span.qed}_
 :::
 
 ---
 > id: pythagoras-2
 
-Much about Pythagoras’ life is unknown, and no original copies of his work have
-survived. He founded a religious cult, the _Pythagoreans_, that practiced a kind
-of  “number worship”. They believed that all numbers have their own character,
-and followed a variety of other bizarre customs.
+Vieles über Pythagoras' Leben ist unbekannt, und es sind keine Originalschriften seines Werkes
+erhalten geblieben. Er gründete einen religiösen Kult, die _Pythagoräer_, der eine Art
+“Zahlenverehrung” praktizierte. Sie glaubten, dass alle Zahlen ihren eigenen Charakter haben,
+und folgten einer Vielzahl anderer bizarrer Bräuche.
 
 ::: column.grow
-The Pythagoreans are credited with many mathematical discoveries, including
-finding the first [irrational number](gloss:irrational-numbers), `sqrt(2)`.
-Irrational numbers cannot be expressed as a simple fraction – a concept the
-Pythagoreans found deeply troubling and (unsuccessfully) tried to cover up!
+Den Pythagoräern werden viele mathematische Entdeckungen zugeschrieben, darunter das
+Auffinden der ersten [irrationalen Zahl](gloss:irrational-numbers), `sqrt(2)`.
+Irrationale Zahlen können nicht als einfacher Bruch ausgedrückt werden - ein Konzept, das die
+Pythagoräer zutiefst beunruhigend fanden und (erfolglos) zu vertuschen versuchten!
 ::: column(width=400)
     x-media(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
-{.caption} “Pythagoreans celebrate sunrise” by Fyodor Bronnikov
+{.caption} “Pythagoräer feiern den Sonnenaufgang” von Fjodor Bronnikow
 :::
 
 ---
 > id: distance-formula
 
-### Calculating Distances
+### Abstände berechnen
 
-One of the most important application of Pythagoras’ Theorem is for calculating
-distances. 
+Eine der wichtigsten Anwendungen des Satzes des Pythagoras ist die Berechnung
+von Abständen. 
 
 ::: column.grow
-{.r} On the right you can see two points in a coordinate system. We could
-measure their distance using a ruler, but that is not particularly accurate.
-Instead, let’s try using Pythagoras.
-_{span.next-step} Continue_
+{.r} Auf der rechten Seite siehst du zwei Punkte in einem Koordinatensystem. Wir könnten ihren Abstand mit einem Lineal
+messen, aber das ist nicht besonders genau,
+stattdessen versuchen wir es mit Pythagoras.
+_{span.next-step} Weiter_
 
-{.reveal(when="next-0")} We can easily count the [horizontal distance](target:dx)
-along the _x_-axis, and the [vertical distance](target:dy) along the _y_-axis.
-If we draw those two lines, we get a [right-angled triangle](target:triangle).
+{.reveal(when="next-0")} Wir können leicht den [horizontalen Abstand](target:dx)
+entlang der _x-Achse_ und den [vertikalen Abstand](target:dy) entlang der _y-Achse_ abzählen.
+Wenn wir diese beiden Linien einzeichnen, erhalten wir ein [rechtwinkliges Dreieck](target:triangle).
 
-{.reveal(when="next-0")} Using Pythagoras,
+{.reveal(when="next-0")} Mit Pythagoras,
 
     table.eqn-system.reveal(when="next-0")
       tr
@@ -1203,12 +1203,12 @@ If we draw those two lines, we get a [right-angled triangle](target:triangle).
 ---
 > id: distance-formula-1
 
-This method works for _any_ two points:
+Diese Methode funktioniert für zwei _beliebige_ Punkte:
 
 ::: .theorem
-__The Distance Formula__  
-If you are given two points with coordinates  (`x_1`,`y_1`) and (`x_2`,`y_2`),
-the distance between them is
+__Die Abstandsformel__  
+Wenn du zwei Punkte mit den Koordinaten (`x_1`,`y_1`) und (`x_2`,`y_2`) gegeben hast,
+beträgt der Abstand zwischen ihnen
 
 {.text-center} `d^2=(x_2−x_1)^2+(y_2−y_1)^2`
 
@@ -1218,42 +1218,42 @@ the distance between them is
 ---
 > id: pythagorean-triples
 
-### Pythagorean Triples
+### Pythagoräische Tripel
 
-As you moved the [vertices of the triangle](->#tri-move) in the previous step,
-you might have noticed that in most cases, the length of the hypothenuse _d_
-ended up being a [[decimal number|fraction|integer]].
-_{span.reveal(when="blank-0")}However there are a few examples of right-angled
-triangles where the lengths of *all three sides* happens to be *whole numbers*._
+Als du die [Ecken des Dreiecks](->#tri-move) im vorherigen Schritt verschoben hast, hast
+du vielleicht bemerkt, dass die Länge der Hypothenuse _d_
+in den meisten Fällen eine [[Dezimalzahl|Bruchzahl|ganze Zahl]] ist.
+_{span.reveal(when="blank-0")} aber es gibt einige Beispiele für rechtwinklige
+Dreiecke, bei denen die Länge von *allen drei Seiten* zufällig *natürliche Zahlen* sind._
 
 ---
 > id: pythagorean-triples-1
 
 ::: column.grow
-One famous example is the 3-4-5 triangle. Since `3^2 + 4^2 = 5^2`, any triangle
-with sides of length 3, 4 and 5 must be right-angled.
+Ein berühmtes Beispiel ist das 3-4-5 Dreieck. Da `3^2 + 4^2 = 5^2`, muss jedes Dreieck
+mit Seiten der Länge 3, 4 und 5 rechtwinklig sein.
 
-The ancient Egyptians didn’t know about Pythagoras’ theorem, but they did know
-about the 3-4-5 triangle. When building the pyramids, they used knotted ropes
-of lengths 3, 4 and 5 to measure perfect right angles.
+Die alten Ägypter wussten nichts über den Satz von Pythagoras, aber sie wussten etwas
+über das 3-4-5 Dreieck. Beim Bau der Pyramiden verwendeten sie geknotete Seile
+der Längen 3, 4 und 5, um perfekte rechte Winkel zu messen.
 ::: column(width=400)
 
     img(src="images/egypt.png" width=400 height=220)
 
 :::
 
-Three integers like this are called [__Pythagorean Triples__](gloss:pythagorean-triple).
-(3, 4, 5) is one example of a Pythagorean triple. If we multiply every number
-by 2, we get another Pythagorean triple: (6, 8, [[10]]).
+Drei Zahlen wie diese werden als [__Pythagoräische Tripel__](gloss:pythagorean-triple)bezeichnet.
+(3, 4, 5) ist ein Beispiel für ein Pythagoräisches Tripel. Wenn wir jede Zahl
+mit 2 multiplizieren, erhalten wir ein weiteres Pythagoräisches Tripel: (6, 8, [[10]]).
 
 ---
 > id: pythagorean-triples-grid
 > goals: p0 p1 p2 p3 p4 p5
 
-We can think of these triples as grid points in a coordinate systems. For a
-valid Pythagorean triples, the distance from the origin to the grid point has to
-be a whole number. Using the coordinate system below, can you find any other
-Pythagorean triples?
+Wir können uns diese Tripel als Gitterpunkte in einem Koordinatensystem vorstellen. Für ein
+gültiges Pythagoräisches Tripel muss der Abstand vom Ursprung bis zum Gitterpunkt eine ganze Zahl
+sein. Kannst du mit dem untenstehenden Koordinatensystem weitere
+Pythagoräische Tripel finden?
 
     figure: x-geopad.r.label-halo(width=450 height=450 grid=25)
       svg
@@ -1268,30 +1268,30 @@ Pythagorean triples?
       .label.var(x-style="left:${12.5+25*a.x}px; top:${225+12.5*a.y}px") ${17-a.y}
       .label.var(x-style="left:${12.5+12.5*a.x}px; top:${225+12.5*a.y}px") ${sqrtDistance(a)}
 
-{.reveal(when="p0 p1 p2 p3 p4 p5")} Do you notice any pattern in the
-distribution of these points? 
+{.reveal(when="p0 p1 p2 p3 p4 p5")} Erkennst du ein Muster in der
+Verteilung dieser Punkte? 
 
-    // The mathematician Euclid found a clever method for generating new
-    // Pythagorean triples. First, we need to pick any two integers _m_ and _n_:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
-    // Now we can calculate the three numbers that make up the triple:
+    // Der Mathematiker Euklid fand eine clevere Methode, um neue
+    // Pythagoräische Tripel zu erzeugen. Zuerst müssen wir zwei beliebige ganze Zahlen _m_ und _n_ nehmen:
+    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = n = ${n}{n|2|1,20,1}
+    // Jetzt können wir die drei Zahlen berechnen, aus denen sich das Tripel zusammensetzt:
     // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
-    // And there you have your pythagorean triple! You can check that a2 + b2 = c2.
+    // Und schon haben wir ein Pythagoräisches Tripel! Du kannst überprüfen, ob a2 + b2 = c2.
 
 ----
 > id: isosceles
 > sectionStatus: dev
 
-## Isosceles and Equilateral Triangles
+## Gleichschenklige und gleichseitige Dreiecke
 
-Other then right-angled triangles, there are a few other triangles with
-special properties. In this section we’ll have a look at some of them.
+Neben den rechtwinkligen Dreiecken gibt es noch einige andere Dreiecke mit
+besonderen Eigenschaften. In diesem Abschnitt werden wir uns einige davon ansehen.
 
-### Isosceles Triangles
+### Gleichschenklige Dreiecke
 
-We say that a triangle is [__isosceles__](gloss:isosceles-triangle) if it has
-two congruent sides. These congruent sides are called the __legs__ of the
-triangle, while the third side is called the __base__.
+Wir sagen, dass ein Dreieck [__gleichschenklig ]__(gloss:isosceles-triangle)ist, wenn es
+zwei kongruente Seiten hat. Diese kongruenten Seiten werden die __Schenkel__ des
+Dreiecks genannt, während die dritte Seite die __Basis__genannt wird.
 
 {.todo} COMING SOON – Base angles theorem
 Proof by constructing angle bisector and using SAS result.
@@ -1345,16 +1345,16 @@ equilateral triangle using straight-edge and compass.
 ----
 > id: trigonometry
 
-## Trigonometry
+## Trigonometrie
 
-So far we have seen relationships between the __angles__ of triangles (e.g.
-they always sum up to 180°) and relationships between the __sides__ of triangles
-(e.g. Pythagoras). But there is nothing that _connects_ the size of angles and
-sides.
+Bisher haben wir Beziehungen zwischen den __Winkeln__ von Dreiecken (z.B. summieren
+sie sich immer auf 180°) und Beziehungen zwischen den __Seiten__ von Dreiecken
+(z.B. Pythagoras) betrachtet. Aber wir haben nichts, was die Größe von Winkeln und
+Seiten _miteinander verbindet_.
 
-For example, if I know the three sides of a triangle, how do I find the size of
-its angles – without drawing the triangle and measuring them using a protractor?
-This is where __Trigonometry__ comes in!
+Wenn ich zum Beispiel die drei Seiten eines Dreiecks kenne, wie finde ich die Größe
+seiner Winkel - ohne das Dreieck zu zeichnen und mit einem Winkelmesser zu messen -
+hier kommt die __Trigonometrie__ ins Spiel!
 
     figure: img(src="images/trig-om-nom.jpg" width=200 height=200)
 
@@ -1362,11 +1362,11 @@ This is where __Trigonometry__ comes in!
 > id: trigonometry-1
 
 ::: column.grow
-Imagine we have a right-angled triangle, and we also know one of the two other
-angles, __{.m-red}α__. We already know that the longest side is called the
-[__{.m-yellow}hypotenuse__](target:hyp). The other two are usually called the
-[__{.m-green}adjacent__](target:adj) (which is next to angle __{.m-red}α__) and
-the [__{.m-blue}opposite__](target:opp) (which is opposite angle __{.m-red}α__).
+Stell dir vor, wir haben ein rechtwinkliges Dreieck, und wir kennen auch einen der beiden anderen
+Winkel, __{.m-red}α__. Wir wissen bereits, dass die längste Seite [
+__{.m-yellow}Hypotenuse]__(target:hyp) genannt wird. Die anderen beiden werden normalerweise als [
+__{.m-green}anliegend]__(target:adj) (neben dem Winkel __{.m-red}α__) und
+[__{.m-blue}gegenüberliegend__](target:opp) (also gegenüber des Winkels __{.m-red}α__) bezeichnet.
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
@@ -1376,80 +1376,80 @@ the [__{.m-blue}opposite__](target:opp) (which is opposite angle __{.m-red}α__)
       path(x="angle(a,c,b)")
       path.red(x="angle(b,a,c)" label="α")
       path.yellow(x="segment(a,b)" label="Hypotenuse" target="hyp")
-      path.blue(x="segment(b,c)" label="Opposite" target="opp")
-      path.green(x="segment(a,c)" label="Adjacent" target="adj")
+      path.blue(x="segment(b,c)" label="Gegenkathete" target="opp")
+      path.green(x="segment(a,c)" label="Ankathete" target="adj")
 
 :::
 
-There are many different triangles that have angles __{.m-red}α__ and 90°, but
-from the [AA condition](gloss:triangle-aa) we know that they are all
-[[similar|congruent]]:
+Es gibt viele verschiedene Dreiecke, die einen Winkel __{.m-red}α__ und 90° haben, aber
+vom [WWW-Satz](gloss:triangle-aa) wissen wir, dass sie alle
+[[ähnlich|kongruent]] sind:
 
     figure: img(src="images/triangles.svg" width=600 height=240)
 
 ---
 > id: trig-functions
 
-Since all of these triangles are similar, we know that their sides are
-proportional. In particular, the following ratios are the same for all of these
-triangles:
+Da alle diese Dreiecke ähnlich sind, wissen wir, dass ihre Seiten
+proportional sind. Insbesondere sind die folgenden Verhältnisse für alle diese
+Dreiecke gleich:
 
     p.text-center
-      mfrac
-        mrow: mtext.m-blue.b Opposite
+     mfrac
+        mrow: mtext.m-blue.b Gegenkathete
         mrow: mtext.m-yellow.b Hypotenuse
-      span.space
-      mfrac
-        mrow: mtext.m-green.b Adjacent
-        mrow: mtext.m-yellow.b Hypotenuse
-      span.space
-      mfrac
-        mrow: mtext.m-blue.b Opposite
-        mrow: mtext.m-green.b Adjacent
+     span.space
+     mfrac
+        mrow: mtext.m-green.b Ankathete
+        mtext.m-yellow.b Hypotenuse
+     span.space
+     mfrac
+        mrow: mtext.m-blue.b Gegenkathete
+        mrow: mtext.m-green.b Ankathete
 
-Let’s try to summarise this: we picked a certain value for __{.m-red}α__, and
-got lots of similar, right-angled triangles. All of these triangles have the
-same ratios of sides. Since __{.m-red}α__ was our only variable, there must be
-some relationship between __{.m-red}α__ and those ratios.
+Fassen wir zusammenzufassen: Wir haben einen bestimmten Wert für __{.m-red}α__gewählt
+und viele ähnliche, rechtwinklige Dreiecke erhalten. Die Seiten dieser Dreiecke stehen zueinander
+in jeweils gleichem Verhältnis. Da __{.m-red}α__ unsere einzige Variable war, muss es irgendeine
+ Beziehung zwischen __{.m-red}α__ und diesen Verhältnissen geben.
 
-These relationships are the __Trigonometric functions__ – and there are three of
-them:
+Diese Beziehungen sind die __trigonometrischen Funktionen__ - und es gibt
+drei davon:
 
 ::: .theorem
-The three Trigonometric functions are relationships between the angles and the
-ratios of sides in a right-angles triangle. They each have a name, as well as
-a 3-letter abbreviation:
+Die drei trigonometrischen Funktionen sind Beziehungen zwischen den Winkeln und den
+Verhältnissen der Seiten in einem rechtwinkligen Dreieck. Jede hat einen Namen sowie
+eine dreistellige Abkürzung:
 
 ::: column.grow
 
     ul
       li
-        strong Sine:
+        strong Sinus:
         .space
         mtext sin
         mfenced: mtext.m-red.b α
         mo =
         mfrac
-          mrow: mtext.m-blue.b Opposite
+          mrow: mtext.m-blue.b Gegenkathete
           mrow: mtext.m-yellow.b Hypotenuse
       li
-        strong Cosine:
+        strong Cosinus:
         .space
         mtext cos
         mfenced: mtext.m-red.b α
         mo =
         mfrac
-          mrow: mtext.m-green.b Adjacent
+          mrow: mtext.m-green.b Ankathete
           mrow: mtext.m-yellow.b Hypotenuse
       li
-        strong Tangent:
+        strong Tangens:
         .space
         mtext tan
         mfenced: mtext.m-red.b α
         mo =
         mfrac
-          mrow: mtext.m-blue.b Opposite
-          mrow: mtext.m-green.b Adjacent
+          mrow: mtext.m-blue.b Gegenkathete
+          mrow: mtext.m-green.b Ankathete
 
 ::: column(width=240)
 
@@ -1460,8 +1460,8 @@ a 3-letter abbreviation:
       path(x="angle(a,c,b)")
       path.red(x="angle(b,a,c)" label="α")
       path.yellow(x="segment(a,b)" label="Hypotenuse")
-      path.blue(x="segment(b,c)" label="Opposite")
-      path.green(x="segment(a,c)" label="Adjacent")
+      path.blue(x="segment(b,c)" label="Gegenkathete")
+      path.green(x="segment(a,c)" label="Ankathete")
 
 :::
 :::
@@ -1674,13 +1674,13 @@ for the curvature of Earth.
 > id: applications
 > class: no-border
 
-## Applications
+## Anwendungen
 
-But triangles and trigonometry are not just useful for measuring the height of
-mountains, and the tools and concepts you have learned are incredibly important
-in countless areas of mathematics, science and engineering.
+Dreiecke und Trigonometrie sind nicht nur für die Messung der Höhe von
+Bergen nützlich. Die Werkzeuge und Konzepte, die du hier gelernt hast, sind in
+unzähligen Bereichen der Mathematik, Naturwissenschaften und Technik unglaublich wichtig.
 
-Triangles are special because they are particularly _strong_. They are the only
+Dreiecke sind etwas Besonderes, weil sie besonders _stabil_ sind. They are the only
 polygon that, when made out of wooden beams and hinges, will be completely
 _rigid_ – unlike rectangles, for example, which you can easily push over.
 
@@ -1794,7 +1794,7 @@ quadrilaterals or pentagons in the future.
     // than the included angle of the second triangle.
 
 
-    // ## Inscribed Similar Triangles 
+    // ## Inscribed Ähnliche Dreiecke 
 
     // If two objects are similar, corresponding angles are congruent and their sides
     // are proportional in length. Let’s look at a right triangle, with an altitude
