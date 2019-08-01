@@ -316,7 +316,7 @@ cos:
 
 cpoct:
   title: CPOCT
-  text: CPOCT steht für __entsprechende Teile von kongruenten Dreiecken__. Das
+  text: CPOCT steht für __einander entsprechende Teile von kongruenten Dreiecken__. Das
     heißt, wenn zwei Dreiecke kongruent sind, dann müssen auch alle zugehörigen
     Komponenten (Winkel, Seiten, Abschnitte,....) kongruent zueinander sein.
   link: /course/triangles-and-trigonometry/triangles-congruence#cpoct
@@ -1330,9 +1330,9 @@ tetrahedron:
   link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
 
 theorem:
-  title: Theorem
-  text: Ein __Theorem__ ist ein besonders wichtiges Ergebnis oder eine
-    Beobachtung in der Mathematik, die mit Axiomen und früheren Theoremen
+  title: Lehrsatz
+  text: Ein __Lehrsatz__ ist ein besonders wichtiges Ergebnis oder eine
+    Beobachtung in der Mathematik, die mit Axiomen und früheren Lehrsätzen
     nachgewiesen wurde.
 
 transformation:
@@ -1393,9 +1393,9 @@ triangle-legs:
     kürzeren Seiten (nicht die _Hypotenuse_). Sie bilden den rechten Winkel.
 
 triangle-midsegment:
-  title: Mittendreieck
-  text: Das __Mittendreieck__ konstruiert man indem man die Mittelpunkte der
-    verschiedenen Seiten eines Dreiecks miteinander verbindet.
+  title: Mittelparallele
+  text: Die __Mittelparallelen__ eines Dreiecks sind die Strecken, die die
+    Mittelpunkte der verschiedenen Seiten des Dreiecks miteinander verbinden.
   image: triangle-midsegment.svg
   link: /course/triangles-and-trigonometry/properties-of-triangles#midsegments
 
