@@ -10,7 +10,7 @@ abel:
   overflow: true
   bio: |
     __Niels Henrik Abel__ (1802 - 1829) war ein wichtiger norwegischer
-    Mathematiker. Obwohl er im Alter von 26 Jahren starb, leistete er 
+    Mathematiker. Obwohl er im Alter von 26 Jahren starb, leistete er
     bahnbrechende Beiträge zu einer Vielzahl von Themen.
 
     Im Alter von 16 Jahren bewies Abel den Binomialsatz. Drei Jahre später
@@ -21,8 +21,8 @@ abel:
 
     Abel verbrachte sein Leben in Armut: Er hatte sechs Geschwister, sein Vater
     starb, als er 18 Jahre alt war, er konnte keinen Job an einer Universität
-    finden, und viele Mathematiker lehnten seine Arbeiten anfangs ab. Heute ist 
-    der _Abel-Preis_, eine der höchsten Auszeichnungen in der Mathematik, nach 
+    finden, und viele Mathematiker lehnten seine Arbeiten anfangs ab. Heute ist
+    der _Abel-Preis_, eine der höchsten Auszeichnungen in der Mathematik, nach
     ihm benannt.
   links:
     - title: Gruppentheorie
@@ -41,8 +41,8 @@ al-haytham:
     Jahrhunderte vor europäischen Wissenschaftlern in der Renaissance.
 
     Alhazen interessierte sich besonders für Optik und visuelle Wahrnehmung. Er
-    leitete auch eine Formel für die Summe von vierten Potenzen 
-    (`1^4 + 2^4 + 3^4 + 3^4 + .... + n^4`) her, und er studierte die Verbindung 
+    leitete auch eine Formel für die Summe von vierten Potenzen
+    (`1^4 + 2^4 + 3^4 + 3^4 + .... + n^4`) her, und er studierte die Verbindung
     zwischen Algebra und Geometrie.
 
 al-karaji:
@@ -639,8 +639,8 @@ fermat:
     Wahrscheinlichkeit, Geometrie und Optik.
 
     1637 schrieb er eine kurze Notiz am Rand eines seiner Lehrbücher und
-    behauptete, dass die Gleichung `a^n + b^n = c^n` keine ganzzahligen Lösungen für `n
-    >2` habe, und dass er einen “wahrhaft wunderbaren Beweis entdeckt habe, der Rand hier aber zu
+    behauptete, dass die Gleichung `a^n + b^n = c^n` keine ganzzahligen Lösungen für
+    `n>2` habe, und dass er einen “wahrhaft wunderbaren Beweis entdeckt habe, der Rand hier aber zu
     schmal sei, um ihn zu fassen”. Dies wurde bekannt als _Fermat's letzter Satz_, und war eines
     der berühmtesten ungelösten Probleme in der Mathematik - bis es schließlich 1994
     bewiesen wurde.
