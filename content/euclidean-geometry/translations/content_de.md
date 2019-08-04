@@ -33,98 +33,98 @@ Wähle zuerst zwei Punkte irgendwo in dem Feld auf der linken Seite aus.
 _{span.reveal(when="p1 p2")} Wir wollen diese Punkte mit einem Halbkreis verbinden._
 
 {.reveal(when="p1 p2")} Wähle jetzt einen dritten Punkt, der irgendwo auf dem
-[Umfang](target:circumf) des Halbkreises liegt.
+[Kreisbogen](target:circumf) des Halbkreises liegt.
 
-{.reveal(when="p3")} Let’s draw the [triangle](target:triangle) formed by the
-two corners of the semicircle, as well as the point you picked on the
-circumference.
+{.reveal(when="p3")} Als nächstes zeichnen wir das [Dreieck], das aus den
+beiden Eckpunkten des Halbkreises(target:triangle) und dem auf dem
+Kreisbogen gewählten Punkt gebildet wird.
 
-{.reveal(when="p3" delay=1000)} Try moving the position of the three points and
-observe what happens to the [angle](target:angle) at the top of the triangle.
-_{span.reveal(when="move")} It seems like it is always [[90]]°!_
-_{span.reveal(when="blank-0")} This means that the triangle is
-[[right-angled|equilateral|acute]]._
+{.reveal(when="p3" delay=1000)} Schau was mit dem [Winkel](target:angle) oben im Dreieck
+passiert wenn du die Position der drei Punkte verschiebst.
+_{span.reveal(when="move")} Wie es aussieht, hat er immer [[90]]°!_
+_{span.reveal(when="blank-0")} Das bedeutet, dass das Dreieck
+[[rechtwinklig|gleichseitig|spitzwinklig]] ist._
 :::
 
 ---
 > id: thales-1
 
-For Thales, this was a pretty spectacular result. Why should _semicircles_ and
-_right-angled triangles_, two completely different shapes, be linked in this
-fundamental way? He was so awed by his discovery that, according to legend, he
-sacrificed an entire ox to thank the gods.
+Für Thales war dies ein ziemlich spektakuläres Ergebnis. Warum sollten _Halbkreise_ und
+_rechtwinklige Dreiecke_, zwei völlig unterschiedliche Figuren, auf diese
+grundlegende Weise miteinander verbunden sein? Er war von seiner Entdeckung so begeistert, dass er der Legende nach einen ganzen Ochsen
+opferte, um den Göttern zu danken.
 
     figure
       x-media(src="images/temple.svg" width=400 height=170)
 
-However, simply _observing_ a relationship like this was not enough for Thales.
-He wanted to understand _why_ it is true, and verify that it is _always_ true
-– not just in the few examples he tried.
+Doch die bloße _Beobachtung_ einer solchen Verbindung reichte Thales nicht aus,
+er wollte verstehen, _warum_ das so ist, und überprüfen, ob das _immer_ gilt
+- nicht nur in den wenigen Beispielen, die er ausprobiert hat.
 
-An argument that logically explains, beyond any doubt, why something must be
-true, is called a [__proof__](gloss:proof). In the following courses you will
-learn a number of geometric techniques, that will eventually allow us to prove
-_Thales’ theorem_.
+Ein Argument, das logisch erklärt, warum etwas
+wahr sein muss, wird als [__Beweis__](gloss:proof) bezeichnet. In den folgenden Kursen
+lernst du eine Reihe von geometrischen Techniken, die es uns letztendlich ermöglichen, den
+_Satz des Thales_ zu beweisen.
 
 ---
 > id: applications
 
-But geometry is not just useful for proving theorems – it is everywhere around
-us, in nature, architecture, technology and design. We need geometry for
-everything from measuring distances to constructing skyscrapers or sending
-satellites into space. Here are a few more examples:
+Aber Geometrie ist nicht nur für den Nachweis von Sätzen nützlich - sie ist überall um
+uns herum, in der Natur, in der Architektur, in der Technik und im Design. Wir brauchen Geometrie für
+alles, von der Entfernungsmessung über den Bau von Wolkenkratzern bis hin zur Entsendung von
+Satelliten ins All. Hier sind noch ein paar weitere Beispiele:
 
 ::: column(width=200)
 
     x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
-{.caption} Geometry allowed the ancient Egyptians to construct gigantic,
-perfectly regular pyramids.
+{.caption} Die Geometrie erlaubte es den alten Ägyptern, gigantische,
+perfekt regelmäßige Pyramiden zu bauen.
 ::: column(width=200)
 
     x-media(src="images/sextant.jpg" width=200 height=200)
 
-{.caption} Sailors use sextants to determine their location while at sea, using 
-angles formed by the sun or stars.
+{.caption} Seefahrer verwenden Sextanten, um ihren Standort auf See zu bestimmen, wobei
+sie die von der Sonne oder den Sternen gebildeten Winkel verwenden.
 ::: column(width=200)
 
     x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
 
-{.caption} Geometry is needed to create realistic video game or movie graphics.
+{.caption} Geometrie wird benötigt, um realistische Videospiel- oder Filmgrafiken zu erstellen.
 ::: column(width=200)
 
     x-media(src="images/plane.jpg" width=200 height=200)
 
-{.caption} Geometry can help design and test new airplane models, making them
-safer and more efficient.
+{.caption} Geometrie kann dabei helfen, neue Flugzeugmodelle zu entwerfen und zu testen, um sie
+sicherer und effizienter zu machen.
 ::: column(width=200)
 
     x-media(src="images/cctv.jpg" lightbox width=200 height=200)
 
-{.caption} Geometry was key when designing this skyscraper in Beijing – and to
-make sure it won’t fall over.
+{.caption} Geometrie war bei der Planung dieses Wolkenkratzers in Peking entscheidend - und
+um sicherzustellen, dass er nicht umkippt.
 ::: column(width=200)
 
     x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
-{.caption} Geometry allows us to predict the position of stars, planets and
-satellites orbiting Earth.
+{.caption} Geometrie ermöglicht es uns, die Position von Sternen, Planeten und
+Satelliten in der Erdumlaufbahn vorherzusagen.
 :::
 
-In this and the following courses, you will learn about many different tools and
-techniques in geometry, that were discovered by mathematicians over the course
-of many centuries. We will also see how these techniques can be used to solve
-important problems in the real world.
+In diesem und den folgenden Kursen lernst du viele verschiedene Werkzeuge und
+Techniken der Geometrie kennen, die von Mathematikern im Laufe
+vieler Jahrhunderte entdeckt wurden. Wir werden auch sehen, wie diese Techniken eingesetzt werden können,
+um wichtige Probleme in der realen Welt zu lösen.
 
 ---
 > id: points
 > section: definitions
 
-## Geometric Definitions
+## Geometrische Definitionen
 
-Before we can write any proofs, we need some common terminology that will make
-it easier to talk about geometric objects. These are not particularly exciting,
-but you should already know most of them:
+Bevor wir irgendwelche Beweise formulieren können, müssen wir uns auf ein paar Fachausdrücke einigen,
+die es einfacher machen, über geometrische Objekte zu sprechen. Diese sind vielleicht nicht wirklich spannend,
+aber die meisten davon solltest du eh bereits kennen:
 
 ::: column(width=240)
 
@@ -136,14 +136,14 @@ but you should already know most of them:
       circle(x="point(70,120)" target="no-move" label="R")
 
 ::: column.grow
-A [__point__](gloss:point) is a specific location in space. Points describe a
-position, but have no _size_ or _shape_ themselves. They are labelled using
-capital letters.
+Ein [__Punkt__](gloss:point) ist eine bestimmte Position im Raum. Punkte beschreiben eine
+Position, haben aber selbst keine _Größe_ oder _Form_. Sie werden mit
+Großbuchstaben bezeichnet.
 
-{.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
-you can move around, while [smaller, outlined dots](target:no-move) indicate
-fixed points which you can’t move.
-_{button.next-step} Continue_
+{.r} In Mathigon zeigen [große, ausgefüllte Punkte](target:move) interaktive Punkte an, die
+du bewegen kannst, während [kleinere, nicht ausgefüllte Punkte](target:no-move) fixe Punkte anzeigen
+, die du nicht bewegen kannst
+_{button.next-step} Weiter_
 :::
 
 ---
@@ -159,16 +159,16 @@ _{button.next-step} Continue_
       path.yellow(x="line(P,Q)")
 
 ::: column.grow
-A [__line__](gloss:line) is a set of infinitely many points that extend forever
-in both directions. Lines are always straight and, just like points, they don’t
-take up any space – they have no _width_.
+Eine [__Gerade__](gloss:line) ist eine Ansammlung von unendlich vielen Punkten, die sich 
+in beide Richtungen unbegrenzt erstreckt. Geraden sind immer gerade und nehmen, genau wie Punkte, keinen
+Platz ein - sie haben keine _Breite_.
 
-{.r} Lines are labeled using lower-case letters. We can also refer to them using
-two points that lie on the line, for example
-<span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
-<span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
-order of the points does not matter.
-_{button.next-step} Continue_
+{.r} Geraden werden mit Kleinbuchstaben beschriftet. Wir können sie auch mit
+zwei Punkten festlegen, die auf der Geraden liegen, z.B.
+<span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> oder
+<span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. Die
+Reihenfolge der Punkte spielt keine Rolle.
+_{button.next-step} Weiter_
 :::
 
 ---
@@ -185,11 +185,11 @@ _{button.next-step} Continue_
       path.blue(x="segment(c,d)")
 
 ::: column.grow
-{.r} A [__line segment__](gloss:line-segment) is the part of a line between two
-points, without extending to infinity. We can label them just like lines, but
-without arrows on the bar above: `bar(AB)` or `bar(BA)`. Like, before the order
-of the points does not matter.
-_{button.next-step} Continue_
+{.r}Eine [__Strecke__](gloss:line-segment)ist der Abschnitt einer Geraden zwischen zwei
+Punkten, ohne sich bis ins Unendliche zu erstrecken. Wir können sie genau wie Geraden beschriften, aber
+ohne Pfeilspitzen auf dem Strich darüber: `bar(AB)` oder `bar(BA)`. Auch hier spielt
+die Reihenfolge der Punkte keine Rolle.
+_{button.next-step} Weiter_
 :::
 
 ---
@@ -206,13 +206,13 @@ _{button.next-step} Continue_
       path.yellow(x="ray(a,b)")
 
 ::: column.grow
-A [__ray__](gloss:ray) is something in between a _line_ and a _line segment_:
-it only extends to infinity on one side. You can think of it like _sunrays_:
-they start at a point (the sun) and then keep going forever.
+Ein [__Strahl__](gloss:ray) ist etwas zwischen einer _Geraden_ und einer _Strecke_:
+er erstreckt sich nur auf einer Seite bis zur Unendlichkeit. Du kannst dir das wie _Sonnenstrahlen_ vorstellen:
+Sie beginnen an einem Punkt (der Sonne) und gehen dann für immer weiter.
 
-{.r} When labelling rays, the arrow shows the direction where it extends to
-infinity, for example `vec(AB)`. This time, the order of the points _does_ matter.
-_{button.next-step} Continue_
+{.r} Bei der Beschriftung von Strahlen zeigt der Pfeil die Richtung an, in die er sich bis zur
+Unendlichkeit erstreckt, z.B. "vec(AB)`. Diesmal spielt die Reihenfolge der Punkte _eine_ Rolle.
+_{button.next-step} Weiter_
 :::
 
 ---
@@ -230,17 +230,17 @@ _{button.next-step} Continue_
       path.blue(x="circle(b,60)")
 
 ::: column.grow
-{.r} A [__circle__](gloss:circle) is the collection of points that all have the
-same [distance](target:radius) from a point in the center. This distance is
-called the [__radius__](gloss:circle-radius).
-_{button.next-step} Continue_
+{.r}Ein [__Kreis__](gloss:circle) ist die Ansammlung von Punkten, die alle den
+gleichen [Abstand](target:radius) zu einem Punkt in der Mitte haben. Dieser Abstand
+wird als [__Radius__](gloss:circle-radius) bezeichnet.
+_{button.next-step} Weiter_
 :::
 
 ---
 > id: congruence
 > goals: pair-a-a pair-b-b pair-c-c pair-d-d pair-e1-e2 pair-e1-e3 pair-e2-e3 pair-f-f
 
-### Congruence
+### Kongruenz
 
 ::: column(width=240)
 
@@ -250,17 +250,17 @@ _{button.next-step} Continue_
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-colour="white")
 
 ::: column.grow
-The two shapes on the right basically look identical. They have the same size
-and shape, and we could [turn and slide](target:move) one of them to exactly
-match up with the other. In geometry, we say that the two shapes are
-[__congruent__](gloss:congruent).
+Die beiden Formen auf der rechten Seite stimmen im Wesentlichen überein. Sie haben die gleiche Größe
+und Form, und wir könnten durch [drehen und verschieben](target:move) einen von ihnen exakt über
+den anderen legen. In der Geometrie sagen wir, dass die beiden Formen 
+[__kongruent]__(gloss:congruent) oder deckungsgleich sind.
 
-The symbol for congruence is `≅`, so we would say that `A ≅ B`.
+Das Symbol für Kongruenz ist `≅`. Wir würden also sagen, dass `A ≅ B`.
 :::
 
-Here are a few different geometric objects. Connect all the ones that are
-congruent, and remember that more than two shapes might be congruent to each
-other:
+Hier sind ein paar verschiedene geometrische Objekte. Verbinde alle
+kongruenten Formen und denke daran, dass mehr als zwei Formen miteinander
+kongruent sein können:
 
     svg.congruence(width=760 height=320 viewBox="0 0 760 320")
       g.lines
@@ -303,21 +303,21 @@ other:
 ---
 > id: congruence-1
 
-Two line segments are congruent if they [[have the same length|intersect]]. Two
-angles are congruent if they [[have the same size|meet at a point]] (in degrees).
+Zwei Strecken sind kongruent, wenn sie [[die gleiche Länge haben|sich schneiden]]. Zwei
+Winkel sind kongruent, wenn sie [[die gleiche Größe haben|sich an einem Punkt treffen]] (in Grad).
 
-Note the that _“congruent”_ does not mean _“equal”_. For example, congruent
-lines and angles don’t have to point in the same direction. Still, _congruence_
-has many of the same properties of _equality_:
+Beachte, dass _“Kongruenz”_ nicht _“gleich”_ bedeutet. Beispielsweise müssen kongruente
+Geraden und Winkel nicht in die gleiche Richtung zeigen. Dennoch hat die _Kongruenz_
+viele der Eigenschaften die auch die _Gleichheit_ hat:
 
-* Congruence is __symmetric__: if `X ≅ Y` then also `Y ≅ X`.
-* Congruence is __reflexive__: any shape is congruent to itself. For example, `A ≅ A`.
-* Congruence is __transitive__: if `X ≅ Y` and `Y ≅ Z` then also `X ≅ Z`.
+* Kongruenz ist __symmetrisch__: wenn `X ≅ Y` dann auch `Y ≅ X`.
+* Kongruenz ist __reflexiv__: jede Form ist kongruent zu sich selbst. Zum Beispiel: `A ≅ A`.
+* Kongruenz ist __übertragbar__: wenn `X ≅ Y` und `Y ≅ Z` dann gilt auch `X ≅ Z`.
 
 ---
 > id: parallel
 
-### Parallel and Perpendicular
+### Parallele und Normale
 
 ::: column(width=240)
 
@@ -329,17 +329,17 @@ has many of the same properties of _equality_:
       path.yellow(x="l2.shift(-30,40)" mark="arrow2" label="e")
 
 ::: column.grow
-Two straight lines that never intersect are called [__parallel__](gloss:parallel).
-They point into the same direction, and the distance between them is always
-[[the same|increasing|decreasing]].
+Zwei Geraden, die sich nie schneiden, werden als [__Parallele__](gloss:parallel) bezeichnet,
+sie zeigen in die gleiche Richtung, und der Abstand zwischen ihnen ist
+[[immer gleich|zunehmend|abnehmend]].
 
-{.reveal(when="blank-0")} A good example of parallel lines in real life are
-_railroad tracks_. But note that more than two lines can be parallel to each
-other!
+{.reveal(when="blank-0")} Ein gutes Beispiel für parallele Linien im wirklichen Leben sind
+_Eisenbahngleise_. Beachte jedoch, dass mehr als zwei Geraden parallel
+zueinander sein können!
 
-{.reveal(when="blank-0")} In diagrams, we denote parallel lines by adding one or
-more small arrows. In this example, __{.m-red}`a ∥ b ∥ c`__ and
-__{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
+{.reveal(when="blank-0")} In Diagrammen bezeichnen wir parallele Linien, indem wir einen oder
+mehrere kleine Pfeile hinzufügen. In diesem Beispiel schreiben wir __{.m-red}`a ∥ b ∥ c`__ und
+__{.m-yellow}`d ∥ e`__. Das Symbol `∥` bedeutet einfach _“parallel zu”_.
 :::
 
 ---
@@ -353,12 +353,12 @@ __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
       path.green(x="line(point(50,100),point(70,0))" label="b")
 
 ::: column.grow
-The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
-These lines are called [__perpendicular__](gloss:perpendicular).
+Das Gegenteil von _parallel_ sind zwei Geraden, die sich in einem Winkel von 90° (rechter Winkel) treffen.
+Solche Geraden werden als [__Normale__](gloss:perpendicular) bezeichnet.
 
-{.r} In this example, we would write  _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. The
-`_|_` symbol simply means _“is perpendicular to”_.
-_{button.next-step} Continue_
+{.r} In diesem Beispiel würden wir schreiben: _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. Das Symbol 
+`_|_` bedeutet einfach _“ist normal auf”_.
+_{button.next-step} Weiter_
 
 :::
 
@@ -366,23 +366,23 @@ _{button.next-step} Continue_
 > id: euclid
 > section: euclids-axioms
 
-## Euclid’s Axioms
+## Euklids Axiome
 
 ::: column.grow
-Greek mathematicians realised that to write formal proofs, you need some sort of
-_starting point_: simple, intuitive statements, that everyone agrees are true.
-These are called [__axioms__](gloss:axiom) (or _postulates_).
+Griechische Mathematiker erkannten, dass man, um formale Beweise zu schreiben, eine Art
+_Ausgangspunkt_ braucht: einfache, leicht zu verstehende und für alle als wahr geltende Aussagen.
+Sie werden als [__Axiome__](gloss:axiom) (oder _Postulate_) bezeichnet.
 
-A key part of mathematics is combining different axioms to prove more complex
-results, using the rules of logic.
+Ein wichtiger Teil der Mathematik ist die Kombination verschiedener Axiome, um komplexere
+Ergebnisse unter Verwendung der Regeln der Logik zu beweisen.
 
-The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
-the _father of geometry_, published the five axioms of geometry:
+Der griechische Mathematiker [Euklid von Alexandria](bio:euclid), der oft als _Vater der Geometrie_
+bezeichnet wird, veröffentlichte die fünf Axiome der Geometrie:
 ::: column(width=220)
 
     img(src="images/euclid.jpg" width=220 height=269)
 
-{.caption} Euclid of Alexandria
+{.caption} Euklid von Alexandria
 :::
 
 ::: column(width=220)
@@ -392,9 +392,9 @@ the _father of geometry_, published the five axioms of geometry:
       circle.move(name="a" cx=30 cy=130 target="1_point")
       circle.move(name="b" cx=190 cy=30 target="1_point")
 
-{.text-center }__First Axiom__  
-You can join any [two points](target:1_point) using exactly one straight
-[line segment](target:1_line).
+{.text-center }__Erstes Axiom__  
+Man kann beliebige [zwei Punkte](target:1_point) mit genau einer geraden
+[Strecke](target:1_line) verbinden.
 
 ::: column(width=220)
 
@@ -404,9 +404,9 @@ You can join any [two points](target:1_point) using exactly one straight
       circle.move(name="c" cx=60 cy=100 target="2_segment")
       circle.move(name="d" cx=180 cy=60 target="2_segment")
 
-{.text-center }__Second Axiom__  
-You can extend any [line segment](target:2_segment) to an<br>
-infinite line.
+{.text-center }__Zweites Axiom__  
+Man kann jede beliebige [Strecke](target:2_segment) unendlich weit <br>
+ zu einer Geraden verlängern.
 
 ::: column(width=220)
 
@@ -416,9 +416,9 @@ infinite line.
       circle.move(name="e" cx=120 cy=80 target="3_center" label="P")
       circle.move(name="f" cx=170 cy=130)
 
-{.text-center }__Third Axiom__  
-Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
-can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
+{.text-center }__Drittes Axiom__  
+Bei einem gegebenen [Punkt _P_](target:3_center) und einem [Abstand _r_](target:3_radius)
+ kann man einen [Kreis](target:3_circle) mit dem Mittelpunkt _P_ und dem Radius _r_ zeichnen.
 
 ::: column(width=220)
 
@@ -437,8 +437,8 @@ can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__Fourth Axiom__  
-Any two right angles are congruent.
+{.text-center }__Viertes Axiom__  
+Zwei beliebige rechte Winkel sind kongruent.
 
 ::: column(width=220)
 
@@ -447,26 +447,26 @@ Any two right angles are congruent.
       path.red(x="line5.parallel(g)" target="5_parallel")
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
 
-{.text-center }__Fifth Axiom__  
-Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
-there is exactly [one line](target:5_parallel) through _P_ that is
-[parallel](gloss:parallel) to _L_.
+{.text-center }__Fünftes Axiom__  
+Zu einer gegebenen [Geraden _g_](target:5_line) und einem [Punkt _P_](target:5_point) nicht auf _g_,
+gibt es genau [eine Gerade](target:5_parallel) durch _P_, die
+[parallel](gloss:parallel) zu _g_ ist .
 :::
 
-{.r} _{button.next-step} Continue_
+{.r} _{button.next-step} Weiter_
 
 ---
 > id: jefferson
 
 ::: column.grow
-Each of these axioms looks pretty obvious and self-evident, but together they
-form the foundation of geometry, and can be used to deduce almost everything
-else. According to none less than [Isaac Newton](bio:newton), _“it’s the glory
-of geometry that from so few principles it can accomplish so much”_.
+Jedes dieser Axiome sieht ziemlich offensichtlich und selbstverständlich aus, aber zusammen
+bilden sie die Grundlage der Geometrie und können verwendet werden, um fast alles
+andere abzuleiten. Laut keinem Geringeren als [Isaac Newton](bio:newton) ist _“es das großartige an
+der Geometrie, dass mit so wenigen Prinzipien so viel erreicht werden kann”_.
 
-Euclid published the five axioms in a book _“Elements”_. It is the first example
-in history of a systematic approach to mathematics, and was used as mathematics
-textbook for thousands of years.
+Euklid veröffentlichte die fünf Axiome in seinem Buch _“Elemente”_. Es ist das erste Beispiel
+eines systematischen Ansatzes in der Geschichte der Mathematik und wurde als
+Mathematik-Lehrbuch über Tausende von Jahren verwendet.
 
 ::: column(width=220)
 
@@ -474,40 +474,40 @@ textbook for thousands of years.
 
 :::
 
-One of the people who studied Euclid’s work was the American President [Thomas
-Jefferson](bio:jefferson). When writing the Declaration of Independence in 1776,
-he wanted to follow a similar approach. He begins by stating a few, simple
-“axioms” and then “proves” more complex results:
+Einer derjenigen, die Euklids Arbeit studierten, war der amerikanische Präsident[Thomas
+Jefferson](bio:jefferson). Als er 1776 die Unabhängigkeitserklärung schrieb, wollte
+er einen ähnlichen Ansatz verfolgen. Er beginnt mit einigen wenigen, einfachen
+“Axiomen” und “beweist” dann komplexere Ergebnisse:
 
-    .parchment “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
+    .parchment “Wir halten diese Wahrheiten für ausgemacht, daß alle Menschen gleich erschaffen worden, daß sie von ihrem Schöpfer mit gewissen unveräußerlichen Rechten begabt worden, worunter sind Leben, Freyheit und das Bestreben nach Glückseligkeit.”
 
 {.text-center.follows} `=>`
 
-    .parchment We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
+    .parchment Wir erklären daher … , daß diese Vereinigten Colonien Freye und Unabhängige Staaten sind, und von Rechtswegen seyn sollen.”
 
-This is just one example where Euclid’s ideas in mathematics have inspired
-completely different subjects.
+Dies ist nur ein Beispiel dafür, dass Euklids Ideen in der Mathematik
+auch auf ganz anderen Gebieten als Inspiuratio9n dienten.
 
 ---
 > id: measuring
 > section: geometric-construction
 
-## Geometric Construction
+## Geometrisches Konstruktieren
 
-You might have noticed that Euclid’s five axioms don’t contain anything about
-_measuring_ distances or angles. Up to now, this has been a key part of
-geometry, for example to calculate areas and volumes.
+Du hast vielleicht bemerkt, dass die fünf Axiome von Euklid nichts über die
+_Messung_ von Abständen oder Winkeln sagen. Das war schon immer ein wesentlicher Bestandteil der
+Geometrie, z.B. zur Berechnung von Flächen und Volumen.
 
 ::: column.grow
-However, at the times of Thales or Euclid, there wasn’t a universal framework of
-units like we have today. Distances were often measured using body parts, for
-example finger widths, or arm lengths. These are not very accurate and they vary
-for different people.
+Zu Zeiten von Thales oder Euklid gab es jedoch kein allgemein angewandtes System von
+Einheiten, wie wir es heute haben. Abstände wurden oft mittels Körperteilen gemessen, z.B
+. Fingerbreiten oder Armlängen. Diese sind nicht sehr genau und sie unterscheiden sich
+von Mensch zu Mensch.
 
-To measure longer distances, architects or surveyors used _knotted cords_: long
-pieces of string that contained many knots at equal intervals. But these were
-also not perfectly accurate, and different string had the knots placed at
-slightly different distances.
+Um größere Entfernungen zu messen, verwendeten Architekten oder Gutachter _geknotete Schnüre_: lange
+Schnüre, die in gleichen Abständen viele Knoten enthielten. Aber diese waren
+auch nicht ganz genau, und verschiedene Schnüre hatten die Knoten in
+leicht unterschiedlichen Abständen platziert.
 
     figure: x-media(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
@@ -517,15 +517,15 @@ slightly different distances.
 
 :::
 
-Greek mathematicians didn’t want to deal with these approximations. They were
-much more interested in the underlying laws of geometry, than in their practical
-applications.
+Griechische Mathematiker wollten sich nicht wirklich mit diesen Ungenauigkeiten befassen. Sie interessierten sich
+viel mehr für die zugrunde liegenden Gesetze der Geometrie als für ihre praktischen
+Anwendungen.
 
-That’s why they came up with a much more idealised version of our universe: one
-in which points can have no size and lines can have no width. Of course, it is
-[[impossible|very difficult]] to draw these on paper. Visible points will always
-take up some space, and lines will always have some width. This is why our
-drawings are always just “approximations”.
+Deshalb haben sie eine viel idealisiertere Version unseres Universums entwickelt: eine
+, in der Punkte keine Größe und Geraden keine Breite haben können. Natürlich ist es
+[[unmöglich|sehr schwer]], diese auf Papier zu zeichnen. Sichtbare Punkte nehmen immer
+etwas Platz ein, und Geraden haben immer eine gewisse Breite. Aus diesem Grund sind unsere
+Zeichnungen immer nur “Näherungen”.
 
 ---
 > id: tools
@@ -533,9 +533,9 @@ drawings are always just “approximations”.
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
-Euclid’ axioms basically tell us _what’s possible_ in his version of geometry.
-It turns out that we just need two very simple tools to be able to sketch this
-on paper:
+Die Axiome von Euklid sagen uns im Grunde, was in seiner Vorstellung von Geometrie _möglich ist_
+Es stellt sich heraus, dass wir nur zwei sehr einfache Werkzeuge benötigen, um dies
+auf Papier skizzieren zu können:
 
 ::: column(width=320)
 
@@ -546,7 +546,7 @@ on paper:
         path.red(name="l1" x="segment(a,b)" style="display: none")
       x-play-btn
 
-{.text-center} A __straight-edge__ is like a ruler but without any markings. You
+{.text-center} Eine __gerade__ Kante ist wie ein Lineal, aber ohne Markierungen. You
 can use it to connect two points (as in Axiom 1), or to extend a line segment
 (as in Axiom 2).
 
