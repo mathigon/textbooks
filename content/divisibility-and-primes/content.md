@@ -136,7 +136,7 @@ divisible by 2.
 ---
 > id: divisibility5
 
-To see if a number is divisibility by 5 we similarly just have to check that its
+To see if a number is divisible by 5, we similarly just have to check that its
 last digit is 0 or 5:
 
     +grid(30)
