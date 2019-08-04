@@ -358,8 +358,6 @@ These lines are called [__perpendicular__](gloss:perpendicular).
 
 {.r} In this example, we would write  _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. The
 `_|_` symbol simply means _“is perpendicular to”_.
-_{button.next-step} Continue_
-
 :::
 
 ---
