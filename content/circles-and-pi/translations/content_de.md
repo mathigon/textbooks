@@ -714,7 +714,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 Die Verwendung von Radiant hat einen besonders interessanten Vorteil bei der Verwendung 
 der [__Sinus-Funktion__](gloss:sin). Wenn `θ` ein sehr kleiner Winkel ist (weniger als 20° oder 0,3 rad),
-dann gilt `"sin"(θ) ≈ θ`. Zum Beispiel,
+dann gilt `sin(θ) ≈ θ`. Zum Beispiel,
 
 {.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
@@ -922,7 +922,7 @@ Wie du im Diagramm sehen kannst, ist ein [{.red} Kreisbogen](pill:arc) ein Teil 
 ist ein Teil des [[Kreisinhalts|Radius|Umfangs]] eines Kreises.
 
 ::: .reveal(when="blank-0 blank-1")
-Der Kreisbogen zwischen zwei Punkten _A_ und _B_ wird oft als `§arc(AB)` geschrieben. Diese
+Der Kreisbogen zwischen zwei Punkten _A_ und _B_ wird oft als `arc(AB)` geschrieben. Diese
 Definition ist etwas zweideutig: Es gibt einen [{.purple} zweiten Kreisbogen](pill:major),
 der _A_ und _B_ verbindet, aber den anderen Weg um den Kreis herum geht.
 
@@ -955,7 +955,7 @@ des Kreises.
 
 Wir können diese Beziehung in einer Gleichung ausdrücken:
 
-{.text-center} `§ "Kreisbogenlänge" / "Umfang" = blank("Sektorfläche","Kreisradius","Winkelfläche") / "Kreisfläche" = "Mittelpunktswinkel" / blank("360°","180°","90°")`
+{.text-center} `"Kreisbogenlänge" / "Umfang" = blank("Sektorfläche","Kreisradius","Winkelfläche") / "Kreisfläche" = "Mittelpunktswinkel" / blank("360°","180°","90°")`
 :::
 
 ::: column(width=280)
@@ -1093,20 +1093,20 @@ Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel]
 ::: .reveal(when="blank-0")
 Nun können wir die Formel für die Kreisbogenlänge verwenden, die wir oben hergeleitet haben:
 
-{.text-center} `§pill("Kreisbogenlänge","red","arc") / pill("Umfang","blue","circ") = (input(7.2)"°") / "360°"`
+{.text-center} `pill("Kreisbogenlänge","red","arc") / pill("Umfang","blue","circ") = (input(7.2)"°") / "360°"`
 :::
 
 ::: .reveal(when="blank-1")
 Wenn wir diese umformen, stellen wir fest, dass der Umfang der Erde sich so berechnen lässt:
 
-{.text-center} `§pill("Erdumfang","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
+{.text-center} `pill("Erdumfang","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 :::
 
 ::: .reveal(when="blank-2")
 Wie wir wissen, ist der Umfang eines Kreises `u = 2 pi r`, also ist der
 Radius der Erde
 
-{.text-center} `§r_"Erde" = (40000 "km") / (2 pi) ≈ 6400 "km"`.
+{.text-center} `r_"Erde" = (40000 "km") / (2 pi) ≈ 6400 "km"`.
 :::
 
 ::: column(width=300)
@@ -1669,7 +1669,7 @@ Fall erhalten wir einen Kreis und [[einen Kreissektor|ein Kreissegment|einen Kre
 {.reveal(when="blank-0")}Nun müssen wir nur noch die Fläche dieser beiden
 Teilstücke addieren. Die __{.m-yellow}Grundfläche__ ist ein Kreis mit dem Radius _r_. Somit ist seine Fläche gleich
 
-{.text-center.reveal(when="blank-0")} `§pill(A_"Grundfläche","yellow","circle") =`
+{.text-center.reveal(when="blank-0")} `pill(A_"Grundfläche","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
@@ -1721,7 +1721,7 @@ _{span.reveal(when="blank-0")}π r`. Jetzt können wir die Sektorfläche
 mit Hilfe der [Formel](gloss:circle-sector) berechnen, die wir in einem vorherigen Abschnitt hergeleitet haben_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
-| `§pill(A_"Sektor","green","sector")` | `=` | `§pill(A_"Kreis","teal","circle") × pill("Kreisbogen","red","arc") / pill("Umfang","teal","circumference")` |
+| `pill(A_"Sektor","green","sector")` | `=` | `pill(A_"Kreis","teal","circle") × pill("Kreisbogen","red","arc") / pill("Umfang","teal","circumference")` |
 |                | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 :::
 
@@ -1855,7 +1855,7 @@ dieser beiden Körper in einem Abstand der __{span.pill.blue.step-target(data-to
 rechtwinkligen Dreiecks_, so dass wir den [Satz des Pythagoras](gloss:pythagoras-theorem) anwenden können:
 
 ::: .reveal(when="blank-0")
-{.text-center} `§pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
+{.text-center} `pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
 
 Damit ergibt sich die Fläche des Querschnitts
 

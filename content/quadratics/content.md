@@ -2106,7 +2106,7 @@ IF YOU CAN, DRAW A SKETCH FIRST. A PICTURE SPEAKS 1001 WORDS!
 
 ---
 
-EXAMPLE 89: How many times does the graph of `y=−x^2+4x−5 cross the x-axis?`
+EXAMPLE 89: How many times does the graph of `y=−x^2+4x−5` cross the x-axis?
 
 Answer: We have y=−x(x−4)−5 and so x=0 and x=4 are interesting. (They both give y=−5.)
 
@@ -2204,7 +2204,7 @@ b) Explain why the vertex of its graph occurs at `x=−b/(2a)`.
 
 COMMENT: Many curricula have students memorise this result. For example, given
 `y=3x2+4x+8`, say, they like students to be able to say that its vertex lies at
-`x=−b2a=−42⋅3=−23`. If speed is important to you, then great! If not, there is
+`x=−b2a=−42*3=−23`. If speed is important to you, then great! If not, there is
 nothing wrong with writing y=x(3x+4)+8 and saying that the vertex is halfway
 between x=0 and x=−43.
 
