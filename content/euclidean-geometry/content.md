@@ -356,8 +356,8 @@ __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
 The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
 These lines are called [__perpendicular__](gloss:perpendicular).
 
-{.r} In this example, we would write  _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. The
-`_|_` symbol simply means _“is perpendicular to”_.
+{.r} In this example, we would write  _{.b.m-blue}a_ `⊥` _{.b.m-green}b_. The
+`⊥` symbol simply means _“is perpendicular to”_.
 :::
 
 ---
@@ -633,7 +633,7 @@ is indeed an equilateral triangle._
     // 
     // A line, segment, or ray that passes through a midpoint of another segment 
     // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
-    // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) _|_ bar(DE)`.
+    // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) ⊥ bar(DE)`.
 
 ---
 > id: angle-bisector
@@ -708,7 +708,7 @@ temple that was _exactly twice_ the volume of the existing one.
 Note that _doubling the volume_ is not the same as _doubling an edge of the
 cube_. In fact, if the [[3-dimensional|2-dimensional|1-dimensional]] volume
 increases by a factor of 2, the [[1-dimensional|3-dimensional|2-dimensional]]
-edge of the cube will increase by a factor of `root(3)(2)`.
+edge of the cube will increase by a factor of `root(2,3)`.
 
 ---
 > id: impossible-1
