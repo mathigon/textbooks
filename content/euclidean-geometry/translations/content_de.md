@@ -12,7 +12,7 @@ berechnen oder die Größe der landwirtschaftlichen Nutzfläche zu schätzen.
 
 Mathematiker im antiken Griechenland, um 500 v. Chr., waren von mathematischen
 Mustern begeistert und wollten sie erforschen und erklären. Zum ersten Mal begannen
-sie, Mathematik nur “zum Spaß” zu studieren, ohne eine bestimmte Anwendung im Sinn zu haben. 
+sie, Mathematik nur „zum Spaß“ zu studieren, ohne eine bestimmte Anwendung im Sinn zu haben. 
 ::: column(width=300)
 
     x-media(src="images/tablet.jpg" width=300 height=210)
@@ -30,18 +30,18 @@ Einer dieser Mathematiker war [Thales von Milet](bio:thales), der eine
 
 ::: column.grow
 Wähle zuerst zwei Punkte irgendwo in dem Feld auf der linken Seite aus.
-_{span.reveal(when="p1 p2")} Wir wollen diese Punkte mit einem Halbkreis verbinden._
+_{span.reveal(when="p1 p2")} Nun wollen wir diese Punkte mit einem Halbkreis verbinden._
 
 {.reveal(when="p1 p2")} Wähle jetzt einen dritten Punkt, der irgendwo auf dem
 [Kreisbogen](target:circumf) des Halbkreises liegt.
 
-{.reveal(when="p3")} Als nächstes zeichnen wir das [Dreieck], das aus den
-beiden Eckpunkten des Halbkreises(target:triangle) und dem auf dem
+{.reveal(when="p3")} Als nächstes zeichnen wir das [Dreieck](target:triangle), das aus den
+beiden Eckpunkten des Halbkreises und dem auf dem
 Kreisbogen gewählten Punkt gebildet wird.
 
-{.reveal(when="p3" delay=1000)} Schau was mit dem [Winkel](target:angle) oben im Dreieck
-passiert wenn du die Position der drei Punkte verschiebst.
-_{span.reveal(when="move")} Wie es aussieht, hat er immer [[90]]°!_
+{.reveal(when="p3" delay=1000)} Versuche, die Position der drei Punkte zu verschieben und
+beobachte, was mit dem [Winkel](target:angle) oben im Dreieck passiert.
+_{span.reveal(when="move")} Es scheint, als wäre er immer [[90]]° groß!_
 _{span.reveal(when="blank-0")} Das bedeutet, dass das Dreieck
 [[rechtwinklig|gleichseitig|spitzwinklig]] ist._
 :::
@@ -59,7 +59,7 @@ opferte, um den Göttern zu danken.
 
 Doch die bloße _Beobachtung_ einer solchen Verbindung reichte Thales nicht aus,
 er wollte verstehen, _warum_ das so ist, und überprüfen, ob das _immer_ gilt
-- nicht nur in den wenigen Beispielen, die er ausprobiert hat.
+ und nicht nur in den wenigen Beispielen, die er ausprobiert hatte.
 
 Ein Argument, das logisch erklärt, warum etwas
 wahr sein muss, wird als [__Beweis__](gloss:proof) bezeichnet. In den folgenden Kursen
@@ -70,7 +70,7 @@ _Satz des Thales_ zu beweisen.
 > id: applications
 
 Aber Geometrie ist nicht nur für den Nachweis von Sätzen nützlich - sie ist überall um
-uns herum, in der Natur, in der Architektur, in der Technik und im Design. Wir brauchen Geometrie für
+uns herum: in der Natur, in der Architektur, in der Technik und im Design. Wir brauchen Geometrie für
 alles, von der Entfernungsmessung über den Bau von Wolkenkratzern bis hin zur Entsendung von
 Satelliten ins All. Hier sind noch ein paar weitere Beispiele:
 
@@ -141,8 +141,8 @@ Position, haben aber selbst keine _Größe_ oder _Form_. Sie werden mit
 Großbuchstaben bezeichnet.
 
 {.r} In Mathigon zeigen [große, ausgefüllte Punkte](target:move) interaktive Punkte an, die
-du bewegen kannst, während [kleinere, nicht ausgefüllte Punkte](target:no-move) fixe Punkte anzeigen
-, die du nicht bewegen kannst
+du bewegen kannst, während [kleinere, nicht ausgefüllte Punkte](target:no-move) fixe Punkte anzeigen,
+die du nicht bewegen kannst.
 _{button.next-step} Weiter_
 :::
 
@@ -185,8 +185,8 @@ _{button.next-step} Weiter_
       path.blue(x="segment(c,d)")
 
 ::: column.grow
-{.r}Eine [__Strecke__](gloss:line-segment)ist der Abschnitt einer Geraden zwischen zwei
-Punkten, ohne sich bis ins Unendliche zu erstrecken. Wir können sie genau wie Geraden beschriften, aber
+{.r} Eine [__Strecke__](gloss:line-segment) ist der Abschnitt einer Geraden zwischen zwei
+Punkten, und geht in beiden Richtungen nicht unendlich weiter. Wir können sie genau wie Geraden beschriften, aber
 ohne Pfeilspitzen auf dem Strich darüber: `bar(AB)` oder `bar(BA)`. Auch hier spielt
 die Reihenfolge der Punkte keine Rolle.
 _{button.next-step} Weiter_
@@ -206,12 +206,12 @@ _{button.next-step} Weiter_
       path.yellow(x="ray(a,b)")
 
 ::: column.grow
-Ein [__Strahl__](gloss:ray) ist etwas zwischen einer _Geraden_ und einer _Strecke_:
-er erstreckt sich nur auf einer Seite bis zur Unendlichkeit. Du kannst dir das wie _Sonnenstrahlen_ vorstellen:
+Ein [__Strahl__](gloss:ray) liegt zwischen einer _Geraden_ und einer _Strecke_:
+er geht nur auf einer Seite unendlich weiter. Du kannst dir das wie _Sonnenstrahlen_ vorstellen:
 Sie beginnen an einem Punkt (der Sonne) und gehen dann für immer weiter.
 
 {.r} Bei der Beschriftung von Strahlen zeigt der Pfeil die Richtung an, in die er sich bis zur
-Unendlichkeit erstreckt, z.B. "vec(AB)`. Diesmal spielt die Reihenfolge der Punkte _eine_ Rolle.
+Unendlichkeit erstreckt, z.B. `vec(AB)`. Diesmal spielt die Reihenfolge der Punkte _eine_ Rolle.
 _{button.next-step} Weiter_
 :::
 
@@ -230,7 +230,7 @@ _{button.next-step} Weiter_
       path.blue(x="circle(b,60)")
 
 ::: column.grow
-{.r}Ein [__Kreis__](gloss:circle) ist die Ansammlung von Punkten, die alle den
+{.r} Ein [__Kreis__](gloss:circle) ist die Ansammlung von Punkten, die alle den
 gleichen [Abstand](target:radius) zu einem Punkt in der Mitte haben. Dieser Abstand
 wird als [__Radius__](gloss:circle-radius) bezeichnet.
 _{button.next-step} Weiter_
@@ -250,10 +250,10 @@ _{button.next-step} Weiter_
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-colour="white")
 
 ::: column.grow
-Die beiden Formen auf der rechten Seite stimmen im Wesentlichen überein. Sie haben die gleiche Größe
+Die beiden Figuren auf der rechten Seite stimmen im Wesentlichen überein. Sie haben die gleiche Größe
 und Form, und wir könnten durch [drehen und verschieben](target:move) einen von ihnen exakt über
-den anderen legen. In der Geometrie sagen wir, dass die beiden Formen 
-[__kongruent]__(gloss:congruent) oder deckungsgleich sind.
+den anderen legen. In der Geometrie sagen wir, dass die beiden Figuren
+[__kongruent__](gloss:congruent) oder deckungsgleich sind.
 
 Das Symbol für Kongruenz ist `≅`. Wir würden also sagen, dass `A ≅ B`.
 :::
@@ -306,11 +306,11 @@ kongruent sein können:
 Zwei Strecken sind kongruent, wenn sie [[die gleiche Länge haben|sich schneiden]]. Zwei
 Winkel sind kongruent, wenn sie [[die gleiche Größe haben|sich an einem Punkt treffen]] (in Grad).
 
-Beachte, dass _“Kongruenz”_ nicht _“gleich”_ bedeutet. Beispielsweise müssen kongruente
+Beachte, dass _“kongruent”_ nicht _“gleich”_ bedeutet. Beispielsweise müssen kongruente
 Geraden und Winkel nicht in die gleiche Richtung zeigen. Dennoch hat die _Kongruenz_
 viele der Eigenschaften die auch die _Gleichheit_ hat:
 
-* Kongruenz ist __symmetrisch__: wenn `X ≅ Y` dann auch `Y ≅ X`.
+* Kongruenz ist __symmetrisch__: wenn `X ≅ Y` dann gilt auch `Y ≅ X`.
 * Kongruenz ist __reflexiv__: jede Form ist kongruent zu sich selbst. Zum Beispiel: `A ≅ A`.
 * Kongruenz ist __übertragbar__: wenn `X ≅ Y` und `Y ≅ Z` dann gilt auch `X ≅ Z`.
 
@@ -329,17 +329,17 @@ viele der Eigenschaften die auch die _Gleichheit_ hat:
       path.yellow(x="l2.shift(-30,40)" mark="arrow2" label="e")
 
 ::: column.grow
-Zwei Geraden, die sich nie schneiden, werden als [__Parallele__](gloss:parallel) bezeichnet,
-sie zeigen in die gleiche Richtung, und der Abstand zwischen ihnen ist
-[[immer gleich|zunehmend|abnehmend]].
+Zwei Geraden, die sich nie schneiden, werden als [__Parallele__](gloss:parallel) bezeichnet.
+Sie zeigen in die gleiche Richtung, und der Abstand zwischen ihnen
+[[ist immer gleich|nimmt zu|nimmt ab]].
 
-{.reveal(when="blank-0")} Ein gutes Beispiel für parallele Linien im wirklichen Leben sind
+{.reveal(when="blank-0")} Ein gutes Beispiel für parallele Geraden im wirklichen Leben sind
 _Eisenbahngleise_. Beachte jedoch, dass mehr als zwei Geraden parallel
 zueinander sein können!
 
-{.reveal(when="blank-0")} In Diagrammen bezeichnen wir parallele Linien, indem wir einen oder
-mehrere kleine Pfeile hinzufügen. In diesem Beispiel schreiben wir __{.m-red}`a ∥ b ∥ c`__ und
-__{.m-yellow}`d ∥ e`__. Das Symbol `∥` bedeutet einfach _“parallel zu”_.
+{.reveal(when="blank-0")} In Diagrammen bezeichnen wir parallele Geraden, indem wir einen oder
+mehrere kleine Pfeile hinzufügen. In diesem Beispiel sind __{.m-red}`a ∥ b ∥ c`__ und
+__{.m-yellow}`d ∥ e`__. Das Symbol `∥` bedeutet einfach _"ist parallel zu"_.
 :::
 
 ---
@@ -356,8 +356,8 @@ __{.m-yellow}`d ∥ e`__. Das Symbol `∥` bedeutet einfach _“parallel zu”_.
 Das Gegenteil von _parallel_ sind zwei Geraden, die sich in einem Winkel von 90° (rechter Winkel) treffen.
 Solche Geraden werden als [__Normale__](gloss:perpendicular) bezeichnet.
 
-{.r} In diesem Beispiel würden wir schreiben: _{.b.m-blue}a_ `_|_` _{.b.m-green}b_. Das Symbol 
-`_|_` bedeutet einfach _“ist normal auf”_.
+{.r} In diesem Beispiel würden wir _{.b.m-blue}a_ `_|_` _{.b.m-green}b_ schreiben. Das
+`_|_` Symbol bedeutet einfach _"ist senkrecht zu"_.
 _{button.next-step} Weiter_
 
 :::
@@ -366,7 +366,7 @@ _{button.next-step} Weiter_
 > id: euclid
 > section: euclids-axioms
 
-## Euklids Axiome
+## Satz des Euklid
 
 ::: column.grow
 Griechische Mathematiker erkannten, dass man, um formale Beweise zu schreiben, eine Art
@@ -393,7 +393,7 @@ bezeichnet wird, veröffentlichte die fünf Axiome der Geometrie:
       circle.move(name="b" cx=190 cy=30 target="1_point")
 
 {.text-center }__Erstes Axiom__  
-Man kann beliebige [zwei Punkte](target:1_point) mit genau einer geraden
+Man kann [zwei beliebige Punkte](target:1_point) mit genau einer geraden
 [Strecke](target:1_line) verbinden.
 
 ::: column(width=220)
@@ -405,8 +405,8 @@ Man kann beliebige [zwei Punkte](target:1_point) mit genau einer geraden
       circle.move(name="d" cx=180 cy=60 target="2_segment")
 
 {.text-center }__Zweites Axiom__  
-Man kann jede beliebige [Strecke](target:2_segment) unendlich weit <br>
- zu einer Geraden verlängern.
+Man kann jede beliebige [Strecke](target:2_segment) unendlich weit<br>
+zu einer Geraden verlängern.
 
 ::: column(width=220)
 
@@ -417,8 +417,8 @@ Man kann jede beliebige [Strecke](target:2_segment) unendlich weit <br>
       circle.move(name="f" cx=170 cy=130)
 
 {.text-center }__Drittes Axiom__  
-Bei einem gegebenen [Punkt _P_](target:3_center) und einem [Abstand _r_](target:3_radius)
- kann man einen [Kreis](target:3_circle) mit dem Mittelpunkt _P_ und dem Radius _r_ zeichnen.
+Mit einem gegebenen [Punkt _P_](target:3_center) und einem [Abstand _r_](target:3_radius) kann
+man einen [Kreis](target:3_circle) mit dem Mittelpunkt _P_ und dem Radius _r_ zeichnen.
 
 ::: column(width=220)
 
@@ -450,7 +450,7 @@ Zwei beliebige rechte Winkel sind kongruent.
 {.text-center }__Fünftes Axiom__  
 Zu einer gegebenen [Geraden _g_](target:5_line) und einem [Punkt _P_](target:5_point) nicht auf _g_,
 gibt es genau [eine Gerade](target:5_parallel) durch _P_, die
-[parallel](gloss:parallel) zu _g_ ist .
+[parallel](gloss:parallel) zu _g_ ist.
 :::
 
 {.r} _{button.next-step} Weiter_
@@ -461,10 +461,10 @@ gibt es genau [eine Gerade](target:5_parallel) durch _P_, die
 ::: column.grow
 Jedes dieser Axiome sieht ziemlich offensichtlich und selbstverständlich aus, aber zusammen
 bilden sie die Grundlage der Geometrie und können verwendet werden, um fast alles
-andere abzuleiten. Laut keinem Geringeren als [Isaac Newton](bio:newton) ist _“es das großartige an
-der Geometrie, dass mit so wenigen Prinzipien so viel erreicht werden kann”_.
+andere abzuleiten. Laut keinem Geringeren als [Isaac Newton](bio:newton) ist _"es das Großartige an
+der Geometrie, dass mit so wenigen Prinzipien so viel erreicht werden kann"_.
 
-Euklid veröffentlichte die fünf Axiome in seinem Buch _“Elemente”_. Es ist das erste Beispiel
+Euklid veröffentlichte die fünf Axiome in seinem Buch _"Elemente"_. Es ist das erste Beispiel
 eines systematischen Ansatzes in der Geschichte der Mathematik und wurde als
 Mathematik-Lehrbuch über Tausende von Jahren verwendet.
 
@@ -474,19 +474,19 @@ Mathematik-Lehrbuch über Tausende von Jahren verwendet.
 
 :::
 
-Einer derjenigen, die Euklids Arbeit studierten, war der amerikanische Präsident[Thomas
-Jefferson](bio:jefferson). Als er 1776 die Unabhängigkeitserklärung schrieb, wollte
+Einer derjenigen, die Euklids Arbeit studierten, war der amerikanische Präsident
+[Thomas Jefferson](bio:jefferson). Als er 1776 die Unabhängigkeitserklärung schrieb, wollte
 er einen ähnlichen Ansatz verfolgen. Er beginnt mit einigen wenigen, einfachen
-“Axiomen” und “beweist” dann komplexere Ergebnisse:
+"Axiomen" und "beweist" dann komplexere Ergebnisse:
 
     .parchment “Wir halten diese Wahrheiten für ausgemacht, daß alle Menschen gleich erschaffen worden, daß sie von ihrem Schöpfer mit gewissen unveräußerlichen Rechten begabt worden, worunter sind Leben, Freyheit und das Bestreben nach Glückseligkeit.”
 
 {.text-center.follows} `=>`
 
-    .parchment Wir erklären daher … , daß diese Vereinigten Colonien Freye und Unabhängige Staaten sind, und von Rechtswegen seyn sollen.”
+    .parchment “Wir erklären daher … , daß diese Vereinigten Colonien Freye und Unabhängige Staaten sind, und von Rechtswegen seyn sollen.”
 
 Dies ist nur ein Beispiel dafür, dass Euklids Ideen in der Mathematik
-auch auf ganz anderen Gebieten als Inspiuratio9n dienten.
+auch auf ganz anderen Gebieten als Inspiration dienten.
 
 ---
 > id: measuring
@@ -495,8 +495,8 @@ auch auf ganz anderen Gebieten als Inspiuratio9n dienten.
 ## Geometrisches Konstruktieren
 
 Du hast vielleicht bemerkt, dass die fünf Axiome von Euklid nichts über die
-_Messung_ von Abständen oder Winkeln sagen. Das war schon immer ein wesentlicher Bestandteil der
-Geometrie, z.B. zur Berechnung von Flächen und Volumen.
+_Messung_ von Abständen oder Winkeln sagen, was schon immer ein wesentlicher Bestandteil der
+Geometrie, z.B. zur Berechnung von Flächen und Volumen, gewesen ist.
 
 ::: column.grow
 Zu Zeiten von Thales oder Euklid gab es jedoch kein allgemein angewandtes System von
@@ -525,7 +525,7 @@ Deshalb haben sie eine viel idealisiertere Version unseres Universums entwickelt
 , in der Punkte keine Größe und Geraden keine Breite haben können. Natürlich ist es
 [[unmöglich|sehr schwer]], diese auf Papier zu zeichnen. Sichtbare Punkte nehmen immer
 etwas Platz ein, und Geraden haben immer eine gewisse Breite. Aus diesem Grund sind unsere
-Zeichnungen immer nur “Näherungen”.
+Zeichnungen immer nur "Näherungen".
 
 ---
 > id: tools
@@ -533,7 +533,7 @@ Zeichnungen immer nur “Näherungen”.
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
-Die Axiome von Euklid sagen uns im Grunde, was in seiner Vorstellung von Geometrie _möglich ist_
+Die Axiome von Euklid sagen uns im Grunde, was in seiner Vorstellung von Geometrie _möglich ist_.
 Es stellt sich heraus, dass wir nur zwei sehr einfache Werkzeuge benötigen, um dies
 auf Papier skizzieren zu können:
 
@@ -546,9 +546,9 @@ auf Papier skizzieren zu können:
         path.red(name="l1" x="segment(a,b)" style="display: none")
       x-play-btn
 
-{.text-center} Eine __gerade__ Kante ist wie ein Lineal, aber ohne Markierungen. You
-can use it to connect two points (as in Axiom 1), or to extend a line segment
-(as in Axiom 2).
+{.text-center} Eine __gerade Leiste__ die nichts anderes als ein Lineal ohne Zentimeterskala ist. Du
+kannst damit zwei Punkte verbinden (wie in Axiom 1) oder eine Strecke
+erweitern (wie in Axiom 2).
 
 ::: column.reveal(width=300 when="play-l1")
 
@@ -560,33 +560,33 @@ can use it to connect two points (as in Axiom 1), or to extend a line segment
         path.red(name="c1" x="arc(c,d,1.99*pi)" style="display: none")
       x-play-btn
 
-{.text-center} A __compass__ allows you to draw a circle of a given size around
-a point (as in Axiom 3).
+{.text-center} Mit einem __Zirkel__ kannst du einen Kreis einer bestimmten Größe um
+einen Punkt zeichnen (wie in Axiom 3).
 :::
 
 ---
 > id: construction
 
-Axioms 4 and 5 are about comparing properties of shapes, rather than drawing
-anything. Therefore they don’t need specific tools.
+Bei den Axiomen 4 und 5 geht es darum, die Eigenschaften von Figuren zu vergleichen,
+anstatt etwas zu zeichnen. Daher werden dafür keine speziellen Werkzeuge benötigt.
 
 ::: column.grow
-You can imagine that Greek mathematicians were thinking about Geometry on the
-beach, and drawing different shapes in the sand: using long planks as
-straight-edge and pieces of string as compass.
+Du kannst dir das Ganze so vorstellen, dass griechische Mathematiker über die Geometrie am
+Strand nachdachten und verschiedene Figuren in den Sand zeichneten: mit langen Stecken als
+Lineal und Schnurstücken als Zirkel.
 
-Even though these tools look very primitive, you can draw a great number of
-shapes with them. This became almost like a puzzle game for mathematicians:
-trying to find ways to “construct” different geometric shapes using just a
-straight-edge and compass.
+Obwohl diese Werkzeuge sehr primitiv aussehen, kann man mit ihnen eine große Anzahl von
+Figuren zeichnen. Das wurde fast wie ein Quizspiel für Mathematiker:
+Wie kann man verschiedene geometrische Figuren nur mit einer
+geraden Leiste und einem Zirkel "konstruieren"?
 
 ::: column(width=340)
 
     x-media(src="images/archimedes.jpg" width=340 height=265)
 
-{.caption} The Greek Mathematician [Archimedes](bio:archimedes) was studying
-Geometry when he was killed by Roman invaders. His last words were “do not
-disturb my circles”.
+{.caption} Der griechische Mathematiker [Archimedes](bio:archimedes) beschäftigte sich mit
+Geometrie, als er von römischen Eroberern getötet wurde. Seine letzten Worte waren: "Stört meine
+Kreise nicht".
 :::
 
 ---
@@ -598,51 +598,51 @@ disturb my circles”.
     x-geopad.sticky(width=320 tools="move|line|circle" intersect=true): svg
 
 ::: column.grow
-{.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
-straight-edge and compass.
+{.task} Zeichne ein [gleichseitiges Dreieck](gloss:equilateral-triangle) nur mit einer
+geraden Leiste und einem Zirkel.
 
-To begin, draw a line segment anywhere in a box on the right. With the
-<x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target>
-selected, simply drag from start to end. This segment will be one of the sides
-of the triangle.
+Zeichne zunächst eine Strecke an einer beliebigen Stelle im Feld rechts. Wähle das
+<x-target no-margins to="#equilateral .tool:nth-child(3)">Linienwerkzeug</x-target>
+aus und ziehe damit einfach vom Anfang bis zum Ende. Diese Strecke wird eine der Seiten
+des Dreiecks sein.
 
-{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
-of the line segments as center, and go through the other endpoint. With
-the <x-target no-margins to="#equilateral .tool:nth-child(5)">circle tool</x-target> selected,
-simply drag from one endpoint to the other.
+{.reveal(when="segment0")} Zeichne anschließend zwei Kreise, die jeweils einen der Endpunkte
+der Strecke als Mittelpunkt haben und durch den anderen Endpunkt gehen. Wähle das
+<x-target no-margins to="#equilateral .tool:nth-child(5)">Kreiswerkzeug</x-target>
+aus und ziehe damit einfach jeweils von einem Endpunkt zum anderen.
 
-{.reveal(when="circle1 circle2")} We already have two vertices of the triangle,
-and the third one is the intersection of the two circles. Use the line tool
-again to draw the two missing sides and complete the triangle.
+{.reveal(when="circle1 circle2")} Wir haben bereits zwei Eckpunkte des Dreiecks,
+und der dritte ist der Schnittpunkt der beiden Kreise. Verwende das Linienwerkzeug
+erneut, um die beiden fehlenden Seiten zu zeichnen und das Dreieck zu vervollständigen.
 
-{.reveal(when="segment1 segment2")} Now [these two sides](target:a) and
-[these two sides](target:b) are each [[radii|diameters|circumferences]] of the
-same circle, _{span.reveal(when="blank-0")} so they must have the same length.
-In other words, all three sides of the triangle are congruent – and therefore it
-is indeed an equilateral triangle._
+{.reveal(when="segment1 segment2")} Da [diese beiden Seiten](target:a) und
+[diese beiden Seiten](target:b) jeweils die [[Radien|Durchmesser|Umfänge]] des
+gleichen Kreises sind, _{span.reveal(when="blank-0")} müssen sie die gleiche Länge haben.
+Mit anderen Worten, alle drei Seiten des Dreiecks sind kongruent - und damit
+ist es tatsächlich ein gleichseitiges Dreieck._
 :::
 
 ---
 > id: perp-bisector
 
-### Midpoints and Perpendicular Bisectors
+### Mittelpunkte und Streckensymmetralen (Mittelsenkrechte)
 
-{.todo} COMING SOON – Constructing Midpoints and Perpendicular Bisectors
+{.todo} Demnächst - Konstruktion von Mittelpunkten und Mittelsenkrechten
 
-    // A midpoint is a point on a line segment that divides it into two congruent
-    // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
+    // Ein Mittelpunkt ist ein Punkt auf einer Strecke, der ihn in zwei kongruente
+    // Segmente unterteilt. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
     // `bar(AC)`.
     // 
-    // A line, segment, or ray that passes through a midpoint of another segment 
-    // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
-    // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) _|_ bar(DE)`.
+    // Eine Gerade, eine Strecke oder ein Strahl, die im rechten Winkel durch den Mittelpunkt einer anderen Strecke 
+    // verläuft, wird als __Streckensymmetrale__ bezeichnet. `bar(DE)` ist der
+    // Senkrechthälfte von `bar(AC)`, also `bar(AB) ~= bar(BC)` und `bar(AC) _|_ bar(DE)`.
 
 ---
 > id: angle-bisector
 
-### Angle Bisectors
+### Winkelsymmetrale (Winkelhalbierende)
 
-{.todo} COMING SOON – Constructing Angle Bisectors
+{.todo} Demnächst - Konstruktion von Winkelhalbierenden
 
     // When two rays have the same endpoint, an angle is created.
     // 
@@ -663,7 +663,7 @@ is indeed an equilateral triangle._
 ---
 > id: parallel-perp
 
-### Parallel and Perpendicular Lines
+### Parallele und normale Geraden
 
 {.todo} COMING SOON – Constructing Parallel and Perpendicular Lines
 
@@ -686,17 +686,17 @@ is indeed an equilateral triangle._
 ---
 > id: impossible
 
-### Impossible Constructions
+### Unmögliche Konstruktionen
 
-In the following courses, we will see even more shapes that can be constructed
-like this. However, there is a limit to Euclidean geometry: some constructions
-are simply impossible using just straight-edge and compass.
+In den folgenden Kursen werden wir noch mehr Figuren sehen, die auf
+dieselbe Weise konstruiert werden können. Allerdings gibt es eine Grenze für die euklidische Geometrie: Einige Konstruktionen
+sind nur mit einer geraden Leiste und einem Zirkel schlicht unmöglich.
 
 ::: column.grow
-According to legend, the city of Delos in ancient Greece was once faced with a
-terrible plague. The oracle in Delphi told them that this was a punishment from
-the gods, and the plague would go away if they built a new altar for their
-temple that was _exactly twice_ the volume of the existing one.
+Der Legende nach war die Stadt Delos im antiken Griechenland einst mit einer
+schrecklichen Pest konfrontiert. Das Orakel in Delphi sagte, dass dies eine Strafe der
+Götter sei, und dass die Pest verschwinden würde, wenn sie einen neuen Altar für ihren
+Tempel bauen würden, mit _genau dem doppelten_ Volumen des vorhandenen.
 
     figure: img(src="images/altar.svg" width=320 height=140)
 
@@ -704,68 +704,68 @@ temple that was _exactly twice_ the volume of the existing one.
 
     x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
     
-{.caption} A reconstruction of a temple in Delphi
+{.caption} Eine Rekonstruktion eines Tempels in Delphi
 :::
 
-Note that _doubling the volume_ is not the same as _doubling an edge of the
-cube_. In fact, if the [[3-dimensional|2-dimensional|1-dimensional]] volume
-increases by a factor of 2, the [[1-dimensional|3-dimensional|2-dimensional]]
-edge of the cube will increase by a factor of `root(3)(2)`.
+Beachte, dass die _Verdoppelung des Volumens_ nicht dasselbe ist wie die _Verdoppelung der Kantenlänge des
+Würfels_. Wenn das [[3-dimensionale|2-dimensionale|1-dimensionale]] Volumen
+um den Faktor 2 zunimmt, wird die [[1-dimensionale|3-dimensionale|2-dimensionale]]
+Würfelkante nämlich um den Faktor `root(3)(2)` vergrößert.
 
 ---
 > id: impossible-1
 
-This still sounds pretty simple, but doubling the cube is actually impossible
-in [Euclidean geometry](gloss:euclidean-geometry), using only straight-edge and
-compass! For the citizens of Delos this unfortunately meant that all hope was
-lost. There are two other constructions that are famously impossible.
-Mathematicians devoted a great amount of time trying to find a solution – but
-without success:
+Das klingt immer noch ziemlich einfach, aber eine Verdoppelung
+eines Würfels ist in der [euklidischen Geometrie](gloss:euclidean-geometry) unter
+Verwendung von nur einer geraden Leiste und einem Zirkel unmöglich! Für die Bürger von Delos bedeutete dies leider, dass alles hoffnungslos
+war. Es gibt zwei weitere Konstruktionen, die berümt dafür sind unmöglich zu sein.
+Mathematiker widmeten der Suche nach einer Lösung viel Zeit - aber
+ohne Erfolg:
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Trisecting the angle__  
-We already know how to bisect angles. However it is impossible to similarly
-split an angle into _three_ equal parts.
+{.text-center} __{.m-red} Dreiteilung des Winkels__  
+Wir wissen bereits, wie man Winkel halbiert. Es ist jedoch nicht möglich, einen Winkel auf ähnliche Weise
+in _drei_ gleiche Teile zu teilen.
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Doubling the cube__  
-Given the edge of a cube, it is impossible to construct the edge of another cube
-that has exactly twice the volume.
+{.text-center} __{.m-blue} Würfelverdoppelung__  
+Bei gegebener Würfelkantenlänge ist es unmöglich, die Kantenlänge eines anderen Würfels
+zu konstruieren, der genau das doppelte Volumen hat.
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Squaring the circle__  
-Given a circle, it is impossible to construct a square that has exactly the same
-area.
+{.text-center} __{.m-green} Quadratur des Kreises__  
+Zu einem Kreis ist es unmöglich, ein Quadrat zu konstruieren, das genau die gleiche
+Fläche hat.
 :::
 
-Note that these problems can all be solved quite easily with algebra, or using
-marked rulers and protractors. But they are impossible if you are just allowed to
-use straight-edge and compass.
+Beachte, dass diese Probleme alle ganz einfach durch Rechnen oder mit
+Linealen und Winkelmessern mit einer Skalierung gelöst werden können. Aber sie sind unmöglich, wenn man nur eine gerade Leiste und einen Zirkel
+benutzen darf.
 
 ---
 > id: origami
 > section: origami
 > sectionBackground: dark
 
-## Origami and Paper Folding
+## Origami und Papierfalten
 
-Using straight-edge and compass is not the only way to construct geometric
-shapes. Another technique uses no tools at all: __Origami__.
+Die Verwendung von einem Lineal und einem Zirkel ist nicht die einzige Möglichkeit,
+geometrische Figuren zu konstruieren. Eine andere Technik verwendet überhaupt keine Werkzeuge: __Origami__.
 
-The word _Origami_ (折り紙) comes from the Japanese _oru_ (to fold) and _kami_
-(paper). The goal is to make objects out of one or more sheets of paper,
-without any additional tools like glue or scissors. You can create incredibly
-beautiful and impressive designs – all of these figures were built using nothing
-but rectangular sheets of paper:
+Das Wort _Origami_ (折り紙) ergibt sich aus dem japanischen _oru_ (falten) und _kami_
+(Papier). Ziel ist es, Objekte aus einem oder mehreren Blättern Papier herzustellen,
+ohne zusätzliche Werkzeuge wie Kleber oder Schere zu verwenden. Man kann unglaublich
+schöne und beeindruckende Designs entwerfen - alle diese Figuren wurden aus nichts anderem
+als rechteckigen Papierblättern gebaut:
 
 ::: column(width=186)
     x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
@@ -785,116 +785,116 @@ but rectangular sheets of paper:
 > id: crane
 > goals: video
 
-Building shapes like this can take a lot of time, and it is important to be
-extremely accurate. But with a bit of practice, you can do it yourself!
+Das Erstellen solcher Formen kann viel Zeit in Anspruch nehmen,
+und es ist wichtig, dabei extrem genau zu arbeiten. Aber mit ein wenig Übung schaffst du das selbst auch!
 
 ::: column.sticky-video(width=360)
 
     x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
-{.step.active(data-t=0)} You just need a square sheet of paper. To start, fold
-the sheet along its two diagonals.
+{.step.active(data-t=0)} Du brauchst nur ein quadratisches Blatt Papier. Falte
+das Blatt zuerst entlang seiner beiden Diagonalen.
 
-{.step(data-t=16)} Next, fold it along its horizontal and vertical centers – but
-in the opposite direction.
+{.step(data-t=16)} Als nächstes falte es jeweils horizontal und vertikal in der Mitte - allerdings
+in die entgegengesetzte Richtung.
 
-{.step(data-t=38)} Now take two opposite corners of the sheet and bring them
-together as shown. This forms a smaller square which is open at the bottom.
+{.step(data-t=38)} Nimm nun zwei gegenüberliegende Ecken des Blatts und falte sie wie gezeigt
+zusammen. Es entsteht ein kleineres Quadrat, das nach unten offen ist.
 
-{.step(data-t=51)} Fold the left and right corners of the square towards its
-center line. Then turn it over and repeat the same.
+{.step(data-t=51)} Falte die linke und rechte Ecke des Quadrats in Richtung
+Mittellinie. Dann drehe es um und wiederhole das.
 
-{.step(data-t=83)} Now fold the top triangle down, along the horizontal line,
-and then open up the folds from the last two steps.
+{.step(data-t=83)} Falte nun das obere Dreieck entlang der horizontalen Linie nach unten
+und öffne dann die Falten aus den letzten beiden Schritten.
 
-{.step(data-t=99)} This one is difficult: take the bottom corner of the paper
-and fold it all the way up, along the horizontal line you just created. Some of
-the folds you made before will be inverted. Then turn over and repeat.
+{.step(data-t=99)} Jetzt wird's schwierig: Nimm die untere Ecke des Papiers
+und falte sie entlang der horizontalen Linie, die du gerade erstellt hast, ganz nach oben. Einige
+der Faltlinien, die du vorher gemacht hast, werden umgekehrt. Dann dreh das Blatt um und wiederhole die Schritte.
 
-{.step(data-t=135)} Make sure the two “legs” are pointing down. Then take the
-left and right corner and fold them towards the center line. Turn over and
-repeat.
+{.step(data-t=135)} Achte darauf, dass die beiden "Beine" nach unten zeigen. Dann nimm die
+linke und rechte Ecke und falte sie zur Mittellinie. Dreh das Blatt um und
+wiederhole die Schritte.
 
-{.step(data-t=172)} You’re almost done! Slightly open the right side, and fold
-the head up towards the top. You will have to turn it inside out. Then repeat
-the same with the tail on the left.
+{.step(data-t=172)} Du bist fast fertig! Öffne die rechte Seite leicht und falte
+den Kopf nach oben. Du musst sie dabei aufklappen. Wiederhole
+das dann mit dem Schwanz links.
 
-{.step(data-t=203)} Reverse the fold as shown to create a beak. You can decide
-how long you want it to be by picking the location of the fold.
+{.step(data-t=203)} Falte den Teil wie gezeigt, um einen Schnabel zu erzeugen. Du kannst entscheiden
+, wie lange er sein soll, indem du den Abstand der Faltung wählst.
 
-{.step(data-t=215)} Finally, fold down the two wings, and pull them apart.
+{.step(data-t=215)} Zum Schluss die beiden Flügel herunterklappen und auseinanderziehen.
 :::
 
 ---
 > id: crane-1
 
-This _crane_ is one of the oldest and most famous Origami models. We have many
-more [instructions for Origami models](/origami) you can try!
+Dieser _Kranich_ ist eines der ältesten und bekanntesten Origami-Modelle. Wir haben noch viele
+weitere [Anleitungen für Origami-Modelle](/origami), die du ausprobieren kannst!
 
     figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
 
-### Origami Axioms
+### Origami Axiome
 
-Just like drawing with straight-edge and compass, there are a few axioms of
-different _folds_ that are possible with origami. They were first listed in
-1992, by the Italian-Japanese mathematician Humiaki Huzita.
+Genau wie beim Zeichnen mit Lineal und Zirkel gibt es einige Axiome mit
+unterschiedlichen _Falten_, die mittels Origami möglich sind. Sie wurden erstmals
+1992 vom italienisch-japanischen Mathematiker Humiaki Huzita zusammengestellt.
 
 ::: column(width=220 parent="padded-thin origami-axioms")
 
     x-video(src="images/origami/axiom-1.mp4" width=220 height=220)
 
-{.text-center} You can fold a line connecting any two points.
+{.text-center} Man kann eine Gerade falten, die zwei beliebige Punkte verbindet.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-2.mp4" width=220 height=220)
 
-{.text-center} You can fold any point _P_ onto any other point _Q_. This creates
-the [[perpendicular bisector|angle bisector|midpoint]] of the line `bar(PQ)`.
+{.text-center} Man kann jeden Punkt _P_ auf jeden anderen Punkt _Q_ falten. Dadurch entsteht
+[[die Streckensymmetrale|die Winkelsymmetrale|der Mittelpunkt]] der Strecke `(PQ)`.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-3.mp4" width=220 height=220)
 
-{.text-center} We can fold any two lines onto each other. If the lines
-intersect, this creates the [[angle bisector|perpendicular bisector|midpoint]]
-of the angle between the two lines.
+{.text-center} Wir können zwei beliebige Linien aufeinander falten. Wenn sich die Geraden
+schneiden, entsteht [[die Winkelsymmetrale|die Streckensymmetrale|der Mittelpunkt]]
+des Winkels zwischen den beiden Geraden.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-4.mp4" width=220 height=220)
 
-{.text-center} Given a point _P_ and a line _L_, we can make a fold
-perpendicular to _L_ passing through _P_.
+{.text-center} Mit einem Punkt _P_ und einer Geraden _L_können wir eine Falte
+normal zu _L_ machen, die durch _P_ geht.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-5.mp4" width=220 height=220)
 
-{.text-center} Given two points _P_ and _Q_ and a line _L_, we can make a fold 
-that passes through _P_ and places _Q_ onto _L_.
+{.text-center} Mit zwei Punkten _P_ und _Q_ und einer Geraden _L_ können wir eine Falte
+machen, die durch _P_ geht wobei _Q_ auf _L_ platziert wird.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-6.mp4" width=220 height=220)
 
-{.text-center} Given any two points _P_ and _Q_ and any two lines _K_ and _L_,
-we can make a fold that places point _P_ onto line _K_ and at the same time
-places point _Q_ onto line _L_.
+{.text-center} Mit zwei beliebigen Punkten _P_ und _Q_ und zwei beliebigen Geraden _K_ und _L_können
+wir eine Falte machen, die den Punkt _P_ auf die Gerade _K_ und gleichzeitig den Punkt _Q_ auf die Gerade _L_
+setzt.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-7.mp4" width=220 height=220)
 
-{.text-center} Given a point _P_ and two lines _K_ and _L_, we can fold a line
-perpendicular to _K_ that places _P_ onto _L_.
+{.text-center} Mit einem Punkt _P_ und zwei Geraden _K_ und _L_ können wir eine Gerade
+senkrecht zu _K_ falten, die _P_ auf _L_ setzt.
 :::
 
 ---
 > id: origami-axioms-1
 
-It turns out that these axioms are even more powerful than the Euclidean ones.
-It is possible to trisect angles and double cubes using just paper folding!
-Of course, it is impossible to fold any _curved_ lines, and you still can’t
-square the circle with origami.
+Es stellt sich heraus, dass diese Axiome noch mächtiger sind als die euklidischen.
+Die Dreiteilung eines Winkels und die Würfelverdoppelung sind mit nur einer Papierfaltung möglich!
+Natürlich ist es unmöglich, _geschwungene_ Linien zu falten, und man bekommt die Quadratur des Kreises auch mit Origami
+nicht hin.
 
     figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
@@ -902,11 +902,11 @@ square the circle with origami.
 > id: origami-applications
 > goals: video
 
-### Applications of Origami
+### Anwendungen von Origami
 
-Origami is an ancient art, and for the longest time, it was mostly a recreational
-pursuit, without real-life applications. However, it turns out that techniques
-developed for Origami can be incredibly useful in technology and engineering:
+Origami ist eine alte Kunst, und für die längste Zeit war es vor allem eine
+Freizeitbeschäftigung, ohne reale Anwendungen. Es stellt sich jedoch heraus, dass die für Origami entwickelten Techniken
+in der Technologie und Technik unglaublich nützlich sein können:
 
 ::: column(width=300)
 
@@ -914,20 +914,20 @@ developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column.grow
 
-#### Origami in Space
+#### Origami im Weltraum
 
-Satellites need large solar panels to generate power. Unfortunately, the rockets
-that carry satellites into space only have very limited space for cargo, and
-any additional weight costs a lot of fuel.
+Satelliten benötigen große Solarmodule, um Strom zu erzeugen. Leider haben die Raketen
+, die Satelliten in den Weltraum transportieren, nur sehr begrenzten Raum für Fracht, und
+jedes zusätzliche Gewicht kostet viel Treibstoff.
 
-Origami techniques allow solar panels to “unfold” when they reach space. Some
-particularly clever folds are incredibly compact and require very few motors
-and other mechanical components.
+Origami-Techniken ermöglichen es, dass sich Solarmodule "entfalten", wenn sie den Weltraum erreichen. Einige
+besonders clevere Faltungen sind unglaublich kompakt und benötigen nur wenige Motoren
+und andere mechanische Komponenten.
 
-    // One of these is the __Miura Map Fold__, which was invented by _Korio Miura_.
-    // The same is also true for the mirrors of telescopes in space. Larger mirrors
-    // can take better images. Engineers can use Origami to build large mirrors that
-    // can be folded up very efficiently when loaded onto rockets.
+    // Eine davon ist die __Miura-Faltung__, die von _Korio Miura_ erfunden wurde.
+    // Das Gleiche gilt auch für die Spiegel von Teleskopen im Weltraum. Größere Spiegel
+    // können bessere Bilder liefern. Ingenieure können mit Origami große Spiegel bauen, die
+    // sich sehr effizient zusammenklappen lassen, wenn sie auf Raketen geladen werden.
 
 :::
 
@@ -941,12 +941,12 @@ and other mechanical components.
 
 ::: column.grow
 
-#### Origami in Medicine
+#### Origami in der Medizin
 
-In medicine, similar ideas from Origami are used on a much smaller scale. In
-2003, researchers developed _Origami Stents_: tiny tubes that can be inserted
-into blood vessels. They are initially folded up but can expand inside patients’
-blood in order to enlarge clogged arteries or veins.
+In der Medizin werden ähnliche Ideen von Origami in einem viel kleineren Maßstab übernommen. Im Jahr
+2003 entwickelten die Forscher _Origami Stents_: winzige Röhrchen, die in die Blutgefäße eingeführt
+werden können. Sie werden zunächst hochgeklappt, können sich aber im
+Blut des Patienten ausdehnen, und so verstopfte Arterien oder Venen vergrößern.
 
 :::
 
@@ -959,15 +959,15 @@ blood in order to enlarge clogged arteries or veins.
 
 ::: column.grow
 
-#### Foldable Bridges
+#### Zusammenklappbare Brücken
 
-The British and American military used Origami to develop foldable, mobile
-bridges. These were important for quickly crossing rivers or anti-tank ditches,
-and could be deployed much faster than previous designs.
+Das britische und amerikanische Militär verwendete Origami, um zusammenklappbare, mobile
+Brücken zu entwickeln. Diese waren wichtig für die schnelle Überquerung von Flüssen oder Panzergräben
+und konnten viel schneller eingesetzt werden als frühere Konstruktionen.
 
-They can also be used for disaster relief, to quickly give emergency vehicles
-access after earthquakes or tsunamis. This image is of a prototype designed at
-Hiroshima University in Japan.
+Sie können auch für die Katastrophenhilfe eingesetzt werden, um Rettungsfahrzeugen nach Erdbeben oder Tsunamis schnell
+Zugang zu verschaffen. Dieses Bild ist von einem Prototyp, der an der
+Hiroshima University in Japan entworfen wurde.
 
 :::
 
@@ -980,14 +980,14 @@ Hiroshima University in Japan.
     // x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
     // 
     // ::: column.grow
-    // #### Stadium Roofs
+    // #### Stadiondächer
     // 
-    // Bridges are difficult to construct because they have to span large distances
-    // without intermediate support. This also is the case for the roofs of sports
-    // stadiums, which have to cover a large area without being supported by pillars.
+    // Brücken sind schwierig zu bauen, da sie große Entfernungen
+    // ohne Zwischenstütze überbrücken müssen. Dies gilt auch für die Dächer von
+    // Sportstadien, die eine große Fläche bedecken müssen, ohne von Säulen getragen zu werden.
     // 
-    // The roof of the new Falcons Stadium in Atlanta consists of eight enormous
-    // modules that can twist to open or close.
+    // Das Dach des neuen Falcon-Stadions in Atlanta besteht aus acht riesigen
+    // Modulen, die sich beim Öffnen oder Schließen drehen können.
     // :::
 
 ---
@@ -1000,39 +1000,39 @@ Hiroshima University in Japan.
 
 ::: column.grow
 
-#### Origami under the Sea
+#### Origami im Meer
 
-The depths of the oceans are some of the least explored areas on Earth. Animals
-that live there are often squishy and delicate, which makes them very hard
-to examine.
+Die Tiefen der Ozeane sind einige der am wenigsten erforschten Gebiete der Erde. Die dort lebenden Tiere
+sind oft schwammig und empfindlich, was ihre Untersuchung sehr schwierig
+macht.
 
-Here you can see a “trap” in the shape of a [dodecahedron](gloss:dodecahedron)
-that can fold around marine organisms, allowing them to be studied. It is
-remotely controlled and only needs a single motor to drive the complex folding
-motion of its five arms.
+Hier siehst du eine "Falle" in Form eines [Dodekaeders](gloss:dodecahedron)
+, die sich um Meeresorganismen falten kann, um sie untersuchen zu können. Sie wird
+ferngesteuert und benötigt nur einen einzigen Motor, um die komplexe Klappbewegung
+ihrer fünf Arme zu steuern.
 
 :::
 
 ---
 > id: origami-applications-5
 
-And there are many more applications of Origami in everyday life: houses
-that will compress rather than crumble during an earthquake, unfolding airbags
-in cars, self-assembling robots, more efficient packaging, and lightweight
-aircraft.
+Und es gibt noch viel mehr Anwendungen von Origami im Alltag: Häuser
+, die sich bei einem Erdbeben zusammendrücken anstatt zu zerbröckeln, aufgehende Airbags
+im Auto, sich selbst zusammensetzende Roboter, effizientere Verpackungen und
+Leichtflugzeuge.
 
 ---
 > id: origami-wings
 > goals: video
 
-### Origami in Nature
+### Origami in der Natur
 
-It turns out that we humans are not the only ones harnessing the power of
-Origami: nature has been doing so for millions of years.
+Es stellt sich heraus, dass wir Menschen nicht die einzigen sind, die dieses machtvolle
+Origami nutzen: Die Natur tut dies seit Millionen von Jahren.
 
-Here you can see the wing of an __earwig__ that can be folded up using an
-ingenious pattern. When opened, the size of the wing expands by a factor of 10 –
-the highest “folding ratio” in the animal kingdom:
+Hier siehst du den Flügel eines __Ohrwurms__, der nach einem
+ausgeklügelten Muster hochgeklappt werden kann. Beim Öffnen dehnt sich die Größe des Flügels um den Faktor 10 aus -
+die höchste "Faltungsrate" im Tierreich:
 
 ::: column(width=300)
 
@@ -1047,16 +1047,16 @@ the highest “folding ratio” in the animal kingdom:
 ---
 > id: origami-wings-1
 
-When expanded, the large wings snap into a stable position that allows the
-insects to fly. But it only takes the lightest touch for the wings to retract.
-When folded up, they are compact enough to allow earwigs to tunnel underground.
-Many other insects, bats, leaves and flowers use similar folding patterns to fit
-large surfaces into small spaces.
+Im aufgeklappten Zustand rasten die großen Flügel in eine stabile Position ein, die es den
+Insekten ermöglicht, zu fliegen. Aber es braucht nur die leichteste Berührung, damit sich die Flügel zurückziehen.
+Zusammengeklappt sind sie kompakt genug, um es Ohrwürmern zu ermöglichen, in Gängen unter der Erde zu leben.
+Viele andere Insekten, Fledermäuse, Blätter und Blumen verwenden ähnliche Faltmuster, um
+große Flächen auf engstem Raum unterzubringen.
 
-Scientists are studying these plants and animals, hoping to mimic their abilities
-in engineering and technology. Potential applications could include foldable
-electronics in smartphones, expanding solar panels for satellites, or even
-self-folding camping tents.
+Wissenschaftler untersuchen diese Pflanzen und Tiere und hoffen, ihre Fähigkeiten
+in Technik und Technologie nachzuahmen. Mögliche Anwendungen könnten beispielsweise zusammenklappbare
+Elektronik in Smartphones, sich entfaltende Solarmodule für Satelliten oder sogar
+sich selbst zusammenlegende Campingzelte sein.
 
 ---
 > id: origami-dna
@@ -1068,20 +1068,20 @@ self-folding camping tents.
 
 ::: column.grow
 
-Origami even appears in your own body: every human cell contains around 2 meters
-of [DNA](gloss:dna), the [molecule](gloss:molecule) that carries all your
-genetic information. If you could combine the DNA from all cells in your body,
-their length would be more than 140 times the distance from Earth to the sun!
+Origami kommt sogar im eigenen Körper vor: Jede menschliche Zelle enthält etwa 2 Meter
+ [DNA](gloss:dna), das [Molekül](gloss:molecule), das alle deine
+genetischen Informationen trägt. Wenn du die DNA aller Zellen in deinem Körper kombinieren könntest, wäre
+ihre Länge mehr als das 140-fache der Entfernung von der Erde zur Sonne!
 
-To fit all that DNA in your body, without it getting twisted or torn, every
-strand is curled, folded, and held in place by special molecules.
+Um die gesamte DNA in deinen Körper einzupassen, ohne dass sie verdreht oder zerrissen wird, ist jeder
+Strang eingerollt, gefaltet und wird mittels spezieller Moleküle fixiert.
 
 :::
 
 ---
 > id: origami-dna-1
 
-A similar process is also used by other complex molecules that appear in living
-organisms. For example, __[protein](gloss:protein) folding__ is one of the most
-complex problems in biology. Understanding it better can help scientists develop
-new drugs in the future.
+Ein ähnlicher Prozess wird auch von anderen komplexen Molekülen genutzt, die in lebenden Organismen
+vorkommen. So ist beispielsweise die __[Protein](gloss:protein)faltung__ eines der komplexesten
+Probleme in der Biologie. Es besser zu verstehen, kann Wissenschaftlern helfen, in Zukunft neue
+Medikamente zu entwickeln.
