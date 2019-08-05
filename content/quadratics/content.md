@@ -2322,6 +2322,8 @@ downwards).
 
 The result, as you can see, is a parabola. Using Calculus
 
+https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_15_feather_drop.html
+
 ---
 
 Of course, flying penguins are not the only things that move on a parabolic
