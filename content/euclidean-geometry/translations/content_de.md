@@ -625,7 +625,7 @@ ist es tatsächlich ein gleichseitiges Dreieck._
 ---
 > id: perp-bisector
 
-### Mittelpunkte und Streckensymmetralen (Mittelsenkrechte)
+### Mittelpunkte und Mittelsenkrechten (Streckensymmetrale)
 
 {.todo} Demnächst - Konstruktion von Mittelpunkten und Mittelsenkrechten
 
@@ -640,7 +640,7 @@ ist es tatsächlich ein gleichseitiges Dreieck._
 ---
 > id: angle-bisector
 
-### Winkelsymmetrale (Winkelhalbierende)
+### Winkelhalbierende (Winkelsymmetrale)
 
 {.todo} Demnächst - Konstruktion von Winkelhalbierenden
 
@@ -853,13 +853,13 @@ unterschiedlichen _Falten_, die mittels Origami möglich sind. Sie wurden erstma
     x-video(src="images/origami/axiom-2.mp4" width=220 height=220)
 
 {.text-center} Man kann jeden Punkt _P_ auf jeden anderen Punkt _Q_ falten. Dadurch entsteht
-[[die Streckensymmetrale|die Winkelsymmetrale|der Mittelpunkt]] der Strecke `(PQ)`.
+[[die Mittelsenkrechte|die Winkelhalbierende|der Mittelpunkt]] der Strecke `(PQ)`.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-3.mp4" width=220 height=220)
 
 {.text-center} Wir können zwei beliebige Linien aufeinander falten. Wenn sich die Geraden
-schneiden, entsteht [[die Winkelsymmetrale|die Streckensymmetrale|der Mittelpunkt]]
+schneiden, entsteht [[die Winkelhalbierende|die Mittelsenkrechte|der Mittelpunkt]]
 des Winkels zwischen den beiden Geraden.
 ::: column(width=220)
 
