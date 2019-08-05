@@ -83,8 +83,8 @@ associative:
     assoziativ.
 
 axiom:
-  title: Axiom:
-  text: Ein __Axiom__ (manchmal auch __Postulat__genannt) ist eine mathematische
+  title: Axiom
+  text: Ein __Axiom__ (manchmal auch __Postulat__ genannt) ist eine mathematische
     Aussage, die als "selbstverständlich" angesehen und ohne Beweis akzeptiert
     wird. Axiome bilden die Grundlage der Mathematik und können zum Beweisen
     anderer Ergebnisse verwendet werden.
@@ -438,7 +438,7 @@ equilateral-triangle:
 euclidean-geometry:
   title: Euklidische Geometrie
   text: Die __euklidische Geometrie__ ist die Art von Geometrie, die der
-    Mathematiker _Euklid_entwickelt hat. Sie fußt auf nur fünf _Axiomen_, einer
+    Mathematiker _Euklid_ entwickelt hat. Sie fußt auf nur fünf _Axiomen_, einer
     Art von "Gesetzen" der Geometrie, die alles beschreiben, was man tun darf.
   link: /course/euclidean-geometry/euclids-axioms#euclid
 
@@ -705,7 +705,7 @@ lcm:
     ist die kleinste ganze Zahl, die ein Vielfaches von _a_ und _b_ist.
   link: /course/divisibility-and-primes/least-common-multiples
 
-linie:
+line:
   title: Gerade
   text: Eine __Gerade__ besteht aus unendlich vielen Punkten, die sich ohne
     Anfang und Ende in beide Richtungen erstrecken. Geraden sind immer
@@ -885,8 +885,8 @@ perfect-numbers:
 
 perpendicular:
   title: Senkrechte Geraden
-  text: Zwei Geraden stehen __senkrecht__, wenn sie sich im rechten Winkel
-    schneiden.
+  text: Zwei Geraden stehen __normal__ aufeinander, wenn sie sich in einem
+    rechten Winkel schneiden.
   image: perpendicular.svg
   link: /course/euclidean-geometry/definitions#perpendicular
 

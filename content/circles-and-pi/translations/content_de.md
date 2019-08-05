@@ -750,7 +750,7 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
       
       circle.red(x="c.at(0.5)" name="a1" target="secant")
       circle.red(x="c.at(0.7)" name="a2" target="secant")
-      path.red.thick(x="line(a1,a2)" label="Secant" target="secant")
+      path.red.thick(x="line(a1,a2)" label="Sekante" target="secant")
       
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
