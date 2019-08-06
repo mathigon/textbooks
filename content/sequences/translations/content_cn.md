@@ -1326,7 +1326,7 @@ _{.n}[[144]]_, …
 
 {.reveal(when="blank-0")} 然而，事实证明，`φ`的精确值不能写成一个简单的分数：
 它是一个[__无理数__](gloss:irrational-numbers)，就像圆周率[`π`](gloss:pi) 和
-`根号2` 以及其它一些你以前见过的数。
+根号2 以及其它一些你以前见过的数。
 
 ---
 > id: sunflower-growing

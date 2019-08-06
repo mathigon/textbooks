@@ -10,9 +10,9 @@ abel:
   overflow: true
   bio: |
     __Niels Henrik Abel__ (1802 – 1829) Norveçli önemli bir matematikçiydi. 26 yaşında ölmüş olmasına rağmen, matematiğin pek çok alanında çığır açan katkıları olmuştur.
-    
+
     Abel 16 yaşındayken, binom katsayıları teoremini kanıtlamıştır. Üç yıl sonra, kendi başına grup teorisini keşfederek, beşinci derece denklemleri çözmenin imkansızlığını kanıtlamıştır. Bu soru, 350 yıl boyunca çözülememişti! Aynı zamanda eliptik fonksiyonlar üzerinde çalışmış ve _Abelyen_ fonksiyonları keşfetmiştir.
-    
+
     Abel yokluk içinde bir yaşam sürdü: altı kardeşi vardı, 18 yaşındayken babasını kaybetti, üniversitede iş bulamadı ve çoğu matematikçi çalışmalarını başlarda önemsemedi. Bugün, matematik alanındaki en önemli ödüllerden birisi, kendisinin adıyla anılan _Abel Ödülü_dür.
   links:
     - title: Grup teorisi
@@ -24,16 +24,15 @@ al-haytham:
   name: Al-Haytham
   bio: |
     __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 – 1050), İslam’ın Altın Çağı olarak adlandırılan dönemde Kahire’de yaşamış ve matematik, fizik, astronomi, felsefe ve tıp alanlarında eğitim almıştır. Al- Haytham, Rönesans döneminde Avrupa’da yaşamış biliminsanlarından asırlar önce bilimsel yöntemin savunucularındandı. Bilimsel yöntem, herhangi bir bilimsel hipotezi deneyler ve matematiksel mantık kullanarak doğrulamaya dayanır.
-    
-    Al-Haytham özellikle optik ve görme algısı ile ilgileniyordu. Kendisi, doğal sayıların dördüncü kuvvetlerinin toplamını (`1^4 + 2^4 + 3^4 + … + n^4`) veren bir formül de çıkarmıştır. Ayrıca cebir ve geometri arasındaki ilişki üzerine de çalışmalar yapmıştır.
 
+    Al-Haytham özellikle optik ve görme algısı ile ilgileniyordu. Kendisi, doğal sayıların dördüncü kuvvetlerinin toplamını (`1^4 + 2^4 + 3^4 + … + n^4`) veren bir formül de çıkarmıştır. Ayrıca cebir ve geometri arasındaki ilişki üzerine de çalışmalar yapmıştır.
 
 al-karaji:
   born: 953
   died: 1029
   name: Al-Karaji
   bio: __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 – 1029),  İranlı bir matematikçi ve mühendisti. Kendisi, bugün adına “Tümevarım Yöntemi” dediğimiz ispat yöntemini kullanan ilk kişidir. Bu yöntemle Binom Teoremi’ni kanıtlamıştır.
-    
+
   links:
     - title: Tümevarım Yöntemi
       url: /world/Axioms_and_Proof
@@ -45,7 +44,7 @@ al-khwarizmi:
   overflow: true
   bio: |
     İranlı matematikçi __Muhammad El-Harizmi__ (محمد بن موسى الخوارزمي‎,
-    780 – 850) Bağdat’taki müslüman Abbasiler döneminin altın çağında yaşamıştır. İskenderiye kütüphanesinin yok edilmesinin ardından ilk büyük kitap koleksiyonuna sahip “Bilgelik Evi”nde çalışmıştır. 
+    780 – 850) Bağdat’taki müslüman Abbasiler döneminin altın çağında yaşamıştır. İskenderiye kütüphanesinin yok edilmesinin ardından ilk büyük kitap koleksiyonuna sahip “Bilgelik Evi”nde çalışmıştır.
 
     El-Harizmi “cebirin babası” olarak anılır, hatta _cebir_ kelimesi, en önemli eserinin Arapça adı olan “al-Kitāb al-mukhtaṣar fī ḥisāb al-jabr wal-muqābala”dan  (Tamamlama ve Dengeleme ile Hesaplama Üzerine Özlü Kitap) gelir. Bu eserinde doğrusal ve ikinci derece denklemlerin nasıl çözüleceğini göstermiştir. Kitabı yüzyıllar boyunca Avrupa’daki üniversitelerde okutulan temel matematik kitaplarındandır.
 
@@ -55,7 +54,7 @@ apollonius:
   name: Apollonius
   born: -262  # ???
   died: -190  # ???
-  bio: __Perge’li  Apollonius __ (M.Ö. 200 ) bir koninin düzlemle kesilmesiyle oluşan şekillerin  _ “dört koni kesiti” _ analizi üzerine yaptığı çalışmalarıyla ünlü Yunan matematikçi ve astronomdur. 
+  bio: __Perge’li  Apollonius __ (M.Ö. 200 ) bir koninin düzlemle kesilmesiyle oluşan şekillerin  _ “dört koni kesiti” _ analizi üzerine yaptığı çalışmalarıyla ünlü Yunan matematikçi ve astronomdur.
   links:
     - title: Konik kesitler
       url: /course/circles-and-pi/conic-sections
@@ -69,7 +68,6 @@ appel:
 
     Appel New York’taki Queens College’da ve Michigan Üniversitesinde okudu. Illinois ve New Hampshire üniversitelerinde çalıştı.
 
-
 archimedes:
   name: Archimedes
   born: -287
@@ -80,11 +78,9 @@ archimedes:
     Arşimed, banyo yaparken, cisimlerin suya batırılımasıyla meydana gelen suyun yer değiştirme miktarını kullanarak düzensiz cisimlerin hacmini belirlemenin bir yolunu buldu. Bu keşif sayesinde öylesine heyecanlandı ki, sokakta, hala soyunmuş halde iken _“Eureka!”_ diye bağırdı  (Yunanca’da _“Onu buldum!”_).
 
     Sicilya'daki memleketi Syracuse'nin kuşatması sırasında, bir mühendis olarak, ustalıkla savunma makineleri yaptı. İki yıl sonra, Romalıların sonunda girmeyi başardığı Syracuse’ta Arşimed öldürüldü. Son sözleri, o sırada üzerinde çalıştığı _“Çemberlerime dokunma”_ idi.
-
   links:
     - title: Arşimed Cisimleri
       url: /course/polygons-and-polyhedra/more-on-polyhedra
-
 
 aristotle:
   born: -384
@@ -120,7 +116,6 @@ babbage:
 
     Prensipte bu makineler, bant ya da kartlara kaydedilen işlemleri otomatik olarak yapabiliyordu. Ancak üretim maliyetleri çok yüksek olduğu için, Babbage hayattayken tam olarak yapılamadılar. 1991 yılında bu makinelerin çalışan bir kopyası Londra Bilim Müzesinde yapılmıştır.
 
-
 bernoulli-1:
   born: 1654
   died: 1705
@@ -132,25 +127,33 @@ bernoulli-1:
 
     Olasılık ile ilgili ilk önemli çalışmaları yazmıştır. Bu çalışmalar permütasyonları, kombinasyonları ve büyük sayılar yasasını içerir. Binom açılım teoremini kanıtlamış ve Bernoulli sayılarının bir sürü özelliğini elde etmiştir.
 
-
 bernoulli-2:
   born: 1700
   died: 1782
   name: Bernoulli
   bio: |
-    __Daniel Bernoulli__ (1700 – 1782) İsviçreli bir fizikçi ve matematikçiydi. Babası Johann, amcası Jacob ve kardeşi Nicholas gibi, Daniel de Bernoulli ailesinin ünlü bilim insanlarındandır.
+    __Daniel Bernoulli__ (1700 – 1782) İsviçreli bir fizikçi ve matematikçiydi.
+    Babası Johann, amcası Jacob ve kardeşi Nicholas gibi, Daniel de Bernoulli
+    ailesinin ünlü bilim insanlarındandır.
 
-    Daniel Bernoulli, bir akışkanın hızı arttıkça, basıncının düşeceğini göstermiştir. Günümüzde _Bernoulli prensibi_ olarak geçen bu gözlem, uçak kanatları ve içten yanmalı motorlarda kullandığımız mekanizmadır. Ayrıca olasılık ve istatistik alanlarında önemli keşifler yapmıştır ve _Bessel fonksiyonları_yla karşılaşan ilk kişidir.
+    Daniel Bernoulli, bir akışkanın hızı arttıkça, basıncının düşeceğini
+    göstermiştir. Günümüzde _Bernoulli prensibi_ olarak geçen bu gözlem, uçak
+    kanatları ve içten yanmalı motorlarda kullandığımız mekanizmadır. Ayrıca
+    olasılık ve istatistik alanlarında önemli keşifler yapmıştır ve _Bessel
+    fonksiyonları_yla karşılaşan ilk kişidir.
 
-    34 yaşında, babasını Paris Akademisinin bir ödül yarışmasında yendiği için evden kovulmuştur.
-
+    34 yaşında, babasını Paris Akademisinin bir ödül yarışmasında yendiği için
+    evden kovulmuştur.
 
 bhaskara:
   born: 1114
   died: 1185
   name: Bhaskara
-  bio: __Bhaskara II__ (1114 – 1185)  Hintli bir matematikçi ve astronomdur. Newton ve Leibniz’den 500 yıl önce, kalkülüs hesabının bazı kavramlarını keşfetmiştir. Bhaskara  aynı zamanda sıfır ile bölmenin sonsuz sonucunu vereceğini göstermiş, ikinci, üçüncü ve dördüncü derece bir çok denklemi ve çeşitli Diofant denklemlerini çözmüştür. 
-
+  bio: __Bhaskara II__ (1114 – 1185)  Hintli bir matematikçi ve astronomdur.
+    Newton ve Leibniz’den 500 yıl önce, kalkülüs hesabının bazı kavramlarını
+    keşfetmiştir. Bhaskara  aynı zamanda sıfır ile bölmenin sonsuz sonucunu
+    vereceğini göstermiş, ikinci, üçüncü ve dördüncü derece bir çok denklemi ve
+    çeşitli Diofant denklemlerini çözmüştür.
 
 blackwell:
   born: 1919
@@ -168,7 +171,7 @@ bolyai:
   name: Bolyai
   small: true
   bio: |
-    __János Bolyai__ (1802 – 1860) Macar bir matematikçiydi. Öklid’in paralel doğrular ile ilgili beşinci aksiyomunun doğru olmadığı Öklid-dışı geometrilerin ilk kaşiflerindendir. Bu keşif, matematikte önemli bir dönüm noktasıdır. Gauss ve Lobachevsky aynı dönemde benzer keşifler yaparak, Bolyai’nin şanssızlığına, ünün çoğunu kendilerine almışlardır. 
+    __János Bolyai__ (1802 – 1860) Macar bir matematikçiydi. Öklid’in paralel doğrular ile ilgili beşinci aksiyomunun doğru olmadığı Öklid-dışı geometrilerin ilk kaşiflerindendir. Bu keşif, matematikte önemli bir dönüm noktasıdır. Gauss ve Lobachevsky aynı dönemde benzer keşifler yaparak, Bolyai’nin şanssızlığına, ünün çoğunu kendilerine almışlardır.
   links:
     - title: Öklid dışı geometri
       url: /world/Dimensions_and_Distortions
@@ -184,17 +187,17 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
-  bio: Hintli matematikçi __Brahmagupta__ (c. 598 – 668 AD) sıfır ve negatif sayılar ile toplama, çıkarma ve çarpmanın kurallarını bulmuştur. Aynı zamanda bir astronomdu ve matematikte bir çok keşifler yaptı.Ne yazık ki yazılı çalışmalarında kanıtlara yer vermemiştir, bu sebeple sonuçlarını nasıl elde ettiğini bilemiyoruz. 
+  bio: Hintli matematikçi __Brahmagupta__ (c. 598 – 668 AD) sıfır ve negatif sayılar ile toplama, çıkarma ve çarpmanın kurallarını bulmuştur. Aynı zamanda bir astronomdu ve matematikte bir çok keşifler yaptı.Ne yazık ki yazılı çalışmalarında kanıtlara yer vermemiştir, bu sebeple sonuçlarını nasıl elde ettiğini bilemiyoruz.
 
 cantor:
   born: 1845
   died: 1918
   name: Cantor
   bio: |
-    Alman matematikçi __Georg Cantor__ (1845 – 1918) kümeler kuramının kaşifi ve sonsuzluğu anlama konusunda bir öncüydü. Hayatının büyük bir kısmında, Cantor’un keşiflerine meslektaşlarından çok şiddetli itirazlar gelmiştir. Yaşadığı depresyon ve sinir bozuklularında bu olayların da etkisi olabilir, uzun yıllarını akıl ve ruh sağlığı merkezlerinde geçirmiştir. 
+    Alman matematikçi __Georg Cantor__ (1845 – 1918) kümeler kuramının kaşifi ve sonsuzluğu anlama konusunda bir öncüydü. Hayatının büyük bir kısmında, Cantor’un keşiflerine meslektaşlarından çok şiddetli itirazlar gelmiştir. Yaşadığı depresyon ve sinir bozuklularında bu olayların da etkisi olabilir, uzun yıllarını akıl ve ruh sağlığı merkezlerinde geçirmiştir.
 
     Cantor, _değişik büyüklüklerde_ sonsuzluklar olduğunu kanıtlamıştır. Örneğin reel sayılar kümesinin elemanları _sayılamaz_ sonsuzluktadır, yani bu kümenin elemanları, doğal sayılar ile birebir eşleştirilemezler.
- 
+
     Hakettiği ilgi ve ünü ancak hayatının sonlarına doğru görebilmiştir. David Hilbert’in bu konudaki ünlü sözü “Kimse bizi Cantor’un yarattığı cennetten kovamaz”dır.
   links:
     - title: Sonsuzluk
@@ -213,7 +216,6 @@ cardano:
   links:
     - title: Sanal Sayılar
       url: /world/Real_Irrational_Imaginary
-
 
 carroll:
   born: 1832
@@ -234,7 +236,6 @@ cauchy:
 
     Cauchy kalkülüs ve analizi biçimlendiren kişidir. Bu alanda kendisinden önceki matematikçilerin ihmal ettiği ve özen göstermediği birçok sonucu yeniden ifade edip kanıtlamıştır. Aynı zamanda matematiğin _Karmaşık Analiz_ dalının kurucusudur. Permütasyon grupları, optik, akışlar dinamiği ve elastikiyet teorisi ile ilgili çalışmalar yapmıştır.
 
-
 cavalieri:
   name: Cavalieri
   born: 1598
@@ -247,16 +248,14 @@ cavalieri:
     - title: Cavalieri İlkesi
       url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
 
-
 cayley:
   born: 1821
   died: 1895
   name: Cayley
-  bio: __Arthur Cayley__ (1821 – 1895), İngiliz matematikçi ve avukat. Cayley, _Grup Teori_’nin öncülerindendir. “Grup” tanımının günümüzdeki tanımını öneren ilk matematikçi olmakla birlikte bu tanımı matematiğin başka dallarına da uygulayabilmek için genelleştirmiştir. Cayley ayrıca matris cebirini geliştirmiş ve yüksek boyutlu geometri ile ilgili çalışmalar yapmıştır. 
+  bio: __Arthur Cayley__ (1821 – 1895), İngiliz matematikçi ve avukat. Cayley, _Grup Teori_’nin öncülerindendir. “Grup” tanımının günümüzdeki tanımını öneren ilk matematikçi olmakla birlikte bu tanımı matematiğin başka dallarına da uygulayabilmek için genelleştirmiştir. Cayley ayrıca matris cebirini geliştirmiş ve yüksek boyutlu geometri ile ilgili çalışmalar yapmıştır.
   links:
     - title: Grup Teori
       url: /course/transformations-and-symmetry/symmetry-groups
-
 
 collatz:
   name: Collatz
@@ -274,16 +273,15 @@ conway:
     - title: Bak-ve-söyle dizisi
       url: /course/sequences/special#look-and-say
 
-
 copernicus:
   born: 1473
   died: 1543
   name: Copernicus
   bio: |
     __Nicolaus Copernicus__ (1473 – 1543) (Türkçe’deki adıyla Kopernik) Polonyalı bir matematikçi, astronom ve avukattı. Hayatı sırasında insanların çoğu, Dünya’nın merkezde ve geri kalan her şeyin onun etrafında döndüğü, _Dünya merkezli_bir evren modeline inanıyordu.
- 
+
     Copernicus güneşin merkezde yer aldığı, Dünya’nın ise güneş etrafındaki bir çemberde hareket ettiği yeni bir evren modeli yarattı. Ayrıca her gün Dünya’nın kendi ekseni etrafında bir tur attığını öngörmüştür. Katolik kilisesinin tepkisinden çekindiği için bu modelini ölümünden az bir zaman önce yayınlamıştır. Bu yayın ile _Kopernik Devrimi_ diye anılan hareket başlamıştır.
-    
+
     Copernicus aynı zamanda diplomat ve doktor olarak çalışmış, ekonomiye önemli katkılar yapmıştır.
   links:
     - title: Gezegen Yörüngeleri
@@ -296,13 +294,12 @@ de-moivre:
   bio: |
      __Abraham de Moivre__ (1667 – 1754), olasılık ve analitik geometri alanlarında çalışmalar yapmış olan Fransız matematikçi. de Moivre özellikle kendi ismi taşıyan ve trigonometri ile karmaşık sayılar arasında bağlantı kuran _de Moivre Formülü_ ile tanınmaktadır.
 
-     de Moivre bulduğu formülü olasılıktaki normal dağılım için keşfetmiş ve matematik tarihine ismini _Merkezi Limit Teoremi_’ni ortaya atan ilk matematikçi olarak kazımıştır. de Moivre ayrıca Fibonacci sayıları için özyinelemesiz bir formül keşfetmiştir ve bu sayılarla altın oran `φ` arasında ilişki kurmuştur. 
+     de Moivre bulduğu formülü olasılıktaki normal dağılım için keşfetmiş ve matematik tarihine ismini _Merkezi Limit Teoremi_’ni ortaya atan ilk matematikçi olarak kazımıştır. de Moivre ayrıca Fibonacci sayıları için özyinelemesiz bir formül keşfetmiştir ve bu sayılarla altın oran `φ` arasında ilişki kurmuştur.
   links:
     - title: Olasılık
       url: /course/probability/predicting-the-future
     - title: Fibonacci Sayıları
-      url: /course/sequences/fibonacci  
-
+      url: /course/sequences/fibonacci
 
 dedekind:
   born: 1831
@@ -320,7 +317,6 @@ democritus:
     - title: Koninin Hacmi
       url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
 
-
 desargues:
   born: 1591
   died: 1661
@@ -333,16 +329,15 @@ desargues:
     - title: Konik Kesitler
       url: /course/circles-and-pi/conic-sections
 
-
 descartes:
   born: 1596
   died: 1650
   name: Descartes
   bio: |
-    __René Descartes__ (1596 – 1650) Fransız bir matematikçi ve filozoftur. Bilimsel devrimin en önemli figürlerinden birsidir. Kendisinden önceki filozofların otoritelerini reddetmiştir ve en ünlü sözlerinden biri “Düşünüyorum, öyleyse varım”dır. 
-    
+    __René Descartes__ (1596 – 1650) Fransız bir matematikçi ve filozoftur. Bilimsel devrimin en önemli figürlerinden birsidir. Kendisinden önceki filozofların otoritelerini reddetmiştir ve en ünlü sözlerinden biri “Düşünüyorum, öyleyse varım”dır.
+
     Descartes, geometrik şekilleri cebirsel ifadelerle anlatmamıza yarayan _analitik geometri_nin babasıdır. Bu, sonraki birkaç onyıl içerisinde Newton ve Leibniz’in _kalkülüs_ hesabını keşfetmeleri için gereken bir öncüldür.
-    
+
     Üslü sayılarla ilgili günümüzdeki notasyonu ilk kullanan kişi olarak bilinir ve _kartezyen koordinat sistemi_ne adı Descartes’tan alır.
 
 diophantus:
@@ -351,7 +346,7 @@ diophantus:
   name: Diophantus
   overflow: true
   bio: |
-    __Diyofant__ Helenistik dönemde İskenderiye’de yaşamış bir matematikçidir. Çalışmaları genelde çok bilinmeyene sahip polinom denklemlerini tamsayılarda çözmek üzerinedir. Bu tür denklemlere günümüzde _Diyofant denklemleri_ denir ve günümüzde önemli bir araştırma konusudur.  
+    __Diyofant__ Helenistik dönemde İskenderiye’de yaşamış bir matematikçidir. Çalışmaları genelde çok bilinmeyene sahip polinom denklemlerini tamsayılarda çözmek üzerinedir. Bu tür denklemlere günümüzde _Diyofant denklemleri_ denir ve günümüzde önemli bir araştırma konusudur.
 
     _Pierre de Fermat_, yüzyıllar sonra Diyofant’ın kitaplarından birini okuduğu sırada bu tarz bir denklemin çözümü olmadığını öne sürmüştür. Bu önerme “Fermat’nın Son Teoremi” olarak bilinir, ve ancak 1994 yılında kanıtlanabilmiştir.
 
@@ -362,7 +357,6 @@ dirac:
 
     Amerika’ya taşınmadan önce Cambridge Üniversitesi’nde çalışıyordu. Herkes Dirac’ın utangaç bir insan olduğunu bilirdi. Hatta Einstein’e göre Dirac _”delilik ve dahilik arasındaki baş döndürücü yolda dengeli kalabilmeyi başaran”_ insandır.
 
-
 einstein:
   name: Einstein
   born: 1879
@@ -372,7 +366,7 @@ einstein:
     __Albert Einstein__ (1879 – 1955) Alman bir fizikçiydi. Tarihteki en önemli bilim insanlarından biridir. Fizik alanında Nobel ödülü almıştır ve TIME dergisi kendisinden _20. Yüzyılın en önemli kişisi diye bahsetmiştir.
 
     Einstein, Newton’dan beri evren hakkındaki görüşümüzde en büyük değişime yol açmıştır. Klasik _Newton fiziği_nin bir takım fizik olaylarını açıklamakta yetersiz kaldığını fark etmiştir.
- 
+
     “Altın yılı” olarak geçen 26. yılında, fotoelektrik etkiyi ve Brown hareketini açıklayan, özel görelilik kuramını tanıtan ve enerji(_E_) ile kütlenin(_m_) denk olduğunu söyleyen “E=m c^2” denklemini elde ettiği dört tane, bilim dünyasında çığır açan makale yayınlamıştır.
 
 eratosthenes:
@@ -395,10 +389,15 @@ erdos:
   died: 1996
   name: Erdős
   bio: |
-    __Paul Erdős__ (1913 – 1996), tarihteki en üretken matematikçilerden biriydi. Macaristan doğumlu olan Erdős çizgeler kuramı, sayılar kuramı, kombinatorik, analiz ve olasılık başta olmak üzere matematiğin birçok alanıyla ilgilenip bu alanlarda sorulmuş sayısız probleme çözüm sunmuştur.
+    __Paul Erdős__ (1913 – 1996), tarihteki en üretken matematikçilerden
+    biriydi. Macaristan doğumlu olan Erdős çizgeler kuramı, sayılar kuramı,
+    kombinatorik, analiz ve olasılık başta olmak üzere matematiğin birçok
+    alanıyla ilgilenip bu alanlarda sorulmuş sayısız probleme çözüm sunmuştur.
 
-    Erdős tüm hayatı boyunca 1500’e yakın makale yayınlamış, 500’den fazla matematikçiyle ortak çalışmalar yapmıştır. Aslında kariyeri boyunca leyleği havada görmüş, bir sürü seminere katılmış ve meslektaşlarını bolca ziyaret etmiştir!
-
+    Erdős tüm hayatı boyunca 1500’e yakın makale yayınlamış, 500’den fazla
+    matematikçiyle ortak çalışmalar yapmıştır. Aslında kariyeri boyunca leyleği
+    havada görmüş, bir sürü seminere katılmış ve meslektaşlarını bolca ziyaret
+    etmiştir!
 
 escher:
   name: Escher
@@ -408,14 +407,19 @@ escher:
     __Maurits Cornelis Escher__ (1898 – 1972) matematikten esinlenmiş nesneler ve şekillerin(çokgenler, yüzey kaplamaları ve imkansız şekiller) eskizlerini, tahtadan oyma modellerini ve taş baskılarını yapan Hollandalı bir sanatçıydı. Öklid-dışı geometriler, sonsuzluk, perspektif ve simetri gibi kavramları çizimleri aracılığı ile incelemiştir.
   small: true
   links:
-    - title: Sanatta Yüzey Kaplamaları 
+    - title: Sanatta Yüzey Kaplamaları
       url: /course/polygons-and-polyhedra/tessellations#escher
 
 euclid:
   name: Euclid
   born: -330
   died: -270
-  bio: __İskenderiye’li Öklid__ (M.Ö. 300 civarında) _geometrinin babası _ olarak bilinen Yunan bir matematikçiydi. Öklid geometrisini tanıtan ve geometri ile sayı teorisinde birçok önemli ispat içeren _Elementler _ adında bir kitap yazdı. Bu kitap, 19. yüzyıla kadar ana matematik ders kitabı olarak kullanıldı. İskenderiye'de matematik dersleri verdi, fakat hayatı hakkında çok az şey biliniyor.
+  bio: __İskenderiye’li Öklid__ (M.Ö. 300 civarında) _geometrinin babası_ olarak
+    bilinen Yunan bir matematikçiydi. Öklid geometrisini tanıtan ve geometri ile
+    sayı teorisinde birçok önemli ispat içeren _Elementler _ adında bir kitap
+    yazdı. Bu kitap, 19. yüzyıla kadar ana matematik ders kitabı olarak
+    kullanıldı. İskenderiye'de matematik dersleri verdi, fakat hayatı hakkında
+    çok az şey biliniyor.
   links:
     - title: Öklid Geometrisinin Temel Aksiyomları
       url: /course/euclidean-geometry/euclids-axioms
@@ -430,7 +434,7 @@ euler:
     __Leonhard Euler__ (1707 – 1783), tüm zamanların en büyük matematikçilerinden biriydi. Yaptığı çalışmalar matematiğin bütün dalları kapsar, tam 80 cilt matematik araştırması vardır!
 
     İsviçre doğumlu olan Euler, Basel’de eğitim almıştır ancak hayatının büyük bir çoğunluğunu Berlin, Prusya ve St. Petersburg, Rusya’da geçirmiştir.
-    
+
     Euler modern matematikte kullandığımız terminoloji ve gösterimleri bize kazandıran kişidir. Ayrıca kalkülüs, analiz, çizgeler kuramı, fizik, astronomi ve daha birçok alanda önemli keşifler yapmıştır.
   links:
     - title: Königsberg Köprüsü Problemi
@@ -452,19 +456,22 @@ fermat:
     - title: Olasılık
       url: /course/probability/introduction
 
-
 fibonacci:
   name: Fibonacci
   born: 1175
   died: 1250
   bio: |
-    Daha çok __Fibonacci__ adıyla bilinen __Leonardo Pisano__ (1175 – 1250) İtalyan bir matematikçiydi. Kendi adıyla anılan sayı dizisiyle anılır: 1, 1, 2, 3, 5, 8, 13, ...
-    
-    Fibonacci, 12. Yüzyılda hala Roma rakamlarını (I, V, X, D, …) kullanan Avrupa’da Arap rakamlarını (0, 1, 2, 3, 4, ...) popülerleştirmiştir. Tüccarlar için pratik bir kitap olarak yazdığı “Liber Abaci” adındaki kitabında onluk sayı sitemini açıklamıştır.
+    Daha çok __Fibonacci__ adıyla bilinen __Leonardo Pisano__ (1175 – 1250)
+    İtalyan bir matematikçiydi. Kendi adıyla anılan sayı dizisiyle anılır:
+    1, 1, 2, 3, 5, 8, 13, …
+
+    Fibonacci, 12. Yüzyılda hala Roma rakamlarını (I, V, X, D, …) kullanan
+    Avrupa’da Arap rakamlarını (0, 1, 2, 3, 4, ...) popülerleştirmiştir.
+    Tüccarlar için pratik bir kitap olarak yazdığı “Liber Abaci” adındaki
+    kitabında onluk sayı sitemini açıklamıştır.
   links:
     - title: Fibonacci Sayıları
       url: /course/sequences/fibonacci
-
 
 fourier:
   born: 1768
@@ -484,7 +491,7 @@ galileo:
   died: 1642
   name: Galileo
   bio: |
-    __Galileo Galilei__ (1564 – 1642) İtalyan bir astronom, fizikçi ve mühendisti. Geceleri gökyüzünde ilk teleskoplardan biri ile gözlemler yapmış ve Jüpiter’in dört en büyük uydusunu, Venüs’ün evrelerini, güneş patlamalarını ve benzeri pek çok olayı keşfetmiştir. 
+    __Galileo Galilei__ (1564 – 1642) İtalyan bir astronom, fizikçi ve mühendisti. Geceleri gökyüzünde ilk teleskoplardan biri ile gözlemler yapmış ve Jüpiter’in dört en büyük uydusunu, Venüs’ün evrelerini, güneş patlamalarını ve benzeri pek çok olayı keşfetmiştir.
 
     Galileo “modern bilimin babası” olarak anılır. Serbest düşüşteki cisimlerin hareketlerini ve hızlarını, malzeme bilimini çalışmış ve termometrenin ilkel bir hali olan termoskobu icat etmiştir.
 
@@ -496,12 +503,12 @@ galois:
   name: Galois
   overflow: true
   bio: |
-    Fransız matematikçi __Évariste Galois__ (1811 – 1832) kısa ve trajik bir hayat yaşamasına rağmen matematikte iki yeni alan icat etmiştir: _Grup teorisi_ ve _Galois teorisi_. 
+    Fransız matematikçi __Évariste Galois__ (1811 – 1832) kısa ve trajik bir hayat yaşamasına rağmen matematikte iki yeni alan icat etmiştir: _Grup teorisi_ ve _Galois teorisi_.
 
-    Henüz ergenlik çağındayken, Niels Abel ile aynı zamanda, beş ya da daha yüksek dereceli polinom denklemleri için genel bir çözüm olamayacağını kanıtlamıştır. 
-    
+    Henüz ergenlik çağındayken, Niels Abel ile aynı zamanda, beş ya da daha yüksek dereceli polinom denklemleri için genel bir çözüm olamayacağını kanıtlamıştır.
+
     Ne yazık ki bu keşiflerini paylaştığı matematikçiler ya çalışmalarının değerini anlamamışlar, ya da okumadan geri çevirmişlerdir. Çok karmaşık olan kendi çalışmalarına odaklandığı için okul ve üniversite sınavlarında başarısız olmuştur.
-    
+
     21 yaşındaki Galois, (bir kadın yüzünden girdiği iddia edilen) düelloda vurulmuş ve kısa süre sonra yaralarından dolayı ölmüştür. Ölmeden önceki gece arkadaşına yazdığı bir mektupta matematiksel çalışmalarını özetlemiştir. Çalışmalarının değerini ve gerçek etkisini anlamak, matematikçilerin yıllarını almıştır.
   links:
     - title: Grup Teorisi
@@ -533,15 +540,14 @@ germain:
 
     Germain elastik yüzeylerin matematiğini anlama konusundaki öncülerden biriydi. Bu alandaki katkılarından dolayı Paris Bilim Akademisi ödülüne layık görüldü. Kendisi ayrıca Fermat’nın Son Teoremi’ni ispatlama konusunda hatırı sayılır ölçüde ilerleme kaydetti ve Carl Friedrich Gauss ile düzenli olarak mektuplaştı.
 
-
 godel:
   born: 1906
   died: 1978
   name: Gödel
   small: true
   bio: |
-    __Kurt Gödel__ (1906 – 1978) sonradan Amerika’ya yerleşmiş Avusturyalı bir matematikçidir. Tarihin en iyi mantıkçısı olarak bilinir. 
-    
+    __Kurt Gödel__ (1906 – 1978) sonradan Amerika’ya yerleşmiş Avusturyalı bir matematikçidir. Tarihin en iyi mantıkçısı olarak bilinir.
+
     25 yaşında, Viyana’da doktorasını bitirdiği sırada, iki _eksiklik teoremi_ni yayınlamıştır. Bu teoremler (tutarlı ve yeterince güçlü) herhangi bir matematik sisteminde, doğru olan ancak asla kanıtlanamayacak önermeler olacağını gösterir. Yani matematikte, çözmesi imkansız sorular vardır.
 
     Bu sonuç matematik felsefesinde ve matematiğin gelişiminde çok derin izler bırakmıştır. Gödel ayrıca bu “‘imkansız problemler”e bir örnek de bulmuştur: _süreklilik hipotezi_.
@@ -550,7 +556,6 @@ godel:
       url: /world/Axioms_and_Proof
     - title: Süreklilik Hipotezi
       url: /world/Infinity
-
 
 goldbach:
   name: Goldbach
@@ -561,7 +566,6 @@ goldbach:
     - title: Goldbach Sanısı
       url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
 
-
 grothendieck:
   born: 1928
   died: 2014
@@ -571,7 +575,7 @@ grothendieck:
 
 guthrie:
   name: Guthrie
-  bio: __Francis Guthrie__ (1831 – 1899) Güney Afrikalı bir botanikçi ve matematikçiydi. İlk defa 1958 yılında Dört Renk Teoremini dile getirmiştir. En büyük İngiliz matematikçilerden olan Augustus De Morgan’ın öğrencisiydi. Guthrie matematik profesörü ve öğretmeni olmanın yanında, avukat olarak çalışmış ve güneş enerjisi ile havacılık konularında araştırmalar yapmıştır. 
+  bio: __Francis Guthrie__ (1831 – 1899) Güney Afrikalı bir botanikçi ve matematikçiydi. İlk defa 1958 yılında Dört Renk Teoremini dile getirmiştir. En büyük İngiliz matematikçilerden olan Augustus De Morgan’ın öğrencisiydi. Guthrie matematik profesörü ve öğretmeni olmanın yanında, avukat olarak çalışmış ve güneş enerjisi ile havacılık konularında araştırmalar yapmıştır.
 
 haken:
   name: Haken
@@ -587,9 +591,9 @@ hamilton:
   name: Hamilton
   small: true
   bio: |
-    __William Rowan Hamilton__ (1805 – 1865) İrlandalı bir matematikçiydi ve üstün yetenekli bir çocuktu. Matematik, fizik ve bilgisayar bilimlerinde önemli uygulamaları olan _dördeyler_i(quaternions), ilk “değişmeli olmayan cebir” örneğini, icat etmiştir. 
+    __William Rowan Hamilton__ (1805 – 1865) İrlandalı bir matematikçiydi ve üstün yetenekli bir çocuktu. Matematik, fizik ve bilgisayar bilimlerinde önemli uygulamaları olan _dördeyler_i(quaternions), ilk “değişmeli olmayan cebir” örneğini, icat etmiştir.
 
-    Bu fikir aklına ilk defa Dublin’deki Kraliyet Kanalı etrafında yürürken gelmiş ve  `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1` formülünü üzerinden geçtiği taş köprüye kazımıştır. 
+    Bu fikir aklına ilk defa Dublin’deki Kraliyet Kanalı etrafında yürürken gelmiş ve  `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1` formülünü üzerinden geçtiği taş köprüye kazımıştır.
 
     Hamilton aynı zamanda Newton mekaniği, optik gibi konularda fiziğe önemli katkılar yapmıştır.
 
@@ -599,24 +603,23 @@ hardy:
   name: Hardy
   small: true
   bio: |
-    __G.H. Hardy__ (1877 – 1947) alanının öncüsü bir İngiliz matematikçiydi. _John Littlewood_ ile birlikte analiz ve sayılar teorisinde önemli keşifler yapmışlardır. Bunlardan biri asal sayıların dağılımı üzerinedir. 
+    __G.H. Hardy__ (1877 – 1947) alanının öncüsü bir İngiliz matematikçiydi. _John Littlewood_ ile birlikte analiz ve sayılar teorisinde önemli keşifler yapmışlardır. Bunlardan biri asal sayıların dağılımı üzerinedir.
 
-    1913 yılında Hardy, _Srinivasa Ramanujan_ isimli tanınmamış, kendi kendisini eğitmiş Hintli bir rahipten bir mektup almıştır. Hardy hemen Ramanujan’ın dehasının farkına varmış ve kendi çalıştığı Cambridge’e gelmesi için ayarlamalar yapmıştır. Birlikte pek çok önemli keşifler yapmış ve sayısız makalelere imza atmışlardır. 
- 
-    Hardy hiç bir zaman uygulamalı matematiği sevmemiştir. Matematik hakkındaki görüşlerinin yer aldığı 1940 basımlı _Bir Matematikçinin Savunması_ kitabında bu görüşünü de dile getirmiştir. 
+    1913 yılında Hardy, _Srinivasa Ramanujan_ isimli tanınmamış, kendi kendisini eğitmiş Hintli bir rahipten bir mektup almıştır. Hardy hemen Ramanujan’ın dehasının farkına varmış ve kendi çalıştığı Cambridge’e gelmesi için ayarlamalar yapmıştır. Birlikte pek çok önemli keşifler yapmış ve sayısız makalelere imza atmışlardır.
+
+    Hardy hiç bir zaman uygulamalı matematiği sevmemiştir. Matematik hakkındaki görüşlerinin yer aldığı 1940 basımlı _Bir Matematikçinin Savunması_ kitabında bu görüşünü de dile getirmiştir.
 
 hilbert:
   name: Hilbert
   born: 1862
   died: 1943
   bio: |
-    __David Hilbert__ (1862 – 1943) 20. yüzyılın en önemli matematikçilerindendi. Matematiğin neredeyse her alanında çalışmalar yapmıştır. Özellikle de matematiğe biçimsel, mantıksal bir temel bulmak ile ilgilenmiştir. 
+    __David Hilbert__ (1862 – 1943) 20. yüzyılın en önemli matematikçilerindendi. Matematiğin neredeyse her alanında çalışmalar yapmıştır. Özellikle de matematiğe biçimsel, mantıksal bir temel bulmak ile ilgilenmiştir.
 
     Hilbert Almanya’da Göttingen’de çalışmış, burada sonradan ünlü olacak pek çok matematikçi yetiştirmiştir. 1900 yılındaki Uluslararası Matematik Kongersi’nde henüz çözülmemiş 23 sorudan bahsetmiştir. Bu sorular, matematik araştırmalarının yönünü tayin etmiştir ve dört tanesi günümüzde hala çözülememiştir!
   links:
     - title: Hilbert Oteli
       url: /world/Infinity
-
 
 hypatia:
   born: 360
@@ -627,7 +630,6 @@ hypatia:
     __Hypatia__(360-415) antik İskenderiye’de önemli bir astronom ve matematikçiydi. Aynı zamanda çalışmalarının nispeten iyi kayıtlarının tutulduğu ilk kadın matematikçidir. Zamanının pek çok bilimsel kitabını düzenlemiş ve haklarında yorumlar yazmıştır. Aynı zamanda usturlablar ve hidrometreler yapmıştır.
 
     Zamanında çok iyi bir öğretmen olarak ün salmış ve İskenderiye’nin Romalı yöneticisi Orestes’e danışmanlık yapmıştır. Orestes’in İskenderiye papazı Cyril ile kavgasından dolayı, sinirli ve saldırgan bir Hristiyan topluluğu tarafından Hypatia öldürülmüştür.
-
 
 jacobi:
   born: 1809
@@ -649,9 +651,9 @@ jiushao:
   name: Qin Jiushao
   overflow: true
   bio: |
-    __Qin Jiushao__ (秦九韶, c. 1202 – 1261) Çinli bir matematikçi, mucit ve politikacıydı. _Shùshū Jiǔzhāng_ adlı kitabında _Çin Kalan Teoremi_ni de içeren pek çok matematiksel keşif ve anketçilik, meteoroloji ve askerlik hakkında yazılar yer alır. 
+    __Qin Jiushao__ (秦九韶, c. 1202 – 1261) Çinli bir matematikçi, mucit ve politikacıydı. _Shùshū Jiǔzhāng_ adlı kitabında _Çin Kalan Teoremi_ni de içeren pek çok matematiksel keşif ve anketçilik, meteoroloji ve askerlik hakkında yazılar yer alır.
 
-    Qin, bugün _Horner metodu_ olarak bilinen, polinom denklemlerini sayısal olarak çözmekte kullanılan bir yöntem geliştirmiştir. Üçgenin alanını, üç kenar uzunluğu cinsinden ifade eden bir formül bulmuş, aritmetik serilerin toplamlarını hesaplamış ve Çin matematiğinde “sıfır” için bir sembol üretmiştir. 
+    Qin, bugün _Horner metodu_ olarak bilinen, polinom denklemlerini sayısal olarak çözmekte kullanılan bir yöntem geliştirmiştir. Üçgenin alanını, üç kenar uzunluğu cinsinden ifade eden bir formül bulmuş, aritmetik serilerin toplamlarını hesaplamış ve Çin matematiğinde “sıfır” için bir sembol üretmiştir.
 
     Qin aynı zamanda düşen yağmur miktarını ölçmek ve tarım için önemli olan hava durumu verisini toplamak için kullanılan _Tianchi havuzları_nı icat etmiştir.
 
@@ -683,11 +685,10 @@ khayyam:
   name: Khayyam
   born: 1048
   died: 1131
-  bio: __Ömer Hayyam(عمر خیّام‎, 1048 – 1131) İranlı bir matematikçi, astronom ve şairdi. Bütün üçüncü derece denklemleri sınıflandırıp çözmeyi başarmış ve Öklid’in _paralellik aksiyomunu_ anlamanın yeni bir yolunu bulmuştur. Hayyam aynı zamanda güneşe dayalı hassas bir takvim olan _Celali takvimi_ni tasarlamıştır. Bu takvim hala kimi ülkelerde kullanılmaktadır. 
+  bio: __Ömer Hayyam(عمر خیّام‎, 1048 – 1131) İranlı bir matematikçi, astronom ve şairdi. Bütün üçüncü derece denklemleri sınıflandırıp çözmeyi başarmış ve Öklid’in _paralellik aksiyomunu_ anlamanın yeni bir yolunu bulmuştur. Hayyam aynı zamanda güneşe dayalı hassas bir takvim olan _Celali takvimi_ni tasarlamıştır. Bu takvim hala kimi ülkelerde kullanılmaktadır.
   links:
     - title: Pascal Üçgeni
       url: /course/sequences/pascals-triangle
-
 
 lagrange:
   born: 1736
@@ -712,10 +713,10 @@ laplace:
   name: Laplace
   small: true
   bio: |
-    __Pierre-Simon Laplace__ (1749 – 1827) Fransız bir matematikçi ve bilim insanıydı. Çalışma alanlarının fazlalığı ve yaptığı çalışmaların büyük etkilerinden dolayı “Fransa’nın Newton”u olarak da bilinir. 
-    
+    __Pierre-Simon Laplace__ (1749 – 1827) Fransız bir matematikçi ve bilim insanıydı. Çalışma alanlarının fazlalığı ve yaptığı çalışmaların büyük etkilerinden dolayı “Fransa’nın Newton”u olarak da bilinir.
+
     Beş ciltlik bir eserinde Laplace, gök mekaniği ile ilgili problemleri geometriden kalkülüse tercüme etmiştir. Bu çalışma evreni anlamamız konusunda bir sürü yeni strateji geliştirebilmemize yardımcı olmuştur. Güneş sisteminin dönen biz toz dairesinden evrildiğini ileri sürmüştür.
- 
+
     Laplace aynı zamanda olasılık alanının öncülerindendir. Fiziksel dünyamızdaki verileri olasılık aracılığı ile nasıl anlayabileceğimizi göstermiştir.
 
 leibniz:
@@ -723,7 +724,7 @@ leibniz:
   born: 1646
   died: 1716
   bio: |
-    __Gottfried Wilhelm Leibniz__ (1646 – 1716) Alman bir matematikçi ve filozoftu. Bir çok başarısının yanında, kalkülüsün kaşiflerindendir ve ilk mekanik hesap makinalarını icat etmiştir. 
+    __Gottfried Wilhelm Leibniz__ (1646 – 1716) Alman bir matematikçi ve filozoftu. Bir çok başarısının yanında, kalkülüsün kaşiflerindendir ve ilk mekanik hesap makinalarını icat etmiştir.
 
     Leibniz yaşadığımız evrenin, özgür iradeye sahip olmamız koşuluyla,  tanrının yaratabileceği “en iyi evren” olduğu inancındaydı. _Akılcılık_ akımının büyük bir taraftarıydı. Fiziğe, tıbba, dilbilime, hukuka, tarihe ve pek çok alana katkıları olmuştur.
 
@@ -750,7 +751,7 @@ lobachevsky:
   died: 1856
   name: Lobachevsky
   small: true
-  bio: __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) Rus bir matematikçiydi, Öklid-dışı geometrilerin ilk kurucularındandı. Öklid’in (paralel doğrular ile ilgili) beşinci aksiyomunun geçerli olmadığı, tutarlı yeni geometriler inşa edilebileceğini göstermiştir. 
+  bio: __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) Rus bir matematikçiydi, Öklid-dışı geometrilerin ilk kurucularındandı. Öklid’in (paralel doğrular ile ilgili) beşinci aksiyomunun geçerli olmadığı, tutarlı yeni geometriler inşa edilebileceğini göstermiştir.
   links:
     - title: Öklid-dışı Geometriler
       url: /world/Dimensions_and_Distortions
@@ -803,7 +804,7 @@ mersenne:
   died: 1648
   name: Mersenne
   bio: |
-    __Marin Mersenne__ (1588 – 1648) Fransız bir matematikçi ve rahipti. 17. Yüzyıl bilim dünyasındaki tanıdıkları ile çok etkileşimde bulunduğu için kendisine “Avrupa’nın posta kutusu” dendiği de olur.. 
+    __Marin Mersenne__ (1588 – 1648) Fransız bir matematikçi ve rahipti. 17. Yüzyıl bilim dünyasındaki tanıdıkları ile çok etkileşimde bulunduğu için kendisine “Avrupa’nın posta kutusu” dendiği de olur..
 
     Bugün kendisini daha çok `2^n - 1` şeklinde yazılabilen _Mersenne asalları_ ile hatırlıyoruz. Tanınan en büyük asalların çoğu bu kategoridedir. Aynı zamanda akustik ve titreşen bir telin harmoniği üzerinde çalışmış, teoloji ve felsefe üzerine yazmıştır.
   links:
@@ -840,7 +841,6 @@ monge:
     - title: Harita izdüşümleri
       url: /world/Dimensions_and_Distortions
 
-
 monsky:
   name: Monsky
   bio: __Paul Monsky__ (born 1936) Brandeis Üniversitesi’nde profesörlük yapan Amerikalı bir matematikçidir. “Monsky teorem’” olarak bilinen, bir karenin tek sayıda eşit alana sahip üçgenlere bölünemeyeceği sonucunu kanıtlamıştır.
@@ -856,7 +856,7 @@ nash:
   died: 2015
   name: Nash
   bio: |
-    __John Forbes Nash__ (1928 – 2015) oyun teorisi, türevli geometri ve kısmi türevli denklemler alanlarında çalışmış Amerikalı bir matematikçiydi. Matematiğin ekonomi ve askeri konular gibi günlük hayattan, karmaşık sistemlerin karar alma süreçlerini nasıl açıklayabileceğini göstermiştir. 
+    __John Forbes Nash__ (1928 – 2015) oyun teorisi, türevli geometri ve kısmi türevli denklemler alanlarında çalışmış Amerikalı bir matematikçiydi. Matematiğin ekonomi ve askeri konular gibi günlük hayattan, karmaşık sistemlerin karar alma süreçlerini nasıl açıklayabileceğini göstermiştir.
 
     30’lu yaşlarında paranoyak şizofreni teşhisi koyulan Nash, iyileşip akademik çalışmalarına geri dönmeyi başarmıştır. Matematik alanındaki en büyük ödüllerden olan _Abel Ödülü_nü ve ekonomi alanındaki Nobel ödülünü birlikte almış tek kişidir.
   links:
@@ -878,7 +878,7 @@ newton:
   born: 1642
   died: 1726
   bio: |
-    __Sir Isaac Newton__ (1642 – 1726) İngiliz bir fizikçi, matematikçi ve astronomdur. Bütün zamanların en etkin bilim insanlarındandır. Cambridge Üniversitesinde profesördü ve Londra Kraliyet Akademisi’nin başkanıydı. 
+    __Sir Isaac Newton__ (1642 – 1726) İngiliz bir fizikçi, matematikçi ve astronomdur. Bütün zamanların en etkin bilim insanlarındandır. Cambridge Üniversitesinde profesördü ve Londra Kraliyet Akademisi’nin başkanıydı.
 
     _Principia Mathematica_ isimli kitabında hareket ve yer çekimi yasalarını tasvir etmiştir. Bu eser, klasik fiziğin temellerini oluşturup yazıldıktan sonraki üçyüzyıl boyunca evren hakkındaki görüşümüzü domine etmiştir.
 
@@ -913,12 +913,11 @@ noether:
   name: Noether
   born: 1882
   died: 1935
-  bio: __Amalie Emmy Noether__ (1882 – 1935) soyut cebir ve fizikte önemli keşifler yapmış Alman bir matematikçiydi. Bu keşifler içinde simetri ve fizikteki korunum yasaları arasındaki ilişki vardır. Tüm zamanların en çok etki yapmış kadın matematikçisi olarak anılır.   
+  bio: __Amalie Emmy Noether__ (1882 – 1935) soyut cebir ve fizikte önemli keşifler yapmış Alman bir matematikçiydi. Bu keşifler içinde simetri ve fizikteki korunum yasaları arasındaki ilişki vardır. Tüm zamanların en çok etki yapmış kadın matematikçisi olarak anılır.
   small: true
   links:
     - title: Fizikte Simetri
       url: /course/transformations-and-symmetry/symmetry-in-physics
-
 
 oresme:
   born: 1323
@@ -952,8 +951,8 @@ peano:
   name: Peano
   small: true
   bio: |
-    İtalyan matematikçi__Giuseppe Peano__ (1858 – 1932) mantık ve matematik hakkında 200’ün üzerinde kitap ve makale yazmıştır. Cebir ve analizin temeli olarak kullanılan _Peano aksiyomları_nı ortaya koymuş, mantık ve kümeler kuramı için notasyon geliştirmiş, sürekli ve uzayı dolduran eğriler(Peano eğrileri) inşa etmiş ve tümevarımla ispat yöntemi üzerinde çalışmıştır. 
- 
+    İtalyan matematikçi__Giuseppe Peano__ (1858 – 1932) mantık ve matematik hakkında 200’ün üzerinde kitap ve makale yazmıştır. Cebir ve analizin temeli olarak kullanılan _Peano aksiyomları_nı ortaya koymuş, mantık ve kümeler kuramı için notasyon geliştirmiş, sürekli ve uzayı dolduran eğriler(Peano eğrileri) inşa etmiş ve tümevarımla ispat yöntemi üzerinde çalışmıştır.
+
     Ayrıca Peano, Latince’nin basitleştirilmiş bir hali olan yeni, uluslararası bir dil geliştirmiştir: _Latino sine flexione_.
   links:
     - title: Tümervarımla kanıt
@@ -985,7 +984,6 @@ perelman:
 
     Perelman aynı zamanda Riemann geometrisine ve geometrik topolojiye katkılarda bulunmuştur. Poincaré sanısı, günümüzde çözülmüş olan tek Milenyum Ödülü problemidir.
 
-
 pingala:
   name: Pingala
   born: -330
@@ -994,7 +992,6 @@ pingala:
   links:
     - title: Pascal Üçgeni
       url: /course/sequences/pascals-triangle
-
 
 planck:
   name: Plank
@@ -1011,7 +1008,6 @@ plato:
   links:
     - title: Platonik Cisimler
       url: /course/polygons-and-polyhedra/platonic-solids
-
 
 poincare:
   born: 1854
@@ -1045,13 +1041,12 @@ ptolemy:
     - title: Yörüngeler
       url: /course/circles-and-pi/introduction
 
-
 pythagoras:
   name: Pythagoras
   born: -570
   died: -495
   bio: |
-    __Samos’lu Pisagor__ (M.Ö 570 – 495 ) bir Yunan filozof ve matematikçiydi. Kendisi _Pisagor Teoremi_ ile bilinse de, daha birçok matematiksel ve bilimsel keşifleri vardır. 
+    __Samos’lu Pisagor__ (M.Ö 570 – 495 ) bir Yunan filozof ve matematikçiydi. Kendisi _Pisagor Teoremi_ ile bilinse de, daha birçok matematiksel ve bilimsel keşifleri vardır.
 
     Pisagor, müziği matematikle açıklamaya çalıştı ve frekanslarının oranı basit bir kesirse, iki ses tonunun (ünsüz) birlikte kulağa “hoş” geldiğini keşfetti.
 
@@ -1060,14 +1055,13 @@ pythagoras:
     - title: Pisagor Teoremi
       url: /course/triangles-and-trigonometry/pythagoras-theorem
 
-
 ramanujan:
   born: 1887
   died: 1920
   name: Ramanujan
   overflow: true
   bio: |
-    __Srinivasa Ramanujan__ (1887 – 1920) çok az resmi eğitim gördüğü Hindistan’da büyümüştür.Buna rağmen, küçük bir dükkanda veznedar olarak çalışırken,  tek başına yeni fikirler geliştirmeyi başarmıştır. 
+    __Srinivasa Ramanujan__ (1887 – 1920) çok az resmi eğitim gördüğü Hindistan’da büyümüştür.Buna rağmen, küçük bir dükkanda veznedar olarak çalışırken,  tek başına yeni fikirler geliştirmeyi başarmıştır.
 
     Diğer matematikçilerle iletişime geçmekte bir kaç defa başarız olduktan sonra, ünlü G. H. Hardy’ye bir mektup yazmıştır. Hardy anında Ramanujan’ın dehasının farkına varmış ve İngiltere’de Cambridge’e yanına gelmesi için seyahatini ayarlamıştır. Birlikte sonsuz seriler, analiz ve sayılar kuramında sayısız keşifler yapmışlardır.
 
@@ -1096,7 +1090,7 @@ russell:
   name: Russell
   small: true
   bio: |
-    __Bertrand Russell__ (1872 – 1970) İngiliz bir filozof, matematikçi ve yazardı. 20. yüzyılın en önemli mantıkçılarından kabul edilir. 
+    __Bertrand Russell__ (1872 – 1970) İngiliz bir filozof, matematikçi ve yazardı. 20. yüzyılın en önemli mantıkçılarından kabul edilir.
 
     Russell matematiği mantık kullanarak biçimsel olarak temellendirmek için Whitehead ile birlikte “Principia Mathematica”’yı yazmıştır. Çalışmalarının sadece matematik ve felsefeye değil, aynı zamanda dilbilim, yapay zeka ve metafiziğe de çok önemli etkileri olmuştur.
 
@@ -1112,7 +1106,6 @@ shannon:
     - title: Kumar için Bilgisayarlar
       url: /course/probability/casino-mathematics#dealer
 
-
 shijie:
   born: 1249
   died: 1314
@@ -1125,10 +1118,9 @@ shijie:
     - title: Pascal Üçgeni
       url: /course/sequences/pascals-triangle
 
-
 sikdar:
   name: Sikdar
-  bio: __Radhanath Sikdar__ (1813 – 1870) Hintli bir matematikçiydi. Everest’in yüksekliğini ölçen ve onun Dünya’daki en yüksek dağ olduğunu gösteren ilk kişidir. 
+  bio: __Radhanath Sikdar__ (1813 – 1870) Hintli bir matematikçiydi. Everest’in yüksekliğini ölçen ve onun Dünya’daki en yüksek dağ olduğunu gösteren ilk kişidir.
 
 singmaster:
   name: Singmaster
@@ -1158,7 +1150,6 @@ thales:
     - title: Thales Teoremi
       url: /course/euclidean-geometry/introduction
 
-
 thorp:
   name: Thorp
   bio: __Edward Thorp__ (1932 doğumlu ) Amerikalı bir yatırım fonu yöneticisi ve 21 oyuncusudur. _Kart sayma_ tekniğini bulması ve Rulet oyununda kumarhaneleri yenmek için kullanılan ilk _giyilebilir bilgisayar_ları yapmasıyla ünlüdür. MIT’de çalışmış bir matematik profesörüdür ve olasılık kuramının modern uygulamaları konusunda bir öncüdür.
@@ -1170,12 +1161,11 @@ turing:
   bio: |
     __Alan Turing__ (1912 – 1954) İngiliz bir matematikçiydi. Bbilgisayar biliminin babası” olarak bilinir.
 
-    İkinci dünya savaşı sırasında, Bletchley Park’taki “Hükümet Kod ve Şifre Okulu”nun bir parçası olarak, Alman askeriyesi tarafından kullanılan Enigma kodunun kırılmasında kritik bir rol oynamıştır. Bu sayede müttefiklerin savaşı kazanmasına ve belki de milyonlarca hayatın kurtulmasına yol açmıştır. 
+    İkinci dünya savaşı sırasında, Bletchley Park’taki “Hükümet Kod ve Şifre Okulu”nun bir parçası olarak, Alman askeriyesi tarafından kullanılan Enigma kodunun kırılmasında kritik bir rol oynamıştır. Bu sayede müttefiklerin savaşı kazanmasına ve belki de milyonlarca hayatın kurtulmasına yol açmıştır.
 
     Ayrıca genel amaçlı bir bilgisayarın matematiksel bir modeli olan _Turing makinesi_ni ve yapay zekanın yetilerini ölçmek için kullanılabilen _Turing testi_ni icat etmiştir.
 
     Turing eşcinselli ve yaşadığı zamanlarda bu bir suçtu. Dolayısı olağanüstü başarıları, asla hak ettiği saygıyı görmedi. 41 yaşında intihar etmiştir.
-
 
 ulam:
   name: Ulam
@@ -1205,10 +1195,10 @@ wiles:
   died: 2020
   name: Wiles
   bio: |
-    İngiliz matematikçi  Sir __Andrew Wiles__ (1953 doğumlu), kendisi çözene kadar 350 yıl boyunca çözümsüz kalmış, Fermat’nın Son Teoremi olarak bilinen teoreme verdiği kanıt ile bilinir. 
+    İngiliz matematikçi  Sir __Andrew Wiles__ (1953 doğumlu), kendisi çözene kadar 350 yıl boyunca çözümsüz kalmış, Fermat’nın Son Teoremi olarak bilinen teoreme verdiği kanıt ile bilinir.
 
     1637’de Pierre de Fermat, bir kitabın sayfasının kenarına `a^n + b^n = c^n` denkleminin `n > 2` için tamsayı çözümünün olmadığına dair muhteşem bir kanıtı olduğu yazmıştır. Ne yazık ki, yaklaşık 400 yıl boyunca, Wiles bulana kadar, kimse böyle bir kanıt bulamamıştır.
 
     Wiles 10 yaşından beri bu problemden etkilenmiştir ve 7 yıl boyunca kendi kendine bir çözüm üzerinde çalışmıştır. Çözümünü 1993 yılında duyurmuştur, ancak kanıtındaki ufak bir hatanın giderilmesi 2 yıl daha sürmüştür.
 
-    Kanıtı sunduğu zaman 40 yaş sınırı olan, matematikteki en prestijli ödül olan _Fields Madalyası_nı almak için yaşlıydı. Wiles onun yerine, çalışmasından dolayı özel bir gümüş plaket ile ödüllendirilmiştir. 
+    Kanıtı sunduğu zaman 40 yaş sınırı olan, matematikteki en prestijli ödül olan _Fields Madalyası_nı almak için yaşlıydı. Wiles onun yerine, çalışmasından dolayı özel bir gümüş plaket ile ödüllendirilmiştir.

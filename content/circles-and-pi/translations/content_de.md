@@ -295,7 +295,7 @@ Ziffern wäre etwa 400\ km dick - das ist die Höhe, in der die
 [Internationale Raumstation](gloss:iss) die Erde umkreist!
 
 Natürlich musst du dir nicht so viele Ziffern von Pi merken. Tatsächlich ist der
-Bruch `22/7 = 3,142....` eine gute Annäherung.
+Bruch `22/7 = 3,142…` eine gute Annäherung.
 
 :::
 
