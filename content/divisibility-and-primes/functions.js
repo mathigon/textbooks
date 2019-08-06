@@ -252,8 +252,7 @@ export function race($section) {
       for (let i of [0, 1]) {
         let offset = ((p * duration) % speed[i]) / speed[i];
         let point = $paths[i].getPointAt(offset);
-        $runners[i].setAttr('cx', point.x);
-        $runners[i].setAttr('cy', point.y);
+        $runners[i].setCenter(point);
         $runners[i].setAttr('r', 12 * (1 + point.y/234));
       }
       $buttonText.text = Math.floor(p * duration * 10) + ' s';

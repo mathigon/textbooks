@@ -85,13 +85,13 @@ export function rigid1($step) {
   });
 
   play($step, $animations[1], 2000, 't2', () => {
-    $images[1].transform = 'none';
+    $images[1].css('transform', 'none');
     $lines[1].enter('draw', 1000);
     $images[1].animate({transform: 'rotate(54deg) translate(230px,-118px) scaleX(-1)'}, 1000, 1000);
   });
 
   play($step, $animations[2], 2000, 't3', () => {
-    $images[2].transform = 'none';
+    $images[2].css('transform', 'none');
     for (let i=2; i<6; ++i) $lines[i].enter('draw', 500);
     $images[2].animate({transform: 'rotate(84deg)', }, 1000, 1000);
   });
@@ -103,7 +103,7 @@ export function translations1($step) {
 
   $step.$$('svg').forEach(($s, i) => {
     const $polygons = $s.$$('polygon');
-    $polygons[0].transform = `translate(${initial[i].x}px, ${initial[i].y}px)`;
+    $polygons[0].setTransform(initial[i]);
 
     const drag = new Draggable($polygons[1], $s, {useTransform: true, snap: 20});
     drag.setPosition(initial[i].x, initial[i].y);

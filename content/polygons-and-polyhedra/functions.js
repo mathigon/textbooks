@@ -238,7 +238,7 @@ export function escher($step) {
     move(p, start, last) {
       translate += last.x - p.x;
       translate = clamp(translate, 0, max);
-      $img.transform = `translateX(-${translate}px)`;
+      $img.translate(-translate, 0);
     }
   });
 

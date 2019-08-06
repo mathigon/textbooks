@@ -15,7 +15,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@mathigon/boost": "^0.2.9",
+    "@mathigon/boost": "^0.3.0",
     "@mathigon/core": "^0.2.5",
     "@mathigon/fermat": "^0.2.7",
     "@mathigon/hilbert": "^0.2.3"

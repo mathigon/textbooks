@@ -39,7 +39,7 @@ export class PiScroll extends CustomElement {
 
   updateRow(i) {
     const $row = this.$rows[i % NUM_ELS];
-    $row.translateY(i * ROW_HEIGHT);
+    $row.translate(0, i * ROW_HEIGHT);
     $row.text = this.string.substr(i * this.numColumns, this.numColumns);
   }
 

@@ -72,7 +72,7 @@ class Shape {
     this.transformed = polygon;
     this.posn = p;
     this.angle = a;
-    this.$el.transform = `translate(${p.x}px, ${p.y}px) rotate(${a}deg)`;
+    this.$el.setTransform(p, a * Math.PI/180);
   }
 
   hasIntersects(polygon) {
