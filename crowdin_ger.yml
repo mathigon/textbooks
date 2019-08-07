@@ -1,6 +1,0 @@
-files:
-  - source: /content/*/*.md
-    ignore:
-      - '*/translations/*.*'
-    translation: >-
-      %original_path%/translations/%original_file_name%_%two_letters_code%.%file_extension%
