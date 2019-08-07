@@ -25,7 +25,7 @@ export class Anibutton extends CustomElement {
 
     animate(p => {
       const s = p < 0.3 ? 0 : ease('elastic-out', 1.43 * p - 0.43);
-      this.$text.transform = `scale(${s})`;
+      this.$text.css('transform', `scale(${s})`);
     }, 1000);
 
     this.burst.play(1000, [80, 80], [0, 80]);

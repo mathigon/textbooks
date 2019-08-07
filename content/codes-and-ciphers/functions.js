@@ -33,7 +33,7 @@ class CodeBox extends Evented {
 
     function update($container, current, other, bars) {
       return function(text) {
-        let caret = $container.isTextarea ? $container.cursor : 0;
+        // let caret = $container.isTextarea ? getCursor($container) : 0;
 
         $container.html = '';
         letters[current] = [];
@@ -62,7 +62,7 @@ class CodeBox extends Evented {
           });
         });
 
-        if ($container.isTextarea) $container.cursor = caret;
+        // if ($container.isTextarea) $container.cursor = caret;
 
         if (bars) {
           let freq = cipherLetterFreq(text);

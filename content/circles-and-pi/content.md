@@ -715,7 +715,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 Using radians has one particularly interesting advantage when using the [__Sine
 function__](gloss:sin). If `θ` is a very small angle (less than 20° or 0.3 rad),
-then `"sin"(θ) ≈ θ`. For example,
+then `sin(θ) ≈ θ`. For example,
 
 {.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
@@ -923,7 +923,7 @@ As you can see in the diagram, an [{.red} arc](pill:arc) is a part of the
 is a part of the [[interior|radius|perimeter]] of a circle.
 
 ::: .reveal(when="blank-0 blank-1")
-The arc between two points _A_ and _B_ is often written as `§arc(AB)`. This
+The arc between two points _A_ and _B_ is often written as `arc(AB)`. This
 definition is slightly ambiguous: there is a [{.purple} second arc](pill:major)
 that connects _A_ and _B_ but goes the other way around the circle.
 
@@ -956,7 +956,7 @@ the circle.
 
 We can express this relationship in an equation:
 
-{.text-center} `§ "arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
+{.text-center} `"arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
 :::
 
 ::: column(width=280)
@@ -1094,20 +1094,20 @@ Eratosthenes measured that the [{.teal} angle](pill:angle1) of the shadow was
 ::: .reveal(when="blank-0")
 Now we can use the equation for arc length that we derived above:
 
-{.text-center} `§pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
+{.text-center} `pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
 :::
 
 ::: .reveal(when="blank-1")
 If we rearrange this, we find that the circumference of the Earth is
 
-{.text-center} `§pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
+{.text-center} `pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 :::
 
 ::: .reveal(when="blank-2")
 Finally, we know that the circumference of a circle is `C = 2 pi r`, so the
 radius of Earth is
 
-{.text-center} `§r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"`.
+{.text-center} `r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"`.
 :::
 
 ::: column(width=300)
@@ -1670,7 +1670,7 @@ case, we get one circle and one [[circle sector|circle segment|circle arc]].
 {.reveal(when="blank-0")} Now we just have to add up the area of both these
 components. The __{.m-yellow}base__ is a circle with radius _r_, so its area is
 
-{.text-center.reveal(when="blank-0")} `§pill(A_"Base","yellow","circle") =`
+{.text-center.reveal(when="blank-0")} `pill(A_"Base","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
@@ -1722,7 +1722,7 @@ _{span.reveal(when="blank-0")}`2 π r`. Now we can find the area of the sector
 using the [formula](gloss:circle-sector) we derived in a previous section:_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
-| `§pill(A_"Sector","green","sector")` | `=` | `§pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
 |                | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 :::
 
@@ -1856,7 +1856,7 @@ above the base.
 right-angled triangle_, so we can use [Pythagoras](gloss:pythagoras-theorem):
 
 ::: .reveal(when="blank-0")
-{.text-center} `§pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
+{.text-center} `pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
 
 Now, the area of the cross section is
 

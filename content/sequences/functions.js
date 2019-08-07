@@ -448,12 +448,12 @@ export function goldenSpiral($step) {
   const transforms = ['scale(4) translate(-23%,-23%)',
     'scale(3.5) translate(-23%,-18%)', 'scale(3) translate(-18%,-18%)',
     'scale(1.5) translate(-18%,-23%)', 'none', 'none'];
-  $svg.transform = transforms[0];
+  $svg.css('transform', transforms[0]);
 
   for (let $e of [...$squares, ...$lines]) $e.hide();
 
   $step.$slides.on('next', (x) => {
-    $svg.transform = transforms[x];
+    $svg.css('transform', transforms[x]);
     if (x <= 3) {
       $squares[x - 1].enter('fade');
     } else if (x === 4) {
@@ -466,7 +466,7 @@ export function goldenSpiral($step) {
   });
 
   $step.$slides.on('back', (x) => {
-    $svg.transform = transforms[x];
+    $svg.css('transform', transforms[x]);
     if (x <= 2) {
       $squares[x].exit('fade');
     } else if (x === 3) {
@@ -500,15 +500,15 @@ export function sunflowerGrowing($step) {
       let r = Math.sqrt((x - i)/count);
       let cx = r * 70 * Math.cos(t);
       let cy = r * 70 * Math.sin(t);
-      $petals[i].transform = `translate(${cx}px,${cy}px) scale(${1.5 + r}) rotate(${t}rad)`;
+      $petals[i].setTransform(new Point(cx, cy), t, 1.5 + r);
     }
 
     for (let i = x + 1; i < count; ++i) {
       let t = 3.883222 * i;
-      $petals[i].transform = `scale(0.05) rotate(${t}rad)`;
+      $petals[i].setTransform(null, t, 0.05);
     }
 
-    $bulb.transform = `scale(${1 + 69 * Math.sqrt(x/count)})`
+    $bulb.setTransform(null, 0, 1 + 69 * Math.sqrt(x/count));
   }
 
   $slider.on('move', move);

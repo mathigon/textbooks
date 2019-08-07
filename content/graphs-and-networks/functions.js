@@ -22,6 +22,7 @@ const RED = '#b30469';
 const BLUE = '#1f7aff';
 const GREEN = '#31b304';
 const YELLOW = '#ff941f';
+const ORANGE = '#db3229';
 
 export function intro($section) {
   let $graph = $section.$('.graph');
@@ -264,7 +265,7 @@ export function bridges1($section) {
 }
 
 export function bridges3($section) {
-  let g = Colour.green, r = Colour.red, b = Colour.blue, o = Colour.orange;
+  let g = GREEN, r = RED, b = BLUE, o = ORANGE;
   let colours = {
     val: Colour.rainbow(8),
     eo: [g,r,g,r,g,r,g],
@@ -301,12 +302,12 @@ export function bridges4($section) {
     if (x < 4) {
       $edges[2 * x - 2].enter('draw', 600).then(function() {
         $text.text = 2 * x - 1;
-        $vertex.css('fill', Colour.red);
+        $vertex.css('fill', RED);
       }).then(function() {
         return $edges[2 * x - 1].enter('draw', 600)
       }).then(function() {
         $text.text = 2 * x;
-        $vertex.css('fill', Colour.green);
+        $vertex.css('fill', GREEN);
       });
 
     } else if (x === 5) {
@@ -321,7 +322,7 @@ export function bridges4($section) {
         return $edges[2 * x  ].exit('draw', 400);
       }).then(function() {
         $text.text = 2 * x || '';
-        $vertex.css('fill', x ? Colour.green : '#BBB');
+        $vertex.css('fill', x ? GREEN : '#BBB');
       });
 
     } else if (x === 4) {
@@ -561,12 +562,12 @@ export function euler($section) {
     let $svg = $svgs[(i-x)/3];
     $section.onScore('blank-' + i, function() {
       if (x === 0) {
-        $svg.$$('circle').forEach(function($c) { $c.animate({ fill: Colour.green }); })
+        $svg.$$('circle').forEach(($c) => $c.animate({fill: GREEN}));
       } else if (x === 1) {
-        $svg.$$('polygon').forEach(function($c) { $c.animate({ opacity: .3 }); });
-        $notes[(i-x)/3].fadeIn();
+        $svg.$$('polygon').forEach(($c) => $c.animate({opacity: .3}));
+        $notes[(i-x)/3].enter('fade');
       } else if (x === 2) {
-        $svg.$$('line').forEach(function($c) { $c.animate({ stroke: Colour.red }); });
+        $svg.$$('line').forEach(($c) => $c.animate({stroke: RED}));
       }
     });
   });
@@ -651,12 +652,12 @@ export function euler3($section) {
 
     $svg.css('cursor','default');
     $gs.forEach(function($g, i) {
-      setTimeout(() => { $g.transform = 'rotate(23.5deg)'; }, i*100);
-      setTimeout(() => { $g.transform = 'rotate(43.5deg)'; }, i*100 + 100);
-      setTimeout(() => { $g.transform = 'rotate(  56deg)'; }, i*100 + 200);
-      setTimeout(() => { $g.transform = 'rotate(  62deg)'; }, i*100 + 300);
-      setTimeout(() => { $g.transform = 'rotate(64.5deg)'; }, i*100 + 400);
-      setTimeout(() => { $g.transform = 'rotate(65.5deg)'; }, i*100 + 500);
+      setTimeout(() => $g.css('transform', 'rotate(23.5deg)'), i*100);
+      setTimeout(() => $g.css('transform', 'rotate(43.5deg)'), i*100 + 100);
+      setTimeout(() => $g.css('transform', 'rotate(  56deg)'), i*100 + 200);
+      setTimeout(() => $g.css('transform', 'rotate(  62deg)'), i*100 + 300);
+      setTimeout(() => $g.css('transform', 'rotate(64.5deg)'), i*100 + 400);
+      setTimeout(() => $g.css('transform', 'rotate(65.5deg)'), i*100 + 500);
     });
   });
 }
@@ -679,7 +680,7 @@ export function euler4($step) {
 }
 
 export function maps1($section) {
-  let colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', Colour.violet, Colour.orange, Colour.cyan];
+  let colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', '#662D91', '#F15A24', '#29ABE2'];
   let $colours = $section.$$('.four-colour-icon');
   let activeColour = 0;
   let warned = false;

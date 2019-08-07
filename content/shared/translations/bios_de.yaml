@@ -33,7 +33,7 @@ al-haytham:
   died: 1050
   name: Al-Haytham
   bio: |
-    __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 - 1050)
+    __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, ca. 965 - 1050)
     lebte während der Blütezeit des Islam in Kairo und studierte Mathematik,
     Physik, Astronomie, Philosophie und Medizin. Er war ein Verfechter der
     _wissenschaftlichen Methode_: die Überzeugung, dass jede wissenschaftliche
@@ -42,14 +42,14 @@ al-haytham:
 
     Alhazen interessierte sich besonders für Optik und visuelle Wahrnehmung. Er
     leitete auch eine Formel für die Summe von vierten Potenzen
-    (`1^4 + 2^4 + 3^4 + 3^4 + .... + n^4`) her, und er studierte die Verbindung
+    (`1^4 + 2^4 + 3^4 + 3^4 + … + n^4`) her, und er studierte die Verbindung
     zwischen Algebra und Geometrie.
 
 al-karaji:
   born: 953
   died: 1029
   name: Al-Karaji
-  bio: __Muhammad al-Karadschi__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029)
+  bio: __Muhammad al-Karadschi__ (ابو بکر محمد بن الحسن الکرجی, ca. 953 - 1029)
     war ein persischer Mathematiker und Ingenieur. Er war der Erste, der einen
     _Beweis durch vollständige Induktion_, anwendete und so den Binomialsatz
     beweisen konnte.
@@ -82,7 +82,7 @@ apollonius:
   name: Apollonius
   born: -262  # ???
   died: -190  # ???
-  bio: __Apollonius von Perge__ (c. 200 v. Chr.) war ein griechischer Mathematiker und
+  bio: __Apollonius von Perge__ (ca. 200 v. Chr.) war ein griechischer Mathematiker und
     Astronom, der vor allem für seine Arbeit über die vier _Kegelschnitte_ bekannt ist.
   links:
     - title: Kegelschnitte
@@ -106,7 +106,7 @@ archimedes:
   born: -287
   died: -212
   bio: |
-    __Archimedes__ (c. 287 – c. 212 v. Chr.) war ein altgriechischer Wissenschaftler und
+    __Archimedes__ (ca. 287 – ca. 212 v. Chr.) war ein altgriechischer Wissenschaftler und
     Ingenieur sowie einer der größten Mathematiker aller Zeiten. Er entdeckte
     viele Rechenmethoden und beschäftigte sich mit Geometrie, Analysis und Mechanik.
 
@@ -128,7 +128,7 @@ aristotle:
   died: -322
   name: Aristoteles
   bio: |
-    __Aristoteles__ (Ἀριστοτέλης, c. 384 - 322 v. Chr.) war ein Philosoph im antiken
+    __Aristoteles__ (Ἀριστοτέλης, ca. 384 - 322 v. Chr.) war ein Philosoph im antiken
     Griechenland. Zusammen mit seinem Lehrer _Plato_ gilt er als “Vater der
     Philosophie des Abendlandes” (der westlichen Philosophie). Er war auch der Privatlehrer von Alexander dem Großen.
 
@@ -265,7 +265,7 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
-  bio: Der indische Mathematiker __Brahmagupta__ (c. 598 - 668 AD) erfand die
+  bio: Der indische Mathematiker __Brahmagupta__ (ca. 598 - 668 AD) erfand die
     Regeln für Addition, Subtraktion und Multiplikation mit Null und negativen
     Zahlen. Er war auch ein Astronom und machte viele andere Entdeckungen in der
     Mathematik. Leider enthielten seine Schriften keine Beweise, so dass wir
@@ -451,7 +451,7 @@ democritus:
   born: -460
   died: -370
   name: Demokrit
-  bio: Der griechische Mathematiker __Demokrit__ (c. 460 - 370 v. Chr.), dürfte als
+  bio: Der griechische Mathematiker __Demokrit__ (ca. 460 - 370 v. Chr.), dürfte als
     Erster vermutet haben, dass die gesamte Materie aus winzigen _Atomen_ besteht und
     gilt als der “Vater der modernen Wissenschaft”. Er machte auch viele Entdeckungen
     in der Geometrie, einschließlich der Formel für das Volumen von Prismen und Kegeln.
@@ -900,7 +900,7 @@ hypatia:
   name: Hypatia
   overflow: true
   bio: |
-    __Hypatia__ (c. 360 – 415 AD) was a prominent astronomer and mathematician
+    __Hypatia__ (ca. 360 – 415 AD) was a prominent astronomer and mathematician
     in ancient Alexandria. She was also the first female mathematician whose
     life and work are reasonably well recorded. She edited or wrote commentaries
     on many of the scientific books of her time, and constructed astrolabes and
@@ -922,13 +922,12 @@ jacobi:
 jefferson:
   name: Jefferson
   bio: |
-    __Thomas Jefferson__ (1743 – 1826), was one of the Founding fathers of the
-    United States, their third president, and the principal author of the
-    Declaration of Independence.
+    __Thomas Jefferson__ (1743 – 1826), war einer der Gründerväter der
+    Vereinigten Staaten, ihr dritter Präsident und Hauptautor der Unabhängigkeitserklärung.
 
-    In addition to his work in politics, he studied mathematics, horticulture,
-    mechanics, and worked as an architect. After retiring from public office,
-    Jefferson founded the University of Virginia.
+    Neben seiner Tätigkeit in der Politik studierte er Mathematik,
+    Gartenbau, Mechanik und arbeitete als Architekt. Nach seinem Rückzug
+    aus dem öffentlichen Dienst gründete Jefferson die University of Virginia.
 
 jiushao:
   born: 1202
@@ -936,7 +935,7 @@ jiushao:
   name: Qin Jiushao
   overflow: true
   bio: |
-    __Qin Jiushao__ (秦九韶, c. 1202 – 1261) was a Chinese mathematician,
+    __Qin Jiushao__ (秦九韶, ca. 1202 – 1261) was a Chinese mathematician,
     inventor and politician. In his book _Shùshū Jiǔzhāng_, he published
     numerous mathematical discoveries, including the important _Chinese
     remainder theorem_, and wrote about surveying, meteorology and the military.
@@ -1127,7 +1126,7 @@ madhava:
   died: 1425
   name: Madhava
   bio: |
-    __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and
+    __Madhava of Sangamagramma__ (ca. 1340 – 1425) was a mathematician and
     astronomer from southern India. All of his original work has been lost, but
     he had a great impact on the development of mathematics.
 
@@ -1299,7 +1298,7 @@ nicomachus:
   born: 60
   died: 120
   overflow: true
-  bio: __Nicomachus of Gerasa__ (c. 60 – 120) was an ancient Greek mathematician
+  bio: __Nicomachus of Gerasa__ (ca. 60 – 120) was an ancient Greek mathematician
     who also spent much time thinking about the mystical properties of numbers.
     His book _Introduction to Arithmetic_ contains the first mention of perfect
     numbers.
@@ -1342,7 +1341,7 @@ oresme:
   born: 1323
   died: 1382
   name: Oresme
-  bio: __Nicole Oresme__ (c. 1323 – 1382) was an important French mathematician,
+  bio: __Nicole Oresme__ (ca. 1323 – 1382) was an important French mathematician,
     philosopher and bishop, living in the late Middle Ages. He invented
     coordinate geometry, long before Descartes, was the first to use fractional
     exponents, and worked on infinite series. He wrote about economics, physics,
@@ -1502,7 +1501,7 @@ ptolemy:
   died: 168
   name: Ptolemy
   bio: |
-    __Claudius Ptolemy__ (c. 100 – 170 AD) was a Greco-Roman mathematician,
+    __Claudius Ptolemy__ (ca. 100 – 170 AD) was a Greco-Roman mathematician,
     astronomer, geographer and astrologer. He is best remembered for the
     _Ptolemaic_ or _Geocentric_ model of our universe – that Earth is in the
     centre and all planets and the sun revolve around this.
