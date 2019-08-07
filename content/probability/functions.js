@@ -29,7 +29,7 @@ export function roulette($step) {
       ballOffset = null;
     },
     draw(angle, isMomentum, dt) {
-      for (let $w of $wheels) $w.transform = `rotate(${angle}rad)`;
+      for (let $w of $wheels) $w.setTransform(null, angle);
       if (!isMomentum) return;
 
       ballSpeed *= 0.985;
@@ -43,7 +43,7 @@ export function roulette($step) {
       const ballRadius = Math.min(116 + 87500 * Math.abs(ballSpeed), 165);
       const x = ballRadius * Math.sin(ballAngle);
       const y = -ballRadius * Math.cos(ballAngle);
-      $ball.transform = `translate(${x}px, ${y}px)`;
+      $ball.translate(x, y);
     }
   });
 }
