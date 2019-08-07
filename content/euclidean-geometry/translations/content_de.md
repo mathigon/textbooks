@@ -59,7 +59,7 @@ opferte, um den Göttern zu danken.
 
 Doch die bloße _Beobachtung_ einer solchen Verbindung reichte Thales nicht aus,
 er wollte verstehen, _warum_ das so ist, und überprüfen, ob das _immer_ gilt
- und nicht nur in den wenigen Beispielen, die er ausprobiert hatte.
+und nicht nur in den wenigen Beispielen, die er ausprobiert hatte.
 
 Ein Argument, das logisch erklärt, warum etwas
 wahr sein muss, wird als [__Beweis__](gloss:proof) bezeichnet. In den folgenden Kursen
@@ -357,7 +357,7 @@ Das Gegenteil von _parallel_ sind zwei Geraden, die sich in einem Winkel von 90�
 Solche Geraden werden als [__Normale__](gloss:perpendicular) bezeichnet.
 
 {.r} In diesem Beispiel würden wir _{.b.m-blue}a_ `⊥` _{.b.m-green}b_ schreiben. Das
-`⊥` Symbol bedeutet einfach _"ist senkrecht zu"_.
+`⊥` Symbol bedeutet einfach _"ist normal auf"_.
 _{button.next-step} Weiter_
 
 :::
@@ -500,8 +500,8 @@ Geometrie, z.B. zur Berechnung von Flächen und Volumen, gewesen ist.
 
 ::: column.grow
 Zu Zeiten von Thales oder Euklid gab es jedoch kein allgemein angewandtes System von
-Einheiten, wie wir es heute haben. Abstände wurden oft mittels Körperteilen gemessen, z.B
-. Fingerbreiten oder Armlängen. Diese sind nicht sehr genau und sie unterscheiden sich
+Einheiten, wie wir es heute haben. Abstände wurden oft mittels Körperteilen gemessen, z.B.
+Fingerbreiten oder Armlängen. Diese sind nicht sehr genau und sie unterscheiden sich
 von Mensch zu Mensch.
 
 Um größere Entfernungen zu messen, verwendeten Architekten oder Gutachter _geknotete Schnüre_: lange
@@ -521,8 +521,8 @@ Griechische Mathematiker wollten sich nicht wirklich mit diesen Ungenauigkeiten 
 viel mehr für die zugrunde liegenden Gesetze der Geometrie als für ihre praktischen
 Anwendungen.
 
-Deshalb haben sie eine viel idealisiertere Version unseres Universums entwickelt: eine
-, in der Punkte keine Größe und Geraden keine Breite haben können. Natürlich ist es
+Deshalb haben sie eine viel idealisiertere Version unseres Universums entwickelt: eine,
+in der Punkte keine Größe und Geraden keine Breite haben können. Natürlich ist es
 [[unmöglich|sehr schwer]], diese auf Papier zu zeichnen. Sichtbare Punkte nehmen immer
 etwas Platz ein, und Geraden haben immer eine gewisse Breite. Aus diesem Grund sind unsere
 Zeichnungen immer nur "Näherungen".
@@ -820,8 +820,8 @@ wiederhole die Schritte.
 den Kopf nach oben. Du musst sie dabei aufklappen. Wiederhole
 das dann mit dem Schwanz links.
 
-{.step(data-t=203)} Falte den Teil wie gezeigt, um einen Schnabel zu erzeugen. Du kannst entscheiden
-, wie lange er sein soll, indem du den Abstand der Faltung wählst.
+{.step(data-t=203)} Falte den Teil wie gezeigt, um einen Schnabel zu erzeugen. Du kannst entscheiden,
+wie lange er sein soll, indem du den Abstand der Faltung wählst.
 
 {.step(data-t=215)} Zum Schluss die beiden Flügel herunterklappen und auseinanderziehen.
 :::
@@ -916,8 +916,8 @@ in der Technologie und Technik unglaublich nützlich sein können:
 
 #### Origami im Weltraum
 
-Satelliten benötigen große Solarmodule, um Strom zu erzeugen. Leider haben die Raketen
-, die Satelliten in den Weltraum transportieren, nur sehr begrenzten Raum für Fracht, und
+Satelliten benötigen große Solarmodule, um Strom zu erzeugen. Leider haben die Raketen,
+die Satelliten in den Weltraum transportieren, nur sehr begrenzten Raum für Fracht, und
 jedes zusätzliche Gewicht kostet viel Treibstoff.
 
 Origami-Techniken ermöglichen es, dass sich Solarmodule "entfalten", wenn sie den Weltraum erreichen. Einige
@@ -1006,8 +1006,8 @@ Die Tiefen der Ozeane sind einige der am wenigsten erforschten Gebiete der Erde.
 sind oft schwammig und empfindlich, was ihre Untersuchung sehr schwierig
 macht.
 
-Hier siehst du eine "Falle" in Form eines [Dodekaeders](gloss:dodecahedron)
-, die sich um Meeresorganismen falten kann, um sie untersuchen zu können. Sie wird
+Hier siehst du eine "Falle" in Form eines [Dodekaeders](gloss:dodecahedron),
+die sich um Meeresorganismen falten kann, um sie untersuchen zu können. Sie wird
 ferngesteuert und benötigt nur einen einzigen Motor, um die komplexe Klappbewegung
 ihrer fünf Arme zu steuern.
 
@@ -1016,8 +1016,8 @@ ihrer fünf Arme zu steuern.
 ---
 > id: origami-applications-5
 
-Und es gibt noch viel mehr Anwendungen von Origami im Alltag: Häuser
-, die sich bei einem Erdbeben zusammendrücken anstatt zu zerbröckeln, aufgehende Airbags
+Und es gibt noch viel mehr Anwendungen von Origami im Alltag: Häuser,
+die sich bei einem Erdbeben zusammendrücken anstatt zu zerbröckeln, aufgehende Airbags
 im Auto, sich selbst zusammensetzende Roboter, effizientere Verpackungen und
 Leichtflugzeuge.
 
@@ -1069,7 +1069,7 @@ sich selbst zusammenlegende Campingzelte sein.
 ::: column.grow
 
 Origami kommt sogar im eigenen Körper vor: Jede menschliche Zelle enthält etwa 2 Meter
- [DNA](gloss:dna), das [Molekül](gloss:molecule), das alle deine
+[DNA](gloss:dna), das [Molekül](gloss:molecule), das alle deine
 genetischen Informationen trägt. Wenn du die DNA aller Zellen in deinem Körper kombinieren könntest, wäre
 ihre Länge mehr als das 140-fache der Entfernung von der Erde zur Sonne!
 
