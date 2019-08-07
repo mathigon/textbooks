@@ -356,8 +356,8 @@ __{.m-yellow}`d ∥ e`__. Das Symbol `∥` bedeutet einfach _"ist parallel zu"_.
 Das Gegenteil von _parallel_ sind zwei Geraden, die sich in einem Winkel von 90° (rechter Winkel) treffen.
 Solche Geraden werden als [__Normale__](gloss:perpendicular) bezeichnet.
 
-{.r} In diesem Beispiel würden wir _{.b.m-blue}a_ `_|_` _{.b.m-green}b_ schreiben. Das
-`_|_` Symbol bedeutet einfach _"ist senkrecht zu"_.
+{.r} In diesem Beispiel würden wir _{.b.m-blue}a_ `⊥` _{.b.m-green}b_ schreiben. Das
+`⊥` Symbol bedeutet einfach _"ist normal auf"_.
 _{button.next-step} Weiter_
 
 :::
