@@ -34,8 +34,8 @@ alternate-angles:
   image: alternate-angles.svg
 
 angle-bisector:
-  title: Winkelhalbierende
-  text: Eine __Winkelhalbierende__ ist eine Gerade, die einen Winkel in der Mitte
+  title: Winkelsymmetrale
+  text: Eine __Winkelsymmetrale__ ist eine Gerade, die einen Winkel in der Mitte
     in zwei kongruente, kleinere Winkel teilt.
   image: angle-bisector.svg
 
@@ -84,7 +84,7 @@ associative:
 
 axiom:
   title: Axiom
-  text: Ein __Axiom__ (manchmal auch __Postulat__ genannt) ist eine mathematische
+  text: Ein __Axiom__ (manchmal auch __Postulat__genannt) ist eine mathematische
     Aussage, die als "selbstverständlich" angesehen und ohne Beweis akzeptiert
     wird. Axiome bilden die Grundlage der Mathematik und können zum Beweisen
     anderer Ergebnisse verwendet werden.
@@ -301,8 +301,8 @@ coordinate-system-origin:
     Achsen kreuzen.
 
 corresponding-angles:
-  title: Stufenwinkel
-  text: Als __Stufenwinkel__ bezeichnet man zwei Winkel, die sich in den
+  title: Parallelwinkel
+  text: Als __Parallelwinkel__ bezeichnet man zwei Winkel, die sich in den
     Schnittpunkten einer Transversale mit 2 unterschiedlichen parallelen Geraden
     ergeben. Sie sind immer kongruent.
   image: corresponding-angles.svg
@@ -438,7 +438,7 @@ equilateral-triangle:
 euclidean-geometry:
   title: Euklidische Geometrie
   text: Die __euklidische Geometrie__ ist die Art von Geometrie, die der
-    Mathematiker _Euklid_ entwickelt hat. Sie fußt auf nur fünf _Axiomen_, einer
+    Mathematiker _Euklid_entwickelt hat. Sie fußt auf nur fünf _Axiomen_, einer
     Art von "Gesetzen" der Geometrie, die alles beschreiben, was man tun darf.
   link: /course/euclidean-geometry/euclids-axioms#euclid
 
@@ -541,7 +541,7 @@ golden-ratio:
   title: Goldener Schnitt
   text: |
     Der __Goldene Schnitt__ ist eine bestimmte irrationale Zahl mit dem Wert
-    `φ = 1,61803398875…`. Sie kann durch Division zweier aufeinanderfolgender
+    `φ = 1,61803398875....`. Sie kann durch Division zweier aufeinanderfolgender
     Fibonacci-Zahlen angenähert werden.
 
     Der Goldene Schnitt wird in Kunst und Architektur oft als besonders
@@ -705,7 +705,7 @@ lcm:
     ist die kleinste ganze Zahl, die ein Vielfaches von _a_ und _b_ist.
   link: /course/divisibility-and-primes/least-common-multiples
 
-line:
+linie:
   title: Gerade
   text: Eine __Gerade__ besteht aus unendlich vielen Punkten, die sich ohne
     Anfang und Ende in beide Richtungen erstrecken. Geraden sind immer
@@ -738,8 +738,8 @@ linear-function:
     der Linie und _d_ den Schnittpunkt mit der _y_-Achse festlegt.
 
 median:
-  title: Seitenhalbierende
-  text: Die __Seitenhalbierenden (Schwerlinien)__ eines Dreiecks sind die
+  title: Schwerlinie
+  text: Die __Schwerlinien__ eines Dreiecks sind die
     Linien, die jeden Eckpunkt mit dem Mittelpunkt ihrer gegenüberliegenden
     Seiten verbinden.
   link: /course/triangles-and-trigonometry/properties-of-triangles#medians
@@ -891,8 +891,8 @@ perpendicular:
   link: /course/euclidean-geometry/definitions#perpendicular
 
 perpendicular-bisector:
-  title: Mittelsenkrechte
-  text: Die __Mittelsenkrechte__ einer Strecke durchläuft ihren Mittelpunkt
+  title: Streckensymmetrale
+  text: Die __Streckensymmetrale__ einer Strecke durchläuft ihren Mittelpunkt
     und schneidet sie in einem Winkel von 90°.
   image: perpendicular-bisector.svg
 
@@ -1288,7 +1288,7 @@ subgraph:
   link: /course/graphs-and-networks/introduction#intro-2
 
 supplementary-angles:
-  title: Supplementwinkel (Ergänzungswinkel)
+  title: Supplementärwinkel (Ergänzungswinkel)
   text: Zwei Winkel sind __supplementär__, wenn sie sich zu 180° ergänzen.
 
 symmetry:
@@ -1452,6 +1452,6 @@ venn-diagram:
 
 vertical-angles:
   title: Scheitelwinkel
-  text: __Scheitelwinkel__ sind Paare von gegenüberliegenden Winkeln, die durch
-    sich schneidende Geraden erzeugt werden. Scheitelwinkel sind immer
+  text: __Scheitelwinkel__ (Gegenwinkel) sind Paare von gegenüberliegenden Winkeln,
+    die durch sich schneidende Geraden erzeugt werden. Scheitelwinkel sind immer
     kongruent.
