@@ -420,7 +420,7 @@ __Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die St
 ::: column.grow
 Wie die [Schwerlinien](gloss:median), [Streckensymmetralen](gloss:perpendicular-bisector)
 und [Winkelsymmetralen](gloss:angle-bisector)
-schneiden sich auch die drei Höhen eines Dreiecks in einem einzigen Punkt. Dies wird als [__Höhenschnittpunkt__](target:center)
+schneiden sich auch die drei Höhen eines Dreiecks in einem einzigen Punkt. Dieser wird als [__Höhenschnittpunkt__](target:center)
 des Dreiecks bezeichnet.
 
 Bei [spitzwinkligen Dreiecken](gloss:acute-triangle) liegt der Höhenschnittpunkt
