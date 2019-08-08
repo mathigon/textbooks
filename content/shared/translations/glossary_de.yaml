@@ -34,7 +34,7 @@ alternate-angles:
   image: alternate-angles.svg
 
 angle-bisector:
-  title: Winkelhalbierende
+  title: Winkelhalbierende (Winkelsymmetrale)
   text: Eine __Winkelhalbierende__ ist eine Gerade, die einen Winkel in der Mitte
     in zwei kongruente, kleinere Winkel teilt.
   image: angle-bisector.svg
@@ -301,7 +301,7 @@ coordinate-system-origin:
     Achsen kreuzen.
 
 corresponding-angles:
-  title: Stufenwinkel
+  title: Stufenwinkel (Parallelwinkel)
   text: Als __Stufenwinkel__ bezeichnet man zwei Winkel, die sich in den
     Schnittpunkten einer Transversale mit 2 unterschiedlichen parallelen Geraden
     ergeben. Sie sind immer kongruent.
@@ -738,8 +738,8 @@ linear-function:
     der Linie und _d_ den Schnittpunkt mit der _y_-Achse festlegt.
 
 median:
-  title: Seitenhalbierende
-  text: Die __Seitenhalbierenden (Schwerlinien)__ eines Dreiecks sind die
+  title: Seitenhalbierende (Schwerlinien)
+  text: Die __Seitenhalbierenden__ eines Dreiecks sind die
     Linien, die jeden Eckpunkt mit dem Mittelpunkt ihrer gegenüberliegenden
     Seiten verbinden.
   link: /course/triangles-and-trigonometry/properties-of-triangles#medians
@@ -884,14 +884,14 @@ perfect-numbers:
   link: /course/sequences/special#perfect-1
 
 perpendicular:
-  title: Normale
-  text: Zwei Geraden stehen __normal__ aufeinander, wenn sie sich im rechten
+  title: Senkrechte (Normale)
+  text: Zwei Geraden stehen __senkrecht (normal)__ aufeinander, wenn sie sich im rechten
     Winkel schneiden.
   image: perpendicular.svg
   link: /course/euclidean-geometry/definitions#perpendicular
 
 perpendicular-bisector:
-  title: Mittelsenkrechte
+  title: Mittelsenkrechte (Streckensymmetrale)
   text: Die __Mittelsenkrechte__ einer Strecke durchläuft ihren Mittelpunkt
     und schneidet sie in einem Winkel von 90°.
   image: perpendicular-bisector.svg
@@ -1102,7 +1102,7 @@ rational-numbers:
     12.7 und 9.
 
 ray:
-  title: Strahl
+  title: Strahl (Halbgerade)
   text: Ein __Strahl__ ist der Teil einer Geraden, der sich nur in eine Richtung
     bis zur Unendlichkeit erstreckt. Wir schreiben für einen Strahl `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
@@ -1288,7 +1288,7 @@ subgraph:
   link: /course/graphs-and-networks/introduction#intro-2
 
 supplementary-angles:
-  title: Supplementwinkel (Ergänzungswinkel)
+  title: Supplementärwinkel (Ergänzungswinkel)
   text: Zwei Winkel sind __supplementär__, wenn sie sich zu 180° ergänzen.
 
 symmetry:

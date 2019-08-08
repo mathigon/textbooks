@@ -155,7 +155,7 @@ verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 > id: medians
 > goals: s0 s1 s2 move
 
-### Seitenhalbierende (Schwerlinien) 
+### Schwerlinien
 
 ::: column(width=300)
 
@@ -179,18 +179,18 @@ verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 Hier siehst du ein Dreieck sowie die [Mittelpunkte](gloss:midpoint) seiner
 drei Seiten.
 
-Eine [__Seitenhalbierende__](gloss:median)eines Dreiecks ist eine Strecke, die einen Eckpunkt
-mit dem Mittelpunkt der gegenüberliegenden Seite verbindet. Zeichne die drei Seitenhalbierenden dieses Dreiecks.
+Eine [__Schwerlinie__](gloss:median)eines Dreiecks ist eine Strecke, die einen Eckpunkt
+mit dem Mittelpunkt der gegenüberliegenden Seite verbindet. Zeichne die drei Schwerlinien dieses Dreiecks.
 _{span.reveal(when="s0 s1 s2")}Was passiert, wenn du die Eckpunkte des
 Dreiecks verschiebst?_
 
-{.reveal(when="move")} Es scheint, dass sich die Seitenhalbierenden immer [[in einem
+{.reveal(when="move")} Es scheint, dass sich die Schwerlinien immer [[in einem
 Punkt schneiden|auf gleiche Größe anpassen|gegenseitig halbieren]].
 _{span.reveal(when="blank-0")}Dieser Punkt wird als
 [__Schwerpunkt__](gloss:centroid)bezeichnet._
 
-{.reveal(when="blank-0")} Seitenhalbierende (oder Schwerlinien) teilen sich immer im
-[Verhältnis 2:1](target:ratio). Für jede der drei Seitenhalbierenden ist der Abstand vom
+{.reveal(when="blank-0")} Schwerlinien teilen sich immer im
+[Verhältnis 2:1](target:ratio). Für jede der drei Schwerlinien ist der Abstand vom
 Eckpunkt zum Schwerpunkt immer [[zweimal|dreimal|genau]] so lang wie der
 Abstand vom Schwerpunkt zum Mittelpunkt der Seite.
 :::
@@ -200,7 +200,7 @@ Abstand vom Schwerpunkt zum Mittelpunkt der Seite.
 > goals: move
 
 Der Schwerpunkt ist auch der “Balancierpunkt” eines Dreiecks. Zeichne ein Dreieck auf
-einen Karton, schneide es aus und finde die drei Seitenhalbierenden (Schwerlinien). Wenn du genau gearbeitet hast,
+einen Karton, schneide es aus und finde die drei Schwerlinien. Wenn du genau gearbeitet hast,
 kannst du das Dreieck nun auf der Bleistiftspitze ausbalancieren oder es ganz
 waagrecht an einem Stück Schnur aufhängen, die an seinem Schwerpunkt befestigt ist:
 
@@ -234,7 +234,7 @@ Abbildung rechts. Die roten und grünen Bereiche haben immer die gleiche Fläche
 > id: circumcircle
 > goals: s0 s1 s2
 
-### Mittelsenkrechten und Umkreis
+### Streckensymmetralen und Umkreis
 
 ::: column(width=300)
 
@@ -252,17 +252,17 @@ Abbildung rechts. Die roten und grünen Bereiche haben immer die gleiche Fläche
       path.yellow(hidden x="arc(d,c,1.99*pi)" name="circumcircle")
 
 ::: column.grow
-Erinnere dich, dass die [Mittelsenkrechte](gloss:perpendicular-bisector) einer Strecke die Senkrechte
+Erinnere dich, dass die [Streckensymmetrale](gloss:perpendicular-bisector) einer Strecke die Senkrechte
 ist, die durch [[ihren Mittelpunkt|ihre Endpunkte]] verläuft.
 
-{.reveal(when="blank-0")}Zeichne die Mittelsenkrechte aller drei Seiten dieses
-Dreiecks. _{.lgrey}Um die Mittelsenkrechte einer Seite des Dreiecks zu
+{.reveal(when="blank-0")}Zeichne die Streckensymmetrale aller drei Seiten dieses
+Dreiecks. _{.lgrey}Um die Streckensymmetrale einer Seite des Dreiecks zu
 zeichnen, klicke auf einen Eckpunkt und ziehe ihn einfach zum anderen Endpunkt der Seite._
 
-{.reveal(when="s0 s1 s2")} Wie zuvor schneiden sich die drei Mittelsenkrechten in einem
+{.reveal(when="s0 s1 s2")} Wie zuvor schneiden sich die drei Streckensymmetralen in einem
 einzigen Punkt. Und wieder hat dieser Punkt eine besondere Eigenschaft.
 
-{.reveal(when="s0 s1 s2")} Jeder Punkt auf einer Mittelsenkrechte hat den gleichen
+{.reveal(when="s0 s1 s2")} Jeder Punkt auf einer Streckensymmetrale hat den gleichen
 Abstand zu den beiden Endpunkten der Strecke, die er halbiert. So hat beispielsweise jeder Punkt
 auf der [blauen Symmetrale](target:b-blue) den gleichen Abstand zu den Punkten _A_ und
 _C_ und jeder Punkt auf der [roten Symmetrale](target:b-red) den gleichen Abstand zu den
@@ -315,8 +315,8 @@ was das Besondere am Schnittpunkt der Geraden ist.
 
 ::: column.grow
 Erinnere dich, dass die [Winkelsymmetrale](gloss:angle-bisector) einen Winkel genau
-in der Mitte teilt. Zeichne die Winkelhalbierende der drei Winkel in diesem Dreieck.
-_{.lgrey}Um ein Winkelhalbierende zu zeichnen, musst du auf die drei Punkte klicken, die den Winkel bilden,
+in der Mitte teilt. Zeichne die Winkelsymmetrale der drei Winkel in diesem Dreieck.
+_{.lgrey}Um eine Winkelsymmetrale zu zeichnen, musst du auf die drei Punkte klicken, die den Winkel bilden,
 den du halbieren möchtest._
 
 {.r.reveal(when="s0 s1 s2")} Auch hier schneiden sich alle drei Linien in einem Punkt.
@@ -325,7 +325,7 @@ es eigentlich keinen offensichtlichen Grund gibt, warum dies passieren sollte - 
 spezielle Figuren sind!
 _{button.next-step} Weiter_
 
-{.reveal(when="next-0")} Punkte, die auf einer Winkelhalbierenden liegen, haben den gleichen
+{.reveal(when="next-0")} Punkte, die auf einer Winkelsymmetralen liegen, haben den gleichen
 Abstand zu den beiden Linien, die den Winkel bilden. Zum Beispiel hat jeder Punkt auf der
 [blauen Symmetrale](target:b-blue) den gleichen Abstand von Seite _a_ und Seite _c_,
 und jeder Punkt auf der [roten Symmetrale](target:b-red) hat den gleichen Abstand von den
@@ -418,7 +418,7 @@ __Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die St
       circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
-Wie die [Seitenhalbierenden](gloss:median), [Mittelsenkrechten](gloss:perpendicular-bisector)
+Wie die [Schwerlinien](gloss:median), [Streckensymmetralen](gloss:perpendicular-bisector)
 und [Winkelsymmetralen](gloss:angle-bisector)
 schneiden sich auch die drei Höhen eines Dreiecks in einem einzigen Punkt. Dies wird als [__Höhenschnittpunkt__](target:center)
 des Dreiecks bezeichnet.
