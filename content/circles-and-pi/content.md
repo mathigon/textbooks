@@ -307,24 +307,7 @@ One approach for calculating Pi is using infinite sequences of numbers. Here is
 one example which was discovered by [Gottfried Wilhelm Leibniz](bio:leibniz) in
 1676:
 
-    p.text-center: span.math
-      mi π
-      mo(value="=") =
-      mfrac #[mn 4]#[mn 1]
-      mo –
-      mfrac #[mn 4]#[mn 3]
-      mo +
-      mfrac #[mn 4]#[mn 5]
-      mo –
-      mfrac #[mn 4]#[mn 7]
-      mo +
-      mfrac #[mn 4]#[mn 9]
-      mo –
-      mfrac
-        mn 4
-        mrow.md [[11]]
-      mo +
-      mo …
+{.text-center} `π = 4/1 - 4/3 + 4/5 + 4/7 + 4/9 - 4/input(11) + …`
 
 {.reveal(when="blank-0")} As we calculate more and more terms of this series,
 always following the same pattern, the result will get closer and closer to Pi.

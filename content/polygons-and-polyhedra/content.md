@@ -2,6 +2,7 @@
 
 ## Polygons
 
+> section: polygons
 > id: polygons
 
 A [__polygon__](gloss:polygon) is a closed, flat shape that has only straight
@@ -273,88 +274,42 @@ isosceles triangle. This means that we can use trigonometry!
 of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
 size of the [internal angles](target:int-angle) of the polygon:
 
-    p.text-center.reveal(when="blank-3"): span.math
-      mn.pill.blue.step-target(data-to="alpha") α
-      mo(value="=") =
-      mfrac #[mn 1]#[mn 2]
-      mfenced
-        mn 180°
-        mo –
-        mfrac
-          mn 360°
-          mrow: mn.var ${n}
-      mo(value="=") =
-      mn.var ${round(90-180/n,2)}°
+{.text-center.reveal(when="blank-3")} `pill(α, "blue", "alpha") = 1/2 (180° -
+(360°)/var("n")) = var("round(90-180/n,2)")`
 
 {.reveal(when="blank-3")} To find the apothem, we can use the definition of
 [[tangents|sine|cosine]]:
 
-    p.text-center.reveal(when="blank-4"): span.math
-      mtext tan
-      mn.step-target.pill.blue(data-to="alpha") α
-      mo(value="=") =
-      mfrac
-        mtext: span.step-target(data-to="apothem") opposite
-        mtext: span.step-target(data-to="half-base") adjacent
-      mo(value="=") =
-      mfrac
-        mtext: x-blank
-          span.choice apothem
-          span.choice s
-          span.choice s/2
-        mtext: x-blank
-          span.choice s/2
-          span.choice s
-          span.choice apothem
+{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
+target("opposite", "apothem") / target("adjacent", "half-base") =
+blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
-    p.text-center.reveal(when="blank-5 blank-6"): span.math
-      mo ⇒
-      mtext.step-target.pill.yellow(data-to="apothem") apothem
-      mo(value="=") =
-      mfrac #[mn 1]#[mn 2]
-      mi.step-target.pill.green(data-to="base") s
-      mo ×
-      mtext tan
-      mn.step-target.pill.blue(data-to="alpha") α
-      mo(value="=") =
-      mn #[span.var ${round(Math.tan(pi/2-pi/n)/2,2)}]m
+{.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
+"apothem") = 1/2 pill(s, "green", "base") × tan pill(α, "blue", "alpha") =
+var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
 [isosceles triangle](target:isosceles-triangle) is
 
-    p.text-center.reveal(when="blank-5 blank-6" delay=2000): span.math
-      mfrac #[mn 1]#[mn 2]
-      mtext base
-      mo ×
-      mtext height
-      mo =
-      mfrac #[mn 1]#[mn 2]
-      mtext.pill.green.step-target(data-to="base") 1m
-      mo ×
-      mtext.var.pill.yellow.step-target(data-to="apothem") ${round(Math.tan(pi/2-pi/n)/2,2)}
-      mo =
-      mn #[span.var ${round(Math.tan(pi/2-pi/n)/4,2)}]
-      msup #[mtext m]#[mn 2]
+{.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
+= 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
+"yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
 
 {.reveal(when="blank-5 blank-6" delay=4000)} The polygon consists of ${toWord(n)}
 of these isosceles triangles, all of which have the same area. Therefore, the
 total area of the polygon is
 
-    p.text-center.reveal(when="blank-5 blank-6" delay=4000): span.math
-      mi A
-      mo =
-      mn.var ${n}
-      mo ×
-      mn.var ${round(Math.tan(pi/2-pi/n)/4,2)}
-      mo =
-      mn #[span.var ${round(n×Math.tan(pi/2-pi/n)/4,2)}]
-      msup #[mtext m]#[mn 2]
+{.text-center.reveal(when="blank-5 blank-6" delay=4000)} `A = var("n") ×
+var("round(Math.tan(pi/2-pi/n)/4,2)") = var("round(n×Math.tan(pi/2-pi/n)/4,2)")
+"m"^2`
 :::
 
 ---
-> id: quadrilaterals
 
 ## Quadrilaterals
+
+> section: quadrilaterals
+> id: quadrilaterals
 
 In the [previous course](/course/triangles-and-trigonometry) we investigated
 many different properties of triangles. Now let’s have a look at quadrilaterals.
@@ -1013,9 +968,11 @@ pick whichever equation is more convenient._
     //- they do NOT bisect each other.
 
 ---
-> id: tessellations
 
 ## Tessellations
+
+> section: tessellations
+> id: tessellations
 
 [Polygons](gloss:polygon) appear everywhere in nature. They are especially
 useful if you want to tile a large area, because you can fit polygons together
@@ -1415,9 +1372,11 @@ pattern. The pattern was even used on toilet paper, because the manufacturers
 noticed that a non-periodic pattern can be rolled up without any bulges.
 
 ---
-> id: polyhedra
 
 ## Polyhedra
+
+> section: polyhedra
+> id: polyhedra
 
 Up to now we have just looked at what we can do with polygons in a flat,
 two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
@@ -1469,9 +1428,11 @@ formula always works. In [a later course](/course/graphs-and-networks/eulers-for
 you’ll learn how to actually prove it mathematically.
 
 ---
-> id: platonic
 
 ## Platonic Solids
+
+> section: platonic-solids
+> id: platonic
 
 At the beginning of this course we defined [regular polygons](gloss:regular-polygon)
 as particularly “symmetric” polygons, where all sides and angles are the same.
@@ -1750,10 +1711,12 @@ consist of spherical atoms, not polyhedra.
       p.caption Images from Johannes Kepler’s book “Harmonices Mundi” (1619)
 
 ---
-> id: archimedean
-> title: Archimedean Solids
 
 ## More on Polyhedra
+
+> section: more-on-polyhedra
+> id: archimedean
+> title: Archimedean Solids
 
 Platonic solids are particularly important polyhedra, but there are countless
 others.
@@ -1933,10 +1896,12 @@ famous polyhedron in the world: it is the shape of the football.
 :::
 
 ---
-> id: nets
-> sectionStatus: dev
 
 ## Nets and Cross Sections
+
+> section: nets-and-cross-sections
+> id: nets
+> sectionStatus: dev
 
 Our entire world is 3-dimensional – but it is often much easier to draw or
 visualise flat, 2-dimensional objects. And there are a few different ways to
