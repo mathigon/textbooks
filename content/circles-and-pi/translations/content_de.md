@@ -264,7 +264,7 @@ wären die obigen Näherungen perfekt - und sie ergeben beide die gleiche Formel
 
 ### Berechnung von Pi
 
-Wie du oben gesehen hast, ist `π = 3,1415926....` keine einfache ganze Zahl, und ihre 
+Wie du oben gesehen hast, ist `π = 3,1415926…` keine einfache ganze Zahl, und ihre 
 Dezimalstellen gehen ewig weiter, ohne dass sich ein Muster wiederholt. Zahlen mit dieser Eigenschaft
 werden als [__irrationale Zahlen__](gloss:irrational-numbers) bezeichnet, und das bedeutet, dass `π`
 nicht als einfacher Bruch `a/b` ausgedrückt werden kann.
@@ -306,24 +306,7 @@ Ein Ansatz zur Berechnung von Pi ist die Verwendung unendlicher Zahlenreihen. Hi
 ein Beispiel, das 1676 von [Gottfried Wilhelm Leibniz](bio:leibniz) 
 entdeckt wurde:
 
-    p.text-center: span.math
-      mi π
-      mo(value="=") =
-      mfrac #[mn 4]#[mn 1]
-      mo –
-      mfrac #[mn 4]#[mn 3]
-      mo +
-      mfrac #[mn 4]#[mn 5]
-      mo –
-      mfrac #[mn 4]#[mn 7]
-      mo +
-      mfrac #[mn 4]#[mn 9]
-      mo –
-      mfrac
-        mn 4
-        mrow.md [[11]]
-      mo +
-      mo …
+{.text-center} `π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
 {.reveal(when="blank-0")}Wenn wir mehr und mehr Terme dieser Reihe berechnen,
 immer nach dem gleichen Muster, wird das Ergebnis sich immer mehr Pi annähern.
