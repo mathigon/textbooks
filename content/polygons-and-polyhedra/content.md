@@ -1431,7 +1431,7 @@ you’ll learn how to actually prove it mathematically.
 
 ## Platonic Solids
 
-> id: platonic-solids
+> section: platonic-solids
 > id: platonic
 
 At the beginning of this course we defined [regular polygons](gloss:regular-polygon)
