@@ -212,13 +212,13 @@ Wir kennen bereits die [Innenwinkelsumme](gloss:internal-angle) von
 Vielecken. Für regelmäßige Vielecke gilt, dass alle diese Winkel [[gleich groß|spitze Winkel]] sind,
 so dass wir die Größe eines einzelnen Innenwinkels berechnen können:
 
-{.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[Summe aller Winkel|Anzahl der Winkel]]</mrow><mrow>[[Anzahl der Winkel|Summe aller Winkel]]</mrow></mfrac>
+{.text-center.reveal(when="blank-0")} Winkel = <mfrac><mrow>[[Summe aller Winkel|Anzahl der Winkel]]</mrow><mrow>[[Anzahl der Winkel|Summe aller Winkel]]</mrow></mfrac>
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} Wenn `n=3` ist, erhalten wir die Größe der
 Innenwinkel eines gleichseitigen Dreiecks - wir wissen bereits, dass
 [[60]]° herauskommen muss. _{span.reveal(when="blank-3")} In einem regelmäßigen Vieleck mit ${x}{x|6|3,12,1}
-Seiten ist jeder Innenwinkel 180° - <mfrac class="inline"><mrow>360°</mrow><mrow><mrow>&gt${x}</mrow></mfrac>=
+Seiten ist jeder Innenwinkel 180° - <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
 ${Math.round(180-360/x)}°._
 
 ---
@@ -256,12 +256,12 @@ Hier siehst du ein [regelmäßiges Vieleck](gloss:regular-polygon) mit ${n}{n|5|
 Seiten. Jede Seite hat eine Länge von [{.step-target.pill.green}1m](target:base). Wir
 wollen nun versuchen, seine Fläche zu berechnen!
 
-Zuerst können wir das Vieleck in ${toWord(n)} kongruente,
-[[gleichschenklige|, gleichseitige,|rechtwinklige]] Dreiecke aufteilen.
+Zuerst können wir das Vieleck in ${n} kongruente,
+[[gleichschenklige|gleichseitige|rechtwinklige]] Dreiecke aufteilen.
 
 {.reveal(when="blank-0")} Wir kennen bereits die [[Basis|Höhe|Fläche]] dieser
 Dreiecke, aber wir brauchen auch die [[Höhe|Schenkel|Schwerlinie]], um ihre Fläche berechnen
-zu können. _{span.reveal(when="blank-2")} In regelmäßigen Vielecke wird diese Höhe
+zu können. _{span.reveal(when="blank-2")} In regelmäßigen Vielecken wird diese Höhe
 manchmal als [{.step-target.pill.yellow}Apothema](target:apothem) bezeichnet._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} Beachte, dass es ein [rechtwinkliges
@@ -293,8 +293,8 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
       mn.step-target.pill.blue(data-to="alpha") α
       mo(value="=") =
       mfrac
-        mtext: span.step-target(data-to="apothem") opposite
-        mtext: span.step-target(data-to="half-base") adjacent
+        mtext: span.step-target(data-to="apothem") Gegenkathete
+        mtext: span.step-target(data-to="half-base") Ankathete
       mo(value="=") =
       mfrac
         mtext: x-blank
@@ -308,7 +308,7 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 
     p.text-center.reveal(when="blank-5 blank-6"): span.math
       mo ⇒
-      mtext.step-target.pill.yellow(data-to="Apothema") apothem
+      mtext.step-target.pill.yellow(data-to="Apothema") Apothema
       mo(value="=") =
       mfrac #[mn 1]#[mn 2]
       mi.step-target.pill.green(data-to="base") s
@@ -323,9 +323,9 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 
     p.text-center.reveal(when="blank-5 blank-6" delay=2000): span.math
       mfrac #[mn 1]#[mn 2]
-      mtext base
+      mtext Basis
       mo ×
-      mtext height
+      mtext Höhe
       mo =
       mfrac #[mn 1]#[mn 2]
       mtext.pill.green.step-target(data-to="base") 1m
@@ -335,7 +335,7 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
       mn #[span.var ${round(Math.tan(pi/2-pi/n)/4,2)}]
       msup #[mtext m]#[mn 2]
 
-{.reveal(when="blank-5 blank-6" delay=4000)} Das Vieleck besteht aus ${toWord(n)}
+{.reveal(when="blank-5 blank-6" delay=4000)} Das Vieleck besteht aus ${n}
 dieser gleichschenkligen Dreiecke, die alle die gleiche Fläche haben. Die
 Gesamtfläche des Vielecks beträgt daher
 
