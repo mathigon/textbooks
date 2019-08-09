@@ -1,4 +1,4 @@
-# Kreise und Pi (π)
+# Kreise und Pi
 
 ## Einführung
 
@@ -7,20 +7,20 @@
 
 ::: column.grow
 
-Solange es uns Menschen gibt, haben wir zum Himmel geschaut und versucht, das Leben auf der Erde mit der Bewegung von Sternen, Planeten und Mond zu erklären.
+Solange es Menschen gibt, haben wir zum Himmel geschaut und versucht, das Leben
+auf der Erde mit der Bewegung von Sternen, Planeten und Mond zu erklären.
 
-
-Die altgriechischen Astronomen entdeckten als erste, dass sich alle Himmelsobjekte auf regelmäßigen Bahnen, den so genannten __Umlaufbahnen__, bewegen.
- Sie glaubten, dass diese Umlaufbahnen
-immer kreisförmig sind. Schließlich sind Kreise die “vollkommensten” aller Formen:
-symmetrisch in alle Richtungen und damit eine passende Wahl für die unserem
-Universum zugrundeliegende Ordnung.
+Die altgriechischen Astronomen entdeckten als erste, dass sich alle Himmelsobjekte auf regelmäßigen Bahnen, den so genannten __Umlaufbahnen__,
+bewegen. Sie glaubten, dass diese Bahnen
+immer kreisförmig sind. Schließlich sind Kreise die "vollkommenste" aller F:
+symmetrisch in alle Richtungen und damit eine passende Wahl für die zugrunde
+liegende Ordnung unseres Universums.
 
 ::: column(width=320)
 
     x-media(src="images/geocentric.jpg" width=320 height=272)
 
-{.caption}Die Erde steht im Mittelpunkt des _ptolemäischen Universums_.
+{.caption} Die Erde steht im Mittelpunkt des _ptolemäischen Universums_.
 
 :::
 
@@ -28,8 +28,8 @@ Universum zugrundeliegende Ordnung.
 > id: radius
 > goals: compass
 
-Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von seinem Mittelpunkt.
- Das bedeutet, dass sie mittels eines [Zirkels](gloss:compass) gezeichnet werden können:
+Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von seinem
+Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass)gezeichnet werden können:
 
 ::: column(width=320)
 
@@ -45,15 +45,16 @@ Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von sei
 
 ::: column.grow
 
-{.reveal(when="compass")} Es gibt drei wichtige Maße im Zusammenhang mit Kreisen, die du kennen solltest:
+{.reveal(when="compass")} Es gibt drei wichtige Maße im Zusammenhang mit
+Kreisen, die du kennen solltest:
 
-* {.reveal(when="compass" delay="1000")}Der [{.step-target.pill.b.red}Radius](target:r)
+* {.reveal(when="compass" delay="1000")} Der [{.step-target.pill.b.red}Radius](target:r)
   ist der Abstand vom Mittelpunkt eines Kreises zur Kreislinie.
-* {.reveal(when="compass" delay="4000")}Der [{.step-target.pill.b.blue}Durchmesser](target:d)
-  ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch
-  den Mittelpunkt, und seine Länge ist [[doppelt|halb|gleich]] groß wie der Radius.
-* {.reveal(when="blank-0")}Der [{.step-target.pill.b.green}Umfang](target:c) 
-  ist gleich der Länge der Strecke um einen Kreis.
+* {.reveal(when="compass" delay="4000")} Der [{.step-target.pill.b.blue}Durchmesser](target:d)
+  ist der Abstand zwischen zwei gegenüberliegenden Punkten auf einem Kreis. Er geht durch den
+  Mittelpunkt, und seine Länge ist [[doppelt|halb|genau]] so groß wie der Radius.
+* {.reveal(when="blank-0")} Der [{.step-target.pill.b.green}Umfang](target:c) 
+  entspricht der Länge der Strecke um einen Kreis.
 
 :::
 
@@ -62,9 +63,9 @@ Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von sei
 > goals: circle-0 circle-1 circle-2
 
 Eine wichtige Eigenschaft von Kreisen ist, dass alle Kreise
-[ähnlich](gloss:similar) sind. Du kannst das überprüfen, indem du zeigst, dass alle Kreise durch einfache [Translationen](gloss:translation) und [Dilatationen](gloss:dilation) exakt passend übereinander gelegt werden können:
-
-
+[ähnlich](gloss:similar) sind. Du kannst das überprüfen, indem du zeigst,
+dass alle Kreise durch einfache [Translationen](gloss:translation) und
+[Dilatationen](gloss:dilation) exakt passend übereinander gelegt werden können:
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -72,13 +73,13 @@ Eine wichtige Eigenschaft von Kreisen ist, dass alle Kreise
 > id: pi-definition
 > goals: digits
 
-Du erinnerst dich vielleicht daran, dass bei ähnlichen Vielecken das Verhältnis zwischen den entsprechenden Seiten immer konstant ist.
- Ähnliches gilt für Kreise: Das Verhältnis zwischen 
-dem [Umfang](gloss:circle-circumference) und dem 
+Du erinnerst dich vielleicht daran, dass bei ähnlichen Vielecken das Verhältnis
+zwischen den entsprechenden Seiten immer konstant ist. Ähnliches gilt für Kreise: Das Verhältnis zwischen
+dem [Umfang](gloss:circle-circumference) und dem
 [Durchmesser](gloss:circle-diameter) ist für _alle Kreise_ gleich groß. Es beträgt immer
 3,14159.... - eine geheimnisvolle Zahl namens [__Pi__](gloss:pi), die oft 
-als griechischer Buchstabe _π_ für “p” geschrieben wird. Pi hat unendlich viele Dezimalstellen, die sich bis in alle Ewigkeit ohne ein bestimmtes Muster aneinanderreihen:
-
+als griechischer Buchstabe _π_ für “p” geschrieben wird. Pi hat unendlich viele Dezimalstellen, die sich bis in
+alle Ewigkeit ohne ein bestimmtes Muster aneinanderreihen:
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -86,8 +87,8 @@ als griechischer Buchstabe _π_ für “p” geschrieben wird. Pi hat unendlich 
 > id: wheel
 > goals: unroll
 
-Wir haben hier ein Rad mit dem Durchmesser 1. Wenn du den Umfang “abrollst”, kannst du sehen, dass seine Länge genau [[`pi`|`2 * pi`|3]] ist:
-
+Wir haben hier ein Rad mit dem Durchmesser 1. Wenn du den Umfang “abrollst”, kannst du sehen,
+dass seine Länge genau [[`pi`|`2 * pi`|3]] ist:
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -95,10 +96,10 @@ Wir haben hier ein Rad mit dem Durchmesser 1. Wenn du den Umfang “abrollst”,
 ---
 > id: circumference
 
-Bei einem Kreis mit dem Durchmesser _d_ ist der Umfang `u = π × d`. Ebenso ist
-bei einem Kreis mit dem [Radius](gloss:circle-radius) _r_ der Umfang 
+Bei einem Kreis mit dem Durchmesser _d_ ist der Umfang `u = d × π`. Ebenso ist
+bei einem Kreis mit dem [Radius](gloss:circle-radius) _r_ der Umfang
 
-{.text-center} `u =` [[`2 π r`|`π r`|`π r^2`]].
+{.text-center} `u =` [[`2 r π`|`r π`|`r^2 π`]].
 
 ---
 > id: nature
@@ -148,7 +149,7 @@ dir sonst noch etwas ein? [Weiter](btn:next)
 
 ::: column.grow
 
-Man hat außerdem festgestell, dass ein Kreis die Form mit der größten Fläche bei einem bestimmten
+Man hat außerdem festgestellt, dass ein Kreis die Form mit der größten Fläche bei einem bestimmten
 Umfang ist. Wenn du zum Beispiel ein Seil mit einer Länge von 100\ m hast und damit die 
 größtmögliche Fläche umschließen willst, mußt du damit einen Kreis bilden (und nicht andere Formen
 wie ein Rechteck oder Dreieck).
@@ -199,21 +200,21 @@ Annäherungen treffen müssen:
 
 ::: column.grow
 
-Hier siehst du einen Kreis, der in ${toWord(n1)} Tortenstücke unterteilt ist. Bewege den Schieberegler, um
+Hier siehst du einen Kreis, der in ${n1} Tortenstücke unterteilt ist. Bewege den Schieberegler, um
 die Tortenstücke in einer Reihe anzuordnen.
 
-{.reveal(when="slider")}Wenn wir die Anzahl der Tortenstücke auf ${n1}{n1|6|6,30,2} erhöhen, beginnt
+{.reveal(when="slider")} Wenn wir die Anzahl der Tortenstücke auf ${n1}{n1|6|6,30,2} erhöhen, beginnt
 diese Form immer mehr wie ein [[Rechteck|Kreis|Quadrat]] auszusehen.
 
-{.reveal(when="blank-0")} Die Höhe des Rechtecks entspricht dem 
-[[Radius|Umfang|Durchmesser]] des Kreises,
-_{span.reveal(when="blank-1")} die Breite des Rechtecks entspricht dem 
-[[halben Umfang|Umfang|doppelten Radius]] des Kreises_
+{.reveal(when="blank-0")} Die Höhe des Rechtecks entspricht dem
+[[Radius|Durchmesser|Umfang]] des Kreises.
+_{span.reveal(when="blank-1")} Die Breite des Rechtecks entspricht 
+[[der Hälfte des Umfangs|dem Umfang|dem doppelten Radius]] des Kreises._
 _{span.reveal(when="blank-2")} (Beachte, wie die Hälfte der Tortenstücke nach unten und
 die andere Hälfte nach oben zeigt.)_
 
 {.reveal(when="blank-2" delay=1000)} Daher beträgt die Gesamtfläche des Rechtecks
-etwa `A = π r^2`.
+etwa `A = r^2 π`.
 
 :::
 
@@ -233,20 +234,20 @@ etwa `A = π r^2`.
 
 ::: column.grow
 
-Hier siehst du einen Kreis, der in ${toWord(n)} Ringe unterteilt ist. Wie zuvor kannst du den Schieberegler
-bewegen, um die Ringe "gerade zu biegen".
+Hier siehst du einen Kreis, der in ${n} Ringe unterteilt ist. Wie zuvor kannst du den Schieberegler
+bewegen, um die Ringe gerade zu biegen.
 
-{.reveal(when="slider")}Wenn wir die Anzahl der Ringe auf ${n2}{n2|4|2,12,1} erhöhen,
+{.reveal(when="slider")} Wenn wir die Anzahl der Ringe auf ${n2}{n2|4|2,12,1} erhöhen,
  beginnt diese Form immer mehr wie ein [[Dreieck|Rechteck|Trapez]] auszusehen.
 
-{span.reveal(when="blank-1")}Die Höhe des Dreiecks entspricht dem
- [[Radius|Durchmesser|Umfang]] des Kreises. 
-_{.reveal(when="blank-0")}_ Die Basis des Dreiecks ist gleich 
+{.reveal(when="blank-0")} Die Höhe des Dreiecks entspricht dem
+ [[Radius|Durchmesser|Umfang]] des Kreises.
+_{span.reveal(when="blank-1")} Die Basis des Dreiecks ist gleich 
 [[der Umfang|der doppelte Durchmesser]] des Kreises._
 _{span.reveal(when="blank-2")} Daher beträgt die Gesamtfläche des Dreiecks
 ungefähr_
 
-{.text-center.reveal(when="blank-2")}`A = 1/2 "Basis" × "Höhe" = π r^2`.
+{.text-center.reveal(when="blank-2")} `A = 1/2 "Basis" × "Höhe" = r^2 π`.
 
 :::
 
@@ -256,7 +257,7 @@ ungefähr_
 Wenn wir unendlich viele Ringe oder Tortenstücke verwenden könnten,
 wären die obigen Näherungen perfekt - und sie ergeben beide die gleiche Formel für die Fläche eines Kreises:
 
-{.text-center.r}`A = π r^2`.
+{.text-center.r} `A = r^2 π`.
 [Weiter](btn:next)
 
 ---
@@ -288,8 +289,6 @@ immer mehr|immer weniger|genau]] wie ein Kreis auszusehen:
 
 1665 gelang es [Isaac Newton](bio:newton), 15 Stellen zu berechnen. Heute können wir mit leistungsstarken Computern den Wert von Pi mit einer viel höheren Genauigkeit berechnen.
 
-
-
 Der aktuelle Rekord liegt bei 31,4 Billionen Stellen. Ein gedrucktes Buch mit all diesen
 Ziffern wäre etwa 400\ km dick - das ist die Höhe, in der die
 [Internationale Raumstation](gloss:iss) die Erde umkreist!
@@ -303,12 +302,12 @@ Bruch `22/7 = 3,142…` eine gute Annäherung.
 > id: pi-sequence
 
 Ein Ansatz zur Berechnung von Pi ist die Verwendung unendlicher Zahlenreihen. Hier ist 
-ein Beispiel, das 1676 von [Gottfried Wilhelm Leibniz](bio:leibniz) 
+ein Beispiel, das 1676 von [Gottfried Wilhelm Leibniz](bio:leibniz)
 entdeckt wurde:
 
 {.text-center} `π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
-{.reveal(when="blank-0")}Wenn wir mehr und mehr Terme dieser Reihe berechnen,
+{.reveal(when="blank-0")} Wenn wir mehr und mehr Terme dieser Reihe berechnen,
 immer nach dem gleichen Muster, wird das Ergebnis sich immer mehr Pi annähern.
 
 ---
@@ -318,7 +317,7 @@ immer nach dem gleichen Muster, wird das Ergebnis sich immer mehr Pi annähern.
 ::: column.grow
 
 Viele Mathematiker glauben, dass Pi eine noch seltsamere Eigenschaft hat: nämlich dass sie eine sogenannte 
-__normale Zahl__ ist Das bedeutet, dass die Ziffern von 0 bis 9 völlig
+__normale Zahl__ ist. Das bedeutet, dass die Ziffern von 0 bis 9 völlig
 zufällig auftreten, als ob die Natur einen 10-seitigen Würfel unendlich oft gewürfelt hätte, um den Wert von Pi zu
 bestimmen.
 
@@ -363,19 +362,19 @@ Zeichenkette umwandeln (a = 01, b = 02, und so weiter). Wenn Pi normal ist, wird
 Ziffern erscheinen - aber es würde Millionen von Jahren dauern, bis genügend Ziffern berechnet
 sind, um sie zu finden.
 
-Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissenschaften und Mathematik.
- Das könnte ein Grund dafür sein, dass Pi in unserer Kultur ungewöhnlich beliebt geworden ist (zumindest im Vergleich zu anderen Themen der Mathematik)
-
+Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissenschaften
+und Mathematik. Das könnte ein Grund dafür sein, dass Pi in unserer Kultur ungewöhnlich beliebt
+geworden ist (zumindest im Vergleich zu anderen Themen der Mathematik)
 
 ::: column(width=220 parent="padded-thin")
 
     x-video(src="images/museum.mp4" poster="images/museum.jpg" width=220 height=140 audio credit="© 20th Century Fox")
-    p.caption Pi ist die geheime Kombination für die Tafel in "Nachts im Museum 2".
+    p.caption Pi ist die geheime Kombination für die Tafel in Nachts im Museum 2.
 
 ::: column(width=220)
 
     x-video(src="images/simpsons.mp4" poster="images/simpsons.jpg" width=220 height=140 audio credit="© Fox")
-    p.caption Professor Frink ("Simpsons") bringt einen Raum mit lauter Wissenschaftlern zum Schweigen, indem er sagt, dass Pi gleich 3 ist.
+    p.caption Professor Frink (Simpsons) bringt einen Raum mit lauter Wissenschaftlern zum Schweigen, indem er sagt, dass Pi gleich 3 ist.
 
 ::: column(width=220)
 
@@ -387,7 +386,7 @@ Pi ist leicht zu verstehen, aber von grundlegender Bedeutung für Naturwissensch
 ---
 > id: pi-day
 
-Es gibt sogar jedes Jahr einen _Pi Day ("Pi-Tag")_
+Es gibt sogar jedes Jahr einen _Pi Day (Pi-Tag)_
 , der entweder am 14. März begangen wird, weil `pi ≈ 3.14`, was der Datumsschreibweise im englischsprachigen Raum entspricht, oder der am 22. Juli gefeiert wird,
 weil `pi ≈ 22/7`, also 22/7 (eine andere Datumsschreibweise).
 
@@ -443,10 +442,10 @@ __{.m-red}vollständige Umdrehung__ hat [[360]]°, eine __{.m-green}halbe__ hat
 ---
 > id: degrees-1
 
-{.r}Die Zahl 360 ist sehr praktisch, da sie durch so viele andere Zahlen
+{.r} Die Zahl 360 ist sehr praktisch, da sie durch so viele andere Zahlen
  teilbar ist: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15 und so weiter. Das bedeutet, dass viele 
 Bruchteile eines Kreises praktischerweise ganze Zahlen sind. Aber hast du dich jemals gefragt
-, wie man überhaupt auf die Zahl 360 gekommen ist? [ Weiter](btn:next)
+, wie man überhaupt auf die Zahl 360 gekommen ist? [Weiter](btn:next)
 
 ---
 > id: babylon
@@ -467,7 +466,7 @@ vorherzusagen oder mit den Göttern zu kommunizieren.
 
     x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
-{.caption}Eine babylonische Tafel zur Berechnung von `sqrt(2)`
+{.caption} Eine babylonische Tafel zur Berechnung von `sqrt(2)`
 
 :::
 
@@ -495,9 +494,9 @@ Natürlich sind es eigentlich 365 Tage in einem Jahr (genauer gesagt 365,242199)
 aber babylonische Mathematiker arbeiteten mit einfachen Sonnenuhren, 
 und diese Annäherung war völlig ausreichend.
 
-Es funktionierte auch gut mit dem bestehenden 60er Zahlensystem (weil 
+Es funktionierte auch gut mit dem bestehenden 60er Zahlensystem (weil
 `6 xx 60 = 360`). Dieses System ist der Grund, warum wir immer noch 60 Sekunden in einer
-Minute und 60 Minuten in einer Stunde verwenden - obwohl die meisten anderen Einheiten im [Dezimalsystem](gloss:base-10) angegeben 
+Minute und 60 Minuten in einer Stunde verwenden - obwohl die meisten anderen Einheiten im [Dezimalsystem](gloss:base-10) angegeben
 werden (zB. ein Jahrzent für 10 Jahre, ein Jahrhundert für 100 Jahre).
 
 ::: column.grow
@@ -514,7 +513,7 @@ Jupiter sogar 10.475 Tage haben.
 
     x-video(src="images/skateboard.mp4" poster="images/skateboard.jpg" width=280 height=200 credit="© RIDE Channel, from YouTube")
 
-{.caption}Der 540 McFlip, eine Drehung um 540°
+{.caption} Der 540 McFlip, eine Drehung um 540°
 
 :::
 
@@ -544,15 +543,15 @@ eines [__Einheitskreises__](gloss:unit-circle) (eines Kreises mit dem Radius 1) 
 Ein _{span.var-action}ganzer Kreis_ hat dann einen Umfang
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")}Bei einer _{span.var-action}halben Drehung_ beträgt der
+{.reveal(when="eqn-0")} Bei einer _{span.var-action}halben Drehung_ beträgt der
 entsprechende Abstand entlang des Umfangs
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")}Bei einer _{span.var-action}Viertelumdrehung_ beträgt der
+{.reveal(when="eqn-1")} Bei einer _{span.var-action}Viertelumdrehung_ beträgt der
 Abstand entlang des Umfangs
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
-{.reveal(when="eqn-2")}Und so weiter: Diese Art der Winkelmessung wird als 
+{.reveal(when="eqn-2")} Und so weiter: Diese Art der Winkelmessung wird als
 [__Radiant („Bogenmaß“)__](gloss:radians) bezeichnet (als Eselsbrücke könntest du dir “Radiusanteile” merken).
 
 :::
@@ -560,8 +559,8 @@ _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 ---
 > id: radians-conversion
 
-Jeder Winkel in Grad hat dabei eine gleichwertige Größe in Radiant. Die Umrechnung zwischen den 
-beiden ist sehr einfach - so wie man zwischen anderen Einheiten wie Metern und 
+Jeder Winkel in Grad hat dabei eine gleichwertige Größe in Radiant. Die Umrechnung zwischen den
+beiden ist sehr einfach - so wie man zwischen anderen Einheiten wie Metern und
 Kilometern oder Celsius und Fahrenheit umrechnen kann:
 
 {.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
@@ -581,8 +580,8 @@ __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} 
 ---
 > id: radians-table
 
-Du kannst den Radiantwert entweder als Vielfaches von _π_ oder als 
-einzelne Dezimalzahl schreiben. Kannst du diese Tabelle mit den entsprechenden 
+Du kannst den Radiantwert entweder als Vielfaches von _π_ oder als
+einzelne Dezimalzahl schreiben. Kannst du diese Tabelle mit den entsprechenden
 Winkelgrößen in Grad und Radiant ausfüllen?
 
 | __{.m-green}Grad__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
@@ -594,21 +593,21 @@ Winkelgrößen in Grad und Radiant ausfüllen?
 
 ### Zurückgelegte Strecke
 
-Man kann sich Radiant als die "zurückgelegte Wegstrecke" entlang des Umfangs 
-eines Einheitskreises vorstellen. Dies ist besonders nützlich bei der Arbeit mit Objekten, 
+Man kann sich Radiant als die zurückgelegte Wegstrecke entlang des Umfangs
+eines Einheitskreises vorstellen. Dies ist besonders nützlich bei der Arbeit mit Objekten,
 die sich auf einer Kreisbahn bewegen.
 
 ::: column.grow
 
-Zum Beispiel umkreist die [Internationale Raumstation](gloss:iss) die Erde einmal alle 1,5\ Stunden.
- Das bedeutet, dass ihre __Drehgeschwindigkeit__ [[`(2 pi)/1.5`| 
+Zum Beispiel umkreist die [Internationale Raumstation](gloss:iss) die
+Erde einmal alle 1,5\ Stunden. Das bedeutet, dass ihre __Drehgeschwindigkeit__ [[`(2 pi)/1.5`| 
 `1.5/(2 pi)`|`1.5 *  pi`]] Radiant pro Stunde beträgt.
 
-{.reveal(when="blank-0")}In einem [Einheitskreis](gloss:unit-circle) ist die 
+{.reveal(when="blank-0")} In einem [Einheitskreis](gloss:unit-circle) ist die 
 Drehgeschwindigkeit gleich der _tatsächlichen_, Geschwindigkeit, da die Länge des Umfangs 
 gleich einer vollen Umdrehung in Radiant ist (beide sind `2pi`).
 
-{.reveal(when="blank-0" delay=1000)}Der Radius der ISS-Umlaufbahn beträgt 6800\ km,
+{.reveal(when="blank-0" delay=1000)} Der Radius der ISS-Umlaufbahn beträgt 6800\ km,
 was bedeutet, dass die _tatsächliche_ Geschwindigkeit der ISS [[`(2 pi)/1.5 xx 6800`| `
 (2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
 pro Stunde betragen muss_
@@ -651,15 +650,15 @@ _{span.reveal(when="blank-0")}(oder `80/(2pi) = 13` Umdrehungen pro Sekunde)_
 Für die meisten einfachen Geometrieaufgaben sind Grad und Radiant völlig 
 austauschbar - Du kannst entweder wählen, welche du bevorzugst, 
 oder in der Frage wird schon festgelegt, in welcher Einheit man antworten soll. Sobald du dich jedoch tiefer
-mit [Trigonometrie](gloss:trigonometry) oder [Infinitesimalrechnung ](gloss:calculus) auseinandersetzt,
+mit [Trigonometrie](gloss:trigonometry) oder [Infinitesimalrechnung](gloss:calculus) auseinandersetzt,
 wirst du feststellen, dass Radiant viel bequemer zu handhaben sind als das Gradmaß.
 
 ::: column.grow
 
 Die meisten Taschenrechner verfügen über eine [spezielle Taste](->.button.mode), um zwischen
 Grad und Radiant zu wechseln. Trigonometrische Funktionen wie [__sin__](gloss:sin),
-[__cos__](gloss:cos) und __tan__ nehmen Winkel als Eingabe an, und 
-ihre inversen Funktionen __arcsin__, __arccos__ und __arctan__ geben Winkel zurück. Die 
+[__cos__](gloss:cos) und __tan__ nehmen Winkel als Eingabe an, und
+ihre inversen Funktionen __arcsin__, __arccos__ und __arctan__ geben Winkel zurück. Die
 Einstellung des aktuellen Taschenrechners bestimmt, welche Einheiten für diese Winkel verwendet werden.
 
 Versuche folgende Rechnungen mit dem Rechner nachzuvollziehen
@@ -695,13 +694,13 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 ---
 > id: small-angle
 
-Die Verwendung von Radiant hat einen besonders interessanten Vorteil bei der Verwendung 
+Die Verwendung von Radiant hat einen besonders interessanten Vorteil bei der Verwendung
 der [__Sinus-Funktion__](gloss:sin). Wenn `θ` ein sehr kleiner Winkel ist (weniger als 20° oder 0,3 rad),
 dann gilt `sin(θ) ≈ θ`. Zum Beispiel,
 
 {.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
-{.reveal(when="var-0")}Dies wird als __Kleinwinkelnäherung__ bezeichnet und 
+{.reveal(when="var-0")} Dies wird als __Kleinwinkelnäherung__ bezeichnet und
 kann bestimmte Gleichungen, die trigonometrische Funktionen enthalten, erheblich vereinfachen.
 Wir werden darauf später noch näher eingehen.
 
@@ -716,9 +715,9 @@ Wir werden darauf später noch näher eingehen.
 > section: tangets-chords-arcs
 > id: circle-parts
 
-In den vorangegangenen Abschnitten hast du die Bezeichnungen für 
+In den vorangegangenen Abschnitten hast du die Bezeichnungen für
 die verschiedenen Teile eines Kreises gelernt - wie Mittelpunkt, Radius, Durchmesser und Umfang.
-Es gibt jedoch im Zusammenhang mit Kreisen viele geometrische Elemente, 
+Es gibt jedoch im Zusammenhang mit Kreisen viele geometrische Elemente,
 die wir zur Lösung komplexerer Aufgaben benötigen:
 
 ::: column(width=300)
@@ -748,18 +747,18 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
 
 ::: column.grow(parent="right")
 
-* {.r}Eine [{.red}Sekante](pill:secant) ist eine Gerade, die einen Kreis in 
+* {.r} Eine [{.red}Sekante](pill:secant) ist eine Gerade, die einen Kreis in
 zwei Punkten schneidet. [Weiter](btn:next)
-* {.r.reveal(when="next-0")}Eine [{.green}Sehne](pill:chord) ist eine Strecke, 
+* {.r.reveal(when="next-0")}Eine [{.green}Sehne](pill:chord) ist eine Strecke,
 deren Endpunkte auf dem Umfang eines Kreises liegen. [Weiter](btn:next)
-* {.r.reveal(when="next-1")}Eine [{.blue}Tangente](pill:tangent) ist eine Gerade, die 
-einen Kreis an genau einem Punkt berührt. Man nennt ihn den 
+* {.r.reveal(when="next-1")}Eine [{.blue}Tangente](pill:tangent) ist eine Gerade, die
+einen Kreis an genau einem Punkt berührt. Man nennt ihn den
 __Berührungspunkt__. [Weiter](btn:next)
-* {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus 
+* {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus
 dem Umfang eines Kreises. [Weiter](btn:next)
-* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil des 
-Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_. 
-[Weiter](btn:next)
+* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil des
+Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
+  [Weiter](btn:next)
 * {.r.reveal(when="next-4")}Und ein [{.purple} Segment](pill:segment) ist ein
  Teil des Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
   [Weiter](btn:next)
@@ -788,7 +787,7 @@ diese Definitionen merken musst - du kannst jederzeit im
     // 
     // Point of Tangency: Der Punkt, an dem eine Tangente den Kreis berührt.
     // 
-    //  Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
+    // Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
     // Beziehung. Let’s investigate it here.
     // 
     // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
@@ -962,19 +961,19 @@ Wir können diese Beziehung in einer Gleichung ausdrücken:
 ---
 > id: arcs-2
 
-Jetzt können wir diese Gleichungen neu anordnen, um die Variable zu bestimmen, die uns
+Jetzt können wir diese Gleichungen umformen, um die Variable zu bestimmen, die uns
 interessiert. Zum Beispiel,
 
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × c/360` |
-|                          | = | `2 π r × c/360`          |
+|                          | = | `2 r π × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × c/360` |
-|                              | = | `π r^2 × c/360`         |
+|                              | = | `r^2 π × c/360`         |
 {.eqn-system}
 
 :::
@@ -982,13 +981,13 @@ interessiert. Zum Beispiel,
 wobei _r_ der Radius des Kreises ist und _c_ die Größe des
 Mittelpunktswinkels ist.
 
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
+    // Was die Formeln tun, ist, sie gehen von der Fläche des ganzen Kreises aus, und
+    // nehmen dann einen Bruchteil davon, je nachdem, welchen Bruchteil des Kreises
+    // der Sektor ausfüllt.
 
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
+    // Die Bogenlänge ist der Abstand entlang der gekrümmten Linie des
+    // Umfangs des Kreises. Sie ist etwas länger als die gerade
+    // Linie, die die beiden gleichen Punkte (die Sehne) verbindet.
 
 ---
 > id: arcs-rad
@@ -1000,33 +999,33 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `2 π r × c/(2π)` |
+| [{.red}Kreisbogenlänge](pill) | = | `2 r π × c/(2π)` |
 |                          | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `π r^2 × c/(2π)` |
+| [{.yellow}Sektorfläche](pill) | = | `r^2 π × c/(2π)` |
 |                              | = | `1/2 r^2 c`      |
 {.eqn-system}
 
 :::
 
-Beachte, wie die Gleichungen viel einfacher werden, und _π_ überall weggekürzt wird, 
+Beachte, wie die Gleichungen viel einfacher werden, und _π_ überall weggekürzt wird,
 da, wie du dich vielleicht erinnern kannst, die [Definition von
 Radiant](/course/circles-and-pi/radians#radians) im Grunde genommen nichts anderes als die Länge eines
 Kreisbogens in einem Kreis mit dem Radius 1 ist.
 
-Nun wollen wir uns ansehen, wie wir Kreisbögen und Sektoren verwenden können, um den Umfang der 
-Erde zu berechnen. [ Weiter](btn:next)
+Nun wollen wir uns ansehen, wie wir Kreisbögen und Sektoren verwenden können, um den Umfang der
+Erde zu berechnen. [Weiter](btn:next)
 :::
 
 ---
 > id: eratosthenes
 
 Im alten Ägypten gab es am Nil eine Stadt namens _Syene_. Syene war
-berühmt für einen Brunnen mit einer seltsamen Eigenschaft: jedes Jahr 
-zu einem bestimmten Zeitpunkt - mittags am 21. Juni, dem Tag der _Sommersonnenwende_ - spiegelte sich 
+berühmt für einen Brunnen mit einer seltsamen Eigenschaft: jedes Jahr
+zu einem bestimmten Zeitpunkt - mittags am 21. Juni, dem Tag der _Sommersonnenwende_ - spiegelte sich
 das Sonnenlicht am Grund des Brunnens. Zu diesem Zeitpunkt wurde der Boden des Brunnens
 beleuchtet, aber nicht die Seitenwände seines Schachts. Die Sonne stand also direkt über
 dem Brunnen.
@@ -1042,7 +1041,7 @@ Schritte gezählt haben, die sie gemacht haben, um diese abzugehen.
 
     x-media(src="images/well.jpg" width=300 height=300 lightbox)
 
-{.caption}Einige Quellen sagen, dass der “Brunnen von Eratosthenes” auf der Flussinsel _Elephantine_
+{.caption} Einige Quellen sagen, dass der “Brunnen von Eratosthenes” auf der Flussinsel _Elephantine_
 im Nil lag.
 
 :::
@@ -1053,8 +1052,8 @@ Stadtzentrum von Alexandria stand ein Obelisk, ein hohes, schmales Denkmal mit e
 pyramidenförmigen Spitze.
 
 Eratosthenes bemerkte, dass der Obelisk
-am Mittag des Tages der Sommersonnenwende einen Schatten warf - was bedeutete, dass die Sonne hier _nicht_ direkt über ihm stand. Er 
-schloss daraus, dass dies an der Krümmung der Erde liegen musste, und erkannte, dass dieser Umstand zur 
+am Mittag des Tages der Sommersonnenwende einen Schatten warf - was bedeutete, dass die Sonne hier _nicht_ direkt über ihm stand. Er
+schloss daraus, dass dies an der Krümmung der Erde liegen musste, und erkannte, dass dieser Umstand zur
 Berechnung des Umfangs der Erde verwendet werden konnte.
 
 ---
@@ -1062,13 +1061,12 @@ Berechnung des Umfangs der Erde verwendet werden konnte.
 
 ::: column.grow
 
-{.r}Hier siehst du den Brunnen in Syene sowie den Obelisken in Alexandria, 
+{.r} Hier siehst du den Brunnen in Syene sowie den Obelisken in Alexandria,
 die Sonnenstrahlen fallen direkt in den Brunnen, treffen aber schräg auf den Obelisken und
 werfen einen Schatten. [Weiter](btn:next)
 
 ::: .reveal(when="next-0")
-Eratosthenes machte eine Messung des [{.teal} Winkels](pill:angle1) dieses Schattens. 
-Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel](pill:angle2) des
+Eratosthenes machte eine Messung des [{.teal} Winkels](pill:angle1) dieses Schattens. Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel](pill:angle2) des
 [{.red}Kreisbogens](pill:arc) von Alexandria nach Syene übereinstimmen, da es sich bei beiden um
 [[Wechselwinkel|Komplementärwinkel|Supplementärwinkel]] handelt.
 :::
@@ -1076,7 +1074,7 @@ Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel]
 ::: .reveal(when="blank-0")
 Nun können wir die Formel für die Kreisbogenlänge verwenden, die wir oben hergeleitet haben:
 
-{.text-center} `pill("Kreisbogenlänge","red","arc") / pill("Umfang","blue","circ") = (input(7.2)"°") / "360°"`
+{.text-center} `pill("Kreisbogenlänge","red","arc") / pill("Erdumfang","blue","circ") = (input(7.2)"°") / "360°"`
 :::
 
 ::: .reveal(when="blank-1")
@@ -1086,7 +1084,7 @@ Wenn wir diese umformen, stellen wir fest, dass der Umfang der Erde sich so bere
 :::
 
 ::: .reveal(when="blank-2")
-Wie wir wissen, ist der Umfang eines Kreises `u = 2 pi r`, also ist der
+Wie wir wissen, ist der Umfang eines Kreises `u = 2 r pi`, also ist der
 Radius der Erde
 
 {.text-center} `r_"Erde" = (40000 "km") / (2 pi) ≈ 6400 "km"`.
@@ -1123,8 +1121,8 @@ Radius der Erde
 ---
 > id: eratosthenes-2
 
-Eratosthenes' Messung war eines der wichtigsten Experimente der 
-Antike. Seine Schätzung der Größe der Erde war überraschend genau, besonders 
+Eratosthenes' Messung war eines der wichtigsten Experimente der
+Antike. Seine Schätzung der Größe der Erde war überraschend genau, besonders
 wenn man bedenkt, dass er nur Zugang zu sehr einfachen Messwerkzeugen hatte.
 
 ::: column(width=280)
@@ -1133,7 +1131,7 @@ wenn man bedenkt, dass er nur Zugang zu sehr einfachen Messwerkzeugen hatte.
 
 ::: column.grow
 
-Natürlich gestaltet es sich etwas schwierig, seine ursprünglichen Ergebnisse in moderne 
+Natürlich gestaltet es sich etwas schwierig, seine ursprünglichen Ergebnisse in moderne
 Einheiten wie Kilometer umzuwandeln. Im antiken Griechenland wurde die Entfernung in _Stadien_
 (ca. 160 m) gemessen, aber es gab keinen allgemein gültigen Standard dafür. Jedes Gebiet verwendete eine
 etwas andere Länge, und wir wissen nicht, welche Eratosthenes verwendet hat.
@@ -1142,8 +1140,8 @@ In den folgenden Jahrhunderten versuchten die Wissenschaftler, den
 Radius der Erde mit anderen Methoden zu berechnen - manchmal mit sehr unterschiedlichen und falschen Ergebnissen.
 
 Es war eine dieser falschen Messungen, die Christoph Kolumbus veranlasste, von Portugal aus
-nach Westen zu segeln. Er nahm an, dass die Erde viel kleiner war, als sie tatsächlich 
-ist, und hoffte, Indien zu erreichen. Tatsächlich gelangte er auf einen anderen Kontinent 
+nach Westen zu segeln. Er nahm an, dass die Erde viel kleiner war, als sie tatsächlich
+ist, und hoffte, Indien zu erreichen. Tatsächlich gelangte er auf einen anderen Kontinent
 dazwischen: den amerikanischen.
 
 :::
@@ -1279,7 +1277,7 @@ Nachweis durch gleichschenklige Dreiecke
 
 Kombiniert alle Erkenntnisse der euklidischen Geometrie
 
-{.todo}TODO
+{.todo} TODO
 
 
 
@@ -1327,27 +1325,27 @@ einige Körper in 3D an, die auf Kreisen basieren:
 
     x-solid(size=220)
 
-{.text-center}Ein [__Zylinder__](gloss:cylinder)besteht aus zwei kongruenten,
+{.text-center} Ein [__Zylinder__](gloss:cylinder) besteht aus zwei kongruenten,
 parallelen Kreisen, die durch eine gekrümmte Oberfläche verbunden sind. 
 
 ::: column(width=220)
 
     x-solid(size=220)
 
-{.text-center}Ein [__Kegel__](gloss:cone)hat eine kreisförmige Grundfläche, die mit 
+{.text-center} Ein [__Kegel__](gloss:cone) hat eine kreisförmige Grundfläche, die mit
 einem einzigen Punkt (der sogenannten Spitze) verbunden ist.
 
 ::: column(width=220)
 
     x-solid(size=220 static)
 
-{.text-center}Jeder Punkt auf der Oberfläche einer [__Kugel__](gloss:sphere)hat
+{.text-center} Jeder Punkt auf der Oberfläche einer [__Kugel__](gloss:sphere) hat
 den gleichen Abstand von ihrem Mittelpunkt.
 
 :::
 
-Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition von einem [
-[Kreis|Radius|Würfel]] - aber in drei Dimensionen!
+Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition von einem 
+Kreis|Radius|Würfel]] - aber eben dreidimensional!
 
 ---
 > id: gasometer
@@ -1356,26 +1354,26 @@ Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition v
 
 ::: column.grow
 
-Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland. Er wird verwendet um
-Erdgas, das als Brennstoff in nahegelegenen Fabriken und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
+Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland. Er wird verwendet umErdgas, das als Brennstoff in nahegelegenen Fabriken und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
 sein Boden und seine Deckfläche sind zwei große Kreise mit einem
 Radius von 35 m. Es gibt zwei wichtige Fragen, die hier für Ingenieure
-von Interesse sein dürften:
+von Interesse sein dürften: Es gibt zwei wichtige Fragen, die Ingenieure
+möglicherweise beantworten sollten:
 
-* Wie viel Erdgas kann gespeichert werden? Dabei geht es um [[das Volumen|die Fläche|den Durchmesser]] des
- Zylinders.
-* {.reveal(when="blank-0")}Wie viel Stahl wird zum Bau des Gasometers benötigt?
-  In diesem Fall geht es (ungefähr) um [[die Fläche|den Umfang|die Diagonale]] des
- Zylinders.
+* Wie viel Erdgas kann gespeichert werden? Das ist [[der Durchmesser|die Fläche|das Volumen]] des
+  Zylinders.
+* {.reveal(when="blank-0")} Wie viel Stahl wird für den Bau des Gasometers benötigt?
+  In diesem Fall geht es (ungefähr) um [[die Oberfläche|den Umfang|die Diagonale]] des
+Zylinders.
 
-{.reveal(when="blank-0 blank-1")}Wir wollen versuchen, Formeln für diese beiden
+{.reveal(when="blank-0 blank-1")} Wir wollen versuchen, Formeln für diese beiden
 Werte zu finden!
 
 ::: column(width=300)
 
     x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
-{.caption}Gasometer Oberhausen
+{.caption} Gasometer Oberhausen
 
 :::
 
@@ -1413,7 +1411,7 @@ Zylinders mit Radius _{.b.m-red}r_ und Höhe _{.b.m-blue}h_ sich wie folgt berec
 
 {.text-center} `V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
 
-{.reveal(when="eqn-0")}Beachte, dass Radius und Höhe die gleichen Einheiten haben müssen,
+{.reveal(when="eqn-0")} Beachte, dass Radius und Höhe die gleichen Einheiten haben müssen,
 z.B. wenn _r_ und _h_ beide in cm sind, dann wird das Volumen in
 [[`"cm"^3`|`"cm"^2`|cm]] sein.
 
@@ -1426,7 +1424,7 @@ z.B. wenn _r_ und _h_ beide in cm sind, dann wird das Volumen in
 In den obigen Beispielen lagen die beiden Kreisflächen des Zylinders immer _direkt übereinander_
 :Man nennt dies einen __geraden Zylinder__. Wenn die Kreisflächen nicht direkt
 übereinander liegen, reden wir von einem __schiefen Zylinder__. Die Kreisflächen sind noch parallel,
-aber die Seiten scheinen sich in einem Winkel von nicht 90° zu ”lehnen“.
+aber die Seiten scheinen sich in einem Winkel von nicht 90° seitwärts zu ”lehnen“.
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1435,7 +1433,7 @@ aber die Seiten scheinen sich in einem Winkel von nicht 90° zu ”lehnen“.
 
     x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
 
-{.caption}Beim _Schiefen Turm von Pisa_ in Italien handelt es sich um keinen
+{.caption} Beim _Schiefen Turm von Pisa_ in Italien handelt es sich um keinen
 wirklich schiefen Zylinder.
 
 :::
@@ -1446,7 +1444,7 @@ wirklich schiefen Zylinder.
 
 Das Volumen eines schiefen Zylinders erweist sich als genau das gleiche wie bei einem
 geraden Zylinder mit gleichem Radius und gleicher Höhe. Dies ist auf das
-[__Prinzip von Cavalieri]__](gloss:cavalieri) zurückzuführen, benannt nach dem italienischen Mathematiker
+[__Prinzip von Cavalieri__](gloss:cavalieri) zurückzuführen, benannt nach dem italienischen Mathematiker
 [Bonaventura Cavalieri](bio:cavalieri): Wenn zwei Festkörper in jeder Höhe die gleiche
 Querschnittsfläche haben, dann haben sie das gleiche Volumen.
 
@@ -1483,15 +1481,15 @@ Um die Oberfläche eines Zylinders zu bestimmen, müssen wir ihn flach in sein
 [Netz](gloss:net) “ausbreiten”. Du kannst das selbst ausprobieren, indem du z.B. das
 Etikett auf einer Lebensmitteldose ablöst.
 
-Es gibt bei jedem Zylinder zwei [[Kreise|Kugeln|Quadrate]], 
-oberhalb und unterhalb. Die gekrümmte Seitenfläche ist eigentlich ein großes [[Rechteck|Quadrat|Ellipse]].
+Es gibt bei jedem Zylinder zwei [[Kreise|Kugeln|Quadrate]],
+oberhalb und unterhalb. Die gebogene Seitenfläche ist eigentlich ein großes [[Rechteck|Quadrat|Trapez]].
 
 * {.reveal(when="blank-0 blank-1")} Die zwei Kreisflächen haben jeweils eine Fläche von
   _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 * {.reveal(when="eqn-0")} Die Höhe des Rechtecks ist gleich
   _{x-equation.small(solution="h" keys=" " short-var)}_
   _{span.reveal(when="eqn-1")} und die Breite des Rechtecks ist
- gleich [[dem Umfang|dem Durchmesser|der Tangente]] der Kreise:_
+gleich [[dem Umfang|dem Durchmesser|der Tangente]] der Kreise:_
   _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
@@ -1505,7 +1503,7 @@ oberhalb und unterhalb. Die gekrümmte Seitenfläche ist eigentlich ein großes 
 > id: cylinder-surface-1
 
 Das bedeutet, dass sich die gesamte Oberfläche eines Zylinders mit Radius _r_ und Höhe 
-_h_ sich wie folgt berechnen lässt:
+_h_ wie folgt berechnen lässt:
 
 {.text-center} `A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_.
 
@@ -1514,7 +1512,7 @@ _h_ sich wie folgt berechnen lässt:
 
     figure: x-media(src="images/cylinders.jpg" width=460 height=125)
 
-Zylinder sind überall in unserem Alltag zu finden - von der Limonade bis zum Toilettenpapier 
+Zylinder sind überall in unserem Alltag zu finden - von der Limonade bis zum Toilettenpapier
 oder Wasserleitungen. Fallen dir noch ein andere Beispiele ein?
 
 Der _Gasometer_ von weiter oben hatte einen Radius von 35m und eine Höhe von 120m. Wir können nun
@@ -1592,7 +1590,7 @@ könnten wir uns einen Kegel als eine Pyramide mit _unendlich vielen_ Seiten vor
 ---
 > id: cone-volume-1
 
-Das bedeutet auch, dass wir die Gleichung für das Volumen verwenden können: `V
+Das bedeutet auch, dass wir die Gleichung für das Volumen verwenden können: V
 = 1/3 "Grundfläche" × "Höhe" `. Die Grundfläche eines Kegels ist ein Kreis, so dass das Volumen eines
 Kegels mit Radius _r_ und Höhe _h_ sich wie folgt berechnet
 
@@ -1601,7 +1599,7 @@ Kegels mit Radius _r_ und Höhe _h_ sich wie folgt berechnet
 ---
 > id: cone-circumscribed
 
-Beachte die Ähnlichkeit mit der Gleichung für das Volumen eines Zylinders. Stellen dir vor
+Beachte die Ähnlichkeit mit der Gleichung für das Volumen eines Zylinders. Stell dir vor
 , du zeichnest einen Zylinder _um_ den Kegel herum, mit der gleichen Grundfläche und Höhe - man 
 nennt das den __umschriebenen Zylinder__. Wir stellen fest, dass das Volumen des Kegels genau [[ein
 Drittel|die Hälfte|ein Viertel]] des Volumens des Zylinders beträgt:
@@ -1611,7 +1609,7 @@ Drittel|die Hälfte|ein Viertel]] des Volumens des Zylinders beträgt:
 ---
 > id: cone-hilbert
 
-{.i.lgrey}Anmerkung: Man könnte meinen, dass unendlich viele kleine Seiten als Annäherung
+{.i.lgrey} Anmerkung: Man könnte meinen, dass unendlich viele kleine Seiten als Annäherung
 etwas “ungenau” sind. Die Mathematiker haben lange Zeit versucht, einen
 einfacheren Weg zu finden, um das Volumen eines Kegels zu berechnen. Im Jahr 1900 nannte der große
 Mathematiker [David Hilbert](bio:hilbert) das sogar als eines der 23
@@ -1624,11 +1622,11 @@ unmöglich ist.
 
 ::: column.grow
 
-Genau wie ein Zylinder muss ein Kegel nicht “gerade”sein. Wenn die Spitze 
+Genau wie ein Zylinder muss ein Kegel nicht “gerade” sein. Wenn die Spitze 
 direkt über der Mitte der Grundfläche liegt, handelt es sich um einen __geraden Zylinder__. Ansonsten sprechen
 wir von einem __schiefen Zylinder__.
 
-Noch einmal können wir das [__Prinzip von Cavalieri]__](gloss:cavalieri) anwenden, um zu zeigen, dass alle schiefen Zylinder
+Noch einmal können wir das Prinzip von Cavalieri anwenden, um zu zeigen, dass alle schiefen Zylinder
 das gleiche Volumen haben, solange sie die gleiche Grundfläche und Höhe haben.
 
 ::: column(width=280)
@@ -1649,7 +1647,7 @@ Die Bestimmung der Oberfläche eines Kegels ist etwas komplizierter. Wie zuvor k
 entfalten. Bewege den Schieberegler, um zu sehen, was passiert: In diesem
 Fall erhalten wir einen Kreis und [[einen Kreissektor|ein Kreissegment|einen Kreisbogen]].
 
-{.reveal(when="blank-0")}Nun müssen wir nur noch die Fläche dieser beiden
+{.reveal(when="blank-0")} Nun müssen wir nur noch die Fläche dieser beiden
 Teilstücke addieren. Die __{.m-yellow}Grundfläche__ ist ein Kreis mit dem Radius _r_. Somit ist seine Fläche gleich
 
 {.text-center.reveal(when="blank-0")} `pill(A_"Grundfläche","yellow","circle") =`
@@ -1698,10 +1696,10 @@ mit Hilfe des [Satzes von Pythagoras](gloss:pythagoras-theorem) ermitteln:
 
 ::: column.grow
 
-Die _{span.pill.step-target.red(data-to="arc")}Bogenlänge_ des Sektors ist
-gleich dem [[Umfang|Durchmesser|Kreisbogen]] der _{span.pill.step-target.yellow(data-to="base")}Grundfläche:_`2
-_{span.reveal(when="blank-0")}π r`. Jetzt können wir die Sektorfläche
-mit Hilfe der [Formel](gloss:circle-sector) berechnen, die wir in einem vorherigen Abschnitt hergeleitet haben_
+Die _{span.pill.step-target.red(data-to="arc")}Kreisbogenlänge_ des Sektors ist
+gleich dem [[Umfang|Durchmesser|Radius]] der _{span.pill.step-target.yellow(data-to="base")}Grundfläche_:
+_{span.reveal(when="blank-0")}`2 π r`. Jetzt können wir die Sektorfläche
+mit der [Formel](gloss:circle-sector) finden, die wir in einem vorherigen Abschnitt hergeleitet haben:_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 | `pill(A_"Sektor","green","sector")` | `=` | `pill(A_"Kreis","teal","circle") × pill("Kreisbogen","red","arc") / pill("Umfang","teal","circumference")` |
@@ -1735,7 +1733,7 @@ mit Hilfe der [Formel](gloss:circle-sector) berechnen, die wir in einem vorherig
 > id: cone-surface-2
 
 Schließlich müssen wir nur noch die Fläche der __{.m-yellow}Grundfläche__ und die Fläche
-des __{.m-green}Sektors__addieren, um die Gesamtoberfläche des Kegels zu erhalten:
+des __{.m-green}Sektors__ addieren, um die Gesamtoberfläche des Kegels zu erhalten:
 
 {.text-center} `A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_
 
@@ -1746,7 +1744,7 @@ des __{.m-green}Sektors__addieren, um die Gesamtoberfläche des Kegels zu erhalt
 
 ::: column.grow
 
-Eine [__Kugel]__(gloss:sphere)ist ein dreidimensionaler Körper, der aus allen
+Eine [__Kugel__](gloss:sphere)ist ein dreidimensionaler Körper, der aus allen
 Punkten besteht, die den gleichen Abstand zu einem gegebenen __{.m-green}Mittelpunkt *M*__ haben . Dieser
 Abstand wird als __{.m-red}Radius *r*__ der Kugel bezeichnet.
 
@@ -1763,7 +1761,7 @@ Kreis hat auch eine Kugel einen __{.m-blue}Durchmesser *d*__, der
 ---
 > id: sphere-1
 
-{.r}In einem[vorherigen Abschnitt](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1) hast du
+{.r} In einem [früheren Abschnitt](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1) hast du
 gelernt, wie der griechische Mathematiker [Eratosthenes](bio:eratosthenes) den Radius der Erde mit dem Schatten eines Obelisken
 berechnete - er betrug 6.371 km.
 Nun wollen wir versuchen, das Gesamtvolumen und die Oberfläche der Erde zu berechnen.
@@ -1774,7 +1772,7 @@ Nun wollen wir versuchen, das Gesamtvolumen und die Oberfläche der Erde zu bere
 
 #### Volumen einer Kugel
 
-Um das Volumen einer Kugel zu bestimmen, müssen wir wieder einmal das [__Prinzip von Cavalieri]__](gloss:cavalieri) anwenden:
+Um das Volumen einer Kugel zu bestimmen, müssen wir wieder einmal das Prinzip von Cavalieri anwenden:
 Beginnen wir mit einer Halbkugel - einer Kugel, die entlang des Äquators in zwei Hälften geschnitten ist. Wir betrachten auch
 einen Zylinder mit dem gleichen Radius und der gleichen Höhe wie diese Halbkugel, aber mit einem
 umgekehrten Kegel, der aus seiner Mitte “herausgebohrt” worden ist.
@@ -1824,16 +1822,16 @@ Formen in einer bestimmten Höhe über der Grundfläche ändert:
     x-slider(steps=100)
 
 
-Versuchen{.reveal(when="slider-0")} wir, die Querschnittsfläche
+{.reveal(when="slider-0")} Versuchen wir, die Querschnittsfläche
 dieser beiden Körper in einem Abstand der __{span.pill.blue.step-target(data-to="h")}Höhe *h*__
 über der Grundfläche zu berechnen.
 
 ::: column.grow
 
-{.reveal(when="slider-0")}Der Querschnitt der Halbkugel ist immer ein 
+{.reveal(when="slider-0")} Der Querschnitt der Halbkugel ist immer ein 
 [[Kreis|Ring|Zylinder]].
 
-{.reveal(when="blank-0")}Der __{span.pill.red.step-target(data-to="x")}Radius
+{.reveal(when="blank-0")} Der __{span.pill.red.step-target(data-to="x")}Radius
 *x*__ des Querschnitts ist Teil eines _{span.pill.yellow.step-target(data-to="tri")}
 rechtwinkligen Dreiecks_, so dass wir den [Satz des Pythagoras](gloss:pythagoras-theorem) anwenden können:
 
@@ -1854,8 +1852,8 @@ Damit ergibt sich die Fläche des Querschnitts
 Der Querschnitt des Zylinderauschnitts ist immer ein [[Ring|Kreis|Kegel]].
 
 ::: .reveal(when="blank-1")
-Der Radius der „Bohrung“ beträgt _h_. Wir können die Fläche des Rings finden, indem wir die Fläche der Bohrung von der Fläche des größeren Kreises abziehen
-:
+Der Radius der „Bohrung“ beträgt _h_. Wir können die Fläche des Rings finden,
+indem wir die Fläche der Bohrung von der Fläche des größeren Kreises abziehen:
 
 | _A_ | = | `π r^2 - π h^2` |
 |     | = | `π (r^2 - h^2)` |
@@ -1884,7 +1882,7 @@ und das Volumen des [Kegels](gloss:cone-volume) voneinander abziehen_
 Eine Kugel besteht aus [[zwei]] Halbkugeln, _{span.reveal(when="blank-0")}d.h.
 ihr Volumen ergibt sich zu_
 
-{.text-center.reveal(when="blank-0")} `V = 4/3 π r^3`.
+{.text-center.reveal(when="blank-0")} `V = 4/3 r^3 π`.
 
 ---
 > id: earth-volume
@@ -1899,12 +1897,12 @@ Volumen
 |     | `=` | _{span.numbers}1_ `"km"^3` |
 {.eqn-system}
 
-{.reveal(when="numbers")}Die durchschnittliche Dichte der Erde beträgt `5510 "kg/m"^3`,
+{.reveal(when="numbers")} Die durchschnittliche Dichte der Erde beträgt `5510 "kg/m"^3`,
 d.h. ihre Gesamtmasse ist
 
 {.text-center.reveal(when="numbers")} `"Masse" = "Volumen" × "Dichte" ≈ 6 × 10^24 "kg"`
 
-{.reveal(when="numbers")}Das ist eine 6, gefolgt von 24 Nullen!
+{.reveal(when="numbers")} Das ist eine 6, gefolgt von 24 Nullen!
 
 ::: column(width=280)
 
@@ -1925,7 +1923,7 @@ als auch eine Kugel perfekt in sein Inneres einpassen:
     x-solid(size=220 style="margin-top: -20px")
     .large-op.reveal(when="blank-0" animation="pop") +
 
-{.text-center}Dieser Kegel hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
+{.text-center} Dieser Kegel hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
 _{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column.r(width=220)
@@ -1933,19 +1931,19 @@ _{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
     x-solid(size=220 style="margin-top: -20px")
     .large-op.reveal(when="blank-0" animation="pop") =
 
-{.text-center}Die Kugel hat den Radius `r`. Ihr Volumen beträgt
+{.text-center} Diese Kugel hat den Radius `r`. Sein Volumen beträgt
 _{x-equation.small(solution="4/3 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column(width=220)
 
     x-solid(size=220 style="margin-top: -20px")
 
-{.text-center}Der Zylinder hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
+{.text-center} Der Zylinder hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
 _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 :::
 
-{.reveal(when="eqn-0 eqn-1 eqn-2")}Beachte, dass, wenn wir das Volumen des Kegels und der Kugel
+{.reveal(when="eqn-0 eqn-1 eqn-2")} Beachte, dass, wenn wir das Volumen des Kegels und der Kugel
 [[addieren|subtrahieren|vervielfachen]], wir genau
 das Volumen des Zylinders erhalten!
 
@@ -1996,7 +1994,7 @@ Um die Oberfläche einer Kugel zu bestimmen, können wir sie noch einmal mit ein
 anderen Form annähern - zum Beispiel einem Polyeder mit vielen Flächen. Mit zunehmender Anzahl der
 Flächen beginnt das Polyeder immer mehr wie eine Kugel auszusehen.
 
-{.todo} KOMMT BALD!
+{.todo} DEMNÄCHST: KOMMT BALD!
 
     // If we connect the small polygons to the center of the sphere, we get
     // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
@@ -2027,48 +2025,48 @@ Flächen beginnt das Polyeder immer mehr wie eine Kugel auszusehen.
 > id: conics
 > goals: ellipse parabola hyperbola
 
-The circle is one of four different shapes which can be created using “slices”
-through a [cone](gloss:cone). This can be demonstrated using the light cone of
-a torch:
+Der Kreis ist eine von vier verschiedenen Formen, die durch "Schnitte"
+durch einen [Kegel](gloss:cone) erzeugt werden können. Das kann am Lichtkegel
+einer Taschenlampe demonstriert werden:
 
     x-conic-section
     x-scale-box(width=760).conics
       .row
         .active
-          p: strong Circle
+          p: strong Kreis
           include svg/circle.svg
         .hide
           p: strong Ellipse
           include svg/ellipse.svg
         .hide
-          p: strong Parabola
+          p: strong Parabel
           include svg/parabola.svg
         .hide
-          p: strong Hyperbola
+          p: strong Hyperbel
           include svg/hyperbola.svg
 
 ---
 > id: conics-1
 
-If you point the torch vertically downwards, you see a [[circle|ellipse|oval]]
-of light. _{span.reveal(when="blank-0")}If you tilt the cone, you get an
-[__ellipse__](gloss:ellipse). If you tilt it even further, you get a
-[__parabola__](gloss:parabola) or a [__hyperbola__](gloss:hyperbola)._
+Wenn du die Taschenlampe senkrecht nach unten richtest, siehst du [[einen Kreis|eine Ellipse|ein Oval]]
+ aus Licht. _{span.reveal(when="blank-0")}Wenn du den Lichtkegel neigst, wird daraus eine
+[__Ellipse__](gloss:ellipse). Wenn du ihn noch weiter kippst, bekommst du eine
+[__Parabel__](gloss:parabola) oder eine [__Hyperbel__](gloss:hyperbola)._
 
 ---
 > id: conics-2
 
 ::: column.grow
 
-Collectively, these four shapes are called [__conic sections__](gloss:conic-section).
-Even though they all look very different, they are closely related: in fact,
-they can all be generated using the same equation!
+Zusammenfassend werden diese vier Formen als [__Kegelschnitte__](gloss:conic-section) bezeichnet.
+Auch wenn sie alle sehr unterschiedlich aussehen, sind sie doch eng miteinander verbunden: Tatsächlich können
+sie alle nach der gleichen Gleichung erzeugt werden!
 
-Conic sections were first studied by the ancient Greek mathematician [Apollonius
-of Perga](bio:apollonius), who also gave them their unusual names.
+Kegelschnitte wurden zunächst vom altgriechischen Mathematiker [Apollonius
+von Perge](bio:apollonius) untersucht, der ihnen auch ihre ungewöhnlichen Namen gab.
 
-In later courses, you’ll learn much more about parabolas and hyperbolas. For
-now, let’s have a closer look at the ellipse.
+In späteren Kursen wirst du noch viel mehr über Parabeln und Hyperbeln erfahren. Lass uns
+zunächst einen genaueren Blick auf die Ellipse werfen.
 
 ::: column(width=300)
 
@@ -2081,20 +2079,20 @@ now, let’s have a closer look at the ellipse.
 
 ### Ellipsen
 
-An ellipse just looks almost like an “elongated circle”. In fact, you could
-think about it as a circle with _two centers_ – these are called __focal
-points__. Just like every point on a circle has the same distance from its
-center, every point on an ellipse has the same _sum of distances_ to its two
-focal points.
+Eine Ellipse sieht irgendwie fast wie ein "länglicher Kreis" aus. Tatsächlich könnte man sie sich als einen Kreis mit _zwei Mittelpunkten_ 
+vorstellen - diese werden als __Brennpunkte__
+bezeichnet. So wie jeder Punkt auf einem Kreis den gleichen Abstand von seiner
+Mitte hat, so hat jeder Punkt auf einer Ellipse die gleiche _Summe der Abstände_ zu seinen beiden
+Brennpunkten.
 
-If you have a long string connected to two fixed points, you can draw a perfect
-ellipse by tracing the maximum reach of the strings:
+Wenn du eine lange Schnur mit zwei Fixpunkten verbindest, kannst du eine perfekte
+Ellipse zeichnen, indem du die Schnur gespannt hältst und so ganz herum zeichnest:
 
-{.todo} KOMMT BALD!
+{.todo} KOMMT BALD! Ellipsenzeichnung interaktiv
 
     // ---
     // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
+    // Du kannst auch die Brennpunkte verschieben. Notice how, if they are further
     // apart, the ellipse will be [[more|less]] elongated. If they are close together,
     // it will look almost like a [[circle|parabola|trapezium]].
 
@@ -2102,27 +2100,27 @@ ellipse by tracing the maximum reach of the strings:
 > id: ellipses-2
 > goals: v0 v1 v2 v3
 
-There are many other physical representations of how you could draw an ellipse:
+Es gibt viele andere Darstellungsformen, mit denen man eine Ellipse zeichnen könnte:
 
 ::: column(width=320 parent="padded-thin")
 
     x-video(src="images/gears.mp4" poster="images/gears.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Gears
+    p.caption Zahnräder (Spirograph)
 
 ::: column(width=320)
 
     x-video(src="images/trammel.mp4" poster="images/trammel.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Trammel
+    p.caption Elipsenzirkel
 
 ::: column(width=320)
 
     x-video(src="images/disk.mp4" poster="images/disk.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Disk
+    p.caption Scheibe
 
 ::: column(width=320)
 
     x-video(src="images/swing.mp4" poster="images/swing.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Swing
+    p.caption Schaukel
 
 :::
 
@@ -2133,20 +2131,20 @@ There are many other physical representations of how you could draw an ellipse:
 
 ::: column.grow
 
-You might remember from the very beginning of this course, that ancient Greek
-astronomers believed that the Earth is at the centre of the universe and that
-the sun, moon and planets move around Earth on circular orbits.
+Du erinnerst dich vielleicht an die Einleitung zu diesem Kurs, und dass altgriechische
+Astronomen glaubten, dass die Erde im Mittelpunkt des Universums steht und dass
+sich Sonne, Mond und Planeten auf kreisförmigen Bahnen um die Erde bewegen.
 
-Unfortunately, astronomical observation of the sky didn’t quite support this.
-For example, the sun appeared larger during some parts of the year and smaller
-during others. On a circle, every point should have [[the same|an increasing|a
-decreasing]] distance from its center.
+Zu ihrem Leidwesen hat die astronomische Beobachtung des Himmels dies
+nicht wirklich bestätigt. So schien beispielsweise die Sonne
+in einigen Jahreszeiten größer und in anderen kleiner. Auf einem Kreis sollte aber jeder Punkt [[den gleichen|einen zunehmenden|
+einen abnehmendem]] Abstand von seinem Mittelpunkt haben.
 
 ::: column(width=330)
 
     x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
-{.caption} Greek astronomer Hipparchus of Nicaea
+{.caption} Der griechische Astronom Hipparchus von Nicäa
 
 :::
 
@@ -2154,10 +2152,10 @@ decreasing]] distance from its center.
 > id: epicycles
 > goals: play
 
-To fix this, astronomers added __Epicycles__ to their model of the solar system:
-planets move on a large circle around Earth, while simultaneously rotating on
-a smaller circle. While very complicated, this was the most widely accepted
-model of our universe for more than 1000 years:
+Um das zu beheben, fügten Astronomen __Epizykeln__ zu ihrem Modell des Sonnensystems hinzu:
+Planeten bewegen sich auf einem großen Kreis um die Erde, während sie sich gleichzeitig auf
+einem kleineren Kreis drehen. Obwohl sehr kompliziert, war dies das am weitesten verbreitete
+Modell unseres Universums für mehr als 1000 Jahre:
 
 ::: column(width=320)
 
@@ -2170,16 +2168,16 @@ model of our universe for more than 1000 years:
         circle.earth(cx=310 cy=160 r=10 fill="#ff941f")
       x-play-btn
 
-{.caption} This planet makes ${n}{n|6|2,12,1} rotations around the small circle
-(the __epicycle__) during one rotation around the large circle (the
-__deferent__).
+{.caption} Dieser Planet  dreht sich in ${n}{n|6|2,12,1} kleinen Kreisen
+(den __Epizykeln__) während er sich in einer großen Kreisbahn (dem
+__Deferent__) bewegt.
 
 ::: column(width=320)
 
     x-media(src="images/epicycles.jpg" width=320 height=320)
 
-{.caption} A 16-century drawing of epicycles in the __Geocentric model__. The
-Greek word “planetes” means “wanderers”.
+{.caption} Eine Zeichnung aus dem 16. Jahrhundert mit Epizykeln im __geozentrischen Modell__. Das
+griechische Wort "planetes" bedeutet "Wanderer".
 :::
 
 ---
@@ -2188,13 +2186,13 @@ Greek word “planetes” means “wanderers”.
 
 ::: column.grow
 
-Over time, people realised that Earth was just one of many planets orbiting the
-sun (the __Heliocentric model__), but it wasn’t until 1609, that the astronomer
-[Johannes Kepler](bio:kepler) discovered that planets actually move on
-_elliptical orbits_.
+Im Laufe der Zeit erkannten die Menschen, dass die Erde nur einer von vielen Planeten ist, die die
+Sonne umkreisen (das __heliozentrische Modell__), aber erst 1609 entdeckte der Astronom
+[Johannes Kepler](bio:kepler), dass sich die Planeten eigentlich auf
+_elliptischen Bahnen_ bewegen.
 
-The sun is in one of the two focal points of these ellipses. The planets speed
-up as they get closer to the sun, and slow down as they move further away.
+Die Sonne steht in einem der beiden Brennpunkte dieser Ellipsen. Die Planeten beschleunigen
+sich, wenn sie der Sonne näher kommen, und verlangsamen sich, wenn sie sich weiter entfernen.
 
 ::: column(width=320)
 
@@ -2213,14 +2211,14 @@ up as they get closer to the sun, and slow down as they move further away.
 > id: newton
 > goals: apple
 
-A few decades later, [Isaac Newton](bio:newton) was able to prove Kepler’s
-observations, using his newly developed laws of [__gravity__](gloss:gravity).
-Newton realised that there is a force between any two masses in the universe –
-similar to the attraction between two magnets. 
+Ein paar Jahrzehnte später konnte [Isaac Newton](bio:newton) Keplers
+Beobachtungen mit seinen neu entwickelten Gesetzen der [__Schwerkraft__](gloss:gravity) beweisen.
+Newton erkannte, dass es eine Kraft zwischen zwei beliebigen Massen im Universum gibt -
+ähnlich wie die Anziehungskraft zwischen zwei Magneten. 
 
-Gravity is what makes everything fall to the ground and gravity is also what
-makes the planets move around the sun. It is only the great speed at which
-planets move, that prevents them from falling directly into the sun.
+Die Schwerkraft ist es, die alles auf den Boden fallen lässt, und die Schwerkraft
+ist es auch, die die Planeten sich um die Sonne herum bewegen lässt. Nur die große Geschwindigkeit, mit der sich die
+Planeten bewegen, verhindert, dass sie direkt in die Sonne fallen.
 
 ::: column(width=280)
 
@@ -2234,15 +2232,14 @@ planets move, that prevents them from falling directly into the sun.
 
 ::: column.grow
 
-Using Newton’s laws, you can derive the path that objects take when moving under
-the force of gravity. It turns out that Planets move on ellipses, but other
-objects like comets can travel on [parabolic](gloss:parabola) or
-[hyperbolic](gloss:hyperbola) paths: they fly close to the sun before turning
-around and shooting off into the universe, never to come back.
+Anhand der Newtonschen Gesetze kann man den Weg bestimmen, den Objekte nehmen,
+wenn sie sich unter dem Einfluss der Schwerkraft bewegen. Es stellt sich heraus, dass sich Planeten auf Ellipsen bewegen, aber andere
+Objekte wie Kometen können auf [parabolischen](gloss:parabola) oder
+[hyperbolischen](gloss:hyperbola) Bahnen unterwegs sein: Sie fliegen nahe zur Sonne, bevor sie
+um sie herum fliegen und ins Universum schießen und nie wieder zurückzukehren.
 
-According to legend, a falling apple inspired Newton to think about gravity. He
-was one of the most influential scientist of all time, and his ideas shaped our
-understanding of the world for nearly 300 years – until Albert Einstein
-discovered relativity in 1905.
+Der Legende nach inspirierte ein fallender Apfel Newton dazu, sich Gedanken über die Schwerkraft zu machen. Er
+war einer der einflussreichsten Wissenschaftler aller Zeiten, und seine Ideen prägten fast 300 Jahre lang unser
+Weltbild - bis Albert Einstein
+1905 die Relativitätstheorie entdeckte.
 
-:::
