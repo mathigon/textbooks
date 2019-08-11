@@ -1,0 +1,23 @@
+not-a-polygon-1: Eine der Seiten dieser Figur ist gebogen, also ist es kein Vieleck.
+not-a-polygon-2: Diese Form ist kein Vieleck, da sie ein Loch enthält.
+not-a-polygon-3: Diese Form hat eine geschwungene Seite, so dass es sich nicht um ein Vieleck handeln kann.
+
+no-overlap: Vorsicht - die Seiten dürfen sich nicht kreuzen, sonst haben wir kein Vieleck mehr.
+angles-repeat: Prima! Versuche nun, einige der Ecken des Vierecks zu verschieben und betrachte, was passiert.
+
+not-a-diagonal: Das ist keine Diagonale des Vierecks.
+not-a-diagonal-1: Das ist keine Diagonale des Parallelogramms.
+
+not-concave-1: Dreiecke können nie konkav sein: Alle ihre Winkel sind kleiner als 180°.
+not-concave-2: Dieses Vieleck ist konvex - alle Winkel sind kleiner als 180°.
+not-concave-3: Dieses Vieleck ist konvex - alle Diagonalen liegen innerhalb des Vielecks, und alle Winkel sind kleiner als 180°.
+
+not-regular-1: In diesem Vieleck haben einige Seiten unterschiedliche Längen - deshalb kann es nicht regelmäßig sein.
+not-regular-2: Alle Seiten haben die gleiche Länge, aber einige der Winkel haben unterschiedliche Größen. Daher ist das _kein_ regelmäßiges Vieleck.
+not-regular-3: Das ist ein Kreis, kein Vieleck!
+
+parall-error-1: Das ist nicht wahr - die Winkel können beliebig groß sein, solange sie sich zu 360° addieren.
+parall-error-2: Das stimmt, wenn das Paralellogramm auch eine Raute ist, aber nicht für _jedes_ Parallelogramm.
+parall-error-3: Das ist korrekt, wenn das Parallelogramm zufällig ein Rechteck ist, aber nicht für _jedes_ Parallelogramm.
+parall-error-4: Nein: benachbarte Seiten in einem Parallelogramm müssen nicht die gleiche Länge haben.
+

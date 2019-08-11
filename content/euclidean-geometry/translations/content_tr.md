@@ -298,7 +298,7 @@ Hiçbir zaman kesişmeyen iki doğruya [__paralel__](gloss:parallel) denir. Yön
 ::: column.grow
  _Paralelin_ karşıtı iki doğrunun  90°’lik açı (sağdaki açı) ile kesişmesidir. Bu doğrulara  [__dik__](gloss:perpendicular) denir.
 
-{.r} Bu örnekteki doğrular için _{.b.m-blue}a_ `_|_` _{.b.m-gree}b_ yazarız. `_|_` sembolü basitçe _“‘e diktir”_ anlamına gelir.
+{.r} Bu örnekteki doğrular için _{.b.m-blue}a_ `⊥` _{.b.m-gree}b_ yazarız. `⊥` sembolü basitçe _“‘e diktir”_ anlamına gelir.
 _{button.next-step} Devam et_
 
 :::
@@ -520,7 +520,7 @@ Başlangıç için, sol üstteki kutucuklardan <x-target no-margins to="#equilat
     // 
     // A line, segment, or ray that passes through a midpoint of another segment 
     // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
-    // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) _|_ bar(DE)`.
+    // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) ⊥ bar(DE)`.
 
 ---
 > id: angle-bisector

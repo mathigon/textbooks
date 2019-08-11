@@ -613,7 +613,7 @@ internal-angle:
 irrational-numbers:
   title: 无理数
   text: __无理数__是不能表示为整数分数(_有理数_)的数。例如，0.333333…=`1/3`是
-    _有理性_的，但`π`、`sqrt（2）`和_e_都是_无理性_的。
+    _有理性_的，但`π`、`sqrt(2)`和_e_都是_无理性_的。
 
 irregular-polygon:
   title: Irregular Polygon

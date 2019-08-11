@@ -158,7 +158,7 @@ export function wheel($step) {
     const dx = 60 + a * 100;
     const end = Point.fromPolar(2 * a + Math.PI / 2, 50).shift(dx, 55);
 
-    $wheel.transform = `translateX(${a*100}px) rotate(${2*a}rad)`;
+    $wheel.setTransform(new Point(a*100, 0), 2*a);
     $line.setAttr('d', `M ${60} ${105} L ${dx} ${105}` +
         `A 50 50 0 ${p < 0.5 ? 1 : 0} 0 ${end.x} ${end.y}`);
   }
@@ -413,7 +413,7 @@ export function constellations($step) {
     maxSpeed: 0.01,
     $disk: $wheel,
     draw(angle) {
-      $wheel.transform = `rotate(${angle}rad)`;
+      $wheel.setTransform(null, angle);
 
       const d = (720 - Math.round(angle * 180 / Math.PI)) % 360;
       $step.model.day = d;

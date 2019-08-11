@@ -1,13 +1,13 @@
-# Polygons and Polyhedra
+# Vielecke und Polyeder
 
-## Polygons
+## Vielecke (Polygone)
 
-> section: polygons
 > id: polygons
+> section: polygons
 
-A [__polygon__](gloss:polygon) is a closed, flat shape that has only straight
-sides. Polygons can have any number of sides and angles, but the sides cannot be
-curved. Which of the shapes below are polygons?
+Ein [__Vieleck__](gloss:polygon) oder Polygon ist eine geschlossene,
+ebene Figur, die nur gerade Seiten hat. Vielecke können beliebig viele Seiten und Winkel haben, aber die Seiten dürfen nicht
+gebogen sein. Welche der folgenden Formen sind Vielecke?
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -22,36 +22,36 @@ curved. Which of the shapes below are polygons?
 ---
 > id: polygons-1
 
-We give different names to polygons, depending on how many sides they have:
+Wir geben Polygonen unterschiedliche Namen, je nachdem, wie viele Seiten sie haben:
 
     .row.padded-thin
       div(style="width: 100px")
         include svg/polygons/number-3.svg
-        p.caption #[strong Triangle]#[br]3 sides
+        p.caption #[strong Dreieck]#[br]3 Seiten
       div(style="width: 100px")
         include svg/polygons/number-4.svg
-        p.caption #[strong Quadrilateral]#[br]4 sides
+        p.caption #[strong Viereck]#[br]4 Seiten
       div(style="width: 100px")
         include svg/polygons/number-5.svg
-        p.caption #[strong Pentagon]#[br]5 sides
+        p.caption #[strong Fünfeck]#[br]5 Seiten
       div(style="width: 100px")
         include svg/polygons/number-6.svg
-        p.caption #[strong Hexagon]#[br]6 sides
+        p.caption #[strong Sechseck]#[br]6 Seiten
       div(style="width: 100px")
         include svg/polygons/number-7.svg
-        p.caption #[strong Heptagon]#[br]7 sides
+        p.caption #[strong Siebeneck]#[br]7 Seiten
       div(style="width: 100px")
         include svg/polygons/number-8.svg
-        p.caption #[strong Octagon]#[br]8 sides
+        p.caption #[strong Achteck]#[br]8 Seiten
 
 ---
 > id: angles-0
 
-### Angles in Polygons
+### Winkel in Vielecken
 
-Every polygon with _n_ sides also has _n_ [internal angles](gloss:internal-angle).
-We already know that the sum of the internal angles in a triangle is always
-[[180]]° but what about other polygons?
+Jedes Vieleck mit _n_ Seiten hat auch _n_ [Innenwinkel](gloss:internal-angle).
+Wir wissen bereits, dass die Summe der Innenwinkel in einem Dreieck immer
+[[180]]° beträgt, aber wie ist das bei anderen Vielecken?
 
 ---
 > id: angles
@@ -76,9 +76,8 @@ We already know that the sum of the internal angles in a triangle is always
 {.text-center.var} _{span.circled.red}${round(angle(b,a,d).deg)}°_ +
 _{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
 _{span.circled.green}${round(angle(d,c,b).deg)}°_ +
-_{span.circled.yellow}${360 - round(angle(b,a,d).deg) - round(angle(c,b,a).deg) -
-round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
-
+_{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+    
     x-gesture(target="x-anibutton")
 
 ::: column.grow(width=300)
@@ -104,17 +103,16 @@ round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 _{span.circled.blue}${round(angle(g,f,e).deg)}°_ +
 _{span.circled.green}${round(angle(h,g,f).deg)}°_ +
 _{span.circled.yellow}${round(angle(i,h,g).deg)}°_ +
-_{span.circled}${540 - round(angle(f,e,i).deg) - round(angle(g,f,e).deg) -
-round(angle(h,g,f).deg) - round(angle(i,h,g).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+_{span.circled}${round(angle(e,i,h).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
 > id: angles-1
 
-It looks like the sum of internal angles in a quadrilateral is always [[360]]°
-– exactly [[twice|three times|half]] the sum of angles in a triangle.
-_{span.reveal(when="blank-0 blank-1")} This is no coincidence: every quadrilateral
-can be split into two triangles._
+Es sieht so aus, als ob die Summe der Innenwinkel in einem Viereck immer [[360]]°
+beträgt- genau [[das Doppelte|das Dreifache|die Hälfte]] der Summe der Winkel in einem Dreieck.
+_{span.reveal(when="blank-0 blank-1")} Das ist kein Zufall: Jedes Viereck
+kann in zwei Dreiecke geteilt werden._
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -122,19 +120,19 @@ can be split into two triangles._
       .reveal(when="blank-4" style="width: 140px"): include svg/polygons/triangles-2.svg
       .reveal(when="blank-4" delay=500 style="width: 140px"): include svg/polygons/triangles-3.svg
 
-{.reveal(when="blank-0 blank-1")} The same also works for larger polygons.
-We can split a pentagon into [[3]] triangles, so its internal angle sum is
-`3 × 180° =` [[540]]°. _{span.reveal(when="blank-2 blank-3")} And we can split
-a hexagon into [[4]] triangles, so its internal angle sum is `4 × 180° =` [[720]]°._
+{.reveal(when="blank-0 blank-1")} Das Gleiche gilt auch für größere Vielecke.
+Wir können ein Fünfeck in [[3]] Dreiecke aufteilen, so dass seine Innenwinkelsumme
+`3 × 180° =` [[540]]° beträgt. _{span.reveal(when="blank-2 blank-3")} Und wir können ein Sechseck in [[4]] Dreiecke aufteilen
+, so dass seine Innenwinkelsumme `4 × 180° =` [[720]]° beträgt._
 
 ---
 > id: internal-angle-sum
 
-A polygon with ${x}{x|7|3,15,1} sides will have an internal angle sum of
-180° × ${x-2} = ${(x-2)*180}°. More generally, a polygon with _n_ sides can be
-split into [[n – 2|n – 1|n]] triangles. Therefore,
+Ein Vieleck mit ${x}{x|7|3,15,1} Seiten hat also eine Innenwinkelsumme von
+180° × ${x-2} = ${(x-2)*180}°. Generell kann ein Vieleck mit _n_ Seiten in [[n - 2|n - 1|n]] Dreiecke
+unterteilt werden. Daher ist die
  
-{.text-center.reveal(when="blank-0")} Sum of internal angles in an _n_-gon
+{.text-center.reveal(when="blank-0")} Summe der Innenwinkel in einem _n_-eck
 `= (n - 2) × 180°`.
 
     x-gesture(target="#internal-angle-sum x-var" slide="100,0")
@@ -142,19 +140,18 @@ split into [[n – 2|n – 1|n]] triangles. Therefore,
 ---
 > id: concave
 
-### Convex and Concave Polygons
+### Konvexe und nichtkonvexe (konkave) Vielecke
 
 ::: column.grow
-We say that a polygon is [__concave__](gloss:concave) if it has a section that
-“points inwards”. You can imagine that this part has [“caved in”](target:cave).
-Polygons that are _not_ concave are called [__convex__](gloss:convex).
+Wir sagen, dass ein Vieleck (Polygon) [__konkav__](gloss:concave) ist, wenn es einen Abschnitt hat, der
+["nach innen zeigt"](target:cave). Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
 
-There are two ways you can easily identify concave polygons: they have at least
-one [internal angle that is bigger than 180°](target:angle). They also have at
-least one [diagonal that lies _outside_ the polygon](target:diagonal).
+Es gibt zwei Möglichkeiten, konkave Vielecke leicht zu identifizieren: Sie haben mindestens
+einen [Innenwinkel, der größer als 180° ist](target:angle). Sie haben außerdem
+mindestens eine [Diagonale, die _außerhalb_ des Vielecks](target:diagonal) liegt.
 
-In convex polygons, on the other hand, all internal angles are less than
-[[180]]°, and all diagonals lie [[inside|outside]] the polygon.
+Bei konvexen Vielecken hingegen sind alle Innenwinkel kleiner als
+[[180]]°, und alle Diagonalen liegen [[innerhalb|außerhalb]] des Vielecks.
 ::: column(width=240)
 
     x-geopad(width=240): svg
@@ -176,7 +173,7 @@ In convex polygons, on the other hand, all internal angles are less than
 ---
 > id: concave-1
 
-Which of these polygons are concave?
+Welche dieser Vielecke sind konkav?
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -189,11 +186,11 @@ Which of these polygons are concave?
 ---
 > id: regular-polygons
 
-### Regular Polygons
+### Regelmäßige Vielecke
 
-We say that a polygon is [__regular__](gloss:regular-polygon) if all of its
-sides have the same length, and all of the angles have the same size. Which of
-these shapes are regular polygons?
+Wir sagen, dass ein Vieleck [__regelmäßig__](gloss:regular-polygon) ist, wenn alle seine
+Seiten die gleiche Länge und alle Winkel die gleiche Größe haben. Welche
+dieser Figuren sind regelmäßige Vielecke?
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -206,29 +203,29 @@ these shapes are regular polygons?
 ---
 > id: regular-1
 
-Regular polygons can come in many different sizes – but all regular polygons
-with the same number of sides [[are similar|are congruent|have the same area]]!
+Regelmäßige Vielecke können in vielen verschiedenen Größen auftreten - aber alle regelmäßigen Vielecke
+mit der gleichen Anzahl von Seiten [[sind ähnlich|sind kongruent|haben die gleiche Fläche!]]
 
 ---
 > id: regular-2
 
-We already know the sum of all [internal angles](gloss:internal-angle) in
-polygons. For regular polygons all these angles have [[the same size|are alternate angles]],
-so we can work out the size of a single internal angle:
+Wir kennen bereits die [Innenwinkelsumme](gloss:internal-angle) von
+Vielecken. Für regelmäßige Vielecke gilt, dass alle diese Winkel [[gleich groß|spitze Winkel]] sind,
+so dass wir die Größe eines einzelnen Innenwinkels berechnen können:
 
-{.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[sum of all angles|number of angles]]</mrow><mrow>[[number of angles|sum of all angles]]</mrow></mfrac>
+{.text-center.reveal(when="blank-0")} Winkel = <mfrac><mrow>[[Summe aller Winkel|Anzahl der Winkel]]</mrow><mrow>[[Anzahl der Winkel|Summe aller Winkel]]</mrow></mfrac>
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
-{.reveal(when="blank-1 blank-2" delay=1000)} If `n=3` we get the size of the
-internal angles of an equilateral triangle – we already know that it must be
-[[60]]°. _{span.reveal(when="blank-3")} In a regular polygon with ${x}{x|6|3,12,1}
-sides, every internal angle is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
+{.reveal(when="blank-1 blank-2" delay=1000)} Wenn `n=3` ist, erhalten wir die Größe der
+Innenwinkel eines gleichseitigen Dreiecks - wir wissen bereits, dass
+[[60]]° herauskommen muss. _{span.reveal(when="blank-3")} In einem regelmäßigen Vieleck mit ${x}{x|6|3,12,1}
+Seiten ist jeder Innenwinkel 180° - <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
 ${Math.round(180-360/x)}°._
 
 ---
 > id: regular-area
 
-### The Area of Regular Polygons
+### Die Fläche eines regelmäßigen Vielecks
 
 ::: column(width=320)
 
@@ -248,7 +245,7 @@ ${Math.round(180-360/x)}°._
       for i in [0,1,2,3,4,5,6,7,8,9,10,11]
         path.thin.reveal(when="blank-0" delay=i*150 hidden x=`segment(p.points[${i}%n],m)` animation="draw")
 
-      path.yellow.reveal(when="blank-2" x="segment(m,k)" target="apothem" label="apothem" animation="draw")
+      path.yellow.reveal(when="blank-2" x="segment(m,k)" target="apothem" label="Apothema" animation="draw")
       path.green(x="segment(p1,p0)" target="base" label="s = 1m")
       path.green(x="segment(k,p0)" target="base half-base")
 
@@ -256,50 +253,50 @@ ${Math.round(180-360/x)}°._
         path.red.fill.transparent(x=`angle(p.points[${i+2}%n],p.points[${i+1}%n],p.points[${i}%n])` size=18 target="int-angle")
 
 ::: column.grow
-Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
-sides. Every side has length [{.step-target.pill.green}1m](target:base). Let’s
-try to calculate its area!
+Hier siehst du ein [regelmäßiges Vieleck](gloss:regular-polygon) mit ${n}{n|5|4,12,1}
+Seiten. Jede Seite hat eine Länge von [{.step-target.pill.green}1m](target:base). Wir
+wollen nun versuchen, seine Fläche zu berechnen!
 
-First, we can split the polygon into ${toWord(n)} congruent,
-[[isosceles|equilateral|right-angled]] triangles.
+Zuerst können wir das Vieleck in ${n} kongruente,
+[[gleichschenklige|gleichseitige|rechtwinklige]] Dreiecke aufteilen.
 
-{.reveal(when="blank-0")} We already know the [[base|height|area]] of these
-triangles, but we also need the [[height|legs|medians]] to be able to calculate
-its area. _{span.reveal(when="blank-2")} In regular polygons, this height
-is sometimes called the [{.step-target.pill.yellow}apothem](target:apothem)._
+{.reveal(when="blank-0")} Wir kennen bereits die [[Basis|Höhe|Fläche]] dieser
+Dreiecke, aber wir brauchen auch die [[Höhe|Schenkel|Schwerlinie]], um ihre Fläche berechnen
+zu können. _{span.reveal(when="blank-2")} In regelmäßigen Vielecken wird diese Höhe
+manchmal als [{.step-target.pill.yellow}Apothema](target:apothem) bezeichnet._
 
-{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [right angled
-triangle](target:right-triangle) formed by the apothem and half the base of the
-isosceles triangle. This means that we can use trigonometry!
+{.reveal(when="blank-1 blank-2" delay=1000)} Beachte, dass es ein [rechtwinkliges
+Dreieck](target:right-triangle) gibt, das aus dem Apothema und der Hälfte der Basis des
+gleichschenkligen Dreiecks gebildet wird. Das bedeutet, dass wir die Trigonometrie nutzen können!
 
-{.reveal(when="blank-1 blank-2" delay=2000)} The [{.step-target.pill.blue}base angles](target:base-angle)
-of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
-size of the [internal angles](target:int-angle) of the polygon:
+{.reveal(when="blank-1 blank-2" delay=2000)} Die [{.step-target.pill.blue}Basiswinkel](target:base-angle)
+des gleichschenkligen Dreiecks (nennen wir sie α) sind [[halb so|gleich|doppelt so]]
+groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 
 {.text-center.reveal(when="blank-3")} `pill(α, "blue", "alpha") = 1/2 (180° -
 (360°)/var("n")) = var("round(90-180/n,2)")`
 
-{.reveal(when="blank-3")} To find the apothem, we can use the definition of
-[[tangents|sine|cosine]]:
+{.reveal(when="blank-3")} Um das Apothema zu finden, können wir die Definition der
+[[Tangens|Sinus|Kosinus]]funktion verwenden:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+target("Gegenkathete", "apothem") / target("Ankathete", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
 "apothem") = 1/2 pill(s, "green", "base") × tan pill(α, "blue", "alpha") =
 var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
 
-{.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
-[isosceles triangle](target:isosceles-triangle) is
+{.reveal(when="blank-5 blank-6" delay=2000)} Die Fläche des
+[gleichschenkligen Dreiecks](target:isosceles-triangle) ist somit
 
 {.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
 = 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
 "yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
 
-{.reveal(when="blank-5 blank-6" delay=4000)} The polygon consists of ${toWord(n)}
-of these isosceles triangles, all of which have the same area. Therefore, the
-total area of the polygon is
+{.reveal(when="blank-5 blank-6" delay=4000)} Das Vieleck besteht aus ${n}
+dieser gleichschenkligen Dreiecke, die alle die gleiche Fläche haben. Die
+Gesamtfläche des Vielecks beträgt daher
 
 {.text-center.reveal(when="blank-5 blank-6" delay=4000)} `A = var("n") ×
 var("round(Math.tan(pi/2-pi/n)/4,2)") = var("round(n×Math.tan(pi/2-pi/n)/4,2)")
@@ -308,16 +305,16 @@ var("round(Math.tan(pi/2-pi/n)/4,2)") = var("round(n×Math.tan(pi/2-pi/n)/4,2)")
 
 ---
 
-## Quadrilaterals
+## Vierecke
 
 > section: quadrilaterals
 > id: quadrilaterals
 
-In the [previous course](/course/triangles-and-trigonometry) we investigated
-many different properties of triangles. Now let’s have a look at quadrilaterals.
+Im [vorherigen Kurs](/course/triangles-and-trigonometry) haben wir
+viele verschiedene Eigenschaften von Dreiecken untersucht. Wir wollen jetzt die Vierecke genauer betrachten.
 
-A _regular quadrilateral_ is called a [[square|rectangle|equilateral quadrilateral]].
-All of its sides have the same length, and all of its angles are equal.
+Ein _regelmäßiges Viereck_ wird als [[Quadrat|Rechteck|gleichseitiges Viereck]] bezeichnet.
+Alle seine Seiten haben die gleiche Länge, und alle seine Winkel sind gleich.
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -336,16 +333,16 @@ All of its sides have the same length, and all of its angles are equal.
       path.red(x="segment(c,d)" target="side" mark="bar")
       path.red(x="segment(d,a)" target="side" mark="bar")
 
-{.caption} A __square__ is a quadrilateral with [four equal sides](target:side)
-and [four equal angles](target:angle).
+{.caption} Ein __Quadrat__ ist ein Viereck mit [vier gleichen Seiten](target:side)
+und [vier gleichen Winkeln](target:angle).
 :::
 
 ---
 > id: quadrilaterals-1
 
-For slightly “less regular” quadrilaterals, we have two options. If we just want
-the _angles_ to be equal, we get a [__rectangle__](gloss:rectangle). If we just
-want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
+Für etwas "weniger regelmäßige" Vierecke haben wir zwei Möglichkeiten. Wenn wir nur wollen
+, dass die _Winkel_ gleich sind, erhalten wir ein [__Rechteck__](gloss:rectangle). Wenn wir nur
+wollen, dass die _Seiten_ gleich sind, bekommen wir eine [__Raute__](gloss:rhombus).
 
 ::: column.quadrilateral
 
@@ -364,7 +361,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(c,d)")
       path.red(x="segment(d,a)")
 
-{.caption} A __Rectangle__ is a quadrilateral with [four equal angles](target:angle).
+{.caption} Ein __Rechteck__ ist ein Viereck mit [vier gleichen Winkeln](target:angle).
 ::: column.quadrilateral
 
     x-geopad(width=210 height=120): svg
@@ -378,14 +375,14 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(g,h)" target="side" mark="bar")
       path.red(x="segment(h,e)" target="side" mark="bar")
 
-{.caption} A __Rhombus__ is a quadrilateral with [four equal sides](target:side).
+{.caption} Eine __Raute__ ist ein Viereck mit [vier gleichen Seiten](target:side).
 :::
 
 ---
 > id: quadrilaterals-2
 
-There are a few other quadrilaterals, that are even less regular but still have
-certain important properties:
+Es gibt noch ein paar andere Vierecke, die noch etwas weniger regelmäßig sind, aber dennoch bestimmte wichtige Eigenschaften haben
+:
 
 ::: column.quadrilateral
 
@@ -400,8 +397,8 @@ certain important properties:
       path.yellow(x="segment(a,c)" mark="arrow2")
       path.yellow(x="segment(b,d)" mark="arrow2")
 
-{.caption} If both pairs of _opposite_ sides are [parallel](gloss:parallel), we
-get a __Parallelogram__.
+{.caption} Wenn beide Paare der _gegenüberliegenden_ Seiten [parallel](gloss:parallel) sind,
+erhalten wir ein __Parallelogramm__.
 ::: column.quadrilateral
 
     x-geopad(width=210 height=120): svg
@@ -415,7 +412,7 @@ get a __Parallelogram__.
       path.yellow(x="segment(g,h)" mark="bar2")
       path.red(x="segment(h,e,)" mark="bar")
 
-{.caption} If two pairs of _adjacent_ sides have the same length, we get a __Kite__.
+{.caption} Wenn zwei Paare _benachbarter_ Seiten die gleiche Länge haben, bekommen wir ein __Deltoid__.
 ::: column.quadrilateral
 
     x-geopad(width=210 height=120): svg
@@ -429,25 +426,25 @@ get a __Parallelogram__.
       path(x="segment(k,l)")
       path.red(x="segment(i,l)" mark="arrow")
 
-{.caption} If just one pair of opposite sides is parallel, we get a __Trapezium__.
+{.caption} Wenn nur ein Paar der gegenüberliegenden Seiten parallel ist, erhalten wir ein __Trapez__.
 :::
 
 ---
 > id: quadrilaterals-venn
 
-Quadrilaterals can fall into multiple of these categories. We can visualise the
-hierarchy of different types of quadrilaterals as a [Venn
-diagram](gloss:venn-diagram):
+Vierecke können in mehrere dieser Kategorien fallen. Wir können die
+Hierarchie der verschiedenen Arten von Vierecken in einem [Venn-Diagramm
+](gloss:venn-diagram) darstellen:
 
     figure: include svg/venn.svg
 
-For example, every rectangle is also a [[parallelogram|rhombus|square]], and
-every [[rhombus|trapezium|parallelogram]] is also a kite. A rhombus is
-[[sometimes|always|never]] a square and a rectangle is [[always|sometimes|never]]
-a trapezium.
+Zum Beispiel ist jedes Rechteck auch [[ein Parallelogramm|eine Raute|ein Quadrat]], und
+ [[jede Raute|jedes Trapez|jedes Parallelogramm]] ist auch ein Deltoid. Eine Raute ist
+[[manchmal|immer|nie]] ein Quadrat und ein Rechteck ist [[immer|manchmal|nie]]
+ein Trapez.
 
-{.reveal(when="blank-0 blank-1 blank-2 blank-3")} To avoid any ambiguity, we
-usually use just the most specific type.
+{.reveal(when="blank-0 blank-1 blank-2 blank-3")} Um Unklarheiten zu vermeiden, verwenden wir in der
+Regel nur den spezifischsten Typ.
 
 ---
 > id: midsegments
@@ -457,11 +454,11 @@ usually use just the most specific type.
     x-geopad.sticky(width=300 height=300): svg
 
 ::: column.grow
-Now pick four points, anywhere in the the grey box on the left.
-_{span.reveal(when="points")} We can connect all of them to form a quadrilateral._
+Wähle nun vier Punkte, irgendwo im grauen Feld links.
+_{span.reveal(when="points")} Wir können sie alle zu einem Viereck verbinden._
 
-{.reveal(when="points" delay=1000)} Let’s find the midpoint of each of the four
-sides. If we connect the midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
+{.reveal(when="points" delay=1000)} Lassen Sie uns den Mittelpunkt jeder der vier
+Seiten finden. If we connect the midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
 
 {.reveal(when="blank-0")} Try moving the vertices of the outer quadrilateral and
 observe what happens to the smaller one. It looks like it is not just _any_
@@ -493,7 +490,7 @@ quadrilateral is a [parallelogram](gloss:parallelogram). _{span.qed}_
 ---
 > id: parallelograms
 
-### Parallelograms
+### Parallelogramme
 
 It turns out that parallelograms have many other interesting properties, other
 than opposite sides being parallel. Which of the following six statements are
@@ -596,7 +593,7 @@ quadrilateral has to be a parallelogram.
     //- Adjacent angles are supplementary.
 
 ::: tab
-#### Diagonals _{span.check(when="diagonal blank-2 blank-3")}_
+#### Diagonalen _{span.check(when="diagonal blank-2 blank-3")}_
 
 ::: column(width=300)
 
@@ -743,22 +740,22 @@ _{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
 triangles](target:triangle1). We know that they are congruent from the
 [SSS](gloss:triangle-sss) condition: both triangles have [three congruent
 sides](target:sss) (red, green and blue).
-_{button.next-step} Continue_
+_{button.next-step} Weiter_
 
 {.reveal.r(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
 [corresponding angles](target:angles) must also be congruent.
-_{button.next-step} Continue_
+_{button.next-step} Weiter_
 
 {.reveal.r(when="next-1")} This means, for example, that the [diagonal](target:d1)
 is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
 ends.
-_{button.next-step} Continue_
+_{button.next-step} Weiter_
 
 {.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
 we get [two more, smaller triangles](target:triangle2). These must also be
 congruent, because of the [SAS](gloss:triangle-sss) condition: the have the same
 [two sides and included angle](target:sas).
-_{button.next-step} Continue_
+_{button.next-step} Weiter_
 
 {.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
 the same as [angle β](target:beta). Since they are adjacent, [supplementary
@@ -779,7 +776,7 @@ trick of converting it into a [[rectangle|square|pentagon]]. It turns out that
 we can also do that for some quadrilaterals:
 
 ::: tab
-#### Parallelogram _{span.check(when="draw-1 blank-1")}_
+#### Parallelogramm _{span.check(when="draw-1 blank-1")}_
 
 ::: column(width=300)
 
@@ -809,7 +806,7 @@ parallelogram: it is usually not the same as one of the two sides._
 :::
 
 ::: tab
-#### Trapezium _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
+#### Großes Vieleckbein _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
 
 Recall that trapeziums are quadrilaterals with one pair of [parallel sides](target:bases).
 These parallel sides are called the __bases__ of the trapezium.
@@ -845,7 +842,7 @@ sides](target:bases) of the trapezium.
 of the rectangle is the distance between the [[midpoints|endpoints]] of the two
 non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
 called the __midsegment__ of the trapezium._
-_{button.next-step.reveal(when="blank-3")} Continue_
+_{button.next-step.reveal(when="blank-3")} Weiter_
 
 {.reveal(when="next-0")} Like with [triangles](gloss:triangle-midsegment), the
 midsegment of a trapezium is [[parallel to|perpendicular to|the same length as]]
@@ -860,7 +857,7 @@ and height [_h_](target:t-height):
 :::
 
 ::: tab
-#### Kite _{span.check(when="blank-5")}_
+#### Drachen _{span.check(when="blank-5")}_
 
 ::: column(width=300)
 
@@ -905,7 +902,7 @@ triangles](target:inside) that make up the kite are the same as the
 :::
 
 ::: tab
-#### Rhombus _{span.check(when="blank-6 blank-7")}_
+#### Raute _{span.check(when="blank-6 blank-7")}_
 
 ::: column(width=300)
 
@@ -971,7 +968,7 @@ pick whichever equation is more convenient._
 
 ---
 
-## Tessellations
+## Parkettierung
 
 > section: tessellations
 > id: tessellations
@@ -1382,7 +1379,7 @@ noticed that a non-periodic pattern can be rolled up without any bulges.
 
 Up to now we have just looked at what we can do with polygons in a flat,
 two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
-object that is made up of polygons. Here are some examples:
+object that is made up of polygons. Hier sind ein paar Beispiele:
 
 ::: column.padded-thin(width=220)
     x-polyhedron#poly1(size=220 shape="PentagonalPrism")
@@ -1431,7 +1428,7 @@ you’ll learn how to actually prove it mathematically.
 
 ---
 
-## Platonic Solids
+## Platonische Körper
 
 > section: platonic-solids
 > id: platonic
@@ -1929,4 +1926,3 @@ view 3-dimensional polyhedra in a 2-dimensional way.
     //- is to use a net. A net is an unfolded, flat representation of the sides of a
     //- three-dimensional shape.
 
-    //- rotate a cube to make a hexagonal cross-section
