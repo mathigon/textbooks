@@ -29,6 +29,9 @@ nbproject
 # Folders to ignore
 node_modules
 server/assets/resources
+
+# Translations
+*_ger.*
 *.7z
 *.WinMerge
 package-lock.json

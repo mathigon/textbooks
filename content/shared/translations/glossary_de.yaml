@@ -34,8 +34,8 @@ alternate-angles:
   image: alternate-angles.svg
 
 angle-bisector:
-  title: Winkelsymmetrale
-  text: Eine __Winkelsymmetrale__ ist eine Gerade, die einen Winkel in der Mitte
+  title: Winkelhalbierende (Winkelsymmetrale)
+  text: Eine __Winkelhalbierende__ ist eine Gerade, die einen Winkel in der Mitte
     in zwei kongruente, kleinere Winkel teilt.
   image: angle-bisector.svg
 
@@ -65,7 +65,7 @@ arabic-numerals:
 archimedean-solid:
   title: Archimedischer Körper
   text: Ein __archimedischer Körper__ ist ein Polyeder, der aus verschiedenen
-    Arten von regelmäßigen Polygonen besteht, der aus allen Richtungen gleich
+    Arten von regelmäßigen Vielecken besteht, der aus allen Richtungen gleich
     aussieht. Es gibt 13 verschiedene archimedische Körper.
   link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
 
@@ -83,8 +83,8 @@ associative:
     assoziativ.
 
 axiom:
-  title: Axiom:
-  text: Ein __Axiom__ (manchmal auch __Postulat__genannt) ist eine mathematische
+  title: Axiom
+  text: Ein __Axiom__ (manchmal auch __Postulat__ genannt) ist eine mathematische
     Aussage, die als "selbstverständlich" angesehen und ohne Beweis akzeptiert
     wird. Axiome bilden die Grundlage der Mathematik und können zum Beweisen
     anderer Ergebnisse verwendet werden.
@@ -139,7 +139,8 @@ center-of-rotation:
 centroid:
   title: Schwerpunkt
   text: Der __Schwerpunkt__ eines Dreiecks ist der Punkt, an dem sich seine drei
-    Schwerlinien (Seitenhalbierende) schneiden. Er ist auch der "Massenschwerpunkt" des Dreiecks.
+    Schwerlinien (Seitenhalbierenden) schneiden. Er ist auch der
+    "Massenschwerpunkt" des Dreiecks.
   link: /course/triangles-and-trigonometry/properties-of-triangles#center-of-mass
 
 chaos:
@@ -221,12 +222,12 @@ complete-graph:
   link: /course/graphs-and-networks/parties-and-dating#handshakes-3
 
 concave:
-  title: Nichtkonvexes Vieleck (Polygon)
-  text: Ein __nichtkonvexes__ Vieleck hat mindestens einen Innenwinkel größer
-    als 180° („konkaves Polygon“). Mindestens eine der Diagonalen liegt
-    _außerhalb_ des Polygons. Eine gängige Methode zur Identifizierung eines
-    nichtkonvexen (=konkaven) Polygons ist die Suche nach einer "eingefallenen"
-    Seite des Polygons, wobei _konkave_ das Gegenteil von _konvexen_ Polygonen
+  title: Konkaves Vieleck (Polygon)
+  text: Ein __konkaves__ Vieleck hat mindestens einen Innenwinkel größer
+    als 180° („nichtkonvexes Vieleck“). Mindestens eine der Diagonalen liegt
+    _außerhalb_ des Vielecks. Eine gängige Methode zur Identifizierung eines
+    konkaven Vielecks ist die Suche nach einer "eingefallenen"
+    Seite des Vielecks, wobei _konkave_ das Gegenteil von _konvexen_ Vielecken
     sind.
   link: /course/polygons-and-polyhedra/polygons#concave
 
@@ -283,7 +284,7 @@ convex:
   title: Konvexes Vieleck (Polygon)
   text: Ein __konvexes__ Vieleck enthält keine Innenwinkel größer als 180°. Alle
     Diagonalen liegen innerhalb des Vielecks. Dies ist das Gegenteil von
-    _nichtkonvexen_ Vielecken (konkaven Polygonen).
+    _konkaven_ ("nichtkonvexenen") Vielecken.
   link: /course/polygons-and-polyhedra/polygons#concave
 
 coordinate-system:
@@ -300,7 +301,7 @@ coordinate-system-origin:
     Achsen kreuzen.
 
 corresponding-angles:
-  title: Stufenwinkel
+  title: Stufenwinkel (Parallelwinkel)
   text: Als __Stufenwinkel__ bezeichnet man zwei Winkel, die sich in den
     Schnittpunkten einer Transversale mit 2 unterschiedlichen parallelen Geraden
     ergeben. Sie sind immer kongruent.
@@ -315,7 +316,7 @@ cos:
 
 cpoct:
   title: CPOCT
-  text: CPOCT steht für __entsprechende Teile von kongruenten Dreiecken__. Das
+  text: CPOCT steht für __einander entsprechende Teile von kongruenten Dreiecken__. Das
     heißt, wenn zwei Dreiecke kongruent sind, dann müssen auch alle zugehörigen
     Komponenten (Winkel, Seiten, Abschnitte,....) kongruent zueinander sein.
   link: /course/triangles-and-trigonometry/triangles-congruence#cpoct
@@ -406,10 +407,10 @@ dot-annihilation:
 dot-machine:
   title: Dot Machine
   text: |
-    Eine __Punkt-Maschine__ besteht aus mehreren Zellen, die Punkte enthalten. 
+    Eine __Punkt-Maschine__ besteht aus mehreren Zellen, die Punkte enthalten.
     Du kannst diese Punkte verändern, indem du bestimmte Regeln auf sie anwendest.
 
-    In einer `1←3` Maschine werden z.B. 3 Punkte einer Zelle umgewandelt in einen 
+    In einer `1←3` Maschine werden z.B. 3 Punkte einer Zelle umgewandelt in einen
     Punkt in der Zelle links davon. Ganz ähnlich, wird 1 Punkt in der Zelle umgewandelt
     in 3 Punkte in der Zelle rechts daneben. Das wird eine "Explosion" genannt.
 
@@ -437,7 +438,7 @@ equilateral-triangle:
 euclidean-geometry:
   title: Euklidische Geometrie
   text: Die __euklidische Geometrie__ ist die Art von Geometrie, die der
-    Mathematiker _Euklid_entwickelt hat. Sie fußt auf nur fünf _Axiomen_, einer
+    Mathematiker _Euklid_ entwickelt hat. Sie fußt auf nur fünf _Axiomen_, einer
     Art von "Gesetzen" der Geometrie, die alles beschreiben, was man tun darf.
   link: /course/euclidean-geometry/euclids-axioms#euclid
 
@@ -540,7 +541,7 @@ golden-ratio:
   title: Goldener Schnitt
   text: |
     Der __Goldene Schnitt__ ist eine bestimmte irrationale Zahl mit dem Wert
-    `φ = 1,61803398875....`. Sie kann durch Division zweier aufeinanderfolgender
+    `φ = 1,61803398875…`. Sie kann durch Division zweier aufeinanderfolgender
     Fibonacci-Zahlen angenähert werden.
 
     Der Goldene Schnitt wird in Kunst und Architektur oft als besonders
@@ -704,7 +705,7 @@ lcm:
     ist die kleinste ganze Zahl, die ein Vielfaches von _a_ und _b_ist.
   link: /course/divisibility-and-primes/least-common-multiples
 
-linie:
+line:
   title: Gerade
   text: Eine __Gerade__ besteht aus unendlich vielen Punkten, die sich ohne
     Anfang und Ende in beide Richtungen erstrecken. Geraden sind immer
@@ -737,9 +738,10 @@ linear-function:
     der Linie und _d_ den Schnittpunkt mit der _y_-Achse festlegt.
 
 median:
-  title: Seitenhalbierende
-  text: Die __Seitenhalbierenden (Schwerlinien)__ eines Dreiecks sind die Linien, die jeden Eckpunkt
-    mit dem Mittelpunkt ihrer gegenüberliegenden Seiten verbinden.
+  title: Seitenhalbierende (Schwerlinien)
+  text: Die __Seitenhalbierenden__ eines Dreiecks sind die
+    Linien, die jeden Eckpunkt mit dem Mittelpunkt ihrer gegenüberliegenden
+    Seiten verbinden.
   link: /course/triangles-and-trigonometry/properties-of-triangles#medians
 
 midpoint:
@@ -754,7 +756,7 @@ millennium-prize:
   text: |
     Die sieben __Millennium-Probleme__ gehören zu den schwierigsten offenen
     Problemen in der Mathematik. Sie wurden im Jahr 2000 vom _Clay Mathematics
-    Institute_aufgelistet und mit jeweils einer Belohnung von 1 Million Dollar
+    Institute_ aufgelistet und mit jeweils einer Belohnung von 1 Million Dollar
     für die Lösung ausgeschrieben:
 
     * Lösung des P-NP-Problems
@@ -773,7 +775,7 @@ molecule:
   title: Molekül
   text: |
     Ein __Molekül__ besteht aus zwei mehr Atomen, die durch chemische Bindungen
-    zusammengehalten werden und dabei über einen längeren Zeitraum stabil sind. 
+    zusammengehalten werden und dabei über einen längeren Zeitraum stabil sind.
     Trägt es eine elektrische Ladung, nennt man es __Ionen__.
 
     Beispiele für Moleküle sind `O_2`, das aus zwei verbundenen Sauerstoffatomen
@@ -882,15 +884,15 @@ perfect-numbers:
   link: /course/sequences/special#perfect-1
 
 perpendicular:
-  title: Senkrechte Geraden
-  text: Zwei Geraden stehen __senkrecht__, wenn sie sich im rechten Winkel
-    schneiden.
+  title: Senkrechte (Normale)
+  text: Zwei Geraden stehen __senkrecht (normal)__ aufeinander, wenn sie sich im rechten
+    Winkel schneiden.
   image: perpendicular.svg
   link: /course/euclidean-geometry/definitions#perpendicular
 
 perpendicular-bisector:
-  title: Streckensymmetrale
-  text: Die __Streckensymmetrale__ einer Strecke durchläuft ihren Mittelpunkt
+  title: Mittelsenkrechte (Streckensymmetrale)
+  text: Die __Mittelsenkrechte__ einer Strecke durchläuft ihren Mittelpunkt
     und schneidet sie in einem Winkel von 90°.
   image: perpendicular-bisector.svg
 
@@ -919,7 +921,7 @@ polygon:
   title: Vieleck (Polygon)
   text: Ein __Vieleck__ ist eine geometrische Form, die aus geraden Strecken
     besteht. Vielecke dürfen keine gekrümmten Seiten oder Unterbrechungen
-    enthalten. Zum Beispiel ist ein Quadrat ein Polygon, ein Kreis aber nicht.
+    enthalten. Zum Beispiel ist ein Quadrat ein Vieleck, ein Kreis aber nicht.
   image: polygon.svg
   link: /course/polygons-and-polyhedra/polygons#polygons
 
@@ -994,7 +996,7 @@ prime-factor:
 prism:
   title: Prisma
   text: Ein __Prisma__ ist ein dreidimensionaler Körper mit zwei kongruenten
-    vieleckigen Flächen, (_Grund- und Deckfläche_genannt), deren
+    vieleckigen Flächen, (_Grund- und Deckfläche_ genannt), deren
     zusammengehörende Eckpunkte durch parallele Kanten verbunden sind. Die
     verbleibenden Flächen eines Prismas sind alles Rechtecke oder
     Parallelogramme.
@@ -1100,7 +1102,7 @@ rational-numbers:
     12.7 und 9.
 
 ray:
-  title: Strahl
+  title: Strahl (Halbgerade)
   text: Ein __Strahl__ ist der Teil einer Geraden, der sich nur in eine Richtung
     bis zur Unendlichkeit erstreckt. Wir schreiben für einen Strahl `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
@@ -1286,7 +1288,7 @@ subgraph:
   link: /course/graphs-and-networks/introduction#intro-2
 
 supplementary-angles:
-  title: Supplementwinkel (Ergänzungswinkel)
+  title: Supplementärwinkel (Ergänzungswinkel)
   text: Zwei Winkel sind __supplementär__, wenn sie sich zu 180° ergänzen.
 
 symmetry:
@@ -1328,9 +1330,9 @@ tetrahedron:
   link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
 
 theorem:
-  title: Theorem
-  text: Ein __Theorem__ ist ein besonders wichtiges Ergebnis oder eine
-    Beobachtung in der Mathematik, die mit Axiomen und früheren Theoremen
+  title: Lehrsatz
+  text: Ein __Lehrsatz__ ist ein besonders wichtiges Ergebnis oder eine
+    Beobachtung in der Mathematik, die mit Axiomen und früheren Lehrsätzen
     nachgewiesen wurde.
 
 transformation:
@@ -1391,9 +1393,9 @@ triangle-legs:
     kürzeren Seiten (nicht die _Hypotenuse_). Sie bilden den rechten Winkel.
 
 triangle-midsegment:
-  title: Mittendreieck
-  text: Das __Mittendreieck__ konstruiert man indem man die Mittelpunkte der
-    verschiedenen Seiten eines Dreiecks miteinander verbindet.
+  title: Mittelparallele
+  text: Die __Mittelparallelen__ eines Dreiecks sind die Strecken, die die
+    Mittelpunkte der verschiedenen Seiten des Dreiecks miteinander verbinden.
   image: triangle-midsegment.svg
   link: /course/triangles-and-trigonometry/properties-of-triangles#midsegments
 

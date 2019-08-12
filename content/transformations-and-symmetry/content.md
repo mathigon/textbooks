@@ -670,8 +670,8 @@ of any other palindromes?
 ---
 > id: palindromes-1
 
-If we ignore spaces and punctuation, these letters also have reflectional
-symmetry. Can you come up with your own?
+If we ignore spaces and punctuation, the short sentences below also have
+reflectional symmetry. Can you come up with your own?
 
 {.text-center} Never odd or even.  
 A [[nut]] for a jar of tuna.  

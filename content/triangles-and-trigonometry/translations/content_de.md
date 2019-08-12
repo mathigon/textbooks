@@ -1,53 +1,53 @@
-# Triangles and Trigonometry
+# Dreiecke und Trigonometrie
 
-## Introduction
+## Einführung
 
 > id: intro
 
 ::: column.grow
-By the early 19th century, explorers had discovered most of the world. Trade and
-transportation was booming between distant countries, and this created a need
-for _accurate maps_ of the entire planet.
+Zu Beginn des 19. Jahrhunderts hatten die Forscher den größten Teil der Welt entdeckt. Handel und
+Transport boomten zwischen den fernen Ländern, was die Notwendigkeit
+_genauer Karten_ des gesamten Planeten mit sich brachte.
 
-Today we have satellites that can take photos from above – but 200 years ago,
-creating maps was a difficult and time consuming task. It was done by
-mathematicians like [Radhanath Sikdar](bio:sikdar), who worked on the _Great
-Trigonometrical Survey_: a century-long project to measure all of India,
-including the Himalayan mountain range.
+Heute haben wir Satelliten, die Fotos von oben machen können - aber vor 200 Jahren war die
+Erstellung von Karten eine schwierige und zeitraubende Aufgabe. Sie wurde von
+Mathematikern wie [Radhanath Sikdar](bio:sikdar)bewerkstelligt, die an
+der _Große Trigonometrische Vermessung_ arbeiteten: einem jahrhundertelangem Projekt zur Vermessung
+ganz Indiens,einschließlich des Himalaya-Gebirges.
 
 ::: column(width=240)
 
     x-media.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
 
-{.caption} The _theodolite_, a surveying instrument
+{.caption} Der _Theodolit_, ein Vermessungsinstrument
 :::
 
-Of particular interest was the quest to find the highest mountain on Earth.
-There were a few different candidates, but from hundreds of kilometers away, it
-was difficult to tell which one was the highest.
+Von besonderem Interesse war die Suche nach dem höchsten Berg der Erde:
+Es gab einige verschiedene Kandidaten, aber aus Hunderten von Kilometern Entfernung
+war es schwer zu sagen, welcher der höchste war.
 
-So how to you measure the height of a mountain?
+Wie misst man also die Höhe eines Berges?
 
     figure.mountain: include svg/mountain.svg
 
-{.r} Today we can use satellites to measure the height of mountains to within a
-few centimeters – but these did not exist when Radhanath was surveying India.
-_{button.next-step} Continue_
+{.r} Heute können wir die Höhe von Bergen mit Hilfe von Satelliten auf
+wenige Zentimeter genau messen - aber diese Möglichkeit hatte man bei der Vermessung Indiens durch Radhanath nicht.
+_{button.next-step} Weiter_
 
-{.r.reveal(when="next-0")} Climbers use _altimeters_ to determine their altitude.
-These devices use the difference in air pressure at different heights. However
-this would have required someone to actually climb to the [top of every
-mountain](->.mountain-top) – an extremely difficult feat that was not achieved
-until a century later.
-_{button.next-step} Continue_
+{.r.reveal(when="next-0")} Kletterer verwenden _Höhenmesser_, um ihre Höhe zu bestimmen,
+indem sie den Luftdruckunterschied in verschiedenen Höhen nutzen. Allerdings
+hätte man dafür jemanden tatsächlich auf die [Spitze jedes
+Berges] (->.mountain-top) klettern lassen müssen - eine extrem schwierige Aufgabe, die erst
+ein Jahrhundert später umgesetzt wurde
+_{button.next-step} Weiter_
 
-{.r.reveal(when="next-1")} You could also try using similar triangles, like we
-did in the [previous course](/course/transformations-and-symmetry/similarity).
-This method requires knowing the [distance](->.mountain-distance) to the [base
-of the mountain](->.mountain-base): the point at sea level that directly below
-its summit. We can do this for trees or tall buildings, but for mountains this
-point is hidden underneath hundreds of meters of rock.
-_{button.next-step} Continue_
+{.r.reveal(when="next-1")} Du könntest auch versuchen, ähnliche Dreiecke zu verwenden, wie wir
+es im [vorherigen Kurs](/course/transformations-and-symmetry/similarity) gemacht haben,
+diese Methode erfordert die Kenntnis des [Abstands](->.mountain-distance) zur [Basis
+des Bergers](->.mountain-base): der Punkt auf Meereshöhe, der direkt unter
+seinem Gipfel liegt. Wir können das bei Bäumen oder hohen Gebäuden so machen, aber für Berge ist dieser
+Punkt unter Hunderten von Metern Felsen verborgen
+_{button.next-step} Weiter_
 
 ---
 > id: intro-2
@@ -56,35 +56,35 @@ _{button.next-step} Continue_
 
     x-media(src="images/hillary.jpg" width=320 height=190)
 
-{.caption} Edmund Hillary and Tenzing Norgay were the first to reach the top of
-Mount Everest, in 1953.
+{.caption} Edmund Hillary und Tenzing Norgay waren die ersten, die 1953 den Gipfel des
+Mount Everest erreichten.
 
 ::: column.grow
-But there are more advanced geometric techniques, which [Radhanath](bio:sikdar)
-used to discover the highest mountain on Earth: it is now called _Mount Everest_.
-His measurement is only a few meters off today’s official height of 8848 meters.
+Aber es gibt fortgeschrittenere geometrische Techniken,
+mit denen [Radhanath](bio:sikdar) den höchsten Berg der Erde entdeckte: Er heißt heute _Mount Everest_.
+Seine Messungen wichen nur um wenige Meter von der heutigen offiziellen Höhe von 8848 Metern ab.
 
-In this course you will learn about many different features and properties of
-triangles. These will allow you to measure the height of mountains, but they are
-also of fundamental importance in many other areas of mathematics, science and
-engineering.
+In diesem Kurs lernst du viele verschiedene Merkmale und Eigenschaften von
+Dreiecken kennen. Diese ermöglichen es dir, die Höhe von Bergen zu messen, aber sie sind
+auch in vielen anderen Bereichen der Mathematik, Naturwissenschaften und
+Technik von grundlegender Bedeutung.
 :::
 
 ---
 > id: angle-sum
 
-## Properties of Triangles
+## Eigenschaften von Dreiecken
 
-Let’s start simple: a triangle is a closed shape that has three sides (which
-are [line segments](gloss:line-segment)) and three vertices (the
-[points](gloss:point) where the sides meet). It also has three [internal
-angles](gloss:internal-angle), and we already know that the sum of them is
-always [[180]]°.
+Fangen wir ganz einfach an: Ein Dreieck ist eine geschlossene Figur mit drei Seiten (die [Strecken](gloss:line-segment)
+sind) und drei Eckpunkten (die
+[Punkte](gloss:point), an denen sich die Seiten treffen). Es hat auch drei [
+Innenwinkel](gloss:internal-angle), und wir wissen bereits, dass ihre Summe
+immer [[180]]° beträgt.
 
 ---
 > id: classification
 
-We can classify triangles by the size of their angles:
+Wir können Dreiecke nach der Größe ihrer Winkel einteilen:
 
 ::: column(width=220)
 
@@ -95,8 +95,8 @@ We can classify triangles by the size of their angles:
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption} A __right-angled triangle__  
-has one [right angle](gloss:right-angle).
+{.caption} Ein __rechtwinkliges Dreieck__  
+hat einen [rechten Winkel](gloss:right-angle).
 ::: column(width=220)
 
     x-geopad(width=220): svg
@@ -106,8 +106,8 @@ has one [right angle](gloss:right-angle).
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption} An __obtuse triangle__  
-has one [obtuse angle](gloss:obtuse-angle).
+{.caption} Ein __stumpfwinkliges Dreieck__  
+hat einen [stumpfen Winkel](gloss:obtuse-angle).
 ::: column(width=220)
 
     x-geopad(width=220): svg
@@ -119,23 +119,23 @@ has one [obtuse angle](gloss:obtuse-angle).
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption} An __acute triangle__  
-has [[three]] [acute angles](gloss:acute-angle).
+{.caption} Ein __spitzwinkliges Dreieck__  
+hat [[3]][spitze Winkel](gloss:acute-angle).
 :::
 
 ---
 > id: labels
 
 ::: column.grow
-For convenience, we always label triangles in the same way. The vertices are
-labelled with capital letters [_A_, _B_ and _C_](target:vertex), the sides are
-labelled with lowercase letters [_a_, _b_ and _c_](target:side), and the angles
-are labelled with Greek letters [`α`, `β` and `γ`](target:angle) (“alpha”, “beta” and
-“gamma”).
+Aus Gründen der Übersichtlichkeit beschriften wir Dreiecke immer auf die gleiche Weise. Die Eckpunkte werden
+mit Großbuchstaben [_A_, _B_ und _C_](target:vertex), die Seiten mit Kleinbuchstaben [_a_, _b_ und _c_](target:side) und die Winkel
+mit griechischen Buchstaben [`α`, `β` and `γ`](target:angle) (“alpha”, “beta” und
+“gamma”)
+ bezeichnet.
  
-The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
-[angle that lies right next to _A_](target:Y) is labelled `α`. The same pattern
-works for _B_/_b_/`β` and for _C_/_c_/`γ`.
+Die [Seite, die _gegenüber_ dem Eckpunkt _A ]_(target:X) liegt, ist mit _a_, und der
+[Winkel, der direkt bei _A_](target:Y) anliegt, mit `α` bezeichnet. Auf dieselbe Art und Weise
+verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 ::: column(width=220)
 
     x-geopad.label-halo(width=220 height=200): svg
@@ -155,7 +155,7 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
 > id: medians
 > goals: s0 s1 s2 move
 
-### Medians 
+### Schwerlinien
 
 ::: column(width=300)
 
@@ -176,43 +176,43 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
       
 
 ::: column.grow
-Here you can see a triangle as well as the [midpoints](gloss:midpoint) of its
-three sides.
+Hier siehst du ein Dreieck sowie die [Mittelpunkte](gloss:midpoint) seiner
+drei Seiten.
 
-A [__median__](gloss:median) of a triangle is a line segment that joins a vertex
-and the midpoint of the opposite side. Draw the three medians of this triangle.
-_{span.reveal(when="s0 s1 s2")}What happens as you move the vertices of the
-triangle?_
+Eine [__Schwerlinie__](gloss:median)eines Dreiecks ist eine Strecke, die einen Eckpunkt
+mit dem Mittelpunkt der gegenüberliegenden Seite verbindet. Zeichne die drei Schwerlinien dieses Dreiecks.
+_{span.reveal(when="s0 s1 s2")}Was passiert, wenn du die Eckpunkte des
+Dreiecks verschiebst?_
 
-{.reveal(when="move")} It seems like the medians always [[intersect in one
-point|have the same length|divide each other in the middle]].
-_{span.reveal(when="blank-0")}This point is called the
-[__centroid__](gloss:centroid)._
+{.reveal(when="move")} Es scheint, dass sich die Schwerlinien immer [[in einem
+Punkt schneiden|auf gleiche Größe anpassen|gegenseitig halbieren]].
+_{span.reveal(when="blank-0")}Dieser Punkt wird als
+[__Schwerpunkt__](gloss:centroid)bezeichnet._
 
-{.reveal(when="blank-0")} Medians always divide each other in the
-[ratio 2:1](target:ratio). For each of the three medians, the distance from the
-vertex to the centroid is always [[twice|three times|exactly]] as long as the
-distance from the centroid to the midpoint.
+{.reveal(when="blank-0")} Schwerlinien teilen sich immer im
+[Verhältnis 2:1](target:ratio). Für jede der drei Schwerlinien ist der Abstand vom
+Eckpunkt zum Schwerpunkt immer [[zweimal|dreimal|genau]] so lang wie der
+Abstand vom Schwerpunkt zum Mittelpunkt der Seite.
 :::
 
 ---
 > id: center-of-mass
 > goals: move
 
-The centroid is also the “balancing point” of a triangle. Draw a triangle on
-some cardboard, cut it out, and find the three medians. If you were accurate,
-you can now balance the triangle on the tip of a pencil, or hang it perfectly
-level from a piece of string that’s attached to its centroid:
+Der Schwerpunkt ist auch der “Balancierpunkt” eines Dreiecks. Zeichne ein Dreieck auf
+einen Karton, schneide es aus und finde die drei Schwerlinien. Wenn du genau gearbeitet hast,
+kannst du das Dreieck nun auf der Bleistiftspitze ausbalancieren oder es ganz
+waagrecht an einem Stück Schnur aufhängen, die an seinem Schwerpunkt befestigt ist:
 
     figure: img(src="images/center-of-mass.jpg" width=600 height=190)
 
 ::: column.grow
-This works because the weight of the triangle is evenly distributed around the
-centroid. In physics, this point is often called the __center of mass__.
+Das funktioniert, weil das Gewicht des Dreiecks gleichmäßig um den
+Schwerpunkt verteilt ist. In der Physik wird dieser Punkt oft als __Massenschwerpunkt__ bezeichnet.
 
-Any straight line that goes through the centroid divides the triangle into two
-parts that have exactly the same area. Move the [blue point](target:move) in the
-figure on the right. The red and green areas will always have the same area.
+Jede gerade Linie, die durch den Schwerpunkt verläuft, teilt das Dreieck in zwei
+Teile, die genau die gleiche Fläche haben. Verschiebe den [blauen Punkt](target:move) in der
+Abbildung rechts. Die roten und grünen Bereiche haben immer die gleiche Fläche.
 ::: column(width=220)
 
     x-geopad(width=220): svg
@@ -234,7 +234,7 @@ figure on the right. The red and green areas will always have the same area.
 > id: circumcircle
 > goals: s0 s1 s2
 
-### Perpendicular Bisectors and Circumcircle
+### Streckensymmetralen und Umkreis
 
 ::: column(width=300)
 
@@ -252,48 +252,48 @@ figure on the right. The red and green areas will always have the same area.
       path.yellow(hidden x="arc(d,c,1.99*pi)" name="circumcircle")
 
 ::: column.grow
-Recall that the [perpendicular bisector](gloss:perpendicular-bisector) of a line
-is the perpendicular line that goes through its [[midpoint|endpoints]].
+Erinnere dich, dass die [Streckensymmetrale](gloss:perpendicular-bisector) einer Strecke die Senkrechte
+ist, die durch [[ihren Mittelpunkt|ihre Endpunkte]] verläuft.
 
-{.reveal(when="blank-0")}Draw the perpendicular bisector of all three sides of
-this triangle. _{.lgrey} To draw the perpendicular bisector of a side of the
-triangle, simply click and drag from one of its endpoints to the other._
+{.reveal(when="blank-0")}Zeichne die Streckensymmetrale aller drei Seiten dieses
+Dreiecks. _{.lgrey}Um die Streckensymmetrale einer Seite des Dreiecks zu
+zeichnen, klicke auf einen Eckpunkt und ziehe ihn einfach zum anderen Endpunkt der Seite._
 
-{.reveal(when="s0 s1 s2")} Like before, the three perpendicular bisectors meet in a
-single point. And again, this point has a special property.
+{.reveal(when="s0 s1 s2")} Wie zuvor schneiden sich die drei Streckensymmetralen in einem
+einzigen Punkt. Und wieder hat dieser Punkt eine besondere Eigenschaft.
 
-{.reveal(when="s0 s1 s2")} Any point on a perpendicular bisector has the same
-distance from the two endpoints of the lines it bisects. For example, any point
-on the [blue bisector](target:b-blue) has the same distance from points _A_ and
-_C_ and any point on the [red bisector](target:b-red) has the same distance from
-points [[A and B|A and C|B and C]].
+{.reveal(when="s0 s1 s2")} Jeder Punkt auf einer Streckensymmetrale hat den gleichen
+Abstand zu den beiden Endpunkten der Strecke, die er halbiert. So hat beispielsweise jeder Punkt
+auf der [blauen Symmetrale](target:b-blue) den gleichen Abstand zu den Punkten _A_ und
+_C_ und jeder Punkt auf der [roten Symmetrale](target:b-red) den gleichen Abstand zu den
+Punkten [[A und B|A und C|B und C]].
 
-{.reveal(when="blank-1")} The [intersection point](target:center) lies on all
-three perpendicular bisectors, so it must have the same distance from all three
-[[vertices|sides]] of the triangle.
+{.reveal(when="blank-1")} Der [Schnittpunkt](target:center) liegt auf allen
+drei Senkrechten, daher muss er den gleichen Abstand zu allen drei
+[[Eckpunkten|Seiten]] des Dreiecks haben.
 
-{.reveal(when="blank-2")} This means we can draw a circle around it that
-perfectly touches all the vertices. This circle is called the
-[__circumcircle__](gloss:circumcircle) of the triangle, and the center is called
-the __circumcenter__.
+{.reveal(when="blank-2")} Das bedeutet, dass wir einen Kreis um ihn herum zeichnen können, der genau durch
+alle Eckpunkte geht. Dieser Kreis wird als 
+[__Umkreis__](gloss:circumcircle) des Dreiecks bezeichnet, und sein Mittelpunkt wird als
+__Umkreismittelpunkt__ bezeichnet.
 :::
 
 ---
 > id: circumcircle-1
 
-In fact, this means that if you are given any three points, you can use the
-circumcenter to find a circle that goes through all three of them. (Unless the
-points are [[collinear|parallel]], in which case they all lie on a straight line.)
+Das heißt, dass wenn du drei Punkte gegeben hast, du den
+Umkreismittelpunkt benutzen kannst, um den Kreis zu finden, der durch alle diese drei Punkte geht. (Es sei denn, die
+Punkte sind [[kollinear|parallel]], in diesem Fall liegen sie alle auf einer geraden Linie.)
 
 ---
 > id: incircle
 > goals: s0 s1 s2
 
-### Angle Bisectors and Incircle
+### Winkelsymmetralen und Inkreis
 
-You’re probably getting the hang of this now: we pick a certain construction, do
-it three times for all sides/angles of the triangles, and then we work out
-what’s special about their intersection.
+Du hast jetzt wahrscheinlich den Dreh raus: Wir wählen eine bestimmte Geradenkonstruktion aus, führen
+diese dreimal für alle Seiten/Winkel der Dreiecke aus, und versuchen dann herauszufinden,
+was das Besondere am Schnittpunkt der Geraden ist.
 
 ::: column(width=300)
 
@@ -314,59 +314,59 @@ what’s special about their intersection.
       path.yellow(hidden x="arc(triangle(a,b,c).incircle.c,triangle(a,b,c).incircle.at(0),1.999*pi)" name="incircle")
 
 ::: column.grow
-Recall that the [angle bisector](gloss:angle-bisector) divides an angle exactly
-in the middle. Draw the angle bisector of the three angles in this triangle.
-_{.lgrey} To draw an angle bisector, you have to click on three points that form
-the angle you want to bisect._
+Erinnere dich, dass die [Winkelsymmetrale](gloss:angle-bisector) einen Winkel genau
+in der Mitte teilt. Zeichne die Winkelsymmetrale der drei Winkel in diesem Dreieck.
+_{.lgrey}Um eine Winkelsymmetrale zu zeichnen, musst du auf die drei Punkte klicken, die den Winkel bilden,
+den du halbieren möchtest._
 
-{.r.reveal(when="s0 s1 s2")} Once again, all three lines intersect at one point.
-You probably expected something like this, but it is important to notice that
-there is no obvious reason why this should happen – triangles are just very
-special shapes!
-_{button.next-step} Continue_
+{.r.reveal(when="s0 s1 s2")} Auch hier schneiden sich alle drei Linien in einem Punkt.
+Du hast so etwas wahrscheinlich erwartet, aber es ist wichtig zu beachten, dass
+es eigentlich keinen offensichtlichen Grund gibt, warum dies passieren sollte - außer dass Dreiecke eben sehr
+spezielle Figuren sind!
+_{button.next-step} Weiter_
 
-{.reveal(when="next-0")} Points that lie on an angle bisector have the same
-distance from the two lines that form the angle. For example any point on the
-[blue bisector](target:b-blue) has the same distance from side _a_ and side _c_,
-and any point on the [red bisector](target:b-red) has the same distance from
-sides [[a and b|a and c|b and c]].
+{.reveal(when="next-0")} Punkte, die auf einer Winkelsymmetralen liegen, haben den gleichen
+Abstand zu den beiden Linien, die den Winkel bilden. Zum Beispiel hat jeder Punkt auf der
+[blauen Symmetrale](target:b-blue) den gleichen Abstand von Seite _a_ und Seite _c_,
+und jeder Punkt auf der [roten Symmetrale](target:b-red) hat den gleichen Abstand von den
+Seiten [[a und b|a und c|b und c]].
 
-{.reveal(when="blank-0")} The [intersection point](target:center) lies on all
-three bisectors. Therefore it must have the same distance from all three
-[[sides|vertices]] of the triangle.
+{.reveal(when="blank-0")} Der [Schnittpunkt](target:center) liegt auf allen
+drei Symmetralen. Daher muss er den gleichen Abstand von allen drei
+[[Seiten|Eckpunkten]] des Dreiecks haben.
 
-{.reveal(when="blank-1")} This means we can draw a circle around it, that lies
-inside the triangle and just touches its three sides. This circle is called the
-__incircle__ of the triangle, and the center is called the __incenter__.
+{.reveal(when="blank-1")} Das bedeutet, dass wir einen Kreis um ihn herum zeichnen können, der innerhalb des Dreiecks liegt
+und seine drei Seiten nur in jeweils einem Punkt berührt. Dieser Kreis wird als
+__Inkreis__ des Dreiecks bezeichnet, und sein Mittelpunkt als __Inkreismittelpunkt__.
 :::
 
 ---
 > id: area
 
-### Area and Altitudes
+### Fläche und Höhen
 
 ::: column.grow
-{.r} Finding the area of a [rectangle](gloss:rectangle) is easy: you simply
-multiply its width by its height. Finding the area of a triangle is a bit less
-obvious. Let’s start by “trapping” a triangle inside a rectangle.
-_{button.next-step} Continue_
+{.r} Die Berechnung der Fläche eines [Rechtecks](gloss:rectangle) ist einfach: Man
+multipliziert einfach seine Breite mit seiner Höhe. Das Bestimmen der Fläche eines Dreiecks ist
+etwas weniger offensichtlich. Beginnen wir damit, ein “passgenaues” Rechteck um unser Dreieck zu zeichnen.
+_{button.next-step} Weiter_
 
-{.reveal.r(when="next-0")} The width of the rectangle is the length of the
-[bottom side](target:base) of the triangle (which is called the __base__). The
-height of the rectangle is the [perpendicular distance](target:height) from the
-base to the opposite vertex.
-_{button.next-step} Continue_
+{.reveal.r(when="next-0")} Die Länge des Rechtecks ist gleich der Länge der
+[Unterseite](target:base) des Dreiecks (die als __Basis__bezeichnet wird). Die
+Höhe des Rechtecks ist der [senkrechte Abstand](target:height) von der
+Basis zum gegenüberliegenden Eckpunkt
+_{button.next-step} Weiter_
 
-{.reveal(when="next-1")} The height divides the triangle into two parts. Notice
-how the [two gaps in the rectangle](target:gap) are exactly as big as the two
-parts of the triangle. This means that the rectangle is
-[[twice as|three times as|exactly as]] large as the triangle.
+{.reveal(when="next-1")} Die Höhe teilt das Dreieck in zwei Teile. Beachte,
+dass die [zwei Lücken im Rechteck](target:gap) genau so groß sind wie die beiden
+entsprechenden Teile des Dreiecks. Das bedeutet, dass das Rechteck
+[[doppelt|dreimal|genau]] so groß wie das Dreieck ist.
 
-{.reveal(when="blank-0")} We can easily work out the area of the rectangle, so
-the area of the triangle must be half that:
+{.reveal(when="blank-0")}Wir können die Fläche des Rechtecks leicht herausbekommen, und
+die Fläche des Dreiecks muss dann also halb so groß sein:
 
-{.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.step-target.pill.red} base](target:base)
-`×` [{.step-target.pill.blue} height](target:height)
+{.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.step-target.pill.red} Basis](target:base)
+`×` [{.step-target.pill.blue} Höhe](target:height)
 ::: column(width=300)
 
     x-geopad.sticky(width=300): svg
@@ -394,12 +394,12 @@ the area of the triangle must be half that:
 ---
 > id: altitudes
 
-To calculate the area of a triangle, you can pick any of the three sides as
-__base__, and then find the corresponding __height__, which is the line that is
-[[perpendicular|parallel]] to the base and goes through the opposite vertex.
+Um die Fläche eines Dreiecks zu berechnen, kannst du eine der drei Seiten als
+__Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die Strecke, die
+[[senkrecht|parallel]] zur Basis und durch den gegenüberliegenden Eckpunkt verläuft.
 
-{.reveal(when="blank-0")} In triangles, these _heights_ are often called
-[__altitudes__](gloss:triangle-altitude). Every triangle has [[three]] altitudes.
+{.reveal(when="blank-0")} In Dreiecken spricht man von der 
+[__Höhe__](gloss:triangle-altitude) _auf die Seite_. Jedes Dreieck hat [[3]] Höhen.
 
 ---
 > id: altitudes-1
@@ -418,27 +418,27 @@ __base__, and then find the corresponding __height__, which is the line that is
       circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
-Like the [medians](gloss:median), [perpendicular bisectors](gloss:perpendicular-bisector)
-and [angle bisectors](gloss:angle-bisector), the three altitudes of a triangle
-intersect in a single point. This is called the [__orthocenter__](target:center)
-of the triangle.
+Wie die [Schwerlinien](gloss:median), [Streckensymmetralen](gloss:perpendicular-bisector)
+und [Winkelsymmetralen](gloss:angle-bisector)
+schneiden sich auch die drei Höhen eines Dreiecks in einem einzigen Punkt. Dieser wird als [__Höhenschnittpunkt__](target:center)
+des Dreiecks bezeichnet.
 
-In [acute triangles](gloss:acute-triangle), the orthocenter
-[[lies inside|lies outside|is a vertex of]] the triangle.
+Bei [spitzwinkligen Dreiecken](gloss:acute-triangle) liegt der Höhenschnittpunkt
+[[innerhalb|außerhalb|auf einem Eckpunkt]] des Dreiecks.
 
-{.reveal(when="blank-0")} In [obtuse triangles](gloss:obtuse-triangle), the
-orthocenter [[lies outside|lies inside|is a vertex of]] the triangle.
+{.reveal(when="blank-0")} Bei [stumpfwinkligen Dreiecken](gloss:obtuse-triangle), liegt der
+Höhenschnittpunkt [[außerhalb|innerhalb|auf einem Eckpunkt]] des Dreiecks.
 
-{.reveal(when="blank-1")} In [right-angled triangles](gloss:right-triangle), the
-orthocenter [[is a vertex of|lies inside|lies outside]] the triangle. Two of the
-altitudes are actually just sides of the triangle.
+{.reveal(when="blank-1")} Bei [rechtwinkligen Dreiecken](gloss:right-triangle) ist der
+Höhenschnittpunkt [[ein Eckpunkt|innerhalb|außerhalb]] des Dreiecks. Zwei der
+Höhen sind eigentlich nur Seiten des Dreiecks.
 :::
 
 ---
 > id: midsegments
 > goals: s0 s1 s2
 
-### Triangle Midsegments
+### Mittelparallele
 
 ::: column(width=300)
 
@@ -458,26 +458,26 @@ altitudes are actually just sides of the triangle.
       path.transparent.fill.red(x="polygon(a,b,c)" target="large")
 
 ::: column.grow
-A [__midsegment__](gloss:triangle-midsegment) is a line segment that connects
-the midpoints of two sides of a triangle. Draw the three midsegments of this
-triangle.
+Eine [__Mittelparallele]__(gloss:triangle-midsegment) ist eine Strecke, die die
+Mittelpunkte zweier Seiten eines Dreiecks miteinander verbindet. Zeichne die drei Mittelparallelen dieses
+Dreiecks.
 
-{.reveal(when="s0 s1 s2")} As you can see, the midsegments split the triangle
-into [four smaller triangles](target:triangles).
+{.reveal(when="s0 s1 s2")} Wie du siehst, teilen die Mittelparallelen das Dreieck
+in [vier kleinere Dreiecke](target:triangles).
 
-{.reveal(when="s0 s1 s2")} It turns out that all of these smaller triangles are
-[[congruent|overlapping|different sizes]] – even the upside down one in the
-middle. _{span.reveal(when="blank-0")} They are also all [[similar|congruent]]
-to the [original triangle](target:large),_ _{span.reveal(when="blank-1")}with a
-scale factor of `1/2`._
+{.reveal(when="s0 s1 s2")} Es stellt sich heraus, dass alle diese kleineren Dreiecke
+[[kongruent|überlappend|verschieden groß]] sind - auch das umgedrehte in der
+Mitte_{span.reveal(when="blank-0")} - und dass sie alle [[ähnlich|kongruent]]
+ zum [ursprünglichen Dreieck](target:large) sind,_ _{span.reveal(when="blank-1")}mit einem
+Skalierungsfaktor von `1/2`_.
 
-{.reveal(when="blank-1")} This allows us to deduce some important facts about
-the midsegments of triangles:
+{.reveal(when="blank-1")} Das erlaubt es uns, einige wichtige Eigenschaften
+ der Mittelparallelen von Dreiecken abzuleiten:
 
 ::: .theorem.reveal(when="blank-1")
-__Midsegment Theorem__  
-A midsegment of a triangle is parallel to its opposite side, and exactly half
-the length of that side.
+__Satz von der Mittelparallelen im Dreieck__  
+Eine Mittelparallele eines Dreiecks ist parallel zu ihrer gegenüberliegenden Seite und genau halb
+so lang wie diese Seite.
 :::
 :::
 
@@ -485,14 +485,14 @@ the length of that side.
 > id: triangle-inequality
 > goals: s0 s1 s3 s5
 
-## The Triangle Inequality
+## Die Dreiecksungleichung
 
-Having studied many of the properties and components of triangles, let’s think
-about _creating_ triangles. In particular, if I give you any three numbers, can
-you make a triangle that has those side lengths?
+Nachdem wir viele der Eigenschaften und Komponenten von Dreiecken untersucht haben,
+wollen wir uns jetzt Gedanken darüber machen, wie Dreiecke _aufgebaut_ sind. Wenn ich dir zB. jetzt drei Zahlen vorgebe, kannst
+du ein Dreieck zeichnen, das diese Seitenlängen hat?
 
-Here are a some examples – move the vertices of the triangle until the three
-sides match one of the triples on the left.
+Hier sind einige Beispiele - verschiebe die Ecken des Dreiecks, bis die drei
+Seitenlängen jeweils mit einer der drei Zahlenkombinationen auf der linken Seite übereinstimmen.
 
     .inequality.row
       div(style="width:150px")
@@ -511,21 +511,21 @@ sides match one of the triples on the left.
           path.blue(x="segment(b,c)" label="${roundD(b,c)}")
           path.yellow(x="segment(a,c)" label="${roundD(a,c)}")
 
-{.reveal(when="s0 s1 s3 s5")} It seems like there are a few cases where three
-numbers simply _cannot_ make a triangle. This particularly happens when one side
-[[is much longer than|is much shorter than|is the same length as]] the other two.
+{.reveal(when="s0 s1 s3 s5")} Es scheint so zu sein, dass es einige Fälle gibt, in denen aus den drei
+Längen einfach _kein Dreieck_ gebildet werden kann. Dies ist insbesondere der Fall, wenn eine Seite
+[[viel länger als|viel kürzer als|gleich lang wie]] die beiden anderen ist.
 
 ---
 > id: triangle-inequality-1
 
 ::: column.grow
-Think about the three sides of a triangle as metal rods, connected with hinges.
-Let’s place the [longest rod](target:long) in the middle and the [shorter
-ones](target:short) on either side.
+Stell dir die drei Seiten eines Dreiecks als Metallstangen vor, die mit Scharnieren verbunden sind, und
+platziere die [längste Stange](target:long) in der Mitte und die [kürzeren
+](target:short) an beiden Enden.
 
-{.r} Now it is easy to see that it is impossible to link up the ends of the
-shorter rods, if their combined length is less than the length of the larger rod.
-_{button.next-step} Continue_
+{.r} Jetzt ist leicht zu erkennen, dass es unmöglich ist, die Enden der
+kürzeren Stangen zusammen zu bringen, wenn ihre Gesamtlänge kleiner ist als die Länge der größeren Stange ist.
+_{button.next-step} Weiter_
 
 ::: column(width=300)
 
@@ -546,19 +546,19 @@ _{button.next-step} Continue_
 ---
 > id: inequality-picker
 
-Let’s rewrite this observation in mathematical terms:
+Wir wollen diese Beobachtung nun mathematisch formulieren:
 
 ::: .theorem
-__The Triangle Inequality__  
-The sum of the lengths of any two sides of a triangle must be greater than the
-length of the third.
+__Die Dreiecksungleichung__  
+Die Summe der Längen von zwei beliebigen Seiten eines Dreiecks muss größer sein als die
+Länge der dritten.
 :::
 
-In other words, if a triangle has sides _a_, _b_ and _c_, then we know that
-`a+b>c` and `a+c>b` and `b+c>a`.
+Mit anderen Worten, wenn ein Dreieck die Seiten _a_, _b_ und _c_hat, dann wissen wir, dass
+`a+b>c` und `a+c>b` und `b+c>a` sein müssen.
 
-The triangle inequality allows us to quickly check if three numbers can make a
-triangle. Which of these triples of numbers are possible?
+Die Dreiecksungleichung ermöglicht es uns, schnell zu überprüfen, ob drei Zahlen ein
+Dreieck bilden können. Mit welchen dieser drei Zahlen geht es?
 
     x-picker
       .item.text-center #[.t-num 4]#[.t-num 6]#[.t-num 9]
@@ -571,28 +571,28 @@ triangle. Which of these triples of numbers are possible?
 ---
 > id: triangle-inequality-2
 
-The triangle inequality also allows us to estimate the length of the third side
-of a triangle, if we know the length of the other two.
+Die Dreiecksungleichung erlaubt es uns auch, die Länge der dritten Seite
+eines Dreiecks zu schätzen, wenn wir die Länge der beiden anderen kennen.
 
-Imagine that a triangle has two sides of length 4 and 6. Let’s call _c_ the
-length of the third side. Then we know that
+Stellen dir vor, dass ein Dreieck zwei Seiten der Länge 4 und 6 hat. Wir wollen die Länge der dritten
+Seite _c_ nennen. Dann wissen wir, dass
 
-{.text-center} `4+6>c`, _{span.space}_ `4+c>6` _{span.space}_ and _{span.space}_ `6+c>4`
+{.text-center} `4+6>c`, _{span.space}_ `4+c>6` _{span.space}_ und _{span.space}_ `6+c>4`
 
-We can rearrange these inequalities to give [[2]] `<c<` [[10]].
-_{span.reveal(when="blank-0 blank-1")}The length of side *c* has to be between 2 and 10._
+Wir können diese Ungleichungen neu anordnen, und erhalten [[2]] `<c<` [[10]].
+_{span.reveal(when="blank-0 blank-1")}Die Länge der Seite *c* muss also zwischen 2 und 10 liegen_
 
 ---
 > id: triangle-inequality-3
 > goals: target-0 target-1
 
 ::: column.grow
-Once again, we can think about this using physical objects: two sides of the
-triangle are metal rods of length 4 and 6, and the third side is a rubber band
-that can expand or contract.
+Stellen wir uns das wieder als eine Konstruktion aus Bauteilen vor: zwei Seiten des
+Dreiecks sind Metallstäbe der Länge 4 und 6, und die dritte Seite ist ein Gummiband
+, das sich dehnen oder zusammenziehen kann.
 
-Now you can see that the rubber band will always be _{span.hover-target} longer than_
-`6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
+Jetzt sehen wir, dass das Gummiband immer _{span.hover-target} länger als _
+`6-4=2`und _{span.hover-target} kürzer als_ `6+4=10` ist.
 ::: column(width=300)
 
     x-geopad.label-halo(width=300 height=200): svg
@@ -605,68 +605,68 @@ Now you can see that the rubber band will always be _{span.hover-target} longer 
 
 :::
 
-Note that these are _strict_ inequalities. If the third side is _exactly_ 2 or
-10, we get a straight line and not a triangle. However 2.1 or 9.9 would be
-enough to form a triangle.
+Beachte, dass es sich hierbei um _strikte_ Ungleichheiten handelt. Wenn die dritte Seite _genau_ 2 oder
+10 ist, erhalten wir eine gerade Linie und kein Dreieck. Allerdings würden 2.1 oder 9.9
+genügen, um ein Dreieck zu bilden.
 
 ---
 > id: sss-construction
 > goals: draw-base draw-c1 draw-c2
 
-## Triangles Congruence
+## Kongruente Dreiecke
 
-Now that we can check if three sides can form a triangle, let’s think about how
-we would actually _construct_ a triangle with these sides.
+Nun, da wir überprüfen können, ob drei Seiten ein Dreieck bilden können, wollen wir darüber nachdenken, wie
+wir tatsächlich ein Dreieck mit diesen Seitenlängen _konstruieren_ könnten.
 
 ::: column(width=300)
 
     x-geopad.sticky.label-halo(width=300 tools="move|line|circle"): svg
 
 ::: column.grow
-{.task} Draw a triangle that has sides of lengths 4cm, 5cm and 6cm.
+{.task} Zeichne ein Dreieck, das Seiten mit den Längen 4cm, 5cm und 6cm hat.
 
-{.r} In the box of the length, draw the longest side of the triangle, which is
-__6cm__. _{span.reveal(when="draw-base")} Now we already have [two](target:base)
-of the three vertices of the triangle – the challenge is to find the last one.
-*{button.next-step} Continue*_
+{.r} Zeichne zuerst die längste Seite des Dreiecks mit __6cm__ in das Feld.
+ _{span.reveal(when="draw-base")} Damit haben wir bereits [zwei](target:base)
+der drei Eckpunkte des Dreiecks - die Herausforderung besteht darin, den letzten zu finden
+*{button.next-step} Weiter*_
 
-{.reveal(when="next-0")} Next, draw a circle of radius __4cm__ around one of the
-vertices, _{span.reveal(when="draw-c1")} and a circle of radius __5cm__ around
-the other one._
+{.reveal(when="next-0")} Zeichne als nächstes einen Kreis mit dem Radius __4cm__ um einen der
+Eckpunkte _{span.reveal(when="draw-c1")}und einen Kreis mit dem Radius __5cm__ um
+den anderen._
 
-{.reveal(when="draw-c2")} The third vertex of the triangle is the
-[[intersection|center|radius]] of the two circles. _{span.reveal(when="blank-0")}
-Now we can simply connect them to form a triangle._
+{.reveal(when="draw-c2")}Der dritte Eckpunkt des Dreiecks ist der
+[[|Schnittpunkt|Mittelpunkt|Radius]] der beiden Kreise. _{span.reveal(when="blank-0")}
+Jetzt können wir sie einfach zu einem Dreieck verbinden._
 
-{.reveal(when="blank-0" delay="3000")} The circles actually intersect
-[[twice|three times|infinitely many times]]: _{span.reveal(when="blank-1")}once
-[at the top](target:top) and once [at the bottom](target:bottom). We can pick
-either of these intersections, and the resulting two triangles are
-[[congruent|equilateral|perpendicular]]._
+{.reveal(when="blank-0" delay="3000")} Die Kreise schneiden sich eigentlich 
+[[zweimal|dreimal|unendlich oft]]: _{span.reveal(when="blank-1")}einmal
+[oben](target:top) und einmal [unten](target:bottom). Wir können jeden dieser Schnittpunkte auswählen
+, und die beiden resultierenden Dreiecke sind
+[[kongruent|gleichseitig|rechtwinklig]]._
 :::
 
 ---
 > id: congruence
 
-### Congruence Conditions
+### Kongruenzsätze
 
-But is it possible to construct _a different_ triangle with the same three
-sides?
+Aber ist es überhaupt möglich, _ein anderes_ Dreieck mit den gleichen drei
+Seiten zu konstruieren?
 
-We already saw two triangles above, but they were both congruent. In fact, any
-two triangles that have the same three side lengths are congruent. This is
-called the [__SSS Congruence Condition__](gloss:triangle-sss) for triangles
-(“Side-Side-Side”).
+Wir haben oben bereits zwei Dreiecke gesehen, aber sie waren beide kongruent. Tatsächlich sind
+zwei beliebige Dreiecke, die die gleichen drei Seitenlängen haben, immer kongruent. Dies wird
+als [__SSS-Satz__](gloss:triangle-sss) für Dreiecke
+(“Seiten-Seiten-Seiten-Satz”) bezeichnet.
 
-We now have two conditions for triangles: “AA” means that two triangles are
-[[similar|congruent|transformations]], and “SSS” means that two triangles are
-[[congruent|similar|equal]]. There are a few more congruence conditions:
+Wir haben jetzt zwei Bedingungen für Dreiecke: “WW” bedeutet, dass zwei Dreiecke [[ähnlich|kongruent|Abbildungen]] sind
+, und “SSS” bedeutet, dass zwei Dreiecke
+[[kongruent|ähnlich|gleich]] sind. Es gibt noch einige weitere Kongruenzsätze:
 
 ---
 > id: congruence-1
 
 ::: .theorem
-Two triangles are congruent if any one of the following conditions is met:
+Zwei Dreiecke sind kongruent, wenn eine der folgenden Bedingungen erfüllt ist:
 
     .row.padded-thin
       div(style="width: 150px")
@@ -678,10 +678,10 @@ Two triangles are congruent if any one of the following conditions is met:
           path.red(x="segment(a,b)")
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
-        p.caption All sides are congruent.
+        p.caption Alle Seiten sind kongruent.
         
       div(style="width: 150px")
-        .text-center: strong SAS
+        .text-center: strong SWS
         x-geopad(width=150 height=120): svg
           circle(name="a" x="point(60,10)")
           circle(name="b" x="point(10,110)")
@@ -690,10 +690,10 @@ Two triangles are congruent if any one of the following conditions is met:
           path.red(x="segment(a,b)")
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
-        p.caption Two sides and the #[strong included] angle are congruent.
+        p.caption Zwei Seiten und der #[strong eingeschlossene] Winkel sind kongruent.
         
       div(style="width: 150px")
-        .text-center: strong ASA
+        .text-center: strong WSW
         x-geopad(width=150 height=120): svg
           circle(name="a" x="point(60,10)")
           circle(name="b" x="point(10,110)")
@@ -703,10 +703,10 @@ Two triangles are congruent if any one of the following conditions is met:
           path.red(x="segment(a,b)")
           path(x="segment(a,c)")
           path(x="segment(b,c)")
-        p.caption Two angles and the #[strong included] side are congruent.
+        p.caption Zwei Winkel und die #[strong anliegende] Seite sind kongruent.
         
       div(style="width: 150px")
-        .text-center: strong AAS
+        .text-center: strong WWS
         x-geopad(width=150 height=120): svg
           circle(name="a" x="point(60,10)")
           circle(name="b" x="point(10,110)")
@@ -716,134 +716,134 @@ Two triangles are congruent if any one of the following conditions is met:
           path.red(x="segment(a,b)")
           path(x="segment(a,c)")
           path(x="segment(b,c)")
-        p.caption Two angles and one of the non-included sided.
+        p.caption Zwei Winkel und einer der nicht anliegenden Seiten.
 :::
 
 ---
 > id: cpoct
 
-You can think of these conditions as “shortcuts”: to check if two triangles are
-congruent, you just need to check one of the conditions above.
+Du kannst dir diese Bedingungen als “Abkürzungen” vorstellen: Um zu überprüfen, ob zwei Dreiecke
+deckungsgleich sind, musst du nur eine der obigen Bedingungen überprüfen.
 
-Once you _know_ that two triangles are congruent, you know that _all_ of their
-corresponding sides and angles are congruent. This is often called
-[__CPOCT__](gloss:cpoct), or “Corresponding Parts of Congruent Triangles are
-Congruent”.
+Sobald du _weißt_, dass zwei Dreiecke kongruent sind, weißt du auch, dass _alle_ ihre
+entsprechenden Seiten und Winkel deckungsgleich sind. Im englischsprachigen Raum wird das oft mit
+[__CPOCT__](gloss:cpoct) bezeichnet, und bedeutet dass “einander entsprechende Teile von kongruenten Dreiecken”
+kongruent sind.
 
-It is interesting to note that all conditions consists of [[three]] different
-values (either sides or angles)!
+Es ist auch von Interesse, dass alle Sätze aus [[3]] verschiedenen
+Werten (entweder Seiten oder Winkel) gebildet werden!
 
 ---
 > id: contruction
 
-### Constructing Triangles
+### Dreieckskonstruktionen
 
-At the beginning of this section, we saw how to construct a triangle if we know
-its three sides. Similarly, there are ways to construct triangles for each of
-the congruence conditions above.
+Am Anfang dieses Abschnitts haben wir gesehen, wie man ein Dreieck konstruiert, wenn
+ man alle drei seiner Seiten kennt. Ebenso ist es möglich, Dreiecke für jeden
+der genannten Kongruenzsätze zu konstruieren.
 
 ::: tab
-#### SAS
+#### SWS
 
 ::: column(width=300)
 {.todo} COMING SOON – Animation
 ::: column.grow
-{.task} Draw the triangle that has sides of 5cm and 3cm, and an included
-angle of 40°.
+{.task}Zeichne das Dreieck, das Seiten mit den Längen 5 cm und 3 cm und einen eingeschlossenen
+Winkel von 40° hat.
 
-Like before, we start by drawing one of the sides of the triangle.
+Wie zuvor beginnen wir damit, eine der Seiten des Dreiecks zu zeichnen.
 
-Next, use a protractor to measure a 40° angle around one of the two vertices.
-Let’s mark this angle with a point.
+Als nächstes messen wir mit einem Winkelmesser einen Winkel von 40° um einen der beiden Eckpunkte und
+markieren diesen Winkel mit einem Punkt.
 
-We can connect the vertex to our measurement, to form the second side of the
-triangle.
+Wir können den Eckpunkt mit unserer Messung verbinden, um die zweite Seite des
+Dreiecks zu konstruieren.
 
-We know that this side has to be 3cm long, so let’s measure that distance with a
-ruler and then mark the third vertex of the triangle.
+Wir wissen, dass diese Seite 3 cm lang sein muss, also messen wir diesen Abstand mit einem
+Lineal und markieren dann den dritten Eckpunkt des Dreiecks.
 
-Finally, we can connect the last two vertices, to complete the triangle.
+Schließlich können wir die letzten beiden Eckpunkte verbinden, um das Dreieck zu vervollständigen.
 :::
 
-Of course, we could have drawn the 3cm side first, or picked the other vertex
-to draw the 40° angle around. However in all those cases, the resulting
-triangles would have been congruent to this one.
+Natürlich hätten wir auch zuerst die 3 cm Seite zeichnen oder den anderen Eckpunkt
+wählen können, um den 40°-Winkel zu zeichnen. In all diesen Fällen wären die resultierenden
+Dreiecke jedoch kongruent zu diesem gewesen.
 
 ::: tab
-#### ASA
+#### WSW
 
 ::: column(width=300)
 {.todo} COMING SOON – Animation
 ::: column.grow
-{.task} Draw the triangle that has angles of 70° and 50°, and an included
-side of length 5cm.
+{.task}Zeichne das Dreieck, das Winkel von 70° und 50° und eine anliegende
+Seite von 5 cm Länge hat.
 
-Let’s start by drawing the first side, using a ruler to measure 5cm.
+Zeichnen wir zunächst die erste Seite und messen mit einem Lineal 5 cm ab.
 
-Now let’s use a protractor to measure an angle of 70° around one of the
-endpoints of the side, and and angle of 50° around the other endpoint. (Which
-way round does not matter – the resulting triangles will be congruent.)
+Nun können wir mit einem Winkelmesser einen Winkel von 70° von einem der
+Endpunkte der Seite und einen Winkel von 50° vom anderen Endpunkt aus abmessen. (Auch
+der umgekehrte Weg ist möglich - die resultierenden Dreiecke werden kongruent sein.)
 
-Connecting the angle marks to the endpoints completes the triangle.
-:::
-
-::: tab
-#### AAS
-
-::: column(width=300)
-{.todo} COMING SOON – Animation
-::: column.grow
-{.task} Draw the triangle that has angles of 40° and 50°, and an included
-side of length 5cm.
-
-Again, we’ll start by constructing the first side of the triangle, which is 5cm
-long.
-
-And again, we’ll use a protractor to measure an angle of 40° around one of the
-endpoints, and draw the second side of the triangle. However, we don’t yet know
-where this side will end.
-
-Instead, let’s pick any point around this line, pretend it’s the third vertex of
-the triangle and measure an angle of 50°.
-
-As you can see, this doesn’t quite work: the third side does not yet link up
-with the vertex A. To fix this, we simply have to shift it: we draw a parallel
-line that goes through A. (You already learned how to construct parallel lines
-in a [previous course](/course/euclidean-geometry/geometric-construction).)
-
-Now the two angles at the top are alternate angles, so they must be congruent
-and both 50°. We can erase the incorrect, first line to get our completed AAS
-triangle.
+Das Verbinden der Winkelmarkierungen mit den Endpunkten vervollständigt das Dreieck.
 :::
 
 ::: tab
-#### SSA
-The SSA construction is slightly different. You might have noticed that “SSA”
-was not in the list of congruence conditions above, so comparing SSA is two
-triangles is not enough to confirm they are congruent. This will show you why:
+#### WWS
 
 ::: column(width=300)
 {.todo} COMING SOON – Animation
 ::: column.grow
-{.task} Draw the triangle that has sides of 4cm and 5cm, and a non-included
-angle of 50°.
+{.task} Zeichne das Dreieck, das Winkel von 40° und 50° und eine angrenzende
+Seite von 5 cm Länge hat.
 
-Like always, let’s start by drawing the first side of the triangle which is 5cm
-long.
+Auch hier beginnen wir mit der Konstruktion der ersten Seite des Dreiecks, die 5 cm
+lang ist.
 
-Next, let’s measure an angle of 50° around one of the endpoints and draw the
-second side of the triangle. However, we don’t yet know where this side will
-end.
+Und wieder werden wir mit einem Winkelmesser einen Winkel von 40° um einen der
+Endpunkte abtragen und die zweite Seite des Dreiecks zeichnen. Allerdings wissen
+wir noch nicht, wo diese Seite enden wird.
 
-The third side has o be 4cm long. Using a protractor we can draw a circle of
-radius 4cm around the other endpoint of the original side.
+Stattdessen wählen wir einen beliebigen Punkt um diese Linie herum, stellen uns vor, es sei der dritte Eckpunkt
+des Dreiecks und tragen einen Winkel von 50° ab.
 
-The final vertex of the triangle is formed by the intersection of the circle and
-the second line. However, in this case, there are two intersections!
+Wie du sehen kannst, funktioniert das nicht ganz: Die dritte Seite lässt sich noch nicht
+mit dem Eckpunkt A verbinden. Um das zu beheben, müssen wir sie einfach verschieben: Wir zeichnen eine parallele
+Linie, die durch A geht. (Du hast bereits in einem [vorherigen Kurs](/course/euclidean-geometry/geometric-construction) gelernt,
+wie man parallele Linienkonstruiert.)
 
-These two triangles are clearly not congruent. This means that there are two
-different triangles that have sides of 4cm and 5cm, as well as a non-included
-angle of 50°. SSA is not enough to confirm two triangles are congruent.
+Nun sind die beiden Winkel an der Oberseite [Wechselwinkel](gloss:alternate-angles), weshalb sie kongruent
+und beide 50° sein müssen. Wir können die falsche, erste Linie löschen, um unser fertiges WWS-Dreieck
+zu erhalten.
+:::
+
+::: tab
+#### SSW
+Die SSW-Konstruktion ist etwas anders. Du hast vielleicht bemerkt, dass “SSW”
+nicht in der Liste der oben genannten Kongruenzsätze stand, da der Vergleich durch SSW allein nicht
+gewährleistet, dass zwei Dreiecke kongruent sind. Warum das so ist, siehst du hier:
+
+::: column(width=300)
+{.todo} COMING SOON – Animation
+::: column.grow
+{.task}Zeichne das Dreieck, das Seiten von 4 cm und 5 cm und einen nicht eingeschlossenen
+Winkel von 50° hat.
+
+Wie immer beginnen wir damit, die erste Seite des
+5 cm langen Dreiecks zu zeichnen.
+
+Als nächstes tragen wir einen Winkel von 50° an einem der Endpunkte ab und zeichnen die
+zweite Seite des Dreiecks. Allerdings wissen wir noch nicht, wo diese Seite
+enden wird.
+
+Die dritte Seite muss eine Länge von 4 cm haben. Mit einem Zirkel können wir einen Kreis mit einem
+Radius von 4 cm um den anderen Endpunkt der ursprünglichen Seite zeichnen.
+
+Der letzte Eckpunkt des Dreiecks wird durch den Schnittpunkt des Kreises und
+der zweiten Linie gebildet. In diesem Fall gibt es jedoch zwei Schnittpunkte!
+
+Diese beiden Dreiecke sind eindeutig nicht kongruent. Das bedeutet, dass es zwei
+verschiedene Dreiecke gibt, die Seiten von 4 cm und 5 cm, sowie einen nicht eingeschlossenen
+Winkel von 50° haben. SSW ist also nicht ausreichend, um zu sicherzustellen, dass zwei Dreiecke kongruent sind.
 :::
 :::
 
@@ -851,25 +851,25 @@ angle of 50°. SSA is not enough to confirm two triangles are congruent.
 > id: pythagoras
 > class: no-border
 
-## Pythagoras’ Theorem 
+## Der Satz des Pythagoras 
 
-We have now reached an important point in geometry – being able to state and
-understand one of the most famous [theorems](gloss:theorem) in all of
-mathematics: __Pythagoras’ Theorem__. It is named after the ancient Greek
-mathematician [Pythagoras of Samos](bio:pythagoras).
+Wir sind nun an einem wichtigen Punkt in der Geometrie angelangt - wir sind in der Lage, einen der berühmtesten [Lehrsätze](gloss:theorem) der gesamten
+Mathematik zu formulieren und zu
+verstehen: den __Satz des Pythagoras__. Er ist nach dem altgriechischen
+Mathematiker [Pythagoras von Samos](bio:pythagoras) benannt.
 
 ::: .theorem
 ::: column.grow
-__Pythagoras’ Theorem__  
-In any right-angled triangle, the square of the length of the
-[__hypotenuse__](target:hypot) (the side that lies opposite the right angle) is
-equal to the sum of the squares of the other two sides. In other words,
+__Der Satz des Pythagoras__  
+In jedem rechtwinkligen Dreieck ist das Quadrat der Länge der
+[__Hypotenuse__](target:hypot) (die Seite, die dem rechten Winkel gegenüberliegt)
+gleich der Summe der Quadrate der anderen beiden Seiten. Mit anderen Worten,
  
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
 
-_The converse is also true: if the three sides in a triangle satisfy
-a*{sup}2* + b*{sup}2* = c*{sup}2*, then it must be [[right-angled|acute|obtuse]]._
+_Umgekehrt gilt auch: Wenn die drei Seiten eines Dreiecks
+a*{sup}2* + b*{sup}2* = c*{sup}2* entsprechen, dann muss es [[rechtwinklig|spitzwinklig,|stumpfwinklig]] sein._
 ::: column(width=300)
 
     x-geopad(width=300): svg
@@ -897,14 +897,14 @@ a*{sup}2* + b*{sup}2* = c*{sup}2*, then it must be [[right-angled|acute|obtuse]]
     img(src="images/ladder.svg" width=220 height=300)
 
 ::: column.grow
-Right angles are everywhere, and that’s why Pythagoras’ Theorem is so useful.
+Rechte Winkel sind überall, und deshalb ist der Satz des Pythagoras so nützlich.
 
-Here you can see a __{.m-red}6m__ long ladder leaning on a wall. The bottom of
-the ladder is __{.m-blue}1m__ away from the wall. How far does it reach up the
-wall?
+Hier siehst du eine __{.m-red}6 m__ lange Leiter, die an eine Wand gelehnt ist. Das untere Ende
+der Leiter ist __{.m-blue}1 m__ von der Wand entfernt. Wie weit reicht sie die
+Wand hinauf?
 
-Notice that there is a right-angled triangle formed by the ladder, the wall and
-the ground. Using Pythagoras’ theorem, we get
+Beachte, dass ein rechtwinkliges Dreieck gebildet wird, das aus der Leiter, der Wand und
+dem Boden besteht. Mit dem Satz des Pythagoras bekommen wir einen
 
     //- Ideal syntax:
     //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
@@ -924,43 +924,43 @@ the ground. Using Pythagoras’ theorem, we get
 
 :::
 
-{.reveal(when="blank-0")} Whenever you’ve got a right-angled triangle and know
-two of its sides, Pythagoras can help you find the third one.
+{.reveal(when="blank-0")} Immer wenn du ein rechtwinkliges Dreieck gegeben hast und
+zwei seiner Seiten kennst, kannst du mit dem Satz des Pythagoras die dritte bestimmen.
 
 ---
 > id: pythagoras-proof
 
-### Proving Pythagoras’ Theorem
+### Beweise für den Satz des Pythagoras
 
-Pythagoras’ theorem was known to ancient Babylonians, Mesopotamians,
-Indians and Chinese – but Pythagoras may have been the first to find a formal,
-mathematical proof.
+Der Satz des Pythagoras war den alten Babyloniern, Mesopotamiern,
+Indern und Chinesen bekannt - aber Pythagoras war wohl der erste, der einen formalen,
+mathematischen Beweis fand.
 
-There are actually many different ways to prove Pythagoras’ theorem. Here you
-can see three different examples that each use a different strategy:
+Es gibt tatsächlich viele verschiedene Möglichkeiten, den Satz des Pythagoras zu beweisen. Hier zeigen wir
+drei verschiedene Beispiele, die jeweils eine andere Strategie verwenden:
 
 ::: tab.proof-1
 
-#### Rearrangement _{span.check(when="blank-0 blank-1")}_
+#### Neuanordnung _{span.check(when="blank-0 blank-1")}_
 
 ::: column.grow
 
-Have a look at the figure on the right. The square has side length _a_ + _b_,
-and contains [four right-angled triangles](target:triangle), as well as a
-[smaller square](target:square) of size [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ – _b_|_a_ + _b_]].
+Schau dir die Abbildung rechts an. Das Quadrat hat die Seitenlänge _a_ + _b_,
+und enthält [vier rechtwinklige Dreiecke](target:triangle), sowie ein
+[kleineres Quadrat](target:square) der Größe [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ - _b_|_a_ + _b_]].
 
-{.reveal(when="blank-0")} Now let’s rearrange the triangles in the square. The
-result still contains the four right-angles triangles, as well as two squares
-of size [[<msup><mi>a</mi><mn>2</mn></msup> and <msup><mi>b</mi><mn>2</mn></msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
+{.reveal(when="blank-0")} Nun ordnen wir die Dreiecke im Quadrat neu an. Das
+Ergebnis enthält noch immer die vier rechtwinkligen Dreiecke sowie zwei Quadrate
+der Größe [[<msup><mi>a</mi><mn>2</mn></msup> und <msup><mi>b</mi><mn>2</mn></msup msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
 
-{.reveal(when="blank-1")} Comparing the size of the red area
-_{span.hover-target}before_ and _{span.hover-target}after_ the rearrangement, we
-see that
+{.reveal(when="blank-1")}Vergleicht man die Größe des roten Bereichs
+_{span.hover-target}vor_ und _{span.hover-target}nach_ der Umstellung, so
+sieht man, dass
 
 {.text-center.reveal(when="blank-1")} `a^2 + b^2 = c^2`.
 
-{.reveal(when="blank-1")} This is the original proof that
-[Pythagoras](bio:pythagoras) came up with. _{span.qed}_
+{.reveal(when="blank-1")} Das ist genau der gleiche Beweis, den sich
+[Pythagoras](bio:pythagoras) ausgedacht hat _{span.qed}_
 
 ::: column(width=240)
 
@@ -1002,17 +1002,17 @@ see that
 #### Algebra _{span.check(when="blank-2 blank-3 blank-4")}_
 
 ::: column.grow
-Here we have the same figure as before, but this time we’ll use _algebra_ rather
-than _rearrangement_ to prove Pythagoras’ theorem.
+Hier haben wir die gleiche Skizze wie zuvor, aber diesmal verwenden wir _Algebra_
+anstatt einer _Neuanordnung_, um den Satz des Pythagoras zu beweisen.
 
-The large square has side length `a + b` and area
-[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2</sup>|_c_<sup>2</sup>]].
+Das große Quadrat hat eine Seitenlänge von `a + b` und eine Fläche
+[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2 /sup + b sup 2</sup>|_c_<sup>2</sup>]].
 
-{.reveal(when="blank-2")} It consists of [four triangles](target:triangle), each
-of size [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
-and [one square](target:square) of size [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
+{.reveal(when="blank-2")} Es besteht aus [vier Dreiecken](target:triangle), mit einer Fläche von
+jeweils [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
+und [einem Quadrat](target:square) der Fläche [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
-{.reveal(when="blank-3 blank-4")} If we combine all of that information, we have
+{.reveal(when="blank-3 blank-4")} Wenn wir alle diese Informationen zusammenführen, bekommen wir folgende Gleichung:
 
     //- Ideal syntax:
     //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
@@ -1030,7 +1030,7 @@ and [one square](target:square) of size [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup
         <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
         <td><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></td>
 
-{.reveal(when="blank-3 blank-4")} And, once again, we get Pythagoras’ theorem.
+{.reveal(when="blank-3 blank-4")}Und wieder erhalten wir den Satz des Pythagoras.
 _{span.qed}_
 
 ::: column(width=240)
@@ -1057,23 +1057,23 @@ _{span.qed}_
 :::
 ::: tab.proof-3
 
-#### Similar Triangles _{span.check(when="next-0 next-1 next-2 blank-5")}_
+#### Ähnliche Dreiecke _{span.check(when="next-0 next-1 next-2 blank-5")}_
 
 ::: column.grow
-{.r} Here you can see another right-angled triangle. If we draw one of the
-altitudes, it splits the triangle into two smaller triangle.
-It also divides the hypotenuse _c_ into [two smaller parts](target:hypotenuse)
-which we’ll call [{.step-target.i.pill.blue}x](target:x) and
-[{.step-target.i.pill.green}y](target:y).
-_{span.next-step} Continue_
+{.r} Hier haben wir ein weiteres rechtwinkliges Dreieck. Wenn wir eine der
+Höhen einzeichnen, teilt sie das Dreieck in zwei kleinere Dreiecke auf,
+und sie teilt die Hypotenuse _c_ in [zwei kleinere Teile](target:hypotenuse)
+, die wir [{.step-target.i.pill.blue}x](target:x) und [
+{.step-target.i.pill.green}y](target:y) nennen wollen.
+_{span.next-step} Weiter_
 
-{.r.reveal(when="next-0")} Let’s separate out the two smaller triangles, so that
-it’s clearer to see how they are related…
-_{span.next-step} Continue_
+{.r.reveal(when="next-0")} Sehen wir uns die beiden kleineren Dreiecke getrennt an, damit
+klarer wird, wie sie zusammenhängen…
+_{span.next-step} Weiter_
 
-{.reveal(when="next-1")} Both smaller triangles [share one angle](target:angle)
-with the original triangle. They also all have [one right angle](target:right).
-By the AA condition, all thee triangles must be [[similar|congruent|right-angled]].
+{.reveal(when="next-1")} Beide kleineren Dreiecke [teilen sich einen Winkel](target:angle)
+mit dem ursprünglichen Dreieck. Beide haben auch [einen rechten Winkel](target:right).
+Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinklig]].
 
 ::: column(width=260)
 
@@ -1114,8 +1114,8 @@ By the AA condition, all thee triangles must be [[similar|congruent|right-angled
 
 :::
 
-{.reveal(when="blank-5")} Now we can use the equations we already know about
-similar polygons:
+{.reveal(when="blank-5")} Jetzt können wir die Gleichungen verwenden, die wir bereits über
+ähnliche Vielecke kennen:
 
     table.proof-table.reveal(when="blank-5")
       tr
@@ -1126,56 +1126,56 @@ similar polygons:
           <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
           <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
 
-{.r.reveal(when="blank-5")} _{span.next-step} Continue_
+{.r.reveal(when="blank-5")} _{span.next-step} Weiter_
 
-{.reveal(when="next-2")} But remember that _c_ = [{.step-target.i.pill.blue}x](target:x) +
-[{.step-target.i.pill.green}y](target:y). Therefore
+{.reveal(when="next-2")} Aber erinnere dich, dass _c_ = [{.step-target.i.pill.blue}x](target:x) +
+[{.step-target.i.pill.green}y](target:y). Wir setzen ein und erhalten
 
 {.text-center.reveal(when="next-2")} `c = a^2/c + b^2/c`
 
 {.text-center.reveal(when="next-2")} `c^2 = a^2 + b^2`
 
-{.reveal(when="next-2")} Once more, we’ve proven Pythagoras’ theorem! _{span.qed}_
+{.reveal(when="next-2")} Und damit haben wir ein weiteres mal den Satz des Pythagoras bewiesen! _{span.qed}_
 :::
 
 ---
 > id: pythagoras-2
 
-Much about Pythagoras’ life is unknown, and no original copies of his work have
-survived. He founded a religious cult, the _Pythagoreans_, that practiced a kind
-of  “number worship”. They believed that all numbers have their own character,
-and followed a variety of other bizarre customs.
+Vieles über Pythagoras' Leben ist unbekannt, und es sind keine Originalschriften seines Werkes
+erhalten geblieben. Er gründete einen religiösen Kult, die _Pythagoräer_, der eine Art
+“Zahlenverehrung” praktizierte. Sie glaubten, dass alle Zahlen ihren eigenen Charakter haben,
+und folgten einer Vielzahl anderer bizarrer Bräuche.
 
 ::: column.grow
-The Pythagoreans are credited with many mathematical discoveries, including
-finding the first [irrational number](gloss:irrational-numbers), `sqrt(2)`.
-Irrational numbers cannot be expressed as a simple fraction – a concept the
-Pythagoreans found deeply troubling and (unsuccessfully) tried to cover up!
+Den Pythagoräern werden viele mathematische Entdeckungen zugeschrieben, darunter das
+Auffinden der ersten [irrationalen Zahl](gloss:irrational-numbers), `sqrt(2)`.
+Irrationale Zahlen können nicht als einfacher Bruch ausgedrückt werden - ein Konzept, das die
+Pythagoräer zutiefst beunruhigend fanden und (erfolglos) zu vertuschen versuchten!
 ::: column(width=400)
     x-media(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
-{.caption} “Pythagoreans celebrate sunrise” by Fyodor Bronnikov
+{.caption} “Pythagoräer feiern den Sonnenaufgang” von Fjodor Bronnikow
 :::
 
 ---
 > id: distance-formula
 
-### Calculating Distances
+### Abstände berechnen
 
-One of the most important application of Pythagoras’ Theorem is for calculating
-distances. 
+Eine der wichtigsten Anwendungen des Satzes des Pythagoras ist die Berechnung
+von Abständen. 
 
 ::: column.grow
-{.r} On the right you can see two points in a coordinate system. We could
-measure their distance using a ruler, but that is not particularly accurate.
-Instead, let’s try using Pythagoras.
-_{span.next-step} Continue_
+{.r} Auf der rechten Seite siehst du zwei Punkte in einem Koordinatensystem. Wir könnten ihren Abstand mit einem Lineal
+messen, aber das ist nicht besonders genau,
+stattdessen versuchen wir es mit Pythagoras.
+_{span.next-step} Weiter_
 
-{.reveal(when="next-0")} We can easily count the [horizontal distance](target:dx)
-along the _x_-axis, and the [vertical distance](target:dy) along the _y_-axis.
-If we draw those two lines, we get a [right-angled triangle](target:triangle).
+{.reveal(when="next-0")} Wir können leicht den [horizontalen Abstand](target:dx)
+entlang der _x-Achse_ und den [vertikalen Abstand](target:dy) entlang der _y-Achse_ abzählen.
+Wenn wir diese beiden Linien einzeichnen, erhalten wir ein [rechtwinkliges Dreieck](target:triangle).
 
-{.reveal(when="next-0")} Using Pythagoras,
+{.reveal(when="next-0")} Mit Pythagoras,
 
     table.eqn-system.reveal(when="next-0")
       tr
@@ -1203,12 +1203,12 @@ If we draw those two lines, we get a [right-angled triangle](target:triangle).
 ---
 > id: distance-formula-1
 
-This method works for _any_ two points:
+Diese Methode funktioniert für zwei _beliebige_ Punkte:
 
 ::: .theorem
-__The Distance Formula__  
-If you are given two points with coordinates  (`x_1`,`y_1`) and (`x_2`,`y_2`),
-the distance between them is
+__Die Abstandsformel__  
+Wenn du zwei Punkte mit den Koordinaten (`x_1`,`y_1`) und (`x_2`,`y_2`) gegeben hast,
+beträgt der Abstand zwischen ihnen
 
 {.text-center} `d^2=(x_2−x_1)^2+(y_2−y_1)^2`
 
@@ -1218,42 +1218,42 @@ the distance between them is
 ---
 > id: pythagorean-triples
 
-### Pythagorean Triples
+### Pythagoräische Tripel
 
-As you moved the [vertices of the triangle](->#tri-move) in the previous step,
-you might have noticed that in most cases, the length of the hypothenuse _d_
-ended up being a [[decimal number|fraction|integer]].
-_{span.reveal(when="blank-0")}However there are a few examples of right-angled
-triangles where the lengths of *all three sides* happens to be *whole numbers*._
+Als du die [Ecken des Dreiecks](->#tri-move) im vorherigen Schritt verschoben hast, hast
+du vielleicht bemerkt, dass die Länge der Hypothenuse _d_
+in den meisten Fällen eine [[Dezimalzahl|Bruchzahl|ganze Zahl]] ist.
+_{span.reveal(when="blank-0")} aber es gibt einige Beispiele für rechtwinklige
+Dreiecke, bei denen die Länge von *allen drei Seiten* zufällig *natürliche Zahlen* sind._
 
 ---
 > id: pythagorean-triples-1
 
 ::: column.grow
-One famous example is the 3-4-5 triangle. Since `3^2 + 4^2 = 5^2`, any triangle
-with sides of length 3, 4 and 5 must be right-angled.
+Ein berühmtes Beispiel ist das 3-4-5 Dreieck. Da `3^2 + 4^2 = 5^2`, muss jedes Dreieck
+mit Seiten der Länge 3, 4 und 5 rechtwinklig sein.
 
-The ancient Egyptians didn’t know about Pythagoras’ theorem, but they did know
-about the 3-4-5 triangle. When building the pyramids, they used knotted ropes
-of lengths 3, 4 and 5 to measure perfect right angles.
+Die alten Ägypter wussten nichts über den Satz von Pythagoras, aber sie wussten etwas
+über das 3-4-5 Dreieck. Beim Bau der Pyramiden verwendeten sie geknotete Seile
+der Längen 3, 4 und 5, um perfekte rechte Winkel zu messen.
 ::: column(width=400)
 
     img(src="images/egypt.png" width=400 height=220)
 
 :::
 
-Three integers like this are called [__Pythagorean Triples__](gloss:pythagorean-triple).
-(3, 4, 5) is one example of a Pythagorean triple. If we multiply every number
-by 2, we get another Pythagorean triple: (6, 8, [[10]]).
+Drei Zahlen wie diese werden als [__Pythagoräische Tripel__](gloss:pythagorean-triple)bezeichnet.
+(3, 4, 5) ist ein Beispiel für ein Pythagoräisches Tripel. Wenn wir jede Zahl
+mit 2 multiplizieren, erhalten wir ein weiteres Pythagoräisches Tripel: (6, 8, [[10]]).
 
 ---
 > id: pythagorean-triples-grid
 > goals: p0 p1 p2 p3 p4 p5
 
-We can think of these triples as grid points in a coordinate systems. For a
-valid Pythagorean triples, the distance from the origin to the grid point has to
-be a whole number. Using the coordinate system below, can you find any other
-Pythagorean triples?
+Wir können uns diese Tripel als Gitterpunkte in einem Koordinatensystem vorstellen. Für ein
+gültiges Pythagoräisches Tripel muss der Abstand vom Ursprung bis zum Gitterpunkt eine ganze Zahl
+sein. Kannst du mit dem untenstehenden Koordinatensystem weitere
+Pythagoräische Tripel finden?
 
     figure: x-geopad.r.label-halo(width=450 height=450 grid=25)
       svg
@@ -1268,30 +1268,30 @@ Pythagorean triples?
       .label.var(x-style="left:${12.5+25*a.x}px; top:${225+12.5*a.y}px") ${17-a.y}
       .label.var(x-style="left:${12.5+12.5*a.x}px; top:${225+12.5*a.y}px") ${sqrtDistance(a)}
 
-{.reveal(when="p0 p1 p2 p3 p4 p5")} Do you notice any pattern in the
-distribution of these points? 
+{.reveal(when="p0 p1 p2 p3 p4 p5")} Erkennst du ein Muster in der
+Verteilung dieser Punkte? 
 
-    // The mathematician Euclid found a clever method for generating new
-    // Pythagorean triples. First, we need to pick any two integers _m_ and _n_:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
-    // Now we can calculate the three numbers that make up the triple:
+    // Der Mathematiker Euklid fand eine clevere Methode, um neue
+    // Pythagoräische Tripel zu erzeugen. Zuerst müssen wir zwei beliebige ganze Zahlen _m_ und _n_ nehmen:
+    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = n = ${n}{n|2|1,20,1}
+    // Jetzt können wir die drei Zahlen berechnen, aus denen sich das Tripel zusammensetzt:
     // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
-    // And there you have your pythagorean triple! You can check that a2 + b2 = c2.
+    // Und schon haben wir ein Pythagoräisches Tripel! Du kannst überprüfen, ob a2 + b2 = c2.
 
 ----
 > id: isosceles
 > sectionStatus: dev
 
-## Isosceles and Equilateral Triangles
+## Gleichschenklige und gleichseitige Dreiecke
 
-Other then right-angled triangles, there are a few other triangles with
-special properties. In this section we’ll have a look at some of them.
+Neben den rechtwinkligen Dreiecken gibt es noch einige andere Dreiecke mit
+besonderen Eigenschaften. In diesem Abschnitt werden wir uns einige davon ansehen.
 
-### Isosceles Triangles
+### Gleichschenklige Dreiecke
 
-We say that a triangle is [__isosceles__](gloss:isosceles-triangle) if it has
-two congruent sides. These congruent sides are called the __legs__ of the
-triangle, while the third side is called the __base__.
+Wir sagen, dass ein Dreieck [__gleichschenklig ]__(gloss:isosceles-triangle)ist, wenn es
+zwei kongruente Seiten hat. Diese kongruenten Seiten werden die __Schenkel__ des
+Dreiecks genannt, während die dritte Seite die __Basis__genannt wird.
 
 {.todo} COMING SOON – Base angles theorem
 Proof by constructing angle bisector and using SAS result.
@@ -1345,16 +1345,16 @@ equilateral triangle using straight-edge and compass.
 ----
 > id: trigonometry
 
-## Trigonometry
+## Trigonometrie
 
-So far we have seen relationships between the __angles__ of triangles (e.g.
-they always sum up to 180°) and relationships between the __sides__ of triangles
-(e.g. Pythagoras). But there is nothing that _connects_ the size of angles and
-sides.
+Bisher haben wir Beziehungen zwischen den __Winkeln__ von Dreiecken (z.B. summieren
+sie sich immer auf 180°) und Beziehungen zwischen den __Seiten__ von Dreiecken
+(z.B. Pythagoras) betrachtet. Aber wir haben nichts, was die Größe von Winkeln und
+Seiten _miteinander verbindet_.
 
-For example, if I know the three sides of a triangle, how do I find the size of
-its angles – without drawing the triangle and measuring them using a protractor?
-This is where __Trigonometry__ comes in!
+Wenn ich zum Beispiel die drei Seiten eines Dreiecks kenne, wie finde ich die Größe
+seiner Winkel - ohne das Dreieck zu zeichnen und mit einem Winkelmesser zu messen -
+hier kommt die __Trigonometrie__ ins Spiel!
 
     figure: img(src="images/trig-om-nom.jpg" width=200 height=200)
 
@@ -1362,11 +1362,11 @@ This is where __Trigonometry__ comes in!
 > id: trigonometry-1
 
 ::: column.grow
-Imagine we have a right-angled triangle, and we also know one of the two other
-angles, __{.m-red}α__. We already know that the longest side is called the
-[__{.m-yellow}hypotenuse__](target:hyp). The other two are usually called the
-[__{.m-green}adjacent__](target:adj) (which is next to angle __{.m-red}α__) and
-the [__{.m-blue}opposite__](target:opp) (which is opposite angle __{.m-red}α__).
+Stell dir vor, wir haben ein rechtwinkliges Dreieck, und wir kennen auch einen der beiden anderen
+Winkel, __{.m-red}α__. Wir wissen bereits, dass die längste Seite [
+__{.m-yellow}Hypotenuse]__(target:hyp) genannt wird. Die anderen beiden werden normalerweise als [
+__{.m-green}anliegend]__(target:adj) (neben dem Winkel __{.m-red}α__) und
+[__{.m-blue}gegenüberliegend__](target:opp) (also gegenüber des Winkels __{.m-red}α__) bezeichnet.
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
@@ -1376,80 +1376,80 @@ the [__{.m-blue}opposite__](target:opp) (which is opposite angle __{.m-red}α__)
       path(x="angle(a,c,b)")
       path.red(x="angle(b,a,c)" label="α")
       path.yellow(x="segment(a,b)" label="Hypotenuse" target="hyp")
-      path.blue(x="segment(b,c)" label="Opposite" target="opp")
-      path.green(x="segment(a,c)" label="Adjacent" target="adj")
+      path.blue(x="segment(b,c)" label="Gegenkathete" target="opp")
+      path.green(x="segment(a,c)" label="Ankathete" target="adj")
 
 :::
 
-There are many different triangles that have angles __{.m-red}α__ and 90°, but
-from the [AA condition](gloss:triangle-aa) we know that they are all
-[[similar|congruent]]:
+Es gibt viele verschiedene Dreiecke, die einen Winkel __{.m-red}α__ und 90° haben, aber
+vom [WWW-Satz](gloss:triangle-aa) wissen wir, dass sie alle
+[[ähnlich|kongruent]] sind:
 
     figure: img(src="images/triangles.svg" width=600 height=240)
 
 ---
 > id: trig-functions
 
-Since all of these triangles are similar, we know that their sides are
-proportional. In particular, the following ratios are the same for all of these
-triangles:
+Da alle diese Dreiecke ähnlich sind, wissen wir, dass ihre Seiten
+proportional sind. Insbesondere sind die folgenden Verhältnisse für alle diese
+Dreiecke gleich:
 
     p.text-center
-      mfrac
-        mrow: mtext.m-blue.b Opposite
+     mfrac
+        mrow: mtext.m-blue.b Gegenkathete
         mrow: mtext.m-yellow.b Hypotenuse
-      span.space
-      mfrac
-        mrow: mtext.m-green.b Adjacent
-        mrow: mtext.m-yellow.b Hypotenuse
-      span.space
-      mfrac
-        mrow: mtext.m-blue.b Opposite
-        mrow: mtext.m-green.b Adjacent
+     span.space
+     mfrac
+        mrow: mtext.m-green.b Ankathete
+        mtext.m-yellow.b Hypotenuse
+     span.space
+     mfrac
+        mrow: mtext.m-blue.b Gegenkathete
+        mrow: mtext.m-green.b Ankathete
 
-Let’s try to summarise this: we picked a certain value for __{.m-red}α__, and
-got lots of similar, right-angled triangles. All of these triangles have the
-same ratios of sides. Since __{.m-red}α__ was our only variable, there must be
-some relationship between __{.m-red}α__ and those ratios.
+Fassen wir zusammenzufassen: Wir haben einen bestimmten Wert für __{.m-red}α__gewählt
+und viele ähnliche, rechtwinklige Dreiecke erhalten. Die Seiten dieser Dreiecke stehen zueinander
+in jeweils gleichem Verhältnis. Da __{.m-red}α__ unsere einzige Variable war, muss es irgendeine
+ Beziehung zwischen __{.m-red}α__ und diesen Verhältnissen geben.
 
-These relationships are the __Trigonometric functions__ – and there are three of
-them:
+Diese Beziehungen sind die __trigonometrischen Funktionen__ - und es gibt
+drei davon:
 
 ::: .theorem
-The three Trigonometric functions are relationships between the angles and the
-ratios of sides in a right-angles triangle. They each have a name, as well as
-a 3-letter abbreviation:
+Die drei trigonometrischen Funktionen sind Beziehungen zwischen den Winkeln und den
+Verhältnissen der Seiten in einem rechtwinkligen Dreieck. Jede hat einen Namen sowie
+eine dreistellige Abkürzung:
 
 ::: column.grow
 
     ul
       li
-        strong Sine:
+        strong Sinus:
         .space
         mtext sin
         mfenced: mtext.m-red.b α
         mo =
         mfrac
-          mrow: mtext.m-blue.b Opposite
+          mrow: mtext.m-blue.b Gegenkathete
           mrow: mtext.m-yellow.b Hypotenuse
       li
-        strong Cosine:
+        strong Cosinus:
         .space
         mtext cos
         mfenced: mtext.m-red.b α
         mo =
         mfrac
-          mrow: mtext.m-green.b Adjacent
+          mrow: mtext.m-green.b Ankathete
           mrow: mtext.m-yellow.b Hypotenuse
       li
-        strong Tangent:
+        strong Tangens:
         .space
         mtext tan
         mfenced: mtext.m-red.b α
         mo =
         mfrac
-          mrow: mtext.m-blue.b Opposite
-          mrow: mtext.m-green.b Adjacent
+          mrow: mtext.m-blue.b Gegenkathete
+          mrow: mtext.m-green.b Ankathete
 
 ::: column(width=240)
 
@@ -1460,8 +1460,8 @@ a 3-letter abbreviation:
       path(x="angle(a,c,b)")
       path.red(x="angle(b,a,c)" label="α")
       path.yellow(x="segment(a,b)" label="Hypotenuse")
-      path.blue(x="segment(b,c)" label="Opposite")
-      path.green(x="segment(a,c)" label="Adjacent")
+      path.blue(x="segment(b,c)" label="Gegenkathete")
+      path.green(x="segment(a,c)" label="Ankathete")
 
 :::
 :::
@@ -1656,7 +1656,7 @@ side. _{span.reveal(when="blank-5")}We can find it using the definition of
           mn.pill.step-target.yellow(data-to="height") 8.987 km
 
 {.reveal(when="blank-6 blank-7" delay=2000)} And that is very close to the
-actual height of Mount Everest, the highest mountain on Earth: 8,848m.
+actual height of Mount Everest, the highest mountain on Earth: 8.848 m.
 :::
 
 ---
@@ -1674,13 +1674,13 @@ for the curvature of Earth.
 > id: applications
 > class: no-border
 
-## Applications
+## Anwendungen
 
-But triangles and trigonometry are not just useful for measuring the height of
-mountains, and the tools and concepts you have learned are incredibly important
-in countless areas of mathematics, science and engineering.
+Dreiecke und Trigonometrie sind nicht nur für die Messung der Höhe von
+Bergen nützlich. Die Werkzeuge und Konzepte, die du hier gelernt hast, sind in
+unzähligen Bereichen der Mathematik, Naturwissenschaften und Technik unglaublich wichtig.
 
-Triangles are special because they are particularly _strong_. They are the only
+Dreiecke sind etwas Besonderes, weil sie besonders _stabil_ sind. They are the only
 polygon that, when made out of wooden beams and hinges, will be completely
 _rigid_ – unlike rectangles, for example, which you can easily push over.
 
@@ -1794,7 +1794,7 @@ quadrilaterals or pentagons in the future.
     // than the included angle of the second triangle.
 
 
-    // ## Inscribed Similar Triangles 
+    // ## Inscribed Ähnliche Dreiecke 
 
     // If two objects are similar, corresponding angles are congruent and their sides
     // are proportional in length. Let’s look at a right triangle, with an altitude

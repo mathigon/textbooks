@@ -2106,7 +2106,7 @@ IF YOU CAN, DRAW A SKETCH FIRST. A PICTURE SPEAKS 1001 WORDS!
 
 ---
 
-EXAMPLE 89: How many times does the graph of `y=−x^2+4x−5 cross the x-axis?`
+EXAMPLE 89: How many times does the graph of `y=−x^2+4x−5` cross the x-axis?
 
 Answer: We have y=−x(x−4)−5 and so x=0 and x=4 are interesting. (They both give y=−5.)
 
@@ -2204,7 +2204,7 @@ b) Explain why the vertex of its graph occurs at `x=−b/(2a)`.
 
 COMMENT: Many curricula have students memorise this result. For example, given
 `y=3x2+4x+8`, say, they like students to be able to say that its vertex lies at
-`x=−b2a=−42⋅3=−23`. If speed is important to you, then great! If not, there is
+`x=−b2a=−42*3=−23`. If speed is important to you, then great! If not, there is
 nothing wrong with writing y=x(3x+4)+8 and saying that the vertex is halfway
 between x=0 and x=−43.
 
@@ -2322,6 +2322,8 @@ downwards).
 
 The result, as you can see, is a parabola. Using Calculus
 
+https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_15_feather_drop.html
+
 ---
 
 Of course, flying penguins are not the only things that move on a parabolic
@@ -2406,11 +2408,21 @@ When practicing jumps and tricks, it is important to understand how gravity
 
 {.todo} skateboarding image
 
----
+
+
+--------------------------------------------------------------------------------
+
+
+
+## More Applications of Quadratics
+
+> section: applications
+> sectionStatus: dev
+
 
 ::: column.grow
 
-You saw above that every object you throw an object into the air follows a
+In the previous section, you learned that every object you throw an object into the air follows a
 parabolic path. But what if the fire a ball out of a canon, so fast that it
 flied around the entire planet and comes back to where we started?
 
@@ -2469,17 +2481,6 @@ Calculating the transition between parabolic and elliptical orbits was an
 incredibly difficult task – as explained here in the move "Hidden Figures":
 
 {.fixme}
-
-
-
---------------------------------------------------------------------------------
-
-
-
-## More Applications of Quadratics
-
-> section: applications
-> sectionStatus: dev
 
 Quadratic functions and equations appear not just in the motion of projectiles,
 but have many other applications in science, engineering, economics and nature.
