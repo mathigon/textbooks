@@ -1304,8 +1304,8 @@ term:
     getrennt sind.
 
 tessellation:
-  title: Tessellierung
-  text: Eine __Tessellierung__ ist ein geometrisches Muster, das eine Oberfläche
+  title: Parkettierung (Tessellation)
+  text: Eine __Parkettierung__ ist ein geometrisches Muster, das eine Oberfläche
     ohne Lücken oder Überlappungen bedeckt.
   link: /course/polygons-and-polyhedra/tessellations
 
