@@ -695,9 +695,9 @@ linear-function:
 
 median:
   title: Median
-  text: The __medians__ of a triangle are the lines that connect each vertex to
-    the midpoint of their opposite sides.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#medians
+  text: The __median__ of a set of numbers is the value for which half the
+    numbers are larger and half the numbers are smaller. If there are two
+    “middle numbers”, it is the average of these numbers.
 
 midpoint:
   title: Midpoint
@@ -1320,6 +1320,13 @@ triangle-legs:
   title: Legs of a triangle
   text: The two __legs__ of a right-angled triangle are the two shorter sides
     (not the _hypotenuse_). They are next to the right angle.
+
+triangle-median:
+  title: Medians of a Triangle
+  text: The __medians__ of a triangle are the line segments that connect each
+    vertex to the midpoint of the opposite sides. The three medians of a
+    triangle intersect in a single point called the __centroid__.
+  link: /course/triangles-and-trigonometry/properties-of-triangles#medians
 
 triangle-midsegment:
   title: Midsegment

@@ -179,7 +179,7 @@ verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 Hier siehst du ein Dreieck sowie die [Mittelpunkte](gloss:midpoint) seiner
 drei Seiten.
 
-Eine [__Schwerlinie__](gloss:median)eines Dreiecks ist eine Strecke, die einen Eckpunkt
+Eine [__Schwerlinie__](gloss:triangle-median)eines Dreiecks ist eine Strecke, die einen Eckpunkt
 mit dem Mittelpunkt der gegenüberliegenden Seite verbindet. Zeichne die drei Schwerlinien dieses Dreiecks.
 _{span.reveal(when="s0 s1 s2")}Was passiert, wenn du die Eckpunkte des
 Dreiecks verschiebst?_
@@ -418,7 +418,7 @@ __Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die St
       circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
-Wie die [Schwerlinien](gloss:median), [Streckensymmetralen](gloss:perpendicular-bisector)
+Wie die [Schwerlinien](gloss:triangle-median), [Streckensymmetralen](gloss:perpendicular-bisector)
 und [Winkelsymmetralen](gloss:angle-bisector)
 schneiden sich auch die drei Höhen eines Dreiecks in einem einzigen Punkt. Dieser wird als [__Höhenschnittpunkt__](target:center)
 des Dreiecks bezeichnet.

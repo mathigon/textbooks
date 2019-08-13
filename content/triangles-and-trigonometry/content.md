@@ -179,10 +179,10 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
 Here you can see a triangle as well as the [midpoints](gloss:midpoint) of its
 three sides.
 
-A [__median__](gloss:median) of a triangle is a line segment that joins a vertex
-and the midpoint of the opposite side. Draw the three medians of this triangle.
-_{span.reveal(when="s0 s1 s2")}What happens as you move the vertices of the
-triangle?_
+A [__median__](gloss:triangle-median) of a triangle is a line segment that joins
+a vertex and the midpoint of the opposite side. Draw the three medians of this
+triangle. _{span.reveal(when="s0 s1 s2")}What happens as you move the vertices
+of the triangle?_
 
 {.reveal(when="move")} It seems like the medians always [[intersect in one
 point|have the same length|divide each other in the middle]].
@@ -418,8 +418,9 @@ __base__, and then find the corresponding __height__, which is the line that is
       circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
-Like the [medians](gloss:median), [perpendicular bisectors](gloss:perpendicular-bisector)
-and [angle bisectors](gloss:angle-bisector), the three altitudes of a triangle
+Like the [medians](gloss:triangle-median), [perpendicular
+bisectors](gloss:perpendicular-bisector) and [angle
+bisectors](gloss:angle-bisector), the three altitudes of a triangle
 intersect in a single point. This is called the [__orthocenter__](target:center)
 of the triangle.
 
