@@ -486,10 +486,10 @@ function-graph:
   text: We can plot mathematical functions of the form `f(x)` in a coordinate
     system. The result is called the __graph__ of the function.
 
-gcd:
-  title: Greatest Common Divisor
-  text: The __Greatest Common Divisor__ (gcd) of two numbers _a_ and _b_ is the
-    largest integer that is a divisor of both _a_ and _b_.
+gcf:
+  title: Greatest Common Factor
+  text: The __greatest common factor__ (gcf) of two numbers _a_ and _b_ is the
+    largest integer that is a factor of both _a_ and _b_.
   link: /course/divisibility-and-primes/greatest-common-factors
 
 geometric-sequence:
