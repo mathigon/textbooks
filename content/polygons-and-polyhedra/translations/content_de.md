@@ -76,8 +76,7 @@ Wir wissen bereits, dass die Summe der Innenwinkel in einem Dreieck immer
 {.text-center.var} _{span.circled.red}${round(angle(b,a,d).deg)}°_ +
 _{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
 _{span.circled.green}${round(angle(d,c,b).deg)}°_ +
-_{span.circled.yellow}${360 - round(angle(b,a,d).deg) - round(angle(c,b,a).deg) -
-round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+_{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 
     x-gesture(target="x-anibutton")
 
@@ -104,8 +103,7 @@ round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 _{span.circled.blue}${round(angle(g,f,e).deg)}°_ +
 _{span.circled.green}${round(angle(h,g,f).deg)}°_ +
 _{span.circled.yellow}${round(angle(i,h,g).deg)}°_ +
-_{span.circled}${540 - round(angle(f,e,i).deg) - round(angle(g,f,e).deg) -
-round(angle(h,g,f).deg) - round(angle(i,h,g).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+_{span.circled}${round(angle(e,i,h).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
@@ -146,8 +144,7 @@ unterteilt werden. Daher ist die
 
 ::: column.grow
 Wir sagen, dass ein Vieleck (Polygon) [__konkav__](gloss:concave) ist, wenn es einen Abschnitt hat, der
-::: column.grow
-"nach innen zeigt"[__. Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
+["nach innen zeigt"](target:cave). Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
 
 Es gibt zwei Möglichkeiten, konkave Vielecke leicht zu identifizieren: Sie haben mindestens
 einen [Innenwinkel, der größer als 180° ist](target:angle). Sie haben außerdem
