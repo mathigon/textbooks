@@ -746,7 +746,7 @@ _{button.next-step} Weiter_
 [entsprechenden Winkel](target:angles) kongruent sein müssen.
 _{button.next-step} Weiter_
 
-{.reveal.r(when="next-1")} Das bedeutet z.B., dass die [Diagonale](target:d1)
+{.reveal.r(when="next-1")} Das bedeutet z.B., dass eine der [Diagonalen](target:d1)
 eine [[Winkelsymmetrale|Normale|Schwerlinie]] der [beiden Winkel](target:vAngle) an ihren
 Enden ist.
 _{button.next-step} Weiter_
@@ -1084,7 +1084,7 @@ Du hast vielleicht bemerkt, dass sich einige [regelmäßige Vielecke](gloss:regu
 ---
 > id: tessellation-regular-1
 
-Das hat mit der Größe ihrer [Innenwinkel](gloss:internal-angle)zu tun,
+Das hat mit der Größe ihrer [Innenwinkel](gloss:internal-angle) zu tun,
 mit deren Berechnung wir uns schon beschäftigt haben. An jedem [Eckpunkt](gloss:polygon-vertex) in
 dieser Parkettierung treffen sich die Innenwinkel mehrerer verschiedener Vielecke. Alle
 diese Winkel müssen zusammengezählt [[360°]] ergeben, sonst gibt
@@ -1915,9 +1915,9 @@ betrachten.
 {.todo} KOMMT BALD!
 
     //- Welches dieser Netze bildet einen Würfel
-    //- Das Netz dem Objekt
-    zuordnen //- h
-    ttps://github.com/polymake/matchthenet //- Netze zeichnen
+    //- Das Netz dem Objekt zuordnen 
+    //- https://github.com/polymake/matchthenet 
+    //- Netze zeichnen
 
     //- Describe the cross section formed by the intersection of the plane and the solid.
 

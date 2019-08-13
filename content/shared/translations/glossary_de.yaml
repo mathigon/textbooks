@@ -334,7 +334,7 @@ cryptography:
 cube:
   title: Würfel
   text: Der __Würfel__ ist ein platonischer Körper, der aus sechs Feldern
-    besteht. Er hat 8 Eckpunkte und 12 Kanten.
+    besteht. Er hat 8 Ecken und 12 Kanten.
   link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
 
 cylinder:
@@ -395,7 +395,7 @@ dna:
 dodecahedron:
   title: Dodekaeder
   text: Das __Dodekaeder__ ist ein platonischer Körper, der aus 12 regelmäßigen
-    Fünfecken besteht. Er hat 20 Eckpunkte und 30 Kanten.
+    Fünfecken besteht. Er hat 20 Ecken und 30 Kanten.
   link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
 
 dot-annihilation:
@@ -636,7 +636,7 @@ hypotenuse:
 icosahedron:
   title: Ikosaeder
   text: Das __Ikosaeder__ ist ein platonischer Körper, der aus 20 Dreiecken
-    besteht. Es hat 12 Eckpunkte und 30 Kanten.
+    besteht. Es hat 12 Ecken und 30 Kanten.
   link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
 
 infinity:
@@ -924,8 +924,8 @@ polygon-diagonal:
     verbindet, die nicht nebeneinander liegen.
 
 polygon-vertex:
-  title: Eckpunkt eines Vielecks
-  text: Die __Eckpunkte__ eines Vielecks sind die Punkte, an denen sich seine
+  title: Ecken eines Vielecks
+  text: Die __Ecken__ eines Vielecks sind die Punkte, an denen sich seine
     Seiten treffen.
 
 polyhedron:
