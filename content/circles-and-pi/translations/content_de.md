@@ -552,7 +552,7 @@ Abstand entlang des Umfangs
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")} Und so weiter: Diese Art der Winkelmessung wird als
-[__Radiant („Bogenmaß“)__](gloss:radians) bezeichnet (als Eselsbrücke könntest du dir “Radiusanteile” merken).
+[__Radiant („Bogenmaß“)__](gloss:radians) bezeichnet (als Eselsbrücke könntest du dir “Radanteile” für die Teile des Umfangs eines Rads merken).
 
 :::
 
