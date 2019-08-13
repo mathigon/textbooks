@@ -36,7 +36,7 @@ adjacent-angles:
 
 aleph-zero:
   title: Aleph Zero
-  text: Aleph Zero, written using the Hebrew letter `א‎_0`, is the cardinality of
+  text: Aleph Zero, written using the Hebrew letter א‎, is the cardinality of
     a countably infinite set (e.g. the natual numbers).
 
 algebraic-numbers:
@@ -110,7 +110,7 @@ arccos:
   title: Inverse Cosine
   text: |
     The __inverse cosine__ function is a trigonometric function written as
-    `arccos(x)` or `cos^(-1)(x)`. It is the inverse of `cos()`
+    `arccos(x)` or `cos^(-1)(x)`. It is the inverse of `cos(x)`.
   # Basic idea: To find cos-1 (½), we ask "what angle has cosine equal to ½?" The
   # answer is 60°. As a result we say cos-1 (½) = 60°. In radians this is
   # cos-1(½) = π/3. There are actually many angles that have cosine equal to ½.
@@ -551,7 +551,7 @@ factor:
 
 factorial:
   title: Factorial
-  text:
+  text: |
     The __factorial__ of a positive integer is the product of all integers
     up to and including itself. We write it using the exclamation point, for
     example
@@ -1540,7 +1540,7 @@ tangent:
 
 term:
   title: Term (Algebra)
-  text:
+  text: |
     The __terms__ are the parts of an algebraic expression or equation that
     are separated by + or – signs. They can be products or fractions or
     one or more numbers, variables or functions.
