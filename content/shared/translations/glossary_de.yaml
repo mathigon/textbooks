@@ -737,13 +737,6 @@ linear-function:
     Linie ist. Sie ist definiert durch `f(x) = kx + d`, wobei _k_ die Steigung
     der Linie und _d_ den Schnittpunkt mit der _y_-Achse festlegt.
 
-median:
-  title: Seitenhalbierende (Schwerlinien)
-  text: Die __Seitenhalbierenden__ eines Dreiecks sind die
-    Linien, die jeden Eckpunkt mit dem Mittelpunkt ihrer gegenüberliegenden
-    Seiten verbinden.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#medians
-
 midpoint:
   title: Mittelpunkt
   text: Der __Mittelpunkt__ einer Strecke ist der Punkt auf der Strecke, der sie
@@ -1391,6 +1384,13 @@ triangle-legs:
   title: Katheten eines Dreiecks
   text: Die beiden __Katheten__ eines rechtwinkligen Dreiecks sind die beiden
     kürzeren Seiten (nicht die _Hypotenuse_). Sie bilden den rechten Winkel.
+
+triangle-median:
+  title: Seitenhalbierende (Schwerlinien)
+  text: Die __Seitenhalbierenden__ eines Dreiecks sind die
+    Linien, die jeden Eckpunkt mit dem Mittelpunkt ihrer gegenüberliegenden
+    Seiten verbinden.
+  link: /course/triangles-and-trigonometry/properties-of-triangles#medians
 
 triangle-midsegment:
   title: Mittelparallele
