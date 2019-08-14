@@ -2,8 +2,8 @@
 
 ## Vielecke (Polygone)
 
-> id: polygons
 > section: polygons
+> id: polygons
 
 Ein [__Vieleck__](gloss:polygon) oder Polygon ist eine geschlossene,
 ebene Figur, die nur gerade Seiten hat. Vielecke können beliebig viele Seiten und Winkel haben, aber die Seiten dürfen nicht
@@ -77,7 +77,7 @@ Wir wissen bereits, dass die Summe der Innenwinkel in einem Dreieck immer
 _{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
 _{span.circled.green}${round(angle(d,c,b).deg)}°_ +
 _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
-    
+
     x-gesture(target="x-anibutton")
 
 ::: column.grow(width=300)
@@ -281,16 +281,16 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
 target("Gegenkathete", "apothem") / target("Ankathete", "half-base") =
-blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
+blank("Apothema", "s", "s/2") / blank("s/2", "s", "Apothema")`
 
-{.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
+{.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("Apothema", "yellow",
 "apothem") = 1/2 pill(s, "green", "base") × tan pill(α, "blue", "alpha") =
 var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Die Fläche des
 [gleichschenkligen Dreiecks](target:isosceles-triangle) ist somit
 
-{.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
+{.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "Basis" × "Höhe"
 = 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
 "yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
 
@@ -746,7 +746,7 @@ _{button.next-step} Weiter_
 [entsprechenden Winkel](target:angles) kongruent sein müssen.
 _{button.next-step} Weiter_
 
-{.reveal.r(when="next-1")} Das bedeutet z.B., dass die [Diagonale](target:d1)
+{.reveal.r(when="next-1")} Das bedeutet z.B., dass eine der [Diagonalen](target:d1)
 eine [[Winkelsymmetrale|Normale|Schwerlinie]] der [beiden Winkel](target:vAngle) an ihren
 Enden ist.
 _{button.next-step} Weiter_
@@ -1084,7 +1084,7 @@ Du hast vielleicht bemerkt, dass sich einige [regelmäßige Vielecke](gloss:regu
 ---
 > id: tessellation-regular-1
 
-Das hat mit der Größe ihrer [Innenwinkel](gloss:internal-angle)zu tun,
+Das hat mit der Größe ihrer [Innenwinkel](gloss:internal-angle) zu tun,
 mit deren Berechnung wir uns schon beschäftigt haben. An jedem [Eckpunkt](gloss:polygon-vertex) in
 dieser Parkettierung treffen sich die Innenwinkel mehrerer verschiedener Vielecke. Alle
 diese Winkel müssen zusammengezählt [[360°]] ergeben, sonst gibt
@@ -1389,42 +1389,42 @@ Objekt, das aus Vielecken besteht. Hier sind ein paar Beispiele:
     x-polyhedron(size=220 shape="StellatedDodecahedron")
 :::
 
-Polyhedra cannot contain curved surfaces – spheres and cylinders, for example,
-are not polyhedra.
+Polyeder können keine gekrümmten Oberflächen enthalten - Kugeln und Zylinder zum Beispiel
+sind keine Polyeder.
 
-The polygons that make up a polyhedron are called its [__faces__](gloss:polyhedron-face).
-The lines where two faces are connected are called [__edges__](gloss:polyhedron-edge),
-and the corners where the edges meet are called [__vertices__](gloss:polyhedron-vertex).
+Die Vielecke, aus denen ein Polyeder besteht, werden seine [__Flächen__](gloss:polyhedron-face) genannt.
+Die Strecken die zwei Flächen miteinander verbinden, werden [__Kanten__](gloss:polyhedron-edge),
+und die Punkte, an denen sich die Kanten treffen, werden [__Ecken__](gloss:polyhedron-vertex) genannt.
 
 ---
 > id: euler
 
-Polyhedra come in many different shapes and sizes – from simple cubes or
-pyramids with just a few faces, to complex objects like the star above, which
-has 60 triangular faces. It turns out, however, that _all_ polyhedra have one
-important property in common:
+Polyeder gibt es in vielen verschiedenen Formen und Größen - von einfachen Würfeln oder
+Pyramiden mit nur wenigen Flächen bis hin zu komplexen Objekten wie dem Stern oben, der 60 dreieckige Flächen
+hat. Es stellt sich jedoch heraus, dass _alle_ Polyeder eine
+wichtige Eigenschaft gemeinsam haben:
 
 ::: .theorem
-__Euler’s Polyhedron Formula__  
-In every polyhedron, the number of faces (_F_) plus the number of vertices (_V_)
-is two more than the number of edges (_E_). In other words,
+__Eulerscher Polyedersatz__  
+In jedem Polyeder ist die Anzahl der Flächen ("_F_") plus die Anzahl der Ecken ("_E_")
+um zwei größer als die Anzahl der Kanten ("_K_"). Anders ausgedrückt,
 
-{.text-center} `F + V = E + 2`
+{.text-center} `F + E = K + 2`
 :::
 
-For example, if a polyhedron has 12 faces and 18 vertices, we know that it must
-have [[28]] edges.
+Wenn ein Polyeder zum Beispiel 12 Flächen und 18 Ecken hat, wissen wir, dass es [[28]] Kanten
+haben muss.
 
 ---
 > id: euler-1
 
-This equation was discovered by the famous Swiss mathematician [Leonard
-Euler](bio:euler). It is true for any polyhedron, as long as it doesn’t contain
-any holes.
+Diese Gleichung wurde vom berühmten Schweizer Mathematiker [Leonard
+Euler](bio:euler) entdeckt. Sie gilt für jedes Polyeder, solange es
+keine Löcher enthält.
 
-If you try different polyhedra, like the ones above, you’ll find that Euler’s
-formula always works. In [a later course](/course/graphs-and-networks/eulers-formula)
-you’ll learn how to actually prove it mathematically.
+Wenn du das mit verschiedenen Polyedern, wie den oben aufgeführten, ausprobierst wirst du feststellen,
+dass der Satz von Euler immer funktioniert. In [einem späteren Kurs](/course/graphs-and-networks/eulers-formula)
+lernst du, wie du das auch mathematisch beweisen kannst.
 
 ---
 
@@ -1433,24 +1433,24 @@ you’ll learn how to actually prove it mathematically.
 > section: platonic-solids
 > id: platonic
 
-At the beginning of this course we defined [regular polygons](gloss:regular-polygon)
-as particularly “symmetric” polygons, where all sides and angles are the same.
-We can do something similar for polyhedra.
+Zu Beginn dieses Kurses haben wir [regelmäßige Vielecke](gloss:regular-polygon)
+ als besonders "symmetrische" Vielecke definiert, bei denen alle Seiten und Winkel gleich sind.
+Wir können etwas Ähnliches für Polyeder tun.
 
-In a _regular polyhedron_ all [faces](gloss:polyhedron-face) are all the same
-kind of regular polygon, and the same number of faces meet at every
-[vertex](gloss:polyhedron-vertex). Polyhedra with these two properties are
-called [__Platonic solids__](gloss:platonic-solid), named after the Greek
-philosopher [Plato](bio:plato).
+In einem _regelmäßigen Polyeder_ sind alle [Flächen](gloss:polyhedron-face) 
+regelmäßige Vielecke von derselben Art und an jeder
+[Ecke](gloss:polyhedron-vertex) trifft die gleiche Anzahl von Flächen aufeinander. Polyeder mit diesen beiden Eigenschaften werden als [__platonische Körper__](gloss:platonic-solid)
+ bezeichnet, benannt nach dem griechischen
+Philosophen [Platon](bio:plato).
 
-    //- The pyramid on the right of not a Platonic solid. It consists of two
+    //- Die Pyramide rechts von keinem platonischen Körper. It consists of two
     //- different kinds of polygons (squares and triangles), and it has [[4]]
     //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
-So what do the Platonic solids look like – and how many of them are there? To
-make a 3-dimensional shape, we need at least [[3]] faces to meet at every
-vertex. Let’s start systematically with the smallest regular polygon:
-equilateral triangles:
+Wie sehen also die platonischen Körper aus - und wie viele von ihnen gibt es? Um eine dreidimensionale Form zu
+erhalten, benötigen wir mindestens [[3]] Flächen, die sich an jeder
+Ecke treffen. Beginnen wir systematisch mit dem kleinsten regelmäßigen Polygon:
+gleichseitige Dreiecke:
 
 ---
 > id: platonic-tetrahedron
@@ -1464,10 +1464,10 @@ equilateral triangles:
     img(src="images/platonic/tetrahedron.svg" width=200 height=120)
 
 ::: column.grow
-If we create a polyhedron where three [equilateral triangles](gloss:equilateral-triangle)
-meet at every vertex, we get the shape on the left. It is called a
-__Tetrahedron__ and has [[4]] faces. _{.reveal(when="blank-0")}(“Tetra” means
-“four” in Greek)._
+Wenn wir ein Polyeder zusammensetzen, so dass an jeder Ecke drei [gleichseitige Dreiecke](gloss:equilateral-triangle)
+zusammentreffen, erhalten wir den Körper auf der linken Seite. Er wird als
+__Tetraeder__ bezeichnet und hat [[4]] Flächen. _{.reveal(when="blank-0")}("Tetra" bedeutet auf Griechisch
+"vier")._
 :::
 
 ---
@@ -1482,10 +1482,10 @@ __Tetrahedron__ and has [[4]] faces. _{.reveal(when="blank-0")}(“Tetra” mean
     img(src="images/platonic/octahedron.svg" width=200 height=120)
 
 ::: column.grow
-If four equilateral triangles meet at every vertex, we get a different Platonic
-solid. It is called the __Octahedron__ and has [[8]] faces.
-_{.reveal(when="blank-0")}(“Octa” means “eight” in Greek. Just like “Octagon”
-means 8-sided shape, “Octahedron” means 8-faced solid.)_
+Wenn sich an jeder Ecke vier gleichseitige Dreiecke treffen, erhalten wir einen anderen platonischen
+Körper. Er wird __Oktaeder__ genannt und hat [[8]] Flächen.
+_{.reveal(when="blank-0")}("Octa" bedeutet auf Griechisch "acht". So wie "Oktogon" eine 8-seitige Figur
+meint, meint "Oktaeder" einen 8-seitigen Körper.)_
 :::
 
 ---
@@ -1500,8 +1500,8 @@ means 8-sided shape, “Octahedron” means 8-faced solid.)_
     img(src="images/platonic/icosahedron.svg" width=200 height=120)
 
 ::: column.grow
-If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
-[[20]] faces. _{.reveal(when="blank-1")}(“Icosa” means “twenty” in Greek.)_
+Wenn sich an jeder Ecke [[5]] Dreiecke treffen, erhalten wir ein __Ikosaeder__. Es hat
+[[20]] Flächen. _{.reveal(when="blank-1")}("Icosa" bedeutet auf Griechisch "zwanzig".)_
 :::
 
 ---
@@ -1513,9 +1513,9 @@ If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
     img.reveal(when="blank-1" src="images/platonic/triangles-6.svg" width=200 height=120)
 
 ::: column.grow
-If [[six]] triangles meet at every vertex, something different happens: we
-simply get [[a tessellation|a quadrilateral|another Icosahedron]],
-_{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
+Wenn [[6]] Dreiecke an jeder Ecke zusammentreffen, geschieht etwas anderes: Wir erhalten nur [[
+eine Parkettierung|ein Viereck|einen anderen Ikosaeder]],
+_{span.reveal(when="blank-1")}anstelle eines dreidimensionalen Polyeders._
 :::
 
 ---
@@ -1527,12 +1527,12 @@ _{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
     img(src="images/platonic/triangles-7.svg" width=200 height=120)
 
 ::: column.grow
-And seven or more triangles at every vertex also don’t produce new polyhedra:
-there is not enough space around a vertex, to fit that many triangles.
+Und sieben oder mehr Dreiecke an jeder Ecke produzieren auch keine neuen Polyeder:
+Es gibt für so viele Dreiecke nicht genug Platz um eine Ecke herum.
 :::
 
-This means we’ve found [[three]] Platonic solids consisting of triangles. Let’s
-move on to the next regular polygon: squares.
+Das bedeutet, dass wir [[3]] platonische Körper gefunden haben, die aus Dreiecken bestehen. Kommen
+wir zum nächsten regelmäßigen Vieleck: Quadrate.
 
 ---
 > id: platonic-cube
@@ -1546,9 +1546,9 @@ move on to the next regular polygon: squares.
     img(src="images/platonic/cube.svg" width=200 height=120)
 
 ::: column.grow
-If [[three]] squares meet at every vertex, we get the __cube__. Just like dice,
-it has [[6]] faces. _{span.reveal(when="blank-1")}The cube is sometimes also
-called *Hexahedron*, after the Greek word “hexa" for “six”._
+Wenn [[3]] Quadrate an jeder Ecke zusammentreffen, erhalten wir einen __Würfel__. Genau wie ein Spielwürfel
+hat er [[6]] Flächen. _{span.reveal(when="blank-1")}Der Würfel wird manchmal auch *Hexaeder*
+genannt, nach dem griechischen Wort "hexa" für "sechs"._
 :::
 
 ---
@@ -1560,14 +1560,14 @@ called *Hexahedron*, after the Greek word “hexa" for “six”._
     img.reveal(when="blank-1" src="images/platonic/squares.svg" width=200 height=120)
 
 ::: column.grow
-If [[four]] squares meet at every vertex, we get [[another tessellation|a tetrahedron|another cube]].
-_{span.reveal(when="blank-1")}And like before, five or more squares also won’t work._
+Wenn sich an jeder Ecke [[4]] Quadrate treffen, erhalten wir eine [[ander Parkettierung|ein Tetraeder|einen weiteren Würfel]].
+_{span.reveal(when="blank-1")}Und wie zuvor funktioniert es auch hier mit fünf oder mehr Quadrate nicht._
 :::
 
 ---
 > id: platonic-dodecahedron
 
-Next, let’s try regular pentagons:
+Als nächstes versuchen wir es mit regelmäßigen Fünfecken (Pentagon):
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1578,8 +1578,8 @@ Next, let’s try regular pentagons:
     img(src="images/platonic/dodecahedron.svg" width=200 height=120)
 
 ::: column.grow
-If [[three]] pentagons meet at every vertex, we get the __Dodecahedron__. It has
-[[12]] faces. _{.reveal(when="blank-1")} (“Dodeca” means “twelve” in Greek.)_
+Wenn [[3]] Fünfecke an jeder Ecke zusammentreffen, erhalten wir ein __Dodekaeder__. Es hat
+[[12]] Flächen. _{.reveal(when="blank-1")} ("Dodeca" bedeutet auf Griechisch "zwölf".)_
 :::
 
 ---
@@ -1591,14 +1591,14 @@ If [[three]] pentagons meet at every vertex, we get the __Dodecahedron__. It has
     img(src="images/platonic/pentagons.svg" width=200 height=120)
 
 ::: column.grow
-Like before, four or more pentagons [[don’t work|are possible]] because there is
-not enough space.
+Wie zuvor sind vier oder mehr Fünfecke [[nicht möglich|möglich]], weil
+nicht genügend Platz vorhanden ist.
 :::
 
 ---
 > id: platonic-hexagons
 
-The next regular polygon to try are hexagons:
+Das nächste regelmäßige Vieleck, das wir untersuchen wollen ist das Sechseck (Hexagon):
 
 ::: column(width=120 parent="padded-thin")
 ::: column(width=200)
@@ -1606,80 +1606,80 @@ The next regular polygon to try are hexagons:
     img.reveal(when="blank-0" src="images/platonic/hexagons.svg" width=200 height=120)
 
 ::: column.grow
-If three hexagons meet at every vertex, we immediately get a [[tessellation|polyhedron|hexahedron]].
-_{span.reveal(when="blank-0")} Since there is no space for more than three, it
-seems like there are no Platonic solids consisting of hexagons._
+Wenn an jeder Ecke drei Sechsecke zusammentreffen, erhalten wir sofort [[eine Parkettierung|ein Polyeder|ein Hexaeder]].
+_{span.reveal(when="blank-0")} Da es keinen Platz für mehr als drei gibt,
+scheint es keine platonischen Körper aus Sechsecken zu geben._
 :::
 
 ---
 > id: platonic-final
 
-The same also happens for all regular polygons with more than six sides. They
-don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
+Dasselbe gilt auch für alle regelmäßigen Vielecke mit mehr als sechs Seiten. Sie
+lassen sich nicht zu einer Parkettierung zusammenfügen und man erhält schon gar keine dreidimensionalen Polygone.
 
-This means that there are just [[five]] Platonic solids! Let’s have a look at
-all of them together:
+Das bedeutet, dass es nur [[5]] platonische Körper gibt! Schauen wir uns
+alle auf einmal an:
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
-__Tetrahedron__
+__Tetraeder__
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual}[[4]] Faces_  
-_{span.dual}[[4]] Vertices_  
-_{span.dual}[[6]] Edges_
+_{span.dual}[[4]] Flächen_  
+_{span.dual}[[4]] Ecken_  
+_{span.dual}[[6]] Kanten_
 
 ::: column.grow.text-center(width=120)
-__Cube__
+__Würfel__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")}[[6]] Faces_  
-_{span.dual(target="dual1")}[[8]] Vertices_  
-_{span.dual}[[12]] Edges_
+_{span.dual(target="dual1")}[[6]] Flächen_  
+_{span.dual(target="dual1")}[[8]] Ecken_  
+_{span.dual}[[12]] Kanten_
 
 ::: column.grow.text-center(width=120)
-__Octahedron__
+__Oktaeder__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")}[[8]] Faces_  
-_{span.dual(target="dual1")}[[6]] Vertices_  
-_{span.dual}[[12]] Edges_
+_{span.dual(target="dual1")}[[8]] Flächen_  
+_{span.dual(target="dual1")}[[6]] Ecken_  
+_{span.dual}[[12]] Kanten_
 
 ::: column.grow.text-center(width=120)
-__Dodecahedron__
+__Dodekaeder__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")}[[12]] Faces_  
-_{span.dual(target="dual2")}20 Vertices_  
-_{span.dual}30 Edges_
+_{span.dual(target="dual2")}[[12]] Flächen_  
+_{span.dual(target="dual2")}20 Ecken_  
+_{span.dual}30 Kanten_
 
 ::: column.grow.text-center(width=120)
-__Icosahedron__
+__Ikosaeder__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")}[[20]] Faces_  
-_{span.dual(target="dual2")}12 Vertices_  
-_{span.dual}30 Edges_
+_{span.dual(target="dual2")}[[20]] Flächen_  
+_{span.dual(target="dual2")}12 Ecken_  
+_{span.dual}30 Kanten_
 :::
 
-{.reveal(when="blank-3 blank-4 blank-6 blank-7 blank-9 blank-10")} Notice how
-the number of faces and vertices are [[swapped around|the same]] for [cube and
-octahedron](target:dual1), as well as [dodecahedron and icosahedron](target:dual2),
-while the number of edges [[stays the same|are different]]. These pairs of
-Platonic solids are called [__dual solids__](gloss:polyhedron-dual).
+{.reveal(when="blank-3 blank-4 blank-6 blank-7 blank-9 blank-10")} Beachte, dass
+die Anzahl der Flächen und Ecken bei [Würfeln und
+Oktaedern](target:dual1) sowie bei [Dodekaedern und Ikosaedern](target:dual2) [[vertauscht wird|gleich ist]],
+während die Anzahl der Kanten bei beiden [[gleich bleibt|unterschiedlich ist]]. Diese Paare
+platonischer Körper werden als [__duale Körper__](gloss:polyhedron-dual) bezeichnet.
 
 ---
 > id: platonic-dual
 
-We can turn a polyhedron into its dual, by “replacing” every face with a vertex,
-and every vertex with a face. These animations show how:
+Wir können ein Polyeder in sein Dual verwandeln, indem wir jede Fläche durch eine Ecke
+und jede Ecke durch eine Fläche "ersetzen". Diese Animationen zeigen, wie das abläuft:
 
 ::: column(width=300)
 
@@ -1693,218 +1693,218 @@ and every vertex with a face. These animations show how:
 
 :::
 
-The tetrahedron is dual with itself. Since it has the same number of faces and
-vertices, swapping them wouldn’t change anything.
+Das Tetraeder ist dual mit sich selbst. Da es die gleiche Anzahl von Flächen und
+Eckpunkten hat, würde das Austauschen nichts ändern.
 
 ---
 > id: platonic-elements
 
-[Plato](bio:plato) believed that all matter in the Universe consists of four
-elements: Air, Earth, Water and Fire. He thought that every element correspond
-to one of the Platonic solids, while the fifth one would represent the universe
-as a whole. Today we know that there are more than 100 different elements which
-consist of spherical atoms, not polyhedra.
+[Platon](bio:plato) glaubte, dass die ganze Materie im Universum aus vier
+Elementen besteht: Luft, Erde, Wasser und Feuer. Er dachte, dass jedes Element einem der platonischen Körper entspricht,
+während das fünfte das Universum
+als Ganzes darstellen würde. Heute wissen wir, dass es mehr als 100 verschiedene Elemente gibt, die aus kugeligen Atomen und nicht aus Polyedern
+bestehen.
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
-      p.caption Images from Johannes Kepler’s book “Harmonices Mundi” (1619)
+      p.caption Bilder aus Johannes Keplers Buch "Harmonices Mundi" (1619)
 
 ---
 
-## More on Polyhedra
+## Mehr zu Polyedern
 
 > section: more-on-polyhedra
 > id: archimedean
 > title: Archimedean Solids
 
-Platonic solids are particularly important polyhedra, but there are countless
-others.
+Platonische Körper sind besonders wichtige Polyeder, aber es gibt unzählige
+andere.
 
-[__Archimedean solids__](gloss:archimedean-solid), for example, still have to be
-made up of [regular polygons](gloss:regular-polygon), but you can use multiple
-different types. They are named after another Greek mathematician, [Archimedes
-of Syracuse](bio:archimedes), and there are 13 of them:
+[__Archimedische Körper__](gloss:archimedean-solid) zum Beispiel müssen auch aus [regelmäßigen Vielecken](gloss:regular-polygon)
+bestehen, aber man kann dabei mehrere
+unterschiedliche Arten verwenden. Sie sind nach einem anderen griechischen Mathematiker, [Archimedes
+von Syrakus](bio:archimedes), benannt, und es gibt 13 von ihnen:
 
 ::: column(width=170 parent="padded-thin")
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
     
-{.caption} __Truncated Tetrahedron__  
-8 faces, 12 vertices, 18 edges
+{.caption} __Tetraederstumpf__  
+8 Flächen, 12 Ecken,  18 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Cuboctahedron")
 
-{.caption} __Cuboctahedron__  
-14 faces, 12 vertices, 24 edges
+{.caption} __Kuboktaeder__  
+14 Flächen, 12 Ecken, 24 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __Truncated Cube__  
-14 faces, 24 vertices, 36 edges
+{.caption} __Hexaederstumpf__  
+14 Flächen, 24 Ecken, 36 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __Truncated Octahedron__  
-14 faces, 24 vertices, 36 edges
+{.caption} __Oktaederstumpf__  
+14 Flächen, 24 Ecken, 36 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __Rhombicuboctahedron__  
-26 faces, 24 vertices, 48 edges
+{.caption} __Rhombenkuboktaeder__  
+26 Flächen, 24 Ecken, 48 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Truncated Cuboctahedron__  
-26 faces, 48 vertices, 72 edges
+{.caption} __Kuboktaederstumpf__  
+26 Flächen, 48 Ecken, 72 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __Snub Cube__  
-38 faces, 24 vertices, 60 edges
+{.caption} __Abgeschrägtes Hexaeder__  
+38 Flächen, 24 Ecken, 60 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
-{.caption} __Icosidodecahedron__  
-32 faces, 30 vertices, 60 edges
+{.caption} __Ikosidodekaeder__  
+32 Flächen, 30 Ecken, 60 Kanten
 ::: column(width=170)
-    x-polyhedron(size=170 shape="TruncatedDodecahedron")
+    x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Truncated Dodecahedron__  
-32 faces, 60 vertices, 90 edges
+{.caption} __Dodekaederstumpf__  
+32 Flächen, 60 Ecken, 90 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __Truncated Icosahedron__  
-32 faces, 60 vertices, 90 edges
+{.caption} __Ikosaederstumpf__  
+32 Flächen, 60 Ecken, 90 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __Rhombicosidodecahedron__  
-62 faces, 60 vertices, 120 edges
+{.caption} __Rhombenikosidodekaeder__  
+62 Flächen, 60 Ecken, 120 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __Truncated Icosidodecahedron__  
-62 faces, 120 vertices, 180 edges
+{.caption} __Ikosidodekaederstumpf__  
+62 Flächen, 120 Ecken, 180 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __Snub Dodecahedron__  
-92 faces, 60 vertices, 150 edges
+{.caption} __abgeschrägtes Dodekaeder__  
+92 Flächen, 60 Eckpunkte, 150 Kanten
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
+    // Prismen und Antiprismen, deren Symmetriegruppen die Diedergruppen sind, werden im
+    // Allgemeinen nicht als archimedische Körper betrachtet, obwohl sie die
+    // obige Definition erfüllen.
 
 ---
 > id: polyhedra-applications
 
-### Applications of Polyhedra
+### Anwendungen von Polyedern
 
-Plato was wrong in believing that all elements consists of Platonic solids. But
-regular polyhedra have many special properties that make them appear elsewhere
-in nature – and we can copy these properties in science and engineering.
+Platon hatte Unrecht, als er glaubte, dass alle Elemente aus platonischen Körpern bestehen. Aber
+regelmäßige Polyeder haben viele besondere Eigenschaften, die an anderer
+Stelle in der Natur zum Vorschein kommen - und wir können diese Eigenschaften in Wissenschaft und Technik kopieren.
 
 ::: column(width=180)
 
     x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
-    p.caption Radiolaria skeleton
+    p.caption Skelett eines Strahlentierchens
     
 ::: column(width=180)
 
     x-media(lightbox width=180 height=180 src="images/virus.jpg")
-    p.caption Icosahedral virus
+    p.caption Ikosaedrisches Virus
 
 ::: column.grow
-Many __viruses__, __bacteria__ and other small __organisms__ are shaped like
-[icosahedra](gloss:icosahedron). Viruses, for example, must enclose their
-genetic material inside a shell of many identical protein units. The icosahedron
-is the most efficient way to do this, because it consists of a few regular
-elements but is almost shaped like a sphere.
+Viele __Viren__, __Bakterien__ und andere kleine __Organismen__ haben die Form von
+[Ikosaedern](gloss:icosahedron). So müssen beispielsweise Viren ihr
+Erbgut in eine Hülle aus vielen identischen Proteineinheiten einschließen. Das Ikosaeder
+ist der effizienteste Weg, da es aus wenigen regelmäßigen
+Elementen besteht, aber fast wie eine Kugel geformt ist.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
-    p.caption Buckyball molecule
+    p.caption Fulleren-Moleküle
       
 ::: column(width=180)
 
     x-media(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
-    p.caption Montreal Biosphere
+    p.caption Biosphère Montreal
       
 ::: column.grow
-Many __molecules__ are shaped like regular polyhedra. The most famous example is
-`C_60` which consists of 60 carbon atoms arranged in the shape of a [Truncated
-Icosahedron](gloss:truncated-icosahedron).
+Viele __Moleküle__ sind wie regelmäßige Polyeder geformt. Das bekannteste Beispiel ist
+`C_60`, das aus 60 Kohlenstoffatomen besteht, die in Form eines
+[Ikosaederstumpfs](gloss:truncated-icosahedron) angeordnet sind.
 
-It was discovered in 1985 when scientists researched interstellar dust. They
-named it “Buckyball” (or Buckminsterfullerene) after the architect [Buckminster
-Fuller](bio:fuller), famous for constructing similar-looking buildings.
+Es wurde 1985 entdeckt, als Wissenschaftler interstellaren Staub erforschten. Sie
+nannten es "Buckyball" (oder Buckminsterfullerene) nach dem Architekten [Buckminster
+Fuller](bio:fuller), der für den Bau ähnlich aussehender Gebäude bekannt ist.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
-    p.caption Fluorite octahedron
+    p.caption Fluorit-Oktaeder
       
 ::: column(width=180)
 
     x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
-    p.caption Pyrite cube
+    p.caption Pyritwürfel
       
 ::: column.grow
-Most __crystals__ have their atoms arranged in a regular grids consisting of
-[tetrahedra](gloss:tetrahedron), [cubes](gloss:cube) or [octahedra](gloss:octahedron).
-When they crack or shatter, you can see these shapes on a larger scale.
+Die meisten __Kristalle__ haben ihre Atome in einem regelmäßigen Gitter angeordnet, das aus
+[Tetraedern](gloss:tetrahedron), [Würfeln](gloss:cube) oder [Oktaedern](gloss:octahedron) besteht.
+Wenn sie abbrechen oder zerspringen, kannst du diese Formen in größerem Maßstab sehen.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
-    p.caption Octagonal space frames
+    p.caption Achteckige Gitterrahmen
 
 ::: column(width=180)
 
     x-media(lightbox width="180", height="180", src="images/louvre.jpg")
-    p.caption Louvre museum in Paris
+    p.caption Louvre-Museum in Paris
 
 ::: column.grow
-Tetrahedra and octahedra are incredibly rigid and stable, which makes them very
-useful in __construction__. _Space frames_ are polygonal structures that can
-support large roofs and heavy bridges.
+Tetraeder und Oktaeder sind unglaublich steif und stabil, weshalb sie sehr
+oft für __Konstruktionen__ verwendet werden. _Gitterrahmen_ sind vieleckige Konstruktionen, die große Dächer und schwere Brücken
+tragen können.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox width="180", height="180", src="images/football.jpg")
-    p.caption Football
+    p.caption Fußball
     
 ::: column(width=180)
 
     x-media(lightbox width="180", height="180", src="images/dice.jpg")
-    p.caption Polygonal role-playing dice
+    p.caption Mehrseitige Würfel
 
 ::: column.grow
-Platonic solids are also used to create __dice__. because of their summetry,
-every side has the [probability](gloss:probability) of landing facing up – so
-the dice are fair.
+Platonische Körper werden auch verwendet, um __Würfel__ zu machen. Aufgrund ihrer Symmetrie hat
+jede Seite die gleiche [Wahrscheinlichkeit](gloss:probability), mit dem Gesicht nach oben zu landen - also sind
+Würfel immer fair.
 
-The [Truncated Icosahedron](gloss:truncated-icosahedron) is probably the most
-famous polyhedron in the world: it is the shape of the football.
+Der [Ikosaederstumpf](gloss:truncated-icosahedron) ist wahrscheinlich der
+berühmteste Polyeder der Welt: Er hat die Form eines Fußballs.
 :::
 
 ---
 
-## Nets and Cross Sections
+## Netze und Querschnitte
 
 > section: nets-and-cross-sections
 > id: nets
 > sectionStatus: dev
 
-Our entire world is 3-dimensional – but it is often much easier to draw or
-visualise flat, 2-dimensional objects. And there are a few different ways to
-view 3-dimensional polyhedra in a 2-dimensional way.
+Unsere ganze Welt ist 3-dimensional - aber es ist oft viel einfacher, flache, 2-dimensionale Objekte zu zeichnen oder zu
+visualisieren. Und es gibt einige verschiedene Möglichkeiten, dreidimensionale Polyeder zweidimensional zu
+betrachten.
 
     //- x-folding(shape="Tetrahedron" size=400)
     //- x-folding(shape="Cube" size=400)
@@ -1912,12 +1912,12 @@ view 3-dimensional polyhedra in a 2-dimensional way.
     //- x-folding(shape="Dodecahedron" size=400)
     //- x-folding(shape="Icosahedron" size=400)
 
-{.todo} COMING SOON!
+{.todo} KOMMT BALD!
 
-    //- Which of these nets makes a cube
-    //- Match the net to the object
-    //- https://github.com/polymake/matchthenet
-    //- Drawing Nets
+    //- Welches dieser Netze bildet einen Würfel
+    //- Das Netz dem Objekt zuordnen 
+    //- https://github.com/polymake/matchthenet 
+    //- Netze zeichnen
 
     //- Describe the cross section formed by the intersection of the plane and the solid.
 
