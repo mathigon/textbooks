@@ -3,6 +3,7 @@
 ## Einführung
 
 > id: intro
+> section: introduction
 
 ::: column.grow
 Zu Beginn des 19. Jahrhunderts hatten die Forscher den größten Teil der Welt entdeckt. Handel und
@@ -71,9 +72,11 @@ Technik von grundlegender Bedeutung.
 :::
 
 ---
-> id: angle-sum
 
 ## Eigenschaften von Dreiecken
+
+> id: angle-sum
+> section: properties-of-triangles
 
 Fangen wir ganz einfach an: Ein Dreieck ist eine geschlossene Figur mit drei Seiten (die [Strecken](gloss:line-segment)
 sind) und drei Eckpunkten (die
@@ -482,10 +485,12 @@ so lang wie diese Seite.
 :::
 
 ---
-> id: triangle-inequality
-> goals: s0 s1 s3 s5
 
 ## Die Dreiecksungleichung
+
+> id: triangle-inequality
+> section: the-triangle-inequality
+> goals: s0 s1 s3 s5
 
 Nachdem wir viele der Eigenschaften und Komponenten von Dreiecken untersucht haben,
 wollen wir uns jetzt Gedanken darüber machen, wie Dreiecke _aufgebaut_ sind. Wenn ich dir zB. jetzt drei Zahlen vorgebe, kannst
@@ -610,10 +615,12 @@ Beachte, dass es sich hierbei um _strikte_ Ungleichheiten handelt. Wenn die drit
 genügen, um ein Dreieck zu bilden.
 
 ---
-> id: sss-construction
-> goals: draw-base draw-c1 draw-c2
 
 ## Kongruente Dreiecke
+
+> id: sss-construction
+> section: triangles-congruence
+> goals: draw-base draw-c1 draw-c2
 
 Nun, da wir überprüfen können, ob drei Seiten ein Dreieck bilden können, wollen wir darüber nachdenken, wie
 wir tatsächlich ein Dreieck mit diesen Seitenlängen _konstruieren_ könnten.
@@ -848,10 +855,11 @@ Winkel von 50° haben. SSW ist also nicht ausreichend, um zu sicherzustellen, da
 :::
 
 ---
-> id: pythagoras
-> class: no-border
 
 ## Der Satz des Pythagoras 
+
+> id: pythagoras
+> section: pythagoras-theorem
 
 Wir sind nun an einem wichtigen Punkt in der Geometrie angelangt - wir sind in der Lage, einen der berühmtesten [Lehrsätze](gloss:theorem) der gesamten
 Mathematik zu formulieren und zu
@@ -1279,10 +1287,12 @@ Verteilung dieser Punkte?
     // Und schon haben wir ein Pythagoräisches Tripel! Du kannst überprüfen, ob a2 + b2 = c2.
 
 ----
-> id: isosceles
-> sectionStatus: dev
 
 ## Gleichschenklige und gleichseitige Dreiecke
+
+> id: isosceles
+> section: isosceles-and-equilateral
+> sectionStatus: dev
 
 Neben den rechtwinkligen Dreiecken gibt es noch einige andere Dreiecke mit
 besonderen Eigenschaften. In diesem Abschnitt werden wir uns einige davon ansehen.
@@ -1343,9 +1353,11 @@ equilateral triangle using straight-edge and compass.
 {.todo} COMING SOON – Area of an equilateral triangle
 
 ----
-> id: trigonometry
 
 ## Trigonometrie
+
+> id: trigonometry
+> section: trigonometry
 
 Bisher haben wir Beziehungen zwischen den __Winkeln__ von Dreiecken (z.B. summieren
 sie sich immer auf 180°) und Beziehungen zwischen den __Seiten__ von Dreiecken
@@ -1671,10 +1683,11 @@ for the curvature of Earth.
     figure: x-media(src="images/himalaya.jpg" width=760 height=320)
 
 ---
-> id: applications
-> class: no-border
 
 ## Anwendungen
+
+> id: applications
+> section: applications
 
 Dreiecke und Trigonometrie sind nicht nur für die Messung der Höhe von
 Bergen nützlich. Die Werkzeuge und Konzepte, die du hier gelernt hast, sind in
