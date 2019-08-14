@@ -12,8 +12,8 @@ _genauer Karten_ des gesamten Planeten mit sich brachte.
 
 Heute haben wir Satelliten, die Fotos von oben machen können - aber vor 200 Jahren war die
 Erstellung von Karten eine schwierige und zeitraubende Aufgabe. Sie wurde von
-Mathematikern wie [Radhanath Sikdar](bio:sikdar)bewerkstelligt, die an
-der _Große Trigonometrische Vermessung_ arbeiteten: einem jahrhundertelangem Projekt zur Vermessung
+Mathematikern wie [Radhanath Sikdar](bio:sikdar) bewerkstelligt, die an
+der _Großen Trigonometrischen Vermessung_ arbeiteten: einem jahrhundertelangem Projekt zur Vermessung
 ganz Indiens,einschließlich des Himalaya-Gebirges.
 
 ::: column(width=240)
@@ -38,8 +38,8 @@ _{button.next-step} Weiter_
 {.r.reveal(when="next-0")} Kletterer verwenden _Höhenmesser_, um ihre Höhe zu bestimmen,
 indem sie den Luftdruckunterschied in verschiedenen Höhen nutzen. Allerdings
 hätte man dafür jemanden tatsächlich auf die [Spitze jedes
-Berges] (->.mountain-top) klettern lassen müssen - eine extrem schwierige Aufgabe, die erst
-ein Jahrhundert später umgesetzt wurde
+Berges](->.mountain-top) klettern lassen müssen - eine extrem schwierige Aufgabe, die erst
+ein Jahrhundert später umgesetzt wurde.
 _{button.next-step} Weiter_
 
 {.r.reveal(when="next-1")} Du könntest auch versuchen, ähnliche Dreiecke zu verwenden, wie wir
@@ -47,7 +47,7 @@ es im [vorherigen Kurs](/course/transformations-and-symmetry/similarity) gemacht
 diese Methode erfordert die Kenntnis des [Abstands](->.mountain-distance) zur [Basis
 des Bergers](->.mountain-base): der Punkt auf Meereshöhe, der direkt unter
 seinem Gipfel liegt. Wir können das bei Bäumen oder hohen Gebäuden so machen, aber für Berge ist dieser
-Punkt unter Hunderten von Metern Felsen verborgen
+Punkt unter Hunderten von Metern Felsen verborgen.
 _{button.next-step} Weiter_
 
 ---
@@ -62,7 +62,7 @@ Mount Everest erreichten.
 
 ::: column.grow
 Aber es gibt fortgeschrittenere geometrische Techniken,
-mit denen [Radhanath](bio:sikdar) den höchsten Berg der Erde entdeckte: Er heißt heute _Mount Everest_.
+mit denen [Radhanath](bio:sikdar) den höchsten Berg der Erde entdeckte: Er wird heute _Mount Everest_ genannt.
 Seine Messungen wichen nur um wenige Meter von der heutigen offiziellen Höhe von 8848 Metern ab.
 
 In diesem Kurs lernst du viele verschiedene Merkmale und Eigenschaften von
@@ -123,7 +123,7 @@ hat einen [stumpfen Winkel](gloss:obtuse-angle).
       path(x="polygon(a3,b3,c3)")
 
 {.caption} Ein __spitzwinkliges Dreieck__  
-hat [[3]][spitze Winkel](gloss:acute-angle).
+hat [[3]] [spitze Winkel](gloss:acute-angle).
 :::
 
 ---
@@ -134,7 +134,7 @@ Aus Gründen der Übersichtlichkeit beschriften wir Dreiecke immer auf die gleic
 mit Großbuchstaben [_A_, _B_ und _C_](target:vertex), die Seiten mit Kleinbuchstaben [_a_, _b_ und _c_](target:side) und die Winkel
 mit griechischen Buchstaben [`α`, `β` and `γ`](target:angle) (“alpha”, “beta” und
 “gamma”)
- bezeichnet.
+bezeichnet.
  
 Die [Seite, die _gegenüber_ dem Eckpunkt _A ]_(target:X) liegt, ist mit _a_, und der
 [Winkel, der direkt bei _A_](target:Y) anliegt, mit `α` bezeichnet. Auf dieselbe Art und Weise
@@ -158,7 +158,7 @@ verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 > id: medians
 > goals: s0 s1 s2 move
 
-### Schwerlinien
+### Seitenhalbierende (Schwerlinien) 
 
 ::: column(width=300)
 
@@ -182,17 +182,17 @@ verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 Hier siehst du ein Dreieck sowie die [Mittelpunkte](gloss:midpoint) seiner
 drei Seiten.
 
-Eine [__Schwerlinie__](gloss:triangle-median)eines Dreiecks ist eine Strecke, die einen Eckpunkt
-mit dem Mittelpunkt der gegenüberliegenden Seite verbindet. Zeichne die drei Schwerlinien dieses Dreiecks.
-_{span.reveal(when="s0 s1 s2")}Was passiert, wenn du die Eckpunkte des
-Dreiecks verschiebst?_
+Eine [__Seitenhalbierende__](gloss:triangle-median) eines Dreiecks ist eine Strecke, die einen Eckpunkt
+mit dem Mittelpunkt der gegenüberliegenden Seite verbindet. Zeichne die drei Seitenhalbierenden dieses
+Dreiecks. _{span.reveal(when="s0 s1 s2")}Was passiert, wenn du die Eckpunkte
+des Dreiecks verschiebst?_
 
-{.reveal(when="move")} Es scheint, dass sich die Schwerlinien immer [[in einem
-Punkt schneiden|auf gleiche Größe anpassen|gegenseitig halbieren]].
+{.reveal(when="move")} Es scheint, dass sich die Seitenhalbierenden immer [[in einem
+Punkt schneiden|als gleich groß herausstellen|gegenseitig halbieren]].
 _{span.reveal(when="blank-0")}Dieser Punkt wird als
 [__Schwerpunkt__](gloss:centroid)bezeichnet._
 
-{.reveal(when="blank-0")} Schwerlinien teilen sich immer im
+{.reveal(when="blank-0")} Schwerlinien (Seitenhalbierende) teilen sich immer im
 [Verhältnis 2:1](target:ratio). Für jede der drei Schwerlinien ist der Abstand vom
 Eckpunkt zum Schwerpunkt immer [[zweimal|dreimal|genau]] so lang wie der
 Abstand vom Schwerpunkt zum Mittelpunkt der Seite.
@@ -203,7 +203,7 @@ Abstand vom Schwerpunkt zum Mittelpunkt der Seite.
 > goals: move
 
 Der Schwerpunkt ist auch der “Balancierpunkt” eines Dreiecks. Zeichne ein Dreieck auf
-einen Karton, schneide es aus und finde die drei Schwerlinien. Wenn du genau gearbeitet hast,
+einen Karton, schneide es aus und finde die drei Seitenhalbierenden (Schwerlinien). Wenn du genau gearbeitet hast,
 kannst du das Dreieck nun auf der Bleistiftspitze ausbalancieren oder es ganz
 waagrecht an einem Stück Schnur aufhängen, die an seinem Schwerpunkt befestigt ist:
 
@@ -259,7 +259,7 @@ Erinnere dich, dass die [Streckensymmetrale](gloss:perpendicular-bisector) einer
 ist, die durch [[ihren Mittelpunkt|ihre Endpunkte]] verläuft.
 
 {.reveal(when="blank-0")}Zeichne die Streckensymmetrale aller drei Seiten dieses
-Dreiecks. _{.lgrey}Um die Streckensymmetrale einer Seite des Dreiecks zu
+Dreiecks. _{.lgrey} Um die Streckensymmetrale einer Seite des Dreiecks zu
 zeichnen, klicke auf einen Eckpunkt und ziehe ihn einfach zum anderen Endpunkt der Seite._
 
 {.reveal(when="s0 s1 s2")} Wie zuvor schneiden sich die drei Streckensymmetralen in einem
@@ -318,9 +318,9 @@ was das Besondere am Schnittpunkt der Geraden ist.
 
 ::: column.grow
 Erinnere dich, dass die [Winkelsymmetrale](gloss:angle-bisector) einen Winkel genau
-in der Mitte teilt. Zeichne die Winkelsymmetrale der drei Winkel in diesem Dreieck.
-_{.lgrey}Um eine Winkelsymmetrale zu zeichnen, musst du auf die drei Punkte klicken, die den Winkel bilden,
-den du halbieren möchtest._
+in der Mitte teilt. Zeichne die Winkelsymmetrale aller drei Winkel dieses Dreiecks.
+_{.lgrey} Um einen Winkelhalbierenden zu zeichnen, musst du auf die drei Punkte klicken, die den Winkel bilden
+, den du halbieren möchtest._
 
 {.r.reveal(when="s0 s1 s2")} Auch hier schneiden sich alle drei Linien in einem Punkt.
 Du hast so etwas wahrscheinlich erwartet, aber es ist wichtig zu beachten, dass
@@ -355,9 +355,9 @@ etwas weniger offensichtlich. Beginnen wir damit, ein “passgenaues” Rechteck
 _{button.next-step} Weiter_
 
 {.reveal.r(when="next-0")} Die Länge des Rechtecks ist gleich der Länge der
-[Unterseite](target:base) des Dreiecks (die als __Basis__bezeichnet wird). Die
+[unteren Seite](target:base) des Dreiecks (die als __Grundseite (Basis)__ bezeichnet wird). Die
 Höhe des Rechtecks ist der [senkrechte Abstand](target:height) von der
-Basis zum gegenüberliegenden Eckpunkt
+Basis zum gegenüberliegenden Eckpunkt.
 _{button.next-step} Weiter_
 
 {.reveal(when="next-1")} Die Höhe teilt das Dreieck in zwei Teile. Beachte,
@@ -365,7 +365,7 @@ dass die [zwei Lücken im Rechteck](target:gap) genau so groß sind wie die beid
 entsprechenden Teile des Dreiecks. Das bedeutet, dass das Rechteck
 [[doppelt|dreimal|genau]] so groß wie das Dreieck ist.
 
-{.reveal(when="blank-0")}Wir können die Fläche des Rechtecks leicht herausbekommen, und
+{.reveal(when="blank-0")} Wir können die Fläche des Rechtecks leicht herausbekommen, und
 die Fläche des Dreiecks muss dann also halb so groß sein:
 
 {.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.step-target.pill.red} Basis](target:base)
@@ -388,9 +388,9 @@ die Fläche des Dreiecks muss dann also halb so groß sein:
       
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
-      path.blue.reveal(x="segment(c,d)" label="height" when="next-0" delay="1000" target="height")
+      path.blue.reveal(x="segment(c,d)" label="Höhe" when="next-0" delay="1000" target="height")
       path.blue.reveal(x="angle(c,d,b).sup" when="next-0" delay="1000" target="height")
-      path.red.reveal(x="segment(a,b)" label="base" when="next-0" delay="1000" target="base")
+      path.red.reveal(x="segment(a,b)" label="Basis" when="next-0" delay="1000" target="base")
 
 :::
 
@@ -421,7 +421,7 @@ __Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die St
       circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
-Wie die [Schwerlinien](gloss:triangle-median), [Streckensymmetralen](gloss:perpendicular-bisector)
+Wie die [Seitenhalbierenden (Schwerlinien)](gloss:triangle-median), [Streckensymmetralen](gloss:perpendicular-bisector)
 und [Winkelsymmetralen](gloss:angle-bisector)
 schneiden sich auch die drei Höhen eines Dreiecks in einem einzigen Punkt. Dieser wird als [__Höhenschnittpunkt__](target:center)
 des Dreiecks bezeichnet.
@@ -461,7 +461,7 @@ Höhen sind eigentlich nur Seiten des Dreiecks.
       path.transparent.fill.red(x="polygon(a,b,c)" target="large")
 
 ::: column.grow
-Eine [__Mittelparallele]__(gloss:triangle-midsegment) ist eine Strecke, die die
+Eine [__Mittelparallele__](gloss:triangle-midsegment) ist eine Strecke, die die
 Mittelpunkte zweier Seiten eines Dreiecks miteinander verbindet. Zeichne die drei Mittelparallelen dieses
 Dreiecks.
 
@@ -469,10 +469,10 @@ Dreiecks.
 in [vier kleinere Dreiecke](target:triangles).
 
 {.reveal(when="s0 s1 s2")} Es stellt sich heraus, dass alle diese kleineren Dreiecke
-[[kongruent|überlappend|verschieden groß]] sind - auch das umgedrehte in der
-Mitte_{span.reveal(when="blank-0")} - und dass sie alle [[ähnlich|kongruent]]
- zum [ursprünglichen Dreieck](target:large) sind,_ _{span.reveal(when="blank-1")}mit einem
-Skalierungsfaktor von `1/2`_.
+[[kongruent|überlappend|verschieden groß]] sind- sogar das umgedrehte in der
+Mitte. _{span.reveal(when="blank-0")} Sie sind auch alle [[ähnlich|kongruent]]
+zum [ursprünglichen Dreieck](target:large),_ _{span.reveal(when="blank-1")}mit einem
+Verkleinerungsfaktor von `1/2`._
 
 {.reveal(when="blank-1")} Das erlaubt es uns, einige wichtige Eigenschaften
  der Mittelparallelen von Dreiecken abzuleiten:
@@ -616,7 +616,7 @@ genügen, um ein Dreieck zu bilden.
 
 ---
 
-## Kongruente Dreiecke
+## Kongruenzsätze
 
 > id: sss-construction
 > section: triangles-congruence
@@ -632,8 +632,7 @@ wir tatsächlich ein Dreieck mit diesen Seitenlängen _konstruieren_ könnten.
 ::: column.grow
 {.task} Zeichne ein Dreieck, das Seiten mit den Längen 4cm, 5cm und 6cm hat.
 
-{.r} Zeichne zuerst die längste Seite des Dreiecks mit __6cm__ in das Feld.
- _{span.reveal(when="draw-base")} Damit haben wir bereits [zwei](target:base)
+{.r} Zeichne zuerst die längste Seite des Dreiecks mit __6cm__ in das Feld. _{span.reveal(when="draw-base")} Damit haben wir bereits [zwei](target:base)
 der drei Eckpunkte des Dreiecks - die Herausforderung besteht darin, den letzten zu finden
 *{button.next-step} Weiter*_
 
@@ -641,8 +640,8 @@ der drei Eckpunkte des Dreiecks - die Herausforderung besteht darin, den letzten
 Eckpunkte _{span.reveal(when="draw-c1")}und einen Kreis mit dem Radius __5cm__ um
 den anderen._
 
-{.reveal(when="draw-c2")}Der dritte Eckpunkt des Dreiecks ist der
-[[|Schnittpunkt|Mittelpunkt|Radius]] der beiden Kreise. _{span.reveal(when="blank-0")}
+{.reveal(when="draw-c2")} Der dritte Eckpunkt des Dreiecks ist der
+[[|Schnittpunkt|MittelpunktRadius]] der beiden Kreise. _{span.reveal(when="blank-0")}
 Jetzt können wir sie einfach zu einem Dreieck verbinden._
 
 {.reveal(when="blank-0" delay="3000")} Die Kreise schneiden sich eigentlich 
@@ -655,7 +654,7 @@ Jetzt können wir sie einfach zu einem Dreieck verbinden._
 ---
 > id: congruence
 
-### Kongruenzsätze
+### Kongruenzkriterien
 
 Aber ist es überhaupt möglich, _ein anderes_ Dreieck mit den gleichen drei
 Seiten zu konstruieren?
@@ -723,13 +722,13 @@ Zwei Dreiecke sind kongruent, wenn eine der folgenden Bedingungen erfüllt ist:
           path.red(x="segment(a,b)")
           path(x="segment(a,c)")
           path(x="segment(b,c)")
-        p.caption Zwei Winkel und einer der nicht anliegenden Seiten.
+        p.caption Zwei Winkel und eine der nicht anliegenden Seiten.
 :::
 
 ---
 > id: cpoct
 
-Du kannst dir diese Bedingungen als “Abkürzungen” vorstellen: Um zu überprüfen, ob zwei Dreiecke
+Du kannst dir diese Kriterien als “Abkürzungen” vorstellen: Um zu überprüfen, ob zwei Dreiecke
 deckungsgleich sind, musst du nur eine der obigen Bedingungen überprüfen.
 
 Sobald du _weißt_, dass zwei Dreiecke kongruent sind, weißt du auch, dass _alle_ ihre
@@ -800,7 +799,7 @@ Das Verbinden der Winkelmarkierungen mit den Endpunkten vervollständigt das Dre
 ::: column(width=300)
 {.todo} COMING SOON – Animation
 ::: column.grow
-{.task} Zeichne das Dreieck, das Winkel von 40° und 50° und eine angrenzende
+{.task}Zeichne das Dreieck, das Winkel von 40° und 50° und eine anliegende
 Seite von 5 cm Länge hat.
 
 Auch hier beginnen wir mit der Konstruktion der ersten Seite des Dreiecks, die 5 cm
@@ -815,8 +814,8 @@ des Dreiecks und tragen einen Winkel von 50° ab.
 
 Wie du sehen kannst, funktioniert das nicht ganz: Die dritte Seite lässt sich noch nicht
 mit dem Eckpunkt A verbinden. Um das zu beheben, müssen wir sie einfach verschieben: Wir zeichnen eine parallele
-Linie, die durch A geht. (Du hast bereits in einem [vorherigen Kurs](/course/euclidean-geometry/geometric-construction) gelernt,
-wie man parallele Linienkonstruiert.)
+Linie, die durch A verläuft. (Du hast bereits in einem [früheren Kurs](/course/euclidean-geometry/geometric-construction) gelernt, wie man parallele Linien
+konstruiert.)
 
 Nun sind die beiden Winkel an der Oberseite [Wechselwinkel](gloss:alternate-angles), weshalb sie kongruent
 und beide 50° sein müssen. Wir können die falsche, erste Linie löschen, um unser fertiges WWS-Dreieck
@@ -830,9 +829,9 @@ nicht in der Liste der oben genannten Kongruenzsätze stand, da der Vergleich du
 gewährleistet, dass zwei Dreiecke kongruent sind. Warum das so ist, siehst du hier:
 
 ::: column(width=300)
-{.todo} COMING SOON – Animation
+{.todo} KOMMT BALD – Animation
 ::: column.grow
-{.task}Zeichne das Dreieck, das Seiten von 4 cm und 5 cm und einen nicht eingeschlossenen
+{.task} Zeichne das Dreieck, das Seiten von 4 cm und 5 cm und einen nicht eingeschlossenen
 Winkel von 50° hat.
 
 Wie immer beginnen wir damit, die erste Seite des
@@ -863,7 +862,7 @@ Winkel von 50° haben. SSW ist also nicht ausreichend, um zu sicherzustellen, da
 
 Wir sind nun an einem wichtigen Punkt in der Geometrie angelangt - wir sind in der Lage, einen der berühmtesten [Lehrsätze](gloss:theorem) der gesamten
 Mathematik zu formulieren und zu
-verstehen: den __Satz des Pythagoras__. Er ist nach dem altgriechischen
+verstehen: __Den Satz des Pythagoras__. Er ist nach dem altgriechischen
 Mathematiker [Pythagoras von Samos](bio:pythagoras) benannt.
 
 ::: .theorem
@@ -876,8 +875,8 @@ gleich der Summe der Quadrate der anderen beiden Seiten. Mit anderen Worten,
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
 
-_Umgekehrt gilt auch: Wenn die drei Seiten eines Dreiecks
-a*{sup}2* + b*{sup}2* = c*{sup}2* entsprechen, dann muss es [[rechtwinklig|spitzwinklig,|stumpfwinklig]] sein._
+_Umgekehrt gilt auch: Wenn für die drei Seiten eines Dreiecks
+a*{sup}2* + b*{sup}2* = c*{sup}2* gilt, dann muss es [[rechtwinklig|spitzwinklig,|stumpfwinklig]] sein._
 ::: column(width=300)
 
     x-geopad(width=300): svg
@@ -961,7 +960,7 @@ und enthält [vier rechtwinklige Dreiecke](target:triangle), sowie ein
 Ergebnis enthält noch immer die vier rechtwinkligen Dreiecke sowie zwei Quadrate
 der Größe [[<msup><mi>a</mi><mn>2</mn></msup> und <msup><mi>b</mi><mn>2</mn></msup msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
 
-{.reveal(when="blank-1")}Vergleicht man die Größe des roten Bereichs
+{.reveal(when="blank-1")} Vergleicht man die Größe des roten Bereichs
 _{span.hover-target}vor_ und _{span.hover-target}nach_ der Umstellung, so
 sieht man, dass
 
@@ -1038,7 +1037,7 @@ und [einem Quadrat](target:square) der Fläche [[_c_<sup>2</sup>|(_a_ + _b_)<sup
         <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
         <td><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></td>
 
-{.reveal(when="blank-3 blank-4")}Und wieder erhalten wir den Satz des Pythagoras.
+{.reveal(when="blank-3 blank-4")} Und wieder erhalten wir den Satz des Pythagoras.
 _{span.qed}_
 
 ::: column(width=240)
@@ -1068,7 +1067,7 @@ _{span.qed}_
 #### Ähnliche Dreiecke _{span.check(when="next-0 next-1 next-2 blank-5")}_
 
 ::: column.grow
-{.r} Hier haben wir ein weiteres rechtwinkliges Dreieck. Wenn wir eine der
+{.r} Hier haben wir irgendein rechtwinkliges Dreieck. Wenn wir eine der
 Höhen einzeichnen, teilt sie das Dreieck in zwei kleinere Dreiecke auf,
 und sie teilt die Hypotenuse _c_ in [zwei kleinere Teile](target:hypotenuse)
 , die wir [{.step-target.i.pill.blue}x](target:x) und [
@@ -1281,7 +1280,7 @@ Verteilung dieser Punkte?
 
     // Der Mathematiker Euklid fand eine clevere Methode, um neue
     // Pythagoräische Tripel zu erzeugen. Zuerst müssen wir zwei beliebige ganze Zahlen _m_ und _n_ nehmen:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = n = ${n}{n|2|1,20,1}
+    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
     // Jetzt können wir die drei Zahlen berechnen, aus denen sich das Tripel zusammensetzt:
     // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
     // Und schon haben wir ein Pythagoräisches Tripel! Du kannst überprüfen, ob a2 + b2 = c2.
@@ -1299,9 +1298,9 @@ besonderen Eigenschaften. In diesem Abschnitt werden wir uns einige davon ansehe
 
 ### Gleichschenklige Dreiecke
 
-Wir sagen, dass ein Dreieck [__gleichschenklig ]__(gloss:isosceles-triangle)ist, wenn es
+Wir sagen, dass ein Dreieck [__gleichschenklig__](gloss:isosceles-triangle)ist, wenn es
 zwei kongruente Seiten hat. Diese kongruenten Seiten werden die __Schenkel__ des
-Dreiecks genannt, während die dritte Seite die __Basis__genannt wird.
+Dreiecks genannt, während die dritte Seite die __Basis__ genannt wird.
 
 {.todo} COMING SOON – Base angles theorem
 Proof by constructing angle bisector and using SAS result.
@@ -1333,24 +1332,24 @@ Proof by constructing angle bisector and using SAS result.
 ---
 > id: equilateral
 
-### Equilateral Triangles
+### Gleichseitige Dreiecke
 
-We say that a triangle is [__equilateral__](todo:equilateral-triangle) if all of
-its sides  have the same length. You’ve [already
-seen](/course/euclidean-geometry/geometric-construction) how to construct an
-equilateral triangle using straight-edge and compass.
+Wir sagen, dass ein Dreieck [__gleichseitig__](todo:equilateral-triangle) ist, wenn alle
+seine Seiten die gleiche Länge haben. Du hast [bereits
+gesehen](/course/euclidean-geometry/geometric-construction), wie man ein
+gleichseitiges Dreieck mit Lineal und Zirkel konstruiert.
 
-    // Any equilateral triangle is always also isosceles. From the base angle theorem
-    // we know that angles opposite congruent sides in a triangle are also congruent.
-    // In an equilateral triangle, all of the sides are congruent, so all of the angles
-    // must also be congruent.
+    // Jedes gleichseitige Dreieck ist immer auch gleichschenklig. Aus dem Basiswinkelsatz
+    // wissen wir, dass auch Winkel, die sich gegenüber kongruenten Seiten in einem Dreieck befinden, kongruent sind.
+    // In einem gleichseitigen Dreieck sind alle Seiten deckungsgleich, so dass auch alle Winkel
+    // deckungsgleich sein müssen.
     // 
-    // Since we know that the sum of all three angles is 180°, every individual angle
-    // in an equilateral triangle must be [[60]]°.
+    // Da wir wissen, dass die Summe aller drei Winkel 180° beträgt, muss jeder einzelne Winkel
+    // in einem gleichseitigen Dreieck [[60]]° betragen.
 
-{.todo} COMING SOON – Size of angles in an equilateral triangle
+{.todo} KOMMT BALD - Größe der Winkel in einem gleichseitigen Dreieck
 
-{.todo} COMING SOON – Area of an equilateral triangle
+{.todo} KOMMT BALD - Fläche eines gleichseitigen Dreiecks
 
 ----
 
@@ -1375,9 +1374,9 @@ hier kommt die __Trigonometrie__ ins Spiel!
 
 ::: column.grow
 Stell dir vor, wir haben ein rechtwinkliges Dreieck, und wir kennen auch einen der beiden anderen
-Winkel, __{.m-red}α__. Wir wissen bereits, dass die längste Seite [
-__{.m-yellow}Hypotenuse]__(target:hyp) genannt wird. Die anderen beiden werden normalerweise als [
-__{.m-green}anliegend]__(target:adj) (neben dem Winkel __{.m-red}α__) und
+Winkel, __{.m-red}α__. Wir wissen bereits, dass die längste Seite
+[__{.m-yellow}Hypotenuse]__(target:hyp) genannt wird. Die anderen beiden werden normalerweise als
+[__{.m-green}anliegend]__(target:adj) (neben dem Winkel __{.m-red}α__) und
 [__{.m-blue}gegenüberliegend__](target:opp) (also gegenüber des Winkels __{.m-red}α__) bezeichnet.
 ::: column(width=240)
 
@@ -1481,7 +1480,7 @@ eine dreistellige Abkürzung:
 ---
 > id: trig-functions-1
 
-{.todo} COMING SOON – More on Trigonometry
+{.todo} KOMMT BALD - Mehr zur Trigonometrie
 
     // {.todo} COMING SOON – Abbreviations: sin x, cos y
     // {.todo} COMING SOON – Using calculators
@@ -1491,18 +1490,18 @@ eine dreistellige Abkürzung:
 ---
 > id: inverse-trig
 
-### Inverse Trignometric Functions 
+### Trignometrische Umkehrfunktionen (inverse Funktionen) 
 
-{.todo} COMING SOON – Inverse functions
+{.todo} KOMMT BALD - Umkehrfunktion
 
-    // The word inverse is probably familiar to you. In mathematics, once you learn how
-    // to do an operation, you also learn how to “undo” it. For example, you may
-    // remember that addition and subtraction are considered inverse operations.
-    // Multiplication and division are also inverse operations. In algebra you used
-    // inverse operations to solve equations and inequalities. When we apply the word
-    // inverse to the trigonometric ratios, we can find the acute angle measures within
-    // a right triangle. Normally, if you are given an angle and a side of a right
-    // triangle, you can find the other two sides, using sine, cosine or tangent. With
+    // Das Wort invers für umgekehrt ist dir vielleicht bekannt. In der Mathematik lernt man, wie
+    // man eine Operation durchführt, und wie man sie "rückgängig macht". Zum Beispiel kannst du dich daran
+    // erinnern, dass Addition und Subtraktion als inverse Operationen betrachtet werden.
+    // Multiplikation und Division sind ebenfalls inverse Operationen. In der Algebra hast du
+    // Umkehrfunktionen verwendet, um Gleichungen und Ungleichungen zu lösen. Wenn wir das Wort
+    // invers auf die trigonometrischen Verhältnisse anwenden, können wir die Größe der spitzen Winkel in
+    // einem rechtwinkligen Dreieck finden. Normalerweise, wenn du einen Winkel und eine Seite eines rechtwinkligen
+    // Dreiecks gegeben hast, kannst die beiden anderen Seiten finden, indem du Sinus, Cosinus oder Tangents anwendest. With
     // the inverse trig ratios, you can find the angle measure, given two sides.
 
     // On most scientific and graphing calculators, the buttons look like
@@ -1512,41 +1511,41 @@ eine dreistellige Abkürzung:
 ---
 > id: sine-cosine-rule
 
-### Sine and Cosine Rules
+### Sinus- und Kosinussätze
 
-So far, all you’ve learned about Trigonometry only works in right-angled
-triangles. But most triangles are not right-angled, and there are two important
-results that work for all triangles
+Bisher funktioniert alles, was du über die Trigonometrie gelernt hast, nur in rechtwinkligen
+Dreiecken. Aber die meisten Dreiecke sind nicht rechtwinklig, und es gibt zwei wichtige
+Ergebnisse, die für alle Dreiecke funktionieren
 
 ::: column.grow
 ::: .theorem
-__Sine Rule__  
-In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
+__Sinussatz__  
+In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _C_,
 
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
 :::
 
-    // {.todo} Use Law of Sines when given:
-    // An angle and its opposite side.
-    // Any two angles and one side.
+    // {.todo} Verwende den Sinussatz, wenn folgendes gegeben ist:
+    // Ein Winkel und seine gegenüberliegende Seite.
+    // Zwei beliebige Winkel und eine Seite.
 
 ::: column.grow
 ::: .theorem
-__Cosine Rule__  
-In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
+__Kosinussatz__  
+In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _C_,
 
 {.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
 `b^2 = c^2 + a^2 - 2ca cos(B)`  
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-    // {.todo} Even though there are three formulas, they are all very similar. First, notice
+    // {.todo} Obwohl es drei Formeln gibt, sind sie alle sehr ähnlich. First, notice
     // that whatever angle is in the cosine, the opposite side is on the other side of
     // the equal sign.
     // 
-    // {.todo} Use Law of Cosines when given:
-    // Two sides and the included angle.
-    // All three sides.
+    // {.todo} Verwende den Kosinussatz, wenn folgendes gegeben ist:
+    // Zwei Seiten und der eingeschlossene Winkel.
+    // Alle drei Seiten.
 :::
 
 ---
@@ -1559,11 +1558,11 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 ---
 > id: mountains
 
-### The Great Trigonometric Survey
+### Die Große Trigonometrische Vermessung
 
-Do you still remember the quest to find the highest mountain on Earth from the
-[introduction](/course/triangles-and-trigonometry/introduction)? With
-Trigonometry, we finally have the tools to do it!
+Erinnerst du dich noch an die Suche nach dem höchsten Berg der Erde in der
+[Einleitung](/course/triangles-and-trigonometry/introduction)? Mit der
+Trigonometrie haben wir endlich die Werkzeuge das zu bewerkstelligen!
 
 ::: .sticky-wrap
 
@@ -1585,22 +1584,22 @@ Trigonometry, we finally have the tools to do it!
         path.yellow(x="segment(b,x)" target="")
         path.yellow(name="side-d" x="segment(a,x)" target="d right" label="d")
         path.yellow(x="segment(b,y)" target="right")
-        path.yellow(x="segment(x,y)" target="right" label="height")
+        path.yellow(x="segment(x,y)" target="right" label="Höhe")
 
-The surveyors in India measured the angle of the top of a mountain from [two
-different positions](target:points), _{span.pill.step-target.yellow(data-to="base")}5km apart_.
-The results were _{span.pill.step-target.red(data-to="ang")}23°_ and
+Die Vermesser in Indien haben den Winkel zur Bergspitze von [zwei
+verschiedenen Positionen](target:points) aus gemessen, die _{span.pill.step-target.yellow(data-to="base")}im Abstand von 5 km_ liegen.
+Die Ergebnisse waren _{span.pill.step-target.red(data-to="ang")}23°_ und
 _{span.pill.step-target.blue(data-to="ang1")}29°_.
 
-Because _{span.pill.step-target.green(data-to="a")}angle α_ is a [supplementary
-angle](gloss:supplementary-angles), we know that it must be [[151]]°.
-_{span.reveal(when="blank-0")}Now we can use the sum of the internal angles of
-a triangle to work out that *{span.pill.step-target(data-to="b")}angle β* is [[6]]°._
+Da der _{span.pill.step-target.green(data-to="a")}Winkel α_ ein [Supplementärwinkel](gloss:supplementary-angles)
+ist, wissen wir, dass er [[151]]° betragen muss.
+_{span.reveal(when="blank-0")}Jetzt können wir die Summe der Innenwinkel
+eines Dreiecks verwenden, um herauszufinden, dass der *{span.pill.step-target(data-to="b")}Winkel β*  [[6]]° beträgt._
 
-{.reveal(when="blank-1")} Now we know [all three angles](target:angles) of the
-triangle, as well as _{span.pill.step-target.yellow(data-to="base")}one of the
-sides_. This is enough to use the [[sine rule|cosine rule]] to find the distance
-[_d_](target:d):
+{.reveal(when="blank-1")} Jetzt kennen [wir alle drei Winkel](target:angles) des
+Dreiecks, sowie _{span.pill.step-target.yellow(data-to="base")}eine der
+Seiten_. Das genügt, um mit dem [[Sinussatz|Kosinussatz]] den Abstand
+[_d_](target:d) zu finden:
 
     table.eqn-system
       tr.reveal(when="blank-2")
@@ -1636,11 +1635,11 @@ sides_. This is enough to use the [[sine rule|cosine rule]] to find the distance
           mo =
           mn.pill.yellow.step-target(data-to="d") 23.2 km
 
-{.reveal(when="blank-3 blank-4" delay=2000)} There is one final step: let’s have
-a look at the [big, right-angled triangle](target:right). We already know the
-length of the hypotenuse, but what we really need is the [[opposite|adjacent]]
-side. _{span.reveal(when="blank-5")}We can find it using the definition of
-*sin*:_
+{.reveal(when="blank-3 blank-4" delay=2000)} Es gibt noch einen letzten Schritt: Wir wollen uns
+das [große, rechtwinklige Dreieck](target:right) ansehen. Wir kennen bereits die
+Länge der Hypotenuse, aber was wir wirklich brauchen, ist die Länge der [[Gegenkathete|Ankathete]]
+. _{span.reveal(when="blank-5")}Wir können sie mit der Definition des
+*sin* finden:_
 
     table.eqn-system
       tr.reveal(when="blank-5" delay=1000)
@@ -1653,7 +1652,7 @@ side. _{span.reveal(when="blank-5")}We can find it using the definition of
             mrow.md [[height|23]]
             mrow.md [[23|height]]
       tr.reveal(when="blank-6 blank-7")
-        td: mtext height
+        td: mtext Höhe
         td
           mo =
           mo sin
@@ -1667,18 +1666,18 @@ side. _{span.reveal(when="blank-5")}We can find it using the definition of
           mo =
           mn.pill.step-target.yellow(data-to="height") 8.987 km
 
-{.reveal(when="blank-6 blank-7" delay=2000)} And that is very close to the
-actual height of Mount Everest, the highest mountain on Earth: 8.848 m.
+{.reveal(when="blank-6 blank-7" delay=2000)} Und dieser Wert ist sehr nahe an der
+tatsächlichen Höhe des Mount Everest, dem höchsten Berg der Welt: 8.848 m.
 :::
 
 ---
 > id: mountains-1
 
-This explanation greatly simplifies the extraordinary work done by the
-mathematicians and geographers working on the Great Trigonometrical Survey. They
-started from sea level at the beach, measured thousands of kilometers of
-distance, built surveying towers across the entire country and even accounted
-for the curvature of Earth.
+Diese Erklärung vereinfacht die außerordentliche Arbeit der
+Mathematiker und Geographen, die an der Großen Trigonometrische Vermessung arbeiteten, erheblich. Sie
+starteten vom Meeresspiegel am Strand, maßen Tausende von
+Kilometern, bauten Vermessungstürme im ganzen Land und berücksichtigten
+sogar die Krümmung der Erde.
 
     figure: x-media(src="images/himalaya.jpg" width=760 height=320)
 
@@ -1693,44 +1692,44 @@ Dreiecke und Trigonometrie sind nicht nur für die Messung der Höhe von
 Bergen nützlich. Die Werkzeuge und Konzepte, die du hier gelernt hast, sind in
 unzähligen Bereichen der Mathematik, Naturwissenschaften und Technik unglaublich wichtig.
 
-Dreiecke sind etwas Besonderes, weil sie besonders _stabil_ sind. They are the only
-polygon that, when made out of wooden beams and hinges, will be completely
-_rigid_ – unlike rectangles, for example, which you can easily push over.
+Dreiecke sind etwas Besonderes, weil sie besonders _stabil_ sind. Sie sind das einzige
+Vieleck, das, wenn es aus Holzbalken und Scharnieren zusammengebaut wird, völlig
+_steif_ wird - im Gegensatz zu z.B. Rechtecken, die man leicht verschieben kann.
 
-{.todo} COMING SOON – Animations
+{.todo} KOMMT BALD - Animationen
 
 ---
 > id: applications-1
 
-This property makes triangles particularly useful in construction, where they
-can carry heavy weights.
+Diese Eigenschaft macht Dreiecke besonders nützlich für Konstruktionen, wobei sie schwere Lasten tragen
+können.
 
 ::: column(width=200)
     x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
 
-{.caption} A “Truss bridge” is supported by triangular bars
+{.caption} Eine "Fachwerkbrücke" wird von Dreieckskonstruktionen getragen
 ::: column(width=200)
     x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
 
-{.caption} Triangles in high-voltage electricity Pylons
+{.caption} Dreiecke in Hochspannungsmasten
 ::: column(width=200)
     x-media(src="images/bike.jpg" width=200 height=200 lightbox)
 
-{.caption} Even bikes use triangles for stability.
+{.caption} Auch Fahrräder verwenden Dreiecke für Stabilität.
 :::
 
 ---
 > id: applications-2
 > goals: video
 
-Triangles are also the simplest polygon, with the fewest sides. This makes them
-particularly well suited to approximating complex curved surfaces. This is done
-in physical building…
+Dreiecke sind auch das einfachste Polygon, mit den wenigsten Seiten. Dadurch sind sie
+besonders gut geeignet, um komplexe gekrümmte Oberflächen nachzubilden. Das wird
+in realen Gebäuden…
 
 ::: column(width=200)
     x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
 
-{.caption} “The Gherkin”, a skyscraper in London
+{.caption} "Die Gurke", ein Wolkenkratzer in London
 ::: column(width=200)
     x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
 
@@ -1738,15 +1737,15 @@ in physical building…
 ::: column(width=200)
     x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
 
-{.caption} Courtyard of the British Museum in London
+{.caption} Innenhof des British Museums in London
 :::
 
 ::: column.grow
-…but also in virtual worlds. In computer generated graphics (e.g. for movies or
-video games), all surfaces are approximated using a “mesh” of tiny triangles.
-Artists and software engineers need to know about geometry and trigonometry in
-order to be able to move and transform these triangles realistically, and to
-calculate their colour and texture.
+…aber auch in virtuellen Welten angewendet. In computergenerierten Grafiken (z.B. für Filme oder
+Videospiele) werden alle Oberflächen durch ein "Netz" aus winzigen Dreiecken nachgebildet.
+Künstler und Softwareingenieure müssen sich mit Geometrie und Trigonometrie auskennen,
+um diese Dreiecke realistisch bewegen und verformen zu können und ihre Farbe und Textur zu
+berechnen.
 ::: column(width=220)
     x-media(src="images/dolphin.jpg" width=220 height=135)
 :::
@@ -1757,8 +1756,8 @@ calculate their colour and texture.
 ---
 > id: applications-3
 
-Many results from this course will be useful when studying bigger polygons like
-quadrilaterals or pentagons in the future.
+Viele Ergebnisse aus diesem Kurs werden bei der Untersuchung größerer Vielecke wie
+Vierecken oder Fünfecken später noch nützlich sein.
 
 
     // ### Euler Line
@@ -1807,38 +1806,5 @@ quadrilaterals or pentagons in the future.
     // than the included angle of the second triangle.
 
 
-    // ## Inscribed Ähnliche Dreiecke 
+    // ## Eingeschriebene ähnliche Dreiecke 
 
-    // If two objects are similar, corresponding angles are congruent and their sides
-    // are proportional in length. Let’s look at a right triangle, with an altitude
-    // drawn from the right angle. There are three right triangles in this picture,
-    // △ADB,△CDA, and △CAB. Both of the two smaller triangles are similar to the larger
-    // triangle because they each share an angle with △ADB. That means all three
-    // triangles are similar to each other.
-    // 
-    // Inscribed Triangle Theorem: If an altitude is drawn from the right angle of any
-    // right triangle, then the two triangles formed are similar to the original
-    // triangle and all three triangles are similar to each other.
-    // 
-    // You are probably familiar with the arithmetic mean, which divides the sum of n
-    // numbers by n. This is commonly used to determine the average test score for a
-    // group of students. The geometric mean is a different sort of average, which
-    // takes the nth root of the product of n numbers. In this text, we will primarily
-    // compare two numbers, so we would be taking the square root of the product of two
-    // numbers. This mean is commonly used with rates of increase or decrease.
-    // 
-    // Geometric Mean: The geometric mean of two positive numbers a and b is the number
-    // x, such that ax=xb or x2=ab and x=ab−−√.
-    // 
-    // Geometric Mean Theorem #1: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of the altitude is the geometric mean of these two segments. In other
-    // words, BCAC=ACDC.
-    // 
-    // Geometric Mean Theorem #2: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of each leg of the right triangle is the geometric mean of the lengths
-    // of the hypotenuse and the segment of the hypotenuse that is adjacent to the leg.
-    // In other words, BCAB=ABDB and DCAD=ADDB.
-    // 
-    // Both of these theorems are proved using similar triangles.
