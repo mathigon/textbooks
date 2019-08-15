@@ -91,7 +91,7 @@ axiom:
 
 axis-of-symmetry:
   title: Symmetrieachse
-  text: Wenn eine Form spiegelsymmetrisch ist, ist die __Symmetrieachse__ die
+  text: Wenn eine Figur spiegelsymmetrisch ist, ist die __Symmetrieachse__ die
     Linie, die sie in zwei gleiche Hälften teilt.
   image: reflectional-symmetry.svg
   link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
@@ -133,7 +133,7 @@ calculus:
 
 center-of-rotation:
   title: Drehpunkt
-  text: Der __Drehpunkt__ ist der Punkt, um den eine Form gedreht wird.
+  text: Der __Drehpunkt__ ist der Punkt, um den eine Figur gedreht wird.
   link: /course/transformations-and-symmetry/transformations#rotations
 
 centroid:
@@ -371,7 +371,7 @@ denominator:
 dilation:
   title: Dilatation (Streckung)
   text: Eine __Dilatation__ (Streckung, Dehnung, Stauchung) ist eine Abbildung,
-    die die Maße einer geometrischen Form ändert, indem sie diese größer oder
+    die die Maße einer geometrischen Figur ändert, indem sie diese größer oder
     kleiner macht.
   image: dilation.svg
   link: /course/transformations-and-symmetry/similarity#dilations
@@ -482,7 +482,7 @@ fibonacci-numbers:
 
 figurate-numbers:
   title: Figurierte Zahlen
-  text: __Figurierte Zahlen__ sind Zahlen, die durch geometrische Formen
+  text: __Figurierte Zahlen__ sind Zahlen, die durch geometrische Figuren
     dargestellt werden können. Beispiele sind Quadrat-, Kubik- und
     Tetraederzahlen.
   link: /course/sequences/figurate#figurate
@@ -821,9 +821,9 @@ octahedron:
 
 order-of-symmetry:
   title: Zähligkeit
-  text: Wenn eine Form rotationssymmetrisch ist, ist seine __Zähligkeit__ die
-    Anzahl der Orientierungen, in denen die Form gleich aussieht. (Oder, es ist
-    die Anzahl der Male, die man die Form drehen kann, bevor man zum Anfang
+  text: Wenn eine Figur rotationssymmetrisch ist, ist ihre __Zähligkeit__ die
+    Anzahl der Orientierungen, in denen die Figur gleich aussieht. (Oder, es ist
+    die Anzahl der Male, die man die Figur drehen kann, bevor man zum Anfang
     zurückkehrt.)
   link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
 
@@ -865,8 +865,8 @@ pascals-triangle:
 penrose:
   title: Penrose-Parkettierung
   text: Eine __Penrose-Parkettierung__ ist eine _nicht-periodische_,
-    _selbstähnliche_ Tesselierung. Es besteht nur aus wenigen verschiedenen
-    Formen, wiederholt sich aber nie.
+    _selbstähnliche_ Tesselierung. Sie besteht nur aus wenigen verschiedenen
+    Figuren, wiederholt sich aber nie.
   link: /course/polygons-and-polyhedra/tessellations#penrose
 
 perfect-numbers:
@@ -912,7 +912,7 @@ point:
 
 polygon:
   title: Vieleck (Polygon)
-  text: Ein __Vieleck__ ist eine geometrische Form, die aus geraden Strecken
+  text: Ein __Vieleck__ ist eine geometrische Figur, die aus geraden Strecken
     besteht. Vielecke dürfen keine gekrümmten Seiten oder Unterbrechungen
     enthalten. Zum Beispiel ist ein Quadrat ein Vieleck, ein Kreis aber nicht.
   image: polygon.svg
@@ -1107,13 +1107,13 @@ rectangle:
 
 reflection:
   title: Spiegelung
-  text: Eine __Spiegelung__ ist eine Abbildung, die eine Form entlang einer
+  text: Eine __Spiegelung__ ist eine Abbildung, die eine Figur entlang einer
     Linie „rotiert" oder „reflektiert".
   link: /course/transformations-and-symmetry/transformations#reflections
 
 reflectional-symmetry:
   title: Spiegelsymmetrie
-  text: Eine Form nennt man spiegelsymmetrisch, wenn sie nach einer Spiegelung
+  text: Eine Figur nennt man spiegelsymmetrisch, wenn sie nach einer Spiegelung
     gleich aussieht.
   image: reflectional-symmetry.svg
   link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
@@ -1165,13 +1165,13 @@ roman-numerals:
 
 rotation:
   title: Drehung
-  text: Eine __Drehung__ ist eine Abbildung, die eine Form um einen bestimmten
+  text: Eine __Drehung__ ist eine Abbildung, die eine Figur um einen bestimmten
     Winkel um einen Festpunkt „rotieren“ lässt.
   link: /course/transformations-and-symmetry/transformations#rotations
 
 rotational-symmetry:
   title: Rotationssymmetrie
-  text: Eine Form nennt man rotationssymmetrisch, wenn sie nach einer Drehung
+  text: Eine Figur nennt man rotationssymmetrisch, wenn sie nach einer Drehung
     um weniger als 360° gleich aussieht.
   image: rotational-symmetry.svg
   link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
@@ -1185,7 +1185,7 @@ roulette:
 scale-factor:
   title: Skalierungsfaktor
   text: Der __Skalierungsfaktor__ einer Dilatation ist der Betrag, um den die
-    Form gedehnt oder gestaucht wird.
+    Figur gedehnt oder gestaucht wird.
   link: /course/transformations-and-symmetry/similarity#dilations-1
 
 scalene-triangle:
@@ -1238,8 +1238,8 @@ sieve-eratosthenes:
 
 similar:
   title: Ähnlich
-  text: Zwei geometrische Formen sind __ähnlich__, wenn sie die gleiche Form,
-    aber eine andere Größe haben. Wir können eine der Formen bewegen, drehen,
+  text: Zwei geometrische Figuren sind __ähnlich__, wenn sie die gleiche Form,
+    aber eine andere Größe haben. Wir können eine der Figuren bewegen, drehen,
     spiegeln und in der Größe verändern, um sie exakt an die andere anzupassen.
 
 sin:
@@ -1330,21 +1330,21 @@ theorem:
 
 transformation:
   title: Abbildung
-  text: Eine __Abbildung__ wandelt eine geometrische Form in eine andere um. Es
+  text: Eine __Abbildung__ wandelt eine geometrische Figur in eine andere um. Es
     gibt viele verschiedene Arten von Abbildungen, wie _Spiegelungen_ oder
     _Dilatationen_.
   link: /course/transformations-and-symmetry/transformations#transformations
 
 transformation-image:
   title: Abbild
-  text: Nach der Anwendung einer Abbildung auf eine geometrische Form wird das
+  text: Nach der Anwendung einer Abbildung auf eine geometrische Figur wird das
     Ergebnis als sein __Abbild__bezeichnet. Das wird oft durch das Anhängen
     eines ' an das Ende ihrer Bezeichnung gekennzeichnet.
   link: /course/transformations-and-symmetry/transformations#transformations
 
 translation:
-  title: Translation
-  text: Eine __Translation__ ist eine Abbildung, die eine Figur in eine
+  title: Verschiebung
+  text: Eine __Verschiebung__ ist eine Abbildung, die eine Figur in eine
     bestimmte Richtung bewegt, ohne ihren Winkel oder ihre Form zu verändern.
   image: translation.svg
   link: /course/transformations-and-symmetry/transformations#translations
