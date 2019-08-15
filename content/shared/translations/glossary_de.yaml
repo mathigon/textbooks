@@ -533,7 +533,7 @@ geometric-sequence:
 glide-reflection:
   title: Gleitspiegelung
   text: Eine __Gleitspiegelung__ ist eine besondere Art der Abbildung. Sie ist
-    eine Kombination aus einer _Spiegelung_ und einer _Translation_ in die
+    eine Kombination aus einer _Spiegelung_ und einer _Verschiebung_ in die
     gleiche Richtung wie die Spiegelachse.
   link: /course/transformations-and-symmetry/wallpaper-groups#footsteps
 
@@ -1343,16 +1343,16 @@ transformation-image:
   link: /course/transformations-and-symmetry/transformations#transformations
 
 translation:
-  title: Translation
-  text: Eine __Translation__ ist eine Abbildung, die eine Figur in eine
+  title: Verschiebung (Translation)
+  text: Eine __Verschiebung__ ist eine Abbildung, die eine Figur in eine
     bestimmte Richtung bewegt, ohne ihren Winkel oder ihre Form zu verändern.
   image: translation.svg
   link: /course/transformations-and-symmetry/transformations#translations
 
 translational-symmetry:
-  title: Translationssymmetrie
+  title: Verschiebungssymmetrie
   text: Ein sich wiederholendes Muster (wie eine Tapete) ist
-    __translationssymmetrisch__, wenn es nach einer Verschiebung um einen
+    __verschiebungssymmetrisch__, wenn es nach einer Verschiebung um einen
     bestimmten Abstand gleich aussieht.
   link: /course/transformations-and-symmetry/wallpaper-groups#wallpaper-groups-1
 
