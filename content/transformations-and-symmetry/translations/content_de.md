@@ -39,7 +39,7 @@ Gesetze der Physik erklären.
 
 Obwohl man sich unter Symmetrie sehr leicht etwas vorstellen kann, ist es
 schwieriger als man vermuten würde, sie mathematisch zu beschreiben. Zuerst müssen wir etwas über
-_Abbildungen_lernen.
+_Abbildungen_ lernen.
 
 ---
 
@@ -77,7 +77,7 @@ Zunächst werden wir nur uns nur mit Abbildungen befassen, die die Größe und F
 ursprünglichen Figur nicht verändern. Stell dir vor, sie besteht aus einem festen
 Material wie Holz oder Metall: Wir können sie bewegen, drehen und wenden, aber wir können sie nicht dehnen
 oder irgendwie verformen. Diese Abbildungen werden als
-[__Kongruenzabbildungen (längentreue Abbildungen__](gloss:rigid-transformation) bezeichnet.
+[__Kongruenzabbildungen (längentreue Abbildungen)__](gloss:rigid-transformation) bezeichnet.
 
 Welche dieser Abbildungen sind längentreu?
 
@@ -109,7 +109,7 @@ Arten von Kongruenzabbildungen:
       include svg/rigid-2.svg
       x-play-btn
 
-{.text-center} Eine Abbildung, die eine Figur _umdreht_, wird als
+{.text-center} Eine Abbildung, die eine Figur _um eine Achse dreht_, wird als
 [__Spiegelung__](gloss:reflection) bezeichnet.
 
 ::: column.grow.r(width=200)
@@ -118,14 +118,14 @@ Arten von Kongruenzabbildungen:
       x-play-btn
 
 {.text-center} Eine Abbildung, die eine Figur _dreht_, wird als
-[__Drehung__](gloss:rotation) bezeichnet.
+[__Drehung (Rotation)__](gloss:rotation) bezeichnet.
 :::
 
 ---
 > id: rigid-2
 
 Wir können auch mehrere Arten von Abbildungen kombinieren, um komplexere
-zu erreichen - zum Beispiel eine Verschiebung mit anschließender Drehung.
+Abbildungen zu erreichen - zum Beispiel eine Verschiebung mit anschließender Drehung.
 
 Aber zuerst wollen wir einen genauren Blick auf jede
 dieser Arten von Abbildungen werfen.
@@ -139,7 +139,7 @@ Eine [__Verschiebung__](gloss:translation) ist eine Abbildung, die jeden
 Punkt einer Figur um den gleichen Abstand in die gleiche Richtung bewegt.
 
 In der Koordinatenebene können wir eine Verschiebung festlegen, indem wir angeben
-wie weit die Figur entlang der _x_-Achse und der _y_-Achsebewegt wird. Beispielsweise bewegt eine Verschiebung um
+wie weit die Figur entlang der _x_-Achse und der _y_-Achse bewegt wird. Beispielsweise bewegt eine Verschiebung um
 (3, 5) eine Figur um 3 entlang der _x_-Achse und um 5 entlang der _y_-Achse.
 
 ::: column(width=220)
@@ -439,7 +439,7 @@ Drehpunkt zu zeichnen.
 _{button.next-step} Weiter_
 
 {.r.reveal(when="next-1")} Mit einem [Winkelmesser](target:protractor) können
-wir einen [Winkel von ${ang*10}° um das Drehzentrummessen.
+wir einen [Winkel von ${ang*10}°](target:angle) um das Drehzentrum messen.
 Zeichnen wir eine [zweite Linie](target:l2) in diesem Winkel dazu.
 _{button.next-step} Weiter_
 
@@ -458,10 +458,10 @@ Eckpunkte verbinden, um das gedrehte Bild unserer ursprünglichen Figur zu erhal
     // ---
     // > id: composition
     // 
-    // ### Composition of Transformations
+    // ### Komposition von Transformationen
     // 
-    // Of course, we can combine multiple translations, reflections and rotations to
-    // create more complex transformations.
+    // Natürlich können wir mehrere Übersetzungen, Reflexionen und Rotationen kombinieren, um komplexere Transformationen zu
+    // erzeugen.
     // 
     // {.todo} TODO Example
     // 
@@ -505,13 +505,13 @@ Abbildungen in späteren Kursen erfahren, aber für den Moment wollen wir zur Sy
 > goals: play-0 play-1
 > section: symmetry
 
-[__Symmetry__](gloss:symmetry) is everywhere around us, and an intuitive
-concept: different parts of an object look _the same_ in some way. But using
-transformations, we can give a much more precise, mathematical definition of
-what symmetry _really_ means:
+[__Symmetrie__](gloss:symmetry) ist überall um uns herum, und eigentlich
+weiß man was damit gemeint ist: Ein Objekt sieht teilweise _gleich_ aus. Aber durch
+Abbildungen können wir viel präziser und mathematischer definieren,
+was Symmetrie _wirklich_ bedeutet:
 
-{.definition} An object is _symmetric_ if it looks the same, even after applying
-a certain transformation.
+{.definition} Ein Objekt ist _symmetrisch_ , wenn es auch nachdem
+man eine bestimmte Abbildung angewendet hat gleich aussieht.
 
 ::: column.grow
 
@@ -520,8 +520,8 @@ a certain transformation.
       img(src="images/symmetry-1.png" width=320 height=240)
       x-play-btn
 
-{.text-center} We can reflect this butterfly, and it looks the same afterwards.
-We say that it has __reflectional symmetry__.
+{.text-center} Wir können diesen Schmetterling spiegeln, und er sieht danach noch immer gleich aus.
+Wir sprechen dann von einer __Spiegelsymmetrie__.
 
 ::: column.grow
 
@@ -530,26 +530,26 @@ We say that it has __reflectional symmetry__.
       img(src="images/symmetry-2.jpg" width=320 height=240)
       x-play-btn
 
-{.text-center} We can rotate this flower, and it looks the same afterwards. We
-say that it has __rotational symmetry__.
+{.text-center} Wir können diese Blume drehen, und sie sieht danach genauso aus. Wir
+sprechen dann von __Drehsymmetrie (Rotationssymmetrie)__.
 :::
 
 ---
 > id: reflectional-symmetry
 
-### Reflectional Symmetry
+### Spiegelsymmetrie
 
-A shape has [__reflectional symmetry__](gloss:rotational-symmetry) if it looks
-the same after being reflected. The line of reflection is called the [__axis of
-symmetry__](gloss:axis-of-symmetry), and it splits the shape into two
-[[congruent|equal|similar]] halves. Some figures can also have more than one
-axis of symmetry.
+Eine Figur ist [__spiegelsymmetrisch__](gloss:rotational-symmetry), wenn sie nach einer Spieglung gleich aussieht
+. Die Spiegelachse wird als [__
+Symmetrieachse__](gloss:axis-of-symmetry)bezeichnet und teilt die Figur in zwei
+[[kongruente|gleiche|ähnliche]] Hälften auf. Einige Figuren können auch mehr als eine
+Symmetrieachse haben.
 
 ---
 > id: reflectional-symmetry-1
 > goals: r0 r1 r2 r3 r4 r5
 
-Draw all axes of symmetry in these six images and shapes:
+Zeichne alle Symmetrieachsen in diesen sechs Bildern und Figuren:
 
 ::: column(width=220)
 
@@ -579,7 +579,7 @@ Draw all axes of symmetry in these six images and shapes:
       path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
 
-{.caption} This shape has [[2]] axes of symmetry.
+{.caption} Diese Figur hat [[2]] Symmetrieachsen.
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20): svg
@@ -589,7 +589,7 @@ Draw all axes of symmetry in these six images and shapes:
       path(hidden name="line4c" x="line(point(0,-1),point(10,9))")
       path(hidden name="line4d" x="line(point(10,-1),point(0,9))")
 
-{.caption} A square has [[4]] axes of symmetry.
+{.caption} Ein Quadrat hat [[4]] Symmetrieachsen.
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20): svg
@@ -597,14 +597,14 @@ Draw all axes of symmetry in these six images and shapes:
       path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
       path(hidden name="line5b" x="line(point(7,-1),point(3,11))")
 
-{.caption} This shape has [[2]] axes of symmetry.
+{.caption} Diese Figur hat [[2]] Symmetrieachsen.
 :::
 
 ---
 > id: alphabet
 
-Many letters in the alphabet have reflectional symmetry. Select all the ones
-that do:
+Viele Buchstaben im Alphabet sind spiegelsymmetrisch. Wähle diejenigen aus,
+für die das zutrifft:
 
     x-picker.letters
       - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
@@ -618,8 +618,8 @@ that do:
 > id: reflectional-symmetry-2
 > goals: r0 r1 r2
 
-Here are some more shapes. Complete them so that they have reflectional
-symmetry:
+Hier sind noch ein paar weitere Figuren. Vervollständige sie so, dass sie eine
+spiegelsymmetrisch sind:
 
 ::: column(width=220)
 
@@ -652,12 +652,12 @@ symmetry:
 > id: palindromes
 > goals: p0 p1 p2
 
-Shapes, letters and images can have reflectional symmetry, but so can entire
-numbers, words and sentences!
+Nicht nur Figuren, Buchstaben und Bilder können spiegelsymmetrisch sein, sondern auch ganze
+Zahlen, Wörter und Sätze!
 
-For example “25352” and “ANNA” both read the same from back to front. Numbers
-or words like this are called [__Palindromes__](gloss:palindrome). Can you think
-of any other palindromes?
+Zum Beispiel kann man "25352" und "ANNA" auch von hinten nach vorne lesen ohne dass sich die Bedeutung verändert. Zahlen
+oder Wörter wie diese werden [__Palindrome__](gloss:palindrome) genannt. Fallen dir
+noch andere Beispiele für Palindrome ein?
 
     form.palindromes.text-center.form-field
       input(type="text")
@@ -670,35 +670,34 @@ of any other palindromes?
 ---
 > id: palindromes-1
 
-If we ignore spaces and punctuation, the short sentences below also have
-reflectional symmetry. Can you come up with your own?
+Wenn wir Leerzeichen und Interpunktion ignorieren, sind auch die kurzen Sätze unten 
+spiegelsymmetrisch. Fallen dir eigene Beispiele ein?
 
-{.text-center} Never odd or even.  
-A [[nut]] for a jar of tuna.  
-Yo, banana [[boy]]!
+{.text-center} Ein Esel lese nie.  
+Sei mein, [[nie]] fies - sei fein, nie mies.  
+Ein Neger mit Gazelle [[zagt]] im Regen nie!
 
-{.reveal(when="blank-0 blank-1")} But Palindromes are not just fun, they
-actually have practical importance. A few years ago, scientists discovered that
-parts of our [DNA](gloss:dna) are palindromic. This makes that more resilient to
-mutations or damage – because there is a second backup copy of every piece.
+{.reveal(when="blank-0 blank-1")} Aber Palindrome machen nicht nur Spaß, sie haben
+auch eine praktische Bedeutung. Vor einigen Jahren entdeckten Wissenschaftler, dass
+Teile unserer [DNA](gloss:dna) palindromisch sind. Das macht sie widerstandsfähiger gegen
+Mutationen oder Beschädigungen - denn von jedem Teilstück gibt es eine zweite Sicherungskopie.
 
 ---
 > id: rotational-symmetry
 
-### Rotational Symmetry
+### Rotationssymmetrie (Drehsymmetrie)
 
 ::: column.grow
-A shape has [__rotational symmetry__](gloss:rotational-symmetry) if it looks the
-same after being rotated (by less than 360°). The [center of
-rotation](gloss:center-of-rotation) is usually just the middle of the shape.
+Eine Figur nennt man [__rotationssymmetrisch__](gloss:rotational-symmetry), wenn sie nach einer Drehung (um weniger als 360°) gleich aussieht. Das [
+Drehzentrum](gloss:center-of-rotation) ist normalerweise die Mitte der Figur.
 
-The [__order of symmetry__](gloss:order-of-symmetry) is the number of distinct
-orientations in which the shape looks the same. You can also think about it as
-the _number of times we can rotate the shape_, before we get back to the start.
-For example, this snowflake has order [[6]].
+Die [__Zähligkeit__](gloss:order-of-symmetry) ist die Anzahl der verschiedenen
+Ausrichtungen, in denen die Figur gleich aussieht. Du kannst dir das auch so vorstellen, wie
+ _oft eine Figur_ gedreht werden kann, bevor man wieder zum Anfang zurückgelangt.
+Zum Beispiel hat diese Schneeflocke die Zähligkeit [[6]].
 
-{.reveal(when="blank-0")} The angle of each rotation is `"360°"/"order"`. In the
-snowflake, this is `"360°"/6` = [[60]]°.
+{.reveal(when="blank-0")} Der Winkel jeder Drehung beträgt `"360°"/"Zähligkeit"`. Für der
+Schneeflocke sind das `"360°"/6` = [[60]]°.
 
 ::: column(width=240)
 
@@ -709,27 +708,27 @@ snowflake, this is `"360°"/6` = [[60]]°.
 ---
 > id: rotational-symmetry-1
 
-Find the order and the angle of rotation, for each of these shapes:
+Finde die Zähligkeit und den Drehwinkel für jede dieser Figuren:
 
 ::: column(width=220)
     img(src="images/clover.jpg" width=200 height=200)
 
-{.caption} Order [[4]], angle [[90]]°
-::: column(width=220)
+{.caption} Zähligkeit [[4]],
+Winkel [[90]]°::: column(width=220)
     img(src="images/playing-card.jpg" width=200 height=200)
 
-{.caption} Order [[2]], angle [[180]]°
+{.caption} Zähligkeit [[2]], Winkel [[180]]°
 ::: column(width=220)
     img(src="images/flower.jpg" width=200 height=200)
 
-{.caption} Order [[8]], angle [[45]]°
+{.caption} Zähligkeit [[8]], Winkel [[45]]°
 :::
 
 ---
 > id: rotational-symmetry-2
 > goals: r0 r1 r2
 
-Now complete these shapes, so that they have rotational symmetry:
+Vervollständige diese Figuren, so dass sie rotationssymmetrisch sind:
 
 ::: column(width=220)
 
@@ -741,7 +740,7 @@ Now complete these shapes, so that they have rotational symmetry:
       path.red(x="segment(point(5,4),point(11,4))")
       path(hidden x="polyline(point(9,4),point(6,5),point(5,8),point(4,5),point(1,4),point(4,3),point(5,0))" name="to0")
 
-{.caption} Order 4
+{.caption} Zähligkeit 4
 ::: column(width=220)
 
     x-geopad.draw(width=220 height=180 grid=20 no-points): svg
@@ -751,7 +750,7 @@ Now complete these shapes, so that they have rotational symmetry:
       path.red(x="segment(point(5,-1),point(5,9))")
       path(hidden x="from1.rotate(pi,c1)" name="to1")
 
-{.caption} Order 2
+{.caption} Zähligkeit 2
 ::: column(width=220)
 
     x-geopad.draw(width=220 height=180 grid=20 no-points): svg
@@ -762,17 +761,17 @@ Now complete these shapes, so that they have rotational symmetry:
       path.red(x="segment(point(5,4),point(-1,4))")
       path(hidden x="polyline(point(4,4),point(2,6),point(3,7),point(5,5),point(7,7),point(8,6),point(6,4),point(8,2),point(7,1),point(5,3))" name="to2")
 
-{.caption} Order 4
+{.caption} Zähligkeit 4
 :::
 
 ---
 
-## Symmetry Groups
+## Symmetriegruppen
 
 > id: groups
 > section: symmetry-groups
 
-    // HINT: To recognise different configurations, we need to highlight the
+    // TIPP: To recognise different configurations, we need to highlight the
     // four corners in different colours.
 
 Some shapes have more than one symmetry – let’s have a look at the
