@@ -37,7 +37,7 @@ By now you should be comfortable with addition, subtraction and multiplication
 of integers. Division is slightly different, because you can’t always divide any
 integer by any other. For example 17 divided by 3 is not a whole number – it is
 somewhere in between 5 and 6. You either have to give a remainder (2), or
-express the answer as a decimal number (5.66).
+express the answer as a decimal number (5.66…).
 
     .row.padded
       .grow
