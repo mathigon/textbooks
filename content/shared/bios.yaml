@@ -104,16 +104,16 @@ archimedes:
   bio: |
     __Archimedes__ (c. 287 – c. 212 BC) was an ancient Greek scientist and
     engineer, and one of the greatest mathematicians of all time. He discovered
-    many concepts of calculus, and worked in geometry, analysis and mechanics.
+    many concepts of calculus and worked in geometry, analysis and mechanics.
 
     While taking a bath, Archimedes discovered a way to determine the volume of
     irregular objects using the amount of water they displaced when submerged.
     He was so excited by this discovery that he ran out on the street, still
     undressed, yelling _“Eureka!”_ (Greek for _“I have found it!”_).
 
-    As engineer he built ingenious defence machines during the siege of his home
-    city Syracuse in Sicily. After two years, the Romans finally managed to
-    enter and Archimedes was killed. His last words were _“Do not disturb my
+    As an engineer, he built ingenious defence machines during the siege of his
+    home city Syracuse in Sicily. After two years, the Romans finally managed to
+    enter, and Archimedes was killed. His last words were _“Do not disturb my
     circles”_ – which he was studying at the time.
   links:
     - title: Archimedean Solids

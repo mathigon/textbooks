@@ -538,7 +538,7 @@ euclidean-geometry:
   title: Euclidean Geometry
   text: __Euclidean geometry__ is the kind of geometry envisioned by the
     mathematician _Euclid_, and includes the study of points, lines, polygons,
-    circles as well as three-dimensional solids. It dependes on just five
+    circles as well as three-dimensional solids. It depends on just five
     _axiom_, the basic laws of geometry, which describe all the permitted
     operations and constructions.
   link: /course/euclidean-geometry/euclids-axioms#euclid
