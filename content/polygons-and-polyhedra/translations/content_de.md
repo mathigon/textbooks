@@ -638,7 +638,7 @@ Dreiecke kongruent sein.
 
 {.reveal(when="blank-3")} Nun können wir die Tatsache nutzen, dass die einander entsprechenden Teile
 kongruenter Dreiecke auch kongruent sind, um zu dem Schluss zu kommen, dass [`bar(AM)`](target:AM)
-= [`bar(CM)`](target:CM) and [`bar(BC)`](target:BM) = [`bar(DM)`](target:DM). Mit
+= [`bar(CM)`](target:CM) and [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM). Mit
 anderen Worten, die beiden Diagonalen schneiden sich an ihren Mittelpunkten. _{span.qed}_
 :::
 

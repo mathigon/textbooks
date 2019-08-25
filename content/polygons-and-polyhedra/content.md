@@ -641,7 +641,7 @@ triangles must therefore also be congruent.
 
 {.reveal(when="blank-3")} Now we can use the fact the corresponding parts of
 congruent triangles are also congruent, to conclude that [`bar(AM)`](target:AM)
-= [`bar(CM)`](target:CM) and [`bar(BC)`](target:BM) = [`bar(DM)`](target:DM). In
+= [`bar(CM)`](target:CM) and [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM). In
 other words, the two diagonals intersect at their midpoints. _{span.qed}_
 :::
 
