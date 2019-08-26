@@ -1067,10 +1067,10 @@ reflection](gloss:axis-of-symmetry) in these examples?
         p.caption <strong>Type P2</strong><br>Rotations of order 2, translations
       div
         img(src="images/wallpapers/p3.svg" width=360, height=240)
-        p.caption <strong>Type P3</strong><br>Four rotations of order 2 (180°), translations
+        p.caption <strong>Type P3</strong><br>Rotations of order 3 (120°), translations
       div
         img(src="images/wallpapers/p4.svg" width=360, height=240)
-        p.caption <strong>Type P4</strong><br>Rotations of order 3 (120°), translations
+        p.caption <strong>Type P4</strong><br>Four rotations of order 2 (180°), translations
       div
         img(src="images/wallpapers/p6.svg" width=360, height=240)
         p.caption <strong>Type P6</strong><br>Rotations of order 2, 3 and 6 (60°), translations
