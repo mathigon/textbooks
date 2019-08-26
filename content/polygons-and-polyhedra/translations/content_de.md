@@ -22,7 +22,7 @@ gebogen sein. Welche der folgenden Formen sind Vielecke?
 ---
 > id: polygons-1
 
-Wir geben Polygonen unterschiedliche Namen, je nachdem, wie viele Seiten sie haben:
+Wir geben Vielecken unterschiedliche Namen, je nachdem, wie viele Seiten sie haben:
 
     .row.padded-thin
       div(style="width: 100px")
@@ -76,7 +76,8 @@ Wir wissen bereits, dass die Summe der Innenwinkel in einem Dreieck immer
 {.text-center.var} _{span.circled.red}${round(angle(b,a,d).deg)}°_ +
 _{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
 _{span.circled.green}${round(angle(d,c,b).deg)}°_ +
-_{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+_{span.circled.yellow}${360 - round(angle(b,a,d).deg) - round(angle(c,b,a).deg) -
+round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 
     x-gesture(target="x-anibutton")
 
@@ -103,7 +104,8 @@ _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(
 _{span.circled.blue}${round(angle(g,f,e).deg)}°_ +
 _{span.circled.green}${round(angle(h,g,f).deg)}°_ +
 _{span.circled.yellow}${round(angle(i,h,g).deg)}°_ +
-_{span.circled}${round(angle(e,i,h).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+_{span.circled}${540 - round(angle(f,e,i).deg) - round(angle(g,f,e).deg) -
+round(angle(h,g,f).deg) - round(angle(i,h,g).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
@@ -144,7 +146,7 @@ unterteilt werden. Daher ist die
 
 ::: column.grow
 Wir sagen, dass ein Vieleck (Polygon) [__konkav__](gloss:concave) ist, wenn es einen Abschnitt hat, der
-["nach innen zeigt"](target:cave). Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
+::: column.grow"nach innen zeigt"[__. Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
 
 Es gibt zwei Möglichkeiten, konkave Vielecke leicht zu identifizieren: Sie haben mindestens
 einen [Innenwinkel, der größer als 180° ist](target:angle). Sie haben außerdem
@@ -257,7 +259,7 @@ Hier siehst du ein [regelmäßiges Vieleck](gloss:regular-polygon) mit ${n}{n|5|
 Seiten. Jede Seite hat eine Länge von [{.step-target.pill.green}1m](target:base). Wir
 wollen nun versuchen, seine Fläche zu berechnen!
 
-Zuerst können wir das Vieleck in ${n} kongruente,
+Zuerst können wir das Vieleck in ${toWord(n)} kongruente,
 [[gleichschenklige|gleichseitige|rechtwinklige]] Dreiecke aufteilen.
 
 {.reveal(when="blank-0")} Wir kennen bereits die [[Basis|Höhe|Fläche]] dieser
@@ -294,7 +296,7 @@ var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
 = 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
 "yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
 
-{.reveal(when="blank-5 blank-6" delay=4000)} Das Vieleck besteht aus ${n}
+{.reveal(when="blank-5 blank-6" delay=4000)} Das Vieleck besteht aus ${toWord(n)}
 dieser gleichschenkligen Dreiecke, die alle die gleiche Fläche haben. Die
 Gesamtfläche des Vielecks beträgt daher
 
@@ -746,7 +748,7 @@ _{button.next-step} Weiter_
 [entsprechenden Winkel](target:angles) kongruent sein müssen.
 _{button.next-step} Weiter_
 
-{.reveal.r(when="next-1")} Das bedeutet z.B., dass eine der [Diagonalen](target:d1)
+{.reveal.r(when="next-1")} Das bedeutet z.B., dass die [Diagonale](target:d1)
 eine [[Winkelsymmetrale|Normale|Schwerlinie]] der [beiden Winkel](target:vAngle) an ihren
 Enden ist.
 _{button.next-step} Weiter_
@@ -1084,7 +1086,7 @@ Du hast vielleicht bemerkt, dass sich einige [regelmäßige Vielecke](gloss:regu
 ---
 > id: tessellation-regular-1
 
-Das hat mit der Größe ihrer [Innenwinkel](gloss:internal-angle) zu tun,
+Das hat mit der Größe ihrer [Innenwinkel](gloss:internal-angle)zu tun,
 mit deren Berechnung wir uns schon beschäftigt haben. An jedem [Eckpunkt](gloss:polygon-vertex) in
 dieser Parkettierung treffen sich die Innenwinkel mehrerer verschiedener Vielecke. Alle
 diese Winkel müssen zusammengezählt [[360°]] ergeben, sonst gibt
@@ -1449,7 +1451,7 @@ Philosophen [Platon](bio:plato).
 
 Wie sehen also die platonischen Körper aus - und wie viele von ihnen gibt es? Um eine dreidimensionale Form zu
 erhalten, benötigen wir mindestens [[3]] Flächen, die sich an jeder
-Ecke treffen. Beginnen wir systematisch mit dem kleinsten regelmäßigen Polygon:
+Ecke treffen. Beginnen wir systematisch mit dem kleinsten regelmäßigen Vieleck:
 gleichseitige Dreiecke:
 
 ---
@@ -1615,7 +1617,7 @@ scheint es keine platonischen Körper aus Sechsecken zu geben._
 > id: platonic-final
 
 Dasselbe gilt auch für alle regelmäßigen Vielecke mit mehr als sechs Seiten. Sie
-lassen sich nicht zu einer Parkettierung zusammenfügen und man erhält schon gar keine dreidimensionalen Polygone.
+lassen sich nicht zu einer Parkettierung zusammenfügen und man erhält schon gar keine dreidimensionalen Vielecke.
 
 Das bedeutet, dass es nur [[5]] platonische Körper gibt! Schauen wir uns
 alle auf einmal an:
@@ -1915,9 +1917,9 @@ betrachten.
 {.todo} KOMMT BALD!
 
     //- Welches dieser Netze bildet einen Würfel
-    //- Das Netz dem Objekt zuordnen 
-    //- https://github.com/polymake/matchthenet 
-    //- Netze zeichnen
+    //- Das Netz dem Objekt
+    zuordnen //- h
+    ttps://github.com/polymake/matchthenet //- Netze zeichnen
 
     //- Describe the cross section formed by the intersection of the plane and the solid.
 
