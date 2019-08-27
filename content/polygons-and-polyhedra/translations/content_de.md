@@ -146,7 +146,7 @@ unterteilt werden. Daher ist die
 
 ::: column.grow
 Wir sagen, dass ein Vieleck (Polygon) [__konkav__](gloss:concave) ist, wenn es einen Abschnitt hat, der
-::: column.grow"nach innen zeigt"[__. Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
+"nach innen zeigt"[__. Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
 
 Es gibt zwei Möglichkeiten, konkave Vielecke leicht zu identifizieren: Sie haben mindestens
 einen [Innenwinkel, der größer als 180° ist](target:angle). Sie haben außerdem
@@ -259,7 +259,7 @@ Hier siehst du ein [regelmäßiges Vieleck](gloss:regular-polygon) mit ${n}{n|5|
 Seiten. Jede Seite hat eine Länge von [{.step-target.pill.green}1m](target:base). Wir
 wollen nun versuchen, seine Fläche zu berechnen!
 
-Zuerst können wir das Vieleck in ${toWord(n)} kongruente,
+Zuerst können wir das Vieleck in ${n} kongruente,
 [[gleichschenklige|gleichseitige|rechtwinklige]] Dreiecke aufteilen.
 
 {.reveal(when="blank-0")} Wir kennen bereits die [[Basis|Höhe|Fläche]] dieser
@@ -296,7 +296,7 @@ var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
 = 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
 "yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
 
-{.reveal(when="blank-5 blank-6" delay=4000)} Das Vieleck besteht aus ${toWord(n)}
+{.reveal(when="blank-5 blank-6" delay=4000)} Das Vieleck besteht aus ${n}
 dieser gleichschenkligen Dreiecke, die alle die gleiche Fläche haben. Die
 Gesamtfläche des Vielecks beträgt daher
 
