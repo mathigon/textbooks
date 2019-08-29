@@ -596,8 +596,8 @@ Stellen wir uns das wieder als eine Konstruktion aus Bauteilen vor: zwei Seiten 
 Dreiecks sind Metallstäbe der Länge 4 und 6, und die dritte Seite ist ein Gummiband
 , das sich dehnen oder zusammenziehen kann.
 
-Jetzt sehen wir, dass das Gummiband immer _{span.hover-target} länger als _
-`6-4=2`und _{span.hover-target} kürzer als_ `6+4=10` ist.
+Jetzt sehen wir, dass das Gummiband immer _{span.hover-target} länger als_
+`6-4=2` und _{span.hover-target} kürzer als_ `6+4=10` ist.
 ::: column(width=300)
 
     x-geopad.label-halo(width=300 height=200): svg
@@ -641,7 +641,7 @@ Eckpunkte _{span.reveal(when="draw-c1")}und einen Kreis mit dem Radius __5cm__ u
 den anderen._
 
 {.reveal(when="draw-c2")} Der dritte Eckpunkt des Dreiecks ist der
-[[|Schnittpunkt|MittelpunktRadius]] der beiden Kreise. _{span.reveal(when="blank-0")}
+[[Schnittpunkt|Mittelpunkt|Radius]] der beiden Kreise. _{span.reveal(when="blank-0")}
 Jetzt können wir sie einfach zu einem Dreieck verbinden._
 
 {.reveal(when="blank-0" delay="3000")} Die Kreise schneiden sich eigentlich 
@@ -911,7 +911,7 @@ der Leiter ist __{.m-blue}1 m__ von der Wand entfernt. Wie weit reicht sie die
 Wand hinauf?
 
 Beachte, dass ein rechtwinkliges Dreieck gebildet wird, das aus der Leiter, der Wand und
-dem Boden besteht. Mit dem Satz des Pythagoras bekommen wir einen
+dem Boden besteht. Mit dem Satz des Pythagoras können wir das so schreiben:
 
     //- Ideal syntax:
     //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
@@ -958,7 +958,7 @@ und enthält [vier rechtwinklige Dreiecke](target:triangle), sowie ein
 
 {.reveal(when="blank-0")} Nun ordnen wir die Dreiecke im Quadrat neu an. Das
 Ergebnis enthält noch immer die vier rechtwinkligen Dreiecke sowie zwei Quadrate
-der Größe [[<msup><mi>a</mi><mn>2</mn></msup> und <msup><mi>b</mi><mn>2</mn></msup msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
+der Größe [[<msup><mi>a</mi><mn>2</mn></msup> and <msup><mi>b</mi><mn>2</mn></msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
 
 {.reveal(when="blank-1")} Vergleicht man die Größe des roten Bereichs
 _{span.hover-target}vor_ und _{span.hover-target}nach_ der Umstellung, so
@@ -1013,11 +1013,11 @@ Hier haben wir die gleiche Skizze wie zuvor, aber diesmal verwenden wir _Algebra
 anstatt einer _Neuanordnung_, um den Satz des Pythagoras zu beweisen.
 
 Das große Quadrat hat eine Seitenlänge von `a + b` und eine Fläche
-[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2 /sup + b sup 2</sup>|_c_<sup>2</sup>]].
+[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2</sup>|_c_<sup>2</sup>]].
 
 {.reveal(when="blank-2")} Es besteht aus [vier Dreiecken](target:triangle), mit einer Fläche von
 jeweils [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
-und [einem Quadrat](target:square) der Fläche [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
+and [one square](target:square) of size [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
 {.reveal(when="blank-3 blank-4")} Wenn wir alle diese Informationen zusammenführen, bekommen wir folgende Gleichung:
 
@@ -1070,8 +1070,8 @@ _{span.qed}_
 {.r} Hier haben wir irgendein rechtwinkliges Dreieck. Wenn wir eine der
 Höhen einzeichnen, teilt sie das Dreieck in zwei kleinere Dreiecke auf,
 und sie teilt die Hypotenuse _c_ in [zwei kleinere Teile](target:hypotenuse)
-, die wir [{.step-target.i.pill.blue}x](target:x) und [
-{.step-target.i.pill.green}y](target:y) nennen wollen.
+, die wir [{.step-target.i.pill.blue}x](target:x) und 
+[{.step-target.i.pill.green}y](target:y) nennen wollen.
 _{span.next-step} Weiter_
 
 {.r.reveal(when="next-0")} Sehen wir uns die beiden kleineren Dreiecke getrennt an, damit
@@ -1249,7 +1249,7 @@ der Längen 3, 4 und 5, um perfekte rechte Winkel zu messen.
 
 :::
 
-Drei Zahlen wie diese werden als [__Pythagoräische Tripel__](gloss:pythagorean-triple)bezeichnet.
+Drei Zahlen wie diese werden als [__Pythagoräische Tripel__](gloss:pythagorean-triple) beeichnet.
 (3, 4, 5) ist ein Beispiel für ein Pythagoräisches Tripel. Wenn wir jede Zahl
 mit 2 multiplizieren, erhalten wir ein weiteres Pythagoräisches Tripel: (6, 8, [[10]]).
 
@@ -1375,9 +1375,9 @@ hier kommt die __Trigonometrie__ ins Spiel!
 ::: column.grow
 Stell dir vor, wir haben ein rechtwinkliges Dreieck, und wir kennen auch einen der beiden anderen
 Winkel, __{.m-red}α__. Wir wissen bereits, dass die längste Seite
-[__{.m-yellow}Hypotenuse]__(target:hyp) genannt wird. Die anderen beiden werden normalerweise als
-[__{.m-green}anliegend]__(target:adj) (neben dem Winkel __{.m-red}α__) und
-[__{.m-blue}gegenüberliegend__](target:opp) (also gegenüber des Winkels __{.m-red}α__) bezeichnet.
+[__{.m-yellow}Hypotenuse__](target:hyp) genannt wird. Die anderen beiden werden normalerweise als
+[__{.m-green}Ankathete__](target:adj) (anliegend am Winkel __{.m-red}α__) und
+[__{.m-blue}Gegenkathete__](target:opp) (gegenüberliegend zum Winkel __{.m-red}α__) bezeichnet.
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
@@ -1418,7 +1418,7 @@ Dreiecke gleich:
         mrow: mtext.m-blue.b Gegenkathete
         mrow: mtext.m-green.b Ankathete
 
-Fassen wir zusammenzufassen: Wir haben einen bestimmten Wert für __{.m-red}α__gewählt
+Fassen wir zusammenzufassen: Wir haben einen bestimmten Wert für __{.m-red}α__ gewählt
 und viele ähnliche, rechtwinklige Dreiecke erhalten. Die Seiten dieser Dreiecke stehen zueinander
 in jeweils gleichem Verhältnis. Da __{.m-red}α__ unsere einzige Variable war, muss es irgendeine
  Beziehung zwischen __{.m-red}α__ und diesen Verhältnissen geben.
@@ -1539,9 +1539,9 @@ In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-    // {.todo} Obwohl es drei Formeln gibt, sind sie alle sehr ähnlich. First, notice
-    // that whatever angle is in the cosine, the opposite side is on the other side of
-    // the equal sign.
+    // {.todo} Obwohl es drei Formeln gibt, sind sie alle sehr ähnlich. Zuerst ist zu beachten
+    // , dass sich die gegenüberliegende Seite auf der anderen Seite des
+    // Gleichheitszeichens befindet, egal welcher Winkel im Kosinus liegt.
     // 
     // {.todo} Verwende den Kosinussatz, wenn folgendes gegeben ist:
     // Zwei Seiten und der eingeschlossene Winkel.
