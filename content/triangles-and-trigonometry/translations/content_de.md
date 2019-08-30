@@ -1017,7 +1017,7 @@ Das große Quadrat hat eine Seitenlänge von `a + b` und eine Fläche
 
 {.reveal(when="blank-2")} Es besteht aus [vier Dreiecken](target:triangle), mit einer Fläche von
 jeweils [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
-and [one square](target:square) of size [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
+und [ein Quadrat](target:square) der Fläche [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
 {.reveal(when="blank-3 blank-4")} Wenn wir alle diese Informationen zusammenführen, bekommen wir folgende Gleichung:
 
@@ -1249,7 +1249,7 @@ der Längen 3, 4 und 5, um perfekte rechte Winkel zu messen.
 
 :::
 
-Drei Zahlen wie diese werden als [__Pythagoräische Tripel__](gloss:pythagorean-triple) beeichnet.
+Drei Zahlen wie diese werden als [__Pythagoräische Tripel__](gloss:pythagorean-triple) bezeichnet.
 (3, 4, 5) ist ein Beispiel für ein Pythagoräisches Tripel. Wenn wir jede Zahl
 mit 2 multiplizieren, erhalten wir ein weiteres Pythagoräisches Tripel: (6, 8, [[10]]).
 
