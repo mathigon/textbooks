@@ -1908,23 +1908,5 @@ Unsere ganze Welt ist 3-dimensional - aber es ist oft viel einfacher, flache, 2-
 visualisieren. Und es gibt einige verschiedene Möglichkeiten, dreidimensionale Polyeder zweidimensional zu
 betrachten.
 
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
 {.todo} KOMMT BALD!
-
-    //- Welches dieser Netze bildet einen Würfel
-    //- Das Netz dem Objekt
-    zuordnen //- h
-    ttps://github.com/polymake/matchthenet //- Netze zeichnen
-
-    //- Describe the cross section formed by the intersection of the plane and the solid.
-
-    //- A cross-section is the intersection of a plane with a solid.
-    //- Another way to represent a three-dimensional figure in a two dimensional plane
-    //- is to use a net. A net is an unfolded, flat representation of the sides of a
-    //- three-dimensional shape.
 

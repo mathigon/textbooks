@@ -6,11 +6,8 @@ absolute-value:
   title: Absolutbetrag
   text: Der __Absolutbetrag__ einer Zahl ist ihr Abstand von 0 auf der
     Zahlengerade. Er macht negative Zahlen positiv, lässt aber positive Zahlen
-    unverändert. Der Absolutbetrag von `x` wird `|x|` geschrieben. Zum Beispiel 
+    unverändert. Der Absolutbetrag von `x` wird `|x|` geschrieben. Zum Beispiel
     `|-5|= 5` und `|3| = 3`.
-  # The absolute value of a number is the distance between the number and the
-  # origin. This connects the notion of _absolute value_ to the modulus of a
-  # complex number and the magnitude of a vector.
 
 acute-angle:
   title: Spitzer Winkel
@@ -42,7 +39,7 @@ aleph-zero:
 
 algebraic-numbers:
   title: Algebraische Zahlen |
-  text: 
+  text: |
     __Algebraische Zahlen__ sind die Teilmenge der reellen Zahlen,
     die als Lösungen einer Polynomgleichung mit ganzzahligen Koeffizienten dargestellt werden können.
     Alle rationalen (wie `2/3`) und irrationale Zahlen (wie `root(3,5)`) sind
@@ -54,7 +51,7 @@ algebraic-numbers:
 
 algorithm:
   title: Algorithmus |
-  text: 
+  text: |
     Ein __Algorithmus__ ist ein Satz von Regeln oder Anweisungen, die zur
     Lösung eines bestimmten Problems verwendet werden können. Sie werden häufig von Computern verwendet und tauchen
     überall in der Mathematik auf: von der _schriftlichen Division_ bis zur _Gauß'schen Elimination_.
@@ -72,7 +69,6 @@ alternate-angles:
     Die Winkelpaare 1 und 2 werden als __äußere Wechselwinkel__bezeichnet, da
     sie außerhalb der parallelen Linien liegen, und die Winkelpaare 3 und 4
     als __innere Wechselwinkel__.
-  # TODO Image
 
 angle:
   title: Winkel
@@ -110,19 +106,9 @@ arabic-numerals:
 
 arccos:
   title: Arkuskosinus |
-  text: 
+  text: |
     Die __Arkuskosinus-Funktion__ ist eine trigonometrische Funktion, die als
     `arccos(x)` oder `cos^(-1)(x)` geschrieben wird. Sie ist die Umkehrfunktion zu `cos(x)`.
-  # Basic idea: To find cos-1 (½), we ask "what angle has cosine equal to ½?" The
-  # answer is 60°. As a result we say cos-1 (½) = 60°. In radians this is
-  # cos-1(½) = π/3. There are actually many angles that have cosine equal to ½.
-  # We are really asking "what is the simplest, most basic angle that has
-  # cosine equal to ½?" As before, the answer is 60°. Thus cos-1 (½) = 60° or
-  # cos-1 (½) = π/3. Details: What is cos-1 (–½)? Do we choose 120°, –120°, 240°,
-  # or some other angle? The answer is 120°. With inverse cosine, we select the
-  # angle on the top half of the unit circle. Thus cos-1 (–½) = 120° or
-  # cos-1 (–½) = 2π/3. In other words, the range of cos-1 is
-  # restricted to [0, 180°] or [0, π].
 
 archimedean-solid:
   title: Archimedischer Körper
@@ -155,7 +141,7 @@ associative:
 
 axiom:
   title: Axiom |
-  text: 
+  text: |
     Ein __Axiom__, manchmal auch __Postulat__genannt, ist eine mathematische Aussage
     , die als "selbstverständlich" angesehen und ohne Beweis akzeptiert wird. Es sollte
     also so einfach sein, dass es offensichtlich und zweifellos wahr ist.
@@ -362,7 +348,8 @@ conic-section:
     verschiedene Arten von Kegelschnitten, die alle viele gemeinsame
     Eigenschaften haben: Kreis
     * Ellipse
-    * Parabel* Hyperbel
+    * Parabel
+    * Hyperbel
   link: /course/circles-and-pi/conic-sections
 
 convex:
@@ -393,7 +380,6 @@ cos:
   title: Kosinus
   text: Der __Kosinus__ ist eine trigonometrische Funktion, die `cos(θ)` geschrieben wird. In einem
     rechtwinkligen Dreieck ist es das Verhältnis der Ankathete zur Hypotenuse.
-  # cos(x) is a periodic function with period 2π.
   link: /course/triangles-and-trigonometry/trigonometry#trig-functions
 
 cpoct:
@@ -415,9 +401,9 @@ cryptography:
 
 cube:
   title: Würfel
-  text: Ein __Würfel__ (manchmal auch __Hexaeder__ genannt) ist ein regelmäßiges Polyeder
-    , bei dem jede Fläche ein Quadrat ist. Er ist einer der fünf _platonischen Körper_,
-    und er hat 6 Flächen, 8 Ecken und 12 Kanten.
+  text: Ein __Würfel__ (manchmal auch __Hexaeder__ genannt) ist ein regelmäßiges
+    Polyeder, bei dem jede Fläche ein Quadrat ist. Er ist einer der fünf
+    _platonischen Körper_, und er hat 6 Flächen, 8 Ecken und 12 Kanten.
   link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
 
 cube-volume:
@@ -456,7 +442,8 @@ denominator:
 dilation:
   title: Streckung (Dilatation)
   text: Eine __Dilatation__ (Streckung, Dehnung, Stauchung) ist eine Abbildung,
-    die die Maße einer geometrischen Form ändert, indem sie diese größer oder kleiner macht.
+    die die Maße einer geometrischen Form ändert, indem sie diese größer oder
+    kleiner macht.
   image: dilation.svg
   link: /course/transformations-and-symmetry/similarity#dilations
 
@@ -509,7 +496,7 @@ dot-machine:
 
 ellipse:
   title: Ellipse |
-  text: 
+  text: |
     Eine __Ellipse__ ist eine gekrümmte Bahn rund um zwei Brennpunkte. Jeder Punkt
     am Umfang der Ellipse hat die gleiche _Summe der Abstände_ zu den
     beiden Brennpunkten.
@@ -549,11 +536,10 @@ factor:
   link: /course/divisibility-and-primes/factors-and-multiples
 
 factorial:
-  title: Fakultät |
-  text: 
+  title: Fakultät
+  text: |
     Die __Fakultät__ einer positiven ganzen Zahl ist das Produkt aller ganzen Zahlen
     bis hin zu sich selbst. Wir bezeichnen sie mit dem Ausrufezeichen, z.B
-    
 
     {.text-center} `5! = 1×2×3×4×5`.
 
@@ -692,8 +678,8 @@ graph-vertex:
   link: /course/graphs-and-networks/introduction
 
 gravity:
-  title: Gravitation |
-  text: 
+  title: Gravitation
+  text: |
     __Gravitation__ ist eine der vier fundamentalen Kräfte der Natur, und sie zieht
     zwei beliebige Massen im Universum zur jeweils anderen. Isaac Newton entdeckte,
     dass die Kraft zwischen zwei Massen `m_1` und `m_2`
@@ -755,8 +741,8 @@ icosahedron:
   link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
 
 imaginary:
-  title: Imaginäre Zahlen |
-  text: 
+  title: Imaginäre Zahlen
+  text: |
     __Imaginäre Zahlen__ entstehen durch die Quadratwurzel negativer
     Zahlen. Trotz ihres Namens sind sie in Mathematik,
     Naturwissenschaften und Ingenieurwissenschaften von großer Bedeutung.
@@ -906,8 +892,8 @@ mode:
     Zum Beispiel ist der Modalwert von [3, 4, 4, 4, 4, 5, 5, 5, 6] 5.
 
 molecule:
-  title: Molekül |
-  text: 
+  title: Molekül
+  text: |
     Ein __Molekül__ besteht aus zwei oder mehreren Atomen,
     die durchchemische Bindungen zusammengehalten werden. Es hat keine elektrische Ladung, im Gegensatz zu __Ionen__.
 
@@ -1012,7 +998,6 @@ parabola-vertex:
   text: Der __Scheitelpunkt__ einer Parabel ist der Punkt, an dem sie ihre Richtung ändert.
     Er ist entweder das Maximum oder das Minimum der entsprechenden quadratischen
     Funktion, und er liegt auf der Symmetrieachse der Parabel.
-  # The vertex is halfway between the directrix and the focus of the parabola.
 
 parallel:
   title: Parallele Geraden
@@ -1061,7 +1046,6 @@ perpendicular:
   title: Senkrechte Geraden (Normale)
   text: Zwei Geraden sind __senkrecht__ (manchmal auch _normal_ oder
     _orthogonal_ genannt), wenn sie sich im rechten Winkel schneiden.
-  # Perpendicular lines have slopes that are negative reciprocals.
   image: perpendicular.svg
   link: /course/euclidean-geometry/definitions#perpendicular
 
@@ -1257,9 +1241,10 @@ quadratic-equation:
 
 quadratic-formula:
   title: Lösungsformel für die quadratische Gleichung |
-  text: 
+  text: |
     Die __Lösungsformel ("Mitternachtsformel", "a-b-c-Formel")__ ist
-    eine Möglichkeit, die Lösungen einer quadratischen Gleichung zu bestimmen. Die Gleichung `ax^2 + bx + c = 0` hat die Lösungen
+    eine Möglichkeit, die Lösungen einer quadratischen Gleichung zu bestimmen.
+    Die Gleichung `ax^2 + bx + c = 0` hat die Lösungen
 
     {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
 
@@ -1399,8 +1384,8 @@ roulette:
     36 Zahlen sowie eine oder zwei Nullen.
 
 scale-factor:
-  title: Skalierungsfaktor |
-  text: 
+  title: Skalierungsfaktor
+  text: |
     Der __Skalierungsfaktor__ von zwei ähnlichen geometrischen Figuren ist das Verhältnis von zwei
     einander zugeordneten Längen.
 
@@ -1414,8 +1399,8 @@ scalene-triangle:
     unterschiedliche Längen.
 
 scientific-notation:
-  title: Wissenschaftliche Notation |
-  text: 
+  title: Wissenschaftliche Notation
+  text: |
     Die __Wissenschaftliche Notation__ ist eine standardisierte Methode zum Schreiben von sehr großen oder
     kleinen Zahlen. Sie hat die Form `a × 10^n`, wobei _n_ eine ganze Zahl ist und
     `1 ≤ a < 10`.
@@ -1477,7 +1462,6 @@ sin:
   text: Der __Sinus__ ist eine trigonometrische Funktion, die `sin(θ)`
     geschrieben wird. In einem rechtwinkligen Dreieck ist der Sinus das
     Verhältnis der Gegenkathete zur Hypotenuse.
-  # `sin(x) is a periodic function with period `2π`.
   link: /course/triangles-and-trigonometry/trigonometry#trig-functions
 
 sphere:
@@ -1541,7 +1525,8 @@ symmetry-group:
   link: /course/transformations-and-symmetry/symmetry-groups#groups-1
 
 tan:
-  title: Tangens  text: 
+  title: Tangens
+  text: |
     Der __Tangens__ ist eine trigonometrische Funktion, die `tan(θ)` geschrieben wird. Er ist definiert
     als das Verhältnis von _Sinus_ und _Kosinus_:
 
@@ -1556,13 +1541,10 @@ tangent:
   text: Eine __Tangente__ ist eine Gerade, die eine Kurve oder einen Kreis an einem einzigen
     Punkt berührt, ohne diese zu schneiden. Man nennt diesen Punkt den
     __Berührungspunkt__.
-  # Formally, it is a line through a point of a differentiable curve, which has
-  # the same slop as the slope of the curve at that point.
-  # A line tangent to a circle is perpendicular to the radius at that point.
 
 term:
-  title: Term (Algebra) |
-  text: 
+  title: Term (Algebra)
+  text: |
     __Terme__ sind die Teile eines algebraischen Ausdrucks oder einer Gleichung,
     die durch + oder - Zeichen getrennt sind. Das können Produkte oder Brüche oder
     eine oder mehrere Zahlen, Variablen oder Funktionen sein.
@@ -1665,7 +1647,6 @@ triangle-inequality:
     __Länge der dritten Seite. Das bedeutet
     auch, dass die kürzeste Entfernung zwischen zwei beliebigen Punkten eine gerade
     Linie ist (weil der Weg über einen dritten Punkt immer länger ist).
-  # TODO Image
 
 triangle-median:
   title: Schwerlinie eines Dreiecks
