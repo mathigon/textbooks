@@ -687,7 +687,7 @@ and promised $1,000,000 to any mathematician who solves it.
 > goals: race
 > section: least-common-multiple
 
-## Least Common Multiples
+## Lowest Common Multiples
 
 Two runners are training on a circular racing track. The __{.m-blue}first runner__
 takes __{.m-blue}60__ seconds for one lap. The __{.m-green}second runner__ only
@@ -709,7 +709,7 @@ both runners are back at the start line is after [[120]] seconds.
 
 {.reveal(when="blank-0 blank-1")} What we’ve just found is the smallest number
 which is both a multiple of __{.m-green}40__ and a multiple of __{.m-blue}60__.
-This is called the __least common multiple__ or __lcm__.
+This is called the __lowest common multiple__ or __lcm__.
 
 ---
 > id: race2
