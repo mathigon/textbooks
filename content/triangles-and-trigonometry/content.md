@@ -3,6 +3,7 @@
 ## Introduction
 
 > id: intro
+> section: introduction
 
 ::: column.grow
 By the early 19th century, explorers had discovered most of the world. Trade and
@@ -71,9 +72,11 @@ engineering.
 :::
 
 ---
-> id: angle-sum
 
 ## Properties of Triangles
+
+> id: angle-sum
+> section: properties-of-triangles
 
 Let’s start simple: a triangle is a closed shape that has three sides (which
 are [line segments](gloss:line-segment)) and three vertices (the
@@ -179,10 +182,10 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
 Here you can see a triangle as well as the [midpoints](gloss:midpoint) of its
 three sides.
 
-A [__median__](gloss:median) of a triangle is a line segment that joins a vertex
-and the midpoint of the opposite side. Draw the three medians of this triangle.
-_{span.reveal(when="s0 s1 s2")}What happens as you move the vertices of the
-triangle?_
+A [__median__](gloss:triangle-median) of a triangle is a line segment that joins
+a vertex and the midpoint of the opposite side. Draw the three medians of this
+triangle. _{span.reveal(when="s0 s1 s2")}What happens as you move the vertices
+of the triangle?_
 
 {.reveal(when="move")} It seems like the medians always [[intersect in one
 point|have the same length|divide each other in the middle]].
@@ -418,8 +421,9 @@ __base__, and then find the corresponding __height__, which is the line that is
       circle.yellow(hidden x="triangle(a,b,c).orthocenter" target="center")
 
 ::: column.grow
-Like the [medians](gloss:median), [perpendicular bisectors](gloss:perpendicular-bisector)
-and [angle bisectors](gloss:angle-bisector), the three altitudes of a triangle
+Like the [medians](gloss:triangle-median), [perpendicular
+bisectors](gloss:perpendicular-bisector) and [angle
+bisectors](gloss:angle-bisector), the three altitudes of a triangle
 intersect in a single point. This is called the [__orthocenter__](target:center)
 of the triangle.
 
@@ -482,10 +486,12 @@ the length of that side.
 :::
 
 ---
-> id: triangle-inequality
-> goals: s0 s1 s3 s5
 
 ## The Triangle Inequality
+
+> id: triangle-inequality
+> section: the-triangle-inequality
+> goals: s0 s1 s3 s5
 
 Having studied many of the properties and components of triangles, let’s think
 about _creating_ triangles. In particular, if I give you any three numbers, can
@@ -610,10 +616,12 @@ Note that these are _strict_ inequalities. If the third side is _exactly_ 2 or
 enough to form a triangle.
 
 ---
-> id: sss-construction
-> goals: draw-base draw-c1 draw-c2
 
-## Triangles Congruence
+## Triangle Congruence
+
+> id: sss-construction
+> section: triangles-congruence
+> goals: draw-base draw-c1 draw-c2
 
 Now that we can check if three sides can form a triangle, let’s think about how
 we would actually _construct_ a triangle with these sides.
@@ -848,10 +856,11 @@ angle of 50°. SSA is not enough to confirm two triangles are congruent.
 :::
 
 ---
-> id: pythagoras
-> class: no-border
 
 ## Pythagoras’ Theorem 
+
+> id: pythagoras
+> section: pythagoras-theorem
 
 We have now reached an important point in geometry – being able to state and
 understand one of the most famous [theorems](gloss:theorem) in all of
@@ -1279,10 +1288,12 @@ distribution of these points?
     // And there you have your pythagorean triple! You can check that a2 + b2 = c2.
 
 ----
-> id: isosceles
-> sectionStatus: dev
 
 ## Isosceles and Equilateral Triangles
+
+> id: isosceles
+> section: isosceles-and-equilateral
+> sectionStatus: dev
 
 Other then right-angled triangles, there are a few other triangles with
 special properties. In this section we’ll have a look at some of them.
@@ -1343,9 +1354,11 @@ equilateral triangle using straight-edge and compass.
 {.todo} COMING SOON – Area of an equilateral triangle
 
 ----
-> id: trigonometry
 
 ## Trigonometry
+
+> id: trigonometry
+> section: trigonometry
 
 So far we have seen relationships between the __angles__ of triangles (e.g.
 they always sum up to 180°) and relationships between the __sides__ of triangles
@@ -1671,10 +1684,11 @@ for the curvature of Earth.
     figure: x-media(src="images/himalaya.jpg" width=760 height=320)
 
 ---
-> id: applications
-> class: no-border
 
 ## Applications
+
+> id: applications
+> section: applications
 
 But triangles and trigonometry are not just useful for measuring the height of
 mountains, and the tools and concepts you have learned are incredibly important

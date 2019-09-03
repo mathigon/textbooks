@@ -37,7 +37,7 @@ By now you should be comfortable with addition, subtraction and multiplication
 of integers. Division is slightly different, because you can’t always divide any
 integer by any other. For example 17 divided by 3 is not a whole number – it is
 somewhere in between 5 and 6. You either have to give a remainder (2), or
-express the answer as a decimal number (5.66).
+express the answer as a decimal number (5.66…).
 
     .row.padded
       .grow
@@ -78,11 +78,11 @@ as fast as possible. Click the [play button](->#divisibility-game_.toggle) to st
 ---
 > id: factors
 
-It is often useful to find _all_ the divisors of a number. For example, the
-divisors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60.
+It is often useful to find _all_ the factors of a number. For example, the
+factors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60.
 
-Of course, you don’t want to check all numbers up to 60 if they are divisors.
-Instead, there is a simple technique which relies on the fact that divisors
+Of course, you don’t want to check all numbers up to 60 if they are factors.
+Instead, there is a simple technique which relies on the fact that factors
 always appear in [[pairs|triples|halves]].
 
 ---
@@ -93,7 +93,7 @@ In the case of 60 we have 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 =
 
     +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
 
-To find all divisors of a number we simply start at both ends of this list,
+To find all factors of a number we simply start at both ends of this list,
 until we meet in the middle.
 
 ---
@@ -102,7 +102,7 @@ until we meet in the middle.
     x-slideshow
       .stage(slot="stage")
         +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
-      .legend(slot="legend") For example, the first divisor pair of 42 is simply 1 and 42, and we write them down with much space in between.
+      .legend(slot="legend") For example, the first factor pair of 42 is simply 1 and 42, and we write them down with much space in between.
       .legend(slot="legend") After 1 at the beginning, we check if 2 divides 42. It does, and the corresponding pair is 42 ÷ 2 = 21.
       .legend(slot="legend") Next, we check if 3 divides 42. It does, and the corresponding pair if 42 ÷ 3 = 14.
       .legend(slot="legend") Now we check if 4 divides 42. It does not, however, so we move on.
@@ -310,8 +310,8 @@ More on that later…
 
 ## Prime Numbers
 
-When calculating these divisor pairs, it can happen that a number doesn’t have
-any divisors except for the first pair. One example is 13 – its only divisors
+When calculating these factor pairs, it can happen that a number doesn’t have
+any factors except for the first pair. One example is 13 – its only factors
 are 1 and 13 itself. These special numbers are called __Prime numbers__. They
 can’t be broken up into products of smaller numbers, which, in a way, makes them
 the “atoms of numbers”.
@@ -866,13 +866,13 @@ along the sides. What is the largest size of squares she can use?
 Just like before, this question is not about geometry - it is about
 divisibility. The length of the sides of the tiles has to divide both 18 and 30,
 and the largest possible number with that property is [[6]]. This is called the
-__Greatest Common Divisor__ or __gcd__ of 18 and 30.
+__Greatest Common Factor__ or __gcf__ of 18 and 30.
 
 ---
 > id: gcd2
 
 Once again, we can use the [prime factorisation](gloss:factorisation) to
-calculate the gcd of any two numbers. Remember that any divisor of a number
+calculate the gcf of any two numbers. Remember that any factor of a number
 must have some of the prime factors of that number.
 
     table.table-tiny
@@ -893,7 +893,7 @@ must have some of the prime factors of that number.
         td(colspan=3): | ×
         td: .number-ball.l-green 5
 
-Suppose that __{.m-red}X__ is the gcd of __{.m-green}18__ and __{.m-blue}30__.
+Suppose that __{.m-red}X__ is the gcf of __{.m-green}18__ and __{.m-blue}30__.
 Then __{.m-red}X__ divides __{.m-green}18__ so the prime factors of __{.m-red}X__
 must be among _{span.number-ball.small.l-blue}2_, _{span.number-ball.small.l-blue}3_
 and _{span.number-ball.small.l-blue}3_. Also, __{.m-red}X__ divides __{.m-blue}30__
@@ -912,13 +912,13 @@ _{span.number-ball.l-blue-green}3_ &nbsp;=&nbsp; 6.
 ---
 > id: gcd4
 
-Now we have a simple method for finding the gcd of two numbers:
+Now we have a simple method for finding the gcf of two numbers:
 
     ol.proof
       li Find the prime factorisation of each number.
       li Multiple the prime factors which are in both numbers.
 
-Once again prime numbers are special: the gcd of two different primes is always
+Once again prime numbers are special: the gcf of two different primes is always
 [[1]], because they don’t share any prime factors.
 
 ---
@@ -950,7 +950,7 @@ appear in regular intervals, say every 6 years.
 
 Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1} years
 (${isPrime(n) ? 'prime' : 'not prime'}). The two animals would meet every
-${lcm(n,6)} years, which is the [[lcm|gcd|product]] of 6 and ${n}.
+${lcm(n,6)} years, which is the [[lcm|gcf|product]] of 6 and ${n}.
 
     figure
       include svg/cicadas.svg

@@ -2,8 +2,8 @@
 
 ## Vielecke (Polygone)
 
-> id: polygons
 > section: polygons
+> id: polygons
 
 Ein [__Vieleck__](gloss:polygon) oder Polygon ist eine geschlossene,
 ebene Figur, die nur gerade Seiten hat. Vielecke können beliebig viele Seiten und Winkel haben, aber die Seiten dürfen nicht
@@ -22,7 +22,7 @@ gebogen sein. Welche der folgenden Formen sind Vielecke?
 ---
 > id: polygons-1
 
-Wir geben Polygonen unterschiedliche Namen, je nachdem, wie viele Seiten sie haben:
+Wir geben Vielecken unterschiedliche Namen, je nachdem, wie viele Seiten sie haben:
 
     .row.padded-thin
       div(style="width: 100px")
@@ -76,8 +76,9 @@ Wir wissen bereits, dass die Summe der Innenwinkel in einem Dreieck immer
 {.text-center.var} _{span.circled.red}${round(angle(b,a,d).deg)}°_ +
 _{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
 _{span.circled.green}${round(angle(d,c,b).deg)}°_ +
-_{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
-    
+_{span.circled.yellow}${360 - round(angle(b,a,d).deg) - round(angle(c,b,a).deg) -
+round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+
     x-gesture(target="x-anibutton")
 
 ::: column.grow(width=300)
@@ -103,7 +104,8 @@ _{span.circled.yellow}${round(angle(a,d,c).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(
 _{span.circled.blue}${round(angle(g,f,e).deg)}°_ +
 _{span.circled.green}${round(angle(h,g,f).deg)}°_ +
 _{span.circled.yellow}${round(angle(i,h,g).deg)}°_ +
-_{span.circled}${round(angle(e,i,h).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+_{span.circled}${540 - round(angle(f,e,i).deg) - round(angle(g,f,e).deg) -
+round(angle(h,g,f).deg) - round(angle(i,h,g).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
@@ -144,7 +146,7 @@ unterteilt werden. Daher ist die
 
 ::: column.grow
 Wir sagen, dass ein Vieleck (Polygon) [__konkav__](gloss:concave) ist, wenn es einen Abschnitt hat, der
-["nach innen zeigt"](target:cave). Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
+"nach innen zeigt"[__. Vielecke, die _nicht_ konkav sind, werden als [__konvex__](gloss:convex) bezeichnet.
 
 Es gibt zwei Möglichkeiten, konkave Vielecke leicht zu identifizieren: Sie haben mindestens
 einen [Innenwinkel, der größer als 180° ist](target:angle). Sie haben außerdem
@@ -281,16 +283,16 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
 target("Gegenkathete", "apothem") / target("Ankathete", "half-base") =
-blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
+blank("Apothema", "s", "s/2") / blank("s/2", "s", "Apothema")`
 
-{.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
+{.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("Apothema", "yellow",
 "apothem") = 1/2 pill(s, "green", "base") × tan pill(α, "blue", "alpha") =
 var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Die Fläche des
 [gleichschenkligen Dreiecks](target:isosceles-triangle) ist somit
 
-{.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
+{.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "Basis" × "Höhe"
 = 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
 "yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
 
@@ -457,34 +459,34 @@ Regel nur den spezifischsten Typ.
 Wähle nun vier Punkte, irgendwo im grauen Feld links.
 _{span.reveal(when="points")} Wir können sie alle zu einem Viereck verbinden._
 
-{.reveal(when="points" delay=1000)} Lassen Sie uns den Mittelpunkt jeder der vier
-Seiten finden. If we connect the midpoints, we get [[another quadrilateral|a triangle|a rectangle]].
+{.reveal(when="points" delay=1000)} Wir wollen jetzt den Mittelpunkt jeder der vier
+Seiten bestimmen. Wenn wir die Mittelpunkte verbinden, erhalten wir ein weiteres [[Viereck|Dreieck|Rechteck]].
 
-{.reveal(when="blank-0")} Try moving the vertices of the outer quadrilateral and
-observe what happens to the smaller one. It looks like it is not just _any_
-quadrilateral, but always a [[parallelogram|trapezium|rectangle]]!
+{.reveal(when="blank-0")} Versuche, die Ecken des äußeren Vierecks zu verschieben und
+beobachte dabei, was mit dem kleineren passiert. Es sieht so aus, als wäre es nicht _irgendein_
+Viereck, sondern immer ein [[Parallelogramm|Trapez|Rechteck]]!
 
-{.reveal(when="blank-1")} But why is that the case? Why should the the result
-for _any_ quadrilateral always end up being a parallelogram? To help us explain,
-we need to draw one of the [diagonals](gloss:polygon-diagonal) of the original
-quadrilateral.
+{.reveal(when="blank-1")} Aber warum ist das so? Warum sollte das Ergebnis
+für _jedes_ Viereck immer ein Parallelogramm sein? Um eine Erklärung dafür zu finden,
+müssen wir eine der [Diagonalen](gloss:polygon-diagonal) des ursprünglichen
+Vierecks einzeichnen.
 
-{.reveal(when="diagonal")} The diagonal splits the quadrilateral into [two
-triangles](target:triangle). And now you can see that [two of the sides](target:midsegment)
-of the inner quadrilateral are actually [[midsegments|medians|perpendicular bisectors]]
-of these triangles.
+{.reveal(when="diagonal")} Die Diagonale teilt das Viereck in [zwei
+Dreiecke](target:triangle) auf. Wie du jetzt erkennen kannst sind [zwei der Seiten](target:midsegment)
+des inneren Vierecks eigentlich [[Mittelparallelen|Schwerlinien|Streckensymmetralen]]
+ dieser Dreiecke.
 
-{.reveal(when="blank-2")} In the [previous
-course](/course/triangles-and-trigonometry/properties-of-triangles) we showed
-that [midsegments](gloss:triangle-midsegment) of a triangle are always parallel
-to its base. In this case, it means that [both these sides](target:parallel) are
-parallel to the diagonal – therefore they must also be [[parallel to each
-other|the same length|perpendicular to each other]].
+{.reveal(when="blank-2")} Im [vorherigen
+Kurs](/course/triangles-and-trigonometry/properties-of-triangles) haben wir gezeigt
+, dass die [Mittelparallelen](gloss:triangle-midsegment) eines Dreiecks immer parallel
+zu seiner Basis sind. In diesem Fall bedeutet das, dass [beide Seiten](target:parallel)
+parallel zur Diagonale sind - daher müssen sie auch
+[[parallel zueinander|gleich lang|zueinander senkrecht]] sein.
 
-{.reveal(when="blank-3" delay=2000)} We can do exactly the same with the [second
-diagonal](target:other) of the quadrilateral, to show that both pairs of
-opposite sides are parallel. And this is all we need to prove that the inner
-quadrilateral is a [parallelogram](gloss:parallelogram). _{span.qed}_
+{.reveal(when="blank-3" delay=2000)} Genauso können wir mit der [zweiten
+Diagonale](target:other) des Vierecks verfahren, um zu zeigen, dass beide Paare von
+gegenüberliegenden Seiten parallel sind. Und das ist alles was wir für den Beweis, dass das innere
+Viereck ein [Parallelogramm](gloss:parallelogram) ist, benötigen. _{span.qed}_
 :::
 
 ---
@@ -492,20 +494,20 @@ quadrilateral is a [parallelogram](gloss:parallelogram). _{span.qed}_
 
 ### Parallelogramme
 
-It turns out that parallelograms have many other interesting properties, other
-than opposite sides being parallel. Which of the following six statements are
-true?
+Es stellt sich heraus, dass Parallelogramme viele andere interessante Eigenschaften haben,
+außer dass die gegenüberliegenden Seiten parallel sind. Welche der folgenden sechs Aussagen sind
+wahr?
 
 ::: column.grow
 
     x-picker.list
-      .item.md The opposite sides are [congruent](gloss:congruent).
-      .item(data-error="parall-error-1") The internal angles are always less than 90°.
-      .item.md(data-error="parall-error-2") The diagonals [bisect](gloss:angle-bisector) the internal angles.
-      .item The opposite angles are congruent.
-      .item(data-error="parall-error-3") Both diagonals are congruent.
-      .item(data-error="parall-error-4") Adjacent sides have the same length
-      .item The two diagonals bisect each other in the middle.
+      .item.md Die gegenüberliegenden Seiten sind [kongruent](gloss:congruent).
+      .item(data-error="parall-error-1") Die Innenwinkel sind immer kleiner als 90°.
+      .item.md(data-error="parall-error-2") Die Diagonalen [teilen](gloss:angle-bisector) die Innenwinkel in der Mitte.
+      .item Die gegenüberliegenden Winkel sind kongruent.
+      .item(data-error="parall-error-3") Beide Diagonalen sind kongruent.
+      .item(data-error="parall-error-4") Angrenzende Seiten haben die gleiche Länge
+      .item Die beiden Diagonalen teilen sich in der Mitte.
 
 ::: column(width=300)
 
@@ -532,11 +534,11 @@ true?
 ---
 > id: parallelograms-proof
 
-Of course, simply “observing” these properties is not enough. To be sure that
-they are _always_ true, we need to _prove_ them:
+Natürlich reicht es nicht aus, diese Eigenschaften nur zu "beobachten". Um sicher zu sein, dass
+sie _immer_ wahr sind, müssen wir sie _beweisen_:
 
 ::: tab
-#### Opposite Sides and Angles _{span.check(when="diagonal blank-0 blank-1")}_
+#### Gegenüberliegende Seiten und Winkel _{span.check(when="diagonal blank-0 blank-1")}_
 
 ::: column(width=300)
 
@@ -565,32 +567,32 @@ they are _always_ true, we need to _prove_ them:
       path.fill.yellow.transparent(x="angle(d,a,b).sup" target="angles")
 
 ::: column.grow
-{.task} Let’s try to prove that the opposite sides and angles in a parallelogram
-are always congruent.
+{.task} Versuchen wir also zu beweisen, dass die gegenüberliegenden Seiten und Winkel in einem Parallelogramm
+immer deckungsgleich sind.
 
-Start by drawing one of the diagonals of the parallelogram.
+Zeichne zunächst eine der Diagonalen des Parallelogramms.
 
-{.reveal(when="diagonal")} The diagonal creates four new angles with the sides
-of the of the parallelogram. The two [red angles](target:red-angle) and the two
-[blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
-so they must each be [[congruent|adjacent|supplementary]].
+{.reveal(when="diagonal")} Die Diagonale erzeugt vier neue Winkel mit den Seiten
+des Parallelogramms. Die beiden [roten Winkel](target:red-angle) und die beiden
+[blauen Winkel](target:blue-angle) sind [Wechselwinkel](gloss:alternate-angles),
+so dass sie jeweils [[kongruent|benachbart|supplementät]] sein müssen.
 
-{.reveal(when="blank-0")} Now if we look at the [two triangles](target:triangles)
-created by the diagonal, we see that they have two congruent angles,
-and [one congruent side](target:diagonal). By the [[ASA|AAS|AA]] congruence
-condition, both triangles must be congruent.
+{.reveal(when="blank-0")} Wenn wir uns nun die [beiden durch die Diagonale erzeugten Dreiecke](target:triangles)
+ansehen, sehen wir, dass sie zwei kongruente Winkel
+und [eine kongruente Seite](target:diagonal) haben. Nach dem [[WSW|WWS|WWW]] Kongruenzsatz
+ müssen beide Dreiecke kongruent sein.
 
-{.reveal(when="blank-1")} This means that the other corresponding parts of the
-triangles must also be congruent: in particular, both [pairs of opposite
-sides](target:sides) are congruent, and both [pairs of opposite
-angles](target:angles) are congruent. _{span.qed}_
+{.reveal(when="blank-1")} Das bedeutet, dass auch die anderen entsprechenden Teile der
+Dreiecke kongruent sein müssen: Insbesondere sind beide [Paare von gegenüberliegenden
+Seiten](target:sides) und beide [Paare von gegenüberliegenden
+Winkeln](target:angles) kongruent. _{span.qed}_
 :::
 
-{.reveal(when="blank-1")} It turns out that the converse is also true: if both
-pairs of opposite sides (or angles) in a quadrilateral are congruent, then the
-quadrilateral has to be a parallelogram.
+{.reveal(when="blank-1")} Es stellt sich heraus, dass das auch umgekehrt wahr ist: Wenn beide
+Paare von gegenüberliegenden Seiten (oder Winkeln) in einem Viereck deckungsgleich sind, dann muss das
+Viereck ein Parallelogramm sein.
 
-    //- Adjacent angles are supplementary.
+    //- Angrenzende Winkel sind ergänzend.
 
 ::: tab
 #### Diagonalen _{span.check(when="diagonal blank-2 blank-3")}_
@@ -624,43 +626,43 @@ quadrilateral has to be a parallelogram.
       path.yellow.tick.transparent(x="segment(d1,m1)" target="DM")
 
 ::: column.grow
-{.task} Now prove that the two diagonals in a parallelogram bisect each other.
+{.task} Beweise jetzt, dass sich die beiden Diagonalen in einem Parallelogramm gegenseitig halbieren.
 
-Let’s think about the two yellow triangles generated by the diagonals:
+Überlegungen zu den beiden gelben Dreiecken, die durch die Diagonalen erzeugt werden:
 
-* We have just proved that the [two green sides](target:side1) are congruent,
-  because they are opposite sides of a parallelogram.
-* The [two red angles](target:anglesR) and [two blue angles](target:anglesB) are
-  congruent, because they are [[alternate angles|opposite angles|right angles]].
+* Wir haben gerade erst bewiesen, dass die [beiden grünen Seiten](target:side1) kongruent sind,
+  da sie gegenüberliegende Seiten eines Parallelogramms sind.
+* Die [beiden roten](target:anglesR) und [zwei blauen Winkel](target:anglesB) sind
+  kongruent, da es sich um [[Wechselwinkel|gegenüberliegende Winkel|rechte Winkel]] handelt.
 
-{.reveal(when="blank-2")} By the [[ASA|SSS|AAS]] condition, both of the yellow
-triangles must therefore also be congruent.
+{.reveal(when="blank-2")} Nach dem [[WSW|SSS|WWS]]-Satz müssen daher auch die beiden gelben
+Dreiecke kongruent sein.
 
-{.reveal(when="blank-3")} Now we can use the fact the corresponding parts of
-congruent triangles are also congruent, to conclude that [`bar(AM)`](target:AM)
-= [`bar(CM)`](target:CM) and [`bar(BC)`](target:BM) = [`bar(DM)`](target:DM). In
-other words, the two diagonals intersect at their midpoints. _{span.qed}_
+{.reveal(when="blank-3")} Nun können wir die Tatsache nutzen, dass die einander entsprechenden Teile
+kongruenter Dreiecke auch kongruent sind, um zu dem Schluss zu kommen, dass [`bar(AM)`](target:AM)
+= [`bar(CM)`](target:CM) and [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM). Mit
+anderen Worten, die beiden Diagonalen schneiden sich an ihren Mittelpunkten. _{span.qed}_
 :::
 
-{.reveal(when="blank-3")} Like before, the opposite is also true: if the two
-diagonals of a quadrilateral bisect each other, then the quadrilateral is a
-parallelogram.
+{.reveal(when="blank-3")} Wie zuvor ist auch hier der Umkehrschluss richtig: Wenn sich die beiden
+Diagonalen eines Vierecks gegenseitig halbieren, dann ist das Viereck ein
+Parallelogramm.
 :::
 
 ---
 > id: kites
 
-### Kites
+### Deltoide (Drachenviereck)
 
 ::: column.grow
-We showed above that the two pairs of [[opposite|adjacent]] sides of a
-parallelogram are congruent. In a kite, two pairs of _adjacent_ sides are
-congruent.
+Wir haben oben gezeigt, dass die beiden Paare der [[gegenüberliegenden|benachbarten]] Seiten eines
+Parallelogramms kongruent sind. In einem Deltoid sind zwei Paare _benachbarter_ Seiten
+kongruent.
 
-The name _Kite_ clearly comes from its shape: it looks like the kites you can
-fly in the sky. However, of all the special quadrilaterals we have seen so far,
-the Kite is the only one that can also be [concave](gloss:concave): if it is
-shaped like a dart or arrow:
+Der Name _Drachenviereck_ geht eindeutig auf seine Form zurück: Ein Deltoid sieht aus wie die Drachen, die man am Himmel
+fliegen lassen kann. Von allen speziellen Vierecken, die wir bisher gesehen haben, ist
+das Deltoid jedoch das einzige, das auch [konkav](gloss:concave) sein kann: wenn es wie ein Pfeil
+geformt ist:
 ::: column(width=320)
 
     x-media(src="images/kites.jpg")
@@ -680,7 +682,7 @@ shaped like a dart or arrow:
       path.blue(x="segment(b,c)")
       path.blue(x="segment(d,c)")
 
-{.caption} A convex kite
+{.caption} Ein konvexes Deltoid
 ::: column(width=240)
 
     x-geopad(width=240 height=180): svg
@@ -694,7 +696,7 @@ shaped like a dart or arrow:
       path.blue(x="segment(b1,c1)")
       path.blue(x="segment(d1,c1)")
 
-{.caption} A concave kite that looks like an arrow
+{.caption} Ein konkaves Deltoid, das wie ein Pfeil aussieht
 :::
 
 ---
@@ -732,48 +734,48 @@ shaped like a dart or arrow:
       path.red.reveal(when="next-2" x="segment(b,d)" animation="draw")
 
 ::: column.grow
-You might have noticed that all kites are [[symmetric|similar]].
-_{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
-[[one of the diagonals|one of the sides|a midsegment]]._
+Du hast vielleicht bemerkt, dass alle Deltoide [[symmetrisch|ähnlich]] sind.
+_{span.reveal(when="blank-0")} Die [Symmetrieachse](gloss:axis-of-symmetry) ist
+[[eine der Diagonalen|eine der Seiten|eine Mittelparallele]]._
 
-{.reveal.r(when="blank-1")} The diagonal splits the kite into [two congruent
-triangles](target:triangle1). We know that they are congruent from the
-[SSS](gloss:triangle-sss) condition: both triangles have [three congruent
-sides](target:sss) (red, green and blue).
+{.reveal.r(when="blank-1")} Die Diagonale teilt das Deltoid in [zwei
+kongruente Dreiecke](target:triangle1) auf. Wir wissen aufgrund des
+[SSS](gloss:triangle-sss)-Satzes dass sie kongruent sind: Beide Dreiecke haben [drei kongruente
+Seiten](target:sss) (rot, grün und blau).
 _{button.next-step} Weiter_
 
-{.reveal.r(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
-[corresponding angles](target:angles) must also be congruent.
+{.reveal.r(when="next-0")} Unser "[CPOCT](gloss:cpoct)-Wissen" sagt uns, dass auch die
+[entsprechenden Winkel](target:angles) kongruent sein müssen.
 _{button.next-step} Weiter_
 
-{.reveal.r(when="next-1")} This means, for example, that the [diagonal](target:d1)
-is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
-ends.
+{.reveal.r(when="next-1")} Das bedeutet z.B., dass die [Diagonale](target:d1)
+eine [[Winkelsymmetrale|Normale|Schwerlinie]] der [beiden Winkel](target:vAngle) an ihren
+Enden ist.
 _{button.next-step} Weiter_
 
-{.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
-we get [two more, smaller triangles](target:triangle2). These must also be
-congruent, because of the [SAS](gloss:triangle-sss) condition: the have the same
-[two sides and included angle](target:sas).
+{.reveal.r(when="next-2")} Wir können noch weiter gehen: Wenn wir die andere Diagonale zeichnen,
+erhalten wir [zwei weitere, kleinere Dreiecke](target:triangle2). Diese müssen aufgrund des [SWS](gloss:triangle-sss)-Satzes auch
+kongruent sein: Sie haben die gleichen
+[zwei Seiten und eingeschlossenen Winkel](target:sas).
 _{button.next-step} Weiter_
 
-{.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
-the same as [angle β](target:beta). Since they are adjacent, [supplementary
-angles](gloss:supplementary-angles) both α and β must be [[90]]°.
+{.reveal(when="next-3")} Das bedeutet, dass der [Winkel α](target:alpha) auch derselbe sein
+muss wie der [Winkel β](target:beta). Da sie nebeneinander liegen, und
+[supplementär](gloss:supplementary-angles) sind müssen sowohl α als auch β [[90]]° groß sein.
 
-{.reveal(when="blank-3")} In other words, the diagonals of a kite are always
-[[perpendicular|parallel]].
+{.reveal(when="blank-3")} Mit anderen Worten, die Diagonalen eines Drachens sind immer
+[[Senkrechten|Parallelen]].
 :::
 
 ---
 > id: quadrilaterals-area
 > goals: draw-1 draw-2
 
-### Area of Quadrilaterals
+### Fläche von Vierecken
 
-When calculating the area of triangles in the previous course, we used the
-trick of converting it into a [[rectangle|square|pentagon]]. It turns out that
-we can also do that for some quadrilaterals:
+Bei der Berechnung der Fläche von Dreiecken im vorherigen Kurs haben wir den
+Trick benutzt, sie in ein [[Rechteck|Quadrat|Fünfeck]] zu verwandeln. Es stellt sich heraus, dass
+wir das auch für einige Vierecke tun können:
 
 ::: tab
 #### Parallelogramm _{span.check(when="draw-1 blank-1")}_
@@ -791,25 +793,25 @@ we can also do that for some quadrilaterals:
       path.blue(x="polygon(a1,b1,c1,d1)")
 
 ::: column.grow
-On the left, try to draw a rectangle that has the same area as the
-parallelogram.
+Versuche auf der linken Seite, ein Rechteck zu zeichnen, das die gleiche Fläche wie das
+Parallelogramm hat.
 
-{.reveal(when="draw-1")} Can you see that the [missing triangle](target:triangle-1)
-on the left is [[exactly the same as|smaller than|bigger than]] the [overlapping
-triangle](target:triangle-2) on the right?
-_{span.reveal(when="blank-1")}Therefore the area of a parallelogram is_
+{.reveal(when="draw-1")} Kannst du sehen, dass das [fehlende Dreieck](target:triangle-1)
+auf der linken Seite [[genau gleich groß wie|kleiner als|größer als]] das [überlappende
+Dreieck](target:triangle-2) auf der rechten Seite ist?
+_{span.reveal(when="blank-1")}Daher ist die Fläche eines Parallelogramms_
 
-{.text-center.reveal(when="blank-1")} Area = __{.i.m-green}base__ × __{.i.m-yellow}height__
+{.text-center.reveal(when="blank-1")} Fläche = __{.i.m-green}Grundseite__ × __{.i.m-yellow}Höhe__
 
-{.reveal(when="blank-1" delay=1000)} _Be careful when measuring the height of a
-parallelogram: it is usually not the same as one of the two sides._
+{.reveal(when="blank-1" delay=1000)} _Seie vorsichtig bei der Messung der Höhe eines
+Parallelogramms: Es ist in der Regel nicht gleich lang wie eine der beiden Seiten._
 :::
 
 ::: tab
-#### Großes Vieleckbein _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
+#### Trapez _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
 
-Recall that trapeziums are quadrilaterals with one pair of [parallel sides](target:bases).
-These parallel sides are called the __bases__ of the trapezium.
+Erinnere dich daran, dass Trapeze Vierecke mit einem Paar [paralleler Seiten](target:bases) sind.
+Diese parallelen Seiten werden als __Grundseiten__ des Trapezes bezeichnet.
 
 ::: column(width=300)
 
@@ -830,34 +832,34 @@ These parallel sides are called the __bases__ of the trapezium.
       circle.reveal(when="blank-3" x="line(b2,c2).midpoint" target="t-width" animation="pop")
 
 ::: column.grow
-Like before, try to draw a rectangle that has the same area as this trapezium.
-_{span.reveal(when="draw-2")} Can you see how the [missing and added
-triangles](target:triangles-3) on the left and the right cancel out?_
+Versuche wie zuvor auf der linken Seite, ein Rechteck zu zeichnen, das die gleiche Fläche wie das Trapez hat.
+_{span.reveal(when="draw-2")} Kannst du sehen, wie sich die [fehlenden und hinzugefügten
+Dreiecke](target:triangles-3) links und rechts aufheben?_
 
-{.reveal(when="draw-2" delay=2000)} The [{.step-target.pill.green} height](target:t-height)
-of this rectangle is the [[distance between|average of|length of]] the [parallel
-sides](target:bases) of the trapezium.
+{.reveal(when="draw-2" delay=2000)} Die [{.step-target.pill.green} Höhe](target:t-height)
+dieses Rechtecks entspricht [[dem Abstand|der mittleren Länge|der Länge]] der [parallelen
+Seiten](target:bases) des Trapezes.
 
-{.reveal.r(when="blank-2")} The [{.step-target.pill.yellow} width](target:t-width)
-of the rectangle is the distance between the [[midpoints|endpoints]] of the two
-non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
-called the __midsegment__ of the trapezium._
+{.reveal.r(when="blank-2")} Die [{.step-target.pill.yellow} Breite](target:t-width)
+des Rechtecks ist der Abstand zwischen den [[Mittelpunkten|Endpunkten]] der beiden nicht
+parallelen Seiten des Trapezes. _{span.reveal(when="blank-3")} Dieser wird als
+die __Mittelparallele__ des Trapezes bezeichnet._
 _{button.next-step.reveal(when="blank-3")} Weiter_
 
-{.reveal(when="next-0")} Like with [triangles](gloss:triangle-midsegment), the
-midsegment of a trapezium is [[parallel to|perpendicular to|the same length as]]
-its two bases. The length of the midsegment is the average of the lengths of the
-bases: `(a+c)/2`.
+{.reveal(when="next-0")} Wie bei [Dreiecken](gloss:triangle-midsegment) ist die
+Mittelparallele eines Trapezes [[parallel zu|senkrecht auf|gleich lang wie]]
+ seine beiden Grundseiten. Die Länge der Mittelparallelen ist der Durchschnitt der Längen der
+Grundseiten: `(a+c)/2`.
 
-{.reveal(when="blank-4")} If we combine all of this, we get an equation for the
-area of a trapezium with parallel sides [_a_](target:base-2) and [_c_](target:base-1),
-and height [_h_](target:t-height):
+{.reveal(when="blank-4")} Wenn wir all das zusammenfügen, erhalten wir eine Gleichung für die
+Fläche eines Trapezes mit den parallelen Seiten [_a_](target:base-2) und [_c_](target:base-1),
+und der Höhe [_h_](target:t-height):
 
 {.text-center.reveal(when="blank-4")} `A = h xx ((a+c) / 2)`
 :::
 
 ::: tab
-#### Drachen _{span.check(when="blank-5")}_
+#### Deltoid _{span.check(when="blank-5")}_
 
 ::: column(width=300)
 
@@ -884,19 +886,19 @@ and height [_h_](target:t-height):
       path.fill.yellow.transparent(x="polygon(d3,a3,point(1,9))" target="outside")
 
 ::: column.grow
-In this kite, the [two diagonals](target:diag3) form the width and the height of
-a large [rectangle](target:rect4) that surrounds the kite.
+Bei diesem Deltoid](target:diag3) bilden die [beiden Diagonalen die Breite und Höhe
+eines großen [Rechtecks](target:rect4), das das Deltoid umgibt.
 
-The area of this rectangle is [[twice|the same as|three times]] the area of the
-kite. _{span.reveal(when="blank-5")} Can you see how each of the [four
-triangles](target:inside) that make up the kite are the same as the
-[four gaps](target:outside) outside it?_
+Die Fläche dieses Rechtecks ist [[doppelt so|gleich|dreimal so]] groß wie die Fläche des
+Deltoids. _{span.reveal(when="blank-5")} Kannst du sehen, wie jedes der [vier
+Dreiecke](target:inside), aus denen das Deltoid besteht, mit den
+[vier Lücken](target:outside) außerhalb des Deltoids identisch ist?_
 
-{.reveal(when="blank-5")} This means that the area of a kite with diagonals
-[{.step-target.i.pill.green}d1](target:d31) and
-[{.step-target.i.pill.yellow}d2](target:d32) is
+{.reveal(when="blank-5")} Das bedeutet, dass die Fläche eines Deltoids mit den Diagonalen
+[{.step-target.i.pill.green}d1](target:d31) und
+[{.step-target.i.pill.yellow}d2](target:d32) sich folgendermaßen berechnen lässt:
 
-{.text-center.reveal(when="blank-5")} _Area_ = `1/2`
+{.text-center.reveal(when="blank-5")} _Fläche_ = `1/2`
 [{.step-target.i.pill.green}d1](target:d31) ×
 [{.step-target.i.pill.yellow}d2](target:d32).
 :::
@@ -925,33 +927,33 @@ triangles](target:inside) that make up the kite are the same as the
       path.blue(x="segment(c4,d4)" target="base")
 
 ::: column.grow
-A [Rhombus](gloss:rhombus) is a quadrilateral that has four congruent sides. You
-might remember that every rhombus is a [[parallelogram|rectangle|square]] – and
-also a [[kite|hexagon|concave polygon]].
+Eine [Raute](gloss:rhombus) ist ein Viereck mit vier kongruenten Seiten. Du weißt
+vielleicht noch, dass jede Raute ein [[Parallelogramm|Rechteck|Quadrat]] ist - ebenso
+wie ein [[Deltoid|Sechseck|konkaves Vieleck]].
 
-{.reveal(when="blank-6 blank-7")} This means that to find the area of a rhombus,
-we can use either the equation for the area of a parallelogram, or that for the
-area of a kite:
+{.reveal(when="blank-6 blank-7")} Das bedeutet, dass
+wir zur Bestimmung der Fläche einer Raute entweder die Gleichung für die Fläche eines Parallelogramms oder die Gleichung für die
+Fläche eines Deltoids verwenden können:
 
-{.text-center.reveal(when="blank-6 blank-7")} _Area_ =
-[{.step-target.i.pill.blue}base](target:base) ×
-[{.step-target.i.pill.red}height](target:height) = `1/2`
+{.text-center.reveal(when="blank-6 blank-7")} _Fläche_ =
+[{.step-target.i.pill.blue}Grundseite](target:base) ×
+[{.step-target.i.pill.red}Höhe](target:height) = `1/2`
 [{.step-target.i.pill.green}d1](target:d41) ×
 [{.step-target.i.pill.yellow}d2](target:d42).
 
-{.reveal(when="blank-6 blank-7" delay=1000)} _In different contexts, you might
-be given different parts of a Rhombus (sides, height, diagonals), and you should
-pick whichever equation is more convenient._
+{.reveal(when="blank-6 blank-7" delay=1000)} _Je nachdem
+werden also verschiedene Teile einer Raute (Seiten, Höhe, Diagonalen) gegeben sein, und solltest dann die Formel
+wählen, die am besten geeignet ist._
 :::
 
 :::
 
-    //- ### Cyclic quadrilaterals
+    //- ### Zyklische Vierecke
 
-    //- ### Isosceles Trapeziums
+    //- ### Gleichschenklige Trapeze
     //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
+    //- Ein gleichschenkliges Trapez ist ein Trapez, bei dem die nicht-parallelen Seiten
+    //- deckungsgleich sind. The third trapezoid above is an example of an isosceles
     //- trapezoid. Think of it as an isosceles triangle with the top cut off.
     //- Isosceles trapezoids also have parts that are labeled much like an
     //- isosceles triangle. Both parallel sides are called bases.
@@ -968,84 +970,84 @@ pick whichever equation is more convenient._
 
 ---
 
-## Parkettierung
+## Parkettierung (Tessellation)
 
 > section: tessellations
 > id: tessellations
 
-[Polygons](gloss:polygon) appear everywhere in nature. They are especially
-useful if you want to tile a large area, because you can fit polygons together
-without any gaps or overlaps. Patterns like that are called
-[__tessellations__](gloss:tessellation).
+[Vielecke](gloss:polygon) treten überall in der Natur auf. Sie sind besonders
+nützlich, wenn man eine große Fläche kacheln möchte, da man Vielecke
+ohne Lücken oder Überlappungen zusammenfügen kann. Solche Muster werden als
+[__Parkettierungen__](gloss:tessellation) bezeichnet.
 
 ::: column(width=200)
 
     x-media(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
-{.caption} [[Hexagonal|Triangular|Quadratic]] honeycomb
+{.caption} [[Sechseckige|Dreieckige|Quadratische]] Wabe
 ::: column(width=200)
 
     x-media(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
 
-{.caption} Sinaloan Milk Snake skin
+{.caption} Haut einer Sinaloa-Dreiecksnatter
 ::: column(width=200)
 
     x-media(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
 
-{.caption} Cellular structure of leafs
+{.caption} Zellstruktur von Blättern
 ::: column(width=200)
 
     x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
 
-{.caption} Basalt columns at Giant’s Causeway in Northern Ireland
+{.caption} Basaltsäulen am Giant's Causeway in Nordirland
 ::: column(width=200)
 
     x-media(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
 
-{.caption} Pineapple skin
+{.caption} Ananasschale
 ::: column(width=200)
 
     x-media(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
 
-{.caption} Shell of a tortoise
+{.caption} Schildpatt einer Schildkröte
 :::
 
 ---
 > id: tessellations-1
 
-Humans have copied many of these natural patterns in art, architecture and
-technology – from ancient Rome to the present. Here are a few examples:
+Die Menschen haben viele dieser natürlichen Muster in Kunst, Architektur und
+Technik kopiert - vom alten Rom bis in die Gegenwart. Hier sind einige Beispiele:
 
 ::: column(width=200)
 
     x-media(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
 
-{.caption} [[Rectangular|Quadratic|Hexagonal]] pavement pattern
+{.caption} [[Rechteckiges|Quadratisches|Sechseckiges]] Belagsmuster
 ::: column(width=200)
 
     x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
 
-{.caption} Greenhouse at the Eden Project in England
+{.caption} Gewächshaus am Eden Project in England
 ::: column(width=200)
 
     x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
 
-{.caption} Mosaic at Alhambra
+{.caption} Mosaik in der Alhambra
 ::: column(width=200)
 
     x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
 
-{.caption} [[Triangular|Hexagonal|Rectangular]] roof at the British Museum in London
+{.caption} [[Dreieckiges|Sechseckiges|Rechteckiges]] Dach im British Museum in London
 ::: column(width=200)
 
     x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
 
-{.caption} Cellular tessellation pavilion in Sydney
+{.caption} Cellular Tessellation Pavillon in Sydney
 ::: column(width=200)
 
     x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
 
-{.caption} _Study of Regular Division of the Plane with Reptiles_, M. C. Escher
+{.caption} _Studie einer regelmäßigen Flächenfüllung mit Reptilien_, M. C. Escher
 :::
 
     // TODO Carbon Nanotube
@@ -1057,16 +1059,16 @@ technology – from ancient Rome to the present. Here are a few examples:
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
-Here you can create your own tessellations using regular polygons. Simply drag
-new shapes from the sidebar onto the canvas. Which shapes tessellate well? Are
-there any shapes that don’t tessellate at all? Try to create interesting
-patterns!
+Hier kannst du deine eigenen Parkettierungen mit regelmäßigen Vielecken erstellen. Ziehe einfach
+neue Formen aus der Seitenleiste auf die Leinwand. Welche Formen eignen sich gut für Parkettierungen? Gibt
+es Formen, die sich nicht kacheln lassen? Versuche, interessante
+Muster zu erstellen!
 
     include ./components/tessellation
     figure: x-tessellation
     x-gesture(target="x-tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
-      h4 Examples of other students’ tessellations
+      h4 Beispiele für die Parkettierungen      anderer Studenten
       .row.padded-thin
         div(style="width: 224px"): img(src="images/user/tess-1.png" width=240 height=160)
         div(style="width: 224px"): img(src="images/user/tess-2.png" width=240 height=160)
@@ -1075,20 +1077,20 @@ patterns!
 ---
 > id: tessellation-regular
 
-### Tessellations from regular polygons
+### Parkettierungen mit regelmäßigen Vielecken
 
-You might have noticed that some [regular polygons](gloss:regular-polygon) (like
-[[squares|pentagons]]) tessellate very easily, while others (like
-[[pentagons|triangles|hexagons]]) don’t seem to tessellate at all.
+Du hast vielleicht bemerkt, dass sich einige [regelmäßige Vielecke](gloss:regular-polygon) (wie
+[[Quadrate|Fünfecke]]) sehr gut und andere (wie
+[[Fünfecke|Dreiecke|Sechsecke]]) sich überhaupt nicht für Parkettierungen eignen.
 
 ---
 > id: tessellation-regular-1
 
-This has to do with the size of their [internal angles](gloss:internal-angle),
-which we learned to calculate before. At every [vertex](gloss:polygon-vertex) in
-the tessellation, the internal angles of multiple different polygons meet. We
-need all of these angles to add up to [[360]]°, otherwise there will either be
-a gap or an overlap.
+Das hat mit der Größe ihrer [Innenwinkel](gloss:internal-angle)zu tun,
+mit deren Berechnung wir uns schon beschäftigt haben. An jedem [Eckpunkt](gloss:polygon-vertex) in
+dieser Parkettierung treffen sich die Innenwinkel mehrerer verschiedener Vielecke. Alle
+diese Winkel müssen zusammengezählt [[360°]] ergeben, sonst gibt
+es entweder eine Lücke oder eine Überlappung.
 
 ---
 > id: tessellation-regular-2
@@ -1096,67 +1098,67 @@ a gap or an overlap.
 ::: column(width=160 parent="padded-thin")
     include svg/tessellations/triangles.svg
 
-{.caption} Triangles [[tessellate|don’t tessellate]] _{span.reveal(when="blank-0")} because 6 × 60° = 360°._
+{.caption} Dreiecke [[kann man|kann man nicht]] zu einer Parkettierung zusammenfügen, _{span.reveal(when="blank-0")} da 6 × 60° = 360°._
 ::: column(width=160)
     include svg/tessellations/squares.svg
 
-{.caption} Squares [[tessellate|don’t tessellate]] _{span.reveal(when="blank-1")} because 4 × 90° = 360°._
+{.caption} Quadrate [[kann man|kann man nicht]] zu einer Parkettierung zusammenfügen, _{span.reveal(when="blank-1")} da 4 × 90° = 360°._
 ::: column(width=160)
     include svg/tessellations/pentagons.svg
 
-{.caption} Pentagons [[don’t tessellate|tessellate]] _{span.reveal(when="blank-2")} because multiples of 108°
-don’t add up to 360°._
+{.caption} Fünfecke [[kann man|kann man nicht]] zu einer Parkettierung zusammenfügen, _{span.reveal(when="blank-2")} da sich
+Vielfache von 108° nicht zu 360° summieren._
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
+    //- {.caption}3 × 108° = 324° ist zu klein, aber 4 × 108° = 432° ist zu groß.
 ::: column(width=160)
     include svg/tessellations/hexagons.svg
 
-{.caption} Hexagons [[tessellate|don’t tessellate]] _{span.reveal(when="blank-3")} because 3 × 120° = 360°._
+{.caption} Sechsecke [[kann man|kann man nicht]] zu einer Parkettierung zusammenfügen, _{span.reveal(when="blank-3")} da 3 × 120° = 360°._
 :::
 
 ---
 > id: tessellation-regular-3
 
-You can similarly check that, just like pentagons, any regular polygon with 7 or
-more sides doesn’t tessellate. This means that the only regular polygons that
-tessellate are triangles, squares and hexagons!
+Du kannst auch überprüfen, dass, genau wie bei Fünfecken, jedes normale Vieleck mit 7 oder
+mehr Seiten keine Parkettierung ergibt. Das bedeutet, dass die einzigen regelmäßigen Vielecke, die
+Parkettierungen ermöglichen, Dreiecke, Quadrate und Sechsecke sind!
 
-Of course you could combine different kinds of regular polygons in a
-tessellation, provided that their internal angles can add up to 360°:
+Natürlich kann man auch verschiedene Arten von regelmäßigen Vielecken in einer
+Parkettierung kombinieren, vorausgesetzt, ihre Innenwinkel ergeben in Summe 360°:
 
     x-gallery(slide-width="520")
       div
         img(src="images/tessellations/regular-1.svg" width=360 height=240)
-        p.caption Squares and triangles#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption Quadrate und Dreiecke#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-3.svg" width=360 height=240)
-        p.caption Squares and triangles#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption Quadrate und Dreiecke#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-4.svg" width=360 height=240)
-        p.caption Hexagons and triangles#[br]#[strong.m-red 120°] + #[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption Sechsecke und Dreiecke#[br]#[strong.m-red 120°] + #[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-5.svg" width=360 height=240)
-        p.caption Hexagons and triangles#[br]#[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption Sechsecke und Dreiecke#[br]#[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-2.svg" width=360 height=240)
-        p.caption Hexagons, squares and triangles#[br]#[strong.m-red 120°] + #[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] = 360°
+        p.caption Sechsecke, Quadrate und Dreiecke#[br]#[strong.m-red 120°] + #[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-6.svg" width=360 height=240)
-        p.caption Octagons and squares#[br]#[strong.m-green 135°] + #[strong.m-green 135°] + #[strong.m-blue 90°] = 360°
+        p.caption Achtecke und Quadrate#[br]#[strong.m-green 135°] + #[strong.m-green 135°] + #[strong.m-blue 90°] = 360°
       div
         img(src="images/tessellations/regular-7.svg" width=360 height=240)
-        p.caption Dodecagons (12-gons) and triangles#[br]#[strong.m-green 150°] + #[strong.m-green 150°] + #[strong.m-yellow 60°] = 360°
+        p.caption Zwölfecke (Dodekagone) und Dreiecke#[br]#[strong.m-green 150°] + #[strong.m-green 150°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-8.svg" width=360 height=240)
-        p.caption Dodecagons, hexagons and squares#[br]#[strong.m-green 150°] + #[strong.m-red 120°] + #[strong.m-blue 90°] = 360°
+        p.caption Zwölfecke, Sechsecke und Quadrate#[br]#[strong.m-green 150°] + #[strong.m-red 120°] + #[strong.m-blue 90°] = 360°
 
 ---
 > id: tessellation-triangles
 
-### Tessellations from irregular polygons
+### Parkettierungen mit unregelmäßigen Vielecken
 
-We can also try making tessellations out of [irregular polygons](gloss:irregular-polygon)
-– as long as we are careful when rotating and arranging them.
+Wir können auch versuchen, Parkettierungen aus [unregelmäßigen Vielecken](gloss:irregular-polygon)
+herzustellen - vorausgesetzt, wir passen beim Drehen und Anordnen gut auf.
 
 ::: column(width=360)
 
@@ -1175,11 +1177,11 @@ We can also try making tessellations out of [irregular polygons](gloss:irregular
             path.yellow.fill(x=`y.translate(c.subtract(a).scale(${x}).add(b.subtract(a).scale(${y})))`)
 
 ::: column.grow
-It turns out that you can tessellate not just equilateral triangles, but _any
-triangle_! Try moving the [vertices](target:vertex) in this diagram.
+Es stellt sich heraus, dass man nicht nur gleichseitige Dreiecke, sondern _jedes
+beliebige Dreieck_ für eine Parkettierung verwenden kann! Versuche, die [Eckpunkte](target:vertex) in diesem Diagramm zu verschieben.
  
-The sum of the internal angles in a triangle is [[180]]°. If we use each angle
-[[twice|once|three times]] at every vertex in the tessellation, we get 360°:
+Die Summe der Innenwinkel in einem Dreieck beträgt [[180]]°. Wenn wir jeden Winkel
+[[zweimal|einmal|dreimal]] an jedem Eckpunkt der Parkettierung verwenden, erhalten wir 360°:
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1241,9 +1243,9 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
 
 
 ::: column.grow    
-More surprisingly, _any quadrilateral_ also tessellates! Their internal angle
-sum is [[360]]°, so if we use each angle [[once|twice|three times]] at every
-vertex in the tessellation, we we get 360°.
+Noch überraschender ist, dass auch _alle Vierecke_ zu Parkettierungen zusammengefügt werden können! Ihre innere
+Winkelsumme beträgt [[360]]°, wenn wir also jeden Winkel [[einmal|zweimal|dreimal]] an jedem
+Eckpunkt der Parkettierung verwenden, erhalten wir 360°.
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1284,8 +1286,8 @@ vertex in the tessellation, we we get 360°.
 ---
 > id: tessellation-pentagons
 
-Pentagons are a bit trickier. We already saw that _regular_ pentagons [[don’t
-tessellate|tessellate]], but what about non-regular ones?
+Fünfecke sind etwas kniffliger. Wir haben bereits gesehen, dass _regelmäßige_ Fünfecke sich [[nicht
+|gut]] für Parkettierungen eignen. Aber was ist mit unregelmäßigen Fünfecken?
 
 ---
 > id: tessellation-pentagons-1
@@ -1298,88 +1300,88 @@ tessellate|tessellate]], but what about non-regular ones?
     include svg/tessellations/pentagons-3.svg
 :::
 
-Here are three different examples of tessellations with pentagons. They are not
-_regular_, but they are perfectly valid 5-sided polygons.
+Hier sind drei verschiedene Beispiele für Parkettierungen mit Fünfecken. Sie sind nicht
+_regelmäßig_, aber sie sind einwandfreie fünfseitige Vielecke.
 
-So far, mathematicians have only found 15 different kinds of tessellations with
-(convex) pentagons – the most recent of which was discovered in 2015. No one
-knows if there are any others, or if these 15 are the only ones…
+Bisher haben Mathematiker nur 15 verschiedene Arten von Parkettierungen mit
+(konvexen) Fünfecken gefunden - die jüngste davon wurde 2015 entdeckt. Niemand
+weiß, ob es noch andere gibt, oder ob diese 15 die einzigen sind…
 
 ---
 > id: escher
 
-### Tessellations in Art
+### Parkettierungen in der Kunst
 
-Tessellations we both a tool and inspiration for many artists, architects and 
-designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher’s
-work contains strange, mutating creatures, patterns and landscapes:
+Parkettierungen sind für viele Künstler, Architekten und 
+Designer ein Werkzeug und eine Inspiration - allen voran der niederländische Künstler [M. C. Escher](bio:escher). Eschers
+Werk enthält seltsame, mutierende Kreaturen, Muster und Landschaften:
 
     .row
       div(style="width: 220px")
         x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
-        p.caption “Sky and Water I” (1938)
+        p.caption "Himmel und Wasser I" (1938)
       div(style="width: 220px")
         x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
-        p.caption “Lizard” (1942)
+        p.caption "Eidechse" (1942)
       div(style="width: 220px")
         x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
-        p.caption “Lizard, Fish, Bat” (1952)
+        p.caption "Eidechsen, Fische, Fledermäuse" (1952)
       div(style="width: 220px")
         x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
-        p.caption “Butterfly” (1948)
+        p.caption "Schmetterlinge" (1948)
       div(style="width: 220px")
         x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
-        p.caption “Two Fish” (1942)
+        p.caption “Zwei Fische” (1942)
       div(style="width: 220px")
         x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
-        p.caption “Shells and Starfish” (1941)
+        p.caption "Muscheln und Seesterne" (1941)
 
-These artworks often look fun and effortless, but the underlying mathematical
-principles are the same as before: angles, rotations, translations and polygons.
-If the maths isn’t right, the tessellation is not going to work!
+Diese Kunstwerke sehen oft spaßig und mühelos aus, aber die zugrunde liegenden mathematischen
+Prinzipien sind die gleichen wie zuvor: Winkel, Rotationen, Translationen und Vielecke.
+Wenn die Mathematik nicht stimmt, wird die Parkettierung nicht funktionieren!
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
-    p.caption “Metamorphosis II” by M. C. Escher (1940)
+    p.caption “Metamorphose II” von M. C. Escher (1940)
 
 ---
 > id: penrose
 
-### Penrose Tilings
+### Penrose-Parkettierungen
 
-All the tessellations we saw so far have one thing in common: they are
-__periodic__. That means they consist of a regular pattern that is repeated
-again and again. They can continue forever in all directions and they will look
-the same everywhere.
+Alle bisherigen Parkettierungen haben eines gemeinsam: Sie sind
+__periodisch__. Das heißt, sie bestehen aus einem regelmäßigen Muster, das immer wieder wiederholt
+wird. Sie können auf ewig in alle Richtungen weitergehen und werden
+überall gleich aussehen.
 
-In the 1970s, the British mathematician and physicist [Roger Penrose](bio:penrose)
-discovered _non-periodic_ tessellations – they still continue infinitely in all
-directions, but _never_ look exactly the same. These are called __Penrose
-tilings__, and you only need a few different kinds of polygons to
-create one:
+In den 1970er Jahren entdeckte der britische Mathematiker und Physiker [Roger Penrose](bio:penrose)
+ _nicht-periodische_ Parkettierungen - sie gehen immer noch unendlich in alle
+Richtungen weiter, sehen aber _nie_ genau gleich aus. Diese werden als __Penrose-Parkettierungen__
+bezeichnet, und man benötigt nur ein paar verschiedene Arten von Vielecken, um sie zu
+erstellen:
 
     figure
       include svg/penrose.svg
       x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
-      p.caption Move the slider to reveal the underlying structure of this tessellation. Notice how you have the same patterns at various scales: the small yellow pentagons, blue stars, orange rhombi and green ‘ships’ appear in their original size, in a #[strong.blue slightly larger size] and an #[strong.red even larger size]. This #[em self-similarity] can be used to prove that this Penrose tiling is non-periodic.
+      p.caption Bewege den Schieberegler, um die zugrunde liegende Struktur dieser Parkettierung zu enthüllen. Beachte, dass in verschiedenen Maßstäben die gleichen Muster auftauchen: Die kleinen gelben Fünfecke, blaue Sterne, orangefarbene Rauten und grüne "Schiffe" erscheinen in ihrer Originalgröße, in einer #[strong.blue etwas größeren Größe] und einer #[strong.red noch größeren Größe]. Diese #[em Selbstähnlichkeit] kann dazu verwendet werden, um zu beweisen, dass diese Penrose-Parkettierung nicht periodisch ist.
 
 ---
 > id: penrose-1
 
-Penrose was exploring tessellations purely for fun, but it turns out that the
-internal structure of some real materials (like aluminium) follow a similar
-pattern. The pattern was even used on toilet paper, because the manufacturers
-noticed that a non-periodic pattern can be rolled up without any bulges.
+Penrose untersuchte Parkettierungen nur zum Spaß, aber es stellte sich heraus, dass die
+innere Struktur einiger echter Materialien (wie Aluminium) einem ähnlichen
+Muster folgt. Das Muster wurde sogar auf Toilettenpapier verwendet, da die Hersteller
+feststellten, dass ein nicht-periodisches Muster ganz glatt aufgerollt werden kann.
 
 ---
 
-## Polyhedra
+## Polyeder
 
 > section: polyhedra
 > id: polyhedra
 
-Up to now we have just looked at what we can do with polygons in a flat,
-two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
-object that is made up of polygons. Hier sind ein paar Beispiele:
+Bisher haben wir uns nur angesehen, was wir mit Vielecken in einer flachen,
+zweidimensionalen Welt machen können. Ein [__Polyeder__](gloss:polyhedron) ist ein dreidimensionales
+Objekt, das aus Vielecken besteht. Hier sind ein paar Beispiele:
 
 ::: column.padded-thin(width=220)
     x-polyhedron#poly1(size=220 shape="PentagonalPrism")
@@ -1389,42 +1391,42 @@ object that is made up of polygons. Hier sind ein paar Beispiele:
     x-polyhedron(size=220 shape="StellatedDodecahedron")
 :::
 
-Polyhedra cannot contain curved surfaces – spheres and cylinders, for example,
-are not polyhedra.
+Polyeder können keine gekrümmten Oberflächen enthalten - Kugeln und Zylinder zum Beispiel
+sind keine Polyeder.
 
-The polygons that make up a polyhedron are called its [__faces__](gloss:polyhedron-face).
-The lines where two faces are connected are called [__edges__](gloss:polyhedron-edge),
-and the corners where the edges meet are called [__vertices__](gloss:polyhedron-vertex).
+Die Vielecke, aus denen ein Polyeder besteht, werden seine [__Flächen__](gloss:polyhedron-face) genannt.
+Die Strecken die zwei Flächen miteinander verbinden, werden [__Kanten__](gloss:polyhedron-edge),
+und die Punkte, an denen sich die Kanten treffen, werden [__Ecken__](gloss:polyhedron-vertex) genannt.
 
 ---
 > id: euler
 
-Polyhedra come in many different shapes and sizes – from simple cubes or
-pyramids with just a few faces, to complex objects like the star above, which
-has 60 triangular faces. It turns out, however, that _all_ polyhedra have one
-important property in common:
+Polyeder gibt es in vielen verschiedenen Formen und Größen - von einfachen Würfeln oder
+Pyramiden mit nur wenigen Flächen bis hin zu komplexen Objekten wie dem Stern oben, der 60 dreieckige Flächen
+hat. Es stellt sich jedoch heraus, dass _alle_ Polyeder eine
+wichtige Eigenschaft gemeinsam haben:
 
 ::: .theorem
-__Euler’s Polyhedron Formula__  
-In every polyhedron, the number of faces (_F_) plus the number of vertices (_V_)
-is two more than the number of edges (_E_). In other words,
+__Eulerscher Polyedersatz__  
+In jedem Polyeder ist die Anzahl der Flächen ("_F_") plus die Anzahl der Ecken ("_E_")
+um zwei größer als die Anzahl der Kanten ("_K_"). Anders ausgedrückt,
 
-{.text-center} `F + V = E + 2`
+{.text-center} `F + E = K + 2`
 :::
 
-For example, if a polyhedron has 12 faces and 18 vertices, we know that it must
-have [[28]] edges.
+Wenn ein Polyeder zum Beispiel 12 Flächen und 18 Ecken hat, wissen wir, dass es [[28]] Kanten
+haben muss.
 
 ---
 > id: euler-1
 
-This equation was discovered by the famous Swiss mathematician [Leonard
-Euler](bio:euler). It is true for any polyhedron, as long as it doesn’t contain
-any holes.
+Diese Gleichung wurde vom berühmten Schweizer Mathematiker [Leonard
+Euler](bio:euler) entdeckt. Sie gilt für jedes Polyeder, solange es
+keine Löcher enthält.
 
-If you try different polyhedra, like the ones above, you’ll find that Euler’s
-formula always works. In [a later course](/course/graphs-and-networks/eulers-formula)
-you’ll learn how to actually prove it mathematically.
+Wenn du das mit verschiedenen Polyedern, wie den oben aufgeführten, ausprobierst wirst du feststellen,
+dass der Satz von Euler immer funktioniert. In [einem späteren Kurs](/course/graphs-and-networks/eulers-formula)
+lernst du, wie du das auch mathematisch beweisen kannst.
 
 ---
 
@@ -1433,24 +1435,24 @@ you’ll learn how to actually prove it mathematically.
 > section: platonic-solids
 > id: platonic
 
-At the beginning of this course we defined [regular polygons](gloss:regular-polygon)
-as particularly “symmetric” polygons, where all sides and angles are the same.
-We can do something similar for polyhedra.
+Zu Beginn dieses Kurses haben wir [regelmäßige Vielecke](gloss:regular-polygon)
+ als besonders "symmetrische" Vielecke definiert, bei denen alle Seiten und Winkel gleich sind.
+Wir können etwas Ähnliches für Polyeder tun.
 
-In a _regular polyhedron_ all [faces](gloss:polyhedron-face) are all the same
-kind of regular polygon, and the same number of faces meet at every
-[vertex](gloss:polyhedron-vertex). Polyhedra with these two properties are
-called [__Platonic solids__](gloss:platonic-solid), named after the Greek
-philosopher [Plato](bio:plato).
+In einem _regelmäßigen Polyeder_ sind alle [Flächen](gloss:polyhedron-face) 
+regelmäßige Vielecke von derselben Art und an jeder
+[Ecke](gloss:polyhedron-vertex) trifft die gleiche Anzahl von Flächen aufeinander. Polyeder mit diesen beiden Eigenschaften werden als [__platonische Körper__](gloss:platonic-solid)
+ bezeichnet, benannt nach dem griechischen
+Philosophen [Platon](bio:plato).
 
-    //- The pyramid on the right of not a Platonic solid. It consists of two
+    //- Die Pyramide rechts von keinem platonischen Körper. It consists of two
     //- different kinds of polygons (squares and triangles), and it has [[4]]
     //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
-So what do the Platonic solids look like – and how many of them are there? To
-make a 3-dimensional shape, we need at least [[3]] faces to meet at every
-vertex. Let’s start systematically with the smallest regular polygon:
-equilateral triangles:
+Wie sehen also die platonischen Körper aus - und wie viele von ihnen gibt es? Um eine dreidimensionale Form zu
+erhalten, benötigen wir mindestens [[3]] Flächen, die sich an jeder
+Ecke treffen. Beginnen wir systematisch mit dem kleinsten regelmäßigen Vieleck:
+gleichseitige Dreiecke:
 
 ---
 > id: platonic-tetrahedron
@@ -1464,10 +1466,10 @@ equilateral triangles:
     img(src="images/platonic/tetrahedron.svg" width=200 height=120)
 
 ::: column.grow
-If we create a polyhedron where three [equilateral triangles](gloss:equilateral-triangle)
-meet at every vertex, we get the shape on the left. It is called a
-__Tetrahedron__ and has [[4]] faces. _{.reveal(when="blank-0")}(“Tetra” means
-“four” in Greek)._
+Wenn wir ein Polyeder zusammensetzen, so dass an jeder Ecke drei [gleichseitige Dreiecke](gloss:equilateral-triangle)
+zusammentreffen, erhalten wir den Körper auf der linken Seite. Er wird als
+__Tetraeder__ bezeichnet und hat [[4]] Flächen. _{.reveal(when="blank-0")}("Tetra" bedeutet auf Griechisch
+"vier")._
 :::
 
 ---
@@ -1482,10 +1484,10 @@ __Tetrahedron__ and has [[4]] faces. _{.reveal(when="blank-0")}(“Tetra” mean
     img(src="images/platonic/octahedron.svg" width=200 height=120)
 
 ::: column.grow
-If four equilateral triangles meet at every vertex, we get a different Platonic
-solid. It is called the __Octahedron__ and has [[8]] faces.
-_{.reveal(when="blank-0")}(“Octa” means “eight” in Greek. Just like “Octagon”
-means 8-sided shape, “Octahedron” means 8-faced solid.)_
+Wenn sich an jeder Ecke vier gleichseitige Dreiecke treffen, erhalten wir einen anderen platonischen
+Körper. Er wird __Oktaeder__ genannt und hat [[8]] Flächen.
+_{.reveal(when="blank-0")}("Octa" bedeutet auf Griechisch "acht". So wie "Oktogon" eine 8-seitige Figur
+meint, meint "Oktaeder" einen 8-seitigen Körper.)_
 :::
 
 ---
@@ -1500,8 +1502,8 @@ means 8-sided shape, “Octahedron” means 8-faced solid.)_
     img(src="images/platonic/icosahedron.svg" width=200 height=120)
 
 ::: column.grow
-If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
-[[20]] faces. _{.reveal(when="blank-1")}(“Icosa” means “twenty” in Greek.)_
+Wenn sich an jeder Ecke [[5]] Dreiecke treffen, erhalten wir ein __Ikosaeder__. Es hat
+[[20]] Flächen. _{.reveal(when="blank-1")}("Icosa" bedeutet auf Griechisch "zwanzig".)_
 :::
 
 ---
@@ -1513,9 +1515,9 @@ If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
     img.reveal(when="blank-1" src="images/platonic/triangles-6.svg" width=200 height=120)
 
 ::: column.grow
-If [[six]] triangles meet at every vertex, something different happens: we
-simply get [[a tessellation|a quadrilateral|another Icosahedron]],
-_{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
+Wenn [[6]] Dreiecke an jeder Ecke zusammentreffen, geschieht etwas anderes: Wir erhalten nur [[
+eine Parkettierung|ein Viereck|einen anderen Ikosaeder]],
+_{span.reveal(when="blank-1")}anstelle eines dreidimensionalen Polyeders._
 :::
 
 ---
@@ -1527,12 +1529,12 @@ _{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
     img(src="images/platonic/triangles-7.svg" width=200 height=120)
 
 ::: column.grow
-And seven or more triangles at every vertex also don’t produce new polyhedra:
-there is not enough space around a vertex, to fit that many triangles.
+Und sieben oder mehr Dreiecke an jeder Ecke produzieren auch keine neuen Polyeder:
+Es gibt für so viele Dreiecke nicht genug Platz um eine Ecke herum.
 :::
 
-This means we’ve found [[three]] Platonic solids consisting of triangles. Let’s
-move on to the next regular polygon: squares.
+Das bedeutet, dass wir [[3]] platonische Körper gefunden haben, die aus Dreiecken bestehen. Kommen
+wir zum nächsten regelmäßigen Vieleck: Quadrate.
 
 ---
 > id: platonic-cube
@@ -1546,9 +1548,9 @@ move on to the next regular polygon: squares.
     img(src="images/platonic/cube.svg" width=200 height=120)
 
 ::: column.grow
-If [[three]] squares meet at every vertex, we get the __cube__. Just like dice,
-it has [[6]] faces. _{span.reveal(when="blank-1")}The cube is sometimes also
-called *Hexahedron*, after the Greek word “hexa" for “six”._
+Wenn [[3]] Quadrate an jeder Ecke zusammentreffen, erhalten wir einen __Würfel__. Genau wie ein Spielwürfel
+hat er [[6]] Flächen. _{span.reveal(when="blank-1")}Der Würfel wird manchmal auch *Hexaeder*
+genannt, nach dem griechischen Wort "hexa" für "sechs"._
 :::
 
 ---
@@ -1560,14 +1562,14 @@ called *Hexahedron*, after the Greek word “hexa" for “six”._
     img.reveal(when="blank-1" src="images/platonic/squares.svg" width=200 height=120)
 
 ::: column.grow
-If [[four]] squares meet at every vertex, we get [[another tessellation|a tetrahedron|another cube]].
-_{span.reveal(when="blank-1")}And like before, five or more squares also won’t work._
+Wenn sich an jeder Ecke [[4]] Quadrate treffen, erhalten wir eine [[ander Parkettierung|ein Tetraeder|einen weiteren Würfel]].
+_{span.reveal(when="blank-1")}Und wie zuvor funktioniert es auch hier mit fünf oder mehr Quadrate nicht._
 :::
 
 ---
 > id: platonic-dodecahedron
 
-Next, let’s try regular pentagons:
+Als nächstes versuchen wir es mit regelmäßigen Fünfecken (Pentagon):
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1578,8 +1580,8 @@ Next, let’s try regular pentagons:
     img(src="images/platonic/dodecahedron.svg" width=200 height=120)
 
 ::: column.grow
-If [[three]] pentagons meet at every vertex, we get the __Dodecahedron__. It has
-[[12]] faces. _{.reveal(when="blank-1")} (“Dodeca” means “twelve” in Greek.)_
+Wenn [[3]] Fünfecke an jeder Ecke zusammentreffen, erhalten wir ein __Dodekaeder__. Es hat
+[[12]] Flächen. _{.reveal(when="blank-1")} ("Dodeca" bedeutet auf Griechisch "zwölf".)_
 :::
 
 ---
@@ -1591,14 +1593,14 @@ If [[three]] pentagons meet at every vertex, we get the __Dodecahedron__. It has
     img(src="images/platonic/pentagons.svg" width=200 height=120)
 
 ::: column.grow
-Like before, four or more pentagons [[don’t work|are possible]] because there is
-not enough space.
+Wie zuvor sind vier oder mehr Fünfecke [[nicht möglich|möglich]], weil
+nicht genügend Platz vorhanden ist.
 :::
 
 ---
 > id: platonic-hexagons
 
-The next regular polygon to try are hexagons:
+Das nächste regelmäßige Vieleck, das wir untersuchen wollen ist das Sechseck (Hexagon):
 
 ::: column(width=120 parent="padded-thin")
 ::: column(width=200)
@@ -1606,80 +1608,80 @@ The next regular polygon to try are hexagons:
     img.reveal(when="blank-0" src="images/platonic/hexagons.svg" width=200 height=120)
 
 ::: column.grow
-If three hexagons meet at every vertex, we immediately get a [[tessellation|polyhedron|hexahedron]].
-_{span.reveal(when="blank-0")} Since there is no space for more than three, it
-seems like there are no Platonic solids consisting of hexagons._
+Wenn an jeder Ecke drei Sechsecke zusammentreffen, erhalten wir sofort [[eine Parkettierung|ein Polyeder|ein Hexaeder]].
+_{span.reveal(when="blank-0")} Da es keinen Platz für mehr als drei gibt,
+scheint es keine platonischen Körper aus Sechsecken zu geben._
 :::
 
 ---
 > id: platonic-final
 
-The same also happens for all regular polygons with more than six sides. They
-don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
+Dasselbe gilt auch für alle regelmäßigen Vielecke mit mehr als sechs Seiten. Sie
+lassen sich nicht zu einer Parkettierung zusammenfügen und man erhält schon gar keine dreidimensionalen Vielecke.
 
-This means that there are just [[five]] Platonic solids! Let’s have a look at
-all of them together:
+Das bedeutet, dass es nur [[5]] platonische Körper gibt! Schauen wir uns
+alle auf einmal an:
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
-__Tetrahedron__
+__Tetraeder__
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual}[[4]] Faces_  
-_{span.dual}[[4]] Vertices_  
-_{span.dual}[[6]] Edges_
+_{span.dual}[[4]] Flächen_  
+_{span.dual}[[4]] Ecken_  
+_{span.dual}[[6]] Kanten_
 
 ::: column.grow.text-center(width=120)
-__Cube__
+__Würfel__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")}[[6]] Faces_  
-_{span.dual(target="dual1")}[[8]] Vertices_  
-_{span.dual}[[12]] Edges_
+_{span.dual(target="dual1")}[[6]] Flächen_  
+_{span.dual(target="dual1")}[[8]] Ecken_  
+_{span.dual}[[12]] Kanten_
 
 ::: column.grow.text-center(width=120)
-__Octahedron__
+__Oktaeder__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")}[[8]] Faces_  
-_{span.dual(target="dual1")}[[6]] Vertices_  
-_{span.dual}[[12]] Edges_
+_{span.dual(target="dual1")}[[8]] Flächen_  
+_{span.dual(target="dual1")}[[6]] Ecken_  
+_{span.dual}[[12]] Kanten_
 
 ::: column.grow.text-center(width=120)
-__Dodecahedron__
+__Dodekaeder__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")}[[12]] Faces_  
-_{span.dual(target="dual2")}20 Vertices_  
-_{span.dual}30 Edges_
+_{span.dual(target="dual2")}[[12]] Flächen_  
+_{span.dual(target="dual2")}20 Ecken_  
+_{span.dual}30 Kanten_
 
 ::: column.grow.text-center(width=120)
-__Icosahedron__
+__Ikosaeder__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")}[[20]] Faces_  
-_{span.dual(target="dual2")}12 Vertices_  
-_{span.dual}30 Edges_
+_{span.dual(target="dual2")}[[20]] Flächen_  
+_{span.dual(target="dual2")}12 Ecken_  
+_{span.dual}30 Kanten_
 :::
 
-{.reveal(when="blank-3 blank-4 blank-6 blank-7 blank-9 blank-10")} Notice how
-the number of faces and vertices are [[swapped around|the same]] for [cube and
-octahedron](target:dual1), as well as [dodecahedron and icosahedron](target:dual2),
-while the number of edges [[stays the same|are different]]. These pairs of
-Platonic solids are called [__dual solids__](gloss:polyhedron-dual).
+{.reveal(when="blank-3 blank-4 blank-6 blank-7 blank-9 blank-10")} Beachte, dass
+die Anzahl der Flächen und Ecken bei [Würfeln und
+Oktaedern](target:dual1) sowie bei [Dodekaedern und Ikosaedern](target:dual2) [[vertauscht wird|gleich ist]],
+während die Anzahl der Kanten bei beiden [[gleich bleibt|unterschiedlich ist]]. Diese Paare
+platonischer Körper werden als [__duale Körper__](gloss:polyhedron-dual) bezeichnet.
 
 ---
 > id: platonic-dual
 
-We can turn a polyhedron into its dual, by “replacing” every face with a vertex,
-and every vertex with a face. These animations show how:
+Wir können ein Polyeder in sein Dual verwandeln, indem wir jede Fläche durch eine Ecke
+und jede Ecke durch eine Fläche "ersetzen". Diese Animationen zeigen, wie das abläuft:
 
 ::: column(width=300)
 
@@ -1693,218 +1695,218 @@ and every vertex with a face. These animations show how:
 
 :::
 
-The tetrahedron is dual with itself. Since it has the same number of faces and
-vertices, swapping them wouldn’t change anything.
+Das Tetraeder ist dual mit sich selbst. Da es die gleiche Anzahl von Flächen und
+Eckpunkten hat, würde das Austauschen nichts ändern.
 
 ---
 > id: platonic-elements
 
-[Plato](bio:plato) believed that all matter in the Universe consists of four
-elements: Air, Earth, Water and Fire. He thought that every element correspond
-to one of the Platonic solids, while the fifth one would represent the universe
-as a whole. Today we know that there are more than 100 different elements which
-consist of spherical atoms, not polyhedra.
+[Platon](bio:plato) glaubte, dass die ganze Materie im Universum aus vier
+Elementen besteht: Luft, Erde, Wasser und Feuer. Er dachte, dass jedes Element einem der platonischen Körper entspricht,
+während das fünfte das Universum
+als Ganzes darstellen würde. Heute wissen wir, dass es mehr als 100 verschiedene Elemente gibt, die aus kugeligen Atomen und nicht aus Polyedern
+bestehen.
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
-      p.caption Images from Johannes Kepler’s book “Harmonices Mundi” (1619)
+      p.caption Bilder aus Johannes Keplers Buch "Harmonices Mundi" (1619)
 
 ---
 
-## More on Polyhedra
+## Mehr zu Polyedern
 
 > section: more-on-polyhedra
 > id: archimedean
 > title: Archimedean Solids
 
-Platonic solids are particularly important polyhedra, but there are countless
-others.
+Platonische Körper sind besonders wichtige Polyeder, aber es gibt unzählige
+andere.
 
-[__Archimedean solids__](gloss:archimedean-solid), for example, still have to be
-made up of [regular polygons](gloss:regular-polygon), but you can use multiple
-different types. They are named after another Greek mathematician, [Archimedes
-of Syracuse](bio:archimedes), and there are 13 of them:
+[__Archimedische Körper__](gloss:archimedean-solid) zum Beispiel müssen auch aus [regelmäßigen Vielecken](gloss:regular-polygon)
+bestehen, aber man kann dabei mehrere
+unterschiedliche Arten verwenden. Sie sind nach einem anderen griechischen Mathematiker, [Archimedes
+von Syrakus](bio:archimedes), benannt, und es gibt 13 von ihnen:
 
 ::: column(width=170 parent="padded-thin")
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
     
-{.caption} __Truncated Tetrahedron__  
-8 faces, 12 vertices, 18 edges
+{.caption} __Tetraederstumpf__  
+8 Flächen, 12 Ecken,  18 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Cuboctahedron")
 
-{.caption} __Cuboctahedron__  
-14 faces, 12 vertices, 24 edges
+{.caption} __Kuboktaeder__  
+14 Flächen, 12 Ecken, 24 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __Truncated Cube__  
-14 faces, 24 vertices, 36 edges
+{.caption} __Hexaederstumpf__  
+14 Flächen, 24 Ecken, 36 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __Truncated Octahedron__  
-14 faces, 24 vertices, 36 edges
+{.caption} __Oktaederstumpf__  
+14 Flächen, 24 Ecken, 36 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __Rhombicuboctahedron__  
-26 faces, 24 vertices, 48 edges
+{.caption} __Rhombenkuboktaeder__  
+26 Flächen, 24 Ecken, 48 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Truncated Cuboctahedron__  
-26 faces, 48 vertices, 72 edges
+{.caption} __Kuboktaederstumpf__  
+26 Flächen, 48 Ecken, 72 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __Snub Cube__  
-38 faces, 24 vertices, 60 edges
+{.caption} __Abgeschrägtes Hexaeder__  
+38 Flächen, 24 Ecken, 60 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
-{.caption} __Icosidodecahedron__  
-32 faces, 30 vertices, 60 edges
+{.caption} __Ikosidodekaeder__  
+32 Flächen, 30 Ecken, 60 Kanten
 ::: column(width=170)
-    x-polyhedron(size=170 shape="TruncatedDodecahedron")
+    x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Truncated Dodecahedron__  
-32 faces, 60 vertices, 90 edges
+{.caption} __Dodekaederstumpf__  
+32 Flächen, 60 Ecken, 90 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __Truncated Icosahedron__  
-32 faces, 60 vertices, 90 edges
+{.caption} __Ikosaederstumpf__  
+32 Flächen, 60 Ecken, 90 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __Rhombicosidodecahedron__  
-62 faces, 60 vertices, 120 edges
+{.caption} __Rhombenikosidodekaeder__  
+62 Flächen, 60 Ecken, 120 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __Truncated Icosidodecahedron__  
-62 faces, 120 vertices, 180 edges
+{.caption} __Ikosidodekaederstumpf__  
+62 Flächen, 120 Ecken, 180 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __Snub Dodecahedron__  
-92 faces, 60 vertices, 150 edges
+{.caption} __abgeschrägtes Dodekaeder__  
+92 Flächen, 60 Eckpunkte, 150 Kanten
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
+    // Prismen und Antiprismen, deren Symmetriegruppen die Diedergruppen sind, werden im
+    // Allgemeinen nicht als archimedische Körper betrachtet, obwohl sie die
+    // obige Definition erfüllen.
 
 ---
 > id: polyhedra-applications
 
-### Applications of Polyhedra
+### Anwendungen von Polyedern
 
-Plato was wrong in believing that all elements consists of Platonic solids. But
-regular polyhedra have many special properties that make them appear elsewhere
-in nature – and we can copy these properties in science and engineering.
+Platon hatte Unrecht, als er glaubte, dass alle Elemente aus platonischen Körpern bestehen. Aber
+regelmäßige Polyeder haben viele besondere Eigenschaften, die an anderer
+Stelle in der Natur zum Vorschein kommen - und wir können diese Eigenschaften in Wissenschaft und Technik kopieren.
 
 ::: column(width=180)
 
     x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
-    p.caption Radiolaria skeleton
+    p.caption Skelett eines Strahlentierchens
     
 ::: column(width=180)
 
     x-media(lightbox width=180 height=180 src="images/virus.jpg")
-    p.caption Icosahedral virus
+    p.caption Ikosaedrisches Virus
 
 ::: column.grow
-Many __viruses__, __bacteria__ and other small __organisms__ are shaped like
-[icosahedra](gloss:icosahedron). Viruses, for example, must enclose their
-genetic material inside a shell of many identical protein units. The icosahedron
-is the most efficient way to do this, because it consists of a few regular
-elements but is almost shaped like a sphere.
+Viele __Viren__, __Bakterien__ und andere kleine __Organismen__ haben die Form von
+[Ikosaedern](gloss:icosahedron). So müssen beispielsweise Viren ihr
+Erbgut in eine Hülle aus vielen identischen Proteineinheiten einschließen. Das Ikosaeder
+ist der effizienteste Weg, da es aus wenigen regelmäßigen
+Elementen besteht, aber fast wie eine Kugel geformt ist.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
-    p.caption Buckyball molecule
+    p.caption Fulleren-Moleküle
       
 ::: column(width=180)
 
     x-media(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
-    p.caption Montreal Biosphere
+    p.caption Biosphère Montreal
       
 ::: column.grow
-Many __molecules__ are shaped like regular polyhedra. The most famous example is
-`C_60` which consists of 60 carbon atoms arranged in the shape of a [Truncated
-Icosahedron](gloss:truncated-icosahedron).
+Viele __Moleküle__ sind wie regelmäßige Polyeder geformt. Das bekannteste Beispiel ist
+`C_60`, das aus 60 Kohlenstoffatomen besteht, die in Form eines
+[Ikosaederstumpfs](gloss:truncated-icosahedron) angeordnet sind.
 
-It was discovered in 1985 when scientists researched interstellar dust. They
-named it “Buckyball” (or Buckminsterfullerene) after the architect [Buckminster
-Fuller](bio:fuller), famous for constructing similar-looking buildings.
+Es wurde 1985 entdeckt, als Wissenschaftler interstellaren Staub erforschten. Sie
+nannten es "Buckyball" (oder Buckminsterfullerene) nach dem Architekten [Buckminster
+Fuller](bio:fuller), der für den Bau ähnlich aussehender Gebäude bekannt ist.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
-    p.caption Fluorite octahedron
+    p.caption Fluorit-Oktaeder
       
 ::: column(width=180)
 
     x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
-    p.caption Pyrite cube
+    p.caption Pyritwürfel
       
 ::: column.grow
-Most __crystals__ have their atoms arranged in a regular grids consisting of
-[tetrahedra](gloss:tetrahedron), [cubes](gloss:cube) or [octahedra](gloss:octahedron).
-When they crack or shatter, you can see these shapes on a larger scale.
+Die meisten __Kristalle__ haben ihre Atome in einem regelmäßigen Gitter angeordnet, das aus
+[Tetraedern](gloss:tetrahedron), [Würfeln](gloss:cube) oder [Oktaedern](gloss:octahedron) besteht.
+Wenn sie abbrechen oder zerspringen, kannst du diese Formen in größerem Maßstab sehen.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
-    p.caption Octagonal space frames
+    p.caption Achteckige Gitterrahmen
 
 ::: column(width=180)
 
     x-media(lightbox width="180", height="180", src="images/louvre.jpg")
-    p.caption Louvre museum in Paris
+    p.caption Louvre-Museum in Paris
 
 ::: column.grow
-Tetrahedra and octahedra are incredibly rigid and stable, which makes them very
-useful in __construction__. _Space frames_ are polygonal structures that can
-support large roofs and heavy bridges.
+Tetraeder und Oktaeder sind unglaublich steif und stabil, weshalb sie sehr
+oft für __Konstruktionen__ verwendet werden. _Gitterrahmen_ sind vieleckige Konstruktionen, die große Dächer und schwere Brücken
+tragen können.
 :::
 
 ::: column(width=180)
 
     x-media(lightbox width="180", height="180", src="images/football.jpg")
-    p.caption Football
+    p.caption Fußball
     
 ::: column(width=180)
 
     x-media(lightbox width="180", height="180", src="images/dice.jpg")
-    p.caption Polygonal role-playing dice
+    p.caption Mehrseitige Würfel
 
 ::: column.grow
-Platonic solids are also used to create __dice__. because of their summetry,
-every side has the [probability](gloss:probability) of landing facing up – so
-the dice are fair.
+Platonische Körper werden auch verwendet, um __Würfel__ zu machen. Aufgrund ihrer Symmetrie hat
+jede Seite die gleiche [Wahrscheinlichkeit](gloss:probability), mit dem Gesicht nach oben zu landen - also sind
+Würfel immer fair.
 
-The [Truncated Icosahedron](gloss:truncated-icosahedron) is probably the most
-famous polyhedron in the world: it is the shape of the football.
+Der [Ikosaederstumpf](gloss:truncated-icosahedron) ist wahrscheinlich der
+berühmteste Polyeder der Welt: Er hat die Form eines Fußballs.
 :::
 
 ---
 
-## Nets and Cross Sections
+## Netze und Querschnitte
 
 > section: nets-and-cross-sections
 > id: nets
 > sectionStatus: dev
 
-Our entire world is 3-dimensional – but it is often much easier to draw or
-visualise flat, 2-dimensional objects. And there are a few different ways to
-view 3-dimensional polyhedra in a 2-dimensional way.
+Unsere ganze Welt ist 3-dimensional - aber es ist oft viel einfacher, flache, 2-dimensionale Objekte zu zeichnen oder zu
+visualisieren. Und es gibt einige verschiedene Möglichkeiten, dreidimensionale Polyeder zweidimensional zu
+betrachten.
 
     //- x-folding(shape="Tetrahedron" size=400)
     //- x-folding(shape="Cube" size=400)
@@ -1912,12 +1914,12 @@ view 3-dimensional polyhedra in a 2-dimensional way.
     //- x-folding(shape="Dodecahedron" size=400)
     //- x-folding(shape="Icosahedron" size=400)
 
-{.todo} COMING SOON!
+{.todo} KOMMT BALD!
 
-    //- Which of these nets makes a cube
-    //- Match the net to the object
-    //- https://github.com/polymake/matchthenet
-    //- Drawing Nets
+    //- Welches dieser Netze bildet einen Würfel
+    //- Das Netz dem Objekt
+    zuordnen //- h
+    ttps://github.com/polymake/matchthenet //- Netze zeichnen
 
     //- Describe the cross section formed by the intersection of the plane and the solid.
 

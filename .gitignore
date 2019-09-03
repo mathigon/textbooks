@@ -28,6 +28,9 @@ nbproject
 node_modules
 server/assets/resources
 
+# Development
+_*.yaml
+
 # Translations
 *_ger.*
 *.7z
