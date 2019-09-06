@@ -1210,7 +1210,7 @@ of energy in the universe will always stay constant.
 
 ::: column.grow
 It turns out that, just by knowing about symmetry, physicists can derive most
-laws of nature that govern out universe – without ever having to do an
+laws of nature that govern our universe – without ever having to do an
 experiment or observation.
 
 Symmetry can even predict the existence of fundamental particles. One example is

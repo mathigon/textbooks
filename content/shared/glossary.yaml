@@ -30,7 +30,7 @@ adic:
     power of _n_.
 
 adjacent-angles:
-  title: Anjacent angles
+  title: Adjacent angles
   text: Two angles are __adjacent__ if they share a common side and vertex but
     do not overlap. The word _adjacent_ simply means “neighbouring”.
 
@@ -156,7 +156,7 @@ axiom:
   text: |
     An __axiom__, sometimes called __postulate__, is a mathematical statement
     that is regarded as “self-evident” and accepted without proof. It should be
-    so simple that it is obviously and unquestionably true,
+    so simple that it is obviously and unquestionably true.
 
     Axioms form the foundation of mathematics and can be used to prove other,
     more complex results.
@@ -725,7 +725,7 @@ hailstone-sequence:
 
 heptagon:
   title: Heptagon
-  text: A __heptagon__ is a polygon with six sides.
+  text: A __heptagon__ is a polygon with seven sides.
 
 hexagon:
   title: Hexagon
@@ -856,7 +856,7 @@ linear-function:
     _c_ is its _y_-axis intercept.
 
 matrix:
-  title: matrix
+  title: Matrix
   text: A __matrix__ is a rectangular array of numbers arranged in rows and
     columns.
 

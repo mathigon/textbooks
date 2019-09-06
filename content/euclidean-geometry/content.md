@@ -258,9 +258,9 @@ match up with the other. In geometry, we say that the two shapes are
 The symbol for congruence is `≅`, so we would say that `A ≅ B`.
 :::
 
-Here are a few different geometric objects. Connect all the ones that are
-congruent, and remember that more than two shapes might be congruent to each
-other:
+Here are a few different geometric objects – connect all pairs that are
+congruent to each other. Remember that _more than two_ shapes might be
+congruent, and some shapes might not be congruent to _any_ others:
 
     svg.congruence(width=760 height=320 viewBox="0 0 760 320")
       g.lines
