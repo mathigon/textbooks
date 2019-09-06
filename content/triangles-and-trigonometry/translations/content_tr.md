@@ -55,7 +55,7 @@ Bu derste üçgenlerin pek çok farklı özelliklerini öğreneceksiniz. Bu, da�
 > id: angle-sum
 > section: properties-of-triangles
 
-Basitten başlayalım: üçgen, üç kenarı (kenarlar [doğru parçası](gloss:line_segment)’dır), üç köşesi (kenarların birleştiği [noktalar](gloss:point)) olan kapalı bir şekildir. Aynı zamanda toplamları [[180]] derece olan üç [iç açısı](gloss:internal-angle) vardır.
+Basitten başlayalım: üçgen, üç kenarı (kenarlar [doğru parçası](gloss:line-segment)’dır), üç köşesi (kenarların birleştiği [noktalar](gloss:point)) olan kapalı bir şekildir. Aynı zamanda toplamları [[180]] derece olan üç [iç açısı](gloss:internal-angle) vardır.
 
 ---
 > id: classification
