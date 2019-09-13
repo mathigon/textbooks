@@ -900,7 +900,7 @@ mode:
 molecule:
   title: Molecule
   text: |
-    A __molecule__ consists of two ore mole atoms which are held together by
+    A __molecule__ consists of two or more atoms which are held together by
     chemical bonds. It has no electric charge, unlike __Ions__.
 
     Examples of molecules include `O_2`, which consists of two connected Oxygen
