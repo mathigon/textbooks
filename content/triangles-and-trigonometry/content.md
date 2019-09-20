@@ -1082,7 +1082,7 @@ _{span.next-step} Continue_
 
 {.reveal(when="next-1")} Both smaller triangles [share one angle](target:angle)
 with the original triangle. They also all have [one right angle](target:right).
-By the AA condition, all thee triangles must be [[similar|congruent|right-angled]].
+By the AA condition, all three triangles must be [[similar|congruent|right-angled]].
 
 ::: column(width=260)
 
