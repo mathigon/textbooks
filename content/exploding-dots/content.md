@@ -455,7 +455,7 @@ _It turns out that there are a few fractions that cannot be expressed in our
 ten-adic number system: all fractions that, in their reduced form, have a
 [denominator](gloss:denominator) that is a multiple of 2 or 5 (or both). You
 can fix this by allowing ten-adic numbers to have a finite number of decimal
-places. Now, every [rational number](gloss:rational-numbers) as a ten-adic
+places. Now, every [rational number](gloss:rational-numbers) has a ten-adic
 equivalent._
 
 ---
@@ -523,7 +523,7 @@ _{button.next-step} Continue_
 ---
 > id: flaw-2
 
-If we try to multiple powers of 2 and 5, we get a sequence of products that get
+If we try to multiply powers of 2 and 5, we get a sequence of products that get
 closer and closer to zero (in our 10-adic sense):
 
 |    |   |     |   |           |
@@ -614,7 +614,7 @@ _{button.next-step} Continue_
 
 ---
 > id: square-3
- 
+
 Here’s the shocker: it turns out that it is _impossible_ to divide a square into
 an _odd_ number of triangles of equal area! This was proven in 1970 by
 mathematician [Paul Monsky](bio:monsky) – you can even have a look at the paper
