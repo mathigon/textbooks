@@ -158,7 +158,8 @@ export function wheel($step) {
     const dx = 60 + a * 100;
     const end = Point.fromPolar(2 * a + Math.PI / 2, 50).shift(dx, 55);
 
-    $wheel.setTransform(new Point(a*100, 0), 2*a);
+    // Note: .setTransform() breaks in Safari because of transform-origin.
+    $wheel.css('transform', `translate(${a*100}px,0) rotate(${2*a}rad)`);
     $line.setAttr('d', `M ${60} ${105} L ${dx} ${105}` +
         `A 50 50 0 ${p < 0.5 ? 1 : 0} 0 ${end.x} ${end.y}`);
   }
