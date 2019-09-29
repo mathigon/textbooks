@@ -31,7 +31,8 @@ class Cell extends Evented {
     this.value = initial;
     this.$value = $N('div', {class: 'cell-value', html: initial}, this.$el);
 
-    const order = numberFormat(Math.pow($dotMachine.type, index));
+    const order = numberFormat(index > 0 ? Math.pow($dotMachine.type, index) :
+        1 / Math.pow($dotMachine.type, -index));  // Prevent rounding errors
     $N('div', {class: 'cell-order', html: order}, this.$el);
 
     if (initial) {
