@@ -314,7 +314,7 @@ Bei der Berechnung der Teilerpaare einer Zahl kann es vorkommen, dass die Zahl a
 dem ersten Paar keine anderen Teiler mehr hat. Ein Beispiel dafür ist 13 - seine einzigen Teiler
 sind 1 und 13 selbst. Diese besonderen Zahlen werden als __Primzahlen__ bezeichnet. Sie
 können nicht in Produkte mit kleineren Zahlen zerlegt werden, was sie
-gewissermaßen zu “Atomen von Zahlen”macht.
+gewissermaßen zu “Atomen von Zahlen” macht.
 
 Beachte, dass 1 selbst _keine_ Primzahl ist, so dass die ersten Primzahlen
 2, 3, 5, 7, 11, 13,.... sind.
@@ -596,7 +596,7 @@ ungelösten Probleme in der Mathematik.
 ### Primzahlzwillinge
 
 Wir haben bereits gesehen, dass Primzahlen mit zunehmender Größe immer weiter auseinanderliegen,
-aber sie scheinen immer völlig zufällig zu aufzutreten, und gelegentlich finden wir zwei
+aber sie scheinen immer völlig zufällig aufzutreten, und gelegentlich finden wir zwei
 Primzahlen direkt nebeneinander, nur eine Zahl auseinander: diese
 werden __Primzahlzwillinge__ genannt.
 
@@ -717,8 +717,8 @@ was als das __kleinste gemeinsame Vielfache__ oder __kgV__ bezeichnet wird.
 > id: race2
 
 Um das kgV von zwei beliebigen Zahlen zu finden, ist es wichtig zu erkennen, dass, wenn
-__{.m-yellow}a__ __{.m-blue}b__ teilt, __{.m-blue}b__ alle
-Primfaktoren von __{.m-yellow}a__ (plus einige mehr) haben muss:
+__{.m-blue}b__ durch __{.m-yellow}a__ teilbar ist, __{.m-blue}b__ alle
+Primfaktoren von __{.m-yellow}a__ (und dann noch einige zusätzlich) beinhalten muss:
 
     table.table-tiny
       tr
@@ -951,7 +951,7 @@ es gibt Raubtiere im Wald, die Zikaden töten. Diese Raubtiere treten auch
 in regelmäßigen Abständen auf, zB alle 6 Jahre.
 
 Stell dir nun vor, dass die Zikaden
-alle ${n}{n|13|4,20,1} Jahre ausbrüten würden (${isPrime(n) ? 'prime' : 'not prime'}). Die beiden Tiere würden alle
+alle ${n}{n|13|4,20,1} Jahre ausbrüten würden (${isPrime(n) ? 'Primzahl' : 'keine Primzahl'}). Die beiden Tiere würden alle
 ${lcm(n,6)} Jahre, was dem [[kgV|ggT|Produkt]] von 6 und ${n} entspricht, aufeinandertreffen.
 
     figure
