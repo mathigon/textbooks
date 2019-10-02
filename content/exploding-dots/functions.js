@@ -85,6 +85,7 @@ export function dots($step) {
       return $step.addHint('addPairFirst', {className: 'incorrect'});
 
     await $machine.cells[dStep].explode();
+    await wait(400);
     await $machine.cells[dStep - 1].annihilate();
     xStep = dStep;
     $step.score('x' + xStep);
