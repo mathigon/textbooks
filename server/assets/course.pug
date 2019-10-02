@@ -49,7 +49,7 @@ html
             .page-background
           h1= section.title
           .show-all-steps.off #[+icon('book', 20)] Reveal All Steps
-          div!= course.getSectionHTML(section.id)
+          .steps!= course.getSectionHTML(section.id)
 
           footer
             p.skip-step
