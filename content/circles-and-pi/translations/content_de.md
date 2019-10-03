@@ -901,7 +901,7 @@ Wissen über die Kreisbögen und Sektoren eines Kreises.
 
 Wie du im Diagramm sehen kannst, ist ein [{.red} Kreisbogen](pill:arc) ein Teil des
 [[Umfangs|Durchmesser|Radius]] eines Kreises, und ein [{.yellow} Sektor](pill:sector)
-ist ein Teil des [[Kreisinhalts|Radius|Umfangs]] eines Kreises.
+ist ein Teil des [[Flächeninhalts|Radius|Umfangs]] eines Kreises.
 
 ::: .reveal(when="blank-0 blank-1")
 Der Kreisbogen zwischen zwei Punkten _A_ und _B_ wird oft als `arc(AB)` geschrieben. Diese
