@@ -64,8 +64,8 @@ Kreisen, die du kennen solltest:
 
 Eine wichtige Eigenschaft von Kreisen ist, dass alle Kreise
 [ähnlich](gloss:similar) sind. Du kannst das überprüfen, indem du zeigst,
-dass alle Kreise durch einfache [Translationen](gloss:translation) und
-[Dilatationen](gloss:dilation) exakt passend übereinander gelegt werden können:
+dass alle Kreise durch einfaches [Verschieben](gloss:translation) und
+[Vergrößern bzw. Verkleinern](gloss:dilation) exakt passend übereinander gelegt werden können:
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
