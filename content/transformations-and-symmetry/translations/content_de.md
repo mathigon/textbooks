@@ -458,10 +458,10 @@ Eckpunkte verbinden, um das gedrehte Bild unserer ursprünglichen Figur zu erhal
     // ---
     // > id: composition
     // 
-    // ### Komposition von Transformationen
+    // ### Composition of Transformations
     // 
-    // Natürlich können wir mehrere Übersetzungen, Reflexionen und Rotationen kombinieren, um komplexere Transformationen zu
-    // erzeugen.
+    // Of course, we can combine multiple translations, reflections and rotations to
+    // create more complex transformations.
     // 
     // {.todo} TODO Example
     // 
@@ -541,7 +541,7 @@ sprechen dann von __Drehsymmetrie (Rotationssymmetrie)__.
 
 Eine Figur ist [__spiegelsymmetrisch__](gloss:rotational-symmetry), wenn sie nach einer Spieglung gleich aussieht
 . Die Spiegelachse wird als [__
-Symmetrieachse__](gloss:axis-of-symmetry)bezeichnet und teilt die Figur in zwei
+Symmetrieachse__](gloss:axis-of-symmetry) bezeichnet und teilt die Figur in zwei
 [[kongruente|gleiche|ähnliche]] Hälften auf. Einige Figuren können auch mehr als eine
 Symmetrieachse haben.
 
@@ -675,7 +675,7 @@ spiegelsymmetrisch. Fallen dir eigene Beispiele ein?
 
 {.text-center} Ein Esel lese nie.  
 Sei mein, [[nie]] fies - sei fein, nie mies.  
-Ein Neger mit Gazelle [[zagt]] im Regen nie!
+Trug Tim eine so helle Hose nie [[mit]] Gurt?
 
 {.reveal(when="blank-0 blank-1")} Aber Palindrome machen nicht nur Spaß, sie haben
 auch eine praktische Bedeutung. Vor einigen Jahren entdeckten Wissenschaftler, dass
@@ -713,8 +713,8 @@ Finde die Zähligkeit und den Drehwinkel für jede dieser Figuren:
 ::: column(width=220)
     img(src="images/clover.jpg" width=200 height=200)
 
-{.caption} Zähligkeit [[4]],
-Winkel [[90]]°::: column(width=220)
+{.caption} Zähligkeit [[4]],Winkel [[90]]°
+::: column(width=220)
     img(src="images/playing-card.jpg" width=200 height=200)
 
 {.caption} Zähligkeit [[2]], Winkel [[180]]°
@@ -771,11 +771,11 @@ Vervollständige diese Figuren, so dass sie rotationssymmetrisch sind:
 > id: groups
 > section: symmetry-groups
 
-    // TIPP: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
+    // TIPP: Um verschiedene Konfigurationen zu erkennen, müssen wir die
+    // vier Ecken in verschiedenen Farben hervorheben.
 
-Some shapes have more than one symmetry – let’s have a look at the
-[square](gloss:square) as a simple example.
+Einige Formen haben mehr als eine Symmetrie - schauen wir uns das
+[Quadrat](gloss:square) als einfaches Beispiel an.
 
 ::: column(width=400 parent="padded-thin")
 
@@ -790,25 +790,25 @@ Some shapes have more than one symmetry – let’s have a look at the
       img.cube.reveal(src="images/cube-7.svg" width=80 height=80 when="blank-0" delay=600 animation="pop")
 
 ::: column.grow(width=200)
-You have already shown above that a square has [[4]] axes of reflection.
+Du hast bereits oben gezeigt, dass ein Quadrat [[4]] Spiegelachsen hat.
 
-{.reveal(when="blank-0")} It also has rotational symmetry by [[90]]°,
-[[180]]° and [[270]]°.
+{.reveal(when="blank-0")} Es ist auch rotationssymmetrisch und zwar um [[90]]°,
+[[180]]° und [[270]]°.
 
-{.reveal(when="blank-1 blank-2 blank-3")} And finally, we can think
-about “doing nothing” as another special kind of symmetry – because the result
-is (obviously) the same as before. This is sometimes called the __identity__.
+{.reveal(when="blank-1 blank-2 blank-3")} Und schließlich können wir uns als eine weitere besondere Art der Symmetrie das "Nichts tun" vorstellen
+- denn das Ergebnis
+ist (eh klar) das gleiche wie zuvor. Dies wird manchmal als die __Identität__ bezeichnet.
 
-{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} In total, we have found [[8]]
-different “symmetries of the square”.
+{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} Insgesamt haben wir [[8]]
+verschiedene "Symmetrien des Quadrats" gefunden.
 :::
 
 ---
 > id: add-symmetries
 > goals: sum-0 sum-1
 
-Now we can actually start doing some arithmetic with these symmetries. For
-example, we can _add_ two symmetries to get new ones:
+Jetzt können wir tatsächlich anfangen, mit diesen Symmetrien zu rechnen. Zum
+Beispiel können wir zwei Symmetrien _addieren_ , um neue zu erhalten:
 
 ::: column(width=260)
 
@@ -836,8 +836,8 @@ example, we can _add_ two symmetries to get new ones:
 > title: Symmetry Calculator
 > goals: calculate
 
-Whenever you add two symmetries of a square, you get a new one. Here is a
-“symmetry calculator” where you can try it yourself:
+Immer wenn man zwei Symmetrien eines Quadrats addiert, erhält man eine neue. Hier ist ein
+"Symmetrie-Rechner", mit dem du das selbst ausprobieren kannst:
 
     .calculator
       .display
@@ -856,25 +856,25 @@ Whenever you add two symmetries of a square, you get a new one. Here is a
 ---
 > id: symmetry-arithmetic
 
-Spend some time playing around with the symmetry calculator, and try to find any
-patterns. Can you complete these observations?
+Verbringe einige Zeit damit, mit dem Symmetrie-Rechner herumzuspielen, und versuche, irgendwelche
+gemeinsame Muster zu finden. Kannst du diese Beobachtungen vervollständigen?
 
-* Adding two rotations will always give [[a rotation|a reflection]] (or the identity).
-* Adding two reflections will always give [[a rotation|a reflection]] (or the identity).
-* Adding the same two symmetries in the opposite order
-  [[sometimes gives a different|always gives a different|always gives the same]] result.
-* Adding the identity [[doesn’t do anything|returns a reflection|returns the opposite]].
+* Das Addieren von zwei Drehungen ergibt immer eine [[Drehung|Spiegelung]] (oder die Identität).
+* Das Addieren von zwei Spiegelungen ergibt immer eine [[Drehung|Spiegelung]] (oder die Identität).
+* Das Addieren zweier Symmetrien in umgekehrter Reihenfolge ergibt
+  [[manchmal ein anderes|immer ein anderes|immer das gleiche]] Ergebnis.
+* Die Addition der Identität [[ändert nichts|bewirkt eine Spiegelung|führt zum Gegenteil]].
 
 ---
 > id: group-axioms
 
-You might have realised already that adding __{.orange}symmetries__ is actually
-very similar to adding __{.green}integers__:
+Du hast vielleicht schon bemerkt, dass das Addieren __{.orange}von Symmetrien__ eigentlich
+dem Addieren __{.green}von ganzen Zahlen__ sehr ähnlich ist:
 
     ol.proof
       
       li.r
-        | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
+        | Die Addition von zwei #[strong.orange Symmetrien]/#[strong.green ganzen Zahlen] ergibt immer eine andere #[strong.orange Symmetrie]/#[strong.green ganze Zahl]:
         .text-center.axiom 
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
@@ -887,10 +887,10 @@ very similar to adding __{.green}integers__:
           mn 7
           mo =
           mn 19
-        .next-step Continue
+        .next-step Weiter
       
       li.r.reveal(when="next-0")
-        span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
+        span.md Die Addition von zwei #[strong.orange Symmetrien]/#[strong.green ganzen Zahlen] ist [assoziativ](gloss:associative):
         .text-center.axiom 
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
@@ -913,77 +913,77 @@ very similar to adding __{.green}integers__:
           mn 4
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
-        .next-step Continue
+        .next-step Weiter
       
       li.r.reveal(when="next-1")
-        | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
+        | Jede #[strong.orange Symmetrie]/#[strong.green ganze Zahl] hat eine #[strong inverse], eine andere #[strong.orange Symmetrie]/#[strong.green ganze Zahl] die, wenn man sie dazu addiert, die Identität ergibt:
         .text-center.axiom 
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
-          mo(value="=") =
-          img.cube(src="images/cube-0.svg" width=32 height=32)
+          mo(value="= ) =") =
+          img.cube(src="images/cube-0.svg" width=32 height=32 height=32)
         .text-center.axiom 
           mn 4
           mo +
-          mn –4
+          mn -4
           mo(value="=") =
           mn 0
-        .next-step Continue
+        .next-step Weiter
 
 ---
 > id: groups-1
 
-In mathematics, any collection that has these properties is called a
-[__group__](gloss:group). Some groups (like the __{.orange}symmetries__ of a
-square) only have a finite number of elements. Others (like the
-__{.green}integers__) are infinite.
+In der Mathematik wird jede Menge von Elementen, die diese Eigenschaften hat, als
+[__Gruppe__](gloss:group) bezeichnet. Einige Gruppen (wie die __{.orange}Symmetrien__ eines
+Quadrats) haben nur eine begrenzte Anzahl von Elementen. Andere (wie die ganzen
+__{.green}Zahlen__) sind unendlich.
 
-In this example, we started with the eight symmetries of the square. In fact,
-every geometric shape has its own __symmetry group__. They all have different
-elements, but they always satisfy the three rules above.
+In diesem Beispiel haben wir mit den acht Symmetrien des Quadrats begonnen. Tatsächlich hat
+jede geometrische Form ihre eigene __Symmetriegruppe__. Sie alle haben unterschiedliche
+Elemente, aber sie erfüllen immer die drei obigen Regeln.
 
-Groups appear everywhere in mathematics. The elements can be numbers or
-symmetries, but also polynomials, permutations, matrices, functions … _anything_
-that obeys the three rules. The key idea of _group theory_ is that we are not
-interested in the individual elements, just in _how they interact with each
-other_.
+Gruppen erscheinen überall in der Mathematik. Die Elemente können Zahlen oder
+Symmetrien sein, aber auch Polynome, Permutationen, Matrizen, Funktionen … _alles_
+, was die drei Regeln erfüllt. Die Grundidee der _Gruppentheorie_ ist, dass wir uns nicht
+für die einzelnen Elemente interessieren, sondern nur dafür, _wie sie
+sich gegenseitig beeinflussen_.
 
 ::: column.grow
-For example, the symmetry groups of different molecules can help scientists
-predict and explain the properties of the corresponding materials.
+So können beispielsweise die Symmetriegruppen verschiedener Moleküle den Wissenschaftlern
+helfen, die Eigenschaften der entsprechenden Materialien vorherzusagen und zu erklären.
 
-Groups can also be used to analyse the winning strategy in board games, the
-behaviour of viruses in medicine, different harmonies in music, and many other
-concepts…
+Gruppen können auch verwendet werden, um die Gewinnstrategie in Brettspielen, das
+Verhalten von Viren in der Medizin, verschiedene Harmonien in der Musik und viele andere
+Konzepte zu analysieren…
 ::: column(width=340)
 
     img(src="images/molecule.jpg" width=160 height=160 style="margin-right: 20px")
     img(src="images/virus.jpg" width=160 height=160)
 
-{.caption} The properties of the CCl<sub>4</sub> molecule (left) and the
-Adenovirus (right) are determined by their symmetries.
+{.caption} Die Eigenschaften des CCl<sub>4</sub>-Moleküls (links) und des Adenovirus
+(rechts) werden durch ihre Symmetrien bestimmt.
 :::
 
 ---
 
-## Wallpaper Groups
+## Ornamentgruppen
 
 > id: wallpaper-groups
 > section: wallpaper-groups
 
-In the previous sections we have now seen two different kinds of symmetry, that
-correspond to two different transformations: rotations and reflections. But
-there is also a symmetry for the third kind of rigid transformation:
-[[translations|spins|flips]].
+In den vorangegangenen Abschnitten haben wir nun zwei verschiedene Arten von Symmetrie gesehen, die zwei verschiedenen Abbildungen
+entsprechen: Drehungen und Spiegelungen. Aber
+es gibt auch eine Symmetrie für die dritte Art der Kongruenzabbildung:
+[[Verschiebungen|Verwirbelungen|Saltos]].
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
-[__Translational symmetry__](gloss:translational-symmetry) does not work for
-isolated objects like flowers or butterflies, but it does for regular patterns
-that extend into every direction:
+[__Verschiebungssymmetrie__](gloss:translational-symmetry) funktioniert nicht mit
+einzelnen Objekten wie Blumen oder Schmetterlingen, sondern bei regelmäßigen Mustern
+, die sich in alle Richtungen erstrecken:
 
 ::: column.grow
 
@@ -992,7 +992,7 @@ that extend into every direction:
       img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
       x-play-btn
 
-{.caption} Hexagonal honyecomb
+{.caption} Sechseckige Honigwaben
 ::: column.grow
 
     .symmetry(style="width: 320px; height: 240px;")
@@ -1000,16 +1000,16 @@ that extend into every direction:
       img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
       x-play-btn
 
-{.caption} Ceramic wall tiling
+{.caption} Keramische Wandfliesen
 :::
 
 ---
 > id: footsteps
 
-In addition to reflectional, rotational and translational symmetry, there even
-is a fourth kind: [__glide reflections__](gloss:glide-reflection). This is a
-combination of a reflection and a translation in the same direction as the axis
-of reflection.
+Neben der Spiegelungs-, Rotations- und Verschiebungssymmetrie gibt es sogar
+eine vierte Art: [__Gleitspiegelungen__](gloss:glide-reflection). Dabei handelt es sich um
+eine Kombination aus einer 
+Spiegelung und einer Verschiebung in die Richtung der Spiegelachse.
 
     figure
       .footsteps
@@ -1020,14 +1020,14 @@ of reflection.
 ---
 > id: wallpaper-groups-2
 
-A pattern can have more than one type of symmetry. And just like for squares,
-we can find the [symmetry group](gloss:symmetry-group) of a pattern, which
-contains all its different symmetries.
+Ein Muster kann auch mehr als eine Art von Symmetrie aufweisen. Und wir finden die [Symmetriegruppe](gloss:symmetry-group) eines Musters
+, die alle seine verschiedenen Symmetrien
+enthält, genau wie bei Quadraten.
 
-These groups don’t tell you much about how the pattern _looks_ like (e.g. its
-colours and shapes), just how it is _repeated_. Multiple different patterns can
-have the same symmetry group – as long are arranged and repeated in the same
-way.
+Diese Gruppen sagen wenig darüber aus, wie das Muster _aussieht_ (z.B. seine
+Farben und Formen), man erfährt nur wie es sich _wiederholt_. Mehrere verschiedene Muster können die gleiche Symmetriegruppe
+haben - vorausgesetzt, sie werden auf die gleiche
+Weise angeordnet und wiederholt.
 
 ::: column.grow
 
@@ -1035,86 +1035,86 @@ way.
       img(src="images/wallpaper-1.svg" width=150 height=150 style="margin: 0 10px")
       img(src="images/wallpaper-2.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} These two patterns have the same symmetries, even though they look
-very different. But symmetries are not about colours, or superficial shapes.
+{.caption} Diese beiden Muster haben die gleichen Symmetrien,
+auch wenn sie sehr unterschiedlich aussehen. Bei Symmetrien geht es aber nicht um Farben oder oberflächliche Formen.
 ::: column.grow
 
     .text-center
       img(src="images/wallpaper-3.svg" width=150 height=150 style="margin: 0 10px")
       img(src="images/wallpaper-4.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} These two patterns also have the same symmetries – even though they
-look more similar to the corresponding patterns on the left, than to each other.
+{.caption} Diese beiden Muster haben auch die gleichen Symmetrien - auch wenn sie
+den entsprechenden Mustern auf der linken Seite ähnlicher sind als einander.
 :::
 
 ---
 > id: wallpaper-groups-3
 
-It turns out that, while there are infinitely many possible patterns, they all
-have one of just 17 different symmetry groups. These are called the __Wallpaper
-Groups__. Every wallpaper group is defined by a combination of translations,
-rotations, reflections and glide reflections. Can you see the [centers of
-rotation](gloss:center-of-rotation) and the [axes of
-reflection](gloss:axis-of-symmetry) in these examples?
+Es stellt sich heraus, dass es zwar unendlich viele mögliche Muster gibt, sie aber alle
+eine von nur 17 verschiedenen Symmetriegruppen haben. Diese werden als __Ornamentgruppen
+__ bezeichnet. Jede Ornamentgruppe wird durch eine Kombination von Verschiebungen,
+Drehungen, Spiegelungen und Gleitspiegelungen definiert. Kannst du in diesen Beispielen die [
+Drehpunkte](gloss:center-of-rotation) und die [
+Spiegelungsachsen](gloss:axis-of-symmetry) erkennen?
 
     x-gallery(slide-width="320")
       div
         img(src="images/wallpapers/p1.svg" width=360, height=240)
-        p.caption <strong>Type P1</strong><br>Only translations
+        p.caption <strong>Gruppe p1</strong><br>Nur Verschiebungen
       div
         img(src="images/wallpapers/p2.svg" width=360, height=240)
-        p.caption <strong>Type P2</strong><br>Rotations of order 2, translations
+        p.caption <strong>Gruppe p2</strong><br>zweizählige Drehung, Verschiebungen
       div
         img(src="images/wallpapers/p3.svg" width=360, height=240)
-        p.caption <strong>Type P3</strong><br>Four rotations of order 2 (180°), translations
+        p.caption <strong>Gruppe p3</strong><br>Dreizählige Drehungen (120°), Verschiebungen
       div
         img(src="images/wallpapers/p4.svg" width=360, height=240)
-        p.caption <strong>Type P4</strong><br>Rotations of order 3 (120°), translations
+        p.caption <strong>Gruppe p4</strong><br>Vier zweizählige Drehungen (180°), Verschiebungen
       div
         img(src="images/wallpapers/p6.svg" width=360, height=240)
-        p.caption <strong>Type P6</strong><br>Rotations of order 2, 3 and 6 (60°), translations
+        p.caption <strong>Gruppe p6</strong><br>Zwei-, drei- und sechszählige Drehungen (60°), Verschiebungen
       div
         img(src="images/wallpapers/pm.svg" width=360, height=240)
-        p.caption <strong>Type PM</strong><br>Parallel axes of reflection, translations
+        p.caption <strong>Gruppe PM</strong><br>Parallele Spiegelachsen, Verschiebungen
       div
         img(src="images/wallpapers/pmm.svg" width=360, height=240)
-        p.caption <strong>Type PMM</strong><br>Perpendicular reflections, rotations of order 2, translations
+        p.caption <strong>Gruppe PMM</strong><br>Senkrechte Spiegelungen, zweizählige Drehungen, Verschiebungen
       div
         img(src="images/wallpapers/p4m.svg" width=360, height=240)
-        p.caption <strong>Type P4M</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
+        p.caption <strong>Gruppe P4M</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p6m.svg" width=360, height=240)
-        p.caption <strong>Type P6M</strong><br>Rotations (ord 2 + 6), reflections, glide reflections, translations
+        p.caption <strong>Gruppe P6M</strong><br>Drehungen (2 + 6), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-        p.caption <strong>Type P3M1</strong><br>Rotations of order 3, reflections, glide reflections, translations
+        p.caption <strong>Gruppe P3M1</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
+        p.caption <strong>Gruppe P31M</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Type P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
+        p.caption <strong>Gruppe P4G</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
-        p.caption <strong>Type CMM</strong><br>Perpendicular reflections, rotations of order 2, translations
+        p.caption <strong>Gruppe CMM</strong><br>Senkrechte Spiegelungen, Drehungen (2), Verschiebungen
       div
         img(src="images/wallpapers/pmg.svg" width=360, height=240)
-        p.caption <strong>Type PMG</strong><br>Reflections, glide reflections, rotations of order 2, translations
+        p.caption <strong>Gruppe PMG</strong><br>Spiegelungen, Gleitspiegelungen, Drehungen (2), Verschiebungen
       div
         img(src="images/wallpapers/pg.svg" width=360, height=240)
-        p.caption <strong>Type PG</strong><br>Parallel glide reflections, translations
+        p.caption <strong>Gruppe PG</strong><br>Parallele Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>Type CM</strong><br>Reflections, glide reflections, translations
+        p.caption <strong>Gruppe CM</strong><br>Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
-        p.caption <strong>Type PGG</strong><br>Perpendicular glide reflections, rotations of order 2, translations
+        p.caption <strong>Gruppe PGG</strong><br>Senkrechte Gleitspiegelungen, Drehungen (2), Verschiebungen
 
-Unfortunately there is no simple reason why there are _17_ of these groups.
-Proving it requires much more advanced mathematics…
+Leider gibt es keinen einfachen Grund, warum es _17_ dieser Gruppen gibt.
+Der Beweis dafür erfordert eine viel fortgeschrittenere Mathematik…
 
-Instead, you can try drawing your own repeated patterns for each of the 17
-wallpaper groups:
+Stattdessen kannst du versuchen, deine eigenen sich wiederholenden Muster für jede der 17
+Ornamentgruppen zu zeichnen:
 
 ---
 > id: drawing
@@ -1124,7 +1124,7 @@ wallpaper groups:
     include ./components/wallpaper
     x-wallpaper
     .other-students.reveal(when="draw-1 switch")
-      h4 Examples of other students’ drawings
+      h4 Beispiele von Zeichnungen anderer Schüler
       .row.padded-thin
         div(style="width: 224px"): img(src="images/user/wallpaper-1.png" width=240 height=160)
         div(style="width: 224px"): img(src="images/user/wallpaper-2.png" width=240 height=160)
@@ -1134,53 +1134,53 @@ wallpaper groups:
 > id: crystallographic-groups
 
 ::: column.grow
-The wallpaper groups were all about flat, two-dimensional patterns. We can do
-something similar for three-dimensional patterns: these are called
-crystallographic groups, and there are 219 of them!
+Bei den Ornamentgruppen ging es um ebene, zweidimensionale Muster. Bei dreidimensionalen Mustern können wir etwas Ähnliches tun
+: Man nennt sie
+kristallographische Raumgruppen, und es gibt 219 davon!
 
-In addition to translations, reflections, rotations, and glide reflections,
-these groups include symmetries like __glide planes__ and __screw axes__ (think
-about the motion when unscrewing a bottle).
+Zu
+diesen Gruppen gehören neben Verschiebungen, Spiegelungen, Drehungen und Gleitspiegelungen auch Symmetrien wie __Gleitebenen__ und __Schraubungen__ (stelle
+dir die Bewegung beim Aufschrauben einer Flasche vor).
 ::: column(width=300)
 
     img(src="images/crystal.jpg" width=300 height=240)
 
-{.caption} Boron-Nitride has its molecules arranged in this crystal lattice,
-which has a 3-dimensional symmetry group.
+{.caption} In diesem Kristallgitter,
+das eine dreidimensionale Symmetriegruppe aufweist, sind die Moleküle von Bornitrid angeordnet.
 :::
 
 ---
 
-## Symmetry in Physics
+## Symmetrie in der Physik
 
 > id: planets
 > sectionBackground: dark stars
 > section: symmetry-in-physics
 
-So far, all the symmetries we looked at were _visual_ in some sense: visible
-shapes, images or patterns. In fact, symmetry can be a much wider concept:
-_immunity to change_.
+Bisher waren alle Symmetrien, die wir betrachteten, in gewisser Weise _visuell_: sichtbare
+Formen, Bilder oder Muster. Tatsächlich kann Symmetrie ein viel weitreichenderes Konzept sein:
+_Widerstandsfähigkeit gegen Veränderungen_.
 
-For example, if you like apple juice just as much as you like orange juice, then
-your preference is “symmetric” under the transformation that swaps apples and
-oranges.
+Wenn du zum Beispiel Apfelsaft genauso magst wie Orangensaft, dann ist
+deine Vorliebe "symmetrisch" in Bezug auf die Abbildung, die Äpfel und
+Orangen tauscht.
 
-In 1915, the German mathematician [Emmy Noether](bio:noether) observed that
-something similar is true for the [laws of nature](gloss:laws-of-nature).
+1915 stellte die deutsche Mathematikerin [Emmy Noether](bio:noether) fest, dass
+etwas Ähnliches für die [Naturgesetze](gloss:laws-of-nature) gilt.
 
 ::: column.grow
-For example, our experience tells us that the laws of Physics are the same
-everywhere in the universe. It doesn’t matter if you conduct an experiment in
-London, or in New York, or on Mars – the laws of Physics should always be the
-same. In a way, they have [[translational symmetry|reflectional symmetry]].
+Zum Beispiel sagt uns unsere Erfahrung, dass die Gesetze der Physik
+überall im Universum die gleichen sind. Es spielt keine Rolle, ob man ein Experiment in
+London, New York oder auf dem Mars durchführt - die Gesetze der Physik sollten immer die
+gleichen sein. In gewisser Weise haben sie [[Verschiebungssymmetrie|Spiegelsymmetrie]].
 
-{.reveal(when="blank-0")} Similarly, it shouldn’t matter if we conduct an
-experiment while facing North, or South, or East or West: the laws of nature
-have [[rotational symmetry|glide reflection symmetry]].
+{.reveal(when="blank-0")} Ebenso sollte es egal sein, ob wir ein
+Experiment mit Blick auf den Norden oder Süden, den Osten oder den Westen durchführen: Die Naturgesetze
+haben [[Drehsymmetrie|Gleitspiegelungssymmetrie]].
 
-{.reveal(when="blank-1")} And finally, it shouldn’t matter if we conduct an
-experiment today, or tomorrow, or in a year. The laws of nature are
-“time-symmetric”.
+{.reveal(when="blank-1")} Und schließlich sollte es keine Rolle spielen, ob wir heute, morgen oder in einem Jahr ein
+Experiment durchführen. Die Naturgesetze sind
+"zeitsymmetrisch".
 ::: column(width=300)
 
     include svg/planets.svg
@@ -1190,57 +1190,57 @@ experiment today, or tomorrow, or in a year. The laws of nature are
 ---
 > id: planets-1
 
-These “symmetries” might initially seem quite meaningless, but they can actually
-tell us a lot about our universe. Emmy Noether managed to prove that every
-symmetry corresponds to a certain physical quantity that is _conserved_.
+Diese "Symmetrien" mögen zunächst recht bedeutungslos erscheinen, aber sie können uns tatsächlich
+viel über unser Universum erzählen. Emmy Noether gelang es zu beweisen, dass jede
+Symmetrie einer bestimmten physikalischen Größe entspricht, die _erhalten_ bleibt.
 
-For example, time-symmetry implies that __Energy__ must be conserved in our
-universe: you can convert energy from one type to another (e.g. light, or heat
-or electricity), but you can never create or destroy energy. The total amount
-of energy in the universe will always stay constant.
+Zum Beispiel bedeutet Zeitsymmetrie, dass __Energie__ in unserem
+Universum erhalten bleiben muss: Man kann Energie von einem Typ in einen anderen umwandeln (z.B. Licht, oder Wärme
+oder Elektrizität), aber man kann niemals Energie erzeugen oder zerstören. Die Gesamtenergiemenge
+im Universum wird immer konstant bleiben.
 
     figure
       x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
-      p.caption CERN is the world’s largest particle accellerator. Scientists smash together fundamental particles at enourmous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
+      p.caption CERN ist der weltweit größte Partikelbeschleuniger. Wissenschaftler zerschlagen Elementarteilchen mit enormen Geschwindigkeiten, um mehr über ihre Eigenschaften zu erfahren. Kannst du die Person unten sehen, zum Größenvergleich?
 
 ::: column(width=220)
 
     x-media(src="images/higgs.png" width=220 height=150)
-    p.caption The paths taken by particle fragments after a collision
+    p.caption Die Wege, die die Teilchenfragmente nach einer Kollision zurücklegen
 
 ::: column.grow
-It turns out that, just by knowing about symmetry, physicists can derive most
-laws of nature that govern our universe – without ever having to do an
-experiment or observation.
+Es stellt sich heraus, dass Physiker allein durch das Wissen um die Symmetrie die meisten
+Naturgesetze ableiten können, die das Universum bestimmen - ohne jemals ein
+Experiment oder eine Beobachtung durchführen zu müssen.
 
-Symmetry can even predict the existence of fundamental particles. One example is
-the famous __Higgs Boson__: it was predicted in the 1960s by theoretical
-physicists, but not observed in the real world until 2012.
+Symmetrie kann sogar die Existenz von Elementarteilchen vorhersagen. Ein Beispiel ist
+das berühmte __Higgs-Boson__: Es wurde in den 1960er Jahren von theoretischen
+Physikern vorhergesagt, aber erst 2012 in der realen Welt beobachtet.
 :::
 
 ---
 
-## Similarity
+## Ähnlichkeit
 
 > id: dilations
 > section: similarity
 
-So far, we have just looked at [[rigid|congruent|visual]] transformations.
-_{span.reveal(when="blank-0")} Now let’s think about one that is not: a
-[__dilation__](gloss:dilation) changes a shape’s size by making it larger or
-smaller._
+Bisher haben wir uns nur mit [[längentreuen|verformenden|visuellen]] Abbildungen beschäftigt.
+_{span.reveal(when="blank-0")} Widmen wir uns jetzt einer Abbildung, bei der das nicht so ist: Eine
+[__Streckung__](gloss:dilation) verändert die Abmessungen einer Figur, indem sie sie größer oder
+kleiner macht._
 
 ---
 > id: dilations-1
 
 ::: column.grow
-All dilations have a [__center__](target:center) and a [__scale factor__](->.scale-target).
-The center is the point of reference for the dilation and scale factor tells us
-how much the figure stretches or shrinks.
+Alle Streckungen haben ein [__Zentrum__](target:center) und einen [__Skalierungsfaktor__](->.scalee-target).
+Das Zentrum ist der Bezugspunkt für die Streckung und der Skalierungsfaktor sagt uns
+, wie stark die Figur gedehnt oder gestaucht wird.
 
-If the [scale factor](gloss:scale-factor) is between 0 and 1, the image is
-[[smaller|larger]] than the original. If the scale factor is larger than 1, the
-image is [[larger|smaller]] than the original.
+Wenn der [Skalierungsfaktor](gloss:scale-factor) zwischen 0 und 1 liegt, ist das Bild
+[[kleiner|größer]] als das Original. Wenn der Skalierungsfaktor größer als 1 ist, ist das
+Bild [[größer|kleiner]] als das Original.
 ::: column(width=300)
 
     x-geopad(width=300 height=240): svg
@@ -1261,7 +1261,7 @@ image is [[larger|smaller]] than the original.
       path.light.thin(x="segment(C,s<1?b:b1)")
       path.light.thin(x="segment(C,s<1?c:c1)")
     
-{.text-center.scale-target} Scale factor: ${s}{s|2|0,3,0.1}
+{.text-center.scale-target} Skalierungsfaktor: ${s}{s|2|0,3,0.1}
 :::
 
 {.todo} COMING SOON – More on Dilations and Similarity
@@ -1456,8 +1456,8 @@ image is [[larger|smaller]] than the original.
 ---
 > id: outro
 
-Triangles are not just useful for measuring distances. In the next course we
-will learn a lot more about triangles and their properties.
+Dreiecke sind nicht nur zum Messen von Entfernungen geeignet. Im nächsten Kurs
+werden wir viel mehr über Dreiecke und ihre Eigenschaften erfahren.
 
 
     // ### Similarity on Rays
