@@ -29,7 +29,7 @@ liegende Ordnung unseres Universums.
 > goals: compass
 
 Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von seinem
-Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass)gezeichnet werden können:
+Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass) gezeichnet werden können:
 
 ::: column(width=320)
 
@@ -64,8 +64,8 @@ Kreisen, die du kennen solltest:
 
 Eine wichtige Eigenschaft von Kreisen ist, dass alle Kreise
 [ähnlich](gloss:similar) sind. Du kannst das überprüfen, indem du zeigst,
-dass alle Kreise durch einfache [Translationen](gloss:translation) und
-[Dilatationen](gloss:dilation) exakt passend übereinander gelegt werden können:
+dass alle Kreise durch einfaches [Verschieben](gloss:translation) und
+[Vergrößern bzw. Verkleinern](gloss:dilation) exakt passend übereinander gelegt werden können:
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -178,7 +178,7 @@ kreisförmig oder kugelförmig werden und damit ihre Oberfläche reduzieren.
 ### Die Fläche eines Kreises
 
 Die Fläche eines Kreises berechnen - wie soll das denn gehen? Wir könnten die gleiche
-Vorgehensweise, die wir bei der [Berechnung der Viereckflächen](/course/polygons-and-polyhedra/quadrilaterals) angewandt haben, versuchen:
+Vorgehensweise, die wir bei der [Berechnung der Viereckflächen](/course/polygons-and-polyhedra/quadrilaterals?hl=de) angewandt haben, versuchen:
 Wir schneiden die Form in mehrere verschiedene Teile und legen diese dann zu einer
 anderen Figur zusammen, von der wir bereits die Fläche kennen (z.B. ein Rechteck oder ein Dreieck).
 
@@ -901,7 +901,7 @@ Wissen über die Kreisbögen und Sektoren eines Kreises.
 
 Wie du im Diagramm sehen kannst, ist ein [{.red} Kreisbogen](pill:arc) ein Teil des
 [[Umfangs|Durchmesser|Radius]] eines Kreises, und ein [{.yellow} Sektor](pill:sector)
-ist ein Teil des [[Kreisinhalts|Radius|Umfangs]] eines Kreises.
+ist ein Teil des [[Flächeninhalts|Radius|Umfangs]] eines Kreises.
 
 ::: .reveal(when="blank-0 blank-1")
 Der Kreisbogen zwischen zwei Punkten _A_ und _B_ wird oft als `arc(AB)` geschrieben. Diese
@@ -1013,7 +1013,7 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 
 Beachte, wie die Gleichungen viel einfacher werden, und _π_ überall weggekürzt wird,
 da, wie du dich vielleicht erinnern kannst, die [Definition von
-Radiant](/course/circles-and-pi/radians#radians) im Grunde genommen nichts anderes als die Länge eines
+Radiant](/course/circles-and-pi/radians?hl=de#radians) im Grunde genommen nichts anderes als die Länge eines
 Kreisbogens in einem Kreis mit dem Radius 1 ist.
 
 Nun wollen wir uns ansehen, wie wir Kreisbögen und Sektoren verwenden können, um den Umfang der
@@ -1761,7 +1761,7 @@ Kreis hat auch eine Kugel einen __{.m-blue}Durchmesser *d*__, der
 ---
 > id: sphere-1
 
-{.r} In einem [früheren Abschnitt](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1) hast du
+{.r} In einem [früheren Abschnitt](/course/circles-and-pi/tangets-chords-arcs?hl=de#eratosthenes-1) hast du
 gelernt, wie der griechische Mathematiker [Eratosthenes](bio:eratosthenes) den Radius der Erde mit dem Schatten eines Obelisken
 berechnete - er betrug 6.371 km.
 Nun wollen wir versuchen, das Gesamtvolumen und die Oberfläche der Erde zu berechnen.
@@ -1984,7 +1984,7 @@ und beobachte, wie dieser Bereich auf einer Kugel _tatsächlich_ aussieht:
             path.grid
             path.land
             rect.map-select(x="-24" y="-24" width=48 height=48 style="cursor: move")
-          p.caption Wenn du das Feld auf der Karte verschiebst, beachte, wie sich Größe und Form des Bereichs #[em actual] auf dem dreidimensionalen Globus ändern.
+          p.caption Wenn du das Feld auf der Karte verschiebst, beachte, wie sich Größe und Form des #[em ausgewählten] Bereichs auf dem dreidimensionalen Globus ändern.
     x-gesture(target="#projection" slide="50, 20")
 
 ---
