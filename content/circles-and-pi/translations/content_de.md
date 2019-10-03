@@ -1984,7 +1984,7 @@ und beobachte, wie dieser Bereich auf einer Kugel _tatsächlich_ aussieht:
             path.grid
             path.land
             rect.map-select(x="-24" y="-24" width=48 height=48 style="cursor: move")
-          p.caption Wenn du das Feld auf der Karte verschiebst, beachte, wie sich Größe und Form des Bereichs #[em actual] auf dem dreidimensionalen Globus ändern.
+          p.caption Wenn du das Feld auf der Karte verschiebst, beachte, wie sich Größe und Form des #[em ausgewählten] Bereichs auf dem dreidimensionalen Globus ändern.
     x-gesture(target="#projection" slide="50, 20")
 
 ---
