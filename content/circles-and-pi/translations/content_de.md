@@ -29,7 +29,7 @@ liegende Ordnung unseres Universums.
 > goals: compass
 
 Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von seinem
-Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass)gezeichnet werden können:
+Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass) gezeichnet werden können:
 
 ::: column(width=320)
 
