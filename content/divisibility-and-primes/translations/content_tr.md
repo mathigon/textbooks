@@ -554,8 +554,8 @@ point, and showed the results in a chart:
       svg(width=680 height=300 viewBox="0 0 680 300")
         line.axis(x1=0 y1=280 x2=680 y2=280)
         g.chart
-          path.pi(fill="none" stroke="#1f7aff")
-          path.log(fill="none" stroke="#b30469")
+          path.pi(fill="none" stroke="#0f82f2")
+          path.log(fill="none" stroke="#cd0e66")
           g.small-primes
         g.numbers
       .zoom-icon: svg(viewBox="0 0 32 32" class="icon" width=32 height=32)

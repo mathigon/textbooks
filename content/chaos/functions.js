@@ -28,7 +28,7 @@ export function pendulum($step) {
   let da = 0;
 
   const state = {p: center.shift(Math.sin(a) * l, Math.cos(a) * l)};
-  const trails = [['p', '#b30469']];
+  const trails = [['p', '#cd0e66']];
   const sim = new Simulation($geopad, $canvas, state, trails);
 
   function step(dt) {
@@ -67,7 +67,7 @@ export function doublePendulum($step) {
     new DoublePendulum(state, ['c1', 'c2'], center),
     new DoublePendulum(state, ['d1', 'd2'], center)];
 
-  const trails = [['d2', '#b30469']];
+  const trails = [['d2', '#cd0e66']];
   const sim = new Simulation($geopad, $canvas, state, trails);
 
   function showPendulums() {
@@ -78,7 +78,7 @@ export function doublePendulum($step) {
     model.a1 = model.b1 = model.c1 = model.d1;
     model.a2 = model.b2 = model.c2 = model.d2;
 
-    sim.addTrails(['a2', '#ff941f'], ['b2', '#31b304'], ['c2', '#1f7aff']);
+    sim.addTrails(['a2', '#fd8c00'], ['b2', '#22ab24'], ['c2', '#0f82f2']);
     for (let $p of $geopad.$$('path.thick')) $p.show();
   }
 
@@ -167,7 +167,7 @@ export function pool($step) {
 
   for (let i = 0; i < 7; ++i) {
     for (let j = 0; j < 7; ++j) {
-      balls.push(new Ball(690 - i * 50, 70 + j * 50, '#ff941f'));
+      balls.push(new Ball(690 - i * 50, 70 + j * 50, '#fd8c00'));
     }
   }
 
@@ -234,7 +234,7 @@ export function threeBodies($step) {
   };
 
   const state = Object.assign({}, initial);
-  const trails = [['a', '#b30469'], ['b', '#1f7aff'], ['c', '#31b304']];
+  const trails = [['a', '#cd0e66'], ['b', '#0f82f2'], ['c', '#22ab24']];
 
   function acceleration(i) {
     let gravity = new Point(0, 0);

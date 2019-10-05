@@ -12,12 +12,12 @@ import {FoldingData} from './folding-data';
 
 
 const colours = {
-  3: 0xff941f,  // yellow
-  4: 0x1f7aff,  // blue
-  5: 0x31b304,  // green
-  6: 0xb30469,  // red
-  8: 0x693fb4,  // violet
-  10: 0x289782  // teal
+  3: 0xfd8c00,  // yellow
+  4: 0x0f82f2,  // blue
+  5: 0x22ab24,  // green
+  6: 0xcd0e66,  // red
+  8: 0x613aa1,  // violet
+  10: 0x129387  // teal
 };
 
 function drawFace(face, vertices) {

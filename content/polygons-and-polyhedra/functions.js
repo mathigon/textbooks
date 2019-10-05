@@ -290,10 +290,10 @@ export function platonicDual($step) {
 
   $solids[0].addMesh((scene, THREE) => {
     const octahedronGeo = makePolyhedronGeo(PolyhedronData.Octahedron, THREE);
-    const octahedron = $solids[0].addSolid(octahedronGeo, 0xff941f, 5, true);
+    const octahedron = $solids[0].addSolid(octahedronGeo, 0xfd8c00, 5, true);
 
     const cubeGeo = makePolyhedronGeo(PolyhedronData.Cube, THREE);
-    const cube = $solids[0].addSolid(cubeGeo, 0x31b304, 5, true);
+    const cube = $solids[0].addSolid(cubeGeo, 0x22ab24, 5, true);
     cube.setRotationFromEuler(new THREE.Euler(0.71, 0.63, -0.97));
 
     function update(n) {
@@ -314,7 +314,7 @@ export function platonicDual($step) {
     icosahedron.setRotationFromEuler(new THREE.Euler(-0.47, 0, 0.3));
 
     const dodecahedronGeo = makePolyhedronGeo(PolyhedronData.Dodecahedron, THREE);
-    const dodecahedron = $solids[1].addSolid(dodecahedronGeo, 0xb30469, 5, true);
+    const dodecahedron = $solids[1].addSolid(dodecahedronGeo, 0xcd0e66, 5, true);
     dodecahedron.setRotationFromEuler(new THREE.Euler(0.17, 0, 0.52));
 
     function update(n) {
