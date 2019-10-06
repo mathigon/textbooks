@@ -42,8 +42,8 @@ export function similar($step) {
   const $strokes = $N('g', {}, $svg);
   const burst = new Burst($N('g', {class: 'burst'}, $svg), 20);
 
-  $N('circle', {class: 'handle fixed', r: 10, cx: 320, cy: 180, style: 'fill: #31b304'}, $svg);
-  $N('circle', {class: 'outline', r: 60, cx: 320, cy: 180, style: 'stroke: #31b304'}, $strokes);
+  $N('circle', {class: 'handle fixed', r: 10, cx: 320, cy: 180, style: 'fill: #22ab24'}, $svg);
+  $N('circle', {class: 'outline', r: 60, cx: 320, cy: 180, style: 'stroke: #22ab24'}, $strokes);
 
   const circles = [[140, 120, 100, 0], [220, 300, 40, 1], [500, 240, 120, 2]];
   const isCompleted = [false, false, false];
@@ -182,7 +182,7 @@ export function wheel($step) {
 
 export function piColours($step) {
   const colours = ['#ff941f', '#e66438', '#cc3450', '#b30469', '#822b9b',
-    '#5053cd', '#1f7aff', '#258dab', '#2ba058', '#31b304'];
+    '#5053cd', '#1f7aff', '#258dab', '#2ba058', '#31b304'];  // TODO New colours
 
   const $cells = $step.$$('.pi-cell');
   for (let $c of $cells) $c.css('background', colours[+$c.text]);
@@ -567,17 +567,17 @@ export function solids($step) {
 
   $solids[0].addMesh((scene, THREE) => {
     const geo = new THREE.CylinderGeometry(1.2, 1.2, 2.6, 32, 1);
-    $solids[0].addSolid(geo, 0xb30469, 20);
+    $solids[0].addSolid(geo, 0xcd0e66, 20);
   });
 
   $solids[1].addMesh((scene, THREE) => {
     const geo = new THREE.ConeGeometry(1.3, 2.6, 128, 1);
-    $solids[1].addSolid(geo, 0x1f7aff);
+    $solids[1].addSolid(geo, 0x0f82f2);
   });
 
   $solids[2].addMesh((scene, THREE) => {
     const geo = new THREE.SphereGeometry(1.3, 128, 128);
-    $solids[2].addSolid(geo, 0xff941f);
+    $solids[2].addSolid(geo, 0xfd8c00);
   });
 }
 
@@ -585,11 +585,11 @@ export function cylinderPrism($step) {
   const $solids = $step.$$('x-solid');
 
   $solids[0].addMesh((scene, THREE) => {
-    $solids[0].addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xb30469);
-    $solids[0].addLabel('r', [0.7, -1.4, 0], 0xb30469, '-2px 0 0 -3px');
+    $solids[0].addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xcd0e66);
+    $solids[0].addLabel('r', [0.7, -1.4, 0], 0xcd0e66, '-2px 0 0 -3px');
 
-    $solids[0].addArrow([1.55, -1.4, 0], [1.6, 1.4, 0], 0x1f7aff);
-    $solids[0].addLabel('h', [1.55, 0, 0], 0x1f7aff, '-10px 0 0 6px');
+    $solids[0].addArrow([1.55, -1.4, 0], [1.6, 1.4, 0], 0x0f82f2);
+    $solids[0].addLabel('h', [1.55, 0, 0], 0x0f82f2, '-10px 0 0 6px');
 
     $solids[0].addWireframe(new THREE.CylinderGeometry(1.4, 1.4, 2.8, 256, 1, true));
 
@@ -598,7 +598,7 @@ export function cylinderPrism($step) {
     top.rotateX(Math.PI / 2);
     top.position.y = 1.4;
 
-    const bottomMaterial = Solid.translucentMaterial(0xb30469, 0.3);
+    const bottomMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
     const bottom = new THREE.Mesh(new THREE.CircleGeometry(1.4, 32), bottomMaterial);
     bottom.rotateX(Math.PI / 2);
     bottom.position.y = -1.4;
@@ -634,8 +634,8 @@ export function obliqueCylinder($step) {
     const topCircle = $solid.addCircle(1.4);
     const bottomCircle = $solid.addCircle(1.4);
 
-    $solid.addArrow([0, -1.4, 0], [0, 1.4, 0], 0x1f7aff);
-    $solid.addLabel('h', [0, 0, 0], 0x1f7aff, '-10px 0 0 4px');
+    $solid.addArrow([0, -1.4, 0], [0, 1.4, 0], 0x0f82f2);
+    $solid.addLabel('h', [0, 0, 0], 0x0f82f2, '-10px 0 0 4px');
 
     for (let obj of [top, topCircle, bottom, bottomCircle])
       obj.setRotationFromEuler(new THREE.Euler(Math.PI / 2, 0, 0));
@@ -668,12 +668,12 @@ export function cavalieri($step) {
   let shift;
 
   $solids[0].addMesh((scene, THREE) => {
-    $solids[0].addSolid(new THREE.CylinderGeometry(1.2, 1.2, 2, 64, 1), 0xff941f, 45);
+    $solids[0].addSolid(new THREE.CylinderGeometry(1.2, 1.2, 2, 64, 1), 0xfd8c00, 45);
   });
 
   $solids[1].addMesh((scene, THREE) => {
     const geo = new THREE.CylinderGeometry(1.2, 1.2, 0.1, 64, 1);
-    const cylinders = tabulate(() => $solids[1].addSolid(geo, 0xff941f, 45), 20);
+    const cylinders = tabulate(() => $solids[1].addSolid(geo, 0xfd8c00, 45), 20);
 
     function update(s) {
       shift = s;
@@ -700,19 +700,19 @@ export function cylinderSurface($step) {
   $solid.one('rotate', () => hasMoved = true);
 
   $solid.addMesh((scene, THREE) => {
-    const cylinder = $solid.addWireframe(new THREE.Geometry(), 0x1f7aff, 45, 0.2);
-    $solid.addArrow([0, -1, -1], [0, 1, -1], 0x1f7aff);
-    $solid.addLabel('h', [0, 0, -1], 0x1f7aff, '-10px 0 0 6px');
+    const cylinder = $solid.addWireframe(new THREE.Geometry(), 0x0f82f2, 45, 0.2);
+    $solid.addArrow([0, -1, -1], [0, 1, -1], 0x0f82f2);
+    $solid.addLabel('h', [0, 0, -1], 0x0f82f2, '-10px 0 0 6px');
 
     const baseGeo = new THREE.CircleGeometry(1, 64);
 
-    const top = $solid.addOutlined(baseGeo, 0xb30469, 5, 0.2);
-    top.add($solid.addArrow([0, 0, 0], [1, 0, 0], 0xb30469));
-    const topLabel = $solid.addLabel('r', [0.5, 1, 0], 0xb30469, '-1px 0 0 -3px');
+    const top = $solid.addOutlined(baseGeo, 0xcd0e66, 5, 0.2);
+    top.add($solid.addArrow([0, 0, 0], [1, 0, 0], 0xcd0e66));
+    const topLabel = $solid.addLabel('r', [0.5, 1, 0], 0xcd0e66, '-1px 0 0 -3px');
 
-    const bottom = $solid.addOutlined(baseGeo, 0xb30469, 5, 0.2);
-    bottom.add($solid.addArrow([0, 0, 0], [1, 0, 0], 0xb30469));
-    const bottomLabel = $solid.addLabel('r', [0.5, -1, 0], 0xb30469, '-1px 0 0 -3px');
+    const bottom = $solid.addOutlined(baseGeo, 0xcd0e66, 5, 0.2);
+    bottom.add($solid.addArrow([0, 0, 0], [1, 0, 0], 0xcd0e66));
+    const bottomLabel = $solid.addLabel('r', [0.5, -1, 0], 0xcd0e66, '-1px 0 0 -3px');
 
     function update(n) {
       const angle = PI / 2 * (n/105);
@@ -754,16 +754,16 @@ export function cone($step) {
   const $solid = $step.$('x-solid');
 
   $solid.addMesh((scene, THREE) => {
-    $solid.addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xb30469);
-    $solid.addLabel('r', [0.7, -1.4, 0], 0xb30469, '-1px 0 0 -3px');
+    $solid.addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xcd0e66);
+    $solid.addLabel('r', [0.7, -1.4, 0], 0xcd0e66, '-1px 0 0 -3px');
 
-    $solid.addArrow([0, -1.4, 0], [0, 1.35, 0], 0x1f7aff);
-    $solid.addLabel('h', [0, 0, 0], 0x1f7aff, '-10px 0 0 4px');
+    $solid.addArrow([0, -1.4, 0], [0, 1.35, 0], 0x0f82f2);
+    $solid.addLabel('h', [0, 0, 0], 0x0f82f2, '-10px 0 0 4px');
 
-    $solid.addPoint([0, 1.4, 0], 0x31b304);
+    $solid.addPoint([0, 1.4, 0], 0x22ab24);
     $solid.addWireframe(new THREE.ConeGeometry(1.4, 2.8, 128, 1, true));
 
-    const bottomMaterial = Solid.translucentMaterial(0xb30469, 0.3);
+    const bottomMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
     const bottom = new THREE.Mesh(new THREE.CircleGeometry(1.4, 32), bottomMaterial);
     bottom.rotateX(Math.PI / 2);
     bottom.position.y = -1.4;
@@ -788,7 +788,7 @@ export function coneCircumscribed($step) {
   const $solid = $step.$('x-solid');
 
   $solid.addMesh((scene, THREE) => {
-    $solid.addSolid(new THREE.ConeGeometry(1.4, 2.8, 128, 1), 0xb30469);
+    $solid.addSolid(new THREE.ConeGeometry(1.4, 2.8, 128, 1), 0xcd0e66);
     $solid.addWireframe(new THREE.CylinderGeometry(1.4, 1.4, 2.8, 128, 1), 0xaaaaaa);
   });
 }
@@ -801,7 +801,7 @@ export function obliqueCone($step) {
     const cylinders = tabulate((i) => {
       const r = 1.6 * (1 - i/30);
       const geo = new THREE.CylinderGeometry(r, r, 0.1, 64, 1);
-      return $solid.addSolid(geo, 0xff941f, 45)
+      return $solid.addSolid(geo, 0xfd8c00, 45)
     }, 30);
 
     function update(s) {
@@ -831,13 +831,13 @@ export function coneSurface($step) {
   const rMax = Math.sqrt(square(r) + square(h));
 
   $solid.addMesh((scene, THREE) => {
-    const cone = $solid.addWireframe(new THREE.Geometry(), 0x31b304, 45, 0.2);
-    const slantArrow = $solid.addArrow([0, -h/2, -r], [0, h/2, 0], 0x31b304);
-    const slantLabel = $solid.addLabel('s', [0, 0, -r/2], 0x31b304, '-10px 0 0 6px');
+    const cone = $solid.addWireframe(new THREE.Geometry(), 0x22ab24, 45, 0.2);
+    const slantArrow = $solid.addArrow([0, -h/2, -r], [0, h/2, 0], 0x22ab24);
+    const slantLabel = $solid.addLabel('s', [0, 0, -r/2], 0x22ab24, '-10px 0 0 6px');
 
-    const bottom = $solid.addOutlined(new THREE.CircleGeometry(1, 32), 0xff941f, 5, 0.2);
-    bottom.add($solid.addArrow([r, 0, 0], [0, 0, 0], 0xff941f));
-    const radiusLabel = $solid.addLabel('r', [r/2, -h/2, 0], 0xff941f, '-2px 0 0 -3px');
+    const bottom = $solid.addOutlined(new THREE.CircleGeometry(1, 32), 0xfd8c00, 5, 0.2);
+    bottom.add($solid.addArrow([r, 0, 0], [0, 0, 0], 0xfd8c00));
+    const radiusLabel = $solid.addLabel('r', [r/2, -h/2, 0], 0xfd8c00, '-2px 0 0 -3px');
 
     function update(n) {
       const angle = PI / 2 * (n/100.5);
@@ -896,14 +896,14 @@ export function sphere($step) {
   const $solid = $step.$('x-solid');
 
   $solid.addMesh((scene, THREE) => {
-    $solid.addArrow([0.04, 0, 0], [1.8, 0, 0], 0xb30469);
-    $solid.addLabel('r', [0.9, 0, 0], 0xb30469);
+    $solid.addArrow([0.04, 0, 0], [1.8, 0, 0], 0xcd0e66);
+    $solid.addLabel('r', [0.9, 0, 0], 0xcd0e66);
 
-    $solid.addArrow([0, -1.8, 0], [0, 1.8, 0], 0x1f7aff);
-    $solid.addLabel('d', [0, 0.9, 0], 0x1f7aff, '-10px 0 0 -14px');
+    $solid.addArrow([0, -1.8, 0], [0, 1.8, 0], 0x0f82f2);
+    $solid.addLabel('d', [0, 0.9, 0], 0x0f82f2, '-10px 0 0 -14px');
 
-    $solid.addPoint([0, 0, 0], 0x31b304);
-    $solid.addLabel('C', [0, 0, 0], 0x31b304, '0 0 0 -15px');
+    $solid.addPoint([0, 0, 0], 0x22ab24);
+    $solid.addLabel('C', [0, 0, 0], 0x22ab24, '0 0 0 -15px');
 
     $solid.addCircle(1.8, 0xaaaaaa);
     $solid.addCircle(1.8, 0xaaaaaa).rotateX(Math.PI/2);
@@ -927,7 +927,7 @@ export function sphereVolume($step) {
     $solids[0].addWireframe(new THREE.SphereGeometry(r, s, s, 0, Math.PI), 0xaaaaaa, 45).rotateX(-Math.PI/2).translateZ(-r/2);
     $solids[0].addOutlined(new THREE.CircleGeometry(r, s)).rotateX(-Math.PI/2).translateZ(-r/2);
 
-    const cross = $solids[0].addOutlined(new THREE.CircleGeometry(r, s), 0xb30469, 5, 0.4, 0xb30469).rotateX(-Math.PI/2).translateZ(-r/2);
+    const cross = $solids[0].addOutlined(new THREE.CircleGeometry(r, s), 0xcd0e66, 5, 0.4, 0xcd0e66).rotateX(-Math.PI/2).translateZ(-r/2);
     $slider.on('move', (n) => {
       cross.updateGeometry(new THREE.CircleGeometry(Math.max(0.001, Math.sqrt(1 - square(n/100)) * r), s));
       cross.position.set(0, r * n/100 - r/2, 0);
@@ -941,7 +941,7 @@ export function sphereVolume($step) {
     const inside = $solids[1].addOutlined(new THREE.ConeGeometry(r, r, s, s, true), 0xaaaaaa, 45);
     inside.rotateX(Math.PI);
 
-    const cross = $solids[1].addOutlined(new THREE.RingGeometry(0.001, r, s, 1), 0xb30469, 5, 0.4, 0xb30469).rotateX(-Math.PI/2).translateZ(-r/2);
+    const cross = $solids[1].addOutlined(new THREE.RingGeometry(0.001, r, s, 1), 0xcd0e66, 5, 0.4, 0xcd0e66).rotateX(-Math.PI/2).translateZ(-r/2);
     $slider.on('move', (n) => {
       cross.position.set(0, r * n/100 - r/2, 0);
       cross.updateGeometry(new THREE.RingGeometry(Math.max(0.001, n/100 * r), r, s, 1));
@@ -997,17 +997,17 @@ export function sphereSum($step) {
   const $solids = $step.$$('x-solid');
 
   $solids[0].addMesh((scene, THREE) => {
-    $solids[0].addSolid(new THREE.ConeGeometry(1.2, 2.4, 64, 1), 0xb30469, 45);
+    $solids[0].addSolid(new THREE.ConeGeometry(1.2, 2.4, 64, 1), 0xcd0e66, 45);
     $solids[0].addWireframe(new THREE.CylinderGeometry(1.2, 1.2, 2.4, 64, 1), 0xaaaaaa, 45);
   });
 
   $solids[1].addMesh((scene, THREE) => {
-    $solids[1].addSolid(new THREE.SphereGeometry(1.2, 64, 64), 0xb30469, 45);
+    $solids[1].addSolid(new THREE.SphereGeometry(1.2, 64, 64), 0xcd0e66, 45);
     $solids[1].addWireframe(new THREE.CylinderGeometry(1.2, 1.2, 2.4, 64, 1), 0xaaaaaa, 45);
   });
 
   $solids[2].addMesh((scene, THREE) => {
-    $solids[2].addSolid(new THREE.CylinderGeometry(1.2, 1.2, 2.4, 64, 1), 0xb30469, 20);
+    $solids[2].addSolid(new THREE.CylinderGeometry(1.2, 1.2, 2.4, 64, 1), 0xcd0e66, 20);
   });
 
   for (const i of [0, 1, 2]) {

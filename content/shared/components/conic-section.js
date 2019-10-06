@@ -81,7 +81,7 @@ export class ConicSection extends CustomElement {
     // Cone
     const coneGeo = new THREE.ConeGeometry(100, coneHeight, 150, 1, true);
     const coneMaterial = new THREE.MeshPhongMaterial({
-      color: 0xff941f, transparent: true, opacity: 0.7, shininess: 40,
+      color: 0xfd8c00, transparent: true, opacity: 0.7, shininess: 40,
       side: THREE.DoubleSide, clippingPlanes: [bottom, right]
     });
     const cone = new THREE.Mesh(coneGeo, coneMaterial);
@@ -97,7 +97,7 @@ export class ConicSection extends CustomElement {
     scene.add(plane);
 
     // Conic Section Tube
-    const tubeMaterial = new THREE.MeshLambertMaterial({color: 0xb30469, clippingPlanes: [right]});
+    const tubeMaterial = new THREE.MeshLambertMaterial({color: 0xcd0e66, clippingPlanes: [right]});
     const tube = new THREE.Mesh(getTubeGeo(), tubeMaterial);
     scene.add(tube);
 

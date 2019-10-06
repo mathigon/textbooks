@@ -922,7 +922,7 @@ dem Addieren __{.green}von ganzen Zahlen__ sehr ähnlich ist:
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
           mo(value="= ) =") =
-          img.cube(src="images/cube-0.svg" width=32 height=32 height=32)
+          img.cube(src="images/cube-0.svg" width=32 height=32)
         .text-center.axiom 
           mn 4
           mo +

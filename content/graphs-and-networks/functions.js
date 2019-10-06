@@ -18,11 +18,11 @@ import { travellingSalesman } from './components/geometry';
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,' +
   '14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';
 
-const RED = '#b30469';
-const BLUE = '#1f7aff';
-const GREEN = '#31b304';
-const YELLOW = '#ff941f';
-const ORANGE = '#db3229';
+const RED = '#cd0e66';
+const BLUE = '#0f82f2';
+const GREEN = '#22ab24';
+const YELLOW = '#fd8c00';
+const ORANGE = '#e64328';
 
 export function intro($section) {
   let $graph = $section.$('.graph');

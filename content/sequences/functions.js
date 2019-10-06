@@ -258,7 +258,7 @@ export function polygonNumbers($step) {
   const POLYGONS = ['triangle', 'square', 'pentagonal', 'hexagonal',
       'heptagonal', 'octagonal', 'nonagonal', 'decagonal'];
   const COLOURS = ['#ff941f', '#ec7031', '#d94c44', '#c62857', '#b30469',
-    '#8e228f', '#693fb4', '#445dda', '#1f7aff', '#2488c0', '#289782', '#2da543'];
+    '#8e228f', '#693fb4', '#445dda', '#1f7aff', '#2488c0', '#289782', '#2da543'];  // TODO New colours
 
   const $svg = $step.$('svg');
   const $slider = $step.$('x-slider');
