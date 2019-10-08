@@ -131,17 +131,17 @@ As humans, we can only ever write a finite number of 9s, say ${n}{n|1|1,15,1}:
       line(x1="660" y1="88" x2="660" y2="80" stroke="#000" stroke-linecap="round" stroke-width="2")
       text(transform="translate(16.01 106.62)" font-size="18") 0
       text(transform="translate(656.01 106.62)" font-size="18") 1
-      g(fill="#ff941f")
+      g(fill="#fd8c00")
         text(transform="translate(522.54 38.62)" font-size="16") 0.9
-        line(x1="532" y1="68.53" x2="532" y2="43" stroke="#ff941f" stroke-linecap="round" stroke-width="2")
+        line(x1="532" y1="68.53" x2="532" y2="43" stroke="#fd8c00" stroke-linecap="round" stroke-width="2")
         polygon(points="532 77 536.88 65.06 532 67.89 527.12 65.06 532 77")
-      g.reveal(when="n2" fill="#31b304")
+      g.reveal(when="n2" fill="#22ab24")
         text(transform="translate(620.57 38.62)" font-size="16") 0.99
-        line(x1="634" y1="68.53" x2="634" y2="43" stroke="#31b304" stroke-linecap="round" stroke-width="2")
+        line(x1="634" y1="68.53" x2="634" y2="43" stroke="#22ab24" stroke-linecap="round" stroke-width="2")
         polygon(points="634 77 638.88 65.06 634 67.89 629.12 65.06 634 77")
-      g.reveal(when="n3" fill="#1f7aff")
+      g.reveal(when="n3" fill="#0f82f2")
         text(transform="translate(637.59 14.62)" font-size="16") 0.999
-        line(x1="655" y1="68.53" x2="655" y2="19" stroke="#1f7aff" stroke-linecap="round" stroke-width="2")
+        line(x1="655" y1="68.53" x2="655" y2="19" stroke="#0f82f2" stroke-linecap="round" stroke-width="2")
         polygon(points="655 77 659.88 65.06 655 67.89 650.12 65.06 655 77")
     x-gesture(target="x-var" slide="100,0")
 

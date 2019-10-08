@@ -1097,7 +1097,7 @@ Radius der Erde
       svg.r
         defs: radialGradient#grad1(cx=200 cy=200 r=200 gradientUnits="userSpaceOnUse")
           stop(offset=0 stop-color="#63a3ff")
-          stop(offset=1 stop-color="#1f7aff")
+          stop(offset=1 stop-color="#0f82f2")
       
         circle(x="point(150,250)" name="c" hidden)
         circle(x="point(150,120)" name="a" hidden)
@@ -2163,9 +2163,9 @@ Modell unseres Universums für mehr als 1000 Jahre:
       svg(width=320 height=320)
         circle.large-circle(cx=160 cy=160 r=120 fill="none" stroke="#ccc" stroke-width="2px")
         circle.small-circle(cx=280 cy=160 r=30 fill="none" stroke="#ccc" stroke-width="2px")
-        path(fill="none" stroke="#ff941f" stroke-width="3px" opacity="0.8" stroke-linejoin="round")
-        circle(cx=160 cy=160 r=15 fill="#1f7aff")
-        circle.earth(cx=310 cy=160 r=10 fill="#ff941f")
+        path(fill="none" stroke="#fd8c00" stroke-width="3px" opacity="0.8" stroke-linejoin="round")
+        circle(cx=160 cy=160 r=15 fill="#0f82f2")
+        circle.earth(cx=310 cy=160 r=10 fill="#fd8c00")
       x-play-btn
 
 {.caption} Dieser Planet  dreht sich in ${n}{n|6|2,12,1} kleinen Kreisen
@@ -2198,10 +2198,10 @@ sich, wenn sie der Sonne näher kommen, und verlangsamen sich, wenn sie sich wei
 
     .r
       svg(width=320 height=240)
-        path.sweep(fill="#1f7aff" opacity="0.25")
+        path.sweep(fill="#0f82f2" opacity="0.25")
         path.orbit(fill="none" stroke="#ccc" stroke-width="3px" opacity="0.8" stroke-linejoin="round")
-        circle.earth(cx=280 cy=120 r=10 fill="#1f7aff")
-        circle(cx=220 cy=120 r=15 fill="#ff941f")
+        circle.earth(cx=280 cy=120 r=10 fill="#0f82f2")
+        circle(cx=220 cy=120 r=15 fill="#fd8c00")
         circle(cx=100 cy=120 r=4 fill="#ccc")
       x-play-btn
 

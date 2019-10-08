@@ -163,8 +163,8 @@ A [__line__](gloss:line) is a set of infinitely many points that extend forever
 in both directions. Lines are always straight and, just like points, they don’t
 take up any space – they have no _width_.
 
-{.r} Lines are labeled using lower-case letters. We can also refer to them using
-two points that lie on the line, for example
+{.r} Lines are labeled using lower-case letters like _a_ or _b_. We can also
+refer to them using two points that lie on the line, for example
 <span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
 <span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
 order of the points does not matter.

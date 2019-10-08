@@ -139,7 +139,7 @@ export class Solid extends CustomElement {
 
   addLabel(text, posn, color = STROKE_COLOR, margin = '') {
     const $label = $N('div', {text, class: 'label3d'});
-    $label.css('color', '#' + color.toString(16));
+    $label.css('color', '#' + color.toString(16).padStart(6, '0'));
     if (margin) $label.css('margin', margin);
 
     let posn1 = new THREE.Vector3(...posn);

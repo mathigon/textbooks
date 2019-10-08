@@ -118,9 +118,9 @@ adding or subtracting a number:
 
     svg(style="width: 0; height: 0; position: absolute;"): defs
       marker#blue-arrow(refX=2 refY=2 markerWidth=4 markerHeight=4 orient="auto")
-        path(d="M 0 0 L 4 2 L 0 4 z" fill="#ff941f")
+        path(d="M 0 0 L 4 2 L 0 4 z" fill="#fd8c00")
       marker#blue-circle(refX="2" refY="2" markerWidth="4" markerHeight="4" orient="auto")
-        circle( cx=2 cy=2 r=1.5 fill="#ff941f")
+        circle( cx=2 cy=2 r=1.5 fill="#fd8c00")
 
     x-coordinate-system(width=400 height=320 x-axis="-8|8|1" y-axis="-6|6|1" no-crosshairs margins="5 5 5 5")
     x-gesture(target="#intercept x-var" slide="100,0")
