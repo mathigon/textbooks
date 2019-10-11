@@ -2,54 +2,85 @@
 
 ## Carbon Dating
 
-> id: cd1
+> section: carbon-dating
 
-Everything in our world is made up of different chemical elements: Oxygen,
-Hydrogen, Iron, and many others. Many of these elements can have different types
-of atoms, called __isotopes__. For example, the element Carbon occurs in three
-different isotopes:
+A group of archaeologists has discovered a new tomb in the Egyptian desert.
+They carefully break the sealed door, walk through several rooms filled with
+ancient treasures, until they arrive in the XXXXX. The sarkophagus 
 
-    figure.row
-      .text-center(style="width: 170px")
-        include svg/atom-1.svg
-        div #[strong Carbon 12]
-        .small 6 Protons, 6 Neutrons#[br]98.8%
-      .text-center(style="width: 170px")
-        include svg/atom-2.svg
-        div #[strong Carbon 13]
-        .small 6 Protons, 7 Neutrons#[br]1.1%
-      .text-center(style="width: 170px")
-        include svg/atom-3.svg
-        div #[strong Carbon 14]
-        .small 6 Protons, 8 Neutrons#[br]0.1%
+They carefully catalogue every item in the tomb, before transporting it to a
+nearby museum for further examination. The most important question is: who is
+this
 
-One amazing fact is that the proportions of these isotopes is almost exactly the
-same, anywhere on Earth – almost everything is C12, but approximately 0.1% of
-all carbon atoms are C14.
+Unfortunately, none of the drawings and inscriptions on the wall of the tomb
+seem to contain names or dates. Instead, it turns out that there is another way
+to accurately determine the age of ancient artifacts, that solely relies on
+physics.
 
-{.todo} use mummies!
+---
 
-Another amazing fact is that C14 is radioactive :radioactive:. That means that
-over time, it decays: it breaks apart into other element. We are actually
-surrounded by many different radioactive materials, but they are all much, much
-weaker than nuclear power stations or atomic bombs.
+All living organisms on Earth – plants, animals and humans – contain Carbon
+[atoms](gloss:atom). Usually, the core of a Carbon atom consists of six
+[protons](gloss:proton) and six [neutrons](gloss:protons). However, a small
+number of Carbon atoms contain additional neutrons. These "variants" are called
+__isotopes__:
+
+::: column(width=170)
+
+    x-media(src="svg/atom-1.svg" width=150 height=150)
+
+{.text-center} __Carbon 12__  
+6 Protons, 6 Neutrons  
+98.8%
+
+::: column(width=170)
+
+    x-media(src="svg/atom-2.svg" width=150 height=150)
+
+{.text-center} __Carbon 13__  
+6 Protons, 7 Neutrons  
+1.1%
+
+::: column(width=170)
+
+    x-media(src="svg/atom-3.svg" width=150 height=150)
+
+{.text-center} __Carbon 14__  
+6 Protons, 8 Neutrons  
+0.1%
+
+:::
+
+One amazing fact is that the proportion at which each of these isotopes occurs
+is almost exactly the same, anywhere on Earth! Another important fact is that
+`C_14` is [radioactive](gloss:radioactive). This means that over time, it
+"decays" by breaking apart into other elements.
+
+We are actually surrounded by many different radioactive materials, but they are
+all much, much weaker than nuclear power stations or atomic bombs.
 
 During our life, as we eat or breathe, all living things – plants, animals or
 humans – absorb these materials, which means that our body contains some
-radioactive atoms. When we die, we no longer absorb any new atoms, and the ones
-that we have already absorbed start to [[decay|multiply|disappear]].
+radioactive atoms.
+
+You might think that 0.1% is a very small proportion, but your body contains
+around XXXXX Carbon atoms, which means that you also contain around XXXXX
+C-14 atoms.
+
+---
+
+When we die, we no longer absorb any new atoms, and the ones that we have
+already absorbed in our body start to [[decay|multiply|disappear]].
 
     figure: include svg/chart.svg
 
----
-> id: cd3
+This is the key fact that can be used by archaeologists and geologists when
+they are trying to find the age of fossils, mummies, and similar objects.
 
-    img.text-wrap(src="images/fossil.jpg" style="shape-outside: url(images/fossil.png)" width=320 height=295)
-
-This can be used by geologists, when the’re trying to determine the age of
-fossils: they take a small sample of fossil and “count” the number of C12 and
-C14 atoms in the sample. By looking at the ratio, they can work out how much C14
-must have decayed since the animal died. Finally, they can calculate how long it
+First, they take a small sample of fossil. Using a complex machine called a
+__mass spectrometer__, they can “count” the number of C12 and C14 atoms in the
+sample. By looking at the ratio, they can work out how much C14 must have
+decayed since the animal died. Finally, they can calculate how long it
 takes for that much C14 to decay, and that’s precisely the age of the fossil!
 
 This process is called __Carbon Dating__, and it relies on some interesting
@@ -59,10 +90,11 @@ decay at a constant rate, which is usually indicated by their __half life__.
 ---
 > id: cd4
 
-C14, for example, has a half life of approximately 6,000 years. This means that
-if I have a block of C14, it will take 6,000 years for half of it to decay into
-other elements. After another 6,000 years, half of the remaining atoms will have
-decayed, so I’m left with [[a quarter|a third|nothing]] of the original amount.
+C14, for example, has a half life of approximately 8,000 years. This means that
+if you have a block of C14 atoms, it will take 8,000 years for half of it to
+decay into other elements. After another 8,000 years, half of the remaining
+atoms will have decayed, so you're left with just [[a quarter|a third|nothing]]
+of the original amount.
 
 Let’s assume we start with 1,200 Carbon 14 atoms, and summarise the remaining
 amount over time in a table:
@@ -86,10 +118,10 @@ amount over time in a table:
       tr
         td __amount__
         td 1200
-        td [[600]]
-        td [[300]]
-        td [[150]]
-        td [[75]]
+        td.md [[600]]
+        td.md [[300]]
+        td.md [[150]]
+        td.md [[75]]
 
 ---
 
@@ -106,6 +138,8 @@ is:
 `"amount" = "initial" × 2^((-t)/"half life")` {.text-center}
 
 ---
+
+    img.text-wrap(src="images/fossil.jpg" style="shape-outside: url(images/fossil.png)" width=320 height=295)
 
 Let's get back to our geologists, who were trying to determine the age of the
 fossil. In a small sample, they found 10 Carbon 14 atoms, when given the ratios
