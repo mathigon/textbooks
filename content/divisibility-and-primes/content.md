@@ -199,7 +199,7 @@ Unfortunately 4 doesn’t divide 10, so we can’t just look at the last number 
 but 4 _does_ divide 100, so we just have to slightly modify our rule from above.
 Now we write __{.m-red}ab__**{.m-green}cd** = __{.m-red}ab × 100__ +
 __{.m-green}cd__. We know that 4 will always divide __{.m-red}ab × 100__, so we
-have to look at the last [[two]] digits to check if a number if divisible by 4.
+have to look at the last [[two]] digits to check if a number is divisible by 4.
 
 For example, __{.m-green}24__ is divisible by 4 so __{.m-red}2735__**{.m-green}24**
 [[is also|is not]] divisible by 4, and __{.m-green}18__ is not divisible by 4 so
