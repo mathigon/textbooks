@@ -27,7 +27,7 @@ Of particular interest was the quest to find the highest mountain on Earth.
 There were a few different candidates, but from hundreds of kilometers away, it
 was difficult to tell which one was the highest.
 
-So how to you measure the height of a mountain?
+So how do you measure the height of a mountain?
 
     figure.mountain: include svg/mountain.svg
 
