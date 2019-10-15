@@ -1698,7 +1698,7 @@ mit Hilfe des [Satzes von Pythagoras](gloss:pythagoras-theorem) ermitteln:
 
 Die _{span.pill.step-target.red(data-to="arc")}Kreisbogenlänge_ des Sektors ist
 gleich dem [[Umfang|Durchmesser|Radius]] der _{span.pill.step-target.yellow(data-to="base")}Grundfläche_:
-_{span.reveal(when="blank-0")}`2 π r`. Jetzt können wir die Sektorfläche
+_{span.reveal(when="blank-0")}`2 r π`. Jetzt können wir die Sektorfläche
 mit der [Formel](gloss:circle-sector) finden, die wir in einem vorherigen Abschnitt hergeleitet haben:_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
@@ -1744,7 +1744,7 @@ des __{.m-green}Sektors__ addieren, um die Gesamtoberfläche des Kegels zu erhal
 
 ::: column.grow
 
-Eine [__Kugel__](gloss:sphere)ist ein dreidimensionaler Körper, der aus allen
+Eine [__Kugel__](gloss:sphere) ist ein dreidimensionaler Körper, der aus allen
 Punkten besteht, die den gleichen Abstand zu einem gegebenen __{.m-green}Mittelpunkt *M*__ haben . Dieser
 Abstand wird als __{.m-red}Radius *r*__ der Kugel bezeichnet.
 
@@ -1855,7 +1855,7 @@ Der Querschnitt des Zylinderauschnitts ist immer ein [[Ring|Kreis|Kegel]].
 Der Radius der „Bohrung“ beträgt _h_. Wir können die Fläche des Rings finden,
 indem wir die Fläche der Bohrung von der Fläche des größeren Kreises abziehen:
 
-| _A_ | = | `π r^2 - π h^2` |
+| _A_ | = | `r^2 π - h^2 π` |
 |     | = | `π (r^2 - h^2)` |
 {.eqn-system}
 :::

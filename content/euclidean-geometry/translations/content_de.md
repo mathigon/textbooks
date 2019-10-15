@@ -492,7 +492,7 @@ auch auf ganz anderen Gebieten als Inspiration dienten.
 > id: measuring
 > section: geometric-construction
 
-## Geometrisches Konstruktieren
+## Geometrisches Konstruieren
 
 Du hast vielleicht bemerkt, dass die fünf Axiome von Euklid nichts über die
 _Messung_ von Abständen oder Winkeln sagen, was schon immer ein wesentlicher Bestandteil der
@@ -710,7 +710,7 @@ Tempel bauen würden, mit _genau dem doppelten_ Volumen des vorhandenen.
 Beachte, dass die _Verdoppelung des Volumens_ nicht dasselbe ist wie die _Verdoppelung der Kantenlänge des
 Würfels_. Wenn das [[3-dimensionale|2-dimensionale|1-dimensionale]] Volumen
 um den Faktor 2 zunimmt, wird die [[1-dimensionale|3-dimensionale|2-dimensionale]]
-Würfelkante nämlich um den Faktor `root(3)(2)` vergrößert.
+Würfelkante nämlich um den Faktor `root(2,3)` vergrößert.
 
 ---
 > id: impossible-1

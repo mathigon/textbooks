@@ -1091,7 +1091,7 @@ Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinkl
       path.fill.light.red(x="polygon(B1,X1,C1)")
       path.fill.yellow(x="angle(C1,B1,X1).sup" size=25 target="angle")
       path.dark.thin(x="angle(B1,X1,C1).sup" size=10 target="right")
-      path.red(x="segment(B1,C1)" label="a" target="a ac")
+      path.red(x="segment(B1,C1)" label="b" target="a ac")
       path.dark(x="segment(X1,C1)")
       path.blue(x="segment(X1,B1)" label="x" target="x xa")
 
@@ -1101,7 +1101,7 @@ Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinkl
       path.fill.light.yellow(x="polygon(A2,X2,C2)")
       path.fill.red(x="angle(C2,A2,X2).sup" size=20 target="angle")
       path.dark.thin(x="angle(A2,X2,C2).sup" size=10 target="right")
-      path.yellow(x="segment(A2,C2)" label="b" target="b bc")
+      path.yellow(x="segment(A2,C2)" label="a" target="b bc")
       path.dark(x="segment(X2,C2)")
       path.green(x="segment(X2,A2)" label="y" target="y yb")
 
@@ -1114,8 +1114,8 @@ Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinkl
       path.fill.yellow(x="angle(C,B,X)" size=25 target="angle")
       path.fill.red(x="angle(X,A,C)" size=20 target="angle")
       path.dark.thin(x="angle(A,C,B)" size=10 target="right")
-      path.red(x="segment(B,C)" label="a" target="a xa")
-      path.yellow(x="segment(A,C)" label="b" target="b yb")
+      path.red(x="segment(B,C)" label="b" target="a xa")
+      path.yellow(x="segment(A,C)" label="a" target="b yb")
       path.blue(x="segment(B,X)" label="x" target="hypotenuse x ac bc")
       path.green(x="segment(X,A)" label="y" target="hypotenuse y ac bc")
 
@@ -1127,16 +1127,16 @@ Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinkl
     table.proof-table.reveal(when="blank-5")
       tr
         td
-          <p class="text-center"><mrow class="step-target pill blue" data-to="xa"><mfrac><mi>x</mi><mi>a</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill red" data-to="ac"><mfrac><mi>a</mi><mi>c</mi></mfra></mrow></p>
-          <p class="text-center"><mi class="step-target pill blue" data-to="x">x</mi><mo>=</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
+          <p class="text-center"><mrow class="step-target pill blue" data-to="xa"><mfrac><mi>x</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill red" data-to="ac"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
+          <p class="text-center"><mi class="step-target pill blue" data-to="x">x</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
         td
-          <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
-          <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
+          <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>a</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>a</mi><mi>c</mi></mfra></mrow></p>
+          <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
 
 {.r.reveal(when="blank-5")} _{span.next-step} Weiter_
 
-{.reveal(when="next-2")} Aber erinnere dich, dass _c_ = [{.step-target.i.pill.blue}x](target:x) +
-[{.step-target.i.pill.green}y](target:y). Wir setzen ein und erhalten
+{.reveal(when="next-2")} Aber erinnere dich, dass _c_ = [{.step-target.i.pill.green}y](target:y) +
+[{.step-target.i.pill.blue}x](target:x). Wir setzen ein und erhalten
 
 {.text-center.reveal(when="next-2")} `c = a^2/c + b^2/c`
 

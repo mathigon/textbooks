@@ -492,10 +492,11 @@ Eckpunkte verbinden, um das gedrehte Bild unserer ursprünglichen Figur zu erhal
 > id: composition-1
 
 Abbildungen sind in vielen Bereichen der Mathematik eine wichtige Grundlage, nicht nur in der
-Geometrie. Beispielsweise kann man [_Funktionen_](gloss:function) transformieren ("abbilden"), indem man ihre [Graphen](gloss:function-graph)
- verschiebt oder dreht. Andere Abbildungen (Transformationen)
-haben nicht einmal eine visuelle Darstellung. Du wirst mehr über diese
-Abbildungen in späteren Kursen erfahren, aber für den Moment wollen wir zur Symmetrie weitergehen.
+Geometrie. Beispielsweise kann man [_Funktionen_](gloss:function) transformieren ("abbilden"),
+indem man ihre [Graphen](gloss:function-graph) verschiebt oder dreht.
+Andere Abbildungen (Transformationen) haben nicht einmal eine visuelle Darstellung.
+Du wirst mehr über diese Abbildungen in späteren Kursen erfahren, aber für den Moment wollen
+wir zur Symmetrie weitergehen.
 
 ---
 
@@ -539,11 +540,10 @@ sprechen dann von __Drehsymmetrie (Rotationssymmetrie)__.
 
 ### Spiegelsymmetrie
 
-Eine Figur ist [__spiegelsymmetrisch__](gloss:rotational-symmetry), wenn sie nach einer Spieglung gleich aussieht
-. Die Spiegelachse wird als [__
-Symmetrieachse__](gloss:axis-of-symmetry) bezeichnet und teilt die Figur in zwei
-[[kongruente|gleiche|ähnliche]] Hälften auf. Einige Figuren können auch mehr als eine
-Symmetrieachse haben.
+Eine Figur ist [__spiegelsymmetrisch__](gloss:rotational-symmetry), wenn sie nach einer
+Spieglung gleich aussieht. Die Spiegelachse wird als [__Symmetrieachse__](gloss:axis-of-symmetry)
+bezeichnet und teilt die Figur in zwei [[kongruente|gleiche|ähnliche]] Hälften auf.
+Einige Figuren können auch mehr als eine Symmetrieachse haben.
 
 ---
 > id: reflectional-symmetry-1
@@ -655,9 +655,9 @@ spiegelsymmetrisch sind:
 Nicht nur Figuren, Buchstaben und Bilder können spiegelsymmetrisch sein, sondern auch ganze
 Zahlen, Wörter und Sätze!
 
-Zum Beispiel kann man "25352" und "ANNA" auch von hinten nach vorne lesen ohne dass sich die Bedeutung verändert. Zahlen
-oder Wörter wie diese werden [__Palindrome__](gloss:palindrome) genannt. Fallen dir
-noch andere Beispiele für Palindrome ein?
+Zum Beispiel kann man "25352" und "ANNA" auch von hinten nach vorne lesen ohne dass sich die
+Bedeutung verändert. Zahlen oder Wörter wie diese werden [__Palindrome__](gloss:palindrome) genannt.
+Fallen dir noch andere Beispiele für Palindrome ein?
 
     form.palindromes.text-center.form-field
       input(type="text")
