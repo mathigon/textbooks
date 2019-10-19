@@ -24,6 +24,7 @@ TODO
 ## Slope and Intercept
 
 > section: slope-intercept
+> sectionStatus: dev
 > id: slope
 > goals: make-point slide-point
 

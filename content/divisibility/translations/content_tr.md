@@ -105,10 +105,11 @@ Bu yöntemle ilgili tek özel durum kare sayılar içindir: Bu durumda, ortada s
     //- TODO Factorisation exercises
 
 ---
-> id: divisibility2
-> section: divisibility-rules
 
 ## Bölünebilme Kuralları
+
+> id: divisibility2
+> section: rules
 
 Bir sayının başka sayılar tarafından bölünebilir olup olmadığını kontrol etmeyi şaşırtıcı bir şekilde kolaylaştıran birkaç farklı kural vardır. Bu bölümde bunlardan bazılarına bir göz atacağız...
 
@@ -255,10 +256,11 @@ Bir sayının 6 ile bölünebilir olup olmadığını kontrol etmek için 2 [[ve
     //- TODO Practice exercises
 
 ---
-> id: primes
-> section: prime-numbers
 
 ## Asal sayılar
+
+> id: primes
+> section: primes
 
 Bölen çiftleri hesaplarken, bir sayı ilk bölen çifti hariç başka bölen çifte sahip olmayabilir. Örnek olarak 13'ü ele alalım – bölenleri sadece 1 ve kendisi (13). Bu özel sayılar __Asal sayılar__ olarak adlandırılır. Onları daha küçük sayıların çarpımı şeklinde yazamayız ki bu onları bir nevi “sayıların atomları” yapar.
 
@@ -379,11 +381,12 @@ start with an assumption, deduce something impossible, and thus know that our
 assumption must be incorrect.
 
 ---
-> id: prime-test
-> goals: calculator
-> section: the-distribution-of-primes
 
 ## Asalların Dağılımı
+
+> id: prime-test
+> goals: calculator
+> section: distribution-of-primes
 
 Bir sayının asal olup olmadığını kontrol etmenin en kolay yolu onu kendisinden küçük tüm tamsayılara bölmeye çalışmaktır. Bilgisayarlar bunu çok hızlı ve verimli bir şekilde yapabilir. _Çok büyük_ sayılar, yüzlerce basamaklı, için daha verimli algoritmalar da vardır. Bunlardan bazıları bir sayının _neredeyse kesinlikle_ asal olup olmadığını belirlemek için olasılığı kullanır.
 
@@ -572,11 +575,12 @@ Ancak, yukarıda göreceğiniz gibi, asalların sayısı ve Gauss'un yakınsamas
 Yüzlerce matematikçi Riemann'ın hipotezini kanıtlamaya çalıştı fakat hiçbiri başaramadı. Bu hipotezi genellikle en zor ve en önemli çözülemeyen problem olarak görülür. 2000'de, Clay Matematik Enstitüsü [__Milenyum Problemleri__](gloss:millennium-prize)nin 6 tanesinden biri olarak gösterdi ve çözen matematikçiye 1.000.000 dolar vaat etti.
 
 ---
-> id: race
-> goals: race
-> section: least-common-multiple
 
 ## En Küçük Ortak Kat
+
+> id: race
+> goals: race
+> section: lcm
 
 İki koşucu dairesel bir yarış pistinde antreman yapıyor. 
 __{.m-blue}İlk koşucu__
@@ -716,10 +720,46 @@ Asal sayılar için özel bir durum: İki asal sayının ekok'u direkt olarak ik
     //- TODO Exercises
 
 ---
-> id: gcd
-> section: greatest-common-factor
+> id: cicadas
+> goals: bound-low bound-high
+
+### Ağustos Böcekleri
+
+::: column.grow
+
+Kuzey Amerika, çeşitli ağustos böceklerine ev sahipliği yapıyor. Bunların birkaç senede bir yazın üremek için ortaya çıkmak gibi ilginç bir özellikleri var - Kalan zamanlarını yeraltında geçiriyorlar.
+
+Örneğin, Florida ve Mississippi'deki ağustos böcekleri her 13 yılda bir ortaya çıkıyor. Illinois ve Iowa'daki ağustos böcekleri ise her 17 yılda bir ortaya çıkıyor. Ama 12, 14, 15 ve 16 yıllık döngülerde ağustost böcekleri ortaya çıkmıyorlar.
+
+::: column(width=360)
+
+    x-media(width=360 height=240 src="images/cicadas.jpg")
+
+:::
+
+Hem 13 hem de 17, asal sayıdır - ve bunun çok iyi bir nedeni var. Ortmanda ağustos böceklerini öldüren avcılar olduğunu hayal edin. By avcılar da düzenli aralıklarda ortaya çıkıyorlar - diyelim ki 6 yılda bir olsun.
+
+Şimdi, ağustos böcekleri her ${n}{n|13|4,20,1} yılda (${isPrime(n) ? 'asal' : 'asal değil'}) bir ortaya çıkıyor olsun. Bu iki hayvan her ${lcm(n,6)} yılda bir aynı anda yeryüzüne çıkıyorlar, bu sayı 6 ve ${n} sayılarının [[ekok'udur|ebob'udur|çarpımıdır]].
+
+    figure
+      include svg/cicadas.svg
+      p.caption Farklı ağustos böceği ortaya çıkış döngüsü süreleri için ağustosböcekleri ve avcıların buluşma süresi.
+
+---
+> id: cicadas1
+
+Bu sayının, ağustos böceği ortaya çıkış süresi 13, 17 gibi asal bir sayıysa daha büyük olduğu görünüyor. Bunun sebebi asal sayıların 6 ile ortak çarpanları bulunmamasıdır, böylece en küçük ortak kat hesaplanırken tekrar eden asal çarpan olmayacağı için sadeleştiremeyiz.
+
+Tabii ki, ağustos böcekleri asal sayılarla ilgili bir fikre sahip değil - fakat milyonlarca yıldır, evrim asal döngülerin en güvenilir olduğunu ortaya koydu. Avcı hayvanların zamanla soyu tükenmiş görünüyor fakat asal döngüler kalıyor.
+
+    //- TODO Exercises
+
+---
 
 ## En Büyük Ortak Bölenler
+
+> id: gcd
+> section: gcd
 
 Bir mimar bahçesinin uzunlukları 18m ve 30m olan bir kat planlıyor. Bu mimar bu bahçeyi kare fayanslarla boşluksuz veya üstüste gelmeden kaplamak istiyor. Kullanabileceği en büyük kare fayansın bir kenarının uzunluğu kaçtır?
 
@@ -777,44 +817,6 @@ Artık iki sayının ebob'unu bulmak için kolay bir yöntemimiz var:
       li İki sayının da ortak asal çarpanlarını çarp.
 
 Asal sayılar için yine bir özel durum: iki asalın ebob'u her zaman [[1]]'dir çünkü asalların ortak asal çarpanları yoktur.
-
----
-> id: cicadas
-> goals: bound-low bound-high
-> section: real-life-applications
-
-## Gerçek Hayattaki Uygulamaları
-
-### Ağustos Böcekleri
-
-::: column.grow
-
-Kuzey Amerika, çeşitli ağustos böceklerine ev sahipliği yapıyor. Bunların birkaç senede bir yazın üremek için ortaya çıkmak gibi ilginç bir özellikleri var - Kalan zamanlarını yeraltında geçiriyorlar.
-
-Örneğin, Florida ve Mississippi'deki ağustos böcekleri her 13 yılda bir ortaya çıkıyor. Illinois ve Iowa'daki ağustos böcekleri ise her 17 yılda bir ortaya çıkıyor. Ama 12, 14, 15 ve 16 yıllık döngülerde ağustost böcekleri ortaya çıkmıyorlar.
-
-::: column(width=360)
-
-    x-media(width=360 height=240 src="images/cicadas.jpg")
-
-:::
-
-Hem 13 hem de 17, asal sayıdır - ve bunun çok iyi bir nedeni var. Ortmanda ağustos böceklerini öldüren avcılar olduğunu hayal edin. By avcılar da düzenli aralıklarda ortaya çıkıyorlar - diyelim ki 6 yılda bir olsun.
-
-Şimdi, ağustos böcekleri her ${n}{n|13|4,20,1} yılda (${isPrime(n) ? 'asal' : 'asal değil'}) bir ortaya çıkıyor olsun. Bu iki hayvan her ${lcm(n,6)} yılda bir aynı anda yeryüzüne çıkıyorlar, bu sayı 6 ve ${n} sayılarının [[ekok'udur|ebob'udur|çarpımıdır]].
-
-    figure
-      include svg/cicadas.svg
-      p.caption Farklı ağustos böceği ortaya çıkış döngüsü süreleri için ağustosböcekleri ve avcıların buluşma süresi.
-
----
-> id: cicadas1
-
-Bu sayının, ağustos böceği ortaya çıkış süresi 13, 17 gibi asal bir sayıysa daha büyük olduğu görünüyor. Bunun sebebi asal sayıların 6 ile ortak çarpanları bulunmamasıdır, böylece en küçük ortak kat hesaplanırken tekrar eden asal çarpan olmayacağı için sadeleştiremeyiz.
-
-Tabii ki, ağustos böcekleri asal sayılarla ilgili bir fikre sahip değil - fakat milyonlarca yıldır, evrim asal döngülerin en güvenilir olduğunu ortaya koydu. Avcı hayvanların zamanla soyu tükenmiş görünüyor fakat asal döngüler kalıyor.
-
-    //- TODO Exercises
 
 ---
 > id: crypto

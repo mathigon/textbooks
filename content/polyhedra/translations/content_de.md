@@ -1453,7 +1453,7 @@ TODO
 
 ## Platonische Körper
 
-> section: platonic-solids
+> section: platonic
 > id: platonic
 
 Zu Beginn dieses Kurses haben wir [regelmäßige Vielecke](gloss:regular-polygon)

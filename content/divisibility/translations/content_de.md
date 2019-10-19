@@ -115,10 +115,11 @@ nur eine einzige Zahl in der Mitte, wie bei 64 = 8 × 8.
     //- TODO Factorisation exercises
 
 ---
-> id: divisibility2
-> section: divisibility-rules
 
 ## Teilbarkeitsregeln
+
+> id: divisibility2
+> section: rules
 
 Es gibt ein paar verschiedene Regeln, die es dir überraschend einfach machen können, zu überprüfen, ob eine
 Zahl durch eine andere teilbar ist. In diesem Abschnitt werden wir einen Blick auf einige von
@@ -305,10 +306,11 @@ Mehr dazu später....
     //- TODO Practice exercises
 
 ---
-> id: primes
-> section: prime-numbers
 
 ## Primzahlen
+
+> id: primes
+> section: primes
 
 Bei der Berechnung der Teilerpaare einer Zahl kann es vorkommen, dass die Zahl außer
 dem ersten Paar keine anderen Teiler mehr hat. Ein Beispiel dafür ist 13 - seine einzigen Teiler
@@ -447,11 +449,12 @@ beginnen mit einer Annahme, leiten daraus etwas Unmögliches ab und wissen daher
 Annahme falsch gewesen sein muss.
 
 ---
-> id: prime-test
-> goals: calculator
-> section: the-distribution-of-primes
 
 ## Die Verteilung der Primzahlen
+
+> id: prime-test
+> goals: calculator
+> section: distribution-of-primes
 
 Der einfachste Weg, um zu überprüfen, ob eine Zahl eine Primzahl ist, ist, sie durch alle
 kleineren natürlichen Zahlen zu teilen. Computer können das sehr schnell und effizient bewerkstelligen. Für _sehr
@@ -685,11 +688,12 @@ Institute sie eines von sieben [__Millennium-Problemen__](gloss:millennium-prize
  und versprach 1.000.000 Dollar für jeden Mathematiker, der es löst.
 
 ---
-> id: race
-> goals: race
-> section: least-common-multiple
 
 ## Kleinstes gemeinsames Vielfaches
+
+> id: race
+> goals: race
+> section: lcm
 
 Auf einer Rundstrecke trainieren zwei Läufer. Der __{.m-blue}erste Läufer__
 benötigt __{.m-blue}60__ Sekunden für eine Runde. Der __{.m-green}zweite Läufer__ benötigt nur
@@ -849,10 +853,56 @@ Primfaktoren haben, die “gestrichen” werden würden.
     //- TODO Exercises
 
 ---
-> id: gcd
-> section: greatest-common-factor
+> id: cicadas
+> goals: bound-low bound-high
+
+### Zikaden
+
+::: column.grow
+Nordamerika ist die Heimat verschiedener Zikadenarten. Diese haben die seltsame
+Eigenschaft, dass sie nur alle paar Jahre im Sommer zum Brüten auftauchen - die
+restliche Zeit verbringen sie unter der Erde.
+
+So erscheinen beispielsweise die Zikaden in Florida und Mississippi alle 13 Jahre. Die
+Zikaden in Illinois und Iowa erscheinen nur alle 17 Jahre. Aber es gibt keine
+Zikaden mit Jahreszyklen von 12, 14, 15 oder 16 Jahren.
+::: column(width=360)
+
+    x-media(width=360 height=240 src="images/cicadas.jpg")
+
+:::
+
+Sowohl 13 als auch 17 sind Primzahlen - und das hat einen sehr guten Grund. Stell dir vor,
+es gibt Raubtiere im Wald, die Zikaden töten. Diese Raubtiere treten auch
+in regelmäßigen Abständen auf, zB alle 6 Jahre.
+
+Stell dir nun vor, dass die Zikaden
+alle ${n}{n|13|4,20,1} Jahre ausbrüten würden (${isPrime(n) ? 'Primzahl' : 'keine Primzahl'}). Die beiden Tiere würden alle
+${lcm(n,6)} Jahre, was dem [[kgV|ggT|Produkt]] von 6 und ${n} entspricht, aufeinandertreffen.
+
+    figure
+      include svg/cicadas.svg
+      p.caption Zeit bis sich Zikaden und Raubtiere treffen, für verschiedene Zikadenzykluslängen.
+
+---
+> id: cicadas1
+
+Diese Zahl scheint viel größer zu sein, wenn der Zikadenzyklus eine Primzahl wie
+13 und 17 ist. Das liegt daran, dass Primzahlen keine Teiler mit 6 gemeinsam haben, so dass wir
+bei der Berechnung des kgV keine doppelten Teiler zu löschen haben.
+
+Natürlich haben die Zikaden keine Ahnung, was Primzahlen sind - aber in Millionen von
+Jahren hat die Evolution herausgefunden, dass Primzahlen für sie am sichersten sind. Das Raubtier
+scheint im Laufe der Zeit ausgestorben zu sein, aber die Primzahlzyklen wurden beibehalten.
+
+    //- TODO Exercises
+
+---
 
 ## Größter gemeinsamer Teiler
+
+> id: gcd
+> section: gcd
 
 Eine Architektin plant den Boden für einen großen Innenhof, der 18m x
 30m misst. Sie möchte, dass er mit den größtmöglichen quadratischen Fliesen bedeckt ist, ohne Lücken oder Überlappungen
@@ -922,54 +972,6 @@ Jetzt haben wir eine einfache Methode, um den ggT von zwei Zahlen zu bestimmen:
 
 Auch hier gilt für Primzahlen etwas Besonderes: Der ggT von zwei verschiedenen Primzahlen ist immer
 [[1]], da sie keine Primfaktoren miteinander teilen.
-
----
-> id: cicadas
-> goals: bound-low bound-high
-> section: real-life-applications
-
-## Anwendungen im richtigen Leben
-
-### Zikaden
-
-::: column.grow
-Nordamerika ist die Heimat verschiedener Zikadenarten. Diese haben die seltsame
-Eigenschaft, dass sie nur alle paar Jahre im Sommer zum Brüten auftauchen - die
-restliche Zeit verbringen sie unter der Erde.
-
-So erscheinen beispielsweise die Zikaden in Florida und Mississippi alle 13 Jahre. Die
-Zikaden in Illinois und Iowa erscheinen nur alle 17 Jahre. Aber es gibt keine
-Zikaden mit Jahreszyklen von 12, 14, 15 oder 16 Jahren.
-::: column(width=360)
-
-    x-media(width=360 height=240 src="images/cicadas.jpg")
-
-:::
-
-Sowohl 13 als auch 17 sind Primzahlen - und das hat einen sehr guten Grund. Stell dir vor,
-es gibt Raubtiere im Wald, die Zikaden töten. Diese Raubtiere treten auch
-in regelmäßigen Abständen auf, zB alle 6 Jahre.
-
-Stell dir nun vor, dass die Zikaden
-alle ${n}{n|13|4,20,1} Jahre ausbrüten würden (${isPrime(n) ? 'Primzahl' : 'keine Primzahl'}). Die beiden Tiere würden alle
-${lcm(n,6)} Jahre, was dem [[kgV|ggT|Produkt]] von 6 und ${n} entspricht, aufeinandertreffen.
-
-    figure
-      include svg/cicadas.svg
-      p.caption Zeit bis sich Zikaden und Raubtiere treffen, für verschiedene Zikadenzykluslängen.
-
----
-> id: cicadas1
-
-Diese Zahl scheint viel größer zu sein, wenn der Zikadenzyklus eine Primzahl wie
-13 und 17 ist. Das liegt daran, dass Primzahlen keine Teiler mit 6 gemeinsam haben, so dass wir
-bei der Berechnung des kgV keine doppelten Teiler zu löschen haben.
-
-Natürlich haben die Zikaden keine Ahnung, was Primzahlen sind - aber in Millionen von
-Jahren hat die Evolution herausgefunden, dass Primzahlen für sie am sichersten sind. Das Raubtier
-scheint im Laufe der Zeit ausgestorben zu sein, aber die Primzahlzyklen wurden beibehalten.
-
-    //- TODO Exercises
 
 ---
 > id: crypto

@@ -115,10 +115,11 @@ will meet at just a single number in the middle, like 64 = 8 × 8.
     //- TODO Factorisation exercises
 
 ---
-> id: divisibility2
-> section: divisibility-rules
 
 ## Divisibility Rules
+
+> id: divisibility2
+> section: rules
 
 There are a few different rules that can make it surprisingly easy to check if a
 number is divisible by another. In this section we will have a look at some of
@@ -305,10 +306,11 @@ More on that later…
     //- TODO Practice exercises
 
 ---
-> id: primes
-> section: prime-numbers
 
 ## Prime Numbers
+
+> id: primes
+> section: primes
 
 When calculating these factor pairs, it can happen that a number doesn’t have
 any factors except for the first pair. One example is 13 – its only factors
@@ -446,11 +448,12 @@ start with an assumption, deduce something impossible, and thus know that our
 assumption must be incorrect.
 
 ---
-> id: prime-test
-> goals: calculator
-> section: the-distribution-of-primes
 
 ## The Distribution of Primes
+
+> id: prime-test
+> goals: calculator
+> section: distribution-of-primes
 
 The easiest way to check if a number is prime, is to try to divide it by all
 smaller integers. Computers can do this very quickly and efficiently. For _very
@@ -683,11 +686,12 @@ Institute named it one of seven [__Millennium Prize Problems__](gloss:millennium
 and promised $1,000,000 to any mathematician who solves it.
 
 ---
-> id: race
-> goals: race
-> section: least-common-multiple
 
 ## Lowest Common Multiples
+
+> id: race
+> goals: race
+> section: lcm
 
 Two runners are training on a circular racing track. The __{.m-blue}first runner__
 takes __{.m-blue}60__ seconds for one lap. The __{.m-green}second runner__ only
@@ -847,10 +851,56 @@ factors which would get “canceled”.
     //- TODO Exercises
 
 ---
-> id: gcd
-> section: greatest-common-factor
+> id: cicadas
+> goals: bound-low bound-high
+
+### Cicadas
+
+::: column.grow
+North America is home to various broods of cicadas. These have the curious
+property that they only emerge every few years during the summer to breed – the
+remaining time they spend underground.
+
+For example, the cicadas in Florida and Mississippi appear every 13 years. The
+cicadas in Illinois and Iowa only appear every 17 years. But there are no
+cicadas with 12, 14, 15 or 16 year cycles.
+::: column(width=360)
+
+    x-media(width=360 height=240 src="images/cicadas.jpg")
+
+:::
+
+Both 13 and 17 are prime numbers – and that has a very good reason. Imagine that
+there are predators in the forest which kill cicadas. These predators also
+appear in regular intervals, say every 6 years.
+
+Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1} years
+(${isPrime(n) ? 'prime' : 'not prime'}). The two animals would meet every
+${lcm(n,6)} years, which is the [[lcm|product|average]] of 6 and ${n}.
+
+    figure
+      include svg/cicadas.svg
+      p.caption Time until cicadas and predators meet, for various different cicada cycle lengths.
+
+---
+> id: cicadas1
+
+This number seems to be much larger if the cicada cycle is a prime number like
+13 and 17. That’s because prime numbers don’t share any factors with 6, so
+when calculating the lcm we don’t cancel any duplicate factors.
+
+Of course, cicadas have no idea what prime numbers are – but over millions of
+years, evolution has worked out that prime cycles are the safest. The predator
+animal seems to have gone extinct over time, but the prime number cycles remain.
+
+    //- TODO Exercises
+
+---
 
 ## Greatest Common Factors
+
+> id: gcd
+> section: gcd
 
 An architect is planning the floor for a large courtyard that measures 18m by
 30m. She wants it to be covered in quadratic tiles, without any gaps or overlaps
@@ -920,54 +970,6 @@ Now we have a simple method for finding the gcf of two numbers:
 
 Once again prime numbers are special: the gcf of two different primes is always
 [[1]], because they don’t share any prime factors.
-
----
-> id: cicadas
-> goals: bound-low bound-high
-> section: real-life-applications
-
-## Real Life Applications
-
-### Cicadas
-
-::: column.grow
-North America is home to various broods of cicadas. These have the curious
-property that they only emerge every few years during the summer to breed – the
-remaining time they spend underground.
-
-For example, the cicadas in Florida and Mississippi appear every 13 years. The
-cicadas in Illinois and Iowa only appear every 17 years. But there are no
-cicadas with 12, 14, 15 or 16 year cycles.
-::: column(width=360)
-
-    x-media(width=360 height=240 src="images/cicadas.jpg")
-
-:::
-
-Both 13 and 17 are prime numbers – and that has a very good reason. Imagine that
-there are predators in the forest which kill cicadas. These predators also
-appear in regular intervals, say every 6 years.
-
-Now imagine that a brood of cicadas appears every ${n}{n|13|4,20,1} years
-(${isPrime(n) ? 'prime' : 'not prime'}). The two animals would meet every
-${lcm(n,6)} years, which is the [[lcm|gcf|product]] of 6 and ${n}.
-
-    figure
-      include svg/cicadas.svg
-      p.caption Time until cicadas and predators meet, for various different cicada cycle lengths.
-
----
-> id: cicadas1
-
-This number seems to be much larger if the cicada cycle is a prime number like
-13 and 17. That’s because prime numbers don’t share any factors with 6, so
-when calculating the lcm we don’t cancel any duplicate factors.
-
-Of course, cicadas have no idea what prime numbers are – but over millions of
-years, evolution has worked out that prime cycles are the safest. The predator
-animal seems to have gone extinct over time, but the prime number cycles remain.
-
-    //- TODO Exercises
 
 ---
 > id: crypto
