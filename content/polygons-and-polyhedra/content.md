@@ -429,7 +429,8 @@ get a __Parallelogram__.
       path(x="segment(k,l)")
       path.red(x="segment(i,l)" mark="arrow")
 
-{.caption} If just one pair of opposite sides is parallel, we get a __Trapezium__.
+{.caption} If at least one pair of opposite sides is parallel, we get a
+__Trapezium__.
 :::
 
 ---
@@ -1431,9 +1432,58 @@ you’ll learn how to actually prove it mathematically.
 
 ---
 
+## Nets and Cross Sections
+
+> section: nets-cross-sections
+> sectionStatus: dev
+
+Our entire world is 3-dimensional – but it is often much easier to draw or
+visualise flat, 2-dimensional objects. And there are a few different ways to
+view 3-dimensional polyhedra in a 2-dimensional way.
+
+    //- x-folding(shape="Tetrahedron" size=400)
+    //- x-folding(shape="Cube" size=400)
+    //- x-folding(shape="Octahedron" size=400)
+    //- x-folding(shape="Dodecahedron" size=400)
+    //- x-folding(shape="Icosahedron" size=400)
+
+Which of these nets makes a cube
+Match the net to the object
+https://github.com/polymake/matchthenet
+Drawing Nets
+
+Describe the cross section formed by the intersection of the plane and the solid.
+
+A cross-section is the intersection of a plane with a solid.
+Another way to represent a three-dimensional figure in a two dimensional plane
+is to use a net. A net is an unfolded, flat representation of the sides of a
+three-dimensional shape.
+
+rotate a cube to make a hexagonal cross-section
+
+---
+
+## Prisms and Pyramids
+
+> section: prisms-pyramids
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Scaling Shapes and Solids
+
+> section: scaling
+> sectionStatus: dev
+
+TODO
+
+---
+
 ## Platonic Solids
 
-> section: platonic-solids
+> section: platonic
 > id: platonic
 
 At the beginning of this course we defined [regular polygons](gloss:regular-polygon)
@@ -1714,11 +1764,9 @@ consist of spherical atoms, not polyhedra.
 
 ---
 
-## More on Polyhedra
+### Archimedean Solids
 
-> section: more-on-polyhedra
 > id: archimedean
-> title: Archimedean Solids
 
 Platonic solids are particularly important polyhedra, but there are countless
 others.
@@ -1802,7 +1850,7 @@ of Syracuse](bio:archimedes), and there are 13 of them:
 ---
 > id: polyhedra-applications
 
-### Applications of Polyhedra
+### Applications
 
 Plato was wrong in believing that all elements consists of Platonic solids. But
 regular polyhedra have many special properties that make them appear elsewhere
@@ -1896,37 +1944,3 @@ the dice are fair.
 The [Truncated Icosahedron](gloss:truncated-icosahedron) is probably the most
 famous polyhedron in the world: it is the shape of the football.
 :::
-
----
-
-## Nets and Cross Sections
-
-> section: nets-and-cross-sections
-> id: nets
-> sectionStatus: dev
-
-Our entire world is 3-dimensional – but it is often much easier to draw or
-visualise flat, 2-dimensional objects. And there are a few different ways to
-view 3-dimensional polyhedra in a 2-dimensional way.
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
-{.todo} COMING SOON!
-
-    //- Which of these nets makes a cube
-    //- Match the net to the object
-    //- https://github.com/polymake/matchthenet
-    //- Drawing Nets
-
-    //- Describe the cross section formed by the intersection of the plane and the solid.
-
-    //- A cross-section is the intersection of a plane with a solid.
-    //- Another way to represent a three-dimensional figure in a two dimensional plane
-    //- is to use a net. A net is an unfolded, flat representation of the sides of a
-    //- three-dimensional shape.
-
-    //- rotate a cube to make a hexagonal cross-section

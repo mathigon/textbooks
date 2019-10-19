@@ -1430,6 +1430,27 @@ lernst du, wie du das auch mathematisch beweisen kannst.
 
 ---
 
+## Netze und Querschnitte
+
+> section: nets-cross-sections
+> sectionStatus: dev
+
+Unsere ganze Welt ist 3-dimensional - aber es ist oft viel einfacher, flache,
+2-dimensionale Objekte zu zeichnen oder zu visualisieren. Und es gibt einige
+verschiedene Möglichkeiten, dreidimensionale Polyeder zweidimensional zu
+betrachten.
+
+---
+
+## Prismen und Pyramiden
+
+> section: prisms-pyramids
+> sectionStatus: dev
+
+TODO
+
+---
+
 ## Platonische Körper
 
 > section: platonic-solids
@@ -1713,11 +1734,9 @@ bestehen.
 
 ---
 
-## Mehr zu Polyedern
+### Archimedische Körper
 
-> section: more-on-polyhedra
 > id: archimedean
-> title: Archimedean Solids
 
 Platonische Körper sind besonders wichtige Polyeder, aber es gibt unzählige
 andere.
@@ -1801,7 +1820,7 @@ von Syrakus](bio:archimedes), benannt, und es gibt 13 von ihnen:
 ---
 > id: polyhedra-applications
 
-### Anwendungen von Polyedern
+### Anwendungen
 
 Platon hatte Unrecht, als er glaubte, dass alle Elemente aus platonischen Körpern bestehen. Aber
 regelmäßige Polyeder haben viele besondere Eigenschaften, die an anderer
@@ -1895,18 +1914,3 @@ Würfel immer fair.
 Der [Ikosaederstumpf](gloss:truncated-icosahedron) ist wahrscheinlich der
 berühmteste Polyeder der Welt: Er hat die Form eines Fußballs.
 :::
-
----
-
-## Netze und Querschnitte
-
-> section: nets-and-cross-sections
-> id: nets
-> sectionStatus: dev
-
-Unsere ganze Welt ist 3-dimensional - aber es ist oft viel einfacher, flache, 2-dimensionale Objekte zu zeichnen oder zu
-visualisieren. Und es gibt einige verschiedene Möglichkeiten, dreidimensionale Polyeder zweidimensional zu
-betrachten.
-
-{.todo} KOMMT BALD!
-
