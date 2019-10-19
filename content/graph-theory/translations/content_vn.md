@@ -121,91 +121,10 @@ Các đồ thị có một vòng nối các đỉnh được gọi là [__vòng_
       svg.graph(style='width: 90px; height: 90px;')
 
 ---
-> id: handshakes-1
-> section: parties-and-dating
-
-## Tiệc tùng và hẹn hò
-
-::: column.grow
-Hãy tưởng tượng bạn được mời tham dự một buổi tiệc sang trọng. Tính thêm cả bạn và chủ tiệc thì có tổng cộng
- ${hnd}{hnd|5|3,15,1} người tham dự.
-
-Cuối buổi tiệc khi mọi người chuẩn bị ra về, mọi người bắt tay nhau. Vậy có tất cả bao nhiêu cái bắt tay? 
-
-Nếu minh họa những cái bắt tay bằng một đồ thị thì mỗi người tham gia là [[một đỉnh|một cạnh]],
-và mỗi cái bắt tay là [[một cạnh|một đỉnh]].
- 
-{.reveal(when='blank-0 blank-1')}  Vậy giờ ta có thể dếm dễ dàng số lượng cạnh của đồ thị, với ${hnd} người, có tất cả ${hnd*(hnd-1)/2} cái bắt tay.
-
-::: column.s-hide(width=240)
-
-    img.shifted(src="images/party.jpg" width=240 height152)
-    svg.graph(style='width: 240px; height: 240px;')
-
-:::
-
----
-> id: handshakes-2
-
-Thay vì đếm tất cả các cạnh trong một đồ thị lớn, ta cũng có thể tìm một công thức đơn giản để tính ra kết quả với bất kỳ số lượng nào của người tham dự tiệc. 
-
-Mỗi người trong số ${n}{n|5|2,8,1} người đến tham dự tiệc bắt tay với ${n-1} người khác.
-Vậy là có  ${n} × ${n-1} = ${n×(n-1)} cái bắt tay tất cả. Cho số _n_ người, số cái bắt tay sẽ là [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
-
-    p.var ${handshakeTable(n)}
-    x-gesture(target="#handshakes-2 x-var" slide="100,0")
-
----
-> id: handshakes-2a
-
-Tuy nhiên thật ra kết quả này là không đúng: bởi chúng ta đã đếm mỗi cái bắt tay
-[[hai lần|một lần|ba lần]], _{span.reveal(when="blank-0")}vì hai người tham gia chỉ bắt tay một lần với nhau._
-
-{.reveal(when="blank-0")} Ví dụ, <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)"> hai cái bắt tay đầu tiên
-ở hàng trên cùng </x-target> thực ra là một. Số cái bắt tay đúng cho ${n}{n|5|2,25,1} người tham dự là <mfrac><mrow>${n} ×
-${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
-
----
-> id: handshakes-3
-
-Đồ thị minh họa những cái bắt tay rất đặc biệt vì các đỉnh đều kết nối với các đỉnh còn lại. Đồ thị với đặc tính này được gọi là __đồ thị hoàn chỉnh__. Đồ thị hoàn chỉnh có 4 đỉnh được viết tắt là `K_4`, đồ thị hoàn chỉnh  với 5 đỉnh được ký hiệu là `K_5`, v...v...
-
-Chúng ta vừa thấy rằng đồ thị có `n` đỉnh, ký hiệu `K_n`, có tất cả
-`(n × (n-1))/2` cạnh.
-
-    .row
-      svg.graph(style="width: 90px; height: 90px")
-      svg.graph(style="width: 90px; height: 90px")
-      svg.graph(style="width: 90px; height: 90px")
-      svg.graph(style="width: 90px; height: 90px")
-
----
-> id: handshakes-4
-
-    figure: img(src="images/flags.jpg" width=855 height=100)
-
-Vào một ngày đẹp trời khác, bạn được mời đến tham dự một buổi hẹn hò tốc hành (speed dating) cho ${m}{m|5|2,8,1}
-bạn nam và ${f}{f|4|2,8,1} bạn nữ. Ban tổ chức sắp đặt những cái bàn nhỏ để mỗi bạn nam có thể có 5 phút với mỗi bạn nữ.
-Vậy tổng cộng có bao nhiêu "cuộc gặp gỡ" đã diễn ra? 
-
-::: column.grow
-Trong trường hợp này, đồ thì tương ứng có hai tập đỉnh khác nhau. Mỗi đỉnh được kết nối với tất cả các đỉnh [[của nhóm đối diện|của chính nhóm đó]], nhưng không kết nối với các đỉnh của [[chính nhóm đó|nhóm đối diện]]. Đồ thị với đặc tính này được gọi là __đồ thị hai phía__.
-::: column(width=300)
-
-    svg.graph(style="width: 300px; height: 140px;")
-
-:::
-
-{.reveal(when="blank-0 blank-1")} Đồ thị hai phía với hai tập đỉnh _x_
-và _y_ thường được ký hiệu là `K_"x,y"`. Đồ thị này có [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
-cạnh, _{span.reveal(when="blank-2")} nghĩa là trong ví dụ trên có tất cả ${m} × ${f} = ${m×f} cuộc gặp gỡ._
-
----
 > id: bridges
 > goals: bridge-0 bridge-1 bridge-2 bridge-3
 > title: The Bridges of Königsberg
-> section: bridges-of-koenigsberg
+> section: bridges
 
 ## Những cây cầu ở Königsberg
 
@@ -315,6 +234,87 @@ Phát hiện này của Euler có vẻ như không hữu ích gì nhiều trong 
 :::
 
 ---
+> id: handshakes-1
+> section: handshakes
+
+## Tiệc tùng và hẹn hò
+
+::: column.grow
+Hãy tưởng tượng bạn được mời tham dự một buổi tiệc sang trọng. Tính thêm cả bạn và chủ tiệc thì có tổng cộng
+ ${hnd}{hnd|5|3,15,1} người tham dự.
+
+Cuối buổi tiệc khi mọi người chuẩn bị ra về, mọi người bắt tay nhau. Vậy có tất cả bao nhiêu cái bắt tay? 
+
+Nếu minh họa những cái bắt tay bằng một đồ thị thì mỗi người tham gia là [[một đỉnh|một cạnh]],
+và mỗi cái bắt tay là [[một cạnh|một đỉnh]].
+ 
+{.reveal(when='blank-0 blank-1')}  Vậy giờ ta có thể dếm dễ dàng số lượng cạnh của đồ thị, với ${hnd} người, có tất cả ${hnd*(hnd-1)/2} cái bắt tay.
+
+::: column.s-hide(width=240)
+
+    img.shifted(src="images/party.jpg" width=240 height152)
+    svg.graph(style='width: 240px; height: 240px;')
+
+:::
+
+---
+> id: handshakes-2
+
+Thay vì đếm tất cả các cạnh trong một đồ thị lớn, ta cũng có thể tìm một công thức đơn giản để tính ra kết quả với bất kỳ số lượng nào của người tham dự tiệc. 
+
+Mỗi người trong số ${n}{n|5|2,8,1} người đến tham dự tiệc bắt tay với ${n-1} người khác.
+Vậy là có  ${n} × ${n-1} = ${n×(n-1)} cái bắt tay tất cả. Cho số _n_ người, số cái bắt tay sẽ là [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
+
+    p.var ${handshakeTable(n)}
+    x-gesture(target="#handshakes-2 x-var" slide="100,0")
+
+---
+> id: handshakes-2a
+
+Tuy nhiên thật ra kết quả này là không đúng: bởi chúng ta đã đếm mỗi cái bắt tay
+[[hai lần|một lần|ba lần]], _{span.reveal(when="blank-0")}vì hai người tham gia chỉ bắt tay một lần với nhau._
+
+{.reveal(when="blank-0")} Ví dụ, <x-target to=".handshakes tr:first-child
+td:first-child, .handshakes tr:first-child td:nth-child(2)"> hai cái bắt tay đầu tiên
+ở hàng trên cùng </x-target> thực ra là một. Số cái bắt tay đúng cho ${n}{n|5|2,25,1} người tham dự là <mfrac><mrow>${n} ×
+${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
+
+---
+> id: handshakes-3
+
+Đồ thị minh họa những cái bắt tay rất đặc biệt vì các đỉnh đều kết nối với các đỉnh còn lại. Đồ thị với đặc tính này được gọi là __đồ thị hoàn chỉnh__. Đồ thị hoàn chỉnh có 4 đỉnh được viết tắt là `K_4`, đồ thị hoàn chỉnh  với 5 đỉnh được ký hiệu là `K_5`, v...v...
+
+Chúng ta vừa thấy rằng đồ thị có `n` đỉnh, ký hiệu `K_n`, có tất cả
+`(n × (n-1))/2` cạnh.
+
+    .row
+      svg.graph(style="width: 90px; height: 90px")
+      svg.graph(style="width: 90px; height: 90px")
+      svg.graph(style="width: 90px; height: 90px")
+      svg.graph(style="width: 90px; height: 90px")
+
+---
+> id: handshakes-4
+
+    figure: img(src="images/flags.jpg" width=855 height=100)
+
+Vào một ngày đẹp trời khác, bạn được mời đến tham dự một buổi hẹn hò tốc hành (speed dating) cho ${m}{m|5|2,8,1}
+bạn nam và ${f}{f|4|2,8,1} bạn nữ. Ban tổ chức sắp đặt những cái bàn nhỏ để mỗi bạn nam có thể có 5 phút với mỗi bạn nữ.
+Vậy tổng cộng có bao nhiêu "cuộc gặp gỡ" đã diễn ra? 
+
+::: column.grow
+Trong trường hợp này, đồ thì tương ứng có hai tập đỉnh khác nhau. Mỗi đỉnh được kết nối với tất cả các đỉnh [[của nhóm đối diện|của chính nhóm đó]], nhưng không kết nối với các đỉnh của [[chính nhóm đó|nhóm đối diện]]. Đồ thị với đặc tính này được gọi là __đồ thị hai phía__.
+::: column(width=300)
+
+    svg.graph(style="width: 300px; height: 140px;")
+
+:::
+
+{.reveal(when="blank-0 blank-1")} Đồ thị hai phía với hai tập đỉnh _x_
+và _y_ thường được ký hiệu là `K_"x,y"`. Đồ thị này có [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
+cạnh, _{span.reveal(when="blank-2")} nghĩa là trong ví dụ trên có tất cả ${m} × ${f} = ${m×f} cuộc gặp gỡ._
+
+---
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
@@ -380,9 +380,8 @@ Cũng như bài toán của thị trấn Königsberg ở trên, bạn nhận ra 
 
 ---
 > id: euler
-> section: eulers-formula
 
-## Công thức Euler
+### Công thức Euler
 
 Tất cả các đồ thị phẳng chia mặt phẳng thành nhiều vùng khác nhau,
 được gọi là __các mặt__.
@@ -526,7 +525,6 @@ nhưng hầu hết các bản đồ phức tạp hơn cần nhiều màu hơn.
 ---
 > id: maps-1
 > goals: map-0 map-1 map-2 map-3
-> title: Colouring Maps
 
 Khi tô màu bản đồ của các tiểu  bang của Mỹ, hiển nhiên 50 màu chắc chắn là đủ, nhưng không cần thiết. Hãy thử tô màu bản đồ dưới đây sử dụng càng ít màu càng tốt:
 
@@ -573,7 +571,6 @@ Khi tô màu bản đồ của các tiểu  bang của Mỹ, hiển nhiên 50 m�
 
 ---
 > id: maps-2
-> title: The Four Colour Theorem
 
 ::: column.grow
 Tất cả các bản đồ ở trên đều có thể được tô với chỉ 4 màu khác nhau, và cũng không khó để tưởng tượng được rằng các bản đồ phức tạp khác có thể cần nhiều màu hơn. Thực tế một số bản đồ cần __ít nhất__ bốn màu, khi bản đồ có 4 vùng kết nối với nhau.
@@ -638,7 +635,7 @@ Tuy nhiên, các nhà toán học cũng nghiên cứu cả các bản đồ củ
 
 ---
 > id: salesman
-> section: the-travelling-salesman-problem
+> section: travelling-salesman
 
 ## Bài toán vận chuyển của người bán hàng 
 
@@ -771,8 +768,16 @@ Tìm được một thuật toán nhanh giải quyết bài toán vận chuyển
 :::
 
 ---
+> section: scheduling
+> sectionStatus: dev
+
+## Vấn đề lập kế hoạch
+
+TODO
+
+---
 > id: applications
-> section: graphs-in-everyday-life
+> section: applications
 
 ## Đồ thị trong cuộc sống hằng ngày
 
@@ -888,7 +893,6 @@ Có vô vàn các đồ thị khác trong khoa học kỹ thuật và cuộc s�
 
 ---
 > id: social
-> section: social-networks
 
 ### Mạng xã hội
 

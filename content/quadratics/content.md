@@ -138,6 +138,19 @@ quadratic equations and to understand their graphs.
 
 
 
+## Binomial Expressions
+
+> section: binomials
+> sectionStatus: dev
+
+TODO
+
+
+
+--------------------------------------------------------------------------------
+
+
+
 ## Solving Quadratic Equations
 
 > id: definitions
@@ -2414,11 +2427,10 @@ When practicing jumps and tricks, it is important to understand how gravity
 
 
 
-## More Applications of Quadratics
+## More Applications
 
 > section: applications
 > sectionStatus: dev
-
 
 ::: column.grow
 

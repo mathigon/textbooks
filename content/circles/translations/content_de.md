@@ -398,318 +398,6 @@ weil `pi ≈ 22/7`, also 22/7 (eine andere Datumsschreibweise).
 
 
 
-## Grad und Radiant
-
-> section: radians
-> id: degrees
-
-Bisher haben wir in der Geometrie immer Winkel in [Grad](gloss:degrees) gemessen. Eine
-__{.m-red}vollständige Umdrehung__ hat [[360]]°, eine __{.m-green}halbe__ hat 
-[[180]]°, eine __{.m-yellow}Viertelumdrehung__ hat [[90]]°, und so weiter.
-
-::: column(width=160)
-
-    x-geopad(width=160 height=160): svg
-      circle(x="point(150,80)" name="a0" hidden)
-      circle(x="point(80,80)" name="b0")
-      circle(x="c0" hidden)
-      path.red.fill(x="angle(c0,b0,a0)" round size=40)
-      path(x="segment(a0,b0)")
-      path(x="segment(b0,c0)")
-
-::: column(width=160)
-
-    x-geopad(width=160 height=160): svg
-      circle(x="point(150,80)" name="a1" hidden)
-      circle(x="point(80,80)" name="b1")
-      circle(x="c1" hidden)
-      path.green.fill(x="angle(c1,b1,a1)" round size=40)
-      path(x="segment(a1,b1)")
-      path(x="segment(b1,c1)")
-
-::: column(width=160)
-
-    x-geopad(width=160 height=160): svg
-      circle(x="point(150,80)" name="a2" hidden)
-      circle(x="point(80,80)" name="b2")
-      circle(x="c2" hidden)
-      path.yellow.fill(x="angle(c2,b2,a2)" round size=40)
-      path(x="segment(a2,b2)")
-      path(x="segment(b2,c2)")
-
-:::
-
----
-> id: degrees-1
-
-{.r} Die Zahl 360 ist sehr praktisch, da sie durch so viele andere Zahlen
- teilbar ist: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15 und so weiter. Das bedeutet, dass viele 
-Bruchteile eines Kreises praktischerweise ganze Zahlen sind. Aber hast du dich jemals gefragt
-, wie man überhaupt auf die Zahl 360 gekommen ist? [Weiter](btn:next)
-
----
-> id: babylon
-
-::: column.grow
-
-Tatsächlich sind 360 Grad eines der ältesten Konzepte der Mathematik, die wir heute
-noch anwenden. Man kann es bis ins alte Babylon zurückverfolgen, 
-wo es vor mehr als 5000 Jahren entwickelt worden ist!
-
-Zu dieser Zeit war eine der wichtigsten Anwendungen der Mathematik 
-die Astronomie. Die _Sonne_ bestimmt die vier Jahreszeiten, über die die Bauern 
-beim Anbau von Pflanzen Bescheid wissen müssen. Ebenso bestimmt der _Mond_ die Gezeiten, was für 
-die Fischer wichtig war. Die Menschen studierten auch die Sterne, um die Zukunft 
-vorherzusagen oder mit den Göttern zu kommunizieren.
-
-::: column(width=260)
-
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
-
-{.caption} Eine babylonische Tafel zur Berechnung von `sqrt(2)`
-
-:::
-
----
-> id: constellations
-> goals: rotate
-
-Astronomen bemerkten, dass sich die zu einer bestimmten Zeit während
- der Nacht sichtbaren Konstellationen jeden Tag ein wenig verschoben haben - bis sie 
-nach etwa 360 Tagen wieder zu ihrem Ausgangspunkt zurückgekehrt waren. Und das mag der Grund gewesen sein, 
-warum sie den Kreis in 360 Grad unterteilt haben.
-
-    figure: .constellations
-      .label.md Mitternacht am Tag ${day}
-      .bg
-      .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
-      .fg
-    x-gesture(target=".constellations" offset="0,-120", slide="-160,0")
-
----
-> id: constellations-1
-> goals: video
-
-Natürlich sind es eigentlich 365 Tage in einem Jahr (genauer gesagt 365,242199), 
-aber babylonische Mathematiker arbeiteten mit einfachen Sonnenuhren, 
-und diese Annäherung war völlig ausreichend.
-
-Es funktionierte auch gut mit dem bestehenden 60er Zahlensystem (weil
-`6 xx 60 = 360`). Dieses System ist der Grund, warum wir immer noch 60 Sekunden in einer
-Minute und 60 Minuten in einer Stunde verwenden - obwohl die meisten anderen Einheiten im [Dezimalsystem](gloss:base-10) angegeben
-werden (zB. ein Jahrzent für 10 Jahre, ein Jahrhundert für 100 Jahre).
-
-::: column.grow
-
-Für viele von uns ist die Winkelmessung in Grad eine Selbstverständlichkeit: Es gibt 
-360°-Videos, Skateboarder können 540° Drehungen ausführen, und 
-jemand, der seine Entscheidung ändert, macht eine Kehrtwendung um 180°.
-
-Aber aus mathematischer Sicht ist die Wahl von 360 
-völlig willkürlich. Wenn wir auf dem Mars leben würden, könnte ein Kreis 670° und ein Jahr auf dem 
-Jupiter sogar 10.475 Tage haben.
-
-::: column(width=280)
-
-    x-video(src="images/skateboard.mp4" poster="images/skateboard.jpg" width=280 height=200 credit="© RIDE Channel, from YouTube")
-
-{.caption} Der 540 McFlip, eine Drehung um 540°
-
-:::
-
----
-> id: radians
-
-### Radiant
-
-Anstatt einen Kreis in eine bestimmte Anzahl von Teilbereiche (z.B. 360 Grad) aufzuteilen, ziehen
-Mathematiker es oft vor, Winkel mittels des [Umfangs](gloss:circle-circumference)
-eines [__Einheitskreises__](gloss:unit-circle) (eines Kreises mit dem Radius 1) anzugeben.
-
-::: column(width=280)
-
-    x-geopad(width=280 height=280): svg
-      circle(x="point(140,140)" name="c")
-      path.thin(x="circle(c,100)" name="circ")
-      circle.move.blue.pulsate(cx=240 cy=140 name="a" project="circ")
-      circle.move.green(cx=240 cy=140.4 name="b" project="circ")
-      path.fill.green(x="angle(b,c,a)" label="${round(ang.deg)}°" name="ang" round)
-      path.red.thick(x="arc(c,b,ang.rad)" label="${rad(ang.rad)}π")
-      path.thin(x="segment(c,a)")
-      path.thin(x="segment(c,b)")
-
-::: column.grow
-
-Ein _{span.var-action}ganzer Kreis_ hat dann einen Umfang
-_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
-
-{.reveal(when="eqn-0")} Bei einer _{span.var-action}halben Drehung_ beträgt der
-entsprechende Abstand entlang des Umfangs
-_{x-equation.small(solution="π" keys="+ × π" numeric)}_.
-
-{.reveal(when="eqn-1")} Bei einer _{span.var-action}Viertelumdrehung_ beträgt der
-Abstand entlang des Umfangs
-_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
-
-{.reveal(when="eqn-2")} Und so weiter: Diese Art der Winkelmessung wird als
-[__Radiant („Bogenmaß“)__](gloss:radians) bezeichnet (als Eselsbrücke könntest du dir “Radanteile” für die Teile des Umfangs eines Rads merken).
-
-:::
-
----
-> id: radians-conversion
-
-Jeder Winkel in Grad hat dabei eine gleichwertige Größe in Radiant. Die Umrechnung zwischen den
-beiden ist sehr einfach - so wie man zwischen anderen Einheiten wie Metern und
-Kilometern oder Celsius und Fahrenheit umrechnen kann:
-
-{.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
-
-::: column(width=180 parent="padded-thin")
-
-{.text-center} _{span.rotate.left}`=>`_  
-__{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
-
-::: column(width=180)
-
-{.text-center} _{span.rotate.right}`=>`_  
-__{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
-
-:::
-
----
-> id: radians-table
-
-Du kannst den Radiantwert entweder als Vielfaches von _π_ oder als
-einzelne Dezimalzahl schreiben. Kannst du diese Tabelle mit den entsprechenden
-Winkelgrößen in Grad und Radiant ausfüllen?
-
-| __{.m-green}Grad__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
-| __{.m-red}Radiant__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
-{.table-small.grid}
-
----
-> id: radians-distance
-
-### Zurückgelegte Strecke
-
-Man kann sich Radiant als die zurückgelegte Wegstrecke entlang des Umfangs
-eines Einheitskreises vorstellen. Dies ist besonders nützlich bei der Arbeit mit Objekten,
-die sich auf einer Kreisbahn bewegen.
-
-::: column.grow
-
-Zum Beispiel umkreist die [Internationale Raumstation](gloss:iss) die
-Erde einmal alle 1,5\ Stunden. Das bedeutet, dass ihre __Drehgeschwindigkeit__ [[`(2 pi)/1.5`| 
-`1.5/(2 pi)`|`1.5 *  pi`]] Radiant pro Stunde beträgt.
-
-{.reveal(when="blank-0")} In einem [Einheitskreis](gloss:unit-circle) ist die 
-Drehgeschwindigkeit gleich der _tatsächlichen_, Geschwindigkeit, da die Länge des Umfangs 
-gleich einer vollen Umdrehung in Radiant ist (beide sind `2pi`).
-
-{.reveal(when="blank-0" delay=1000)} Der Radius der ISS-Umlaufbahn beträgt 6800\ km,
-was bedeutet, dass die _tatsächliche_ Geschwindigkeit der ISS [[`(2 pi)/1.5 xx 6800`| `
-(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
-pro Stunde betragen muss_
-
-::: column(width=300)
-
-    x-geopad.r(width=300 height=300)
-      .earth
-      svg.r
-        circle(x="point(150,150)" name="c")
-        circle(x="point(280,150)" name="a")
-        circle(x="a.rotate(p*2*pi,c)" name="b" hidden)
-        path.red(x="arc(c,a,p*2*pi)")
-        path.fill(x="angle(a,c,b)" label="${round(2*p,1)}π" round)
-        path.red(x="segment(c,a)")
-        path.red(x="segment(c,b)")
-      .var.iss(style="transform: translate(${a.rotate(p*2*pi,c).x}px,${a.rotate(p*2*pi,c).y}px) rotate(${(p+0.25)*2*pi}rad)")
-      .time.var ${round(p*1.5,1)}h
-      x-play-btn
-
-:::
-
----
-> id: radians-distance-1
-
-Wie du siehst sind in diesem Beispiel Radiant die viel bequemere Einheit 
-als Grad. Sobald wir die Drehgeschwindigkeit kennen, müssen wir einfach mit dem
-Radius multiplizieren, um die tatsächliche Drehgeschwindigkeit zu erhalten.
-
-Hier ist ein weiteres Beispiel: Dein Auto hat Reifen mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
-fährst, drehen sich die Reifen deines Autos mit [[`20/0.25 =
-80`|`20 xx 0.25 = 5`|`0.25/50 = 0,0125`]] Radiant pro Sekunde
-_{span.reveal(when="blank-0")}(oder `80/(2pi) = 13` Umdrehungen pro Sekunde)_
-
----
-> id: radians-trig
-
-### Trigonometrie
-
-Für die meisten einfachen Geometrieaufgaben sind Grad und Radiant völlig 
-austauschbar - Du kannst entweder wählen, welche du bevorzugst, 
-oder in der Frage wird schon festgelegt, in welcher Einheit man antworten soll. Sobald du dich jedoch tiefer
-mit [Trigonometrie](gloss:trigonometry) oder [Infinitesimalrechnung](gloss:calculus) auseinandersetzt,
-wirst du feststellen, dass Radiant viel bequemer zu handhaben sind als das Gradmaß.
-
-::: column.grow
-
-Die meisten Taschenrechner verfügen über eine [spezielle Taste](->.button.mode), um zwischen
-Grad und Radiant zu wechseln. Trigonometrische Funktionen wie [__sin__](gloss:sin),
-[__cos__](gloss:cos) und __tan__ nehmen Winkel als Eingabe an, und
-ihre inversen Funktionen __arcsin__, __arccos__ und __arctan__ geben Winkel zurück. Die
-Einstellung des aktuellen Taschenrechners bestimmt, welche Einheiten für diese Winkel verwendet werden.
-
-Versuche folgende Rechnungen mit dem Rechner nachzuvollziehen
-
-{.text-center} sin(30°) = [[0.5]] _{span.eqn-gap}_ cos(1°) = [[0.999]]<br>
-sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
-
-::: column(width=300)
-
-    .calculator
-      .display
-        span
-        .setting DEG
-      .button.num 7
-      .button.num 8
-      .button.num 9
-      .button.wide sin
-      .button.num 4
-      .button.num 5
-      .button.num 6
-      .button.wide cos
-      .button.num 1
-      .button.num 2
-      .button.num 3
-      .button.wide tan
-      .button.num 0
-      .button .
-      .button C
-      .button.wide.mode mode
-
-:::
-
----
-> id: small-angle
-
-Die Verwendung von Radiant hat einen besonders interessanten Vorteil bei der Verwendung
-der [__Sinus-Funktion__](gloss:sin). Wenn `θ` ein sehr kleiner Winkel ist (weniger als 20° oder 0,3 rad),
-dann gilt `sin(θ) ≈ θ`. Zum Beispiel,
-
-{.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
-
-{.reveal(when="var-0")} Dies wird als __Kleinwinkelnäherung__ bezeichnet und
-kann bestimmte Gleichungen, die trigonometrische Funktionen enthalten, erheblich vereinfachen.
-Wir werden darauf später noch näher eingehen.
-
-
-
---------------------------------------------------------------------------------
-
-
-
 ## Tangenten, Sehnen und Kreisbögen
 
 > section: tangets-chords-arcs
@@ -1305,6 +993,318 @@ formed a linear pair when matched up.
 
 Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
 and only if the opposite angles are supplementary.
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+## Grad und Radiant
+
+> section: radians
+> id: degrees
+
+Bisher haben wir in der Geometrie immer Winkel in [Grad](gloss:degrees) gemessen. Eine
+__{.m-red}vollständige Umdrehung__ hat [[360]]°, eine __{.m-green}halbe__ hat 
+[[180]]°, eine __{.m-yellow}Viertelumdrehung__ hat [[90]]°, und so weiter.
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a0" hidden)
+      circle(x="point(80,80)" name="b0")
+      circle(x="c0" hidden)
+      path.red.fill(x="angle(c0,b0,a0)" round size=40)
+      path(x="segment(a0,b0)")
+      path(x="segment(b0,c0)")
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a1" hidden)
+      circle(x="point(80,80)" name="b1")
+      circle(x="c1" hidden)
+      path.green.fill(x="angle(c1,b1,a1)" round size=40)
+      path(x="segment(a1,b1)")
+      path(x="segment(b1,c1)")
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a2" hidden)
+      circle(x="point(80,80)" name="b2")
+      circle(x="c2" hidden)
+      path.yellow.fill(x="angle(c2,b2,a2)" round size=40)
+      path(x="segment(a2,b2)")
+      path(x="segment(b2,c2)")
+
+:::
+
+---
+> id: degrees-1
+
+{.r} Die Zahl 360 ist sehr praktisch, da sie durch so viele andere Zahlen
+ teilbar ist: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15 und so weiter. Das bedeutet, dass viele 
+Bruchteile eines Kreises praktischerweise ganze Zahlen sind. Aber hast du dich jemals gefragt
+, wie man überhaupt auf die Zahl 360 gekommen ist? [Weiter](btn:next)
+
+---
+> id: babylon
+
+::: column.grow
+
+Tatsächlich sind 360 Grad eines der ältesten Konzepte der Mathematik, die wir heute
+noch anwenden. Man kann es bis ins alte Babylon zurückverfolgen, 
+wo es vor mehr als 5000 Jahren entwickelt worden ist!
+
+Zu dieser Zeit war eine der wichtigsten Anwendungen der Mathematik 
+die Astronomie. Die _Sonne_ bestimmt die vier Jahreszeiten, über die die Bauern 
+beim Anbau von Pflanzen Bescheid wissen müssen. Ebenso bestimmt der _Mond_ die Gezeiten, was für 
+die Fischer wichtig war. Die Menschen studierten auch die Sterne, um die Zukunft 
+vorherzusagen oder mit den Göttern zu kommunizieren.
+
+::: column(width=260)
+
+    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+
+{.caption} Eine babylonische Tafel zur Berechnung von `sqrt(2)`
+
+:::
+
+---
+> id: constellations
+> goals: rotate
+
+Astronomen bemerkten, dass sich die zu einer bestimmten Zeit während
+ der Nacht sichtbaren Konstellationen jeden Tag ein wenig verschoben haben - bis sie 
+nach etwa 360 Tagen wieder zu ihrem Ausgangspunkt zurückgekehrt waren. Und das mag der Grund gewesen sein, 
+warum sie den Kreis in 360 Grad unterteilt haben.
+
+    figure: .constellations
+      .label.md Mitternacht am Tag ${day}
+      .bg
+      .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
+      .fg
+    x-gesture(target=".constellations" offset="0,-120", slide="-160,0")
+
+---
+> id: constellations-1
+> goals: video
+
+Natürlich sind es eigentlich 365 Tage in einem Jahr (genauer gesagt 365,242199), 
+aber babylonische Mathematiker arbeiteten mit einfachen Sonnenuhren, 
+und diese Annäherung war völlig ausreichend.
+
+Es funktionierte auch gut mit dem bestehenden 60er Zahlensystem (weil
+`6 xx 60 = 360`). Dieses System ist der Grund, warum wir immer noch 60 Sekunden in einer
+Minute und 60 Minuten in einer Stunde verwenden - obwohl die meisten anderen Einheiten im [Dezimalsystem](gloss:base-10) angegeben
+werden (zB. ein Jahrzent für 10 Jahre, ein Jahrhundert für 100 Jahre).
+
+::: column.grow
+
+Für viele von uns ist die Winkelmessung in Grad eine Selbstverständlichkeit: Es gibt 
+360°-Videos, Skateboarder können 540° Drehungen ausführen, und 
+jemand, der seine Entscheidung ändert, macht eine Kehrtwendung um 180°.
+
+Aber aus mathematischer Sicht ist die Wahl von 360 
+völlig willkürlich. Wenn wir auf dem Mars leben würden, könnte ein Kreis 670° und ein Jahr auf dem 
+Jupiter sogar 10.475 Tage haben.
+
+::: column(width=280)
+
+    x-video(src="images/skateboard.mp4" poster="images/skateboard.jpg" width=280 height=200 credit="© RIDE Channel, from YouTube")
+
+{.caption} Der 540 McFlip, eine Drehung um 540°
+
+:::
+
+---
+> id: radians
+
+### Radiant
+
+Anstatt einen Kreis in eine bestimmte Anzahl von Teilbereiche (z.B. 360 Grad) aufzuteilen, ziehen
+Mathematiker es oft vor, Winkel mittels des [Umfangs](gloss:circle-circumference)
+eines [__Einheitskreises__](gloss:unit-circle) (eines Kreises mit dem Radius 1) anzugeben.
+
+::: column(width=280)
+
+    x-geopad(width=280 height=280): svg
+      circle(x="point(140,140)" name="c")
+      path.thin(x="circle(c,100)" name="circ")
+      circle.move.blue.pulsate(cx=240 cy=140 name="a" project="circ")
+      circle.move.green(cx=240 cy=140.4 name="b" project="circ")
+      path.fill.green(x="angle(b,c,a)" label="${round(ang.deg)}°" name="ang" round)
+      path.red.thick(x="arc(c,b,ang.rad)" label="${rad(ang.rad)}π")
+      path.thin(x="segment(c,a)")
+      path.thin(x="segment(c,b)")
+
+::: column.grow
+
+Ein _{span.var-action}ganzer Kreis_ hat dann einen Umfang
+_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
+
+{.reveal(when="eqn-0")} Bei einer _{span.var-action}halben Drehung_ beträgt der
+entsprechende Abstand entlang des Umfangs
+_{x-equation.small(solution="π" keys="+ × π" numeric)}_.
+
+{.reveal(when="eqn-1")} Bei einer _{span.var-action}Viertelumdrehung_ beträgt der
+Abstand entlang des Umfangs
+_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
+
+{.reveal(when="eqn-2")} Und so weiter: Diese Art der Winkelmessung wird als
+[__Radiant („Bogenmaß“)__](gloss:radians) bezeichnet (als Eselsbrücke könntest du dir “Radanteile” für die Teile des Umfangs eines Rads merken).
+
+:::
+
+---
+> id: radians-conversion
+
+Jeder Winkel in Grad hat dabei eine gleichwertige Größe in Radiant. Die Umrechnung zwischen den
+beiden ist sehr einfach - so wie man zwischen anderen Einheiten wie Metern und
+Kilometern oder Celsius und Fahrenheit umrechnen kann:
+
+{.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
+
+::: column(width=180 parent="padded-thin")
+
+{.text-center} _{span.rotate.left}`=>`_  
+__{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
+
+::: column(width=180)
+
+{.text-center} _{span.rotate.right}`=>`_  
+__{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
+
+:::
+
+---
+> id: radians-table
+
+Du kannst den Radiantwert entweder als Vielfaches von _π_ oder als
+einzelne Dezimalzahl schreiben. Kannst du diese Tabelle mit den entsprechenden
+Winkelgrößen in Grad und Radiant ausfüllen?
+
+| __{.m-green}Grad__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
+| __{.m-red}Radiant__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
+
+---
+> id: radians-distance
+
+### Zurückgelegte Strecke
+
+Man kann sich Radiant als die zurückgelegte Wegstrecke entlang des Umfangs
+eines Einheitskreises vorstellen. Dies ist besonders nützlich bei der Arbeit mit Objekten,
+die sich auf einer Kreisbahn bewegen.
+
+::: column.grow
+
+Zum Beispiel umkreist die [Internationale Raumstation](gloss:iss) die
+Erde einmal alle 1,5\ Stunden. Das bedeutet, dass ihre __Drehgeschwindigkeit__ [[`(2 pi)/1.5`| 
+`1.5/(2 pi)`|`1.5 *  pi`]] Radiant pro Stunde beträgt.
+
+{.reveal(when="blank-0")} In einem [Einheitskreis](gloss:unit-circle) ist die 
+Drehgeschwindigkeit gleich der _tatsächlichen_, Geschwindigkeit, da die Länge des Umfangs 
+gleich einer vollen Umdrehung in Radiant ist (beide sind `2pi`).
+
+{.reveal(when="blank-0" delay=1000)} Der Radius der ISS-Umlaufbahn beträgt 6800\ km,
+was bedeutet, dass die _tatsächliche_ Geschwindigkeit der ISS [[`(2 pi)/1.5 xx 6800`| `
+(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
+pro Stunde betragen muss_
+
+::: column(width=300)
+
+    x-geopad.r(width=300 height=300)
+      .earth
+      svg.r
+        circle(x="point(150,150)" name="c")
+        circle(x="point(280,150)" name="a")
+        circle(x="a.rotate(p*2*pi,c)" name="b" hidden)
+        path.red(x="arc(c,a,p*2*pi)")
+        path.fill(x="angle(a,c,b)" label="${round(2*p,1)}π" round)
+        path.red(x="segment(c,a)")
+        path.red(x="segment(c,b)")
+      .var.iss(style="transform: translate(${a.rotate(p*2*pi,c).x}px,${a.rotate(p*2*pi,c).y}px) rotate(${(p+0.25)*2*pi}rad)")
+      .time.var ${round(p*1.5,1)}h
+      x-play-btn
+
+:::
+
+---
+> id: radians-distance-1
+
+Wie du siehst sind in diesem Beispiel Radiant die viel bequemere Einheit 
+als Grad. Sobald wir die Drehgeschwindigkeit kennen, müssen wir einfach mit dem
+Radius multiplizieren, um die tatsächliche Drehgeschwindigkeit zu erhalten.
+
+Hier ist ein weiteres Beispiel: Dein Auto hat Reifen mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
+fährst, drehen sich die Reifen deines Autos mit [[`20/0.25 =
+80`|`20 xx 0.25 = 5`|`0.25/50 = 0,0125`]] Radiant pro Sekunde
+_{span.reveal(when="blank-0")}(oder `80/(2pi) = 13` Umdrehungen pro Sekunde)_
+
+---
+> id: radians-trig
+
+### Trigonometrie
+
+Für die meisten einfachen Geometrieaufgaben sind Grad und Radiant völlig 
+austauschbar - Du kannst entweder wählen, welche du bevorzugst, 
+oder in der Frage wird schon festgelegt, in welcher Einheit man antworten soll. Sobald du dich jedoch tiefer
+mit [Trigonometrie](gloss:trigonometry) oder [Infinitesimalrechnung](gloss:calculus) auseinandersetzt,
+wirst du feststellen, dass Radiant viel bequemer zu handhaben sind als das Gradmaß.
+
+::: column.grow
+
+Die meisten Taschenrechner verfügen über eine [spezielle Taste](->.button.mode), um zwischen
+Grad und Radiant zu wechseln. Trigonometrische Funktionen wie [__sin__](gloss:sin),
+[__cos__](gloss:cos) und __tan__ nehmen Winkel als Eingabe an, und
+ihre inversen Funktionen __arcsin__, __arccos__ und __arctan__ geben Winkel zurück. Die
+Einstellung des aktuellen Taschenrechners bestimmt, welche Einheiten für diese Winkel verwendet werden.
+
+Versuche folgende Rechnungen mit dem Rechner nachzuvollziehen
+
+{.text-center} sin(30°) = [[0.5]] _{span.eqn-gap}_ cos(1°) = [[0.999]]<br>
+sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
+
+::: column(width=300)
+
+    .calculator
+      .display
+        span
+        .setting DEG
+      .button.num 7
+      .button.num 8
+      .button.num 9
+      .button.wide sin
+      .button.num 4
+      .button.num 5
+      .button.num 6
+      .button.wide cos
+      .button.num 1
+      .button.num 2
+      .button.num 3
+      .button.wide tan
+      .button.num 0
+      .button .
+      .button C
+      .button.wide.mode mode
+
+:::
+
+---
+> id: small-angle
+
+Die Verwendung von Radiant hat einen besonders interessanten Vorteil bei der Verwendung
+der [__Sinus-Funktion__](gloss:sin). Wenn `θ` ein sehr kleiner Winkel ist (weniger als 20° oder 0,3 rad),
+dann gilt `sin(θ) ≈ θ`. Zum Beispiel,
+
+{.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
+
+{.reveal(when="var-0")} Dies wird als __Kleinwinkelnäherung__ bezeichnet und
+kann bestimmte Gleichungen, die trigonometrische Funktionen enthalten, erheblich vereinfachen.
+Wir werden darauf später noch näher eingehen.
 
 
 

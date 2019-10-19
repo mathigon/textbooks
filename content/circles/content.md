@@ -400,318 +400,6 @@ because `pi ≈ 22/7`.
 
 
 
-## Degrees and Radians
-
-> section: radians
-> id: degrees
-
-So far in geometry, we've always measured angles in [degrees](gloss:degrees). A
-__{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
-[[180]]°, a __{.m-yellow}quarter circle__ is [[90]]°, and so on.
-
-::: column(width=160)
-
-    x-geopad(width=160 height=160): svg
-      circle(x="point(150,80)" name="a0" hidden)
-      circle(x="point(80,80)" name="b0")
-      circle(x="c0" hidden)
-      path.red.fill(x="angle(c0,b0,a0)" round size=40)
-      path(x="segment(a0,b0)")
-      path(x="segment(b0,c0)")
-
-::: column(width=160)
-
-    x-geopad(width=160 height=160): svg
-      circle(x="point(150,80)" name="a1" hidden)
-      circle(x="point(80,80)" name="b1")
-      circle(x="c1" hidden)
-      path.green.fill(x="angle(c1,b1,a1)" round size=40)
-      path(x="segment(a1,b1)")
-      path(x="segment(b1,c1)")
-
-::: column(width=160)
-
-    x-geopad(width=160 height=160): svg
-      circle(x="point(150,80)" name="a2" hidden)
-      circle(x="point(80,80)" name="b2")
-      circle(x="c2" hidden)
-      path.yellow.fill(x="angle(c2,b2,a2)" round size=40)
-      path(x="segment(a2,b2)")
-      path(x="segment(b2,c2)")
-
-:::
-
----
-> id: degrees-1
-
-{.r} The number 360 is very convenient because it is divisible by so many other
-numbers: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, and so on. This means that many
-fractions of one circle are also whole numbers. But have you ever wondered
-where the number 360 comes from? [Continue](btn:next)
-
----
-> id: babylon
-
-::: column.grow
-
-As it happens, 360 degrees are one of the oldest concepts in mathematics we
-still use today. They were developed in ancient Babylon, more than 5000 years
-ago!
-
-At that time, one of the most important applications of mathematics was in
-astronomy. The _sun_ determines the four seasons, which farmers have to know
-about when growing crops. Similarly, the _moon_ determines the tides, which
-was important for fishers. People also studied the stars to predict the
-future, or to communicate with gods.
-
-::: column(width=260)
-
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
-
-{.caption} A Babylonian tablet for calculating `sqrt(2)`
-
-:::
-
----
-> id: constellations
-> goals: rotate
-
-Astronomers noticed that the constellations visible at a specific time during
-the night shifted a tiny bit every day – until, after approximately 360 days,
-they had rotated back to their starting point. And this might have been the
-reason why they divided the circle into 360 degrees.
-
-    figure: .constellations
-      .label.md Midnight on day ${day}
-      .bg
-      .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
-      .fg
-    x-gesture(target=".constellations" offset="0,-120", slide="-160,0")
-
----
-> id: constellations-1
-> goals: video
-
-Of course, there are actually 365 days in one year (well, 365.242199 to be
-exact), but Babylonian mathematicians worked with simple sundials, and this
-approximation was perfectly adequate.
-
-It also worked well with their existing base-60 number system (since
-`6 xx 60 = 360`). This system is the reason why we still have 60 seconds in a
-minute and 60 minutes in an hour – even though most other units are measured
-in [base 10](gloss:base-10) (e.g. 10 years in a decade, or 100 years in a century).
-
-::: column.grow
-
-For many of us, measuring angles in degrees is second nature: there is 360°
-video, skateboarders can pull 540s, and someone changing their decision might
-make a 180° turn.
-
-But from a mathematical point of view, the choice of 360 is completely
-arbitrary. If we were living on Mars, a circle might have 670°, and a year on
-Jupiter even has 10,475 days.
-
-::: column(width=280)
-
-    x-video(src="images/skateboard.mp4" poster="images/skateboard.jpg" width=280 height=200 credit="© RIDE Channel, from YouTube")
-
-{.caption} The 540 McFlip, a 540° rotation
-
-:::
-
----
-> id: radians
-
-### Radians
-
-Rather than dividing a circle into some number of segments (like 360 degrees),
-mathematicians often prefer to measure angles using the [circumference](gloss:circle-circumference)
-of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
-
-::: column(width=280)
-
-    x-geopad(width=280 height=280): svg
-      circle(x="point(140,140)" name="c")
-      path.thin(x="circle(c,100)" name="circ")
-      circle.move.blue.pulsate(cx=240 cy=140 name="a" project="circ")
-      circle.move.green(cx=240 cy=140.4 name="b" project="circ")
-      path.fill.green(x="angle(b,c,a)" label="${round(ang.deg)}°" name="ang" round)
-      path.red.thick(x="arc(c,b,ang.rad)" label="${rad(ang.rad)}π")
-      path.thin(x="segment(c,a)")
-      path.thin(x="segment(c,b)")
-
-::: column.grow
-
-A _{span.var-action}full circle_ has circumference
-_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
-
-{.reveal(when="eqn-0")} For a _{span.var-action}half circle rotation_, the
-corresponding distance along the circumference is
-_{x-equation.small(solution="π" keys="+ × π" numeric)}_.
-
-{.reveal(when="eqn-1")} For a _{span.var-action}quarter circle rotation_, the
-distance along the circumference is
-_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
-
-{.reveal(when="eqn-2")} And so on: this way of measuring angles is called
-[__radians__](gloss:radians) (you could remember this as “radius units”).
-
-:::
-
----
-> id: radians-conversion
-
-Every angle in degrees has an equivalent size in radians. Converting between the
-two is very easy – just like you can convert between other units like meters and
-kilometers, or Celsius and Fahrenheit:
-
-{.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
-
-::: column(width=180 parent="padded-thin")
-
-{.text-center} _{span.rotate.left}`=>`_  
-__{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
-
-::: column(width=180)
-
-{.text-center} _{span.rotate.right}`=>`_  
-__{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
-
-:::
-
----
-> id: radians-table
-
-You can write the radians value either as a multiple of _π_, or as just a single
-decimal number. Can you fill in this table of equivalent angle sizes in degrees
-and radians?
-
-| __{.m-green}degrees__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
-| __{.m-red}radians__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
-{.table-small.grid}
-
----
-> id: radians-distance
-
-### Distance Travelled
-
-You can think of radians as the “distance traveled” along the circumference of
-a unit circle. This is particularly useful when working with objects that are
-moving on a circular path.
-
-::: column.grow
-
-For example, the [International Space Station](gloss:iss) orbits Earth once
-every 1.5\ hours. This means its __speed of rotation__ is [[`(2 pi)/1.5`|
-`1.5/(2 pi)`|`1.5 * pi`]] radians per hour.
-
-{.reveal(when="blank-0")} In a [unit circle](gloss:unit-circle), the speed of
-rotation is the same as the _actual_ speed, because the length of the
-circumference is the same as one full rotation in radians (both are `2pi`).
-
-{.reveal(when="blank-0" delay=1000)} The radius of the ISS orbit is 6800\ km,
-which means that the _actual_ speed of the ISS has to be [[`(2 pi)/1.5 xx 6800`|
-`(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
-per hour._
-
-::: column(width=300)
-
-    x-geopad.r(width=300 height=300)
-      .earth
-      svg.r
-        circle(x="point(150,150)" name="c")
-        circle(x="point(280,150)" name="a")
-        circle(x="a.rotate(p*2*pi,c)" name="b" hidden)
-        path.red(x="arc(c,a,p*2*pi)")
-        path.fill(x="angle(a,c,b)" label="${round(2*p,1)}π" round)
-        path.red(x="segment(c,a)")
-        path.red(x="segment(c,b)")
-      .var.iss(style="transform: translate(${a.rotate(p*2*pi,c).x}px,${a.rotate(p*2*pi,c).y}px) rotate(${(p+0.25)*2*pi}rad)")
-      .time.var ${round(p*1.5,1)}h
-      x-play-btn
-
-:::
-
----
-> id: radians-distance-1
-
-Can you see that, in this example, radians are a much more convenient unit than
-degrees? Once we know the speed of rotation, we simply have to multiply by the
-radius to get the actual speed.
-
-Here is another example: your car has wheels with radius 0.25\ m. If you’re
-driving at a speed of 20\ m/s, the wheels of your car rotate at [[`20/0.25 =
-80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] radians per second
-_{span.reveal(when="blank-0")}(or `80/(2pi) = 13` rotations per second)._
-
----
-> id: radians-trig
-
-### Trigonometry
-
-For most simple geometry problems, degrees and radians are completely
-interchangeable – you can either pick which one you prefer, or a question
-might tell you which unit to give your answer in. However, once you study
-more advanced [trigonometry](gloss:trigonometry) or [calculus](gloss:calculus),
-it turns out that radians are much more convenient than degrees.
-
-::: column.grow
-
-Most calculators have a [special button](->.button.mode) to switch between
-degrees and radians. Trigonometric functions like [__sin__](gloss:sin),
-[__cos__](gloss:cos) and __tan__ take angles as input, and their inverse
-functions __arcsin__, __arccos__ and __arctan__ return angles as output. The
-current calculator setting determines which units are used for these angles.
-
-Try using this calculator to calculate that
-
-{.text-center} sin(30°) = [[0.5]] _{span.eqn-gap}_ cos(1°) = [[0.999]]<br>
-sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
-
-::: column(width=300)
-
-    .calculator
-      .display
-        span
-        .setting DEG
-      .button.num 7
-      .button.num 8
-      .button.num 9
-      .button.wide sin
-      .button.num 4
-      .button.num 5
-      .button.num 6
-      .button.wide cos
-      .button.num 1
-      .button.num 2
-      .button.num 3
-      .button.wide tan
-      .button.num 0
-      .button .
-      .button C
-      .button.wide.mode mode
-
-:::
-
----
-> id: small-angle
-
-Using radians has one particularly interesting advantage when using the [__Sine
-function__](gloss:sin). If `θ` is a very small angle (less than 20° or 0.3 rad),
-then `sin(θ) ≈ θ`. For example,
-
-{.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
-
-{.reveal(when="var-0")} This is called the __small angle approximation__, and it
-can greatly simplify certain equations containing trigonometric functions.
-You’ll learn much more about this in the future.
-
-
-
---------------------------------------------------------------------------------
-
-
-
 ## Tangents, Chords and Arcs
 
 > section: tangets-chords-arcs
@@ -1308,6 +996,318 @@ formed a linear pair when matched up.
 
 Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
 and only if the opposite angles are supplementary.
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+## Degrees and Radians
+
+> section: radians
+> id: degrees
+
+So far in geometry, we've always measured angles in [degrees](gloss:degrees). A
+__{.m-red}full circle__ rotation is [[360]]°, a __{.m-green}half circle__ is
+[[180]]°, a __{.m-yellow}quarter circle__ is [[90]]°, and so on.
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a0" hidden)
+      circle(x="point(80,80)" name="b0")
+      circle(x="c0" hidden)
+      path.red.fill(x="angle(c0,b0,a0)" round size=40)
+      path(x="segment(a0,b0)")
+      path(x="segment(b0,c0)")
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a1" hidden)
+      circle(x="point(80,80)" name="b1")
+      circle(x="c1" hidden)
+      path.green.fill(x="angle(c1,b1,a1)" round size=40)
+      path(x="segment(a1,b1)")
+      path(x="segment(b1,c1)")
+
+::: column(width=160)
+
+    x-geopad(width=160 height=160): svg
+      circle(x="point(150,80)" name="a2" hidden)
+      circle(x="point(80,80)" name="b2")
+      circle(x="c2" hidden)
+      path.yellow.fill(x="angle(c2,b2,a2)" round size=40)
+      path(x="segment(a2,b2)")
+      path(x="segment(b2,c2)")
+
+:::
+
+---
+> id: degrees-1
+
+{.r} The number 360 is very convenient because it is divisible by so many other
+numbers: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, and so on. This means that many
+fractions of one circle are also whole numbers. But have you ever wondered
+where the number 360 comes from? [Continue](btn:next)
+
+---
+> id: babylon
+
+::: column.grow
+
+As it happens, 360 degrees are one of the oldest concepts in mathematics we
+still use today. They were developed in ancient Babylon, more than 5000 years
+ago!
+
+At that time, one of the most important applications of mathematics was in
+astronomy. The _sun_ determines the four seasons, which farmers have to know
+about when growing crops. Similarly, the _moon_ determines the tides, which
+was important for fishers. People also studied the stars to predict the
+future, or to communicate with gods.
+
+::: column(width=260)
+
+    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+
+{.caption} A Babylonian tablet for calculating `sqrt(2)`
+
+:::
+
+---
+> id: constellations
+> goals: rotate
+
+Astronomers noticed that the constellations visible at a specific time during
+the night shifted a tiny bit every day – until, after approximately 360 days,
+they had rotated back to their starting point. And this might have been the
+reason why they divided the circle into 360 degrees.
+
+    figure: .constellations
+      .label.md Midnight on day ${day}
+      .bg
+      .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
+      .fg
+    x-gesture(target=".constellations" offset="0,-120", slide="-160,0")
+
+---
+> id: constellations-1
+> goals: video
+
+Of course, there are actually 365 days in one year (well, 365.242199 to be
+exact), but Babylonian mathematicians worked with simple sundials, and this
+approximation was perfectly adequate.
+
+It also worked well with their existing base-60 number system (since
+`6 xx 60 = 360`). This system is the reason why we still have 60 seconds in a
+minute and 60 minutes in an hour – even though most other units are measured
+in [base 10](gloss:base-10) (e.g. 10 years in a decade, or 100 years in a century).
+
+::: column.grow
+
+For many of us, measuring angles in degrees is second nature: there is 360°
+video, skateboarders can pull 540s, and someone changing their decision might
+make a 180° turn.
+
+But from a mathematical point of view, the choice of 360 is completely
+arbitrary. If we were living on Mars, a circle might have 670°, and a year on
+Jupiter even has 10,475 days.
+
+::: column(width=280)
+
+    x-video(src="images/skateboard.mp4" poster="images/skateboard.jpg" width=280 height=200 credit="© RIDE Channel, from YouTube")
+
+{.caption} The 540 McFlip, a 540° rotation
+
+:::
+
+---
+> id: radians
+
+### Radians
+
+Rather than dividing a circle into some number of segments (like 360 degrees),
+mathematicians often prefer to measure angles using the [circumference](gloss:circle-circumference)
+of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
+
+::: column(width=280)
+
+    x-geopad(width=280 height=280): svg
+      circle(x="point(140,140)" name="c")
+      path.thin(x="circle(c,100)" name="circ")
+      circle.move.blue.pulsate(cx=240 cy=140 name="a" project="circ")
+      circle.move.green(cx=240 cy=140.4 name="b" project="circ")
+      path.fill.green(x="angle(b,c,a)" label="${round(ang.deg)}°" name="ang" round)
+      path.red.thick(x="arc(c,b,ang.rad)" label="${rad(ang.rad)}π")
+      path.thin(x="segment(c,a)")
+      path.thin(x="segment(c,b)")
+
+::: column.grow
+
+A _{span.var-action}full circle_ has circumference
+_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
+
+{.reveal(when="eqn-0")} For a _{span.var-action}half circle rotation_, the
+corresponding distance along the circumference is
+_{x-equation.small(solution="π" keys="+ × π" numeric)}_.
+
+{.reveal(when="eqn-1")} For a _{span.var-action}quarter circle rotation_, the
+distance along the circumference is
+_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
+
+{.reveal(when="eqn-2")} And so on: this way of measuring angles is called
+[__radians__](gloss:radians) (you could remember this as “radius units”).
+
+:::
+
+---
+> id: radians-conversion
+
+Every angle in degrees has an equivalent size in radians. Converting between the
+two is very easy – just like you can convert between other units like meters and
+kilometers, or Celsius and Fahrenheit:
+
+{.text-center} __{.m-red} 360°__ _{span.space}=_ __{.m-green} 2*π* rad__
+
+::: column(width=180 parent="padded-thin")
+
+{.text-center} _{span.rotate.left}`=>`_  
+__{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
+
+::: column(width=180)
+
+{.text-center} _{span.rotate.right}`=>`_  
+__{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
+
+:::
+
+---
+> id: radians-table
+
+You can write the radians value either as a multiple of _π_, or as just a single
+decimal number. Can you fill in this table of equivalent angle sizes in degrees
+and radians?
+
+| __{.m-green}degrees__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
+| __{.m-red}radians__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
+
+---
+> id: radians-distance
+
+### Distance Travelled
+
+You can think of radians as the “distance traveled” along the circumference of
+a unit circle. This is particularly useful when working with objects that are
+moving on a circular path.
+
+::: column.grow
+
+For example, the [International Space Station](gloss:iss) orbits Earth once
+every 1.5\ hours. This means its __speed of rotation__ is [[`(2 pi)/1.5`|
+`1.5/(2 pi)`|`1.5 * pi`]] radians per hour.
+
+{.reveal(when="blank-0")} In a [unit circle](gloss:unit-circle), the speed of
+rotation is the same as the _actual_ speed, because the length of the
+circumference is the same as one full rotation in radians (both are `2pi`).
+
+{.reveal(when="blank-0" delay=1000)} The radius of the ISS orbit is 6800\ km,
+which means that the _actual_ speed of the ISS has to be [[`(2 pi)/1.5 xx 6800`|
+`(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
+per hour._
+
+::: column(width=300)
+
+    x-geopad.r(width=300 height=300)
+      .earth
+      svg.r
+        circle(x="point(150,150)" name="c")
+        circle(x="point(280,150)" name="a")
+        circle(x="a.rotate(p*2*pi,c)" name="b" hidden)
+        path.red(x="arc(c,a,p*2*pi)")
+        path.fill(x="angle(a,c,b)" label="${round(2*p,1)}π" round)
+        path.red(x="segment(c,a)")
+        path.red(x="segment(c,b)")
+      .var.iss(style="transform: translate(${a.rotate(p*2*pi,c).x}px,${a.rotate(p*2*pi,c).y}px) rotate(${(p+0.25)*2*pi}rad)")
+      .time.var ${round(p*1.5,1)}h
+      x-play-btn
+
+:::
+
+---
+> id: radians-distance-1
+
+Can you see that, in this example, radians are a much more convenient unit than
+degrees? Once we know the speed of rotation, we simply have to multiply by the
+radius to get the actual speed.
+
+Here is another example: your car has wheels with radius 0.25\ m. If you’re
+driving at a speed of 20\ m/s, the wheels of your car rotate at [[`20/0.25 =
+80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] radians per second
+_{span.reveal(when="blank-0")}(or `80/(2pi) = 13` rotations per second)._
+
+---
+> id: radians-trig
+
+### Trigonometry
+
+For most simple geometry problems, degrees and radians are completely
+interchangeable – you can either pick which one you prefer, or a question
+might tell you which unit to give your answer in. However, once you study
+more advanced [trigonometry](gloss:trigonometry) or [calculus](gloss:calculus),
+it turns out that radians are much more convenient than degrees.
+
+::: column.grow
+
+Most calculators have a [special button](->.button.mode) to switch between
+degrees and radians. Trigonometric functions like [__sin__](gloss:sin),
+[__cos__](gloss:cos) and __tan__ take angles as input, and their inverse
+functions __arcsin__, __arccos__ and __arctan__ return angles as output. The
+current calculator setting determines which units are used for these angles.
+
+Try using this calculator to calculate that
+
+{.text-center} sin(30°) = [[0.5]] _{span.eqn-gap}_ cos(1°) = [[0.999]]<br>
+sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
+
+::: column(width=300)
+
+    .calculator
+      .display
+        span
+        .setting DEG
+      .button.num 7
+      .button.num 8
+      .button.num 9
+      .button.wide sin
+      .button.num 4
+      .button.num 5
+      .button.num 6
+      .button.wide cos
+      .button.num 1
+      .button.num 2
+      .button.num 3
+      .button.wide tan
+      .button.num 0
+      .button .
+      .button C
+      .button.wide.mode mode
+
+:::
+
+---
+> id: small-angle
+
+Using radians has one particularly interesting advantage when using the [__Sine
+function__](gloss:sin). If `θ` is a very small angle (less than 20° or 0.3 rad),
+then `sin(θ) ≈ θ`. For example,
+
+{.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
+
+{.reveal(when="var-0")} This is called the __small angle approximation__, and it
+can greatly simplify certain equations containing trigonometric functions.
+You’ll learn much more about this in the future.
 
 
 

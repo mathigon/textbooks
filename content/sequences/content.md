@@ -1103,6 +1103,19 @@ days of Christmas.
 
 
 
+## Sequences as Functions
+
+> section: functions
+> sectionStatus: dev
+
+TODO
+
+
+
+--------------------------------------------------------------------------------
+
+
+
 ## Fibonacci Numbers
 
 > section: fibonacci

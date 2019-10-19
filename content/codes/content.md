@@ -7,6 +7,9 @@
 
 ## Simple Codes
 
+> section: introduction
+> sectionStatus: dev
+
 __Information__ is everywhere around us, but it is difficult to define what
 exactly "information" _means_. Instead we can give examples of things that
 contain information: books and newspapers, numbers and charts, images, sound or
@@ -48,7 +51,10 @@ algorithms to encode and decode messages.
 
 ---
 
-## Error Correction and Error Detection
+## Error Detection and Error Correction 
+
+> section: error-correction
+> sectionStatus: dev
 
 {.todo} Bar Code
 
@@ -58,7 +64,10 @@ algorithms to encode and decode messages.
 
 ---
 
-## Cryptography
+## Secret Codes
+
+> section: cryptography
+> sectionStatus: dev
 
 Some codes are designed in a way that only
 
@@ -163,16 +172,16 @@ using substitution ciphers:
 
 ## The Enigma
 
+> section: enigma
+> sectionStatus: dev
+
 {.todo} TODO
 
 ---
 
 ## RSA Cryptography
 
-{.todo} TODO
-
----
-
-## Quantum Cryptography
+> section: rsa
+> sectionStatus: dev
 
 {.todo} TODO

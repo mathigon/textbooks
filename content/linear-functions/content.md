@@ -1,6 +1,9 @@
-# Functions
+# Linear Functions
 
-## Notation, Domain and Range
+## Input and Output
+
+> section: input-output
+> sectionStatus: dev
 
 Here is an interactive numberline:
 
@@ -8,11 +11,21 @@ Here is an interactive numberline:
     x-numberline
 
 ---
-> sectionId: slope
+
+## Graphing Functions
+
+> section: graphing
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Slope and Intercept
+
+> section: slope-intercept
 > id: slope
 > goals: make-point slide-point
-
-## Equations of Linear Functions
 
 ::: .theorem
 __Common Core Standard 8.EE.6__  
@@ -200,29 +213,28 @@ each case, and write down the equation of the line?
 :::
 
 ---
+
+## Parallel and Perpendicular Lines
+
+> section: parallel-perpendicular
 > sectionStatus: dev
 
-## Piecewise Functions
-
-{.todo} TODO
+TODO
 
 ---
+
+## Linear Functions
+
+> section: linear
 > sectionStatus: dev
 
-## Interpreting Functions
-
-{.todo} TODO
+TODO
 
 ---
+
+## Piecewise Functions and Systems of Equations
+
+> section: systems
 > sectionStatus: dev
 
-## Numeric Solutions
-
-{.todo} TODO
-
----
-> sectionStatus: dev
-
-## Rate of Change and Area under the Curve
-
-{.todo} TODO
+TODO

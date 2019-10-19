@@ -139,104 +139,9 @@ vertices|more edges than vertices|fewer edges than vertices]].
       svg.graph(style='width: 90px; height: 90px;')
 
 ---
-> id: handshakes-1
-> section: parties-and-dating
-
-## Parties and Dating
-
-::: column.grow
-You have been invited to an extravagant birthday party. Including yourself and
-the host, there are ${hnd}{hnd|5|3,15,1} people present.
-
-In the evening, as guests get ready to leave, everyone shakes hands with
-everyone else. How many handshakes are there in total?
-
-We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
-and every handshake is [[an edge|a vertex]].
- 
-{.reveal(when='blank-0 blank-1')}  Now it is easy to count the number of edges
-in the graph. We find that there with ${hnd} people, there are ${hnd*(hnd-1)/2}
-handshakes.
-
-::: column.s-hide(width=240)
-
-    img.shifted(src="images/party.jpg" width=240 height152)
-    svg.graph(style='width: 240px; height: 240px;')
-
-:::
-
----
-> id: handshakes-2
-
-Rather than counting all the edges in large graphs, we could also try to find a
-simple formula that tells us the result for _any_ number of guests.
-
-Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
-That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
-number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
-
-    p.var ${handshakeTable(n)}
-    x-gesture(target="#handshakes-2 x-var" slide="100,0")
-
----
-> id: handshakes-2a
-
-Unfortunately this answer is not quite right: we have counted every handshake
-[[twice|once|three times]], _{span.reveal(when="blank-0")}once for each of the
-two people involved._
-
-{.reveal(when="blank-0")} For example, <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two
-entries on the top row</x-target> are actually the same. The correct number of
-handshakes for ${n}{n|5|2,25,1} guests is <mfrac><mrow>${n} ×
-${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
-
----
-> id: handshakes-3
-
-The handshake graphs are special because every vertex is connected to every
-other vertex. Graphs with this property are called __complete graphs__. The
-complete graph with 4 vertices is often abbreviated as `K_4`, the complete graph
-with 5 vertices is known as `K_5`, and so on.
-
-We have just shown that a complete graph with `n` vertices, `K_n`, has
-`(n × (n-1))/2` edges.
-
-    .row
-      svg.graph(style="width: 90px; height: 90px")
-      svg.graph(style="width: 90px; height: 90px")
-      svg.graph(style="width: 90px; height: 90px")
-      svg.graph(style="width: 90px; height: 90px")
-
----
-> id: handshakes-4
-
-    figure: img(src="images/flags.jpg" width=855 height=100)
-
-On a different day, you are invited to a speed dating event for ${m}{m|5|2,8,1}
-boys and ${f}{f|4|2,8,1} girls. There are many small tables and every boy spends
-5 minutes with each of the girls. How many individual “dates” are there in total?
-
-::: column.grow
-In this case, the corresponding graph consists of two separate sets of vertices.
-Every vertex is connected to all the vertices in [[the opposite|its own]] set,
-but none of the vertices in [[its own|the opposite]] set. Graphs which have this
-layout are called __bipartite graphs__.
-::: column(width=300)
-
-    svg.graph(style="width: 300px; height: 140px;")
-
-:::
-
-{.reveal(when="blank-0 blank-1")} The bipartite graph with two sets of size _x_
-and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
-edges, _{span.reveal(when="blank-2")}which means that in the above example there
-are ${m} × ${f} = ${m×f} dates._
-
----
 > id: bridges-0
 > title: The Bridges of Königsberg
-> section: bridges-of-koenigsberg
+> section: bridges
 
 ## The Bridges of Königsberg
 
@@ -376,11 +281,106 @@ between two locations. We will discover more of these applications later.
 :::
 
 ---
+> id: handshakes-1
+> section: handshakes
+
+## Handshakes and Parties
+
+::: column.grow
+You have been invited to an extravagant birthday party. Including yourself and
+the host, there are ${hnd}{hnd|5|3,15,1} people present.
+
+In the evening, as guests get ready to leave, everyone shakes hands with
+everyone else. How many handshakes are there in total?
+
+We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
+and every handshake is [[an edge|a vertex]].
+ 
+{.reveal(when='blank-0 blank-1')}  Now it is easy to count the number of edges
+in the graph. We find that there with ${hnd} people, there are ${hnd*(hnd-1)/2}
+handshakes.
+
+::: column.s-hide(width=240)
+
+    img.shifted(src="images/party.jpg" width=240 height152)
+    svg.graph(style='width: 240px; height: 240px;')
+
+:::
+
+---
+> id: handshakes-2
+
+Rather than counting all the edges in large graphs, we could also try to find a
+simple formula that tells us the result for _any_ number of guests.
+
+Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
+That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
+number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
+
+    p.var ${handshakeTable(n)}
+    x-gesture(target="#handshakes-2 x-var" slide="100,0")
+
+---
+> id: handshakes-2a
+
+Unfortunately this answer is not quite right: we have counted every handshake
+[[twice|once|three times]], _{span.reveal(when="blank-0")}once for each of the
+two people involved._
+
+{.reveal(when="blank-0")} For example, <x-target to=".handshakes tr:first-child
+td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two
+entries on the top row</x-target> are actually the same. The correct number of
+handshakes for ${n}{n|5|2,25,1} guests is <mfrac><mrow>${n} ×
+${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
+
+---
+> id: handshakes-3
+
+The handshake graphs are special because every vertex is connected to every
+other vertex. Graphs with this property are called __complete graphs__. The
+complete graph with 4 vertices is often abbreviated as `K_4`, the complete graph
+with 5 vertices is known as `K_5`, and so on.
+
+We have just shown that a complete graph with `n` vertices, `K_n`, has
+`(n × (n-1))/2` edges.
+
+    .row
+      svg.graph(style="width: 90px; height: 90px")
+      svg.graph(style="width: 90px; height: 90px")
+      svg.graph(style="width: 90px; height: 90px")
+      svg.graph(style="width: 90px; height: 90px")
+
+---
+> id: handshakes-4
+
+    figure: img(src="images/flags.jpg" width=855 height=100)
+
+On a different day, you are invited to a speed dating event for ${m}{m|5|2,8,1}
+boys and ${f}{f|4|2,8,1} girls. There are many small tables and every boy spends
+5 minutes with each of the girls. How many individual “dates” are there in total?
+
+::: column.grow
+In this case, the corresponding graph consists of two separate sets of vertices.
+Every vertex is connected to all the vertices in [[the opposite|its own]] set,
+but none of the vertices in [[its own|the opposite]] set. Graphs which have this
+layout are called __bipartite graphs__.
+::: column(width=300)
+
+    svg.graph(style="width: 300px; height: 140px;")
+
+:::
+
+{.reveal(when="blank-0 blank-1")} The bipartite graph with two sets of size _x_
+and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
+edges, _{span.reveal(when="blank-2")}which means that in the above example there
+are ${m} × ${f} = ${m×f} dates._
+
+---
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
 
-## Planar Graphs
+## Planar Graphs and Euler's Formula
 
 ::: column.grow
 Here is another puzzle that is related to graph theory.
@@ -451,9 +451,8 @@ these two graphs as a subgraph.
 
 ---
 > id: euler
-> section: eulers-formula
 
-## Euler’s Formula
+### Euler’s Formula
 
 All planar graphs divide the plane they are drawn on into a number of areas,
 called __faces__.
@@ -762,7 +761,7 @@ may need more than four colours and the proofs become even more difficult.
 
 ---
 > id: salesman
-> section: the-travelling-salesman-problem
+> section: travelling-salesman
 
 ## The Travelling Salesman Problem
 
@@ -950,8 +949,16 @@ Problems](gloss:millennium-prize), each carrying a \$1m prize.
 :::
 
 ---
+> section: scheduling
+> sectionStatus: dev
+
+## Scheduling Problems
+
+TODO
+
+---
 > id: applications
-> section: graphs-in-everyday-life
+> section: applications
 
 ## Graphs in Everyday Life
 
@@ -1096,7 +1103,6 @@ theory__ and __financial mathematics__.
 
 ---
 > id: social
-> section: social-networks
 
 ### Social Networks
 

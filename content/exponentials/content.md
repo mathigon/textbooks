@@ -1,8 +1,9 @@
-# Exponential and Rational Functions
+# Exponential Functions
 
 ## Carbon Dating
 
 > section: carbon-dating
+> sectionStatus: dev
 
 A group of archaeologists has discovered a new tomb in the Egyptian desert.
 They carefully break the sealed door, walk through several rooms filled with
@@ -164,7 +165,19 @@ extinct animals, or when certain layers of rock in our Earth's crust formed.
 
 ---
 
-## Linear and Exponential Models
+## Exponential Growth and Decay
+
+> section: growth-decay
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Comparing Models
+
+> section: comparing-models
+> sectionStatus: dev
 
 Radioactive decay follows a _constant rate_: during equal time intervals, the
 number of atoms changes by a __fixed proportion__{.red} (e.g. 50%). This gives
@@ -185,3 +198,21 @@ and others are decreasing.)
 {.todo} interest
 
 {.todo} speed of computers, Moore's Law
+
+---
+
+## Compound Interest
+
+> section: compound-interest
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Population Dynamics
+
+> section: population-dynamics
+> sectionStatus: dev
+
+TODO
