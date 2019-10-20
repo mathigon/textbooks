@@ -9,6 +9,7 @@
 @media screen and (min-width: 680px) { .shift-1 { margin-top: -70px !important; } }
 
 .space { display: inline-block; width: 20px; }
+.hover-target { .inline-hover(mix(@green, white, 60%)); }
 
 .mountain {
   background: white;
@@ -29,37 +30,6 @@
   height: 300px;
   top: calc(~"50vh - 150px");
 }
-
-// -----------------------------------------------------------------------------
-
-#triangle-inequality {
-  .labels text { font-weight: 600; }
-  .item { .clearfix(); margin-bottom: 12px; }
-  .check { float: right; margin: 6px; }
-}
-
-.t-num {
-  font-size: 22px;
-  width: 36px;
-  height: 36px;
-  text-align: center;
-  line-height: 36px;
-  transition: background .2s, color .2s;
-  float: left;
-  margin-right: 1px;
-  background: @grey-background;
-
-  &:first-child { border-radius: 18px 0 0 18px; }
-  &:nth-child(3) { border-radius: 0 18px 18px 0; }
-}
-
-.t-num.correct { background: mix(@green, @grey-background); }
-.item.correct .t-num { background: @green; color: white; }
-
-#inequality-picker x-picker { flex-wrap: wrap; justify-content: center; }
-#inequality-picker .item { width: 120px; border: none; margin: 4px; }
-
-.hover-target { .inline-hover(mix(@green, white, 60%)); }
 
 // -----------------------------------------------------------------------------
 

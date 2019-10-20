@@ -69,14 +69,79 @@ In this course you will learn about many different features and properties of
 triangles. These will allow you to measure the height of mountains, but they are
 also of fundamental importance in many other areas of mathematics, science and
 engineering.
+_{button.next-step} Continue_
 :::
+
+---
+> id: applications
+
+Triangles are special because they are particularly _strong_. They are the only
+polygon that, when made out of wooden beams and hinges, will be completely
+_rigid_ – unlike rectangles, for example, which you can easily push over.
+
+{.todo} COMING SOON – Animations
+
+---
+> id: applications-1
+
+This property makes triangles particularly useful in construction, where they
+can carry heavy weights.
+
+::: column(width=200)
+    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
+
+{.caption} A “Truss bridge” is supported by triangular bars
+::: column(width=200)
+    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
+
+{.caption} Triangles in high-voltage electricity Pylons
+::: column(width=200)
+    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
+
+{.caption} Even bikes use triangles for stability.
+:::
+
+---
+> id: applications-2
+> goals: video
+
+Triangles are also the simplest polygon, with the fewest sides. This makes them
+particularly well suited to approximating complex curved surfaces. This is done
+in physical building…
+
+::: column(width=200)
+    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} “The Gherkin”, a skyscraper in London
+::: column(width=200)
+    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} Bank of China Tower in Hong Kong
+::: column(width=200)
+    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} Courtyard of the British Museum in London
+:::
+
+::: column.grow
+…but also in virtual worlds. In computer generated graphics (e.g. for movies or
+video games), all surfaces are approximated using a “mesh” of tiny triangles.
+Artists and software engineers need to know about geometry and trigonometry in
+order to be able to move and transform these triangles realistically, and to
+calculate their colour and texture.
+::: column(width=220)
+    x-media(src="images/dolphin.jpg" width=220 height=135)
+:::
+
+    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
+    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
 
 ---
 
 ## Properties of Triangles
 
 > id: angle-sum
-> section: properties-of-triangles
+> section: properties
 
 Let’s start simple: a triangle is a closed shape that has three sides (which
 are [line segments](gloss:line-segment)) and three vertices (the
@@ -176,7 +241,6 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
       
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
-      
 
 ::: column.grow
 Here you can see a triangle as well as the [midpoints](gloss:midpoint) of its
@@ -439,10 +503,13 @@ altitudes are actually just sides of the triangle.
 :::
 
 ---
+
+## Midsegments and Similarity
+
+> section: midsegments
+> sectionStatus: dev
 > id: midsegments
 > goals: s0 s1 s2
-
-### Triangle Midsegments
 
 ::: column(width=300)
 
@@ -487,140 +554,15 @@ the length of that side.
 
 ---
 
-## The Triangle Inequality
-
-> id: triangle-inequality
-> section: the-triangle-inequality
-> goals: s0 s1 s3 s5
-
-Having studied many of the properties and components of triangles, let’s think
-about _creating_ triangles. In particular, if I give you any three numbers, can
-you make a triangle that has those side lengths?
-
-Here are a some examples – move the vertices of the triangle until the three
-sides match one of the triples on the left.
-
-    .inequality.row
-      div(style="width:150px")
-        .item #[.t-num 5]#[.t-num 6]#[.t-num 7] #[span.check(when="s0")]
-        .item #[.t-num 3]#[.t-num 9]#[.t-num 9] #[span.check(when="s1")]
-        .item #[.t-num 2]#[.t-num 4]#[.t-num 8]
-        .item #[.t-num 4]#[.t-num 6]#[.t-num 7] #[span.check(when="s3")]
-        .item #[.t-num 1]#[.t-num 2]#[.t-num 6]
-        .item #[.t-num 3]#[.t-num 5]#[.t-num 7] #[span.check(when="s5")]
-      .grow
-        x-geopad.label-halo(height=360): svg
-          circle.move.pulsate(name="a" cx=175 cy=75)
-          circle.move(name="b" cx=150 cy=250)
-          circle.move(name="c" cx=350 cy=200)
-          path.red(x="segment(a,b)" label="${roundD(a,b)}")
-          path.blue(x="segment(b,c)" label="${roundD(b,c)}")
-          path.yellow(x="segment(a,c)" label="${roundD(a,c)}")
-
-{.reveal(when="s0 s1 s3 s5")} It seems like there are a few cases where three
-numbers simply _cannot_ make a triangle. This particularly happens when one side
-[[is much longer than|is much shorter than|is the same length as]] the other two.
-
----
-> id: triangle-inequality-1
-
-::: column.grow
-Think about the three sides of a triangle as metal rods, connected with hinges.
-Let’s place the [longest rod](target:long) in the middle and the [shorter
-ones](target:short) on either side.
-
-{.r} Now it is easy to see that it is impossible to link up the ends of the
-shorter rods, if their combined length is less than the length of the larger rod.
-_{button.next-step} Continue_
-
-::: column(width=300)
-
-    x-geopad(width=300 height=180): svg
-      circle(name="a" x="point(90,90)")
-      circle(name="b" x="point(210,90)")
-      circle.move.pulsate(name="c" cx=150 cy=50 project="circle(a,60)")
-      circle.move.pulsate(name="d" cx=150 cy=50 project="circle(b,40)")
-
-      path.blue(x="circle(a,60)" style="stroke-dasharray: 8px 10px")
-      path.blue(x="circle(b,40)" style="stroke-dasharray: 8px 10px")
-      path.thick(x="segment(a,b)" target="long")
-      path.thick(x="segment(a,c)" target="short")
-      path.thick(x="segment(b,d)" target="short")
-
-:::
-
----
-> id: inequality-picker
-
-Let’s rewrite this observation in mathematical terms:
-
-::: .theorem
-__The Triangle Inequality__  
-The sum of the lengths of any two sides of a triangle must be greater than the
-length of the third.
-:::
-
-In other words, if a triangle has sides _a_, _b_ and _c_, then we know that
-`a+b>c` and `a+c>b` and `b+c>a`.
-
-The triangle inequality allows us to quickly check if three numbers can make a
-triangle. Which of these triples of numbers are possible?
-
-    x-picker
-      .item.text-center #[.t-num 4]#[.t-num 6]#[.t-num 9]
-      .item.text-center(data-error="inequality-error-1") #[.t-num 1]#[.t-num 2]#[.t-num 3]
-      .item.text-center #[.t-num 3]#[.t-num 7]#[.t-num 8]
-      .item.text-center(data-error="inequality-error-2") #[.t-num 2]#[.t-num 4]#[.t-num 7]
-      .item.text-center(data-error="inequality-error-3") #[.t-num 1]#[.t-num 5]#[.t-num 8]
-      .item.text-center #[.t-num 2]#[.t-num 3]#[.t-num 4]
-
----
-> id: triangle-inequality-2
-
-The triangle inequality also allows us to estimate the length of the third side
-of a triangle, if we know the length of the other two.
-
-Imagine that a triangle has two sides of length 4 and 6. Let’s call _c_ the
-length of the third side. Then we know that
-
-{.text-center} `4+6>c`, _{span.space}_ `4+c>6` _{span.space}_ and _{span.space}_ `6+c>4`
-
-We can rearrange these inequalities to give [[2]] `<c<` [[10]].
-_{span.reveal(when="blank-0 blank-1")}The length of side *c* has to be between 2 and 10._
-
----
-> id: triangle-inequality-3
-> goals: target-0 target-1
-
-::: column.grow
-Once again, we can think about this using physical objects: two sides of the
-triangle are metal rods of length 4 and 6, and the third side is a rubber band
-that can expand or contract.
-
-Now you can see that the rubber band will always be _{span.hover-target} longer than_
-`6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
-::: column(width=300)
-
-    x-geopad.label-halo(width=300 height=200): svg
-      circle.move(name="a" cx=150 cy=150)
-      circle.move(name="b" cx=70 cy=150 project="circle(a,80)")
-      circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
-      path(x="segment(a,b)" style="stroke-width: 5px" label="4")
-      path(x="segment(a,c)" style="stroke-width: 5px" label="6")
-      path.rubber(x="segment(b,c)" style="stroke: #00cca6" label="${round(distance(b,c)/20)}")
-
-:::
-
-Note that these are _strict_ inequalities. If the third side is _exactly_ 2 or
-10, we get a straight line and not a triangle. However 2.1 or 9.9 would be
-enough to form a triangle.
+{.todo} COMING SOON – More on triangle midsegments, and how they relate to
+similarity and proportionality.
 
 ---
 
 ## Triangle Congruence
 
 > id: sss-construction
-> section: triangles-congruence
+> section: congruence
 > goals: draw-base draw-c1 draw-c2
 
 Now that we can check if three sides can form a triangle, let’s think about how
@@ -860,7 +802,7 @@ angle of 50°. SSA is not enough to confirm two triangles are congruent.
 ## Pythagoras’ Theorem 
 
 > id: pythagoras
-> section: pythagoras-theorem
+> section: pythagoras
 
 We have now reached an important point in geometry – being able to state and
 understand one of the most famous [theorems](gloss:theorem) in all of
@@ -1511,9 +1453,11 @@ a 3-letter abbreviation:
     // button to access these functions.
 
 ---
-> id: sine-cosine-rule
 
-### Sine and Cosine Rules
+## Sine and Cosine Rules
+
+> section: sine-cosine-rule
+> id: sine-cosine-rule
 
 So far, all you’ve learned about Trigonometry only works in right-angled
 triangles. But most triangles are not right-angled, and there are two important
@@ -1682,164 +1626,3 @@ distance, built surveying towers across the entire country and even accounted
 for the curvature of Earth.
 
     figure: x-media(src="images/himalaya.jpg" width=760 height=320)
-
----
-
-## Applications
-
-> id: applications
-> section: applications
-
-But triangles and trigonometry are not just useful for measuring the height of
-mountains, and the tools and concepts you have learned are incredibly important
-in countless areas of mathematics, science and engineering.
-
-Triangles are special because they are particularly _strong_. They are the only
-polygon that, when made out of wooden beams and hinges, will be completely
-_rigid_ – unlike rectangles, for example, which you can easily push over.
-
-{.todo} COMING SOON – Animations
-
----
-> id: applications-1
-
-This property makes triangles particularly useful in construction, where they
-can carry heavy weights.
-
-::: column(width=200)
-    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
-
-{.caption} A “Truss bridge” is supported by triangular bars
-::: column(width=200)
-    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
-
-{.caption} Triangles in high-voltage electricity Pylons
-::: column(width=200)
-    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
-
-{.caption} Even bikes use triangles for stability.
-:::
-
----
-> id: applications-2
-> goals: video
-
-Triangles are also the simplest polygon, with the fewest sides. This makes them
-particularly well suited to approximating complex curved surfaces. This is done
-in physical building…
-
-::: column(width=200)
-    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} “The Gherkin”, a skyscraper in London
-::: column(width=200)
-    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} Bank of China Tower in Hong Kong
-::: column(width=200)
-    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} Courtyard of the British Museum in London
-:::
-
-::: column.grow
-…but also in virtual worlds. In computer generated graphics (e.g. for movies or
-video games), all surfaces are approximated using a “mesh” of tiny triangles.
-Artists and software engineers need to know about geometry and trigonometry in
-order to be able to move and transform these triangles realistically, and to
-calculate their colour and texture.
-::: column(width=220)
-    x-media(src="images/dolphin.jpg" width=220 height=135)
-:::
-
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
-
----
-> id: applications-3
-
-Many results from this course will be useful when studying bigger polygons like
-quadrilaterals or pentagons in the future.
-
-
-    // ### Euler Line
-    // 
-    // Let’s put all of this together… construct the centroid, the circumcenter and the
-    // orthocenter in this triangle.
-    // 
-    // Now move the vertices of the triangle and observe what happens to these three
-    // points.
-    // 
-    // It looks like they always lie on a single line: called the __Euler line__.
-
-    // ### Determine if a Triangle is Acute, Obtuse, or Right
-    // We can extend the converse of the Pythagorean Theorem to determine if a triangle
-    // has an obtuse angle or is acute. We know that if the sum of the squares of the
-    // two smaller sides equals the square of the larger side, then the triangle is
-    // right. We can also interpret the outcome if the sum of the squares of the
-    // smaller sides does not equal the square of the third.
-    // 
-    // Theorem: (1) If the sum of the squares of the two shorter sides in a right
-    // triangle is greater than the square of the longest side, then the triangle is
-    // acute. (2) If the sum of the squares of the two shorter sides in a right
-    // triangle is less than the square of the longest side, then the triangle is obtuse.
-    // 
-    // In other words: The sides of a triangle are a,b, and c and c>b and c>a.
-    // If a2+b2>c2, then the triangle is acute.
-    // If a2+b2=c2, then the triangle is right.
-    // If a2+b2<c2, then the triangle is obtuse.
-
-
-    // ### Comparing Angles and Sides in Triangles
-    // 
-    // Theorem: If one side of a triangle is longer than another side, then the angle
-    // opposite the longer side will be larger than the angle opposite the shorter side.
-    // 
-    // The SAS Inequality Theorem (Hinge Theorem): If two sides of a triangle are
-    // congruent to two sides of another triangle, but the included angle of one
-    // triangle has greater measure than the included angle of the other triangle,
-    // then the third side of the first triangle is longer than the third side of the
-    // second triangle.
-    // 
-    // SSS Inequality Theorem (also called the Converse of the Hinge Theorem): If two
-    // sides of a triangle are congruent to two sides of another triangle, but the
-    // third side of the first triangle is longer than the third side of the second
-    // triangle, then the included angle of the first triangle is greater in measure
-    // than the included angle of the second triangle.
-
-
-    // ## Inscribed Similar Triangles 
-
-    // If two objects are similar, corresponding angles are congruent and their sides
-    // are proportional in length. Let’s look at a right triangle, with an altitude
-    // drawn from the right angle. There are three right triangles in this picture,
-    // △ADB,△CDA, and △CAB. Both of the two smaller triangles are similar to the larger
-    // triangle because they each share an angle with △ADB. That means all three
-    // triangles are similar to each other.
-    // 
-    // Inscribed Triangle Theorem: If an altitude is drawn from the right angle of any
-    // right triangle, then the two triangles formed are similar to the original
-    // triangle and all three triangles are similar to each other.
-    // 
-    // You are probably familiar with the arithmetic mean, which divides the sum of n
-    // numbers by n. This is commonly used to determine the average test score for a
-    // group of students. The geometric mean is a different sort of average, which
-    // takes the nth root of the product of n numbers. In this text, we will primarily
-    // compare two numbers, so we would be taking the square root of the product of two
-    // numbers. This mean is commonly used with rates of increase or decrease.
-    // 
-    // Geometric Mean: The geometric mean of two positive numbers a and b is the number
-    // x, such that ax=xb or x2=ab and x=ab−−√.
-    // 
-    // Geometric Mean Theorem #1: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of the altitude is the geometric mean of these two segments. In other
-    // words, BCAC=ACDC.
-    // 
-    // Geometric Mean Theorem #2: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of each leg of the right triangle is the geometric mean of the lengths
-    // of the hypotenuse and the segment of the hypotenuse that is adjacent to the leg.
-    // In other words, BCAB=ABDB and DCAD=ADDB.
-    // 
-    // Both of these theorems are proved using similar triangles.

@@ -72,11 +72,75 @@ Technik von grundlegender Bedeutung.
 :::
 
 ---
+> id: applications
+
+Dreiecke sind etwas Besonderes, weil sie besonders _stabil_ sind. Sie sind das einzige
+Vieleck, das, wenn es aus Holzbalken und Scharnieren zusammengebaut wird, völlig
+_steif_ wird - im Gegensatz zu z.B. Rechtecken, die man leicht verschieben kann.
+
+{.todo} KOMMT BALD - Animationen
+
+---
+> id: applications-1
+
+Diese Eigenschaft macht Dreiecke besonders nützlich für Konstruktionen, wobei sie schwere Lasten tragen
+können.
+
+::: column(width=200)
+    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
+
+{.caption} Eine "Fachwerkbrücke" wird von Dreieckskonstruktionen getragen
+::: column(width=200)
+    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
+
+{.caption} Dreiecke in Hochspannungsmasten
+::: column(width=200)
+    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
+
+{.caption} Auch Fahrräder verwenden Dreiecke für Stabilität.
+:::
+
+---
+> id: applications-2
+> goals: video
+
+Dreiecke sind auch das einfachste Polygon, mit den wenigsten Seiten. Dadurch sind sie
+besonders gut geeignet, um komplexe gekrümmte Oberflächen nachzubilden. Das wird
+in realen Gebäuden…
+
+::: column(width=200)
+    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} "Die Gurke", ein Wolkenkratzer in London
+::: column(width=200)
+    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} Bank of China Tower in Hong Kong
+::: column(width=200)
+    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} Innenhof des British Museums in London
+:::
+
+::: column.grow
+…aber auch in virtuellen Welten angewendet. In computergenerierten Grafiken (z.B. für Filme oder
+Videospiele) werden alle Oberflächen durch ein "Netz" aus winzigen Dreiecken nachgebildet.
+Künstler und Softwareingenieure müssen sich mit Geometrie und Trigonometrie auskennen,
+um diese Dreiecke realistisch bewegen und verformen zu können und ihre Farbe und Textur zu
+berechnen.
+::: column(width=220)
+    x-media(src="images/dolphin.jpg" width=220 height=135)
+:::
+
+    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
+    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
+
+---
 
 ## Eigenschaften von Dreiecken
 
 > id: angle-sum
-> section: properties-of-triangles
+> section: properties
 
 Fangen wir ganz einfach an: Ein Dreieck ist eine geschlossene Figur mit drei Seiten (die [Strecken](gloss:line-segment)
 sind) und drei Eckpunkten (die
@@ -438,10 +502,13 @@ Höhen sind eigentlich nur Seiten des Dreiecks.
 :::
 
 ---
+
+## Mittelparallelen und Ähnlichkeit
+
+> section: midsegments
+> sectionStatus: dev
 > id: midsegments
 > goals: s0 s1 s2
-
-### Mittelparallele
 
 ::: column(width=300)
 
@@ -486,140 +553,15 @@ so lang wie diese Seite.
 
 ---
 
-## Die Dreiecksungleichung
-
-> id: triangle-inequality
-> section: the-triangle-inequality
-> goals: s0 s1 s3 s5
-
-Nachdem wir viele der Eigenschaften und Komponenten von Dreiecken untersucht haben,
-wollen wir uns jetzt Gedanken darüber machen, wie Dreiecke _aufgebaut_ sind. Wenn ich dir zB. jetzt drei Zahlen vorgebe, kannst
-du ein Dreieck zeichnen, das diese Seitenlängen hat?
-
-Hier sind einige Beispiele - verschiebe die Ecken des Dreiecks, bis die drei
-Seitenlängen jeweils mit einer der drei Zahlenkombinationen auf der linken Seite übereinstimmen.
-
-    .inequality.row
-      div(style="width:150px")
-        .item #[.t-num 5]#[.t-num 6]#[.t-num 7] #[span.check(when="s0")]
-        .item #[.t-num 3]#[.t-num 9]#[.t-num 9] #[span.check(when="s1")]
-        .item #[.t-num 2]#[.t-num 4]#[.t-num 8]
-        .item #[.t-num 4]#[.t-num 6]#[.t-num 7] #[span.check(when="s3")]
-        .item #[.t-num 1]#[.t-num 2]#[.t-num 6]
-        .item #[.t-num 3]#[.t-num 5]#[.t-num 7] #[span.check(when="s5")]
-      .grow
-        x-geopad.label-halo(height=360): svg
-          circle.move.pulsate(name="a" cx=175 cy=75)
-          circle.move(name="b" cx=150 cy=250)
-          circle.move(name="c" cx=350 cy=200)
-          path.red(x="segment(a,b)" label="${roundD(a,b)}")
-          path.blue(x="segment(b,c)" label="${roundD(b,c)}")
-          path.yellow(x="segment(a,c)" label="${roundD(a,c)}")
-
-{.reveal(when="s0 s1 s3 s5")} Es scheint so zu sein, dass es einige Fälle gibt, in denen aus den drei
-Längen einfach _kein Dreieck_ gebildet werden kann. Dies ist insbesondere der Fall, wenn eine Seite
-[[viel länger als|viel kürzer als|gleich lang wie]] die beiden anderen ist.
-
----
-> id: triangle-inequality-1
-
-::: column.grow
-Stell dir die drei Seiten eines Dreiecks als Metallstangen vor, die mit Scharnieren verbunden sind, und
-platziere die [längste Stange](target:long) in der Mitte und die [kürzeren
-](target:short) an beiden Enden.
-
-{.r} Jetzt ist leicht zu erkennen, dass es unmöglich ist, die Enden der
-kürzeren Stangen zusammen zu bringen, wenn ihre Gesamtlänge kleiner ist als die Länge der größeren Stange ist.
-_{button.next-step} Weiter_
-
-::: column(width=300)
-
-    x-geopad(width=300 height=180): svg
-      circle(name="a" x="point(90,90)")
-      circle(name="b" x="point(210,90)")
-      circle.move.pulsate(name="c" cx=150 cy=50 project="circle(a,60)")
-      circle.move.pulsate(name="d" cx=150 cy=50 project="circle(b,40)")
-
-      path.blue(x="circle(a,60)" style="stroke-dasharray: 8px 10px")
-      path.blue(x="circle(b,40)" style="stroke-dasharray: 8px 10px")
-      path.thick(x="segment(a,b)" target="long")
-      path.thick(x="segment(a,c)" target="short")
-      path.thick(x="segment(b,d)" target="short")
-
-:::
-
----
-> id: inequality-picker
-
-Wir wollen diese Beobachtung nun mathematisch formulieren:
-
-::: .theorem
-__Die Dreiecksungleichung__  
-Die Summe der Längen von zwei beliebigen Seiten eines Dreiecks muss größer sein als die
-Länge der dritten.
-:::
-
-Mit anderen Worten, wenn ein Dreieck die Seiten _a_, _b_ und _c_hat, dann wissen wir, dass
-`a+b>c` und `a+c>b` und `b+c>a` sein müssen.
-
-Die Dreiecksungleichung ermöglicht es uns, schnell zu überprüfen, ob drei Zahlen ein
-Dreieck bilden können. Mit welchen dieser drei Zahlen geht es?
-
-    x-picker
-      .item.text-center #[.t-num 4]#[.t-num 6]#[.t-num 9]
-      .item.text-center(data-error="inequality-error-1") #[.t-num 1]#[.t-num 2]#[.t-num 3]
-      .item.text-center #[.t-num 3]#[.t-num 7]#[.t-num 8]
-      .item.text-center(data-error="inequality-error-2") #[.t-num 2]#[.t-num 4]#[.t-num 7]
-      .item.text-center(data-error="inequality-error-3") #[.t-num 1]#[.t-num 5]#[.t-num 8]
-      .item.text-center #[.t-num 2]#[.t-num 3]#[.t-num 4]
-
----
-> id: triangle-inequality-2
-
-Die Dreiecksungleichung erlaubt es uns auch, die Länge der dritten Seite
-eines Dreiecks zu schätzen, wenn wir die Länge der beiden anderen kennen.
-
-Stellen dir vor, dass ein Dreieck zwei Seiten der Länge 4 und 6 hat. Wir wollen die Länge der dritten
-Seite _c_ nennen. Dann wissen wir, dass
-
-{.text-center} `4+6>c`, _{span.space}_ `4+c>6` _{span.space}_ und _{span.space}_ `6+c>4`
-
-Wir können diese Ungleichungen neu anordnen, und erhalten [[2]] `<c<` [[10]].
-_{span.reveal(when="blank-0 blank-1")}Die Länge der Seite *c* muss also zwischen 2 und 10 liegen_
-
----
-> id: triangle-inequality-3
-> goals: target-0 target-1
-
-::: column.grow
-Stellen wir uns das wieder als eine Konstruktion aus Bauteilen vor: zwei Seiten des
-Dreiecks sind Metallstäbe der Länge 4 und 6, und die dritte Seite ist ein Gummiband
-, das sich dehnen oder zusammenziehen kann.
-
-Jetzt sehen wir, dass das Gummiband immer _{span.hover-target} länger als_
-`6-4=2` und _{span.hover-target} kürzer als_ `6+4=10` ist.
-::: column(width=300)
-
-    x-geopad.label-halo(width=300 height=200): svg
-      circle.move(name="a" cx=150 cy=150)
-      circle.move(name="b" cx=70 cy=150 project="circle(a,80)")
-      circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
-      path(x="segment(a,b)" style="stroke-width: 5px" label="4")
-      path(x="segment(a,c)" style="stroke-width: 5px" label="6")
-      path.rubber(x="segment(b,c)" style="stroke: #00cca6" label="${round(distance(b,c)/20)}")
-
-:::
-
-Beachte, dass es sich hierbei um _strikte_ Ungleichheiten handelt. Wenn die dritte Seite _genau_ 2 oder
-10 ist, erhalten wir eine gerade Linie und kein Dreieck. Allerdings würden 2.1 oder 9.9
-genügen, um ein Dreieck zu bilden.
+{.todo} COMING SOON – More on triangle midsegments, and how they relate to
+similarity and proportionality.
 
 ---
 
 ## Kongruenzsätze
 
 > id: sss-construction
-> section: triangles-congruence
+> section: congruence
 > goals: draw-base draw-c1 draw-c2
 
 Nun, da wir überprüfen können, ob drei Seiten ein Dreieck bilden können, wollen wir darüber nachdenken, wie
@@ -858,7 +800,7 @@ Winkel von 50° haben. SSW ist also nicht ausreichend, um zu sicherzustellen, da
 ## Der Satz des Pythagoras 
 
 > id: pythagoras
-> section: pythagoras-theorem
+> section: theorem
 
 Wir sind nun an einem wichtigen Punkt in der Geometrie angelangt - wir sind in der Lage, einen der berühmtesten [Lehrsätze](gloss:theorem) der gesamten
 Mathematik zu formulieren und zu
@@ -1509,9 +1451,11 @@ eine dreistellige Abkürzung:
     // button to access these functions.
 
 ---
-> id: sine-cosine-rule
 
-### Sinus- und Kosinussätze
+## Sinus- und Kosinussätze
+
+> section: sine-cosine-rule
+> id: sine-cosine-rule
 
 Bisher funktioniert alles, was du über die Trigonometrie gelernt hast, nur in rechtwinkligen
 Dreiecken. Aber die meisten Dreiecke sind nicht rechtwinklig, und es gibt zwei wichtige
@@ -1680,131 +1624,3 @@ Kilometern, bauten Vermessungstürme im ganzen Land und berücksichtigten
 sogar die Krümmung der Erde.
 
     figure: x-media(src="images/himalaya.jpg" width=760 height=320)
-
----
-
-## Anwendungen
-
-> id: applications
-> section: applications
-
-Dreiecke und Trigonometrie sind nicht nur für die Messung der Höhe von
-Bergen nützlich. Die Werkzeuge und Konzepte, die du hier gelernt hast, sind in
-unzähligen Bereichen der Mathematik, Naturwissenschaften und Technik unglaublich wichtig.
-
-Dreiecke sind etwas Besonderes, weil sie besonders _stabil_ sind. Sie sind das einzige
-Vieleck, das, wenn es aus Holzbalken und Scharnieren zusammengebaut wird, völlig
-_steif_ wird - im Gegensatz zu z.B. Rechtecken, die man leicht verschieben kann.
-
-{.todo} KOMMT BALD - Animationen
-
----
-> id: applications-1
-
-Diese Eigenschaft macht Dreiecke besonders nützlich für Konstruktionen, wobei sie schwere Lasten tragen
-können.
-
-::: column(width=200)
-    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
-
-{.caption} Eine "Fachwerkbrücke" wird von Dreieckskonstruktionen getragen
-::: column(width=200)
-    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
-
-{.caption} Dreiecke in Hochspannungsmasten
-::: column(width=200)
-    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
-
-{.caption} Auch Fahrräder verwenden Dreiecke für Stabilität.
-:::
-
----
-> id: applications-2
-> goals: video
-
-Dreiecke sind auch das einfachste Polygon, mit den wenigsten Seiten. Dadurch sind sie
-besonders gut geeignet, um komplexe gekrümmte Oberflächen nachzubilden. Das wird
-in realen Gebäuden…
-
-::: column(width=200)
-    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} "Die Gurke", ein Wolkenkratzer in London
-::: column(width=200)
-    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} Bank of China Tower in Hong Kong
-::: column(width=200)
-    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} Innenhof des British Museums in London
-:::
-
-::: column.grow
-…aber auch in virtuellen Welten angewendet. In computergenerierten Grafiken (z.B. für Filme oder
-Videospiele) werden alle Oberflächen durch ein "Netz" aus winzigen Dreiecken nachgebildet.
-Künstler und Softwareingenieure müssen sich mit Geometrie und Trigonometrie auskennen,
-um diese Dreiecke realistisch bewegen und verformen zu können und ihre Farbe und Textur zu
-berechnen.
-::: column(width=220)
-    x-media(src="images/dolphin.jpg" width=220 height=135)
-:::
-
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
-
----
-> id: applications-3
-
-Viele Ergebnisse aus diesem Kurs werden bei der Untersuchung größerer Vielecke wie
-Vierecken oder Fünfecken später noch nützlich sein.
-
-
-    // ### Euler Line
-    // 
-    // Let’s put all of this together… construct the centroid, the circumcenter and the
-    // orthocenter in this triangle.
-    // 
-    // Now move the vertices of the triangle and observe what happens to these three
-    // points.
-    // 
-    // It looks like they always lie on a single line: called the __Euler line__.
-
-    // ### Determine if a Triangle is Acute, Obtuse, or Right
-    // We can extend the converse of the Pythagorean Theorem to determine if a triangle
-    // has an obtuse angle or is acute. We know that if the sum of the squares of the
-    // two smaller sides equals the square of the larger side, then the triangle is
-    // right. We can also interpret the outcome if the sum of the squares of the
-    // smaller sides does not equal the square of the third.
-    // 
-    // Theorem: (1) If the sum of the squares of the two shorter sides in a right
-    // triangle is greater than the square of the longest side, then the triangle is
-    // acute. (2) If the sum of the squares of the two shorter sides in a right
-    // triangle is less than the square of the longest side, then the triangle is obtuse.
-    // 
-    // In other words: The sides of a triangle are a,b, and c and c>b and c>a.
-    // If a2+b2>c2, then the triangle is acute.
-    // If a2+b2=c2, then the triangle is right.
-    // If a2+b2<c2, then the triangle is obtuse.
-
-
-    // ### Comparing Angles and Sides in Triangles
-    // 
-    // Theorem: If one side of a triangle is longer than another side, then the angle
-    // opposite the longer side will be larger than the angle opposite the shorter side.
-    // 
-    // The SAS Inequality Theorem (Hinge Theorem): If two sides of a triangle are
-    // congruent to two sides of another triangle, but the included angle of one
-    // triangle has greater measure than the included angle of the other triangle,
-    // then the third side of the first triangle is longer than the third side of the
-    // second triangle.
-    // 
-    // SSS Inequality Theorem (also called the Converse of the Hinge Theorem): If two
-    // sides of a triangle are congruent to two sides of another triangle, but the
-    // third side of the first triangle is longer than the third side of the second
-    // triangle, then the included angle of the first triangle is greater in measure
-    // than the included angle of the second triangle.
-
-
-    // ## Eingeschriebene ähnliche Dreiecke 
-

@@ -50,10 +50,66 @@ Bu derste üçgenlerin pek çok farklı özelliklerini öğreneceksiniz. Bu, da�
 
 ---
 
+> id: applications
+
+Üçgenler özeldir çünkü onlar özellikle  _güçlüdürler_. Tahta kirişlerden ve menteşelerden yapıldında _bükemeyeceğiniz_ tek çokgendir – örneğin kolayca bastırıp bükebileceğiniz dikdörtgenlerin aksine.
+{.todo} YAKINDA – Animations
+
+---
+> id: applications-1
+
+Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle kullanışlı yapar.
+
+::: column(width=200)
+    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
+
+{.caption} ‘Kirişli köprü’, üçgen barlarla desteklenir.
+::: column(width=200)
+    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
+
+{.caption} Yüksek-voltajlı elektrik direğinde üçgenler
+::: column(width=200)
+    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
+
+{.caption} Bisikletler bile denge için üçgenleri kullanır.
+:::
+
+---
+> id: applications-2
+> goals: video
+
+Üçgenler ayrıca en az kenara sahip en basit çokgenlerdir. Bu onları karmaşık eğrisel yüzeylere yaklaşmak için özellikle uygun hale getirir. Bu fiziksel yapılarda kullanılır…
+
+::: column(width=200)
+    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} “The Gherkin”, Londra’da bir gökdelen
+::: column(width=200)
+    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} Hong Kong’ta Çin Bankası Kulesi
+::: column(width=200)
+    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
+
+{.caption} Londra’da British Müzesi’nin avlusu
+:::
+
+::: column.grow
+...ayrıca görsel dünyada da. Bilgisayar tarafından oluşturulan grafiklerde (örneğin video oyunları veya filmler için), tüm yüzeylere çok küçük üçgen “kafesler” kullanılarak yaklaşılmaktadır.
+Sanatçılar ve yazılım mühendisleri, bu üçgenleri gerçekçi bir şekilde hareket ettirebilmek ve renklerini ve yapılarını hesaplayabilmek için, geometri ve trigonometri hakkında bilgi sahibi olmalıdır.
+::: column(width=220)
+    x-media(src="images/dolphin.jpg" width=220 height=135)
+:::
+
+    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
+    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
+
+---
+
 ## Üçgenlerin Özellikleri
 
 > id: angle-sum
-> section: properties-of-triangles
+> section: properties
 
 Basitten başlayalım: üçgen, üç kenarı (kenarlar [doğru parçası](gloss:line-segment)’dır), üç köşesi (kenarların birleştiği [noktalar](gloss:point)) olan kapalı bir şekildir. Aynı zamanda toplamları [[180]] derece olan üç [iç açısı](gloss:internal-angle) vardır.
 
@@ -338,10 +394,13 @@ ve [açı ortaylar](gloss:angle-bisector) konusunda olduğu gibi bu üç uzunlu�
 :::
 
 ---
+
+## Üçgen Orta Segmentleri
+
+> section: midsegments
+> sectionStatus: dev
 > id: midsegments
 > goals: s0 s1 s2
-
-### Üçgen Orta Segmentleri
 
 ::: column(width=300)
 
@@ -377,125 +436,15 @@ Bir üçgenin orta segmenti karşısındaki kenara paraleldir ve uzunluğunun ya
 
 ---
 
-## Üçgen Eşitsizliği
-
-> id: triangle-inequality
-> section: the-triangle-inequality
-> goals: s0 s1 s3 s5
-
-Üçgenlerin bölümlerini ve özelliklerini inceledikten sonra şimdi de üçgen _oluşturma_ üzerine düşünelim. Özellikle, size herhangi üç sayı versem, kenar uzunluğu bunlar olan bir üçgen çizebilir misiniz? 
-
-Buraya bir kaç örnek yazdık. Üçgenin köşelerini, yandaki sayı üçlülerini elde edene kadar hareket ettirin.
-
-    .inequality.row
-      div(style="width:150px")
-        .item #[.t-num 5]#[.t-num 6]#[.t-num 7] #[span.check(when="s0")]
-        .item #[.t-num 3]#[.t-num 9]#[.t-num 9] #[span.check(when="s1")]
-        .item #[.t-num 2]#[.t-num 4]#[.t-num 8]
-        .item #[.t-num 4]#[.t-num 6]#[.t-num 7] #[span.check(when="s3")]
-        .item #[.t-num 1]#[.t-num 2]#[.t-num 6]
-        .item #[.t-num 3]#[.t-num 5]#[.t-num 7] #[span.check(when="s5")]
-      .grow
-        x-geopad.label-halo(height=360): svg
-          circle.move.pulsate(name="a" cx=175 cy=75)
-          circle.move(name="b" cx=150 cy=250)
-          circle.move(name="c" cx=350 cy=200)
-          path.red(x="segment(a,b)" label="${roundD(a,b)}")
-          path.blue(x="segment(b,c)" label="${roundD(b,c)}")
-          path.yellow(x="segment(a,c)" label="${roundD(a,c)}")
-
-{.reveal(when="s0 s1 s3 s5")} Öyle görünüyor ki üç sayının bir üçgen  _oluşturamadığı_
-birkaç durum var. Bu özellikle bir kenar [[diğerinden daha uzun|diğerinden daha kısa|diğeriyle aynı uzunlukta]] olduğunda gerçekleşiyor.
-
-
----
-> id: triangle-inequality-1
-
-::: column.grow
-Üçgenin kenarlarını menteşelerle birbirine bağlanmış olan metal çubuklar gibi düşünün. Ortaya [en uzun çubuğu](target:long) ve diğer taraflara da [daha kısa olanları](target:short) yerleştirin.
-
-{.r} Şimdi eğer birleştirilen uzunluklar, uzun çubuğun uzunluğundan daha kısa ise kısa olan çubukların sonlarını birleştirmenin imkansız olduğunu görmek kolay.
-_{button.next-step} Devam_
-
-
-::: column(width=300)
-
-    x-geopad(width=300 height=180): svg
-      circle(name="a" x="point(90,90)")
-      circle(name="b" x="point(210,90)")
-      circle.move.pulsate(name="c" cx=150 cy=50 project="circle(a,60)")
-      circle.move.pulsate(name="d" cx=150 cy=50 project="circle(b,40)")
-
-      path.blue(x="circle(a,60)" style="stroke-dasharray: 8px 10px")
-      path.blue(x="circle(b,40)" style="stroke-dasharray: 8px 10px")
-      path.thick(x="segment(a,b)" target="long")
-      path.thick(x="segment(a,c)" target="short")
-      path.thick(x="segment(b,d)" target="short")
-
-:::
-
----
-> id: inequality-picker
-
-Şimdi matematiksel terimleri kullanarak bu gözlemi tekrar yazalım:
-
-::: .theorem
-__Üçgen Eşitsizliği__  
-Bir üçgenin herhangi iki kenarının uzunlukları toplamı üçüncü kenarın uzunluğundan büyük olmalı.
-:::
-
-Diğer bir deyişle, eğer bir üçgen _a_, _b_ ve  _c_ kenarlarına sahipse, o zaman `a+b>c` ve `a+c>b` ve `b+c>a` eşitsizliklerini biliyoruz.
-
-Üçgen eşitsizliği bize üç sayının bir üçgen verip vermeyeceğini çabucak kontrol etme imkanı tanıyor. Bu üçlülerden hangileri bir üçgen verir ?
-
-    x-picker
-      .item.text-center #[.t-num 4]#[.t-num 6]#[.t-num 9]
-      .item.text-center(data-error="inequality-error-1") #[.t-num 1]#[.t-num 2]#[.t-num 3]
-      .item.text-center #[.t-num 3]#[.t-num 7]#[.t-num 8]
-      .item.text-center(data-error="inequality-error-2") #[.t-num 2]#[.t-num 4]#[.t-num 7]
-      .item.text-center(data-error="inequality-error-3") #[.t-num 1]#[.t-num 5]#[.t-num 8]
-      .item.text-center #[.t-num 2]#[.t-num 3]#[.t-num 4]
-
----
-> id: triangle-inequality-2
-
-Üçgen eşitsizliği aynı zamanda eğer iki kenarın uzunluğunu biliyorsak üçüncüsünü tahmin etmemizi sağlıyor.
-
-4 ve 6 uzunluğunda iki kenarı olan bir üçgen hayal edin. Üçüncü kenara _c_ diyelim. O halde şunları biliyoruz:
-
-{.text-center} `4+6>c`, _{span.space}_ `4+c>6` _{span.space}_ ve _{span.space}_ `6+c>4`
-
-Bu eşitsizlikleri, [[2]] `<c<` [[10]] vermesi için tekrar düzenleyebiliriz.
-_{span.reveal(when="blank-0 blank-1")} *c* kenarının uzunluğu 2 ile 10 arasında olmalı._
-
----
-> id: triangle-inequality-3
-> goals: target-0 target-1
-
-::: column.grow
-Bir kez daha, bunu fiziksel nesneleri kullanarak düşünebiliriz: örneğin üçgenin iki kenarını 4 ve 6 uzunluğundaki iki metal çubuk ve üçüncü kenarı da uzayabilen veya kısalabilen bir paket lastiği.
-
-Şimdi paket lastiğinin her zaman `6-4=2’den` _{span.hover-target} daha uzun_ ve `6+4=10’dan`. _{span.hover-target} daha kısa_ olacağını görebilirsiniz.
-::: column(width=300)
-
-    x-geopad.label-halo(width=300 height=200): svg
-      circle.move(name="a" cx=150 cy=150)
-      circle.move(name="b" cx=70 cy=150 project="circle(a,80)")
-      circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
-      path(x="segment(a,b)" style="stroke-width: 5px" label="4")
-      path(x="segment(a,c)" style="stroke-width: 5px" label="6")
-      path.rubber(x="segment(b,c)" style="stroke: #00cca6" label="${round(distance(b,c)/20)}")
-
-:::
-
-Bunların _eşitliğin dahil olmadığı_ eşitsizlikler olduğunu not edelim. Eğer üçüncü kenar _tam olarak_ 2 veya 10 ise, düz bir doğru elde ederiz, üçgen değil. Ancak 2.1 veya 9.9 bir üçgen oluşturmak için yeterli olurdu.
+{.todo} COMING SOON – More on triangle midsegments, and how they relate to
+similarity and proportionality.
 
 ---
 
 ## Üçgende Eşlik
 
 > id: sss-construction
-> section: triangles-congruence
+> section: congruence
 > goals: draw-base draw-c1 draw-c2
 
 Şimdi herhangi üç kenarın bir üçgen oluşturup oluşturmadığını kontrol edebiliriz, bu kenarlarla tam olarak nasıl bir üçgen _inşa edeceğimizi_ düşünelim.
@@ -689,7 +638,7 @@ KKA, iki üçgenin eş olduğunu belirlemek için yeterli değil.
 ## Pisagor Teoremi
 
 > id: pythagoras
-> section: pythagoras-theorem
+> section: pythagoras
 
 Geometride önemli bir noktaya ulaştık – matematikteki en ünlü [teoremlerden](gloss:theorem) birini ifade edebilir ve anlayabiliriz: __Pisagor Teoremi__. Adını antik Yunan matematikçisi [Sisamlı Pisagor’dan](bio:pythagoras) alır.
 
@@ -1276,9 +1225,11 @@ Bu üç Trigonometrik fonksiyon, dik açılı üçgenlerin kenarlarının oranla
     // button to access these functions.
 
 ---
-> id: sine-cosine-rule
 
-### Sinüs ve Kosinüs Kuralları
+## Sinüs ve Kosinüs Kuralları
+
+> id: sine-cosine-rule
+> section: sine-cosine-rule
 
 Şu ana kadar Trigonometriyi dik üçgenlerde gördünüz. Ama çoğu üçgen dik değildir ve her üçgen için çalışan iki önemli, sonuç vardır
 
@@ -1426,152 +1377,3 @@ _{span.pill.step-target.green(data-to="a")} α açısının_ bir [bütünler aç
 Bu açıklama Büyük Trigonometrik Araştırma üzerinde çalışan matematikçiler ve coğrafyacılar tarafından yapılan olağanüstü çalışmaları büyük ölçüde kolaylaştırmaktadır. Deniz seviyesinden başladılar, binlerce kilometre mesafedeki uzaklıkları ölçtüler, tüm ülke genelinde araştırma kuleleri inşa ettiler ve hatta Dünya’nın eğriliğini bile hesapladılar.
 
     figure: x-media(src="images/himalaya.jpg" width=760 height=320)
-
----
-
-## Uygulamalar
-
-> id: applications
-> section: applications
-
-Üçgenler ve Trigonometri sadece bir dağın yüksekliğini ölçmek için faydalı değildir, öğrendiğiniz  araçlar ve kavramlar, matematik, fen ve mühendislik alanlarında inanılmaz derecede büyük bir öneme sahiptir.
-
-Üçgenler özeldir çünkü onlar özellikle  _güçlüdürler_. Tahta kirişlerden ve menteşelerden yapıldında _bükemeyeceğiniz_ tek çokgendir – örneğin kolayca bastırıp bükebileceğiniz dikdörtgenlerin aksine.
-{.todo} YAKINDA – Animations
-
----
-> id: applications-1
-
-Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle kullanışlı yapar.
-
-::: column(width=200)
-    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
-
-{.caption} ‘Kirişli köprü’, üçgen barlarla desteklenir.
-::: column(width=200)
-    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
-
-{.caption} Yüksek-voltajlı elektrik direğinde üçgenler
-::: column(width=200)
-    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
-
-{.caption} Bisikletler bile denge için üçgenleri kullanır.
-:::
-
----
-> id: applications-2
-> goals: video
-
-Üçgenler ayrıca en az kenara sahip en basit çokgenlerdir. Bu onları karmaşık eğrisel yüzeylere yaklaşmak için özellikle uygun hale getirir. Bu fiziksel yapılarda kullanılır…
-
-::: column(width=200)
-    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} “The Gherkin”, Londra’da bir gökdelen
-::: column(width=200)
-    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} Hong Kong’ta Çin Bankası Kulesi
-::: column(width=200)
-    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
-
-{.caption} Londra’da British Müzesi’nin avlusu
-:::
-
-::: column.grow
-...ayrıca görsel dünyada da. Bilgisayar tarafından oluşturulan grafiklerde (örneğin video oyunları veya filmler için), tüm yüzeylere çok küçük üçgen “kafesler” kullanılarak yaklaşılmaktadır.
-Sanatçılar ve yazılım mühendisleri, bu üçgenleri gerçekçi bir şekilde hareket ettirebilmek ve renklerini ve yapılarını hesaplayabilmek için, geometri ve trigonometri hakkında bilgi sahibi olmalıdır.
-::: column(width=220)
-    x-media(src="images/dolphin.jpg" width=220 height=135)
-:::
-
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
-
----
-> id: applications-3
-
-Gelecekte dörtgenler ve beşgenler gibi daha büyük çokgenleri çalışırken bu dersin pek çok sonucu faydalı olacak.
-
-
-    // ### Euler Line
-    // 
-    // Let’s put all of this together… construct the centroid, the circumcenter and the
-    // orthocenter in this triangle.
-    // 
-    // Now move the vertices of the triangle and observe what happens to these three
-    // points.
-    // 
-    // It looks like they always lie on a single line: called the __Euler line__.
-
-    // ### Determine if a Triangle is Acute, Obtuse, or Right
-    // We can extend the converse of the Pythagorean Theorem to determine if a triangle
-    // has an obtuse angle or is acute. We know that if the sum of the squares of the
-    // two smaller sides equals the square of the larger side, then the triangle is
-    // right. We can also interpret the outcome if the sum of the squares of the
-    // smaller sides does not equal the square of the third.
-    // 
-    // Theorem: (1) If the sum of the squares of the two shorter sides in a right
-    // triangle is greater than the square of the longest side, then the triangle is
-    // acute. (2) If the sum of the squares of the two shorter sides in a right
-    // triangle is less than the square of the longest side, then the triangle is obtuse.
-    // 
-    // In other words: The sides of a triangle are a,b, and c and c>b and c>a.
-    // If a2+b2>c2, then the triangle is acute.
-    // If a2+b2=c2, then the triangle is right.
-    // If a2+b2<c2, then the triangle is obtuse.
-
-
-    // ### Comparing Angles and Sides in Triangles
-    // 
-    // Theorem: If one side of a triangle is longer than another side, then the angle
-    // opposite the longer side will be larger than the angle opposite the shorter side.
-    // 
-    // The SAS Inequality Theorem (Hinge Theorem): If two sides of a triangle are
-    // congruent to two sides of another triangle, but the included angle of one
-    // triangle has greater measure than the included angle of the other triangle,
-    // then the third side of the first triangle is longer than the third side of the
-    // second triangle.
-    // 
-    // SSS Inequality Theorem (also called the Converse of the Hinge Theorem): If two
-    // sides of a triangle are congruent to two sides of another triangle, but the
-    // third side of the first triangle is longer than the third side of the second
-    // triangle, then the included angle of the first triangle is greater in measure
-    // than the included angle of the second triangle.
-
-
-    // ## Inscribed Similar Triangles 
-
-    // If two objects are similar, corresponding angles are congruent and their sides
-    // are proportional in length. Let’s look at a right triangle, with an altitude
-    // drawn from the right angle. There are three right triangles in this picture,
-    // △ADB,△CDA, and △CAB. Both of the two smaller triangles are similar to the larger
-    // triangle because they each share an angle with △ADB. That means all three
-    // triangles are similar to each other.
-    // 
-    // Inscribed Triangle Theorem: If an altitude is drawn from the right angle of any
-    // right triangle, then the two triangles formed are similar to the original
-    // triangle and all three triangles are similar to each other.
-    // 
-    // You are probably familiar with the arithmetic mean, which divides the sum of n
-    // numbers by n. This is commonly used to determine the average test score for a
-    // group of students. The geometric mean is a different sort of average, which
-    // takes the nth root of the product of n numbers. In this text, we will primarily
-    // compare two numbers, so we would be taking the square root of the product of two
-    // numbers. This mean is commonly used with rates of increase or decrease.
-    // 
-    // Geometric Mean: The geometric mean of two positive numbers a and b is the number
-    // x, such that ax=xb or x2=ab and x=ab−−√.
-    // 
-    // Geometric Mean Theorem #1: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of the altitude is the geometric mean of these two segments. In other
-    // words, BCAC=ACDC.
-    // 
-    // Geometric Mean Theorem #2: In a right triangle, the altitude drawn from the
-    // right angle to the hypotenuse divides the hypotenuse into two segments. The
-    // length of each leg of the right triangle is the geometric mean of the lengths
-    // of the hypotenuse and the segment of the hypotenuse that is adjacent to the leg.
-    // In other words, BCAB=ABDB and DCAD=ADDB.
-    // 
-    // Both of these theorems are proved using similar triangles.
