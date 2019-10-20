@@ -17,10 +17,6 @@ around us. Almost all plants, animals, and even we humans are symmetric.
     x-media(src="images/starfish.jpg" width=200 height=200 lightbox)
 :::
 
-_{button.next-step} Continue_
-
----
-
 Over time, we’ve imitated nature’s symmetry in art, architecture, technology
 and design. Symmetric shapes and patterns just seems to look _more beautiful_
 than non-symmetric ones.
@@ -37,23 +33,19 @@ But symmetry is much more important than simply _looking beautiful_. It lies at
 the very foundations of our universe, and can even explain the most fundamental
 laws of physics.
 
-While symmetry is a very intuitive concept, describing it mathematically is more
-difficult than you might think. To start with, we have to learn about
-_transformations_.
+_{button.next-step} Continue_
 
 ---
-
-## Transformations
-
 > id: transformations
 > goals: t1 t2 t3
-> section: transformations
 
-A [__transformation__](gloss:transformation) is a specific set of rules that
-convert one geometric figure into another one. Here are a few examples:
+While symmetry is a very intuitive concept, describing it mathematically is more
+difficult than you might think. First, we have to learn about
+[__transformations__](gloss:transformation), which are ways to convert one
+geometric figure into another one. Here are a few examples:
 
 ::: column.r(width=200)
-    .animation
+    .animation#star
       include svg/transform-1.svg
       x-play-btn
 ::: column.r(width=200)
@@ -66,18 +58,27 @@ convert one geometric figure into another one. Here are a few examples:
       x-play-btn
 :::
 
-{.reveal(when="t1 t2 t3")} The result of a transformation is called the
-[__image__](gloss:transformation-image). The image of a figure `A` is usually
-denoted by `A'` (pronounced as “A prime”).
+---
+> id: transformations-1
+
+The result of a transformation is called the [__image__](gloss:transformation-image).
+The image of a figure `A` is usually denoted by `A'` (pronounced as “A prime”).
+
+The [first example](->#star) above is special, because it only moves and rotates
+the original star, but doesn’t change its size or shapes. Transformations with
+this property are called __rigid transformations__.
 
 ---
-> id: rigid
 
-Initially, we will just think about transformations that don’t change the
-original figure’s size and shape. Imagine that it is made out of a solid
-material like wood or metal: we can move, turn and flip it, but we can’t stretch
-or otherwise deform it. These transformations are called
-[__rigid transformations__](gloss:rigid-transformation).
+## Rigid Transformations
+
+> id: rigid
+> section: rigid
+
+A [__rigid transformation__](gloss:rigid-transformation) is a special kind of
+transformation that don’t change the original figure’s size and shape. Imagine
+that it is made out of a solid material like wood or metal: we can move it, 
+turn it and flip it over, but we can’t stretch or otherwise deform it.
 
 Which of these transformations are rigid?
 
@@ -455,47 +456,54 @@ _{button.next-step} Continue_
 vertices to get the rotated image of our original shape.
 :::
 
-    // ---
-    // > id: composition
-    // 
-    // ### Composition of Transformations
-    // 
-    // Of course, we can combine multiple translations, reflections and rotations to
-    // create more complex transformations.
-    // 
-    // {.todo} TODO Example
-    // 
-    // However, as it turns out, it doesn’t matter how many different transformations
-    // you combine: you can always find another transformation that does the same in
-    // one go!
-    // 
-    // {.todo} TODO Transformation composition calculator
-    // 
-    // Combining two reflections is particularly interesting. There are two different
-    // cases we need to consider:
-    // 
-    // ::: column.grow
-    // If the two lines of reflection are parallel, the result is a single translation.
-    // The direction of the translation is perpendicular to the lines of reflection,
-    // and the distance is twice the distance between the lines of reflection.
-    // 
-    // {.todo} TODO Animation
-    // ::: column.grow
-    // If the two lines of reflection intersect, the result is a single rotation. The
-    // center of rotation is the intersection between the lines of reflection, and the
-    // angle is twice the angle between the lines of reflection.
-    // 
-    // {.todo} TODO Animation
-    // :::
-
 ---
 > id: composition-1
 
 Transformations are an important concept in many parts of mathematics, not just
 geometry. For example, you can transform [_functions_](gloss:function) by
-shifting or rotating their [graphs](gloss:function-graph). Other transformations
-don’t even have a visual representation at all. You’ll learn more about these
-transformations in future courses, but for now let’s move on to symmetry.
+shifting or rotating their [graphs](gloss:function-graph). You can also use
+transformations to determine whether two shapes are [congruent](gloss:congruent).
+
+---
+
+## Congruence
+
+> section: congruence
+> sectionStatus: dev
+
+TODO
+
+---
+
+### Composition of Transformations
+
+Of course, we can combine multiple translations, reflections and rotations to
+create more complex transformations.
+
+{.todo} TODO Example
+
+However, as it turns out, it doesn’t matter how many different transformations
+you combine: you can always find another transformation that does the same in
+one go!
+
+{.todo} TODO Transformation composition calculator
+
+Combining two reflections is particularly interesting. There are two different
+cases we need to consider:
+
+::: column.grow
+If the two lines of reflection are parallel, the result is a single translation.
+The direction of the translation is perpendicular to the lines of reflection,
+and the distance is twice the distance between the lines of reflection.
+
+{.todo} TODO Animation
+::: column.grow
+If the two lines of reflection intersect, the result is a single rotation. The
+center of rotation is the intersection between the lines of reflection, and the
+angle is twice the angle between the lines of reflection.
+
+{.todo} TODO Animation
+:::
 
 ---
 
@@ -767,7 +775,7 @@ Now complete these shapes, so that they have rotational symmetry:
 
 ---
 
-## Symmetry Groups
+## Symmetry Groups and Wallpapers
 
 > id: groups
 > section: symmetry-groups
@@ -968,15 +976,14 @@ Adenovirus (right) are determined by their symmetries.
 
 ---
 
-## Wallpaper Groups
+### Wallpaper Groups
 
 > id: wallpaper-groups
-> section: wallpaper-groups
 
-In the previous sections we have now seen two different kinds of symmetry, that
-correspond to two different transformations: rotations and reflections. But
-there is also a symmetry for the third kind of rigid transformation:
-[[translations|spins|flips]].
+In the [previous sections](/course/transformations/symmetry) we saw two
+different kinds of symmetry corresponding to two different transformations:
+rotations and reflections. But there is also a symmetry for the third kind of
+rigid transformation: [[translations|spins|flips]].
 
 ---
 > id: wallpaper-groups-1
@@ -1156,7 +1163,7 @@ which has a 3-dimensional symmetry group.
 
 > id: planets
 > sectionBackground: dark stars
-> section: symmetry-in-physics
+> section: physics
 
 So far, all the symmetries we looked at were _visual_ in some sense: visible
 shapes, images or patterns. In fact, symmetry can be a much wider concept:
@@ -1221,10 +1228,10 @@ physicists, but not observed in the real world until 2012.
 
 ---
 
-## Similarity
+## Dilations
 
 > id: dilations
-> section: similarity
+> section: dilations
 
 So far, we have just looked at [[rigid|congruent|visual]] transformations.
 _{span.reveal(when="blank-0")} Now let’s think about one that is not: a
@@ -1265,11 +1272,8 @@ image is [[larger|smaller]] than the original.
 {.text-center.scale-target} Scale factor: ${s}{s|2|0,3,0.1}
 :::
 
-{.todo} COMING SOON – More on Dilations and Similarity
+{.todo} COMING SOON – More on Dilations
 
-    // ---
-    // > id: dilations-1
-    // 
     // Here is how we can construct the dilation of a geometric shape:
     // 
     // ::: column(width=300)
@@ -1283,213 +1287,219 @@ image is [[larger|smaller]] than the original.
     // 
     // All that’s left is to connect the transformed points in the image … all done!
     // :::
-    // 
-    // ---
-    // > id: similarity
-    // 
-    // ::: column.grow
-    // For rigid transformations, the image is always [[congruent|larger|smaller]] to
-    // the original – but this is [[no longer|still]] true for dilations. Instead, we
-    // say that two shapes are [__similar__](gloss:similar). They have the same overall
-    // shape, but not necessarily the same size.
-    // 
-    // The symbol for similarity is `∼` (similar to the symbol for congruence, which
-    // was `≅`). In this example, we would write `A ∼ A'`.
-    // 
-    // ::: column(width=240)
-    // {.todo} COMING SOON – Illustration
-    // :::
-    // 
-    // ---
-    // > id: perspective
-    // 
-    // ### Perspective Drawings
-    // 
-    // You might have noticed that these dilations with the connecting rays almost look
-    // like __perspective drawings__. The center of dilation is called the __vanishing
-    // point__, because it looks like this is where everything is “vanishing in the
-    // distance”.
-    // 
-    // Find the vanishing point in the figure below:
-    // 
-    // {.todo} COMING SOON – Interactive
-    // 
-    // Now can you draw another house that matches the existing ones?
-    // 
-    // ---
-    // > id: similar-polygons
-    // 
-    // ### Similar Polygons
-    // 
-    // Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
-    // [squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
-    // are [[always|sometimes|never]] similar. They might have different sizes, but
-    // always the same general shape.
-    // 
-    // ::: column.grow
-    // The two quadrilaterals on the right are similar. Our first important observation
-    // is that in similar polygons, all the matching pairs of angles are
-    // [congruent](gloss:congruent-angles). This means that
-    // 
-    // {.text-center} [_{.m-red}`∡ABC`_ `≅` _{.m-red}`∡A'B'C'`_](target:a)_{.space}_
-    // [_{.m-blue}`∡BCD`_ `≅` _{.m-blue}`∡B'C'D'`_](target:b)  
-    // [_{.m-green}`∡CDE`_ `≅` _{.m-green}`∡C'D'E'`_](target:c)_{.space}_
-    // [_{.m-yellow}`∡DEA`_ `≅` _{.m-yellow}`∡D'E'A'`_](target:d)
-    // 
-    // The second important fact is that in similar polygons, all sides are scaled
-    // __proportionally__ by the scale factor of the corresponding dilation. If the
-    // scale factor is ${k}{k|1.5|0.5,2,0.1}, then
-    // 
-    // {.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
-    // `|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
-    // 
-    // We can instead rearrange these equations and eliminate the scale factor
-    // entirely:
-    // 
-    // {.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-    // 
-    //     // This proportional relationship is true not just for the sides of the
-    //     // polygon, but also for properties like diagonals.
-    // 
-    // We can use this to solve real life problems that involve similar polygons – for
-    // example finding the length of missing sides, if we know some of the other sides.
-    // In the following section you will see a few examples.
-    // ::: column(width=240)
-    // 
-    //     x-geopad.sticky(width=240 height=360): svg
-    //       - var x = ['a', 'b', 'c', 'd']
-    //       - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-    //       - var next = {a:'b', b:'c', c:'d', d:'a'}
-    //       - var prev = {a:'d', b:'a', c:'b', d:'c'}
-    //       - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-    //       each l in x
-    //         circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-    //         path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-    //         path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-    //         circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-    //         path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-    //         path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-    // :::
-    // 
-    // ---
-    // > id: similar-triangles
-    // 
-    // ### Similar Triangles
-    // 
-    // The concept of similarity is particularly powerful with triangles. We already
-    // know that the corresponding internal angles in similar polygons are equal.
-    // 
-    // For triangles, the opposite is also true: this means that if you have two
-    // triangles with the same three angle sizes, then the triangles must be similar.
-    // 
-    // And it gets even better! We know that the internal angles in a triangle always
-    // add up to [[180]]°. This means that if we know two angles in a triangle, we can
-    // always work out the third one.
-    // 
-    // For similarity, this means that we also just need to check _two angles_ to
-    // determine if triangles are similar. If two triangles have two angles of the same
-    // size, then the third angle must also be the same in both.
-    // 
-    // This result is sometimes called the [__AA Similarity Condition__](gloss:triangle-aa)
-    // for triangles. (The two _As_ stand for the two _angles_ we compare.)
-    // 
-    // ::: .theorem
-    // If two angles in one triangle are congruent to two angles in another triangle,
-    // the two triangles are similar.
-    // :::
-    // 
-    // ---
-    // > id: similar-triangles-1
-    // 
-    // Let’s have a look at a few examples where this is useful:
-    // 
-    // ::: column(width=320)
-    // {.todo} COMING SOON – Animation
-    // 
-    // ::: column.grow
-    // Here you can see the image of a large lighthouse. Together with a friend, you
-    // want to measure the height of the lighthouse, but unfortunately we cannot climb
-    // to the top.
-    // 
-    // It turns out that, very well hidden, the diagram contains two similar triangles:
-    // one is formed by the lighthouse and its shadow, and one is formed by your friend
-    // and her shadow.
-    // 
-    // Both triangles have one right angle at the bottom. The sun rays are parallel,
-    // which means that the other two angles at the bottom are corresponding angles,
-    // and also equal. By the AA condition for triangles, these two must be similar.
-    // 
-    // We can easily measure the length of the shadows, and we also know the height of
-    // your friend. Now we can use the proportionality of sides in similar triangles
-    // to find the height of the lighthouse:
-    // 
-    // {.todo} COMING SOON – Equation
-    // 
-    // Therefore the lighthouse is 1.5m tall.
-    // :::
-    // 
-    // ---
-    // > id: similar-triangles-2
-    // 
-    // ::: column(width=320)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // We can use the same technique to measure distances on the ground. Here we want
-    // to find the width of a large river. There is a big tree on one side of the
-    // river, and I’ve got a stick that is one meter long.
-    // 
-    // Try drawing another two similar triangles in this diagram.
-    // 
-    // You can mark the point along the side of the river, that lies directly on the
-    // line of sight from the end of the stick to the tree. Then we can measure the
-    // distances to the stick, and to the point directly opposite the tree.
-    // 
-    // Once again, these two triangles are similar because of the AA condition. They
-    // both have a right angle, and on pair of opposite angles.
-    // 
-    // According to the proportionality rule, this means that
-    // 
-    // {.todo} COMING SOON – Equation
-    // 
-    // Therefore the width of the river is 45 meters.
-    // :::
 
 ---
-> id: outro
+
+## Similarity
+
+> section: similarity
+> sectionStatus: dev
+> id: similarity
+
+::: column.grow
+For rigid transformations, the image is always [[congruent|larger|smaller]] to
+the original – but this is [[no longer|still]] true for dilations. Instead, we
+say that two shapes are [__similar__](gloss:similar). They have the same overall
+shape, but not necessarily the same size.
+
+The symbol for similarity is `∼` (similar to the symbol for congruence, which
+was `≅`). In this example, we would write `A ∼ A'`.
+
+::: column(width=240)
+{.todo} COMING SOON – Illustration
+:::
+
+---
+> id: perspective
+
+### Perspective Drawings
+
+You might have noticed that these dilations with the connecting rays almost look
+like __perspective drawings__. The center of dilation is called the __vanishing
+point__, because it looks like this is where everything is “vanishing in the
+distance”.
+
+Find the vanishing point in the figure below:
+
+{.todo} COMING SOON – Interactive
+
+Now can you draw another house that matches the existing ones?
+
+---
+> id: similar-polygons
+
+### Similar Polygons
+
+Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
+[squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
+are [[always|sometimes|never]] similar. They might have different sizes, but
+always the same general shape.
+
+::: column.grow
+The two quadrilaterals on the right are similar. Our first important observation
+is that in similar polygons, all the matching pairs of angles are
+[congruent](gloss:congruent-angles). This means that
+
+{.text-center} [_{.m-red}∡ABC_ ≅ _{.m-red}∡A'B'C'_](target:a)_{.space}_
+[_{.m-blue}∡BCD_ ≅ _{.m-blue}∡B'C'D'_](target:b)  
+[_{.m-green}∡CDE_ ≅ _{.m-green}∡C'D'E'_](target:c)_{.space}_
+[_{.m-yellow}∡DEA_ ≅ _{.m-yellow}∡D'E'A'_](target:d)
+
+The second important fact is that in similar polygons, all sides are scaled
+__proportionally__ by the scale factor of the corresponding dilation. If the
+scale factor is ${k}{k|1.5|0.5,2,0.1}, then
+
+{.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
+`|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
+
+We can instead rearrange these equations and eliminate the scale factor
+entirely:
+
+{.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
+
+    // This proportional relationship is true not just for the sides of the
+    // polygon, but also for properties like diagonals.
+
+We can use this to solve real life problems that involve similar polygons – for
+example finding the length of missing sides, if we know some of the other sides.
+In the following section you will see a few examples.
+::: column(width=240)
+
+    x-geopad.sticky(width=240 height=360): svg
+      - var x = ['a', 'b', 'c', 'd']
+      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
+      - var next = {a:'b', b:'c', c:'d', d:'a'}
+      - var prev = {a:'d', b:'a', c:'b', d:'c'}
+      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
+      each l in x
+        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
+        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
+        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
+        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
+        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
+        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
+:::
+
+---
+> id: similar-triangles
+
+### Similar Triangles
+
+The concept of similarity is particularly powerful with triangles. We already
+know that the corresponding internal angles in similar polygons are equal.
+
+For triangles, the opposite is also true: this means that if you have two
+triangles with the same three angle sizes, then the triangles must be similar.
+
+And it gets even better! We know that the internal angles in a triangle always
+add up to [[180]]°. This means that if we know two angles in a triangle, we can
+always work out the third one.
+
+For similarity, this means that we also just need to check _two angles_ to
+determine if triangles are similar. If two triangles have two angles of the same
+size, then the third angle must also be the same in both.
+
+This result is sometimes called the [__AA Similarity Condition__](gloss:triangle-aa)
+for triangles. (The two _As_ stand for the two _angles_ we compare.)
+
+::: .theorem
+If two angles in one triangle are congruent to two angles in another triangle,
+the two triangles are similar.
+:::
+
+---
+> id: similar-triangles-1
+
+Let’s have a look at a few examples where this is useful:
+
+::: column(width=320)
+{.todo} COMING SOON – Animation
+
+::: column.grow
+Here you can see the image of a large lighthouse. Together with a friend, you
+want to measure the height of the lighthouse, but unfortunately we cannot climb
+to the top.
+
+It turns out that, very well hidden, the diagram contains two similar triangles:
+one is formed by the lighthouse and its shadow, and one is formed by your friend
+and her shadow.
+
+Both triangles have one right angle at the bottom. The sun rays are parallel,
+which means that the other two angles at the bottom are corresponding angles,
+and also equal. By the AA condition for triangles, these two must be similar.
+
+We can easily measure the length of the shadows, and we also know the height of
+your friend. Now we can use the proportionality of sides in similar triangles
+to find the height of the lighthouse:
+
+{.todo} COMING SOON – Equation
+
+Therefore the lighthouse is 1.5m tall.
+:::
+
+---
+> id: similar-triangles-2
+
+::: column(width=320)
+{.todo} COMING SOON – Animation
+::: column.grow
+We can use the same technique to measure distances on the ground. Here we want
+to find the width of a large river. There is a big tree on one side of the
+river, and I’ve got a stick that is one meter long.
+
+Try drawing another two similar triangles in this diagram.
+
+You can mark the point along the side of the river, that lies directly on the
+line of sight from the end of the stick to the tree. Then we can measure the
+distances to the stick, and to the point directly opposite the tree.
+
+Once again, these two triangles are similar because of the AA condition. They
+both have a right angle, and on pair of opposite angles.
+
+According to the proportionality rule, this means that
+
+{.todo} COMING SOON – Equation
+
+Therefore the width of the river is 45 meters.
+:::
+
+---
+
+### Similarity on Rays
+
+Theorem: If a ray bisects an angle of a triangle, then it divides the
+opposite side into segments that are proportional to the lengths of the
+other two sides.
+
+We can extend this theorem to a situation outside of triangles where we
+have multiple parallel lines cut by transverals.
+
+Theorem: If three or more parallel lines are cut by two transversals, then they
+divide the transversals proportionally.
+
+Think about a midsegment of a triangle. A midsegment is parallel to one side of
+a triangle and divides the other two sides into congruent halves. The midsegment
+divides those two sides proportionally.
+
+Triangle Proportionality Theorem: If a line parallel to one side of a triangle
+intersects the other two sides, then it divides those sides proportionally.
+
+Triangle Proportionality Theorem Converse: If a line divides two sides of a
+triangle proportionally, then it is parallel to the third side.
+
+---
+
+### Self Similarity
+
+There are some curious mathematical shapes that are similar to a smaller part
+_of themselves_. An example is the __Sierpinksi Triangle__: the entire triangle
+is similar to any one of the smaller triangles it consists on. You could zoom
+in and infinitely many smaller and smaller triangles.
+
+Shapes with this property are called __Fractals__. They have some surprising
+and truly XXX properties, which you will learn about more in the future.
+
+---
 
 Triangles are not just useful for measuring distances. In the next course we
 will learn a lot more about triangles and their properties.
-
-
-    // ### Similarity on Rays
-    //
-    // Theorem: If a ray bisects an angle of a triangle, then it divides the
-    // opposite side into segments that are proportional to the lengths of the
-    // other two sides.
-    // 
-    // We can extend this theorem to a situation outside of triangles where we
-    // have multiple parallel lines cut by transverals.
-    // 
-    // Theorem: If three or more parallel lines are cut by two transversals, then they
-    // divide the transversals proportionally.
-    // 
-    // Think about a midsegment of a triangle. A midsegment is parallel to one side of
-    // a triangle and divides the other two sides into congruent halves. The midsegment
-    // divides those two sides proportionally.
-    // 
-    // Triangle Proportionality Theorem: If a line parallel to one side of a triangle
-    // intersects the other two sides, then it divides those sides proportionally.
-    // 
-    // Triangle Proportionality Theorem Converse: If a line divides two sides of a
-    // triangle proportionally, then it is parallel to the third side.
-
-
-    // ### Self Similarity
-    // 
-    // There are some curious mathematical shapes that are similar to a smaller part
-    // _of themselves_. An example is the __Sierpinksi Triangle__: the entire triangle
-    // is similar to any one of the smaller triangles it consists on. You could zoom
-    // in and infinitely many smaller and smaller triangles.
-    // 
-    // Shapes with this property are called __Fractals__. They have some surprising
-    // and truly XXX properties, which you will learn about more in the future.

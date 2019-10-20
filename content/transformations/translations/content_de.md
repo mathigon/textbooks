@@ -17,10 +17,6 @@ um uns herum. Fast alle Pflanzen, Tiere und sogar wir Menschen sind symmetrisch.
     x-media(src="images/starfish.jpg" width=200 height=200 lightbox)
 :::
 
-_{button.next-step} Weiter_
-
----
-
 Im Laufe der Zeit haben wir die Symmetrie der Natur in Kunst, Architektur, Technologie
 und Design nachgeahmt. Symmetrische Formen und Muster scheinen einfach schöner
 _zu sein_ als unsymmetrische.
@@ -37,23 +33,20 @@ Aber bei der Symmetrie geht es um viel mehr, als einfach nur _schön auszusehen_
 unserem Universum zu Grunde und kann sogar die grundlegendsten
 Gesetze der Physik erklären.
 
-Obwohl man sich unter Symmetrie sehr leicht etwas vorstellen kann, ist es
-schwieriger als man vermuten würde, sie mathematisch zu beschreiben. Zuerst müssen wir etwas über
-_Abbildungen_ lernen.
+_{button.next-step} Weiter_
 
 ---
-
-## Abbildungen
-
 > id: transformations
 > goals: t1 t2 t3
-> section: transformations
 
-Unter einer [__Abbildung__](gloss:transformation) versteht man ganz spezielle Regeln, wie eine geometrische Figur in eine andere
-umgewandelt wird. Hier sind einige Beispiele:
+Obwohl man sich unter Symmetrie sehr leicht etwas vorstellen kann, ist es
+schwieriger als man vermuten würde, sie mathematisch zu beschreiben. Zuerst
+müssen wir über [__Abbildung__](gloss:transformation) lernen. Darunter versteht
+spezielle Regeln, wie eine geometrische Figur in eine andere umgewandelt wird.
+Hier sind einige Beispiele:
 
 ::: column.r(width=200)
-    .animation
+    .animation#star
       include svg/transform-1.svg
       x-play-btn
 ::: column.r(width=200)
@@ -66,18 +59,29 @@ umgewandelt wird. Hier sind einige Beispiele:
       x-play-btn
 :::
 
+---
+> id: transformations-1
+
 {.reveal(when="t1 t2 t3")} Das Ergebnis einer Abbildung wird als
 [__Bild__](gloss:transformation-image) bezeichnet. Das Bild einer Figur `A` wird in der Regel
 mit `A'` bezeichnet (ausgesprochen als "A Strich").
 
----
-> id: rigid
+Das erste Beispiel oben ist besonderes, da wir den ursprüngliche Stern nur
+bewegen und drehen, aber nicht seine Größe oder Form verändern. Abbildungen mit
+dieset Eigenschaft nennt man [__Kongruenzabbildungen__](gloss:rigid-transformation).
 
-Zunächst werden wir nur uns nur mit Abbildungen befassen, die die Größe und Form der
-ursprünglichen Figur nicht verändern. Stell dir vor, sie besteht aus einem festen
-Material wie Holz oder Metall: Wir können sie bewegen, drehen und wenden, aber wir können sie nicht dehnen
-oder irgendwie verformen. Diese Abbildungen werden als
-[__Kongruenzabbildungen (längentreue Abbildungen)__](gloss:rigid-transformation) bezeichnet.
+---
+
+## Kongruenzabbildungen
+
+> id: rigid
+> section: rigid
+
+Eine [__Kongruenzabbildungen (längentreue Abbildungen)__](gloss:rigid-transformation)
+ist eine Abbildung die Größe und Form der ursprüngliche Figur nicht verändert.
+Stell dir vor, sie besteht aus einem festen Material wie Holz oder Metall: Wir
+können sie bewegen, drehen und wenden, aber wir können sie nicht dehnen
+oder irgendwie verformen.
 
 Welche dieser Abbildungen sind längentreu?
 
@@ -455,39 +459,6 @@ _{button.next-step} Weiter_
 Eckpunkte verbinden, um das gedrehte Bild unserer ursprünglichen Figur zu erhalten.
 :::
 
-    // ---
-    // > id: composition
-    // 
-    // ### Composition of Transformations
-    // 
-    // Of course, we can combine multiple translations, reflections and rotations to
-    // create more complex transformations.
-    // 
-    // {.todo} TODO Example
-    // 
-    // However, as it turns out, it doesn’t matter how many different transformations
-    // you combine: you can always find another transformation that does the same in
-    // one go!
-    // 
-    // {.todo} TODO Transformation composition calculator
-    // 
-    // Combining two reflections is particularly interesting. There are two different
-    // cases we need to consider:
-    // 
-    // ::: column.grow
-    // If the two lines of reflection are parallel, the result is a single translation.
-    // The direction of the translation is perpendicular to the lines of reflection,
-    // and the distance is twice the distance between the lines of reflection.
-    // 
-    // {.todo} TODO Animation
-    // ::: column.grow
-    // If the two lines of reflection intersect, the result is a single rotation. The
-    // center of rotation is the intersection between the lines of reflection, and the
-    // angle is twice the angle between the lines of reflection.
-    // 
-    // {.todo} TODO Animation
-    // :::
-
 ---
 > id: composition-1
 
@@ -495,8 +466,15 @@ Abbildungen sind in vielen Bereichen der Mathematik eine wichtige Grundlage, nic
 Geometrie. Beispielsweise kann man [_Funktionen_](gloss:function) transformieren ("abbilden"),
 indem man ihre [Graphen](gloss:function-graph) verschiebt oder dreht.
 Andere Abbildungen (Transformationen) haben nicht einmal eine visuelle Darstellung.
-Du wirst mehr über diese Abbildungen in späteren Kursen erfahren, aber für den Moment wollen
-wir zur Symmetrie weitergehen.
+
+---
+
+## Kongruenz
+
+> section: congruence
+> sectionStatus: dev
+
+TODO
 
 ---
 
@@ -766,7 +744,7 @@ Vervollständige diese Figuren, so dass sie rotationssymmetrisch sind:
 
 ---
 
-## Symmetriegruppen
+## Symmetriegruppen und Muster
 
 > id: groups
 > section: symmetry-groups
@@ -967,15 +945,14 @@ Konzepte zu analysieren…
 
 ---
 
-## Ornamentgruppen
+### Ornamentgruppen
 
 > id: wallpaper-groups
-> section: wallpaper-groups
 
-In den vorangegangenen Abschnitten haben wir nun zwei verschiedene Arten von Symmetrie gesehen, die zwei verschiedenen Abbildungen
-entsprechen: Drehungen und Spiegelungen. Aber
-es gibt auch eine Symmetrie für die dritte Art der Kongruenzabbildung:
-[[Verschiebungen|Verwirbelungen|Saltos]].
+Im [vorigen Kapitel](/course/transformations/symmetry) haben wir zwei
+verschiedene Arten von Symmetrie gesehen, die zwei verschiedenen Abbildungen
+entsprechen: Drehungen und Spiegelungen. Aber es gibt auch eine Symmetrie für
+die dritte Art der Kongruenzabbildung: [[Verschiebungen|Verwirbelungen|Saltos]].
 
 ---
 > id: wallpaper-groups-1
@@ -1155,7 +1132,7 @@ das eine dreidimensionale Symmetriegruppe aufweist, sind die Moleküle von Borni
 
 > id: planets
 > sectionBackground: dark stars
-> section: symmetry-in-physics
+> section: physics
 
 Bisher waren alle Symmetrien, die wir betrachteten, in gewisser Weise _visuell_: sichtbare
 Formen, Bilder oder Muster. Tatsächlich kann Symmetrie ein viel weitreichenderes Konzept sein:
@@ -1220,10 +1197,10 @@ Physikern vorhergesagt, aber erst 2012 in der realen Welt beobachtet.
 
 ---
 
-## Ähnlichkeit
+## Streckung
 
 > id: dilations
-> section: similarity
+> section: dilations
 
 Bisher haben wir uns nur mit [[längentreuen|verformenden|visuellen]] Abbildungen beschäftigt.
 _{span.reveal(when="blank-0")} Widmen wir uns jetzt einer Abbildung, bei der das nicht so ist: Eine
@@ -1266,220 +1243,11 @@ Bild [[größer|kleiner]] als das Original.
 
 {.todo} COMING SOON – More on Dilations and Similarity
 
-    // ---
-    // > id: dilations-1
-    // 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-    // 
-    // ---
-    // > id: similarity
-    // 
-    // ::: column.grow
-    // For rigid transformations, the image is always [[congruent|larger|smaller]] to
-    // the original – but this is [[no longer|still]] true for dilations. Instead, we
-    // say that two shapes are [__similar__](gloss:similar). They have the same overall
-    // shape, but not necessarily the same size.
-    // 
-    // The symbol for similarity is `∼` (similar to the symbol for congruence, which
-    // was `≅`). In this example, we would write `A ∼ A'`.
-    // 
-    // ::: column(width=240)
-    // {.todo} COMING SOON – Illustration
-    // :::
-    // 
-    // ---
-    // > id: perspective
-    // 
-    // ### Perspective Drawings
-    // 
-    // You might have noticed that these dilations with the connecting rays almost look
-    // like __perspective drawings__. The center of dilation is called the __vanishing
-    // point__, because it looks like this is where everything is “vanishing in the
-    // distance”.
-    // 
-    // Find the vanishing point in the figure below:
-    // 
-    // {.todo} COMING SOON – Interactive
-    // 
-    // Now can you draw another house that matches the existing ones?
-    // 
-    // ---
-    // > id: similar-polygons
-    // 
-    // ### Similar Polygons
-    // 
-    // Similarity can tell us a lot about shapes. For example, [circles](gloss:circle),
-    // [squares](gloss:square) and [equilateral triangles](gloss:equilateral-triangle)
-    // are [[always|sometimes|never]] similar. They might have different sizes, but
-    // always the same general shape.
-    // 
-    // ::: column.grow
-    // The two quadrilaterals on the right are similar. Our first important observation
-    // is that in similar polygons, all the matching pairs of angles are
-    // [congruent](gloss:congruent-angles). This means that
-    // 
-    // {.text-center} [_{.m-red}`∡ABC`_ `≅` _{.m-red}`∡A'B'C'`_](target:a)_{.space}_
-    // [_{.m-blue}`∡BCD`_ `≅` _{.m-blue}`∡B'C'D'`_](target:b)  
-    // [_{.m-green}`∡CDE`_ `≅` _{.m-green}`∡C'D'E'`_](target:c)_{.space}_
-    // [_{.m-yellow}`∡DEA`_ `≅` _{.m-yellow}`∡D'E'A'`_](target:d)
-    // 
-    // The second important fact is that in similar polygons, all sides are scaled
-    // __proportionally__ by the scale factor of the corresponding dilation. If the
-    // scale factor is ${k}{k|1.5|0.5,2,0.1}, then
-    // 
-    // {.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
-    // `|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
-    // 
-    // We can instead rearrange these equations and eliminate the scale factor
-    // entirely:
-    // 
-    // {.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-    // 
-    //     // This proportional relationship is true not just for the sides of the
-    //     // polygon, but also for properties like diagonals.
-    // 
-    // We can use this to solve real life problems that involve similar polygons – for
-    // example finding the length of missing sides, if we know some of the other sides.
-    // In the following section you will see a few examples.
-    // ::: column(width=240)
-    // 
-    //     x-geopad.sticky(width=240 height=360): svg
-    //       - var x = ['a', 'b', 'c', 'd']
-    //       - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-    //       - var next = {a:'b', b:'c', c:'d', d:'a'}
-    //       - var prev = {a:'d', b:'a', c:'b', d:'c'}
-    //       - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-    //       each l in x
-    //         circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-    //         path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-    //         path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-    //         circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-    //         path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-    //         path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-    // :::
-    // 
-    // ---
-    // > id: similar-triangles
-    // 
-    // ### Similar Triangles
-    // 
-    // The concept of similarity is particularly powerful with triangles. We already
-    // know that the corresponding internal angles in similar polygons are equal.
-    // 
-    // For triangles, the opposite is also true: this means that if you have two
-    // triangles with the same three angle sizes, then the triangles must be similar.
-    // 
-    // And it gets even better! We know that the internal angles in a triangle always
-    // add up to [[180]]°. This means that if we know two angles in a triangle, we can
-    // always work out the third one.
-    // 
-    // For similarity, this means that we also just need to check _two angles_ to
-    // determine if triangles are similar. If two triangles have two angles of the same
-    // size, then the third angle must also be the same in both.
-    // 
-    // This result is sometimes called the [__AA Similarity Condition__](gloss:triangle-aa)
-    // for triangles. (The two _As_ stand for the two _angles_ we compare.)
-    // 
-    // ::: .theorem
-    // If two angles in one triangle are congruent to two angles in another triangle,
-    // the two triangles are similar.
-    // :::
-    // 
-    // ---
-    // > id: similar-triangles-1
-    // 
-    // Let’s have a look at a few examples where this is useful:
-    // 
-    // ::: column(width=320)
-    // {.todo} COMING SOON – Animation
-    // 
-    // ::: column.grow
-    // Here you can see the image of a large lighthouse. Together with a friend, you
-    // want to measure the height of the lighthouse, but unfortunately we cannot climb
-    // to the top.
-    // 
-    // It turns out that, very well hidden, the diagram contains two similar triangles:
-    // one is formed by the lighthouse and its shadow, and one is formed by your friend
-    // and her shadow.
-    // 
-    // Both triangles have one right angle at the bottom. The sun rays are parallel,
-    // which means that the other two angles at the bottom are corresponding angles,
-    // and also equal. By the AA condition for triangles, these two must be similar.
-    // 
-    // We can easily measure the length of the shadows, and we also know the height of
-    // your friend. Now we can use the proportionality of sides in similar triangles
-    // to find the height of the lighthouse:
-    // 
-    // {.todo} COMING SOON – Equation
-    // 
-    // Therefore the lighthouse is 1.5m tall.
-    // :::
-    // 
-    // ---
-    // > id: similar-triangles-2
-    // 
-    // ::: column(width=320)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // We can use the same technique to measure distances on the ground. Here we want
-    // to find the width of a large river. There is a big tree on one side of the
-    // river, and I’ve got a stick that is one meter long.
-    // 
-    // Try drawing another two similar triangles in this diagram.
-    // 
-    // You can mark the point along the side of the river, that lies directly on the
-    // line of sight from the end of the stick to the tree. Then we can measure the
-    // distances to the stick, and to the point directly opposite the tree.
-    // 
-    // Once again, these two triangles are similar because of the AA condition. They
-    // both have a right angle, and on pair of opposite angles.
-    // 
-    // According to the proportionality rule, this means that
-    // 
-    // {.todo} COMING SOON – Equation
-    // 
-    // Therefore the width of the river is 45 meters.
-    // :::
-
 ---
-> id: outro
 
-Dreiecke sind nicht nur zum Messen von Entfernungen geeignet. Im nächsten Kurs
-werden wir viel mehr über Dreiecke und ihre Eigenschaften erfahren.
+## Ähnlichkeit
 
+> section: similarity
+> sectionStatus: dev
 
-    // ### Similarity on Rays
-    //
-    // Theorem: If a ray bisects an angle of a triangle, then it divides the
-    // opposite side into segments that are proportional to the lengths of the
-    // other two sides.
-    // 
-    // We can extend this theorem to a situation outside of triangles where we
-    // have multiple parallel lines cut by transverals.
-    // 
-    // Theorem: If three or more parallel lines are cut by two transversals, then they
-    // divide the transversals proportionally.
-    // 
-    // Think about a midsegment of a triangle. A midsegment is parallel to one side of
-    // a triangle and divides the other two sides into congruent halves. The midsegment
-    // divides those two sides proportionally.
-    // 
-    // Triangle Proportionality Theorem: If a line parallel to one side of a triangle
-    // intersects the other two sides, then it divides those sides proportionally.
-    // 
-    // Triangle Proportionality Theorem Converse: If a line divides two sides of a
-    // triangle proportionally, then it is parallel to the third side.
-
-
+TODO
