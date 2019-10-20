@@ -1,692 +1,516 @@
 # ==============================================================================
-# Mathigon Curriculum Overview
+# Mathigon Curriculum Outline
+# (c) Mathigon
 # ==============================================================================
+
 
 
 # ------------------------------------------------------------------------------
 # Foundations
 
-# Numbers and Arithmetic
-
 integers:
-  name: The Integers
-  topics:
-    - Whole number arithmetic  # Addition, subtraction, multiplication, division
-    - Negative numbers
-    - The number line
-    - Absolute value
-    - Inverse operations
-    - Order of operations
-    - Associative, commutative and distributive law
-    - Division by zero
-  color: 31b304
+  title: The Integers
+  color: 22ab24
+  sections:
+    - title: TODO
 
-divisibility-and-primes:
-  name: Divisibility and Primes
-  topics:
-    - Factors and multiples
-    - Prime numbers and prime factorisationn
-    - LCM and HCF
-    - Divisibility rules
-  color: 4ab706
+divisibility:
+  title: Divisibility and Primes
+  description: Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.
+  color: 1ea53d
+  locales: [en, cn, de, tr]
 
 fractions:
-  name: Fractions
-  topics:
-    - Comparing fractions
-    - Simplifying fractions
-    - Addition and subtraction
-    - Multiplication and division
-    - Mixed numbers and improper fractions
-  color: 63bb08
+  title: Fractions
+  color: 1a9f56
+  sections:
+    - title: TODO
 
 decimals:
-  name: Decimals
-  topics:
-    - Decimal notation
-    - Decimals on the number line
-    - Addition and subtraction
-    - Multiplication and division
-    - Converting between fractions and decimals
-  color: 7cc00a
+  title: Decimals
+  color: 16996e
+  sections:
+    - title: TODO
 
-percentages-and-ratios:
-  name: Percentages and Ratios
-  topics:
-    - Percentages
-    - Percentage change
-    - Ratio notation
-    - Calculating ratios
-  color: 94c40c
+percentages:
+  title: Rates, Percentages and Ratios
+  color: 129387
+  sections:
+    - title: TODO
 
-exponents-and-roots:
-  name: Exponents and Roots
-  topics:
-    - Exponents
-    - Exponent laws
-    - Roots, negative and fractional exponents
-    - Rationalising the denominator
-    - Rational and irrational numbers
-    - Approximating irrational numbers using rationals
-  color: adc80e
+exponents:
+  title: Roots and Exponents
+  color: 118fa2
+  sections:
+    - title: TODO
 
-place-value-and-rounding:
-  name: Place Value and Rounding
-  topics:
-    - Place value
-    - Big and small numbers
-    - Ordering
-    - Rounding integers and decimals
-    - Scientific notation
-    - Different bases
-  color: c6cc10
+shapes:
+  title: Area and Shapes
+  color: 0f82f2
+  sections:
+    - title: Introduction
+    - title: Parallelograms and Triangles
+    - title: Polygons
+    - title: Circles and Circumferences
+    - title: Area of Circles
 
+polygons:
+  title: Angles and Polygons
+  color: 2470de
 
-# Equations and Functions
+solids:
+  title: 3D Solids
+  color: 385eca
+  sections:
+    - title: Polyhedra
+    - title: Nets and Surface Area
+    - title: Volumes and Cuboids
+    - title: Prisms and Pyramids
+    - title: Cylinders and Cones
+    - title: Spheres
 
-proportional-relationships:
-  name: Proportional Relationships
-  topics:
-    - Direct and inverse proportions
-    - Graphs of proportional relationships
-    - Scale factors
-    - Rate of change
-  color: ff941f
+measuring:
+  title: Units and Measuring
+  color: 4d4cb5
+  sections:
+    - title: TODO
 
-intro-to-algebra:
-  name: Introduction to Algebra
-  topics:
-    - Introduction and history
-    - Variables
-    - Writing, manipulating and evaluating algebraic expressions
-    - Modelling using algebra
-  color: f2791a
+algebra:
+  title: Introduction to Algebra
+  color: fd8c00
+  sections:
+    - title: TODO
+
+proportional:
+  title: Proportional Relationships
+  color: f5740d
+  sections:
+    - title: TODO
 
 linear-equations:
-  name: Linear Equations
-  topics:
-    - Equations and identities
-    - Manipulating and rearranging equations
-    - Linear equations in one variable
-    - Solve simultaneous linear equations
-    - Linear inequalities
-  color: e65d16
+  title: Linear Equations
+  color: ee5b1b
+  sections:
+    - title: Reasoning with Tape Diagrams
+    - title: Weighing and Balancing
+    - title: Manipulating Equations
+    - title: Solving Linear Equations
+    - title: Inequalities
 
 linear-functions:
-  name: Linear Functions
-  topics:
-    - Introduction to functions
-    - Graphs of linear equations
-    - Intercepts and slope
-    - Parallel and perpendicular lines
-  color: d94211
-
-
-# Geometry
-
-lines-and-angles:
-  name: Lines and Angles
-  topics:
-    - Points, lines, segments and rays
-    - Parallel and perpendicular lines
-    - Angles and classification (acute, right, obtuse)
-    - Adjacent, opposite, alternate and corresponding angles
-    # - Shortest distance between points and lines
-    - The coordinate plane
-  color: 1f7aff
-
-2d-shapes:
-  name: 2D Shapes
-  topics:
-    - Area and perimeter of triangles and quadrilaterals
-    - Area and circumference of circles
-    - Sum of angles in polygons
-    - Ruler and compass construction
-    - Pythagoras’ theorem
-    - Congruence and similarity  # transformations
-  color: '3559e3'
-
-3d-solids:
-  name: 3D Solids
-  topics:
-    - Cuboids, prisms and pyramids
-    - Cones, cylinders and spheres
-    - Cavalieri’s principle
-    - Density and weights
-    - Nets of 3D solids
-    - Cross-sections of 3D objects
-    - Modelling the real world
-  color: 4b39c8
-
-units-and-measuring:
-  name: Units and Measuring
-  topics:
-    - Space, time and weight units
-    - Unit conversion
-    - Measuring angles distances in geometric figures
-    - Scale drawings
-  color: 6118ac
-
-
-# Probability and Statistics
+  title: Linear Functions
+  color: e64328
 
 basic-probability:
-  name: Basic Probability
-  topics:
-    - Introduction
-    - Simple probability experiments
-    - Unions, intersections and Venn diagrams
-    - Independent and mutually exclusive events
-    - Calculating probabilities
-    - Tree diagrams
-  color: b30469
+  title: Basic Probability
+  color: cd0e66
+  sections:
+    - title: Introduction
+    - title: Coins, Cards and Dice
+    - title: Multi-Step Experiments
+    - title: Designing Simulations
 
 combinatorics:
-  name: Combinatorics
-  topics:
-    - Factorials
-    - Permutations and combinations
-    - Probability
-    - Random Walks
-  color: ab0741
+  title: Combinatorics
+  color: a2207e
+  sections:
+    - title: Factorials
+      preview: /world/Combinatorics
+    - title: Permutations
+      preview: /world/Combinatorics#permutations
+    - title: Combinations
+      preview: /world/Combinatorics#combinations
+    - title: Winning the Lottery
+      preview: /world/Combinatorics#lottery
 
-data-and-statistics:
-  name: Data and Statistics
-  topics:
-    - Questions about data
-    - Mean, meadian and mode
-    - Range, quartiles, standard deviation and outliers
-    - Sampling and estimation
-    - Bar charts, pie charts, scatter plots and frequency tables
-    - Stem-and-leaf plots, box plots and histograms
-    - Relationships between variables
-    - Misleading statistics
-  color: a20918
+data:
+  title: Data and Statistics
+  color: 773195
+  sections:
+    - title: Introduction
+    - title: Dot Plots and Histograms
+    - title: Box Plots
+    - title: Mean, Median and Mode
+    - title: Sampling
+    - title: Comparing Populations
+    - title: Scatter Plots and Linear Models
 
 
 # ------------------------------------------------------------------------------
 # Intermediate
 
-# Algebra
-
-sequences:
-  name: Sequences and Patterns
-  topics:
-    - Triangle, square and cube numbers
-    - Linear and quadratic sequences
-    - Fibonacci numbers
-    - Perfect numbers
-    - Arithmetic and geometric sequences
-    - Recursive equations
-    - Pascal’s triangle
-  color: ff941f
-
-functions:
-  name: Functions
-  topics:
-    - Function notation  (input and output)
-    - Domain and range
-    - Absolute value and piecewise functions
-    - Increasing, decreasing, maxima and minima
-    - Recognising and interpreting functions
-    - Approximate solutions to equations
-    - Graphing two-variable equations
-    - Average rate of change
-    - Area under a curve
-  color: f7841c
-
-polynomials-and-factorisation:
-  name: Polynomials and Factorisation
-  topics:
-    - Adding, subtracting and multiplying polynomials
-    - Binomials
-    - Difference of squares
-    - Factoring simple polynomials
-  color: f07319
-
-quadratics:
-  name: Quadratics
-  topics:
-    - Solving quadratic equations
-    - Completing the square
-    - The quadratic formula
-    - Parabolae
-    - Standard and vertex form
-    - Transforming parabolae
-  color: e86317
-
-inequalities-and-systems:
-  name: Inequalities and Systems of Equations
-  topics:
-    - Linear inequalities
-    - Quadratic inequalities
-    - Graphing two-variable inequalities
-    - Systems of equations with two unknowns
-    - Elimination and substitution methods
-  color: e15214
-
-exponential-and-rational:
-  name: Exponential and Rational Functions
-  topics:
-    - Exponents, radicals and rational expressions
-    - Square and cube root equations
-    - Radical functions
-    - Exponential growth and decay
-    - Linear vs exponential models
-  color: d94211
-
-
-# Geometry
-
 euclidean-geometry:
-  name: Euclidean Geometry
-  topics:
-    - History and definitions
-    - Congruence
-    - Euclid’s postulates
-    - Straight-edge and compass constructions
-    - Origami
-    - Applications
-  color: 1f7aff
+  title: Euclidean Geometry
+  description: Geometry is one of the oldest parts of mathematics – and one of the most useful. Its logical, systematic approach has been copied in many other areas.
+  color: 0f82f2
+  locales: [en, de, tr]
+  next: transformations
 
-transformations-and-symmetry:
-  name: Transformations and Symmetry
-  topics:
-    - Reflections, rotations and translations
-    - Reflectional and rotational symmetry
-    - Symmetry groups
-    - Wallpaper symmetries
-    - Similarity
-  color: 2c66ee
+transformations:
+  title: Transformations and Symmetry
+  description: Symmetry can be seen everywhere in nature – but it also underlies completely invisible laws of nature. Mathematics can explain why that is the case.
+  color: 1f74e2
+  locales: [en, de, tr]
+  next: triangles
 
-triangles-and-trigonometry:
-  name: Triangles and Trigonometry
-  topics:
-    - Triangle properties
-    - Medians, midsegments, incircle and circumcircle
-    - Triangle inequality
-    - Triangle congruence
-    - Pythagoras’ theorem
-    - Isosceles and equilateral triangles
-    - Trigonometry
-    - Sine and cosine rules
-  color: 3953de
+triangles:
+  title: Triangles and Trigonometry
+  description: "Triangles are some of the most important shapes in geometry: they have countless interesting properties and appear everywhere in engineering and technology."
+  color: 3065d2
+  locales: [en, de, tr]
+  next: polyhedra
 
-polygons-and-polyhedra:
-  name: Polygons and Polyhedra
-  topics:
-    - Angles in polygons
-    - Polygons properties
-    - Quadrilaterals
-    - Tessellations
-    - Polyhedra
-    - Euler’s Formula
-    - Platonic and Archimedean solids
-  color: 473fcd
+polyhedra:
+  title: Polygons and Polyhedra
+  description: Geometric shapes are everywhere around us. In this course you will learn about angels, polygons, tessellations, polyhedra and nets.
+  color: 4057c1
+  locales: [en, de]
+  next: circles
 
-circles-and-pi:
-  name: Circles and Pi
-  topics:
-    - Circles and Pi
-    - Tangents
-    - Circle theorems
-    - Radians
-    - Sectors and arcs
-    - Inscribed shapes and angles
-    - Spheres, cones and cylinders
-  color: 542cbd
+circles:
+  title: Circles and Pi
+  trailer: tBJUNvCBkLo
+  color: 5148b1
+  locales: [en, de]
+  next: graph-theory
 
 non-euclidean-geometry:
-  name: Non-Euclidean Geometry
-  topics:
-    - Metric spaces
-    - Spherical geometry
-    - Hyperbolic geometry
-    - Projections
-    - Higher dimensions
-    - Topology
-    - Möbius strip and Klein bottle
-  color: 6118ac
+  title: Non-Euclidean Geometry
+  color: 613aa1
+  sections:
+    - title: Introduction
+      preview: /world/Dimensions_and_Distortions
+    - title: Metric Spaces
+      preview: /world/Dimensions_and_Distortions#metric
+    - title: Spherical Geometry
+      preview: /world/Dimensions_and_Distortions#spherical
+    - title: Map Projections
+      preview: /world/Dimensions_and_Distortions#projections
+    - title: Hyperbolic Geometry
+      preview: /world/Dimensions_and_Distortions#hyperbolic
+    - title: Higher Dimensions
+    - title: Topology
+      preview: /world/Dimensions_and_Distortions#topology
 
+functions:
+  title: Functions
+  color: fd8c00
+  sections:
+    - title: Relations and Functions
+    - title: Graphing Functions
+    - title: Solving Equations Graphically
+    - title: Domain and Rage
+    - title: Absolute Value Functions
+    - title: Inverse Functions
+    - title: Rates of Change
 
-# Probability and Discrete Mathematics
+sequences:
+  title: Sequences and Patterns
+  description: Learn about some of the most fascinating patterns in mathematics, from triangle numbers to the Fibonacci sequence and Pascal’s triangle.
+  trailer: u2vwpDVj5rU
+  color: f87d08
+  locales: [en, cn]
+  next: quadratics
+
+equations:
+  title: Linear Equations and Inequalities
+  color: f46f10
+  sections:
+    - title: Solving Linear Equations
+    - title: Graphing Linear Functions
+    - title: Systems of Linear Equations
+    - title: Row Operations and Elimination
+    - title: Linear Inequalities
+    - title: Inequalities in Two Variables
+    - title: Systems of Inequalities
+
+quadratics:
+  title: Quadratic Equations
+  color: ef6018
+  next: graph-theory
+
+exponentials:
+  title: Exponential Functions
+  color: eb5220
 
 probability:
-  name: Probability
-  topics:
-    - Introduction
-    - Coins, dice and roulette
-    - Venn diagrams and probability trees  # set operations, combined events
-    - Independent and mutually exclusive events
-    - Conditional probability
-    - Addition and multiplication rule
-    - The Monty Hall problem
-    - Randomness
-  color: b30469
+  title: Probability
+  description: "Cards, dice, roulette and game shows: probability is one of the most fun areas of mathematics, full of surprises and real life applications."
+  color: cd0e66
+  locales: [en, tr]
+  next: statistics
 
 statistics:
-  name: Statistics
-  topics:
-    - Sampling and estimation
-    - Tables, graphs and histograms
-    - Central tendency and spread
-    - Scatter plots and regression
-    - Correlation vs causation
-    - Comparing models and data sets
-  color: b00559
+  title: Statistics
+  color: b71772
+  locales: [en, tr]
+  next: graph-theory
 
-graphs-and-networks:
-  name: Graphs and Networks
-  topics:
-    - Introduction
-    - Complete and bipartite graphs
-    - Königsberg bridges
-    - Planar graphs
-    - Euler’s formula
-    - Map colouring
-    - Travelling salesman problem
-    - Social networks and other applications
-  color: ac0649
+graph-theory:
+  title: Graphs and Networks
+  description: "Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks."
+  color: a2207e
+  locales: [en, vn]
+  next: probability
 
-codes-and-ciphers:
-  name: Codes and Ciphers
-  topics:
-    - Simple codes and Morse
-    - Error detection and correction
-    - One time pads
-    - The Caesar and Vigenère cipher
-    - The Enigma
-    - RSA cryptography
-  color: a90738
+codes:
+  title: Codes and Ciphers
+  color: 8c2889
 
 game-theory:
-  name: Game Theory
-  topics:
-    - Combinatorial games and Nim
-    - Tree diagrams
-    - Prisoners’ paradox
-    - Games based on chance
-    - The lottery
-  color: a50828
-
-algorithms:
-  name: Algorithms and Computing
-  topics:
-    - Introduction to computing
-    - Computational complexity and the O() notation
-    - Sorting algorithms
-    - Linear programming and the simplex algorithm
-    - Data structures
-    - Graphs, trees and networks
-  color: a20918
+  title: Game Theory
+  color: 8c2889
+  sections:
+    - title: The Winning Move
+      preview: /world/Game_Theory
+    - title: Cards, Coins and Dice
+    - title: The Prisoners’ Dilemma
+      preview: /world/Game_Theory#prisoners-dilemma
+    - title: Gamblers’ Ruin
 
 
 # ------------------------------------------------------------------------------
 # Advanced
 
-# Algebra and Analysis
+polynomials:
+  title: Polynomials
+  color: fd8c00
+  sections:
+    - title: Introduction
+    - title: Zeros of Polynomials
+    - title: Sketching Polynomial Functions
+    - title: The Factor and Remainder Theorems
+    - title: Systems of Equations
 
-advanced-algebra:
-  name: Advanced Algebra
-  topics:
-    - Manipulating rational expressions
-    - Systems of quadratic equations
-    - Linear and quadratic inequalities
-    - Partial fraction expansion
-    - Polynomials
-    - Polynomial division
-    - Factor and remainder theorem
-    - Binomial theorem
-    - Fundamental theorem of algebra
-    - Solve polynomial equations up to quartics
-  color: ff941f
+function-transforms:
+  title: Function Transformations
+  color: f87d08
+  sections:
+    - title: Combining and Composing Functions
+    - title: Translating Functions
+    - title: Reflecting Functions
+    - title: Scaling Functions
+    - title: Inverse functions
 
-advanced-functions:
-  name: Advanced Functions
-  topics:
-    - Combining and composing functions
-    - Inverse functions
-    - Function transformations (shifting and stretching)
-    - Polynomial functions
-    - Rational functions and discontinuities
-    - Limit behaviour of polynomial and rational functions
-    - Graph sketching
-  color: f6801b
+rationals:
+  title: Rationals and Radicals
+  color: f46f10
+  sections:
+    - title: Rational and Irrational Numbers
+    - title: Rational Functions
+    - title: Manipulating Rational Expressions
+    - title: Solving Rational Equations
+    - title: Exponent Laws
+    - title: Radical Functions
+    - title: Solving Radical Equations
 
-exponentials-and-logarithms:
-  name: Exponentials and Logarithms
-  topics:
-    - Exponential equations
-    - Exponential growth and decay
-    - Introduction to Logarithms
-    - The natural logarithm and e
-    - Logarithmic equations
-    - Graphs of exponential and logarithmic functions
-    - Logarithmic scale
-  color: ec6b18
+logarithms:
+  title: Exponentials and Logarithms
+  color: ef6018
+  sections:
+    - title: Exponential Growth and Decay
+    - title: Exponential Functions
+    - title: Introduction to Logarithms
+    - title: Laws of Logarithms
+    - title: The Number e
+    - title: Logarithmic Functions
 
-numerical-methods:
-  name: Numerical Methods
-  topics:
-    - Change of sign methods
-    - Interval bisection
-    - Newton-Raphson method
-  color: e35715
+series:
+  title: Sequences and Series
+  color: eb5220
+  sections:
+    - title: Sequences
+    - title: Series and Sigma Notation
+    - title: Arithmetic and Geometric Series
+    - title: The Binomial Theorem
 
-sequences-and-series:
-  name: Sequences and series
-  topics:
-    - Binomial expansion of (a + bx)^n
-    - Recurrence relations
-    - Arithmetic and geometric series
-    - Sigma notation
-    - Maclaurin series
-    - Convergence and divergence
-  color: d94211
+logic:
+  title: Logic, Sets and Proof
+  color: e64328
+  sections:
+    - title: Logic and Paradoxes
+      preview: /world/Logic_and_Paradoxes
+    - title: Sets, Axioms and Proof
+      preview: /world/Axioms_and_Proof
+    - title: Proof by Contradiction
+      preview: /world/Axioms_and_Proof#contradiction
+    - title: Proof by Induction
+      preview: /world/Axioms_and_Proof#induction
+    - title: Infinity and Hilbert’s Hotel
+      preview: /world/Infinity
 
-
-# The Language of Mathematics
-
-logic-sets-and-proof:
-  name: Logic, Sets and Proof
-  topics:
-    - Set theory
-    - Logic and proof
-    - Proof by contradiction
-    - Proof by induction
-  color: 31b304
-
-complex-numbers:
-  name: Imaginary and Complex Numbers
-  topics:
-    - Introduction
-    - Complex algebra
-    - The complex plane
-    - Modulus and argument form
-    - Complex conjugates
-    - Quadratic, cubic and quartic equations
-    - De Moivre’s theorem
-    - Euler’s identity
-    - Complex roots of unity
-  color: 7cc00a
-
-infinity:
-  name: 'Infinity'
-  topics:
-    - Hilbert’s hotel
-    - Countability
-    - Cantor’s diagonal
-    - The continuum hypothesis
-  color: c6cc10
-
-
-# Geometry, Trigonometry and Matrices
-
-coordinate-geometry:
-  name: Coordinate Geometry
-  topics:
-    - Equation of lines and circles
-    - Distances and midpoints
-    - Parallel and perpendicular lines
-    - Quadrilaterals and polygons
-  color: 1f7aff
-
-conic-sections:
-  name: Conic Sections
-  topics:
-    - Equation of a circle
-    - Ellipses
-    - Parabolae and hyperbolae
-    - Kepler’s laws and planetary orbits
-  color: 2a6af1
+coordinate-geo:
+  title: Coordinate Geometry
+  color: 0f82f2
+  sections:
+    - title: Equations of Lines
+    - title: Parallel and Perpendicular Lines
+    - title: Equations of Circles
+    - title: Properties of Polygons
+    - title: Transformations
 
 trigonometry:
-  name: Trigonometry
-  topics:
-    - Unit circle definitions
-    - Trigonometric functions and their graphs
-    - Amplitude and frequency
-    - Trigonometric values of special angles
-    - Pythagorean identities
-    - Sine and cosine rules
-    - Double angle and addition formulas
-    - Secant, cosecant and cotangent
-    - Inverse trigonometric functions
-    - Simple trigonometric equations
-    - Small angle approximation
-    - Hyperbolic functions
-  color: '3559e3'
+  title: Trigonometry
+  color: 1f74e2
+  sections:
+    - title: The Unit Circle Definition
+    - title: Graphs of Trigonometric Functions
+    - title: Amplitude, Frequency and Transformations
+    - title: Pythagorean Identities
+    - title: More Trigonometric Identities
+    - title: Inverse Trigonometric Functions
+    - title: Circular Motion
+
+conics:
+  title: Conic Sections and Polar Coordinates
+  color: 3065d2
+  sections:
+    - title: Parametric Curves
+    - title: Circles and Ellipses
+    - title: Parabolae
+    - title: Hyperbolae
+    - title: Polar Coordinates
 
 vectors:
-  name: Vectors
-  topics:
-    - Introduction
-    - Magnitude and direction
-    - Vector arithmetic
-    - Position vectors
-    - Scalar product
-    - Equation of lines and planes
-  color: 4049d6
+  title: Vectors
+  color: 4057c1
+  sections:
+    - title: Introduction
+    - title: Vector Arithmetic
+    - title: Scalar Products and Equations of Planes
+    - title: Cross Products and Equations of Lines
+    - title: Geometry Problems
 
 matrices:
-  name: Matrices
-  topics:
-    - Introduction
-    - Matrix arithmetic
-    - Matrix multipliction
-    - Matrices as transformations
-    - Determinants
-    - Matrix inverses
-    - Linear systems of equations
-    - Gaussian elimination
-  color: 4b39c8
+  title: Matrices
+  color: 5148b1
+  sections:
+    - title: Matrices as Transformations
+    - title: Matrix Arithmetic
+    - title: Determinants
+    - title: Matrix Inverses
+    - title: Cramer’s Rule and Gaussian Elimination
+    - title: Eigenvalues and Eigenvectors
 
-parametric-and-polar:
-  name: Parametric and Polar Coordinates
-  topics:
-    - Parametric curves
-    - Conversion between polar and cartesian
-    - Sketching polar curves
-    - Area enclosed by a polar curve
-  color: 5628ba
+complex:
+  title: Complex Numbers
+  color: 613aa1
+  sections:
+    - title: Introduction
+      preview: /world/Real_Irrational_Imaginary#imaginary
+    - title: The Complex Plane
+    - title: Modulus and Argument
+    - title: Quadratic, Cubic and Quartic Equations
+    - title: Euler’s Identity and De Moivre’s Theorem
+    - title: Complex Roots of Unity
 
 fractals:
-  name: Fractals
-  world: Fractals
-  topics:
-    - Dimension of fractals
-    - The Sierpinski gasket
-    - Mandelbrot set
-    - Fractals in nature and technology
-  color: 6118ac
-
-
-# Calculus
+  title: Fractals
+  color: 773195
+  sections:
+    - title: Introduction
+      preview: /world/Fractals
+    - title: The Sierpinski Gasket
+      preview: /world/Fractals#sierpinski
+    - title: The Mandelbrot Set
+      preview: /world/Fractals#mandelbrot
 
 differentiation:
-  name: Differentiation
-  topics:
-    - Differentiation as gradient of tangents
-    - Limits and rate of change
-    - Simple derivatives
-    - Product rule, quotient rule and chain rule
-    - Implicit differentiation
-    - Increasing, decreasing, convex and concave functions
-    - Equations of tangents and normals
-    - Stationary points and optimisation problems
-    - Derivatives of inverse functions
-    - Mean value theorem
-    - L’Hôpital’s rule
-  color: ff941f
+  title: Differentiation
+  color: 22ab24
+  sections:
+    - title: Introduction
+    - title: Limits and Gradients
+    - title: Differentiation Rules I
+    - title: Differentiation Rules II
+    - title: Optimisation problems
 
 integration:
-  name: Integration
-  topics:
-    - Integrals as anti-derivatives
-    - Integrals as areas under a curve
-    - Fundamental theorem of calculus
-    - Trapezium rule
-    - Integration by parts or substitution
-    - Integration using partial fraction expansions
-    - Integration using trigonometric identities
-    - Improper integrals
-    - Arc length
-    - Volumes of revolution
-  color: f2791a
+  title: Integration
+  color: 1ea53d
+  sections:
+    - title: Introduction
+    - title: Integration Rules I
+    - title: Integration Rules II
+    - title: Definite Integrals and Areas under a Curve
+    - title: Numerical Integration
+    - title: Improper Integrals
+    - title: Solids of Revolution
 
-differential-equations:
-  name: Differential Equations
-  topics:
-    - First order differential equations
-    - Separable equations
-    - Logistic map
-    - Second order differential equations
-    - Homogenous equations and particular integral
-    - Coupled differential equations
-    - Simple harmonic motion and dampened oscillators
-  color: e65d16
+numerical:
+  title: Numerical Methods
+  color: 1a9f56
+  sections:
+    - title: Solving Equations Numerically
+    - title: The Newton­-Raphson Method
+    - title: Maclaurin and Taylor series
+
+diff-equations:
+  title: Differential Equations
+  color: 16996e
+  sections:
+    - title: Simple Differential Equations
+    - title: First Order Separable Equations
+    - title: Second Order Differential Equations
+    - title: Homogenous Equations and Particular Integrals
+    - title: Simple Harmonic Motion
+    - title: Coupled Differential Equations
 
 chaos:
-  name: Chaos Theory
-  topics:
-    - Double Pendulums
-    - Three body problem
-    - Logistic Map
-    - Strange Attractors
-    - Butterfly effect
-    - Chaotic scattering
-  color: d94211
+  title: Chaos Theory
+  color: 129387
+
+adv-probability:
+  title: Advanced Probability
+  color: cd0e66
+  sections:
+    - title: Introduction
+    - title: Discrete Random Variables
+    - title: The Normal Distribution
+    - title: Binomial and Poisson Distribution
+    - title: Continuous Random Variables
+    - title: Random Walks
+
+adv-statistics:
+  title: Statistics and Hypothesis Tests
+  color: b71772
+  sections:
+    - title: Data Representation
+    - title: Experiments and Sampling
+    - title: Hypothesis Tests
+    - title: Estimation and Confidence Intervals
+    - title: The Law of Large Numbers and Central Limit Theorem
+    - title: Chi Squared Tests and Correlation Coefficients
+    - title: Bayesian Statistics
+
+algorithms:
+  title: Algorithms
+  color: a2207e
+  sections:
+    - title: Introduction to Computing
+    - title: Complexity and O Notation
+    - title: Sorting Algorithms
+    - title: Linear Programming and the Simplex Algorithm
+    - title: Graphs, Trees and Networks
+
+machine-learning-1:
+  title: Machine Learning
+  color: 8c2889
+  sections:
+    - title: Introduction
+    - title: Linear Regression
+    - title: Neural Networks
+    - title: Support Vector Machines
+    - title: Unsupervised Learning
+    - title: Tensor Flow
 
 
-# Probability and Statistics
+# ------------------------------------------------------------------------------
+# External
 
-advanced-probability:
-  name: Advanced Probability
-  topics:
-    - Populations and sample spaces
-    - Random variables and distributions
-    - Binomial distribution
-    - Poisson distribution
-    - Normal distribution
-    - Expectation and variance
-    - Law of large numbers
-    - Modelling
-  color: b30469
-
-hypothesis-tests:
-  name: Hypothesis Tests
-  topics:
-    - Designing statistical experiments
-    - Hypothesis tests
-    - Estimating population mean
-  color: ab0741
-
-data-representation:
-  name: Data Representation
-  topics:
-    - Histograms and frequency tables
-    - Scatter plots and regression
-    - Mean and standard deviation
-    - Data collection
-    - Data visualisation
-  color: a20918
+exploding-dots:
+  title: Exploding Dots
+  description: A mathematical story developed for Global Math Week – learn about place value, infinity and p-adic numbers.
+  tile: /images/og-tile/exploding-dots.jpg
+  color: 613aa1
+  hideTitle: true
