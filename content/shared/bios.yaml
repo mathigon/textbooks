@@ -17,14 +17,14 @@ abel:
     proved that it is impossible to solve quintic equations – by independently
     inventing group theory. This had been an open problem for over 350 years! He
     also worked on elliptic functions and discovered _Abelian_ functions.
-    
+
     Abel spent his life in poverty: he had six siblings, his father died when he
     was 18, he was unable to find a job at a university, and many mathematicians
     initially dismissed his work. Today, one of the highest awards in
     mathematics, the _Abel Prize_ is named after him.
   links:
     - title: Group Theory
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 al-haytham:
   born: 965
@@ -70,7 +70,7 @@ al-khwarizmi:
     Compendious Book on Calculation by Completion and Balancing”. In it, he
     showed how to solve linear and quadratic equations, and for many centuries,
     it was the main mathematics textbook at European universities.
-    
+
     Al-Khwarizmi also worked in astronomy and geography, and the word
     “algorithm” is named after him.
 
@@ -82,7 +82,7 @@ apollonius:
     astronomer best known for his work on the four _conic sections_.
   links:
     - title: Conic Sections
-      url: /course/circles-and-pi/conic-sections
+      url: /course/circles/conic-sections
 
 appel:
   name: Appel
@@ -92,7 +92,7 @@ appel:
 
     In recognition, he and Haken received the Fulkerson Prize of the American
     Mathematical Society.
-    
+
     Appel studied at Queens College, New York, and the University of Michigan.
     He taught at the University of Illinois, and the University of New
     Hampshire.
@@ -110,14 +110,14 @@ archimedes:
     irregular objects using the amount of water they displaced when submerged.
     He was so excited by this discovery that he ran out on the street, still
     undressed, yelling _“Eureka!”_ (Greek for _“I have found it!”_).
-    
+
     As an engineer, he built ingenious defence machines during the siege of his
     home city Syracuse in Sicily. After two years, the Romans finally managed to
     enter, and Archimedes was killed. His last words were _“Do not disturb my
     circles”_ – which he was studying at the time.
   links:
     - title: Archimedean Solids
-      url: /course/polygons-and-polyhedra/more-on-polyhedra
+      url: /course/polyhedra/platonic#archimedean
 
 aristotle:
   born: -384
@@ -133,7 +133,7 @@ aristotle:
     highly influential during the Middle Ages and into the Renaissance, and his
     views on ethics and other philosophical questions are still being discussed
     today.
-    
+
     Aristotle is also the first known person to formally study _logic_,
     including its applications in science and mathematics.
 
@@ -148,7 +148,7 @@ aryabhata:
     realised that _π_ is irrational.
   links:
     - title: Trigonometry
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Quadratic Equations
       url: /course/quadratics/introduction
 
@@ -181,7 +181,7 @@ bernoulli-1:
     and Leibnitz, created the field of _calculus of variations_, discovered the
     fundamental constant _e_, developed techniques for solving differential
     equations, and much more.
-    
+
     He published the first substantial work about probability, including
     permutations, combinations and the law of large numbers, he proved the
     binomial theorem, and derived many of the properties of Bernoulli numbers.
@@ -199,7 +199,7 @@ bernoulli-2:
     decreases. Now called _Bernoulli’s principle_, this is the mechanism used by
     airplane wings and combustion engines. He also made important discoveries
     in probability and statistics, and first encountered _Bessel functions_.
-    
+
     At the age of 34, he was banned from his father’s house for beating him at
     an award from the Paris Academy, for which they both submitted an entry.
 
@@ -281,7 +281,7 @@ cantor:
     Cantor proved that there are _different sizes_ of infinity. The set of real
     numbers, for example, is _uncountable_ – meaning that it cannot be paired up
     with the set of natural numbers.
-    
+
     Only towards the end of his life, Cantor started to receive the recognition
     he deserved. David Hilbert famously declared that “No one shall expel us
     from the paradise that Cantor has created”.
@@ -353,7 +353,7 @@ cavalieri:
     and exchanged many letters with Galileo Galilei.
   links:
     - title: Cavalieri’s Principle
-      url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
+      url: /course/circles/spheres-cones-cylinders#cavalieri
 
 cayley:
   born: 1821
@@ -366,7 +366,7 @@ cayley:
     worked on higher-dimensional geometry.
   links:
     - title: Group Theory
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 collatz:
   name: Collatz
@@ -406,12 +406,12 @@ copernicus:
     axis once every day. Afraid that it would upset the Catholic church, he
     only published the model just before his death – triggering what is now
     called the _Copernican Revolution_.
-    
+
     Copernicus also worked as a diplomat and physician, and made important
     contributions to economist.
   links:
     - title: Planetary Orbits
-      url: /course/circles-and-pi/conic-sections#orbits
+      url: /course/circles/conic-sections#orbits
 
 de-moivre:
   born: 1667
@@ -453,7 +453,7 @@ democritus:
     in geometry, including the formula for the volume of prisms and cones.
   links:
     - title: Volume of a Cone
-      url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
+      url: /course/circles/spheres-cones-cylinders#cone-volume
 
 desargues:
   born: 1591
@@ -472,7 +472,7 @@ desargues:
     essentially the same.
   links:
     - title: Conic Sections
-      url: /course/circles-and-pi/conic-sections
+      url: /course/circles/conic-sections
 
 descartes:
   born: 1596
@@ -487,7 +487,7 @@ descartes:
     Descartes is the father of _analytical geometry_, which allows us to
     describe geometric shapes using algebra. This was one of the prerequisites,
     which allowed Newton and Leibnitz to invent _calculus_ a few decades later.
-    
+
     He is credited with the first use of superscripts for powers or exponents,
     and the _cartesian coordinate system_ is named after him.
 
@@ -531,7 +531,7 @@ einstein:
     Einstein triggered the most significant transformation in our view of the
     universe since Newton. He realised that classical, _Newtonian_ physics was
     no longer enough to explain certain physical phenomenons.
-    
+
     At the age of 26, during his “miracle year”, he published four
     groundbreaking scientific papers that explained the photoelectric effect
     and Brownian motion, introduced special relativity, and derived the formula
@@ -548,14 +548,14 @@ eratosthenes:
     Among many other achievements, Eratosthenes calculated the circumference of
     the Earth, measured the tilt of the Earth’s axis of rotation, estimated the
     distance to the sun, and created some of the first maps of the world.
-    
+
     He also invented the “Sieve of Eratosthenes”, an efficient way to
     calculate _prime numbers_.
   links:
     - title: Radius of the Earth
-      url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
+      url: /course/circles/tangets-chords-arcs#eratosthenes
     - title: Sieve of Eratosthenes
-      url: /course/divisibility-and-primes/prime-numbers#eratosthenes
+      url: /course/divisibility/prime-numbers#eratosthenes
 
 erdos:
   born: 1913
@@ -584,7 +584,7 @@ escher:
   small: true
   links:
     - title: Tessellations in Art
-      url: /course/polygons-and-polyhedra/tessellations#escher
+      url: /course/polyhedra/tessellations#escher
 
 euclid:
   name: Euclid
@@ -600,7 +600,7 @@ euclid:
     - title: Euclid’s Axioms
       url: /course/euclidean-geometry/euclids-axioms
     - title: Infinitely many Primes
-      url: /course/divisibility-and-primes/prime-numbers#primes3
+      url: /course/divisibility/prime-numbers#primes3
 
 euler:
   name: Euler
@@ -613,17 +613,17 @@ euler:
 
     Euler was born in Switzerland and studied in Basel, but lived most of his
     life in Berlin, Prussia, and St. Petersburg, Russia.
-    
+
     Euler invented much of the modern mathematical terminology and notation, and
     made important discoveries in calculus, analysis, graph theory, physics,
     astronomy, and many other topics.
   links:
     - title: Königsberg Bridges Problem
-      url: /course/graphs-and-networks/bridges-of-koenigsberg
+      url: /course/graph-theory/bridges-of-koenigsberg
     - title: Euler’s Formula
-      url: /course/graphs-and-networks/eulers-formula
+      url: /course/graph-theory/planar-graphs
     - title: Polyhedrons
-      url: /course/polygons-and-polyhedra/polyhedra
+      url: /course/polyhedra/polyhedra
 
 fermat:
   name: Fermat
@@ -695,7 +695,7 @@ galileo:
     Galileo, sometimes called the “father of modern science”, also studied the
     motion of objects in free fall, kinematics, material science, and invented
     the thermoscope (an early thermometer).
-    
+
     He was a vocal proponent of _Heliocentrism_, the idea that the Sun was at
     the centre of our solar system. This eventually led to him being tried by
     the Catholic Inquisition: Galileo was forced to recant and spent the rest
@@ -714,18 +714,18 @@ galois:
     While still in his teens, Galois proved that there is no general solution
     for polynomial equations of degree five or higher – simultaneously with
     Niels Abel.
-    
+
     Unfortunately, other mathematicians who he shared these discoveries with
     repeatedly misplaced or simply returned his work, and he failed his school
     and university exams while concentrating on much more complex work.
-    
+
     At the age of 21, Galois was shot in a duel (some say a feud over a woman),
     and later died of his wounds. In the night before his death, he summarised
     his mathematical discoveries in a letter to a friend. It would take other
     mathematicians many years to fully realise the true impact of his work.
   links:
     - title: Group Theory
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 gauss:
   name: Gauss
@@ -743,7 +743,7 @@ gauss:
     teenager, and later tutored many other famous mathematicians as Professor.
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -781,7 +781,7 @@ godel:
     sufficiently powerful) mathematical system contains certain statements that
     are true but cannot be proven. In other words, mathematics contains certain
     problems that are impossible to solve.
-    
+
     This result had a profound impact on the development and philosophy of
     mathematics. Gödel also found an example of these “impossible theorems”:
     the _continuum hypothesis_.
@@ -800,7 +800,7 @@ goldbach:
     Peter II, and is remembered for his “Goldbach Conjecture“.
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/the-distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -849,7 +849,7 @@ hamilton:
     He first came up with the idea while walking along the Royal Canal in
     Dublin, and carved the fundamental formula into a stone bridge he passed:
     `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
-    
+
     Hamilton also made significant contributions to physics, including optics
     and Newtonian mechanics.
 
@@ -867,7 +867,7 @@ hardy:
     self-taught clerk from India. Hardy immediately recognised his genius, and
     arranged for Ramanujan to travel to Cambridge where he was working.
     Together, they made important discoveries and authord numerous paper.
-    
+
     Hardy always dislkied applied mathematics and expressed this in his personal
     account of mathematical thinking, the 1940 book _A Mathematician’s Apology_.
 
@@ -942,7 +942,7 @@ jiushao:
     a triangle based on the length of its three sides, calculated the sum of
     arithmetic series, and introduced a symbol for “zero” into Chinese
     mathematics.
-    
+
     Qin also invented _Tianchi basins_, which were used to measure rainfall and
     gather meteorological data important for farming.
 
@@ -960,7 +960,7 @@ johnson:
     and emergency return paths was widely known. Even after the arrival of
     computers, astronaut John Glenn asked her to personally re-check the
     electronic results.
-    
+
     In 2015, Johnson received the Presidential Medal of Freedom.
 
 karinthy:
@@ -979,7 +979,7 @@ kepler:
     optics, and invented an improved telescope for his observations.
   links:
     - title: Elliptical Orbits
-      url: /course/circles-and-pi/conic-sections#kepler
+      url: /course/circles/conic-sections#kepler
 
 khayyam:
   name: Khayyam
@@ -1006,7 +1006,7 @@ lagrange:
     He worked on analysis and the calculus of variations, invented new
     methods for solving differential equations, proved theorems in number
     theory, and laid the foundations of group theory.
-    
+
     Lagrange also wrote about classical and celestial mechanics, and helped
     establish the metric system in Europe.
 
@@ -1034,7 +1034,7 @@ laplace:
     from _geometry_ to _calculus_. This opened up a wide range of new strategies
     for understanding our universe. He proposed that the solar system developed
     from a rotating disk of dust.
-    
+
     Laplace also pioneered the field of probability, and showed how probability
     can help us understand data from the physical world.
 
@@ -1067,7 +1067,7 @@ leonardo:
     Rome, Bologna, and Venice. Only 15 of his paintings have survived, but among
     them are some of the best known and most reproduced works in the world,
     including the _Mona Lisa_ and _The Last Supper_.
-    
+
     His notebooks contain a vast number of drawings, inventions, and scientific
     diagrams – including the first flying machines and helicopters, hydraulic
     pumps, bridges, and much more.
@@ -1133,9 +1133,9 @@ madhava:
     formula for _π_ (also using infinite series).
   links:
     - title: Trigonometry
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Pi
-      url: /course/circles-and-pi/introduction
+      url: /course/circles/introduction
 
 mandelbrot:
   born: 1924
@@ -1170,7 +1170,7 @@ mersenne:
     and wrote about theology and philosophy.
   links:
     - title: Large Primes
-      url: /course/divisibility-and-primes/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/the-distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1192,7 +1192,7 @@ mirzakhani:
     Maryam worked at the intersection of dynamical systems and geometry. She
     studied objects like _hyperbolic surfaces_ and _complex manifolds_, but
     also contributed to many other areas of mathematics.
-    
+
     When solving problems, Maryam would draw doodles and diagrams on large
     sheets of paper, to see the underlying patterns and beauty. Her daughter
     even described Maryam’s work as “painting”. At the age of 40, Maryam died
@@ -1279,16 +1279,16 @@ newton:
     In his book _Principia Mathematica_, Newton formulated the laws of motion
     and gravity, which laid the foundations for classical physics and dominated
     our view of the universe for the next three centuries.
-    
+
     Among many other things, Newton was one of the inventors of calculus, built
     the first reflecting telescope, calculated the speed of sound, studied the
     motion of fluids, and developed a theory of colour based on how prisms split
     sunlight into a rainbow-coloured spectrum.
   links:
     - title: Gravity
-      url: /course/circles-and-pi/conic-sections#newton
+      url: /course/circles/conic-sections#newton
     - title: Digits of Pi
-      url: /course/circles-and-pi/introduction#pi-record
+      url: /course/circles/introduction#pi-record
 
 nicomachus:
   name: Nicomachus
@@ -1332,7 +1332,7 @@ noether:
   small: true
   links:
     - title: Symmetry in Physics
-      url: /course/transformations-and-symmetry/symmetry-in-physics
+      url: /course/transformations/physics
 
 oresme:
   born: 1323
@@ -1409,7 +1409,7 @@ penrose:
     non-periodic tessellations.
   links:
     - title: Penrose Tilings
-      url: /course/polygons-and-polyhedra/tessellations#penrose
+      url: /course/polyhedra/tessellations#penrose
 
 perelman:
   born: 1966
@@ -1425,7 +1425,7 @@ perelman:
     Medal_ which is the highest recognition in mathematics. In fact, he said:
     _“I’m not interested in money or fame; I don’t want to be on display like an
     animal in a zoo.”_
-    
+
     Perelman also made contributions to Riemannian geometry and geometric
     topology, and the Poincaré Conjecture is still the only one of the seven
     Millennium Prize problems to have been solved.
@@ -1464,7 +1464,7 @@ plato:
     thinkers of all time.
   links:
     - title: Platonic Solids
-      url: /course/polygons-and-polyhedra/platonic-solids
+      url: /course/polyhedra/platonic
 
 poincare:
   born: 1854
@@ -1478,12 +1478,12 @@ poincare:
     Poincaré is one of the founders of the field of _Topology_, and he came up
     with the _Poincaré conjecture_. This was one of the famous unsolved problems
     in mathematics, until it was proven in 2003 by Grigori Perelman
-    
+
     He also found a partial solution for the “three body problem”, and
     discovered that the motion of three stars or planets in space can be
     completely unpredictable. This laid the foundation for modern _Chaos
     theory_.
-    
+
     Poincaré was the first to propose _gravitational waves_, and his work on
     Lorentz transformations was the basis upon which Albert Einstein built his
     theory of special relativity.
@@ -1509,9 +1509,9 @@ ptolemy:
     created detailed maps of the Earth, and wrote about music theory and optics.
   links:
     - title: Trigonometry
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Orbits
-      url: /course/circles-and-pi/introduction
+      url: /course/circles/introduction
 
 pythagoras:
   name: Pythagoras
@@ -1525,13 +1525,13 @@ pythagoras:
     Pythagoras tried to explain music in a mathematical way, and discovered that
     two tones sound “nice” together (consonant) if the ratio of their
     frequencies is a simple fraction.
-    
+
     He also founded a school in Italy where he and his students worshipped
     mathematics almost like a religion, while following a number of bizarre
     rules – but the school was eventually burned down by their adversaries.
   links:
     - title: Pythagoras’ Theorem
-      url: /course/triangles-and-trigonometry/pythagoras-theorem
+      url: /course/triangles/pythagoras
 
 ramanujan:
   born: 1887
@@ -1548,7 +1548,7 @@ ramanujan:
     genius, and arranged for him to travel to Cambridge in England. Together,
     they made numerous discoveries in number theory, analysis, and infinite
     series.
-    
+
     Unfortunately, Ramanujan soon fell ill and was forced to return to India,
     where he died at the age of 32. During his short life, Ramanujan proved over
     3000 theorems and equations, on a wide range of topics. His work created
@@ -1576,7 +1576,7 @@ riemann:
     regarding the distribution of prime numbers.
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
 
 russell:
   born: 1872
@@ -1592,7 +1592,7 @@ russell:
     formal foundation for mathematics using logic. His work has had a
     significant impact not just on maths and philosophy, but also on
     linguistics, artificial intelligence and metaphysics.
-    
+
     Russell was a passionate pacifist and anti-war activist. In 1950, he
     received the Nobel Prize in Literature, for his work “in which he champions
     humanitarian ideals and freedom of thought”.
@@ -1610,7 +1610,7 @@ shannon:
   small: true
   links:
     - title: Computers for Gambling
-      url: /course/probability/casino-mathematics#dealer
+      url: /course/statistics/casino#dealer
 
 shijie:
   born: 1249
@@ -1696,11 +1696,11 @@ turing:
     Enigma code used by the German military, as part of the “Government Code and
     Cypher School” at Bletchley Park. This helped the Allies win the war, and
     may have saved millions of lives.
-    
+
     He also invented the _Turing machine_, a mathematical model of a general
     purpose computer, and the _Turing test_, which can be used to judge the
     ability of artificial intelligence.
-    
+
     Turing was gay, which was still a crime during his life, and meant that his
     groundbreaking accomplishments were never fully recognised. He committed
     suicide at the age of 41.
@@ -1756,11 +1756,11 @@ wiles:
     wonderful proof that the equation `a^n + b^n = c^n` has no integer
     solutions for `n > 2`. Unfortunately, no one was able to find a proof –
     until Wiles, some 400 years later.
-    
+
     Wiles had been fascinated by the problem since the age of 10, and spent
     seven years working on it in solitude. He announced his solution in 1993,
     although a small gap in his argument took two more years to fix.
-    
+
     He was too old to receive the _Fields medal_, the highest award in
     mathematics, which has an age limit of 40. Instead, Wiles was awarded a
     special silver plaque for his work.

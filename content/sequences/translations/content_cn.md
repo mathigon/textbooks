@@ -1557,7 +1557,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 ---
 > id: primes-3
 
-在我们的[整除和素数](/course/divisibility-and-primes)课程中，你可以学到更多的
+在我们的[整除和素数](/course/divisibility/primes)课程中，你可以学到更多的
 关于素数的这些和其他性质的知识。它们是数学中最重要和最神秘的概念之一！
 
     figure: img(src="images/primes.svg" width=480 height=156) 

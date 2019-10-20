@@ -7,7 +7,7 @@ export function loadD3() {
   const load3 = script('/resources/shared/vendor/topojson.v1.min.js');
 
   return Promise.all([load1, load2, load3])
-      .then(() => fetch('/resources/circles-and-pi/images/world-110m.json'))
+      .then(() => fetch('/resources/circles/images/world-110m.json'))
       .then(text => text.json())
       .then(world => ({d3, topojson, world}));
 }

@@ -1695,7 +1695,7 @@ number, we get a “stepped” function with fascinating properties.
 > id: primes-3
 
 You can learn more about these and other properties of prime numbers in our
-course on [Divisibility and Primes](/course/divisibility-and-primes). They are
+course on [Divisibility and Primes](/course/divisibility/primes). They are
 some of the most important and most mysterious concepts in mathematics!
 
     figure: img(src="images/primes.svg" width=480 height=156) 

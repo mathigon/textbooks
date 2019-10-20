@@ -21,13 +21,13 @@ arithmetic-sequence:
 dodecahedron:
   title: 正十二面体
   text: __正十二面体__是由12个正五边形组成的柏拉图式固体。它有20个顶点和30条边。
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 factor:
   title: 因子
   text: 一个数是 _a_ 是另一个数 _b_ 的 __因子 __(或 __除数 __)，如果你能用 _a_
     整除 _b_ 同时没有余数。
-  link: /course/divisibility-and-primes/factors-and-multiples
+  link: /course/divisibility/factors-and-multiples
 
 fibonacci-numbers:
   title: 斐波那契数
@@ -103,7 +103,7 @@ pi:
   title: 圆周率
   text: __圆周率___, 通常希腊字母 _π_ 的写法表示，它是圆周和圆直径的比值。
     其值约为3.14159265…
-  link: /course/circles-and-pi/introduction#pi-definition
+  link: /course/circles/introduction#pi-definition
 
 powers:
   title: 幂
@@ -114,7 +114,7 @@ powers:
 prime:
   title: 素数
   text: __素数__是一个整数，而且除了 1 和它自身之外没有其它整数因子。
-  link: /course/divisibility-and-primes/prime-numbers
+  link: /course/divisibility/prime-numbers
 
 proof:
   title: 证明
@@ -168,7 +168,7 @@ sequence-term:
 sieve-eratosthenes:
   title: 埃拉托色尼筛选法
   text: __埃拉托色尼筛选法__是一个通过连续消除_非_素数来寻找素数的过程。
-  link: /course/divisibility-and-primes/prime-numbers#eratosthenes
+  link: /course/divisibility/prime-numbers#eratosthenes
 
 square-numbers:
   title: 平方数
@@ -185,7 +185,7 @@ tetrahedral-numbers:
 tetrahedron:
   title: 四面体
   text: __四面体__是由四个等边三角形组成的柏拉图体。它有四个顶点和六条边。
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 triangle-numbers:
   title: 三角形数
@@ -198,4 +198,4 @@ twin-primes:
   title: 孪生素数
   text: __孪生素数__ 是像17和19一样的成对素数, 它们正好相隔两个数。仍然不知道
     是否有无穷多对双素数。
-  link: /course/divisibility-and-primes/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/the-distribution-of-primes#twin-primes

@@ -178,7 +178,7 @@ circular or spherical, and reducing their surface area.
 ### The Area of a Circle
 
 But how do we actually calculate the area of a circle? Let’s try the same
-technique we used for [finding the area quadrilaterals](/course/polygons-and-polyhedra/quadrilaterals):
+technique we used for [finding the area quadrilaterals](/course/polyhedra/quadrilaterals):
 we cut the shape into multiple different parts, and then rearrange them into a
 different shape we already know the area of (e.g. a rectangle or a triangle).
 
@@ -703,7 +703,7 @@ If the central angle is measured in [radians](gloss:radians) rather than
 
 Notice how the equations become much simpler, and _π_ cancels out everywhere.
 This is because, as you might recall, the [definition of
-radians](/course/circles-and-pi/radians#radians) is basically the length of an
+radians](/course/circles/radians#radians) is basically the length of an
 arc in a circle with radius 1.
 
 Now let’s see how we can use arcs and sectors to calculate the circumference of
@@ -1764,7 +1764,7 @@ like a circle, a sphere also has a __{.m-blue}diameter *d*__, which is
 ---
 > id: sphere-1
 
-{.r} In a [previous section](/course/circles-and-pi/tangets-chords-arcs#eratosthenes-1),
+{.r} In a [previous section](/course/circles/tangets-chords-arcs#eratosthenes-1),
 you learned how the Greek mathematician [Eratosthenes](bio:eratosthenes)
 calculated the radius of Earth using the shadow of a pole – it was 6,371 km.
 Now, let’s try to find the Earth’s total volume and surface area.

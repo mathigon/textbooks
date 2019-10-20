@@ -20,7 +20,7 @@ acute-triangle:
   title: Acute triangle
   text: In an __acute triangle__, all three interior angles are _acute_
     (less than 90°).
-  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+  link: /course/triangles/properties#classification
 
 adic:
   title: N-adic Numbers
@@ -127,7 +127,7 @@ archimedean-solid:
   text: An __Archimedean solid__ is a polyhedron made up of different kinds of
     regular polygons, that looks the same from every direction. There are 13
     different Archimedean solids.
-  link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
+  link: /course/polyhedra/platonic#archimedean
 
 arithmetic-mean:
   title: Arithmetic Mean
@@ -166,7 +166,7 @@ axis-of-symmetry:
   text: If a shape has reflectional symmetry, the __axis of symmetry__ is the
     line that divides it into two equal halves.
   image: reflectional-symmetry.svg
-  link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
+  link: /course/transformations/symmetry#reflectional-symmetry
 
 base-10:
   title: Base 10
@@ -179,7 +179,7 @@ bipartite-graph:
   text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is
     connected to all the vertices in the opposite set, but none of the vertices
     in its own set.
-  link: /course/graphs-and-networks/parties-and-dating#handshakes-4
+  link: /course/graph-theory/handshakes#handshakes-4
 
 blackjack:
   title: Blackjack
@@ -207,14 +207,14 @@ center-of-rotation:
   title: Center of Rotation
   text: The __center of rotation__ is the point around which a shape is being
     rotated.
-  link: /course/transformations-and-symmetry/transformations#rotations
+  link: /course/transformations/rigid#rotations
 
 centroid:
   title: Centroid
   text: The __centroid__ of a triangle is the point where its three medians
     intersect. It is also the “center of mass” of the triangle of uniform
     density.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#center-of-mass
+  link: /course/triangles/properties#center-of-mass
 
 chaos:
   title: Chaos
@@ -225,7 +225,7 @@ circle:
   text: A __circle__ is the set of all points in two dimensions, at a fixed
     distance (the _radius_) from a given point (the _center_).
   image: circle.svg
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-area:
   title: Area of a Circle
@@ -236,19 +236,19 @@ circle-circumference:
   title: Circumference of a Circle
   text: The __circumference__ of a circle is the distance around its outside
     edge. A circle with radius _r_ has circumference `C = 2 pi r`.
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-diameter:
   title: Diameter (circle)
   text: The __diameter__ of a circle is the distance between two opposite points
     on its circumference, and passing through its center.
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-radius:
   title: Radius
   text: The __radius__ of a circle is the distance (or a line segment) between
     its center and any point on its circumference.
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-sector:
   title: Circle Sector
@@ -258,7 +258,7 @@ circle-sector:
     well as the length of the arc. This means that
 
     {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
-  link:  /course/circles-and-pi/tangets-chords-arcs#sectors
+  link:  /course/circles/tangets-chords-arcs#sectors
   image: circle-sector.svg
 
 circle-segment:
@@ -271,7 +271,7 @@ circumcircle:
   text: The __circumcircle__ of a triangle is the circle that goes through all
     three of its vertices.
   image: circumcircle.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#circumcircle-1
+  link: /course/triangles/properties#circumcircle-1
 
 coefficient:
   title: Coefficient
@@ -298,7 +298,7 @@ complete-graph:
   title: Complete Graph
   text: In __complete graphs__, every vertex is connected to every other vertex.
     A complete graph with _n_ vertices has `(n×(n-1))/2` edges.
-  link: /course/graphs-and-networks/parties-and-dating#handshakes-3
+  link: /course/graph-theory/handshakes#handshakes-3
 
 complex-number:
   title: Complex Number
@@ -318,7 +318,7 @@ concave:
     At least one of the diagonals lies _outside_ the polygon. A common way to
     identify a concave polygon is to look for a “caved-in” side of the polygon.
     _Concave_ is the opposite of _convex_ polygons.
-  link: /course/polygons-and-polyhedra/polygons#concave
+  link: /course/polyhedra/polygons#concave
 
 cone:
   title: Cone
@@ -329,7 +329,7 @@ cone:
 
     A __right cone__ is a cone with its vertex directly above the center of its
     base.
-  link: /course/circles-and-pi/spheres-cones-cylinders#cone
+  link: /course/circles/spheres-cones-cylinders#cone
   image: cone.svg
 
 cone-volume:
@@ -363,14 +363,14 @@ conic-section:
     * Ellipse
     * Parabola
     * Hyperbola
-  link: /course/circles-and-pi/conic-sections
+  link: /course/circles/conic-sections
 
 convex:
   title: Convex polygon
   text: A __convex__ polygon contains no internal angles greater than 180°. All
     diagonals lie inside the polygon. This is the opposite of _concave_
     polygons.
-  link: /course/polygons-and-polyhedra/polygons#concave
+  link: /course/polyhedra/polygons#concave
 
 coordinate-system:
   title: Coordinate System
@@ -395,7 +395,7 @@ cos:
   text: __Cosine__ is a trigonometric function written as `cos(θ)`. In a right
     angled triangle, it is the ratio of the adjacent side and the hypotenuse.
   # cos(x) is a periodic function with period 2π.
-  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+  link: /course/triangles/trigonometry#trig-functions
 
 cpoct:
   title: CPOCT
@@ -403,7 +403,7 @@ cpoct:
     means that if two triangles are congruent, then all of their corresponding
     components (angles, sides, midsegments, …) must also be congruent to each
     other.
-  link: /course/triangles-and-trigonometry/triangles-congruence#cpoct
+  link: /course/triangles/congruence#cpoct
 
 cross-section:
   title: Cross section
@@ -420,7 +420,7 @@ cube:
   text: A __cube__ (sometimes called __Hexahedron__) is a regular polyhedron
     in which every face is a square. It is one of the five _Platonic solids_,
     and it has 6 faces, 8 vertices and 12 edges.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 cube-volume:
   title: Volume of a Cube
@@ -431,7 +431,7 @@ cylinder:
   text: A __cylinder__ is a three-dimensional solid consisting of two congruent,
     parallel, circular sides (the _bases_), joined by a curved surface. You
     could also think of a cylinder as a “circular prism”.
-  link: /course/circles-and-pi/spheres-cones-cylinders#cylinder-prism
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
   image: cylinder.svg
 
 cylinder-volume:
@@ -459,13 +459,13 @@ dilation:
   text: A __dilation__ is a transformation that resizes a geometric shape, by
     making it bigger or smaller.
   image: dilation.svg
-  link: /course/transformations-and-symmetry/similarity#dilations
+  link: /course/transformations/dilations
 
 directed-graph:
   title: Directed Graph
   text: In a __directed graph__, every edge as an arrow, i.e. a start vertex and
     an end vertex.
-  link: /course/graphs-and-networks/introduction#intro-1
+  link: /course/graph-theory/introduction#intro-1
 
 discriminant:
   title: Discriminant
@@ -491,7 +491,7 @@ dodecahedron:
   title: Dodecahedron
   text: The __Dodecahedron__ is a Platonic solid and consists of 12 faces that
     are regular pentagons. It has 20 vertices and 30 edges.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 dot-annihilation:
   title: Annihilation
@@ -521,7 +521,7 @@ ellipse:
     Ellipses are one type of _conic section_: an intersection of a cone with a
     plane.
   image: ellipse.svg
-  link: /course/circles-and-pi/conic-sections#ellipses
+  link: /course/circles/conic-sections#ellipses
 
 equation:
   title: Equation
@@ -547,7 +547,7 @@ factor:
   title: Factor
   text: A number _a_ is a __factor__ (or __divisor__) of a number _b_, if you
     can divide _b_ by _a_ without remainder.
-  link: /course/divisibility-and-primes/factors-and-multiples
+  link: /course/divisibility/factors-and-multiples
 
 factorial:
   title: Factorial
@@ -564,7 +564,7 @@ factorisation:
   title: Prime Factorisation
   text: The __prime factorisation__ of a number is a way to write it as a
     product of prime numbers.
-  link: /course/divisibility-and-primes/prime-numbers
+  link: /course/divisibility/prime-numbers
 
 fermat-last:
   title: Fermat’s Last Theorem
@@ -627,7 +627,7 @@ gcf:
   title: Greatest Common Factor
   text: The __greatest common factor__ (gcf) of two numbers _a_ and _b_ is the
     largest integer that is a factor of both _a_ and _b_.
-  link: /course/divisibility-and-primes/greatest-common-factors
+  link: /course/divisibility/greatest-common-factors
 
 geometric-sequence:
   title: Geometric Sequence
@@ -645,7 +645,7 @@ glide-reflection:
   text: A __glide reflection__ is a special kind of transformation. It is a
     combination of a _reflection_ and a _translation_ in the same direction as
     the axis of reflection.
-  link: /course/transformations-and-symmetry/wallpaper-groups#footsteps
+  link: /course/transformations/symmetry-groups#footsteps
 
 golden-ratio:
   title: Golden Ratio
@@ -661,32 +661,32 @@ golden-ratio:
 graph:
   title: Graph
   text: A __graph__ is a collection of vertices connected by edges.
-  link: /course/graphs-and-networks/introduction
+  link: /course/graph-theory/introduction
 
 graph-cycle:
   title: Cycle
   text: __Cycles__ are graphs that consist of a single ring of vertices.
-  link: /course/graphs-and-networks/introduction#intro-4
+  link: /course/graph-theory/introduction#intro-4
 
 graph-degree:
   title: Degree
   text: The __degree__ of a vertex is the number of edges that meet at that vertex.
-  link: /course/graphs-and-networks/introduction#intro-3
+  link: /course/graph-theory/introduction#intro-3
 
 graph-edge:
   title: Edge
   text: __Edges__ are the lines that connect vertices (points) in a graph.
-  link: /course/graphs-and-networks/introduction
+  link: /course/graph-theory/introduction
 
 graph-order:
   title: Order
   text: The __order__ of a graph is the number of vertices in it.
-  link: /course/graphs-and-networks/introduction#intro-3
+  link: /course/graph-theory/introduction#intro-3
 
 graph-vertex:
   title: Vertex
   text: A __vertex__ is a point or node that is part of a graph.
-  link: /course/graphs-and-networks/introduction
+  link: /course/graph-theory/introduction
 
 gravity:
   title: Gravity
@@ -711,7 +711,7 @@ group:
     2. The things are _associative_, which means that `a+(b+c) + (a+b)+c`.
     3. There is an _identity_, and every “thing” has an _inverse_ which, when
        added, gives the identity.
-  link: /course/transformations-and-symmetry/symmetry-groups#groups-1
+  link: /course/transformations/symmetry-groups#groups-1
 
 hailstone-sequence:
   title: Hailstone Sequence
@@ -748,7 +748,7 @@ icosahedron:
   title: Icosahedron
   text: The __Icosahedron__ is a Platonic solid and consists of 20 faces that
     are all equilateral triangles. It has 12 vertices and 30 edges.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 imaginary:
   title: Imaginary Numbers
@@ -810,7 +810,7 @@ kite:
   title: Kite
   text: A __kite__ is a quadrilateral in which two pairs of adjacent sides have
     the same length.
-  link: /course/polygons-and-polyhedra/quadrilaterals#kites
+  link: /course/polyhedra/quadrilaterals#kites
 
 laws-of-nature:
   title: Laws of Nature
@@ -822,7 +822,7 @@ lcm:
   title: Lowest Common Multiple
   text: The __Lowest Common Multiple__ (lcm) of two numbers _a_ and _b_ is the
     smallest integer that is a multiple of both _a_ and _b_.
-  link: /course/divisibility-and-primes/least-common-multiples
+  link: /course/divisibility/least-common-multiples
 
 line:
   title: Line
@@ -910,7 +910,7 @@ molecule:
 multiple:
   title: Multiple
   text: A number _a_ is a __multiple__ of a number _b_, if _b_ is a factor of _a_.
-  link: /course/divisibility-and-primes/factors-and-multiples
+  link: /course/divisibility/factors-and-multiples
 
 natural-numbers:
   title: Natural Numbers
@@ -941,7 +941,7 @@ obtuse-angle:
 obtuse-triangle:
   title: Obtuse triangle
   text: In an __obtuse triangle__, one interior angle is larger than 90°.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+  link: /course/triangles/properties#classification
 
 octagon:
   title: Octagon
@@ -951,14 +951,14 @@ octahedron:
   title: Octahedron
   text: The __Octahedron__ is a Platonic solid and consists of 8 faces that are
     equilateral triangles. It has 6 vertices and 12 edges.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 order-of-symmetry:
   title: Order of Symmetry
   text: If a shape has rotational symmetry, the __order of symmetry__ is the
     number of orientations in which the shape looks the same. (Or, it is the
     number of times you can rotate the shape, before we get back to the start.)
-  link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
+  link: /course/transformations/symmetry#rotational-symmetry
 
 origin:
   title: Origin
@@ -974,7 +974,7 @@ palindrome:
   text: A __palindrome__ is a word or number that reads the same from back to
     front as it does from front to back. For example, 25752 and “ANNA” are both
     palindromes.
-  link: /course/transformations-and-symmetry/symmetry#palindromes
+  link: /course/transformations/symmetry#palindromes
 
 parabola:
   title: Parabola
@@ -1013,7 +1013,7 @@ parallelogram:
   title: Parallelogram
   text: A __parallelogram__ is a quadrilateral in which both pairs of
     opposite sides are parallel.
-  link: /course/polygons-and-polyhedra/quadrilaterals#parallelograms
+  link: /course/polyhedra/quadrilaterals#parallelograms
 
 pascals-triangle:
   title: Pascal’s Triangle
@@ -1026,7 +1026,7 @@ penrose:
   title: Penrose tiling
   text: A __Penrose tiling__ is a _non-periodic_, _self-similar_ tessellation.
     It only consists of a few different shapes, but never repeats itself.
-  link: /course/polygons-and-polyhedra/tessellations#penrose
+  link: /course/polyhedra/tessellations#penrose
 
 pentagon:
   title: Pentagon
@@ -1063,7 +1063,7 @@ pi:
   text: __Pi__, often written as the Greek letter _π_, is the ratio of the
     circumference and the diameter of a circle. It is a transcendental number,
     and its value is approximately 3.14159265…
-  link: /course/circles-and-pi/introduction#pi-definition
+  link: /course/circles/introduction#pi-definition
 
 platonic-solid:
   title: Platonic solid
@@ -1071,7 +1071,7 @@ platonic-solid:
     polygon with the same number of edges, and where the same number of faces
     meet at every vertex. There are only five different Platonic solids: the
     Tetrahedron, Cube, Octahedron, Dodecahedron and Icosahedron."
-  link: /course/polygons-and-polyhedra/platonic-solids
+  link: /course/polyhedra/platonic
 
 point:
   title: Point
@@ -1085,7 +1085,7 @@ polygon:
     segments. Polygons cannot contain any curved sides, or holes. For example, a
     square is a polygon but a circle is not.
   image: polygon.svg
-  link: /course/polygons-and-polyhedra/polygons#polygons
+  link: /course/polyhedra/polygons#polygons
 
 polygon-diagonal:
   title: Diagonal
@@ -1107,29 +1107,29 @@ polyhedron:
   text: A __polyhedron__ (the plural is _polyhedra_) is a 3-dimensional solid
     with no curves surfaces or edges. All faces of a polyhedron are polygons.
     For example, a cube and a pyramid are polyhedra, but a sphere is not.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polyhedron-dual:
   title: Dual of a polyhedron
   text: TODO
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-dual
+  link: /course/polyhedra/platonic#platonic-dual
 
 polyhedron-edge:
   title: Edge of a polyhedron
   text: The __edges__ of a polyhedron are the line segments where two of its
     faces are connected.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polyhedron-face:
   title: Face of a polyhedron
   text: The __faces__ of a polyhedron are the polygons which make up its
     surface.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polyhedron-vertex:
   title: Vertex of a polyhedron
   text: The “corners” of a polyhedron are called its __vertices__.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polynomial:
   title: Polynomial
@@ -1155,12 +1155,12 @@ prime:
   title: Prime Number
   text: A __prime number__ is a positive integer that has no factors other than
     1 and itself. The first prime numbers are 2, 3, 5, 7, 11, 13, …
-  link: /course/divisibility-and-primes/prime-numbers
+  link: /course/divisibility/prime-numbers
 
 prime-factor:
   title: Prime Factor
   text: A __prime factor__ of a number is simply a factor which is prime.
-  link: /course/divisibility-and-primes/prime-numbers
+  link: /course/divisibility/prime-numbers
 
 prime-factorisation:
   title: Prime Factorisation
@@ -1219,13 +1219,13 @@ pythagoras-theorem:
   text: __Pythagoras’ Theorem__ states that in every right-angled triangle,
     `a^2 + b^2 = c^2`, where _c_ is the length of the hypotenuse and _a_ and _b_
     are the lengths of the other two sides.
-  link: /course/triangles-and-trigonometry/pythagoras-theorem
+  link: /course/triangles/pythagoras
 
 pythagorean-triple:
   title: Pythagorean triple
   text: A __Pythagorean triple__ is a set of three whole numbers _a_, _b_ and
     _c_ that satisfy Pythagoras’ Theorem `a^2 + b^2 = c^2`.
-  link: /course/triangles-and-trigonometry/pythagoras-theorem#pythagorean-triples
+  link: /course/triangles/pythagoras#pythagorean-triples
 
 quadratic:
   title: Quadratic
@@ -1261,7 +1261,7 @@ quadratic-function-vertex-form:
 quadrilateral:
   title: Quadrilateral
   text: A __quadrilateral__ is a polygon with four sides.
-  link: /course/polygons-and-polyhedra/quadrilaterals
+  link: /course/polyhedra/quadrilaterals
 
 quantum:
   title: Quantum Mechanics
@@ -1273,7 +1273,7 @@ radians:
   text: __Radians__ are a unit for measuring the size of angles. One complete
     revolution (360°) is `2π` radians – the length of the circumference of a
     unit circle.
-  link: /course/circles-and-pi/radians#radians
+  link: /course/circles/radians#radians
 
 radioactive:
   title: Radioactive Decay
@@ -1303,33 +1303,33 @@ real-numbers:
 rectangle:
   title: Rectangle
   text: A __rectangle__ is a quadrilateral in which all four angles are 90°.
-  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-1
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 reflection:
   title: Reflection
   text: A __reflection__ is a transformation that “flips” or “mirrors” a shape
     across a line.
-  link: /course/transformations-and-symmetry/transformations#reflections
+  link: /course/transformations/rigid#reflections
 
 reflectional-symmetry:
   title: Reflectional Symmetry
   text: A shape has reflectional symmetry if it looks the same after being
     reflected.
   image: reflectional-symmetry.svg
-  link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
+  link: /course/transformations/symmetry#reflectional-symmetry
 
 regular-polygon:
   title: Regular polygon
   text: A __regular polygon__ is a polygon in which all sides have the same
     length and all interior angles have the same size.
   image: regular-polygon.svg
-  link: /course/polygons-and-polyhedra/polygons#regular-polygons
+  link: /course/polyhedra/polygons#regular-polygons
 
 rhombus:
   title: Rhombus
   text: A __rhombus__ (the plural is _rhombuses_ or _rhombi_) is a quadrilateral
     in which all sides have the same length.
-  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-1
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 right-angle:
   title: Right angle
@@ -1339,13 +1339,13 @@ right-triangle:
   title: Right-angled triangle
   text: In a __right-angled triangle__, one interior angle is exactly 90°.
   image: right-triangle.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+  link: /course/triangles/properties#classification
 
 rigid-transformation:
   title: Rigid transformation
   text: A __rigid transformation__ (or __isometry__) is a transformation that
     doesn't change the size or shape of a geometric figure.
-  link: /course/transformations-and-symmetry/transformations#rigid
+  link: /course/transformations/rigid
 
 roman-numerals:
   title: Roman Numerals
@@ -1366,14 +1366,14 @@ rotation:
   title: Rotation
   text: A __rotation__ is a transformation that “turns” a shape by a certain
     angle around a fixed point.
-  link: /course/transformations-and-symmetry/transformations#rotations
+  link: /course/transformations/rigid#rotations
 
 rotational-symmetry:
   title: Rotational Symmetry
   text: A shape has rotational symmetry if it looks the same after being rotated
     (by less than 360°).
   image: rotational-symmetry.svg
-  link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
+  link: /course/transformations/symmetry#rotational-symmetry
 
 roulette:
   title: Roulette
@@ -1388,7 +1388,7 @@ scale-factor:
 
     A scale factor less than 1 indicates the shape is shrinked, and a scale
     factor greater than 1 indicates the shape is enlarged.
-  link: /course/transformations-and-symmetry/similarity#dilations-1
+  link: /course/transformations/dilations#dilations-1
 
 scalene-triangle:
   title: Scalene Triangle
@@ -1441,7 +1441,7 @@ sieve-eratosthenes:
   title: Sieve of Eratosthenes
   text: The __Sieve of Eratosthenes__ is a procedure for finding prime numbers,
     by continuoulsy eliminating numbers that are _not_ prime.
-  link: /course/divisibility-and-primes/prime-numbers#eratosthenes
+  link: /course/divisibility/prime-numbers#eratosthenes
 
 similar:
   title: Similar
@@ -1455,14 +1455,14 @@ sin:
   text: __Sine__ is a trigonometric function written as `sin(θ)`. In a right
     angled triangle, it is the ratio of the opposite side and the hypotenuse.
   # `sin(x) is a periodic function with period `2π`.
-  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+  link: /course/triangles/trigonometry#trig-functions
 
 sphere:
   title: Sphere
   text: A __sphere__ is a three-dimensional solid consisting of all points
     that have the same distance from a given _center_. This distance is called
     the _radius_ of the sphere.
-  link: /course/circles-and-pi/spheres-cones-cylinders#sphere
+  link: /course/circles/spheres-cones-cylinders#sphere
 
 sphere-radius:
   title: Radius of a Sphere
@@ -1473,7 +1473,7 @@ square:
   title: Square
   text: "A __square__ is a regular quadrilateral: all sides have the same
     length, and all angles have the same size (90°)."
-  link: /course/polygons-and-polyhedra/quadrilaterals
+  link: /course/polyhedra/quadrilaterals
 
 square-area:
   title: Area of a Square
@@ -1499,7 +1499,7 @@ subgraph:
   title: Subgraph
   text: A graph is a __subgraph__ of another graph, if it is formed by a subset
     of the larger graphs edges and vertices.
-  link: /course/graphs-and-networks/introduction#intro-2
+  link: /course/graph-theory/introduction#intro-2
 
 supplementary-angles:
   title: Supplementary angles
@@ -1509,13 +1509,13 @@ symmetry:
   title: Symmetry
   text: A figure or shape has __symmetry__, if it looks the same after being
     transformed in some way (e.g. reflection or rotation).
-  link: /course/transformations-and-symmetry/symmetry#symmetry
+  link: /course/transformations/symmetry#symmetry
 
 symmetry-group:
   title: Symmetry Group
   text: The __symmetry group__ of a geometric object is the collection of all of
     its _symmetries_ (as well as the _identity_).
-  link: /course/transformations-and-symmetry/symmetry-groups#groups-1
+  link: /course/transformations/symmetry-groups#groups-1
 
 tan:
   title: Tangent
@@ -1527,7 +1527,7 @@ tan:
 
     In a right angled triangle, `tan(θ)` is the ratio of the opposite side and
     the adjacent side of an angle `θ`.
-  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+  link: /course/triangles/trigonometry#trig-functions
 
 tangent:
   title: Tangent Line
@@ -1552,7 +1552,7 @@ tessellation:
   title: Tessellation
   text: A __tessellation__ is a geometric pattern that covers a surface without
     gaps or overlaps.
-  link: /course/polygons-and-polyhedra/tessellations
+  link: /course/polyhedra/tessellations
 
 tetrahedral-numbers:
   title: Tetrahedral Numbers
@@ -1565,7 +1565,7 @@ tetrahedron:
   title: Tetrahedron
   text: The __Tetrahedron__ is a Platonic solid and consists of four faces that
     are equilateral triangles. It has four vertices and six edges.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 theorem:
   title: Theorem
@@ -1578,26 +1578,26 @@ transformation:
   text: A __transformation__ converts one geometric shape into another. There
     are many different types of transformations, like _reflections_ or
     _dilations_.
-  link: /course/transformations-and-symmetry/transformations#transformations
+  link: /course/transformations/rigid#transformations
 
 transformation-image:
   title: Image of a Transformation
   text: After transforming a geometric shape, the result is called its
     __image__. It is often denoted by adding a ’ to the end of its label.
-  link: /course/transformations-and-symmetry/transformations#transformations
+  link: /course/transformations/rigid#transformations
 
 translation:
   title: Translation
   text: A __translation__ is a transformation that moves a figure in a specific
     direction, without changing its angle or shape.
   image: translation.svg
-  link: /course/transformations-and-symmetry/transformations#translations
+  link: /course/transformations/rigid#translations
 
 translational-symmetry:
   title: Translational Symmetry
   text: A repeated pattern (like a wallpaper) has __translational symmetry__ if
     it looks the same after being translated by a specific distance.
-  link: /course/transformations-and-symmetry/wallpaper-groups#wallpaper-groups-1
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
 
 transversal:
   title: Traversal
@@ -1608,7 +1608,7 @@ trapezium:
   text: A __trapezium__ (sometimes called __trapezoid__) is a quadrilateral in
     which two opposite sides are parallel. These are called the _bases_ of the
     trapezium, and the other two sides are called the _legs_.
-  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-2
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
 
 triangle:
   title: Triangle
@@ -1626,7 +1626,7 @@ triangle-altitude:
     one of the sides, that goes through the opposite vertex. Every triangle has
     three altitudes.
   image: triangle-altitude.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#altitudes
+  link: /course/triangles/properties#altitudes
 
 triangle-legs:
   title: Legs of a triangle
@@ -1646,14 +1646,14 @@ triangle-median:
   text: The __medians__ of a triangle are the line segments that connect each
     vertex to the midpoint of the opposite sides. The three medians of a
     triangle intersect in a single point called the __centroid__.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#medians
+  link: /course/triangles/properties#medians
 
 triangle-midsegment:
   title: Midsegment
   text: The __midsegments__ of a triangle are the lines that connect the
     midpoints of different sides of the triangle.
   image: triangle-midsegment.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#midsegments
+  link: /course/triangles/midsegments
 
 triangle-numbers:
   title: Triangle Numbers
@@ -1667,7 +1667,7 @@ triangle-sss:
   title: SSS condition for triangles
   text: Two triangles are __congruent__ if their three sides have the same
     length. This is called the __SSS congruence condition__ for triangles.
-  link: /course/triangles-and-trigonometry/triangles-congruence#congruence-1
+  link: /course/triangles/congruence#congruence-1
 
 trigonometry:
   title: Trigonometry
@@ -1675,20 +1675,20 @@ trigonometry:
     relationships between the sides and angles of triangles. It is primarily
     concerned with the trigonometric functions __sine__, __cosine__, __tangent__
     and their reciprocals.
-  link: /course/triangles-and-trigonometry/trigonometry
+  link: /course/triangles/trigonometry
 
 truncated-icosahedron:
   title: Truncated Icosahedron
   text: The __Truncated Icosahedron__ is an _Archimedean solid_ consisting of
     12 regular pentagons and 20 regular hexagons.
-  link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
+  link: /course/polyhedra/platonic#archimedean
 
 twin-primes:
   title: Twin Primes
   text: __Twin primes__ are pairs of prime numbers like 17 and 19 or 101 and
     103, which are exactly two apart. It is unknown if there are infinitely
     many pairs of twin primes.
-  link: /course/divisibility-and-primes/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/the-distribution-of-primes#twin-primes
 
 unit-circle:
   title: Unit Circle

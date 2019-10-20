@@ -205,10 +205,10 @@ export function piDigits($step) {
   const $input = $step.$('.pi-controls input');
   const $warning = $step.$('.pi-warning');
 
-  fetch('/resources/circles-and-pi/images/pi-100k.txt')
+  fetch('/resources/circles/images/pi-100k.txt')
       .then(response => response.text())
       .then(data => $scroller.setUp(data + '…'))
-      .then(() => fetch('/resources/circles-and-pi/images/pi-1m.txt'))
+      .then(() => fetch('/resources/circles/images/pi-1m.txt'))
       .then(response => response.text())
       .then(data => $scroller.setUp(data + '…'));
 
@@ -529,9 +529,9 @@ function makeEarth($solid) {
         material.needsUpdate = true;
       });
     }
-    loadTexture('map', '/resources/circles-and-pi/images/textures/map.jpg');
-    loadTexture('bumpMap', '/resources/circles-and-pi/images/textures/bump.jpg');
-    loadTexture('specularMap', '/resources/circles-and-pi/images/textures/spec.jpg');
+    loadTexture('map', '/resources/circles/images/textures/map.jpg');
+    loadTexture('bumpMap', '/resources/circles/images/textures/bump.jpg');
+    loadTexture('specularMap', '/resources/circles/images/textures/spec.jpg');
 
     const geometry = new THREE.SphereGeometry(2, 64, 64);
     return [new THREE.Mesh(geometry, material)];

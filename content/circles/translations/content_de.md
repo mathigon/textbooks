@@ -178,7 +178,7 @@ kreisförmig oder kugelförmig werden und damit ihre Oberfläche reduzieren.
 ### Die Fläche eines Kreises
 
 Die Fläche eines Kreises berechnen - wie soll das denn gehen? Wir könnten die gleiche
-Vorgehensweise, die wir bei der [Berechnung der Viereckflächen](/course/polygons-and-polyhedra/quadrilaterals?hl=de) angewandt haben, versuchen:
+Vorgehensweise, die wir bei der [Berechnung der Viereckflächen](/course/polyhedra/quadrilaterals?hl=de) angewandt haben, versuchen:
 Wir schneiden die Form in mehrere verschiedene Teile und legen diese dann zu einer
 anderen Figur zusammen, von der wir bereits die Fläche kennen (z.B. ein Rechteck oder ein Dreieck).
 
@@ -701,7 +701,7 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 
 Beachte, wie die Gleichungen viel einfacher werden, und _π_ überall weggekürzt wird,
 da, wie du dich vielleicht erinnern kannst, die [Definition von
-Radiant](/course/circles-and-pi/radians?hl=de#radians) im Grunde genommen nichts anderes als die Länge eines
+Radiant](/course/circles/radians?hl=de#radians) im Grunde genommen nichts anderes als die Länge eines
 Kreisbogens in einem Kreis mit dem Radius 1 ist.
 
 Nun wollen wir uns ansehen, wie wir Kreisbögen und Sektoren verwenden können, um den Umfang der
@@ -1761,7 +1761,7 @@ Kreis hat auch eine Kugel einen __{.m-blue}Durchmesser *d*__, der
 ---
 > id: sphere-1
 
-{.r} In einem [früheren Abschnitt](/course/circles-and-pi/tangets-chords-arcs?hl=de#eratosthenes-1) hast du
+{.r} In einem [früheren Abschnitt](/course/circles/tangets-chords-arcs?hl=de#eratosthenes-1) hast du
 gelernt, wie der griechische Mathematiker [Eratosthenes](bio:eratosthenes) den Radius der Erde mit dem Schatten eines Obelisken
 berechnete - er betrug 6.371 km.
 Nun wollen wir versuchen, das Gesamtvolumen und die Oberfläche der Erde zu berechnen.

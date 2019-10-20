@@ -312,8 +312,9 @@ var("round(Math.tan(pi/2-pi/n)/4,2)") = var("round(n×Math.tan(pi/2-pi/n)/4,2)")
 > section: quadrilaterals
 > id: quadrilaterals
 
-Im [vorherigen Kurs](/course/triangles-and-trigonometry) haben wir
-viele verschiedene Eigenschaften von Dreiecken untersucht. Wir wollen jetzt die Vierecke genauer betrachten.
+Im [vorherigen Kurs](/course/triangles) haben wir viele verschiedene
+Eigenschaften von Dreiecken untersucht. Wir wollen jetzt die Vierecke genauer
+betrachten.
 
 Ein _regelmäßiges Viereck_ wird als [[Quadrat|Rechteck|gleichseitiges Viereck]] bezeichnet.
 Alle seine Seiten haben die gleiche Länge, und alle seine Winkel sind gleich.
@@ -476,8 +477,7 @@ Dreiecke](target:triangle) auf. Wie du jetzt erkennen kannst sind [zwei der Seit
 des inneren Vierecks eigentlich [[Mittelparallelen|Schwerlinien|Streckensymmetralen]]
  dieser Dreiecke.
 
-{.reveal(when="blank-2")} Im [vorherigen
-Kurs](/course/triangles-and-trigonometry/properties-of-triangles) haben wir gezeigt
+{.reveal(when="blank-2")} Im [vorherigen Kurs](/course/triangles/properties) haben wir gezeigt
 , dass die [Mittelparallelen](gloss:triangle-midsegment) eines Dreiecks immer parallel
 zu seiner Basis sind. In diesem Fall bedeutet das, dass [beide Seiten](target:parallel)
 parallel zur Diagonale sind - daher müssen sie auch
@@ -1425,7 +1425,7 @@ Euler](bio:euler) entdeckt. Sie gilt für jedes Polyeder, solange es
 keine Löcher enthält.
 
 Wenn du das mit verschiedenen Polyedern, wie den oben aufgeführten, ausprobierst wirst du feststellen,
-dass der Satz von Euler immer funktioniert. In [einem späteren Kurs](/course/graphs-and-networks/eulers-formula)
+dass der Satz von Euler immer funktioniert. In [einem späteren Kurs](/course/graph-theory/planar-graphs)
 lernst du, wie du das auch mathematisch beweisen kannst.
 
 ---

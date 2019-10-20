@@ -485,14 +485,14 @@ _{.b.green}V_ = _{.b.red}E_ + [[2]].
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
 {.caption} __Khối hai mươi mặt__  
-một trong 5 [Khối đa diện Platon](/course/polygons-and-polyhedra/platonic-solids)  
+một trong 5 [Khối đa diện Platon](/course/polyhedra/platonic)  
 __{.blue}20__ Mặt, __{.green}12__ Đỉnh and __{.red}30__ Cạnh
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
 {.caption} __Khối 60 mặt__  
-một trong 13 [Khối đa diện Archimedean](/course/polygons-and-polyhedra/more-on-polyhedra)  
+một trong 13 [Khối đa diện Archimedean](/course/polyhedra/platonic#archimedean)  
 __{.blue}62__ Mặt, __{.green}60__ Đỉnh and __{.red}120__ Cạnh
 ::: column(width=200)
 

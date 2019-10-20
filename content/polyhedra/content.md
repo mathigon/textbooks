@@ -313,8 +313,8 @@ var("round(Math.tan(pi/2-pi/n)/4,2)") = var("round(n×Math.tan(pi/2-pi/n)/4,2)")
 > section: quadrilaterals
 > id: quadrilaterals
 
-In the [previous course](/course/triangles-and-trigonometry) we investigated
-many different properties of triangles. Now let’s have a look at quadrilaterals.
+In the [previous course](/course/triangles) we investigated many different
+properties of triangles. Now let’s have a look at quadrilaterals.
 
 A _regular quadrilateral_ is called a [[square|rectangle|equilateral quadrilateral]].
 All of its sides have the same length, and all of its angles are equal.
@@ -478,11 +478,10 @@ triangles](target:triangle). And now you can see that [two of the sides](target:
 of the inner quadrilateral are actually [[midsegments|medians|perpendicular bisectors]]
 of these triangles.
 
-{.reveal(when="blank-2")} In the [previous
-course](/course/triangles-and-trigonometry/properties-of-triangles) we showed
-that [midsegments](gloss:triangle-midsegment) of a triangle are always parallel
-to its base. In this case, it means that [both these sides](target:parallel) are
-parallel to the diagonal – therefore they must also be [[parallel to each
+{.reveal(when="blank-2")} In the [previous course](/course/triangles/properties)
+we showed that [midsegments](gloss:triangle-midsegment) of a triangle are always
+parallel to its base. In this case, it means that [both these sides](target:parallel)
+are parallel to the diagonal – therefore they must also be [[parallel to each
 other|the same length|perpendicular to each other]].
 
 {.reveal(when="blank-3" delay=2000)} We can do exactly the same with the [second
@@ -1427,7 +1426,7 @@ Euler](bio:euler). It is true for any polyhedron, as long as it doesn’t contai
 any holes.
 
 If you try different polyhedra, like the ones above, you’ll find that Euler’s
-formula always works. In [a later course](/course/graphs-and-networks/eulers-formula)
+formula always works. In [a later course](/course/graph-theory/planar-graphs)
 you’ll learn how to actually prove it mathematically.
 
 ---
