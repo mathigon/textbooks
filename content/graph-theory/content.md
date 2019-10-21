@@ -380,7 +380,7 @@ are ${m} × ${f} = ${m×f} dates._
 > goals: try-three-times
 > section: planar-graphs
 
-## Planar Graphs and Euler's Formula
+## Planar Graphs
 
 ::: column.grow
 Here is another puzzle that is related to graph theory.

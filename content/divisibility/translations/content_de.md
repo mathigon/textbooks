@@ -902,7 +902,7 @@ scheint im Laufe der Zeit ausgestorben zu sein, aber die Primzahlzyklen wurden b
 ## Größter gemeinsamer Teiler
 
 > id: gcd
-> section: gcd
+> section: gcf
 
 Eine Architektin plant den Boden für einen großen Innenhof, der 18m x
 30m misst. Sie möchte, dass er mit den größtmöglichen quadratischen Fliesen bedeckt ist, ohne Lücken oder Überlappungen

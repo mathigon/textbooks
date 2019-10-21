@@ -759,7 +759,7 @@ Tabii ki, ağustos böcekleri asal sayılarla ilgili bir fikre sahip değil - fa
 ## En Büyük Ortak Bölenler
 
 > id: gcd
-> section: gcd
+> section: gcf
 
 Bir mimar bahçesinin uzunlukları 18m ve 30m olan bir kat planlıyor. Bu mimar bu bahçeyi kare fayanslarla boşluksuz veya üstüste gelmeden kaplamak istiyor. Kullanabileceği en büyük kare fayansın bir kenarının uzunluğu kaçtır?
 

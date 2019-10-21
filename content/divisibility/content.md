@@ -900,7 +900,7 @@ animal seems to have gone extinct over time, but the prime number cycles remain.
 ## Greatest Common Factors
 
 > id: gcd
-> section: gcd
+> section: gcf
 
 An architect is planning the floor for a large courtyard that measures 18m by
 30m. She wants it to be covered in quadratic tiles, without any gaps or overlaps
