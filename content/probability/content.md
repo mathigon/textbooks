@@ -221,7 +221,12 @@ can never tell what _actually_ will happen.
 
 > id: future
 
-    p.md If we roll two dice at once and add up their scores we could get results from [[2]] up to [[12]]. However, not all outcomes are equally likely. Some results can only happen one way (to get #[span.dice.outline 12] you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (to get #[span.dice.outline 5] you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
+If we roll a dice, the result is a number between 1 and 6, and all outcomes are
+equally likely. If we roll two dice at once and add up their scores we can get
+results from [[2]] up to [[12]]. However, in this case they are not all equally
+likely.
+
+    p.md Some results can only happen one way (to get #[span.dice.outline 12] you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (to get #[span.dice.outline 5] you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
 
 ---
 > id: future-1
