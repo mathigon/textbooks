@@ -12,7 +12,14 @@ integers:
   title: The Integers
   color: 22ab24
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Commutative, Associative and Distributive Laws
+    - title: Order of Operations
+    - title: The Number Line
+    - title: Arithmetic with Negative Numbers
+    - title: Properties of Zero
+    - title: Absolute Value
+    - title: Place Value
 
 divisibility:
   title: Divisibility and Primes
@@ -24,25 +31,47 @@ fractions:
   title: Fractions
   color: 1a9f56
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Introduction
+    - title: Simplifying and Expanding Fractions
+    - title: Adding and Subtracting Fractions
+    - title: Multiplying and Dividing Fractions
+    - title: Mixed Numbers
 
 decimals:
   title: Decimals
   color: 16996e
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Introduction
+    - title: Adding and Subtracting Decimals
+    - title: Ordering Decimals
+    - title: Multiplying Decimals
+    - title: Dividing Decimals
+    - title: Converting Decimals and Fractions
+    - title: Rounding
 
 percentages:
   title: Rates, Percentages and Ratios
   color: 129387
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Ratios and Mixtures
+    - title: Percentages
+    - title: Percentage Increase and Decrease
+    - title: Interest
+    - title: Ratios and Rates
 
 exponents:
   title: Roots and Exponents
   color: 118fa2
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Square and Cube Roots
+    - title: Rational and Irrational Numbers
+    - title: Powers and Exponents
+    - title: Large and Small Numbers
+    - title: Scientific Notation
 
 shapes:
   title: Area and Shapes
@@ -73,19 +102,32 @@ measuring:
   title: Units and Measuring
   color: 4d4cb5
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Measuring
+    - title: Units and Conversion
+    - title: Scale Drawings
+    - title: Scaling and Dimensions
+    - title: Estimation
 
 algebra:
   title: Introduction to Algebra
   color: fd8c00
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Introduction
+    - title: Constants and Variables
+    - title: Manipulating Expressions
+    - title: Modelling
 
 proportional:
   title: Proportional Relationships
   color: f5740d
   sections:
-    - title: TODO
+    # TODO Update Sections
+    - title: Introduction
+    - title: Direct and Inverse Proportion
+    - title: Graphing Proportional Relationships
+    - title: Constant of Proportionality
 
 linear-equations:
   title: Linear Equations

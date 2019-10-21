@@ -23,8 +23,8 @@ the assets to be compiled and then open [localhost:5000](http://localhost:5000).
 The server will automatically watch for file changes.
 
 Every course is a subfolder in the [content](content) directory. The URL of the
-[Probability course](content/probability), for example, will be
-[localhost:5000/course/probability](http://localhost:5000/course/probability).
+[Sequences course](content/sequences), for example, will be
+[localhost:5000/course/probability](http://localhost:5000/course/sequences).
 
 ![](https://mathigon.org/images/unused/divider-2.png)
 
