@@ -800,7 +800,7 @@ Winkel von 50° haben. SSW ist also nicht ausreichend, um zu sicherzustellen, da
 ## Der Satz des Pythagoras 
 
 > id: pythagoras
-> section: theorem
+> section: pythagoras
 
 Wir sind nun an einem wichtigen Punkt in der Geometrie angelangt - wir sind in der Lage, einen der berühmtesten [Lehrsätze](gloss:theorem) der gesamten
 Mathematik zu formulieren und zu

@@ -199,7 +199,7 @@ using mathematics and computers on the stock market.
 
 ## Data Visualisation
 
-> section: xxx
+> section: visualisation
 > sectionStatus: dev
 
 TODO
@@ -208,7 +208,7 @@ TODO
 
 ## Center and Spread of Data
 
-> section: xxx
+> section: center-and-spread
 > sectionStatus: dev
 
 TODO
@@ -217,7 +217,7 @@ TODO
 
 ## Sampling and Estimation
 
-> section: xxx
+> section: sampling
 > sectionStatus: dev
 
 TODO
@@ -226,7 +226,7 @@ TODO
 
 ## Spreadsheets and Frequency Tables
 
-> section: xxx
+> section: spreadsheets
 > sectionStatus: dev
 
 TODO
@@ -235,7 +235,7 @@ TODO
 
 ## Linear Models
 
-> section: xxx
+> section: linear-models
 > sectionStatus: dev
 
 TODO
@@ -244,7 +244,7 @@ TODO
 
 ## Causation vs Correlation
 
-> section: xxx
+> section: causation-correlation
 > sectionStatus: dev
 
 TODO
