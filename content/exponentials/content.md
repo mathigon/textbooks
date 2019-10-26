@@ -5,6 +5,8 @@
 > section: carbon-dating
 > sectionStatus: dev
 
+::: column.grow
+
 A group of archaeologists has discovered a new tomb in the Egyptian desert.
 They carefully break the sealed door, walk through several rooms filled with
 ancient treasures, until they arrive in the XXXXX. The sarkophagus 
@@ -17,6 +19,13 @@ Unfortunately, none of the drawings and inscriptions on the wall of the tomb
 seem to contain names or dates. Instead, it turns out that there is another way
 to accurately determine the age of ancient artifacts, that solely relies on
 physics.
+[Continue](btn:next)
+
+::: column(width=240)
+
+{.fixme} Image
+
+:::
 
 ---
 
@@ -65,18 +74,28 @@ humans – absorb these materials, which means that our body contains some
 radioactive atoms.
 
 You might think that 0.1% is a very small proportion, but your body contains
-around XXXXX Carbon atoms, which means that you also contain around XXXXX
-C-14 atoms.
+around `7 * 10^26` Carbon atoms, which means that you also contain around
+`7 * 10*blank(23)` C-14 atoms (that's almost a million-million-million-million
+atoms).
 
 ---
+
+::: column.grow
 
 When we die, we no longer absorb any new atoms, and the ones that we have
 already absorbed in our body start to [[decay|multiply|disappear]].
 
-    figure: include svg/chart.svg
-
 This is the key fact that can be used by archaeologists and geologists when
 they are trying to find the age of fossils, mummies, and similar objects.
+
+::: column(width=300)
+
+    figure
+      x-media(src="/images/chart.svg")
+
+:::
+
+---
 
 First, they take a small sample of fossil. Using a complex machine called a
 __mass spectrometer__, they can “count” the number of C12 and C14 atoms in the
