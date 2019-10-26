@@ -1,6 +1,6 @@
 {
   "name": "@mathigon/textbooks",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "Mathigon Textbooks",
   "homepage": "https://mathigon.org/",
   "repository": "mathigon/textbooks",
@@ -21,7 +21,7 @@
     "@mathigon/hilbert": "^0.2.3"
   },
   "devDependencies": {
-    "@mathigon/parser": "^0.2.22",
+    "@mathigon/parser": "^0.3.0",
     "emojione-assets": "^3.1.1",
     "eslint": "^5.12.1",
     "express": "^4.16.4",
@@ -31,6 +31,7 @@
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
+    "marked": "0.6.2",
     "pug": "^2.0.3",
     "rollup": "^1.1.2",
     "rollup-plugin-node-resolve": "^4.0.0",

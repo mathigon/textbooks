@@ -36,3 +36,8 @@ _*.yaml
 *.7z
 *.WinMerge
 package-lock.json
+
+translations/input.md
+translations/translate.md
+translations/output.md
+translations/cache.json
