@@ -143,7 +143,7 @@ Thorp sonuçlar hakkında bilimsel bir makale yazdı ve sonra tabii ki bilgisaya
 
 ## Veri Görselleştirme
 
-> section: xxx
+> section: visualisation
 > sectionStatus: dev
 
 TODO
@@ -152,7 +152,7 @@ TODO
 
 ## Veri Merkezi ve Yayılımı
 
-> section: xxx
+> section: center-and-spread
 > sectionStatus: dev
 
 TODO
@@ -161,7 +161,7 @@ TODO
 
 ## Örnekleme ve Tahmin
 
-> section: xxx
+> section: sampling
 > sectionStatus: dev
 
 TODO
@@ -170,7 +170,7 @@ TODO
 
 ## Elektronik Tablolar ve Frekans Tabloları
 
-> section: xxx
+> section: spreadsheets
 > sectionStatus: dev
 
 TODO
@@ -179,7 +179,7 @@ TODO
 
 ## Doğrusal Modeller
 
-> section: xxx
+> section: linear-models
 > sectionStatus: dev
 
 TODO
@@ -188,7 +188,7 @@ TODO
 
 ## Nedensellik - Korelasyon
 
-> section: xxx
+> section: causation-correlation
 > sectionStatus: dev
 
 TODO
