@@ -24,12 +24,12 @@ integers:
 divisibility:
   title: Divisibility and Primes
   description: Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.
-  color: 1ea53d
+  color: 1fab40
   locales: [en, cn, de, tr]
 
 fractions:
   title: Fractions
-  color: 1a9f56
+  color: 1dab5b
   sections:
     # TODO Update Sections
     - title: Introduction
@@ -40,7 +40,7 @@ fractions:
 
 decimals:
   title: Decimals
-  color: 16996e
+  color: 1aaa77
   sections:
     # TODO Update Sections
     - title: Introduction
@@ -53,7 +53,7 @@ decimals:
 
 percentages:
   title: Rates, Percentages and Ratios
-  color: 129387
+  color: 18a38a
   sections:
     # TODO Update Sections
     - title: Ratios and Mixtures
@@ -64,7 +64,7 @@ percentages:
 
 exponents:
   title: Roots and Exponents
-  color: 118fa2
+  color: 15a1ab
   sections:
     # TODO Update Sections
     - title: Square and Cube Roots
@@ -85,11 +85,11 @@ shapes:
 
 polygons:
   title: Angles and Polygons
-  color: 2470de
+  color: 2c63e8
 
 solids:
   title: 3D Solids
-  color: 385eca
+  color: 4a40de
   sections:
     - title: Polyhedra
     - title: Nets and Surface Area
@@ -100,7 +100,7 @@ solids:
 
 measuring:
   title: Units and Measuring
-  color: 4d4cb5
+  color: 6f27cc
   sections:
     # TODO Update Sections
     - title: Measuring
@@ -121,7 +121,7 @@ algebra:
 
 proportional:
   title: Proportional Relationships
-  color: f5740d
+  color: f76f0a
   sections:
     # TODO Update Sections
     - title: Introduction
@@ -131,7 +131,7 @@ proportional:
 
 linear-equations:
   title: Linear Equations
-  color: ee5b1b
+  color: f15315
   sections:
     - title: Reasoning with Tape Diagrams
     - title: Weighing and Balancing
@@ -141,7 +141,7 @@ linear-equations:
 
 linear-functions:
   title: Linear Functions
-  color: e64328
+  color: ea3620
 
 basic-probability:
   title: Basic Probability
@@ -154,7 +154,7 @@ basic-probability:
 
 combinatorics:
   title: Combinatorics
-  color: a2207e
+  color: af1589
   sections:
     - title: Factorials
       preview: /world/Combinatorics
@@ -167,7 +167,7 @@ combinatorics:
 
 data:
   title: Data and Statistics
-  color: 773195
+  color: 901cac
   sections:
     - title: Introduction
     - title: Dot Plots and Histograms
@@ -191,34 +191,34 @@ euclidean-geometry:
 transformations:
   title: Transformations and Symmetry
   description: Symmetry can be seen everywhere in nature – but it also underlies completely invisible laws of nature. Mathematics can explain why that is the case.
-  color: 1f74e2
+  color: 216fec
   locales: [en, de, tr]
   next: triangles
 
 triangles:
   title: Triangles and Trigonometry
   description: "Triangles are some of the most important shapes in geometry: they have countless interesting properties and appear everywhere in engineering and technology."
-  color: 3065d2
+  color: 325ce6
   locales: [en, de, tr]
   next: polyhedra
 
 polyhedra:
   title: Polygons and Polyhedra
   description: Geometric shapes are everywhere around us. In this course you will learn about angels, polygons, tessellations, polyhedra and nets.
-  color: 4057c1
+  color: "4346e0"
   locales: [en, de]
   next: circles
 
 circles:
   title: Circles and Pi
   trailer: tBJUNvCBkLo
-  color: 5148b1
+  color: 5934d9
   locales: [en, de]
   next: graph-theory
 
 non-euclidean-geometry:
   title: Non-Euclidean Geometry
-  color: 613aa1
+  color: 6f27cc
   sections:
     - title: Introduction
       preview: /world/Dimensions_and_Distortions
@@ -250,13 +250,13 @@ sequences:
   title: Sequences and Patterns
   description: Learn about some of the most fascinating patterns in mathematics, from triangle numbers to the Fibonacci sequence and Pascal’s triangle.
   trailer: u2vwpDVj5rU
-  color: f87d08
+  color: f97607
   locales: [en, cn]
   next: quadratics
 
 equations:
   title: Linear Equations and Inequalities
-  color: f46f10
+  color: f46110
   sections:
     - title: Solving Linear Equations
     - title: Graphing Linear Functions
@@ -268,12 +268,12 @@ equations:
 
 quadratics:
   title: Quadratic Equations
-  color: ef6018
+  color: ef4b18
   next: graph-theory
 
 exponentials:
   title: Exponential Functions
-  color: eb5220
+  color: ea3620
 
 probability:
   title: Probability
@@ -284,24 +284,24 @@ probability:
 
 statistics:
   title: Statistics
-  color: b71772
+  color: bb127b
   locales: [en, tr]
   next: graph-theory
 
 graph-theory:
   title: Graphs and Networks
   description: "Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks."
-  color: a2207e
+  color: aa1690
   locales: [en, vn]
   next: probability
 
 codes:
   title: Codes and Ciphers
-  color: 8c2889
+  color: 971aa6
 
 game-theory:
   title: Game Theory
-  color: 8c2889
+  color: 8220b9
   sections:
     - title: The Winning Move
       preview: /world/Game_Theory
@@ -326,7 +326,7 @@ polynomials:
 
 function-transforms:
   title: Function Transformations
-  color: f87d08
+  color: fa7b06
   sections:
     - title: Combining and Composing Functions
     - title: Translating Functions
@@ -336,7 +336,7 @@ function-transforms:
 
 rationals:
   title: Rationals and Radicals
-  color: f46f10
+  color: f66a0c
   sections:
     - title: Rational and Irrational Numbers
     - title: Rational Functions
@@ -348,7 +348,7 @@ rationals:
 
 logarithms:
   title: Exponentials and Logarithms
-  color: ef6018
+  color: f25813
   sections:
     - title: Exponential Growth and Decay
     - title: Exponential Functions
@@ -359,7 +359,7 @@ logarithms:
 
 series:
   title: Sequences and Series
-  color: eb5220
+  color: ee4719
   sections:
     - title: Sequences
     - title: Series and Sigma Notation
@@ -368,7 +368,7 @@ series:
 
 logic:
   title: Logic, Sets and Proof
-  color: e64328
+  color: ea3620
   sections:
     - title: Logic and Paradoxes
       preview: /world/Logic_and_Paradoxes
@@ -393,7 +393,7 @@ coordinate-geo:
 
 trigonometry:
   title: Trigonometry
-  color: 1f74e2
+  color: 216fec
   sections:
     - title: The Unit Circle Definition
     - title: Graphs of Trigonometric Functions
@@ -405,7 +405,7 @@ trigonometry:
 
 conics:
   title: Conic Sections and Polar Coordinates
-  color: 3065d2
+  color: 325ce6
   sections:
     - title: Parametric Curves
     - title: Circles and Ellipses
@@ -415,7 +415,7 @@ conics:
 
 vectors:
   title: Vectors
-  color: 4057c1
+  color: "4346e0"
   sections:
     - title: Introduction
     - title: Vector Arithmetic
@@ -425,7 +425,7 @@ vectors:
 
 matrices:
   title: Matrices
-  color: 5148b1
+  color: 5934d9
   sections:
     - title: Matrices as Transformations
     - title: Matrix Arithmetic
@@ -436,7 +436,7 @@ matrices:
 
 complex:
   title: Complex Numbers
-  color: 613aa1
+  color: 6f27cc
   sections:
     - title: Introduction
       preview: /world/Real_Irrational_Imaginary#imaginary
@@ -448,7 +448,7 @@ complex:
 
 fractals:
   title: Fractals
-  color: 773195
+  color: 8220b9
   sections:
     - title: Introduction
       preview: /world/Fractals
@@ -469,7 +469,7 @@ differentiation:
 
 integration:
   title: Integration
-  color: 1ea53d
+  color: 1fab40
   sections:
     - title: Introduction
     - title: Integration Rules I
@@ -481,7 +481,7 @@ integration:
 
 numerical:
   title: Numerical Methods
-  color: 1a9f56
+  color: 1dab5b
   sections:
     - title: Solving Equations Numerically
     - title: The Newton­-Raphson Method
@@ -489,7 +489,7 @@ numerical:
 
 diff-equations:
   title: Differential Equations
-  color: 16996e
+  color: 1aaa77
   sections:
     - title: Simple Differential Equations
     - title: First Order Separable Equations
@@ -500,7 +500,7 @@ diff-equations:
 
 chaos:
   title: Chaos Theory
-  color: 129387
+  color: 18a38a
 
 adv-probability:
   title: Advanced Probability
@@ -515,7 +515,7 @@ adv-probability:
 
 adv-statistics:
   title: Statistics and Hypothesis Tests
-  color: b71772
+  color: bb127b
   sections:
     - title: Data Representation
     - title: Experiments and Sampling
@@ -527,7 +527,7 @@ adv-statistics:
 
 algorithms:
   title: Algorithms
-  color: a2207e
+  color: aa1690
   sections:
     - title: Introduction to Computing
     - title: Complexity and O Notation
@@ -537,7 +537,7 @@ algorithms:
 
 machine-learning-1:
   title: Machine Learning
-  color: 8c2889
+  color: 971aa6
   sections:
     - title: Introduction
     - title: Linear Regression
@@ -554,5 +554,5 @@ exploding-dots:
   title: Exploding Dots
   description: A mathematical story developed for Global Math Week – learn about place value, infinity and p-adic numbers.
   tile: /images/og-tile/exploding-dots.jpg
-  color: 613aa1
+  color: 6f27cc
   hideTitle: true

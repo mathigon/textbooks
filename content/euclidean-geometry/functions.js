@@ -48,8 +48,8 @@ export function congruence($step) {
   const $lines = $svg.$('.lines');
   const $groups = $svg.$$('.obj');
   const centers = $groups.map($g => $g.center);
-  const colours = {a: '#fd8c00', b: '#e64328', c: '#613aa1', d: '#0f82f2',
-    e: '#129387', f: '#22ab24'};
+  const colours = {a: '#fd8c00', b: '#ea3620', c: '#6f27cc', d: '#0f82f2',
+    e: '#18aa93', f: '#22ab24'};
 
   let from = null;
   let $line = null;

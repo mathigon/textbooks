@@ -22,7 +22,7 @@ const RED = '#cd0e66';
 const BLUE = '#0f82f2';
 const GREEN = '#22ab24';
 const YELLOW = '#fd8c00';
-const ORANGE = '#e64328';
+const ORANGE = '#ea3620';
 
 export function intro($section) {
   let $graph = $section.$('.graph');
