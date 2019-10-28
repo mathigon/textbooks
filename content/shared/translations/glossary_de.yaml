@@ -549,7 +549,7 @@ factorisation:
   title: Primfaktorenzerlegung
   text: Die __Primfaktorenzerlegung__ einer Zahl ist eine Möglichkeit, sie als
     Produkt von Primzahlen zu schreiben.
-  link: /course/divisibility/prime-numbers
+  link: /course/divisibility/primes
 
 fermat-last:
   title: Fermat's letzter Satz
@@ -1153,12 +1153,12 @@ prime:
   title: Primzahl
   text: Eine __Primzahl__ ist eine positive ganze Zahl, die keine anderen Faktoren als
     1 und sich selbst hat. Die ersten Primzahlen sind 2, 3, 5, 11, 13, …
-  link: /course/divisibility/prime-numbers
+  link: /course/divisibility/primes
 
 prime-factor:
   title: Primfaktor
   text: Ein __Primfaktor__ einer Zahl ist einfach ein Faktor, der Primzahl ist.
-  link: /course/divisibility/prime-numbers
+  link: /course/divisibility/primes
 
 prime-factorisation:
   title: Primfaktorenzerlegung
@@ -1448,7 +1448,7 @@ sieve-eratosthenes:
   text: Das __Sieb des Eratosthenes__ ist ein Verfahren zum Auffinden von
     Primzahlen, indem Schritt für Schritt Zahlen eliminiert werden, die _nicht_
     Primzahlen sind.
-  link: /course/divisibility/prime-numbers#eratosthenes
+  link: /course/divisibility/primes#eratosthenes
 
 similar:
   title: Ähnlich

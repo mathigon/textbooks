@@ -19,7 +19,7 @@ eratosthenes:
     - title: 地球半径
       url: /course/circles/tangets-chords-arcs#eratosthenes
     - title: 埃拉托色尼筛选法
-      url: /course/divisibility/prime-numbers#eratosthenes
+      url: /course/divisibility/primes#eratosthenes
 
 euclid:
   name: Euclid
@@ -33,7 +33,7 @@ euclid:
     - title: 欧几里得公理
       url: /course/euclidean-geometry/euclids-axioms
     - title: 无穷多素数
-      url: /course/divisibility/prime-numbers#primes3
+      url: /course/divisibility/primes#primes3
 
 euler:
   name: Euler
@@ -50,7 +50,7 @@ euler:
     许多其他课题中做出了重要的发现。
   links:
     - title: Königsberg Bridges Problem
-      url: /course/graph-theory/bridges-of-koenigsberg
+      url: /course/graph-theory/bridges
     - title: Euler’s Formula
       url: /course/graph-theory/planar-graphs
     - title: Polyhedrons

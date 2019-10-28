@@ -564,7 +564,7 @@ factorisation:
   title: Prime Factorisation
   text: The __prime factorisation__ of a number is a way to write it as a
     product of prime numbers.
-  link: /course/divisibility/prime-numbers
+  link: /course/divisibility/primes
 
 fermat-last:
   title: Fermat’s Last Theorem
@@ -1155,12 +1155,12 @@ prime:
   title: Prime Number
   text: A __prime number__ is a positive integer that has no factors other than
     1 and itself. The first prime numbers are 2, 3, 5, 7, 11, 13, …
-  link: /course/divisibility/prime-numbers
+  link: /course/divisibility/primes
 
 prime-factor:
   title: Prime Factor
   text: A __prime factor__ of a number is simply a factor which is prime.
-  link: /course/divisibility/prime-numbers
+  link: /course/divisibility/primes
 
 prime-factorisation:
   title: Prime Factorisation
@@ -1441,7 +1441,7 @@ sieve-eratosthenes:
   title: Sieve of Eratosthenes
   text: The __Sieve of Eratosthenes__ is a procedure for finding prime numbers,
     by continuoulsy eliminating numbers that are _not_ prime.
-  link: /course/divisibility/prime-numbers#eratosthenes
+  link: /course/divisibility/primes#eratosthenes
 
 similar:
   title: Similar

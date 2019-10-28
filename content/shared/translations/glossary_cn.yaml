@@ -114,7 +114,7 @@ powers:
 prime:
   title: 素数
   text: __素数__是一个整数，而且除了 1 和它自身之外没有其它整数因子。
-  link: /course/divisibility/prime-numbers
+  link: /course/divisibility/primes
 
 proof:
   title: 证明
@@ -168,7 +168,7 @@ sequence-term:
 sieve-eratosthenes:
   title: 埃拉托色尼筛选法
   text: __埃拉托色尼筛选法__是一个通过连续消除_非_素数来寻找素数的过程。
-  link: /course/divisibility/prime-numbers#eratosthenes
+  link: /course/divisibility/primes#eratosthenes
 
 square-numbers:
   title: 平方数
