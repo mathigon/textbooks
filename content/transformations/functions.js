@@ -210,7 +210,7 @@ function add(a, b) {
 
 function makeSquare(i, x, $parent, delay=0) {
   let $el = $N('img', {
-    src: `/resources/transformations-and-symmetry/images/cube-${i}.svg`,
+    src: `/resources/transformations/images/cube-${i}.svg`,
     style: `left: ${8 + x*70}px;`
   }, $parent);
   $el.enter('pop', 200, delay);
