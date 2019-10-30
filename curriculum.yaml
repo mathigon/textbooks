@@ -251,7 +251,7 @@ sequences:
   description: Learn about some of the most fascinating patterns in mathematics, from triangle numbers to the Fibonacci sequence and Pascal’s triangle.
   trailer: u2vwpDVj5rU
   color: f97607
-  locales: [en, cn]
+  locales: [en, es, cn]
   next: quadratics
 
 equations:
