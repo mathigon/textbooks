@@ -245,7 +245,7 @@ Una [__secuencia__](gloss:sequence) es una lista de números, formas geométrica
 
 Una [__fórmula recursiva__](gloss:sequence-recursive) para una secuencia le dice el valor del _n_ término en función de [[sus términos anteriores|the first term]]. También debe especificar los primeros términos.
 
-Una [__fórmula explícita__](gloss:sequence-explicit) para una secuencia le dice el valor del término _n_ en función de [[solo _n_ {496 }, sin hacer referencia a otros términos en la secuencia.
+Una [__fórmula explícita__](gloss:sequence-explicit) para una secuencia le dice el valor del término _n_ en función de [[solo _n_|the previous term]], sin hacer referencia a otros términos en la secuencia.
 
 :::
 
