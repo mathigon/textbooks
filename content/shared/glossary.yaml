@@ -151,6 +151,15 @@ associative:
   text: An operation • is associative if `a•(b•c) = (a•b)•c`. For example,
     addition (+) and multiplication (×) of numbers are associative.
 
+atom:
+  title: Atom
+  text: |
+    __Atoms__ are the particles that make up all ordinary matter: solids,
+    liquids, gases and plasma. Atoms consist of a positively-charged _core_ (or
+    _nucleus_), made up of _protons_ and _neutrons_, and surrounded my shells
+    of negatively-charged _electrons_. The diameter of an atom is approximately
+    a ten-millionth of a millimeter.
+
 axiom:
   title: Axiom
   text: |
@@ -922,6 +931,11 @@ net:
   text: The __net__ of a polyhedron is what you get when you “unfold” its
     polygonal faces onto a flat surface.
 
+neutron:
+  title: Neutron
+  text: A __neutron__ is one of the particles that makes up the core of an atom.
+    It has no charge, and approximately the same mass as a proton.
+
 np:
   title: NP Hard Problems
   text: _Computational complexity theory_ is about determining how “difficult”
@@ -1193,12 +1207,18 @@ proof:
     certain statement is true.
 
 protein:
-  title: protein
+  title: Protein
   text: |
     A __Protein__ is a large _macromolecule_ that can perfom many different
     functions within living organisms: from digestion to communicating between
     cells or replicating DNA. Proteins consist of one or more chains of _amino
     acid residues_.
+
+proton:
+  title: Proton
+  text: A __Proton__ is one of the particles that makes up the core of an atom.
+    It has charge +1. The number of protons in an atom is called it’s “atomic
+    number”, and it defines what kind of element it is.
 
 pyramid:
   title: Pyramid

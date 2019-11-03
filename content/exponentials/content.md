@@ -4,149 +4,146 @@
 
 > section: carbon-dating
 > sectionStatus: dev
+> id: egypt
 
 ::: column.grow
 
 A group of archaeologists has discovered a new tomb in the Egyptian desert.
-They carefully break the sealed door, walk through several rooms filled with
-ancient treasures, until they arrive in the XXXXX. The sarkophagus 
+They carefully open the hidden entrance, climb through several rooms filled with
+ancient treasures, until they arrive in the burial chamber. The sarcophagus
+is still sealed, and contains the mummy of a Pharaoh.
 
-They carefully catalogue every item in the tomb, before transporting it to a
-nearby museum for further examination. The most important question is: who is
-this
+After cataloguing every item in the tomb and carefully transporting it to a
+nearly museum, they want to answer their most pressing question: who is this
+Pharaoh, and when did he die?
 
-Unfortunately, none of the drawings and inscriptions on the wall of the tomb
-seem to contain names or dates. Instead, it turns out that there is another way
-to accurately determine the age of ancient artifacts, that solely relies on
-physics.
-[Continue](btn:next)
+::: column(width=300)
 
-::: column(width=240)
-
-{.fixme} Image
+    x-media(src="images/egypt.jpg" lightbox width=300 height=312)
 
 :::
 
----
+Unfortunately, none of the drawings and inscriptions on the walls of the tomb
+seem to contain names or dates. However, it turns out that there is a method
+to accurately determine the age of ancient artifacts like mummies or fossils,
+which solely relies on physics and mathematics – called __Carbon Dating__.
+[Continue](btn:next)
 
-All living organisms on Earth – plants, animals and humans – contain Carbon
+---
+> id: carbon-1
+
+{.fixme} Mummy Image
+
+All living organisms on Earth, plants, animals and humans, contain Carbon
 [atoms](gloss:atom). Usually, the core of a Carbon atom consists of six
-[protons](gloss:proton) and six [neutrons](gloss:protons). However, a small
-number of Carbon atoms contain additional neutrons. These "variants" are called
-__isotopes__:
+[protons](gloss:proton) and six [neutrons](gloss:neutron), but a small
+proportion of Carbon atoms contain additional neutrons. These “variants” are
+called __isotopes__:
 
 ::: column(width=170)
 
-    x-media(src="svg/atom-1.svg" width=150 height=150)
+    x-atom(protons=6 neutrons=6 size=150)
 
-{.text-center} __Carbon 12__  
-6 Protons, 6 Neutrons  
+{.text-center} __Carbon-12__  
+6 protons, 6 neutrons  
 98.8%
 
 ::: column(width=170)
 
-    x-media(src="svg/atom-2.svg" width=150 height=150)
+    x-atom(protons=6 neutrons=7 size=150)
 
-{.text-center} __Carbon 13__  
-6 Protons, 7 Neutrons  
+{.text-center} __Carbon-13__  
+6 protons, 7 neutrons  
 1.1%
 
 ::: column(width=170)
 
-    x-media(src="svg/atom-3.svg" width=150 height=150)
+    x-atom(protons=6 neutrons=8 size=150)
 
-{.text-center} __Carbon 14__  
-6 Protons, 8 Neutrons  
+{.text-center} __Carbon-14__  
+6 protons, 8 neutrons  
 0.1%
 
 :::
 
-One amazing fact is that the proportion at which each of these isotopes occurs
-is almost exactly the same, anywhere on Earth! Another important fact is that
-`C_14` is [radioactive](gloss:radioactive). This means that over time, it
-"decays" by breaking apart into other elements.
+In this example, we are particularly interested in Carbon-14. It contains 6
+protons and 8 neutrons, and is abbreviated as <sup>14</sup>C. It is created high
+in the atmosphere, by cosmic rays coming from space. This also means that the
+proportion at which it occurs is almost exactly the same, anywhere on Earth. In
+other words, any sample of Carbon atoms contains 0.1% of <sup>14</sup>C atoms.
 
+You might think that this is an insignificant amount, but your body contains
+around `8 × 10^26` Carbon atoms, which means that you also contain around
+`8 × 10^23` <sup>14</sup>C atoms. That's almost a million-million-million-million
+atoms!
+
+---
+> id: carbon-2
+
+The reason why Carbon-14 is so important is that it is [radioactive](gloss:radioactive).
+This means that over time, it “decays” by breaking apart into other elements.
 We are actually surrounded by many different radioactive materials, but they are
 all much, much weaker than nuclear power stations or atomic bombs.
 
-During our life, as we eat or breathe, all living things – plants, animals or
-humans – absorb these materials, which means that our body contains some
-radioactive atoms.
-
-You might think that 0.1% is a very small proportion, but your body contains
-around `7 * 10^26` Carbon atoms, which means that you also contain around
-`7 * 10*blank(23)` C-14 atoms (that's almost a million-million-million-million
-atoms).
-
----
-
 ::: column.grow
 
-When we die, we no longer absorb any new atoms, and the ones that we have
-already absorbed in our body start to [[decay|multiply|disappear]].
+During our life, as we eat and breathe, we absorb <sup>14</sup>C atoms which
+are stored in our body. When we die, we stop absorbing new <sup>14</sup>C atoms,
+and the ones that are already in our body slowly start to
+[[decay|multiply|disappear]].
 
-This is the key fact that can be used by archaeologists and geologists when
-they are trying to find the age of fossils, mummies, and similar objects.
+This is what scientists can use when trying to estimate the age of mummies,
+fossils, and similar objects.
 
 ::: column(width=300)
 
-    figure
-      x-media(src="/images/chart.svg")
+{.fixme} chart animation
 
 :::
 
 ---
+> id: carbon-3
 
-First, they take a small sample of fossil. Using a complex machine called a
-__mass spectrometer__, they can “count” the number of C12 and C14 atoms in the
-sample. By looking at the ratio, they can work out how much C14 must have
-decayed since the animal died. Finally, they can calculate how long it
-takes for that much C14 to decay, and that’s precisely the age of the fossil!
+The archaeologists in our story decided to take a very small piece of the
+mummy's skin. Using a complex machine called a __mass spectrometer__, they were
+able to “count” the number of <sup>12</sup>C and <sup>14</sup>C atoms in the
+sample.
 
-This process is called __Carbon Dating__, and it relies on some interesting
-mathematics. The key concept to understand is that radioactive materials always
-decay at a constant rate, which is usually indicated by their __half life__.
+If you know the proportion of <sup>14</sup>C atoms, you can work out how much
+<sup>14</sup>C must have decayed since the Pharaoh died. Next, you have to
+work out how long it takes for that much <sup>14</sup>C to decay – and that
+number is precisely the [[age of the Pharaoh when he died|time since the
+Pharaoh died]].
 
 ---
-> id: cd4
+> id: carbon-4
 
-C14, for example, has a half life of approximately 8,000 years. This means that
-if you have a block of C14 atoms, it will take 8,000 years for half of it to
-decay into other elements. After another 8,000 years, half of the remaining
-atoms will have decayed, so you're left with just [[a quarter|a third|nothing]]
-of the original amount.
+Luckily, all radioactive elements decay at a very predictable rate, which is
+usually indicated by their __half life__. Carbon-14, for example, has a half
+life of approximately 6,000 years. This means that if you have a block of
+<sup>14</sup>C atoms, it will take 6,000 years for half of them to decay into
+other elements. After another 6,000 years, half of the remaining atoms will have
+also decayed, so you're left with just [[a quarter|a third|nothing]] of the
+original amount.
+
+---
+> id: carbon-5
 
 Let’s assume we start with 1,200 Carbon 14 atoms, and summarise the remaining
 amount over time in a table:
 
-    table.grid.col-grid
-      tr
-        td
-        td: .col
-        td: .col.c1
-        td: .col.c2
-        td: .col.c3
-        td: .col.c4
-        td: .col.c3
-      tr
-        td __time__
-        td 0
-        td 6000
-        td 12000
-        td 18000
-        td 24000
-      tr
-        td __amount__
-        td 1200
-        td.md [[600]]
-        td.md [[300]]
-        td.md [[150]]
-        td.md [[75]]
+|            | _{div.col}_ | _{div.col.c1}_ | _{div.col.c2}_ | _{div.col.c3}_ | _{div.col.c4}_ |
+| __Years__  | 0           | 6000           | 12,000         | 18,000         | 24,000         |
+| __Amount__ | 1200        | [[600]]        | [[300]]        | [[150]]        | [[75]]         |
+{.grid.col-grid}
 
 ---
+> id: carbon-6
 
-As you can see, we’re just multiplying by 1/2, again and again. Using exponents,
-we can write down an equation for the amount left after time `t`:
+As you can see, we’re multiplying by `1/2` at every step, just like a
+[[geometric|arithmetic|Fibonacci]] sequence.
+
+Using exponents, we can write down an equation for the amount left after `t` years:
 
 | `"amount"` | `= 1000 × (1/2)^(t/6000)` |
 |            | `= 1000 × 2^((-t)/6000)`  |
@@ -155,11 +152,9 @@ we can write down an equation for the amount left after time `t`:
 Of course 1,000 and 6,000 were just arbitrary numbers. A more general equation
 is:
 
-`"amount" = "initial" × 2^((-t)/"half life")` {.text-center}
+    x-equation-flow(expr=`"amount" = "initial" × 2^((-t)/"half life")` max-steps="2")
 
 ---
-
-    img.text-wrap(src="images/fossil.jpg" style="shape-outside: url(images/fossil.png)" width=320 height=295)
 
 Let's get back to our geologists, who were trying to determine the age of the
 fossil. In a small sample, they found 10 Carbon 14 atoms, when given the ratios
@@ -181,6 +176,9 @@ biologists: to determine the age of mummies, the evolutinary ancestry between
 extinct animals, or when certain layers of rock in our Earth's crust formed.
 
     figure: x-media(src="images/dinosaur.jpg" width=760, height=360)
+    //- img.text-wrap(src="images/fossil.jpg" style="shape-outside: url(images/fossil.png)" width=320 height=295)
+
+The method was developed in the late 1940s at the University of Chicago by Willard Libby, who received the Nobel Prize in Chemistry for his work in 1960.
 
 ---
 

@@ -6,23 +6,31 @@
 
 @import "styles/variables";
 
-.col-grid tr:first-child td {
-  padding: 0  .6em;
-  border: 0;
+
+sup { font-weight: 600; }
+
+x-atom { display: block; margin: 0 auto; }
+x-atom canvas { width: 100%; height: auto; }
+
+.col-grid {
+  td { padding: .4em .6em; }
+  tr:first-child td { padding: 0 .6em .4em; border: 0; }
 }
+
 .col {
   background: @yellow;
-  height: 100px;
+  height: 120px;
   width: 50px;
   margin: 0 auto;
   transform-origin: center bottom;
-  transition: opacity .6s, transform 1s;
+  transition: opacity .2s, transform 1s;
   box-shadow: 0 0 8px 1px fade(@yellow, 50%);
 
-  &.c1 { opacity: 0; }
-  &.c2 { opacity: 0; height: 50px; margin-top: 50px; }
-  &.c3 { opacity: 0; height: 25px; margin-top: 75px; }
-  &.c4 { opacity: 0; height: 12.5px; margin-top: 87.5px; }
+  &.c1, &.c2, &.c3, &.c4 { opacity: 0; transform: scaleY(0); }
+  &.on { opacity: 1; transform: none; }
 
-  &.on { opacity: 1; transform: scaleY(0.5); }
+  &.c1 { height: 60px; margin-top: 60px; }
+  &.c2 { height: 30px; margin-top: 90px; }
+  &.c3 { height: 15px; margin-top: 105px; }
+  &.c4 { height: 7.5px; margin-top: 112.5px; }
 }

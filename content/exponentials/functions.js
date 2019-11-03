@@ -1,14 +1,15 @@
 // =============================================================================
-// Exponentials and Logarithms
+// Exponential Functions
 // (c) Mathigon
 // =============================================================================
 
 
-export function cd4(section) {
+import './components/atom';
 
-  section.onScore('blank-1', () => section.$el.$('.c1').addClass('on'));
-  section.onScore('blank-2', () => section.$el.$('.c2').addClass('on'));
-  section.onScore('blank-3', () => section.$el.$('.c3').addClass('on'));
-  section.onScore('blank-4', () => section.$el.$('.c4').addClass('on'));
 
+export function carbon5($step) {
+  $step.onScore('blank-0', () => $step.$('.c1').addClass('on'));
+  $step.onScore('blank-1', () => $step.$('.c2').addClass('on'));
+  $step.onScore('blank-2', () => $step.$('.c3').addClass('on'));
+  $step.onScore('blank-3', () => $step.$('.c4').addClass('on'));
 }
