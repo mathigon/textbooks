@@ -291,7 +291,6 @@ x-geopad.sketch {
     background: @grey-background;
     border-radius: 6px;
     padding-top: 18px;
-    touch-action: none;
   }
 
   .left { width: 240px; margin: 12px; }
@@ -301,7 +300,9 @@ x-geopad.sketch {
   .outline { fill: mix(@blue, @grey-background); }
   .grid { fill: none; stroke: fade(white, 30%); stroke-width: .5px; }
   .land { fill: mix(@green, @grey-background); stroke: mix(@green, black, 70%); stroke-width: .6px; }
+
   .map-select { stroke: @red; stroke-width: 2px; fill: fade(@red, 40%); }
+  .right .map-select { touch-action: none; }
 }
 
 
