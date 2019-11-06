@@ -17,7 +17,7 @@ acute-triangle:
   title: Spitzwinkliges Dreieck
   text: In einem __spitzwinkligen Dreieck__ sind alle drei Winkel _spitz_
     (kleiner als 90°).
-  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+  link: /course/triangles/properties#classification
 
 adic:
   title: N-adische Zahlen
@@ -115,7 +115,7 @@ archimedean-solid:
   text: Ein __archimedischer Körper__ ist ein Polyeder, der aus verschiedenen
     Arten von regelmäßigen Vielecken besteht, der aus allen Richtungen gleichaussieht. Es gibt 13
     verschiedene archimedische Körper.
-  link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
+  link: /course/polyhedra/platonic#archimedean
 
 arithmetic-mean:
   title: Arithmetisches Mittel
@@ -154,7 +154,7 @@ axis-of-symmetry:
   text: Wenn eine Form spiegelsymmetrisch ist, ist die __Symmetrieachse__ die
     Linie, die sie in zwei gleiche Hälften teilt.
   image: reflectional-symmetry.svg
-  link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
+  link: /course/transformations/symmetry#reflectional-symmetry
 
 base-10:
   title: Basis 10
@@ -167,7 +167,7 @@ bipartite-graph:
   text: __Bipartite Graphen__ bestehen aus zwei Mengen von Eckpunkten. Jeder
     Knoten ist mit allen Knoten in der gegenüberliegenden Menge verbunden, aber
     keiner der Knoten in seiner eigenen Menge.
-  link: /course/graphs-and-networks/parties-and-dating#handshakes-4
+  link: /course/graph-theory/parties-and-dating#handshakes-4
 
 blackjack:
   title: Blackjack
@@ -194,14 +194,14 @@ calculus:
 center-of-rotation:
   title: Drehpunkt
   text: Der __Drehpunkt__ ist der Punkt, um den eine Form gedreht wird.
-  link: /course/transformations-and-symmetry/transformations#rotations
+  link: /course/transformations/rigid#rotations
 
 centroid:
   title: Schwerpunkt
   text: Der __Schwerpunkt__ eines Dreiecks ist der Punkt, an dem sich seine drei
     Schwerlinien (Seitenhalbierenden) schneiden. Er ist auch der Massenschwerpunkt eines
     Dreiecks, wenn dessen Dichte einheitlich ist.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#center-of-mass
+  link: /course/triangles/properties#center-of-mass
 
 chaos:
   title: Chaos
@@ -212,7 +212,7 @@ circle:
   text: Ein __Kreis__ ist die Menge aller Punkte in einer Ebene (zweidimensional), die sich in einem bestimmten
     Abstand (dem _Radius_) von einem gegebenen Punkt (dem _Mittelpunkt_) befinden.
   image: circle.svg
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-area:
   title: Fläche eines Kreises
@@ -223,19 +223,19 @@ circle-circumference:
   title: Umfang eines Kreises
   text: Der __Umfang__ eines Kreises ist die Streckenlänge seiner äußeren
     Umrandung (Kreislinie). Ein Kreis mit Radius _r_ hat den Umfang`u = 2 r pi`.
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-diameter:
   title: Durchmesser eines Kreises
   text: Der __Durchmesser__ eines Kreises ist der Abstand zwischen zwei gegenüberliegenden Punkten
     auf seinem Umfang, gemessen durch seinen Mittelpunkt.
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-radius:
   title: Radius
   text: Der __Radius__ eines Kreises ist der Abstand (oder eine Strecke) zwischen
     seinem Mittelpunkt und einem beliebigen Punkt auf seinem Umfang.
-  link: /course/circles-and-pi/introduction#radius
+  link: /course/circles/introduction#radius
 
 circle-sector:
   title: Kreissektor
@@ -245,7 +245,7 @@ circle-sector:
     zum Innenwinkel sowie zur Länge des Kreisbogens. Damit ergibt sich
 
     {.text-center} `(A_"Sektor")/(A_"Kreis") = "Kreisbogen"/"Umfang" = θ/(2π)`
-  link:  /course/circles-and-pi/tangets-chords-arcs#sectors
+  link:  /course/circles/tangets-chords-arcs#sectors
   image: circle-sector.svg
 
 circle-segment:
@@ -258,7 +258,7 @@ circumcircle:
   text: Der __Umkreis__ eines Dreiecks ist der Kreis, der durch alle drei seiner
     Eckpunkte verläuft.
   image: circumcircle.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#circumcircle-1
+  link: /course/triangles/properties#circumcircle-1
 
 coefficient:
   title: Koeffizient
@@ -285,7 +285,7 @@ complete-graph:
   title: Vollständiger Graph
   text: In __vollständigen Graphen__ist jeder Knoten mit jedem anderen Knoten
     verbunden. Ein vollständiger Graph mit _n_ Knoten hat `(n×(n-1))/2` Kanten.
-  link: /course/graphs-and-networks/parties-and-dating#handshakes-3
+  link: /course/graph-theory/parties-and-dating#handshakes-3
 
 complex-number:
   title: Komplexe Zahl
@@ -305,7 +305,7 @@ concave:
     als 180° („nichtkonvexes Vieleck“). Mindestens eine der Diagonalen liegt _außerhalb_ des Vielecks.
     Eine gängige Methode zur Identifizierung eines konkaven Vielecks ist die Suche nach einer eingefallenen
     Seite des Vielecks, wobei _konkave_ das Gegenteil von _konvexen_ Vielecken sind.
-  link: /course/polygons-and-polyhedra/polygons#concave
+  link: /course/polyhedra/polygons#concave
 
 cone:
   title: Kegel
@@ -316,7 +316,7 @@ cone:
 
     Ein __gerader Kegel__ ist ein Kegel mit seinem Scheitelpunkt direkt über dem
     Mittelpunkt seiner Grundfläche.
-  link: /course/circles-and-pi/spheres-cones-cylinders#cone
+  link: /course/circles/spheres-cones-cylinders#cone
   image: cone.svg
 
 cone-volume:
@@ -350,14 +350,14 @@ conic-section:
     * Ellipse
     * Parabel
     * Hyperbel
-  link: /course/circles-and-pi/conic-sections
+  link: /course/circles/conic-sections
 
 convex:
   title: Konvexes Vieleck (Polygon)
   text: Ein __konvexes__ Vieleck enthält keine Innenwinkel größer als 180°. Alle
     Diagonalen liegen innerhalb des Vielecks. Dies ist das Gegenteil von
     _konkaven_ (nichtkonvexenen) Vielecken.
-  link: /course/polygons-and-polyhedra/polygons#concave
+  link: /course/polyhedra/polygons#concave
 
 coordinate-system:
   title: Koordinatensystem
@@ -380,14 +380,14 @@ cos:
   title: Kosinus
   text: Der __Kosinus__ ist eine trigonometrische Funktion, die `cos(θ)` geschrieben wird. In einem
     rechtwinkligen Dreieck ist es das Verhältnis der Ankathete zur Hypotenuse.
-  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+  link: /course/triangles/trigonometry#trig-functions
 
 cpoct:
   title: CPOCT
   text: CPOCT steht für __einander entsprechende Teile von kongruenten Dreiecken__. Das
     heißt, wenn zwei Dreiecke kongruent sind, dann müssen auch alle zugehörigen
     Komponenten (Winkel, Seiten, Abschnitte,....) kongruent zueinander sein.
-  link: /course/triangles-and-trigonometry/triangles-congruence#cpoct
+  link: /course/triangles/congruence#cpoct
 
 cross-section:
   title: Querschnitt
@@ -404,7 +404,7 @@ cube:
   text: Ein __Würfel__ (manchmal auch __Hexaeder__ genannt) ist ein regelmäßiges
     Polyeder, bei dem jede Fläche ein Quadrat ist. Er ist einer der fünf
     _platonischen Körper_, und er hat 6 Flächen, 8 Ecken und 12 Kanten.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 cube-volume:
   title: Volumen eines Würfels
@@ -415,7 +415,7 @@ cylinder:
   text: Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei
     kongruenten, parallelen, kreisförmigen Flächen (den _Grund- und Deckflächen_) besteht, die
     durch eine gekrümmte Oberfläche verbunden sind. Man könnte sich einen Zylinder auch als "rundes Prisma" vorstellen.
-  link: /course/circles-and-pi/spheres-cones-cylinders#cylinder-prism
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
   image: cylinder.svg
 
 cylinder-volume:
@@ -445,13 +445,13 @@ dilation:
     die die Maße einer geometrischen Form ändert, indem sie diese größer oder
     kleiner macht.
   image: dilation.svg
-  link: /course/transformations-and-symmetry/similarity#dilations
+  link: /course/transformations/dilations
 
 directed-graph:
   title: Gerichteter Graph
   text: In einem __gerichteten Graphen__, wird jede Kante als Pfeil dargestellt,
     d.h. es gibt jeweils einen Start- und einen Endknoten.
-  link: /course/graphs-and-networks/introduction#intro-1
+  link: /course/graph-theory/introduction#intro-1
 
 discriminant:
   title: Diskriminante
@@ -477,7 +477,7 @@ dodecahedron:
   title: Dodekaeder
   text: Das __Dodekaeder__ ist ein platonischer Körper und aus besteht 12 Flächen, die alle regelmäßige
     Fünfecke sind. Er hat 20 Eckpunkte und 30 Kanten.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 dot-annihilation:
   title: Vernichtung
@@ -507,7 +507,7 @@ ellipse:
     Ellipsen sind eine Art von _Kegelschnitt:_eine Schnittfläche eines Kegels
     mit einer Ebene.
   image: ellipse.svg
-  link: /course/circles-and-pi/conic-sections#ellipses
+  link: /course/circles/conic-sections#ellipses
 
 equation:
   title: Gleichung
@@ -533,7 +533,7 @@ factor:
   title: Faktor
   text: Eine Zahl _a_ ist ein __Faktor__ (oder __Divisor__) einer Zahl _b_, wenn
     man _b_ durch _a_ ohne Rest teilen kann.
-  link: /course/divisibility-and-primes/factors-and-multiples
+  link: /course/divisibility/factors-and-multiples
 
 factorial:
   title: Fakultät
@@ -549,7 +549,7 @@ factorisation:
   title: Primfaktorenzerlegung
   text: Die __Primfaktorenzerlegung__ einer Zahl ist eine Möglichkeit, sie als
     Produkt von Primzahlen zu schreiben.
-  link: /course/divisibility-and-primes/prime-numbers
+  link: /course/divisibility/prime-numbers
 
 fermat-last:
   title: Fermat's letzter Satz
@@ -612,7 +612,7 @@ gcf:
   title: Größter gemeinsamer Teiler
   text: Der __größte gemeinsame Teiler__ (ggT) von zwei Zahlen _a_ und _b_ ist
     die größte ganze Zahl, die gleichzeitig ein Divisor von _a_ und von _b_ ist.
-  link: /course/divisibility-and-primes/greatest-common-factors
+  link: /course/divisibility/greatest-common-factors
 
 geometric-sequence:
   title: Geometrische Folge
@@ -630,7 +630,7 @@ glide-reflection:
   text: Eine __Gleitspiegelung__ ist eine besondere Art der Abbildung. Sie ist
     eine Kombination aus einer _Spiegelung_ und einer _Translation_ in die
     gleiche Richtung wie die Spiegelachse.
-  link: /course/transformations-and-symmetry/wallpaper-groups#footsteps
+  link: /course/transformations/symmetry-groups#footsteps
 
 golden-ratio:
   title: Goldener Schnitt
@@ -646,36 +646,36 @@ golden-ratio:
 graph:
   title: Graph
   text: Ein __Graph__ ist eine Menge von Knoten, die durch Kanten verbunden sind.
-  link: /course/graphs-and-networks/introduction
+  link: /course/graph-theory/introduction
 
 graph-cycle:
   title: Zyklus
   text: __Zyklen__ sind Graphen, die aus einem geschlossenen Ring von
     Knoten bestehen.
-  link: /course/graphs-and-networks/introduction#intro-4
+  link: /course/graph-theory/introduction#intro-4
 
 graph-degree:
   title: Grad
   text: Der __Grad__ eines Knoten ist die Anzahl der Kanten, die sich an diesem
     Knoten treffen.
-  link: /course/graphs-and-networks/introduction#intro-3
+  link: /course/graph-theory/introduction#intro-3
 
 graph-edge:
   title: Kante
   text: __Kanten__ sind die Linien, die Knoten (Punkte) in einem Graphen
     verbinden.
-  link: /course/graphs-and-networks/introduction
+  link: /course/graph-theory/introduction
 
 graph-order:
   title: Ordnung
   text: Die __Ordnung__ eines Graphen entspricht der Anzahl seiner Knoten in
     ihm.
-  link: /course/graphs-and-networks/introduction#intro-3
+  link: /course/graph-theory/introduction#intro-3
 
 graph-vertex:
   title: Knoten
   text: Ein __Knoten__ ist ein Punkt oder eine Ecke eines Graphen.
-  link: /course/graphs-and-networks/introduction
+  link: /course/graph-theory/introduction
 
 gravity:
   title: Gravitation
@@ -701,7 +701,7 @@ group:
     3. Es gibt ein _neutrales Element_, und jedes Element e hat ein
        _Umkehr-Element (inverses Element)_, das, wenn es mit e verknüpft wird,
     das neutrale Element ergibt.
-  link: /course/transformations-and-symmetry/symmetry-groups#groups-1
+  link: /course/transformations/symmetry-groups#groups-1
 
 hailstone-sequence:
   title: Hagelschlagzahlen
@@ -738,7 +738,7 @@ icosahedron:
   title: Ikosaeder
   text: Das __Ikosaeder__ ist ein platonischer Körper und aus besteht 20 Flächen, die alle gleichseitige
     Dreiecke sind. Es hat 12 Ecken und 30 Kanten.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 imaginary:
   title: Imaginäre Zahlen
@@ -802,7 +802,7 @@ kite:
   title: Deltoid (Drachenviereck)
   text: Ein __Deltoid__ ist ein Viereck, bei dem zwei Paare benachbarter Seiten
     die gleiche Länge haben.
-  link: /course/polygons-and-polyhedra/quadrilaterals#kites
+  link: /course/polyhedra/quadrilaterals#kites
 
 laws-of-nature:
   title: Naturgesetze
@@ -814,7 +814,7 @@ lcm:
   title: Kleinstes gemeinsames Vielfaches
   text: Das __kleinste gemeinsame Vielfache__ (kgV) von zwei Zahlen _a_ und _b_
     ist die kleinste ganze Zahl, die ein Vielfaches von _a_ und _b_ist.
-  link: /course/divisibility-and-primes/least-common-multiples
+  link: /course/divisibility/least-common-multiples
 
 line:
   title: Gerade
@@ -905,7 +905,7 @@ multiple:
   title: Vielfache
   text: Eine Zahl _a_ ist ein __Vielfaches__ einer Zahl _b_, wenn _b_ ein Faktor
     von _a_ist.
-  link: /course/divisibility-and-primes/factors-and-multiples
+  link: /course/divisibility/factors-and-multiples
 
 natural-numbers:
   title: Natürliche Zahlen
@@ -938,7 +938,7 @@ obtuse-angle:
 obtuse-triangle:
   title: Stumpfwinkliges Dreieck
   text: In einem __stumpfwinkligen Dreieck__ ist ein Innenwinkel größer als 90°.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+  link: /course/triangles/properties#classification
 
 octagon:
   title: Oktogon (Achteck)
@@ -948,7 +948,7 @@ octahedron:
   title: Oktaeder
   text: Das __Oktaeder__ ist ein platonischer Körper und besteht aus 8 Flächen, die alle gleichseitige
     Dreiecke sind. Er hat 6 Eckpunkte und 12 Kanten.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 order-of-symmetry:
   title: Zähligkeit
@@ -956,7 +956,7 @@ order-of-symmetry:
     Anzahl der Orientierungen, in denen die Form gleich aussieht. (Oder, es ist
     die Anzahl der Male, die man die Form drehen kann, bevor man zum Anfang
     zurückkehrt.)
-  link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
+  link: /course/transformations/symmetry#rotational-symmetry
 
 origin:
   title: Ursprung
@@ -972,7 +972,7 @@ palindrome:
   text: Ein __Palindrom__ ist ein Wort oder eine Zahl, die von hinten nach vorne
     gleichlautend ist wie von vorne nach hinten. Zum Beispiel sind 25752 und
     "ANNA" beides Palindrome.
-  link: /course/transformations-and-symmetry/symmetry#palindromes
+  link: /course/transformations/symmetry#palindromes
 
 parabola:
   title: Parabel
@@ -1010,7 +1010,7 @@ parallelogram:
   title: Parallelogramm
   text: Ein __Parallelogramm__ ist ein Viereck, bei dem beide Paare von
     gegenüberliegenden Seiten parallel sind.
-  link: /course/polygons-and-polyhedra/quadrilaterals#parallelograms
+  link: /course/polyhedra/quadrilaterals#parallelograms
 
 pascals-triangle:
   title: Pascalsches Dreieck
@@ -1024,7 +1024,7 @@ penrose:
   text: Eine __Penrose-Parkettierung__ ist eine _nicht-periodische_,
     _selbstähnliche_ Tesselierung. Es besteht nur aus wenigen verschiedenen
     Formen, wiederholt sich aber nie.
-  link: /course/polygons-and-polyhedra/tessellations#penrose
+  link: /course/polyhedra/tessellations#penrose
 
 pentagon:
   title: Pentagon (Fünfeck)
@@ -1060,7 +1060,7 @@ pi:
   text: __Pi__, oft als griechischer Buchstabe _π_geschrieben, ist das
     Verhältnis von Umfang und Durchmesser eines Kreises. Sie ist eine transzendente Zahl,
     und ihr Wert ist ungefähr 3,14159265…
-  link: /course/circles-and-pi/introduction#pi-definition
+  link: /course/circles/introduction#pi-definition
 
 platonic-solid:
   title: Platonischer Körper
@@ -1068,7 +1068,7 @@ platonic-solid:
     Vieleck mit der gleichen Anzahl von Kanten ist und bei dem sich an jeder Ecke die gleiche Anzahl von Flächen
     trifft. Es gibt nur fünf verschiedene platonische Körper:
     Tetraeder, Würfel, Oktaeder, Dodekaeder und Ikosaeder."
-  link: /course/polygons-and-polyhedra/platonic-solids
+  link: /course/polyhedra/platonic
 
 point:
   title: Punkt
@@ -1083,7 +1083,7 @@ polygon:
     enthalten. Zum Beispiel ist ein Quadrat ein Vieleck, ein
     Kreis aber nicht.
   image: polygon.svg
-  link: /course/polygons-and-polyhedra/polygons#polygons
+  link: /course/polyhedra/polygons#polygons
 
 polygon-diagonal:
   title: Diagonale
@@ -1105,28 +1105,28 @@ polyhedron:
   text: Ein __Polyeder__ (auch _Vielflächler_ genannt) ist ein dreidimensionaler
     Körper ohne gekrümmte Oberflächen oder Kanten. Alle Flächen eines Polyeders sind Vielecke. Zum
     Beispiel sind ein Würfel und eine Pyramide Polyeder, aber eine Kugel nicht.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polyhedron-dual:
   title: Dualität eines Polyeders
   text: TODO
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-dual
+  link: /course/polyhedra/platonic#platonic-dual
 
 polyhedron-edge:
   title: Kanten eines Polyeders
   text: Die __Kanten__ eines Polyeders sind die Strecken, durch die zwei seiner
     Flächen verbunden sind.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polyhedron-face:
   title: Oberfläche eines Polyeders
   text: Die __Oberfläche__ eines Polyeders besteht aus Vielecken.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polyhedron-vertex:
   title: Eckpunkt eines Polyeders
   text: Die Ecken eines Polyeders werden seine __Eckpunkte__ genannt.
-  link: /course/polygons-and-polyhedra/polyhedra
+  link: /course/polyhedra/polyhedra
 
 polynomial:
   title: Polynom
@@ -1153,12 +1153,12 @@ prime:
   title: Primzahl
   text: Eine __Primzahl__ ist eine positive ganze Zahl, die keine anderen Faktoren als
     1 und sich selbst hat. Die ersten Primzahlen sind 2, 3, 5, 11, 13, …
-  link: /course/divisibility-and-primes/prime-numbers
+  link: /course/divisibility/prime-numbers
 
 prime-factor:
   title: Primfaktor
   text: Ein __Primfaktor__ einer Zahl ist einfach ein Faktor, der Primzahl ist.
-  link: /course/divisibility-and-primes/prime-numbers
+  link: /course/divisibility/prime-numbers
 
 prime-factorisation:
   title: Primfaktorenzerlegung
@@ -1220,13 +1220,13 @@ pythagoras-theorem:
   text: __Der Satz des Pythagoras__ besagt, dass in jedem rechtwinkligen Dreieck
     `a^2 + b^2 = c^2` gilt, wobei _c_ die Länge der Hypotenuse und _a_ und _b_
     die Längen der beiden Katheten sind.
-  link: /course/triangles-and-trigonometry/pythagoras-theorem
+  link: /course/triangles/pythagoras
 
 pythagorean-triple:
   title: pythagoreisches Tripel
   text: Ein __pythagoreisches Tripel__ sind drei ganze Zahlen _a_, _b_ und
     _c_, die den Satz des Pythagoras erfüllen `a^2 + b^2 = c^2`.
-  link: /course/triangles-and-trigonometry/pythagoras-theorem#pythagorean-triples
+  link: /course/triangles/pythagoras#pythagorean-triples
 
 quadratic:
   title: Quadratische Funktionen
@@ -1263,7 +1263,7 @@ quadratic-function-vertex-form:
 quadrilateral:
   title: Viereck
   text: Ein __Viereck__ ist ein Vieleck (Polygon) mit vier Seiten.
-  link: /course/polygons-and-polyhedra/quadrilaterals
+  link: /course/polyhedra/quadrilaterals
 
 quantum:
   title: Quantenmechanik
@@ -1275,7 +1275,7 @@ radians:
   text: __Radiant__ ist eine Einheit zur Messung der Größe von Winkeln. Eine
     vollständige Umdrehung (360°) ist `2π` in Radiant (Bogenmaß) - die Länge
     des Umfangs eines Einheitskreises.
-  link: /course/circles-and-pi/radians#radians
+  link: /course/circles/radians#radians
 
 radioactive:
   title: Radioaktiver Zerfall
@@ -1305,33 +1305,33 @@ real-numbers:
 rectangle:
   title: Rechteck
   text: Ein __Rechteck__ ist ein Viereck, bei dem alle vier Winkel 90° betragen.
-  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-1
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 reflection:
   title: Spiegelung
   text: Eine __Spiegelung__ ist eine Abbildung, die eine Form entlang einer
     Linie "rotiert" oder "reflektiert".
-  link: /course/transformations-and-symmetry/transformations#reflections
+  link: /course/transformations/rigid#reflections
 
 reflectional-symmetry:
   title: Spiegelsymmetrie
   text: Eine Form nennt man spiegelsymmetrisch, wenn sie nach einer Spiegelung
     gleich aussieht.
   image: reflectional-symmetry.svg
-  link: /course/transformations-and-symmetry/symmetry#reflectional-symmetry
+  link: /course/transformations/symmetry#reflectional-symmetry
 
 regular-polygon:
   title: Regelmäßiges Vieleck
   text: Bei einem __regelmäßigen Vieleck__ haben alle Seiten die gleiche Länge
     und alle Innenwinkel die gleiche Größe.
   image: regular-polygon.svg
-  link: /course/polygons-and-polyhedra/polygons#regular-polygons
+  link: /course/polyhedra/polygons#regular-polygons
 
 rhombus:
   title: Raute
   text: Eine __Raute__ oder Rhombus (der Plural ist _Rhomben_ oder _Rauten_) ist
     ein Viereck, bei dem alle Seiten die gleiche Länge haben.
-  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-1
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 right-angle:
   title: Rechter Winkel
@@ -1341,13 +1341,13 @@ right-triangle:
   title: Rechtwinkliges Dreieck
   text: In einem __rechtwinkligen Dreieck__hat ein Innenwinkel genau 90°.
   image: right-triangle.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#classification
+  link: /course/triangles/properties#classification
 
 rigid-transformation:
   title: Längentreue Abbildung
   text: Eine __längentreue Abbildung__ (oder __Isometrie__) ist eine Abbildung,
     die die Größe oder Form einer geometrischen Figur nicht verändert.
-  link: /course/transformations-and-symmetry/transformations#rigid
+  link: /course/transformations/rigid
 
 roman-numerals:
   title: Römische Zahlen
@@ -1368,14 +1368,14 @@ rotation:
   title: Drehung
   text: Eine __Drehung__ ist eine Abbildung, die eine Form um einen bestimmten
     Winkel um einen Festpunkt „rotieren“ lässt.
-  link: /course/transformations-and-symmetry/transformations#rotations
+  link: /course/transformations/rigid#rotations
 
 rotational-symmetry:
   title: Rotationssymmetrie
   text: Eine Form nennt man rotationssymmetrisch, wenn sie nach einer Drehung
     um weniger als 360° gleich aussieht.
   image: rotational-symmetry.svg
-  link: /course/transformations-and-symmetry/symmetry#rotational-symmetry
+  link: /course/transformations/symmetry#rotational-symmetry
 
 roulette:
   title: Roulette
@@ -1391,7 +1391,7 @@ scale-factor:
 
     Ein Skalierungsfaktor von weniger als 1 bedeutet, dass die Figur geschrumpft ist, und ein
     Skalierungsfaktor größer als 1 bedeutet, dass die Figur vergrößert ist.
-  link: /course/transformations-and-symmetry/similarity#dilations-1
+  link: /course/transformations/dilations#dilations-1
 
 scalene-triangle:
   title: Unregelmäßiges Dreieck
@@ -1448,7 +1448,7 @@ sieve-eratosthenes:
   text: Das __Sieb des Eratosthenes__ ist ein Verfahren zum Auffinden von
     Primzahlen, indem Schritt für Schritt Zahlen eliminiert werden, die _nicht_
     Primzahlen sind.
-  link: /course/divisibility-and-primes/prime-numbers#eratosthenes
+  link: /course/divisibility/prime-numbers#eratosthenes
 
 similar:
   title: Ähnlich
@@ -1462,14 +1462,14 @@ sin:
   text: Der __Sinus__ ist eine trigonometrische Funktion, die `sin(θ)`
     geschrieben wird. In einem rechtwinkligen Dreieck ist der Sinus das
     Verhältnis der Gegenkathete zur Hypotenuse.
-  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+  link: /course/triangles/trigonometry#trig-functions
 
 sphere:
   title: Kugel
   text: Eine __Kugel__ ist ein dreidimensionaler Körper, der aus allen Punkten
     besteht, die den gleichen Abstand zu einem bestimmten _Mittelpunkt_ haben. Dieser Abstand
     wird als _Radius_ der Kugel bezeichnet.
-  link: /course/circles-and-pi/spheres-cones-cylinders#sphere
+  link: /course/circles/spheres-cones-cylinders#sphere
 
 sphere-radius:
   title: Radius einer Kugel
@@ -1480,7 +1480,7 @@ square:
   title: Quadrat
   text: "Ein __Quadrat__ ist ein regelmäßiges Viereck: Alle Seiten haben die gleiche
     Länge, und alle Winkel haben die gleiche Größe (90°)."
-  link: /course/polygons-and-polyhedra/quadrilaterals
+  link: /course/polyhedra/quadrilaterals
 
 square-area:
   title: Fläche eines Quadrats
@@ -1506,7 +1506,7 @@ subgraph:
   title: Teilgraph
   text: Ein Graph ist ein __Teilgraph__ eines anderen Graphen, wenn er durch
     eine Teilmenge von dessen Kanten und Knoten gebildet wird.
-  link: /course/graphs-and-networks/introduction#intro-2
+  link: /course/graph-theory/introduction#intro-2
 
 supplementary-angles:
   title: Suplementärwinkel
@@ -1516,13 +1516,13 @@ symmetry:
   title: Symmetrie
   text: Eine Figur oder Form ist __symmetrisch__, wenn sie auch nach einer
     bestimmten Abbildung (z.B. Spiegelung oder Drehung) gleich aussieht.
-  link: /course/transformations-and-symmetry/symmetry#symmetry
+  link: /course/transformations/symmetry#symmetry
 
 symmetry-group:
   title: Symmetriegruppe
   text: Eine __Symmetriegruppe__ eines geometrischen Objekts ist die Sammlung
     aller seiner _symmetrieerhaltenden Abbildungen_.
-  link: /course/transformations-and-symmetry/symmetry-groups#groups-1
+  link: /course/transformations/symmetry-groups#groups-1
 
 tan:
   title: Tangens
@@ -1534,7 +1534,7 @@ tan:
 
     In einem rechtwinkligen Dreieck ist `tan(θ)` das Verhältnis der Gegenkathete und
     der Ankathete eines Winkels `θ`.
-  link: /course/triangles-and-trigonometry/trigonometry#trig-functions
+  link: /course/triangles/trigonometry#trig-functions
 
 tangent:
   title: Tangente
@@ -1556,7 +1556,7 @@ tessellation:
   title: Tessellierung
   text: Eine __Tessellierung__ ist ein geometrisches Muster, das eine Oberfläche
     ohne Lücken oder Überlappungen bedeckt.
-  link: /course/polygons-and-polyhedra/tessellations
+  link: /course/polyhedra/tessellations
 
 tetrahedral-numbers:
   title: Tetraederzahlen
@@ -1569,7 +1569,7 @@ tetrahedron:
   title: Tetraeder
   text: Das __Tetraeder__ ist ein platonischer Körper und besteht aus 4 Flächen, die alle gleichseitige
     Dreiecke sind. Es hat vier Ecken und sechs Kanten.
-  link: /course/polygons-and-polyhedra/platonic-solids#platonic-overview
+  link: /course/polyhedra/platonic#platonic-overview
 
 theorem:
   title: Theorem
@@ -1582,28 +1582,28 @@ transformation:
   text: Eine __Abbildung__ wandelt eine geometrische Form in eine andere um. Es
     gibt viele verschiedene Arten von Abbildungen, wie _Spiegelungen_ oder
     _Dilatationen_.
-  link: /course/transformations-and-symmetry/transformations#transformations
+  link: /course/transformations/rigid#transformations
 
 transformation-image:
   title: Abbild
   text: Nach der Anwendung einer Abbildung auf eine geometrische Form wird das
     Ergebnis als sein __Abbild__bezeichnet. Das wird oft durch das Anhängen
     eines ' an das Ende ihrer Bezeichnung gekennzeichnet.
-  link: /course/transformations-and-symmetry/transformations#transformations
+  link: /course/transformations/rigid#transformations
 
 translation:
   title: Verschiebung
   text: Eine __Verschiebung__ ist eine Abbildung, die eine Figur in eine
     bestimmte Richtung bewegt, ohne ihren Winkel oder ihre Form zu verändern.
   image: translation.svg
-  link: /course/transformations-and-symmetry/transformations#translations
+  link: /course/transformations/rigid#translations
 
 translational-symmetry:
   title: Translationssymmetrie
   text: Ein sich wiederholendes Muster (wie eine Tapete) ist
     __translationssymmetrisch__, wenn es nach einer Verschiebung um einen
     bestimmten Abstand gleich aussieht.
-  link: /course/transformations-and-symmetry/wallpaper-groups#wallpaper-groups-1
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
 
 transversal:
   title: Transversale
@@ -1614,7 +1614,7 @@ trapezium:
   text: Ein __Trapez__ ist ein Viereck, bei dem ein Paar gegenüberliegender
     Seiten parallel sind. Diese werden die _Grundseiten_ des
     Trapezes genannt, und die anderen beiden Seiten werden als _Schenkel_ bezeichnet.
-  link: /course/polygons-and-polyhedra/quadrilaterals#quadrilaterals-2
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
 
 triangle:
   title: Dreieck
@@ -1633,7 +1633,7 @@ triangle-altitude:
     Seiten, die zum gegenüberliegenden Eckpunkt verläuft. Jedes Dreieck hat
     drei Höhen.
   image: triangle-altitude.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#altitudes
+  link: /course/triangles/properties#altitudes
 
 triangle-legs:
   title: Katheten eines Dreiecks
@@ -1653,14 +1653,14 @@ triangle-median:
   text: Die __Schwerlinien__ eines Dreiecks sind die Strecken, die jeden
     Eckpunkt mit dem Mittelpunkt der gegenüberliegenden Seiten verbinden. Die drei Schwerlinien eines
     Dreiecks schneiden sich in einem einzigen Punkt, dem sogenannten __Schwerpunkt__.
-  link: /course/triangles-and-trigonometry/properties-of-triangles#medians
+  link: /course/triangles/properties#medians
 
 triangle-midsegment:
   title: Mittelparallele
   text: Die __Mittelparallelen__ eines Dreiecks sind die Strecken, die die
     Mittelpunkte der verschiedenen Seiten des Dreiecks miteinander verbinden.
   image: triangle-midsegment.svg
-  link: /course/triangles-and-trigonometry/properties-of-triangles#midsegments
+  link: /course/triangles/midsegments
 
 triangle-numbers:
   title: Dreieckszahlen
@@ -1675,7 +1675,7 @@ triangle-sss:
   title: SSS-Satz
   text: Zwei Dreiecke sind __kongruent__, wenn ihre drei Seiten die gleiche
     Länge haben. Dies wird als __SSS-Satz__ für Dreiecke bezeichnet.
-  link: /course/triangles-and-trigonometry/triangles-congruence#congruence-1
+  link: /course/triangles/congruence#congruence-1
 
 trigonometry:
   title: Trigonometrie
@@ -1683,20 +1683,20 @@ trigonometry:
     zwischen den Seiten und Winkeln von Dreiecken untersucht. Es geht in erster
     Linie um die trigonometrischen Funktionen __Sinus__, __Kosinus__,
     __Tangens__ und deren Wechselwirkungen.
-  link: /course/triangles-and-trigonometry/trigonometry
+  link: /course/triangles/trigonometry
 
 truncated-icosahedron:
   title: Ikosaederstumpf
   text: Der __Ikosaederstumpf__ ist ein _archimedischer Körper_, der aus 12
     regelmäßigen Fünfecken und 20 regelmäßigen Sechsecken besteht.
-  link: /course/polygons-and-polyhedra/more-on-polyhedra#archimedean
+  link: /course/polyhedra/platonic#archimedean
 
 twin-primes:
   title: Primzahlzwillinge
   text: __Primzahlzwillinge__ sind Paare von Primzahlen wie 17 und 19 oder 101 und 103, deren
     Abstand genau 2 ist. Es ist unbekannt, ob es unendlich viele Paare von
     Primzahlzwillingen gibt.
-  link: /course/divisibility-and-primes/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/the-distribution-of-primes#twin-primes
 
 unit-circle:
   title: Einheitskreis

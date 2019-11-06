@@ -117,10 +117,11 @@ vieler Jahrhunderte entdeckt wurden. Wir werden auch sehen, wie diese Techniken 
 um wichtige Probleme in der realen Welt zu lösen.
 
 ---
-> id: points
-> section: definitions
 
-## Geometrische Definitionen
+## Euklids Axiome
+
+> section: axioms
+> id: points
 
 Bevor wir irgendwelche Beweise formulieren können, müssen wir uns auf ein paar Fachausdrücke einigen,
 die es einfacher machen, über geometrische Objekte zu sprechen. Diese sind vielleicht nicht wirklich spannend,
@@ -364,9 +365,8 @@ _{button.next-step} Weiter_
 
 ---
 > id: euclid
-> section: euclids-axioms
 
-## Satz des Euklid
+### Satz des Euklid
 
 ::: column.grow
 Griechische Mathematiker erkannten, dass man, um formale Beweise zu schreiben, eine Art
@@ -489,10 +489,11 @@ Dies ist nur ein Beispiel dafür, dass Euklids Ideen in der Mathematik
 auch auf ganz anderen Gebieten als Inspiration dienten.
 
 ---
-> id: measuring
-> section: geometric-construction
 
-## Geometrisches Konstruieren
+## Konstruktion mit Zirkel und Lineal
+
+> section: construction
+> id: measuring
 
 Du hast vielleicht bemerkt, dass die fünf Axiome von Euklid nichts über die
 _Messung_ von Abständen oder Winkeln sagen, was schon immer ein wesentlicher Bestandteil der
@@ -644,51 +645,12 @@ ist es tatsächlich ein gleichseitiges Dreieck._
 
 {.todo} Demnächst - Konstruktion von Winkelhalbierenden
 
-    // When two rays have the same endpoint, an angle is created.
-    // 
-    // Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
-    // “∠” symbol in front of the three letters used to label it. This angle can be
-    // labeled `/_ABC` or `/_CBA`. Always put the vertex (the common endpoint of the
-    // two rays) in the middle of the three points. It doesn’t matter which side point
-    // is written first.
-    // 
-    // An __angle bisector__ is a ray that divides an angle into two congruent angles,
-    // each having a measure exactly half of the original angle. Every angle has
-    // exactly one angle bisector.
-    // 
-    // Angle Bisector Theorem: If a point is on the bisector of an angle, then the
-    // point is equidistant from the sides of the angle.
-    // In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
-
----
-> id: parallel-perp
-
-### Parallele und normale Geraden
-
-{.todo} COMING SOON – Constructing Parallel and Perpendicular Lines
-
-{.todo} COMING SOON – Constructing a Square
-
-    // Perpendicular Line Construction; through a Point NOT on the Line
-    // Draw a horizontal line and a point above that line. Label the line l and the point A.
-    // 
-    // * Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
-    // * Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
-    // * Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
-    // 
-    // Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
-    // 
-    // Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
-    // 
-    // Distance Between Parallel Lines 
-    // The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
-
 ---
 > id: impossible
 
 ### Unmögliche Konstruktionen
 
-In den folgenden Kursen werden wir noch mehr Figuren sehen, die auf
+Im folgenden Kapitel werden wir noch mehr Figuren sehen, die auf
 dieselbe Weise konstruiert werden können. Allerdings gibt es eine Grenze für die euklidische Geometrie: Einige Konstruktionen
 sind nur mit einer geraden Leiste und einem Zirkel schlicht unmöglich.
 
@@ -752,11 +714,30 @@ Linealen und Winkelmessern mit einer Skalierung gelöst werden können. Aber sie
 benutzen darf.
 
 ---
+
+## Noch mehr Konstruktionen
+
+> section: more-construction
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Winkel und Beweise
+
+> section: proofs
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Origami und Papierfalten
+
 > id: origami
 > section: origami
 > sectionBackground: dark
-
-## Origami und Papierfalten
 
 Die Verwendung von einem Lineal und einem Zirkel ist nicht die einzige Möglichkeit,
 geometrische Figuren zu konstruieren. Eine andere Technik verwendet überhaupt keine Werkzeuge: __Origami__.

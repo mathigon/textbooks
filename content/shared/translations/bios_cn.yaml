@@ -17,9 +17,9 @@ eratosthenes:
     他还发明了“埃拉托色尼筛选法”，一种计算__素数__的有效方法。
   links:
     - title: 地球半径
-      url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
+      url: /course/circles/tangets-chords-arcs#eratosthenes
     - title: 埃拉托色尼筛选法
-      url: /course/divisibility-and-primes/prime-numbers#eratosthenes
+      url: /course/divisibility/prime-numbers#eratosthenes
 
 euclid:
   name: Euclid
@@ -33,7 +33,7 @@ euclid:
     - title: 欧几里得公理
       url: /course/euclidean-geometry/euclids-axioms
     - title: 无穷多素数
-      url: /course/divisibility-and-primes/prime-numbers#primes3
+      url: /course/divisibility/prime-numbers#primes3
 
 euler:
   name: Euler
@@ -50,11 +50,11 @@ euler:
     许多其他课题中做出了重要的发现。
   links:
     - title: Königsberg Bridges Problem
-      url: /course/graphs-and-networks/bridges-of-koenigsberg
+      url: /course/graph-theory/bridges-of-koenigsberg
     - title: Euler’s Formula
-      url: /course/graphs-and-networks/eulers-formula
+      url: /course/graph-theory/planar-graphs
     - title: Polyhedrons
-      url: /course/polygons-and-polyhedra/polyhedra
+      url: /course/polyhedra/polyhedra
 
 gauss:
   name: Gauss
@@ -70,7 +70,7 @@ gauss:
     发现; 后来又以教授的身份辅导了许多著名的数学家。
   links:
     - title: 素数定理
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
     - title: 非欧几里得几何
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -87,7 +87,7 @@ riemann:
     对素数的分布作出了开创性的发现。
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
 
 ulam:
   name: Ulam

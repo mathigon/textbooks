@@ -89,10 +89,11 @@ Fakat geometri sadece teoremleri kanıtlamaya yaramaz. Geometri doğadadır, mim
 Bu ve sıradaki derslerde, yüzyıllar içinde matematikçiler tarafından keşfedilen, geometrideki pek çok aracı ve tekniği öğreneceğiz. Ayrıca bu tekniklerin, dünyamızın önemli problemleri çözmede nasıl kullanılabileceğini göreceğiz.
 
 ---
-> id: points
-> section: definitions
 
-## Geometrik Tanımlar
+## Öklid’in Aksiyomları
+
+> section: axioms
+> id: points
 
 Kanıt yapmaya başlamadan önce, geometrik nesnelerden daha kolay bahsedebilmek için sıklıkla kullanılan terminolojiye ihtiyacımız var. Bunlar özellikle heyecan verici olan nesneler değil ama zaten çoğunu biliyor olmalısınız:
 
@@ -305,9 +306,8 @@ _{button.next-step} Devam et_
 
 ---
 > id: euclid
-> section: euclids-axioms
 
-## Öklid’in Aksiyomları
+### Öklid’in Aksiyomları
 
 ::: column.grow
 Yunan matematikçi usule uygun ispatlar yapmak için bazı _başlangıç noktalarına_ ihtiyacımız olduğunu anladı: herkesin doğruluğunda hemfikir olduğu basit, sezgisel ifadeler. Bu ifadelere  [__aksiyom__](gloss:axiom) (ya da _belit_) denir.
@@ -412,10 +412,11 @@ Bu aksiyomların her biri oldukça açık ve aşikar ancak birlikte geometrinin 
 Bu Öklid’in matematik konusundaki fikirlerinin tamamen farklı konulara ilham verdiğinin örneklerinden biridir.
 
 ---
-> id: measuring
-> section: geometric-construction
 
-## Geometrik İnşalar
+## Pergel ve çizgilik çizimleri
+
+> section: construction
+> id: measuring
 
 Öklid’in beş aksiyomunun uzunluk ve açı _ölçme_ hakkında hiçbir şey içermediğini fark etmiş olabilirsiniz. Şimdiye kadar, alan ve hacim hesaplamalarında çok önemli bir noktaydı.
 
@@ -529,45 +530,6 @@ Başlangıç için, sol üstteki kutucuklardan <x-target no-margins to="#equilat
 
 {.todo} ÇOK YAKINDA – AÇIORTAYLARI OLUŞTURMA 
 
-    // When two rays have the same endpoint, an angle is created.
-    // 
-    // Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
-    // “∠” symbol in front of the three letters used to label it. This angle can be
-    // labeled `/_ABC` or `/_CBA`. Always put the vertex (the common endpoint of the
-    // two rays) in the middle of the three points. It doesn’t matter which side point
-    // is written first.
-    // 
-    // An __angle bisector__ is a ray that divides an angle into two congruent angles,
-    // each having a measure exactly half of the original angle. Every angle has
-    // exactly one angle bisector.
-    // 
-    // Angle Bisector Theorem: If a point is on the bisector of an angle, then the
-    // point is equidistant from the sides of the angle.
-    // In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
-
----
-> id: parallel-perp
-
-### Paralel ve Dik Çizgiler
-
-{.todo} ÇOK YAKINDA – PARALEL VE DİK ÇİZGİLERİ OLUŞTURMA
-
-{.todo} ÇOK YAKINDA – KARE OLUŞTURMA
-
-    // Perpendicular Line Construction; through a Point NOT on the Line
-    // Draw a horizontal line and a point above that line. Label the line l and the point A.
-    // 
-    // * Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
-    // * Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
-    // * Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
-    // 
-    // Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
-    // 
-    // Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
-    // 
-    // Distance Between Parallel Lines 
-    // The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
-
 ---
 > id: impossible
 
@@ -619,11 +581,30 @@ Bir çember verildiğinde, bu çemberden çember ile aynı alan sahip bir kare e
 Şunu unutmamalıyız ki bu problemler cebir veya cetvel  ve iletki kullanılarak kolayca çözülebilirler. Ama  eğer sadece cetvel ve düz kenar kullanmanıza izin verildiyse imkansızdır. 
 
 ---
+
+## Daha da fazla inşaat
+
+> section: more-construction
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Açılar ve Kanıtlar
+
+> section: proofs
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Origami and Kağıt Katlama
+
 > id: origami
 > section: origami
 > sectionBackground: dark
-
-## Origami and Kağıt Katlama
 
 Geometrik şekilleri inşa etmenin tek yolu cetvel ve pergel çizimleri değildir. Hiç araç gereç kullanmayan başka bir teknik var: __Origami__.
 

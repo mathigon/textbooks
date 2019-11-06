@@ -117,10 +117,11 @@ of many centuries. We will also see how these techniques can be used to solve
 important problems in the real world.
 
 ---
-> id: points
-> section: definitions
 
-## Geometric Definitions
+## Euclid’s Axioms
+
+> section: axioms
+> id: points
 
 Before we can write any proofs, we need some common terminology that will make
 it easier to talk about geometric objects. These are not particularly exciting,
@@ -362,9 +363,8 @@ These lines are called [__perpendicular__](gloss:perpendicular).
 
 ---
 > id: euclid
-> section: euclids-axioms
 
-## Euclid’s Axioms
+### Euclid’s Axioms
 
 ::: column.grow
 Greek mathematicians realised that to write formal proofs, you need some sort of
@@ -487,10 +487,11 @@ This is just one example where Euclid’s ideas in mathematics have inspired
 completely different subjects.
 
 ---
-> id: measuring
-> section: geometric-construction
 
-## Geometric Construction
+## Ruler and Compass Construction
+
+> section: construction
+> id: measuring
 
 You might have noticed that Euclid’s five axioms don’t contain anything about
 _measuring_ distances or angles. Up to now, this has been a key part of
@@ -659,34 +660,11 @@ is indeed an equilateral triangle._
     // In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
 
 ---
-> id: parallel-perp
-
-### Parallel and Perpendicular Lines
-
-{.todo} COMING SOON – Constructing Parallel and Perpendicular Lines
-
-{.todo} COMING SOON – Constructing a Square
-
-    // Perpendicular Line Construction; through a Point NOT on the Line
-    // Draw a horizontal line and a point above that line. Label the line l and the point A.
-    // 
-    // * Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
-    // * Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
-    // * Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
-    // 
-    // Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
-    // 
-    // Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
-    // 
-    // Distance Between Parallel Lines 
-    // The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
-
----
 > id: impossible
 
 ### Impossible Constructions
 
-In the following courses, we will see even more shapes that can be constructed
+In the next chapter, we will see even more shapes that can be constructed
 like this. However, there is a limit to Euclidean geometry: some constructions
 are simply impossible using just straight-edge and compass.
 
@@ -750,11 +728,48 @@ marked rulers and protractors. But they are impossible if you are just allowed t
 use straight-edge and compass.
 
 ---
+
+## Even More Constructions
+
+> section: more-construction
+> sectionStatus: dev
+
+Constructing a Football Pitch
+
+Constructing Parallel and Perpendicular Lines
+
+Constructing a Square
+
+Perpendicular Line Construction; through a Point NOT on the Line
+Draw a horizontal line and a point above that line. Label the line l and the point A.
+
+* Take the compass and put the pointer on A. Open the compass so that it reaches beyond line l. Draw an arc that intersects the line twice.
+* Move the pointer to one of the arc intersections. Widen the compass a little and draw an arc below the line. Repeat this on the other side so that the two arc marks intersect.
+* Take your straightedge and draw a line from point A to the arc intersections below the line. This line is perpendicular to l and passes through A.
+
+Theorem #1: If two lines are parallel and a third line is perpendicular to one of the parallel lines, it is also perpendicular to the other parallel line. Or, if l || m and l⊥n, then n⊥m.
+
+Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
+
+Distance Between Parallel Lines 
+The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
+
+---
+
+## Angles and Proofs
+
+> section: proofs
+> sectionStatus: dev
+
+TODO
+
+---
+
+## Origami and Paper Folding
+
 > id: origami
 > section: origami
 > sectionBackground: dark
-
-## Origami and Paper Folding
 
 Using straight-edge and compass is not the only way to construct geometric
 shapes. Another technique uses no tools at all: __Origami__.

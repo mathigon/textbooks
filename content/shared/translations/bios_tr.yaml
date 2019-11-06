@@ -16,7 +16,7 @@ abel:
     Abel yokluk içinde bir yaşam sürdü: altı kardeşi vardı, 18 yaşındayken babasını kaybetti, üniversitede iş bulamadı ve çoğu matematikçi çalışmalarını başlarda önemsemedi. Bugün, matematik alanındaki en önemli ödüllerden birisi, kendisinin adıyla anılan _Abel Ödülü_dür.
   links:
     - title: Grup teorisi
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 al-haytham:
   born: 965
@@ -57,7 +57,7 @@ apollonius:
   bio: __Perge’li  Apollonius __ (M.Ö. 200 ) bir koninin düzlemle kesilmesiyle oluşan şekillerin  _ “dört koni kesiti” _ analizi üzerine yaptığı çalışmalarıyla ünlü Yunan matematikçi ve astronomdur.
   links:
     - title: Konik kesitler
-      url: /course/circles-and-pi/conic-sections
+      url: /course/circles/conic-sections
 
 appel:
   name: Appel
@@ -80,7 +80,7 @@ archimedes:
     Sicilya'daki memleketi Syracuse'nin kuşatması sırasında, bir mühendis olarak, ustalıkla savunma makineleri yaptı. İki yıl sonra, Romalıların sonunda girmeyi başardığı Syracuse’ta Arşimed öldürüldü. Son sözleri, o sırada üzerinde çalıştığı _“Çemberlerime dokunma”_ idi.
   links:
     - title: Arşimed Cisimleri
-      url: /course/polygons-and-polyhedra/more-on-polyhedra
+      url: /course/polyhedra/platonic
 
 aristotle:
   born: -384
@@ -102,7 +102,7 @@ aryabhata:
   bio: __Aryabhata__ (आर्यभट) Hint matematiğinin altın çağının ilk matematikçilerinden ve astronomlarındandır. Trigonometrik fonksiyonları tanımlamış, ikinci derece denklem sistemlerini çözmüş, _π_’nin yaklaşık değerlerini hesaplamış ve _π_’nin irrasyonel olduğunu fark etmiştir.
   links:
     - title: Trigonometri
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: İkinci derece denkelmler
       url: /course/quadratics/introduction
 
@@ -246,7 +246,7 @@ cavalieri:
     Cavalieri aynı zamanda optik ve hareket üzerine, logaritmanın İtalya’ya tanıtılmasına çalışmıştır. Galileo Galilei ile sık sık mektuplaşmışlardır.
   links:
     - title: Cavalieri İlkesi
-      url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
+      url: /course/circles/spheres-cones-cylinders#cavalieri
 
 cayley:
   born: 1821
@@ -255,7 +255,7 @@ cayley:
   bio: __Arthur Cayley__ (1821 – 1895), İngiliz matematikçi ve avukat. Cayley, _Grup Teori_’nin öncülerindendir. “Grup” tanımının günümüzdeki tanımını öneren ilk matematikçi olmakla birlikte bu tanımı matematiğin başka dallarına da uygulayabilmek için genelleştirmiştir. Cayley ayrıca matris cebirini geliştirmiş ve yüksek boyutlu geometri ile ilgili çalışmalar yapmıştır.
   links:
     - title: Grup Teori
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 collatz:
   name: Collatz
@@ -285,7 +285,7 @@ copernicus:
     Copernicus aynı zamanda diplomat ve doktor olarak çalışmış, ekonomiye önemli katkılar yapmıştır.
   links:
     - title: Gezegen Yörüngeleri
-      url: /course/circles-and-pi/conic-sections#orbits
+      url: /course/circles/conic-sections#orbits
 
 de-moivre:
   born: 1667
@@ -315,7 +315,7 @@ democritus:
   bio: Yunan matematikçi __Demokritos__ (M.Ö. 460 – 370 ), tüm maddenin minik  _atomlardan_ oluştuğunu iddia eden ve “modern bilimin babası” olarak nitelendirilen ilk kişi olabilir. Ayrıca, prizmaların ve konilerin hacminin formülü de dahil olmak üzere geometride birçok keşifler yaptı.
   links:
     - title: Koninin Hacmi
-      url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
+      url: /course/circles/spheres-cones-cylinders#cone-volume
 
 desargues:
   born: 1591
@@ -327,7 +327,7 @@ desargues:
     Desargues matematikte _projektif geometri_ ya da izdüşüm geometrisinin babası olarak anılır. Bu paralel doğruların “sonsuzdaki bir noktada” kesiştiği, şekillerin büyüklüklerinin değil, sadece orantılarının önemli olduğu ve dört konik kesitin(çember, elips, parabol ve hiperbol) temelde aynı olduğu özel bir çeşit geometridir.
   links:
     - title: Konik Kesitler
-      url: /course/circles-and-pi/conic-sections
+      url: /course/circles/conic-sections
 
 descartes:
   born: 1596
@@ -380,9 +380,9 @@ eratosthenes:
     Ayrıca asal sayıları bulmak için “Eratosthenes Kalburu” isminde bir yöntem geliştirmiştir.
   links:
     - title: Dünya’nın yarıçapı
-      url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
+      url: /course/circles/tangets-chords-arcs#eratosthenes
     - title: Eratosthenes Kalburu
-      url: /course/divisibility-and-primes/prime-numbers#eratosthenes
+      url: /course/divisibility/prime-numbers#eratosthenes
 
 erdos:
   born: 1913
@@ -408,7 +408,7 @@ escher:
   small: true
   links:
     - title: Sanatta Yüzey Kaplamaları
-      url: /course/polygons-and-polyhedra/tessellations#escher
+      url: /course/polyhedra/tessellations#escher
 
 euclid:
   name: Euclid
@@ -424,7 +424,7 @@ euclid:
     - title: Öklid Geometrisinin Temel Aksiyomları
       url: /course/euclidean-geometry/euclids-axioms
     - title: Asal Sayıların Sonsuzluğu
-      url: /course/divisibility-and-primes/prime-numbers#primes3
+      url: /course/divisibility/prime-numbers#primes3
 
 euler:
   name: Euler
@@ -438,11 +438,11 @@ euler:
     Euler modern matematikte kullandığımız terminoloji ve gösterimleri bize kazandıran kişidir. Ayrıca kalkülüs, analiz, çizgeler kuramı, fizik, astronomi ve daha birçok alanda önemli keşifler yapmıştır.
   links:
     - title: Königsberg Köprüsü Problemi
-      url: /course/graphs-and-networks/bridges-of-koenigsberg
+      url: /course/graph-theory/bridges-of-koenigsberg
     - title: Euler Formülü
-      url: /course/graphs-and-networks/eulers-formula
+      url: /course/graph-theory/planar-graphs
     - title: Çokyüzlüler
-      url: /course/polygons-and-polyhedra/polyhedra
+      url: /course/polyhedra/polyhedra
 
 fermat:
   name: Fermat
@@ -512,7 +512,7 @@ galois:
     21 yaşındaki Galois, (bir kadın yüzünden girdiği iddia edilen) düelloda vurulmuş ve kısa süre sonra yaralarından dolayı ölmüştür. Ölmeden önceki gece arkadaşına yazdığı bir mektupta matematiksel çalışmalarını özetlemiştir. Çalışmalarının değerini ve gerçek etkisini anlamak, matematikçilerin yıllarını almıştır.
   links:
     - title: Grup Teorisi
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 gauss:
   name: Gauss
@@ -524,7 +524,7 @@ gauss:
     Rivayete göre Gauss daha 3 yaşındayken babasının kendi işiyle alakalı yaptığı bir hesapta hatasını bulup onu düzeltmiştir. Ayrıca 8 yaşındayken 1’den 1000’e kadar olan doğal sayıları toplayabilmenin kolay yolunu bulmuştur. En önemli keşiflerini sunmaya başladığında daha ergenlik çağındaydı. Daha sonra üniversitede çalışırken birçok önemli matematikçiye ders vermiştir.
   links:
     - title: Asal Sayı Teoremi
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
     - title: Öklid dışı geometri
       url: /world/Dimensions_and_Distortions
     - title: Üçgen sayıların toplamı
@@ -564,7 +564,7 @@ goldbach:
   bio: __Christian Goldbach__ (1690 – 1764) Prusyalı bir matematikçiydi. Euler, Leibniz ve Bernoulli’nin çağdaşıydı. Rus çarı 2. Peter’ın eğitmeniydi. “Goldbach Sanısı” ile anılır.
   links:
     - title: Goldbach Sanısı
-      url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/the-distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -679,7 +679,7 @@ kepler:
   bio: __Johannes Kepler__ (1571 – 1630) Alman bir astronom ve matematikçiydi. Prag’daki _imparatorluk matematikçisi_ydi. _Gezegenlerin hareketleri yasaları_ olarak bilinen üç yasası elde ettiği en önemli sonuçtur. Kepler aynı zamanda optik üzerine çalışmış ve gözlemleri için daha gelişmiş bir teleskop icat etmiştir.
   links:
     - title: Eliptik Yörüngeler
-      url: /course/circles-and-pi/conic-sections#kepler
+      url: /course/circles/conic-sections#kepler
 
 khayyam:
   name: Khayyam
@@ -782,9 +782,9 @@ madhava:
     Madhava trigonometrik fonksiyonlara sonsuz seriler aracılığı ile yaklaşarak,  yüzyıllar sonra kalkülüsün gelişmesine doğru giden yoldaki önemli bir adımı atmıştır. Geometri ve cebir üzerine çalışmış ve (sonsuz serileri kullanarak) _π_ için kesin bir ifade bulmuştur.
   links:
     - title: Trigonometri
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Pi
-      url: /course/circles-and-pi/introduction
+      url: /course/circles/introduction
 
 mandelbrot:
   born: 1924
@@ -809,7 +809,7 @@ mersenne:
     Bugün kendisini daha çok `2^n - 1` şeklinde yazılabilen _Mersenne asalları_ ile hatırlıyoruz. Tanınan en büyük asalların çoğu bu kategoridedir. Aynı zamanda akustik ve titreşen bir telin harmoniği üzerinde çalışmış, teoloji ve felsefe üzerine yazmıştır.
   links:
     - title: Büyük Asallar
-      url: /course/divisibility-and-primes/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/the-distribution-of-primes#prime-test-1
 
 
 milgram:
@@ -885,9 +885,9 @@ newton:
     Newton kalkülüsü icat etmek, ilk yansıtmalı teleskobu yapmak, sesin hızını hesaplamak, akışkanların hareketini incelemek ve prizmaların güneş ışığını gökkuşağı spektrumuna çevirmesinden tola çıkarak renklere dair teoriler geliştirmek gibi pek çok çalışma yapmıştır.
   links:
     - title: Yerçekimi
-      url: /course/circles-and-pi/conic-sections#newton
+      url: /course/circles/conic-sections#newton
     - title: Pi'nin basamakları
-      url: /course/circles-and-pi/introduction#pi-record
+      url: /course/circles/introduction#pi-record
 
 nicomachus:
   name: Nicomachus
@@ -917,7 +917,7 @@ noether:
   small: true
   links:
     - title: Fizikte Simetri
-      url: /course/transformations-and-symmetry/symmetry-in-physics
+      url: /course/transformations/physics
 
 oresme:
   born: 1323
@@ -970,7 +970,7 @@ penrose:
     __Sir Roger Penrose__ (born 1931) İngiliz bir matematikçi ve fizikçidir. Stephen Hawking ve Michael Atiyah gibi ünlü bilim insanlarıyla birlikte çalışarak, genel görelilik ve kozmoloji alanlarında çığır açan işler yapmıştır. Ayrıca _Penrose Kaplamaları_nı keşfetmiştir: kendisini tekrar eden, periyodik olmayan kaplamalar.
   links:
     - title: Penrose Kaplamaları
-      url: /course/polygons-and-polyhedra/tessellations#penrose
+      url: /course/polyhedra/tessellations#penrose
 
 perelman:
   born: 1966
@@ -1007,7 +1007,7 @@ plato:
     Platon, Batı dünyasında ilk yüksek öğrenim kurumu olan Atina Akademisi'ni kurdu. Felsefe ve teoloji, bilim ve matematik, politika ve adalet üzerine yaptığı birçok yazı onu tüm zamanların en etkili düşünürlerinden biri yapar.
   links:
     - title: Platonik Cisimler
-      url: /course/polygons-and-polyhedra/platonic-solids
+      url: /course/polyhedra/platonic
 
 poincare:
   born: 1854
@@ -1037,9 +1037,9 @@ ptolemy:
     Bugün bu modelin doğru olmadığını bilsek de, Ptolemy’nin bilim üzerindeki etkisi tartışmasızdır. Yüzyıllar boyunca geçerliliğini koruyan, pek çok pratik uygulaması olan trigonometrik tablolar geliştirmiştir. Ayrıca detaylı Dünya haritaları hazırlamış, optik ve müzik teorisi üzerinde yazılar yazmıştır.
   links:
     - title: Trigonometri
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Yörüngeler
-      url: /course/circles-and-pi/introduction
+      url: /course/circles/introduction
 
 pythagoras:
   name: Pythagoras
@@ -1053,7 +1053,7 @@ pythagoras:
     Ayrıca İtalya’da, öğrencilerinin neredeyse matematiğe bir din gibi ibadet ettiği, bazı tuhaf kuralları olan bir okul kurdu - ancak okul sonunda düşmanları tarafından yakıldı.
   links:
     - title: Pisagor Teoremi
-      url: /course/triangles-and-trigonometry/pythagoras-theorem
+      url: /course/triangles/pythagoras
 
 ramanujan:
   born: 1887
@@ -1082,7 +1082,7 @@ riemann:
   bio: __Bernhard Riemann__ (1826 – 1866), analiz ve sayılar kuramı alanlarında çalışmalar yapmış olan Alman bir matematikçidir. İntegralin muntazam ilk tanımını veren kişidir. Aynı zamanda diferansiyel geometri de çalışmış, böylece genel göreliliğin temellerini atmıştır. Asal sayıların dağılımıyla alakalı çığır açan keşifleri de olmuştur.
   links:
     - title: Riemann Hipotezi
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
 
 russell:
   born: 1872
@@ -1104,7 +1104,7 @@ shannon:
   small: true
   links:
     - title: Kumar için Bilgisayarlar
-      url: /course/probability/casino-mathematics#dealer
+      url: /course/statistics/casino#dealer
 
 shijie:
   born: 1249

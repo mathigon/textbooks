@@ -24,7 +24,7 @@ abel:
     höchsten Auszeichnungen in der Mathematik, nach ihm benannt.
   links:
     - title: Gruppentheorie
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 al-haytham:
   born: 965
@@ -82,7 +82,7 @@ apollonius:
     Astronom, der vor allem für seine Arbeit über die vier _Kegelschnitte_ bekannt ist.
   links:
     - title: Kegelschnitte
-      url: /course/circles-and-pi/conic-sections
+      url: /course/circles/conic-sections
 
 appel:
   name: Appel
@@ -117,7 +117,7 @@ archimedes:
     Kreise nicht”_ – da er diese damals studierte.
   links:
     - title: Archimedische Körper
-      url: /course/polygons-and-polyhedra/more-on-polyhedra
+      url: /course/polyhedra/platonic
 
 aristotle:
   born: -384
@@ -148,7 +148,7 @@ aryabhata:
     erkannte, dass _π_ irrational ist.
   links:
     - title: Trigonometrie
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Quadratische Gleichungen
       url: /course/quadratics/introduction
 
@@ -353,7 +353,7 @@ cavalieri:
     und tauschte viele Briefe mit Galileo Galilei aus.
   links:
     - title: Das Prinzip von Cavalieri
-      url: /course/circles-and-pi/spheres-cones-cylinders#cavalieri
+      url: /course/circles/spheres-cones-cylinders#cavalieri
 
 cayley:
   born: 1821
@@ -366,7 +366,7 @@ cayley:
     arbeitete an einer höherdimensionalen Geometrie.
   links:
     - title: Gruppentheorie
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 collatz:
   name: Collatz
@@ -411,7 +411,7 @@ copernicus:
     Beiträge zur Ökonomie.
   links:
     - title: Planetenbahnen
-      url: /course/circles-and-pi/conic-sections#orbits
+      url: /course/circles/conic-sections#orbits
 
 de-moivre:
   born: 1667
@@ -453,7 +453,7 @@ democritus:
     in der Geometrie, einschließlich der Formel für das Volumen von Prismen und Kegeln.
   links:
     - title: Volumen eines Kegels
-      url: /course/circles-and-pi/spheres-cones-cylinders#cone-volume
+      url: /course/circles/spheres-cones-cylinders#cone-volume
 
 desargues:
   born: 1591
@@ -472,7 +472,7 @@ desargues:
     Wesentlichen gleich sind.
   links:
     - title: Kegelschnitte
-      url: /course/circles-and-pi/conic-sections
+      url: /course/circles/conic-sections
 
 descartes:
   born: 1596
@@ -553,9 +553,9 @@ eratosthenes:
     Berechnung _von Primzahlen_.
   links:
     - title: Radius der Erde
-      url: /course/circles-and-pi/tangets-chords-arcs#eratosthenes
+      url: /course/circles/tangets-chords-arcs#eratosthenes
     - title: Sieb des Eratosthenes
-      url: /course/divisibility-and-primes/prime-numbers#eratosthenes
+      url: /course/divisibility/prime-numbers#eratosthenes
 
 erdos:
   born: 1913
@@ -584,7 +584,7 @@ escher:
   small: true
   links:
     - title: Tessellations in Art
-      url: /course/polygons-and-polyhedra/tessellations#escher
+      url: /course/polyhedra/tessellations#escher
 
 euclid:
   name: Euclid
@@ -600,7 +600,7 @@ euclid:
     - title: Satz des Euklid
       url: /course/euclidean-geometry/euclids-axioms
     - title: Unendlich viele Primzahlen
-      url: /course/divisibility-and-primes/prime-numbers#primes3
+      url: /course/divisibility/prime-numbers#primes3
 
 euler:
   name: Euler
@@ -619,11 +619,11 @@ euler:
     Astronomie und vielen anderen Themen.
   links:
     - title: Königsberger Brückenproblem
-      url: /course/graphs-and-networks/bridges-of-koenigsberg
+      url: /course/graph-theory/bridges-of-koenigsberg
     - title: Eulersche Formel
-      url: /course/graphs-and-networks/eulers-formula
+      url: /course/graph-theory/planar-graphs
     - title: Polyeder
-      url: /course/polygons-and-polyhedra/polyhedra
+      url: /course/polyhedra/polyhedra
 
 fermat:
   name: Fermat
@@ -725,7 +725,7 @@ galois:
     mathematicians many years to fully realise the true impact of his work.
   links:
     - title: Group Theory
-      url: /course/transformations-and-symmetry/symmetry-groups
+      url: /course/transformations/symmetry-groups
 
 gauss:
   name: Gauss
@@ -743,7 +743,7 @@ gauss:
     später viele andere berühmte Mathematiker als Professor.
   links:
     - title: Primzahlsatz
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
     - title: Nichteuklidische Geometrie
       url: /world/Dimensions_and_Distortions
     - title: Summen von Dreieckszahlen
@@ -800,7 +800,7 @@ goldbach:
     Peter II. und wird für seine “Goldbachsche Vermutung“ in Erinnerung behalten.
   links:
     - title: Goldbachsche Vermutung
-      url: /course/divisibility-and-primes/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/the-distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -979,7 +979,7 @@ kepler:
     Optik und erfand ein verbessertes Teleskop für seine Beobachtungen.
   links:
     - title: Elliptische Umlaufbahnen
-      url: /course/circles-and-pi/conic-sections#kepler
+      url: /course/circles/conic-sections#kepler
 
 khayyam:
   name: Khayyam
@@ -1133,9 +1133,9 @@ madhava:
     formula for _π_ (also using infinite series).
   links:
     - title: Trigonometry
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Pi
-      url: /course/circles-and-pi/introduction
+      url: /course/circles/introduction
 
 mandelbrot:
   born: 1924
@@ -1170,7 +1170,7 @@ mersenne:
     und er schrieb auch über Theologie und Philosophie.
   links:
     - title: Große Primzahlen
-      url: /course/divisibility-and-primes/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/the-distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1286,9 +1286,9 @@ newton:
     Sonnenlicht in ein regenbogenfarbenes Spektrum aufteilen.
   links:
     - title: Schwerkraft
-      url: /course/circles-and-pi/conic-sections#newton
+      url: /course/circles/conic-sections#newton
     - title: Ziffern von Pi
-      url: /course/circles-and-pi/introduction#pi-record
+      url: /course/circles/introduction#pi-record
 
 nicomachus:
   name: Nicomachus
@@ -1332,7 +1332,7 @@ noether:
   small: true
   links:
     - title: Symmetry in Physics
-      url: /course/transformations-and-symmetry/symmetry-in-physics
+      url: /course/transformations/physics
 
 oresme:
   born: 1323
@@ -1409,7 +1409,7 @@ penrose:
     non-periodic tessellations.
   links:
     - title: Penrose Tilings
-      url: /course/polygons-and-polyhedra/tessellations#penrose
+      url: /course/polyhedra/tessellations#penrose
 
 perelman:
   born: 1966
@@ -1464,7 +1464,7 @@ plato:
     Denker aller Zeiten.
   links:
     - title: Platonische Körper
-      url: /course/polygons-and-polyhedra/platonic-solids
+      url: /course/polyhedra/platonic
 
 poincare:
   born: 1854
@@ -1509,9 +1509,9 @@ ptolemy:
     detaillierte Karten der Erde und schrieb über Musiktheorie und Optik.
   links:
     - title: Trigonometrie
-      url: /course/triangles-and-trigonometry/trigonometry
+      url: /course/triangles/trigonometry
     - title: Umlaufbahnen
-      url: /course/circles-and-pi/introduction
+      url: /course/circles/introduction
 
 pythagoras:
   name: Pythagoras
@@ -1531,7 +1531,7 @@ pythagoras:
     Regeln folgten – aber die Schule wurde schließlich von ihren Gegnern niedergebrannt.
   links:
     - title: Der Satz des Pythagoras
-      url: /course/triangles-and-trigonometry/pythagoras-theorem
+      url: /course/triangles/pythagoras
 
 ramanujan:
   born: 1887
@@ -1578,7 +1578,7 @@ riemann:
     über die Verteilung von Primzahlen.
   links:
     - title: Riemannsche Vermutung
-      url: /course/divisibility-and-primes/the-distribution-of-primes#riemann
+      url: /course/divisibility/the-distribution-of-primes#riemann
 
 russell:
   born: 1872
@@ -1612,7 +1612,7 @@ shannon:
   small: true
   links:
     - title: Computers for Gambling
-      url: /course/probability/casino-mathematics#dealer
+      url: /course/statistics/casino#dealer
 
 shijie:
   born: 1249

@@ -1,0 +1,141 @@
+// =============================================================================
+// Graphs and Networks
+// (c) Mathigon
+// =============================================================================
+
+
+@import "styles/variables";
+
+.svg-block { margin: 0 0 1em 0; }
+
+x-parallax.full-width {
+  position: relative;
+  left: calc(~"520px - 50vw");
+  height: 480px;
+  margin: 1.5em 0;
+  width: calc(~"100vw - 280px");
+  @media screen and (max-width: 1120px) { left: -40px; }
+  @media screen and (max-width: @browser-medium) { width: 100vw; }
+  @media screen and (max-width: @browser-small) { left: -24px; }
+  .credit { position: absolute; bottom: 0; right: 0; background: fade(black, 50%); color: white; font-size: 11px; padding: 1px 8px; }
+}
+
+x-tabbox .titles .check { border: 1px solid white; }
+
+// -----------------------------------------------------------------------------
+
+.drawing-path {
+	fill: none;
+  stroke: fade(black, 70%);
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.node { stroke: @grey-background; fill: @red; stroke-width: 2px; cursor: move; }
+.link { stroke: @light-grey; stroke-width: 2px; fill: transparent; }
+.arrow { fill: @light-grey; }
+.graph { background: @grey-background; border-radius: 4px; }
+
+#graph0 .node { transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: scale(1); transform-origin: center; }
+#graph0.novertices .node { transform: scale(0); cursor: default; }
+
+#graph0 .link { stroke-dasharray: 70px; stroke-dashoffset: 140px; transition: stroke-dashoffset 1.6s; }
+#graph0.noedges .link { stroke-dashoffset: 70px; }
+
+.person { display: inline-block; width: 24px; height: 24px; text-align: center; color: #FFF; border-radius: 20px; line-height: 24px; font-weight: 600; }
+.handshakes .duplicate { opacity: 1; transition: opacity .5s; }
+.complete .handshakes .duplicate { opacity: 0.1; }
+.handshakes td { text-align: center; color: #666; }
+
+@media screen and (max-width: 1100px) {
+  .handshakes {
+    width: 100%;
+    max-width: 500px;
+    line-height: 1.4;
+  }
+  .handshakes .person {
+    margin-left: calc(50% - 12px);
+    margin-right: calc(50% - 12px);
+  }
+}
+
+.bridge { fill: @yellow; stroke: transparent; stroke-width: 16px; transition: fill .2s; }
+.bridge.green { fill: @green; }
+.bridge.red { fill: @red; }
+.water { fill: mix(@blue, white, 70%); }
+
+// -----------------------------------------------------------------------------
+
+#planarity circle { fill: @blue; cursor: move; stroke: mix(@blue, white, 20%); stroke-width: 2.5px; }
+#planarity circle.intersect { fill: @red; }
+#planarity line { stroke: fade(black, 30%); stroke-width: 2.5px; }
+#planarity line.intersect { stroke: @red; }
+
+// -----------------------------------------------------------------------------
+
+#konigsberg-proof text { font-weight: 600; text-anchor: middle; fill: white; font-size: 32px; }
+
+.utility { z-index: 10; }
+.utility1, .utility2, .utility3 { opacity: 0; transition: opacity .3s; }
+
+// -----------------------------------------------------------------------------
+
+#planar-1 .link, #planar-2 .link, #planar-3 .link { stroke-width: 3px; }
+
+.frame .btn, .slide .btn, .tab .btn { position: absolute; bottom: 10px; left: 10px; }
+.tab .btn.right { left: auto; right: 10px; }
+
+.frame select {
+  .button();
+  background: @dark-grey data-uri('svg/dropdown.svg') no-repeat right 10px top 14px;
+  background-size: 15px 8px;
+  padding: 0 36px 0 1em;
+  height: 2em;
+  line-height: 2em;
+  font-weight: 600;
+  letter-spacing: .2px;
+  appearance: none;
+  &:hover, &:focus, &:active { background-color: lighten(@dark-grey, 15%); }
+}
+
+.four-colour-icon { width: 40px; height: 40px; padding: 8px; display: inline-block; margin: 0 5px; cursor: pointer; }
+.four-colour-icon.on { padding: 0; border: 8px solid rgba(0,0,0,0.6); }
+.four-colours .solve { left: auto; right: 10px; }
+.four-colours path { transition: .2s; cursor: pointer; &:hover { opacity: 0.8; } }
+
+.colour-count {
+  background: @red;
+  height: 36px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 10px;
+  width: 220px;
+  margin-left: -110px;
+  left: 50%;
+  line-height: 36px;
+  color: white;
+  box-shadow: 0 3px 8px fade(black, 30%);
+}
+
+#dominoes { cursor: pointer; }
+#dominoes g rect { fill: #999; }
+#dominoes g text { fill: #F2F2F2; font-size: 18px; letter-spacing: -1px; }
+#dominoes g { transform-origin: bottom right; transition: transform .1s linear; }
+
+.tsm {
+  background: url(/resources/graph-theory/images/map.jpg);
+  background-size: cover;
+  border-radius: 6px;
+  rect { fill: transparent; cursor: pointer; }
+  circle { fill: @red; cursor: move; }
+  path { fill: none; stroke: @blue; stroke-width: 6; }
+}
+
+.vertex-orders text { font-size: 18px; fill: #FFF; }
+.vertex-orders circle { transition: fill .5s; }
+
+.euler-sum { opacity: 0; margin: 0.4em 0px 0px; padding-top: .4em; border-top: 1px solid #ddd; }

@@ -93,10 +93,9 @@ Bizim örneğimizde, Pascal’ın oyunu kazanma olasılığı `3/4 = 0,75` ve Fe
 
 ---
 
-## Olasılıklar Nelerdir
+### Olasılıklar Nelerdir
 
 > id: prob-line
-> section: what-are-probabilities
 
 __Olasılık__ belirli bir __olayın__ gerçekleşme ihtimalini tanımlayan 0 ile 1 arasında bir sayıdır. 0 olasılığı, bir şeyin _imkansız_ olduğu anlamına gelir; 1 olasılığı, bir şeyin _kesin_ olduğu anlamına gelir.
 
@@ -180,184 +179,9 @@ Olasılıklar _tahmin etmek ve öngörmek_ için harika iken, _aslında_ ne olac
 
 ---
 
-## Kumarhane Matematiği
-
-> id: roulette
-> sectionBackground: dark casino
-> goals: rotate
-> section: casino-mathematics
-
-    .roulette-wheel
-      .layer-2.wheel
-      .layer-3
-      .layer-4.wheel
-      .layer-5
-      .ball
-      svg(width=380 height=380): circle(cx=190 cy=190 r=190)
-    x-gesture(target=".roulette-wheel" offset="-90,-100" slide="0,200")
-
-Keşfedildiği ilk andan kısa bir süre sonra matematikçiler olasılığın kurallarını kumarhane oyunlarının da dahil olduğu bir çok alana uygulamaya başladılar.
-
-Bu matematikçilerden biri olan [Karl Pearson](bio:pearson) _Le Monaco_ adlı Fransız gazetesinde rulet oyunun sonuçlarını analiz ettiği bir makale yayınladı.
-
-Rulet 1’den 36’ya kadar __{.red}kırmızı__ ve __{.black}siyah__ renkli sayılardan ve yeşil 0’dan oluşan bir çark ile oynanır. Bir top atılır ve sayılardan birinin üzerinde rastgele durur. Oyuncular sadece bir sayıya, birden çok sayı kümesine veya sadece bir renge oynayabilirler. Oyuncuların kazanma potansiyeli bu seçeneklerin gerçekleşme olasılığına bağlıdır.
-
----
-> id: roulette-1
-
-İşte Pearson’ın incelediklerinin yüzlercesinden biri. İlk bakışta oldukça rastgele görünüyor:
-
-    .newspaper
-      p 19 Ağustos 1823 tarihli rulet sonuçları, 5. masa:
-      div
-        for x in [13, 12, 30, 33, 3, 12, 29, 5, 8, 22, 23, 13, 5, 18, 14, 31, 36, 15, 18, 28, 32, 29, 11, 34, 23, 36, 8, 16, 2, 3, 9, 20, 16, 14, 15, 26, 31, 21, 15, 3, 33, 22, 12, 14, 9, 6, 30, 13, 33, 5, 28, 17, 27, 6, 5, 34, 11, 18, 32, 6, 9, 31, 29, 2, 18, 35, 6, 1, 34, 28, 1, 10]
-          span(class=colour(x))= x
-
-Bir rulet çarkında aynı sayıda kırmızı ve siyah sayı bulunur. Eğer yeşil 0’ı (kumarhanenin kazandığı durum) gözardı edersek [[neredeyse aynı|tamamen eşit]] sayıda kırmızı ve siyah top gelmesini bekleriz. Bunu yukarıdaki sonuçları inceleyerek kontrol edelim:
-
-    +barchart([['Kırmızı', 37, 'r'], ['Siyah', 35, 'b']])
-
----
-> id: roulette-2
-
-Bu kırmızı ve siyah sayılar arasındaki az bir farkla oldukça eşit dağılmış görünüyor ancak bu zaten olasılıktan beklediğimiz bir sonuç.
-
-Ancak Pearson burada durmadı. O, eğer bu sonuçlar tamamen rastgele dağılıyorsa o halde ikililerin olası dağılımlarının yaklaşık aynı olacağını farketti. Örneğimizde gerçekleşenleri sayalım:
-
-    +barchart([['KK', 14, 'r'], ['KS', 24, 'rb'], ['SK', 24, 'rb'], ['SS', 9, 'b']])
-
----
-> id: roulette-3
-
-Bazı nedenlerde dolayı, aynı olasılıkta olsalar da __{.red}KK__ ve __{.black}SS__; __{.red}K__**{.black}S** ve __{.red}S__**{.black}K**’ya göre [[daha az|daha çok]] sıklıkta meydana geldiği görünüyor. Tabi ki, biz sadece bu belirli dizi için _şanssız_ olabiliriz fakat Pearson bunu defalarca test etti ve hep aynı sonucu buldu.
-
----
-> id: roulette-4
-
-Üçlülere baktığımızda iş daha da kötüleşiyor. 8 olası durum için gerçekleşme sayılarının yine yakın çıkmasını bekliyoruz ancak gerçekte durum böyle değil:
-
-    +barchart([['KKK', 3, 'r'], ['KKS', 10, 'rrb'], ['SKK', 10, 'rrb'], ['KSK', 15, 'rrb'], ['SKS', 14, 'bbr'], ['KSS', 8, 'bbr'], ['SSK', 8, 'bbr'], ['SSS', 2, 'b']])
-
-Görünüşe göre bu kumarhanede renkler beklenenden çok daha sık değişiyor. Aynı renkte üçlülerin gelmesi neredeyse imkansız (__{.red}KKK__ or __{.black}SSS__).
-
-Pearson’ın bu çarpık sonuçları görme ihtimali 100 milyonda 1’den azdı! Kumarhaneye daha yüksek bir kar elde ettirmek için rulet tekerlerinde hile yapıldığını varsaydı ve bu hileyi ortaya çıkarmak için öfkeli birçok mektup yazdı.
-
----
-> id: roulette-5
-
-::: column(width=300)
-
-    x-media(src="images/cocktails.jpg" width=300 height=185)
-
-::: column.grow
-Monte Carlo'ya gittiğinde, nihayet çarpık sonuçların nedeninin çok farklı bir nitelikte olduğunu keşfetti: Sonuçları kaydetmesi için gönderilen gazeteciler kumarhanenin barında oturuyorlardı, bir şeyler içiyor ve öylesine renklere oynuyorlardı...
-:::
-
----
-> id: random-sequence
-> goals: random
-
-Bu hikaye, insanların rastgele görünen verilerle uğraşmakta oldukça kötü olma eğiliminde olduğunu gösteriyor: genellikle olası olayları (aynı renkten uzun diziler) hafife alıyoruz ve muhtemel olayları (farklı renklerden oluşan diziler) fazla tahmin ediyoruz. Bu bankacılık ve sigortacılık alanlarında sahtekarlığı tespit etmek için etkin bir şekilde kullanılabilir.
-
-Gazetecilerden daha iyiyseniz burada kendiniz deneyebilirsiniz: K ve S’lerden oluşan bir dizi yazın ve onun gerçekten ne kadar rastgele olduğunu öğrenin:
-
-    label.newspaper: input(type="text", placeholder="KSSKKSSSKKKSKSKKS")
-    p.text-center(style="margin-top: -1em; font-family: monospace") Rastgelelik puanı: #[span.score 100]/100
-
----
-> id: dealer
-
-::: column.grow
-Pearson yalnızca önceki ruletin sonuçlarını incelerken, diğerleri kumarhanelerdeki kazanma olasılığını arttırmak için matematiği kullanmayı denedi. Bu kişilerden biri [Blackjack](gloss:blackjack) oyununda kumarhaneyi yenmeyi sağlayan _kart sayma_ tekniğini icat eden [Edward Thorp](bio:thorp)’tu.
-
-O daha sonra odağını rulete çevirdi: eğer bir rulet çarkındaki topun konumunu ve hızını biliyorsanız, fiziği kullanarak sonucu yaklaşık olarak tahmin edebileceğimize inanıyordu. Dağıtıcı rulet çarkını çevirdikten sonra yeni bir bahis koymak için sadece birkaç saniyeniz var. Maalesef bu süre insanların kafalarındaki sonucu hesaplamak için çok kısa.
-::: column(width=150)
-
-    .book: img(src="images/beat-the-dealer.jpg" width=150 height=250)
-
-:::
-
----
-> id: dealer-1
-
-    img.computer(src="images/wearable-computer.png" width=275 height=364)
-
-Massachusetts Institute of Technology’de Thorp fikirlerini [bilgi teorisinin](gloss:information) de babası olarak bilinen bir başka matematikçi [Claude Shannon](bio:shannon) ile paylaştı. Onlar birlikte Apple Watch veya Google Glass’dan yüzyıllar önce ilk _giyilebilir bilgisayarı_ yapmaya karar verdiler.
-
-Bilgisayar bir paket sigara büyüklüğündeydi ve bellerine sarılmıştı. Rulet çarkında top belirli bir işareti ne zaman geçse bir insanın ayakkabısına kadar uzanan kablolar hafifçe çekiştirilirdi. Bu bilgisayarın hızı hesaplamasına ve nerede duracağını tahmin etmesini sağlıyordu. Başka bir kablo seti farklı sonuçlara dayanarak farklı tonlar üreten bir bilgisayardan bir kulaklığa yönlendirirdi.
-
----
-> id: dealer-2
-
-    figure: x-media(src="images/las-vegas.jpg" width=760 height=345)
-
-1961 yazında Thorp ve Shannon Las Vegas’ta bilgisayarlarını denediler. Fakat bir miktar para kazanırken, model uçakların bile parçalarını içeren bilgisayar, daha büyük ölçekte kullanılacak kadar sağlam değildi.
-
-Thorp sonuçlar hakkında bilimsel bir makale yazdı ve sonra tabii ki bilgisayarlar kumarhanelerde yasaklandı. Thorp da Las Vegas’taki tüm kumarhanelerden yasaklandı fakat o andan itibaren daha karlı bir işe yöneldi: matematiği ve bilgisayarı borsa da kullanmak.
-
-    // Shannon cryptography and code-breaking during World War II, and would go
-    // on to become known as the father of information theory - and, indeed, the
-    // information age. Shannon taught him to juggle three balls, and that he
-    // rode a unicycle on a steel cable strung between two tree stumps. "He
-    // later reached his goal," he wrote, "which was to juggle the balls while
-    // riding the unicycle on the tightrope."
-
-Bu kısa tarih yolculuğundan sonra, gerçek matematiğe geri dönelim...
-
----
-
-## Venn Diyagramları ve Olasılık Ağaçları
-
-> section: trees-venn
-> sectionStatus: dev
-
-    // TODO – Probability Trees
-    // In real life, coins never have exactly a probability of 0.5. It might be 0.4932
-    // or 0.500012, depending on their exact shape or physical properties. In
-    // mathematics we don’t have to worry about these tiny inaccuracies: we can simply
-    // assume that our “mathematical model” of a coin has exactly a 0.5 probability of
-    // landing heads and is truly random. With this simplification, we can start
-    // answering much more interesting questions.
-    // Now let’s try a more difficult game: there is a bag that contains five
-    // red and three blue marbles. When picking two marbles at random, what is
-    // the probability that both of them are red?
-    // We already know how to calculate the probability that the first marble is
-    // red: it is 5/8 = 0.625.
-    // However, once we have picked the first marble, the probabilities change:
-    // now there are only 7 marbles left, and only four of them are red.
-    // Therefore the probability that the second marble is red is 4/7 = 0.571.
-    // To calculate the probability that #[em both] marbles are red, we simply
-    // have to multiply these probabilities: the final answer is 0.625 × 0.571 = 0.357.
-    // There are four possible outcomes in total: red-red, red-blue, blue-red
-    // and blue-blue. We can represent all these possibilities in a single diagram:
-    // slideshow
-    // Now we can simply read off the probability of the different outcomes. The
-    // probability that both marbles are blue is xxx, and the probability that
-    // you get two marbles with different colours are xxx + xxx = xxx.
-    // Probability trees can be used to solve many problems that consist of
-    // multiple steps that happen one after the other.
-
-    // TODO – VENN DIAGRAMS
-    // Opposite probabilities always add up to 1. This means that you can
-    // calculate the opposite of a probability by subtracting it from 1.
-    // Venn Diagrams and set operations
-    // Independent and Mutually Exclusive Events
-    // There are 200 kids in a school. 140 students are taking Mathematics, and
-    // 100 students are taking Biology. 80 students are studying both Maths and Biology.
-    // The corresponding Venn Diagram corresponds to two overlapping circles for
-    // Maths and Biology. We can write 80 in their interx-step.
-    // There are 140 - 80 = 60 students studying just Mathematics, so we write
-    // than in the remaining part of the Maths circle.  There are 100 - 80 = 20
-    // students studying just Biology so we write that in the remaining part of
-    // the Biology circle.
-    // How many students at the school study neither Mathematics nor Biology?
-
----
-
-## Geleceği Öngörmek
+### Geleceği Öngörmek
 
 > id: future
-> section: predicting-the-future
 
     p.md Aynı anda iki zar atıp gelen sayıları toplarsak [[2]] ile [[12]] arasında bir sayı elde ederiz. Ancak bu aralıktaki her sayıyı elde etme ihtimalimiz eşit değildir. Bazı sonuçları tek bir şekilde elde edebiliriz(#[span.dice.outline 12] elde etmek için #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]] atmamız gerek), bazılarını ise bir çok şekilde elde edebiliriz (#[span.dice.outline 5] elde etmek için #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] ya da #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]] atabiliriz).
 
@@ -465,14 +289,47 @@ Bu animasyonda aynı anda bir çok defa “sanal” zar atabilir ve gelen sonuç
 
 {.reveal(when="roll")} Benzer şekilde, aynı anda attığımız zar sayısını arttırırsak, olasılıkların biz çizgiden (tek zar) bir üçgene (iki zar) ve sonra “çan eğrisine” dönüştüğünü görebiliriz. Bu sonuç __Merkezi Limit Teoremi__ olarak geçer, ve çan şeklindeki bu eğriye __Normal Dağılım__ denir.
 
+
 ---
+
+
+## Olasılık Ağaçları
+
+> section: trees
+> sectionStatus: dev
+
+TODO
+
+
+---
+
+
+## Venn Diyagramları
+
+> section: venn-diagrams
+> sectionStatus: dev
+
+TODO
+
+
+---
+
+## Şartlı olasılık
+
+> section: conditional
+> sectionStatus: dev
+
+TODO
+
+
+---
+
 
 ## Monty Hall Problemi
 
 > id: monty-hall
 > sectionBackground: dark gameshow
 > goals: game
-> title: Monty Hall Problemi
 > section: monty-hall
 
 Yeryüzündeki en müthiş oyun programına hoş geldiniz! Hayatınızda elinize bir kez geçecek bir fırsat ile karşı karşıyasınız: şu üç kapıdan birinin arkasında gizli duran muhteşem bir spor araba kazanma şansınız var. Ancaaaak, diğer iki kapının arkasında keçiler var. Seçiminizi yapın!
@@ -535,12 +392,25 @@ Bu durum içgüdülerimiz ile tam olarak örtüşmese de, doğru olduğunu kanı
 
 9 durumdan [[6]] tanesinde kazanmak için kapıyı değiştirmeliyiz. Bu da daha önce hesapladığımız gibi f `6/9 = 2/3` ihtimal verir.
 
+
 ---
+
+
+## Doğum Günü Sorunu
+
+> section: birthdays
+> sectionStatus: dev
+
+TODO
+
+
+---
+
 
 ## Esas Rastgelelik
 
 > id: quantum
-> section: true-randomness
+> section: randomness
 
 ::: column.grow
 Bu ders çoğunlukla bozuk para, zar ya da rulet çarkı gibi nesnelerin tamamen rastgele davrandığı varsayımı üzerine kuruldu. Fakat bu doğru değil - örneğin Edward Thrope’un ruletin sonucunu nasıl kestirdiğini görmüştük.

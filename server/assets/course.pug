@@ -48,7 +48,9 @@ html
           if section.background
             .page-background
           h1= section.title
-          .show-all-steps.off #[+icon('book', 20)] Reveal All Steps
+          .reveal-banner.off
+            | Reading time: ~#{section.duration} min
+            .complete Reveal all steps
           .steps!= course.getSectionHTML(section.id)
 
           footer
