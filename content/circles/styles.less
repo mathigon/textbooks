@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-@import "styles/variables";
+@import "../shared/variables";
 @import "../shared/components/solid";
 @import "./components/pi-scroll";
 
@@ -296,13 +296,12 @@ x-geopad.sketch {
   .left { width: 240px; margin: 12px; }
   .right { width: 400px; flex-grow: 1; margin: 12px; }
   svg { width: 100%; }
+  .right svg { touch-action: none; }
 
   .outline { fill: mix(@blue, @grey-background); }
   .grid { fill: none; stroke: fade(white, 30%); stroke-width: .5px; }
   .land { fill: mix(@green, @grey-background); stroke: mix(@green, black, 70%); stroke-width: .6px; }
-
   .map-select { stroke: @red; stroke-width: 2px; fill: fade(@red, 40%); }
-  .right .map-select { touch-action: none; }
 }
 
 

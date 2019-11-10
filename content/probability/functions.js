@@ -6,7 +6,18 @@
 
 import { list, tabulate, flatten } from '@mathigon/core';
 import { random } from '@mathigon/fermat';
-import { $, $N, table } from '@mathigon/boost';
+import { $, $N } from '@mathigon/boost';
+
+
+// -----------------------------------------------------------------------------
+// Utilities
+
+/** Converts a 2-dimensional data array into an HTML <table> string.
+export function table(data: any[][]) {
+  const rows = data.map(tr => '<tr>' + tr.map(td => `<td>${td}</td>`)
+      .join('') + '</tr>').join('');
+  return `<table>${rows}</table>`;
+}*/
 
 
 
