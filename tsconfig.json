@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": [
+      "es2016",
+      "dom",
+      "es2017.object",
+      "es2017.string"
+    ],
+    "outDir": "ts_build",
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
