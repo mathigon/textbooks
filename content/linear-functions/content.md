@@ -5,10 +5,7 @@
 > section: input-output
 > sectionStatus: dev
 
-Here is an interactive numberline:
-
-    include ./components/numberline
-    x-numberline
+TODO
 
 ---
 
