@@ -4,25 +4,23 @@
 // =============================================================================
 
 
+import {Obj} from '@mathigon/core';
 import {Point, Segment} from '@mathigon/fermat';
-import {animate} from '@mathigon/boost';
-
+import {animate, AnimationResponse, CanvasView, Observable} from '@mathigon/boost';
+import {Geopad} from '../../shared/types';
 
 
 class Trail {
+  private tail: Float32Array;
+  private length = 0;
+  private index = 0;
 
-  constructor(name, color, width = 4, maxLength = 400) {
-    this.name = name;
-    this.color = color;
-    this.width = width;
-    this.maxLength = maxLength;
-
+  constructor(readonly name: string, private color: string, private width = 4,
+              private maxLength = 400) {
     this.tail = new Float32Array(maxLength * 2);
-    this.clear();
   }
 
-
-  push(p) {
+  push(p: Point) {
     this.tail[this.index * 2] = p.x;
     this.tail[this.index * 2 + 1] = p.y;
     this.index = (this.index + 1) % this.maxLength;
@@ -38,12 +36,13 @@ class Trail {
     return points;
   }
 
-  draw($canvas, res = 2) {
+  draw($canvas: CanvasView, res = 2) {
     const tail = this.points.map(t => new Point(t[0] * res, t[1] * res));
     for (let i = 1; i < tail.length - 2; ++i) {
       const line = new Segment(tail[i], tail[i + 1]);
       const opacity = 0.5 * (1 - i / tail.length);
-      $canvas.draw(line, {stroke: this.color, strokeWidth: this.width, opacity});
+      $canvas.draw(line,
+          {stroke: this.color, strokeWidth: this.width, opacity});
     }
   }
 
@@ -55,23 +54,24 @@ class Trail {
 
 // -----------------------------------------------------------------------------
 
+type TrailList = [string, string][];
+type State = Obj<Point>;
+
 export class Simulation {
+  private trails: Trail[] = [];
+  private animation?: AnimationResponse;
+  private points: string[];
+  private model: Observable;
 
-  constructor($geopad, $canvas, state, trails) {
-    this.$geopad = $geopad;
-    this.$canvas = $canvas;
-    this.state = state;
+  constructor(private $geopad: Geopad, private $canvas: CanvasView,
+              private state: State, trails: TrailList) {
     this.model = $geopad.model;
-
-    this.animation = null;
-
-    this.trails = trails.map(t => new Trail(t[0], t[1]));
-
+    this.addTrails(...trails);
     this.points = Object.keys(state);
     for (let p of this.points) this.model.set(p, state[p]);
   }
 
-  play(callback, speed = 1, steps = 3) {
+  play(callback: (p: number) => void, speed = 1, steps = 3) {
     this.$geopad.lock();
     for (let t of this.trails) t.clear();
 
@@ -96,11 +96,11 @@ export class Simulation {
   pause() {
     if (!this.animation) return;
     this.animation.cancel();
-    this.animation = null;
+    this.animation = undefined;
     this.$geopad.unlock();
   }
 
-  addTrails(...trails) {
+  addTrails(...trails: TrailList) {
     for (let t of trails) this.trails.push(new Trail(t[0], t[1]));
   }
 }

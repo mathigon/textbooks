@@ -4,40 +4,38 @@
 // =============================================================================
 
 
-import {square, last} from '@mathigon/core';
+import {last} from '@mathigon/core';
 import {Point, Line, Angle, quadratic} from '@mathigon/fermat';
-import {CustomElement, registerElement, $N, Draggable} from '@mathigon/boost';
+import {CustomElementView, register, $N, Draggable, SVGView, SVGParentView} from '@mathigon/boost';
 
 
 class Ellipse {
+  q: number;  // Distance from the focus to the origin.
 
-  constructor(c, rx, ry) {
-    this.c = c;
-    this.rx = this.a = rx;
-    this.ry = this.b = ry;
+  constructor(private c: Point, private a: number, private b: number) {
     // TODO Make this work for vertical ellipses.
-    // q is the distance from the focus to the origin.
-    this.q = Math.sqrt(square(this.rx) - square(this.ry));
+    this.q = Math.sqrt(a ** 2 - b ** 2);
   }
 
   get f1() { return this.c.shift(-this.q, 0); }
+
   get f2() { return this.c.shift(this.q, 0); }
 
-  normalAt(p) {
+  normalAt(p: Point) {
     const a = new Angle(this.f1, p, this.f2);
     return a.bisector;
   }
 
-  intersect(line) {
+  intersect(line: Line) {
     const dx = line.p1.x - line.p2.x;
     const dy = line.p1.y - line.p2.y;
 
     const px = this.c.x - line.p1.x;
     const py = this.c.y - line.p1.y;
 
-    const A = square(dx / this.a) + square(dy / this.b);
-    const B = 2 * px * dx / square(this.a) + 2 * py * dy / square(this.b);
-    const C = square(px / this.a) + square(py / this.b) - 1;
+    const A = (dx / this.a) ** 2 + (dy / this.b) ** 2;
+    const B = 2 * px * dx / (this.a) ** 2 + 2 * py * dy / (this.b) ** 2;
+    const C = (px / this.a) ** 2 + (py / this.b) ** 2 - 1;
 
     const points = quadratic(A, B, C);
     return points.map(t => line.at(t));
@@ -47,24 +45,27 @@ class Ellipse {
 
 // -----------------------------------------------------------------------------
 
-export class PoolTable extends CustomElement {
+@register('x-pool-table')
+export class PoolTable extends CustomElementView {
+  private $path!: SVGView;
+  private $end!: SVGView;
 
   ready() {
-    const $svg = this.$('svg');
+    const $svg = this.$('svg') as SVGParentView;
 
     $N('ellipse', {cx: 380, cy: 220, rx: 366, ry: 206, class: 'pool-table'}, $svg);
-    this.$path = $N('path', {fill: 'transparent', stroke: 'white'}, $svg);
+    this.$path = $N('path', {fill: 'transparent', stroke: 'white'}, $svg) as SVGView;
 
     const $start = $N('circle', {r: 20, fill: '#fd8c00'}, $svg);
-    const drag = new Draggable($start, $svg, {useTransform: true, responsive: true});
+    const drag = new Draggable($start, $svg, {useTransform: true});
 
-    this.$end = $N('circle', {r: 20, fill: '#0f82f2'}, $svg);
+    this.$end = $N('circle', {r: 20, fill: '#0f82f2'}, $svg) as SVGView;
 
     drag.on('move', (p) => this.drawPath(p));
     drag.setPosition(380, 220);
   }
 
-  drawPath(start) {
+  drawPath(start: Point) {
     const ellipse = new Ellipse(new Point(380, 220), 360, 200);
 
     const points = [start];
@@ -81,5 +82,3 @@ export class PoolTable extends CustomElement {
     this.$end.setCenter(last(points));
   }
 }
-
-registerElement('x-pool-table', PoolTable);

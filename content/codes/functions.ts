@@ -4,16 +4,17 @@
 // =============================================================================
 
 
-import { Evented, clamp } from '@mathigon/core';
-import { letterFrequency, caesarCipher, cipherLetterFreq } from '@mathigon/fermat';
-import { $, $N } from '@mathigon/boost';
+import {EventTarget} from '@mathigon/core';
+// import {clamp, letterFrequency, caesarCipher, cipherLetterFreq} from '@mathigon/fermat';
+// import {$, $N} from '@mathigon/boost';
+// import {Step} from '../shared/types';
 
 
 // -----------------------------------------------------------------------------
 // Utilities and CLasses
 
-class CodeBox extends Evented {
-  constructor($plain, $cipher, options) {
+class CodeBox extends EventTarget {
+  /* constructor($plain: any, $cipher: any, options: any) {
     super();
 
     $plain.isTextarea = $plain.is('[contenteditable]');
@@ -74,17 +75,17 @@ class CodeBox extends Evented {
     }
 
     this.on('plain',  update($plain,  'plain', 'cipher', options.plainBars));
-    this.on('cipher', update($cipher, 'cipher', 'plain', options.realBars));  // TODO
-  }
+    this.on('cipher', update($cipher, 'cipher', 'plain', options.realBars));
+  } */
 }
 
 
 // -----------------------------------------------------------------------------
 // Section Functions
 
-export function caesar_cipher($step) {
-  let $plain = $('.plain-text', $step);
-  let $cipher = $('.cipher-text', $step);
+export function caesar_cipher() {
+  /* let $plain = $step.$('.plain-text')!;
+  let $cipher = $step.$('.cipher-text')!;
 
   let codeBox = new CodeBox($plain, $cipher, {
     chartCols:  $step.$$('.freq-table-chart  .freq-col'),
@@ -100,11 +101,11 @@ export function caesar_cipher($step) {
   $plain.on('input', function() {
     text = $plain.text;
     codeBox.trigger('plain', text);
-    codeBox.trigger('cipher', caesarCipher(text, shift, 26));
+    codeBox.trigger('cipher', caesarCipher(text, shift));
   });
 
-  $('#letter-slider').on('move', function(x) {
+  $('#letter-slider')!.on('move', function(x) {
     shift = clamp(Math.round(-x/26) % 26, 0, 25);
-    codeBox.trigger('cipher', caesarCipher(text, shift, 26));
-  });
+    codeBox.trigger('cipher', caesarCipher(text, shift));
+  }); */
 }
