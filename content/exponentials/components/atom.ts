@@ -4,18 +4,19 @@
 // =============================================================================
 
 
-
-import {random} from '@mathigon/fermat';
-import {registerElement} from '@mathigon/boost';
+import {Random} from '@mathigon/fermat';
+import {register} from '@mathigon/boost';
 import {Solid} from '../../shared/components/solid';
+import * as THREE from 'three';
 
 
 const RED = 0xcd0e66;
 const BLUE = 0x0f82f2;
+type Point3D = [number, number, number];
 
-function distribute(number, radius = 1) {
+function distribute(number: number, radius = 1) {
   const points = [];
-  const offset = 2/number;
+  const offset = 2 / number;
   const increment = Math.PI * (3 - Math.sqrt(5));
 
   for (let i = 0; i < number; ++i) {
@@ -24,13 +25,13 @@ function distribute(number, radius = 1) {
     const phi = ((i) % number) * increment;
     const x = Math.cos(phi) * r;
     const z = Math.sin(phi) * r;
-    points.push([x,y,z])
+    points.push([x, y, z]);
   }
 
   return points;
 }
 
-function addSpheres(points, color, atom, THREE) {
+function addSpheres(points: Point3D[], color: number, atom: THREE.Object3D) {
   const material = new THREE.MeshPhongMaterial({specular: 0x222222, color});
   const geometry = new THREE.SphereGeometry(0.7, 64, 64);
 
@@ -42,21 +43,20 @@ function addSpheres(points, color, atom, THREE) {
 }
 
 
+@register('x-atom')
 export class Atom extends Solid {
   created() {
-    this.addMesh((scene, THREE) => {
+    this.addMesh(() => {
       const atom = new THREE.Object3D();
 
       const protons = +this.attr('protons');
       const neutrons = +this.attr('neutrons');
-      const points = random.shuffle(distribute(protons + neutrons));
+      const points = Random.shuffle(distribute(protons + neutrons));
 
-      addSpheres(points.slice(0, protons), BLUE, atom, THREE);
-      addSpheres(points.slice(protons), RED, atom, THREE);
+      addSpheres(points.slice(0, protons), BLUE, atom);
+      addSpheres(points.slice(protons), RED, atom);
 
       return [atom];
     });
   }
 }
-
-registerElement('x-atom', Atom);

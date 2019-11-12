@@ -4,13 +4,14 @@
 // =============================================================================
 
 
-
-import {registerElement} from '@mathigon/boost';
+import {register} from '@mathigon/boost';
+import {Obj} from '@mathigon/core';
 import {Solid} from '../../shared/components/solid';
 import {PolyhedronData} from './polyhedron-data';
+import * as THREE from 'three';
 
 
-const colours = {
+const colours: Obj<number> = {
   3: 0xfd8c00,  // yellow
   4: 0x0f82f2,  // blue
   5: 0x22ab24,  // green
@@ -19,13 +20,14 @@ const colours = {
   10: 0x18aa93  // teal
 };
 
-const scales = {
+const scales: Obj<number> = {
   StellatedDodecahedron: 2,
   Octahedron: 1.3,
   Tetrahedron: 1.1
 };
 
 
+@register('x-polyhedron')
 export class Polyhedron extends Solid {
 
   created() {
@@ -36,7 +38,7 @@ export class Polyhedron extends Solid {
     const scale = scales[shape] || 1.65;
     this.setAttr('rotate', '1');
 
-    this.addMesh((scene, THREE) => {
+    this.addMesh((scene) => {
       const polyhedron = new THREE.Object3D();
       const vertices = data.vertex.map(v =>
           new THREE.Vector3(v[0], v[1], v[2]).multiplyScalar(scale));
@@ -45,7 +47,7 @@ export class Polyhedron extends Solid {
       faceGeometry.vertices = vertices;
       for (let f of data.face) {
         for (let i = 1; i < f.length - 1; i++) {
-          const face = new THREE.Face3(f[0], f[i], f[i+1]);
+          const face = new THREE.Face3(f[0], f[i], f[i + 1]);
           face.color = new THREE.Color(colours[f.length]);
           faceGeometry.faces.push(face);
         }
@@ -74,5 +76,3 @@ export class Polyhedron extends Solid {
     });
   }
 }
-
-registerElement('x-polyhedron', Polyhedron);

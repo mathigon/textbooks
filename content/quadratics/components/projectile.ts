@@ -5,9 +5,11 @@
 
 
 import {Point, Line} from '@mathigon/fermat';
-import {CustomElement, registerElement, $N, slide, animate} from '@mathigon/boost';
+import {CustomElementView, register, $N, slide, animate, SVGView} from '@mathigon/boost';
 
-export class Projectile extends CustomElement {
+
+@register('x-projectile')
+export class Projectile extends CustomElementView {
 
   ready() {
 
@@ -16,9 +18,9 @@ export class Projectile extends CustomElement {
     const center = new Point(50, 400);
     const ball = new Point(50, 400);
 
-    const $slingshot = $N('circle', {r: 5}, $svg);
-    const $ball = $N('circle', {r: 10, fill: 'red'}, $svg);
-    const $line = $N('line', {stroke: 'red'}, $svg);
+    const $slingshot = $N('circle', {r: 5}, $svg) as SVGView;
+    const $ball = $N('circle', {r: 10, fill: 'red'}, $svg) as SVGView;
+    const $line = $N('line', {stroke: 'red'}, $svg) as SVGView;
 
     $slingshot.setCenter(center);
     $ball.setCenter(ball);
@@ -43,12 +45,6 @@ export class Projectile extends CustomElement {
           $ball.setCenter({x, y});
         }, 3000);
       }
-    })
+    });
   }
-
-
-
-
 }
-
-registerElement('x-projectile', Projectile);

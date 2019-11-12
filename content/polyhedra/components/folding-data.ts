@@ -4,11 +4,19 @@
 // =============================================================================
 
 
+import {Obj} from '@mathigon/core';
+
+
+export interface FoldingDataItem {
+  net: number[][],
+  hinges: number[][];
+  vertices: [number, number, number][];
+}
+
 // Data from https://github.com/paaatrick/polyhedra-folding/tree/master/poly
 
-export const FoldingData = {
-
-  Tetrahedron : {
+export const FoldingData: Obj<FoldingDataItem> = {
+  Tetrahedron: {
     net: [
       [1, 2, 4],
       [3, 1, 4],
@@ -85,7 +93,7 @@ export const FoldingData = {
       [7, 0, 6, 2, 1.9106332362490186]
     ],
     vertices: [
-      [-1.44337567297406, 1.5,0],
+      [-1.44337567297406, 1.5, 0],
       [-.577350269189626, 0, 0],
       [-.577350269189626, 1, 0],
       [-.577350269189626, 2, 0],
@@ -168,7 +176,7 @@ export const FoldingData = {
     ]
   },
 
-  Icosahedron : {
+  Icosahedron: {
     net: [
       [0, 5, 6],
       [5, 11, 12],

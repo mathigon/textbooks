@@ -4,16 +4,16 @@
 // =============================================================================
 
 
+export class AudioPlayer {
+  private el: HTMLAudioElement;
 
-export class Audio {
-
-  constructor(url) {
-    this._el = new window.Audio(url);
-    this._el.preload = true;
+  constructor(url: string) {
+    this.el = new Audio(url);
+    this.el.preload = 'auto';
   }
 
   play() {
-    this._el.currentTime = 0;
-    this._el.play();
+    this.el.currentTime = 0;
+    this.el.play();
   }
 }

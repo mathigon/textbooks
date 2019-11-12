@@ -4,11 +4,11 @@
 // =============================================================================
 
 
-
-/* global THREE */
-import {tabulate, clamp} from '@mathigon/core';
-import {CustomElement, registerElement, slide} from '@mathigon/boost';
+import {tabulate} from '@mathigon/core';
+import {clamp} from '@mathigon/fermat';
+import {CustomElementView, register, slide} from '@mathigon/boost';
 import {create3D} from './webgl';
+import * as THREE from 'three';
 
 
 // -----------------------------------------------------------------------------
@@ -25,7 +25,7 @@ const centerX = (bounds[0][0] + bounds[0][1]) / 2;
 // -----------------------------------------------------------------------------
 // Utilities
 
-function getPointAt(s, angle) {
+function getPointAt(s: number, angle: number) {
   const min = angle < 1 ? 0 : 4.5 * (angle - 1);
   const max = 2 * Math.PI - min;
   const u = min + s * (max - min);
@@ -48,8 +48,8 @@ function getPlaneGeo() {
   return geometry;
 }
 
-function getTubeGeo(angle=0) {
-  const points = tabulate((i) => getPointAt(i/120, angle), 121);
+function getTubeGeo(angle = 0) {
+  const points = tabulate((i) => getPointAt(i / 120, angle), 121);
   const curve = new THREE.CatmullRomCurve3(points, false);
   return new THREE.TubeGeometry(curve, 120, 0.3, 8, false);
 }
@@ -58,7 +58,9 @@ function getTubeGeo(angle=0) {
 // -----------------------------------------------------------------------------
 // Component
 
-export class ConicSection extends CustomElement {
+@register('x-conic-section')
+export class ConicSection extends CustomElementView {
+  update!: (a: number) => void;
 
   async ready() {
     const scene = await create3D(this, 25, width, height);
@@ -85,7 +87,7 @@ export class ConicSection extends CustomElement {
       side: THREE.DoubleSide, clippingPlanes: [bottom, right]
     });
     const cone = new THREE.Mesh(coneGeo, coneMaterial);
-    cone.position.y = coneTop - coneHeight/2;
+    cone.position.y = coneTop - coneHeight / 2;
     scene.add(cone);
 
     // Bottom Plane (set in background)
@@ -97,7 +99,8 @@ export class ConicSection extends CustomElement {
     scene.add(plane);
 
     // Conic Section Tube
-    const tubeMaterial = new THREE.MeshLambertMaterial({color: 0xcd0e66, clippingPlanes: [right]});
+    const tubeMaterial = new THREE.MeshLambertMaterial(
+        {color: 0xcd0e66, clippingPlanes: [right]});
     const tube = new THREE.Mesh(getTubeGeo(), tubeMaterial);
     scene.add(tube);
 
@@ -110,7 +113,7 @@ export class ConicSection extends CustomElement {
 
     // Update Function
     let angle = 0;
-    this.update = (a) => {
+    this.update = (a: number) => {
       angle = a;
       tube.geometry = getTubeGeo(a);
       torch.rotation.z = a;
@@ -132,5 +135,3 @@ export class ConicSection extends CustomElement {
     scene.draw();
   }
 }
-
-registerElement('x-conic-section', ConicSection);

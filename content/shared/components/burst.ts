@@ -4,27 +4,29 @@
 // =============================================================================
 
 
-
-import { tabulate } from '@mathigon/core';
-import { $N, animate, ease } from '@mathigon/boost';
+import {tabulate} from '@mathigon/core';
+import {$N, animate, ease, SVGParentView, SVGView} from '@mathigon/boost';
 
 
 export class Burst {
+  private $ring!: SVGView;
+  private $lines!: SVGView[];
+  isAnimating = false;
 
-  constructor($svg, items = 20) {
-    this.animating = false;
-    this.$ring = $N('circle', {opacity: 0.6}, $svg);
-    this.$lines = tabulate(() => $N('line', {'stroke-width': 2}, $svg), items);
+  constructor($svg: SVGParentView, items = 20) {
+    this.$ring = $N('circle', {opacity: 0.6}, $svg) as SVGView;
+    this.$lines =
+        tabulate(() => $N('line', {'stroke-width': 2}, $svg) as SVGView, items);
   }
 
-  play(time = 1000, center = [80, 80], radius = [0, 80]) {
-    if (this.animating) return;
-    this.animating = true;
+  async play(time = 1000, center = [80, 80], radius = [0, 80]) {
+    if (this.isAnimating) return;
+    this.isAnimating = true;
 
     const n = this.$lines.length;
     this.$ring.setCenter({x: center[0], y: center[1]});
 
-    animate((p) => {
+    await animate((p) => {
       const q = ease('sine-out', p);
       this.$ring.setAttr('r', radius[0] + 0.6 * q * radius[1]);
       this.$ring.setAttr('stroke-width', 0.25 * (1 - q) * radius[1]);
@@ -40,6 +42,8 @@ export class Burst {
             {x: center[0] + c * r1, y: center[1] + s * r1},
             {x: center[0] + c * r2, y: center[1] + s * r2});
       }
-    }, time).then(() => this.animating = false);
+    }, time).promise;
+
+    this.isAnimating = false;
   }
 }

@@ -4,8 +4,9 @@
 // =============================================================================
 
 
-import { list, square } from '@mathigon/core';
-import { nearlyEquals, Point } from '@mathigon/fermat';
+import {list} from '@mathigon/core';
+import {nearlyEquals, Point} from '@mathigon/fermat';
+import {CoordinateSystem, EquationSystem, Step} from '../shared/types';
 
 import './components/projectile';
 import '../shared/components/conic-section';
@@ -14,18 +15,18 @@ import '../shared/components/conic-section';
 // -----------------------------------------------------------------------------
 // Shared Utilities
 
-function q(a, b, c) {
-  return (x) => (a*x*x + b*x + c);
+function q(a: number, b: number, c: number) {
+  return (x: number) => (a * x * x + b * x + c);
 }
 
-function zeros(a,b,c) {
+function zeros(a: number, b: number, c: number) {
   let disc = b * b - 4 * a * c;
   if (disc < 0) return [];
 
-  if (nearlyEquals(disc, 0, 0.1)) return [-b / (2*a)];
+  if (nearlyEquals(disc, 0, 0.1)) return [-b / (2 * a)];
 
-  let x1 = (-b + Math.sqrt(disc))/(2*a);
-  let x2 = (-b - Math.sqrt(disc))/(2*a);
+  let x1 = (-b + Math.sqrt(disc)) / (2 * a);
+  let x2 = (-b - Math.sqrt(disc)) / (2 * a);
   return [x1, x2];
 }
 
@@ -71,13 +72,14 @@ function compare(params, paramsExp, type) {
 // -----------------------------------------------------------------------------
 // Introduction
 
-export function intro4($step) {
-  const $system = $step.$('x-equation-system');
+export function intro4($step: Step) {
+  const $system = $step.$('x-equation-system') as EquationSystem;
 
   $system.isFinal = (expr) => {
     const str = expr.toString();
     return (expr.variables.length === 1) && expr.functions.includes('sup')
-        && str.includes('89000') && str.includes('3250') && !str.includes('(');
+           && str.includes('89000') && str.includes('3250') &&
+           !str.includes('(');
   };
 
   $system.on('solve-row', ({$math}) => {
@@ -90,13 +92,13 @@ export function intro4($step) {
   });
 }
 
-export function introTable($step) {
+export function introTable($step: Step) {
   $step.addHint('calculator');
 }
 
-export function introChart($step) {
-  const $chart = $step.$('x-coordinate-system');
-  const f = (x => -15 * x * x + 3250 * x - 89000);
+export function introChart($step: Step) {
+  const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
+  const f = (x: number) => -15 * x * x + 3250 * x - 89000;
 
   $chart.setFunctions(f);
   $chart.drawPoints(list(0, 180, 20).map(p => new Point(p, f(p))));
@@ -106,8 +108,8 @@ export function introChart($step) {
 // -----------------------------------------------------------------------------
 // Solving Quadratic Equations
 
-export function parabola($step) {
-  const $chart = $step.$('x-coordinate-system');
+export function parabola($step: Step) {
+  const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
 
   $step.model.watch((s) => {
     const fn = q(s.a, s.b, s.c);
@@ -125,12 +127,10 @@ export function parabola($step) {
   $actions[2].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -4); $step.model.set('c', 2) });
 } */
 
-export function directrix($step) {
-
-  $step.model.set('qy', (p, d) => {
-    const num = square(d.x - p.x) + square(d.y) - square(p.y);
+export function directrix($step: Step) {
+  $step.model.set('qy', (p: Point, d: Point) => {
+    const num = (d.x - p.x) ** 2 + d.y ** 2 - p.y ** 2;
     const den = 2 * p.y + 2 * d.y;
-    return num/den;
+    return num / den;
   });
-
 }
