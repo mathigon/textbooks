@@ -27,6 +27,7 @@ nbproject
 # Folders to ignore
 node_modules
 server/assets/resources
+ts_build
 
 # Development
 _*.yaml

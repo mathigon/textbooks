@@ -18,7 +18,7 @@ export class DoublePendulum {
 
   constructor(readonly state: State, points: [string, string],
               private center: Point, private lengths = [80, 60],
-              private angles = [2, 2.6, 0, 0]) {
+              public angles = [2, 2.6, 0, 0]) {
     this.p1 = points[0];
     this.p2 = points[1];
     this.drawPoints();

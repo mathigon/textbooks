@@ -118,7 +118,7 @@ export function parabola($step: Step) {
   });
 }
 
-/* export function s3($step) {
+/* export function s3($step: Step) {
   $step.model.set('zeros', zeros);
 
   let $actions = $step.$$('.action');

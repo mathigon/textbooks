@@ -419,7 +419,7 @@ export class Geopad extends CustomElementView {
   animatePoint(name: string, target: Point, duration?: number): void;
   animateConstruction(name: string, duration?: number): Promise<void>;
   showGesture(from: string, to?: string): void;
-  waitForPath(validate: (p: GeoPath) => boolean): Promise<unknown>;
+  waitForPath(validate: (p: GeoPath) => boolean): Promise<GeoPath>;
   waitForPaths(paths: (string|Shape)[], {onCorrect, onIncorrect, onHint, onComplete, maxErrors}?: WaitForPathsOptions): void;
 }
 

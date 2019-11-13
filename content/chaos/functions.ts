@@ -4,23 +4,27 @@
 // =============================================================================
 
 
-import {cube, square} from '@mathigon/core';
+import {Obj} from '@mathigon/core';
 import {Point, isBetween} from '@mathigon/fermat';
-import {$N, animate} from '@mathigon/boost';
+import {$N, animate, AnimationResponse, CanvasView, SVGView} from '@mathigon/boost';
 
-import {Simulation} from './components/simulation'
-import {DoublePendulum} from './components/double-pendulum'
-import './components/pool-table'
-import './components/water-ripples'
+import {AudioPlayer} from '../shared/components/audio';
+import {Geopad, PlayToggle, Step} from '../shared/types';
+import {Simulation} from './components/simulation';
+import {DoublePendulum} from './components/double-pendulum';
+import {WaterCanvas} from './components/water-ripples';
+
+import './components/pool-table';
+import './components/water-ripples';
 
 
 // -----------------------------------------------------------------------------
 // Introduction
 
-export function pendulum($step) {
-  const $geopad = $step.$('x-geopad');
-  const $canvas = $geopad.$('canvas');
-  const $play = $step.$('x-play-toggle');
+export function pendulum($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+  const $play = $step.$('x-play-toggle') as PlayToggle;
 
   let center = new Point(160, 160);
   let l = 120;
@@ -28,10 +32,10 @@ export function pendulum($step) {
   let da = 0;
 
   const state = {p: center.shift(Math.sin(a) * l, Math.cos(a) * l)};
-  const trails = [['p', '#cd0e66']];
+  const trails = [['p', '#cd0e66']] as [string, string][];
   const sim = new Simulation($geopad, $canvas, state, trails);
 
-  function step(dt) {
+  function step(dt: number) {
     da -= 5 * Math.sin(a) / l * dt;
     a = a + da * dt;
     state.p = center.shift(Math.sin(a) * l, Math.cos(a) * l);
@@ -52,22 +56,22 @@ export function pendulum($step) {
   });
 }
 
-export function doublePendulum($step) {
-  const $geopad = $step.$('x-geopad');
-  const $canvas = $geopad.$('canvas');
-  const $play = $step.$('x-play-toggle');
+export function doublePendulum($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+  const $play = $step.$('x-play-toggle') as PlayToggle;
 
   const model = $step.model;
   const center = new Point(160, 160);
   const state = {};
   let showAll = false;
 
-  const pendulums =[new DoublePendulum(state, ['a1', 'a2'], center),
+  const pendulums = [new DoublePendulum(state, ['a1', 'a2'], center),
     new DoublePendulum(state, ['b1', 'b2'], center),
     new DoublePendulum(state, ['c1', 'c2'], center),
     new DoublePendulum(state, ['d1', 'd2'], center)];
 
-  const trails = [['d2', '#cd0e66']];
+  const trails = [['d2', '#cd0e66']] as [string, string][];
   const sim = new Simulation($geopad, $canvas, state, trails);
 
   function showPendulums() {
@@ -106,10 +110,10 @@ export function doublePendulum($step) {
   });
 }
 
-export function butterfly1($step) {
-  const $canvas = $step.$('x-water-canvas');
-  const $butterfly = $step.$('.butterfly');
-  const $tornado = $step.$('.tornado');
+export function butterfly1($step: Step) {
+  const $canvas = $step.$('x-water-canvas') as WaterCanvas;
+  const $butterfly = $step.$('.butterfly')!;
+  const $tornado = $step.$('.tornado')!;
 
   $butterfly.on('pointerdown', () => {
     $butterfly.addClass('flap');
@@ -121,12 +125,12 @@ export function butterfly1($step) {
   });
 }
 
-function videoPlay($step) {
-  $step.$('x-video').on('play', () => $step.score('video'));
+function videoPlay($step: Step) {
+  $step.$('x-video')!.on('play', () => $step.score('video'));
 }
 
-function videoEnd($step) {
-  $step.$('x-video').on('end', () => $step.score('video'));
+function videoEnd($step: Step) {
+  $step.$('x-video')!.on('end', () => $step.score('video'));
 }
 
 export const butterfly2 = videoPlay;
@@ -141,24 +145,28 @@ export const popCulture = videoPlay;
 const RADIUS = 10;
 
 class Ball {
- constructor(x, y, fill) {
-   this.p = new Point(x, y);
-   this.v = new Point(0, 0);
-   this.$el = $N('circle', {r: RADIUS, cx: x, cy: y, fill});
- }
+  p: Point;
+  v: Point;
+  $el: SVGView;
+
+  constructor(x: number, y: number, fill: string) {
+    this.p = new Point(x, y);
+    this.v = new Point(0, 0);
+    this.$el = $N('circle', {r: RADIUS, cx: x, cy: y, fill}) as SVGView;
+  }
 }
 
+const collision = new AudioPlayer('/resources/chaos/images/ball.mp3');
 
-const collision = new Audio('/resources/chaos/images/ball.mp3');
 function playCollision() {
-  collision.currentTime = 0;
-  // collision.play();
+  collision.play();
 }
 
-export function pool($step) {
-  const $svg = $step.$('svg');
-  const $toggle = $step.$('x-play-toggle');
-  const $path = $N('path', {fill: 'transparent', stroke: 'white', d: 'M60,220'}, $svg);
+export function pool($step: Step) {
+  const $svg = $step.$('svg')!;
+  const $toggle = $step.$('x-play-toggle') as PlayToggle;
+  const $path = $N('path', {fill: 'transparent', stroke: 'white', d: 'M60,220'},
+      $svg) as SVGView;
 
   const bounds = [20 + RADIUS, 20 + RADIUS, 740 - RADIUS, 420 - RADIUS];
 
@@ -179,12 +187,12 @@ export function pool($step) {
     for (let i = 0; i < balls.length; ++i) {
       const b = balls[i];
       if (!isBetween(b.p.x, bounds[0], bounds[2])) {
-        b.v.x *= -1;
+        b.v = b.v.scale(-1, 1);
         playCollision();
       }
 
       if (!isBetween(b.p.y, bounds[1], bounds[3])) {
-        b.v.y *= -1;
+        b.v = b.v.scale(1, -1);
         playCollision();
       }
 
@@ -193,7 +201,7 @@ export function pool($step) {
         if (Point.distance(b.p, b1.p) < 2 * RADIUS) {
           // https://en.wikipedia.org/wiki/Elastic_collision#Two-dimensional_collision_with_two_moving_objects
           const d = b.p.subtract(b1.p);
-          const dv = Point.dot(b.v.subtract(b1.v), d) / square(d.length);
+          const dv = Point.dot(b.v.subtract(b1.v), d) / d.length ** 2;
           b.v = b.v.subtract(d.scale(dv));
           b1.v = b1.v.add(d.scale(dv));
           playCollision();
@@ -209,7 +217,7 @@ export function pool($step) {
     $path.addPoint(cue.p);
   }
 
-  let animation;
+  let animation: AnimationResponse;
   $toggle.on('play', () => animation = animate(step));
   $toggle.on('pause', () => animation.cancel());
 }
@@ -218,36 +226,37 @@ export function pool($step) {
 // -----------------------------------------------------------------------------
 // Three Body Problem
 
-export function threeBodies($step) {
-  const $geopad = $step.$('x-geopad');
-  const $canvas = $geopad.$('canvas');
-  const $play = $step.$('x-play-toggle');
-  const $restore = $step.$('.restore');
+export function threeBodies($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+  const $play = $step.$('x-play-toggle') as PlayToggle;
+  const $restore = $step.$('.restore')!;
 
-  const initial = {
+  const initial: Obj<Point> = {
     a: Point.fromPolar(0, 120).shift(240, 240),
-    b: Point.fromPolar(2/3 * Math.PI, 120).shift(240, 240),
-    c: Point.fromPolar(4/3 * Math.PI, 120).shift(240, 240),
-    va: Point.fromPolar(Math.PI/2, 66),
-    vb: Point.fromPolar(2*Math.PI/3 + Math.PI/2, 66),
-    vc: Point.fromPolar(4*Math.PI/3 + Math.PI/2, 66)
+    b: Point.fromPolar(2 / 3 * Math.PI, 120).shift(240, 240),
+    c: Point.fromPolar(4 / 3 * Math.PI, 120).shift(240, 240),
+    va: Point.fromPolar(Math.PI / 2, 66),
+    vb: Point.fromPolar(2 * Math.PI / 3 + Math.PI / 2, 66),
+    vc: Point.fromPolar(4 * Math.PI / 3 + Math.PI / 2, 66)
   };
 
-  const state = Object.assign({}, initial);
-  const trails = [['a', '#cd0e66'], ['b', '#0f82f2'], ['c', '#22ab24']];
+  const state: Obj<Point> = Object.assign({}, initial);
+  const trails = [['a', '#cd0e66'], ['b', '#0f82f2'],
+    ['c', '#22ab24']] as [string, string][];
 
-  function acceleration(i) {
+  function acceleration(i: string) {
     let gravity = new Point(0, 0);
     for (let j of ['a', 'b', 'c']) {
       if (i === j) continue;
       const dx = state[j].subtract(state[i]);
-      gravity =  gravity.translate(dx.scale(1600000 / cube(dx.length)));
+      gravity = gravity.translate(dx.scale(1600000 / dx.length ** 3));
     }
     return gravity;
   }
 
-  function step(dt) {
-    const acc = {};
+  function step(dt: number) {
+    const acc: Obj<Point> = {};
     for (let p of ['a', 'b', 'c']) acc[p] = acceleration(p);
 
     for (let i of ['a', 'b', 'c']) {
@@ -264,6 +273,6 @@ export function threeBodies($step) {
     $play.pause();
     Object.assign(state, initial);
     Object.assign($step.model, initial);
-    sim.$canvas.clear();
+    $canvas.clear();
   });
 }

@@ -4,16 +4,35 @@
 // =============================================================================
 
 
-import {tabulate, clamp} from '@mathigon/core';
-import {isBetween} from '@mathigon/fermat';
-import {CustomElement, registerElement, $N, slide, animate} from '@mathigon/boost';
+import {repeat2D, tabulate2D} from '@mathigon/core';
+import {isBetween, clamp, Point} from '@mathigon/fermat';
+import {CustomElementView, register, $N, slide, animate, CanvasView} from '@mathigon/boost';
 
 
 const THRESHOLD = 0.05;
-let TIMEOUT = null;
+let TIMEOUT: number;
 
 
-export class WaterCanvas extends CustomElement {
+@register('x-water-canvas')
+export class WaterCanvas extends CustomElementView {
+  private $canvas!: CanvasView;
+  private imagePixels?: Uint8ClampedArray;
+
+  private isAnimating = false;
+  private damping!: number;
+  private clipping!: number;
+  private refraction!: number;  // Number of pixels used by refraction.
+  private reflection!: number;  // Amount of color highlighting.
+  private touchSize = 10;
+
+  private sx!: number;
+  private sy!: number;
+  private rx!: number;
+  private ry!: number;
+
+  private depthMap1!: number[][];
+  private depthMap2!: number[][];
+  private touchPattern!: number[][];
 
   ready() {
     this.sx = +this.attr('width');
@@ -23,36 +42,33 @@ export class WaterCanvas extends CustomElement {
     this.rx = this.sx * r;
     this.ry = this.sy * r;
 
-    this.$canvas = $N('canvas', {width: this.rx, height: this.ry}, this);
+    this.$canvas =
+        $N('canvas', {width: this.rx, height: this.ry}, this) as CanvasView;
     this.$canvas.css({width: this.sx + 'px', height: this.sy + 'px'});
 
-    this.imagePixels = null;
     this.loadBackground(this.attr('src'));
 
-    this.depthMap1 = tabulate(0, this.sx, this.sy);
-    this.depthMap2 = tabulate(0, this.sx, this.sy);
+    this.depthMap1 = repeat2D(0, this.sx, this.sy);
+    this.depthMap2 = repeat2D(0, this.sx, this.sy);
 
     this.damping = +this.attr('damping') || 0.994;
     this.clipping = +this.attr('clipping') || 5;
-    this.refraction = +this.attr('refraction') || 8;  // Number of pixels used by refraction.
-    this.reflection	= +this.attr('reflection') || 1;  // Amount of color highlighting.
-
-    this.isAnimating = false;
+    this.refraction = +this.attr('refraction') || 8;
+    this.reflection = +this.attr('reflection') || 1;
 
     // The touch pattern is a 2D array containing numbers between -1 and 1.
-    this.touchSize = 10;
     this.touchPattern = this.createDropPattern(this.touchSize * 2);
 
     slide(this.$canvas, {
-      start: (p) => this.touchWater(p.scale(1/r), 0.5),
-      move: (p) => this.touchWater(p.scale(1/r), 0.1)
+      start: (p) => this.touchWater(p.scale(1 / r), 0.5),
+      move: (p) => this.touchWater(p.scale(1 / r), 0.1)
     });
   }
 
   startAnimation() {
     // After 10s, greatly increase the damping to stop ripples.
     clearTimeout(TIMEOUT);
-    TIMEOUT = setTimeout(() => this.damping = 0.95, 10000);
+    TIMEOUT = window.setTimeout(() => this.damping = 0.95, 10000);
     this.damping = 0.994;
 
     if (this.isAnimating) return;
@@ -73,8 +89,8 @@ export class WaterCanvas extends CustomElement {
   // ---------------------------------------------------------------------------
   // Canvas Utilities
 
-  loadBackground(src) {
-    const $canvas = $N('canvas', {width: this.rx, height: this.ry});
+  loadBackground(src: string) {
+    const $canvas = $N('canvas', {width: this.rx, height: this.ry}) as CanvasView;
     const image = new Image();
 
     image.onload = () => {
@@ -96,7 +112,7 @@ export class WaterCanvas extends CustomElement {
       const x = (i / 4) % this.rx;
       const y = (i / 4 - x) / this.rx;
 
-      const strength = this.depthMap1[Math.floor(x/2)][Math.floor(y/2)];
+      const strength = this.depthMap1[Math.floor(x / 2)][Math.floor(y / 2)];
       const refraction = Math.round(strength * this.refraction);
       const reflection = 1 + strength * this.reflection;
 
@@ -112,10 +128,10 @@ export class WaterCanvas extends CustomElement {
     this.$canvas.ctx.putImageData(imgDataOut, 0, 0);
   }
 
-  createDropPattern(size) {
-    const $canvas = $N('canvas', {width: size, height: size});
+  createDropPattern(size: number) {
+    const $canvas = $N('canvas', {width: size, height: size}) as CanvasView;
 
-    const grad = $canvas.ctx.createRadialGradient(size/2, size/2, 0, size/2, size/2, size/2);
+    const grad = $canvas.ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
     grad.addColorStop(0, '#fff');
     grad.addColorStop(1, '#000');
 
@@ -124,14 +140,14 @@ export class WaterCanvas extends CustomElement {
     const pixels = $canvas.ctx.getImageData(0, 0, size, size).data;
 
     // Only use the red component when extracting pixel values.
-    return tabulate((x, y) => pixels[(x * size + y) * 4] / 255, size, size);
+    return tabulate2D((x, y) => pixels[(x * size + y) * 4] / 255, size, size);
   }
 
 
   // ---------------------------------------------------------------------------
   // Water Utilities
 
-  touchWater(p, pressure) {
+  touchWater(p: Point, pressure: number) {
     const x = Math.round(p.x);
     const y = Math.round(p.y);
 
@@ -169,11 +185,9 @@ export class WaterCanvas extends CustomElement {
     }
 
     // Swap buffer references
-    [this.depthMap1, this.depthMap2] 	= [this.depthMap2, this.depthMap1];
+    [this.depthMap1, this.depthMap2] = [this.depthMap2, this.depthMap1];
 
     return noChange;
   }
 
 }
-
-registerElement('x-water-canvas', WaterCanvas);
