@@ -1,15 +1,14 @@
 {
   "name": "@mathigon/textbooks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Mathigon Textbooks",
   "homepage": "https://mathigon.org/",
   "repository": "mathigon/textbooks",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "server": "node server/app.js --use-strict & grunt concurrent",
-    "start": "grunt && npm run server",
-    "test": "eslint */*.js"
+    "server": "node server/app.js --use-strict & gulp watch",
+    "start": "gulp && npm run server"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -19,6 +18,8 @@
     "@mathigon/core": "^0.3.2",
     "@mathigon/fermat": "^0.3.2",
     "@mathigon/hilbert": "^0.3.2",
+    "@types/d3": "^5.7.2",
+    "@types/topojson": "^3.2.2",
     "three": "^0.110.0"
   },
   "devDependencies": {

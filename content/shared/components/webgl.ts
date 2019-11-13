@@ -29,8 +29,17 @@ function getRenderer(width: number, height: number) {
   return renderers[id] = renderer;
 }
 
+export interface Graphics3D {
+  $canvas: CanvasView;
+  camera: THREE.Camera;
+  renderer: THREE.WebGLRenderer;
+  draw: () => void;
+  onDraw: (fn: () => void) => void;
+  add: (obj: THREE.Object3D) => void;
+}
+
 export async function create3D($el: ElementView, fov: number, width: number,
-                               height = width) {
+                               height = width): Promise<Graphics3D> {
 
   const $canvas = $N('canvas',
       {width, height, style: 'max-width: 100%'}, $el) as CanvasView;

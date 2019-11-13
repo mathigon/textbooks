@@ -180,7 +180,6 @@ export class CoordinateSystem extends CustomElementView {
   private $yAxis;
   private $plot;
   private $labels;
-  private $overlay;
   private mathBounds;
   private plotBounds;
   private plotOrigin;
@@ -194,6 +193,7 @@ export class CoordinateSystem extends CustomElementView {
   private yLabel;
   private crosshairGrid;
   private getCrosshairPosn;
+  $overlay: SVGView;
   ready(): void;
   setupCrosshairs($svg: SVGParentView, width: number): void;
   mathToPlotCoords(p: Point): Point;

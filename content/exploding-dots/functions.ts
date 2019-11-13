@@ -4,21 +4,25 @@
 // =============================================================================
 
 
-import { repeat, wait } from '@mathigon/core';
-import { Rectangle, Point, random, numberFormat } from '@mathigon/fermat';
-import { $N, Colour } from '@mathigon/boost';
+import {repeat, wait, Color} from '@mathigon/core';
+import {Rectangle, Point, Random, numberFormat} from '@mathigon/fermat';
+import {$N, Observable} from '@mathigon/boost';
+import {Slideshow, Step} from '../shared/types';
+import {DotMachine} from './components/dot-machine';
+
 import './components/dot-machine';
 
 
-export function race($step) {
+export function race($step: Step) {
   const posn = [0, 54, 76, 85, 88, 90];
   const $img = $step.$$('img');
   const $g = $step.$$('g');
   let hasShownGesture = false;
 
-  $step.$slides.on('next back', (x) => {
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next back', (x: number) => {
     $img[0].css('left', posn[x] + '%');
-    $img[1].css('left', posn[x+1] + '%');
+    $img[1].css('left', posn[x + 1] + '%');
 
     if (!hasShownGesture && !$step.scores.has('blank-0')) {
       setTimeout(() => {
@@ -34,21 +38,21 @@ export function race($step) {
   $step.onScore('slide-3', () => $g[3].enter('fade'));
 }
 
-export function choice($step) {
+export function choice($step: Step) {
   const $buttons = $step.$$('button');
   for (let $b of $buttons) {
     $b.on('click', () => {
       $step.score('choice');
-      $step.$('.btn-row').addClass('done');
+      $step.$('.btn-row')!.addClass('done');
       $b.addClass('selected');
     });
   }
 }
 
-export function numberline($step) {
-  const $limit = $step.$('span.hidden');
+export function numberline($step: Step) {
+  const $limit = $step.$('span.hidden')!;
 
-  $step.model.set('nines', n => '0.' + repeat('9', n));
+  $step.model.set('nines', (n: number) => '0.' + repeat('9', n));
   $step.model.watch(state => {
     if (state.n === 2) $step.score('n2');
     if (state.n === 3) $step.score('n3');
@@ -57,22 +61,22 @@ export function numberline($step) {
   });
 }
 
-export function convergence($step) {
+export function convergence($step: Step) {
   const log2 = Math.log10(2);
   $step.model.assign({
-    pow: n => numberFormat(Math.pow(2, n)),
-    nines: n => '0.' + repeat('9', Math.ceil(n * log2))
+    pow: (n: number) => numberFormat(Math.pow(2, n)),
+    nines: (n: number) => '0.' + repeat('9', Math.ceil(n * log2))
   });
 }
 
-export function dots($step) {
-  const $machine = $step.$('x-dot-machine');
-  const $btn = $step.$('button');
+export function dots($step: Step) {
+  const $machine = $step.$('x-dot-machine') as DotMachine;
+  const $btn = $step.$('button')!;
 
   let dStep = 0;
   $machine.on('add', ({i, cell, point}) => {
     if (i !== xStep + 1)
-      return $step.addHint('incorrectCell', {className: 'incorrect'});
+      return $step.addHint('incorrectCell', {class: 'incorrect'});
 
     cell.addDotAntidot(point);
     dStep = xStep + 1;
@@ -80,9 +84,9 @@ export function dots($step) {
   });
 
   let xStep = 0;
-  $btn.on('click', async function() {
+  $btn.on('click', async function () {
     if (dStep <= xStep)
-      return $step.addHint('addPairFirst', {className: 'incorrect'});
+      return $step.addHint('addPairFirst', {class: 'incorrect'});
 
     await $machine.cells[dStep].explode();
     await wait(400);
@@ -94,13 +98,13 @@ export function dots($step) {
 
 // -----------------------------------------------------------------------------
 
-export function dots1($step) {
-  const $machine = $step.$('x-dot-machine');
+export function dots1($step: Step) {
+  const $machine = $step.$('x-dot-machine') as DotMachine;
   let added = false;
 
   $machine.on('add', ({i, cell, point}) => {
     if (added) return;
-    if (i !== 4) return $step.addHint('incorrectCell', {className: 'incorrect'});
+    if (i !== 4) return $step.addHint('incorrectCell', {class: 'incorrect'});
     added = true;
 
     cell.addDot(point, {audio: true});
@@ -109,7 +113,7 @@ export function dots1($step) {
   });
 }
 
-function svgs($step) {
+function svgs($step: Step) {
   let t = 1200;
   for (let $g of $step.$$('svg g')) {
     $g.hide();
@@ -121,13 +125,13 @@ function svgs($step) {
 export const warp1 = svgs;
 export const warp2 = svgs;
 
-export function dots2($step) {
-  const $machine = $step.$('x-dot-machine');
+export function dots2($step: Step) {
+  const $machine = $step.$('x-dot-machine') as DotMachine;
   let added = 0;
 
   $machine.on('add', ({i, cell, point}) => {
     if (added >= 2) return;
-    if (i !== 4) return $step.addHint('incorrectCell', {className: 'incorrect'});
+    if (i !== 4) return $step.addHint('incorrectCell', {class: 'incorrect'});
     added += 1;
 
     cell.addDot(point, {audio: true});
@@ -139,21 +143,21 @@ export function dots2($step) {
   });
 }
 
-function addDots($machine, className) {
-  for (let i=0; i<=4; ++i) {
-    for (let x=0; x<6; ++x) {
+function addDots($machine: DotMachine, className: string) {
+  for (let i = 0; i <= 4; ++i) {
+    for (let x = 0; x < 6; ++x) {
       const $dot = $machine.cells[i].addDot();
       $dot.addClass(className);
     }
   }
 
-  const $dot = $machine.cells[4].addDot(null, {audio: true});
+  const $dot = $machine.cells[4].addDot(undefined, {audio: true});
   $dot.addClass(className);
 }
 
-export function dots3($step) {
-  const $machine = $step.$('x-dot-machine');
-  const $button = $step.$('button');
+export function dots3($step: Step) {
+  const $machine = $step.$('x-dot-machine') as DotMachine;
+  const $button = $step.$('button')!;
 
   $button.one('click', () => {
     addDots($machine, 'dark');
@@ -165,36 +169,38 @@ export function dots3($step) {
 
 // -----------------------------------------------------------------------------
 
-function factors(n) {
+function factors(n: number) {
   const start = Math.floor(Math.sqrt(n));
   for (let x = start; x >= 1; --x) {
     if (n % x === 0) {
-      return [x, n/x];
+      return [x, n / x];
     }
   }
+  return [1, n];
 }
 
-export function square($step) {
-  const $svg = $step.$('svg.square');
+export function square($step: Step) {
+  const $svg = $step.$('svg.square')!;
   const width = 320;
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: Observable) => {
     $svg.removeChildren();
-     const f = factors(state.x);
-     const colours = random.shuffle(Colour.rainbow(2*state.x));
-     let c = 0;
+    const f = factors(state.x);
+    const colours = Random.shuffle(Color.rainbow(2 * state.x));
+    let c = 0;
 
-     for (let i=0; i<f[0]; ++i) {
-       for (let j=0; j<f[1]; ++j) {
-         const origin = new Point(i * width / f[0], j * width / f[1]);
-         const r = new Rectangle(origin, width / f[0], width / f[1]).polygon.points;
+    for (let i = 0; i < f[0]; ++i) {
+      for (let j = 0; j < f[1]; ++j) {
+        const origin = new Point(i * width / f[0], j * width / f[1]);
+        const r = new Rectangle(origin, width / f[0],
+            width / f[1]).polygon.points;
 
-         let odd = (i + j) % 2;
+        let odd = (i + j) % 2;
 
-         $N('polygon', {points: `${r[0].x} ${r[0].y},${r[1].x} ${r[1].y},${r[odd ? 2 : 3].x} ${r[odd ? 2 : 3].y}`, fill: colours[c]}, $svg);
-         $N('polygon', {points: `${r[odd ? 0 : 1].x} ${r[odd ? 0 : 1].y},${r[2].x} ${r[2].y},${r[3].x} ${r[3].y}`, fill: colours[c + 1]}, $svg);
-         c += 2;
-       }
-     }
+        $N('polygon', {points: `${r[0].x} ${r[0].y},${r[1].x} ${r[1].y},${r[odd ? 2 : 3].x} ${r[odd ? 2 : 3].y}`, fill: colours[c]}, $svg);
+        $N('polygon', {points: `${r[odd ? 0 : 1].x} ${r[odd ? 0 : 1].y},${r[2].x} ${r[2].y},${r[3].x} ${r[3].y}`, fill: colours[c + 1]}, $svg);
+        c += 2;
+      }
+    }
   });
 }

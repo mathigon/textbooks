@@ -4,8 +4,9 @@
 // =============================================================================
 
 
-import {clamp, tabulate} from '@mathigon/core';
-import {CustomElement, registerElement, $N, Browser} from '@mathigon/boost';
+import {tabulate} from '@mathigon/core';
+import {clamp} from '@mathigon/fermat';
+import {CustomElementView, register, $N, Browser, ElementView} from '@mathigon/boost';
 
 
 const ROW_HEIGHT = 30;
@@ -13,7 +14,19 @@ const NUM_ELS = 100;  // Number of reusable row elements.
 const VISIBLE_ELS = 10;  // Number of rows that are visible on one screen.
 const INITIAL = '141592653589793238462643383279502884197169399375105';
 
-export class PiScroll extends CustomElement {
+
+@register('x-pi-scroll')
+export class PiScroll extends CustomElementView {
+  private string = '';
+  private numColumns = 0;
+  private numRows = 0;
+  private firstEl = 0;
+  private letterWidth!: number;
+
+  private $wrap!: ElementView;
+  private $rows!: ElementView[];
+  private $highlight1!: ElementView;
+  private $highlight2!: ElementView;
 
   ready() {
     this.$wrap = $N('div', {class: 'pi-wrap'}, this);
@@ -22,13 +35,9 @@ export class PiScroll extends CustomElement {
     this.$highlight2 = $N('div', {class: 'pi-highlight'}, this.$wrap);
     this.$rows[0].text = INITIAL;
 
-    this.string = '';
-    this.numColumns = 0;
-    this.numRows = 0;
-    this.firstEl = 0;
     this.letterWidth = this.$rows[0].width / INITIAL.length;
 
-    Browser.resize(() => {
+    Browser.onResize(() => {
       this.numColumns = Math.floor(this.innerWidth / this.letterWidth);
       this.setUp(this.string);
     });
@@ -37,13 +46,13 @@ export class PiScroll extends CustomElement {
     this.on('scroll', (e) => this.onScroll(e.top));
   }
 
-  updateRow(i) {
+  updateRow(i: number) {
     const $row = this.$rows[i % NUM_ELS];
     $row.translate(0, i * ROW_HEIGHT);
     $row.text = this.string.substr(i * this.numColumns, this.numColumns);
   }
 
-  setUp(data) {
+  setUp(data: string) {
     this.string = data;
     this.numRows = Math.ceil(data.length / this.numColumns);
 
@@ -51,7 +60,7 @@ export class PiScroll extends CustomElement {
     for (let i = 0; i < NUM_ELS; ++i) this.updateRow(this.firstEl + i);
   }
 
-  onScroll(top) {
+  onScroll(top: number) {
     if (!this.string) return;
 
     const rowTop = top / ROW_HEIGHT - (NUM_ELS - VISIBLE_ELS) / 2;
@@ -64,7 +73,7 @@ export class PiScroll extends CustomElement {
     this.firstEl = newFirstEl;
   }
 
-  findString(str) {
+  findString(str?: string) {
     if (!str) {
       this.$highlight1.hide();
       this.$highlight2.hide();
@@ -103,7 +112,4 @@ export class PiScroll extends CustomElement {
     this.scrollTo(top * ROW_HEIGHT - 50);
     return index;
   }
-
 }
-
-registerElement('x-pi-scroll', PiScroll);

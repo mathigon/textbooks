@@ -4,11 +4,10 @@
 // =============================================================================
 
 
-
-/* global THREE */
 import {chunk} from '@mathigon/core';
-import {$N, Browser, CustomElement, registerElement, slide} from '@mathigon/boost';
-import {create3D} from '../../shared/components/webgl';
+import {$N, Browser, CustomElementView, register, slide} from '@mathigon/boost';
+import {create3D, Graphics3D} from './webgl';
+import * as THREE from 'three';
 
 const STROKE_COLOR = 0x666666;
 const LINE_RADIUS = 0.012;
@@ -19,7 +18,16 @@ const POINT_RADIUS = 0.08;
 // -----------------------------------------------------------------------------
 // Utilities
 
-function rotate($solid, animate = true, speed = 1) {
+type Vector = [number, number, number];
+
+// Custom methods on the THREE.Object3D class
+interface Object3D extends THREE.Object3D {
+  setClipPlanes?: (planes: THREE.Plane[]) => void;
+  updateGeometry?: (gep: THREE.Geometry) => void;
+  updateEnds?: (f: Vector, t: Vector) => void;
+}
+
+function rotate($solid: Solid, animate = true, speed = 1) {
   // TODO Damping after mouse movement
   // TODO Better mouse-to-point mapping
 
@@ -58,12 +66,12 @@ function rotate($solid, animate = true, speed = 1) {
   });
 }
 
-function createEdges(geometry, material, maxAngle) {
+function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngle?: number) {
   const obj = new THREE.Object3D();
   if (!maxAngle) return obj;
 
   const edges = new THREE.EdgesGeometry(geometry, maxAngle);
-  const edgeData = edges.attributes.position.array;
+  const edgeData = edges.attributes.position.array as number[];
   const points = chunk(chunk(edgeData, 3).map(p => new THREE.Vector3(...p)), 2);
 
   for (const edge of points) {
@@ -80,7 +88,11 @@ function createEdges(geometry, material, maxAngle) {
 // -----------------------------------------------------------------------------
 // Custom Element
 
-export class Solid extends CustomElement {
+@register('x-solid')
+export class Solid extends CustomElementView {
+  private isReady = false;
+  object!: THREE.Object3D;
+  scene!: Graphics3D;
 
   async ready() {
     const size = this.attr('size').split(',');
@@ -108,7 +120,7 @@ export class Solid extends CustomElement {
     this.isReady = true;
   }
 
-  addMesh(fn) {
+  addMesh(fn: (scene: Graphics3D) => THREE.Mesh[]) {
     if (this.isReady) {
       this.addMeshCallback(fn);
     } else {
@@ -116,8 +128,8 @@ export class Solid extends CustomElement {
     }
   }
 
-  addMeshCallback(fn) {
-    const items = fn(this.scene, THREE) || [];
+  addMeshCallback(fn: (scene: Graphics3D) => THREE.Mesh[]) {
+    const items = fn(this.scene) || [];
     for (let i of items)  this.object.add(i);
 
     if (!this.hasAttr('static')) {
@@ -128,7 +140,7 @@ export class Solid extends CustomElement {
     this.scene.draw();
   }
 
-  rotate(q) {
+  rotate(q: THREE.Quaternion) {
     this.object.quaternion.set(q.x, q.y, q.z, q.w);
     this.scene.draw();
   }
@@ -137,7 +149,7 @@ export class Solid extends CustomElement {
   // ---------------------------------------------------------------------------
   // Element Creation Utilities
 
-  addLabel(text, posn, color = STROKE_COLOR, margin = '') {
+  addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin = '') {
     const $label = $N('div', {text, class: 'label3d'});
     $label.css('color', '#' + color.toString(16).padStart(6, '0'));
     if (margin) $label.css('margin', margin);
@@ -152,12 +164,16 @@ export class Solid extends CustomElement {
       $label.css('top', (1 - p.y) * this.scene.$canvas.height / 2 + 'px');
     });
 
-    return {updatePosition(posn) { posn1 = new THREE.Vector3(...posn) }};
+    return {
+      updatePosition(posn: Vector) {
+        posn1 = new THREE.Vector3(...posn);
+      }
+    };
   }
 
-  addArrow(from, to, color = STROKE_COLOR) {
+  addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
     const material = new THREE.MeshBasicMaterial({color});
-    const obj = new THREE.Object3D();
+    const obj = new THREE.Object3D() as Object3D;
 
     const height = new THREE.Vector3(...from).distanceTo(new THREE.Vector3(...to));
     const line = new THREE.CylinderGeometry(0.02, 0.02, height - 0.3, 8, 1, true);
@@ -172,7 +188,7 @@ export class Solid extends CustomElement {
     end.translate(0, -height/2 + 0.1, 0);
     obj.add(new THREE.Mesh(end, material));
 
-    obj.updateEnds = function(f, t) {
+    obj.updateEnds = function(f: Vector, t: Vector) {
       // TODO Support changing the height of the arrow.
       const q = new THREE.Quaternion();
       const v = new THREE.Vector3(t[0]-f[0], t[1]-f[1], t[2]-f[2]).normalize();
@@ -186,8 +202,8 @@ export class Solid extends CustomElement {
     return obj;
   }
 
-  addCircle(radius, color = STROKE_COLOR, segments = 64) {
-    const path = new THREE.Curve();
+  addCircle(radius: number, color = STROKE_COLOR, segments = 64) {
+    const path = new THREE.Curve<THREE.Vector3>();
     path.getPoint = function(t) {
       const a = 2 * Math.PI * t;
       return new THREE.Vector3(radius * Math.cos(a), radius * Math.sin(a), 0);
@@ -201,7 +217,7 @@ export class Solid extends CustomElement {
     return mesh;
   }
 
-  addPoint(position, color = STROKE_COLOR) {
+  addPoint(position: Vector, color = STROKE_COLOR) {
     const material = new THREE.MeshBasicMaterial({color});
     const geometry = new THREE.SphereGeometry(POINT_RADIUS, 16, 16);
 
@@ -210,7 +226,7 @@ export class Solid extends CustomElement {
     this.object.add(mesh);
   }
 
-  addSolid(geo, color, maxAngle = 5, flatShading = false) {
+  addSolid(geo: THREE.Geometry, color: number, maxAngle = 5, flatShading = false) {
     const edgeMaterial = new THREE.LineBasicMaterial({color: 0xffffff});
     const edges = new THREE.EdgesGeometry(geo, maxAngle);
 
@@ -226,21 +242,21 @@ export class Solid extends CustomElement {
   //      geometry.isConeGeometry etc.
 
   // A translucent material with a solid border.
-  addOutlined(geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1, strokeColor = null) {
+  addOutlined(geo: THREE.Geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1, strokeColor = null) {
     const solidMaterial = Solid.translucentMaterial(color, opacity);
-    const solid = new THREE.Mesh(geometry, solidMaterial);
+    const solid = new THREE.Mesh(geo, solidMaterial);
 
     const edgeMaterial = new THREE.MeshBasicMaterial({color: strokeColor || STROKE_COLOR});
-    let edges = createEdges(geometry, edgeMaterial, maxAngle);
+    let edges = createEdges(geo, edgeMaterial, maxAngle);
 
-    const obj = new THREE.Object3D();
+    const obj = new THREE.Object3D() as Object3D;
     obj.add(solid, edges);
 
-    obj.setClipPlanes = function(planes) {
+    obj.setClipPlanes = function(planes: THREE.Plane[]) {
       solidMaterial.clippingPlanes = planes;
     };
 
-    obj.updateGeometry = function(geo) {
+    obj.updateGeometry = function(geo: THREE.Geometry) {
       solid.geometry.dispose();
       solid.geometry = geo;
       obj.remove(edges);
@@ -254,7 +270,7 @@ export class Solid extends CustomElement {
 
   // Like .addOutlined, but we also add outlines for curved edges (e.g. of
   // a sphere or cylinder).
-  addWireframe(geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1) {
+  addWireframe(geometry: THREE.Geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1) {
     const solid = this.addOutlined(geometry, color, maxAngle, opacity);
 
     const outlineMaterial = new THREE.MeshBasicMaterial({
@@ -274,17 +290,17 @@ export class Solid extends CustomElement {
     });
     const knockout = new THREE.Mesh(geometry, knockoutMaterial);
 
-    const obj = new THREE.Object3D();
+    const obj = new THREE.Object3D() as Object3D;
     obj.add(solid, outline, knockout);
 
-    obj.setClipPlanes = function(planes) {
-      solid.setClipPlanes(planes);
+    obj.setClipPlanes = function(planes: THREE.Plane[]) {
+      if (solid.setClipPlanes) solid.setClipPlanes(planes);
       for (let m of [outlineMaterial, knockoutMaterial])
         m.clippingPlanes = planes;
     };
 
-    obj.updateGeometry = function(geo) {
-      solid.updateGeometry(geo);
+    obj.updateGeometry = function(geo: THREE.Geometry) {
+      if (solid.updateGeometry) solid.updateGeometry(geo);
       for (let mesh of [outline, knockout]) {
         mesh.geometry.dispose();
         mesh.geometry = geo;
@@ -299,7 +315,7 @@ export class Solid extends CustomElement {
   // ---------------------------------------------------------------------------
   // Materials
 
-  static solidMaterial(color, flatShading = false) {
+  static solidMaterial(color: number, flatShading = false) {
     return new THREE.MeshPhongMaterial({
       side: THREE.DoubleSide,
       transparent: true,
@@ -310,7 +326,7 @@ export class Solid extends CustomElement {
     });
   }
 
-  static translucentMaterial(color, opacity = 0.1) {
+  static translucentMaterial(color: number, opacity = 0.1) {
     return new THREE.MeshLambertMaterial({
       side: THREE.DoubleSide,
       transparent: true,
@@ -318,7 +334,4 @@ export class Solid extends CustomElement {
       opacity, color
     });
   }
-
 }
-
-registerElement('x-solid', Solid);

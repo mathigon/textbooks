@@ -4,26 +4,27 @@
 // =============================================================================
 
 
-import './components/numberline';
-import {clamp} from "@mathigon/core";
-import {Point, roundTo} from "@mathigon/fermat";
-import {$N, Draggable, svgPointerPosn} from "@mathigon/boost";
+import {clamp, Point, roundTo} from '@mathigon/fermat';
+import {$N, Draggable, svgPointerPosn, SVGView} from '@mathigon/boost';
+import {CoordinateSystem, Step} from '../shared/types';
 
 
-export function slope($step) {
-  const $chart = $step.$('x-coordinate-system');
+export function slope($step: Step) {
+  const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
   $chart.setFunctions(x => 1.5 * x);
   $step.model.set('p', {x: 1, y: 2});
 
   const $point = $N('div', {class: 'chart-point'}, $chart);
-  const $triangle = $N('path', {class: 'triangle'}, $chart.$overlay);
-  const $lineX = $N('line', {class: 'line-x', target: 'dx'}, $chart.$overlay);
-  const $lineY = $N('line', {class: 'line-y', target: 'dy'}, $chart.$overlay);
+  const $triangle = $N('path', {class: 'triangle'}, $chart.$overlay) as SVGView;
+  const $lineX = $N('line', {class: 'line-x', target: 'dx'}, $chart.$overlay) as SVGView;
+  const $lineY = $N('line', {class: 'line-y', target: 'dy'}, $chart.$overlay) as SVGView;
 
   const $labelX = $N('div', {class: 'chart-label blue', target: 'dx'}, $chart);
   const $labelY = $N('div', {class: 'chart-label green', target: 'dy'}, $chart);
 
-  function pfn(p) {
+  const $svg = $chart.$overlay.$ownerSVG;
+
+  function pfn(p: Point) {
     const q = $chart.plotToMathCoords(p);
     const x = clamp(roundTo(q.x, 0.5), -4, 4);
     return $chart.mathToPlotCoords(new Point(x, 1.5 * x));
@@ -35,7 +36,7 @@ export function slope($step) {
   $chart.on('mousemove', (e) => {
     if (hasSelected) return;
 
-    const p = $chart.plotToMathCoords(svgPointerPosn(e, $chart.$overlay));
+    const p = $chart.plotToMathCoords(svgPointerPosn(e, $svg));
     if (Math.abs(p.y - 1.5 * p.x) > 1) {
       $point.removeClass('visible');
     } else {
@@ -48,7 +49,7 @@ export function slope($step) {
   $chart.on('click', (e) => {
     if (hasSelected) return;
 
-    const p = $chart.plotToMathCoords(svgPointerPosn(e, $chart.$overlay));
+    const p = $chart.plotToMathCoords(svgPointerPosn(e, $svg));
     if (Math.abs(p.y - 1.5 * p.x) > 1) return;
 
     $point.addClass('fixed');
@@ -83,12 +84,12 @@ export function slope($step) {
   });
 
   $step.onScore('blank-0', () => {
-    drag.on('end', () => $step.score('slide-point'))
+    drag.on('end', () => $step.score('slide-point'));
   });
 }
 
-export function questions1($step) {
-  const $charts = $step.$$('x-coordinate-system');
+export function questions1($step: Step) {
+  const $charts = $step.$$('x-coordinate-system') as CoordinateSystem[];
 
   $charts[0].setFunctions(x => 0.5 * x);
   $charts[0].drawPoints([new Point(2, 1)]);
@@ -100,49 +101,55 @@ export function questions1($step) {
   $charts[2].drawPoints([new Point(-2, 2)]);
 }
 
-export function intercept($step) {
-  const $chart = $step.$('x-coordinate-system');
-  $chart.setFunctions(x => 2/3 * x);
+export function intercept($step: Step) {
+  const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
+  $chart.setFunctions(x => 2 / 3 * x);
 
   const arrows = [-6, -3, 0, 3, 6];
-  const $lines = arrows.map(() => $N('line', {class: 'arrow'}, $chart.$overlay));
-  const points = arrows.map(x => $chart.mathToPlotCoords(new Point(x, 2/3*x)));
+  const $lines = arrows.map(
+      () => $N('line', {class: 'arrow'}, $chart.$overlay) as SVGView);
+  const points = arrows.map(
+      x => $chart.mathToPlotCoords(new Point(x, 2 / 3 * x)));
 
-  $step.model.set('sign', (a) => a < 0 ? '–' : '+');
+  $step.model.set('sign', (a: number) => a < 0 ? '–' : '+');
   $step.model.set('abs', Math.abs);
 
   $step.model.watch((state) => {
-    $chart.setFunctions(x => 2/3 * x + state.a);
+    $chart.setFunctions(x => 2 / 3 * x + state.a);
     $lines.forEach(($l, i) => {
-      if (state.a) { $l.show(); } else { return $l.hide(); }
-      const end = $chart.mathToPlotCoords(new Point(arrows[i], 2/3*arrows[i] + state.a));
-      end.y += (state.a < 0 ? -8 : 8);
-      $l.setLine(points[i], end);
+      if (state.a) {
+        $l.show();
+      } else {
+        return $l.hide();
+      }
+      const end = $chart.mathToPlotCoords(
+          new Point(arrows[i], 2 / 3 * arrows[i] + state.a));
+      $l.setLine(points[i], end.shift(0, state.a < 0 ? -8 : 8));
     });
   });
 }
 
-export function equation1($step) {
-  const $chart = $step.$('x-coordinate-system');
-  $chart.setFunctions(x => 3/4 * x + 2);
+export function equation1($step: Step) {
+  const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
+  $chart.setFunctions(x => 3 / 4 * x + 2);
 
   const $point1 = $N('div', {class: 'chart-point fixed', hidden: true}, $chart);
   const $point2 = $N('div', {class: 'chart-point fixed', hidden: true}, $chart);
 
-  const $triangle = $N('path', {class: 'triangle'}, $chart.$overlay);
-  const $lineX = $N('line', {class: 'line-x'}, $chart.$overlay);
-  const $lineY = $N('line', {class: 'line-y'}, $chart.$overlay);
+  const $triangle = $N('path', {class: 'triangle'}, $chart.$overlay) as SVGView;
+  const $lineX = $N('line', {class: 'line-x'}, $chart.$overlay) as SVGView;
+  const $lineY = $N('line', {class: 'line-y'}, $chart.$overlay) as SVGView;
 
-  function pfn(p) {
+  function pfn(p: Point) {
     const q = $chart.plotToMathCoords(p);
     const x = clamp(roundTo(q.x, 0.5), -4, 4);
-    return $chart.mathToPlotCoords(new Point(x, 3/4 * x + 2));
+    return $chart.mathToPlotCoords(new Point(x, 3 / 4 * x + 2));
   }
 
   const drag1 = new Draggable($point1, $chart, {round: pfn});
   const drag2 = new Draggable($point2, $chart, {round: pfn});
 
-  drag1.on('move', (posn) => {
+  drag1.on('move', (posn: Point) => {
     const corner = {x: drag2.position.x, y: posn.y};
     $lineX.setLine(posn, corner);
     $lineY.setLine(corner, drag2.position);
@@ -168,8 +175,8 @@ export function equation1($step) {
   });
 }
 
-export function questions2($step) {
-  const $charts = $step.$$('x-coordinate-system');
+export function questions2($step: Step) {
+  const $charts = $step.$$('x-coordinate-system') as CoordinateSystem[];
 
   $charts[0].setFunctions(x => 1.5 * x - 2);
   $charts[0].drawPoints([new Point(2, 1), new Point(0, -2)]);

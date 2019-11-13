@@ -4,54 +4,58 @@
 // =============================================================================
 
 
+import {EventTarget, defer, last} from '@mathigon/core';
+import {Point, numberFormat} from '@mathigon/fermat';
+import {CustomElementView, register, $N, pointerPosition, ElementView} from '@mathigon/boost';
+import {AudioPlayer} from '../../shared/components/audio';
 
-import { Evented, defer, last } from '@mathigon/core';
-import { Point, numberFormat } from '@mathigon/fermat';
-import { CustomElement, registerElement, $N, pointerPosition } from '@mathigon/boost';
-import { Audio } from '../../shared/components/audio'
 
-const enterAudio = new Audio('/resources/exploding-dots/audio/enter.m4a');
-const explodeAudio = new Audio('/resources/exploding-dots/audio/explode.m4a');
-const annihilateAudio = new Audio('/resources/exploding-dots/audio/annihilate.m4a');
+const enterAudio = new AudioPlayer('/resources/exploding-dots/audio/enter.m4a');
+const explodeAudio = new AudioPlayer('/resources/exploding-dots/audio/explode.m4a');
+const annihilateAudio = new AudioPlayer('/resources/exploding-dots/audio/annihilate.m4a');
 
 // -----------------------------------------------------------------------------
 
-class Cell extends Evented {
+class Cell extends EventTarget {
+  $el: ElementView;
+  $dots: ElementView[] = [];
+  $value: ElementView;
 
-  constructor($dotMachine, initial=0, index=0) {
+  value: number;
+  dotCols = 1;
+  dotRows = 1;
+
+
+  constructor(private readonly $dotMachine: DotMachine, initial = 0,
+              index = 0) {
     super();
-
-    this.$dotMachine = $dotMachine;
-    this.$el = $N('div', {class: 'dot-cell'}, $dotMachine.$wrap);
-    this.$dots = [];
-
-    this.dotCols = 1;
-    this.dotRows = 1;
-
     this.value = initial;
+
+    this.$el = $N('div', {class: 'dot-cell'}, $dotMachine.$wrap);
     this.$value = $N('div', {class: 'cell-value', html: initial}, this.$el);
 
     const order = numberFormat(index > 0 ? Math.pow($dotMachine.type, index) :
-        1 / Math.pow($dotMachine.type, -index));  // Prevent rounding errors
+                               1 / Math.pow($dotMachine.type, -index));  // Prevent rounding errors
     $N('div', {class: 'cell-order', html: order}, this.$el);
 
     if (initial) {
       this.rearrange(initial);
-      for (let i = 0; i < initial; ++i) this.addDot(null, {count: false});
+      for (let i = 0; i < initial; ++i) this.addDot(undefined, {count: false});
     }
   }
 
   get $fullDots() { return this.$dots.filter($d => !$d.data.anti); }
+
   get $antiDots() { return this.$dots.filter($d => $d.data.anti); }
 
-  getDotPosition(i) {
+  getDotPosition(i: number) {
     const s = this.$dotMachine.spacing;
-    const x = 60 - this.dotCols * s/2 + (i % this.dotCols) * s;
-    const y = 60 - this.dotRows * s/2 + Math.floor(i / this.dotCols) * s;
+    const x = 60 - this.dotCols * s / 2 + (i % this.dotCols) * s;
+    const y = 60 - this.dotRows * s / 2 + Math.floor(i / this.dotCols) * s;
     return new Point(x, y);
   }
 
-  rearrange(useN=null) {
+  rearrange(useN?: number) {
     const n = this.$dots.length;
     this.dotCols = Math.ceil(Math.sqrt(useN || n));
     this.dotRows = Math.ceil((useN || n) / this.dotCols);
@@ -60,36 +64,41 @@ class Cell extends Evented {
 
     for (let i = 0; i < n; ++i) {
       const p = this.getDotPosition(i);
-      this.$dots[i].animate({transform: `translate(${p.x}px,${p.y}px)`}, 300, i * 20);
+      this.$dots[i].animate({transform: `translate(${p.x}px,${p.y}px)`}, 300,
+          i * 20);
     }
   }
 
-  addDot(posn=null, {className='', dx=0, audio=false, count=true}={}) {
+  addDot(posn?: Point,
+         {className = '', dx = 0, audio = false, count = true} = {}) {
     if (!posn) posn = this.getDotPosition(this.$dots.length);
     if (audio) enterAudio.play();
 
     const $dot = $N('div', {class: 'dot ' + className}, this.$el);
     this.$dots.push($dot);
 
-    $dot.animate({transform: [`translate(${posn.x}px, ${posn.y}px) scale(0.1)`,
-        `translate(${posn.x + dx}px, ${posn.y}px)`]}, 400, 0, 'bounce-in');
+    $dot.animate({
+      transform: [`translate(${posn.x}px, ${posn.y}px) scale(0.1)`,
+        `translate(${posn.x + dx}px, ${posn.y}px)`]
+    }, 400, 0, 'bounce-in');
 
     if (count) {
       this.value += 1;
-      this.$value.text = this.value;
+      this.$value.text = '' + this.value;
     }
 
     setTimeout(() => this.rearrange(), 400);
     return $dot;
   }
 
-  addDotAntidot(posn) {
+  addDotAntidot(posn: Point) {
     this.addDot(posn, {dx: -10, audio: true, count: false});
-    const $antiDot = this.addDot(posn, {className: 'anti', dx: 10, count: false});
-    $antiDot.data.anti = true;
+    const $antiDot = this.addDot(posn,
+        {className: 'anti', dx: 10, count: false});
+    $antiDot.data.anti = 'true';
   }
 
-  explode(recursive=false) {
+  explode(recursive = false): Promise<void> {
     const n = this.$dotMachine.type;
     if (this.$fullDots.length < n) return Promise.resolve();
 
@@ -101,13 +110,13 @@ class Cell extends Evented {
     const nextIndex = this.$dotMachine.cells.indexOf(this) - 1;
     const next = this.$dotMachine.cells[nextIndex];
 
-    const target = next ? next.getDotPosition(next.$dots.length) : null;
-    const transform = next ? target.add(next.$el.topLeftPosition)
+    const target = next ? next.getDotPosition(next.$dots.length) : undefined;
+    const transform = next ? target!.add(next.$el.topLeftPosition)
         .subtract(this.$el.topLeftPosition) : new Point(-54, 50);
 
     for (let $r of $remove) {
       $r.animate({transform: `translate(${transform.x}px,${transform.y}px) scale(2)`}, 400, 400)
-          .then(() => $r.remove());
+          .promise.then(() => $r.remove());
     }
 
     setTimeout(() => explodeAudio.play(), 100);
@@ -116,14 +125,14 @@ class Cell extends Evented {
     setTimeout(() => {
       if (next) next.addDot(target);
       this.value -= n;
-      this.$value.text = this.value;
+      this.$value.text = '' + this.value;
     }, 800);
 
     const deferred = defer();
     setTimeout(() => {
       const cell = (this.$fullDots.length < n) ? next : this;
       if (!recursive || !cell) return deferred.resolve();
-      cell.explode(n, recursive).then(() => deferred.resolve());
+      cell.explode(recursive).then(() => deferred.resolve());
     }, 1200);
     return deferred.promise;
   }
@@ -139,10 +148,10 @@ class Cell extends Evented {
       setTimeout(() => {
         $fullDots[i].addClass('warning');
         $fullDots[i].animate({transform: `translate(50px, 50px) scale(2)`}, 400, 400)
-            .then(() => $fullDots[i].exit('pop'));
+            .promise.then(() => $fullDots[i].exit('pop'));
         $antiDots[i].addClass('warning');
         $antiDots[i].animate({transform: `translate(50px, 50px) scale(2)`}, 400, 400)
-            .then(() => $antiDots[i].exit('pop'));
+            .promise.then(() => $antiDots[i].exit('pop'));
       }, i * 600);
       setTimeout(() => annihilateAudio.play(), i * 600 + 500);
     }
@@ -152,7 +161,12 @@ class Cell extends Evented {
 
 // -----------------------------------------------------------------------------
 
-export class DotMachine extends CustomElement {
+@register('x-dot-machine')
+export class DotMachine extends CustomElementView {
+  $wrap!: ElementView;
+  type!: number;
+  spacing!: number;
+  cells: Cell[] = [];
 
   ready() {
     const cellString = (this.attr('cells') || '000');
@@ -162,22 +176,22 @@ export class DotMachine extends CustomElement {
     this.spacing = this.hasClass('tiny') ? 14 : 20;
 
     this.$wrap = $N('div', {class: 'dot-wrap'}, this);
-    this.cells = [];
-
     if (cellString[0] === '…') $N('div', {class: 'dot-ellipses'}, this.$wrap);
 
-    for (let i=0; i<cells[0].length; ++i) {
+    for (let i = 0; i < cells[0].length; ++i) {
       this.cells.push(new Cell(this, +cells[0][i], cells[0].length - 1 - i));
     }
 
     if (cells[1]) {
       $N('div', {class: 'dot-decimal'}, this.$wrap);
-      for (let i=0; i<cells[1].length; ++i) {
+      for (let i = 0; i < cells[1].length; ++i) {
         this.cells.push(new Cell(this, +cells[1][i], -1 - i));
       }
     }
 
-    if (last(cellString) === '…') $N('div', {class: 'dot-ellipses'}, this.$wrap);
+    if (cellString[cellString.length - 1] === '…') {
+      $N('div', {class: 'dot-ellipses'}, this.$wrap);
+    }
 
     this.cells.forEach((cell, i) => {
       cell.$el.on('click', (e) => {
@@ -191,5 +205,3 @@ export class DotMachine extends CustomElement {
     return last(this.cells).explode(true);
   }
 }
-
-registerElement('x-dot-machine', DotMachine);
