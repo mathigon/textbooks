@@ -120,7 +120,7 @@ export class Solid extends CustomElementView {
     this.isReady = true;
   }
 
-  addMesh(fn: (scene: Graphics3D) => THREE.Object3D[]) {
+  addMesh(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
     if (this.isReady) {
       this.addMeshCallback(fn);
     } else {
@@ -128,7 +128,7 @@ export class Solid extends CustomElementView {
     }
   }
 
-  addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]) {
+  addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
     const items = fn(this.scene) || [];
     for (let i of items)  this.object.add(i);
 
@@ -242,7 +242,7 @@ export class Solid extends CustomElementView {
   //      geometry.isConeGeometry etc.
 
   // A translucent material with a solid border.
-  addOutlined(geo: THREE.Geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1, strokeColor = null) {
+  addOutlined(geo: THREE.Geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1, strokeColor?: number) {
     const solidMaterial = Solid.translucentMaterial(color, opacity);
     const solid = new THREE.Mesh(geo, solidMaterial);
 

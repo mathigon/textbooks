@@ -7,7 +7,7 @@
 import {Obj} from '@mathigon/core';
 
 
-interface PolyhedronDataItem {
+export interface PolyhedronDataItem {
   vertex: [number, number, number][];
   edge: [number, number][];
   face: number[][];

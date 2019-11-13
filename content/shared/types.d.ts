@@ -169,7 +169,7 @@ export class Step extends CustomElementView {
   storeData(key: string, value: any): void;
   onScore(goalList: string, callback: () => void): void;
   addHint(text: string, options?: HintOptions): {text: string};
-  getText(id: string): string|string[];
+  getText(id: string): string;
   getHelp(): void;
   delayedHint(callback: () => void, t?: number): void;
 }
@@ -288,18 +288,20 @@ export class EquationFlow extends CustomElementView {
   newRow(): Promise<void>;
 }
 
+type Callback = (e: any) => void;
+
 export class Gameplay extends CustomElementView {
   private $progress;
   private $dots;
   private slideTemplate;
   private time;
-  private slideGenerator;
   private currentAnimation;
   private history;
   private goal;
   private $currentSlide;
   playing: boolean;
   completed: boolean;
+  slideGenerator: (el: ElementView, success: Callback, error: Callback) => void;
   ready(): void;
   private score;
   private makeSlide;

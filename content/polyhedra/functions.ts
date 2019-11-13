@@ -4,24 +4,30 @@
 // =============================================================================
 
 
-import { clamp, tabulate } from '@mathigon/core';
-import { toWord, Segment, Point, Angle } from '@mathigon/fermat';
-import { Browser, slide } from '@mathigon/boost';
-import {PolyhedronData} from './components/polyhedron-data';
+import {tabulate} from '@mathigon/core';
+import {clamp, toWord, Segment, Point, Angle, lerp, Line} from '@mathigon/fermat';
+import {Browser, slide} from '@mathigon/boost';
+import {GeoElement, Geopad, GeoPoint, Slider, Step} from '../shared/types';
+import {Solid} from '../shared/components/solid';
+import {Graphics3D} from '../shared/components/webgl';
+import {Anibutton} from './components/anibutton';
+import {PolyhedronData, PolyhedronDataItem} from './components/polyhedron-data';
+import {Tessellation} from './components/tessellation';
+import * as THREE from 'three';
 
-import '../shared/components/solid'
+import '../shared/components/solid';
 import './components/tessellation';
 import './components/polyhedron';
 import './components/folding';
 import './components/anibutton';
 
 
-export function angles($step) {
+export function angles($step: Step) {
   const totals = [360, 540];
-  const $buttons = $step.$$('x-anibutton');
+  const $buttons = $step.$$('x-anibutton') as Anibutton[];
   let overlap = [false, false];
 
-  $buttons.forEach(($b, i) => {
+  for (const [i, $b] of $buttons.entries()) {
     $step.model.watch(() => $b.setAttr('text', '???'));
     $b.on('click', () => {
       if (overlap[i]) return $step.addHint('no-overlap', {force: true});
@@ -29,20 +35,20 @@ export function angles($step) {
       $b.setAttr('text', totals[i] + '°');
       $step.score('angle-' + i);
     });
-  });
+  }
 
   $step.model.watch(s => {
-    const a1 = new Angle(s.b,s.a,s.d).deg;
-    const a2 = new Angle(s.c,s.b,s.a).deg;
-    const a3 = new Angle(s.d,s.c,s.b).deg;
-    const a4 = new Angle(s.a,s.d,s.c).deg;
+    const a1 = new Angle(s.b, s.a, s.d).deg;
+    const a2 = new Angle(s.c, s.b, s.a).deg;
+    const a3 = new Angle(s.d, s.c, s.b).deg;
+    const a4 = new Angle(s.a, s.d, s.c).deg;
     overlap[0] = a1 + a2 + a3 + a4 > 361;
 
-    const b1 = new Angle(s.f,s.e,s.i).deg;
-    const b2 = new Angle(s.g,s.f,s.e).deg;
-    const b3 = new Angle(s.h,s.g,s.f).deg;
-    const b4 = new Angle(s.i,s.h,s.g).deg;
-    const b5 = new Angle(s.e,s.i,s.h).deg;
+    const b1 = new Angle(s.f, s.e, s.i).deg;
+    const b2 = new Angle(s.g, s.f, s.e).deg;
+    const b3 = new Angle(s.h, s.g, s.f).deg;
+    const b4 = new Angle(s.i, s.h, s.g).deg;
+    const b5 = new Angle(s.e, s.i, s.h).deg;
     overlap[1] = b1 + b2 + b3 + b4 + b5 >= 541;
 
     if (overlap[0] || overlap[1]) $step.addHint('no-overlap');
@@ -51,47 +57,46 @@ export function angles($step) {
   $buttons[0].one('click', () => $step.addHint('angles-repeat'));
 }
 
-export function regularArea($step) {
+export function regularArea($step: Step) {
   const model = $step.model;
-  model.assign({ toWord });
+  model.assign({toWord});
 
-  model.set('regular', function(c, r, n) {
+  model.set('regular', (c: Point, r: number, n: number) => {
     const points = tabulate(i => {
-      const a = Math.PI * (2*i/n + 1/2 - 1/n);
+      const a = Math.PI * (2 * i / n + 1 / 2 - 1 / n);
       return model.point(c.x + r * Math.cos(a), c.y + r * Math.sin(a));
     }, n);
     return model.polygon(...points);
   });
-
 }
 
 // -----------------------------------------------------------------------------
 
-function checkPathMatches(p, options) {
+function checkPathMatches(p: GeoElement<Line>, options: Line[]) {
   for (let i = 0; i < options.length; ++i) {
-    if (p.val.equals(options[i])) return i;
+    if (p.val!.equals(options[i])) return i;
   }
   p.remove();
   return -1;
 }
 
-export function midsegments($step) {
-  const $geopad = $step.$('x-geopad');
+export function midsegments($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
   $geopad.setActiveTool('point');
 
-  let points = [];
-  let orientation = null;
+  let points: GeoPoint[] = [];
+  let orientation: number;
 
-  $geopad.on('add:point', function(p) {
+  $geopad.on('add:point', function (p) {
     if (points.length === 4) return p.remove();
     points.push(p);
     if (points.length === 4) $step.score('points');
   });
 
-  $geopad.on('add:path', function(p) {
+  $geopad.on('add:path', function (p) {
     const match = checkPathMatches(p, [
-      new Segment(points[0].val, points[2].val),
-      new Segment(points[1].val, points[3].val)
+      new Segment(points[0].val!, points[2].val!),
+      new Segment(points[1].val!, points[3].val!)
     ]);
 
     if (match >= 0) {
@@ -113,23 +118,24 @@ export function midsegments($step) {
 
     $geopad.setActiveTool('move');
 
-    const [a,b,c,d] = points.map(p => p.val);
-    if (Segment.intersect({p1: a, p2: b}, {p1: c, p2: d})) {
+    const [a, b, c, d] = points.map(p => p.val);
+    if (Segment.intersect(new Segment(a!, b!), new Segment(c!, d!))) {
       points = [points[0], points[2], points[1], points[3]];
-    } else if (Segment.intersect({p1: a, p2: d}, {p1: b, p2: c})) {
+    } else if (Segment.intersect(new Segment(a!, d!), new Segment(b!, c!))) {
       points = [points[0], points[1], points[3], points[2]];
     }
 
     const pointStr = points.map(p => p.name).join(',');
-    $geopad.drawPath(`polygon(${pointStr})`, {name: 'quad', animate: 1000});
+    $geopad.drawPath(`polygon(${pointStr})`, {name: 'quad', animated: 1000});
   });
 
 
   $step.onScore('blank-0', () => {
-    for (let i=0; i<4; ++i)
+    for (let i = 0; i < 4; ++i) {
       $geopad.drawPoint(`quad.edges[${i}].midpoint`, {name: `m${i}`, classes: 'red'});
+    }
 
-    $geopad.drawPath(`polygon(m0,m1,m2,m3)`, {classes: 'red', name: 'p0', animate: 1000});
+    $geopad.drawPath(`polygon(m0,m1,m2,m3)`, {classes: 'red', name: 'p0', animated: 1000});
   });
 
   $step.onScore('blank-1', () => {
@@ -138,25 +144,27 @@ export function midsegments($step) {
   });
 
   $step.onScore('diagonal', () => {
-    const [a,b,c,d] = points.map(p => p.name);
+    const [a, b, c, d] = points.map(p => p.name);
     $geopad.setActiveTool('move');
 
-    if (!orientation) { /* TODO add diagonal */ }
-    const o = orientation === 1;
+    if (!orientation) {
+      // TODO add diagonal
+    }
+    const o = (orientation === 1);
 
     $geopad.drawPath(`segment(m0,m1)`, {classes: 'transparent red', target: o ? 'midsegment parallel' : 'other'});
     $geopad.drawPath(`segment(m2,m3)`, {classes: 'transparent red', target: o ? 'midsegment parallel' : 'other'});
     $geopad.drawPath(`segment(m1,m2)`, {classes: 'transparent red', target: !o ? 'midsegment parallel' : 'other'});
     $geopad.drawPath(`segment(m0,m3)`, {classes: 'transparent red', target: !o ? 'midsegment parallel' : 'other'});
 
-    $geopad.drawPath(`segment(${o?b:a},${o?d:c})`, {classes: 'transparent', target: 'other'});
-    $geopad.drawPath(`polygon(${b},${o?c:d},${a})`, {classes: 'fill green transparent', target: 'triangle'});
-    $geopad.drawPath(`polygon(${c},${d},${o?a:b})`, {classes: 'fill yellow transparent', target: 'triangle'});
+    $geopad.drawPath(`segment(${o ? b : a},${o ? d : c})`, {classes: 'transparent', target: 'other'});
+    $geopad.drawPath(`polygon(${b},${o ? c : d},${a})`, {classes: 'fill green transparent', target: 'triangle'});
+    $geopad.drawPath(`polygon(${c},${d},${o ? a : b})`, {classes: 'fill yellow transparent', target: 'triangle'});
   });
 }
 
-export function parallelogramsProof($step) {
-  const $geo1 = $step.$$('x-geopad')[0];
+export function parallelogramsProof($step: Step) {
+  const $geo1 = $step.$$('x-geopad')[0] as Geopad;
   const model = $step.model;
 
   model.set('o', false);
@@ -169,7 +177,7 @@ export function parallelogramsProof($step) {
     }
   }, 1000);
 
-  $geo1.on('add:path', function(p) {
+  $geo1.on('add:path', function (p) {
     const match = checkPathMatches(p, [
       new Segment(model.b, model.d),
       new Segment(model.a, model.c)
@@ -186,8 +194,8 @@ export function parallelogramsProof($step) {
   });
 }
 
-export function quadrilateralsArea($step) {
-  const $geopads = $step.$$('x-geopad');
+export function quadrilateralsArea($step: Step) {
+  const $geopads = $step.$$('x-geopad') as Geopad[];
 
   $geopads[0].setActiveTool('rectangle');
   $geopads[0].on('add:path', path => {
@@ -219,18 +227,19 @@ export function quadrilateralsArea($step) {
 
 // -----------------------------------------------------------------------------
 
-export function tessellationDrawing($step) {
+export function tessellationDrawing($step: Step) {
   let polygons = 0;
 
-  $step.$('x-tessellation').on('add-shape', function() {
+  const $tessellation = $step.$('x-tessellation') as Tessellation;
+  $tessellation.on('add-shape', function () {
     polygons += 1;
     if (polygons >= 3) $step.score('shapes0');
     if (polygons >= 5) $step.score('shapes1');
   });
 }
 
-export function escher($step) {
-  const $img = $step.$('.metamorph img');
+export function escher($step: Step) {
+  const $img = $step.$('.metamorph img')!;
   let translate = 0;
   let max = 3000;
 
@@ -242,39 +251,42 @@ export function escher($step) {
     }
   });
 
-  Browser.resize(({width}) => { max = 3000 - Math.min(760, width - 60); });
+  Browser.onResize(({width}) => {
+    max = 3000 - Math.min(760, width - 60);
+  });
 }
 
-export function penrose($step) {
+export function penrose($step: Step) {
   let $g = $step.$$('svg g');
 
   $g[1].setAttr('opacity', 0);
   $g[2].setAttr('opacity', 0);
 
-  $step.$('x-slider').on('move', (n) => {
-    $g[0].setAttr('opacity', n < 50 ? 1-n/77 : 0.35);
-    $g[1].setAttr('opacity', n < 50 ? n/50 : 1.5-n/100);
-    $g[2].setAttr('opacity', n < 50 ? 0 : n/50-1);
+  const $slider = $step.$('x-slider') as Slider;
+  $slider.on('move', (n) => {
+    $g[0].setAttr('opacity', n < 50 ? 1 - n / 77 : 0.35);
+    $g[1].setAttr('opacity', n < 50 ? n / 50 : 1.5 - n / 100);
+    $g[2].setAttr('opacity', n < 50 ? 0 : n / 50 - 1);
   });
 }
 
 // -----------------------------------------------------------------------------
 
-export function polyhedra($step) {
+export function polyhedra($step: Step) {
   $step.addHint('move-polyhedra');
 }
 
-export function platonicOverview($step) {
+export function platonicOverview($step: Step) {
   $step.addHint('use-euler');
 }
 
-function makePolyhedronGeo(data, THREE) {
+function makePolyhedronGeo(data: PolyhedronDataItem) {
   const vertices = data.vertex.map(v => new THREE.Vector3(v[0], v[1], v[2]));
   const geometry = new THREE.Geometry();
   geometry.vertices = vertices;
   for (let f of data.face) {
     for (let i = 1; i < f.length - 1; i++) {
-      geometry.faces.push(new THREE.Face3(f[0], f[i], f[i+1]));
+      geometry.faces.push(new THREE.Face3(f[0], f[i], f[i + 1]));
     }
   }
   geometry.computeFaceNormals();
@@ -282,44 +294,43 @@ function makePolyhedronGeo(data, THREE) {
   return geometry;
 }
 
-export function platonicDual($step) {
-  const $solids = $step.$$('x-solid');
+export function platonicDual($step: Step) {
+  const $solids = $step.$$('x-solid') as Solid[];
   const $sliders = $step.$$('x-slider');
 
-  const interpolate = (a, b, p) => a + p * (b - a);
-
-  $solids[0].addMesh((scene, THREE) => {
-    const octahedronGeo = makePolyhedronGeo(PolyhedronData.Octahedron, THREE);
+  $solids[0].addMesh((scene: Graphics3D) => {
+    const octahedronGeo = makePolyhedronGeo(PolyhedronData.Octahedron);
     const octahedron = $solids[0].addSolid(octahedronGeo, 0xfd8c00, 5, true);
 
-    const cubeGeo = makePolyhedronGeo(PolyhedronData.Cube, THREE);
+    const cubeGeo = makePolyhedronGeo(PolyhedronData.Cube);
     const cube = $solids[0].addSolid(cubeGeo, 0x22ab24, 5, true);
     cube.setRotationFromEuler(new THREE.Euler(0.71, 0.63, -0.97));
 
-    function update(n) {
-      cube.scale.setScalar(interpolate(1.67, 0.95, n/100));
-      octahedron.scale.setScalar(interpolate(0.83, 1.43, n/100));
+    function update(n: number) {
+      cube.scale.setScalar(lerp(1.67, 0.95, n / 100));
+      octahedron.scale.setScalar(lerp(0.83, 1.43, n / 100));
       scene.draw();
     }
 
-    scene.camera.fov = 45;
+    (scene.camera as THREE.PerspectiveCamera).fov = 45;
     $solids[0].object.rotateX(0.2).rotateY(-0.6);
     $sliders[0].on('move', update);
     update(0);
   });
 
-  $solids[1].addMesh((scene, THREE) => {
-    const icosahedronGeo = makePolyhedronGeo(PolyhedronData.Icosahedron, THREE);
+  $solids[1].addMesh((scene) => {
+    const icosahedronGeo = makePolyhedronGeo(PolyhedronData.Icosahedron);
     const icosahedron = $solids[1].addSolid(icosahedronGeo, 0xf7aff, 5, true);
     icosahedron.setRotationFromEuler(new THREE.Euler(-0.47, 0, 0.3));
 
-    const dodecahedronGeo = makePolyhedronGeo(PolyhedronData.Dodecahedron, THREE);
-    const dodecahedron = $solids[1].addSolid(dodecahedronGeo, 0xcd0e66, 5, true);
+    const dodecahedronGeo = makePolyhedronGeo(PolyhedronData.Dodecahedron);
+    const dodecahedron = $solids[1].addSolid(dodecahedronGeo, 0xcd0e66, 5,
+        true);
     dodecahedron.setRotationFromEuler(new THREE.Euler(0.17, 0, 0.52));
 
-    function update(n) {
-      dodecahedron.scale.setScalar(interpolate(1.88, 1.48, n/100));
-      icosahedron.scale.setScalar(interpolate(1.35, 1.7, n/100));
+    function update(n: number) {
+      dodecahedron.scale.setScalar(lerp(1.88, 1.48, n / 100));
+      icosahedron.scale.setScalar(lerp(1.35, 1.7, n / 100));
       scene.draw();
     }
 
