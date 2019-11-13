@@ -5,13 +5,14 @@
 
 
 
-/* global THREE */
-import {$N, CustomElement, registerElement} from '@mathigon/boost';
+import {$N, CustomElementView, register} from '@mathigon/boost';
+import {Obj} from '@mathigon/core';
 import {create3D} from '../../shared/components/webgl';
-import {FoldingData} from './folding-data';
+import {FoldingData, FoldingDataItem} from './folding-data';
+import * as THREE from 'three';
 
 
-const colours = {
+const colours: Obj<number> = {
   3: 0xfd8c00,  // yellow
   4: 0x0f82f2,  // blue
   5: 0x22ab24,  // green
@@ -20,7 +21,7 @@ const colours = {
   10: 0x18aa93  // teal
 };
 
-function drawFace(face, vertices) {
+function drawFace(face: number[], vertices: THREE.Vector3[]) {
   const faceGeometry = new THREE.Geometry();
   faceGeometry.vertices = vertices;
   for (let i = 1; i < face.length - 1; i++) {
@@ -33,13 +34,13 @@ function drawFace(face, vertices) {
   return faceGeometry;
 }
 
-function getFolding(data) {
-  const vertices = data.vertices.map(v => new THREE.Vector3(v[0], v[1], v[2]));
+function getFolding(data: FoldingDataItem) {
+  const vertices = data.vertices.map(v => new THREE.Vector3(...v));
   const hinges = data.hinges;
 
-  function buildTree(f, side=0, angle=Math.PI, parent) {
+  function buildTree(f: number, side=0, angle=Math.PI, parent?: THREE.Object3D) {
     const node = new THREE.Object3D();
-    node.name = f;
+    node.name = '' + f;
 
     const face = data.net[f];
     const faceGeometry = drawFace(face, vertices);
@@ -80,10 +81,10 @@ function getFolding(data) {
   return buildTree(hinges[0][0]);
 }
 
-function updateHinges(polyhedron, p) {
-  polyhedron.traverse(function(obj) {
+function updateHinges(polyhedron: THREE.Object3D, p: number) {
+  polyhedron.traverse((obj) => {
     let u = obj.userData;
-    if (!u.hasOwnProperty('offset')) return;
+    if (u.offset) return;
 
     let t1 = new THREE.Matrix4().makeTranslation(-u.offset.x, -u.offset.y, -u.offset.z);
     let r = new THREE.Matrix4().makeRotationAxis(u.axis, p * (Math.PI - u.amount));
@@ -97,7 +98,8 @@ function updateHinges(polyhedron, p) {
 
 // -----------------------------------------------------------------------------
 
-export class Folding extends CustomElement {
+@register('x-folding')
+export class Folding extends CustomElementView {
 
   async ready() {
     const size = +this.attr('size');
@@ -127,5 +129,3 @@ export class Folding extends CustomElement {
     });
   }
 }
-
-registerElement('x-folding', Folding);
