@@ -51,7 +51,7 @@ export class Atom extends Solid {
 
       const protons = +this.attr('protons');
       const neutrons = +this.attr('neutrons');
-      const points = Random.shuffle(distribute(protons + neutrons));
+      const points = Random.shuffle(distribute(protons + neutrons)) as [number, number, number][];
 
       addSpheres(points.slice(0, protons), BLUE, atom);
       addSpheres(points.slice(protons), RED, atom);

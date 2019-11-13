@@ -120,7 +120,7 @@ export class Solid extends CustomElementView {
     this.isReady = true;
   }
 
-  addMesh(fn: (scene: Graphics3D) => THREE.Mesh[]) {
+  addMesh(fn: (scene: Graphics3D) => THREE.Object3D[]) {
     if (this.isReady) {
       this.addMeshCallback(fn);
     } else {
@@ -128,7 +128,7 @@ export class Solid extends CustomElementView {
     }
   }
 
-  addMeshCallback(fn: (scene: Graphics3D) => THREE.Mesh[]) {
+  addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]) {
     const items = fn(this.scene) || [];
     for (let i of items)  this.object.add(i);
 

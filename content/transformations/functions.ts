@@ -4,15 +4,19 @@
 // =============================================================================
 
 
-import { isPalindrome, words, flatten } from '@mathigon/core';
-import { Point } from '@mathigon/fermat';
-import { Draggable, $N } from '@mathigon/boost';
+import {isPalindrome, words, flatten} from '@mathigon/core';
+import {Line, Point} from '@mathigon/fermat';
+import {Draggable, $N, InputView, ElementView} from '@mathigon/boost';
+import {Geopad, GeoPoint, PlayBtn, Slider, Step} from '../shared/types';
+import {Wallpaper} from './components/wallpaper';
+
 import './components/wallpaper';
 
-// -----------------------------------------------------------------------------
 
-function play($step, $el, duration, score, callback) {
-  const $play = $el.$('x-play-btn');
+
+function play($step: Step, $el: ElementView, duration: number, score: string,
+              callback: () => void) {
+  const $play = $el.$('x-play-btn') as PlayBtn;
   $play.on('play', () => {
     callback();
     setTimeout(() => {
@@ -22,15 +26,17 @@ function play($step, $el, duration, score, callback) {
   });
 }
 
-function expandSegment($geopad, [e1, e2], line) {
-  let swap = Point.distance(e1.val, line.p1) > Point.distance(e2.val, line.p1);
+function expandSegment($geopad: Geopad, [e1, e2]: GeoPoint[], line: Line) {
+  let swap = Point.distance(e1.val!, line.p1) > Point.distance(e2.val!, line.p1);
   $geopad.animatePoint(swap ? e2.name : e1.name, line.p1);
   $geopad.animatePoint(swap ? e1.name : e2.name, line.p2);
 }
 
-function drawShape($step, $geopad, goal, shape, expand=false) {
+function drawShape($step: Step, $geopad: Geopad, goal: string, shape: string,
+                   expand = false) {
   // `shape` should be names of a polygon, segment or line.
-  const lines = flatten(words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));
+  const lines = flatten(
+      words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));
 
   $geopad.setActiveTool('line');
 
@@ -54,32 +60,41 @@ function drawShape($step, $geopad, goal, shape, expand=false) {
 
 // -----------------------------------------------------------------------------
 
-export function transformations($step) {
+export function transformations($step: Step) {
   const $animations = $step.$$('.animation');
   const $images = $step.$$('.image');
 
   play($step, $animations[0], 1000, 't1', () => {
-    $images[0].animate({transform: ['none', 'translate(95px,45px) rotate(18deg) scale(1.2)']}, 1000);
+    $images[0].animate(
+        {transform: ['none', 'translate(95px,45px) rotate(18deg) scale(1.2)']},
+        1000);
   });
 
   play($step, $animations[1], 1000, 't2', () => {
-    $images[1].animate({transform: ['none', 'translate(80px,100px) scale(0.9,1.3) rotate(-30deg)']}, 1000);
+    $images[1].animate({
+      transform: ['none', 'translate(80px,100px) scale(0.9,1.3) rotate(-30deg)']
+    }, 1000);
   });
 
   play($step, $animations[2], 1000, 't3', () => {
-    $images[2].animate({transform: ['translate(-20px,40px) rotate(-30deg)', 'rotate(30deg) translate(135px,0) scale(0.8)'], rx: ['50px', 0], ry: ['50px', 0]}, 1000);
+    $images[2].animate({
+      transform: ['translate(-20px,40px) rotate(-30deg)',
+        'rotate(30deg) translate(135px,0) scale(0.8)'], rx: ['50px', 0],
+      ry: ['50px', 0]
+    }, 1000);
   });
 }
 
-export function rigid1($step) {
+export function rigid1($step: Step) {
   const $animations = $step.$$('.animation');
   const $images = $step.$$('.image');
   const $lines = $step.$$('line');
-  const $arrow = $step.$('.arrow-head');
+  const $arrow = $step.$('.arrow-head')!;
 
   play($step, $animations[0], 1000, 't1', () => {
     $arrow.hide();
-    $images[0].animate({transform: ['none', 'translate(90px,-40px)']}, 1000, 0, 'linear');
+    $images[0].animate({transform: ['none', 'translate(90px,-40px)']}, 1000, 0,
+        'linear');
     $lines[0].enter('draw', 1000);
     $arrow.enter('fade', 400, 900);
   });
@@ -87,17 +102,19 @@ export function rigid1($step) {
   play($step, $animations[1], 2000, 't2', () => {
     $images[1].css('transform', 'none');
     $lines[1].enter('draw', 1000);
-    $images[1].animate({transform: 'rotate(54deg) translate(230px,-118px) scaleX(-1)'}, 1000, 1000);
+    $images[1].animate(
+        {transform: 'rotate(54deg) translate(230px,-118px) scaleX(-1)'}, 1000,
+        1000);
   });
 
   play($step, $animations[2], 2000, 't3', () => {
     $images[2].css('transform', 'none');
-    for (let i=2; i<6; ++i) $lines[i].enter('draw', 500);
-    $images[2].animate({transform: 'rotate(84deg)', }, 1000, 1000);
+    for (let i = 2; i < 6; ++i) $lines[i].enter('draw', 500);
+    $images[2].animate({transform: 'rotate(84deg)'}, 1000, 1000);
   });
 }
 
-export function translations1($step) {
+export function translations1($step: Step) {
   const initial = [{x: 40, y: 40}, {x: 120, y: 0}, {x: 20, y: 20}];
   const correct = [{x: 100, y: 20}, {x: 40, y: 40}, {x: 120, y: 40}];
 
@@ -105,7 +122,8 @@ export function translations1($step) {
     const $polygons = $s.$$('polygon');
     $polygons[0].setTransform(initial[i]);
 
-    const drag = new Draggable($polygons[1], $s, {useTransform: true, snap: 20});
+    const drag = new Draggable($polygons[1], $s,
+        {useTransform: true, snap: 20});
     drag.setPosition(initial[i].x, initial[i].y);
     drag.on('end', () => {
       if (drag.position.equals(correct[i])) {
@@ -118,15 +136,15 @@ export function translations1($step) {
   });
 }
 
-export function reflections($step) {
-  const $geopads = $step.$$('x-geopad');
+export function reflections($step: Step) {
+  const $geopads = $step.$$('x-geopad') as Geopad[];
 
   drawShape($step, $geopads[0], 'r0', 'line0', true);
   drawShape($step, $geopads[1], 'r1', 'line1', true);
   drawShape($step, $geopads[2], 'r2', 'line2', true);
 }
 
-export function symmetry($step) {
+export function symmetry($step: Step) {
   const $symmetries = $step.$$('.symmetry');
   const $images = $step.$$('img:nth-child(2)');
 
@@ -139,8 +157,8 @@ export function symmetry($step) {
   });
 }
 
-export function reflectionalSymmetry1($step) {
-  const $geopads = $step.$$('x-geopad');
+export function reflectionalSymmetry1($step: Step) {
+  const $geopads = $step.$$('x-geopad') as Geopad[];
 
   drawShape($step, $geopads[0], 'r0', 'line0', true);
   drawShape($step, $geopads[1], 'r1', 'line1', true);
@@ -150,8 +168,8 @@ export function reflectionalSymmetry1($step) {
   drawShape($step, $geopads[5], 'r5', 'line5a line5b', true);
 }
 
-function drawThreeShapes($step) {
-  const $geopads = $step.$$('x-geopad');
+function drawThreeShapes($step: Step) {
+  const $geopads = $step.$$('x-geopad') as Geopad[];
 
   drawShape($step, $geopads[0], 'r0', 'to0');
   drawShape($step, $geopads[1], 'r1', 'to1');
@@ -168,10 +186,10 @@ export const rotations = drawThreeShapes;
 export const reflectionalSymmetry2 = drawThreeShapes;
 export const rotationalSymmetry2 = reflectionalSymmetry2;
 
-export function palindromes($step) {
-  const $inputs = $step.$$('input');
+export function palindromes($step: Step) {
+  const $inputs = $step.$$('input') as InputView[];
 
-  for (let i=0; i<3; ++i) {
+  for (let i = 0; i < 3; ++i) {
     $inputs[i].onKeyDown('enter', () => $inputs[i].blur());
     $inputs[i].on('blur', () => {
       let str = '' + $inputs[i].value;
@@ -192,7 +210,7 @@ export function palindromes($step) {
 
 // -----------------------------------------------------------------------------
 
-export function addSymmetries($step) {
+export function addSymmetries($step: Step) {
   $step.$$('.sym-sum').forEach(($s, i) => {
     $s.one('click', () => {
       $step.score('sum-' + i);
@@ -201,33 +219,36 @@ export function addSymmetries($step) {
   });
 }
 
-function add(a, b) {
+function add(a: number, b: number) {
   if (a < 4 && b < 4) return (a + b) % 4;  // rotation + rotation
   if (a >= 4 && b >= 4) return (a - b + 4) % 4;  // reflection + reflection
   if (a > b) return 4 + ((a - b) % 4);  // reflection + rotation
   return 4 + ((a + b) % 4);  // rotation + reflection
 }
 
-function makeSquare(i, x, $parent, delay=0) {
+function makeSquare(i: number, x: number, $parent: ElementView, delay = 0) {
   let $el = $N('img', {
     src: `/resources/transformations/images/cube-${i}.svg`,
-    style: `left: ${8 + x*70}px;`
+    style: `left: ${8 + x * 70}px;`
   }, $parent);
   $el.enter('pop', 200, delay);
   return $el;
 }
 
-export function calculator($step) {
-  const $buttons = $step.$$('.button');
-  const $display = $step.$('.display');
-  const $clear = $display.$('.clear');
+export function calculator($step: Step) {
+  const $buttons = $step.$$('.button')!;
+  const $display = $step.$('.display')!;
+  const $clear = $display.$('.clear')!;
 
-  let a = null, b = null, answer = null;
-  let $results = [];
+  let a: number|null = null;
+  let b: number|null = null;
+  let answer: number|null = null;
+
+  let $results: ElementView[] = [];
   let locked = false;
   let count = 0;
 
-  $buttons.forEach(($b, i) => {
+  for (const [i, $b] of $buttons.entries()) {
     $b.on('click', () => {
       count += 1;
       if (count === 3) $step.score('calculate');
@@ -249,18 +270,17 @@ export function calculator($step) {
 
         a = answer;
         b = i;
-        answer = add(a, b);
+        answer = add(a!, b);
 
-        $results.shift().exit('pop', 200);
-        $results.shift().exit('pop', 200);
+        $results.shift()!.exit('pop', 200);
+        $results.shift()!.exit('pop', 200);
         $results[0].animate({left: '8px'}, 400);
 
         $results.push(makeSquare(b, 1, $display, 400));
         $results.push(makeSquare(answer, 2, $display, 600));
       }
-
     });
-  });
+  }
 
   $clear.on('click', () => {
     for (let $r of $results) $r.exit('pop', 200);
@@ -270,13 +290,13 @@ export function calculator($step) {
   });
 }
 
-export function symmetryArithmetic($step) {
+export function symmetryArithmetic($step: Step) {
   $step.onScore('blank-2', () => $step.addHint('not-commutative'));
 }
 
 // -----------------------------------------------------------------------------
 
-export function wallpaperGroups1($step) {
+export function wallpaperGroups1($step: Step) {
   const $symmetries = $step.$$('.symmetry');
   const $images = $step.$$('img:nth-child(2)');
 
@@ -289,15 +309,16 @@ export function wallpaperGroups1($step) {
   });
 }
 
-export function footsteps($step) {
-  const $img = $step.$('img:nth-child(2)');
-  $step.$('x-slider').on('move', (n) => {
-    $img.css('transform', `translateX(${n/2}px) scaleY(${1-n/50})`);
+export function footsteps($step: Step) {
+  const $img = $step.$('img:nth-child(2)')!;
+  const $slider = $step.$('x-slider') as Slider;
+  $slider.on('move', (n) => {
+    $img.css('transform', `translateX(${n / 2}px) scaleY(${1 - n / 50})`);
   });
 }
 
-export function drawing($step) {
-  const $wallpaper = $step.$('x-wallpaper');
+export function drawing($step: Step) {
+  const $wallpaper = $step.$('x-wallpaper') as Wallpaper;
   let switched = false;
 
   $wallpaper.on('draw', () => {
@@ -310,7 +331,7 @@ export function drawing($step) {
   });
 }
 
-export function planets($step) {
+export function planets($step: Step) {
   const $rockets = $step.$$('.rocket');
   const $clocks = $step.$$('.clock');
 
