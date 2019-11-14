@@ -167,7 +167,7 @@ export class Step extends CustomElementView {
   isReady: boolean;
   score(goal: string, goNext?: boolean): void;
   storeData(key: string, value: any): void;
-  onScore(goalList: string, callback: () => void): void;
+  onScore(goalList: string, callback?: () => void): Promise<void>;
   addHint(text: string, options?: HintOptions): {text: string};
   getText(id: string): string;
   getHelp(): void;
@@ -452,11 +452,11 @@ export class PlayToggle extends CustomElementView {
 }
 
 export class Slider extends CustomElementView {
-  private steps;
   private speed;
-  private current;
   private playing;
   private drag;
+  steps: number;
+  current: number;
   ready(): void;
   play(): void;
   set(x: number): void;

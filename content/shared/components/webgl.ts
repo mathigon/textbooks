@@ -31,7 +31,7 @@ function getRenderer(width: number, height: number) {
 
 export interface Graphics3D {
   $canvas: CanvasView;
-  camera: THREE.Camera;
+  camera: THREE.PerspectiveCamera;
   renderer: THREE.WebGLRenderer;
   draw: () => void;
   onDraw: (fn: () => void) => void;

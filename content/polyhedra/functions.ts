@@ -312,7 +312,7 @@ export function platonicDual($step: Step) {
       scene.draw();
     }
 
-    (scene.camera as THREE.PerspectiveCamera).fov = 45;
+    scene.camera.fov = 45;
     $solids[0].object.rotateX(0.2).rotateY(-0.6);
     $sliders[0].on('move', update);
     update(0);
