@@ -21,16 +21,18 @@ interface GraphOptions {
   edge?: string|((i: number, j: number) => string);  // vertex colouring
 }
 
-interface Vertex {
+export interface Vertex {
   $el: SVGView;
   posn: SimplePoint;
   neighbours: Vertex[];
   v: SimplePoint;  // velocity
+  intersect?: boolean;  // required for Planarity game
 }
 
-interface Edge {
+export interface Edge {
   $el: SVGView;
   vertices: [Vertex, Vertex];
+  intersect?: boolean;  // required for Planarity game
 }
 
 
@@ -38,22 +40,22 @@ export class Graph extends EventTarget {
   private $edges: ElementView;
   private $vertices: ElementView;
 
-  private vertices: Vertex[] = [];
-  private edges: Edge[] = [];
-
   private stable = false;
   private dragging?: Vertex;
   private animating = false;
 
-  private repulsion!: number;
-  private attraction!: number;
-  private gravity!: number;
-  private damping = 0.9;
+  vertices: Vertex[] = [];
+  edges: Edge[] = [];
 
-  private width: number;
-  private height: number;
+  repulsion!: number;
+  attraction!: number;
+  gravity!: number;
+  damping = 0.9;
 
-  constructor($svg: SVGParentView, vertices: number, edges: [number, number][],
+  width: number;
+  height: number;
+
+  constructor($svg: SVGParentView, vertices: number, edges: number[][],
               private readonly options: GraphOptions = {}) {
     super();
 
@@ -103,7 +105,7 @@ export class Graph extends EventTarget {
     this.load(vertices, edges, options.posn);
   }
 
-  load(vertices: number, edges: [number, number][], posn?: SimplePoint[]) {
+  load(vertices: number, edges: number[][], posn?: SimplePoint[]) {
     this.repulsion = 50 / Math.sqrt(vertices);
     this.attraction = 0.1 * Math.sqrt(vertices) / edges.length * 200 /
                       (this.width + this.height);

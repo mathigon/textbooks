@@ -1,5 +1,5 @@
 import {Obj, EventTarget} from '@mathigon/core';
-import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle} from '@mathigon/fermat';
+import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds} from '@mathigon/fermat';
 import {CustomElementView, ElementView, SVGView, Observable, AnimationResponse, SVGParentView} from '@mathigon/boost';
 import {ExprElement} from '@mathigon/hilbert';
 
@@ -13,6 +13,7 @@ export class Gesture extends CustomElementView {
   from?: Point;
   created(): void;
   ready(): void;
+  setTarget($target: string|ElementView): void;
   start(slide?: Point): void;
   startSlide($from: ElementView, $to: ElementView): void;
   stop(): void;
@@ -45,7 +46,7 @@ export class BlankInput extends CustomElementView {
   blur(): void;
 }
 
-export type EquationValidationResponse = {isCorrect?: boolean, error?: string}|null;
+export type EquationValidationResponse = {isCorrect?: boolean, error?: string}|undefined;
 
 export class Equation extends CustomElementView {
   $math: ElementView;
@@ -151,6 +152,7 @@ export class Step extends CustomElementView {
   tools: {confetti: (duration?: number, maxParticles?: number) => void};
   initialData?: any;
   isShown: boolean;
+  isPageLoaded: boolean;
   isCompleted: boolean;
   goals: string[];
   scores: Set<string>;
@@ -176,13 +178,8 @@ export class Step extends CustomElementView {
 
 export class CoordinateSystem extends CustomElementView {
   private $grid;
-  private $xAxis;
-  private $yAxis;
-  private $plot;
   private $labels;
   private mathBounds;
-  private plotBounds;
-  private plotOrigin;
   private xAxisOptions;
   private yAxisOptions;
   private xSuffix;
@@ -193,7 +190,12 @@ export class CoordinateSystem extends CustomElementView {
   private yLabel;
   private crosshairGrid;
   private getCrosshairPosn;
+  $xAxis: SVGView;
+  $yAxis: SVGView;
+  $plot: ElementView;
   $overlay: SVGView;
+  plotBounds: Bounds;
+  plotOrigin: Point;
   ready(): void;
   setupCrosshairs($svg: SVGParentView, width: number): void;
   mathToPlotCoords(p: Point): Point;

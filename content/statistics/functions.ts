@@ -96,6 +96,6 @@ export function randomSequence($step: Step) {
 
   $input.change(str => {
     if (str.length > 7) $step.score('random');
-    $score.text = '' + Math.round(compute(str.toUpperCase()) * 100);
+    $score.textStr = Math.round(compute(str.toUpperCase()) * 100);
   });
 }

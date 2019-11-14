@@ -5,7 +5,7 @@
 
 
 import {EventTarget, last} from '@mathigon/core';
-import {Point, Segment, isBetween} from '@mathigon/fermat';
+import {Point, Segment, isBetween, SimplePoint} from '@mathigon/fermat';
 import {$N, slide, SVGParentView, SVGView} from '@mathigon/boost';
 
 
@@ -17,10 +17,10 @@ interface SketchOptions {
 
 
 export class Sketch extends EventTarget {
-  private drawing = false;
-  private paths: SVGView[] = [];
-  private p?: Point;
+  paths: SVGView[] = [];
+  p?: SimplePoint;
   private activePath?: SVGView;
+  drawing = false;
 
   constructor(private $svg: SVGParentView,
               private readonly options: SketchOptions = {}) {
@@ -46,7 +46,7 @@ export class Sketch extends EventTarget {
     });
   }
 
-  start(p: Point) {
+  start(p: SimplePoint) {
     if (this.p && Point.distance(this.p, p) < 20) {
       this.activePath!.addPoint(p);
 
@@ -62,7 +62,7 @@ export class Sketch extends EventTarget {
     this.p = p;
   }
 
-  addPoint(p: Point) {
+  addPoint(p: SimplePoint) {
     if (Point.distance(this.p!, p) > 3) {
       this.activePath!.addPoint(p);
       this.p = p;

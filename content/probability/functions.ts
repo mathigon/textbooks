@@ -68,7 +68,7 @@ export function diceSimulation($step: Step) {
     let maxScore = Math.max(...scores);
 
     for (let i = d; i <= 6 * d; ++i) {
-      $('#dc1' + i)!.text = '' + scores[i];
+      $('#dc1' + i)!.textStr = scores[i];
       $('#dc2' + i)!.css('height', (scores[i] / maxScore * 95) + '%');
     }
   }

@@ -84,7 +84,7 @@ class Cell extends EventTarget {
 
     if (count) {
       this.value += 1;
-      this.$value.text = '' + this.value;
+      this.$value.textStr = this.value;
     }
 
     setTimeout(() => this.rearrange(), 400);
@@ -125,7 +125,7 @@ class Cell extends EventTarget {
     setTimeout(() => {
       if (next) next.addDot(target);
       this.value -= n;
-      this.$value.text = '' + this.value;
+      this.$value.textStr = this.value;
     }, 800);
 
     const deferred = defer();
