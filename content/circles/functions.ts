@@ -83,9 +83,9 @@ export function similar($step: Step) {
     drag.on('end', () => {
       if (!cReady || rReady || hasShownResizeGesture) return;
       hasShownResizeGesture = true;
-      $gesture.offset = new Point(-$outline.attr('r'), 0);
-      $gesture.slide = new Point(+$outline.attr('r') - 60, 0);
-      $gesture.setTarget($handle);
+      const shift = new Point(-$outline.attr('r'), 0);
+      const slide = new Point(+$outline.attr('r') - 60, 0);
+      $gesture.setTarget($handle, slide, shift);
       setTimeout(() => $gesture.start(), 1000);
     });
 
@@ -250,7 +250,7 @@ export function maxArea($step: Step) {
 
   const $path = $N('path', {}, $step.$('svg')) as SVGView;
   const $select = $step.$('x-select') as Select;
-  $path.closed = true;
+  // $path.closed = true;
 
   let i = 0;
   $path.draw(polygons[0]);
@@ -489,7 +489,7 @@ export function radiansTrig($step: Step) {
         $value.text = '';
       } else if (isOneOf(t, 'sin', 'cos', 'tan')) {
         const n = +value || 0;
-        const r = Math[t](n * (isDegree ? Math.PI / 180 : 1));
+        const r = (Math as any)[t](n * (isDegree ? Math.PI / 180 : 1));
         $value.text = ('' + round(r, 6));
         reset = true;
       } else if (t === 'mode') {
@@ -534,7 +534,7 @@ function makeEarth($solid: Solid) {
 
     function loadTexture(property: string, url: string) {
       textureLoader.load(url, (texture) => {
-        material[property] = texture;
+        (material as any)[property] = texture;
         material.needsUpdate = true;
       });
     }

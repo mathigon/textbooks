@@ -13,7 +13,7 @@ export class Gesture extends CustomElementView {
   from?: Point;
   created(): void;
   ready(): void;
-  setTarget($target: string|ElementView): void;
+  setTarget($target: string|ElementView, slide?: Point, shift?: Point): void;
   start(slide?: Point): void;
   startSlide($from: ElementView, $to: ElementView): void;
   stop(): void;

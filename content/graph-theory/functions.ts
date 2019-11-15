@@ -5,11 +5,11 @@
 
 
 import {last, tabulate, list, isOneOf, Color, Obj, repeat2D, tabulate2D} from '@mathigon/core';
-import {factorial, Random, numberFormat, toOrdinal, Point, Segment, subsets, SimplePoint} from '@mathigon/fermat';
+import {factorial, Random, numberFormat, toOrdinal, Point, Segment, subsets, SimplePoint, lerp} from '@mathigon/fermat';
 import {$, $$, $N, svgPointerPosn, animate, Draggable, SVGParentView, SVGView, InputView} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
 
-import {Edge, Graph} from './components/graph';
+import {Edge, edgeToSegment, Graph} from './components/graph';
 import {Sketch} from './components/sketch';
 import {borders} from './components/four-colour-maps';
 import {travellingSalesman} from './components/geometry';
@@ -143,7 +143,9 @@ export function handshakes2($step: Step) {
 }
 
 export function handshakes2a($step: Step) {
-  $step.onScore('blank-0', () => $step.prev.addClass('complete'));
+  $step.onScore('blank-0', () => {
+    if ($step.prev) $step.prev.addClass('complete')
+  });
 }
 
 export function handshakes3($section: Step) {
@@ -470,26 +472,25 @@ export function utilities($section: Step) {
 export function utilities1($section: Step) {
   let graphs = $section.$$('.graph') as SVGParentView[];
 
-  let p3 = [[100, 35], [170, 155], [30, 155]];
+  let p3 = [{x: 100, y: 35}, {x: 170, y: 155}, {x: 30, y: 155}];
   new Graph(graphs[0], 3, subsets(list(3), 2), {r: 8, static: true, posn: p3});
 
-  let p4 = [[40, 40], [160, 40], [160, 160], [40, 160]];
-  let p4x = [[100, 110], [100, 25], [175, 160], [25, 160]];
+  let p4 = [{x: 40, y: 40}, {x: 160, y: 40}, {x: 160, y: 160}, {x: 40, y: 160}];
+  let p4x = [{x: 100, y: 110}, {x: 100, y: 25}, {x: 175, y: 160}, {x: 25, y: 160}];
   let k4 = new Graph(graphs[1], 4, subsets(list(4), 2),
       {r: 8, static: true, posn: p4});
 
-  let p5 = [[100, 30], [175, 85], [145, 170], [55, 170], [25, 85]];
-  let p5x = [[100, 30], [120, 110], [185, 170], [15, 170], [80, 110]];
+  let p5 = [{x: 100, y: 30}, {x: 175, y: 85}, {x: 145, y: 170}, {x: 55, y: 170}, {x: 25, y: 85}];
+  let p5x = [{x: 100, y: 30}, {x: 120, y: 110}, {x: 185, y: 170}, {x: 15, y: 170}, {x: 80, y: 110}];
   let k5 = new Graph(graphs[2], 5, subsets(list(5), 2),
       {r: 8, static: true, posn: p5});
 
-  function transition(graph: Graph, to: number[][]) {
-    let from = graph.vertices.map(v => [v.posn.x, v.posn.y]);
+  function transition(graph: Graph, to: SimplePoint[]) {
     animate((q) => {
-      graph.arrange(from.map((x, i) => {
+      graph.arrange(graph.vertices.map((v, i) => {
         return {
-          x: to[i][0] * q + from[i][0] * (1 - q),
-          y: to[i][1] * q + from[i][1] * (1 - q)
+          x: lerp(to[i].x, v.posn.x, q),
+          y: lerp(to[i].y, v.posn.y, q)
         };
       }));
     }, 800);
@@ -516,9 +517,8 @@ export function planarity($section: Step) {
   let creating = false;
 
   function shuffle(n: number) {
-    return tabulate(() => {
-      return {x: Math.random() * graph.width, y: Math.random() * graph.height};
-    }, n);
+    return tabulate(() =>
+        new Point(Math.random() * graph.width, Math.random() * graph.height), n);
   }
 
   function generateGraph(n: number) {
@@ -531,9 +531,9 @@ export function planarity($section: Step) {
 
     function addEdge(u: number, v: number) {
       if (u === v) return;
-      let edge = {p1: points[u], p2: points[v]};
+      let edge = new Segment(points[u], points[v]);
       for (let i = 0; i < edges.length; ++i) {
-        const e2 = {p1: points[edges[i][0]], p2: points[edges[i][1]]};
+        const e2 = new Segment(points[edges[i][0]], points[edges[i][1]]);
         if (Segment.equals(edge, e2) || Segment.intersect(edge, e2)) return;
       }
 
@@ -571,9 +571,9 @@ export function planarity($section: Step) {
     });
 
     for (let i = 0; i < edges.length; ++i) {
-      let e1 = {p1: edges[i].vertices[0].posn, p2: edges[i].vertices[1].posn};
+      let e1 = edgeToSegment(edges[i]);
       for (let j = i + 1; j < edges.length; ++j) {
-        let e2 = {p1: edges[j].vertices[0].posn, p2: edges[j].vertices[1].posn};
+        let e2 = edgeToSegment(edges[j]);
         if (Segment.intersect(e1, e2)) {
           edges[i].intersect =
               edges[j].intersect = edges[i].vertices[0].intersect =
@@ -805,7 +805,7 @@ export function maps1($section: Step) {
 
     $solve.on('click', function () {
       $count.textStr = used = 4;
-      completed = true;
+      completed = 1;  // TODO how is this used?
       colourUses = [0, 0, 0, 0, 0, 0, 0];
       countryIds.forEach(c => { colourUses[countryColours[c]] += 1; });
     });

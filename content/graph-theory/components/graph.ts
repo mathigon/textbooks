@@ -5,7 +5,7 @@
 
 
 import {list, EventTarget, run} from '@mathigon/core';
-import {nearlyEquals, Point, clamp, Vector, SimplePoint} from '@mathigon/fermat';
+import {nearlyEquals, Point, clamp, Vector, SimplePoint, Segment} from '@mathigon/fermat';
 import {$N, animate, ElementView, slide, SVGParentView, SVGView} from '@mathigon/boost';
 
 
@@ -36,6 +36,13 @@ export interface Edge {
 }
 
 
+export function edgeToSegment(e: Edge) {
+  const p1 = new Point(e.vertices[0].posn.x, e.vertices[0].posn.y);
+  const p2 = new Point(e.vertices[0].posn.x, e.vertices[0].posn.y);
+  return new Segment(p1, p2);
+}
+
+
 export class Graph extends EventTarget {
   private $edges: ElementView;
   private $vertices: ElementView;
@@ -56,7 +63,7 @@ export class Graph extends EventTarget {
   height: number;
 
   constructor($svg: SVGParentView, vertices: number, edges: number[][],
-              private readonly options: GraphOptions = {}) {
+              readonly options: GraphOptions = {}) {
     super();
 
     this.$edges = $N('g', {}, $svg);
