@@ -382,7 +382,7 @@ eratosthenes:
     - title: Dünya’nın yarıçapı
       url: /course/circles/tangets-chords-arcs#eratosthenes
     - title: Eratosthenes Kalburu
-      url: /course/divisibility/prime-numbers#eratosthenes
+      url: /course/divisibility/primes#eratosthenes
 
 erdos:
   born: 1913
@@ -424,7 +424,7 @@ euclid:
     - title: Öklid Geometrisinin Temel Aksiyomları
       url: /course/euclidean-geometry/euclids-axioms
     - title: Asal Sayıların Sonsuzluğu
-      url: /course/divisibility/prime-numbers#primes3
+      url: /course/divisibility/primes#primes3
 
 euler:
   name: Euler
@@ -438,7 +438,7 @@ euler:
     Euler modern matematikte kullandığımız terminoloji ve gösterimleri bize kazandıran kişidir. Ayrıca kalkülüs, analiz, çizgeler kuramı, fizik, astronomi ve daha birçok alanda önemli keşifler yapmıştır.
   links:
     - title: Königsberg Köprüsü Problemi
-      url: /course/graph-theory/bridges-of-koenigsberg
+      url: /course/graph-theory/bridges
     - title: Euler Formülü
       url: /course/graph-theory/planar-graphs
     - title: Çokyüzlüler

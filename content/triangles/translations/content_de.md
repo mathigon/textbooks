@@ -43,7 +43,7 @@ ein Jahrhundert später umgesetzt wurde.
 _{button.next-step} Weiter_
 
 {.r.reveal(when="next-1")} Du könntest auch versuchen, ähnliche Dreiecke zu verwenden, wie wir
-es im [vorherigen Kurs](/course/transformations-and-symmetry/similarity) gemacht haben,
+es im [vorherigen Kurs](/course/transformations/similarity) gemacht haben,
 diese Methode erfordert die Kenntnis des [Abstands](->.mountain-distance) zur [Basis
 des Bergers](->.mountain-base): der Punkt auf Meereshöhe, der direkt unter
 seinem Gipfel liegt. Wir können das bei Bäumen oder hohen Gebäuden so machen, aber für Berge ist dieser
@@ -1505,7 +1505,7 @@ In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _
 ### Die Große Trigonometrische Vermessung
 
 Erinnerst du dich noch an die Suche nach dem höchsten Berg der Erde in der
-[Einleitung](/course/triangles-and-trigonometry/introduction)? Mit der
+[Einleitung](/course/triangles/introduction)? Mit der
 Trigonometrie haben wir endlich die Werkzeuge das zu bewerkstelligen!
 
 ::: .sticky-wrap

@@ -1979,7 +1979,7 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 > id: pascal-intro
 
 Below you can see a number pyramid that is created using a simple pattern: it
-starts with a single “1” at the top, and every following cells is the sum of
+starts with a single “1” at the top, and every following cell is the sum of
 the two cells directly above. Hover over some of the cells to see how they are
 calculated, and then fill in the missing ones:
 

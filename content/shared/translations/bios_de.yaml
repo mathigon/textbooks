@@ -555,7 +555,7 @@ eratosthenes:
     - title: Radius der Erde
       url: /course/circles/tangets-chords-arcs#eratosthenes
     - title: Sieb des Eratosthenes
-      url: /course/divisibility/prime-numbers#eratosthenes
+      url: /course/divisibility/primes#eratosthenes
 
 erdos:
   born: 1913
@@ -600,7 +600,7 @@ euclid:
     - title: Satz des Euklid
       url: /course/euclidean-geometry/euclids-axioms
     - title: Unendlich viele Primzahlen
-      url: /course/divisibility/prime-numbers#primes3
+      url: /course/divisibility/primes#primes3
 
 euler:
   name: Euler
@@ -619,7 +619,7 @@ euler:
     Astronomie und vielen anderen Themen.
   links:
     - title: Königsberger Brückenproblem
-      url: /course/graph-theory/bridges-of-koenigsberg
+      url: /course/graph-theory/bridges
     - title: Eulersche Formel
       url: /course/graph-theory/planar-graphs
     - title: Polyeder

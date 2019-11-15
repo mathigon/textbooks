@@ -29,7 +29,7 @@ _{button.next-step} Devam_
 {.r.reveal(when="next-0")} Dağcılar yükseklikleri belirlemek için _yükseklikölçer_ kullanırlar. Bu araçlar farklı yüksekliklerdeki hava basıncı farkını kullanırlar. Ancak bu da birinin  [her dağın zirvesine](->.mountain-top) çıkmasını gerektirirdi–bir yüzyıl sonrasına kadar başarılamayan oldukça zor bir beceri.
 _{button.next-step} Devam_
 
-{.r.reveal(when="next-1")} Aslında önceki derste  [önceki ders](/course/transformations-and-symmetry/similarity) yaptığımız gibi, benzer üçgenleri kullanabilirdiniz. Bu metod  [dağın tabanına](->.mountain-base) olan  [mesafeyi](->.mountain-distance) bilmeyi gerektirir : zirvenin direkt aşağısındaki deniz seviyesi noktası. Bunu ağaçlar veya uzun binalar için yapabiliriz, ama dağlar için bu nokta kayanın yüzlerce metre altında saklıdır.
+{.r.reveal(when="next-1")} Aslında önceki derste  [önceki ders](/course/transformations/similarity) yaptığımız gibi, benzer üçgenleri kullanabilirdiniz. Bu metod  [dağın tabanına](->.mountain-base) olan  [mesafeyi](->.mountain-distance) bilmeyi gerektirir : zirvenin direkt aşağısındaki deniz seviyesi noktası. Bunu ağaçlar veya uzun binalar için yapabiliriz, ama dağlar için bu nokta kayanın yüzlerce metre altında saklıdır.
 _{button.next-step} Devam_
 
 ---
@@ -1276,7 +1276,7 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 
 ### Büyük Trigonometrik Araştırma
 
- [Giriş](/course/triangles-and-trigonometry/introduction) bölümünde dünya üzerindeki en yüksek dağı bulma çalışmasını hala hatırlıyor musunuz? Trigonometri sayesinde, sonunda bunu yapmak için yeterli aracımız var!
+[Giriş](/course/triangles/introduction) bölümünde dünya üzerindeki en yüksek dağı bulma çalışmasını hala hatırlıyor musunuz? Trigonometri sayesinde, sonunda bunu yapmak için yeterli aracımız var!
 
 ::: .sticky-wrap
 

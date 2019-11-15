@@ -43,7 +43,7 @@ until a century later.
 _{button.next-step} Continue_
 
 {.r.reveal(when="next-1")} You could also try using similar triangles, like we
-did in the [previous course](/course/transformations-and-symmetry/similarity).
+did in the [previous course](/course/transformations/similarity).
 This method requires knowing the [distance](->.mountain-distance) to the [base
 of the mountain](->.mountain-base): the point at sea level that directly below
 its summit. We can do this for trees or tall buildings, but for mountains this
@@ -1507,8 +1507,8 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 ### The Great Trigonometric Survey
 
 Do you still remember the quest to find the highest mountain on Earth from the
-[introduction](/course/triangles-and-trigonometry/introduction)? With
-Trigonometry, we finally have the tools to do it!
+[introduction](/course/triangles/introduction)? With Trigonometry, we finally
+have the tools to do it!
 
 ::: .sticky-wrap
 

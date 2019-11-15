@@ -394,7 +394,7 @@ numbers getting closer and closer to [[zero|1|–1|infinity]]. Similarly, 9, 99,
 999, 9999, … is getting closer and closer to [[-1]], just like we saw above.
 
 ---
-> id: p-adic
+> id: p-adic-numbers
 
 Mathematicians call this way of viewing distances between the non-negative
 integers [__ten-adic arithmetic__](gloss:adic). The suffix “adic” means “a
