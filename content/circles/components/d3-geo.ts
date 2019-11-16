@@ -4,9 +4,9 @@
 // =============================================================================
 
 
+/// <reference types="d3"/>
+/// <reference types="topojson"/>
 import {loadScript} from '@mathigon/boost';
-import * as d3 from 'd3';
-import * as topojson from 'topojson';
 
 
 export async function loadD3() {
@@ -17,5 +17,5 @@ export async function loadD3() {
   await Promise.all([load1, load2, load3]);
   const text = await fetch('/resources/circles/images/world-110m.json');
   const world = await text.json() as any;
-  return {d3: d3 as any, topojson: d3 as any, world};
+  return {d3: d3, topojson: topojson, world};
 }

@@ -7,7 +7,6 @@
 import {chunk} from '@mathigon/core';
 import {$N, Browser, CustomElementView, register, slide} from '@mathigon/boost';
 import {create3D, Graphics3D} from './webgl';
-import * as THREE from 'three';
 
 const STROKE_COLOR = 0x666666;
 const LINE_RADIUS = 0.012;
@@ -116,7 +115,7 @@ export class Solid extends CustomElementView {
     this.object = new THREE.Object3D();
     this.scene.add(this.object);
 
-    this.trigger('ready');
+    this.trigger('loaded');
     this.isReady = true;
   }
 
@@ -124,7 +123,7 @@ export class Solid extends CustomElementView {
     if (this.isReady) {
       this.addMeshCallback(fn);
     } else {
-      this.one('ready', () => this.addMeshCallback(fn));
+      this.one('loaded', () => this.addMeshCallback(fn));
     }
   }
 

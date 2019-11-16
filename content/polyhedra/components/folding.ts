@@ -9,7 +9,6 @@ import {$N, CustomElementView, register} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
 import {create3D} from '../../shared/components/webgl';
 import {FoldingData, FoldingDataItem} from './folding-data';
-import * as THREE from 'three';
 
 
 const colours: Obj<number> = {

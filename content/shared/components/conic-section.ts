@@ -8,7 +8,6 @@ import {tabulate} from '@mathigon/core';
 import {clamp} from '@mathigon/fermat';
 import {CustomElementView, register, slide} from '@mathigon/boost';
 import {create3D} from './webgl';
-import * as THREE from 'three';
 
 
 // -----------------------------------------------------------------------------

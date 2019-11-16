@@ -4,14 +4,14 @@
 // =============================================================================
 
 
+/// <reference types="three"/>
 import {Obj} from '@mathigon/core';
 import {loadScript, $N, CanvasView, ElementView} from '@mathigon/boost';
-import * as THREE from 'three';
 
 
 const url = '/resources/shared/vendor/three-91.min.js';
 const renderers: Obj<THREE.WebGLRenderer> = {};
-let threePromise: Promise<{}>;
+let threePromise: Promise<any>;
 
 function loadTHREE() {
   if (!threePromise) threePromise = loadScript(url);

@@ -38,7 +38,7 @@ export interface Edge {
 
 export function edgeToSegment(e: Edge) {
   const p1 = new Point(e.vertices[0].posn.x, e.vertices[0].posn.y);
-  const p2 = new Point(e.vertices[0].posn.x, e.vertices[0].posn.y);
+  const p2 = new Point(e.vertices[1].posn.x, e.vertices[1].posn.y);
   return new Segment(p1, p2);
 }
 
@@ -172,11 +172,11 @@ export class Graph extends EventTarget {
     let totalMoved = 0;
 
     for (const [i, v] of this.vertices.entries()) {
-      if (this.options.static || v === this.dragging) return;
+      if (this.options.static || v === this.dragging) continue;
       let force = {x: 0, y: 0};
 
       for (const u of this.vertices) {
-        if (u === v) return;
+        if (u === v) continue;
 
         // Coulomb's Repulsion between Vertices
         let d = (v.posn.x - u.posn.x) ** 2 + (v.posn.y - u.posn.y) ** 2;

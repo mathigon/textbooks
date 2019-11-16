@@ -14,7 +14,6 @@ import {Solid} from '../shared/components/solid';
 import {loadD3} from './components/d3-geo';
 import {EquationSystem, Geopad, Gesture, PlayBtn, Select, Slider, Step} from '../shared/types';
 import {PiScroll} from './components/pi-scroll';
-import * as THREE from 'three';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
@@ -1086,10 +1085,10 @@ export async function sphereMaps($step: Step) {
   const grid = d3.geoGraticule()();
   const land = topojson.feature(world, world.objects.land);
   const projections: Obj<any> = {
-    Cylindrical: d3.geoCylindricalEqualArea().scale(90),
+    Cylindrical: (d3 as any).geoCylindricalEqualArea().scale(90),
     Mercator: d3.geoMercator().scale(70),
-    Mollweide: d3.geoMollweide().scale(78),
-    Robinson: d3.geoRobinson().scale(70)
+    Mollweide: (d3 as any).geoMollweide().scale(78),
+    Robinson: (d3 as any).geoRobinson().scale(70)
   };
 
   const globeProjection = d3.geoOrthographic().clipAngle(90)
