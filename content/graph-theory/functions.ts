@@ -775,7 +775,7 @@ export function maps1($section: Step) {
           return;
         }
 
-        if (countryColours[id] != null) --colourUses[countryColours[id]];
+        if (countryColours[id] != undefined) --colourUses[countryColours[id]];
         ++colourUses[activeColour];
         $count.textStr = used = colourUses.filter(x => x > 0).length;
 
@@ -783,7 +783,7 @@ export function maps1($section: Step) {
         $c.css('fill', colours[activeColour]);
 
         if (used < completed &&
-            countryIds.every(id => countryColours[id] != null)) {
+            countryIds.every(id => countryColours[id] != undefined)) {
           completed = used;
           if (used <= 4) {
             $solveds[i].enter();

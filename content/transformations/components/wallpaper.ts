@@ -57,8 +57,8 @@ function line(a1: number, a2: number, b1: number, b2: number) {
   return new Line(new Point(a1, a2), new Point(b1, b2));
 }
 
-export const TRANSFORMATIONS: (null|((p: Point) => Point[]))[] = [
-  null,
+export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
+  undefined,
 
   p => {  // p1
     const p1 = p.mod(480, 320);

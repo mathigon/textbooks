@@ -16,7 +16,7 @@ import {Gameplay, Slideshow, Step} from '../shared/types';
 function numberGrid($grid: ElementView, time: number, className: string,
                     filter: (i: number) => boolean) {
   for (const $i of $grid.children) {
-    if (!filter(+$i.text)) return;
+    if (!filter(+$i.text)) continue;
     delay(() => $i.addClass(className), time);
     time += 80;
   }

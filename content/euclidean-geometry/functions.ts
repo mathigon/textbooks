@@ -58,8 +58,8 @@ export function congruence($step: Step) {
     d: '#0f82f2', e: '#18aa93', f: '#22ab24'
   };
 
-  let from: number|null = null;
-  let $line: SVGView|null = null;
+  let from: number|undefined = undefined;
+  let $line: SVGView|undefined = undefined;
 
   slide($svg, {
     start(posn) {
@@ -79,7 +79,7 @@ export function congruence($step: Step) {
 
       if (to < 0 || from === to) {
         $line.exit('draw');
-        return from = $line = null;
+        return from = $line = undefined;
       }
 
       const ids = [$groups[from!].data.q, $groups[to].data.q].sort();
@@ -88,7 +88,7 @@ export function congruence($step: Step) {
 
       if (!isCorrect) {
         $line.exit('draw');
-        return from = $line = null;
+        return from = $line = undefined;
       }
 
       $line.addClass('correct');
@@ -100,7 +100,7 @@ export function congruence($step: Step) {
       $groups[to].css({fill: c, stroke: c});
       $step.score('pair-' + ids.join('-'));
 
-      from = $line = null;
+      from = $line = undefined;
     }
   });
 
@@ -133,7 +133,7 @@ export function equilateral($step: Step) {
 
   $geopad.setActiveTool('line');
   $geopad.showGesture('point(60,200)', 'point(260,200)');
-  let segment0: Segment|null = null;
+  let segment0: Segment|undefined = undefined;
 
   $geopad.on('add:path', (path: GeoPath) => {
     if (!path.val) return;
