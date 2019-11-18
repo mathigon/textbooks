@@ -26,8 +26,6 @@ Every course is a subfolder in the [content](content) directory. The URL of the
 [Sequences course](content/sequences), for example, will be
 [localhost:5000/course/probability](http://localhost:5000/course/sequences).
 
-![](https://mathigon.org/images/unused/divider-2.png)
-
 
 ## Course Structure
 
@@ -36,7 +34,7 @@ Every course consists of a few different components:
 * `content.md` contains the source code and metadata for a course. It is
   written in a [custom extension](https://mathigon.io/markdown) of
   [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-* `functions.js` contains all course-specific JavaScript code.
+* `functions.ts` contains all course-specific TypeScript code.
 * `styles.less` contains all course-specific styles, in
   [LESS](http://lesscss.org/) format.
 * `hints.yaml` (optional) contains any messages that can be sent by Mathigon's
@@ -48,13 +46,14 @@ The [shared directory](content/shared) contains biographies, glossary and assets
 used by multiple courses.
 
 Every course is divided into multiple steps, each with a unique ID. These IDs
-are used as function names in `functions.js` when exporting the setup code
-for every section.
+are used as function names in `functions.ts` when exporting the setup code
+for every section. Every function gets called with a `$step` argument, when
+the corresponding step is revealed for the first time. Check
+[types.d.ts](content/shared/types.d.ts`) for the available properties and
+methods.
 
 The [server directory](server) contains a simplified version of Mathigon's web
 server. It is used for local testing, but should not usually be modified.
-
-![](https://mathigon.org/images/unused/divider-3.png)
 
 
 ## Contributing
@@ -68,8 +67,6 @@ Before submitting a pull request, you will need to sign the [Mathigon Individual
 Contributor License Agreement](https://gist.github.com/plegner/5ad5b7be2948a4ad073c50b15ac01d39).
 
 You can find out more on [Mathigon.io](https://mathigon.io).
-
-![](https://mathigon.org/images/unused/divider-4.png)
 
 ---
 
