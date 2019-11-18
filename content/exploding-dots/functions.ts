@@ -52,7 +52,7 @@ export function choice($step: Step) {
 export function numberline($step: Step) {
   const $limit = $step.$('span.hidden')!;
 
-  $step.model.set('nines', (n: number) => '0.' + repeat('9', n));
+  $step.model.set('nines', (n: number) => '0.' + '9'.repeat(n));
   $step.model.watch(state => {
     if (state.n === 2) $step.score('n2');
     if (state.n === 3) $step.score('n3');
@@ -65,7 +65,7 @@ export function convergence($step: Step) {
   const log2 = Math.log10(2);
   $step.model.assign({
     pow: (n: number) => numberFormat(Math.pow(2, n)),
-    nines: (n: number) => '0.' + repeat('9', Math.ceil(n * log2))
+    nines: (n: number) => '0.' + '9'.repeat(Math.ceil(n * log2))
   });
 }
 

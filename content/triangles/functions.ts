@@ -50,11 +50,6 @@ export function medians($step: Step) {
   });
 }
 
-export function centerOfMass($step: Step) {
-  const $geopad = $step.$('x-geopad') as Geopad;
-  $geopad.on('moveEnd', () => $step.score('move'));
-}
-
 export function circumcircle($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
 

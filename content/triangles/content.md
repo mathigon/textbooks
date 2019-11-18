@@ -264,7 +264,6 @@ distance from the centroid to the midpoint.
 
 ---
 > id: center-of-mass
-> goals: move
 
 The centroid is also the “balancing point” of a triangle. Draw a triangle on
 some cardboard, cut it out, and find the three medians. If you were accurate,
@@ -273,16 +272,14 @@ level from a piece of string that’s attached to its centroid:
 
     figure: img(src="images/center-of-mass.jpg" width=600 height=190)
 
-::: column.grow
 This works because the weight of the triangle is evenly distributed around the
 centroid. In physics, this point is often called the __center of mass__.
 
-Any straight line that goes through the centroid divides the triangle into two
-parts that have exactly the same area. Move the [blue point](target:move) in the
-figure on the right. The red and green areas will always have the same area.
-::: column(width=220)
+    // Any straight line that goes through the centroid divides the triangle into two
+    // parts that have exactly the same area. Move the [blue point](target:move) in the
+    // figure on the right. The red and green areas will always have the same area.
 
-    x-geopad(width=220): svg
+    // x-geopad(width=220): svg
       circle.move(name="a" cx=70 cy=50)
       circle.move(name="b" cx=60 cy=160)
       circle.move(name="c" cx=180 cy=130)
@@ -294,8 +291,6 @@ figure on the right. The red and green areas will always have the same area.
       path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
       path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
       path.blue(x="line(p,d)")
-
-:::
 
 ---
 > id: circumcircle

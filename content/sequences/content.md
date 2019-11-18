@@ -2017,7 +2017,7 @@ was known to other civilisations many centuries earlier:
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-1.jpg" width=130 height=280)
+    x-media(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
 
 {.caption} In 450BC, the Indian mathematician [Pingala](bio:pingala) called the
 triangle the __“Staircase of Mount Meru”__, named after a sacred Hindu mountain.

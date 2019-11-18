@@ -5,17 +5,27 @@
 
 
 import {Angle, clamp, Point} from '@mathigon/fermat';
-import {slide, animate, ElementView, AnimationResponse} from '@mathigon/boost';
+import {slide, animate, ElementView, AnimationResponse, SVGView} from '@mathigon/boost';
 
 
 interface Options {
   draw: (angle: number, isMomentum: boolean, dt: number) => void;
   resistance?: number;
   maxSpeed?: number;
-  $disk?: ElementView;  // If different from $el
   start?: () => void;
   momentumStart?: (speed: number) => void;
   end?: () => void;
+}
+
+function findCenter($el: ElementView) {
+  // The slide() events measures positions w.r.t. the viewport for HTML
+  // elements, but w.r.t. the SVG canvas for SVG element.
+  if ($el.type === 'svg') {
+    const parent = ($el as SVGView).$ownerSVG;
+    return new Point(parent.svgWidth / 2, parent.svgHeight / 2);
+  } else {
+    return $el.boxCenter;
+  }
 }
 
 export function rotateDisk($el: ElementView, options: Options) {
@@ -24,7 +34,7 @@ export function rotateDisk($el: ElementView, options: Options) {
   let animation: AnimationResponse;
   let startAngle: number;
   let angle = 0;
-  const maxSpeed = options.maxSpeed || 0.01;
+  const maxSpeed = options.maxSpeed || 0.005;
 
   function spin(speed: number) {
     if (options.momentumStart) options.momentumStart(speed);
@@ -39,7 +49,7 @@ export function rotateDisk($el: ElementView, options: Options) {
   slide($el, {
     start() {
       if (animation) animation.cancel();
-      center = (options.$disk || $el).boxCenter;
+      center = findCenter($el);
       startAngle = angle;
       history = [[angle, Date.now()]];
       if (options.start) options.start();

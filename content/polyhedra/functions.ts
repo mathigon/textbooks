@@ -128,8 +128,7 @@ export function midsegments($step: Step) {
     $geopad.drawPath(`polygon(${pointStr})`, {name: 'quad', animated: 1000});
   });
 
-
-  $step.onScore('blank-0', () => {
+  $step.onScore('blank-0 points', () => {
     for (let i = 0; i < 4; ++i) {
       $geopad.drawPoint(`quad.edges[${i}].midpoint`, {name: `m${i}`, classes: 'red'});
     }
@@ -137,7 +136,7 @@ export function midsegments($step: Step) {
     $geopad.drawPath(`polygon(m0,m1,m2,m3)`, {classes: 'red', name: 'p0', animated: 1000});
   });
 
-  $step.onScore('blank-1', () => {
+  $step.onScore('blank-1 points', () => {
     $geopad.setActiveTool('line');
     $geopad.showGesture(points[0].name, points[2].name);
   });

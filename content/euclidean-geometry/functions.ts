@@ -7,7 +7,7 @@
 import {Obj} from '@mathigon/core';
 import {Point, nearlyEquals, Segment, isLineLike, isCircle} from '@mathigon/fermat';
 import {$N, slide, SVGView} from '@mathigon/boost';
-import {GeoMovablePoint, Geopad, GeoPath, PlayBtn, Step, Video} from '../shared/types';
+import {GeoElement, GeoMovablePoint, Geopad, GeoPath, PlayBtn, Step, Video} from '../shared/types';
 
 
 export function thales($step: Step) {
@@ -133,37 +133,37 @@ export function equilateral($step: Step) {
 
   $geopad.setActiveTool('line');
   $geopad.showGesture('point(60,200)', 'point(260,200)');
-  let segment0: Segment|undefined = undefined;
+  let segment0: GeoElement<Segment>|undefined = undefined;
 
   $geopad.on('add:path', (path: GeoPath) => {
     if (!path.val) return;
 
     if (isLineLike(path.val)) {
       if (!segment0) {
-        segment0 = path.val as Segment;
+        segment0 = path as any as GeoElement<Segment>;
         path.$el.setAttr('target', 'a b');
         $geopad.setActiveTool('circle');
         $geopad.animatePoint(path.points[0].name, new Point(60, 260));
         $geopad.animatePoint(path.points[1].name, new Point(260, 260));
         return $step.score('segment0');
 
-      } else if (nearlyEquals(segment0.length, path.val.length)) {
-        if (path.val.p1.equals(segment0.p1) ||
-            path.val.p2.equals(segment0.p1)) {
+      } else if (nearlyEquals(segment0.val!.length, path.val.length)) {
+        if (path.val.p1.equals(segment0.val!.p1) ||
+            path.val.p2.equals(segment0.val!.p1)) {
           path.$el.setAttr('target', 'a');
           return $step.score('segment1');
-        } else if (path.val.p1.equals(segment0.p2) ||
-                   path.val.p2.equals(segment0.p2)) {
+        } else if (path.val.p1.equals(segment0.val!.p2) ||
+                   path.val.p2.equals(segment0.val!.p2)) {
           path.$el.setAttr('target', 'b');
           return $step.score('segment2');
         }
       }
 
     } else if (segment0 && isCircle(path.val)) {
-      if (nearlyEquals(segment0.length, path.val.r)) {
-        if (path.val.c.equals(segment0.p1)) {
+      if (nearlyEquals(segment0.val!.length, path.val.r)) {
+        if (path.val.c.equals(segment0.val!.p1)) {
           return $step.score('circle1');
-        } else if (path.val.c.equals(segment0.p2)) {
+        } else if (path.val.c.equals(segment0.val!.p2)) {
           return $step.score('circle2');
         }
       }

@@ -486,11 +486,12 @@ export function utilities1($section: Step) {
       {r: 8, static: true, posn: p5});
 
   function transition(graph: Graph, to: SimplePoint[]) {
+    let from = graph.vertices.map(v => ({x: v.posn.x, y: v.posn.y}));
     animate((q) => {
       graph.arrange(graph.vertices.map((v, i) => {
         return {
-          x: lerp(to[i].x, v.posn.x, q),
-          y: lerp(to[i].y, v.posn.y, q)
+          x: lerp(from[i].x, to[i].x, q),
+          y: lerp(from[i].y, to[i].y, q)
         };
       }));
     }, 800);
@@ -534,7 +535,7 @@ export function planarity($section: Step) {
       let edge = new Segment(points[u], points[v]);
       for (let i = 0; i < edges.length; ++i) {
         const e2 = new Segment(points[edges[i][0]], points[edges[i][1]]);
-        if (Segment.equals(edge, e2) || Segment.intersect(edge, e2)) return;
+        if (edge.equals(e2) || Segment.intersect(edge, e2)) return;
       }
 
       edges.push([u, v]);
