@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@mathigon/parser": "^0.4.2",
+    "autoprefixer": "^9.7.1",
     "emojione-assets": "^3.1.1",
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
@@ -32,10 +33,12 @@
     "gulp-less": "^4.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "marked": "0.6.2",
     "pug": "^2.0.3",
+    "rollup": "^1.27.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2",
     "yamljs": "^0.3.0"
   }
 }

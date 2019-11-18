@@ -28,6 +28,7 @@ nbproject
 node_modules
 server/assets/resources
 ts_build
+content/.cache.json
 
 # Development
 _*.yaml
