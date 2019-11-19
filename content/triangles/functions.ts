@@ -5,7 +5,7 @@
 
 
 import {delay, isOneOf} from '@mathigon/core';
-import {round, isInteger, Point, Circle, isLineLike} from '@mathigon/fermat';
+import {round, isInteger, Point, Circle, Line, isLineLike, intersections} from '@mathigon/fermat';
 import {hover} from '@mathigon/boost';
 import {GeoMovablePoint, Geopad, GeoPath, GeoPoint, Slider, Step} from '../shared/types';
 
@@ -109,7 +109,6 @@ export async function sssConstruction($step: Step) {
   const model = $geopad.model;
 
   const getLength = (x: number) => round(x / 36, 1);
-  const intersects = () => model.intersections(circles[0].val, circles[1].val);
   model.set('getLength', getLength);
 
   $geopad.on('add:path', () => $geopad.setActiveTool('move'));
@@ -126,7 +125,7 @@ export async function sssConstruction($step: Step) {
   });
 
   const base = await $geopad.waitForPath(
-      path => (isLineLike(path.val!) && path.val!.length === 6));
+      path => getLength((path.val as Line).length) === 6);
 
   $step.score('draw-base');
   base.$el.addClass('green');
@@ -144,7 +143,7 @@ export async function sssConstruction($step: Step) {
   $geopad.animatePoint(base.points[1].name, model.point(258, 220));
   $geopad.setActiveTool('circle');
 
-  const circle1 = await $geopad.waitForPath(
+  let circle1 = await $geopad.waitForPath(
       path => (getLength((path.val as Circle).r) === 4 &&
                isOneOf(path.points[0], ...base.points)));
 
@@ -153,8 +152,8 @@ export async function sssConstruction($step: Step) {
   circle1.points[1].remove(0);
   $geopad.setActiveTool('circle');
 
-  const circle2 = await $geopad.waitForPath(path =>
-      (round((path.val as Circle).r / 36, 1) === 5 && path.points[0] ===
+  let circle2 = await $geopad.waitForPath(path =>
+      (getLength((path.val as Circle).r) === 5 && path.points[0] ===
        base.points.filter(p => p !== circle1.points[0])[0]));
 
   $step.score('draw-c2');
@@ -163,12 +162,16 @@ export async function sssConstruction($step: Step) {
 
   await $step.onScore('blank-0');
 
-  const circles = [circle1, circle2];
-  if (circle1.points[0] === base.points[1]) circles.reverse();
+  if (circle1.points[0] === base.points[1]) {
+    [circle1, circle2] = [circle2, circle1];
+  }
 
-  $geopad.drawPoint(() => intersects()[0], {target: 'top', name: 'c'});
+  $geopad.drawPoint(() => intersections(circle1.val!, circle2.val!)[0],
+      {target: 'top', name: 'c'});
+
   $geopad.drawPath(`segment(${base.points[0].name},c)`,
       {name: 'side1', classes: 'green'});
+
   await $geopad.animateConstruction('side1', 1000);
 
   $geopad.drawPath(`segment(c,${base.points[1].name})`,
@@ -183,7 +186,8 @@ export async function sssConstruction($step: Step) {
   $geopad.animatePoint(base.points[0].name, model.point(42, 150));
   $geopad.animatePoint(base.points[1].name, model.point(258, 150));
 
-  $geopad.drawPoint(() => intersects()[1], {target: 'bottom', name: 'd'});
+  $geopad.drawPoint(() => intersections(circle1.val!, circle2.val!)[1],
+      {target: 'bottom', name: 'd'});
 
   await $step.onScore('blank-2');
 
