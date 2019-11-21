@@ -108,6 +108,7 @@ export class Tessellation extends CustomElementView {
   $svg!: SVGParentView;
 
   ready() {
+    this.$svg = this.$('svg') as SVGParentView;
     for (let c of INITIAL) new Shape(SHAPES[c.p], c, this);
 
     for (let $a of this.$$('.add')) {

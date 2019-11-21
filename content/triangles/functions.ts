@@ -67,8 +67,8 @@ export function circumcircle($step: Step) {
   $step.onScore('blank-2', () => $geopad.animateConstruction('circumcircle'));
 
   waitToDraw($step, $geopad,
-      ['line(a,b).perpBisector', 'line(a,c).perpBisector',
-        'line(b,c).perpBisector'],
+      ['line(a,b).perpendicularBisector', 'line(a,c).perpendicularBisector',
+        'line(b,c).perpendicularBisector'],
       ['red', 'blue', 'green'],
       ['b-red', 'b-blue', 'b-green']);
 }

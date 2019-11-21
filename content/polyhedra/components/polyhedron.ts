@@ -8,7 +8,6 @@ import {register} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
 import {Solid} from '../../shared/components/solid';
 import {PolyhedronData} from './polyhedron-data';
-import * as THREE from 'three';
 
 
 const colours: Obj<number> = {

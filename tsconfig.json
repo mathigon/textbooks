@@ -10,11 +10,13 @@
     "outDir": "ts_build",
     "moduleResolution": "node",
     "strict": true,
+    "types" : [],
     "noImplicitAny": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "allowUmdGlobalAccess": true
   },
   "exclude": [
     "node_modules"

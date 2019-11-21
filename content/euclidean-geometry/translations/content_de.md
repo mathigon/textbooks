@@ -223,7 +223,7 @@ _{button.next-step} Weiter_
 
     x-geopad(width=240 height=160): svg
       circle.move(name="a" cx=50 cy=60)
-      path(x="segment(a,a.add(point(1,1).normal.scale(40)))" target="radius")
+      path(x="segment(a,a.add(point(1,1).unitVector.scale(40)))" target="radius")
       path.red(x="circle(a,40)")
 
       circle.move(name="b" cx=170 cy=90)
@@ -424,15 +424,15 @@ man einen [Kreis](target:3_circle) mit dem Mittelpunkt _P_ und dem Radius _r_ ze
 
     x-geopad(width=220 height=160): svg
       circle.move(name="x" cx=50 cy=100)
-      circle(hidden name="xa" x="x.translate(point(110,80).subtract(x).rotate(pi/4).normal.scale(50))")
-      circle(hidden name="xb" x="x.translate(point(110,80).subtract(x).rotate(-pi/4).normal.scale(50))")
+      circle(hidden name="xa" x="x.translate(point(110,80).subtract(x).rotate(pi/4).unitVector.scale(50))")
+      circle(hidden name="xb" x="x.translate(point(110,80).subtract(x).rotate(-pi/4).unitVector.scale(50))")
       path.fill.red(x="angle(xb,x,xa)")
       path.dark(x="segment(x,xa)")
       path.dark(x="segment(x,xb)")
 
       circle.move(name="y" cx=190 cy=60)
-      circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).normal.scale(50))")
-      circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).normal.scale(50))")
+      circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).unitVector.scale(50))")
+      circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).unitVector.scale(50))")
       path.fill.red(x="angle(yb,y,ya)")
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")

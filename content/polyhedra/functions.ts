@@ -13,7 +13,6 @@ import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';
 import {PolyhedronData, PolyhedronDataItem} from './components/polyhedron-data';
 import {Tessellation} from './components/tessellation';
-import * as THREE from 'three';
 
 import '../shared/components/solid';
 import './components/tessellation';

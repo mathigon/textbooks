@@ -7,7 +7,6 @@
 import {Random} from '@mathigon/fermat';
 import {register} from '@mathigon/boost';
 import {Solid} from '../../shared/components/solid';
-import * as THREE from 'three';
 
 
 const RED = 0xcd0e66;

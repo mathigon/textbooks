@@ -40,7 +40,7 @@ center. This means that they can be drawn using a [compass](gloss:compass):
         path.red(x="segment(a,b).contract(0.08)" target="r" arrows="both" hidden)
         path(name="c1" x="arc(a,b,1.99*pi)" hidden)
         path.blue(x="segment(b.rotate(Math.PI/3,a),b.rotate(-2*Math.PI/3,a)).contract(0.01)" target="d" arrows="both" hidden)
-        path.green(x="arc(a,b.add(b.subtract(a).normal.scale(12)),1.99*pi).contract(0.02)" target="c" arrows="start" hidden)
+        path.green(x="arc(a,b.add(b.subtract(a).unitVector.scale(12)),1.99*pi).contract(0.02)" target="c" arrows="start" hidden)
       x-play-btn
 
 ::: column.grow
