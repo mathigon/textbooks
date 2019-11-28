@@ -1373,7 +1373,7 @@ a 3-letter abbreviation:
 ::: column.grow
 
     ul
-      li
+      li.display
         strong Sine:
         .space
         mtext sin
@@ -1382,7 +1382,7 @@ a 3-letter abbreviation:
         mfrac
           mrow: mtext.m-blue.b Opposite
           mrow: mtext.m-yellow.b Hypotenuse
-      li
+      li.display
         strong Cosine:
         .space
         mtext cos
@@ -1391,7 +1391,7 @@ a 3-letter abbreviation:
         mfrac
           mrow: mtext.m-green.b Adjacent
           mrow: mtext.m-yellow.b Hypotenuse
-      li
+      li.display
         strong Tangent:
         .space
         mtext tan
