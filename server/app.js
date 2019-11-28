@@ -29,7 +29,7 @@ class Course {
 
   readFile(name) {
     try {
-      return fs.readFileSync(path.join(COURSE_PATH, this.id, this.locale, name));
+      return fs.readFileSync(path.join(COURSE_PATH, this.id, name));
     } catch (e) {
       return null;
     }
@@ -40,7 +40,7 @@ class Course {
     return this.sections[sectionIndex + 1];
   }
 
-  getJSON(type) { return this.readFile(type + '.json'); }
+  getJSON(type) { return this.readFile(type + `_${this.locale}.json`); }
   getSection(section) { return this.sections.find(s => s.id === section); }
   getStep(step) { return this.steps.find(s => s.id === step); }
 
@@ -51,7 +51,7 @@ class Course {
 }
 
 function getCourse(courseId, locale='en') {
-  const file = path.join(COURSE_PATH, courseId, locale, 'data.json');
+  const file = path.join(COURSE_PATH, courseId, `data_${locale}.json`);
   if (!fs.existsSync(file)) return;
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
   return new Course(courseId, data, locale);

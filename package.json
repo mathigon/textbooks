@@ -33,6 +33,7 @@
     "gulp-less": "^4.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
+    "marked": "^0.7.0",
     "pug": "^2.0.3",
     "rollup": "^1.27.0",
     "rollup-plugin-node-resolve": "^5.2.0",
