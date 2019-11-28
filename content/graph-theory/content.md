@@ -523,10 +523,10 @@ see if Euler’s equation works. Instead we can try to find a simple
               td.xe 0
           p #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
 
-      .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler&rsquo;s equation works.
-      .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler&rsquo;s equation still works.
+      .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
+      .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
       .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
-      .legend(slot="legend") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler&rsquo;s equation works.
+      .legend(slot="legend") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler’s equation works.
       .legend(slot="legend") Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face. Euler’s equation still works.
 
 ---
@@ -566,7 +566,7 @@ they become flat, planar graphs:
 ---
 > id: euler-5
 
-This means that we can use Euler&rsquo;s formula not only for planar graphs but
+This means that we can use Euler’s formula not only for planar graphs but
 also for all polyhedra – with one small difference. When transforming the
 polyhedra into graphs, one of the faces disappears: the topmost face of the
 polyhedra becomes the “outside”; of the graphs.

@@ -292,7 +292,7 @@ graph-theory:
   title: Graphs and Networks
   description: "Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks."
   color: aa1690
-  locales: [en, vn]
+  locales: [en, vn, fr]
   next: probability
 
 codes:
