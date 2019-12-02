@@ -7,7 +7,7 @@
 
 ::: column.grow
 
-Chaque jour, nous sommes entourés d'innombrables connexions et réseaux: routes et voies ferrées, lignes téléphoniques, Internet, circuits électroniques et même liaisons moléculaires. Il existe également des _réseaux sociaux_ entre amis et familles. Tous ces systèmes consistent en certains _points_ dénommés [[sommets|circles|crossings]], dont certains sont reliés par [[arêtes|boundaries|pairs]]. En mathématiques, on appelle cela un [__graphe__](gloss:graph).
+Chaque jour, nous sommes entourés d'innombrables connexions et réseaux: routes et voies ferrées, lignes téléphoniques, Internet, circuits électroniques et même liaisons moléculaires. Il existe également des _réseaux sociaux_ entre amis et familles. Tous ces systèmes consistent en certains _points_ dénommés [[sommets|cercles|intersections]], dont certains sont reliés par [[arêtes|boundaries|pairs]]. En mathématiques, on appelle cela un [__graphe__](gloss:graph).
 
 ::: column(width=160)
 
@@ -41,19 +41,19 @@ La __théorie des graphes__ est l'étude des graphes et de leurs propriétés. C
 
 > id: intro-1
 
-Nous pouvons esquisser la disposition de graphiques simples en utilisant des cercles et des lignes. La position des cercles et la longueur des lignes sont sans importance - nous nous soucions uniquement de _la manière dont elles sont connectées_. Les lignes peuvent même se croiser et ne doivent pas nécessairement être droites.
+Nous pouvons esquisser la disposition de graphes simples en utilisant des cercles et des lignes. La position des cercles et la longueur des lignes sont sans importance - nous nous soucions uniquement de _la manière dont elles sont connectées_. Les lignes peuvent même se croiser et ne doivent pas nécessairement être droites.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Dans certains graphiques, les arêtes ne vont que dans un sens. Ces graphes sont appelés [__graphes dirigés__](gloss:directed-graph).
+{.text-center} Dans certains graphiques, les arêtes ne vont que dans un sens. Ces graphes sont appelés [__graphes orientés__](gloss:directed-graph).
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Certains graphiques sont constitués de plusieurs segments distincts qui ne sont pas reliés par des arêtes. Ces graphiques sont __déconnectés__.
+{.text-center} Certains graphes sont constitués de plusieurs parties distinctes qui ne sont pas reliées par des arêtes. Ces graphes sont __non connexes__.
 
 ::: column(width=200)
 
@@ -92,7 +92,7 @@ Nous pouvons créer de nouveaux graphiques à partir d'un graphique existant en 
 
 > id: intro-3
 
-[__L'ordre__](gloss:graph-order) d'un graphe est son nombre de sommets. Le [__degré__](gloss:graph-degree) d'un sommet dans un graphique est le nombre d'arêtes qui se rejoignent à ce sommet.
+[__L'ordre__](gloss:graph-order) d'un graphe est son nombre de sommets. Le [__degré__](gloss:graph-degree) d'un sommet dans un graphe est le nombre d'arêtes qui se rejoignent à ce sommet.
 
 ::: column(width=130)
 
@@ -124,7 +124,7 @@ Nous pouvons créer de nouveaux graphiques à partir d'un graphique existant en 
 
 > id: intro-4
 
-Les graphiques constitués d'un seul anneau de sommets sont appelés [__cycles__](gloss:graph-cycle). Tous les cycles ont [[le même nombre d'arêtes et de sommets|plus d'arêtes que de sommets|moins d'arêtes que de sommets]].
+Les graphes constitués d'une seule chaîne de sommets sont appelés [__cycles__](gloss:graph-cycle). Tous les cycles ont [[le même nombre d'arêtes et de sommets|plus d'arêtes que de sommets|moins d'arêtes que de sommets]].
 
     .row
       svg.graph(style='width: 90px; height: 90px;')
@@ -165,25 +165,25 @@ Essayez de trouver un itinéraire valide en dessinant sur ces cartes:
         x-solved
         include svg/bridges-1.svg
         button.btn Recommencer
-        button.btn.right(hidden) Sauter
+        button.btn.right(hidden) Passer
       .tab
         h3 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
         button.btn Recommencer
-        button.btn.right(hidden) Sauter
+        button.btn.right(hidden) Passer
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
         button.btn Recommencer
-        button.btn.right(hidden) Sauter
+        button.btn.right(hidden) Passer
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
         button.btn Recommencer
-        button.btn.right(hidden) Sauter
+        button.btn.right(hidden) Passer
 
 ---
 
@@ -193,7 +193,7 @@ Dans le cas de Königsberg, il semble impossible de trouver un itinéraire valab
 
 ::: column.grow
 
-Premièrement, nous devons convertir les cartes de la ville en graphiques avec des arêtes et des sommets. Chaque île ou région terrestre est représentée par [[un sommet|un bord|une zone]] et chaque pont reliant deux régions est représenté par un [[bord|sommet|rue]] correspondant.
+Premièrement, nous devons convertir les cartes de la ville en graphes avec des arêtes et des sommets. Chaque île ou région terrestre est représentée par [[un sommet|un bord|une zone]] et chaque pont reliant deux régions est représenté par un [[bord|sommet|rue]] correspondant.
 
 {.reveal(when="blank-0 blank-1")} Le problème de "visiter une ville en traversant chaque pont exactement une fois" est devenu un problème de "dessiner un graphique en un trait continu tout en traçant chaque bord exactement une fois".
 
@@ -207,7 +207,7 @@ Premièrement, nous devons convertir les cartes de la ville en graphiques avec d
 
 > id: bridges-2
 
-Sur papier, donnez quelques graphiques différents, puis essayez de déterminer lesquels peuvent être dessinés avec un seul trait continu.
+Sur papier, imaginez quelques graphes différents, puis essayez de déterminer lesquels peuvent être dessinés avec un seul trait continu.
 
     // p Try drawing these graphs with one continuous stroke:
     // p.todo Interactive coming soon…
@@ -217,18 +217,18 @@ Sur papier, donnez quelques graphiques différents, puis essayez de déterminer 
 > id: bridges-3
 > goals: dropdown
 
-Tout comme pour les cartes de villes précédentes, nous constatons que certains graphiques sont possibles, d'autres non. Pour nous aider à comprendre pourquoi, étiquetons chaque sommet avec son [degré](gloss:graph-degree):
+Tout comme pour les cartes de villes précédentes, nous constatons que certains graphes sont possibles, d'autres non. Pour nous aider à comprendre pourquoi, étiquetons chaque sommet avec son [degré](gloss:graph-degree):
 
     .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong These graphs are possible:
+      p(style="margin: 0"): strong Ces graphes sont possibles :
       include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong These graphs are not possible:
+      p(style="margin: 1em 0 0"): strong Ces graphes ne sont pas possibles :
       include svg/vertex-orders-2.svg
       p: select
-        option(value="val", selected) Colour by value
-        option(value="size") Colour by small and large
-        option(value="prime") Colour by prime and composite
-        option(value="eo") Colour by even and odd
+        option(value="val", selected) Colorier par valeur
+        option(value="size") Colorier par petit et grand
+        option(value="prime") Colorier par primalité
+        option(value="eo") Colorier par parité
 
 ---
 
