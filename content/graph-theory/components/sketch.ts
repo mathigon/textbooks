@@ -6,7 +6,7 @@
 
 import {EventTarget, last} from '@mathigon/core';
 import {Point, Segment, isBetween, SimplePoint} from '@mathigon/fermat';
-import {$N, slide, SVGParentView, SVGView} from '@mathigon/boost';
+import {$N, slide, SVGParentView, SVGView, $body} from '@mathigon/boost';
 
 
 interface SketchOptions {
@@ -44,6 +44,8 @@ export class Sketch extends EventTarget {
       },
       end: () => this.stop()
     });
+
+    $body.on('scroll', () => this.stop());
   }
 
   start(p: SimplePoint) {
