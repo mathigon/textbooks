@@ -16,7 +16,7 @@ const autoprefixer = require('autoprefixer');
 const gulpTextbooks = require('@mathigon/parser').gulp;
 const tsconfig = require('./tsconfig.json');
 
-const LANGUAGES = ['en', 'es', 'vn', 'cn', 'tr', 'de'];
+const LANGUAGES = ['en', 'es', 'vn', 'cn', 'tr', 'de', 'fr'];
 const CACHE = __dirname + '/content/.cache.json';
 
 

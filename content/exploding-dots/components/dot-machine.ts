@@ -34,8 +34,8 @@ class Cell extends EventTarget {
     this.$el = $N('div', {class: 'dot-cell'}, $dotMachine.$wrap);
     this.$value = $N('div', {class: 'cell-value', html: initial}, this.$el);
 
-    const order = numberFormat(index > 0 ? Math.pow($dotMachine.type, index) :
-                               1 / Math.pow($dotMachine.type, -index));  // Prevent rounding errors
+    const order = numberFormat(index > 0 ? Math.pow($dotMachine.base, index) :
+                               1 / Math.pow($dotMachine.base, -index));  // Prevent rounding errors
     $N('div', {class: 'cell-order', html: order}, this.$el);
 
     if (initial) {
@@ -99,7 +99,7 @@ class Cell extends EventTarget {
   }
 
   explode(recursive = false): Promise<void> {
-    const n = this.$dotMachine.type;
+    const n = this.$dotMachine.base;
     if (this.$fullDots.length < n) return Promise.resolve();
 
     const $remove = this.$dots.slice(0, n);
@@ -164,7 +164,7 @@ class Cell extends EventTarget {
 @register('x-dot-machine')
 export class DotMachine extends CustomElementView {
   $wrap!: ElementView;
-  type!: number;
+  base!: number;
   spacing!: number;
   cells: Cell[] = [];
 
@@ -172,7 +172,7 @@ export class DotMachine extends CustomElementView {
     const cellString = (this.attr('cells') || '000');
     const cells = cellString.replace('…', '').split('.');
 
-    this.type = (+this.attr('type') || 10);
+    this.base = (+this.attr('type') || 10);
     this.spacing = this.hasClass('tiny') ? 14 : 20;
 
     this.$wrap = $N('div', {class: 'dot-wrap'}, this);

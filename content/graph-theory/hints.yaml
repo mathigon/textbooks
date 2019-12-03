@@ -7,7 +7,7 @@ tryDifferentStartPoint: The starting location might be important. See what happe
 mapKeepTrying: Keep trying! Maybe start at a different location.
 housesToEachOther: You only need to connect the houses to the factories, but not the houses to each other.
 factoriesToEachOther: You only need to connect the factories to the houses, but not the factories to each other.
-linesCross: Careful: the lines are not allowed to cross.
+linesCross: "Careful: the lines are not allowed to cross."
 edgeDrawnBefore: Watch out, you’ve already drawn this edge once.
 utilitiesImpossible: "I think this puzzle might also be impossible… Sorry I tricked you :wink:"
 mapError: You can’t use this colour here because it is already in one of the neighbouring areas.

@@ -199,7 +199,7 @@ Now it’s your turn – translate the following shapes as shown:
       polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; opacity: .5;")
       polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; cursor: move")
 
-{.caption} Translate by (–4 –2) _{span.check(when="drag-1")}_
+{.caption} Translate by (–4, –2) _{span.check(when="drag-1")}_
 ::: column(width=220)
 
     svg(width=220 height=140)

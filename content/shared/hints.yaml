@@ -36,4 +36,4 @@ welcomeMorningNamed: Good morning, $name!
 welcomeAfternoonNamed: Good afternoon, $name!
 welcomeEveningNamed: Good evening, $name!
 
-serverError: "Sorry, I can’t help at the moment. Check you internet connection or try again later. :confused:"
+serverError: "Sorry, I can’t help at the moment. Check your internet connection or try again later. :confused:"

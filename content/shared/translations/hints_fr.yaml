@@ -1,0 +1,36 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: "Bienvenue chez Mathigon! Je suis Archie, ton tuteur personnel. :mortar_board:"
+account: Vous pouvez créer un compte gratuit pour enregistrer vos progrès.
+tutorial1: Notre contenu est divisé en petites étapes. Vous devez compléter les activités pour révéler la suite.
+tutorial2: Nous enregistrerons tous vos progrès afin que vous puissiez revenir plus tard et continuer là où vous l'avez laissé.
+
+correct:
+  - "Bien joué :relaxed:"
+  - "Bon travail! :relieved:"
+  - "Brilliant :thumbsup:"
+  - "Excellent! :ok_hand:"
+  - "Cool :sunglasses:"
+  - "Agréable! :v:"
+  - "Marche à suivre! :blush:"
+  - "Exceptionnel :grin:"
+  - "Superbe! :star:"
+  - "Merveilleux! :smiley:"
+
+incorrect:
+  - "Ce n'est pas tout à fait juste :white_frowning_face:"
+  - "Êtes-vous sûr de cela? :thinking_face:"
+  - "Cela ne semble pas juste. :hushed:"
+  - "Réessayer! :confused:"
+
+welcomeMorning: Bonjour!
+welcomeAfternoon: Bonjour!
+welcomeEvening: Bonsoir!
+
+welcomeMorningNamed: Bonjour, $name!
+welcomeAfternoonNamed: Bonjour, $name!
+welcomeEveningNamed: Bonsoir, $name!
+
+serverError: "Désolé, je ne peux pas aider pour le moment. Vérifiez votre connexion Internet ou réessayez plus tard. :confused:"

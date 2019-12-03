@@ -135,7 +135,7 @@ function videoEnd($step: Step) {
 
 export const butterfly2 = videoPlay;
 export const dominoes = videoEnd;
-export const applications = videoEnd;
+export const applications = videoPlay;
 export const popCulture = videoPlay;
 
 

@@ -65,7 +65,7 @@ function compare(params, paramsExp, type) {
     }
   }
 
-  return {error: null};
+  return {error: undefined};
 } */
 
 

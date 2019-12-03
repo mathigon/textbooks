@@ -5,7 +5,7 @@
 
 
 import {InputView} from '@mathigon/boost';
-import {last, total} from '@mathigon/core';
+import {cache, last, total} from '@mathigon/core';
 import {clamp, Random, roundTo} from '@mathigon/fermat';
 import {rotateDisk} from '../shared/components/disk';
 import {Step} from '../shared/types';
@@ -21,7 +21,6 @@ export function roulette($step: Step) {
   let ballOffset: number;
 
   rotateDisk($target, {
-    $disk: $wheels[0],
     start() {
       $ball.hide();
       $step.score('rotate');
@@ -58,8 +57,11 @@ export function roulette($step: Step) {
 function generatePossibilities(len: number): string[][] {
   if (len <= 1) return [['R', 'B']];
   const prev = generatePossibilities(len - 1);
-  return [...prev, last(prev).map(x => x + 'R'), last(prev).map(x => x + 'B')];
+  prev.push([...last(prev).map(x => x + 'R'), ...last(prev).map(x => x + 'B')]);
+  return prev;
 }
+
+const generatePossibilitiesCached = cache(generatePossibilities);
 
 function findCount(str: string, substr: string) {
   let count = 0;
@@ -71,7 +73,7 @@ function findCount(str: string, substr: string) {
 
 function compute(str: string) {
   const max = clamp(Math.floor(str.length / 2), 1, 8);
-  const poss = generatePossibilities(max);
+  const poss = generatePossibilitiesCached(max);
   let result = 1;
 
   for (let i = 2; i <= max; ++i) {
@@ -81,7 +83,7 @@ function compute(str: string) {
     let observed = values.map(v => findCount(str, v));
     let sum = total(observed);
 
-    let chi = total(observed.map(o => (o - sum / count) ** 2 / sum * count));
+    let chi = total(observed.map(o => ((o - sum / count) ** 2) / sum * count));
     let deg = count - 1;
 
     result = Math.min(result, Random.chiCDF(chi, deg));

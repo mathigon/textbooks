@@ -249,7 +249,6 @@ export function maxArea($step: Step) {
 
   const $path = $N('path', {}, $step.$('svg')) as SVGView;
   const $select = $step.$('x-select') as Select;
-  // $path.closed = true;
 
   let i = 0;
   $path.draw(polygons[0]);
@@ -416,10 +415,9 @@ export function constellations($step: Step) {
   const seen = [0, 360];
   drawTick(0, $lines);
 
-  rotateDisk($box, {
+  rotateDisk($wheel, {
     resistance: 0.85,
     maxSpeed: 0.01,
-    $disk: $wheel,
     draw(angle) {
       $wheel.setTransform(undefined, angle);
 
@@ -637,7 +635,7 @@ export function obliqueCylinder($step: Step) {
 
   $solid.addMesh((scene) => {
     const geo = new THREE.CylinderGeometry(1.4, 1.4, 6, 64, 1, true);
-    const cylinder = $solid.addWireframe(geo, 0xaaaaaa);
+    const cylinder = $solid.addWireframe(geo, 0xaaaaaa, 0);
 
     const top = new THREE.Mesh(new THREE.CircleGeometry(1.4, 64),
         Solid.translucentMaterial(0xaaaaaa));

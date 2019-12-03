@@ -240,9 +240,9 @@ export function calculator($step: Step) {
   const $display = $step.$('.display')!;
   const $clear = $display.$('.clear')!;
 
-  let a: number|null = null;
-  let b: number|null = null;
-  let answer: number|null = null;
+  let a: number|undefined = undefined;
+  let b: number|undefined = undefined;
+  let answer: number|undefined = undefined;
 
   let $results: ElementView[] = [];
   let locked = false;
@@ -253,12 +253,12 @@ export function calculator($step: Step) {
       count += 1;
       if (count === 3) $step.score('calculate');
 
-      if (a === null) {
+      if (a === undefined) {
         a = i;
         $results.push(makeSquare(i, 0, $display));
         $clear.enter('pop');
 
-      } else if (b === null) {
+      } else if (b === undefined) {
         b = i;
         answer = add(a, b);
         $results.push(makeSquare(b, 1, $display));
@@ -285,7 +285,7 @@ export function calculator($step: Step) {
   $clear.on('click', () => {
     for (let $r of $results) $r.exit('pop', 200);
     $results = [];
-    a = b = answer = null;
+    a = b = answer = undefined;
     $clear.exit('pop');
   });
 }

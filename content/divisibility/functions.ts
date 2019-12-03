@@ -16,7 +16,7 @@ import {Gameplay, Slideshow, Step} from '../shared/types';
 function numberGrid($grid: ElementView, time: number, className: string,
                     filter: (i: number) => boolean) {
   for (const $i of $grid.children) {
-    if (!filter(+$i.text)) return;
+    if (!filter(+$i.text)) continue;
     delay(() => $i.addClass(className), time);
     time += 80;
   }
@@ -244,9 +244,9 @@ export function primeTest($section: Step) {
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
-    thread(isPrime, v)
-        .then(({data}) => $section.model.set('result',
-            $section.getText(data ? 'is-prime' : 'not-prime')))
+    thread('/resources/divisibility/worker.js', ['isPrime', v])
+        .then(result => $section.model.set('result',
+            $section.getText(result ? 'is-prime' : 'not-prime')))
         .catch(() => $section.model.set('result',
             $section.getText('no-solution')));
   });
@@ -260,8 +260,8 @@ export function primeGenerator($section: Step) {
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
-    thread(generatePrime, d, 10000)
-        .then(({data}) => $section.model.set('result', numberFormat(data)))
+    thread('/resources/divisibility/worker.js', ['getPrime', d], 10000)
+        .then((result) => $section.model.set('result', numberFormat(result)))
         .catch(() => $section.model.set('result', `Couldn‘t find a prime :(`));
   });
 }
@@ -388,9 +388,9 @@ export function goldbach1($section: Step) {
     $section.model.set('result', '<span class="loading"></span>');
     $section.score('calculator');
 
-    thread(goldbach, v, 10000)
-        .then(({data}) => $section.model.set('result',
-            `${v} = ${data![0]} + ${data![1]}`))
+    thread('/resources/divisibility/worker.js', ['goldbach', v], 10000)
+        .then(result => $section.model.set('result',
+            `${v} = ${result![0]} + ${result![1]}`))
         .catch(() => $section.model.set('result',
             $section.getText('no-solution')));
   });

@@ -217,7 +217,7 @@ export class Ticker {
 export abstract class DisplayNode {
   readonly type: string;
   $element?: SVGView|undefined;
-  parent: DisplayNode|null;
+  parent?: DisplayNode;
   children: DisplayNode[];
   status: string;
   value: string;

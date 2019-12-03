@@ -13,7 +13,7 @@ export function travellingSalesman(dist: number[][]) {
   const cities = list(n);
 
   let minLength = Infinity;
-  let minPath = null;
+  let minPath = undefined;
 
   loop1:
       for (let path of permutations(cities)) {

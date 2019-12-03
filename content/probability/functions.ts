@@ -109,9 +109,9 @@ export function montyHall($step: Step) {
   let attempt = 0;
   let decided = false;  // Has the student confirmed their choice?
 
-  let selected: number|null = null;  // The door selected by the student
-  let opened: number|null = null;  // The door opened by the host
-  let car: number|null = null;  // The door that has the car
+  let selected: number|undefined = undefined;  // The door selected by the student
+  let opened: number|undefined = undefined;  // The door opened by the host
+  let car: number|undefined = undefined;  // The door that has the car
 
   const $monty = $step.$('.monty-hall')!;
   const $doors = $monty.$$('.door-box');
@@ -121,7 +121,7 @@ export function montyHall($step: Step) {
   $doors.forEach(($d, i) => {
     $d.$('.door')!.on('click', () => {
       if (i === selected || decided) return;
-      if (selected !== null) $doors[selected].removeClass('selected');
+      if (selected !== undefined) $doors[selected].removeClass('selected');
 
       selected = i;
       $d.addClass('selected');
@@ -185,7 +185,7 @@ export function montyHall($step: Step) {
     for (let b of [sureBtn, swapBtn, revealBtn]) b.reset();
     for (let $r of $reveals) $r.removeClass('visible');
     for (let $d of $doors) $d.removeClass('car selected open');
-    selected = opened = car = null;
+    selected = opened = car = undefined;
     decided = false;
     $monty.addClass('selectable');
     attempt += 1;
