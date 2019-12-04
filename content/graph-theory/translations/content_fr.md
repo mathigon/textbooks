@@ -239,9 +239,9 @@ En comparant ces nombres pour des graphes possibles et impossibles, il semble qu
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
       .legend(slot="legend") Ici, vous pouvez voir un seul sommet agrandi dans un graphique.
-      .legend(slot="legend") Si nous dessinons le graphique, nous aurons éventuellement une arrête arrivant à ce sommet, puis une autre partant de ce sommet. Cela fait que deux arêtes se rejoignent au sommet.
-      .legend(slot="legend") Peut-être que le sommet est un croisement plutôt qu'un coin. Dans ce cas, il y aura une autre arrête arrivant vers le sommet et une autre arrête partant de ce sommet. Nous avons maintenant quatre arêtes.
-      .legend(slot="legend") Et dans certains graphiques, il peut même y avoir une troisième paire d'arêtes arrivant et partant du sommet. Maintenant, il y a six arrête.
+      .legend(slot="legend") Si nous dessinons le graphique, nous aurons éventuellement une arête arrivant à ce sommet, puis une autre partant de ce sommet. Cela fait que deux arêtes se rejoignent au sommet.
+      .legend(slot="legend") Peut-être que le sommet est un croisement plutôt qu'un coin. Dans ce cas, il y aura une autre arête arrivant vers le sommet et une autre arête partant de ce sommet. Nous avons maintenant quatre arêtes.
+      .legend(slot="legend") Et dans certains graphiques, il peut même y avoir une troisième paire d'arêtes arrivant et partant du sommet. Maintenant, il y a six arête.
       .legend(slot="legend") Notez que, de toute façon, il y a toujours un nombre pair d'arêtes qui se rejoignant au sommet.
       .legend(slot="legend") Les deux seules exceptions sont les sommets où le chemin commence et où il se termine - ces deux peuvent avoir un nombre impair d'arêtes. Si les sommet de début et de fin sont identiques, tous les sommets du graphique sont pairs.
 
@@ -271,11 +271,11 @@ La découverte d’Euler peut ne pas sembler particulièrement utile dans la vie
 ::: column.grow
 
 
-Vous avez été invité à une fête d'anniversaire extravagante. En vous incluant et l'hôte, ${hnd}{hnd|5|3,15,1} personnes sont présentes.
+Vous avez été invité à une fête d'anniversaire extravagante. Vous et l'hôte inclus, ${hnd}{hnd|5|3,15,1} personnes sont présentes.
 
 Le soir, alors que les invités se préparent à partir, tout le monde se serre la main. Combien de poignées de main y a-t-il au total?
 
-Nous pouvons représenter les poignées de main à l'aide d'un graphique: chaque personne est [[un sommet|un bord]] et chaque poignée de main est [[un bord|un sommet]].
+Nous pouvons représenter les poignées de main à l'aide d'un graphique: chaque personne est [[un sommet|une arête]] et chaque poignée de main est [[une arête|un sommet]].
 
 {.reveal(when=&#39;blank-0 blank-1&#39;)} Il est maintenant facile de compter le nombre d'arêtes dans le graphique. Nous constatons que là-bas avec ${hnd} personnes, il y a ${hnd*(hnd-1)/2} poignées de main.
 
@@ -301,7 +301,7 @@ Chacune des ${n}{n|5|2,8,1} personnes présentes à la fête serre la main avec 
 
 > id: handshakes-2a
 
-Malheureusement, cette réponse n’est pas tout à fait correcte: nous avons compté chaque poignée de main [[deux fois|once|three times]], _{span.reveal(when="blank-0")} une fois pour chacune des deux personnes impliquées._
+Malheureusement, cette réponse n’est pas tout à fait correcte: nous avons compté chaque poignée de main [[deux fois|une fois|trois fois]], _{span.reveal(when="blank-0")} une fois pour chacune des deux personnes impliquées._
 
 {.reveal(when="blank-0")} Par exemple, <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)"> les deux premiers les entrées de la rangée supérieure</x-target> sont en fait les mêmes. Le nombre correct de poignées de main pour ${n}{n|5|2,25,1} invités est <mfrac><mrow>${n} × ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
 
@@ -309,7 +309,7 @@ Malheureusement, cette réponse n’est pas tout à fait correcte: nous avons co
 
 > id: handshakes-3
 
-Les graphiques de négociation sont spéciaux car chaque sommet est connecté à tous les autres sommets. Les graphes avec cette propriété sont appelés __graphes complets__. Le graphe complet à 4 sommets est souvent abrégé en `K_4`, le graphe complet à 5 sommets est appelé `K_5`, etc.
+Les graphiques de poignées de mains sont spéciaux car chaque sommet est connecté à tous les autres sommets. Les graphes avec cette propriété sont appelés __graphes complets__. Le graphe complet à 4 sommets est souvent abrégé en `K_4`, le graphe complet à 5 sommets est appelé `K_5`, etc.
 
 Nous venons de montrer qu'un graphe complet avec `n` sommets, `K_n`, a `(n × (n-1))/2` arêtes.
 
@@ -325,11 +325,11 @@ Nous venons de montrer qu'un graphe complet avec `n` sommets, `K_n`, a `(n × (n
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
-Un autre jour, vous êtes invité à un événement de speed dating pour ${m}{m|5|2,8,1} garçons et ${f}{f|4|2,8,1} filles. Il y a beaucoup de petites tables et chaque garçon passe 5 minutes avec chacune des filles. Combien de «dates» individuelles y a-t-il au total?
+Un autre jour, vous êtes invité à un événement de speed dating pour ${m}{m|5|2,8,1} garçons et ${f}{f|4|2,8,1} filles. Il y a beaucoup de petites tables et chaque garçon passe 5 minutes avec chacune des filles. Combien de « rencontres » individuelles y a-t-il au total?
 
 ::: column.grow
 
-Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts de sommets. Chaque sommet est connecté à tous les sommets de l'ensemble [[de l'ensemble|its own]] opposé, mais aucun des sommets de [[ne possède son propre ensemble|the opposite]]. Les graphes présentant cette présentation sont appelés __graphes bipartites__.
+Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts de sommets. Chaque sommet est connecté à tous les sommets [[de l'ensemble opposé|du même ensemble]], mais à aucun des sommets [[du même ensemble|de l'ensemble opposé]]. Les graphes présentant cette présentation sont appelés __graphes bipartis__.
 
 ::: column(width=300)
 
@@ -337,7 +337,7 @@ Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts 
 
 :::
 
-{.reveal(when="blank-0 blank-1")} Le graphique bipartite avec deux ensembles de taille _x_ et _y_ est souvent écrit sous la forme `K_"x,y"`. Il a [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]] arêtes, _{span.reveal(when="blank-2")}, ce qui signifie que, dans l'exemple ci-dessus, ${m} × ${f} = {299 } dates._
+{.reveal(when="blank-0 blank-1")} Le graphe biparti avec deux ensembles de taille _x_ et _y_ est souvent écrit sous la forme `K_"x,y"`. Il a [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]] arêtes, _{span.reveal(when="blank-2")}, ce qui signifie que, dans l'exemple ci-dessus, ${m} × ${f} = {299 } rencontres._
 
 ---
 
