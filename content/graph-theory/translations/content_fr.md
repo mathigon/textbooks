@@ -7,7 +7,7 @@
 
 ::: column.grow
 
-Chaque jour, nous sommes entourés d'innombrables connexions et réseaux: routes et voies ferrées, lignes téléphoniques, Internet, circuits électroniques et même liaisons moléculaires. Il existe également des _réseaux sociaux_ entre amis et familles. Tous ces systèmes consistent en certains _points_ dénommés [[sommets|cercles|intersections]], dont certains sont reliés par [[arêtes|boundaries|pairs]]. En mathématiques, on appelle cela un [__graphe__](gloss:graph).
+Chaque jour, nous sommes entourés d'innombrables connexions et réseaux: routes et voies ferrées, lignes téléphoniques, Internet, circuits électroniques et même liaisons moléculaires. Il existe également des _réseaux sociaux_ entre amis et familles. Tous ces systèmes consistent en certains _points_ dénommés [[sommets|cercles|intersections]], dont certains sont reliés par [[arêtes|liens|paires]]. En mathématiques, on appelle cela un [__graphe__](gloss:graph).
 
 ::: column(width=160)
 
@@ -234,16 +234,16 @@ Tout comme pour les cartes de villes précédentes, nous constatons que certains
 
 > id: bridges-4
 
-En comparant ces nombres pour des graphes possibles et impossibles, il semble qu'un graphe puisse être tracé s'il [[n'a pas plus de deux sommets «impairs»|n'a que des sommets «pairs»|n'a pas de sommet avec une commande supérieure à 4|a un nombre impair de sommets | n'a pas de sommets d'ordre 3]]. Cette condition peut être expliquée si nous ne regardons qu'un seul sommet dans le graphique:
+En comparant ces nombres pour des graphes possibles et impossibles, il semble qu'un graphe puisse être tracé s'il [[n'a pas plus de deux sommets «impairs»|n'a que des sommets «pairs»|n'a pas de sommet avec un degré supérieure à 4|a un nombre impair de sommets | n'a pas de sommets d'ordre 3]]. Cette condition peut être expliquée si nous ne regardons qu'un seul sommet dans le graphique:
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
       .legend(slot="legend") Ici, vous pouvez voir un seul sommet agrandi dans un graphique.
-      .legend(slot="legend") Si nous dessinons le graphique, nous aurons éventuellement un bord menant à ce sommet, puis un autre menant au loin. Cela fait que deux arêtes se rejoignent au sommet.
-      .legend(slot="legend") Peut-être que le sommet est un croisement plutôt qu'un coin. Dans ce cas, il y aura un autre bord menant vers le sommet et un autre bord menant. Nous avons maintenant quatre arêtes.
-      .legend(slot="legend") Et dans certains graphiques, il peut même y avoir une troisième paire d'arêtes menant vers et à partir du sommet. Maintenant, il y a six bords.
-      .legend(slot="legend") Notez que, de toute façon, il y a toujours un nombre pair d'arêtes se rejoignant au sommet.
-      .legend(slot="legend") Les deux seules exceptions sont les sommets où le chemin commence et où il se termine - ces deux peuvent avoir un nombre impair d'arêtes. Si les points de début et de fin sont identiques, tous les sommets du graphique sont pairs.
+      .legend(slot="legend") Si nous dessinons le graphique, nous aurons éventuellement une arrête arrivant à ce sommet, puis une autre partant de ce sommet. Cela fait que deux arêtes se rejoignent au sommet.
+      .legend(slot="legend") Peut-être que le sommet est un croisement plutôt qu'un coin. Dans ce cas, il y aura une autre arrête arrivant vers le sommet et une autre arrête partant de ce sommet. Nous avons maintenant quatre arêtes.
+      .legend(slot="legend") Et dans certains graphiques, il peut même y avoir une troisième paire d'arêtes arrivant et partant du sommet. Maintenant, il y a six arrête.
+      .legend(slot="legend") Notez que, de toute façon, il y a toujours un nombre pair d'arêtes qui se rejoignant au sommet.
+      .legend(slot="legend") Les deux seules exceptions sont les sommets où le chemin commence et où il se termine - ces deux peuvent avoir un nombre impair d'arêtes. Si les sommet de début et de fin sont identiques, tous les sommets du graphique sont pairs.
 
 ---
 
