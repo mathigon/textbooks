@@ -337,7 +337,7 @@ Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts 
 
 :::
 
-{.reveal(when="blank-0 blank-1")} Le graphe biparti avec deux ensembles de taille _x_ et _y_ est souvent écrit sous la forme `K_"x,y"`. Il a [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]] arêtes, _{span.reveal(when="blank-2")}, ce qui signifie que, dans l'exemple ci-dessus, ${m} × ${f} = {299 } rencontres._
+{.reveal(when="blank-0 blank-1")} Le graphe biparti avec deux ensembles de taille _x_ et _y_ est souvent écrit sous la forme `K_"x,y"`. Il a [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]] arêtes, _{span.reveal(when="blank-2")}, ce qui signifie que, dans l'exemple ci-dessus, ${m} × ${f} = ${m×f} rencontres._
 
 ---
 
