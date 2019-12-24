@@ -756,8 +756,8 @@ _{button.next-step} Continue_
 
 {.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
 we get [two more, smaller triangles](target:triangle2). These must also be
-congruent, because of the [SAS](gloss:triangle-sss) condition: the have the same
-[two sides and included angle](target:sas).
+congruent, because of the [SAS](gloss:triangle-sss) condition: they have the
+same [two sides and included angle](target:sas).
 _{button.next-step} Continue_
 
 {.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
