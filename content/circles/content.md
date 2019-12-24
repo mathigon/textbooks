@@ -1626,10 +1626,10 @@ impossible.
 ::: column.grow
 
 Just like a cylinder, a cone doesn’t have to be “straight”. If the vertex is
-directly over the center of the base, we have a __right cylinder__. Otherwise,
-we call it an __oblique cylinder__.
+directly over the center of the base, we have a __right cone__. Otherwise,
+we call it an __oblique cone__.
 
-Once again, we can use Cavalieri’s principle to show that all oblique cylinders
+Once again, we can use Cavalieri’s principle to show that all oblique cones
 have the same volume, as long as they have the same base and height.
 
 ::: column(width=280)
