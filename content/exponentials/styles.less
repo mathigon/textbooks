@@ -24,7 +24,8 @@ x-atom canvas { width: 100%; height: auto; }
   margin: 0 auto;
   transform-origin: center bottom;
   transition: opacity .2s, transform 1s;
-  box-shadow: 0 0 8px 1px fade(@yellow, 50%);
+  box-shadow: 0 0 12px 1px fade(@yellow, 60%);
+  border-radius: 2px;
 
   &.c1, &.c2, &.c3, &.c4 { opacity: 0; transform: scaleY(0); }
   &.on { opacity: 1; transform: none; }
@@ -33,4 +34,13 @@ x-atom canvas { width: 100%; height: auto; }
   &.c2 { height: 30px; margin-top: 90px; }
   &.c3 { height: 15px; margin-top: 105px; }
   &.c4 { height: 7.5px; margin-top: 112.5px; }
+}
+
+.text-wrap {
+  display: block;
+  float: right;
+  shape-margin: 24px;
+  margin: 0 0 24px 24px;
+  shape-outside: circle();
+  @media (max-width: 560px) { float: none !important; margin: 0 auto 1em; }
 }
