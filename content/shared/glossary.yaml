@@ -472,8 +472,8 @@ dilation:
 
 directed-graph:
   title: Directed Graph
-  text: In a __directed graph__, every edge as an arrow, i.e. a start vertex and
-    an end vertex.
+  text: In a __directed graph__, every edge has an “arrow”, i.e. a start vertex
+    and an end vertex.
   link: /course/graph-theory/introduction#intro-1
 
 discriminant:
