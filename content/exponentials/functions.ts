@@ -6,10 +6,18 @@
 
 import './components/atom';
 import {list, wait} from '@mathigon/core';
-import {numberFormat, Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/fermat';
+import {$} from '@mathigon/boost';
 import {EquationFlow} from '../../../mathigon.org/src/course/components/equation-flow/equation-flow';
 import {CoordinateSystem, Step} from '../shared/types';
 
+
+export function radioactive1($step: Step) {
+  $('.decay-box x-atom')!.one('click', () => {
+    $step.score('decay');
+    setTimeout(() => $step.score('decay-done'), 1500);
+  });
+}
 
 export function radioactiveTable1($step: Step) {
   $step.onScore('blank-0', () => $step.$('.c1')!.addClass('on'));

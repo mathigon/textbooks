@@ -32,7 +32,7 @@ which solely relies on physics and mathematics: __Carbon Dating__.
 ---
 > id: carbon-1
 
-    figure: x-media(src="images/mummy.jpg" width=600 height=180)
+    figure: x-media(src="images/sarcophagus.jpg" width=600 height=180)
 
 All living organisms on Earth – plants, animals and humans – contain Carbon
 [atoms](gloss:atom). Usually, the core of a Carbon atom consists of six
@@ -74,40 +74,57 @@ proportion of Carbon atoms contain additional neutrons. These different
 The proportion at which these isotopes occur is almost exactly the same,
 everywhere on Earth – and this will be very important later. In this example,
 we are particularly interested in Carbon-14, which is abbreviated as
-<sup>14</sup>C. It contains 6 protons and 8 neutrons, and it’s created when
+<sup>14</sup>C. It contains 6 protons and 8 neutrons, and it is created when
 cosmic rays coming from space hit particles high in our atmosphere.
 
-Any sample of Carbon atoms contains [[0.1]]% of these special <sup>14</sup>C atoms.
-You might think that this is an insignificant amount, but your body contains
-around `8 × 10^26` Carbon atoms, which means that you also contain around
-`8 × 10^23` Carbon-14 atoms. That’s almost a million-million-million-million
+Any sample of Carbon atoms contains [[0.1]]% of these special <sup>14</sup>C
+atoms. You might think that this is an insignificant amount, but your body
+contains around `8 × 10^26` Carbon atoms, which means that you also contain
+around `8 × 10^23` Carbon-14 atoms. That’s almost a million-million-million-million
 atoms!
+
+    // Carbon is an essential part of our body, because it can form long,
+    // complex molecules. 
 
 ---
 > id: radioactive-1
+> goals: decay decay-done
 
-::: column(width=260)
+::: column(width=300)
 
-{.fixme} Image
+    .decay-box
+      x-atom(protons=6 neutrons=8 size=68 style="cursor: pointer;")
+      x-atom.reveal(when="delay" protons=7 neutrons=7 size=68 style="left: 100px" delay="200")
+      x-atom.reveal(when="delay" protons=1 color="fd8c00" size=68 style="left: 178px" delay="600")
+      x-atom.reveal(when="delay" protons=1 color="22ab24" size=68 style="left: 244px" delay="1000")
+      .label #[strong Carbon-14]#[br]6 protons#[br]8 neutrons
+      .label.reveal(when="delay" style="left: 100px" delay="200") #[strong Nitrogen]#[br]7 protons#[br]7 neutrons
+      .label.reveal(when="delay" style="left: 178px" delay="600"): strong Antineutrino
+      .label.reveal(when="delay" style="left: 244px" delay="1000"): strong Electron
+      .operator.reveal(when="delay" style="left: 76px") →
+      .operator.reveal(when="delay" style="left: 176px" delay="400") +
+      .operator.reveal(when="delay" style="left: 240px" delay="800") +
+    x-gesture(target=".decay-box x-atom")
 
-{.caption} Carbon is an essential part of our body, because it can form long,
-complex molecules. 
+{.caption} 
 
 ::: column.grow
 
-Carbon-14 is special, because it is [__radioactive__](gloss:radioactive). This
-means that, over time, it __decays__ by breaking apart into other elements. We
-are actually surrounded by many radioactive materials, but they are not
-dangerous because their concentration is so low.
-
-During our life, as we eat and breathe, our body absorbs <sup>14</sup>C atoms.
-When we die, we stop absorbing new <sup>14</sup>C atoms, and the ones that are
-already in our body slowly start to [[decay|multiply|disappear]].
+Carbon-14 is useful, because it is [__radioactive__](gloss:radioactive). The
+atom is unstable, and it might __decay__ into other, more stable elements. We
+are actually surrounded by many radioactive materials, but their concentration
+is much too low to be dangerous.
 
 :::
 
 ---
 > id: radioactive-2
+
+::: column.grow
+
+During our life, as we eat and breathe, our body absorbs <sup>14</sup>C atoms.
+When we die, we stop absorbing new <sup>14</sup>C atoms, and the ones that are
+already in our body slowly start to [[decay|multiply|disappear]].
 
 All radioactive elements decay at a very predictable rate – this is determined
 by their __half-life__. Carbon-14, for example, has a half-life of approximately
@@ -115,6 +132,12 @@ by their __half-life__. Carbon-14, for example, has a half-life of approximately
 will take 6,000 years for half of them to decay. After another 6,000 years, half
 of the remaining atoms will have also decayed, so you're left with just [[a
 quarter|a third|1/8|none]] of the original amount.
+
+::: column(width=220)
+
+    x-media(src="images/atom.jpg" width=220 height=310)
+
+:::
 
 ---
 > id: radioactive-table-1
@@ -205,20 +228,32 @@ We can use the equation we found above, and fill in the required parameters:
 ---
 > id: carbon-end
 
+::: column.grow
+
 This means that the Pharaoh dies 6000 years ago, right at the beginning of the
 Egyptian Middle Kingdom. And all we needed to find his age was a tiny piece of
-skin tissue, as well as mathematics!
+skin tissue, as well as mathematics! some more text some more text some more text
+some more text some more text
+
+::: column(width=280)
+
+    x-media(src="images/mummy.jpg" lightbox width=280 height=170)
+
+:::
 
 Geologists, archaeologists and biologists can use the same method to determine
-the age of fossils, the evolutinary ancestry between extinct animals, or when
+the age of fossils, the evolutionary ancestry between extinct animals, or when
 certain layers of rock in our Earth's crust formed.
+[Continue](btn:next)
 
-    figure: x-media(src="images/dinosaur.jpg" width=760, height=360)
+---
 
 Carbon Dating was developed in the late 1940s at the University of Chicago, by
 Willard Libby, who received the Nobel Prize in Chemistry for his work in 1960.
 It can become an indispensable method in many areas of science, where we are
 trying to understand the history of our world.
+
+    figure: x-media(src="images/dinosaur.jpg" width=760, height=360)
 
 Note that we have greatly simplified the process of Carbon Dating in this
 chapter. There are many other things to consider, such as sample contamination,

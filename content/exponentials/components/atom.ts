@@ -14,6 +14,8 @@ const BLUE = 0x0f82f2;
 type Point3D = [number, number, number];
 
 function distribute(number: number, radius = 1) {
+  if (number === 1) return [[0, 0, 0]];
+
   const points = [];
   const offset = 2 / number;
   const increment = Math.PI * (3 - Math.sqrt(5));
@@ -52,8 +54,9 @@ export class Atom extends Solid {
       const neutrons = +this.attr('neutrons');
       const points = Random.shuffle(distribute(protons + neutrons)) as [number, number, number][];
 
-      addSpheres(points.slice(0, protons), BLUE, atom);
-      addSpheres(points.slice(protons), RED, atom);
+      const color = parseInt(this.attr('color'), 16);
+      addSpheres(points.slice(0, protons), color || BLUE, atom);
+      addSpheres(points.slice(protons), color || RED, atom);
 
       return [atom];
     });

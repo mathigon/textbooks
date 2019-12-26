@@ -44,3 +44,12 @@ x-atom canvas { width: 100%; height: auto; }
   shape-outside: circle();
   @media (max-width: 560px) { float: none !important; margin: 0 auto 1em; }
 }
+
+.decay-box {
+  position: relative;
+  height: 112px;
+  x-atom { position: absolute; top: 0; }
+  x-atom:first-child { .bouncy(); }
+  .label { position: absolute; top: 72px;  width: 72px; text-align: center; font-size: 11px; line-height: 1.2; }
+  .operator { position: absolute; top: 16px; font-size: 20px; color: @text-dark; }
+}
