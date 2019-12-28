@@ -88,22 +88,22 @@ atoms!
 
 ---
 > id: radioactive-1
-> goals: decay decay-done
+> goals: decay
 
 ::: column(width=300)
 
     .decay-box
       x-atom(protons=6 neutrons=8 size=68 style="cursor: pointer;")
-      x-atom.reveal(when="delay" protons=7 neutrons=7 size=68 style="left: 100px" delay="200")
-      x-atom.reveal(when="delay" protons=1 color="fd8c00" size=68 style="left: 178px" delay="600")
-      x-atom.reveal(when="delay" protons=1 color="22ab24" size=68 style="left: 244px" delay="1000")
+      x-atom(hidden protons=7 neutrons=7 size=68 style="left: 100px")
+      x-atom(hidden protons=1 color="fd8c00" size=68 style="left: 178px")
+      x-atom(hidden protons=1 color="22ab24" size=68 style="left: 244px")
       .label #[strong Carbon-14]#[br]6 protons#[br]8 neutrons
-      .label.reveal(when="delay" style="left: 100px" delay="200") #[strong Nitrogen]#[br]7 protons#[br]7 neutrons
-      .label.reveal(when="delay" style="left: 178px" delay="600"): strong Antineutrino
-      .label.reveal(when="delay" style="left: 244px" delay="1000"): strong Electron
-      .operator.reveal(when="delay" style="left: 76px") →
-      .operator.reveal(when="delay" style="left: 176px" delay="400") +
-      .operator.reveal(when="delay" style="left: 240px" delay="800") +
+      .label(hidden style="left: 100px") #[strong Nitrogen]#[br]7 protons#[br]7 neutrons
+      .label(hidden style="left: 178px"): strong Antineutrino
+      .label(hidden style="left: 244px"): strong Electron
+      .operator(hidden style="left: 76px") →
+      .operator(hidden style="left: 176px") +
+      .operator(hidden style="left: 240px") +
     x-gesture(target=".decay-box x-atom")
 
 {.caption} 
@@ -153,7 +153,7 @@ we can calculate the remaining amount of <sup>14</sup>C atoms over time:
 ---
 > id: radioactive-table-2
 
-As you can see, we’re multiplying by `1/2` at every step, just like a
+As you can see, we’re multiplying by `§1/2` at every step, just like a
 [[geometric|arithmetic|Fibonacci]] sequence.
 
 ---
@@ -161,13 +161,12 @@ As you can see, we’re multiplying by `1/2` at every step, just like a
 
 Using exponents, we can write down an equation for the amount left after `t` years:
 
-    x-equation-flow(expr=`"amount" = 1200 × (1/2)^(t/6000)` max-steps="2")
-    // 1000 × 2^((-t)/6000)
+{.text-center} `§"amount" = 1200 × (1/2)^(t/6000)`
 
 Of course 1200 and 6000 were just arbitrary numbers. A more general equation
 is:
 
-    x-equation-flow(expr=`"amount" = "initial" × 2^((-t)/"half life")` max-steps="2")
+{.text-center} `§"amount" = "initial" × 2^((-t)/"half-life")`
 
 Since the equation contains an _exponent_, and the number of atoms _decreases_,
 we call this process __exponential decay__.
@@ -196,9 +195,9 @@ in our story. The archaeologists decided cut a tiny sample out of the mummy's
 skin. Using a complex machine called a __mass spectrometer__, they were able to
 “count” the number of <sup>12</sup>C and <sup>14</sup>C atoms in the sample.
 
-They found just 100 Carbon-14 atoms in the sample. Given the ratios of
-<sup>12</sup>C and <sup>14</sup>C atoms, they also estimate that the same sample
-would have contained 1000 <sup>14</sup>C atoms when the Pharaoh was alive.
+They found 680 Carbon-14 atoms in the sample. Given the ratios of <sup>12</sup>C
+and <sup>14</sup>C atoms, they also estimate that the same sample would have
+contained 1000 <sup>14</sup>C atoms when the Pharaoh was alive.
 
 ::: column(width=320)
 
@@ -208,7 +207,7 @@ would have contained 1000 <sup>14</sup>C atoms when the Pharaoh was alive.
 
 :::
 
-All we have to do now it calculate how long it takes for the remaining 900
+All we have to do now is calculate how long it takes for the missing 320
 <sup>14</sup>C atoms to decay. That number is precisely the [[time since the
 Pharaoh died|age of the Pharaoh when he died]].
 
@@ -217,27 +216,37 @@ Pharaoh died|age of the Pharaoh when he died]].
 
 We can use the equation we found above, and fill in the required parameters:
 
-    x-equation-flow(expr="20 × 2^((-t)/400) = 10" max-steps="7")
+::: x-algebra-flow
 
-    // |         `10` | `= 100 × 2^((-t)/6000)` |
-    // |        `0.1` | `= 2^((-t)/6000)`       |
-    // | `log_2(0.1)` | `= (-t)/6000`           |
-    // |          `t` | `= -6000 × log_2(0.1)`  |
-    // |              | `= 19932 "years"`       |
+`input(1000,"initial") × 2^((-t)/input(6000,"half-life")) = input(680,"amount")`
+
+* Fill in the three parameters from above!
+* First, let's divide both sides of the equation by 20.
+* We can simplify the right-hand side of the equation.
+* Now, we have to revert the exponent on the left-hand side. To do that, we can
+  use a special function called the __Logarithm__, which we'll learn more about
+  later.
+* Using a calculator, we can work out that the value of XXX is XXX.
+* The rest should be simple: let's multiply both sides of the equation by 400.
+* step 6
+* We can also remove the - sign on both sides of the equation.
+* And that means that it takes XXXX for
+
+:::
 
 ---
 > id: carbon-end
 
-::: column.grow
-
-This means that the Pharaoh dies 6000 years ago, right at the beginning of the
-Egyptian Middle Kingdom. And all we needed to find his age was a tiny piece of
-skin tissue, as well as mathematics! some more text some more text some more text
-some more text some more text
-
 ::: column(width=280)
 
     x-media(src="images/mummy.jpg" lightbox width=280 height=170)
+
+::: column.grow
+
+This means that the Pharaoh died approximately 3600 years ago, at the beginning
+of the _New Kingdom_ in Egyptian history, which marked the peak of its power.
+All we needed was a tiny piece of skin tissue, as well as mathematics!
+some more text some more text some more text
 
 :::
 

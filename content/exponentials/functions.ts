@@ -8,14 +8,25 @@ import './components/atom';
 import {list, wait} from '@mathigon/core';
 import {Point} from '@mathigon/fermat';
 import {$} from '@mathigon/boost';
-import {EquationFlow} from '../../../mathigon.org/src/course/components/equation-flow/equation-flow';
+import {AlgebraFlow} from '../../../mathigon.org/src/course/components/algebra/algebra-flow';
 import {CoordinateSystem, Step} from '../shared/types';
 
 
 export function radioactive1($step: Step) {
-  $('.decay-box x-atom')!.one('click', () => {
-    $step.score('decay');
-    setTimeout(() => $step.score('decay-done'), 1500);
+  const $box = $('.decay-box')!;
+
+  const $atoms = $box.$$('x-atom');
+  const $labels = $box.$$('.label');
+  const $ops = $box.$$('.operator');
+
+  $atoms[0].one('click', () => {
+    for (const $c of [$atoms[1], $labels[1]]) $c.enter('slide-right', 600, 200);
+    for (const $c of [$atoms[2], $labels[2]]) $c.enter('slide-right', 600, 300);
+    for (const $c of [$atoms[3], $labels[3]]) $c.enter('slide-right', 600, 400);
+
+    for (const $c of $ops) $c.enter('fade', 400, 500);
+
+    setTimeout(() => $step.score('decay'), 1000);
   });
 }
 
@@ -38,56 +49,51 @@ export function radioactiveChart($step: Step) {
 }
 
 
-export function carbonSolve($step: Step) {
+export function carbonSolver($step: Step) {
+  const $equation = $step.$('x-algebra-flow') as AlgebraFlow;
 
-  const $equation = $step.$('x-equation-flow') as EquationFlow;
-
-  $equation.on('step-1', async ({equation, system}) => {
-    await system.newRow();
-    await wait(400);
-    equation.wrapTerms('$1/$2', '10', '20');
-    equation.deleteTerm('×');
-    await equation.animate();
+  $equation.on('next', async ({step, equation, system}) => {
+    switch(step) {
+      case 2:
+        await system.newRow();
+        await wait(400);
+        equation.wrapTerms('$1/$2', '10', '20');
+        equation.deleteTerm('×');
+        await equation.animate();
+        return;
+      case 3:
+        equation.replaceTerm('10/20', '0.5');
+        await equation.animate();
+        return;
+      case 4:
+        await system.newRow();
+        await wait(400);
+        equation.wrapTerms('log_($2)($1)', '0.5', '2');
+        equation.unwrapTerm('-t/400');
+        await equation.animate();
+        return;
+      case 5:
+        await system.newRow();
+        await wait(400);
+        equation.replaceTerm('log_2(0.5)', '-1');
+        await equation.animate();
+        return;
+      case 6:
+        await system.newRow();
+        await wait(400);
+        equation.moveTermAfter('400', '-1');
+        equation.addTermAfter('×', '-1');
+        equation.unwrapTerm('-t');
+        await equation.animate();
+        return;
+      case 7:
+        equation.deleteTerm('1×');
+        await equation.animate();
+        return;
+      case 8:
+        equation.deleteTerm('-');
+        equation.deleteTerm('-');
+        await equation.animate();
+    }
   });
-
-  $equation.on('step-2', async ({equation}) => {
-    equation.replaceTerm('10/20', '0.5');
-    await equation.animate();
-  });
-
-  $equation.on('step-3', async ({equation, system}) => {
-    await system.newRow();
-    await wait(400);
-    equation.wrapTerms('log_($2)($1)', '0.5', '2');
-    equation.unwrapTerm('-t/400');
-    await equation.animate();
-  });
-
-  $equation.on('step-4', async ({equation, system}) => {
-    await system.newRow();
-    await wait(400);
-    equation.replaceTerm('log_2(0.5)', '-1');
-    await equation.animate();
-  });
-
-  $equation.on('step-5', async ({system, equation}) => {
-    await system.newRow();
-    await wait(400);
-    equation.moveTermAfter('400', '-1');
-    equation.addTermAfter('×', '-1');
-    equation.unwrapTerm('-t');
-    await equation.animate();
-  });
-
-  $equation.on('step-6', async ({equation}) => {
-    equation.deleteTerm('1×');
-    await equation.animate();
-  });
-
-  $equation.on('step-7', async ({equation}) => {
-    equation.deleteTerm('-');
-    equation.deleteTerm('-');
-    await equation.animate();
-  });
-
 }

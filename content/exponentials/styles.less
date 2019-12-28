@@ -53,3 +53,8 @@ x-atom canvas { width: 100%; height: auto; }
   .label { position: absolute; top: 72px;  width: 72px; text-align: center; font-size: 11px; line-height: 1.2; }
   .operator { position: absolute; top: 16px; font-size: 20px; color: @text-dark; }
 }
+
+x-algebra-flow {
+  x-blank-input input { min-width: 74px; transition: min-width .2s; }
+  x-blank-input.invalid input { min-width: 54px; }
+}
