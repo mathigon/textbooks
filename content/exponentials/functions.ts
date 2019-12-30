@@ -6,7 +6,7 @@
 
 import './components/atom';
 import {list, wait} from '@mathigon/core';
-import {Point} from '@mathigon/fermat';
+import {numberFormat, Point} from '@mathigon/fermat';
 import {$} from '@mathigon/boost';
 import {AlgebraFlow} from '../../../mathigon.org/src/course/components/algebra/algebra-flow';
 import {CoordinateSystem, Step} from '../shared/types';
@@ -40,6 +40,8 @@ export function radioactiveTable1($step: Step) {
 export function radioactiveChart($step: Step) {
   const $plot = $step.$('x-coordinate-system') as CoordinateSystem;
 
+  $step.model.set('format', numberFormat);
+
   $step.model.watch((m) => {
     const fn = (x: number) => m.x0 * 2 ** (-x / m.hl);
 
@@ -57,37 +59,37 @@ export function carbonSolver($step: Step) {
       case 2:
         await system.newRow();
         await wait(400);
-        equation.wrapTerms('$1/$2', '10', '20');
+        equation.wrapTerms('$1/$2', '800', '1200');
         equation.deleteTerm('×');
         await equation.animate();
         return;
       case 3:
-        equation.replaceTerm('10/20', '0.5');
+        equation.replaceTerm('800/1200', '0.667');
         await equation.animate();
         return;
       case 4:
         await system.newRow();
         await wait(400);
-        equation.wrapTerms('log_($2)($1)', '0.5', '2');
-        equation.unwrapTerm('-t/400');
+        equation.wrapTerms('log_($2)($1)', '0.667', '2');
+        equation.unwrapTerm('-t/6000');
         await equation.animate();
         return;
       case 5:
         await system.newRow();
         await wait(400);
-        equation.replaceTerm('log_2(0.5)', '-1');
+        equation.replaceTerm('log_2(0.667)', '-0.585');
         await equation.animate();
         return;
       case 6:
         await system.newRow();
         await wait(400);
-        equation.moveTermAfter('400', '-1');
-        equation.addTermAfter('×', '-1');
+        equation.moveTermAfter('6000', '-0.585');
+        equation.addTermAfter('×', '-0.585');
         equation.unwrapTerm('-t');
         await equation.animate();
         return;
       case 7:
-        equation.deleteTerm('1×');
+        equation.replaceTerm('-0.585×6000', '-3510');
         await equation.animate();
         return;
       case 8:

@@ -175,15 +175,27 @@ we call this process __exponential decay__.
 > id: radioactive-chart
 
 We can plot the amount of <sup>14</sup>C atoms over time in a coordinate system.
-If we start with an initial amount of ${x0}{x0|1200|100,4000,100} and the half-life
-is ${hl}{hl|6000|200,10000,200} years, then the decay looks like this:
+If we start with an initial amount of ${format(x0)}{x0|3000|100,4000,100} and
+the half-life is ${format(hl)}{hl|5000|200,10000,200} years, then the decay
+looks like this:
 
     x-coordinate-system(width=600 height=400 x-axis="0|18000" y-axis="0|4000" x-label="Years" y-label="Carbon-14 Atoms" margins="20 20 20 40")
 
-{.reveal(when="var-0 var-1")} The points on the graph show when the number of
-atoms has halved. Notice that we can calculate the remaining about of atoms at
-_any point in time_, not just these specific intervals. This is the main
-difference compared with geometric sequences.
+---
+> id: radioactive-chart-2
+
+The points on the graph show when the number of atoms has halved. Notice that
+we can calculate the remaining about of atoms at _any point in time_, not just
+these specific intervals. This is the main difference compared with geometric
+sequences.
+
+The decay of radioactive atoms is random, and it is impossible to predict
+exactly when an individual <sup>14</sup>C is going to decay. If the graph shows
+there should be a decimal number of atoms left at a certain time (like 10.6),
+this is the _average_ number of atoms we _expect_ to be left, even though you
+can only have whole numbers of atoms. You will learn more about this in our
+[course on probability](/course/probability/randomness).
+[Continue](btn:next)
 
 ---
 > id: spectrometer
@@ -195,9 +207,9 @@ in our story. The archaeologists decided cut a tiny sample out of the mummy's
 skin. Using a complex machine called a __mass spectrometer__, they were able to
 “count” the number of <sup>12</sup>C and <sup>14</sup>C atoms in the sample.
 
-They found 680 Carbon-14 atoms in the sample. Given the ratios of <sup>12</sup>C
+They found 800 Carbon-14 atoms in the sample. Given the ratios of <sup>12</sup>C
 and <sup>14</sup>C atoms, they also estimate that the same sample would have
-contained 1000 <sup>14</sup>C atoms when the Pharaoh was alive.
+contained 1200 <sup>14</sup>C atoms when the Pharaoh was alive.
 
 ::: column(width=320)
 
@@ -207,7 +219,7 @@ contained 1000 <sup>14</sup>C atoms when the Pharaoh was alive.
 
 :::
 
-All we have to do now is calculate how long it takes for the missing 320
+All we have to do now is calculate how long it takes for the missing 400
 <sup>14</sup>C atoms to decay. That number is precisely the [[time since the
 Pharaoh died|age of the Pharaoh when he died]].
 
@@ -218,24 +230,25 @@ We can use the equation we found above, and fill in the required parameters:
 
 ::: x-algebra-flow
 
-`input(1000,"initial") × 2^((-t)/input(6000,"half-life")) = input(680,"amount")`
+`input(1200,"initial") × 2^((-t)/input(6000,"half-life")) = input(800,"amount")`
 
 * Fill in the three parameters from above!
-* First, let's divide both sides of the equation by 20.
+* First, let's divide both sides of the equation by 1200.
 * We can simplify the right-hand side of the equation.
 * Now, we have to revert the exponent on the left-hand side. To do that, we can
   use a special function called the __Logarithm__, which we'll learn more about
   later.
-* Using a calculator, we can work out that the value of XXX is XXX.
-* The rest should be simple: let's multiply both sides of the equation by 400.
-* step 6
+* Using a calculator, we can find the value of `log_2(0.667)`.
+* The rest should be simple: let's multiply both sides of the equation by 6000.
+* We can simplify the right-hand side of the equation.
 * We can also remove the - sign on both sides of the equation.
-* And that means that it takes XXXX for
+* Thus, we see that it takes 3510 years for this many <sup>14</sup>C atoms to
+  decay.
 
 :::
 
 ---
-> id: carbon-end
+> id: carbon-end-1
 
 ::: column(width=280)
 
@@ -243,10 +256,10 @@ We can use the equation we found above, and fill in the required parameters:
 
 ::: column.grow
 
-This means that the Pharaoh died approximately 3600 years ago, at the beginning
-of the _New Kingdom_ in Egyptian history, which marked the peak of its power.
-All we needed was a tiny piece of skin tissue, as well as mathematics!
-some more text some more text some more text
+This means that the Pharaoh died approximately 3510 years ago, or in
+[[1490 ± 10]] BC. This time period was the beginning of the _New Kingdom_ in
+Egyptian history: a “golden age” which marked the peak of Egypt’s power. And all
+we needed was a tiny piece of skin tissue, together with clever mathematics!
 
 :::
 
@@ -256,6 +269,7 @@ certain layers of rock in our Earth's crust formed.
 [Continue](btn:next)
 
 ---
+> id: carbon-end-2
 
 Carbon Dating was developed in the late 1940s at the University of Chicago, by
 Willard Libby, who received the Nobel Prize in Chemistry for his work in 1960.
