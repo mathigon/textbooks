@@ -216,11 +216,13 @@ export class Ticker {
 
 export abstract class DisplayNode {
   readonly type: string;
+  readonly equation: DisplayEquation;
   $element?: SVGView|undefined;
   parent?: DisplayNode;
   children: DisplayNode[];
   status: string;
   value: string;
+  customColor: string;
   width: number;
   height: number;
   baseline: number;
@@ -230,6 +232,7 @@ export abstract class DisplayNode {
   constructor(type: string, children: DisplayNode[], equation: DisplayEquation, $element?: SVGView|undefined);
   expr: string;
   log: string;
+  color: string;
   static create(el: Element, equation: DisplayEquation): DisplayNode;
   marginLeft: number;
   marginRight: number;
@@ -246,7 +249,8 @@ export abstract class DisplayNode {
   measure(): void;
   setStatus(status: string): void;
   render(ticker?: Ticker): void;
-  drawElement(p: number, width: number, height: number, baseline: number, scale: number): void;
+  protected positionElement(t: {x: number; y: number; scale: number;}): void;
+  protected drawElement(p: number, width: number, height: number, baseline: number, scale: number): void;
 }
 
 export class DisplayNodeRow extends DisplayNode {
@@ -260,12 +264,18 @@ export class DisplayNodeRow extends DisplayNode {
 
 export class DisplayEquation extends EventTarget {
   readonly $row: SVGView;
+  readonly fontSize: number;
+  readonly isDisplay: boolean;
   root: DisplayNodeRow;
   isReady: boolean;
-  deletedNodes: Set<DisplayNode>;
-  constructor(expr: string, $row: SVGView, dx?: number);
-  parse(expr: string): DisplayNode[];
-  find(search: string): DisplayNode[];
+  readonly deletedNodes: Set<DisplayNode>;
+  private desc;
+  constructor($row: SVGView, dx?: number, align?: string, fontSize?: number, isDisplay?: boolean);
+  setValue(expr: string | Element[]): void;
+  private updateDescription;
+  resize(): void;
+  private parse;
+  private find;
   animate(): Promise<void>;
   addTermAfter(expr: string, search?: string): void;
   addTermBefore(expr: string, search?: string): DisplayNode[];
@@ -279,15 +289,28 @@ export class DisplayEquation extends EventTarget {
   rightSide: DisplayNode[];
 }
 
-export class EquationFlow extends CustomElementView {
-  $svg: SVGParentView;
-  $lastRow: SVGView;
-  isReady: boolean;
-  equation: DisplayEquation;
-  topOffset: number;
-  currentHeight: number;
+export class AlgebraFlow extends CustomElementView {
+  private $svg;
+  private $lastRow;
+  private isReady;
+  private equation;
+  private topOffset;
+  private currentHeight;
+  private currentStep;
+  private $legend;
+  private $steps;
+  private $back;
+  private $next;
+  private nextEvents;
+  private backEvents;
   ready(): void;
   newRow(): Promise<void>;
+  hideLastRow(): Promise<void>;
+  onNextStep(obj: Obj<((equation: DisplayEquation) => Promise<void>)>): void;
+  onBackStep(obj: Obj<((equation: DisplayEquation) => Promise<void>)>): void;
+  goNext(): Promise<void>;
+  goBack(): Promise<void>;
+  private go;
 }
 
 type Callback = (e: any) => void;
