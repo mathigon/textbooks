@@ -9,6 +9,7 @@ import {list, wait} from '@mathigon/core';
 import {numberFormat, Point} from '@mathigon/fermat';
 import {$} from '@mathigon/boost';
 import {AlgebraFlow} from '../../../mathigon.org/src/course/components/algebra/algebra-flow';
+import {DisplayEquation} from '../../../mathigon.org/src/course/components/algebra/display-equation';
 import {CoordinateSystem, Step} from '../shared/types';
 
 
@@ -52,50 +53,53 @@ export function radioactiveChart($step: Step) {
 
 
 export function carbonSolver($step: Step) {
-  const $equation = $step.$('x-algebra-flow') as AlgebraFlow;
+  const $system = $step.$('x-algebra-flow') as AlgebraFlow;
 
-  $equation.on('next', async ({step, equation, system}) => {
-    switch(step) {
-      case 2:
-        await system.newRow();
-        await wait(400);
-        equation.wrapTerms('$1/$2', '800', '1200');
-        equation.deleteTerm('×');
-        await equation.animate();
-        return;
-      case 3:
-        equation.replaceTerm('800/1200', '0.667');
-        await equation.animate();
-        return;
-      case 4:
-        await system.newRow();
-        await wait(400);
-        equation.wrapTerms('log_($2)($1)', '0.667', '2');
-        equation.unwrapTerm('-t/6000');
-        await equation.animate();
-        return;
-      case 5:
-        await system.newRow();
-        await wait(400);
-        equation.replaceTerm('log_2(0.667)', '-0.585');
-        await equation.animate();
-        return;
-      case 6:
-        await system.newRow();
-        await wait(400);
-        equation.moveTermAfter('6000', '-0.585');
-        equation.addTermAfter('×', '-0.585');
-        equation.unwrapTerm('-t');
-        await equation.animate();
-        return;
-      case 7:
-        equation.replaceTerm('-0.585×6000', '-3510');
-        await equation.animate();
-        return;
-      case 8:
-        equation.deleteTerm('-');
-        equation.deleteTerm('-');
-        await equation.animate();
+  $system.onNextStep({
+    2: async (equation) => {
+      await $system.newRow();
+      await wait(400);
+      equation.wrapTerms('$1/$2', '800', '1200');
+      equation.deleteTerm('×');
+      await equation.animate();
+    },
+    3: async (equation) => {
+      equation.replaceTerm('800/1200', '0.667');
+      await equation.animate();
+    },
+    4: async (equation) => {
+      await $system.newRow();
+      await wait(400);
+      equation.wrapTerms('log_($2)($1)', '0.667', '2');
+      equation.unwrapTerm('-t/6000');
+      await equation.animate();
+    },
+    5: async (equation) => {
+      await $system.newRow();
+      await wait(400);
+      equation.replaceTerm('log_2(0.667)', '-0.585');
+      await equation.animate();
+    },
+    6: async (equation) => {
+      await $system.newRow();
+      await wait(400);
+      equation.moveTermAfter('6000', '-0.585');
+      equation.addTermAfter('×', '-0.585');
+      equation.unwrapTerm('-t');
+      await equation.animate();
+    },
+    7: async (equation) => {
+      equation.replaceTerm('-0.585×6000', '-3510');
+      await equation.animate();
+    },
+    8: async (equation) => {
+      equation.deleteTerm('-');
+      equation.deleteTerm('-');
+      await equation.animate();
     }
+  });
+
+  $system.onBackStep({
+    // TODO Implement!
   });
 }

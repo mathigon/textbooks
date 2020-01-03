@@ -203,7 +203,7 @@ can only have whole numbers of atoms. You will learn more about this in our
 ::: column.grow
 
 Now we have all the information needed to determine the age of the Pharaoh
-in our story. The archaeologists decided cut a tiny sample out of the mummy's
+in our story. The archaeologists decided cut a tiny sample out of the mummy’s
 skin. Using a complex machine called a __mass spectrometer__, they were able to
 “count” the number of <sup>12</sup>C and <sup>14</sup>C atoms in the sample.
 
@@ -233,17 +233,17 @@ We can use the equation we found above, and fill in the required parameters:
 `input(1200,"initial") × 2^((-t)/input(6000,"half-life")) = input(800,"amount")`
 
 * Fill in the three parameters from above!
-* First, let's divide both sides of the equation by 1200.
+* Let’s start by dividing both sides of the equation by 1200.
 * We can simplify the right-hand side of the equation.
 * Now, we have to revert the exponent on the left-hand side. To do that, we can
-  use a special function called the __Logarithm__, which we'll learn more about
+  use a special function called the __Logarithm__, which we’ll learn more about
   later.
 * Using a calculator, we can find the value of `log_2(0.667)`.
-* The rest should be simple: let's multiply both sides of the equation by 6000.
+* The rest should be simple: let’s multiply both sides of the equation by 6000.
 * We can simplify the right-hand side of the equation.
 * We can also remove the - sign on both sides of the equation.
-* Thus, we see that it takes 3510 years for this many <sup>14</sup>C atoms to
-  decay.
+* Thus, we see that it takes 3510 years for the required number of
+  <sup>14</sup>C atoms to decay.
 
 :::
 
