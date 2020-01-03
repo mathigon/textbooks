@@ -1968,10 +1968,10 @@ und beobachte, wie dieser Bereich auf einer Kugel _tatsächlich_ aussieht:
 
     .sphere-maps
       x-select.tabs
-        .projection Mercator
-        .projection Zylindrisch
-        .projection Robinson
-        .projection Mollweide
+        .projection(data-name="mercator") Mercator
+        .projection(data-name="cylindrical") Zylindrisch
+        .projection(data-name="robinson") Robinson
+        .projection(data-name="mollweide")  Mollweide
       .map-body
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")

@@ -237,7 +237,7 @@ is approximately `A = π r^2`.
 Here you can see a circle divided into ${toWord(n)} rings. Like before, you can
 move the slider to “uncurl” the rings.
 
-{.reveal(when="slider")} If we increase the number of wedges to ${n2}{n2|4|2,12,1},
+{.reveal(when="slider")} If we increase the number of rings to ${n2}{n2|4|2,12,1},
 this shape starts to look more and more like a [[triangle|rectangle|trapezium]].
 
 {.reveal(when="blank-0")} The height of the triangle is equal to the 
@@ -1970,10 +1970,10 @@ the red square, and watch what this area _actually_ looks like on a globe:
 
     .sphere-maps
       x-select.tabs
-        .projection Mercator
-        .projection Cylindrical
-        .projection Robinson
-        .projection Mollweide
+        .projection(data-name="mercator") Mercator
+        .projection(data-name="cylindrical") Cylindrical
+        .projection(data-name="robinson") Robinson
+        .projection(data-name="mollweide") Mollweide
       .map-body
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")

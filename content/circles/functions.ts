@@ -1083,10 +1083,10 @@ export async function sphereMaps($step: Step) {
   const grid = d3.geoGraticule()();
   const land = topojson.feature(world, world.objects.land);
   const projections: Obj<any> = {
-    Cylindrical: (d3 as any).geoCylindricalEqualArea().scale(90),
-    Mercator: d3.geoMercator().scale(70),
-    Mollweide: (d3 as any).geoMollweide().scale(78),
-    Robinson: (d3 as any).geoRobinson().scale(70)
+    cylindrical: (d3 as any).geoCylindricalEqualArea().scale(90),
+    mercator: d3.geoMercator().scale(70),
+    mollweide: (d3 as any).geoMollweide().scale(78),
+    robinson: (d3 as any).geoRobinson().scale(70)
   };
 
   const globeProjection = d3.geoOrthographic().clipAngle(90)
@@ -1115,11 +1115,11 @@ export async function sphereMaps($step: Step) {
   }
 
   const $select = $step.$('x-select') as Select;
-  $select.on('change', ($el: ElementView) => updateProjection($el.text));
+  $select.on('change', ($el: ElementView) => updateProjection($el.data.name!));
   $select.one('change', () => $step.score('projection'));
   drag.on('move', updateSelection);
   drag.one('end', () => $step.score('move'));
-  updateProjection($select.$active.text);
+  updateProjection($select.$active.data.name!);
 }
 
 
