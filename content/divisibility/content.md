@@ -53,7 +53,7 @@ __{.red}A__, and that __{.red}A__ is a __multiple__ of __{.blue}B__. We often
 write __{.blue}B__|__{.red}A__, where the vertical bar simply means _“divides”_.
 
 For example, __{.green}7__ × 3 = __{.orange}21__, so __{.green}7__ is a
-[[factor|multiple]] of __{.orange}21__, __{.orange}21__ is a [[multiple|factor]]
+[[factor|multiple]] of __{.orange}21__. It follows that __{.orange}21__ is a [[multiple|factor]]
 of __{.green}7__, and __{.green}7__|__{.orange}21__.
 
 ---
@@ -109,7 +109,7 @@ until we meet in the middle.
       .legend(slot="legend") 5 also doesn’t divide 42 so we move on.
       .legend(slot="legend") 6 does divide 42 again. Its pair is 42 ÷ 6 = 7. Notice how we’ve met in the middle after only a few attempts, without having to test all numbers from 7 to 42.
 
-The only special case with this method is for square number: in that case, you
+The only special case with this method is for square numbers: in that case, you
 will meet at just a single number in the middle, like 64 = 8 × 8.
 
     //- TODO Factorisation exercises
@@ -455,7 +455,7 @@ assumption must be incorrect.
 > goals: calculator
 > section: distribution-of-primes
 
-The easiest way to check if a number is prime, is to try to divide it by all
+The easiest way to check if a number is prime is to try to divide it by all
 smaller integers. Computers can do this very quickly and efficiently. For _very
 large_ numbers, with hundreds of digits, there are also more efficient
 algorithms. Some of these even use probability to determine if a number is
@@ -676,7 +676,7 @@ functions are always “approximately similar”, and this was proven in 1896.
 However, as you can see above, there is still a significant error between the
 actual number of primes, and Gauss’s approximation. In 1859, the mathematician
 [Bernhard Riemann](bio:riemann) discovered an approximation that looked much
-better, but he wasn’t able to prove that that would _always_ work. His idea
+better, but he wasn’t able to prove that it would _always_ work. His idea
 became known as the __Riemann Hypothesis__.
 
 Hundreds of mathematicians have tried to prove Riemann’s hypothesis, but all
@@ -844,7 +844,7 @@ Therefore the lcm of __{.m-blue}12__, __{.m-green}30__ and __{.m-yellow}45__ is
 ---
 > id: race6
 
-A special case are prime numbers: the lcm of two different primes is simply 
+A special case is prime numbers: the lcm of two different primes is simply 
 their [[product|sum|difference]], because they don’t have any common prime
 factors which would get “canceled”.
 
@@ -966,7 +966,7 @@ Now we have a simple method for finding the gcf of two numbers:
 
     ol.proof
       li Find the prime factorisation of each number.
-      li Multiple the prime factors which are in both numbers.
+      li Multiply the prime factors which are in both numbers.
 
 Once again prime numbers are special: the gcf of two different primes is always
 [[1]], because they don’t share any prime factors.
