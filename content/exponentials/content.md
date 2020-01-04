@@ -166,13 +166,22 @@ Using exponents, we can write down an equation for the amount left after `t` yea
 Of course 1200 and 6000 were just arbitrary numbers. A more general equation
 is:
 
-{.text-center} `§"amount" = "initial" × 2^((-t)/"half-life")`
+::: x-algebra-flow
 
-Since the equation contains an _exponent_, and the number of atoms _decreases_,
-we call this process __exponential decay__.
+`"amount" = "initial" × (1/2)^(t/"half-life")`
+
+* Using the laws for exponents, we can flip the fraction `1/2` into a 2, if
+  we multiply the exponent by `–1`.
+* This is the simplest equation that describes how many atoms are left after
+  _t_ number of years.
+
+:::
 
 ---
 > id: radioactive-chart
+
+Since the equation contains an _exponent_, and the number of atoms _decreases_,
+we call this process __exponential decay__.
 
 We can plot the amount of <sup>14</sup>C atoms over time in a coordinate system.
 If we start with an initial amount of ${format(x0)}{x0|3000|100,4000,100} and
@@ -219,7 +228,7 @@ contained 1200 <sup>14</sup>C atoms when the Pharaoh was alive.
 
 :::
 
-All we have to do now is calculate how long it takes for the missing 400
+All we have to do now is calculate how long it takes for the 400 missing
 <sup>14</sup>C atoms to decay. That number is precisely the [[time since the
 Pharaoh died|age of the Pharaoh when he died]].
 
@@ -234,16 +243,17 @@ We can use the equation we found above, and fill in the required parameters:
 
 * Fill in the three parameters from above!
 * Let’s start by dividing both sides of the equation by 1200.
-* We can simplify the right-hand side of the equation.
-* Now, we have to revert the exponent on the left-hand side. To do that, we can
-  use a special function called the __Logarithm__, which we’ll learn more about
-  later.
+* We can find the decimal value of the fraction on the right-hand side of the
+  equation.
+* Now, we have to deal with the exponent on the left-hand side. To do that, we
+  can use a special function called the __Logarithm__, which we’ll learn more
+  about later.
 * Using a calculator, we can find the value of `log_2(0.667)`.
 * The rest should be simple: let’s multiply both sides of the equation by 6000.
 * We can simplify the right-hand side of the equation.
 * We can also remove the - sign on both sides of the equation.
-* Thus, we see that it takes 3510 years for the required number of
-  <sup>14</sup>C atoms to decay.
+* Thus, we see that it takes 3510 years for the required number
+  of <sup>14</sup>C atoms to decay.
 
 :::
 

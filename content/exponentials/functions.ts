@@ -36,6 +36,21 @@ export function radioactiveTable1($step: Step) {
   $step.onScore('blank-3', () => $step.$('.c4')!.addClass('on'));
 }
 
+export function radioactiveEquation($step: Step) {
+  const $system = $step.$('x-algebra-flow') as AlgebraFlow;
+
+  $system.onNextStep({
+    1: async (equation) => {
+      await $system.newRow();
+      await wait(400);
+      equation.unwrapTerm('2');
+      equation.unwrapTerm('2');
+      equation.addTermBefore('-', 't');
+      await equation.animate();
+    }
+  });
+}
+
 export function radioactiveChart($step: Step) {
   const $plot = $step.$('x-coordinate-system') as CoordinateSystem;
 
