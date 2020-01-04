@@ -39,7 +39,7 @@ equations that help predict when the next one might happen.
 ::: column(width=400)
 
 Bankers also look at historic data of stock prices, interest rates and currency
-exchange rates, to estimate how __financial markets__ might change in the
+exchange rates to estimate how __financial markets__ might change in the
 future. Being able to predict if the value of a stock will go up or down can be
 extremely lucrative!
 
@@ -223,7 +223,7 @@ Every term is formed by increasingly large squares:
 
 For the triangle numbers we found a recursive formula that tells you the _next_
 term of the sequence as a function of of its _previous_ terms. For square
-numbers we can do even better: an equation that tells you the *n*th term
+numbers we can do even better: a formula that tells you the *n*th term
 directly, without first having to calculate all the previous ones:
 
 {.text-center.s-purple} *{.n}`x_n`* = _{x-equation(solution="n^2")}_
@@ -231,8 +231,8 @@ directly, without first having to calculate all the previous ones:
 ---
 > id: explicit
 
-Equations like this are called [__explicit formulas__](gloss:sequence-explicit).
-We can use it, for example, to calculate that the 13th square number is [[169]],
+These are called [__explicit formulas__](gloss:sequence-explicit).
+We can use this one, for example, to calculate that the 13th square number is [[169]],
 without first finding the previous 12 square numbers.
 
 ---
@@ -322,7 +322,7 @@ Here are a few more examples of action sequence photography for your enjoyment:
 
 In 1682, the astronomer [Edmond Halley](bio:halley) observed an unusual
 phenomenon: a glowing white object with a long tail that moved across the night
-sky. It was a __comet__, a small, icy rock that is flying through space, while
+sky. It was a __comet__, a small, icy rock that was flying through space, while
 leaving behind a trail of dust and ice.
 
 Halley remembered that other astronomers had observed similar comets much
@@ -340,7 +340,7 @@ consecutive observations is the same in both cases: [[76]] years.
 > id: halley-1
 
 Halley concluded that all three observations were in fact of the same comet –
-which is now called _Halley’s comet_. It is orbiting around the sun and passes
+which is now called _Halley’s comet_. It was orbiting around the sun and passed
 Earth approximately every 76 years. He also predicted when the comet would be
 visible next:
 
@@ -704,7 +704,7 @@ we can work out how many new people are affected at any step:
 
 The number of people increases incredibly quickly. In the 10th step, you would
 reach 19,683 new ones, and after 22 steps you would have reached more people
-than currently alive on Earth.
+than are currently alive on Earth.
 
 This sequence of numbers has a special name: the __powers of 3__. As you can
 see, every term is actually just a different [power](gloss:powers) of 3:
@@ -875,7 +875,7 @@ You’ve already seen the recursive formula for triangle numbers:
 > id: billiard-pool
 
 It is no coincidence that there are always 10 pins when bowling or 15 balls when
-playing billiard: they are both triangle numbers!
+playing billiards: they are both triangle numbers!
 
 ::: column(width=320)
 
@@ -1457,7 +1457,7 @@ sunflower and pine cone you saw at the beginning of this section.
 
 Both these plants grow outwards from their center (a part of the plant called
 the _meristem_). As new seeds, leaves or petals are added, they push the
-existing ones further outside.
+existing ones further outwards.
 
 Move the slider on the right to visualise how a plant grows. Notice how every
 leaf is added at a different rotation than the previous one. The angle between
@@ -1603,7 +1603,7 @@ explain why?
 __3. Fibonacci Staircases__
 
 When walking up the stairs, I can either take single steps or leap over two
-steps at a time. This means that there are many different possibilities how I
+steps at a time. This means that there are many different possibilities for how I
 could go up a staircase. For example, if there are 5 steps, I have 8 different
 choices:
 
@@ -1708,7 +1708,7 @@ some of the most important and most mysterious concepts in mathematics!
 To determine if a number is [prime](gloss:prime), we have to find all of its
 [factors](gloss:factor). Usually we would _multiply_ these factors to get back
 the original number, but let’s see what happens if we _add up_ all factors
-of a number:
+of a number (excluding the number itself):
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
