@@ -278,11 +278,12 @@ export class DisplayEquation extends EventTarget {
   private find;
   animate(): Promise<void>;
   addTermAfter(expr: string, search?: string): void;
-  addTermBefore(expr: string, search?: string): DisplayNode[];
+  addTermBefore(expr: string, search?: string): void;
   deleteTerm(expr: string): void;
   replaceTerm(search: string, expr: string): void;
-  moveTermAfter(expr: string, search?: string): DisplayNode[];
-  moveTermBefore(expr: string, search?: string): DisplayNode[];
+  moveTermAfter(expr: string, search?: string): void;
+  moveTermBefore(expr: string, search?: string): void;
+  moveTermToStart(expr: string): void;
   wrapTerms(expr: string, ...searchTerms: string[]): void;
   unwrapTerm(search: string, levels?: number): void;
   leftSide: DisplayNode[];
@@ -306,8 +307,8 @@ export class AlgebraFlow extends CustomElementView {
   ready(): void;
   newRow(): Promise<void>;
   hideLastRow(): Promise<void>;
-  onNextStep(obj: Obj<((equation: DisplayEquation) => Promise<void>)>): void;
-  onBackStep(obj: Obj<((equation: DisplayEquation) => Promise<void>)>): void;
+  onNextStep(obj: Obj<((equation: DisplayEquation) => void)>): void;
+  onBackStep(obj: Obj<((equation: DisplayEquation) => void)>): void;
   goNext(): Promise<void>;
   goBack(): Promise<void>;
   private go;
