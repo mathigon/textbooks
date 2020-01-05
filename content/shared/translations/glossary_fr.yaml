@@ -184,10 +184,9 @@ base-10:
     different values, from 0 to 9.
 
 bipartite-graph:
-  title: Bipartite Graph
-  text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is
-    connected to all the vertices in the opposite set, but none of the vertices
-    in its own set.
+  title: Graphe Biparti
+  text: Un __Graphe Biparti__ est un graphe constitué de deux groupes de sommets,
+    où chaque sommet est connecté aux sommets de l'autre groupe mais pas aux sommets de son propre groupe.
   link: /course/graph-theory/handshakes#handshakes-4
 
 blackjack:
@@ -304,9 +303,9 @@ complementary-angles:
   text: Two angles are __complementary__ if they add up to 90° (a right angle).
 
 complete-graph:
-  title: Complete Graph
-  text: In __complete graphs__, every vertex is connected to every other vertex.
-    A complete graph with _n_ vertices has `(n×(n-1))/2` edges.
+  title: Graphe Complet
+  text: Dans un __graphe complet__, chaque sommet est connecté à tous les autres sommets.
+    Un graphe complet à _n_ sommets a `(n×(n-1))/2` arêtes.
   link: /course/graph-theory/handshakes#handshakes-3
 
 complex-number:
@@ -471,9 +470,9 @@ dilation:
   link: /course/transformations/dilations
 
 directed-graph:
-  title: Directed Graph
-  text: In a __directed graph__, every edge has an “arrow”, i.e. a start vertex
-    and an end vertex.
+  title: Graphe Orienté
+  text: Dans un __Graphe Orienté__, chaque arête est une flèche, c'est à dire que
+    chaque arrête est constitué d'un sommet de départ et d'un sommet d'arrivé.
   link: /course/graph-theory/introduction#intro-1
 
 discriminant:
@@ -668,8 +667,8 @@ golden-ratio:
   link: /course/sequences/fibonacci#golden-ratio-1
 
 graph:
-  title: Graph
-  text: A __graph__ is a collection of vertices connected by edges.
+  title: Graphe
+  text: Un __graphe__ est un ensemble de sommets reliés par des arêtes.
   link: /course/graph-theory/introduction
 
 graph-cycle:
@@ -678,23 +677,23 @@ graph-cycle:
   link: /course/graph-theory/introduction#intro-4
 
 graph-degree:
-  title: Degree
-  text: The __degree__ of a vertex is the number of edges that meet at that vertex.
+  title: Degré
+  text: Le __Aegré__ d'un sommet est le nombre d'arêtes reliées à ce sommet..
   link: /course/graph-theory/introduction#intro-3
 
 graph-edge:
-  title: Edge
-  text: __Edges__ are the lines that connect vertices (points) in a graph.
+  title: Arête
+  text: Les __Arêtes__ sont les lignes qui relient les sommets (points) d'un graphe.
   link: /course/graph-theory/introduction
 
 graph-order:
-  title: Order
-  text: The __order__ of a graph is the number of vertices in it.
+  title: Ordre
+  text: L'__ordre__ d'un graphe est le nombre de sommets du graphe.
   link: /course/graph-theory/introduction#intro-3
 
 graph-vertex:
-  title: Vertex
-  text: A __vertex__ is a point or node that is part of a graph.
+  title: Sommet
+  text: Un __sommet__ est un point ou nœud d'un graphe.
   link: /course/graph-theory/introduction
 
 gravity:

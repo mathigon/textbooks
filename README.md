@@ -70,4 +70,4 @@ You can find out more on [Mathigon.io](https://mathigon.io).
 
 ---
 
-© Mathigon 2016–2019, All rights reserved
+© Mathigon 2016–2020, All rights reserved
