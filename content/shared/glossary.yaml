@@ -156,9 +156,9 @@ atom:
   text: |
     __Atoms__ are the particles that make up all ordinary matter: solids,
     liquids, gases and plasma. Atoms consist of a positively-charged _core_ (or
-    _nucleus_), made up of _protons_ and _neutrons_, and surrounded my shells
+    _nucleus_), made up of _protons_ and _neutrons_, and surrounded by shells
     of negatively-charged _electrons_. The diameter of an atom is approximately
-    a ten-millionth of a millimeter.
+    a ten-millionth of a millimetre.
 
 axiom:
   title: Axiom
@@ -933,8 +933,8 @@ net:
 
 neutron:
   title: Neutron
-  text: A __neutron__ is one of the particles that makes up the core of an atom.
-    It has no charge, and approximately the same mass as a proton.
+  text: A __neutron__ is one of the particles that make up the core of an atom.
+    It has no charge, and has approximately the same mass as a proton.
 
 np:
   title: NP Hard Problems
@@ -1216,9 +1216,9 @@ protein:
 
 proton:
   title: Proton
-  text: A __Proton__ is one of the particles that makes up the core of an atom.
-    It has charge +1. The number of protons in an atom is called it’s “atomic
-    number”, and it defines what kind of element it is.
+  text: A __Proton__ is one of the particles that make up the core of an atom.
+    It has a charge of +1. The number of protons in an atom is called its
+    “atomic number”, and it determines what kind of element it is.
 
 pyramid:
   title: Pyramid
