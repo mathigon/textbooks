@@ -175,8 +175,8 @@ is:
 
 `"amount" = "initial" × (1/2)^(t/"half-life")`
 
-* Using the laws for exponents, we can flip the fraction `1/2` into a 2, if
-  we multiply the exponent by `–1`.
+* Using the exponents laws, we can flip the fraction `1/2` into a 2, if we
+  multiply the exponent by `–1`.
 * {.new-row} This equation describes how many atoms are left after _t_ number of
   years.
 
