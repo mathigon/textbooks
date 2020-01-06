@@ -213,7 +213,7 @@ circles:
   title: Circles and Pi
   trailer: tBJUNvCBkLo
   color: 5934d9
-  locales: [en, de]
+  locales: [en, de, cn]
   next: graph-theory
 
 non-euclidean-geometry:

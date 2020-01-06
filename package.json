@@ -7,8 +7,9 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "server": "node server/app.js --use-strict & gulp watch",
-    "start": "gulp && npm run server"
+    "server": "node server/app.js --use-strict",
+    "watch": "gulp watch",
+    "start": "gulp && npm-run-all --parallel server watch"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -34,6 +35,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "marked": "^0.7.0",
+    "npm-run-all": "^4.1.5",
     "pug": "^2.0.3",
     "rollup": "^1.27.0",
     "rollup-plugin-node-resolve": "^5.2.0",
