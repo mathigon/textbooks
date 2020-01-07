@@ -61,8 +61,9 @@ function getCourse(courseId, locale='en') {
 // -----------------------------------------------------------------------------
 // Web Server
 
+const port = process.env.PORT || 5000
 const app = express();
-app.set('port', process.env.PORT || 5000);
+app.set('port', port);
 app.set('env', 'development');
 app.set('views', path.join(__dirname, 'assets'));
 app.set('view engine', 'pug');
@@ -96,6 +97,6 @@ app.post('/course/:course/ask', function(req, res) {
   res.type('txt').send(JSON.stringify([{content: '[NOT IMPLEMENTED]'}]));
 });
 
-app.listen(5000, function() {
+app.listen(port, function() {
   console.log('Server listening on port 5000');
 });
