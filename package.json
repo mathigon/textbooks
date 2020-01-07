@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "server": "node server/app.js --use-strict & gulp watch",
-    "start": "gulp && npm run server"
+    "postinstall": "gulp",
+    "start": "npm run server"
   },
   "engines": {
     "node": ">=8.0.0"
