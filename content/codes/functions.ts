@@ -7,8 +7,19 @@
 import {EventTarget} from '@mathigon/core';
 // import {clamp, letterFrequency, caesarCipher, cipherLetterFreq} from '@mathigon/fermat';
 // import {$, $N} from '@mathigon/boost';
-// import {Step} from '../shared/types';
+import {Step} from '../shared/types';
 
+export function binarySimulation($step: Step) {
+
+  console.log($step);
+  // NEXT NEXT NEXT let's get some code in here... make it display a random number
+
+
+  const buttons = $step.$$('.btn');
+  buttons[0].on('click', () => {
+    $step.score('advance');
+  });
+}
 
 // -----------------------------------------------------------------------------
 // Utilities and CLasses

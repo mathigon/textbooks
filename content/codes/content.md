@@ -41,7 +41,263 @@ algorithms to encode and decode messages.
 
 ### Binary Codes
 
+Binary numbers are pretty cool, man. They're like regular numbers but there are only [[two|three|four]] of them.
+
+Binary numbers were NOT invented by [Alan Turing](bio:turing) and [Charles Boole](bio:boole), but both of their works were shaped by it.
+
+#### Fingers
+
+Look at all the different ways we can count using our fingers.
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_00.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_01.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_02.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_03.jpg" width=100 height=100)
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_04.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_05.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_06.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_07.jpg" width=100 height=100)
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_08.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_09.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_10.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_11.jpg" width=100 height=100)
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_12.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_13.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_14.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_15.jpg" width=100 height=100)
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_16.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_17.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_18.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_19.jpg" width=100 height=100)
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_20.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_21.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_22.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_23.jpg" width=100 height=100)
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_24.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_25.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_26.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_27.jpg" width=100 height=100)
+
+::: column(width=100 parent="padded-thin")
+    x-media(src="images/binary_28.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_29.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_30.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_31.jpg" width=100 height=100)
+
+:::
+
+
+#### Multiplication
+
+To find the lcm of any two numbers, it is important to realise that if
+__{.m-yellow}a__ divides __{.m-blue}b__, then __{.m-blue}b__ needs to have all
+the prime factors of __{.m-yellow}a__ (plus some more):
+
+    table.table-tiny
+      tr
+        td.text-right: .number-ball.yellow 12
+        td: .divides
+        td.text-left: .number-ball.blue 60
+      tr
+        td
+          .number-ball.l-yellow 2
+          | &nbsp;×&nbsp;
+          .number-ball.l-yellow 2
+          | &nbsp;×&nbsp;
+          .number-ball.l-yellow 3
+        td
+        td
+          .number-ball.l-yellow 2
+          | &nbsp;×&nbsp;
+          .number-ball.l-yellow 2
+          | &nbsp;×&nbsp;
+          .number-ball.l-yellow 3
+          | &nbsp;×&nbsp;
+          .number-ball.l-blue 5
+
+This is easy to verify: if a prime factor divides __{.m-yellow}a__, and
+__{.m-yellow}a__ divides __{.m-green}b__, then that prime factor must _also_
+divide __{.m-green}b__.
+
+---
+> id: race3
+
+To find the lcm of __{.m-green}40__ and __{.m-blue}60__, we first need to find
+the [prime factorisation](gloss:factorisation) of both:
+
+    table.table-tiny
+      tr
+        td: .number-ball.blue 40
+        td: | =
+        td: .number-ball.l-blue 2
+        td: | ×
+        td: .number-ball.l-blue 2
+        td: | ×
+        td: .number-ball.l-blue 2
+        td(colspan=3): | ×
+        td: .number-ball.l-blue 5
+      tr
+        td: .number-ball.green 60
+        td: | =
+        td: .number-ball.l-green 2
+        td: | ×
+        td: .number-ball.l-green 2
+        td(colspan=3): | ×
+        td: .number-ball.l-green 3
+        td: | ×
+        td: .number-ball.l-green 5
+
+---
+> id: race3
+
+To find the lcm of __{.m-green}40__ and __{.m-blue}60__, we first need to find
+the [prime factorisation](gloss:factorisation) of both:
+
+    table.table-tiny
+      tr
+        td: .number-ball.blue 40
+        td: | =
+        td: .number-ball.l-blue 32
+        td: | +
+        td: .number-ball.l-blue 8
+        td(colspan=3): | ×
+        td: .number-ball.l-blue 5
+      tr
+        td: .number-ball.green 60
+        td: | =
+        td: .number-ball.l-green 2
+        td: | ×
+        td: .number-ball.l-green 2
+        td(colspan=3): | ×
+        td: .number-ball.l-green 3
+        td: | ×
+        td: .number-ball.l-green 5
+
+Suppose that __{.m-red}X__ is the lcm of __{.m-green}40__ and __{.m-blue}60__.
+Then __{.m-green}40__ divides __{.m-red}X__, so _{span.number-ball.small.l-blue}2_,
+_{span.number-ball.small.l-blue}2_, _{span.number-ball.small.l-blue}2_ and
+_{span.number-ball.small.l-blue}5_ must be prime factors of __{.m-red}X__. Also,
+__{.m-blue}60__ divides __{.m-red}X__, so __{span.number-ball.small.l-green}2__,
+_{span.number-ball.small.l-green}2_, _{span.number-ball.small.l-green}3_ and
+_{span.number-ball.small.l-green}5_ must be prime factors of __{.m-red}X__.
+
+---
+> id: race4
+
+To find __{.m-red}X__, we simply combine all the prime factors of __{.m-green}40__
+and __{.m-blue}60__, but any duplicates we only need once:
+
+{.text-center} __{.m-red}X__ &nbsp;=&nbsp; _{span.number-ball.l-blue-green}2_ ×
+_{span.number-ball.l-blue-green}2_ × _{span.number-ball.l-blue}2_ ×
+_{span.number-ball.l-green}3_ × _{span.number-ball.l-blue-green}5_
+
+This gives us that __{.m-red}X__ = 120, just like we saw above. Notice that if
+the same prime factor appears multiple times, like 2 above, we need to keep the
+maximum occurrences in one of the two numbers (3 times in __{.m-green}40__ is
+more than 2 times in __{.m-blue}60__).
+
+---
+> id: race5
+
+Now we have a simple method for finding the lcm of two numbers:
+
+    ol.proof
+      li Find the prime factorisation of each number.
+      li Combine all prime factors, but only count duplicates once.
+
+We can use the same method to find the binary values of these three numbers,
+like __{.m-blue}28__, __{.m-green}21__ and __{.m-yellow}7__:
+
+    table.table-tiny
+      tr
+        td: .number-ball.blue 28
+        td: | =
+        td: .number-ball.l-blue 16
+        td: | +
+        td: .number-ball.l-blue 8
+        td: | +
+        td: .number-ball.l-blue 4
+      tr
+        td: .number-ball.green 21
+        td: | =
+        td: .number-ball.l-green 16
+        td(colspan=3): | +
+        td: .number-ball.l-green 4
+        td(colspan=3): | +
+        td: .number-ball.l-green 1
+      tr
+        td: .number-ball.yellow 7
+        td: | =
+        td(colspan=4)
+        td: .number-ball.l-yellow 4
+        td: | +
+        td: .number-ball.l-yellow 2
+        td: | +
+        td: .number-ball.l-yellow 1
+
+Therefore the binary value of  __{.m-blue}28__ is [[11100]].
+The binary value of __{.m-green}21__ is [[10101]].
+The binary value of  __{.m-yellow}7__ is [[00111]].
+
+    //- TODO Exercises
+
+
+___
+> id: binary-simulation
+> goals: advance
+> title: Experiment
+
+In this animation you can blah blah blah:
+
+    .box
+      .box-title: h3 Rolling Binary
+      .box-body
+        p.md We roll our dice and do the thing.
+        p.btn-row
+          button.btn Advance
+
+Ugh what am I missing?
+
 {.todo} TODO
+
+{.reveal(when="advance")} Yay we did it __baby__.
 
 ---
 

@@ -124,3 +124,53 @@
   position: absolute;
   top: 0;
 }
+
+.number-ball {
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  min-width: 20px;
+  padding: 0 5px;
+  border-radius: 20px;
+  background: @red;
+  color: white;
+  position: relative;
+
+  &.blue { background: @blue; }
+  &.green { background: @green; }
+  &.yellow { background: @yellow; }
+
+  &.l-blue { background: fade(@blue, 40%); }
+  &.l-green { background: fade(@green, 40%); }
+  &.l-yellow { background: fade(@yellow, 40%); }
+  &.l-blue-green { background: linear-gradient(to bottom right, fade(@blue, 40%) 50%, fade(@green, 40%) 50%); }
+
+  &.small { padding: 0; width: 24px; line-height: 24px; font-size: 1em; margin: -6px 1px; }
+
+  &.blue.cross { position: relative; background: fade(@blue, 30%); }
+  &.cross:after {
+    content: "";
+    width: 150%;
+    height: 2px;
+    background: #c00;
+    position: absolute;
+    left: -25%;
+    top: 50%;
+    transform: rotate(-45deg);
+    margin-top: -1px;
+  }
+
+  &.legs:before, &.legs:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: @light-grey;
+  }
+  &.legs:before { transform: rotate(-45deg); top: 37px; right: 21px; }
+  &.legs:after { transform: rotate(45deg); top: 37px; left: 21px; }
+
+  &.legs.b:before { transform: rotate(-30deg); top: 33px; right: 24px; }
+  &.legs.a:after { transform: rotate(30deg); top: 33px; left: 24px; }
+}

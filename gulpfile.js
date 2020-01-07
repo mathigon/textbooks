@@ -19,6 +19,8 @@ const tsconfig = require('./tsconfig.json');
 const LANGUAGES = ['en', 'es', 'vn', 'cn', 'tr', 'de', 'fr'];
 const CACHE = __dirname + '/content/.cache.json';
 
+const connect = require('gulp-connect');
+
 
 function markdown() {
   return gulp.src(['content/*/', '!content/shared/'])
@@ -45,6 +47,15 @@ function stylesheets() {
       .pipe(rename({extname: '.css'}))
       .pipe(gulp.dest('server/assets/resources'));
 }
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: ['.'],
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  })
+
+});
 
 exports.watch = () => {
   gulp.watch('content/**/*.{md,yaml}', markdown);

@@ -14,25 +14,24 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-less": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
     "@mathigon/boost": "^0.4.3",
     "@mathigon/core": "^0.3.4",
     "@mathigon/fermat": "^0.3.4",
     "@mathigon/hilbert": "^0.3.4",
     "@types/d3": "^5.7.2",
     "@types/topojson": "^3.2.2",
-    "three": "^0.110.0"
-  },
-  "devDependencies": {
+    "three": "^0.110.0",
     "@mathigon/parser": "^0.4.2",
     "autoprefixer": "^9.7.1",
     "emojione-assets": "^3.1.1",
     "express": "^4.16.4",
     "express-validator": "^5.3.1",
-    "gulp": "^4.0.2",
-    "gulp-better-rollup": "^4.0.1",
-    "gulp-less": "^4.0.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
     "marked": "^0.7.0",
     "pug": "^2.0.3",
     "rollup": "^1.27.0",
@@ -41,5 +40,8 @@
     "tslib": "^1.10.0",
     "typescript": "^3.7.2",
     "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    
   }
 }
