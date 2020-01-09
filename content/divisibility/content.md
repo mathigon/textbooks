@@ -53,8 +53,8 @@ __{.red}A__, and that __{.red}A__ is a __multiple__ of __{.blue}B__. We often
 write __{.blue}B__|__{.red}A__, where the vertical bar simply means _“divides”_.
 
 For example, __{.green}7__ × 3 = __{.orange}21__, so __{.green}7__ is a
-[[factor|multiple]] of __{.orange}21__. It follows that __{.orange}21__ is a [[multiple|factor]]
-of __{.green}7__, and __{.green}7__|__{.orange}21__.
+[[factor|multiple]] of __{.orange}21__. Similarly, __{.orange}21__ is a [[multiple|factor]]
+of __{.green}7__, and we can write __{.green}7__|__{.orange}21__.
 
 ---
 > id: divisibility-game
