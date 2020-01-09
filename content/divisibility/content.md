@@ -844,7 +844,7 @@ Therefore the lcm of __{.m-blue}12__, __{.m-green}30__ and __{.m-yellow}45__ is
 ---
 > id: race6
 
-A special case is prime numbers: the lcm of two different primes is simply 
+Prime numbers are a special case: the lcm of two different primes is simply 
 their [[product|sum|difference]], because they don’t have any common prime
 factors which would get “canceled”.
 
