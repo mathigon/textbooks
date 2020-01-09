@@ -231,7 +231,7 @@ directly, without first having to calculate all the previous ones:
 ---
 > id: explicit
 
-This is called an [__explicit formulas__](gloss:sequence-explicit).
+This is called an [__explicit formula__](gloss:sequence-explicit).
 We can use it, for example, to calculate that the 13th square number is [[169]],
 without first finding the previous 12 square numbers.
 
@@ -322,7 +322,7 @@ Here are a few more examples of action sequence photography for your enjoyment:
 
 In 1682, the astronomer [Edmond Halley](bio:halley) observed an unusual
 phenomenon: a glowing white object with a long tail that moved across the night
-sky. It was a __comet__, a small, icy rock that was flying through space, while
+sky. It was a __comet__, a small, icy rock that is flying through space, while
 leaving behind a trail of dust and ice.
 
 Halley remembered that other astronomers had observed similar comets much
