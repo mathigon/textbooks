@@ -231,8 +231,8 @@ directly, without first having to calculate all the previous ones:
 ---
 > id: explicit
 
-These are called [__explicit formulas__](gloss:sequence-explicit).
-We can use this one, for example, to calculate that the 13th square number is [[169]],
+This is called an [__explicit formulas__](gloss:sequence-explicit).
+We can use it, for example, to calculate that the 13th square number is [[169]],
 without first finding the previous 12 square numbers.
 
 ---
@@ -340,7 +340,7 @@ consecutive observations is the same in both cases: [[76]] years.
 > id: halley-1
 
 Halley concluded that all three observations were in fact of the same comet –
-which is now called _Halley’s comet_. It was orbiting around the sun and passed
+which is now called _Halley’s comet_. It is orbiting around the sun and passes
 Earth approximately every 76 years. He also predicted when the comet would be
 visible next:
 
