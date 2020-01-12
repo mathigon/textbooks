@@ -136,14 +136,10 @@ export function kri8it($section: Step) {
     // select all the [lines, paths, polylines] | *path from kri8it
     
     const $lines = $section.$$('path, line, polyline') as SVGView[];
-    console.log(`found ${$lines.length} lines`);
-    console.log($lines);
     const $runner = $section.$('#runner') as SVGView;
-    console.log($runner);
 
     // KRI8: figure out data structure for traversing between connected paths
-    const velocityInverse = 1;
-    // KRI8: how come they go different speeds? It should be 1 ms per strokeLength...
+    const velocityInverse = 3;
     const durations = $lines.map(l => l.strokeLength * velocityInverse);
 
     let a = (i: number): AnimationResponse => {
@@ -151,7 +147,7 @@ export function kri8it($section: Step) {
             let point = $lines[i].getPointAt(p);
             let translated = point.translate(new Point(14.620133, 14)); // shift by the "translate" property of the root
             $runner.setCenter(translated);
-        }, durations[0]);
+        }, durations[i]);
     }
 
     // make it recursive instead of hard-coding
