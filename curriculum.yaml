@@ -556,3 +556,11 @@ exploding-dots:
   tile: /images/og-tile/exploding-dots.jpg
   color: 6f27cc
   hideTitle: true
+
+
+# ------------------------------------------------------------------------------
+# For Testing
+testing:
+  title: For Testing
+  description: This is not real.
+  color: 363535

@@ -9,7 +9,7 @@
   "scripts": {
     "server": "node server/app.js --use-strict",
     "dev-server": "node server/app.js --use-strict & gulp watch",
-    "dev-start": "gulp && npm run server",
+    "dev-start": "gulp && npm run dev-server",
     "postinstall": "gulp",
     "start": "npm run server"
   },
