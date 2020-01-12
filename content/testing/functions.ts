@@ -5,7 +5,7 @@
 
 // nothing to see here, folks
 import {Obj, Color} from '@mathigon/core';
-import {SVGView, animate, InputView} from '@mathigon/boost';
+import {SVGView, animate, InputView, AnimationResponse} from '@mathigon/boost';
 import {Step} from '../shared/types';
 import { Point } from '@mathigon/fermat';
 
@@ -133,55 +133,35 @@ export function unit2($section: Step) {
  * Trace a circle around the zig-zaggy track of a kri8it painting
  */
 export function kri8it($section: Step) {
-    console.log($section);
-    console.log($section.$('svg'));
-
     // select all the [lines, paths, polylines] | *path from kri8it
-    // KRI8: join all paths, lines, polylines into one (how? Arrays.join? or something?)
-    const $lines = $section.$$('path') as SVGView[];
+    
+    const $lines = $section.$$('path, line, polyline') as SVGView[];
     console.log(`found ${$lines.length} lines`);
     console.log($lines);
     const $runner = $section.$('#runner') as SVGView;
     console.log($runner);
 
-    // KRI8: figure out data structure for traversing from path to path
-    // must know which end of the path we're at
-    // could use vertices?
-    const randPaths = [3, 4, 5]; // three "random" paths
+    // KRI8: figure out data structure for traversing between connected paths
+    const velocityInverse = 1;
+    // KRI8: how come they go different speeds? It should be 1 ms per strokeLength...
+    const durations = $lines.map(l => l.strokeLength * velocityInverse);
 
-    const velocity = 3;
-    const durations = randPaths.map(i => $lines[i].strokeLength * velocity);
-    const totalDuration = durations.reduce((d, acc) => d + acc);
-    // DONE: make an animation that is dependent on the length of the *path
+    let a = (i: number): AnimationResponse => {
+        return animate(function(p) {
+            let point = $lines[i].getPointAt(p);
+            let translated = point.translate(new Point(14.620133, 14)); // shift by the "translate" property of the root
+            $runner.setCenter(translated);
+        }, durations[0]);
+    }
 
-    // KRI8: make it recursive instead of hard-coding
-    animate(function (p) {
-        let timeElapsed = p * durations[0];
-        let point = $lines[randPaths[0]].getPointAt(p);
-        // KRI8: why is it not centered on the line?
-        point.translate(new Point(14.620133, 14)); // shift by the "translate" property of the root
-        $runner.setCenter(point);
-    }, durations[0]).promise.then(() => {
-        console.log("DONE 1");
-
-        animate(function(p) {
-            let timeElapsed = p * durations[1];
-            let point = $lines[randPaths[1]].getPointAt(p);
-            point.translate(new Point(14.620133, 14)); // shift by the "translate" property of the root
-            $runner.setCenter(point);
-        }, durations[1]).promise.then(() => {
-            console.log("DONE 2");
-
-            animate(function(p) {
-                let timeElapsed = p * durations[2];
-                let point = $lines[randPaths[2]].getPointAt(p);
-                point.translate(new Point(14.620133, 14)); // shift by the "translate" property of the root
-                $runner.setCenter(point);
-            }, durations[2]).promise.then(() => {
-                console.log("DONE 3");
-            });
-
+    // make it recursive instead of hard-coding
+    let recurse = (i: number, N: number) => {
+        console.log(`i = ${i}; N = ${N}`);
+        if (i >= N) return;
+        a(i).promise.then(() => {
+            recurse(++i, N);
         });
+    }
 
-    });
+    recurse(0, $lines.length);
 }
