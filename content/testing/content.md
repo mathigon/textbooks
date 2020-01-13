@@ -31,7 +31,7 @@ I wonder what will happen?
 
     // BINPATTERN: mimic selector for binpatterns
     .frame.fill(sytle="padding: 20px")
-    p(style="margin: 0"): strong hello darkness my old friend:
+    p(style="margin: 0"): strong hello
     include svg/graphs.svg
     p: select
       option(value="val", selected) Colour by value
@@ -48,6 +48,8 @@ I wonder what will happen?
 > id: kri8it
     
     p(style="margin: 0"): strong what's your favorite idea? mine is being kri8it
+    // KRI8: how to get the actual painting underneath??? oh well, leave it for another time
     include svg/kri8it_paths.svg
+    // x-media.background(src="images/kri8it.png")
 
 ---
