@@ -265,7 +265,9 @@ export function kri8it($section: Step) {
 
     }
     // start from the edge
-    recurse2("x");
+    $section.$('.button')?.on('click', () => {
+        recurse2("x");
+    });
 
     return;
     let a = (i: number): AnimationResponse => {

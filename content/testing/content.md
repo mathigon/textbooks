@@ -46,8 +46,16 @@ I wonder what will happen?
 > section: kri8it
 > sectionStatus: dev
 > id: kri8it
-    
-    p(style="margin: 0"): strong what's your favorite idea? mine is being kri8it
+
+### Fun experimenting with SVG
+This is a painting by a local Pittsburgh artist, [Brad Bianchi](https://www.instagram.com/krii8it/)
+
+    x-media.background(src="images/kri8it.png" width=220 height=220)
+
+It looks quite like a graph, doesn't it?
+
+    p(style="margin: 0"): strong What if we animate a dot to run around it?
+    .button Press Me
     // KRI8: how to get the actual painting underneath??? oh well, leave it for another time
     include svg/kri8it_paths.svg
     // x-media.background(src="images/kri8it.png")
