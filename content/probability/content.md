@@ -559,7 +559,7 @@ outcome.
 > goals: decay
 
 But _true randomness_ does exists – at the very foundations of matter. A block
-of radioactive material consists of millions of atoms which decay over time:
+of radioactive material consists of billions of atoms which decay over time:
 they fall apart into smaller atoms while emitting dangerous radiation.
 
 ::: column.grow
