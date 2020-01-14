@@ -10,44 +10,55 @@
 > section: introduction
 > sectionStatus: dev
 
-__Information__ is everywhere around us, but it is difficult to define what
-exactly "information" _means_. Instead we can give examples of things that
-contain information: books and newspapers, numbers and charts, images, sound or
-film clips.
+    // QUESTION: how does the function fn get added to this???
+    // ANSWER: "badge" is something that pops up in the top right corner... not changes actual value
+    // QUESTION: this only takes numbers or something
+    mixin grid(n, bin, fn)
+      .number-grid
+        - var i = 0
+        while i < n
+          .number-cell= bin(i)
+            if fn
+              - var badge = fn(i)
+              if badge
+                .number-badge= badge
+          - i += 1
 
-    .row
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-    
-__Codes__ are rules or algorithms to express information in certain formats. Our
-alphabet is a example of a code can can be used to express _language_ in the
-form of _letters_.
-
-Sometimes letters are not the best format to express information, and we can use
-other codes. In this course we will discover some of these codes as well as the
-algorithms to encode and decode messages.
-
----
-
-### Morse Code
-
-{.todo} TODO
 
 ---
 
 ### Binary Codes
 
-Binary numbers are pretty cool, man. They're like regular numbers but there are only [[two|three|four]] of them.
+How high can you count with only one hand? When people count with their hands, they traditionally use the number of fingers up to represent the number they are on. We have five fingers, so that means the highest you can count is to [[five|four|fifteen]].
 
-Binary numbers were NOT invented by [Alan Turing](bio:turing) and [Charles Boole](bio:boole), but both of their works were shaped by it.
+{.todo} TODO make this do the delayed appear.
+
+::: column(width=100)
+    x-media(src="images/binary_01.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_03.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_07.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_15.jpg" width=100 height=100)
+::: column(width=100)
+    x-media(src="images/binary_31.jpg" width=100 height=100)
+:::
+
+1, 2, 3, 4, 5.
+
+What if I told you that there was a way you could count way higher using only one hand? The secret lies in something called **binary numbers**. Instead of using the number of fingers sticking up as our count, we have to do something a bit more complicated. We can treat each of our fingers as a _digit_ (tee-hee) with one of two possible values: up or down. Up can represent **1** and down can represent **0**.
+
+With two possible values for each digit, and five digits, how many possible number values can we represent this way? If we had two fingers, there would be [[4|2|3]] possible values. If we had three fingers, there would be [[8|6|9]] possible values. So with our five fingers, we have [[32|16|8]] possible values (this could be easier).
+(make sure next part doesn't show up until mc questions)
+
+---
 
 #### Fingers
 
-Look at all the different ways we can count using our fingers.
+Look at all the different values we can represent using our fingers.
+
+// FINGERFADE: how can we make this fade?
 
 ::: column(width=100 parent="padded-thin")
     x-media(src="images/binary_00.jpg" width=100 height=100)
@@ -123,181 +134,156 @@ Look at all the different ways we can count using our fingers.
 
 :::
 
+---
 
-#### Multiplication
 
-To find the lcm of any two numbers, it is important to realise that if
-__{.m-yellow}a__ divides __{.m-blue}b__, then __{.m-blue}b__ needs to have all
-the prime factors of __{.m-yellow}a__ (plus some more):
+Now the question is... how do we know which hand represents each number value?
 
-    table.table-tiny
-      tr
-        td.text-right: .number-ball.yellow 12
-        td: .divides
-        td.text-left: .number-ball.blue 60
-      tr
-        td
-          .number-ball.l-yellow 2
-          | &nbsp;×&nbsp;
-          .number-ball.l-yellow 2
-          | &nbsp;×&nbsp;
-          .number-ball.l-yellow 3
-        td
-        td
-          .number-ball.l-yellow 2
-          | &nbsp;×&nbsp;
-          .number-ball.l-yellow 2
-          | &nbsp;×&nbsp;
-          .number-ball.l-yellow 3
-          | &nbsp;×&nbsp;
-          .number-ball.l-blue 5
+{.todo} TODO how can we make this a table of binary numbers?
+1: cap row at 8
+2: convert decimal to binary
 
-This is easy to verify: if a prime factor divides __{.m-yellow}a__, and
-__{.m-yellow}a__ divides __{.m-green}b__, then that prime factor must _also_
-divide __{.m-green}b__.
+
+Binary numbers are like decimal numbers but instead of using ten possible digit values, there are only [[two|three|four]] of them.
 
 ---
-> id: race3
 
-To find the lcm of __{.m-green}40__ and __{.m-blue}60__, we first need to find
-the [prime factorisation](gloss:factorisation) of both:
-
-    table.table-tiny
-      tr
-        td: .number-ball.blue 40
-        td: | =
-        td: .number-ball.l-blue 2
-        td: | ×
-        td: .number-ball.l-blue 2
-        td: | ×
-        td: .number-ball.l-blue 2
-        td(colspan=3): | ×
-        td: .number-ball.l-blue 5
-      tr
-        td: .number-ball.green 60
-        td: | =
-        td: .number-ball.l-green 2
-        td: | ×
-        td: .number-ball.l-green 2
-        td(colspan=3): | ×
-        td: .number-ball.l-green 3
-        td: | ×
-        td: .number-ball.l-green 5
-
----
-> id: race3
-
-To find the lcm of __{.m-green}40__ and __{.m-blue}60__, we first need to find
-the [prime factorisation](gloss:factorisation) of both:
-
-    table.table-tiny
-      tr
-        td: .number-ball.blue 40
-        td: | =
-        td: .number-ball.l-blue 32
-        td: | +
-        td: .number-ball.l-blue 8
-        td(colspan=3): | ×
-        td: .number-ball.l-blue 5
-      tr
-        td: .number-ball.green 60
-        td: | =
-        td: .number-ball.l-green 2
-        td: | ×
-        td: .number-ball.l-green 2
-        td(colspan=3): | ×
-        td: .number-ball.l-green 3
-        td: | ×
-        td: .number-ball.l-green 5
-
-Suppose that __{.m-red}X__ is the lcm of __{.m-green}40__ and __{.m-blue}60__.
-Then __{.m-green}40__ divides __{.m-red}X__, so _{span.number-ball.small.l-blue}2_,
-_{span.number-ball.small.l-blue}2_, _{span.number-ball.small.l-blue}2_ and
-_{span.number-ball.small.l-blue}5_ must be prime factors of __{.m-red}X__. Also,
-__{.m-blue}60__ divides __{.m-red}X__, so __{span.number-ball.small.l-green}2__,
-_{span.number-ball.small.l-green}2_, _{span.number-ball.small.l-green}3_ and
-_{span.number-ball.small.l-green}5_ must be prime factors of __{.m-red}X__.
-
----
-> id: race4
-
-To find __{.m-red}X__, we simply combine all the prime factors of __{.m-green}40__
-and __{.m-blue}60__, but any duplicates we only need once:
-
-{.text-center} __{.m-red}X__ &nbsp;=&nbsp; _{span.number-ball.l-blue-green}2_ ×
-_{span.number-ball.l-blue-green}2_ × _{span.number-ball.l-blue}2_ ×
-_{span.number-ball.l-green}3_ × _{span.number-ball.l-blue-green}5_
-
-This gives us that __{.m-red}X__ = 120, just like we saw above. Notice that if
-the same prime factor appears multiple times, like 2 above, we need to keep the
-maximum occurrences in one of the two numbers (3 times in __{.m-green}40__ is
-more than 2 times in __{.m-blue}60__).
+Binary numbers were NOT invented by [Alan Turing](bio:turing) and [Charles Boole](bio:boole), but both of their works were related to it. Binary numbers are especially useful because they can be understood by computers. Computers are built out of these microscopic things called **transistor** that store on/off values. 1s and 0s! Everything a computer stores, from text and images to video and sound is stored as sequences of 1s and 0s.
 
 ---
 > id: race5
 
-Now we have a simple method for finding the lcm of two numbers:
+#### Converting Decimals to Binary Numbers
+
+Now we have a simple method for converting a decimal to a binary number.
 
     ol.proof
-      li Find the prime factorisation of each number.
-      li Combine all prime factors, but only count duplicates once.
+      li Subtract highest power of `2^n`
+      li If you can subtract it, append a `1`. If not, append a `0`.
 
 We can use the same method to find the binary values of these three numbers,
 like __{.m-blue}28__, __{.m-green}21__ and __{.m-yellow}7__:
 
     table.table-tiny
       tr
-        td: .number-ball.blue 28
+        td: .number-square.blue 28
         td: | =
-        td: .number-ball.l-blue 16
+        td: .number-square.l-blue 16
         td: | +
-        td: .number-ball.l-blue 8
+        td: .number-square.l-blue 8
         td: | +
-        td: .number-ball.l-blue 4
+        td: .number-square.l-blue 4
       tr
-        td: .number-ball.green 21
+        td: .number-square.green 21
         td: | =
-        td: .number-ball.l-green 16
+        td: .number-square.l-green 16
         td(colspan=3): | +
-        td: .number-ball.l-green 4
+        td: .number-square.l-green 4
         td(colspan=3): | +
-        td: .number-ball.l-green 1
+        td: .number-square.l-green 1
       tr
-        td: .number-ball.yellow 7
+        td: .number-square.yellow 7
         td: | =
         td(colspan=4)
-        td: .number-ball.l-yellow 4
+        td: .number-square.l-yellow 4
         td: | +
-        td: .number-ball.l-yellow 2
+        td: .number-square.l-yellow 2
         td: | +
-        td: .number-ball.l-yellow 1
+        td: .number-square.l-yellow 1
 
 Therefore the binary value of  __{.m-blue}28__ is [[11100]].
 The binary value of __{.m-green}21__ is [[10101]].
 The binary value of  __{.m-yellow}7__ is [[00111]].
 
     //- TODO Exercises
+---
 
+#### Binary to Decimal
+
+    table.table-tiny
+      tr
+        td: .number-square.blue 100110
+        td: | =
+        td: .number-square.blue 32
+        td: | +
+        td: .number-square.l-blue 0
+        td: | +
+        td: .number-square.l-blue 0
+        td: | +
+        td: .number-square.blue 4
+        td: | +
+        td: .number-square.blue 2
+        td: | +
+        td: .number-square.l-blue 0
+        td: | =
+        td: .number-square.blue 38
+      tr
+        td: .number-square.yellow 111000
+        td: | =
+        td: .number-square.yellow 32
+        td: | +
+        td: .number-square.yellow 16
+        td: | +
+        td: .number-square.yellow 8
+        td: | +
+        td: .number-square.l-yellow 0
+        td: | +
+        td: .number-square.l-yellow 0
+        td: | +
+        td: .number-square.l-yellow 0
+        td: | =
+        td: .number-square.yellow 56
+      tr
+        td: .number-square.green 101011
+        td: | =
+        td: .number-square.green 32
+        td: | +
+        td: .number-square.l-green 0
+        td: | +
+        td: .number-square.green 8
+        td: | +
+        td: .number-square.l-green 0
+        td: | +
+        td: .number-square.green 2
+        td: | +
+        td: .number-square.green 1
+        td: | =
+        td: .number-square.green 43
+
+The decimal value of  __{.m-blue}100110__ is [[38]].
+The decimal value of __{.m-yellow}111000__ is [[56]].
+The decimal value of  __{.m-green}101011__ is [[43]].
+
+---
+>id: binary-table
+#### Patterns in Binary Numbers
+
+There are some cool patterns we can find in binary numbers.
+
+    // DONE: convert to binary number
+    // DONE: make the number circle bigger
+    // DONE: 4 or 8 per row, not 10
+    // BINPATTERN: dropdown should go here
+    // BINPATTERN: oops I removed all my progress that wasn't in *codes*...
+    +grid(32, function(n) { var s = ''; s += Math.floor(n/16); s+= Math.floor(n%16 / 8); s+= Math.floor(n%8 / 4); s+= Math.floor(n%4 / 2); s += n%2; return s;})
+    p: select
+        option(value="4", selected) Colour by 1s digit
+        option(value="3") Colour by 2s digit
+        option(value="2") Colour by 4s digit
+        option(value="1") Colour by 8s digit
+        option(value="0") Colour by 16s digit
+
+If we look at the 1s digit, it changes every time. If we look at the 2s digit, it changes every other time. Et cetera.
 
 ___
-> id: binary-simulation
-> goals: advance
-> title: Experiment
 
-In this animation you can blah blah blah:
+#### Other binary number things
 
-    .box
-      .box-title: h3 Rolling Binary
-      .box-body
-        p.md We roll our dice and do the thing.
-        p.btn-row
-          button.btn Advance
+other references:
 
-Ugh what am I missing?
+{.todo} TODO insert photo of bracket
 
-{.todo} TODO
-
-{.reveal(when="advance")} Yay we did it __baby__.
+The NCAA March Madness tournament uses a bracket structure. The Sweet Sixteen, the Elite Eight, and the Final Four are all names of rounds. Note that the number of teams in each round will be a power of 2.
 
 ---
 
@@ -317,6 +303,33 @@ Ugh what am I missing?
 {.todo} Satellite Communications
 
 {.todo} CDs and DVDs
+
+---
+__Information__ is everywhere around us, but it is difficult to define what
+exactly "information" _means_. Instead we can give examples of things that
+contain information: books and newspapers, numbers and charts, images, sound or
+film clips.
+
+    .row
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+      div(style="width: 80px"): img(width="100", height="100", src="xyz")
+    
+__Codes__ are rules or algorithms to express information in certain formats. Our
+alphabet is a example of a code can can be used to express _language_ in the
+form of _letters_.
+
+Sometimes letters are not the best format to express information, and we can use
+other codes. In this course we will discover some of these codes as well as the
+algorithms to encode and decode messages.
+
+---
+### Morse Code
+
+{.todo} TODO
 
 ---
 

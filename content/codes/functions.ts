@@ -4,10 +4,62 @@
 // =============================================================================
 
 
-import {EventTarget} from '@mathigon/core';
+import {EventTarget, delay} from '@mathigon/core';
 // import {clamp, letterFrequency, caesarCipher, cipherLetterFreq} from '@mathigon/fermat';
 // import {$, $N} from '@mathigon/boost';
 import {Step} from '../shared/types';
+import {ElementView, InputView} from '@mathigon/boost';
+
+/**
+ * 
+ * @param $grid the grid to put them into
+ * @param time delay until the start of the animation, in ms
+ * @param className the class name to match CSS selector, e.g. blue or green
+ * @param filter the function to decide what matches
+ */
+function numberGrid($grid: ElementView, time: number, className: string,
+                    filter: (i: string) => boolean) {
+  for (const $i of $grid.children) {
+    if (!filter($i.text)) continue;
+    delay(() => $i.addClass(className), time);
+    time += 80;
+  }
+}
+
+// BINPATTERN: how to re-render with a drop down? (see Graph Theory?)
+export function binaryTable($section: Step) {
+  function f2 (i: string){ console.log(i); return i[4] === '0'; }
+  function f4 (i: number){ return i % 4 === 0; }
+  function f8 (i: number){ return i % 8 === 0; }
+  function f16 (i: number){ return i % 16 === 0; }
+
+  function fx (digit: number) {
+    return (i: string) => { 
+      var s = '' + i; 
+      return s[digit] === '0';
+    }
+  }
+
+  function fy (digit: number) { 
+    return (i: string) => {
+      var s = '' + i; 
+      return s[digit] === '1';
+    }  
+  }
+  
+  function colour(x: string) {
+    $section.$('.number-grid')?.children.forEach(c => {
+      c.removeClass('purple-yellow');
+      c.removeClass('green-yellow');
+    });
+    $section.$('.number-grid')?.removeClass('green-yellow');
+    numberGrid($section.$('.number-grid')!, 0, 'purple-yellow', fx(+x));
+    numberGrid($section.$('.number-grid')!, 0, 'green-yellow', fy(+x));  
+  }
+
+  ($section.$('select') as InputView).change(colour);
+  colour('4'); // default -- color last digit
+}
 
 export function binarySimulation($step: Step) {
 
