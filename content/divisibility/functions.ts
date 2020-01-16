@@ -5,7 +5,7 @@
 
 
 import {$N, animate, thread, observable, InputView, ElementView, SVGView} from '@mathigon/boost';
-import {isPrime, lcm, goldbach, generatePrime, numberFormat, Random} from '@mathigon/fermat';
+import {isPrime, lcm, goldbach, numberFormat, Random} from '@mathigon/fermat';
 import {total, sortBy, list, isOneOf, delay} from '@mathigon/core';
 import {Gameplay, Slideshow, Step} from '../shared/types';
 
@@ -18,7 +18,7 @@ function numberGrid($grid: ElementView, time: number, className: string,
   for (const $i of $grid.children) {
     if (!filter(+$i.text)) continue;
     delay(() => $i.addClass(className), time);
-    time += 80;
+    time += 150;
   }
 }
 

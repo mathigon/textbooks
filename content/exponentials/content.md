@@ -3,7 +3,6 @@
 ## Carbon Dating
 
 > section: carbon-dating
-> sectionStatus: dev
 > id: egypt
 
 ::: column.grow
@@ -145,10 +144,14 @@ you’re left with just [[a quarter|a third|1/8|none]] of the original amount.
 Let’s assume we start with a block of 1,200 Carbon-14 atoms. Using the half-life,
 we can calculate the remaining amount of <sup>14</sup>C atoms over time:
 
+::: .overflow-wrap
+
 |            | _{div.col}_ | _{div.col.c1}_ | _{div.col.c2}_ | _{div.col.c3}_ | _{div.col.c4}_ |
 | __Years__  | 0           | 6000           | 12,000         | 18,000         | 24,000         |
 | __Amount__ | 1200        | [[600]]        | [[300]]        | [[150]]        | [[75]]         |
 {.grid.col-grid}
+
+:::
 
 ---
 > id: radioactive-table-2
