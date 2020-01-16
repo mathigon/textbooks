@@ -214,7 +214,7 @@ _{span.reveal(when="blank-2")} (Beachte, wie die Hälfte der Tortenstücke nach 
 die andere Hälfte nach oben zeigt.)_
 
 {.reveal(when="blank-2" delay=1000)} Daher beträgt die Gesamtfläche des Rechtecks
-etwa `A = r ∙ r π = r^2 π`.
+etwa `A = r * r π = r^2 π`.
 
 :::
 
@@ -247,7 +247,7 @@ _{span.reveal(when="blank-1")} Die Basis des Dreiecks ist gleich
 _{span.reveal(when="blank-2")} Daher beträgt die Gesamtfläche des Dreiecks
 ungefähr_
 
-{.text-center.reveal(when="blank-2")} `A = 1/2 "Basis" × "Höhe" = 1/2 ∙ 2rπ ∙ r = r^2 π`.
+{.text-center.reveal(when="blank-2")} `A = 1/2 "Basis" × "Höhe" = 1/2 * 2rπ * r = r^2 π`.
 
 :::
 
