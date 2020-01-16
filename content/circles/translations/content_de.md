@@ -214,7 +214,7 @@ _{span.reveal(when="blank-2")} (Beachte, wie die Hälfte der Tortenstücke nach 
 die andere Hälfte nach oben zeigt.)_
 
 {.reveal(when="blank-2" delay=1000)} Daher beträgt die Gesamtfläche des Rechtecks
-etwa `A = r^2 π`.
+etwa `A = r ∙ r π = r^2 π`.
 
 :::
 
@@ -247,7 +247,7 @@ _{span.reveal(when="blank-1")} Die Basis des Dreiecks ist gleich
 _{span.reveal(when="blank-2")} Daher beträgt die Gesamtfläche des Dreiecks
 ungefähr_
 
-{.text-center.reveal(when="blank-2")} `A = 1/2 "Basis" × "Höhe" = r^2 π`.
+{.text-center.reveal(when="blank-2")} `A = 1/2 "Basis" × "Höhe" = 1/2 ∙ 2rπ ∙ r = r^2 π`.
 
 :::
 
@@ -757,11 +757,11 @@ einen Kreis an genau einem Punkt berührt. Man nennt ihn den
 __Berührungspunkt__. [Weiter](btn:next)
 * {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus
 dem Umfang eines Kreises. [Weiter](btn:next)
-* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil des
-Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
+* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil der
+Kreisfläche, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
   [Weiter](btn:next)
 * {.r.reveal(when="next-4")}Und ein [{.purple} Segment](pill:segment) ist ein
- Teil des Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
+ Teil der Kreisfläche, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
   [Weiter](btn:next)
 
 :::
