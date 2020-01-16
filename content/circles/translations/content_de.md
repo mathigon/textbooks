@@ -1346,7 +1346,7 @@ den gleichen Abstand von ihrem Mittelpunkt.
 :::
 
 Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition von einem 
-Kreis|Radius|Würfel]] - aber eben dreidimensional!
+[[Kreis|Radius|Würfel]] - aber eben dreidimensional!
 
 ---
 > id: gasometer
@@ -1358,10 +1358,9 @@ Kreis|Radius|Würfel]] - aber eben dreidimensional!
 Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland. Er wird verwendet umErdgas, das als Brennstoff in nahegelegenen Fabriken und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
 sein Boden und seine Deckfläche sind zwei große Kreise mit einem
 Radius von 35 m. Es gibt zwei wichtige Fragen, die hier für Ingenieure
-von Interesse sein dürften: Es gibt zwei wichtige Fragen, die Ingenieure
-möglicherweise beantworten sollten:
+von Interesse sein dürften:
 
-* Wie viel Erdgas kann gespeichert werden? Das ist [[der Durchmesser|die Fläche|das Volumen]] des
+* Wie viel Erdgas kann gespeichert werden? Das entspricht [[dem Volumen|der Fläche|dem Durchmesser]] des
   Zylinders.
 * {.reveal(when="blank-0")} Wie viel Stahl wird für den Bau des Gasometers benötigt?
   In diesem Fall geht es (ungefähr) um [[die Oberfläche|den Umfang|die Diagonale]] des
@@ -1422,10 +1421,10 @@ z.B. wenn _r_ und _h_ beide in cm sind, dann wird das Volumen in
 
 ::: column.grow
 
-In den obigen Beispielen lagen die beiden Kreisflächen des Zylinders immer _direkt übereinander_
-:Man nennt dies einen __geraden Zylinder__. Wenn die Kreisflächen nicht direkt
+In den obigen Beispielen lagen die beiden Kreisflächen des Zylinders immer _direkt übereinander_: 
+Man nennt dies einen __geraden Zylinder__. Wenn die Kreisflächen nicht direkt
 übereinander liegen, reden wir von einem __schiefen Zylinder__. Die Kreisflächen sind noch parallel,
-aber die Seiten scheinen sich in einem Winkel von nicht 90° seitwärts zu ”lehnen“.
+aber die Seiten scheinen sich seitwärts zu ”lehnen“, in einem Winkel der nicht 90° groß ist.
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1478,12 +1477,13 @@ konstant:
 
 ::: column.grow
 
-Um die Oberfläche eines Zylinders zu bestimmen, müssen wir ihn flach in sein 
-[Netz](gloss:net) “ausbreiten”. Du kannst das selbst ausprobieren, indem du z.B. das
+Um die Oberfläche eines Zylinders zu bestimmen, müssen wir ihn in sein 
+[Netz](gloss:net) “auseinanderklappen”. Du kannst das selbst ausprobieren, indem du z.B. das
 Etikett auf einer Lebensmitteldose ablöst.
 
-Es gibt bei jedem Zylinder zwei [[Kreise|Kugeln|Quadrate]],
-oberhalb und unterhalb. Die gebogene Seitenfläche ist eigentlich ein großes [[Rechteck|Quadrat|Trapez]].
+Jeder Zylinder setzt sich aus zwei [[Kreisen|Kugeln|Quadraten]] zusammen,
+oberhalb und unterhalb. Dazu kommt eine gebogene Seitenfläche, die eigentlich ein 
+großes [[Rechteck|Quadrat|Trapez]] ist.
 
 * {.reveal(when="blank-0 blank-1")} Die zwei Kreisflächen haben jeweils eine Fläche von
   _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
