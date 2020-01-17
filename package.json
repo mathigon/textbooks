@@ -1,6 +1,6 @@
 {
   "name": "@mathigon/textbooks",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Mathigon Textbooks",
   "homepage": "https://mathigon.org/",
   "repository": "mathigon/textbooks",
@@ -15,7 +15,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@mathigon/boost": "^0.4.3",
+    "@mathigon/boost": "^0.4.4",
     "@mathigon/core": "^0.3.4",
     "@mathigon/fermat": "^0.3.4",
     "@mathigon/hilbert": "^0.3.4",
