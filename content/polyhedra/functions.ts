@@ -5,7 +5,7 @@
 
 
 import {tabulate} from '@mathigon/core';
-import {clamp, toWord, Segment, Point, Angle, lerp, Line} from '@mathigon/fermat';
+import {clamp, toWord, Segment, Point, lerp, Line} from '@mathigon/fermat';
 import {Browser, slide} from '@mathigon/boost';
 import {GeoElement, Geopad, GeoPoint, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
@@ -21,36 +21,175 @@ import './components/folding';
 import './components/anibutton';
 
 
-export function angles($step: Step) {
-  const totals = [360, 540];
-  const $buttons = $step.$$('x-anibutton') as Anibutton[];
-  let overlap = [false, false];
+// Attempted fix for https://github.com/mathigon/textbooks/issues/8
+//
+// - Uses computeChangedAngles() during model.watch() to figure out which points
+// in a GeoPad have moved, and which angles are expected to be adjusted.
+//
+// - Uses computeGeometry() to determine the angles of the polygon, rounded to integers
+// in such a way that only angles adjacent to the user's action (e.g., dragging a point)
+// will be affected by the need to add +1 or -1 to deal with rounding error.
+//
 
+// computeGeometry()
+// Compute the necessary angles and integer-rounded values for these values.
+// If the sum of the integer-rounded angles is not the expected sum (e.g., 360 for a quadrilateral),
+// then choose an angle to add/subtract the rounding error to create the correct sum.
+// The angle to be adjusted will be chosen from the set of adjustableAngleNames, if non-empty,
+// and will pointNames[0] otherwise.
+//
+// The result of computeGeometry will be a geometry object containing the calculated
+// angles and their rounded forms.
+//
+// This function also computes a .overlap boolean which indicates whether
+// there are overlapping edges
+//
+
+function computeGeometry(model, pointNames, adjustableAngleNames): object {
+  // console.log('computeGeometry', pointNames, adjustableAngleNames);
+  const numPoints = pointNames.length;
+  let sum = 0;
+  let roundedSum = 0;
+  const geometry = {};
+  const expectedSum = (pointNames.length - 2) * 180;
+  let adjustThisPoint = pointNames[0]; // If no adjustable angles specified, then arbitrarily use the first one.
+
+  for (let index = 0; index < numPoints; ++index) {
+    const prevPointName = pointNames[index === 0 ? numPoints - 1 : index - 1];
+    const midPointName = pointNames[index];
+    const nextPointName = pointNames[index === numPoints - 1 ? 0 : index + 1];
+    const exact = model.angle(model[nextPointName], model[midPointName], model[prevPointName]);
+    const deg = exact.deg;
+    const rounded = Math.round(deg);
+
+    //
+    // The last adjustable point will be adopted as the target of any rounding
+    // error adjustments.
+    // If the angle is a right angle, or within a degree of that,
+    // then it will be excluded as an adjustment candidate
+    // Because otherwise the UI would show a right angle with a label of 89
+    // or 91 degrees, or a non-right angle with a label of 90.
+    //
+    if (adjustableAngleNames.indexOf(midPointName) >= 0) {
+      if (Math.abs(deg - 90) > 1) {
+        adjustThisPoint = midPointName;
+      }
+      // else {
+      //   console.log(midPointName, exact, exact.isRight, deg, Math.abs(deg - 90));
+      // }
+    }
+
+    sum += deg;
+    roundedSum += rounded;
+    geometry[midPointName] = {
+      exact,
+      rounded,
+    };
+  };
+
+  const delta = expectedSum - roundedSum;
+  if (delta !== 0 ) {
+    // console.log('Mismatch', adjustableAngleNames, adjustThisPoint, geometry[adjustThisPoint].rounded, roundedSum, expectedSum, delta, roundedSum, sum);
+    geometry[adjustThisPoint].rounded += delta;
+  }
+
+  geometry.sum = sum;
+  geometry.roundedSum = roundedSum;
+  geometry.overlap = (Math.round(sum) > expectedSum);
+
+  return geometry;
+}
+
+
+// computeChangedAngles()
+// This function would not be necessary if I knew a better way to obtain
+// the currently dragged point(s) in a GeoPad. So what this function does is to
+// figure out which points have changed position and to return an array of the
+// relevant angles that have changed, which includes the adjacent angles to a given
+// dragged point.
+//
+// So if one point is being dragged, then three angles are adjustable.
+// If a line segment (two points) were to be dragged, then four angles would be affected.
+//
+// This function compares oldPoints with the latest values in the model to determine
+// what (if anything) changed. It completes by updating oldPoints with the latest model
+// values.
+//
+
+function computeChangedAngles(model: Observable, pointNames: string[], oldPoints: object[]): string[] {
+  const adjustableAngleNames = [];
+  const numPoints = pointNames.length;
+
+  for (let index = 0; index < numPoints; ++index) {
+    const prevPointName = pointNames[index === 0 ? numPoints - 1 : index - 1];
+    const midPointName = pointNames[index];
+    const nextPointName = pointNames[index === numPoints - 1 ? 0 : index + 1];
+
+    const newPoint: GeoPoint = model[midPointName];
+    const newPointCopy = {x: newPoint.x, y: newPoint.y};
+    const oldPoint = oldPoints[midPointName] || newPointCopy;
+    if (oldPoint.x !== newPointCopy.x || oldPoint.y !== newPointCopy.y) {
+      adjustableAngleNames.push(prevPointName);
+      adjustableAngleNames.push(midPointName);
+      adjustableAngleNames.push(nextPointName);
+    }
+    oldPoints[midPointName] = newPointCopy;
+  };
+
+  return adjustableAngleNames;
+}
+
+
+export function angles($step: Step): void {
+  const model = $step.model;
+  const leftPolygon = {
+    modelKey: 'geometryLeft',
+    pointNames: ['a', 'b', 'c', 'd'],
+    oldPoints: {},
+    geometry: null,
+  };
+  const rightPolygon = {
+    modelKey: 'geometryRight',
+    pointNames: ['e', 'f', 'g', 'h', 'i'],
+    oldPoints: {},
+    geometry: null,
+  }
+  const polygons = [
+    leftPolygon,
+    rightPolygon,
+  ];
+
+  polygons.forEach(polygon => {
+    polygon.geometry = computeGeometry(model, polygon.pointNames, []);
+    computeChangedAngles(model, polygon.pointNames, polygon.oldPoints);
+    model.set(polygon.modelKey, polygon.geometry);
+  });
+
+
+  const $buttons = $step.$$('x-anibutton') as Anibutton[];
   for (const [i, $b] of $buttons.entries()) {
-    $step.model.watch(() => $b.setAttr('text', '???'));
+    const polygon = polygons[i];
+    model.watch(() => $b.setAttr('text', '???'));
     $b.on('click', () => {
-      if (overlap[i]) return $step.addHint('no-overlap', {force: true});
+      if (polygon.geometry.overlap) return $step.addHint('no-overlap', {force: true});
       $b.play();
-      $b.setAttr('text', totals[i] + '°');
+      $b.setAttr('text', polygon.geometry.sum + '°');
       $step.score('angle-' + i);
     });
   }
 
-  $step.model.watch(s => {
-    const a1 = new Angle(s.b, s.a, s.d).deg;
-    const a2 = new Angle(s.c, s.b, s.a).deg;
-    const a3 = new Angle(s.d, s.c, s.b).deg;
-    const a4 = new Angle(s.a, s.d, s.c).deg;
-    overlap[0] = a1 + a2 + a3 + a4 > 361;
 
-    const b1 = new Angle(s.f, s.e, s.i).deg;
-    const b2 = new Angle(s.g, s.f, s.e).deg;
-    const b3 = new Angle(s.h, s.g, s.f).deg;
-    const b4 = new Angle(s.i, s.h, s.g).deg;
-    const b5 = new Angle(s.e, s.i, s.h).deg;
-    overlap[1] = b1 + b2 + b3 + b4 + b5 >= 541;
+  model.watch(() => {
+    polygons.forEach(polygon => {
+      const adjustedAngleNames = computeChangedAngles(model, polygon.pointNames, polygon.oldPoints);
+      polygon.geometry = computeGeometry(model, polygon.pointNames, []);
+      if (adjustedAngleNames.length > 0) {
+        polygon.geometry = computeGeometry(model, polygon.pointNames, adjustedAngleNames);
+        model.set(polygon.modelKey, polygon.geometry);
 
-    if (overlap[0] || overlap[1]) $step.addHint('no-overlap');
+        if (polygon.geometry.overlap) $step.addHint('no-overlap');
+      }
+    });
   });
 
   $buttons[0].one('click', () => $step.addHint('angles-repeat'));
@@ -255,7 +394,7 @@ export function escher($step: Step) {
 }
 
 export function penrose($step: Step) {
-  let $g = $step.$$('svg g');
+  const $g = $step.$$('svg g');
 
   $g[1].setAttr('opacity', 0);
   $g[2].setAttr('opacity', 0);
@@ -282,7 +421,7 @@ function makePolyhedronGeo(data: PolyhedronDataItem) {
   const vertices = data.vertex.map(v => new THREE.Vector3(v[0], v[1], v[2]));
   const geometry = new THREE.Geometry();
   geometry.vertices = vertices;
-  for (let f of data.face) {
+  for (const f of data.face) {
     for (let i = 1; i < f.length - 1; i++) {
       geometry.faces.push(new THREE.Face3(f[0], f[i], f[i + 1]));
     }
