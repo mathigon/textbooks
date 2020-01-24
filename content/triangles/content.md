@@ -893,13 +893,13 @@ can see three different examples that each use a different strategy:
 
 Have a look at the figure on the right. The square has side length _a_ + _b_,
 and contains [four right-angled triangles](target:triangle), as well as a
-[smaller square](target:square) of size [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ – _b_|_a_ + _b_]].
+[smaller square](target:square) of area [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ – _b_|_a_ + _b_]].
 
 {.reveal(when="blank-0")} Now let’s rearrange the triangles in the square. The
 result still contains the four right-angles triangles, as well as two squares
 of size [[<msup><mi>a</mi><mn>2</mn></msup> and <msup><mi>b</mi><mn>2</mn></msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
 
-{.reveal(when="blank-1")} Comparing the size of the red area
+{.reveal(when="blank-1")} Comparing the area of the red area
 _{span.hover-target}before_ and _{span.hover-target}after_ the rearrangement, we
 see that
 
@@ -955,8 +955,8 @@ The large square has side length `a + b` and area
 [[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2</sup>|_c_<sup>2</sup>]].
 
 {.reveal(when="blank-2")} It consists of [four triangles](target:triangle), each
-of size [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
-and [one square](target:square) of size [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
+with an area of [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
+and [one square](target:square) of area [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
 {.reveal(when="blank-3 blank-4")} If we combine all of that information, we have
 

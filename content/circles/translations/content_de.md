@@ -967,19 +967,19 @@ interessiert. Zum Beispiel,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × c/360` |
-|                          | = | `2 r π × c/360`          |
+| [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × α/360` |
+|                          | = | `2 r π × α/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × c/360` |
-|                              | = | `r^2 π × c/360`         |
+| [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × α/360` |
+|                              | = | `r^2 π × α/360`         |
 {.eqn-system}
 
 :::
 
-wobei _r_ der Radius des Kreises ist und _c_ die Größe des
+wobei _r_ der Radius des Kreises ist und _α_ die Größe des
 Mittelpunktswinkels ist.
 
     // Was die Formeln tun, ist, sie gehen von der Fläche des ganzen Kreises aus, und
@@ -1000,14 +1000,14 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `2 r π × c/(2π)` |
-|                          | = | `r × c`          |
+| [{.red}Kreisbogenlänge](pill) | = | `2 r π × α/(2π)` |
+|                          | = | `r × α`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `r^2 π × c/(2π)` |
-|                              | = | `1/2 r^2 c`      |
+| [{.yellow}Sektorfläche](pill) | = | `r^2 π × α/(2π)` |
+|                              | = | `1/2 r^2 α`      |
 {.eqn-system}
 
 :::
