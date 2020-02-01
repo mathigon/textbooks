@@ -26,26 +26,36 @@
 
 
 ---
-
+> id: finger5
 ### Binary Codes
 
 How high can you count with only one hand? When people count with their hands, they traditionally use the number of fingers up to represent the number they are on. We have five fingers, so that means the highest you can count is to [[five|four|fifteen]].
 
-{.todo} TODO make this do the delayed appear.
+{.todo} TODO make this do the delayed appear. // FINGERFADE: make it appear after learner gets the last MC correct.
+
+    button.appear FINGERS
 
 ::: column(width=100)
-    x-media(src="images/binary_01.jpg" width=100 height=100)
+    div.bin-finger
+      x-media.finger-5(src="images/binary_01.jpg" width=100 height=100)
+      .caption 1
 ::: column(width=100)
-    x-media(src="images/binary_03.jpg" width=100 height=100)
+    div.bin-finger
+      x-media.finger-5(src="images/binary_03.jpg" width=100 height=100)
+      .caption 2
 ::: column(width=100)
-    x-media(src="images/binary_07.jpg" width=100 height=100)
+    div.bin-finger
+      x-media.finger-5(src="images/binary_07.jpg" width=100 height=100)
+      .caption 3
 ::: column(width=100)
-    x-media(src="images/binary_15.jpg" width=100 height=100)
+    div.bin-finger
+      x-media.finger-5(src="images/binary_15.jpg" width=100 height=100)
+      .caption 4
 ::: column(width=100)
-    x-media(src="images/binary_31.jpg" width=100 height=100)
+    div.bin-finger
+      x-media.finger-5(src="images/binary_31.jpg" width=100 height=100)
+      .caption 5
 :::
-
-1, 2, 3, 4, 5.
 
 What if I told you that there was a way you could count way higher using only one hand? The secret lies in something called **binary numbers**. Instead of using the number of fingers sticking up as our count, we have to do something a bit more complicated. We can treat each of our fingers as a _digit_ (tee-hee) with one of two possible values: up or down. Up can represent **1** and down can represent **0**.
 
@@ -53,89 +63,168 @@ With two possible values for each digit, and five digits, how many possible numb
 (make sure next part doesn't show up until mc questions)
 
 ---
-
+>id: finger32
 #### Fingers
 
 Look at all the different values we can represent using our fingers.
 
-// FINGERFADE: how can we make this fade?
+// should also clean this up and make it more abstract, perhaps a mixin?
+
+    table.finger-grid   
+      for x in [0, 1, 2, 3]
+        tr
+          for y in [0, 1, 2, 3, 4, 5, 6, 7]
+            - var n = x*8 + y
+            // FINGERFADE: make this binary
+            td: div.bin-finger(padding="1px")
+              x-media(src="images/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=60 height=60)
+              .caption= "lmao " + n
+          
+
+    button.appear FINGERS
+    // FINGERFADE: disappear one of these
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_00.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_00.jpg" width=100 height=100)
+      .caption 00000
 ::: column(width=100)
-    x-media(src="images/binary_01.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_01.jpg" width=100 height=100)
+      .caption 00001
 ::: column(width=100)
-    x-media(src="images/binary_02.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_02.jpg" width=100 height=100)
+      .caption 00010
 ::: column(width=100)
-    x-media(src="images/binary_03.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_03.jpg" width=100 height=100)
+      .caption 00011
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_04.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_04.jpg" width=100 height=100)
+      .caption 00100
 ::: column(width=100)
-    x-media(src="images/binary_05.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_05.jpg" width=100 height=100)
+      .caption 00101
 ::: column(width=100)
-    x-media(src="images/binary_06.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_06.jpg" width=100 height=100)
+      .caption 00110
 ::: column(width=100)
-    x-media(src="images/binary_07.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_07.jpg" width=100 height=100)
+      .caption 00111
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_08.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_08.jpg" width=100 height=100)
+      .caption 01000
 ::: column(width=100)
-    x-media(src="images/binary_09.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_09.jpg" width=100 height=100)
+      .caption 01001
 ::: column(width=100)
-    x-media(src="images/binary_10.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_10.jpg" width=100 height=100)
+      .caption 01010
 ::: column(width=100)
-    x-media(src="images/binary_11.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_11.jpg" width=100 height=100)
+      .caption 01011
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_12.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_12.jpg" width=100 height=100)
+      .caption 01100
 ::: column(width=100)
-    x-media(src="images/binary_13.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_13.jpg" width=100 height=100)
+      .caption 01101
 ::: column(width=100)
-    x-media(src="images/binary_14.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_14.jpg" width=100 height=100)
+      .caption 01110
 ::: column(width=100)
-    x-media(src="images/binary_15.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_15.jpg" width=100 height=100)
+      .caption 01111
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_16.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_16.jpg" width=100 height=100)
+      .caption 10000
 ::: column(width=100)
-    x-media(src="images/binary_17.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_17.jpg" width=100 height=100)
+      .caption 10001
 ::: column(width=100)
-    x-media(src="images/binary_18.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_18.jpg" width=100 height=100)
+      .caption 10010
 ::: column(width=100)
-    x-media(src="images/binary_19.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_19.jpg" width=100 height=100)
+      .caption 10011
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_20.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_20.jpg" width=100 height=100)
+      .caption 10100
 ::: column(width=100)
-    x-media(src="images/binary_21.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_21.jpg" width=100 height=100)
+      .caption 10101
 ::: column(width=100)
-    x-media(src="images/binary_22.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_22.jpg" width=100 height=100)
+      .caption 10110
 ::: column(width=100)
-    x-media(src="images/binary_23.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_23.jpg" width=100 height=100)
+      .caption 10111
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_24.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_24.jpg" width=100 height=100)
+      .caption 11000
 ::: column(width=100)
-    x-media(src="images/binary_25.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_25.jpg" width=100 height=100)
+      .caption 11001
 ::: column(width=100)
-    x-media(src="images/binary_26.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_26.jpg" width=100 height=100)
+      .caption 11010
 ::: column(width=100)
-    x-media(src="images/binary_27.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_27.jpg" width=100 height=100)
+      .caption 11011
 
 ::: column(width=100 parent="padded-thin")
-    x-media(src="images/binary_28.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_28.jpg" width=100 height=100)
+      .caption 11100
 ::: column(width=100)
-    x-media(src="images/binary_29.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_29.jpg" width=100 height=100)
+      .caption 11101
 ::: column(width=100)
-    x-media(src="images/binary_30.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_30.jpg" width=100 height=100)
+      .caption 11110
 ::: column(width=100)
-    x-media(src="images/binary_31.jpg" width=100 height=100)
+    div.bin-finger
+      x-media(src="images/binary_31.jpg" width=100 height=100)
+      .caption 11111
 
 :::
 
 ---
 
+Let's convert these fingers to numbers. Let's use a <red>0</red> for a finger down, and a <blue>1</blue> for a finger up. Now click here to label all of these images with their proper value (upon clicking or something, all of the hands are labeled).
 
 Now the question is... how do we know which hand represents each number value?
 

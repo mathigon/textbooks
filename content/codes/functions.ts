@@ -26,6 +26,38 @@ function numberGrid($grid: ElementView, time: number, className: string,
   }
 }
 
+export function finger5($section: Step) {
+  const $fingers = $section.$$('.fingy');
+  $fingers.forEach($f => $f.hide());
+
+  // fade: opacity [0, 100]
+  // pop: size [0, 100] (from center, with some bounce)
+  // draw: doesn't work with this??
+  // draw-reverse:
+  // slide: they slide in from the bottom
+  // slide-down: they slide in from the top
+  // reveal: like fade, but elements below slide down
+  // reveal-left/right: each element slides in from the left/right
+  let i = 0;
+  let delay = 1000;
+  $section.$('.appear')?.on('click', () => $fingers.forEach(
+    $f => $f.enter('slide', 500, i++ * delay)
+  )); 
+  // I love how this looks
+
+}
+
+export function finger32($section: Step) {
+  const $fingers = $section.$$('.fingy');
+  $fingers.forEach($f => $f.hide());
+
+  let i = 0; 
+  let delay = 500;
+  $section.$('.appear')?.on('click', () => $fingers.forEach(
+    $f => $f.enter('slide', 500, i++ * delay)
+  ));
+}
+
 // BINPATTERN: how to re-render with a drop down? (see Graph Theory?)
 export function binaryTable($section: Step) {
   function f2 (i: string){ console.log(i); return i[4] === '0'; }
