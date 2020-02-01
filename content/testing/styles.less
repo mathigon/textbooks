@@ -16,3 +16,89 @@
     box-shadow: 0 3px 0 @dark-grey;
     cursor: pointer; 
 }
+
+.emoji-table tr {
+    margin: 20px;
+}
+.emoji-table td {
+    margin: 2px;
+    padding: 3px;
+}
+
+.emoji {
+    background: lighten(@grey, 70%);
+    border-radius: 4px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    transition: box-shadow .3s;
+}
+
+.back, .clear {
+    background: lighten(@red, 50%);
+    border-radius: 4px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    transition: box-shadow .3s
+}
+
+.back:hover, .clear:hover {
+    box-shadow: 0 0 2px @red;
+}
+
+.emoji:hover {
+    box-shadow: 0 0 2px @dark-grey;
+}
+
+.typeout {
+    height: 100px;
+    background: #eeeeee;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+// from divisibility
+.parity-row {
+    margin-top: 120px;
+    font-size: 1.2em;
+    text-align: center;
+}
+  
+.parity-bin-number {
+    background: @grey;
+    width: 8em;
+    height: 2em;
+    line-height: 2em;
+    margin: 0 .4em;
+    display: inline-block;
+    border-radius: 20px;
+    color: white;
+}
+  
+.parity-value {
+    display: inline-block;
+    position: relative;
+    width: 6em;
+    height: 2em;
+    margin: 0 .5em -.6em;
+}
+  
+.parity-bubble {
+    width: 6em;
+    height: 2em;
+    padding: 0;
+    line-height: 2em;
+    top: 0;
+    left: 0;
+    position: absolute;
+  
+    transition: transform .2s;
+    transition-delay: .1s;
+    &:first-child { transform: translateY(-120%); }
+    &:last-child { transform: translateY(120%); }
+  
+    &.success .btn { pointer-events: none; background: @green; z-index: 10; box-shadow: none; color: white; }
+    &.error .btn { pointer-events: none; background: @red; z-index: 10; box-shadow: none; color: white; }
+}
+  

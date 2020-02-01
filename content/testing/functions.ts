@@ -5,9 +5,186 @@
 
 // nothing to see here, folks
 import {Obj, Color} from '@mathigon/core';
-import {SVGView, animate, InputView, AnimationResponse} from '@mathigon/boost';
-import {Step} from '../shared/types';
-import { Point } from '@mathigon/fermat';
+import {SVGView, animate, InputView, AnimationResponse, ElementView, $, observable} from '@mathigon/boost';
+import {Step, Gameplay} from '../shared/types';
+import { Point, Random } from '@mathigon/fermat';
+
+export function emojiBoard($section: Step) {
+
+    // 1. set up code data
+    const hearts = ['💙', '💚', '💛', '💜', '🧡', '🖤'];
+    const fruit = ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈'];
+    const sports = ['⚽️', '🏀', '⚾️', '🏈', '🥎', '🎾', '🏐', '🏉', '🥏', '🎱'];
+    const books = [ '📕', '📗', '📘', '📙', '📒'];
+
+    const emoji: Obj<string[]> = {
+        hearts, fruit, sports, books
+    };
+
+    let theme = 'hearts';
+
+    // is there a difference between which item is selected in each place?
+    const $emoji: ElementView[] = $section.$$('.emoji');
+    const $hearts: ElementView[] = $section.$$('.hearts .emoji');
+    const $sports: ElementView[] = $section.$$('.sports .emoji');
+    const $fruit: ElementView[] = $section.$$('.fruit .emoji');
+    const $books: ElementView[] = $section.$$('.books .emoji');
+
+    const hideAll = ($f: ElementView) => $f.hide();
+    const showAll = ($f: ElementView) => $f.show();
+    $section.$$('.sports')!.forEach(hideAll);
+    $section.$$('.fruit')!.forEach(hideAll);
+    $section.$$('.books')!.forEach(hideAll);
+    const $typeout: ElementView = $section.$('.typeout')!;
+    let typed: boolean = false;
+
+    console.log($hearts.length, $sports.length, $fruit.length);
+
+    const clickFarm = (map: string[]) => 
+        ($f: ElementView, i: number) => {
+            $f.on('click', () => {
+                if (!typed) {
+                    $typeout.text = "";
+                    typed = true;
+                }
+                $typeout.text += map[i];
+            });
+        }
+
+    $fruit.forEach(clickFarm(fruit));
+    $sports.forEach(clickFarm(sports));
+    $hearts.forEach(clickFarm(hearts));
+    $books.forEach(clickFarm(books));
+
+    // delete
+    $section.$$('.back').forEach(($b: ElementView) => {
+        $b.on('click', () => {
+            $typeout.text = $typeout.text.substr(0, $typeout.text.length - 2);
+        });
+    });
+
+    // clear
+    $section.$$('.clear').forEach($b => {
+        $b.on('click', () => {
+            $typeout.text = "";
+        });
+    });
+
+    
+    ($section.$('select') as InputView).change((x: string) => {
+        theme = x;
+        // reset
+        $typeout.text = "";
+
+        // EMOJI: could do this with a map function?
+        if (x === 'hearts') {
+            $section.$$('.hearts')!.forEach(showAll);
+            $section.$$('.sports')!.forEach(hideAll);
+            $section.$$('.fruit')!.forEach(hideAll);
+            $section.$$('.books')!.forEach(hideAll);
+        } else if (x === 'sports') {
+            $section.$$('.hearts')!.forEach(hideAll);
+            $section.$$('.sports')!.forEach(showAll);
+            $section.$$('.fruit')!.forEach(hideAll);
+            $section.$$('.books')!.forEach(hideAll);
+        } else if (x === 'fruit') {
+            $section.$$('.hearts')!.forEach(hideAll);
+            $section.$$('.sports')!.forEach(hideAll);
+            $section.$$('.fruit')!.forEach(showAll);
+            $section.$$('.books')!.forEach(hideAll);
+        } else if (x === 'books') {
+            $section.$$('.hearts')!.forEach(hideAll);
+            $section.$$('.sports')!.forEach(hideAll);
+            $section.$$('.fruit')!.forEach(hideAll);
+            $section.$$('.books')!.forEach(showAll);
+        }
+    });
+
+    const translateFun = (input: string) => {
+        let translated = "";
+        // what's the best way to do this? a map of emojis, mapped to letters?? idk
+        for (let i = 0; i < input.length; i+=4) {
+            let nextChar1 = input[i].concat(input[i+1]);
+            let nextChar2 = input[i+2].concat(input[i+3]);
+
+            let map = emoji[theme];
+            let index1: number = map.indexOf(nextChar1);
+            let index2: number = map.indexOf(nextChar2);
+    
+            let charIndex = index1*5 + index2;
+            // this one doesn't have "x"
+            console.log(charIndex);
+            if (charIndex === 23 || charIndex === 24) charIndex++;
+            
+            translated += String.fromCharCode(97 + charIndex);
+            
+            console.log(translated);
+        }
+        $section.$('.output')!.text = translated;
+
+    }
+
+    const $translate = $section.$('.translate')!;
+    $translate.on('click', () => {
+        let translateme = $typeout.text;
+        console.log(translateme);
+        translateFun(translateme);
+
+
+    });
+
+    return; 
+    
+    console.log('emoji board');
+    const $textarea = $section.$('textarea')!;
+    console.log($textarea);
+
+    const $button = $section.$('button')!;
+
+    $textarea.onKeyDown('a', () => {
+        console.log('a');
+    });
+    let x = 0;
+
+    let hasTyped = false;
+
+    let ff = (e:any) => {
+        
+        (e as KeyboardEvent).stopImmediatePropagation();
+        switch((e as KeyboardEvent).key) {
+            case 'a': console.log('apple'); break;
+            case 'b': console.log('bruins'); break;
+            case 'c': console.log('coffee'); break;
+        }
+        console.log((e as KeyboardEvent));
+        console.log((e as KeyboardEvent).key);
+        
+        if (!hasTyped) {
+          //  $textarea.text = '';
+          //  hasTyped = true;
+        }
+        //$textarea.text += '' + e.key + hearts[2];
+        //$textarea._el.innerHTML = $textarea.text;
+
+        console.log($textarea.text);
+        console.log($textarea.textStr);
+
+    };
+
+    $button.on('click', (e) => {
+        console.log('click');
+        $textarea.text += 'x';
+    });
+
+//    $textarea._el.removeEventListener('keydown');
+    $textarea._el.addEventListener('keydown', ff, {once: false});
+
+    // EMOJI: this can't handle letters, numbers, anything except what's defined
+//    $textarea.onKeyDown('')
+    $textarea.onKeyDown('enter', () => {
+        console.log('enter');
+    });
+}
 
 /**
  * A modification of *race* from divisibility.
@@ -16,20 +193,20 @@ import { Point } from '@mathigon/fermat';
 export function raaace($section: Step) {
 
     const $svg = $section.$('svg');
-    console.log($svg);
+    //console.log($svg);
 
     const $button = $section.$('.lap-button')!;
     const $buttonText = $button.$('text')!;
     // select runners
     const $runners = $section.$$('circle') as SVGView[];
-    console.log($runners);
+    //console.log($runners);
 
     const $paths = $section.$$('.runner-path') as SVGView[];
-    console.log($paths);
+    //console.log($paths);
 
     // map gives us an array of children instead of the parent
     const $lapTimes = $section.$$('.lap-times').map($l => $l.children);
-    console.log($lapTimes);
+    //console.log($lapTimes);
 
     let speed = [4, 6, 3];
     let duration = 12;
@@ -288,4 +465,48 @@ export function kri8it($section: Step) {
     }
 
     recurse(0, $lines.length);
+}
+
+export function hamming($step: Step) {
+
+  const $gameplay = $step.$('x-gameplay') as Gameplay;
+
+  $gameplay.setFirstSlide($el =>
+    $el.bindObservable(observable({bin: '??????', p: '?'})));
+
+  $gameplay.slideGenerator = ($el, success, error) => {
+
+    let len = 6, bin = "";
+    let count = 0;
+    for (let i=0; i<len; i++) {
+        let digit = Random.integer(2);
+        bin += "" + digit;
+        if (digit === 1) count++;
+    }
+
+    $el.bindObservable(observable({bin}));
+
+    let $buttons = $el.$$('.parity-bubble');
+    $buttons[0].on('click', count%2 === 0 ? success : error);
+    $buttons[1].on('click', count%2 === 1 ? success : error);
+
+    $el.on('success', function () {
+        for (const [i, $b] of $buttons.entries()) {
+            if (count%2 === i) {
+                $b.addClass('success');
+                $b.css('transform', 'none');
+            } else {
+                $b.children[0].exit('pop');
+            }
+        }
+    });
+
+    $el.on('error', () => {
+        for (const [i, $b] of $buttons.entries()) {
+            $b.addClass(count%2 === i ? 'success' : 'error');
+        }
+    });
+
+  }
+
 }

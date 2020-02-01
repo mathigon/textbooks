@@ -4,9 +4,110 @@
 > section: unit-1
 > sectionStatus: dev
 
+    p Please point at   <em id="pointed" style="color: green;">this word</em>
+
+    p Blah blah <em id="pointed" style="color: green;">blah</em>.
+
+Blah blah blah.
+
+Blah blah blah.
+
+Hey I'm gonna point at that thing when you hover over [here](->#pointed).
+
+---
+> section: unit-2x
+> sectionStatus: dev
+> id: emoji-board
+
+## Emoji Codes
+
+    mixin codeTable(base, emojis, letters)
+      table(class=attributes.class)
+        tr
+          td
+          -var e= 0
+          while (e < base)
+            td= emojis[e]
+            - e+= 1
+        - var r = 0
+        while (r < base)
+          tr
+            -var d = 0
+            td= emojis[r]
+            while (d < base)
+              td= letters[r*base + d]
+              -d += 1
+          - r += 1
+
+          
+### Section 1.0
+##### Let's do some table stuff
+
+    - var hearts = ['💙', '💚', '💛', '💜', '🧡']
+    - var fruit = ['🍏', '🍎', '🍐', '🍊', '🍋']
+    - var sports = ['⚽️', '🏀', '⚾️', '🏈', '🥎']
+    - var books = [ '📕', '📗', '📘', '📙', '📒'];
+
+    - var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'y', 'z']
+    +codeTable(5, hearts, letters)(class="hearts")
+    +codeTable(5, fruit, letters)(class="fruit")
+    +codeTable(5, sports, letters)(class="sports")
+    +codeTable(5, books, letters)(class="books")
+
+
+##### Pick a theme and write with emojis to create a code.
+
+    div.wtf
+      p: select
+        option(value="hearts", selected) Hearts 💙💚💛
+        option(value="sports") Sports ⚽️🏀⚾️
+        option(value="fruit") Fruit 🍎🍊🍐
+        option(value="books") Books 📕📗📘
+      .typeout
+      // EMOJI: (1) this could be a m1x1n (see divisibility)
+    div
+      table.emoji-table
+        tr.hearts
+          td: button.emoji 💙
+          td: button.emoji 💚
+          td: button.emoji 💛
+          td: button.emoji 💜
+          td: button.emoji 🧡
+          td: button.back 🔙
+          td: button.clear 🚫
+        tr.sports
+          td: button.emoji ⚽️
+          td: button.emoji 🏀
+          td: button.emoji ⚾️
+          td: button.emoji 🏈
+          td: button.emoji 🥎
+          td: button.back 🔙
+          td: button.clear 🚫
+        tr.fruit
+          td: button.emoji 🍏
+          td: button.emoji 🍎
+          td: button.emoji 🍐
+          td: button.emoji 🍊
+          td: button.emoji 🍋
+          td: button.back 🔙
+          td: button.clear 🚫
+        tr.books
+          td: button.emoji 📕
+          td: button.emoji 📗
+          td: button.emoji 📘
+          td: button.emoji 📙
+          td: button.emoji 📒
+          td: button.back 🔙
+          td: button.clear 🚫
+
+    .button.translate TRANSLATE
+
+    div.output
+
 ---
 >id: raaace
 
+## Misc
 ### Section 1.1
 
 {.todo} TODO do something
@@ -59,5 +160,46 @@ It looks quite like a graph, doesn't it?
     // KRI8: how to get the actual painting underneath??? oh well, leave it for another time
     include svg/kri8it_paths.svg
     // x-media.background(src="images/kri8it.png")
+
+---
+
+## Algebra Solver
+> section: algebra
+> sectionStatus: dev
+> id: algebra
+
+### Let's use the Algebra Solver
+
+    // HAMMING: can this be used for just making new equations? not algebra? 
+::: x-algebra-flow
+
+`input(1, "p1") = input(0, "p2")`
+
+* Do a thing!
+* Do another thing!
+* Yay!
+
+:::
+
+---
+## Hamming Codes
+> section: hamming
+> sectionStatus: dev
+> id: hamming
+
+    // HAMMING: next mimic a quiz
+
+In this short game you have to determine the parity of a binary number, as fast as possible. Click the play button to start.
+
+    // HAMMING: next
+    .box.problem-box
+      .box-title: h3 Parity Quiz
+      x-gameplay.box-body
+        .parity-row
+          .parity-bin-number ${bin}
+          | has parity value
+          .parity-value
+            .parity-bubble: .btn.btn-blue 0
+            .parity-bubble: .btn.btn-blue 1
 
 ---
