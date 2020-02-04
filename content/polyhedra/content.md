@@ -458,7 +458,7 @@ usually use just the most specific type.
     x-geopad.sticky(width=300 height=300): svg
 
 ::: column.grow
-Now pick four points, anywhere in the the grey box on the left.
+Now pick four points, anywhere in the grey box on the left.
 _{span.reveal(when="points")} We can connect all of them to form a quadrilateral._
 
 {.reveal(when="points" delay=1000)} Let’s find the midpoint of each of the four
@@ -468,7 +468,7 @@ sides. If we connect the midpoints, we get [[another quadrilateral|a triangle|a 
 observe what happens to the smaller one. It looks like it is not just _any_
 quadrilateral, but always a [[parallelogram|trapezium|rectangle]]!
 
-{.reveal(when="blank-1")} But why is that the case? Why should the the result
+{.reveal(when="blank-1")} But why is that the case? Why should the result
 for _any_ quadrilateral always end up being a parallelogram? To help us explain,
 we need to draw one of the [diagonals](gloss:polygon-diagonal) of the original
 quadrilateral.
@@ -1904,7 +1904,7 @@ Fuller](bio:fuller), famous for constructing similar-looking buildings.
     p.caption Pyrite cube
       
 ::: column.grow
-Most __crystals__ have their atoms arranged in a regular grids consisting of
+Most __crystals__ have their atoms arranged in a regular grid consisting of
 [tetrahedra](gloss:tetrahedron), [cubes](gloss:cube) or [octahedra](gloss:octahedron).
 When they crack or shatter, you can see these shapes on a larger scale.
 :::
@@ -1936,7 +1936,7 @@ support large roofs and heavy bridges.
     p.caption Polygonal role-playing dice
 
 ::: column.grow
-Platonic solids are also used to create __dice__. because of their summetry,
+Platonic solids are also used to create __dice__. because of their symmetry,
 every side has the [probability](gloss:probability) of landing facing up – so
 the dice are fair.
 

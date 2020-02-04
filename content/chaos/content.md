@@ -499,3 +499,4 @@ Sinaï-Ruelle-Bowen measure / statistics / forecasting
 * https://www.dwitter.net/d/12018
 * https://geoffboeing.com/2015/03/chaos-theory-logistic-map/
 * Feigenbaum constant
+* https://www.youtube.com/watch?v=ovJcsL7vyrk
