@@ -15,7 +15,7 @@
 
     x-media(src="images/geocentric.jpg" width=320 height=272)
 
-{.caption} 地球是_托勒密宇宙_的中心。
+{.caption} 地球是 _托勒密宇宙_ 的中心。
 
 :::
 
@@ -80,6 +80,7 @@
 > id: circumference
 
 如果一个圆的直径为_d_，则它的周长`C = π × d`。同样的，如果一个圆的[半径](gloss:circle-radius)为_r_，那么它的周长
+
 {.text-center} `C =` [[`2 π r`|`π r`|`π r^2`]]。
 
 ---
@@ -171,7 +172,7 @@
 
 ::: column.grow
 
-这里我们可以看到一个圆分成了${toWord(n1)} 块楔形。移动滑块，把它们排成一行。
+这里我们可以看到一个圆分成了 ${n1} 块楔形。移动滑块，把它们排成一行。
 
 {.reveal(when="slider")} 如果我们增加楔形的数量到 ${n1}{n1|6|6,30,2}。这个形状开始越来越接近于 [[长方形|圆|正方形]]。
 
@@ -205,7 +206,8 @@ _{span.reveal(when="blank-2")} (注意观察一半的楔形向下，一半的向
 
 {.reveal(when="blank-0")}三角形的高度等于圆的[[半径|直径|周长]]。
 _{span.reveal(when="blank-1")} 三角形的底等于圆的[[周长|直径的两倍]]。_
-_{span.reveal(when="blank-2")} 所以三角形的面积近似于
+_{span.reveal(when="blank-2")} 所以三角形的面积近似于_
+
 {.text-center.reveal(when="blank-2")} `A = 1/2 "base" × "height" = π r^2`。
 
 :::
@@ -214,7 +216,9 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于
 > id: area-2
 
 如果我们可以使用无限个环形或楔形，上面的近似值就刚好完美——并且他们得出了两个一样的圆的面积公式：
+
 {.text-center.r} `A = π r^2`。
+
 [Continue](btn:next)
 
 ---
@@ -282,6 +286,7 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于
 > goals: search
 
 如果圆周率是一个常数，意味着你随便想一个数字串，它将出现在某个数位里面。下面你可以在圆周率的前1百万位搜索——是否包含你的生日？
+
     .box
       .box-title: h3 圆周率的前1百万位
       .box-body.pi-controls
@@ -379,7 +384,7 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于
 
 恰巧，360度是我们至今仍然使用的一个最古老的数学概念之一。起源于大约5000年前的古巴比伦。
 
-当时，数学的一个最重要的应用之一就是天文学。_太阳_决定这四季的轮转，农民们在种地的时候需要知道这些。类似的，_月亮_决定了潮汐，这对渔民们来说也很重要。人们还研究根据星象来预测未来或者与天神沟通。
+当时，数学的一个最重要的应用之一就是天文学。_太阳_ 决定这四季的轮转，农民们在种地的时候需要知道这些。类似的，_月亮_ 决定了潮汐，这对渔民们来说也很重要。人们还研究根据星象来预测未来或者与天神沟通。
 
 ::: column(width=260)
 
@@ -495,11 +500,11 @@ __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} 
 
 ::: column.grow
 
-例如，[国际空间站](gloss:iss)绕地球一种需要1.5小时。这意味着它__旋转的速度__ 为 [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]]弧度每小时。
+例如，[国际空间站](gloss:iss)绕地球一种需要1.5小时。这意味着它 __旋转的速度__ 为 [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]]弧度每小时。
 
-{.reveal(when="blank-0")} 在一个[单位圆](gloss:unit-circle)中，旋转的速度和__实际的__速度是一样的，因为周长等于旋转一周的弧度（都是`2π`）。
+{.reveal(when="blank-0")} 在一个[单位圆](gloss:unit-circle)中，旋转的速度和 __实际的__ 速度是一样的，因为周长等于旋转一周的弧度（都是`2π`）。
 
-{.reveal(when="blank-0" delay=1000)} ISS的轨道半径为6800千米，这意味着ISS的_实际_运行速度为 [[`(2 pi)/1.5 xx 6800`|`(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km/h._
+{.reveal(when="blank-0" delay=1000)} ISS的轨道半径为6800千米，这意味着ISS的 _实际_ 运行速度为 [[`(2 pi)/1.5 xx 6800`|`(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km/h._
 
 ::: column(width=300)
 
@@ -756,9 +761,9 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 正如你在图中看到的，一条 [{.red} 弧](pill:arc) 是圆的[[直径|周长|切线]]的一部分，而[{.yellow} 扇形](pill:sector)则是圆[[半径|边缘|内部]]的一部分。
 
 ::: .reveal(when="blank-0 blank-1")
-点_A_和点_B_之间的弧通常记为`arc(AB)`。这个定义有点不严谨：连接点A和点B之间的弧还有 [{.purple} 另一条弧](pill:major)在圆上的另一边。
+点 _A_ 和点 _B_ 之间的弧通常记为 `arc(AB)`。这个定义有点不严谨：连接点A和点B之间的弧还有 [{.purple} 另一条弧](pill:major)在圆上的另一边。
 
-另个中较短的弧称之为__劣弧__，而较长的则称之为__优弧__。如果点_A_和点_B_恰好相对且两条弧的长度相等时，我们称之为[[直径|周长|半圆]]。
+另个中较短的弧称之为 __劣弧__，而较长的则称之为 __优弧__。如果点_A_和点_B_恰好相对且两条弧的长度相等时，我们称之为[[直径|周长|半圆]]。
 :::
 
 :::
@@ -770,7 +775,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 计算弧长或扇形面积，我们需要知道它们所在圆中所对的角：也就是[{.blue} 圆心角](pill:angle)。
 
-注意观察，弧、扇形和圆心角所占一个完整圆的比例是_相同_的。例如，如果[{.blue} 圆心角](pill:angle)为_{span.var-action}90°_，则占了[{.teal} 整个圆](pill:fangle)的[[one quarter|one half|one third]]。
+注意观察，弧、扇形和圆心角所占一个完整圆的比例是 _相同_ 的。例如，如果[{.blue} 圆心角](pill:angle)为 _{span.var-action}90°_，则占了[{.teal} 整个圆](pill:fangle)的[[one quarter|one half|one third]]。
 
 ::: .reveal(when="blank-0")
 也就是说 [{.red}弧长](pill:arc) 也是[{.purple} 整个圆周长](pill:circ)的`1/4` ，且 [{.yellow} 扇形的面积](pill:sector) 也是[{.orange} 整个圆面积](pill:area) 的`1/4`。
@@ -806,13 +811,13 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}弧长](pill) | = | `"周长" × c/360` |
-|                          | = | `2 π r × c/360`          |
+|                    | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow}扇形面积](pill) | = | `"圆的面积" × c/360` |
-|                              | = | `π r^2 × c/360`         |
+|                          | = | `π r^2 × c/360`     |
 {.eqn-system}
 
 :::
@@ -836,13 +841,13 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}弧长](pill) | = | `2 π r × c/(2π)` |
-|                          | = | `r × c`          |
+|                    | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow}扇形面积公式](pill) | = | `π r^2 × c/(2π)` |
-|                              | = | `1/2 r^2 c`      |
+|                             | = | `1/2 r^2 c`      |
 {.eqn-system}
 
 :::
@@ -867,7 +872,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
     x-media(src="images/well.jpg" width=300 height=300 lightbox)
 
-{.caption} 一些资料称“埃拉托色尼井”位于尼罗河的_象岛_。
+{.caption} 一些资料称“埃拉托色尼井”位于尼罗河的 _象岛_。
 
 :::
 
@@ -1170,9 +1175,9 @@ and only if the opposite angles are supplementary.
 ---
 > id: cylinder-prism
 
-####圆柱的体积
+#### 圆柱的体积
 
-圆柱的顶部和底部是两个全等的圆，叫做_底_。圆柱的__{.m-blue} 高 *h*__是两个底面间的垂直距离，而圆柱体的 __{.m-red} 半径 *r*__则只是表示两圆形底部的半径。
+圆柱的顶部和底部是两个全等的圆，叫做 _底_。圆柱的 __{.m-blue} 高 *h*__ 是两个底面间的垂直距离，而圆柱体的 __{.m-red} 半径 *r*__ 则只是表示两圆形底部的半径。
 
 我们可以把一个圆柱近似成${n}{n|5|3,20,1}[__棱柱__](gloss:prism)。当边数越来越多的时候，棱柱逐渐看起来像一个圆柱。
 
@@ -1189,11 +1194,11 @@ and only if the opposite angles are supplementary.
 ---
 > id: cylinder-volume
 
-尽管确切的说圆柱不是棱柱，但他们有很多共同的性质。这两种图形，我们可以通过把__{.m-red} 底面积__乘以 __{.m-blue} 高__的形式得到它们的体积。也就是说一个半径为_{.b.m-red} r_ 且高为 _{.b.m-blue} h_ 的圆柱的体积为
+尽管确切的说圆柱不是棱柱，但他们有很多共同的性质。这两种图形，我们可以通过把 __{.m-red} 底面积__ 乘以 __{.m-blue} 高__的形式得到它们的体积。也就是说一个半径为_{.b.m-red} r_ 且高为 _{.b.m-blue} h_ 的圆柱的体积为
 
 {.text-center} `V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
 
-{.reveal(when="eqn-0")} 要注意半径和高的单位需要统一。例如，如果_r_和_h_都是以cm为单位，那么体积的单位为[[`"cm"^3`|`"cm"^2`|cm]]。
+{.reveal(when="eqn-0")} 要注意半径和高的单位需要统一。例如，如果 _r_ 和 _h_ 都是以cm为单位，那么体积的单位为[[`"cm"^3`|`"cm"^2`|cm]]。
 
 ---
 > id: oblique-cylinder
@@ -1201,7 +1206,7 @@ and only if the opposite angles are supplementary.
 
 ::: column.grow
 
-上面的例子中，圆柱的底都是在对方的正上方：这种叫做_直圆柱_。如果底不在对方的上方，我们就得到一个_斜圆柱_。它们的底面还是平行的，但是边“倾斜”了一个不是90°的角。
+上面的例子中，圆柱的底都是在对方的正上方：这种叫做 _直圆柱_。如果底不在对方的上方，我们就得到一个 _斜圆柱_。它们的底面还是平行的，但是边“倾斜”了一个不是90°的角。
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1218,7 +1223,7 @@ and only if the opposite angles are supplementary.
 > id: cavalieri
 > goals: slide
 
-通过证明发现一个斜圆柱的体积恰好等于一个相同半径和高的直圆柱。这是根据[__卡瓦列里原理(gloss:cavalieri)用意大利的数学家[博纳文图拉•卡瓦列里](bio:cavalieri)的名字来命名：如果截两个几何体的两个截面的面积总相等，那么这两个几何体的体积相等。
+通过证明发现一个斜圆柱的体积恰好等于一个相同半径和高的直圆柱。这是根据 [__卡瓦列里原理__](gloss:cavalieri)用意大利的数学家[博纳文图拉•卡瓦列里](bio:cavalieri)的名字来命名：如果截两个几何体的两个截面的面积总相等，那么这两个几何体的体积相等。
 
 假设把一个圆柱切成无数个小片。我们可以水平移动这些小片得到一个斜圆柱。每个圆片的体积并没有随着变倾斜而改变，因此总体积仍然是固定的：
 
@@ -1254,8 +1259,9 @@ and only if the opposite angles are supplementary.
   _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 * {.reveal(when="eqn-0")} 长方形的高为
   _{x-equation.small(solution="h" keys=" " short-var)}_
-  _{span.reveal(when="eqn-1")}，长方形的宽为  _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.且等于圆的[[周长|正切|直径]]。_
-
+  _{span.reveal(when="eqn-1")}，长方形的宽为_
+  _{x-equation.small.reveal(when="eqn-1" solution="2 π r" keys="+ × π sup" short-var)}_
+  _{span.reveal(when="eqn-1")}.且等于圆的[[周长|正切|直径]]。_
 
 ::: column(width=320)
 
@@ -1267,7 +1273,7 @@ and only if the opposite angles are supplementary.
 ---
 > id: cylinder-surface-1
 
-也就是说半径为_r_且高为_h_的圆柱的表面积为：
+也就是说半径为 _r_ 且高为 _h_ 的圆柱的表面积为：
 
 {.text-center} `A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_.
 
@@ -1289,7 +1295,7 @@ and only if the opposite angles are supplementary.
 
 一个[__圆锥__](gloss:cone)是一个有圆__{.m-red}底__的立体图形。如图所示，它的侧面“向上缩小”直至一个叫做__{.m-green}顶点__的点。
 
-圆锥的__{.m-red}半径__ 为圆锥底面圆的半径，而__{.m-blue}高__ 则为顶点到底面的垂直距离。
+圆锥的 __{.m-red}半径__ 为圆锥底面圆的半径，而 __{.m-blue}高__ 则为顶点到底面的垂直距离。
 
 正如我们前面看到的其它图形，圆锥在我们身边也是无处不在：冰淇淋筒，锥形交通路标，某些屋顶，甚至圣诞树也是。你还能想到其它的吗？
 
@@ -1324,7 +1330,7 @@ and only if the opposite angles are supplementary.
 ---
 > id: cone-volume
 
-####圆锥的体积
+#### 圆锥的体积
 
 ::: column.grow
 
@@ -1348,7 +1354,7 @@ and only if the opposite angles are supplementary.
 ---
 > id: cone-circumscribed
 
-注意这个公式与圆柱体积的相似之处。假设在圆锥旁边画一个圆柱，它们的底和高相同——这个称为__外切圆柱__。此时，圆锥的刚好占到[[一半|三分之一|四分之一]]的圆柱体积。
+注意这个公式与圆柱体积的相似之处。假设在圆锥旁边画一个圆柱，它们的底和高相同——这个称为 __外切圆柱__。此时，圆锥的刚好占到[[一半|三分之一|四分之一]]的圆柱体积。
 
     figure: x-solid(size=280)
 
@@ -1363,7 +1369,7 @@ and only if the opposite angles are supplementary.
 
 ::: column.grow
 
-正如一个圆柱，一个圆锥也不必“直直的”。如果顶点就在底面圆圆心的正上方，我们就称之为__直圆锥__。否则，我们就称之为__斜圆锥__。
+正如一个圆柱，一个圆锥也不必“直直的”。如果顶点就在底面圆圆心的正上方，我们就称之为 __直圆锥__。否则，我们就称之为 __斜圆锥__。
 
 再一次，我们可以利用卡瓦列里原理来说明斜圆柱具有相同的体积，如果它们的底和高是相同的。
 
@@ -1377,13 +1383,13 @@ and only if the opposite angles are supplementary.
 ---
 > id: cone-surface
 
-####圆锥的表面积
+#### 圆锥的表面积
 
 ::: column.grow
 
 要求一个圆锥的表面积会有一点点麻烦。和之前一样，我们可以把圆锥展平。移动下面的滑块你可以发现：在这个问题中，我们得到一个圆形与一个[[弧|弦|扇形]]。
 
-{.reveal(when="blank-0")} 现在我们只需要把这两个部分的面积相加即可。__{.m-yellow}底面圆__的半径为_r_，那么它的面积为
+{.reveal(when="blank-0")} 现在我们只需要把这两个部分的面积相加即可。__{.m-yellow}底面圆__ 的半径为 _r_，那么它的面积为
 
 {.text-center.reveal(when="blank-0")} `pill(A_"底","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
@@ -1400,8 +1406,8 @@ _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
 ::: column.grow
 
-__{.m-green}扇形__的半径为圆锥底面圆上的点到顶点的距离。这个叫做圆锥的__{.pill.green.step-target(data-to="s")}
-倾斜高度 *s*__，和常说的__{.pill.blue.step-target(data-to="h")}高 *h*__不太一样。我们可以用[勾股定理](gloss:pythagoras-theorem)算出倾斜的高度：
+__{.m-green}扇形__ 的半径为圆锥底面圆上的点到顶点的距离。这个叫做圆锥的 __{.pill.green.step-target(data-to="s")}
+倾斜高度 *s*__，和常说的 __{.pill.blue.step-target(data-to="h")}高 *h*__ 不太一样。我们可以用[勾股定理](gloss:pythagoras-theorem)算出倾斜的高度：
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
 | `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1428,7 +1434,7 @@ __{.m-green}扇形__的半径为圆锥底面圆上的点到顶点的距离。这
 
 ::: column.grow
 
-扇形的_{span.pill.step-target.red(data-to="arc")}弧长_ 等于_{span.pill.step-target.yellow(data-to="base")}底_的[[直径|弧长|周长]]：_{span.reveal(when="blank-0")}`2 π r`。现在我们就可以使用前面部分产生的[公式](gloss:circle-sector) 进行计算扇形面积的公式了：_
+扇形的 _{span.pill.step-target.red(data-to="arc")}弧长_ 等于 _{span.pill.step-target.yellow(data-to="base")}底_ 的[[直径|弧长|周长]]：_{span.reveal(when="blank-0")}`2 π r`。现在我们就可以使用前面部分产生的[公式](gloss:circle-sector) 进行计算扇形面积的公式了：_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 | `pill(A_"扇形","green","sector")` | `=` | `pill(A_"圆","teal","circle") × pill("弧长","red","arc") / pill("周长","teal","circumference")` |
@@ -1461,7 +1467,7 @@ __{.m-green}扇形__的半径为圆锥底面圆上的点到顶点的距离。这
 ---
 > id: cone-surface-2
 
-最后，我们只需要把__{.m-yellow}底__的面积和__{.m-green}扇形__的面积相加，就得到了圆锥的表面积：Finally, we just have to 
+最后，我们只需要把__{.m-yellow}底__的面积和__{.m-green}扇形__的面积相加，就得到了圆锥的表面积：
 
 {.text-center} `A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_
 
@@ -1472,9 +1478,9 @@ __{.m-green}扇形__的半径为圆锥底面圆上的点到顶点的距离。这
 
 ::: column.grow
 
-[__球__](gloss:sphere) 是一个由到给定的__{.m-green}中心 *C*__的距离相等的点组成的一个立体图形。这个距离叫做球的__{.m-red}半径 *r*__。
+[__球__](gloss:sphere) 是一个由到给定的 __{.m-green}中心 *C*__ 的距离相等的点组成的一个立体图形。这个距离叫做球的 __{.m-red}半径 *r*__。
 
-你可以把一个球看成一个“立体的圆”。和[圆](gloss:circle)”一样，球也有__{.m-blue}直径*d*__，其长度为半径的[[一半|两倍]] ，还有弦和割线等等。
+你可以把一个球看成一个“立体的圆”。和[圆](gloss:circle)”一样，球也有 __{.m-blue}直径*d*__，其长度为半径的[[一半|两倍]] ，还有弦和割线等等。
 
 ::: column(width=240)
 
@@ -1485,7 +1491,7 @@ __{.m-green}扇形__的半径为圆锥底面圆上的点到顶点的距离。这
 ---
 > id: sphere-1
 
-{.r}在前面的部分(/course/circles/tangets-chords-arcs#eratosthenes-1)，
+{.r} [在前面的部分](/course/circles/tangets-chords-arcs#eratosthenes-1)，
 你学过了古希腊数学家[埃拉托色尼](bio:eratosthenes)如何通过一个碑影计算地球的半径——为6371km。现在，我们尝试计算地球的体积和表面积。[Continue](btn:next)
 
 ---
@@ -1539,13 +1545,13 @@ __{.m-green}扇形__的半径为圆锥底面圆上的点到顶点的距离。这
     x-slider(steps=100)
 
 
-{.reveal(when="slider-0")} 让我们尝试计算这两个几何体在距离地面相同__{span.pill.blue.step-target(data-to="h")}高度*h*__的横截面的面积。
+{.reveal(when="slider-0")} 让我们尝试计算这两个几何体在距离地面相同 __{span.pill.blue.step-target(data-to="h")}高度*h*__ 的横截面的面积。
 
 ::: column.grow
 
 {.reveal(when="slider-0")} 半球的横截面总是一个[[圆|环形|球]]。
 
-{.reveal(when="blank-0")} 横截面的__{span.pill.red.step-target(data-to="x")}半径*x*__是一个_{span.pill.yellow.step-target(data-to="tri")}直角三角形_的一部分，那么我们就可以使用[勾股定理](gloss:pythagoras-theorem):
+{.reveal(when="blank-0")} 横截面的 __{span.pill.red.step-target(data-to="x")}半径*x*__ 是一个 _{span.pill.yellow.step-target(data-to="tri")}直角三角形_ 的一部分，那么我们就可以使用[勾股定理](gloss:pythagoras-theorem):
 
 ::: .reveal(when="blank-0")
 {.text-center} `pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
@@ -1576,11 +1582,12 @@ __{.m-green}扇形__的半径为圆锥底面圆上的点到顶点的距离。这
 ---
 > id: sphere-volume-1
 
-这看起来两个几何体在同一水平面的横截面的面积是相等的。根据卡瓦列里原理，两个几何体具有相同的[[表面积|体积|周长]]！ _{span.reveal(when="blank-0")我们可以通过把[圆柱](gloss:cylinder-volume)的体积减去[圆锥](gloss:cone-volume)的体积得到半球的体积：_
+这看起来两个几何体在同一水平面的横截面的面积是相等的。根据卡瓦列里原理，两个几何体具有相同的[[表面积|体积|周长]]
+_{span.reveal(when="blank-0")我们可以通过把[圆柱](gloss:cylinder-volume)的体积减去[圆锥](gloss:cone-volume)的体积得到半球的体积：_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 | `V_"半球"` | = | `V_"圆柱" - V_"圆锥"` |
-|                  | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
+|           | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
 :::
 
 ---
@@ -1650,7 +1657,7 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 > id: sphere-maps
 > goals: move projection
 
-####球的表面积
+#### 球的表面积
 
 要得到计算一个球的表面积的公式是非常难的。一个原因就是我们无法像之前把圆锥或圆柱那样打开和“展平”球的表面。
 
@@ -1737,7 +1744,7 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 ---
 > id: conics-1
 
-如果你把手电筒垂直向下，你可以看到一个[[橄榄形|圆形|椭圆形]]的光线。_{span.reveal(when="blank-0")}倾斜那个锥形光束，你可以得到一个[__椭圆__](gloss:ellipse)。如果继续往前倾斜，你可以得到一个[__抛物线__](gloss:parabola) 或者一个[__双曲线__]gloss:hyperbola)。_
+如果你把手电筒垂直向下，你可以看到一个[[橄榄形|圆形|椭圆形]]的光线。_{span.reveal(when="blank-0")}倾斜那个锥形光束，你可以得到一个[__椭圆__](gloss:ellipse)。如果继续往前倾斜，你可以得到一个[__抛物线__](gloss:parabola) 或者一个[__双曲线__](gloss:hyperbola)。_
 
 ---
 > id: conics-2
@@ -1759,7 +1766,7 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 ---
 > id: ellipses
 
-###椭圆
+### 椭圆
 
 一个椭圆看起来很像一个“伸长的圆”。实际上，你可以把它当做一个圆有_两个圆心_——把它们称之为_焦点_。和一个圆上每个点都要圆心的距离相等类似，椭圆上面的每一个点到两个焦点的_距离之和_是固定的。
 
@@ -1804,7 +1811,7 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 ---
 > id: orbits
 
-###行星轨道
+### 行星轨道
 
 ::: column.grow
 
@@ -1852,7 +1859,7 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column.grow
 
-随着时间过去，人们意识到地球仅仅是绕着太阳（__日心说__）的众多行星之一，但直到1609年，天文学家约翰尼斯•开普勒](bio:kepler) 发现行星实际上沿着_椭圆轨道_运行。
+随着时间过去，人们意识到地球仅仅是绕着太阳（__日心说__）的众多行星之一，但直到1609年，天文学家约翰尼斯•[开普勒](bio:kepler) 发现行星实际上沿着_椭圆轨道_运行。
 
 太阳只是这个椭圆中的两个焦点之一。行星的速度靠近太阳时变大，远离太阳时变慢。
 
