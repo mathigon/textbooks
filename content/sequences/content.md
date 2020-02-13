@@ -1685,7 +1685,7 @@ Eratosthenes__](gloss:sieve-eratosthenes).
 
 ::: column(width=320)
 
-    x-coordinate-system(width=320 height=320 margins="8 8 20 24")
+    x-coordinate-system(width=320 height=320 margins="8 8 20 24" x-label="x" y-label="number of primes less than x")
 
 {.caption} If we draw a chart that increases by 1 whenever there is a prime
 number, we get a “stepped” function with fascinating properties.
