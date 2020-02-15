@@ -35,7 +35,7 @@
 
 Probabilities and likelihoods are everywhere around us, from weather forecasting
 to games, insurance or election polls. However, in the history of mathematics,
-probability is actually a very recent idea. While geometry and algebra were
+probability is actually a very recent idea. While numbers and geometry were
 studied by ancient Greek mathematicians more than 2500 years ago, the concepts
 of probability only emerged in the 17th and 18th century.
 

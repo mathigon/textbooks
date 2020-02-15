@@ -1309,6 +1309,8 @@ formed a linear pair when matched up.
 Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
 and only if the opposite angles are supplementary.
 
+https://www.youtube.com/watch?v=bJOuzqu3MUQ
+
 
 
 --------------------------------------------------------------------------------

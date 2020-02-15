@@ -18,15 +18,128 @@ arithmetic-sequence:
         总是常数 _d_。
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
+base-10:
+  title: 10进制
+  text: __十进位制__（__10进制__）是全世界最普遍使用的记数体系。一个数字中的每个数位有一个从0到9中10个不同的数值的一个。
+
+calculus:
+  title: 微积分
+  text: __微积分__是处理极限、导数、积分和幂级数的一个数学分支。常见的问题包括求曲线的斜率、求极值、求一个函数的变化率和曲边图形的面积等。
+
+cavalieri:
+  title: 卡瓦列里原理
+  text: |
+    __卡瓦列里原理__（祖暅原理也称祖氏原理）指出，如果两个几何体的高相等且两个同一水平截面的面积相等，那么它们的体积也相等。
+
+    根据这个原理我们可以得出棱柱和圆柱的体积为截面面积与高的乘积。
+
+circle:
+  title: 圆
+  text: __圆__ 是到定点（__圆心__）的距离等于定长（__半径__）的点的集合。
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-circumference:
+  title: Circumference of a Circle
+  text: 圆的 __周长__ 是环绕圆一周的长度。给定半径为 __r__ 的圆的周长 `C = 2 pi r`。
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: 直径 (圆)
+  text: 圆的__直径__是通过圆心且两个端点都在圆上的线段。
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: 半径
+  text: 圆的 __半径__ 是圆心到圆上一点的距离（或线段）。
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: 扇形
+  text: |
+    __扇形__是圆的一部分，由两条半径与一条__弧__围成的图形。它的面积与圆心角的大小成比例，弧长也是这样。也就是说
+
+    {.text-center} `(A_"扇形")/(A_"圆") = "弧长"/"周长" = θ/(2π)`。
+  link:  /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+compass:
+  title: 圆规
+  text: 圆规是用来绘制圆或弧的一种工具。它有两只脚，把指针的一端固定在中间，笔芯的一端绕着旋转一周画出轨迹。
+
+cone:
+  title: 圆锥
+  text: __圆锥__由一个圆形_底面_与一个点（称为_顶点_）被一个弯曲的侧面围成的立体图形。你可以把圆锥想象成一个“圆形金字塔”。
+
+cone-volume:
+  title: 圆锥的体积
+  text: |
+    圆锥的体积公式为：
+
+    {.text-center} `V = 1/3 π r^2 h`，
+
+    其中_r_为底面圆的半径，而_h_为圆锥的高（顶点到底面的垂直距离）。
+
+conic-section:
+  title: 圆锥曲线
+  text: |
+    __圆锥曲线__是一种由一个平面与圆锥表面相交形成的曲线。包含四种不同形式的圆锥曲线，并有许多性质：
+
+    * 圆
+    * 椭圆
+    * 抛物线
+    * 双曲线
+  link: /course/circles/conic-sections
+
+cos:
+  title: 余弦
+  text: __余弦__是一个三角函数之一，记做`cos(θ)`。在一个直角三角形中，它表示一个角的邻边与斜边的比值。
+  link: /course/triangles/trigonometry#trig-functions
+
+cylinder:
+  title: Cylinder
+  text: __圆柱__是由两个大小相等、相互平行的圆形（_底面_）以及连接两个底面的一个曲面围成的几何体。你也可以把它当做一个“圆形的棱柱”。
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: 圆柱的体积
+  text: |
+    圆柱体积的公式为：
+
+    {.text-center} `V = π r^2 h`，
+
+    其中_r_为底面圆的半径，而_h_为圆柱的高（两个地面之间的垂直距离）。
+
+degrees:
+  title: 度数
+  text: __度数__是测量角的一个单位，用符号°来表示。一个周角为360°，一个直角为90°，以此类推。
+
+dilation:
+  title: 缩放
+  text: __缩放__指的是讲一个图形通过放大或缩小改变大小的图形变换。
+  image: dilation.svg
+  link: /course/transformations/dilations
+
 dodecahedron:
   title: 正十二面体
   text: __正十二面体__是由12个正五边形组成的柏拉图式固体。它有20个顶点和30条边。
   link: /course/polyhedra/platonic#platonic-overview
 
+ellipse:
+  title: 椭圆
+  text: |
+    __椭圆__是一条曲线，包围着两个焦点。椭圆上的任意一点到椭圆两焦点的_距离之和_为定值。
+
+    如果两个焦点的距离很近，它会看起来像一个圆。当焦点的距离越来越远，则椭圆越来越扁。
+
+    圆锥是一种_圆锥曲线_：平面与圆锥相交形成的图形。
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
 factor:
   title: 因子
-  text: 一个数是 _a_ 是另一个数 _b_ 的 __因子 __(或 __除数 __)，如果你能用 _a_
-    整除 _b_ 同时没有余数。
+  text: 一个数是 _a_ 是另一个数 _b_ 的 __因子 __(或 __除数 __)，如果你能用 _a_ 整除 _b_ 同时没有余数。
   link: /course/divisibility/factors-and-multiples
 
 fibonacci-numbers:
@@ -69,6 +182,15 @@ golden-ratio:
     在艺术和建筑中，黄金比例通常被视为特别具有美感，它也出现在许多植物的螺旋
     状结构中。
 
+gravity:
+  title: 万有引力
+  text: |
+    __万有引力__是自然界中的四种基本力之一，促使宇宙中的两个物体相互靠近。艾萨克•牛顿发现两个质量为`m_1`和`m_2`的物体之间的引力为
+
+    {.text-center} `F = (G m_1 m_2) / r^2`，
+
+    _G_是万有引力常数而_r_则是两个物体之间的距离。
+
 hailstone-sequence:
   title: 冰雹序列
   text: |
@@ -78,14 +200,31 @@ hailstone-sequence:
     * 如果 `x_n` 是奇数, 则 `x_(n+1) = 3 * x_n + 1`
   link: /course/sequences/special#hailstone
 
+hyperbola:
+  title: 双曲线
+  text: __双曲线__是一个像`y = 1/x`这样的的函数的图象。它由两个不相交的部分组成，两个分支都往_渐近线_靠拢。它也是一种_圆锥曲线_。
+  image: hyperbola.svg
+
 integer:
   title: 整数
   text: "__整数__是正整数和负整数，包括零：…、-3、-2、-1、0、1、2、3、…"
 
 irrational-numbers:
   title: 无理数
-  text: __无理数__是不能表示为整数分数(_有理数_)的数。例如，0.333333…=`1/3`是
-    _有理性_的，但`π`、`sqrt(2)`和_e_都是_无理性_的。
+  text: __无理数__只不能表示成两个整数的比值的数（_有理数_）。例如0.333333… = `1/3` ，是_有理数_，像`π`, `sqrt(2)` 和_e_都是_无理数_。无理数的小数数位是无限且不循环的。
+
+iss:
+  title: 国际空间站
+  text: __国际空间站__（ISS）发射于1998年，运行在距离地球约400千米的高度轨道上。它是最大的近地轨道人造物体且自发射以来不断有人居住。在地球上肉眼可见。
+
+net:
+  title: 多面体的展开图
+  text: 多面体的__展开图__就是你把一个多面体“展开”后得到的一个水平的平面图形。
+
+parabola:
+  title: 抛物线
+  text: __抛物线__是一个像y = x^2`这样的二次函数的图象。它的图象是对称的U形，其开口可以向上或者向下。它也是一种_圆锥曲线_。
+  image: parabola.svg
 
 pascals-triangle:
   title: 帕斯卡三角
@@ -101,8 +240,7 @@ perfect-numbers:
 
 pi:
   title: 圆周率
-  text: __圆周率___, 通常希腊字母 _π_ 的写法表示，它是圆周和圆直径的比值。
-    其值约为3.14159265…
+  text: __圆周率__常用希腊字母 _π_表示，是圆的周长与直径的比值。它是一个无限不循环小数，约等于3.14159265…
   link: /course/circles/introduction#pi-definition
 
 powers:
@@ -116,9 +254,31 @@ prime:
   text: __素数__是一个整数，而且除了 1 和它自身之外没有其它整数因子。
   link: /course/divisibility/primes
 
+prism:
+  title: 棱柱
+  text: __棱柱__是一个三维立体图形。它有两个面是全等的多边形（叫做_底_），对应顶点由平行的线段相连。圆柱的其它面均为矩形或平行四边形。
+  image: prism.svg
+
 proof:
   title: 证明
   text: __证明__ 是一种逻辑论证，它毫无疑问地表明某一陈述是正确的。
+
+pyramid:
+  title: 棱锥
+  text: |
+    __棱锥__是一个由底面与众多三角形侧面组成的几何体，往上逐渐缩小成一个顶点。一个正棱锥的底是一个正多边形且顶点在底的中心正上方。
+    在一个__正棱锥__中，底是_正多边形_且顶点在底面中心的正上方。
+  image: pyramid.svg
+
+pythagoras-theorem:
+  title: 勾股定理
+  text: __勾股定理（毕达哥拉斯定理）__指出，任何一个直角三角形的三边均满足`a^2 + b^2 = c^2`。其中_c_为斜边的长度，_a_和_b_为直角边的长度。
+  link: /course/triangles/pythagoras
+
+radians:
+  title: 弧度
+  text: __弧度__是测量角度大小的一个单位。一个周角（360°）等于`2π`弧度——也就是半径为1的圆的周长。
+  link: /course/circles/radians#radians
 
 rational-numbers:
   title: 有理数
@@ -170,6 +330,20 @@ sieve-eratosthenes:
   text: __埃拉托色尼筛选法__是一个通过连续消除_非_素数来寻找素数的过程。
   link: /course/divisibility/primes#eratosthenes
 
+similar:
+  title: 相似
+  text: 如果两个几何图形的形状相同但大小不同，那么我们称之为__相似__。我们可以通过移动、旋转、对称和缩放来使其中一个图形与另一个图形重叠。它们的对应角相等，且对应边成比例
+
+sin:
+  title: 正弦
+  text: __正弦__是三角函数之一，记做`sin(θ)`。在一个直角三角形中，它表示一个角的对边与斜边的比值。
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: 球体
+  text: __球体__是由到_定点_的距离等于定长的点组成的一个立体图形。这个距离叫做球的_半径_。
+  link: /course/circles/spheres-cones-cylinders#sphere
+
 square-numbers:
   title: 平方数
   text: __平方数__是一个可以用另一个整数的平方来表示的数字。首批平方数是1，4，
@@ -187,6 +361,12 @@ tetrahedron:
   text: __四面体__是由四个等边三角形组成的柏拉图体。它有四个顶点和六条边。
   link: /course/polyhedra/platonic#platonic-overview
 
+translation:
+  title: 平移
+  text: __平移__指的是将一个图形在不改变形状大小的情况下沿着一个方向移动一定的长度的图形变换。
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
 triangle-numbers:
   title: 三角形数
   text: __三角形数__是一个整数，可以表示为用点组成等边三角形的数。第 *n*th个
@@ -194,8 +374,17 @@ triangle-numbers:
   image: triangle-numbers.svg
   link: /course/sequences/figurate#triangle-numbers
 
+trigonometry:
+  title: 三角学
+  text: __三角学__是研究三角形边与角之间的关系一个数学分支。主要研究三角函数__正弦__、__余弦__、__正切__以及它们的倒数。
+  link: /course/triangles/trigonometry
+
 twin-primes:
   title: 孪生素数
   text: __孪生素数__ 是像17和19一样的成对素数, 它们正好相隔两个数。仍然不知道
     是否有无穷多对双素数。
   link: /course/divisibility/the-distribution-of-primes#twin-primes
+
+unit-circle:
+  title: 单位圆
+  text: __单位圆__是半径为1的圆。
