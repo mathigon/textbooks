@@ -5,7 +5,7 @@
 > section: introduction
 > id: intro
 
-Hej! Det här är Björn. Många yrken som använder matematik är intresserade av en specifik aspekt - _hitta mönster_ och att kunna förutsäga framtiden. Här är några exempel:
+Många yrken som använder matematik är intresserade av en specifik aspekt - _hitta mönster_, samt att kunna förutsäga framtiden. Här är några exempel:
 
 ::: column(width=160 parent="padded-thin")
 
@@ -13,7 +13,7 @@ Hej! Det här är Björn. Många yrken som använder matematik är intresserade 
 
 ::: column(width=400)
 
-Under det senaste decenniet har __polisavdelningar__ runt om i världen börjat förlita sig mer på matematik. Speciella algoritmer kan använda data från tidigare brott för att förutsäga när och var brott kan inträffa i framtiden. Exempelvis hjälpte _PredPol_ -systemet (förkortat för ”förutsägbar polisering”) att minska brottsfrekvensen i delar av Los Angeles med 12%!
+Under det senaste decenniet har __polisavdelningar__ runt om i världen börjat förlita sig mer och mer på matematik. Speciella algoritmer kan använda data från tidigare brott för att förutsäga när och var brott kan tänkas inträffa i framtiden. Exempelvis hjälpte _PredPol_ -systemet (förkortning för ”prediktiv polisering”) att minska brottsfrekvensen i delar av Los Angeles med 12%!
 
 ::: column(width=160)
 
