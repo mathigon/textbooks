@@ -1404,6 +1404,8 @@ Hur många alternativ finns det för trappa med 6, 7 eller 8 steg? Kan du upptä
 > section: special
 > id: special-intro
 
+Hello!
+
 Förutom [aritmetiska](gloss:arithmetic-sequence) och [geometriska](gloss:geometric-sequence) sekvenser, [Fibonacci-nummer](gloss:fibonacci-numbers) och [figurnummer](gloss:figurate-numbers) finns det otaliga intressanta sekvenser som inte följer en liknande , vanligt mönster.
 
 ---
