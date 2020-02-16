@@ -21,7 +21,7 @@ Under det senaste decenniet har __polisavdelningar__ runt om i världen börjat 
 
 ::: column(width=400)
 
-Det visar sig att __jordbävningar__ följer liknande mönster som brott. Precis som ett brott kan utlösa hämnd, kan en jordbävning utlösa efterskockor. I matematik kallas detta en "själv-spännande processer", och det finns ekvationer som hjälper till att förutsäga när nästa kan hända.
+Det visar sig att __jordbävningar__ följer liknande mönster som brott. Precis som ett brott kan utlösa hämnd, kan en jordbävning utlösa efterskockor. I matematik kallas detta "själv-spännande processer", och det finns ekvationer som hjälper till att förutsäga när nästa kan hända.
 
 ::: column(width=160)
 
