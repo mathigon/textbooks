@@ -5,7 +5,7 @@
 > section: introduction
 > id: intro
 
-Många yrken som använder matematik är intresserade av en specifik aspekt - _hitta mönster_ och att kunna förutsäga framtiden. Här är några exempel:
+Hej! Det här är Björn. Många yrken som använder matematik är intresserade av en specifik aspekt - _hitta mönster_ och att kunna förutsäga framtiden. Här är några exempel:
 
 ::: column(width=160 parent="padded-thin")
 
