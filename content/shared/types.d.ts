@@ -88,7 +88,7 @@ export class EquationSystem extends CustomElementView {
   private maxRows;
   private steps;
   private hints;
-  validate?: (expr: ExprElement) => EquationValidationResponse;
+  validate?: (expr: ExprElement, isRepeated: boolean) => EquationValidationResponse;
   isFinal?: (expr: ExprElement) => boolean;
   created(): void;
   ready(): void;

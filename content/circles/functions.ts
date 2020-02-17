@@ -923,6 +923,10 @@ export function coneSurface1($step: Step) {
   $system.isFinal = (expr) => {
     return !expr.variables.includes('s') && expr.functions.includes('sqrt');
   };
+  $system.validate = (expr, isRepeated) => {
+    const substituteHint = (isRepeated && expr.variables.includes('s'));
+    return substituteHint ? {error: 'cone-surface-2'} : undefined;
+  };
 }
 
 export function sphere($step: Step) {
