@@ -7,11 +7,22 @@
 @import "../shared/variables";
 
 
+x-geopad.simulation {
+  position: relative;
+  > svg { position: relative; }
+  canvas { position: absolute; width: 100%; height: 100%; }
+}
+
+
+
+
+
+
 .mandel-frame {
   position: relative;
   overflow: hidden;
   border-radius: 6px;
-  padding-bottom: 56.25%;
+  padding-bottom: 57.89%;
   img { .fillParent(); }
   .scale { position: absolute; left: 50%; bottom: 8px; background: fade(black, 50%);
     color: white; border: 1px solid white; border-radius: 20px; line-height: 24px;

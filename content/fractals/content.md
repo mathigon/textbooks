@@ -5,6 +5,9 @@
 > section: introduction
 > id: intro
 
+    // Chaos game: https://www.youtube.com/watch?v=kbKtFN71Lfs
+    // Mandelbrot: https://www.youtube.com/watch?v=NGMRB4O922I
+
 When looking around nature, you might have noticed plants like the two below.
 Initially they seem like highly complex and intricate shapes, but when you
 look closer, you might notice that they each follow a simple pattern:
@@ -37,6 +40,7 @@ most beautiful and most bizarre objects in all of mathematics, and they have
 many interesting applications!
 
 ---
+> id: fern
 
 ::: column.grow
 
@@ -47,8 +51,16 @@ kinds of shapes – looking like a tree, or like a fern.
 
 ::: column(width=320)
 
-    p.todo INTERACTIVE
-    x-slider(steps=100)
+    x-geopad.simulation(width=320 height=320)
+      canvas(width=320 height=320)
+      svg
+        circle(x="point(160,300)" name="a" hidden)
+        circle(x="point(160,220)" name="b" hidden)
+        circle.move.blue(name="c1" cx=150 cy=160)
+        circle.move.blue(name="c2" cx=200 cy=200)
+        path.thick.red(x="segment(a,b)")
+        path.thick.blue.rounded(x="polyline(c1,b,c2)")
+    x-slider(steps=8 var="steps")
 
 :::
 
@@ -101,7 +113,7 @@ when we compare fractals with other shapes.
 ::: column.grow
 
 A line has dimension [[1]]. _{span.reveal(when="blank-0")} When scaling it by a
-factor of 2, its length increases by a factor of `2^1 = 2`. Obviously!_
+factor of 2, its length increases by a factor of `§2^1 = 2`. Obviously!_
 
 :::
 
@@ -114,7 +126,7 @@ factor of 2, its length increases by a factor of `2^1 = 2`. Obviously!_
 ::: column.grow
 
 A square has dimension [[2]]. _{span.reveal(when="blank-0")} When scaling it by
-a factor of 2, its area increases by a factor of `2^2 =` [[4]]._
+a factor of 2, its area increases by a factor of `§2^2 =` [[4]]._
 
 :::
 
@@ -127,7 +139,7 @@ a factor of 2, its area increases by a factor of `2^2 =` [[4]]._
 ::: column.grow
 
 A square has dimension [[3]]. _{span.reveal(when="blank-0")} When scaling it by
-a factor of 2, its volume increases by a factor of `2^3 =` [[8]]._
+a factor of 2, its volume increases by a factor of `§2^3 =` [[8]]._
 
 :::
 
@@ -275,8 +287,8 @@ One of the fractals we looked at in the previous chapter was the __Sierpinski
 triangle__. It can be created by starting with one large, equilateral
 triangle, and then repeatedly cutting smaller triangles out of its center.
 
-But, as it turns out, the Sierpinski triangle appears in many different areas
-of mathematics, and there are numerous other methods to construct it. In this
+But, as it turns out, the Sierpinski triangle also appears in many other areas
+of mathematics, and there are numerous ways to construct it. In this
 chapter, we will explore some of them!
 
 ::: column(width=300)
@@ -358,78 +370,69 @@ try to find the set of rules that produces something like the Sierpinski Gasket.
 ## The Mandelbrot Set
 
 > section: mandelbrot
-> id: mandelbrot
+> id: iteration
 
-One of the most famous and most intriguing fractals is the __Mandelbrot Set__,
-named after the French mathematician Benoit Mandelbrot (1924 – 2010). When
-rotated by 90°, it looks a bit like a person, with head, body and two arms. Here
-is how you can create it:
+All the fractals we saw in the previous chapters were created using a process
+of __iteration__: you start with a specific pattern, and then you repeat it
+over and over again.
 
-* We start with the plane of complex numbers. Every point on the plane is
-  represented by a different number _c_, and we repeat the following steps for
-  every single point:
-* First we create an infinite [sequence](/course/sequences/introduction) of
-  numbers according to the following pattern: We start with 0. Every new number
-  is the previous number squared, plus _c_. In mathematical notation, we have a
-  sequence `z_n`, where `z_(n+1) = z_n^2 + c`.
-* If this sequence of numbers always increases and tends to infinity (it
-  _diverges_), we colour the point white. However if the sequence does not
-  increase beyond a certain limit (if it is _bounded_), we colour the point black.
+This is similar to another concept in mathematics that you saw before:
+recursive sequences. Again you start with a number, and then you apply the same
+recursive formula again and again, to get the next number in the sequence.
 
-We repeat this process for every point in the coordinate system. The collection
-of all the black points is the Mandelbrot set. Move the blue pin below to
-explore what happens at various points:
+One century ago, mathematicians were exploring what happens to specific
+recursive sequences if you use complex numbers, and their discoveries were some
+of the most surprising and beautiful results in all of mathematics…
 
-    <div class="box">
-      <div class="llarg" id="mandelMove">
-        <img src="resources/Fractals/mandelbrot.png" width="423" height="317" alt="mandelbrot set" style="width: 100%; height: auto;">
-        <div id="mandelTarget"></div>
-      </div>
-      <div class="rsmal frame framePTextWrap" id="mandelCalculation">
-        <p>For the point <em>c</em> = <strong class="red">1</strong> we create the following sequence:</p>
-      
-        <table border="" id="fractTargetTable">
-          <tr>
-            <td>0<sup>2</sup></td>
-            <td>+</td>
-            <td><strong class="red">1</strong></td>
-            <td>=</td>
-            <td><strong class="green" id="green1">1</strong></td>
-          </tr>
-          <tr>
-            <td><strong class="green" id="green2">1</strong><sup>2</sup></td>
-            <td>+</td>
-            <td><strong class="red">1</strong></td>
-            <td>=</td>
-            <td><strong class="cyan" id="cyan1">2</strong></td>
-          </tr>
-          <tr>
-            <td><strong class="cyan" id="cyan2">2</strong><sup>2</sup></td>
-            <td>+</td>
-            <td><strong class="red">1</strong></td>
-            <td>=</td>
-            <td><strong class="blue" id="blue1">5</strong></td>
-          </tr>
-          <tr>
-            <td><strong class="blue" id="blue2">5</strong><sup>2</sup></td>
-            <td>+</td>
-            <td><strong class="red">1</strong></td>
-            <td>=</td>
-            <td><span id="fracTargetFinal">26</span></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&#8230;</td>
-          </tr>
-        </table>
-      
-        <p id="MandelIn">This sequence will always increase and tends to infinity, so <strong class="red">1</strong> is not part of the Mandelbrot set. The point is coloured white.</p>
-        <p id="MandelNo" style="display: none;">This sequence is always bounded, so <strong class="red">1</strong> is part of the Mandelbrot set. The point is coloured black.</p>
-      </div>
-    </div>
+---
+
+real line
+
+---
+
+complex plane
+
+---
+
+### Julia Sets
+
+Now let's make things a bit more complex. Rather than just squaring the previous
+number, we also add a constant _c_.
+
+If `c = 0`, we get the same as before, and the set of numbers that converge
+is a circle.
+
+---
+
+The different shapes that are formed by colouring in the numbers
+are called Julia Sets. 
+
+---
+
+### The Mandelbrot Set
+
+To create a Julia set, we picked a fixed value for _c_, and then changed the
+starting point of the sequence to see which ones converge and which ones don't.
+
+In XXXX, the French mathematician [Benoit Mandelbrot](bio:mandelbrot) decided to
+reverse this process: fix the starting point to always be 0, and instead change
+the value of _c_ to
+
+---
+> id: mandel-paint
+
+Once more, paint over the complex plane to discover the shape of the XXX in
+this example:
+
+
+---
+
+This shape is called the __Mandelbrot Set__, and it is probably the most
+recognisable fractal in the world. When rotated by 90°, it looks almost like a
+person, with head, body and two arms.
+
+Benoit Mandelbrot was one of the first scientists to try to visualise fractals
+using computers. At the time, every image took XXXX to render, and the results
 
 A computer can do these computations very quickly for millions of numbers _c_ –
 like all pixels on a screen. The code required is simple, but the resulting
@@ -447,18 +450,20 @@ laptop.
 
 Black points in the image below are part of the Mandelbrot set. Coloured areas
 are not in the Mandelbrot set, and the colour indicates the speed with which the
-respective sequence of complex numbers diverges (tends to infinity). ${scale}
+respective sequence of complex numbers diverges (tends to infinity).
 
     .mandel-frame
       - i = 1;
       while i <= 19
         img(src="images/mandel/mandel-" + i + ".jpg" width=800 height=450)
         - i += 1;
-      .scale.var Scale ${pow(scale)}
+      .scale.var Scale: ${pow(scale)}
     x-slider(steps=100 speed=0.5 var="scale")
 
 ---
 
-### Julia Sets
+Number of fixed points in every bulb
 
-{.todo} Under Construction
+---
+
+relationship between julia and mandelbrot

@@ -4,8 +4,56 @@
 // =============================================================================
 
 
-import {Slider, Step} from '../shared/types';
+import {CanvasView} from '@mathigon/boost';
+import {Point, Polyline} from '@mathigon/fermat';
+import {Geopad, Slider, Step} from '../shared/types';
 
+
+// -----------------------------------------------------------------------------
+// Introduction
+
+const options = {stroke: '#000', strokeWidth: 2};
+
+/** Returns the image of x, if a-b is mapped onto b-c. */
+function transform(a: Point, b: Point, c: Point, x: Point) {
+  const angle = Math.atan2(c.y - b.y, c.x - b.x) - Math.atan2(b.y - a.y, b.x - a.x);
+  const scale = Point.distance(c, b) / Point.distance(b, a);
+
+  const x1 = x.subtract(b).scale(scale).rotate(angle);
+  return c.add(x1);
+}
+
+function drawIteration($canvas: CanvasView, a: Point, b: Point, c1: Point, c2: Point, i: number) {
+  const d1 = transform(a, b, c1, c1);
+  const d2 = transform(a, b, c1, c2);
+  const d3 = transform(a, b, c2, c1);
+  const d4 = transform(a, b, c2, c2);
+
+  $canvas.draw(new Polyline(d1, c1, d2), options);
+  $canvas.draw(new Polyline(d3, c2, d4), options);
+
+  if (i > 0) {
+    drawIteration($canvas, b, c1, d1, d2, i - 1);
+    drawIteration($canvas, b, c2, d3, d4, i - 1);
+  }
+}
+
+export function fern($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+
+  $step.model.watch(({steps, a, b, c1, c2}) => {
+    $canvas.clear();
+    drawIteration($canvas, a, b, c1, c2, steps);
+
+    // const m2 = matrix(a, b, c2);
+    // $canvas.draw(new Polyline(c1.transform(m2), c2, c2.transform(m2)));
+  });
+}
+
+
+// -----------------------------------------------------------------------------
+// Mandelbrot Set
 
 export function mandelZoom($step: Step) {
   const $images = $step.$$('.mandel-frame img');
