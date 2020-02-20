@@ -1460,7 +1460,7 @@ sequence-term:
 sieve-eratosthenes:
   title: Sieve of Eratosthenes
   text: The __Sieve of Eratosthenes__ is a procedure for finding prime numbers,
-    by continuoulsy eliminating numbers that are _not_ prime.
+    by repeatedly eliminating numbers that are _not_ prime.
   link: /course/divisibility/primes#eratosthenes
 
 similar:
@@ -1721,7 +1721,7 @@ variable:
 
 venn-diagram:
   title: Venn Diagram
-  text: A __venn diagram__ visualises multiple properties or events that
+  text: A __Venn diagram__ visualises multiple properties or events that
     overlap.
   image: venn.svg
 
