@@ -46,7 +46,7 @@ export class BlankInput extends CustomElementView {
   blur(): void;
 }
 
-export type EquationValidationResponse = {isCorrect?: boolean, error?: string}|undefined;
+export type EquationValidationResponse = {isCorrect?: boolean; error?: string}|undefined;
 
 export class Equation extends CustomElementView {
   $math: ElementView;
@@ -71,7 +71,7 @@ export class Equation extends CustomElementView {
   ready(): void;
   focus(): void;
   onPointerdown(e: PointerEvent): void;
-  onKey(e: {code?: number, key: string}): void;
+  onKey(e: {code?: number; key: string}): void;
   onBlur(): void;
   check(): string|void;
   complete(expr: ExprElement): void;
@@ -226,7 +226,7 @@ export abstract class DisplayNode {
   width: number;
   height: number;
   baseline: number;
-  transform: {x: number; y: number; scale: number;};
+  transform: {x: number; y: number; scale: number};
   private currentDimensions;
   private currentWorldTransform;
   constructor(type: string, children: DisplayNode[], equation: DisplayEquation, $element?: SVGView|undefined);
@@ -237,7 +237,7 @@ export abstract class DisplayNode {
   marginLeft: number;
   marginRight: number;
   setTransform(x?: number, y?: number, scale?: number): void;
-  worldTransform: {x: number; y: number; scale: number;};
+  worldTransform: {x: number; y: number; scale: number};
   next: DisplayNode|undefined;
   prev: DisplayNode|undefined;
   addChildren(children: DisplayNode[], index?: number): void;
@@ -249,7 +249,7 @@ export abstract class DisplayNode {
   measure(): void;
   setStatus(status: string): void;
   render(ticker?: Ticker): void;
-  protected positionElement(t: {x: number; y: number; scale: number;}): void;
+  protected positionElement(t: {x: number; y: number; scale: number}): void;
   protected drawElement(p: number, width: number, height: number, baseline: number, scale: number): void;
 }
 

@@ -105,7 +105,7 @@ class Cell extends EventTarget {
     const $remove = this.$dots.slice(0, n);
     this.$dots = this.$dots.slice(n);
 
-    for (let $r of $remove) $r.addClass('glowing');
+    for (const $r of $remove) $r.addClass('glowing');
 
     const nextIndex = this.$dotMachine.cells.indexOf(this) - 1;
     const next = this.$dotMachine.cells[nextIndex];
@@ -114,7 +114,7 @@ class Cell extends EventTarget {
     const transform = next ? target!.add(next.$el.topLeftPosition)
         .subtract(this.$el.topLeftPosition) : new Point(-54, 50);
 
-    for (let $r of $remove) {
+    for (const $r of $remove) {
       $r.animate({transform: `translate(${transform.x}px,${transform.y}px) scale(2)`}, 400, 400)
           .promise.then(() => $r.remove());
     }

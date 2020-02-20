@@ -27,7 +27,7 @@ function play($step: Step, $el: ElementView, duration: number, score: string,
 }
 
 function expandSegment($geopad: Geopad, [e1, e2]: GeoPoint[], line: Line) {
-  let swap = Point.distance(e1.val!, line.p1) > Point.distance(e2.val!, line.p1);
+  const swap = Point.distance(e1.val!, line.p1) > Point.distance(e2.val!, line.p1);
   $geopad.animatePoint(swap ? e2.name : e1.name, line.p1);
   $geopad.animatePoint(swap ? e1.name : e2.name, line.p2);
 }
@@ -192,7 +192,7 @@ export function palindromes($step: Step) {
   for (let i = 0; i < 3; ++i) {
     $inputs[i].onKeyDown('enter', () => $inputs[i].blur());
     $inputs[i].on('blur', () => {
-      let str = '' + $inputs[i].value;
+      const str = '' + $inputs[i].value;
       if (!str.length) {
         // Do nothing
       } else if (str.length < 3) {
@@ -227,7 +227,7 @@ function add(a: number, b: number) {
 }
 
 function makeSquare(i: number, x: number, $parent: ElementView, delay = 0) {
-  let $el = $N('img', {
+  const $el = $N('img', {
     src: `/resources/transformations/images/cube-${i}.svg`,
     style: `left: ${8 + x * 70}px;`
   }, $parent);
@@ -283,7 +283,7 @@ export function calculator($step: Step) {
   }
 
   $clear.on('click', () => {
-    for (let $r of $results) $r.exit('pop', 200);
+    for (const $r of $results) $r.exit('pop', 200);
     $results = [];
     a = b = answer = undefined;
     $clear.exit('pop');

@@ -5,7 +5,7 @@
 
 
 import './components/atom';
-import {list, wait} from '@mathigon/core';
+import {list} from '@mathigon/core';
 import {numberFormat, Point} from '@mathigon/fermat';
 import {$} from '@mathigon/boost';
 import {AlgebraFlow, CoordinateSystem, Step} from '../shared/types';

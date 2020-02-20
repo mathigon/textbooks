@@ -203,10 +203,10 @@ export function crane($step: Step) {
     }
   });
 
-  for (let $s of $steps) $s.on('click', () => $video.setTime(+$s.data.t!));
+  for (const $s of $steps) $s.on('click', () => $video.setTime(+$s.data.t!));
 
   $step.on('complete', () => {
-    for (let $s of $steps) {
+    for (const $s of $steps) {
       if ($s.css('display') !== 'block') $s.enter('fade', 200);
     }
   });

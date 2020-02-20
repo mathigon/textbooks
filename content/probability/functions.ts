@@ -44,28 +44,28 @@ export function diceSimulation($step: Step) {
   let scores: number[] = [];
 
   $step.model.set('probTable', (d: number) => {
-    let pmax = probabilities[d][Math.round(7 * d / 2)];
-    let keys = list(d, d * 6);
+    const pmax = probabilities[d][Math.round(7 * d / 2)];
+    const keys = list(d, d * 6);
 
-    let row1 = keys.map(i => `<div class="pBox">
+    const row1 = keys.map(i => `<div class="pBox">
       <div class="diceCount" id="dc2${i}"></div>
       <div class="diceProb" style="bottom: ${probabilities[d][i] / pmax * 95}%">
     </div></div>`);
 
-    let row2 = keys.map(i => `<span class="dice">${i}</span>`);
-    let row3 = keys.map(i => probabilities[d][i]);
-    let row4 = keys.map(i => `<span class="m-blue" id="dc1${i}">0</span>`);
+    const row2 = keys.map(i => `<span class="dice">${i}</span>`);
+    const row3 = keys.map(i => probabilities[d][i]);
+    const row4 = keys.map(i => `<span class="m-blue" id="dc1${i}">0</span>`);
 
     scores = repeat(0, 60);
     return table([row1, row2, row3, row4]);
   });
 
   function rollDice() {
-    let d = $step.model.d;
-    let x = Random.weighted(probabilities[d]);
+    const d = $step.model.d;
+    const x = Random.weighted(probabilities[d]);
 
     scores[x] += 1;
-    let maxScore = Math.max(...scores);
+    const maxScore = Math.max(...scores);
 
     for (let i = d; i <= 6 * d; ++i) {
       $('#dc1' + i)!.textStr = scores[i];
@@ -95,13 +95,13 @@ class OneTimeButton {
     for (const [i, $el] of $els.entries()) {
       $el.on('click', () => {
         callback(i);
-        for (let $el of $els) $el.setAttr('disabled', true);
+        for (const $el of $els) $el.setAttr('disabled', true);
       });
     }
   }
 
   reset() {
-    for (let $el of this.$els) $el.removeAttr('disabled');
+    for (const $el of this.$els) $el.removeAttr('disabled');
   }
 }
 
@@ -166,7 +166,7 @@ export function montyHall($step: Step) {
     }, 1000);
   });
 
-  let revealBtn = new OneTimeButton([$step.$('.show')!], () => {
+  const revealBtn = new OneTimeButton([$step.$('.show')!], () => {
     $doors.forEach($d => $d.addClass('open'));
 
     if (selected === car) {
@@ -182,9 +182,9 @@ export function montyHall($step: Step) {
   });
 
   $step.$('.reset')!.on('click', () => {
-    for (let b of [sureBtn, swapBtn, revealBtn]) b.reset();
-    for (let $r of $reveals) $r.removeClass('visible');
-    for (let $d of $doors) $d.removeClass('car selected open');
+    for (const b of [sureBtn, swapBtn, revealBtn]) b.reset();
+    for (const $r of $reveals) $r.removeClass('visible');
+    for (const $d of $doors) $d.removeClass('car selected open');
     selected = opened = car = undefined;
     decided = false;
     $monty.addClass('selectable');
@@ -195,7 +195,7 @@ export function montyHall($step: Step) {
 // -----------------------------------------------------------------------------
 
 export function radioactive($step: Step) {
-  let $box = $step.$('.radioactive')!;
+  const $box = $step.$('.radioactive')!;
 
   const $atomMatrix = tabulate2D(
       (x, y) => $N('circle', {cx: x * 20 + 10, cy: y * 20 + 10, r: 6}, $box),
@@ -204,7 +204,7 @@ export function radioactive($step: Step) {
 
   function decay() {
     $step.score('decay');
-    let $atom = $atoms.pop()!;
+    const $atom = $atoms.pop()!;
     $atom.addClass('off');
     if ($atoms.length) {
       setTimeout(decay, Random.exponential($atoms.length / 20000));

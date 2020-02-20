@@ -64,7 +64,7 @@ export function similar($step: Step) {
     burst.play(1000, [320, 180], [70, 50]);
   }
 
-  for (let c of circles) {
+  for (const c of circles) {
     let rReady = false, cReady = false;
 
     const $handle = $N('circle', {class: 'handle', r: 10}, $svg);
@@ -90,7 +90,7 @@ export function similar($step: Step) {
 
     slide($outlineHalo, {
       move(p) {
-        let r = roundTo(p.subtract(drag.position).length, 20);
+        const r = roundTo(p.subtract(drag.position).length, 20);
         $outline.setAttr('r', r);
         $outlineHalo.setAttr('r', r);
         rReady = (r === 60);
@@ -187,17 +187,17 @@ export function piColours($step: Step) {
     '#5053cd', '#1f7aff', '#258dab', '#2ba058', '#31b304'];  // TODO New colours
 
   const $cells = $step.$$('.pi-cell');
-  for (let $c of $cells) $c.css('background', colours[+$c.text]);
+  for (const $c of $cells) $c.css('background', colours[+$c.text]);
   const $filter = list(10).map(i => $cells.filter($c => +$c.text !== i));
 
-  for (let $c of $cells) {
+  for (const $c of $cells) {
     const i = +$c.text;
     hover($c, {
       enter() {
-        for (let $c of $filter[i]) $c.addClass('hide');
+        for (const $c of $filter[i]) $c.addClass('hide');
         $step.score('hover');
       },
-      exit() { for (let $c of $filter[i]) $c.removeClass('hide'); }
+      exit() { for (const $c of $filter[i]) $c.removeClass('hide'); }
     });
   }
 }
@@ -390,7 +390,7 @@ export function degrees($step: Step) {
   $step.model.set('c1', start);
   $step.model.set('c2', start);
 
-  for (let i of [0, 1, 2]) {
+  for (const i of [0, 1, 2]) {
     $step.onScore('blank-' + i, () => {
       animate((t) => {
         const a = t * Math.PI * angles[i];
@@ -477,7 +477,7 @@ export function radiansTrig($step: Step) {
   let isDegree = true;
   let reset = false;
 
-  for (let $b of $step.$$('.calculator .button')) {
+  for (const $b of $step.$$('.calculator .button')) {
     const t = $b.text;
     $b.on('click', () => {
       const value = $value.text;
@@ -591,7 +591,7 @@ export function solids($step: Step) {
 export function cylinderPrism($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];
 
-  $solids[0].addMesh((scene) => {
+  $solids[0].addMesh(() => {
     $solids[0].addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xcd0e66);
     $solids[0].addLabel('r', [0.7, -1.4, 0], 0xcd0e66, '-2px 0 0 -3px');
 
@@ -648,7 +648,7 @@ export function obliqueCylinder($step: Step) {
     $solid.addArrow([0, -1.4, 0], [0, 1.4, 0], 0x0f82f2);
     $solid.addLabel('h', [0, 0, 0], 0x0f82f2, '-10px 0 0 4px');
 
-    for (let obj of [top, topCircle, bottom, bottomCircle])
+    for (const obj of [top, topCircle, bottom, bottomCircle])
       obj.setRotationFromEuler(new THREE.Euler(Math.PI / 2, 0, 0));
 
     cylinder.setClipPlanes!([new THREE.Plane(new THREE.Vector3(0, -1, 0), 1.4),
@@ -657,8 +657,8 @@ export function obliqueCylinder($step: Step) {
     function update(a: number) {
       angle = a;
       const dx = Math.tan(angle) * 1.4;
-      for (let obj of [top, topCircle]) obj.position.set(dx, 1.4, 0);
-      for (let obj of [bottom, bottomCircle]) obj.position.set(-dx, -1.4, 0);
+      for (const obj of [top, topCircle]) obj.position.set(dx, 1.4, 0);
+      for (const obj of [bottom, bottomCircle]) obj.position.set(-dx, -1.4, 0);
       cylinder.setRotationFromEuler(new THREE.Euler(0, 0, -angle));
       cylinder.scale.set(Math.cos(angle), 1, 1);
       scene.draw();
@@ -810,7 +810,7 @@ export function coneVolume($step: Step) {
 export function coneCircumscribed($step: Step) {
   const $solid = $step.$('x-solid') as Solid;
 
-  $solid.addMesh((scene) => {
+  $solid.addMesh(() => {
     $solid.addSolid(new THREE.ConeGeometry(1.4, 2.8, 128, 1), 0xcd0e66);
     $solid.addWireframe(new THREE.CylinderGeometry(1.4, 1.4, 2.8, 128, 1),
         0xaaaaaa);
@@ -1246,7 +1246,7 @@ export function newton($step: Step) {
       if (p < 0.5) {
         $imgs[2].translate(0, p * p * 4 * 166);
       } else {
-        let q = 2 * p - 1;
+        const q = 2 * p - 1;
         $imgs[2].translate(85 * q, 166 + 310 * q * (q - 0.6));
       }
     }, 1600);
