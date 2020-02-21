@@ -24,7 +24,7 @@ import './components/anibutton';
 export function angles($step: Step) {
   const totals = [360, 540];
   const $buttons = $step.$$('x-anibutton') as Anibutton[];
-  let overlap = [false, false];
+  const overlap = [false, false];
 
   for (const [i, $b] of $buttons.entries()) {
     $step.model.watch(() => $b.setAttr('text', '???'));
@@ -255,7 +255,7 @@ export function escher($step: Step) {
 }
 
 export function penrose($step: Step) {
-  let $g = $step.$$('svg g');
+  const $g = $step.$$('svg g');
 
   $g[1].setAttr('opacity', 0);
   $g[2].setAttr('opacity', 0);
@@ -282,7 +282,7 @@ function makePolyhedronGeo(data: PolyhedronDataItem) {
   const vertices = data.vertex.map(v => new THREE.Vector3(v[0], v[1], v[2]));
   const geometry = new THREE.Geometry();
   geometry.vertices = vertices;
-  for (let f of data.face) {
+  for (const f of data.face) {
     for (let i = 1; i < f.length - 1; i++) {
       geometry.faces.push(new THREE.Face3(f[0], f[i], f[i + 1]));
     }

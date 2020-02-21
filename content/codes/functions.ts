@@ -13,7 +13,7 @@ import {EventTarget} from '@mathigon/core';
 // -----------------------------------------------------------------------------
 // Utilities and CLasses
 
-class CodeBox extends EventTarget {
+export class CodeBox extends EventTarget {
   /* constructor($plain: any, $cipher: any, options: any) {
     super();
 
@@ -83,7 +83,7 @@ class CodeBox extends EventTarget {
 // -----------------------------------------------------------------------------
 // Section Functions
 
-export function caesar_cipher() {
+export function caesarCipher() {
   /* let $plain = $step.$('.plain-text')!;
   let $cipher = $step.$('.cipher-text')!;
 

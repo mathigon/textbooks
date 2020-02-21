@@ -129,7 +129,7 @@ export class Solid extends CustomElementView {
 
   addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
     const items = fn(this.scene) || [];
-    for (let i of items)  this.object.add(i);
+    for (const i of items)  this.object.add(i);
 
     if (!this.hasAttr('static')) {
       const speed = +this.attr('rotate') || 1;
@@ -294,13 +294,13 @@ export class Solid extends CustomElementView {
 
     obj.setClipPlanes = function(planes: THREE.Plane[]) {
       if (solid.setClipPlanes) solid.setClipPlanes(planes);
-      for (let m of [outlineMaterial, knockoutMaterial])
+      for (const m of [outlineMaterial, knockoutMaterial])
         m.clippingPlanes = planes;
     };
 
     obj.updateGeometry = function(geo: THREE.Geometry) {
       if (solid.updateGeometry) solid.updateGeometry(geo);
-      for (let mesh of [outline, knockout]) {
+      for (const mesh of [outline, knockout]) {
         mesh.geometry.dispose();
         mesh.geometry = geo;
       }

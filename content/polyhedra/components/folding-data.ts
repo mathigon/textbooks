@@ -8,7 +8,7 @@ import {Obj} from '@mathigon/core';
 
 
 export interface FoldingDataItem {
-  net: number[][],
+  net: number[][];
   hinges: number[][];
   vertices: [number, number, number][];
 }
