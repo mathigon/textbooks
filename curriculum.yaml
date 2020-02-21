@@ -437,14 +437,6 @@ matrices:
 complex:
   title: Complex Numbers
   color: 6f27cc
-  sections:
-    - title: Introduction
-      preview: /world/Real_Irrational_Imaginary#imaginary
-    - title: The Complex Plane
-    - title: Modulus and Argument
-    - title: Quadratic, Cubic and Quartic Equations
-    - title: Euler’s Identity and De Moivre’s Theorem
-    - title: Complex Roots of Unity
 
 fractals:
   title: Fractals
