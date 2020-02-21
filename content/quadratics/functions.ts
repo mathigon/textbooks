@@ -20,13 +20,13 @@ function q(a: number, b: number, c: number) {
 }
 
 function zeros(a: number, b: number, c: number) {
-  let disc = b * b - 4 * a * c;
+  const disc = b * b - 4 * a * c;
   if (disc < 0) return [];
 
   if (nearlyEquals(disc, 0, 0.1)) return [-b / (2 * a)];
 
-  let x1 = (-b + Math.sqrt(disc)) / (2 * a);
-  let x2 = (-b - Math.sqrt(disc)) / (2 * a);
+  const x1 = (-b + Math.sqrt(disc)) / (2 * a);
+  const x2 = (-b - Math.sqrt(disc)) / (2 * a);
   return [x1, x2];
 }
 
@@ -83,7 +83,7 @@ export function intro4($step: Step) {
   };
 
   $system.on('solve-row', ({$math}) => {
-    for (let $mi of $math.$$('mi')) {
+    for (const $mi of $math.$$('mi')) {
       if ($mi.text === 'revenue') $mi.addClass('pill green');
       if ($mi.text === 'cost') $mi.addClass('pill orange');
       if ($mi.text === 'demand') $mi.addClass('pill teal');

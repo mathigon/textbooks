@@ -30,7 +30,7 @@ class Trail {
   get points() {
     const points = [];
     for (let i = this.index; i > this.index - this.length; i--) {
-      let x = (i + this.maxLength) % this.maxLength;
+      const x = (i + this.maxLength) % this.maxLength;
       points.push([this.tail[x * 2], this.tail[x * 2 + 1]]);
     }
     return points;
@@ -68,15 +68,15 @@ export class Simulation {
     this.model = $geopad.model;
     this.addTrails(...trails);
     this.points = Object.keys(state);
-    for (let p of this.points) this.model.set(p, state[p]);
+    for (const p of this.points) this.model.set(p, state[p]);
   }
 
   play(callback: (p: number) => void, speed = 1, steps = 3) {
     this.$geopad.lock();
-    for (let t of this.trails) t.clear();
+    for (const t of this.trails) t.clear();
 
     // Copy the updated state from the model.
-    for (let p of this.points) this.state[p] = this.model[p];
+    for (const p of this.points) this.state[p] = this.model[p];
 
     this.animation = animate(() => {
       // Prevent drawing immediately after the animation has been stopped.
@@ -84,11 +84,11 @@ export class Simulation {
 
       for (let i = 0; i < steps; ++i) callback(speed / steps);
 
-      for (let t of this.trails) t.push(this.state[t.name]);
-      for (let p of this.points) this.model[p] = this.state[p];
+      for (const t of this.trails) t.push(this.state[t.name]);
+      for (const p of this.points) this.model[p] = this.state[p];
 
       this.$canvas.clear();
-      for (let t of this.trails) t.draw(this.$canvas);
+      for (const t of this.trails) t.draw(this.$canvas);
       // TODO Draw the trail position at most 10 times per second.
     });
   }
@@ -101,6 +101,6 @@ export class Simulation {
   }
 
   addTrails(...trails: TrailList) {
-    for (let t of trails) this.trails.push(new Trail(t[0], t[1]));
+    for (const t of trails) this.trails.push(new Trail(t[0], t[1]));
   }
 }

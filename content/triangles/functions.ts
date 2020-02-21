@@ -130,7 +130,7 @@ export async function sssConstruction($step: Step) {
   $step.score('draw-base');
   base.$el.addClass('green');
 
-  for (let p of base.points) {
+  for (const p of base.points) {
     (p as GeoMovablePoint).lock();
     p.$el.setAttr('target', 'base');
   }
@@ -239,7 +239,7 @@ export function pythagorasProof($step: Step) {
   model.set('X2', model.point(170, 100));
   model.set('C2', model.point(170, 20));
 
-  let $geopad = $step.$('.similar-triangle') as Geopad;
+  const $geopad = $step.$('.similar-triangle') as Geopad;
   $step.onScore('next-0', () => {
     $geopad.animatePoint('B1', model.point(10, 210), 1000);
     $geopad.animatePoint('X1', model.point(120, 142), 1000);
@@ -260,8 +260,8 @@ export function pythagoreanTriplesGrid($step: Step) {
   $step.model.set('sqrtDistance', sqrtDistance);
 
   $step.model.watch(m => {
-    let p = m.a;
-    let d = sqrtDistance(p);
+    const p = m.a;
+    const d = sqrtDistance(p);
 
     const valid = p.x > 0 && p.y < 17 && isInteger(d);
     $geopad.setClass('triple', valid);

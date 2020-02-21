@@ -25,7 +25,7 @@ const ORANGE = '#ea3620';
 
 
 export function intro($section: Step) {
-  let $graph = $section.$('.graph') as SVGParentView;
+  const $graph = $section.$('.graph') as SVGParentView;
   new Graph($graph, 8,
       [[0, 4], [4, 5], [5, 2], [5, 1], [1, 2], [2, 3], [3, 4], [3, 6], [6, 7],
         [7, 3], [2, 7]]);
@@ -37,7 +37,7 @@ export function intro($section: Step) {
 }
 
 export function intro1($section: Step) {
-  let graphs = $section.$$('.graph') as SVGParentView[];
+  const graphs = $section.$$('.graph') as SVGParentView[];
   new Graph(graphs[0], 7,
       [[0, 1], [1, 2], [2, 0], [1, 3], [3, 4], [4, 0], [4, 5], [6, 3]],
       {directed: true});
@@ -49,7 +49,7 @@ export function intro1($section: Step) {
 }
 
 export function intro2($section: Step) {
-  let graphs = $section.$$('.graph') as SVGParentView[];
+  const graphs = $section.$$('.graph') as SVGParentView[];
 
   new Graph(graphs[0], 6, [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [2, 5]],
       {vertex: BLUE, edge: BLUE});
@@ -85,7 +85,7 @@ export function intro2($section: Step) {
 }
 
 export function intro3($section: Step) {
-  let graphs = $section.$$('.graph') as SVGParentView[];
+  const graphs = $section.$$('.graph') as SVGParentView[];
 
   new Graph(graphs[0], 5,
       [[0, 1], [1, 2], [2, 0], [1, 3], [3, 4], [4, 0], [4, 2]]);
@@ -104,7 +104,7 @@ export function intro3($section: Step) {
 }
 
 export function intro4($section: Step) {
-  let graphs = $section.$$('.graph') as SVGParentView[];
+  const graphs = $section.$$('.graph') as SVGParentView[];
   new Graph(graphs[0], 3, [[0, 1], [1, 2], [2, 0]]);
   new Graph(graphs[1], 5, [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]]);
   new Graph(graphs[2], 7,
@@ -112,8 +112,8 @@ export function intro4($section: Step) {
 }
 
 export function handshakes1($section: Step) {
-  let $graph = $section.$('.graph') as SVGParentView;
-  let g = new Graph($graph, 5, [], {icon: person});
+  const $graph = $section.$('.graph') as SVGParentView;
+  const g = new Graph($graph, 5, [], {icon: person});
 
   $section.model.watch((state) => {
     g.load(state.hnd, subsets(list(state.hnd), 2));
@@ -124,10 +124,10 @@ export function handshakes1($section: Step) {
 
 export function handshakes2($step: Step) {
   $step.model.set('handshakeTable', (n: number) => {
-    let colours = Color.rainbow($step.model.n);
+    const colours = Color.rainbow($step.model.n);
 
     function makePerson(x: number, y: number) {
-      let newX = (x >= y ? x + 1 : x);
+      const newX = (x >= y ? x + 1 : x);
       return ['<td', (x < y ? ' class="duplicate"' : ''),
         '><span class="person" style="background: ',
         colours[y], '">', y + 1,
@@ -149,7 +149,7 @@ export function handshakes2a($step: Step) {
 }
 
 export function handshakes3($section: Step) {
-  let graphs = $$('.graph', $section) as SVGParentView[];
+  const graphs = $$('.graph', $section) as SVGParentView[];
   new Graph(graphs[0], 4, subsets(list(4), 2) as [number, number][]);
   new Graph(graphs[1], 5, subsets(list(5), 2) as [number, number][]);
   new Graph(graphs[2], 6, subsets(list(6), 2) as [number, number][]);
@@ -157,17 +157,17 @@ export function handshakes3($section: Step) {
 }
 
 export function handshakes4($section: Step) {
-  let graph = $section.$('.graph') as SVGParentView;
-  let g = new Graph(graph, 0, [], {static: true, icon: person, bound: true});
+  const graph = $section.$('.graph') as SVGParentView;
+  const g = new Graph(graph, 0, [], {static: true, icon: person, bound: true});
 
   $section.model.watch((state) => {
-    let m = state.m;
-    let f = state.f;
+    const m = state.m;
+    const f = state.f;
 
-    let mPoints = tabulate(x => ({x: (x + 1) / (m + 1) * 300, y: 30}), m);
-    let fPoints = tabulate(x => ({x: (x + 1) / (f + 1) * 300, y: 110}), f);
+    const mPoints = tabulate(x => ({x: (x + 1) / (m + 1) * 300, y: 30}), m);
+    const fPoints = tabulate(x => ({x: (x + 1) / (f + 1) * 300, y: 110}), f);
 
-    let edges: [number, number][] = [];
+    const edges: [number, number][] = [];
     for (let i = 0; i < m; ++i) for (let j = 0; j < f; ++j) edges.push(
         [i, m + j]);
 
@@ -191,11 +191,15 @@ export function bridges($section: Step) {
 
     $error.hide();
 
-    let map = new Sketch($svg, {paths: $paths});
+    const map = new Sketch($svg, {paths: $paths});
     map.on('start', () => {
       map.clear();
       attempts += 1;
     });
+
+    const [$clear, $skip] = $el.$$('.btn');
+    $clear.on('click', () => map.clear());
+    map.one('end', () => { if (!success) $skip.enter('pop'); });
 
     function completeMap() {
       $skip.exit('pop');
@@ -203,10 +207,6 @@ export function bridges($section: Step) {
       $section.addHint(i === 0 ? 'tryDifferentMapA' : 'tryDifferentMapB');
       $section.score('bridge-' + i);
     }
-
-    const [$clear, $skip] = $el.$$('.btn');
-    $clear.on('click', () => map.clear());
-    map.one('end', () => { if (!success) $skip.enter('pop'); });
     $skip.one('click', completeMap);
 
     map.on('end', () => {
@@ -224,7 +224,7 @@ export function bridges($section: Step) {
     $water.on('pointerenter', (e) => {
       if (!map.drawing) return;
       map.stop();
-      let p = svgPointerPosn(e, $svg);
+      const p = svgPointerPosn(e, $svg);
       $error.css('transform', `translate(${p.x - 20}px, ${p.y - 20}px)`);
       $error.enter('pop', 300);
       $section.addHint('crossWater');
@@ -247,7 +247,7 @@ export function bridges($section: Step) {
 
       $bridge.on('pointerleave', (e) => {
         if (!map.drawing) return;
-        let out = svgPointerPosn(e, $svg);
+        const out = svgPointerPosn(e, $svg);
         if (Point.distance(enter || out, out) < 40) {
           crossed = false;
         } else {
@@ -271,15 +271,15 @@ export function bridges($section: Step) {
 }
 
 export function bridges1($section: Step) {
-  let $svg = $section.$('svg');
+  const $svg = $section.$('svg');
 
-  let $water = $('.water', $svg)!;
-  let $bg = $('.background', $svg)!;
-  let $bridges = $$('.bridge', $svg);
+  const $water = $('.water', $svg)!;
+  const $bg = $('.background', $svg)!;
+  const $bridges = $$('.bridge', $svg);
 
-  let $edges = $$('.edge', $svg);
-  let $vertices = $$('.vertex', $svg);
-  let $trace = $('.trace', $svg)!;
+  const $edges = $$('.edge', $svg);
+  const $vertices = $$('.vertex', $svg);
+  const $trace = $('.trace', $svg)!;
 
   $edges.forEach($e => { $e.hide(); });
   $vertices.forEach($e => { $e.hide(); });
@@ -291,7 +291,7 @@ export function bridges1($section: Step) {
 
   $section.onScore('blank-1', () => {
     setTimeout(() => {
-      for (let $x of [$water, $bg, ...$bridges]) $x.exit('fade', 800);
+      for (const $x of [$water, $bg, ...$bridges]) $x.exit('fade', 800);
     }, 1600);
     $edges.forEach($e => $e.enter('draw', 800));
   });
@@ -302,19 +302,19 @@ export function bridges1($section: Step) {
 }
 
 export function bridges3($section: Step) {
-  let g = GREEN, r = RED, b = BLUE, o = ORANGE;
-  let colours: Obj<(string|Color)[]> = {
+  const g = GREEN, r = RED, b = BLUE, o = ORANGE;
+  const colours: Obj<(string|Color)[]> = {
     val: Color.rainbow(8),
     eo: [g, r, g, r, g, r, g],
     prime: [g, g, r, g, r, g, r],
     size: [b, b, o, o, o, o, o]
   };
 
-  let $circles = $section.$$('circle');
+  const $circles = $section.$$('circle');
 
   function colour(x: string) {
     $circles.forEach(($c) => {
-      let y = +$c.attr('data-value');
+      const y = +$c.attr('data-value');
       $c.css('fill', '' + colours[x][y - 2]);  // -2 because no 0s and 1s
     });
     if (x === 'eo') $section.score('dropdown');
@@ -404,8 +404,8 @@ export function utilities($section: Step) {
     resolve('linesCross');
   });
 
-  let allUtilities = $section.$$('.utility1, .utility2, .utility3');
-  let sectors = new WeakMap();
+  const allUtilities = $section.$$('.utility1, .utility2, .utility3');
+  const sectors = new WeakMap();
 
   function clear() {
     allUtilities.forEach($el => { $el.css('opacity', 0); });
@@ -417,10 +417,10 @@ export function utilities($section: Step) {
   $section.$('button')!.on('click', clear);
 
   for (const $ut of $section.$$('.utility') as SVGView[]) {
-    let $c = $ut.children[0];
-    let p = {x: +$c.attr('cx'), y: +$c.attr('cy')};
+    const $c = $ut.children[0];
+    const p = {x: +$c.attr('cx'), y: +$c.attr('cy')};
     let onThis = false;
-    let dataType = $ut.data.type;
+    const dataType = $ut.data.type;
 
     $ut.on('pointerdown', (e: PointerEvent) => {
       currentUtility = $ut;
@@ -458,7 +458,7 @@ export function utilities($section: Step) {
           $section.addHint('factoriesToEachOther');
         }
       } else {
-        let sector = (startUtility.data.type === 'house') ?
+        const sector = (startUtility.data.type === 'house') ?
                      $('.' + $ut.data.utility, currentUtility)! :
                      $('.' + currentUtility.data.utility, $ut)!;
         sector.css('opacity', 1);
@@ -470,23 +470,23 @@ export function utilities($section: Step) {
 }
 
 export function utilities1($section: Step) {
-  let graphs = $section.$$('.graph') as SVGParentView[];
+  const graphs = $section.$$('.graph') as SVGParentView[];
 
-  let p3 = [{x: 100, y: 35}, {x: 170, y: 155}, {x: 30, y: 155}];
+  const p3 = [{x: 100, y: 35}, {x: 170, y: 155}, {x: 30, y: 155}];
   new Graph(graphs[0], 3, subsets(list(3), 2), {r: 8, static: true, posn: p3});
 
-  let p4 = [{x: 40, y: 40}, {x: 160, y: 40}, {x: 160, y: 160}, {x: 40, y: 160}];
-  let p4x = [{x: 100, y: 110}, {x: 100, y: 25}, {x: 175, y: 160}, {x: 25, y: 160}];
-  let k4 = new Graph(graphs[1], 4, subsets(list(4), 2),
+  const p4 = [{x: 40, y: 40}, {x: 160, y: 40}, {x: 160, y: 160}, {x: 40, y: 160}];
+  const p4x = [{x: 100, y: 110}, {x: 100, y: 25}, {x: 175, y: 160}, {x: 25, y: 160}];
+  const k4 = new Graph(graphs[1], 4, subsets(list(4), 2),
       {r: 8, static: true, posn: p4});
 
-  let p5 = [{x: 100, y: 30}, {x: 175, y: 85}, {x: 145, y: 170}, {x: 55, y: 170}, {x: 25, y: 85}];
-  let p5x = [{x: 100, y: 30}, {x: 120, y: 110}, {x: 185, y: 170}, {x: 15, y: 170}, {x: 80, y: 110}];
-  let k5 = new Graph(graphs[2], 5, subsets(list(5), 2),
+  const p5 = [{x: 100, y: 30}, {x: 175, y: 85}, {x: 145, y: 170}, {x: 55, y: 170}, {x: 25, y: 85}];
+  const p5x = [{x: 100, y: 30}, {x: 120, y: 110}, {x: 185, y: 170}, {x: 15, y: 170}, {x: 80, y: 110}];
+  const k5 = new Graph(graphs[2], 5, subsets(list(5), 2),
       {r: 8, static: true, posn: p5});
 
   function transition(graph: Graph, to: SimplePoint[]) {
-    let from = graph.vertices.map(v => ({x: v.posn.x, y: v.posn.y}));
+    const from = graph.vertices.map(v => ({x: v.posn.x, y: v.posn.y}));
     animate((q) => {
       graph.arrange(graph.vertices.map((v, i) => {
         return {
@@ -509,17 +509,42 @@ export function utilities1($section: Step) {
 }
 
 export function planarity($section: Step) {
-  let $svg = $section.$$('svg')[1] as SVGParentView;
-  let $newBtn = $section.$('button')!;
-  let $solveds = $section.$$('x-solved');
+  const $svg = $section.$$('svg')[1] as SVGParentView;
+  const $newBtn = $section.$('button')!;
+  const $solveds = $section.$$('x-solved');
 
-  let graph = new Graph($svg, 0, [], {r: 12, static: true, bound: true});
+  const graph = new Graph($svg, 0, [], {r: 12, static: true, bound: true});
   let isSolved = false;
   let creating = false;
 
   function shuffle(n: number) {
     return tabulate(() =>
         new Point(Math.random() * graph.width, Math.random() * graph.height), n);
+  }
+
+  function intersect(edges: Edge[]) {
+    let count = 0;
+
+    edges.forEach((e) => {
+      e.intersect = e.vertices[0].intersect = e.vertices[1].intersect = false;
+    });
+
+    for (let i = 0; i < edges.length; ++i) {
+      const e1 = edgeToSegment(edges[i]);
+      for (let j = i + 1; j < edges.length; ++j) {
+        const e2 = edgeToSegment(edges[j]);
+        if (Segment.intersect(e1, e2)) {
+          edges[i].intersect =
+              edges[j].intersect = edges[i].vertices[0].intersect =
+                  edges[i].vertices[1].intersect =
+                      edges[j].vertices[0].intersect =
+                          edges[j].vertices[1].intersect = true;
+          count += 1;
+        }
+      }
+    }
+
+    return count;
   }
 
   function generateGraph(n: number) {
@@ -532,7 +557,7 @@ export function planarity($section: Step) {
 
     function addEdge(u: number, v: number) {
       if (u === v) return;
-      let edge = new Segment(points[u], points[v]);
+      const edge = new Segment(points[u], points[v]);
       for (let i = 0; i < edges.length; ++i) {
         const e2 = new Segment(points[edges[i][0]], points[edges[i][1]]);
         if (edge.equals(e2) || Segment.intersect(edge, e2)) return;
@@ -553,7 +578,7 @@ export function planarity($section: Step) {
   }
 
   graph.on('update', () => {
-    let count = intersect(graph.edges);
+    const count = intersect(graph.edges);
     if (!isSolved && !creating && !count) {
       $section.score('planarity');
       $solveds[0].enter();
@@ -564,42 +589,17 @@ export function planarity($section: Step) {
     graph.edges.forEach(e => e.$el.setClass('intersect', !!e.intersect));
   });
 
-  function intersect(edges: Edge[]) {
-    let count = 0;
-
-    edges.forEach((e) => {
-      e.intersect = e.vertices[0].intersect = e.vertices[1].intersect = false;
-    });
-
-    for (let i = 0; i < edges.length; ++i) {
-      let e1 = edgeToSegment(edges[i]);
-      for (let j = i + 1; j < edges.length; ++j) {
-        let e2 = edgeToSegment(edges[j]);
-        if (Segment.intersect(e1, e2)) {
-          edges[i].intersect =
-              edges[j].intersect = edges[i].vertices[0].intersect =
-                  edges[i].vertices[1].intersect =
-                      edges[j].vertices[0].intersect =
-                          edges[j].vertices[1].intersect = true;
-          count += 1;
-        }
-      }
-    }
-
-    return count;
-  }
-
   $newBtn.on('click',  () => generateGraph($section.model.n));
   $section.model.watch( () => generateGraph($section.model.n));
 }
 
 export function euler($section: Step) {
-  let $svgs = $section.$$('svg');
-  let $notes = $section.$$('.euler-sum');
+  const $svgs = $section.$$('svg');
+  const $notes = $section.$$('.euler-sum');
 
   list(9).forEach(function (i) {
-    let x = i % 3;
-    let $svg = $svgs[(i - x) / 3];
+    const x = i % 3;
+    const $svg = $svgs[(i - x) / 3];
     $section.onScore('blank-' + i, function () {
       if (x === 0) {
         $svg.$$('circle').forEach(($c) => $c.animate({fill: GREEN}));
@@ -622,7 +622,7 @@ export function euler2($section: Step) {
   const $e = $section.$$('.xe');
   const $v = $section.$$('.xv');
 
-  let positions = [
+  const positions = [
     [{x: 300, y: 100}, {x: 270, y: 170}, {x: 270, y: 170}, {x: 300, y: 100}],  // show 0
     [{x: 200, y: 100}, {x: 270, y: 170}, {x: 270, y: 170}, {x: 390, y: 100}],  // show 0, 3
     [{x: 270, y: 30}, {x: 270, y: 170}, {x: 270, y: 170}, {x: 390, y: 100}],  // show 0, 1, 3
@@ -636,8 +636,8 @@ export function euler2($section: Step) {
       ($e, i) => { $e.setLine(positions[0][i], positions[0][(i + 1) % 4]); });
 
   $slideshow.on('next back', (s: number) => {
-    let start = positions[slide];
-    let end = positions[s];
+    const start = positions[slide];
+    const end = positions[s];
     slide = s;
 
     animate((x) => {
@@ -682,7 +682,7 @@ export function euler2($section: Step) {
     }
   });
 
-  let values = [[0, 1, 0], [0, 2, 1], [1, 3, 3], [0, 3, 2], [1, 4, 4]];
+  const values = [[0, 1, 0], [0, 2, 1], [1, 3, 3], [0, 3, 2], [1, 4, 4]];
   $slideshow.on('step', (s: number) => {
     $f.forEach(x => { x.textStr = values[s][0]; });
     $v.forEach(x => { x.textStr = values[s][1]; });
@@ -691,8 +691,8 @@ export function euler2($section: Step) {
 }
 
 export function euler3($section: Step) {
-  let $svg = $section.$('#dominoes')!;
-  let $gs = $svg.$$('g');
+  const $svg = $section.$('#dominoes')!;
+  const $gs = $svg.$$('g');
 
   let hasClicked = false;
   $svg.on('click', function () {
@@ -716,7 +716,7 @@ export function euler4($step: Step) {
   const $slider = $step.$$('x-slider');
   const src = $img.map($i => $i.attr('src'));
 
-  for (let i in [0, 1]) {
+  for (const i in [0, 1]) {
     // Preload images
     for (let j = 1; j < 32; ++j) {
       const img = new Image();
@@ -729,9 +729,9 @@ export function euler4($step: Step) {
 }
 
 export function maps1($section: Step) {
-  let colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', '#662D91',
+  const colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', '#662D91',
     '#F15A24', '#29ABE2'];
-  let $colours = $section.$$('.four-colour-icon');
+  const $colours = $section.$$('.four-colour-icon');
   let activeColour = 0;
   let warned = false;
 
@@ -745,23 +745,23 @@ export function maps1($section: Step) {
   });
 
   $section.$$('.tab').forEach(($map, i) => {
-    let $count = $map.$('.colour-count span')!;
-    let $countries = $map.$('.frame')!.children;
-    let $solve = $map.$('.solve')!;
-    let $solveds = $section.$$('x-solved');
+    const $count = $map.$('.colour-count span')!;
+    const $countries = $map.$('.frame')!.children;
+    const $solve = $map.$('.solve')!;
+    const $solveds = $section.$$('x-solved');
 
-    let countryIds: string[] = [];
+    const countryIds: string[] = [];
     let countryColours: Obj<number> = {};
     let colourUses = [0, 0, 0, 0, 0, 0, 0];
     let completed = 10;
     let used = 0;
 
     $countries.forEach(function ($c, j) {
-      let id = $c.id;
-      let neighbours = borders[i][id] || [];
+      const id = $c.id;
+      const neighbours = borders[i][id] || [];
       countryIds.push(id);
 
-      let initial = colours.indexOf($c.attr('fill'));
+      const initial = colours.indexOf($c.attr('fill'));
       $c.css('fill', '#CCC');
       $solve.on('click', function () {
         countryColours[id] = initial;
@@ -770,7 +770,7 @@ export function maps1($section: Step) {
       });
 
       $c.on('click', function () {
-        for (let n of neighbours) if (countryColours[n] === activeColour) {
+        for (const n of neighbours) if (countryColours[n] === activeColour) {
           if (!warned) $section.addHint('mapError');
           warned = true;
           return;
@@ -814,10 +814,10 @@ export function maps1($section: Step) {
 }
 
 export function maps2($section: Step) {
-  let $svg = $section.$('svg') as SVGParentView;
-  let $countries = $svg.$$('polygon');
-  let $edges = $svg.$$('path');
-  let $vertices = $svg.$$('circle');
+  const $svg = $section.$('svg') as SVGParentView;
+  const $countries = $svg.$$('polygon');
+  const $edges = $svg.$$('path');
+  const $vertices = $svg.$$('circle');
 
   $edges.forEach($e => { $e.exit(); });
   $vertices.forEach($e => { $e.exit(); });
@@ -835,7 +835,7 @@ export function maps2($section: Step) {
 
 export function salesman2($section: Step) {
   $section.model.set('tsmString', (x: number) => {
-    let a = [`There are <strong>${x}</strong> choices for the first city.`];
+    const a = [`There are <strong>${x}</strong> choices for the first city.`];
     if (x > 2) a.push(
         `After picking the first city, there are only <strong>${x -
                                                                 1}</strong> choices left for the second city.`);
@@ -872,7 +872,7 @@ export function salesman4($step: Step) {
   function redraw() {
     if (points.length < 2) return $path.points = [];
 
-    let matrix = repeat2D(0, points.length, points.length);
+    const matrix = repeat2D(0, points.length, points.length);
     for (let i = 0; i < points.length; ++i) {
       for (let j = 0; j < i; ++j) {
         matrix[i][j] = matrix[j][i] = Point.distance(points[i], points[j]);
@@ -916,5 +916,5 @@ export function salesman4($step: Step) {
 
   const initial = [{x: 150, y: 110}, {x: 360, y: 240}, {x: 520, y: 170},
     {x: 420, y: 400}, {x: 120, y: 340}, {x: 330, y: 60}];
-  for (let p of initial) addPoint(p);
+  for (const p of initial) addPoint(p);
 }
