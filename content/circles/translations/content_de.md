@@ -585,8 +585,8 @@ Du kannst den Radiantwert entweder als Vielfaches von _π_ oder als
 einzelne Dezimalzahl schreiben. Kannst du diese Tabelle mit den entsprechenden
 Winkelgrößen in Grad und Radiant ausfüllen?
 
-| __{.m-green}Grad__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
-| __{.m-red}Radiant__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+| __{.m-red}Grad__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
+| __{.m-green}Radiant__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
 {.table-small.grid}
 
 ---
@@ -1624,10 +1624,10 @@ unmöglich ist.
 ::: column.grow
 
 Genau wie ein Zylinder muss ein Kegel nicht “gerade” sein. Wenn die Spitze 
-direkt über der Mitte der Grundfläche liegt, handelt es sich um einen __geraden Zylinder__. Ansonsten sprechen
-wir von einem __schiefen Zylinder__.
+direkt über der Mitte der Grundfläche liegt, handelt es sich um einen __geraden Kegel__. Ansonsten sprechen
+wir von einem __schiefen Kegel__.
 
-Noch einmal können wir das Prinzip von Cavalieri anwenden, um zu zeigen, dass alle schiefen Zylinder
+Noch einmal können wir das Prinzip von Cavalieri anwenden, um zu zeigen, dass alle schiefen Kegel
 das gleiche Volumen haben, solange sie die gleiche Grundfläche und Höhe haben.
 
 ::: column(width=280)

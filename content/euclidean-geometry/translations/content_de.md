@@ -259,9 +259,9 @@ den anderen legen. In der Geometrie sagen wir, dass die beiden Figuren
 Das Symbol für Kongruenz ist `≅`. Wir würden also sagen, dass `A ≅ B`.
 :::
 
-Hier sind ein paar verschiedene geometrische Objekte. Verbinde alle
-kongruenten Formen und denke daran, dass mehr als zwei Formen miteinander
-kongruent sein können:
+Hier sind verschiedene geometrische Objekte: verbinde alle Formen, die 
+kongruent zueinander sind. Bedenke, dass möglicherweise _mehr als zwei_ Formen miteinander
+bzw. einige auch mit _keiner_ kongruent sind:
 
     svg.congruence(width=760 height=320 viewBox="0 0 760 320")
       g.lines
@@ -359,7 +359,6 @@ Solche Geraden werden als [__Normale__](gloss:perpendicular) bezeichnet.
 
 {.r} In diesem Beispiel würden wir _{.b.m-blue}a_ `⊥` _{.b.m-green}b_ schreiben. Das
 `⊥` Symbol bedeutet einfach _"ist normal auf"_.
-_{button.next-step} Weiter_
 
 :::
 
