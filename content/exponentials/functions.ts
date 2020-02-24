@@ -59,11 +59,11 @@ export function radioactiveChart($step: Step) {
 
   $step.model.set('format', numberFormat);
 
-  $step.model.watch((m) => {
-    const fn = (x: number) => m.x0 * 2 ** (-x / m.hl);
+  $step.model.watch((state: any) => {
+    const fn = (x: number) => state.x0 * 2 ** (-x / state.hl);
 
     $plot.setFunctions(fn);
-    $plot.drawPoints(list(0, 18000, m.hl).map(p => new Point(p, fn(p))));
+    $plot.drawPoints(list(0, 18000, state.hl).map(p => new Point(p, fn(p))));
   });
 }
 

@@ -1,5 +1,5 @@
 import {Obj, EventTarget} from '@mathigon/core';
-import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds} from '@mathigon/fermat';
+import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds, Segment, Ray, Sector, Polyline, Triangle, intersections} from '@mathigon/fermat';
 import {CustomElementView, ElementView, SVGView, Observable, AnimationResponse, SVGParentView} from '@mathigon/boost';
 import {ExprElement} from '@mathigon/hilbert';
 
@@ -26,7 +26,7 @@ export class Blank extends CustomElementView {
   private solution;
   done: boolean;
   ready(): void;
-  solve(): void;
+  solve(restore?: boolean): void;
 }
 
 export class BlankInput extends CustomElementView {
@@ -37,11 +37,12 @@ export class BlankInput extends CustomElementView {
   private range;
   private input;
   private attempts;
+  private placeholder;
   done: boolean;
   ready(): void;
-  isCorrect: boolean;
+  get isCorrect(): boolean;
   moveCursor(): void;
-  solve(): void;
+  solve(restore?: boolean): void;
   focus(): void;
   blur(): void;
 }
@@ -54,7 +55,7 @@ export class Equation extends CustomElementView {
   private $cursor;
   private $error;
   private $step?;
-  private numeric;
+  private numeric?;
   private vars;
   private isDone;
   private shortVar;
@@ -148,11 +149,10 @@ export class Tutor extends CustomElementView {
 
 export class Step extends CustomElementView {
   private $course?;
-  model: import('@mathigon/boost').Observable;
+  model: Observable;
   tools: {confetti: (duration?: number, maxParticles?: number) => void};
-  initialData?: any;
+  initialData?: {scores: string[]; data: Obj<any>};
   isShown: boolean;
-  isPageLoaded: boolean;
   isCompleted: boolean;
   goals: string[];
   scores: Set<string>;
@@ -166,7 +166,8 @@ export class Step extends CustomElementView {
   show(): void;
   complete(): void;
   restore(userData: any): void;
-  isReady: boolean;
+  get isReady(): boolean;
+  get isPageLoaded(): boolean;
   score(goal: string, goNext?: boolean): void;
   storeData(key: string, value: any): void;
   onScore(goalList: string, callback?: () => void): Promise<void>;
@@ -174,38 +175,6 @@ export class Step extends CustomElementView {
   getText(id: string): string;
   getHelp(): void;
   delayedHint(callback: () => void, t?: number): void;
-}
-
-export class CoordinateSystem extends CustomElementView {
-  private $grid;
-  private $labels;
-  private mathBounds;
-  private xAxisOptions;
-  private yAxisOptions;
-  private xSuffix;
-  private ySuffix;
-  private animated;
-  private noLabels;
-  private xLabel;
-  private yLabel;
-  private crosshairGrid;
-  private getCrosshairPosn;
-  $xAxis: SVGView;
-  $yAxis: SVGView;
-  $plot: ElementView;
-  $overlay: SVGView;
-  plotBounds: Bounds;
-  plotOrigin: Point;
-  ready(): void;
-  setupCrosshairs($svg: SVGParentView, width: number): void;
-  mathToPlotCoords(p: Point): Point;
-  plotToMathCoords(p: Point): Point;
-  setPoints(points: number[], initial?: number): void;
-  setSeries(...series: Point[][]): void;
-  setFunctions(...fns: ((x: number) => number)[]): void;
-  drawAxes(xStep: number, yStep: number): void;
-  drawLinePlot(points: Point[]): void;
-  drawPoints(points: Point[]): void;
 }
 
 export class Ticker {
@@ -271,7 +240,7 @@ export class DisplayEquation extends EventTarget {
   readonly deletedNodes: Set<DisplayNode>;
   private desc;
   constructor($row: SVGView, dx?: number, align?: string, fontSize?: number, isDisplay?: boolean);
-  setValue(expr: string | Element[]): void;
+  setValue(expr: string|Element[]): void;
   private updateDescription;
   resize(): void;
   private parse;
@@ -334,121 +303,6 @@ export class Gameplay extends CustomElementView {
   setFirstSlide(fn: (slide: ElementView) => void): void;
   play(): void;
   pause(): void;
-}
-
-export class Select extends CustomElementView {
-  $active: ElementView;
-  ready(): void;
-  makeActive($tool: ElementView): void;
-}
-
-export abstract class GeoElement<T extends Shape|Point> {
-  readonly $geopad: Geopad;
-  private $label?;
-  private labelStr?;
-  private labelPosition?;
-  $el: SVGView;
-  name: string;
-  val?: T;
-  removed: boolean;
-  x: GeoFunction<T>;
-  constructor($geopad: Geopad, x: GeoFunction<T>, $el?: SVGView, name?: string);
-  setLabel(str: string, color?: string, position?: string): void;
-  updateLabel(state: GeoState, obj: T): void;
-  remove(t?: number): void;
-  abstract update(v: T): void;
-  abstract makeEl(): SVGView;
-  abstract exit(t: number): AnimationResponse;
-}
-
-export class GeoPath extends GeoElement<Shape> {
-  points: GeoPoint[];
-  update(val: Shape): void;
-  makeEl(): SVGView;
-  exit(t?: number): AnimationResponse;
-}
-
-export class GeoPoint extends GeoElement<Point> {
-  private $halo?;
-  makeEl(): SVGView;
-  exit(t: number): AnimationResponse;
-  update(val: Point): void;
-  addHalo(): void;
-  removeHalo(): Promise<void>;
-}
-
-export class GeoMovablePoint extends GeoPoint {
-  private $pulse?;
-  private projection?;
-  locked: boolean;
-  constructor($geopad: Geopad, initial: Point, $el?: SVGView, name?: string, project?: Projection);
-  project(fn: Projection): void;
-  pulsate(): void;
-  lock(): void;
-  makeEl(): SVGView;
-}
-
-export type Shape = Angle|Line|Circle|Arc|Polygon|Rectangle;
-export type GeoState = any;
-export type GeoFunction<T = Shape|Point> = (vars: GeoState) => T|undefined;
-export type Projection = (vars: GeoState) => Line|Circle|Arc|Polygon|Rectangle;
-export type GeoExpression<T = Shape|Point> = string|GeoFunction<T>;
-
-export interface GeoOptions {
-  classes?: string;
-  animated?: number;
-  target?: string;
-  name?: string;
-}
-
-export type IntersectionPoint = {
-  val: Point;
-  x: () => Point;
-};
-
-export interface WaitForPathsOptions {
-  onCorrect?: (path: GeoPath, index: number) => void;
-  onIncorrect?: (path: GeoPath) => void;
-  onHint?: (path: GeoPath, index: number) => void;
-  onComplete?: (toManyErrors: boolean) => void;
-  maxErrors?: number;
-}
-
-export class Geopad extends CustomElementView {
-  private $svg;
-  $paths: ElementView;
-  $pulses: ElementView;
-  $points: ElementView;
-  $labels: ElementView;
-  private $tools;
-  model: Observable;
-  elements: Map<string, GeoElement<Point|Line|Angle|Arc|Circle|Polygon|Rectangle>>;
-  box: Rectangle;
-  private grid;
-  gridTransform: TransformMatrix;
-  private gridTransformInverse;
-  private findIntersections;
-  noPoints: boolean;
-  private cachedIntersections?;
-  private $gesture?;
-  private $compass?;
-  private $ruler?;
-  ready(): void;
-  lock(): void;
-  unlock(): void;
-  points: GeoPoint[];
-  paths: GeoPath[];
-  intersections: IntersectionPoint[];
-  vertexAt(posn: Point): GeoPoint|undefined;
-  setActiveTool(tool: string): void;
-  drawPath(x: GeoExpression<Shape>, {classes, animated, target, name}?: GeoOptions): GeoPath;
-  drawPoint(x: GeoExpression<Point>, {classes, animated, target, name}?: GeoOptions): GeoPoint;
-  drawMovablePoint(initial: Point, {classes, animated, target, name}?: GeoOptions): GeoMovablePoint;
-  animatePoint(name: string, target: Point, duration?: number): void;
-  animateConstruction(name: string, duration?: number): Promise<void>;
-  showGesture(from: string, to?: string): void;
-  waitForPath(validate: (p: GeoPath) => boolean): Promise<GeoPath>;
-  waitForPaths(paths: (string|Shape)[], {onCorrect, onIncorrect, onHint, onComplete, maxErrors}?: WaitForPathsOptions): void;
 }
 
 export class Gloss extends CustomElementView {
@@ -522,6 +376,195 @@ export class Video extends CustomElementView {
   pause(): void;
 }
 
+export class Select extends CustomElementView {
+  $active: ElementView;
+  ready(): void;
+  makeActive($tool: ElementView): void;
+}
+
+export const DEFAULT_GEO_MODEL: {
+  pi: number;
+  point: (x: number, y: number) => Point;
+  angle: (a: Point, b: Point, c: Point) => Angle;
+  line: (p1: Point, p2: Point) => Line;
+  ray: (p1: Point, p2: Point) => Ray;
+  segment: (p1: Point, p2: Point) => Segment;
+  circle: (c: Point, r: number) => Circle;
+  arc: (a: Point, b: Point, c: number) => Arc;
+  sector: (a: Point, b: Point, c: number) => Sector;
+  polygon: (...points: Point[]) => Polygon;
+  polyline: (...points: Point[]) => Polyline;
+  triangle: (a: Point, b: Point, c: Point) => Triangle;
+  rectangle: (p: Point, w: number, h: number) => Rectangle;
+  distance: typeof Point.distance;
+  round: (x: number, p?: number) => number;
+  sqrt: (x: number) => number;
+  intersections: typeof intersections;
+};
+
+export abstract class CoordinatePlane extends CustomElementView {
+  private $grid?;
+  private $axes?;
+  private $labels?;
+  protected labelSuffix: string[];
+  protected axisNames: string[];
+  protected gridSize: number[];
+  showGrid: boolean;
+  showAxes: boolean;
+  showLabels: boolean;
+  plotBounds: Bounds;
+  viewportBounds: Bounds;
+  plotOrigin: Point;
+  plotToViewportMatrix: TransformMatrix;
+  plotScale: number;
+  setupCoordinates($svg: SVGParentView, options: {showGrid?: boolean|undefined; showAxes?: boolean|undefined; padding?: string|undefined}): void;
+  protected updatePlotBounds(autoBounds?: Bounds): void;
+  protected drawAxes(): void;
+  toPlotCoords(p: Point): Point;
+  toViewportCoords(p: Point): Point;
+}
+
+export class Geopad extends CoordinatePlane {
+  shapes: Map<string, GeoShape<Point|Line|Rectangle|Angle|Arc|Circle|Polygon>>;
+  points: Set<GeoPoint>;
+  paths: Set<GeoPath<Path>>;
+  snapToGrid: number;
+  canSelect: boolean;
+  canIntersect: boolean;
+  locked: boolean;
+  hidePoints: boolean;
+  selection?: GeoShape;
+  hovering?: GeoShape;
+  private cursor;
+  $svg: SVGParentView;
+  $paths: ElementView;
+  $pulses: ElementView;
+  $points: ElementView;
+  $objLabels: ElementView;
+  $pendingPoint: SVGView;
+  private $compass?;
+  private $ruler?;
+  private $gesture?;
+  model: Observable<typeof DEFAULT_GEO_MODEL&Obj<any>>;
+  private events;
+  $tools: Select;
+  boundsRect: Rectangle;
+  ready(): void;
+  switchTool(name: ToolName): void;
+  setCursor(name?: CursorName): void;
+  select(obj?: GeoShape<any>): void;
+  deselect(): void;
+  delete(): void;
+  getPointAt(posn: Point, d?: number): GeoPoint|undefined;
+  getPathAt(posn: Point, d?: number): GeoPath<Path>|undefined;
+  getIntersectionAt(posn: Point, d?: number): Intersection|undefined;
+  drawPath(x: string|GeoValue<Path>, options?: GeoOptions): GeoPath<Path>;
+  drawPoint(x: string|GeoValue<Point>, options?: GeoOptions): GeoPoint;
+  animatePoint(name: string, target: Point, duration?: number): void;
+  animateConstruction(name: string, duration?: number): Promise<void>;
+  showGesture(from: string, to?: string): void;
+  waitForPath(validate: (p: GeoPath) => boolean): Promise<GeoPath<Path>>;
+  waitForPaths(paths: (string|Path)[], options?: WaitForPathsOptions): void;
+}
+
+export abstract class GeoShape<T extends Point|Path = Point|Path> extends EventTarget {
+  readonly $parent: Geopad;
+  $el: SVGView;
+  name: string;
+  locked: boolean;
+  isPending: boolean;
+  components: GeoPoint[];
+  protected $label?: ElementView;
+  protected constructor($parent: Geopad, initial: GeoValue<T>, $el: SVGView, id?: string);
+  get value(): T|undefined;
+  get type(): string|undefined;
+  setValue(p: GeoValue<T>): void;
+  setLabel(str: string, color?: string, position?: string): void;
+  select(): void;
+  deselect(): void;
+  hover(silent?: boolean): void;
+  unhover(silent?: boolean): void;
+  abstract redraw(p: Point|Path): void;
+  abstract delete(duration?: number): void;
+  abstract distance(p: Point): number;
+}
+
+export class GeoPoint extends GeoShape<Point> {
+  private $halo?;
+  components: GeoPoint[];
+  private projectionId;
+  private projection?;
+  private projectionOffset;
+  constructor($parent: Geopad, initial: GeoValue<Point>, id?: string, $el?: SVGView, isLocked?: boolean);
+  setValue(p: GeoValue<Point>): void;
+  redraw(p: Point): void;
+  delete(duration?: number): void;
+  distance(p: Point): number;
+  lock(locked?: boolean): void;
+  project(p: string|GeoShape<Path>|undefined): void;
+  makeIntersection({path1, path2, index}: Intersection): void;
+  addHalo(): void;
+  removeHalo(): Promise<void>;
+  pulsate(): void;
+}
+
+export class GeoPath<T extends Path = Path> extends GeoShape<T> {
+  constructor($parent: Geopad, initial: GeoValue<T>, id?: string, $el?: SVGView);
+  redraw(p: Path): void;
+  distance(posn: Point): number;
+  delete(duration?: number): void;
+  setComponents(components: GeoPoint[], expr: (...points: Point[]) => T|undefined): void;
+  updateEndPoint(newEndPoint: GeoPoint): void;
+}
+
+export type Path = Angle|Line|Circle|Arc|Polygon|Rectangle;
+
+export type ToolName = 'move'|'point'|'line'|'circle'|'rectangle'|'perpBisector'|'angleBisector';
+
+export type CursorName = 'default'|'crosshair'|'grab';
+
+export interface Intersection {
+  path1: GeoPath;
+  path2: GeoPath;
+  posn: Point;
+  index: number;
+}
+
+export interface GeoOptions {
+  classes?: string;
+  animated?: number;
+  target?: string;
+  name?: string;
+  interactive?: boolean;
+}
+
+export type GeoExpr<T> = ((s: Obj<any>) => T|undefined);
+
+export type GeoValue<T> = T|GeoExpr<T>|undefined;
+
+export interface WaitForPathsOptions {
+  onCorrect?: (path: GeoPath, index: number) => void;
+  onIncorrect?: (path: GeoPath) => void;
+  onHint?: (path: GeoPath, index: number) => void;
+  onComplete?: (toManyErrors: boolean) => void;
+  maxErrors?: number;
+}
+
+export class CoordinateSystem extends CoordinatePlane {
+  $plot: ElementView;
+  $overlay: SVGView;
+  private isAnimated;
+  private crosshairGrid;
+  private getCrosshairPosn;
+  ready(): void;
+  setPoints(points: number[], initial?: number): void;
+  setSeries(...series: Point[][]): void;
+  setFunctions(...fns: ((x: number) => number)[]): void;
+  drawLinePlot(points: Point[]): void;
+  drawPoints(points: Point[]): void;
+  setupCrosshairs($svg: SVGParentView): void;
+}
+
 export class Popup extends CustomElementView {
   private isOpen;
   private animation;
@@ -539,4 +582,28 @@ export class Tabbox extends CustomElementView {
   private active;
   ready(): void;
   makeActive(i: number): void;
+}
+
+export class Course extends CustomElementView {
+  user: any;
+  model: Observable;
+  isCompleted: boolean;
+  isReady: boolean;
+  glossary: Obj<any>;
+  userData: any;
+  $activeStep?: Step;
+  $tutor: Tutor;
+  private $steps;
+  private $footer;
+  private $skipStep;
+  private $progress;
+  private $stepsWrap;
+  created(): void;
+  ready(): void;
+  nextStep(): void;
+  goToStep($step: Step, animated?: boolean): void;
+  complete(animated?: boolean): void;
+  findStep(id: string): Step|undefined;
+  saveProgress(data: Obj<any>): void;
+  log(category: string, action: string, value?: string): void;
 }

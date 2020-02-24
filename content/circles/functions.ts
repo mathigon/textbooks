@@ -297,7 +297,7 @@ export function area($step: Step) {
     if (p > 0.95) $step.score('slider');
   }
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: any) => {
     $circle.removeChildren();
     $rect.removeChildren();
 
@@ -361,7 +361,7 @@ export function area1($step: Step) {
     if (p > 0.95) $step.score('slider');
   }
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: any) => {
     // TODO Reuse elements for better performance.
     triangle.removeChildren();
     $circle.removeChildren();
@@ -618,7 +618,7 @@ export function cylinderPrism($step: Step) {
   $solids[1].addMesh((scene) => {
     const cylinder = $solids[1].addOutlined(new THREE.Geometry(), 0xaaaaaa);
 
-    $step.model.watch(state => {
+    $step.model.watch((state: any) => {
       const geo = new THREE.CylinderGeometry(1.4, 1.4, 2.8, state.n, 1);
       cylinder.updateGeometry!(geo);
       scene.draw();
@@ -799,7 +799,7 @@ export function coneVolume($step: Step) {
 
   $solid.addMesh((scene) => {
     const cylinder = $solid.addOutlined(new THREE.Geometry(), 0xaaaaaa);
-    $step.model.watch(state => {
+    $step.model.watch((state: any) => {
       const geo = new THREE.ConeGeometry(1.4, 2.8, state.n, 1);
       cylinder.updateGeometry!(geo);
       scene.draw();
@@ -1170,7 +1170,7 @@ export function epicycles($step: Step) {
   let points: Point[] = [];
   let lastP = 0;
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: any) => {
     points = list(401).map((i) => {
       const a = i / 400 * 2 * Math.PI;
       return Point.fromPolar(a * state.n, SMALL_R)

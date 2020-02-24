@@ -53,7 +53,7 @@ export function numberline($step: Step) {
   const $limit = $step.$('span.hidden')!;
 
   $step.model.set('nines', (n: number) => '0.' + '9'.repeat(n));
-  $step.model.watch(state => {
+  $step.model.watch((state: any) => {
     if (state.n === 2) $step.score('n2');
     if (state.n === 3) $step.score('n3');
     if (state.n === 4) $step.score('n4');

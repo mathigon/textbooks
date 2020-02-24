@@ -25,9 +25,9 @@ export function slope($step: Step) {
   const $svg = $chart.$overlay.$ownerSVG;
 
   function pfn(p: Point) {
-    const q = $chart.plotToMathCoords(p);
+    const q = $chart.toPlotCoords(p);
     const x = clamp(roundTo(q.x, 0.5), -4, 4);
-    return $chart.mathToPlotCoords(new Point(x, 1.5 * x));
+    return $chart.toViewportCoords(new Point(x, 1.5 * x));
   }
 
   const drag = new Draggable($point, $chart, {round: pfn});
@@ -36,12 +36,12 @@ export function slope($step: Step) {
   $chart.on('mousemove', (e) => {
     if (hasSelected) return;
 
-    const p = $chart.plotToMathCoords(svgPointerPosn(e, $svg));
+    const p = $chart.toPlotCoords(svgPointerPosn(e, $svg));
     if (Math.abs(p.y - 1.5 * p.x) > 1) {
       $point.removeClass('visible');
     } else {
       $point.addClass('visible');
-      const point = $chart.mathToPlotCoords(new Point(p.x, 1.5 * p.x));
+      const point = $chart.toViewportCoords(new Point(p.x, 1.5 * p.x));
       drag.setPosition(point.x, point.y);
     }
   });
@@ -49,7 +49,7 @@ export function slope($step: Step) {
   $chart.on('click', (e) => {
     if (hasSelected) return;
 
-    const p = $chart.plotToMathCoords(svgPointerPosn(e, $svg));
+    const p = $chart.toPlotCoords(svgPointerPosn(e, $svg));
     if (Math.abs(p.y - 1.5 * p.x) > 1) return;
 
     $point.addClass('fixed');
@@ -57,9 +57,9 @@ export function slope($step: Step) {
     $step.score('make-point');
   });
 
-  const origin = $chart.mathToPlotCoords(new Point(0, 0));
+  const origin = $chart.toViewportCoords(new Point(0, 0));
   drag.on('move', (posn) => {
-    $step.model.p = $chart.plotToMathCoords(posn);
+    $step.model.p = $chart.toPlotCoords(posn);
 
     const corner = {x: posn.x, y: origin.y};
     $lineX.setLine(corner, origin);
@@ -109,12 +109,12 @@ export function intercept($step: Step) {
   const $lines = arrows.map(
       () => $N('line', {class: 'arrow'}, $chart.$overlay) as SVGView);
   const points = arrows.map(
-      x => $chart.mathToPlotCoords(new Point(x, 2 / 3 * x)));
+      x => $chart.toViewportCoords(new Point(x, 2 / 3 * x)));
 
   $step.model.set('sign', (a: number) => a < 0 ? '–' : '+');
   $step.model.set('abs', Math.abs);
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: any) => {
     $chart.setFunctions(x => 2 / 3 * x + state.a);
     $lines.forEach(($l, i) => {
       if (state.a) {
@@ -122,7 +122,7 @@ export function intercept($step: Step) {
       } else {
         return $l.hide();
       }
-      const end = $chart.mathToPlotCoords(
+      const end = $chart.toViewportCoords(
           new Point(arrows[i], 2 / 3 * arrows[i] + state.a));
       $l.setLine(points[i], end.shift(0, state.a < 0 ? -8 : 8));
     });
@@ -141,9 +141,9 @@ export function equation1($step: Step) {
   const $lineY = $N('line', {class: 'line-y'}, $chart.$overlay) as SVGView;
 
   function pfn(p: Point) {
-    const q = $chart.plotToMathCoords(p);
+    const q = $chart.toPlotCoords(p);
     const x = clamp(roundTo(q.x, 0.5), -4, 4);
-    return $chart.mathToPlotCoords(new Point(x, 3 / 4 * x + 2));
+    return $chart.toViewportCoords(new Point(x, 3 / 4 * x + 2));
   }
 
   const drag1 = new Draggable($point1, $chart, {round: pfn});

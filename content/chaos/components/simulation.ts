@@ -72,7 +72,7 @@ export class Simulation {
   }
 
   play(callback: (p: number) => void, speed = 1, steps = 3) {
-    this.$geopad.lock();
+    this.$geopad.locked = true;
     for (const t of this.trails) t.clear();
 
     // Copy the updated state from the model.
@@ -97,7 +97,7 @@ export class Simulation {
     if (!this.animation) return;
     this.animation.cancel();
     this.animation = undefined;
-    this.$geopad.unlock();
+    this.$geopad.locked = false;
   }
 
   addTrails(...trails: TrailList) {

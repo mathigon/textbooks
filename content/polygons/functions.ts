@@ -24,7 +24,7 @@ export function triangleInequality($step: Step) {
     $step.delayedHint(() => $step.addHint('inequality-impossible'), 20000);
   });
 
-  $step.model.watch(s => {
+  $step.model.watch((s: any) => {
     const active = [round(s.a, s.b), round(s.b, s.c), round(s.a, s.c)].sort();
     targets.forEach((t, i) => {
       let correctCount = 0;

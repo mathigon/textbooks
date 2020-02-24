@@ -115,7 +115,7 @@ export function handshakes1($section: Step) {
   const $graph = $section.$('.graph') as SVGParentView;
   const g = new Graph($graph, 5, [], {icon: person});
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     g.load(state.hnd, subsets(list(state.hnd), 2));
     g.attraction /= 2;
     g.repulsion *= 2;
@@ -160,7 +160,7 @@ export function handshakes4($section: Step) {
   const graph = $section.$('.graph') as SVGParentView;
   const g = new Graph(graph, 0, [], {static: true, icon: person, bound: true});
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     const m = state.m;
     const f = state.f;
 

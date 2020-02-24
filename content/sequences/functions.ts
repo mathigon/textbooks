@@ -90,12 +90,12 @@ export function ball($step: Step) {
   const $balls = $step.$$('.tennis-ball');
 
   $chart.setFunctions(bounce);
-  $chart.$xAxis.setAttr('x1', '2');
+  $chart.$('.axes > path')!.setAttr('x1', '2');
   const $fn = $chart.$plot.$('path')!;
 
   function tick(n: number) {
     const x = 6.65 * n / $slider.steps;
-    const p = $chart.mathToPlotCoords(new Point(x, bounce(x)));
+    const p = $chart.toViewportCoords(new Point(x, bounce(x)));
 
     const right = ($chart.plotBounds.xMax - p.x) / $chart.plotBounds.dx * 100;
     $fn.css('clip-path', `inset(-2px ${right}% -2px -2px)`);
@@ -144,7 +144,7 @@ export function arithmeticGeometricGraph($step: Step) {
   $step.model.set('geometric',
       (a: number, r: number, i: number) => numberFormat(a * (r ** i), 4));
 
-  $step.model.watch((m) => {
+  $step.model.watch((m: any) => {
     const p1 = arithmetic(m.a, m.d, 10).map((p, i) => new Point(1 + i, p));
     const p2 = geometric(m.b, m.r, 10).map((p, i) => new Point(1 + i, p));
     $plots[0].setSeries(p1);
@@ -226,7 +226,7 @@ export function triangleSums($step: Step) {
   const $svgs = $step.$$('svg.t-sum');
   const $sums = $step.$$('strong.t-sum');
 
-  $step.model.watch((model) => {
+  $step.model.watch((model: any) => {
     const t = triangularSum(model.n);
     const tx = t.map(x => triangleNumber(x));
 
@@ -293,7 +293,7 @@ export function polygonNumbers($step: Step) {
     }
   }
 
-  $step.model.watch((m) => update(m.k, $slider.current + 1));
+  $step.model.watch((m: any) => update(m.k, $slider.current + 1));
   $slider.on('move', (x) => update($step.model.k, x + 1));
   $slider.set(3);
 }
@@ -371,7 +371,7 @@ export function hailstone2($step: Step) {
   const cached = cache(hailstones);
   const $plot = $step.$('x-coordinate-system') as CoordinateSystem;
 
-  $step.model.watch((m) => $plot.setPoints([...cached(m.n), 4, 2, 1]));
+  $step.model.watch((m: any) => $plot.setPoints([...cached(m.n), 4, 2, 1]));
 
   const $actions = $step.$$('.var-action');
   $actions[0].on('click', () => $step.model.set('n', 31));

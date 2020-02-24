@@ -111,7 +111,7 @@ export function introChart($step: Step) {
 export function parabola($step: Step) {
   const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
 
-  $step.model.watch((s) => {
+  $step.model.watch((s: any) => {
     const fn = q(s.a, s.b, s.c);
     $chart.setFunctions(fn);
     $chart.drawPoints(zeros(s.a, s.b, s.c).map(p => new Point(p, fn(p))));

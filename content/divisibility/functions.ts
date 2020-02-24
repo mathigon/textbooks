@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {$N, animate, thread, observable, InputView, ElementView, SVGView} from '@mathigon/boost';
+import {$N, animate, thread, InputView, ElementView, SVGView, observe} from '@mathigon/boost';
 import {isPrime, lcm, numberFormat, Random} from '@mathigon/fermat';
 import {total, sortBy, list, isOneOf, delay} from '@mathigon/core';
 import {Gameplay, Slideshow, Step} from '../shared/types';
@@ -29,8 +29,7 @@ function numberGrid($grid: ElementView, time: number, className: string,
 export function divisibilityGame($step: Step) {
   const $gameplay = $step.$('x-gameplay') as Gameplay;
 
-  $gameplay.setFirstSlide($el =>
-      $el.bindObservable(observable({x: '?', y: '?'})));
+  $gameplay.setFirstSlide($el => $el.bindModel(observe({x: '?', y: '?'})));
 
   $gameplay.slideGenerator = ($el, success, error) => {
     const answer = Random.smart(3, 'divisibility-game');
@@ -53,7 +52,7 @@ export function divisibilityGame($step: Step) {
         if (Random.integer(1)) [x, y] = [y, x];
     }
 
-    $el.bindObservable(observable({x, y}));
+    $el.bindModel(observe({x, y}));
 
     const $buttons = $el.$$('.factor-bubble');
     $buttons[0].on('click', answer === 0 ? success : error);
@@ -330,7 +329,7 @@ export function gcd($section: Step) {
   const $tiles = $section.$('.tiles')!;
   const $result = $section.$('.result')!;
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     const hint = isOneOf(state.x, 1, 2, 3, 6) ? 'gcd-yes' : 'gcd-no';
     $result.html = $section.getText(hint);
     $tiles.removeChildren();
@@ -359,7 +358,7 @@ export function cicadas($section: Step) {
   const $rects = $section.$$('rect').slice(1);
   $rects.forEach($r => { $r.hide(); });
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     $rects[state.n - 4].show();
     $highlight.setAttr('x', (state.n - 4) * 26);
 

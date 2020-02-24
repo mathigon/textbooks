@@ -5,9 +5,9 @@
 
 
 import {tabulate} from '@mathigon/core';
-import {clamp, toWord, Segment, Point, Angle, lerp, Line} from '@mathigon/fermat';
+import {clamp, toWord, Segment, Point, Angle, lerp, Line, Rectangle} from '@mathigon/fermat';
 import {Browser, slide} from '@mathigon/boost';
-import {GeoElement, Geopad, GeoPoint, Slider, Step} from '../shared/types';
+import {Geopad, GeoPath, GeoPoint, GeoShape, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';
@@ -36,7 +36,7 @@ export function angles($step: Step) {
     });
   }
 
-  $step.model.watch(s => {
+  $step.model.watch((s: any) => {
     const a1 = new Angle(s.b, s.a, s.d).deg;
     const a2 = new Angle(s.c, s.b, s.a).deg;
     const a3 = new Angle(s.d, s.c, s.b).deg;
@@ -71,36 +71,36 @@ export function regularArea($step: Step) {
 
 // -----------------------------------------------------------------------------
 
-function checkPathMatches(p: GeoElement<Line>, options: Line[]) {
+function checkPathMatches(p: GeoShape<Line>, options: Line[]) {
   for (let i = 0; i < options.length; ++i) {
-    if (p.val!.equals(options[i])) return i;
+    if (p.value!.equals(options[i])) return i;
   }
-  p.remove();
+  p.delete();
   return -1;
 }
 
 export function midsegments($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
-  $geopad.setActiveTool('point');
+  $geopad.switchTool('point');
 
   let points: GeoPoint[] = [];
   let orientation: number;
 
-  $geopad.on('add:point', function (p) {
-    if (points.length === 4) return p.remove();
-    points.push(p);
+  $geopad.on('add:point', ({point}: {point: GeoPoint}) => {
+    if (points.length === 4) return point.delete();
+    points.push(point);
     if (points.length === 4) $step.score('points');
   });
 
-  $geopad.on('add:path', function (p) {
-    const match = checkPathMatches(p, [
-      new Segment(points[0].val!, points[2].val!),
-      new Segment(points[1].val!, points[3].val!)
+  $geopad.on('add:path', ({path}: {path: GeoPath<Line>}) => {
+    const match = checkPathMatches(path, [
+      new Segment(points[0].value!, points[2].value!),
+      new Segment(points[1].value!, points[3].value!)
     ]);
 
     if (match >= 0) {
       orientation = match + 1;
-      p.$el.setAttr('target', 'parallel');
+      path.$el.setAttr('target', 'parallel');
       $step.score('diagonal');
     } else {
       $step.addHint('not-a-diagonal');
@@ -109,15 +109,15 @@ export function midsegments($step: Step) {
 
   $step.onScore('points', () => {
     if (points.length < 4) points = [
-      $geopad.drawMovablePoint(new Point(50, 40)),
-      $geopad.drawMovablePoint(new Point(70, 250)),
-      $geopad.drawMovablePoint(new Point(220, 240)),
-      $geopad.drawMovablePoint(new Point(260, 90))
+      $geopad.drawPoint(new Point(50, 40)),
+      $geopad.drawPoint(new Point(70, 250)),
+      $geopad.drawPoint(new Point(220, 240)),
+      $geopad.drawPoint(new Point(260, 90))
     ];
 
-    $geopad.setActiveTool('move');
+    $geopad.switchTool('move');
 
-    const [a, b, c, d] = points.map(p => p.val);
+    const [a, b, c, d] = points.map(p => p.value);
     if (Segment.intersect(new Segment(a!, b!), new Segment(c!, d!))) {
       points = [points[0], points[2], points[1], points[3]];
     } else if (Segment.intersect(new Segment(a!, d!), new Segment(b!, c!))) {
@@ -130,20 +130,20 @@ export function midsegments($step: Step) {
 
   $step.onScore('blank-0 points', () => {
     for (let i = 0; i < 4; ++i) {
-      $geopad.drawPoint(`quad.edges[${i}].midpoint`, {name: `m${i}`, classes: 'red'});
+      $geopad.drawPoint(`quad.edges[${i}].midpoint`, {name: `m${i}`, classes: 'red', interactive: false});
     }
 
     $geopad.drawPath(`polygon(m0,m1,m2,m3)`, {classes: 'red', name: 'p0', animated: 1000});
   });
 
   $step.onScore('blank-1 points', () => {
-    $geopad.setActiveTool('line');
+    $geopad.switchTool('line');
     $geopad.showGesture(points[0].name, points[2].name);
   });
 
   $step.onScore('diagonal', () => {
     const [a, b, c, d] = points.map(p => p.name);
-    $geopad.setActiveTool('move');
+    $geopad.switchTool('move');
 
     if (!orientation) {
       // TODO add diagonal
@@ -166,26 +166,26 @@ export function parallelogramsProof($step: Step) {
   const model = $step.model;
 
   model.set('o', false);
-  $geo1.on('add:point', p => p.remove());
+  $geo1.on('add:point', ({point}: {point: GeoPoint}) => point.delete());
 
   setTimeout(() => {
     if (!$step.scores.has('diagonal')) {
       $geo1.showGesture('a', 'c');
-      $geo1.setActiveTool('line');
+      $geo1.switchTool('line');
     }
   }, 1000);
 
-  $geo1.on('add:path', function (p) {
-    const match = checkPathMatches(p, [
+  $geo1.on('add:path', ({path}: {path: GeoPath<Line>}) => {
+    const match = checkPathMatches(path, [
       new Segment(model.b, model.d),
       new Segment(model.a, model.c)
     ]);
 
     if (match >= 0) {
-      p.$el.setAttr('target', 'diagonal');
+      path.$el.setAttr('target', 'diagonal');
       if (match === 1) model.set('o', true);
       $step.score('diagonal');
-      $geo1.setActiveTool('move');
+      $geo1.switchTool('move');
     } else {
       $step.addHint('not-a-diagonal-1');
     }
@@ -195,32 +195,32 @@ export function parallelogramsProof($step: Step) {
 export function quadrilateralsArea($step: Step) {
   const $geopads = $step.$$('x-geopad') as Geopad[];
 
-  $geopads[0].setActiveTool('rectangle');
-  $geopads[0].on('add:path', path => {
-    if (path.val.w * path.val.h === 48) {
+  $geopads[0].switchTool('rectangle');
+  $geopads[0].on('add:path', ({path}: {path: GeoPath<Rectangle>}) => {
+    if (path.value!.w * path.value!.h === 48) {
       // TODO shift to correct location
       $step.addHint('correct');
       $step.score('draw-1');
     } else {
       $step.addHint('incorrect');
-      path.remove();
+      path.delete();
     }
   });
-  $step.onScore('draw-1', () => $geopads[0].setActiveTool('move'));
+  $step.onScore('draw-1', () => $geopads[0].switchTool('move'));
 
 
-  $geopads[1].setActiveTool('rectangle');
-  $geopads[1].on('add:path', path => {
-    if (path.val.w * path.val.h === 48) {
+  $geopads[1].switchTool('rectangle');
+  $geopads[1].on('add:path', ({path}: {path: GeoPath<Rectangle>}) => {
+    if (path.value!.w * path.value!.h === 48) {
       // TODO shift to correct location
       $step.addHint('correct');
       $step.score('draw-2');
     } else {
       $step.addHint('incorrect');
-      path.remove();
+      path.delete();
     }
   });
-  $step.onScore('draw-2', () => $geopads[1].setActiveTool('move'));
+  $step.onScore('draw-2', () => $geopads[1].switchTool('move'));
 }
 
 // -----------------------------------------------------------------------------

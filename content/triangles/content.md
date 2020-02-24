@@ -661,7 +661,7 @@ Two triangles are congruent if any one of the following conditions is met:
           path.red(x="segment(a,b)")
           path(x="segment(a,c)")
           path(x="segment(b,c)")
-        p.caption Two angles and one of the non-included sided.
+        p.caption Two angles and one of the non-included sides.
 :::
 
 ---
