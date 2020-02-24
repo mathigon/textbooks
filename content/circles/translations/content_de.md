@@ -726,7 +726,7 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
       
-      path.teal.fill.reveal(x="sector(x,d1,Math.PI/2.5)" target="sector" when="next-3" label="Sektor" label-colour="white")
+      path.teal.fill.reveal(x="sector(x,d1,Math.PI/2.5)" target="sector" when="next-3" label="Sektor" label-class="white")
       path.purple.fill.reveal(x="arc(x,b1,Math.PI/2.5)" target="segment" when="next-4" label="Segment")
       
       path.black(x="circle(x,100)" name="c")
@@ -894,7 +894,7 @@ Wissen über die Kreisbögen und Sektoren eines Kreises.
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sektor" target="sector" label-colour="white")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sektor" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Kreisbogen" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
 
@@ -949,7 +949,7 @@ Wir können diese Beziehung in einer Gleichung ausdrücken:
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sektor" target="sector" label-colour="white")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sektor" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Kreisbogen" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
       

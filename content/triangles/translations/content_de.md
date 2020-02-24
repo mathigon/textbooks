@@ -826,9 +826,9 @@ a*{sup}2* + b*{sup}2* = c*{sup}2* gilt, dann muss es [[rechtwinklig|spitzwinklig
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
       
-      path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-colour="white")
-      path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-colour="white")
-      path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-colour="white")
+      path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
+      path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
+      path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
       
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")

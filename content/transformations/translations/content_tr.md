@@ -129,8 +129,8 @@ Ama önce her bir dönüşüm çeşidine daha detaylı bakalım.
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" style="fill: #d94c44; opacity: 0.6" label-colour="white")
-      path.fill(x="s1.shift(5,-1)" style="fill: #d94c44" label="A'" label-colour="white")
+      path.fill(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" style="fill: #d94c44; opacity: 0.6" label-class="white")
+      path.fill(x="s1.shift(5,-1)" style="fill: #d94c44" label="A'" label-class="white")
       path.reveal(x="segment(point(4,5),point(9,5))" mark="arrow" when="blank-0" animation="draw")
       path.reveal(x="segment(point(9,5),point(9,4))" mark="arrow" when="blank-1" animation="draw")
 
@@ -138,8 +138,8 @@ Ama önce her bir dönüşüm çeşidine daha detaylı bakalım.
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill.red(x="circle(point(7,4),1.5)" name="s2" label="B" style="opacity: 0.6" label-colour="white")
-      path.fill.red(x="s2.shift(-4,-2)" label="B'" label-colour="white")
+      path.fill.red(x="circle(point(7,4),1.5)" name="s2" label="B" style="opacity: 0.6" label-class="white")
+      path.fill.red(x="s2.shift(-4,-2)" label="B'" label-class="white")
       path.reveal(x="segment(point(6,5),point(2,5))" mark="arrow" when="blank-2" animation="draw")
       path.reveal(x="segment(point(2,5),point(2,3))" mark="arrow" when="blank-3" animation="draw")
 
@@ -147,8 +147,8 @@ Ama önce her bir dönüşüm çeşidine daha detaylı bakalım.
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C" style="fill: #822b9b; opacity: 0.6" label-colour="white")
-      path.fill(x="s3.shift(4,2)" style="fill: #822b9b" label="C'" label-colour="white")
+      path.fill(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C" style="fill: #822b9b; opacity: 0.6" label-class="white")
+      path.fill(x="s3.shift(4,2)" style="fill: #822b9b" label="C'" label-class="white")
       path.reveal(x="segment(point(2,6),point(6,6))" mark="arrow" when="blank-4" animation="draw")
       path.reveal(x="segment(point(2,4),point(2,6))" mark="arrow" when="blank-5" animation="draw")
 
@@ -1086,8 +1086,8 @@ Eğer [genleşme katsayısı](gloss:scale-factor) 0 ile 1 arasındaysa, sonuç, 
       circle(hidden name="b1" x="b.subtract(C).scale(s).add(C)")
       circle(hidden name="c1" x="c.subtract(C).scale(s).add(C)")
 
-      path.fill.green(x="polygon(a,b,c)" label="A" label-colour="white")
-      path.fill.blue(x="polygon(a1,b1,c1)" label="A’" label-colour="white")
+      path.fill.green(x="polygon(a,b,c)" label="A" label-class="white")
+      path.fill.blue(x="polygon(a1,b1,c1)" label="A’" label-class="white")
 
       path.light.thin(x="segment(C,s<1?a:a1)")
       path.light.thin(x="segment(C,s<1?b:b1)")
