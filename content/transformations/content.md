@@ -146,8 +146,8 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" style="fill: #d94c44; opacity: 0.6" label-class="white")
-      path.fill(x="s1.shift(5,-1)" style="fill: #d94c44" label="A'" label-class="white")
+      path.fill.orange.light(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" label-class="white")
+      path.fill.orange(x="s1.shift(5,-1)" label="A'" label-class="white")
       path.reveal(x="segment(point(4,5),point(9,5))" mark="arrow" when="blank-0" animation="draw")
       path.reveal(x="segment(point(9,5),point(9,4))" mark="arrow" when="blank-1" animation="draw")
 
@@ -155,7 +155,7 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill.red(x="circle(point(7,4),1.5)" name="s2" label="B" style="opacity: 0.6" label-class="white")
+      path.fill.red.light(x="circle(point(7,4),1.5)" name="s2" label="B" label-class="white")
       path.fill.red(x="s2.shift(-4,-2)" label="B'" label-class="white")
       path.reveal(x="segment(point(6,5),point(2,5))" mark="arrow" when="blank-2" animation="draw")
       path.reveal(x="segment(point(2,5),point(2,3))" mark="arrow" when="blank-3" animation="draw")
@@ -164,8 +164,8 @@ moved along the _x_-axis and the _y_-axis. For example, a transformation by
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C" style="fill: #822b9b; opacity: 0.6" label-class="white")
-      path.fill(x="s3.shift(4,2)" style="fill: #822b9b" label="C'" label-class="white")
+      path.fill.light.purple(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C")
+      path.fill.purple(x="s3.shift(4,2)" label="C'")
       path.reveal(x="segment(point(2,6),point(6,6))" mark="arrow" when="blank-4" animation="draw")
       path.reveal(x="segment(point(2,4),point(2,6))" mark="arrow" when="blank-5" animation="draw")
 
@@ -226,21 +226,21 @@ Draw the line of reflection in each of these examples:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,1),point(1,2),point(2,3),point(8,2))" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)" name="from0")
       path(hidden name="line0" x="line(point(-1,4),point(11,4))")
       path(x="from0.reflect(line0)" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(1,1),point(1,5),point(3,5),point(2,3),point(4,1))" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)" name="from1")
       path(hidden name="line1" x="line(point(9,-1),point(-1,9))")
       path(x="from1.reflect(line1)" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/rorschach.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
@@ -561,28 +561,28 @@ Draw all axes of symmetry in these six images and shapes:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/lake.jpg" width=220 height=180)
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/beijing.jpg" width=220 height=180)
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,2),point(5,1),point(8,2),point(9,4),point(8,6),point(5,7),point(2,6),point(1,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(255,148,31,0.4)")
       path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
@@ -590,7 +590,7 @@ Draw all axes of symmetry in these six images and shapes:
 {.caption} This shape has [[2]] axes of symmetry.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,2),point(7,2),point(7,6),point(3,6))" style="stroke: #363644; stroke-width: 3px; fill: rgba(242,124,43,0.4)")
       path(hidden name="line4a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line4b" x="line(point(5,-1),point(5,9))")
@@ -600,7 +600,7 @@ Draw all axes of symmetry in these six images and shapes:
 {.caption} A square has [[4]] axes of symmetry.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,1),point(9,3),point(8,6),point(2,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(230,100,56,0.4)")
       path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
       path(hidden name="line5b" x="line(point(7,-1),point(3,11))")

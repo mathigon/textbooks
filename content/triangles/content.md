@@ -922,19 +922,19 @@ see that
         circle(name="g" x="c.subtract(e.subtract(a))")
         circle(name="h" x="d.subtract(e.subtract(a).flip)")
 
-        path.dark.thin(x="segment(a,e)" label="a")
-        path.dark.thin(x="segment(e,b)" label="b")
-        path.dark.thin(x="segment(a,h)" label="b")
-        path.dark.thin(x="segment(h,d)" label="a")
-        path.dark.thin(x="segment(e,h)" label="c")
-        path.dark.thin(x="segment(e,f).shift(0,x*distance(h,a))" label="c")
+        path.thin(x="segment(a,e)" label="a")
+        path.thin(x="segment(e,b)" label="b")
+        path.thin(x="segment(a,h)" label="b")
+        path.thin(x="segment(h,d)" label="a")
+        path.thin(x="segment(e,h)" label="c")
+        path.thin(x="segment(e,f).shift(0,x*distance(h,a))" label="c")
 
-        path.dark.square(x="polygon(a,b,c,d)")
-        path.dark.tri(x="polygon(a,e,h)" target="triangle")
-        path.dark.tri(x="polygon(c,g,f).shift(-x*distance(d,g),-x*distance(b,f))" target="triangle")
-        path.dark.tri(x="polygon(d,h,g).shift(x*distance(e,a),0)" target="triangle")
-        path.dark.tri(x="polygon(b,f,e).shift(0,x*distance(h,a))" target="triangle")
-        path.dark.square.transparent(x="polygon(e,f,g,h)" target="square")
+        path.square(x="polygon(a,b,c,d)")
+        path.tri(x="polygon(a,e,h)" target="triangle")
+        path.tri(x="polygon(c,g,f).shift(-x*distance(d,g),-x*distance(b,f))" target="triangle")
+        path.tri(x="polygon(d,h,g).shift(x*distance(e,a),0)" target="triangle")
+        path.tri(x="polygon(b,f,e).shift(0,x*distance(h,a))" target="triangle")
+        path.square.transparent(x="polygon(e,f,g,h)" target="square")
 
       .label(style="left: 120px; top: 120px;") c²
       .label.var(x-style="left: ${10 + e.x/2}px; top: ${230 - e.x/2}px;") a²
@@ -1212,7 +1212,7 @@ Pythagorean triples?
 
       .label.var(x-style="left:${12.5+12.5*a.x}px; top:440px") ${a.x}
       .label.var(x-style="left:${12.5+25*a.x}px; top:${225+12.5*a.y}px") ${17-a.y}
-      .label.var(x-style="left:${12.5+12.5*a.x}px; top:${225+12.5*a.y}px") ${sqrtDistance(a)}
+      .label.var(x-style="left:${12.5+12.5*a.x}px; top:${225+12.5*a.y}px") ${sqrtA}
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Do you notice any pattern in the
 distribution of these points? 
