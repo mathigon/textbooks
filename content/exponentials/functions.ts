@@ -57,7 +57,7 @@ export function radioactiveEquation1($step: Step) {
 export function radioactiveChart($step: Step) {
   const $plot = $step.$('x-coordinate-system') as CoordinateSystem;
 
-  $step.model.set('format', numberFormat);
+  $step.model.format = numberFormat;
 
   $step.model.watch((state: any) => {
     const fn = (x: number) => state.x0 * 2 ** (-x / state.hl);

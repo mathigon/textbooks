@@ -119,18 +119,18 @@ export function parabola($step: Step) {
 }
 
 /* export function s3($step: Step) {
-  $step.model.set('zeros', zeros);
+  $step.model.zeros = zeros;
 
   let $actions = $step.$$('.action');
-  $actions[0].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -2); $step.model.set('c', 2) });
-  $actions[1].on('click', function() { $step.model.set('a', 1); $step.model.set('b', 2); $step.model.set('c', 1) });
-  $actions[2].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -4); $step.model.set('c', 2) });
+  $actions[0].on('click', () => $step.model.a = 1; $step.model.b = -2; $step.model.c = 2; });
+  $actions[1].on('click', () => $step.model.a = 1; $step.model.b = 2; $step.model.c = 1; });
+  $actions[2].on('click', () => $step.model.a = 1; $step.model.b = -4; $step.model.c = 2; });
 } */
 
 export function directrix($step: Step) {
-  $step.model.set('qy', (p: Point, d: Point) => {
+  $step.model.qy = (p: Point, d: Point) => {
     const num = (d.x - p.x) ** 2 + d.y ** 2 - p.y ** 2;
     const den = 2 * p.y + 2 * d.y;
     return num / den;
-  });
+  };
 }

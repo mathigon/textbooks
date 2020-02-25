@@ -14,7 +14,7 @@ function round(a: Point, b: Point) {
 }
 
 export function triangleInequality($step: Step) {
-  $step.model.set('roundD', round);
+  $step.model.roundD = round;
 
   const $items = $step.$$('.item');
   const targets = $items.map(

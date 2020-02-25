@@ -109,7 +109,7 @@ export async function sssConstruction($step: Step) {
   const model = $geopad.model;
 
   const getLength = (x: number) => round(x / 36, 1);
-  model.set('getLength', getLength);
+  model.getLength = getLength;
 
   $geopad.on('add:path', () => $geopad.switchTool('move'));
   $geopad.showGesture('point(50,200)', 'point(250,200)');
@@ -213,10 +213,10 @@ export function pythagorasProof($step: Step) {
         $step.scores.has('blank-1') && model.x > 0.9);
   }
 
-  model.set('x', 0);
+  model.x = 0;
   const $slider = $step.$('.proof-1 x-slider') as Slider;
   $slider.on('move', n => {
-    model.set('x', n / 100);
+    model.x = n / 100;
     updateLabels();
   });
 
@@ -233,12 +233,12 @@ export function pythagorasProof($step: Step) {
 
   // -----
 
-  model.set('B1', model.point(40, 100));
-  model.set('X1', model.point(170, 100));
-  model.set('C1', model.point(170, 20));
-  model.set('A2', model.point(220, 100));
-  model.set('X2', model.point(170, 100));
-  model.set('C2', model.point(170, 20));
+  model.B1 = model.point(40, 100);
+  model.X1 = model.point(170, 100);
+  model.C1 = model.point(170, 20);
+  model.A2 = model.point(220, 100);
+  model.X2 = model.point(170, 100);
+  model.C2 = model.point(170, 20);
 
   const $geopad = $step.$('.similar-triangle') as Geopad;
   $step.onScore('next-0', () => {
@@ -258,7 +258,8 @@ export function pythagoreanTriplesGrid($step: Step) {
 
   const sqrtDistance = (p: Point) => round(
       Math.sqrt(p.x ** 2 + (17 - p.y) ** 2), 3);
-  $step.model.set('sqrtDistance', sqrtDistance);
+
+  $step.model.setComputed('sqrtA', (m: any) => sqrtDistance(m.a));
 
   $step.model.watch((m: any) => {
     const p = m.a;

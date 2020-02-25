@@ -60,13 +60,13 @@ export function regularArea($step: Step) {
   const model = $step.model;
   model.assign({toWord});
 
-  model.set('regular', (c: Point, r: number, n: number) => {
+  model.regular = (c: Point, r: number, n: number) => {
     const points = tabulate(i => {
       const a = Math.PI * (2 * i / n + 1 / 2 - 1 / n);
       return model.point(c.x + r * Math.cos(a), c.y + r * Math.sin(a));
     }, n);
     return model.polygon(...points);
-  });
+  };
 }
 
 // -----------------------------------------------------------------------------
@@ -165,7 +165,7 @@ export function parallelogramsProof($step: Step) {
   const $geo1 = $step.$$('x-geopad')[0] as Geopad;
   const model = $step.model;
 
-  model.set('o', false);
+  model.o = false;
   $geo1.on('add:point', ({point}: {point: GeoPoint}) => point.delete());
 
   setTimeout(() => {
@@ -183,7 +183,7 @@ export function parallelogramsProof($step: Step) {
 
     if (match >= 0) {
       path.$el.setAttr('target', 'diagonal');
-      if (match === 1) model.set('o', true);
+      if (match === 1) model.o = true;
       $step.score('diagonal');
       $geo1.switchTool('move');
     } else {

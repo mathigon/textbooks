@@ -68,7 +68,7 @@ export class Simulation {
     this.model = $geopad.model;
     this.addTrails(...trails);
     this.points = Object.keys(state);
-    for (const p of this.points) this.model.set(p, state[p]);
+    for (const p of this.points) this.model[p] = state[p];
   }
 
   play(callback: (p: number) => void, speed = 1, steps = 3) {

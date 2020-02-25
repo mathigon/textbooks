@@ -12,7 +12,7 @@ import {CoordinateSystem, Step} from '../shared/types';
 export function slope($step: Step) {
   const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
   $chart.setFunctions(x => 1.5 * x);
-  $step.model.set('p', {x: 1, y: 2});
+  $step.model.p = {x: 1, y: 2};
 
   const $point = $N('div', {class: 'chart-point'}, $chart);
   const $triangle = $N('path', {class: 'triangle'}, $chart.$overlay) as SVGView;
@@ -111,8 +111,8 @@ export function intercept($step: Step) {
   const points = arrows.map(
       x => $chart.toViewportCoords(new Point(x, 2 / 3 * x)));
 
-  $step.model.set('sign', (a: number) => a < 0 ? '–' : '+');
-  $step.model.set('abs', Math.abs);
+  $step.model.sign = (a: number) => a < 0 ? '–' : '+';
+  $step.model.abs = Math.abs;
 
   $step.model.watch((state: any) => {
     $chart.setFunctions(x => 2 / 3 * x + state.a);

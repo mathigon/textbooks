@@ -138,11 +138,11 @@ export function arithmeticGeometricSelect($step: Step) {
 export function arithmeticGeometricGraph($step: Step) {
   const $plots = $step.$$('x-coordinate-system') as CoordinateSystem[];
 
-  $step.model.set('arithmetic',
-      (a: number, d: number, i: number) => numberFormat(a + i * d, 4));
+  $step.model.arithmetic =
+      (a: number, d: number, i: number) => numberFormat(a + i * d, 4);
 
-  $step.model.set('geometric',
-      (a: number, r: number, i: number) => numberFormat(a * (r ** i), 4));
+  $step.model.geometric =
+      (a: number, r: number, i: number) => numberFormat(a * (r ** i), 4);
 
   $step.model.watch((m: any) => {
     const p1 = arithmetic(m.a, m.d, 10).map((p, i) => new Point(1 + i, p));
@@ -363,8 +363,8 @@ function hailstones(n: number) {
 }
 
 export function hailstone1($step: Step) {
-  $step.model.set('hailstones', (n: number) => hailstones(n)
-      .map(i => `<span class="n">${i}</span>`).join(', '));
+  $step.model.hailstones = (n: number) =>
+      hailstones(n).map(i => `<span class="n">${i}</span>`).join(', ');
 }
 
 export function hailstone2($step: Step) {
@@ -374,8 +374,8 @@ export function hailstone2($step: Step) {
   $step.model.watch((m: any) => $plot.setPoints([...cached(m.n), 4, 2, 1]));
 
   const $actions = $step.$$('.var-action');
-  $actions[0].on('click', () => $step.model.set('n', 31));
-  $actions[1].on('click', () => $step.model.set('n', 47));
+  $actions[0].on('click', () => $step.model.n = 31);
+  $actions[1].on('click', () => $step.model.n = 47);
 }
 
 export function quiz($step: Step) {
