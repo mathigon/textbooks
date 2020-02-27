@@ -377,7 +377,6 @@ collatz:
 conway:
   name: Conway
   born: 1937
-  died: 2020
   bio: |
     __John Horton Conway__ (born 1937) is a British mathematician and currently
     Professor Emeritus at Princeton University.
@@ -952,7 +951,7 @@ johnson:
   died: 2020
   name: Johnson
   bio: |
-    __Katherine Johnson__ (born 1918) is an African-American mathematician.
+    __Katherine Johnson__ (1918 – 2020) was an African-American mathematician.
     While working at NASA, Johnson calculated the orbits taken by American
     astronauts – including Alan Shepard, the first American in space, the Apollo
     Moon landing program, and even the Space Shuttle.
@@ -1401,7 +1400,6 @@ pearson:
 penrose:
   name: Penrose
   born: 1931
-  died: 2020
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
     who is known for his groundbreaking work in general relativity and cosmology
@@ -1414,7 +1412,6 @@ penrose:
 
 perelman:
   born: 1966
-  died: 2020
   name: Perelman
   bio: |
     In 2003, the Russian mathematician __Grigori Perelman__ (Григо́рий
@@ -1746,7 +1743,6 @@ wallis:
 
 wiles:
   born: 1953
-  died: 2020
   name: Wiles
   bio: |
     The British mathematician Sir __Andrew Wiles__ (born 1953) is best known for

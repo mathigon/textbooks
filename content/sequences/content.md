@@ -2129,7 +2129,7 @@ _third_ diagonals of the triangle – that makes eight occurrences in total.
 It is unknown if there are any other numbers that appear eight times in the
 triangle, or if there numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
-fixed limed on how often numbers can appear in Pascal’s triangle – but it hasn’t
+fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.
 
 ---
