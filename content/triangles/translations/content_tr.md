@@ -162,7 +162,7 @@ Kolay lık olsun diye üçgenleri genelde benzer şekillerde işaretleriz. Köş
 [_A_ köşesinin _karşısındaki_ kenar](target:X) _a_, [_A_ köşesindeki açı](target:Y) `α` ile işaretlenir. Aynı işaretlendirme _B_/_b_/`β` ve _C_/_c_/`γ` için de geçerlidir.
 ::: column(width=220)
 
-    x-geopad.label-halo(width=220 height=200): svg
+    x-geopad(width=220 height=200): svg
       circle.move.red(name="a" cx=80 cy=30 label="A" target="vertex X Y")
       circle.move.blue(name="b" cx=30 cy=170 label="B" target="vertex")
       circle.move.green(name="c" cx=190 cy=150 label="C" target="vertex")
@@ -246,7 +246,7 @@ Ağırlık merkezinden geçen bir doğru üçgeni alanları birbirlerine eşit o
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|perpBisector" width=300): svg
+    x-geopad.sticky(tools="move|perpBisector" width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A" target="b-blue b-red")
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
@@ -288,7 +288,7 @@ Muhtemelen şu an şuna takıldınız: bir yapı alıyoruz, kenarlara/açılara 
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|angleBisector" width=300): svg
+    x-geopad.sticky(tools="move|angleBisector" width=300): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
@@ -371,7 +371,7 @@ Bir üçgenin alanını hesaplamak için herhangi bir kenarını __taban__ olara
 
 ::: column(width=300)
 
-    x-geopad.label-halo(width=300): svg
+    x-geopad(width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
@@ -404,7 +404,7 @@ ve [açı ortaylar](gloss:angle-bisector) konusunda olduğu gibi bu üç uzunlu�
 
 ::: column(width=300)
 
-    x-geopad.label-halo.sticky(tools="move|line" width=300): svg
+    x-geopad.sticky(tools="move|line" width=300): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
@@ -451,7 +451,7 @@ similarity and proportionality.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(width=300 tools="move|line|circle"): svg
+    x-geopad.sticky(width=300 tools="move|line|circle"): svg
 
 ::: column.grow
 {.task} Kenar uzunlukları 4cm, 5cm ve 6cm olan bir üçgen çizelim.
@@ -839,7 +839,7 @@ AA şartından, üç üçgenin de  [[benzer|eş|dik açılı]] olması gerektiğ
 
 ::: column(width=260)
 
-    x-geopad.similar-triangle.label-halo(width=260): svg
+    x-geopad.similar-triangle(width=260): svg
       circle(x="B1")
       circle(x="X1")
       circle(x="C1")
@@ -941,7 +941,7 @@ Bu iki doğruyu çizersek, [dik açılı bir üçgen](target:triangle) elde eder
 
 ::: column(width=300)
 
-    x-geopad.label-halo(width=300 height=300 grid="25"): svg
+    x-geopad(width=300 height=300 grid="25"): svg
       circle.move.pulsate(name="a" cx="2" cy="6" label="(${x},${11-y})")
       circle.move.pulsate(name="b" cx="9" cy="1" label="(${x},${11-y})")
       path(x="segment(a,b)" label="d")
@@ -996,7 +996,7 @@ Bu şekildeki üç tam sayı [__Pisagor Üçlüsü__](gloss:pythagorean-triple) 
 
 Bu üçlüleri, koordinat sisteminde karelaj noktaları olarak düşünebiliriz.  Geçerli bir Pisagor Üçlüsü için, karelaj noktasından orijine uzaklık bir tam sayı olmalıdır. Aşağıdaki koordinat sistemini kullanarak, Pisagor Üçlülerini bulabilir misiniz?
 
-    figure: x-geopad.r.label-halo(width=450 height=450 grid=25)
+    figure: x-geopad.r(width=450 height=450 grid=25)
       svg
         path(x="line(o,point(0,16))")
         path(x="line(o,point(1,17))")

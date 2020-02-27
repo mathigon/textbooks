@@ -205,7 +205,7 @@ Die [Seite, die _gegenüber_ dem Eckpunkt _A ]_(target:X) liegt, ist mit _a_, un
 verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 ::: column(width=220)
 
-    x-geopad.label-halo(width=220 height=200): svg
+    x-geopad(width=220 height=200): svg
       circle.move.red(name="a" cx=80 cy=30 label="A" target="vertex X Y")
       circle.move.blue(name="b" cx=30 cy=170 label="B" target="vertex")
       circle.move.green(name="c" cx=190 cy=150 label="C" target="vertex")
@@ -305,7 +305,7 @@ Abbildung rechts. Die roten und grünen Bereiche haben immer die gleiche Fläche
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|perpBisector" width=300): svg
+    x-geopad.sticky(tools="move|perpBisector" width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A" target="b-blue b-red")
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
@@ -364,7 +364,7 @@ was das Besondere am Schnittpunkt der Geraden ist.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|angleBisector" width=300): svg
+    x-geopad.sticky(tools="move|angleBisector" width=300): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
@@ -473,7 +473,7 @@ __Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die St
 
 ::: column(width=300)
 
-    x-geopad.label-halo(width=300): svg
+    x-geopad(width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
@@ -512,7 +512,7 @@ Höhen sind eigentlich nur Seiten des Dreiecks.
 
 ::: column(width=300)
 
-    x-geopad.label-halo.sticky(tools="move|line" width=300): svg
+    x-geopad.sticky(tools="move|line" width=300): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
@@ -569,7 +569,7 @@ wir tatsächlich ein Dreieck mit diesen Seitenlängen _konstruieren_ könnten.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(width=300 tools="move|line|circle"): svg
+    x-geopad.sticky(width=300 tools="move|line|circle"): svg
 
 ::: column.grow
 {.task} Zeichne ein Dreieck, das Seiten mit den Längen 4cm, 5cm und 6cm hat.
@@ -1026,7 +1026,7 @@ Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinkl
 
 ::: column(width=260)
 
-    x-geopad.similar-triangle.label-halo(width=260): svg
+    x-geopad.similar-triangle(width=260): svg
       circle(x="B1")
       circle(x="X1")
       circle(x="C1")
@@ -1139,7 +1139,7 @@ Wenn wir diese beiden Linien einzeichnen, erhalten wir ein [rechtwinkliges Dreie
 
 ::: column(width=300)
 
-    x-geopad.label-halo(width=300 height=300 grid="25"): svg
+    x-geopad(width=300 height=300 grid="25"): svg
       circle.move.pulsate(name="a" cx="2" cy="6" label="(${x},${11-y})")
       circle.move.pulsate(name="b" cx="9" cy="1" label="(${x},${11-y})")
       path(x="segment(a,b)" label="d")
@@ -1204,7 +1204,7 @@ gültiges Pythagoräisches Tripel muss der Abstand vom Ursprung bis zum Gitterpu
 sein. Kannst du mit dem untenstehenden Koordinatensystem weitere
 Pythagoräische Tripel finden?
 
-    figure: x-geopad.r.label-halo(width=450 height=450 grid=25)
+    figure: x-geopad.r(width=450 height=450 grid=25)
       svg
         path(x="line(o,point(0,16))")
         path(x="line(o,point(1,17))")

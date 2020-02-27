@@ -131,13 +131,13 @@ Now you can see that the rubber band will always be _{span.hover-target} longer 
 `6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
 ::: column(width=300)
 
-    x-geopad.label-halo(width=300 height=200): svg
+    x-geopad(width=300 height=200): svg
       circle.move(name="a" cx=150 cy=150)
       circle.move(name="b" cx=70 cy=150 project="circle(a,80)")
       circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
       path(x="segment(a,b)" style="stroke-width: 5px" label="4")
       path(x="segment(a,c)" style="stroke-width: 5px" label="6")
-      path.rubber(x="segment(b,c)" style="stroke: #00cca6" label="${round(distance(b,c)/20)}")
+      path.teal(x="segment(b,c)" label="${floor(distance(b,c)/20+0.01)}")
 
 :::
 

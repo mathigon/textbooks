@@ -246,7 +246,7 @@ ${Math.round(180-360/x)}°._
       path.blue.fill.reveal(when="blank-1 blank-2" x="angle(m,p1,k)" size=25 target="base-angle isosceles-triangle")
 
       for i in [0,1,2,3,4,5,6,7,8,9,10,11]
-        path.thin.reveal(when="blank-0" delay=i*150 hidden x=`segment(p.points[${i}%n],m)` animation="draw")
+        path.thin.reveal(when="blank-0" delay=i*150 x=`segment(p.points[${i}%n],m)` animation="draw")
 
       path.yellow.reveal(when="blank-2" x="segment(m,k)" target="apothem" label="apothem" animation="draw")
       path.green(x="segment(p1,p0)" target="base" label="s = 1m")
@@ -288,21 +288,21 @@ blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
 "apothem") = 1/2 pill(s, "green", "base") × tan pill(α, "blue", "alpha") =
-var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
+var("round(tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
 [isosceles triangle](target:isosceles-triangle) is
 
 {.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
-= 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
-"yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
+= 1/2 pill("1m", "green", "base") × pill(var("round(tan(pi/2-pi/n)/2,2)"),
+"yellow", "apothem") = var("round(tan(pi/2-pi/n)/4,2)") "m"^2`
 
 {.reveal(when="blank-5 blank-6" delay=4000)} The polygon consists of ${toWord(n)}
 of these isosceles triangles, all of which have the same area. Therefore, the
 total area of the polygon is
 
 {.text-center.reveal(when="blank-5 blank-6" delay=4000)} `A = var("n") ×
-var("round(Math.tan(pi/2-pi/n)/4,2)") = var("round(n×Math.tan(pi/2-pi/n)/4,2)")
+var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 "m"^2`
 :::
 

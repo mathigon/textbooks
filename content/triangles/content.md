@@ -206,7 +206,7 @@ The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
 works for _B_/_b_/`β` and for _C_/_c_/`γ`.
 ::: column(width=220)
 
-    x-geopad.label-halo(width=220 height=200): svg
+    x-geopad(width=220 height=200): svg
       circle.move.red(name="a" cx=80 cy=30 label="A" target="vertex X Y")
       circle.move.blue(name="b" cx=30 cy=170 label="B" target="vertex")
       circle.move.green(name="c" cx=190 cy=150 label="C" target="vertex")
@@ -227,7 +227,7 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
 
 ::: column(width=300)
 
-    x-geopad.sticky(width=300 tools="move|line"): svg
+    x-geopad.sticky(width=300 tools="move|line" projections="no"): svg
       circle.move(name="a" cx=75 cy=75 target="ratio")
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
@@ -300,7 +300,7 @@ centroid. In physics, this point is often called the __center of mass__.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|perpBisector" width=300): svg
+    x-geopad.sticky(tools="move|perpBisector" width=300 projections="no"): svg
       circle.move(name="a" cx=75 cy=75 label="A" target="b-blue b-red")
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
@@ -359,14 +359,14 @@ what’s special about their intersection.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(tools="move|angleBisector" width=300): svg
+    x-geopad.sticky(tools="move|angleBisector" width=300 projections="no"): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
 
-      path.thin.red(x="angle(c,a,b).sup" name="xa")
-      path.thin.blue(x="angle(a,b,c).sup" name="xb")
-      path.thin.green(x="angle(b,c,a).sup" name="xc")
+      path.fill.light.red(x="angle(c,a,b).sup" name="xa")
+      path.fill.light.blue(x="angle(a,b,c).sup" name="xb")
+      path.fill.light.green(x="angle(b,c,a).sup" name="xc")
 
       path(x="segment(a,b)" label="a" target="b-blue b-red")
       path(x="segment(a,c)" label="b" target="b-red")
@@ -468,7 +468,7 @@ __base__, and then find the corresponding __height__, which is the line that is
 
 ::: column(width=300)
 
-    x-geopad.label-halo(width=300): svg
+    x-geopad(width=300): svg
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
@@ -508,7 +508,7 @@ altitudes are actually just sides of the triangle.
 
 ::: column(width=300)
 
-    x-geopad.label-halo.sticky(tools="move|line" width=300): svg
+    x-geopad.sticky(tools="move|line" width=300 projections="no"): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
@@ -565,7 +565,7 @@ we would actually _construct_ a triangle with these sides.
 
 ::: column(width=300)
 
-    x-geopad.sticky.label-halo(width=300 tools="move|line|circle"): svg
+    x-geopad.sticky(width=300 tools="move|line|circle"): svg
 
 ::: column.grow
 {.task} Draw a triangle that has sides of lengths 4cm, 5cm and 6cm.
@@ -1023,7 +1023,7 @@ By the AA condition, all three triangles must be [[similar|congruent|right-angle
 
 ::: column(width=260)
 
-    x-geopad.similar-triangle.label-halo(width=260): svg
+    x-geopad.similar-triangle(width=260): svg
       circle(x="B1")
       circle(x="X1")
       circle(x="C1")
@@ -1136,7 +1136,7 @@ If we draw those two lines, we get a [right-angled triangle](target:triangle).
 
 ::: column(width=300)
 
-    x-geopad.label-halo(width=300 height=300 grid="25"): svg
+    x-geopad(width=300 height=300 grid="25"): svg
       circle.move.pulsate(name="a" cx="2" cy="6" label="(${x},${11-y})")
       circle.move.pulsate(name="b" cx="9" cy="1" label="(${x},${11-y})")
       path(x="segment(a,b)" label="d")
@@ -1201,7 +1201,7 @@ valid Pythagorean triples, the distance from the origin to the grid point has to
 be a whole number. Using the coordinate system below, can you find any other
 Pythagorean triples?
 
-    figure: x-geopad.r.label-halo(width=450 height=450 grid=25)
+    figure: x-geopad.r(width=450 height=450 grid=25)
       svg
         path(x="line(o,point(0,16))")
         path(x="line(o,point(1,17))")

@@ -7,7 +7,7 @@
 import {delay, isOneOf} from '@mathigon/core';
 import {round, isInteger, Point, Circle, Line, isLineLike, intersections} from '@mathigon/fermat';
 import {hover} from '@mathigon/boost';
-import {Geopad, GeoPath, GeoPoint, Slider, Step} from '../shared/types';
+import {Geopad, GeoPath, Slider, Step} from '../shared/types';
 
 
 // -----------------------------------------------------------------------------
@@ -32,7 +32,6 @@ function waitToDraw($step: Step, $geopad: Geopad, shapes: string[],
       $step.score('s' + i);
     }
   });
-  $geopad.on('add:point', ({point}: {point: GeoPoint}) => point.delete(0));
 }
 
 export function medians($step: Step) {

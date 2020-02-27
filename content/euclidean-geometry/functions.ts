@@ -35,10 +35,10 @@ export function thales($step: Step) {
     } else if (!c) {
       c = point.name;
       point.project('semicirc.contract(0.2)');
-      $geopad.drawPath(m => m.triangle(m[a], m[c], m[b]),
-          {animated: 2000, target: 'triangle', classes: 'red'});
       $geopad.drawPath(m => m.angle(m[b], m[c], m[a]),
           {animated: 500, target: 'angle', classes: 'red thin'});
+      $geopad.drawPath(m => m.triangle(m[a], m[c], m[b]),
+          {animated: 2000, target: 'triangle', classes: 'red'});
       $step.score('p3');
       $geopad.switchTool('move');
       $geopad.on('moveEnd', () => $step.score('move'));

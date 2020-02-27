@@ -48,24 +48,24 @@ export function triangleInequality3($step: Step) {
 
   hover($targets[0], {
     enter() {
-      $geopad.animatePoint('a', $geopad.model.point(90, 110), 1200);
-      $geopad.animatePoint('b', $geopad.model.point(165, 105), 1200);
-      $geopad.animatePoint('c', $geopad.model.point(210, 110), 1200);
+      $geopad.animatePoint('a', new Point(90, 110), 1200);
+      $geopad.animatePoint('b', new Point(165, 105), 1200);
+      $geopad.animatePoint('c', new Point(210, 110), 1200);
       $step.score('target-0');
     }
   });
 
   hover($targets[1], {
     enter() {
-      $geopad.animatePoint('b', $geopad.model.point(50, 105), 1200);
-      $geopad.animatePoint('a', $geopad.model.point(130, 110), 1200);
-      $geopad.animatePoint('c', $geopad.model.point(250, 105), 1200);
+      $geopad.animatePoint('b', new Point(50, 105), 1200);
+      $geopad.animatePoint('a', new Point(130, 110), 1200);
+      $geopad.animatePoint('c', new Point(250, 105), 1200);
       $step.score('target-1');
     }
   });
 
-  const $rubber = $step.$('.rubber')!;
+  const $rubber = $step.$('.teal')!;
   $geopad.model.watch(state => {
-    $rubber.css('stroke-width', 350 / Point.distance(state.b, state.c) + 'px');
+    $rubber.css('stroke-width', 450 / Point.distance(state.b, state.c) + 'px');
   });
 }

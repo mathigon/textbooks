@@ -4,8 +4,7 @@
 // =============================================================================
 
 
-import {tabulate} from '@mathigon/core';
-import {clamp, toWord, Segment, Point, Angle, lerp, Line, Rectangle} from '@mathigon/fermat';
+import {clamp, toWord, Segment, Point, Angle, lerp, Line, Rectangle, Polygon} from '@mathigon/fermat';
 import {Browser, slide} from '@mathigon/boost';
 import {Geopad, GeoPath, GeoPoint, GeoShape, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
@@ -57,16 +56,11 @@ export function angles($step: Step) {
 }
 
 export function regularArea($step: Step) {
-  const model = $step.model;
-  model.assign({toWord});
-
-  model.regular = (c: Point, r: number, n: number) => {
-    const points = tabulate(i => {
-      const a = Math.PI * (2 * i / n + 1 / 2 - 1 / n);
-      return model.point(c.x + r * Math.cos(a), c.y + r * Math.sin(a));
-    }, n);
-    return model.polygon(...points);
-  };
+  $step.model.assign({
+    toWord,
+    tan: Math.tan,
+    regular: (c: Point, r: number, n: number) => Polygon.regular(n, r).translate(c)
+  });
 }
 
 // -----------------------------------------------------------------------------
