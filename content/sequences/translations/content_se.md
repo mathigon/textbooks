@@ -346,7 +346,7 @@ Faktiskt är tidsintervallet inte alltid _exakt_ 76 år: det kan variera med ett
 
 En annan grupp forskare undersöker beteendet hos en studsande tennisboll. De tappade bollen från en höjd av 10 meter och mätte dess position över tid. Med varje studs förlorar bollen en del av sin ursprungliga höjd:
 
-    x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|7|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
+    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)
@@ -473,7 +473,7 @@ _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
 
-    x-coordinate-system(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system(padding="12 12 24 40" width=320 height=240)
     x-gesture(target="#arithmetic-geometric-graph x-var" slide="100,0")
 
 ::: column.ag-chart.s-green(width=320)
@@ -489,7 +489,7 @@ _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
 
-    x-coordinate-system.green(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system.green(padding="12 12 24 40" width=320 height=240)
 
 :::
 
@@ -1448,7 +1448,7 @@ Primtal har inte heller en enkel geometrisk representation som [triangel](gloss:
 
 ::: column(width=320)
 
-    x-coordinate-system(width=320 height=320 margins="8 8 20 24" x-label="x" y-label="number of primes less than x")
+    x-coordinate-system(width=320 height=320 padding="8 8 20 24" axis-names="x,number of primes less than x")
 
 {.caption} Om vi ​​ritar ett diagram som ökar med 1 när det finns ett primtal, får vi en "stegad" funktion med fascinerande egenskaper.
 
@@ -1586,7 +1586,7 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 
 Det verkar som att sekvensens längd varierar mycket, men den kommer alltid att hamna i en cykel på 4, 2, 1 - oavsett vilket första nummer vi väljer. Vi kan till och med visualisera termerna i sekvensen i ett diagram:
 
-    x-coordinate-system(margins="12 12 24 40")
+    x-coordinate-system(padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Lägg märke till hur vissa startpunkter slutar mycket snabbt, medan andra (som _{span.var-action} 31_ eller _{span.var-action} 47_) tar mer än hundra steg innan de når 4, 2, 1 cykel.

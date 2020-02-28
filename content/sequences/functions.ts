@@ -90,7 +90,7 @@ export function ball($step: Step) {
   const $balls = $step.$$('.tennis-ball');
 
   $chart.setFunctions(bounce);
-  $chart.$('.axes > path')!.setAttr('x1', '2');
+  // TODO $chart.$('.axes > path')!.setAttr('x1', '2');
   const $fn = $chart.$plot.$('path')!;
 
   function tick(n: number) {
