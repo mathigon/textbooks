@@ -377,9 +377,8 @@ collatz:
 conway:
   name: Conway
   born: 1937
-  died: 2020
   bio: |
-    __John Horton Conway__ (1937 - 2020) ist ein britischer Mathematiker und derzeit
+    __John Horton Conway__ (geb. 1937) ist ein britischer Mathematiker und derzeit
     Professor Emeritus an der Princeton University.
 
     Er ist vor allem bekannt für die Erfindung von “Conways Spiel des Lebens”, einem _zellulärem
@@ -951,14 +950,14 @@ johnson:
   died: 2020
   name: Johnson
   bio: |
-    __Katherine Johnson__ (1918 - 2020) ist eine afroamerikanische Mathematikerin.
+    __Katherine Johnson__ (1918 - 2020) war eine afroamerikanische Mathematikerin.
     Während ihrer Arbeit bei der NASA berechnete Johnson die Umlaufbahnen von
     amerikanischen Astronauten - zB für Alan Shepard, dem ersten Amerikaner im
     Weltraum, das Apollo-Mondlandungsprogramm und sogar das Space Shuttle.
 
     Ihre außerordentliche Fähigkeit zur Berechnung von Umlaufbahnen, Startzeiten
     und Notfallrückkehrwege war weithin bekannt. Auch nach dem aufkommenden Einsatz
-    von Computern, bat der Astronaut John Glenn sie, persönlich noch einmal die
+    von Computern bat der Astronaut John Glenn sie, persönlich noch einmal die
     elektronischen Ergebnisse zu überprüfen.
 
     Im Jahr 2015 erhielt Johnson die Presidential Medal of Freedom.
@@ -1401,9 +1400,8 @@ pearson:
 penrose:
   name: Penrose
   born: 1931
-  died: 2020
   bio: |
-    __Sir Roger Penrose__ (1931 - 2020) ist ein britischer Mathematiker und Physiker
+    __Sir Roger Penrose__ (geb. 1931) ist ein britischer Mathematiker und Physiker
     der für seine bahnbrechenden Arbeiten in der allgemeinen Relativitätstheorie und
     Kosmologie bekannt ist - oft in Zusammenarbeit mit anderen berühmten 
     Wissenschaftlern wie Stephen Hawking und Michael Atiyah. Er entdeckte auch die
@@ -1748,10 +1746,9 @@ wallis:
 
 wiles:
   born: 1953
-  died: 2020
   name: Wiles
   bio: |
-    Der britische Mathematiker Sir __Andrew Wiles__ (1953 - 2020) ist vor allem für den
+    Der britische Mathematiker Sir __Andrew Wiles__ (geb. 1953) ist vor allem für den
     Nachweis von Fermats letztem Satz bekannt, der bis dahin eines der berühmtesten
     ungelösten Probleme in der Mathematik war.
 
