@@ -38,7 +38,7 @@ numberline to a plane, and rotate twice by 90°. Have another animation where th
 Here is a geopad with axes and coordinate system
 
     figure
-      x-geopad(width=600 height=400 x-axis="-6,6" y-axis="-4,4" show-axes show-grid): svg
+      x-geopad(width=600 height=400 x-axis="-6,6,1" y-axis="-4,4,1" axes grid padding=5): svg
         circle.move.green(name="p" cx=2 cy=2)
         path.green(x="segment(point(0,0),p)")
         circle.red(x="complexRoot(p,3,0)" name="r0")
@@ -114,7 +114,6 @@ Here is a geopad with axes and coordinate system
 * Know and use e^(iθ) = cos(θ) + i sin(θ) and the form z = re^(iθ).
 * Use De Moivre’s theorem to find multiple angle formulae and sums of series
 * De Moivre’s theorem and its application to trigonometric identities and to roots of a complex number.
-
 
 ---
 

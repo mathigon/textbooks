@@ -416,12 +416,6 @@ conics:
 vectors:
   title: Vectors
   color: "4346e0"
-  sections:
-    - title: Introduction
-    - title: Vector Arithmetic
-    - title: Scalar Products and Equations of Planes
-    - title: Cross Products and Equations of Lines
-    - title: Geometry Problems
 
 matrices:
   title: Matrices
