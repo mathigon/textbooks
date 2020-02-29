@@ -379,7 +379,7 @@ conway:
   born: 1937
   died: 2020
   bio: |
-    __John Horton Conway__ (geb. 1937) ist ein britischer Mathematiker und derzeit
+    __John Horton Conway__ (1937 - 2020) ist ein britischer Mathematiker und derzeit
     Professor Emeritus an der Princeton University.
 
     Er ist vor allem bekannt für die Erfindung von “Conways Spiel des Lebens”, einem _zellulärem
@@ -951,17 +951,17 @@ johnson:
   died: 2020
   name: Johnson
   bio: |
-    __Katherine Johnson__ (born 1918) is an African-American mathematician.
-    While working at NASA, Johnson calculated the orbits taken by American
-    astronauts – including Alan Shepard, the first American in space, the Apollo
-    Moon landing program, and even the Space Shuttle.
+    __Katherine Johnson__ (1918 - 2020) ist eine afroamerikanische Mathematikerin.
+    Während ihrer Arbeit bei der NASA berechnete Johnson die Umlaufbahnen von
+    amerikanischen Astronauten - zB für Alan Shepard, dem ersten Amerikaner im
+    Weltraum, das Apollo-Mondlandungsprogramm und sogar das Space Shuttle.
 
-    Her extraordinary ability to calculate orbital trajectories, launch windows
-    and emergency return paths was widely known. Even after the arrival of
-    computers, astronaut John Glenn asked her to personally re-check the
-    electronic results.
+    Ihre außerordentliche Fähigkeit zur Berechnung von Umlaufbahnen, Startzeiten
+    und Notfallrückkehrwege war weithin bekannt. Auch nach dem aufkommenden Einsatz
+    von Computern, bat der Astronaut John Glenn sie, persönlich noch einmal die
+    elektronischen Ergebnisse zu überprüfen.
 
-    In 2015, Johnson received the Presidential Medal of Freedom.
+    Im Jahr 2015 erhielt Johnson die Presidential Medal of Freedom.
 
 karinthy:
   name: Karinthy
@@ -1402,11 +1402,11 @@ penrose:
   born: 1931
   died: 2020
   bio: |
-    __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
-    who is known for his groundbreaking work in general relativity and cosmology
-    – often collaborating with other famous scientists like Stephen Hawking and
-    Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
-    non-periodic tessellations.
+    __Sir Roger Penrose__ (1931 - 2020) ist ein britischer Mathematiker und Physiker
+    der für seine bahnbrechenden Arbeiten in der allgemeinen Relativitätstheorie und
+    Kosmologie bekannt ist - oft in Zusammenarbeit mit anderen berühmten 
+    Wissenschaftlern wie Stephen Hawking und Michael Atiyah. Er entdeckte auch die
+    selbstähnlichen und nicht-periodischen _Penrose Parkettierungen_.
   links:
     - title: Penrose Tilings
       url: /course/polyhedra/tessellations#penrose
@@ -1750,7 +1750,7 @@ wiles:
   died: 2020
   name: Wiles
   bio: |
-    Der britische Mathematiker Sir __Andrew Wiles__ (geb. 1953) ist vor allem für den
+    Der britische Mathematiker Sir __Andrew Wiles__ (1953 - 2020) ist vor allem für den
     Nachweis von Fermats letztem Satz bekannt, der bis dahin eines der berühmtesten
     ungelösten Probleme in der Mathematik war.
 
