@@ -203,9 +203,9 @@ _{button.next-step} Devam et_
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
-      path.fill.green(name="x" x="polygon(point(30,30),point(80,20),point(100,80),point(70,110),point(30,90))" label="A" label-colour="white" target="move")
+      path.fill.green(name="x" x="polygon(point(30,30),point(80,20),point(100,80),point(70,110),point(30,90))" label="A" label-class="white" target="move")
       path.fill.green.light(x="x.rotate(1).shift(190,10)" target="move")
-      path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-colour="white")
+      path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
 Sağdaki iki şekil özdeş görünüyor. Aynı ölçüye ve şekle sahipler, ve şekillerden birini [döndürüp kaydırarak](target:move) diğerini elde edebiliriz. Geometride bu özelliklere sahip iki şekle [__denk__](gloss:congruent) şekiller denir.
@@ -325,9 +325,9 @@ Geometrinin ilk beş aksiyomunu yayınlayan Yunan matematikçi [Öklid](bio:eucl
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="segment(a,b)" target="1_line")
       circle.move(name="a" cx=30 cy=130 target="1_point")
       circle.move(name="b" cx=190 cy=30 target="1_point")
+      path.red(x="segment(a,b)" target="1_line")
 
 {.text-center }__Birinci Aksiyom__  
 Herhangi [iki noktayı](target:1_point) sadece bir [doğru parçasıyla](target:1_line) birleştirebilirsin.
@@ -335,10 +335,10 @@ Herhangi [iki noktayı](target:1_point) sadece bir [doğru parçasıyla](target:
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="line(c,d)")
-      path(x="segment(c,d)" target="2_segment")
       circle.move(name="c" cx=60 cy=100 target="2_segment")
       circle.move(name="d" cx=180 cy=60 target="2_segment")
+      path.red(x="line(c,d)")
+      path(x="segment(c,d)" target="2_segment")
 
 {.text-center }__İkinci Aksiyom__  
 Herhangi bir [doğru parçasını](target:2_segment) bir doğruya genişletebilirsin.
@@ -346,10 +346,10 @@ Herhangi bir [doğru parçasını](target:2_segment) bir doğruya genişletebili
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path(x="segment(e,f)" label="r" target="3_radius")
-      path.red(x="circle(e,distance(e,f))" target="3_circle")
       circle.move(name="e" cx=120 cy=80 target="3_center" label="P")
       circle.move(name="f" cx=170 cy=130)
+      path(x="segment(e,f)" label="r" target="3_radius")
+      path.red(x="circle(e,distance(e,f))" target="3_circle")
 
 {.text-center }__Üçüncü Aksiyom__  
 [_P_ noktası](target:3_center) ve [_r_ mesafesi](target:3_radius) verildiğinde, merkezi _P_ ve yarıçapı _r_ olan bir [çember](target:3_circle) çizebilirsin.
@@ -378,8 +378,8 @@ Herhangi iki dik açı birbirine denktir.
 
     x-geopad(width=220 height=160): svg
       circle.move(name="g" cx=170 cy=60 target="5_point" label="P")
-      path.red(x="line5.parallel(g)" target="5_parallel")
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
+      path.red(x="line5.parallel(g)" target="5_parallel")
 
 {.text-center }__Beşinci Aksiyom__  
 Verilen bir [_L_ doğrusu](target:5_line) ve _L_ doğrusundan olmayan bir [_P_ noktası](target:5_point) ile _P_ noktasından geçen _L_ doğrusuna [paralel](gloss:parallel) sadece bir doğru çizebilirsin.
@@ -451,7 +451,7 @@ Aslında Öklid’in aksiyomları, kendi geometri versiyonunda _neyin mümkün_ 
       svg
         circle.move(name="a" cx=50 cy=190)
         circle.move(name="b" cx=250 cy=50)
-        path.red(name="l1" x="segment(a,b)" style="display: none")
+        path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
 {.text-center} _Düz kenar_, üzerinde işaretler olmayan bir cetvel gibidir. Bunu iki noktayı birleştirmek için (1. Aksiyom’da olduğu gibi), ya da bir çizgiyi uzatmak için kullanabilirsiniz (2. Aksiyom’da olduğu gibi)
@@ -463,7 +463,7 @@ Aslında Öklid’in aksiyomları, kendi geometri versiyonunda _neyin mümkün_ 
         circle.move(name="c" cx=150 cy=120)
         circle.move(name="d" cx=250 cy=150)
         path(x="segment(c,d)")
-        path.red(name="c1" x="arc(c,d,1.99*pi)" style="display: none")
+        path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
       x-play-btn
 
 {.text-center} _Pergel_, bir nokta etrafında belirli bir çapta çember çizmeye yarar (3. Aksiyom’da olduğu gibi).
@@ -493,7 +493,7 @@ Bu aletler ne kadar ilkel görünseler de bunlarla çok fazla sayıda şekil çi
 
 ::: column(width=320)
 
-    x-geopad.sticky(width=320 tools="move|line|circle" intersect=true): svg
+    x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
 {.task} Pergel ve düz kenar ile [eşkenar üçgen](gloss:equilateral-triangle) çizimi.

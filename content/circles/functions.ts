@@ -252,7 +252,7 @@ export function maxArea($step: Step) {
 
   let i = 0;
   $path.draw(polygons[0]);
-  $step.model.set('area', areas[0]);
+  $step.model.area = areas[0];
 
   $select.on('change', ($el) => {
     const j = i;
@@ -276,7 +276,7 @@ export function area($step: Step) {
   let angle: number;
   let dx: number;
   let dy: number;
-  $step.model.set('toWord', toWord);
+  $step.model.toWord = toWord;
 
   function sector(center: Point, r: number, size: number, angle: number) {
     const startAngle = angle - size / 2 - Math.PI / 2;
@@ -297,7 +297,7 @@ export function area($step: Step) {
     if (p > 0.95) $step.score('slider');
   }
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: any) => {
     $circle.removeChildren();
     $rect.removeChildren();
 
@@ -338,7 +338,7 @@ export function area1($step: Step) {
   const triangle = $N('g', {class: 'circle'}, $svg);
 
   const r = 60;
-  $step.model.set('toWord', toWord);
+  $step.model.toWord = toWord;
 
   function drawRings(element: ElementView, p: number) {
     const $rings = element.children;
@@ -361,7 +361,7 @@ export function area1($step: Step) {
     if (p > 0.95) $step.score('slider');
   }
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: any) => {
     // TODO Reuse elements for better performance.
     triangle.removeChildren();
     $circle.removeChildren();
@@ -386,16 +386,15 @@ export function degrees($step: Step) {
   const angles = [1.999, 1, 0.5];
 
   const start = new Point(150, 80);
-  $step.model.set('c0', start);
-  $step.model.set('c1', start);
-  $step.model.set('c2', start);
+  $step.model.c0 = start;
+  $step.model.c1 = start;
+  $step.model.c2 = start;
 
   for (const i of [0, 1, 2]) {
     $step.onScore('blank-' + i, () => {
       animate((t) => {
         const a = t * Math.PI * angles[i];
-        const p = new Point(80 + 70 * Math.cos(a), 80 - 70 * Math.sin(a));
-        $step.model.set('c' + i, p);
+        $step.model['c' + i] = new Point(80 + 70 * Math.cos(a), 80 - 70 * Math.sin(a));
       }, angles[i] * 750);
     });
   }
@@ -411,7 +410,7 @@ export function constellations($step: Step) {
   const $box = $step.$('.constellations')!;
   const $wheel = $box.$('.wheel')!;
   const $lines = $N('g', {transform: 'translate(380, 380)'}, $box.$('svg'));
-  $step.model.set('day', 0);
+  $step.model.day = 0;
   const seen = [0, 360];
   drawTick(0, $lines);
 
@@ -442,10 +441,10 @@ export function constellations1($step: Step) {
 }
 
 export function radians($step: Step) {
-  $step.model.set('rad', (r: number) => {
+  $step.model.rad = (r: number) => {
     const a = r / Math.PI;
     return a > 1.99 ? 2 : round(a, 2);
-  });
+  };
 
   const zero = new Point(240, 140);
   const center = new Point(140, 140);
@@ -504,7 +503,7 @@ export function radiansTrig($step: Step) {
 
 export function radiansDistance($step: Step) {
   const $play = $step.$('x-play-btn') as PlayBtn;
-  $step.model.set('p', 0);
+  $step.model.p = 0;
   $play.on('click', async () => {
     await animate((p) => $step.model.p = Math.min(p, 0.999), 5000).promise;
     $play.reset();
@@ -512,7 +511,7 @@ export function radiansDistance($step: Step) {
 }
 
 export function smallAngle($step: Step) {
-  $step.model.set('sin', (x: number) => round(Math.sin(x), 4));
+  $step.model.sin = (x: number) => round(Math.sin(x), 4);
 }
 
 
@@ -618,7 +617,7 @@ export function cylinderPrism($step: Step) {
   $solids[1].addMesh((scene) => {
     const cylinder = $solids[1].addOutlined(new THREE.Geometry(), 0xaaaaaa);
 
-    $step.model.watch(state => {
+    $step.model.watch((state: any) => {
       const geo = new THREE.CylinderGeometry(1.4, 1.4, 2.8, state.n, 1);
       cylinder.updateGeometry!(geo);
       scene.draw();
@@ -799,7 +798,7 @@ export function coneVolume($step: Step) {
 
   $solid.addMesh((scene) => {
     const cylinder = $solid.addOutlined(new THREE.Geometry(), 0xaaaaaa);
-    $step.model.watch(state => {
+    $step.model.watch((state: any) => {
       const geo = new THREE.ConeGeometry(1.4, 2.8, state.n, 1);
       cylinder.updateGeometry!(geo);
       scene.draw();
@@ -999,7 +998,7 @@ export function sphereVolume($step: Step) {
   $solids[0].on('rotate', (e) => $solids[1].rotate(e.quaternion));
   $solids[1].on('rotate', (e) => $solids[0].rotate(e.quaternion));
 
-  $step.model.set('h', 0);
+  $step.model.h = 0;
   $slider.on('move', (n) => $step.model.h = n / 100);
 }
 
@@ -1170,7 +1169,7 @@ export function epicycles($step: Step) {
   let points: Point[] = [];
   let lastP = 0;
 
-  $step.model.watch((state) => {
+  $step.model.watch((state: any) => {
     points = list(401).map((i) => {
       const a = i / 400 * 2 * Math.PI;
       return Point.fromPolar(a * state.n, SMALL_R)

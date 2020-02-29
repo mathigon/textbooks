@@ -23,7 +23,7 @@ class Ellipse {
 
   normalAt(p: Point) {
     const a = new Angle(this.f1, p, this.f2);
-    return a.bisector;
+    return a.bisector!;
   }
 
   intersect(line: Line) {

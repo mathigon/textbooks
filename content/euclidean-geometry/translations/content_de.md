@@ -246,9 +246,9 @@ _{button.next-step} Weiter_
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
-      path.fill.green(name="x" x="polygon(point(30,30),point(80,20),point(100,80),point(70,110),point(30,90))" label="A" label-colour="white" target="move")
+      path.fill.green(name="x" x="polygon(point(30,30),point(80,20),point(100,80),point(70,110),point(30,90))" label="A" label-class="white" target="move")
       path.fill.green.light(x="x.rotate(1).shift(190,10)" target="move")
-      path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-colour="white")
+      path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
 Die beiden Figuren auf der rechten Seite stimmen im Wesentlichen überein. Sie haben die gleiche Größe
@@ -387,9 +387,9 @@ bezeichnet wird, veröffentlichte die fünf Axiome der Geometrie:
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="segment(a,b)" target="1_line")
       circle.move(name="a" cx=30 cy=130 target="1_point")
       circle.move(name="b" cx=190 cy=30 target="1_point")
+      path.red(x="segment(a,b)" target="1_line")
 
 {.text-center }__Erstes Axiom__  
 Man kann [zwei beliebige Punkte](target:1_point) mit genau einer geraden
@@ -398,10 +398,10 @@ Man kann [zwei beliebige Punkte](target:1_point) mit genau einer geraden
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="line(c,d)")
-      path(x="segment(c,d)" target="2_segment")
       circle.move(name="c" cx=60 cy=100 target="2_segment")
       circle.move(name="d" cx=180 cy=60 target="2_segment")
+      path.red(x="line(c,d)")
+      path(x="segment(c,d)" target="2_segment")
 
 {.text-center }__Zweites Axiom__  
 Man kann jede beliebige [Strecke](target:2_segment) unendlich weit<br>
@@ -410,10 +410,10 @@ zu einer Geraden verlängern.
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path(x="segment(e,f)" label="r" target="3_radius")
-      path.red(x="circle(e,distance(e,f))" target="3_circle")
       circle.move(name="e" cx=120 cy=80 target="3_center" label="P")
       circle.move(name="f" cx=170 cy=130)
+      path(x="segment(e,f)" label="r" target="3_radius")
+      path.red(x="circle(e,distance(e,f))" target="3_circle")
 
 {.text-center }__Drittes Axiom__  
 Mit einem gegebenen [Punkt _P_](target:3_center) und einem [Abstand _r_](target:3_radius) kann
@@ -443,8 +443,8 @@ Zwei beliebige rechte Winkel sind kongruent.
 
     x-geopad(width=220 height=160): svg
       circle.move(name="g" cx=170 cy=60 target="5_point" label="P")
-      path.red(x="line5.parallel(g)" target="5_parallel")
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
+      path.red(x="line5.parallel(g)" target="5_parallel")
 
 {.text-center }__Fünftes Axiom__  
 Zu einer gegebenen [Geraden _g_](target:5_line) und einem [Punkt _P_](target:5_point) nicht auf _g_,
@@ -543,7 +543,7 @@ auf Papier skizzieren zu können:
       svg
         circle.move(name="a" cx=50 cy=190)
         circle.move(name="b" cx=250 cy=50)
-        path.red(name="l1" x="segment(a,b)" style="display: none")
+        path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
 {.text-center} Eine __gerade Leiste__ die nichts anderes als ein Lineal ohne Zentimeterskala ist. Du
@@ -557,7 +557,7 @@ erweitern (wie in Axiom 2).
         circle.move(name="c" cx=150 cy=120)
         circle.move(name="d" cx=250 cy=150)
         path(x="segment(c,d)")
-        path.red(name="c1" x="arc(c,d,1.99*pi)" style="display: none")
+        path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
       x-play-btn
 
 {.text-center} Mit einem __Zirkel__ kannst du einen Kreis einer bestimmten Größe um
@@ -595,7 +595,7 @@ Kreise nicht".
 
 ::: column(width=320)
 
-    x-geopad.sticky(width=320 tools="move|line|circle" intersect=true): svg
+    x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
 {.task} Zeichne ein [gleichseitiges Dreieck](gloss:equilateral-triangle) nur mit einer

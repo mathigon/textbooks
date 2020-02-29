@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {$N, animate, thread, observable, InputView, ElementView, SVGView} from '@mathigon/boost';
+import {$N, animate, thread, InputView, ElementView, SVGView, observe} from '@mathigon/boost';
 import {isPrime, lcm, numberFormat, Random} from '@mathigon/fermat';
 import {total, sortBy, list, isOneOf, delay} from '@mathigon/core';
 import {Gameplay, Slideshow, Step} from '../shared/types';
@@ -29,8 +29,7 @@ function numberGrid($grid: ElementView, time: number, className: string,
 export function divisibilityGame($step: Step) {
   const $gameplay = $step.$('x-gameplay') as Gameplay;
 
-  $gameplay.setFirstSlide($el =>
-      $el.bindObservable(observable({x: '?', y: '?'})));
+  $gameplay.setFirstSlide($el => $el.bindModel(observe({x: '?', y: '?'})));
 
   $gameplay.slideGenerator = ($el, success, error) => {
     const answer = Random.smart(3, 'divisibility-game');
@@ -53,7 +52,7 @@ export function divisibilityGame($step: Step) {
         if (Random.integer(1)) [x, y] = [y, x];
     }
 
-    $el.bindObservable(observable({x, y}));
+    $el.bindModel(observe({x, y}));
 
     const $buttons = $el.$$('.factor-bubble');
     $buttons[0].on('click', answer === 0 ? success : error);
@@ -235,34 +234,34 @@ export function primeTest($section: Step) {
 
   $input.on('blur', () => {
     const v = +$input.value;
-    if (!v) return $section.model.set('result', '');
+    if (!v) return $section.model.result = '';
 
     if (v > Number.MAX_SAFE_INTEGER) {
-      $section.model.set('result', $section.getText('too-large'));
+      $section.model.result = $section.getText('too-large');
       return;
     }
-    $section.model.set('result', '<span class="loading"></span>');
+    $section.model.result = '<span class="loading"></span>';
     $section.score('calculator');
 
     thread('/resources/divisibility/worker.js', ['isPrime', v])
-        .then(result => $section.model.set('result',
-            $section.getText(result ? 'is-prime' : 'not-prime')))
-        .catch(() => $section.model.set('result',
-            $section.getText('no-solution')));
+        .then(result => $section.model.result =
+            $section.getText(result ? 'is-prime' : 'not-prime'))
+        .catch(() => $section.model.result =
+            $section.getText('no-solution'));
   });
 }
 
 export function primeGenerator($section: Step) {
   $section.$('button')!.on('click', function () {
     const d = +$section.model.d;
-    if (!d) return $section.model.set('result', '');
+    if (!d) return $section.model.result = '';
 
-    $section.model.set('result', '<span class="loading"></span>');
+    $section.model.result = '<span class="loading"></span>';
     $section.score('calculator');
 
     thread('/resources/divisibility/worker.js', ['getPrime', d], 10000)
-        .then((result) => $section.model.set('result', numberFormat(result)))
-        .catch(() => $section.model.set('result', `Couldn‘t find a prime :(`));
+        .then((result) => $section.model.result = numberFormat(result))
+        .catch(() => $section.model.result = `Couldn‘t find a prime :(`);
   });
 }
 
@@ -330,7 +329,7 @@ export function gcd($section: Step) {
   const $tiles = $section.$('.tiles')!;
   const $result = $section.$('.result')!;
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     const hint = isOneOf(state.x, 1, 2, 3, 6) ? 'gcd-yes' : 'gcd-no';
     $result.html = $section.getText(hint);
     $tiles.removeChildren();
@@ -352,14 +351,14 @@ export function gcd($section: Step) {
 }
 
 export function cicadas($section: Step) {
-  $section.model.set('isPrime', isPrime);
-  $section.model.set('lcm', lcm);
+  $section.model.isPrime = isPrime;
+  $section.model.lcm = lcm;
 
   const $highlight = $section.$('rect')!;
   const $rects = $section.$$('rect').slice(1);
   $rects.forEach($r => { $r.hide(); });
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     $rects[state.n - 4].show();
     $highlight.setAttr('x', (state.n - 4) * 26);
 
@@ -378,21 +377,21 @@ export function goldbach1($section: Step) {
 
   $input.on('blur', () => {
     const v = +$input.value;
-    if (!v) return $section.model.set('result', '');
+    if (!v) return $section.model.result = '';
 
-    if (v % 2) return $section.model.set('result',
-        $section.getText('not-even'));
-    if (v > Number.MAX_SAFE_INTEGER) return $section.model.set('result',
-        $section.getText('too-large'));
+    if (v % 2) return $section.model.result =
+        $section.getText('not-even');
+    if (v > Number.MAX_SAFE_INTEGER) return $section.model.result =
+        $section.getText('too-large');
 
-    $section.model.set('result', '<span class="loading"></span>');
+    $section.model.result = '<span class="loading"></span>';
     $section.score('calculator');
 
     thread('/resources/divisibility/worker.js', ['goldbach', v], 10000)
-        .then(result => $section.model.set('result',
-            `${v} = ${result![0]} + ${result![1]}`))
-        .catch(() => $section.model.set('result',
-            $section.getText('no-solution')));
+        .then(result => $section.model.result =
+            `${v} = ${result![0]} + ${result![1]}`)
+        .catch(() => $section.model.result =
+            $section.getText('no-solution'));
   });
 }
 

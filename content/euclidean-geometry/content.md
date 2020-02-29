@@ -246,9 +246,9 @@ _{button.next-step} Continue_
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
-      path.fill.green(name="x" x="polygon(point(30,30),point(80,20),point(100,80),point(70,110),point(30,90))" label="A" label-colour="white" target="move")
+      path.fill.green(name="x" x="polygon(point(30,30),point(80,20),point(100,80),point(70,110),point(30,90))" label="A" label-class="white" target="move")
       path.fill.green.light(x="x.rotate(1).shift(190,10)" target="move")
-      path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-colour="white")
+      path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
 The two shapes on the right basically look identical. They have the same size
@@ -386,9 +386,9 @@ the _father of geometry_, published the five axioms of geometry:
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="segment(a,b)" target="1_line")
       circle.move(name="a" cx=30 cy=130 target="1_point")
       circle.move(name="b" cx=190 cy=30 target="1_point")
+      path.red(x="segment(a,b)" target="1_line")
 
 {.text-center }__First Axiom__  
 You can join any [two points](target:1_point) using exactly one straight
@@ -397,10 +397,10 @@ You can join any [two points](target:1_point) using exactly one straight
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path.red(x="line(c,d)")
-      path(x="segment(c,d)" target="2_segment")
       circle.move(name="c" cx=60 cy=100 target="2_segment")
       circle.move(name="d" cx=180 cy=60 target="2_segment")
+      path.red(x="line(c,d)")
+      path(x="segment(c,d)" target="2_segment")
 
 {.text-center }__Second Axiom__  
 You can extend any [line segment](target:2_segment) to an<br>
@@ -409,10 +409,10 @@ infinite line.
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      path(x="segment(e,f)" label="r" target="3_radius")
-      path.red(x="circle(e,distance(e,f))" target="3_circle")
       circle.move(name="e" cx=120 cy=80 target="3_center" label="P")
       circle.move(name="f" cx=170 cy=130)
+      path(x="segment(e,f)" label="r" target="3_radius")
+      path.red(x="circle(e,distance(e,f))" target="3_circle")
 
 {.text-center }__Third Axiom__  
 Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
@@ -442,8 +442,8 @@ Any two right angles are congruent.
 
     x-geopad(width=220 height=160): svg
       circle.move(name="g" cx=170 cy=60 target="5_point" label="P")
-      path.red(x="line5.parallel(g)" target="5_parallel")
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
+      path.red(x="line5.parallel(g)" target="5_parallel")
 
 {.text-center }__Fifth Axiom__  
 Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
@@ -542,7 +542,7 @@ on paper:
       svg
         circle.move(name="a" cx=50 cy=190)
         circle.move(name="b" cx=250 cy=50)
-        path.red(name="l1" x="segment(a,b)" style="display: none")
+        path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
 {.text-center} A __straight-edge__ is like a ruler but without any markings. You
@@ -556,7 +556,7 @@ can use it to connect two points (as in Axiom 1), or to extend a line segment
         circle.move(name="c" cx=150 cy=120)
         circle.move(name="d" cx=250 cy=150)
         path(x="segment(c,d)")
-        path.red(name="c1" x="arc(c,d,1.99*pi)" style="display: none")
+        path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
       x-play-btn
 
 {.text-center} A __compass__ allows you to draw a circle of a given size around
@@ -594,7 +594,7 @@ disturb my circles”.
 
 ::: column(width=320)
 
-    x-geopad.sticky(width=320 tools="move|line|circle" intersect=true): svg
+    x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
 {.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
