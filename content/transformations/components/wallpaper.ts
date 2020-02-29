@@ -35,8 +35,8 @@ function applyTransforms(point: Point, [x, y]: [number, number],
                          transforms: ((p: Point) => Point)[]) {
   let points = [point.mod(x, y)];
 
-  for (let t of transforms) {
-    for (let p of points.map(p => t(p))) {
+  for (const t of transforms) {
+    for (const p of points.map(p => t(p))) {
       if (!points.some(q => q.equals(p))) points.push(p);
     }
   }
@@ -149,8 +149,8 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
   },
 
   p => {  // p3m1
-    let w = 480;
-    let h = w * Math.sqrt(3) / 2;
+    const w = 480;
+    const h = w * Math.sqrt(3) / 2;
     return applyTransforms(p, [w * 3, h * 2], [
       p => p.reflect(lineX(h)),
       p => p.rotate(Math.PI * 2 / 3, new Point(1.5 * w, h)),
@@ -179,49 +179,49 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
   },
 
   p => {  // p4g
-    let p1 = p.mod(720, 720);
-    let p2 = p1.reflect(lineS);
-    let p3 = p1.rotate(-Math.PI / 2, new Point(0, 360));
-    let p4 = p2.rotate(Math.PI / 2, new Point(360, 0));
-    let p5678 = [p1, p2, p3, p4].map(p => p.reflect(lineSI));
+    const p1 = p.mod(720, 720);
+    const p2 = p1.reflect(lineS);
+    const p3 = p1.rotate(-Math.PI / 2, new Point(0, 360));
+    const p4 = p2.rotate(Math.PI / 2, new Point(360, 0));
+    const p5678 = [p1, p2, p3, p4].map(p => p.reflect(lineSI));
     return grid([p1, p2, p3, p4, ...p5678], 720, 720);
   },
 
   p => {  // cmm
-    let p1 = p.mod(1280, 640);
-    let p2 = p1.rotate(Math.PI,
+    const p1 = p.mod(1280, 640);
+    const p2 = p1.rotate(Math.PI,
         new Point(p1.x < 640 ? 320 : 960, p1.y < 320 ? 160 : 480));
-    let p34 = [p1, p2].map(p => p.reflect(lineY2));
-    let p5678 = [p1, p2, ...p34].map(p => p.reflect(lineX1));
+    const p34 = [p1, p2].map(p => p.reflect(lineY2));
+    const p5678 = [p1, p2, ...p34].map(p => p.reflect(lineX1));
     return grid([p1, p2, ...p34, ...p5678], 1280, 640);
   },
 
   p => {  // pmg
-    let p1 = p.mod(960, 640);
-    let p2 = p1.rotate(Math.PI, new Point(480, p1.y < 320 ? 160 : 480));
-    let p34 = [p1, p2].map(p => p.reflect(lineX1));
+    const p1 = p.mod(960, 640);
+    const p2 = p1.rotate(Math.PI, new Point(480, p1.y < 320 ? 160 : 480));
+    const p34 = [p1, p2].map(p => p.reflect(lineX1));
     return grid([p1, p2, ...p34], 960, 640);
   },
 
   p => {  // pg
-    let p1 = p.mod(960, 320);
-    let p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480, 320 - p1.y);
+    const p1 = p.mod(960, 320);
+    const p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480, 320 - p1.y);
     return grid([p1, p2], 960, 320);
   },
 
   p => {  // cm
-    let p1 = p.mod(960, 640);
-    let p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480,
+    const p1 = p.mod(960, 640);
+    const p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480,
         p1.y > 320 ? 960 - p1.y : 320 - p1.y);
-    let p34 = [p1, p2].map(p => p.reflect(lineX1));
+    const p34 = [p1, p2].map(p => p.reflect(lineX1));
     return grid([p1, p2, ...p34], 960, 640);
   },
 
   p => {  // pgg
-    let p1 = p.mod(960, 640);
-    let p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480,
+    const p1 = p.mod(960, 640);
+    const p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480,
         p1.y > 320 ? 960 - p1.y : 320 - p1.y);
-    let p34 = [p1, p2].map(p => p.rotate(Math.PI, pointX1Y1));
+    const p34 = [p1, p2].map(p => p.rotate(Math.PI, pointX1Y1));
     return grid([p1, p2, ...p34], 960, 640);
   }
 ];
@@ -230,7 +230,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
 // Component
 
 function drawPoint(ctx: CanvasRenderingContext2D, group: number, point: Point) {
-  for (let p of TRANSFORMATIONS[group]!(point)) {
+  for (const p of TRANSFORMATIONS[group]!(point)) {
     ctx.beginPath();
     ctx.arc(p.x, p.y, 8, 0, 2 * Math.PI);
     ctx.fill();
@@ -264,8 +264,8 @@ export class Wallpaper extends CustomElementView {
     slide($canvas, {
       start: p => drawPoint(context, activeGroup, p),
       move(p, _, last) {
-        let l = new Line(last, p);
-        let n = l.length / 8;
+        const l = new Line(last, p);
+        const n = l.length / 8;
         for (let i = 0; i < n; ++i) drawPoint(context, activeGroup,
             l.at(i / n));
       },

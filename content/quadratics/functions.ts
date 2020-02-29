@@ -20,13 +20,13 @@ function q(a: number, b: number, c: number) {
 }
 
 function zeros(a: number, b: number, c: number) {
-  let disc = b * b - 4 * a * c;
+  const disc = b * b - 4 * a * c;
   if (disc < 0) return [];
 
   if (nearlyEquals(disc, 0, 0.1)) return [-b / (2 * a)];
 
-  let x1 = (-b + Math.sqrt(disc)) / (2 * a);
-  let x2 = (-b - Math.sqrt(disc)) / (2 * a);
+  const x1 = (-b + Math.sqrt(disc)) / (2 * a);
+  const x2 = (-b - Math.sqrt(disc)) / (2 * a);
   return [x1, x2];
 }
 
@@ -83,7 +83,7 @@ export function intro4($step: Step) {
   };
 
   $system.on('solve-row', ({$math}) => {
-    for (let $mi of $math.$$('mi')) {
+    for (const $mi of $math.$$('mi')) {
       if ($mi.text === 'revenue') $mi.addClass('pill green');
       if ($mi.text === 'cost') $mi.addClass('pill orange');
       if ($mi.text === 'demand') $mi.addClass('pill teal');
@@ -111,7 +111,7 @@ export function introChart($step: Step) {
 export function parabola($step: Step) {
   const $chart = $step.$('x-coordinate-system') as CoordinateSystem;
 
-  $step.model.watch((s) => {
+  $step.model.watch((s: any) => {
     const fn = q(s.a, s.b, s.c);
     $chart.setFunctions(fn);
     $chart.drawPoints(zeros(s.a, s.b, s.c).map(p => new Point(p, fn(p))));
@@ -119,18 +119,18 @@ export function parabola($step: Step) {
 }
 
 /* export function s3($step: Step) {
-  $step.model.set('zeros', zeros);
+  $step.model.zeros = zeros;
 
   let $actions = $step.$$('.action');
-  $actions[0].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -2); $step.model.set('c', 2) });
-  $actions[1].on('click', function() { $step.model.set('a', 1); $step.model.set('b', 2); $step.model.set('c', 1) });
-  $actions[2].on('click', function() { $step.model.set('a', 1); $step.model.set('b', -4); $step.model.set('c', 2) });
+  $actions[0].on('click', () => $step.model.a = 1; $step.model.b = -2; $step.model.c = 2; });
+  $actions[1].on('click', () => $step.model.a = 1; $step.model.b = 2; $step.model.c = 1; });
+  $actions[2].on('click', () => $step.model.a = 1; $step.model.b = -4; $step.model.c = 2; });
 } */
 
 export function directrix($step: Step) {
-  $step.model.set('qy', (p: Point, d: Point) => {
+  $step.model.qy = (p: Point, d: Point) => {
     const num = (d.x - p.x) ** 2 + d.y ** 2 - p.y ** 2;
     const den = 2 * p.y + 2 * d.y;
     return num / den;
-  });
+  };
 }

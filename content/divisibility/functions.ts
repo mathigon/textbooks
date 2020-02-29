@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import {$N, animate, thread, observable, InputView, ElementView, SVGView} from '@mathigon/boost';
-import {isPrime, lcm, goldbach, numberFormat, Random} from '@mathigon/fermat';
+import {$N, animate, thread, InputView, ElementView, SVGView, observe} from '@mathigon/boost';
+import {isPrime, lcm, numberFormat, Random} from '@mathigon/fermat';
 import {total, sortBy, list, isOneOf, delay} from '@mathigon/core';
 import {Gameplay, Slideshow, Step} from '../shared/types';
 
@@ -29,13 +29,12 @@ function numberGrid($grid: ElementView, time: number, className: string,
 export function divisibilityGame($step: Step) {
   const $gameplay = $step.$('x-gameplay') as Gameplay;
 
-  $gameplay.setFirstSlide($el =>
-      $el.bindObservable(observable({x: '?', y: '?'})));
+  $gameplay.setFirstSlide($el => $el.bindModel(observe({x: '?', y: '?'})));
 
   $gameplay.slideGenerator = ($el, success, error) => {
-    let answer = Random.smart(3, 'divisibility-game');
-    let n1 = Random.smart(9, 'divisibility-game-number') + 2;
-    let n2 = Random.smart(9, 'divisibility-game-number') + 2;
+    const answer = Random.smart(3, 'divisibility-game');
+    const n1 = Random.smart(9, 'divisibility-game-number') + 2;
+    const n2 = Random.smart(9, 'divisibility-game-number') + 2;
 
     let x, y;
     switch (answer) {
@@ -53,9 +52,9 @@ export function divisibilityGame($step: Step) {
         if (Random.integer(1)) [x, y] = [y, x];
     }
 
-    $el.bindObservable(observable({x, y}));
+    $el.bindModel(observe({x, y}));
 
-    let $buttons = $el.$$('.factor-bubble');
+    const $buttons = $el.$$('.factor-bubble');
     $buttons[0].on('click', answer === 0 ? success : error);
     $buttons[1].on('click', answer === 1 ? success : error);
     $buttons[2].on('click', answer > 1 ? success : error);
@@ -113,8 +112,8 @@ export function divisibility9($section: Step) {
 }
 
 export function divisibility6($section: Step) {
-  let $buttons = $section.$$('.btn');
-  let $grid = $section.$('.number-grid')!;
+  const $buttons = $section.$$('.btn');
+  const $grid = $section.$('.number-grid')!;
 
   $section.on('score-btn2', function () {
     $buttons[0].exit('pop');
@@ -234,40 +233,40 @@ export function primeTest($section: Step) {
   $input.onKeyDown('enter', () => $input.blur());
 
   $input.on('blur', () => {
-    let v = +$input.value;
-    if (!v) return $section.model.set('result', '');
+    const v = +$input.value;
+    if (!v) return $section.model.result = '';
 
     if (v > Number.MAX_SAFE_INTEGER) {
-      $section.model.set('result', $section.getText('too-large'));
+      $section.model.result = $section.getText('too-large');
       return;
     }
-    $section.model.set('result', '<span class="loading"></span>');
+    $section.model.result = '<span class="loading"></span>';
     $section.score('calculator');
 
     thread('/resources/divisibility/worker.js', ['isPrime', v])
-        .then(result => $section.model.set('result',
-            $section.getText(result ? 'is-prime' : 'not-prime')))
-        .catch(() => $section.model.set('result',
-            $section.getText('no-solution')));
+        .then(result => $section.model.result =
+            $section.getText(result ? 'is-prime' : 'not-prime'))
+        .catch(() => $section.model.result =
+            $section.getText('no-solution'));
   });
 }
 
 export function primeGenerator($section: Step) {
   $section.$('button')!.on('click', function () {
-    let d = +$section.model.d;
-    if (!d) return $section.model.set('result', '');
+    const d = +$section.model.d;
+    if (!d) return $section.model.result = '';
 
-    $section.model.set('result', '<span class="loading"></span>');
+    $section.model.result = '<span class="loading"></span>';
     $section.score('calculator');
 
     thread('/resources/divisibility/worker.js', ['getPrime', d], 10000)
-        .then((result) => $section.model.set('result', numberFormat(result)))
-        .catch(() => $section.model.set('result', `Couldn‘t find a prime :(`));
+        .then((result) => $section.model.result = numberFormat(result))
+        .catch(() => $section.model.result = `Couldn‘t find a prime :(`);
   });
 }
 
 export function ulam($section: Step) {
-  let $cells = $section.$$('.number-cell');
+  const $cells = $section.$$('.number-cell');
   sortBy($cells, ($c) => +$c.text);
 
   $cells.forEach($c => { $c.hide(); });
@@ -290,8 +289,8 @@ export function race($section: Step) {
   const $paths = $section.$$('.runner-path') as SVGView[];
   const $lapTimes = $section.$$('.lap-times').map($l => $l.children);
 
-  let speed = [4, 6];
-  let duration = 12;
+  const speed = [4, 6];
+  const duration = 12;
   let running = false;
 
   $button.on('click', () => {
@@ -302,9 +301,9 @@ export function race($section: Step) {
     $lapTimes.forEach($g => { $g.forEach($l => { $l.exit('pop', 200); }); });
 
     animate(function (p) {
-      for (let i of [0, 1]) {
-        let offset = ((p * duration) % speed[i]) / speed[i];
-        let point = $paths[i].getPointAt(offset);
+      for (const i of [0, 1]) {
+        const offset = ((p * duration) % speed[i]) / speed[i];
+        const point = $paths[i].getPointAt(offset);
         $runners[i].setCenter(point);
         $runners[i].setAttr('r', 12 * (1 + point.y / 234));
       }
@@ -316,7 +315,7 @@ export function race($section: Step) {
       }, 1000);
     });
 
-    for (let i of [0, 1]) {
+    for (const i of [0, 1]) {
       for (let x = 0; x < duration / speed[i]; ++x) {
         setTimeout(function () {
           $lapTimes[i][x].enter('pop', 200);
@@ -327,10 +326,10 @@ export function race($section: Step) {
 }
 
 export function gcd($section: Step) {
-  let $tiles = $section.$('.tiles')!;
-  let $result = $section.$('.result')!;
+  const $tiles = $section.$('.tiles')!;
+  const $result = $section.$('.result')!;
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     const hint = isOneOf(state.x, 1, 2, 3, 6) ? 'gcd-yes' : 'gcd-no';
     $result.html = $section.getText(hint);
     $tiles.removeChildren();
@@ -352,14 +351,14 @@ export function gcd($section: Step) {
 }
 
 export function cicadas($section: Step) {
-  $section.model.set('isPrime', isPrime);
-  $section.model.set('lcm', lcm);
+  $section.model.isPrime = isPrime;
+  $section.model.lcm = lcm;
 
-  let $highlight = $section.$('rect')!;
-  let $rects = $section.$$('rect').slice(1);
+  const $highlight = $section.$('rect')!;
+  const $rects = $section.$$('rect').slice(1);
   $rects.forEach($r => { $r.hide(); });
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     $rects[state.n - 4].show();
     $highlight.setAttr('x', (state.n - 4) * 26);
 
@@ -377,29 +376,29 @@ export function goldbach1($section: Step) {
   $input.onKeyDown('enter', () => $input.blur());
 
   $input.on('blur', () => {
-    let v = +$input.value;
-    if (!v) return $section.model.set('result', '');
+    const v = +$input.value;
+    if (!v) return $section.model.result = '';
 
-    if (v % 2) return $section.model.set('result',
-        $section.getText('not-even'));
-    if (v > Number.MAX_SAFE_INTEGER) return $section.model.set('result',
-        $section.getText('too-large'));
+    if (v % 2) return $section.model.result =
+        $section.getText('not-even');
+    if (v > Number.MAX_SAFE_INTEGER) return $section.model.result =
+        $section.getText('too-large');
 
-    $section.model.set('result', '<span class="loading"></span>');
+    $section.model.result = '<span class="loading"></span>';
     $section.score('calculator');
 
     thread('/resources/divisibility/worker.js', ['goldbach', v], 10000)
-        .then(result => $section.model.set('result',
-            `${v} = ${result![0]} + ${result![1]}`))
-        .catch(() => $section.model.set('result',
-            $section.getText('no-solution')));
+        .then(result => $section.model.result =
+            `${v} = ${result![0]} + ${result![1]}`)
+        .catch(() => $section.model.result =
+            $section.getText('no-solution'));
   });
 }
 
 export function riemann($section: Step) {
-  let dx = 23.5;
-  let dy = 27;
-  let y0 = 280;
+  const dx = 23.5;
+  const dy = 27;
+  const y0 = 280;
 
   let y = y0;
   const points = [{x: 0, y}];
@@ -414,7 +413,7 @@ export function riemann($section: Step) {
   const $pi = $section.$('.pi') as SVGView;
   $pi.points = points;
 
-  let $smallPrimes = $section.$('.small-primes');
+  const $smallPrimes = $section.$('.small-primes');
   [3, 5, 7, 11, 13, 17, 19, 23, 29].forEach(function (p, i) {
     $N('line', {
       x1: (p - 1) * dx, y1: y0, x2: (p - 1) * dx,
@@ -422,7 +421,7 @@ export function riemann($section: Step) {
     }, $smallPrimes);
   });
 
-  let $numbers = $section.$('.numbers');
+  const $numbers = $section.$('.numbers');
   for (let i = 2; i < 30; ++i) {
     $N('text', {
       html: i, x: (i - 1) * dx, y: y0 + 18, 'class': isPrime(i) ? 'prime' : ''
@@ -433,8 +432,8 @@ export function riemann($section: Step) {
   $log.points =
       list(3, 1000).map(i => ({x: (i - 1) * dx, y: y0 - dy * i / Math.log(i)}));
 
-  let $svg = $section.$('svg')!;
-  let $zoom = $section.$('.zoom-icon')!;
+  const $svg = $section.$('svg')!;
+  const $zoom = $section.$('.zoom-icon')!;
 
   $zoom.on('click', () => {
     $section.score('zoom');

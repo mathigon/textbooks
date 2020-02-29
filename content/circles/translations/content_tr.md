@@ -34,8 +34,8 @@ Antik Yunanlı astronomlar, gök cisimlerinin __yörünge__ dediğimiz düzenli 
         circle.move.reveal(name="b" cx=250 cy=240 project="circle(a, 120)" target="r" when="compass")
         path.red(x="segment(a,b).contract(0.08)" target="r" arrows="both" hidden)
         path(name="c1" x="arc(a,b,1.99*pi)" hidden)
-        path.blue(x="segment(b.rotate(Math.PI/3,a),b.rotate(-2*Math.PI/3,a)).contract(0.01)" target="d" arrows="both" hidden)
-        path.green(x="arc(a,b.add(b.subtract(a).normal.scale(12)),1.99*pi).contract(0.02)" target="c" arrows="start" hidden)
+        path.blue(x="segment(b.rotate(pi/3,a),b.rotate(-2*pi/3,a)).contract(0.01)" target="d" arrows="both" hidden)
+        path.green(x="arc(a,b.add(b.subtract(a).unitVector.scale(12)),1.99*pi).contract(0.02)" target="c" arrows="start" hidden)
       x-play-btn
 
 ::: column.grow
@@ -624,8 +624,8 @@ Geçtiğimiz bölümlerde merkez, çap, yarıçap ve çevre gibi çemberin çeş
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
       
-      path.teal.fill.reveal(x="sector(x,d1,Math.PI/2.5)" target="sector" when="next-3" label="Sector" label-colour="white")
-      path.purple.fill.reveal(x="arc(x,b1,Math.PI/2.5)" target="segment" when="next-4" label="Segment")
+      path.teal.fill.reveal(x="sector(x,d1,pi/2.5)" target="sector" when="next-3" label="Sector" label-class="white")
+      path.purple.fill.reveal(x="arc(x,b1,pi/2.5)" target="segment" when="next-4" label="Segment")
       
       path.black(x="circle(x,100)" name="c")
       
@@ -636,16 +636,13 @@ Geçtiğimiz bölümlerde merkez, çap, yarıçap ve çevre gibi çemberin çeş
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
       path.green.thick.reveal(x="segment(b1,b2)" label="Kiriş" target="chord" when="next-0" animation="draw")
-
       
       circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
       path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Teğet" target="tangent" when="next-1" animation="draw")
-
       
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
-      path.yellow.thick.reveal(x="arc(x,d1,Math.PI/2.5)" label="Yay" target="arc" when="next-2" animation="draw")
-
+      path.yellow.thick.reveal(x="arc(x,d1,pi/2.5)" label="Yay" target="arc" when="next-2" animation="draw")
 
 ::: column.grow(parent="right")
 
@@ -781,7 +778,7 @@ Ne yazık ki kimse Dünyanın _ne kadar büyük_ olduğunu bilmiyordu, taa ki M.
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Dilim" target="sector" label-colour="white")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Dilim" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Yay" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
 
@@ -824,7 +821,7 @@ Demek ki [{.red} yayın uzunluğu](pill:arc) da çemberin [{.purple} çevresinin
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Dilim" target="sector" label-colour="white")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Dilim" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Yay" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
       
@@ -972,7 +969,7 @@ olur.
         path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
         path.blue.transparent(x="circle(c,130)" target="circ")
         
-        image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 x-x="${b.x-4}" x-y="${b.y-60}" style="transform: rotate(-${angle(b,c,a).rad}rad)")
+        image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 style="transform: translate(${b.x-4}px, ${b.y-60}px) rotate(-${angle(b,c,a).rad}rad)")
 
 :::
 
@@ -1461,7 +1458,7 @@ __{.m-green}Dilim__in yarıçapı ise koninin tabanındaki çemberin bir noktas�
 
 ::: column(width=280)
 
-    x-geopad.sketch(width=280 height=200): svg
+    x-geopad.sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1491,7 +1488,7 @@ _{span.reveal(when="blank-0")}`2 π r`. Şimdi dilimin alanını öndeki kısım
 
 ::: column(width=280)
 
-    x-geopad.sketch(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)
@@ -1555,7 +1552,7 @@ Aşağıdaki çubuğu kaydırdıkça bu iki şeklin tabandan belli bir yüksekli
 
     x-solid(size=240 style="margin: -24px 0 10px")
 
-    x-geopad.sketch.r(width=220 height=120): svg
+    x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(110,110)" name="c1")
       circle(x="c1.shift(0,-100*h)" name="h1")
       circle(x="h1.shift(-100 * sqrt(1-h*h),0)" name="a1")
@@ -1564,15 +1561,15 @@ Aşağıdaki çubuğu kaydırdıkça bu iki şeklin tabandan belli bir yüksekli
       path(x="arc(c1,point(10,c1.x),pi)")
       path(x="segment(point(10,c1.x),point(210,c1.x))")
       path.green.thin(x="segment(c1,a1)" label="r" target="r tri")
-      path.blue.thin(x="segment(c1,h1)" label="h" target="h h1 tri")
-      path.red.thick(x="segment(a1,h1)" label="x" target="x tri")
+      path.blue.thin(x="segment(h1,c1)" label="h" target="h h1 tri")
+      path.red.thick(x="segment(h1,a1)" label="x" target="x tri")
       path.red.thick(x="segment(h1,point(220-a1.x,a1.y))")
 
 ::: column(width=240)
 
     x-solid(size=240 style="margin: -24px 0 10px")
 
-    x-geopad.sketch.r(width=220 height=120): svg
+    x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(10,10)" name="a2" hidden)
       circle(x="point(210,10)" name="b2" hidden)
       path(x="polygon(a2,b2,point(210,110),point(10,110))")
@@ -1583,7 +1580,7 @@ Aşağıdaki çubuğu kaydırdıkça bu iki şeklin tabandan belli bir yüksekli
 
       path.thin(x="segment(a2,c2)")
       path.thin(x="segment(b2,c2)")
-      path.blue.thin(x="segment(c1,h1)" label="h" target="h")
+      path.blue.thin(x="segment(h1,c1)" label="h" target="h")
       path.blue.thin(x="segment(h1,point(110-100*h,h2.y))")
       path.red.thick(x="segment(point(10,h2.y),point(110-100*h,h2.y))")
       path.red.thick(x="segment(point(110+100*h,h2.y),point(210,h2.y))")

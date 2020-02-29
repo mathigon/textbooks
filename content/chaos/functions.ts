@@ -26,7 +26,7 @@ export function pendulum($step: Step) {
   const $canvas = $geopad.$('canvas') as CanvasView;
   const $play = $step.$('x-play-toggle') as PlayToggle;
 
-  let center = new Point(160, 160);
+  const center = new Point(160, 160);
   let l = 120;
   let a = 2.4;
   let da = 0;
@@ -83,7 +83,7 @@ export function doublePendulum($step: Step) {
     model.a2 = model.b2 = model.c2 = model.d2;
 
     sim.addTrails(['a2', '#fd8c00'], ['b2', '#22ab24'], ['c2', '#0f82f2']);
-    for (let $p of $geopad.$$('path.thick')) $p.show();
+    for (const $p of $geopad.$$('path.thick')) $p.show();
   }
 
   $step.onScore('blank-0', showPendulums);
@@ -93,14 +93,14 @@ export function doublePendulum($step: Step) {
     setTimeout(() => $step.score('play1'), 12000);
     if (showAll) setTimeout(() => $step.score('play2'), 8000);
 
-    for (let p of pendulums) p.set(model.d1, model.d2);
+    for (const p of pendulums) p.set(model.d1, model.d2);
 
     // Add a small perturbation to the initial angle.
     pendulums[1].angles[1] += 0.0001;
     pendulums[2].angles[1] += 0.0002;
     pendulums[3].angles[1] += 0.0003;
 
-    sim.play((dt) => { for (let p of pendulums) p.step(dt); }, 0.1125, 3);
+    sim.play((dt) => { for (const p of pendulums) p.step(dt); }, 0.1125, 3);
   });
 
   $play.on('pause', () => {
@@ -179,7 +179,7 @@ export function pool($step: Step) {
     }
   }
 
-  for (let b of balls) $svg.append(b.$el);
+  for (const b of balls) $svg.append(b.$el);
 
   cue.v = new Point(5, -0.25);
 
@@ -209,7 +209,7 @@ export function pool($step: Step) {
       }
     }
 
-    for (let b of balls) {
+    for (const b of balls) {
       b.p = b.p.add(b.v);
       b.$el.setCenter(b.p);
     }
@@ -247,7 +247,7 @@ export function threeBodies($step: Step) {
 
   function acceleration(i: string) {
     let gravity = new Point(0, 0);
-    for (let j of ['a', 'b', 'c']) {
+    for (const j of ['a', 'b', 'c']) {
       if (i === j) continue;
       const dx = state[j].subtract(state[i]);
       gravity = gravity.translate(dx.scale(1600000 / dx.length ** 3));
@@ -257,9 +257,9 @@ export function threeBodies($step: Step) {
 
   function step(dt: number) {
     const acc: Obj<Point> = {};
-    for (let p of ['a', 'b', 'c']) acc[p] = acceleration(p);
+    for (const p of ['a', 'b', 'c']) acc[p] = acceleration(p);
 
-    for (let i of ['a', 'b', 'c']) {
+    for (const i of ['a', 'b', 'c']) {
       state[i] = state[i].translate(state['v' + i].scale(dt));
       state['v' + i] = state['v' + i].translate(acc[i].scale(dt));
     }

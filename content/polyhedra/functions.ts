@@ -4,10 +4,10 @@
 // =============================================================================
 
 
-import {tabulate} from '@mathigon/core';
-import {clamp, toWord, Segment, Point, Angle, lerp, Line} from '@mathigon/fermat';
+import {list, total} from '@mathigon/core';
+import {clamp, toWord, Segment, Point, Angle, lerp, Line, Rectangle, Polygon, isLineLike} from '@mathigon/fermat';
 import {Browser, slide} from '@mathigon/boost';
-import {GeoElement, Geopad, GeoPoint, Slider, Step} from '../shared/types';
+import {Geopad, GeoPath, GeoPoint, GeoShape, Path, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';
@@ -21,10 +21,19 @@ import './components/folding';
 import './components/anibutton';
 
 
+function internalAngles(polygon: Polygon) {
+  const n = polygon.points.length;
+  return polygon.points.map((p, i) => {
+    const a = polygon.points[(i + 1) % n];
+    const b = polygon.points[(i - 1 + n) % n];
+    return Math.round(new Angle(a, p, b).deg);
+  });
+}
+
 export function angles($step: Step) {
   const totals = [360, 540];
   const $buttons = $step.$$('x-anibutton') as Anibutton[];
-  let overlap = [false, false];
+  const overlap = [false, false];
 
   for (const [i, $b] of $buttons.entries()) {
     $step.model.watch(() => $b.setAttr('text', '???'));
@@ -36,20 +45,12 @@ export function angles($step: Step) {
     });
   }
 
-  $step.model.watch(s => {
-    const a1 = new Angle(s.b, s.a, s.d).deg;
-    const a2 = new Angle(s.c, s.b, s.a).deg;
-    const a3 = new Angle(s.d, s.c, s.b).deg;
-    const a4 = new Angle(s.a, s.d, s.c).deg;
-    overlap[0] = a1 + a2 + a3 + a4 > 361;
+  $step.model.setComputed('a1', (m: any) => internalAngles(m.p1));
+  $step.model.setComputed('a2', (m: any) => internalAngles(m.p2));
 
-    const b1 = new Angle(s.f, s.e, s.i).deg;
-    const b2 = new Angle(s.g, s.f, s.e).deg;
-    const b3 = new Angle(s.h, s.g, s.f).deg;
-    const b4 = new Angle(s.i, s.h, s.g).deg;
-    const b5 = new Angle(s.e, s.i, s.h).deg;
-    overlap[1] = b1 + b2 + b3 + b4 + b5 >= 541;
-
+  $step.model.watch((s: any) => {
+    overlap[0] = total(s.a1) > 361;
+    overlap[1] = total(s.a2) >= 541;
     if (overlap[0] || overlap[1]) $step.addHint('no-overlap');
   });
 
@@ -57,170 +58,130 @@ export function angles($step: Step) {
 }
 
 export function regularArea($step: Step) {
-  const model = $step.model;
-  model.assign({toWord});
-
-  model.set('regular', (c: Point, r: number, n: number) => {
-    const points = tabulate(i => {
-      const a = Math.PI * (2 * i / n + 1 / 2 - 1 / n);
-      return model.point(c.x + r * Math.cos(a), c.y + r * Math.sin(a));
-    }, n);
-    return model.polygon(...points);
+  $step.model.assign({
+    toWord,
+    tan: Math.tan,
+    regular: (c: Point, r: number, n: number) => Polygon.regular(n, r).translate(c)
   });
 }
 
 // -----------------------------------------------------------------------------
 
-function checkPathMatches(p: GeoElement<Line>, options: Line[]) {
-  for (let i = 0; i < options.length; ++i) {
-    if (p.val!.equals(options[i])) return i;
-  }
-  p.remove();
-  return -1;
-}
-
-export function midsegments($step: Step) {
+export async function midsegments($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
-  $geopad.setActiveTool('point');
 
-  let points: GeoPoint[] = [];
-  let orientation: number;
+  $geopad.switchTool('point');
 
-  $geopad.on('add:point', function (p) {
-    if (points.length === 4) return p.remove();
-    points.push(p);
-    if (points.length === 4) $step.score('points');
-  });
+  let a = await $geopad.waitForPoint();
+  let b = await $geopad.waitForPoint();
+  let c = await $geopad.waitForPoint();
+  let d = await $geopad.waitForPoint();
 
-  $geopad.on('add:path', function (p) {
-    const match = checkPathMatches(p, [
-      new Segment(points[0].val!, points[2].val!),
-      new Segment(points[1].val!, points[3].val!)
-    ]);
+  // Reorder the points to be clockwise.
+  if (Segment.intersect(new Segment(a.value!, b.value!), new Segment(c.value!, d.value!))) {
+    [b, c] = [c, b];
+  } else if (Segment.intersect(new Segment(a.value!, d.value!), new Segment(b.value!, c.value!))) {
+    [c, d] = [d, c];
+  }
 
-    if (match >= 0) {
-      orientation = match + 1;
-      p.$el.setAttr('target', 'parallel');
-      $step.score('diagonal');
-    } else {
-      $step.addHint('not-a-diagonal');
-    }
-  });
+  $step.score('points');
+  $geopad.switchTool('move');
 
-  $step.onScore('points', () => {
-    if (points.length < 4) points = [
-      $geopad.drawMovablePoint(new Point(50, 40)),
-      $geopad.drawMovablePoint(new Point(70, 250)),
-      $geopad.drawMovablePoint(new Point(220, 240)),
-      $geopad.drawMovablePoint(new Point(260, 90))
-    ];
+  const pointStr = [a, b, c, d].map(p => p.name).join(',');
+  $geopad.drawPath(`polygon(${pointStr})`, {name: 'quad', animated: 1000});
 
-    $geopad.setActiveTool('move');
+  await $step.onScore('blank-0');
 
-    const [a, b, c, d] = points.map(p => p.val);
-    if (Segment.intersect(new Segment(a!, b!), new Segment(c!, d!))) {
-      points = [points[0], points[2], points[1], points[3]];
-    } else if (Segment.intersect(new Segment(a!, d!), new Segment(b!, c!))) {
-      points = [points[0], points[1], points[3], points[2]];
-    }
+  for (let i = 0; i < 4; ++i) {
+    $geopad.drawPoint(`quad.edges[${i}].midpoint`, {name: `m${i}`, classes: 'red', interactive: false});
+  }
+  $geopad.drawPath(`polygon(m0,m1,m2,m3)`, {classes: 'red', name: 'p0', animated: 1000});
 
-    const pointStr = points.map(p => p.name).join(',');
-    $geopad.drawPath(`polygon(${pointStr})`, {name: 'quad', animated: 1000});
-  });
+  await $step.onScore('blank-1');
 
-  $step.onScore('blank-0 points', () => {
-    for (let i = 0; i < 4; ++i) {
-      $geopad.drawPoint(`quad.edges[${i}].midpoint`, {name: `m${i}`, classes: 'red'});
-    }
+  $geopad.showGesture(a.name, c.name);
 
-    $geopad.drawPath(`polygon(m0,m1,m2,m3)`, {classes: 'red', name: 'p0', animated: 1000});
-  });
+  // Two possible diagonals:
+  const s1 = new Segment(a.value!, c.value!);
+  const s2 = new Segment(b.value!, d.value!);
 
-  $step.onScore('blank-1 points', () => {
-    $geopad.setActiveTool('line');
-    $geopad.showGesture(points[0].name, points[2].name);
-  });
+  $geopad.switchTool('line');
+  let orientation = 0;
 
-  $step.onScore('diagonal', () => {
-    const [a, b, c, d] = points.map(p => p.name);
-    $geopad.setActiveTool('move');
+  const diagonal = await $geopad.waitForPath<Segment>((p: Path) => {
+    if (!isLineLike(p)) return false;
+    orientation = p.equals(s1) ? 1 : p.equals(s2) ? 2 : 0;
+    return orientation > 0;
+  }, {onIncorrect: () => $step.addHint('not-a-diagonal')});
 
-    if (!orientation) {
-      // TODO add diagonal
-    }
-    const o = (orientation === 1);
+  diagonal.$el.setAttr('target', 'parallel');
+  $step.score('diagonal');
+  $geopad.switchTool('move');
 
-    $geopad.drawPath(`segment(m0,m1)`, {classes: 'transparent red', target: o ? 'midsegment parallel' : 'other'});
-    $geopad.drawPath(`segment(m2,m3)`, {classes: 'transparent red', target: o ? 'midsegment parallel' : 'other'});
-    $geopad.drawPath(`segment(m1,m2)`, {classes: 'transparent red', target: !o ? 'midsegment parallel' : 'other'});
-    $geopad.drawPath(`segment(m0,m3)`, {classes: 'transparent red', target: !o ? 'midsegment parallel' : 'other'});
+  const [a1, b1, c1, d1] = [a, b, c, d].map(p => p.name);
+  const o = (orientation === 1);
 
-    $geopad.drawPath(`segment(${o ? b : a},${o ? d : c})`, {classes: 'transparent', target: 'other'});
-    $geopad.drawPath(`polygon(${b},${o ? c : d},${a})`, {classes: 'fill green transparent', target: 'triangle'});
-    $geopad.drawPath(`polygon(${c},${d},${o ? a : b})`, {classes: 'fill yellow transparent', target: 'triangle'});
-  });
+  $geopad.drawPath(`segment(m0,m1)`, {classes: 'transparent red', target: o ? 'midsegment parallel' : 'other'});
+  $geopad.drawPath(`segment(m2,m3)`, {classes: 'transparent red', target: o ? 'midsegment parallel' : 'other'});
+  $geopad.drawPath(`segment(m1,m2)`, {classes: 'transparent red', target: !o ? 'midsegment parallel' : 'other'});
+  $geopad.drawPath(`segment(m0,m3)`, {classes: 'transparent red', target: !o ? 'midsegment parallel' : 'other'});
+
+  $geopad.drawPath(`segment(${o ? b1 : a1},${o ? d1 : c1})`, {classes: 'transparent', target: 'other'});
+  $geopad.drawPath(`polygon(${b1},${o ? c1 : d1},${a1})`, {classes: 'fill green transparent', target: 'triangle'});
+  $geopad.drawPath(`polygon(${c1},${d1},${o ? a1 : b1})`, {classes: 'fill yellow transparent', target: 'triangle'});
 }
 
-export function parallelogramsProof($step: Step) {
+export async function parallelogramsProof($step: Step) {
   const $geo1 = $step.$$('x-geopad')[0] as Geopad;
   const model = $step.model;
 
-  model.set('o', false);
-  $geo1.on('add:point', p => p.remove());
+  $geo1.showGesture('a', 'c');
+  $geo1.switchTool('line');
+  model.o = false;
 
-  setTimeout(() => {
-    if (!$step.scores.has('diagonal')) {
-      $geo1.showGesture('a', 'c');
-      $geo1.setActiveTool('line');
-    }
-  }, 1000);
+  const diagonal = await $geo1.waitForPath<Segment>((path: Path) => {
+    if (!isLineLike(path)) return false;
+    const d1 = path.equals(new Segment(model.b, model.d));
+    const d2 = path.equals(new Segment(model.a, model.c));
+    model.o = d2;
+    return d1 || d2;
+  }, {onIncorrect: () => $step.addHint('not-a-diagonal-1')});
 
-  $geo1.on('add:path', function (p) {
-    const match = checkPathMatches(p, [
-      new Segment(model.b, model.d),
-      new Segment(model.a, model.c)
-    ]);
-
-    if (match >= 0) {
-      p.$el.setAttr('target', 'diagonal');
-      if (match === 1) model.set('o', true);
-      $step.score('diagonal');
-      $geo1.setActiveTool('move');
-    } else {
-      $step.addHint('not-a-diagonal-1');
-    }
-  });
+  diagonal.$el.setAttr('target', 'diagonal');
+  $step.score('diagonal');
+  $geo1.switchTool('move');
 }
 
 export function quadrilateralsArea($step: Step) {
   const $geopads = $step.$$('x-geopad') as Geopad[];
 
-  $geopads[0].setActiveTool('rectangle');
-  $geopads[0].on('add:path', path => {
-    if (path.val.w * path.val.h === 48) {
-      // TODO shift to correct location
+  $geopads[0].switchTool('rectangle');
+  $geopads[0].on('add:path', ({path}: {path: GeoPath<Rectangle>}) => {
+    if (path.value!.w === 8 && path.value!.h === 6) {
+      $geopads[0].animatePoint(path.components[0].name, new Point(2, 3));
+      $geopads[0].animatePoint(path.components[1].name, new Point(10, 9));
       $step.addHint('correct');
       $step.score('draw-1');
+      $geopads[0].switchTool('move')
     } else {
       $step.addHint('incorrect');
-      path.remove();
+      path.delete();
     }
   });
-  $step.onScore('draw-1', () => $geopads[0].setActiveTool('move'));
 
-
-  $geopads[1].setActiveTool('rectangle');
-  $geopads[1].on('add:path', path => {
-    if (path.val.w * path.val.h === 48) {
-      // TODO shift to correct location
+  $geopads[1].switchTool('rectangle');
+  $geopads[1].on('add:path', ({path}: {path: GeoPath<Rectangle>}) => {
+    if (path.value!.w * path.value!.h === 48) {
+      $geopads[1].animatePoint(path.components[0].name, new Point(3, 3));
+      $geopads[1].animatePoint(path.components[1].name, new Point(11, 9));
       $step.addHint('correct');
       $step.score('draw-2');
+      $geopads[1].switchTool('move')
     } else {
       $step.addHint('incorrect');
-      path.remove();
+      path.delete();
     }
   });
-  $step.onScore('draw-2', () => $geopads[1].setActiveTool('move'));
 }
 
 // -----------------------------------------------------------------------------
@@ -255,7 +216,7 @@ export function escher($step: Step) {
 }
 
 export function penrose($step: Step) {
-  let $g = $step.$$('svg g');
+  const $g = $step.$$('svg g');
 
   $g[1].setAttr('opacity', 0);
   $g[2].setAttr('opacity', 0);
@@ -282,7 +243,7 @@ function makePolyhedronGeo(data: PolyhedronDataItem) {
   const vertices = data.vertex.map(v => new THREE.Vector3(v[0], v[1], v[2]));
   const geometry = new THREE.Geometry();
   geometry.vertices = vertices;
-  for (let f of data.face) {
+  for (const f of data.face) {
     for (let i = 1; i < f.length - 1; i++) {
       geometry.faces.push(new THREE.Face3(f[0], f[i], f[i + 1]));
     }

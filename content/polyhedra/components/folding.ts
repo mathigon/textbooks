@@ -55,17 +55,17 @@ function getFolding(data: FoldingDataItem) {
 
     node.add(new THREE.Mesh(faceGeometry, faceMaterial));
 
-    let s1 = face[side];
-    let s2 = face[(side + 1) % face.length];
+    const s1 = face[side];
+    const s2 = face[(side + 1) % face.length];
     node.userData = {
       offset: vertices[s1],
       axis: new THREE.Vector3().subVectors(vertices[s2], vertices[s1]).clone().normalize(),
       amount: angle
     };
 
-    let parentName = (parent === undefined) ? -1 : parent.name;
+    const parentName = (parent === undefined) ? -1 : parent.name;
     for (let n = 0; n < hinges.length; n++) {
-      let hinge = hinges[n];
+      const hinge = hinges[n];
       if (hinge[0] === f && hinge[2] !== parentName) {
         buildTree(hinge[2], hinge[3], hinge[4], node);
       } else if (hinge[2] === f && hinge[0] !== parentName) {
@@ -82,12 +82,12 @@ function getFolding(data: FoldingDataItem) {
 
 function updateHinges(polyhedron: THREE.Object3D, p: number) {
   polyhedron.traverse((obj) => {
-    let u = obj.userData;
+    const u = obj.userData;
     if (u.offset) return;
 
-    let t1 = new THREE.Matrix4().makeTranslation(-u.offset.x, -u.offset.y, -u.offset.z);
-    let r = new THREE.Matrix4().makeRotationAxis(u.axis, p * (Math.PI - u.amount));
-    let t2 = new THREE.Matrix4().makeTranslation(u.offset.x, u.offset.y, u.offset.z);
+    const t1 = new THREE.Matrix4().makeTranslation(-u.offset.x, -u.offset.y, -u.offset.z);
+    const r = new THREE.Matrix4().makeRotationAxis(u.axis, p * (Math.PI - u.amount));
+    const t2 = new THREE.Matrix4().makeTranslation(u.offset.x, u.offset.y, u.offset.z);
 
     obj.matrix = new THREE.Matrix4().multiplyMatrices(t2, r).multiply(t1);
     obj.matrixAutoUpdate = false;

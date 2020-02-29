@@ -34,11 +34,11 @@ demand?
 
     x-picker.wrap
       .item(data-error="wrong-chart-1" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels fns="0.6x + 2")
+        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="0.6x + 2")
       .item(style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels fns="8 - 0.6x")
+        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="8 - 0.6x")
       .item(data-error="wrong-chart-2" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0|10|2" x-label="price" y-axis="0|10|2" y-label="demand" no-crosshairs no-labels fns="2.5 * sqrt(x)") 
+        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="2.5 * sqrt(x)") 
 
 ---
 > id: demand-1
@@ -102,7 +102,7 @@ different prices:
 Now we can plot all these points in a coordinate system, and connect them with
 a line:
 
-    x-coordinate-system(width=640 height=400 x-axis="-20|200|20" x-label="price/$" y-axis="-100000|100000|20000" y-label="profit/$" margins="10 10 10 10" animate)
+    x-coordinate-system(width=640 height=400 x-axis="-20,200,20" y-axis="-100000,100000,20000" axis-names="price/$,profit/$" padding=10 animate)
       .region.r1(style="top: 48%; height: 46%; left: 6%; width: 6%;")
       .region.r2(style="top: 26%; height: 40%; left: 79%; width: 21%;")
 
@@ -178,7 +178,7 @@ Like you saw in the [introduction](/course/quadratics/introduction), plotting
 the graph of a quadratic function in a coordinate system gives a curved shape
 called a __Parabola__:
 
-    x-coordinate-system.var(x-axis="-5|5|1" y-axis="-3|5|1")
+    x-coordinate-system(x-axis="-5,5,1" y-axis="-3,5,1")
 
 {.text-center} `y =`${a}{a|1|-5,5,0.1} `x^2+`${b}{b|0|-5,5,0.1} `x+`${c}{c|0|-5,5,0.1}
 
@@ -1285,7 +1285,7 @@ have advantages and disadvantages:
 At the beginning of this chapter, we already saw what happens if we plot the
 function `y=x^2` in a coordinate system.
 
-    x-coordinate-system(width=480 height=320 x-axis="-5|5|1")
+    x-coordinate-system(width=480 height=320 x-axis="-5,5,1")
 
 The function y=x^2 is a symmetrical, U-shaped graph.
 

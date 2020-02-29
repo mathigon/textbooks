@@ -37,14 +37,14 @@ export class Polyhedron extends Solid {
     const scale = scales[shape] || 1.65;
     this.setAttr('rotate', '1');
 
-    this.addMesh((scene) => {
+    this.addMesh(() => {
       const polyhedron = new THREE.Object3D();
       const vertices = data.vertex.map(v =>
           new THREE.Vector3(v[0], v[1], v[2]).multiplyScalar(scale));
 
       const faceGeometry = new THREE.Geometry();
       faceGeometry.vertices = vertices;
-      for (let f of data.face) {
+      for (const f of data.face) {
         for (let i = 1; i < f.length - 1; i++) {
           const face = new THREE.Face3(f[0], f[i], f[i + 1]);
           face.color = new THREE.Color(colours[f.length]);
@@ -63,7 +63,7 @@ export class Polyhedron extends Solid {
       });
       polyhedron.add(new THREE.Mesh(faceGeometry, faceMaterial));
 
-      for (let e of data.edge) {
+      for (const e of data.edge) {
         const edgeGeometry = new THREE.Geometry();
         edgeGeometry.vertices = [vertices[e[0]], vertices[e[1]]];
         const edgeMaterial = new THREE.LineBasicMaterial({color: 0xffffff});

@@ -62,7 +62,7 @@ export async function create3D($el: ElementView, fov: number, width: number,
     renderer.render(scene, camera);
     context.clearRect(0, 0, width, height);
     context.drawImage(renderer.domElement, 0, 0);
-    for (let fn of callbacks) fn();
+    for (const fn of callbacks) fn();
   };
 
   return {$canvas, camera, renderer, draw, onDraw, add};

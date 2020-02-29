@@ -43,9 +43,9 @@ Watch the pendulum swinging, and try to predict what it’ll do next!
       canvas(width=640 height=640)
       svg
         circle(x="point(160,160)" name="c")
-        path.thick.yellow.rounded(x="polyline(c,a1,a2)" style="stroke-width: 7px; display: none")
-        path.thick.green.rounded(x="polyline(c,b1,b2)" style="stroke-width: 6px; display: none")
-        path.thick.blue.rounded(x="polyline(c,c1,c2)" style="stroke-width: 5px; display: none")
+        path.thick.yellow(x="polyline(c,a1,a2)" style="stroke-width: 7px; display: none")
+        path.thick.green(x="polyline(c,b1,b2)" style="stroke-width: 6px; display: none")
+        path.thick.blue(x="polyline(c,c1,c2)" style="stroke-width: 5px; display: none")
         circle.move.red(name="d1")
         circle.move.red(name="d2")
         path.thick.red(x="polyline(c,d1,d2)")
@@ -427,7 +427,7 @@ Poincare etc.
       svg
         circle.large.move.red(name="a")
         circle.large.move.blue(name="b")
-        circle.large.move.green(name="c")        
+        circle.large.move.green(name="c")
         path.thin(x="segment(a, a.translate(va))" arrows="end")
         path.thin(x="segment(b, b.translate(vb))" arrows="end")
         path.thin(x="segment(c, c.translate(vc))" arrows="end")
@@ -500,3 +500,4 @@ Sinaï-Ruelle-Bowen measure / statistics / forecasting
 * https://geoffboeing.com/2015/03/chaos-theory-logistic-map/
 * Feigenbaum constant
 * https://www.youtube.com/watch?v=ovJcsL7vyrk
+* https://www.thegreatcourses.com/courses/chaos.html

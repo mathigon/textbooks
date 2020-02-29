@@ -91,17 +91,17 @@ export class Sketch extends EventTarget {
   checkForIntersects() {
     if (!this.options.intersect || this.paths.length <= 1) return;
 
-    let path1 = last(this.paths);
-    let points1 = path1.points as Point[];
-    let line1 = new Segment(points1[points1.length - 2],
+    const path1 = last(this.paths);
+    const points1 = path1.points as Point[];
+    const line1 = new Segment(points1[points1.length - 2],
         points1[points1.length - 1]);
 
     for (let i = 0; i < this.paths.length - 1; ++i) {
-      let path2 = this.paths[i];
-      let points2 = path2.points as Point[];
+      const path2 = this.paths[i];
+      const points2 = path2.points as Point[];
       for (let j = 1; j < points2.length - 2; ++j) {
-        let line2 = new Segment(points2[j], points2[j + 1]);
-        let t = Segment.intersect(line1, line2);
+        const line2 = new Segment(points2[j], points2[j + 1]);
+        const t = Segment.intersect(line1, line2);
         if (t) {
           this.trigger('intersect', {point: t, paths: [path1, path2]});
           return;

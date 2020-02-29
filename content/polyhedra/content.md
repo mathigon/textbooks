@@ -64,20 +64,15 @@ We already know that the sum of the internal angles in a triangle is always
       circle.move(name="b" cx=260 cy=80)
       circle.move(name="c" cx=240 cy=220)
       circle.move(name="d" cx=80 cy=260)
-      path.fill.red(x="angle(b,a,d)" label="${round(angle(b,a,d).deg)}°")
-      path.fill.blue(x="angle(c,b,a)" label="${round(angle(c,b,a).deg)}°")
-      path.fill.green(x="angle(d,c,b)" label="${round(angle(d,c,b).deg)}°")
-      path.fill.yellow(x="angle(a,d,c)" label="${round(angle(a,d,c).deg)}°")
-      path(x="segment(a,b)")
-      path(x="segment(b,c)")
-      path(x="segment(c,d)")
-      path(x="segment(d,a)")
+      path.fill.red(x="angle(b,a,d)" label="${a1[0]}°")
+      path.fill.blue(x="angle(c,b,a)" label="${a1[1]}°")
+      path.fill.green(x="angle(d,c,b)" label="${a1[2]}°")
+      path.fill.yellow(x="angle(a,d,c)" label="${360-a1[0]-a1[1]-a1[2]}°")
+      path(name="p1" x="polygon(a,b,c,d)")
 
-{.text-center.var} _{span.circled.red}${round(angle(b,a,d).deg)}°_ +
-_{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
-_{span.circled.green}${round(angle(d,c,b).deg)}°_ +
-_{span.circled.yellow}${360 - round(angle(b,a,d).deg) - round(angle(c,b,a).deg) -
-round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+{.text-center.var} _{span.circled.red}${a1[0]}°_ +
+_{span.circled.blue}${a1[1]}°_ + _{span.circled.green}${a1[2]}°_ +
+_{span.circled.yellow}${360-a1[0]-a1[1]-a1[2]}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 
     x-gesture(target="x-anibutton")
 
@@ -89,23 +84,17 @@ round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
       circle.move(name="g" cx=220 cy=270)
       circle.move(name="h" cx=80 cy=240)
       circle.move(name="i" cx=30 cy=150)
-      path.fill.red(x="angle(f,e,i)" label="${round(angle(f,e,i).deg)}°")
-      path.fill.blue(x="angle(g,f,e)" label="${round(angle(g,f,e).deg)}°")
-      path.fill.green(x="angle(h,g,f)" label="${round(angle(h,g,f).deg)}°")
-      path.fill.yellow(x="angle(i,h,g)" label="${round(angle(i,h,g).deg)}°")
-      path.fill(x="angle(e,i,h)" label="${round(angle(e,i,h).deg)}°")
-      path(x="segment(e,f)")
-      path(x="segment(f,g)")
-      path(x="segment(g,h)")
-      path(x="segment(h,i)")
-      path(x="segment(i,e)")
+      path.fill.red(x="angle(f,e,i)" label="${a2[0]}°")
+      path.fill.blue(x="angle(g,f,e)" label="${a2[1]}°")
+      path.fill.green(x="angle(h,g,f)" label="${a2[2]}°")
+      path.fill.yellow(x="angle(i,h,g)" label="${a2[3]}°")
+      path.fill.purple(x="angle(e,i,h)" label="${540-a2[0]-a2[1]-a2[2]-a2[3]}°")
+      path(name="p2" x="polygon(e,f,g,h,i)")
 
-{.text-center.var} _{span.circled.red}${round(angle(f,e,i).deg)}°_ +
-_{span.circled.blue}${round(angle(g,f,e).deg)}°_ +
-_{span.circled.green}${round(angle(h,g,f).deg)}°_ +
-_{span.circled.yellow}${round(angle(i,h,g).deg)}°_ +
-_{span.circled}${540 - round(angle(f,e,i).deg) - round(angle(g,f,e).deg) -
-round(angle(h,g,f).deg) - round(angle(i,h,g).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+{.text-center.var} _{span.circled.red}${a2[0]}°_ +
+_{span.circled.blue}${a2[1]}°_ + _{span.circled.green}${a2[2]}°_ +
+_{span.circled.yellow}${a2[3]}°_ +
+_{span.circled.purple}${540-a2[0]-a2[1]-a2[2]-a2[3]}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
@@ -246,7 +235,7 @@ ${Math.round(180-360/x)}°._
       path.blue.fill.reveal(when="blank-1 blank-2" x="angle(m,p1,k)" size=25 target="base-angle isosceles-triangle")
 
       for i in [0,1,2,3,4,5,6,7,8,9,10,11]
-        path.thin.reveal(when="blank-0" delay=i*150 hidden x=`segment(p.points[${i}%n],m)` animation="draw")
+        path.thin.reveal(when="blank-0" delay=i*150 x=`segment(p.points[${i}%n],m)` animation="draw")
 
       path.yellow.reveal(when="blank-2" x="segment(m,k)" target="apothem" label="apothem" animation="draw")
       path.green(x="segment(p1,p0)" target="base" label="s = 1m")
@@ -288,21 +277,21 @@ blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
 "apothem") = 1/2 pill(s, "green", "base") × tan pill(α, "blue", "alpha") =
-var("round(Math.tan(pi/2-pi/n)/2,2)")"m"`
+var("round(tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
 [isosceles triangle](target:isosceles-triangle) is
 
 {.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
-= 1/2 pill("1m", "green", "base") × pill(var("round(Math.tan(pi/2-pi/n)/2,2)"),
-"yellow", "apothem") = var("round(Math.tan(pi/2-pi/n)/4,2)") "m"^2`
+= 1/2 pill("1m", "green", "base") × pill(var("round(tan(pi/2-pi/n)/2,2)"),
+"yellow", "apothem") = var("round(tan(pi/2-pi/n)/4,2)") "m"^2`
 
 {.reveal(when="blank-5 blank-6" delay=4000)} The polygon consists of ${toWord(n)}
 of these isosceles triangles, all of which have the same area. Therefore, the
 total area of the polygon is
 
 {.text-center.reveal(when="blank-5 blank-6" delay=4000)} `A = var("n") ×
-var("round(Math.tan(pi/2-pi/n)/4,2)") = var("round(n×Math.tan(pi/2-pi/n)/4,2)")
+var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 "m"^2`
 :::
 
@@ -326,11 +315,11 @@ All of its sides have the same length, and all of its angles are equal.
       circle.move(name="b" cx=60 cy=105)
       circle(name="c" x="a.rotate(pi/2,b)")
       circle(name="d" x="b.rotate(-pi/2,a)")
-      path.fill.blue.light(x="polygon(a,b,c,d)")
-      path.yellow(x="angle(a,b,c)" target="angle")
-      path.yellow(x="angle(b,c,d)" target="angle")
-      path.yellow(x="angle(c,d,a)" target="angle")
-      path.yellow(x="angle(d,a,b)" target="angle")
+      path.fill.yellow.light(x="polygon(a,b,c,d)")
+      path.blue(x="angle(a,b,c)" target="angle")
+      path.blue(x="angle(b,c,d)" target="angle")
+      path.blue(x="angle(c,d,a)" target="angle")
+      path.blue(x="angle(d,a,b)" target="angle")
       path.red(x="segment(a,b)" target="side" mark="bar")
       path.red(x="segment(b,c)" target="side" mark="bar")
       path.red(x="segment(c,d)" target="side" mark="bar")
@@ -354,11 +343,11 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       circle.move(name="b" cx=40 cy=105)
       circle.move(name="c" cx=180 cy=105 project="line(a,b).perpendicular(b)")
       circle(name="d" x="c.add(a).subtract(b)")
-      path.fill.blue.light(x="polygon(a,b,c,d)")
-      path.yellow(x="angle(a,b,c)" target="angle")
-      path.yellow(x="angle(b,c,d)" target="angle")
-      path.yellow(x="angle(c,d,a)" target="angle")
-      path.yellow(x="angle(d,a,b)" target="angle")
+      path.fill.yellow.light(x="polygon(a,b,c,d)")
+      path.blue(x="angle(a,b,c)" target="angle")
+      path.blue(x="angle(b,c,d)" target="angle")
+      path.blue(x="angle(c,d,a)" target="angle")
+      path.blue(x="angle(d,a,b)" target="angle")
       path.red(x="segment(a,b)")
       path.red(x="segment(b,c)")
       path.red(x="segment(c,d)")
@@ -372,7 +361,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       circle.move(name="f" cx=105 cy=15)
       circle.move(name="h" cx=105 cy=105 project="circle(e,distance(e,f))")
       circle(name="g" x="h.add(f).subtract(e)")
-      path.fill.blue.light(x="polygon(e,f,g,h)")
+      path.fill.yellow.light(x="polygon(e,f,g,h)")
       path.red(x="segment(e,f)" target="side" mark="bar")
       path.red(x="segment(f,g)" target="side" mark="bar")
       path.red(x="segment(g,h)" target="side" mark="bar")
@@ -394,11 +383,11 @@ certain important properties:
       circle.move(name="b" cx=160 cy=20)
       circle.move(name="c" cx=50 cy=100)
       circle(name="d" x="b.add(c).subtract(a)")
-      path.fill.blue.light(x="polygon(a,b,d,c)")
+      path.fill.yellow.light(x="polygon(a,b,d,c)")
       path.red(x="segment(a,b)" mark="arrow")
       path.red(x="segment(c,d)" mark="arrow")
-      path.yellow(x="segment(a,c)" mark="arrow2")
-      path.yellow(x="segment(b,d)" mark="arrow2")
+      path.blue(x="segment(a,c)" mark="arrow2")
+      path.blue(x="segment(b,d)" mark="arrow2")
 
 {.caption} If both pairs of _opposite_ sides are [parallel](gloss:parallel), we
 get a __Parallelogram__.
@@ -409,10 +398,10 @@ get a __Parallelogram__.
       circle.move(name="f" cx=140 cy=15)
       circle.move(name="g" cx=190 cy=60)
       circle(name="h" x="f.reflect(line(e,g))")
-      path.fill.blue.light(x="polygon(e,f,g,h)")
+      path.fill.yellow.light(x="polygon(e,f,g,h)")
       path.red(x="segment(e,f,)" mark="bar")
-      path.yellow(x="segment(f,g)" mark="bar2")
-      path.yellow(x="segment(g,h)" mark="bar2")
+      path.blue(x="segment(f,g)" mark="bar2")
+      path.blue(x="segment(g,h)" mark="bar2")
       path.red(x="segment(h,e,)" mark="bar")
 
 {.caption} If two pairs of _adjacent_ sides have the same length, we get a __Kite__.
@@ -423,7 +412,7 @@ get a __Parallelogram__.
       circle.move(name="j" cx=20 cy=105)
       circle.move(name="k" cx=190 cy=105)
       circle.move(name="l" cx=160 cy=15 project="line(j,k).parallel(i)")
-      path.fill.blue.light(x="polygon(i,j,k,l)")
+      path.fill.yellow.light(x="polygon(i,j,k,l)")
       path(x="segment(i,j)")
       path.red(x="segment(j,k)" mark="arrow")
       path(x="segment(k,l)")
@@ -712,13 +701,13 @@ shaped like a dart or arrow:
       circle(name="d" x="b.reflect(line(a,c))")
       circle.transparent(name="m" x="line(a,c).project(b)")
 
-      path.fill.blue.reveal(when="next-0" x="angle(b,a,d).sup" target="angles vAngle sas")
-      path.fill.green.reveal(when="next-0" x="angle(b,c,d).sup" target="angles vAngle")
-      path.fill.red.reveal(when="next-0" x="angle(a,d,c).sup" target="angles")
-      path.fill.red.reveal(when="next-0" x="angle(a,b,c).sup" target="angles")
-      path.fill.yellow.reveal(when="next-3" x="angle(a,m,d).sup" target="alpha" label="α")
-      path.fill.yellow.reveal(when="next-3" x="angle(b,m,a).sup" target="beta" label="β")
-            
+      path.fill.light.blue.reveal(when="next-0" x="angle(b,a,d).sup" target="angles vAngle sas")
+      path.fill.light.green.reveal(when="next-0" x="angle(b,c,d).sup" target="angles vAngle")
+      path.fill.light.red.reveal(when="next-0" x="angle(a,d,c).sup" target="angles")
+      path.fill.light.red.reveal(when="next-0" x="angle(a,b,c).sup" target="angles")
+      path.fill.light.yellow.reveal(when="next-3" x="angle(a,m,d).sup" target="alpha" label="α")
+      path.fill.light.yellow.reveal(when="next-3" x="angle(b,m,a).sup" target="beta" label="β")
+
       path.fill.red.transparent(x="polygon(a,b,c)" target="triangle1")
       path.fill.yellow.transparent(x="polygon(a,c,d)" target="triangle1")
       path.fill.red.transparent(x="polygon(a,m,d)" target="triangle2")
@@ -728,8 +717,8 @@ shaped like a dart or arrow:
       path.green(x="segment(a,d)" target="sss sas")
       path.blue(x="segment(d,c)" target="sss")
       path.blue(x="segment(b,c)" target="sss")
-      
-      path.red.thin.reveal(when="blank-1" x="line(a,c)" target="symmetry" animation="draw")
+
+      path.red.light.thin.reveal(when="blank-1" x="line(a,c)" target="symmetry" animation="draw")
       path.red.reveal(when="blank-1" x="segment(a,c)" target="symmetry sss d1" animation="draw")
       path.red.transparent(x="segment(a,m)" target="sas" animation="draw")
       path.red.reveal(when="next-2" x="segment(b,d)" animation="draw")
@@ -1185,8 +1174,8 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
 [[twice|once|three times]] at every vertex in the tessellation, we get 360°:
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
-      circle(name="m" x="point(100,80)")
-      circle(name="p" x="point(100,150)")
+      circle(name="m" cx=100 cy=80)
+      circle(name="p" cx=100 cy=150)
       circle.move(name="q" cx=175 cy=130)
       circle(name="r" x="p.rotate(pi,line(m,q).midpoint)")
       circle(name="s" x="p.rotate(pi,m)")

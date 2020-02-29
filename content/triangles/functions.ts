@@ -5,9 +5,9 @@
 
 
 import {delay, isOneOf} from '@mathigon/core';
-import {round, isInteger, Point, Circle, Line, isLineLike, intersections} from '@mathigon/fermat';
+import {round, isInteger, Point, Circle, Line, isLineLike, intersections, Segment, isCircle} from '@mathigon/fermat';
 import {hover} from '@mathigon/boost';
-import {GeoMovablePoint, Geopad, GeoPath, GeoPoint, Slider, Step} from '../shared/types';
+import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
 
 
 // -----------------------------------------------------------------------------
@@ -32,12 +32,11 @@ function waitToDraw($step: Step, $geopad: Geopad, shapes: string[],
       $step.score('s' + i);
     }
   });
-  $geopad.on('add:point', (e: GeoPoint) => e.remove(0));
 }
 
 export function medians($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
-  $geopad.setActiveTool('line');
+  $geopad.switchTool('line');
 
   waitToDraw($step, $geopad,
       ['segment(a,bc)', 'segment(b,ac)', 'segment(c,ab)'],
@@ -45,7 +44,7 @@ export function medians($step: Step) {
       ['ratio', '', '']);
 
   $step.onScore('s0 s1 s2', () => {
-    $geopad.setActiveTool('move');
+    $geopad.switchTool('move');
     $geopad.on('moveEnd', () => $step.score('move'));
   });
 }
@@ -54,11 +53,11 @@ export function circumcircle($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
 
   $step.onScore('blank-0', () => {
-    $geopad.setActiveTool('perpBisector');
+    $geopad.switchTool('perpBisector');
     $geopad.showGesture('a', 'c');
   });
 
-  $step.onScore('s0 s1 s2', () => $geopad.setActiveTool('move'));
+  $step.onScore('s0 s1 s2', () => $geopad.switchTool('move'));
   $step.onScore('blank-2', () => $geopad.animateConstruction('circumcircle'));
 
   waitToDraw($step, $geopad,
@@ -71,8 +70,8 @@ export function circumcircle($step: Step) {
 export function incircle($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
 
-  $geopad.setActiveTool('angleBisector');
-  $step.onScore('s0 s1 s2', () => $geopad.setActiveTool('move'));
+  $geopad.switchTool('angleBisector');
+  $step.onScore('s0 s1 s2', () => $geopad.switchTool('move'));
   $step.onScore('blank-1', () => $geopad.animateConstruction('incircle'));
 
   waitToDraw($step, $geopad,
@@ -92,8 +91,8 @@ export function altitudes1($step: Step) {
 export function midsegments($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
 
-  $geopad.setActiveTool('line');
-  $step.onScore('s0 s1 s2', () => $geopad.setActiveTool('move'));
+  $geopad.switchTool('line');
+  $step.onScore('s0 s1 s2', () => $geopad.switchTool('move'));
 
   waitToDraw($step, $geopad,
       ['segment(p,q)', 'segment(p,r)', 'segment(q,r)'],
@@ -109,89 +108,81 @@ export async function sssConstruction($step: Step) {
   const model = $geopad.model;
 
   const getLength = (x: number) => round(x / 36, 1);
-  model.set('getLength', getLength);
+  model.getLength = getLength;
 
-  $geopad.on('add:path', () => $geopad.setActiveTool('move'));
   $geopad.showGesture('point(50,200)', 'point(250,200)');
-  $geopad.setActiveTool('line');
+  $geopad.switchTool('line');
 
-  $geopad.on('begin:path', (path: GeoPath) => {
-    if (isLineLike(path.val!)) {
-      path.setLabel(`\${getLength(${path.name}.length)||''}`);
-    } else {
-      path.setLabel(`\${getLength(${path.name}.r)||''}`, undefined,
-          `${path.name}.c.shift(0,-${path.name}.r/2)`);
-    }
+  const base = await $geopad.waitForPath<Segment>((p: Path) => isLineLike(p) && getLength(p.length) === 6, {
+    onBegin: (p: GeoPath) => p.setLabel(`\${getLength(${p.name}.length)||''}`),
+    onIncorrect: () => $step.addHint('incorrect')
   });
-
-  const base = await $geopad.waitForPath(
-      path => getLength((path.val as Line).length) === 6);
 
   $step.score('draw-base');
   base.$el.addClass('green');
 
-  for (let p of base.points) {
-    (p as GeoMovablePoint).lock();
+  const [b1, b2] = base.components;
+  for (const p of base.components) {
+    p.lock();
     p.$el.setAttr('target', 'base');
   }
 
-  if (base.points[0].val!.x > base.points[1].val!.x) base.points.reverse();
-
+  $geopad.switchTool('move');
   await $step.onScore('next-0');
 
-  $geopad.animatePoint(base.points[0].name, model.point(42, 220));
-  $geopad.animatePoint(base.points[1].name, model.point(258, 220));
-  $geopad.setActiveTool('circle');
+  $geopad.animatePoint(base.components[0].name, new Point(42, 220));
+  $geopad.animatePoint(base.components[1].name, new Point(258, 220));
+  $geopad.switchTool('circle');
 
-  let circle1 = await $geopad.waitForPath(
-      path => (getLength((path.val as Circle).r) === 4 &&
-               isOneOf(path.points[0], ...base.points)));
+  const circle1 = await $geopad.waitForPath<Circle>(path => isCircle(path) && getLength(path.r) === 4 && isOneOf(path.c, b1.value, b2.value), {
+    onBegin: (p: GeoPath) => p.setLabel(`\${getLength(${p.name}.r)||''}`, undefined, `${p.name}.c.shift(0,-${p.name}.r/2)`),
+    onIncorrect: () => $step.addHint('incorrect')
+  });
 
   $step.score('draw-c1');
   circle1.$el.addClass('green light thin');
-  circle1.points[1].remove(0);
-  $geopad.setActiveTool('circle');
+  circle1.components[1].$el.setAttr('hidden', 'hidden');
 
-  let circle2 = await $geopad.waitForPath(path =>
-      (getLength((path.val as Circle).r) === 5 && path.points[0] ===
-       base.points.filter(p => p !== circle1.points[0])[0]));
+  const circle2 = await $geopad.waitForPath<Circle>(path => isCircle(path) && getLength(path.r) === 5 && isOneOf(path.c, b1.value, b2.value) && path.c !== circle1.value!.c, {
+    onBegin: (p: GeoPath) => p.setLabel(`\${getLength(${p.name}.r)||''}`, undefined, `${p.name}.c.shift(0,-${p.name}.r/2)`),
+    onIncorrect: () => $step.addHint('incorrect')
+  });
 
   $step.score('draw-c2');
   circle2.$el.addClass('green light thin');
-  circle2.points[1].remove(0);
+  circle2.components[1].$el.setAttr('hidden', 'hidden');
 
+  $geopad.switchTool('move');
   await $step.onScore('blank-0');
 
-  if (circle1.points[0] === base.points[1]) {
-    [circle1, circle2] = [circle2, circle1];
-  }
+  const i = (circle1.components[0] === base.components[1]) ? 1 : 0;
 
-  $geopad.drawPoint(() => intersections(circle1.val!, circle2.val!)[0],
-      {target: 'top', name: 'c'});
+  $geopad.drawPoint(() => intersections(circle1.value!, circle2.value!)[i],
+      {target: 'top', name: 'c', interactive: false});
 
-  $geopad.drawPath(`segment(${base.points[0].name},c)`,
+  $geopad.drawPath(`segment(${base.components[0].name},c)`,
       {name: 'side1', classes: 'green'});
 
   await $geopad.animateConstruction('side1', 1000);
 
-  $geopad.drawPath(`segment(c,${base.points[1].name})`,
+  $geopad.drawPath(`segment(c,${base.components[1].name})`,
       {name: 'side2', classes: 'green'});
   await $geopad.animateConstruction('side2', 1000);
 
   await $step.onScore('blank-1');
 
-  circle1.x = () => model.circle(model[circle1.points[0].name], 4 * 36);
-  circle2.x = () => model.circle(model[circle2.points[0].name], 5 * 36);
+  circle1.setValue(() => new Circle(model[circle1.components[0].name], 4 * 36));
+  circle2.setValue(() => new Circle(model[circle2.components[0].name], 5 * 36));
 
-  $geopad.animatePoint(base.points[0].name, model.point(42, 150));
-  $geopad.animatePoint(base.points[1].name, model.point(258, 150));
+  $geopad.animatePoint(base.components[0].name, new Point(42, 150));
+  $geopad.animatePoint(base.components[1].name, new Point(258, 150));
 
-  $geopad.drawPoint(() => intersections(circle1.val!, circle2.val!)[1],
-      {target: 'bottom', name: 'd'});
+  $geopad.drawPoint(() => intersections(circle1.value!, circle2.value!)[1-i],
+      {target: 'bottom', name: 'd', interactive: false});
 
   await $step.onScore('blank-2');
 
-  $geopad.drawPath(`polyline(${base.points[0].name},d,${base.points[1].name})`,
+  $geopad.drawPath(`polyline(${base.components[0].name},d,${base.components[1].name})`,
       {animated: 1000, classes: 'green'});
 }
 
@@ -212,10 +203,10 @@ export function pythagorasProof($step: Step) {
         $step.scores.has('blank-1') && model.x > 0.9);
   }
 
-  model.set('x', 0);
+  model.x = 0;
   const $slider = $step.$('.proof-1 x-slider') as Slider;
   $slider.on('move', n => {
-    model.set('x', n / 100);
+    model.x = n / 100;
     updateLabels();
   });
 
@@ -232,21 +223,14 @@ export function pythagorasProof($step: Step) {
 
   // -----
 
-  model.set('B1', model.point(40, 100));
-  model.set('X1', model.point(170, 100));
-  model.set('C1', model.point(170, 20));
-  model.set('A2', model.point(220, 100));
-  model.set('X2', model.point(170, 100));
-  model.set('C2', model.point(170, 20));
-
-  let $geopad = $step.$('.similar-triangle') as Geopad;
+  const $geopad = $step.$('.similar-triangle') as Geopad;
   $step.onScore('next-0', () => {
-    $geopad.animatePoint('B1', model.point(10, 210), 1000);
-    $geopad.animatePoint('X1', model.point(120, 142), 1000);
-    $geopad.animatePoint('C1', model.point(162, 210), 1000);
-    $geopad.animatePoint('A2', model.point(250, 170), 1000);
-    $geopad.animatePoint('X2', model.point(224, 128), 1000);
-    $geopad.animatePoint('C2', model.point(156, 170), 1000);
+    $geopad.animatePoint('B1', new Point(10, 210), 1000);
+    $geopad.animatePoint('X1', new Point(120, 142), 1000);
+    $geopad.animatePoint('C1', new Point(162, 210), 1000);
+    $geopad.animatePoint('A2', new Point(250, 170), 1000);
+    $geopad.animatePoint('X2', new Point(224, 128), 1000);
+    $geopad.animatePoint('C2', new Point(156, 170), 1000);
   });
 
 }
@@ -255,15 +239,10 @@ export function pythagoreanTriplesGrid($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const found = new Set();
 
-  const sqrtDistance = (p: Point) => round(
-      Math.sqrt(p.x ** 2 + (17 - p.y) ** 2), 3);
-  $step.model.set('sqrtDistance', sqrtDistance);
+  $step.model.watch((m: any) => {
+    const p = m.a;
 
-  $step.model.watch(m => {
-    let p = m.a;
-    let d = sqrtDistance(p);
-
-    const valid = p.x > 0 && p.y < 17 && isInteger(d);
+    const valid = p.x > 0 && p.y > 0 && isInteger(p.length);
     $geopad.setClass('triple', valid);
     if (!valid) return;
 
@@ -272,7 +251,7 @@ export function pythagoreanTriplesGrid($step: Step) {
     $step.score('p' + found.size);
     found.add(p.x + '-' + p.y);
 
-    $geopad.drawPoint(() => p, {classes: 'green'});
+    $geopad.drawPoint(() => p, {classes: 'green', interactive: false});
     if (isOneOf(found.size, 1, 6, 12)) $step.addHint('correct');
   });
 }
@@ -285,17 +264,17 @@ export function mountains($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
 
   $step.onScore('blank-0', () => {
-    $geopad.elements.get('angle-a')!.setLabel('151°');
+    $geopad.shapes.get('angle-a')!.setLabel('151°');
     $geopad.model.update();
   });
 
   $step.onScore('blank-1', () => {
-    $geopad.elements.get('angle-b')!.setLabel('β = 6°');
+    $geopad.shapes.get('angle-b')!.setLabel('β = 6°');
     $geopad.model.update();
   });
 
   $step.onScore('blank-3 blank-4', () => {
-    $geopad.elements.get('side-d')!.setLabel('d = 23km');
+    $geopad.shapes.get('side-d')!.setLabel('d = 23km');
     $geopad.model.update();
   });
 }

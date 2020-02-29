@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {repeat, wait, Color} from '@mathigon/core';
+import {wait, Color} from '@mathigon/core';
 import {Rectangle, Point, Random, numberFormat} from '@mathigon/fermat';
 import {$N, Observable} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
@@ -40,7 +40,7 @@ export function race($step: Step) {
 
 export function choice($step: Step) {
   const $buttons = $step.$$('button');
-  for (let $b of $buttons) {
+  for (const $b of $buttons) {
     $b.on('click', () => {
       $step.score('choice');
       $step.$('.btn-row')!.addClass('done');
@@ -52,8 +52,8 @@ export function choice($step: Step) {
 export function numberline($step: Step) {
   const $limit = $step.$('span.hidden')!;
 
-  $step.model.set('nines', (n: number) => '0.' + '9'.repeat(n));
-  $step.model.watch(state => {
+  $step.model.nines = (n: number) => '0.' + '9'.repeat(n);
+  $step.model.watch((state: any) => {
     if (state.n === 2) $step.score('n2');
     if (state.n === 3) $step.score('n3');
     if (state.n === 4) $step.score('n4');
@@ -74,6 +74,8 @@ export function dots($step: Step) {
   const $btn = $step.$('button')!;
 
   let dStep = 0;
+  let xStep = 0;
+
   $machine.on('add', ({i, cell, point}) => {
     if (i !== xStep + 1)
       return $step.addHint('incorrectCell', {class: 'incorrect'});
@@ -83,7 +85,6 @@ export function dots($step: Step) {
     $step.score('d' + dStep);
   });
 
-  let xStep = 0;
   $btn.on('click', async function () {
     if (dStep <= xStep)
       return $step.addHint('addPairFirst', {class: 'incorrect'});
@@ -115,7 +116,7 @@ export function dots1($step: Step) {
 
 function svgs($step: Step) {
   let t = 1200;
-  for (let $g of $step.$$('svg g')) {
+  for (const $g of $step.$$('svg g')) {
     $g.hide();
     $g.enter('fade', 400, t);
     t += 800;
@@ -195,7 +196,7 @@ export function square($step: Step) {
         const r = new Rectangle(origin, width / f[0],
             width / f[1]).polygon.points;
 
-        let odd = (i + j) % 2;
+        const odd = (i + j) % 2;
 
         $N('polygon', {points: `${r[0].x} ${r[0].y},${r[1].x} ${r[1].y},${r[odd ? 2 : 3].x} ${r[odd ? 2 : 3].y}`, fill: colours[c]}, $svg);
         $N('polygon', {points: `${r[odd ? 0 : 1].x} ${r[odd ? 0 : 1].y},${r[2].x} ${r[2].y},${r[3].x} ${r[3].y}`, fill: colours[c + 1]}, $svg);

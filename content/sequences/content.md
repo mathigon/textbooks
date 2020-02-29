@@ -372,7 +372,7 @@ tennis ball. They dropped the ball from a height of 10 meters and measured its
 position over time. With every bounce, the ball loses some of its original
 height:
 
-    x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|7|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
+    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)
@@ -512,7 +512,7 @@ _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
 
-    x-coordinate-system(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system(padding="12 12 24 40" width=320 height=240)
     x-gesture(target="#arithmetic-geometric-graph x-var" slide="100,0")
 
 ::: column.ag-chart.s-green(width=320)
@@ -528,7 +528,7 @@ _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
 
-    x-coordinate-system.green(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system.green(padding="12 12 24 40" width=320 height=240)
 
 :::
 
@@ -1685,7 +1685,7 @@ Eratosthenes__](gloss:sieve-eratosthenes).
 
 ::: column(width=320)
 
-    x-coordinate-system(width=320 height=320 margins="8 8 20 24" x-label="x" y-label="number of primes less than x")
+    x-coordinate-system(width=320 height=320 padding="8 8 20 24" axis-names="x,number of primes less than x")
 
 {.caption} If we draw a chart that increases by 1 whenever there is a prime
 number, we get a “stepped” function with fascinating properties.
@@ -1837,7 +1837,7 @@ It seems like the length of the sequence varies a lot, but it will always end up
 in a 4, 2, 1 cycle – no matter what first number we pick. We can even visualise
 the terms of the sequence in a chart:
 
-    x-coordinate-system(margins="12 12 24 40")
+    x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Notice how some starting points end very quickly,
@@ -2129,7 +2129,7 @@ _third_ diagonals of the triangle – that makes eight occurrences in total.
 It is unknown if there are any other numbers that appear eight times in the
 triangle, or if there numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
-fixed limed on how often numbers can appear in Pascal’s triangle – but it hasn’t
+fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.
 
 ---

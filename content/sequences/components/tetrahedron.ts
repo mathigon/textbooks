@@ -33,7 +33,7 @@ export class Tetrahedron extends Solid {
           color: COLOURS[i]
         });
 
-        for (let p of points) {
+        for (const p of points) {
           const sphere = new THREE.Mesh(geometry, material);
           sphere.position.set(p.x * 0.65, -dy * 0.65, p.y * 0.65);
           tetrahedron.add(sphere);
