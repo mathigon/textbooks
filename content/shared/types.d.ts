@@ -465,8 +465,9 @@ export class Geopad extends CoordinatePlane {
   animatePoint(name: string, target: Point, duration?: number): void;
   animateConstruction(name: string, duration?: number): Promise<void>;
   showGesture(from: string, to?: string): void;
-  waitForPath(validate: (p: GeoPath) => boolean): Promise<GeoPath<Path>>;
-  waitForPaths(paths: (string|Path)[], options?: WaitForPathsOptions): void;
+  waitForPoint(): Promise<GeoPoint>
+  waitForPath<T extends Path = Path>(validate: PathDefinition, options?: WaitForPathsOptions): Promise<GeoPath<T>>;
+  waitForPaths<T extends Path = Path>(paths: PathDefinition[], options?: WaitForPathsOptions): Promise<GeoPath<T>[]>;
 }
 
 export abstract class GeoShape<T extends Point|Path = Point|Path> extends EventTarget {
@@ -544,7 +545,10 @@ export type GeoExpr<T> = ((s: Obj<any>) => T|undefined);
 
 export type GeoValue<T> = T|GeoExpr<T>|undefined;
 
+export type PathDefinition = string|Path|((p: Path) => boolean);
+
 export interface WaitForPathsOptions {
+  onBegin?: (path: GeoPath) => void;
   onCorrect?: (path: GeoPath, index: number) => void;
   onIncorrect?: (path: GeoPath) => void;
   onHint?: (path: GeoPath, index: number) => void;

@@ -594,7 +594,7 @@ disturb my circles”.
 
 ::: column(width=320)
 
-    x-geopad.sticky(width=320 tools="move|line|circle" intersect=true): svg
+    x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
 {.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a

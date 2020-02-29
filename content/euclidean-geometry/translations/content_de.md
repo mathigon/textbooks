@@ -595,7 +595,7 @@ Kreise nicht".
 
 ::: column(width=320)
 
-    x-geopad.sticky(width=320 tools="move|line|circle" intersect=true): svg
+    x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
 {.task} Zeichne ein [gleichseitiges Dreieck](gloss:equilateral-triangle) nur mit einer

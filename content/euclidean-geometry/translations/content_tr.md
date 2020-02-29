@@ -493,7 +493,7 @@ Bu aletler ne kadar ilkel görünseler de bunlarla çok fazla sayıda şekil çi
 
 ::: column(width=320)
 
-    x-geopad.sticky(width=320 tools="move|line|circle" intersect=true): svg
+    x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
 {.task} Pergel ve düz kenar ile [eşkenar üçgen](gloss:equilateral-triangle) çizimi.
