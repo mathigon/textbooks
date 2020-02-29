@@ -500,3 +500,4 @@ Sinaï-Ruelle-Bowen measure / statistics / forecasting
 * https://geoffboeing.com/2015/03/chaos-theory-logistic-map/
 * Feigenbaum constant
 * https://www.youtube.com/watch?v=ovJcsL7vyrk
+* https://www.thegreatcourses.com/courses/chaos.html
