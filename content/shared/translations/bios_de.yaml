@@ -1003,22 +1003,22 @@ lagrange:
     der Leonard Euler als Direktor der Akademie der Wissenschaften in Berlin
     ablöste.
 
-    He worked on analysis and the calculus of variations, invented new
-    methods for solving differential equations, proved theorems in number
-    theory, and laid the foundations of group theory.
+    Er arbeitete im Bereich der Analysis und der Variationsrechnung, erfand neue
+    Methoden zur Lösung von Differentialgleichungen, bewies Theoreme in der
+    Zahlentheorie und legte die Grundlagen der Gruppentheorie.
 
-    Lagrange also wrote about classical and celestial mechanics, and helped
-    establish the metric system in Europe.
+    Lagrange schrieb auch über klassische und Himmelsmechanik und half
+    das metrische System in Europa zu etablieren.
 
 lambert:
   born: 1728
   died: 1777
   name: Lambert
-  bio: __Johann Lambert__ (1728 – 1777) was a Swiss mathematician, physicist,
-    astronomer and philosopher. He was the first to prove that _π_ is an
-    irrational number, and he introduced hyperbolic trigonometric functions.
-    Lambert also worked on geometry and cartography, created map projections,
-    and foreshadowed the discovery of non-Euclidean spaces.
+  bio: __Johann Lambert__ (1728 - 1777) war ein Schweizer Mathematiker und Physiker,
+    Astronom und Philosoph. Er war der erste, der bewies, dass _π_ eine
+    irrationale Zahl ist, und er führte hyperbolische trigonometrische Funktionen ein.
+    Lambert arbeitete auch im Bereich der Geometrie und Kartographie, erstellte
+    Kartenprojektionen, und kündigte die Entdeckung der nicht-euklidischen Räume an.
 
 laplace:
   born: 1749
@@ -1026,17 +1026,18 @@ laplace:
   name: Laplace
   small: true
   bio: |
-    __Pierre-Simon Laplace__ (1749 – 1827) was a French mathematician and
-    scientist. He is sometimes called the “Newton of France”, because of his
-    wide range of interests, and the enormous impact of his work.
+    __Pierre-Simon Laplace__ (1749 - 1827) war ein französischer Mathematiker und
+    Wissenschafter. Er wird manchmal der "Newton Frankreichs" genannt, wegen seiner
+    breiten Palette von Interessen und der enormen Bedeutung seiner Arbeit.
 
-    In a five-volume book, Laplace translated problems in celestial mechanics
-    from _geometry_ to _calculus_. This opened up a wide range of new strategies
-    for understanding our universe. He proposed that the solar system developed
-    from a rotating disk of dust.
+    In einem fünfbändigen Buch übersetzte Laplace Probleme der Himmelsmechanik von
+    der _Geometrie_ hin zur _Infinitesimalrechnung_. Dies eröffnete eine breite
+    Palette neuer Ansätze für das Verständnis unseres Universums. Er vermutete,
+    dass sich das Sonnensystem aus einer rotierenden Staubscheibe entwickelt hat.
 
-    Laplace also pioneered the field of probability, and showed how probability
-    can help us understand data from the physical world.
+    Laplace leistete auch Pionierarbeit auf dem Gebiet der Statistik und zeigte,
+    wie die Wahrscheinlichkeit uns helfen kann, Daten aus der realen Welt zu
+    verstehen.
 
 leibniz:
   name: Leibniz
