@@ -406,6 +406,8 @@ export abstract class CoordinatePlane extends CustomElementView {
   private $grid?;
   private $axes?;
   private $labels?;
+  $xAxis?: SVGView;
+  $yAxis?: SVGView;
   protected labelSuffix: string[];
   protected axisNames: string[];
   protected gridSize: number[];
