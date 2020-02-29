@@ -451,7 +451,7 @@ Aslında Öklid’in aksiyomları, kendi geometri versiyonunda _neyin mümkün_ 
       svg
         circle.move(name="a" cx=50 cy=190)
         circle.move(name="b" cx=250 cy=50)
-        path.red(name="l1" x="segment(a,b)" style="display: none")
+        path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
 {.text-center} _Düz kenar_, üzerinde işaretler olmayan bir cetvel gibidir. Bunu iki noktayı birleştirmek için (1. Aksiyom’da olduğu gibi), ya da bir çizgiyi uzatmak için kullanabilirsiniz (2. Aksiyom’da olduğu gibi)
@@ -463,7 +463,7 @@ Aslında Öklid’in aksiyomları, kendi geometri versiyonunda _neyin mümkün_ 
         circle.move(name="c" cx=150 cy=120)
         circle.move(name="d" cx=250 cy=150)
         path(x="segment(c,d)")
-        path.red(name="c1" x="arc(c,d,1.99*pi)" style="display: none")
+        path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
       x-play-btn
 
 {.text-center} _Pergel_, bir nokta etrafında belirli bir çapta çember çizmeye yarar (3. Aksiyom’da olduğu gibi).

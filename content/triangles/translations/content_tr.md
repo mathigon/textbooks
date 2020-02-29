@@ -183,7 +183,7 @@ Kolay lık olsun diye üçgenleri genelde benzer şekillerde işaretleriz. Köş
 
 ::: column(width=300)
 
-    x-geopad.sticky(width=300 tools="move|line"): svg
+    x-geopad.sticky(width=300 tools="move|line" projections="no"): svg
       circle.move(name="a" cx=75 cy=75 target="ratio")
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
@@ -246,7 +246,7 @@ Ağırlık merkezinden geçen bir doğru üçgeni alanları birbirlerine eşit o
 
 ::: column(width=300)
 
-    x-geopad.sticky(tools="move|perpBisector" width=300): svg
+    x-geopad.sticky(tools="move|perpBisector" width=300 projections="no"): svg
       circle.move(name="a" cx=75 cy=75 label="A" target="b-blue b-red")
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
@@ -288,14 +288,14 @@ Muhtemelen şu an şuna takıldınız: bir yapı alıyoruz, kenarlara/açılara 
 
 ::: column(width=300)
 
-    x-geopad.sticky(tools="move|angleBisector" width=300): svg
+    x-geopad.sticky(tools="move|angleBisector" width=300 projections="no"): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
 
-      path.thin.red(x="angle(c,a,b).sup" name="xa")
-      path.thin.blue(x="angle(a,b,c).sup" name="xb")
-      path.thin.green(x="angle(b,c,a).sup" name="xc")
+      path.fill.light.red(x="angle(c,a,b).sup" name="xa")
+      path.fill.light.blue(x="angle(a,b,c).sup" name="xb")
+      path.fill.light.green(x="angle(b,c,a).sup" name="xc")
 
       path(x="segment(a,b)" label="a" target="b-blue b-red")
       path(x="segment(a,c)" label="b" target="b-red")
@@ -404,7 +404,7 @@ ve [açı ortaylar](gloss:angle-bisector) konusunda olduğu gibi bu üç uzunlu�
 
 ::: column(width=300)
 
-    x-geopad.sticky(tools="move|line" width=300): svg
+    x-geopad.sticky(tools="move|line" width=300 projections="no"): svg
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
@@ -741,27 +741,27 @@ _{span.hover-target}önce_ ve _{span.hover-target}sonra_ olarak karşılaştırd
         circle(hidden name="d" x="point(20,220)")
 
         circle.move(name="e" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
-        circle(name="f" x="b.add(e.subtract(a).flip)")
-        circle(name="g" x="c.subtract(e.subtract(a))")
-        circle(name="h" x="d.subtract(e.subtract(a).flip)")
+        circle(name="f" hidden x="b.add(e.subtract(a).flip)")
+        circle(name="g" hidden x="c.subtract(e.subtract(a))")
+        circle(name="h" hidden x="d.subtract(e.subtract(a).flip)")
 
-        path.dark.thin(x="segment(a,e)" label="a")
-        path.dark.thin(x="segment(e,b)" label="b")
-        path.dark.thin(x="segment(a,h)" label="b")
-        path.dark.thin(x="segment(h,d)" label="a")
-        path.dark.thin(x="segment(e,h)" label="c")
-        path.dark.thin(x="segment(e,f).shift(0,x*distance(h,a))" label="c")
+        path.thin(x="segment(a,e)" label="a")
+        path.thin(x="segment(e,b)" label="b")
+        path.thin(x="segment(a,h)" label="b")
+        path.thin(x="segment(h,d)" label="a")
+        path.thin(x="segment(e,h)" label="c")
+        path.thin(x="segment(e,f).shift(0,x*distance(h,a))" label="c")
 
-        path.dark.square(x="polygon(a,b,c,d)")
-        path.dark.tri(x="polygon(a,e,h)" target="triangle")
-        path.dark.tri(x="polygon(c,g,f).shift(-x*distance(d,g),-x*distance(b,f))" target="triangle")
-        path.dark.tri(x="polygon(d,h,g).shift(x*distance(e,a),0)" target="triangle")
-        path.dark.tri(x="polygon(b,f,e).shift(0,x*distance(h,a))" target="triangle")
-        path.dark.square.transparent(x="polygon(e,f,g,h)" target="square")
+        path.square(x="polygon(a,b,c,d)")
+        path.tri(x="polygon(a,e,h)" target="triangle")
+        path.tri(x="polygon(c,g,f).shift(-x*distance(d,g),-x*distance(b,f))" target="triangle")
+        path.tri(x="polygon(d,h,g).shift(x*distance(e,a),0)" target="triangle")
+        path.tri(x="polygon(b,f,e).shift(0,x*distance(h,a))" target="triangle")
+        path.square.transparent(x="polygon(e,f,g,h)" target="square")
 
       .label(style="left: 120px; top: 120px;") c²
-      .label.var(x-style="left: ${10 + e.x/2}px; top: ${230 - e.x/2}px;") a²
-      .label.var(x-style="left: ${110 + e.x/2}px; top: ${130 - e.x/2}px;") b²
+      .label.var(style="left: ${10 + e.x/2}px; top: ${230 - e.x/2}px;") a²
+      .label.var(style="left: ${110 + e.x/2}px; top: ${130 - e.x/2}px;") b²
 
     x-slider(steps=100)
 
@@ -804,22 +804,22 @@ _{span.qed}_
 
     x-geopad(width=240): svg        
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
-      circle(name="f1" x="b.add(e1.subtract(a).flip)")
-      circle(name="g1" x="c.subtract(e1.subtract(a))")
-      circle(name="h1" x="d.subtract(e1.subtract(a).flip)")
+      circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
+      circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
+      circle(name="h1" hidden x="d.subtract(e1.subtract(a).flip)")
 
-      path.dark.thin(x="segment(a,e1)" label="a")
-      path.dark.thin(x="segment(e1,b)" label="b")
-      path.dark.thin(x="segment(a,h1)" label="b")
-      path.dark.thin(x="segment(h1,d)" label="a")
-      path.dark.thin(x="segment(e1,h1)" label="c")
-      path.dark.thin(x="segment(e1,f1).shift(0,x*distance(h,a))" label="c")
+      path.thin(x="segment(a,e1)" label="a")
+      path.thin(x="segment(e1,b)" label="b")
+      path.thin(x="segment(a,h1)" label="b")
+      path.thin(x="segment(h1,d)" label="a")
+      path.thin(x="segment(e1,h1)" label="c")
+      path.thin(x="segment(e1,f1).shift(0,x*distance(h,a))" label="c")
 
-      path.dark.square(x="polygon(e1,f1,g1,h1)" target="square")
-      path.dark.tri(x="polygon(a,e1,h1)" target="triangle")
-      path.dark.tri(x="polygon(c,g1,f1)" target="triangle")
-      path.dark.tri(x="polygon(d,h1,g1)" target="triangle")
-      path.dark.tri(x="polygon(b,f1,e1)" target="triangle")
+      path.square(x="polygon(e1,f1,g1,h1)" target="square")
+      path.tri(x="polygon(a,e1,h1)" target="triangle")
+      path.tri(x="polygon(c,g1,f1)" target="triangle")
+      path.tri(x="polygon(d,h1,g1)" target="triangle")
+      path.tri(x="polygon(b,f1,e1)" target="triangle")
 
 :::
 ::: tab.proof-3
@@ -840,9 +840,9 @@ AA şartından, üç üçgenin de  [[benzer|eş|dik açılı]] olması gerektiğ
 ::: column(width=260)
 
     x-geopad.similar-triangle(width=260): svg
-      circle(x="B1")
-      circle(x="X1")
-      circle(x="C1")
+      circle(name="B1" hidden cx=40 cy=100)
+      circle(name="X1" hidden cx=170 cy=100)
+      circle(name="C1" hidden cx=170 cy=20)
       path.fill.light.red(x="polygon(B1,X1,C1)")
       path.fill.yellow(x="angle(C1,B1,X1).sup" size=25 target="angle")
       path.dark.thin(x="angle(B1,X1,C1).sup" size=10 target="right")
@@ -850,9 +850,9 @@ AA şartından, üç üçgenin de  [[benzer|eş|dik açılı]] olması gerektiğ
       path.dark(x="segment(X1,C1)")
       path.blue(x="segment(X1,B1)" label="x" target="x xa")
 
-      circle(x="A2")
-      circle(x="X2")
-      circle(x="C2")
+      circle(name="A2" hidden cx=220 cy=100)
+      circle(name="X2" hidden cx=170 cy=100)
+      circle(name="C2" hidden cx=170 cy=20)
       path.fill.light.yellow(x="polygon(A2,X2,C2)")
       path.fill.red(x="angle(C2,A2,X2).sup" size=20 target="angle")
       path.dark.thin(x="angle(A2,X2,C2).sup" size=10 target="right")
@@ -860,10 +860,10 @@ AA şartından, üç üçgenin de  [[benzer|eş|dik açılı]] olması gerektiğ
       path.dark(x="segment(X2,C2)")
       path.green(x="segment(X2,A2)" label="y" target="y yb")
 
-      circle(name="A" x="point(220,100)")
-      circle(name="B" x="point(40,100)")
-      circle(name="C" x="point(170,20)")
-      circle(name="X" x="point(170,100)")
+      circle(name="A" hidden x="point(220,100)")
+      circle(name="B" hidden x="point(40,100)")
+      circle(name="C" hidden x="point(170,20)")
+      circle(name="X" hidden x="point(170,100)")
       path.dark(x="segment(X,C)" target="altitude")
       path.dark.thin(x="angle(B,X,C)" size=10 target="altitude")
       path.fill.yellow(x="angle(C,B,X)" size=25 target="angle")
@@ -931,23 +931,23 @@ Bu iki doğruyu çizersek, [dik açılı bir üçgen](target:triangle) elde eder
     table.eqn-system.reveal(when="next-0")
       tr
         <td><msup><mi>d</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><msup><mn class="step-target pill blue var" data-to="dx">${b.x-a.x}</mn><mn>2</mn></msup><mo>+</mo><msup><mn class="step-target pill red var" data-to="dy">${a.y-b.y}</mn><mn>2</mn></msup></td>
+        <td><mo>=</mo><msup><mn class="step-target pill blue var" data-to="dx">${b.x-a.x}</mn><mn>2</mn></msup><mo>+</mo><msup><mn class="step-target pill red var" data-to="dy">${b.y-a.y}</mn><mn>2</mn></msup></td>
       tr
         <td><msup><mi>d</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><mn class="var">${(b.x-a.x)*(b.x-a.x) + (a.y-b.y)*(a.y-b.y)}</mn></td>
+        <td><mo>=</mo><mn class="var">${(b.x-a.x)*(b.x-a.x) + (b.y-a.y)*(b.y-a.y)}</mn></td>
       tr
         <td><mi>d</mi></td>
-        <td><mo>=</mo><msqrt><mn class="var">${(b.x-a.x)*(b.x-a.x) + (a.y-b.y)*(a.y-b.y)}</mn></msqrt><mo>=</mo><mn class="var">${round(Math.sqrt((b.x-a.x)*(b.x-a.x) + (a.y-b.y)*(a.y-b.y)),4)}</mn></td>
+        <td><mo>=</mo><msqrt><mn class="var">${(b.x-a.x)**2+(a.y-b.y)**2}</mn></msqrt><mo>=</mo><mn class="var">${round(distance(a,b),4)}</mn></td>
 
 ::: column(width=300)
 
-    x-geopad(width=300 height=300 grid="25"): svg
-      circle.move.pulsate(name="a" cx="2" cy="6" label="(${x},${11-y})")
-      circle.move.pulsate(name="b" cx="9" cy="1" label="(${x},${11-y})")
+    x-geopad(width=300 height=300 x-axis="-0.5,11.5,1" y-axis="-0.5,11.5,1" grid snap): svg
+      circle.move.pulsate(name="a" cx="2" cy="5" label="(${a.x},${a.y})")
+      circle.move.pulsate(name="b" cx="9" cy="10" label="(${b.x},${b.y})")
       path(x="segment(a,b)" label="d")
       path.blue.reveal(x="segment(a,point(b.x,a.y))" label="${b.x-a.x}" mark="arrow" when="next-0" target="dx")
-      path.red.reveal(x="segment(point(b.x,a.y),b)" label="${a.y-b.y}" mark="arrow" when="next-0" target="dy")
-      path.yellow.transparent#tri-move(target="triangle" x="polygon(a,b,point(b.x,a.y))")
+      path.red.reveal(x="segment(point(b.x,a.y),b)" label="${b.y-a.y}" mark="arrow" when="next-0" target="dy")
+      path.yellow.fill.transparent#tri-move(target="triangle" x="polygon(a,b,point(b.x,a.y))")
 
 :::
 
@@ -996,18 +996,13 @@ Bu şekildeki üç tam sayı [__Pisagor Üçlüsü__](gloss:pythagorean-triple) 
 
 Bu üçlüleri, koordinat sisteminde karelaj noktaları olarak düşünebiliriz.  Geçerli bir Pisagor Üçlüsü için, karelaj noktasından orijine uzaklık bir tam sayı olmalıdır. Aşağıdaki koordinat sistemini kullanarak, Pisagor Üçlülerini bulabilir misiniz?
 
-    figure: x-geopad.r(width=450 height=450 grid=25)
+    figure: x-geopad.r.no-background(width=450 height=450 x-axis="0,16.5,1" y-axis="0,16.5,1" grid axes padding="10 10 25 25" snap)
       svg
-        path(x="line(o,point(0,16))")
-        path(x="line(o,point(1,17))")
-
         circle.move.pulsate(cx=4 cy=10 name="a")
-        circle(x="point(0,17)" name="o")
-        path.thick(x="polygon(o,a,point(a.x,o.y))")
-
-      .label.var(x-style="left:${12.5+12.5*a.x}px; top:440px") ${a.x}
-      .label.var(x-style="left:${12.5+25*a.x}px; top:${225+12.5*a.y}px") ${17-a.y}
-      .label.var(x-style="left:${12.5+12.5*a.x}px; top:${225+12.5*a.y}px") ${sqrtDistance(a)}
+        path.thick(x="polygon(point(0,0),a,point(a.x,0))")
+      .label.var(style="left:${26+12.5*a.x}px; top:425px") ${a.x}
+      .label.var(style="left:${26+25*a.x}px; top:${425-12.5*a.y}px") ${a.y}
+      .label.var(style="left:${26+12.5*a.x}px; top:${425-12.5*a.y}px") ${round(a.length,2)}
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Bu noktaların dağılmasında herhangi bir yöntem farkettiniz mi?
 
@@ -1281,7 +1276,7 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 ::: .sticky-wrap
 
     figure.sticky.mountain
-      x-geopad(width=760 height=250 style="background: white"): svg
+      x-geopad.no-background(width=760 height=250): svg
         image(href="images/mountain.svg" height=240 width=760 y=5)
         circle(name="a" x="point(25, 230)" target="points")
         circle(name="b" x="point(185, 230)" target="points")

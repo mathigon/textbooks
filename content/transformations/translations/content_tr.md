@@ -129,8 +129,8 @@ Ama önce her bir dönüşüm çeşidine daha detaylı bakalım.
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" style="fill: #d94c44; opacity: 0.6" label-class="white")
-      path.fill(x="s1.shift(5,-1)" style="fill: #d94c44" label="A'" label-class="white")
+      path.fill.orange.light(x="polygon(point(2,2),point(1,5),point(4,5),point(3,2))" name="s1" label="A" label-class="white")
+      path.fill.orange(x="s1.shift(5,-1)" label="A'" label-class="white")
       path.reveal(x="segment(point(4,5),point(9,5))" mark="arrow" when="blank-0" animation="draw")
       path.reveal(x="segment(point(9,5),point(9,4))" mark="arrow" when="blank-1" animation="draw")
 
@@ -138,7 +138,7 @@ Ama önce her bir dönüşüm çeşidine daha detaylı bakalım.
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill.red(x="circle(point(7,4),1.5)" name="s2" label="B" style="opacity: 0.6" label-class="white")
+      path.fill.red.light(x="circle(point(7,4),1.5)" name="s2" label="B" label-class="white")
       path.fill.red(x="s2.shift(-4,-2)" label="B'" label-class="white")
       path.reveal(x="segment(point(6,5),point(2,5))" mark="arrow" when="blank-2" animation="draw")
       path.reveal(x="segment(point(2,5),point(2,3))" mark="arrow" when="blank-3" animation="draw")
@@ -147,8 +147,8 @@ Ama önce her bir dönüşüm çeşidine daha detaylı bakalım.
 ::: column(width=220)
 
     x-geopad(width=220 height=140 grid=20 no-points): svg
-      path.fill(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C" style="fill: #822b9b; opacity: 0.6" label-class="white")
-      path.fill(x="s3.shift(4,2)" style="fill: #822b9b" label="C'" label-class="white")
+      path.fill.light.purple(x="polygon(point(2,0),point(5,0),point(5,2),point(4,2),point(4,1),point(3,1),point(3,4),point(2,4))" name="s3" label="C")
+      path.fill.purple(x="s3.shift(4,2)" label="C'")
       path.reveal(x="segment(point(2,6),point(6,6))" mark="arrow" when="blank-4" animation="draw")
       path.reveal(x="segment(point(2,4),point(2,6))" mark="arrow" when="blank-5" animation="draw")
 
@@ -208,21 +208,21 @@ Her bir örnekteki yansıma doğrularını çizin:
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,1),point(1,2),point(2,3),point(8,2))" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)" name="from0")
       path(hidden name="line0" x="line(point(-1,4),point(11,4))")
       path(x="from0.reflect(line0)" style="stroke: #363644; stroke-width: 3px; fill: rgba(179,4,105,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(1,1),point(1,5),point(3,5),point(2,3),point(4,1))" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)" name="from1")
       path(hidden name="line1" x="line(point(9,-1),point(-1,9))")
       path(x="from1.reflect(line1)" style="stroke: #363644; stroke-width: 3px; fill: rgba(154,24,130,0.4)")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/rorschach.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
@@ -273,33 +273,36 @@ Yukarıdaki örneklerin hepsinde, yansıma doğrusu yatay, dik veya 45°’lik a
     x-geopad.sticky(width=300): svg
       circle.move.pulsate(name="l1" cx="180" cy="30" target="refl")
       circle.move.pulsate(name="l2" cx="120" cy="270" target="refl")
-      path.dark(name="refl" x="line(l1,l2)" target="refl")
+      path(name="refl" x="line(l1,l2)" target="refl")
 
       circle.reveal(name="a" x="point(60,50)" when="next-0" animation="pop" target="circ")
-      circle.reveal(name="b" x="point(120,100)" when="next-2" animation="pop")
-      circle.reveal(name="c" x="point(110,170)" when="next-2" animation="pop" delay=100)
-      circle.reveal(name="d" x="point(65,200)" when="next-2" animation="pop" delay=200)
-      circle.reveal(name="e" x="point(30,120)" when="next-2" animation="pop" delay=300)
+      circle(name="b" x="point(120,100)" hidden)
+      circle(name="c" x="point(110,170)" hidden)
+      circle(name="d" x="point(65,200)" hidden)
+      circle(name="e" x="point(30,120)" hidden)
+
+      circle.reveal(name="p" x="refl.project(a)" when="next-0" animation="pop" delay=1500)
+      path.reveal.fill.light(x="angle(a,p,l1)" size=16 when="next-0" delay=1500)
 
       circle.reveal(name="a1" x="a.reflect(refl)" when="next-1" animation="pop" target="circ")
-      circle.reveal(name="b1" x="b.reflect(refl)" when="next-2" animation="pop" delay=1000)
-      circle.reveal(name="c1" x="c.reflect(refl)" when="next-2" animation="pop" delay=1100)
-      circle.reveal(name="d1" x="d.reflect(refl)" when="next-2" animation="pop" delay=1200)
-      circle.reveal(name="e1" x="e.reflect(refl)" when="next-2" animation="pop" delay=1300)
+      circle(name="b1" x="b.reflect(refl)" hidden)
+      circle(name="c1" x="c.reflect(refl)" hidden)
+      circle(name="d1" x="d.reflect(refl)" hidden)
+      circle(name="e1" x="e.reflect(refl)" hidden)
 
       path.fill.blue(x="polygon(a,b,c,d,e)")
       path.fill.reveal.blue1(x="polygon(a1,b1,c1,d1,e1)" when="next-3")
 
-      path.thin.reveal(x="line(a,a1)" when="next-0" animation="draw" delay=1000)
-      path.thin.reveal(x="segment(b,b1)" when="next-2" animation="draw" delay=400)
-      path.thin.reveal(x="segment(c,c1)" when="next-2" animation="draw" delay=500)
-      path.thin.reveal(x="segment(d,d1)" when="next-2" animation="draw" delay=600)
-      path.thin.reveal(x="segment(e,e1)" when="next-2" animation="draw" delay=700)
+      path.reveal(x="line(a,a1)" when="next-0" animation="draw" delay=1000)
+      path.reveal.thin.light(x="segment(b,b1)" when="next-2" animation="draw" delay=400)
+      path.reveal.thin.light(x="segment(c,c1)" when="next-2" animation="draw" delay=500)
+      path.reveal.thin.light(x="segment(d,d1)" when="next-2" animation="draw" delay=600)
+      path.reveal.thin.light(x="segment(e,e1)" when="next-2" animation="draw" delay=700)
 
       circle.transparent(name="ax" x="refl.project(a)" target="circ")
-      path.dark.transparent(x="segment(a,ax)" target="d1 circ")
-      path.dark.transparent(x="segment(a1,ax)" target="d2 circ")
-      path.dark.transparent(x="circle(ax,distance(a,ax))" target="circ")
+      path.transparent(x="segment(a,ax)" target="d1 circ")
+      path.transparent(x="segment(a1,ax)" target="d2 circ")
+      path.transparent(x="circle(ax,distance(a,ax))" target="circ")
 
 ::: column.grow
 {.r} Bu şekli [yansıma doğrusunun](target:refl) karşısına yansıtmak için, her [köşeyi](gloss:polygon-vertex) tek tek yansıtmamız ve sonra tekrar birleştirmemiz gerekiyor.
@@ -362,38 +365,37 @@ Aşağıdaki şekilleri kırmızı renkteki döndürme merkezi etrafında dönd�
       circle.move.pulsate(name="rot" cx="150" cy="250" target="rot angle compass protractor")
 
       circle.reveal(name="a" x="point(270,190)" when="next-0" animation="pop" target="compass")
-      circle.reveal(name="b" x="point(280,110)" when="next-3" animation="pop")
-      circle.reveal(name="c" x="point(210,80)" when="next-3" animation="pop" delay=100)
-      circle.reveal(name="d" x="point(190,170)" when="next-3" animation="pop" delay=200)
-      circle.reveal(name="e" x="point(220,200)" when="next-3" animation="pop" delay=300)
+      circle(name="b" x="point(280,110)" hidden)
+      circle(name="c" x="point(210,80)" hidden)
+      circle(name="d" x="point(190,170)" hidden)
+      circle(name="e" x="point(220,200)" hidden)
 
       circle.reveal(name="a1" x="a.rotate(-ang/18*pi,rot)" when="next-2" animation="pop" target="a1 compass")
-      circle.reveal(name="b1" x="b.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1200)
-      circle.reveal(name="c1" x="c.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1300)
-      circle.reveal(name="d1" x="d.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1400)
-      circle.reveal(name="e1" x="e.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1500)
+      circle(name="b1" x="b.rotate(-ang/18*pi,rot)" hidden)
+      circle(name="c1" x="c.rotate(-ang/18*pi,rot)" hidden)
+      circle(name="d1" x="d.rotate(-ang/18*pi,rot)" hidden)
+      circle(name="e1" x="e.rotate(-ang/18*pi,rot)" hidden)
 
       path.fill.green(x="polygon(a,b,c,d,e)")
       path.fill.reveal.green1(x="polygon(a1,b1,c1,d1,e1)" when="next-4")
 
-      path.transparent.red.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
-      path.thin.reveal(x="angle(a1,rot,a)" when="next-1" animation="draw" target="angle protractor")
+      path.transparent.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
+      path.reveal.light.fill(x="angle(a1,rot,a)" when="next-1" target="angle protractor")
 
-      path.thin.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
-      path.thin.reveal(x="segment(rot,b)" when="next-3" animation="draw" delay=400)
-      path.thin.reveal(x="segment(rot,c)" when="next-3" animation="draw" delay=500)
-      path.thin.reveal(x="segment(rot,d)" when="next-3" animation="draw" delay=600)
-      path.thin.reveal(x="segment(rot,e)" when="next-3" animation="draw" delay=700)
+      path.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
+      path.reveal.thin.light(x="segment(rot,b)" when="next-3" animation="draw" delay=400)
+      path.reveal.thin.light(x="segment(rot,c)" when="next-3" animation="draw" delay=500)
+      path.reveal.thin.light(x="segment(rot,d)" when="next-3" animation="draw" delay=600)
+      path.reveal.thin.light(x="segment(rot,e)" when="next-3" animation="draw" delay=700)
 
-      path.thin.reveal(x="ray(rot,a1)" when="next-1" animation="draw" delay=500 target="angle l2")
-      path.thin.reveal(x="segment(rot,b1)" when="next-3" animation="draw" delay=800)
-      path.thin.reveal(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
-      path.thin.reveal(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
-      path.thin.reveal(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
+      path.reveal(x="ray(rot,a1)" when="next-1" animation="draw" delay=500 target="angle l2")
+      path.reveal.thin.light(x="segment(rot,b1)" when="next-3" animation="draw" delay=800)
+      path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
+      path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
+      path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
       
       path.transparent(x="segment(rot,a1)" target="compass protractor")
-      path.transparent.dark(x="circle(rot,distance(rot,a))" target="compass")
-
+      path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
 ::: column.grow
 90° veya 180° olmayan döndürmeleri çizmek daha zordur. Şimdi bu şekli ${10*ang}{ang|6|-18,18,1}° ile [döndürme merkezi](target:rot) etrafında döndürmeyi deneyelim.
@@ -479,28 +481,28 @@ Bir şekil yansıtıldıktan sonra aynı görünüyorsa [__yansıma simetrisine_
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/lake.jpg" width=220 height=180)
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/beijing.jpg" width=220 height=180)
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20)
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
       x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(2,2),point(5,1),point(8,2),point(9,4),point(8,6),point(5,7),point(2,6),point(1,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(255,148,31,0.4)")
       path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
@@ -508,7 +510,7 @@ Bir şekil yansıtıldıktan sonra aynı görünüyorsa [__yansıma simetrisine_
 {.caption} Bu şekil [[2]] simetri doğrusuna sahiptir.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,2),point(7,2),point(7,6),point(3,6))" style="stroke: #363644; stroke-width: 3px; fill: rgba(242,124,43,0.4)")
       path(hidden name="line4a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line4b" x="line(point(5,-1),point(5,9))")
@@ -518,7 +520,7 @@ Bir şekil yansıtıldıktan sonra aynı görünüyorsa [__yansıma simetrisine_
 {.caption} Kare [[4]] simetri doğrusuna sahiptir.
 ::: column(width=220)
 
-    x-geopad.draw.reflection(width=220 height=180 grid=20): svg
+    x-geopad.draw.reflection(width=220 height=180 grid=20 no-points): svg
       path(x="polygon(point(3,1),point(9,3),point(8,6),point(2,4))" style="stroke: #363644; stroke-width: 3px; fill: rgba(230,100,56,0.4)")
       path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
       path(hidden name="line5b" x="line(point(7,-1),point(3,11))")
@@ -566,8 +568,8 @@ Alfabedeki çoğu şekil yansıma simetrisine sahiptir. Yansıma simetrisi olan 
     x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path.fill.finished(hidden x="polygon(point(2,1),point(8,1),point(9,2),point(9,6),point(8,7),point(2,7),point(1,6),point(1,2))" style="fill: rgba(130,43,155,0.4)")
       path(x="polyline(point(5,1),point(8,1),point(9,2),point(9,4))")
-      path.red(x="line(point(5,-1),point(5,9))" name="line2")
-      path.red(x="line(point(-1,4),point(11,4))" name="line2")
+      path.red(x="line(point(5,-1),point(5,9))")
+      path.red(x="line(point(-1,4),point(11,4))")
       path(hidden x="polyline(point(5,1),point(2,1),point(1,2),point(1,6),point(2,7),point(8,7),point(9,6),point(9,4))" name="to2")
 
 :::

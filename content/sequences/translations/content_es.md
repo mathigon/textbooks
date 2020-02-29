@@ -346,7 +346,7 @@ En realidad, el intervalo de tiempo no siempre es _exactamente_ 76 años: puede 
 
 Un grupo diferente de científicos está investigando el comportamiento de una pelota de tenis que rebota. Dejaron caer la pelota desde una altura de 10 metros y midieron su posición con el tiempo. Con cada rebote, la pelota pierde algo de su altura original:
 
-    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7" label-suffix="s,m" axis-names="time,height")
+    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)
@@ -1448,7 +1448,7 @@ Los números primos tampoco tienen una representación geométrica simple como [
 
 ::: column(width=320)
 
-    x-coordinate-system(width=320 height=320 padding="8 8 20 24")
+    x-coordinate-system(width=320 height=320 padding="8 8 20 24" axis-names="x,number of primes less than x")
 
 {.caption} Si dibujamos un gráfico que aumenta en 1 siempre que haya un número primo, obtenemos una función "escalonada" con propiedades fascinantes.
 
@@ -1584,7 +1584,7 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 
 Parece que la longitud de la secuencia varía mucho, pero siempre terminará en un ciclo 4, 2, 1, sin importar el primer número que elijamos. Incluso podemos visualizar los términos de la secuencia en un gráfico:
 
-    x-coordinate-system(padding="12 12 24 40")
+    x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Observe cómo algunos puntos de partida terminan muy rápidamente, mientras que otros (como _{span.var-action} 31_ o _{span.var-action} 47_) toman más de un centenar de pasos antes de llegar al 4, 2, 1 ciclo.

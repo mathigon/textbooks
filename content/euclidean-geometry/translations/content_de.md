@@ -543,7 +543,7 @@ auf Papier skizzieren zu können:
       svg
         circle.move(name="a" cx=50 cy=190)
         circle.move(name="b" cx=250 cy=50)
-        path.red(name="l1" x="segment(a,b)" style="display: none")
+        path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
 {.text-center} Eine __gerade Leiste__ die nichts anderes als ein Lineal ohne Zentimeterskala ist. Du
@@ -557,7 +557,7 @@ erweitern (wie in Axiom 2).
         circle.move(name="c" cx=150 cy=120)
         circle.move(name="d" cx=250 cy=150)
         path(x="segment(c,d)")
-        path.red(name="c1" x="arc(c,d,1.99*pi)" style="display: none")
+        path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
       x-play-btn
 
 {.text-center} Mit einem __Zirkel__ kannst du einen Kreis einer bestimmten Größe um
