@@ -123,26 +123,28 @@ _{span.reveal(when="blank-0 blank-1")}The length of side *c* has to be between 2
 > goals: target-0 target-1
 
 ::: column.grow
+
 Once again, we can think about this using physical objects: two sides of the
 triangle are metal rods of length 4 and 6, and the third side is a rubber band
 that can expand or contract.
 
-Now you can see that the rubber band will always be _{span.hover-target} longer than_
-`6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
+Now you can see that the rubber band will always be _{span.hover-target} longer
+than_ `6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
+
 ::: column(width=300)
 
     x-geopad(width=300 height=200): svg
-      circle.move(name="a" cx=150 cy=150)
-      circle.move(name="b" cx=70 cy=150 project="circle(a,80)")
-      circle.move(name="c" cx=250 cy=50 project="circle(a,120)")
-      path(x="segment(a,b)" style="stroke-width: 5px" label="4")
-      path(x="segment(a,c)" style="stroke-width: 5px" label="6")
-      path.teal(x="segment(b,c)" label="${floor(distance(b,c)/20+0.01)}")
+      circle(name="a" cx=170 cy=130 hidden)
+      circle.move(name="b" cx=75 cy=60 project="circle(a,120)")
+      circle.move(name="c" cx=300 cy=110 project="circle(a,80)")
+      path.thick(x="segment(a,b)" label="6")
+      path.thick(x="segment(a,c)" label="4")
+      path.orange(x="segment(b,c)" label="${floor(distance(b,c)/20+0.01)}")
 
 :::
 
 Note that these are _strict_ inequalities. If the third side is _exactly_ 2 or
-10, we get a straight line and not a triangle. However 2.1 or 9.9 would be
+10, we get a straight line and not a triangle. However, 2.1 or 9.9 would be
 enough to form a triangle.
 
 ---

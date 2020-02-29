@@ -139,8 +139,8 @@ export async function sssConstruction($step: Step) {
 
   await $step.onScore('next-0');
 
-  $geopad.animatePoint(base.components[0].name, model.point(42, 220));
-  $geopad.animatePoint(base.components[1].name, model.point(258, 220));
+  $geopad.animatePoint(base.components[0].name, new Point(42, 220));
+  $geopad.animatePoint(base.components[1].name, new Point(258, 220));
   $geopad.switchTool('circle');
 
   let circle1 = await $geopad.waitForPath(
@@ -232,21 +232,14 @@ export function pythagorasProof($step: Step) {
 
   // -----
 
-  model.B1 = model.point(40, 100);
-  model.X1 = model.point(170, 100);
-  model.C1 = model.point(170, 20);
-  model.A2 = model.point(220, 100);
-  model.X2 = model.point(170, 100);
-  model.C2 = model.point(170, 20);
-
   const $geopad = $step.$('.similar-triangle') as Geopad;
   $step.onScore('next-0', () => {
-    $geopad.animatePoint('B1', model.point(10, 210), 1000);
-    $geopad.animatePoint('X1', model.point(120, 142), 1000);
-    $geopad.animatePoint('C1', model.point(162, 210), 1000);
-    $geopad.animatePoint('A2', model.point(250, 170), 1000);
-    $geopad.animatePoint('X2', model.point(224, 128), 1000);
-    $geopad.animatePoint('C2', model.point(156, 170), 1000);
+    $geopad.animatePoint('B1', new Point(10, 210), 1000);
+    $geopad.animatePoint('X1', new Point(120, 142), 1000);
+    $geopad.animatePoint('C1', new Point(162, 210), 1000);
+    $geopad.animatePoint('A2', new Point(250, 170), 1000);
+    $geopad.animatePoint('X2', new Point(224, 128), 1000);
+    $geopad.animatePoint('C2', new Point(156, 170), 1000);
   });
 
 }
@@ -255,16 +248,10 @@ export function pythagoreanTriplesGrid($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const found = new Set();
 
-  const sqrtDistance = (p: Point) => round(
-      Math.sqrt(p.x ** 2 + (17 - p.y) ** 2), 3);
-
-  $step.model.setComputed('sqrtA', (m: any) => sqrtDistance(m.a));
-
   $step.model.watch((m: any) => {
     const p = m.a;
-    const d = sqrtDistance(p);
 
-    const valid = p.x > 0 && p.y < 17 && isInteger(d);
+    const valid = p.x > 0 && p.y > 0 && isInteger(p.length);
     $geopad.setClass('triple', valid);
     if (!valid) return;
 

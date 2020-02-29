@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+import {total} from '@mathigon/core';
 import {clamp, toWord, Segment, Point, Angle, lerp, Line, Rectangle, Polygon} from '@mathigon/fermat';
 import {Browser, slide} from '@mathigon/boost';
 import {Geopad, GeoPath, GeoPoint, GeoShape, Slider, Step} from '../shared/types';
@@ -20,6 +21,15 @@ import './components/folding';
 import './components/anibutton';
 
 
+function internalAngles(polygon: Polygon) {
+  const n = polygon.points.length;
+  return polygon.points.map((p, i) => {
+    const a = polygon.points[(i + 1) % n];
+    const b = polygon.points[(i - 1 + n) % n];
+    return Math.round(new Angle(a, p, b).deg);
+  });
+}
+
 export function angles($step: Step) {
   const totals = [360, 540];
   const $buttons = $step.$$('x-anibutton') as Anibutton[];
@@ -35,20 +45,12 @@ export function angles($step: Step) {
     });
   }
 
+  $step.model.setComputed('a1', (m: any) => internalAngles(m.p1));
+  $step.model.setComputed('a2', (m: any) => internalAngles(m.p2));
+
   $step.model.watch((s: any) => {
-    const a1 = new Angle(s.b, s.a, s.d).deg;
-    const a2 = new Angle(s.c, s.b, s.a).deg;
-    const a3 = new Angle(s.d, s.c, s.b).deg;
-    const a4 = new Angle(s.a, s.d, s.c).deg;
-    overlap[0] = a1 + a2 + a3 + a4 > 361;
-
-    const b1 = new Angle(s.f, s.e, s.i).deg;
-    const b2 = new Angle(s.g, s.f, s.e).deg;
-    const b3 = new Angle(s.h, s.g, s.f).deg;
-    const b4 = new Angle(s.i, s.h, s.g).deg;
-    const b5 = new Angle(s.e, s.i, s.h).deg;
-    overlap[1] = b1 + b2 + b3 + b4 + b5 >= 541;
-
+    overlap[0] = total(s.a1) > 361;
+    overlap[1] = total(s.a2) >= 541;
     if (overlap[0] || overlap[1]) $step.addHint('no-overlap');
   });
 
@@ -83,7 +85,10 @@ export function midsegments($step: Step) {
   $geopad.on('add:point', ({point}: {point: GeoPoint}) => {
     if (points.length === 4) return point.delete();
     points.push(point);
-    if (points.length === 4) $step.score('points');
+    if (points.length === 4) {
+      $step.score('points');
+      $geopad.switchTool('move');
+    }
   });
 
   $geopad.on('add:path', ({path}: {path: GeoPath<Line>}) => {
@@ -108,8 +113,6 @@ export function midsegments($step: Step) {
       $geopad.drawPoint(new Point(220, 240)),
       $geopad.drawPoint(new Point(260, 90))
     ];
-
-    $geopad.switchTool('move');
 
     const [a, b, c, d] = points.map(p => p.value);
     if (Segment.intersect(new Segment(a!, b!), new Segment(c!, d!))) {
@@ -191,30 +194,31 @@ export function quadrilateralsArea($step: Step) {
 
   $geopads[0].switchTool('rectangle');
   $geopads[0].on('add:path', ({path}: {path: GeoPath<Rectangle>}) => {
-    if (path.value!.w * path.value!.h === 48) {
-      // TODO shift to correct location
+    if (path.value!.w === 8 && path.value!.h === 6) {
+      $geopads[0].animatePoint(path.components[0].name, new Point(2, 3));
+      $geopads[0].animatePoint(path.components[1].name, new Point(10, 9));
       $step.addHint('correct');
       $step.score('draw-1');
+      $geopads[0].switchTool('move')
     } else {
       $step.addHint('incorrect');
       path.delete();
     }
   });
-  $step.onScore('draw-1', () => $geopads[0].switchTool('move'));
-
 
   $geopads[1].switchTool('rectangle');
   $geopads[1].on('add:path', ({path}: {path: GeoPath<Rectangle>}) => {
     if (path.value!.w * path.value!.h === 48) {
-      // TODO shift to correct location
+      $geopads[1].animatePoint(path.components[0].name, new Point(3, 3));
+      $geopads[1].animatePoint(path.components[1].name, new Point(11, 9));
       $step.addHint('correct');
       $step.score('draw-2');
+      $geopads[1].switchTool('move')
     } else {
       $step.addHint('incorrect');
       path.delete();
     }
   });
-  $step.onScore('draw-2', () => $geopads[1].switchTool('move'));
 }
 
 // -----------------------------------------------------------------------------

@@ -294,33 +294,36 @@ the case, the construction requires a bit more work:
     x-geopad.sticky(width=300): svg
       circle.move.pulsate(name="l1" cx="180" cy="30" target="refl")
       circle.move.pulsate(name="l2" cx="120" cy="270" target="refl")
-      path.dark(name="refl" x="line(l1,l2)" target="refl")
+      path(name="refl" x="line(l1,l2)" target="refl")
 
       circle.reveal(name="a" x="point(60,50)" when="next-0" animation="pop" target="circ")
-      circle.reveal(name="b" x="point(120,100)" when="next-2" animation="pop")
-      circle.reveal(name="c" x="point(110,170)" when="next-2" animation="pop" delay=100)
-      circle.reveal(name="d" x="point(65,200)" when="next-2" animation="pop" delay=200)
-      circle.reveal(name="e" x="point(30,120)" when="next-2" animation="pop" delay=300)
+      circle(name="b" x="point(120,100)" hidden)
+      circle(name="c" x="point(110,170)" hidden)
+      circle(name="d" x="point(65,200)" hidden)
+      circle(name="e" x="point(30,120)" hidden)
+
+      circle.reveal(name="p" x="refl.project(a)" when="next-0" animation="pop" delay=1500)
+      path.reveal.fill.light(x="angle(a,p,l1)" size=16 when="next-0" delay=1500)
 
       circle.reveal(name="a1" x="a.reflect(refl)" when="next-1" animation="pop" target="circ")
-      circle.reveal(name="b1" x="b.reflect(refl)" when="next-2" animation="pop" delay=1000)
-      circle.reveal(name="c1" x="c.reflect(refl)" when="next-2" animation="pop" delay=1100)
-      circle.reveal(name="d1" x="d.reflect(refl)" when="next-2" animation="pop" delay=1200)
-      circle.reveal(name="e1" x="e.reflect(refl)" when="next-2" animation="pop" delay=1300)
+      circle(name="b1" x="b.reflect(refl)" hidden)
+      circle(name="c1" x="c.reflect(refl)" hidden)
+      circle(name="d1" x="d.reflect(refl)" hidden)
+      circle(name="e1" x="e.reflect(refl)" hidden)
 
       path.fill.blue(x="polygon(a,b,c,d,e)")
       path.fill.reveal.blue1(x="polygon(a1,b1,c1,d1,e1)" when="next-3")
 
-      path.thin.reveal(x="line(a,a1)" when="next-0" animation="draw" delay=1000)
-      path.thin.reveal(x="segment(b,b1)" when="next-2" animation="draw" delay=400)
-      path.thin.reveal(x="segment(c,c1)" when="next-2" animation="draw" delay=500)
-      path.thin.reveal(x="segment(d,d1)" when="next-2" animation="draw" delay=600)
-      path.thin.reveal(x="segment(e,e1)" when="next-2" animation="draw" delay=700)
+      path.reveal(x="line(a,a1)" when="next-0" animation="draw" delay=1000)
+      path.reveal.thin.light(x="segment(b,b1)" when="next-2" animation="draw" delay=400)
+      path.reveal.thin.light(x="segment(c,c1)" when="next-2" animation="draw" delay=500)
+      path.reveal.thin.light(x="segment(d,d1)" when="next-2" animation="draw" delay=600)
+      path.reveal.thin.light(x="segment(e,e1)" when="next-2" animation="draw" delay=700)
 
       circle.transparent(name="ax" x="refl.project(a)" target="circ")
-      path.dark.transparent(x="segment(a,ax)" target="d1 circ")
-      path.dark.transparent(x="segment(a1,ax)" target="d2 circ")
-      path.dark.transparent(x="circle(ax,distance(a,ax))" target="circ")
+      path.transparent(x="segment(a,ax)" target="d1 circ")
+      path.transparent(x="segment(a1,ax)" target="d2 circ")
+      path.transparent(x="circle(ax,distance(a,ax))" target="circ")
 
 ::: column.grow
 {.r} To reflect this shape across the [line of reflection](target:refl), we have
@@ -394,37 +397,37 @@ Try to rotate the shapes below around the red center of rotation:
       circle.move.pulsate(name="rot" cx="150" cy="250" target="rot angle compass protractor")
 
       circle.reveal(name="a" x="point(270,190)" when="next-0" animation="pop" target="compass")
-      circle.reveal(name="b" x="point(280,110)" when="next-3" animation="pop")
-      circle.reveal(name="c" x="point(210,80)" when="next-3" animation="pop" delay=100)
-      circle.reveal(name="d" x="point(190,170)" when="next-3" animation="pop" delay=200)
-      circle.reveal(name="e" x="point(220,200)" when="next-3" animation="pop" delay=300)
+      circle(name="b" x="point(280,110)" hidden)
+      circle(name="c" x="point(210,80)" hidden)
+      circle(name="d" x="point(190,170)" hidden)
+      circle(name="e" x="point(220,200)" hidden)
 
       circle.reveal(name="a1" x="a.rotate(-ang/18*pi,rot)" when="next-2" animation="pop" target="a1 compass")
-      circle.reveal(name="b1" x="b.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1200)
-      circle.reveal(name="c1" x="c.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1300)
-      circle.reveal(name="d1" x="d.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1400)
-      circle.reveal(name="e1" x="e.rotate(-ang/18*pi,rot)" when="next-3" animation="pop" delay=1500)
+      circle(name="b1" x="b.rotate(-ang/18*pi,rot)" hidden)
+      circle(name="c1" x="c.rotate(-ang/18*pi,rot)" hidden)
+      circle(name="d1" x="d.rotate(-ang/18*pi,rot)" hidden)
+      circle(name="e1" x="e.rotate(-ang/18*pi,rot)" hidden)
 
       path.fill.green(x="polygon(a,b,c,d,e)")
       path.fill.reveal.green1(x="polygon(a1,b1,c1,d1,e1)" when="next-4")
 
-      path.transparent.red.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
-      path.thin.reveal(x="angle(a1,rot,a)" when="next-1" animation="draw" target="angle protractor")
+      path.transparent.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
+      path.reveal.light.fill(x="angle(a1,rot,a)" when="next-1" target="angle protractor")
 
-      path.thin.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
-      path.thin.reveal(x="segment(rot,b)" when="next-3" animation="draw" delay=400)
-      path.thin.reveal(x="segment(rot,c)" when="next-3" animation="draw" delay=500)
-      path.thin.reveal(x="segment(rot,d)" when="next-3" animation="draw" delay=600)
-      path.thin.reveal(x="segment(rot,e)" when="next-3" animation="draw" delay=700)
+      path.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
+      path.reveal.thin.light(x="segment(rot,b)" when="next-3" animation="draw" delay=400)
+      path.reveal.thin.light(x="segment(rot,c)" when="next-3" animation="draw" delay=500)
+      path.reveal.thin.light(x="segment(rot,d)" when="next-3" animation="draw" delay=600)
+      path.reveal.thin.light(x="segment(rot,e)" when="next-3" animation="draw" delay=700)
 
-      path.thin.reveal(x="ray(rot,a1)" when="next-1" animation="draw" delay=500 target="angle l2")
-      path.thin.reveal(x="segment(rot,b1)" when="next-3" animation="draw" delay=800)
-      path.thin.reveal(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
-      path.thin.reveal(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
-      path.thin.reveal(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
+      path.reveal(x="ray(rot,a1)" when="next-1" animation="draw" delay=500 target="angle l2")
+      path.reveal.thin.light(x="segment(rot,b1)" when="next-3" animation="draw" delay=800)
+      path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
+      path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
+      path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
       
       path.transparent(x="segment(rot,a1)" target="compass protractor")
-      path.transparent.dark(x="circle(rot,distance(rot,a))" target="compass")
+      path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
 
 ::: column.grow
@@ -650,8 +653,8 @@ symmetry:
     x-geopad.draw(width=220 height=180 grid=20 no-points): svg
       path.fill.finished(hidden x="polygon(point(2,1),point(8,1),point(9,2),point(9,6),point(8,7),point(2,7),point(1,6),point(1,2))" style="fill: rgba(130,43,155,0.4)")
       path(x="polyline(point(5,1),point(8,1),point(9,2),point(9,4))")
-      path.red(x="line(point(5,-1),point(5,9))" name="line2")
-      path.red(x="line(point(-1,4),point(11,4))" name="line2")
+      path.red(x="line(point(5,-1),point(5,9))")
+      path.red(x="line(point(-1,4),point(11,4))")
       path(hidden x="polyline(point(5,1),point(2,1),point(1,2),point(1,6),point(2,7),point(8,7),point(9,6),point(9,4))" name="to2")
 
 :::

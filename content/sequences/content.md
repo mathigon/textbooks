@@ -372,7 +372,7 @@ tennis ball. They dropped the ball from a height of 10 meters and measured its
 position over time. With every bounce, the ball loses some of its original
 height:
 
-    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7" label-suffix="s,m" axis-names="time,height")
+    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)

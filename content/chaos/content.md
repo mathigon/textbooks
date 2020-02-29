@@ -427,7 +427,7 @@ Poincare etc.
       svg
         circle.large.move.red(name="a")
         circle.large.move.blue(name="b")
-        circle.large.move.green(name="c")        
+        circle.large.move.green(name="c")
         path.thin(x="segment(a, a.translate(va))" arrows="end")
         path.thin(x="segment(b, b.translate(vb))" arrows="end")
         path.thin(x="segment(c, c.translate(vc))" arrows="end")

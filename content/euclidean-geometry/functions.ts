@@ -28,7 +28,7 @@ export function thales($step: Step) {
     } else if (!b) {
       b = point.name;
       $geopad.drawPath(m => m.segment(m[a], m[b]), {animated: 800});
-      $geopad.drawPath(`arc(line(${a},${b}).midpoint,${a},Math.PI)`,
+      $geopad.drawPath(`arc(line(${a},${b}).midpoint,${a},pi)`,
           {name: 'semicirc', animated: 2000, target: 'circumf'});
       $step.score('p2');
 
@@ -135,7 +135,7 @@ export function equilateral($step: Step) {
   $geopad.showGesture('point(60,200)', 'point(260,200)');
   let segment0: GeoShape<Segment>|undefined = undefined;
 
-  $geopad.on('add:path', (path: GeoPath) => {
+  $geopad.on('add:path', ({path}: {path: GeoPath}) => {
     if (!path.value) return;
 
     if (isLineLike(path.value)) {

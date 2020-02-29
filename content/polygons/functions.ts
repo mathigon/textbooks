@@ -48,23 +48,21 @@ export function triangleInequality3($step: Step) {
 
   hover($targets[0], {
     enter() {
-      $geopad.animatePoint('a', new Point(90, 110), 1200);
-      $geopad.animatePoint('b', new Point(165, 105), 1200);
-      $geopad.animatePoint('c', new Point(210, 110), 1200);
+      $geopad.animatePoint('b', new Point(50, 127), 1200);
+      $geopad.animatePoint('c', new Point(250, 127), 1200);
       $step.score('target-0');
     }
   });
 
   hover($targets[1], {
     enter() {
-      $geopad.animatePoint('b', new Point(50, 105), 1200);
-      $geopad.animatePoint('a', new Point(130, 110), 1200);
-      $geopad.animatePoint('c', new Point(250, 105), 1200);
+      $geopad.animatePoint('b', new Point(90, 45), 1200);
+      $geopad.animatePoint('c', new Point(125, 65), 1200);
       $step.score('target-1');
     }
   });
 
-  const $rubber = $step.$('.teal')!;
+  const $rubber = $step.$('.orange')!;
   $geopad.model.watch(state => {
     $rubber.css('stroke-width', 450 / Point.distance(state.b, state.c) + 'px');
   });

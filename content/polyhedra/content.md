@@ -64,20 +64,15 @@ We already know that the sum of the internal angles in a triangle is always
       circle.move(name="b" cx=260 cy=80)
       circle.move(name="c" cx=240 cy=220)
       circle.move(name="d" cx=80 cy=260)
-      path.fill.red(x="angle(b,a,d)" label="${round(angle(b,a,d).deg)}°")
-      path.fill.blue(x="angle(c,b,a)" label="${round(angle(c,b,a).deg)}°")
-      path.fill.green(x="angle(d,c,b)" label="${round(angle(d,c,b).deg)}°")
-      path.fill.yellow(x="angle(a,d,c)" label="${round(angle(a,d,c).deg)}°")
-      path(x="segment(a,b)")
-      path(x="segment(b,c)")
-      path(x="segment(c,d)")
-      path(x="segment(d,a)")
+      path.fill.red(x="angle(b,a,d)" label="${a1[0]}°")
+      path.fill.blue(x="angle(c,b,a)" label="${a1[1]}°")
+      path.fill.green(x="angle(d,c,b)" label="${a1[2]}°")
+      path.fill.yellow(x="angle(a,d,c)" label="${360-a1[0]-a1[1]-a1[2]}°")
+      path(name="p1" x="polygon(a,b,c,d)")
 
-{.text-center.var} _{span.circled.red}${round(angle(b,a,d).deg)}°_ +
-_{span.circled.blue}${round(angle(c,b,a).deg)}°_ +
-_{span.circled.green}${round(angle(d,c,b).deg)}°_ +
-_{span.circled.yellow}${360 - round(angle(b,a,d).deg) - round(angle(c,b,a).deg) -
-round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+{.text-center.var} _{span.circled.red}${a1[0]}°_ +
+_{span.circled.blue}${a1[1]}°_ + _{span.circled.green}${a1[2]}°_ +
+_{span.circled.yellow}${360-a1[0]-a1[1]-a1[2]}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 
     x-gesture(target="x-anibutton")
 
@@ -89,23 +84,17 @@ round(angle(d,c,b).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
       circle.move(name="g" cx=220 cy=270)
       circle.move(name="h" cx=80 cy=240)
       circle.move(name="i" cx=30 cy=150)
-      path.fill.red(x="angle(f,e,i)" label="${round(angle(f,e,i).deg)}°")
-      path.fill.blue(x="angle(g,f,e)" label="${round(angle(g,f,e).deg)}°")
-      path.fill.green(x="angle(h,g,f)" label="${round(angle(h,g,f).deg)}°")
-      path.fill.yellow(x="angle(i,h,g)" label="${round(angle(i,h,g).deg)}°")
-      path.fill(x="angle(e,i,h)" label="${round(angle(e,i,h).deg)}°")
-      path(x="segment(e,f)")
-      path(x="segment(f,g)")
-      path(x="segment(g,h)")
-      path(x="segment(h,i)")
-      path(x="segment(i,e)")
+      path.fill.red(x="angle(f,e,i)" label="${a2[0]}°")
+      path.fill.blue(x="angle(g,f,e)" label="${a2[1]}°")
+      path.fill.green(x="angle(h,g,f)" label="${a2[2]}°")
+      path.fill.yellow(x="angle(i,h,g)" label="${a2[3]}°")
+      path.fill.purple(x="angle(e,i,h)" label="${540-a2[0]-a2[1]-a2[2]-a2[3]}°")
+      path(name="p2" x="polygon(e,f,g,h,i)")
 
-{.text-center.var} _{span.circled.red}${round(angle(f,e,i).deg)}°_ +
-_{span.circled.blue}${round(angle(g,f,e).deg)}°_ +
-_{span.circled.green}${round(angle(h,g,f).deg)}°_ +
-_{span.circled.yellow}${round(angle(i,h,g).deg)}°_ +
-_{span.circled}${540 - round(angle(f,e,i).deg) - round(angle(g,f,e).deg) -
-round(angle(h,g,f).deg) - round(angle(i,h,g).deg)}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
+{.text-center.var} _{span.circled.red}${a2[0]}°_ +
+_{span.circled.blue}${a2[1]}°_ + _{span.circled.green}${a2[2]}°_ +
+_{span.circled.yellow}${a2[3]}°_ +
+_{span.circled.purple}${540-a2[0]-a2[1]-a2[2]-a2[3]}°_ &nbsp;=&nbsp; _{x-anibutton(text="???")}_
 :::
 
 ---
@@ -1185,8 +1174,8 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
 [[twice|once|three times]] at every vertex in the tessellation, we get 360°:
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
-      circle(name="m" x="point(100,80)")
-      circle(name="p" x="point(100,150)")
+      circle(name="m" cx=100 cy=80)
+      circle(name="p" cx=100 cy=150)
       circle.move(name="q" cx=175 cy=130)
       circle(name="r" x="p.rotate(pi,line(m,q).midpoint)")
       circle(name="s" x="p.rotate(pi,m)")

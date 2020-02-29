@@ -184,7 +184,7 @@ function drawThreeShapes($step: Step) {
 export const reflections1 = drawThreeShapes;
 export const rotations = drawThreeShapes;
 export const reflectionalSymmetry2 = drawThreeShapes;
-export const rotationalSymmetry2 = reflectionalSymmetry2;
+export const rotationalSymmetry2 = drawThreeShapes;
 
 export function palindromes($step: Step) {
   const $inputs = $step.$$('input') as InputView[];

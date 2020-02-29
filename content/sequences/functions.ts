@@ -90,14 +90,14 @@ export function ball($step: Step) {
   const $balls = $step.$$('.tennis-ball');
 
   $chart.setFunctions(bounce);
-  // TODO $chart.$('.axes > path')!.setAttr('x1', '2');
+  $chart.$xAxis!.setAttr('x1', '2');
   const $fn = $chart.$plot.$('path')!;
 
   function tick(n: number) {
     const x = 6.65 * n / $slider.steps;
     const p = $chart.toViewportCoords(new Point(x, bounce(x)));
 
-    const right = ($chart.plotBounds.xMax - p.x) / $chart.plotBounds.dx * 100;
+    const right = ($chart.viewportBounds.xMax - p.x) / $chart.viewportBounds.dx * 100;
     $fn.css('clip-path', `inset(-2px ${right}% -2px -2px)`);
 
     setPosition($balls[0], p, 640, 320, x * 90);
