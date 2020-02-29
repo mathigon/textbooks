@@ -1,6 +1,6 @@
 {
   "name": "@mathigon/textbooks",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Mathigon Textbooks",
   "homepage": "https://mathigon.org/",
   "repository": "mathigon/textbooks",
@@ -16,16 +16,16 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@mathigon/boost": "^0.4.4",
-    "@mathigon/core": "^0.3.4",
-    "@mathigon/fermat": "^0.3.4",
-    "@mathigon/hilbert": "^0.3.4",
+    "@mathigon/boost": "^0.4.5",
+    "@mathigon/core": "^0.3.5",
+    "@mathigon/fermat": "^0.3.5",
+    "@mathigon/hilbert": "^0.3.5",
     "@types/d3": "^5.7.2",
     "@types/topojson": "^3.2.2",
     "three": "^0.110.0"
   },
   "devDependencies": {
-    "@mathigon/parser": "^0.4.3",
+    "@mathigon/parser": "^0.4.4",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "autoprefixer": "^9.7.1",
