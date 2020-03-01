@@ -371,7 +371,7 @@ layout are called __bipartite graphs__.
 :::
 
 {.reveal(when="blank-0 blank-1")} The bipartite graph with two sets of size _x_
-and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
+and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2*x* – _y_]]
 edges, _{span.reveal(when="blank-2")}which means that in the above example there
 are ${m} × ${f} = ${m×f} dates._
 
