@@ -5,9 +5,9 @@
 
 
 import {Obj} from '@mathigon/core';
-import {Point, nearlyEquals, Segment, isLineLike, isCircle} from '@mathigon/fermat';
+import {Point, nearlyEquals, Segment, isLineLike, isCircle, Circle} from '@mathigon/fermat';
 import {$N, slide, SVGView} from '@mathigon/boost';
-import {GeoElement, GeoMovablePoint, Geopad, GeoPath, PlayBtn, Step, Video} from '../shared/types';
+import {Geopad, GeoPath, GeoPoint, GeoShape, Path, PlayBtn, Step, Video} from '../shared/types';
 
 
 export function thales($step: Step) {
@@ -15,12 +15,12 @@ export function thales($step: Step) {
 
   $geopad.showGesture('point(200,160)');
 
-  $geopad.setActiveTool('point');
+  $geopad.switchTool('point');
   let a = '';
   let b = '';
   let c = '';
 
-  $geopad.on('add:point', (point: GeoMovablePoint) => {
+  $geopad.on('add:point', ({point}: {point: GeoPoint}) => {
     if (!a) {
       a = point.name;
       $step.score('p1');
@@ -28,19 +28,19 @@ export function thales($step: Step) {
     } else if (!b) {
       b = point.name;
       $geopad.drawPath(m => m.segment(m[a], m[b]), {animated: 800});
-      $geopad.drawPath(`arc(line(${a},${b}).midpoint,${a},Math.PI)`,
+      $geopad.drawPath(`arc(line(${a},${b}).midpoint,${a},pi)`,
           {name: 'semicirc', animated: 2000, target: 'circumf'});
       $step.score('p2');
 
     } else if (!c) {
       c = point.name;
-      point.project(m => m.semicirc.contract(0.2));
-      $geopad.drawPath(m => m.triangle(m[a], m[c], m[b]),
-          {animated: 2000, target: 'triangle', classes: 'red'});
+      point.project('semicirc.contract(0.2)');
       $geopad.drawPath(m => m.angle(m[b], m[c], m[a]),
           {animated: 500, target: 'angle', classes: 'red thin'});
+      $geopad.drawPath(m => m.triangle(m[a], m[c], m[b]),
+          {animated: 2000, target: 'triangle', classes: 'red'});
       $step.score('p3');
-      $geopad.setActiveTool('move');
+      $geopad.switchTool('move');
       $geopad.on('moveEnd', () => $step.score('move'));
     }
   });
@@ -128,54 +128,44 @@ export function tools($step: Step) {
 
 // -----------------------------------------------------------------------------
 
-export function equilateral($step: Step) {
+export async function equilateral($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
+  const drawingOptions = {onIncorrect: () => $step.addHint('incorrect')};
 
-  $geopad.setActiveTool('line');
+  $geopad.switchTool('line');
   $geopad.showGesture('point(60,200)', 'point(260,200)');
-  let segment0: GeoElement<Segment>|undefined = undefined;
 
-  $geopad.on('add:path', (path: GeoPath) => {
-    if (!path.val) return;
+  // Draw the base of the triangle.
+  const s0 = await $geopad.waitForPath<Segment>((p: Path) => isLineLike(p),
+      drawingOptions);
 
-    if (isLineLike(path.val)) {
-      if (!segment0) {
-        segment0 = path as any as GeoElement<Segment>;
-        path.$el.setAttr('target', 'a b');
-        $geopad.setActiveTool('circle');
-        $geopad.animatePoint(path.points[0].name, new Point(60, 260));
-        $geopad.animatePoint(path.points[1].name, new Point(260, 260));
-        return $step.score('segment0');
+  s0.$el.setAttr('target', 'a b');
+  $geopad.animatePoint(s0.components[0].name, new Point(60, 260));
+  $geopad.animatePoint(s0.components[1].name, new Point(260, 260));
+  $geopad.switchTool('circle');
+  $step.score('segment0');
 
-      } else if (nearlyEquals(segment0.val!.length, path.val.length)) {
-        if (path.val.p1.equals(segment0.val!.p1) ||
-            path.val.p2.equals(segment0.val!.p1)) {
-          path.$el.setAttr('target', 'a');
-          return $step.score('segment1');
-        } else if (path.val.p1.equals(segment0.val!.p2) ||
-                   path.val.p2.equals(segment0.val!.p2)) {
-          path.$el.setAttr('target', 'b');
-          return $step.score('segment2');
-        }
-      }
+  // Draw the two circles
+  const [c1, c2] = await $geopad.waitForPaths([
+    `circle(${s0.name}.p1,distance(${s0.name}.p1,${s0.name}.p2))`,
+    `circle(${s0.name}.p2,distance(${s0.name}.p1,${s0.name}.p2))`,
+  ], drawingOptions);
 
-    } else if (segment0 && isCircle(path.val)) {
-      if (nearlyEquals(segment0.val!.length, path.val.r)) {
-        if (path.val.c.equals(segment0.val!.p1)) {
-          return $step.score('circle1');
-        } else if (path.val.c.equals(segment0.val!.p2)) {
-          return $step.score('circle2');
-        }
-      }
-    }
+  $step.score('circle1');
+  $step.score('circle2');
+  $geopad.switchTool('line');
 
-    $step.addHint('incorrect');
-    path.remove();
-  });
+  // Draw the two side segments
+  const [s1, s2] = await $geopad.waitForPaths<Segment>([
+    `segment(${s0.name}.p1,intersections(${c1.name},${c2.name})[0])`,
+    `segment(${s0.name}.p2,intersections(${c1.name},${c2.name})[0])`,
+  ], drawingOptions);
 
-  $geopad.on('add:point', path => { if (segment0) path.remove(); });
-  $step.onScore('circle1 circle2', () => $geopad.setActiveTool('line'));
-  $step.onScore('segment1 segment2', () => $geopad.setActiveTool('move'));
+  s1.$el.setAttr('target', 'a');
+  s2.$el.setAttr('target', 'b');
+  $step.score('segment1');
+  $step.score('segment2');
+  $geopad.switchTool('move');
 }
 
 // -----------------------------------------------------------------------------

@@ -248,7 +248,7 @@ x-pi-scroll.box-body {
   x-geopad { background: none; }
   .sunrays { display: block; position: absolute; }
   .shadow { fill: #ccc; transition: fill .2s; }
-  .obelisk { pointer-events: none; transform-origin: center bottom; }
+  .obelisk { transform-origin: center bottom; }
   .earth-cover.fill { fill: transparent; }
 
   &.focus .sunrays { opacity: 0.2; }
@@ -268,12 +268,8 @@ x-pi-scroll.box-body {
 }
 
 x-geopad.sketch {
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  background: transparent;
-
+  .labels text { stroke: none !important; }
   ellipse { stroke: #96969e; stroke-width: 2px; fill: fade(@yellow, 30%); transition: opacity .2s; }
-  .thick { width: 6px; }
   .light.green, .light.teal { opacity: 0.3; }
   .light.focus { opacity: 0.6; }
   .focus & ellipse { opacity: 0.3; }

@@ -5,7 +5,7 @@
 
 
 import {chunk} from '@mathigon/core';
-import {$N, Browser, CustomElementView, register, slide} from '@mathigon/boost';
+import {$html, $N, Browser, CustomElementView, register, slide} from '@mathigon/boost';
 import {create3D, Graphics3D} from './webgl';
 
 const STROKE_COLOR = 0x666666;
@@ -32,6 +32,7 @@ function rotate($solid: Solid, animate = true, speed = 1) {
 
   // Only Chrome is fast enough to support auto-rotation.
   const autoRotate = animate && Browser.isChrome && !Browser.isMobile;
+  $solid.css('cursor', 'grab');
 
   let dragging = false;
   let visible = false;
@@ -53,7 +54,10 @@ function rotate($solid: Solid, animate = true, speed = 1) {
   const s = Math.PI / 2 / $solid.scene.$canvas.width * 1.1;
 
   slide($solid.scene.$canvas, {
-    start() { dragging = true; },
+    start() {
+      dragging = true;
+      $html.addClass('grabbing');
+    },
     move(posn, start, last) {
       const d = posn.subtract(last).scale(s);
       const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
@@ -61,7 +65,10 @@ function rotate($solid: Solid, animate = true, speed = 1) {
       $solid.trigger('rotate', {quaternion: $solid.object.quaternion});
       if (!autoRotate) frame();
     },
-    end() { dragging = false; }
+    end() {
+      dragging = false;
+      $html.removeClass('grabbing');
+    }
   });
 }
 
