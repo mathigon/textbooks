@@ -115,7 +115,7 @@ export function handshakes1($section: Step) {
   const $graph = $section.$('.graph') as SVGParentView;
   const g = new Graph($graph, 5, [], {icon: person});
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     g.load(state.hnd, subsets(list(state.hnd), 2));
     g.attraction /= 2;
     g.repulsion *= 2;
@@ -123,7 +123,7 @@ export function handshakes1($section: Step) {
 }
 
 export function handshakes2($step: Step) {
-  $step.model.set('handshakeTable', (n: number) => {
+  $step.model.handshakeTable = (n: number) => {
     const colours = Color.rainbow($step.model.n);
 
     function makePerson(x: number, y: number) {
@@ -139,7 +139,7 @@ export function handshakes2($step: Step) {
            tabulate2D(makePerson, n - 1, n).map(x => `<tr>${x.join('')}</tr>`)
                .join('') +
            '</table>';
-  });
+  };
 }
 
 export function handshakes2a($step: Step) {
@@ -160,7 +160,7 @@ export function handshakes4($section: Step) {
   const graph = $section.$('.graph') as SVGParentView;
   const g = new Graph(graph, 0, [], {static: true, icon: person, bound: true});
 
-  $section.model.watch((state) => {
+  $section.model.watch((state: any) => {
     const m = state.m;
     const f = state.f;
 
@@ -834,7 +834,7 @@ export function maps2($section: Step) {
 }
 
 export function salesman2($section: Step) {
-  $section.model.set('tsmString', (x: number) => {
+  $section.model.tsmString = (x: number) => {
     const a = [`There are <strong>${x}</strong> choices for the first city.`];
     if (x > 2) a.push(
         `After picking the first city, there are only <strong>${x -
@@ -850,15 +850,15 @@ export function salesman2($section: Step) {
 
     return '<li style="margin-bottom: 0">' +
            a.join('</li><li style="margin-bottom: 0">') + '</li>';
-  });
+  };
 
-  $section.model.set('tsnPaths', (x: number) => {
+  $section.model.tsnPaths = (x: number) => {
     return list(x, 1).join(' × ') + ' = ' + numberFormat(factorial(x));
-  });
+  };
 }
 
 export function salesman3($section: Step) {
-  $section.model.set('factorial', (x: number) => numberFormat(factorial(x)));
+  $section.model.factorial = (x: number) => numberFormat(factorial(x));
 }
 
 export function salesman4($step: Step) {

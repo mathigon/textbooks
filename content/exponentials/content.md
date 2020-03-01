@@ -196,7 +196,7 @@ If we start with an initial amount of ${format(x0)}{x0|3000|100,4000,100} atoms,
 and the half-life is ${format(hl)}{hl|5000|200,10000,200} years, then the decay
 looks like this:
 
-    x-coordinate-system(width=600 height=400 x-axis="0|18000" y-axis="0|4000" x-label="Years" y-label="Carbon-14 Atoms" margins="20 20 20 40")
+    x-coordinate-system(width=600 height=400 x-axis="0,18000" y-axis="0,4000" axis-names="Years,Carbon-14 Atoms" padding="20 20 20 40")
 
 ---
 > id: radioactive-chart-2

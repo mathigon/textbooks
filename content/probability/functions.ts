@@ -43,7 +43,7 @@ const probabilities: Obj<number[]> = {
 export function diceSimulation($step: Step) {
   let scores: number[] = [];
 
-  $step.model.set('probTable', (d: number) => {
+  $step.model.probTable = (d: number) => {
     const pmax = probabilities[d][Math.round(7 * d / 2)];
     const keys = list(d, d * 6);
 
@@ -58,7 +58,7 @@ export function diceSimulation($step: Step) {
 
     scores = repeat(0, 60);
     return table([row1, row2, row3, row4]);
-  });
+  };
 
   function rollDice() {
     const d = $step.model.d;

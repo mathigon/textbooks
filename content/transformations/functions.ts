@@ -27,7 +27,7 @@ function play($step: Step, $el: ElementView, duration: number, score: string,
 }
 
 function expandSegment($geopad: Geopad, [e1, e2]: GeoPoint[], line: Line) {
-  const swap = Point.distance(e1.val!, line.p1) > Point.distance(e2.val!, line.p1);
+  const swap = Point.distance(e1.value!, line.p1) > Point.distance(e2.value!, line.p1);
   $geopad.animatePoint(swap ? e2.name : e1.name, line.p1);
   $geopad.animatePoint(swap ? e1.name : e2.name, line.p2);
 }
@@ -38,11 +38,11 @@ function drawShape($step: Step, $geopad: Geopad, goal: string, shape: string,
   const lines = flatten(
       words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));
 
-  $geopad.setActiveTool('line');
+  $geopad.switchTool('line');
 
   $geopad.waitForPaths(lines, {
     onCorrect(path, i) {
-      if (expand) expandSegment($geopad, path.points, lines[i]);
+      if (expand) expandSegment($geopad, path.components, lines[i]);
     },
     onIncorrect() {
       $step.addHint('incorrect', {force: true});
@@ -184,7 +184,7 @@ function drawThreeShapes($step: Step) {
 export const reflections1 = drawThreeShapes;
 export const rotations = drawThreeShapes;
 export const reflectionalSymmetry2 = drawThreeShapes;
-export const rotationalSymmetry2 = reflectionalSymmetry2;
+export const rotationalSymmetry2 = drawThreeShapes;
 
 export function palindromes($step: Step) {
   const $inputs = $step.$$('input') as InputView[];
