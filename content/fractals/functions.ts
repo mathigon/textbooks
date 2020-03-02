@@ -5,7 +5,7 @@
 
 
 import {CanvasView} from '@mathigon/boost';
-import {Point, Polyline} from '@mathigon/fermat';
+import {Point, Polyline, Complex} from '@mathigon/fermat';
 import {Geopad, Slider, Step} from '../shared/types';
 
 
@@ -42,7 +42,7 @@ export function fern($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const $canvas = $geopad.$('canvas') as CanvasView;
 
-  $step.model.watch(({steps, a, b, c1, c2}) => {
+  $step.model.watch(({steps, a, b, c1, c2}: any) => {
     $canvas.clear();
     drawIteration($canvas, a, b, c1, c2, steps);
 
@@ -55,6 +55,18 @@ export function fern($step: Step) {
 // -----------------------------------------------------------------------------
 // Mandelbrot Set
 
+export function mandelPaint($step: Step) {
+  $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString();
+
+  const square = (p: Point) => new Point(p.x * p.x - p.y * p.y, 2 * p.x * p.y);
+
+  $step.model.setComputed('x1', ({c}: any) => square(c).add(c));
+  $step.model.setComputed('x2', ({x1, c}: any) => square(x1).add(c));
+  $step.model.setComputed('x3', ({x2, c}: any) => square(x2).add(c));
+  $step.model.setComputed('x4', ({x3, c}: any) => square(x3).add(c));
+  $step.model.setComputed('x5', ({x4, c}: any) => square(x4).add(c));
+}
+
 export function mandelZoom($step: Step) {
   const $images = $step.$$('.mandel-frame img');
   const $slider = $step.$('x-slider') as Slider;
@@ -62,7 +74,7 @@ export function mandelZoom($step: Step) {
 
   $step.model.pow = (s: number) => Math.round(2 ** (s/100 * 19));
 
-  $step.model.watch(state => {
+  $step.model.watch((state: any) => {
     for (const [i, $img] of $images.entries()) {
       const scale = state.scale * speed - 2 * i;
       const isVisible = scale > -3 && scale < 2;

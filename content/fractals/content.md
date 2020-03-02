@@ -424,6 +424,25 @@ the value of _c_ to
 Once more, paint over the complex plane to discover the shape of the XXX in
 this example:
 
+::: column(width=460)
+
+    x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes padding=10 snap=10)
+      canvas(width=1080 height=960)
+      svg
+        circle.move(name="c" cx=0 cy=0 style="r: 25; stroke: blue; fill: white")
+
+::: column.grow(width=200)
+
+c = ${complex(c)}
+
+| x_0 = | 0^2   + c | = | ${complex(c)}  |
+| x_1 = | x_0^2 + c | = | ${complex(x1)} |
+| x_2 = | x_1^2 + c | = | ${complex(x2)} |
+| x_3 = | x_2^2 + c | = | ${complex(x3)} |
+| x_4 = | x_3^2 + c | = | ${complex(x4)} |
+| x_5 = | x_4^2 + c | = | ${complex(x5)} |
+
+:::
 
 ---
 
