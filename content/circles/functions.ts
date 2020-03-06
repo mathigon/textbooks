@@ -19,6 +19,7 @@ import {PiScroll} from './components/pi-scroll';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
+import './components/ellipse';
 
 
 // -----------------------------------------------------------------------------
