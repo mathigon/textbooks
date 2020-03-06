@@ -5,6 +5,8 @@
 
 
 import {EventTarget} from '@mathigon/core';
+import './components/enigma'
+
 // import {clamp, letterFrequency, caesarCipher, cipherLetterFreq} from '@mathigon/fermat';
 // import {$, $N} from '@mathigon/boost';
 // import {Step} from '../shared/types';

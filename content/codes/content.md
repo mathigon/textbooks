@@ -175,7 +175,10 @@ using substitution ciphers:
 > section: enigma
 > sectionStatus: dev
 
-{.todo} TODO
+Here is a virtual enigma:
+
+    include ./components/enigma
+    x-enigma
 
 ---
 
