@@ -141,7 +141,7 @@ export class EllipseDrawing extends CustomElementView {
             afterDraggedBefore = dragBandRoundSnagForwards(band.points, afterSnag, beforeSnag);
           // Now the same thing with the bit of string *before* the pen.
           if (!afterDraggedBefore) {
-            const penDraggedBefore = dragBandRoundSnagBackwards(band.points, penSnag, beforeSnag);
+            penDraggedBefore = dragBandRoundSnagBackwards(band.points, penSnag, beforeSnag);
             if (penDraggedBefore && !penDraggedAfter && snags.length === 3)
               beforeDraggedAfter = dragBandRoundSnagBackwards(band.points, beforeSnag, afterSnag);
           }
@@ -154,25 +154,19 @@ export class EllipseDrawing extends CustomElementView {
 
           // Now the snags are all in the right places,
           // we just need to straighten out the segments.
-          if (penDraggedAfter) {
+          if (penDraggedAfter)
             straightenSegment(band.points, penSnag, afterSnag);
-            if (afterDraggedBefore)
-              straightenSegment(band.points, afterSnag, beforeSnag);
-            else
-              pullSegment(band.points, afterSnag, beforeSnag);
-            if (snags.length === 3)
-              pullSegment(band.points, beforeSnag, penSnag);
-          } else if (penDraggedBefore) {
-            straightenSegment(band.points, beforeSnag, penSnag);
-            if (beforeDraggedAfter)
-              straightenSegment(band.points, afterSnag, beforeSnag);
-            else
-              pullSegment(band.points, afterSnag, beforeSnag);
-            if (snags.length === 3)
-              pullSegment(band.points, penSnag, afterSnag);
-          } else {
-            pullSegment(band.points, beforeSnag, penSnag);
+          else
             pullSegment(band.points, penSnag, afterSnag);
+          if (penDraggedBefore)
+            straightenSegment(band.points, beforeSnag, penSnag);
+          else
+            pullSegment(band.points, beforeSnag, penSnag);
+          if (snags.length > 2) {
+            if (beforeDraggedAfter || afterDraggedBefore)
+              straightenSegment(band.points, afterSnag, beforeSnag);
+            else
+              pullSegment(band.points, afterSnag, beforeSnag);
           }
           // for (const snag of snags)
           //   band.points[snag.index] = snag.point;
@@ -202,13 +196,20 @@ export class EllipseDrawing extends CustomElementView {
     }
 
     function straightenSegment(band: Point[], start: Snag, end: Snag) {
+      for (const point of band)
+        if (isNaN(point.x))
+          console.error('inputnan', band, start, end)
       let p = 0;
+      const ib = [...band];
       const requiredSegments = (end.index - start.index + band.length) % band.length,
         segmentFraction = 1 / requiredSegments;
       for (let i = start.index; i !== end.index; i = (i + 1) % band.length) {
         band[i] = Point.interpolate(start.point, end.point, p);
         p += segmentFraction;
       }
+      for (const point of band)
+        if (isNaN(point.x))
+          console.error('nan found', ib, start, end)
     }
 
     function nearestPointOfBand(band: Point[], p: Point): NearestPoint {
@@ -248,10 +249,11 @@ export class EllipseDrawing extends CustomElementView {
       const nearestPointToPen = nearestPointOfBand(band.points, p);
       let points = pivotArray(band.points, nearestPointToPen.index!);
 
+      let iterations = 10;
       while (true) {
         points = dragSegmentForwards(points, p);
         points = dragSegmentBackwards(points, p);
-        if (!closeEnough(points[0], p))
+        if (!closeEnough(points[0], p) && --iterations)
           continue;
         // const newBand = new Polygon(...points);
         // console.log(bandLength, newBand.circumference);
@@ -281,11 +283,15 @@ export class EllipseDrawing extends CustomElementView {
 
     function pullSegment(points: Point[], start: Snag, end: Snag) {
       
+      for (const point of points)
+        if (isNaN(point.x))
+          console.error('inputpullnan', points, start, end)
       // straightenSegment(points, start, end);
       // return;
+      const ip = [...points];
 
       // console.log('pulling')
-      const pointCount = (end.index - start.index + points.length) % points.length || points.length;
+      const pointCount = ((end.index - start.index + points.length) % points.length) || points.length;
       const segment = pivotArray(points, start.index, end.index);
       if (segment.length !== pointCount) {
         console.error(start, end, points.length);
@@ -325,6 +331,9 @@ export class EllipseDrawing extends CustomElementView {
 
       points[start.index] = start.point;
       points[end.index] = end.point;
+      for (const point of points)
+        if (isNaN(point.x))
+          console.error('pullnan', ip, start, end)
       return;
 
       // const pointCount = (end.index - start.index + points.length) % points.length;
@@ -381,6 +390,13 @@ export class EllipseDrawing extends CustomElementView {
       }
       // smoothBand(points);
       // console.log('a', points.length);
+      // let d = 0;
+      // for (let i = 1; i < points.length; ++i)
+      //   d += Point.distance(points[i - 1], points[i]);
+      // const l = points.length * bandSegmentLength;
+      // console.log('len by number of points:', l);
+      // console.log('len by geometry:', d);
+      // console.log('error:', d - l);
       return points;
     }
 
@@ -411,11 +427,19 @@ export class EllipseDrawing extends CustomElementView {
     // Drags a single point towards a target on a rigid rod of given length
     function dragPoint(current: Point, target: Point): Point {
       const difference = current.subtract(target);
+      // Just to stop divisions by zero:
+      if (difference.length < 0.0001)
+        return target.add({ x: 0.1, y: 0.1 });
       return target.add(difference.scale(bandSegmentLength / difference.length));
     }
 
     function updateBandGraphic() {
       // console.log(band.circumference, bandLength, band);
+      const pe = ((band.circumference - bandLength) / bandLength * 100);
+      if (pe > 5)
+        console.error(pe.toFixed(2) + '%');
+      else if (pe > 2)
+        console.warn(pe.toFixed(2) + '%');
       const points = band.points.length > 10 ? smoothBand(band.points) : band.points;
       $band.points = [ ...points, points[0] ];
     }
