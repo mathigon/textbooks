@@ -8,11 +8,38 @@
 
 
 x-ellipse-drawing {
+
+  width: 100%;
+  display: block;
+
   svg {
+    cursor: move;
+    margin: auto;
+    background-color: rgb(247, 247, 248);
+    
     .band {
-        stroke-width: 1px;
-        stroke: red;
-        fill: none;
+      stroke-width: 3px;
+      stroke: rgb(157, 11, 78);
+      fill: none;
+    }
+
+    .pin {
+      fill: rgb(34, 171, 36);
+    }
+
+    path.shadow {
+      stroke-width: 3px;
+      stroke: rgb(200, 200, 200);
+      fill: none;
+    }
+    circle.shadow {
+      fill: rgb(200, 200, 200);
+    }
+
+    .trail {
+      stroke-width: 2px;
+      stroke: rgba(0, 0, 0, 0.1);
+      fill: none;
     }
   }
 }

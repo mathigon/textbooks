@@ -10,6 +10,7 @@ import {CustomElementView, register, $N, slide, SVGBaseView, SVGParentView} from
 import { smallAngle } from '../functions';
 import { Points } from 'three';
 import { polygonHull } from 'd3';
+import { triangleInequality } from '../../polygons/functions';
 
 interface NearestPoint {
   point: Point;
@@ -53,18 +54,37 @@ export class EllipseDrawing extends CustomElementView {
       .translate(this.centre);
 
     const $svg = $N('svg', { width: width, height: height }, this) as SVGParentView;
+    //const $trail = $N('path', { class: 'trail' }, $svg) as SVGBaseView<SVGPathElement>;
+    let $trail: SVGBaseView<SVGPathElement>;
+    for (const pin of this.pins) {
+      const shadow = pin.add({ x: 10, y: 10 });
+      $N('circle', { class: 'shadow', cx: shadow.x, cy: shadow.y, r: 5 }, $svg);
+      const stick = $N('path', { class: 'shadow' }, $svg) as SVGBaseView<SVGPathElement>;
+      stick.points = [ pin, shadow ];
+    }
     const $band = $N('path', { class: 'band' }, $svg) as SVGBaseView<SVGPathElement>;
     updateBandGraphic();
     for (const pin of this.pins)
       $N('circle', { class: 'pin', cx: pin.x, cy: pin.y, r: 5 }, $svg);
     const $pen = $N('circle', { 
       class: 'pen',
-      cx: width / 2,
-      cy: height / 2,
+      // Hide pen initially by positioning it offscreen
+      cx: width * 10,
+      cy: height * 10,
       r: 3
     }, $svg) as SVGBaseView<SVGCircleElement>;
 
     slide($svg, {
+      start: () => {
+        $trail = $N('path', { class: 'trail' }) as SVGBaseView<SVGPathElement>;
+        $svg._el.insertBefore($trail._el, $band._el);
+      },
+      end: () => {
+        $pen.setCenter({
+          x: -1000,
+          y: -1000
+        });
+      },
       move: (p) => {
         // console.log('FRAME START');
         let distance = this.totalDistanceToPins(p);
@@ -79,6 +99,8 @@ export class EllipseDrawing extends CustomElementView {
           }
 
         $pen.setCenter(p);
+        if ($trail)
+          $trail.points = [ ...$trail.points, p ];
 
         // If the pen is on (or very near) the perimeter,
         // don't bother with any physice simulation for the band.
