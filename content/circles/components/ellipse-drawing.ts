@@ -4,13 +4,9 @@
 // =============================================================================
 
 
-import {tabulate} from '@mathigon/core';
-import {clamp, nearlyEquals, SimplePoint, Point, Polygon} from '@mathigon/fermat';
+import {clamp, SimplePoint, Point, Polygon} from '@mathigon/fermat';
 import {CustomElementView, register, $N, slide, SVGBaseView, SVGParentView} from '@mathigon/boost';
-import { smallAngle } from '../functions';
-import { Points } from 'three';
-import { polygonHull } from 'd3';
-import { triangleInequality } from '../../polygons/functions';
+
 
 interface NearestPoint {
   point: Point;
@@ -23,10 +19,12 @@ interface Snag {
   point: Point;
 }
 
+
 const width = 500,
   height = 400,
   bandPoints = 500,
   bandSegmentFraction = 1 / bandPoints;
+
 
 @register('x-ellipse-drawing')
 export class EllipseDrawing extends CustomElementView {
@@ -36,6 +34,7 @@ export class EllipseDrawing extends CustomElementView {
     new Point(width * 0.7, height / 2),
   ];
   private centre = new Point(width / 2, height / 2);
+
 
   ready() {
     // totalDistance doesn't include the gap between the pins;
@@ -53,14 +52,14 @@ export class EllipseDrawing extends CustomElementView {
     band = band.scale(bandLength / band.circumference)
       .translate(this.centre);
 
+    // Generate the SVG elements (except $trail, which generates on-click):
     const $svg = $N('svg', { width: width, height: height }, this) as SVGParentView;
-    //const $trail = $N('path', { class: 'trail' }, $svg) as SVGBaseView<SVGPathElement>;
     let $trail: SVGBaseView<SVGPathElement>;
     for (const pin of this.pins) {
       const shadow = pin.add({ x: 10, y: 10 });
       $N('circle', { class: 'shadow', cx: shadow.x, cy: shadow.y, r: 5 }, $svg);
-      const stick = $N('path', { class: 'shadow' }, $svg) as SVGBaseView<SVGPathElement>;
-      stick.points = [ pin, shadow ];
+      const $stick = $N('path', { class: 'shadow' }, $svg) as SVGBaseView<SVGPathElement>;
+      $stick.points = [ pin, shadow ];
     }
     const $band = $N('path', { class: 'band' }, $svg) as SVGBaseView<SVGPathElement>;
     updateBandGraphic();
@@ -69,54 +68,56 @@ export class EllipseDrawing extends CustomElementView {
     const $pen = $N('circle', { 
       class: 'pen',
       // Hide pen initially by positioning it offscreen
-      cx: width * 10,
-      cy: height * 10,
+      cx: -1000,
+      cy: -1000,
       r: 3
     }, $svg) as SVGBaseView<SVGCircleElement>;
 
     slide($svg, {
       start: () => {
+        // Create a new trail every time a drag starts...
         $trail = $N('path', { class: 'trail' }) as SVGBaseView<SVGPathElement>;
         $svg._el.insertBefore($trail._el, $band._el);
       },
+
       end: () => {
+        // Hide the pen when the drag ends
         $pen.setCenter({
           x: -1000,
           y: -1000
         });
       },
-      move: (p) => {
-        // console.log('FRAME START');
-        let distance = this.totalDistanceToPins(p);
 
+      move: (p) => {
         // If the user has moved the pen outside the ellipse,
         // find a nearby point on the perimeter
         // (or rather, within one pixel of the perimeter).
+        let distance = this.totalDistanceToPins(p);
         if (distance > totalDistance)
           while (Math.abs(distance - totalDistance) > 1) {
             p = Point.interpolate(this.centre, p, totalDistance / distance);
             distance = this.totalDistanceToPins(p);
           }
 
+        // Draw the pen and its trail.
         $pen.setCenter(p);
         if ($trail)
           $trail.points = [ ...$trail.points, p ];
 
         // If the pen is on (or very near) the perimeter,
-        // don't bother with any physice simulation for the band.
-        // Just force it to be where we know it should be.
+        // don't bother with any physics simulation for the band.
+        // Just draw it as a triangle.
         if (totalDistance - distance < 2) {
           band = new Polygon(p, ...this.pins);
           updateBandGraphic();
           return;
         }
         
-        // If the pen is inside the current band polygon,
-        // we still don't need to do anything.
+        // If the pen is inside the band, no dragging happens.
         if (band.contains(p))
           return;
 
-        // Since the pen is within the band, we need to do "physics".
+        // Otherwise, we need to do "physics".
         // Make sure we have enough points to simulate.
         if (band.points.length < bandPoints) {
           const interpolatedBand: Point[] = [];
@@ -125,14 +126,17 @@ export class EllipseDrawing extends CustomElementView {
           band = new Polygon(...interpolatedBand);
         }
 
-        // The naive thing to do is simply drag the whole band towards the pen,
-        // so let's start with that.
+        // The naive thing to do is simply drag the whole band towards the pen.
+        // We start with that, and fix any problems later.
         band = dragBand(band, p);
 
+        // If we moved either of the are outside the band,
+        // we need to pull them back in.
+        // This might need iterating a couple of times but we limit it
+        // for performance and safety.
         let iterations = 0;
         while (++iterations < 3) {
-          // If that moved either of the pins are outside the band,
-          // we need to pull them back in.
+          // First, work out which pins are affected and whether we care.
           const snags: Snag[] = [{ index: 0, point: p }];
           let totalBadness = 0;
           for (const pin of this.pins)
@@ -144,14 +148,17 @@ export class EllipseDrawing extends CustomElementView {
                 point: pin
               });
             }
+          // If both pins are within (or very nearly within) the band,
+          // we don't need to change anything, so draw the band and exit.
           if (totalBadness < 2) {
             updateBandGraphic();
             return;
           }
           snags.sort((a, b) => a.index - b.index);
           
-          // First, check the bit of string *after* the pen
-          // to see if it's long enough to get to the snag point.
+          // Next, we calculate whether, and if so how, the string needs to slide past the pins.
+          // (We assume the pen is high-friction and is doing the dragging.
+          // That's not a good physical assumption, but it doesn't show.)
           const beforeSnag = snags[snags.length - 1],
             penSnag = snags[0],
             afterSnag = snags[1];
@@ -161,21 +168,14 @@ export class EllipseDrawing extends CustomElementView {
           const penDraggedAfter = dragBandRoundSnagForwards(band.points, penSnag, afterSnag);
           if (penDraggedAfter && snags.length === 3)
             afterDraggedBefore = dragBandRoundSnagForwards(band.points, afterSnag, beforeSnag);
-          // Now the same thing with the bit of string *before* the pen.
           if (!afterDraggedBefore) {
             penDraggedBefore = dragBandRoundSnagBackwards(band.points, penSnag, beforeSnag);
             if (penDraggedBefore && !penDraggedAfter && snags.length === 3)
               beforeDraggedAfter = dragBandRoundSnagBackwards(band.points, beforeSnag, afterSnag);
           }
 
-          // console.log({
-          //   snags,
-          //   penDraggedAfter, penDraggedBefore,
-          //   afterDraggedBefore, beforeDraggedAfter
-          // });
-
-          // Now the snags are all in the right places,
-          // we just need to straighten out the segments.
+          // Lastly, now we know how much string there is where,
+          // we move the individual elements to get the total distance (about) right.
           if (penDraggedAfter)
             straightenSegment(band.points, penSnag, afterSnag);
           else
@@ -190,14 +190,18 @@ export class EllipseDrawing extends CustomElementView {
             else
               pullSegment(band.points, afterSnag, beforeSnag);
           }
-          // for (const snag of snags)
-          //   band.points[snag.index] = snag.point;
-          
-          // console.log(band.points.map(p => `${p.x},     ${p.y}`).join('\n'))
+
+          // The loop now restarts —
+          // hopefully we've got both pins inside the band this time.
         }
       }
     });
 
+    // These two functions:
+    //   • Modify `snag` in place, if that's required to make sure
+    //     there are enough points between it and `target` to cover
+    //     the distance needed.
+    //   • Return `true` if `snag` was modified, and `false` if not.
     function dragBandRoundSnagForwards(band: Point[], target: Snag, snag: Snag): boolean {
       const requiredSegments = Point.distance(target.point, snag.point) / bandSegmentLength,
         availableSegments = (snag.index - target.index + band.length) % band.length;
@@ -217,21 +221,16 @@ export class EllipseDrawing extends CustomElementView {
       return false;
     }
 
+    // Replaces the points in a section of the band with a straight line.
+    // Used when the string is taut.
     function straightenSegment(band: Point[], start: Snag, end: Snag) {
-      for (const point of band)
-        if (isNaN(point.x))
-          console.error('inputnan', band, start, end)
       let p = 0;
-      const ib = [...band];
       const requiredSegments = (end.index - start.index + band.length) % band.length,
         segmentFraction = 1 / requiredSegments;
       for (let i = start.index; i !== end.index; i = (i + 1) % band.length) {
         band[i] = Point.interpolate(start.point, end.point, p);
         p += segmentFraction;
       }
-      for (const point of band)
-        if (isNaN(point.x))
-          console.error('nan found', ib, start, end)
     }
 
     function nearestPointOfBand(band: Point[], p: Point): NearestPoint {
@@ -255,170 +254,99 @@ export class EllipseDrawing extends CustomElementView {
     }
 
     // Takes an array which is assumed to be a loop and gives you a slice that wraps round.
-    // TODO: test this?
     function pivotArray<T>(array: T[], start: number, end = start): T[] {
-      if (end > start)
-        return array.slice(start, end);
-      else
-        return [
-          ...array.slice(start),
-          ...array.slice(0, end)
-        ];
+      return (end > start)
+        ? array.slice(start, end)
+        : [ ...array.slice(start), ...array.slice(0, end) ];
     }
 
-
+    // Drags the entire band to include point `p`
     function dragBand(band: Polygon, p: Point): Polygon {
       const nearestPointToPen = nearestPointOfBand(band.points, p);
       let points = pivotArray(band.points, nearestPointToPen.index!);
-
-      let iterations = 10;
       while (true) {
         points = dragSegmentForwards(points, p);
         points = dragSegmentBackwards(points, p);
-        if (!closeEnough(points[0], p) && --iterations)
-          continue;
-        // const newBand = new Polygon(...points);
-        // console.log(bandLength, newBand.circumference);
-        // if (Math.abs(bandLength - newBand.circumference) < 5) {
-          const smooth = smoothBand(points);
-          smooth[0] = p;
-          return new Polygon(...smooth);
-        // }
+        const smooth = smoothBand(points);
+        smooth[0] = p;
+        return new Polygon(...smooth);
       }
     }
 
+    // Sometimes the drag algorithm makes jagged edges when the chain is pushed rather than pulled.
+    // This function "blurs" the positions, masking that effect.
+    // It affects the length, but not so you'd notice.
     function smoothBand(points: Point[]): Point[] {
       const newPoints = [],
         n = points.length;
       for (let i = 0; i < n; ++i) {
-        const b = points[i],
-          a = points[(i + n - 1) % n],
-          c = points[(i + 1) % n];
-        newPoints[i] = b.scale(2).add(a.add(c)).scale(0.25);
+        const point = points[i],
+          next = points[(i + n - 1) % n],
+          previous = points[(i + 1) % n];
+        newPoints[i] = point.scale(2).add(next.add(previous)).scale(0.25);
       }
       return newPoints;
     }
 
+    // Cosntants used in pullSegment:
     const snapToStraightAt = 1.00,
       startInterpolatingAt = 1.05,
       interpolationRange = startInterpolatingAt - snapToStraightAt;
 
+    // Tightens a section of the string, but not completely.
     function pullSegment(points: Point[], start: Snag, end: Snag) {
-      
-      for (const point of points)
-        if (isNaN(point.x))
-          console.error('inputpullnan', points, start, end)
-      // straightenSegment(points, start, end);
-      // return;
-      const ip = [...points];
 
-      // console.log('pulling')
-      const pointCount = ((end.index - start.index + points.length) % points.length) || points.length;
+      // Pull out the section of the curve we care about.
       const segment = pivotArray(points, start.index, end.index);
-      if (segment.length !== pointCount) {
-        console.error(start, end, points.length);
-        throw new Error(`seglen = ${segment.length} but pointcount = ${pointCount}`);
-      }
 
-      // Fudge it to a straight line if it's close
-      // const totalDistance = pointCount * bandSegmentLength;
+      // Work out how close we are to a straight line
       let totalDistance = 0;
-      for (let i = 1; i < pointCount; ++i)
+      for (let i = 1; i < segment.length; ++i)
         totalDistance += Point.distance(segment[i - 1], segment[i]);
       const requiredDistance = Point.distance(start.point, end.point),
         distanceRatio = totalDistance / requiredDistance;
+
+      // Fudge it to a straight line if it's close
       if (distanceRatio < snapToStraightAt) {
-        // console.log('fudging pull', totalDistance, requiredDistance)
         straightenSegment(points, start, end);
         return;
       }
 
+      // Otherwise run a simple physics simulation to find a similar curve of the correct length
+      // and copy it into the points array.
       const draggedSegment = dragSegment(segment, start.point, end.point);
-      for (let i = 0; i < pointCount; ++i) {
+      for (let i = 0; i < segment.length; ++i) {
         points[(start.index + i) % points.length] = draggedSegment[i];
       }
 
+      // If it's close to the straightness where we'd fudge it into a straight line,
+      // interpolate with the straight line version to smooth any discontinuities between the algorithms
       if (distanceRatio < startInterpolatingAt) {
-        // interpolate with a straight line to smooth the discontinuities between the algorithms
         const straight = [ ...points ];
         straightenSegment(straight, start, end);
         const p = clamp((startInterpolatingAt - distanceRatio) / interpolationRange, 0, 1);
-        // console.log(distanceRatio,
-        //   startInterpolatingAt - distanceRatio,
-        //   (startInterpolatingAt - distanceRatio) / interpolationRange,
-        //   p);
         for (let i = 0; i < points.length; ++i)
           points[i] = Point.interpolate(points[i], straight[i], p);
       }
 
+      // Make sure the end points are correct, and return.
       points[start.index] = start.point;
       points[end.index] = end.point;
-      for (const point of points)
-        if (isNaN(point.x))
-          console.error('pullnan', ip, start, end)
       return;
-
-      // const pointCount = (end.index - start.index + points.length) % points.length;
-      const forwards: Point[] = [];
-      const backwards: Point[] = [];
-      for (let iterations = 0; iterations < 10; ++iterations) {
-        let lastForwardIndex = start.index,
-          lastBackwardIndex = end.index;
-        points[start.index] = start.point;
-        points[end.index] = end.point;
-        for (let i = 1; i < pointCount; ++i) {
-          const forwardIndex = (lastForwardIndex + 1) % points.length,
-            backwardIndex = (lastBackwardIndex || points.length) - 1;
-          forwards[forwardIndex] = dragPoint(points[forwardIndex], points[lastForwardIndex]);
-          backwards[backwardIndex] = dragPoint(points[backwardIndex], points[lastBackwardIndex]);
-          lastForwardIndex = forwardIndex;
-          lastBackwardIndex = backwardIndex;
-        }
-        // Lastly, interpolate between the forward and backward runs
-        if (iterations === 2) {
-          for (let i = 1; i < pointCount; ++i) {
-            const j = (lastForwardIndex + 1) % points.length;
-            if (forwards[j] && backwards[j]) {
-              points[j] = (iterations & 1) ? backwards[j] : forwards[j];
-            }
-            return;
-          }
-        }
-        for (let i = 1; i < pointCount; ++i) {
-          const j = (lastForwardIndex + 1) % points.length;
-          if (forwards[j] && backwards[j]) {
-            points[j] = Point.interpolate(backwards[j], forwards[j], i / pointCount);
-          }
-        }
-      }
-
-
     }
 
-    // Stretches a segment between two points.
+    // Stretches a segment between two points — a simpler version of pullSegment used as a utility.
     function dragSegment(points: Point[], newStart: Point, newEnd: Point): Point[] {
       let iterations = 10;
-      // console.log('b', points.length);
       while (true) {
         if (!--iterations) break;
         points = dragSegmentForwards(points, newStart);
-        // console.log('start err', Point.distance(points[points.length - 1], newEnd));
         if (closeEnough(points[points.length - 1], newEnd))
           break;
         points = dragSegmentBackwards(points, newEnd);
-        // console.log('end err', Point.distance(points[0], newStart));
         if (closeEnough(points[0], newStart))
           break;
       }
-      // smoothBand(points);
-      // console.log('a', points.length);
-      // let d = 0;
-      // for (let i = 1; i < points.length; ++i)
-      //   d += Point.distance(points[i - 1], points[i]);
-      // const l = points.length * bandSegmentLength;
-      // console.log('len by number of points:', l);
-      // console.log('len by geometry:', d);
-      // console.log('error:', d - l);
       return points;
     }
 
@@ -426,7 +354,8 @@ export class EllipseDrawing extends CustomElementView {
       return Point.manhattan(a, b) < 0.5;
     }
 
-    // Pulls a chain towards a new target
+    // These function pulls a chain towards a new target,
+    // with no regard for where the other end ends up.
     function dragSegmentForwards(points: Point[], target: Point): Point[] {
       const newPoints = [target];
       for (let i = 1; i < points.length; ++i)
@@ -455,13 +384,8 @@ export class EllipseDrawing extends CustomElementView {
       return target.add(difference.scale(bandSegmentLength / difference.length));
     }
 
+    // Draws the band to the screen.
     function updateBandGraphic() {
-      // console.log(band.circumference, bandLength, band);
-      const pe = ((band.circumference - bandLength) / bandLength * 100);
-      if (pe > 5)
-        console.error(pe.toFixed(2) + '%');
-      else if (pe > 2)
-        console.warn(pe.toFixed(2) + '%');
       const points = band.points.length > 10 ? smoothBand(band.points) : band.points;
       $band.points = [ ...points, points[0] ];
     }
@@ -472,5 +396,4 @@ export class EllipseDrawing extends CustomElementView {
       distance + pin.subtract(p).length,
       0);
   }
-
 }
