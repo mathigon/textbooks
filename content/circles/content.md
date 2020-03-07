@@ -2093,7 +2093,7 @@ focal points.
 If you have a long string connected to two fixed points, you can draw a perfect
 ellipse by tracing the maximum reach of the strings:
 
-{.todo} Coming soon: Ellipses drawing interactive
+    x-ellipse-drawing
 
     // ---
     // > id: ellipses-1

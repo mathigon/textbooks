@@ -14,9 +14,11 @@ import {Solid} from '../shared/components/solid';
 import {loadD3} from './components/d3-geo';
 import {EquationSystem, Geopad, Gesture, PlayBtn, Select, Slider, Step} from '../shared/types';
 import {PiScroll} from './components/pi-scroll';
+import {EllipseDrawing} from './components/ellipse-drawing';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
+import './components/ellipse-drawing';
 
 
 // -----------------------------------------------------------------------------
