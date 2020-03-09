@@ -446,7 +446,7 @@ Regel nur den spezifischsten Typ.
     x-geopad.sticky(width=300 height=300): svg
 
 ::: column.grow
-Wähle nun vier Punkte, irgendwo im grauen Feld links.
+Wähle nun vier Punkte, irgendwo im grauen Feld.
 _{span.reveal(when="points")} Wir können sie alle zu einem Viereck verbinden._
 
 {.reveal(when="points" delay=1000)} Wir wollen jetzt den Mittelpunkt jeder der vier
@@ -782,7 +782,7 @@ wir das auch für einige Vierecke tun können:
       path.blue(x="polygon(a1,b1,c1,d1)")
 
 ::: column.grow
-Versuche auf der linken Seite, ein Rechteck zu zeichnen, das die gleiche Fläche wie das
+Versuche entlang der Kästchen, ein Rechteck zu zeichnen, das die gleiche Fläche wie das
 Parallelogramm hat.
 
 {.reveal(when="draw-1")} Kannst du sehen, dass das [fehlende Dreieck](target:triangle-1)
@@ -792,7 +792,7 @@ _{span.reveal(when="blank-1")}Daher ist die Fläche eines Parallelogramms_
 
 {.text-center.reveal(when="blank-1")} Fläche = __{.i.m-green}Grundseite__ × __{.i.m-yellow}Höhe__
 
-{.reveal(when="blank-1" delay=1000)} _Seie vorsichtig bei der Messung der Höhe eines
+{.reveal(when="blank-1" delay=1000)} _Sei vorsichtig bei der Messung der Höhe eines
 Parallelogramms: Es ist in der Regel nicht gleich lang wie eine der beiden Seiten._
 :::
 
@@ -821,7 +821,7 @@ Diese parallelen Seiten werden als __Grundseiten__ des Trapezes bezeichnet.
       circle.reveal(when="blank-3" x="line(b2,c2).midpoint" target="t-width" animation="pop")
 
 ::: column.grow
-Versuche wie zuvor auf der linken Seite, ein Rechteck zu zeichnen, das die gleiche Fläche wie das Trapez hat.
+Versuche wie zuvor, ein Rechteck zu zeichnen, das die gleiche Fläche wie das Trapez hat.
 _{span.reveal(when="draw-2")} Kannst du sehen, wie sich die [fehlenden und hinzugefügten
 Dreiecke](target:triangles-3) links und rechts aufheben?_
 
@@ -875,7 +875,7 @@ und der Höhe [_h_](target:t-height):
       path.fill.yellow.transparent(x="polygon(d3,a3,point(1,9))" target="outside")
 
 ::: column.grow
-Bei diesem Deltoid](target:diag3) bilden die [beiden Diagonalen die Breite und Höhe
+Bei diesem [Deltoid](target:diag3) bilden die beiden Diagonalen die Breite und Höhe
 eines großen [Rechtecks](target:rect4), das das Deltoid umgibt.
 
 Die Fläche dieses Rechtecks ist [[doppelt so|gleich|dreimal so]] groß wie die Fläche des
