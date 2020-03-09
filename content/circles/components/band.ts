@@ -1,5 +1,6 @@
 import { Point, Polygon, SimplePoint, clamp } from "@mathigon/fermat";
 import { SVGBaseView } from "@mathigon/boost";
+import Rope from "./rope";
 
 interface NearestPoint {
   point: Point;
@@ -11,11 +12,6 @@ interface Snag {
   index: number;
   point: Point;
 }
-
-// Cosntants used in pullSegment:
-const snapToStraightAt = 1.00,
-  startInterpolatingAt = 1.03,
-  interpolationRange = startInterpolatingAt - snapToStraightAt;
 
 export default class Band {
   public length!: number;
@@ -170,10 +166,11 @@ export default class Band {
 
   dragTo(p: Point) {
     const nearestPointToPen = this.nearestPoint(p);
-    let points = pivotArray(this.points, nearestPointToPen.index!);
-    points = this.dragSegmentForwards(points, p);
-    this.points = this.dragSegmentBackwards(points, p);
-    this.smooth();
+    this.points = Rope
+      .fromArray(pivotArray(this.points, nearestPointToPen.index!))
+      .pull(p, p)
+      .smooth()
+      .points;
   }
 
   nearestPoint(p: Point): NearestPoint {
@@ -196,85 +193,26 @@ export default class Band {
     };
   }
 
-  smooth() {
-    const newPoints = [],
-      n = this.polygon.points.length;
-    for (let i = 0; i < n; ++i) {
-      const point = this.polygon.points[i],
-        next = this.polygon.points[(i + n - 1) % n],
-        previous = this.polygon.points[(i + 1) % n];
-      newPoints[i] = point.scale(2).add(next.add(previous)).scale(0.25);
-    }
-    this.points = newPoints;
-  }
-
   // Replaces the points in a section of the band with a straight line.
   // Used when the string is taut.
-  straightenSegment(points: Point[], start: Snag, end: Snag) {
-    if (end.index > this.segmentCount) throw new Error();
-    let p = 0;
-    const requiredSegments = (end.index - start.index + this.segmentCount) % this.segmentCount,
-      segmentFraction = 1 / requiredSegments;
-    for (let i = start.index; i !== end.index; i = (i + 1) % this.segmentCount) {
-      points[i] = Point.interpolate(start.point, end.point, p);
-      p += segmentFraction;
-    }
+  private straightenSegment(points: Point[], start: Snag, end: Snag) {
+    const segment = Rope
+      .fromArray(pivotArray(points, start.index, end.index))
+      .straighten(start.point, end.point)
+      .points;
+    wrappedSplice(points, segment, start.index);
   }
 
   // Tightens a section of the string, but not completely.
-  pullSegment(points: Point[], start: Snag, end: Snag) {
-    // Pull out the section of the curve we care about.
-    const segment = pivotArray(points, start.index, end.index);
-
-    // Work out how close we are to a straight line
-    const totalDistance = segment.length * this.segmentLength,
-      requiredDistance = Point.distance(start.point, end.point),
-      distanceRatio = totalDistance / requiredDistance;
-
-    // Fudge it to a straight line if it's close
-    if (distanceRatio < snapToStraightAt) {
-      this.straightenSegment(points, start, end);
-      return;
-    }
-
-    // Otherwise run a simple physics simulation to find a similar curve of the correct length
-    // and copy it into the points array.
-    const draggedSegment = this.dragSegment(segment, start.point, end.point);
-    for (let i = 0; i < segment.length; ++i) {
-      points[(start.index + i) % points.length] = draggedSegment[i];
-    }
-
-    // If it's close to the straightness where we'd fudge it into a straight line,
-    // interpolate with the straight line version to smooth any discontinuities between the algorithms
-    if (distanceRatio < startInterpolatingAt) {
-      const straight = [ ...points ];
-      this.straightenSegment(straight, start, end);
-      const p = clamp((startInterpolatingAt - distanceRatio) / interpolationRange, 0, 1);
-      for (let i = 0; i < points.length; ++i)
-        points[i] = Point.interpolate(points[i], straight[i], p);
-    }
-
-    // Make sure the end points are correct, and return.
-    points[start.index] = start.point;
-    points[end.index] = end.point;
-  }
-
-  // Stretches a segment between two points — a simpler version of pullSegment used as a utility.
-  dragSegment(points: Point[], newStart: Point, newEnd: Point): Point[] {
-    for (let iterations = 10; iterations > 0; --iterations) {
-      points = this.dragSegmentForwards(points, newStart);
-      if (closeEnough(points[points.length - 1], newEnd))
-        break;
-      points = this.dragSegmentBackwards(points, newEnd);
-      if (closeEnough(points[0], newStart))
-        break;
-    }
-    return points;
+  private pullSegment(points: Point[], start: Snag, end: Snag) {
+    const segment = Rope
+      .fromArray(pivotArray(points, start.index, end.index))
+      .pull(start.point, end.point)
+      .points;
+    wrappedSplice(points, segment, start.index);
   }
 
   updateGraphic() {
-    if (this.polygon.points.length > 10)
-      this.smooth();
     if (this.$path)
       this.$path.points = [ ...this.polygon.points, this.polygon.points[0] ];
   }
@@ -284,37 +222,13 @@ export default class Band {
       + Point.distance(p, this.pins[1]);
   }
 
-  // These function pulls a chain towards a new target,
-  // with no regard for where the other end ends up.
-  dragSegmentForwards(points: Point[], target: Point): Point[] {
-    const newPoints = [target];
-    for (let i = 1; i < points.length; ++i)
-      newPoints.push(this.dragPoint(points[i], newPoints[i - 1]));
-    return newPoints;
-  }
-  dragSegmentBackwards(points: Point[], target: Point): Point[] {
-    const newPoints = [target];
-    for (let i = points.length - 2; i >= 0; --i)
-      newPoints.unshift(this.dragPoint(points[i], newPoints[0]));
-    return newPoints;
-  }
-
-  // Drags a single point towards a target on a rigid rod of given length
-  dragPoint(current: Point, target: Point): Point {
-    const difference = current.subtract(target);
-    // Just to stop divisions by zero:
-    if (difference.length < 0.0001)
-      return target.add({ x: 0.1, y: 0.1 });
-    return target.add(difference.scale(this.segmentLength / difference.length));
-  }
-
   // These two functions:
   //   • Modify `snag` in place, if that's required to make sure
   //     there are enough points between it and `target` to cover
   //     the distance needed.
   //   • Return `true` if `snag` was modified, and `false` if not.
   // Both assume we have a fully flexible band, not just a triangle.
-  dragRoundSnagForwards(target: Snag, snag: Snag): boolean {
+  private dragRoundSnagForwards(target: Snag, snag: Snag): boolean {
     const requiredSegments = Point.distance(target.point, snag.point) / this.segmentLength,
       availableSegments = (snag.index - target.index + this.segmentCount) % this.segmentCount;
     if (availableSegments < requiredSegments) {
@@ -323,7 +237,7 @@ export default class Band {
     }
     return false;
   }
-  dragRoundSnagBackwards(target: Snag, snag: Snag) {
+  private dragRoundSnagBackwards(target: Snag, snag: Snag) {
     const requiredSegments = Point.distance(target.point, snag.point) / this.segmentLength,
       availableSegments = (target.index - snag.index + this.segmentCount) % this.segmentCount;
     if (availableSegments < requiredSegments) {
@@ -341,6 +255,11 @@ function pivotArray<T>(array: T[], start: number, end = start): T[] {
     : [ ...array.slice(start), ...array.slice(0, end) ];
 }
 
-function closeEnough(a: Point, b: Point): boolean {
-  return Point.manhattan(a, b) < 0.5;
+function wrappedSplice<T>(destination: T[], source: T[], start: number) {
+  for (let i = start, n = 0;
+    n < source.length;
+    ++n, i = ((i + 1) % destination.length)
+  ) {
+    destination[i] = source[n];
+  }
 }
