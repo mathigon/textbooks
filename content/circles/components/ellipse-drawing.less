@@ -16,6 +16,11 @@ x-ellipse-drawing {
     cursor: url('images/pencil-cursor.png'), pointer;
     margin: auto;
     background-color: rgb(247, 247, 248);
+
+    &.dragging-pin,
+    &.dragging-pin .pin {
+      cursor: grabbing;
+    }
     
     .band {
       stroke-width: 3px;
@@ -24,8 +29,16 @@ x-ellipse-drawing {
     }
 
     .pin {
-      cursor: move;
+      cursor: grab;
       fill: rgb(34, 171, 36);
+      transition: transform 100ms;
+      &:hover {
+        transform: scale(2);
+      }
+    }
+    &.dragging-pin-0 .pin-0,
+    &.dragging-pin-1 .pin-1 {
+      transform: scale(2);
     }
 
     path.shadow {
@@ -39,8 +52,9 @@ x-ellipse-drawing {
 
     .trail {
       stroke-width: 2px;
-      stroke: rgba(0, 0, 0, 0.1);
+      stroke: rgba(0, 0, 0, 0.4);
       fill: none;
+      transition: opacity 1s;
     }
   }
 }

@@ -12,16 +12,12 @@ interface Snag {
   point: Point;
 }
 
-const preferredBandLength = 300,
-  bandStretch = 1.2;
-
 // Cosntants used in pullSegment:
 const snapToStraightAt = 1.00,
-  startInterpolatingAt = 1.04,
+  startInterpolatingAt = 1.03,
   interpolationRange = startInterpolatingAt - snapToStraightAt;
 
 export default class Band {
-  public totalDistance!: number;
   public length!: number;
   public segmentLength!: number;
   public segmentCount!: number;
@@ -34,7 +30,7 @@ export default class Band {
   get points(): Point[] { return this.polygon.points; }
   set points(value: Point[]) { this.polygon = new Polygon(...value); }
 
-  constructor() {}
+  constructor(public totalDistance: number) {}
 
   initialise(pins: Point[]) {
     this.pins = [ ...pins ];
@@ -42,13 +38,6 @@ export default class Band {
     const pinDifference = pins[1].subtract(pins[0]),
       pinSeparation = pinDifference.length;
 
-    // Ideally the band length would be constant
-    // so that users can properly explore the effect of pin separation,
-    // but it does get longer if the pins are really far apart,
-    // just so it will always stretch around them.
-    this.totalDistance = pinSeparation > (preferredBandLength / bandStretch)
-      ? pinSeparation * bandStretch
-      : preferredBandLength;
     this.length = this.totalDistance + pinSeparation;
     this.segmentCount = Math.round(this.length);
     this.segmentLength = this.length / this.segmentCount;
@@ -71,17 +60,16 @@ export default class Band {
   closestAllowedPoint(p: Point) {
     // If the user has moved the pen outside the ellipse,
     // find a nearby point on the perimeter
-    // (or rather, within one pixel of the perimeter).
-    let distance = this.totalDistanceToPins(p);
-    if (distance > this.totalDistance) {
-      let iterations = 10;
-      while (Math.abs(distance - this.totalDistance) > 1) {
-        p = Point.interpolate(this.centre, p, this.totalDistance / distance);
-        distance = this.totalDistanceToPins(p);
-        if (--iterations === 0) break;
-      }
+    const distance = this.totalDistanceToPins(p);
+    if (distance < this.totalDistance) {
+      return p;
     }
-    return p;
+    const a = this.totalDistance / 2,
+      focusOffset = (this.pins[1].x - this.pins[0].x) / 2,
+      b = Math.sqrt(a ** 2 - focusOffset ** 2),
+      centre = Point.average(...this.pins),
+      theta = p.subtract(centre).scale(1 / a, 1 / b).angle();
+    return Point.fromPolar(theta, 1).scale(a, b).add(centre);
   }
 
   pullTo(p: Point) {
@@ -239,10 +227,8 @@ export default class Band {
     const segment = pivotArray(points, start.index, end.index);
 
     // Work out how close we are to a straight line
-    let totalDistance = 0;
-    for (let i = 1; i < segment.length; ++i)
-      totalDistance += Point.distance(segment[i - 1], segment[i]);
-    const requiredDistance = Point.distance(start.point, end.point),
+    const totalDistance = segment.length * this.segmentLength,
+      requiredDistance = Point.distance(start.point, end.point),
       distanceRatio = totalDistance / requiredDistance;
 
     // Fudge it to a straight line if it's close
@@ -294,9 +280,8 @@ export default class Band {
   }
 
   totalDistanceToPins(p: SimplePoint) {
-    return this.pins.reduce((distance, pin) =>
-      distance + pin.subtract(p).length,
-      0);
+    return Point.distance(p, this.pins[0])
+      + Point.distance(p, this.pins[1]);
   }
 
   // These function pulls a chain towards a new target,

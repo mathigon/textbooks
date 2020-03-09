@@ -9,7 +9,8 @@ import {CustomElementView, register, $N, slide, SVGBaseView, SVGParentView} from
 import Band from './band';
 
 const width = 500,
-  height = 400;
+  height = 400,
+  bandLength = 301;
 
 
 @register('x-ellipse-drawing')
@@ -19,9 +20,8 @@ export class EllipseDrawing extends CustomElementView {
     new Point(width * 0.3, height / 2),
     new Point(width * 0.7, height / 2),
   ];
-  private centre = new Point(width / 2, height / 2);
 
-  private band = new Band();
+  private band = new Band(bandLength);
 
   private $pins: Array<{
     $pin: SVGBaseView<SVGCircleElement>,
@@ -31,13 +31,13 @@ export class EllipseDrawing extends CustomElementView {
 
   ready() {
     // Generate the SVG elements (except $trail, which generates on-click):
-    const $svg = $N('svg', { width: width, height: height }, this) as SVGParentView;
+    const $svg = $N('svg', { width, height }, this) as SVGParentView;
     let $trail: SVGBaseView<SVGPathElement>;
-    this.$pins = this.pins.map(() => ({
+    this.$pins = this.pins.map((pin, i) => ({
       $shadowStick: $N('path', { class: 'shadow' }, $svg) as SVGBaseView<SVGPathElement>,
       $shadowBall: $N('circle', { class: 'shadow', r: 5 }, $svg) as SVGBaseView<SVGCircleElement>,
       // Don't append this one just yet as it needs to be above the band.
-      $pin: $N('circle', { class: 'pin', r: 5 }) as SVGBaseView<SVGCircleElement>
+      $pin: $N('circle', { class: `pin pin-${i}`, r: 5 }) as SVGBaseView<SVGCircleElement>
     }));
     this.band.$path = $N('path', { class: 'band' }, $svg) as SVGBaseView<SVGPathElement>;
     this.band.initialise(this.pins);
@@ -56,15 +56,24 @@ export class EllipseDrawing extends CustomElementView {
 
     slide($svg, {
       start: (p) => {
-        for (let i = 0; i < this.pins.length; ++i) {
+        for (let i = 0; i < this.pins.length; ++i)
           if (Point.distance(p, this.pins[i]) < 10) {
             draggingPin = i;
             this.band.$path!.hide();
+            $svg.addClass('dragging-pin');
+            $svg.addClass(`dragging-pin-${draggingPin}`);
             return;
           }
-        }
         
         // Create a new trail every time a drag starts...
+        for (const $oldTrail of this.$$('.trail')) {
+          const { style } = $oldTrail._el;
+          const opacity = style.opacity ? parseFloat(style.opacity) : 1;
+          if (opacity > 0)
+            style.opacity = (opacity - 0.2).toFixed(1);
+          else
+            $oldTrail._el.remove();
+        }
         $trail = $N('path', { class: 'trail' }) as SVGBaseView<SVGPathElement>;
         $svg._el.insertBefore($trail._el, this.band.$path!._el);
       },
@@ -78,6 +87,8 @@ export class EllipseDrawing extends CustomElementView {
         if (draggingPin !== null) {
           this.band.initialise(this.pins);
           this.band.$path!.show();
+          $svg.removeClass('dragging-pin');
+          $svg.removeClass(`dragging-pin-${draggingPin}`);
           draggingPin = null;
         }
       },
@@ -86,7 +97,10 @@ export class EllipseDrawing extends CustomElementView {
 
         // Handle pin-dragging first, because that's easy
         if (draggingPin !== null) {
-          this.pins[draggingPin] = p;
+          let x = (draggingPin === 0) ? width - p.x : p.x;
+          if (x < 275) x = 275;
+          if (x > 400) x = 400;
+          this.pins[draggingPin] = new Point((draggingPin === 0) ? width - x : x, height / 2);
           this.updatePinPositions();
           return;
         }
