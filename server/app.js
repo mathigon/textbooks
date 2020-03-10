@@ -84,7 +84,7 @@ app.get('/course/:course', function(req, res, next) {
 
 app.get('/course/:course/:section', function(req, res, next) {
   const lang = req.query.hl || 'en';
-  const dir = ['ar', 'fa'].includes(lang) ? 'rtl' : 'ltr';
+  const dir = ['ar', 'fa', 'iw'].includes(lang) ? 'rtl' : 'ltr';
 
   const course = getCourse(req.params.course, lang);
   if (!course) return next();
