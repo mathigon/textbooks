@@ -83,13 +83,16 @@ app.get('/course/:course', function(req, res, next) {
 });
 
 app.get('/course/:course/:section', function(req, res, next) {
-  const course = getCourse(req.params.course, req.query.hl || 'en');
+  const lang = req.query.hl || 'en';
+  const dir = ['ar', 'fa'].includes(lang) ? 'rtl' : 'ltr';
+
+  const course = getCourse(req.params.course, lang);
   if (!course) return next();
 
   const section = course.getSection(req.params.section);
   if (!section) return next();
 
-  res.render('course', {course, section});
+  res.render('course', {course, section, lang, dir});
 });
 
 app.post('/course/:course/ask', function(req, res) {
