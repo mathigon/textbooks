@@ -5,9 +5,6 @@
 > section: introduction
 > id: intro
 
-    // Chaos game: https://www.youtube.com/watch?v=kbKtFN71Lfs
-    // Mandelbrot: https://www.youtube.com/watch?v=NGMRB4O922I
-
 When looking around nature, you might have noticed plants like the two below.
 Initially they seem like highly complex and intricate shapes, but when you
 look closer, you might notice that they each follow a simple pattern:
@@ -51,8 +48,8 @@ kinds of shapes – looking like a tree, or like a fern.
 
 ::: column(width=320)
 
-    x-geopad.simulation(width=320 height=320)
-      canvas(width=320 height=320)
+    x-geopad(width=320 height=320)
+      canvas(width=640 height=640)
       svg
         circle(x="point(160,300)" name="a" hidden)
         circle(x="point(160,220)" name="b" hidden)
@@ -106,9 +103,9 @@ number dimension – they have a _fractional_ dimension. Initially this may seem
 impossible (What do you mean by a dimension like 2.5?), but it becomes clear
 when we compare fractals with other shapes.
 
-::: column(width=235)
+::: column(width=240)
 
-    img(src="images/dimImg1.png" width=235 height=60)
+    img(src="images/line.png" width=240 height=20)
 
 ::: column.grow
 
@@ -119,9 +116,9 @@ factor of 2, its length increases by a factor of `§2^1 = 2`. Obviously!_
 
 ---
 
-::: column(width=235)
+::: column(width=240)
 
-    img(src="images/dimImg2.png" width=235 height=94)
+    img(src="images/square.png" width=240 height=131)
 
 ::: column.grow
 
@@ -132,9 +129,9 @@ a factor of 2, its area increases by a factor of `§2^2 =` [[4]]._
 
 ---
 
-::: column(width=235)
+::: column(width=240)
 
-    img(src="images/dimImg3.png" width=235 height=116)
+    img(src="images/cube.png" width=240 height=157)
 
 ::: column.grow
 
@@ -145,9 +142,9 @@ a factor of 2, its volume increases by a factor of `§2^3 =` [[8]]._
 
 ---
 
-::: column(width=235)
+::: column(width=240)
 
-    img(src="images/dimImg4.png" width=235 height=131)
+    img(src="images/sierpinski.png" width=240 height=114)
 
 ::: column.grow
 
@@ -167,12 +164,20 @@ that the dimension of the Sierpinski Gasket is `d = log_2(3) = 1.585…`
 
 :::
 
-    <img src="resources/Fractals/snowflake-scale.png" width=210 height=50/>
+---
+
+::: column(width=380)
+
+    img(src="images/koch.png" width=380 height=171)
+
+::: column.grow
 
 When we scale one edge segment of the von Koch Snowflake by a factor of 3, its
 length quadruples. Therefore we get the equation `3^d=4`. Like before, we can
 solve this equation to find that the dimension of the von Koch Snowflake is
 `d = log_3(4) = 1.262…`
+
+:::
 
 Note that even though they are called _fractals_, these dimensions are not
 _fractions_. They are, in fact, [irrational numbers](/world/Real_Irrational_Imaginary).
@@ -282,6 +287,10 @@ Alan Sloan in the 1980s.
 > id: sierpinski
 
 ::: column.grow
+
+    // Chaos game: https://www.youtube.com/watch?v=kbKtFN71Lfs
+    // Mandelbrot: https://www.youtube.com/watch?v=NGMRB4O922I
+
 
 One of the fractals we looked at in the previous chapter was the __Sierpinski
 triangle__. It can be created by starting with one large, equilateral

@@ -4,15 +4,17 @@
 // =============================================================================
 
 
-import {CanvasView} from '@mathigon/boost';
+import {Color} from '@mathigon/core';
 import {Point, Polyline, Complex} from '@mathigon/fermat';
+import {CanvasView} from '@mathigon/boost';
 import {Geopad, Slider, Step} from '../shared/types';
 
 
 // -----------------------------------------------------------------------------
 // Introduction
 
-const options = {stroke: '#000', strokeWidth: 2};
+const colours = Color.gradient('#22ab24', '#0f82f2', 10).map(c => c.toString());
+const options = {strokeWidth: 3, lineCap: 'round', lineJoin: 'round'};
 
 /** Returns the image of x, if a-b is mapped onto b-c. */
 function transform(a: Point, b: Point, c: Point, x: Point) {
@@ -29,8 +31,8 @@ function drawIteration($canvas: CanvasView, a: Point, b: Point, c1: Point, c2: P
   const d3 = transform(a, b, c2, c1);
   const d4 = transform(a, b, c2, c2);
 
-  $canvas.draw(new Polyline(d1, c1, d2), options);
-  $canvas.draw(new Polyline(d3, c2, d4), options);
+  $canvas.draw(new Polyline(d1, c1, d2), {...options, stroke: colours[i]});
+  $canvas.draw(new Polyline(d3, c2, d4), {...options, stroke: colours[i]});
 
   if (i > 0) {
     drawIteration($canvas, b, c1, d1, d2, i - 1);
@@ -44,10 +46,7 @@ export function fern($step: Step) {
 
   $step.model.watch(({steps, a, b, c1, c2}: any) => {
     $canvas.clear();
-    drawIteration($canvas, a, b, c1, c2, steps);
-
-    // const m2 = matrix(a, b, c2);
-    // $canvas.draw(new Polyline(c1.transform(m2), c2, c2.transform(m2)));
+    drawIteration($canvas, a.scale(2), b.scale(2), c1.scale(2), c2.scale(2), steps);
   });
 }
 
