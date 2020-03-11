@@ -520,8 +520,8 @@ machine-learning-1:
   sections:
     - title: Introduction
     - title: Linear Regression
-    - title: Neural Networks
     - title: Support Vector Machines
+    - title: Neural Networks
     - title: Unsupervised Learning
     - title: Tensor Flow
 
