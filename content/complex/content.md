@@ -3,7 +3,7 @@
 ## Introduction
 
 > section: introduction
-> status: dev
+> sectionStatus: dev
 
 Throughout our journey through mathematics, we had to extend our number system
 to solve increasingly complex problems. We started with just the integers 1, 2,
@@ -59,7 +59,7 @@ Here is a geopad with axes and coordinate system
 ## Complex Arithmetic
 
 > section: arithmetic
-> status: dev
+> sectionStatus: dev
 
 * Represent solutions to equations using i and the complex plane.
 * Visualise why the sum of two complex numbers is another complex number.
@@ -78,7 +78,7 @@ Here is a geopad with axes and coordinate system
 ## Modulus and Argument
 
 > section: modulus-argument
-> status: dev
+> sectionStatus: dev
 
 * Convert between the Cartesian form and the modulus-argument form.
 * Multiply and divide complex numbers in modulus-­argument form.
@@ -90,7 +90,7 @@ Here is a geopad with axes and coordinate system
 ## Quadratic, Cubic and Quartic Equations
 
 > section: polynomials
-> status: dev
+> sectionStatus: dev
 
 * Know that non-­real roots of polynomial equations with real coefficients occur
   in conjugate pairs.
@@ -109,7 +109,7 @@ Here is a geopad with axes and coordinate system
 ## Euler’s Identity and De Moivre’s Theorem
 
 > section: euler-identity
-> status: dev
+> sectionStatus: dev
 
 * Know and use e^(iθ) = cos(θ) + i sin(θ) and the form z = re^(iθ).
 * Use De Moivre’s theorem to find multiple angle formulae and sums of series
@@ -120,7 +120,7 @@ Here is a geopad with axes and coordinate system
 ## Complex Roots of Unity
 
 > section: roots-of-unity
-> status: dev
+> sectionStatus: dev
 
 * Find the n distinct nth roots of re^(iθ)
 * Know that they form the vertices of a regular n-­gon in the Argand diagram.
