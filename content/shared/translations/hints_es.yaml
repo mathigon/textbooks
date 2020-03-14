@@ -3,7 +3,7 @@
 # ==============================================================================
 
 welcome: "¡Bienvenido a Mathigon! Soy Archie, tu tutor personal. :mortar_board:"
-account: Puede [crear una cuenta gratuita](->.nav-link.popup-target) para guardar su progreso.
+account: Puede [crear una cuenta gratuita](->#login-btn) para guardar su progreso.
 tutorial1: Nuestro contenido se divide en pequeños pasos. Tienes que completar las actividades para revelar lo que sigue.
 tutorial2: Guardaremos todo su progreso, para que pueda regresar más tarde y continuar justo donde lo dejó.
 
