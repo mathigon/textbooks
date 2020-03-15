@@ -6,7 +6,8 @@
 
 import {Complex, Point} from '@mathigon/fermat';
 import {Step} from '../shared/types';
-
+import './components/complexarithmetic';
+import './components/complextransform';
 
 export function demo($step: Step) {
   $step.model.complexRoot = (p: Point, n: number, i: number) => {
@@ -15,3 +16,4 @@ export function demo($step: Step) {
     return new Point(root.re, root.im);
   };
 }
+

@@ -30,8 +30,6 @@ get 4, and that works if x = 2.
 numberline to a plane, and rotate twice by 90°. Have another animation where the
 2d numberline transforms into a plane:
 
-{.fixme} Plane animation
-
 ---
 > id: demo
 
@@ -53,6 +51,65 @@ Here is a geopad with axes and coordinate system
   imaginary number is a real number times i.
 * Understand and use the terms ‘real part’ and ‘imaginary part.
 * Geometrical representation of complex numbers in the Argand diagram.
+
+---
+
+### Arithmetic on complex plane
+
+    include ./components/complexarithmetic
+    x-complex-arithmetic
+
+---
+
+### Complex functions transform the entire plane
+
+    include ./components/complextransform
+    x-complex-transform
+
+---
+
+### Addition using geopad
+
+    figure
+      x-geopad(width=600 height=400 x-axis="-6,6,1" y-axis="-4,4,1" axes grid padding=5): svg
+        circle(name="O" x="point(0,0)" target="no-move" label="O")
+        circle.move(name="P" cx=3 cy=1 label="z1")
+        circle.move(name="Q" cx=1 cy=1 label="z2")
+        path.yellow(x="segment(O,P)")
+        path.green(x="segment(O,Q)")
+        path.green(x="segment(P,P.add(Q))")
+        path.green(x="segment(Q,P.add(Q))")
+        circle(x="P.add(Q)" target="no-move" label="z1+z2")
+
+---
+
+### Subtraction using geopad
+
+    figure
+      x-geopad(width=600 height=400 x-axis="-6,6,1" y-axis="-4,4,1" axes grid padding=5): svg
+        circle(name="O" x="point(0,0)" target="no-move" label="O")
+        circle.move(name="P" cx=3 cy=1 label="z1")
+        circle.move(name="Q" cx=1 cy=1 label="z2")
+        path.yellow(x="segment(O,P)")
+        path.green(x="segment(O,Q)")
+        path.green(x="segment(P,P.subtract(Q))")
+        path.green(x="segment(Q,P.subtract(Q))")
+        circle(x="P.subtract(Q)" target="no-move" label="z1-z2")
+---
+
+### Multiplication using geopad
+
+    figure
+      x-geopad(width=600 height=400 x-axis="-6,6,1" y-axis="-4,4,1" axes grid padding=5): svg
+        circle(name="O" cx=0 cy=0 target="no-move" label="O")
+        path.yellow(x="ray(O,point(1,0))")
+        path.yellow(x="ray(O,point(0,1))")
+        circle.move(name="P" cx=3 cy=1 label="z1")
+        circle.move(name="Q" cx=1 cy=1 label="z2")
+        path.green(x="segment(O,P)")
+        path.red(x="segment(O,Q)")
+        circle(name="M" x="P.subtract(O).rotate(Q.subtract(O).angle()).scale(Q.subtract(O).length,Q.subtract(O).length).add(O)" label="z1*z2")
+        path.red(x="segment(O,M)")
 
 ---
 

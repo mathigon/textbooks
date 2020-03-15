@@ -6,4 +6,33 @@
 
 @import "../shared/variables";
 
-// TODO
+.complex-plane {
+    display: block;
+    position: relative;
+    margin: 1.5rem 0;
+    @media screen and (max-width: @browser-small) { margin: 1.5em -24px; }
+  
+    canvas {
+      width: 100%;
+      height: auto;
+      background: @grey-background;
+      border-radius: 6px;
+    }
+  
+    x-select.tabs { position: relative; z-index: 1; }
+    x-select.tabs .group {
+      width: 100px;
+      text-align: center;
+      padding: 0;
+      @media screen and (max-width: 740px) { width: 30px; }
+      @media screen and (max-width: 1020px) and (min-width: @browser-medium) { width: 30px; }
+    }
+  }
+  
+  x-complex-transform {
+  .complex-plane;
+  }
+  
+  x-complex-arithmetic{
+  .complex-plane;
+  }

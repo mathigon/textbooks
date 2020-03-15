@@ -1,0 +1,5 @@
+template#complex-arithmetic
+  x-select.tabs
+    for i in ["Sum","Product","Difference","Quotient"]
+      .group(data-value=i)= i
+  canvas(width=2000 height=2000)

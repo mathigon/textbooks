@@ -1,0 +1,5 @@
+template#complex-transform
+  x-select.tabs
+    for i in ["Z^2","..."]
+      .group(data-value=i)= i
+  canvas(width=2000 height=2000)
