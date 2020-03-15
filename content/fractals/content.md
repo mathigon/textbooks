@@ -276,34 +276,29 @@ Methods of fractal image compression were developed by Michael Barnsley and
 Alan Sloan in the 1980s.
 
 
-
 --------------------------------------------------------------------------------
 
 
-
-## The Sierpinski Gasket
+## The Sierpinski Triangle
 
 > section: sierpinski
 > id: sierpinski
 
+::: column(width=300 parent="right")
+
+    svg.sierpinsk(width=300 height=265)
+    x-slider(steps=8 var="steps")
+
 ::: column.grow
 
-    // Chaos game: https://www.youtube.com/watch?v=kbKtFN71Lfs
-    // Mandelbrot: https://www.youtube.com/watch?v=NGMRB4O922I
-
-
-One of the fractals we looked at in the previous chapter was the __Sierpinski
+One of the fractals we saw in the previous chapter was the __Sierpinski
 triangle__. It can be created by starting with one large, equilateral
 triangle, and then repeatedly cutting smaller triangles out of its center.
 
-But, as it turns out, the Sierpinski triangle also appears in many other areas
-of mathematics, and there are numerous ways to construct it. In this
-chapter, we will explore some of them!
-
-::: column(width=300)
-
-    img(src="images/sierpinski.gif" width=300 height=300)
-    x-slider(steps=100)
+{.r.reveal(when="slider-0")} As it turns out, the Sierpinski triangle also
+appears in many other areas of mathematics, and there are many different ways to
+generate it. In this chapter, we will explore some of them!
+[Continue](btn:next)
 
 :::
 
@@ -341,6 +336,8 @@ pattern will continue, producing bigger and bigger triangles.
 
 ### The Chaos Game
 
+    // Chaos game: https://www.youtube.com/watch?v=kbKtFN71Lfs
+
 In the Chaos Game, we start with an empty triangle and select a random point in 
 the middle. We then choose one of the three vertices of the triangle at random,
 and mark the point at the centre of the line from the random point to the
@@ -351,35 +348,52 @@ vertex. Then we repeat the process, starting with that new point…
 ---
 > id: cellular
 
-### Cellular Automaton
+### Cellular Automata
 
-The cellular automaton is a grid consisting of black and white squares. We start
-with one black square in the first row; the squares in all following rows are
-coloured automatically depending on the three squares immediately above.
+A [__cellular automaton__](gloss:cellular-automata) is a grid consisting of many
+connected cells. The “state” of every cell (e.g. its colour) is determined by
+its surrounding cells.
 
-The eight rules at the top determine what a square (red) will look like,
-depending on the three squares above. Modify the rules by clicking them, and
-try to find the set of rules that produces something like the Sierpinski Gasket.
+In our example, every cell can be either black or white. We start with one row
+that contains just a single black square. In every following row, the colour of
+each cell is determined by the three cells immediately above.
 
-    <div id="fracAutoRules">
-      <div class="fracAutoRule" id="fracRule1"></div>
-      <div class="fracAutoRule" id="fracRule2"></div>
-      <div class="fracAutoRule" id="fracRule3"></div>
-      <div class="fracAutoRule" id="fracRule4"></div>
-      <div class="fracAutoRule" id="fracRule5"></div>
-      <div class="fracAutoRule" id="fracRule6"></div>
-      <div class="fracAutoRule" id="fracRule7"></div>
-      <div class="fracAutoRule" id="fracRule8"></div>
-      <div class="clear"></div>
-    </div>
-    <table id="fracAutoTable"></table>
+There are eight different types of three adjacent cells, and in each case we can
+decide how we want to colour the cell underneath. Tap the options below to
+toggle their state – can you find a set of rules that create a pattern similar
+to the Sierpinski triangle?
+
+    .cellular-rules
+    figure: svg.cellular-grid(width=595 height=310)
+
+Rule 30
 
 ---
+
+::: column.grow
+
+Many plants and animals also grow by following simple rules like this – and
+that can cause the appearance of similar patterns in nature. Here you can see
+a seashell that shows 
+
+::: column(width=320)
+
+    x-media(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
+
+{.caption} Conus textile, a venomous sea snail
+
+:::
+
+
+--------------------------------------------------------------------------------
+
 
 ## The Mandelbrot Set
 
 > section: mandelbrot
 > id: iteration
+
+    // Mandelbrot: https://www.youtube.com/watch?v=NGMRB4O922I
 
 All the fractals we saw in the previous chapters were created using a process
 of __iteration__: you start with a specific pattern, and then you repeat it
@@ -435,21 +449,21 @@ this example:
 
 ::: column(width=460)
 
-    x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes padding=10 snap=10)
+    x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes padding=10 snap=0.02)
       canvas(width=1080 height=960)
       svg
-        circle.move(name="c" cx=0 cy=0 style="r: 25; stroke: blue; fill: white")
+        circle.move(name="c" cx=0 cy=0 style="r: 15; stroke: blue; fill: white")
 
 ::: column.grow(width=200)
 
 c = ${complex(c)}
 
-| x_0 = | 0^2   + c | = | ${complex(c)}  |
-| x_1 = | x_0^2 + c | = | ${complex(x1)} |
-| x_2 = | x_1^2 + c | = | ${complex(x2)} |
-| x_3 = | x_2^2 + c | = | ${complex(x3)} |
-| x_4 = | x_3^2 + c | = | ${complex(x4)} |
-| x_5 = | x_4^2 + c | = | ${complex(x5)} |
+| `x_0` | = | `0^2   + c` | = | ${complex(c)}  |
+| `x_1` | = | `x_0^2 + c` | = | ${complex(x1)} |
+| `x_2` | = | `x_1^2 + c` | = | ${complex(x2)} |
+| `x_3` | = | `x_2^2 + c` | = | ${complex(x3)} |
+| `x_4` | = | `x_3^2 + c` | = | ${complex(x4)} |
+| `x_5` | = | `x_4^2 + c` | = | ${complex(x5)} |
 
 :::
 

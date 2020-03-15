@@ -7,16 +7,13 @@
 @import "../shared/variables";
 
 
-.mandel-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  padding-bottom: 57.89%;
-  img { .fillParent(); }
-  .scale { position: absolute; left: 50%; bottom: 8px; background: fade(black, 50%);
-    color: white; border: 1px solid white; border-radius: 20px; line-height: 24px;
-    font-size: 16px; padding: 0 14px; transform: translateX(-50%); }
-}
+// -----------------------------------------------------------------------------
+// Introduction
+
+
+
+// -----------------------------------------------------------------------------
+// Sierpinski Triangle
 
 .pascal-grid {
   margin: 1.5em auto;
@@ -42,80 +39,25 @@
   }
 }
 
+.cellular-grid {
+  rect { stroke: @grey; fill: white; }
+  rect.on { fill: @grey; }
+}
+
+
+
+
 
 // -----------------------------------------------------------------------------
+// Mandelbrot Set
 
-#fracPascal { position: relative; margin-bottom: 10px; }
-
-#fracPascal1, #fracPascal2 {
-  width: 100%;
-  height: auto;
-  top: 0;
-}
-
-#fracPascal2 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-#fracAutoRules { margin-bottom: 10px; }
-
-.fracAutoRule {
-  width: 52px;
-  height: 35px;
-  float: left;
-  cursor: pointer;
-  margin: 0 5px 5px 0;
-  background-image: url(/course/fractals/images/auto-rules.png);
-}
-
-#fracRule2 { background-position:  -51px 0; }
-#fracRule3 { background-position: -102px 0; }
-#fracRule4 { background-position: -153px 0; }
-#fracRule5 { background-position: -204px 0; }
-#fracRule6 { background-position: -255px 0; }
-#fracRule7 { background-position: -306px 0; }
-#fracRule8 { background-position: -357px 0; }
-
-#fracRule1.on { background-position:      0 -35px; }
-#fracRule2.on { background-position:  -51px -35px; }
-#fracRule3.on { background-position: -102px -35px; }
-#fracRule4.on { background-position: -153px -35px; }
-#fracRule5.on { background-position: -204px -35px; }
-#fracRule6.on { background-position: -255px -35px; }
-#fracRule7.on { background-position: -306px -35px; }
-#fracRule8.on { background-position: -357px -35px; }
-
-#fracAutoTable {
-  table-layout: fixed;
-  border-collapse: collapse;
-  margin-bottom: 10px;
-}
-
-#fracAutoTable td    { border: 1px solid #000; background: #FFF; width: 16px; height: 16px; padding: 0; }
-#fracAutoTable td.on { background: #000; }
-
-#fractTargetTable { margin: 0 auto 1em auto; font-size: .9em; }
-
-#fractTargetTable td { text-align: center; max-width: 100px; white-space: nowrap; padding: 0 4px; opacity: 0.5; }
-#fractTargetTable tr td:last-child { opacity: 1; }
-
-#fracDimBar .boxTabLink { transition: left 1.2s; }
-
-#mandelMove {
+.mandel-frame {
   position: relative;
-}
-
-#mandelTarget {
-  width: 44px;
-  height: 44px;
-  margin: -22px 0 0 -22px;
-  background: url(/course/fractals/images/target.png) center no-repeat;
-  position: absolute;
-  top: 49.5%;
-  left: 90.5%;
-  cursor:move;
+  overflow: hidden;
+  border-radius: 6px;
+  padding-bottom: 57.89%;
+  img { .fillParent(); }
+  .scale { position: absolute; left: 50%; bottom: 8px; background: fade(black, 50%);
+    color: white; border: 1px solid white; border-radius: 20px; line-height: 24px;
+    font-size: 16px; padding: 0 14px; transform: translateX(-50%); }
 }

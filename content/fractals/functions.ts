@@ -4,17 +4,18 @@
 // =============================================================================
 
 
-import {Color} from '@mathigon/core';
-import {Point, Polyline, Complex} from '@mathigon/fermat';
-import {CanvasView} from '@mathigon/boost';
+import {Color, tabulate2D, unique} from '@mathigon/core';
+import {Point, Polyline, Complex, Polygon} from '@mathigon/fermat';
+import {$N, CanvasView, hover, SVGView} from '@mathigon/boost';
+
 import {Geopad, Slider, Step} from '../shared/types';
+import {RED, YELLOW} from '../shared/constants';
 
 
 // -----------------------------------------------------------------------------
 // Introduction
 
 const colours = Color.gradient('#22ab24', '#0f82f2', 10).map(c => c.toString());
-const options = {strokeWidth: 3, lineCap: 'round', lineJoin: 'round'};
 
 /** Returns the image of x, if a-b is mapped onto b-c. */
 function transform(a: Point, b: Point, c: Point, x: Point) {
@@ -31,8 +32,8 @@ function drawIteration($canvas: CanvasView, a: Point, b: Point, c1: Point, c2: P
   const d3 = transform(a, b, c2, c1);
   const d4 = transform(a, b, c2, c2);
 
-  $canvas.draw(new Polyline(d1, c1, d2), {...options, stroke: colours[i]});
-  $canvas.draw(new Polyline(d3, c2, d4), {...options, stroke: colours[i]});
+  $canvas.draw(new Polyline(d1, c1, d2), {strokeWidth: 3, lineCap: 'round', lineJoin: 'round', stroke: colours[i]});
+  $canvas.draw(new Polyline(d3, c2, d4), {strokeWidth: 3, lineCap: 'round', lineJoin: 'round', stroke: colours[i]});
 
   if (i > 0) {
     drawIteration($canvas, b, c1, d1, d2, i - 1);
@@ -52,10 +53,105 @@ export function fern($step: Step) {
 
 
 // -----------------------------------------------------------------------------
+// Sierpinski Triangle
+
+function drawSierpinski(a: Point, b: Point, c: Point, i: number): string {
+  if (i <= 0) return '';
+
+  const ab = Point.average(a, b);
+  const ac = Point.average(a, c);
+  const bc = Point.average(b, c);
+
+  const t1 = drawSierpinski(a, ab, ac, i - 1);
+  const t2 = drawSierpinski(b, ab, bc, i - 1);
+  const t3 = drawSierpinski(c, ac, bc, i - 1);
+
+  return `M${ab.x},${ab.y}L${ac.x},${ac.y}L${bc.x},${bc.y}Z ${t1}${t2}${t3}`
+}
+
+
+export function sierpinski($step: Step) {
+  const $svg = $step.$('svg.sierpinsk')!;
+  const fill = $N('path', {fill: RED}, $svg) as SVGView;
+  const holes = $N('path', {fill: 'white'}, $svg) as SVGView;
+
+  const triangle = Polygon.regular(3, 170).shift(150, 175);
+  fill.draw(triangle);
+
+  $step.model.watch((m: any) => {
+    const steps = m.steps || 0;
+    holes.setAttr('d', drawSierpinski(triangle.points[0], triangle.points[1], triangle.points[2], steps));
+  });
+}
+
+
+export function cellular($step: Step) {
+  const $grid = $step.$('.cellular-grid')!;
+
+  const $cells = tabulate2D((i: number, j: number) => $N('rect', {
+    width: 15, height: 15, x: 5 + j * 15, y: 5 + i * 15
+  }, $grid), 20, 39);
+
+  const $highlight = $N('path', {d: 'M0,0L55,0L55,25L40,25L40,40L15,40L15,25L0,25Z', fill: YELLOW}, $grid);
+
+  $cells[0][19].addClass('on');
+
+  /* const highlight = (x: number, y: number) => {
+    $grid.append($highlight);
+    $highlight.translate(x * 15, y * 15);
+    $highlight.show();
+    $grid.append($cells[x][y]);
+    $grid.append($cells[x-1][y]);
+    if (y > 0) $grid.append($cells[x-1][y-1]);
+    if (y < 20) $grid.append($cells[x-1][y+1]);
+  };
+
+  for (const [y, $row] of $cells.entries()) {
+    // if (!x) continue;
+    for (const [x, $c] of $row.entries()) {
+      hover($c, {enter: () => highlight(x, y), exit: () => $highlight.hide()});
+    }
+  } */
+
+
+
+
+
+}
+
+
+/*
+function fracAuto() {
+
+  for( var i=1; i<15; i++) {
+    for( var j=0; j<23; j++) {
+
+      var temp = ($('#fracTableRow'+(i-1)+' #fracTableCell'+(j-1)).hasClass('on')?"1":"0") +
+                 ($('#fracTableRow'+(i-1)+' #fracTableCell'+(j  )).hasClass('on')?"1":"0") +
+                 ($('#fracTableRow'+(i-1)+' #fracTableCell'+(j+1)).hasClass('on')?"1":"0");
+
+      if( temp == "000" ) { var colour = $('#fracRule1').hasClass('on')?1:0 }
+      else if( temp == "001" ) { var colour = $('#fracRule2').hasClass('on')?1:0 }
+      else if( temp == "010" ) { var colour = $('#fracRule3').hasClass('on')?1:0 }
+      else if( temp == "011" ) { var colour = $('#fracRule4').hasClass('on')?1:0 }
+      else if( temp == "100" ) { var colour = $('#fracRule5').hasClass('on')?1:0 }
+      else if( temp == "101" ) { var colour = $('#fracRule6').hasClass('on')?1:0 }
+      else if( temp == "110" ) { var colour = $('#fracRule7').hasClass('on')?1:0 }
+      else if( temp == "111" ) { var colour = $('#fracRule8').hasClass('on')?1:0 }
+      else { var colour = 0 };
+
+      if( colour ) { $('#fracTableRow'+i+' #fracTableCell'+j).addClass('on') } else { $('#fracTableRow'+i+' #fracTableCell'+j).removeClass('on') };
+
+    };
+  };
+}; */
+
+
+// -----------------------------------------------------------------------------
 // Mandelbrot Set
 
 export function mandelPaint($step: Step) {
-  $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString();
+  $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString(2);
 
   const square = (p: Point) => new Point(p.x * p.x - p.y * p.y, 2 * p.x * p.y);
 
@@ -95,48 +191,6 @@ export function mandelZoom($step: Step) {
 
 // ========================================
 
-$('.fracAutoRule').click( function(){
-  $(this).toggleClass('on');
-  fracAuto();
-});
-
-var fracAutoTableString="";
-
-for( var i=0; i<15; i++) {
-  fracAutoTableString += "<tr id='fracTableRow"+i+"'>";
-  for( var j=0; j<23; j++) {
-    fracAutoTableString += "<td id='fracTableCell"+j+"'></td>";
-  };
-  fracAutoTableString += "</tr>";
-};
-
-$('#fracAutoTable').html(fracAutoTableString);
-$('#fracTableRow0 #fracTableCell11').addClass('on');
-
-function fracAuto() {
-
-  for( var i=1; i<15; i++) {
-    for( var j=0; j<23; j++) {
-
-      var temp = ($('#fracTableRow'+(i-1)+' #fracTableCell'+(j-1)).hasClass('on')?"1":"0") +
-                 ($('#fracTableRow'+(i-1)+' #fracTableCell'+(j  )).hasClass('on')?"1":"0") +
-                 ($('#fracTableRow'+(i-1)+' #fracTableCell'+(j+1)).hasClass('on')?"1":"0");
-
-      if( temp == "000" ) { var colour = $('#fracRule1').hasClass('on')?1:0 }
-      else if( temp == "001" ) { var colour = $('#fracRule2').hasClass('on')?1:0 }
-      else if( temp == "010" ) { var colour = $('#fracRule3').hasClass('on')?1:0 }
-      else if( temp == "011" ) { var colour = $('#fracRule4').hasClass('on')?1:0 }
-      else if( temp == "100" ) { var colour = $('#fracRule5').hasClass('on')?1:0 }
-      else if( temp == "101" ) { var colour = $('#fracRule6').hasClass('on')?1:0 }
-      else if( temp == "110" ) { var colour = $('#fracRule7').hasClass('on')?1:0 }
-      else if( temp == "111" ) { var colour = $('#fracRule8').hasClass('on')?1:0 }
-      else { var colour = 0 };
-
-      if( colour ) { $('#fracTableRow'+i+' #fracTableCell'+j).addClass('on') } else { $('#fracTableRow'+i+' #fracTableCell'+j).removeClass('on') };
-
-    };
-  };
-};
 
 // ========================================
 
