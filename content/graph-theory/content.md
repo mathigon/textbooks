@@ -317,7 +317,7 @@ Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
 That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
 number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
 
-    p.var ${handshakeTable(n)}
+    p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
 
 ---
