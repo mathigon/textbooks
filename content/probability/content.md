@@ -330,7 +330,7 @@ results compare to the predicted probabilities:
     .box
       .box-title: h3 Rolling Dice
       .box-body
-        .probTable.var ${ probTable(d) }
+        .probTable.var(:html="probTable(d)")
         p.md We roll ${d}{d|2|1,6,1} dice at once and record the #[span.dice(style="width: auto; padding: 0 4px;") SUM] of their scores. The #[strong.m-green green lines] represent the probabilities of every possible outcome predicted by probability theory and the #[strong.m-blue blue bars] show how often each outcome happened in this computer generated experiment.
         p.btn-row
           button.btn Roll once
