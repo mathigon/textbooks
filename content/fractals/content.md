@@ -5,45 +5,50 @@
 > section: introduction
 > id: intro
 
-When looking around nature, you might have noticed plants like the two below.
-Initially they seem like highly complex and intricate shapes, but when you
-look closer, you might notice that they each follow a simple pattern:
+When looking around nature, you might have noticed intricate plants like
+these two examples:
 
-
-::: column(width=320)
+::: column.r(width=320)
 
     img(src="images/fern.jpg" width=320 height=240)
+    img.fractal-overlay(src="images/fern-overlay.png" width=320 height=240)
 
-{.caption} Here is a simple __Fern__. It consists of many small leafs that
-branch off a larger one.
+{.caption} This __Fern__ consists of many small leafs that branch off a larger one.
 
-::: column(width=320)
+::: column.r(width=320)
 
     img(src="images/romanesco.jpg" width=320 height=240)
+    img.fractal-overlay(src="images/romanesco-overlay.png" width=320 height=240)
 
-{.caption} This is a __Romanesco broccoli__. It consists of smaller
-[[cones|cubes|spheres]] spiralling around a larger one.
+{.caption} This __Romanesco broccoli__ consists of smaller [[cones|cubes|spheres]]
+spiralling around a larger one.
 
 :::
 
+{.fixme.reveal(when="blank-0")} Initially, these look highly complex shapes – but
+when you look closer, you can see that they both follow a simple pattern:
+Notice how the [individual parts](target:fractal) of both plants look exactly
+the same as the entire plant, just smaller. The same pattern is repeated over
+and over again, at smaller scales.
+
 ---
+> id: self-similar
 
-Notice how the individual parts of both plants look exactly the same as the
-full-sized plant, just smaller! The same pattern is repeated over and over
-again.
-
-Mathematicians call shapes with this property __Fractals__. They are some of the
-most beautiful and most bizarre objects in all of mathematics, and they have
-many interesting applications!
+{.fixme} In mathematics, we call this _self-similarity_. The shapes that have this
+property are called __Fractals__, and they are some of the most beautiful and
+most bizarre objects in all of mathematics.
 
 ---
 > id: fern
 
+{.fixme} To create a fractal, you can start with a simple pattern and repeat it at
+smaller scales, again and again, forever. 
+
 ::: column.grow
 
-We can try to create our own fractals using geometry.
+{.fixme} We can try to create our own fractals using geometry.
 
-Depending on how you position the points, you can make completely different
+{.fixme} Depending on how you position the points, you can make completely different
 kinds of shapes – looking like a tree, or like a fern.
 
 ::: column(width=320)
@@ -62,46 +67,46 @@ kinds of shapes – looking like a tree, or like a fern.
 :::
 
 ---
+> id: triangle
 
-They look the same at various different scales – you can take a small extract of
-the shape and it looks the same as the entire shape. This curious property is
-called _self-similarity_.
+::: column.grow(parent="right")
 
-To create a fractal, you can start with a simple pattern and repeat it at
-smaller scales, again and again, forever. In real life, of course, it is
-impossible to draw fractals with “infinitely small” patterns. However, we can
-draw shapes which _look_ just like fractals. Using mathematics, we can think
-about the properties a _real_ fractal would have – and these are very surprising.
+Another famous fractal is the __Sierpinski Triangle__. In this case, you start
+with a large, equilateral triangle, and then repeatedly cut smaller triangles
+out of the remaining parts.
 
-Here you can see, step by step, how to create two famous fractals: the 
-__Sierpinski Gasket__ and the __von Koch Snowflake__.
+{.fixme} Notice how, after a while, every smaller triangle looks exactly the
+same as the whole. You can zoom into a fractal, and the patterns and shapes
+will continue repeating, forever.
 
-::: column(width=340)
+::: column(width=300)
 
-    img(src="images/sierpinski.gif" alt="Sierpinski Gasket" width=340 height=340)
-
-{.caption} To create the __Sierpinski Gasket__, start with a triangle and
-repeatedly cut out the centre of every segment. Notice how, after a while,
-every smaller triangle looks exactly the same as the whole.
-
-::: column(width=340)
-
-    img(src="images/snowflake.gif" alt="Koch Snowflake" width=340 height=340)
-
-{.caption} To create the __von Koch Snowflake__ you also start with a triangle
-and repeatedly add a smaller triangle to every segment of its edge. After a
-while, the edge looks exactly the same at small and large scales.
+    svg(width=300 height=265)
+      path.var.red(:draw="triangle")
+      path.var.white(:d="sierpinski(triangle.points, steps)")
+    x-slider(steps=8 var="steps")
 
 :::
 
 ---
+> id: real
+
+{.fixme} The plants at the begining of this chapter _look_ like fractals, but it is
+clearly impossible to create _true_ fractals in real life: if we keep repeating
+the same pattern over and over again, smaller and smaller, we would eventually
+get to cells, molecules or atoms which can no longer be divided.
+
+{.fixme} At the beginning of this chapter, we saw two examples of plants that look almost
+like fractals – ferns and broccoli. Of course, true fractals can never appear
+in nature: if you zoom in further and further, you would eventually arrive at
+molecules and atoms, which are no longer divisible.
+
+However, using mathematics, we can think about the properties that real fractals
+“would” have – and these are very surprising…
+
+---
 
 ### Fractal Dimensions
-
-The name “fractals” is derived from the fact that fractals don’t have a whole
-number dimension – they have a _fractional_ dimension. Initially this may seem
-impossible (What do you mean by a dimension like 2.5?), but it becomes clear
-when we compare fractals with other shapes.
 
 ::: column(width=240)
 
@@ -109,8 +114,9 @@ when we compare fractals with other shapes.
 
 ::: column.grow
 
-A line has dimension [[1]]. _{span.reveal(when="blank-0")} When scaling it by a
-factor of 2, its length increases by a factor of `§2^1 = 2`. Obviously!_
+First, let’s think about the dimension of Fractals. A line has dimension [[1]].
+_{span.reveal(when="blank-0")} When scaling it by a factor of 2, its length
+increases by a factor of `§2^1 = 2`. Obviously!_
 
 :::
 
@@ -144,27 +150,89 @@ a factor of 2, its volume increases by a factor of `§2^3 =` [[8]]._
 
 ::: column(width=240)
 
-    img(src="images/sierpinski.png" width=240 height=114)
+    img(src="images/sierpinski.png" width=240 height=114 style="position:sticky;top:48px")
 
 ::: column.grow
 
-Now let's have a look at a fractal. When scaling a Sierpinski triangle by a
-factor of 2, its area increases by a factor of [[3]]!
+Now let's have a look at the Sierpinski triangle. If we scale it by a factor of
+2, you can see that it's "area" increases by a factor of [[3]].
 
-Looking at the blue increase factors above, we can deduce it must have a dimension between <span class="sansSerif red">1</span> and <span class="sansSerif red">2</span>. There aren&#8217;t any integers <em>in between</em> <span class="sansSerif red">1</span> and <span class="sansSerif red">2</span>, so the dimension of the Sierpinski Gasket has to be fractional. In fact, one can calculate that it is around <span class="sansSerif red">1.585</span>.
-
-To calculate the exact dimension of fractals, we need exponents and logarithms.
-Whenever we scale an object of dimension _d_ by a factor of _x_, its content
-(length, area, …) changes by a factor of `x^d`. This is because the object is
-scaled by _x_ in _d_ directions.
-
-When we scale the Sierpinski Gasket by a factor of 2, its area triples.
-Therefore, we get the equation `2^d = 3`. We can solve this equation to find
-that the dimension of the Sierpinski Gasket is `d = log_2(3) = 1.585…`
+{.reveal(when="blank-0")} Let's say that _d_ is the dimension of the triangle.
+Using the same pattern as above, we get `§2^d = 3`. In other words, _d_ =
+[[`log_2(3)`|`log_3(2)`]] _≈ 1.585…_
 
 :::
 
 ---
+
+So … how can something have a dimension that is not an integer? It seems
+impossible, but this is just one of the weird properties of fractals. In fact,
+this is what gives fractals their name: they have a __fractional dimension__.
+
+With every iteration, we remove some of the area of the Sierpinski triangle.
+If we could do this infinitely many times, there would actually be no area
+left: that's why the Sierpinski triangle is something in-between a 2-dimesional
+area, and a 1-dimensional line.
+
+---
+
+### The History of Fractals
+
+{.fixme} TODO
+
+{.fixme} Fractals are very popular in mathematical visualisation, because they look very
+beautiful even though they can be created using simple patterns like the ones
+above.
+
+---
+> id: snowflake
+
+### The Koch Snowflake
+
+::: column.grow
+
+We've already seen some plants that look like fractals, but there are many
+other shapes in nature that also do. One great examples are snowflakes and
+ice crystals.
+
+{.fixme} images
+
+::: column(width=352)
+
+    x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 credit="© Disney")
+
+:::
+
+---
+> id: koch
+
+::: column.grow
+
+{.fixme} To create the __von Koch Snowflake__ you also start with a triangle
+and repeatedly add a smaller triangle to every segment of its edge. After a
+while, the edge looks exactly the same at small and large scales.
+
+::: column(width=300)
+
+    svg(width=300 height=300)
+      path.var.blue(:draw="koch(steps)")
+    x-slider(steps=5 var="steps")
+
+:::
+
+---
+> id: koch-area
+
+{.fixme} Area of koch snowflake: You can think about creating the Koch Snowflake
+as a sequence: you start with a single triangle, and at every step you add
+smaller triangles around the outside. At every step, the number of triangles
+increases by 4, but their area decreases by a factor of 9. The total area is
+therefore a geometric series that converges. The resulting area is 2√3/5 ≈ 0.69.
+Here you can find a more detailed walkthrough of the solution:
+http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/area.htm
+
+---
+> id: koch-dimension
 
 ::: column(width=380)
 
@@ -172,104 +240,130 @@ that the dimension of the Sierpinski Gasket is `d = log_2(3) = 1.585…`
 
 ::: column.grow
 
-When we scale one edge segment of the von Koch Snowflake by a factor of 3, its
+{.fixme} When we scale one edge segment of the von Koch Snowflake by a factor of 3, its
 length quadruples. Therefore we get the equation `3^d=4`. Like before, we can
 solve this equation to find that the dimension of the von Koch Snowflake is
 `d = log_3(4) = 1.262…`
 
 :::
 
-Note that even though they are called _fractals_, these dimensions are not
-_fractions_. They are, in fact, [irrational numbers](/world/Real_Irrational_Imaginary).
-
-Fractals are very popular in mathematical visualisation, because they look very
-beautiful even though they can be created using simple patterns like the ones
-above. You can zoom into a fractal, and the patterns and shapes will continue
-repeating, forever.
-
 ---
-> id: applications
+> id: menger-sponge
 
-### Fractals in Nature and Technology
+### Menger Sponge
 
-At the beginning of this chapter, we saw two examples of plants that look almost
-like fractals – ferns and broccoli. Of course, true fractals can never appear
-in nature: if you zoom in further and further, you would eventually arrive at
-molecules and atoms, which are no longer divisible.
+Fractals don't have to be "flat" – there many Fractals that look 3-dimensional.
+One of the most famous examples is the __Menger sponge__, which is named after
+the mathematician Karl Menger who first described it in 1926.
 
-However, there are many more examples in nature that look _almost_ like
-fractals – for example costlines.
+::: column.grow
 
+{.fixme} description
 
-XXXX
+::: column(width=320)
 
----
+    x-menger-sponge(size=320 steps=3)
 
-Here are some other examples of fractals in nature:
-
-::: column(width=200)
-
-    img(src="images/nature/blood.jpg" width=200 height=200)
-
-{.caption} Blood Vessels
-
-::: column(width=200)
-
-    img(src="images/nature/snow.jpg" width=200 height=200)
-
-{.caption} Snowflakes
-
-::: column(width=200)
-
-    img(src="images/nature/coast.jpg" width=200 height=200)
-
-{.caption} Cracks in Glass or on CDs
-
-::: column(width=200)
-
-    img(src="images/nature/rivers.jpg" width=200 height=200)
-
-{.caption} River Networks
-
-::: column(width=200)
-
-    img(src="images/nature/clouds.jpg" width=200 height=200)
-
-{.caption} Clouds
-
-::: column(width=200)
-
-    img(src="images/nature/mountains.jpg" width=200 height=200)
-
-{.caption} Mountain Ranges
+{.caption} This rendering consists of 8000 individual cubes.
 
 :::
 
-These shapes appear to be completely random, but – as with fractals – there is
+---
+> id: coastlines
+
+### Fractals in Nature and Technology
+
+While true fractals can never appear in nature, there are many examples that
+look _almost_ like fractals. We've already seen some plants and snowflake,
+but are much larger-scale example are costlines.
+
+::: column.grow
+
+{.fixme} coastlines text
+
+::: column(width=280)
+
+{.fixme} coastlines interactive
+
+:::
+
+---
+> id: nature
+
+And here are many more examples of fractals in nature:
+
+::: column(width=200)
+
+    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
+    x-media(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
+
+{.caption} Mountain range in central Asia
+
+::: column(width=200)
+
+    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
+    x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
+
+{.caption} Ganges river delta in India
+
+::: column(width=200 parent="padded-thin")
+
+    x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
+
+{.caption} Lightning bolts
+
+::: column(width=200)
+
+    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
+    x-media(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
+
+{.caption} Blood vessels in the retina
+
+::: column(width=200)
+
+    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
+    x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
+
+{.caption} Grand Canyon in the USA
+
+::: column(width=200)
+
+    x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
+
+{.caption} Clouds
+
+:::
+
+---
+
+{.fixme} These shapes appear to be completely random, but – as with fractals – there is
 an underlying pattern that determines how the shapes are formed and what they
 will look like. Mathematics can help us understand the shapes better, and thus
 has applications in medicine, biology, geology and meteorology.
 
 ::: column(width=300)
 
-    img(src="images/rendering.jpg" width=300 height=225)
+    // https://commons.wikimedia.org/wiki/File:BlueRidgePastures.jpg
+    x-media(src="images/xxx.jpg" width=300 height=225 lightbox credit="Gary R. Huber, 3D Nature, CC BY-SA")
 
 ::: column.grow
 
-At the beginning of this article we created a very realistic snowflake using a
-fractal. Similar processes can be applied to all kinds of computer generated
+{.fixme} Generate realistic computer-generated
+graphics for movies or video games.
+
+{.fixme}  Similar processes can be applied to all kinds of computer generated
 graphics. The water, mountains and clouds in this image are generated entirely
 by a computer using fractals. These methods can be used, for example, when
 creating textures for computer games.
 
 :::
 
-The process can also be reversed and used for __image compression__. Usually,
+{.fixme} The process can also be reversed and used for __image compression__. Usually,
 pictures on a computer are saved by remembering the colour of every individual
 pixel in the image. For large images this can take up a lot of disk space and we
 want to reduce its size: we want to _compress_ it.
 
-However some parts of the picture may look similar to fractals. Instead of
+{.fixme} However some parts of the picture may look similar to fractals. Instead of
 saving the pixels individually, a computer could try to find certain patterns
 in the picture and only save these patterns – this could save a lot of space.
 Methods of fractal image compression were developed by Michael Barnsley and
@@ -287,6 +381,8 @@ Alan Sloan in the 1980s.
 ::: column(width=300 parent="right")
 
     svg.sierpinsk(width=300 height=265)
+      path.var.red(:draw="triangle")
+      path.var.white(:d="sierpinski(triangle.points, steps)")
     x-slider(steps=8 var="steps")
 
 ::: column.grow

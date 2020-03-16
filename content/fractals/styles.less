@@ -10,6 +10,21 @@
 // -----------------------------------------------------------------------------
 // Introduction
 
+.fractal-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: opacity .4s;
+  pointer-events: none;
+  x-step.focus & { opacity: 0.85; }
+}
+
+x-menger-sponge { display: block; }
+x-menger-sponge canvas { width: 100%; height: auto; }
+
+path.var.red { fill: @red; }
+path.var.blue { fill: @blue; }
+path.var.white { fill: white; }
 
 
 // -----------------------------------------------------------------------------
