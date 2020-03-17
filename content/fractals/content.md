@@ -525,44 +525,96 @@ of __iteration__: you start with a specific pattern, and then you repeat it
 over and over again.
 
 This is similar to another concept in mathematics that you saw before:
-recursive sequences. Again you start with a number, and then you apply the same
-recursive formula again and again, to get the next number in the sequence.
+[recursive sequences](gloss:sequence-recursive). There, you start with a number,
+and then you apply the same recursive formula again and again, to get the next
+number in the sequence.
 
-One century ago, mathematicians were exploring what happens to specific
-recursive sequences if you use complex numbers, and their discoveries were some
-of the most surprising and beautiful results in all of mathematics…
+Let's take the recursive formula `§x_n = x_(n-1)^2` as an example. The resulting
+sequence can be have very differently, depending on the starting value `§x_0`.
 
----
-
-real line
+{.fixme} Numberline slider
 
 ---
+> id: iteration-1
 
-complex plane
+If `§x_0 > 1`, the sequence [[diverges|convrerges]]: it just keeps growing,
+up to Infinity.
+
+If `§-1 < x_0 < 1`, the squence [[converges|diverges]] to [[0]]
+
+If `§x_0 < -1`, the sequence [[diverges|converges]] again.
+
+---
+> id: iteration-2
+
+### Julia Sets
+
+So far, we've not learned anything new. However, one century ago, mathematicians
+started to explore what happens to these sequences if you use [__complex
+numbers__](gloss:complex), rather than real numbers – and their discoveries were
+some of the most surprising and beautiful results in all of mathematics…
+
+Let's use the same sequence as before, `§x_n = x_(n-1)^2`. Move the position of
+`§x_0` around the complex plane, to see what happens to the following terms. If
+the sequence converges, let's colour the corresponding point on the plane blue.
+
+    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px")
+      canvas(width=1440 height=960)
+      svg
+        circle.move.yellow(name="a0" x="point(1,1)")
+        path.yellow(x="spiral(a0,c)")
+        circle.move.red(name="c" x="point(0,0)")
+
+{.fixme} Complex plane
+
+---
+> id: iteration-3
+
+In this case, the sequence converges as long as `§x_0` lies inside the [[unit
+circle|xxx|xxx]] – the circle with radius 1, centered at the origin.
 
 ---
 > id: julia
 
-### Julia Sets
-
 Now let's make things a bit more complex. Rather than just squaring the previous
-number, we also add a constant _c_.
+number, we also add a constant _c_ every time. In other words, `§x_n = x_(n-1)^2 + c`.
 
-If `c = 0`, we get the same as before, and the set of numbers that converge
-is a circle.
+Below, you can not only move the position of `pill(x_n,"yellow")`, but also the value of
+`pill(c,"red")`:
 
-    figure
-      x-geopad(width=600 height=400 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no")
-        canvas(width=1200 height=800)
-        svg
-          circle.move.yellow(name="a0" x="point(1,1)")
-          path.yellow(x="spiral(a0,c)")
-          circle.move.red(name="c" x="point(0,0)")
+::: x-slideshow
+
+    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px")
+      canvas(width=1440 height=960)
+      svg
+        circle.move.yellow(name="a0" x="point(0.5,-0.2)")
+        path.yellow(x="spiral(a0,c)")
+        circle.move.red(name="c" x="point(0,0)")
+
+{div(slot="legend")} We already know what happens if
+[`c = 0`](action:animate(0,0)) – that's the same as the example above.
+The sequence convergence as long as `x_0` lies within the unit circle.
+
+{div(slot="legend")} As soon as we change the value of _c_, something wonderful
+happens. The circle transforms into a highly complex, fractal shape, for
+example when [`c = –0.6 – 0.2i`](action:animate(-0.6,-0.2)).
+
+{div(slot="legend")} When [`c = –0.54 + 0.5i`](action:animate(-0.54,0.5)), the
+shape divides into infinity many tiny elements arranged in spirals.
+
+{div(slot="legend")} What else can you find? have a look at
+[`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) or
+[`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also values of _c_,
+like [`c = 0.8 + 0.2i`](action:animate(0.8,0.2)), where _every_ sequence
+diverges. In this case, we don't colour anything blue.
+
+:::
 
 ---
+> id: julia-1
 
-The different shapes that are formed by colouring in the numbers
-are called Julia Sets. 
+The different shapes that are formed by colouring in the numbers are called
+[__Julia Sets__](gloss:julia-set). More about history, computers, etc.
 
 ---
 
@@ -573,7 +625,7 @@ starting point of the sequence to see which ones converge and which ones don't.
 
 In XXXX, the French mathematician [Benoit Mandelbrot](bio:mandelbrot) decided to
 reverse this process: fix the starting point to always be 0, and instead change
-the value of _c_ to
+the value of _c_.
 
 ---
 > id: mandel-paint

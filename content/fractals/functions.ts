@@ -8,7 +8,7 @@ import {Color, tabulate2D} from '@mathigon/core';
 import {Point, Polyline, Complex, Polygon} from '@mathigon/fermat';
 import {$N, CanvasView} from '@mathigon/boost';
 
-import {Geopad, Slider, Step} from '../shared/types';
+import {Geopad, Slider, Slideshow, Step} from '../shared/types';
 import {YELLOW} from '../shared/constants';
 
 import './components/menger-sponge';
@@ -132,6 +132,10 @@ export function cellular($step: Step) {
 // Mandelbrot Set
 
 export function julia($step: Step) {
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+
   $step.model.spiral = (p: Point, c: Point) => {
     const points = [p];
     let x = p.x;
@@ -147,8 +151,15 @@ export function julia($step: Step) {
     return new Polyline(...points);
   };
 
-  const $geopad = $step.$('x-geopad') as Geopad;
-  const $canvas = $geopad.$('canvas') as CanvasView;
+  $step.model.animate = (x: number, y: number) => {
+    $geopad.animatePoint('c', new Point(x, y), 2000);
+  };
+
+  $slideshow.on('next back', (n: number) => {
+    if (n === 1) $step.model.animate(-0.6, -0.2);
+    if (n === 2) $step.model.animate(-0.54, 0.5);
+  });
+
   const [pB, vB] = [$geopad.plotBounds, $geopad.viewportBounds];
   const resolution = pB.dx / vB.dx; // / 2;
   const juliaCanvas = new JuliaCanvas(pB, vB, $canvas, resolution);
