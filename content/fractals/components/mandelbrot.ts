@@ -4,66 +4,68 @@
 // =============================================================================
 
 
-import {CustomElementView, CanvasView, register, thread, functionToWorker} from '@mathigon/boost';
+import {CanvasView} from '@mathigon/boost';
+import {Bounds, Point, roundTo} from '@mathigon/fermat';
+import {BLUE} from '../../shared/constants';
 
 
-function mandelbrot(xMin: number, xMax: number, dx: number, yMin: number,
-                    yMax: number, dy: number) {
+export class JuliaCanvas {
+  private readonly range: number[];
+  private readonly worker: Worker;
+  private queue?: Point = undefined;
+  private isRunning = false;
 
-  function run(x: number, y: number) {
-    let i = 0;
-    let zx = 0;
-    let zy = 0;
+  constructor(private readonly plotBounds: Bounds,
+              private readonly viewportBounds: Bounds,
+              private readonly $canvas: CanvasView,
+              private readonly resolution = 0.1) {
 
-    do {
-      let xt = zx * zy;
-      zx = zx * zx - zy * zy + x;
-      zy = 2 * xt + y;
-      i++;
-    } while (i < 255 && (zx * zx + zy * zy) < 4);
+    const xMax = roundTo(plotBounds.xMax, resolution);
+    const yMin = roundTo(plotBounds.yMin, resolution);
+    const yMax = roundTo(plotBounds.yMax, resolution);
+    this.range = [0, xMax, yMax, yMin];
 
-    return i;
+    this.worker = new Worker('/resources/fractals/worker.js');
+    this.worker.onmessage = (e: MessageEvent) => this.onCompleted(e.data);
+    this.worker.onerror = (e: ErrorEvent) => console.error('[WebWorker]', e);
   }
 
-  const result = [];
-
-  for (let x = xMin; x < xMax; x += dx) {
-    let row = [];
-    for (let y = yMin; y < yMax; y += dy) row.push(run(x, y));
-    result.push(row);
+  draw(c: Point) {
+    if (this.isRunning) return this.queue = c;
+    this.isRunning = true;
+    this.worker.postMessage(['julia', c.x, c.y, ...this.range, this.resolution]);
   }
 
-  return result;
-}
+  private onCompleted(data: number[][]) {
+    const [pB, vB] = [this.plotBounds, this.viewportBounds];
+    const scale = Math.abs(vB.dx / pB.dx) * this.resolution;
+    const iMax = data.length;
+    const jMax = data[0].length;
 
-const mandelbrotWorker = functionToWorker(mandelbrot);
+    this.$canvas.clear();
+    const context = this.$canvas.getContext() as CanvasRenderingContext2D;
+    context.fillStyle = BLUE;
+    context.beginPath();
 
-async function draw(context: CanvasRenderingContext2D, xMin: number,
-                    xMax: number, yMin: number, yMax: number, r: number) {
-  const dx = (xMax - xMin) / r;
-  const dy = (yMax - yMin) / r;
-
-  const result = await thread<number[][]>(mandelbrotWorker,
-      [xMin, xMax, dx, yMin, yMax, dy]);
-
-  for (let x = 0; x < r; ++x) {
-    for (let y = 0; y < r; ++y) {
-      let color = result[x][y].toString(16);
-      context.beginPath();
-      context.rect(x, y, 1, 1);
-      context.fillStyle = '#' + color + color + color;
-      context.fill();
+    for (let i = 0; i < iMax; ++i) {
+      const x = this.range[0] + i * this.resolution;
+      const xV = vB.xMin + (x - pB.xMin) / (pB.dx) * (vB.dx);
+      const xV1 = vB.xMin + (-x - pB.xMin) / (pB.dx) * (vB.dx);
+      for (let j = 0; j < jMax; ++j) {
+        if (data[i][j]) {
+          const y = this.range[2] + j * this.resolution;
+          const yV = vB.yMin + (y - pB.yMin) / (pB.dy) * (vB.dy);
+          const yV1 = vB.yMin + (-y - pB.yMin) / (pB.dy) * (vB.dy);
+          context.rect(xV * 2 - scale, yV * 2 - scale, scale * 2+0.1, scale * 2+0.1);
+          context.rect(xV1 * 2 - scale, yV1 * 2 - scale, scale * 2+0.1, scale * 2+0.1);
+        }
+      }
     }
-  }
-}
 
+    context.fill();
 
-const template = '<canvas width="800" height="800" style="width: 400px; margin: 1.5rem auto"></canvas>';
-
-@register('x-mandelbrot', {template})
-export class Mandelbrot extends CustomElementView {
-  ready() {
-    const $canvas = this.$('canvas') as CanvasView;
-    draw($canvas.ctx, -2, 1, -1.5, 1.5, 800);
+    this.isRunning = false;
+    if (this.queue) this.draw(this.queue);
+    this.queue = undefined;
   }
 }

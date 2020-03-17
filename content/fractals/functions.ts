@@ -12,6 +12,7 @@ import {Geopad, Slider, Step} from '../shared/types';
 import {YELLOW} from '../shared/constants';
 
 import './components/menger-sponge';
+import {JuliaCanvas} from './components/mandelbrot';
 
 
 // -----------------------------------------------------------------------------
@@ -129,6 +130,32 @@ export function cellular($step: Step) {
 
 // -----------------------------------------------------------------------------
 // Mandelbrot Set
+
+export function julia($step: Step) {
+  $step.model.spiral = (p: Point, c: Point) => {
+    const points = [p];
+    let x = p.x;
+    let y = p.y;
+    let i = 0;
+
+    while (i < 20 && Math.abs(x) < 3 && Math.abs(y) < 2) {
+      [x, y] = [x * x - y * y + c.x, 2 * x * y + c.y];
+      points.push(new Point(x, y));
+      i += 1;
+    }
+
+    return new Polyline(...points);
+  };
+
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+  const [pB, vB] = [$geopad.plotBounds, $geopad.viewportBounds];
+  const resolution = pB.dx / vB.dx; // / 2;
+  const juliaCanvas = new JuliaCanvas(pB, vB, $canvas, resolution);
+
+  $step.model.watch(async (m: any) => juliaCanvas.draw(m.c));
+}
+
 
 export function mandelPaint($step: Step) {
   $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString(2);

@@ -6,7 +6,7 @@
 > id: intro
 
 When looking around nature, you might have noticed intricate plants like
-these two examples:
+these:
 
 ::: column.r(width=320)
 
@@ -175,42 +175,52 @@ left: that's why the Sierpinski triangle is something in-between a 2-dimesional
 area, and a 1-dimensional line.
 
 ---
-
-### The History of Fractals
-
-{.fixme} TODO
-
-{.fixme} Fractals are very popular in mathematical visualisation, because they look very
-beautiful even though they can be created using simple patterns like the ones
-above.
-
----
 > id: snowflake
 
 ### The Koch Snowflake
 
-::: column.grow
+There are many shapes in nature that look like fractals. We've already seen
+some plants at the beginning of this chapter. Another great examples are
+snowflakes and ice crystals:
 
-We've already seen some plants that look like fractals, but there are many
-other shapes in nature that also do. One great examples are snowflakes and
-ice crystals.
+::: column(width=120 parent="padded-thin")
 
-{.fixme} images
+    x-media(src="images/snow-1.jpg" width=120 height=120)
 
-::: column(width=352)
+::: column(width=120)
 
-    x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 credit="© Disney")
+    x-media(src="images/snow-2.jpg" width=120 height=120)
+
+::: column(width=120)
+
+    x-media(src="images/snow-3.jpg" width=120 height=120)
+
+::: column(width=120)
+
+    x-media(src="images/snow-4.jpg" width=120 height=120)
+
+::: column(width=120)
+
+    x-media(src="images/snow-5.jpg" width=120 height=120)
 
 :::
 
 ---
 > id: koch
 
+To create our own fractal snowflake, we once again have to find a simple
+procedure we can apply over and over again.
+
 ::: column.grow
 
-{.fixme} To create the __von Koch Snowflake__ you also start with a triangle
-and repeatedly add a smaller triangle to every segment of its edge. After a
-while, the edge looks exactly the same at small and large scales.
+Like the Sierpinski triangle, let's start with a single, equilateral triangle.
+However, rather than _removing_ smaller triangles at every step, we _add_
+smaller triangles along the edge. The side-length of every triangle is
+[[`1/3`|`1/4`|`1/2`]] of the triangles in the previous step.
+
+The resulting shape is called the __Koch snowflake__, named after the Swedish
+mathematician [Helge von Koch](bio:koch). Notice, once again, that small
+sections of the edge of the snowflake look exactly the same as larger sections.
 
 ::: column(width=300)
 
@@ -219,17 +229,6 @@ while, the edge looks exactly the same at small and large scales.
     x-slider(steps=5 var="steps")
 
 :::
-
----
-> id: koch-area
-
-{.fixme} Area of koch snowflake: You can think about creating the Koch Snowflake
-as a sequence: you start with a single triangle, and at every step you add
-smaller triangles around the outside. At every step, the number of triangles
-increases by 4, but their area decreases by a factor of 9. The total area is
-therefore a geometric series that converges. The resulting area is 2√3/5 ≈ 0.69.
-Here you can find a more detailed walkthrough of the solution:
-http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/area.htm
 
 ---
 > id: koch-dimension
@@ -246,6 +245,36 @@ solve this equation to find that the dimension of the von Koch Snowflake is
 `d = log_3(4) = 1.262…`
 
 :::
+
+---
+> id: koch-area
+
+{.fixme} Area of koch snowflake: You can think about creating the Koch Snowflake
+as a sequence: you start with a single triangle, and at every step you add
+smaller triangles around the outside. At every step, the number of triangles
+increases by 4, but their area decreases by a factor of 9. The total area is
+therefore a geometric series that converges. The resulting area is 2√3/5 ≈ 0.69.
+Here you can find a more detailed walkthrough of the solution:
+http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/area.htm
+
+
+::: column(width=352)
+
+    x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 audio credit="© Disney")
+
+{.caption} "My soul is spiralling on frozen fractals all around…"
+
+:::
+
+---
+
+### The History of Fractals
+
+{.fixme} TODO
+
+{.fixme} Fractals are very popular in mathematical visualisation, because they look very
+beautiful even though they can be created using simple patterns like the ones
+above.
 
 ---
 > id: menger-sponge
@@ -343,8 +372,8 @@ has applications in medicine, biology, geology and meteorology.
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:BlueRidgePastures.jpg
-    x-media(src="images/xxx.jpg" width=300 height=225 lightbox credit="Gary R. Huber, 3D Nature, CC BY-SA")
+    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
+    x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 ::: column.grow
 
@@ -512,6 +541,7 @@ real line
 complex plane
 
 ---
+> id: julia
 
 ### Julia Sets
 
@@ -520,6 +550,14 @@ number, we also add a constant _c_.
 
 If `c = 0`, we get the same as before, and the set of numbers that converge
 is a circle.
+
+    figure
+      x-geopad(width=600 height=400 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no")
+        canvas(width=1200 height=800)
+        svg
+          circle.move.yellow(name="a0" x="point(1,1)")
+          path.yellow(x="spiral(a0,c)")
+          circle.move.red(name="c" x="point(0,0)")
 
 ---
 
