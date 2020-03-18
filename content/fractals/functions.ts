@@ -47,11 +47,18 @@ function drawIteration($canvas: CanvasView, a: Point, b: Point, c1: Point, c2: P
 export function fern($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const $canvas = $geopad.$('canvas') as CanvasView;
+  const $slider = $step.$('x-slider') as Slider;
 
   $step.model.watch(({steps, a, b, c1, c2}: any) => {
     $canvas.clear();
     drawIteration($canvas, a.scale(2), b.scale(2), c1.scale(2), c2.scale(2), steps);
   });
+
+  $step.model.set = (a: number, b: number, c: number, d: number) => {
+    $geopad.animatePoint('c1', new Point(a, b), 500);
+    $geopad.animatePoint('c2', new Point(c, d), 500);
+    $slider.moveTo(8, 500)
+  };
 }
 
 function drawSierpinski([a, b, c]: Point[], i: number): string {
@@ -185,7 +192,7 @@ export function mandelZoom($step: Step) {
   const $slider = $step.$('x-slider') as Slider;
   const speed = 2 * ($images.length - 1) / $slider.steps;
 
-  $step.model.pow = (s: number) => Math.round(2 ** (s/100 * 19));
+  $step.model.pow = (s: number) => Math.round(4 ** (s/10));
 
   $step.model.watch((state: any) => {
     for (const [i, $img] of $images.entries()) {

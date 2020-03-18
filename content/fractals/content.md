@@ -25,44 +25,52 @@ spiralling around a larger one.
 
 :::
 
-{.fixme.reveal(when="blank-0")} Initially, these look highly complex shapes – but
-when you look closer, you can see that they both follow a simple pattern:
-Notice how the [individual parts](target:fractal) of both plants look exactly
-the same as the entire plant, just smaller. The same pattern is repeated over
-and over again, at smaller scales.
-
----
-> id: self-similar
-
-{.fixme} In mathematics, we call this _self-similarity_. The shapes that have this
-property are called __Fractals__, and they are some of the most beautiful and
-most bizarre objects in all of mathematics.
+{.reveal(when="blank-0")} Initially, these appear like highly complex shapes –
+but when you look closer, you might notice that they both follow a relatively
+simple pattern: all the [individual parts](target:fractal) of the plants look
+exactly the same as the entire plant, just smaller. The same pattern is repeated
+over and over again, at smaller scales.
+[Continue](btn:next)
 
 ---
 > id: fern
 
-{.fixme} To create a fractal, you can start with a simple pattern and repeat it at
-smaller scales, again and again, forever. 
+In mathematics, we call this property __self-similarity__, and shapes that
+have it are called [__fractals__](gloss:fractal). They are some of the most
+beautiful and most bizarre objects in all of mathematics.
+
+To create our own fractals, we have to start with a simple pattern and then
+repeat it over and over again, at smaller scales.
 
 ::: column.grow
 
-{.fixme} We can try to create our own fractals using geometry.
+One of the simplest patterns might be a [{.pill.red} line segment](target:s1),
+with [{.pill.blue} two more segments](target:s2) branching off one end. If we
+repeat this pattern, both of these blue segments will also have two more
+branches at their ends.
 
-{.fixme} Depending on how you position the points, you can make completely different
-kinds of shapes – looking like a tree, or like a fern.
+You can move the [blue dots](target:dot) to change the length and angle of all
+of the branches. Then increase the number of iterations using [the
+slider](->#fern-slider) below.
 
-::: column(width=320)
+{.reveal(when="slider-0")} Depending on the position of the branches, you can
+make completely different patterns – looking like the
+[fern](action:set(130,228,197,184)) above, a [tree](action:set(160,186,200,186)),
+or [nested pentagons](action:set(113,235,232,238)). What else can you find?
+[Continue](btn:next)
 
-    x-geopad(width=320 height=320)
-      canvas(width=640 height=640)
+::: column(width=360)
+
+    x-geopad(width=360 height=360 projections="no")
+      canvas(width=720 height=720)
       svg
-        circle(x="point(160,300)" name="a" hidden)
-        circle(x="point(160,220)" name="b" hidden)
-        circle.move.blue(name="c1" cx=150 cy=160)
-        circle.move.blue(name="c2" cx=200 cy=200)
-        path.thick.red(x="segment(a,b)")
-        path.thick.blue.rounded(x="polyline(c1,b,c2)")
-    x-slider(steps=8 var="steps")
+        circle(x="point(180,340)" name="a" hidden)
+        circle(x="point(180,250)" name="b" hidden)
+        circle.move.blue.pulsate(name="c1" cx=150 cy=175 target="s2 dot")
+        circle.move.blue.pulsate(name="c2" cx=225 cy=220 target="s2 dot")
+        path.thick.red(x="segment(a,b)" target="s1")
+        path.thick.blue.rounded(x="polyline(c1,b,c2)" target="s2")
+    x-slider#fern-slider(steps=8 var="steps")
 
 :::
 
@@ -71,7 +79,7 @@ kinds of shapes – looking like a tree, or like a fern.
 
 ::: column.grow(parent="right")
 
-Another famous fractal is the __Sierpinski Triangle__. In this case, you start
+Another famous fractal is the __Sierpinski Triangle__. In this case, we start
 with a large, equilateral triangle, and then repeatedly cut smaller triangles
 out of the remaining parts.
 
@@ -91,18 +99,14 @@ will continue repeating, forever.
 ---
 > id: real
 
-{.fixme} The plants at the begining of this chapter _look_ like fractals, but it is
-clearly impossible to create _true_ fractals in real life: if we keep repeating
+The plants at the begining of this chapter _look_ just like fractals, but it is
+clearly impossible to create _true_ fractals in real-life: if we keep repeating
 the same pattern over and over again, smaller and smaller, we would eventually
 get to cells, molecules or atoms which can no longer be divided.
 
-{.fixme} At the beginning of this chapter, we saw two examples of plants that look almost
-like fractals – ferns and broccoli. Of course, true fractals can never appear
-in nature: if you zoom in further and further, you would eventually arrive at
-molecules and atoms, which are no longer divisible.
-
 However, using mathematics, we can think about the properties that real fractals
 “would” have – and these are very surprising…
+[Continue](btn:next)
 
 ---
 
@@ -114,7 +118,7 @@ However, using mathematics, we can think about the properties that real fractals
 
 ::: column.grow
 
-First, let’s think about the dimension of Fractals. A line has dimension [[1]].
+First, let’s think about the dimension of fractals. A line has dimension [[1]].
 _{span.reveal(when="blank-0")} When scaling it by a factor of 2, its length
 increases by a factor of `§2^1 = 2`. Obviously!_
 
@@ -143,6 +147,8 @@ a factor of 2, its area increases by a factor of `§2^2 =` [[4]]._
 
 A square has dimension [[3]]. _{span.reveal(when="blank-0")} When scaling it by
 a factor of 2, its volume increases by a factor of `§2^3 =` [[8]]._
+_{span.reveal(when="blank-1")} Notice that the larger cube in the image
+consists of 8 copies of the smaller one!_
 
 :::
 
@@ -154,32 +160,39 @@ a factor of 2, its volume increases by a factor of `§2^3 =` [[8]]._
 
 ::: column.grow
 
-Now let's have a look at the Sierpinski triangle. If we scale it by a factor of
-2, you can see that it's "area" increases by a factor of [[3]].
+Now let’s have a look at the Sierpinski triangle. If we scale it by a factor of
+2, you can see that it’s “area” increases by a factor of [[3]].
 
-{.reveal(when="blank-0")} Let's say that _d_ is the dimension of the triangle.
-Using the same pattern as above, we get `§2^d = 3`. In other words, _d_ =
-[[`log_2(3)`|`log_3(2)`]] _≈ 1.585…_
+{.reveal(when="blank-0")} Let’s say that _d_ is the dimension of the Sierpinski
+triangle. Using the same pattern as above, we get `§2^d = 3`. In other words,
+_d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")}≈ 1.585…_
 
 :::
 
 ---
 
-So … how can something have a dimension that is not an integer? It seems
+But wait … how can something have a dimension that is not an integer? It seems
 impossible, but this is just one of the weird properties of fractals. In fact,
 this is what gives fractals their name: they have a __fractional dimension__.
 
 With every iteration, we remove some of the area of the Sierpinski triangle.
 If we could do this infinitely many times, there would actually be no area
-left: that's why the Sierpinski triangle is something in-between a 2-dimesional
+left: that’s why the Sierpinski triangle is something in-between a 2-dimesional
 area, and a 1-dimensional line.
+
+::: .theorem
+While many fractals are _self-similar_, a better definition is that __fractals__
+are shapes which have a __non-integer dimension__.
+:::
+
+[Continue](btn:next)
 
 ---
 > id: snowflake
 
 ### The Koch Snowflake
 
-There are many shapes in nature that look like fractals. We've already seen
+There are many shapes in nature that look like fractals. We’ve already seen
 some plants at the beginning of this chapter. Another great examples are
 snowflakes and ice crystals:
 
@@ -674,6 +687,21 @@ supercomputers in 1980; today everybody can do the same calculations on a normal
 laptop.
 
 ---
+
+Here are two of the first visualisations of the Mandelbrot set and a Julia set,
+from a paper by Robert Brooks and Peter Matelski, published in 1980:
+
+::: column(width=340)
+
+    x-media(src="images/mandelbrot.jpg" width=340 height=340)
+
+::: column(width=340)
+
+    x-media(src="images/julia.jpg" width=340 height=340)
+
+:::
+
+---
 > id: mandel-zoom
 
 Black points in the image below are part of the Mandelbrot set. Coloured areas
@@ -682,16 +710,17 @@ respective sequence of complex numbers diverges (tends to infinity).
 
     .mandel-frame
       - i = 1;
-      while i <= 19
-        img(src="images/mandel/mandel-" + i + ".jpg" width=800 height=450)
+      while i <= 27
+        img(src="images/mandel/mandel-" + i + ".jpg" width=760 height=500)
         - i += 1;
       .scale.var Scale: ${pow(scale)}
-    x-slider(steps=100 speed=0.5 var="scale")
+    x-slider(steps=270 speed=0.5 var="scale")
 
 ---
 
-Number of fixed points in every bulb
+The Mandelbrot set can be created with just a single, simple equation – yet, it
+is infinitely complex and stunningly beautiful. This combination has made it
+one of the most famous and most recognisable shapes in all of mathematics.
 
----
-
-relationship between julia and mandelbrot
+{.todo} Coming Soon: More on the relationship between the Julia and
+Mandebrot sets, and the number of fixed points in every bulb.
