@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {Color, tabulate2D} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon} from '@mathigon/fermat';
-import {$N, CanvasView} from '@mathigon/boost';
+import {Color, list, tabulate, tabulate2D} from '@mathigon/core';
+import {Point, Polyline, Complex, Polygon, Segment} from '@mathigon/fermat';
+import {$N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, Slider, Slideshow, Step} from '../shared/types';
 import {YELLOW} from '../shared/constants';
@@ -18,7 +18,7 @@ import {JuliaCanvas} from './components/mandelbrot';
 // -----------------------------------------------------------------------------
 // Introduction
 
-const colours = Color.gradient('#22ab24', '#0f82f2', 10).map(c => c.toString());
+const colours = Color.gradient('#22ab24', '#0f82f2', 9).map(c => c.toString());
 
 /** Returns the image of x, if a-b is mapped onto b-c. */
 function transform(a: Point, b: Point, c: Point, x: Point) {
@@ -29,18 +29,21 @@ function transform(a: Point, b: Point, c: Point, x: Point) {
   return c.add(x1);
 }
 
-function drawIteration($canvas: CanvasView, a: Point, b: Point, c1: Point, c2: Point, i: number) {
+function drawIteration($canvas: CanvasView, a: Point, b: Point, c1: Point, c2: Point, max: number, i = 0) {
   const d1 = transform(a, b, c1, c1);
   const d2 = transform(a, b, c1, c2);
   const d3 = transform(a, b, c2, c1);
   const d4 = transform(a, b, c2, c2);
 
-  $canvas.draw(new Polyline(d1, c1, d2), {strokeWidth: 3, lineCap: 'round', lineJoin: 'round', stroke: colours[i]});
-  $canvas.draw(new Polyline(d3, c2, d4), {strokeWidth: 3, lineCap: 'round', lineJoin: 'round', stroke: colours[i]});
+  const strokeWidth = 6 - i/2;
+  const stroke = colours[max - i];
 
-  if (i > 0) {
-    drawIteration($canvas, b, c1, d1, d2, i - 1);
-    drawIteration($canvas, b, c2, d3, d4, i - 1);
+  $canvas.draw(new Polyline(d1, c1, d2), {strokeWidth, lineCap: 'round', lineJoin: 'round', stroke});
+  $canvas.draw(new Polyline(d3, c2, d4), {strokeWidth, lineCap: 'round', lineJoin: 'round', stroke});
+
+  if (i < max) {
+    drawIteration($canvas, b, c1, d1, d2, max, i + 1);
+    drawIteration($canvas, b, c2, d3, d4, max, i + 1);
   }
 }
 
@@ -98,6 +101,52 @@ export function koch($step: Step) {
   const triangle = Polygon.regular(3, 150).shift(150, 150);
   $step.model.koch = drawKoch.bind(undefined, triangle);
 }
+
+export function coastlines1($step: Step) {
+  const $svg = $step.$('.coastline svg')!;
+  const $lines = $N('g', {}, $svg);
+
+  const $coast = $svg.$('path') as SVGView;
+  const length = $coast.strokeLength;
+
+  const startPoint = $coast.getPointAtLength(0);
+  const points = list(5, length, 5).map(i => $coast.getPointAtLength(i));
+
+  $step.model.rulers = [100, 80, 60, 40, 20];
+  const scale = 0.8;
+
+  function makeRuler(p: Point, q: Point) {
+    const $outline = $N('line', {class: 'border'}, $lines) as SVGView;
+    const $line = $N('line', {}, $lines) as SVGView;
+    $outline.setLine(p, q);
+    $line.setLine(p, q);
+  }
+
+  $step.model.watch((s: any) => {
+    const rulerLength = $step.model.rulers[s.index] * scale;
+
+    $lines.removeChildren();
+    let point = startPoint;
+    let count = 0;
+
+    for (const p of points) {
+      if (Point.distance(point, p) >= rulerLength) {
+        makeRuler(point, p);
+        count += 1;
+        point = p;
+      }
+    }
+
+    if (Point.distance(point, startPoint) >= rulerLength / 2) {
+      makeRuler(point, startPoint);
+      count += 1;
+    }
+
+    $step.model.count = count;
+  })
+
+}
+
 
 
 // -----------------------------------------------------------------------------

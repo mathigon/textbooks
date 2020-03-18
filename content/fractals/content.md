@@ -280,59 +280,126 @@ http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/area.htm
 :::
 
 ---
-
-### The History of Fractals
-
-{.fixme} TODO
-
-{.fixme} Fractals are very popular in mathematical visualisation, because they look very
-beautiful even though they can be created using simple patterns like the ones
-above.
-
----
 > id: menger-sponge
 
 ### Menger Sponge
 
-Fractals don't have to be "flat" – there many Fractals that look 3-dimensional.
-One of the most famous examples is the __Menger sponge__, which is named after
-the mathematician Karl Menger who first described it in 1926.
+Fractals don't have to be “flat”, like many of the examples above. One of the
+most famous fractals that look 3-dimensional is the __Menger sponge__, named
+after the mathematician [Karl Menger](bio:menger) who first described it in 1926.
 
 ::: column.grow
 
-{.fixme} description
+We start with a solid cube, and repeatedly drill smaller and smaller holes into
+its sides. Every new iterations of hole has [[`1/3`|`1/2`|`1/4`]] the width of
+the previous iteration of holes.
+
+{.reveal(when="blank-0 slider-0")} We can try to calculate the dimension of the
+Menger sponge just like we did for the Koch snowflake above. The cube on the
+right consists of [[20]] copies of itself, all of which are 3 times smaller.
+
+{.reveal(when="blank-1")} If _d_ is the dimension of the Menger sponge, we get
+`§3^d = 20`, or `§d = log_3(20) ≈ 2.727`. If you imagine cutting out more and
+more holes, infinitely many times, there would be no actual volume left – which
+is why the cube is “not quite” 3-dimensional.
 
 ::: column(width=320)
 
-    x-menger-sponge(size=320 steps=3)
-
-{.caption} This rendering consists of 8000 individual cubes.
+    x-menger-sponge.var(size=320 :steps="steps")
+    x-slider(steps=3 var="steps")
 
 :::
 
 ---
 > id: coastlines
 
-### Fractals in Nature and Technology
+### Fractal Coastlines
 
-While true fractals can never appear in nature, there are many examples that
-look _almost_ like fractals. We've already seen some plants and snowflake,
-but are much larger-scale example are costlines.
+One of the key characteristics of all the fractals we've seen so far is that
+you can "zoom in" forever, and always find new patterns. Around 1920, the
+British mathematician [Lewis Fry Richardson](bio:richardson) realised that the
+same is true for the border or coastline of many countries.
+
+You start with the basic shape of the country, and as you zoom in, you add
+river inlets, bays and estuary, then individual cliffs, rocks, pebbles, and so
+on:
+
+::: column(width=120 parent="padded-thin")
+
+    x-media(src="images/coast-1.jpg" width=120 height=180)
+
+::: column(width=120)
+
+    x-media(src="images/coast-2.jpg" width=120 height=180)
+
+::: column(width=120)
+
+    x-media(src="images/coast-3.jpg" width=120 height=180)
+
+::: column(width=120)
+
+    x-media(src="images/coast-4.jpg" width=120 height=180)
+
+::: column(width=120)
+
+    x-media(src="images/coast-5.jpg" width=120 height=180)
+
+:::
+
+[Continue](btn:next)
+
+---
+> id: coastlines-1
 
 ::: column.grow
 
-{.fixme} coastlines text
+This is a significant problem when trying to calculate the length of the border
+of a country – how do you decide which nooks and crannies to include?
+
+One way we could measure the length of Britain's coastline, for example, is to
+take a long ruler, walk all the way around its beaches, and then add up all the
+distances.
+
+If the ruler is ${rulers[index]}{index|0|0,4,1}km long, we have to use it
+${count} times, so we get a total coastline of ${count} × ${rulers[index]} =
+${count * rulers[index]}km.
+
+{.reveal(when="var-0")} We can just keep going, with smaller and smaller rulers,
+and each time, our result for the length of the coastline would get a bit
+longer. Just like the Koch Snowflake before, it seems that Britains
+coastline is infinitely long!
+
+{.reveal(when="var-0")} This is often called the __Coastline paradox__.
+[Continue](btn:next)
 
 ::: column(width=280)
 
-{.fixme} coastlines interactive
+    .coastline: include svgs/britain.svg
 
 :::
 
 ---
+> id: coastline-dimension
+
+A few decades later, the mathematician [Benoit Mandelbrot](bio:mandelbrot)
+stumbled upon Richardson's work in a discarded library book, while working at
+IBM. He recognised its significance, and also how it relates to more recent
+research on fractals and dimensions.
+
+The coastline of Britain certainly “looks” fractal, but it is not
+_self-similar_, like all the other fractals we’ve seen before. This means we
+have to find a slightly different method to calculate its area.
+
+{.todo} Coming Soon: Calculating the Dimension of Britain's Coastline
+
+---
 > id: nature
 
-And here are many more examples of fractals in nature:
+### More Fractals in Nature and Technology
+
+While true fractals can never appear in nature, there are many objects that
+look _almost_ like fractals. We've already seen plants, snowflakes and
+coastlines, and here are many more examples:
 
 ::: column(width=200)
 
@@ -376,40 +443,34 @@ And here are many more examples of fractals in nature:
 
 :::
 
----
+All these object might appear completely random, but, just like fractals, there
+is an underlying pattern that determines how they are formed. Mathematics can
+help us understand the shapes better, and fractals have applications in fields
+like medicine, biology, geology and meteorology.
+[Continue](btn:next)
 
-{.fixme} These shapes appear to be completely random, but – as with fractals – there is
-an underlying pattern that determines how the shapes are formed and what they
-will look like. Mathematics can help us understand the shapes better, and thus
-has applications in medicine, biology, geology and meteorology.
+---
+> id: technology
 
 ::: column(width=300)
 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
 
+{.caption} Computer-generated fractal terrain
+
 ::: column.grow
 
-{.fixme} Generate realistic computer-generated
-graphics for movies or video games.
+We can also use fractals to create realistic “copies” of nature, for example as
+landscapes and textures used in video games or computer-generated movies. The
+water, mountains and clouds in this image are made entirely by a computer, with
+the help of fractals!
 
-{.fixme}  Similar processes can be applied to all kinds of computer generated
-graphics. The water, mountains and clouds in this image are generated entirely
-by a computer using fractals. These methods can be used, for example, when
-creating textures for computer games.
+And we can even reverse this process to compress digital images, to reduce their
+file size. The first algorithms were developed by Michael Barnsley and Alan
+Sloan in the 1980s, and new ones are still being researched today.
 
 :::
-
-{.fixme} The process can also be reversed and used for __image compression__. Usually,
-pictures on a computer are saved by remembering the colour of every individual
-pixel in the image. For large images this can take up a lot of disk space and we
-want to reduce its size: we want to _compress_ it.
-
-{.fixme} However some parts of the picture may look similar to fractals. Instead of
-saving the pixels individually, a computer could try to find certain patterns
-in the picture and only save these patterns – this could save a lot of space.
-Methods of fractal image compression were developed by Michael Barnsley and
-Alan Sloan in the 1980s.
 
 
 --------------------------------------------------------------------------------
@@ -724,3 +785,14 @@ one of the most famous and most recognisable shapes in all of mathematics.
 
 {.todo} Coming Soon: More on the relationship between the Julia and
 Mandebrot sets, and the number of fixed points in every bulb.
+
+
+--------------------------------------------------------------------------------
+
+
+## Space Filling Curves
+
+> section: space-filling
+> sectionStatus: dev
+
+{.todo} Coming Soon!

@@ -1562,6 +1562,20 @@ regiomontanus:
     and astronomer. He made great advances in both fields, including creating
     detailed astronomical tables and publishing multiple textbooks.
 
+richardson:
+  name: Richardson
+  bio: |
+    __Lewis Fry Richardson__ (1881 – 1953) was a British mathematician and
+    physicist. He pioneered modern mathematical techniques of weather
+    forecasting, invented acoustic machines to detect icebergs, and developed
+    methods for solving systems of linear equations.
+
+    He also tried to calculate the probability of two countries declaring war
+    on each other, given the length of their shared border – however, he was
+    unable to find accurate measurements for the length of countries borders.
+    This led him to realise that borders and coastlines have many properties
+    of _fractals_.
+
 riemann:
   name: Riemann
   born: 1826

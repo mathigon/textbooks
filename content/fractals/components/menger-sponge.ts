@@ -38,21 +38,30 @@ function step(child: THREE.Object3D) {
 export class MengerSponge extends Solid {
 
   created() {
-    const layers = +this.attr('steps');
-    if (layers > 1) this.setAttr('rotate', '1');
+    this.setAttr('rotate', '1');
+    let cubes: THREE.Object3D[] = [];
 
     this.addMesh(() => {
       const geometry = new THREE.BoxBufferGeometry(1, 1, 1);
       const material = new THREE.MeshPhongMaterial(
-          {specular: 0x222222, color: 0x0f82f2, flatShading: true});
+          {specular: 0x222222, color: 0xfd8c00, flatShading: true});
 
-      let cube: THREE.Object3D = new THREE.Mesh(geometry, material);
-      cube.receiveShadow = true;
-      for (let i = 0; i < 3; ++i) cube = step(cube);
+      cubes = [0, 1, 2, 3].map((steps: number) => {
+        let cube: THREE.Object3D = new THREE.Mesh(geometry, material);
+        cube.receiveShadow = true;
+        for (let i = 0; i < steps; ++i) cube = step(cube);
+        cube.scale.set(2.2, 2.2, 2.2);
+        cube.visible = false;
+        return cube;
+      });
 
-      cube.scale.set(2.2, 2.2, 2.2);
-      return [cube];
+      cubes[+this.attr('steps')].visible = true;
+      return cubes;
     });
 
+    this.on('attr:steps', (e) => {
+      for (const c of cubes) c.visible = false;
+      if (cubes[+e.newVal]) cubes[+e.newVal].visible = true;
+    });
   }
 }
