@@ -285,23 +285,23 @@ every edge:
 
 ::: column(width=140)
 
-    img(src="images/koch-1.svg" width=140 height=160)
+    img(src="images/koch-0.svg" width=140 height=160)
 
 ::: column(width=140)
 
-    img(src="images/koch-2.svg" width=140 height=160)
+    img(src="images/koch-1.svg" width=140 height=160)
 
 [[3]] new triangles
 
 ::: column(width=140)
 
-    img(src="images/koch-3.svg" width=140 height=160)
+    img(src="images/koch-2.svg" width=140 height=160)
 
 [[12]] new triangles
 
 ::: column(width=140)
 
-    img(src="images/koch-4.svg" width=140 height=160)
+    img(src="images/koch-3.svg" width=140 height=160)
 
 [[48]] new triangles
 
@@ -335,7 +335,7 @@ properties of fractals.
 
     x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 audio credit="© Disney")
 
-{.caption} "My soul is spiralling on frozen fractals all around…"
+{.caption} “My soul is spiralling on frozen fractals all around…”
 
 :::
 
@@ -344,7 +344,7 @@ properties of fractals.
 
 ### Menger Sponge
 
-Fractals don't have to be “flat”, like many of the examples above. One of the
+Fractals don’t have to be “flat”, like many of the examples above. One of the
 most famous fractals that look 3-dimensional is the __Menger sponge__, named
 after the mathematician [Karl Menger](bio:menger) who first described it in 1926.
 
@@ -376,8 +376,8 @@ is why the cube is “not quite” 3-dimensional.
 
 ### Fractal Coastlines
 
-One of the key characteristics of all the fractals we've seen so far is that
-you can "zoom in" forever, and always find new patterns. Around 1920, the
+One of the key characteristics of all the fractals we’ve seen so far is that
+you can “zoom in” forever, and always find new patterns. Around 1920, the
 British mathematician [Lewis Fry Richardson](bio:richardson) realised that the
 same is true for the border or coastline of many countries.
 
@@ -417,7 +417,7 @@ on:
 This is a significant problem when trying to calculate the length of the border
 of a country – how do you decide which nooks and crannies to include?
 
-One way we could measure the length of Britain's coastline, for example, is to
+One way we could measure the length of Britain’s coastline, for example, is to
 take a long ruler, walk all the way around its beaches, and then add up all the
 distances.
 
@@ -443,7 +443,7 @@ coastline is infinitely long!
 > id: coastline-dimension
 
 A few decades later, the mathematician [Benoit Mandelbrot](bio:mandelbrot)
-stumbled upon Richardson's work in a discarded library book, while working at
+stumbled upon Richardson’s work in a discarded library book, while working at
 IBM. He recognised its significance, and also how it relates to more recent
 research on fractals and dimensions.
 
@@ -465,7 +465,7 @@ repeat the process of counting the cells. In this case, the size of the
 coastline has increased by a factor of `§197/88`.
 
 {.reveal(when="next-0")} Using the same idea as before, this means that the
-dimension of Britain's Coastline is
+dimension of Britain’s Coastline is
 
 {.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16`
 
@@ -474,7 +474,7 @@ dimension of Britain's Coastline is
 ---
 > id: coastline-dimension-1
 
-If we keep repeating this with larger and larger grids, we'd find that the
+If we keep repeating this with larger and larger grids, we’d find that the
 dimension of the coastline of Britain tends towards 1.21.
 
 Mandelbrot realised that this fractal dimension is also a measure of the
@@ -487,8 +487,8 @@ applications in many areas of mathematics and science.
 ### More Fractals in Nature and Technology
 
 While true fractals can never appear in nature, there are many objects that
-look _almost_ like fractals. We've already seen plants, snowflakes and
-coastlines, and here are many more examples:
+look _almost_ like fractals. We’ve already seen plants, snowflakes and
+coastlines, and here are some more examples:
 
 ::: column(width=200)
 
@@ -696,6 +696,10 @@ over and over again.
 
 ::: column(width=112 parent="padded-thin")
 
+    img(src="images/koch-0.svg" width=112 height=128)
+
+::: column(width=112 parent="padded-thin")
+
     img(src="images/koch-1.svg" width=112 height=128)
 
 ::: column(width=112 parent="padded-thin")
@@ -705,10 +709,6 @@ over and over again.
 ::: column(width=112 parent="padded-thin")
 
     img(src="images/koch-3.svg" width=112 height=128)
-
-::: column(width=112 parent="padded-thin")
-
-    img(src="images/koch-4.svg" width=112 height=128)
 
 :::
 
@@ -811,7 +811,7 @@ also the value of `pill(c,"red","c")`:
         circle.move.red(name="c" x="point(0,0)")
 
 {div(slot="legend")} We already know what happens if
-[`c = 0`](action:animate(0,0)) – that's the same as the example above.
+[`c = 0`](action:animate(0,0)) – that’s the same as the example above.
 The sequence convergence as long as `x_0` lies within the unit circle.
 
 {div(slot="legend")} As soon as we change the value of _c_, something wonderful
