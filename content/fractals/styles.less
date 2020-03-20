@@ -19,12 +19,24 @@
   x-step.focus & { opacity: 0.85; }
 }
 
+svg.var {
+  .red { fill: @red; }
+  .blue { fill: @blue; }
+  .white { fill: white; }
+  .overlay { fill: white; opacity: 0; transition: opacity .2s; }
+  .overlay.focus { opacity: 0.9; }
+}
+
+.sierpinski {
+  overflow: visible;
+  g { transition: transform .3s, fill .3s }
+  .focus & .t1 { transform: translate(10px, 5px); fill: @blue; }
+  .focus & .t2 { transform: translate(-10px, 5px); fill: @green; }
+  .focus & .t3 { transform: translate(0, -10px); fill: @yellow; }
+}
+
 x-menger-sponge { display: block; }
 x-menger-sponge canvas { width: 100%; height: auto; }
-
-path.var.red { fill: @red; }
-path.var.blue { fill: @blue; }
-path.var.white { fill: white; }
 
 .coastline {
   path { fill: @medium-grey; }
@@ -66,11 +78,13 @@ path.var.white { fill: white; }
 }
 
 
-
-
-
 // -----------------------------------------------------------------------------
 // Mandelbrot Set
+
+.sequence-cell { background: mix(@blue, white, 10%); border-radius: 6px;
+  padding: 16px 12px; text-align: center; }
+
+.vdots { transform: rotate(90deg); display: inline-block; margin-left: 15px; }
 
 .mandel-frame {
   position: relative;

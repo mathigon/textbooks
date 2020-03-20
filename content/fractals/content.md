@@ -13,7 +13,8 @@ these:
     img(src="images/fern.jpg" width=320 height=240)
     img.fractal-overlay(src="images/fern-overlay.png" width=320 height=240)
 
-{.caption} This __Fern__ consists of many small leafs that branch off a larger one.
+{.caption} This __Fern__ consists of many small leaves that branch off a larger
+one.
 
 ::: column.r(width=320)
 
@@ -83,15 +84,24 @@ Another famous fractal is the __Sierpinski Triangle__. In this case, we start
 with a large, equilateral triangle, and then repeatedly cut smaller triangles
 out of the remaining parts.
 
-{.fixme} Notice how, after a while, every smaller triangle looks exactly the
-same as the whole. You can zoom into a fractal, and the patterns and shapes
-will continue repeating, forever.
+{.reveal(when="slider=0")} Notice how the final shape is made up of [three
+identical copies of itself](target:x), and each of these is made up of even
+smaller copies of the entire triangle! You could keep zooming into the triangle
+forever, and the patterns and shapes will always continue repeating.
 
 ::: column(width=300)
 
-    svg(width=300 height=265)
-      path.var.red(:draw="triangle")
-      path.var.white(:d="sierpinski(triangle.points, steps)")
+    svg.sierpinski.var(width=300 height=265)
+      path.red(:draw="triangle" :show="!steps")
+      g.red.t1
+        path(:draw="t1")
+        path.white(:d="sierpinski(t1.points, steps-1)")
+      g.red.t2
+        path(:draw="t2")
+        path.white(:d="sierpinski(t2.points, steps-1)")
+      g.red.t3
+        path(:draw="t3")
+        path.white(:d="sierpinski(t3.points, steps-1)")
     x-slider(steps=8 var="steps")
 
 :::
@@ -99,8 +109,8 @@ will continue repeating, forever.
 ---
 > id: real
 
-The plants at the begining of this chapter _look_ just like fractals, but it is
-clearly impossible to create _true_ fractals in real-life: if we keep repeating
+The plants at the beginning of this chapter _look_ just like fractals, but it is
+clearly impossible to create _true_ fractals in real-life. If we keep repeating
 the same pattern over and over again, smaller and smaller, we would eventually
 get to cells, molecules or atoms which can no longer be divided.
 
@@ -177,7 +187,7 @@ this is what gives fractals their name: they have a __fractional dimension__.
 
 With every iteration, we remove some of the area of the Sierpinski triangle.
 If we could do this infinitely many times, there would actually be no area
-left: that’s why the Sierpinski triangle is something in-between a 2-dimesional
+left: that’s why the Sierpinski triangle is something in-between a 2-dimensional
 area, and a 1-dimensional line.
 
 ::: .theorem
@@ -193,7 +203,7 @@ are shapes which have a __non-integer dimension__.
 ### The Koch Snowflake
 
 There are many shapes in nature that look like fractals. We’ve already seen
-some plants at the beginning of this chapter. Another great examples are
+some plants at the beginning of this chapter. Other great examples are
 snowflakes and ice crystals:
 
 ::: column(width=120 parent="padded-thin")
@@ -226,19 +236,22 @@ procedure we can apply over and over again.
 
 ::: column.grow
 
-Like the Sierpinski triangle, let's start with a single, equilateral triangle.
+Like the Sierpinski triangle, let’s start with a single, equilateral triangle.
 However, rather than _removing_ smaller triangles at every step, we _add_
 smaller triangles along the edge. The side-length of every triangle is
 [[`1/3`|`1/4`|`1/2`]] of the triangles in the previous step.
 
-The resulting shape is called the __Koch snowflake__, named after the Swedish
-mathematician [Helge von Koch](bio:koch). Notice, once again, that small
-sections of the edge of the snowflake look exactly the same as larger sections.
+{.reveal(when="blank-0")} The resulting shape is called the __Koch snowflake__,
+named after the Swedish mathematician [Helge von Koch](bio:koch). Notice, once
+again, that [small sections](target:t2) of the edge of the snowflake look
+exactly the same as [larger sections](target:t1).
 
 ::: column(width=300)
 
-    svg(width=300 height=300)
-      path.var.blue(:draw="koch(steps)")
+    svg.var(width=300 height=300)
+      path.blue(:draw="koch(steps)")
+      rect.overlay(y=76 width=300 height=224 target="t1")
+      polygon.overlay(points="300 0 90 0 107 76 0 76 0 300 300 300 300 0" target="t2")
     x-slider(steps=5 var="steps")
 
 :::
@@ -252,24 +265,71 @@ sections of the edge of the snowflake look exactly the same as larger sections.
 
 ::: column.grow
 
-{.fixme} When we scale one edge segment of the von Koch Snowflake by a factor of 3, its
-length quadruples. Therefore we get the equation `3^d=4`. Like before, we can
-solve this equation to find that the dimension of the von Koch Snowflake is
-`d = log_3(4) = 1.262…`
+When we scale one edge segment of the Koch Snowflake by a factor of 3, its
+length [[quadruples|triples|doubles]]. 
+
+{.reveal(when="blank-0")} Using the same relationship between dimensions and
+scale factors as above, we get the equation [[`3^d=4`|`2^d=4`|`2^d=3`|`4^d=3`]].
+_{span.reveal(when="blank-1")} This means that the dimension of the Koch
+Snowflake is `§d = log_3(4) ≈ 1.262`._
 
 :::
 
 ---
 > id: koch-area
 
-{.fixme} Area of koch snowflake: You can think about creating the Koch Snowflake
-as a sequence: you start with a single triangle, and at every step you add
-smaller triangles around the outside. At every step, the number of triangles
-increases by 4, but their area decreases by a factor of 9. The total area is
-therefore a geometric series that converges. The resulting area is 2√3/5 ≈ 0.69.
-Here you can find a more detailed walkthrough of the solution:
-http://ecademy.agnesscott.edu/~lriddle/ifs/ksnow/area.htm
+Creating the Koch snowflakes is almost like a [recursive
+sequence](gloss:sequence-recursive): we know the starting shape (a triangle),
+and we know how to get from one term to the next, by adding more triangles on
+every edge:
 
+::: column(width=140)
+
+    img(src="images/koch-1.svg" width=140 height=160)
+
+::: column(width=140)
+
+    img(src="images/koch-2.svg" width=140 height=160)
+
+[[3]] new triangles
+
+::: column(width=140)
+
+    img(src="images/koch-3.svg" width=140 height=160)
+
+[[12]] new triangles
+
+::: column(width=140)
+
+    img(src="images/koch-4.svg" width=140 height=160)
+
+[[48]] new triangles
+
+:::
+
+---
+> id: koch-area-1
+
+The number of new triangles added increases by [[4]] at every step, but the
+size of them decreases by a factor of [[9]] at every step. This means that the
+total area of the Koch snowflake is a [geometric series](gloss:series-geometric)
+with common difference `4/9`.
+
+{.fixme} Calculate area
+
+---
+> id: koch-circumference
+
+{.fixme} Calculate circumference
+
+---
+> id: frozen
+
+::: column.grow
+
+{.fixme} It is almost unthinkable that you can have a shape with _finite_ area
+uet _infinite_ circumference – but thisi is just one of the many unexpected
+properties of fractals.
 
 ::: column(width=352)
 
@@ -291,17 +351,18 @@ after the mathematician [Karl Menger](bio:menger) who first described it in 1926
 ::: column.grow
 
 We start with a solid cube, and repeatedly drill smaller and smaller holes into
-its sides. Every new iterations of hole has [[`1/3`|`1/2`|`1/4`]] the width of
+its sides. Every new iteration of holes has [[`1/3`|`1/2`|`1/4`]] the width of
 the previous iteration of holes.
 
-{.reveal(when="blank-0 slider-0")} We can try to calculate the dimension of the
-Menger sponge just like we did for the Koch snowflake above. The cube on the
-right consists of [[20]] copies of itself, all of which are 3 times smaller.
+{.reveal(when="blank-0")} We can try to calculate the dimension of the Menger
+sponge just like we did for the Koch snowflake above. The cube on the right
+consists of [[20]] copies of itself, all of which are 3 times smaller.
 
 {.reveal(when="blank-1")} If _d_ is the dimension of the Menger sponge, we get
 `§3^d = 20`, or `§d = log_3(20) ≈ 2.727`. If you imagine cutting out more and
 more holes, infinitely many times, there would be no actual volume left – which
 is why the cube is “not quite” 3-dimensional.
+[Continue](btn:next)
 
 ::: column(width=320)
 
@@ -387,10 +448,38 @@ IBM. He recognised its significance, and also how it relates to more recent
 research on fractals and dimensions.
 
 The coastline of Britain certainly “looks” fractal, but it is not
-_self-similar_, like all the other fractals we’ve seen before. This means we
-have to find a slightly different method to calculate its area.
+_self-similar_, like all the other fractals we’ve seen before.
 
-{.todo} Coming Soon: Calculating the Dimension of Britain's Coastline
+::: column(width=340)
+
+    include svgs/cells.svg
+
+::: column.grow
+
+In order to find its “size” of the coastline, we can draw it on a grid and count
+the number of cells that intersect with it.
+[Continue](btn:next)
+
+{.reveal(when="next-0")} Then, we scale the coastline by a factor of 2, and
+repeat the process of counting the cells. In this case, the size of the
+coastline has increased by a factor of `§197/88`.
+
+{.reveal(when="next-0")} Using the same idea as before, this means that the
+dimension of Britain's Coastline is
+
+{.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16`
+
+:::
+
+---
+> id: coastline-dimension-1
+
+If we keep repeating this with larger and larger grids, we'd find that the
+dimension of the coastline of Britain tends towards 1.21.
+
+Mandelbrot realised that this fractal dimension is also a measure of the
+__roughness__ of a shape – a new concept that he found has important
+applications in many areas of mathematics and science.
 
 ---
 > id: nature
@@ -443,7 +532,7 @@ coastlines, and here are many more examples:
 
 :::
 
-All these object might appear completely random, but, just like fractals, there
+All these objects might appear completely random, but, just like fractals, there
 is an underlying pattern that determines how they are formed. Mathematics can
 help us understand the shapes better, and fractals have applications in fields
 like medicine, biology, geology and meteorology.
@@ -461,7 +550,7 @@ like medicine, biology, geology and meteorology.
 
 ::: column.grow
 
-We can also use fractals to create realistic “copies” of nature, for example as
+We can also use fractals to create realistic “copies” of nature, for example, as
 landscapes and textures used in video games or computer-generated movies. The
 water, mountains and clouds in this image are made entirely by a computer, with
 the help of fractals!
@@ -483,9 +572,9 @@ Sloan in the 1980s, and new ones are still being researched today.
 
 ::: column(width=300 parent="right")
 
-    svg.sierpinsk(width=300 height=265)
-      path.var.red(:draw="triangle")
-      path.var.white(:d="sierpinski(triangle.points, steps)")
+    svg.var.sierpinsk(width=300 height=265)
+      path.red(:draw="triangle")
+      path.white(:d="sierpinski(triangle.points, steps)")
     x-slider(steps=8 var="steps")
 
 ::: column.grow
@@ -584,6 +673,14 @@ a seashell that shows
 :::
 
 
+---
+> id: chaos-game
+
+### Sierpinski Tetrahedra
+
+todo
+
+
 --------------------------------------------------------------------------------
 
 
@@ -591,74 +688,122 @@ a seashell that shows
 
 > section: mandelbrot
 > id: iteration
-
-    // Mandelbrot: https://www.youtube.com/watch?v=NGMRB4O922I
+> goals: move
 
 All the fractals we saw in the previous chapters were created using a process
 of __iteration__: you start with a specific pattern, and then you repeat it
 over and over again.
 
-This is similar to another concept in mathematics that you saw before:
-[recursive sequences](gloss:sequence-recursive). There, you start with a number,
-and then you apply the same recursive formula again and again, to get the next
-number in the sequence.
+::: column(width=112 parent="padded-thin")
 
-Let's take the recursive formula `§x_n = x_(n-1)^2` as an example. The resulting
-sequence can be have very differently, depending on the starting value `§x_0`.
+    img(src="images/koch-1.svg" width=112 height=128)
 
-{.fixme} Numberline slider
+::: column(width=112 parent="padded-thin")
+
+    img(src="images/koch-2.svg" width=112 height=128)
+
+::: column(width=112 parent="padded-thin")
+
+    img(src="images/koch-3.svg" width=112 height=128)
+
+::: column(width=112 parent="padded-thin")
+
+    img(src="images/koch-4.svg" width=112 height=128)
+
+:::
+
+This is similar to another concept in mathematics that you saw before: with
+[recursive sequences](gloss:sequence-recursive), you start with a specific
+number, and then you apply the same recursive formula, again and again, to get
+the next number in the sequence.
+
+Let’s take the recursive formula `§x_n = x_(n-1)^2` as an example, and plot its
+terms on a number line. You can change the value of `pill(x_0,"yellow","x0")`:
+
+    figure: x-geopad.no-background(width=720 height=120 x-axis="-3.5,3.5,1" y-axis="-0.1,0.1" axes="yes,no" padding="0 20"): svg
+      circle.yellow.move(x="point(0,0)" name="x0" project="segment(point(-3,0),point(3,0))" target="x0")
+      circle.yellow(x="point(x0.x*x0.x,0)" name="x1")
+      circle.yellow(x="point(x1.x*x1.x,0)")
+      path.yellow(x="arc(x0.add(x1.subtract(x0).scale(0.5)),x0,pi)")
+
+      path.blue.thick(x="segment(point(-1,0),point(1,0))")
 
 ---
 > id: iteration-1
 
-If `§x_0 > 1`, the sequence [[diverges|convrerges]]: it just keeps growing,
-up to Infinity.
+Notice how the resulting sequence can behave very differently, depending on the
+starting value `§x_0`:
 
-If `§-1 < x_0 < 1`, the squence [[converges|diverges]] to [[0]]
+::: column.sequence-cell(width=180 parent="padded-thin")
+
+If `§x_0 > 1`, the sequence [[diverges|converges]]: it just keeps growing,
+up to infinity.
+
+::: column.sequence-cell(width=180)
+
+If `§-1 < x_0 < 1`, the sequence [[converges|diverges]] to [[0]]
+
+::: column.sequence-cell(width=180)
 
 If `§x_0 < -1`, the sequence [[diverges|converges]] again.
+
+:::
 
 ---
 > id: iteration-2
 
-### Julia Sets
-
-So far, we've not learned anything new. However, one century ago, mathematicians
-started to explore what happens to these sequences if you use [__complex
-numbers__](gloss:complex), rather than real numbers – and their discoveries were
-some of the most surprising and beautiful results in all of mathematics…
-
-Let's use the same sequence as before, `§x_n = x_(n-1)^2`. Move the position of
-`§x_0` around the complex plane, to see what happens to the following terms. If
-the sequence converges, let's colour the corresponding point on the plane blue.
-
-    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px")
-      canvas(width=1440 height=960)
-      svg
-        circle.move.yellow(name="a0" x="point(1,1)")
-        path.yellow(x="spiral(a0,c)")
-        circle.move.red(name="c" x="point(0,0)")
-
-{.fixme} Complex plane
-
----
-> id: iteration-3
-
-In this case, the sequence converges as long as `§x_0` lies inside the [[unit
-circle|xxx|xxx]] – the circle with radius 1, centered at the origin.
+So far, we’ve not learned anything new. However, about one century ago,
+mathematicians started to explore what happens to these sequences if you use
+[__complex numbers__](gloss:complex), rather than just the real number line.
+Their discoveries were some of the most surprising and beautiful results in all
+of mathematics.
 
 ---
 > id: julia
+> goals: wipe
 
-Now let's make things a bit more complex. Rather than just squaring the previous
-number, we also add a constant _c_ every time. In other words, `§x_n = x_(n-1)^2 + c`.
+### Julia Sets
 
-Below, you can not only move the position of `pill(x_n,"yellow")`, but also the value of
-`pill(c,"red")`:
+Let’s use the same sequence as before, `§x_n = x_(n-1)^2`, but on the complex
+plane. You can move the position of `pill(x_0,"yellow","x0")`, to see what
+happens to the following terms. If the sequence looks like it will converge,
+let’s colour the corresponding point on the plane in _{.pill.blue}blue_:
+
+    x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i")
+      canvas(width=1440 height=960)
+      canvas(width=1440 height=960)
+      svg
+        circle.move.yellow.pulsate(name="a0" x="point(0,0)" label="x₀ = ${complex(a0)}")
+        circle.yellow(name="a1" x="iterate(a0)" label="x₁")
+        circle.yellow(name="a2" x="iterate(a1)" label="x₂")
+        path.yellow(x="spiral(a0)")
+
+---
+> id: julia-1
+
+As you can see, the sequence converges as long as `pill(x_0,"yellow")`
+lies [[inside the unit circle|outside the unit square|above the x-axis]]
+_{span.reveal(when="blank-0")}(the circle with radius 1, centred at the origin)._
+
+---
+> id: julia-2
+
+Now let’s make things a bit more difficult. Rather than just squaring the
+previous number, we also add a constant _{.pill.red}c_ every time (which can be
+any complex number). In other words, `§x_n = x_(n-1)^2 + c`. Do you think we’ll
+still get a circle of convergence? What other shapes do you think we might see?
+[Continue](btn:next)
+
+---
+> id: julia-3
+> goals: move
+
+In this diagram, you can not just move the position of `pill(x_0,"yellow")`, but
+also the value of `pill(c,"red","c")`:
 
 ::: x-slideshow
 
-    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px")
+    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i")
       canvas(width=1440 height=960)
       svg
         circle.move.yellow(name="a0" x="point(0.5,-0.2)")
@@ -676,98 +821,123 @@ example when [`c = –0.6 – 0.2i`](action:animate(-0.6,-0.2)).
 {div(slot="legend")} When [`c = –0.54 + 0.5i`](action:animate(-0.54,0.5)), the
 shape divides into infinity many tiny elements arranged in spirals.
 
-{div(slot="legend")} What else can you find? have a look at
-[`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) or
-[`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also values of _c_,
-like [`c = 0.8 + 0.2i`](action:animate(0.8,0.2)), where _every_ sequence
-diverges. In this case, we don't colour anything blue.
+{div(slot="legend")} What else can you find? have a look at the patterns when
+[`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) or when
+[`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also some values of
+_c_ where _every_ sequence diverges, so the entire complex plain remains white.
 
 :::
 
 ---
-> id: julia-1
+> id: julia-4
 
 The different shapes that are formed by colouring in the numbers are called
-[__Julia Sets__](gloss:julia-set). More about history, computers, etc.
+[__Julia Sets__](gloss:julia-set). They were discovered independently by two
+French mathematicians, [Gaston Julia](bio:julia) and [Pierre Fatou](bio:fatou),
+around 1918.
 
----
+At that time, there were no computers to help visualise what Julia sets actually
+looked like. Mathematicians like Julia and Fatou were able to reason about them
+mathematically, but they only ever saw rough, hand-drawn sketches of what they
+might look like.
 
-### The Mandelbrot Set
+We don’t have this problem today – the images below are all of different Julia
+sets. The different colours indicate _how quickly_ the sequence at that point
+diverges:
 
-To create a Julia set, we picked a fixed value for _c_, and then changed the
-starting point of the sequence to see which ones converge and which ones don't.
+::: column(width=220)
 
-In XXXX, the French mathematician [Benoit Mandelbrot](bio:mandelbrot) decided to
-reverse this process: fix the starting point to always be 0, and instead change
-the value of _c_.
+    x-media(src="images/julia-1.jpg" width=220 height=165 lightbox)
+
+{.caption} `c = −0.70176 – 0.3842"i"`
+
+::: column(width=220)
+
+    x-media(src="images/julia-2.jpg" width=220 height=165 lightbox)
+
+{.caption} `c = −0.4 + 0.6"i"`
+
+::: column(width=220)
+
+    x-media(src="images/julia-3.jpg" width=220 height=165 lightbox)
+
+{.caption} `c = 0.285 + 0.01"i"`
+
+:::
+
+[Continue](btn:next)
 
 ---
 > id: mandel-paint
 
-Once more, paint over the complex plane to discover the shape of the XXX in
-this example:
+### The Mandelbrot Set
+
+When creating the different Julia sets, you might have noticed that there were
+some values of _c_ for which no sequences converge, and the entire complex plane
+remains white. A few decades after Julia and Fatou, a new generation of
+mathematicians tried to map these areas.
+
+In the previous example, we chose a fixed value for _{.pill.red}c_, and then
+changed the position of _{.pill.yellow}x0_ to colour the plane. Now let’s fix
+the value of _{.pill.yellow}x0 = 0_, and instead change the value of _{.pill.red}c_.
+
+Once more, paint over the complex plane to reveal the area in which sequences
+converge. What shape do you expect to appear?
 
 ::: column(width=460)
 
-    x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes padding=10 snap=0.02)
-      canvas(width=1080 height=960)
+    x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes grid padding=10 label-suffix=",i")
+      img(src="images/mandelbrot.png" width=460 height=460 style="position: absolute;")
+      canvas(width=920 height=920)
       svg
-        circle.move(name="c" cx=0 cy=0 style="r: 15; stroke: blue; fill: white")
+        circle.move.red.pulsate(name="c" cx=0 cy=0 target="c")
+        path.yellow(x="spiral(point(0,0),c)")
+        circle.yellow.hidden(x="x1" target="x1")
+        circle.yellow.hidden(x="x2" target="x2")
 
-::: column.grow(width=200)
+::: column.grow(width=232)
 
-c = ${complex(c)}
+[{span.pill.red.step-target(target="")}_c_ = ${complex(c)}](target:c)
 
-| `x_0` | = | `0^2   + c` | = | ${complex(c)}  |
-| `x_1` | = | `x_0^2 + c` | = | ${complex(x1)} |
-| `x_2` | = | `x_1^2 + c` | = | ${complex(x2)} |
-| `x_3` | = | `x_2^2 + c` | = | ${complex(x3)} |
-| `x_4` | = | `x_3^2 + c` | = | ${complex(x4)} |
-| `x_5` | = | `x_4^2 + c` | = | ${complex(x5)} |
+[{.pill.yellow}`x_0`](target:x0) = 0  
+[{.pill.yellow}`x_1`](target:x1) `§= x_0^2 + c =` ${complex(x1)}  
+[{.pill.yellow}`x_2`](target:x2) `§= x_1^2 + c =` ${complex(x2)}  
+[{.pill.yellow}`x_3`](target:x3) `§= x_2^2 + c =` ${complex(x3)}  
+[{.pill.yellow}`x_4`](target:x4) `§= x_3^2 + c =` ${complex(x4)}  
+[{.pill.yellow}`x_5`](target:x5) `§= x_4^2 + c =` ${complex(x5)}  
+_{span.vdots}…_
+
+Converges!
 
 :::
 
 ---
+> id: mandel-history
 
-This shape is called the __Mandelbrot Set__, and it is probably the most
-recognisable fractal in the world. When rotated by 90°, it looks almost like a
-person, with head, body and two arms.
+This fractal is called the __Mandelbrot Set__, and when rotated by 90°, it looks
+almost like a person, with head, body and two arms. It was defined and drawn for
+the first time in 1978, in a research paper by the mathematicians Robert Brooks
+and Peter Matelski:
 
-Benoit Mandelbrot was one of the first scientists to try to visualise fractals
-using computers. At the time, every image took XXXX to render, and the results
+    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290)
 
-A computer can do these computations very quickly for millions of numbers _c_ –
-like all pixels on a screen. The code required is simple, but the resulting
-fractal is unbelievable complex.
-
-When Benoit Mandelbrot studied the fractal in the early 1920s, there weren’t any
-computers to visualise it &ndash; in fact he didn’t know exactly what it looked
-like. But using mathematics he was able to predict its complexity. The first
-computer generated image of the Mandelbrot set was produced by an IBM
-supercomputers in 1980; today everybody can do the same calculations on a normal
-laptop.
-
----
-
-Here are two of the first visualisations of the Mandelbrot set and a Julia set,
-from a paper by Robert Brooks and Peter Matelski, published in 1980:
-
-::: column(width=340)
-
-    x-media(src="images/mandelbrot.jpg" width=340 height=340)
-
-::: column(width=340)
-
-    x-media(src="images/julia.jpg" width=340 height=340)
-
-:::
+A few years later, [Benoit Mandelbrot](bio:mandelbrot) used the powerful
+computers at IBM to create a much more detailed visualisation of the fractal,
+which was later named after him. The first printouts looked different from what
+he expected – until he realised that the technicians working at the printers were
+cleaning up the “fuzziness” around its edge, assuming that it was caused by dust
+particles or printer errors, and not a defining characteristic of fractals.
+[Continue](btn:next)
 
 ---
 > id: mandel-zoom
 
-Black points in the image below are part of the Mandelbrot set. Coloured areas
-are not in the Mandelbrot set, and the colour indicates the speed with which the
-respective sequence of complex numbers diverges (tends to infinity).
+Like all fractals, we can “zoom into” the Mandelbrot set forever, finding new
+patterns at every scale. Here you can zoom into a part of the Mandelbrot set
+that is called the __Seahorse valley__. Black points are _inside_ the Mandelbrot
+set, where the sequence _converges_. Coloured points are _outside_ the
+Mandelbrot set, where the sequence _diverges_. The different colours indicate
+_how quickly_ these sequences diverge:
 
     .mandel-frame
       - i = 1;
@@ -778,13 +948,37 @@ respective sequence of complex numbers diverges (tends to infinity).
     x-slider(steps=270 speed=0.5 var="scale")
 
 ---
+> id: mandel-zoom-1
 
-The Mandelbrot set can be created with just a single, simple equation – yet, it
-is infinitely complex and stunningly beautiful. This combination has made it
-one of the most famous and most recognisable shapes in all of mathematics.
+This slider consists of 27 individual images, up to a zoom level of over 14
+quadrillion, or `2^54`. Altogether, they took almost 45 minutes to render on
+a modern laptop. The Mandelbrot set can be created with just a single, simple
+equation, `§x_n = x_(n-1)^2 + c`, yet it is infinitely complex and stunningly
+beautiful.
 
-{.todo} Coming Soon: More on the relationship between the Julia and
-Mandebrot sets, and the number of fixed points in every bulb.
+    // TODO: Relationship between Julia and Mandelbrot sets
+    // TODO: Number of fixed points in the different bulbs of the Mandelbrot set
+
+---
+> id: mandel-outro
+
+::: column.grow
+
+Bernoit Mandelbrot dedicated most of his life to the study of fractals, as well
+as the mathematics of _roughness_ and _self-similarity_. His work had
+applications in  physics, meteorology, neurology, economics, geology,
+engineering, computer science, and many other fields.
+
+In 1985, the Mandelbrot set appeared on the cover of the _Scientific American_
+magazine, and since then it has become one of the most recognisable mathematical
+shapes in the world. You can find it on T-shirts, in music videos, and as screen
+savers, and it’s been referenced in popular books and movies.
+
+::: column(width=220)
+
+    x-media(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
+
+:::
 
 
 --------------------------------------------------------------------------------

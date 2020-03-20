@@ -4,12 +4,12 @@
 // =============================================================================
 
 
-import {Color, list, tabulate, tabulate2D} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Segment} from '@mathigon/fermat';
+import {Color, list, tabulate2D} from '@mathigon/core';
+import {Point, Polyline, Complex, Polygon, Circle, numberFormat} from '@mathigon/fermat';
 import {$N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, Slider, Slideshow, Step} from '../shared/types';
-import {YELLOW} from '../shared/constants';
+import {BLUE} from '../shared/constants';
 
 import './components/menger-sponge';
 import {JuliaCanvas} from './components/mandelbrot';
@@ -79,8 +79,16 @@ function drawSierpinski([a, b, c]: Point[], i: number): string {
 }
 
 export function triangle($step: Step) {
-  $step.model.triangle = Polygon.regular(3, 170).shift(150, 175);
   $step.model.sierpinski = drawSierpinski;
+  $step.model.triangle = Polygon.regular(3, 170).shift(150, 175);
+  const [a, b, c] = $step.model.triangle.points;
+
+  $step.model.t1 = new Polygon(a, Point.average(a, b), Point.average(a, c));
+  $step.model.t2 = new Polygon(b, Point.average(b, a), Point.average(b, c));
+  $step.model.t3 = new Polygon(c, Point.average(c, a), Point.average(c, b));
+
+  const $slider = $step.$('x-slider') as Slider;
+  $step.on('target-focus', () => $slider.moveTo(8));
 }
 
 function drawKoch(last: Polygon, i: number): Polygon {
@@ -100,6 +108,9 @@ function drawKoch(last: Polygon, i: number): Polygon {
 export function koch($step: Step) {
   const triangle = Polygon.regular(3, 150).shift(150, 150);
   $step.model.koch = drawKoch.bind(undefined, triangle);
+
+  const $slider = $step.$('x-slider') as Slider;
+  $step.on('target-focus', () => $slider.moveTo(5));
 }
 
 export function coastlines1($step: Step) {
@@ -148,7 +159,6 @@ export function coastlines1($step: Step) {
 }
 
 
-
 // -----------------------------------------------------------------------------
 // Sierpinski Triangle
 
@@ -161,11 +171,11 @@ export function cellular($step: Step) {
     width: 15, height: 15, x: 5 + j * 15, y: 5 + i * 15
   }, $grid), 20, 39);
 
-  const $highlight = $N('path', {d: 'M0,0L55,0L55,25L40,25L40,40L15,40L15,25L0,25Z', fill: YELLOW}, $grid);
+  /* const $highlight = $N('path', {d: 'M0,0L55,0L55,25L40,25L40,40L15,40L15,25L0,25Z', fill: YELLOW}, $grid);
 
   $cells[0][19].addClass('on');
 
-  /* const highlight = (x: number, y: number) => {
+  const highlight = (x: number, y: number) => {
     $grid.append($highlight);
     $highlight.translate(x * 15, y * 15);
     $highlight.show();
@@ -187,25 +197,46 @@ export function cellular($step: Step) {
 // -----------------------------------------------------------------------------
 // Mandelbrot Set
 
+function iterate(p: Point, c?: Point) {
+  return new Point(p.x * p.x - p.y * p.y + (c ? c.x : 0),
+      2 * p.x * p.y + (c ? c.y : 0));
+}
+
+function spiral(p: Point, c?: Point) {
+  const points = [p];
+  for (let i = 0; i < 20; ++i) {
+    if (Math.abs(p.x) > 3 && Math.abs(p.y) > 2) break;
+    p = iterate(p, c);
+    points.push(p);
+  }
+  return new Polyline(...points);
+}
+
 export function julia($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvases = $geopad.$$('canvas') as CanvasView[];
+
+  $step.model.iterate = iterate;
+  $step.model.spiral = spiral;
+
+  $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString();
+
+  const origin = $geopad.toViewportCoords(new Point(0, 0)).scale(2);
+  $canvases[0].draw(new Circle(origin, $geopad.plotScale * 2), {fill: BLUE});
+
+  $canvases[1].fill('#fff');
+  $step.model.watch((s: any) => {
+    const c = $geopad.toViewportCoords(s.a0).scale(2);
+    $canvases[1].clearCircle(c, 25);
+  });
+}
+
+export function julia3($step: Step) {
   const $slideshow = $step.$('x-slideshow') as Slideshow;
   const $geopad = $step.$('x-geopad') as Geopad;
   const $canvas = $geopad.$('canvas') as CanvasView;
 
-  $step.model.spiral = (p: Point, c: Point) => {
-    const points = [p];
-    let x = p.x;
-    let y = p.y;
-    let i = 0;
-
-    while (i < 20 && Math.abs(x) < 3 && Math.abs(y) < 2) {
-      [x, y] = [x * x - y * y + c.x, 2 * x * y + c.y];
-      points.push(new Point(x, y));
-      i += 1;
-    }
-
-    return new Polyline(...points);
-  };
+  $step.model.spiral = spiral;
 
   $step.model.animate = (x: number, y: number) => {
     $geopad.animatePoint('c', new Point(x, y), 2000);
@@ -223,17 +254,25 @@ export function julia($step: Step) {
   $step.model.watch(async (m: any) => juliaCanvas.draw(m.c));
 }
 
-
 export function mandelPaint($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+
+  $canvas.fill('#fff');
+  $step.model.watch((s: any) => {
+    const c = $geopad.toViewportCoords(s.c).scale(2);
+    $canvas.clearCircle(c, 25);
+  });
+
   $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString(2);
+  $step.model.spiral = spiral;
 
-  const square = (p: Point) => new Point(p.x * p.x - p.y * p.y, 2 * p.x * p.y);
-
-  $step.model.setComputed('x1', ({c}: any) => square(c).add(c));
-  $step.model.setComputed('x2', ({x1, c}: any) => square(x1).add(c));
-  $step.model.setComputed('x3', ({x2, c}: any) => square(x2).add(c));
-  $step.model.setComputed('x4', ({x3, c}: any) => square(x3).add(c));
-  $step.model.setComputed('x5', ({x4, c}: any) => square(x4).add(c));
+  const origin = new Point(0, 0);
+  $step.model.setComputed('x1', ({c}: any) => iterate(origin, c));
+  $step.model.setComputed('x2', ({x1, c}: any) => iterate(x1, c));
+  $step.model.setComputed('x3', ({x2, c}: any) => iterate(x2, c));
+  $step.model.setComputed('x4', ({x3, c}: any) => iterate(x3, c));
+  $step.model.setComputed('x5', ({x4, c}: any) => iterate(x4, c));
 }
 
 export function mandelZoom($step: Step) {
@@ -241,7 +280,7 @@ export function mandelZoom($step: Step) {
   const $slider = $step.$('x-slider') as Slider;
   const speed = 2 * ($images.length - 1) / $slider.steps;
 
-  $step.model.pow = (s: number) => Math.round(4 ** (s/10));
+  $step.model.pow = (s: number) => numberFormat(Math.round(4 ** (s/10)));
 
   $step.model.watch((state: any) => {
     for (const [i, $img] of $images.entries()) {
