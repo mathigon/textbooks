@@ -49,13 +49,13 @@ x-menger-sponge canvas { width: 100%; height: auto; }
 // Sierpinski Triangle
 
 .pascal-grid {
-  margin: 1.5em auto;
   position: relative;
   user-select: none;
 
   .r { display: flex; justify-content: center; }
 
   .c {
+    cursor: pointer;
     width: 28px;
     font-size: 10px;
     background: #ddd;
@@ -68,7 +68,7 @@ x-menger-sponge canvas { width: 100%; height: auto; }
     box-shadow: inset 0 -1px fade(black, 30%);
     padding-bottom: 1px;
     .small { font-size: 8px; line-height: 8px; }
-    &.red { color: white; background: @red; }
+    &.red { color: white; background: @red; cursor: default; }
   }
 }
 
@@ -96,3 +96,6 @@ x-menger-sponge canvas { width: 100%; height: auto; }
     color: white; border: 1px solid white; border-radius: 20px; line-height: 24px;
     font-size: 16px; padding: 0 14px; transform: translateX(-50%); }
 }
+
+x-geopad img { transition: opacity .2s; }
+.focus x-geopad img { opacity: 0.2; }

@@ -624,6 +624,13 @@ euler:
     - title: Polyhedrons
       url: /course/polyhedra/polyhedra
 
+fatou:
+  name: Fatou
+  bio: __Pierre Joseph Louis Fatou__ (1878 – 1929) was a French mathematician
+    and astronomer. He co-discovered the _Julia set_, and its inverse, the
+    Fatou set, is named after him. He also made important contributions to
+    analysis and celestial mechanics.
+
 fermat:
   name: Fermat
   born: 1607
@@ -963,6 +970,12 @@ johnson:
 
     In 2015, Johnson received the Presidential Medal of Freedom.
 
+julia:
+  name: Julia
+  bio: __Gaston Maurice Julia__ (1893 – 1978) was a French mathematician who
+    co-discovered the _Julia set_, a fractal that was later popularised by
+    Benoit Mandelbrot.
+
 karinthy:
   name: Karinthy
   bio: __Frigyes Karinthy__ (1887 – 1938) was a Hungarian author, poet and
@@ -993,6 +1006,13 @@ khayyam:
   links:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: __Niels Fabian Helge von Koch__ (1870 – 1924) was a Swedish mathematician.
+    He first described the _Koch snowflake_, a fractal which is named after him,
+    and proved relationships between the Riemann hypothesis and the distribution
+    of prime numbers.
 
 lagrange:
   born: 1736
@@ -1154,6 +1174,13 @@ mandelbrot:
   links:
     - title: Fractals
       url: /world/Fractals
+
+menger:
+  name: Menger
+  bio: __Karl Menger__ (1902 – 1985) was an Austrian-American mathematician.
+    He researched algebra, geometry, dimensions, as well as game theory and
+    social science – but he is best remembered for the _Menger sponge_, a
+    famous, 3-dimensional _fractal_.
 
 mersenne:
   born: 1588
@@ -1640,6 +1667,20 @@ shijie:
   links:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __Wacław Franciszek Sierpiński__ (1882 – 1969) was a Polish mathematician.
+    He made important discoveries in set theory, number theory, analysis and
+    topologies, publishing over 700 papers and 50 books. He also invented
+    many popular _fractals_, including the _Sierpinski triangle_, the
+    _Sierpinski carpet_ and the _Sierpinski curve_.
+
+    _Sierpinski numbers_ are odd natural numbers _k_ such that `k * 2^n +1` is
+    composite for all natural numbers _n_. The _Sierpinski problem_ is trying
+    to find the smallest Sierpinski numbers. The smallest known such number is
+    78,557 – but it is still unknown whether there are smaller ones.
 
 sikdar:
   name: Sikdar

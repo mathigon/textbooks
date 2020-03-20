@@ -580,8 +580,10 @@ Sloan in the 1980s, and new ones are still being researched today.
 ::: column.grow
 
 One of the fractals we saw in the previous chapter was the __Sierpinski
-triangle__. It can be created by starting with one large, equilateral
-triangle, and then repeatedly cutting smaller triangles out of its center.
+triangle__, which is named after the Polish mathematician [Wacław
+Sierpiński](bio:sierpinski). It can be created by starting with one large,
+equilateral triangle, and then repeatedly cutting smaller triangles out of its
+center.
 
 {.r.reveal(when="slider-0")} As it turns out, the Sierpinski triangle also
 appears in many other areas of mathematics, and there are many different ways to
@@ -595,14 +597,15 @@ generate it. In this chapter, we will explore some of them!
 
 ### Pascal’s Triangle
 
-[Pascal’s Triangle](/course/sequences/pascals-triangle) is a number pyramid in
-which every number is the sum of the two numbers above. Let’s see what happens
-if we highlight all the even numbers…
+You might even remember the Sierpinski triangle from our chapter on [__Pascal’s
+Triangle__](gloss:pascals-triangle). This is a number pyramid in which every
+number is the sum of the two numbers above. Tap on all the _even_ numbers in the
+triangle below, to highlight them – and see if you notice a pattern:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
 
-    .overflow-wrap: .pascal-grid.small(style="width: 760px")
+    figure: .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25
         - var j = 0
@@ -616,7 +619,10 @@ if we highlight all the even numbers…
             - j += 1;
         - i += 1;
 
-Pascal’s Triangle can be continued downwards forever. The Sierpinski
+---
+> id: pascal-1
+
+{.fixme} Pascal’s Triangle can be continued downwards forever. The Sierpinski
 pattern will continue, producing bigger and bigger triangles.
 
 ---
@@ -626,7 +632,7 @@ pattern will continue, producing bigger and bigger triangles.
 
     // Chaos game: https://www.youtube.com/watch?v=kbKtFN71Lfs
 
-In the Chaos Game, we start with an empty triangle and select a random point in 
+{.fixme} In the Chaos Game, we start with an empty triangle and select a random point in 
 the middle. We then choose one of the three vertices of the triangle at random,
 and mark the point at the centre of the line from the random point to the
 vertex. Then we repeat the process, starting with that new point…
@@ -654,13 +660,14 @@ to the Sierpinski triangle?
     .cellular-rules
     figure: svg.cellular-grid(width=595 height=310)
 
-Rule 30
-
 ---
+> id: rule-30
+
+{.fixme} Rule 30
 
 ::: column.grow
 
-Many plants and animals also grow by following simple rules like this – and
+{.fixme} Many plants and animals also grow by following simple rules like this – and
 that can cause the appearance of similar patterns in nature. Here you can see
 a seashell that shows 
 
@@ -672,13 +679,19 @@ a seashell that shows
 
 :::
 
+---
+> id: carpet
+
+### Sierpinski Carpet
+
+{.fixme} COMING SOON
 
 ---
-> id: chaos-game
+> id: tetrahedra
 
 ### Sierpinski Tetrahedra
 
-todo
+{.fixme} COMING SOON
 
 
 --------------------------------------------------------------------------------
@@ -688,7 +701,7 @@ todo
 
 > section: mandelbrot
 > id: iteration
-> goals: move
+> goals: move-1 move-2
 
 All the fractals we saw in the previous chapters were created using a process
 of __iteration__: you start with a specific pattern, and then you repeat it
@@ -720,13 +733,10 @@ the next number in the sequence.
 Let’s take the recursive formula `§x_n = x_(n-1)^2` as an example, and plot its
 terms on a number line. You can change the value of `pill(x_0,"yellow","x0")`:
 
-    figure: x-geopad.no-background(width=720 height=120 x-axis="-3.5,3.5,1" y-axis="-0.1,0.1" axes="yes,no" padding="0 20"): svg
-      circle.yellow.move(x="point(0,0)" name="x0" project="segment(point(-3,0),point(3,0))" target="x0")
-      circle.yellow(x="point(x0.x*x0.x,0)" name="x1")
-      circle.yellow(x="point(x1.x*x1.x,0)")
-      path.yellow(x="arc(x0.add(x1.subtract(x0).scale(0.5)),x0,pi)")
-
-      path.blue.thick(x="segment(point(-1,0),point(1,0))")
+    figure: x-geopad.no-background(width=720 height=120 x-axis="-2.4,4.4,1" y-axis="-0.1,0.1" axes="yes,no" padding="40 20 0"): svg
+      circle.yellow.move.pulsate(x="point(0,0)" name="x0" project="line(point(-3,0),point(3,0))" target="x0")
+      path.blue.thick.reveal.light(x="segment(point(-1,0),point(1,0))" style="stroke-width: 20px" when="move-1 move-2" animation="draw")
+      path.yellow(:d="drawArc(x0)")
 
 ---
 > id: iteration-1
@@ -736,16 +746,16 @@ starting value `§x_0`:
 
 ::: column.sequence-cell(width=180 parent="padded-thin")
 
-If `§x_0 > 1`, the sequence [[diverges|converges]]: it just keeps growing,
-up to infinity.
+If `§x_0 > 1`, the sequence [[diverges|converges]]:
+_{span.reveal(when="blank-0")}it just keeps growing, up to infinity._
 
 ::: column.sequence-cell(width=180)
 
-If `§-1 < x_0 < 1`, the sequence [[converges|diverges]] to [[0]]
+If `§x_0` is between –1 and 1, the sequence [[converges|diverges]].
 
 ::: column.sequence-cell(width=180)
 
-If `§x_0 < -1`, the sequence [[diverges|converges]] again.
+If `§x_0 < -1`, the sequence [[diverges|converges]].
 
 :::
 
@@ -767,16 +777,18 @@ of mathematics.
 Let’s use the same sequence as before, `§x_n = x_(n-1)^2`, but on the complex
 plane. You can move the position of `pill(x_0,"yellow","x0")`, to see what
 happens to the following terms. If the sequence looks like it will converge,
-let’s colour the corresponding point on the plane in _{.pill.blue}blue_:
+let’s colour the corresponding point on the plane in _{span.pill.blue}blue_:
 
-    x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i")
+    x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
-      canvas(width=1440 height=960)
+      canvas(width=1440 height=960 style="opacity: 1")
       svg
-        circle.move.yellow.pulsate(name="a0" x="point(0,0)" label="x₀ = ${complex(a0)}")
-        circle.yellow(name="a1" x="iterate(a0)" label="x₁")
-        circle.yellow(name="a2" x="iterate(a1)" label="x₂")
+        circle.move.yellow.pulsate(name="a0" x="point(0,0)")
+        circle.yellow.transparent(name="a1" x="iterate(a0)")
+        circle.yellow.transparent(name="a2" x="iterate(a1)")
         path.yellow(x="spiral(a0)")
+      .geo-legend
+        
 
 ---
 > id: julia-1
@@ -803,7 +815,7 @@ also the value of `pill(c,"red","c")`:
 
 ::: x-slideshow
 
-    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i")
+    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
       svg
         circle.move.yellow(name="a0" x="point(0.5,-0.2)")
@@ -888,7 +900,7 @@ converge. What shape do you expect to appear?
 
     x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes grid padding=10 label-suffix=",i")
       img(src="images/mandelbrot.png" width=460 height=460 style="position: absolute;")
-      canvas(width=920 height=920)
+      canvas(width=920 height=920 style="opacity: 1")
       svg
         circle.move.red.pulsate(name="c" cx=0 cy=0 target="c")
         path.yellow(x="spiral(point(0,0),c)")

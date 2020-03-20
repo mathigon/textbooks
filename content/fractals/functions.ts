@@ -5,7 +5,7 @@
 
 
 import {Color, list, tabulate2D} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat} from '@mathigon/fermat';
+import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
 import {$N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, Slider, Slideshow, Step} from '../shared/types';
@@ -164,6 +164,19 @@ export function coastlines1($step: Step) {
 
 export const sierpinski = triangle;
 
+export function pascal($step: Step) {
+  let count = 0;
+
+  for (const $c of $step.$$('.pascal-grid .c')) {
+    $c.one('click', () => {
+      if (!(+$c.text % 2)) {
+        count += 1;
+        $c.addClass('red');
+      }
+    });
+  }
+}
+
 export function cellular($step: Step) {
   const $grid = $step.$('.cellular-grid')!;
 
@@ -196,6 +209,30 @@ export function cellular($step: Step) {
 
 // -----------------------------------------------------------------------------
 // Mandelbrot Set
+
+export function iteration($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+
+  $step.model.watch((s: any) => {
+    if (s.x0.x < -1) $step.score('move-1');
+    if (s.x0.x > 1) $step.score('move-2');
+  });
+
+  $step.model.drawArc = (x0: Point) => {
+    let p = $geopad.toViewportCoords(x0);
+    let x = x0.x;
+    let path = `M${p.x} ${p.y}`;
+
+    while(x < 0 || (!nearlyEquals(x, 1) && isBetween(x, 0.03, 4.5))) {
+      const x1 = x * x;
+      const p1 = $geopad.toViewportCoords(new Point(x1, 0));
+      const d = Math.min(Point.distance(p, p1), 100);
+      path += `C${p.x} ${p.y - d},${p1.x} ${p1.y - d},${p1.x} ${p1.y}`;
+      [x, p] = [x1, p1];
+    }
+    return path;
+  };
+}
 
 function iterate(p: Point, c?: Point) {
   return new Point(p.x * p.x - p.y * p.y + (c ? c.x : 0),
