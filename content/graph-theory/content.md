@@ -800,7 +800,7 @@ the remaining cities in any order:
 In a graph with ${tsn1}{tsn1|4|2,10,1} cities, every Hamiltonian cycle must also
 contain ${tsn1} cities. Now,
 
-    ul.var ${tsmString(tsn1)}
+    ul.var(:html="tsmString(tsn1)")
 
 This means that, in total, there are ${tsnPaths(tsn1)} possible paths. A
 shorthand for this product is ${tsn1}! or ${tsn1} __Factorial__.

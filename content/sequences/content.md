@@ -1826,7 +1826,7 @@ continue to repeat over and over again, forever.
 Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
 Then the sequence would look like this:
 
-{.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-red}_{.n}4_,
+{.text-center} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.n}4_,
 _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 *{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
 
