@@ -80,9 +80,9 @@ or [nested pentagons](action:set(113,235,232,238)). What else can you find?
 
 ::: column.grow(parent="right")
 
-Another famous fractal is the __Sierpinski Triangle__. In this case, we start
-with a large, equilateral triangle, and then repeatedly cut smaller triangles
-out of the remaining parts.
+Another famous fractal is the [__Sierpinski triangle__](gloss:sierpinski-triangle).
+In this case, we start with a large, equilateral triangle, and then repeatedly
+cut smaller triangles out of the remaining parts.
 
 {.reveal(when="slider=0")} Notice how the final shape is made up of [three
 identical copies of itself](target:x), and each of these is made up of even
@@ -241,10 +241,10 @@ However, rather than _removing_ smaller triangles at every step, we _add_
 smaller triangles along the edge. The side-length of every triangle is
 [[`1/3`|`1/4`|`1/2`]] of the triangles in the previous step.
 
-{.reveal(when="blank-0")} The resulting shape is called the __Koch snowflake__,
-named after the Swedish mathematician [Helge von Koch](bio:koch). Notice, once
-again, that [small sections](target:t2) of the edge of the snowflake look
-exactly the same as [larger sections](target:t1).
+{.reveal(when="blank-0")} The resulting shape is called the [__Koch
+snowflake__](gloss:koch-snowflake), named after the Swedish mathematician [Helge
+von Koch](bio:koch). Notice, once again, that [small sections](target:t2) of the
+edge of the snowflake look exactly the same as [larger sections](target:t1).
 
 ::: column(width=300)
 
@@ -276,60 +276,98 @@ Snowflake is `§d = log_3(4) ≈ 1.262`._
 :::
 
 ---
-> id: koch-area
+> id: koch-size
+
+::: tab
+
+#### Area _{span.check(when="blank-6")}_
 
 Creating the Koch snowflakes is almost like a [recursive
 sequence](gloss:sequence-recursive): we know the starting shape (a triangle),
-and we know how to get from one term to the next, by adding more triangles on
-every edge:
+and we know how to get from one term to the next (by adding more triangles on
+every edge):
 
 ::: column(width=140)
 
-    img(src="images/koch-0.svg" width=140 height=160)
+    img#koch-0(src="images/koch-0.svg" width=140 height=160)
 
 ::: column(width=140)
 
-    img(src="images/koch-1.svg" width=140 height=160)
+    img#koch-1(src="images/koch-1.svg" width=140 height=160)
 
-[[3]] new triangles
+{.text-center} [[3]] new triangles
 
 ::: column(width=140)
 
     img(src="images/koch-2.svg" width=140 height=160)
 
-[[12]] new triangles
+{.text-center} [[12]] new triangles
 
 ::: column(width=140)
 
     img(src="images/koch-3.svg" width=140 height=160)
 
-[[48]] new triangles
+{.text-center} [[48]] new triangles
 
 :::
 
----
-> id: koch-area-1
+{.reveal(when="blank-0 blank-1 blank-2")}
+After the first iteration, the number of new triangles added increases by a
+factor of [[4]] at every step. At the same time, the size of these new triangles
+decreases by a factor of [[9]] at every step.
 
-The number of new triangles added increases by [[4]] at every step, but the
-size of them decreases by a factor of [[9]] at every step. This means that the
-total area of the Koch snowflake is a [geometric series](gloss:series-geometric)
-with common difference `4/9`.
+{.reveal(when="blank-3 blank-4")}
+Let’s say that the [first triangle](->#koch-0) has an area of 1. Then the total
+area of the [next three triangles](->#koch-1) is `3 × 1/9 = 1/3`. The following
+steps all form a [[geometric series|arithmetic series|quadratic series]],
+_{span.reveal(when="blank-5")} with common ratio [[`4/9`|`9/4`|`4/3`]]._
 
-{.fixme} Calculate area
+{.reveal(when="blank-6")}
+Using the formula for the sum of infinite [geometric series](gloss:geometric-series),
+we can calculate that the total area of the Koch snowflake is
 
----
-> id: koch-circumference
+{.text-center.reveal(when="blank-6")}
+`A = 1 + 1/3 × 1/blank(1-4/9, 1+9/4, 9-1/4) reveal(= 8/5 = 1.6,"blank-7")`.
 
-{.fixme} Calculate circumference
+::: tab
+
+#### Perimeter _{span.check(when="blank-9")}_
+
+::: column.grow
+
+We can also try to calculate the perimeter of the Koch snowflake. As we have
+already seen before, the length of the perimeter changes by a factor of
+[[`4/3`|`3/4`|`1/4`]] at every step.
+
+{.reveal(when="blank-8")}
+This means that, once again, we have a geometric series – but in this case, it
+[[doesn’t converge|converges to 0|doesn’t have a first term]].
+_{span.reveal(when="blank-9")} This means that the perimeter of the Koch
+snowflake is actually **infinitely long**!_
+
+::: column(width=220)
+
+    img(src="images/koch-edge.svg" width=220 height=250)
+
+:::
+
+{.reveal(when="blank-9")} _If this seems counterintuitive, just remember that
+we multiply the perimeter by `4/3` at every step, and we do this infinitely
+many times._
+
+:::
 
 ---
 > id: frozen
 
 ::: column.grow
 
-{.fixme} It is almost unthinkable that you can have a shape with _finite_ area
-uet _infinite_ circumference – but thisi is just one of the many unexpected
+It is almost unthinkable that you can have a shape with a _finite_ area at also
+an _infinite_ circumference – but this is just one of the many unexpected
 properties of fractals.
+
+Can you come up with any other ways to create your own fractals?
+[Continue](btn:next)
 
 ::: column(width=352)
 
@@ -579,11 +617,11 @@ Sloan in the 1980s, and new ones are still being researched today.
 
 ::: column.grow
 
-One of the fractals we saw in the previous chapter was the __Sierpinski
-triangle__, which is named after the Polish mathematician [Wacław
-Sierpiński](bio:sierpinski). It can be created by starting with one large,
-equilateral triangle, and then repeatedly cutting smaller triangles out of its
-center.
+One of the fractals we saw in the previous chapter was the [__Sierpinski
+triangle__](gloss:sierpinski-triangle), which is named after the Polish
+mathematician [Wacław Sierpiński](bio:sierpinski). It can be created by starting
+with one large, equilateral triangle, and then repeatedly cutting smaller
+triangles out of its center.
 
 {.r.reveal(when="slider-0")} As it turns out, the Sierpinski triangle also
 appears in many other areas of mathematics, and there are many different ways to
@@ -644,9 +682,8 @@ vertex. Then we repeat the process, starting with that new point…
 
 ### Cellular Automata
 
-A [__cellular automaton__](gloss:cellular-automata) is a grid consisting of many
-connected cells. The “state” of every cell (e.g. its colour) is determined by
-its surrounding cells.
+A __cellular automaton__ is a grid consisting of many connected cells. The
+“state” of every cell (e.g. its colour) is determined by its surrounding cells.
 
 In our example, every cell can be either black or white. We start with one row
 that contains just a single black square. In every following row, the colour of
@@ -735,7 +772,7 @@ terms on a number line. You can change the value of `pill(x_0,"yellow","x0")`:
 
     figure: x-geopad.no-background(width=720 height=120 x-axis="-2.4,4.4,1" y-axis="-0.1,0.1" axes="yes,no" padding="40 20 0"): svg
       circle.yellow.move.pulsate(x="point(0,0)" name="x0" project="line(point(-3,0),point(3,0))" target="x0")
-      path.blue.thick.reveal.light(x="segment(point(-1,0),point(1,0))" style="stroke-width: 20px" when="move-1 move-2" animation="draw")
+      path.blue.thick.reveal.light(x="segment(point(-1,0),point(1,0))" style="stroke-width: 20px" when="move-1 move-2" animation="draw" duration=1200)
       path.yellow(:d="drawArc(x0)")
 
 ---
@@ -764,13 +801,14 @@ If `§x_0 < -1`, the sequence [[diverges|converges]].
 
 So far, we’ve not learned anything new. However, about one century ago,
 mathematicians started to explore what happens to these sequences if you use
-[__complex numbers__](gloss:complex), rather than just the real number line.
-Their discoveries were some of the most surprising and beautiful results in all
-of mathematics.
+[__complex numbers__](gloss:complex-numbers), rather than just the real number
+line. Their discoveries were some of the most surprising and beautiful results
+in all of mathematics.
+
 
 ---
 > id: julia
-> goals: wipe
+> goals: wipe-a wipe-b wipe-c wipe-d
 
 ### Julia Sets
 
@@ -788,7 +826,6 @@ let’s colour the corresponding point on the plane in _{span.pill.blue}blue_:
         circle.yellow.transparent(name="a2" x="iterate(a1)")
         path.yellow(x="spiral(a0)")
       .geo-legend
-        
 
 ---
 > id: julia-1
@@ -808,7 +845,6 @@ still get a circle of convergence? What other shapes do you think we might see?
 
 ---
 > id: julia-3
-> goals: move
 
 In this diagram, you can not just move the position of `pill(x_0,"yellow")`, but
 also the value of `pill(c,"red","c")`:
@@ -881,6 +917,7 @@ diverges:
 
 ---
 > id: mandel-paint
+> goals: wipe-a wipe-b wipe-c
 
 ### The Mandelbrot Set
 
@@ -926,10 +963,10 @@ Converges!
 ---
 > id: mandel-history
 
-This fractal is called the __Mandelbrot Set__, and when rotated by 90°, it looks
-almost like a person, with head, body and two arms. It was defined and drawn for
-the first time in 1978, in a research paper by the mathematicians Robert Brooks
-and Peter Matelski:
+This fractal is called the [__Mandelbrot Set__](gloss:mandelbrot-set), and when
+rotated by 90°, it looks almost like a person, with head, body and two arms. It
+was defined and drawn for the first time in 1978, in a research paper by the
+mathematicians Robert Brooks and Peter Matelski:
 
     figure: x-media(src="images/mandelbrot.jpg" width=360 height=290)
 
@@ -957,7 +994,7 @@ _how quickly_ these sequences diverge:
         img(src="images/mandel/mandel-" + i + ".jpg" width=760 height=500)
         - i += 1;
       .scale.var Scale: ${pow(scale)}
-    x-slider(steps=270 speed=0.5 var="scale")
+    x-slider(steps=27 continuous speed=0.1 var="scale")
 
 ---
 > id: mandel-zoom-1

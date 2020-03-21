@@ -266,6 +266,13 @@ export function julia($step: Step) {
     const c = $geopad.toViewportCoords(s.a0).scale(2);
     $canvases[1].clearCircle(c, 25);
   });
+
+  $step.model.watch((s: any) => {
+    if (Point.distance(s.a0, new Point(0, 1)) <  0.3) $step.score('wipe-a');
+    if (Point.distance(s.a0, new Point(0, -1)) <  0.3) $step.score('wipe-b');
+    if (Point.distance(s.a0, new Point(1, 0)) <  0.3) $step.score('wipe-c');
+    if (Point.distance(s.a0, new Point(-1, 0)) <  0.3) $step.score('wipe-d');
+  });
 }
 
 export function julia3($step: Step) {
@@ -310,6 +317,12 @@ export function mandelPaint($step: Step) {
   $step.model.setComputed('x3', ({x2, c}: any) => iterate(x2, c));
   $step.model.setComputed('x4', ({x3, c}: any) => iterate(x3, c));
   $step.model.setComputed('x5', ({x4, c}: any) => iterate(x4, c));
+
+  $step.model.watch((s: any) => {
+    if (Point.distance(s.c, new Point(0, 0.6)) <  0.2) $step.score('wipe-a');
+    if (Point.distance(s.c, new Point(0, -0.6)) <  0.2) $step.score('wipe-b');
+    if (Point.distance(s.c, new Point(-1, 0)) <  0.3) $step.score('wipe-c');
+  });
 }
 
 export function mandelZoom($step: Step) {
@@ -317,7 +330,7 @@ export function mandelZoom($step: Step) {
   const $slider = $step.$('x-slider') as Slider;
   const speed = 2 * ($images.length - 1) / $slider.steps;
 
-  $step.model.pow = (s: number) => numberFormat(Math.round(4 ** (s/10)));
+  $step.model.pow = (s: number) => numberFormat(Math.round(4 ** s));
 
   $step.model.watch((state: any) => {
     for (const [i, $img] of $images.entries()) {
