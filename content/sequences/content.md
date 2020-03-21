@@ -1490,7 +1490,7 @@ might look like with different angles between its seeds:
 
     .sunflower-spiral(slot="stage")
       .value
-      x-slider(steps=1000 speed=0.1 no-play)
+      x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
 {div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
