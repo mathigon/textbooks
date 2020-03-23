@@ -4,14 +4,17 @@
 // =============================================================================
 
 
-import {Color, list, tabulate2D} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
-import {$N, CanvasView, SVGView} from '@mathigon/boost';
+import {Color, delay, isOneOf, list, repeat, tabulate2D} from '@mathigon/core';
+import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals, Random} from '@mathigon/fermat';
+import {$N, CanvasView, ElementView, pointerOver, SVGParentView, SVGView} from '@mathigon/boost';
 
-import {Geopad, Slider, Slideshow, Step} from '../shared/types';
+import {Geopad, GeoPoint, Slider, Slideshow, Step} from '../shared/types';
 import {BLUE} from '../shared/constants';
 
 import './components/menger-sponge';
+import './components/sierpinski-tetrahedra';
+import {ChaosGame} from './components/chaos-game';
+import {drawKoch, drawSierpinski} from './components/fractals';
 import {JuliaCanvas} from './components/mandelbrot';
 
 
@@ -64,20 +67,6 @@ export function fern($step: Step) {
   };
 }
 
-function drawSierpinski([a, b, c]: Point[], i: number): string {
-  if (i <= 0) return '';
-
-  const ab = Point.average(a, b);
-  const ac = Point.average(a, c);
-  const bc = Point.average(b, c);
-
-  const t1 = drawSierpinski([a, ab, ac], i - 1);
-  const t2 = drawSierpinski([b, ab, bc], i - 1);
-  const t3 = drawSierpinski([c, ac, bc], i - 1);
-
-  return `M${ab.x},${ab.y}L${ac.x},${ac.y}L${bc.x},${bc.y}Z ${t1}${t2}${t3}`
-}
-
 export function triangle($step: Step) {
   $step.model.sierpinski = drawSierpinski;
   $step.model.triangle = Polygon.regular(3, 170).shift(150, 175);
@@ -89,20 +78,6 @@ export function triangle($step: Step) {
 
   const $slider = $step.$('x-slider') as Slider;
   $step.on('target-focus', () => $slider.moveTo(8));
-}
-
-function drawKoch(last: Polygon, i: number): Polygon {
-  if (i <= 0) return last;
-
-  const points: Point[] = [];
-  for (const e of last.edges) {
-    const a = Point.interpolate(e.p1, e.p2, 1/3);
-    const c = Point.interpolate(e.p1, e.p2, 2/3);
-    const b = c.rotate(-Math.PI/3, a);
-    points.push(e.p1, a, b, c)
-  }
-
-  return drawKoch(new Polygon(...points), i - 1);
 }
 
 export function koch($step: Step) {
@@ -165,45 +140,165 @@ export function coastlines1($step: Step) {
 export const sierpinski = triangle;
 
 export function pascal($step: Step) {
+  const $cells = $step.$$('.pascal-grid .c');
   let count = 0;
+  let done = false;
 
-  for (const $c of $step.$$('.pascal-grid .c')) {
+  function revealAll() {
+    $step.score('select');
+    done = true;
+    const $red = $cells.filter($c => !(+$c.text % 2) && !$c.hasClass('red'));
+    for (const [i, $c] of $red.entries()) {
+      delay(() => $c.addClass('red'), Math.sqrt(i) * 160);
+    }
+  }
+
+  for (const $c of $cells) {
     $c.one('click', () => {
-      if (!(+$c.text % 2)) {
-        count += 1;
-        $c.addClass('red');
-      }
+      if (done || +$c.text % 2) return;
+      count += 1;
+      $c.addClass('red');
+      if (count >= 8) revealAll();
     });
   }
 }
 
-export function cellular($step: Step) {
-  const $grid = $step.$('.cellular-grid')!;
+export function pascalLarge($step: Step) {
+  const $canvas = $step.$('canvas.pascal') as CanvasView;
+  const triangle = Polygon.regular(3, 455).shift(400, 466);
+  const edge = triangle.edges[1];
+  const rows = 128;
 
-  const $cells = tabulate2D((i: number, j: number) => $N('rect', {
-    width: 15, height: 15, x: 5 + j * 15, y: 5 + i * 15
-  }, $grid), 20, 39);
+  $step.model.gradient = Color.rainbow(39);
 
-  /* const $highlight = $N('path', {d: 'M0,0L55,0L55,25L40,25L40,40L15,40L15,25L0,25Z', fill: YELLOW}, $grid);
+  // We can't just use binomial(), because it caouses number overflow in JS.
+  const cells: number[][] = [];
+  for (let i = 0; i < rows; ++i) {
+    cells.push(repeat(0, i + 1));
+  }
 
-  $cells[0][19].addClass('on');
+  $step.model.watch((s: any) => {
+    const color = $step.model.gradient[s.n - 2].toString();
+    $canvas.clear();
 
-  const highlight = (x: number, y: number) => {
-    $grid.append($highlight);
-    $highlight.translate(x * 15, y * 15);
-    $highlight.show();
-    $grid.append($cells[x][y]);
-    $grid.append($cells[x-1][y]);
-    if (y > 0) $grid.append($cells[x-1][y-1]);
-    if (y < 20) $grid.append($cells[x-1][y+1]);
-  };
+    for (let n = 0; n < rows; ++n) {
+      for (let k = 0; k <= n; ++k) {
+        const p = edge.at(1 - n/rows).shift(k/rows * edge.length, 0);
 
-  for (const [y, $row] of $cells.entries()) {
-    // if (!x) continue;
-    for (const [x, $c] of $row.entries()) {
-      hover($c, {enter: () => highlight(x, y), exit: () => $highlight.hide()});
+        if (k === 0) {
+          cells[n][k] = 1;
+        } else if (2 * k > n) {
+          cells[n][k] = cells[n][n-k];
+        } else {
+          cells[n][k] = (cells[n - 1][k] + cells[n - 1][k - 1]) % s.n;
+        }
+
+        const fill = (s.n <= 1 || cells[n][k]) ? '#ddd' : color;
+        $canvas.draw(new Circle(p, 2.7), {fill});
+      }
     }
-  } */
+  });
+}
+
+
+export function chaosGame($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+
+  const triangle = Polygon.regular(3, 180).shift(180, 225).points
+      .map(p => $geopad.drawPoint(p, {interactive: false, classes: 'red'}));
+
+  $step.model.game = new ChaosGame(triangle, $geopad.$('canvas') as CanvasView);
+
+  let point0: GeoPoint;
+
+  $geopad.switchTool('point');
+  $geopad.waitForPoint().then(p => {
+    point0 = p;
+    $step.score('point');
+  });
+
+  $step.onScore('point', () => {
+    if (!point0) point0 = $geopad.drawPoint(new Point(300, 200), {});
+    $step.model.game.lastPoint = point0.value;
+    point0.$el.addClass('blue');
+    $geopad.switchTool('move');
+  });
+
+}
+
+export function chaosGame1($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+
+  const initial = Polygon.regular(5, 200).shift(260, 200).points.map(p =>
+      $geopad.drawPoint(p, {classes: 'red'}));
+
+  $step.model.game = new ChaosGame(initial, $geopad.$('canvas') as CanvasView, 1/1.6180339887);
+}
+
+
+
+
+
+function rect(x: number, y: number, $parent: ElementView, classes = '') {
+  return $N('rect', {width: 12, height: 12, x: 4 + x * 12, y: 4 + y * 12, class: classes}, $parent)
+}
+
+
+const rules = ['000', '001', '010', '100', '011', '101', '110', '111'];
+
+export function cellular($step: Step) {
+  const $grid = $step.$('.cellular-grid') as SVGParentView;
+
+  const rows = 26;
+  const cols = rows * 2 - 1;
+
+  for (const $r of $step.$$('.cellular-rule')) {
+    const rule = $r.data.rule!;
+    $step.model[rule] = false;
+    for (const k of [0, 1, 2]) rect(k, 0, $r, rule[k] === '1' ? 'fill' : '');
+    const $value =  rect(1, 1, $r, 'red');
+    $step.model.watch(() => $value.setClass('fill', $step.model[rule]));
+    $r.on('click', () => $step.model[rule] = !$step.model[rule]);
+  }
+
+  const $cells = tabulate2D((i, j) => rect(j, i, $grid), rows, cols);
+  const cells = tabulate2D(() => false, rows, cols);
+
+  const type = (i: number, j: number) =>
+      (j < 0 || j >= cols) ? '0' : cells[i][j] ? '1' : '0';
+
+  $step.model.watch((s: any) => {
+    const choice = rules.map(r => s[r] ? '1' : '0').join('');
+    if (isOneOf(choice, '01011000', '01110000')) $step.score('sierpinski');
+
+    for (let i = 1; i < rows; ++i) {
+      for (let j = 0; j < cols; ++j) {
+        const rule = type(i - 1, j - 1) + type(i - 1, j) + type(i - 1, j + 1);
+        cells[i][j] = $step.model[rule];
+        $cells[i][j].setClass('fill', cells[i][j]);
+      }
+    }
+  });
+
+  cells[0][rows - 1] = true;
+  $cells[0][rows - 1].addClass('fill');
+  $step.model['001'] = $step.model['010'] = $step.model['011'] = true;
+
+  const $highlight = $N('path', {d: 'M-15,-15l0,18l12,0l0,12l18,0l0,-12l12,0l0,-18Z',
+    class: 'highlight'}, $grid);
+  let highlightPosition = new Point(0, 0);
+
+  pointerOver($grid, {
+    enter: () => $highlight.show(),
+    move: (p: Point) => {
+      p = p.shift(-4, -4).scale(1/12).floor();
+      // if (p.equals(highlightPosition)) return;  // Point hasn't changed.
+      highlightPosition = p;
+      $highlight.toggle(p.x > 0 && p.y > 0 && p.x < cols - 1 && p.y < rows);
+      $highlight.setTransform(p.scale(12).shift(4, 4));
+    },
+    exit: () => $highlight.hide()
+  });
 }
 
 

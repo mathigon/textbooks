@@ -56,25 +56,48 @@ x-menger-sponge canvas { width: 100%; height: auto; }
 
   .c {
     cursor: pointer;
-    width: 28px;
-    font-size: 10px;
+    width: 36px;
+    font-size: 13px;
     background: #ddd;
     margin: 1px;
     text-align: center;
     position: relative;
-    line-height: 16px;
+    line-height: 20px;
     border-radius: 3px;
     transition: color .4s, background .4s;
     box-shadow: inset 0 -1px fade(black, 30%);
     padding-bottom: 1px;
-    .small { font-size: 8px; line-height: 8px; }
     &.red { color: white; background: @red; cursor: default; }
   }
 }
 
-.cellular-grid {
-  rect { stroke: @grey; fill: white; }
-  rect.on { fill: @grey; }
+.pascal-canvas {
+  position: relative;
+  float : left;
+  shape-outside: polygon(0 0, 200px 0, 400px 350px, 0 350px);
+  shape-margin: 44px;
+  margin: 0 32px 1.5em 0;
+
+  .label { position: absolute; top: 16px; left: 20px; font-weight: 600; color: @text-dark; }
+  .circled { width: 32px; height: 32px; line-height: 32px; }
+
+  @media screen and (max-width: 980px) and (min-width: 841px) { float: none; width: 400px; margin: 0 auto 1.5em; shape-outside: none; }
+  @media screen and (max-width: 700px) { float: none; width: 400px; margin: 0 auto 1.5em; shape-outside: none; }
+}
+
+
+.cellular-rules {
+  display: flex;
+  justify-content: center;
+  .cellular-rule { margin: 5px; cursor: pointer; transition: transform .2s; }
+  .cellular-rule:hover, .cellular-rule:focus { transform: scale(1.2); outline: none; }
+}
+
+.cellular-rules, .cellular-grid {
+  rect { stroke: fade(@grey, 20%); fill: white; }
+  rect.fill { fill: @grey; }
+  rect.red { stroke: @red; stroke-width: 2px; stroke-linejoin: round; }
+  .highlight { fill: none; stroke: @yellow; stroke-width: 5px; opacity: 0.7; }
 }
 
 

@@ -608,13 +608,6 @@ Sloan in the 1980s, and new ones are still being researched today.
 > section: sierpinski
 > id: sierpinski
 
-::: column(width=300 parent="right")
-
-    svg.var.sierpinsk(width=300 height=265)
-      path.red(:draw="triangle")
-      path.white(:d="sierpinski(triangle.points, steps)")
-    x-slider(steps=8 var="steps")
-
 ::: column.grow
 
 One of the fractals we saw in the previous chapter was the [__Sierpinski
@@ -623,82 +616,186 @@ mathematician [Wacław Sierpiński](bio:sierpinski). It can be created by starti
 with one large, equilateral triangle, and then repeatedly cutting smaller
 triangles out of its center.
 
-{.r.reveal(when="slider-0")} As it turns out, the Sierpinski triangle also
-appears in many other areas of mathematics, and there are many different ways to
-generate it. In this chapter, we will explore some of them!
-[Continue](btn:next)
+{.r.reveal(when="slider-0")} Wacław Sierpiński was the first mathematicians to
+think about the properties of this triangle, but it has appeared many centuries
+earlier in artwork, patterns and mosaics.
+
+::: column(width=300)
+
+    svg.var.sierpinsk(width=300 height=265)
+      path.red(:draw="triangle")
+      path.white(:d="sierpinski(triangle.points, steps)")
+    x-slider(steps=8 var="steps")
 
 :::
 
 ---
+> id: sierpinski-history
+
+Here are some examples of floor tilings at the Santa Maria in Cosmedin basilica
+in Rome:
+
+::: column(width=140 parent="padded-thin")
+
+    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
+    x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+
+::: column(width=140)
+
+    x-media(src="images/floor-2.jpg" width=140 height=140)
+
+::: column(width=140)
+
+    x-media(src="images/floor-3.jpg" width=140 height=140)
+
+:::
+
+As it turns out, the Sierpinski triangle also appears in many other areas of
+mathematics, and there are many different ways to generate it. In this chapter,
+we will explore some of them!
+[Continue](btn:next)
+
+
+---
 > id: pascal
+> goals: select
 
 ### Pascal’s Triangle
 
 You might even remember the Sierpinski triangle from our chapter on [__Pascal’s
-Triangle__](gloss:pascals-triangle). This is a number pyramid in which every
+triangle__](gloss:pascals-triangle). This is a number pyramid in which every
 number is the sum of the two numbers above. Tap on all the _even_ numbers in the
 triangle below, to highlight them – and see if you notice a pattern:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-
     figure: .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
-      while i < 25
+      while i <= 18
         - var j = 0
         .r
           while j <= i
             - b = bin(i, j)
-            if b > 99999
-              .c: span.small= b
-            else
-              .c= b
+            .c= b
             - j += 1;
         - i += 1;
 
 ---
 > id: pascal-1
 
-{.fixme} Pascal’s Triangle can be continued downwards forever. The Sierpinski
-pattern will continue, producing bigger and bigger triangles.
+Pascal’s triangle can be continued downwards forever, and the Sierpinski pattern
+will continue with bigger and bigger triangles. You can already see the
+beginning of an even larger triangle, starting in row 16.
+
+Of course, we can also try colouring all cells divisible by numbers _other than
+2_. What do you think will happen in those cases?
+[Continue](btn:next)
+
+---
+> id: pascal-large
+
+    .pascal-canvas
+      canvas.pascal(width=800 height=700 style="width: 400px; height: 350px")
+      .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
+
+Here you can see a tiny version of the first 128 rows of Pascal’s triangle.
+We have highlighted all cells that are divisible by ${n}{n|2|2,40,1} – what
+patterns can you find?
+
+{.reveal(when="var-0")} For every number, we get intricate triangular patterns
+similar to the Sierpinski triangle. However, the most 
+, but some are more regular than others.
+Particularly interesting are the patterns for [prime numbers](gloss:prime) or
+the powers of prime numbers (like 27 or 32).
+
+    x-gesture(target="#pascal-large x-var" slide="100,0")
 
 ---
 > id: chaos-game
+> goals: point simulation
 
 ### The Chaos Game
 
-    // Chaos game: https://www.youtube.com/watch?v=kbKtFN71Lfs
+::: column.grow
 
-{.fixme} In the Chaos Game, we start with an empty triangle and select a random point in 
-the middle. We then choose one of the three vertices of the triangle at random,
-and mark the point at the centre of the line from the random point to the
-vertex. Then we repeat the process, starting with that new point…
+Here you can see the three vertices of an equilateral triangle. Tap anywhere
+in the grey area to create a fourth point.
 
-{.todo} Animation Coming Soon
+{.r.reveal(when="point")} Now lets play a game: we pick one of the vertices of
+the triangle at random, draw a line between our point and the vertex, and then
+highlight the midpoint of that segment.
+[Continue](btn:next)
+
+{.r.reveal(when="next-0")} And then we repeat the process: once again we pick
+a random vertex, draw the line from our new point, and then highlight then find
+the midpoint.
+[Continue](btn:next)
+
+{.reveal(when="next-1")} So far, nothing surprising has happened – but watch
+as we repeat the same process many more times:
+
+{.text-center.reveal(when="next-1")}
+_{button.btn.var(@click="game.run(100)")} 100 steps_
+_{button.btn.var(@click="game.run(1000)")} 1000 steps_
+
+::: column(width=360)
+
+    x-geopad.sticky(width=360)
+      canvas(width=720 height=720)
+      svg
+      x-icon-btn.var(icon="restore" @click="game.reset()")
+
+:::
+
+---
+> id: chaos-game-1
+
+If you repeat 
+
+This process is called the __Chaos Game__, and there are many other versions of
+it. For example, we could start with a square or a pentagon, rather than a
+triangle. What do you expect to happen?
+
+::: figure
+
+    x-geopad(width=520 height=400)
+      canvas(width=1040 height=800)
+      svg
+      x-icon-btn.var(icon="restore" @click="game.reset()")
+      button.btn.var(@click="game.run(1000)" style="position: absolute; top: 8px; left: 8px;") 1000 Steps
+
+{.caption} Tap anywhere to create a new point, and drag points to the edge to
+remove them.
+
+:::
 
 ---
 > id: cellular
+> goals: sierpinski
 
 ### Cellular Automata
 
-A __cellular automaton__ is a grid consisting of many connected cells. The
-“state” of every cell (e.g. its colour) is determined by its surrounding cells.
+A __cellular automaton__ is a grid consisting of many connected cells. Every
+cell can be in different “states” (e.g. different colours), and the state of
+every cell is determined by its surrounding cells.
 
 In our example, every cell can be either black or white. We start with one row
 that contains just a single black square. In every following row, the colour of
-each cell is determined by the three cells immediately above.
+each cell is determined by the three cells immediately above. Tap the eight
+possible XXXX below to flip their colour. Can you find a set of rules that
+creates a pattern similar to the Sierpinski triangle?
 
-There are eight different types of three adjacent cells, and in each case we can
-decide how we want to colour the cell underneath. Tap the options below to
-toggle their state – can you find a set of rules that create a pattern similar
-to the Sierpinski triangle?
-
-    .cellular-rules
-    figure: svg.cellular-grid(width=595 height=310)
+    figure
+      .cellular-rules.var
+        for r in ['000', '001', '010', '100', '011', '101', '110', '111']
+          svg.cellular-rule(width=44 height=32 data-rule=r tabindex=0)
+      svg.cellular-grid(width=620 height=320)
 
 ---
 > id: rule-30
+
+There are two options for each of the eight XX, which means there are `2^8 = 256`
+possible rules in total. 
 
 {.fixme} Rule 30
 
@@ -719,14 +816,17 @@ a seashell that shows
 ---
 > id: carpet
 
-### Sierpinski Carpet
+### Sierpinski Carpets and Tetrahedra
 
-{.fixme} COMING SOON
 
----
-> id: tetrahedra
+::: column(width=320)
 
-### Sierpinski Tetrahedra
+
+::: column(width=320)
+
+    x-sierpinski-tetrahedra.var(size=320 steps=4 shadows)
+
+:::
 
 {.fixme} COMING SOON
 

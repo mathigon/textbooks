@@ -48,7 +48,6 @@ export class MengerSponge extends Solid {
 
       cubes = [0, 1, 2, 3].map((steps: number) => {
         let cube: THREE.Object3D = new THREE.Mesh(geometry, material);
-        cube.receiveShadow = true;
         for (let i = 0; i < steps; ++i) cube = step(cube);
         cube.scale.set(2.2, 2.2, 2.2);
         cube.visible = false;
