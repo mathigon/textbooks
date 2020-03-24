@@ -642,10 +642,12 @@ in Rome:
 
 ::: column(width=140)
 
-    x-media(src="images/floor-2.jpg" width=140 height=140)
+    // https://www.cattedraledianagni.it/
+    x-media(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
+    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-media(src="images/floor-3.jpg" width=140 height=140)
 
 :::
