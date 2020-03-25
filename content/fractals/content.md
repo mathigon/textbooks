@@ -453,22 +453,21 @@ on:
 ::: column.grow
 
 This is a significant problem when trying to calculate the length of the border
-of a country – how do you decide which nooks and crannies to include?
+of a country – how do you decide how far to zoom in, and which nooks and
+crannies to include?
 
 One way we could measure the length of Britain’s coastline, for example, is to
 take a long ruler, walk all the way around its beaches, and then add up all the
 distances.
 
-If the ruler is ${rulers[index]}{index|0|0,4,1}km long, we have to use it
+If the ruler is ${rulers[index]}{index|0|0,8,1}km long, we have to use it
 ${count} times, so we get a total coastline of ${count} × ${rulers[index]} =
 ${count * rulers[index]}km.
 
 {.reveal(when="var-0")} We can just keep going, with smaller and smaller rulers,
 and each time, our result for the length of the coastline would get a bit
-longer. Just like the Koch Snowflake before, it seems that Britains
-coastline is infinitely long!
-
-{.reveal(when="var-0")} This is often called the __Coastline paradox__.
+longer. Just like the Koch Snowflake before, it seems that Britains coastline
+is infinitely long! This is often called the __Coastline paradox__.
 [Continue](btn:next)
 
 ::: column(width=280)
@@ -648,13 +647,13 @@ in Rome:
 ::: column(width=140)
 
     // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
-    x-media(src="images/floor-3.jpg" width=140 height=140)
+    x-media(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
 
-As it turns out, the Sierpinski triangle also appears in many other areas of
-mathematics, and there are many different ways to generate it. In this chapter,
-we will explore some of them!
+As it turns out, the Sierpinski triangle appears in a wide range of other areas
+of mathematics, and there are many different ways to generate it. In this
+chapter, we will explore some of them!
 [Continue](btn:next)
 
 
@@ -664,10 +663,11 @@ we will explore some of them!
 
 ### Pascal’s Triangle
 
-You might even remember the Sierpinski triangle from our chapter on [__Pascal’s
-triangle__](gloss:pascals-triangle). This is a number pyramid in which every
-number is the sum of the two numbers above. Tap on all the _even_ numbers in the
-triangle below, to highlight them – and see if you notice a pattern:
+You might already remember the Sierpinski triangle from our chapter on
+[__Pascal’s triangle__](gloss:pascals-triangle). This is a number pyramid in
+which every number is the sum of the two numbers above. Tap on all the _even_
+numbers in the triangle below, to highlight them – and see if you notice a
+pattern:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -689,26 +689,28 @@ Pascal’s triangle can be continued downwards forever, and the Sierpinski patte
 will continue with bigger and bigger triangles. You can already see the
 beginning of an even larger triangle, starting in row 16.
 
-Of course, we can also try colouring all cells divisible by numbers _other than
-2_. What do you think will happen in those cases?
+If two adjacent cells are divisible by 2, then their sum in the cell underneath
+must also be divisible by 2 – that’s why we can only get coloured triangles
+(or single cells). Of course, we can also try colouring all cells divisible by
+numbers _other than 2_. What do you think will happen in those cases?
 [Continue](btn:next)
 
 ---
 > id: pascal-large
 
     .pascal-canvas
-      canvas.pascal(width=800 height=700 style="width: 400px; height: 350px")
+      canvas.pascal(width=960 height=840)
       .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
 Here you can see a tiny version of the first 128 rows of Pascal’s triangle.
 We have highlighted all cells that are divisible by ${n}{n|2|2,40,1} – what
-patterns can you find?
+do you notice?
 
-{.reveal(when="var-0")} For every number, we get intricate triangular patterns
-similar to the Sierpinski triangle. However, the most 
-, but some are more regular than others.
-Particularly interesting are the patterns for [prime numbers](gloss:prime) or
-the powers of prime numbers (like 27 or 32).
+{.reveal(when="var-0")} For every number, we a different triangular pattern
+similar to the Sierpinski triangle. The pattern is particularly regular if we
+choose a [[prime number|triangle number|Fibonacci number]].
+_{span.reveal(when="blank-0")} If the number has *many different* prime factors,
+the pattern looks more random._
 
     x-gesture(target="#pascal-large x-var" slide="100,0")
 
@@ -777,35 +779,36 @@ remove them.
 
 ### Cellular Automata
 
-A __cellular automaton__ is a grid consisting of many connected cells. Every
+A __cellular automaton__ is a grid consisting of many individual cells. Every
 cell can be in different “states” (e.g. different colours), and the state of
 every cell is determined by its surrounding cells.
 
 In our example, every cell can be either black or white. We start with one row
 that contains just a single black square. In every following row, the colour of
 each cell is determined by the three cells immediately above. Tap the eight
-possible XXXX below to flip their colour. Can you find a set of rules that
+possible options below to flip their colour – can you find a set of rules that
 creates a pattern similar to the Sierpinski triangle?
 
-    figure
-      .cellular-rules.var
-        for r in ['000', '001', '010', '100', '011', '101', '110', '111']
-          svg.cellular-rule(width=44 height=32 data-rule=r tabindex=0)
-      svg.cellular-grid(width=620 height=320)
+    figure: x-automaton(size=28)
+
+{.reveal(when="sierpinski")} There are two choices for each of the eight
+options, which means there are `2^8 =` [[256]] possible rules in total. Some,
+like [Rule 126](action:setRule('01111110')), look like the Sierpinski triangle.
+Others, like [Rule 30](action:setRule('01111000')), look completely chaotic.
+It was discovered by [Stephen Wolfram](bio:wolfram) in 1983, and computers can
+even use them to generate random numbers!
 
 ---
-> id: rule-30
-
-There are two options for each of the eight XX, which means there are `2^8 = 256`
-possible rules in total. 
-
-{.fixme} Rule 30
+> id: cellular-1
 
 ::: column.grow
 
-{.fixme} Many plants and animals also grow by following simple rules like this – and
-that can cause the appearance of similar patterns in nature. Here you can see
-a seashell that shows 
+Cellular automata show how highly complex patterns can be created by very simple
+rules – just like fractals. Many processes in nature also follow simple rules,
+yet produce incredibly complex systems.
+
+In some cases, this can lead to the appearance of patterns that look just like
+cellular automata, for example the colours on the shell of this snail.
 
 ::: column(width=320)
 
@@ -816,21 +819,28 @@ a seashell that shows
 :::
 
 ---
-> id: carpet
+> id: tetrahedra
 
-### Sierpinski Carpets and Tetrahedra
+### Sierpinski Tetrahedra
 
+There are many variants of the Sierpinski triangle, and other fractals with
+similar properties and creation processes. Some look 2-dimensional, like the
+_Sierpinski Carpet_ you saw above. Others look 3-dimensional, like these
+examples:
 
 ::: column(width=320)
 
+    x-sierpinski-tetrahedra(size=320 steps=5 style="display: block; margin-top: -20px")
+
+{.caption} Sierpinski Tetrahedra
 
 ::: column(width=320)
 
-    x-sierpinski-tetrahedra.var(size=320 steps=4 shadows)
+    x-sierpinski-pyramid(size=320 steps=5 style="display: block; margin-top: -20px")
+
+{.caption} Sierpinski Pyramid
 
 :::
-
-{.fixme} COMING SOON
 
 
 --------------------------------------------------------------------------------

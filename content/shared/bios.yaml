@@ -1816,3 +1816,11 @@ wiles:
     He was too old to receive the _Fields medal_, the highest award in
     mathematics, which has an age limit of 40. Instead, Wiles was awarded a
     special silver plaque for his work.
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __Stephen Wolfram__ (born 1959) is a British-American computer scientist,
+    physicist, and businessman. He is the founder and CEO of _Wolfram Research_,
+    where he developed the _Mathematica_ computing system, the _Wolfram|Alpha_
+    answer engine, and the Wolfram programming language.

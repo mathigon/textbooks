@@ -4,18 +4,21 @@
 // =============================================================================
 
 
-import {Color, delay, isOneOf, list, repeat, tabulate2D} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals, Random} from '@mathigon/fermat';
-import {$N, CanvasView, ElementView, pointerOver, SVGParentView, SVGView} from '@mathigon/boost';
+import {Color, delay, list, repeat} from '@mathigon/core';
+import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
+import {$N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Slider, Slideshow, Step} from '../shared/types';
 import {BLUE} from '../shared/constants';
 
-import './components/menger-sponge';
-import './components/sierpinski-tetrahedra';
+import {CellularAutomaton} from './components/automata';
 import {ChaosGame} from './components/chaos-game';
 import {drawKoch, drawSierpinski} from './components/fractals';
 import {JuliaCanvas} from './components/mandelbrot';
+
+import './components/menger-sponge';
+import './components/sierpinski-tetrahedra';
+import './components/automata';
 
 
 // -----------------------------------------------------------------------------
@@ -130,7 +133,6 @@ export function coastlines1($step: Step) {
 
     $step.model.count = count;
   })
-
 }
 
 
@@ -140,18 +142,22 @@ export function coastlines1($step: Step) {
 export const sierpinski = triangle;
 
 export function pascal($step: Step) {
-  const $cells = $step.$$('.pascal-grid .c');
+  const $grid = $step.$('.pascal-grid')!;
+  const $cells = $grid.$$('.c');
   let count = 0;
   let done = false;
 
   function revealAll() {
     $step.score('select');
+    $grid.addClass('done');
     done = true;
     const $red = $cells.filter($c => !(+$c.text % 2) && !$c.hasClass('red'));
     for (const [i, $c] of $red.entries()) {
       delay(() => $c.addClass('red'), Math.sqrt(i) * 160);
     }
   }
+
+  if ($step.scores.has('select')) revealAll();
 
   for (const $c of $cells) {
     $c.one('click', () => {
@@ -165,7 +171,7 @@ export function pascal($step: Step) {
 
 export function pascalLarge($step: Step) {
   const $canvas = $step.$('canvas.pascal') as CanvasView;
-  const triangle = Polygon.regular(3, 455).shift(400, 466);
+  const triangle = Polygon.regular(3, 546).shift(480, 560);
   const edge = triangle.edges[1];
   const rows = 128;
 
@@ -194,7 +200,7 @@ export function pascalLarge($step: Step) {
         }
 
         const fill = (s.n <= 1 || cells[n][k]) ? '#ddd' : color;
-        $canvas.draw(new Circle(p, 2.7), {fill});
+        $canvas.draw(new Circle(p, 3.2), {fill});
       }
     }
   });
@@ -223,7 +229,6 @@ export function chaosGame($step: Step) {
     point0.$el.addClass('blue');
     $geopad.switchTool('move');
   });
-
 }
 
 export function chaosGame1($step: Step) {
@@ -235,70 +240,18 @@ export function chaosGame1($step: Step) {
   $step.model.game = new ChaosGame(initial, $geopad.$('canvas') as CanvasView, 1/1.6180339887);
 }
 
-
-
-
-
-function rect(x: number, y: number, $parent: ElementView, classes = '') {
-  return $N('rect', {width: 12, height: 12, x: 4 + x * 12, y: 4 + y * 12, class: classes}, $parent)
-}
-
-
-const rules = ['000', '001', '010', '100', '011', '101', '110', '111'];
-
 export function cellular($step: Step) {
-  const $grid = $step.$('.cellular-grid') as SVGParentView;
+  const correct = ['01110000', '0101_0__', '01110101', '01111110'];
+  const match = (a: string, b: string) =>
+      a.split('').every((c, i) => c === b[i] || c === '_');
 
-  const rows = 26;
-  const cols = rows * 2 - 1;
+  const automaton = $step.$('x-automaton') as CellularAutomaton;
 
-  for (const $r of $step.$$('.cellular-rule')) {
-    const rule = $r.data.rule!;
-    $step.model[rule] = false;
-    for (const k of [0, 1, 2]) rect(k, 0, $r, rule[k] === '1' ? 'fill' : '');
-    const $value =  rect(1, 1, $r, 'red');
-    $step.model.watch(() => $value.setClass('fill', $step.model[rule]));
-    $r.on('click', () => $step.model[rule] = !$step.model[rule]);
-  }
-
-  const $cells = tabulate2D((i, j) => rect(j, i, $grid), rows, cols);
-  const cells = tabulate2D(() => false, rows, cols);
-
-  const type = (i: number, j: number) =>
-      (j < 0 || j >= cols) ? '0' : cells[i][j] ? '1' : '0';
-
-  $step.model.watch((s: any) => {
-    const choice = rules.map(r => s[r] ? '1' : '0').join('');
-    if (isOneOf(choice, '01011000', '01110000')) $step.score('sierpinski');
-
-    for (let i = 1; i < rows; ++i) {
-      for (let j = 0; j < cols; ++j) {
-        const rule = type(i - 1, j - 1) + type(i - 1, j) + type(i - 1, j + 1);
-        cells[i][j] = $step.model[rule];
-        $cells[i][j].setClass('fill', cells[i][j]);
-      }
-    }
+  automaton.on('rule-change', (rules: string) => {
+    if (correct.some(c => match(c, rules))) $step.score('sierpinski');
   });
 
-  cells[0][rows - 1] = true;
-  $cells[0][rows - 1].addClass('fill');
-  $step.model['001'] = $step.model['010'] = $step.model['011'] = true;
-
-  const $highlight = $N('path', {d: 'M-15,-15l0,18l12,0l0,12l18,0l0,-12l12,0l0,-18Z',
-    class: 'highlight'}, $grid);
-  let highlightPosition = new Point(0, 0);
-
-  pointerOver($grid, {
-    enter: () => $highlight.show(),
-    move: (p: Point) => {
-      p = p.shift(-4, -4).scale(1/12).floor();
-      // if (p.equals(highlightPosition)) return;  // Point hasn't changed.
-      highlightPosition = p;
-      $highlight.toggle(p.x > 0 && p.y > 0 && p.x < cols - 1 && p.y < rows);
-      $highlight.setTransform(p.scale(12).shift(4, 4));
-    },
-    exit: () => $highlight.hide()
-  });
+  $step.model.setRule = (str: string) => automaton.setRule(str);
 }
 
 

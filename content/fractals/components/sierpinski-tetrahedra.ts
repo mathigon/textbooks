@@ -1,5 +1,5 @@
 // =============================================================================
-// Menger Sponge Component
+// Sierpinski Component
 // (c) Mathigon
 // =============================================================================
 
@@ -8,45 +8,59 @@ import {register} from '@mathigon/boost';
 import {Solid} from '../../shared/components/solid';
 
 
-const positions = [[1, 1, 1], [-1, -1, 1], [-1, 1, -1], [1, -1, -1]];
-
-function step(child: THREE.Object3D) {
-  child.scale.set(1/2, 1/2, 1/2);
-  const obj = new THREE.Object3D();
-  obj.castShadow = true;
-  obj.receiveShadow = false;
-
-  for (const p of positions) {
-    const part = child.clone();
-    part.position.set(p[0] / 4, p[1] / 4, p[2] / 4);
-    obj.add(part);
-  }
-
-  return obj;
-}
-
-
 @register('x-sierpinski-tetrahedra')
 export class SierpinskiTetrahedra extends Solid {
+  positions = [[1, 1, 1], [-1, -1, 1], [-1, 1, -1], [1, -1, -1]];
+  color = 0x0f82f2;
+  shift = 0;
+  size = 2.3;
 
   created() {
-    this.setAttr('rotate', '1');
     const steps = +this.attr('steps') || 0;
 
     this.addMesh(() => {
-      const geometry = new THREE.TetrahedronBufferGeometry(1);
-      const material = new THREE.MeshPhongMaterial(
-          {specular: 0x222222, color: 0xfd8c00, flatShading: true, shadowSide: THREE.DoubleSide});
+      const geometry = this.initial();
+      const material = new THREE.MeshLambertMaterial(
+          {color: this.color, flatShading: true});
 
-      let tetrahedron: THREE.Object3D = new THREE.Mesh(geometry, material);
-      tetrahedron.castShadow = true;
-      tetrahedron.receiveShadow = false;
+      let object: THREE.Object3D = new THREE.Mesh(geometry, material);
+      for (let i = 0; i < steps; ++i) object = this.step(object);
 
-      for (let i = 0; i < steps; ++i) tetrahedron = step(tetrahedron);
-
-      tetrahedron.scale.set(2.2, 2.2, 2.2);
-      return [tetrahedron];
+      object.scale.set(this.size, this.size, this.size);
+      object.position.set(0, this.shift, 0);
+      return [object];
     });
+  }
 
+  initial(): THREE.BufferGeometry {
+    return new THREE.TetrahedronBufferGeometry(1);
+  }
+
+  step(child: THREE.Object3D) {
+    child.scale.set(1 / 2, 1 / 2, 1 / 2);
+    const obj = new THREE.Object3D();
+
+    for (const p of this.positions) {
+      const part = child.clone();
+      part.position.set(p[0] / 4, p[1] / 4, p[2] / 4);
+      obj.add(part);
+    }
+
+    return obj;
+  }
+}
+
+const SQRT = Math.sqrt(2);
+
+@register('x-sierpinski-pyramid')
+export class SierpinskiPyramid extends SierpinskiTetrahedra {
+  positions = [[0, 1, 0], [0, -1, SQRT], [SQRT, -1, 0], [0, -1, -SQRT],
+    [-SQRT, -1, 0]];
+  color = 0x22ab24;
+  shift = 0.5;
+  size = 2.6;
+
+  initial() {
+    return new THREE.ConeBufferGeometry(1 / SQRT, 1, 4);
   }
 }

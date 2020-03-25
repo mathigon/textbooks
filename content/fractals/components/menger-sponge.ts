@@ -43,8 +43,8 @@ export class MengerSponge extends Solid {
 
     this.addMesh(() => {
       const geometry = new THREE.BoxBufferGeometry(1, 1, 1);
-      const material = new THREE.MeshPhongMaterial(
-          {specular: 0x222222, color: 0xfd8c00, flatShading: true});
+      const material = new THREE.MeshLambertMaterial(
+          {color: 0xfd8c00, flatShading: true});
 
       cubes = [0, 1, 2, 3].map((steps: number) => {
         let cube: THREE.Object3D = new THREE.Mesh(geometry, material);
