@@ -958,8 +958,8 @@ still get a circle of convergence? What other shapes do you think we might see?
 ---
 > id: julia-3
 
-In this diagram, you can not just move the position of `pill(x_0,"yellow")`, but
-also the value of `pill(c,"red","c")`:
+In this diagram, you can move the position of `pill(x_0,"yellow")` as well as
+the value of `pill(c,"red","c")`:
 
 ::: x-slideshow
 
@@ -975,13 +975,23 @@ also the value of `pill(c,"red","c")`:
 The sequence convergence as long as `x_0` lies within the unit circle.
 
 {div(slot="legend")} As soon as we change the value of _c_, something wonderful
-happens. The circle transforms into a highly complex, fractal shape, for
-example when [`c = –0.6 – 0.2i`](action:animate(-0.6,-0.2)).
+happens. The circle transforms into a highly complex, fractal shape.
 
 {div(slot="legend")} When [`c = –0.54 + 0.5i`](action:animate(-0.54,0.5)), the
 shape divides into infinity many tiny elements arranged in spirals.
 
-{div(slot="legend")} What else can you find? have a look at the patterns when
+::: div(slot="legend")
+In some cases, the sequence doesn’t converge to a _single
+point_ – instead it reaches a cycle of multiple points, like a triangle. These
+cycles are called __orbits__.
+
+Points that are coloured blue mean that the corresponding sequence converges or
+has an orbit, which means that it is always __bounded__ by some limit. Points
+that are left white mean that the corresponding sequence __diverges__: it
+eventually blows up to infinity.
+:::
+
+{div(slot="legend")} What else can you find? Have a look at the patterns when
 [`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) or when
 [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also some values of
 _c_ where _every_ sequence diverges, so the entire complex plain remains white.
@@ -1034,16 +1044,17 @@ diverges:
 ### The Mandelbrot Set
 
 When creating the different Julia sets, you might have noticed that there were
-some values of _c_ for which no sequences converge, and the entire complex plane
-remains white. A few decades after Julia and Fatou, a new generation of
-mathematicians tried to map these areas.
+some values of _c_ for which every sequence diverges, and the entire complex
+plane remains white. A few decades after Julia and Fatou, a new generation of
+mathematicians tried to map what these areas looked like.
 
 In the previous example, we chose a fixed value for _{.pill.red}c_, and then
 changed the position of _{.pill.yellow}x0_ to colour the plane. Now let’s fix
-the value of _{.pill.yellow}x0 = 0_, and instead change the value of _{.pill.red}c_.
+the value of _{.pill.yellow}x0 = 0_, and instead change the value of
+_{.pill.red}c_.
 
 Once more, paint over the complex plane to reveal the area in which sequences
-converge. What shape do you expect to appear?
+remain bounded. What shapes do you expect to appear?
 
 ::: column(width=460)
 

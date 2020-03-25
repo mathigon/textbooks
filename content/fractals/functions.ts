@@ -331,12 +331,17 @@ export function julia3($step: Step) {
   $step.model.spiral = spiral;
 
   $step.model.animate = (x: number, y: number) => {
-    $geopad.animatePoint('c', new Point(x, y), 2000);
+    $geopad.animatePoint('c', new Point(x, y), 1600);
   };
 
   $slideshow.on('next back', (n: number) => {
+    if (n === 0) $step.model.animate(0, 0);
     if (n === 1) $step.model.animate(-0.6, -0.2);
     if (n === 2) $step.model.animate(-0.54, 0.5);
+    if (n === 3) {
+      $step.model.animate(-0.08, 0.72);
+      $geopad.animatePoint('a0', new Point(0.12, -0.07), 1600);
+    }
   });
 
   const [pB, vB] = [$geopad.plotBounds, $geopad.viewportBounds];
