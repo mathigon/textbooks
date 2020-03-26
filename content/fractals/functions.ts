@@ -101,7 +101,7 @@ export function coastlines1($step: Step) {
   const startPoint = $coast.getPointAtLength(0);
   const points = list(5, length, 5).map(i => $coast.getPointAtLength(i));
 
-  $step.model.rulers = [100, 80, 60, 40, 20];
+  $step.model.rulers = [100, 90, 80, 70, 60, 50, 40, 30, 20];
   const scale = 0.8;
 
   function makeRuler(p: Point, q: Point) {
@@ -393,4 +393,16 @@ export function mandelZoom($step: Step) {
       if (isVisible) $img.css('transform', `scale(${Math.pow(2, scale)})`)
     }
   });
+}
+
+export function mandelOrbits($step: Step) {
+  $step.model.spiral = spiral;
+
+  const points = list(0, 1, 0.02).map(i => {
+    const t = 2 * Math.PI * i;
+    const x = 2 * Math.cos(t) - Math.cos(2 * t);
+    const y = 2 * Math.sin(t) - Math.sin(2 * t);
+    return new Point(x / 4, y / 4);
+  });
+  $step.model.cardioid = new Polygon(...points);
 }

@@ -978,16 +978,16 @@ The sequence convergence as long as `x_0` lies within the unit circle.
 happens. The circle transforms into a highly complex, fractal shape.
 
 {div(slot="legend")} When [`c = –0.54 + 0.5i`](action:animate(-0.54,0.5)), the
-shape divides into infinity many tiny elements arranged in spirals.
+shape divides into infinitely many tiny elements arranged in spirals.
 
 ::: div(slot="legend")
 In some cases, the sequence doesn’t converge to a _single
 point_ – instead it reaches a cycle of multiple points, like a triangle. These
 cycles are called __orbits__.
 
-Points that are coloured blue mean that the corresponding sequence converges or
-has an orbit, which means that it is always __bounded__ by some limit. Points
-that are left white mean that the corresponding sequence __diverges__: it
+Points that are coloured blue mean that the corresponding sequence either
+converges or has an orbit (we say that it is __bounded__). Points that are left
+white mean the corresponding sequence __diverges__: it is not bounded, and
 eventually blows up to infinity.
 :::
 
@@ -1059,7 +1059,7 @@ remain bounded. What shapes do you expect to appear?
 ::: column(width=460)
 
     x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes grid padding=10 label-suffix=",i")
-      img(src="images/mandelbrot.png" width=460 height=460 style="position: absolute;")
+      img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
       canvas(width=920 height=920 style="opacity: 1")
       svg
         circle.move.red.pulsate(name="c" cx=0 cy=0 target="c")
@@ -1079,7 +1079,7 @@ remain bounded. What shapes do you expect to appear?
 [{.pill.yellow}`x_5`](target:x5) `§= x_4^2 + c =` ${complex(x5)}  
 _{span.vdots}…_
 
-Converges!
+Bounded!
 
 :::
 
@@ -1091,7 +1091,7 @@ rotated by 90°, it looks almost like a person, with head, body and two arms. It
 was defined and drawn for the first time in 1978, in a research paper by the
 mathematicians Robert Brooks and Peter Matelski:
 
-    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290)
+    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
 A few years later, [Benoit Mandelbrot](bio:mandelbrot) used the powerful
 computers at IBM to create a much more detailed visualisation of the fractal,
@@ -1107,9 +1107,9 @@ particles or printer errors, and not a defining characteristic of fractals.
 Like all fractals, we can “zoom into” the Mandelbrot set forever, finding new
 patterns at every scale. Here you can zoom into a part of the Mandelbrot set
 that is called the __Seahorse valley__. Black points are _inside_ the Mandelbrot
-set, where the sequence _converges_. Coloured points are _outside_ the
-Mandelbrot set, where the sequence _diverges_. The different colours indicate
-_how quickly_ these sequences diverge:
+set, where the sequence is bounded. Coloured points are _outside_ the Mandelbrot
+set, where the sequence diverges, and the different colours indicate _how
+quickly_ it grows to infinity:
 
     .mandel-frame
       - i = 1;
@@ -1128,8 +1128,42 @@ a modern laptop. The Mandelbrot set can be created with just a single, simple
 equation, `§x_n = x_(n-1)^2 + c`, yet it is infinitely complex and stunningly
 beautiful.
 
+---
+> id: mandel-orbits
+
+::: column(width=360 parent="right")
+
+    x-geopad.no-background(width=360 height="340" x-axis="-1.5,0.5,1" y-axis="-0.9,0.9,1" axes padding=8 labels="no")
+      img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
+      svg
+        circle.move.red.pulsate(name="c" x="point(-0.3,0.4)" target="c")
+        path.blue.transparent.fill(x="cardioid" target="bulb0")
+        path.blue.transparent.fill(x="circle(point(-0.125,0.745),0.094)" target="bulb1")
+        path.blue.transparent.fill(x="circle(point(-0.5045,0.563),0.039)" target="bulb2")
+        path.yellow.thin(x="spiral(point(0,0),c)")
+
+::: column.grow
+
+As you move the value of [{.pill.red}c](target:c) around the Mandelbrot set,
+you might notice a curious property:
+
+* All sequences within the [main body](target:bulb0) of the Mandelbrot set
+  [[converge|diverge|reach an orbit]] _{span.reveal(when="blank-0")}to a single point._
+* {.reveal(when="blank-0")} The sequences within the [large bulb](target:bulb1)
+  at the top [[reach an orbit|converge|diverge]] _{span.reveal(when="blank-1")}
+  consisting of [[3]] points._
+* {.reveal(when="blank-2")} Sequences in [this smaller bulb](target:bulb2) have
+  orbits of length [[5]].
+
+:::
+
+{.reveal(when="blank-3")} Every bulb has a differently-sized orbit, with smaller
+bulbs having more and more points in their orbits. The size of these orbits are
+closely related to the __Logistic Map__, an important concept in [Chaos
+theory](/course/chaos).
+
     // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Number of fixed points in the different bulbs of the Mandelbrot set
+    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 > id: mandel-outro
@@ -1144,7 +1178,7 @@ engineering, computer science, and many other fields.
 In 1985, the Mandelbrot set appeared on the cover of the _Scientific American_
 magazine, and since then it has become one of the most recognisable mathematical
 shapes in the world. You can find it on T-shirts, in music videos, and as screen
-savers, and it’s been referenced in popular books and movies.
+savers, and it’s been referenced in many popular books and movies.
 
 ::: column(width=220)
 
