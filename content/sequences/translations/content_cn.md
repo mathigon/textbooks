@@ -2056,18 +2056,18 @@ __谢尔宾斯基三角形__。像这样的形状，由一个简单的模式组�
     // a single person left, who would get the role.
 
     // A clever actress decided she would get the role. There were 10 people in
-    // her circle. Where must she stand to be the last one in the circle? 
+    // her circle. Where must she stand to be the last one in the circle?
 
     // An actor auditioning for a different part was faced with 20 in his circle.
     // Where should ! he stand?
     
     // Find a pattern that tells you where to stand no matter how many people
-    // are in the circle. Why does it work? 
+    // are in the circle. Why does it work?
 
     // What if the director eliminates every mth person? Where should you stand
-    // in a circle of n? 
+    // in a circle of n?
 
-    // What about “in, in, out, out,” leaving two in and then kicking two out? 
+    // What about “in, in, out, out,” leaving two in and then kicking two out?
 
     // With eight people, for example, you’ll lost the even numbers on round one,
     // 3 and 7 on round two, and 5 on round three, making 1 the winner.
@@ -2077,7 +2077,7 @@ __谢尔宾斯基三角形__。像这样的形状，由一个简单的模式组�
     // person 1. So your answer for n people should be the same as for n-1,
     // except the people are relabeled with a number 2 greater. In other words,
     // if for the nth circle you stands in position p, for the n+1st circle you
-    // stand in position  p +2. However, this number may be larger than n+1, so
+    // stand in position p +2. However, this number may be larger than n+1, so
     // we have to reduce it mod n+1 if necessary. It’s possible to get a formula
     // for this, and that’s a nice challenge for kids who are ready for it. But
     // for most, just elucidating the pattern will be enough.

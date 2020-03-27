@@ -539,6 +539,5 @@ machine-learning-1:
 exploding-dots:
   title: Exploding Dots
   description: A mathematical story developed for Global Math Week – learn about place value, infinity and p-adic numbers.
-  tile: /images/og-tile/exploding-dots.jpg
   color: 6f27cc
   hideTitle: true

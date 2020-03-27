@@ -551,7 +551,7 @@ export function sunflowerSpiral($step: Step) {
         y: 200 + r * Math.sin(t)
       });
     }
-    $value.text = `${round(x / 1000 * 360, 1)}° (${x / 1000} rotations)`;
+    $value.text = `${round(x / 1000 * 360, 1)}° (${Math.round(x) / 1000} rotations)`;
   });
 
   $slideshow.on('next back', (x) => {
