@@ -5,8 +5,8 @@
 
 
 import {Color, delay, list, Obj, repeat} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals, Random} from '@mathigon/fermat';
-import {$N, Browser, CanvasView, InputView, SVGView} from '@mathigon/boost';
+import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
+import {$N, CanvasView, InputView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
 import {BLUE} from '../shared/constants';
@@ -246,7 +246,7 @@ export function chaosGame($step: Step) {
   });
 }
 
-export function chaosGame1($step: Step) {
+export function fractalBuilder($step: Step) {
   const VERTICES = ['x0', 'x1', 'x2', 'x3', 'x4'];
   const RATIOS = [0.5, 2/3, 1/1.6180339887];
   const INITIAL: Obj<Point[]> = {
@@ -262,34 +262,40 @@ export function chaosGame1($step: Step) {
   const game = new ChaosGame($canvas, []);
   const points = VERTICES.map(i => $geopad.shapes.get(i)) as GeoPoint[];
 
+  $select.on('change', () => $step.score('shape'));
+  $geopad.on('move', () => game.pause());
+
   $step.model.watch((s: any) => {
     for (const [i, v] of VERTICES.entries()) $step.model[v] = INITIAL[s.shape][i];
-    game.reset();
+    game.pause();
     game.points = points.slice(0, +s.shape);
   });
 
-  $step.model.game = game;
-  $step.model.download = () => $canvas.downloadImage('fractal');
-
-  ($step.$('.chaos-ratio') as InputView).change((r: string) => {
-    game.reset();
-    game.ratio = RATIOS[+r];
-    $step.score('s1');
+  $step.model.watch((s: any) => {
+    game.ratio = RATIOS[+s.ratio];
+    game.rule = s.rule;
+    game.pause();
   });
 
-  ($step.$('.chaos-special') as InputView).change((r: string) => {
-    game.reset();
-    game.rule = r;
-    $step.score('s2');
+  $step.model.assign({
+    game,
+    download: () => $canvas.downloadImage('fractal'),
+    score: (s: string) => $step.score(s),
+    play: (n: number) => {
+      $step.score('play');
+      game.play(n);
+    },
+    carpet: () => {
+      $step.model.assign({shape: '4', ratio: '1', rule: 'midpoints'});
+      game.reset();
+      game.play(10000);
+    },
+    snowflake: () => {
+      $step.model.assign({shape: '5', ratio: '2', rule: 'none'});
+      game.reset();
+      game.play(10000);
+    },
   });
-
-  $step.model.carpet = () => {
-    $select.makeActive($select.children[1]);
-
-  };
-
-  // TODO Select Arrows
-  // TODO Break when moving vertices
 }
 
 export function cellular($step: Step) {

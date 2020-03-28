@@ -1,5 +1,5 @@
 .chaos-game
-  x-select.tabs(var="shape")
+  x-select.tabs.var(:bind="shape")
     div(value="3") Triangle
     div(value="4") Square
     div(value="5") Pentagon
@@ -15,16 +15,16 @@
     x-icon-btn.var(icon="restore" title="Clear Canvas" @click="game.reset()")
     x-icon-btn.var(icon="download" title="Download Image" @click="download()" style="top: 54px")
 
-  .chaos-rules
+  .chaos-rules.var
     label.form-field(style="width: 120px")
-      select.chaos-ratio
+      select.chaos-ratio(:bind="ratio" @change="score('s1')")
         option(value="0") 1/2
         option(value="1") 2/3
         option(value="2") Golden Ratio
       span.placeholder Ratio
 
     label.form-field(style="width: 180px")
-      select.chaos-special
+      select.chaos-special(:bind="rule" @change="score('s2')")
         option(value="none") None
         option(value="midpoints") Also include midpoints of edges
         option(value="center") Also include the center of the polygom
@@ -32,5 +32,5 @@
         option(value="adjacent") Has to pick a vertex next to the previous one
       span.placeholder Special Rules
 
-    .button-field.var
-      button.btn.btn-red(@click="game.run(5000)") 5000 Steps
+    .button-field
+      button.btn.btn-red(@click="play(5000)") 5000 Steps

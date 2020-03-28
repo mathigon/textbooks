@@ -71,7 +71,7 @@ or [nested pentagons](action:set(113,235,232,238)). What else can you find?
         circle.move.blue.pulsate(name="c2" cx=225 cy=220 target="s2 dot")
         path.thick.red(x="segment(a,b)" target="s1")
         path.thick.blue.rounded(x="polyline(c1,b,c2)" target="s2")
-    x-slider#fern-slider(steps=8 var="steps")
+    x-slider#fern-slider(steps=8 :bind="steps")
 
 :::
 
@@ -102,7 +102,7 @@ forever, and the patterns and shapes will always continue repeating.
       g.red.t3
         path(:draw="t3")
         path.white(:d="sierpinski(t3.points, steps-1)")
-    x-slider(steps=8 var="steps")
+    x-slider(steps=8 :bind="steps")
 
 :::
 
@@ -252,7 +252,7 @@ edge of the snowflake look exactly the same as [larger sections](target:t1).
       path.blue(:draw="koch(steps)")
       rect.overlay(y=76 width=300 height=224 target="t1")
       polygon.overlay(points="300 0 90 0 107 76 0 76 0 300 300 300 300 0" target="t2")
-    x-slider(steps=5 var="steps")
+    x-slider(steps=5 :bind="steps")
 
 :::
 
@@ -405,7 +405,7 @@ is why the cube is “not quite” 3-dimensional.
 ::: column(width=320)
 
     x-menger-sponge.var(size=320 :steps="steps")
-    x-slider(steps=3 var="steps")
+    x-slider(steps=3 :bind="steps")
 
 :::
 
@@ -487,7 +487,7 @@ research on fractals and dimensions.
 ::: column(width=340)
 
     include svgs/cells.svg
-    x-slider(steps=10 continuous var="i")
+    x-slider(steps=10 continuous :bind="i")
 
 ::: column.grow
 
@@ -623,7 +623,7 @@ earlier in artwork, patterns and mosaics.
     svg.var.sierpinsk(width=300 height=265)
       path.red(:draw="triangle")
       path.white(:d="sierpinski(triangle.points, steps)")
-    x-slider(steps=8 var="steps")
+    x-slider(steps=8 :bind="steps")
 
 :::
 
@@ -751,8 +751,8 @@ _{button.btn.var(@click="game.run(1000)")} 1000 steps_
 :::
 
 ---
-> id: chaos-game-1
-> goals: s1 s2 play
+> id: fractal-builder
+> goals: s1 s2 shape play
 
 This process is called the __Chaos Game__. If you repeat the same step many
 times, the distribution of dots starts to look more and more like the Sierpinski
@@ -761,13 +761,13 @@ triangle.
 There are many other versions of it – for example, we could start with a square
 or a pentagon, we could add additional rules like not being able to select the
 same vertex twice in a row, or we could pick the next point at a ratio other
-than `1/2`. In some of these cases, we’ll just get a random distribution of
+than `§1/2`. In some of these cases, we’ll just get a random distribution of
 dots, but in other cases, we reveal even more fractals:
 
     include components/chaos-game
 
 {.reveal(when="s1 s2 play")} Did you discover the [Sierpinski
-Carpet](action:carpet()) or this [pentagonal snowflake](action:snowflake())
+carpet](action:carpet()) or this [pentagonal snowflake](action:snowflake())
 based on the [__Golden ratio__](gloss:golden-ratio)?
 
 ---
@@ -1076,7 +1076,7 @@ the value of `pill(x_0 = 0,"yellow","x0")`, and instead change the value of
 Once more, paint over the complex plane to reveal the area in which sequences
 remain bounded. What shapes do you expect to appear?
 
-    figure: x-geopad.no-background(width=720 height=480 x-axis="-2.2,1.2,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
+    figure: x-geopad.no-background(width=720 height=480 x-axis="-2.1,1.1,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
       img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
       canvas(width=1440 height=960 style="opacity: 1")
       svg
@@ -1132,7 +1132,7 @@ quickly_ it grows to infinity:
         img(src="images/mandel/mandel-" + i + ".jpg" width=760 height=500)
         - i += 1;
       .scale.var Scale: ${pow(scale)}
-    x-slider(steps=27 continuous speed=0.1 var="scale")
+    x-slider(steps=27 continuous speed=0.1 :bind="scale")
 
 ---
 > id: mandel-zoom-1

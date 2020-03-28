@@ -59,10 +59,7 @@ export class ChaosGame {
     this.$canvas.draw(new Circle(this.lastPoint.scale(2), 2), {fill: this.colours[index]});
   }
 
-  run(n: number) {
-    this.queue += n;
-    if (this.running) return;
-
+  setup() {
     this.vertices = this.points.map(p => p.value!);
     this.colours = this.points.map(p => p.color);
 
@@ -78,13 +75,23 @@ export class ChaosGame {
     }
 
     this.lastPoint = this.vertices[0];
+  }
+
+  play(n: number) {
+    this.queue += n;
+    if (this.running) return;
+    this.setup();
     this.running = true;
     this.step();
   }
 
-  reset() {
-    this.$canvas.clear();
-    this.queue = 0;
+  pause() {
     this.running = false;
+    this.queue = 0;
+  }
+
+  reset() {
+    this.pause();
+    this.$canvas.clear();
   }
 }
