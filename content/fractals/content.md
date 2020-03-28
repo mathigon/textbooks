@@ -155,7 +155,7 @@ a factor of 2, its area increases by a factor of `2^2 =` [[4]]._
 
 ::: column.grow
 
-A square has dimension [[3]]. _{span.reveal(when="blank-0")} When scaling it by
+A cube has dimension [[3]]. _{span.reveal(when="blank-0")} When scaling it by
 a factor of 2, its volume increases by a factor of `2^3 =` [[8]]._
 _{span.reveal(when="blank-1")} Notice that the larger cube in the image
 consists of 8 copies of the smaller one!_
