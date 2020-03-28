@@ -69,3 +69,16 @@ export class JuliaCanvas {
     this.queue = undefined;
   }
 }
+
+
+export function converges(p: Point, c: Point, bailout = 120, limit = 2) {
+  let x = p.x;
+  let y = p.y;
+  for (let i = 0; i < bailout; ++i) {
+    const xy = x * y;
+    x = x * x - y * y + c.x;
+    y = 2 * xy + c.y;
+    if (x * x + y * y >= limit) return false;
+  }
+  return true;
+}

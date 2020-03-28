@@ -6,6 +6,7 @@
 
 @import "../shared/variables";
 @import "./components/automaton";
+@import "./components/chaos-game";
 
 
 // -----------------------------------------------------------------------------
@@ -96,7 +97,40 @@ x-menger-sponge canvas { width: 100%; height: auto; }
 .sequence-cell { background: mix(@blue, white, 10%); border-radius: 6px;
   padding: 16px 12px; text-align: center; }
 
-.vdots { transform: rotate(90deg); display: inline-block; margin-left: 15px; }
+.geo-legend {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 14px;
+
+  .formula, .sequence {
+    width: fit-content;
+    background: mix(@light-grey, white);
+    border: 2px solid white;
+    padding: 2px 4px;
+    border-radius: 8px;
+  }
+
+  .formula { margin-top: -2px; border-bottom-left-radius: 0; }
+  .sequence { margin-top: -2px; border-top-left-radius: 0; }
+
+  .pill { padding: 0 8px; }
+  .vdots { transform: rotate(90deg); display: inline-block; margin-left: 13px; margin-right: 24px; }
+
+  @media screen and (max-width: 940px) and (min-width: 841px), screen and (max-width: 660px) {
+    font-size: 12px;
+    .pill { padding: 0 7px; }
+    .formula, .sequence { padding: 2px 3px; }
+  }
+
+  @media screen and (max-width: 560px) {
+    font-size: 10px;
+    .pill { padding: 0 6px; }
+    .formula, .sequence { padding: 1px 2px; }
+  }
+
+  @media screen and (max-width: 400px) { display: none; }
+}
 
 .mandel-frame {
   position: relative;

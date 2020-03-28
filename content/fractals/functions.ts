@@ -4,17 +4,18 @@
 // =============================================================================
 
 
-import {Color, delay, list, repeat} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
-import {$N, CanvasView, SVGView} from '@mathigon/boost';
+import {Color, delay, list, Obj, repeat} from '@mathigon/core';
+import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals, Random} from '@mathigon/fermat';
+import {$N, Browser, CanvasView, InputView, SVGView} from '@mathigon/boost';
 
-import {Geopad, GeoPoint, Slider, Slideshow, Step} from '../shared/types';
+import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
 import {BLUE} from '../shared/constants';
 
 import {CellularAutomaton} from './components/automata';
 import {ChaosGame} from './components/chaos-game';
+import {COASTLINE} from './components/coastline';
 import {drawKoch, drawSierpinski} from './components/fractals';
-import {JuliaCanvas} from './components/mandelbrot';
+import {JuliaCanvas, converges} from './components/mandelbrot';
 
 import './components/menger-sponge';
 import './components/sierpinski-tetrahedra';
@@ -41,7 +42,7 @@ function drawIteration($canvas: CanvasView, a: Point, b: Point, c1: Point, c2: P
   const d3 = transform(a, b, c2, c1);
   const d4 = transform(a, b, c2, c2);
 
-  const strokeWidth = 6 - i/2;
+  const strokeWidth = 6 - i / 2;
   const stroke = colours[max - i];
 
   $canvas.draw(new Polyline(d1, c1, d2), {strokeWidth, lineCap: 'round', lineJoin: 'round', stroke});
@@ -66,7 +67,7 @@ export function fern($step: Step) {
   $step.model.set = (a: number, b: number, c: number, d: number) => {
     $geopad.animatePoint('c1', new Point(a, b), 500);
     $geopad.animatePoint('c2', new Point(c, d), 500);
-    $slider.moveTo(8, 500)
+    $slider.moveTo(8, 500);
   };
 }
 
@@ -95,11 +96,8 @@ export function coastlines1($step: Step) {
   const $svg = $step.$('.coastline svg')!;
   const $lines = $N('g', {}, $svg);
 
-  const $coast = $svg.$('path') as SVGView;
-  const length = $coast.strokeLength;
-
-  const startPoint = $coast.getPointAtLength(0);
-  const points = list(5, length, 5).map(i => $coast.getPointAtLength(i));
+  const points = COASTLINE;
+  const startPoint = COASTLINE.shift()!;
 
   $step.model.rulers = [100, 90, 80, 70, 60, 50, 40, 30, 20];
   const scale = 0.8;
@@ -132,7 +130,36 @@ export function coastlines1($step: Step) {
     }
 
     $step.model.count = count;
-  })
+  });
+}
+
+export async function coastlineGrid($step: Step) {
+  const $svg = $step.$('svg')!;
+
+  const $grid = $svg.$$('.grid');
+  const $cells = $svg.$$('.cells');
+  const $coast = $svg.$$('.coast');
+  const $arrow = $svg.$('.arrow')!;
+  const $labels = $svg.$('.labels')!;
+
+  for (const $el of
+      [$grid[1], $cells[1], $coast[1], $arrow, $labels]) $el.hide();
+
+  $coast[1].css('transition', 'transform 1s');
+  $coast[1].setTransform(new Point(-186, -85), 0, 0.5);
+
+  await $step.onScore('next-0');
+
+  $coast[1].show();
+  Browser.redraw();
+
+  $coast[1].setTransform();
+  $grid[1].enter('fade', 1000);
+  $cells[1].show();
+
+  for (const [i, $c] of Random.shuffle($cells[1].children).entries()) {
+    $c.enter('fade', 600, 1000 + i * 8);
+  }
 }
 
 
@@ -189,12 +216,12 @@ export function pascalLarge($step: Step) {
 
     for (let n = 0; n < rows; ++n) {
       for (let k = 0; k <= n; ++k) {
-        const p = edge.at(1 - n/rows).shift(k/rows * edge.length, 0);
+        const p = edge.at(1 - n / rows).shift(k / rows * edge.length, 0);
 
         if (k === 0) {
           cells[n][k] = 1;
         } else if (2 * k > n) {
-          cells[n][k] = cells[n][n-k];
+          cells[n][k] = cells[n][n - k];
         } else {
           cells[n][k] = (cells[n - 1][k] + cells[n - 1][k - 1]) % s.n;
         }
@@ -232,12 +259,49 @@ export function chaosGame($step: Step) {
 }
 
 export function chaosGame1($step: Step) {
+  const VERTICES = ['x0', 'x1', 'x2', 'x3', 'x4'];
+  const RATIOS = [0.5, 2/3, 1/1.6180339887];
+  const INITIAL: Obj<Point[]> = {
+    3: Polygon.regular(3, 230).shift(380, 270).points,
+    4: Polygon.regular(4, 240).shift(380, 220).points,
+    5: Polygon.regular(5, 200).shift(380, 240).points
+  };
+
   const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
+  const $select = $step.$('x-select') as Select;
 
-  const initial = Polygon.regular(5, 200).shift(260, 200).points.map(p =>
-      $geopad.drawPoint(p, {classes: 'red'}));
+  const game = new ChaosGame($canvas, []);
+  const points = VERTICES.map(i => $geopad.shapes.get(i)) as GeoPoint[];
 
-  $step.model.game = new ChaosGame(initial, $geopad.$('canvas') as CanvasView, 1/1.6180339887);
+  $step.model.watch((s: any) => {
+    for (const [i, v] of VERTICES.entries()) $step.model[v] = INITIAL[s.shape][i];
+    game.reset();
+    game.points = points.slice(0, +s.shape);
+  });
+
+  $step.model.game = game;
+  $step.model.download = () => $canvas.downloadImage('fractal');
+
+  ($step.$('.chaos-ratio') as InputView).change((r: string) => {
+    game.reset();
+    game.ratio = RATIOS[+r];
+    $step.score('s1');
+  });
+
+  ($step.$('.chaos-special') as InputView).change((r: string) => {
+    game.reset();
+    game.rule = r;
+    $step.score('s2');
+  });
+
+  $step.model.carpet = () => {
+    $select.makeActive($select.children[1]);
+
+  };
+
+  // TODO Select Arrows
+  // TODO Break when moving vertices
 }
 
 export function cellular($step: Step) {
@@ -271,7 +335,7 @@ export function iteration($step: Step) {
     let x = x0.x;
     let path = `M${p.x} ${p.y}`;
 
-    while(x < 0 || (!nearlyEquals(x, 1) && isBetween(x, 0.03, 4.5))) {
+    while (x < 0 || (!nearlyEquals(x, 1) && isBetween(x, 0.03, 4.5))) {
       const x1 = x * x;
       const p1 = $geopad.toViewportCoords(new Point(x1, 0));
       const d = Math.min(Point.distance(p, p1), 100);
@@ -297,38 +361,41 @@ function spiral(p: Point, c?: Point) {
   return new Polyline(...points);
 }
 
+function complex(p: Point) {
+  return new Complex(p.x, p.y).toString();
+}
+
 export function julia($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const $canvases = $geopad.$$('canvas') as CanvasView[];
 
-  $step.model.iterate = iterate;
-  $step.model.spiral = spiral;
-
-  $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString();
+  $step.model.assign({iterate, spiral, complex});
+  $step.model.setComputed('converges', (state: any) => state.x0.length <= 1);
 
   const origin = $geopad.toViewportCoords(new Point(0, 0)).scale(2);
   $canvases[0].draw(new Circle(origin, $geopad.plotScale * 2), {fill: BLUE});
 
   $canvases[1].fill('#fff');
   $step.model.watch((s: any) => {
-    const c = $geopad.toViewportCoords(s.a0).scale(2);
+    const c = $geopad.toViewportCoords(s.x0).scale(2);
     $canvases[1].clearCircle(c, 25);
   });
 
   $step.model.watch((s: any) => {
-    if (Point.distance(s.a0, new Point(0, 1)) <  0.3) $step.score('wipe-a');
-    if (Point.distance(s.a0, new Point(0, -1)) <  0.3) $step.score('wipe-b');
-    if (Point.distance(s.a0, new Point(1, 0)) <  0.3) $step.score('wipe-c');
-    if (Point.distance(s.a0, new Point(-1, 0)) <  0.3) $step.score('wipe-d');
+    if (Point.distance(s.x0, new Point(0, 1)) < 0.3) $step.score('wipe-a');
+    if (Point.distance(s.x0, new Point(0, -1)) < 0.3) $step.score('wipe-b');
+    if (Point.distance(s.x0, new Point(1, 0)) < 0.3) $step.score('wipe-c');
+    if (Point.distance(s.x0, new Point(-1, 0)) < 0.3) $step.score('wipe-d');
   });
 }
 
-export function julia3($step: Step) {
+export function julia2($step: Step) {
   const $slideshow = $step.$('x-slideshow') as Slideshow;
   const $geopad = $step.$('x-geopad') as Geopad;
   const $canvas = $geopad.$('canvas') as CanvasView;
 
-  $step.model.spiral = spiral;
+  $step.model.assign({iterate, spiral, complex});
+  $step.model.setComputed('converges', (s: any) => converges(s.x0, s.c));
 
   $step.model.animate = (x: number, y: number) => {
     $geopad.animatePoint('c', new Point(x, y), 1600);
@@ -340,7 +407,7 @@ export function julia3($step: Step) {
     if (n === 2) $step.model.animate(-0.54, 0.5);
     if (n === 3) {
       $step.model.animate(-0.08, 0.72);
-      $geopad.animatePoint('a0', new Point(0.12, -0.07), 1600);
+      $geopad.animatePoint('x0', new Point(0.12, -0.07), 1600);
     }
   });
 
@@ -355,26 +422,19 @@ export function mandelPaint($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const $canvas = $geopad.$('canvas') as CanvasView;
 
+  $step.model.assign({iterate, spiral, complex});
+  $step.model.setComputed('converges', (s: any) => converges(s.x0, s.c));
+
   $canvas.fill('#fff');
   $step.model.watch((s: any) => {
     const c = $geopad.toViewportCoords(s.c).scale(2);
     $canvas.clearCircle(c, 25);
   });
 
-  $step.model.complex = (p: Point) => new Complex(p.x, p.y).toString(2);
-  $step.model.spiral = spiral;
-
-  const origin = new Point(0, 0);
-  $step.model.setComputed('x1', ({c}: any) => iterate(origin, c));
-  $step.model.setComputed('x2', ({x1, c}: any) => iterate(x1, c));
-  $step.model.setComputed('x3', ({x2, c}: any) => iterate(x2, c));
-  $step.model.setComputed('x4', ({x3, c}: any) => iterate(x3, c));
-  $step.model.setComputed('x5', ({x4, c}: any) => iterate(x4, c));
-
   $step.model.watch((s: any) => {
-    if (Point.distance(s.c, new Point(0, 0.6)) <  0.2) $step.score('wipe-a');
-    if (Point.distance(s.c, new Point(0, -0.6)) <  0.2) $step.score('wipe-b');
-    if (Point.distance(s.c, new Point(-1, 0)) <  0.3) $step.score('wipe-c');
+    if (Point.distance(s.c, new Point(0, 0.6)) < 0.2) $step.score('wipe-a');
+    if (Point.distance(s.c, new Point(0, -0.6)) < 0.2) $step.score('wipe-b');
+    if (Point.distance(s.c, new Point(-1, 0)) < 0.3) $step.score('wipe-c');
   });
 }
 
@@ -390,7 +450,7 @@ export function mandelZoom($step: Step) {
       const scale = state.scale * speed - 2 * i;
       const isVisible = scale > -3 && scale < 2;
       $img.toggle(isVisible);
-      if (isVisible) $img.css('transform', `scale(${Math.pow(2, scale)})`)
+      if (isVisible) $img.css('transform', `scale(${Math.pow(2, scale)})`);
     }
   });
 }

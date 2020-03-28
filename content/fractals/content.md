@@ -130,7 +130,7 @@ However, using mathematics, we can think about the properties that real fractals
 
 First, let’s think about the dimension of fractals. A line has dimension [[1]].
 _{span.reveal(when="blank-0")} When scaling it by a factor of 2, its length
-increases by a factor of `§2^1 = 2`. Obviously!_
+increases by a factor of `2^1 = 2`. Obviously!_
 
 :::
 
@@ -143,7 +143,7 @@ increases by a factor of `§2^1 = 2`. Obviously!_
 ::: column.grow
 
 A square has dimension [[2]]. _{span.reveal(when="blank-0")} When scaling it by
-a factor of 2, its area increases by a factor of `§2^2 =` [[4]]._
+a factor of 2, its area increases by a factor of `2^2 =` [[4]]._
 
 :::
 
@@ -156,7 +156,7 @@ a factor of 2, its area increases by a factor of `§2^2 =` [[4]]._
 ::: column.grow
 
 A square has dimension [[3]]. _{span.reveal(when="blank-0")} When scaling it by
-a factor of 2, its volume increases by a factor of `§2^3 =` [[8]]._
+a factor of 2, its volume increases by a factor of `2^3 =` [[8]]._
 _{span.reveal(when="blank-1")} Notice that the larger cube in the image
 consists of 8 copies of the smaller one!_
 
@@ -174,7 +174,7 @@ Now let’s have a look at the Sierpinski triangle. If we scale it by a factor o
 2, you can see that it’s “area” increases by a factor of [[3]].
 
 {.reveal(when="blank-0")} Let’s say that _d_ is the dimension of the Sierpinski
-triangle. Using the same pattern as above, we get `§2^d = 3`. In other words,
+triangle. Using the same pattern as above, we get `2^d = 3`. In other words,
 _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")}≈ 1.585…_
 
 :::
@@ -352,7 +352,7 @@ snowflake is actually **infinitely long**!_
 :::
 
 {.reveal(when="blank-9")} _If this seems counterintuitive, just remember that
-we multiply the perimeter by `4/3` at every step, and we do this infinitely
+we multiply the perimeter by `§4/3` at every step, and we do this infinitely
 many times._
 
 :::
@@ -397,7 +397,7 @@ sponge just like we did for the Koch snowflake above. The cube on the right
 consists of [[20]] copies of itself, all of which are 3 times smaller.
 
 {.reveal(when="blank-1")} If _d_ is the dimension of the Menger sponge, we get
-`§3^d = 20`, or `§d = log_3(20) ≈ 2.727`. If you imagine cutting out more and
+`3^d = 20`, or `§d = log_3(20) ≈ 2.727`. If you imagine cutting out more and
 more holes, infinitely many times, there would be no actual volume left – which
 is why the cube is “not quite” 3-dimensional.
 [Continue](btn:next)
@@ -477,7 +477,7 @@ is infinitely long! This is often called the __Coastline paradox__.
 :::
 
 ---
-> id: coastline-dimension
+> id: coastline-grid
 
 A few decades later, the mathematician [Benoit Mandelbrot](bio:mandelbrot)
 stumbled upon Richardson’s work in a discarded library book, while working at
@@ -493,18 +493,20 @@ _self-similar_, like all the other fractals we’ve seen before.
 
 ::: column.grow
 
-In order to find its “size” of the coastline, we can draw it on a grid and count
-the number of cells that intersect with it.
+{.r} In order to find its “size”, we can draw it on a grid and
+count the number of cells that intersect with it. In this case, there are 88
+intersecting cells.
 [Continue](btn:next)
 
-{.reveal(when="next-0")} Then, we scale the coastline by a factor of 2, and
-repeat the process of counting the cells. In this case, the size of the
-coastline has increased by a factor of `§197/88`.
+{.r.reveal(when="next-0")} Then, we scale the coastline by a factor of 2, and
+repeat the process of counting the cells. Now there are 197 intersecting cells,
+so the size of the coastline has increased by a factor of `§197/88`.
+[Continue](btn:next)
 
-{.reveal(when="next-0")} Using the same idea as before, this means that the
+{.reveal(when="next-1")} Using the same idea as before, this means that the
 dimension of Britain’s Coastline is
 
-{.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16`
+{.text-center.reveal(when="next-1")} `§d = log_2(197/88) ≈ 1.16`
 
 :::
 
@@ -753,25 +755,23 @@ _{button.btn.var(@click="game.run(1000)")} 1000 steps_
 
 ---
 > id: chaos-game-1
+> goals: s1 s2 play
 
-If you repeat 
+This process is called the __Chaos Game__. If you repeat the same step many
+times, the distribution of dots starts to look more and more like the Sierpinski
+triangle.
 
-This process is called the __Chaos Game__, and there are many other versions of
-it. For example, we could start with a square or a pentagon, rather than a
-triangle. What do you expect to happen?
+There are many other versions of it – for example, we could start with a square
+or a pentagon, we could add additional rules like not being able to select the
+same vertex twice in a row, or we could pick the next point at a ratio other
+than `1/2`. In some of these cases, we’ll just get a random distribution of
+dots, but in other cases, we reveal even more fractals:
 
-::: figure
+    include components/chaos-game
 
-    x-geopad(width=520 height=400)
-      canvas(width=1040 height=800)
-      svg
-      x-icon-btn.var(icon="restore" @click="game.reset()")
-      button.btn.var(@click="game.run(1000)" style="position: absolute; top: 8px; left: 8px;") 1000 Steps
-
-{.caption} Tap anywhere to create a new point, and drag points to the edge to
-remove them.
-
-:::
+{.reveal(when="s1 s2 play")} Did you discover the [Sierpinski
+Carpet](action:carpet()) or this [pentagonal snowflake](action:snowflake())
+based on the [__Golden ratio__](gloss:golden-ratio)?
 
 ---
 > id: cellular
@@ -891,20 +891,20 @@ terms on a number line. You can change the value of `pill(x_0,"yellow","x0")`:
 > id: iteration-1
 
 Notice how the resulting sequence can behave very differently, depending on the
-starting value `§x_0`:
+starting value `x_0`:
 
 ::: column.sequence-cell(width=180 parent="padded-thin")
 
-If `§x_0 > 1`, the sequence [[diverges|converges]]:
+If `x_0 > 1`, the sequence [[diverges|converges]]:
 _{span.reveal(when="blank-0")}it just keeps growing, up to infinity._
 
 ::: column.sequence-cell(width=180)
 
-If `§x_0` is between –1 and 1, the sequence [[converges|diverges]].
+If `x_0` is between –1 and 1, the sequence [[converges|diverges]].
 
 ::: column.sequence-cell(width=180)
 
-If `§x_0 < -1`, the sequence [[diverges|converges]].
+If `x_0 < -1`, the sequence [[diverges|converges]].
 
 :::
 
@@ -929,25 +929,34 @@ plane. You can move the position of `pill(x_0,"yellow","x0")`, to see what
 happens to the following terms. If the sequence looks like it will converge,
 let’s colour the corresponding point on the plane in _{span.pill.blue}blue_:
 
-    x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginary")
+    figure: x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
       canvas(width=1440 height=960 style="opacity: 1")
       svg
-        circle.move.yellow.pulsate(name="a0" x="point(0,0)")
-        circle.yellow.transparent(name="a1" x="iterate(a0)")
-        circle.yellow.transparent(name="a2" x="iterate(a1)")
-        path.yellow(x="spiral(a0)")
+        circle.move.yellow.pulsate(name="x0" x="point(0,0)" target="x0")
+        circle.yellow.transparent(name="x1" x="iterate(x0)" target="x1")
+        circle.yellow.transparent(name="x2" x="iterate(x1)" target="x2")
+        circle.yellow.transparent(name="x3" x="iterate(x2)" target="x3")
+        path.yellow(x="spiral(x0)")
       .geo-legend
+        .formula.md `pill(x_n,"yellow") = pill(x_(n-1),"yellow")^2`
+        .sequence
+          .md `pill(x_0,"yellow", "x0") = var("complex(x0)")`
+          .md `pill(x_1,"yellow", "x1") = var("complex(x1)")`
+          .md `pill(x_2,"yellow", "x2") = var("complex(x2)")`
+          .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
+          div
+            span.vdots …
+            strong.var.m-blue(:show="converges" data-display="inline") Converges!
+            strong.var(:show="!converges" data-display="inline") Diverges!
+
+{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} As you can see, the sequence
+converges as long as `pill(x_0,"yellow","x0")` lies [[inside the unit circle|
+outside the unit square|above the *x*-axis]] _{span.reveal(when="blank-0")}(the
+circle with radius 1, centred at the origin)._
 
 ---
 > id: julia-1
-
-As you can see, the sequence converges as long as `pill(x_0,"yellow")`
-lies [[inside the unit circle|outside the unit square|above the x-axis]]
-_{span.reveal(when="blank-0")}(the circle with radius 1, centred at the origin)._
-
----
-> id: julia-2
 
 Now let’s make things a bit more difficult. Rather than just squaring the
 previous number, we also add a constant _{.pill.red}c_ every time (which can be
@@ -956,19 +965,33 @@ still get a circle of convergence? What other shapes do you think we might see?
 [Continue](btn:next)
 
 ---
-> id: julia-3
+> id: julia-2
 
-In this diagram, you can move the position of `pill(x_0,"yellow")` as well as
-the value of `pill(c,"red","c")`:
+In this diagram, you can move the position of `pill(x_0,"yellow","x0")` as well
+as the value of `pill(c,"red","c")`:
 
 ::: x-slideshow
 
     x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
       svg
-        circle.move.yellow(name="a0" x="point(0.5,-0.2)")
-        path.yellow(x="spiral(a0,c)")
-        circle.move.red(name="c" x="point(0,0)")
+        circle.move.yellow(name="x0" x="point(0.5,0.5)" target="x0")
+        circle.move.red(name="c" x="point(0,0)" target="c")
+        circle.yellow.transparent(name="x1" x="iterate(x0,c)" target="x1")
+        circle.yellow.transparent(name="x2" x="iterate(x1,c)" target="x2")
+        circle.yellow.transparent(name="x3" x="iterate(x2,c)" target="x3")
+        path.yellow(x="spiral(x0,c)")
+      .geo-legend
+        .formula.md `pill(x_n,"yellow") = pill(x_(n-1),"yellow")^2 + pill(var("complex(c)"),"red","c")`
+        .sequence
+          .md `pill(x_0,"yellow", "x0") = var("complex(x0)")`
+          .md `pill(x_1,"yellow", "x1") = var("complex(x1)")`
+          .md `pill(x_2,"yellow", "x2") = var("complex(x2)")`
+          .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
+          div
+            span.vdots …
+            strong.var.m-blue(:show="converges" data-display="inline") Bounded!
+            strong.var(:show="!converges" data-display="inline") Diverges!
 
 {div(slot="legend")} We already know what happens if
 [`c = 0`](action:animate(0,0)) – that’s the same as the example above.
@@ -999,7 +1022,7 @@ _c_ where _every_ sequence diverges, so the entire complex plain remains white.
 :::
 
 ---
-> id: julia-4
+> id: julia-3
 
 The different shapes that are formed by colouring in the numbers are called
 [__Julia Sets__](gloss:julia-set). They were discovered independently by two
@@ -1048,40 +1071,35 @@ some values of _c_ for which every sequence diverges, and the entire complex
 plane remains white. A few decades after Julia and Fatou, a new generation of
 mathematicians tried to map what these areas looked like.
 
-In the previous example, we chose a fixed value for _{.pill.red}c_, and then
-changed the position of _{.pill.yellow}x0_ to colour the plane. Now let’s fix
-the value of _{.pill.yellow}x0 = 0_, and instead change the value of
-_{.pill.red}c_.
+In the previous example, we chose a fixed value for `pill(c,"red","c")`, and then
+changed the position of `pill(x_0,"yellow","x0")` to colour the plane. Now let’s fix
+the value of `pill(x_0 = 0,"yellow","x0")`, and instead change the value of
+`pill(c,"red","c")`.
 
 Once more, paint over the complex plane to reveal the area in which sequences
 remain bounded. What shapes do you expect to appear?
 
-::: column(width=460)
-
-    x-geopad.no-background(width=460 height=460 x-axis="-1.6,0.6,1" y-axis="-1.1,1.1,1" axes grid padding=10 label-suffix=",i")
+    figure: x-geopad.no-background(width=720 height=480 x-axis="-2.2,1.2,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
       img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
-      canvas(width=920 height=920 style="opacity: 1")
+      canvas(width=1440 height=960 style="opacity: 1")
       svg
         circle.move.red.pulsate(name="c" cx=0 cy=0 target="c")
-        path.yellow(x="spiral(point(0,0),c)")
-        circle.yellow.hidden(x="x1" target="x1")
-        circle.yellow.hidden(x="x2" target="x2")
-
-::: column.grow(width=232)
-
-[{span.pill.red.step-target(target="")}_c_ = ${complex(c)}](target:c)
-
-[{.pill.yellow}`x_0`](target:x0) = 0  
-[{.pill.yellow}`x_1`](target:x1) `§= x_0^2 + c =` ${complex(x1)}  
-[{.pill.yellow}`x_2`](target:x2) `§= x_1^2 + c =` ${complex(x2)}  
-[{.pill.yellow}`x_3`](target:x3) `§= x_2^2 + c =` ${complex(x3)}  
-[{.pill.yellow}`x_4`](target:x4) `§= x_3^2 + c =` ${complex(x4)}  
-[{.pill.yellow}`x_5`](target:x5) `§= x_4^2 + c =` ${complex(x5)}  
-_{span.vdots}…_
-
-Bounded!
-
-:::
+        circle.yellow.transparent(name="x0" x="point(0,0)" target="x0")
+        circle.yellow.transparent(name="x1" x="iterate(x0,c)" target="x1")
+        circle.yellow.transparent(name="x2" x="iterate(x1,c)" target="x2")
+        circle.yellow.transparent(name="x3" x="iterate(x2,c)" target="x3")
+        path.yellow(x="spiral(x0,c)")
+      .geo-legend
+        .formula.md `pill(x_n,"yellow") = pill(x_(n-1),"yellow")^2 + pill(var("complex(c)"),"red","c")`
+        .sequence
+          .md `pill(x_0,"yellow", "x0") = var("complex(x0)")`
+          .md `pill(x_1,"yellow", "x1") = var("complex(x1)")`
+          .md `pill(x_2,"yellow", "x2") = var("complex(x2)")`
+          .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
+          div
+            span.vdots …
+            strong.var.m-blue(:show="converges" data-display="inline") Bounded!
+            strong.var(:show="!converges" data-display="inline") Diverges!
 
 ---
 > id: mandel-history
@@ -1096,9 +1114,9 @@ mathematicians Robert Brooks and Peter Matelski:
 A few years later, [Benoit Mandelbrot](bio:mandelbrot) used the powerful
 computers at IBM to create a much more detailed visualisation of the fractal,
 which was later named after him. The first printouts looked different from what
-he expected – until he realised that the technicians working at the printers were
-cleaning up the “fuzziness” around its edge, assuming that it was caused by dust
-particles or printer errors, and not a defining characteristic of fractals.
+he expected – until he realised that the technicians working at the printers
+were cleaning up the “fuzziness” around its edge, assuming that it was caused by
+dust particles or printer errors, and not a defining characteristic of fractals!
 [Continue](btn:next)
 
 ---

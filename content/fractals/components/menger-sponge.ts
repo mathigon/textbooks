@@ -61,6 +61,7 @@ export class MengerSponge extends Solid {
     this.on('attr:steps', (e) => {
       for (const c of cubes) c.visible = false;
       if (cubes[+e.newVal]) cubes[+e.newVal].visible = true;
+      if (this.scene) this.scene.draw();
     });
   }
 }
