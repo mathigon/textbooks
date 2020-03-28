@@ -135,31 +135,19 @@ export function coastlines1($step: Step) {
 
 export async function coastlineGrid($step: Step) {
   const $svg = $step.$('svg')!;
-
   const $grid = $svg.$$('.grid');
   const $cells = $svg.$$('.cells');
   const $coast = $svg.$$('.coast');
-  const $arrow = $svg.$('.arrow')!;
-  const $labels = $svg.$('.labels')!;
 
-  for (const $el of
-      [$grid[1], $cells[1], $coast[1], $arrow, $labels]) $el.hide();
+  const coastTransform = new Point(-186, -85);
 
-  $coast[1].css('transition', 'transform 1s');
-  $coast[1].setTransform(new Point(-186, -85), 0, 0.5);
+  $step.model.watch(({i}: any) => {
+    $grid[1].css('opacity', i < 8 ? 0 : 0.2);
+    $cells[1].css('opacity', i < 9.9 ? 0 : 0.7);
 
-  await $step.onScore('next-0');
-
-  $coast[1].show();
-  Browser.redraw();
-
-  $coast[1].setTransform();
-  $grid[1].enter('fade', 1000);
-  $cells[1].show();
-
-  for (const [i, $c] of Random.shuffle($cells[1].children).entries()) {
-    $c.enter('fade', 600, 1000 + i * 8);
-  }
+    $coast[1].setTransform(coastTransform.scale(1 - i/10), 0, (1 + i/10) / 2);
+    $coast[1].css('opacity', Math.min(i, 1));
+  });
 }
 
 

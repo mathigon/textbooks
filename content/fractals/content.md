@@ -484,41 +484,38 @@ stumbled upon Richardson’s work in a discarded library book, while working at
 IBM. He recognised its significance, and also how it relates to more recent
 research on fractals and dimensions.
 
-The coastline of Britain certainly “looks” fractal, but it is not
-_self-similar_, like all the other fractals we’ve seen before.
-
 ::: column(width=340)
 
     include svgs/cells.svg
+    x-slider(steps=10 continuous var="i")
 
 ::: column.grow
 
-{.r} In order to find its “size”, we can draw it on a grid and
-count the number of cells that intersect with it. In this case, there are 88
-intersecting cells.
+The coastline of Britain certainly “looks” fractal, but it is not
+_self-similar_, like other fractals we’ve seen before. In order to find
+its size, we can draw it on a grid and count the number of cells that
+it intersects with.
+
+{.r.reveal(when="slider-0")} Initially, there are __{.pill.yellow}88__
+intersecting cells. If we scale the coastline by a factor of 2, there are
+__{.pill.yellow}197__ intersecting cells – more than twice as many!
 [Continue](btn:next)
 
-{.r.reveal(when="next-0")} Then, we scale the coastline by a factor of 2, and
-repeat the process of counting the cells. Now there are 197 intersecting cells,
-so the size of the coastline has increased by a factor of `§197/88`.
-[Continue](btn:next)
+{.r.reveal(when="next-0")} The size of the coastline has increased by a factor
+of `§197/88`. Like before, this means that the dimension of the coastline is
 
-{.reveal(when="next-1")} Using the same idea as before, this means that the
-dimension of Britain’s Coastline is
-
-{.text-center.reveal(when="next-1")} `§d = log_2(197/88) ≈ 1.16`
+{.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16`
 
 :::
 
 ---
 > id: coastline-dimension-1
 
-If we keep repeating this with larger and larger grids, we’d find that the
-dimension of the coastline of Britain tends towards 1.21.
-
-Mandelbrot realised that this fractal dimension is also a measure of the
-__roughness__ of a shape – a new concept that he found has important
-applications in many areas of mathematics and science.
+If we repeat this with larger grids, we’d find that the dimension of Britain’s
+coastline is actually approximately 1.21. Mandelbrot realised that this fractal
+dimension is also a measure of the __roughness__ of a shape – a new concept, for
+which he found important applications in many other areas of mathematics and
+science.
 
 ---
 > id: nature

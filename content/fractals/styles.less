@@ -46,6 +46,11 @@ x-menger-sponge canvas { width: 100%; height: auto; }
   line.border { stroke: mix(@orange, @grey); stroke-width: 10px; }
 }
 
+#coastline-grid {
+  .grid, .cells { transition: opacity .8s; }
+  .coast { vector-effect: non-scaling-stroke; }
+}
+
 
 // -----------------------------------------------------------------------------
 // Sierpinski Triangle
