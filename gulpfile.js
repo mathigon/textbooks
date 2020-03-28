@@ -42,7 +42,8 @@ function scripts() {
 function stylesheets() {
   return gulp.src(['content/*/*.less', '!content/shared/**'])
       .pipe(less())
-      .pipe(postcss([rtl(), autoprefixer()]))
+      // TODO Enable RTL Conversion
+      .pipe(postcss([/*rtl(), */autoprefixer()]))
       .pipe(rename({extname: '.css'}))
       .pipe(gulp.dest('server/assets/resources'));
 }
