@@ -53,10 +53,10 @@ export class ChaosGame {
     return index;
   }
 
-  drawPointTo(index: number) {
+  drawPointTo(index: number, radius = 2) {
     this.lastIndex = index;
     this.lastPoint = Point.interpolate(this.lastPoint, this.vertices[index], this.ratio);
-    this.$canvas.draw(new Circle(this.lastPoint.scale(2), 2), {fill: this.colours[index]});
+    this.$canvas.draw(new Circle(this.lastPoint.scale(2), radius), {fill: this.colours[index]});
   }
 
   setup() {

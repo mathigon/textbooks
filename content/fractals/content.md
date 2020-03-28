@@ -715,38 +715,41 @@ the pattern looks more random._
 
 ---
 > id: chaos-game
-> goals: point simulation
+> goals: point play
 
 ### The Chaos Game
+
+::: column(width=360 parent="right")
+
+    x-geopad.sticky#chaos-geo(width=360)
+      canvas(width=720 height=720)
+      svg
+        circle.red(name="x0" x="tri[0]")
+        circle.green(name="x1" x="tri[1]")
+        circle.yellow(name="x2" x="tri[2]")
+    x-gesture(target="#chaos-geo")
 
 ::: column.grow
 
 Here you can see the three vertices of an equilateral triangle. Tap anywhere
 in the grey area to create a fourth point.
 
-{.r.reveal(when="point")} Now lets play a game: we pick one of the vertices of
-the triangle at random, draw a line between our point and the vertex, and then
-highlight the midpoint of that segment.
+{.r.reveal(when="point")} Let’s play a simple game: we pick one of the vertices
+of the triangle at random, draw a line segment between our point and the vertex,
+and then find the [{.pill.red}midpoint](target:p1) of that segment.
 [Continue](btn:next)
 
-{.r.reveal(when="next-0")} And then we repeat the process: once again we pick
-a random vertex, draw the line from our new point, and then highlight then find
-the midpoint.
+{.r.reveal(when="next-0")} Now we repeat the process: we pick another random
+vertex, draw the segment from our last point, and then find the
+[{.pill.green}midpoint](target:p2). Note that we colour these new points based
+on the colour of the vertex of the triangle we picked.
 [Continue](btn:next)
 
 {.reveal(when="next-1")} So far, nothing surprising has happened – but watch
 as we repeat the same process many more times:
 
-{.text-center.reveal(when="next-1")}
-_{button.btn.var(@click="game.run(100)")} 100 steps_
-_{button.btn.var(@click="game.run(1000)")} 1000 steps_
-
-::: column(width=360)
-
-    x-geopad.sticky(width=360)
-      canvas(width=720 height=720)
-      svg
-      x-icon-btn.var(icon="restore" @click="game.reset()")
+{.text-center.reveal.var(when="next-1")}
+_{button.btn.btn-red(@click="play()")} Add 1000 steps_
 
 :::
 
@@ -754,15 +757,15 @@ _{button.btn.var(@click="game.run(1000)")} 1000 steps_
 > id: fractal-builder
 > goals: s1 s2 shape play
 
-This process is called the __Chaos Game__. If you repeat the same step many
-times, the distribution of dots starts to look more and more like the Sierpinski
-triangle.
+This process is called the __Chaos Game__. There might be a few stray points at
+the beginning, but if you repeat the same steps many times, the distribution of
+dots starts to look exactly like the Sierpinski triangle!
 
 There are many other versions of it – for example, we could start with a square
 or a pentagon, we could add additional rules like not being able to select the
 same vertex twice in a row, or we could pick the next point at a ratio other
-than `§1/2`. In some of these cases, we’ll just get a random distribution of
-dots, but in other cases, we reveal even more fractals:
+than `§1/2` along the segment. In some of these cases, we’ll just get a random
+distribution of dots, but in other cases, we reveal even more fractals:
 
     include components/chaos-game
 
@@ -1177,6 +1180,7 @@ bulbs having more and more points in their orbits. The size of these orbits are
 closely related to the __Logistic Map__, an important concept in [Chaos
 theory](/course/chaos).
 
+    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
     // TODO: Relationship between Julia and Mandelbrot sets
     // TODO: Fibonacci Numbers in the Mandelbrot sets
 

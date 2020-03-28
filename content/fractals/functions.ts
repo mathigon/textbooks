@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {Color, delay, list, Obj, repeat} from '@mathigon/core';
+import {Color, delay, list, Obj, repeat, wait} from '@mathigon/core';
 import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
-import {$N, CanvasView, InputView, SVGView} from '@mathigon/boost';
+import {$N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
 import {BLUE} from '../shared/constants';
@@ -221,36 +221,68 @@ export function pascalLarge($step: Step) {
   });
 }
 
-
-export function chaosGame($step: Step) {
+export async function chaosGame($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
 
-  const triangle = Polygon.regular(3, 180).shift(180, 225).points
-      .map(p => $geopad.drawPoint(p, {interactive: false, classes: 'red'}));
+  const points = Array.from($geopad.points);
+  $step.model.tri = Polygon.regular(3, 180).shift(180, 225).points;
 
-  $step.model.game = new ChaosGame(triangle, $geopad.$('canvas') as CanvasView);
+  const game = new ChaosGame($canvas, points);
+  game.setup();
 
-  let point0: GeoPoint;
+  let startPoint: GeoPoint;
 
-  $geopad.switchTool('point');
-  $geopad.waitForPoint().then(p => {
-    point0 = p;
-    $step.score('point');
-  });
-
-  $step.onScore('point', () => {
-    if (!point0) point0 = $geopad.drawPoint(new Point(300, 200), {});
-    $step.model.game.lastPoint = point0.value;
-    point0.$el.addClass('blue');
+  if ($step.scores.has('point')) {
+    startPoint = $geopad.drawPoint('point(150, 200)', {classes: 'blue'})
+  } else {
+    $geopad.switchTool('point');
+    startPoint = await $geopad.waitForPoint();
     $geopad.switchTool('move');
-  });
+    startPoint.$el.addClass('blue');
+    $step.score('point');
+  }
+
+  await $step.onScore('point');
+  await wait(2000);
+  const m1 = $geopad.drawPath(`segment(${startPoint.name},x0)`,
+      {name: 'm1', animated: 1000, classes: 'thin'});
+  await wait(1000);
+  const p1 = $geopad.drawPoint(`m1.midpoint`,
+      {classes: 'red chaos-point', interactive: false, name: 'p1', target: 'p1'});
+
+  await $step.onScore('next-0');
+  await wait(2000);
+  m1.$el.exit('fade');
+  const m2 = $geopad.drawPath(`segment(p1,x1)`,
+      {name: 'm2', animated: 1000, classes: 'thin'});
+  await wait(1000);
+  const p2 = $geopad.drawPoint(`m2.midpoint`,
+      {classes: 'green chaos-point', interactive: false, target: 'p2'});
+
+  await $step.onScore('next-1');
+  for (const p of [p1, p2]) {
+    p.$el.css('opacity', '');
+    p.$el.addClass('transparent');
+  }
+  for (const p of [m2, startPoint]) p.$el.exit();
+  startPoint.lock();
+
+  game.lastPoint = startPoint.value!;
+  game.drawPointTo(0, 6);
+  game.drawPointTo(1, 6);
+
+  $step.model.play = () => {
+    game.play(1000);
+    $step.score('play');
+  };
 }
 
 export function fractalBuilder($step: Step) {
   const VERTICES = ['x0', 'x1', 'x2', 'x3', 'x4'];
   const RATIOS = [0.5, 2/3, 1/1.6180339887];
   const INITIAL: Obj<Point[]> = {
-    3: Polygon.regular(3, 230).shift(380, 270).points,
+    3: Polygon.regular(3, 235).shift(380, 280).points,
     4: Polygon.regular(4, 240).shift(380, 220).points,
     5: Polygon.regular(5, 200).shift(380, 240).points
   };
