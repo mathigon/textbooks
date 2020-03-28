@@ -227,22 +227,24 @@ ones can be drawn with a single, continuous stroke.
 
 ---
 > id: bridges-3
-> goals: dropdown
+> goals: size prime eo
 
 Just like for the city maps before, we find that some graphs are possible while
 others are not. To help us understand why, let us label every vertex with its
-[degree](gloss:graph-degree):
+[degree](gloss:graph-degree). Then we can colour the vertices in different ways,
+and try to reveal a pattern:
 
-    .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong These graphs are possible:
-      include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong These graphs are not possible:
-      include svg/vertex-orders-2.svg
-      p: select
-        option(value="val", selected) Colour by value
-        option(value="size") Colour by small and large
-        option(value="prime") Colour by prime and composite
-        option(value="eo") Colour by even and odd
+    figure
+      x-select.var.tabs(:bind="colour")
+        div(value="val") Value
+        div(value="size") Size
+        div(value="prime") Prime Numbers
+        div(value="eo") Even and Odd
+      .frame-body
+        p(style="margin: 0"): strong These graphs are possible:
+        include svg/vertex-orders-1.svg
+        p(style="margin: 1em 0 0"): strong These graphs are not possible:
+        include svg/vertex-orders-2.svg
 
 ---
 > id: bridges-4

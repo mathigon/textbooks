@@ -87,18 +87,7 @@ x-tabbox .titles .check { border: 1px solid white; }
 .frame .btn, .slide .btn, .tab .btn { position: absolute; bottom: 10px; left: 10px; }
 .tab .btn.right { left: auto; right: 10px; }
 
-.frame select {
-  .button();
-  background: @dark-grey data-uri('svg/dropdown.svg') no-repeat right 10px top 14px;
-  background-size: 15px 8px;
-  padding: 0 36px 0 1em;
-  height: 2em;
-  line-height: 2em;
-  font-weight: 600;
-  letter-spacing: .2px;
-  appearance: none;
-  &:hover, &:focus, &:active { background-color: lighten(@dark-grey, 15%); }
-}
+.frame-body { background: @grey-background; padding: 30px 18px 18px; border-radius: 6px; }
 
 .four-colour-icon { width: 40px; height: 40px; padding: 8px; display: inline-block; margin: 0 5px; cursor: pointer; }
 .four-colour-icon.on { padding: 0; border: 8px solid rgba(0,0,0,0.6); }

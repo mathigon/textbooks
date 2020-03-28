@@ -6,22 +6,17 @@
 
 import {last, tabulate, list, isOneOf, Color, Obj, repeat2D, tabulate2D} from '@mathigon/core';
 import {factorial, Random, numberFormat, toOrdinal, Point, Segment, subsets, SimplePoint, lerp} from '@mathigon/fermat';
-import {$, $$, $N, svgPointerPosn, animate, Draggable, SVGParentView, SVGView, InputView} from '@mathigon/boost';
+import {$, $$, $N, svgPointerPosn, animate, Draggable, SVGParentView, SVGView} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
 
 import {Edge, edgeToSegment, Graph} from './components/graph';
 import {Sketch} from './components/sketch';
 import {borders} from './components/four-colour-maps';
 import {travellingSalesman} from './components/geometry';
+import {RED, BLUE, GREEN, YELLOW, ORANGE} from '../shared/constants';
 
 
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';
-
-const RED = '#cd0e66';
-const BLUE = '#0f82f2';
-const GREEN = '#22ab24';
-const YELLOW = '#fd8c00';
-const ORANGE = '#ea3620';
 
 
 export function intro($section: Step) {
@@ -312,16 +307,14 @@ export function bridges3($section: Step) {
 
   const $circles = $section.$$('circle');
 
-  function colour(x: string) {
-    $circles.forEach(($c) => {
+  $section.model.watch((s: any) => {
+    $section.score(s.colour);
+    console.log(s.colour);
+    for (const $c of $circles) {
       const y = +$c.attr('data-value');
-      $c.css('fill', '' + colours[x][y - 2]);  // -2 because no 0s and 1s
-    });
-    if (x === 'eo') $section.score('dropdown');
-  }
-
-  ($section.$('select') as InputView).change(colour);
-  colour('val');
+      $c.css('fill', '' + colours[s.colour][y - 2]);  // -2 because no 0s and 1s
+    }
+  });
 }
 
 export function bridges4($section: Step) {
