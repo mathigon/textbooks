@@ -1,0 +1,22 @@
+- id: p1
+  text: |
+    What is the area of a circle with radius 10m?
+  choices:
+    - `10π`m
+    - `100π`m
+    - `10^2`m
+    - `10π^2`m
+  hints:
+    - Remember that the area of a circle with radius `r` is given by the formula `A = π r^2`.
+  read-more: /course/circles/introduction#area
+
+- id: p2
+  text: |
+    What is the circumference of a circle with radius 4cm?
+  choices:
+    - `4π`
+    - `8π`
+    - `16π`
+  hints:
+    - Remember that the circumference of a circle with radius `r` is given by the formula `C = 2 π r`.
+  read-more: /course/circles/introduction#wheel

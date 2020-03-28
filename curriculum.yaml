@@ -435,13 +435,6 @@ complex:
 fractals:
   title: Fractals
   color: 8220b9
-  sections:
-    - title: Introduction
-      preview: /world/Fractals
-    - title: The Sierpinski Gasket
-      preview: /world/Fractals#sierpinski
-    - title: The Mandelbrot Set
-      preview: /world/Fractals#mandelbrot
 
 differentiation:
   title: Differentiation
