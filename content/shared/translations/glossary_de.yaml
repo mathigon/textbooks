@@ -590,7 +590,7 @@ fractal:
   text: Ein __Fraktal__ ist eine _selbstähnliche_ geometrische Form. Das bedeutet, dass sie bei verschiedenen Vergrößerungsstufen gleich
     aussieht. Fraktale können durch
     unendliche Wiederholung einer Vorgehensweise oder Anwendung einer Gleichung erzeugt werden.
-  link: /world/Fractals
+  link: /course/fractals
 
 fta:
   title: Fundamentalsatz der Arithmetik

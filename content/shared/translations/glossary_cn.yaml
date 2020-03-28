@@ -161,7 +161,7 @@ fractal:
   title: 分形
   text: __分形__是一种_自相似_的几何形状，例如, 一个物体在不同的放大率下看起来
     形状相同。分形通过无限频繁地重复一个过程或方程而产生。
-  link: /world/Fractals
+  link: /course/fractals
 
 fta:
   title: 算术基本定理

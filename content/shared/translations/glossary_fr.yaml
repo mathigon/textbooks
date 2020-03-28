@@ -330,7 +330,7 @@ fractal:
   text: A __fractal__ is a _self-similar_ geometric shape. This means that it
     looks the same at different levels of magnification. Fractals can be created
     by repeating a procedure or applying an equation infinitely many times.
-  link: /world/Fractals
+  link: /course/fractals
 
 fta:
   title: Fundamental Theorem of Arithemtic

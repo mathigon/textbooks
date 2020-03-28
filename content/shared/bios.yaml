@@ -1173,7 +1173,9 @@ mandelbrot:
     _Mandelbrot set_.
   links:
     - title: Fractals
-      url: /world/Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
 
 menger:
   name: Menger
