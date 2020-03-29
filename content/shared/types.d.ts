@@ -474,13 +474,17 @@ export abstract class GeoShape<T extends Point|Path = Point|Path> extends EventT
   readonly $parent: Geopad;
   $el: SVGView;
   name: string;
-  locked: boolean;
+  color: string;
+  label: string;
   isPending: boolean;
+  isLocked: boolean;
   components: GeoPoint[];
   protected $label?: ElementView;
   protected constructor($parent: Geopad, initial: GeoValue<T>, $el: SVGView, id?: string);
   get value(): T|undefined;
   get type(): string|undefined;
+  get locked(): boolean;
+  get isHidden(): boolean;
   setValue(p: GeoValue<T>): void;
   setLabel(str: string, color?: string, position?: string): void;
   select(): void;

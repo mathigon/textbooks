@@ -1153,7 +1153,9 @@ mandelbrot:
     _Mandelbrot set_.
   links:
     - title: Fractals
-      url: /world/Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
 
 mersenne:
   born: 1588
@@ -1403,7 +1405,7 @@ penrose:
   bio: |
     __Sir Roger Penrose__ (geb. 1931) ist ein britischer Mathematiker und Physiker
     der für seine bahnbrechenden Arbeiten in der allgemeinen Relativitätstheorie und
-    Kosmologie bekannt ist - oft in Zusammenarbeit mit anderen berühmten 
+    Kosmologie bekannt ist - oft in Zusammenarbeit mit anderen berühmten
     Wissenschaftlern wie Stephen Hawking und Michael Atiyah. Er entdeckte auch die
     selbstähnlichen und nicht-periodischen _Penrose Parkettierungen_.
   links:

@@ -10,11 +10,11 @@
 Solange es Menschen gibt, haben wir zum Himmel geschaut und versucht, das Leben
 auf der Erde mit der Bewegung von Sternen, Planeten und Mond zu erklären.
 
-Die altgriechischen Astronomen entdeckten als erste, dass sich alle Himmelsobjekte auf regelmäßigen Bahnen, den so genannten __Umlaufbahnen__,
-bewegen. Sie glaubten, dass diese Bahnen
-immer kreisförmig sind. Schließlich sind Kreise die "vollkommenste" aller F:
-symmetrisch in alle Richtungen und damit eine passende Wahl für die zugrunde
-liegende Ordnung unseres Universums.
+Die altgriechischen Astronomen entdeckten als erste, dass sich alle Himmelsobjekte
+auf regelmäßigen Bahnen, den so genannten __Umlaufbahnen__, bewegen. Sie glaubten,
+dass diese Bahnen immer kreisförmig sind. Schließlich ist ein Kreis die "vollkommenste"
+aller Formen: symmetrisch in alle Richtungen und damit die perfekte Wahl für die
+unserem Universum zugrunde liegende Ordnung.
 
 ::: column(width=320)
 
@@ -28,7 +28,7 @@ liegende Ordnung unseres Universums.
 > id: radius
 > goals: compass
 
-Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von seinem
+Alle Punkt auf einem [__Kreis__](gloss:circle) haben den gleichen Abstand von seinem
 Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass) gezeichnet werden können:
 
 ::: column(width=320)
@@ -1355,7 +1355,9 @@ Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition v
 
 ::: column.grow
 
-Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland. Er wird verwendet umErdgas, das als Brennstoff in nahegelegenen Fabriken und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
+Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland.
+Er wird verwendet um Erdgas, das als Brennstoff in nahegelegenen Fabriken
+und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
 sein Boden und seine Deckfläche sind zwei große Kreise mit einem
 Radius von 35 m. Es gibt zwei wichtige Fragen, die hier für Ingenieure
 von Interesse sein dürften:
@@ -1880,7 +1882,7 @@ und das Volumen des [Kegels](gloss:cone-volume) voneinander abziehen_
 ---
 > id: sphere-volume-2
 
-Eine Kugel besteht aus [[zwei]] Halbkugeln, _{span.reveal(when="blank-0")}d.h.
+Eine Kugel besteht aus [[2]] Halbkugeln, _{span.reveal(when="blank-0")}d.h.
 ihr Volumen ergibt sich zu_
 
 {.text-center.reveal(when="blank-0")} `V = 4/3 r^3 π`.
@@ -1932,7 +1934,7 @@ _{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
     x-solid(size=220 style="margin-top: -20px")
     .large-op.reveal(when="blank-0" animation="pop") =
 
-{.text-center} Diese Kugel hat den Radius `r`. Sein Volumen beträgt
+{.text-center} Diese Kugel hat den Radius `r`. Ihr Volumen beträgt
 _{x-equation.small(solution="4/3 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column(width=220)
