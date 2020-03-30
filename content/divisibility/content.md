@@ -466,7 +466,7 @@ Here is a calculator that allows you to check if any number is prime:
     .calculator
       h3 Prime Checker
       input(type="number" min="2")
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: prime-test-1
@@ -505,7 +505,7 @@ Here you can generate your own prime numbers with a given number of digits:
       h3 Prime Generator
       p.md Number of digits: ${d}{d|6|2,16,1}
       p(style="margin: 10px 0"): button.btn.btn-white Generate
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: ulam
@@ -576,7 +576,7 @@ is quite surprising, because primes are defined using multiplication and factors
       h3 Goldbach Calculator
       p Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
       input(type="number", min=4, step=2)
-      p.result.var ${result}
+      .result.var(:html="result")
 
 Goldbach wrote about his observation in a letter to the famous mathematician
 [Leonhard Euler](bio:euler), but neither of them was able to prove it. It became
