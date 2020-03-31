@@ -313,7 +313,7 @@ every edge):
 
 {.reveal(when="blank-0 blank-1 blank-2")}
 After the first iteration, the number of new triangles added increases by a
-factor of [[4]] at every step. At the same time, the size of these new triangles
+factor of [[4]] at every step. At the same time, the area of these new triangles
 decreases by a factor of [[9]] at every step.
 
 {.reveal(when="blank-3 blank-4")}
@@ -466,7 +466,7 @@ ${count * rulers[index]}km.
 
 {.reveal(when="var-0")} We can just keep going, with smaller and smaller rulers,
 and each time, our result for the length of the coastline would get a bit
-longer. Just like the Koch Snowflake before, it seems that Britains coastline
+longer. Just like the Koch Snowflake before, it seems that Britain’s coastline
 is infinitely long! This is often called the __Coastline paradox__.
 [Continue](btn:next)
 
