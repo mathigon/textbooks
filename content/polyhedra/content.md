@@ -212,7 +212,7 @@ _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x
 internal angles of an equilateral triangle – we already know that it must be
 [[60]]°. _{span.reveal(when="blank-3")} In a regular polygon with ${x}{x|6|3,12,1}
 sides, every internal angle is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
-${Math.round(180-360/x)}°._
+${round(180-360/x)}°._
 
 ---
 > id: regular-area

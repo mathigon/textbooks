@@ -574,6 +574,9 @@ help us understand the shapes better, and fractals have applications in fields
 like medicine, biology, geology and meteorology.
 [Continue](btn:next)
 
+    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
+    // TODO Fractals in African Art
+
 ---
 > id: technology
 
