@@ -2,12 +2,12 @@
 
 ## Development Roadmap
 
-[x] Translate course content (including shared glossary and biographies)
-[x] Translate course UI text
-[ ] Translate sitewide UI text (header, login, homepage, dashboards, …)
-[ ] Improved URLs for other languages (`de.mathigon.org` rather than `?hl=de`)
-[ ] RTL support for Arabic and Hebrew
-[ ] Translate JavaScript functions like `numberToString()`
+* [x] Translate course content (including shared glossary and biographies)
+* [x] Translate course UI text
+* [ ] Translate sitewide UI text (header, login, homepage, dashboards, …)
+* [ ] Improved URLs for other languages (`de.mathigon.org` rather than `?hl=de`)
+* [ ] RTL support for Arabic and Hebrew
+* [ ] Translate JavaScript functions like `numberToString()`
 
 ## Manual Translations
 
