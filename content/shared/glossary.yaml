@@ -656,11 +656,11 @@ geometric-series:
   title: Geometric Series
   text: |
     A __geometric series__ is the infinity sum of the terms in a geometric
-    sequence, where consecutive have a constant ratio _r_. For example,
+    sequence, where consecutive terms have a constant ratio _r_. For example,
 
     {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
 
-    is a geometric series with costant ration `1/2`.
+    is a geometric series with constant ratio `1/2`.
 
 glide-reflection:
   title: Glide Reflections

@@ -362,7 +362,7 @@ many times._
 
 ::: column.grow
 
-It is almost unthinkable that you can have a shape with a _finite_ area at also
+It is almost unthinkable that you can have a shape with a _finite_ area and also
 an _infinite_ circumference – but this is just one of the many unexpected
 properties of fractals.
 
@@ -415,12 +415,12 @@ is why the cube is “not quite” 3-dimensional.
 ### Fractal Coastlines
 
 One of the key characteristics of all the fractals we’ve seen so far is that
-you can “zoom in” forever, and always find new patterns. Around 1920, the
+you can “zoom in” forever and always find new patterns. Around 1920, the
 British mathematician [Lewis Fry Richardson](bio:richardson) realised that the
 same is true for the border or coastline of many countries.
 
-You start with the basic shape of the country, and as you zoom in, you add
-river inlets, bays and estuary, then individual cliffs, rocks, pebbles, and so
+You start with the basic shape of the country, and, as you zoom in, you add
+river inlets, bays and estuaries, then individual cliffs, rocks, pebbles, and so
 on:
 
 ::: column(width=120 parent="padded-thin")
@@ -465,9 +465,9 @@ ${count} times, so we get a total coastline of ${count} × ${rulers[index]} =
 ${count * rulers[index]}km.
 
 {.reveal(when="var-0")} We can just keep going, with smaller and smaller rulers,
-and each time, our result for the length of the coastline would get a bit
+and each time our result for the length of the coastline would get a bit
 longer. Just like the Koch Snowflake before, it seems that Britain’s coastline
-is infinitely long! This is often called the __Coastline paradox__.
+is infinitely long! This is often called the __coastline paradox__.
 [Continue](btn:next)
 
 ::: column(width=280)

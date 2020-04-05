@@ -1180,9 +1180,9 @@ mandelbrot:
 menger:
   name: Menger
   bio: __Karl Menger__ (1902 – 1985) was an Austrian-American mathematician.
-    He researched algebra, geometry, dimensions, as well as game theory and
-    social science – but he is best remembered for the _Menger sponge_, a
-    famous, 3-dimensional _fractal_.
+    He researched algebra, geometry, dimensions, game theory and social
+    science, but he is best remembered for the _Menger sponge_, a famous
+    3-dimensional _fractal_.
 
 mersenne:
   born: 1588
@@ -1600,8 +1600,8 @@ richardson:
     methods for solving systems of linear equations.
 
     He also tried to calculate the probability of two countries declaring war
-    on each other, given the length of their shared border – however, he was
-    unable to find accurate measurements for the length of countries borders.
+    on each other, given the length of their shared border. However, he was
+    unable to find accurate measurements for the length of countries’ borders.
     This led him to realise that borders and coastlines have many properties
     of _fractals_.
 
