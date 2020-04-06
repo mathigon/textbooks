@@ -386,28 +386,31 @@ Fractals don’t have to be “flat”, like many of the examples above. One of 
 most famous fractals that look 3-dimensional is the __Menger sponge__, named
 after the mathematician [Karl Menger](bio:menger) who first described it in 1926.
 
+::: column(width=320 parent="right")
+
+    x-menger-sponge.var(size=320 :steps="steps")
+    x-slider(steps=3 :bind="steps")
+
 ::: column.grow
 
 We start with a solid cube, and repeatedly drill smaller and smaller holes into
 its sides. Every new iteration of holes has [[`1/3`|`1/2`|`1/4`]] the width of
 the previous iteration of holes.
 
-{.reveal(when="blank-0")} We can try to calculate the dimension of the Menger
-sponge just like we did for the Koch snowflake above. The cube on the right
-consists of [[20]] copies of itself, all of which are 3 times smaller.
+{.reveal(when="blank-0")} A `3×3×3` cube consists of 27 smaller cubes, but here
+we have removed some of these. The Menger sponge consists of [[20]] copies of
+itself, which are 3 times smaller.
 
-{.reveal(when="blank-1")} If _d_ is the dimension of the Menger sponge, we get
-`3^d = 20`, or `§d = log_3(20) ≈ 2.727`. If you imagine cutting out more and
-more holes, infinitely many times, there would be no actual volume left – which
-is why the cube is “not quite” 3-dimensional.
-[Continue](btn:next)
-
-::: column(width=320)
-
-    x-menger-sponge.var(size=320 :steps="steps")
-    x-slider(steps=3 :bind="steps")
+{.reveal(when="blank-1")} Now we can try to calculate the dimension _d_ of the
+Menger sponge just like we did for the Koch snowflake above. In this case we get
+`3^d = 20`, or `§d = log_3(20) ≈ 2.727`. 
 
 :::
+
+{.reveal(when="blank-1")} If you imagine cutting out more and more holes,
+infinitely many times, there would be no actual volume left. That’s why the cube
+is “not quite” 3-dimensional!
+[Continue](btn:next)
 
 ---
 > id: coastlines
@@ -633,13 +636,17 @@ earlier in artwork, patterns and mosaics.
 ---
 > id: sierpinski-history
 
-Here are some examples of floor tilings at the Santa Maria in Cosmedin basilica
-in Rome:
+Here are some examples of floor tilings from different churches in Rome:
 
 ::: column(width=140 parent="padded-thin")
 
     // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+
+::: column(width=140)
+
+    // Permission from Elisa Conversano
+    x-media(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
