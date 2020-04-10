@@ -15,6 +15,65 @@ Blah blah blah.
 Hey I'm gonna point at that thing when you hover over [here](->#pointed).
 
 ---
+> section: morse-demo
+> sectionStatus: dev
+> id: morse-demo
+
+## Morse Demos
+
+    div.wtf
+      .typeout
+    div
+      table.emoji-table
+        tr.hearts
+          td: button.dot DOT
+          td: button.dash DASH
+          td: button.letter LETTER
+          td: button.word WORD
+
+    .button.translate TRANSLATE
+
+    div.output
+
+---
+> section: telegraph
+> id: telegraph
+### Look at this Telegraph
+
+Here tap the telegraph.
+
+
+    figure: include svg/telegraph.svg
+
+
+---
+> section: binary-demo
+> sectionStatus: dev
+> id: binary-demo
+
+## Binary Demos
+
+  // how do I... put inputs inside of a table?
+    table
+      tr
+        td [[1]]
+        td hello
+      tr
+        td okay
+        td bye
+
+---
+> section: transistor
+> sectionStatus: dev
+> id: transistor
+
+## Transistors
+
+    figure: include svg/transistor_on.svg
+
+    button.transistor SWITCH
+
+---
 > section: unit-2x
 > sectionStatus: dev
 > id: emoji-board
@@ -203,3 +262,15 @@ In this short game you have to determine the parity of a binary number, as fast 
             .parity-bubble: .btn.btn-blue 1
 
 ---
+
+## Barcode
+> section: barcode
+> sectionStatus: dev
+> id: barcode
+
+Here we will look at a barcode
+
+    include ./components/barcode
+    x-barcode
+
+Where is the barcode?

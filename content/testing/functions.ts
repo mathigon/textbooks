@@ -7,10 +7,161 @@
 import {Obj, Color} from '@mathigon/core';
 import {SVGView, animate, InputView, AnimationResponse, ElementView, $, observable} from '@mathigon/boost';
 import {Step, Gameplay} from '../shared/types';
-import { Point, Random } from '@mathigon/fermat';
+import { Point, Random, SimplePoint } from '@mathigon/fermat';
+
+import './components/barcode';
+import { Barcode } from './components/barcode';
+
+
+const MORSE = {
+    '._': 'a',
+    '_...': 'b',
+    '_._.': 'c'
+}
+
+// TODO_MORSE_1 insert code table
+// TODO_MORSE_2 translation
+
+export function morseDemo($section: Step) {
+
+    const $dot: ElementView = $section.$('.dot')!;
+    const $dash: ElementView = $section.$('.dash')!;
+    const $letter: ElementView = $section.$('.letter')!;
+    const $word: ElementView = $section.$('.word')!;
+    const $typeout: ElementView = $section.$('.typeout')!;
+    let typed: boolean = false;
+
+    $dot.on('click', () => {
+        if (!typed) {
+            $typeout.text = "";
+            typed = true;
+        }
+        $typeout.text += ".";
+    });
+
+    $dash.on('click', () => {
+        if (!typed) {
+            $typeout.text = "";
+            typed = true;
+        }
+        $typeout.text += "_";
+    });
+
+    $letter.on('click', () => {
+        if (!typed) {
+            $typeout.text = "";
+            typed = true;
+        }
+        $typeout.text += "/";
+    });
+
+    $word.on('click', () => {
+        if (!typed) {
+            $typeout.text = "";
+            typed = true;
+        }
+        $typeout.text += "//";
+    });
+
+
+    const $translate: ElementView = $section.$('.translate')!;
+    $translate.on('click', () => {
+        if(!typed) return;
+        let translateme = $typeout.text;
+        console.log('translate!!');
+
+    });
+}
+
+export function telegraph($section: Step) {
+    console.log("telegraph");
+    const $arm = $section.$('g#arm') as SVGView;
+    console.log($arm);
+
+    let open = false;
+
+    let center: SimplePoint = new Point(23, 11);
+    $arm.on('click', () => {
+        if (open) {
+            $arm.setTransform(undefined, 0);
+        } else {
+            $arm.setTransform(undefined, 0.1);
+            // needs implementation
+            // $arm.setTransformWithCenteredAngle(undefined, 0.1, undefined, 23, 11);
+        }
+        open = !open;
+        
+    })
+
+}
+
+export function transistor($section: Step) {
+
+    console.log('transistor2');
+
+    const $pathOn = $section.$('#path_on') as SVGView;
+    const $pathOff = $section.$('#path_off') as SVGView;
+    const $electrons = $section.$$('#electron') as SVGView[];
+    const $switch = $section.$('button.transistor')!;
+    let switchOn = false;
+
+    $switch.on('click', () => {
+        console.log('switch');
+        switchOn = !switchOn;
+        if (switchOn) turnOn();
+        else turnOff();
+    });
+
+    let electronPositions : number[];
+    const UPDATE_PERIOD = 100;
+
+    function turnOn() {
+        // show all
+        $electrons.forEach((e) => e.show());
+        const totalLength = $pathOn.strokeLength;
+        const gap = totalLength / $electrons.length; // gap between electrons
+        // need way to scale this from linear to non-linear and back
+        electronPositions = $electrons.map((e, i) => (i * gap) / totalLength); // each electron has a position
+
+        setTimeout(move, UPDATE_PERIOD);        
+    }
+
+    function move() {
+        if (!switchOn) return;
+        electronPositions = electronPositions.map(p => {
+            let pp = p + 0.02;
+            if (pp >= 1) pp = (pp - 1);
+            return pp;
+        })
+
+        $electrons.forEach((e, i) => {
+            let xy = $pathOn.getPointAt(electronPositions[i]);
+            let xyShift = new Point(xy.x - 12, xy.y - 12);
+            e.setTransform(xyShift);
+        });
+
+        setTimeout(move, UPDATE_PERIOD);
+    }
+
+    function turnOff() {
+        console.log('move electrons to the safe area');
+        // NEXT: e[0:3] move to pathOff.pointAt(0.2, 0.4, 0.6, 0.8);
+        // hide them
+        $electrons.forEach((e, i) => {
+            if (i > 3) {
+                e.hide();
+            } else {
+                let xy = $pathOff.getPointAt([0.11, 0.37, 0.63, 0.89][i]); // one of four points
+                let xyShift = new Point(xy.x - 12, xy.y - 12);
+                e.setTransform(xyShift);
+            }
+        });
+    }
+}
 
 export function emojiBoard($section: Step) {
 
+    console.log("emojiBoard");
     // 1. set up code data
     const hearts = ['💙', '💚', '💛', '💜', '🧡', '🖤'];
     const fruit = ['🍏', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🍈'];
@@ -508,5 +659,12 @@ export function hamming($step: Step) {
     });
 
   }
+
+}
+
+export function barcode($section: Step) {
+
+    const $barcode = $section.$('x-barcode') as Barcode;
+    console.log($barcode);
 
 }
