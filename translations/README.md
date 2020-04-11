@@ -4,8 +4,9 @@
 
 * [x] Translate course content (including shared glossary and biographies)
 * [x] Translate course UI text
-* [ ] Translate sitewide UI text (header, login, homepage, dashboards, …)
-* [ ] Improved URLs for other languages (`de.mathigon.org` rather than `?hl=de`)
+* [x] Translate sitewide UI text (header, login, homepage, dashboards, …)
+* [X] Improved URLs for other languages (`de.mathigon.org` rather than `?hl=de`)
+* [ ] Translate curriculum.yaml document and indicate which translations are missing
 * [ ] RTL support for Arabic and Hebrew
 * [ ] Translate JavaScript functions like `numberToString()`
 
