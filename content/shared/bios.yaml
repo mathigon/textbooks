@@ -377,15 +377,16 @@ collatz:
 conway:
   name: Conway
   born: 1937
+  died: 2020
   bio: |
-    __John Horton Conway__ (born 1937) is a British mathematician and currently
-    Professor Emeritus at Princeton University.
+    __John Horton Conway__ (1937 – 2020) was a British mathematician who worked
+    at Cambridge and Princeton University. He was a fellow of the Royal Society,
+    and the first recipient of the Pólya Prize.
 
-    He is best known for inventing “Conway’s Game of Life”, a _cellular
-    automaton_ with fascinating properties. He explored the underlying
-    mathematics of everyday objects like knots and games, as well as
-    contributing to group theory, number theory and many other areas of
-    mathematics.
+    He explored the underlying mathematics of everyday objects like knots and
+    games, and he contributed to group theory, number theory and many other
+    areas of mathematics. Conway is known for inventing “Conway’s Game of Life”,
+    a _cellular automaton_ with fascinating properties.
   links:
     - title: Look-and-say Sequence
       url: /course/sequences/special#look-and-say
