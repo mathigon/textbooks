@@ -4,32 +4,30 @@
 // =============================================================================
 
 
-const fs = require('fs');
 const marked = require('marked');
 let originalP = null;  // Caching of unparsed paragraphs (for blockquotes)
 
 
-const CACHE = [];
-
-function encode(string) {
-  CACHE.push(string);
-  return `{${CACHE.length - 1}}`;
-}
-
-
 // -----------------------------------------------------------------------------
 // Markdown Extensions
+
+let STORE = [];
+
+function store(string) {
+  STORE.push(string);
+  return `{${STORE.length - 1}}`;
+}
 
 function parseParagraph(text) {
   return text.replace(/\s+/g, ' ')
       .replace(/\[\[([^\]]+)]]/g, (x, body) => {
         const options = body.split('|');
         const end = '<<<<' + (options.length > 1 ? '|' : '') + options.slice(1).join('|') + ']]';
-        return `${encode('[[>>>>')} ${options[0]} ${encode(end)}`;
+        return `${store('[[>>>>')} ${options[0]} ${store(end)}`;
       })
-      .replace(/\${([^}]+)}{([^}]+)}/g, encode)
-      .replace(/\${([^}]+)}(?!<\/x-var>)/g, encode)
-      .replace(/:\w+:/, encode);
+      .replace(/\${([^}]+)}{([^}]+)}/g, store)
+      .replace(/\${([^}]+)}(?!<\/x-var>)/g, store)
+      .replace(/:\w+:/, store);
 }
 
 const renderer = new marked.Renderer();
@@ -38,27 +36,27 @@ const renderer = new marked.Renderer();
 // whitespace that's incorrectly inserted by Google Translate.
 
 renderer.link = function (href, title, text) {
-  return encode('[>>>>') + text + encode(`<<<<](${href})`);
+  return store('[>>>>') + text + store(`<<<<](${href})`);
 };
 
 renderer.heading = function (text, level) {
-  return encode('#'.repeat(level)) + ' ' + text + '\n\n';
+  return store('#'.repeat(level)) + ' ' + text + '\n\n';
 };
 
 renderer.codespan = function(code) {
-  return encode('`' + code + '`');
+  return store('`' + code + '`');
 };
 
 renderer.blockquote = function () {
-  return encode(originalP.split('\n').map(x => '> ' + x).join('\n')) + '\n\n';
+  return store(originalP.split('\n').map(x => '> ' + x).join('\n')) + '\n\n';
 };
 
 renderer.hr = function () {
-  return encode('---') + '\n\n';
+  return store('---') + '\n\n';
 };
 
 renderer.code = function (code) {
-  return encode(code.split('\n').map(x => '    ' + x).join('\n')) + '\n\n';
+  return store(code.split('\n').map(x => '    ' + x).join('\n')) + '\n\n';
 };
 
 renderer.list = function (text) {
@@ -75,22 +73,22 @@ renderer.paragraph = function (text) {
 };
 
 renderer.strong = function (text) {
-  return encode('__>>>>') + text + encode('<<<<__');
+  return store('__>>>>') + text + store('<<<<__');
 };
 
 renderer.em = function (text) {
-  return encode('_>>>>') + text + encode('<<<<_');
+  return store('_>>>>') + text + store('<<<<_');
 };
-
 
 // -----------------------------------------------------------------------------
 
+module.exports.encode = function(content) {
+  STORE = [];
 
-function parseContent(content) {
   // Block Indentation
   content = content.split('\n').map((line) => {
     if (!line.startsWith(':::')) return line;
-    return '\n\n' + encode(line) + '\n\n'
+    return '\n\n' + store(line) + '\n\n'
   }).join('\n');
 
   // Parse Markdown (but override HTML detection)
@@ -101,12 +99,12 @@ function parseContent(content) {
 
   // Parse custom element attributes
   parsed = parsed.replace(/{([^}]+)}/g, (selection, body) => {
-    return body.match(/^[0-9]+$/) ? selection : encode(selection)
+    return body.match(/^[0-9]+$/) ? selection : store(selection)
   });
 
   parsed = parsed.replace(/&nbsp;/g, ' ');
 
-  // Split into sections of length at most 1000.
+  // Split into sections of length at most 5000.
   const output = [''];
   for (const row of parsed.split(/\n\n/)) {
     if (output[output.length - 1].length + row.length < 4950) {
@@ -116,11 +114,18 @@ function parseContent(content) {
     }
   }
 
-  return output.join('\n\n===========================================\n\n');
-}
+  return [output, STORE];
+};
 
+// -----------------------------------------------------------------------------
 
-const input = fs.readFileSync(__dirname + '/input.md', 'utf8');
-const cleaned = parseContent(input);
-fs.writeFileSync(__dirname + '/translate.md', cleaned);
-fs.writeFileSync(__dirname + '/cache.json', JSON.stringify(CACHE));
+module.exports.decode = function decode(text, STORE) {
+  return text.split('\n').filter(row => !row.startsWith('=====')).join('\n')
+      .replace(/{([0-9]+)}/g, (_, n) => STORE[+n])
+      .replace(/{([0-9]+)}/g, (_, n) => STORE[+n])  // Second pass!
+      .replace(/>>>>\s+/g, '')
+      .replace(/\s+<<<</g, '')
+      .replace(/&quot;/g, '"')
+      .replace(/&gt;/g, '>')
+      .replace(/&lt;/g, '<');
+};

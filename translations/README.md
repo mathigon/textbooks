@@ -1,15 +1,5 @@
 # Translations
 
-## Development Roadmap
-
-* [x] Translate course content (including shared glossary and biographies)
-* [x] Translate course UI text
-* [x] Translate sitewide UI text (header, login, homepage, dashboards, …)
-* [X] Improved URLs for other languages (`de.mathigon.org` rather than `?hl=de`)
-* [ ] Translate curriculum.yaml document and indicate which translations are missing
-* [ ] RTL support for Arabic and Hebrew
-* [ ] Translate JavaScript functions like `numberToString()`
-
 ## Manual Translations
 
 All of Mathigon's content is stored in this GitHub repository. The text, including translations, are written in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), a special way of annotating HTML. We use some additional, custom syntax which is [documented here](https://mathigon.io/markdown), and you can have a look at one of our existing courses like [Circles and Pi](https://raw.githubusercontent.com/mathigon/textbooks/master/content/circles-and-pi/content.md).
@@ -22,17 +12,12 @@ When adding a new language for the first time, you also have to add it to the [G
 
 ## Automated Translations
 
-The scripts in this folder can help generating draft translations using Google Translate, while preserving all built-in tags, markup and syntax.
-
-Here are the steps to generate them:
-
-1. Copy a markdown source file as `input.md` into this repository.
-2. Run the script `node translations/encode.js`. This should generate a new `translate.md` file.
-3. Manually translate this new file by copying it into [Google Translate](https://translate.google.com). Note that Google has a 5000 character limit, and the file is already divided into appropriately-sized segments which are separated using `======`s.
-4. Run the script `node translations/decode.js` to covert the translated file into a valid markdown document with all custom tags restored.
+The scripts in this folder can help generating draft translations using Google Translate, while preserving all built-in tags, markup and syntax. Simply edit the constants at the beginning of `translate.js` (including a ink to a Google Cloud Service Account for the Translate API) and then run `node translations/translate.js`.
 
 Note that the script might miss some words, and that Google's translations might not be perfect. In particular:
 
-* Text inside html blocks (indented by 4 characters) is never translated.
+* Sometimes placeholders like `{10}` or `<<<<` will be left in the translated code. These need to be fixed manually, and might cause compile errors when running the server.
 * Only the correct, first answer of multiple choice questions is translated.
+* Text inside html blocks (indented by 4 characters) is never translated.
 * Markdown's bold and italic tags might no longer be valid, because Google inserts whitespace before and after them.
+* YAML files like `hints.yaml`, `bios.yaml` and `glossary.yaml` are not translated.
