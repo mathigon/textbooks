@@ -119,6 +119,7 @@ However, using mathematics, we can think about the properties that real fractals
 [Continue](btn:next)
 
 ---
+> id: dimension
 
 ### Fractal Dimensions
 
@@ -135,6 +136,7 @@ increases by a factor of `2^1 = 2`. Obviously!_
 :::
 
 ---
+> id: dimension-1
 
 ::: column(width=240)
 
@@ -148,6 +150,7 @@ a factor of 2, its area increases by a factor of `2^2 =` [[4]]._
 :::
 
 ---
+> id: dimension-2
 
 ::: column(width=240)
 
@@ -163,6 +166,7 @@ consists of 8 copies of the smaller one!_
 :::
 
 ---
+> id: dimension-3
 
 ::: column(width=240)
 
@@ -180,6 +184,7 @@ _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")}≈ 1.585…_
 :::
 
 ---
+> id: dimension-4
 
 But wait … how can something have a dimension that is not an integer? It seems
 impossible, but this is just one of the weird properties of fractals. In fact,
