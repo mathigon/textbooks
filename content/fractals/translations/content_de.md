@@ -5,7 +5,7 @@
 > section: introduction
 > id: intro
 
-Wenn Sie sich in der Natur umschauen, haben Sie vielleicht komplizierte Pflanzen wie diese bemerkt:
+Wenn du dich in der Natur umschaust, hast du vielleicht komplizierte Pflanzen wie diese bemerkt:
 
 ::: column.r(width=320)
 
@@ -23,7 +23,7 @@ Wenn Sie sich in der Natur umschauen, haben Sie vielleicht komplizierte Pflanzen
 
 :::
 
-{.reveal(when="blank-0")} Anfangs erscheinen diese wie hochkomplexe Formen - aber wenn Sie genauer hinschauen, werden Sie feststellen, dass beide einem relativ einfachen Muster folgen: Alle [Einzelteile](target:fractal) der Pflanzen sehen genauso aus wie die gesamten Pflanze, nur kleiner. Das gleiche Muster wird in kleineren Maßstäben immer wieder wiederholt. [Weiter](btn:next)
+{.reveal(when="blank-0")} Anfangs erscheinen diese wie hochkomplexe Formen - aber wenn du genauer hinschaust, wirst du feststellen, dass beide einem relativ einfachen Muster folgen: Alle [Einzelteile](target:fractal) der Pflanzen sehen genauso aus wie die gesamten Pflanze, nur kleiner. Das gleiche Muster wird in kleineren Maßstäben immer wieder wiederholt. [Weiter](btn:next)
 
 ---
 
@@ -37,9 +37,9 @@ Um unsere eigenen Fraktale zu erstellen, müssen wir mit einem einfachen Muster 
 
 Eines der einfachsten Muster könnte ein [{.pill.red} Liniensegment](target:s1) sein, wobei [{.pill.blue} zwei weitere Segmente](target:s2) an einem Ende abzweigen. Wenn wir dieses Muster wiederholen, haben diese beiden blauen Segmente auch zwei weitere Zweige an ihren Enden.
 
-Sie können die [blauen Punkte](target:dot) verschieben, um die Länge und den Winkel aller Zweige zu ändern. Erhöhen Sie dann die Anzahl der Iterationen mit [dem Schieberegler](->#fern-slider) unten.
+Du kannst die [blauen Punkte](target:dot) verschieben, um die Länge und den Winkel aller Zweige zu ändern. Dann erhöhe die Anzahl der Iterationen mit [dem Schieberegler](->#fern-slider) unten.
 
-{.reveal(when="slider-0")} Abhängig von der Position der Zweige können Sie völlig unterschiedliche Muster erstellen - ähnlich wie der [Farn](action:set(130,228,197,184)) oben, ein [Baum](action:set(160,186,200,186)) oder [verschachtelte Pentagone](action:set(113,235,232,238)). Was können Sie sonst noch finden? [Weiter](btn:next)
+{.reveal(when="slider-0")} Abhängig von der Position der Zweige kannst du völlig unterschiedliche Muster erstellen - ähnlich wie der [Farn](action:set(130,228,197,184)) oben, ein [Baum](action:set(160,186,200,186)) oder [verschachtelte Fünfecke](action:set(113,235,232,238)). Was kannst du sonst noch finden? [Weiter](btn:next)
 
 ::: column(width=360)
 
@@ -64,7 +64,7 @@ Sie können die [blauen Punkte](target:dot) verschieben, um die Länge und den W
 
 Ein weiteres berühmtes Fraktal ist das [__Sierpinski-Dreieck__](gloss:sierpinski-triangle). In diesem Fall beginnen wir mit einem großen, gleichseitigen Dreieck und schneiden dann wiederholt kleinere Dreiecke aus den verbleibenden Teilen aus.
 
-{.reveal(when="slider=0")} Beachten Sie, wie die endgültige Form aus [drei identischen Kopien von sich selbst besteht](target:x), und jede davon besteht aus noch kleineren Kopien des gesamten Dreiecks! Sie können das Dreieck für immer vergrößern, und die Muster und Formen wiederholen sich immer weiter.
+{.reveal(when="slider=0")} Beachte, wie die endgültige Form aus [drei identischen Kopien von sich selbst besteht](target:x), und jede davon besteht aus noch kleineren Kopien des gesamten Dreiecks! Du könntest das Dreieck für immer vergrößern, und die Muster und Formen wiederholen sich immer weiter.
 
 ::: column(width=300)
 
@@ -102,7 +102,7 @@ Mit Hilfe der Mathematik können wir jedoch über die Eigenschaften nachdenken, 
 
 ::: column.grow
 
-Lassen Sie uns zunächst über die Dimension von Fraktalen nachdenken. Eine Linie hat die Dimension [[1]]. _{span.reveal(when="blank-0")} Wenn es um den Faktor 2 skaliert wird, erhöht sich seine Länge um den Faktor `2^1 = 2`. Offensichtlich!_
+Lasst uns zunächst über die Dimension von Fraktalen nachdenken. Eine Linie hat die Dimension [[1]]. _{span.reveal(when="blank-0")} Wenn es um den Faktor 2 skaliert wird, erhöht sich seine Länge um den Faktor `2^1 = 2`. Offensichtlich!_
 
 :::
 
@@ -115,7 +115,7 @@ Lassen Sie uns zunächst über die Dimension von Fraktalen nachdenken. Eine Lini
 
 ::: column.grow
 
-Ein Quadrat hat die Dimension [[2]]. _{span.reveal(when="blank-0")} Wenn Sie es um den Faktor 2 skalieren, vergrößert sich seine Fläche um den Faktor `2^2 =` [[4]]._
+Ein Quadrat hat die Dimension [[2]]. _{span.reveal(when="blank-0")} Wenn du es um den Faktor 2 skalierst, vergrößert sich seine Fläche um den Faktor `2^2 =` [[4]]._
 
 :::
 
@@ -128,7 +128,7 @@ Ein Quadrat hat die Dimension [[2]]. _{span.reveal(when="blank-0")} Wenn Sie es 
 
 ::: column.grow
 
-Ein Würfel hat die Dimension [[3]]. _{span.reveal(when="blank-0")} Wenn Sie es um den Faktor 2 skalieren, erhöht sich sein Volumen um den Faktor `2^3 =` [[8]]._ _{span.reveal(when="blank-1")} Beachten Sie, dass der größere Würfel im Bild ist besteht aus 8 Exemplaren des kleineren!_
+Ein Würfel hat die Dimension [[3]]. _{span.reveal(when="blank-0")} Wenn du es um den Faktor 2 skalierst, erhöht sich sein Volumen um den Faktor `2^3 =` [[8]]._ _{span.reveal(when="blank-1")} Beachte, dass der größere Würfel im Bild aus 8 Kopien des kleineren besteht!_
 
 :::
 
@@ -141,7 +141,7 @@ Ein Würfel hat die Dimension [[3]]. _{span.reveal(when="blank-0")} Wenn Sie es 
 
 ::: column.grow
 
-Schauen wir uns nun das Sierpinski-Dreieck an. Wenn wir es um den Faktor 2 skalieren, können Sie sehen, dass sich die „Fläche“ um den Faktor [[3]] erhöht.
+Schauen wir uns nun das Sierpinski-Dreieck an. Wenn wir es um den Faktor 2 skalieren, kannst du sehen, dass sich die „Fläche“ um den Faktor [[3]] erhöht.
 
 {.reveal(when="blank-0")} Nehmen wir an, _d_ ist die Dimension des Sierpinski-Dreiecks. Unter Verwendung des gleichen Musters wie oben erhalten wir `2^d = 3`. Mit anderen Worten, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1,585…_
 
@@ -200,9 +200,9 @@ Um unsere eigene fraktale Schneeflocke zu erzeugen, müssen wir erneut ein einfa
 
 ::: column.grow
 
-Beginnen wir wie beim Sierpinski-Dreieck mit einem einzigen gleichseitigen Dreieck. Anstatt _bei jedem Schritt_ kleinere Dreiecke zu entfernen, fügen wir _<<<<_ kleinere Dreiecke entlang der Kante hinzu. Die Seitenlänge jedes Dreiecks beträgt [[`1/3`|`1/4`|`1/2`]] der Dreiecke im vorherigen Schritt.
+Beginnen wir wie beim Sierpinski-Dreieck mit einem einzigen gleichseitigen Dreieck. Anstatt bei jedem Schritt kleinere Dreiecke zu _entfernen_, fügen wir kleinere Dreiecke entlang der Kante _hinzu_. Die Seitenlänge jedes Dreiecks beträgt [[`1/3`|`1/4`|`1/2`]] der Dreiecke im vorherigen Schritt.
 
-{.reveal(when="blank-0")} Die resultierende Form heißt [__Koch-Schneeflocke__](gloss:koch-snowflake), benannt nach dem schwedischen Mathematiker [Helge von Koch](bio:koch). Beachten Sie erneut, dass [kleine Abschnitte](target:t2) des Randes der Schneeflocke genauso aussehen wie [größere Abschnitte](target:t1).
+{.reveal(when="blank-0")} Die resultierende Form heißt [__Koch-Schneeflocke__](gloss:koch-snowflake), benannt nach dem schwedischen Mathematiker [Helge von Koch](bio:koch). Beachte erneut, dass [kleine Abschnitte](target:t2) des Randes der Schneeflocke genauso aussehen wie [größere Abschnitte](target:t1).
 
 ::: column(width=300)
 
@@ -266,7 +266,7 @@ Das Erstellen der Koch-Schneeflocken ist fast wie eine [rekursive Sequenz](gloss
 
 {.reveal(when="blank-0 blank-1 blank-2")} Nach der ersten Iteration erhöht sich die Anzahl der neu hinzugefügten Dreiecke bei jedem Schritt um den Faktor [[4]]. Gleichzeitig verringert sich die Fläche dieser neuen Dreiecke bei jedem Schritt um den Faktor [[9]].
 
-{.reveal(when="blank-3 blank-4")} Nehmen wir an, das [erste Dreieck](->#koch-0) hat eine Fläche von 1. Dann beträgt die Gesamtfläche der [nächsten drei Dreiecke](->#koch-1) `3 × 1/9 = 1/3`. Die folgenden Schritte bilden alle eine [[geometrische Reihe|arithmetic series|quadratic series]], _{span.reveal(when="blank-5")} mit dem gemeinsamen Verhältnis [[`4/9`|`9/4`|`4/3`]]._
+{.reveal(when="blank-3 blank-4")} Nehmen wir an, das [erste Dreieck](->#koch-0) hat eine Fläche von 1. Dann beträgt die Gesamtfläche der [nächsten drei Dreiecke](->#koch-1) `3 × 1/9 = 1/3`. Die folgenden Schritte bilden alle eine [[geometrische Reihe|arithmetische Reihe|quadratische Reihe]], _{span.reveal(when="blank-5")} mit dem gemeinsamen Verhältnis [[`4/9`|`9/4`|`4/3`]]._
 
 {.reveal(when="blank-6")} Mit der Formel für die Summe der unendlichen [geometrischen Reihen](gloss:geometric-series) können wir berechnen, dass die Gesamtfläche der Koch-Schneeflocke beträgt
 
@@ -280,7 +280,7 @@ Das Erstellen der Koch-Schneeflocken ist fast wie eine [rekursive Sequenz](gloss
 
 Wir können auch versuchen, den Umfang der Koch-Schneeflocke zu berechnen. Wie wir bereits gesehen haben, ändert sich die Länge des Umfangs bei jedem Schritt um den Faktor [[`4/3`|`3/4`|`1/4`]].
 
-{.reveal(when="blank-8")} Dies bedeutet, dass wir wieder eine geometrische Reihe haben - aber in diesem Fall konvergiert [[nicht|converges to 0|doesn’t have a first term]]. _{span.reveal(when="blank-9")} Dies bedeutet, dass der Umfang der Koch-Schneeflocke tatsächlich __unendlich lang ist__!_
+{.reveal(when="blank-8")} Dies bedeutet, dass wir wieder eine geometrische Reihe haben - aber in diesem Fall [[konvergiert sie nicht|konvergiert sie zu 0|hat sie keinen ersten Term]]. _{span.reveal(when="blank-9")} Dies bedeutet, dass der Umfang der Koch-Schneeflocke tatsächlich **unendlich lang ist**!_
 
 ::: column(width=220)
 
@@ -288,7 +288,7 @@ Wir können auch versuchen, den Umfang der Koch-Schneeflocke zu berechnen. Wie w
 
 :::
 
-{.reveal(when="blank-9")} _Wenn dies nicht intuitiv erscheint, denken Sie daran, dass wir den Umfang bei jedem Schritt mit `§4/3` multiplizieren und dies unendlich oft tun._
+{.reveal(when="blank-9")} _Wenn dies nicht intuitiv erscheint, denke daran, dass wir den Umfang bei jedem Schritt mit `§4/3` multiplizieren und dies unendlich oft tun._
 
 :::
 
@@ -298,15 +298,15 @@ Wir können auch versuchen, den Umfang der Koch-Schneeflocke zu berechnen. Wie w
 
 ::: column.grow
 
-Es ist fast undenkbar, dass Sie eine Form mit einer _endlichen_ Fläche und einem _unendlichen_ Umfang haben können - aber dies ist nur eine der vielen unerwarteten Eigenschaften von Fraktalen.
+Es ist fast undenkbar, dass man eine Form mit einer _endlichen_ Fläche und einem _unendlichen_ Umfang haben können - aber dies ist nur eine der vielen unerwarteten Eigenschaften von Fraktalen.
 
-Können Sie sich andere Möglichkeiten einfallen lassen, um Ihre eigenen Fraktale zu erstellen? [Weiter](btn:next)
+Kannst du dir andere Möglichkeiten einfallen lassen, um deine eigenen Fraktale zu erstellen? [Weiter](btn:next)
 
 ::: column(width=352)
 
     x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 audio credit="© Disney")
 
-{.caption} "Meine Seele dreht sich überall um gefrorene Fraktale ..."
+{.caption} “My soul is spiralling on frozen fractals all around…”
 
 :::
 
@@ -333,7 +333,7 @@ Wir beginnen mit einem festen Würfel und bohren wiederholt immer kleinere Löch
 
 :::
 
-{.reveal(when="blank-1")} Wenn Sie sich vorstellen, unendlich oft mehr und mehr Löcher auszuschneiden, ist kein tatsächliches Volumen mehr vorhanden. Deshalb ist der Würfel "nicht ganz" dreidimensional! [Weiter](btn:next)
+{.reveal(when="blank-1")} Wenn du dir vorstellst, unendlich oft mehr und mehr Löcher auszuschneiden, ist kein tatsächliches Volumen mehr vorhanden. Deshalb ist der Würfel „nicht ganz“ dreidimensional! [Weiter](btn:next)
 
 ---
 
@@ -341,9 +341,9 @@ Wir beginnen mit einem festen Würfel und bohren wiederholt immer kleinere Löch
 
 ### Fraktale Küsten
 
-Eines der Hauptmerkmale aller Fraktale, die wir bisher gesehen haben, ist, dass Sie für immer „hineinzoomen“ und immer neue Muster finden können. Um 1920 erkannte der britische Mathematiker [Lewis Fry Richardson](bio:richardson), dass dies auch für die Grenze oder Küste vieler Länder gilt.
+Eines der Hauptmerkmale aller Fraktale, die wir bisher gesehen haben, ist, dass man für immer „hineinzoomen“ kann, und immer neue Muster findet. Um 1920 erkannte der britische Mathematiker [Lewis Fry Richardson](bio:richardson), dass dies auch für die Grenze oder Küste vieler Länder gilt.
 
-Sie beginnen mit der Grundform des Landes und fügen beim Vergrößern Flusseinlässe, Buchten und Flussmündungen sowie einzelne Klippen, Felsen, Kieselsteine usw. hinzu:
+Man beginnt mit der Grundform des Landes und fügen beim Vergrößern Flusseinlässe, Buchten und Flussmündungen sowie einzelne Klippen, Felsen, Kieselsteine usw. hinzu:
 
 ::: column(width=120 parent="padded-thin")
 
@@ -375,7 +375,7 @@ Sie beginnen mit der Grundform des Landes und fügen beim Vergrößern Flusseinl
 
 ::: column.grow
 
-Dies ist ein erhebliches Problem, wenn Sie versuchen, die Länge der Grenze eines Landes zu berechnen. Wie entscheiden Sie, wie weit die Ansicht vergrößert werden soll und welche Ecken und Winkel berücksichtigt werden sollen?
+Dies ist ein erhebliches Problem, wenn Sie versuchen, die Länge der Grenze eines Landes zu berechnen. Wie entscheidet man, wie weit die Ansicht vergrößert werden soll und welche Ecken und Winkel berücksichtigt werden sollen?
 
 Eine Möglichkeit, die Länge der britischen Küste zu messen, besteht beispielsweise darin, ein langes Lineal zu nehmen, den ganzen Weg um die Strände herumzulaufen und dann alle Entfernungen zu addieren.
 
@@ -393,7 +393,7 @@ Wenn das Lineal ${rulers[index]}{index|0|0,8,1} km lang ist, müssen wir es ${co
 
 > id: coastline-grid
 
-Einige Jahrzehnte später stieß der Mathematiker [Benoit Mandelbrot](bio:mandelbrot) bei seiner Arbeit bei IBM auf Richardsons Arbeit in einem weggeworfenen Bibliotheksbuch. Er erkannte seine Bedeutung und auch seine Beziehung zu neueren Forschungen zu Fraktalen und Dimensionen.
+Einige Jahrzehnte später stieß der Mathematiker [Benoit Mandelbrot](bio:mandelbrot) bei seiner Arbeit bei IBM auf Richardsons Arbeit in einem alten Bibliotheksbuch. Er erkannte seine Bedeutung und auch seine Beziehung zu neueren Forschungen zu Fraktalen und Dimensionen.
 
 ::: column(width=340)
 
@@ -406,9 +406,9 @@ Die Küste Großbritanniens sieht sicherlich fraktal aus, ist aber nicht _selbst
 
 {.r.reveal(when="slider-0")} Anfangs gibt es __{.pill.yellow} 88__ sich schneidende Zellen. Wenn wir die Küste um den Faktor 2 skalieren, gibt es __{.pill.yellow} 197__ sich schneidende Zellen - mehr als doppelt so viele! [Weiter](btn:next)
 
-{.r.reveal(when="next-0")} Die Größe der Küste hat sich um den Faktor `§197/88` erhöht. Dies bedeutet nach wie vor, dass die Dimension der Küste ist
+{.r.reveal(when="next-0")} Die Größe der Küste hat sich um den Faktor `§197/88` erhöht. Dies bedeutet, wie vorher, dass die Dimension der Küste
 
-{.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16`
+{.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16` ist.
 
 :::
 
@@ -551,7 +551,7 @@ Wie sich herausstellt, erscheint das Sierpinski-Dreieck in einer Vielzahl andere
 
 ### Pascals Dreieck
 
-Vielleicht erinnern Sie sich bereits an das Sierpinski-Dreieck aus unserem Kapitel über [__Pascals Dreieck__](gloss:pascals-triangle). Dies ist eine Zahlenpyramide, in der jede Zahl die Summe der beiden obigen Zahlen ist. Tippen Sie auf alle _geraden_ Zahlen im Dreieck unten, um sie hervorzuheben - und prüfen Sie, ob Sie ein Muster bemerken:
+Vielleicht erinnerst du dich bereits an das Sierpinski-Dreieck aus unserem Kapitel über [__Pascals Dreieck__](gloss:pascals-triangle). Dies ist eine Zahlenpyramide, in der jede Zahl die Summe der beiden obigen Zahlen ist. Tippe auf alle _geraden_ Zahlen im Dreieck unten, um sie hervorzuheben - und schau ob du ein Muster findest:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -570,9 +570,9 @@ Vielleicht erinnern Sie sich bereits an das Sierpinski-Dreieck aus unserem Kapit
 
 > id: pascal-1
 
-Pascals Dreieck kann für immer nach unten fortgesetzt werden, und das Sierpinski-Muster wird mit immer größeren Dreiecken fortgesetzt. Sie können bereits den Anfang eines noch größeren Dreiecks sehen, beginnend in Zeile 16.
+Pascals Dreieck kann für immer nach unten fortgesetzt werden, und das Sierpinski-Muster wird mit immer größeren Dreiecken fortgesetzt. Du kannst bereits den Anfang eines noch größeren Dreiecks sehen das in Zeile 16 beginnt.
 
-Wenn zwei benachbarte Zellen durch 2 teilbar sind, muss ihre Summe in der Zelle darunter auch durch 2 teilbar sein - deshalb können wir nur farbige Dreiecke (oder einzelne Zellen) erhalten. Natürlich können wir auch versuchen, alle Zellen zu färben, die durch Zahlen _außer 2_ teilbar sind. Was wird Ihrer Meinung nach in diesen Fällen passieren? [Weiter](btn:next)
+Wenn zwei benachbarte Zellen durch 2 teilbar sind, muss ihre Summe in der Zelle darunter auch durch 2 teilbar sein - deshalb können wir nur farbige Dreiecke (oder einzelne Zellen) erhalten. Natürlich können wir auch versuchen, alle Zellen zu färben, die durch _andere Zahlen_ teilbar sind. Was glaubst du wird in diesen Fällen passieren? [Weiter](btn:next)
 
 ---
 
@@ -582,9 +582,9 @@ Wenn zwei benachbarte Zellen durch 2 teilbar sind, muss ihre Summe in der Zelle 
       canvas.pascal(width=960 height=840)
       .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
-Hier sehen Sie eine winzige Version der ersten 128 Reihen des Pascalschen Dreiecks. Wir haben alle Zellen hervorgehoben, die durch ${n}{n|2|2,40,1} teilbar sind - was fällt Ihnen auf?
+Hier ist eine winzige Version der ersten 128 Reihen des Pascalschen Dreiecks. Wir haben alle Zellen hervorgehoben, die durch ${n}{n|2|2,40,1} teilbar sind - was fällt dir auf?
 
-{.reveal(when="var-0")} Für jede Zahl haben wir ein anderes Dreiecksmuster ähnlich dem Sierpinski-Dreieck. Das Muster ist besonders regelmäßig, wenn wir eine [[Primzahl|triangle number|Fibonacci number]] wählen. _{span.reveal(when="blank-0")} Wenn die Zahl _viele verschiedene_ Primfaktoren hat, sieht das Muster zufälliger aus._
+{.reveal(when="var-0")} Für jede Zahl haben wir ein anderes Dreiecksmuster ähnlich dem Sierpinski-Dreieck. Das Muster ist besonders regelmäßig, wenn wir eine [[Primzahl|Dreieckszahl|Fibonacci Zahl]] wählen. _{span.reveal(when="blank-0")} Wenn die Zahl *viele verschiedene* Primfaktoren hat, sieht das Muster weniger regelmäßig aus._
 
     x-gesture(target="#pascal-large x-var" slide="100,0")
 
@@ -607,13 +607,13 @@ Hier sehen Sie eine winzige Version der ersten 128 Reihen des Pascalschen Dreiec
 
 ::: column.grow
 
-Hier sehen Sie die drei Eckpunkte eines gleichseitigen Dreiecks. Tippen Sie auf eine beliebige Stelle im grauen Bereich, um einen vierten Punkt zu erstellen.
+Hier siehst du die drei Eckpunkte eines gleichseitigen Dreiecks. Tippe auf eine beliebige Stelle im grauen Bereich, um einen vierten Punkt zu erstellen.
 
-{.r.reveal(when="point")} Spielen wir ein einfaches Spiel: Wir wählen zufällig einen der Eckpunkte des Dreiecks aus, zeichnen ein Liniensegment zwischen unserem Punkt und dem Scheitelpunkt und finden dann den [{.pill.red} Mittelpunkt](target:p1) dieses Segments. [Weiter](btn:next)
+{.r.reveal(when="point")} Jetzt spielen wir ein einfaches Spiel: Wir wählen zufällig einen der Eckpunkte des Dreiecks aus, zeichnen ein Liniensegment zwischen unserem Punkt und dem Scheitelpunkt und finden dann den [{.pill.red} Mittelpunkt](target:p1) dieses Segments. [Weiter](btn:next)
 
 {.r.reveal(when="next-0")} Nun wiederholen wir den Vorgang: Wir wählen einen anderen zufälligen Scheitelpunkt aus, zeichnen das Segment von unserem letzten Punkt und finden dann den [{.pill.green} Mittelpunkt](target:p2). Beachten Sie, dass wir diese neuen Punkte basierend auf der Farbe des Scheitelpunkts des ausgewählten Dreiecks färben. [Weiter](btn:next)
 
-{.reveal(when="next-1")} Bisher ist nichts Überraschendes passiert - aber sehen Sie zu, wie wir denselben Vorgang noch viele Male wiederholen:
+{.reveal(when="next-1")} Bisher ist nichts Überraschendes passiert - aber schau was passier wenn wir denselben Vorgang noch viele Male wiederholen:
 
 {.text-center.reveal.var(when="next-1")} _{button.btn.btn-red(@click="play()")} 1000 Schritte hinzufügen_
 
@@ -624,13 +624,13 @@ Hier sehen Sie die drei Eckpunkte eines gleichseitigen Dreiecks. Tippen Sie auf 
 > id: fractal-builder
 > goals: s1 s2 shape play
 
-Dieser Vorgang wird als __Chaos Game__ bezeichnet. Am Anfang kann es einige Streupunkte geben, aber wenn Sie dieselben Schritte viele Male wiederholen, sieht die Punktverteilung genau wie das Sierpinski-Dreieck aus!
+Dieser Vorgang wird als __Chaos-Spiel__ bezeichnet. Am Anfang kann es einige Streupunkte geben, aber wenn Sie dieselben Schritte viele Male wiederholen, sieht die Punktverteilung genau wie das Sierpinski-Dreieck aus!
 
 Es gibt viele andere Versionen davon - zum Beispiel könnten wir mit einem Quadrat oder einem Fünfeck beginnen, wir könnten zusätzliche Regeln hinzufügen, wie zum Beispiel, dass wir nicht zweimal hintereinander denselben Scheitelpunkt auswählen können, oder wir könnten den nächsten Punkt in einem Verhältnis auswählen außer `§1/2` entlang des Segments. In einigen dieser Fälle erhalten wir nur eine zufällige Verteilung der Punkte, in anderen Fällen zeigen wir noch mehr Fraktale:
 
     include components/chaos-game
 
-{.reveal(when="s1 s2 play")} Haben Sie den [Sierpinski-Teppich](action:carpet()) oder diese [fünfeckige Schneeflocke](action:snowflake()) entdeckt, die auf dem [__Goldenen Schnitt__](gloss:golden-ratio) basiert?
+{.reveal(when="s1 s2 play")} Hast du den [Sierpinski-Teppich](action:carpet()) oder diese [fünfeckige Schneeflocke](action:snowflake()) entdeckt, die auf dem [__Goldenen Schnitt__](gloss:golden-ratio) basiert?
 
 ---
 
@@ -689,7 +689,7 @@ Es gibt viele Varianten des Sierpinski-Dreiecks und andere Fraktale mit ähnlich
 
 ---
 
-## Das Mandelbrot-Set
+## Die Mandelbrot-Menge
 
 > section: mandelbrot
 > id: iteration
@@ -872,7 +872,7 @@ Wir haben dieses Problem heute nicht - die Bilder unten zeigen alle verschiedene
 > id: mandel-paint
 > goals: wipe-a wipe-b wipe-c
 
-### Das Mandelbrot-Set
+### Die Mandelbrot-Menge
 
 Beim Erstellen der verschiedenen Julia-Mengen haben Sie möglicherweise bemerkt, dass es einige Werte von _c_ gab, für die jede Sequenz divergiert, und die gesamte komplexe Ebene weiß bleibt. Einige Jahrzehnte nach Julia und Fatou versuchte eine neue Generation von Mathematikern abzubilden, wie diese Gebiete aussahen.
 
@@ -906,7 +906,7 @@ Im vorherigen Beispiel haben wir einen festen Wert für `pill(c,"red","c")` ausg
 
 > id: mandel-history
 
-Dieses Fraktal wird als [__Mandelbrot-Set__](gloss:mandelbrot-set) bezeichnet. Wenn es um 90 ° gedreht wird, sieht es fast aus wie eine Person mit Kopf, Körper und zwei Armen. Es wurde 1978 zum ersten Mal in einem Forschungsbericht der Mathematiker Robert Brooks und Peter Matelski definiert und gezeichnet:
+Dieses Fraktal wird als [__Mandelbrot-Menge__](gloss:mandelbrot-set) bezeichnet. Wenn es um 90 ° gedreht wird, sieht es fast aus wie eine Person mit Kopf, Körper und zwei Armen. Es wurde 1978 zum ersten Mal in einem Forschungsbericht der Mathematiker Robert Brooks und Peter Matelski definiert und gezeichnet:
 
     figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
@@ -916,7 +916,7 @@ Einige Jahre später verwendete [Benoit Mandelbrot](bio:mandelbrot) die leistung
 
 > id: mandel-zoom
 
-Wie alle Fraktale können wir das Mandelbrot-Set für immer „vergrößern“ und auf jeder Skala neue Muster finden. Hier können Sie einen Teil des Mandelbrot-Sets vergrößern, der als __Seepferdchen-Tal__ bezeichnet wird. Schwarze Punkte befinden sich _innerhalb von_ der Mandelbrot-Menge, wo die Sequenz begrenzt ist. Farbige Punkte befinden sich _außerhalb von_ der Mandelbrot-Menge, wo die Sequenz divergiert, und die verschiedenen Farben zeigen _an, wie schnell_ es bis ins Unendliche wächst:
+Wie alle Fraktale können wir die Mandelbrot-Menge für immer „vergrößern“ und auf jeder Skala neue Muster finden. Hier kannst du einen Teil der Mandelbrot-Menge vergrößern, der als __Seepferdchen-Tal__ bezeichnet wird. Schwarze Punkte befinden sich _innerhalb von_ der Mandelbrot-Menge, wo die Sequenz begrenzt ist. Farbige Punkte befinden sich _außerhalb von_ der Mandelbrot-Menge, wo die Sequenz divergiert, und die verschiedenen Farben zeigen _an, wie schnell_ es bis ins Unendliche wächst:
 
     .mandel-frame
       - i = 1;
@@ -930,7 +930,7 @@ Wie alle Fraktale können wir das Mandelbrot-Set für immer „vergrößern“ u
 
 > id: mandel-zoom-1
 
-Dieser Schieberegler besteht aus 27 Einzelbildern bis zu einer Zoomstufe von über 14 Billiarden oder `2^54`. Insgesamt dauerte das Rendern auf einem modernen Laptop fast 45 Minuten. Das Mandelbrot-Set kann mit nur einer einfachen Gleichung `§x_n = x_(n-1)^2 + c` erstellt werden, ist jedoch unendlich komplex und atemberaubend schön.
+Dieser Schieberegler besteht aus 27 Einzelbildern bis zu einer Zoomstufe von über 14 Billiarden oder `2^54`. Insgesamt dauerte das Rendern auf einem modernen Laptop fast 45 Minuten. Die Mandelbrot-Menge kann mit nur einer einfachen Gleichung `§x_n = x_(n-1)^2 + c` erstellt werden, ist jedoch unendlich komplex und atemberaubend schön.
 
 ---
 
@@ -972,7 +972,7 @@ Wenn Sie den Wert von [{.pill.red} c](target:c) um die Mandelbrot-Menge verschie
 
 Bernoit Mandelbrot widmete den größten Teil seines Lebens dem Studium der Fraktale sowie der Mathematik der _Rauheit_ und _Selbstähnlichkeit_. Seine Arbeit hatte Anwendungen in Physik, Meteorologie, Neurologie, Wirtschaft, Geologie, Ingenieurwesen, Informatik und vielen anderen Bereichen.
 
-1985 erschien das Mandelbrot-Set auf dem Cover des _Scientific American_ -Magazins und ist seitdem zu einer der bekanntesten mathematischen Formen der Welt geworden. Sie finden es auf T-Shirts, in Musikvideos und als Bildschirmschoner. In vielen populären Büchern und Filmen wurde darauf verwiesen.
+1985 erschien die Mandelbrot-Menge auf dem Cover des _Scientific American_ -Magazins und ist seitdem zu einer der bekanntesten mathematischen Formen der Welt geworden. Sie finden es auf T-Shirts, in Musikvideos und als Bildschirmschoner. In vielen populären Büchern und Filmen wurde darauf verwiesen.
 
 ::: column(width=220)
 
