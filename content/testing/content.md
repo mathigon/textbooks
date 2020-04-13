@@ -47,6 +47,32 @@ Here tap the telegraph.
 
 
 ---
+> section: cheesecake
+> sectionStatus: dev
+> id: cheesecake
+
+## Cheesecake
+
+// lets eat cheesecake
+
+    x-slideshow
+      .stage.cheesecake(slot="stage")
+        figure: include svg/ch.svg
+      .legend(slot="legend") We have a full block.
+      .legend(slot="legend") First we test the 16s place
+      .legend(slot="legend") We subtract 16.
+      .legend(slot="legend") Next we test the 8s place
+      .legend(slot="legend") We subtract 8.
+      .legend(slot="legend") Next we test the 4s place
+      .legend(slot="legend") We cannot subtract 4.
+      .legend(slot="legend") Next we test the 2s place
+      .legend(slot="legend") We cannot subtract 2.
+      .legend(slot="legend") Next we test the 1s place
+      .legend(slot="legend") We subtract 1.
+
+Now it's over
+
+---
 > section: binary-demo
 > sectionStatus: dev
 > id: binary-demo

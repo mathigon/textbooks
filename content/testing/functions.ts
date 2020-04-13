@@ -5,8 +5,8 @@
 
 // nothing to see here, folks
 import {Obj, Color} from '@mathigon/core';
-import {SVGView, animate, InputView, AnimationResponse, ElementView, $, observable} from '@mathigon/boost';
-import {Step, Gameplay} from '../shared/types';
+import {SVGView, animate, InputView, AnimationResponse, ElementView, $, observable, SVGBaseView} from '@mathigon/boost';
+import {Step, Gameplay, Slideshow} from '../shared/types';
 import { Point, Random, SimplePoint } from '@mathigon/fermat';
 
 import './components/barcode';
@@ -106,7 +106,6 @@ export function transistor($section: Step) {
     let switchOn = false;
 
     $switch.on('click', () => {
-        console.log('switch');
         switchOn = !switchOn;
         if (switchOn) turnOn();
         else turnOff();
@@ -144,7 +143,6 @@ export function transistor($section: Step) {
     }
 
     function turnOff() {
-        console.log('move electrons to the safe area');
         // NEXT: e[0:3] move to pathOff.pointAt(0.2, 0.4, 0.6, 0.8);
         // hide them
         $electrons.forEach((e, i) => {
@@ -157,6 +155,153 @@ export function transistor($section: Step) {
             }
         });
     }
+}
+
+export function cheesecake($section: Step) {
+    const $slideshow = $section.$('x-slideshow') as Slideshow;
+    const $svg = $section.$('#ch_full') as SVGView;
+
+    let $blockN = $section.$('#blockN') as SVGView;
+
+    const digits = [16, 8, 4, 2, 1];
+    const $digitBlocks = digits.map(d => $section.$(`#block${d}`) as SVGView);
+    const $digitClaws = digits.map(d => $section.$(`#thingy${d}`) as SVGView);
+    $digitBlocks.forEach(b => b.hide());
+
+    // lower the claw!!!
+    function lowerClaw(digitIndex: number) {
+        const $claw = $digitClaws[digitIndex];
+        const $grab = $claw.$('path') as SVGView;
+        $grab.setTransform(new Point(0, 90));
+        const $arm : SVGView = $claw.$('rect') as SVGView;
+        $arm.setAttr('height', 130);
+    }
+
+    // raise the claw! with or without the block
+    function raiseClaw(digitIndex: number, grabbed: boolean) {
+        const $claw = $digitClaws[digitIndex];
+
+        const $grab = $claw.$('path') as SVGView;
+        $grab.setTransform(new Point(0, 0));
+
+        const $arm : SVGView = $claw.$('rect') as SVGView;
+        $arm.setAttr('height', 40);
+
+        if (grabbed) {
+            $digitBlocks[digitIndex].show();
+            $digitBlocks[digitIndex].setTransform(new Point(xpos[digitIndex], 146));
+        }
+    }
+
+    // can be abstracted for any thingy
+    function moveClawToHeight(id: string, height: number) {
+        const $thingy1 = $section.$(id) as SVGView;
+        const claw = $thingy1.$('path') as SVGView;
+        claw.setTransform(new Point(0, height - 40));
+        const arm : SVGView = $thingy1.$('rect') as SVGView;
+        arm.setAttr('height', height);
+    }
+
+    function moveBlock($block: SVGView, x: number) {
+        const blockY = 234;
+        $block.setTransform(new Point(x, blockY))
+    }
+    const basex = 473;
+    const xpos = [0, 227, 374, 445, 496]; // translate.x vals
+
+    function splitBlock(digitIndex: number, N: number) {
+        const blockY = 234;
+        $digitBlocks[digitIndex].show();
+
+        const placeValue = digits[digitIndex];
+        let newN = N - placeValue;
+        // change width
+        $blockN.$('rect')?.setAttr('width', newN * 10);
+        // translate, move to end of claw.
+        $blockN.setTransform(
+            new Point(basex + xpos[digitIndex] + digits[digitIndex] * 10,
+                blockY));
+        
+        // change text
+        if (newN == 0) {
+            $blockN.hide();
+            return;
+        } else {
+            let textBuffer = newN >= 10 ? 14 : 7;
+            $blockN.$('tspan')!.setAttr('x', (newN * 10) / 2 - textBuffer); // text positioning
+            $blockN.$('tspan')!.textStr = newN;
+        }
+
+    }
+
+    // 
+    $slideshow.on('next', (x: number) => {
+        switch (x) {
+            // 16
+            case 1:               
+                lowerClaw(0);
+                moveBlock($blockN, xpos[0] + basex);                
+                splitBlock(0, 25);
+                break;
+            case 2:
+                raiseClaw(0, true);
+                break;
+
+            //8
+            case 3:
+                lowerClaw(1);
+                moveBlock($blockN, xpos[1] + basex);
+                splitBlock(1, 9);
+                break;
+
+            case 4:
+                raiseClaw(1, true);
+                break;
+
+            // 4
+            case 5:
+                lowerClaw(2);
+                moveBlock($blockN, xpos[2] + basex);
+                break;
+            case 6:
+                raiseClaw(2, false);
+                break;
+
+            // 2
+            case 7:
+                lowerClaw(3);
+                moveBlock($blockN, xpos[3] + basex);
+                break;
+            case 8:
+                raiseClaw(3, false);
+                break;
+
+            // 1
+            case 9:
+                lowerClaw(4);
+                moveBlock($blockN, xpos[4] + basex);
+                splitBlock(4, 1);
+                break;
+            case 10:
+                raiseClaw(4, true);
+                break;
+        }
+        
+    });
+
+    $slideshow.on('back', (x: number) => {
+        switch (x) {
+            case 0:
+                raiseClaw(0, false);
+                moveBlock($blockN, 166);
+                break;
+            case 1:
+                raiseClaw(1, false);
+                lowerClaw(0);
+                moveBlock($blockN, xpos[0] + basex);
+                break;
+        }
+    });
 }
 
 export function emojiBoard($section: Step) {
