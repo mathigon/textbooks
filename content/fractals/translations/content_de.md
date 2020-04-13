@@ -988,6 +988,3 @@ Bernoit Mandelbrot widmete den größten Teil seines Lebens dem Studium der Frak
 > sectionStatus: dev
 
 {.todo} Bald erhältlich!
-
-
-
