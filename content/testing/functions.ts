@@ -167,7 +167,9 @@ export function cheesecake($section: Step) {
     const digits = [16, 8, 4, 2, 1];
     const $digitBlocks = digits.map(d => $section.$(`#block${d}`) as SVGView);
     const $digitClaws = digits.map(d => $section.$(`#thingy${d}`) as SVGView);
+    const $digitText = digits.map(d => $section.$(`#digit${d}`) as SVGView);
     $digitBlocks.forEach(b => b.hide());
+    $digitText.forEach(t => t.hide());
 
     // spacing constants
     const CLAW_START_Y = 40;
@@ -336,6 +338,7 @@ export function cheesecake($section: Step) {
             case 2:            
                 raiseClaw(0, Nbinary[0]);
                 if (Nbinary[0]) splitBlock(0, Nvals[0]);
+                setTimeout(() => $digitText[0].show(), DURATION1);
                 break;
 
             //8
@@ -347,6 +350,7 @@ export function cheesecake($section: Step) {
             case 4:
                 if (Nbinary[1]) splitBlock(1, Nvals[1]);
                 raiseClaw(1, Nbinary[1]);
+                setTimeout(() => $digitText[1].show(), DURATION1);
                 break;
 
             // 4
@@ -357,6 +361,7 @@ export function cheesecake($section: Step) {
             case 6:
                 if (Nbinary[2]) splitBlock(2, Nvals[2]);
                 raiseClaw(2, Nbinary[2]);
+                setTimeout(() => $digitText[2].show(), DURATION1);
                 break;
 
             // 2
@@ -367,6 +372,7 @@ export function cheesecake($section: Step) {
             case 8:
                 if (Nbinary[3]) splitBlock(3, Nvals[3]);
                 raiseClaw(3, Nbinary[3]);
+                setTimeout(() => $digitText[3].show(), DURATION1);
                 break;
 
             // 1
@@ -377,6 +383,7 @@ export function cheesecake($section: Step) {
             case 10:
                 raiseClaw(4, Nbinary[4]);
                 if (Nbinary[4]) splitBlock(4, Nvals[4]);
+                setTimeout(() => $digitText[4].show(), DURATION1);
                 break;
         }
         
@@ -393,6 +400,7 @@ export function cheesecake($section: Step) {
             case 1:
                 lowerClaw(0, true);
                 mergeBlocks(0, 9);
+                $digitText[0].hide();
                 break;
 
             case 2:
@@ -403,6 +411,7 @@ export function cheesecake($section: Step) {
             case 3:
                 lowerClaw(1, true);
                 mergeBlocks(1, 1);
+                $digitText[1].hide();
                 break;
 
             case 4:
@@ -413,6 +422,7 @@ export function cheesecake($section: Step) {
             case 5:
                 lowerClaw(2, false);
                 // mergeBlocks(1, 1);
+                $digitText[2].hide();
                 break;
 
             case 6:
@@ -423,6 +433,7 @@ export function cheesecake($section: Step) {
             case 7:
                 lowerClaw(3, false);
                 // mergeBlocks(1, 1);
+                $digitText[3].hide();
                 break;
 
             case 8:
@@ -433,6 +444,7 @@ export function cheesecake($section: Step) {
             case 9:
                 lowerClaw(4, true);
                 mergeBlocks(4, 0);
+                $digitText[4].hide();
                 break;
         }
     });

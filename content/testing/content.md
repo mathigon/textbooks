@@ -51,26 +51,34 @@ Here tap the telegraph.
 > sectionStatus: dev
 > id: cheesecake
 
-## Cheesecake
+## Converting Decimal to Binary
 
-// lets eat cheesecake
+How do we convert from decimal to binary? Follow the animation below.
 
     x-slideshow
       .stage.cheesecake(slot="stage")
         figure: include svg/ch.svg
-      .legend(slot="legend") We have a full block of 25.
-      .legend(slot="legend") First we test the 16s place
-      .legend(slot="legend") We subtract 16.
-      .legend(slot="legend") Next we test the 8s place
-      .legend(slot="legend") We subtract 8.
-      .legend(slot="legend") Next we test the 4s place
-      .legend(slot="legend") We cannot subtract 4.
-      .legend(slot="legend") Next we test the 2s place
-      .legend(slot="legend") We cannot subtract 2.
-      .legend(slot="legend") Next we test the 1s place
-      .legend(slot="legend") We subtract 1.
+      .legend(slot="legend") We have a full block of length 25.
+      .legend(slot="legend") We always start with the leftmost digit. In this case, 16 is the largest power of 2 that can fit into 25. So first we test the 16s place.
+      .legend(slot="legend") We subtract 16, so we write a *1* in the 16s place. We're left with 9.
+      .legend(slot="legend") Next we test the 8s place. 
+      .legend(slot="legend") We can subtract 8, so we write a *1* in the 8s place. We're left with 1.
+      .legend(slot="legend") Next we test the 4s place.
+      .legend(slot="legend") We cannot subtract 4, so we write a *0* in the 4s place.
+      .legend(slot="legend") Next we test the 2s place.
+      .legend(slot="legend") We cannot subtract 2, so we write a *0* in the 2s place.
+      .legend(slot="legend") Next we test the 1s place.
+      .legend(slot="legend") We can subtract 1, so we write a *1* in the 1s place. We're left with 0.
 
-Now it's over
+
+Here is that simple method put into steps. 
+// BUTTER: format it
+When converting decimal number N into binary:
+1. Start with the highest power of 2^n, d, that you can subtract from N. 
+2. If you can subtract d from N, then write a 1 in that place and continue with N = N - d.
+3. If you cannot subtract d from N, then write a 0 in that place and continue with N = N.
+4. Divide d by 2 to get the next digits place.
+5. Repeat steps 2 through 4 until you have written the 1s place.
 
 ---
 > section: binary-demo
