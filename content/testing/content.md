@@ -46,6 +46,87 @@ Here tap the telegraph.
     figure: include svg/telegraph.svg
 
 ---
+> section: bracket
+> sectionStatus: dev
+> id: bracket
+
+## Introducing Binary Digits
+
+With each finger that we add, our number of options multiplies by two.
+
+    svg.bracket(width=600 height=320)
+      - var textb = 4
+      g#b32
+        - var i = 0
+        while i < 32
+          line(x1=500 y1=10+i*10 x2=600 y2=10+i*10)
+          line(x1=500 y1=10+i*10+(i%2==0?5:-5) x2=500 y2=10+i*10)
+          text(x=550 y=10+i*10-1 font-size=12)= i%2
+          - i += 1
+      g#b16
+        - var i = 0
+        while i < 16
+          line(x1=400 y1=15+i*20 x2=500 y2=15+i*20)
+          line(x1=400 y1=15+i*20+(i%2==0?10:-10) x2=400 y2=15+i*20)
+          text(x=450 y=15+i*20-textb font-size=16)= i%2
+          - i += 1
+      g#b8
+        - var i = 0
+        while i < 8
+          line(x1=300 y1=25+i*40 x2=400 y2=25+i*40)
+          line(x1=300 y1=25+i*40+(i%2==0?20:-20) x2=300 y2=25+i*40)
+          text(x=350 y=25+i*40-textb font-size=20)= i%2
+          -i += 1
+      g#b4
+        - var i = 0
+        while i < 4
+          line(x1=200 y1=45+i*80 x2=300 y2=45+i*80)
+          line(x1=200 y1=45+i*80+(i%2==0?40:-40) x2=200 y2=45+i*80)
+          text(x=250 y=45+i*80-textb font-size=30)= i%2
+          -i += 1
+      g#b2
+        - var i = 0
+        while i < 2
+          line(x1=100 y1=85+i*160 x2=200 y2=85+i*160)
+          line(x1=100 y1=85+i*160+(i%2==0?80:-80) x2=100 y2=85+i*160)
+          text(x=150 y=85+i*160-textb font-size=40)= i%2
+          -i += 1
+      g#b1
+        - var i = 0
+        while i < 1
+          line(x1=0 y1=165+i*320 x2=100 y2=165+i*320)
+          -i += 1
+
+
+    x-slider.bracket(steps=6 speed=0.5)
+
+We can get our five-digit binary number by following any path from beginning to end.
+
+---
+> section: flower
+> sectionStatus: dev
+> id: flower
+
+## New page for flowers
+
+::: column(width=300)
+
+    svg.petals(width=300 height=300)
+      circle(r=1 cx=150 cy=150)
+      - var i = 0
+      while i < 40
+        path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
+        - i += 1
+
+    x-slider.flower(steps=39 speed=0.5)
+
+:::
+
+
+- a table for filling in digit values
+- ???
+
+---
 > section: bin2dec
 > sectionStatus: dev
 > id: bin2dec
@@ -53,6 +134,8 @@ Here tap the telegraph.
 ## Converting Binary to Decimal
 
 See how to do multiple step thingies in // ALGEBRA:
+
+Could do this, but plenty of other things I could do...
 
 
 ---

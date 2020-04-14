@@ -6,7 +6,7 @@
 // nothing to see here, folks
 import {Obj, Color} from '@mathigon/core';
 import {SVGView, animate, InputView, AnimationResponse, ElementView, $, observable, SVGBaseView} from '@mathigon/boost';
-import {Step, Gameplay, Slideshow} from '../shared/types';
+import {Step, Gameplay, Slideshow, Slider} from '../shared/types';
 import { Point, Random, SimplePoint } from '@mathigon/fermat';
 
 import './components/barcode';
@@ -71,6 +71,88 @@ export function morseDemo($section: Step) {
         console.log('translate!!');
 
     });
+}
+
+/**
+ * A representation of adding another finger to count on. on/off
+ * Multiplies by two with each number.
+ * 
+ * DIGITZ: don't animate the first guy showing up (off-by-one)
+ * DIGITZ: better commenting
+ * DIGITZ: surrounding exposition (see GDocs)
+ * 
+ * @param $step 
+ */
+export function bracket($step: Step) {
+
+    let lastStep = 0;
+
+    const $slider = $step.$('x-slider.bracket') as Slider;
+    console.log($slider);
+
+    const $rounds = $step.$$('g');
+    const count = $rounds.length;
+
+    function move(x: number) {
+        let direction = x - lastStep;
+        lastStep = x;
+
+        for (let i=0; i < x; i++) {
+            $rounds[count - 1 - i].show();
+        }
+        for (let i = x + 1; i < count; i++) {
+            $rounds[count - 1 - i].hide();
+        }
+
+        if (x == 0) return;
+        if (direction > 0) {
+            let $lines = $rounds[count - x].$$('line');
+            $lines.forEach((l, i) => {
+                if (i % 2 == 0) {
+                    l.animate({
+                        transform: [
+                            `translate(-50px, 0px) scale(0.0, 1.0)`, 
+                            `translate(0px, 0px) scale(1.0, 1.0)`
+                    ]}, 400, 100);
+                }
+            });
+        } else {
+
+        } 
+    }
+
+    $slider.on('move', move);
+    move(lastStep);
+}
+
+// DIGITZ:
+export function flower($step: Step) {
+    // copy stuff from sunflower
+    const $petals = $step.$$('svg path');
+    const $bulb = $step.$('svg circle')!;
+    const $slider = $step.$('x-slider.flower') as Slider;
+    console.log($slider);
+    const count = $petals.length;
+
+    function move(x: number) {
+        for (let i=0; i <= x; ++i) {
+            let t = 3.883222 * i;
+            let r = Math.sqrt((x-i) / count);
+            let cx = r * 70 * Math.cos(t);
+            let cy = r * 70 * Math.sin(t);
+            $petals[i].setTransform(new Point(cx, cy), t, 1.5 + r);
+        }
+
+        for (let i = x + 1; i < count; ++i) {
+            let t = 3.883222 * i;
+            $petals[i].setTransform(undefined, t, 0.05);
+        }
+        $bulb.setTransform(undefined, 0, 1 + 69 * Math.sqrt(x / count));
+
+    }
+
+    $slider.on('move', move);
+    move(0);
 }
 
 export function telegraph($section: Step) {

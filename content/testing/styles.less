@@ -17,6 +17,20 @@
     cursor: pointer; 
 }
 
+.bracket line {stroke: black}
+
+// petals
+.petals circle { fill: darken(@green, 25%); transition: transform .3s; }
+
+.petals path {
+  transition: transform .3s;
+  transform-origin: 0 center;
+  fill: @green;
+  stroke: darken(@green, 10%);
+  // vector-effect: non-scaling-stroke;
+}
+
+
 .emoji-table tr {
     margin: 20px;
 }
