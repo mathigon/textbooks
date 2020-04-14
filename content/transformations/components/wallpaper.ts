@@ -237,6 +237,7 @@ function drawPoint(ctx: CanvasRenderingContext2D, group: number, point: Point) {
   }
 }
 
+// BARCODE: how to register a thing
 @register('x-wallpaper', {templateId: '#wallpaper'})
 export class Wallpaper extends CustomElementView {
 

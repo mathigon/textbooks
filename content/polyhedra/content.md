@@ -1384,6 +1384,7 @@ Up to now we have just looked at what we can do with polygons in a flat,
 two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
 object that is made up of polygons. Here are some examples:
 
+        // BARCODE: alternative to creating a mixin
 ::: column.padded-thin(width=220)
     x-polyhedron#poly1(size=220 shape="PentagonalPrism")
 ::: column(width=220)

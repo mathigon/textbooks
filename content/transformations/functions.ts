@@ -317,6 +317,7 @@ export function footsteps($step: Step) {
   });
 }
 
+// BARCODE: possibly for drawing?
 export function drawing($step: Step) {
   const $wallpaper = $step.$('x-wallpaper') as Wallpaper;
   let switched = false;

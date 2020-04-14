@@ -45,6 +45,15 @@ Here tap the telegraph.
 
     figure: include svg/telegraph.svg
 
+---
+> section: bin2dec
+> sectionStatus: dev
+> id: bin2dec
+
+## Converting Binary to Decimal
+
+See how to do multiple step thingies in // ALGEBRA:
+
 
 ---
 > section: cheesecake
@@ -198,6 +207,13 @@ When converting decimal number N into binary:
     div.output
 
 ---
+> section: barcode
+> sectionStatus: dev
+> id: barcode
+
+// BARCODE:... can I make a special element?
+
+---
 >id: raaace
 
 ## Misc
@@ -295,6 +311,10 @@ In this short game you have to determine the parity of a binary number, as fast 
             .parity-bubble: .btn.btn-blue 0
             .parity-bubble: .btn.btn-blue 1
 
+
+// HAMMING:
+- see HAMMING in triangles to animate numbers moving (I also did this with cheesecake)
+- 
 ---
 
 ## Barcode

@@ -212,6 +212,7 @@ export function pythagorasProof($step: Step) {
         $step.scores.has('blank-1') && model.x > 0.9);
   }
 
+  // HAMMING: mimic the way these triangles move... It's clearly setting some 'x' value in the shape model.
   model.set('x', 0);
   const $slider = $step.$('.proof-1 x-slider') as Slider;
   $slider.on('move', n => {

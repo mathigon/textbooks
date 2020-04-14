@@ -1,0 +1,87 @@
+{
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        "DEBUG:",
+        "REVIEW:",
+        {
+            "text": "NOTE:",
+            "color": "#ff0000",
+            "backgroundColor": "yellow",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "BUTTER:",
+            "color": "#000000",
+            "backgroundColor": "#F3E7AF",
+            "isWholeLine": false
+        },
+        {
+            "text": "BINPATTERN:",
+            "color": "#ffffff",
+            "backgroundColor": "purple",
+            "isWholeLine": false
+        },
+        {
+            "text": "FINGERFADE:",
+            "color": "#1EE2F8",
+            "backgroundColor": "#030110",
+            "isWholeLine": false
+        },
+        {
+            "text": "UNIT:",
+            "color": "#FFFFFF",
+            "backgroundColor": "#52121E"
+        },
+        {
+            "text": "KRI8:",
+            "color": "#ffffff",
+            "backgroundColor": "#31B304"
+        },
+        {
+            "text": "EMOJI:",
+            "color": "#2E2E2E",
+            "backgroundColor": "#F5BD1B"
+        },
+        {
+            "text": "GRAPHS:",
+            "color": "#ffffff",
+            "backgroundColor": "#96010E"
+        },
+        {
+            "text": "HAMMING:",
+            "color": "#ffffff",
+            "backgroundColor": "#003365"
+        },
+        {
+            "text": "ALGEBRA:",
+            "color": "#ffffff",
+            "backgroundColor": "#472D70",
+            "comment": "May be useful in multi-step problems, e.g. converting binary to decimal"
+        },
+        {
+            "text": "BARCODE:",
+            "color": "#ffffff",
+            "backgroundColor": "#000000"
+        }
+
+    ],
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.md"
+    ],
+    "todohighlight.exclude": [
+        "**/node_modules/**",
+        "**/server/**",
+        "**/.vscode/**",
+        "**/.github/**"
+    ],
+    "todohighlight.toggleURI": true
+}

@@ -153,7 +153,7 @@ we can calculate the remaining amount of <sup>14</sup>C atoms over time:
 ---
 > id: radioactive-table-2
 
-As you can see, we’re multiplying by `§1/2` at every step, just like a
+As you can see, we’re multiplying by `$1/2` at every step, just like a
 [[geometric|arithmetic|Fibonacci]] sequence.
 
 ---
@@ -161,12 +161,12 @@ As you can see, we’re multiplying by `§1/2` at every step, just like a
 
 Using exponents, we can write down an equation for the amount left after `t` years:
 
-{.text-center} `§"amount" = 1200 × (1/2)^(t/6000)`
+{.text-center} `$"amount" = 1200 × (1/2)^(t/6000)`
 
 Of course 1200 and 6000 were just arbitrary numbers. A more general equation
 is:
 
-{.text-center} `§"amount" = "initial" × 2^((-t)/"half-life")`
+{.text-center} `$"amount" = "initial" × 2^((-t)/"half-life")`
 
 Since the equation contains an _exponent_, and the number of atoms _decreases_,
 we call this process __exponential decay__.
@@ -227,6 +227,8 @@ Pharaoh died|age of the Pharaoh when he died]].
 > id: carbon-solver
 
 We can use the equation we found above, and fill in the required parameters:
+
+    // ALGEBRA: mimic this.
 
 ::: x-algebra-flow
 

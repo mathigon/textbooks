@@ -25,7 +25,7 @@ const scales: Obj<number> = {
   Tetrahedron: 1.1
 };
 
-
+// BARCODE: alternative to creating a mixin!
 @register('x-polyhedron')
 export class Polyhedron extends Solid {
 

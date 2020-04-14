@@ -5,6 +5,11 @@
     // http://plus.maths.org/content/exploring-enigma
     // http://nrich.maths.org/2198
 
+## Morse Code
+
+// TODO
+
+
 ## Simple Codes
 
 > section: introduction
@@ -78,7 +83,7 @@ Look at all the different values we can represent using our fingers.
             // FINGERFADE: make this binary
             td: div.bin-finger(padding="1px")
               x-media(src="images/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=60 height=60)
-              .caption= "lmao " + n
+              .caption= n
           
 
     button.appear FINGERS
