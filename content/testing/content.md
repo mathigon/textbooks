@@ -58,7 +58,7 @@ Here tap the telegraph.
     x-slideshow
       .stage.cheesecake(slot="stage")
         figure: include svg/ch.svg
-      .legend(slot="legend") We have a full block.
+      .legend(slot="legend") We have a full block of 25.
       .legend(slot="legend") First we test the 16s place
       .legend(slot="legend") We subtract 16.
       .legend(slot="legend") Next we test the 8s place

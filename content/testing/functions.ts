@@ -159,58 +159,121 @@ export function transistor($section: Step) {
 
 export function cheesecake($section: Step) {
     const $slideshow = $section.$('x-slideshow') as Slideshow;
-    const $svg = $section.$('#ch_full') as SVGView;
-
+    
+    // the remainder block
     let $blockN = $section.$('#blockN') as SVGView;
 
+    // elements for each digit
     const digits = [16, 8, 4, 2, 1];
     const $digitBlocks = digits.map(d => $section.$(`#block${d}`) as SVGView);
     const $digitClaws = digits.map(d => $section.$(`#thingy${d}`) as SVGView);
     $digitBlocks.forEach(b => b.hide());
 
-    // lower the claw!!!
-    function lowerClaw(digitIndex: number) {
+    // spacing constants
+    const CLAW_START_Y = 40;
+    const CLAW_END_Y = 130;
+    const ARM_Y_SCALE = CLAW_END_Y/CLAW_START_Y; 
+    const BLOCK_Y = 234;
+    const BLOCK_Y_HIGH = 146;
+    const BLOCK_X_START = 166;
+    const basex = 473;
+    const BLOCK_X_POSITIONS = [0, 227, 374, 445, 496]; // translate.x vals
+
+    // timing constants
+    const DURATION1 = 400,
+          DURATION2 = 400;
+
+    // values for N=25
+    const Nvals = [25, 9, 1, 1, 1];
+    const Nbinary = [true, true, false, false, true];
+
+    /**
+     * Animate lowering of the claw
+     * @param digitIndex the index of the claw
+     * @param grabbed if true, lower the block with it
+     */
+    function lowerClaw(digitIndex: number, grabbed: boolean) {
         const $claw = $digitClaws[digitIndex];
+
         const $grab = $claw.$('path') as SVGView;
-        $grab.setTransform(new Point(0, 90));
+        $grab.animate({
+            transform: ['none', `translate(0px, ${CLAW_END_Y - CLAW_START_Y}px)`]}
+            , DURATION1, grabbed ? 0 : DURATION2);
+
         const $arm : SVGView = $claw.$('rect') as SVGView;
-        $arm.setAttr('height', 130);
+        $arm.animate({transform: ['none', `scale(1.0, ${ARM_Y_SCALE})`]}, 
+            DURATION1, grabbed ? 0 : DURATION2);
+    
+        // when going in reverse with an already grabbed slice, we must lower it 
+        if (grabbed) {
+            $digitBlocks[digitIndex].animate({transform: [
+                `translate(${BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y_HIGH}px)`,
+                `translate(${BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)` 
+            ]}, DURATION1);
+        }
     }
 
-    // raise the claw! with or without the block
+    /**
+     * Animate raising of the claw
+     * @param digitIndex the index of the claw
+     * @param grabbed if true, raise the block with it
+     */
     function raiseClaw(digitIndex: number, grabbed: boolean) {
         const $claw = $digitClaws[digitIndex];
 
         const $grab = $claw.$('path') as SVGView;
-        $grab.setTransform(new Point(0, 0));
+        $grab.animate({transform: [`translate(0px, ${CLAW_END_Y - CLAW_START_Y}px)`, 'none']},
+            DURATION1);
 
         const $arm : SVGView = $claw.$('rect') as SVGView;
-        $arm.setAttr('height', 40);
+        $arm.animate({transform: [`scale(1.0, ${ARM_Y_SCALE})`, 'none']}, DURATION1);
 
         if (grabbed) {
             $digitBlocks[digitIndex].show();
-            $digitBlocks[digitIndex].setTransform(new Point(xpos[digitIndex], 146));
+            $digitBlocks[digitIndex].animate({transform: [
+                `translate(${BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)`, 
+                `translate(${BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y_HIGH}px)`
+            ]}, DURATION1);
         }
     }
 
-    // can be abstracted for any thingy
-    function moveClawToHeight(id: string, height: number) {
-        const $thingy1 = $section.$(id) as SVGView;
-        const claw = $thingy1.$('path') as SVGView;
-        claw.setTransform(new Point(0, height - 40));
-        const arm : SVGView = $thingy1.$('rect') as SVGView;
-        arm.setAttr('height', height);
-    }
+    /**
+     * Move a block between two digits.
+     * @param startDigit the index of the starting digit
+     * @param endDigit the index of the ending digit
+     */
+    function moveBlockBetweenDigits(startDigit: number, endDigit: number) {
+        // left to right
+        if (startDigit < endDigit) {
+            let startX = startDigit < 0 ? BLOCK_X_START : Nbinary[startDigit] ? getClawEnd(startDigit): getClawStart(startDigit);
+            $blockN.animate({transform: [
+                `translate(${startX}px, ${BLOCK_Y}px)`, 
+                `translate(${getClawStart(endDigit)}px, ${BLOCK_Y}px)`]},
+            DURATION1);
+        } else {
+            // right to left
+            let endX = endDigit < 0 ? BLOCK_X_START : Nbinary[endDigit] ? getClawEnd(endDigit) : getClawStart(endDigit);
+            $blockN.animate({ transform: [
+                `translate(${getClawStart(startDigit)}px, ${BLOCK_Y}px)`,
+                `translate(${endX}px, ${BLOCK_Y}px)`]},
+            DURATION2, DURATION1);
+        }
 
-    function moveBlock($block: SVGView, x: number) {
-        const blockY = 234;
-        $block.setTransform(new Point(x, blockY))
-    }
-    const basex = 473;
-    const xpos = [0, 227, 374, 445, 496]; // translate.x vals
+        function getClawStart(index: number) {
+            return basex + BLOCK_X_POSITIONS[index];
+        }
 
+        function getClawEnd(index: number) {
+            return basex + BLOCK_X_POSITIONS[index] + digits[index] * 10
+        }
+    }
+    
+    /**
+     * Split $blockN into two blocks.
+     * @param digitIndex index of the digit
+     * @param N the current size of $blockN
+     */
     function splitBlock(digitIndex: number, N: number) {
-        const blockY = 234;
         $digitBlocks[digitIndex].show();
 
         const placeValue = digits[digitIndex];
@@ -218,9 +281,11 @@ export function cheesecake($section: Step) {
         // change width
         $blockN.$('rect')?.setAttr('width', newN * 10);
         // translate, move to end of claw.
-        $blockN.setTransform(
-            new Point(basex + xpos[digitIndex] + digits[digitIndex] * 10,
-                blockY));
+        // technically it's not moving
+        $blockN.animate({transform: [
+            `translate(${basex + BLOCK_X_POSITIONS[digitIndex] + digits[digitIndex] * 10}px, ${BLOCK_Y}px)`,
+            `translate(${basex + BLOCK_X_POSITIONS[digitIndex] + digits[digitIndex] * 10}px, ${BLOCK_Y}px)`]
+        }, DURATION1);
         
         // change text
         if (newN == 0) {
@@ -231,74 +296,143 @@ export function cheesecake($section: Step) {
             $blockN.$('tspan')!.setAttr('x', (newN * 10) / 2 - textBuffer); // text positioning
             $blockN.$('tspan')!.textStr = newN;
         }
-
     }
 
-    // 
+    /**
+     * Merge blocks $blockN and the digit block
+     * @param digitIndex index of the digit
+     * @param N the current size of $blockN
+     */
+    function mergeBlocks(digitIndex: number, N: number) {
+        // Example... lower 8 back onto 17
+        // $block8 disappears ($digitBlocks[digitIndex].hide(); )
+        // $blockN goes back to its current size + 8
+        const newN = digits[digitIndex] + N;
+        console.log(newN);
+
+        setTimeout(() => {
+            $digitBlocks[digitIndex].hide();
+            $blockN.show();
+            $blockN.$('rect')?.setAttr('width', newN * 10);
+            $blockN.animate({transform: [
+                `translate(${basex + BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)`,
+                `translate(${basex + BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)`]},
+            DURATION1, DURATION2);
+            // $blockN moves back to the beginning of the thing
+            let textBuffer = newN >= 10 ? 14 : 7; // make room for two-digit or one
+            $blockN.$('tspan')!.setAttr('x', (newN * 10) / 2 - textBuffer); // text positioning
+            $blockN.$('tspan')!.textStr = newN;
+        }, DURATION1 + DURATION2);
+    }
+
     $slideshow.on('next', (x: number) => {
+        // BUTTER: these could be abstracted by checking even/odd and using single index
         switch (x) {
             // 16
             case 1:               
-                lowerClaw(0);
-                moveBlock($blockN, xpos[0] + basex);                
-                splitBlock(0, 25);
+                lowerClaw(0, false);
+                moveBlockBetweenDigits(-1, 0);
                 break;
-            case 2:
-                raiseClaw(0, true);
+            case 2:            
+                raiseClaw(0, Nbinary[0]);
+                if (Nbinary[0]) splitBlock(0, Nvals[0]);
                 break;
 
             //8
             case 3:
-                lowerClaw(1);
-                moveBlock($blockN, xpos[1] + basex);
-                splitBlock(1, 9);
+                lowerClaw(1, false);
+                moveBlockBetweenDigits(0, 1);
                 break;
 
             case 4:
-                raiseClaw(1, true);
+                if (Nbinary[1]) splitBlock(1, Nvals[1]);
+                raiseClaw(1, Nbinary[1]);
                 break;
 
             // 4
             case 5:
-                lowerClaw(2);
-                moveBlock($blockN, xpos[2] + basex);
+                lowerClaw(2, false);
+                moveBlockBetweenDigits(1, 2);
                 break;
             case 6:
-                raiseClaw(2, false);
+                if (Nbinary[2]) splitBlock(2, Nvals[2]);
+                raiseClaw(2, Nbinary[2]);
                 break;
 
             // 2
             case 7:
-                lowerClaw(3);
-                moveBlock($blockN, xpos[3] + basex);
+                lowerClaw(3, false);
+                moveBlockBetweenDigits(2, 3);
                 break;
             case 8:
-                raiseClaw(3, false);
+                if (Nbinary[3]) splitBlock(3, Nvals[3]);
+                raiseClaw(3, Nbinary[3]);
                 break;
 
             // 1
             case 9:
-                lowerClaw(4);
-                moveBlock($blockN, xpos[4] + basex);
-                splitBlock(4, 1);
+                lowerClaw(4, false);
+                moveBlockBetweenDigits(3, 4);            
                 break;
             case 10:
-                raiseClaw(4, true);
+                raiseClaw(4, Nbinary[4]);
+                if (Nbinary[4]) splitBlock(4, Nvals[4]);
                 break;
         }
         
     });
 
+    // BUTTER: these could be abstracted by checking even/odd and using single index
     $slideshow.on('back', (x: number) => {
         switch (x) {
             case 0:
                 raiseClaw(0, false);
-                moveBlock($blockN, 166);
+                moveBlockBetweenDigits(0, -1); // when moving in reverse, logic is different
                 break;
+
             case 1:
+                lowerClaw(0, true);
+                mergeBlocks(0, 9);
+                break;
+
+            case 2:
                 raiseClaw(1, false);
-                lowerClaw(0);
-                moveBlock($blockN, xpos[0] + basex);
+                moveBlockBetweenDigits(1, 0); 
+                break;
+
+            case 3:
+                lowerClaw(1, true);
+                mergeBlocks(1, 1);
+                break;
+
+            case 4:
+                raiseClaw(2, false);
+                moveBlockBetweenDigits(2, 1); 
+                break;
+
+            case 5:
+                lowerClaw(2, false);
+                // mergeBlocks(1, 1);
+                break;
+
+            case 6:
+                raiseClaw(3, false);
+                moveBlockBetweenDigits(3, 2); 
+                break;
+
+            case 7:
+                lowerClaw(3, false);
+                // mergeBlocks(1, 1);
+                break;
+
+            case 8:
+                raiseClaw(4, false);
+                moveBlockBetweenDigits(4, 3); 
+                break;
+
+            case 9:
+                lowerClaw(4, true);
+                mergeBlocks(4, 0);
                 break;
         }
     });
