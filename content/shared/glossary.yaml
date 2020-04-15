@@ -309,12 +309,17 @@ complete-graph:
     A complete graph with _n_ vertices has `(n×(n-1))/2` edges.
   link: /course/graph-theory/handshakes#handshakes-3
 
-complex-number:
-  title: Complex Number
-  text: The __complex numbers__ are all numbers that are the sum or difference
+complex-numbers:
+  title: Complex Numbers
+  text: |
+    The __complex numbers__ are all numbers that are the sum or difference
     of a real and an imaginary number. They are often written as `a + bi`,
-    where _a_ is the real part and _b_ is the imaginary part. The set of all
-    complex numbers is often denoted using the symbol `CC`.
+    where _a_ is the real part and _b_ is the imaginary part.
+
+    Complex numbers can be represented on a 2-dimensional plane, where the
+    _x_-axis are the real numbers, and the _y_-axis are the imginary numbers.
+
+    The set of all complex numbers is often denoted using the symbol `CC`.
 
 composite-number:
   title: Composite Number
@@ -611,10 +616,12 @@ formula:
 
 fractal:
   title: Fractal
-  text: A __fractal__ is a _self-similar_ geometric shape. This means that it
-    looks the same at different levels of magnification. Fractals can be created
-    by repeating a procedure or applying an equation infinitely many times.
-  link: /world/Fractals
+  text: A __fractal__ is a geometric shape that has a _fractional dimension_.
+    Many famous fractals are _self-similar_, which means that they consist of
+    smaller copies of themselves. Fractals contain patterns at every level of
+    magnification, and they can be created by repeating a procedure or iterating
+    an equation infinitely many times.
+  link: /course/fractals/introduction
 
 fta:
   title: Fundamental Theorem of Arithemtic
@@ -647,7 +654,13 @@ geometric-sequence:
 
 geometric-series:
   title: Geometric Series
-  text: A __geometric series__ is the sum of the terms in a geometric sequence.
+  text: |
+    A __geometric series__ is the infinity sum of the terms in a geometric
+    sequence, where consecutive terms have a constant ratio _r_. For example,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    is a geometric series with constant ratio `1/2`.
 
 glide-reflection:
   title: Glide Reflections
@@ -815,11 +828,29 @@ iss:
     human-made body in low Earth orbit, and has been inhabited continuously
     since launch. It can be seen with the naked eye from Earth.
 
+julia-set:
+  title: Julia Set
+  text: Given a function `f`, like `§f(x) = x^2`, the corresponding __Julia
+    set__ `§K(f)` is a subset of all points in the complex plane, where the
+    sequence formed by repeatedly applying `f` does not diverge. In many cases,
+    the Julia set is a _fractal_, and it is closely related to the _Mandelbrot
+    set_.
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
 kite:
   title: Kite
   text: A __kite__ is a quadrilateral in which two pairs of adjacent sides have
     the same length.
   link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: Koch Snowflake
+  text: The __Koch Snowflake__ is a self-similar fractal. It consists of
+    an eqilateral triangle, with smaller equilateral triangles recursively
+    added to each of its sides.
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
 
 laws-of-nature:
   title: Laws of Nature
@@ -863,6 +894,14 @@ linear-function:
   text: A __linear function__ is a function whose graph is a straight line. It
     can be defined as `f(x) = mx + c`, where _m_ is the slope of the line, and
     _c_ is its _y_-axis intercept.
+
+mandelbrot-set:
+  title: Mandelbrot Set
+  text: The __Mandelbrot set__ is the set of complex numbers `CC` for which the
+    recursive sequence `§z_n = z_(n-1)^2 + c` (with `§z_0 = 0`) does not
+    diverge. It is a _fractal_.
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
 
 matrix:
   title: Matrix
@@ -1456,6 +1495,14 @@ sequence-term:
   title: Terms of a Sequence
   text: The __terms__ of a sequence are all its individual numbers or elements.
   link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: Sierpinski Triangle
+  text: The __Sierpinski Triangle__ is a self-similar fractal. It consists of
+    an eqilateral triangle, with smaller equilateral triangles recursively
+    removed from its remaining area.
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
 
 sieve-eratosthenes:
   title: Sieve of Eratosthenes

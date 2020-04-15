@@ -15,8 +15,10 @@ const typescript = require('rollup-plugin-typescript');
 const autoprefixer = require('autoprefixer');
 const gulpTextbooks = require('@mathigon/parser').gulp;
 const tsconfig = require('./tsconfig.json');
+const rtl = require('postcss-rtl');
 
-const LANGUAGES = ['en', 'es', 'vn', 'cn', 'tr', 'de', 'fr', 'se'];
+const LANGUAGES = ['en',  'ar', 'cn', 'de', 'es', 'fr', 'hi', 'it', 'ja', 'pt',
+  'ru', 'sv', 'tr', 'vi', 'fa', 'mr'];
 const CACHE = __dirname + '/content/.cache.json';
 
 
@@ -41,7 +43,7 @@ function scripts() {
 function stylesheets() {
   return gulp.src(['content/*/*.less', '!content/shared/**'])
       .pipe(less())
-      .pipe(postcss([autoprefixer()]))
+      .pipe(postcss([rtl(), autoprefixer()]))
       .pipe(rename({extname: '.css'}))
       .pipe(gulp.dest('server/assets/resources'));
 }

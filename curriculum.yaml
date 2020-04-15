@@ -25,7 +25,6 @@ divisibility:
   title: Divisibility and Primes
   description: Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.
   color: 1fab40
-  locales: [en, cn, de, tr]
 
 fractions:
   title: Fractions
@@ -185,35 +184,30 @@ euclidean-geometry:
   title: Euclidean Geometry
   description: Geometry is one of the oldest parts of mathematics – and one of the most useful. Its logical, systematic approach has been copied in many other areas.
   color: 0f82f2
-  locales: [en, de, tr]
   next: transformations
 
 transformations:
   title: Transformations and Symmetry
   description: Symmetry can be seen everywhere in nature – but it also underlies completely invisible laws of nature. Mathematics can explain why that is the case.
   color: 216fec
-  locales: [en, de, tr]
   next: triangles
 
 triangles:
   title: Triangles and Trigonometry
   description: "Triangles are some of the most important shapes in geometry: they have countless interesting properties and appear everywhere in engineering and technology."
   color: 325ce6
-  locales: [en, de, tr]
   next: polyhedra
 
 polyhedra:
   title: Polygons and Polyhedra
   description: Geometric shapes are everywhere around us. In this course you will learn about angels, polygons, tessellations, polyhedra and nets.
   color: "4346e0"
-  locales: [en, de]
   next: circles
 
 circles:
   title: Circles and Pi
   trailer: tBJUNvCBkLo
   color: 5934d9
-  locales: [en, de, cn, tr]
   next: graph-theory
 
 non-euclidean-geometry:
@@ -251,7 +245,6 @@ sequences:
   description: Learn about some of the most fascinating patterns in mathematics, from triangle numbers to the Fibonacci sequence and Pascal’s triangle.
   trailer: u2vwpDVj5rU
   color: f97607
-  locales: [en, es, cn, se]
   next: quadratics
 
 equations:
@@ -279,20 +272,17 @@ probability:
   title: Probability
   description: "Cards, dice, roulette and game shows: probability is one of the most fun areas of mathematics, full of surprises and real life applications."
   color: cd0e66
-  locales: [en, tr]
   next: statistics
 
 statistics:
   title: Statistics
   color: bb127b
-  locales: [en, tr]
   next: graph-theory
 
 graph-theory:
   title: Graphs and Networks
   description: "Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks."
   color: aa1690
-  locales: [en, vn, fr]
   next: probability
 
 codes:
@@ -339,8 +329,7 @@ rationals:
   color: f66a0c
   sections:
     - title: Rational and Irrational Numbers
-    - title: Rational Functions
-    - title: Manipulating Rational Expressions
+    - title: Rational Functions and Expressions
     - title: Solving Rational Equations
     - title: Exponent Laws
     - title: Radical Functions
@@ -434,14 +423,8 @@ complex:
 
 fractals:
   title: Fractals
+  trailer: ohygDnKg5mg
   color: 8220b9
-  sections:
-    - title: Introduction
-      preview: /world/Fractals
-    - title: The Sierpinski Gasket
-      preview: /world/Fractals#sierpinski
-    - title: The Mandelbrot Set
-      preview: /world/Fractals#mandelbrot
 
 differentiation:
   title: Differentiation

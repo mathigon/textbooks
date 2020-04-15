@@ -4,10 +4,10 @@
 // =============================================================================
 
 
-import {list, total} from '@mathigon/core';
-import {clamp, toWord, Segment, Point, Angle, lerp, Line, Rectangle, Polygon, isLineLike} from '@mathigon/fermat';
+import {total} from '@mathigon/core';
+import {clamp, toWord, Segment, Point, Angle, lerp, Rectangle, Polygon, isLineLike} from '@mathigon/fermat';
 import {Browser, slide} from '@mathigon/boost';
-import {Geopad, GeoPath, GeoPoint, GeoShape, Path, Slider, Step} from '../shared/types';
+import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';
@@ -63,6 +63,10 @@ export function regularArea($step: Step) {
     tan: Math.tan,
     regular: (c: Point, r: number, n: number) => Polygon.regular(n, r).translate(c)
   });
+}
+
+export function regular2($step: Step) {
+  $step.model.round = Math.round;
 }
 
 // -----------------------------------------------------------------------------
