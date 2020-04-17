@@ -1,56 +1,10 @@
 # Testing
 
-## Unit 1
-> section: unit-1
-> sectionStatus: dev
+## Introducing Binary Digits
 
-    p Please point at   <em id="pointed" style="color: green;">this word</em>
-
-    p Blah blah <em id="pointed" style="color: green;">blah</em>.
-
-Blah blah blah.
-
-Blah blah blah.
-
-Hey I'm gonna point at that thing when you hover over [here](->#pointed).
-
----
-> section: morse-demo
-> sectionStatus: dev
-> id: morse-demo
-
-## Morse Demos
-
-    div.wtf
-      .typeout
-    div
-      table.emoji-table
-        tr.hearts
-          td: button.dot DOT
-          td: button.dash DASH
-          td: button.letter LETTER
-          td: button.word WORD
-
-    .button.translate TRANSLATE
-
-    div.output
-
----
-> section: telegraph
-> id: telegraph
-### Look at this Telegraph
-
-Here tap the telegraph.
-
-
-    figure: include svg/telegraph.svg
-
----
 > section: bracket
 > sectionStatus: dev
 > id: bracket
-
-## Introducing Binary Digits
 
 With each finger that we add, our number of options multiplies by two.
 
@@ -100,50 +54,30 @@ With each finger that we add, our number of options multiplies by two.
 
     x-slider.bracket(steps=6 speed=0.5)
 
-We can get our five-digit binary number by following any path from beginning to end.
+We can get our five-digit binary number by following any path from beginning to end. 
+
+{.todo} // DIGITZ: could make it point to a full number, e.g. [b4](->#b4)
+
+Please enter the number of things into the table below.
+
+With 1 finger there are [[2]] possible combinations.
+
+With 2 fingers there are [[4]] possible combinations.
+
+With 3 fingers there are [[8]] possible combinations.
+
+With 4 fingers there are [[16]] possible combinations.
+
+With 5 fingers there are [[32]] possible combinations.
+
+More generally, with N fingers we can represent [[2^N]] possible combinations.
 
 ---
-> section: flower
-> sectionStatus: dev
-> id: flower
-
-## New page for flowers
-
-::: column(width=300)
-
-    svg.petals(width=300 height=300)
-      circle(r=1 cx=150 cy=150)
-      - var i = 0
-      while i < 40
-        path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
-        - i += 1
-
-    x-slider.flower(steps=39 speed=0.5)
-
-:::
-
-
-- a table for filling in digit values
-- ???
-
----
-> section: bin2dec
-> sectionStatus: dev
-> id: bin2dec
-
-## Converting Binary to Decimal
-
-See how to do multiple step thingies in // ALGEBRA:
-
-Could do this, but plenty of other things I could do...
-
-
----
-> section: cheesecake
-> sectionStatus: dev
-> id: cheesecake
 
 ## Converting Decimal to Binary
+> section: dec2bin
+> sectionStatus: dev
+> id: dec2bin
 
 How do we convert from decimal to binary? Follow the animation below.
 
@@ -172,39 +106,13 @@ When converting decimal number N into binary:
 4. Divide d by 2 to get the next digits place.
 5. Repeat steps 2 through 4 until you have written the 1s place.
 
----
-> section: binary-demo
-> sectionStatus: dev
-> id: binary-demo
-
-## Binary Demos
-
-  // how do I... put inputs inside of a table?
-    table
-      tr
-        td [[1]]
-        td hello
-      tr
-        td okay
-        td bye
 
 ---
-> section: transistor
-> sectionStatus: dev
-> id: transistor
-
-## Transistors
-
-    figure: include svg/transistor_on.svg
-
-    button.transistor SWITCH
-
----
-> section: unit-2x
-> sectionStatus: dev
-> id: emoji-board
 
 ## Emoji Codes
+> section: emoji-codes
+> sectionStatus: dev
+> id: emoji-codes
 
     mixin codeTable(base, emojis, letters)
       table(class=attributes.class)
@@ -290,90 +198,18 @@ When converting decimal number N into binary:
     div.output
 
 ---
-> section: barcode
+
+## Transistors
+> section: transistor
 > sectionStatus: dev
-> id: barcode
+> id: transistor
 
-// BARCODE:... can I make a special element?
+    figure: include svg/transistor_on.svg
 
----
->id: raaace
-
-## Misc
-### Section 1.1
-
-{.todo} TODO do something
-
-I wonder what will happen?
-
-    figure: include svg/raaace.svg
+    button.transistor SWITCH
 
 ---
 
-### Section 1.2
-
-{.todo} TODO do something else
-
----
-
-## Unit 2
-> section: unit-2
-> sectionStatus: dev
-
-### Section 2.1
-
-    // BINPATTERN: mimic selector for binpatterns
-    .frame.fill(sytle="padding: 20px")
-    p(style="margin: 0"): strong hello
-    include svg/graphs.svg
-    p: select
-      option(value="val", selected) Colour by value
-      option(value="size") Colour by small and large
-      option(value="prime") Colour by prime and composite
-      option(value="eo") Colour by even and odd
-
-{.todo} TODO do something
-
----
-## Kri8it
-> section: kri8it
-> sectionStatus: dev
-> id: kri8it
-
-### Fun experimenting with SVG
-This is a painting by a local Pittsburgh artist, [Brad Bianchi](https://www.instagram.com/krii8it/)
-
-    x-media.background(src="images/kri8it.png" width=220 height=220)
-
-It looks quite like a graph, doesn't it?
-
-    p(style="margin: 0"): strong What if we animate a dot to run around it?
-    .button Press Me
-    // KRI8: how to get the actual painting underneath??? oh well, leave it for another time
-    include svg/kri8it_paths.svg
-    // x-media.background(src="images/kri8it.png")
-
----
-
-## Algebra Solver
-> section: algebra
-> sectionStatus: dev
-> id: algebra
-
-### Let's use the Algebra Solver
-
-    // HAMMING: can this be used for just making new equations? not algebra? 
-::: x-algebra-flow
-
-`input(1, "p1") = input(0, "p2")`
-
-* Do a thing!
-* Do another thing!
-* Yay!
-
-:::
-
----
 ## Hamming Codes
 > section: hamming
 > sectionStatus: dev
@@ -395,19 +231,73 @@ In this short game you have to determine the parity of a binary number, as fast 
             .parity-bubble: .btn.btn-blue 1
 
 
-// HAMMING:
-- see HAMMING in triangles to animate numbers moving (I also did this with cheesecake)
-- 
+{.todo} see //HAMMING in triangles to animate numbers moving
+
 ---
 
-## Barcode
-> section: barcode
+> section: morse-demo
 > sectionStatus: dev
-> id: barcode
+> id: morse-demo
 
-Here we will look at a barcode
+## Morse Demos
 
-    include ./components/barcode
-    x-barcode
+// iframe example
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184253099&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 
-Where is the barcode?
+// proto- conversion box
+
+    div.wtf
+      .typeout
+    div
+      table.emoji-table
+        tr.hearts
+          td: button.dot DOT
+          td: button.dash DASH
+          td: button.letter LETTER
+          td: button.word WORD
+
+    .button.translate TRANSLATE
+
+    div.output
+
+---
+> section: telegraph
+> id: telegraph
+### Look at this Telegraph
+
+Here tap the telegraph.
+
+    figure: include svg/telegraph.svg
+
+{.todo} fix rotation point (if we decide to include)
+
+---
+
+> section: bin2dec
+> sectionStatus: dev
+> id: bin2dec
+
+## Converting Binary to Decimal
+
+{.todo} do a multiple step, one-step-at-a-time revealed proof, as in // ALGEBRA:
+
+
+---
+
+## SVG Experiment
+> section: krii8it
+> sectionStatus: dev
+> id: krii8it
+
+### Krii8it
+This is a painting by a local Pittsburgh artist, [Brad Bianchi](https://www.instagram.com/krii8it/)
+
+    x-media.background(src="images/kri8it.png" width=220 height=220)
+
+It looks quite like a graph, doesn't it?
+
+    p(style="margin: 0"): strong What if we animate a dot to run around it?
+    .button Press Me
+    // KRI8: how to get the actual painting underneath??? oh well, leave it for another time
+    include svg/kri8it_paths.svg
+    // x-media.background(src="images/kri8it.png")
