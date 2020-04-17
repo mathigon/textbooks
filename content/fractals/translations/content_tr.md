@@ -5,41 +5,41 @@
 > section: introduction
 > id: intro
 
-Doğanın etrafına bakarken, aşağıdakiler gibi karmaşık bitkileri fark etmiş olabilirsiniz:
+Doğada çevremize bakarken, aşağıdaki gibi karmaşık bitkileri fark etmiş olabilirsiniz:
 
 ::: column.r(width=320)
 
     img(src="images/fern.jpg" width=320 height=240)
     img.fractal-overlay(src="images/fern-overlay.png" width=320 height=240)
 
-{.caption} Bu __Eğreltiotu__, daha büyük olandan dallanan birçok küçük yapraktan oluşur.
+{.caption} Bir __Eğreltiotu__, ana dalından aynı şekilde çıkan birçok küçük yaprakdan oluşur.
 
 ::: column.r(width=320)
 
     img(src="images/romanesco.jpg" width=320 height=240)
     img.fractal-overlay(src="images/romanesco-overlay.png" width=320 height=240)
 
-{.caption} Bu __Romanesco brokoli__, daha büyük olanın etrafında dönen küçük [[konilerden|cubes|spheres]] oluşur.
+{.caption} Bu __Romanesco brokoli__, daha büyük olanın etrafında dönen küçük [[konilerden|küplerden|kürelerden]] oluşur.
 
 :::
 
-{.reveal(when="blank-0")} Başlangıçta, bunlar son derece karmaşık şekiller gibi görünür - ancak daha yakından baktığınızda, her ikisinin de nispeten basit bir desen izlediğini fark edebilirsiniz: bitkilerin tüm [tekil kısımları](target:fractal) tamamen bitki, sadece daha küçük. Aynı desen daha küçük ölçeklerde tekrar tekrar tekrarlanır. [Devam](btn:next)
+{.reveal(when="blank-0")} Başlangıçta, bunlar son derece karmaşık şekiller gibi görünür - ancak daha yakından baktığınızda, her ikisinin de nispeten basit bir desen izlediğini fark edebilirsiniz: bitkilerin her [bir birimi](target:fractal) bitkinin bütününe benzer, sadece daha küçüklerdir. Aynı desen daha küçük ölçeklerde tekrar tekrar yenilenir. [Devam](btn:next)
 
 ---
 
 > id: fern
 
-Matematikte, bu özelliğe __kendine benzerlik__ diyoruz ve buna sahip şekiller [__fraktallar__](gloss:fractal) olarak adlandırılıyor. Tüm matematiğin en güzel ve en tuhaf nesnelerinden bazıları.
+Matematikte, bu özelliğe __kendine benzerlik__ diyoruz ve buna sahip şekillere [__fraktallar__](gloss:fractal) denir. Fraktallar, tüm matematiğin en güzel ve en tuhaf nesnelerinden bazılarıdır.
 
-Kendi fraktallarımızı oluşturmak için basit bir desenle başlamalı ve daha sonra daha küçük ölçeklerde tekrar tekrar tekrarlamalıyız.
+Kendi fraktallarımızı oluşturmak için basit bir desenle işe başlayıp daha sonra daha küçük ölçeklerde tekrar tekrar yenileyerek devam etmeliyiz.
 
 ::: column.grow
 
-En basit örüntülerden biri [{.pill.red} çizgi segmenti](target:s1), [{.pill.blue} iki segment daha](target:s2) bir ucu dallanmış olabilir. Bu paterni tekrarlarsak, bu mavi segmentlerin her ikisinin de uçlarında iki dal daha olacaktır.
+En basit örüntülerden biri bir ucundan [{.pill.blue} iki doğru parçası daha](target:s2)çıkan bir [{.pill.red} doğru parçasıdır](target:s1). Bu örüntüyü tekrarlarsak, bu mavi segmentlerin her ikisinin de uçlarından iki dal daha çıkacaktır.
 
-Tüm şubelerin uzunluğunu ve açısını değiştirmek için [mavi noktaları](target:dot) taşıyabilirsiniz. Ardından, aşağıdaki kaydırıcıyı](->#fern-slider) kullanarak {yin} yineleme sayısını artırın.
+Tüm dalların uzunluğunu ve açısını değiştirmek için [mavi noktaları](target:dot) hareket ettirebilirsiniz. Ardından, aşağıdaki çubuğu](->#fern-slider) kaydırarak {yin} tekrarlanma sayısını artırın.
 
-{.reveal(when="slider-0")} Dalların konumuna bağlı olarak, yukarıdaki [eğrelti otu](action:set(130,228,197,184)), [ağaç](action:set(160,186,200,186)) veya [iç içe beşgenler](action:set(113,235,232,238)) gibi görünen tamamen farklı desenler oluşturabilirsiniz. Başka ne bulabilirsin? [Devam](btn:next)
+{.reveal(when="slider-0")} Dalların konumuna bağlı olarak, yukarıdaki [eğrelti otu](action:set(130,228,197,184)), [ağaç](action:set(160,186,200,186)) veya [iç içe geçmiş beşgenler](action:set(113,235,232,238)) gibi görünen tamamen farklı desenleri oluşturabilirsiniz. Başka hangi şekilleri oluşturabilirsiniz? [Devam](btn:next)
 
 ::: column(width=360)
 
@@ -62,9 +62,9 @@ Tüm şubelerin uzunluğunu ve açısını değiştirmek için [mavi noktaları]
 
 ::: column.grow(parent="right")
 
-Bir başka ünlü fraktal [__Sierpinski üçgeni__](gloss:sierpinski-triangle). Bu durumda, büyük, eşkenar bir üçgenle başlıyoruz ve daha sonra kalan parçalardan tekrar tekrar küçük üçgenler kesiyoruz.
+Bir başka ünlü fraktal da [__Sierpinski üçgenidir__](gloss:sierpinski-triangle). Burda ise, büyük, eşkenar bir üçgenle başlayıp, sonra kalan parçalardan tekrar tekrar küçük üçgenler kesiyoruz.
 
-{.reveal(when="slider=0")} Nihai şeklin kendisinin üç özdeş kopyasından](target:x) nasıl oluştuğuna ve bunların her birinin tüm üçgenin daha da küçük kopyalarından oluştuğuna dikkat edin! Üçgene sonsuza dek yakınlaştırma yapmaya devam edebilirsiniz ve desenler ve şekiller her zaman tekrarlanmaya devam eder.
+{.reveal(when="slider=0")} Son şeklin bütününün üç özdeş birimden](target:x) nasıl oluştuğuna ve bunların her birinin, tüm üçgenin, daha da küçük kopyalarından oluştuğuna dikkat edin! Üçgeni sonsuza dek büyütmeye devam ettiğinizde, desenler ve şekillerin her zaman tekrarlanmaya devam ettiğini görürsünüz.
 
 ::: column(width=300)
 
@@ -87,14 +87,14 @@ Bir başka ünlü fraktal [__Sierpinski üçgeni__](gloss:sierpinski-triangle). 
 
 > id: real
 
-Bu bölümün başındaki bitkiler _tıpkı fraktallar gibi_ 'a benziyorlar, ancak gerçek hayatta _gerçek_ fraktal oluşturmak kesinlikle mümkün değil. Aynı modeli tekrar tekrar, daha küçük ve daha küçük tekrarlarsak, sonunda bölünemeyecek olan hücrelere, moleküllere veya atomlara ulaşırdık.
+Bu bölümün başında gördüğümüz bitkiler _fraktallar_ 'a benziyorlar, ancak gerçek hayatta _hakiki_ fraktal oluşturmak mümkün değildir. Aynı modeli tekrar tekrar, daha küçük ve daha küçük tekrarlarsak bile, sonunda bölünemeyecek olan hücrelere, moleküllere veya atomlara ulaşırdık.
 
-Ancak, matematiği kullanarak gerçek fraktalların “sahip olacağı” özellikleri düşünebiliriz - ve bunlar çok şaşırtıcı… [Devam](btn:next)
+Ancak, matematik sayesinde gerçek fraktalların “sahip olacağı” özellikleri düşünebiliriz - ve bunlar çok çok şaşırtıcı… [Devam](btn:next)
 
 ---
 > id: dimension
 
-### Fraktal Boyutlar
+### Fraktalların Boyutları
 
 ::: column(width=240)
 
@@ -102,7 +102,7 @@ Ancak, matematiği kullanarak gerçek fraktalların “sahip olacağı” özell
 
 ::: column.grow
 
-İlk olarak, fraktalların boyutunu düşünelim. Bir satırın boyutu [[1]]. _{span.reveal(when="blank-0")} 2 kat ölçeklendirildiğinde uzunluğu `2^1 = 2` kat artar. Açıkçası!_
+İlk olarak, fraktalların boyutlarını düşünelim. Bir doğru parçasının boyutu [[1]] dir. _{span.reveal(when="blank-0")} Tahmin edilebileceği gibi, onu 2 kat büyüttüğümüzde uzunluğu `2^1 = 2` kat artar._
 
 :::
 
@@ -115,7 +115,7 @@ Ancak, matematiği kullanarak gerçek fraktalların “sahip olacağı” özell
 
 ::: column.grow
 
-Bir kare [[2]] boyutuna sahiptir. _{span.reveal(when="blank-0")} 2 kat ölçeklendirildiğinde, alanı `2^2 =` [[4]] kat artmaktadır._
+Bir kare [[2]] boyuta sahiptir. _{span.reveal(when="blank-0")} 2 kat büyüttüğümüzde, alanı `2^2 =` [[4]] kat artar._
 
 :::
 
@@ -128,7 +128,7 @@ Bir kare [[2]] boyutuna sahiptir. _{span.reveal(when="blank-0")} 2 kat ölçekle
 
 ::: column.grow
 
-Bir küpün [[3]] boyutu vardır. _{span.reveal(when="blank-0")} 2 kat ölçeklendirirken, hacmi `2^3 =` [[8]] kat artmaktadır._ _{span.reveal(when="blank-1")} Görüntüdeki büyük küpün daha küçük olanın 8 kopyasından oluşur!_
+Bir küpün [[3]] boyutu vardır. _{span.reveal(when="blank-0")} onu, 2 kat büyütürken, hacmi `2^3 =` [[8]] kat artmaktadır._ _{span.reveal(when="blank-1")} Görüntüdeki büyük küp, daha küçük olanın 8 kopyasından oluşur!_
 
 :::
 
@@ -141,7 +141,7 @@ Bir küpün [[3]] boyutu vardır. _{span.reveal(when="blank-0")} 2 kat ölçekle
 
 ::: column.grow
 
-Şimdi Sierpinski üçgenine bakalım. Bunu 2 katına çıkarırsak, "alan" ın [[3]] kat arttığını görebilirsiniz.
+Şimdi ise Sierpinski üçgenine bakalım. Bu üçgeni 2 katına çıkarırsak, "alan" ın [[3]] kat arttığını görebilirsiniz.
 
 {.reveal(when="blank-0")} Diyelim ki _d_, Sierpinski üçgeninin boyutu. Yukarıdaki ile aynı modeli kullanarak `2^d = 3` elde ederiz. Başka bir deyişle, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1.585…_
 
@@ -150,13 +150,13 @@ Bir küpün [[3]] boyutu vardır. _{span.reveal(when="blank-0")} 2 kat ölçekle
 ---
 > id: dimension-4
 
-Ama bekleyin… bir şeyin tamsayı olmayan bir boyutu nasıl olabilir? İmkansız görünüyor, ama bu fraktallerin garip özelliklerinden sadece biri. Aslında, fraktallara isimlerini veren budur: __kesirli bir boyutu__ var.
+Ama durun… bir şeyin tamsayı olmayan bir boyutu nasıl olabilir? İmkansız görünüyor, ama bu fraktalların garip özelliklerinden sadece biri. Aslında, fraktallara isimlerini veren de budur: Fraktalların, __kesirli bir boyutu__ vardır.
 
-Her yinelemede, Sierpinski üçgeninin bazı alanlarını kaldırıyoruz. Bunu sonsuza kadar birçok kez yapabilseydik, aslında hiç bir alan kalmazdı: bu yüzden Sierpinski üçgeni 2 boyutlu bir alan ile 1 boyutlu bir çizgi arasında bir şey.
+Her yinelemede, Sierpinski üçgeninin bazı bölgelerini yok ediyoruz. Bunu sonsuza kadar birçok kez yapabilseydik, aslında herhangi bir yüzeyi kalmazdı: bu yüzden Sierpinski üçgeni 2 boyutlu bir yüzey ile 1 boyutlu bir çizgi arasında bir şeydir.
 
 ::: .theorem
 
-Birçok fraktal _kendine benzer_ olmakla birlikte, daha iyi bir tanım __fraktalların__ __tamsayı olmayan bir boyuta__ sahip şekiller olduğudur.
+Birçok fraktal _kendine benzer_ olmakla birlikte, daha iyi bir tanım __fraktalların__ __tamsayı olmayan bir boyuta__ sahip olan şekiller, olduğudur.
 
 :::
 
@@ -168,7 +168,7 @@ Birçok fraktal _kendine benzer_ olmakla birlikte, daha iyi bir tanım __fraktal
 
 ### Koch Kar Tanesi
 
-Doğada fraktallara benzeyen birçok şekil var. Bu bölümün başında zaten bazı bitkiler gördük. Diğer harika örnekler kar taneleri ve buz kristalleridir:
+Doğada fraktallara benzeyen birçok şekil var. Bu bölümün başında, zaten bazı bitkiler görmüştük. Diğer harika örnekler, kar taneleri ve buz kristalleridir:
 
 ::: column(width=120 parent="padded-thin")
 
@@ -196,13 +196,13 @@ Doğada fraktallara benzeyen birçok şekil var. Bu bölümün başında zaten b
 
 > id: koch
 
-Kendi fraktal kar tanesi oluşturmak için, tekrar tekrar uygulayabileceğimiz basit bir prosedür bulmak zorundayız.
+Kendi fraktal kar tanemizi oluşturmak için, tekrar tekrar uygulayabileceğimiz basit bir prosedür bulmak zorundayız.
 
 ::: column.grow
 
-Sierpinski üçgeni gibi, tek bir eşkenar üçgenle başlayalım. Bununla birlikte, her adımda _daha küçük üçgenleri _kaldırmak yerine, kenar boyunca_ daha küçük üçgenler ekliyoruz. Her üçgenin yan uzunluğu, önceki adımdaki üçgenlerin [[`1/3`|`1/4`|`1/2`]] 'dır.
+Sierpinski üçgeni gibi, tek bir eşkenar üçgenle başlayalım. Bununla birlikte, her adımda _daha küçük üçgenleri _silmek yerine, kenar boyunca_ ekleyelim. Her yeni, küçük üçgenin kenar uzunluğu, önceki adımdaki üçgenlerin [[`1/3`|`1/4`|`1/2`]] 'dır.
 
-{.reveal(when="blank-0")} Ortaya çıkan şekle, İsveçli matematikçi [Helge von Koch](bio:koch) adını taşıyan [__Koch kar tanesi__](gloss:koch-snowflake) denir. Bir kez daha, kar tanesinin kenarındaki [küçük bölümlerin](target:t2), [büyük bölümlerle](target:t1) tamamen aynı göründüğüne dikkat edin.
+{.reveal(when="blank-0")} Ortaya çıkan şekle, İsveçli matematikçi [Helge von Koch](bio:koch) adını taşıyan [__Koch kar tanesi__](gloss:koch-snowflake) denir. Bir kez daha, kar tanesinin kenarlarındaki her bir [küçük bölümün](target:t2), [şeklin bütünü](target:t1) ile tamamen aynı göründüğüne dikkat edin.
 
 ::: column(width=300)
 
@@ -224,9 +224,9 @@ Sierpinski üçgeni gibi, tek bir eşkenar üçgenle başlayalım. Bununla birli
 
 ::: column.grow
 
-Koch Kar Tanesi'nin bir kenar segmentini 3 katına kadar ölçeklendirdiğimizde, uzunluğu [[dört kat|triples|doubles]].
+Koch Kar Tanesi'nin bir kenarını 3 katı büyüttüğümüzde, uzunluğu [[dört kat|üç kat|iki kat]].
 
-{.reveal(when="blank-0")} Yukarıdaki boyutlar ve ölçek faktörleri arasında aynı ilişkiyi kullanarak [[`3^d=4`|`2^d=4`|`2^d=3`|`4^d=3`]] denklemini alıyoruz. _{span.reveal(when="blank-1")} Bu, Koch Kar Tanesi'nin boyutunun `§d = log_3(4) ≈ 1.262` olduğu anlamına gelir._
+{.reveal(when="blank-0")} Yukarıdaki boyutlar ve büyüme ölçekleri arasındaki aynı ilişkiyi kullanarak, [[`3^d=4`|`2^d=4`|`2^d=3`|`4^d=3`]] denklemini alıyoruz. _{span.reveal(when="blank-1")} Bu da, Koch Kar Tanesi'nin boyutunun `§d = log_3(4) ≈ 1.262` olduğu anlamına gelir._
 
 :::
 
@@ -238,7 +238,7 @@ Koch Kar Tanesi'nin bir kenar segmentini 3 katına kadar ölçeklendirdiğimizde
 
 #### Alan _{span.check(when="blank-6")}_
 
-Koch kar taneleri oluşturmak neredeyse [özyinelemeli bir dizi](gloss:sequence-recursive) gibidir: başlangıç şeklini (bir üçgen) biliyoruz ve bir terimden diğerine nasıl geçileceğini biliyoruz (her kenarda daha fazla üçgen ekleyerek):
+Koch kar taneleri oluşturmak neredeyse [yinelemeli bir dizi](gloss:sequence-recursive) gibidir: başlangıç şeklini (bir üçgen) biliyoruz ve bir terimden diğerine nasıl geçileceğini biliyoruz (her kenara daha fazla üçgen ekleyerek):
 
 ::: column(width=140)
 
@@ -264,11 +264,11 @@ Koch kar taneleri oluşturmak neredeyse [özyinelemeli bir dizi](gloss:sequence-
 
 :::
 
-{.reveal(when="blank-0 blank-1 blank-2")} İlk yinelemeden sonra, eklenen yeni üçgenlerin sayısı her adımda [[4]] kat artmaktadır. Aynı zamanda, bu yeni üçgenlerin alanı her adımda [[9]] faktör azalmaktadır.
+{.reveal(when="blank-0 blank-1 blank-2")} İlk adımdan sonra, eklenen yeni üçgenlerin sayısı her adımda [[4]] kat artmaktadır. Aynı zamanda, bu yeni üçgenlerin alanı, her adımda [[9]] da bir azalmaktadır.
 
-{.reveal(when="blank-3 blank-4")} Diyelim ki [ilk üçgenin](->#koch-0) 1 alanı var. Sonra [sonraki üç üçgenin](->#koch-1) toplam alanı `3 × 1/9 = 1/3`. Aşağıdaki adımların tümü, ortak oranı [[`4/9`|`9/4`|`4/3`]] olan [[geometrik bir dizi|arithmetic series|quadratic series]], _{span.reveal(when="blank-5")} oluşturur._
+{.reveal(when="blank-3 blank-4")} Diyelim ki [ilk üçgenin](->#koch-0) 1 birim alanı var. [sonraki üç üçgenin](->#koch-1) toplam alanı `3 × 1/9 = 1/3` olur. Aşağıdaki adımların tümü, ortak oranı [[`4/9`|`9/4`|`4/3`]] olan [[geometrik bir dizi|aritmetik bir dizi|kuadratik bir dizi]], _{span.reveal(when="blank-5")} oluşturur._
 
-{.reveal(when="blank-6")} Sonsuz [geometrik seri](gloss:geometric-series) toplamı için formülü kullanarak, Koch kar tanesinin toplam alanının
+{.reveal(when="blank-6")} Sonsuz [geometrik seri](gloss:geometric-series) toplamını hesaplamak için gereken formülü kullanarak, Koch kar tanesinin, toplam alanını bulabiliriz.
 
 {.text-center.reveal(when="blank-6")} `A = 1 + 1/3 × 1/blank(1-4/9, 1+9/4, 9-1/4) reveal(= 8/5 = 1.6,"blank-7")`.
 
@@ -278,9 +278,9 @@ Koch kar taneleri oluşturmak neredeyse [özyinelemeli bir dizi](gloss:sequence-
 
 ::: column.grow
 
-Koch kar tanesi çevresini de hesaplamaya çalışabiliriz. Daha önce gördüğümüz gibi, çevre uzunluğu her adımda [[`4/3`|`3/4`|`1/4`]] faktörü ile değişir.
+Koch kar tanesinin, çevresini de hesaplamaya çalışabiliriz. Daha önce gördüğümüz gibi, çevre uzunluğu her adımda [[`4/3`|`3/4`|`1/4`]] katına çıkar.
 
-{.reveal(when="blank-8")} Bu, bir kez daha geometrik bir serimiz olduğu anlamına gelir - ancak bu durumda [[>>>>,|converges to 0|doesn’t have a first term]] 'yi birbirine yakınlaştırmaz. _{span.reveal(when="blank-9")} Bu, Koch kar tanesi çevresinin aslında __sonsuz uzunluğunda olduğu anlamına gelir__!_
+{.reveal(when="blank-8")} Bu, bir kez daha geometrik bir serimiz olduğu anlamına gelir - ancak bu durumda çevra,  [[>>>>,|0'a yaklaşır|dilk terimi yoktur] 'herhangi bir sayoya yaklaşmaz. _{span.reveal(when="blank-9")} Bu, Koch kar tanesi çevresinin aslında __sonsuz uzunluğunda olduğu anlamına gelir__!_
 
 ::: column(width=220)
 
@@ -298,7 +298,7 @@ Koch kar tanesi çevresini de hesaplamaya çalışabiliriz. Daha önce gördüğ
 
 ::: column.grow
 
-_sonlu_ alanı ve ayrıca _sonsuz_ çevresi olan bir şekle sahip olmanız neredeyse düşünülemez - ancak bu, fraktallerin beklenmedik birçok özelliğinden sadece biridir.
+Aynı anda _sonlu_ alanı ve _sonsuz_ çevresi olan bir şekil neredeyse düşünülemez - ancak bu, fraktalların beklenmedik birçok özelliğinden sadece biridir.
 
 Kendi fraktallarınızı yaratmanın başka yollarını bulabilir misiniz? [Devam](btn:next)
 
@@ -306,7 +306,7 @@ Kendi fraktallarınızı yaratmanın başka yollarını bulabilir misiniz? [Deva
 
     x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 audio credit="© Disney")
 
-{.caption} “Ruhum her yerdeki donmuş fraktallara yayılıyor…”
+{.caption} “Ruhum her yerdeki donmuş fraktallara geziniyor…”
 
 :::
 
@@ -316,7 +316,7 @@ Kendi fraktallarınızı yaratmanın başka yollarını bulabilir misiniz? [Deva
 
 ### Menger Süngeri
 
-Fraktalların yukarıdaki örneklerin çoğu gibi "düz" olmaları gerekmez. 3 boyutlu görünen en ünlü fraktallardan biri, ilk olarak 1926'da tanımlayan matematikçi [Karl Menger](bio:menger) 'nin adını taşıyan __Menger süngeri__' dir.
+Fraktalların, yukarıdaki örneklerde olduğu gibi hep "düzlemsel" olmaları gerekmez. 3 boyutlu olan en ünlü fraktallardan biri, ilk olarak 1926'da matematikçi [Karl Menger](bio:menger) tarafından bulunan __Menger süngeri__' dir.
 
 ::: column(width=320 parent="right")
 
@@ -325,15 +325,15 @@ Fraktalların yukarıdaki örneklerin çoğu gibi "düz" olmaları gerekmez. 3 b
 
 ::: column.grow
 
-Sağlam bir küple başlıyoruz ve yanlarına tekrar tekrar daha küçük ve daha küçük delikler açıyoruz. Her yeni delik yinelemesi, önceki delik yinelemesinin genişliğine [[`1/3`|`1/2`|`1/4`]] sahiptir.
+Tek bir küple başlıyoruz ve her bir yüzüne tekrar tekrar daha küçük ve daha küçük delikler açıyoruz. Her yeni adımda oluşan kübik delik, önceki deliğin genişliğinin [[`1/3`|`1/2`|`1/4`]] 'ü kadardır.
 
-{.reveal(when="blank-0")} Bir küp (347}) 27 küçük küpten oluşuyor, ancak burada bunlardan bazılarını kaldırdık. Menger süngeri 3 kat daha küçük olan kendi [[20]] kopyasından oluşur.
+{.reveal(when="blank-0")} Normalde, (3x3x3) bir küp (347}) 27 küçük küpten oluşur, ancak şekilde gördüğüniz gibi bunlardan bazılarını sildik. Dolayısı ile Menger süngeri, kendisinden 3 kat daha küçük olan [[20]] kopyasından oluşur.
 
-{.reveal(when="blank-1")} Şimdi, yukarıdaki Koch kar tanesi için yaptığımız gibi Menger süngerinin _d_ boyutunu hesaplamaya çalışabiliriz. Bu durumda `3^d = 20` veya `§d = log_3(20) ≈ 2.727` alırız.
+{.reveal(when="blank-1")} Şimdi, yukarıdaki Koch kar tanesi için yaptığımız gibi Menger süngerinin de  _d_ boyutunu hesaplamaya çalışabiliriz. Bu durumda `3^d = 20` veya `§d = log_3(20) ≈ 2.727` alırız.
 
 :::
 
-{.reveal(when="blank-1")} Sonsuz kez daha fazla delik açmayı hayal ederseniz, gerçek hacim kalmaz. Bu yüzden küp “tam olarak” 3 boyutlu! [Devam](btn:next)
+{.reveal(when="blank-1")} Sonsuza kadar delik açmaya devam ettiğimizi varsayarsak, aslında geriye bir hacim kalmaz. Bu yüzden bu küp “tam olarak” 3 boyutlu değildir! [Devam](btn:next)
 
 ---
 
@@ -341,9 +341,9 @@ Sağlam bir küple başlıyoruz ve yanlarına tekrar tekrar daha küçük ve dah
 
 ### Fraktal Sahil Şeritleri
 
-Şimdiye kadar gördüğümüz tüm fraktalların temel özelliklerinden biri, sonsuza dek “yakınlaştırabilir” ve her zaman yeni desenler bulabilmenizdir. 1920 civarında, İngiliz matematikçi [Lewis Fry Richardson](bio:richardson), bunun birçok ülkenin sınırı veya sahil şeridi için geçerli olduğunu fark etti.
+Şimdiye kadar gördüğümüz tüm fraktalların temel özelliklerinden biri, sonsuza dek “yakınlaştırabilmemiz” ve her zaman aynı örüntüleri bulabilmenizdir. 1920 yılı dolaylarında, İngiliz matematikçi [Lewis Fry Richardson](bio:richardson), bunun birçok ülkenin sınırı veya sahil şeridi için geçerli olduğunu fark etti.
 
-Ülkenin temel şekli ile başlıyorsunuz ve yakınlaştırdıkça nehir girişleri, koylar ve haliçleri, ardından bireysel uçurumları, kayaları, çakıl taşlarını vb.
+Ülkenin temel şekli ile başlayıp, yakınlaştırdıkça nehir girişleri, koylar ve körfezleri ekleyip, ardından her bir sahili, kayaları, çakıl taşlarını eklemek gibi
 
 ::: column(width=120 parent="padded-thin")
 
@@ -375,13 +375,13 @@ Sağlam bir küple başlıyoruz ve yanlarına tekrar tekrar daha küçük ve dah
 
 ::: column.grow
 
-Bir ülkenin sınırının uzunluğunu hesaplamaya çalışırken bu önemli bir sorundur - ne kadar yakınlaştıracağınıza ve hangi köşe ve çatlakları dahil edeceğinize nasıl karar veriyorsunuz?
+Bir ülkenin sınırının uzunluğunu hesaplamaya çalışırken - ne kadar yakınlaştıracağınıza ve hangi köşe ve girinti ve çıkıntıları dahil edeceğinize karar vermek, önemli bir sorundur.
 
-Britanya'nın kıyı şeridinin uzunluğunu ölçmenin bir yolu, örneğin, uzun bir cetvel almak, plajlarında dolaşmak ve sonra tüm mesafeleri toplamaktır.
+Britanya'nın kıyı şeridinin uzunluğunu ölçmenin yollarından biri, uzun bir cetvel almak, plajlarında dolaşmak ve sonra tüm mesafeleri toplamaktır.
 
-Cetvel ${rulers[index]}{index|0|0,8,1} km uzunluğundaysa, onu ${count} kez kullanmalıyız, bu yüzden toplam sahil şeridimiz ${count} × ${rulers[index]} = ${count * rulers[index]} km.
+Cetvel ${rulers[index]}{index|0|0,8,1} km uzunluğundaysa, onu ${count} kez kullanmalıyız, bu yüzden toplam sahil şeridimiz ${count} × ${rulers[index]} = ${count * rulers[index]} km olur.
 
-{.reveal(when="var-0")} Daha küçük ve daha küçük cetvellerle devam edebiliriz ve kıyı şeridinin uzunluğuna ilişkin sonuç her seferinde biraz daha uzun olur. Tıpkı daha önce Koch Snowflake gibi, İngiltere'nin sahil şeridinin sonsuza kadar uzun olduğu görülüyor! Buna genellikle __kıyı şeridi paradoksu__ denir. [Devam](btn:next)
+{.reveal(when="var-0")} Daha küçük ve daha küçük cetvellerle bu işe devam edebiliriz, kıyı şeridinin uzunluğuna ilişkin sonuç her seferinde biraz daha uzun olur. Tıpkı daha önce Koch Kar tanesinde olduğu gibi, İngiltere'nin sahil şeridi sonsuza kadar uzuyormuş gibi gözüküyor! Buna genellikle __kıyı şeridi paradoksu__ denir. [Devam](btn:next)
 
 ::: column(width=280)
 
@@ -393,7 +393,7 @@ Cetvel ${rulers[index]}{index|0|0,8,1} km uzunluğundaysa, onu ${count} kez kull
 
 > id: coastline-grid
 
-Birkaç on yıl sonra matematikçi [Benoit Mandelbrot](bio:mandelbrot), IBM’de çalışırken Richardson’ın atılan bir kütüphane kitabındaki çalışmalarına rastladı. Önemini ve ayrıca fraktallar ve boyutlar hakkında daha yeni araştırmalarla nasıl ilişkili olduğunu kabul etti.
+On yıllar sonra, matematikçi [Benoit Mandelbrot](bio:mandelbrot), IBM’de çalışırken Richardson’ın atılan bir kütüphane kitabındaki çalışmalarına rastladı. Kitabın önemini ve fraktallar ile boyutlar hakkında yapılan yeni araştırmalarla nasıl ilişkili olduğunu hemen fark etti.
 
 ::: column(width=340)
 
@@ -402,11 +402,11 @@ Birkaç on yıl sonra matematikçi [Benoit Mandelbrot](bio:mandelbrot), IBM’de
 
 ::: column.grow
 
-Britanya'nın kıyı şeridi kesinlikle fraktal "görünüyor", ancak daha önce gördüğümüz diğer fraktallar gibi _kendine benzer_ değil. Boyutunu bulmak için, bir ızgaraya çizebilir ve kesiştiği hücre sayısını sayabiliriz.
+Britanya'nın kıyı şeridi kesinlikle fraktal "görünüyor", ancak daha önce gördüğümüz diğer fraktallar gibi _kendine benzer_ değil. Boyutunu bulmak için, kareli bir kağıda çizebilir ve kesiştiği kare sayısını sayabiliriz.
 
-{.r.reveal(when="slider-0")} Başlangıçta __{.pill.yellow} 88__ kesişen hücre vardır. Kıyı şeridini 2 kat büyütürsek, __{.pill.yellow} 197__ kesişen hücre var - iki katından fazla! [Devam](btn:next)
+{.r.reveal(when="slider-0")} Başlangıçta __{.pill.yellow} 88__ kesişen kare vardır. Kıyı şeridini 2 kat büyütürsek, __{.pill.yellow} 197__ kesişen kare olur - iki katından fazla! [Devam](btn:next)
 
-{.r.reveal(when="next-0")} Kıyı şeridinin boyutu `§197/88` kat arttı. Daha önce olduğu gibi, bu sahil şeridinin boyutunun
+{.r.reveal(when="next-0")} Kıyı şeridinin boyutu `§197/88` kat arttı. Daha önce olduğu gibi, bu sahil şeridinin boyutu
 
 {.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16`
 
@@ -416,15 +416,15 @@ Britanya'nın kıyı şeridi kesinlikle fraktal "görünüyor", ancak daha önce
 
 > id: coastline-dimension-1
 
-Bunu daha büyük ızgaralarla tekrarlarsak, İngiltere sahil şeridinin boyutunun aslında yaklaşık 1.21 olduğunu görürüz. Mandelbrot, bu fraktal boyutun aynı zamanda bir şeklin __pürüzlülüğünün__ bir ölçüsü olduğunu fark etti - yeni bir kavram, matematik ve bilimin diğer birçok alanında önemli uygulamalar buldu.
+Bunu daha büyük karelerle tekrarlarsak, İngiltere sahil şeridinin boyutunun aslında yaklaşık 1.21 olduğunu görürüz. Mandelbrot, bu fraktal boyutun aynı zamanda bir şeklin __pürüzlülüğünün__ bir ölçüsü olduğunu fark etti - bu yeni kavram ile, matematik ve bilimin diğer birçok alanında önemli uygulamalar buldu.
 
 ---
 
 > id: nature
 
-### Doğa ve Teknolojide Daha Fazla Fraktal
+### Doğa ve Teknolojiden Daha Fazla Fraktal
 
-Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ benzeyen birçok nesne vardır. Zaten bitkiler, kar taneleri ve sahil şeritleri gördük ve işte size birkaç örnek daha:
+Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ benzeyen birçok nesne vardır. Zaten bitkiler, kar taneleri ve sahil şeritlerini görmüştük ve işte size birkaç örnek daha:
 
 ::: column(width=200)
 
@@ -444,7 +444,7 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
 
     x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
 
-{.caption} Yıldırım cıvataları
+{.caption} Yıldırımlar
 
 ::: column(width=200)
 
@@ -458,7 +458,7 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
     // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
-{.caption} ABD'de Büyük Kanyon
+{.caption} ABD'deki Büyük Kanyon
 
 ::: column(width=200)
 
@@ -468,7 +468,7 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
 
 :::
 
-Tüm bu nesneler tamamen rastgele görünebilir, ancak tıpkı fraktallar gibi, bunların nasıl oluştuğunu belirleyen altta yatan bir desen vardır. Matematik şekilleri daha iyi anlamamıza yardımcı olabilir ve fraktalların tıp, biyoloji, jeoloji ve meteoroloji gibi alanlarda uygulamaları vardır. [Devam](btn:next)
+Tüm bu nesneler, tamamen rastgele oluşmuş gibi görünebilir, ancak tıpkı fraktallar gibi, bunların nasıl oluştuğunu belirleyen bir örüntü vardır. Matematik, şekilleri daha iyi anlamamıza yardımcı olabilir ve fraktalların tıp, biyoloji, jeoloji ve meteoroloji gibi alanlarda uygulamaları vardır. [Devam](btn:next)
 
     // TODO https://en.wikipedia.org/wiki/Fractal_antenna
     // TODO Fractals in African Art
@@ -482,13 +482,13 @@ Tüm bu nesneler tamamen rastgele görünebilir, ancak tıpkı fraktallar gibi, 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
 
-{.caption} Bilgisayar tarafından oluşturulan fraktal arazi
+{.caption} Bilgisayar tarafından oluşturulan fraktal şeklinde yeryüzü
 
 ::: column.grow
 
-Fraktalları, örneğin video oyunlarında veya bilgisayar tarafından oluşturulan filmlerde kullanılan manzaralar ve dokular gibi gerçekçi doğa “kopyaları” oluşturmak için de kullanabiliriz. Bu görüntüdeki su, dağlar ve bulutlar tamamen bir bilgisayar tarafından, fraktalların yardımıyla yapılır!
+Fraktalları, video oyunlarında veya bilgisayar tarafından oluşturulan filmlerde kullanılan manzaralar ve dokular gibi gerçekçi doğa “kopyaları” oluşturmak için de kullanabiliriz. Bu görüntüdeki su, dağlar ve bulutlar tamamen bir bilgisayar tarafından, fraktalların yardımıyla yapıldı!
 
-Ve hatta dijital görüntüleri sıkıştırmak, dosya boyutlarını azaltmak için bu işlemi tersine çevirebiliriz. İlk algoritmalar 1980'lerde Michael Barnsley ve Alan Sloan tarafından geliştirildi ve bugün hala yeni algoritmalar araştırılıyor.
+Ayrıca, dijital görüntüleri sıkıştırmak, dosya boyutlarını azaltmak için bu işlemi tam tersine de çevirebiliriz. Bu konuyla ilgili ilk algoritmalar 1980'lerde Michael Barnsley ve Alan Sloan tarafından geliştirildi ve bugün hala yeni algoritmalar araştırılıyor.
 
 :::
 
