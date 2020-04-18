@@ -105,6 +105,9 @@ algorithms to encode and decode messages.
 
 ## Binary Numbers
 
+> section: binary
+> sectionStatus: dev
+
 {.todo} Computers
 
 ---
