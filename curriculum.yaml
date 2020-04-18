@@ -292,13 +292,6 @@ codes:
 game-theory:
   title: Game Theory
   color: 8220b9
-  sections:
-    - title: The Winning Move
-      preview: /world/Game_Theory
-    - title: Cards, Coins and Dice
-    - title: The Prisoners’ Dilemma
-      preview: /world/Game_Theory#prisoners-dilemma
-    - title: Gamblers’ Ruin
 
 
 # ------------------------------------------------------------------------------
