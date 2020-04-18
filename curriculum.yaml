@@ -214,19 +214,17 @@ non-euclidean-geometry:
   title: Non-Euclidean Geometry
   color: 6f27cc
   sections:
-    - title: Introduction
-      preview: /world/Dimensions_and_Distortions
-    - title: Metric Spaces
-      preview: /world/Dimensions_and_Distortions#metric
     - title: Spherical Geometry
       preview: /world/Dimensions_and_Distortions#spherical
     - title: Map Projections
       preview: /world/Dimensions_and_Distortions#projections
     - title: Hyperbolic Geometry
       preview: /world/Dimensions_and_Distortions#hyperbolic
-    - title: Higher Dimensions
+    - title: Metric Spaces
+      preview: /world/Dimensions_and_Distortions#metric
     - title: Topology
       preview: /world/Dimensions_and_Distortions#topology
+    - title: Higher Dimensions
 
 functions:
   title: Functions
