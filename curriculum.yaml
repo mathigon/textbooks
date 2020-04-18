@@ -361,7 +361,7 @@ logic:
     - title: Infinity and Hilbert’s Hotel
       preview: /world/Infinity
 
-coordinate-geo:
+coordinate-geometry:
   title: Coordinate Geometry
   color: 0f82f2
   sections:
