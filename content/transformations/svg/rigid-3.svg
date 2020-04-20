@@ -1,7 +1,7 @@
 <svg width="200" height="200">
   <polygon points="54.9 115.7 112.5 83.6 99.7 18.8 34.2 10.9 6.5 70.8" fill="#2ba058" opacity="0.5"/>
 
-  <g class="image" style="transform-origin: 62px 149px">
+  <g class="image" style="transform-origin: 56px 136px">
     <polygon points="54.9 115.7 112.5 83.6 99.7 18.8 34.2 10.9 6.5 70.8" fill="#2ba058"/>
     <line style="display: none" x1="112.5" y1="83.6" x2="61.9" y2="148.2" stroke="#000" stroke-linecap="round" stroke-width="2"/>
     <line style="display: none" x1="99.7" y1="18.8" x2="61.9" y2="148.2" stroke="#000" stroke-linecap="round" stroke-width="2"/>

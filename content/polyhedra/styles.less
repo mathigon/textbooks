@@ -13,31 +13,16 @@
   width: 210px !important;
   margin: 12px !important;
   position: relative;
-  padding: 16px 12px;
-  background: #eee;
-
-  x-geopad {
-    background: transparent;
-    overflow: hidden;
-    svg { overflow: visible; }
-  }
-
-  &:before, &:after {
-    content: ""; height: 2px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    clip-path: polygon(0% 0%, 5%  100%, 10% 0%, 15%  100%, 20% 0%, 25% 100%,
-      30% 0%, 35%  100%, 40% 0%, 45%  100%, 50% 0%, 55%  100%, 60% 0%, 65%
-      100%, 70% 0%, 75%  100%, 80% 0%, 85%  100%, 90% 0%, 95%  100%, 100% 0%);
-  }
-  &:before { background-color: white; top: 0; }
-  &:after { background-color: #eee; bottom: -2px; }
+  padding: 14px;
+  background: @grey-background;
+  border-radius: 6px;
+  overflow: hidden;
+  x-geopad, x-geopad svg { overflow: visible; }
 }
 
 .task {
   color: @blue;
-  border-bottom: 1px solid @blue;
+  border-bottom: 2px solid @blue;
   padding-bottom: .5em;
   margin-bottom: .7em;
   font-weight: 600;

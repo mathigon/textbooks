@@ -287,8 +287,8 @@ complete-graph:
     verbunden. Ein vollständiger Graph mit _n_ Knoten hat `(n×(n-1))/2` Kanten.
   link: /course/graph-theory/parties-and-dating#handshakes-3
 
-complex-number:
-  title: Komplexe Zahl
+complex-numbers:
+  title: Komplexe Zahlen
   text: Die __komplexen Zahlen__ sind alle Zahlen, die die Summe oder Differenz
     einer realen und einer imaginären Zahl sind. Sie werden oft als `a + bi` geschrieben,
     wobei _a_ der Realteil und _b_ der Imaginärteil ist. Die Menge aller
@@ -590,7 +590,7 @@ fractal:
   text: Ein __Fraktal__ ist eine _selbstähnliche_ geometrische Form. Das bedeutet, dass sie bei verschiedenen Vergrößerungsstufen gleich
     aussieht. Fraktale können durch
     unendliche Wiederholung einer Vorgehensweise oder Anwendung einer Gleichung erzeugt werden.
-  link: /world/Fractals
+  link: /course/fractals
 
 fta:
   title: Fundamentalsatz der Arithmetik

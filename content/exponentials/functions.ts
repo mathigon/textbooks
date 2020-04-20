@@ -5,11 +5,10 @@
 
 
 import './components/atom';
-import {list, wait} from '@mathigon/core';
+import {list} from '@mathigon/core';
 import {numberFormat, Point} from '@mathigon/fermat';
 import {$} from '@mathigon/boost';
-import {AlgebraFlow} from '../../../mathigon.org/src/course/components/algebra/algebra-flow';
-import {CoordinateSystem, Step} from '../shared/types';
+import {AlgebraFlow, CoordinateSystem, Step} from '../shared/types';
 
 
 export function radioactive1($step: Step) {
@@ -37,65 +36,97 @@ export function radioactiveTable1($step: Step) {
   $step.onScore('blank-3', () => $step.$('.c4')!.addClass('on'));
 }
 
+export function radioactiveEquation1($step: Step) {
+  const $system = $step.$('x-algebra-flow') as AlgebraFlow;
+
+  $system.onNextStep({
+    1: async (equation) => {
+      equation.unwrapTerm('2', 2);
+      equation.addTermBefore('-', 't');
+    }
+  });
+
+  $system.onBackStep({
+    1: async (equation) => {
+      equation.deleteTerm('-');
+      equation.wrapTerms('(1/$1)', '2');
+    }
+  });
+}
+
 export function radioactiveChart($step: Step) {
   const $plot = $step.$('x-coordinate-system') as CoordinateSystem;
 
-  $step.model.set('format', numberFormat);
+  $step.model.format = numberFormat;
 
-  $step.model.watch((m) => {
-    const fn = (x: number) => m.x0 * 2 ** (-x / m.hl);
+  $step.model.watch((state: any) => {
+    const fn = (x: number) => state.x0 * 2 ** (-x / state.hl);
 
     $plot.setFunctions(fn);
-    $plot.drawPoints(list(0, 18000, m.hl).map(p => new Point(p, fn(p))));
+    $plot.drawPoints(list(0, 18000, state.hl).map(p => new Point(p, fn(p))));
   });
 }
 
 
 export function carbonSolver($step: Step) {
-  const $equation = $step.$('x-algebra-flow') as AlgebraFlow;
+  const $system = $step.$('x-algebra-flow') as AlgebraFlow;
 
-  $equation.on('next', async ({step, equation, system}) => {
-    switch(step) {
-      case 2:
-        await system.newRow();
-        await wait(400);
-        equation.wrapTerms('$1/$2', '800', '1200');
-        equation.deleteTerm('×');
-        await equation.animate();
-        return;
-      case 3:
-        equation.replaceTerm('800/1200', '0.667');
-        await equation.animate();
-        return;
-      case 4:
-        await system.newRow();
-        await wait(400);
-        equation.wrapTerms('log_($2)($1)', '0.667', '2');
-        equation.unwrapTerm('-t/6000');
-        await equation.animate();
-        return;
-      case 5:
-        await system.newRow();
-        await wait(400);
-        equation.replaceTerm('log_2(0.667)', '-0.585');
-        await equation.animate();
-        return;
-      case 6:
-        await system.newRow();
-        await wait(400);
-        equation.moveTermAfter('6000', '-0.585');
-        equation.addTermAfter('×', '-0.585');
-        equation.unwrapTerm('-t');
-        await equation.animate();
-        return;
-      case 7:
-        equation.replaceTerm('-0.585×6000', '-3510');
-        await equation.animate();
-        return;
-      case 8:
-        equation.deleteTerm('-');
-        equation.deleteTerm('-');
-        await equation.animate();
+  $system.onNextStep({
+    2: (equation) => {
+      equation.wrapTerms('$1/$2', '800', '1200');
+      equation.deleteTerm('×');
+    },
+    3: (equation) => {
+      equation.replaceTerm('800/1200', '0.667');
+    },
+    4: (equation) => {
+      equation.wrapTerms('log_($2)($1)', '0.667', '2');
+      equation.unwrapTerm('-t/6000');
+    },
+    5: (equation) => {
+      equation.replaceTerm('log_2(0.667)', '-0.585');
+    },
+    6: (equation) => {
+      equation.moveTermAfter('6000', '-0.585');
+      equation.addTermAfter('×', '-0.585');
+      equation.unwrapTerm('-t');
+    },
+    7: (equation) => {
+      equation.replaceTerm('0.585×6000', '3510');
+    },
+    8: (equation) => {
+      equation.deleteTerm('-');
+      equation.deleteTerm('-');
+    }
+  });
+
+  $system.onBackStep({
+    2: (equation) => {
+      equation.moveTermToStart('1200');
+      equation.addTermAfter('×', '1200');
+      equation.unwrapTerm('800');
+    },
+    3: (equation) => {
+      equation.replaceTerm('0.667', '800/1200');
+    },
+    4: (equation) => {
+      equation.wrapTerms('$2^$1', '-t/6000', '2');
+      equation.unwrapTerm('0.667');
+      equation.deleteTerm('log');
+    },
+    5: (equation) => {
+      equation.replaceTerm('-0.585', 'log_2(0.667)');
+    },
+    6: (equation) => {
+      equation.wrapTerms('$1/$2', '-t', '6000');
+      equation.deleteTerm('×');
+    },
+    7: (equation) => {
+      equation.replaceTerm('3510', '0.585×6000');
+    },
+    8: (equation) => {
+      equation.addTermBefore('-', 't');
+      equation.addTermBefore('-', '3510');
     }
   });
 }

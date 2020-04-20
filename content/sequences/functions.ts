@@ -33,13 +33,13 @@ export function simplePatterns($step: Step) {
 function fadeInElements($step: Step, tagName: string) {
   let t = 500;
 
-  for (let $svg of $step.$$('svg')) {
+  for (const $svg of $step.$$('svg')) {
     t += 500;
     $svg.prev!.data.display = 'visibility';
     $svg.prev!.hide();
     $svg.prev!.enter('pop', 400, t);
 
-    for (let $c of $svg.$$(tagName).reverse()) {
+    for (const $c of $svg.$$(tagName).reverse()) {
       $c.hide();
       $c.enter('pop', 400, t);
       t += 100;
@@ -90,14 +90,14 @@ export function ball($step: Step) {
   const $balls = $step.$$('.tennis-ball');
 
   $chart.setFunctions(bounce);
-  $chart.$xAxis.setAttr('x1', '2');
+  $chart.$xAxis!.setAttr('x1', '2');
   const $fn = $chart.$plot.$('path')!;
 
   function tick(n: number) {
     const x = 6.65 * n / $slider.steps;
-    const p = $chart.mathToPlotCoords(new Point(x, bounce(x)));
+    const p = $chart.toViewportCoords(new Point(x, bounce(x)));
 
-    const right = ($chart.plotBounds.xMax - p.x) / $chart.plotBounds.dx * 100;
+    const right = ($chart.viewportBounds.xMax - p.x) / $chart.viewportBounds.dx * 100;
     $fn.css('clip-path', `inset(-2px ${right}% -2px -2px)`);
 
     setPosition($balls[0], p, 640, 320, x * 90);
@@ -110,7 +110,7 @@ export function ball($step: Step) {
 
 export function ball1($step: Step) {
   const $reveals = $step.$$('.reveal');
-  for (let $r of $reveals) $r.hide();
+  for (const $r of $reveals) $r.hide();
 
   $step.onScore('blank-0 blank-1', () => {
     $reveals.forEach(($r, i) => $r.enter('fade', 400, 100 + i * 100));
@@ -138,13 +138,13 @@ export function arithmeticGeometricSelect($step: Step) {
 export function arithmeticGeometricGraph($step: Step) {
   const $plots = $step.$$('x-coordinate-system') as CoordinateSystem[];
 
-  $step.model.set('arithmetic',
-      (a: number, d: number, i: number) => numberFormat(a + i * d, 4));
+  $step.model.arithmetic =
+      (a: number, d: number, i: number) => numberFormat(a + i * d, 4);
 
-  $step.model.set('geometric',
-      (a: number, r: number, i: number) => numberFormat(a * (r ** i), 4));
+  $step.model.geometric =
+      (a: number, r: number, i: number) => numberFormat(a * (r ** i), 4);
 
-  $step.model.watch((m) => {
+  $step.model.watch((m: any) => {
     const p1 = arithmetic(m.a, m.d, 10).map((p, i) => new Point(1 + i, p));
     const p2 = geometric(m.b, m.r, 10).map((p, i) => new Point(1 + i, p));
     $plots[0].setSeries(p1);
@@ -177,7 +177,7 @@ export function payItForward2($step: Step) {
 // Figurate Numbers
 
 export function triangleNumbers($step: Step) {
-  for (let $c of $step.$$('svg circle')) $c.hide();
+  for (const $c of $step.$$('svg circle')) $c.hide();
   setTimeout(() => fadeInElements($step, 'circle'), 200);
 }
 
@@ -205,13 +205,13 @@ const triangularSum = cache((x: number) => {
 
   let n0 = Math.floor((Math.sqrt(8 * x + 1) - 1) / 2);
   while (n0 > 0) {
-    let r1 = x - triangleNumber(n0);
+    const r1 = x - triangleNumber(n0);
     if (!r1) return [n0, 0, 0];
     let n1 = Math.min(n0, Math.floor((Math.sqrt(8 * r1 + 1) - 1) / 2));
     while (n1 > 0) {
-      let r2 = r1 - triangleNumber(n1);
+      const r2 = r1 - triangleNumber(n1);
       if (!r2) results.push([n0, n1, 0]);
-      let n2 = Math.min(n1, Math.floor((Math.sqrt(8 * r2 + 1) - 1) / 2));
+      const n2 = Math.min(n1, Math.floor((Math.sqrt(8 * r2 + 1) - 1) / 2));
       if (r2 === triangleNumber(n2)) results.push([n0, n1, n2]);
       n1 -= 1;
     }
@@ -226,15 +226,15 @@ export function triangleSums($step: Step) {
   const $svgs = $step.$$('svg.t-sum');
   const $sums = $step.$$('strong.t-sum');
 
-  $step.model.watch((model) => {
+  $step.model.watch((model: any) => {
     const t = triangularSum(model.n);
     const tx = t.map(x => triangleNumber(x));
 
-    for (let i of [0, 1, 2]) {
+    for (const i of [0, 1, 2]) {
       $sums[i].textStr = tx[i];
       $svgs[i + 1].removeChildren();
       const s = t[i] <= 9 ? 1 : (1.9 - t[i] / 10);
-      for (let p of trianglePoints(t[i] - 1)) {
+      for (const p of trianglePoints(t[i] - 1)) {
         $N('circle', {cx: 70 + 15 * s * p.x, cy: 80 + 15 * s * p.y, r: 6 * s},
             $svgs[i + 1]);
       }
@@ -283,7 +283,7 @@ export function polygonNumbers($step: Step) {
     $mn[0].textStr = x;
     $mn[1].textStr = points.length;
 
-    for (let p of points) {
+    for (const p of points) {
       $N('circle', {
         cx: 150 + (60 + 5 * x) * (scale ? p.x / scale : 0),
         cy: 130 + (60 + 5 * x) * (scale ? (p.y / scale - 1) : 0),
@@ -293,7 +293,7 @@ export function polygonNumbers($step: Step) {
     }
   }
 
-  $step.model.watch((m) => update(m.k, $slider.current + 1));
+  $step.model.watch((m: any) => update(m.k, $slider.current + 1));
   $slider.on('move', (x) => update($step.model.k, x + 1));
   $slider.set(3);
 }
@@ -363,19 +363,19 @@ function hailstones(n: number) {
 }
 
 export function hailstone1($step: Step) {
-  $step.model.set('hailstones', (n: number) => hailstones(n)
-      .map(i => `<span class="n">${i}</span>`).join(', '));
+  $step.model.hailstones = (n: number) =>
+      hailstones(n).map(i => `<span class="n">${i}</span>`).join(', ');
 }
 
 export function hailstone2($step: Step) {
   const cached = cache(hailstones);
   const $plot = $step.$('x-coordinate-system') as CoordinateSystem;
 
-  $step.model.watch((m) => $plot.setPoints([...cached(m.n), 4, 2, 1]));
+  $step.model.watch((m: any) => $plot.setPoints([...cached(m.n), 4, 2, 1]));
 
   const $actions = $step.$$('.var-action');
-  $actions[0].on('click', () => $step.model.set('n', 31));
-  $actions[1].on('click', () => $step.model.set('n', 47));
+  $actions[0].on('click', () => $step.model.n = 31);
+  $actions[1].on('click', () => $step.model.n = 47);
 }
 
 export function quiz($step: Step) {
@@ -399,7 +399,7 @@ export function rabbits($step: Step) {
   const $stage = $step.$('.rabbits')!;
   const $slideshow = $step.$('x-slideshow') as Slideshow;
 
-  for (let $e of[...$dividers, ...$paths, ...$arrows, ...$numbers, ...$rabbits])
+  for (const $e of[...$dividers, ...$paths, ...$arrows, ...$numbers, ...$rabbits])
     $e.hide();
 
   const cum = [0, 1, 2, 4, 7, 12, 20];
@@ -433,7 +433,7 @@ export function rabbits($step: Step) {
 }
 
 export function spirals($step: Step) {
-  for (let $s of $step.$$('x-select')) {
+  for (const $s of $step.$$('x-select')) {
     const $cw = $s.next!.$('.clockwise')!;
     const $ccw = $s.next!.$('.anticlockwise')!;
     $s.on('change', ($el) => {
@@ -466,7 +466,7 @@ export function goldenSpiral($step: Step) {
     'scale(1.5) translate(-18%,-23%)', 'none', 'none'];
   $svg.css('transform', transforms[0]);
 
-  for (let $e of [...$squares, ...$lines]) $e.hide();
+  for (const $e of [...$squares, ...$lines]) $e.hide();
 
   const $slides = $step.$('x-slideshow') as Slideshow;
 
@@ -479,7 +479,7 @@ export function goldenSpiral($step: Step) {
       $squares[4].enter('fade', 400, 400);
       $squares[5].enter('fade', 400, 800);
     } else if (x === 5) {
-      for (let $l of $lines) $l.enter('draw', 2000);
+      for (const $l of $lines) $l.enter('draw', 2000);
     }
   });
 
@@ -492,7 +492,7 @@ export function goldenSpiral($step: Step) {
       $squares[4].exit('fade');
       $squares[5].exit('fade');
     } else if (x === 4) {
-      for (let $l of $lines) $l.exit('draw', 1000);
+      for (const $l of $lines) $l.exit('draw', 1000);
     }
   });
 }
@@ -514,15 +514,15 @@ export function sunflowerGrowing($step: Step) {
 
   function move(x: number) {
     for (let i = 0; i <= x; ++i) {
-      let t = 3.883222 * i;
-      let r = Math.sqrt((x - i) / count);
-      let cx = r * 70 * Math.cos(t);
-      let cy = r * 70 * Math.sin(t);
+      const t = 3.883222 * i;
+      const r = Math.sqrt((x - i) / count);
+      const cx = r * 70 * Math.cos(t);
+      const cy = r * 70 * Math.sin(t);
       $petals[i].setTransform(new Point(cx, cy), t, 1.5 + r);
     }
 
     for (let i = x + 1; i < count; ++i) {
-      let t = 3.883222 * i;
+      const t = 3.883222 * i;
       $petals[i].setTransform(undefined, t, 0.05);
     }
 
@@ -544,14 +544,14 @@ export function sunflowerSpiral($step: Step) {
 
   $slider.on('move', (x) => {
     for (let i = 0; i < COUNT; ++i) {
-      let t = i * Math.PI * 2 * x / $slider.steps;
-      let r = Math.sqrt(i) / Math.sqrt(COUNT) * 196;
+      const t = i * Math.PI * 2 * x / $slider.steps;
+      const r = Math.sqrt(i) / Math.sqrt(COUNT) * 196;
       $circles[i].setCenter({
         x: 200 + r * Math.cos(t),
         y: 200 + r * Math.sin(t)
       });
     }
-    $value.text = `${round(x / 1000 * 360, 1)}° (${x / 1000} rotations)`;
+    $value.text = `${round(x / 1000 * 360, 1)}° (${Math.round(x) / 1000} rotations)`;
   });
 
   $slideshow.on('next back', (x) => {
@@ -562,7 +562,7 @@ export function sunflowerSpiral($step: Step) {
     if (x === 5) $slider.moveTo($slider.steps * 0.6180339);
   });
 
-  for (let $a of $step.$$('.fib-action')) {
+  for (const $a of $step.$$('.fib-action')) {
     const x = $slider.steps * (+$a.data.value!);
     $a.on('click', () => $slider.moveTo(x));
   }
@@ -614,12 +614,12 @@ const colourFunctions: ColorFunction[] = [
 let colourIndex = 0;
 
 function colourPascal($rows: ElementView[][], $cells: ElementView[], fn: ColorFunction, index: number) {
-  for (let $c of $cells) $c.setAttr('class', 'c');
+  for (const $c of $cells) $c.setAttr('class', 'c');
   let t = 0;
 
   for (let i = 0; i < $rows.length; ++i) {
     for (let j = 0; j < $rows[i].length; ++j) {
-      let className = fn(i, j, +$rows[i][j].text);
+      const className = fn(i, j, +$rows[i][j].text);
       if (className) delay(() => {
         if (index === colourIndex) $rows[i][j].addClass(className);
       }, t += 6000 / (i * i + 100));
@@ -669,7 +669,7 @@ export function modular($step: Step) {
   const $cells = $step.$$('.c');
   let count = 0;
 
-  for (let $c of $cells) {
+  for (const $c of $cells) {
     const d = (+$c.text);
     let done = false;
     $c.on('click', () => {

@@ -370,7 +370,7 @@ _{button.next-step} Continue_
   times|four times]] by 10, and still give an integer result.
 * {.reveal(when="blank-0")} The number __230,000__ is even more zero-like. It
   can be divided [[four]] times by 10, and still stay an integer.
-* {.reveal(when="blank-1")} The number __5__, on the other and, it not very
+* {.reveal(when="blank-1")} The number __5__, on the other hand, is not very
   zero-like. We can’t divide it by ten even once, and have it stay an integer.
 
 ---

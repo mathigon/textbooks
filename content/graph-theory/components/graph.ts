@@ -16,7 +16,7 @@ interface GraphOptions {
   arc?: boolean;
   static?: boolean;
   bound?: boolean;
-  posn?: SimplePoint[]  // Initial positions of the vertices
+  posn?: SimplePoint[];  // Initial positions of the vertices
   vertex?: string|((i: number) => string);  // vertex colouring
   edge?: string|((i: number, j: number) => string);  // vertex colouring
 }
@@ -73,8 +73,8 @@ export class Graph extends EventTarget {
     this.height = $svg.svgHeight;
 
     if (options.directed) {
-      let $defs = $N('defs', {}, $svg);
-      let $marker = $N('marker', {
+      const $defs = $N('defs', {}, $svg);
+      const $marker = $N('marker', {
         id: 'arrow-head',
         viewBox: '0 -5 10 10',
         refX: '14',
@@ -88,7 +88,7 @@ export class Graph extends EventTarget {
 
     slide($svg, {
       start: (posn) => {
-        for (let v of this.vertices) {
+        for (const v of this.vertices) {
           if (Point.distance(posn, v.posn) < 18) {
             this.dragging = v;
             this.dragging.posn = posn;
@@ -122,10 +122,10 @@ export class Graph extends EventTarget {
     this.$edges.removeChildren();
 
     this.vertices = list(vertices).map((v) => {
-      let x = posn ? posn[v].x : this.width * (0.3 + 0.4 * Math.random());
-      let y = posn ? posn[v].y : this.height * (0.3 + 0.4 * Math.random());
+      const x = posn ? posn[v].x : this.width * (0.3 + 0.4 * Math.random());
+      const y = posn ? posn[v].y : this.height * (0.3 + 0.4 * Math.random());
 
-      let $el = (this.options.icon ?
+      const $el = (this.options.icon ?
                  $N('path', {'class': 'node', d: this.options.icon}, this.$vertices) :
                  $N('circle', {'class': 'node', r: this.options.r || 5}, this.$vertices)) as SVGView;
       if (this.options.vertex) $el.css('fill', run(this.options.vertex, v));
@@ -133,15 +133,15 @@ export class Graph extends EventTarget {
     });
 
     this.edges = edges.map(([a, b]) => {
-      let v1 = this.vertices[a];
-      let v2 = this.vertices[b];
+      const v1 = this.vertices[a];
+      const v2 = this.vertices[b];
 
-      let type = (v1 === v2) || this.options.arc ? 'path' : 'line';
-      let $el = $N(type, {'class': 'link'}, this.$edges) as SVGView;
+      const type = (v1 === v2) || this.options.arc ? 'path' : 'line';
+      const $el = $N(type, {'class': 'link'}, this.$edges) as SVGView;
       if (this.options.directed) $el.setAttr('marker-end', 'url(#arrow-head)');
       if (this.options.edge) $el.css('stroke', run(this.options.edge, a, b));
 
-      let edge = {$el: $el, vertices: [v1, v2] as [Vertex, Vertex]};
+      const edge = {$el: $el, vertices: [v1, v2] as [Vertex, Vertex]};
 
       v1.neighbours.push(v2);
       v2.neighbours.push(v1);
@@ -168,12 +168,12 @@ export class Graph extends EventTarget {
   }
 
   physics() {
-    let positions: SimplePoint[] = [];
+    const positions: SimplePoint[] = [];
     let totalMoved = 0;
 
     for (const [i, v] of this.vertices.entries()) {
       if (this.options.static || v === this.dragging) continue;
-      let force = {x: 0, y: 0};
+      const force = {x: 0, y: 0};
 
       for (const u of this.vertices) {
         if (u === v) continue;
@@ -181,7 +181,7 @@ export class Graph extends EventTarget {
         // Coulomb's Repulsion between Vertices
         let d = (v.posn.x - u.posn.x) ** 2 + (v.posn.y - u.posn.y) ** 2;
         if (nearlyEquals(d, 0, 0.001)) d = 0.001;
-        let coul = this.repulsion / d;
+        const coul = this.repulsion / d;
         force.x += coul * (v.posn.x - u.posn.x);
         force.y += coul * (v.posn.y - u.posn.y);
       }
@@ -213,7 +213,7 @@ export class Graph extends EventTarget {
       v.posn = positions[i] || v.posn;
 
       if (this.options.bound) {
-        let distance = this.options.r || 5;
+        const distance = this.options.r || 5;
         v.posn.x = clamp(v.posn.x, distance, this.width - distance);
         v.posn.y = clamp(v.posn.y, distance, this.height - distance);
       }

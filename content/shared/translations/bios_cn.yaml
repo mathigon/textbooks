@@ -3,18 +3,37 @@
 # ==============================================================================
 
 
+apollonius:
+  name: 阿波罗尼奥斯
+  born: -262  # ???
+  died: -190  # ???
+  bio: __阿波罗尼奥斯__(约公元前200年) 是古希腊佩尔格的数学家和天文学家，他以对四种_圆锥曲线_的研究而闻名。
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+cavalieri:
+  name: 卡瓦列里
+  born: 1598
+  died: 1647
+  bio: |
+    __博纳文图拉•卡瓦列里__(1598 – 1647)是一位意大利的数学家和修道士。他是积分学的先驱者之一，并以解决几何中体积求法的卡瓦列里原理而称著于世。
+
+    卡瓦列里还专注于光学和运动的研究，把逻辑学引入意大利，并与伽利略•伽利雷有多封书信往来。
+  links:
+    - title: Cavalieri’s Principle
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+
 eratosthenes:
   name: Eratosthenes
   born: -276
   died: -195
-  bio: __昔兰尼古城的埃拉托色尼__ (公元前 276  – 公元前 195 ) 是一名希腊数学家，
-    地理学家、天文学家、历史学家和诗人。他一生中的大部分时间都在埃及度过，担任
-    亚历山大图书馆馆长。
+  bio: |
+    __埃拉托色尼__（公元前275一前193）生于希腊在非洲北部的殖民地昔兰尼（在今利比亚）的一位数学家、地理学家、天文学家、历史学家和诗人。
 
-    在许多其他成就中，埃拉托色尼计算了地球的周长，测量了地球自转轴的倾斜度，估
-    算地球到太阳的距离，并绘制了一些世界上最早的地图。
+    在他的众多成就中，他计算出了地球的周长，测量了地轴的倾斜角，估计了太阳的距离，并绘制了地球的首张地图。
 
-    他还发明了“埃拉托色尼筛选法”，一种计算__素数__的有效方法。
+    他还发明了“埃拉托色尼筛法”，一种高效计算_质数_的方法。
   links:
     - title: 地球半径
       url: /course/circles/tangets-chords-arcs#eratosthenes
@@ -75,6 +94,53 @@ gauss:
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
       url: /course/sequences/figurate#triangle-sums
+
+
+hilbert:
+  name: 希尔伯特
+  born: 1862
+  died: 1943
+  bio: |
+    __大卫•希尔伯特__（1862 – 1943）是二十世纪最有影响力的数学家之一。他几乎致力于数学的所有领域，对建立大一统的数学理论特别感兴趣。
+
+    希尔伯特在哥廷根（德国）工作，在那里他培养了大量后来成为著名数学家的学生。在1900年的国际数学家大会期间，他列出了23个待解决的问题清单。这个给    未来的数学研究奠定了方向——至今仍有四个问题有待解决！
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+
+kepler:
+  name: 开普勒
+  born: 1571
+  died: 1630
+  bio: __约翰尼斯•开普勒__ (1571 – 1630) 是一位德国的天文学家和数学家。他是布拉格的_皇家数学家_，以他的_行星运动三大定律_而闻名。开普勒还致力于光学的研究，并发明了一种望远镜来提升他的观测结果。
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+leibniz:
+  name: 莱布尼茨
+  born: 1646
+  died: 1716
+  bio: |
+    __戈特弗里德•威廉•莱布尼茨__(1646 – 1716) 是一位德国的数学家和哲学家。在他的众多成就中，他不仅是微积分的发明者之一，还最早创造了一些机械计算器。
+
+    莱布尼茨认为我们的宇宙是上帝创造的“最好的一个”，允许我们有自由意志。他是一位伟大的理性主义倡导者，还对物理、医学、语言学、法律、历史和其它学科有中大的贡献。
+
+newton:
+  name: 牛顿
+  born: 1642
+  died: 1726
+  bio: |
+    __艾萨克•牛顿公爵__(1642 – 1726)是一位英国的物理学家、数学家、天文学家，还是有史以来最有影响力的科学家之一。他不仅是剑桥大学的教授，还是皇家学会会长。
+
+    在他的《自然哲学的数学原理》一书中，对万有引力和三大运动定律进行了公式化描述，这些描述奠定了此后三个世纪里物理世界的科学观点。
+
+    在其它方面，牛顿还是微积分的发明者之一，建造了第一个反射望远镜，计算出了音速，研究流体运动，并基于对三棱镜将白光发散成可见光谱的观察发展出了颜色理论。
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
 
 riemann:
   name: Riemann

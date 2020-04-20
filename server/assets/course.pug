@@ -4,7 +4,7 @@ mixin icon(url, width, height)
     use(xlink:href="/icons.svg#" + url)
 
 doctype html
-html
+html(lang=lang dir=dir)
   head
     meta(charset="utf-8")
     title= course.title
@@ -36,7 +36,7 @@ html
                   | #{s.title}
                   .connection
               else
-                a.sidebar-row(href=`/course/${course.id}/${s.id}`)
+                a.sidebar-row(href=`/course/${course.id}/${s.id}${lang === 'en' ? '' : ('?hl=' + lang)}`)
                   x-progress(r=10 p=0)
                   | #{s.title}
                   .connection

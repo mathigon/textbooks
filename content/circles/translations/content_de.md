@@ -10,11 +10,11 @@
 Solange es Menschen gibt, haben wir zum Himmel geschaut und versucht, das Leben
 auf der Erde mit der Bewegung von Sternen, Planeten und Mond zu erklären.
 
-Die altgriechischen Astronomen entdeckten als erste, dass sich alle Himmelsobjekte auf regelmäßigen Bahnen, den so genannten __Umlaufbahnen__,
-bewegen. Sie glaubten, dass diese Bahnen
-immer kreisförmig sind. Schließlich sind Kreise die "vollkommenste" aller F:
-symmetrisch in alle Richtungen und damit eine passende Wahl für die zugrunde
-liegende Ordnung unseres Universums.
+Die altgriechischen Astronomen entdeckten als erste, dass sich alle Himmelsobjekte
+auf regelmäßigen Bahnen, den so genannten __Umlaufbahnen__, bewegen. Sie glaubten,
+dass diese Bahnen immer kreisförmig sind. Schließlich ist ein Kreis die "vollkommenste"
+aller Formen: symmetrisch in alle Richtungen und damit die perfekte Wahl für die
+unserem Universum zugrunde liegende Ordnung.
 
 ::: column(width=320)
 
@@ -28,7 +28,7 @@ liegende Ordnung unseres Universums.
 > id: radius
 > goals: compass
 
-Jeder Punkt auf einem [__Kreis__](gloss:circle) hat den gleichen Abstand von seinem
+Alle Punkt auf einem [__Kreis__](gloss:circle) haben den gleichen Abstand von seinem
 Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass) gezeichnet werden können:
 
 ::: column(width=320)
@@ -39,7 +39,7 @@ Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass) gezeichnet
         circle.move.reveal(name="b" cx=250 cy=240 project="circle(a, 120)" target="r" when="compass")
         path.red(x="segment(a,b).contract(0.08)" target="r" arrows="both" hidden)
         path(name="c1" x="arc(a,b,1.99*pi)" hidden)
-        path.blue(x="segment(b.rotate(Math.PI/3,a),b.rotate(-2*Math.PI/3,a)).contract(0.01)" target="d" arrows="both" hidden)
+        path.blue(x="segment(b.rotate(pi/3,a),b.rotate(-2*pi/3,a)).contract(0.01)" target="d" arrows="both" hidden)
         path.green(x="arc(a,b.add(b.subtract(a).unitVector.scale(12)),1.99*pi).contract(0.02)" target="c" arrows="start" hidden)
       x-play-btn
 
@@ -214,7 +214,7 @@ _{span.reveal(when="blank-2")} (Beachte, wie die Hälfte der Tortenstücke nach 
 die andere Hälfte nach oben zeigt.)_
 
 {.reveal(when="blank-2" delay=1000)} Daher beträgt die Gesamtfläche des Rechtecks
-etwa `A = r^2 π`.
+etwa `A = r * r π = r^2 π`.
 
 :::
 
@@ -247,7 +247,7 @@ _{span.reveal(when="blank-1")} Die Basis des Dreiecks ist gleich
 _{span.reveal(when="blank-2")} Daher beträgt die Gesamtfläche des Dreiecks
 ungefähr_
 
-{.text-center.reveal(when="blank-2")} `A = 1/2 "Basis" × "Höhe" = r^2 π`.
+{.text-center.reveal(when="blank-2")} `A = 1/2 "Basis" × "Höhe" = 1/2 * 2rπ * r = r^2 π`.
 
 :::
 
@@ -585,8 +585,8 @@ Du kannst den Radiantwert entweder als Vielfaches von _π_ oder als
 einzelne Dezimalzahl schreiben. Kannst du diese Tabelle mit den entsprechenden
 Winkelgrößen in Grad und Radiant ausfüllen?
 
-| __{.m-green}Grad__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
-| __{.m-red}Radiant__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+| __{.m-red}Grad__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
+| __{.m-green}Radiant__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
 {.table-small.grid}
 
 ---
@@ -726,8 +726,8 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
       
-      path.teal.fill.reveal(x="sector(x,d1,Math.PI/2.5)" target="sector" when="next-3" label="Sektor" label-colour="white")
-      path.purple.fill.reveal(x="arc(x,b1,Math.PI/2.5)" target="segment" when="next-4" label="Segment")
+      path.teal.fill.reveal(x="sector(x,d1,pi/2.5)" target="sector" when="next-3" label="Sektor" label-class="white")
+      path.purple.fill.reveal(x="arc(x,b1,pi/2.5)" target="segment" when="next-4" label="Segment")
       
       path.black(x="circle(x,100)" name="c")
       
@@ -744,7 +744,7 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
       
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
-      path.yellow.thick.reveal(x="arc(x,d1,Math.PI/2.5)" label="Kreisbogen" target="arc" when="next-2" animation="draw")
+      path.yellow.thick.reveal(x="arc(x,d1,pi/2.5)" label="Kreisbogen" target="arc" when="next-2" animation="draw")
 
 ::: column.grow(parent="right")
 
@@ -757,11 +757,11 @@ einen Kreis an genau einem Punkt berührt. Man nennt ihn den
 __Berührungspunkt__. [Weiter](btn:next)
 * {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus
 dem Umfang eines Kreises. [Weiter](btn:next)
-* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil des
-Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
+* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil der
+Kreisfläche, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
   [Weiter](btn:next)
 * {.r.reveal(when="next-4")}Und ein [{.purple} Segment](pill:segment) ist ein
- Teil des Inneren eines Kreises, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
+ Teil der Kreisfläche, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
   [Weiter](btn:next)
 
 :::
@@ -894,7 +894,7 @@ Wissen über die Kreisbögen und Sektoren eines Kreises.
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sektor" target="sector" label-colour="white")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sektor" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Kreisbogen" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
 
@@ -949,7 +949,7 @@ Wir können diese Beziehung in einer Gleichung ausdrücken:
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
       
-      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sektor" target="sector" label-colour="white")
+      path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sektor" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Kreisbogen" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
       
@@ -967,19 +967,19 @@ interessiert. Zum Beispiel,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × c/360` |
-|                          | = | `2 r π × c/360`          |
+| [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × α/360` |
+|                          | = | `2 r π × α/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × c/360` |
-|                              | = | `r^2 π × c/360`         |
+| [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × α/360` |
+|                              | = | `r^2 π × α/360`         |
 {.eqn-system}
 
 :::
 
-wobei _r_ der Radius des Kreises ist und _c_ die Größe des
+wobei _r_ der Radius des Kreises ist und _α_ die Größe des
 Mittelpunktswinkels ist.
 
     // Was die Formeln tun, ist, sie gehen von der Fläche des ganzen Kreises aus, und
@@ -1000,14 +1000,14 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `2 r π × c/(2π)` |
-|                          | = | `r × c`          |
+| [{.red}Kreisbogenlänge](pill) | = | `2 r π × α/(2π)` |
+|                          | = | `r × α`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `r^2 π × c/(2π)` |
-|                              | = | `1/2 r^2 c`      |
+| [{.yellow}Sektorfläche](pill) | = | `r^2 π × α/(2π)` |
+|                              | = | `1/2 r^2 α`      |
 {.eqn-system}
 
 :::
@@ -1115,7 +1115,7 @@ Radius der Erde
         path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
         path.blue.transparent(x="circle(c,130)" target="circ")
         
-        image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 x-x="${b.x-4}" x-y="${b.y-60}" style="transform: rotate(-${angle(b,c,a).rad}rad)")
+        image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 style="transform: translate(${b.x-4}px, ${b.y-60}px) rotate(-${angle(b,c,a).rad}rad)")
 
 :::
 
@@ -1346,7 +1346,7 @@ den gleichen Abstand von ihrem Mittelpunkt.
 :::
 
 Beachte, dass die Definition einer Kugel fast identisch ist mit der Definition von einem 
-Kreis|Radius|Würfel]] - aber eben dreidimensional!
+[[Kreis|Radius|Würfel]] - aber eben dreidimensional!
 
 ---
 > id: gasometer
@@ -1355,13 +1355,14 @@ Kreis|Radius|Würfel]] - aber eben dreidimensional!
 
 ::: column.grow
 
-Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland. Er wird verwendet umErdgas, das als Brennstoff in nahegelegenen Fabriken und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
+Hier siehst du den zylindrischen _Gasometer_ in Oberhausen, Deutschland.
+Er wird verwendet um Erdgas, das als Brennstoff in nahegelegenen Fabriken
+und Kraftwerken verwendet wird, zu speichern. Der Gasometer ist 120 m hoch und
 sein Boden und seine Deckfläche sind zwei große Kreise mit einem
 Radius von 35 m. Es gibt zwei wichtige Fragen, die hier für Ingenieure
-von Interesse sein dürften: Es gibt zwei wichtige Fragen, die Ingenieure
-möglicherweise beantworten sollten:
+von Interesse sein dürften:
 
-* Wie viel Erdgas kann gespeichert werden? Das ist [[der Durchmesser|die Fläche|das Volumen]] des
+* Wie viel Erdgas kann gespeichert werden? Das entspricht [[dem Volumen|der Fläche|dem Durchmesser]] des
   Zylinders.
 * {.reveal(when="blank-0")} Wie viel Stahl wird für den Bau des Gasometers benötigt?
   In diesem Fall geht es (ungefähr) um [[die Oberfläche|den Umfang|die Diagonale]] des
@@ -1422,10 +1423,10 @@ z.B. wenn _r_ und _h_ beide in cm sind, dann wird das Volumen in
 
 ::: column.grow
 
-In den obigen Beispielen lagen die beiden Kreisflächen des Zylinders immer _direkt übereinander_
-:Man nennt dies einen __geraden Zylinder__. Wenn die Kreisflächen nicht direkt
+In den obigen Beispielen lagen die beiden Kreisflächen des Zylinders immer _direkt übereinander_: 
+Man nennt dies einen __geraden Zylinder__. Wenn die Kreisflächen nicht direkt
 übereinander liegen, reden wir von einem __schiefen Zylinder__. Die Kreisflächen sind noch parallel,
-aber die Seiten scheinen sich in einem Winkel von nicht 90° seitwärts zu ”lehnen“.
+aber die Seiten scheinen sich seitwärts zu ”lehnen“, in einem Winkel der nicht 90° groß ist.
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1478,12 +1479,13 @@ konstant:
 
 ::: column.grow
 
-Um die Oberfläche eines Zylinders zu bestimmen, müssen wir ihn flach in sein 
-[Netz](gloss:net) “ausbreiten”. Du kannst das selbst ausprobieren, indem du z.B. das
+Um die Oberfläche eines Zylinders zu bestimmen, müssen wir ihn in sein 
+[Netz](gloss:net) “auseinanderklappen”. Du kannst das selbst ausprobieren, indem du z.B. das
 Etikett auf einer Lebensmitteldose ablöst.
 
-Es gibt bei jedem Zylinder zwei [[Kreise|Kugeln|Quadrate]],
-oberhalb und unterhalb. Die gebogene Seitenfläche ist eigentlich ein großes [[Rechteck|Quadrat|Trapez]].
+Jeder Zylinder setzt sich aus zwei [[Kreisen|Kugeln|Quadraten]] zusammen,
+oberhalb und unterhalb. Dazu kommt eine gebogene Seitenfläche, die eigentlich ein 
+großes [[Rechteck|Quadrat|Trapez]] ist.
 
 * {.reveal(when="blank-0 blank-1")} Die zwei Kreisflächen haben jeweils eine Fläche von
   _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
@@ -1624,10 +1626,10 @@ unmöglich ist.
 ::: column.grow
 
 Genau wie ein Zylinder muss ein Kegel nicht “gerade” sein. Wenn die Spitze 
-direkt über der Mitte der Grundfläche liegt, handelt es sich um einen __geraden Zylinder__. Ansonsten sprechen
-wir von einem __schiefen Zylinder__.
+direkt über der Mitte der Grundfläche liegt, handelt es sich um einen __geraden Kegel__. Ansonsten sprechen
+wir von einem __schiefen Kegel__.
 
-Noch einmal können wir das Prinzip von Cavalieri anwenden, um zu zeigen, dass alle schiefen Zylinder
+Noch einmal können wir das Prinzip von Cavalieri anwenden, um zu zeigen, dass alle schiefen Kegel
 das gleiche Volumen haben, solange sie die gleiche Grundfläche und Höhe haben.
 
 ::: column(width=280)
@@ -1678,7 +1680,7 @@ mit Hilfe des [Satzes von Pythagoras](gloss:pythagoras-theorem) ermitteln:
 
 ::: column(width=280)
 
-    x-geopad.sketch(width=280 height=200): svg
+    x-geopad.sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1709,7 +1711,7 @@ mit der [Formel](gloss:circle-sector) finden, die wir in einem vorherigen Abschn
 
 ::: column(width=280)
 
-    x-geopad.sketch(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)
@@ -1785,7 +1787,7 @@ Formen in einer bestimmten Höhe über der Grundfläche ändert:
 
     x-solid(size=240 style="margin: -24px 0 10px")
 
-    x-geopad.sketch.r(width=220 height=120): svg
+    x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(110,110)" name="c1")
       circle(x="c1.shift(0,-100*h)" name="h1")
       circle(x="h1.shift(-100 * sqrt(1-h*h),0)" name="a1")
@@ -1794,15 +1796,15 @@ Formen in einer bestimmten Höhe über der Grundfläche ändert:
       path(x="arc(c1,point(10,c1.x),pi)")
       path(x="segment(point(10,c1.x),point(210,c1.x))")
       path.green.thin(x="segment(c1,a1)" label="r" target="r tri")
-      path.blue.thin(x="segment(c1,h1)" label="h" target="h h1 tri")
-      path.red.thick(x="segment(a1,h1)" label="x" target="x tri")
+      path.blue.thin(x="segment(h1,c1)" label="h" target="h h1 tri")
+      path.red.thick(x="segment(h1,a1)" label="x" target="x tri")
       path.red.thick(x="segment(h1,point(220-a1.x,a1.y))")
 
 ::: column(width=240)
 
     x-solid(size=240 style="margin: -24px 0 10px")
 
-    x-geopad.sketch.r(width=220 height=120): svg
+    x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(10,10)" name="a2" hidden)
       circle(x="point(210,10)" name="b2" hidden)
       path(x="polygon(a2,b2,point(210,110),point(10,110))")
@@ -1813,7 +1815,7 @@ Formen in einer bestimmten Höhe über der Grundfläche ändert:
 
       path.thin(x="segment(a2,c2)")
       path.thin(x="segment(b2,c2)")
-      path.blue.thin(x="segment(c1,h1)" label="h" target="h")
+      path.blue.thin(x="segment(h1,c1)" label="h" target="h")
       path.blue.thin(x="segment(h1,point(110-100*h,h2.y))")
       path.red.thick(x="segment(point(10,h2.y),point(110-100*h,h2.y))")
       path.red.thick(x="segment(point(110+100*h,h2.y),point(210,h2.y))")
@@ -1880,7 +1882,7 @@ und das Volumen des [Kegels](gloss:cone-volume) voneinander abziehen_
 ---
 > id: sphere-volume-2
 
-Eine Kugel besteht aus [[zwei]] Halbkugeln, _{span.reveal(when="blank-0")}d.h.
+Eine Kugel besteht aus [[2]] Halbkugeln, _{span.reveal(when="blank-0")}d.h.
 ihr Volumen ergibt sich zu_
 
 {.text-center.reveal(when="blank-0")} `V = 4/3 r^3 π`.
@@ -1932,7 +1934,7 @@ _{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
     x-solid(size=220 style="margin-top: -20px")
     .large-op.reveal(when="blank-0" animation="pop") =
 
-{.text-center} Diese Kugel hat den Radius `r`. Sein Volumen beträgt
+{.text-center} Diese Kugel hat den Radius `r`. Ihr Volumen beträgt
 _{x-equation.small(solution="4/3 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column(width=220)
@@ -1968,10 +1970,10 @@ und beobachte, wie dieser Bereich auf einer Kugel _tatsächlich_ aussieht:
 
     .sphere-maps
       x-select.tabs
-        .projection Mercator
-        .projection Zylindrisch
-        .projection Robinson
-        .projection Mollweide
+        .projection(data-name="mercator") Mercator
+        .projection(data-name="cylindrical") Zylindrisch
+        .projection(data-name="robinson") Robinson
+        .projection(data-name="mollweide")  Mollweide
       .map-body
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")

@@ -3,7 +3,7 @@
 # ==============================================================================
 
 welcome: "Willkommen bei Mathigon! Ich bin Archie, dein persönlicher Tutor. :mortar_board:"
-account: Du kannst [ein kostenloses Konto erstellen](->.nav-link.popup-target), um deine Fortschritte zu speichern.
+account: Du kannst [ein kostenloses Konto erstellen](->#login-btn), um deine Fortschritte zu speichern.
 tutorial1: Unser Inhalt ist in kleine Abschnitte unterteilt. Du musst die Aufgaben lösen, um zu zu sehen wie es weiter geht.
 tutorial2: Wir speichern alle deine Fortschritte, so dass du später wiederkommen und genau dort weitermachen kannst, wo du aufgehört hast.
 

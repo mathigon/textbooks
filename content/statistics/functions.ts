@@ -32,7 +32,7 @@ export function roulette($step: Step) {
       ballOffset = 0;
     },
     draw(angle, isMomentum, dt) {
-      for (let $w of $wheels) $w.setTransform(undefined, angle);
+      for (const $w of $wheels) $w.setTransform(undefined, angle);
       if (!isMomentum) return;
 
       ballSpeed *= 0.985;
@@ -77,14 +77,14 @@ function compute(str: string) {
   let result = 1;
 
   for (let i = 2; i <= max; ++i) {
-    let values = poss[i - 1];
-    let count = values.length;
+    const values = poss[i - 1];
+    const count = values.length;
 
-    let observed = values.map(v => findCount(str, v));
-    let sum = total(observed);
+    const observed = values.map(v => findCount(str, v));
+    const sum = total(observed);
 
-    let chi = total(observed.map(o => ((o - sum / count) ** 2) / sum * count));
-    let deg = count - 1;
+    const chi = total(observed.map(o => ((o - sum / count) ** 2) / sum * count));
+    const deg = count - 1;
 
     result = Math.min(result, Random.chiCDF(chi, deg));
   }

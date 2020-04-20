@@ -53,8 +53,8 @@ __{.red}A__ ist, und dass __{.red}A__ ein __Vielfaches__ von __{.blue}B__ ist. W
 __{.blue}B__|__{.red}A__, wobei der vertikale Strich einfach _“teilt”_ bedeutet.
 
 Zum Beispiel __{.green}7__ × 3 = __{.orange}21__, also ist __{.green}7__ ein
-[[Teiler|Vielfaches]] von __{.orange}21__, __{.orange}21__ ist ein [[Vielfaches|Teiler]]
-von __{.green}7__, und __{.green}7__|__{.orange}21__.
+[[Teiler|Vielfaches]] von __{.orange}21__ und __{.orange}21__ ist ein [[Vielfaches|Teiler]]
+von __{.green}7__ - kurz: __{.green}7__|__{.orange}21__.
 
 ---
 > id: divisibility-game

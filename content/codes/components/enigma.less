@@ -1,0 +1,30 @@
+// =============================================================================
+// Enigma Component
+// (c) Mathigon
+// =============================================================================
+
+
+.enigma {
+  background: black;
+  display: block;
+  // ...
+}
+
+.keyboard, .lightboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+
+  .key {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: grey;
+    margin: 10px;
+    color: black;
+    &.glowing { background: yellow; }
+  }
+}

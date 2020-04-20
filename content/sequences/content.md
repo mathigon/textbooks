@@ -39,7 +39,7 @@ equations that help predict when the next one might happen.
 ::: column(width=400)
 
 Bankers also look at historic data of stock prices, interest rates and currency
-exchange rates, to estimate how __financial markets__ might change in the
+exchange rates to estimate how __financial markets__ might change in the
 future. Being able to predict if the value of a stock will go up or down can be
 extremely lucrative!
 
@@ -223,7 +223,7 @@ Every term is formed by increasingly large squares:
 
 For the triangle numbers we found a recursive formula that tells you the _next_
 term of the sequence as a function of of its _previous_ terms. For square
-numbers we can do even better: an equation that tells you the *n*th term
+numbers we can do even better: a formula that tells you the *n*th term
 directly, without first having to calculate all the previous ones:
 
 {.text-center.s-purple} *{.n}`x_n`* = _{x-equation(solution="n^2")}_
@@ -231,7 +231,7 @@ directly, without first having to calculate all the previous ones:
 ---
 > id: explicit
 
-Equations like this are called [__explicit formulas__](gloss:sequence-explicit).
+This is called an [__explicit formula__](gloss:sequence-explicit).
 We can use it, for example, to calculate that the 13th square number is [[169]],
 without first finding the previous 12 square numbers.
 
@@ -372,7 +372,7 @@ tennis ball. They dropped the ball from a height of 10 meters and measured its
 position over time. With every bounce, the ball loses some of its original
 height:
 
-    x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|7|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
+    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)
@@ -512,7 +512,7 @@ _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
 
-    x-coordinate-system(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system(padding="12 12 24 40" width=320 height=240)
     x-gesture(target="#arithmetic-geometric-graph x-var" slide="100,0")
 
 ::: column.ag-chart.s-green(width=320)
@@ -528,7 +528,7 @@ _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
 
-    x-coordinate-system.green(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system.green(padding="12 12 24 40" width=320 height=240)
 
 :::
 
@@ -704,7 +704,7 @@ we can work out how many new people are affected at any step:
 
 The number of people increases incredibly quickly. In the 10th step, you would
 reach 19,683 new ones, and after 22 steps you would have reached more people
-than currently alive on Earth.
+than are currently alive on Earth.
 
 This sequence of numbers has a special name: the __powers of 3__. As you can
 see, every term is actually just a different [power](gloss:powers) of 3:
@@ -875,7 +875,7 @@ You’ve already seen the recursive formula for triangle numbers:
 > id: billiard-pool
 
 It is no coincidence that there are always 10 pins when bowling or 15 balls when
-playing billiard: they are both triangle numbers!
+playing billiards: they are both triangle numbers!
 
 ::: column(width=320)
 
@@ -1457,7 +1457,7 @@ sunflower and pine cone you saw at the beginning of this section.
 
 Both these plants grow outwards from their center (a part of the plant called
 the _meristem_). As new seeds, leaves or petals are added, they push the
-existing ones further outside.
+existing ones further outwards.
 
 Move the slider on the right to visualise how a plant grows. Notice how every
 leaf is added at a different rotation than the previous one. The angle between
@@ -1490,7 +1490,7 @@ might look like with different angles between its seeds:
 
     .sunflower-spiral(slot="stage")
       .value
-      x-slider(steps=1000 speed=0.1 no-play)
+      x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
 {div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
@@ -1603,7 +1603,7 @@ explain why?
 __3. Fibonacci Staircases__
 
 When walking up the stairs, I can either take single steps or leap over two
-steps at a time. This means that there are many different possibilities how I
+steps at a time. This means that there are many different possibilities for how I
 could go up a staircase. For example, if there are 5 steps, I have 8 different
 choices:
 
@@ -1685,7 +1685,7 @@ Eratosthenes__](gloss:sieve-eratosthenes).
 
 ::: column(width=320)
 
-    x-coordinate-system(width=320 height=320 margins="8 8 20 24")
+    x-coordinate-system(width=320 height=320 padding="8 8 20 24" axis-names="x,number of primes less than x")
 
 {.caption} If we draw a chart that increases by 1 whenever there is a prime
 number, we get a “stepped” function with fascinating properties.
@@ -1708,7 +1708,7 @@ some of the most important and most mysterious concepts in mathematics!
 To determine if a number is [prime](gloss:prime), we have to find all of its
 [factors](gloss:factor). Usually we would _multiply_ these factors to get back
 the original number, but let’s see what happens if we _add up_ all factors
-of a number:
+of a number (excluding the number itself):
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
@@ -1826,7 +1826,7 @@ continue to repeat over and over again, forever.
 Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
 Then the sequence would look like this:
 
-{.text-center} _{span.var.s-orange}${hailstones(n)}_, *{span.s-red}_{.n}4_,
+{.text-center} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.n}4_,
 _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 *{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
 
@@ -1837,7 +1837,7 @@ It seems like the length of the sequence varies a lot, but it will always end up
 in a 4, 2, 1 cycle – no matter what first number we pick. We can even visualise
 the terms of the sequence in a chart:
 
-    x-coordinate-system(margins="12 12 24 40")
+    x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Notice how some starting points end very quickly,
@@ -2129,7 +2129,7 @@ _third_ diagonals of the triangle – that makes eight occurrences in total.
 It is unknown if there are any other numbers that appear eight times in the
 triangle, or if there numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
-fixed limed on how often numbers can appear in Pascal’s triangle – but it hasn’t
+fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.
 
 ---
@@ -2241,18 +2241,18 @@ completely different methods, and then see how they are related.
     // a single person left, who would get the role.
 
     // A clever actress decided she would get the role. There were 10 people in
-    // her circle. Where must she stand to be the last one in the circle? 
+    // her circle. Where must she stand to be the last one in the circle?
 
     // An actor auditioning for a different part was faced with 20 in his circle.
     // Where should ! he stand?
     
     // Find a pattern that tells you where to stand no matter how many people
-    // are in the circle. Why does it work? 
+    // are in the circle. Why does it work?
 
     // What if the director eliminates every mth person? Where should you stand
-    // in a circle of n? 
+    // in a circle of n?
 
-    // What about “in, in, out, out,” leaving two in and then kicking two out? 
+    // What about “in, in, out, out,” leaving two in and then kicking two out?
 
     // With eight people, for example, you’ll lost the even numbers on round one,
     // 3 and 7 on round two, and 5 on round three, making 1 the winner.
@@ -2262,7 +2262,7 @@ completely different methods, and then see how they are related.
     // person 1. So your answer for n people should be the same as for n-1,
     // except the people are relabeled with a number 2 greater. In other words,
     // if for the nth circle you stands in position p, for the n+1st circle you
-    // stand in position  p +2. However, this number may be larger than n+1, so
+    // stand in position p +2. However, this number may be larger than n+1, so
     // we have to reduce it mod n+1 if necessary. It’s possible to get a formula
     // for this, and that’s a nice challenge for kids who are ready for it. But
     // for most, just elucidating the pattern will be enough.

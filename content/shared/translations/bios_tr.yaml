@@ -796,8 +796,10 @@ mandelbrot:
     IBM’de çalışırken, fraktalların görsellerini yaratmak için ilk bilgisayarları kullanmıştır ve 1980 yılında ünlü _Mandelbrot kümesi_ni keşfetmiştir.
 
   links:
-    - title: Fraktallar
-      url: /world/Fractals
+    - title: Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
 
 mersenne:
   born: 1588

@@ -24,7 +24,7 @@ The server will automatically watch for file changes.
 
 Every course is a subfolder in the [content](content) directory. The URL of the
 [Sequences course](content/sequences), for example, will be
-[localhost:5000/course/probability](http://localhost:5000/course/sequences).
+[localhost:5000/course/sequences](http://localhost:5000/course/sequences).
 
 
 ## Course Structure

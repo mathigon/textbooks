@@ -377,7 +377,6 @@ collatz:
 conway:
   name: Conway
   born: 1937
-  died: 2020
   bio: |
     __John Horton Conway__ (geb. 1937) ist ein britischer Mathematiker und derzeit
     Professor Emeritus an der Princeton University.
@@ -951,17 +950,17 @@ johnson:
   died: 2020
   name: Johnson
   bio: |
-    __Katherine Johnson__ (born 1918) is an African-American mathematician.
-    While working at NASA, Johnson calculated the orbits taken by American
-    astronauts – including Alan Shepard, the first American in space, the Apollo
-    Moon landing program, and even the Space Shuttle.
+    __Katherine Johnson__ (1918 - 2020) war eine afroamerikanische Mathematikerin.
+    Während ihrer Arbeit bei der NASA berechnete Johnson die Umlaufbahnen von
+    amerikanischen Astronauten - zB für Alan Shepard, dem ersten Amerikaner im
+    Weltraum, das Apollo-Mondlandungsprogramm und sogar das Space Shuttle.
 
-    Her extraordinary ability to calculate orbital trajectories, launch windows
-    and emergency return paths was widely known. Even after the arrival of
-    computers, astronaut John Glenn asked her to personally re-check the
-    electronic results.
+    Ihre außerordentliche Fähigkeit zur Berechnung von Umlaufbahnen, Startzeiten
+    und Notfallrückkehrwege war weithin bekannt. Auch nach dem aufkommenden Einsatz
+    von Computern bat der Astronaut John Glenn sie, persönlich noch einmal die
+    elektronischen Ergebnisse zu überprüfen.
 
-    In 2015, Johnson received the Presidential Medal of Freedom.
+    Im Jahr 2015 erhielt Johnson die Presidential Medal of Freedom.
 
 karinthy:
   name: Karinthy
@@ -1003,22 +1002,22 @@ lagrange:
     der Leonard Euler als Direktor der Akademie der Wissenschaften in Berlin
     ablöste.
 
-    He worked on analysis and the calculus of variations, invented new
-    methods for solving differential equations, proved theorems in number
-    theory, and laid the foundations of group theory.
+    Er arbeitete im Bereich der Analysis und der Variationsrechnung, erfand neue
+    Methoden zur Lösung von Differentialgleichungen, bewies Theoreme in der
+    Zahlentheorie und legte die Grundlagen der Gruppentheorie.
 
-    Lagrange also wrote about classical and celestial mechanics, and helped
-    establish the metric system in Europe.
+    Lagrange schrieb auch über klassische und Himmelsmechanik und half
+    das metrische System in Europa zu etablieren.
 
 lambert:
   born: 1728
   died: 1777
   name: Lambert
-  bio: __Johann Lambert__ (1728 – 1777) was a Swiss mathematician, physicist,
-    astronomer and philosopher. He was the first to prove that _π_ is an
-    irrational number, and he introduced hyperbolic trigonometric functions.
-    Lambert also worked on geometry and cartography, created map projections,
-    and foreshadowed the discovery of non-Euclidean spaces.
+  bio: __Johann Lambert__ (1728 - 1777) war ein Schweizer Mathematiker und Physiker,
+    Astronom und Philosoph. Er war der erste, der bewies, dass _π_ eine
+    irrationale Zahl ist, und er führte hyperbolische trigonometrische Funktionen ein.
+    Lambert arbeitete auch im Bereich der Geometrie und Kartographie, erstellte
+    Kartenprojektionen, und kündigte die Entdeckung der nicht-euklidischen Räume an.
 
 laplace:
   born: 1749
@@ -1026,17 +1025,18 @@ laplace:
   name: Laplace
   small: true
   bio: |
-    __Pierre-Simon Laplace__ (1749 – 1827) was a French mathematician and
-    scientist. He is sometimes called the “Newton of France”, because of his
-    wide range of interests, and the enormous impact of his work.
+    __Pierre-Simon Laplace__ (1749 - 1827) war ein französischer Mathematiker und
+    Wissenschafter. Er wird manchmal der "Newton Frankreichs" genannt, wegen seiner
+    breiten Palette von Interessen und der enormen Bedeutung seiner Arbeit.
 
-    In a five-volume book, Laplace translated problems in celestial mechanics
-    from _geometry_ to _calculus_. This opened up a wide range of new strategies
-    for understanding our universe. He proposed that the solar system developed
-    from a rotating disk of dust.
+    In einem fünfbändigen Buch übersetzte Laplace Probleme der Himmelsmechanik von
+    der _Geometrie_ hin zur _Infinitesimalrechnung_. Dies eröffnete eine breite
+    Palette neuer Ansätze für das Verständnis unseres Universums. Er vermutete,
+    dass sich das Sonnensystem aus einer rotierenden Staubscheibe entwickelt hat.
 
-    Laplace also pioneered the field of probability, and showed how probability
-    can help us understand data from the physical world.
+    Laplace leistete auch Pionierarbeit auf dem Gebiet der Statistik und zeigte,
+    wie die Wahrscheinlichkeit uns helfen kann, Daten aus der realen Welt zu
+    verstehen.
 
 leibniz:
   name: Leibniz
@@ -1153,7 +1153,9 @@ mandelbrot:
     _Mandelbrot set_.
   links:
     - title: Fractals
-      url: /world/Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
 
 mersenne:
   born: 1588
@@ -1400,13 +1402,12 @@ pearson:
 penrose:
   name: Penrose
   born: 1931
-  died: 2020
   bio: |
-    __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
-    who is known for his groundbreaking work in general relativity and cosmology
-    – often collaborating with other famous scientists like Stephen Hawking and
-    Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
-    non-periodic tessellations.
+    __Sir Roger Penrose__ (geb. 1931) ist ein britischer Mathematiker und Physiker
+    der für seine bahnbrechenden Arbeiten in der allgemeinen Relativitätstheorie und
+    Kosmologie bekannt ist - oft in Zusammenarbeit mit anderen berühmten
+    Wissenschaftlern wie Stephen Hawking und Michael Atiyah. Er entdeckte auch die
+    selbstähnlichen und nicht-periodischen _Penrose Parkettierungen_.
   links:
     - title: Penrose Tilings
       url: /course/polyhedra/tessellations#penrose
@@ -1747,7 +1748,6 @@ wallis:
 
 wiles:
   born: 1953
-  died: 2020
   name: Wiles
   bio: |
     Der britische Mathematiker Sir __Andrew Wiles__ (geb. 1953) ist vor allem für den

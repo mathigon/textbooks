@@ -227,22 +227,24 @@ ones can be drawn with a single, continuous stroke.
 
 ---
 > id: bridges-3
-> goals: dropdown
+> goals: size prime eo
 
 Just like for the city maps before, we find that some graphs are possible while
 others are not. To help us understand why, let us label every vertex with its
-[degree](gloss:graph-degree):
+[degree](gloss:graph-degree). Then we can colour the vertices in different ways,
+and try to reveal a pattern:
 
-    .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong These graphs are possible:
-      include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong These graphs are not possible:
-      include svg/vertex-orders-2.svg
-      p: select
-        option(value="val", selected) Colour by value
-        option(value="size") Colour by small and large
-        option(value="prime") Colour by prime and composite
-        option(value="eo") Colour by even and odd
+    figure
+      x-select.var.tabs(:bind="colour")
+        div(value="val") Value
+        div(value="size") Size
+        div(value="prime") Prime Numbers
+        div(value="eo") Even and Odd
+      .frame-body
+        p(style="margin: 0"): strong These graphs are possible:
+        include svg/vertex-orders-1.svg
+        p(style="margin: 1em 0 0"): strong These graphs are not possible:
+        include svg/vertex-orders-2.svg
 
 ---
 > id: bridges-4
@@ -317,7 +319,7 @@ Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
 That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
 number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
 
-    p.var ${handshakeTable(n)}
+    p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
 
 ---
@@ -371,7 +373,7 @@ layout are called __bipartite graphs__.
 :::
 
 {.reveal(when="blank-0 blank-1")} The bipartite graph with two sets of size _x_
-and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]]
+and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2*x* – _y_]]
 edges, _{span.reveal(when="blank-2")}which means that in the above example there
 are ${m} × ${f} = ${m×f} dates._
 
@@ -800,7 +802,7 @@ the remaining cities in any order:
 In a graph with ${tsn1}{tsn1|4|2,10,1} cities, every Hamiltonian cycle must also
 contain ${tsn1} cities. Now,
 
-    ul.var ${tsmString(tsn1)}
+    ul.var(:html="tsmString(tsn1)")
 
 This means that, in total, there are ${tsnPaths(tsn1)} possible paths. A
 shorthand for this product is ${tsn1}! or ${tsn1} __Factorial__.

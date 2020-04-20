@@ -33,8 +33,8 @@ al-haytham:
   bio: |
     __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 – 1050)
     lived in Cairo during the Islamic Golden Age, and studied mathematics,
-    physics, astronomy, philosophy and medicine. He was a proponent of the
-    _scientific method_: the belief that any a scientific hypothesis must be
+    physics, astronomy, philosophy, and medicine. He was a proponent of the
+    _scientific method_: the belief that any scientific hypothesis must be
     verified using experiments or mathematical logic – centuries before
     European scientists during the Renaissance.
 
@@ -47,7 +47,7 @@ al-karaji:
   died: 1029
   name: Al-Karaji
   bio: __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 – 1029) was
-    a Persian mathematician and engineer. He was the first person to use _prove
+    a Persian mathematician and engineer. He was the first person to use _proof
     by induction_, which allowed him to prove the binomial theorem.
   links:
     - title: Proof by Induction
@@ -65,7 +65,7 @@ al-khwarizmi:
     collection of academic books since the destruction of the Library of
     Alexandria.
 
-    Al-Khwarizmi has been called the “father of algebra” – in fact, the word
+    Al-Khwarizmi has been called the “Father of algebra” – in fact, the word
     _algebra_ comes from the Arabic title of his most important book: “The
     Compendious Book on Calculation by Completion and Balancing”. In it, he
     showed how to solve linear and quadratic equations, and for many centuries,
@@ -300,7 +300,7 @@ cardano:
     influential mathematicians and scientists of the Renaissance. He
     investigated hypercycloids, published Tartaglia’s and Ferrari’s solution for
     cubic and quartic equations, was the first European to systematically use
-    negative numbers, and even acknowledged the existing of imaginary numbers
+    negative numbers, and even acknowledged the existence of imaginary numbers
     (based on `sqrt(-1)`).
 
     Cardano also made some early progress in probability theory and introduced
@@ -333,7 +333,7 @@ cauchy:
   bio: |
     __Augustin-Louis Cauchy__ (1789 – 1857) was a French mathematician and
     physicist. He contributed to a wide range of areas in mathematics, and
-    dozens of theorems and named after him.
+    dozens of theorems are named after him.
 
     Cauchy formalised calculus and analysis, by reformulating and proving
     results where previous mathematicians were much more careless and imprecise.
@@ -349,8 +349,8 @@ cavalieri:
     monk. He developed a precursor to infinitesimal calculus, and is remembered
     for Cavalieri’s principle to find the volume of solids in geometry.
 
-    Cavalieri also worked optics and motion, introduction logarithms to Italy,
-    and exchanged many letters with Galileo Galilei.
+    Cavalieri also worked in optics and mechanics, introduced logarithms to
+    Italy, and exchanged many letters with Galileo Galilei.
   links:
     - title: Cavalieri’s Principle
       url: /course/circles/spheres-cones-cylinders#cavalieri
@@ -379,14 +379,14 @@ conway:
   born: 1937
   died: 2020
   bio: |
-    __John Horton Conway__ (born 1937) is a British mathematician and currently
-    Professor Emeritus at Princeton University.
+    __John Horton Conway__ (1937 – 2020) was a British mathematician who worked
+    at Cambridge and Princeton University. He was a fellow of the Royal Society,
+    and the first recipient of the Pólya Prize.
 
-    He is best known for inventing “Conway’s Game of Life”, a _cellular
-    automaton_ with fascinating properties. He explored the underlying
-    mathematics of everyday objects like knots and games, as well as
-    contributing to group theory, number theory and many other areas of
-    mathematics.
+    He explored the underlying mathematics of everyday objects like knots and
+    games, and he contributed to group theory, number theory and many other
+    areas of mathematics. Conway is known for inventing “Conway’s Game of Life”,
+    a _cellular automaton_ with fascinating properties.
   links:
     - title: Look-and-say Sequence
       url: /course/sequences/special#look-and-say
@@ -625,6 +625,13 @@ euler:
     - title: Polyhedrons
       url: /course/polyhedra/polyhedra
 
+fatou:
+  name: Fatou
+  bio: __Pierre Joseph Louis Fatou__ (1878 – 1929) was a French mathematician
+    and astronomer. He co-discovered the _Julia set_, and its inverse, the
+    Fatou set, is named after him. He also made important contributions to
+    analysis and celestial mechanics.
+
 fermat:
   name: Fermat
   born: 1607
@@ -720,9 +727,10 @@ galois:
     and university exams while concentrating on much more complex work.
 
     At the age of 21, Galois was shot in a duel (some say a feud over a woman),
-    and later died of his wounds. In the night before his death, he summarised
-    his mathematical discoveries in a letter to a friend. It would take other
-    mathematicians many years to fully realise the true impact of his work.
+    and later died of his wounds. During the night before his death, he
+    summarised his mathematical discoveries in a letter to a friend. It would
+    take other mathematicians many years to fully realise the true impact of
+    his work.
   links:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
@@ -951,7 +959,7 @@ johnson:
   died: 2020
   name: Johnson
   bio: |
-    __Katherine Johnson__ (born 1918) is an African-American mathematician.
+    __Katherine Johnson__ (1918 – 2020) was an African-American mathematician.
     While working at NASA, Johnson calculated the orbits taken by American
     astronauts – including Alan Shepard, the first American in space, the Apollo
     Moon landing program, and even the Space Shuttle.
@@ -962,6 +970,12 @@ johnson:
     electronic results.
 
     In 2015, Johnson received the Presidential Medal of Freedom.
+
+julia:
+  name: Julia
+  bio: __Gaston Maurice Julia__ (1893 – 1978) was a French mathematician who
+    co-discovered the _Julia set_, a fractal that was later popularised by
+    Benoit Mandelbrot.
 
 karinthy:
   name: Karinthy
@@ -993,6 +1007,13 @@ khayyam:
   links:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: __Niels Fabian Helge von Koch__ (1870 – 1924) was a Swedish mathematician.
+    He first described the _Koch snowflake_, a fractal which is named after him,
+    and proved relationships between the Riemann hypothesis and the distribution
+    of prime numbers.
 
 lagrange:
   born: 1736
@@ -1153,7 +1174,16 @@ mandelbrot:
     _Mandelbrot set_.
   links:
     - title: Fractals
-      url: /world/Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
+
+menger:
+  name: Menger
+  bio: __Karl Menger__ (1902 – 1985) was an Austrian-American mathematician.
+    He researched algebra, geometry, dimensions, game theory and social
+    science, but he is best remembered for the _Menger sponge_, a famous
+    3-dimensional _fractal_.
 
 mersenne:
   born: 1588
@@ -1400,7 +1430,6 @@ pearson:
 penrose:
   name: Penrose
   born: 1931
-  died: 2020
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
     who is known for his groundbreaking work in general relativity and cosmology
@@ -1413,7 +1442,6 @@ penrose:
 
 perelman:
   born: 1966
-  died: 2020
   name: Perelman
   bio: |
     In 2003, the Russian mathematician __Grigori Perelman__ (Григо́рий
@@ -1446,7 +1474,7 @@ pingala:
 planck:
   name: Plank
   bio: __Max Plank__ (1858 – 1947) was a German physicist and one of the
-    original developers of Quantum Mechanics – for which received the Nobel
+    original developers of Quantum Mechanics – for which he received the Nobel
     Prize in 1918.
 
 plato:
@@ -1564,6 +1592,20 @@ regiomontanus:
     and astronomer. He made great advances in both fields, including creating
     detailed astronomical tables and publishing multiple textbooks.
 
+richardson:
+  name: Richardson
+  bio: |
+    __Lewis Fry Richardson__ (1881 – 1953) was a British mathematician and
+    physicist. He pioneered modern mathematical techniques of weather
+    forecasting, invented acoustic machines to detect icebergs, and developed
+    methods for solving systems of linear equations.
+
+    He also tried to calculate the probability of two countries declaring war
+    on each other, given the length of their shared border. However, he was
+    unable to find accurate measurements for the length of countries’ borders.
+    This led him to realise that borders and coastlines have many properties
+    of _fractals_.
+
 riemann:
   name: Riemann
   born: 1826
@@ -1628,6 +1670,20 @@ shijie:
   links:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __Wacław Franciszek Sierpiński__ (1882 – 1969) was a Polish mathematician.
+    He made important discoveries in set theory, number theory, analysis and
+    topologies, publishing over 700 papers and 50 books. He also invented
+    many popular _fractals_, including the _Sierpinski triangle_, the
+    _Sierpinski carpet_ and the _Sierpinski curve_.
+
+    _Sierpinski numbers_ are odd natural numbers _k_ such that `k * 2^n +1` is
+    composite for all natural numbers _n_. The _Sierpinski problem_ is trying
+    to find the smallest Sierpinski numbers. The smallest known such number is
+    78,557 – but it is still unknown whether there are smaller ones.
 
 sikdar:
   name: Sikdar
@@ -1745,7 +1801,6 @@ wallis:
 
 wiles:
   born: 1953
-  died: 2020
   name: Wiles
   bio: |
     The British mathematician Sir __Andrew Wiles__ (born 1953) is best known for
@@ -1764,3 +1819,11 @@ wiles:
     He was too old to receive the _Fields medal_, the highest award in
     mathematics, which has an age limit of 40. Instead, Wiles was awarded a
     special silver plaque for his work.
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __Stephen Wolfram__ (born 1959) is a British-American computer scientist,
+    physicist, and businessman. He is the founder and CEO of _Wolfram Research_,
+    where he developed the _Mathematica_ computing system, the _Wolfram|Alpha_
+    answer engine, and the Wolfram programming language.

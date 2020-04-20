@@ -1,0 +1,35 @@
+// =============================================================================
+// Game Theory
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../shared/variables";
+
+
+// -----------------------------------------------------------------------------
+// Prisoners Dilemma
+
+.payoff-matrix {
+  td {
+    padding: .2em 1em;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background: mix(@blue, @grey-background, 20%);
+    color: fade(black, 60%);
+  }
+
+  tr:first-child td, td:first-child {
+    background: mix(@blue, @grey-background, 40%);
+    color: fade(black, 70%);
+    font-weight: 700;
+  }
+
+  td:last-child { border-right: none; }
+  tr:last-child td { border-bottom: none; }
+
+  tr:first-child td:first-child { border-top-left-radius: 6px; }
+  tr:first-child td:last-child { border-top-right-radius: 6px; }
+  tr:last-child td:first-child { border-bottom-left-radius: 6px; }
+  tr:last-child td:last-child { border-bottom-right-radius: 6px; }
+}

@@ -15,7 +15,7 @@ import {Point, Polygon, roundTo} from '@mathigon/fermat';
 import {CustomElementView, register, $N, slide, SVGParentView, ElementView} from '@mathigon/boost';
 
 
-type ShapeOptions = {points: string, colour: string};
+type ShapeOptions = {points: string; colour: string};
 
 const SHAPES: Obj<ShapeOptions> = {
   3: {points: '0,-34.6 30,17.3 -30,17.3', colour: '#fd8c00'},
@@ -31,7 +31,7 @@ const SHAPES: Obj<ShapeOptions> = {
   }
 };
 
-const INITIAL: {x: number, y: number, p: number, a?: number}[] =
+const INITIAL: {x: number; y: number; p: number; a?: number}[] =
     [{x: 130, y: 140, p: 6}, {x: 213, y: 92, p: 3}, {x: 213, y: 140, p: 4},
       {x: 287, y: 140, a: 18, p: 5}];
 
@@ -54,7 +54,7 @@ class Shape {
   posn!: Point;
   angle!: number;
 
-  constructor(shape: ShapeOptions, initial: {x: number, y: number, a?: number},
+  constructor(shape: ShapeOptions, initial: {x: number; y: number; a?: number},
               private readonly $parent: Tessellation) {
 
     this.$el = $N('g', {class: 'shape'});
@@ -93,7 +93,7 @@ class Shape {
   }
 
   hasIntersects(polygon: Polygon) {
-    for (let p of this.$parent.shapes) {
+    for (const p of this.$parent.shapes) {
       if (p !== this && Polygon.collision(p.transformed, polygon)) return true;
     }
     return false;
@@ -109,9 +109,9 @@ export class Tessellation extends CustomElementView {
 
   ready() {
     this.$svg = this.$('svg') as SVGParentView;
-    for (let c of INITIAL) new Shape(SHAPES[c.p], c, this);
+    for (const c of INITIAL) new Shape(SHAPES[c.p], c, this);
 
-    for (let $a of this.$$('.add')) {
+    for (const $a of this.$$('.add')) {
       const s = +$a.data.shape!;
       const shape = SHAPES[s];
 

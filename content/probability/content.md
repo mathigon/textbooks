@@ -35,7 +35,7 @@
 
 Probabilities and likelihoods are everywhere around us, from weather forecasting
 to games, insurance or election polls. However, in the history of mathematics,
-probability is actually a very recent idea. While geometry and algebra were
+probability is actually a very recent idea. While numbers and geometry were
 studied by ancient Greek mathematicians more than 2500 years ago, the concepts
 of probability only emerged in the 17th and 18th century.
 
@@ -330,7 +330,7 @@ results compare to the predicted probabilities:
     .box
       .box-title: h3 Rolling Dice
       .box-body
-        .probTable.var ${ probTable(d) }
+        .probTable.var(:html="probTable(d)")
         p.md We roll ${d}{d|2|1,6,1} dice at once and record the #[span.dice(style="width: auto; padding: 0 4px;") SUM] of their scores. The #[strong.m-green green lines] represent the probabilities of every possible outcome predicted by probability theory and the #[strong.m-blue blue bars] show how often each outcome happened in this computer generated experiment.
         p.btn-row
           button.btn Roll once
@@ -559,7 +559,7 @@ outcome.
 > goals: decay
 
 But _true randomness_ does exists – at the very foundations of matter. A block
-of radioactive material consists of millions of atoms which decay over time:
+of radioactive material consists of billions of atoms which decay over time:
 they fall apart into smaller atoms while emitting dangerous radiation.
 
 ::: column.grow

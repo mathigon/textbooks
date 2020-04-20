@@ -25,7 +25,6 @@ divisibility:
   title: Divisibility and Primes
   description: Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.
   color: 1fab40
-  locales: [en, cn, de, tr]
 
 fractions:
   title: Fractions
@@ -185,54 +184,47 @@ euclidean-geometry:
   title: Euclidean Geometry
   description: Geometry is one of the oldest parts of mathematics – and one of the most useful. Its logical, systematic approach has been copied in many other areas.
   color: 0f82f2
-  locales: [en, de, tr]
   next: transformations
 
 transformations:
   title: Transformations and Symmetry
   description: Symmetry can be seen everywhere in nature – but it also underlies completely invisible laws of nature. Mathematics can explain why that is the case.
   color: 216fec
-  locales: [en, de, tr]
   next: triangles
 
 triangles:
   title: Triangles and Trigonometry
   description: "Triangles are some of the most important shapes in geometry: they have countless interesting properties and appear everywhere in engineering and technology."
   color: 325ce6
-  locales: [en, de, tr]
   next: polyhedra
 
 polyhedra:
   title: Polygons and Polyhedra
   description: Geometric shapes are everywhere around us. In this course you will learn about angels, polygons, tessellations, polyhedra and nets.
   color: "4346e0"
-  locales: [en, de]
   next: circles
 
 circles:
   title: Circles and Pi
   trailer: tBJUNvCBkLo
   color: 5934d9
-  locales: [en, de]
   next: graph-theory
 
 non-euclidean-geometry:
   title: Non-Euclidean Geometry
   color: 6f27cc
   sections:
-    - title: Introduction
-      preview: /world/Dimensions_and_Distortions
-    - title: Metric Spaces
-      preview: /world/Dimensions_and_Distortions#metric
     - title: Spherical Geometry
       preview: /world/Dimensions_and_Distortions#spherical
     - title: Map Projections
       preview: /world/Dimensions_and_Distortions#projections
     - title: Hyperbolic Geometry
       preview: /world/Dimensions_and_Distortions#hyperbolic
-    - title: Higher Dimensions
+    - title: Metric Spaces
+      preview: /world/Dimensions_and_Distortions#metric
     - title: Topology
       preview: /world/Dimensions_and_Distortions#topology
+    - title: Higher Dimensions
 
 functions:
   title: Functions
@@ -241,7 +233,7 @@ functions:
     - title: Relations and Functions
     - title: Graphing Functions
     - title: Solving Equations Graphically
-    - title: Domain and Rage
+    - title: Domain and Range
     - title: Absolute Value Functions
     - title: Inverse Functions
     - title: Rates of Change
@@ -251,7 +243,6 @@ sequences:
   description: Learn about some of the most fascinating patterns in mathematics, from triangle numbers to the Fibonacci sequence and Pascal’s triangle.
   trailer: u2vwpDVj5rU
   color: f97607
-  locales: [en, es, cn]
   next: quadratics
 
 equations:
@@ -279,20 +270,17 @@ probability:
   title: Probability
   description: "Cards, dice, roulette and game shows: probability is one of the most fun areas of mathematics, full of surprises and real life applications."
   color: cd0e66
-  locales: [en, tr]
   next: statistics
 
 statistics:
   title: Statistics
   color: bb127b
-  locales: [en, tr]
   next: graph-theory
 
 graph-theory:
   title: Graphs and Networks
   description: "Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks."
   color: aa1690
-  locales: [en, vn, fr]
   next: probability
 
 codes:
@@ -302,13 +290,6 @@ codes:
 game-theory:
   title: Game Theory
   color: 8220b9
-  sections:
-    - title: The Winning Move
-      preview: /world/Game_Theory
-    - title: Cards, Coins and Dice
-    - title: The Prisoners’ Dilemma
-      preview: /world/Game_Theory#prisoners-dilemma
-    - title: Gamblers’ Ruin
 
 
 # ------------------------------------------------------------------------------
@@ -339,8 +320,7 @@ rationals:
   color: f66a0c
   sections:
     - title: Rational and Irrational Numbers
-    - title: Rational Functions
-    - title: Manipulating Rational Expressions
+    - title: Rational Functions and Expressions
     - title: Solving Rational Equations
     - title: Exponent Laws
     - title: Radical Functions
@@ -381,7 +361,7 @@ logic:
     - title: Infinity and Hilbert’s Hotel
       preview: /world/Infinity
 
-coordinate-geo:
+coordinate-geometry:
   title: Coordinate Geometry
   color: 0f82f2
   sections:
@@ -416,12 +396,6 @@ conics:
 vectors:
   title: Vectors
   color: "4346e0"
-  sections:
-    - title: Introduction
-    - title: Vector Arithmetic
-    - title: Scalar Products and Equations of Planes
-    - title: Cross Products and Equations of Lines
-    - title: Geometry Problems
 
 matrices:
   title: Matrices
@@ -437,25 +411,11 @@ matrices:
 complex:
   title: Complex Numbers
   color: 6f27cc
-  sections:
-    - title: Introduction
-      preview: /world/Real_Irrational_Imaginary#imaginary
-    - title: The Complex Plane
-    - title: Modulus and Argument
-    - title: Quadratic, Cubic and Quartic Equations
-    - title: Euler’s Identity and De Moivre’s Theorem
-    - title: Complex Roots of Unity
 
 fractals:
   title: Fractals
+  trailer: ohygDnKg5mg
   color: 8220b9
-  sections:
-    - title: Introduction
-      preview: /world/Fractals
-    - title: The Sierpinski Gasket
-      preview: /world/Fractals#sierpinski
-    - title: The Mandelbrot Set
-      preview: /world/Fractals#mandelbrot
 
 differentiation:
   title: Differentiation
@@ -541,8 +501,8 @@ machine-learning-1:
   sections:
     - title: Introduction
     - title: Linear Regression
-    - title: Neural Networks
     - title: Support Vector Machines
+    - title: Neural Networks
     - title: Unsupervised Learning
     - title: Tensor Flow
 
@@ -553,7 +513,6 @@ machine-learning-1:
 exploding-dots:
   title: Exploding Dots
   description: A mathematical story developed for Global Math Week – learn about place value, infinity and p-adic numbers.
-  tile: /images/og-tile/exploding-dots.jpg
   color: 6f27cc
   hideTitle: true
 

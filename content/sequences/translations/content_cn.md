@@ -342,7 +342,7 @@ _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 另一组科学家正在调查一个有弹性的网球的行为。他们把球从10米的高度扔下，并测量
 了它随时间变化的位置。每次弹跳，球都会损失原来的一部分高度：
 
-    x-coordinate-system(margins="12 12 24 120" width=640 height=320 x-axis="0|7|" x-suffix="s" y-suffix="m" x-label="time" y-label="height")
+    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)
@@ -470,7 +470,7 @@ _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
 
-    x-coordinate-system(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system(padding="12 12 24 40" width=320 height=240)
     x-gesture(target="#arithmetic-geometric-graph x-var" slide="100,0")
 
 ::: column.ag-chart.s-green(width=320)
@@ -486,7 +486,7 @@ _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
 
-    x-coordinate-system.green(margins="12 12 24 40" width=320 height=240)
+    x-coordinate-system.green(padding="12 12 24 40" width=320 height=240)
 
 :::
 
@@ -1548,7 +1548,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 ::: column(width=320)
 
-    x-coordinate-system(width=320 height=320 margins="8 8 20 24")
+    x-coordinate-system(width=320 height=320 padding="8 8 20 24" axis-names="x,number of primes less than x")
 
 {.caption}如果我们画一个这样的图表：每出现一个素数就增加1，我们将得到了一个
 具有迷人性质的“阶梯”函数。
@@ -1687,8 +1687,8 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 似乎序列的长度变化很大，但它总是以4、2、1这个循环结束—不管我们选择哪个数作为
 起始。我们甚至可以在图表中可视化序列的项：
 
-    x-coordinate-system(margins="12 12 24 40")
-      .hailstone-slider.md #[span 起始值:]${n}{n|12|1,50,1}
+    x-coordinate-system(width=600 height=400 padding="12 12 24 40")
+      .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")}注意一些起始点是如何非常快速结束的， 而其他
 (如_{span.var-action}31_或_{span.var-action}47_)在达到4、2、1个循环之前有
@@ -2056,18 +2056,18 @@ __谢尔宾斯基三角形__。像这样的形状，由一个简单的模式组�
     // a single person left, who would get the role.
 
     // A clever actress decided she would get the role. There were 10 people in
-    // her circle. Where must she stand to be the last one in the circle? 
+    // her circle. Where must she stand to be the last one in the circle?
 
     // An actor auditioning for a different part was faced with 20 in his circle.
     // Where should ! he stand?
     
     // Find a pattern that tells you where to stand no matter how many people
-    // are in the circle. Why does it work? 
+    // are in the circle. Why does it work?
 
     // What if the director eliminates every mth person? Where should you stand
-    // in a circle of n? 
+    // in a circle of n?
 
-    // What about “in, in, out, out,” leaving two in and then kicking two out? 
+    // What about “in, in, out, out,” leaving two in and then kicking two out?
 
     // With eight people, for example, you’ll lost the even numbers on round one,
     // 3 and 7 on round two, and 5 on round three, making 1 the winner.
@@ -2077,7 +2077,7 @@ __谢尔宾斯基三角形__。像这样的形状，由一个简单的模式组�
     // person 1. So your answer for n people should be the same as for n-1,
     // except the people are relabeled with a number 2 greater. In other words,
     // if for the nth circle you stands in position p, for the n+1st circle you
-    // stand in position  p +2. However, this number may be larger than n+1, so
+    // stand in position p +2. However, this number may be larger than n+1, so
     // we have to reduce it mod n+1 if necessary. It’s possible to get a formula
     // for this, and that’s a nice challenge for kids who are ready for it. But
     // for most, just elucidating the pattern will be enough.

@@ -39,7 +39,7 @@ started, pick a point anywhere on the line.
 
 ::: column(width=360 parent="padded-thin")
 
-    x-coordinate-system.c-system(width=360 height=440 x-axis="-5|5|1" y-axis="-6|6|1" no-crosshairs margins="5 5 5 5")
+    x-coordinate-system.c-system(width=360 height=440 x-axis="-5,5,1" y-axis="-6,6,1" crosshairs="no" padding=5)
     x-gesture(target="#slope x-coordinate-system" offset="63,-107")
 
 ::: column.grow
@@ -101,19 +101,19 @@ are a few examples:
 
 ::: column(width=230 parent="padded-thin")
 
-    x-coordinate-system(width=230 height=180 x-axis="-5|5|1" y-axis="-4|4|1" no-labels margins="5 5 5 5" crosshair-grid=1)
+    x-coordinate-system(width=230 height=180 x-axis="-5,5,1" y-axis="-4,4,1" labels="no" padding=5 crosshair-grid=1)
 
 {.text-center} _m_ = [[0.5]]
 
 ::: column(width=230)
 
-    x-coordinate-system(width=230 height=180 x-axis="-5|5|1" y-axis="-4|4|1" no-labels margins="5 5 5 5" crosshair-grid=1)
+    x-coordinate-system(width=230 height=180 x-axis="-5,5,1" y-axis="-4,4,1" labels="no" padding=5 crosshair-grid=1)
 
 {.text-center} _m_ = [[3]]
 
 ::: column(width=230)
 
-    x-coordinate-system(width=230 height=180 x-axis="-5|5|1" y-axis="-4|4|1" no-labels margins="5 5 5 5" crosshair-grid=1)
+    x-coordinate-system(width=230 height=180 x-axis="-5,5,1" y-axis="-4,4,1" labels="no" padding=5 crosshair-grid=1)
 
 {.text-center} _m_ = [[-1]]
 
@@ -133,7 +133,7 @@ adding or subtracting a number:
       marker#blue-circle(refX="2" refY="2" markerWidth="4" markerHeight="4" orient="auto")
         circle( cx=2 cy=2 r=1.5 fill="#fd8c00")
 
-    x-coordinate-system(width=400 height=320 x-axis="-8|8|1" y-axis="-6|6|1" no-crosshairs margins="5 5 5 5")
+    x-coordinate-system(width=400 height=320 x-axis="-8,8,1" y-axis="-6,6,1" crosshairs="no" padding=5)
     x-gesture(target="#intercept x-var" slide="100,0")
 
 {.text-center} `y = 2/3 x` ${sign(a)} ${abs(a)}{a|0|-4,4,1}
@@ -166,7 +166,7 @@ _{button.next-step} Continue_
 
 ::: column(width=360 parent="padded-thin")
 
-    x-coordinate-system(width=360 height=360 x-axis="-5|5|1" y-axis="-4|6|1" no-crosshairs margins="5 5 5 5")
+    x-coordinate-system(width=360 height=360 x-axis="-5,5,1" y-axis="-4,6,1" no-crosshairs padding=5)
 
 ::: column.grow
 
@@ -192,19 +192,19 @@ each case, and write down the equation of the line?
 
 ::: column(width=230 parent="padded-thin")
 
-    x-coordinate-system(width=230 height=180 x-axis="-5|5|1" y-axis="-4|4|1" no-labels margins="5 5 5 5" crosshair-grid=1)
+    x-coordinate-system(width=230 height=180 x-axis="-5,5,1" y-axis="-4,4,1" labels="no" padding=5 crosshair-grid=1)
 
 {.text-center} `y=` _{x-equation(solution="3/2 x-2")}_
 
 ::: column(width=230)
 
-    x-coordinate-system(width=230 height=180 x-axis="-5|5|1" y-axis="-4|4|1" no-labels margins="5 5 5 5" crosshair-grid=1)
+    x-coordinate-system(width=230 height=180 x-axis="-5,5,1" y-axis="-4,4,1" labels="no" padding=5 crosshair-grid=1)
 
 {.text-center} `y=` _{x-equation(solution="2x+1")}_
 
 ::: column(width=230)
 
-    x-coordinate-system(width=230 height=180 x-axis="-5|5|1" y-axis="-2|6|1" no-labels margins="5 5 5 5" crosshair-grid=1)
+    x-coordinate-system(width=230 height=180 x-axis="-5,5,1" y-axis="-4,4,1" labels="no" padding=5 crosshair-grid=1)
 
 {.text-center} `y=` _{x-equation(solution="-1/2 x+3")}_
 

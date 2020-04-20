@@ -14,7 +14,7 @@ function round(a: Point, b: Point) {
 }
 
 export function triangleInequality($step: Step) {
-  $step.model.set('roundD', round);
+  $step.model.roundD = round;
 
   const $items = $step.$$('.item');
   const targets = $items.map(
@@ -24,7 +24,7 @@ export function triangleInequality($step: Step) {
     $step.delayedHint(() => $step.addHint('inequality-impossible'), 20000);
   });
 
-  $step.model.watch(s => {
+  $step.model.watch((s: any) => {
     const active = [round(s.a, s.b), round(s.b, s.c), round(s.a, s.c)].sort();
     targets.forEach((t, i) => {
       let correctCount = 0;
@@ -48,24 +48,22 @@ export function triangleInequality3($step: Step) {
 
   hover($targets[0], {
     enter() {
-      $geopad.animatePoint('a', $geopad.model.point(90, 110), 1200);
-      $geopad.animatePoint('b', $geopad.model.point(165, 105), 1200);
-      $geopad.animatePoint('c', $geopad.model.point(210, 110), 1200);
+      $geopad.animatePoint('b', new Point(50, 127), 1200);
+      $geopad.animatePoint('c', new Point(250, 127), 1200);
       $step.score('target-0');
     }
   });
 
   hover($targets[1], {
     enter() {
-      $geopad.animatePoint('b', $geopad.model.point(50, 105), 1200);
-      $geopad.animatePoint('a', $geopad.model.point(130, 110), 1200);
-      $geopad.animatePoint('c', $geopad.model.point(250, 105), 1200);
+      $geopad.animatePoint('b', new Point(90, 45), 1200);
+      $geopad.animatePoint('c', new Point(125, 65), 1200);
       $step.score('target-1');
     }
   });
 
-  const $rubber = $step.$('.rubber')!;
+  const $rubber = $step.$('.orange')!;
   $geopad.model.watch(state => {
-    $rubber.css('stroke-width', 350 / Point.distance(state.b, state.c) + 'px');
+    $rubber.css('stroke-width', 450 / Point.distance(state.b, state.c) + 'px');
   });
 }

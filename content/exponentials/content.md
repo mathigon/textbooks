@@ -3,7 +3,6 @@
 ## Carbon Dating
 
 > section: carbon-dating
-> sectionStatus: dev
 > id: egypt
 
 ::: column.grow
@@ -11,7 +10,7 @@
 A group of archaeologists has discovered a new tomb in the Egyptian desert.
 They carefully open the hidden entrance, climb through several rooms filled with
 ancient treasures, until they arrive in the burial chamber. The sarcophagus
-is still sealed, and contains the mummy of a Pharaoh.
+is still sealed and contains the mummy of a Pharaoh.
 
 After cataloguing every item in the tomb and carefully transporting them to a
 nearby museum, they try to answer their most pressing question: who is this
@@ -24,8 +23,8 @@ Pharaoh, and when did he die?
 :::
 
 Unfortunately, none of the drawings and inscriptions on the walls of the tomb
-seem to contain names or dates. However, there is an ingenious method to
-accurately determine the age of ancient artifacts like mummies or fossils,
+seem to contain any names or dates. However, there is an ingenious method to
+accurately determine the age of ancient artefacts like mummies or fossils,
 which solely relies on physics and mathematics: __Carbon Dating__.
 [Continue](btn:next)
 
@@ -72,10 +71,10 @@ proportion of Carbon atoms contain additional neutrons. These different
 > id: carbon-2
 
 The proportion at which these isotopes occur is almost exactly the same,
-everywhere on Earth – and this will be very important later. In this example,
-we are particularly interested in Carbon-14, which is abbreviated as
-<sup>14</sup>C. It contains 6 protons and 8 neutrons, and it is created when
-cosmic rays coming from space hit particles high in our atmosphere.
+everywhere on Earth – and this will be very important later. In our example, we
+are particularly interested in Carbon-14, which is abbreviated as <sup>14</sup>C.
+It contains 6 protons and 8 neutrons, and it is created when cosmic rays coming
+from outer space hit particles high in our atmosphere.
 
 Any sample of Carbon atoms contains [[0.1]]% of these special <sup>14</sup>C
 atoms. You might think that this is an insignificant amount, but your body
@@ -110,10 +109,10 @@ atoms!
 
 ::: column.grow
 
-Carbon-14 is useful, because it is [__radioactive__](gloss:radioactive). The
+Carbon-14 is useful because it is [__radioactive__](gloss:radioactive). The
 atom is unstable, and it might __decay__ into other, more stable elements. We
 are actually surrounded by many radioactive materials, but their concentration
-is much too low to be dangerous.
+is not high enough to be dangerous.
 
 :::
 
@@ -126,12 +125,12 @@ During our life, as we eat and breathe, our body absorbs <sup>14</sup>C atoms.
 When we die, we stop absorbing new <sup>14</sup>C atoms, and the ones that are
 already in our body slowly start to [[decay|multiply|disappear]].
 
-All radioactive elements decay at a very predictable rate – this is determined
-by their __half-life__. Carbon-14, for example, has a half-life of approximately
-6,000 years. This means that if you have a block of <sup>14</sup>C atoms, it
-will take 6,000 years for half of them to decay. After another 6,000 years, half
-of the remaining atoms will have also decayed, so you're left with just [[a
-quarter|a third|1/8|none]] of the original amount.
+{.reveal(when="blank-0")} All radioactive elements decay at a very predictable
+rate – this is determined by their __half-life__. Carbon-14, for example, has a
+half-life of approximately 6,000 years. This means that if you have a block of
+<sup>14</sup>C atoms, it will take 6,000 years for half of them to decay. After
+another 6,000 years, half of the remaining atoms will have also decayed, so
+you’re left with just [[a quarter|a third|1/8|none]] of the original amount.
 
 ::: column(width=220)
 
@@ -145,10 +144,14 @@ quarter|a third|1/8|none]] of the original amount.
 Let’s assume we start with a block of 1,200 Carbon-14 atoms. Using the half-life,
 we can calculate the remaining amount of <sup>14</sup>C atoms over time:
 
+::: .overflow-wrap
+
 |            | _{div.col}_ | _{div.col.c1}_ | _{div.col.c2}_ | _{div.col.c3}_ | _{div.col.c4}_ |
 | __Years__  | 0           | 6000           | 12,000         | 18,000         | 24,000         |
 | __Amount__ | 1200        | [[600]]        | [[300]]        | [[150]]        | [[75]]         |
 {.grid.col-grid}
+
+:::
 
 ---
 > id: radioactive-table-2
@@ -163,37 +166,51 @@ Using exponents, we can write down an equation for the amount left after `t` yea
 
 {.text-center} `$"amount" = 1200 × (1/2)^(t/6000)`
 
-Of course 1200 and 6000 were just arbitrary numbers. A more general equation
+[Continue](btn:next)
+
+---
+> id: radioactive-equation-1
+
+Of course, 1200 and 6000 were just arbitrary numbers. A more general equation
 is:
 
-{.text-center} `$"amount" = "initial" × 2^((-t)/"half-life")`
+::: x-algebra-flow
 
-Since the equation contains an _exponent_, and the number of atoms _decreases_,
-we call this process __exponential decay__.
+`"amount" = "initial" × (1/2)^(t/"half-life")`
+
+* Using the exponents laws, we can flip the fraction `1/2` into a 2, if we
+  multiply the exponent by `–1`.
+* {.new-row} This equation describes how many atoms are left after _t_ number of
+  years.
+
+:::
 
 ---
 > id: radioactive-chart
 
+Since the equation contains an _exponent_ and the number of atoms _decreases_,
+we call this process __exponential decay__.
+
 We can plot the amount of <sup>14</sup>C atoms over time in a coordinate system.
-If we start with an initial amount of ${format(x0)}{x0|3000|100,4000,100} and
-the half-life is ${format(hl)}{hl|5000|200,10000,200} years, then the decay
+If we start with an initial amount of ${format(x0)}{x0|3000|100,4000,100} atoms,
+and the half-life is ${format(hl)}{hl|5000|200,10000,200} years, then the decay
 looks like this:
 
-    x-coordinate-system(width=600 height=400 x-axis="0|18000" y-axis="0|4000" x-label="Years" y-label="Carbon-14 Atoms" margins="20 20 20 40")
+    x-coordinate-system(width=600 height=400 x-axis="0,18000" y-axis="0,4000" axis-names="Years,Carbon-14 Atoms" padding="20 20 20 40")
 
 ---
 > id: radioactive-chart-2
 
 The points on the graph show when the number of atoms has halved. Notice that
-we can calculate the remaining about of atoms at _any point in time_, not just
-these specific intervals. This is the main difference compared with geometric
+we can calculate the remaining number of atoms at _any point in time_, not just
+these specific intervals. This is the main difference compared to geometric
 sequences.
 
 The decay of radioactive atoms is random, and it is impossible to predict
-exactly when an individual <sup>14</sup>C is going to decay. If the graph shows
-there should be a decimal number of atoms left at a certain time (like 10.6),
-this is the _average_ number of atoms we _expect_ to be left, even though you
-can only have whole numbers of atoms. You will learn more about this in our
+_when exactly_ an individual <sup>14</sup>C is going to decay. The graph shows
+the _average_ number of atoms we _expect_ to be left at a specific time. That’s
+also why the remaining number of atoms might not always be an integer – even
+though you can’t have “half an atom”. You will learn more about this in our
 [course on probability](/course/probability/randomness).
 [Continue](btn:next)
 
@@ -202,14 +219,15 @@ can only have whole numbers of atoms. You will learn more about this in our
 
 ::: column.grow
 
-Now we have all the information needed to determine the age of the Pharaoh
-in our story. The archaeologists decided cut a tiny sample out of the mummy's
-skin. Using a complex machine called a __mass spectrometer__, they were able to
-“count” the number of <sup>12</sup>C and <sup>14</sup>C atoms in the sample.
+Now we have all the information needed to determine the age of the Pharaoh. The
+archaeologists decided to cut a tiny sample out of the mummy’s skin. Using a
+complex machine called a __mass spectrometer__, they were able to “count” the
+number of <sup>12</sup>C and <sup>14</sup>C atoms in the sample.
 
-They found 800 Carbon-14 atoms in the sample. Given the ratios of <sup>12</sup>C
-and <sup>14</sup>C atoms, they also estimate that the same sample would have
-contained 1200 <sup>14</sup>C atoms when the Pharaoh was alive.
+In our example, they found 800 Carbon-14 atoms. Given the ratios of
+<sup>12</sup>C and <sup>14</sup>C atoms, they also estimate that the same
+sample should have contained 1200 <sup>14</sup>C atoms when the Pharaoh was
+still alive.
 
 ::: column(width=320)
 
@@ -219,14 +237,14 @@ contained 1200 <sup>14</sup>C atoms when the Pharaoh was alive.
 
 :::
 
-All we have to do now is calculate how long it takes for the missing 400
+All we have to do now is calculate how long it takes for the 400 missing
 <sup>14</sup>C atoms to decay. That number is precisely the [[time since the
 Pharaoh died|age of the Pharaoh when he died]].
 
 ---
 > id: carbon-solver
 
-We can use the equation we found above, and fill in the required parameters:
+We can use the equation we found above and fill in the required parameters:
 
     // ALGEBRA: mimic this.
 
@@ -235,17 +253,19 @@ We can use the equation we found above, and fill in the required parameters:
 `input(1200,"initial") × 2^((-t)/input(6000,"half-life")) = input(800,"amount")`
 
 * Fill in the three parameters from above!
-* First, let's divide both sides of the equation by 1200.
-* We can simplify the right-hand side of the equation.
-* Now, we have to revert the exponent on the left-hand side. To do that, we can
-  use a special function called the __Logarithm__, which we'll learn more about
-  later.
-* Using a calculator, we can find the value of `log_2(0.667)`.
-* The rest should be simple: let's multiply both sides of the equation by 6000.
-* We can simplify the right-hand side of the equation.
-* We can also remove the - sign on both sides of the equation.
-* Thus, we see that it takes 3510 years for this many <sup>14</sup>C atoms to
-  decay.
+* Let’s start by dividing both sides of the equation by 1200.
+* {.new-row} We can find the decimal value of the fraction on the right-hand
+  side of the equation.
+* Now, we have to deal with the exponent on the left-hand side. To do that, we
+  can use a special function called the __Logarithm__, which you’ll learn more
+  about later.
+* {.new-row} Using a calculator, we can find the value of `log_2(0.667)`.
+* {.new-row} The rest should be simple: let’s multiply both sides of the
+  equation by 6000.
+* {.new-row} We can simplify the right-hand side of the equation.
+* We can also remove the – sign on both sides of the equation.
+* Thus, we see that it takes 3510 years for the required number
+  of <sup>14</sup>C atoms to decay.
 
 :::
 
@@ -265,18 +285,16 @@ we needed was a tiny piece of skin tissue, together with clever mathematics!
 
 :::
 
-Geologists, archaeologists and biologists can use the same method to determine
-the age of fossils, the evolutionary ancestry between extinct animals, or when
-certain layers of rock in our Earth's crust formed.
-[Continue](btn:next)
-
 ---
 > id: carbon-end-2
 
+Geologists and biologists can use the same method to determine the age of
+fossils. This helps them understand when certain layers of rock in our Earth’s
+crust formed, or the evolutionary ancestry between extinct animals.
+
 Carbon Dating was developed in the late 1940s at the University of Chicago, by
 Willard Libby, who received the Nobel Prize in Chemistry for his work in 1960.
-It can become an indispensable method in many areas of science, where we are
-trying to understand the history of our world.
+It has become an indispensable method in many areas of science.
 
     figure: x-media(src="images/dinosaur.jpg" width=760, height=360)
 
