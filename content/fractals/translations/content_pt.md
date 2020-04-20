@@ -19,7 +19,7 @@ Ao olhar a natureza, você deve ter notado plantas complexas como estas:
     img(src="images/romanesco.jpg" width=320 height=240)
     img.fractal-overlay(src="images/romanesco-overlay.png" width=320 height=240)
 
-{.caption} Este __brócolis Romanesco__ consiste em [[cones menores|cubes|spheres]] espiralando em torno de um maior.
+{.caption} Este __brócolis romanesco__ consiste em [[cones|cubos|esferas]] menores espiralando em torno de um maior.
 
 :::
 
@@ -29,13 +29,13 @@ Ao olhar a natureza, você deve ter notado plantas complexas como estas:
 
 > id: fern
 
-Em matemática, chamamos essa propriedade de auto-similaridade__, e as formas que a possuem são chamadas de [__fractais__](gloss:fractal). Eles são alguns dos objetos mais bonitos e bizarros de toda a matemática.
+Em matemática, chamamos essa propriedade de __auto-similaridade__, e as formas que a possuem são chamadas de [__fractais__](gloss:fractal). Eles são alguns dos objetos mais bonitos e bizarros de toda a matemática.
 
 Para criar nossos próprios fractais, temos que começar com um padrão simples e depois repeti-lo várias vezes, em escalas menores.
 
 ::: column.grow
 
-Um dos padrões mais simples pode ser um segmento de linha [{.pill.red}](target:s1), com [{.pill.blue} mais dois segmentos](target:s2) ramificados em uma extremidade. Se repetirmos esse padrão, os dois segmentos azuis também terão mais duas ramificações nas extremidades.
+Um dos padrões mais simples pode ser um [{.pill.red} segmento de linha](target:s1), com [{.pill.blue} mais dois segmentos](target:s2) ramificados em uma extremidade. Se repetirmos esse padrão, os dois segmentos azuis também terão mais duas ramificações nas extremidades.
 
 Você pode mover os [pontos azuis](target:dot) para alterar o comprimento e o ângulo de todos os ramos. Aumente o número de iterações usando [o controle deslizante](->#fern-slider) abaixo.
 
@@ -62,7 +62,7 @@ Você pode mover os [pontos azuis](target:dot) para alterar o comprimento e o â
 
 ::: column.grow(parent="right")
 
-Outro fractal famoso é o triângulo de Sierpinski [__<<<<__](gloss:sierpinski-triangle). Nesse caso, começamos com um triângulo grande e equilátero e, em seguida, cortamos repetidamente triângulos menores das partes restantes.
+Outro fractal famoso é o [__triângulo de Sierpinski__](gloss:sierpinski-triangle). Nesse caso, começamos com um triângulo grande e equilátero e, em seguida, cortamos repetidamente triângulos menores das partes restantes.
 
 {.reveal(when="slider=0")} Observe como a forma final é composta de [três cópias idênticas de si mesma](target:x), e cada uma delas é composta de cópias ainda menores de todo o triângulo! Você pode continuar ampliando o triângulo para sempre, e os padrões e formas sempre continuarão se repetindo.
 
@@ -89,7 +89,7 @@ Outro fractal famoso é o triângulo de Sierpinski [__<<<<__](gloss:sierpinski-t
 
 As plantas no começo deste capítulo _parecem_ exatamente como fractais, mas é claramente impossível criar _verdadeiros_ fractais na vida real. Se continuarmos repetindo o mesmo padrão repetidamente, cada vez menores, chegaremos a células, moléculas ou átomos que não podem mais ser divididos.
 
-No entanto, usando a matemática, podemos pensar nas propriedades que os fractais reais “teriam” ter - e são muito surpreendentes… [Continue](btn:next)
+No entanto, usando a matemática, podemos pensar nas propriedades que os fractais reais “deveriam” ter - e são muito surpreendentes… [Continue](btn:next)
 
 ---
 > id: dimension
@@ -102,7 +102,7 @@ No entanto, usando a matemática, podemos pensar nas propriedades que os fractai
 
 ::: column.grow
 
-Primeiro, vamos pensar na dimensão dos fractais. Uma linha tem dimensão [[1]]. _{span.reveal(when="blank-0")} Ao escalar por um fator de 2, seu comprimento aumenta em um fator de `2^1 = 2`. Obviamente!_
+Primeiro, vamos pensar na dimensão dos fractais. Uma linha tem dimensão [[1]]. _{span.reveal(when="blank-0")} Ao ampliar uma linha por um fator de 2, o comprimento desta aumenta em um fator de `2^1 = 2`. Obviamente!_
 
 :::
 
@@ -115,7 +115,7 @@ Primeiro, vamos pensar na dimensão dos fractais. Uma linha tem dimensão [[1]].
 
 ::: column.grow
 
-Um quadrado tem dimensão [[2]]. _{span.reveal(when="blank-0")} Ao escalá-lo por um fator de 2, sua área aumenta em um fator de `2^2 =` [[4]]._
+Um quadrado tem dimensão [[2]]. _{span.reveal(when="blank-0")} Ao ampliar este por um fator de 2, sua área aumenta em um fator de `2^2 =` [[4]]._
 
 :::
 
@@ -128,7 +128,7 @@ Um quadrado tem dimensão [[2]]. _{span.reveal(when="blank-0")} Ao escalá-lo po
 
 ::: column.grow
 
-Um cubo tem dimensão [[3]]. _{span.reveal(when="blank-0")} Ao escalá-lo por um fator de 2, seu volume aumenta em um fator de `2^3 =` [[8]]._ _{span.reveal(when="blank-1")} Observe que o cubo maior na imagem consiste em 8 cópias da menor!_
+Um cubo tem dimensão [[3]]. _{span.reveal(when="blank-0")} Ao ampliar este por um fator de 2, seu volume aumenta em um fator de `2^3 =` [[8]]._ _{span.reveal(when="blank-1")} Observe que o cubo maior na imagem consiste em 8 cópias da menor!_
 
 :::
 
@@ -141,7 +141,7 @@ Um cubo tem dimensão [[3]]. _{span.reveal(when="blank-0")} Ao escalá-lo por um
 
 ::: column.grow
 
-Agora vamos dar uma olhada no triângulo de Sierpinski. Se o escalarmos por um fator de 2, você poderá ver que a "área" aumenta em um fator de [[3]].
+Agora vamos dar uma olhada no triângulo de Sierpinski. Se o ampliarmos por um fator de 2, você poderá ver que a "área" aumenta em um fator de [[3]].
 
 {.reveal(when="blank-0")} Digamos que _d_ seja a dimensão do triângulo de Sierpinski. Usando o mesmo padrão acima, obtemos `2^d = 3`. Em outras palavras, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1,558…_
 
@@ -150,7 +150,7 @@ Agora vamos dar uma olhada no triângulo de Sierpinski. Se o escalarmos por um f
 ---
 > id: dimension-4
 
-Mas espere ... como algo pode ter uma dimensão que não é um número inteiro? Parece impossível, mas esta é apenas uma das propriedades estranhas dos fractais. De fato, é isso que dá nome aos fractais: eles têm uma dimensão fracionária __>>>>.
+Mas espere... como algo pode ter uma dimensão que não é um número inteiro? Parece impossível, mas esta é apenas uma das propriedades estranhas dos fractais. De fato, é isso que dá nome aos fractais: eles têm uma __dimensão fracionária__.
 
 A cada iteração, removemos parte da área do triângulo de Sierpinski. Se pudéssemos fazer isso infinitamente várias vezes, não haveria realmente nenhuma área: é por isso que o triângulo de Sierpinski é algo entre uma área bidimensional e uma linha unidimensional.
 
@@ -166,7 +166,7 @@ Enquanto muitos fractais são _auto-similares_, uma definição melhor é que __
 
 > id: snowflake
 
-### O floco de neve Koch
+### O floco de neve de Koch
 
 Existem muitas formas na natureza que se parecem com fractais. Já vimos algumas plantas no início deste capítulo. Outros grandes exemplos são flocos de neve e cristais de gelo:
 
@@ -196,13 +196,13 @@ Existem muitas formas na natureza que se parecem com fractais. Já vimos algumas
 
 > id: koch
 
-Para criar nosso próprio floco de neve fractal, precisamos encontrar novamente um procedimento simples que podemos aplicar repetidamente.
+Para criar nosso próprio floco de neve fractal, precisamos encontrar novamente um procedimento simples que possamos aplicar repetidamente.
 
 ::: column.grow
 
 Como o triângulo de Sierpinski, vamos começar com um único triângulo equilátero. No entanto, em vez de _remover_ triângulos menores a cada passo, _adicionamos_ triângulos menores ao longo da aresta. O comprimento lateral de cada triângulo é [[`1/3`|`1/4`|`1/2`]] dos triângulos na etapa anterior.
 
-{.reveal(when="blank-0")} A forma resultante é chamada de [__floco de neve Koch__](gloss:koch-snowflake), com o nome do matemático sueco [Helge von Koch](bio:koch). Observe, mais uma vez, que [seções pequenas](target:t2) da borda do floco de neve parecem exatamente o mesmo que [seções maiores](target:t1).
+{.reveal(when="blank-0")} A forma resultante é chamada de [__floco de neve de Koch__](gloss:koch-snowflake), com o nome do matemático sueco [Helge von Koch](bio:koch). Observe, mais uma vez, que [seções pequenas](target:t2) da borda do floco de neve parecem exatamente o mesmo que [seções maiores](target:t1).
 
 ::: column(width=300)
 
@@ -224,7 +224,7 @@ Como o triângulo de Sierpinski, vamos começar com um único triângulo equilá
 
 ::: column.grow
 
-Quando escalamos um segmento de borda do floco de neve de Koch por um fator 3, seu comprimento [[quadruplica|triples|doubles]].
+Quando ampliamos um segmento de borda do floco de neve de Koch por um fator 3, seu comprimento [[quadruplica|triplica|duplica]].
 
 {.reveal(when="blank-0")} Usando a mesma relação entre dimensões e fatores de escala como acima, obtemos a equação [[`3^d=4`|`2^d=4`|`2^d=3`|`4^d=3`]]. _{span.reveal(when="blank-1")} Isso significa que a dimensão do floco de neve de Koch é `§d = log_3(4) ≈ 1.262`._
 
@@ -236,9 +236,9 @@ Quando escalamos um segmento de borda do floco de neve de Koch por um fator 3, s
 
 ::: tab
 
-#### Área _{span.check(when="blank-6")}_
+#### Área_{span.check(when="blank-6")}_
 
-Criar os flocos de neve de Koch é quase como uma sequência recursiva](gloss:sequence-recursive): conhecemos a forma inicial (um triângulo) e sabemos como passar de um termo para o seguinte (adicionando mais triângulos em todas as arestas):
+Criar os flocos de neve de Koch é quase como uma [sequência recursiva](gloss:sequence-recursive): conhecemos a forma inicial (um triângulo) e sabemos como passar de um termo para o seguinte (adicionando mais triângulos em todas as arestas):
 
 ::: column(width=140)
 
@@ -266,9 +266,9 @@ Criar os flocos de neve de Koch é quase como uma sequência recursiva](gloss:se
 
 {.reveal(when="blank-0 blank-1 blank-2")} Após a primeira iteração, o número de novos triângulos adicionados aumenta em um fator de [[4]] a cada passo. Ao mesmo tempo, a área desses novos triângulos diminui em um fator de [[9]] a cada passo.
 
-{.reveal(when="blank-3 blank-4")} Digamos que o [primeiro triângulo](->#koch-0) tenha uma área de 1. Então a área total dos [próximos três triângulos](->#koch-1) é `3 × 1/9 = 1/3`. As etapas a seguir formam uma [[série geométrica|arithmetic series|quadratic series]], _{span.reveal(when="blank-5")} com razão comum [[`4/9`|`9/4`|`4/3`]]._
+{.reveal(when="blank-3 blank-4")} Digamos que o [primeiro triângulo](->#koch-0) tenha uma área igual a 1. Então a área total dos [próximos três triângulos](->#koch-1) é `3 × 1/9 = 1/3`. As etapas a seguir formam uma [[série geométrica|série aritmética|série quadrática]], _{span.reveal(when="blank-5")} com razão comum [[`4/9`|`9/4`|`4/3`]]._
 
-{.reveal(when="blank-6")} Usando a fórmula da soma das infinitas [séries geométricas](gloss:geometric-series), podemos calcular que a área total do floco de neve de Koch é
+{.reveal(when="blank-6")} Usando a fórmula da soma de infinitos termos de uma [séries geométricas](gloss:geometric-series), podemos calcular que a área total do floco de neve de Koch é
 
 {.text-center.reveal(when="blank-6")} `A = 1 + 1/3 × 1/blank(1-4/9, 1+9/4, 9-1/4) reveal(= 8/5 = 1.6,"blank-7")`.
 
@@ -280,7 +280,7 @@ Criar os flocos de neve de Koch é quase como uma sequência recursiva](gloss:se
 
 Também podemos tentar calcular o perímetro do floco de neve de Koch. Como já vimos antes, o comprimento do perímetro muda em um fator de [[`4/3`|`3/4`|`1/4`]] a cada passo.
 
-{.reveal(when="blank-8")} Isso significa que, mais uma vez, temos uma série geométrica - mas, neste caso, [[não converge|converges to 0|doesn’t have a first term]]. _{span.reveal(when="blank-9")} Isso significa que o perímetro do floco de neve de Koch é realmente __infinitamente longo__!_
+{.reveal(when="blank-8")} Isso significa que, mais uma vez, temos uma série geométrica - mas, neste caso, [[não convergente|converge para 0|não tem um primeiro termo]]. _{span.reveal(when="blank-9")} Isso significa que o perímetro do floco de neve de Koch é  **infinitamente longo**!_
 
 ::: column(width=220)
 
@@ -288,7 +288,7 @@ Também podemos tentar calcular o perímetro do floco de neve de Koch. Como já 
 
 :::
 
-{.reveal(when="blank-9")} _Se isso parecer contra-intuitivo, lembre-se de que multiplicamos o perímetro por `§4/3` a cada passo, e fazemos isso infinitamente várias vezes._
+{.reveal(when="blank-9")} _Se isso parecer contra-intuitivo, lembre-se de que multiplicamos o perímetro por `§4/3` a cada passo, e fazemos isso várias vezes infinitamente._
 
 :::
 
@@ -298,7 +298,7 @@ Também podemos tentar calcular o perímetro do floco de neve de Koch. Como já 
 
 ::: column.grow
 
-É quase impensável que você possa ter uma forma com uma área _finita_ e também uma circunferência _infinita_ - mas essa é apenas uma das muitas propriedades inesperadas dos fractais.
+É quase impensável que você possa ter uma forma com uma área _finita_ e também um perímetro  _infinito_ - mas essa é apenas uma das muitas propriedades inesperadas dos fractais.
 
 Você pode encontrar outras maneiras de criar seus próprios fractais? [Continuar](btn:next)
 
@@ -314,9 +314,9 @@ Você pode encontrar outras maneiras de criar seus próprios fractais? [Continua
 
 > id: menger-sponge
 
-### Esponja Menger
+### Esponja de Menger
 
-Os fractais não precisam ser "planos", como muitos dos exemplos acima. Um dos fractais mais famosos que parecem tridimensionais é a __esponja de Menger__, nomeada após o matemático [Karl Menger](bio:menger) que a descreveu pela primeira vez em 1926.
+Os fractais não precisam ser "planos", como muitos dos exemplos acima. Um dos fractais mais famosos que parecem tridimensionais é a __esponja de Menger__, nomeada em homenagem ao matemático [Karl Menger](bio:menger), que a descreveu pela primeira vez em 1926.
 
 ::: column(width=320 parent="right")
 
@@ -325,7 +325,7 @@ Os fractais não precisam ser "planos", como muitos dos exemplos acima. Um dos f
 
 ::: column.grow
 
-Começamos com um cubo sólido e fazemos repetidamente orifícios cada vez menores em seus lados. Toda nova iteração de furos possui [[`1/3`|`1/2`|`1/4`]] a largura da iteração anterior dos furos.
+Começamos com um cubo sólido e fazemos repetidamente furos cada vez menores em seus lados. Toda nova iteração de furos possui [[`1/3`|`1/2`|`1/4`]] da largura da iteração anterior dos furos.
 
 {.reveal(when="blank-0")} Um cubo `3×3×3` consiste em 27 cubos menores, mas aqui removemos alguns deles. A esponja de Menger consiste em [[20]] cópias de si mesma, que são três vezes menores.
 
@@ -333,13 +333,13 @@ Agora, podemos tentar calcular a dimensão _d_ da esponja de Menger, exatamente 
 
 :::
 
-{.reveal(when="blank-1")} Se você imaginar cortar cada vez mais orifícios, infinitas vezes, não haveria volume real. É por isso que o cubo "não é bem" tridimensional! [Continuar](btn:next)
+{.reveal(when="blank-1")} Se você imaginar cortar cada vez mais furos, infinitas vezes, não haveria volume real. É por isso que o cubo de Menger "não é bem" tridimensional! [Continuar](btn:next)
 
 ---
 
 > id: coastlines
 
-Litoral do Fractal
+### Litoral do Fractal
 
 Uma das principais características de todos os fractais que vimos até agora é que você pode "aumentar o zoom" para sempre e sempre encontrar novos padrões. Por volta de 1920, o matemático britânico [Lewis Fry Richardson](bio:richardson) percebeu que o mesmo se aplica à fronteira ou litoral de muitos países.
 
@@ -381,7 +381,7 @@ Uma maneira de medir o comprimento da costa da Grã-Bretanha, por exemplo, é pe
 
 Se a régua tem ${rulers[index]}{index|0|0,8,1} km de comprimento, precisamos usá-la ${count} vezes, para obter um litoral total de ${count} × ${rulers[index]} = ${count * rulers[index]} km.
 
-{.reveal(when="var-0")} Podemos continuar, com governantes cada vez menores, e cada vez que nosso resultado para a extensão da costa fica um pouco mais longo. Assim como o floco de neve Koch antes, parece que a costa da Grã-Bretanha é infinitamente longa! Isso costuma ser chamado de __paradoxo da costa__. [Continuar](btn:next)
+{.reveal(when="var-0")} Poderíamos continuar, com réguas cada vez menores, e cada vez nosso resultado para a extensão da costa iria ficar um pouco mais longo. Assim como o floco de neve de Koch, parece que a costa da Grã-Bretanha é infinitamente longa! Isso costuma ser chamado de __paradoxo do litoral__. [Continuar](btn:next)
 
 ::: column(width=280)
 
@@ -393,7 +393,7 @@ Se a régua tem ${rulers[index]}{index|0|0,8,1} km de comprimento, precisamos us
 
 > id: coastline-grid
 
-Algumas décadas depois, o matemático Benoit Mandelbrot tropeçou no trabalho de Richardson em um livro descartado da biblioteca, enquanto trabalhava na IBM. Ele reconheceu seu significado e também como ele se relaciona com pesquisas mais recentes sobre fractais e dimensões.
+Algumas décadas depois, enquanto trabalhava na IBM, o matemático Benoit Mandelbrot encontrou o trabalho de Richardson em um livro descartado da biblioteca. Ele reconheceu seu significado e também como ele se relacionava com pesquisas mais recentes sobre fractais e dimensões.
 
 ::: column(width=340)
 
@@ -404,7 +404,7 @@ Algumas décadas depois, o matemático Benoit Mandelbrot tropeçou no trabalho d
 
 O litoral da Grã-Bretanha certamente "parece" fractal, mas não é auto-semelhante, como outros fractais que já vimos antes. Para encontrar seu tamanho, podemos desenhá-lo em uma grade e contar o número de células com as quais ele se cruza.
 
-{.r.reveal(when="slider-0")} Inicialmente, existem __{.pill.yellow} 88__ células que se cruzam. Se escalarmos a costa por um fator de 2, haverá __{.pill.yellow} 197__ células que se cruzam - mais que o dobro! [Continuar](btn:next)
+{.r.reveal(when="slider-0")} Inicialmente, existem __{.pill.yellow} 88__ células que se cruzam. Se ampliarmos a costa por um fator de 2, haverá __{.pill.yellow} 197__ células que se cruzam - mais que o dobro! [Continuar](btn:next)
 
 {.r.reveal(when="next-0")} O tamanho da costa aumentou em um fator de `§197/88`. Como antes, isso significa que a dimensão da costa é
 
@@ -416,7 +416,7 @@ O litoral da Grã-Bretanha certamente "parece" fractal, mas não é auto-semelha
 
 > id: coastline-dimension-1
 
-Se repetirmos isso com redes maiores, descobriremos que a dimensão da costa da Grã-Bretanha é de aproximadamente 1,21. Mandelbrot percebeu que essa dimensão fractal também é uma medida da rugosidade de uma forma - um novo conceito, para o qual ele encontrou aplicações importantes em muitas outras áreas da matemática e da ciência.
+Se repetirmos isso com grades maiores, descobriremos que a dimensão da costa da Grã-Bretanha é de aproximadamente 1,21. Mandelbrot percebeu que essa dimensão fractal também é uma medida da rugosidade de uma forma - um novo conceito, para o qual ele encontrou aplicações importantes em muitas outras áreas da matemática e da ciência.
 
 ---
 
@@ -424,7 +424,7 @@ Se repetirmos isso com redes maiores, descobriremos que a dimensão da costa da 
 
 ### Mais fractais na natureza e na tecnologia
 
-Embora os fractais verdadeiros nunca possam aparecer na natureza, há muitos objetos que se parecem com _quase_. Já vimos plantas, flocos de neve e costas, e aqui estão mais alguns exemplos:
+Embora os fractais verdadeiros nunca possam aparecer na natureza, há muitos objetos que _quase_ se parecem com fractais. Já vimos plantas, flocos de neve e costas, e aqui estão mais alguns exemplos:
 
 ::: column(width=200)
 
@@ -438,7 +438,7 @@ Embora os fractais verdadeiros nunca possam aparecer na natureza, há muitos obj
     // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
-Delta do rio Ganges na Índia
+{.caption} Delta do rio Ganges na Índia
 
 ::: column(width=200 parent="padded-thin")
 
@@ -464,7 +464,7 @@ Delta do rio Ganges na Índia
 
     x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
 
-{.caption} nuvens
+{.caption} Nuvens
 
 :::
 
@@ -488,7 +488,7 @@ Todos esses objetos podem parecer completamente aleatórios, mas, assim como os 
 
 Também podemos usar fractais para criar "cópias" realistas da natureza, por exemplo, como paisagens e texturas usadas em videogames ou filmes gerados por computador. A água, montanhas e nuvens nesta imagem são feitas inteiramente por um computador, com a ajuda de fractais!
 
-E podemos até reverter esse processo para compactar imagens digitais e reduzir o tamanho do arquivo. Os primeiros algoritmos foram desenvolvidos por Michael Barnsley e Alan Sloan na década de 1980, e novos ainda estão sendo pesquisados hoje.
+E podemos até reverter esse processo para compactar imagens digitais e reduzir o tamanho do arquivo. Os primeiros algoritmos foram desenvolvidos por Michael Barnsley e Alan Sloan na década de 1980, e novos algoritmos ainda estão sendo pesquisados até hoje.
 
 :::
 
