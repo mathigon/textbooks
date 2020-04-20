@@ -148,21 +148,25 @@ Tìm giải pháp bằng cách vẽ đường đi trên bản đồ dưới đâ
         x-solved
         include svg/bridges-1.svg
         button.btn Clear
+        button.btn.right Skip
       .tab
         h3 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
         button.btn Clear
+        button.btn.right Skip
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
         button.btn Clear
+        button.btn.right Skip
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
         button.btn Clear
+        button.btn.right Skip
 
 ---
 > id: bridges-1

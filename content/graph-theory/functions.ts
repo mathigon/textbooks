@@ -194,7 +194,6 @@ export function bridges($section: Step) {
 
     const [$clear, $skip] = $el.$$('.btn');
     $clear.on('click', () => map.clear());
-    map.one('end', () => { if (!success) $skip.enter('pop'); });
 
     function completeMap() {
       $skip.exit('pop');
