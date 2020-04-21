@@ -5,12 +5,79 @@
 
 // nothing to see here, folks
 import {Obj} from '@mathigon/core';
-import {SVGView, animate, InputView, AnimationResponse, ElementView, observable} from '@mathigon/boost';
+import {SVGView, animate, InputView, AnimationResponse, ElementView} from '@mathigon/boost';
 import {Step, Gameplay, Slideshow, Slider} from '../shared/types';
 import { Point, Random, SimplePoint } from '@mathigon/fermat';
 
 // TODO_MORSE_1 insert code table
 // TODO_MORSE_2 translation
+
+/** 
+ * Draw a barcode
+ */
+export function barcode($section: Step) {
+
+    const $bars = $section.$$('.bar') as SVGView[];
+    const barType = ['outer', 'left', 'left', 'left', 'left', 'left', 'left', 'center',
+                     'right', 'right', 'right', 'right', 'right', 'right', 'outer'];
+
+    const outer = '101';
+    const center = '01010';
+    const left = [
+        '0001101', // 0
+        '0011001', // 1
+        '0010011', // 2
+        '0111101', // 3
+        '0100011', // 4
+        '0110001', // 5
+        '0101111', // 6
+        '0111011', // 7
+        '0110111', // 8
+        '0001011' // 9
+    ];
+    const right = [
+        '1110010', // 0
+        '1100110', // 1
+        '1101100', // 2
+        '1000010', // 3
+        '1011100', // 4
+        '1001110', // 5
+        '1010000', // 6
+        '1000100', // 7
+        '1001000', // 8
+        '1110100' // 9
+    ];
+
+    let numbers = 'x051000x012517x';
+
+    $bars.forEach(($bar, i) => {
+        // console.log($bar);
+        $bar.children.forEach(($b, j) => {
+            // console.log($b);
+            let type = barType[i];
+            let stripes, number;
+
+            switch(type) {
+                case 'outer':
+                    stripes = outer;
+                    break;
+                case 'center':
+                    stripes = center;
+                    break;
+                case 'left':
+                    number = parseInt(numbers.charAt(i));
+                    stripes = left[number];
+                    break;
+                case 'right':
+                    number = parseInt(numbers.charAt(i));
+                    stripes = right[number];
+                    break;
+            }
+
+            $b.setAttr('fill', stripes?.charAt(j) === '1' ? 'black' : 'white');        
+        });
+    });
+}
 
 /**
  * Varius morse code experiments

@@ -301,3 +301,32 @@ It looks quite like a graph, doesn't it?
     // KRI8: how to get the actual painting underneath??? oh well, leave it for another time
     include svg/kri8it_paths.svg
     // x-media.background(src="images/kri8it.png")
+
+---
+
+## Bar Codes
+> section: barcode
+> sectionStatus: dev
+> id: barcode
+
+
+Look at this barcodes.
+
+    svg.barcode(width=400 height=200)
+      - var barClusters = [3, 7, 7, 7, 7, 7, 7, 5, 7, 7, 7, 7, 7, 7, 3]
+      - var barWidth = 4
+      - var numBars = 95
+      - var totalI = 0
+      g#b32
+        - var i = 0
+        while i < barClusters.length
+          - var j = 0
+          g.bar
+            while j < barClusters[i]
+              - var color= i%2 ? "black" : "white"
+              rect(x=totalI*barWidth y=0 width=barWidth height=200)
+              - j += 1
+              - totalI += 1
+          - i += 1
+
+Okay bye
