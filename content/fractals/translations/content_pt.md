@@ -518,7 +518,7 @@ Wacław Sierpiński foi o primeiro matemático a pensar nas propriedades desse t
 
 > id: sierpinski-history
 
-Aqui estão alguns exemplos de inclinações de diferentes igrejas em Roma:
+Aqui estão alguns exemplos de ladrilhos de diferentes igrejas em Roma:
 
 ::: column(width=140 parent="padded-thin")
 
@@ -572,7 +572,7 @@ Você já deve se lembrar do triângulo de Sierpinski em nosso capítulo sobre [
 
 O triângulo de Pascal pode ser continuado para baixo para sempre, e o padrão de Sierpinski continuará com triângulos cada vez maiores. Você já pode ver o início de um triângulo ainda maior, começando na linha 16.
 
-Se duas células adjacentes são divisíveis por 2, então sua soma na célula abaixo também deve ser divisível por 2 - é por isso que só podemos obter triângulos coloridos (ou células únicas). Obviamente, também podemos tentar colorir todas as células divisíveis por números _>>>>, exceto 2_. O que você acha que vai acontecer nesses casos? [Continuar](btn:next)
+Se duas células adjacentes são divisíveis por 2, então sua soma na célula abaixo também deve ser divisível por 2 - é por isso que só podemos obter triângulos coloridos (ou células únicas). Obviamente, também podemos tentar colorir todas as células divisíveis por outros números _diferentes de 2_. O que você acha que vai acontecer nesses casos? [Continuar](btn:next)
 
 ---
 
@@ -580,11 +580,11 @@ Se duas células adjacentes são divisíveis por 2, então sua soma na célula a
 
     .pascal-canvas
       canvas.pascal(width=960 height=840)
-      .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
+      .label Divisível por #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
 Aqui você pode ver uma versão minúscula das primeiras 128 linhas do triângulo de Pascal. Destacamos todas as células que são divisíveis por ${n}{n|2|2,40,1} - o que você percebe?
 
-Para cada número, temos um padrão triangular diferente, semelhante ao triângulo de Sierpinski. O padrão é particularmente regular se escolhermos um [[número primo|triangle number|Fibonacci number]]. _{span.reveal(when="blank-0")} Se o número tiver _muitos fatores primos diferentes_, o padrão parecerá mais aleatório._
+Para cada número, temos um padrão triangular diferente, semelhante ao triângulo de Sierpinski. O padrão é particularmente regular se escolhermos um [[número primo|número triangular|número de Fibonacci]]. _{span.reveal(when="blank-0")} Se o número tiver *muitos fatores primos diferentes*, o padrão parecerá ser mais aleatório._
 
     x-gesture(target="#pascal-large x-var" slide="100,0")
 
@@ -611,9 +611,9 @@ Aqui você pode ver os três vértices de um triângulo equilátero. Toque em qu
 
 {.r.reveal(when="point")} Vamos jogar um jogo simples: escolhemos um dos vértices do triângulo aleatoriamente, desenhamos um segmento de linha entre o nosso ponto e o vértice e, em seguida, encontramos o [{.pill.red} ponto médio](target:p1) desse segmento. [Continuar](btn:next)
 
-{.r.reveal(when="next-0")} Agora repetimos o processo: escolhemos outro vértice aleatório, desenhamos o segmento do nosso último ponto e encontramos o [{.pill.green} ponto médio](target:p2). Observe que colorimos esses novos pontos com base na cor do vértice do triângulo que escolhemos. [Continuar](btn:next)
+{.r.reveal(when="next-0")} Agora repetimos o processo: escolhemos outro vértice aleatório, desenhamos o segmento conectando o vértice ao  ponto médio e encontramos novamente o [{.pill.green} ponto médio](target:p2) deste segmento. Observe que colorimos esses novos pontos com base na cor do vértice do triângulo que escolhemos. [Continuar](btn:next)
 
-Até agora, nada de surpreendente aconteceu - mas observe como repetimos o mesmo processo muitas vezes:
+Até agora, nada de surpreendente aconteceu - mas observe o que acontece quando repetimos o mesmo processo muitas vezes:
 
 {.text-center.reveal.var(when="next-1")} _{button.btn.btn-red(@click="play()")} Adicione 1000 etapas_
 
@@ -624,13 +624,13 @@ Até agora, nada de surpreendente aconteceu - mas observe como repetimos o mesmo
 > id: fractal-builder
 > goals: s1 s2 shape play
 
-Esse processo é chamado de __Chaos Game__. Pode haver alguns pontos perdidos no início, mas se você repetir os mesmos passos várias vezes, a distribuição dos pontos começará a se parecer exatamente com o triângulo de Sierpinski!
+Esse processo é chamado de __jogo do caos__. Pode haver alguns pontos perdidos no início, mas se você repetir os mesmos passos várias vezes, a distribuição dos pontos começará a se parecer exatamente com o triângulo de Sierpinski!
 
 Existem muitas outras versões - por exemplo, poderíamos começar com um quadrado ou um pentágono, adicionar regras adicionais, como não poder selecionar o mesmo vértice duas vezes seguidas ou escolher o próximo ponto em uma proporção diferente de `§1/2` ao longo do segmento. Em alguns desses casos, obteremos apenas uma distribuição aleatória de pontos, mas em outros casos, revelamos ainda mais fractais:
 
     include components/chaos-game
 
-{.reveal(when="s1 s2 play")} Você descobriu o [tapete Sierpinski](action:carpet()) ou este [floco de neve pentagonal](action:snowflake()) com base na [__Proporção áurea__](gloss:golden-ratio)?
+{.reveal(when="s1 s2 play")} Você descobriu o [tapete Sierpinski](action:carpet()) ou este [floco de neve pentagonal](action:snowflake()) com base na [__proporção áurea__](gloss:golden-ratio)?
 
 ---
 
@@ -641,11 +641,11 @@ Existem muitas outras versões - por exemplo, poderíamos começar com um quadra
 
 Um __autômato celular__ é uma grade que consiste em muitas células individuais. Cada célula pode estar em diferentes "estados" (por exemplo, cores diferentes), e o estado de cada célula é determinado pelas células circundantes.
 
-No nosso exemplo, cada célula pode ser preta ou branca. Começamos com uma linha que contém apenas um único quadrado preto. Em todas as linhas seguintes, a cor de cada célula é determinada pelas três células imediatamente acima. Toque nas oito opções possíveis abaixo para inverter a cor - você consegue encontrar um conjunto de regras que cria um padrão semelhante ao triângulo de Sierpinski?
+No nosso exemplo, cada célula pode ser preta ou branca. Começamos com uma linha que contém apenas um único quadrado preto. Em todas as linhas seguintes, a cor de cada célula é determinada pelas três células imediatamente acima. Toque nas oito opções possíveis abaixo para selecionar a cor de acordo com a regra - você consegue encontrar um conjunto de regras que cria um padrão semelhante ao triângulo de Sierpinski?
 
     figure: x-automaton(size=28)
 
-{.reveal(when="sierpinski")} Há duas opções para cada uma das oito opções, o que significa que existem `2^8 =` [[256]] regras possíveis no total. Alguns, como a [Regra 126](action:setRule('01111110')), parecem com o triângulo de Sierpinski. Outros, como a [Regra 30](action:setRule('01111000')), parecem completamente caóticos. Foi descoberto por [Stephen Wolfram](bio:wolfram) em 1983, e os computadores podem até usá-los para gerar números aleatórios!
+{.reveal(when="sierpinski")} Há duas opções para cada uma das oito opções, o que significa que existem `2^8 =` [[256]] regras possíveis no total. Alguns, como a [regra 126](action:setRule('01111110')), parecem com o triângulo de Sierpinski. Outros, como a [regra 30](action:setRule('01111000')), parecem completamente caóticos. Foi descoberto por [Stephen Wolfram](bio:wolfram) em 1983, e os computadores podem até usá-los para gerar números aleatórios!
 
 ---
 
@@ -671,13 +671,13 @@ Em alguns casos, isso pode levar ao aparecimento de padrões que se parecem com 
 
 Sierpinski Tetrahedra
 
-Existem muitas variantes do triângulo de Sierpinski e outros fractais com propriedades e processos de criação semelhantes. Alguns parecem bidimensionais, como o _Sierpinski Carpet_ que você viu acima. Outros parecem tridimensionais, como estes exemplos:
+Existem muitas variantes do triângulo de Sierpinski e outros fractais com propriedades e processos de criação semelhantes. Alguns parecem bidimensionais, como o _tapete de Sierpinski_ que você viu acima. Outros parecem tridimensionais, como estes exemplos:
 
 ::: column(width=320)
 
     x-sierpinski-tetrahedra(size=320 steps=5 style="display: block; margin-top: -20px")
 
-Sierpinski Tetrahedra
+Tetraedro de Sierpinski
 
 ::: column(width=320)
 
@@ -689,7 +689,7 @@ Pirâmide de Sierpinski
 
 ---
 
-## O Conjunto Mandelbrot
+## O Conjunto de Mandelbrot
 
 > section: mandelbrot
 > id: iteration
@@ -715,7 +715,7 @@ Todos os fractais que vimos nos capítulos anteriores foram criados usando um pr
 
 :::
 
-Isso é semelhante a outro conceito em matemática que você viu antes: com [sequências recursivas](gloss:sequence-recursive), você começa com um número específico e aplica a mesma fórmula recursiva, repetidamente, para obter o próximo número no seqüência.
+Isso é semelhante a outro conceito em matemática que você viu antes: nas [sequências recursivas](gloss:sequence-recursive) você começa com um número específico e aplica nele repetidamente a mesma fórmula recursivamente para obter o próximo número da seqüência.
 
 Vamos usar a fórmula recursiva `§x_n = x_(n-1)^2` como exemplo e plotar seus termos em uma linha numérica. Você pode alterar o valor de `pill(x_0,"yellow","x0")`:
 
@@ -732,15 +732,15 @@ Observe como a sequência resultante pode se comportar de maneira muito diferent
 
 ::: column.sequence-cell(width=180 parent="padded-thin")
 
-Se `x_0 > 1`, a sequência [[diverge|converges]]: _{span.reveal(when="blank-0")} continua crescendo, até o infinito._
+Se `x_0 > 1`, a sequência [[diverge|converge]]: _{span.reveal(when="blank-0")} continua crescendo, até o infinito._
 
 ::: column.sequence-cell(width=180)
 
-Se `x_0` estiver entre –1 e 1, a sequência [[converge|diverges]].
+Se `x_0` estiver entre –1 e 1, a sequência [[converge|diverge]].
 
 ::: column.sequence-cell(width=180)
 
-Se `x_0 < -1`, a sequência [[diverge|converges]].
+Se `x_0 < -1`, a sequência [[diverge|converge]].
 
 :::
 
@@ -748,18 +748,18 @@ Se `x_0 < -1`, a sequência [[diverge|converges]].
 
 > id: iteration-2
 
-Até agora, não aprendemos nada de novo. No entanto, cerca de um século atrás, os matemáticos começaram a explorar o que acontece com essas seqüências se você usar [__números complexos__](gloss:complex-numbers), em vez de apenas a linha numérica real. Suas descobertas foram alguns dos resultados mais surpreendentes e bonitos de toda a matemática.
+Até agora, não aprendemos nada de novo. No entanto, cerca de um século atrás, os matemáticos começaram a explorar o que acontece com essas seqüências se você usar [__números complexos__](gloss:complex-numbers), em vez de usar apenas a reta dos números reais. Suas descobertas foram alguns dos resultados mais surpreendentes e bonitos de toda a matemática.
 
 ---
 
 > id: julia
 > goals: wipe-a wipe-b wipe-c wipe-d
 
-Conjuntos de Julia
+### Conjuntos de Julia
 
-Vamos usar a mesma sequência de antes, `§x_n = x_(n-1)^2`, mas no plano complexo. Você pode mover a posição de `pill(x_0,"yellow","x0")`, para ver o que acontece com os seguintes termos. Se a sequência parecer convergir, vamos colorir o ponto correspondente no plano em _{span.pill.blue} azul_:
+Vamos usar a mesma sequência de antes, `§x_n = x_(n-1)^2`, mas no plano complexo. Você pode mover a posição de `pill(x_0,"yellow","x0")`, para ver o que acontece com os termos seguintes da sequência. Se a sequência parecer convergir, vamos colorir o ponto correspondente no plano em _{span.pill.blue} azul_:
 
-    figure: x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginary")
+    figure: x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginário")
       canvas(width=1440 height=960)
       canvas(width=1440 height=960 style="opacity: 1")
       svg
@@ -777,26 +777,26 @@ Vamos usar a mesma sequência de antes, `§x_n = x_(n-1)^2`, mas no plano comple
           .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
           div
             span.vdots …
-            strong.var.m-blue(:show="converges" data-display="inline") Converges!
-            strong.var(:show="!converges" data-display="inline") Diverges!
+            strong.var.m-blue(:show="converges" data-display="inline") Converge!
+            strong.var(:show="!converges" data-display="inline") Diverge!
 
-{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} Como você pode ver, a sequência converge enquanto `pill(x_0,"yellow","x0")` estiver [[dentro do círculo unitário| outside the unit square|above the _>>>>x<<<<_-axis]] _{span.reveal(when="blank-0")} (o círculo com raio 1, centralizado na origem)._
+{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} Como você pode ver, a sequência converge enquanto `pill(x_0,"yellow","x0")` estiver [[dentro do círculo unitário|fora do quadrado unitário|acima do eixo *x*]] _{span.reveal(when="blank-0")} (o círculo com raio 1, centralizado na origem)._
 
 ---
 
 > id: julia-1
 
-Agora vamos tornar as coisas um pouco mais difíceis. Em vez de apenas equiparar o número anterior, também adicionamos uma constante _{.pill.red} c_ toda vez (que pode ser qualquer número complexo). Em outras palavras, `§x_n = x_(n-1)^2 + c`. Você acha que ainda teremos um círculo de convergência? Que outras formas você acha que poderemos ver? [Continuar](btn:next)
+Agora vamos tornar as coisas um pouco mais difíceis. Em vez de apenas elevar o quadrado do número anterior, também adicionamos a ele uma constante _{.pill.red} c_ (que pode ser qualquer número complexo). Em outras palavras, `§x_n = x_(n-1)^2 + c`. Você acha que ainda teremos um círculo de pontos convergentes? Que outras formas você acha que poderemos ver? [Continuar](btn:next)
 
 ---
 
 > id: julia-2
 
-Neste diagrama, você pode mover a posição de `pill(x_0,"yellow","x0")` e o valor de `pill(c,"red","c")`:
+Neste diagrama, você pode mover a posição de `pill(x_0,"yellow","x0")` e alterar o valor de `pill(c,"red","c")`:
 
 ::: x-slideshow
 
-    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i" axis-names="Real, Imaginary")
+    x-geopad(slot="stage" width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i" axis-names="Real, Imaginário")
       canvas(width=1440 height=960)
       svg
         circle.move.yellow(name="x0" x="point(0.5,0.5)" target="x0")
@@ -814,10 +814,10 @@ Neste diagrama, você pode mover a posição de `pill(x_0,"yellow","x0")` e o va
           .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
           div
             span.vdots …
-            strong.var.m-blue(:show="converges" data-display="inline") Bounded!
-            strong.var(:show="!converges" data-display="inline") Diverges!
+            strong.var.m-blue(:show="converges" data-display="inline") Limitado!
+            strong.var(:show="!converges" data-display="inline") Diverge!
 
-{div(slot="legend")} Já sabemos o que acontece se [`c = 0`](action:animate(0,0)) - é o mesmo que o exemplo acima. A convergência de sequência, desde que `x_0` esteja dentro do círculo unitário.
+{div(slot="legend")} Já sabemos o que acontece se [`c = 0`](action:animate(0,0)) - é o mesmo que o exemplo anterior. A sequência converge desde que `x_0` esteja dentro do círculo unitário.
 
 {div(slot="legend")} Assim que alteramos o valor de _c_, algo maravilhoso acontece. O círculo se transforma em uma forma fractal altamente complexa.
 
@@ -825,13 +825,13 @@ Neste diagrama, você pode mover a posição de `pill(x_0,"yellow","x0")` e o va
 
 ::: div(slot="legend")
 
-Em alguns casos, a sequência não converge para um _ponto único_. Em vez disso, atinge um ciclo de vários pontos, como um triângulo. Esses ciclos são chamados de órbitas __<<<<__.
+Em alguns casos, a sequência não converge para um _único ponto_. Em vez disso, atinge um ciclo com vários pontos, formando, por exemplo, um triângulo. Esses ciclos são chamados de __órbitas__.
 
-Os pontos coloridos em azul significam que a sequência correspondente converge ou tem uma órbita (dizemos que é __delimitada__). Os pontos deixados em branco significam que a sequência correspondente __diverge__: ela não é limitada e, eventualmente, explode até o infinito.
+Os pontos coloridos em azul significam que a sequência correspondente converge ou tem uma órbita (dizemos que a sequência é __limitada__). Os pontos deixados em branco significam que a sequência correspondente __diverge__: ela não é limitada e, eventualmente, explode até o infinito.
 
 :::
 
-{div(slot="legend")} O que mais você pode encontrar? Veja os padrões quando [`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) ou quando [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). Também existem alguns valores de _c_ em que _cada_ diverge, portanto toda a planície complexa permanece branca.
+{div(slot="legend")} O que mais você pode encontrar? Veja os padrões quando [`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) ou quando [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). Também existem alguns valores de _c_ em que _todas sequências_ divergem, e portanto, todo o plano complexo permanece com a cor branca.
 
 :::
 
@@ -839,11 +839,11 @@ Os pontos coloridos em azul significam que a sequência correspondente converge 
 
 > id: julia-3
 
-As diferentes formas que são formadas pela coloração dos números são chamadas [__Julia Sets__](gloss:julia-set). Eles foram descobertos independentemente por dois matemáticos franceses, [Gaston Julia](bio:julia) e [Pierre Fatou](bio:fatou), por volta de 1918.
+As diferentes formas que são formadas pela coloração dos números são chamadas [__conjuntos de Julia__](gloss:julia-set). Eles foram descobertos independentemente por dois matemáticos franceses, [Gaston Julia](bio:julia) e [Pierre Fatou](bio:fatou), por volta de 1918.
 
 Naquela época, não havia computadores para ajudar a visualizar como os conjuntos de Julia realmente eram. Matemáticos como Julia e Fatou foram capazes de raciocinar matematicamente sobre eles, mas eles só viram esboços rudes e desenhados à mão de como poderiam ser.
 
-Hoje não temos esse problema. As imagens abaixo são de conjuntos diferentes de Julia. As cores diferentes indicam _a rapidez com que_ a sequência nesse ponto diverge:
+Hoje não temos esse problema. As imagens abaixo são de conjuntos diferentes de Julia. As cores diferentes indicam _a rapidez_ com que a sequência nesse ponto diverge:
 
 ::: column(width=220)
 
@@ -872,15 +872,15 @@ Hoje não temos esse problema. As imagens abaixo são de conjuntos diferentes de
 > id: mandel-paint
 > goals: wipe-a wipe-b wipe-c
 
-### O Conjunto Mandelbrot
+### O Conjunto de Mandelbrot
 
 Ao criar os diferentes conjuntos de Julia, você deve ter notado que havia alguns valores de _c_ para os quais cada sequência diverge, e todo o plano complexo permanece branco. Algumas décadas depois de Julia e Fatou, uma nova geração de matemáticos tentou mapear como eram essas áreas.
 
-No exemplo anterior, escolhemos um valor fixo para `pill(c,"red","c")` e, em seguida, alteramos a posição de `pill(x_0,"yellow","x0")` para colorir o plano. Agora, vamos corrigir o valor de `pill(x_0 = 0,"yellow","x0")` e, em vez disso, altere o valor de `pill(c,"red","c")`.
+No exemplo anterior, escolhemos um valor fixo para `pill(c,"red","c")` e, em seguida, alteramos a posição de `pill(x_0,"yellow","x0")` para colorir o plano. Agora, faremos o contrário: vamos fixar o valor em `pill(x_0 = 0,"yellow","x0")` e alterar o valor de `pill(c,"red","c")`.
 
-Mais uma vez, pinte o plano complexo para revelar a área na qual as seqüências permanecem delimitadas. Quais formas você espera que apareçam?
+Mais uma vez, pinte o plano complexo para revelar a área na qual as seqüências permanecem limitadas. Quais formas você espera que apareçam?
 
-    figure: x-geopad.no-background(width=720 height=480 x-axis="-2.1,1.1,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
+    figure: x-geopad.no-background(width=720 height=480 x-axis="-2.1,1.1,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginário")
       img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
       canvas(width=1440 height=960 style="opacity: 1")
       svg
@@ -899,14 +899,14 @@ Mais uma vez, pinte o plano complexo para revelar a área na qual as seqüência
           .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
           div
             span.vdots …
-            strong.var.m-blue(:show="converges" data-display="inline") Bounded!
-            strong.var(:show="!converges" data-display="inline") Diverges!
+            strong.var.m-blue(:show="converges" data-display="inline") Limitada!
+            strong.var(:show="!converges" data-display="inline") Diverge!
 
 ---
 
 > id: mandel-history
 
-Esse fractal é chamado de [__Mandelbrot Set__](gloss:mandelbrot-set) e, quando girado em 90 °, parece quase uma pessoa, com cabeça, corpo e dois braços. Foi definido e desenhado pela primeira vez em 1978, em um trabalho de pesquisa dos matemáticos Robert Brooks e Peter Matelski:
+Esse fractal é chamado de [__conjunto de Mandelbrot__](gloss:mandelbrot-set) e, quando girado em 90 °, parece quase uma pessoa, com cabeça, corpo e dois braços. Foi definido e desenhado pela primeira vez em 1978, em um trabalho de pesquisa dos matemáticos Robert Brooks e Peter Matelski:
 
     figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
@@ -916,14 +916,14 @@ Alguns anos depois, [Benoit Mandelbrot](bio:mandelbrot) usou os poderosos comput
 
 > id: mandel-zoom
 
-Como todos os fractais, podemos "ampliar" o conjunto de Mandelbrot para sempre, encontrando novos padrões em todas as escalas. Aqui você pode ampliar uma parte do conjunto de Mandelbrot chamado __Seahorse valley__. Pontos pretos estão _dentro de_ no conjunto de Mandelbrot, onde a sequência é delimitada. Os pontos coloridos estão _fora de_ do conjunto de Mandelbrot, onde a sequência diverge e as cores diferentes indicam _a rapidez com que_ cresce até o infinito:
+Como todos os fractais, podemos "ampliar" o conjunto de Mandelbrot para sempre, encontrando novos padrões em todas as escalas. Aqui você pode ampliar uma parte do conjunto de Mandelbrot chamado __vale do cavalo-marinho__. Pontos pretos estão _dentro_ do conjunto de Mandelbrot, onde a sequência é limitada. Os pontos coloridos estão _fora_ do conjunto de Mandelbrot, onde a sequência diverge e as cores diferentes indicam a _rapidez_ com que a sequência cresce até o infinito:
 
     .mandel-frame
       - i = 1;
       while i <= 27
         img(src="images/mandel/mandel-" + i + ".jpg" width=760 height=500)
         - i += 1;
-      .scale.var Scale: ${pow(scale)}
+      .scale.var Escala: ${pow(scale)}
     x-slider(steps=27 continuous speed=0.1 :bind="scale")
 
 ---
@@ -951,14 +951,14 @@ Esse controle deslizante consiste em 27 imagens individuais, até um nível de z
 
 Ao mover o valor de [{.pill.red} c](target:c) ao redor do conjunto de Mandelbrot, você poderá notar uma propriedade curiosa:
 
-* Todas as sequências no corpo principal [do conjunto Mandelbrot [[convergem|diverge|reach an orbit]] _{span.reveal(when="blank-0")} para um único ponto._
-* {.reveal(when="blank-0")} As sequências dentro do [bulbo grande](target:bulb1) no topo [[atingem uma órbita|converge|diverge]] _{span.reveal(when="blank-1")} consistindo em [[3]] pontos._
-* {.reveal(when="blank-2")} Sequências em [neste bulbo menor](target:bulb2) têm órbitas de comprimento [[5]].
+* Todas as sequências no corpo principal [do conjunto Mandelbrot [[convergem|divergem|atingem uma órbita]] _{span.reveal(when="blank-0")} para um único ponto._
+* {.reveal(when="blank-0")} As sequências dentro do [bulbo grande](target:bulb1) no topo [[atingem uma órbita|convergem|divergem]] _{span.reveal(when="blank-1")} consistindo em [[3]] pontos._
+* {.reveal(when="blank-2")} Sequências [neste bulbo menor](target:bulb2) têm órbitas de período [[5]].
 
 
 :::
 
-{.reveal(when="blank-3")} Toda lâmpada tem uma órbita de tamanho diferente, com lâmpadas menores tendo cada vez mais pontos em suas órbitas. O tamanho dessas órbitas está intimamente relacionado ao __Mapa Logístico__, um conceito importante na [Teoria do Caos](/course/chaos).
+{.reveal(when="blank-3")} Todo bulbo tem uma órbita de tamanho diferente, com bulbos menores tendo cada vez mais pontos em suas órbitas. O tamanho dessas órbitas está intimamente relacionado ao __mapa logístico__, um conceito importante na [teoria do caos](/course/chaos).
 
     // TODO: Generic pan+zoom (see http://mandel.gart.nz)
     // TODO: Relationship between Julia and Mandelbrot sets
@@ -970,7 +970,7 @@ Ao mover o valor de [{.pill.red} c](target:c) ao redor do conjunto de Mandelbrot
 
 ::: column.grow
 
-Bernoit Mandelbrot dedicou a maior parte de sua vida ao estudo de fractais, bem como à matemática da rugosidade _e da auto-similaridade_. Seu trabalho teve aplicações em física, meteorologia, neurologia, economia, geologia, engenharia, ciência da computação e muitos outros campos.
+Bernoit Mandelbrot dedicou a maior parte de sua vida ao estudo de fractais, bem como à matemática da rugosidade e da _auto-similaridade_. Seu trabalho teve aplicações em física, meteorologia, neurologia, economia, geologia, engenharia, ciência da computação e muitos outros campos.
 
 Em 1985, o conjunto de Mandelbrot apareceu na capa da revista _Scientific American_ e, desde então, tornou-se uma das formas matemáticas mais reconhecíveis do mundo. Você pode encontrá-lo em camisetas, videoclipes e como protetores de tela, e foi mencionado em muitos livros e filmes populares.
 
