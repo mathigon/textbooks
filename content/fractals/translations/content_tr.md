@@ -780,7 +780,7 @@ Sonuç dizisinin `x_0` başlangıç değerine bağlı olarak nasıl çok farklı
             strong.var.m-blue(:show="converges" data-display="inline") Converges!
             strong.var(:show="!converges" data-display="inline") Diverges!
 
-{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} Gördüğünüz gibi, dizi `pill(x_0,"yellow","x0")` birim çember içinde olduğu sürece| birim çember dışında| _>>>>x<<<<_-ekseni üstünde]]| outside the unit square|above the _>>>>x<<<<_-axis]] _{span.reveal(when="blank-0")} (1 birim yarıçapına sahip çember) içinde kaldığı sürece dizi yakınsar._
+{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} Gördüğünüz gibi, dizi `pill(x_0,"yellow","x0")` birim çember içinde olduğu sürece| birim çember dışında| _x_-ekseni üstünde]]| outside the unit square|above the _x_-axis]] _{span.reveal(when="blank-0")} (1 birim yarıçapına sahip çember) içinde kaldığı sürece dizi yakınsar._
 
 ---
 
