@@ -1054,9 +1054,16 @@ new shapes from the sidebar onto the canvas. Which shapes tessellate well? Are
 there any shapes that don’t tessellate at all? Try to create interesting
 patterns!
 
-    include ./components/tessellation
-    figure: x-tessellation
-    x-gesture(target="x-tessellation .menu" slide="-300, 140")
+    figure: .tessellation
+      x-polypad
+      .menu
+        for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
+          .add(data-shape=s)
+      .btn-row
+        button.btn Clear
+        button.btn Download
+      svg.overlay: g.tiles.active
+    x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
       h4 Examples of other students’ tessellations
       .row.padded-thin
