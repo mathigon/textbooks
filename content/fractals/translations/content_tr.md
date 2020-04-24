@@ -549,7 +549,7 @@ Görünüşe göre, Sierpinski üçgeni matematiğin de içinde olduğu geniş b
 > id: pascal
 > goals: select
 
-### Pascal’ın Üçgeni
+### Pascal Üçgeni
 
 Sierpinski üçgenini [__Pascal’ın üçgeni__](gloss:pascals-triangle) ile ilgili bölümümüzden hatırlıyor olabilirsiniz. Pascal Üçgeni, her sayının, üst satırındaki iki sayının toplamı olduğu bir sayı piramidi. Aşağıdaki üçgendeki tüm _çift_ sayıları tıklayın - oluşan desen tanıdık geldi mi?:
 
@@ -582,7 +582,7 @@ Pascal üçgeni sonsuza kadar aşağıya doğru devam edebilir ve Sierpinski mod
       canvas.pascal(width=960 height=840)
       .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
-Burada Pascal’ın üçgeninin ilk 128 sırasını gösteren küçük bir versiyonunu görebilirsiniz. ${n}{n|2|2,40,1} ile bölünebilen tüm hücreleri sırası ile seçtik - Ne fark ettiniz?
+Burada Pascal’ın üçgeninin ilk 128 satırını gösteren küçük bir versiyonunu görebilirsiniz. ${n}{n|2|2,40,1} ile bölünebilen tüm hücreleri sırası ile seçtik - Ne fark ettiniz?
 
 {.reveal(when="var-0")} Her sayı için Sierpinski üçgenine benzeyen farklı bir üçgen elde ederiz. Bir [[asal sayı|üçgensel sayı|Fibonacci sayısı]] seçersek, oluşacak desen daha düzgün olur. _{span.reveal(when="blank-0")} Seçilen sayının _birçok farklı_ asal faktörü varsa, desen daha rastgele görünür._
 
@@ -930,7 +930,7 @@ Tüm fraktallar gibi Mandelbrot setini sonsuza dek “yakınlaştırabiliriz” 
 
 > id: mandel-zoom-1
 
-Bu kaydırma çizgisini kullanarak, 27 ayrı resimden oluşan bu seride 14 katrilyonu veya `2^54`aşan yakınlaştırma düzeyine ulaşabilirsiniz. Modern bir dizüstü bilgisayar kullanarak bu resimleri oluşturmak sadece yaklaşık 45 dakika sürdü. Mandelbrot seti sadece tek bir basit denklemle oluşturulabilir `§x_n = x_(n-1)^2 + c`, ancak sonsuz karmaşık ve şaşırtıcı derecede güzeldir.
+Bu kaydırma çizgisini kullanarak, 27 ayrı resimden oluşan bu seride 14 katrilyonu veya `2^54`aşan yakınlaştırma düzeyine ulaşabilirsiniz. Modern bir dizüstü bilgisayar kullanarak bu resimleri oluşturmak yaklaşık 45 dakika sürdü. Mandelbrot seti sadece tek bir basit denklemle oluşturulabilir `§x_n = x_(n-1)^2 + c`, ancak sonsuz karmaşıklıkta ve şaşırtıcı derecede güzeldir.
 
 ---
 
@@ -952,8 +952,8 @@ Bu kaydırma çizgisini kullanarak, 27 ayrı resimden oluşan bu seride 14 katri
 [{.pill.red} c](target:c) değerini Mandelbrot setinin etrafında hareket ettirdikçe, ilginç bir özellik fark edebilirsiniz:
 
 * Mandelbrot setinin [[ana gövdesi](target:bulb0) içerisindeki tüm diziler [[<<<<|ıraksar|yörüngeye ulaşır]] _{span.reveal(when="blank-0")} tek bir noktaya yakınsar._
-* {.reveal(when="blank-0")} [üstündeki [büyük ampul içindeki](target:bulb1) diziler, [[3]] noktadan oluşan|yakınsar|ıraksar]] _{span.reveal(when="blank-1")} yörüngesine ulaşır._
-* {.reveal(when="blank-2")} [küçük ampulün içindeki](target:bulb2) diziler [[5]] uzunluğunda yörüngelere sahiptir.
+* {.reveal(when="blank-0")} Üstteki [büyük ampul içindeki](target:bulb1) diziler, [[3]] noktadan oluşan [[yörüngesine ulaşır|yakınsar|ıraksar]] _{span.reveal(when="blank-1")}._
+* {.reveal(when="blank-2")} [Küçük ampulün içindeki](target:bulb2) diziler [[5]] uzunluğunda yörüngelere sahiptir.
 
 
 :::
