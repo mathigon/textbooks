@@ -720,7 +720,7 @@ Here you can see a tiny version of the first 128 rows of Pascal’s triangle.
 We have highlighted all cells that are divisible by ${n}{n|2|2,40,1} – what
 do you notice?
 
-{.reveal(when="var-0")} For every number, we a different triangular pattern
+{.reveal(when="var-0")} For every number, we get a different triangular pattern
 similar to the Sierpinski triangle. The pattern is particularly regular if we
 choose a [[prime number|triangle number|Fibonacci number]].
 _{span.reveal(when="blank-0")} If the number has *many different* prime factors,
@@ -1032,7 +1032,7 @@ eventually blows up to infinity.
 {div(slot="legend")} What else can you find? Have a look at the patterns when
 [`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) or when
 [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also some values of
-_c_ where _every_ sequence diverges, so the entire complex plain remains white.
+_c_ where _every_ sequence diverges, so the entire complex plane remains white.
 
 :::
 
