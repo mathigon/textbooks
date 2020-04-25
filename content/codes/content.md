@@ -5,69 +5,152 @@
     // http://plus.maths.org/content/exploring-enigma
     // http://nrich.maths.org/2198
 
-## Simple Codes
+## Introduction
 
 > section: introduction
 > sectionStatus: dev
 
-__Information__ is everywhere around us, but it is difficult to define what
-exactly "information" _means_. Instead we can give examples of things that
-contain information: books and newspapers, numbers and charts, images, sound or
-film clips.
+{.fixme} Imagine you’re in the jungle, being held hostage. You’ve been there for three months and you’re losing hope. You just want to be free and see your family again. A song comes on the radio. You hear a secret message in the song that gives you reason to believe you will be rescued soon. But your captors have no idea. How might you get this message that someone else can’t hear?
 
-    .row
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-      div(style="width: 80px"): img(width="100", height="100", src="xyz")
-    
-__Codes__ are rules or algorithms to express information in certain formats. Our
-alphabet is a example of a code can can be used to express _language_ in the
-form of _letters_.
+{.fixme} Listen to a clip of this song and see if you can find a hidden message:
 
-Sometimes letters are not the best format to express information, and we can use
-other codes. In this course we will discover some of these codes as well as the
-algorithms to encode and decode messages.
+    figure: iframe(width="100%" height=166 scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184253099&color=%23295869&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&sharing=false&download=false&show_playcount=false")
+
+---
+
+{.fixme} There are many other situations where we want to communicate, but we can't use our voices or text.
+Imagine that there's been a power outage in the night, and your phone doesn't work. Your friend
+lives across the street, and you can see his window…
 
 ---
 
 ### Morse Code
 
-{.todo} TODO
+{.fixme} A similar technique was invented in XXX by XXXX. A few years earlier, the telegraph was invented,
+and engineers 
+
+{.fixme} This secret language is just like something called Morse Code, which was used in the invention of the telgegraph.
+
+---
+> id: telegraph
+
+::: column.grow
+
+{.fixme} The telegraph can send electrical messages across long distances. Telephone wires span the country, allowing messages to go from one part of the country to another. Before the telegraph, the fastest way to get your message across was the sending letters through the mail? Or  Or train? << Look this up >>.
+
+{.fixme} Like in our flashlight scenario, the people who could work with telegraph could communicate in a very limited medium. Telegraphs work when you press down and connect a circut (on), or let go and disconnect the circuit (off). 
+
+::: column(width=320)
+
+    .telegraph
+      img(src="images/telegraph-bg.jpg" width=320 height=210)
+      img.handle(src="images/telegraph-handle.png" width=320 height=210)
+      img.fg(src="images/telegraph-fg.png" width=320 height=210)
+      svg(width=320 height=210): path(d="M-3.2,112.8c5.7-2.3,43.1-13.4,47.1-16.9l9.8-6.6c4.4-3.3,20.2-6.8,25.5-8.6,7.6-2,1.5-14.5,9.6-15,3.3.3,88.9,1.5,88.5,3a5.2,5.2,0,0,1,3.9,4.9V93.3a4.1,4.1,0,0,1-4,4.1l-92,.9a4.1,4.1,0,0,1-4.1-4c.1-3,.2-8.1-4.2-7.8l-24.2,1C40.1,89.4,30.2,106.2,22,114.6c-6.1,6.3-16.5,6.5-24.7,7.6")
+
+:::
+
+{.fixme} XXX came up with a way to change the letters of our alphabet into sequences of short and long XXX.
+These could be transmitted
+
+    .alphabet
+      for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+        div
+         strong= letter
+         x-morse(char=letter)
+
+{.fixme} For example… 
+To signal an E you would make a [dot|dash] <<< AUDIO + 
+To signal a Y you would make a [dash dot dash dash | dot whatever]
+
+---
+> id: morse-encoding
+
+{.fixme} The most well-known message sent in Morse Code is “SOS”, which is the emergency help message. SOS can be sent by 3 dots (S), 3 dashes (O), and 3 dots (S).
+
+    x-code-box
+      .input(contenteditable="true" spellcheck="false") SOS
+      .output.morse
+
+{.fixme} Resolve music
 
 ---
 
-### Binary Codes
+### Codes and Information
 
 {.todo} TODO
 
+{.fixme} __Information__ is everywhere around us, but it is difficult to define what
+exactly "information" _means_. Instead we can give examples of things that
+contain information: books and newspapers, numbers and charts, images, sound or
+film clips.
+
+{.fixme} __Codes__ are rules or algorithms to express information in certain formats. Our
+alphabet is a example of a code can can be used to express _language_ in the
+form of _letters_.
+
+{.fixme} Sometimes letters are not the best format to express information, and we can use
+other codes. In this course we will discover some of these codes as well as the
+algorithms to encode and decode messages.
+
 ---
 
-### Create your own Codes
+### More Examples
 
 {.todo} TODO
 
----
 
-## Error Detection and Error Correction 
+----------------------------------------------------------------------------------------------------
 
-> section: error-correction
+
+## Binary Numbers
+
+> section: binary
 > sectionStatus: dev
 
-{.todo} Bar Code
+{.todo} Computers
+
+---
+
+{.todo} Finger Codes
+
+---
+
+{.todo} What are binary numbers
+
+---
+
+{.todo} Create your own code
+
+
+----------------------------------------------------------------------------------------------------
+
+
+## Error Detection 
+
+> section: error-detection
+> sectionStatus: dev
 
 {.todo} Satellite Communications
 
-{.todo} CDs and DVDs
+---
+
+{.todo} Bar Code
 
 ---
+
+{.todo} CDs and DVDs
+
+
+----------------------------------------------------------------------------------------------------
+
 
 ## Secret Codes
 
 > section: cryptography
 > sectionStatus: dev
+
+https://plus.maths.org/content/cracking-codes
 
 Some codes are designed in a way that only
 
@@ -168,21 +251,27 @@ using substitution ciphers:
 
 {.todo} TODO
 
----
+
+----------------------------------------------------------------------------------------------------
+
 
 ## The Enigma
 
 > section: enigma
 > sectionStatus: dev
 
-Here is a virtual enigma:
+http://plus.maths.org/content/exploring-enigma
+
+{.todo} TODO
 
     include ./components/enigma
     x-enigma
 
----
 
-## RSA Cryptography
+----------------------------------------------------------------------------------------------------
+
+
+## Public Key Cryptography
 
 > section: rsa
 > sectionStatus: dev

@@ -1,0 +1,39 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: "Bine ai venit la Mathigon! Eu sunt Archie, profesorul tău personal. :mortar_board:"
+account: Poți [crea un cont gratuit](->#login-btn) pentru a-ți salva progresul făcut.
+tutorial1: Conținutul nostru este împărțit în bucăți mici. E necesar să finalizezi activitățile pentru a dezvălui ce urmează.
+tutorial2: îți vom salva progresul făcut pentru ca tu să poți continua mai târziu exact de unde ai rămas.
+
+correct:
+  - "Foarte bine :relaxed:"
+  - "Bine lucrat! :relieved:"
+  - "Minunat :grinning:"
+  - "Genial :thumbsup:"
+  - "Excelent! :ok_hand:"
+  - "Cool :sunglasses:"
+  - "Nice! :v:"
+  - "Way to go! :blush:"
+  - "Sweet :relaxed:"
+  - "Impressive! :trophy:"
+  - "Outstanding :grin:"
+  - "Superb! :star:"
+  - "Wonderful! :smiley:"
+
+incorrect:
+  - "Nu e chiar corect :white_frowning_face:"
+  - "Ești sigur? :thinking_face:"
+  - "Nu pare în regulă. :hushed:"
+  - "Mai încearcă! :confused:"
+
+welcomeMorning: Bună dimineața!
+welcomeAfternoon: Bună ziua!
+welcomeEvening: Bună seara!
+
+welcomeMorningNamed: Bună dimineața, $name!
+welcomeAfternoonNamed: Bună ziua, $name!
+welcomeEveningNamed: Bună seara, $name!
+
+serverError: "Îmi pare rău, nu te pot ajuta în acest moment. Verifică-ți conexiunea internet sau încearcă din nou mai târziu. :confused:"

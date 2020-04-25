@@ -6,16 +6,14 @@
 
 import {total} from '@mathigon/core';
 import {clamp, toWord, Segment, Point, Angle, lerp, Rectangle, Polygon, isLineLike} from '@mathigon/fermat';
-import {Browser, slide} from '@mathigon/boost';
-import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
+import {$, Browser, slide} from '@mathigon/boost';
+import {Geopad, GeoPath, Path, Slider, Step, Polypad} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';
 import {PolyhedronData, PolyhedronDataItem} from './components/polyhedron-data';
-import {Tessellation} from './components/tessellation';
 
 import '../shared/components/solid';
-import './components/tessellation';
 import './components/polyhedron';
 import './components/folding';
 import './components/anibutton';
@@ -191,10 +189,37 @@ export function quadrilateralsArea($step: Step) {
 // -----------------------------------------------------------------------------
 
 export function tessellationDrawing($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  const $overlayTiles = $('.overlay .tiles')!;
+
+  // TODO Save and restore progress
   let polygons = 0;
 
-  const $tessellation = $step.$('x-tessellation') as Tessellation;
-  $tessellation.on('add-shape', function () {
+  for (const $a of $step.$$('.tessellation .add')) {
+    $polypad.bindSource($a, 'polygon', $a.data.shape!, $overlayTiles);
+    $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
+  }
+
+  const [$clear, $download] = $step.$$('.tessellation .btn');
+  $clear.on('click', () => $polypad.clear());
+  $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
+
+  $polypad.on('move-selection rotate-selection add-tile', () => {
+    const tiles = Array.from($polypad.tiles) as any;
+    for (const t of tiles) t.$body.removeClass('overlap');
+
+    const n = tiles.length;
+    for (let i = 0; i < n; ++i) {
+      for (let j = i + 1; j < n; ++j) {
+        if (Point.distance(tiles[i].posn, tiles[j].posn) > 150) continue;
+        if (!Polygon.collision(tiles[i].outline, tiles[j].outline)) continue;
+        tiles[i].$body.addClass('overlap');
+        tiles[j].$body.addClass('overlap');
+      }
+    }
+  });
+
+  $polypad.on('add-tile', () => {
     polygons += 1;
     if (polygons >= 3) $step.score('shapes0');
     if (polygons >= 5) $step.score('shapes1');

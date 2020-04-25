@@ -214,19 +214,17 @@ non-euclidean-geometry:
   title: Non-Euclidean Geometry
   color: 6f27cc
   sections:
-    - title: Introduction
-      preview: /world/Dimensions_and_Distortions
-    - title: Metric Spaces
-      preview: /world/Dimensions_and_Distortions#metric
     - title: Spherical Geometry
       preview: /world/Dimensions_and_Distortions#spherical
     - title: Map Projections
       preview: /world/Dimensions_and_Distortions#projections
     - title: Hyperbolic Geometry
       preview: /world/Dimensions_and_Distortions#hyperbolic
-    - title: Higher Dimensions
+    - title: Metric Spaces
+      preview: /world/Dimensions_and_Distortions#metric
     - title: Topology
       preview: /world/Dimensions_and_Distortions#topology
+    - title: Higher Dimensions
 
 functions:
   title: Functions
@@ -292,13 +290,6 @@ codes:
 game-theory:
   title: Game Theory
   color: 8220b9
-  sections:
-    - title: The Winning Move
-      preview: /world/Game_Theory
-    - title: Cards, Coins and Dice
-    - title: The Prisoners’ Dilemma
-      preview: /world/Game_Theory#prisoners-dilemma
-    - title: Gamblers’ Ruin
 
 
 # ------------------------------------------------------------------------------
@@ -370,7 +361,7 @@ logic:
     - title: Infinity and Hilbert’s Hotel
       preview: /world/Infinity
 
-coordinate-geo:
+coordinate-geometry:
   title: Coordinate Geometry
   color: 0f82f2
   sections:

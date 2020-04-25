@@ -1,0 +1,130 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+
+axiom:
+  title: Axioma
+  text: O __axiomă__, numită uneori și __postulat__, este un enunț matematic considerat
+    evident și care nu mai trebuie dovedit. Ar trebui să fie atât de simplă,
+    încât este adevărată în mod evident și incontestabil.
+
+    Axiomele formeaza fundația  matematicii și pot fi folosite pentru a demonstra
+    alte rezultate mai complexe.
+
+circle:
+  title: Cerc
+  text: Un __cerc__ este mulțimea tuturor punctelor din plan aflate
+    la o distanță fixă (_rază_) față de un punct dat (_centru_).
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: Aria unui cerc
+  text: __Aria__ unui cerc cu raza _r_ este dată de formula
+    `A = pi r^2`.
+
+circle-circumference:
+  title: Circumferința unui cerc
+  text: __Circumferința__ unui cerc este distanța în jurul acestuia.
+    Un cerc cu rază _r_ are circumferința `C = 2 pi r`.
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: Rază
+  text: __Raza__ unui cerc este distanța (sau segmentul de dreaptă) dintre centru
+    și orice punct aflat pe circumferința sa.
+  link: /course/circles/introduction#radius
+
+congruent:
+  title: Congruența
+  text: În geometrie, două figuri geometrice sunt __congruente__ dacă sunt identice
+    ca dimensiune, formă și mărime. Asta înseamnă că le putem muta, răsturna sau roti
+    astfel încât să se potrivească exact una peste alta.
+  link: /course/euclidean-geometry/definitions#congruence
+
+dna:
+  title: ADN
+  text: __ADN__-ul (acidul dezoxiribonucleic) este o moleculă care conține codul genetic
+    al fiecărui organism viu. Majoritatea ADN-urilor constau din două lanțuri organice ce formează
+    un _dublu helix_. Informația genetică este codificată în ordinea a patru acizi nucleici (A, G, C și T).
+    _Secvențierea ADN-ului_ este metoda de extragere a acestei informații - o procedura esențială
+    în biologie, medicină, genetică și biotehnologie.
+
+dodecahedron:
+  title: Dodecaedru
+  text: __Dodecaedrul__ este un poliedru cu douăsprezece fețe care sunt pentagoane regulate.
+    El are 20 de vârfuri și 30 de muchii.
+  link: /course/polyhedra/platonic#platonic-overview
+
+equilateral-triangle:
+  title: Triunghi echilateral
+  text: Un __triunghi echilateral__ este un triunghi care are toate laturile egale.
+
+euclidean-geometry:
+  title: Geometria euclidiană
+  text: __Geometria euclidiană__ este tipul de geometrie concepută de matematicianul
+    _Euclid_. Ea studiază punctele, dreptele, poligoanele, cercurile, precum și formele geometrice
+    tridimensionale. Depinde de doar cinci _axiome_, legile de bază ale geometriei, ce descriu
+    toate operațiunile și construcțiile permise.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+line:
+  title: Dreaptă
+  text: O __dreaptă__ este un set infinit de puncte ce se prelungește la nesfârșit
+    în ambele direcții. Dreptele sunt întotdeauna drepte și nu au _lățime_.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Segment de dreaptă
+  text: Un __segment de dreaptă__ este o bucata a unei drepte ce se află între două puncte,
+    fără a se prelungi la nesfârșit. Segmentele de dreaptă de la punctul _A_ la punctul _B_
+    se notează `bar(AB)`.
+  link: /course/euclidean-geometry/definitions#segments
+
+molecule:
+  title: Moleculă
+  text: |
+    O __moleculă__ este formată din doi sau mai mulți atomi ce sunt legați prin legături chimice.
+    Spre deosebire de __ioni_, molecula nu are sarcină electrică.
+
+    Exemplele de molecule includ `O_2`, ce este formată din doi atomi de oxigen legați și
+    `H_2 O`, ce este formată din doi atomi de hidrogen și unul de oxigen.
+
+parallel:
+  title: Drepte paralele
+  text: Două sau mai multe drepte sunt __paralele__ dacă nu se intersectează niciodată. Ele
+    au aceeași pantă, iar distanța dintre ele este întotdeauna constantă.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+perpendicular:
+  title: Drepte perpendiculare
+  text: Două drepte sunt __perpendiculare__ (uneori numite _ortogonale_) dacă intersectia lor formează un unghi drept.
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+proof:
+  title: Demonstrație
+  text: O __demonstrație__ este un raționament care arată fără nicio urmă de îndoială
+    că o anume afirmație este adevărată.
+
+protein:
+  title: Proteină
+  text: |
+    O __proteină__ este o _macromoleculă_  mare ce poate efectua multe funcții
+    diferite în interiorul organismelor vii: de la digestie pâna la comunicarea intercelulară
+    sau replicarea ADN-ului. Proteinele sunt formate din unul sau mai multe lanțuri de
+    aminoacizi.
+
+ray:
+  title: Semidreaptă
+  text: O __semidreaptă__ este o porțiune dintr-o dreaptă care începe dintr-un punct
+    și se prelungește la infinit într-o singură direcție. Semidreapta care începe din `A` se notează `vec(AB)`.
+  link: /course/euclidean-geometry/definitions#rays
+
+theorem:
+  title: Teoremă
+  text: O __teoremă__ este un rezultat sau o observație deosebit de importanta din matematică.
+    S-a dovedit a fi întotdeauna adevărată, folosind axiome, elemente de logică și
+    teoreme anterioare care erau deja cunoscute a fi adevărate.

@@ -6,122 +6,51 @@
 
 @import "../shared/variables";
 @import "./components/enigma";
+@import "./components/code-box";
 
 
-[contenteditable] { outline: none; }
-
-.letter, .word {
-  display: inline-block;
-  background: @blue;
-  color: #FFF;
-  font-weight: 600;
-  text-align: center;
-  height: 20px;
-  box-sizing: border-box;
-  font-size: 14px;
-  border-radius: 2px;
-  padding: 1px 0 0;
+@keyframes electrons {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 12px; }
 }
 
-.letter { width: 20px; }
-.word { padding: 1px 5px 0; }
-
-.letter.plain, .word.plain { background: @blue; }
-.letter.cipher, .word.cipher { background: @red; }
-
-.letter-bar {
-  position: absolute;
-  bottom: 3px;
-  opacity: 0.6;
-  width: 8px;
-  left: 5px;
-}
-
-.letter-bar.plain { background: @blue; }
-.letter-bar.real { background: @green; left: 13px; }
-.letter-bar.cipher { background: @red; }
-
-.cipher-letter { display: inline-block; }
-
-.cipher-letter.hover {
-  color: #000;
-  padding: 0 3px;
-  margin: 0 -3px;
-  border-radius: 2px;
-}
-
-.plain-text .cipher-letter.hover { background: fade(@blue, 30%); }
-.cipher-text .cipher-letter.hover { background: fade(@red, 30%); }
-
-.code-play {
-  background: #E9E9EA;
-  padding: 1em 1em 1px;
-  margin: 1.5em 0;
+.telegraph {
   position: relative;
-}
-
-.freq-table-wrap {
-  margin: 0 0 1em;
-  overflow: auto;
-}
-
-.freq-table {
-  width: 676px;
-  margin: 0 auto;
-}
-
-.freq-table-chart {
-  height: 80px;
-}
-
-.freq-table-plain, .freq-table-cipher {
-  height: 26px;
+  border-radius: 4px;
   overflow: hidden;
+  cursor: pointer;
+
+  .handle, .fg, svg { position: absolute; top: 0; left: 0; }
+  .handle { transition: transform .2s; transform-origin: 115px 75px; }
+
+  path { transition: opacity .2s; opacity: 0; stroke-width: 6px; stroke: @red;
+    stroke-dasharray: 0 12px; fill: none; stroke-linecap: round;
+    animation: electrons infinite .5s linear; }
+
+  &.pressed .handle { transform: rotate(3.6deg); }
+  &.pressed path { opacity: 1; }
 }
 
-.freq-col {
-  float: left;
-  width: 26px;
-  position: relative;
+.alphabet {
+  column-count: 4;
+  margin: 1.5em 24px;
+  line-height: 1.4;
+  strong { display: inline-block; width: 30px; }
 }
 
-.freq-col.hover { background: #CCC; }
-.freq-table-chart .freq-col { height: 80px; }
-
-.freq-table-plain .letter, .freq-table-cipher .letter { margin: 3px; }
-
-.freq-table .gallery-box { margin: 0; padding: 0; }
-.freq-table .gallery-wrapper { border: none; }
-.freq-table .gallery-next, .freq-table .gallery-back, .freq-table .gallery-dots { display: none; }
-.freq-table .gallery-slide { padding: 0; }
-
-.code-area {
-  border: 1px solid #FFF;
-  background: fade(#FFF, 50%);
-  border-radius: 0;
-  min-height: 150px;
-  padding: 3px 6px;
+x-morse, .morse {
+  .dot, .dash { display: inline-block; background: currentColor; height: 6px; margin: 0 2px 3px; border-radius: 3px; }
+  .dot { width: 6px; }
+  .dash { width: 18px; }
 }
 
-.code-title {
-  color: #999;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin: 3px 0 5px;
+x-morse {
+  cursor: pointer;
+  &:hover, &:focus { color: @blue; outline: none; }
 }
 
-.code-play textarea {
-  width: 100%;
-  background: 0;
-  padding: 0;
-  min-height: 130px;
-  resize: none;
-}
-
-#letter-slider {
-  width: 100%;
-  height: 26px;
-  position: absolute;
-  top: 0;
+x-code-box .morse > span {
+  display: inline-block;  // Prevent wrapping within morse code...
+  margin-right: 12px;
+  &:hover, &.hover { margin-right: 9px; }
 }

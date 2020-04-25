@@ -6,7 +6,6 @@
 
 @import "../shared/variables";
 @import "../shared/components/solid";
-@import "./components/tessellation";
 @import "./components/anibutton";
 
 .quadrilateral {
@@ -30,6 +29,20 @@
 
 #escher { overflow: hidden; }
 .metamorph img { max-width: none; cursor: ew-resize; }
+
+.tessellation {
+  position: relative;
+  display: flex;
+  border-radius: 4px 0 0 4px;
+  background: @grey-background;
+
+  x-polypad { height: 450px; flex-grow: 1; }
+  svg.overlay { .fillParent(); pointer-events: none; z-index: 6; }
+  .menu { background: @grey; border-radius: 0 4px 4px 0; padding: 2px 0; }
+  .add { width: 48px; height: 48px; padding: 0 2px; cursor: grab; }
+  .overlap .polygon-tile { fill: #ff5354 !important; }
+  .btn-row { position: absolute; bottom: 12px; left: 12px }
+}
 
 .plato {
   margin: 0 -12px 1.5em !important;

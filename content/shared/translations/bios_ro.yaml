@@ -1,0 +1,86 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+
+archimedes:
+  name: Arhimede
+  born: -287
+  died: -212
+  bio: |
+    __Arhimede__ (c. 287 – c. 212 î.Hr.) a fost un om de știință și inginer din Grecia Antică, precum și cel mai mare matematician din toate timpurile. El a descoperit multe concepte de calcul și a lucrat în geometrie, analiză și mecanică.
+
+    Arhimede a descoperit în timp ce făcea baie o metodă de a calcula voumul obiectelor
+    de formă neregulată folosind cantitatea de apă dislocată la scufundare. El a fost atât
+    de entuziasmat de descoperirea lui încât a ieșit în fugă pe stradă, dezbrăcat, strigând
+    _“Eureka!”_ (_“Am descoperit!”_ în limba greacă).
+
+    Ca iniginer, el a construit mașinării ingenioase de apărare în timpul asediului orașului
+    Siracuza din Sicilia în care locuia. După doi ani romanii au reușit până la urmă să intre
+    și Arhimede a fost omorât. Ultimele sale cuvinte au fost _“Nu îmi deranjați cercurile”_ – pe care le studia în acel moment.
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __Euclid din Alexandria__ (în jurul 300 î.Hr.) a fost un matematician grec adesea numit
+    _părintele geometriei_. El a publicat o carte cu titlul _Elemente_ care a introdus pentru prima dată
+    geometria euclidiană și care conținea mult demonstrații importante din geometrie și teoria numerelor.
+    Această carte a fost manual principal de matematică până in secolul al 19lea. El a predat matematica
+    în Alexandria, dar altfel se cunosc foarte puține detalii despre viața sa.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility/primes#primes3
+
+jefferson:
+  name: Jefferson
+  bio: |
+    __Thomas Jefferson__ (1743 – 1826) a fost unul dintre părinții fondatori ai Statelor Unite,
+    al treilea președinte al Statelor Unite și principalul autor al Declarației de Independență.
+
+    Pe lânga contribuțiile sale în politică, el a studiat matematica, horticultura, mecanica și
+    a lucrat ca arhitect. După ce s-a retras din funcția publică, Jefferson a înființat
+    Universitatea din Virginia.
+
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642 – 1726) a fost un fizician, matematician și astronom englez.
+    El a fost unul dintre cei mai influenți oameni de știință din toate timpurile. A fost
+    profesor la Universitatea Cambridge și președinte al Societații Regale din Londra.
+
+    Newton a formulat în cartea sa _Principia Mathematica_ legile mișcării și gravitației,
+    legi care au pus bazele fizicii clasice și au dominat viziunea noastra asupra universului
+    timp de trei secole.
+
+    Printre multe altele, Newton a fost unul din inventatorii analizei matematice,
+    a construit primul telescop reflector, a calculat viteza sunetului, a studiat mișcarea fluidelor
+    și a dezvoltat o teorie a culorilor pe baza modului în care o prismă descompune lumina solară
+    în spectrul ei, conținând culorile curcubeului.
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Thales din Milet__ (c. 624 – 546 î.Hr.) a fost un matematician și filosof grec.
+
+    El este considerat de multe ori drept unul dintre primii oameni de știință din civilizația occidentală:
+    el a încercat să explice fenomenele naturale folosind o abordare științifică în loc de a folosi religia sau mitologia.
+    De aemenea, el este unul dintre primii oameni din istorie a cărui descoperire matematică îi poartă numele: teorema lui Thales.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
