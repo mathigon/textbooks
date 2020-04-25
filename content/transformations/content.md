@@ -1257,6 +1257,7 @@ smaller._
 > id: dilations-1
 
 ::: column.grow
+
 All dilations have a [__center__](target:center) and a [__scale factor__](->.scale-target).
 The center is the point of reference for the dilation and scale factor tells us
 how much the figure stretches or shrinks.
@@ -1264,6 +1265,7 @@ how much the figure stretches or shrinks.
 If the [scale factor](gloss:scale-factor) is between 0 and 1, the image is
 [[smaller|larger]] than the original. If the scale factor is larger than 1, the
 image is [[larger|smaller]] than the original.
+
 ::: column(width=300)
 
     x-geopad(width=300 height=240): svg

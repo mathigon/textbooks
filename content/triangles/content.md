@@ -948,6 +948,7 @@ see that
 #### Algebra _{span.check(when="blank-2 blank-3 blank-4")}_
 
 ::: column.grow
+
 Here we have the same figure as before, but this time we’ll use _algebra_ rather
 than _rearrangement_ to prove Pythagoras’ theorem.
 
@@ -1006,6 +1007,7 @@ _{span.qed}_
 #### Similar Triangles _{span.check(when="next-0 next-1 next-2 blank-5")}_
 
 ::: column.grow
+
 {.r} Here you can see another right-angled triangle. If we draw one of the
 altitudes, it splits the triangle into two smaller triangle.
 It also divides the hypotenuse _c_ into [two smaller parts](target:hypotenuse)
@@ -1082,6 +1084,7 @@ similar polygons:
 {.text-center.reveal(when="next-2")} `c^2 = a^2 + b^2`
 
 {.reveal(when="next-2")} Once more, we’ve proven Pythagoras’ theorem! _{span.qed}_
+
 :::
 
 ---
@@ -1093,14 +1096,18 @@ of  “number worship”. They believed that all numbers have their own characte
 and followed a variety of other bizarre customs.
 
 ::: column.grow
+
 The Pythagoreans are credited with many mathematical discoveries, including
 finding the first [irrational number](gloss:irrational-numbers), `sqrt(2)`.
 Irrational numbers cannot be expressed as a simple fraction – a concept the
 Pythagoreans found deeply troubling and (unsuccessfully) tried to cover up!
+
 ::: column(width=400)
+
     x-img(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
 {.caption} “Pythagoreans celebrate sunrise” by Fyodor Bronnikov
+
 :::
 
 ---

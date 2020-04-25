@@ -160,6 +160,7 @@ _{button.next-step} Continue_
       path.yellow(x="line(P,Q)")
 
 ::: column.grow
+
 A [__line__](gloss:line) is a set of infinitely many points that extend forever
 in both directions. Lines are always straight and, just like points, they don’t
 take up any space – they have no _width_.
@@ -170,6 +171,7 @@ refer to them using two points that lie on the line, for example
 <span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
 order of the points does not matter.
 _{button.next-step} Continue_
+
 :::
 
 ---
@@ -330,6 +332,7 @@ has many of the same properties of _equality_:
       path.yellow(x="l2.shift(-30,40)" mark="arrow2" label="e")
 
 ::: column.grow
+
 Two straight lines that never intersect are called [__parallel__](gloss:parallel).
 They point into the same direction, and the distance between them is always
 [[the same|increasing|decreasing]].
@@ -341,6 +344,7 @@ other!
 {.reveal(when="blank-0")} In diagrams, we denote parallel lines by adding one or
 more small arrows. In this example, __{.m-red}`a ∥ b ∥ c`__ and
 __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
+
 :::
 
 ---
@@ -354,11 +358,13 @@ __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
       path.green(x="line(point(50,100),point(70,0))" label="b")
 
 ::: column.grow
+
 The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
 These lines are called [__perpendicular__](gloss:perpendicular).
 
 {.r} In this example, we would write  _{.b.m-blue}a_ `⊥` _{.b.m-green}b_. The
 `⊥` symbol simply means _“is perpendicular to”_.
+
 :::
 
 ---
@@ -367,6 +373,7 @@ These lines are called [__perpendicular__](gloss:perpendicular).
 ### Euclid’s Axioms
 
 ::: column.grow
+
 Greek mathematicians realised that to write formal proofs, you need some sort of
 _starting point_: simple, intuitive statements, that everyone agrees are true.
 These are called [__axioms__](gloss:axiom) (or _postulates_).
@@ -376,11 +383,13 @@ results, using the rules of logic.
 
 The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
 the _father of geometry_, published the five axioms of geometry:
+
 ::: column(width=220)
 
     img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclid of Alexandria
+
 :::
 
 ::: column(width=220)
@@ -477,11 +486,11 @@ Jefferson](bio:jefferson). When writing the Declaration of Independence in 1776,
 he wanted to follow a similar approach. He begins by stating a few, simple
 “axioms” and then “proves” more complex results:
 
-    .parchment “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
+{div.parchment} “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
 
 {.text-center.follows} `=>`
 
-    .parchment We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
+{div.parchment} We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
 
 This is just one example where Euclid’s ideas in mathematics have inspired
 completely different subjects.
@@ -781,17 +790,29 @@ beautiful and impressive designs – all of these figures were built using nothi
 but rectangular sheets of paper:
 
 ::: column(width=186)
+
     x-img(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+
 ::: column(width=186)
+
     x-img(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+
 ::: column(width=186)
+
     x-img(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+
 ::: column(width=186)
+
     x-img(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+
 ::: column(width=186)
+
     x-img(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+
 ::: column(width=186)
+
     x-img(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+
 :::
 
 ---

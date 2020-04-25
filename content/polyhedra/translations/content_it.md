@@ -245,7 +245,7 @@ Qui puoi vedere un [poligono regolare](gloss:regular-polygon) con ${n}{n|5|4,12,
 lati. Ogni lato misura [{.step-target.pill.green}1m](target:base). Proviamo
 a calcolarne l'area!
 
-Prima di tutto, possiamo dividere il poligono in ${toWord(n)} , triangoli
+Prima di tutto, possiamo dividere il poligono in ${n} , triangoli
 [[isosceli|equilateri|rettangoli]] congruenti.
 
 {.reveal(when="blank-0")} Conosciamo già la [[base|altezza|area]] di questi
@@ -282,7 +282,7 @@ var("round(tan(pi/2-pi/n)/2,2)")"m"`
 = 1/2 pill("1m", "green", "base") × pill(var("round(tan(pi/2-pi/n)/2,2)"),
 "yellow", "apothem") = var("round(tan(pi/2-pi/n)/4,2)") "m"^2`
 
-{.reveal(when="blank-5 blank-6" delay=4000)} Il poligono è formato da ${toWord(n)}
+{.reveal(when="blank-5 blank-6" delay=4000)} Il poligono è formato da ${n}
 triangoli isosceli, che hanno tutti la stessa area. Perciò, l'area 
 totale del poligono sarà:
 
@@ -644,7 +644,7 @@ volare nel cielo. Tuttavia, tra tutti i quadrilateri particolari che abbiamo vis
 l'aquilone è l'unico che può anche essere [concavo](gloss:concave): se è a forma di freccia:
 ::: column(width=320)
 
-    x-media(src="images/kites.jpg")
+    x-img(src="images/kites.jpg")
 
 :::
 
