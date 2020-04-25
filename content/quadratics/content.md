@@ -122,7 +122,7 @@ We can maximise our profit by pricing the skateboards at approximately
 ---
 > id: intro-final
 
-    figure: x-media(src="images/skater-2.jpg" width=400 height=352)
+    figure: x-img(src="images/skater-2.jpg" alt="Skateboarder" width=400 height=352)
 
 In the real word, it can be very difficult for companies to determine a precise
 equation for their profit – and it is likely to be much more complicated than

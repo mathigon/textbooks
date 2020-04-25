@@ -172,23 +172,23 @@ Doğada fraktallara benzeyen birçok şekil var. Bu bölümün başında, zaten 
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/snow-1.jpg" width=120 height=120)
+    x-img(src="images/snow-1.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-2.jpg" width=120 height=120)
+    x-img(src="images/snow-2.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-3.jpg" width=120 height=120)
+    x-img(src="images/snow-3.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-4.jpg" width=120 height=120)
+    x-img(src="images/snow-4.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-5.jpg" width=120 height=120)
+    x-img(src="images/snow-5.jpg" width=120 height=120)
 
 :::
 
@@ -347,23 +347,23 @@ Tek bir küple başlıyoruz ve her bir yüzüne tekrar tekrar daha küçük ve d
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/coast-1.jpg" width=120 height=180)
+    x-img(src="images/coast-1.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-2.jpg" width=120 height=180)
+    x-img(src="images/coast-2.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-3.jpg" width=120 height=180)
+    x-img(src="images/coast-3.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-4.jpg" width=120 height=180)
+    x-img(src="images/coast-4.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-5.jpg" width=120 height=180)
+    x-img(src="images/coast-5.jpg" width=120 height=180)
 
 :::
 
@@ -429,40 +429,40 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
 ::: column(width=200)
 
     // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
-    x-media(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
+    x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Orta Asya'daki dağ silsilesi
 
 ::: column(width=200)
 
     // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
-    x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
+    x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Hindistan'da Ganj Nehri Deltası
 
 ::: column(width=200 parent="padded-thin")
 
-    x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
 
 {.caption} Yıldırımlar
 
 ::: column(width=200)
 
     // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
-    x-media(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
+    x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Retinadaki kan damarları
 
 ::: column(width=200)
 
     // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
-    x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
+    x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} ABD'deki Büyük Kanyon
 
 ::: column(width=200)
 
-    x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
 
 {.caption} Bulutlar
 
@@ -480,7 +480,7 @@ Tüm bu nesneler, tamamen rastgele oluşmuş gibi görünebilir, ancak tıpkı f
 ::: column(width=300)
 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
-    x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
+    x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Bilgisayar tarafından oluşturulan fraktal şeklinde yeryüzü
 
@@ -523,22 +523,22 @@ Roma'daki farklı kiliselerdeki yer döşemelerinden bazı örnekler:
 ::: column(width=140 parent="padded-thin")
 
     // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
-    x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+    x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
     // Permission from Elisa Conversano
-    x-media(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
+    x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
     // https://www.cattedraledianagni.it/
-    x-media(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
+    x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
     // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
-    x-media(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
+    x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
 
@@ -659,7 +659,7 @@ Bazı durumlarda, örneğin bu salyangozun kabuğundaki renklerin oluşması gib
 
 ::: column(width=320)
 
-    x-media(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
+    x-img(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
 
 {.caption} Conus tekstil, zehirli bir deniz salyangozu
 
@@ -847,19 +847,19 @@ Bugün böyle bir sorunumuz yok - aşağıdaki resimlerin hepsi farklı Julia se
 
 ::: column(width=220)
 
-    x-media(src="images/julia-1.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.70176 – 0.3842"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-2.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.4 + 0.6"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-3.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = 0.285 + 0.01"i"`
 
@@ -908,7 +908,7 @@ Bir kez daha, dizilerin sınırlı kaldığı bölgeyi ortaya çıkarmak için k
 
 Bu fraktal, [__Mandelbrot Seti__](gloss:mandelbrot-set) olarak adlandırılır ve 90 ° döndürüldüğünde, neredeyse kafa, gövde ve iki kolu olan bir insana benzer. İlk kez 1978'de matematikçiler Robert Brooks ve Peter Matelski tarafından bir araştırma makalesinde tanımlanmış ve çizilmiştir:
 
-    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
+    figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
 Birkaç yıl sonra, [Benoit Mandelbrot](bio:mandelbrot), daha sonra onun adını alan fraktal hakkında çok daha ayrıntılı bir görselleştirme oluşturmak için IBM'deki güçlü bilgisayarları kullandı. İlk çıktılar beklediğinden farklı görünüyordu - yazıcılarda çalışan teknisyenlerin, toz parçacıklarından veya yazıcı hatalarından kaynaklandığını ve fraktalların tanımlayıcı bir özelliği olmadığını varsayarak, kenarındaki “bulanıklığı” temizlediğini anlayana kadar ! [Devam](btn:next)
 
@@ -976,7 +976,7 @@ Bernoit Mandelbrot hayatının çoğunu fraktalların yanı sıra matematikteki 
 
 ::: column(width=220)
 
-    x-media(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
+    x-img(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
 
 :::
 

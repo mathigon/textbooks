@@ -8,21 +8,21 @@
 Birçok geometrik kavram, [doğrular](gloss:line) ve [noktalar](gloss:point) gibi, matematikçiler tarafından “icat edilmiştir.” Simetri, diğer yandan, çevremizde her yerdedir. Hemen hemen her çiçek, hayvan ve hatta insanlar simetriktir.
 
 ::: column(width=200)
-    x-media(src="images/butterfly.jpg" width=200 height=200 lightbox)
+    x-img(src="images/butterfly.jpg" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/lion.jpg" width=200 height=200 lightbox)
+    x-img(src="images/lion.jpg" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/starfish.jpg" width=200 height=200 lightbox)
+    x-img(src="images/starfish.jpg" width=200 height=200 lightbox)
 :::
 
 Zamanla doğadaki simetriyi sanatta, mimaride, teknolojide ve tasarımda taklit ettik. Simetrik şekiller ve desenler simetrik olmayanlardan  _çok daha güzel_ görünür.
 
 ::: column(width=200)
-    x-media(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox)
+    x-img(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox)
+    x-img(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/window.jpg" width=200 height=200 lightbox)
+    x-img(src="images/window.jpg" width=200 height=200 lightbox)
 :::
 
 Ama simetri _güzel görünmekten_ çok daha önemlidir. Evrenin temelinde yatar ve fiziğin en temel kurallarını bile açıklayabilir.
@@ -223,7 +223,7 @@ Her bir örnekteki yansıma doğrularını çizin:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/rorschach.jpg" width=220 height=180)
+      x-img.background(src="images/rorschach.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
 
@@ -482,21 +482,21 @@ Bir şekil yansıtıldıktan sonra aynı görünüyorsa [__yansıma simetrisine_
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/lake.jpg" width=220 height=180)
+      x-img.background(src="images/lake.jpg" width=220 height=180)
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/beijing.jpg" width=220 height=180)
+      x-img.background(src="images/beijing.jpg" width=220 height=180)
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
+      x-img.background(src="images/blue-butterfly.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
@@ -1045,12 +1045,12 @@ Bu “simetriler” ilk bakışta anlamsız görünebilir, ancak aslında evreni
 Örneğin zaman simetrisi, evrenimizde __enerji__nin korunmasını gerektirir: enerjiyi başka formlara dönüştürebilirsiniz(mesela ışık, ısı, elektrik), ancak asla yoktan var edip var olanı yok edemezsiniz. Evrendeki toplam enerji miktarı hep sabit kalır.
 
     figure
-      x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
+      x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN")
       p.caption CERN dünyadaki en büyük parçacık hızlandırıcı. Bilim insanları temel parçacıkların özelliklerini daha iyi anlamak için bu parçacıkları çok yüksek hızlarda birbirleri ile çarpıştırıyorlar. Boyutunu karşılaştırmak açısından, alttaki insanı görebiliyor musunuz?
 
 ::: column(width=220)
 
-    x-media(src="images/higgs.png" width=220 height=150)
+    x-img(src="images/higgs.png" width=220 height=150)
     p.caption Bir çarpışmadan sonra parçacıklardan saçılanların izledikleri yol
 
 ::: column.grow

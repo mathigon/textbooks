@@ -172,23 +172,23 @@ Det finns många former i naturen som ser ut som fraktaler. Vi har redan sett n�
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/snow-1.jpg" width=120 height=120)
+    x-img(src="images/snow-1.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-2.jpg" width=120 height=120)
+    x-img(src="images/snow-2.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-3.jpg" width=120 height=120)
+    x-img(src="images/snow-3.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-4.jpg" width=120 height=120)
+    x-img(src="images/snow-4.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-5.jpg" width=120 height=120)
+    x-img(src="images/snow-5.jpg" width=120 height=120)
 
 :::
 
@@ -347,23 +347,23 @@ Du börjar med landets grundform, och när du zooma in lägger du till flodinlop
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/coast-1.jpg" width=120 height=180)
+    x-img(src="images/coast-1.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-2.jpg" width=120 height=180)
+    x-img(src="images/coast-2.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-3.jpg" width=120 height=180)
+    x-img(src="images/coast-3.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-4.jpg" width=120 height=180)
+    x-img(src="images/coast-4.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-5.jpg" width=120 height=180)
+    x-img(src="images/coast-5.jpg" width=120 height=180)
 
 :::
 
@@ -429,40 +429,40 @@ Om vi upprepar detta med större rutnät hittar vi att dimensionen av Storbritan
 ::: column(width=200)
 
     // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
-    x-media(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
+    x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Bergskedja i centrala Asien
 
 ::: column(width=200)
 
     // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
-    x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
+    x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Ganges floddelta i Indien
 
 ::: column(width=200 parent="padded-thin")
 
-    x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
 
 {.caption} Blixtbultar
 
 ::: column(width=200)
 
     // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
-    x-media(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
+    x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Blodkärl i näthinnan
 
 ::: column(width=200)
 
     // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
-    x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
+    x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Grand Canyon i USA
 
 ::: column(width=200)
 
-    x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
 
 {.caption} Moln
 
@@ -480,7 +480,7 @@ Alla dessa objekt kan verka helt slumpmässiga, men precis som fraktaler finns d
 ::: column(width=300)
 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
-    x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
+    x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Datorgenererad fraktal terräng
 
@@ -523,22 +523,22 @@ Här är några exempel på golvbeläggningar från olika kyrkor i Rom:
 ::: column(width=140 parent="padded-thin")
 
     // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
-    x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+    x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
     // Permission from Elisa Conversano
-    x-media(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
+    x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
     // https://www.cattedraledianagni.it/
-    x-media(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
+    x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
     // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
-    x-media(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
+    x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
 
@@ -659,7 +659,7 @@ I vissa fall kan detta leda till att mönster som ser ut precis som mobilautomat
 
 ::: column(width=320)
 
-    x-media(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
+    x-img(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
 
 {.caption} Conus textil, en giftig havssnigel
 
@@ -847,19 +847,19 @@ Vi har inte det här problemet idag - bilderna nedan är alla av olika Julia-upp
 
 ::: column(width=220)
 
-    x-media(src="images/julia-1.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.70176 – 0.3842"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-2.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.4 + 0.6"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-3.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = 0.285 + 0.01"i"`
 
@@ -908,7 +908,7 @@ I föregående exempel valde vi ett fast värde för `pill(c,"red","c")` och än
 
 Denna fraktal kallas [__Mandelbrot Set__](gloss:mandelbrot-set), och när den roteras 90 ° ser den nästan ut som en person, med huvud, kropp och två armar. Det definierades och ritades för första gången 1978 i ett forskningsdokument av matematikerna Robert Brooks och Peter Matelski:
 
-    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
+    figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
 Några år senare använde [Benoit Mandelbrot](bio:mandelbrot) de kraftfulla datorerna hos IBM för att skapa en mycket mer detaljerad visualisering av fraktalen, som senare fick sitt namn efter honom. De första utskrifterna såg annorlunda ut än vad han förväntade sig - tills han insåg att teknikerna som arbetade på skrivarna städade upp "fuzziness" runt dess kant, med antagande att det orsakades av dammpartiklar eller skrivarfel och inte ett definierande kännetecken för fraktaler ! [Fortsätt](btn:next)
 
@@ -976,7 +976,7 @@ Bernoit Mandelbrot ägnade större delen av sitt liv åt studiet av fraktaler, l
 
 ::: column(width=220)
 
-    x-media(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
+    x-img(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
 
 :::
 

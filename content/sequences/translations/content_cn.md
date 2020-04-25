@@ -10,7 +10,7 @@
 
 ::: column(width=160 parent="padded-thin")
 
-    x-media(src="images/crime.jpg" width=160 height=160)
+    x-img(src="images/crime.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -20,7 +20,7 @@
 
 ::: column(width=160)
 
-    x-media(src="images/volcanoes.jpg" width=160 height=160)
+    x-img(src="images/volcanoes.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -30,7 +30,7 @@
 
 ::: column(width=160)
 
-    x-media(src="images/finance.jpg" width=160 height=160)
+    x-img(src="images/finance.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -246,7 +246,7 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 首先，让我们来看看完全不同的东西：__动作序列摄影__。摄影师快速连续拍摄许多张照
 片，然后将它们合并成一幅图像：
 
-    figure: x-media(src="images/action-1.jpg" width=640 height=320)
+    figure: x-img(src="images/action-1.jpg" width=640 height=320)
 
 你能看到滑雪者是如何形成一个序列的吗？模式不是相加或相乘，而是几何
 [变换](gloss:rigid-transformation)。在两个连续的步骤之间，滑雪者同时被平移和
@@ -259,27 +259,27 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ::: column(width=320 parent="padded-thin")
 
-    x-media(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
+    x-img(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-7.jpg" width=320 height=160 lightbox)
+    x-img(src="images/action-7.jpg" width=320 height=160 lightbox)
 
 :::
 
@@ -305,7 +305,7 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ::: column(width=320)
 
-    x-media(width=320 height=256 src="images/halley.jpg")
+    x-img(width=320 height=256 src="images/halley.jpg")
     p.caption 哈雷彗星图片，#[br]1986年拍摄于复活节岛
 
 :::
@@ -330,10 +330,10 @@ _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
     figure
       .row
-        x-media(src="images/halley-1.jpg" width=160 height=180)
-        x-media(src="images/halley-2.jpg" width=173 height=180 lightbox)
-        x-media(src="images/halley-3.jpg" width=200 height=180 lightbox)
-        x-media(src="images/halley-4.jpg" width=130 height=180 lightbox)
+        x-img(src="images/halley-1.jpg" width=160 height=180)
+        x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
+        x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
+        x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
       p.caption 哈雷彗星在时间上的分布：巴比伦的石碑（公元前164年）、中世纪的挂毯（1070年代）、科学杂志（1910年）和苏联的邮票（1986年）。
 
 ---
@@ -820,11 +820,11 @@ __三角形数__是通过创建逐渐增大的三角形而生成的：
 
 ::: column(width=320)
 
-    x-media(src="images/bowling.jpg" width=320 height=240)
+    x-img(src="images/bowling.jpg" width=320 height=240)
 
 ::: column(width=320)
 
-    x-media(src="images/billiard.jpg" width=320 height=240)
+    x-img(src="images/billiard.jpg" width=320 height=240)
 
 :::
 
@@ -1141,7 +1141,7 @@ _{.n}[[144]]_, …
 {.reveal(when="blank-5")} 如此12个月后，你将有144对兔子！
 
     figure.reveal(when="blank-5")
-      x-media(src="images/rabbits.jpg" width=600 height=230)
+      x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
 > id: fibonacci
@@ -1159,7 +1159,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=300)
 
-    x-media(src="images/fibonacci.jpg" width=300 height=300)
+    x-img(src="images/fibonacci.jpg" width=300 height=300)
     .caption 莱昂纳多·菲波那契的肖像
 
 :::
@@ -1168,7 +1168,7 @@ _{.n}[[144]]_, …
 字命名。
 
     figure
-      x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
+      x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
       p.caption 来自斐波那契的书 #[em Liber Abaci]
 
 ---
@@ -1314,7 +1314,7 @@ _{.n}[[144]]_, …
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/pantheon.jpg" width=320 height=198)
+      x-img(src="images/pantheon.jpg" width=320 height=198)
       img(src="images/pantheon.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
@@ -1324,7 +1324,7 @@ _{.n}[[144]]_, …
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/dali.jpg" width=320 height=198)
+      x-img(src="images/dali.jpg" width=320 height=198)
       img(src="images/dali.png" width=320 height=198)
 
 {.caption} 西班牙艺术家萨尔瓦多·达利的 _最后的晚餐圣礼_ 是许多应用了黄金比例
@@ -1415,7 +1415,7 @@ _{span.fib-action(data-value=2/5)}`2/5`_ 或 _{span.fib-action(data-value=1/3)}`
 
 ::: column(width=240)
 
-    x-media(src="images/flowers.jpg" width=240 height=400)
+    x-img(src="images/flowers.jpg" width=240 height=400)
 
 ::: column.grow
 
@@ -1478,7 +1478,7 @@ __3. 斐波那契楼梯__
 当上楼梯时，我既可以一步上一阶楼梯，也可以一步上两阶楼梯。这意味着上楼梯的方
 式有很多不同的可能性。例如，如果有5阶楼梯，我们有8种不同的选择：
 
-    figure: x-media(src="images/stairs.svg" width=530 height=200)
+    figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 对6、7或8阶楼梯有多少种选择？你能发现一个模式吗？这和斐波那契数有什么关系？
 
@@ -1486,7 +1486,7 @@ __3. 斐波那契楼梯__
 :::
 
     figure
-      x-media(src="images/fibonachos.jpg" width=600 height=282)
+      x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
 
 
@@ -1638,7 +1638,7 @@ _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 
 ::: column(width=220)
 
-    x-media(src="images/euclid.jpg" width=220 height=269)
+    x-img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclid of Alexandria
 :::
@@ -1708,7 +1708,7 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 
 ::: column(width=240)
 
-    x-media(src="images/storm.jpg" width=240 height=340)
+    x-img(src="images/storm.jpg" width=240 height=340)
 
 :::
 
@@ -1737,7 +1737,7 @@ _{button.next-step} 继续_
 这个序列被称为__看和说__序列，模式就是名字所说的：从一个1开始，如果你“大声读出”
 前一个数，那么接下来的每一项就是你得到的。下面是一个例子：
 
-    p: x-media(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
+    p: x-img(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
 你现在能找到后续项吗？
 
@@ -1850,21 +1850,21 @@ _{span.pattern.reveal(when="blank-12 blank-13")} 模式: 奇数平方数_
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-1.jpg" width=130 height=280)
+    x-img(src="images/pascal-1.jpg" width=130 height=280)
 
 {.caption}公元前450年，意大利数学家[宾格拉](bio:pingala)将这个三角称为
 __梅鲁山的楼梯__， 以一座神圣的印度教山命名。
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-2.jpg" width=200 height=280)
+    x-img(src="images/pascal-2.jpg" width=200 height=280)
 
 {.caption}在伊朗，它被称为__哈亚姆三角__(مثلث خیام), 是以波斯诗人和数学家
 [奥玛尔·哈亚姆](bio:khayyam)的名字命名的。
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-3.jpg" width=200 height=280)
+    x-img(src="images/pascal-3.jpg" width=200 height=280)
 
 {.caption} 在中国，数学家贾宪也发现了这个三角形，但它是以他的继任者杨辉
 命名的:__杨辉三角__。

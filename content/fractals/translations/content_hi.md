@@ -171,23 +171,23 @@
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/snow-1.jpg" width=120 height=120)
+    x-img(src="images/snow-1.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-2.jpg" width=120 height=120)
+    x-img(src="images/snow-2.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-3.jpg" width=120 height=120)
+    x-img(src="images/snow-3.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-4.jpg" width=120 height=120)
+    x-img(src="images/snow-4.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-5.jpg" width=120 height=120)
+    x-img(src="images/snow-5.jpg" width=120 height=120)
 
 :::
 
@@ -345,23 +345,23 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/coast-1.jpg" width=120 height=180)
+    x-img(src="images/coast-1.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-2.jpg" width=120 height=180)
+    x-img(src="images/coast-2.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-3.jpg" width=120 height=180)
+    x-img(src="images/coast-3.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-4.jpg" width=120 height=180)
+    x-img(src="images/coast-4.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-5.jpg" width=120 height=180)
+    x-img(src="images/coast-5.jpg" width=120 height=180)
 
 :::
 
@@ -427,40 +427,40 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 ::: column(width=200)
 
     // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
-    x-media(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
+    x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} मध्य एशिया में पर्वत श्रृंखला
 
 ::: column(width=200)
 
     // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
-    x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
+    x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} भारत में गंगा नदी का डेल्टा
 
 ::: column(width=200 parent="padded-thin")
 
-    x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
 
 {.caption} बिजली के बोल्ट
 
 ::: column(width=200)
 
     // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
-    x-media(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
+    x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} रेटिना में रक्त वाहिकाएं
 
 ::: column(width=200)
 
     // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
-    x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
+    x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} यूएसए में ग्रांड कैन्यन
 
 ::: column(width=200)
 
-    x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
 
 {.caption} बादल
 
@@ -478,7 +478,7 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 ::: column(width=300)
 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
-    x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
+    x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} कंप्यूटर जनित भग्न इलाका
 
@@ -521,22 +521,22 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 ::: column(width=140 parent="padded-thin")
 
     // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
-    x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+    x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
     // Permission from Elisa Conversano
-    x-media(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
+    x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
     // https://www.cattedraledianagni.it/
-    x-media(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
+    x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
     // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
-    x-media(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
+    x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
 
@@ -657,7 +657,7 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 
 ::: column(width=320)
 
-    x-media(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
+    x-img(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
 
 {.caption} कोनस टेक्सटाइल, एक विषैला समुद्री घोंघा
 
@@ -845,19 +845,19 @@ Sierpinski त्रिकोण के कई प्रकार हैं, औ
 
 ::: column(width=220)
 
-    x-media(src="images/julia-1.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.70176 – 0.3842"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-2.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.4 + 0.6"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-3.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = 0.285 + 0.01"i"`
 
@@ -906,7 +906,7 @@ Sierpinski त्रिकोण के कई प्रकार हैं, औ
 
 इस भग्न को [__मैंडलब्रॉट सेट__](gloss:mandelbrot-set) कहा जाता है, और जब 90 ° घुमाया जाता है, तो यह लगभग एक व्यक्ति की तरह दिखता है, जिसमें सिर, शरीर और दो भुजाएँ होती हैं। इसे 1978 में गणितज्ञ रॉबर्ट ब्रूक्स और पीटर मैटेस्की द्वारा एक शोध पत्र में पहली बार परिभाषित और तैयार किया गया था:
 
-    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
+    figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
 कुछ साल बाद, [बेनोइट मैंडलब्रॉट](bio:mandelbrot) ने आईबीएम के शक्तिशाली कंप्यूटरों का उपयोग फ्रैक्टल के बहुत अधिक विस्तृत दृश्य बनाने के लिए किया, जिसे बाद में उनके नाम पर रखा गया। पहला प्रिंटआउट उसकी अपेक्षा से भिन्न था - जब तक कि उसने महसूस किया कि प्रिंटर पर काम करने वाले तकनीशियन उसके किनारे के चारों ओर "फ़िज़नेस" की सफाई कर रहे थे, यह मानते हुए कि यह धूल के कणों या प्रिंटर त्रुटियों के कारण हुआ था, न कि भग्न की एक विशिष्ट विशेषता। ! [जारी रखें](btn:next)
 
@@ -974,7 +974,7 @@ Sierpinski त्रिकोण के कई प्रकार हैं, औ
 
 ::: column(width=220)
 
-    x-media(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
+    x-img(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
 
 :::
 

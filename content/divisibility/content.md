@@ -417,7 +417,7 @@ The ancient Greek mathematician [Euclid of Alexandria](bio:euclid) first proved
 that there are infinitely many prime numbers, using the following argument:
 ::: column(width=220)
 
-    x-media(lightbox width=220 height=300 src="images/euclid.jpg")
+    x-img(lightbox width=220 height=300 src="images/euclid.jpg" alt="Euclid of Alexandria Portrait")
 
 :::
 
@@ -555,7 +555,7 @@ equations which seem to generate prime numbers more often than average. However
 it is unknown why that would be the case…_
 ::: column(width=200)
 
-    x-media(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
+    x-img(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg" alt="Scientific American Magazine Cover")
 
 {.caption} Cover of the March 1964 issue of Scientific American
 :::
@@ -866,7 +866,7 @@ cicadas in Illinois and Iowa only appear every 17 years. But there are no
 cicadas with 12, 14, 15 or 16 year cycles.
 ::: column(width=360)
 
-    x-media(width=360 height=240 src="images/cicadas.jpg")
+    x-img(width=360 height=240 src="images/cicadas.jpg" alt="Cicadas")
 
 :::
 
@@ -993,7 +993,7 @@ by mathematician Alan Turing, built some of the first computers that managed to
 decode it.
 ::: column(width=240)
 
-    x-media(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
+    x-img(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg" alt="Enigma Machine")
     p.caption German four-rotor Enigma machine
 
 :::

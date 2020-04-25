@@ -9,7 +9,7 @@ Många yrken som använder matematik är intresserade av en specifik aspekt - _h
 
 ::: column(width=160 parent="padded-thin")
 
-    x-media(src="images/crime.jpg" width=160 height=160)
+    x-img(src="images/crime.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -17,7 +17,7 @@ Under det senaste decenniet har __polisavdelningar__ runt om i världen börjat 
 
 ::: column(width=160)
 
-    x-media(src="images/volcanoes.jpg" width=160 height=160)
+    x-img(src="images/volcanoes.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -25,7 +25,7 @@ Det visar sig att __jordbävningar__ följer liknande mönster som brott. Precis
 
 ::: column(width=160)
 
-    x-media(src="images/finance.jpg" width=160 height=160)
+    x-img(src="images/finance.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -259,7 +259,7 @@ I följande avsnitt kommer du att lära dig om många olika matematiska sekvense
 
 Låt oss dock först se på något helt annat: __fotografering av åtgärdssekvens__. En fotograf tar många bilder snabbt i följd och sammanfogar dem sedan till en enda bild:
 
-    figure: x-media(src="images/action-1.jpg" width=640 height=320)
+    figure: x-img(src="images/action-1.jpg" width=640 height=320)
 
 Kan du se hur skidåkaren bildar en sekvens? Mönstret är inte tillägg eller multiplikation, utan en geometrisk [transformation](gloss:rigid-transformation). Mellan på varandra följande steg översätts och [[roteras|reflected|dilated]].
 
@@ -271,27 +271,27 @@ Här är några fler exempel på action-sekvensfotografering för din njutning:
 
 ::: column(width=320 parent="padded-thin")
 
-    x-media(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
+    x-img(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-7.jpg" width=320 height=160 lightbox)
+    x-img(src="images/action-7.jpg" width=320 height=160 lightbox)
 
 :::
 
@@ -310,7 +310,7 @@ Halley kom ihåg att andra astronomer hade observerat liknande kometer mycket ti
 
 ::: column(width=320)
 
-    x-media(width=320 height=256 src="images/halley.jpg")
+    x-img(width=320 height=256 src="images/halley.jpg")
     p.caption Image of Halley’s Comet,#[br]taken in 1986 on Easter Island
 
 :::
@@ -334,10 +334,10 @@ Faktiskt är tidsintervallet inte alltid _exakt_ 76 år: det kan variera med ett
 
     figure
       .row
-        x-media(src="images/halley-1.jpg" width=160 height=180)
-        x-media(src="images/halley-2.jpg" width=173 height=180 lightbox)
-        x-media(src="images/halley-3.jpg" width=200 height=180 lightbox)
-        x-media(src="images/halley-4.jpg" width=130 height=180 lightbox)
+        x-img(src="images/halley-1.jpg" width=160 height=180)
+        x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
+        x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
+        x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
       p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
@@ -740,11 +740,11 @@ Det är ingen slump att det alltid finns 10 stift vid bowling eller 15 bollar n�
 
 ::: column(width=320)
 
-    x-media(src="images/bowling.jpg" width=320 height=240)
+    x-img(src="images/bowling.jpg" width=320 height=240)
 
 ::: column(width=320)
 
-    x-media(src="images/billiard.jpg" width=320 height=240)
+    x-img(src="images/billiard.jpg" width=320 height=240)
 
 :::
 
@@ -1067,7 +1067,7 @@ _{.n}[[144]]_, …
 {.reveal(when="blank-5")} Så efter 12 månader har du 144 par kaniner!
 
     figure.reveal(when="blank-5")
-      x-media(src="images/rabbits.jpg" width=600 height=230)
+      x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
 
@@ -1084,7 +1084,7 @@ När han återvände till Italien skrev Fibonacci en bok som heter _Liber Abaci_
 
 ::: column(width=300)
 
-    x-media(src="images/fibonacci.jpg" width=300 height=300)
+    x-img(src="images/fibonacci.jpg" width=300 height=300)
     .caption Portrait of Leonardo Fibonacci
 
 :::
@@ -1092,7 +1092,7 @@ När han återvände till Italien skrev Fibonacci en bok som heter _Liber Abaci_
 På en av sidorna i sin bok undersökte han också kaninernas avelsmönster - det är därför Fibonacci-numren fick sitt namn efter honom.
 
     figure
-      x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
+      x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
       p.caption Pages from Fibonacci’s #[em Liber Abaci]
 
 ---
@@ -1239,7 +1239,7 @@ Många tror att det gyllene förhållandet är särskilt estetiskt tilltalande. 
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/pantheon.jpg" width=320 height=198)
+      x-img(src="images/pantheon.jpg" width=320 height=198)
       img(src="images/pantheon.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
@@ -1248,7 +1248,7 @@ Många tror att det gyllene förhållandet är särskilt estetiskt tilltalande. 
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/dali.jpg" width=320 height=198)
+      x-img(src="images/dali.jpg" width=320 height=198)
       img(src="images/dali.png" width=320 height=198)
 
 {.caption} _Sacrament of the Last Supper_, av den spanska konstnären Salvador Dalí, är en av många målningar i det gyllene förhållandet. I bakgrunden kan du också se en stor [dodecahedron](gloss:dodecahedron).
@@ -1328,7 +1328,7 @@ Det är viktigt för blommor att välja en lämplig vinkel: bladen eller frönna
 
 ::: column(width=240)
 
-    x-media(src="images/flowers.jpg" width=240 height=400)
+    x-img(src="images/flowers.jpg" width=240 height=400)
 
 ::: column.grow
 
@@ -1386,7 +1386,7 @@ __3. Fibonacci trappor__
 
 När jag går uppför trappan kan jag antingen ta enstaka steg eller hoppa över två steg åt gången. Det innebär att det finns många olika möjligheter för hur jag kan gå upp en trappa. Om det till exempel finns 5 steg har jag 8 olika val:
 
-    figure: x-media(src="images/stairs.svg" width=530 height=200)
+    figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 Hur många alternativ finns det för trappa med 6, 7 eller 8 steg? Kan du upptäcka ett mönster? Och hur är detta relaterat till Fibonacci-siffrorna?
 
@@ -1395,7 +1395,7 @@ Hur många alternativ finns det för trappa med 6, 7 eller 8 steg? Kan du upptä
 :::
 
     figure
-      x-media(src="images/fibonachos.jpg" width=600 height=282)
+      x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
 
 ---
@@ -1535,7 +1535,7 @@ Idag har matematiker använt datorer för att kontrollera de första 10 <sup> 15
 
 ::: column(width=220)
 
-    x-media(src="images/euclid.jpg" width=220 height=269)
+    x-img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euklid av Alexandria
 
@@ -1604,7 +1604,7 @@ Alla sekvenser som följer denna rekursiva formel kallas [__Hailstone Sequences_
 
 ::: column(width=240)
 
-    x-media(src="images/storm.jpg" width=240 height=340)
+    x-img(src="images/storm.jpg" width=240 height=340)
 
 :::
 
@@ -1631,7 +1631,7 @@ _{button.next-step} Fortsätt_
 
 Denna sekvens kallas __Look-and-Say__ -sekvensen, och mönstret är precis vad namnet säger: du börjar med en 1, och varje följande term är vad du får om du "läser högt" föregående. Här är ett exempel:
 
-    p: x-media(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
+    p: x-img(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
 Kan du nu hitta nästa termer?
 
@@ -1737,19 +1737,19 @@ Triangeln heter [__Pascal triangel__](gloss:pascals-triangle), uppkallad efter d
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
+    x-img(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
 
 {.caption} Under 450 f.Kr. kallade den indiska matematikern [Pingala](bio:pingala) triangeln __'trappuppgången på berget Meru'__, uppkallad efter ett heligt hinduberg.
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-2.jpg" width=200 height=280)
+    x-img(src="images/pascal-2.jpg" width=200 height=280)
 
 {.caption} I Iran var den känd som __'Khayyam-triangeln'__ (مثلث خیام), uppkallad efter den persiska poeten och matematikern [Omar Khayyám](bio:khayyam).
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-3.jpg" width=200 height=280)
+    x-img(src="images/pascal-3.jpg" width=200 height=280)
 
 {.caption} I Kina upptäckte matematikern Jia Xian också triangeln. Den fick sitt namn efter hans efterträdare, __"Yang Huis triangel"__ (杨辉 三角).
 

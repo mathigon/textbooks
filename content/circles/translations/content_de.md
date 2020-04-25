@@ -18,7 +18,7 @@ unserem Universum zugrunde liegende Ordnung.
 
 ::: column(width=320)
 
-    x-media(src="images/geocentric.jpg" width=320 height=272)
+    x-img(src="images/geocentric.jpg" width=320 height=272)
 
 {.caption} Die Erde steht im Mittelpunkt des _ptolemäischen Universums_.
 
@@ -110,31 +110,31 @@ Ecken eines Vielecks. Dies ist einer der Gründe, warum sie
 
 ::: column(width=130 parent="padded-thin")
 
-    x-media(src="images/flower.jpg" width=130 height=130)
+    x-img(src="images/flower.jpg" width=130 height=130)
 
 {.caption} Blumen
 
 ::: column(width=130)
 
-    x-media(src="images/earth.jpg" width=130 height=130)
+    x-img(src="images/earth.jpg" width=130 height=130)
 
 {.caption} Planeten
 
 ::: column(width=130)
 
-    x-media(src="images/tree.jpg" width=130 height=130)
+    x-img(src="images/tree.jpg" width=130 height=130)
 
 {.caption} Bäume
 
 ::: column(width=130)
 
-    x-media(src="images/orange.jpg" width=130 height=130)
+    x-img(src="images/orange.jpg" width=130 height=130)
 
 {.caption} Früchte
 
 ::: column(width=130)
 
-    x-media(src="images/soap.jpg" width=130 height=130)
+    x-img(src="images/soap.jpg" width=130 height=130)
 
 {.caption} Seifenblasen
 
@@ -276,14 +276,14 @@ ersten vier Dezimalstellen von Pi, indem sie Kreise mit
 regelmäßigen Vielecken annäherten. Beachte, wie das Vieleck, wenn du mehr Seiten hinzufügst, anfängt, [[
 immer mehr|immer weniger|genau]] wie ein Kreis auszusehen:
 
-    figure: x-media(src="images/polygons.svg" width=460 height=110)
+    figure: x-img(src="images/polygons.svg" width=460 height=110)
 
 ---
 > id: pi-record
 
 ::: column(width=280)
 
-    x-media(src="images/iss.jpg" width=280 height=330 credit="NASA")
+    x-img(src="images/iss.jpg" width=280 height=330 credit="NASA")
 
 ::: column.grow
 
@@ -391,7 +391,7 @@ begangen wird, weil `pi ≈ 3.14`, was der Datumsschreibweise im englischsprachi
 Raum entspricht, oder der am 22. Juli gefeiert wird, weil `pi ≈ 22/7`, also 22/7
 (eine andere Datumsschreibweise).
 
-    figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
+    figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
 
 
@@ -465,7 +465,7 @@ vorherzusagen oder mit den Göttern zu kommunizieren.
 
 ::: column(width=260)
 
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+    x-img(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
 {.caption} Eine babylonische Tafel zur Berechnung von `sqrt(2)`
 
@@ -1033,14 +1033,14 @@ dem Brunnen.
 
 ::: column(width=300)
 
-    x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
+    x-img(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
 
 {.caption} Die alten Ägypter haben lange Strecken gemessen, indem sie die Anzahl der
 Schritte gezählt haben, die sie gemacht haben, um diese abzugehen.
 
 ::: column(width=300)
 
-    x-media(src="images/well.jpg" width=300 height=300 lightbox)
+    x-img(src="images/well.jpg" width=300 height=300 lightbox)
 
 {.caption} Einige Quellen sagen, dass der “Brunnen von Eratosthenes” auf der Flussinsel _Elephantine_
 im Nil lag.
@@ -1128,7 +1128,7 @@ wenn man bedenkt, dass er nur Zugang zu sehr einfachen Messwerkzeugen hatte.
 
 ::: column(width=280)
 
-    x-media(src="images/obelisk.jpg" width=280 height=450 lightbox)
+    x-img(src="images/obelisk.jpg" width=280 height=450 lightbox)
 
 ::: column.grow
 
@@ -1373,7 +1373,7 @@ Werte zu finden!
 
 ::: column(width=300)
 
-    x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
+    x-img(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
 {.caption} Gasometer Oberhausen
 
@@ -1433,7 +1433,7 @@ aber die Seiten scheinen sich seitwärts zu ”lehnen“, in einem Winkel der ni
 
 ::: column(width=300)
 
-    x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
+    x-img(src="images/pisa.jpg" width=300 height=360 lightbox)
 
 {.caption} Beim _Schiefen Turm von Pisa_ in Italien handelt es sich um keinen
 wirklich schiefen Zylinder.
@@ -1513,7 +1513,7 @@ _h_ wie folgt berechnen lässt:
 ---
 > id: cylinder-real-life
 
-    figure: x-media(src="images/cylinders.jpg" width=460 height=125)
+    figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
 Zylinder sind überall in unserem Alltag zu finden - von der Limonade bis zum Toilettenpapier
 oder Wasserleitungen. Fallen dir noch ein andere Beispiele ein?
@@ -1549,23 +1549,23 @@ sonst noch ein?
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/ice-cream.jpg" width=120 height=120 lightbox)
+    x-img(src="images/ice-cream.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/traffic.jpg" width=120 height=120 lightbox)
+    x-img(src="images/traffic.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/roof.jpg" width=120 height=120 lightbox)
+    x-img(src="images/roof.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/christmas.jpg" width=120 height=120 lightbox)
+    x-img(src="images/christmas.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/tipi.jpg" width=120 height=120 lightbox)
+    x-img(src="images/tipi.jpg" width=120 height=120 lightbox)
 
 :::
 
@@ -2073,7 +2073,7 @@ zunächst einen genaueren Blick auf die Ellipse werfen.
 
 ::: column(width=300)
 
-    x-media(src="images/conics.svg" width=300 height=340)
+    x-img(src="images/conics.svg" width=300 height=340)
 
 :::
 
@@ -2145,7 +2145,7 @@ einen abnehmendem]] Abstand von seinem Mittelpunkt haben.
 
 ::: column(width=330)
 
-    x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
+    x-img(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
 {.caption} Der griechische Astronom Hipparchus von Nicäa
 
@@ -2177,7 +2177,7 @@ __Deferent__) bewegt.
 
 ::: column(width=320)
 
-    x-media(src="images/epicycles.jpg" width=320 height=320)
+    x-img(src="images/epicycles.jpg" width=320 height=320)
 
 {.caption} Eine Zeichnung aus dem 16. Jahrhundert mit Epizykeln im __geozentrischen Modell__. Das
 griechische Wort "planetes" bedeutet "Wanderer".

@@ -15,7 +15,7 @@ Mustern begeistert und wollten sie erforschen und erklären. Zum ersten Mal bega
 sie, Mathematik nur „zum Spaß“ zu studieren, ohne eine bestimmte Anwendung im Sinn zu haben. 
 ::: column(width=300)
 
-    x-media(src="images/tablet.jpg" width=300 height=210)
+    x-img(src="images/tablet.jpg" width=300 height=210)
 
 {.caption} Eine babylonische Tontafel, datiert 1800 v. Chr., die geometrische
 Berechnungen enthält.
@@ -55,7 +55,7 @@ grundlegende Weise miteinander verbunden sein? Er war von seiner Entdeckung so b
 opferte, um den Göttern zu danken.
 
     figure
-      x-media(src="images/temple.svg" width=400 height=170)
+      x-img(src="images/temple.svg" width=400 height=170)
 
 Doch die bloße _Beobachtung_ einer solchen Verbindung reichte Thales nicht aus,
 er wollte verstehen, _warum_ das so ist, und überprüfen, ob das _immer_ gilt
@@ -76,36 +76,36 @@ Satelliten ins All. Hier sind noch ein paar weitere Beispiele:
 
 ::: column(width=200)
 
-    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+    x-img(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
 {.caption} Die Geometrie erlaubte es den alten Ägyptern, gigantische,
 perfekt regelmäßige Pyramiden zu bauen.
 ::: column(width=200)
 
-    x-media(src="images/sextant.jpg" width=200 height=200)
+    x-img(src="images/sextant.jpg" width=200 height=200)
 
 {.caption} Seefahrer verwenden Sextanten, um ihren Standort auf See zu bestimmen, wobei
 sie die von der Sonne oder den Sternen gebildeten Winkel verwenden.
 ::: column(width=200)
 
-    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
+    x-img(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
 
 {.caption} Geometrie wird benötigt, um realistische Videospiel- oder Filmgrafiken zu erstellen.
 ::: column(width=200)
 
-    x-media(src="images/plane.jpg" width=200 height=200)
+    x-img(src="images/plane.jpg" width=200 height=200)
 
 {.caption} Geometrie kann dabei helfen, neue Flugzeugmodelle zu entwerfen und zu testen, um sie
 sicherer und effizienter zu machen.
 ::: column(width=200)
 
-    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
+    x-img(src="images/cctv.jpg" lightbox width=200 height=200)
 
 {.caption} Geometrie war bei der Planung dieses Wolkenkratzers in Peking entscheidend - und
 um sicherzustellen, dass er nicht umkippt.
 ::: column(width=200)
 
-    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
+    x-img(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
 {.caption} Geometrie ermöglicht es uns, die Position von Sternen, Planeten und
 Satelliten in der Erdumlaufbahn vorherzusagen.
@@ -469,7 +469,7 @@ Mathematik-Lehrbuch über Tausende von Jahren verwendet.
 
 ::: column(width=220)
 
-    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+    x-img(src="images/elements.jpg" width=220 height=330 lightbox)
 
 :::
 
@@ -509,11 +509,11 @@ Schnüre, die in gleichen Abständen viele Knoten enthielten. Aber diese waren
 auch nicht ganz genau, und verschiedene Schnüre hatten die Knoten in
 leicht unterschiedlichen Abständen platziert.
 
-    figure: x-media(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
+    figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
 ::: column(width=200)
 
-    x-media(src="images/units.png" width=200 height=336)
+    x-img(src="images/units.png" width=200 height=336)
 
 :::
 
@@ -582,7 +582,7 @@ geraden Leiste und einem Zirkel "konstruieren"?
 
 ::: column(width=340)
 
-    x-media(src="images/archimedes.jpg" width=340 height=265)
+    x-img(src="images/archimedes.jpg" width=340 height=265)
 
 {.caption} Der griechische Mathematiker [Archimedes](bio:archimedes) beschäftigte sich mit
 Geometrie, als er von römischen Eroberern getötet wurde. Seine letzten Worte waren: "Stört meine
@@ -663,7 +663,7 @@ Tempel bauen würden, mit _genau dem doppelten_ Volumen des vorhandenen.
 
 ::: column(width=300)
 
-    x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
+    x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
     
 {.caption} Eine Rekonstruktion eines Tempels in Delphi
 :::
@@ -748,17 +748,17 @@ schöne und beeindruckende Designs entwerfen - alle diese Figuren wurden aus nic
 als rechteckigen Papierblättern gebaut:
 
 ::: column(width=186)
-    x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+    x-img(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+    x-img(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+    x-img(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+    x-img(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
 :::
 
 ---
@@ -812,7 +812,7 @@ wie lange er sein soll, indem du den Abstand der Faltung wählst.
 Dieser _Kranich_ ist eines der ältesten und bekanntesten Origami-Modelle. Wir haben noch viele
 weitere [Anleitungen für Origami-Modelle](/origami), die du ausprobieren kannst!
 
-    figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
+    figure: x-img(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
@@ -876,7 +876,7 @@ Die Dreiteilung eines Winkels und die Würfelverdoppelung sind mit nur einer Pap
 Natürlich ist es unmöglich, _geschwungene_ Linien zu falten, und man bekommt die Quadratur des Kreises auch mit Origami
 nicht hin.
 
-    figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
+    figure: x-img(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
 ---
 > id: origami-applications
@@ -935,7 +935,7 @@ Blut des Patienten ausdehnen, und so verstopfte Arterien oder Venen vergrößern
 
 ::: column(width=300)
 
-    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
+    x-img(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
 
 ::: column.grow
 
@@ -1016,7 +1016,7 @@ die höchste "Faltungsrate" im Tierreich:
 
 ::: column(width=300)
 
-    x-media(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-img(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
 
 ::: column(width=300)
 

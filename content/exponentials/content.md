@@ -18,7 +18,7 @@ Pharaoh, and when did he die?
 
 ::: column(width=300)
 
-    x-media(src="images/egypt.jpg" lightbox width=300 height=312)
+    x-img(src="images/egypt.jpg" alt="Egyptian Tomb" lightbox width=300 height=312)
 
 :::
 
@@ -31,7 +31,7 @@ which solely relies on physics and mathematics: __Carbon Dating__.
 ---
 > id: carbon-1
 
-    figure: x-media(src="images/sarcophagus.jpg" width=600 height=180)
+    figure: x-img(src="images/sarcophagus.jpg" alt="Egyptian Sarcophagus" width=600 height=180)
 
 All living organisms on Earth – plants, animals and humans – contain Carbon
 [atoms](gloss:atom). Usually, the core of a Carbon atom consists of six
@@ -134,7 +134,7 @@ you’re left with just [[a quarter|a third|1/8|none]] of the original amount.
 
 ::: column(width=220)
 
-    x-media(src="images/atom.jpg" width=220 height=310)
+    x-img(src="images/atom.jpg" alt="Atom" width=220 height=310)
 
 :::
 
@@ -231,7 +231,7 @@ still alive.
 
 ::: column(width=320)
 
-    x-media(src="images/spectrometer.jpg" lightbox width=320 height=280)
+    x-img(src="images/spectrometer.jpg" alt="Accelerator Mass Spectrometer" lightbox width=320 height=280)
 
 {.caption} Accelerator Mass Spectrometer in the Oxford Radiocarbon Accelerator Unit
 
@@ -272,7 +272,7 @@ We can use the equation we found above and fill in the required parameters:
 
 ::: column(width=280)
 
-    x-media(src="images/mummy.jpg" lightbox width=280 height=170)
+    x-img(src="images/mummy.jpg" alt="Egyptian Mummy" lightbox width=280 height=170)
 
 ::: column.grow
 
@@ -294,7 +294,7 @@ Carbon Dating was developed in the late 1940s at the University of Chicago, by
 Willard Libby, who received the Nobel Prize in Chemistry for his work in 1960.
 It has become an indispensable method in many areas of science.
 
-    figure: x-media(src="images/dinosaur.jpg" width=760, height=360)
+    figure: x-img(src="images/dinosaur.jpg" alt="Fossil" width=760, height=360)
 
 Note that we have greatly simplified the process of Carbon Dating in this
 chapter. There are many other things to consider, such as sample contamination,

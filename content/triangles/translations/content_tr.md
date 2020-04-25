@@ -12,7 +12,7 @@ Bugün yukarıdan fotoğraf çekebilecek uydularımız var  – fakat 200 yıl �
 
 ::: column(width=240)
 
-    x-media.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
+    x-img.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
 
 {.caption} _Teodolit_, bir ölçüm aracı
 :::
@@ -37,7 +37,7 @@ _{button.next-step} Devam_
 
 ::: column(width=320)
 
-    x-media(src="images/hillary.jpg" width=320 height=190)
+    x-img(src="images/hillary.jpg" width=320 height=190)
 
 {.caption} Edmund Hillary ve Tenzing Norgay, 1953’te Everest Dağı’nın tepesine çıkan ilk insanlar olmayı başarmışlardı.
 
@@ -61,15 +61,15 @@ Bu derste üçgenlerin pek çok farklı özelliklerini öğreneceksiniz. Bu, da�
 Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle kullanışlı yapar.
 
 ::: column(width=200)
-    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
+    x-img(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
 
 {.caption} ‘Kirişli köprü’, üçgen barlarla desteklenir.
 ::: column(width=200)
-    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
+    x-img(src="images/pylon.jpg" width=200 height=200 lightbox)
 
 {.caption} Yüksek-voltajlı elektrik direğinde üçgenler
 ::: column(width=200)
-    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
+    x-img(src="images/bike.jpg" width=200 height=200 lightbox)
 
 {.caption} Bisikletler bile denge için üçgenleri kullanır.
 :::
@@ -81,15 +81,15 @@ Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle 
 Üçgenler ayrıca en az kenara sahip en basit çokgenlerdir. Bu onları karmaşık eğrisel yüzeylere yaklaşmak için özellikle uygun hale getirir. Bu fiziksel yapılarda kullanılır…
 
 ::: column(width=200)
-    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} “The Gherkin”, Londra’da bir gökdelen
 ::: column(width=200)
-    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Hong Kong’ta Çin Bankası Kulesi
 ::: column(width=200)
-    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Londra’da British Müzesi’nin avlusu
 :::
@@ -98,7 +98,7 @@ Bu özellik üçgenleri ağır yük taşıyabilecekleri inşaatlarda özellikle 
 ...ayrıca görsel dünyada da. Bilgisayar tarafından oluşturulan grafiklerde (örneğin video oyunları veya filmler için), tüm yüzeylere çok küçük üçgen “kafesler” kullanılarak yaklaşılmaktadır.
 Sanatçılar ve yazılım mühendisleri, bu üçgenleri gerçekçi bir şekilde hareket ettirebilmek ve renklerini ve yapılarını hesaplayabilmek için, geometri ve trigonometri hakkında bilgi sahibi olmalıdır.
 ::: column(width=220)
-    x-media(src="images/dolphin.jpg" width=220 height=135)
+    x-img(src="images/dolphin.jpg" width=220 height=135)
 :::
 
     figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
@@ -907,7 +907,7 @@ Pisagor’un hayatıyla ilgili çok az şey bilinir ve çalışmalarının oriji
 ::: column.grow
 Pisagorcular, ilk kez bir [irrasyonel sayı](gloss:irrational-numbers) , `sqrt(2)` , bulmak da dahil bir çok matematiksel keşifle tanınırlar. İrrasyonel sayılar basit bir kesir olarak ifade edilemezler – Pisagorcuları derinden sarsan ve (başarısız bir şekilde) örtbas etmeye çalıştıkları bir kavram!
 ::: column(width=400)
-    x-media(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
+    x-img(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
 {.caption} “Pisagorcular güneşin doğuşunu kutluyor” Fyodor Bronnikov
 :::
@@ -1371,4 +1371,4 @@ _{span.pill.step-target.green(data-to="a")} α açısının_ bir [bütünler aç
 
 Bu açıklama Büyük Trigonometrik Araştırma üzerinde çalışan matematikçiler ve coğrafyacılar tarafından yapılan olağanüstü çalışmaları büyük ölçüde kolaylaştırmaktadır. Deniz seviyesinden başladılar, binlerce kilometre mesafedeki uzaklıkları ölçtüler, tüm ülke genelinde araştırma kuleleri inşa ettiler ve hatta Dünya’nın eğriliğini bile hesapladılar.
 
-    figure: x-media(src="images/himalaya.jpg" width=760 height=320)
+    figure: x-img(src="images/himalaya.jpg" width=760 height=320)

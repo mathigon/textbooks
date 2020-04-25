@@ -10,11 +10,17 @@ were “invented” by mathematicians. Symmetry, on the other hand, is everywher
 around us. Almost all plants, animals, and even we humans are symmetric.
 
 ::: column(width=200)
-    x-media(src="images/butterfly.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/butterfly.jpg" width=200 height=200 lightbox alt="Butterfly")
+
 ::: column(width=200)
-    x-media(src="images/lion.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/lion.jpg" width=200 height=200 lightbox alt="Lion")
+
 ::: column(width=200)
-    x-media(src="images/starfish.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/starfish.jpg" width=200 height=200 lightbox alt="Starfish")
+
 :::
 
 Over time, we’ve imitated nature’s symmetry in art, architecture, technology
@@ -22,11 +28,17 @@ and design. Symmetric shapes and patterns just seems to look _more beautiful_
 than non-symmetric ones.
 
 ::: column(width=200)
-    x-media(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox)
+
+    x-img(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox alt="Taj Mahal")
+
 ::: column(width=200)
-    x-media(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox)
+
+    x-img(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox alt="US Capitol")
+
 ::: column(width=200)
-    x-media(src="images/window.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/window.jpg" width=200 height=200 lightbox alt="Mosaic Church Window")
+
 :::
 
 But symmetry is much more important than simply _looking beautiful_. It lies at
@@ -241,7 +253,7 @@ Draw the line of reflection in each of these examples:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/rorschach.jpg" width=220 height=180)
+      x-img.background(src="images/rorschach.jpg" width=220 height=180 alt="Rorschach Test")
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
 
@@ -565,21 +577,21 @@ Draw all axes of symmetry in these six images and shapes:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/lake.jpg" width=220 height=180)
+      x-img.background(src="images/lake.jpg" width=220 height=180 alt="Lake")
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/beijing.jpg" width=220 height=180)
+      x-img.background(src="images/beijing.jpg" width=220 height=180 alt="Forbidden City in Beijing")
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
+      x-img.background(src="images/blue-butterfly.jpg" width=220 height=180 alt="Butterfly")
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
@@ -1211,12 +1223,12 @@ or electricity), but you can never create or destroy energy. The total amount
 of energy in the universe will always stay constant.
 
     figure
-      x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
+      x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
       p.caption CERN is the world’s largest particle accellerator. Scientists smash together fundamental particles at enourmous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
 
 ::: column(width=220)
 
-    x-media(src="images/higgs.png" width=220 height=150)
+    x-img(src="images/higgs.png" width=220 height=150 alt="Particle Fragments")
     p.caption The paths taken by particle fragments after a collision
 
 ::: column.grow

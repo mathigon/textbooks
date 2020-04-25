@@ -15,7 +15,7 @@ Los antiguos astrónomos griegos fueron los primeros en descubrir que todos los 
 
 ::: column(width=320)
 
-    x-media(src="images/geocentric.jpg" width=320 height=272)
+    x-img(src="images/geocentric.jpg" width=320 height=272)
 
 {.caption} La Tierra está en el centro del _universo ptolemaico_.
 
@@ -95,31 +95,31 @@ Los círculos son perfectamente simétricos y no tienen "puntos débiles" como l
 
 ::: column(width=130 parent="padded-thin")
 
-    x-media(src="images/flower.jpg" width=130 height=130)
+    x-img(src="images/flower.jpg" width=130 height=130)
 
 {.caption} Flores
 
 ::: column(width=130)
 
-    x-media(src="images/earth.jpg" width=130 height=130)
+    x-img(src="images/earth.jpg" width=130 height=130)
 
 {.caption} Planetas
 
 ::: column(width=130)
 
-    x-media(src="images/tree.jpg" width=130 height=130)
+    x-img(src="images/tree.jpg" width=130 height=130)
 
 {.caption} Árboles
 
 ::: column(width=130)
 
-    x-media(src="images/orange.jpg" width=130 height=130)
+    x-img(src="images/orange.jpg" width=130 height=130)
 
 {.caption} Fruta
 
 ::: column(width=130)
 
-    x-media(src="images/soap.jpg" width=130 height=130)
+    x-img(src="images/soap.jpg" width=130 height=130)
 
 {.caption} pompas de jabón
 
@@ -232,7 +232,7 @@ Como viste anteriormente, `π = 3.1415926…` no es un entero simple, y sus díg
 
 También significa que nunca podemos escribir _todos_ los dígitos de Pi; después de todo, hay infinitos. Los antiguos matemáticos griegos y chinos calcularon los primeros cuatro dígitos decimales de Pi aproximando círculos usando polígonos regulares. Observe cómo, a medida que agrega más lados, el polígono comienza a verse [[más y más|less|exactly]] como un círculo:
 
-    figure: x-media(src="images/polygons.svg" width=460 height=110)
+    figure: x-img(src="images/polygons.svg" width=460 height=110)
 
 ---
 
@@ -240,7 +240,7 @@ También significa que nunca podemos escribir _todos_ los dígitos de Pi; despu�
 
 ::: column(width=280)
 
-    x-media(src="images/iss.jpg" width=280 height=330 credit="NASA")
+    x-img(src="images/iss.jpg" width=280 height=330 credit="NASA")
 
 ::: column.grow
 
@@ -333,7 +333,7 @@ Pi es fácil de entender, pero de fundamental importancia en ciencias y matemát
 
 Incluso hay un _Pi día_ cada año, que cae el 14 de marzo, porque `pi ≈ 3.14`, o el 22 de julio, porque `pi ≈ 22/7`.
 
-    figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
+    figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
 ---
 
@@ -394,7 +394,7 @@ En ese momento, una de las aplicaciones más importantes de las matemáticas fue
 
 ::: column(width=260)
 
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+    x-img(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
 {.caption} Una tableta babilónica para calcular `sqrt(2)`
 
@@ -853,13 +853,13 @@ En el antiguo Egipto, la ciudad de _Swenet_ estaba ubicada a lo largo del río N
 
 ::: column(width=300)
 
-    x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
+    x-img(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
 
 {.caption} Los antiguos egipcios midieron largas distancias contando la cantidad de pasos que dio para caminar.
 
 ::: column(width=300)
 
-    x-media(src="images/well.jpg" width=300 height=300 lightbox)
+    x-img(src="images/well.jpg" width=300 height=300 lightbox)
 
 {.caption} Algunas fuentes dicen que el "Pozo de Eratóstenes" estaba en _Isla Elefantina_ en el río Nilo.
 
@@ -943,7 +943,7 @@ La medición de Eratóstenes fue uno de los experimentos más importantes en la 
 
 ::: column(width=280)
 
-    x-media(src="images/obelisk.jpg" width=280 height=450 lightbox)
+    x-img(src="images/obelisk.jpg" width=280 height=450 lightbox)
 
 ::: column.grow
 
@@ -1093,7 +1093,7 @@ Aquí puede ver el _Gasómetro cilíndrico_ en Oberhausen, Alemania. Solía alma
 
 ::: column(width=300)
 
-    x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
+    x-img(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
 {.caption} Gasómetro Oberhausen
 
@@ -1143,7 +1143,7 @@ En los ejemplos anteriores, las dos bases del cilindro siempre estuvieron _direc
 
 ::: column(width=300)
 
-    x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
+    x-img(src="images/pisa.jpg" width=300 height=360 lightbox)
 
 {.caption} La _Torre inclinada de Pisa_ en Italia no es un cilindro oblicuo.
 
@@ -1210,7 +1210,7 @@ Esto significa que la superficie total de un cilindro con radio _r_ y altura _h_
 
 > id: cylinder-real-life
 
-    figure: x-media(src="images/cylinders.jpg" width=460 height=125)
+    figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
 Los cilindros se pueden encontrar en todo el mundo, desde latas de refrescos hasta papel higiénico o tuberías de agua. ¿Se te ocurren otros ejemplos?
 
@@ -1238,23 +1238,23 @@ Al igual que otras formas que conocimos antes, los conos están en todas partes:
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/ice-cream.jpg" width=120 height=120 lightbox)
+    x-img(src="images/ice-cream.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/traffic.jpg" width=120 height=120 lightbox)
+    x-img(src="images/traffic.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/roof.jpg" width=120 height=120 lightbox)
+    x-img(src="images/roof.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/christmas.jpg" width=120 height=120 lightbox)
+    x-img(src="images/christmas.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/tipi.jpg" width=120 height=120 lightbox)
+    x-img(src="images/tipi.jpg" width=120 height=120 lightbox)
 
 :::
 
@@ -1698,7 +1698,7 @@ En cursos posteriores, aprenderá mucho más sobre parábolas e hipérbolas. Por
 
 ::: column(width=300)
 
-    x-media(src="images/conics.svg" width=300 height=340)
+    x-img(src="images/conics.svg" width=300 height=340)
 
 :::
 
@@ -1763,7 +1763,7 @@ Desafortunadamente, la observación astronómica del cielo no fue muy compatible
 
 ::: column(width=330)
 
-    x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
+    x-img(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
 {.caption} Astrónomo griego Hiparco de Nicea
 
@@ -1791,7 +1791,7 @@ Para solucionar esto, los astrónomos agregaron __Epiciclos__ a su modelo del si
 
 ::: column(width=320)
 
-    x-media(src="images/epicycles.jpg" width=320 height=320)
+    x-img(src="images/epicycles.jpg" width=320 height=320)
 
 {.caption} Un dibujo de epiciclos del siglo XVI en el __modelo geocéntrico__. La palabra griega "planetas" significa "vagabundos".
 

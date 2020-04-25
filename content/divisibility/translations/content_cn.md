@@ -377,7 +377,7 @@ __{.m-yellow.digit-sum-is}4__.
 通过下面的论证:
 ::: column(width=220)
 
-    x-media(lightbox width=220 height=300 src="images/euclid.jpg")
+    x-img(lightbox width=220 height=300 src="images/euclid.jpg")
 
 :::
 
@@ -502,7 +502,7 @@ _{.lgrey}结果表明，这些对角线都对应于某些二次方程，这些�
 素数的频率更高。然而，尚不清楚为什么会是这样..._
 ::: column(width=200)
 
-    x-media(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
+    x-img(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
 
 {.caption} 1964年3月版《科学美国人》的封面
 :::
@@ -784,7 +784,7 @@ __{.m-green}30__和__{.m-yellow}45__：
 17年出现一次。但是没有一种蝉有12年、14年、15年或16年的出现周期。
 ::: column(width=360)
 
-    x-media(width=360 height=240 src="images/cicadas.jpg")
+    x-img(width=360 height=240 src="images/cicadas.jpg")
 
 :::
 
@@ -897,7 +897,7 @@ _{span.number-ball.l-blue-green}3_ &nbsp;=&nbsp; 6.
 局，制造了首批成功破译密码的计算机。
 ::: column(width=240)
 
-    x-media(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
+    x-img(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
     p.caption 德国四转子加密机
 
 :::

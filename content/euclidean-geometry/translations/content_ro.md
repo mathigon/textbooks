@@ -16,7 +16,7 @@ matematice dorindu-și astfel să le exploreze și să le explice. La început e
 doar de amuzament, fără a avea ca scop un rezultat anume.
 ::: column(width=300)
 
-    x-media(src="images/tablet.jpg" width=300 height=210)
+    x-img(src="images/tablet.jpg" width=300 height=210)
 
 {.caption} Tabletă babiloniană din lut, datată 1800 BC, ce conține calcule geometrice.
 :::
@@ -53,7 +53,7 @@ mod fundamental. Legenda spune ca Thales a fost atât de uluit de descoperirea s
 un bou în semn de mulțumire zeilor.
 
     figure
-      x-media(src="images/temple.svg" width=400 height=170)
+      x-img(src="images/temple.svg" width=400 height=170)
 
 Totuși, simpla _observare_ a unei astfel de relații nu a fost suficientă pentru Thales.
 El a vrut să înțeleagă _de ce_ este adevarată și să verifice că este _întotdeauna_ adevărată, 
@@ -73,38 +73,38 @@ până la construcția zgârie-norilor sau lansarea sateliților în spațiu. Ia
 
 ::: column(width=200)
 
-    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+    x-img(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
 {.caption} Geometria le-a permis vechilor egipteni să construiască piramide gigantice, perfect regulate.
 
 ::: column(width=200)
 
-    x-media(src="images/sextant.jpg" width=200 height=200)
+    x-img(src="images/sextant.jpg" width=200 height=200)
 
 {.caption} Marinarii folosesc sextante pentru determinarea poziției geografice în timp ce se află pe mare 
 folosind unghiuri formate de soare sau stele.
 
 ::: column(width=200)
 
-    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
+    x-img(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
 
 {.caption} Geometria este necesară pentru a crea jocuri video sau filme grafice realiste.
 ::: column(width=200)
 
-    x-media(src="images/plane.jpg" width=200 height=200)
+    x-img(src="images/plane.jpg" width=200 height=200)
 
 {.caption} Geometria poate ajuta la designul și testarea unor modele noi de avioane, 
 făcându-le astfel mai sigure și mai eficiente.
 ::: column(width=200)
 
-    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
+    x-img(src="images/cctv.jpg" lightbox width=200 height=200)
 
 {.caption} Geometria a fost esențială pentru proiectarea acestui zgârie-nori din Beijing – 
 și pentru a se asigura că nu se va dărâma.
 
 ::: column(width=200)
 
-    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
+    x-img(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
 {.caption} Geometria ne permite să prezicem poziția stelelor, planetelor și sateliților 
 care orbitează Pământul.
@@ -460,7 +460,7 @@ folosită drept manual de matematică timp de mii de ani.
 
 ::: column(width=220)
 
-    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+    x-img(src="images/elements.jpg" width=220 height=330 lightbox)
 
 :::
 
@@ -497,11 +497,11 @@ Pentru a măsura distanțe mai lungi arhitecții sau topografii foloseau _sfori 
 bucăți lungi de sfoară care conțineau multe noduri situate la intervale egale. Dar nici acestea nu 
 erau perfect precise și diferite corzi aveau nodurile poziționate la distanțe ușor diferite.
 
-    figure: x-media(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
+    figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
 ::: column(width=200)
 
-    x-media(src="images/units.png" width=200 height=336)
+    x-img(src="images/units.png" width=200 height=336)
 
 :::
 
@@ -565,7 +565,7 @@ construi diferite forme geometrice folosind doar un dreptar și un compas.
 
 ::: column(width=340)
 
-    x-media(src="images/archimedes.jpg" width=340 height=265)
+    x-img(src="images/archimedes.jpg" width=340 height=265)
 
 {.caption} Matematicianul grec [Arhimede](bio:archimedes) studia geometria în momentul în care a fost
 omorât de către invadatorii romani. Ultimele sale cuvinte au fost “nu îmi deranjați cercurile”.
@@ -660,7 +660,7 @@ față de cel existent.
 
 ::: column(width=300)
 
-    x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
+    x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
     
 {.caption} Reconstrucția unui templu din Delphi 
 :::
@@ -759,17 +759,17 @@ fără niciun instrument adițional precum lipici sau foarfecă. Poți crea form
 și de impresionante - toate aceste figuri au fost create folosind doar bucăți dreptunghiulare de hârtie.
 
 ::: column(width=186)
-    x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+    x-img(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+    x-img(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+    x-img(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+    x-img(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
 :::
 
 ---
@@ -821,7 +821,7 @@ cât de lung să fie alegând poziția de îndoire.
 Acest _cocor_ este unul din cele mai vechi și faimoase modele Origami. Avem multe alte
 [instrucțiuni pentru modele Origami](/origami) pe care le poți încerca!
 
-    figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
+    figure: x-img(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
@@ -882,7 +882,7 @@ Se pare că aceste axiome sunt chiar mai puternice decât axiomele euclidiene.
 Putem face trisecția unghiurilor și putem dubla cuburi folosindu-ne doar de îndoirea hârtiei.
 Bineînțeles că este imposibil să îndoim linii curbe și nici nu se poate rezolva cu origami cuadratura cercului.
 
-    figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
+    figure: x-img(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
 ---
 > id: origami-applications
@@ -940,7 +940,7 @@ Acestea sunt inițial pliate, dar se pot extinde în săngele pacientului pentru
 
 ::: column(width=300)
 
-    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
+    x-img(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
 
 ::: column.grow
 
@@ -1019,7 +1019,7 @@ Atunci când este deschisă dimensiunea aripii crește de 10 ori – cel mai mar
 
 ::: column(width=300)
 
-    x-media(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-img(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
 
 ::: column(width=300)
 

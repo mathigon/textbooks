@@ -418,7 +418,7 @@ als erster, dass es unendlich viele Primzahlen gibt, mit dem folgenden Argument:
 
 ::: column(width=220)
 
-    x-media(lightbox width=220 height=300 src="images/euclid.jpg")
+    x-img(lightbox width=220 height=300 src="images/euclid.jpg")
 
 :::
 
@@ -557,7 +557,7 @@ nicht bekannt, was der genaue Hintergrund dafür sein sollte...._
 
 ::: column(width=200)
 
-    x-media(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
+    x-img(lightbox credit="© Scientific American" width=200 height=272 src="images/magazine.jpg")
 
 {.caption} Titelbild der März-Ausgabe 1964 von Scientific American
 :::
@@ -868,7 +868,7 @@ Zikaden in Illinois und Iowa erscheinen nur alle 17 Jahre. Aber es gibt keine
 Zikaden mit Jahreszyklen von 12, 14, 15 oder 16 Jahren.
 ::: column(width=360)
 
-    x-media(width=360 height=240 src="images/cicadas.jpg")
+    x-img(width=360 height=240 src="images/cicadas.jpg")
 
 :::
 
@@ -995,7 +995,7 @@ vom Mathematiker Alan Turing, baute einige der ersten Computer, die es schafften
 entschlüsseln.
 ::: column(width=240)
 
-    x-media(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
+    x-img(lightbox credit="Magnus Manske, via Wikipedia" width=240 height=344 src="images/enigma.jpg")
     p.caption Deutsche Enigma-Maschine mit 4 Walzen
 
 :::

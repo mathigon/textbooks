@@ -172,23 +172,23 @@ Hay muchas formas en la naturaleza que parecen fractales. Ya hemos visto algunas
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/snow-1.jpg" width=120 height=120)
+    x-img(src="images/snow-1.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-2.jpg" width=120 height=120)
+    x-img(src="images/snow-2.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-3.jpg" width=120 height=120)
+    x-img(src="images/snow-3.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-4.jpg" width=120 height=120)
+    x-img(src="images/snow-4.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-5.jpg" width=120 height=120)
+    x-img(src="images/snow-5.jpg" width=120 height=120)
 
 :::
 
@@ -347,23 +347,23 @@ Comienza con la forma básica del país y, a medida que se acerca, agrega entrad
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/coast-1.jpg" width=120 height=180)
+    x-img(src="images/coast-1.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-2.jpg" width=120 height=180)
+    x-img(src="images/coast-2.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-3.jpg" width=120 height=180)
+    x-img(src="images/coast-3.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-4.jpg" width=120 height=180)
+    x-img(src="images/coast-4.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-5.jpg" width=120 height=180)
+    x-img(src="images/coast-5.jpg" width=120 height=180)
 
 :::
 
@@ -429,40 +429,40 @@ Si bien los verdaderos fractales nunca pueden aparecer en la naturaleza, hay muc
 ::: column(width=200)
 
     // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
-    x-media(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
+    x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Cordillera en Asia central
 
 {sesenta y cinco}
 
     // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
-    x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
+    x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Delta del río Ganges en India
 
 ::: column(width=200 parent="padded-thin")
 
-    x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
 
 {.caption} Rayos
 
 ::: column(width=200)
 
     // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
-    x-media(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
+    x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Vasos sanguíneos en la retina
 
 ::: column(width=200)
 
     // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
-    x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
+    x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Gran Cañón en los EE. UU.
 
 ::: column(width=200)
 
-    x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
 
 {.caption} Nubes
 
@@ -480,7 +480,7 @@ Todos estos objetos pueden aparecer completamente al azar, pero, al igual que lo
 ::: column(width=300)
 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
-    x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
+    x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Terreno fractal generado por computadora
 
@@ -523,22 +523,22 @@ Aquí hay algunos ejemplos de revestimientos de pisos de diferentes iglesias en 
 ::: column(width=140 parent="padded-thin")
 
     // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
-    x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+    x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
     // Permission from Elisa Conversano
-    x-media(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
+    x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
     // https://www.cattedraledianagni.it/
-    x-media(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
+    x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
     // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
-    x-media(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
+    x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
 
@@ -659,7 +659,7 @@ En algunos casos, esto puede conducir a la aparición de patrones que se parecen
 
 ::: column(width=320)
 
-    x-media(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
+    x-img(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
 
 {.caption} Conus textile, un caracol de mar venenoso
 
@@ -847,19 +847,19 @@ Hoy no tenemos este problema: las imágenes a continuación son todos conjuntos 
 
 ::: column(width=220)
 
-    x-media(src="images/julia-1.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.70176 – 0.3842"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-2.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.4 + 0.6"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-3.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = 0.285 + 0.01"i"`
 
@@ -908,7 +908,7 @@ Una vez más, pinta sobre el plano complejo para revelar el área en la que las 
 
 Este fractal se llama [__Conjunto de Mandelbrot__](gloss:mandelbrot-set), y cuando se gira 90 °, se ve casi como una persona, con cabeza, cuerpo y dos brazos. Fue definido y dibujado por primera vez en 1978, en un trabajo de investigación de los matemáticos Robert Brooks y Peter Matelski:
 
-    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
+    figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
 Unos años más tarde, [Benoit Mandelbrot](bio:mandelbrot) utilizó las potentes computadoras de IBM para crear una visualización mucho más detallada del fractal, que más tarde recibió su nombre. Las primeras impresiones se veían diferentes de lo que esperaba, hasta que se dio cuenta de que los técnicos que trabajaban en las impresoras estaban limpiando la "borrosidad" alrededor de su borde, suponiendo que fue causada por partículas de polvo o errores de la impresora, y no una característica definitoria de los fractales. ! [Continuar](btn:next)
 
@@ -976,7 +976,7 @@ En 1985, el set de Mandelbrot apareció en la portada de la revista _Scientific 
 
 ::: column(width=220)
 
-    x-media(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
+    x-img(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
 
 :::
 

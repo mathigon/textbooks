@@ -18,7 +18,7 @@ order of our universe.
 
 ::: column(width=320)
 
-    x-media(src="images/geocentric.jpg" width=320 height=272)
+    x-img(src="images/geocentric.jpg" width=320 height=272)
 
 {.caption} Earth is at the center of the _Ptolemaic universe_.
 
@@ -110,31 +110,31 @@ everywhere in nature:
 
 ::: column(width=130 parent="padded-thin")
 
-    x-media(src="images/flower.jpg" width=130 height=130)
+    x-img(src="images/flower.jpg" width=130 height=130)
 
 {.caption} Flowers
 
 ::: column(width=130)
 
-    x-media(src="images/earth.jpg" width=130 height=130)
+    x-img(src="images/earth.jpg" width=130 height=130)
 
 {.caption} Planets
 
 ::: column(width=130)
 
-    x-media(src="images/tree.jpg" width=130 height=130)
+    x-img(src="images/tree.jpg" width=130 height=130)
 
 {.caption} Trees
 
 ::: column(width=130)
 
-    x-media(src="images/orange.jpg" width=130 height=130)
+    x-img(src="images/orange.jpg" width=130 height=130)
 
 {.caption} Fruit
 
 ::: column(width=130)
 
-    x-media(src="images/soap.jpg" width=130 height=130)
+    x-img(src="images/soap.jpg" width=130 height=130)
 
 {.caption} Soap Bubbles
 
@@ -276,14 +276,14 @@ the first four decimal digits of Pi by approximating circles using regular
 polygons. Notice how, as you add more sides, the polygon starts to look
 [[more and more|less|exactly]] like a circle:
 
-    figure: x-media(src="images/polygons.svg" width=460 height=110)
+    figure: x-img(src="images/polygons.svg" width=460 height=110)
 
 ---
 > id: pi-record
 
 ::: column(width=280)
 
-    x-media(src="images/iss.jpg" width=280 height=330 credit="NASA")
+    x-img(src="images/iss.jpg" width=280 height=330 credit="NASA")
 
 ::: column.grow
 
@@ -392,7 +392,7 @@ There even is a _Pi day_
 every year, which either falls on 14 March, because `pi ≈ 3.14`, or on 22 July,
 because `pi ≈ 22/7`.
 
-    figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
+    figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
 
 
@@ -466,7 +466,7 @@ future, or to communicate with gods.
 
 ::: column(width=260)
 
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+    x-img(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
 {.caption} A Babylonian tablet for calculating `sqrt(2)`
 
@@ -1034,14 +1034,14 @@ the well.
 
 ::: column(width=300)
 
-    x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
+    x-img(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
 
 {.caption} Ancient Egyptians measured long distances by counting the number of
 steps it took to walk.
 
 ::: column(width=300)
 
-    x-media(src="images/well.jpg" width=300 height=300 lightbox)
+    x-img(src="images/well.jpg" width=300 height=300 lightbox)
 
 {.caption} Some sources say the “Well of Eratosthenes” was on _Elephantine
 island_ on the Nile river.
@@ -1130,7 +1130,7 @@ when considering that he only had access to very basic measuring tools.
 
 ::: column(width=280)
 
-    x-media(src="images/obelisk.jpg" width=280 height=450 lightbox)
+    x-img(src="images/obelisk.jpg" width=280 height=450 lightbox)
 
 ::: column.grow
 
@@ -1376,7 +1376,7 @@ results!
 
 ::: column(width=300)
 
-    x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
+    x-img(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
 {.caption} Gasometer Oberhausen
 
@@ -1436,7 +1436,7 @@ but the sides seem to “lean over” at an angle that is not 90°.
 
 ::: column(width=300)
 
-    x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
+    x-img(src="images/pisa.jpg" width=300 height=360 lightbox)
 
 {.caption} The _Leaning Tower of Pisa_ in Italy is not quite an oblique
 cylinder.
@@ -1515,7 +1515,7 @@ _h_ is given by
 ---
 > id: cylinder-real-life
 
-    figure: x-media(src="images/cylinders.jpg" width=460 height=125)
+    figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
 Cylinders can be found everywhere in our world – from soda cans to toilet paper
 or water pipes. Can you think of any other examples?
@@ -1551,23 +1551,23 @@ think of?
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/ice-cream.jpg" width=120 height=120 lightbox)
+    x-img(src="images/ice-cream.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/traffic.jpg" width=120 height=120 lightbox)
+    x-img(src="images/traffic.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/roof.jpg" width=120 height=120 lightbox)
+    x-img(src="images/roof.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/christmas.jpg" width=120 height=120 lightbox)
+    x-img(src="images/christmas.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/tipi.jpg" width=120 height=120 lightbox)
+    x-img(src="images/tipi.jpg" width=120 height=120 lightbox)
 
 :::
 
@@ -2075,7 +2075,7 @@ now, let’s have a closer look at the ellipse.
 
 ::: column(width=300)
 
-    x-media(src="images/conics.svg" width=300 height=340)
+    x-img(src="images/conics.svg" width=300 height=340)
 
 :::
 
@@ -2147,7 +2147,7 @@ decreasing]] distance from its center.
 
 ::: column(width=330)
 
-    x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
+    x-img(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
 {.caption} Greek astronomer Hipparchus of Nicaea
 
@@ -2179,7 +2179,7 @@ __deferent__).
 
 ::: column(width=320)
 
-    x-media(src="images/epicycles.jpg" width=320 height=320)
+    x-img(src="images/epicycles.jpg" width=320 height=320)
 
 {.caption} A 16-century drawing of epicycles in the __Geocentric model__. The
 Greek word “planetes” means “wanderers”.

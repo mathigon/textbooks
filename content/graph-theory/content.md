@@ -24,22 +24,22 @@ applications:
 
     x-gallery(slide-width="300")
       div
-        x-media(src="images/network1.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network1.jpg" width=260 height=260 lightbox)
         p.caption Road and Rail Networks
       div
-        x-media(src="images/network6.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network6.jpg" width=260 height=260 lightbox)
         p.caption Integrated Circuits
       div
-        x-media(src="images/network3.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network3.jpg" width=260 height=260 lightbox)
         p.caption Supply Chains
       div
-        x-media(src="images/network2.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network2.jpg" width=260 height=260 lightbox)
         p.caption Friendships
       div
-        x-media(src="images/network7.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network7.jpg" width=260 height=260 lightbox)
         p.caption Neural Connections
       div
-        x-media(src="images/network4.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network4.jpg" width=260 height=260 lightbox)
         p.caption The Internet
 
 ---
@@ -278,7 +278,7 @@ at the foundation of many other geographic problems, such as finding directions
 between two locations. We will discover more of these applications later.
 ::: column(width=240)
 
-    x-media(lightbox width=240 height=260 src="images/prague.jpg")
+    x-img(lightbox width=240 height=260 src="images/prague.jpg")
 
 :::
 
@@ -393,7 +393,7 @@ Unfortunately, due to the city’s layout, the pipes or cables for every product
 are not allowed to cross.
 ::: column(width=300)
 
-    x-media(width=300 height=200 src="images/power-plant.jpg")
+    x-img(width=300 height=200 src="images/power-plant.jpg")
 
 :::
 
@@ -621,7 +621,7 @@ Some simple “maps”, like a chessboard, only need two colours (black and whit
 but most complex maps need more.
 ::: column(width=240 style="margin-top: -10px")
 
-    x-media.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img.shifted(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -704,7 +704,7 @@ and two vertices must have a different colour if they are connected by an edge.
 
 ::: column(width=240 parent="right")
 
-    x-media(lightbox width=240 height=320 src="images/england-counties.jpg")
+    x-img(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
 In 1852, the botany student [Francis Guthrie](bio:guthrie) had to colour a map
@@ -740,7 +740,7 @@ controversial since. Faster computers and a more efficient algorithm mean that
 today you can solve the four colour theorem on a laptop in just a few hours.
 
     figure
-      x-media(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
+      x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
       p.caption Postmark for the Department of Mathematics at the University of<br/>Illinois Urbana-Champaign, where Haken and Appel worked.
 
 ---
@@ -781,7 +781,7 @@ one. Now we want to find paths which visit _every vertex_ exactly once. These
 paths are called __Hamiltonian cycles__.
 ::: column(width=260)
 
-    x-media(src="images/truck.jpg" width=260 height=280)
+    x-img(src="images/truck.jpg" width=260 height=280)
 
 :::
 
@@ -831,7 +831,7 @@ possible paths. Once you have hundreds or thousands of vertices, trying all
 possible paths becomes impossible, even using powerful computers.
 ::: column(width=220)
 
-    x-media(lightbox src="images/microchip.jpg" width=210 height=365)
+    x-img(lightbox src="images/microchip.jpg" width=210 height=365)
 
 :::
 
@@ -914,7 +914,7 @@ leave along their trail, and which other ants can follow.
 
 ::: column(width=220 parent="right")
 
-    x-media(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
+    x-img(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
 
 ::: column.grow
 Ant Colony System (ACS) algorithms try to replicate this behaviour on computers,
@@ -1017,7 +1017,7 @@ guarantee a reliable service, for example by finding diversions when a
 particular connection is busy.
 ::: column(width=220)
 
-    x-media(lightbox src="images/phone.jpg" width=220 height=166)
+    x-img(lightbox src="images/phone.jpg" width=220 height=166)
 
 :::
 
@@ -1028,7 +1028,7 @@ Graphs also play an important role in transportation and navigation. All flight,
 train and subway networks form graphs, which can be used when creating efficient
 schedules. One of the most recognisable graphs is the London Underground map:
 
-    figure: x-media(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
+    figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
 ---
 > id: applications-5
@@ -1039,13 +1039,13 @@ services like Google Maps when working out the shortest route between two given
 points.
 ::: column(width=60)
 
-    x-media(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
+    x-img(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
 
 :::
 
 ::: column(width=280)
 
-    x-media(lightbox src="images/congestion.jpg" width=280 height=170)
+    x-img(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
 In the future, __Intelligent Transportation Systems__ will reduce congestion and
@@ -1069,35 +1069,35 @@ There are countless other graphs in science, engineering or everyday life:
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/molecules.jpg" width=200 height=200)
+    x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
 {.caption} The links between atoms in __molecules__ and crystal grids form a graph.
 ::: column(width=200)
 
-    x-media(lightbox src="images/epidemic.jpg" width=200 height=200)
+    x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
 {.caption} The __spread of diseases__ and epidemics can be modelled using a network.
 ::: column(width=200)
 
-    x-media(lightbox src="images/evolution.jpg" width=200 height=200)
+    x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
 {.caption} In Biology, the __evolutionary trees__ that show the ancestry of
 species form a graph.
 ::: column(width=200)
 
-    x-media(lightbox src="images/network6.jpg" width=200 height=200)
+    x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
 {.caption} The different components of __electric circuits__ and computer chips
 form a network.
 ::: column(width=200)
 
-    x-media(lightbox src="images/letters.jpg" width=200 height=200)
+    x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
 {.caption} The grammatical structure of __languages__ can be modelled using
 graphs, for example to create translation algorithms.
 ::: column(width=200)
 
-    x-media(lightbox src="images/finance.jpg" width=200 height=200)
+    x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
 {.caption} Graphs also have many applications in __probability__, __game
 theory__ and __financial mathematics__.
@@ -1118,7 +1118,7 @@ the same city. We can also determine people’s __centrality__, which depends on
 how well-connected a vertex is, and which may be a measure of a person’s
 popularity in social media.
 
-    figure: x-media(lightbox src="images/social-network.png" width=720 height=500)
+    figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
 ---
 > id: social-1
@@ -1135,7 +1135,7 @@ other? For example, the distance between friends is [[1]], the distance between
 friends of friends is [[2]], and so on.
 ::: column(width=200)
 
-    x-media(src="images/facebook-like.png" width=200 height=200)
+    x-img(src="images/facebook-like.png" width=200 height=200)
 
 :::
 
@@ -1152,7 +1152,7 @@ the world, they will have a friend of a friend who knows a friend of one of your
 friends. And this includes celebrities, politicians or royalty…
 
     figure
-      x-media(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
+      x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
       p.caption Geographic visualisation of all Facebook friendships in 2010.
 
 ---
@@ -1160,7 +1160,7 @@ friends. And this includes celebrities, politicians or royalty…
 
 ::: column(width=200)
 
-    x-media(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
+    x-img(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
 
 ::: column.grow
 In 1929, when the Hungarian author [Frigyes Karinthy](bio:karinthy) first
