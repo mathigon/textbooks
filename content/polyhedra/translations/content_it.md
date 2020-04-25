@@ -955,32 +955,32 @@ senza spazi o sovrapposizioni. Queste strutture sono chiamate
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
 {.caption} Alveare [[esagonale|triangolare|quadratico]] 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
 
 {.caption} Pelle del serpente del latte
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
 
 {.caption} Struttura cellulare delle foglie
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
+    x-img(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
 
 {.caption} Colonne di basalto sul Selciato del Gigante in Irlanda del Nord.
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
 
 {.caption} Buccia d'ananas
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
 
 {.caption} Guscio di una tartaruga
 :::
@@ -993,32 +993,32 @@ in tecnologia – dall'antica Roma fino ad oggi. Ecco qualche esempio:
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
+    x-img(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
 
 {.caption} Piastrellatura [[rettangolare|quadratica|esagonale]]
 ::: column(width=200)
 
-    x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
+    x-img(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
 
 {.caption} Serra al Progetto Eden in Inghilterra
 ::: column(width=200)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
 
 {.caption} Mosaico all'Alhambra
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
+    x-img(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
 
 {.caption} Tetto [[triangolare|esagonale|rettangolare]] al British Museum di Londra
 ::: column(width=200)
 
-    x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
+    x-img(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
 
 {.caption} Padiglione con tassellazione cellulare a Sydney
 ::: column(width=200)
 
-    x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
+    x-img(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
 
 {.caption} _Studio della divisione rettangolare del piano con rettili_, M. C. Escher
 :::
@@ -1295,22 +1295,22 @@ Escher contiene creature curiose e mutanti, schemi e paesaggi:
 
     .row
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
         p.caption “Cielo e acqua I” (1938)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
         p.caption “Lucertole” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
         p.caption “Lucertola, Pesce, Pipistrello” (1952)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
         p.caption “Farfalla” (1948)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
         p.caption “Due pesci” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Conchiglie e Stelle marine” (1941)
 
 Queste opere spesso sembrano divertenti e prodotte con naturalezza, ma i principi matematici
@@ -1827,12 +1827,12 @@ in natura – e possiamo sfruttare queste proprieta nella scienza e nell'ingenie
 
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
+    x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Scheledro di radiolario
     
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/virus.jpg")
+    x-img(lightbox width=180 height=180 src="images/virus.jpg")
     p.caption Virus icosaedrico
 
 ::: column.grow
@@ -1845,12 +1845,12 @@ ma ha quasi la forma di una sfera.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
+    x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Molecola di  buckminsterfullerene
       
 ::: column(width=180)
 
-    x-media(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
+    x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Biosfera di Montreal 
       
 ::: column.grow
@@ -1864,12 +1864,12 @@ Fuller](bio:fuller), famoso per la costruzione di edifici con quella forma.
 
 ::: column(width=180)
 
-    x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
+    x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Ottaedro di fluorite
       
 ::: column(width=180)
 
-    x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
+    x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Cubo di pirite
       
 ::: column.grow
@@ -1880,12 +1880,12 @@ Quando si rompono o si fessurano, queste forma appaiono a più ampia scala.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
     p.caption Strutture reticolari
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/louvre.jpg")
+    x-img(lightbox width="180", height="180", src="images/louvre.jpg")
     p.caption Museo del Louvre a Paris
 
 ::: column.grow
@@ -1896,12 +1896,12 @@ sostenere ampi tetti e pesanti ponti.
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/football.jpg")
+    x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Pallone da calcio
     
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/dice.jpg")
+    x-img(lightbox width="180", height="180", src="images/dice.jpg")
     p.caption Dado poligonale
 
 ::: column.grow
