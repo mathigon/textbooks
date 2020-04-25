@@ -1036,11 +1036,18 @@ Qui puoi creare la tua propria tassellazione usando dei poligoni regolari. Trasc
 nuove forme dalla barra laterale sulla tela. Quali forme funzionano bene? Quali
 non funzionano? Prova a creare strutture interessanti!
 
-    include ./components/tessellation
-    figure: x-tessellation
-    x-gesture(target="x-tessellation .menu" slide="-300, 140")
+    figure: .tessellation
+      x-polypad
+      .menu
+        for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
+          .add(data-shape=s)
+      .btn-row
+        button.btn Clear
+        button.btn Download
+      svg.overlay: g.tiles.active
+    x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
-      h4 Esempi delle tassellazioni di alti studenti
+      h4 Examples of other students’ tessellations
       .row.padded-thin
         div(style="width: 224px"): img(src="images/user/tess-1.png" width=240 height=160)
         div(style="width: 224px"): img(src="images/user/tess-2.png" width=240 height=160)
