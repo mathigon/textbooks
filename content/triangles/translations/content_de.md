@@ -18,7 +18,7 @@ ganz Indiens,einschließlich des Himalaya-Gebirges.
 
 ::: column(width=240)
 
-    x-media.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
+    x-img.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
 
 {.caption} Der _Theodolit_, ein Vermessungsinstrument
 :::
@@ -55,7 +55,7 @@ _{button.next-step} Weiter_
 
 ::: column(width=320)
 
-    x-media(src="images/hillary.jpg" width=320 height=190)
+    x-img(src="images/hillary.jpg" width=320 height=190)
 
 {.caption} Edmund Hillary und Tenzing Norgay waren die ersten, die 1953 den Gipfel des
 Mount Everest erreichten.
@@ -87,15 +87,15 @@ Diese Eigenschaft macht Dreiecke besonders nützlich für Konstruktionen, wobei 
 können.
 
 ::: column(width=200)
-    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
+    x-img(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
 
 {.caption} Eine "Fachwerkbrücke" wird von Dreieckskonstruktionen getragen
 ::: column(width=200)
-    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
+    x-img(src="images/pylon.jpg" width=200 height=200 lightbox)
 
 {.caption} Dreiecke in Hochspannungsmasten
 ::: column(width=200)
-    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
+    x-img(src="images/bike.jpg" width=200 height=200 lightbox)
 
 {.caption} Auch Fahrräder verwenden Dreiecke für Stabilität.
 :::
@@ -109,15 +109,15 @@ besonders gut geeignet, um komplexe gekrümmte Oberflächen nachzubilden. Das wi
 in realen Gebäuden…
 
 ::: column(width=200)
-    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} "Die Gurke", ein Wolkenkratzer in London
 ::: column(width=200)
-    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Bank of China Tower in Hong Kong
 ::: column(width=200)
-    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Innenhof des British Museums in London
 :::
@@ -129,7 +129,7 @@ Künstler und Softwareingenieure müssen sich mit Geometrie und Trigonometrie au
 um diese Dreiecke realistisch bewegen und verformen zu können und ihre Farbe und Textur zu
 berechnen.
 ::: column(width=220)
-    x-media(src="images/dolphin.jpg" width=220 height=135)
+    x-img(src="images/dolphin.jpg" width=220 height=135)
 :::
 
     figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
@@ -1101,7 +1101,7 @@ Auffinden der ersten [irrationalen Zahl](gloss:irrational-numbers), `sqrt(2)`.
 Irrationale Zahlen können nicht als einfacher Bruch ausgedrückt werden - ein Konzept, das die
 Pythagoräer zutiefst beunruhigend fanden und (erfolglos) zu vertuschen versuchten!
 ::: column(width=400)
-    x-media(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
+    x-img(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
 {.caption} “Pythagoräer feiern den Sonnenaufgang” von Fjodor Bronnikow
 :::
@@ -1618,4 +1618,4 @@ starteten vom Meeresspiegel am Strand, maßen Tausende von
 Kilometern, bauten Vermessungstürme im ganzen Land und berücksichtigten
 sogar die Krümmung der Erde.
 
-    figure: x-media(src="images/himalaya.jpg" width=760 height=320)
+    figure: x-img(src="images/himalaya.jpg" width=760 height=320)

@@ -9,7 +9,7 @@ Muchas profesiones que usan las matemáticas están interesadas en un aspecto es
 
 ::: column(width=160 parent="padded-thin")
 
-    x-media(src="images/crime.jpg" width=160 height=160)
+    x-img(src="images/crime.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -17,7 +17,7 @@ En la última década, __departamentos de policía__ en todo el mundo han comenz
 
 ::: column(width=160)
 
-    x-media(src="images/volcanoes.jpg" width=160 height=160)
+    x-img(src="images/volcanoes.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -25,7 +25,7 @@ Resulta que __terremotos__ siguen patrones similares a los crímenes. Al igual q
 
 ::: column(width=160)
 
-    x-media(src="images/finance.jpg" width=160 height=160)
+    x-img(src="images/finance.jpg" width=160 height=160)
 
 ::: column(width=400)
 
@@ -259,7 +259,7 @@ En las siguientes secciones aprenderá sobre muchas secuencias matemáticas dife
 
 Primero, sin embargo, veamos algo completamente diferente: __fotografía de secuencia de acción__. Un fotógrafo toma muchas fotos en rápida sucesión y luego las combina en una sola imagen:
 
-    figure: x-media(src="images/action-1.jpg" width=640 height=320)
+    figure: x-img(src="images/action-1.jpg" width=640 height=320)
 
 ¿Puedes ver cómo el esquiador forma una secuencia? El patrón no es suma ni multiplicación, sino una [transformación geométrica](gloss:rigid-transformation). Entre los pasos consecutivos, el esquiador se traduce y [[gira|reflected|dilated]].
 
@@ -271,27 +271,27 @@ Aquí hay algunos ejemplos más de fotografía de secuencia de acción para su d
 
 ::: column(width=320 parent="padded-thin")
 
-    x-media(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
+    x-img(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
 
 ::: column(width=320)
 
-    x-media(src="images/action-7.jpg" width=320 height=160 lightbox)
+    x-img(src="images/action-7.jpg" width=320 height=160 lightbox)
 
 :::
 
@@ -310,7 +310,7 @@ Halley recordó que otros astrónomos habían observado cometas similares mucho 
 
 ::: column(width=320)
 
-    x-media(width=320 height=256 src="images/halley.jpg")
+    x-img(width=320 height=256 src="images/halley.jpg")
     p.caption Image of Halley’s Comet,#[br]taken in 1986 on Easter Island
 
 :::
@@ -334,10 +334,10 @@ En realidad, el intervalo de tiempo no siempre es _exactamente_ 76 años: puede 
 
     figure
       .row
-        x-media(src="images/halley-1.jpg" width=160 height=180)
-        x-media(src="images/halley-2.jpg" width=173 height=180 lightbox)
-        x-media(src="images/halley-3.jpg" width=200 height=180 lightbox)
-        x-media(src="images/halley-4.jpg" width=130 height=180 lightbox)
+        x-img(src="images/halley-1.jpg" width=160 height=180)
+        x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
+        x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
+        x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
       p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
@@ -739,11 +739,11 @@ No es casualidad que siempre haya 10 pines cuando juegues al boliche o 15 bolas 
 
 ::: column(width=320)
 
-    x-media(src="images/bowling.jpg" width=320 height=240)
+    x-img(src="images/bowling.jpg" width=320 height=240)
 
 ::: column(width=320)
 
-    x-media(src="images/billiard.jpg" width=320 height=240)
+    x-img(src="images/billiard.jpg" width=320 height=240)
 
 :::
 
@@ -1064,7 +1064,7 @@ El número de conejos en un mes en particular es [[la suma de los dos números a
 {.reveal(when="blank-5")} Entonces, después de 12 meses, ¡tendrás 144 pares de conejos!
 
     figure.reveal(when="blank-5")
-      x-media(src="images/rabbits.jpg" width=600 height=230)
+      x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
 
@@ -1081,7 +1081,7 @@ Cuando regresó a Italia, Fibonacci escribió un libro llamado _Liber Abaci_ (en
 
 ::: column(width=300)
 
-    x-media(src="images/fibonacci.jpg" width=300 height=300)
+    x-img(src="images/fibonacci.jpg" width=300 height=300)
     .caption Retrato de Leonardo Fibonacci
 
 :::
@@ -1089,7 +1089,7 @@ Cuando regresó a Italia, Fibonacci escribió un libro llamado _Liber Abaci_ (en
 En una de las páginas de su libro, también investigó los patrones de reproducción de los conejos, por eso los números de Fibonacci llevan su nombre.
 
     figure
-      x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
+      x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
       p.caption Páginas de #[em Liber Abaci] de Fibonacci
 
 ---
@@ -1236,7 +1236,7 @@ Mucha gente cree que la proporción áurea es particularmente agradable estétic
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/pantheon.jpg" width=320 height=198)
+      x-img(src="images/pantheon.jpg" width=320 height=198)
       img(src="images/pantheon.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
@@ -1245,7 +1245,7 @@ Mucha gente cree que la proporción áurea es particularmente agradable estétic
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/dali.jpg" width=320 height=198)
+      x-img(src="images/dali.jpg" width=320 height=198)
       img(src="images/dali.png" width=320 height=198)
 
 {.caption} _El sacramento de la última cena_, del artista español Salvador Dalí, es una de las muchas pinturas en la proporción áurea. En el fondo, también puede ver un gran [dodecaedro](gloss:dodecahedron).
@@ -1325,7 +1325,7 @@ Es importante que las flores escojan un ángulo adecuado: las hojas o semillas d
 
 ::: column(width=240)
 
-    x-media(src="images/flowers.jpg" width=240 height=400)
+    x-img(src="images/flowers.jpg" width=240 height=400)
 
 ::: column.grow
 
@@ -1386,7 +1386,7 @@ __3. Escaleras de Fibonacci__
 
 Al subir las escaleras, puedo dar pasos individuales o saltar dos pasos a la vez. Esto significa que hay muchas posibilidades diferentes de cómo subir una escalera. Por ejemplo, si hay 5 pasos, tengo 8 opciones diferentes:
 
-    figure: x-media(src="images/stairs.svg" width=530 height=200)
+    figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 ¿Cuántas opciones hay para escaleras con 6, 7 u 8 escalones? ¿Puedes detectar un patrón? ¿Y cómo se relaciona esto con los números de Fibonacci?
 
@@ -1395,7 +1395,7 @@ Al subir las escaleras, puedo dar pasos individuales o saltar dos pasos a la vez
 :::
 
     figure
-      x-media(src="images/fibonachos.jpg" width=600 height=282)
+      x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
 
 ---
@@ -1532,7 +1532,7 @@ Hoy, los matemáticos han usado computadoras para verificar los primeros 10 núm
 
 ::: column(width=220)
 
-    x-media(src="images/euclid.jpg" width=220 height=269)
+    x-img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclides de Alejandría
 
@@ -1601,7 +1601,7 @@ En 1937, el matemático [Lothar Collatz](bio:collatz) propuso que _cada_ secuenc
 
 ::: column(width=240)
 
-    x-media(src="images/storm.jpg" width=240 height=340)
+    x-img(src="images/storm.jpg" width=240 height=340)
 
 :::
 
@@ -1627,7 +1627,7 @@ _{button.next-step} Continuar_
 
 Esta secuencia se llama secuencia __Look-and-Say__, y el patrón es exactamente lo que dice el nombre: comienzas con un 1, y cada término siguiente es lo que obtienes si “lees en voz alta” el el anterior. Aquí hay un ejemplo:
 
-    p: x-media(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
+    p: x-img(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
 ¿Puedes encontrar ahora los siguientes términos?
 
@@ -1731,19 +1731,19 @@ El triángulo se llama [__El triángulo de Pascal__](gloss:pascals-triangle), ll
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-1.jpg" width=130 height=280)
+    x-img(src="images/pascal-1.jpg" width=130 height=280)
 
 {.caption} En 450 a. C., el matemático indio [Pingala](bio:pingala) llamó al triángulo la __"Escalera del Monte Meru"__, llamada así por una montaña sagrada hindú.
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-2.jpg" width=200 height=280)
+    x-img(src="images/pascal-2.jpg" width=200 height=280)
 
 {.caption} En Irán, se conocía como el __"Triángulo de Khayyam"__ (مثلث خیام), llamado así por el poeta y matemático persa [Omar Khayyám](bio:khayyam).
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-3.jpg" width=200 height=280)
+    x-img(src="images/pascal-3.jpg" width=200 height=280)
 
 {.caption} En China, el matemático Jia Xian también descubrió el triángulo. Fue nombrado después de su sucesor, __"El triángulo de Yang Hui"__ (杨辉 三角).
 

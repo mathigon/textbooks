@@ -14,7 +14,7 @@ Antik Yunanlı astronomlar, gök cisimlerinin __yörünge__ dediğimiz düzenli 
 
 ::: column(width=320)
 
-    x-media(src="images/geocentric.jpg" width=320 height=272)
+    x-img(src="images/geocentric.jpg" width=320 height=272)
 
 {.caption} _Ptolemy evreninde_ Dünya merkezde.
 
@@ -93,31 +93,31 @@ Burada çapı 1 olan bir tekerlek var. Çevresini “açtıkça” uzunluğunun 
 
 ::: column(width=130 parent="padded-thin")
 
-    x-media(src="images/flower.jpg" width=130 height=130)
+    x-img(src="images/flower.jpg" width=130 height=130)
 
 {.caption} Çiçekler
 
 ::: column(width=130)
 
-    x-media(src="images/earth.jpg" width=130 height=130)
+    x-img(src="images/earth.jpg" width=130 height=130)
 
 {.caption} Gezegenler
 
 ::: column(width=130)
 
-    x-media(src="images/tree.jpg" width=130 height=130)
+    x-img(src="images/tree.jpg" width=130 height=130)
 
 {.caption} Ağaçlar
 
 ::: column(width=130)
 
-    x-media(src="images/orange.jpg" width=130 height=130)
+    x-img(src="images/orange.jpg" width=130 height=130)
 
 {.caption} Meyve
 
 ::: column(width=130)
 
-    x-media(src="images/soap.jpg" width=130 height=130)
+    x-img(src="images/soap.jpg" width=130 height=130)
 
 {.caption} Köpükten Baloncuklar
 
@@ -238,14 +238,14 @@ Yukarıda gördüğünüz gibi `π = 3.1415926…` basit bir tamsayı değil ve 
 
 Aynı zamanda Pi’nin _bütün_ basamaklarını yazamayacağımız anlamına da gelir, sonuçta bunlardan sonsuz tane var. Antik Yunanlı ve Çinli matematikçiler çemberlere çokgenlerle yaklaşarak Pi’nin virgülden sonraki 4 basamağını hesapladılar. Daha fazla kenar ekledikçe çokgenin nasıl da [[daha çok|daha az|tam olarak]] çembere benzediğine bakın:
 
-    figure: x-media(src="images/polygons.svg" width=460 height=110)
+    figure: x-img(src="images/polygons.svg" width=460 height=110)
 
 ---
 > id: pi-record
 
 ::: column(width=280)
 
-    x-media(src="images/iss.jpg" width=280 height=330 credit="NASA")
+    x-img(src="images/iss.jpg" width=280 height=330 credit="NASA")
 
 ::: column.grow
 
@@ -337,7 +337,7 @@ Pi’yi anlaması kolay ve bilimde ve matematikte muazzam bir öneme sahip. Bunu
 
 Her yıl kutlanan bir _Pi günü_ bile var. Tarihi `pi ≈ 3.14` olduğu için 14 Mart ya da `pi ≈ 22/7` olduğu için 22 Temmuz olarak geçiyor. 
 
-    figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
+    figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
 
 
@@ -400,7 +400,7 @@ O zamanlar matematiğin en önemli uygulamalarından bir tanesi astronomiydi. Ç
 
 ::: column(width=260)
 
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+    x-img(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
 {.caption}`sqrt(2)`’yi hesaplamaya yarayan bir Babil tableti.
 
@@ -892,13 +892,13 @@ Antik Mısırda _Asvan_ şehri Nil nehrinin üzerindeydi. Asvan ilginç bir öze
 
 ::: column(width=300)
 
-    x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
+    x-img(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
 
 {.caption} Antik Mısırlılar uzun mesafeleri adım sayısı ile ölçerlerdi.
 
 ::: column(width=300)
 
-    x-media(src="images/well.jpg" width=300 height=300 lightbox)
+    x-img(src="images/well.jpg" width=300 height=300 lightbox)
 
 {.caption} Kimi kaynaklar “Eratosthenes Kuyusu”nun  Nil nehrindeki _Elephantine
 Adası_ nda olduğunu söyler.
@@ -980,7 +980,7 @@ Eratosthenes’in ölçümü antik çağlardaki en önemli deneylerdendi. Dünya
 
 ::: column(width=280)
 
-    x-media(src="images/obelisk.jpg" width=280 height=450 lightbox)
+    x-img(src="images/obelisk.jpg" width=280 height=450 lightbox)
 
 ::: column.grow
 
@@ -1204,7 +1204,7 @@ Burada Almanya’da Oberhausen’daki _Gazmetre_ yi görebilirsiniz. Yakınlarda
 
 ::: column(width=300)
 
-    x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
+    x-img(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
 {.caption} Oberhausen’daki Gazmetre
 
@@ -1254,7 +1254,7 @@ Yukarıdaki örneklerde silindirin iki tabanı hep _birbirinin tam üzerindeydi_
 
 ::: column(width=300)
 
-    x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
+    x-img(src="images/pisa.jpg" width=300 height=360 lightbox)
 
 {.caption} İtalya’daki _Pisa_ kulesi tam bir eğik silindir değil. 
 
@@ -1322,7 +1322,7 @@ Yani yüksekliği _h_ ve yarıçapı _r_ olan bir silindirin toplam yüzey alan�
 ---
 > id: cylinder-real-life
 
-    figure: x-media(src="images/cylinders.jpg" width=460 height=125)
+    figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
 Silindirler etrafta her yerde karşınıza çıkarlar, kola kutularından tuvalet kağıtlarına ya da su borularına. Aklınıza başka örnekler geliyor mu?
 
@@ -1350,23 +1350,23 @@ Diğer şekiller gibi koni de her yerde karşımıza çıkar: dondurma külahı,
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/ice-cream.jpg" width=120 height=120 lightbox)
+    x-img(src="images/ice-cream.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/traffic.jpg" width=120 height=120 lightbox)
+    x-img(src="images/traffic.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/roof.jpg" width=120 height=120 lightbox)
+    x-img(src="images/roof.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/christmas.jpg" width=120 height=120 lightbox)
+    x-img(src="images/christmas.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/tipi.jpg" width=120 height=120 lightbox)
+    x-img(src="images/tipi.jpg" width=120 height=120 lightbox)
 
 :::
 
@@ -1825,7 +1825,7 @@ Konik kesitler ilk olarak antik Yunan matematikçisi [Perga’lı Apollonius](bi
 
 ::: column(width=300)
 
-    x-media(src="images/conics.svg" width=300 height=340)
+    x-img(src="images/conics.svg" width=300 height=340)
 
 :::
 
@@ -1887,7 +1887,7 @@ Ne yazık ki gökyüzünün astronomik gözlemleri bu inancı desteklemedi. Örn
 
 ::: column(width=330)
 
-    x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
+    x-img(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
 {.caption} İznikli Yunan astronom Hipparchus
 
@@ -1914,7 +1914,7 @@ Bunu düzeltmek için astronomlar Güneş sistemi modellerine __Ekçemberler__ e
 
 ::: column(width=320)
 
-    x-media(src="images/epicycles.jpg" width=320 height=320)
+    x-img(src="images/epicycles.jpg" width=320 height=320)
 
 {.caption} __Dünyamerkezli evren modeli__ni gösteren bir 16. Yüzyıl çizimi. Yunance “planetes” “gezen” demek.
 :::

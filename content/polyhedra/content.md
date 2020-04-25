@@ -655,7 +655,7 @@ the Kite is the only one that can also be [concave](gloss:concave): if it is
 shaped like a dart or arrow:
 ::: column(width=320)
 
-    x-media(src="images/kites.jpg")
+    x-img(src="images/kites.jpg")
 
 :::
 
@@ -972,32 +972,32 @@ without any gaps or overlaps. Patterns like that are called
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
 {.caption} [[Hexagonal|Triangular|Quadratic]] honeycomb
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
 
 {.caption} Sinaloan Milk Snake skin
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
 
 {.caption} Cellular structure of leafs
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
+    x-img(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
 
 {.caption} Basalt columns at Giant’s Causeway in Northern Ireland
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
 
 {.caption} Pineapple skin
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
 
 {.caption} Shell of a tortoise
 :::
@@ -1010,32 +1010,32 @@ technology – from ancient Rome to the present. Here are a few examples:
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
+    x-img(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
 
 {.caption} [[Rectangular|Quadratic|Hexagonal]] pavement pattern
 ::: column(width=200)
 
-    x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
+    x-img(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
 
 {.caption} Greenhouse at the Eden Project in England
 ::: column(width=200)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
 
 {.caption} Mosaic at Alhambra
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
+    x-img(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
 
 {.caption} [[Triangular|Hexagonal|Rectangular]] roof at the British Museum in London
 ::: column(width=200)
 
-    x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
+    x-img(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
 
 {.caption} Cellular tessellation pavilion in Sydney
 ::: column(width=200)
 
-    x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
+    x-img(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
 
 {.caption} _Study of Regular Division of the Plane with Reptiles_, M. C. Escher
 :::
@@ -1315,22 +1315,22 @@ work contains strange, mutating creatures, patterns and landscapes:
 
     .row
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
         p.caption “Sky and Water I” (1938)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
         p.caption “Lizard” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
         p.caption “Lizard, Fish, Bat” (1952)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
         p.caption “Butterfly” (1948)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
         p.caption “Two Fish” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
 These artworks often look fun and effortless, but the underlying mathematical
@@ -1853,12 +1853,12 @@ in nature – and we can copy these properties in science and engineering.
 
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
+    x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Radiolaria skeleton
     
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/virus.jpg")
+    x-img(lightbox width=180 height=180 src="images/virus.jpg")
     p.caption Icosahedral virus
 
 ::: column.grow
@@ -1871,12 +1871,12 @@ elements but is almost shaped like a sphere.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
+    x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Buckyball molecule
       
 ::: column(width=180)
 
-    x-media(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
+    x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Montreal Biosphere
       
 ::: column.grow
@@ -1891,12 +1891,12 @@ Fuller](bio:fuller), famous for constructing similar-looking buildings.
 
 ::: column(width=180)
 
-    x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
+    x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Fluorite octahedron
       
 ::: column(width=180)
 
-    x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
+    x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Pyrite cube
       
 ::: column.grow
@@ -1907,12 +1907,12 @@ When they crack or shatter, you can see these shapes on a larger scale.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
     p.caption Octagonal space frames
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/louvre.jpg")
+    x-img(lightbox width="180", height="180", src="images/louvre.jpg")
     p.caption Louvre museum in Paris
 
 ::: column.grow
@@ -1923,12 +1923,12 @@ support large roofs and heavy bridges.
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/football.jpg")
+    x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Football
     
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/dice.jpg")
+    x-img(lightbox width="180", height="180", src="images/dice.jpg")
     p.caption Polygonal role-playing dice
 
 ::: column.grow

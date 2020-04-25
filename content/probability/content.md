@@ -535,7 +535,7 @@ position of every atom in the coin and of all the air molecules surrounding it,
 we could create a computer simulation to accurately predict what will happen.
 ::: column(width=240)
 
-    x-media(src="images/coins.jpg" width=240 height=343)
+    x-img(src="images/coins.jpg" alt="Flipping a Coin" width=240 height=343)
 
 :::
 
@@ -599,7 +599,7 @@ can only ever do one computation at a time. Quantum computers can use the
 properties of subatomic particles to do many calculations at the same time – and
 that makes them significantly faster.
 
-    figure: x-media(lightbox src="images/quantum.jpg" width=760 height=390)
+    figure: x-img(lightbox src="images/quantum.jpg" alt="Quantum Mechanics" width=760 height=390)
 
 ---
 > id: radioactive-2

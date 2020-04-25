@@ -110,7 +110,7 @@ future.
 
 ::: column(width=320)
 
-    x-media(src="images/lgp30.jpg" width=320 height=280)
+    x-img(src="images/lgp30.jpg" width=320 height=280 alt="Computer used by Edward Lorenz")
 
 {.caption} Edward Lorenz used an LGP-30, one of the first off-the-shelf
 computers.
@@ -225,14 +225,14 @@ with an acid. (Shown at 20x speed, © Tim Kench)
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/finance.jpg" width=200 height=200)
+    x-img(lightbox src="images/finance.jpg" width=200 height=200 alt="Stock Market Charts")
 
 {.caption} __Stock markets__, inflation and other parts of the economy are
 chaotic, making them very difficult to predict.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/heart.jpg" width=200 height=200)
+    x-img(lightbox src="images/heart.jpg" width=200 height=200 alt="Heart")
 
 {.caption} Scientists hope that explaining the origin of chaotic
 __heartbeats__ (_ventricular fibrillation_) can lead to a cure.
@@ -247,14 +247,14 @@ __heartbeats__ (_ventricular fibrillation_) can lead to a cure.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/city.jpg" width=200 height=200)
+    x-img(lightbox src="images/city.jpg" width=200 height=200)
 
 {.caption} __Population dynamics__ often is chaotic – from the number of humans
 in a city, to rodent, fish or insect populations.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/stars.jpg" width=200 height=200 credit="Hubble/ESO")
+    x-img(lightbox src="images/stars.jpg" width=200 height=200 credit="Hubble/ESO")
 
 {.caption} __Variable stars__ pulsate by altering their brightness over time.
 Some of these stars pulsate in a chaotic pattern.
@@ -263,7 +263,7 @@ Some of these stars pulsate in a chaotic pattern.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/code.jpg" width=200 height=200)
+    x-img(lightbox src="images/code.jpg" width=200 height=200)
 
 {.caption} Computers can use chaotic systems to generate pseudo-__random
 numbers__, or to securely encrypt images.
@@ -287,7 +287,7 @@ forecasts.
 
 ::: column(width=300)
 
-    x-media(src="images/forecast.jpg" width=300 height=280)
+    x-img(src="images/forecast.jpg" width=300 height=280)
 
 ::: column.grow
 

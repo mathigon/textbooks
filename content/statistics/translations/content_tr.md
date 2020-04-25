@@ -80,7 +80,7 @@ Pearson’ın bu çarpık sonuçları görme ihtimali 100 milyonda 1’den azdı
 
 ::: column(width=300)
 
-    x-media(src="images/cocktails.jpg" width=300 height=185)
+    x-img(src="images/cocktails.jpg" width=300 height=185)
 
 ::: column.grow
 Monte Carlo'ya gittiğinde, nihayet çarpık sonuçların nedeninin çok farklı bir nitelikte olduğunu keşfetti: Sonuçları kaydetmesi için gönderilen gazeteciler kumarhanenin barında oturuyorlardı, bir şeyler içiyor ve öylesine renklere oynuyorlardı...
@@ -122,7 +122,7 @@ Bilgisayar bir paket sigara büyüklüğündeydi ve bellerine sarılmıştı. Ru
 ---
 > id: dealer-2
 
-    figure: x-media(src="images/las-vegas.jpg" width=760 height=345)
+    figure: x-img(src="images/las-vegas.jpg" width=760 height=345)
 
 1961 yazında Thorp ve Shannon Las Vegas’ta bilgisayarlarını denediler. Fakat bir miktar para kazanırken, model uçakların bile parçalarını içeren bilgisayar, daha büyük ölçekte kullanılacak kadar sağlam değildi.
 

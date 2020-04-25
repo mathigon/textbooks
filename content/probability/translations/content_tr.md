@@ -418,7 +418,7 @@ Bu ders çoğunlukla bozuk para, zar ya da rulet çarkı gibi nesnelerin tamamen
 Bir bozuk para atalım: Yazı gelme ihtimali 0,5. Tam parayı atmadan önce paranın hangi yüzünün yukarı baktığını bilirsek, biraz daha iyi bir tahminde bulunabiliriz, 0,58 ya da 0,41 gibi. Ayrıca paranın ağırlığını ve boyutunu, açısını, konumunu ve elimizden ayrılırkenki hızını bilseydik, fizik kanunlarını - yer çekimi, sürtünme, hava direnci - kullanarak paranın hareketini modelleyebilir ve sonucu öngörebilirdik. Nihayetinde paranın her atomunun ve onları çevreleyen hava moleküllerinin konumlarını tam olarak bilseydik, bir bilgisayar simülasyonu yaparak sonucu isabetli olarak öngörebilirdik.
 ::: column(width=240)
 
-    x-media(src="images/coins.jpg" width=240 height=343)
+    x-img(src="images/coins.jpg" width=240 height=343)
 
 :::
 
@@ -458,7 +458,7 @@ Diğer bir yandan, bütün bir parçanın zaman içinde bozunma oranı o kadar d
 
 Bu akıl almaz özellik Kuantum bilgisayarlarınca kullanılıyor. Bildiğimiz bilgisayarlar aynı anda sadece tek bir işlem yapabilirler. Kuantum bilgisayarları aynı anda pek çok işlem yapmak için atom altı parçacıkların özelliklerini kullanabilirler- ve bu onları çok daha hızlı yapıyor.
 
-    figure: x-media(lightbox src="images/quantum.jpg" width=760 height=390)
+    figure: x-img(lightbox src="images/quantum.jpg" width=760 height=390)
 
 ---
 > id: radioactive-2
