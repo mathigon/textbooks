@@ -7,7 +7,7 @@
 
 Many professions that use mathematics are interested in one specific aspect –
 _finding patterns_, and being able to predict the future. Here are a few
-examples:
+examples: 
 
 ::: column(width=160 parent="padded-thin")
 
@@ -23,7 +23,7 @@ rate in parts of Los Angeles by 12%!
 
 ::: column(width=160)
 
-    x-img(src="images/volcanoes.jpg" width=160 height=160 alt="Volcanoe")
+    x-img(src="images/volcanoes.jpg" width=160 height=160 alt="Volcano")
 
 ::: column(width=400)
 
@@ -1149,24 +1149,24 @@ male and female).
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -1175,7 +1175,7 @@ male and female).
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
@@ -1698,7 +1698,7 @@ You can learn more about these and other properties of prime numbers in our
 course on [Divisibility and Primes](/course/divisibility/primes). They are
 some of the most important and most mysterious concepts in mathematics!
 
-    figure: img(src="images/primes.svg" width=480 height=156) 
+    figure: img(src="images/primes.svg" width=480 height=156)
 
 ---
 > id: perfect
@@ -1918,7 +1918,7 @@ The British mathematician [John Conway](bio:conway) discovered that, no matter
 what number you pick as starting value, the sequence will eventually split into
 distinct “sections” that no longer interact with each other. Conway called this
 the _Cosmological Theorem_, and named the different sections using the chemical
-elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_. 
+elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_.
 
 ---
 > id: quiz
@@ -2226,7 +2226,7 @@ completely different methods, and then see how they are related.
     // -------------------------------------------------------------------------
 
     // ## The In-and-out Puzzle
-    // 
+    //
     // > section: in-and-out
     // > sectionStatus: dev
     // > id: in-and-out-intro
@@ -2245,7 +2245,7 @@ completely different methods, and then see how they are related.
 
     // An actor auditioning for a different part was faced with 20 in his circle.
     // Where should ! he stand?
-    
+
     // Find a pattern that tells you where to stand no matter how many people
     // are in the circle. Why does it work?
 
@@ -2336,7 +2336,7 @@ completely different methods, and then see how they are related.
     // Can you explain why this happens?
     // Now start with three numbers.
     // This time, we can generate a sequence where the next number is the mean of the last three numbers.
-    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163. 
+    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163.
     // What would happen if you continued this process indefinitely?
     // Choose some more sets of three starting numbers.
     // Can you find a relationship between your starting numbers and the limit of the sequence they generate?
