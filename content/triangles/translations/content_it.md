@@ -439,7 +439,7 @@ l'area di un triangolo deve valere la metà:
       
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
-      path.blue.reveal(x="segment(c,d)" label="height" when="next-0" delay="1000" target="height")
+      path.blue.reveal(x="segment(c,d)" label="altezza" when="next-0" delay="1000" target="height")
       path.blue.reveal(x="angle(c,d,b).sup" when="next-0" delay="1000" target="height")
       path.red.reveal(x="segment(a,b)" label="base" when="next-0" delay="1000" target="base")
 
@@ -1581,7 +1581,7 @@ vera altezza dell'Everest, la più alta montagna del mondo: 8,848m.
 
 Questa spiegazione è una grande semplificazione dello straordinario lavoro fatto dai
 matematici e dai geografi che hanno lavorato sulla Grande indagine trigonometrica. Essi
-iniziarono a livelle del mare sulla spiaggia e le misure si estesero per migliaia di chilometri, costruirono torri di osservazione attraverso tutto il paese e tennero anche in
+iniziarono a livello del mare sulla spiaggia e le misure si estesero per migliaia di chilometri, costruirono torri di osservazione attraverso tutto il paese e tennero anche in
 considerazione la curvatura della terra.
 
     figure: x-img(src="images/himalaya.jpg" width=760 height=320)
