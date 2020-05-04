@@ -2,6 +2,163 @@
 # MATHIGON GLOSSARY
 # ==============================================================================
 
+absolute-value:
+  title: Valoare Absolută
+  text: __Valoarea absolută__ a unui numar este distanța dintre acesta si 0.
+    It makes negative numbers positive, but leaves positive numbers
+    unchanged. The absolute value of `x` is written as `|x|`. For example,
+    `|-5| = 5` and `|3| = 3`.
+  # The absolute value of a number is the distance between the number and the
+  # origin. This connects the notion of _absolute value_ to the modulus of a
+  # complex number and the magnitude of a vector.
+
+acute-angle:
+  title: Unghi ascuțit
+  text: Un __unghi ascuțit__ este un unghi de mărime mai mică de 90°.
+
+acute-triangle:
+  title: Triunghi ascuțit
+  text: Într-un __triunghi ascuțit__, toate cele trei unghiuri sunt _ascuțite_
+    (mai mici ca 90°).
+  link: /course/triangles/properties#classification
+
+adic:
+  title: N-adic Numbers
+  text: __*N*-adic__ numbers, for some integer _n_, are a special number system,
+    with a definition of “closeness” that is different from usual arithmetic.
+    Two _n_-adic numbers are _close_ if their difference is divisible by a high
+    power of _n_.
+
+adjacent-angles:
+  title: Unghiuri adiacente
+  text: Două unghiuri sunt __adiacente__ dacă au vârful și o latură în comun dar
+    nu se suprapun. Cuvăntul _adiacent_ înseamnă pur și simplu “în vecinătate”.
+
+aleph-zero:
+  title: Aleph Zero
+  text: Aleph Zero, scris folosindu-se litera ebraică א‎, este cardinalitatea unei
+    mulțimi infinite numarabile (de exemplu, numerele naturale).
+
+algebraic-numbers:
+  title: Algebraic Numbers
+  text: |
+    __Algebraic numbers__ are the subset of the real numbers, which can be
+    represented as roots of a polynomial equation with integer coefficients.
+    All rational numbers (like `2/3`) and surds (like `root(3,5)`) are
+    algebraic, and so are numbers that can be build from surds (like
+    `(2 + sqrt(3))/(1 - sqrt(5))`.
+
+    Those numbers which are real but _not_ algebraic are called _transcendental
+    numbers_.
+
+algorithm:
+  title: Algorithm
+  text: |
+    An __algorithm__ is a set of rules or instructions that can be used to
+    solve a specific problem. They are commonly used by computers, and appear
+    everywhere in mathematics: from _long division_ to _Gaussian elimination_.
+
+alternate-angles:
+  title: Alternate angles
+  text: |
+    __Alternate angles__ are formed by two _parallel lines_ which are crossed
+    by a _traversal_ line, and they are always congruent. In the diagram below,
+    each of the pairs of angles labelled 1, 2, 3 and 4 are alternate. The two
+    angles in every pair lie on a different parallel line, and opposite sides
+    of the traversal.
+
+    The angle pairs 1 and 2 are called __alternate exterior angles__, because
+    they lie outside the parallel lines, and the angle pairs 3 and 4 are
+    called __alternate interior angles__.
+  # TODO Image
+
+angle:
+  title: Angle
+  text: An angle is formed by two rays that share a common endpoint. Each ray
+    is called a side of the angle. the size of an angle is usually measured in
+    _degrees_ or _radians_.
+
+angle-bisector:
+  title: Angle bisector
+  text: An __angle bisector__ is a line or ray that splits an angle in half,
+    into two congruent, smaller angles.
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: The cells in a dot machine can contain __anti-dots__, which you can
+    think of as “holes” or “negative dots”. They have a value of –1. You can
+    always add a dot and an anti-dot to the same cell, without changing its
+    value.
+
+apothem:
+  title: Apothem
+  text: The __apothem__ of a regular polygon is the distance from the midpoint
+    of one of its sides to its center.
+
+arabic-numerals:
+  title: Arabic Numerals
+  text: |
+    The __Arabic numeral system__ uses ten different digits (0, 1, 2, 3, 4, 5,
+    6, 7, 8, 9) together with a decimal place-value system, to write any number.
+
+    It was first developed in India, then adapted by Arabic mathematicians,
+    before being brought to Europe by the Italian mathematician Leonardo
+    Fibonacci.
+
+arccos:
+  title: Inverse Cosine
+  text: |
+    The __inverse cosine__ function is a trigonometric function written as
+    `arccos(x)` or `cos^(-1)(x)`. It is the inverse of `cos(x)`.
+  # Basic idea: To find cos-1 (½), we ask "what angle has cosine equal to ½?" The
+  # answer is 60°. As a result we say cos-1 (½) = 60°. In radians this is
+  # cos-1(½) = π/3. There are actually many angles that have cosine equal to ½.
+  # We are really asking "what is the simplest, most basic angle that has
+  # cosine equal to ½?" As before, the answer is 60°. Thus cos-1 (½) = 60° or
+  # cos-1 (½) = π/3. Details: What is cos-1 (–½)? Do we choose 120°, –120°, 240°,
+  # or some other angle? The answer is 120°. With inverse cosine, we select the
+  # angle on the top half of the unit circle. Thus cos-1 (–½) = 120° or
+  # cos-1 (–½) = 2π/3. In other words, the range of cos-1 is
+  # restricted to [0, 180°] or [0, π].
+
+archimedean-solid:
+  title: Archimedean solid
+  text: An __Archimedean solid__ is a polyhedron made up of different kinds of
+    regular polygons, that looks the same from every direction. There are 13
+    different Archimedean solids.
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: Arithmetic Mean
+  text: The __mean__ is the _average_ of a set of numbers. You can calculate it
+    but adding up all the numbers in the set, and dividing the total by the
+    number of items.
+
+arithmetic-sequence:
+  title: Arithmetic Sequence
+  text: An __arithmetic sequence__ (sometimes called __arithmetic progression__)
+    is a sequence of numbers in which the difference _d_ between consecutive
+    terms is always constant.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: Arithmetic Series
+  text: An __arithmetic series__ is the sum of the terms in an arithmetic sequence.
+
+associative:
+  title: Associativity
+  text: An operation • is associative if `a•(b•c) = (a•b)•c`. For example,
+    addition (+) and multiplication (×) of numbers are associative.
+
+atom:
+  title: Atom
+  text: |
+    __Atoms__ are the particles that make up all ordinary matter: solids,
+    liquids, gases and plasma. Atoms consist of a positively-charged _core_ (or
+    _nucleus_), made up of _protons_ and _neutrons_, and surrounded by shells
+    of negatively-charged _electrons_. The diameter of an atom is approximately
+    a ten-millionth of a millimetre.
 
 axiom:
   title: Axioma

@@ -1,0 +1,22 @@
+- id: p1
+  text: |
+    Care este aria unui cerc cu raza de 10m?
+  choices:
+    - `10π`m
+    - `100π`m
+    - `10^2`m
+    - `10π^2`m
+  hints:
+    - Să ne reamintim că formula de calcul pentru aria unui cerc de rază `r` este `A = π r^2`.
+  read-more: /course/circles/introduction#area
+
+- id: p2
+  text: |
+    Care este circumferința unui cerc cu raza de 4cm?
+  choices:
+    - `4π`
+    - `8π`
+    - `16π`
+  hints:
+    - Să ne reamintim că formula de calcul a circumferinței unui cerc de rază `r` este `C = 2 π r`.
+  read-more: /course/circles/introduction#wheel
