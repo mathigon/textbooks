@@ -1,18 +1,20 @@
 - id: p1
-  text: |
-    What is the area of a circle with radius 10m?
+  text: What is the area of a circle with radius {r}m?
   choices:
-    - `10π`m
-    - `100π`m
-    - `10^2`m
-    - `10π^2`m
+    - `{r}π`m
+    - `{r^2}π`m
+    - `{r}^2`m
+    - `{r}π^2`m
   hints:
     - Remember that the area of a circle with radius `r` is given by the formula `A = π r^2`.
+    - In this case, `r = {10}`, so what do we get for `A`?
+  variables:
+    # r: [5, 8, 10, 12, 20]
+    # r1: [5...50] :5
   read-more: /course/circles/introduction#area
 
 - id: p2
-  text: |
-    What is the circumference of a circle with radius 4cm?
+  text: What is the circumference of a circle with radius 4cm?
   choices:
     - `4π`
     - `8π`

@@ -1,4 +1,4 @@
-﻿# Poligoni e poliedri
+# Poligoni e poliedri
 
 ## Poligoni
 
