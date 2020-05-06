@@ -1,4 +1,4 @@
-﻿# Triangoli e trigonometria
+# Triangoli e trigonometria
 
 ## Introduzione
 
@@ -18,7 +18,7 @@ compresa la catena dell'Himalaya.
 
 ::: column(width=240)
 
-    x-img.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
+    x-img(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
 
 {.caption} Il _teodolite_, uno strumento di misura
 :::
@@ -88,17 +88,23 @@ Questa proprietà rende i triangoli particolarmente utili nelle costruzioni, per
 possono sostenere un grande peso.
 
 ::: column(width=200)
+
     x-img(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
 
 {.caption} Un “ponte a capriata” è sostenuto da sbarre triangolari
+
 ::: column(width=200)
+
     x-img(src="images/pylon.jpg" width=200 height=200 lightbox)
 
 {.caption} Triangoli nei piloni dell'alta tensione
+
 ::: column(width=200)
+
     x-img(src="images/bike.jpg" width=200 height=200 lightbox)
 
 {.caption} Anche nelle bici si usano i triangoli per la stabilità.
+
 :::
 
 ---
@@ -110,27 +116,36 @@ particolarmente appropriati per approssimare delle superfici curve piÙ compless
 fatto negli edifici…
 
 ::: column(width=200)
+
     x-img(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Il “Gherkin”, un grattacielo di Londra
+
 ::: column(width=200)
+
     x-img(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Torre della Bank of China a Hong Kong
+
 ::: column(width=200)
+
     x-img(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Atrio del British Museum a Londra
-:::
 
+:::
 ::: column.grow
+
 …ma anche nel mondo virtuale. Nelle immagini di sintesi (ad esempio nei film o
 nei videogiochi), tutte le superfici sono utilizzate utilizzando una “griglia” formata da minuscoli triangoli.
 Gli artisti e gli ingenieri informatici devono conoscere la geometria e la trigonometria per
 poter muovere e trasformare questi triangoli in modo realistico e per
 poter calcolare il loro colore e la loro struttura.
+
 ::: column(width=220)
+
     x-img(src="images/dolphin.jpg" width=220 height=135)
+
 :::
 
     figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
