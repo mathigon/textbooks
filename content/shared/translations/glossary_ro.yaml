@@ -3,11 +3,10 @@
 # ==============================================================================
 
 absolute-value:
-  title: Valoare Absolută
-  text: __Valoarea absolută__ a unui numar este distanța dintre acesta si 0.
-    It makes negative numbers positive, but leaves positive numbers
-    unchanged. The absolute value of `x` is written as `|x|`. For example,
-    `|-5| = 5` and `|3| = 3`.
+  title: Valoarea Absolută
+  text: __Valoarea absolută__ a unui numar este distanța dintre acesta și 0.
+    Numerele negative devin pozitive, iar numerele pozitive rămân neschimbate. 
+    Valoarea absolută a lui `x` se notează `|x|`. De exemplu, `|-5| = 5` și `|3| = 3`.
   # The absolute value of a number is the distance between the number and the
   # origin. This connects the notion of _absolute value_ to the modulus of a
   # complex number and the magnitude of a vector.
@@ -18,16 +17,9 @@ acute-angle:
 
 acute-triangle:
   title: Triunghi ascuțit
-  text: Într-un __triunghi ascuțit__, toate cele trei unghiuri sunt _ascuțite_
+  text: Într-un __triunghi ascuțit__ toate cele trei unghiuri sunt _ascuțite_
     (mai mici ca 90°).
   link: /course/triangles/properties#classification
-
-adic:
-  title: N-adic Numbers
-  text: __*N*-adic__ numbers, for some integer _n_, are a special number system,
-    with a definition of “closeness” that is different from usual arithmetic.
-    Two _n_-adic numbers are _close_ if their difference is divisible by a high
-    power of _n_.
 
 adjacent-angles:
   title: Unghiuri adiacente
@@ -40,77 +32,68 @@ aleph-zero:
     mulțimi infinite numarabile (de exemplu, numerele naturale).
 
 algebraic-numbers:
-  title: Algebraic Numbers
+  title: Numere algebrice
   text: |
-    __Algebraic numbers__ are the subset of the real numbers, which can be
-    represented as roots of a polynomial equation with integer coefficients.
-    All rational numbers (like `2/3`) and surds (like `root(3,5)`) are
-    algebraic, and so are numbers that can be build from surds (like
+    __Numerele algebrice__ reprezintă o submulțime a mulțimii numerelor reale care 
+    pot fi rădăcini ale unei ecuații polinomiale cu coeficienți întregi.
+    Toate numerele raționale (precum `2/3`) și radicalii (precum `root(3,5)`) sunt
+    numere algebrice, precum și numerele ce pot fi construite din radicali (precum
     `(2 + sqrt(3))/(1 - sqrt(5))`.
 
-    Those numbers which are real but _not_ algebraic are called _transcendental
-    numbers_.
+    Numerele care sunt reale, dar _nu_ și algebrice se numesc _numere transcendentale_.
 
 algorithm:
-  title: Algorithm
+  title: Algoritm
   text: |
-    An __algorithm__ is a set of rules or instructions that can be used to
-    solve a specific problem. They are commonly used by computers, and appear
-    everywhere in mathematics: from _long division_ to _Gaussian elimination_.
+    Un __algoritm__ este un set de reguli sau instrucțiuni ce pot fi folosite pentru
+    a rezolva o problemă specifică.  Algoritmii sunt utilizați în mod obișnuit de calculatoare
+    și apar peste tot în matematică: de la _împărțire_ până la _eliminarea Gaussiană_.
 
 alternate-angles:
-  title: Alternate angles
+  title: Unghiuri alterne
   text: |
-    __Alternate angles__ are formed by two _parallel lines_ which are crossed
-    by a _traversal_ line, and they are always congruent. In the diagram below,
-    each of the pairs of angles labelled 1, 2, 3 and 4 are alternate. The two
-    angles in every pair lie on a different parallel line, and opposite sides
-    of the traversal.
+    __Unghiurile alterne__ sunt unghiurile formate de două _drepte paralele_ ce sunt taiate
+    de o linie de _traversare_. Ele sunt mereu congruente. În diagrama de mai jos,
+    fiecare pereche de unghiuri notate 1, 2, 3 and 4 sunt unghiuri alterne. Cele două unghiuri
+    din fiecare pereche se află pe o linie paralelă diferită și de-o parte si de alta a linie 
+    de traversare.
 
-    The angle pairs 1 and 2 are called __alternate exterior angles__, because
-    they lie outside the parallel lines, and the angle pairs 3 and 4 are
-    called __alternate interior angles__.
+    Perechile de unghiuri 1 și 2 se numesc __unghiuri alterne externe__, deoarece 
+    se află pe partea de dinafară a dreptelor parelele, iar perechile de unghiuri 
+    3 și 4 se numesc __unghiuri alterne interioare__.
   # TODO Image
 
 angle:
-  title: Angle
-  text: An angle is formed by two rays that share a common endpoint. Each ray
-    is called a side of the angle. the size of an angle is usually measured in
-    _degrees_ or _radians_.
+  title: Unghi
+  text: Un unghi este format de două semidrepte ce au o extremitate comună. Fiecare semidreaptă 
+    se numește latura unghiului. Un unghi se măsoară de obicei în _grade_ sau _radiani_.
 
 angle-bisector:
-  title: Angle bisector
-  text: An __angle bisector__ is a line or ray that splits an angle in half,
-    into two congruent, smaller angles.
+  title: Bisectoarea unui unghi
+  text: __Bisectoarea unui unghi__  este o dreaptă sau semidreaptă care împarte un unghi 
+    pe jumătate, în două unghiuri mai mici, congruente.
   image: angle-bisector.svg
 
-anti-dot:
-  title: Anti-Dot
-  text: The cells in a dot machine can contain __anti-dots__, which you can
-    think of as “holes” or “negative dots”. They have a value of –1. You can
-    always add a dot and an anti-dot to the same cell, without changing its
-    value.
-
 apothem:
-  title: Apothem
-  text: The __apothem__ of a regular polygon is the distance from the midpoint
-    of one of its sides to its center.
+  title: Apotemă
+  text: __Apotema__ unui poligon regulat este distanța de la mijlocul unei laturi 
+    până la centrul său.
 
 arabic-numerals:
-  title: Arabic Numerals
+  title: Numere arabe
   text: |
-    The __Arabic numeral system__ uses ten different digits (0, 1, 2, 3, 4, 5,
-    6, 7, 8, 9) together with a decimal place-value system, to write any number.
-
-    It was first developed in India, then adapted by Arabic mathematicians,
-    before being brought to Europe by the Italian mathematician Leonardo
-    Fibonacci.
+    __Sistemul cifrelor arabe__ folosește 10 cifre diferite (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) 
+    împreună cu un sistem de valori zecimale pentru a scrie orice număr.
+    
+    Acest sistem a fost dezvoltat pentru prima oară în India, iar apoi a fost adaptat
+    de matematicienii arabi înainte de a fi introdus In Europa de către matematicianul
+    italian Leonardo Fibonacci.
 
 arccos:
-  title: Inverse Cosine
+  title: Arccosinus
   text: |
-    The __inverse cosine__ function is a trigonometric function written as
-    `arccos(x)` or `cos^(-1)(x)`. It is the inverse of `cos(x)`.
+    Funcția arccosinus este o funcție trigonometrică notată cu
+    `arccos(x)` sau `cos^(-1)(x)`. Este funcția inversă a funcției `cos(x)`.
   # Basic idea: To find cos-1 (½), we ask "what angle has cosine equal to ½?" The
   # answer is 60°. As a result we say cos-1 (½) = 60°. In radians this is
   # cos-1(½) = π/3. There are actually many angles that have cosine equal to ½.
@@ -123,52 +106,72 @@ arccos:
   # restricted to [0, 180°] or [0, π].
 
 archimedean-solid:
-  title: Archimedean solid
-  text: An __Archimedean solid__ is a polyhedron made up of different kinds of
-    regular polygons, that looks the same from every direction. There are 13
-    different Archimedean solids.
+  title: Solidd arhimedian
+  text: Un __solid arhimedian__ este un poliedru construit din diferite tipuri de
+    poligoane regulate și care arată la fel din orice direcție. Există 13 tipuri
+    diferite de solide arhimediene.
   link: /course/polyhedra/platonic#archimedean
 
 arithmetic-mean:
-  title: Arithmetic Mean
-  text: The __mean__ is the _average_ of a set of numbers. You can calculate it
-    but adding up all the numbers in the set, and dividing the total by the
-    number of items.
+  title: Media aritmetică
+  text: __Media aritmetică este valoarea medie a unui set de numere. Se poate calcula
+    adunând toate numerele din set și împărțind totalul la numărul de elemente.
 
 arithmetic-sequence:
-  title: Arithmetic Sequence
-  text: An __arithmetic sequence__ (sometimes called __arithmetic progression__)
-    is a sequence of numbers in which the difference _d_ between consecutive
-    terms is always constant.
+  title: Progresia aritmetică
+  text: O __progresie aritmetică__  este un șir de numere ai cărui
+    termeni consecutivi diferă întotdeauna printr-o diferență constantă _d_.
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
 arithmetic series:
-  title: Arithmetic Series
-  text: An __arithmetic series__ is the sum of the terms in an arithmetic sequence.
+  title: Serie aritmetică
+  text: O __serie aritmetică__ este suma termenilor unei progresii aritmetice.
 
 associative:
-  title: Associativity
-  text: An operation • is associative if `a•(b•c) = (a•b)•c`. For example,
-    addition (+) and multiplication (×) of numbers are associative.
+  title: Asociativitate
+  text: O operație • este asociativă dacă `a•(b•c) = (a•b)•c`. De exemplu,
+    adunarea (+) și înmulțirea (×) numerelor sunt operatii asociative.
 
 atom:
   title: Atom
   text: |
-    __Atoms__ are the particles that make up all ordinary matter: solids,
-    liquids, gases and plasma. Atoms consist of a positively-charged _core_ (or
-    _nucleus_), made up of _protons_ and _neutrons_, and surrounded by shells
-    of negatively-charged _electrons_. The diameter of an atom is approximately
-    a ten-millionth of a millimetre.
+    __Atomii__ sunt particulele care alcătuiesc toată materia obișnuită: solide,
+    lichide, gaze  și plasmă. Atomii este format dintr-un _nucleu_ încărcat pozitiv, 
+    alcătuit din _protoni_ și _neutroni_,  și înconjurat de un înveliș de _electroni_
+    încărcați negativ. Diametrul unui atom este de aproximativ o zecime de nanometru.
 
 axiom:
-  title: Axioma
+  title: Axiomă
   text: O __axiomă__, numită uneori și __postulat__, este un enunț matematic considerat
     evident și care nu mai trebuie dovedit. Ar trebui să fie atât de simplă,
     încât este adevărată în mod evident și incontestabil.
 
     Axiomele formeaza fundația  matematicii și pot fi folosite pentru a demonstra
     alte rezultate mai complexe.
+    
+base-10:
+  title: Baza 10
+  text: __Sistemul zecimal__ (sau __baza 10__) este sistemul de numerație cel mai utilizat
+    din lume. Fiecare cifră a unui număr poate avea una din cele zece valori diferite, 
+    de la 0 la 9.
 
+calculus:
+  title: Analiza matematică
+  text: __Analiza matematică__ este ramura matematicii ce se ocupă cu limite, derivate,
+    integrale și serii de puteri. Printre problemele comune abordate se numără
+    calcularea pantei unei curbe, calcularea punctelor de extrem, calcularea punctului
+    de inflexiune și calcularea ariei de sub o curbă.
+    
+cavalieri:
+  title: Principiul lui Cavalieri
+  text: |
+    __Principiul lui Cavalieri__ afirmă că două solide care au înălțimea 
+    și aria secțiunii transversale la fiecare nivel identice, atunci ele 
+    au același volum.
+
+    Putem folosi aceste date pentru a deduce că volumul prismei și al cilindrului
+    este aria secțiunii transversale înmulțită cu înălțimea.
+    
 circle:
   title: Cerc
   text: Un __cerc__ este mulțimea tuturor punctelor din plan aflate
@@ -186,20 +189,114 @@ circle-circumference:
   text: __Circumferința__ unui cerc este distanța în jurul acestuia.
     Un cerc cu rază _r_ are circumferința `C = 2 pi r`.
   link: /course/circles/introduction#radius
+  
+circle-diameter:
+  title: Diametru (cerc)
+  text: __Diametrul__ unui cerc este distanța dintre două puncte opuse aflate pe 
+    circumferința sa, unde distanța trece prin centrul cercului.
+  link: /course/circles/introduction#radius
 
 circle-radius:
   title: Rază
   text: __Raza__ unui cerc este distanța (sau segmentul de dreaptă) dintre centru
     și orice punct aflat pe circumferința sa.
   link: /course/circles/introduction#radius
+  
+circle-sector:
+  title: Sector circular
+  text: |
+    Un __sector circular__ este o porțiune din interiorul unui cerc mărginită de 
+    două raze și un __arc de cerc__. Aria sa este proporțională cu unghiul intern,
+    precum și cu lungimea arcului. Așadar
+    
+    {.text-center} `(A_"Sector circular")/(A_"Cerc") = "Arc"/"Circumferință" = θ/(2π)`
+  link:  /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+  
+compass:
+  title: Compas
+  text: Un compas este un instrument de desen folosit pentru a crea cercuri 
+    sau arce de cerc. El este format din două brațe - acul de la un capăt este
+    poziționat în centru, în timp de creionul de la celalalt capăt este folosit
+    pentru a trasa linia curbă.
 
+cone:
+  title: Con circular
+  text: |
+    Un __con circular__ este un corp geometric tridimensional care are o _bază_ circulară
+    unită într-un singur punct (numit vertex) de o laterală curbată. Te poți gândi 
+    la un con ca la o “piramidă circulară”.
+
+    Un __con drept__ este un con care are vârful exact deasupra centrului bazei sale.
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+  
+cone-volume:
+  title: Volumul unui Con
+  text: |
+    Volumul unui con este dat de ecuația
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    unde _r_ este raza bazei circulare și _h_ este înălțimea conului
+    (lungimea perpendicularei de la bază la vertex).
+  
 congruent:
   title: Congruența
   text: În geometrie, două figuri geometrice sunt __congruente__ dacă sunt identice
     ca dimensiune, formă și mărime. Asta înseamnă că le putem muta, răsturna sau roti
     astfel încât să se potrivească exact una peste alta.
   link: /course/euclidean-geometry/definitions#congruence
+  
+conic-section:
+  title: Secțiune conică
+  text: |
+    O __secțiune conică__ este o curbă ce rezultă în urma intersecției suprafeței 
+    unui con cu o suprafață plană. Există patru tipuri diferite de secțiuni conice 
+    care au multe proprietăți comune:
+    * Cercul
+    * Elipsa
+    * Parabola
+    * Hiperbola
+  link: /course/circles/conic-sections
+  
+cos:
+  title: Cosinus
+  text: __Cosinus__ este o funcție trigonometrică ce se notează `cos(θ)`. Ea este definită 
+    într-un triunghi dreptunghic ca fiind raportul dintre cateta alăturată și ipotenuză.
+  # cos(x) is a periodic function with period 2π.
+  link: /course/triangles/trigonometry#trig-functions
+  
+cylinder:
+  title: Cilindru
+  text: Un cilindru __cylinder__ este un corp geometric format din două părți circulare 
+    congruente și paralele (_bazele_) unite printr-o suprafață curbă. 
+    Te poți gândi la un cilindru ca la o "prismă circulară". 
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+  
+cylinder-volume:
+  title: Volumul unui cilindru
+  text: |
+    Volumul unui cilindru este dat de ecuația
 
+    {.text-center} `V = π r^2 h`,
+
+    undee _r_ este raza bazei, și _h_ este înălțimea cilindrului
+    (lungimea perpendicularei dintre cele două baze).
+    
+degrees:
+  title: Grade
+  text: __Gradele__  sunt o unitate de măsură a unghiurilor, notată cu simbolul °.
+    O mișcare de revoluție completă este de 360°, un unghi drept are 90° și asa mai departe.
+
+dilation:
+  title: Scalare
+  text:  __Scalarea__ este o transformare geometrică prin care o formă geometrică 
+    se redimensionează prin mărire sau micșorare.
+  image: dilation.svg
+  link: /course/transformations/dilations
+  
 dna:
   title: ADN
   text: __ADN__-ul (acidul dezoxiribonucleic) este o moleculă care conține codul genetic
@@ -213,6 +310,19 @@ dodecahedron:
   text: __Dodecaedrul__ este un poliedru cu douăsprezece fețe care sunt pentagoane regulate.
     El are 20 de vârfuri și 30 de muchii.
   link: /course/polyhedra/platonic#platonic-overview
+  
+ellipse:
+  title: Elipsa
+  text: |
+    O __elipsă__ este o traiectorie curbă ce înconjoară două focare. Pentru orice punct
+    de pe circumferință _suma distanțelor_ la cele două focare este constantă.
+
+    Dacă focarele sunt prea apropiate, elipsa arată aproape ca un cerc. Pe măsură 
+    ce se îndepărtează, elipsa devine mai alungită.
+
+    Elipsele reprezintă un tip de _secțiune conică_: intersecția unui con cu un plan.
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
 
 equilateral-triangle:
   title: Triunghi echilateral
@@ -225,6 +335,42 @@ euclidean-geometry:
     tridimensionale. Depinde de doar cinci _axiome_, legile de bază ale geometriei, ce descriu
     toate operațiunile și construcțiile permise.
   link: /course/euclidean-geometry/euclids-axioms#euclid
+
+gravity:
+  title: Gravitația
+  text: |
+    __Gravitația__ este una din cele patru forțe fundamentale ale naturii. Este forța
+    care atrage oricare două mase din univers una către cealaltă. Isaac Newton a descoperit
+    că forța de atracție dintre două mase `m_1` și `m_2` este
+
+    {.text-center} `F = (G m_1 m_2) / r^2`,
+
+    unde _G_ este constanta gravitațională și _r_ este distanța dintre mase.
+  
+hexagon:
+  title: Hexagon
+  text: Un hexagon este un poligon cu șase laturi.
+  
+hyperbola:
+  title: Hiperbola
+  text: O __hiperbolă__ este forma graficului funcției `y = 1/x`.
+    Ea este formată din două părți disjuncte, both of which approach _asymptotes_. It
+    is also a _conic section_.
+  image: hyperbola.svg
+  
+irrational-numbers:
+  title: Nume iraționale
+  text: __Numerele iraționale__ sunt numere care nu se pot exprima ca raportul a două
+    numere întregi(_numere raționale_). De exemplu, 0.333333… = `1/3` este
+    _rațional_, dar `π`, `sqrt(2)` și _e_ sunt _iraționale_. Partea zecimală a unui
+    număr irațional nu are capăt si nici nu se repetă.
+    
+iss:
+  title: Stația Spațială Internațională
+  text: __Stația Spațială Internațională__ (SSI) a fost lansată în 1998 și 
+    orbitează Pământul la o altitudine de aproximativ 400 km. Este cel mai mare 
+    obiect construit de om ce se află pe orbita mică a Pământului și a fost locuită 
+    continuu de la lansare. Se poate vedea cu ochiul liber de pe Pământ.
 
 line:
   title: Dreaptă
@@ -247,7 +393,19 @@ molecule:
 
     Exemplele de molecule includ `O_2`, ce este formată din doi atomi de oxigen legați și
     `H_2 O`, ce este formată din doi atomi de hidrogen și unul de oxigen.
+    
+net:
+  title: Pânzele unui poliedru
+  text: __Pânza__ unui poliedru este ceea ce se obține atunci când se "desfășoară" 
+    pe o suprafață plană fețele poligonale.
 
+parabola:
+  title: Parabola
+  text: O __parabolă__ este forma graficului unei funcții de gradul al doilea
+    `y = x^2`. Este simetrică, în formă de U și poate fi îndreptată fie în sus, fie în jos.
+    De asemenea, este și o _secțiune conică_.
+  image: parabola.svg
+  
 parallel:
   title: Drepte paralele
   text: Două sau mai multe drepte sunt __paralele__ dacă nu se intersectează niciodată. Ele
@@ -261,6 +419,20 @@ perpendicular:
   image: perpendicular.svg
   link: /course/euclidean-geometry/definitions#perpendicular
 
+pi:
+  title: Pi
+  text: __Pi__, notat adesea cu litera greacă _π_, este raportul dintre circumferința
+    și diametrul unui cerc. Este un număr transcendental, iar valoarea sa aproximativă
+    este 3.14159265…
+  link: /course/circles/introduction#pi-definition
+
+prism:
+  title: Prisma
+  text: O__prismă__ este un corp geometric tridimensional care are două fețe congruente 
+    în formă de poligon (numite _baze_) ale căror vârfuri sunt unite de segmente. 
+    Toate celelalte fețe ale unei prisme sunt dreptunghiuri sau paralelograme.  
+  image: prism.svg
+  
 proof:
   title: Demonstrație
   text: O __demonstrație__ este un raționament care arată fără nicio urmă de îndoială
@@ -273,15 +445,74 @@ protein:
     diferite în interiorul organismelor vii: de la digestie pâna la comunicarea intercelulară
     sau replicarea ADN-ului. Proteinele sunt formate din unul sau mai multe lanțuri de
     aminoacizi.
+    
+pyramid:
+  title: Piramidă
+  text: |
+    O _piramidă_ este un poliedru care are ca bază un poligon și fețe triunghiulare 
+    care se întâlnesc într-un vârf.
+
+    O __piramidă dreaptă regulată__ are ca bază un _poligon regulat_ și vârful se află exact
+    deasupra centrului bazei.
+  image: pyramid.svg
+  
+pythagoras-theorem:
+  title: Teorema lui Pitagora
+  text: __Teorema lui Pitagora__ spune că în orice triunghi dreptunghic, `a^2 + b^2 = c^2`, 
+    unde _c_ este lungimea ipotenuzei și _a_ și _b_ sunt lungimile celorlalte două laturi.
+  link: /course/triangles/pythagoras
+
+radians:
+  title: Radian
+  text: __Radianul__ este o unitate de măsură pentru măsura unghiurilor. O rotație completă(360°) 
+    este `2π` radiani – lungimea circumferinței unui cerc unitate.
+  link: /course/circles/radians#radians
 
 ray:
   title: Semidreaptă
   text: O __semidreaptă__ este o porțiune dintr-o dreaptă care începe dintr-un punct
     și se prelungește la infinit într-o singură direcție. Semidreapta care începe din `A` se notează `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
+  
+similar:
+  title: Asemenea
+  text: Două forme geometrice sunt __asemenea__ dacă au aceeași formă, dar dimensiuni diferite. 
+    Putem muta, roti, reflecta și redimensiona o formă astfel încăt sa se potrivească cu o alta.
+    up with the other one. Unghiurile lor corespondente și laturile corespondente au aceeași proporție.
 
+sin:
+  title: Sinus
+  text: __Sinus__ este o funcție trigonometrică notată ca `sin(θ)`. Ea este definită 
+    într-un triunghi dreptunghic ca fiind raportul dintre cateta opusă și ipotenuză.
+  # `sin(x) is a periodic function with period `2π`.
+  link: /course/triangles/trigonometry#trig-functions
+  
+sphere:
+  title: Sfera
+  text: O __sferă__ este un corp geometric tridimensional format din toate punctele aflate 
+    la aceeași distanță față de un _centru_ dat. Această distanță se numește _raza_ sferei.
+  link: /course/circles/spheres-cones-cylinders#sphere
+  
 theorem:
   title: Teoremă
   text: O __teoremă__ este un rezultat sau o observație deosebit de importanta din matematică.
     S-a dovedit a fi întotdeauna adevărată, folosind axiome, elemente de logică și
     teoreme anterioare care erau deja cunoscute a fi adevărate.
+    
+translation:
+  title: Translație
+  text: O __translație__este o transformare geometrică prin care o figură geometrică se mișcă 
+    într-o direcție anume fără a i se modifica orientarea sau forma.
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+  
+trigonometry:
+  title: Trigonometrie
+  text: __Trigonometria__ este o ramură a matematicii care studiază relațiile dintre laturile și 
+    unghiurile unui triunghi. Se preocupă în primul rând cu funcțiile trigonometrice 
+    __sinus__, __cosinus__, __tangentă__ și inversele lor.
+  link: /course/triangles/trigonometry
+  
+unit-circle:
+  title: Unit Circle
+  text: Un __cerc unitate__ este un cerc de rază 1.

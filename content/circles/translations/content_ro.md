@@ -17,7 +17,7 @@ simetrică în toate direcțiile, ceea ce o face o alegere potrivită pentru ord
 
 ::: column(width=320)
 
-    x-media(src="images/geocentric.jpg" width=320 height=272)
+    x-img(src="images/geocentric.jpg" width=320 height=272)
 
 {.caption} Pământul se află în centrul _universului lui Ptolemeu_.
 
@@ -107,31 +107,31 @@ peste tot în natură:
 
 ::: column(width=130 parent="padded-thin")
 
-    x-media(src="images/flower.jpg" width=130 height=130)
+    x-img(src="images/flower.jpg" width=130 height=130)
 
 {.caption} Flori
 
 ::: column(width=130)
 
-    x-media(src="images/earth.jpg" width=130 height=130)
+    x-img(src="images/earth.jpg" width=130 height=130)
 
 {.caption} Planete
 
 ::: column(width=130)
 
-    x-media(src="images/tree.jpg" width=130 height=130)
+    x-img(src="images/tree.jpg" width=130 height=130)
 
 {.caption} Copaci
 
 ::: column(width=130)
 
-    x-media(src="images/orange.jpg" width=130 height=130)
+    x-img(src="images/orange.jpg" width=130 height=130)
 
 {.caption} Fruct
 
 ::: column(width=130)
 
-    x-media(src="images/soap.jpg" width=130 height=130)
+    x-img(src="images/soap.jpg" width=130 height=130)
 
 {.caption} Bule de săpun
 
@@ -196,7 +196,7 @@ niște aproximări:
 
 ::: column.grow
 
-Aici se poate vedea un cerc împărțit în ${toWord(n1)} felii. Mișcă glisorul pentru
+Aici se poate vedea un cerc împărțit în ${n1} felii. Mișcă glisorul pentru
 a alinia feliile de cerc pe un rând.
 
 {.reveal(when="slider")} Dacă mărim numărul feliilor de cerc la ${n1}{n1|6|6,30,2},
@@ -269,14 +269,14 @@ primele patru zecimale ale lui Pi prin aproximarea cercurilor folosind poligoane
 Observă cum, cu cât adaugi mai multe laturi, poligonul începe sa arate [[din ce în ce mai mult|mai puțin|exact]] 
 ca un cerc:
 
-    figure: x-media(src="images/polygons.svg" width=460 height=110)
+    figure: x-img(src="images/polygons.svg" width=460 height=110)
 
 ---
 > id: pi-record
 
 ::: column(width=280)
 
-    x-media(src="images/iss.jpg" width=280 height=330 credit="NASA")
+    x-img(src="images/iss.jpg" width=280 height=330 credit="NASA")
 
 ::: column.grow
 
@@ -379,7 +379,7 @@ Acesta ar putea fi motivul pentru care Pi a devenit neobișnuit de popular în c
 Există chiar și _Ziua Pi_ care se sărbătorește în fiecare an fie pe 14 martie, pentru că `pi ≈ 3.14`,
 fie pe 22 iulie, pentru că `pi ≈ 22/7`.
 
-    figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
+    figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
 
 
@@ -452,7 +452,7 @@ _Soarele_ determină cele patru anotimpuri pe care agricultorii trebuie sa le cu
 
 ::: column(width=260)
 
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+    x-img(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
 {.caption} O tabletă babiloniană folosită pentru a calcula `sqrt(2)`
 
@@ -1006,13 +1006,13 @@ ceea ce înseamna că Soarele se afla direct deasupra fântânii.
 
 ::: column(width=300)
 
-    x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
+    x-img(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
 
 {.caption} Pentru a măsura distanțele lungi, vechii egipteni numărau pașii necesari parcurgerii lor.
 
 ::: column(width=300)
 
-    x-media(src="images/well.jpg" width=300 height=300 lightbox)
+    x-img(src="images/well.jpg" width=300 height=300 lightbox)
 
 {.caption} Unele surse menționează că “Fântâna lui Eratostene” se afla pe _insula Elefantina_ 
 de pe râul Nil.
@@ -1101,7 +1101,7 @@ având în vedere că el avea acces doar la instrumente de măsurare foarte de b
 
 ::: column(width=280)
 
-    x-media(src="images/obelisk.jpg" width=280 height=450 lightbox)
+    x-img(src="images/obelisk.jpg" width=280 height=450 lightbox)
 
 ::: column.grow
 
@@ -1345,7 +1345,7 @@ ambele rezultate:
 
 ::: column(width=300)
 
-    x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
+    x-img(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
 {.caption} Gazometrul Oberhausen
 
@@ -1406,7 +1406,7 @@ __cilindru oblic__. Bazele sunt tot paralele, dar lateralele par că "se înclin
 
 ::: column(width=300)
 
-    x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
+    x-img(src="images/pisa.jpg" width=300 height=360 lightbox)
 
 {.caption} _Turnul din Pisa_ din Italia nu este chiar un cilindru oblic.
 
@@ -1484,7 +1484,7 @@ _h_ este dată de
 ---
 > id: cylinder-real-life
 
-    figure: x-media(src="images/cylinders.jpg" width=460 height=125)
+    figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
 Cilindrii se află peste tot în lumea noastră - de la conserve de băuturi carbogazoase 
 până la hârtie igienică sau conducte de apă. Poți găsi și alte exemple?
@@ -1520,23 +1520,23 @@ La fel ca și alte figuri întâlnite anterior, conurile se află peste tot
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/ice-cream.jpg" width=120 height=120 lightbox)
+    x-img(src="images/ice-cream.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/traffic.jpg" width=120 height=120 lightbox)
+    x-img(src="images/traffic.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/roof.jpg" width=120 height=120 lightbox)
+    x-img(src="images/roof.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/christmas.jpg" width=120 height=120 lightbox)
+    x-img(src="images/christmas.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/tipi.jpg" width=120 height=120 lightbox)
+    x-img(src="images/tipi.jpg" width=120 height=120 lightbox)
 
 :::
 
@@ -2036,7 +2036,7 @@ Pentru moment, hai să aruncăm o privire mai atentă asupra elipsei.
 
 ::: column(width=300)
 
-    x-media(src="images/conics.svg" width=300 height=340)
+    x-img(src="images/conics.svg" width=300 height=340)
 
 :::
 
@@ -2107,7 +2107,7 @@ De exemplu, Soarele apărea mai mare în unele perioade ale anului și mai mic
 
 ::: column(width=330)
 
-    x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
+    x-img(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
 {.caption} Astronomul grec Hipparchus din Nicaea
 
@@ -2139,7 +2139,7 @@ timp de peste 1000 de ani, în ciuda faptului că era foarte complicat:
 
 ::: column(width=320)
 
-    x-media(src="images/epicycles.jpg" width=320 height=320)
+    x-img(src="images/epicycles.jpg" width=320 height=320)
 
 {.caption} Desen din secolul 16 ce prezintă epiciclurile din __modelul geocentric__. Cuvântul
 din limba greacă “planetes” înseamnă “călător”.

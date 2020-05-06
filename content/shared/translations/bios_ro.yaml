@@ -2,7 +2,16 @@
 # MATHIGON BIOGRAPHIES
 # ==============================================================================
 
-
+apollonius:
+  name: Apollonius
+  born: -262  # ???
+  died: -190  # ???
+  bio: __Apollonius din Perga__ (c. 200 î.Hr.) a fost un matematician și astronom grec
+    cunoscut pentru lucrările sale asupra celor patru _secțiuni conice_.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+      
 archimedes:
   name: Arhimede
   born: -287
@@ -21,6 +30,39 @@ archimedes:
   links:
     - title: Archimedean Solids
       url: /course/polyhedra/platonic#archimedean
+      
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598 – 1647) a fost un matematician și călugăr italian. 
+    El a dezvoltat precursorul calculului infinitezimal și a rămas cunoscut pentru 
+    principiul lui Cavalieri cu ajutorul căruia se calculează volumul corpurilor geometrice.
+
+    Cavalieri a lucrat și în optică și mecanică, a introdus logaritmii în Italia și 
+    a corespondat în scris cu Galileo Galilei.
+  links:
+    - title: Principiul lui Cavalieri
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+      
+eratosthenes:
+  name: Eratostene
+  born: -276
+  died: -195
+  bio: __Eratostene din Cyrene__ (c. 276 î.Hr. – 195 î.Hr.) a fost un matematician, geograf,
+    astronom, istoric și poet grec. El și-a petrecut o mare parte din viața sa în Egipt ca
+    șef al bibliotecii din Alexandria.
+
+    Printre multele sale realizări, Eratostene a calculat circumferința Pământului, a măsurat înclinarea
+    axei de rotație a Pământului, a estimat distanța până la Soare și a creat primele hărți ale lumii.
+    
+    De asemenea, el a inventat “Ciurul lui Eratostene”, o metodă eficientă de calculare a _numerelor prime_.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility/primes#eratosthenes
 
 euclid:
   name: Euclid
@@ -38,6 +80,23 @@ euclid:
     - title: Infinitely many Primes
       url: /course/divisibility/primes#primes3
 
+hilbert:
+  name: Hilbert
+  born: 1862
+  died: 1943
+  bio: |
+    __David Hilbert__ (1862 – 1943) a fost unul dintre cei mai influenți matematicieni
+    ai secolului 20. El a lucrat în aproape fiecre arie a matematicii fiind interesat, 
+    în mod special, de construirea unei fundații formale și logice pentru matematică.
+
+    Hilbert a profesat in Göttingen (Germany), unde a îndrumat numeroși studenți care mai târziu 
+    au devenit matematicieni faimoși. Pe parcurul Congresului Internațional de Matematică din 1900, 
+    el a prezenta o listă de 23 de probleme nerezolvate. Acestea au stabilit terenul 
+    pentru cercetarile viitoare - și patru dintre ele sunt și azi nerezolvate!
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+      
 jefferson:
   name: Jefferson
   bio: |
@@ -48,6 +107,32 @@ jefferson:
     a lucrat ca arhitect. După ce s-a retras din funcția publică, Jefferson a înființat
     Universitatea din Virginia.
 
+kepler:
+  name: Kepler
+  born: 1571
+  died: 1630
+  bio: __Johannes Kepler__ (1571 – 1630) a fost un astronom și matematician german. 
+    El a fost _matematicianul imperial_ în Praga și este cel mai cunoscut pentru cele 
+    trei _legi ale mișcării planetelor_. Kepler a lucrat și în optică și a inventat 
+    un telescop îmbunătățit pentru observațiile sale.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+leibniz:
+  name: Leibniz
+  born: 1646
+  died: 1716
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646 – 1716) a fost un matematician și filosof
+    german. Printre multele sale reușite, el a fost unul din inventatorii analizei matematice 
+    și a creat unele din primele calculatoare mecanice.
+    
+    Leibniz credea că universul nostru este “cel mai bun univers posibil” pe care
+    Dumnezeu ar fi putut să-l creeze și în care să ne permită sa avem liberul arbitru.
+    El a fost un adept important al _raționalismului_, și a adus contribuții în fizică,
+    medicină, lingvistică, drept, istorie și multe alte domenii.
+    
 newton:
   name: Newton
   born: 1642
