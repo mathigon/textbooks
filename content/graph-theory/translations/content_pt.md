@@ -1,4 +1,4 @@
-# Gráficos e Redes
+# Grafos e Redes
 
 ## Introdução
 
@@ -7,7 +7,7 @@
 
 ::: column.grow
 
-Todos os dias estamos cercados por inúmeras conexões e redes: estradas e trilhos, linhas telefônicas, internet, circuitos eletrônicos e até ligações moleculares. Existem também _redes sociais_ entre amigos e familiares. Todos esses sistemas consistem em certos _pontos_ chamados [[vértices|circles|crossings]], alguns dos quais são conectados por [[arestas|boundaries|pairs]]. Em matemática, isso é chamado de [__gráfico__](gloss:graph).
+Todos os dias estamos cercados por inúmeras conexões e redes: estradas e trilhos, linhas telefônicas, a internet, circuitos eletrônicos e até ligações moleculares. Existem também _redes sociais_ entre amigos e familiares. Todos esses sistemas consistem em certos _pontos_ chamados [[vértices|círculos|cruzamentos]], alguns dos quais são conectados por [[arestas|fronteiras|pares]]. Em matemática, isso é chamado de [__grafo__](gloss:graph).
 
 ::: column(width=160)
 
@@ -15,59 +15,59 @@ Todos os dias estamos cercados por inúmeras conexões e redes: estradas e trilh
 
 :::
 
-__Teoria dos grafos__ é o estudo de gráficos e suas propriedades. É uma das áreas mais emocionantes e visuais da matemática e tem inúmeras aplicações importantes:
+__Teoria dos grafos__ é o estudo dos grafos e suas propriedades. É uma das áreas mais emocionantes e visuais da matemática e tem inúmeras aplicações importantes:
 
     x-gallery(slide-width="300")
       div
         x-img(src="images/network1.jpg" width=260 height=260 lightbox)
-        p.caption Road and Rail Networks
+        p.caption Redes rodoviárias e ferroviárias
       div
         x-img(src="images/network6.jpg" width=260 height=260 lightbox)
-        p.caption Integrated Circuits
+        p.caption Circuitos integrados
       div
         x-img(src="images/network3.jpg" width=260 height=260 lightbox)
-        p.caption Supply Chains
+        p.caption Redes de fornecimento
       div
         x-img(src="images/network2.jpg" width=260 height=260 lightbox)
-        p.caption Friendships
+        p.caption Redes de amizades
       div
         x-img(src="images/network7.jpg" width=260 height=260 lightbox)
-        p.caption Neural Connections
+        p.caption Conexões neurais
       div
         x-img(src="images/network4.jpg" width=260 height=260 lightbox)
-        p.caption The Internet
+        p.caption A Internet
 
 ---
 > id: intro-1
 
-Podemos esboçar o layout de gráficos simples usando círculos e linhas. A posição dos círculos e o comprimento das linhas são irrelevantes - apenas nos preocupamos com _como eles estão conectados_ entre si. As linhas podem até se cruzar e não precisam ser retas.
+Podemos esboçar o layout de grafos simples usando círculos e linhas. A posição dos círculos e o comprimento das linhas são irrelevantes - apenas nos preocupamos com _como eles estão conectados_ entre si. As linhas podem até se cruzar e não precisam ser retas.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Em alguns gráficos, as arestas seguem apenas uma direção. Estes são chamados [__de gráficos direcionados__](gloss:directed-graph).
+{.text-center} Em alguns grafos, as arestas seguem apenas uma direção. Estes são chamados [__de grafos direcionados__](gloss:directed-graph).
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Alguns gráficos consistem em vários segmentos distintos que não são conectados por arestas. Estes gráficos estão __desconectados__.
+{.text-center} Alguns grafos consistem em vários segmentos distintos que não são conectados por arestas. Estes grafos estão __desconectados__.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Outros gráficos podem conter várias arestas entre os mesmos pares de vértices ou vértices conectados a si mesmos (loops).
+{.text-center} Outros grafos podem conter várias arestas entre os mesmos pares de vértices, ou vértices conectados a si mesmos (loops).
 
 :::
 
-Para simplificar, consideraremos apenas gráficos não direcionados e conectados, sem múltiplas arestas e loops neste curso.
+Para simplificar, neste curso consideraremos apenas grafos não direcionados, conectados, e sem múltiplas arestas e loops. 
 
 ---
 > id: intro-2
 
-Podemos criar novos gráficos a partir de um gráfico existente removendo alguns dos vértices e arestas. O resultado é chamado de [__subgráfico__](gloss:subgraph). Aqui estão alguns exemplos de gráficos e subgráficos:
+Podemos criar novos grafos a partir de um grafo existente removendo alguns dos vértices e arestas. O resultado é chamado de [__subgrafo__](gloss:subgraph). Aqui estão alguns exemplos de grafos e subgrafos:
 
 ::: column(width=200)
 
@@ -89,7 +89,7 @@ Podemos criar novos gráficos a partir de um gráfico existente removendo alguns
 ---
 > id: intro-3
 
-A ordem [__de__](gloss:graph-order) de um gráfico é o número de vértices. O [__grau__](gloss:graph-degree) de um vértice em um gráfico é o número de arestas que se encontram nesse vértice.
+A [__ordem__](gloss:graph-order) de um grafo é o número de vértices. O [__grau__](gloss:graph-degree) de um vértice em um grafo é o número de arestas que se encontram nesse vértice.
 
 ::: column(width=130)
 
@@ -120,7 +120,7 @@ A ordem [__de__](gloss:graph-order) de um gráfico é o número de vértices. O 
 ---
 > id: intro-4
 
-Os gráficos que consistem em um único anel de vértices são chamados de [__ciclos__](gloss:graph-cycle). Todos os ciclos têm [[o mesmo número de arestas e vértices|more edges than vertices|fewer edges than vertices]].
+Os grafos que consistem em um único anel de vértices são chamados de [__ciclos__](gloss:graph-cycle). Todos os ciclos têm [[o mesmo número de arestas e vértices|mais arestas do que vértices|menos arestas do que vértices]].
 
     .row
       svg.graph(style='width: 90px; height: 90px;')
@@ -129,7 +129,7 @@ Os gráficos que consistem em um único anel de vértices são chamados de [__ci
 
 ---
 > id: bridges-0
-> title: The Bridges of Königsberg
+> title: As pontes de Königsberg
 > section: bridges
 
 ## As pontes de Königsberg
