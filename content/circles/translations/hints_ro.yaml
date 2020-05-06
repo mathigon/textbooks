@@ -1,0 +1,14 @@
+cylinder-volume-hint1: Trebuie să calculezi aria bazei și apoi să o înmulțesti cu _h_.
+cylinder-volume-hint2: Baza este un cerc de rază _r_, așadar aria sa este `π r^2`.
+
+cone-volume-hint1: Trebuie să calculezi aria bazei și apoi să o înmulțesti cu `1/3 h`.
+cone-volume-hint2: Baza este un cerc de rază _r_, așadar aria sa este `π r^2`.
+
+cone-surface-1: Trebuie să înlocuiești valoarea corectă pentru fiecare din valorile de mai sus.
+cone-surface-2: Nu uita să utilizezi valoarea lui _s_ găsită anterior.
+
+circle-cross-sec: Folosește ecuația pentru aria cercului și înlocuiește valoarea corectă cu `x^2`.
+sphere-volume: Nu uita că cilindrul și conul de mai sus au ambele raza _r_ și înălțimea _r_.
+
+use-cylinder-volume: Încearcă să folosești formula de calcul pentru volumul unui cilindru.
+use-cylinder-surface: Încearcă să folosești formula de calcul pentru aria unui cilindru.

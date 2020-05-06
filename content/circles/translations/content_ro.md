@@ -84,7 +84,7 @@ un tipar anume:
 > id: wheel
 > goals: unroll
 
-Aceasta este o roată cu diametrul 1. Pe măsură ce desfaci circumferința, poți vedea că 
+Aceasta este o roată cu diametrul 1. Pe măsură ce desfacem circumferința, se poate vedea că 
 lungimea sa este exact [[`pi`|`2 * pi`|3]]:
 
     figure: include svg/wheel.svg
@@ -147,7 +147,7 @@ la alte exemple? [Continuă](btn:next)
 ::: column.grow
 
 De asemenea, se dovedește că cercul este forma cu cea mai mare arie pentru o circumferință dată.
-De exemplu, dacă ai o sfoară cu lungimea  100\ m, o poți folosi pentru a încadra cea mai mare
+De exemplu, dacă avem o sfoară cu lungimea  100\ m, o putem folosi pentru a încadra cea mai mare
 suprafață dacă formezi un cerc (mai degrabă decât alte forme precum dreptunghiul sau triunghiul).
 
 În natură, obiectele precum picăturile de apă sau bulele de aer își pot _economisi energia_ 
@@ -332,7 +332,7 @@ vedea cum sunt distribuite zecimalele.
 > id: pi-digits
 > goals: search
 
-Dacă Pi este un numărnormal, asta înseamnă că te poți gândi la _orice_ șir de cifre și el va apărea 
+Dacă Pi este un număr normal, asta înseamnă că ne putem gândi la _orice_ șir de cifre și el va apărea 
 undeva între zecimalele lui. Aici poți căuta în primul milion de zecimale ale lui Pi - conțin ele ziua ta de naștere?
 
     .box
@@ -563,7 +563,7 @@ __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} 
 ---
 > id: radians-table
 
-Poți scrie valoarea în radiani fie ca un multiplu de _π_ sau ca un singur număr zecimal. 
+Se poate scrie valoarea în radiani fie ca un multiplu de _π_, fie ca un singur număr zecimal. 
 Poți completa acest tabel cu măsurile echivalente ale unghiurile în grade și radiani?
 
 | __{.m-red}grade__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
@@ -575,7 +575,7 @@ Poți completa acest tabel cu măsurile echivalente ale unghiurile în grade și
 
 ### Distanța Parcursă
 
-Te poți gândi la radiani ca la "distanța parcursă" de-a lungul circumferinței unui cerc unitate. 
+Ne putem gândi la radiani ca la "distanța parcursă" de-a lungul circumferinței unui cerc unitate. 
 Asta este util mai ales atunci când lucrezi cu obiecte care se mișcă pe o traiectorie circulară.
 
 ::: column.grow
@@ -1718,7 +1718,7 @@ O [__sferă__](gloss:sphere) este un corp geometric tridimensional format din to
 punctele situate la aceeași distanță față de un __{.m-green}centru *C*__ dat. Această
 distanță se numește __{.m-red}raza *r*__ a sferei.
 
-Te poți gândi la o sferă ca la un “[cerc](gloss:circle) tridimensional”. Asemenea
+Ne putem gândi la o sferă ca la un “[cerc](gloss:circle) tridimensional”. Asemenea
 unui cerc, o sferă are un __{.m-blue}diametru *d*__, care are lungimea 
 [[de două ori mai mare ca|jumătate din]] raza cercului, precum și corzi și secante.
 
@@ -2051,7 +2051,7 @@ ca la un cerc cu _două centre_ - acestea se numesc __focarele elipsei__. Așa c
 de pe un cerc se află situat la aceeași distanță față de centrul său, fiecare punct de pe o elipsă 
 se află situat la aceeași _sumă a distanțelor_ față de cele două focare.
 
-Dacă ai un fir lung conectat la două puncte fixe, poți desena o elipsă perfectă
+Dacă avem un fir lung legat două puncte fixe, putem desena o elipsă perfectă
 trasând întinderea maximă a firelor:
 
 {.todo} ÎN CURÂND: Desenarea interactivă a elipselor
@@ -2198,7 +2198,7 @@ cu care se mișcă planetele este cea care previne ca acestea să cada direct î
 
 ::: column.grow
 
-Folosind legile lui Newton, poți deriva calea pe care o iau obiectele atunci când se mișcă
+Folosind legile lui Newton, putem deriva traiectoria pe care o iau obiectele atunci când se mișcă
 sub forța de gravitație. Se pare că planetele se mișcă pe traiectorii în formă de elipsă, 
 dar alte obiecte precum cometele pot călători pe traiectorii [parabolice](gloss:parabola)
 sau [hiperbolice](gloss:hyperbola): ele zboară până în apropierea soarelui înainte de
