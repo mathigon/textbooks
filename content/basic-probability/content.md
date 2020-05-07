@@ -4,6 +4,20 @@
 
 > section: introduction
 > sectionStatus: dev
+> id: intro
+> goals: spin
+
+::: column.grow
+
+Here you can see a spinner.
+
+::: column(width=300)
+
+    svg.spinner(width=300 height=300)
+      circle(cx=150 cy=150 r="100")
+      rect(x=140 y=50 width=20 height=200)
+
+:::
 
 * Compare outcomes for different experiments, predict which experiment is more likely to produce a desired result, and justify the prediction.
 * Describe how we can use the outcomes from previous experiments to help determine the relative likelihood of future events.

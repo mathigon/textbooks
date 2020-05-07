@@ -15,6 +15,7 @@ interface Options {
   start?: () => void;
   momentumStart?: (speed: number) => void;
   end?: () => void;
+  final?: (angle: number) => void;
 }
 
 function findCenter($el: ElementView) {
@@ -42,7 +43,10 @@ export function rotateDisk($el: ElementView, options: Options) {
       speed *= (options.resistance || 0.995);
       angle = (angle + dt * speed) % (2 * Math.PI);
       options.draw(angle, true, dt);
-      if (animation && Math.abs(speed) < 0.0001) animation.cancel();
+      if (animation && Math.abs(speed) < 0.0001) {
+        animation.cancel();
+        if (options.final) options.final(angle);
+      }
     });
   }
 
