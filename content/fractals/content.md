@@ -1124,7 +1124,7 @@ rotated by 90°, it looks almost like a person, with head, body and two arms. It
 was defined and drawn for the first time in 1978, in a research paper by the
 mathematicians Robert Brooks and Peter Matelski:
 
-    figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press" alt="Mandelbrot Set Drawing")
+    figure: x-img(src="images/printout.jpg" width=360 height=290 credit="© Princeton University Press" alt="Mandelbrot Set Drawing")
 
 A few years later, [Benoit Mandelbrot](bio:mandelbrot) used the powerful
 computers at IBM to create a much more detailed visualisation of the fractal,
