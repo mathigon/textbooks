@@ -14,8 +14,7 @@ Here you can see a spinner.
 ::: column(width=300)
 
     svg.spinner(width=300 height=300)
-      circle(cx=150 cy=150 r="100")
-      rect(x=140 y=50 width=20 height=200)
+      circle(cx=150 cy=150 r=100)
 
 :::
 
