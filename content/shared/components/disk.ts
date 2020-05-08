@@ -51,7 +51,7 @@ export function rotateDisk($el: ElementView, options: Options) {
   }
 
   slide($el, {
-    start() {
+    down() {
       if (animation) animation.cancel();
       center = findCenter($el);
       startAngle = angle;
