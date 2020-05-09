@@ -80,6 +80,58 @@ euclid:
     - title: Infinitely many Primes
       url: /course/divisibility/primes#primes3
 
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707 – 1783) a fost unul dintre cei mai mari matematicieni din istorie. 
+    Munca sa acoperă toate ramurile matematicii și el a scris 80 de volume de cercetare.
+
+    Euler s-a născut în Elveția și a studiat la Basel, dar a trăit marea parte a vieții sale
+    în Berlin, Prusia și în St. Petersburg, Rusia.
+
+    Euler a inventat o mare parte din terminologia și notațiile matematicii moderne și a făcut 
+    descoperiri importante în analiză, teoria grafurilor, fizică, astronomie și în multe alte subiecte.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+    
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Friedrich Gauss__ (1777 – 1855) a fost probabil cel mai mare matematician din istorie. 
+    El a făcut descoperiri inovatoare în aproape toate domeniile matematicii, de la algebră și 
+    teoria numerelor până la statistici, analiză matematică, geometrie, geologie și astronomie.
+    
+    Conform legendei, el a corectat o greșeală din calculele de contabilitate ale tatălui său 
+    la vâsta de 3 ani și a descoperit o metodă de a aduna rapid toate numerele întregi 
+    de la 1 la 100 la vârsta de 8 ani. Primele sale descoperiri importante au fost făcute 
+    pe când era adolescent, iar mai târziu a îndrumat ca profesor mulți matematicieni faimoși.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility/the-distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+      
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: __Christian Goldbach__ (1690 – 1764) a fost un matematician prusac contemporan cu
+    Euler, Leibniz și Bernoulli. El a fost educatorul țarului rus Pentru al II-lea și
+    este a rămas cunoscut pentru conjectura sa - “Conjectura Goldbach“.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      
 hilbert:
   name: Hilbert
   born: 1862
@@ -156,6 +208,20 @@ newton:
     - title: Digits of Pi
       url: /course/circles/introduction#pi-record
 
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: __Bernhard Riemann__ (1826 – 1866) a fost un matematician german ce a lucratwas
+    în domeniul analizei matematice și al teoriei numerelor. El a formulat prima definiție
+    riguroasă a operației de integrare matematică, a studiat geometria diferențială ce a pus
+    bazele relativității generale și a făcut descoperiri inovatoare cu privire la 
+    distribuția numerelor prime.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/the-distribution-of-primes#riemann
+      
 thales:
   name: Thales
   born: -624
@@ -169,3 +235,10 @@ thales:
   links:
     - title: Thales’ Theorem
       url: /course/euclidean-geometry/introduction
+      
+ulam:
+  name: Ulam
+  bio: __Stanisław Ulam__ (1909 – 1984) a fost un matematician polonezo-american. El a avut 
+    un rol important în _proiectul american Manhattan_ de dezvoltare a primelor arme nucleare. 
+    De asemenea, el a lucrat și la propulsia rachetelor cu impulsuri nucleare și a dezvoltat 
+    metoda _Monte Carlo_ – un concept important din statistică.
