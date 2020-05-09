@@ -24,7 +24,7 @@ export function telegraph($step: Step) {
   let sound: Beep;
 
   slide($telegraph, {
-    start: () => {
+    down: () => {
       $telegraph.addClass('pressed');
       sound = beep();
     },

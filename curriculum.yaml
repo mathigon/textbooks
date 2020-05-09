@@ -143,13 +143,8 @@ linear-functions:
   color: ea3620
 
 basic-probability:
-  title: Basic Probability
+  title: Introduction to Probability
   color: cd0e66
-  sections:
-    - title: Introduction
-    - title: Coins, Cards and Dice
-    - title: Multi-Step Experiments
-    - title: Designing Simulations
 
 combinatorics:
   title: Combinatorics
