@@ -57,6 +57,7 @@ export function rotateDisk($el: ElementView, options: Options) {
   if (options.clicky) {
     $el.on("click", () => {
       if (animation) animation.cancel();
+      options.start();
       spin(
         clamp(
           Math.random() < 0.5 ? -Math.random() * 30 : +Math.random() * 30,

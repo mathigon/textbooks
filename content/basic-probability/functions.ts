@@ -12,45 +12,37 @@ export function intro($step: Step) {
   const $svg = $step.$(".spinner") as SVGView;
 
   // Draw Spinner
-  let sections = [
+  let sections: { share: number; end: Point }[] = [
     {
       share: 1 / 3,
+      end: new Point(0, 0),
     },
     {
       share: 1 / 3,
+      end: new Point(0, 0),
     },
     {
       share: 1 / 6,
+      end: new Point(0, 0),
     },
     {
       share: 1 / 6,
+      end: new Point(0, 0),
     },
   ];
 
   sections.forEach((section, count) => {
-    if (count === 0) {
-      let sector = new Sector(
-        new Point(150, 150),
-        new Point(250, 150),
-        section.share * (2 * Math.PI)
-      );
-      $N("path", { class: `sector-${count}`, path: sector }, $svg);
-      sections[count].end = sector.end;
-      sections[count].sector = sector;
-    } else {
-      let sector = new Sector(
-        new Point(150, 150),
-        sections[count - 1].end,
-        section.share * (2 * Math.PI)
-      );
-      $N("path", { class: `sector-${count}`, path: sector }, $svg);
-      sections[count].end = sector.end;
-      sections[count].sector = sector;
-    }
+    let sector = new Sector(
+      new Point(150, 150),
+      count === 0 ? new Point(250, 150) : sections[count - 1].end,
+      section.share * (2 * Math.PI)
+    );
+    $N("path", { class: `sector-${count}`, path: sector }, $svg);
+    sections[count].end = sector.end;
   });
 
   // Draw Pointer, and add spinning logic
-  let pointer = new Rectangle(new Point(140, 50), 10, 200);
+  let pointer = new Rectangle(new Point(145, 50), 10, 200);
   let $spinner = $N("path", { class: `pointer`, path: pointer }, $svg);
 
   rotateDisk($spinner, {

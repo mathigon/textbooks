@@ -1,8 +1,30 @@
-import {Obj, EventTarget} from '@mathigon/core';
-import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds, Segment, Ray, Sector, Polyline, Triangle, intersections} from '@mathigon/fermat';
-import {CustomElementView, ElementView, SVGView, Observable, AnimationResponse, SVGParentView} from '@mathigon/boost';
-import {ExprElement} from '@mathigon/hilbert';
-
+import { Obj, EventTarget } from "@mathigon/core";
+import {
+  Point,
+  Angle,
+  Arc,
+  Circle,
+  Line,
+  TransformMatrix,
+  Polygon,
+  Rectangle,
+  Bounds,
+  Segment,
+  Ray,
+  Sector,
+  Polyline,
+  Triangle,
+  intersections,
+} from "@mathigon/fermat";
+import {
+  CustomElementView,
+  ElementView,
+  SVGView,
+  Observable,
+  AnimationResponse,
+  SVGParentView,
+} from "@mathigon/boost";
+import { ExprElement } from "@mathigon/hilbert";
 
 export class Gesture extends CustomElementView {
   private slide;
@@ -13,7 +35,7 @@ export class Gesture extends CustomElementView {
   from?: Point;
   created(): void;
   ready(): void;
-  setTarget($target: string|ElementView, slide?: Point, shift?: Point): void;
+  setTarget($target: string | ElementView, slide?: Point, shift?: Point): void;
   start(slide?: Point): void;
   startSlide($from: ElementView, $to: ElementView): void;
   stop(): void;
@@ -47,7 +69,9 @@ export class BlankInput extends CustomElementView {
   blur(): void;
 }
 
-export type EquationValidationResponse = {isCorrect?: boolean; error?: string}|undefined;
+export type EquationValidationResponse =
+  | { isCorrect?: boolean; error?: string }
+  | undefined;
 
 export class Equation extends CustomElementView {
   $math: ElementView;
@@ -68,13 +92,13 @@ export class Equation extends CustomElementView {
   solution: ExprElement;
   hints: string[];
   fns: string[];
-  validate?: ((expr: ExprElement) => EquationValidationResponse);
+  validate?: (expr: ExprElement) => EquationValidationResponse;
   ready(): void;
   focus(): void;
   onPointerdown(e: PointerEvent): void;
-  onKey(e: {code?: number; key: string}): void;
+  onKey(e: { code?: number; key: string }): void;
   onBlur(): void;
-  check(): string|void;
+  check(): string | void;
   complete(expr: ExprElement): void;
   solve(): void;
 }
@@ -89,7 +113,10 @@ export class EquationSystem extends CustomElementView {
   private maxRows;
   private steps;
   private hints;
-  validate?: (expr: ExprElement, isRepeated: boolean) => EquationValidationResponse;
+  validate?: (
+    expr: ExprElement,
+    isRepeated: boolean
+  ) => EquationValidationResponse;
   isFinal?: (expr: ExprElement) => boolean;
   created(): void;
   ready(): void;
@@ -134,7 +161,7 @@ export class Tutor extends CustomElementView {
   private recentMessages;
   private isOpen;
   private queuePromise;
-  hints: Obj<string|string[]>;
+  hints: Obj<string | string[]>;
   correct: () => string;
   incorrect: () => string;
   ready(): void;
@@ -142,7 +169,7 @@ export class Tutor extends CustomElementView {
   close(): void;
   queue(content: string, kind?: string, options?: HintOptions): void;
   display(content: string, kind?: string, options?: HintOptions): void;
-  showHint(msg: string, options?: HintOptions): {text: string};
+  showHint(msg: string, options?: HintOptions): { text: string };
   askQuestion(query: string): void;
   meanEasterEgg(): void;
 }
@@ -150,14 +177,14 @@ export class Tutor extends CustomElementView {
 export class Step extends CustomElementView {
   private $course?;
   model: Observable;
-  tools: {confetti: (duration?: number, maxParticles?: number) => void};
-  initialData?: {scores: string[]; data: Obj<any>};
+  tools: { confetti: (duration?: number, maxParticles?: number) => void };
+  initialData?: { scores: string[]; data: Obj<any> };
   isShown: boolean;
   isCompleted: boolean;
   goals: string[];
   scores: Set<string>;
-  $blanks: (Blank|BlankInput)[];
-  $equations: (Equation|EquationSystem)[];
+  $blanks: (Blank | BlankInput)[];
+  $equations: (Equation | EquationSystem)[];
   $reveals: ElementView[];
   $nextBtn: ElementView[];
   $picker?: Picker;
@@ -171,7 +198,7 @@ export class Step extends CustomElementView {
   score(goal: string, goNext?: boolean): void;
   storeData(key: string, value: any): void;
   onScore(goalList: string, callback?: () => void): Promise<void>;
-  addHint(text: string, options?: HintOptions): {text: string};
+  addHint(text: string, options?: HintOptions): { text: string };
   getText(id: string): string;
   getHelp(): void;
   delayedHint(callback: () => void, t?: number): void;
@@ -186,7 +213,7 @@ export class Ticker {
 export abstract class DisplayNode {
   readonly type: string;
   readonly equation: DisplayEquation;
-  $element?: SVGView|undefined;
+  $element?: SVGView | undefined;
   parent?: DisplayNode;
   children: DisplayNode[];
   status: string;
@@ -195,10 +222,15 @@ export abstract class DisplayNode {
   width: number;
   height: number;
   baseline: number;
-  transform: {x: number; y: number; scale: number};
+  transform: { x: number; y: number; scale: number };
   private currentDimensions;
   private currentWorldTransform;
-  constructor(type: string, children: DisplayNode[], equation: DisplayEquation, $element?: SVGView|undefined);
+  constructor(
+    type: string,
+    children: DisplayNode[],
+    equation: DisplayEquation,
+    $element?: SVGView | undefined
+  );
   expr: string;
   log: string;
   color: string;
@@ -206,9 +238,9 @@ export abstract class DisplayNode {
   marginLeft: number;
   marginRight: number;
   setTransform(x?: number, y?: number, scale?: number): void;
-  worldTransform: {x: number; y: number; scale: number};
-  next: DisplayNode|undefined;
-  prev: DisplayNode|undefined;
+  worldTransform: { x: number; y: number; scale: number };
+  next: DisplayNode | undefined;
+  prev: DisplayNode | undefined;
   addChildren(children: DisplayNode[], index?: number): void;
   insertAfter(newNodes: DisplayNode[]): void;
   insertBefore(newNodes: DisplayNode[]): void;
@@ -218,14 +250,25 @@ export abstract class DisplayNode {
   measure(): void;
   setStatus(status: string): void;
   render(ticker?: Ticker): void;
-  protected positionElement(t: {x: number; y: number; scale: number}): void;
-  protected drawElement(p: number, width: number, height: number, baseline: number, scale: number): void;
+  protected positionElement(t: { x: number; y: number; scale: number }): void;
+  protected drawElement(
+    p: number,
+    width: number,
+    height: number,
+    baseline: number,
+    scale: number
+  ): void;
 }
 
 export class DisplayNodeRow extends DisplayNode {
-  readonly align?: string|undefined;
+  readonly align?: string | undefined;
   readonly dx: number;
-  constructor(children: DisplayNode[], equation: DisplayEquation, align?: string|undefined, dx?: number);
+  constructor(
+    children: DisplayNode[],
+    equation: DisplayEquation,
+    align?: string | undefined,
+    dx?: number
+  );
   addChildren(children: DisplayNode[], index?: number): void;
   expr: string;
   measure(): void;
@@ -239,8 +282,14 @@ export class DisplayEquation extends EventTarget {
   isReady: boolean;
   readonly deletedNodes: Set<DisplayNode>;
   private desc;
-  constructor($row: SVGView, dx?: number, align?: string, fontSize?: number, isDisplay?: boolean);
-  setValue(expr: string|Element[]): void;
+  constructor(
+    $row: SVGView,
+    dx?: number,
+    align?: string,
+    fontSize?: number,
+    isDisplay?: boolean
+  );
+  setValue(expr: string | Element[]): void;
   private updateDescription;
   resize(): void;
   private parse;
@@ -276,8 +325,8 @@ export class AlgebraFlow extends CustomElementView {
   ready(): void;
   newRow(): Promise<void>;
   hideLastRow(): Promise<void>;
-  onNextStep(obj: Obj<((equation: DisplayEquation) => void)>): void;
-  onBackStep(obj: Obj<((equation: DisplayEquation) => void)>): void;
+  onNextStep(obj: Obj<(equation: DisplayEquation) => void>): void;
+  onBackStep(obj: Obj<(equation: DisplayEquation) => void>): void;
   goNext(): Promise<void>;
   goBack(): Promise<void>;
   private go;
@@ -419,7 +468,14 @@ export abstract class CoordinatePlane extends CustomElementView {
   plotOrigin: Point;
   plotToViewportMatrix: TransformMatrix;
   plotScale: number;
-  setupCoordinates($svg: SVGParentView, options: {showGrid?: boolean|undefined; showAxes?: boolean|undefined; padding?: string|undefined}): void;
+  setupCoordinates(
+    $svg: SVGParentView,
+    options: {
+      showGrid?: boolean | undefined;
+      showAxes?: boolean | undefined;
+      padding?: string | undefined;
+    }
+  ): void;
   protected updatePlotBounds(autoBounds?: Bounds): void;
   protected drawAxes(): void;
   toPlotCoords(p: Point): Point;
@@ -427,7 +483,10 @@ export abstract class CoordinatePlane extends CustomElementView {
 }
 
 export class Geopad extends CoordinatePlane {
-  shapes: Map<string, GeoShape<Point|Line|Rectangle|Angle|Arc|Circle|Polygon>>;
+  shapes: Map<
+    string,
+    GeoShape<Point | Line | Rectangle | Angle | Arc | Circle | Polygon>
+  >;
   points: Set<GeoPoint>;
   paths: Set<GeoPath<Path>>;
   snapToGrid: number;
@@ -447,7 +506,7 @@ export class Geopad extends CoordinatePlane {
   private $compass?;
   private $ruler?;
   private $gesture?;
-  model: Observable<typeof DEFAULT_GEO_MODEL&Obj<any>>;
+  model: Observable<typeof DEFAULT_GEO_MODEL & Obj<any>>;
   private events;
   $tools: Select;
   boundsRect: Rectangle;
@@ -457,20 +516,28 @@ export class Geopad extends CoordinatePlane {
   select(obj?: GeoShape<any>): void;
   deselect(): void;
   delete(): void;
-  getPointAt(posn: Point, d?: number): GeoPoint|undefined;
-  getPathAt(posn: Point, d?: number): GeoPath<Path>|undefined;
-  getIntersectionAt(posn: Point, d?: number): Intersection|undefined;
-  drawPath(x: string|GeoValue<Path>, options?: GeoOptions): GeoPath<Path>;
-  drawPoint(x: string|GeoValue<Point>, options?: GeoOptions): GeoPoint;
+  getPointAt(posn: Point, d?: number): GeoPoint | undefined;
+  getPathAt(posn: Point, d?: number): GeoPath<Path> | undefined;
+  getIntersectionAt(posn: Point, d?: number): Intersection | undefined;
+  drawPath(x: string | GeoValue<Path>, options?: GeoOptions): GeoPath<Path>;
+  drawPoint(x: string | GeoValue<Point>, options?: GeoOptions): GeoPoint;
   animatePoint(name: string, target: Point, duration?: number): void;
   animateConstruction(name: string, duration?: number): Promise<void>;
   showGesture(from: string, to?: string): void;
-  waitForPoint(): Promise<GeoPoint>
-  waitForPath<T extends Path = Path>(validate: PathDefinition, options?: WaitForPathsOptions): Promise<GeoPath<T>>;
-  waitForPaths<T extends Path = Path>(paths: PathDefinition[], options?: WaitForPathsOptions): Promise<GeoPath<T>[]>;
+  waitForPoint(): Promise<GeoPoint>;
+  waitForPath<T extends Path = Path>(
+    validate: PathDefinition,
+    options?: WaitForPathsOptions
+  ): Promise<GeoPath<T>>;
+  waitForPaths<T extends Path = Path>(
+    paths: PathDefinition[],
+    options?: WaitForPathsOptions
+  ): Promise<GeoPath<T>[]>;
 }
 
-export abstract class GeoShape<T extends Point|Path = Point|Path> extends EventTarget {
+export abstract class GeoShape<
+  T extends Point | Path = Point | Path
+> extends EventTarget {
   readonly $parent: Geopad;
   $el: SVGView;
   name: string;
@@ -480,9 +547,14 @@ export abstract class GeoShape<T extends Point|Path = Point|Path> extends EventT
   isLocked: boolean;
   components: GeoPoint[];
   protected $label?: ElementView;
-  protected constructor($parent: Geopad, initial: GeoValue<T>, $el: SVGView, id?: string);
-  get value(): T|undefined;
-  get type(): string|undefined;
+  protected constructor(
+    $parent: Geopad,
+    initial: GeoValue<T>,
+    $el: SVGView,
+    id?: string
+  );
+  get value(): T | undefined;
+  get type(): string | undefined;
   get locked(): boolean;
   get isHidden(): boolean;
   setValue(p: GeoValue<T>): void;
@@ -491,7 +563,7 @@ export abstract class GeoShape<T extends Point|Path = Point|Path> extends EventT
   deselect(): void;
   hover(silent?: boolean): void;
   unhover(silent?: boolean): void;
-  abstract redraw(p: Point|Path): void;
+  abstract redraw(p: Point | Path): void;
   abstract delete(duration?: number): void;
   abstract distance(p: Point): number;
 }
@@ -502,33 +574,54 @@ export class GeoPoint extends GeoShape<Point> {
   private projectionId;
   private projection?;
   private projectionOffset;
-  constructor($parent: Geopad, initial: GeoValue<Point>, id?: string, $el?: SVGView, isLocked?: boolean);
+  constructor(
+    $parent: Geopad,
+    initial: GeoValue<Point>,
+    id?: string,
+    $el?: SVGView,
+    isLocked?: boolean
+  );
   setValue(p: GeoValue<Point>): void;
   redraw(p: Point): void;
   delete(duration?: number): void;
   distance(p: Point): number;
   lock(locked?: boolean): void;
-  project(p: string|GeoShape<Path>|undefined): void;
-  makeIntersection({path1, path2, index}: Intersection): void;
+  project(p: string | GeoShape<Path> | undefined): void;
+  makeIntersection({ path1, path2, index }: Intersection): void;
   addHalo(): void;
   removeHalo(): Promise<void>;
   pulsate(): void;
 }
 
 export class GeoPath<T extends Path = Path> extends GeoShape<T> {
-  constructor($parent: Geopad, initial: GeoValue<T>, id?: string, $el?: SVGView);
+  constructor(
+    $parent: Geopad,
+    initial: GeoValue<T>,
+    id?: string,
+    $el?: SVGView
+  );
   redraw(p: Path): void;
   distance(posn: Point): number;
   delete(duration?: number): void;
-  setComponents(components: GeoPoint[], expr: (...points: Point[]) => T|undefined): void;
+  setComponents(
+    components: GeoPoint[],
+    expr: (...points: Point[]) => T | undefined
+  ): void;
   updateEndPoint(newEndPoint: GeoPoint): void;
 }
 
-export type Path = Angle|Line|Circle|Arc|Polygon|Rectangle;
+export type Path = Angle | Line | Circle | Arc | Polygon | Rectangle;
 
-export type ToolName = 'move'|'point'|'line'|'circle'|'rectangle'|'perpBisector'|'angleBisector';
+export type ToolName =
+  | "move"
+  | "point"
+  | "line"
+  | "circle"
+  | "rectangle"
+  | "perpBisector"
+  | "angleBisector";
 
-export type CursorName = 'default'|'crosshair'|'grab';
+export type CursorName = "default" | "crosshair" | "grab";
 
 export interface Intersection {
   path1: GeoPath;
@@ -545,11 +638,11 @@ export interface GeoOptions {
   interactive?: boolean;
 }
 
-export type GeoExpr<T> = ((s: Obj<any>) => T|undefined);
+export type GeoExpr<T> = (s: Obj<any>) => T | undefined;
 
-export type GeoValue<T> = T|GeoExpr<T>|undefined;
+export type GeoValue<T> = T | GeoExpr<T> | undefined;
 
-export type PathDefinition = string|Path|((p: Path) => boolean);
+export type PathDefinition = string | Path | ((p: Path) => boolean);
 
 export interface WaitForPathsOptions {
   onBegin?: (path: GeoPath) => void;
@@ -613,50 +706,55 @@ export class Course extends CustomElementView {
   nextStep(): void;
   goToStep($step: Step, animated?: boolean): void;
   complete(animated?: boolean): void;
-  findStep(id: string): Step|undefined;
+  findStep(id: string): Step | undefined;
   saveProgress(data: Obj<any>): void;
   log(category: string, action: string, value?: string): void;
 }
 
 export abstract class Tile {
-    readonly $parent: Polypad;
-    readonly type: string;
-    readonly usePosnAsRotationCenter: boolean;
-    options?: string;
-    $el: SVGView;
-    isActive: boolean;
-    colour: string;
-    posn: Point;
-    rot: number;
-    protected path: Polygon | Rectangle;
-    protected $body: SVGView;
-    protected anchor: Point;
-    protected vertices: never[];
-    protected radius: number;
-    constructor($parent: Polypad);
-    setPosition(posn: Point, snap?: boolean): Point;
-    setRotation(rot: number): void;
-    setColour(colour: string): void;
-    transform(): void;
-    static makeThumbnail(options: string, element: ElementView): void;
-    get outline(): Polygon;
-    get points(): Point[];
-    delete(): void;
-    copy(dx?: number, dy?: number): any;
-    static action(name: string, selectedTiles: Tile[]): void;
+  readonly $parent: Polypad;
+  readonly type: string;
+  readonly usePosnAsRotationCenter: boolean;
+  options?: string;
+  $el: SVGView;
+  isActive: boolean;
+  colour: string;
+  posn: Point;
+  rot: number;
+  protected path: Polygon | Rectangle;
+  protected $body: SVGView;
+  protected anchor: Point;
+  protected vertices: never[];
+  protected radius: number;
+  constructor($parent: Polypad);
+  setPosition(posn: Point, snap?: boolean): Point;
+  setRotation(rot: number): void;
+  setColour(colour: string): void;
+  transform(): void;
+  static makeThumbnail(options: string, element: ElementView): void;
+  get outline(): Polygon;
+  get points(): Point[];
+  delete(): void;
+  copy(dx?: number, dy?: number): any;
+  static action(name: string, selectedTiles: Tile[]): void;
 }
 export class Polypad extends CustomElementView {
-    tiles: Set<Tile>;
-    $svg: SVGParentView;
-    $tiles: ElementView;
-    $activeTiles: ElementView;
-    $selection: SVGView;
-    $strokes: ElementView;
-    $grid: ElementView;
-    ready(): void;
-    selectRect(start: Point, end: Point): void;
-    snap(...points: Point[]): Point | undefined;
-    bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView): void;
-    setColour(c?: string): void;
-    clear(): void;
+  tiles: Set<Tile>;
+  $svg: SVGParentView;
+  $tiles: ElementView;
+  $activeTiles: ElementView;
+  $selection: SVGView;
+  $strokes: ElementView;
+  $grid: ElementView;
+  ready(): void;
+  selectRect(start: Point, end: Point): void;
+  snap(...points: Point[]): Point | undefined;
+  bindSource(
+    $el: ElementView,
+    type: string,
+    options: string,
+    $overlay?: ElementView
+  ): void;
+  setColour(c?: string): void;
+  clear(): void;
 }

@@ -9,8 +9,14 @@
 
 ::: column.grow
 
-Here you can see a spinner.
+Here's a classic spinner, with four sections. When rotated, it will land on a randomly selected section. 
 
+Drag these colors in order of how likely it is that the spinner lands on them!
+    x-sortable
+      .item.md(data-index="0") Red
+      .item.md(data-index="1") Grey
+      .item.md(data-index="2") Green
+      .item.md(data-index="3") Purple
 ::: column(width=300)
 
     svg.spinner(width=300 height=300)
