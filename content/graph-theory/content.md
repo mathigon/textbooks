@@ -1022,7 +1022,7 @@ concept which Google uses to sort search results.
 
 ::: column(width=240)
 
-    img(credit="© Various" src="images/internet.png" width=240 height=240)
+    img(credit="© Various" src="images/websites.png" width=240 height=240)
 
 :::
 

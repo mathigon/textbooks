@@ -1415,7 +1415,7 @@ two examples:
 
     .golden-art
       x-img(src="images/pantheon.jpg" width=320 height=198)
-      img(src="images/pantheon.png" width=320 height=198)
+      img(src="images/pantheon-box.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
 {.caption} The Greek sculptor Phidias is said to have used the golden ratio
@@ -1426,7 +1426,7 @@ the symbol we now use for the golden ratio.
 
     .golden-art
       x-img(src="images/dali.jpg" width=320 height=198)
-      img(src="images/dali.png" width=320 height=198)
+      img(src="images/dali-box.png" width=320 height=198)
 
 {.caption} _The Sacrament of the Last Supper_, by Spanish artist Salvador Dalí,
 is one of many paintings in the golden ratio. In the background, you can also
