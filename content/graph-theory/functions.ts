@@ -46,15 +46,15 @@ export function intro1($section: Step) {
 export function intro2($section: Step) {
   const graphs = $section.$$('.graph') as SVGParentView[];
 
-  new Graph(graphs[0], 6, [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [2, 5]],
+  new Graph(graphs[1], 6, [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [2, 5]],
       {vertex: BLUE, edge: BLUE});
-  new Graph(graphs[2], 5, [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]],
+  new Graph(graphs[3], 5, [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]],
       {vertex: GREEN, edge: GREEN});
-  new Graph(graphs[4], 6,
+  new Graph(graphs[5], 6,
       [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [4, 5], [5, 1]],
       {vertex: YELLOW, edge: YELLOW});
 
-  new Graph(graphs[1], 8,
+  new Graph(graphs[0], 8,
       [[0, 1], [1, 2], [2, 3], [3, 0], [1, 3], [1, 4], [4, 6], [6, 2], [3, 5],
         [5, 7], [7, 0]], {
         vertex: (v) => (v < 6 ? BLUE : '#DDD'),
@@ -62,7 +62,7 @@ export function intro2($section: Step) {
                         '#DDD'
       });
 
-  new Graph(graphs[3], 7,
+  new Graph(graphs[2], 7,
       [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0], [0, 3], [1, 3], [2, 5], [5, 3],
         [5, 6], [6, 3], [6, 4]], {
         vertex: (v) => (v < 5 ? GREEN : '#DDD'),
@@ -70,7 +70,7 @@ export function intro2($section: Step) {
                         GREEN : '#DDD'
       });
 
-  new Graph(graphs[5], 8,
+  new Graph(graphs[4], 8,
       [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [4, 5], [5, 1], [1, 3], [1, 4],
         [3, 6], [6, 0], [4, 7], [7, 0]], {
         vertex: (v) => (v < 6 ? YELLOW : '#DDD'),

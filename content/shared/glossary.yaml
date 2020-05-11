@@ -185,9 +185,9 @@ base-10:
 
 bipartite-graph:
   title: Bipartite Graph
-  text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is
-    connected to all the vertices in the opposite set, but none of the vertices
-    in its own set.
+  text: A (complete) __bipartite graph__ consists of two sets of vertices. Every
+    vertex is connected to all the vertices in the opposite set, but none of the
+    vertices in its own set.
   link: /course/graph-theory/handshakes#handshakes-4
 
 blackjack:
@@ -687,7 +687,7 @@ graph:
 
 graph-cycle:
   title: Cycle
-  text: __Cycles__ are graphs that consist of a single ring of vertices.
+  text: __Cycles__ are graphs that consist of a single loop of vertices.
   link: /course/graph-theory/introduction#intro-4
 
 graph-degree:
