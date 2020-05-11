@@ -1169,7 +1169,7 @@ about the motion when unscrewing a bottle).
     img(src="images/crystal.jpg" width=300 height=240)
 
 {.caption} Boron-Nitride has its molecules arranged in this crystal lattice,
-which has a 3-dimensional symmetry group.
+which has a three-dimensional symmetry group.
 :::
 
 ---

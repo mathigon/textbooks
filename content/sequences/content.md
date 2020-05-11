@@ -1057,7 +1057,7 @@ polygons?
 
 ### Tetrahedral and Cubic Numbers
 
-Of course, we also don’t have to limit ourselves to 2-dimensional shapes and
+Of course, we also don’t have to limit ourselves to two-dimensional shapes and
 patterns. We could stack spheres to form small pyramids, just like how you would
 stack oranges in a supermarket:
 
@@ -1402,7 +1402,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1418,7 +1418,7 @@ two examples:
       img(src="images/pantheon.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
-{.caption} The Greek sculptor Phidias is said to have used the Golden ratio
+{.caption} The Greek sculptor Phidias is said to have used the golden ratio
 when designing the _Parthenon_ in Athens. The first letter of his name, `φ`, is
 the symbol we now use for the golden ratio.
 
