@@ -208,6 +208,19 @@ newton:
     - title: Digits of Pi
       url: /course/circles/introduction#pi-record
 
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: __Amalie Emmy Noether__ (1882 – 1935) a fost o matematiciană germană care a realizat
+    descoperiri importante în algebra abstractă și în fizica teoretică, inclusiv legătura
+    dintre simetrie și legile conservării. Ea este adesea descrisă drept una din cele mai
+    influente matematiciene.    
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
 riemann:
   name: Riemann
   born: 1826
