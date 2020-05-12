@@ -1,0 +1,11 @@
+not-rigid-1: Această transformare geometrică mărește elipsa, deci nu este rigidă.
+not-rigid-2: Această transformare geometrică întinde bara de mijloc, deci nu este rigidă.
+
+letter-not-symmetric: Această literă nu are simetrie reflexivă…
+
+not-commutative: Asta înseamnă de fapt că, spre deosebire de numere, adunarea simetriilor
+    _nu este comutativă_. Cu alte cuvinte, `a + b != b + a`.
+
+short-palindrome: Încearcă să alegi un șir un pic mai lung…
+
+draw-hint: Dă-mi voie să te ajut un pic…

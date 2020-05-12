@@ -130,7 +130,7 @@ arithmetic series:
 associative:
   title: Asociativitate
   text: O operație • este asociativă dacă `a•(b•c) = (a•b)•c`. De exemplu,
-    adunarea (+) și înmulțirea (×) numerelor sunt operatii asociative.
+    adunarea (+) și înmulțirea (×) numerelor sunt operații asociative.
 
 atom:
   title: Atom
@@ -140,6 +140,18 @@ atom:
     alcătuit din _protoni_ și _neutroni_,  și înconjurat de un înveliș de _electroni_
     încărcați negativ. Diametrul unui atom este de aproximativ o zecime de nanometru.
 
+associative:
+  title: Associativitate
+  text: O operație • este asociativă dacă `a•(b•c) = (a•b)•c`. De exemplu,
+    adunarea (+) și înmulțirea (×) numerelor sunt operații asociative.
+    
+axis-of-symmetry:
+  title: Axa de Simetrie
+  text: Dacă o formă are simetrie reflexivă, __axa de simetrie__ este dreapta care
+    o împarte în două jumătăți egale.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+  
 axiom:
   title: Axiomă
   text: O __axiomă__, numită uneori și __postulat__, este un enunț matematic considerat
@@ -171,6 +183,12 @@ cavalieri:
 
     Putem folosi aceste date pentru a deduce că volumul prismei și al cilindrului
     este aria secțiunii transversale înmulțită cu înălțimea.
+
+center-of-rotation:
+  title: Centru de Rotație
+  text: __Centrul de rotație__ este punctul în jurul căruia o formă este rotită.
+    rotated.
+  link: /course/transformations/rigid#rotations
     
 circle:
   title: Cerc
@@ -247,6 +265,10 @@ congruent:
     ca dimensiune, formă și mărime. Asta înseamnă că le putem muta, răsturna sau roti
     astfel încât să se potrivească exact una peste alta.
   link: /course/euclidean-geometry/definitions#congruence
+  
+congruent-angles:
+  title: Unghiuri congruente
+  text: Două unghiuri sunt __congruente__ dacă au aceeași măsură.  
   
 conic-section:
   title: Secțiune conică
@@ -346,6 +368,22 @@ fta:
   text: __Teorema Fundamentală a Aritmeticii__ (TFA) spune că orice număr întregi
     are o descompunere în factori primi unică.
 
+function:
+  title: Funcție
+  text: O __funcție__ este o relație matematică ce convertește o intrare (_x_) într-o singură
+    ieșire (_y_). Este adesea exprimată ca ecuație matematică de forma `f(x)`.
+
+function-graph:
+  title: Grafice de Functii
+  text: Funcțiile matematice de forma `f(x)` pot fi reprezentate grafic 
+    într-un sistem de coordonate. Rezultatul se numește __graficul_ funcției.
+
+glide-reflection:
+  title: Reflexii cu alunecare
+  text: O __reflexie cu alunecare__ este un tip special de transformare geometrică. Este o combinație 
+    între o _reflexie_ și o _translație_ efectuate în aceeași direcție precum axa de reflexie.
+  link: /course/transformations/symmetry-groups#footsteps
+  
 gravity:
   title: Gravitația
   text: |
@@ -367,6 +405,18 @@ hyperbola:
     Ea este formată din două părți disjuncte, both of which approach _asymptotes_. It
     is also a _conic section_.
   image: hyperbola.svg
+
+group:
+  title: Grup
+  text: |
+    Un grup este o colecție de “obiecte” (precum numere sau simetrii) ce îndeplinesc
+    trei reguli distincte:
+
+    1. Două obiecte se pot aduna/combina pentru a obține un altul care se află tot în grup.       
+    2. Obiectele sunt _asociative_, adică `a+(b+c) + (a+b)+c`.
+    3. Există un _element neutru_ și fiecare “obiect” are un _element simetric_ care 
+       atunci când se adună împreună, se obține elementul neutru.       
+  link: /course/transformations/symmetry-groups#groups-1  
   
 irrational-numbers:
   title: Nume iraționale
@@ -382,6 +432,11 @@ iss:
     obiect construit de om ce se află pe orbita mică a Pământului și a fost locuită 
     continuu de la lansare. Se poate vedea cu ochiul liber de pe Pământ.
 
+laws-of-nature:
+  title: Legile Naturii
+  text: __Legile Naturii__ reprezintă numele dat la comun regulilor fizice 
+    (exprimate de obicei ca ecuații matematice) care încearcă să explice tot ce observăm în univers.
+    
 line:
   title: Dreaptă
   text: O __dreaptă__ este un set infinit de puncte ce se prelungește la nesfârșit
@@ -426,7 +481,20 @@ net:
   title: Pânzele unui poliedru
   text: __Pânza__ unui poliedru este ceea ce se obține atunci când se "desfășoară" 
     pe o suprafață plană fețele poligonale.
+    
+order-of-symmetry:
+  title: Gradul de Simetrie
+  text: Dacă o formă are simetrie rotațională, __gradul de simetrie__ este numărul de 
+    orientări în care forma arată la fel. (Sau, este numărul de rotații posibile înainte
+    de a ajunge înapoi la locul de start.)
+  link: /course/transformations/symmetry#rotational-symmetry    
 
+palindrome:
+  title: Palindrom
+  text: Un __palindrom__ este un cuvânt sau un număr care se citește de la coadă la cap
+    la fel ca de la cap la coadă. De exemplu, 25752 și “ANNA” sunt amândouă palindromuri.
+  link: /course/transformations/symmetry#palindromes
+  
 parabola:
   title: Parabola
   text: O __parabolă__ este forma graficului unei funcții de gradul al doilea
@@ -453,6 +521,17 @@ pi:
     și diametrul unui cerc. Este un număr transcendental, iar valoarea sa aproximativă
     este 3.14159265…
   link: /course/circles/introduction#pi-definition
+  
+point:
+  title: Punct
+  text: Un __punct__ este o locație anume în spațiu. Punctele descriu o poziție,
+    dar nu au dimensiune sau formă.
+  link: /course/euclidean-geometry/definitions#points
+
+polygon-vertex:
+  title: Vârful unui poligon
+  text: __Vârfurile__ unui poligon sunt punctele de intersecție ale laturilor adiacente 
+    (“colțurile” sale).
 
 prism:
   title: Prisma
@@ -501,6 +580,40 @@ ray:
   text: O __semidreaptă__ este o porțiune dintr-o dreaptă care începe dintr-un punct
     și se prelungește la infinit într-o singură direcție. Semidreapta care începe din `A` se notează `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
+
+reflection:
+  title: Reflexia
+  text: O __reflexie__ este o transformare care “întoarce” sau “oglindește” o formă
+    față de o dreaptă.
+  link: /course/transformations/rigid#reflections
+  
+rigid-transformation:
+  title: Transformare Rigidă
+  text: O __transformare rigidă__ (sau __izometrie__) este o transformare geometrică
+    ce nu schimbă dimensiunea sau forma unei figuri geometrice.
+  link: /course/transformations/rigid  
+  
+rotation:
+  title: Rotație
+  text: O __rotație__ este o transformare geometrică care “învârte” o formă cu un anumit 
+    unghi în jurul unui punct fix.
+  link: /course/transformations/rigid#rotations
+  
+rotational-symmetry:
+  title: Simetrie Rotațională
+  text: O formă are simetrie rotațională dacă arată la fel dupa ce a fost rotit 
+    (cu mai puțin de 360°).
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry  
+ 
+scale-factor:
+  title: Factor de Scalare
+  text: |
+    __Factorul de scalare__ a două figuri geometrice asemenea este raportul oricăror două lungimi corespondente.
+
+    Un factor de scalare mai mic decât 1 arată că forma este micșorată, 
+    iar un factor de scalare mai mare ca 1 arată că forma este mărită.
+  link: /course/transformations/dilations#dilations-1
   
 similar:
   title: Asemenea
@@ -520,6 +633,25 @@ sphere:
   text: O __sferă__ este un corp geometric tridimensional format din toate punctele aflate 
     la aceeași distanță față de un _centru_ dat. Această distanță se numește _raza_ sferei.
   link: /course/circles/spheres-cones-cylinders#sphere
+
+square:
+  title: Pătrat
+  text: "Un __pătrat__ este un patrulater regulat: toate laturile au aceeași lungime și
+    toate unghiurile au aceeași măsură (90°)."
+  link: /course/polyhedra/quadrilaterals
+  
+symmetry:
+  title: Simetrie
+  text: |
+    O figură sau o formă are __simetrie__ dacă arată la fel în urma unei
+    transformări geometrice (de exemplu: reflexie sau rotație).
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: Grup de Simetrie
+  text: __Grupul de simetrie__ al unui obiect geometric este colecția tuturor _simetriilor_ sale
+    (inclusiv _elementul neutru_).
+  link: /course/transformations/symmetry-groups#groups-1
   
 theorem:
   title: Teoremă
@@ -527,12 +659,35 @@ theorem:
     S-a dovedit a fi întotdeauna adevărată, folosind axiome, elemente de logică și
     teoreme anterioare care erau deja cunoscute a fi adevărate.
     
+transformation:
+  title: Transformare geometrică
+  text: O __transformare geometrică__ convertește o formă geometrică într-o alta. Există
+    multe tipuri diferite de transformări geometrice, precum _reflexiile_ sau _omotetiile_.
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: Imaginea unei Transformări geometrice
+  text: Rezultatul unei transformări geometrice se numește __imagine__. 
+    Aceasta se noteaza adesea adăugând un ’ la capătul etichetei sale.
+  link: /course/transformations/rigid#transformations
+  
 translation:
   title: Translație
   text: O __translație__este o transformare geometrică prin care o figură geometrică se mișcă 
     într-o direcție anume fără a i se modifica orientarea sau forma.
   image: translation.svg
   link: /course/transformations/rigid#translations
+  
+translational-symmetry:
+  title: Simetrie Translativă
+  text: Un șablon repetitiv (ca un tapet) are __simetrie translativă__ dacă 
+    arată la fel dupa ce a fost translat cu o anume lungime.
+  link: /course/transformations/symmetry-groups#symmetry-groups-1  
+  
+triangle-aa:
+  title: Criteriul UU de asemănare a triunghiurilor 
+  text: Două triunghiuri sunt __asemenea__ dacă două din unghiurile lor au aceeași măsură.
+    Numim asta __criteriul de asemănare UU__.
   
 trigonometry:
   title: Trigonometrie
