@@ -1057,7 +1057,7 @@ polygons?
 
 ### Tetrahedral and Cubic Numbers
 
-Of course, we also don’t have to limit ourselves to 2-dimensional shapes and
+Of course, we also don’t have to limit ourselves to two-dimensional shapes and
 patterns. We could stack spheres to form small pyramids, just like how you would
 stack oranges in a supermarket:
 
@@ -1402,7 +1402,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1415,10 +1415,10 @@ two examples:
 
     .golden-art
       x-img(src="images/pantheon.jpg" width=320 height=198)
-      img(src="images/pantheon.png" width=320 height=198)
+      img(src="images/pantheon-box.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
-{.caption} The Greek sculptor Phidias is said to have used the Golden ratio
+{.caption} The Greek sculptor Phidias is said to have used the golden ratio
 when designing the _Parthenon_ in Athens. The first letter of his name, `φ`, is
 the symbol we now use for the golden ratio.
 
@@ -1426,7 +1426,7 @@ the symbol we now use for the golden ratio.
 
     .golden-art
       x-img(src="images/dali.jpg" width=320 height=198)
-      img(src="images/dali.png" width=320 height=198)
+      img(src="images/dali-box.png" width=320 height=198)
 
 {.caption} _The Sacrament of the Last Supper_, by Spanish artist Salvador Dalí,
 is one of many paintings in the golden ratio. In the background, you can also

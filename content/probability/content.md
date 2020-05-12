@@ -58,8 +58,7 @@ One day, however, they get interrupted after the first coin toss and Fermat has
 to leave urgently. Later, they wonder who should pay the bill, or if there is a
 fair way to split it. The first coin landed _heads_ (a point for Pascal), so
 maybe Fermat should pay everything. However, there is a small chance that Fermat
-could have still won if the [[two next tosses|next coin toss]] would have been
-_tails_.
+could have still won if the [[two next tosses|next coin toss]] had been _tails_.
 
 ---
 > id: intro-1
@@ -137,8 +136,7 @@ or of a train arriving on time is [[more|less]] than 0.5 – which means likely.
 ---
 > id: prob-line-1
 
-Here are some more events: drag them into the correct order, from likely to
-unlikely:
+Now drag the following events into the correct order, from likely to unlikely:
 
     x-sortable
       .item.md(data-index="3") You throw a die :game_die: and it lands on 6.
@@ -221,7 +219,7 @@ can never tell what _actually_ will happen.
 
 > id: future
 
-If we roll a dice, the result is a number between 1 and 6, and all outcomes are
+If we roll a die, the result is a number between 1 and 6, and all outcomes are
 equally likely. If we roll two dice at once and add up their scores we can get
 results from [[2]] up to [[12]]. However, in this case they are not all equally
 likely.
@@ -340,13 +338,13 @@ results compare to the predicted probabilities:
 {.reveal(when="roll")} Notice how, as we roll more and more dice, the observed
 frequencies become closer and closer to the frequencies we predicted using
 probability theory. This principle applies to all probability experiments and is
-called the __Law of large numbers__.
+called the __law of large numbers__.
 
 {.reveal(when="roll")} Similarly, as we increase the number of dice rolled at
 once, you can also see that the probabilities change from a straight line (one
 die) to a triangle (two dice) and then to a “bell-shaped” curve. This is known
-as the __Central Limit Theorem__, and the bell-shaped curve is called the
-__Normal Distribution__.
+as the __central limit theorem__, and the bell-shaped curve is called the
+__normal distribution__.
 
 
 ---

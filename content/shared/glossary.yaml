@@ -185,9 +185,9 @@ base-10:
 
 bipartite-graph:
   title: Bipartite Graph
-  text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is
-    connected to all the vertices in the opposite set, but none of the vertices
-    in its own set.
+  text: A (complete) __bipartite graph__ consists of two sets of vertices. Every
+    vertex is connected to all the vertices in the opposite set, but none of the
+    vertices in its own set.
   link: /course/graph-theory/handshakes#handshakes-4
 
 blackjack:
@@ -316,8 +316,8 @@ complex-numbers:
     of a real and an imaginary number. They are often written as `a + bi`,
     where _a_ is the real part and _b_ is the imaginary part.
 
-    Complex numbers can be represented on a 2-dimensional plane, where the
-    _x_-axis are the real numbers, and the _y_-axis are the imginary numbers.
+    Complex numbers can be represented on a two-dimensional plane, where the
+    _x_-axis are the real numbers, and the _y_-axis are the imaginary numbers.
 
     The set of all complex numbers is often denoted using the symbol `CC`.
 
@@ -337,9 +337,9 @@ concave:
 cone:
   title: Cone
   text: |
-    A __cone__ is a 3-dimensional solid that has a circular _base_ joined to a
-    single point (called the _vertex_) by a curved side. You could also think of
-    a cone as a “circular pyramid”.
+    A __cone__ is a three-dimensional solid that has a circular _base_ joined to
+    a single point (called the _vertex_) by a curved side. You could also think
+    of a cone as a “circular pyramid”.
 
     A __right cone__ is a cone with its vertex directly above the center of its
     base.
@@ -388,7 +388,7 @@ convex:
 
 coordinate-system:
   title: Coordinate System
-  text: A __cordinate system__ is a 2-dimensional plane that contains two
+  text: A __cordinate system__ is a two-dimensional plane that contains two
     perpendicular axes. Every point on the plane can be defined using two
     numbers (coordinates), that specify its distance from the two axes.
 
@@ -687,7 +687,7 @@ graph:
 
 graph-cycle:
   title: Cycle
-  text: __Cycles__ are graphs that consist of a single ring of vertices.
+  text: __Cycles__ are graphs that consist of a single loop of vertices.
   link: /course/graph-theory/introduction#intro-4
 
 graph-degree:
@@ -1157,9 +1157,10 @@ polygon-vertex:
 
 polyhedron:
   title: Polyhedron
-  text: A __polyhedron__ (the plural is _polyhedra_) is a 3-dimensional solid
-    with no curved surfaces or edges. All faces of a polyhedron are polygons.
-    For example, a cube and a pyramid are polyhedra, but a sphere is not.
+  text: A __polyhedron__ (the plural is _polyhedra_) is a three-dimensional
+    solid with no curved surfaces or edges. All faces of a polyhedron are
+    polygons. For example, a cube and a pyramid are polyhedra, but a sphere is
+    not.
   link: /course/polyhedra/polyhedra
 
 polyhedron-dual:
@@ -1255,7 +1256,7 @@ protein:
 
 proton:
   title: Proton
-  text: A __Proton__ is one of the particles that make up the core of an atom.
+  text: A __proton__ is one of the particles that make up the core of an atom.
     It has a charge of +1. The number of protons in an atom is called its
     “atomic number”, and it determines what kind of element it is.
 
@@ -1499,7 +1500,7 @@ sequence-term:
 sierpinski-triangle:
   title: Sierpinski Triangle
   text: The __Sierpinski Triangle__ is a self-similar fractal. It consists of
-    an eqilateral triangle, with smaller equilateral triangles recursively
+    an equilateral triangle, with smaller equilateral triangles recursively
     removed from its remaining area.
   link: /course/fractals/sierpinski
   image: sierpinski-triangle.svg

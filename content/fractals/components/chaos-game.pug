@@ -12,15 +12,15 @@
       circle.move.yellow(name="x2")
       circle.move.blue(name="x3")
       circle.move.purple(name="x4")
-    x-icon-btn.var(icon="restore" title="Clear Canvas" @click="game.reset()")
-    x-icon-btn.var(icon="download" title="Download Image" @click="download()" style="top: 54px")
+    x-icon-btn.var(icon="restore" title="Clear canvas" @click="game.reset()")
+    x-icon-btn.var(icon="download" title="Download image" @click="download()" style="top: 54px")
 
   .chaos-rules.var
     label.form-field(style="width: 120px")
       select.chaos-ratio(:bind="ratio" @change="score('s1')")
         option(value="0") 1/2
         option(value="1") 2/3
-        option(value="2") Golden Ratio
+        option(value="2") Golden ratio
       span.placeholder Ratio
 
     label.form-field(style="width: 180px")
@@ -30,7 +30,7 @@
         option(value="center") Also include the center of the polygom
         option(value="repeat") Can’t pick same vertex twice in a row
         option(value="adjacent") Has to pick a vertex next to the previous one
-      span.placeholder Special Rules
+      span.placeholder Special rules
 
     .button-field
       button.btn.btn-red(@click="play(5000)") 5000 Steps

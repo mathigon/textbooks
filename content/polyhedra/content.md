@@ -1377,7 +1377,7 @@ noticed that a non-periodic pattern can be rolled up without any bulges.
 > id: polyhedra
 
 Up to now we have just looked at what we can do with polygons in a flat,
-two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
+two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a three-dimensional
 object that is made up of polygons. Here are some examples:
 
 ::: column.padded-thin(width=220)
@@ -1432,9 +1432,9 @@ you’ll learn how to actually prove it mathematically.
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Our entire world is 3-dimensional – but it is often much easier to draw or
-visualise flat, 2-dimensional objects. And there are a few different ways to
-view 3-dimensional polyhedra in a 2-dimensional way.
+Our entire world is three-dimensional – but it is often much easier to draw or
+visualise flat, two-dimensional objects. And there are a few different ways to
+view three-dimensional polyhedra in a two-dimensional way.
 
     //- x-folding(shape="Tetrahedron" size=400)
     //- x-folding(shape="Cube" size=400)
@@ -1496,7 +1496,7 @@ philosopher [Plato](bio:plato).
     //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 So what do the Platonic solids look like – and how many of them are there? To
-make a 3-dimensional shape, we need at least [[3]] faces to meet at every
+make a three-dimensional shape, we need at least [[3]] faces to meet at every
 vertex. Let’s start systematically with the smallest regular polygon:
 equilateral triangles:
 
@@ -1563,7 +1563,7 @@ If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
 ::: column.grow
 If [[six]] triangles meet at every vertex, something different happens: we
 simply get [[a tessellation|a quadrilateral|another Icosahedron]],
-_{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
+_{span.reveal(when="blank-1")}instead of a three-dimensional polyhedron._
 :::
 
 ---
@@ -1663,7 +1663,7 @@ seems like there are no Platonic solids consisting of hexagons._
 > id: platonic-final
 
 The same also happens for all regular polygons with more than six sides. They
-don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
+don’t tessellate, and we certainly don’t get any three-dimensional polygons.
 
 This means that there are just [[five]] Platonic solids! Let’s have a look at
 all of them together:

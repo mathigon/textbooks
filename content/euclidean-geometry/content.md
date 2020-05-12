@@ -693,8 +693,8 @@ temple that was _exactly twice_ the volume of the existing one.
 :::
 
 Note that _doubling the volume_ is not the same as _doubling an edge of the
-cube_. In fact, if the [[3-dimensional|2-dimensional|1-dimensional]] volume
-increases by a factor of 2, the [[1-dimensional|3-dimensional|2-dimensional]]
+cube_. In fact, if the [[three-dimensional|two-dimensional|one-dimensional]] volume
+increases by a factor of 2, the [[one-dimensional|three-dimensional|two-dimensional]]
 edge of the cube will increase by a factor of `root(2,3)`.
 
 ---
