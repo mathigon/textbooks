@@ -183,6 +183,11 @@ base-10:
     commonly used around the world. Every digit in a number can have one of ten
     different values, from 0 to 9.
 
+binary-numbers:
+  title: Binary Numbers
+  text: _Binary Numbers_ (or __base 2__) is the numbering system used to program
+    computers. Every digit can have one of two different values, either 0 or 1.
+
 bipartite-graph:
   title: Bipartite Graph
   text: __Bipartite graphs__ consists of two sets of vertices. Every vertex is

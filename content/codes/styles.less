@@ -55,8 +55,10 @@ x-code-box .morse > span {
   &:hover, &.hover { margin-right: 9px; }
 }
 
+.bracket line {stroke: black}
+
 // modified from divisibility
-.number-square {
+.ns {
   display: inline-block;
   text-align: center;
   line-height: 30px;
@@ -67,14 +69,14 @@ x-code-box .morse > span {
   color: white;
   position: relative;
 
-  &.blue { background: @blue; }
-  &.green { background: @green; }
-  &.yellow { background: @yellow; }
+  &.b { background: @blue; }
+  &.g { background: @green; }
+  &.y { background: @yellow; }
 
-  &.l-blue { background: fade(@blue, 40%); }
-  &.l-green { background: fade(@green, 40%); }
-  &.l-yellow { background: fade(@yellow, 40%); }
-  &.l-blue-green { background: linear-gradient(to bottom right, fade(@blue, 40%) 50%, fade(@green, 40%) 50%); }
+  &.lb { background: fade(@blue, 40%); }
+  &.lg { background: fade(@green, 40%); }
+  &.ly { background: fade(@yellow, 40%); }
+  &.lbg { background: linear-gradient(to bottom right, fade(@blue, 40%) 50%, fade(@green, 40%) 50%); }
 
   &.small { padding: 0; width: 24px; line-height: 24px; font-size: 1em; margin: -6px 1px; }
 
