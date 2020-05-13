@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Maritime_Alpha</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Alpha" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Rectangle" fill="#27519D" points="60 0 120 0 90 60 120 120 60 120"></polygon>
+        <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="60" height="120"></rect>
+        <path d="M90.559017,60 L120.809017,120.5 L-0.5,120.5 L-0.5,-0.5 L120.809017,-0.5 L90.559017,60 Z" id="frame" stroke="#979797"></path>
+    </g>
+</svg>

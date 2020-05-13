@@ -1658,6 +1658,12 @@ transformation-image:
     __image__. It is often denoted by adding a ’ to the end of its label.
   link: /course/transformations/rigid#transformations
 
+transistor:
+  title: Transistor
+  text: A __transistor__ is a microscopic electrical component within a computer
+    that stores information. There are millions of transistors within one single
+    computer.
+
 translation:
   title: Translation
   text: A __translation__ is a transformation that moves a figure in a specific

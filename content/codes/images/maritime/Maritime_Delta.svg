@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Maritime_Delta</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Delta" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#27519D" x="0" y="24" width="120" height="72"></rect>
+        <polygon id="Rectangle" fill="#FEF200" points="120 96 120 120 0 120 0 96"></polygon>
+        <polygon id="Rectangle" fill="#FEF200" points="120 -3.55271368e-15 120 24 0 24 0 3.55271368e-15"></polygon>
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Maritime_Yankee</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Yankee" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#979797" x="0.5" y="0.5" width="23" height="119"></rect>
+        <rect id="Rectangle" stroke="#979797" x="24.5" y="0.5" width="23" height="119"></rect>
+        <rect id="Rectangle" stroke="#979797" x="48.5" y="0.5" width="23" height="119"></rect>
+        <rect id="Rectangle" stroke="#979797" x="72.5" y="0.5" width="23" height="119"></rect>
+        <rect id="Rectangle" stroke="#979797" x="96.5" y="0.5" width="23" height="119"></rect>
+        <g id="Group" transform="translate(60.000000, 60.000000) rotate(90.000000) translate(-60.000000, -60.000000) " stroke="#979797">
+            <path d="M0.5,0.5 L0.5,119.5 L23.5,119.5 L23.5,0.5 L0.5,0.5 Z" id="Rectangle"></path>
+            <path d="M24.5,0.5 L24.5,119.5 L47.5,119.5 L47.5,0.5 L24.5,0.5 Z" id="Rectangle"></path>
+            <path d="M48.5,0.5 L48.5,119.5 L71.5,119.5 L71.5,0.5 L48.5,0.5 Z" id="Rectangle"></path>
+            <path d="M72.5,0.5 L72.5,119.5 L95.5,119.5 L95.5,0.5 L72.5,0.5 Z" id="Rectangle"></path>
+            <path d="M96.5,0.5 L96.5,119.5 L119.5,119.5 L119.5,0.5 L96.5,0.5 Z" id="Rectangle"></path>
+        </g>
+        <rect id="Rectangle" fill="#FEF200" x="0" y="0" width="120" height="120"></rect>
+        <polygon id="Path-2" fill="#EC1C23" points="0 120 120 0 120 24 24 120"></polygon>
+        <polygon id="Path-3" fill="#EC1C23" points="48 120 120 48 120 72 72 120"></polygon>
+        <polygon id="Path-4" fill="#EC1C23" points="96 120 120 96 120 120"></polygon>
+        <polygon id="Path-5" fill="#EC1C23" points="0 96 96 0 72 0 0 72"></polygon>
+        <polygon id="Path-6" fill="#EC1C23" points="0 48 48 0 24 0 0 24"></polygon>
+    </g>
+</svg>

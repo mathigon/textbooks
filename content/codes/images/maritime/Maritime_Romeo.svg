@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Maritime_Romeo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Romeo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#EC1C23" x="0" y="0" width="120" height="120"></rect>
+        <rect id="Rectangle" fill="#FEF200" x="48" y="0" width="24" height="120"></rect>
+        <polygon id="Rectangle" fill="#FEF200" points="120 48 120 72 0 72 0 48"></polygon>
+    </g>
+</svg>

@@ -5,10 +5,8 @@
     // http://plus.maths.org/content/exploring-enigma
     // http://nrich.maths.org/2198
 
-    mixin nato(ltr)
+    mixin nato(ltr, i)
       - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
-      - l = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
-      - i = l.indexOf(ltr)
       - w = words[i]
       span= w
 
@@ -20,7 +18,7 @@
 
 {.fixme} Imagine you’re in the jungle, being held hostage. You’ve been there for three months and you’re losing hope. You just want to be free and see your family again. A song comes on the radio. You hear a secret message in the song that gives you reason to believe you will be rescued soon. But your captors have no idea. How might you get this message that someone else can’t hear?
 
-{.fixme} Listen to a clip of this song and see if you can find a hidden message: // TODO: add an estimated timestamp so they don't have to go through the whole song.
+{.fixme} Listen to a clip of this song and see if you can find a hidden message (hint: the message is hidden after the chorus, at around 1:20):
 
     figure: iframe(width="100%" height=166 scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184253099&color=%23295869&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&sharing=false&download=false&show_playcount=false")
 
@@ -121,12 +119,31 @@ algorithms to encode and decode messages.
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         div
          strong= letter
-         +nato(letter)
+         +nato(letter, index)
 
 
-{.todo} Table for __Nautical flags__
 
-{.todo} Table and photo for __Flag Semaphore__
+#### International Maritime Signal Flags
+{.fixme} fix padding
+
+    .alphabet
+      - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
+      for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+        div
+          strong= letter
+          img(src="images/maritime/Maritime_" + words[index] + ".svg", width="50px", height="50px")
+
+#### Flag Semaphore
+{.fixme} Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Semaphore_Alpha.svg)
+
+    .alphabet
+      - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
+      for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+        div
+          strong= letter
+          img(src="images/semaphore/Semaphore_" + words[index] + ".svg", width="100px", height="100px")
+
+{.fixme} Maybe something about how the Beatles used __Flag Semaphore__ for album HELP, but decided to use different letters.
 
 {.todo} Table and photo for __Genetic Code__
 
@@ -179,6 +196,8 @@ If we want to use each combination of ups and downs to represent a different num
 > id: bracket
 
 {.fixme} off-by-one error for animation
+
+{.todo} clear up this exposition
 
 With each finger that we add, our number of options multiplies by two.
 
@@ -236,7 +255,7 @@ We can get our five-digit binary number by following any path from beginning to 
 
 Please enter the number of things into the table below.
 
-| How many fingers? | How many possible combinations? |
+| With __ fingers... | we can make __ possible combinations. |
 | 1 | [[2]] |
 | 2 | [[4]] |
 | 3 | [[8]] |
@@ -268,7 +287,7 @@ Yes, there are [[32]] different combinations we can make with five fingers.
 
 ---
 
-And here are their values in binary.
+And here are the same hands, but with their fingers shown as 1s and 0s.
 
     table.finger-grid
       for b0 in [0, 1]
@@ -286,14 +305,17 @@ And here are their values in binary.
 
 {.todo} Transistors
 
+
+A [transistor](gloss:transistor) is like a switch than can be either on or off. Recall how in our morse code/flashlight examples we were constrained by the medium’s ability to be on or off. Computers store data in transistors, so they store data as a collection of ons and offs, or 1s and 0s. Just like we just did with our fingers (by putting them up or down). If a computer had fingers (up/down), they would probably count to 31 on one hand. Everything that’s stored on a computer, from text and images to video and sound is stored in transistors as sequences of 1s and 0s, or binary code.
+
+
 ---
 
 ### Binary to Base-Ten
-{.todo} converting binary to base-ten
 
 Before we can understand how computers use binary code to store complex things like sound and video, we must first understand the basics, like how a base-ten number is stored.
 
-Our number system operates as a (base ten)[gloss:base-10] number system. Base ten numbers have ten possible values for each digit. 0 1 2 3 4 5 6 7 8 and 9. In a base-ten number, each digit is worth ten times as much as the previous smaller digit. The first right-most digit represents how many [[ones|tens|twos]] there are, the second right-most digit represents how many [[tens|hundreds|fives]] there are, and so on.
+Our number system operates as a [base ten](gloss:base-10) number system. Base ten numbers have ten possible values for each digit. 0 1 2 3 4 5 6 7 8 and 9. In a base-ten number, each digit is worth ten times as much as the previous smaller digit. The first right-most digit represents how many [[ones|tens|twos]] there are, the second right-most digit represents how many [[tens|hundreds|fives]] there are, and so on.
 
 | number | hundreds value | tens value | ones value |
 | 432 | [[400]] | [[30]] | [[2]] |
@@ -389,14 +411,10 @@ The decimal value of  __{.m-green}101011__ is [[43]].
 > sectionStatus: dev
 > id: dec2bin
 
-{.todo} converting base-ten to binary
-
 Now that we know how to convert a binary to decimal, how can we convert a decimal to a binary code?
 
 Follow the slideshow below.
 
-
-How do we convert from decimal to binary? Follow the animation below.
 {.fixme} make this design more consistent with the rest of Mathigon
 
     x-slideshow
