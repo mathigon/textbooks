@@ -139,6 +139,7 @@ algorithms to encode and decode messages.
 {.fixme} more stuff.
 
 #### NATO Phonetic Alphabet
+{.fixme} The NATO Phonetic Alphabet is used to communicate letters over radio by people like military, police, or EMS workers. It might be used to communicate something like a license plate.
 
     .alphabet
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -149,6 +150,7 @@ algorithms to encode and decode messages.
 
 
 #### International Maritime Signal Flags
+{.fixme} These are flags hung from boats at sea to communicate messages to other boats within range.
 {.fixme} fix padding
 
     .alphabet
@@ -170,9 +172,20 @@ algorithms to encode and decode messages.
 
 {.fixme} Maybe something about how the Beatles used __Flag Semaphore__ for album HELP, but decided to use different letters.
 
-{.todo} Table and photo for __Genetic Code__
 
-{.fixme} Notice that the same symbol can mean different things within completely different codes. The letter __C__ can be represented by "Charlie" in the NATO Phonetic Alphabet, __this flag__, __these arms__, or it can represent Cytosine.
+#### Genetic Code
+{.fixme} The genetic code is what makes up our DNA. There are 4 different nucleotides. You may see a string of something like __CGATCGTTACGCGATTCGATCATTTGTGTCCATCGTGGG__. This is a _code_ for a sequence of molecules within a strand of DNA. In this case, the _letter_ is the code representing the nucleotide.
+
+    .alphabet
+      - words = ['Adenine', 'Thymine', 'Cytosine', 'Guanine']
+      for letter, index in 'ATCG'
+        div
+          div
+            img(src="images/DNA_" + words[index] + ".png", width="100px", height="100px")
+            span= words[index]
+          strong= letter
+
+{.fixme} The same symbol can mean different things within completely different codes. The letter __C__ can be represented by "Charlie" in the NATO Phonetic Alphabet, __this maritime flag__, __these arms__, or it can represent Cytosine.
 
 ---
 
