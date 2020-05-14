@@ -1253,6 +1253,13 @@ monsky:
     Brandeis University. He proved that a square cannot be divided into an odd
     number of equal-area triangles – this is known as “Monsky’s theorem”.
 
+morse:
+  born: 1791
+  died: 1872
+  name: Morse
+  bio: __Samuel Morse__ (1791-1872) was an American painter and inventor. He
+    co-invented the telegraph, and created "Morse Code".
+
 napier:
   born: 1550
   died: 1617

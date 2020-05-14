@@ -490,3 +490,15 @@ export function morseEncoding($step: Step) {
     }
   });
 }
+
+// MORSE: how to make this work with numbers?
+export function resolution($step: Step) {
+  console.log('resolution');
+  const $codeBox = $step.$('x-code-box') as CodeBox;
+
+  $codeBox.encode((char: string, $el: ElementView) => {
+    for (const x of MORSE_CODE[char.toLowerCase()].split('')) {
+      $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
+    }
+  });
+}

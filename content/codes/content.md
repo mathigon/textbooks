@@ -5,6 +5,11 @@
     // http://plus.maths.org/content/exploring-enigma
     // http://nrich.maths.org/2198
 
+    // TELEGRAPH:
+    // https://en.wikipedia.org/wiki/Morse_code#Development_and_history
+    // https://en.wikipedia.org/wiki/First_transcontinental_telegraph#CITEREFPeters1996
+    // https://historytogo.utah.gov/telegraph/
+
     mixin nato(ltr, i)
       - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
       - w = words[i]
@@ -15,36 +20,39 @@
 
 > section: introduction
 > sectionStatus: dev
+> id: introduction
 
-{.fixme} Imagine you’re in the jungle, being held hostage. You’ve been there for three months and you’re losing hope. You just want to be free and see your family again. A song comes on the radio. You hear a secret message in the song that gives you reason to believe you will be rescued soon. But your captors have no idea. How might you get this message that someone else can’t hear?
+Imagine you’re in the jungle, being held hostage. You’ve been there for three months and you’re losing hope. You just want to be free and see your family again. A song comes on the radio. You hear a secret message in the song that gives you reason to believe you will be rescued soon. But your captors have no idea. How might you get this message that someone else can’t hear?
 
-{.fixme} Listen to a clip of this song and see if you can find a hidden message (hint: the message is hidden after the chorus, at around 1:20):
+Listen to a clip of this song and see if you can find a hidden message (hint: the message is hidden after the chorus, at around 1:20):
 
     figure: iframe(width="100%" height=166 scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184253099&color=%23295869&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&sharing=false&download=false&show_playcount=false")
 
----
 
-{.fixme} There are many other situations where we want to communicate, but we can't use our voices or text.
-Imagine that there's been a power outage in the night, and your phone doesn't work. Your friend
-lives across the street, and you can see his window…
+
+It may be very difficult for the untrained ear to notice, but there is a secret message hidden in the song. There are lots of cases in the world where we want to communicate but we can't use our voices or our text, or we want to conceal our message from others.
 
 ---
 
 ### Morse Code
 
-{.fixme} A similar technique was invented in XXX by XXXX. A few years earlier, the telegraph was invented,
-and engineers 
+Before we resolve our "hostage situation", let's try a thought experiment that's a bit safer. Imagine you and your friend who live across the street want a way to communicate at night time, without using phones or computers and without waking your family members. You both have flashlights which can be turned either off or on. How might you communicate with each other?
 
-{.fixme} This secret language is just like something called Morse Code, which was used in the invention of the telgegraph.
+{.todo} A flashlight SVG with an on/off button (see the "conic section" section for an existing flashlight) {.caption} experiment with ways you might communicate using just a flashlight.
+
+One way we might communicate is by turning it on for different lengths of time, to represent different letters.
 
 ---
+
 > id: telegraph
+
+A similar technique was invented around the year 1837 by [Samuel Morse](bio:morse) after the invention of the [electric telegraph](gloss:telegraph).
 
 ::: column.grow
 
-{.fixme} The telegraph can send electrical messages across long distances. Telephone wires span the country, allowing messages to go from one part of the country to another. Before the telegraph, the fastest way to get your message across was the sending letters through the mail? Or  Or train? << Look this up >>.
+The electric telegraph can send electrical messages across long distances. In 1861, a wire was built across the U.S. across which messages could be sent from coast to coast nearly instantly. Before telegraphs, messages could take hundreds of days to reach one coast from the other.
 
-{.fixme} Like in our flashlight scenario, the people who could work with telegraph could communicate in a very limited medium. Telegraphs work when you press down and connect a circut (on), or let go and disconnect the circuit (off). 
+Like in our flashlight scenario, the people who could work with telegraph could communicate in a very limited medium. Telegraphs work when you press down and connect a circut (on), or let go and disconnect the circuit (off). 
 
 ::: column(width=320)
 
@@ -56,8 +64,9 @@ and engineers
 
 :::
 
-{.fixme} XXX came up with a way to change the letters of our alphabet into sequences of short and long XXX.
-These could be transmitted
+---
+
+Samuel Morse came up with a way to represent the letters of our alphabet by sequences of short beeps (dots) and long beeps (dashes). Each letter has a different sequence.
 
     .alphabet
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -65,19 +74,35 @@ These could be transmitted
          strong= letter
          x-morse(char=letter)
 
-{.fixme} For example… 
-To signal an E you would make a [dot|dash] <<< AUDIO + 
-To signal a Y you would make a [dash dot dash dash | dot whatever]
+For example, to signal an E we would make a [[dot|dash]]. To signal a Y we would make a [[dash dot dash dash|dot dash dash|dot dot]].
 
 > id: morse-encoding
 
-{.fixme} The most well-known message sent in Morse Code is “SOS”, which is the emergency help message. SOS can be sent by 3 dots (S), 3 dashes (O), and 3 dots (S).
+The most well-known message sent in Morse Code is “SOS”, which is the emergency help message. SOS can be sent by 3 dots (S), 3 dashes (O), and 3 dots (S).
 
     x-code-box
       .input(contenteditable="true" spellcheck="false") SOS
       .output.morse
 
-{.fixme} Resolve music
+{.caption} Try writing your name in the box to see it written in Morse Code.
+
+---
+
+> id: resolution
+
+Returning to our original hostage situation, it is [Morse Code](gloss:morse-code) that the creators of that song used to conceal their message. This was the message:
+
+    x-code-box
+      .output.morse
+      .input(contenteditable="false" spellcheck="false") 19 LIBERADOS. SIGUEN USTEDES. ANIMO.
+
+Translated from Spanish, the message is __19 PEOPLE RESCUED. YOU'RE NEXT. DON'T GIVE UP.__
+
+    x-video(src="images/BetterDaysClip.mp4" poster="images/BetterDays.jpg" width=320 height=180 audio controls credit="YouTube")
+
+Let's try listening to the song again. To someone who does not understand Morse Code, it may just sound like part of the music. But the hostages were soldiers who had been trained in Morse Code, and recognized it in the song when they heard it on the radio. They used their training to understand the message and prepared to be rescued. They were rescued and returned home safely. You never know when knowing Morse Code will come in handy!
+
+---
 
 #### Morse Code in history and culture
 

@@ -960,6 +960,11 @@ molecule:
     atoms, and `H_2 O`, which consists of two Hydrogen atoms and one Oxygen
     atom.
 
+morse-code:
+  title: Morse Code
+  text: __Morse code__ is a method of encoding text characters as sequeneces of
+    dots and dashes.
+
 multiple:
   title: Multiple
   text: A number _a_ is a __multiple__ of a number _b_, if _b_ is a factor of _a_.
@@ -1609,6 +1614,12 @@ tangent:
   # Formally, it is a line through a point of a differentiable curve, which has
   # the same slop as the slope of the curve at that point.
   # A line tangent to a circle is perpendicular to the radius at that point.
+
+telegraph:
+  title: Electric Telegraph
+  text: The __electric telegraph__ is a device that can send electrical signals over
+    long distances. It can be used as a communication device with the help of
+    Morse Code.
 
 term:
   title: Term (Algebra)
