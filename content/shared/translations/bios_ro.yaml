@@ -221,6 +221,26 @@ noether:
     - title: Symmetry in Physics
       url: /course/transformations/physics
 
+pythagoras:
+  name: Pitagora
+  born: -570
+  died: -495
+  bio: |
+    __Pitagora din Samos__ (c. 570 – 495 î.Hr) a fost un filosof și matematician grec.
+    El este foarte cunoscut pentru demonstrarea _teoremei lui Pitagora_, dar a realizat
+    multe alte descoperiri matematice și științifice.
+
+    Pitagora a încercat să explice muzica într-un mod matematic și a descoperit că
+    două tonuri sună “frumos” împreună (consonante) dacă raportul frecvențelor lor 
+    este o fracție simplă.
+
+    De asemenea, el a fondat o școală în Italia în care impreună cu studenții sai
+    au venerat matematica aproape asemenei unei religii, în timp ce urmau o serie
+    de reguli bizare - până la urmă școala a fost arsă de adversarii lor.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
 riemann:
   name: Riemann
   born: 1826
@@ -235,6 +255,12 @@ riemann:
     - title: Riemann Hypothesis
       url: /course/divisibility/the-distribution-of-primes#riemann
       
+sikdar:
+  name: Sikdar
+  bio: __Radhanath Sikdar__ (1813 – 1870) a fost un matematician indian. El a fost primul
+    care a măsurat înălțimea muntelui Everest și care a arătat că este cel mai înalt munte
+    de pe Pământ.
+    
 thales:
   name: Thales
   born: -624
