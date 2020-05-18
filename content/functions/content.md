@@ -63,6 +63,11 @@ While everyone is sleeping, let’s think some more about the three exercises we
 
 In mathematics, groups of things like this are called [__sets__](gloss:set), and connections between two sets are called [__relations__](gloss:relation). Relations can take many different forms, and you might have already noticed some similarities and differences between the examples we’ve seen above.
 
+---
+
+### Definitions of Domain and Range
+
+We’ve been working the relationship between sets. That is, we have been looking at relationships between input and output sets. These input and output sets actually have special names. The complete set of all possible inputs is called [__domain__](gloss:domain). Similarly,  [__range__](gloss:range) is the set of all possible output values. Use the tabs to answer the questions below.
 
 
 
