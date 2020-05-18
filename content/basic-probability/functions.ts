@@ -14,19 +14,19 @@ export function intro($step: Step) {
   // Draw Spinner
   let sections: { share: number; end: Point }[] = [
     {
-      share: 1 / 3,
+      share: 7 / 20,
       end: new Point(0, 0),
     },
     {
-      share: 1 / 3,
+      share: 4 / 20,
       end: new Point(0, 0),
     },
     {
-      share: 1 / 6,
+      share: 3 / 20,
       end: new Point(0, 0),
     },
     {
-      share: 1 / 6,
+      share: 6 / 20,
       end: new Point(0, 0),
     },
   ];
@@ -43,7 +43,7 @@ export function intro($step: Step) {
 
   // Draw Pointer, and add spinning logic
   let pointer = new Rectangle(new Point(145, 50), 10, 200);
-  let $spinner = $N("path", { class: `pointer`, path: pointer }, $svg);
+  // let $spinner = $N("path", { class: `pointer`, path: pointer }, $svg);
 
   rotateDisk($spinner, {
     clicky: true,
