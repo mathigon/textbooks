@@ -18,7 +18,7 @@ const tsconfig = require('./tsconfig.json');
 const rtl = require('postcss-rtl');
 
 const LANGUAGES = ['en',  'ar', 'cn', 'de', 'es', 'fr', 'hi', 'it', 'ja', 'pt',
-  'ru', 'sv', 'tr', 'vi', 'fa', 'mr', 'ro'];
+  'ru', 'sv', 'tr', 'vi', 'fa', 'mr', 'ro', 'hr'];
 const CACHE = __dirname + '/content/.cache.json';
 
 
