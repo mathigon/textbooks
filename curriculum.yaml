@@ -224,14 +224,6 @@ non-euclidean-geometry:
 functions:
   title: Functions
   color: fd8c00
-  sections:
-    - title: Relations and Functions
-    - title: Graphing Functions
-    - title: Solving Equations Graphically
-    - title: Domain and Range
-    - title: Absolute Value Functions
-    - title: Inverse Functions
-    - title: Rates of Change
 
 sequences:
   title: Sequences and Patterns
