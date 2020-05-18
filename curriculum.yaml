@@ -510,3 +510,9 @@ exploding-dots:
   description: A mathematical story developed for Global Math Week – learn about place value, infinity and p-adic numbers.
   color: 6f27cc
   hideTitle: true
+
+connections:
+  title: How Mathematics Connects Us
+  description: Discover the mathematical principles that connect our world, from shaking hands to travel and navigation, colouring maps and social networks.
+  color: aa1690
+  hideIcon: true
