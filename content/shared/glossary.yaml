@@ -1463,6 +1463,12 @@ scientific-notation:
 
     For example, the number 4600 could be written as `4.6 × 10^3`.
 
+set:
+  title: Sets
+  text: A __set__ is a collection of things or objects (called elements). Every
+    element can only appear one in a set. We write sets using {}s, for example,
+    a set containing the numbers 2, 3 and 4 would be written as {2, 3, 4}.
+
 sequence:
   title: Sequence
   text: A __sequence__ is an ordered list of numbers (or other elements like
