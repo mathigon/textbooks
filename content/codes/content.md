@@ -181,7 +181,7 @@ algorithms to encode and decode messages.
       for letter, index in 'ATCG'
         div
           div
-            img(src="images/DNA_" + words[index] + ".png", width="100px", height="100px")
+            img(src="images/dna/dna_" + words[index] + ".png", width="100px", height="100px")
             span= words[index]
           strong= letter
 
@@ -205,7 +205,7 @@ How high can you count using only one hand, without skipping any numbers? When w
       tr
         for x in [1, 2, 3, 4, 5]
           td: div.bin-finger(padding="1px")
-            x-media(src="images/decimal_"+x+".jpg" width=100 height=100)
+            x-media(src="images/fingers/decimal_"+x+".jpg" width=100 height=100)
             .caption= x
 
 ---
@@ -214,7 +214,7 @@ How high can you count using only one hand, without skipping any numbers? When w
 A drawback of this strategy is that there are many unused finger combinations. For example, this finger combination to the right would represent [[2]]. With our traditional model there are two fingers up, so it means two. But we already have a configuration for two! We're wasting valuable space.
 
 ::: column(width=320)
-    x-media(src="images/binary_17.jpg" width=320 height=320)
+    x-media(src="images/fingers/binary_17.jpg" width=320 height=320)
 :::
 
 ---
@@ -315,7 +315,7 @@ Yes, there are [[32]] different combinations we can make with five fingers.
             - var n = x*8 + y
             // FINGERFADE: make this binary
             td: div.bin-finger(padding="1px")
-              x-media(src="images/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
+              x-media(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
               .caption= n
           
 
@@ -336,7 +336,7 @@ And here are the same hands, but with their fingers shown as 1s and 0s.
                 for b4 in [0, 1]
                   - var n = b0*16 + b1*8 + b2*4 + b3*2 + b4*1
                   td: div.bin-finger(padding="1px")
-                    x-media(src="images/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=60 height=60)
+                    x-media(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=60 height=60)
                     .caption= ""+b0+b1+b2+b3+b4
 
 ---
