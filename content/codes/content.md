@@ -29,6 +29,14 @@
     // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
     // Photo Credit: David Fearn / newsteam
 
+    // NAUTICAL SIGNAL FLAGS
+    // flags made by Kevin DeLand
+    // nautical-signal.jpg from here (public domain)
+    // https://commons.wikimedia.org/wiki/File:Nautical_signal_flags_-_USS_Bonhomme_Richard_(LHD_6).jpg
+
+    // SEMAPHORE signals
+    // acquired from Wikimedia Commons, all licensed under the GNU Free Documentation License and the Creative Commons Attribution Share-Alike License
+    // https://commons.wikimedia.org/wiki/File:Semaphore_November.svg
     // BEATLES ALBUM COVER
     // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg
     // This image may be covered under Fair Use? https://www.copyright.gov/fair-use/more-info.html
@@ -55,6 +63,8 @@ Listen to a clip of this song and see if you can find a hidden message (hint: th
 
 It may be very difficult for the untrained ear to notice, but there is a secret message hidden in the song. There are lots of cases in the world where we want to communicate but we can't use our voices or our text, or we want to conceal our message from others.
 
+{.fixme} CONTINUE BUTTON
+
 ---
 
 ### Morse Code
@@ -64,6 +74,8 @@ Before we resolve our "hostage situation", let's try a thought experiment that's
 {.todo} A flashlight SVG with an on/off button (see the "conic section" section for an existing flashlight) {.caption} experiment with ways you might communicate using just a flashlight.
 
 One way we might communicate is by turning it on for different lengths of time, to represent different letters.
+
+{.fixme} CONTINUE AFTER PLAYING WITH FLASHLIGHT
 
 ---
 
@@ -87,6 +99,8 @@ Like in our flashlight scenario, the people who could work with telegraph could 
 
 :::
 
+{.fixme} CONTINUE BUTTON?
+
 ---
 
 Samuel Morse came up with a way to represent the letters of our alphabet by sequences of short beeps (dots) and long beeps (dashes). Each letter has a different sequence.
@@ -109,6 +123,9 @@ The most well-known message sent in Morse Code is “SOS”, which is the emerge
 
 {.caption} Try writing your name in the box to see it written in Morse Code.
 
+
+{.fixme} CONTINUE: Should not advance til has written in the box.
+
 ---
 
 > id: resolution
@@ -119,11 +136,15 @@ Returning to our original hostage situation, it is [Morse Code](gloss:morse-code
       .output.morse
       .input(contenteditable="false" spellcheck="false") 19 LIBERADOS. SIGUEN USTEDES. ANIMO.
 
+{.fixme} CHECK COPYRIGHT
+
 Translated from Spanish, the message is __19 PEOPLE RESCUED. YOU'RE NEXT. DON'T GIVE UP.__
 
     x-video(src="images/BetterDaysClip.mp4" poster="images/BetterDays.jpg" width=320 height=180 audio controls credit="YouTube")
 
 Let's try listening to the song again. To someone who does not understand Morse Code, it may just sound like part of the music. But the hostages were soldiers who had been trained in Morse Code, and recognized it in the song when they heard it on the radio. They used their training to understand the message and prepared to be rescued. They were rescued and returned home safely. You never know when knowing Morse Code will come in handy!
+
+{.fixme} CONTINUE after listening to clip
 
 ---
 
@@ -152,8 +173,6 @@ Check out these other times (both real and fictional) when Morse code has been u
 
 ### Codes and Information
 
-{.todo} TODO
-
 {.fixme} __Information__ is everywhere around us, but it is difficult to define what
 exactly "information" _means_. Instead we can give examples of things that
 contain information: books and newspapers, numbers and charts, images, sound or
@@ -163,25 +182,26 @@ film clips.
 alphabet is a example of a code can can be used to express _language_ in the
 form of _letters_.
 
-{.fixme} Sometimes letters are not the best format to express information, and we can use
-other codes. In this course we will discover some of these codes as well as the
-algorithms to encode and decode messages.
 
-{.fixme} What we just communicated with was __morse code__.
-  
-::: column(width=382)
-    x-media(src="images/native-telegraph.jpg" width=382 height=480)
+::: column(width=191)
+    x-media(src="images/native-telegraph.jpg" width=191 height=240)
 
-::: column(width=218)
+::: column.grow
 
 Codes are not a recent invention. For example, indigenous cultures used smoke signals to communicate messages over long distances where it was too far to shout.
 
 :::
 
-{.fixme} more stuff.
+{.fixme} Sometimes letters are not the best format to express information, and we can use
+other codes. In this course we will discover some of these codes as well as the
+algorithms to encode and decode messages.
+
+{.fixme} What we just communicated with was __morse code__.
+
+Here are some more codes that are used commonly.
 
 #### NATO Phonetic Alphabet
-{.fixme} The NATO Phonetic Alphabet is used to communicate letters over radio by people like military, police, or EMS workers. It might be used to communicate something like a license plate.
+The NATO Phonetic Alphabet is used to communicate letters over radio by people like military, police, or EMS workers. Instead of saying a letter, we say its respective word. It might be used to communicate something like a license plate. 
 
     .alphabet
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -190,9 +210,18 @@ Codes are not a recent invention. For example, indigenous cultures used smoke si
          +nato(letter, index)
 
 
-
 #### International Maritime Signal Flags
-{.fixme} These are flags hung from boats at sea to communicate messages to other boats within range.
+
+::: column(width=400)
+__International Maritime Signal Flags__ are hung from boats at sea to communicate messages to other boats within sight range.
+
+    x-media(src="images/nautical-signal.jpg" width=320 height=225)
+
+::: column.grow
+    x-media(src="images/nautical-flags.jpg" width=253 height=360)
+
+:::
+
 {.fixme} fix padding
 
     .alphabet
@@ -202,8 +231,13 @@ Codes are not a recent invention. For example, indigenous cultures used smoke si
           strong= letter
           img(src="images/maritime/Maritime_" + words[index] + ".svg", width="50px", height="50px")
 
+
+
 #### Flag Semaphore
-{.fixme} Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Semaphore_Alpha.svg)
+
+__Flag Semaphore__ is used for communicating letters over long distances. It was used before the invention of the telegraph.
+
+{.fixme} Image Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Semaphore_Alpha.svg)
 
     .alphabet
       - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
@@ -212,7 +246,6 @@ Codes are not a recent invention. For example, indigenous cultures used smoke si
           strong= letter
           img(src="images/semaphore/Semaphore_" + words[index] + ".svg", width="100px", height="100px")
 
-{.fixme} Maybe something about how the Beatles used __Flag Semaphore__ for album HELP, but decided to use different letters.
 
 ::: column(width=300)
     x-media(src="images/help-album.jpg" width=300 height=300)
@@ -236,7 +269,22 @@ The Beatles wanted to use Semaphore to spell the word "HELP" on the cover of the
             span= words[index]
           strong= letter
 
-{.fixme} The same symbol can mean different things within completely different codes. The letter __C__ can be represented by "Charlie" in the NATO Phonetic Alphabet, __this maritime flag__, __these arms__, or it can represent Cytosine.
+The same symbol can mean different things within completely different codes. For example, the letter __C__ can be represented by "Charlie" in the NATO Phonetic Alphabet, __this maritime flag__, __these arms__, or it can represent Cytosine if placed within a strand of other DNA letters.
+
+{.fixme} How to put images inline?
+
+    x-gallery(slide-width="100")
+      div
+        x-media(src="images/maritime/Maritime_Charlie.svg" width="100px" height="100px")
+        p.caption Maritime Flag for C
+      div
+        x-media(src="images/semaphore/Semaphore_Charlie.svg" width="100px" height="100px")
+        p.caption Semaphore signal for C
+      div
+        x-media(src="images/dna/dna_cytosine.png" width="100px" height="100px")
+        p.caption Molecule for Cytosine
+    
+
 
 ---
 
