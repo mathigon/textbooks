@@ -10,6 +10,29 @@
     // https://en.wikipedia.org/wiki/First_transcontinental_telegraph#CITEREFPeters1996
     // https://historytogo.utah.gov/telegraph/
 
+
+    // IMAGES:
+    // CAPITAL RECORDS BUILDING
+    // https://commons.wikimedia.org/wiki/File:Capitol_Records_Building,_Hollywood_(2573870208).jpg
+
+    // JOHNNY GOT HIS GUN
+    // https://en.wikipedia.org/wiki/File:JohnnyGotHisGun.JPG
+    // "It is believed that the use of low-resolution images of book covers... - to illustrate an article discussing the book in question, - on the English-language Wikipedia..., qualifies as fair use under the copyright law of the United States. Other use of this image, on Wikipedia or elsewhere, might be copyright infringement. See (https://en.wikipedia.org/wiki/Wikipedia:Non-free_content) for more information
+    // ALTERNATIVELY: can use Movie Poster
+    // https://en.wikipedia.org/wiki/File:Johnny_Got_His_Gun_poster.jpg
+
+    // JEREMIAH DENTON:
+    // found on wikimedia commons. In the public domain. Would be better to have a shot of him actually blinking.
+    // https://commons.wikimedia.org/wiki/File:JeremiahDentonSenate.jpg
+
+    // BRITISH POW WWII
+    // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
+    // Photo Credit: David Fearn / newsteam
+
+    // BEATLES ALBUM COVER
+    // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg
+    // This image may be covered under Fair Use? https://www.copyright.gov/fair-use/more-info.html
+
     mixin nato(ltr, i)
       - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
       - w = words[i]
@@ -106,9 +129,26 @@ Let's try listening to the song again. To someone who does not understand Morse 
 
 #### Morse Code in history and culture
 
-{.todo} Insert images and captions for references.
+Check out these other times (both real and fictional) when Morse code has been used.
 
-{.todo} _Johnny Got His Gun_, _30 Rock_, _Cryptonomicon_, _Jeremiah Denton_, _Hijacked Dutch Train_, _Capitol Records_, _Jim and Pam_, _Nazi Prison Camp_
+{.fixme} Please check for appropriateness and for image copyright.
+
+    x-gallery(slide-width="300")
+      div
+        x-media(src="images/capitol-records.jpg" width=160 height=240 lightbox)
+        p.caption The Capitol Records building in Los Angeles blinks out the word <em>HOLLYWOOD<em>
+      div
+        x-media(src="images/johnny-book.jpeg" width=160 height=240 lightbox)
+        p.caption In the novel <em>Johnny Got His Gun<em> the protagonist loses nearly almost all control over his bodily movement, and communicates via Morse Code.
+      div
+        x-media(src="images/denton.jpg" width=160 height=240 lightbox)
+        p.caption Jeremiah Denton was taken hostage during the Vietnam war and communicated a hidden message while on camera by blinking in Morse Code.
+      div
+        x-media(src="images/british-pow.jpg" width=160 height=240 lightbox)
+        p.caption In World War II, a British Major used Morse Code to stitch hidden messages while held captive in a prison camp.
+
+
+---
 
 ### Codes and Information
 
@@ -132,7 +172,9 @@ algorithms to encode and decode messages.
 ::: column(width=382)
     x-media(src="images/native-telegraph.jpg" width=382 height=480)
 
-{.caption} Codes are not a recent invention. For example, indigenous cultures used smoke signals to communicate messages over long distances where it was too far to shout.
+::: column(width=218)
+
+Codes are not a recent invention. For example, indigenous cultures used smoke signals to communicate messages over long distances where it was too far to shout.
 
 :::
 
@@ -171,6 +213,15 @@ algorithms to encode and decode messages.
           img(src="images/semaphore/Semaphore_" + words[index] + ".svg", width="100px", height="100px")
 
 {.fixme} Maybe something about how the Beatles used __Flag Semaphore__ for album HELP, but decided to use different letters.
+
+::: column(width=300)
+    x-media(src="images/help-album.jpg" width=300 height=300)
+
+::: column(width=300)
+    
+The Beatles wanted to use Semaphore to spell the word "HELP" on the cover of their album with the same name. They didn't like the way it looked, so they chose different letters. What do their signals actually spell?
+
+:::
 
 
 #### Genetic Code
