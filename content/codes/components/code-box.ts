@@ -63,7 +63,7 @@ export class CodeBox extends CustomElementView {
 
     let i = 0;
     for (const char of str.split('')) {
-      if (!char.match(/[a-zA-Z]/)) { // MORSE: how to make this work with numbers?
+      if (!char.match(/[a-zA-Z0-9]/)) {
         this.$input._el.appendChild(document.createTextNode(char));
         this.$output._el.appendChild(document.createTextNode(char));
       } else {
