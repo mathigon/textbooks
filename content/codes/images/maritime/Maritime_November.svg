@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Maritime_November</title>
-    <desc>Created with Sketch.</desc>
-    <g id="November" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Rectangle" fill="#27519D" x="0" y="0" width="30" height="30"></rect>
-        <rect id="Rectangle" fill="#27519D" x="60" y="0" width="30" height="30"></rect>
-        <rect id="Rectangle" fill="#27519D" x="30" y="30" width="30" height="30"></rect>
-        <rect id="Rectangle" fill="#27519D" x="0" y="60" width="30" height="30"></rect>
-        <rect id="Rectangle" fill="#27519D" x="30" y="90" width="30" height="30"></rect>
-        <rect id="Rectangle" fill="#27519D" x="60" y="60" width="30" height="30"></rect>
-        <rect id="Rectangle" fill="#27519D" x="90" y="30" width="30" height="30"></rect>
-        <rect id="Rectangle" fill="#27519D" x="90" y="90" width="30" height="30"></rect>
-    </g>
-</svg>
+<svg height="120" viewBox="0 0 120 120" width="120" xmlns="http://www.w3.org/2000/svg"><g fill="#27519d" fill-rule="evenodd"><path d="m0 0h30v30h-30z"/><path d="m60 0h30v30h-30z"/><path d="m30 30h30v30h-30z"/><path d="m0 60h30v30h-30z"/><path d="m30 90h30v30h-30z"/><path d="m60 60h30v30h-30z"/><path d="m90 30h30v30h-30z"/><path d="m90 90h30v30h-30z"/></g></svg>

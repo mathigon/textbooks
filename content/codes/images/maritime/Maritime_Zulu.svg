@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>Maritime_Zulu</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Zulu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Rectangle" fill="#EC1C23" points="60 60 120 120 0 120"></polygon>
-        <polygon id="Rectangle" fill="#000000" points="60 60 7.10542736e-15 120 0 1.8369702e-15"></polygon>
-        <polygon id="Rectangle" fill="#FEF200" points="60 60 -1.42108547e-14 7.10542736e-15 120 -7.10542736e-15"></polygon>
-        <polygon id="Rectangle" fill="#27519D" points="60 60 120 -1.42108547e-14 120 120"></polygon>
-    </g>
-</svg>
+<svg height="120" viewBox="0 0 120 120" width="120" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m60 60 60 60h-120z" fill="#ec1c23"/><path d="m60 60-60 60v-120z" fill="#000"/><path d="m60 60-60-60h120z" fill="#fef200"/><path d="m60 60 60-60v120z" fill="#27519d"/></g></svg>
