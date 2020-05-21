@@ -192,8 +192,8 @@ this is what gives fractals their name: they have a __fractional dimension__.
 
 With every iteration, we remove some of the area of the Sierpinski triangle.
 If we could do this infinitely many times, there would actually be no area
-left: that’s why the Sierpinski triangle is something in-between a 2-dimensional
-area, and a 1-dimensional line.
+left: that’s why the Sierpinski triangle is something in-between a two-dimensional
+area, and a one-dimensional line.
 
 ::: .theorem
 While many fractals are _self-similar_, a better definition is that __fractals__
@@ -213,23 +213,23 @@ snowflakes and ice crystals:
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/snow-1.jpg" width=120 height=120)
+    x-img(src="images/snow-1.jpg" width=120 height=120 alt="Snowflake")
 
 ::: column(width=120)
 
-    x-media(src="images/snow-2.jpg" width=120 height=120)
+    x-img(src="images/snow-2.jpg" width=120 height=120 alt="Snowflake")
 
 ::: column(width=120)
 
-    x-media(src="images/snow-3.jpg" width=120 height=120)
+    x-img(src="images/snow-3.jpg" width=120 height=120 alt="Snowflake")
 
 ::: column(width=120)
 
-    x-media(src="images/snow-4.jpg" width=120 height=120)
+    x-img(src="images/snow-4.jpg" width=120 height=120 alt="Snowflake")
 
 ::: column(width=120)
 
-    x-media(src="images/snow-5.jpg" width=120 height=120)
+    x-img(src="images/snow-5.jpg" width=120 height=120 alt="Snowflake")
 
 :::
 
@@ -388,7 +388,7 @@ Can you come up with any other ways to create your own fractals?
 ### Menger Sponge
 
 Fractals don’t have to be “flat”, like many of the examples above. One of the
-most famous fractals that look 3-dimensional is the __Menger sponge__, named
+most famous fractals that look three-dimensional is the __Menger sponge__, named
 after the mathematician [Karl Menger](bio:menger) who first described it in 1926.
 
 ::: column(width=320 parent="right")
@@ -414,7 +414,7 @@ Menger sponge just like we did for the Koch snowflake above. In this case we get
 
 {.reveal(when="blank-1")} If you imagine cutting out more and more holes,
 infinitely many times, there would be no actual volume left. That’s why the cube
-is “not quite” 3-dimensional!
+is “not quite” three-dimensional!
 [Continue](btn:next)
 
 ---
@@ -433,23 +433,23 @@ on:
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/coast-1.jpg" width=120 height=180)
+    x-img(src="images/coast-1.jpg" width=120 height=180 alt="Coastline")
 
 ::: column(width=120)
 
-    x-media(src="images/coast-2.jpg" width=120 height=180)
+    x-img(src="images/coast-2.jpg" width=120 height=180 alt="Coastline")
 
 ::: column(width=120)
 
-    x-media(src="images/coast-3.jpg" width=120 height=180)
+    x-img(src="images/coast-3.jpg" width=120 height=180 alt="Cliffs")
 
 ::: column(width=120)
 
-    x-media(src="images/coast-4.jpg" width=120 height=180)
+    x-img(src="images/coast-4.jpg" width=120 height=180 alt="Beach")
 
 ::: column(width=120)
 
-    x-media(src="images/coast-5.jpg" width=120 height=180)
+    x-img(src="images/coast-5.jpg" width=120 height=180 alt="Pebbles")
 
 :::
 
@@ -537,40 +537,40 @@ coastlines, and here are some more examples:
 ::: column(width=200)
 
     // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
-    x-media(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
+    x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC" alt="Mountain range")
 
 {.caption} Mountain range in central Asia
 
 ::: column(width=200)
 
     // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
-    x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
+    x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA" alt="River delta")
 
 {.caption} Ganges river delta in India
 
 ::: column(width=200 parent="padded-thin")
 
-    x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/lightning.jpg" width=200 height=200 lightbox alt="Lightning bolts")
 
 {.caption} Lightning bolts
 
 ::: column(width=200)
 
     // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
-    x-media(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
+    x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA" alt="Blood vessels")
 
 {.caption} Blood vessels in the retina
 
 ::: column(width=200)
 
     // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
-    x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
+    x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey" alt="Grand Canyon")
 
 {.caption} Grand Canyon in the USA
 
 ::: column(width=200)
 
-    x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/clouds.jpg" width=200 height=200 lightbox alt="Clouds")
 
 {.caption} Clouds
 
@@ -591,7 +591,7 @@ like medicine, biology, geology and meteorology.
 ::: column(width=300)
 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
-    x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
+    x-img(src="images/terrain.jpg" width=360 height=270 lightbox alt="Computer-generated fractal terrain with mountains and water")
 
 {.caption} Computer-generated fractal terrain
 
@@ -625,9 +625,9 @@ mathematician [Wacław Sierpiński](bio:sierpinski). It can be created by starti
 with one large, equilateral triangle, and then repeatedly cutting smaller
 triangles out of its center.
 
-{.r.reveal(when="slider-0")} Wacław Sierpiński was the first mathematicians to
-think about the properties of this triangle, but it has appeared many centuries
-earlier in artwork, patterns and mosaics.
+{.r.reveal(when="slider-0")} Wacław Sierpiński was the first mathematician to think about the
+properties of this triangle, but it has appeared many centuries earlier in artwork, patterns and
+mosaics.
 
 ::: column(width=300)
 
@@ -646,22 +646,22 @@ Here are some examples of floor tilings from different churches in Rome:
 ::: column(width=140 parent="padded-thin")
 
     // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
-    x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+    x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
     // Permission from Elisa Conversano
-    x-media(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
+    x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
     // https://www.cattedraledianagni.it/
-    x-media(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
+    x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
     // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
-    x-media(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
+    x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire" alt="Mosaic Floor with Sierpinski Triangle")
 
 :::
 
@@ -720,7 +720,7 @@ Here you can see a tiny version of the first 128 rows of Pascal’s triangle.
 We have highlighted all cells that are divisible by ${n}{n|2|2,40,1} – what
 do you notice?
 
-{.reveal(when="var-0")} For every number, we a different triangular pattern
+{.reveal(when="var-0")} For every number, we get a different triangular pattern
 similar to the Sierpinski triangle. The pattern is particularly regular if we
 choose a [[prime number|triangle number|Fibonacci number]].
 _{span.reveal(when="blank-0")} If the number has *many different* prime factors,
@@ -786,7 +786,7 @@ distribution of dots, but in other cases, we reveal even more fractals:
 
 {.reveal(when="s1 s2 play")} Did you discover the [Sierpinski
 carpet](action:carpet()) or this [pentagonal snowflake](action:snowflake())
-based on the [__Golden ratio__](gloss:golden-ratio)?
+based on the [__golden ratio__](gloss:golden-ratio)?
 
 ---
 > id: cellular
@@ -827,7 +827,7 @@ cellular automata, for example the colours on the shell of this snail.
 
 ::: column(width=320)
 
-    x-media(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
+    x-img(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0" alt="Shell of a sea snail")
 
 {.caption} Conus textile, a venomous sea snail
 
@@ -839,8 +839,8 @@ cellular automata, for example the colours on the shell of this snail.
 ### Sierpinski Tetrahedra
 
 There are many variants of the Sierpinski triangle, and other fractals with
-similar properties and creation processes. Some look 2-dimensional, like the
-_Sierpinski Carpet_ you saw above. Others look 3-dimensional, like these
+similar properties and creation processes. Some look two-dimensional, like the
+_Sierpinski Carpet_ you saw above. Others look three-dimensional, like these
 examples:
 
 ::: column(width=320)
@@ -1032,7 +1032,7 @@ eventually blows up to infinity.
 {div(slot="legend")} What else can you find? Have a look at the patterns when
 [`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) or when
 [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also some values of
-_c_ where _every_ sequence diverges, so the entire complex plain remains white.
+_c_ where _every_ sequence diverges, so the entire complex plane remains white.
 
 :::
 
@@ -1040,7 +1040,7 @@ _c_ where _every_ sequence diverges, so the entire complex plain remains white.
 > id: julia-3
 
 The different shapes that are formed by colouring in the numbers are called
-[__Julia Sets__](gloss:julia-set). They were discovered independently by two
+[__Julia sets__](gloss:julia-set). They were discovered independently by two
 French mathematicians, [Gaston Julia](bio:julia) and [Pierre Fatou](bio:fatou),
 around 1918.
 
@@ -1055,19 +1055,19 @@ diverges:
 
 ::: column(width=220)
 
-    x-media(src="images/julia-1.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox alt="Julia set")
 
 {.caption} `c = −0.70176 – 0.3842"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-2.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox alt="Julia set")
 
 {.caption} `c = −0.4 + 0.6"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-3.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox alt="Julia set")
 
 {.caption} `c = 0.285 + 0.01"i"`
 
@@ -1119,12 +1119,12 @@ remain bounded. What shapes do you expect to appear?
 ---
 > id: mandel-history
 
-This fractal is called the [__Mandelbrot Set__](gloss:mandelbrot-set), and when
+This fractal is called the [__Mandelbrot set__](gloss:mandelbrot-set), and when
 rotated by 90°, it looks almost like a person, with head, body and two arms. It
 was defined and drawn for the first time in 1978, in a research paper by the
 mathematicians Robert Brooks and Peter Matelski:
 
-    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
+    figure: x-img(src="images/printout.jpg" width=360 height=290 credit="© Princeton University Press" alt="Mandelbrot set drawing")
 
 A few years later, [Benoit Mandelbrot](bio:mandelbrot) used the powerful
 computers at IBM to create a much more detailed visualisation of the fractal,
@@ -1216,7 +1216,7 @@ savers, and it’s been referenced in many popular books and movies.
 
 ::: column(width=220)
 
-    x-media(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
+    x-img(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American" alt="Scientific American Magazine Cover")
 
 :::
 

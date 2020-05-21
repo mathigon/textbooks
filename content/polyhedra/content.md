@@ -655,7 +655,7 @@ the Kite is the only one that can also be [concave](gloss:concave): if it is
 shaped like a dart or arrow:
 ::: column(width=320)
 
-    x-media(src="images/kites.jpg")
+    x-img(src="images/kites.jpg")
 
 :::
 
@@ -972,32 +972,32 @@ without any gaps or overlaps. Patterns like that are called
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
 {.caption} [[Hexagonal|Triangular|Quadratic]] honeycomb
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
 
 {.caption} Sinaloan Milk Snake skin
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/leaf.jpg", width=200 height=200)
 
 {.caption} Cellular structure of leafs
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
+    x-img(lightbox, credit="Chmee2, via Wikipedia", src="images/tessellations/causeway.jpg", width=200 height=200)
 
 {.caption} Basalt columns at Giant’s Causeway in Northern Ireland
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/pineapple.jpg", width=200 height=200)
 
 {.caption} Pineapple skin
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
+    x-img(lightbox src="images/tessellations/tortoise.jpg", width=200 height=200)
 
 {.caption} Shell of a tortoise
 :::
@@ -1010,32 +1010,32 @@ technology – from ancient Rome to the present. Here are a few examples:
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
+    x-img(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
 
 {.caption} [[Rectangular|Quadratic|Hexagonal]] pavement pattern
 ::: column(width=200)
 
-    x-media(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
+    x-img(lightbox, src="images/tessellations/greenhouse.jpg", width="200", height="200")
 
 {.caption} Greenhouse at the Eden Project in England
 ::: column(width=200)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", src="images/tessellations/alhambra.jpg", width="200", height="200")
 
 {.caption} Mosaic at Alhambra
 ::: column(width=200)
 
-    x-media(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
+    x-img(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
 
 {.caption} [[Triangular|Hexagonal|Rectangular]] roof at the British Museum in London
 ::: column(width=200)
 
-    x-media(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
+    x-img(lightbox, credit="© Patrick Boland, via archinect.com", src="images/tessellations/cellular.jpg", width="200", height="200")
 
 {.caption} Cellular tessellation pavilion in Sydney
 ::: column(width=200)
 
-    x-media(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
+    x-img(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
 
 {.caption} _Study of Regular Division of the Plane with Reptiles_, M. C. Escher
 :::
@@ -1054,9 +1054,16 @@ new shapes from the sidebar onto the canvas. Which shapes tessellate well? Are
 there any shapes that don’t tessellate at all? Try to create interesting
 patterns!
 
-    include ./components/tessellation
-    figure: x-tessellation
-    x-gesture(target="x-tessellation .menu" slide="-300, 140")
+    figure: .tessellation
+      x-polypad
+      .menu
+        for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
+          .add(data-shape=s)
+      .btn-row
+        button.btn Clear
+        button.btn Download
+      svg.overlay: g.tiles.active
+    x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
       h4 Examples of other students’ tessellations
       .row.padded-thin
@@ -1308,22 +1315,22 @@ work contains strange, mutating creatures, patterns and landscapes:
 
     .row
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
         p.caption “Sky and Water I” (1938)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
         p.caption “Lizard” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
         p.caption “Lizard, Fish, Bat” (1952)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
         p.caption “Butterfly” (1948)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
         p.caption “Two Fish” (1942)
       div(style="width: 220px")
-        x-media(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
+        x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
 These artworks often look fun and effortless, but the underlying mathematical
@@ -1370,7 +1377,7 @@ noticed that a non-periodic pattern can be rolled up without any bulges.
 > id: polyhedra
 
 Up to now we have just looked at what we can do with polygons in a flat,
-two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
+two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a three-dimensional
 object that is made up of polygons. Here are some examples:
 
         // BARCODE: alternative to creating a mixin
@@ -1426,9 +1433,9 @@ you’ll learn how to actually prove it mathematically.
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Our entire world is 3-dimensional – but it is often much easier to draw or
-visualise flat, 2-dimensional objects. And there are a few different ways to
-view 3-dimensional polyhedra in a 2-dimensional way.
+Our entire world is three-dimensional – but it is often much easier to draw or
+visualise flat, two-dimensional objects. And there are a few different ways to
+view three-dimensional polyhedra in a two-dimensional way.
 
     //- x-folding(shape="Tetrahedron" size=400)
     //- x-folding(shape="Cube" size=400)
@@ -1490,7 +1497,7 @@ philosopher [Plato](bio:plato).
     //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 So what do the Platonic solids look like – and how many of them are there? To
-make a 3-dimensional shape, we need at least [[3]] faces to meet at every
+make a three-dimensional shape, we need at least [[3]] faces to meet at every
 vertex. Let’s start systematically with the smallest regular polygon:
 equilateral triangles:
 
@@ -1557,7 +1564,7 @@ If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
 ::: column.grow
 If [[six]] triangles meet at every vertex, something different happens: we
 simply get [[a tessellation|a quadrilateral|another Icosahedron]],
-_{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
+_{span.reveal(when="blank-1")}instead of a three-dimensional polyhedron._
 :::
 
 ---
@@ -1657,7 +1664,7 @@ seems like there are no Platonic solids consisting of hexagons._
 > id: platonic-final
 
 The same also happens for all regular polygons with more than six sides. They
-don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
+don’t tessellate, and we certainly don’t get any three-dimensional polygons.
 
 This means that there are just [[five]] Platonic solids! Let’s have a look at
 all of them together:
@@ -1847,12 +1854,12 @@ in nature – and we can copy these properties in science and engineering.
 
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/radiolaria.jpg")
+    x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Radiolaria skeleton
     
 ::: column(width=180)
 
-    x-media(lightbox width=180 height=180 src="images/virus.jpg")
+    x-img(lightbox width=180 height=180 src="images/virus.jpg")
     p.caption Icosahedral virus
 
 ::: column.grow
@@ -1865,12 +1872,12 @@ elements but is almost shaped like a sphere.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
+    x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Buckyball molecule
       
 ::: column(width=180)
 
-    x-media(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
+    x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Montreal Biosphere
       
 ::: column.grow
@@ -1885,12 +1892,12 @@ Fuller](bio:fuller), famous for constructing similar-looking buildings.
 
 ::: column(width=180)
 
-    x-media(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
+    x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Fluorite octahedron
       
 ::: column(width=180)
 
-    x-media(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
+    x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Pyrite cube
       
 ::: column.grow
@@ -1901,12 +1908,12 @@ When they crack or shatter, you can see these shapes on a larger scale.
 
 ::: column(width=180)
 
-    x-media(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
+    x-img(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
     p.caption Octagonal space frames
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/louvre.jpg")
+    x-img(lightbox width="180", height="180", src="images/louvre.jpg")
     p.caption Louvre museum in Paris
 
 ::: column.grow
@@ -1917,12 +1924,12 @@ support large roofs and heavy bridges.
 
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/football.jpg")
+    x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Football
     
 ::: column(width=180)
 
-    x-media(lightbox width="180", height="180", src="images/dice.jpg")
+    x-img(lightbox width="180", height="180", src="images/dice.jpg")
     p.caption Polygonal role-playing dice
 
 ::: column.grow

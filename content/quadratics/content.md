@@ -122,7 +122,7 @@ We can maximise our profit by pricing the skateboards at approximately
 ---
 > id: intro-final
 
-    figure: x-media(src="images/skater-2.jpg" width=400 height=352)
+    figure: x-img(src="images/skater-2.jpg" alt="Skateboarder" width=400 height=352)
 
 In the real word, it can be very difficult for companies to determine a precise
 equation for their profit – and it is likely to be much more complicated than
@@ -2577,7 +2577,7 @@ where the receiver is placed in the focus, or thermal solar power plants, which
 focus the suns' rays onto a single point to create a lot of heat.
 
 The actual shape of this telescope is called a Paraboloid – it is basically a
-3-dimensional version of a parabola.
+three-dimensional version of a parabola.
 
 Even the TV dishes at your home have a paraboloid shape. They focus the incoming
 radio waves onto the small receiver in its center.

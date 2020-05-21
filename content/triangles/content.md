@@ -18,7 +18,7 @@ including the Himalayan mountain range.
 
 ::: column(width=240)
 
-    x-media.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
+    x-img.shift-1(src="images/theodolite.jpg" width=240 height=320 credit="Science & Society Picture Library")
 
 {.caption} The _theodolite_, a surveying instrument
 :::
@@ -55,7 +55,7 @@ _{button.next-step} Continue_
 
 ::: column(width=320)
 
-    x-media(src="images/hillary.jpg" width=320 height=190)
+    x-img(src="images/hillary.jpg" width=320 height=190)
 
 {.caption} Edmund Hillary and Tenzing Norgay were the first to reach the top of
 Mount Everest, in 1953.
@@ -88,15 +88,15 @@ This property makes triangles particularly useful in construction, where they
 can carry heavy weights.
 
 ::: column(width=200)
-    x-media(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
+    x-img(src="images/truss-bridge.jpg" credit="© ykanazawa1999, Flickr" width=200 height=200 lightbox)
 
 {.caption} A “Truss bridge” is supported by triangular bars
 ::: column(width=200)
-    x-media(src="images/pylon.jpg" width=200 height=200 lightbox)
+    x-img(src="images/pylon.jpg" width=200 height=200 lightbox)
 
 {.caption} Triangles in high-voltage electricity Pylons
 ::: column(width=200)
-    x-media(src="images/bike.jpg" width=200 height=200 lightbox)
+    x-img(src="images/bike.jpg" width=200 height=200 lightbox)
 
 {.caption} Even bikes use triangles for stability.
 :::
@@ -110,15 +110,15 @@ particularly well suited to approximating complex curved surfaces. This is done
 in physical building…
 
 ::: column(width=200)
-    x-media(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/st-mary.jpg" credit="Kunstlerbob, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} “The Gherkin”, a skyscraper in London
 ::: column(width=200)
-    x-media(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/hk-bank.jpg" credit="WiNG, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Bank of China Tower in Hong Kong
 ::: column(width=200)
-    x-media(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
+    x-img(src="images/museum.jpg" credit="Andrew Dunn, Wikipedia" width=200 height=200 lightbox)
 
 {.caption} Courtyard of the British Museum in London
 :::
@@ -130,7 +130,7 @@ Artists and software engineers need to know about geometry and trigonometry in
 order to be able to move and transform these triangles realistically, and to
 calculate their colour and texture.
 ::: column(width=220)
-    x-media(src="images/dolphin.jpg" width=220 height=135)
+    x-img(src="images/dolphin.jpg" width=220 height=135)
 :::
 
     figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
@@ -949,6 +949,7 @@ see that
 #### Algebra _{span.check(when="blank-2 blank-3 blank-4")}_
 
 ::: column.grow
+
 Here we have the same figure as before, but this time we’ll use _algebra_ rather
 than _rearrangement_ to prove Pythagoras’ theorem.
 
@@ -1007,6 +1008,7 @@ _{span.qed}_
 #### Similar Triangles _{span.check(when="next-0 next-1 next-2 blank-5")}_
 
 ::: column.grow
+
 {.r} Here you can see another right-angled triangle. If we draw one of the
 altitudes, it splits the triangle into two smaller triangle.
 It also divides the hypotenuse _c_ into [two smaller parts](target:hypotenuse)
@@ -1083,6 +1085,7 @@ similar polygons:
 {.text-center.reveal(when="next-2")} `c^2 = a^2 + b^2`
 
 {.reveal(when="next-2")} Once more, we’ve proven Pythagoras’ theorem! _{span.qed}_
+
 :::
 
 ---
@@ -1094,14 +1097,18 @@ of  “number worship”. They believed that all numbers have their own characte
 and followed a variety of other bizarre customs.
 
 ::: column.grow
+
 The Pythagoreans are credited with many mathematical discoveries, including
 finding the first [irrational number](gloss:irrational-numbers), `sqrt(2)`.
 Irrational numbers cannot be expressed as a simple fraction – a concept the
 Pythagoreans found deeply troubling and (unsuccessfully) tried to cover up!
+
 ::: column(width=400)
-    x-media(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
+
+    x-img(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
 {.caption} “Pythagoreans celebrate sunrise” by Fyodor Bronnikov
+
 :::
 
 ---
@@ -1616,4 +1623,4 @@ started from sea level at the beach, measured thousands of kilometers of
 distance, built surveying towers across the entire country and even accounted
 for the curvature of Earth.
 
-    figure: x-media(src="images/himalaya.jpg" width=760 height=320)
+    figure: x-img(src="images/himalaya.jpg" width=760 height=320)

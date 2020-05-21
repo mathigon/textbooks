@@ -172,23 +172,23 @@ Doğada fraktallara benzeyen birçok şekil var. Bu bölümün başında, zaten 
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/snow-1.jpg" width=120 height=120)
+    x-img(src="images/snow-1.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-2.jpg" width=120 height=120)
+    x-img(src="images/snow-2.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-3.jpg" width=120 height=120)
+    x-img(src="images/snow-3.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-4.jpg" width=120 height=120)
+    x-img(src="images/snow-4.jpg" width=120 height=120)
 
 ::: column(width=120)
 
-    x-media(src="images/snow-5.jpg" width=120 height=120)
+    x-img(src="images/snow-5.jpg" width=120 height=120)
 
 :::
 
@@ -347,23 +347,23 @@ Tek bir küple başlıyoruz ve her bir yüzüne tekrar tekrar daha küçük ve d
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/coast-1.jpg" width=120 height=180)
+    x-img(src="images/coast-1.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-2.jpg" width=120 height=180)
+    x-img(src="images/coast-2.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-3.jpg" width=120 height=180)
+    x-img(src="images/coast-3.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-4.jpg" width=120 height=180)
+    x-img(src="images/coast-4.jpg" width=120 height=180)
 
 ::: column(width=120)
 
-    x-media(src="images/coast-5.jpg" width=120 height=180)
+    x-img(src="images/coast-5.jpg" width=120 height=180)
 
 :::
 
@@ -429,40 +429,40 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
 ::: column(width=200)
 
     // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
-    x-media(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
+    x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Orta Asya'daki dağ silsilesi
 
 ::: column(width=200)
 
     // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
-    x-media(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
+    x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Hindistan'da Ganj Nehri Deltası
 
 ::: column(width=200 parent="padded-thin")
 
-    x-media(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/lightning.jpg" width=200 height=200 lightbox)
 
 {.caption} Yıldırımlar
 
 ::: column(width=200)
 
     // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
-    x-media(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
+    x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Retinadaki kan damarları
 
 ::: column(width=200)
 
     // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
-    x-media(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
+    x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} ABD'deki Büyük Kanyon
 
 ::: column(width=200)
 
-    x-media(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
+    x-img(src="images/nature/clouds.jpg" width=200 height=200 lightbox)
 
 {.caption} Bulutlar
 
@@ -480,7 +480,7 @@ Tüm bu nesneler, tamamen rastgele oluşmuş gibi görünebilir, ancak tıpkı f
 ::: column(width=300)
 
     // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
-    x-media(src="images/terrain.jpg" width=360 height=270 lightbox)
+    x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Bilgisayar tarafından oluşturulan fraktal şeklinde yeryüzü
 
@@ -501,9 +501,9 @@ Ayrıca, dijital görüntüleri sıkıştırmak, dosya boyutlarını azaltmak i�
 
 ::: column.grow
 
-Önceki bölümde gördüğümüz fraktallardan biri, Polonyalı matematikçi [Wacław Sierpiński](bio:sierpinski) tarafından adlandırılan [__Sierpinski üçgeni__](gloss:sierpinski-triangle) idi. Bir büyük, eşkenar üçgenle başlayıp, daha sonra merkezden daha küçük üçgenleri tekrar tekrar keserek oluşturulabilir.
+Önceki bölümde gördüğümüz fraktallardan biri de, Polonyalı matematikçi [Wacław Sierpiński](bio:sierpinski) tarafından adlandırılan [__Sierpinski üçgeni__](gloss:sierpinski-triangle) idi. Bu şekil, büyük bir eşkenar üçgenle başlayıp, daha sonra merkezdeki daha küçük üçgenleri tekrar tekrar keserek oluşturulabilir.
 
-{.r.reveal(when="slider-0")} Wacław Sierpiński bu üçgenin özelliklerini düşünen ilk matematikçilerdi, ancak sanat, desen ve mozaiklerde yüzyıllar önce ortaya çıkmıştı.
+{.r.reveal(when="slider-0")} Wacław Sierpiński bu üçgenin özelliklerini düşünen ilk matematikçi idi, ancak bu desen, sanat ve mozaiklerde yüzyıllar önce ortaya çıkmıştı bile.
 
 ::: column(width=300)
 
@@ -518,40 +518,40 @@ Ayrıca, dijital görüntüleri sıkıştırmak, dosya boyutlarını azaltmak i�
 
 > id: sierpinski-history
 
-Roma'daki farklı kiliselerden gelen yer döşemelerinden bazı örnekler:
+Roma'daki farklı kiliselerdeki yer döşemelerinden bazı örnekler:
 
 ::: column(width=140 parent="padded-thin")
 
     // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
-    x-media(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
+    x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
     // Permission from Elisa Conversano
-    x-media(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
+    x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
     // https://www.cattedraledianagni.it/
-    x-media(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
+    x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
     // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
-    x-media(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
+    x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
 
-Görünüşe göre, Sierpinski üçgeni matematiğin geniş bir yelpazesinde ortaya çıkıyor ve onu oluşturmak için birçok farklı yol var. Bu bölümde, bazılarını keşfedeceğiz! [Devam](btn:next)
+Görünüşe göre, Sierpinski üçgeni matematiğin de içinde olduğu geniş bir yelpazede karşımıza çıkıyor ve onu oluşturmanın birçok farklı yolu var. Bu bölümde, bu yolların bazılarını keşfedeceğiz! [Devam](btn:next)
 
 ---
 
 > id: pascal
 > goals: select
 
-### Pascal’ın Üçgeni
+### Pascal Üçgeni
 
-Sierpinski üçgenini [__Pascal’ın üçgeni__](gloss:pascals-triangle) ile ilgili bölümümüzden zaten hatırlayabilirsiniz. Bu, her sayının yukarıdaki iki sayının toplamı olduğu bir sayı piramidi. Aşağıdaki üçgendeki tüm _çift_ sayılara hafifçe vurun, vurgulayın - ve bir kalıp fark edip etmediğinizi görün:
+Sierpinski üçgenini [__Pascal’ın üçgeni__](gloss:pascals-triangle) ile ilgili bölümümüzden hatırlıyor olabilirsiniz. Pascal Üçgeni, her sayının, üst satırındaki iki sayının toplamı olduğu bir sayı piramidi. Aşağıdaki üçgendeki tüm _çift_ sayıları tıklayın - oluşan desen tanıdık geldi mi?:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -570,9 +570,9 @@ Sierpinski üçgenini [__Pascal’ın üçgeni__](gloss:pascals-triangle) ile il
 
 > id: pascal-1
 
-Pascal’ın üçgeni sonsuza kadar aşağıya doğru devam edebilir ve Sierpinski modeli daha büyük ve daha büyük üçgenlerle devam eder. Daha büyük bir üçgenin başlangıcını, 16. satırdan başlayarak görebilirsiniz.
+Pascal üçgeni sonsuza kadar aşağıya doğru devam edebilir ve Sierpinski modeli daha büyük ve daha büyük üçgenlerle devam eder. Daha büyük bir üçgenin başlangıcını, 16. satırdan başlayarak görebilirsiniz.
 
-İki bitişik hücre 2 ile bölünebilirse, altındaki hücredeki toplamları da 2 ile bölünebilir olmalıdır - bu yüzden sadece renkli üçgenler (veya tek hücreler) alabiliriz. Elbette, 2_ dışındaki _sayılarına bölünebilen tüm hücreleri boyamayı da deneyebiliriz. Bu durumlarda ne olacağını düşünüyorsunuz? [Devam](btn:next)
+İki bitişik hücre 2 ile bölünebilirse, altındaki hücredeki toplamları da 2 ile bölünebilir olmalıdır - bu yüzden sadece renkli üçgenler alabiliriz. Elbette, 2_ dışındaki _sayılara bölünebilen tüm hücreleri boyamayı da deneyebiliriz. Bu durumda ne olacağını tahmin edebilir misiniz? [Devam](btn:next)
 
 ---
 
@@ -582,9 +582,9 @@ Pascal’ın üçgeni sonsuza kadar aşağıya doğru devam edebilir ve Sierpins
       canvas.pascal(width=960 height=840)
       .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
-Burada Pascal’ın üçgeninin ilk 128 sırasının küçük bir versiyonunu görebilirsiniz. ${n}{n|2|2,40,1} ile bölünebilen tüm hücreleri vurguladık - ne fark ettiniz?
+Burada Pascal’ın üçgeninin ilk 128 satırını gösteren küçük bir versiyonunu görebilirsiniz. ${n}{n|2|2,40,1} ile bölünebilen tüm hücreleri sırası ile seçtik - Ne fark ettiniz?
 
-{.reveal(when="var-0")} Her sayı için Sierpinski üçgenine benzeyen farklı bir üçgen deseniz. Bir [[asal sayı|triangle number|Fibonacci number]] seçersek, model özellikle düzenlidir. _{span.reveal(when="blank-0")} Sayının _birçok farklı_ asal faktörü varsa, desen daha rastgele görünür._
+{.reveal(when="var-0")} Her sayı için Sierpinski üçgenine benzeyen farklı bir üçgen elde ederiz. Bir [[asal sayı|üçgensel sayı|Fibonacci sayısı]] seçersek, oluşacak desen daha düzgün olur. _{span.reveal(when="blank-0")} Seçilen sayının _birçok farklı_ asal faktörü varsa, desen daha rastgele görünür._
 
     x-gesture(target="#pascal-large x-var" slide="100,0")
 
@@ -607,13 +607,13 @@ Burada Pascal’ın üçgeninin ilk 128 sırasının küçük bir versiyonunu g�
 
 ::: column.grow
 
-Burada eşkenar üçgenin üç köşesini görebilirsiniz. Dördüncü nokta oluşturmak için gri alanda herhangi bir yere dokunun.
+Burada bir eşkenar üçgenin üç köşesini görebilirsiniz. Dördüncü bir nokta oluşturmak için gri alanda herhangi bir yere dokunun.
 
-{.r.reveal(when="point")} Basit bir oyun oynayalım: üçgenin köşelerinden birini rastgele seçiyoruz, noktamızla tepe noktası arasında bir çizgi parçası çiziyoruz ve sonra o parçanın [{.pill.red} orta noktasını](target:p1) buluyoruz. [Devam](btn:next)
+{.r.reveal(when="point")} Şimdi basit bir oyun oynayalım: üçgenin köşelerinden birini rastgele seçiyoruz, noktamızla köşe noktası arasında bir doğru parçası çiziyoruz ve sonra o parçanın [{.pill.red} orta noktasını](target:p1) buluyoruz. [Devam](btn:next)
 
-{.r.reveal(when="next-0")} Şimdi işlemi tekrarlıyoruz: başka bir rastgele tepe noktası seçiyoruz, segmenti son noktamızdan çiziyoruz ve sonra [{.pill.green} orta noktayı](target:p2) buluyoruz. Bu yeni noktaları, seçtiğimiz üçgenin tepe noktasının rengine göre renklendirdiğimizi unutmayın. [Devam](btn:next)
+{.r.reveal(when="next-0")} Şimdi işlemi tekrarlıyoruz: başka bir rastgele köşe seçiyoruz, doğru parçasını son noktamızdan çiziyoruz ve sonra yine [{.pill.green} orta noktayı](target:p2) buluyoruz. Bu yeni noktaları, seçtiğimiz köşe noktasının rengine göre renklendirdiğimizi unutmayın. [Devam](btn:next)
 
-{.reveal(when="next-1")} Şimdiye kadar şaşırtıcı bir şey olmadı - ama aynı işlemi daha fazla tekrarladığımız zaman izleyin:
+{.reveal(when="next-1")} Şimdiye kadar şaşırtıcı bir şey olmadı - ama aynı işlemi çok daha fazla tekrarladığımız zaman neler olduğunu izleyin:
 
 {.text-center.reveal.var(when="next-1")} _{button.btn.btn-red(@click="play()")} 1000 adım ekleyin_
 
@@ -624,13 +624,13 @@ Burada eşkenar üçgenin üç köşesini görebilirsiniz. Dördüncü nokta olu
 > id: fractal-builder
 > goals: s1 s2 shape play
 
-Bu işleme __Kaos Oyunu__ adı verilir. Başlangıçta birkaç başıboş nokta olabilir, ancak aynı adımları birçok kez tekrarlarsanız, noktaların dağılımı tam olarak Sierpinski üçgeni gibi görünmeye başlar!
+Bu işleme __Kaos Oyunu__ adı verilir. Başlangıçta sadece birkaç başıboş nokta olarak görülen desen, aynı adımları birçok kez tekrarladığımızda, Sierpinski üçgeni gibi görünmeye başlar!
 
-Bunun birçok versiyonu var - örneğin, bir kare veya beşgen ile başlayabiliriz, aynı köşeyi arka arkaya iki kez seçememek gibi ek kurallar ekleyebiliriz veya bir sonraki noktayı bir oranda seçebiliriz segment boyunca `§1/2` dışında. Bu vakaların bazılarında, rastgele rastgele bir dağılım elde edeceğiz, ancak diğer durumlarda daha fazla fraktal ortaya çıkarıyoruz:
+Bu oyunun birçok versiyonu var - örneğin, bir kare veya beşgen ile başlayabiliriz, aynı köşeyi arka arkaya iki kez seçememek  veya bir sonraki noktayı`§1/2` dışında bir oranda seçmek gibi ek kurallar ekleyebiliriz. Bu vakaların bazılarında, rastgele rastgele bir dağılım elde etsek de, diğer durumlarda bir çok farklı fraktal ortaya çıkarabiliriz:
 
     include components/chaos-game
 
-{.reveal(when="s1 s2 play")} [Sierpinski halısını](action:carpet()) veya bu [beşgen kar tanesi](action:snowflake()) [__Altın oran__](gloss:golden-ratio) 'ı keşfettiniz mi?
+{.reveal(when="s1 s2 play")} [Sierpinski halısını](action:carpet()) veya bu [beşgen kar tanesi](action:snowflake()) [__Altın oran__](gloss:golden-ratio) 'ı seçerek keşfedebildiniz mi?
 
 ---
 
@@ -641,11 +641,11 @@ Bunun birçok versiyonu var - örneğin, bir kare veya beşgen ile başlayabilir
 
 Bir __hücresel otomatı__ birçok ayrı hücreden oluşan bir ızgaradır. Her hücre farklı "durumlarda" (örneğin farklı renklerde) olabilir ve her hücrenin durumu çevresindeki hücreler tarafından belirlenir.
 
-Örneğimizde, her hücre siyah veya beyaz olabilir. Sadece tek bir siyah kare içeren bir satırla başlıyoruz. Takip eden her satırda, her hücrenin rengi hemen yukarıdaki üç hücre tarafından belirlenir. Renklerini çevirmek için aşağıdaki sekiz olası seçeneğe dokunun - Sierpinski üçgenine benzer bir desen oluşturan bir dizi kural bulabilir misiniz?
+Bu örnekte, her hücre siyah veya beyaz olmalıdır. Sadece tek bir siyah kare içeren bir satırla başlayalım. Takip eden her satırda, her hücrenin rengi, hemen üstündeki üç hücre tarafından belirlenir. Hücrelerin renklerini çevirmek için aşağıdaki sekiz olası seçenekten birine dokunun - Sierpinski üçgenine benzer bir desen oluşturan bir dizi kural bulabilir misiniz?
 
     figure: x-automaton(size=28)
 
-{.reveal(when="sierpinski")} Sekiz seçeneğin her biri için iki seçenek vardır, yani toplamda `2^8 =` [[256]] olası kural vardır. [Kural 126](action:setRule('01111110')) gibi bazıları Sierpinski üçgenine benziyor. [Kural 30](action:setRule('01111000')) gibi diğerleri tamamen kaotik görünüyor. 1983 yılında [Stephen Wolfram](bio:wolfram) tarafından keşfedildi ve bilgisayarlar bunları rastgele sayılar üretmek için bile kullanabilir!
+{.reveal(when="sierpinski")} Sekiz seçeneğin her biri için iki seçenek vardır, yani toplamda `2^8 =` [[256]] olası kural vardır. Bu kurallardan, [Kural 126](action:setRule('01111110')) gibi bazıları Sierpinski üçgenine benzerken [Kural 30](action:setRule('01111000')) gibi diğerleri tamamen kaotik görünüyor. Bu, 1983 yılında [Stephen Wolfram](bio:wolfram) tarafından keşfedildi ve bilgisayarlar bu seçenekleri rastgele sayılar üretmek için bile kullanabilirler!
 
 ---
 
@@ -653,13 +653,13 @@ Bir __hücresel otomatı__ birçok ayrı hücreden oluşan bir ızgaradır. Her 
 
 ::: column.grow
 
-Hücresel otomatalar, tıpkı fraktallar gibi çok basit kurallarla nasıl oldukça karmaşık desenlerin oluşturulabileceğini gösterir. Doğada birçok süreç basit kuralları takip eder, ancak inanılmaz derecede karmaşık sistemler üretir.
+Hücresel otomatlar, tıpkı fraktallar gibi çok basit kurallarla nasıl oldukça karmaşık desenlerin oluşturulabileceğini gösterirler. Doğada da birçok süreç basit kuralları takip ederek oluşup inanılmaz derecede karmaşık sistemler üretebilir.
 
-Bazı durumlarda, bu, hücresel otomatlara benzeyen desenlerin ortaya çıkmasına, örneğin bu salyangozun kabuğundaki renklere yol açabilir.
+Bazı durumlarda, örneğin bu salyangozun kabuğundaki renklerin oluşması gibi, hücresel otomatlara benzeyen desenlerin ortaya çıkmasına sebep olabilir.
 
 ::: column(width=320)
 
-    x-media(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
+    x-img(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
 
 {.caption} Conus tekstil, zehirli bir deniz salyangozu
 
@@ -669,9 +669,9 @@ Bazı durumlarda, bu, hücresel otomatlara benzeyen desenlerin ortaya çıkması
 
 > id: tetrahedra
 
-### Sierpinski Tetrahedra
+### Sierpinski Piramidi
 
-Sierpinski üçgeninin birçok çeşidi ve benzer özelliklere ve yaratma süreçlerine sahip diğer fraktallar vardır. Bazıları, yukarıda gördüğünüz _Sierpinski Halı_ gibi 2 boyutlu görünüyor. Diğerleri bu örnekler gibi 3 boyutlu görünüyor:
+Sierpinski üçgeninin birçok çeşidi olduğu gibi, benzer özelliklere ya da yaratma süreçlerine sahip başka bazı fraktallar da  vardır. Bazıları, yukarıda gördüğünüz _Sierpinski Halısı_ gibi 2 boyutlu olup, diğerleri bu örnekler gibi 3 boyutlu olabilir:
 
 ::: column(width=320)
 
@@ -695,7 +695,7 @@ Sierpinski üçgeninin birçok çeşidi ve benzer özelliklere ve yaratma süre�
 > id: iteration
 > goals: move-1 move-2
 
-Önceki bölümlerde gördüğümüz tüm fraktallar __yineleme__ işlemi kullanılarak oluşturuldu: belirli bir desenle başlıyorsunuz ve sonra tekrar tekrar tekrar ediyorsunuz.
+Önceki bölümlerde gördüğümüz tüm fraktallar __yineleme__ adımları kullanılarak oluşturulur: belirli bir desenle başlayıp sonra tekrar tekrar yinelersiniz.
 
 ::: column(width=112 parent="padded-thin")
 
@@ -715,9 +715,9 @@ Sierpinski üçgeninin birçok çeşidi ve benzer özelliklere ve yaratma süre�
 
 :::
 
-Bu, matematikte daha önce gördüğünüz başka bir konsepte benzer: [özyinelemeli sekanslarla](gloss:sequence-recursive), belirli bir sayıyla başlarsınız ve daha sonra, bir sonraki sayıyı almak için aynı özyinelemeli formülü tekrar tekrar uygularsınız. sıra.
+Bu, matematikte daha önce gördüğünüz başka bir konsepte benzer: [rekursif seriler](gloss:sequence-recursive), belirli bir sayıyla başlarsınız ve daha sonra, bir sonraki sayıya ulaşmak için, aynı formülü tekrar tekrar uygularsınız. 
 
-Örnek olarak `§x_n = x_(n-1)^2` özyinelemeli formülü ele alalım ve terimlerini bir sayı satırına çizelim. `pill(x_0,"yellow","x0")` değerini değiştirebilirsiniz:
+Örnek olarak `§x_n = x_(n-1)^2` formülünü ele alalım ve terimlerini sayı doğrusu üzerinde gösterelim. `pill(x_0,"yellow","x0")` değerini değiştirebilirsiniz:
 
     figure: x-geopad.no-background(width=720 height=120 x-axis="-2.4,4.4,1" y-axis="-0.1,0.1" axes="yes,no" padding="40 20 0"): svg
       circle.yellow.move.pulsate(x="point(0,0)" name="x0" project="line(point(-3,0),point(3,0))" target="x0")
@@ -732,15 +732,15 @@ Sonuç dizisinin `x_0` başlangıç değerine bağlı olarak nasıl çok farklı
 
 ::: column.sequence-cell(width=180 parent="padded-thin")
 
-`x_0 > 1` ise, [[dizisi|converges]] 'i saptırır: _{span.reveal(when="blank-0")} sonsuza kadar büyümeye devam eder._
+`x_0 > 1` ise, dizi [[ıraksar|yakınsar]]: _{span.reveal(when="blank-0")} sonsuza kadar büyümeye devam eder._
 
 ::: column.sequence-cell(width=180)
 
-`x_0` –1 ve 1 arasındaysa, [[dizisi|diverges]] 'i yakınsar.
+`x_0` –1 ve 1 arasındaysa, dizi [[yakınsar|ıraksar]] .
 
 ::: column.sequence-cell(width=180)
 
-`x_0 < -1` ise, [[dizisi|converges]] 'i birbirinden ayırır.
+`x_0 < -1` ise, dizi [[ıraksar|yakınsar]] .
 
 :::
 
@@ -748,7 +748,7 @@ Sonuç dizisinin `x_0` başlangıç değerine bağlı olarak nasıl çok farklı
 
 > id: iteration-2
 
-Şimdiye kadar yeni bir şey öğrenmedik. Ancak, yaklaşık bir asır önce, matematikçiler gerçek sayı çizgisinden ziyade [__karmaşık sayıları__](gloss:complex-numbers) kullanırsanız bu dizilere ne olduğunu keşfetmeye başladılar. Keşifleri tüm matematikteki en şaşırtıcı ve güzel sonuçlardan biriydi.
+Şimdiye kadar yeni bir şey öğrenmedik. Ancak, yaklaşık bir asır önce, matematikçiler gerçek sayı doğrusu yerine [__karmaşık sayıları__](gloss:complex-numbers) kullanınca bu dizilere ne olduğunu keşfetmeye başladılar. Keşifleri, tüm matematikteki en şaşırtıcı ve güzel sonuçlardan biri oldu.
 
 ---
 
@@ -757,7 +757,7 @@ Sonuç dizisinin `x_0` başlangıç değerine bağlı olarak nasıl çok farklı
 
 ### Julia Setleri
 
-Öncekiyle aynı diziyi kullanalım, `§x_n = x_(n-1)^2`, ancak karmaşık düzlemde. Aşağıdaki koşullara ne olduğunu görmek için `pill(x_0,"yellow","x0")` konumunu hareket ettirebilirsiniz. Sekans birleşecek gibi görünüyorsa, düzlemdeki karşılık gelen noktayı _{span.pill.blue} mavi_ ile renklendirelim:
+Öncekiyle aynı diziyi kullanalım, `§x_n = x_(n-1)^2`, ancak karmaşık düzlemde. Aşağıdaki koşullarda ne olduğunu görmek için `pill(x_0,"yellow","x0")` konumunu hareket ettirebilirsiniz. Seri yakınsayacak gibi görünüyorsa da, düzlemde karşılık gelen her noktayı _{span.pill.blue} mavi_ ile renklendirdiğimizde:
 
     figure: x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
@@ -780,19 +780,19 @@ Sonuç dizisinin `x_0` başlangıç değerine bağlı olarak nasıl çok farklı
             strong.var.m-blue(:show="converges" data-display="inline") Converges!
             strong.var(:show="!converges" data-display="inline") Diverges!
 
-{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} Gördüğünüz gibi, dizi `pill(x_0,"yellow","x0")` birim daire| outside the unit square|above the _>>>>x<<<<_-axis]]| outside the unit square|above the _>>>>x<<<<_-axis]] _{span.reveal(when="blank-0")} (başlangıçta ortalanmış 1 yarıçapına sahip daire) içinde kaldığı sürece dizi yakınsar._
+{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} Gördüğünüz gibi, dizi `pill(x_0,"yellow","x0")` birim çember içinde olduğu sürece| birim çember dışında| _x_-ekseni üstünde]]| outside the unit square|above the _x_-axis]] _{span.reveal(when="blank-0")} (1 birim yarıçapına sahip çember) içinde kaldığı sürece dizi yakınsar._
 
 ---
 
 > id: julia-1
 
-Şimdi işleri biraz daha zorlaştıralım. Önceki sayının karesini almak yerine, her seferinde sabit bir _{.pill.red} c_ ekliyoruz (bu herhangi bir karmaşık sayı olabilir). Başka bir deyişle, `§x_n = x_(n-1)^2 + c`. Sizce hala bir yakınsama döngüsü elde edeceğiz mi? Başka hangi şekilleri görebileceğimizi düşünüyorsunuz? [Devam](btn:next)
+Şimdi işleri biraz daha zorlaştıralım. Önceki sayının sadece karesini almak yerine, her seferinde sabit bir _{.pill.red} c_ sayısı ekleyelim (c herhangi bir karmaşık sayı olabilir). Başka bir deyişle, `§x_n = x_(n-1)^2 + c`. Sizce hala bir yakınsama döngüsü elde edebilir miyiz? Başka hangi şekilleri görebileceğimizi tahmin edebilir misiniz? [Devam](btn:next)
 
 ---
 
 > id: julia-2
 
-Bu şemada, `pill(x_0,"yellow","x0")` konumunu ve `pill(c,"red","c")` değerini taşıyabilirsiniz:
+Bu şemada, `pill(x_0,"yellow","x0")` konumunu ve `pill(c,"red","c")` değerini değiştirebilirsiniz:
 
 ::: x-slideshow
 
@@ -817,7 +817,7 @@ Bu şemada, `pill(x_0,"yellow","x0")` konumunu ve `pill(c,"red","c")` değerini 
             strong.var.m-blue(:show="converges" data-display="inline") Bounded!
             strong.var(:show="!converges" data-display="inline") Diverges!
 
-{div(slot="legend")} [`c = 0`](action:animate(0,0)) - yukarıdaki örnekle aynıysa ne olacağını zaten biliyoruz. `x_0` birim çemberin içinde olduğu sürece dizi yakınsaması.
+{div(slot="legend")} [`c = 0`](action:animate(0,0)) - yukarıdaki örnekle aynı olacağından, ne olacağını zaten biliyoruz. `x_0` birim çemberin içinde olduğu sürece dizi yakınsar.
 
 {div(slot="legend")} _c_ 'nin değerini değiştirir değiştirmez harika bir şey olur. Daire oldukça karmaşık, fraktal bir şekle dönüşür.
 
@@ -827,11 +827,11 @@ Bu şemada, `pill(x_0,"yellow","x0")` konumunu ve `pill(c,"red","c")` değerini 
 
 Bazı durumlarda, dizi _tek bir noktaya_ yaklaşmaz - bunun yerine üçgen gibi birden çok noktadan oluşan bir döngüye ulaşır. Bu döngüler __yörüngeler__ olarak adlandırılmaktadır.
 
-Mavi renkli noktalar, karşılık gelen dizinin yakınsadığı veya yörüngesine sahip olduğu anlamına gelir (bunun __sınırlı__ olduğunu söylüyoruz). Beyaz bırakılan noktalar, karşılık gelen __dizisinin__ saptığı anlamına gelir: sınırlandırılmaz ve sonunda sonsuza kadar patlar.
+Mavi renkli noktalar, karşılık gelen dizinin yakınsadığı veya yörüngeye sahip olduğu anlamına gelir (bunun __sınırlı__ olduğunu söyleriz). Beyaz kalan noktalara karşılık gelen __dizinin__ ıraksadığı anlamına gelir: sınırlandırılmaz ve sonsuza gider.
 
 :::
 
-{div(slot="legend")} Başka ne bulabilirsiniz? [`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) veya [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)) olduğunda desenlere bir göz atın. _c_ 'un bazı değerleri de vardır; burada _her_ dizisi birbirinden ayrılır, böylece tüm karmaşık düzlük beyaz kalır.
+{div(slot="legend")} Başka ne bulabilirsiniz? [`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) veya [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)) olduğunda desenlere bir göz atın. _c_ 'un bazı değerleri için oluşan her dizi ıraksar, böylece tüm karmaşık düzlem beyaz kalır.
 
 :::
 
@@ -839,27 +839,27 @@ Mavi renkli noktalar, karşılık gelen dizinin yakınsadığı veya yörüngesi
 
 > id: julia-3
 
-Sayılarda renklendirmeyle oluşan farklı şekillere [__Julia Sets__](gloss:julia-set) denir. 1918 civarında iki Fransız matematikçi [Gaston Julia](bio:julia) ve [Pierre Fatou](bio:fatou) tarafından bağımsız olarak keşfedildi.
+Sayılarda renklendirmeyle oluşan bu farklı şekillere [__Julia Sets__](gloss:julia-set) denir. 1918 civarında iki Fransız matematikçi [Gaston Julia](bio:julia) ve [Pierre Fatou](bio:fatou) tarafından birbirlerinden bağımsız olarak keşfedildi.
 
-O zaman, Julia'nın gerçekte neye benzediğini görselleştirmeye yardımcı olacak bilgisayar yoktu. Julia ve Fatou gibi matematikçiler onlar hakkında matematiksel olarak akıl yürütebildiler, ancak sadece nasıl göründüklerine dair kaba, elle çizilmiş eskizler gördüler.
+O zamanlar, Julia Kümelerinin gerçekte neye benzediğini görselleştirmeye yardımcı olacak bilgisayarlar yoktu. Julia ve Fatou gibi matematikçiler onlar hakkında sadece matematiksel olarak akıl yürütebildiler ve ancak nasıl göründüklerine dair kaba, elle çizilmiş eskizler gördüler.
 
-Bugün bu sorunumuz yok - aşağıdaki resimlerin hepsi farklı Julia setleridir. Farklı renkler _bu noktadaki dizinin ne kadar çabuk_ saptığını gösterir:
+Bugün böyle bir sorunumuz yok - aşağıdaki resimlerin hepsi farklı Julia setlerine ait. Farklı renkler, bu noktalardaki dizinin ne kadar çabuk saptığını gösterir:
 
 ::: column(width=220)
 
-    x-media(src="images/julia-1.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.70176 – 0.3842"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-2.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = −0.4 + 0.6"i"`
 
 ::: column(width=220)
 
-    x-media(src="images/julia-3.jpg" width=220 height=165 lightbox)
+    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox)
 
 {.caption} `c = 0.285 + 0.01"i"`
 
@@ -874,9 +874,9 @@ Bugün bu sorunumuz yok - aşağıdaki resimlerin hepsi farklı Julia setleridir
 
 ### Mandelbrot Seti
 
-Farklı Julia setlerini oluştururken, her dizinin ayrıştığı ve tüm karmaşık düzlemin beyaz kaldığı bazı _c_ değerleri olduğunu fark etmiş olabilirsiniz. Julia ve Fatou'dan birkaç on yıl sonra, yeni nesil matematikçiler bu alanların nasıl göründüğünü haritalamaya çalıştı.
+Farklı Julia setlerini oluştururken, her dizinin ıraksadığı ve tüm karmaşık düzlemin beyaz kaldığı bazı _c_ değerleri olduğunu fark etmiş olabilirsiniz. Julia ve Fatou'dan birkaç on yıl sonra, yeni nesil matematikçiler bu beyaz alanların nasıl göründüğünü anlamaya çalıştı.
 
-Önceki örnekte, `pill(c,"red","c")` için sabit bir değer seçtik ve sonra düzlemi renklendirmek için `pill(x_0,"yellow","x0")` konumunu değiştirdik. Şimdi `pill(x_0 = 0,"yellow","x0")` değerini düzeltelim ve bunun yerine `pill(c,"red","c")` değerini değiştirelim.
+Önceki örnekte, `pill(c,"red","c")` için sabit bir değer seçtik ve sonra düzlemi renklendirmek için `pill(x_0,"yellow","x0")` konumunu değiştirdik. Şimdi `pill(x_0 = 0,"yellow","x0")` değerini sabitleyelim ve bunun yerine `pill(c,"red","c")` değerini değiştirelim.
 
 Bir kez daha, dizilerin sınırlı kaldığı bölgeyi ortaya çıkarmak için karmaşık düzlem üzerinde boyayın. Hangi şekillerin görünmesini bekliyorsunuz?
 
@@ -906,9 +906,9 @@ Bir kez daha, dizilerin sınırlı kaldığı bölgeyi ortaya çıkarmak için k
 
 > id: mandel-history
 
-Bu fraktal, [__Mandelbrot Seti__](gloss:mandelbrot-set) olarak adlandırılır ve 90 ° döndürüldüğünde, kafa, gövde ve iki kolu olan neredeyse bir kişiye benziyor. İlk kez 1978'de matematikçiler Robert Brooks ve Peter Matelski tarafından bir araştırma makalesinde tanımlanmış ve çizilmiştir:
+Bu fraktal, [__Mandelbrot Seti__](gloss:mandelbrot-set) olarak adlandırılır ve 90 ° döndürüldüğünde, neredeyse kafa, gövde ve iki kolu olan bir insana benzer. İlk kez 1978'de matematikçiler Robert Brooks ve Peter Matelski tarafından bir araştırma makalesinde tanımlanmış ve çizilmiştir:
 
-    figure: x-media(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
+    figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
 Birkaç yıl sonra, [Benoit Mandelbrot](bio:mandelbrot), daha sonra onun adını alan fraktal hakkında çok daha ayrıntılı bir görselleştirme oluşturmak için IBM'deki güçlü bilgisayarları kullandı. İlk çıktılar beklediğinden farklı görünüyordu - yazıcılarda çalışan teknisyenlerin, toz parçacıklarından veya yazıcı hatalarından kaynaklandığını ve fraktalların tanımlayıcı bir özelliği olmadığını varsayarak, kenarındaki “bulanıklığı” temizlediğini anlayana kadar ! [Devam](btn:next)
 
@@ -916,7 +916,7 @@ Birkaç yıl sonra, [Benoit Mandelbrot](bio:mandelbrot), daha sonra onun adını
 
 > id: mandel-zoom
 
-Tüm fraktallar gibi Mandelbrot setini sonsuza dek “yakınlaştırabiliriz” ve her ölçekte yeni desenler bulabiliriz. Burada Mandelbrot setinin __Denizatı vadisi__ olarak adlandırılan bir parçasını yakınlaştırabilirsiniz. Siyah noktalar, dizinin sınırlı olduğu Mandelbrot kümesinin_ içinde _yer almaktadır. Renkli noktalar, dizinin ayrıldığı [Mandelbrot kümesinin _dışındadır ve farklı renkler sonsuza kadar ne kadar hızlı büyüdüğünü _gösterir:
+Tüm fraktallar gibi Mandelbrot setini sonsuza dek “yakınlaştırabiliriz” ve her ölçekte yeni desenler bulabiliriz. Burada Mandelbrot setinin __Denizatı vadisi__ olarak adlandırılan bir parçasını yakınlaştırabilirsiniz. Siyah noktalar, dizinin sınırlı olduğu Mandelbrot kümesinin_ içinde _yer almaktadır. Renkli noktalar, dizinin ıraksadığı [Mandelbrot kümesinin _dışındadır ve farklı renkler ne kadar hızlı sonsuzluğa gittiğini_gösterir:
 
     .mandel-frame
       - i = 1;
@@ -930,7 +930,7 @@ Tüm fraktallar gibi Mandelbrot setini sonsuza dek “yakınlaştırabiliriz” 
 
 > id: mandel-zoom-1
 
-Bu kaydırıcı, 14 katrilyonu aşan yakınlaştırma düzeyine veya `2^54` değerine kadar 27 ayrı resimden oluşur. Tamamen, modern bir dizüstü bilgisayarda render yapmak yaklaşık 45 dakika sürdü. Mandelbrot seti sadece tek bir basit denklemle oluşturulabilir `§x_n = x_(n-1)^2 + c`, ancak sonsuz karmaşık ve şaşırtıcı derecede güzeldir.
+Bu kaydırma çizgisini kullanarak, 27 ayrı resimden oluşan bu seride 14 katrilyonu veya `2^54`aşan yakınlaştırma düzeyine ulaşabilirsiniz. Modern bir dizüstü bilgisayar kullanarak bu resimleri oluşturmak yaklaşık 45 dakika sürdü. Mandelbrot seti sadece tek bir basit denklemle oluşturulabilir `§x_n = x_(n-1)^2 + c`, ancak sonsuz karmaşıklıkta ve şaşırtıcı derecede güzeldir.
 
 ---
 
@@ -951,9 +951,9 @@ Bu kaydırıcı, 14 katrilyonu aşan yakınlaştırma düzeyine veya `2^54` değ
 
 [{.pill.red} c](target:c) değerini Mandelbrot setinin etrafında hareket ettirdikçe, ilginç bir özellik fark edebilirsiniz:
 
-* Mandelbrot setinin [[ana gövdesi](target:bulb0) içerisindeki tüm diziler [[<<<<|diverge|reach an orbit]] _{span.reveal(when="blank-0")} tek bir noktaya yaklaşmaktadır._
-* {.reveal(when="blank-0")} [üstündeki [büyük ampul içindeki](target:bulb1) diziler, [[3]] noktadan oluşan|converge|diverge]] _{span.reveal(when="blank-1")} yörüngesine ulaştı._
-* {.reveal(when="blank-2")} [içindeki bu küçük ampulün](target:bulb2) dizileri [[5]] uzunluğunda yörüngelere sahip.
+* Mandelbrot setinin [[ana gövdesi](target:bulb0) içerisindeki tüm diziler [[<<<<|ıraksar|yörüngeye ulaşır]] _{span.reveal(when="blank-0")} tek bir noktaya yakınsar._
+* {.reveal(when="blank-0")} Üstteki [büyük ampul içindeki](target:bulb1) diziler, [[3]] noktadan oluşan [[yörüngesine ulaşır|yakınsar|ıraksar]] _{span.reveal(when="blank-1")}._
+* {.reveal(when="blank-2")} [Küçük ampulün içindeki](target:bulb2) diziler [[5]] uzunluğunda yörüngelere sahiptir.
 
 
 :::
@@ -970,13 +970,13 @@ Bu kaydırıcı, 14 katrilyonu aşan yakınlaştırma düzeyine veya `2^54` değ
 
 ::: column.grow
 
-Bernoit Mandelbrot hayatının çoğunu fraktalların yanı sıra _pürüzlülüğü_ ve _kendine benzerlik_ matematiğine adadı. Çalışmasının fizik, meteoroloji, nöroloji, ekonomi, jeoloji, mühendislik, bilgisayar bilimi ve diğer birçok alanda uygulamaları vardı.
+Bernoit Mandelbrot hayatının çoğunu fraktalların yanı sıra matematikteki _pürüzlülük_ ve _kendine benzerlik_ kavramlarına adadı. Çalışmalarının fizik, meteoroloji, nöroloji, ekonomi, jeoloji, mühendislik, bilgisayar bilimi ve diğer birçok alanda uygulamaları oldu.
 
-1985 yılında Mandelbrot seti _Scientific American_ dergisinin kapağında yer aldı ve o zamandan beri dünyanın en tanınmış matematiksel şekillerinden biri haline geldi. Tişörtlerde, müzik videolarında ve ekran koruyucular olarak bulabilirsiniz ve birçok popüler kitap ve filmde referans alınmıştır.
+1985 yılında Mandelbrot seti _Scientific American_ dergisinin kapağında yer aldı ve o zamandan beri dünyanın en tanınmış matematik simgelerinden biri haline geldi. Tişörtlerde, müzik videolarında ve ekran koruyucu olarak sık sık karşımıza çıkan  Mandelbrot Kümesi birçok popüler kitap ve filmde de referans alınmıştır.
 
 ::: column(width=220)
 
-    x-media(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
+    x-img(src="images/magazine.jpg" width=220 height=316 credit="© Scientific American")
 
 :::
 

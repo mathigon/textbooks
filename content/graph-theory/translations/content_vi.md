@@ -16,22 +16,22 @@ __Lý thuyết về đồ thị__ là môn học về đồ thị và các đặ
 
     x-gallery(slide-width="300")
       div
-        x-media(src="images/network1.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network1.jpg" width=260 height=260 lightbox)
         p.caption Hệ thống đường giao thông và đường ray
       div
-        x-media(src="images/network6.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network6.jpg" width=260 height=260 lightbox)
         p.caption Tổ hợp mạch điện
       div
-        x-media(src="images/network3.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network3.jpg" width=260 height=260 lightbox)
         p.caption Hệ thống phân phối
       div
-        x-media(src="images/network2.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network2.jpg" width=260 height=260 lightbox)
         p.caption Mối quan hệ bạn bè
       div
-        x-media(src="images/network7.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network7.jpg" width=260 height=260 lightbox)
         p.caption Mạng tế bào thần kinh
       div
-        x-media(src="images/network4.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network4.jpg" width=260 height=260 lightbox)
         p.caption Mạng Internet
 
 ---
@@ -148,21 +148,25 @@ Tìm giải pháp bằng cách vẽ đường đi trên bản đồ dưới đâ
         x-solved
         include svg/bridges-1.svg
         button.btn Clear
+        button.btn.right Skip
       .tab
         h3 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
         button.btn Clear
+        button.btn.right Skip
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
         button.btn Clear
+        button.btn.right Skip
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
         button.btn Clear
+        button.btn.right Skip
 
 ---
 > id: bridges-1
@@ -229,7 +233,7 @@ Nếu bạn quay lại với bản đồ của thị trấn Königsberg, bạn s
 Phát hiện này của Euler có vẻ như không hữu ích gì nhiều trong cuộc sống, nhưng đồ thị là nền tảng để giải quyết rất nhiều vấn đề về địa lý, ví dụ như tìm kiếm đường đi giữa hai địa điểm. Chúng ta sẽ khám phá thêm về những ứng dụng này sau. 
 ::: column(width=240)
 
-    x-media(lightbox width=240 height=260 src="images/prague.jpg")
+    x-img(lightbox width=240 height=260 src="images/prague.jpg")
 
 :::
 
@@ -327,7 +331,7 @@ Sau đây là một bài toán khác liên quan đến lý thuyết đồ thị.
 Trong một ngôi làng nhỏ có 3 nhà máy sản xuất nước, gas và điện. Trong làng cũng có 3 ngôi nhà là khách hàng tiềm năng. Do kết cấu xây dựng của làng, các ống dẫn không được phép cắt ngang nhau.
 ::: column(width=300)
 
-    x-media(width=300 height=200 src="images/power-plant.jpg")
+    x-img(width=300 height=200 src="images/power-plant.jpg")
 
 :::
 
@@ -518,7 +522,7 @@ Một số “bản đồ” đơn giản, như bàn cờ vua, chỉ cần hai m
 nhưng hầu hết các bản đồ phức tạp hơn cần nhiều màu hơn.
 ::: column(width=240 style="margin-top: -10px")
 
-    x-media.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img.shifted(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -593,7 +597,7 @@ và hai đỉnh phải có màu khác nhau nếu chúng được kết nối b�
 
 ::: column(width=240 parent="right")
 
-    x-media(lightbox width=240 height=320 src="images/england-counties.jpg")
+    x-img(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
 Năm 1852, một sinh viên thực vật học [Francis Guthrie](bio:guthrie) phải tô màu các vùng của nước Anh. Ông quan sát được rằng hầu như chỉ cần 4 màu là đủ với bất kỳ bản đồ nào Ông thử, nhưng Ông tìm được minh chứng rằng quy tắc 4 màu này áp dụng được cho _tất cả_ các bản đồ. Điều này thực ra là một bài toán cực kỳ khó, được biết đến với cái tên __định lý bốn màu__.
@@ -616,7 +620,7 @@ Không có gì tiến triển về bài toán 4 màu cho đến năm 1976, khi [
 Định lý bốn màu là định lý toán học nổi tiếng đầu tiên dược chứng minh sử dụng máy tính, một phương pháp ngày càng thông dụng và bớt tranh cãi hơn từ đó. Máy tính càng nhanh với thuật toán càng hiệu quả giúp giải bài toán nhanh hơn và ngày nay bài toán bốn màu có thể được giải chỉ trong vài giờ. 
 
     figure
-      x-media(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
+      x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
       p.caption Dấu bưu điện của Khoa toán học, trường Đại học <br/>Illinois Urbana-Champaign, nơi Haken và Appel đã làm việc.
 
 ---
@@ -648,7 +652,7 @@ Chiếc xe tải đi giao hàng phải đi qua hết các thành phố, theo b�
 chúng ta muốn tìm thấy những con đường đi qua _mỗi cạnh_ chỉ đúng một lần. Bây giờ chúng ta muốn tìm con đường đi qua _các đỉnh_ đúng một lần. Những con đường này được gọi là __các vòng Hamiltonian__.
 ::: column(width=260)
 
-    x-media(src="images/truck.jpg" width=260 height=280)
+    x-img(src="images/truck.jpg" width=260 height=280)
 
 :::
 
@@ -682,7 +686,7 @@ Một phương pháp đơn giản là tìm tất cả các đường đi có th�
 con đường khác nhau. Một khi bạn có hàng trăm hay hàng ngàn đỉnh, việc tìm kiếm các con đường khác nhau là bất khả thi, ngay cả khi bạn dùng máy tính mạnh nhất. 
 ::: column(width=220)
 
-    x-media(lightbox src="images/microchip.jpg" width=210 height=365)
+    x-img(lightbox src="images/microchip.jpg" width=210 height=365)
 
 :::
 
@@ -743,7 +747,7 @@ Những chú kiến muốn tìm thấy đường đi ngắn nhất giữa tổ c
 
 ::: column(width=220 parent="right")
 
-    x-media(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
+    x-img(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
 
 ::: column.grow
 Các thuật toán liên quan đến Hệ thống Bầy Kiến (Ant Colony System - ACS) tìm cách bắt chước hệ thống này trên máy tính,
@@ -817,7 +821,7 @@ Trong khi các trang web và đường dẫn tạo nên một đồ thị _ảo_
 Mỗi lần bạn thực hiện một cuộc gọi hay mở một trang web, các tổng đài trong mạng lưới phải tìm cách kết nối người gửi và người nhận, mà không làm quá tải từng đường cáp hay đường truyền kết nối. Lý thuyết đồ thị và lý thuyết xác suất giúp ta có được dịch vụ tin cậy, ví dụ như tìm đường dẫn khác khi một số kết nối bị bận. 
 ::: column(width=220)
 
-    x-media(lightbox src="images/phone.jpg" width=220 height=166)
+    x-img(lightbox src="images/phone.jpg" width=220 height=166)
 
 :::
 
@@ -826,7 +830,7 @@ Mỗi lần bạn thực hiện một cuộc gọi hay mở một trang web, cá
 
 Lý thuyết đồ thị cũng có vai trò quan trọng trong giao thông và định hướng. Tất cả các chuyến bay, chuyến tàu, và hệ thống tàu điện ngầm tạo nên đồ thị, được sử dụng để sắp xếp thời gian biểu một cách hiệu quả. Một trong những đồ thị dễ nhận ra nhất là Bản đồ Tàu điện ngầm ở London:
 
-    figure: x-media(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
+    figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
 ---
 > id: applications-5
@@ -835,13 +839,13 @@ Lý thuyết đồ thị cũng có vai trò quan trọng trong giao thông và �
 Tất cả các con đường và đường cao tốc cùng tạo nên một đồ thị lớn, được sử dụng bởi các dịch vụ định vị như Google Maps khi tìm đường đi ngắn nhất giữa hai vị trí.
 ::: column(width=60)
 
-    x-media(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
+    x-img(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
 
 :::
 
 ::: column(width=280)
 
-    x-media(lightbox src="images/congestion.jpg" width=280 height=170)
+    x-img(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
 Trong tương lai, __Các hệ thống vận chuyển thông minh__ sẽ giảm thiểu kẹt xe và tai nạn bằng cách hướng dẫn xe đi một cách hiệu quả hơn, sử dụng địa điểm thu thập được từ những chiếc điện thoại thông minh hay xe tự lái. Điều này có thể giúp tiết kiệm hàng triệu giờ phí phạm mỗi năm trên đường, giảm thiểu ô nhiễm và giúp các dịch vụ khẩn khấp di chuyển nhanh hơn.
@@ -861,32 +865,32 @@ Có vô vàn các đồ thị khác trong khoa học kỹ thuật và cuộc s�
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/molecules.jpg" width=200 height=200)
+    x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
 {.caption} Kết nối nguyên tử giữa các __phân tử__ và lưới tinh thể tạo nên đồ thị.
 ::: column(width=200)
 
-    x-media(lightbox src="images/epidemic.jpg" width=200 height=200)
+    x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
 {.caption} Sự __lây truyền bệnh__ và đại dịch cũng được mô tả sử dụng đồ thị.
 ::: column(width=200)
 
-    x-media(lightbox src="images/evolution.jpg" width=200 height=200)
+    x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
 {.caption} Trong Sin học, __cây tiến hóa__ cho thấy tổ tiên của các loài kết nối với nhau tạo nên đồ thị.
 ::: column(width=200)
 
-    x-media(lightbox src="images/network6.jpg" width=200 height=200)
+    x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
 {.caption} Các thành phần khác nhau của __các mạch điện__ và các con chips máy tính tạo nên mạng lưới.
 ::: column(width=200)
 
-    x-media(lightbox src="images/letters.jpg" width=200 height=200)
+    x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
 {.caption} Cấu trúc ngữ pháp của __các ngôn ngữ__ có thể được minh học sử dụng đồ thị, ví dụ để tạo nên các thuật toán dịch ngôn ngữ.
 ::: column(width=200)
 
-    x-media(lightbox src="images/finance.jpg" width=200 height=200)
+    x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
 {.caption} Đồ thị cũng có nhiều ứng dụng khác trong __xác suất__, __lý thuyết trò chơi__ and __các bài toán tài chính__.
 :::
@@ -899,7 +903,7 @@ Có vô vàn các đồ thị khác trong khoa học kỹ thuật và cuộc s�
 Cuối cùng, hãy nghĩ về một ví dụ rất tốt sử dụng đồ thị trong cuộc sống hằng ngày của chúng ta: mạng xã hội. Ở đây các đỉnh tượng trưng cho [[con người|bạn bè|mạng lưới]] và các cạnh tượng trưng cho mối quan hệ bạn bè, đăng ký, hay theo dõi.
 
 Khi chúng ta vẽ các mạng xã hội, chúng ta có thể thấy rõ các __cụm__ (clusters) của những người bạn chung, những người học cùng nhau hay sống trong cùng một thành phố. Chúng ta cũng xác định được __trung tâm__ của mỗi người, tùy thuộc vào việc các đỉnh kết nối tốt với nhau như thế nào, và có thể đo lường được mức độ nổi tiếng của người đó trên mạng xã hội. 
-    figure: x-media(lightbox src="images/social-network.png" width=720 height=500)
+    figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
 ---
 > id: social-1
@@ -910,7 +914,7 @@ Năm 2014, Facebook có tổng cộng 1.4  tỷ người sử dụng tích cực
 Một câu hỏi thú vị đặt ra là nối bạn chọ ngẫu nhiên hai người sử dụng Facebook bất kỳ, có bao nhiêu "cạnh mối quan hệ" bạn đi theo để nối với nhau? Ví dụ, khoảng cách giữa các người bạn kết nối trực tiếp là [[1]], và khoảng cách giữa bạn với bạn của bạn là [[2]], v...v...
 ::: column(width=200)
 
-    x-media(src="images/facebook-like.png" width=200 height=200)
+    x-img(src="images/facebook-like.png" width=200 height=200)
 
 :::
 
@@ -923,7 +927,7 @@ Facebook thực hiện vào năm 2016, bạn, trung bình, kết nối với b�
 Nói cách khác, nếu bạn chọn ngẫu nhiên bất kỳ người nào trong hàng tỷ người sử dụng Facebook trên thế giới, người đó sẽ có một người bạn của một người bạn biết một người bạn của một trong những người bạn của bạn. Và điều này áp dụng cho cả người nổi tiếng, chính trị gia và người trong hoàng tộc...
 
     figure
-      x-media(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
+      x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
       p.caption Geographic visualisation of all Facebook friendships in 2010.
 
 ---
@@ -931,7 +935,7 @@ Nói cách khác, nếu bạn chọn ngẫu nhiên bất kỳ người nào tron
 
 ::: column(width=200)
 
-    x-media(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
+    x-img(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
 
 ::: column.grow
 Năm 1929, khi một tách giả người Hungary [Frigyes Karinthy](bio:karinthy) đầu tiên đưa ra ý tưởng “6 Độ Cách Biệt”, lúc đó chưa có internet hay mạng xã hội, nhưng thế giới đã trở nên kết nối rộng rãi hơn bao giờ hết.

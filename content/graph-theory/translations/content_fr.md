@@ -19,22 +19,22 @@ La __théorie des graphes__ est l'étude des graphes et de leurs propriétés. C
 
     x-gallery(slide-width="300")
       div
-        x-media(src="images/network1.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network1.jpg" width=260 height=260 lightbox)
         p.caption Réseaux routiers et ferroviaires
       div
-        x-media(src="images/network6.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network6.jpg" width=260 height=260 lightbox)
         p.caption Circuits intégrés
       div
-        x-media(src="images/network3.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network3.jpg" width=260 height=260 lightbox)
         p.caption Des chaînes d'approvisionnement
       div
-        x-media(src="images/network2.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network2.jpg" width=260 height=260 lightbox)
         p.caption Amitiés
       div
-        x-media(src="images/network7.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network7.jpg" width=260 height=260 lightbox)
         p.caption Connexions neuronales
       div
-        x-media(src="images/network4.jpg" width=260 height=260 lightbox)
+        x-img(src="images/network4.jpg" width=260 height=260 lightbox)
         p.caption L'Internet
 
 ---
@@ -165,25 +165,25 @@ Essayez de trouver un itinéraire valide en dessinant sur ces cartes:
         x-solved
         include svg/bridges-1.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
       .tab
         h3 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
         button.btn Recommencer
-        button.btn.right(hidden) Passer
+        button.btn.right Passer
 
 ---
 
@@ -257,7 +257,7 @@ La découverte d’Euler peut ne pas sembler particulièrement utile dans la vie
 
 ::: column(width=240)
 
-    x-media(lightbox width=240 height=260 src="images/prague.jpg")
+    x-img(lightbox width=240 height=260 src="images/prague.jpg")
 
 :::
 
@@ -355,7 +355,7 @@ Dans un petit village, il existe trois centrales produisant de l’eau, de l’�
 
 ::: column(width=300)
 
-    x-media(width=300 height=200 src="images/power-plant.jpg")
+    x-img(width=300 height=200 src="images/power-plant.jpg")
 
 :::
 
@@ -574,7 +574,7 @@ Certaines «cartes» simples, comme un échiquier, n'ont besoin que de deux coul
 
 ::: column(width=240 style="margin-top: -10px")
 
-    x-media.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img.shifted(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -652,7 +652,7 @@ Comme auparavant, nous pouvons convertir une carte avec des pays et des frontiè
 
 ::: column(width=240 parent="right")
 
-    x-media(lightbox width=240 height=320 src="images/england-counties.jpg")
+    x-img(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
 
@@ -679,7 +679,7 @@ Le problème des quatre couleurs n’a guère progressé jusqu’en 1976, lorsqu
 Le théorème des quatre couleurs est le premier théorème mathématique bien connu à avoir été prouvé à l'aide d'un ordinateur, ce qui est devenu beaucoup plus courant et moins controversé depuis. Des ordinateurs plus rapides et un algorithme plus efficace signifient qu'aujourd'hui, vous pouvez résoudre le théorème des quatre couleurs sur un ordinateur portable en seulement quelques heures.
 
     figure
-      x-media(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
+      x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
       p.caption Cachet postal du département de mathématiques de l'Université <br/> de l'Illinois Urbana-Champaign, où travaillaient Haken et Appel.
 
 ---
@@ -714,7 +714,7 @@ Le camion de livraison doit visiter toutes les villes, dans n'importe quel ordre
 
 ::: column(width=260)
 
-    x-media(src="images/truck.jpg" width=260 height=280)
+    x-img(src="images/truck.jpg" width=260 height=280)
 
 :::
 
@@ -752,7 +752,7 @@ Une méthode simple serait d'essayer tous les chemins possibles, en trouvant la 
 
 ::: column(width=220)
 
-    x-media(lightbox src="images/microchip.jpg" width=210 height=365)
+    x-img(lightbox src="images/microchip.jpg" width=210 height=365)
 
 :::
 
@@ -830,7 +830,7 @@ Les fourmis veulent trouver les itinéraires les plus courts possibles entre leu
 
 ::: column(width=220 parent="right")
 
-    x-media(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
+    x-img(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
 
 ::: column.grow
 
@@ -915,7 +915,7 @@ Chaque fois que vous passez un appel ou chargez un site Web, les opérateurs de 
 
 ::: column(width=220)
 
-    x-media(lightbox src="images/phone.jpg" width=220 height=166)
+    x-img(lightbox src="images/phone.jpg" width=220 height=166)
 
 :::
 
@@ -925,7 +925,7 @@ Chaque fois que vous passez un appel ou chargez un site Web, les opérateurs de 
 
 Les graphiques jouent également un rôle important dans les transports et la navigation. Tous les réseaux de vol, de train et de métro forment des graphiques pouvant être utilisés pour créer des horaires efficaces. L’un des graphiques les plus reconnaissables est la carte du métro de Londres:
 
-    figure: x-media(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
+    figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
 ---
 
@@ -937,13 +937,13 @@ Toutes les routes et les autoroutes forment également un vaste réseau, qui est
 
 ::: column(width=60)
 
-    x-media(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
+    x-img(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
 
 :::
 
 ::: column(width=280)
 
-    x-media(lightbox src="images/congestion.jpg" width=280 height=170)
+    x-img(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
 
@@ -967,37 +967,37 @@ Il existe d'innombrables autres graphiques dans la science, l'ingénierie ou la 
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/molecules.jpg" width=200 height=200)
+    x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
 {.caption} Les liens entre les atomes de __molécules__ et les grilles cristallines forment un graphe.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/epidemic.jpg" width=200 height=200)
+    x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
 {.caption} La propagation __des maladies__ et des épidémies peut être modélisée à l'aide d'un réseau.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/evolution.jpg" width=200 height=200)
+    x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
 {.caption} En Biologie, les __arbres évolutifs__ illustrant l'ascendance des espèces forment un graphique.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/network6.jpg" width=200 height=200)
+    x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
 {.caption} Les différents composants des __circuits électriques__ et des puces informatiques forment un réseau.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/letters.jpg" width=200 height=200)
+    x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
 {.caption} La structure grammaticale des __langues__ peut être modélisée à l'aide de graphiques, par exemple pour créer des algorithmes de traduction.
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/finance.jpg" width=200 height=200)
+    x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
 
 {.caption} Les graphes ont également de nombreuses applications en __probabilités__, __en théorie des jeux__ et en __mathématiques financières__.
@@ -1014,7 +1014,7 @@ Enfin, pensons à un exemple particulièrement intéressant de graphes existant 
 
 Lorsque nous commençons à dessiner des graphiques sur les médias sociaux, nous pouvons clairement voir certains __groupes__ d'amis communs, qui peuvent être allés dans la même école ou vivre dans la même ville. Nous pouvons également déterminer la __centralité__ d'une personne, qui dépend du degré de connexion d'un sommet et qui peut être un indicateur de la popularité d'une personne sur les réseaux sociaux.
 
-    figure: x-media(lightbox src="images/social-network.png" width=720 height=500)
+    figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
 ---
 
@@ -1028,7 +1028,7 @@ Une question passionnante serait désormais la suivante: si vous choisissez deux
 
 ::: column(width=200)
 
-    x-media(src="images/facebook-like.png" width=200 height=200)
+    x-img(src="images/facebook-like.png" width=200 height=200)
 
 :::
 
@@ -1041,7 +1041,7 @@ Selon une étude menée [par Facebook](https://research.facebook.com/blog/three-
 En d'autres termes, si vous choisissez l'un des milliards d'utilisateurs de Facebook dans le monde entier, ils auront un ami d'un ami qui connaît un ami d'un de vos amis. Et cela inclut des célébrités, des politiciens ou des membres de la royauté…
 
     figure
-      x-media(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
+      x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
       p.caption Geographic visualisation of all Facebook friendships in 2010.
 
 ---
@@ -1050,7 +1050,7 @@ En d'autres termes, si vous choisissez l'un des milliards d'utilisateurs de Face
 
 ::: column(width=200)
 
-    x-media(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
+    x-img(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
 
 ::: column.grow
 

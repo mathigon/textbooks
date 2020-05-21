@@ -2,141 +2,172 @@
 
 ## Introduction
 
-> id: intro
+> id: intro-0
 > section: introduction
 
-::: column.grow
-Every day we are surrounded by countless connections and networks: roads and
-rail tracks, phone lines, the internet, electronic circuits and even molecular
-bonds. There are also _social networks_ between friends and families. All these
-systems consist of certain _points_ called [[vertices|circles|crossings]], some
-of which are connected by [[edges|boundaries|pairs]]. In mathematics, this is
-called a [__graph__](gloss:graph).
-::: column(width=160)
+Every day we are surrounded by countless connections and networks: roads and rail tracks, phone
+lines, the internet, electronic circuits and even molecular bonds. There are even _social networks_
+between friends and families. Can you think of any other examples?
 
-    svg#graph0.graph.novertices.noedges(width="160" height="130")
+::: column(width=220 parent="padded-thin")
+
+    x-img(src="images/network1.jpg" width=220 height=220 lightbox)
+
+{.caption} Road and Rail Networks
+
+::: column(width=220)
+
+    x-img(src="images/network6.jpg" width=220 height=220 lightbox)
+
+{.caption} Computer Chips
+
+::: column(width=220)
+
+    x-img(src="images/network3.jpg" width=220 height=220 lightbox)
+
+{.caption} Supply Chains
+
+::: column(width=220)
+
+    x-img(src="images/network2.jpg" width=220 height=220 lightbox)
+
+{.caption} Friendships
+
+::: column(width=220)
+
+    x-img(src="images/network7.jpg" width=220 height=220 lightbox)
+
+{.caption} Neural Connections
+
+::: column(width=220)
+
+    x-img(src="images/network4.jpg" width=220 height=220 lightbox)
+
+{.caption} The Internet
 
 :::
 
-__Graph theory__ is the study of graphs and their properties. It is one of the
-most exciting and visual areas of mathematics, and has countless important
-applications:
+---
+> id: intro
 
-    x-gallery(slide-width="300")
-      div
-        x-media(src="images/network1.jpg" width=260 height=260 lightbox)
-        p.caption Road and Rail Networks
-      div
-        x-media(src="images/network6.jpg" width=260 height=260 lightbox)
-        p.caption Integrated Circuits
-      div
-        x-media(src="images/network3.jpg" width=260 height=260 lightbox)
-        p.caption Supply Chains
-      div
-        x-media(src="images/network2.jpg" width=260 height=260 lightbox)
-        p.caption Friendships
-      div
-        x-media(src="images/network7.jpg" width=260 height=260 lightbox)
-        p.caption Neural Connections
-      div
-        x-media(src="images/network4.jpg" width=260 height=260 lightbox)
-        p.caption The Internet
+::: column.grow
+
+In mathematics, all these examples can be represented as [__graphs__](gloss:graph) (not to be
+confused with the _graph_ of a function). A graph consists of certain _points_ called
+[[vertices|circles|crossings]], some of which are connected by [[edges|boundaries|pairs]].
+
+__Graph theory__ is the study of graphs and their properties. It is one of the most exciting and
+visual areas of mathematics, and has countless important applications.
+
+::: column(width=180)
+
+    svg#graph0.graph.novertices.noedges(width=180 height=180)
+
+:::
 
 ---
 > id: intro-1
 
-We can sketch the layout of simple graphs using circles and lines. The position
-of the circles and the length of the lines is irrelevant – we only care about
-_how they are connected_ to each other. The lines can even cross each other, and
-don’t have to be straight.
+We can draw the layout of simple graphs using circles and lines. The position of the vertices and
+the length of the edges is irrelevant – we only care about _how they are connected_ to each other.
+The edges can even cross each other, and don’t have to be straight.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} In some graphs, the edges only go one way. These are called
-[__directed graphs__](gloss:directed-graph).
+{.caption} In some graphs, the edges only go one way. These are called [__directed
+graphs__](gloss:directed-graph).
+
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Some graphs consist of multiple distinct segments which are not
-connected by edges. These graphs are __disconnected__.
+{.caption} Some graphs consist of multiple groups of vertices which are not connected with each
+other by edges. These graphs are __disconnected__.
+
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.text-center} Other graphs may contain multiple edges between the same pairs of
-vertices, or vertices which are connected to themselves (loops).
+{.caption} Other graphs may contain multiple edges between the same pairs of vertices, or vertices
+which are connected to themselves (loops).
+
 :::
 
-For simplicity we will only think about undirected and connected graphs without
-multiple edges and loops in this course.
+    // TODO maybe include examples of graphs with edges crossing, curved edges, etc.
+    // could include an "is this a graph?" quiz
 
 ---
 > id: intro-2
 
-We can create new graphs from an existing graph by removing some of the vertices
-and edges. The result is called a [__subgraph__](gloss:subgraph). Here are a few
-examples of graphs and subgraphs:
+We can create new graphs from an existing graph by removing some of the vertices and edges. The
+result is called a [__subgraph__](gloss:subgraph). Here you can see a few more examples of graphs,
+with coloured edges and vertices indicating a possible subgraph:
 
-::: column(width=200)
+::: column(width=212 parent="padded-thin")
 
-    svg.graph(height='90', width='90', style='float: left; margin-right: 12px')
-    svg.graph(height='90', width='90', style='float: left')
+    svg.graph(height=100 width=100 style='float: left; margin-right: 12px')
+    svg.graph(height=100 width=100 style='float: left')
 
-::: column(width=200)
+::: column(width=212)
 
-    svg.graph(height='90', width='90', style='float: left; margin-right: 12px')
-    svg.graph(height='90', width='90', style='float: left')
+    svg.graph(height=100 width=100 style='float: left; margin-right: 12px')
+    svg.graph(height=100 width=100 style='float: left')
 
-::: column(width=200)
+::: column(width=212)
 
-    svg.graph(height='90', width='90', style='float: left; margin-right: 12px')
-    svg.graph(height='90', width='90', style='float: left')
+    svg.graph(height=100 width=100 style='float: left; margin-right: 12px')
+    svg.graph(height=100 width=100 style='float: left')
 
 :::
 
 ---
 > id: intro-3
 
-The [__order__](gloss:graph-order) of a graph is its number of vertices. The
-[__degree__](gloss:graph-degree) of a vertex in a graph is the number of edges
-which meet at that vertex.
+We say that the [__order__](gloss:graph-order) of a graph is the number of vertices it has. The
+[__degree__](gloss:graph-degree) of a vertex is the number of edges which meet at that vertex.
 
 ::: column(width=130)
 
-    svg.graph(height=100 width=100 style='margin: 0 auto .8em')
+    svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
 {.text-center} Order: [[5]]
+
 ::: column(width=130)
 
-    svg.graph(height=100 width=100 style='margin: 0 auto .8em')
+    svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
 {.text-center} Order: [[8]]
+
 ::: column(width=130)
 
-    svg.graph(height=100 width=100 style='margin: 0 auto .8em')
+    svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
 {.text-center} Degree: [[3]]
+
 ::: column(width=130)
 
-    svg.graph(height=100 width=100 style='margin: 0 auto .8em')
+    svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
 {.text-center} Degree: [[6]]
+
 :::
 
 ---
 > id: intro-4
 
-Graphs which consist of a single ring of vertices are called
-[__cycles__](gloss:graph-cycle). All cycles have [[the same number of edges and
-vertices|more edges than vertices|fewer edges than vertices]].
+Graphs that consist of a single loop of vertices are called [__cycles__](gloss:graph-cycle). All
+cycles have [[the same number of edges and vertices|more edges than vertices|fewer edges than
+vertices]].
 
     .row
-      svg.graph(style='width: 90px; height: 90px;')
-      svg.graph(style='width: 90px; height: 90px;')
-      svg.graph(style='width: 90px; height: 90px;')
+      svg.graph(style='width: 120px; height: 120px;')
+      svg.graph(style='width: 120px; height: 120px;')
+      svg.graph(style='width: 120px; height: 120px;')
+
+{.reveal(when="blank-0")} Equipped with these new definitions, let’s explore some of the fascinating
+properties and applications of graphs.
 
 ---
 > id: bridges-0
@@ -173,25 +204,25 @@ Try to find a valid route by drawing on these maps:
         x-solved
         include svg/bridges-1.svg
         button.btn Clear
-        button.btn.right(hidden) Skip
+        button.btn.right Skip
       .tab
         h3 Map 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
         button.btn Clear
-        button.btn.right(hidden) Skip
+        button.btn.right Skip
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
         button.btn Clear
-        button.btn.right(hidden) Skip
+        button.btn.right Skip
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
         button.btn Clear
-        button.btn.right(hidden) Skip
+        button.btn.right Skip
 
 ---
 > id: bridges-1
@@ -268,6 +299,7 @@ be explained if we look at just a single vertex in the graph:
 > id: bridges-5
 
 ::: column.grow(parent="right")
+
 If you scroll back to the map of Königsberg, you will find that there are more
 than two islands with an odd number of bridges. Therefore a route that crosses
 every bridge exactly once is indeed impossible – and this is what Leonard Euler
@@ -278,7 +310,7 @@ at the foundation of many other geographic problems, such as finding directions
 between two locations. We will discover more of these applications later.
 ::: column(width=240)
 
-    x-media(lightbox width=240 height=260 src="images/prague.jpg")
+    x-img(lightbox width=240 height=260 src="images/prague.jpg")
 
 :::
 
@@ -286,21 +318,21 @@ between two locations. We will discover more of these applications later.
 > id: handshakes-1
 > section: handshakes
 
-## Handshakes and Parties
+## Handshakes and Dating
 
 ::: column.grow
-You have been invited to an extravagant birthday party. Including yourself and
-the host, there are ${hnd}{hnd|5|3,15,1} people present.
 
-In the evening, as guests get ready to leave, everyone shakes hands with
-everyone else. How many handshakes are there in total?
+You have been invited to a wonderful birthday party with your friends. Including yourself and the
+host, there are ${hnd}{hnd|5|3,15,1} people present.
+
+In the evening, as the guests get ready to leave, everyone shakes hands with everyone else. How
+many handshakes are there in total?
 
 We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
 and every handshake is [[an edge|a vertex]].
  
-{.reveal(when='blank-0 blank-1')}  Now it is easy to count the number of edges
-in the graph. We find that there with ${hnd} people, there are ${hnd*(hnd-1)/2}
-handshakes.
+{.reveal(when='blank-0 blank-1')} Now it is easy to count the number of edges in the graph. We find
+that there with ${hnd} people, there are ${hnd*(hnd-1)/2} handshakes.
 
 ::: column.s-hide(width=240)
 
@@ -317,7 +349,7 @@ simple formula that tells us the result for _any_ number of guests.
 
 Each of the ${n}{n|5|2,8,1} people at the party shakes hands with ${n-1} others.
 That makes ${n} × ${n-1} = ${n×(n-1)} handshakes in total. For _n_ people, the
-number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]].
+number of handshakes would be [[`n×(n–1)`|`n×(n+1)`|`n^2`]].
 
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -325,15 +357,13 @@ number of handshakes would be [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</s
 ---
 > id: handshakes-2a
 
-Unfortunately this answer is not quite right: we have counted every handshake
-[[twice|once|three times]], _{span.reveal(when="blank-0")}once for each of the
-two people involved._
+Unfortunately this answer is not quite right. Notice how <x-target to=".handshakes tr:first-child
+td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two entries on the top
+row</x-target> are actually the same, just flipped around.
 
-{.reveal(when="blank-0")} For example, <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two
-entries on the top row</x-target> are actually the same. The correct number of
-handshakes for ${n}{n|5|2,25,1} guests is <mfrac><mrow>${n} ×
-${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
+In fact, we have counted every handshake [[twice|once|three times]], _{span.reveal(when="blank-0")}
+once for each of the two people involved. This means that the correct number of handshakes for
+${n}{n|5|2,25,1} guests is `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
 
 ---
 > id: handshakes-3
@@ -362,20 +392,20 @@ boys and ${f}{f|4|2,8,1} girls. There are many small tables and every boy spends
 5 minutes with each of the girls. How many individual “dates” are there in total?
 
 ::: column.grow
-In this case, the corresponding graph consists of two separate sets of vertices.
-Every vertex is connected to all the vertices in [[the opposite|its own]] set,
-but none of the vertices in [[its own|the opposite]] set. Graphs which have this
-layout are called __bipartite graphs__.
+
+In this case, the corresponding graph consists of two separate sets of vertices. Every vertex is
+connected to all the vertices in [[the opposite|its own]] set, but none of the vertices in
+[[its own|the opposite]] set. Graphs which have this layout are called __bipartite graphs__.
+
 ::: column(width=300)
 
     svg.graph(style="width: 300px; height: 140px;")
 
 :::
 
-{.reveal(when="blank-0 blank-1")} The bipartite graph with two sets of size _x_
-and _y_ is often written as `K_"x,y"`. It has [[_x_ × _y_|_x_ + _y_|2*x* – _y_]]
-edges, _{span.reveal(when="blank-2")}which means that in the above example there
-are ${m} × ${f} = ${m×f} dates._
+{.reveal(when="blank-0 blank-1")} The bipartite graph with two sets of size _x_ and _y_ is often
+written as `K_"x,y"`. It has [[`x×y`|`x+y`|`2x–y`]] edges, _{span.reveal(when="blank-2")} which
+means that in the above example there are ${m} × ${f} = ${m×f} dates._
 
 ---
 > id: utilities
@@ -385,19 +415,21 @@ are ${m} × ${f} = ${m×f} dates._
 ## Planar Graphs
 
 ::: column.grow
+
 Here is another puzzle that is related to graph theory.
 
-In a small village there are three utility plants producing water, electricity
-and gas respectively. There are also three houses which need to be served.
-Unfortunately, due to the city’s layout, the pipes or cables for every product
-are not allowed to cross.
+In a small village there are three houses and three utility plants that produce water, electricity
+and gas. We have to connect each of the courses to each of the utility plants, but due to the layout
+of the village, the different pipes and cables are not allowed to cross.
+
 ::: column(width=300)
 
-    x-media(width=300 height=200 src="images/power-plant.jpg")
+    x-img(width=300 height=200 src="images/power-plant.jpg")
 
 :::
 
-Try to connect each of the plants below to each of the houses, without any of your lines crossing:
+Try to connect each of the houses to each of the utility companies below, without any of your lines
+intersecting:
 
     .frame.fill
       include svg/utilities.svg
@@ -434,10 +466,12 @@ The [complete graph](gloss:complete-graph) `K_5` is the smallest graph that is
 not planar. Any other graph that contains `K_5` as a subgraph in some way is
 also not planar. This includes `K_6`, `K_7`, and all larger complete graphs.
 
-The graph in the three utilities puzzle is the [bipartite
-graph](gloss:bipartite-graph) `K_"3,3"`. It turns out that any non-planar graph
-must contain a `K_5` or a `K_"3,3"` or a [subdivision](gloss:subdivision) of
-these two graphs as a subgraph.
+The graph in the three utilities puzzle is the [bipartite graph](gloss:bipartite-graph) `K_"3,3"`.
+It turns out that any non-planar graph must either contain a `K_5` or a `K_"3,3"` (or a
+[subdivision](gloss:subdivision) of these two graphs) as a subgraph. This is called _Kuratowski’s
+theorem_.
+
+    // TODO Add bio of Kazimierz Kuratowski
 
 ---
 > id: planarity
@@ -450,6 +484,9 @@ these two graphs as a subgraph.
         svg#planarity.frame(viewBox="0 0 640 320")
         p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
         button.btn New Random Graph
+
+    // TODO Maybe mention that the restriction to straight line edges in the Planarity puzzle isn't
+    // a restriction that matters (Fáry's Theorem).
 
 ---
 > id: euler
@@ -621,7 +658,7 @@ Some simple “maps”, like a chessboard, only need two colours (black and whit
 but most complex maps need more.
 ::: column(width=240 style="margin-top: -10px")
 
-    x-media.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img.shifted(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -704,7 +741,7 @@ and two vertices must have a different colour if they are connected by an edge.
 
 ::: column(width=240 parent="right")
 
-    x-media(lightbox width=240 height=320 src="images/england-counties.jpg")
+    x-img(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
 In 1852, the botany student [Francis Guthrie](bio:guthrie) had to colour a map
@@ -737,10 +774,10 @@ which were each checked by a computer taking over 1000 hours in total.
 The four colour theorem is the first well-known mathematical theorem to be
 proven using a computer, something that has become much more common and less
 controversial since. Faster computers and a more efficient algorithm mean that
-today you can solve the four colour theorem on a laptop in just a few hours.
+today you can prove the four colour theorem on a laptop in just a few hours.
 
     figure
-      x-media(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
+      x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
       p.caption Postmark for the Department of Mathematics at the University of<br/>Illinois Urbana-Champaign, where Haken and Appel worked.
 
 ---
@@ -781,7 +818,7 @@ one. Now we want to find paths which visit _every vertex_ exactly once. These
 paths are called __Hamiltonian cycles__.
 ::: column(width=260)
 
-    x-media(src="images/truck.jpg" width=260 height=280)
+    x-img(src="images/truck.jpg" width=260 height=280)
 
 :::
 
@@ -831,7 +868,7 @@ possible paths. Once you have hundreds or thousands of vertices, trying all
 possible paths becomes impossible, even using powerful computers.
 ::: column(width=220)
 
-    x-media(lightbox src="images/microchip.jpg" width=210 height=365)
+    x-img(lightbox src="images/microchip.jpg" width=210 height=365)
 
 :::
 
@@ -914,7 +951,7 @@ leave along their trail, and which other ants can follow.
 
 ::: column(width=220 parent="right")
 
-    x-media(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
+    x-img(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
 
 ::: column.grow
 Ant Colony System (ACS) algorithms try to replicate this behaviour on computers,
@@ -964,15 +1001,20 @@ TODO
 
 ## Graphs in Everyday Life
 
-Throughout this course we have seen many applications of graph theory, though
-some were somehow contrived. It turns out, however, that graphs are at the very
-heart of many objects and concepts in everyday life.
+We have seen many different applications of graph theory in the previous chapters, although some of
+them were a bit contrived. It turns out, however, that graphs are at the very foundation of many
+objects, concepts and processes in everyday life.
 
 ::: column.grow
+
 The internet, for example, is a vast, virtual graph. Every vertex is an
 individual webpage, and every edge means that there is a hyperlink between two
 pages. Note that links only go one way, so this graph is
 [[directed|multi-line|conected]], and that this graph is _very, very, large_.
+
+    // * "can be viewed as" instead of "is a vast, virtual graph". "Every
+    // vertex represens an individual webpage and every edge a hyperlink
+    // from one page to another".
 
 Some websites, like Wikipedia or Facebook, have lots of incoming links, while
 many smaller websites may have very few incoming links. This is the underlying
@@ -980,7 +1022,7 @@ concept which Google uses to sort search results.
 
 ::: column(width=240)
 
-    img(credit="© Various" src="images/internet.png" width=240 height=240)
+    img(credit="© Various" src="images/websites.png" width=240 height=240)
 
 :::
 
@@ -990,7 +1032,7 @@ concept which Google uses to sort search results.
 Websites with more incoming links tend to be of higher quality and should be
 shown at the top of the search results. For example, when searching for “London”,
 official tourist information sites are shown before small shops in London, or
-blogs of people who live in London. This simple idea from Graph theory, the
+blogs of people who live in London. This simple idea from graph theory, the
 __Page Rank Algorithm__, made Google significantly better than other early
 search engines.
 
@@ -1017,7 +1059,7 @@ guarantee a reliable service, for example by finding diversions when a
 particular connection is busy.
 ::: column(width=220)
 
-    x-media(lightbox src="images/phone.jpg" width=220 height=166)
+    x-img(lightbox src="images/phone.jpg" width=220 height=166)
 
 :::
 
@@ -1028,7 +1070,7 @@ Graphs also play an important role in transportation and navigation. All flight,
 train and subway networks form graphs, which can be used when creating efficient
 schedules. One of the most recognisable graphs is the London Underground map:
 
-    figure: x-media(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
+    figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
 ---
 > id: applications-5
@@ -1039,13 +1081,13 @@ services like Google Maps when working out the shortest route between two given
 points.
 ::: column(width=60)
 
-    x-media(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
+    x-img(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
 
 :::
 
 ::: column(width=280)
 
-    x-media(lightbox src="images/congestion.jpg" width=280 height=170)
+    x-img(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
 In the future, __Intelligent Transportation Systems__ will reduce congestion and
@@ -1069,35 +1111,35 @@ There are countless other graphs in science, engineering or everyday life:
 
 ::: column(width=200)
 
-    x-media(lightbox src="images/molecules.jpg" width=200 height=200)
+    x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
 {.caption} The links between atoms in __molecules__ and crystal grids form a graph.
 ::: column(width=200)
 
-    x-media(lightbox src="images/epidemic.jpg" width=200 height=200)
+    x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
 {.caption} The __spread of diseases__ and epidemics can be modelled using a network.
 ::: column(width=200)
 
-    x-media(lightbox src="images/evolution.jpg" width=200 height=200)
+    x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
 {.caption} In Biology, the __evolutionary trees__ that show the ancestry of
 species form a graph.
 ::: column(width=200)
 
-    x-media(lightbox src="images/network6.jpg" width=200 height=200)
+    x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
 {.caption} The different components of __electric circuits__ and computer chips
 form a network.
 ::: column(width=200)
 
-    x-media(lightbox src="images/letters.jpg" width=200 height=200)
+    x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
 {.caption} The grammatical structure of __languages__ can be modelled using
 graphs, for example to create translation algorithms.
 ::: column(width=200)
 
-    x-media(lightbox src="images/finance.jpg" width=200 height=200)
+    x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
 {.caption} Graphs also have many applications in __probability__, __game
 theory__ and __financial mathematics__.
@@ -1112,18 +1154,18 @@ Finally, let us think about one particularly good example of graphs which exist
 in everyday life: social media. Here, vertices represent [[people|friends|networks]]
 and edges represent friendships, likes, subscriptions or followers.
 
-When we start drawing social media graphs, we can clearly see certain
-__clusters__ of mutual friends, who may have gone to the same school or live in
-the same city. We can also determine people’s __centrality__, which depends on
-how well-connected a vertex is, and which may be a measure of a person’s
-popularity in social media.
+When we draw social media graphs, we might see certain __clusters__ of mutual friends, who may have
+gone to the same school or live in the same city. We can also determine people’s __centrality__,
+which depends on how well-connected a vertex is, and which may be a measure of a person’s
+popularity on social media.
 
-    figure: x-media(lightbox src="images/social-network.png" width=720 height=500)
+    figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
 ---
 > id: social-1
 
 ::: column.grow
+
 In 2014, Facebook had 1.4 billion active users and a total of more than 200
 billion friendships. Half of all Facebook users have more than 200 friends, and
 since most of our friends have a similar number of friends, we could easily have
@@ -1133,26 +1175,27 @@ An exciting question would now be: if you pick any two random Facebook users,
 how many “friendship edges” would you need to follow to get from one to the
 other? For example, the distance between friends is [[1]], the distance between
 friends of friends is [[2]], and so on.
+
 ::: column(width=200)
 
-    x-media(src="images/facebook-like.png" width=200 height=200)
+    x-img(src="images/facebook-like.png" width=200 height=200)
 
 :::
 
 ---
 > id: social-2
 
-Based on a [study](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/)
-which Facebook conducted in 2016, you are, on average, connected to anyone else
-on Facebook through at most 3.57 other people: we say there are 3.57 __degrees
-of separation__.
+In 2016, Facebook conducted [a study](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/)
+to determine how its users are connected to each other. They found that, on average, you are
+connected to _anyone else_ on Facebook through at most 3.57 other people. And this includes
+celebrities, politicians or even royalty!
 
-In other words, if you pick any one of the billions of Facebook users all around
-the world, they will have a friend of a friend who knows a friend of one of your
-friends. And this includes celebrities, politicians or royalty…
+In other words, if you pick any one of the billions of Facebook users all around the world, they
+will probably have a friend of a friend who knows a friend of one of your friends.  We say there are
+3.57 __degrees of separation__.
 
     figure
-      x-media(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
+      x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
       p.caption Geographic visualisation of all Facebook friendships in 2010.
 
 ---
@@ -1160,7 +1203,7 @@ friends. And this includes celebrities, politicians or royalty…
 
 ::: column(width=200)
 
-    x-media(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
+    x-img(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
 
 ::: column.grow
 In 1929, when the Hungarian author [Frigyes Karinthy](bio:karinthy) first

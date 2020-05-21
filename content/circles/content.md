@@ -7,8 +7,8 @@
 
 ::: column.grow
 
-For as long as humans exist, we have looked to the sky and tried to explain life
-on Earth using the motion of stars, planets and the moon.
+For as long as humans have existed, we have looked to the sky and tried to explain life on Earth
+using the motion of stars, planets and the moon.
 
 Ancient Greek astronomers were the first to discover that all celestial objects
 move on regular paths, called __orbits__. They believed that these orbits are
@@ -18,7 +18,7 @@ order of our universe.
 
 ::: column(width=320)
 
-    x-media(src="images/geocentric.jpg" width=320 height=272)
+    x-img(src="images/geocentric.jpg" width=320 height=272)
 
 {.caption} Earth is at the center of the _Ptolemaic universe_.
 
@@ -110,31 +110,31 @@ everywhere in nature:
 
 ::: column(width=130 parent="padded-thin")
 
-    x-media(src="images/flower.jpg" width=130 height=130)
+    x-img(src="images/flower.jpg" width=130 height=130)
 
 {.caption} Flowers
 
 ::: column(width=130)
 
-    x-media(src="images/earth.jpg" width=130 height=130)
+    x-img(src="images/earth.jpg" width=130 height=130)
 
 {.caption} Planets
 
 ::: column(width=130)
 
-    x-media(src="images/tree.jpg" width=130 height=130)
+    x-img(src="images/tree.jpg" width=130 height=130)
 
 {.caption} Trees
 
 ::: column(width=130)
 
-    x-media(src="images/orange.jpg" width=130 height=130)
+    x-img(src="images/orange.jpg" width=130 height=130)
 
 {.caption} Fruit
 
 ::: column(width=130)
 
-    x-media(src="images/soap.jpg" width=130 height=130)
+    x-img(src="images/soap.jpg" width=130 height=130)
 
 {.caption} Soap Bubbles
 
@@ -177,10 +177,10 @@ circular or spherical, and reducing their surface area.
 
 ### The Area of a Circle
 
-But how do we actually calculate the area of a circle? Let’s try the same
-technique we used for [finding the area quadrilaterals](/course/polyhedra/quadrilaterals):
-we cut the shape into multiple different parts, and then rearrange them into a
-different shape we already know the area of (e.g. a rectangle or a triangle).
+But how do we actually calculate the area of a circle? Let’s try the same technique we used for
+[finding the area of quadrilaterals](/course/polyhedra/quadrilaterals): we cut the shape into
+multiple different parts, and then rearrange them into a different shape we already know the area
+of (e.g. a rectangle or a triangle).
 
 The only difference is that, because circles are curved, we have to use some
 approximations:
@@ -276,14 +276,14 @@ the first four decimal digits of Pi by approximating circles using regular
 polygons. Notice how, as you add more sides, the polygon starts to look
 [[more and more|less|exactly]] like a circle:
 
-    figure: x-media(src="images/polygons.svg" width=460 height=110)
+    figure: x-img(src="images/polygons.svg" width=460 height=110)
 
 ---
 > id: pi-record
 
 ::: column(width=280)
 
-    x-media(src="images/iss.jpg" width=280 height=330 credit="NASA")
+    x-img(src="images/iss.jpg" width=280 height=330 credit="NASA")
 
 ::: column.grow
 
@@ -392,7 +392,7 @@ There even is a _Pi day_
 every year, which either falls on 14 March, because `pi ≈ 3.14`, or on 22 July,
 because `pi ≈ 22/7`.
 
-    figure: x-media(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
+    figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
 
 
@@ -466,7 +466,7 @@ future, or to communicate with gods.
 
 ::: column(width=260)
 
-    x-media(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
+    x-img(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
 {.caption} A Babylonian tablet for calculating `sqrt(2)`
 
@@ -696,9 +696,8 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 ---
 > id: small-angle
 
-Using radians has one particularly interesting advantage when using the [__Sine
-function__](gloss:sin). If `θ` is a very small angle (less than 20° or 0.3 rad),
-then `sin(θ) ≈ θ`. For example,
+Using radians has one particularly interesting advantage when using the Sine function. If `θ` is a
+very small angle (less than 20° or 0.3 rad), then `sin(θ) ≈ θ`. For example,
 
 {.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
@@ -749,12 +748,12 @@ need to solve more complex problems:
 
 ::: column.grow(parent="right")
 
-* {.r} A [{.red} secant](pill:secant) is a line that intersects a circle in two
+* {.r} A [{.red} secant](pill:secant) is a line that intersects a circle at two
   points. [Continue](btn:next)
 * {.r.reveal(when="next-0")} A [{.green} chord](pill:chord) is a line segment
   whose endpoints lie on the circumference of a circle. [Continue](btn:next)
 * {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) is a line that
-  touched a circle at exactly one point. This is called the __point of
+  touches a circle at exactly one point. This is called the __point of
   tangency__. [Continue](btn:next)
 * {.r.reveal(when="next-2")} An [{.yellow} arc](pill:arc) is a section of the
   circumference of a circle. [Continue](btn:next)
@@ -1034,14 +1033,14 @@ the well.
 
 ::: column(width=300)
 
-    x-media(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
+    x-img(src="images/egypt-map.jpg" width=300 height=300 lightbox credit="© Google Maps")
 
 {.caption} Ancient Egyptians measured long distances by counting the number of
 steps it took to walk.
 
 ::: column(width=300)
 
-    x-media(src="images/well.jpg" width=300 height=300 lightbox)
+    x-img(src="images/well.jpg" width=300 height=300 lightbox)
 
 {.caption} Some sources say the “Well of Eratosthenes” was on _Elephantine
 island_ on the Nile river.
@@ -1049,14 +1048,13 @@ island_ on the Nile river.
 :::
 
 The mathematician [Eratosthenes](bio:eratosthenes) lived in _Alexandria_, about
-800\ km North of Swenet, where he was director of the Great Library. In the city
+800\ km north of Swenet, where he was director of the Great Library. In the city
 centre of Alexandria stood an obelisk, a tall, narrow monument with a
 pyramid-shaped top.
 
-Eratosthenes noticed that at noon on the day of the summer solstice, the obelisk
-was throwing a shadow – meaning that the sun was _not_ directly above it. He
-deduced that this was because of the curvature of the Earth, and realised it
-could be used to calculate our planet’s circumference.
+Eratosthenes noticed that at noon on the day of the summer solstice, the obelisk threw a shadow –
+meaning that the sun was _not_ directly above it. He deduced that this was because of the curvature
+of the Earth, and realised it could be used to calculate our planet’s circumference.
 
 ---
 > id: eratosthenes-1
@@ -1130,7 +1128,7 @@ when considering that he only had access to very basic measuring tools.
 
 ::: column(width=280)
 
-    x-media(src="images/obelisk.jpg" width=280 height=450 lightbox)
+    x-img(src="images/obelisk.jpg" width=280 height=450 lightbox)
 
 ::: column.grow
 
@@ -1376,7 +1374,7 @@ results!
 
 ::: column(width=300)
 
-    x-media(src="images/gasometer.jpg" width=300 height=400 lightbox)
+    x-img(src="images/gasometer.jpg" width=300 height=400 lightbox)
 
 {.caption} Gasometer Oberhausen
 
@@ -1436,7 +1434,7 @@ but the sides seem to “lean over” at an angle that is not 90°.
 
 ::: column(width=300)
 
-    x-media(src="images/pisa.jpg" width=300 height=360 lightbox)
+    x-img(src="images/pisa.jpg" width=300 height=360 lightbox)
 
 {.caption} The _Leaning Tower of Pisa_ in Italy is not quite an oblique
 cylinder.
@@ -1515,7 +1513,7 @@ _h_ is given by
 ---
 > id: cylinder-real-life
 
-    figure: x-media(src="images/cylinders.jpg" width=460 height=125)
+    figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
 Cylinders can be found everywhere in our world – from soda cans to toilet paper
 or water pipes. Can you think of any other examples?
@@ -1531,7 +1529,7 @@ surface area is approximately [[34,080 ± 100]]`"m"^2`.
 
 ::: column.grow
 
-A [__cone__](gloss:cone) is a 3-dimensional solid that has a circular
+A [__cone__](gloss:cone) is a three-dimensional solid that has a circular
 __{.m-red}base__. Its side “tapers upwards” as shown in the diagram, and ends
 in a single point called the __{.m-green}vertex__.
 
@@ -1551,23 +1549,23 @@ think of?
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/ice-cream.jpg" width=120 height=120 lightbox)
+    x-img(src="images/ice-cream.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/traffic.jpg" width=120 height=120 lightbox)
+    x-img(src="images/traffic.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/roof.jpg" width=120 height=120 lightbox)
+    x-img(src="images/roof.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/christmas.jpg" width=120 height=120 lightbox)
+    x-img(src="images/christmas.jpg" width=120 height=120 lightbox)
 
 ::: column(width=120 parent="padded-thin")
 
-    x-media(src="images/tipi.jpg" width=120 height=120 lightbox)
+    x-img(src="images/tipi.jpg" width=120 height=120 lightbox)
 
 :::
 
@@ -1614,11 +1612,10 @@ third|half|one quarter]] of the volume of the cylinder:
 ---
 > id: cone-hilbert
 
-{.i.lgrey} Note: You might think that infinitely many tiny sides as an approximation
-is a bit “imprecise”. Mathematics spent a long time trying to find a more
-straightforward way to calculate the volume of a cone. In 1900, the great
-mathematician [David Hilbert](bio:hilbert) even named it as one of the 23 most
-important unsolved problems in mathematics! Today we know that it is actually
+{.i.lgrey} Note: You might think that infinitely many tiny sides as an approximation is a bit
+“imprecise”. Mathematicians spent a long time trying to find a more straightforward way to calculate
+the volume of a cone. In 1900, the great mathematician [David Hilbert](bio:hilbert) even named it as
+one of the 23 most important unsolved problems in mathematics! Today we know that it is actually
 impossible.
 
 ---
@@ -1782,7 +1779,7 @@ Let’s start with a hemisphere – a sphere cut in half along the equator. We a
 need a cylinder with the same radius and height as the hemisphere, but with an
 inverted cone “cut out” in the middle.
 
-As you move the slider above, you can see the cross-section of both these
+As you move the slider below, you can see the cross-section of both these
 shapes at a specific height above the base:
 
 ::: column(width=240)
@@ -1963,7 +1960,7 @@ is that we can’t open and “flatten” the surface of a sphere, like we did f
 cones and cylinders before.
 
 This is a particular issue when trying to create maps. Earth has a curved,
-3-dimensional surface, but every printed map has to be flat and 2-dimensional.
+three-dimensional surface, but every printed map has to be flat and two-dimensional.
 This means that Geographers have to cheat: by stretching or squishing certain
 areas.
 
@@ -1989,7 +1986,7 @@ the red square, and watch what this area _actually_ looks like on a globe:
             path.grid
             path.land
             rect.map-select(x="-24" y="-24" width=48 height=48 style="cursor: move")
-          p.caption As you move the square on the map, notice how the size and shape of the #[em actual] area changes on the 3-dimensional globe.
+          p.caption As you move the square on the map, notice how the size and shape of the #[em actual] area changes on the three-dimensional globe.
     x-gesture(target="#projection" slide="50, 20")
 
 ---
@@ -2075,7 +2072,7 @@ now, let’s have a closer look at the ellipse.
 
 ::: column(width=300)
 
-    x-media(src="images/conics.svg" width=300 height=340)
+    x-img(src="images/conics.svg" width=300 height=340)
 
 :::
 
@@ -2147,7 +2144,7 @@ decreasing]] distance from its center.
 
 ::: column(width=330)
 
-    x-media(src="images/hipparchus.jpg" width=330 height=280 lightbox)
+    x-img(src="images/hipparchus.jpg" width=330 height=280 lightbox)
 
 {.caption} Greek astronomer Hipparchus of Nicaea
 
@@ -2179,7 +2176,7 @@ __deferent__).
 
 ::: column(width=320)
 
-    x-media(src="images/epicycles.jpg" width=320 height=320)
+    x-img(src="images/epicycles.jpg" width=320 height=320)
 
 {.caption} A 16-century drawing of epicycles in the __Geocentric model__. The
 Greek word “planetes” means “wanderers”.
@@ -2238,13 +2235,13 @@ planets move, that prevents them from falling directly into the sun.
 ::: column.grow
 
 Using Newton’s laws, you can derive the path that objects take when moving under
-the force of gravity. It turns out that Planets move on ellipses, but other
+the force of gravity. It turns out that planets move on ellipses, but other
 objects like comets can travel on [parabolic](gloss:parabola) or
 [hyperbolic](gloss:hyperbola) paths: they fly close to the sun before turning
 around and shooting off into the universe, never to come back.
 
 According to legend, a falling apple inspired Newton to think about gravity. He
-was one of the most influential scientist of all time, and his ideas shaped our
+was one of the most influential scientists of all time, and his ideas shaped our
 understanding of the world for nearly 300 years – until Albert Einstein
 discovered relativity in 1905.
 

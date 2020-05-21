@@ -7,11 +7,11 @@
 
 Many professions that use mathematics are interested in one specific aspect –
 _finding patterns_, and being able to predict the future. Here are a few
-examples:
+examples: 
 
 ::: column(width=160 parent="padded-thin")
 
-    x-media(src="images/crime.jpg" width=160 height=160)
+    x-img(src="images/crime.jpg" width=160 height=160 alt="Police Officers")
 
 ::: column(width=400)
 
@@ -23,7 +23,7 @@ rate in parts of Los Angeles by 12%!
 
 ::: column(width=160)
 
-    x-media(src="images/volcanoes.jpg" width=160 height=160)
+    x-img(src="images/volcanoes.jpg" width=160 height=160 alt="Volcano")
 
 ::: column(width=400)
 
@@ -34,7 +34,7 @@ equations that help predict when the next one might happen.
 
 ::: column(width=160)
 
-    x-media(src="images/finance.jpg" width=160 height=160)
+    x-img(src="images/finance.jpg" width=160 height=160 alt="Stock Market Charts")
 
 ::: column(width=400)
 
@@ -269,7 +269,7 @@ First, though, let’s look at something completely different: __action sequence
 photography__. A photographer takes many shots in quick succession, and then
 merges them into a single image:
 
-    figure: x-media(src="images/action-1.jpg" width=640 height=320)
+    figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
 Can you see how the skier forms a sequence? The pattern is not addition or
 multiplication, but a geometric [transformation](gloss:rigid-transformation).
@@ -283,27 +283,27 @@ Here are a few more examples of action sequence photography for your enjoyment:
 
 ::: column(width=320 parent="padded-thin")
 
-    x-media(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-2.jpg" width=320 height=160 credit="© Ray Demski" lightbox alt="Jumping Volleyball Player")
 
 ::: column(width=320)
 
-    x-media(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox)
+    x-img(src="images/action-3.jpg" width=320 height=160 credit="© Ray Demski" lightbox alt="Wind Surfing")
 
 ::: column(width=320)
 
-    x-media(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox)
+    x-img(src="images/action-4.jpg" width=320 height=160 credit="© Marcio Abe" lightbox alt="Snowboard Jump")
 
 ::: column(width=320)
 
-    x-media(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-5.jpg" width=320 height=160 credit="© Jason Halayko" lightbox alt="Mountain Bike Jump")
 
 ::: column(width=320)
 
-    x-media(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox)
+    x-img(src="images/action-6.jpg" width=320 height=160 credit="© Jason Halayko" lightbox alt="Mountain Bike Jump")
 
 ::: column(width=320)
 
-    x-media(src="images/action-7.jpg" width=320 height=160 lightbox)
+    x-img(src="images/action-7.jpg" width=320 height=160 lightbox alt="Kite Surfing")
 
 :::
 
@@ -331,7 +331,7 @@ consecutive observations is the same in both cases: [[76]] years.
 
 ::: column(width=320)
 
-    x-media(width=320 height=256 src="images/halley.jpg")
+    x-img(width=320 height=256 src="images/halley.jpg" alt="Halley’s Comet")
     p.caption Image of Halley’s Comet,#[br]taken in 1986 on Easter Island
 
 :::
@@ -358,10 +358,10 @@ know that Halley’s comet was observed by ancient astronomers as early as 240 B
 
     figure
       .row
-        x-media(src="images/halley-1.jpg" width=160 height=180)
-        x-media(src="images/halley-2.jpg" width=173 height=180 lightbox)
-        x-media(src="images/halley-3.jpg" width=200 height=180 lightbox)
-        x-media(src="images/halley-4.jpg" width=130 height=180 lightbox)
+        x-img(src="images/halley-1.jpg" width=160 height=180)
+        x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
+        x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
+        x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
       p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
@@ -879,11 +879,11 @@ playing billiards: they are both triangle numbers!
 
 ::: column(width=320)
 
-    x-media(src="images/bowling.jpg" width=320 height=240)
+    x-img(src="images/bowling.jpg" width=320 height=240)
 
 ::: column(width=320)
 
-    x-media(src="images/billiard.jpg" width=320 height=240)
+    x-img(src="images/billiard.jpg" width=320 height=240)
 
 :::
 
@@ -1057,7 +1057,7 @@ polygons?
 
 ### Tetrahedral and Cubic Numbers
 
-Of course, we also don’t have to limit ourselves to 2-dimensional shapes and
+Of course, we also don’t have to limit ourselves to two-dimensional shapes and
 patterns. We could stack spheres to form small pyramids, just like how you would
 stack oranges in a supermarket:
 
@@ -1149,24 +1149,24 @@ male and female).
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -1175,7 +1175,7 @@ male and female).
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
@@ -1221,7 +1221,7 @@ _{.n}[[144]]_, …
 {.reveal(when="blank-5")} So after 12 months, you’ll have 144 pairs of rabbits!
 
     figure.reveal(when="blank-5")
-      x-media(src="images/rabbits.jpg" width=600 height=230)
+      x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
 > id: fibonacci
@@ -1244,7 +1244,7 @@ use them today.
 
 ::: column(width=300)
 
-    x-media(src="images/fibonacci.jpg" width=300 height=300)
+    x-img(src="images/fibonacci.jpg" width=300 height=300)
     .caption Portrait of Leonardo Fibonacci
 
 :::
@@ -1253,7 +1253,7 @@ On one of the pages in his book, he also investigated the breeding patterns of
 rabbits – that’s why the Fibonacci numbers were named after him.
 
     figure
-      x-media(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
+      x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
       p.caption Pages from Fibonacci’s #[em Liber Abaci]
 
 ---
@@ -1402,7 +1402,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__Golden Ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1414,19 +1414,19 @@ two examples:
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/pantheon.jpg" width=320 height=198)
-      img(src="images/pantheon.png" width=320 height=198)
+      x-img(src="images/pantheon.jpg" width=320 height=198)
+      img(src="images/pantheon-box.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
-{.caption} The Greek sculptor Phidias is said to have used the Golden ratio
+{.caption} The Greek sculptor Phidias is said to have used the golden ratio
 when designing the _Parthenon_ in Athens. The first letter of his name, `φ`, is
 the symbol we now use for the golden ratio.
 
 ::: column(width=320)
 
     .golden-art
-      x-media(src="images/dali.jpg" width=320 height=198)
-      img(src="images/dali.png" width=320 height=198)
+      x-img(src="images/dali.jpg" width=320 height=198)
+      img(src="images/dali-box.png" width=320 height=198)
 
 {.caption} _The Sacrament of the Last Supper_, by Spanish artist Salvador Dalí,
 is one of many paintings in the golden ratio. In the background, you can also
@@ -1531,7 +1531,7 @@ around the world are using.
 
 ::: column(width=240)
 
-    x-media(src="images/flowers.jpg" width=240 height=400)
+    x-img(src="images/flowers.jpg" width=240 height=400)
 
 ::: column.grow
 
@@ -1607,7 +1607,7 @@ steps at a time. This means that there are many different possibilities for how 
 could go up a staircase. For example, if there are 5 steps, I have 8 different
 choices:
 
-    figure: x-media(src="images/stairs.svg" width=530 height=200)
+    figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 How many choices are there for staircase with 6, 7 or 8 steps? Can you detect
 a pattern? And how is this related to the Fibonacci numbers?
@@ -1616,7 +1616,7 @@ a pattern? And how is this related to the Fibonacci numbers?
 :::
 
     figure
-      x-media(src="images/fibonachos.jpg" width=600 height=282)
+      x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
 
 
@@ -1698,7 +1698,7 @@ You can learn more about these and other properties of prime numbers in our
 course on [Divisibility and Primes](/course/divisibility/primes). They are
 some of the most important and most mysterious concepts in mathematics!
 
-    figure: img(src="images/primes.svg" width=480 height=156) 
+    figure: img(src="images/primes.svg" width=480 height=156)
 
 ---
 > id: perfect
@@ -1784,7 +1784,7 @@ mathematics_!
 
 ::: column(width=220)
 
-    x-media(src="images/euclid.jpg" width=220 height=269)
+    x-img(src="images/euclid.jpg" width=220 height=269)
 
 {.caption} Euclid of Alexandria
 :::
@@ -1862,7 +1862,7 @@ followed by twenty zeros.
 
 ::: column(width=240)
 
-    x-media(src="images/storm.jpg" width=240 height=340)
+    x-img(src="images/storm.jpg" width=240 height=340)
 
 :::
 
@@ -1896,7 +1896,7 @@ This sequence is called the __Look-and-Say__ sequence, and the pattern is just
 what the name says: you start with a 1, and every following term is what you
 get if you “read out loud” the previous one. Here is an example:
 
-    p: x-media(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
+    p: x-img(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
 Can you now find the next terms?
 
@@ -1918,7 +1918,7 @@ The British mathematician [John Conway](bio:conway) discovered that, no matter
 what number you pick as starting value, the sequence will eventually split into
 distinct “sections” that no longer interact with each other. Conway called this
 the _Cosmological Theorem_, and named the different sections using the chemical
-elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_. 
+elements _Hydrogen_, _Helium_, _Lithium_, …, up to _Plutonium_.
 
 ---
 > id: quiz
@@ -2017,21 +2017,21 @@ was known to other civilisations many centuries earlier:
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
+    x-img(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
 
 {.caption} In 450BC, the Indian mathematician [Pingala](bio:pingala) called the
 triangle the __“Staircase of Mount Meru”__, named after a sacred Hindu mountain.
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-2.jpg" width=200 height=280)
+    x-img(src="images/pascal-2.jpg" width=200 height=280)
 
 {.caption} In Iran, it was known as the __“Khayyam triangle”__ (مثلث خیام),
 named after the Persian poet and mathematician [Omar Khayyám](bio:khayyam).
 
 ::: column(width=200)
 
-    x-media(src="images/pascal-3.jpg" width=200 height=280)
+    x-img(src="images/pascal-3.jpg" width=200 height=280)
 
 {.caption} In China, the mathematician Jia Xian also discovered the triangle.
 It was named after his successor, __“Yang Hui’s triangle”__ (杨辉三角).
@@ -2226,7 +2226,7 @@ completely different methods, and then see how they are related.
     // -------------------------------------------------------------------------
 
     // ## The In-and-out Puzzle
-    // 
+    //
     // > section: in-and-out
     // > sectionStatus: dev
     // > id: in-and-out-intro
@@ -2245,7 +2245,7 @@ completely different methods, and then see how they are related.
 
     // An actor auditioning for a different part was faced with 20 in his circle.
     // Where should ! he stand?
-    
+
     // Find a pattern that tells you where to stand no matter how many people
     // are in the circle. Why does it work?
 
@@ -2336,7 +2336,7 @@ completely different methods, and then see how they are related.
     // Can you explain why this happens?
     // Now start with three numbers.
     // This time, we can generate a sequence where the next number is the mean of the last three numbers.
-    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163. 
+    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163.
     // What would happen if you continued this process indefinitely?
     // Choose some more sets of three starting numbers.
     // Can you find a relationship between your starting numbers and the limit of the sequence they generate?

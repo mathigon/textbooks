@@ -121,8 +121,9 @@ module.exports.encode = function(content) {
 
 module.exports.decode = function decode(text, STORE) {
   return text.split('\n').filter(row => !row.startsWith('=====')).join('\n')
-      .replace(/{([0-9]+)}/g, (_, n) => STORE[+n])
-      .replace(/{([0-9]+)}/g, (_, n) => STORE[+n])  // Second pass!
+      .replace(/{\s*([0-9]+)\s*}/g, (_, n) => STORE[+n])
+      .replace(/{\s*([0-9]+)\s*}/g, (_, n) => STORE[+n])  // Second pass!
+      .replace(/{\s*([0-9]+)\s*}/g, (_, n) => STORE[+n])  // Second pass!
       .replace(/>>>>\s+/g, '')
       .replace(/\s+<<<</g, '')
       .replace(/&quot;/g, '"')

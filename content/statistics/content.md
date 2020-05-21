@@ -106,7 +106,7 @@ this scam.
 
 ::: column(width=300)
 
-    x-media(src="images/cocktails.jpg" width=300 height=185)
+    x-img(src="images/cocktails.jpg" alt="Cocktail Bar" width=300 height=185)
 
 ::: column.grow
 When he finally travelled to Monte Carlo, he discovered that the reason for the
@@ -172,7 +172,7 @@ based on different outcomes.
 ---
 > id: dealer-2
 
-    figure: x-media(src="images/las-vegas.jpg" width=760 height=345)
+    figure: x-img(src="images/las-vegas.jpg" alt="Las Vegas Strip" width=760 height=345)
 
 During the summer of 1961, Thorp and Shannon successfully tried their computer
 in Las Vegas. But while they made some money, the computer – which even

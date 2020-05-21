@@ -49,7 +49,7 @@ overtake it, the tortoise wins the race!
 
 ---
 
-    figure: x-media(src="images/mind-blown.gif" width=300 height=200)
+    figure: x-img(src="images/mind-blown.gif" alt="Mind Blown GIF" width=300 height=200)
 
 It seems obvious that something in our argument must have gone wrong. We clearly
 _know_ that Achilles would eventually overtake the tortoise. But it is
@@ -79,7 +79,7 @@ numbers that are equal. 5 and 8 are different, just like 100 is different from
 
 ::: column(width=300)
 
-    x-media(src="images/clock.jpg" width=300 height=300)
+    x-img(src="images/clock.jpg" alt="Clock" width=300 height=300)
 
 {.caption} On a clock, the number 12 (XII) is actually the same as the number 0.
 
@@ -270,7 +270,7 @@ Apparently, if we pulled out an infinite calculator and computed the sum of 9 +
 
 _Do you believe that?_
 
-    figure: x-media(src="images/confused.gif" width=200 height=200)
+    figure: x-img(src="images/confused.gif" alt="Confused GID" width=200 height=200)
 
 ---
 
@@ -621,7 +621,7 @@ mathematician [Paul Monsky](bio:monsky) – you can even have a look at the pape
 he published about it:
 
     figure
-      x-media(src="images/paper.jpg" width=400 height=132)
+      x-img(src="images/paper.jpg" alt="Paper by Paul Monsky" width=400 height=132)
       p.caption #[a(href="http://ieee.scripts.mit.edu/urgewiki/images/0/00/Monsky.pdf" target="_blank") The American Mathematical Monthly]
 
 In the proof, Monsky had to use the 2-adic number system. Mathematics, no matter

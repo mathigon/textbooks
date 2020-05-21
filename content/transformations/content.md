@@ -10,11 +10,17 @@ were “invented” by mathematicians. Symmetry, on the other hand, is everywher
 around us. Almost all plants, animals, and even we humans are symmetric.
 
 ::: column(width=200)
-    x-media(src="images/butterfly.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/butterfly.jpg" width=200 height=200 lightbox alt="Butterfly")
+
 ::: column(width=200)
-    x-media(src="images/lion.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/lion.jpg" width=200 height=200 lightbox alt="Lion")
+
 ::: column(width=200)
-    x-media(src="images/starfish.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/starfish.jpg" width=200 height=200 lightbox alt="Starfish")
+
 :::
 
 Over time, we’ve imitated nature’s symmetry in art, architecture, technology
@@ -22,11 +28,17 @@ and design. Symmetric shapes and patterns just seems to look _more beautiful_
 than non-symmetric ones.
 
 ::: column(width=200)
-    x-media(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox)
+
+    x-img(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox alt="Taj Mahal")
+
 ::: column(width=200)
-    x-media(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox)
+
+    x-img(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox alt="US Capitol")
+
 ::: column(width=200)
-    x-media(src="images/window.jpg" width=200 height=200 lightbox)
+
+    x-img(src="images/window.jpg" width=200 height=200 lightbox alt="Mosaic Church Window")
+
 :::
 
 But symmetry is much more important than simply _looking beautiful_. It lies at
@@ -241,7 +253,7 @@ Draw the line of reflection in each of these examples:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/rorschach.jpg" width=220 height=180)
+      x-img.background(src="images/rorschach.jpg" width=220 height=180 alt="Rorschach Test")
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
 
@@ -565,21 +577,21 @@ Draw all axes of symmetry in these six images and shapes:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/lake.jpg" width=220 height=180)
+      x-img.background(src="images/lake.jpg" width=220 height=180 alt="Lake")
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/beijing.jpg" width=220 height=180)
+      x-img.background(src="images/beijing.jpg" width=220 height=180 alt="Forbidden City in Beijing")
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
+      x-img.background(src="images/blue-butterfly.jpg" width=220 height=180 alt="Butterfly")
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
@@ -829,7 +841,7 @@ example, we can _add_ two symmetries to get new ones:
       mo +
       img.cube(src="images/cube-1.svg" width=54 height=54)
       mo =
-      span.sym-sum.pending: img.cube(src="images/cube-2.svg" width=54 height=54)
+      span.sym-sum.pending(tabindex=0): img.cube(src="images/cube-2.svg" width=54 height=54)
     x-gesture(target=".sym-sum")
 
 ::: column(width=260)
@@ -839,7 +851,7 @@ example, we can _add_ two symmetries to get new ones:
       mo +
       img.cube(src="images/cube-6.svg" width=54 height=54)
       mo =
-      span.sym-sum.pending: img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
+      span.sym-sum.pending(tabindex=0): img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
 
 :::
 
@@ -856,14 +868,14 @@ Whenever you add two symmetries of a square, you get a new one. Here is a
         .operator +
         .operator =
         .clear ×
-      .button + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
 
 ---
 > id: symmetry-arithmetic
@@ -1157,7 +1169,7 @@ about the motion when unscrewing a bottle).
     img(src="images/crystal.jpg" width=300 height=240)
 
 {.caption} Boron-Nitride has its molecules arranged in this crystal lattice,
-which has a 3-dimensional symmetry group.
+which has a three-dimensional symmetry group.
 :::
 
 ---
@@ -1211,12 +1223,12 @@ or electricity), but you can never create or destroy energy. The total amount
 of energy in the universe will always stay constant.
 
     figure
-      x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
+      x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
       p.caption CERN is the world’s largest particle accellerator. Scientists smash together fundamental particles at enourmous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
 
 ::: column(width=220)
 
-    x-media(src="images/higgs.png" width=220 height=150)
+    x-img(src="images/higgs.png" width=220 height=150 alt="Particle Fragments")
     p.caption The paths taken by particle fragments after a collision
 
 ::: column.grow
@@ -1245,6 +1257,7 @@ smaller._
 > id: dilations-1
 
 ::: column.grow
+
 All dilations have a [__center__](target:center) and a [__scale factor__](->.scale-target).
 The center is the point of reference for the dilation and scale factor tells us
 how much the figure stretches or shrinks.
@@ -1252,6 +1265,7 @@ how much the figure stretches or shrinks.
 If the [scale factor](gloss:scale-factor) is between 0 and 1, the image is
 [[smaller|larger]] than the original. If the scale factor is larger than 1, the
 image is [[larger|smaller]] than the original.
+
 ::: column(width=300)
 
     x-geopad(width=300 height=240): svg

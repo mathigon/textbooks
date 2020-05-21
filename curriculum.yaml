@@ -143,13 +143,8 @@ linear-functions:
   color: ea3620
 
 basic-probability:
-  title: Basic Probability
+  title: Introduction to Probability
   color: cd0e66
-  sections:
-    - title: Introduction
-    - title: Coins, Cards and Dice
-    - title: Multi-Step Experiments
-    - title: Designing Simulations
 
 combinatorics:
   title: Combinatorics
@@ -229,14 +224,6 @@ non-euclidean-geometry:
 functions:
   title: Functions
   color: fd8c00
-  sections:
-    - title: Relations and Functions
-    - title: Graphing Functions
-    - title: Solving Equations Graphically
-    - title: Domain and Range
-    - title: Absolute Value Functions
-    - title: Inverse Functions
-    - title: Rates of Change
 
 sequences:
   title: Sequences and Patterns
@@ -516,10 +503,8 @@ exploding-dots:
   color: 6f27cc
   hideTitle: true
 
-
-# ------------------------------------------------------------------------------
-# For Testing
-testing:
-  title: For Testing
-  description: This is not real.
-  color: 363535
+connections:
+  title: How Mathematics Connects Us
+  description: Discover the mathematical principles that connect our world, from shaking hands to travel and navigation, colouring maps and social networks.
+  color: aa1690
+  hideIcon: true

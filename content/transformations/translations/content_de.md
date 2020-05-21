@@ -10,11 +10,11 @@ wurden von Mathematikern "erfunden". Symmetrie hingegen ist überall
 um uns herum. Fast alle Pflanzen, Tiere und sogar wir Menschen sind symmetrisch.
 
 ::: column(width=200)
-    x-media(src="images/butterfly.jpg" width=200 height=200 lightbox)
+    x-img(src="images/butterfly.jpg" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/lion.jpg" width=200 height=200 lightbox)
+    x-img(src="images/lion.jpg" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/starfish.jpg" width=200 height=200 lightbox)
+    x-img(src="images/starfish.jpg" width=200 height=200 lightbox)
 :::
 
 Im Laufe der Zeit haben wir die Symmetrie der Natur in Kunst, Architektur, Technologie
@@ -22,11 +22,11 @@ und Design nachgeahmt. Symmetrische Formen und Muster scheinen einfach schöner
 _zu sein_ als unsymmetrische.
 
 ::: column(width=200)
-    x-media(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox)
+    x-img(src="images/taj-mahal.jpg" credit="© Yann Forget / Wikimedia Commons" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox)
+    x-img(src="images/capitol.jpg" credit="© Martin Falbisoner" width=200 height=200 lightbox)
 ::: column(width=200)
-    x-media(src="images/window.jpg" width=200 height=200 lightbox)
+    x-img(src="images/window.jpg" width=200 height=200 lightbox)
 :::
 
 Aber bei der Symmetrie geht es um viel mehr, als einfach nur _schön auszusehen_. Sie liegt 
@@ -244,7 +244,7 @@ Zeichne die Spiegelachse in jedem dieser Beispiele:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/rorschach.jpg" width=220 height=180)
+      x-img.background(src="images/rorschach.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(5,-1),point(5,9))")
 
@@ -534,21 +534,21 @@ Zeichne alle Symmetrieachsen in diesen sechs Bildern und Figuren:
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/lake.jpg" width=220 height=180)
+      x-img.background(src="images/lake.jpg" width=220 height=180)
       svg
         path(hidden name="line0" x="line(point(-1,4),point(11,4))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/beijing.jpg" width=220 height=180)
+      x-img.background(src="images/beijing.jpg" width=220 height=180)
       svg
         path(hidden name="line1" x="line(point(5,-1),point(5,9))")
 
 ::: column(width=220)
 
     x-geopad.draw.reflection(width=220 height=180 grid=20 no-points)
-      x-media.background(src="images/blue-butterfly.jpg" width=220 height=180)
+      x-img.background(src="images/blue-butterfly.jpg" width=220 height=180)
       svg
         path(hidden name="line2" x="line(point(1,-1),point(11,9))")
 
@@ -1179,12 +1179,12 @@ oder Elektrizität), aber man kann niemals Energie erzeugen oder zerstören. Die
 im Universum wird immer konstant bleiben.
 
     figure
-      x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
+      x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN")
       p.caption CERN ist der weltweit größte Partikelbeschleuniger. Wissenschaftler zerschlagen Elementarteilchen mit enormen Geschwindigkeiten, um mehr über ihre Eigenschaften zu erfahren. Kannst du die Person unten sehen, zum Größenvergleich?
 
 ::: column(width=220)
 
-    x-media(src="images/higgs.png" width=220 height=150)
+    x-img(src="images/higgs.png" width=220 height=150)
     p.caption Die Wege, die die Teilchenfragmente nach einer Kollision zurücklegen
 
 ::: column.grow

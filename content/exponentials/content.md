@@ -18,26 +18,26 @@ Pharaoh, and when did he die?
 
 ::: column(width=300)
 
-    x-media(src="images/egypt.jpg" lightbox width=300 height=312)
+    x-img(src="images/egypt.jpg" alt="Egyptian Tomb" lightbox width=300 height=312)
 
 :::
 
 Unfortunately, none of the drawings and inscriptions on the walls of the tomb
 seem to contain any names or dates. However, there is an ingenious method to
 accurately determine the age of ancient artefacts like mummies or fossils,
-which solely relies on physics and mathematics: __Carbon Dating__.
+which solely relies on physics and mathematics: __Carbon dating__.
 [Continue](btn:next)
 
 ---
 > id: carbon-1
 
-    figure: x-media(src="images/sarcophagus.jpg" width=600 height=180)
+    figure: x-img(src="images/sarcophagus.jpg" alt="Egyptian Sarcophagus" width=600 height=180)
 
-All living organisms on Earth – plants, animals and humans – contain Carbon
-[atoms](gloss:atom). Usually, the core of a Carbon atom consists of six
+All living organisms on Earth – plants, animals and humans – contain carbon
+[atoms](gloss:atom). Usually, the core of a carbon atom consists of six
 [protons](gloss:proton) and six [neutrons](gloss:neutron), but a small
-proportion of Carbon atoms contain additional neutrons. These different
-“variants” of Carbon are called __isotopes__:
+proportion of carbon atoms contain additional neutrons. These different
+“variants” of carbon are called __isotopes__:
 
 ::: column(width=170)
 
@@ -72,15 +72,14 @@ proportion of Carbon atoms contain additional neutrons. These different
 
 The proportion at which these isotopes occur is almost exactly the same,
 everywhere on Earth – and this will be very important later. In our example, we
-are particularly interested in Carbon-14, which is abbreviated as <sup>14</sup>C.
+are particularly interested in carbon-14, which is abbreviated as <sup>14</sup>C.
 It contains 6 protons and 8 neutrons, and it is created when cosmic rays coming
 from outer space hit particles high in our atmosphere.
 
-Any sample of Carbon atoms contains [[0.1]]% of these special <sup>14</sup>C
-atoms. You might think that this is an insignificant amount, but your body
-contains around `8 × 10^26` Carbon atoms, which means that you also contain
-around `8 × 10^23` Carbon-14 atoms. That’s almost a million-million-million-million
-atoms!
+Any sample of carbon atoms consists of [[0.1]]% of these special <sup>14</sup>C atoms. You might
+think that this is an insignificant amount, but your body contains around `8 × 10^26` carbon atoms,
+which means that you also contain around `8 × 10^23` carbon-14 atoms. That’s almost a
+million-million-million-million atoms!
 
     // Carbon is an essential part of our body, because it can form long,
     // complex molecules. 
@@ -134,14 +133,14 @@ you’re left with just [[a quarter|a third|1/8|none]] of the original amount.
 
 ::: column(width=220)
 
-    x-media(src="images/atom.jpg" width=220 height=310)
+    x-img(src="images/atom.jpg" alt="Atom" width=220 height=310)
 
 :::
 
 ---
 > id: radioactive-table-1
 
-Let’s assume we start with a block of 1,200 Carbon-14 atoms. Using the half-life,
+Let’s assume we start with a block of 1,200 carbon-14 atoms. Using the half-life,
 we can calculate the remaining amount of <sup>14</sup>C atoms over time:
 
 ::: .overflow-wrap
@@ -156,7 +155,7 @@ we can calculate the remaining amount of <sup>14</sup>C atoms over time:
 ---
 > id: radioactive-table-2
 
-As you can see, we’re multiplying by `$1/2` at every step, just like a
+As you can see, we’re multiplying by `§1/2` at every step, just like a
 [[geometric|arithmetic|Fibonacci]] sequence.
 
 ---
@@ -164,7 +163,7 @@ As you can see, we’re multiplying by `$1/2` at every step, just like a
 
 Using exponents, we can write down an equation for the amount left after `t` years:
 
-{.text-center} `$"amount" = 1200 × (1/2)^(t/6000)`
+{.text-center} `§"amount" = 1200 × (1/2)^(t/6000)`
 
 [Continue](btn:next)
 
@@ -224,14 +223,14 @@ archaeologists decided to cut a tiny sample out of the mummy’s skin. Using a
 complex machine called a __mass spectrometer__, they were able to “count” the
 number of <sup>12</sup>C and <sup>14</sup>C atoms in the sample.
 
-In our example, they found 800 Carbon-14 atoms. Given the ratios of
+In our example, they found 800 carbon-14 atoms. Given the ratios of
 <sup>12</sup>C and <sup>14</sup>C atoms, they also estimate that the same
 sample should have contained 1200 <sup>14</sup>C atoms when the Pharaoh was
 still alive.
 
 ::: column(width=320)
 
-    x-media(src="images/spectrometer.jpg" lightbox width=320 height=280)
+    x-img(src="images/spectrometer.jpg" alt="Accelerator Mass Spectrometer" lightbox width=320 height=280)
 
 {.caption} Accelerator Mass Spectrometer in the Oxford Radiocarbon Accelerator Unit
 
@@ -245,8 +244,6 @@ Pharaoh died|age of the Pharaoh when he died]].
 > id: carbon-solver
 
 We can use the equation we found above and fill in the required parameters:
-
-    // ALGEBRA: mimic this.
 
 ::: x-algebra-flow
 
@@ -274,7 +271,7 @@ We can use the equation we found above and fill in the required parameters:
 
 ::: column(width=280)
 
-    x-media(src="images/mummy.jpg" lightbox width=280 height=170)
+    x-img(src="images/mummy.jpg" alt="Egyptian Mummy" lightbox width=280 height=170)
 
 ::: column.grow
 
@@ -292,15 +289,15 @@ Geologists and biologists can use the same method to determine the age of
 fossils. This helps them understand when certain layers of rock in our Earth’s
 crust formed, or the evolutionary ancestry between extinct animals.
 
-Carbon Dating was developed in the late 1940s at the University of Chicago, by
+Carbon dating was developed in the late 1940s at the University of Chicago, by
 Willard Libby, who received the Nobel Prize in Chemistry for his work in 1960.
 It has become an indispensable method in many areas of science.
 
-    figure: x-media(src="images/dinosaur.jpg" width=760, height=360)
+    figure: x-img(src="images/dinosaur.jpg" alt="Fossil" width=760, height=360)
 
-Note that we have greatly simplified the process of Carbon Dating in this
+Note that we have greatly simplified the process of carbon dating in this
 chapter. There are many other things to consider, such as sample contamination,
-or how the concentration of Carbon-14 in our atmosphere has changed over time.
+or how the concentration of carbon-14 in our atmosphere has changed over time.
 
 ---
 

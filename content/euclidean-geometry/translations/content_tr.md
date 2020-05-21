@@ -12,7 +12,7 @@ Matematik binlerce yıldır mevsim değişikliklerini öngörmek, vergileri hesa
 MÖ 500 yıllarında antik yunanlı matematikçiler, matematiksel örüntüleri çok etkileyici bulmuşlardı ve bunları araştırıp açıklamak istiyorlardı. Tarihte ilk defa, özel bir amaca yönelik değil de, sadece ‘keyif’ için matematik çalışmaya başladılar.
 ::: column(width=300)
 
-    x-media(src="images/tablet.jpg" width=300 height=210)
+    x-img(src="images/tablet.jpg" width=300 height=210)
 
 {.caption} MÖ 1800 tarihli, geometrik hesaplar içeren bir Babil kil tableti.
 :::
@@ -43,7 +43,7 @@ _{span.reveal(when="blank-0")} Demek ki bunlar
 Tales için bu çok etkileyici bir sonuçtu. Neticede _yarıçemberler_ ve _dik üçgenler_, iki tamamen farklı şekil, neden böylesine temel bir biçimde ilişkili olsunlar ki? Bu keşiften o kadar etkilenmişti ki, bir efsaneye göre, tanrılara şükretmek için koca bir öküzü adak olarak sunmuş.
 
     figure
-      x-media(src="images/temple.svg" width=400 height=170)
+      x-img(src="images/temple.svg" width=400 height=170)
 
 Ancak Tales için, sadece böyle bir ilişkiyi _gözlemlemek_ yeterli değilmiş. Bunun _neden_ doğru olduğunu ve sadece denediği örneklerdeki bir tesadüf değil, _her zaman_ doğru olduğunu göstermek istemiş.
 
@@ -56,32 +56,32 @@ Fakat geometri sadece teoremleri kanıtlamaya yaramaz. Geometri doğadadır, mim
 
 ::: column(width=200)
 
-    x-media(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
+    x-img(src="images/pyramids.jpg" credit="© Ricardo Liberato" width=200 height=200)
 
 {.caption} Geometri sayesinde Mısırlılar devasa, muhteşem düzgünlükte piramitler inşa etmeyi başardılar.
 ::: column(width=200)
 
-    x-media(src="images/sextant.jpg" width=200 height=200)
+    x-img(src="images/sextant.jpg" width=200 height=200)
 
 {.caption} Denizciler, güneş ve diğer yıldızlar arasındaki açılardan faydalanıp sekstant aracılığıyla denizdeki konumlarını bulurlar.
 ::: column(width=200)
 
-    x-media(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
+    x-img(src="images/video-game.jpg" credit="© Eric Lascoña" width=200 height=200)
 
 {.caption} Gerçekçi video ya da film grafikleri üretmek için geometri şarttır.
 ::: column(width=200)
 
-    x-media(src="images/plane.jpg" width=200 height=200)
+    x-img(src="images/plane.jpg" width=200 height=200)
 
 {.caption} Geometri sayesinde daha güvenli ve verimli yeni uçak modelleri tasarlayıp test edebiliriz.
 ::: column(width=200)
 
-    x-media(src="images/cctv.jpg" lightbox width=200 height=200)
+    x-img(src="images/cctv.jpg" lightbox width=200 height=200)
 
 {.caption} Beijing’deki bu gökdeleni tasarlarken ve devrilmemesini sağlarken geometrinin anahtar bir rolü vardı.
 ::: column(width=200)
 
-    x-media(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
+    x-img(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
 {.caption} Geometri sayesinde yıldızların, gezegenlerin ve Dünya’nın yörüngesindeki uyduların gelecekteki konumlarını hesaplarız.
 :::
@@ -397,7 +397,7 @@ Bu aksiyomların her biri oldukça açık ve aşikar ancak birlikte geometrinin 
 
 ::: column(width=220)
 
-    x-media(src="images/elements.jpg" width=220 height=330 lightbox)
+    x-img(src="images/elements.jpg" width=220 height=330 lightbox)
 
 :::
 
@@ -425,11 +425,11 @@ Ancak, Tales ya da Öklid’in yaşadığı zamanlarda  bugün olduğu gibi evre
 
 Uzun mesafeleri ölçebilmek için mimarlar  ya da araştırmacılar düğümlenmiş ipleri kullanıyorlardı. Düğümlenmiş ipler eşit aralıklarla düğümlenmiş ip parçalarından oluşuyordu. Ama bu yöntem de yeterince kesin sonuçlar vermiyordu. Farklı ipler farklı yerlerden düğümlenebiliyordu.
 
-    figure: x-media(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
+    figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
 ::: column(width=200)
 
-    x-media(src="images/units.png" width=200 height=336)
+    x-img(src="images/units.png" width=200 height=336)
 
 :::
 
@@ -482,7 +482,7 @@ Bu aletler ne kadar ilkel görünseler de bunlarla çok fazla sayıda şekil çi
 
 ::: column(width=340)
 
-    x-media(src="images/archimedes.jpg" width=340 height=265)
+    x-img(src="images/archimedes.jpg" width=340 height=265)
 
 {.caption} [Arşimet](bio:archimedes) Romalı istilacılar tarafından öldürülmeden hemen önce geometri çalışıyordu. Son sözü “çemberlerimi bozmayın” olmuştur. 
 :::
@@ -544,7 +544,7 @@ Efsaneye göre bir zamanlar bir Antik Yunan şehri olan Dilos, korkunç bir hast
 
 ::: column(width=300)
 
-    x-media(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
+    x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
     
 {.caption} Delfi’deki tapınağın bir modeli
 :::
@@ -611,17 +611,17 @@ Geometrik şekilleri inşa etmenin tek yolu cetvel ve pergel çizimleri değildi
 _Origami_ (折り紙) kelimesi, Japonca _oru_(katlamak) ve _kami_(kağıt) kelimelerinden gelir. Amacı yapıştırıcı ya da makas gibi araçları kullanmadan, bir ya da daha fazla kağıt parçasından nesneler yapmak. Harikulade ve etkileyici tasarımlar yapabilirsiniz, bu şekillerin hepsi sadece dikdörtgen şeklinde kağıtlardan yapılmıştır:
 
 ::: column(width=186)
-    x-media(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-1.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
+    x-img(src="images/origami/origami-2.jpg" lightbox credit="© Dirk Eisner, Thomas Hull" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
+    x-img(src="images/origami/origami-3.jpg" lightbox credit="© ServeSmasher (Flickr)" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
+    x-img(src="images/origami/origami-4.jpg" lightbox credit="© Dirk Eisner" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
+    x-img(src="images/origami/origami-5.jpg" lightbox credit="© Meenakshi Mukerji" width=186 height=200)
 ::: column(width=186)
-    x-media(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
+    x-img(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
 :::
 
 ---
@@ -661,7 +661,7 @@ Böyle şekilleri yapmak çok vakit alabilir ve son derece hassas çalışmayı 
 
 Bu _turna_ en eski ve en ünlü Origami modellerinden biridir. Deneyebileceğiniz daha pek çok [Orgiami modellerimiz](/origami) var.
 
-    figure: x-media(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
+    figure: x-img(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
@@ -717,7 +717,7 @@ Sonuç olarak bu aksiyomların, Öklid aksiyomlarından bile daha güçlü oldu�
 Sadece kağıdı katlayarak bir açıyı üçe bölebilir ve bir kübün iki katını yapabilirsiniz!
 Elbette ki _eğri_ bir çizgi çizmek imkansızdır, ve origami ile bir çemberin alanına sahip kare elde edemeyiz.
 
-    figure: x-media(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
+    figure: x-img(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
 ---
 > id: origami-applications
@@ -767,7 +767,7 @@ Origami teknikleri sayesinde güneş panelleri, uydu uzaya ulaştığı zaman ka
 
 ::: column(width=300)
 
-    x-media(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
+    x-img(src="images/bridge.jpg" width=300 height=225 credit="© Hiroshima University")
 
 ::: column.grow
 
@@ -833,7 +833,7 @@ Bu fotoğrafta bir __kulağa kaçan__’ın dahice bir örüntü ile katlanabile
 
 ::: column(width=300)
 
-    x-media(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-img(src="images/wing.jpg" width=300 height=170 credit="© ETH Zürich")
 
 ::: column(width=300)
 

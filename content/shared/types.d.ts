@@ -617,3 +617,46 @@ export class Course extends CustomElementView {
   saveProgress(data: Obj<any>): void;
   log(category: string, action: string, value?: string): void;
 }
+
+export abstract class Tile {
+    readonly $parent: Polypad;
+    readonly type: string;
+    readonly usePosnAsRotationCenter: boolean;
+    options?: string;
+    $el: SVGView;
+    isActive: boolean;
+    colour: string;
+    posn: Point;
+    rot: number;
+    protected path: Polygon | Rectangle;
+    protected $body: SVGView;
+    protected anchor: Point;
+    protected vertices: never[];
+    protected radius: number;
+    constructor($parent: Polypad);
+    setPosition(posn: Point, snap?: boolean): Point;
+    setRotation(rot: number): void;
+    setColour(colour: string): void;
+    transform(): void;
+    static makeThumbnail(options: string, element: ElementView): void;
+    get outline(): Polygon;
+    get points(): Point[];
+    delete(): void;
+    copy(dx?: number, dy?: number): any;
+    static action(name: string, selectedTiles: Tile[]): void;
+}
+export class Polypad extends CustomElementView {
+    tiles: Set<Tile>;
+    $svg: SVGParentView;
+    $tiles: ElementView;
+    $activeTiles: ElementView;
+    $selection: SVGView;
+    $strokes: ElementView;
+    $grid: ElementView;
+    ready(): void;
+    selectRect(start: Point, end: Point): void;
+    snap(...points: Point[]): Point | undefined;
+    bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView): void;
+    setColour(c?: string): void;
+    clear(): void;
+}

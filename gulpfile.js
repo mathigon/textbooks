@@ -18,10 +18,8 @@ const tsconfig = require('./tsconfig.json');
 const rtl = require('postcss-rtl');
 
 const LANGUAGES = ['en',  'ar', 'cn', 'de', 'es', 'fr', 'hi', 'it', 'ja', 'pt',
-  'ru', 'sv', 'tr', 'vi', 'fa', 'mr'];
+  'ru', 'sv', 'tr', 'vi', 'fa', 'mr', 'ro', 'hr'];
 const CACHE = __dirname + '/content/.cache.json';
-
-const connect = require('gulp-connect');
 
 
 function markdown() {
@@ -33,7 +31,7 @@ function markdown() {
 function scripts() {
   return gulp.src(['content/*/*.ts', '!content/shared/**'])
       .pipe(rollup({
-        plugins: [typescript(tsconfig.compilerOptions), resolve()],
+        plugins: [resolve(), typescript(tsconfig.compilerOptions)],
         onwarn(e) {
           if (e.code !== 'CIRCULAR_DEPENDENCY') console.warn(e.message);
         }
@@ -49,15 +47,6 @@ function stylesheets() {
       .pipe(rename({extname: '.css'}))
       .pipe(gulp.dest('server/assets/resources'));
 }
-
-gulp.task('serveprod', function() {
-  connect.server({
-    root: ['.'],
-    port: process.env.PORT || 5000, // localhost:5000
-    livereload: false
-  })
-
-});
 
 exports.watch = () => {
   gulp.watch('content/**/*.{md,yaml}', markdown);

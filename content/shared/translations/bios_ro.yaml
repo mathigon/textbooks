@@ -1,0 +1,283 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+apollonius:
+  name: Apollonius
+  born: -262  # ???
+  died: -190  # ???
+  bio: __Apollonius din Perga__ (c. 200 î.Hr.) a fost un matematician și astronom grec
+    cunoscut pentru lucrările sale asupra celor patru _secțiuni conice_.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+      
+archimedes:
+  name: Arhimede
+  born: -287
+  died: -212
+  bio: |
+    __Arhimede__ (c. 287 – c. 212 î.Hr.) a fost un om de știință și inginer din Grecia Antică, precum și cel mai mare matematician din toate timpurile. El a descoperit multe concepte de calcul și a lucrat în geometrie, analiză și mecanică.
+
+    Arhimede a descoperit în timp ce făcea baie o metodă de a calcula voumul obiectelor
+    de formă neregulată folosind cantitatea de apă dislocată la scufundare. El a fost atât
+    de entuziasmat de descoperirea lui încât a ieșit în fugă pe stradă, dezbrăcat, strigând
+    _“Eureka!”_ (_“Am descoperit!”_ în limba greacă).
+
+    Ca iniginer, el a construit mașinării ingenioase de apărare în timpul asediului orașului
+    Siracuza din Sicilia în care locuia. După doi ani romanii au reușit până la urmă să intre
+    și Arhimede a fost omorât. Ultimele sale cuvinte au fost _“Nu îmi deranjați cercurile”_ – pe care le studia în acel moment.
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+      
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598 – 1647) a fost un matematician și călugăr italian. 
+    El a dezvoltat precursorul calculului infinitezimal și a rămas cunoscut pentru 
+    principiul lui Cavalieri cu ajutorul căruia se calculează volumul corpurilor geometrice.
+
+    Cavalieri a lucrat și în optică și mecanică, a introdus logaritmii în Italia și 
+    a corespondat în scris cu Galileo Galilei.
+  links:
+    - title: Principiul lui Cavalieri
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+      
+eratosthenes:
+  name: Eratostene
+  born: -276
+  died: -195
+  bio: __Eratostene din Cyrene__ (c. 276 î.Hr. – 195 î.Hr.) a fost un matematician, geograf,
+    astronom, istoric și poet grec. El și-a petrecut o mare parte din viața sa în Egipt ca
+    șef al bibliotecii din Alexandria.
+
+    Printre multele sale realizări, Eratostene a calculat circumferința Pământului, a măsurat înclinarea
+    axei de rotație a Pământului, a estimat distanța până la Soare și a creat primele hărți ale lumii.
+    
+    De asemenea, el a inventat “Ciurul lui Eratostene”, o metodă eficientă de calculare a _numerelor prime_.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility/primes#eratosthenes
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __Euclid din Alexandria__ (în jurul 300 î.Hr.) a fost un matematician grec adesea numit
+    _părintele geometriei_. El a publicat o carte cu titlul _Elemente_ care a introdus pentru prima dată
+    geometria euclidiană și care conținea mult demonstrații importante din geometrie și teoria numerelor.
+    Această carte a fost manual principal de matematică până in secolul al 19lea. El a predat matematica
+    în Alexandria, dar altfel se cunosc foarte puține detalii despre viața sa.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility/primes#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707 – 1783) a fost unul dintre cei mai mari matematicieni din istorie. 
+    Munca sa acoperă toate ramurile matematicii și el a scris 80 de volume de cercetare.
+
+    Euler s-a născut în Elveția și a studiat la Basel, dar a trăit marea parte a vieții sale
+    în Berlin, Prusia și în St. Petersburg, Rusia.
+
+    Euler a inventat o mare parte din terminologia și notațiile matematicii moderne și a făcut 
+    descoperiri importante în analiză, teoria grafurilor, fizică, astronomie și în multe alte subiecte.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+    
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Friedrich Gauss__ (1777 – 1855) a fost probabil cel mai mare matematician din istorie. 
+    El a făcut descoperiri inovatoare în aproape toate domeniile matematicii, de la algebră și 
+    teoria numerelor până la statistici, analiză matematică, geometrie, geologie și astronomie.
+    
+    Conform legendei, el a corectat o greșeală din calculele de contabilitate ale tatălui său 
+    la vâsta de 3 ani și a descoperit o metodă de a aduna rapid toate numerele întregi 
+    de la 1 la 100 la vârsta de 8 ani. Primele sale descoperiri importante au fost făcute 
+    pe când era adolescent, iar mai târziu a îndrumat ca profesor mulți matematicieni faimoși.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility/the-distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+      
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: __Christian Goldbach__ (1690 – 1764) a fost un matematician prusac contemporan cu
+    Euler, Leibniz și Bernoulli. El a fost educatorul țarului rus Pentru al II-lea și
+    este a rămas cunoscut pentru conjectura sa - “Conjectura Goldbach“.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      
+hilbert:
+  name: Hilbert
+  born: 1862
+  died: 1943
+  bio: |
+    __David Hilbert__ (1862 – 1943) a fost unul dintre cei mai influenți matematicieni
+    ai secolului 20. El a lucrat în aproape fiecre arie a matematicii fiind interesat, 
+    în mod special, de construirea unei fundații formale și logice pentru matematică.
+
+    Hilbert a profesat in Göttingen (Germany), unde a îndrumat numeroși studenți care mai târziu 
+    au devenit matematicieni faimoși. Pe parcurul Congresului Internațional de Matematică din 1900, 
+    el a prezenta o listă de 23 de probleme nerezolvate. Acestea au stabilit terenul 
+    pentru cercetarile viitoare - și patru dintre ele sunt și azi nerezolvate!
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+      
+jefferson:
+  name: Jefferson
+  bio: |
+    __Thomas Jefferson__ (1743 – 1826) a fost unul dintre părinții fondatori ai Statelor Unite,
+    al treilea președinte al Statelor Unite și principalul autor al Declarației de Independență.
+
+    Pe lânga contribuțiile sale în politică, el a studiat matematica, horticultura, mecanica și
+    a lucrat ca arhitect. După ce s-a retras din funcția publică, Jefferson a înființat
+    Universitatea din Virginia.
+
+kepler:
+  name: Kepler
+  born: 1571
+  died: 1630
+  bio: __Johannes Kepler__ (1571 – 1630) a fost un astronom și matematician german. 
+    El a fost _matematicianul imperial_ în Praga și este cel mai cunoscut pentru cele 
+    trei _legi ale mișcării planetelor_. Kepler a lucrat și în optică și a inventat 
+    un telescop îmbunătățit pentru observațiile sale.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+leibniz:
+  name: Leibniz
+  born: 1646
+  died: 1716
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646 – 1716) a fost un matematician și filosof
+    german. Printre multele sale reușite, el a fost unul din inventatorii analizei matematice 
+    și a creat unele din primele calculatoare mecanice.
+    
+    Leibniz credea că universul nostru este “cel mai bun univers posibil” pe care
+    Dumnezeu ar fi putut să-l creeze și în care să ne permită sa avem liberul arbitru.
+    El a fost un adept important al _raționalismului_, și a adus contribuții în fizică,
+    medicină, lingvistică, drept, istorie și multe alte domenii.
+    
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642 – 1726) a fost un fizician, matematician și astronom englez.
+    El a fost unul dintre cei mai influenți oameni de știință din toate timpurile. A fost
+    profesor la Universitatea Cambridge și președinte al Societații Regale din Londra.
+
+    Newton a formulat în cartea sa _Principia Mathematica_ legile mișcării și gravitației,
+    legi care au pus bazele fizicii clasice și au dominat viziunea noastra asupra universului
+    timp de trei secole.
+
+    Printre multe altele, Newton a fost unul din inventatorii analizei matematice,
+    a construit primul telescop reflector, a calculat viteza sunetului, a studiat mișcarea fluidelor
+    și a dezvoltat o teorie a culorilor pe baza modului în care o prismă descompune lumina solară
+    în spectrul ei, conținând culorile curcubeului.
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: __Amalie Emmy Noether__ (1882 – 1935) a fost o matematiciană germană care a realizat
+    descoperiri importante în algebra abstractă și în fizica teoretică, inclusiv legătura
+    dintre simetrie și legile conservării. Ea este adesea descrisă drept una din cele mai
+    influente matematiciene.    
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
+pythagoras:
+  name: Pitagora
+  born: -570
+  died: -495
+  bio: |
+    __Pitagora din Samos__ (c. 570 – 495 î.Hr) a fost un filosof și matematician grec.
+    El este foarte cunoscut pentru demonstrarea _teoremei lui Pitagora_, dar a realizat
+    multe alte descoperiri matematice și științifice.
+
+    Pitagora a încercat să explice muzica într-un mod matematic și a descoperit că
+    două tonuri sună “frumos” împreună (consonante) dacă raportul frecvențelor lor 
+    este o fracție simplă.
+
+    De asemenea, el a fondat o școală în Italia în care impreună cu studenții sai
+    au venerat matematica aproape asemenei unei religii, în timp ce urmau o serie
+    de reguli bizare - până la urmă școala a fost arsă de adversarii lor.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: __Bernhard Riemann__ (1826 – 1866) a fost un matematician german ce a lucratwas
+    în domeniul analizei matematice și al teoriei numerelor. El a formulat prima definiție
+    riguroasă a operației de integrare matematică, a studiat geometria diferențială ce a pus
+    bazele relativității generale și a făcut descoperiri inovatoare cu privire la 
+    distribuția numerelor prime.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/the-distribution-of-primes#riemann
+      
+sikdar:
+  name: Sikdar
+  bio: __Radhanath Sikdar__ (1813 – 1870) a fost un matematician indian. El a fost primul
+    care a măsurat înălțimea muntelui Everest și care a arătat că este cel mai înalt munte
+    de pe Pământ.
+    
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Thales din Milet__ (c. 624 – 546 î.Hr.) a fost un matematician și filosof grec.
+
+    El este considerat de multe ori drept unul dintre primii oameni de știință din civilizația occidentală:
+    el a încercat să explice fenomenele naturale folosind o abordare științifică în loc de a folosi religia sau mitologia.
+    De aemenea, el este unul dintre primii oameni din istorie a cărui descoperire matematică îi poartă numele: teorema lui Thales.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
+      
+ulam:
+  name: Ulam
+  bio: __Stanisław Ulam__ (1909 – 1984) a fost un matematician polonezo-american. El a avut 
+    un rol important în _proiectul american Manhattan_ de dezvoltare a primelor arme nucleare. 
+    De asemenea, el a lucrat și la propulsia rachetelor cu impulsuri nucleare și a dezvoltat 
+    metoda _Monte Carlo_ – un concept important din statistică.

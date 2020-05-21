@@ -263,7 +263,7 @@ export class Wallpaper extends CustomElementView {
     this.$('.save')!.on('click', e => e.target.href = $canvas.pngImage);
 
     slide($canvas, {
-      start: p => drawPoint(context, activeGroup, p),
+      down: p => drawPoint(context, activeGroup, p),
       move(p, _, last) {
         const l = new Line(last, p);
         const n = l.length / 8;
