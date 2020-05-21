@@ -13,9 +13,7 @@ const express = require('express');
 // -----------------------------------------------------------------------------
 // Course Class
 
-// UNIT: ensure new unit has been added to resources folder
 const COURSE_PATH = path.join(__dirname, 'assets/resources/');
-// UNIT: add new unit into curriculum.yaml file
 const CURRICULUM = yaml.load(path.join(__dirname, `../curriculum.yaml`));
 
 class Course {
@@ -53,10 +51,8 @@ class Course {
 }
 
 function getCourse(courseId, locale='en') {
-  // UNIT: file = 'assets/resources/:courseId/data_en.json'
   const file = path.join(COURSE_PATH, courseId, `data_${locale}.json`);
   if (!fs.existsSync(file)) return;
-  // UNIT: parse... JSON data???
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
   return new Course(courseId, data, locale);
 }

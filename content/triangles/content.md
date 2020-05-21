@@ -941,7 +941,6 @@ see that
       .label.var(style="left: ${110 + e.x/2}px; top: ${130 - e.x/2}px;") b²
 
     x-slider(steps=100)
-      // HAMMING: mimic? or just animate a different way?
 
 :::
 ::: tab.proof-2
