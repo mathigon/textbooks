@@ -666,25 +666,28 @@ fourier:
 fuller:
   name: Fuller
   bio: |
-    __Richard Buckminster "Bucky" Fuller__ (1895 – 1983) war ein amerikanischer Architekt, Designer
-    und Erfinder. He is famous for constructing _geodesic dome_ – large, spherical structures.
-    Similar looking Carbon molecules, the _fullerenes_, were later named after him.
+    __Richard Buckminster "Bucky" Fuller__ (1895 - 1983) war ein amerikanischer Architekt, Designer
+    und Erfinder. Er ist berühmt für den Bau von _geodätischen Kuppeln_ - großen, kugelförmigen
+    Strukturen. Ähnlich aussehende Kohlenstoffmoleküle, die _Fullerene_, wurden später nach ihm
+    benannt.
 
 galileo:
   born: 1564
   died: 1642
   name: Galileo
   bio: |
-    __Galileo Galilei__ (1564 – 1642) was an Italian astronomer, physicist and engineer. He used one
-    of the first telescopes to make observations of the night sky, where he discovered the four
-    largest moons of Jupiter, the phases of Venus, sunspots, and much more.
+    __Galileo Galilei__ (1564 - 1642) war ein italienischer Astronom, Physiker und Ingenieur. Er
+    benutzte eines der ersten Teleskope, um den Nachthimmel zu beobachten, wo er die vier größten
+    Monde des Jupiter, die Phasen der Venus, Sonnenflecken und vieles mehr entdeckte.
 
-    Galileo, sometimes called the “father of modern science”, also studied the motion of objects in
-    free fall, kinematics, material science, and invented the thermoscope (an early thermometer).
+    Galileo, manchmal auch als „Vater der modernen Wissenschaft“ bezeichnet, untersuchte auch die
+    Bewegung von Objekten im freien Fall, in der Kinematik und in den Materialwissenschaften und
+    erfand das Thermoskop (ein frühes Thermometer).
 
-    He was a vocal proponent of _Heliocentrism_, the idea that the Sun was at the centre of our
-    solar system. This eventually led to him being tried by the Catholic Inquisition: Galileo was
-    forced to recant and spent the rest of his life under house arrest.
+    Er war ein Befürworter des _Heliozentrismus_, der Idee, dass die Sonne im Zentrum unseres
+    Sonnensystems steht. Dies führte schließlich dazu, dass er von der katholischen Inquisition vor
+    Gericht gestellt wurde: Galileo musste widerrufen und verbrachte den Rest seines Lebens unter
+    Hausarrest.
 
 galois:
   born: 1811
@@ -692,20 +695,22 @@ galois:
   name: Galois
   overflow: true
   bio: |
-    The French mathematician __Évariste Galois__ (1811 – 1832) had a short and tragic life, yet he
-    invented two entirely new fields of mathematics: _Group theory_ and _Galois theory_.
+    Der französische Mathematiker __Évariste Galois__ (1811 - 1832) hatte ein kurzes und tragisches
+    Leben, erfand jedoch zwei völlig neue Bereiche der Mathematik: _Gruppentheorie_ und
+    _Galois-Theorie_ .
 
-    While still in his teens, Galois proved that there is no general solution for polynomial
-    equations of degree five or higher – simultaneously with Niels Abel.
+    Bereits als Teenager hat Galois bewiesen, dass es keine allgemeine Lösung für Polynomgleichungen
+    vom Grad fünf oder höher gibt - gleichzeitig mit Niels Abel.
 
-    Unfortunately, other mathematicians who he shared these discoveries with repeatedly misplaced or
-    simply returned his work, and he failed his school and university exams while concentrating on
-    much more complex work.
+    Leider haben andere Mathematiker, mit denen er diese Entdeckungen geteilt hat, seine Arbeit
+    wiederholt verlegt oder einfach zurückgegeben, und er hat seine Schul- und Universitätsprüfungen
+    nicht bestanden, während er sich auf viel komplexere Arbeiten konzentrierte.
 
-    At the age of 21, Galois was shot in a duel (some say a feud over a woman), and later died of
-    his wounds. In the night before his death, he summarised his mathematical discoveries in a
-    letter to a friend. It would take other mathematicians many years to fully realise the true
-    impact of his work.
+    Im Alter von 21 Jahren wurde Galois in einem Duell erschossen (manche sagen eine Fehde um eine
+    Frau) und starb später an seinen Wunden. In der Nacht vor seinem Tod fasste er seine
+    mathematischen Entdeckungen in einem Brief an einen Freund zusammen. Es würde viele Jahre
+    dauern, bis andere Mathematiker die wahren Auswirkungen seiner Arbeit vollständig erkannt
+    hätten.
   links:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
@@ -742,9 +747,10 @@ germain:
     erheblichen Widerständen konfrontiert. Ihre Eltern versuchten, sie daran zu hindern, zu
     studieren, als sie jung war, und sie erhielt nie eine Stelle an einer Universität.
 
-    Germain was a pioneer in understanding the mathematics of elastic surfaces, for which she won
-    the grand prize from the Paris Academy of Sciences. She also made considerable progress in
-    solving Fermat’s Last Theorem, and regularly corresponded with Carl Friedrich Gauss.
+    Germain war eine Pionierin im Verständnis der Mathematik elastischer Oberflächen, für die sie
+    den Hauptpreis der Pariser Akademie der Wissenschaften gewann. Sie machte auch beträchtliche
+    Fortschritte bei der Lösung von Fermats letztem Satz und korrespondierte regelmäßig mit Carl
+    Friedrich Gauss.
 
 godel:
   born: 1906
@@ -752,16 +758,18 @@ godel:
   name: Gödel
   small: true
   bio: |
-    __Kurt Gödel__ (1906 – 1978) was an Austrian mathematician who later immigrated to America, and
-    is considered one of the greatest logicians in history.
+    __Kurt Gödel__ (1906 - 1978) war ein österreichischer Mathematiker, der später nach Amerika
+    einwanderte und als einer der größten Logiker der Geschichte gilt.
 
-    At the age of 25, just after finishing his doctorate in Vienna, he published his two
-    _incompleteness theorems_. These state that any (consistent and sufficiently powerful)
-    mathematical system contains certain statements that are true but cannot be proven. In other
-    words, mathematics contains certain problems that are impossible to solve.
+    Im Alter von 25 Jahren, kurz nach seiner Promotion in Wien, veröffentlichte er seine beiden
+    _Unvollständigkeitssätze_. Diese besagen, dass jedes (konsistente und ausreichend
+    leistungsfähige) mathematische System bestimmte Aussagen enthält, die wahr sind, aber nicht
+    bewiesen werden können. Mit anderen Worten, die Mathematik enthält bestimmte Probleme, die nicht
+    zu lösen sind.
 
-    This result had a profound impact on the development and philosophy of mathematics. Gödel also
-    found an example of these “impossible theorems”: the _continuum hypothesis_.
+    Dieses Ergebnis hatte tiefgreifende Auswirkungen auf die Entwicklung und Philosophie der
+    Mathematik. Gödel fand auch ein Beispiel für diese „unmöglichen Theoreme“: die
+    _Kontinuumshypothese_.
   links:
     - title: Unprovable Theorems
       url: /world/Axioms_and_Proof
@@ -786,32 +794,32 @@ grothendieck:
   name: Grothendieck
   small: true
   bio: |
-    Der französische Mathematiker __Alexander Grothendieck__ (1928 – 2014) war eine der
-    Schlüsselpersonen bei der Entwicklung der _algebraischen Geometrie_. He extended the scope of
-    the field to apply to many new problems in mathematics, including, eventually, Fermat’s last
-    theorem. In 1966, he was awarded the Fields medal.
+    Der französische Mathematiker __Alexander Grothendieck__ (1928 - 2014) war eine der
+    Schlüsselfiguren bei der Entwicklung der _algebraischen Geometrie_. Er erweiterte den
+    Anwendungsbereich des Feldes auf viele neue Probleme in der Mathematik, einschließlich
+    schließlich Fermats letztem Satz. 1966 wurde er mit der Fields-Medaille ausgezeichnet.
 
 guthrie:
   name: Guthrie
   bio: |
-    __Francis Guthrie__ (1831 – 1899) was a South African botanist and mathematician, who first
-    stated the Four Colour Problem in 1852. He was a student of Augustus De Morgan, one of the
-    greatest British mathematicians. In addition to being a mathematics professor and teacher,
-    Guthrie worked as a lawyer and did research in solar power and aeronautics.
+    __Francis Guthrie__ (1831 - 1899) war ein südafrikanischer Botaniker und Mathematiker, der 1852
+    erstmals das Vierfarbenproblem darlegte. Er war Schüler von Augustus De Morgan, einem der
+    größten britischen Mathematiker. Guthrie war nicht nur Mathematikprofessor und Lehrer, sondern
+    auch als Anwalt tätig und forschte in den Bereichen Solarenergie und Luftfahrt.
 
 haken:
   name: Haken
   bio: |
-    __Wolfgang Haken__ (born 1928) is a German mathematician, known for his proof the _Four Colour
-    Theorem_ with Kenneth Appel. In recognition, he and Appell received the Fulkerson Prize of the
-    American Mathematical Society. In 1990, Haken became a member of the Center for Advanced Study
-    at the University of Illinois, where he is now an Emeritus Professor.
+    __Wolfgang Haken__ (* 1928) ist ein deutscher Mathematiker, der für seinen Beweis des
+    _Vierfarbensatzes_ mit Kenneth Appel bekannt ist. Als Anerkennung erhielten er und Appell den
+    Fulkerson-Preis der American Mathematical Society. 1990 wurde Haken Mitglied des Center for
+    Advanced Study an der University of Illinois, wo er heute emeritierter Professor ist.
 
 halley:
   name: Halley
   bio: |
-    __Edmond Halley__ (1656 – 1742) was an English mathematician and physicist, and the second
-    _Astronomer Royal_. He calculated the orbit of Halley’s Comet, which is named after him.
+    __Edmond Halley__ (1656 - 1742) war ein englischer Mathematiker und Physiker und der zweite
+    _Astronomer Royal_. Er berechnete die Umlaufbahn von Halleys Kometen, der nach ihm benannt ist.
 
 hamilton:
   born: 1805
@@ -819,15 +827,15 @@ hamilton:
   name: Hamilton
   small: true
   bio: |
-    __William Rowan Hamilton__ (1805 – 1865) was an Irish mathematician and child prodigy. He
-    invented _quaternions_, the first example of a “non-commutative algebra”, which has important
-    applications in mathematics, physics and computer science.
+    __William Rowan Hamilton__ (1805 - 1865) war ein irischer Mathematiker und Wunderkind. Er erfand
+    _Quaternionen_, das erste Beispiel einer „nicht kommutativen Algebra“, die wichtige Anwendungen
+    in Mathematik, Physik und Informatik hat.
 
-    He first came up with the idea while walking along the Royal Canal in Dublin, and carved the
-    fundamental formula into a stone bridge he passed: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
+    Er kam zuerst auf die Idee, als er den Royal Canal in Dublin entlang ging, und schnitzte die
+    Grundformel in eine Steinbrücke, an der er vorbeikam: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
 
-    Hamilton also made significant contributions to physics, including optics and Newtonian
-    mechanics.
+    Hamilton leistete auch bedeutende Beiträge zur Physik, einschließlich der Optik und der
+    Newtonschen Mechanik.
 
 hardy:
   born: 1877
@@ -835,31 +843,31 @@ hardy:
   name: Hardy
   small: true
   bio: |
-    __G.H. Hardy__ (1877 – 1947) was a leading English pure mathematician. Together with _John
-    Littlewood_, he made important discoveries in analysis and number theory, including the
-    distribution of prime numbers.
+    __G.H. Hardy__ (1877 - 1947) war ein führender englischer reiner Mathematiker. Zusammen mit
+    _John Littlewood_ machte er wichtige Entdeckungen in der Analyse und Zahlentheorie,
+    einschließlich der Verteilung von Primzahlen.
 
-    In 1913, Hardy received a letter from _Srinivasa Ramanujan_, an unknown, self-taught clerk from
-    India. Hardy immediately recognised his genius, and arranged for Ramanujan to travel to
-    Cambridge where he was working. Together, they made important discoveries and authord numerous
-    paper.
+    1913 erhielt Hardy einen Brief von _Srinivasa Ramanujan_, einem unbekannten autodidaktischen
+    Angestellten aus Indien. Hardy erkannte sofort sein Genie und veranlasste Ramanujan, nach
+    Cambridge zu reisen, wo er arbeitete. Zusammen machten sie wichtige Entdeckungen und verfassten
+    zahlreiche Artikel.
 
-    Hardy always dislkied applied mathematics and expressed this in his personal account of
-    mathematical thinking, the 1940 book _A Mathematician’s Apology_.
+    Hardy lehnte angewandte Mathematik immer ab und drückte dies in seinem persönlichen Bericht über
+    mathematisches Denken aus, dem 1940 erschienenen Buch _A Mathematician’s Apology_.
 
 hilbert:
   name: Hilbert
   born: 1862
   died: 1943
   bio: |
-    __David Hilbert__ (1862 – 1943) was one of the most influential mathematicians of the 20th
-    century. He worked on almost every area of mathematics, and was particularly interested in
-    building a formal, logical foundation for maths.
+    __David Hilbert__ (1862 - 1943) war einer der einflussreichsten Mathematiker des 20.
+    Jahrhunderts. Er arbeitete in fast allen Bereichen der Mathematik und war besonders daran
+    interessiert, eine formale, logische Grundlage für Mathematik zu schaffen.
 
-    Hilbert worked in Göttingen (Germany), where he tutored numerous students who later became
-    famous mathematicians. During the International Congress of Mathematicians in 1900, he presented
-    a list of 23 unsolved problems. These set the course for future research – and four of them are
-    still unsolved today!
+    Hilbert arbeitete in Göttingen (Deutschland), wo er zahlreiche Studenten unterrichtete, die
+    später berühmte Mathematiker wurden. Während des Internationalen Mathematikerkongresses im Jahr
+    1900 präsentierte er eine Liste von 23 ungelösten Problemen. Diese setzen die Weichen für die
+    zukünftige Forschung - und vier davon sind bis heute ungelöst!
   links:
     - title: Hilbert’s Hotel
       url: /world/Infinity
@@ -870,14 +878,14 @@ hypatia:
   name: Hypatia
   overflow: true
   bio: |
-    __Hypatia__ (c. 360 – 415 AD) was a prominent astronomer and mathematician in ancient
-    Alexandria. She was also the first female mathematician whose life and work are reasonably well
-    recorded. She edited or wrote commentaries on many of the scientific books of her time, and
-    constructed astrolabes and hydrometers.
+    __Hypatia__ (ca. 360 - 415 n. Chr.) War ein bekannter Astronom und Mathematiker im alten
+    Alexandria. Sie war auch die erste Mathematikerin, deren Leben und Werk einigermaßen gut
+    dokumentiert sind. Sie redigierte oder schrieb Kommentare zu vielen wissenschaftlichen Büchern
+    ihrer Zeit und konstruierte Astrolabien und Hydrometer.
 
-    She was renowned during her life as a great teacher, and she advised Orestes, the Roman prefect
-    of Alexandria. Orestes’ feud with Cyril, the bishop of Alexandria, led to Hypadia being murdered
-    by a mob of Christians.
+    Sie war während ihres Lebens als großartige Lehrerin bekannt und beriet Orestes, den römischen
+    Präfekten von Alexandria. Orestes 'Fehde mit Cyril, dem Bischof von Alexandria, führte dazu,
+    dass Hypatia von einer Menge Christen ermordet wurde.
 
 jacobi:
   born: 1809
@@ -885,8 +893,9 @@ jacobi:
   name: Jacobi
   small: true
   bio: |
-    __Carl Jacobi__ (1804 – 1851) was a German mathematician. He worked on analysis, differential
-    equations and number theory, and was one of the pioneers in the study of _elliptic functions_.
+    __Carl Jacobi__ (1804 - 1851) war ein deutscher Mathematiker. Er beschäftigte sich mit Analyse,
+    Differentialgleichungen und Zahlentheorie und war einer der Pioniere bei der Untersuchung von
+    _elliptischen Funktionen_.
 
 jefferson:
   name: Jefferson
@@ -904,17 +913,18 @@ jiushao:
   name: Qin Jiushao
   overflow: true
   bio: |
-    __Qin Jiushao__ (秦九韶, um 1202 – 1261) war ein chinesischer Mathematiker, Erfinder und Politiker.
-    In his book _Shùshū Jiǔzhāng_, he published numerous mathematical discoveries, including the
-    important _Chinese remainder theorem_, and wrote about surveying, meteorology and the military.
+    __Qin Jiushao__ (秦九韶, ca. 1202 - 1261) war ein chinesischer Mathematiker, Erfinder und
+    Politiker. In seinem Buch _Shùshū Jiǔzhāng_ veröffentlichte er zahlreiche mathematische
+    Entdeckungen, darunter den wichtigen _chinesischen Restsatz_, und schrieb über Vermessung,
+    Meteorologie und Militär.
 
-    Qin first developed a method for numerically solving polynomial equations, which is now known as
-    _Horner’s method_. He found a formula for the area of a triangle based on the length of its
-    three sides, calculated the sum of arithmetic series, and introduced a symbol for “zero” into
-    Chinese mathematics.
+    Qin entwickelte zunächst eine Methode zur numerischen Lösung von Polynomgleichungen, die jetzt
+    als _Horners Methode_ bekannt ist. Er fand eine Formel für die Fläche eines Dreiecks basierend
+    auf der Länge seiner drei Seiten, berechnete die Summe der arithmetischen Reihen und führte ein
+    Symbol für „Null“ in die chinesische Mathematik ein.
 
-    Qin also invented _Tianchi basins_, which were used to measure rainfall and gather
-    meteorological data important for farming.
+    Qin erfand auch _Tianchi-Becken_, mit denen Niederschläge gemessen und für die Landwirtschaft
+    wichtige meteorologische Daten gesammelt wurden.
 
 johnson:
   born: 1918
@@ -942,9 +952,9 @@ julia:
 karinthy:
   name: Karinthy
   bio: |
-    __Frigyes Karinthy__ (1887 – 1938) was a Hungarian author, poet and journalist. He is best known
-    for the 1929 short story “Chains”, which first introduced the concept of _six degrees of
-    separation_.
+    __Frigyes Karinthy__ (1887 - 1938) war ein ungarischer Autor, Dichter und Journalist. Bekannt
+    wurde er durch die Kurzgeschichte „Chains“ von 1929, in der erstmals das Konzept von _sechs
+    Trennungsgraden_ eingeführt wurde.
 
 kepler:
   name: Kepler
@@ -1047,12 +1057,14 @@ leonardo:
     Anatomie, Astronomie, Botanik und Kartographie. Er wird oft als Paradebeispiel für ein
     "Universalgenie" angesehen und war eines der vielfältigsten Talente, die je gelebt haben.
 
-    Leonardo was born in Vinci, educated in Florence, and worked in Milan, Rome, Bologna, and
-    Venice. Only 15 of his paintings have survived, but among them are some of the best known and
-    most reproduced works in the world, including the _Mona Lisa_ and _The Last Supper_.
+    Leonardo wurde in Vinci geboren, in Florenz ausgebildet und arbeitete in Mailand, Rom, Bologna
+    und Venedig. Nur 15 seiner Gemälde sind erhalten, aber unter ihnen befinden sich einige der
+    bekanntesten und am meisten reproduzierten Werke der Welt, darunter die _Mona Lisa_ und _Das
+    letzte Abendmahl_.
 
-    His notebooks contain a vast number of drawings, inventions, and scientific diagrams – including
-    the first flying machines and helicopters, hydraulic pumps, bridges, and much more.
+    Seine Notizbücher enthalten eine Vielzahl von Zeichnungen, Erfindungen und wissenschaftlichen
+    Diagrammen - darunter die ersten Flugmaschinen und Hubschrauber, Hydraulikpumpen, Brücken und
+    vieles mehr.
 
 lie:
   born: 1842
@@ -1060,9 +1072,9 @@ lie:
   name: Lie
   small: true
   bio: |
-    The Norwegian mathematician __Marius Sophus Lie__ (1842 – 1899) made significant advances in the
-    study of _continuous transformation groups_ – now called _Lie groups_. He also worked on
-    differential equations and non-Euclidean geometry.
+    Der norwegische Mathematiker __Marius Sophus Lie__ (1842 - 1899) machte bedeutende Fortschritte
+    bei der Untersuchung von _kontinuierlichen Transformationsgruppen_ - jetzt _Lie-Gruppen_
+    genannt. Er arbeitete auch an Differentialgleichungen und nichteuklidischer Geometrie.
 
 lobachevsky:
   born: 1792
@@ -1070,9 +1082,10 @@ lobachevsky:
   name: Lobachevsky
   small: true
   bio: |
-    __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) was a Russian mathematician, and one of the
-    founders of non-Euclidean geometry. He managed to show that you can build up a consistent type
-    of geometry in which Euclid’s fifth axiom (about parallel lines) does not hold.
+    __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) war ein russischer Mathematiker und einer der
+    Begründer der nichteuklidischen Geometrie. Es gelang ihm zu zeigen, dass Sie eine konsistente
+    Art von Geometrie aufbauen können, in der Euklids fünftes Axiom (über parallele Linien) nicht
+    gilt.
   links:
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
@@ -1082,8 +1095,12 @@ lorenz:
   born: 1917
   died: 2008
   bio: |
-    __Edward Lorenz__ (1917 – 2008) was an American mathematician and meteorologist. He pioneered
-    _chaos theory_, discovered _strange attractors_, and coined the term “butterfly effect”.
+    __Edward Lorenz__ (1917 - 2008) war ein amerikanischer Mathematiker und Meteorologe. Er war
+    Pionier der _Chaostheorie_, entdeckte _seltsame Attraktoren_ und prägte den Begriff
+    „Schmetterlingseffekt“.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
 
 lovelace:
   born: 1815
@@ -1091,26 +1108,28 @@ lovelace:
   name: Lovelace
   overflow: true
   bio: |
-    __Ada Lovelace__ (1815 – 1852) was an English writer and mathematician. Together with Charles
-    Babbage, she worked on the _Analytical Engine_ an early, mechanical computer. She also wrote the
-    first algorithm to run on such a machine (to calculate Bernoulli numbers), making her the first
-    computer programmer in history.
+    __Ada Lovelace__ (1815 - 1852) war eine englische Schriftstellerin und Mathematikerin. Zusammen
+    mit Charles Babbage arbeitete sie an der _Analytical Engine_, einem frühen mechanischen
+    Computer. Sie schrieb auch den ersten Algorithmus, der auf einer solchen Maschine ausgeführt
+    wurde (um Bernoulli-Zahlen zu berechnen), was sie zur ersten Computerprogrammiererin in der
+    Geschichte machte.
 
-    Ada described her approach as “poetical science”, and spent much time thinking about the impact
-    of technology on society.
+    Ada beschrieb ihren Ansatz als „poetische Wissenschaft“ und verbrachte viel Zeit damit, über die
+    Auswirkungen der Technologie auf die Gesellschaft nachzudenken.
 
 madhava:
   born: 1340
   died: 1425
   name: Madhava
   bio: |
-    __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and astronomer from southern
-    India. All of his original work has been lost, but he had a great impact on the development of
-    mathematics.
+    __Madhava von Sangamagramma__ (ca. 1340 - 1425) war ein Mathematiker und Astronom aus Südindien.
+    Alle seine ursprünglichen Arbeiten sind verloren gegangen, aber er hatte einen großen Einfluss
+    auf die Entwicklung der Mathematik.
 
-    Madhava first used infinite series to approximate trigonometric functions, which was a
-    significant step towards the development of calculus many centuries later. He also studied
-    geometry and algebra, and found an exact formula for _π_ (also using infinite series).
+    Madhava verwendete zuerst unendliche Reihen, um trigonometrische Funktionen zu approximieren,
+    was viele Jahrhunderte später ein bedeutender Schritt in Richtung der Entwicklung des Kalküls
+    war. Er studierte auch Geometrie und Algebra und fand eine genaue Formel für _π_ (auch unter
+    Verwendung unendlicher Reihen).
   links:
     - title: Trigonometry
       url: /course/triangles/trigonometry
@@ -1122,12 +1141,13 @@ mandelbrot:
   died: 2010
   name: Mandelbrot
   bio: |
-    The mathematician __Benoît Mandelbrot__ was born in Poland, grew up in France, and eventually
-    moved to the United States. He was one of the pioneers of _fractal geometry_, and particularly
-    interested in how “roughness” and “chaos” appear in the real world (e.g. clouds or coastlines).
+    Der Mathematiker __Benoit Mandelbrot__ wurde in Polen geboren, wuchs in Frankreich auf und zog
+    schließlich in die USA. Er war einer der Pioniere der _fraktalen Geometrie_ und besonders
+    interessiert daran, wie „Rauheit“ und „Chaos“ in der realen Welt (z. B. Wolken oder Küsten)
+    auftreten.
 
-    While working at IBM, he used early computers to create graphical representations of fractals,
-    and in 1980 he discovered the famous _Mandelbrot set_.
+    Während seiner Arbeit bei IBM verwendete er frühe Computer, um grafische Darstellungen von
+    Fraktalen zu erstellen, und 1980 entdeckte er das berühmte _Mandelbrot-Set_.
   links:
     - title: Fractals
       url: /course/fractals/introduction
@@ -1150,10 +1170,10 @@ mersenne:
     intensiven Austausches mit seinen Kollegen in der wissenschaftlichen Welt im 17. Jahrhundert
     wurde er als der “Briefkasten Europas” bezeichnet.
 
-    Heute erinnern wir uns hauptsächlich an ihn für die _Mersenne-Primzahlen_, Primzahlen, die in
-    der Form `2^n – 1` geschrieben werden können. Die meisten der größten bekannten Primzahlen sind
-    von diesem Typ. In der Akustik untersuchte er die Obertöne einer schwingenden Saite und er
-    schrieb auch über Theologie und Philosophie.
+    Heute kennen wir ihn hauptsächlich für die _Mersenne-Primzahlen_, Primzahlen, die in der Form
+    `2^n – 1` geschrieben werden können. Die meisten der größten bekannten Primzahlen sind von
+    diesem Typ. In der Akustik untersuchte er die Obertöne einer schwingenden Saite und er schrieb
+    auch über Theologie und Philosophie.
   links:
     - title: Große Primzahlen
       url: /course/divisibility/the-distribution-of-primes#prime-test-1
@@ -1161,10 +1181,10 @@ mersenne:
 milgram:
   name: Milgram
   bio: |
-    __Stanley Milgram__ (1933 – 1984) was a famous social psychologist. He is best known for
-    experiments on _obedience_, testing how willing adults are to follow orders, even when hurting
-    others, and for the _small-world experiment_, which tests the degree of connectedness of
-    societies.
+    __Stanley Milgram__ (1933 - 1984) war ein berühmter Sozialpsychologe. Er ist am besten bekannt
+    für Experimente zum _Gehorsam_, bei denen getestet wird, wie bereitwillig Erwachsene sind,
+    Befehlen zu folgen, auch wenn sie andere verletzen, und für das _Small-World-Experiment_, bei
+    dem der Grad der Verbundenheit von Gesellschaften.
 
 mirzakhani:
   born: 1977
@@ -1172,31 +1192,31 @@ mirzakhani:
   name: Mirzakhani
   overflow: true;
   bio: |
-    __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian mathematician and professor
-    at Standford University. She is the only woman to have received the _Fields Medal_, the highest
-    award in mathematics.
+    __Maryam Mirzakhani__ (مریم میرزاخانی, 1977 - 2017) war eine iranische Mathematikerin und
+    Professorin an der Standford University. Sie ist die einzige Frau, die die _Fields Medal_
+    erhalten hat, die höchste Auszeichnung in Mathematik.
 
-    Maryam worked at the intersection of dynamical systems and geometry. She studied objects like
-    _hyperbolic surfaces_ and _complex manifolds_, but also contributed to many other areas of
-    mathematics.
+    Maryam arbeitete an der Schnittstelle von dynamischen Systemen und Geometrie. Sie studierte
+    Objekte wie _hyperbolische Oberflächen_ und _komplexe Mannigfaltigkeiten_, trug aber auch zu
+    vielen anderen Bereichen der Mathematik bei.
 
-    When solving problems, Maryam would draw doodles and diagrams on large sheets of paper, to see
-    the underlying patterns and beauty. Her daughter even described Maryam’s work as “painting”. At
-    the age of 40, Maryam died of breast cancer.
+    Bei der Lösung von Problemen zeichnete Maryam Kritzeleien und Diagramme auf große Blätter, um
+    die zugrunde liegenden Muster und die Schönheit zu erkennen. Ihre Tochter beschrieb Maryams Werk
+    sogar als "Malerei". Im Alter von 40 Jahren starb Maryam an Brustkrebs.
 
 monge:
   born: 1746
   died: 1818
   name: Monge
   bio: |
-    __Gaspard Monge__ (1746 – 1818) was a French mathematician. He is considered the father of
-    _differential geometry_, having introduced the concept of _lines of curvature_ on surfaces in
-    three-dimensional space (e.g. on a sphere). Monge also invented _orthographic projection_ and
-    _descriptive geometry_, which allows the representation of three-dimensional objects using
-    two-dimensional drawings.
+    __Gaspard Monge__ (1746 - 1818) war ein französischer Mathematiker. Er gilt als der Vater der
+    _Differentialgeometrie_, nachdem er das Konzept der _Krümmungslinien_ auf Oberflächen im
+    dreidimensionalen Raum (z. B. auf einer Kugel) eingeführt hat. Monge erfand auch die
+    _orthografische Projektion_ und _deskriptive Geometrie_, die die Darstellung dreidimensionaler
+    Objekte mithilfe zweidimensionaler Zeichnungen ermöglicht.
 
-    During the French Revolution, Monge served as Minister of the Marine. He helped reform the
-    French education system and found the École Polytechnique.
+    Während der Französischen Revolution diente Monge als Marineminister. Er half bei der Reform des
+    französischen Bildungssystems und gründete die École Polytechnique.
   small: true
   links:
     - title: Map Projections
@@ -1205,31 +1225,33 @@ monge:
 monsky:
   name: Monsky
   bio: |
-    __Paul Monsky__ (born 1936) is an American mathematician and professor at Brandeis University.
-    He proved that a square cannot be divided into an odd number of equal-area triangles – this is
-    known as “Monsky’s theorem”.
+    __Paul Monsky__ (* 1936) ist ein US-amerikanischer Mathematiker und Professor an der Brandeis
+    University. Er bewies, dass ein Quadrat nicht in eine ungerade Anzahl gleichflächiger Dreiecke
+    unterteilt werden kann - dies ist als "Monskys Theorem" bekannt.
 
 napier:
   born: 1550
   died: 1617
   name: Napier
   bio: |
-    __John Napier__ (1550 – 1617) was a Scottish mathematician, physicist, and astronomer. He
-    invented logarithms, popularised the use of the decimal point, and created “Napier’s bones”, a
-    manual calculating device that helped with multiplication and division.
+    __John Napier__ (1550 - 1617) war ein schottischer Mathematiker, Physiker und Astronom. Er
+    erfand Logarithmen, machte die Verwendung des Dezimalpunkts populär und schuf „Napiers Knochen“,
+    ein manuelles Rechengerät, das bei der Multiplikation und Division half.
 
 nash:
   born: 1928
   died: 2015
   name: Nash
   bio: |
-    __John Forbes Nash__ (1928 – 2015) was an American mathematician who worked on game theory,
-    differential geometry and partial differential equations. He showed how mathematics can explain
-    the decision-making in complex, real-life systems – including economics and the military.
+    __John Forbes Nash__ (1928 - 2015) war ein amerikanischer Mathematiker, der sich mit
+    Spieltheorie, Differentialgeometrie und partiellen Differentialgleichungen beschäftigte. Er
+    zeigte, wie Mathematik die Entscheidungsfindung in komplexen, realen Systemen - einschließlich
+    Wirtschaft und Militär - erklären kann.
 
-    In his 30s, Nash was diagnosed with paranoid schizophrenia, but he managed to recover and return
-    to his academic work. He is the only person to receive both the Nobel Prize for economics and
-    the _Abel Prize_, one of the highest awards in mathematics.
+    In seinen 30ern wurde bei Nash paranoide Schizophrenie diagnostiziert, aber es gelang ihm, sich
+    zu erholen und zu seiner akademischen Arbeit zurückzukehren. Er ist der einzige, der sowohl den
+    Nobelpreis für Wirtschaftswissenschaften als auch den _Abel-Preis_ erhält, eine der höchsten
+    Auszeichnungen in Mathematik.
   links:
     - title: Game Theory
       url: /world/Game_Theory
@@ -1240,14 +1262,14 @@ neumann:
   name: von Neumann
   small: true
   bio: |
-    __John von Neumann__ (1903 – 1957) was a Hungarian-American mathematician, physicist and
-    computer scientist. He made important contributions to pure mathematics, was a pioneer of
-    quantum mechanics, and developed concepts like game theory, cellular automata, self-replicating
-    machines, and linear programming.
+    __John von Neumann__ (1903 - 1957) war ein ungarisch-amerikanischer Mathematiker, Physiker und
+    Informatiker. Er leistete wichtige Beiträge zur reinen Mathematik, war ein Pionier der
+    Quantenmechanik und entwickelte Konzepte wie Spieltheorie, zelluläre Automaten,
+    selbstreplizierende Maschinen und lineare Programmierung.
 
-    During World War II, von Neumann was a key member of the _Manhattan Project_, working on the
-    development of the hydrogen bomb. He later consulted for the Atomic Energy Commission and the US
-    Air Force.
+    Während des Zweiten Weltkriegs war von Neumann ein Schlüsselmitglied des _Manhattan-Projekts_,
+    das an der Entwicklung der Wasserstoffbombe arbeitete. Später konsultierte er die Atomic Energy
+    Commission und die US Air Force.
 
 newton:
   name: Newton
@@ -1291,24 +1313,27 @@ nightingale:
   name: Nightingale
   small: true
   bio: |
-    __Florence Nightingale__ (1820 – 1910) was an English nurse and statistician. During the Crimean
-    War, she nursed wounded British soldiers, and later founded the first training school for
-    nurses. As the “The Lady with the Lamp”, she bacame a cultural icon, and new nurses in the US
-    still take the _Nightingale pledge_.
+    __Florence Nightingale__ (1820 - 1910) war eine englische Krankenschwester und Statistikerin.
+    Während des Krimkrieges pflegte sie verwundete britische Soldaten und gründete später die erste
+    Ausbildungsschule für Krankenschwestern. Als „Die Dame mit der Lampe“ wurde sie zu einer
+    kulturellen Ikone, und neue Krankenschwestern in den USA übernehmen immer noch das
+    _Nachtigallversprechen_.
 
-    One of her most important contributions to medicine was the use of statistics to evaluate
-    treatments. She created numerous infographics, and was one of the first to use pie charts.
-    Nightingale also worked to improve sanitation and hunger relief in India, helped abolish
-    prostitution laws, and promoted new careers for women.
+    Einer ihrer wichtigsten Beiträge zur Medizin war die Verwendung von Statistiken zur Bewertung
+    von Behandlungen. Sie erstellte zahlreiche Infografiken und war eine der ersten, die
+    Tortendiagramme verwendete. Nightingale setzte sich auch für die Verbesserung der sanitären
+    Einrichtungen und der Hungerhilfe in Indien ein, half bei der Abschaffung der
+    Prostitutionsgesetze und förderte neue Karrieren für Frauen.
 
 noether:
   name: Noether
   born: 1882
   died: 1935
   bio: |
-    __Amalie Emmy Noether__ (1882 – 1935) was a German mathematician who made important discoveries
-    in abstract algebra and theoretical physics, including the connection between symmetry and
-    conservation laws. She is often described as the most influential female mathematician.
+    __Amalie Emmy Noether__ (1882 - 1935) war eine deutsche Mathematikerin, die wichtige
+    Entdeckungen in der abstrakten Algebra und der theoretischen Physik machte, einschließlich des
+    Zusammenhangs zwischen Symmetrie und Erhaltungsgesetzen. Sie wird oft als die einflussreichste
+    Mathematikerin beschrieben.
   small: true
   links:
     - title: Symmetry in Physics
@@ -1319,32 +1344,33 @@ oresme:
   died: 1382
   name: Oresme
   bio: |
-    __Nicole Oresme__ (c. 1323 – 1382) was an important French mathematician, philosopher and
-    bishop, living in the late Middle Ages. He invented coordinate geometry, long before Descartes,
-    was the first to use fractional exponents, and worked on infinite series. He wrote about
-    economics, physics, astronomy and theology, and was an advisor to King Charles V of France.
+    __Nicole Oresme__ (ca. 1323 - 1382) war eine wichtige französische Mathematikerin, Philosophin
+    und Bischof, die im Spätmittelalter lebte. Lange bevor Descartes die Koordinatengeometrie
+    erfand, verwendete er als erster Bruchexponenten und arbeitete an unendlichen Reihen. Er schrieb
+    über Wirtschaft, Physik, Astronomie und Theologie und war Berater von König Karl V. von
+    Frankreich.
 
 pacioli:
   born: 1446
   died: 1517
   name: Pacioli
   bio: |
-    __Luca Pacioli__ was an influential Italian friar and mathematician, who invented the standard
-    symbols for plus and minus (+ and –). He was one of the first accountants in Europe, where he
-    introduced double-entry book-keeping. Pacioli collaborated with Leonardo da Vinci, and also
-    wrote about arithmetic and geometry.
+    __Luca Pacioli__ war ein einflussreicher italienischer Mönch und Mathematiker, der die
+    Standardsymbole für Plus und Minus (+ und -) erfand. Er war einer der ersten Buchhalter in
+    Europa, wo er die doppelte Buchführung einführte. Pacioli arbeitete mit Leonardo da Vinci
+    zusammen und schrieb auch über Arithmetik und Geometrie.
 
 pascal:
   name: Pascal
   born: 1623
   died: 1662
   bio: |
-    __Blaise Pascal__ (1623 – 1662) was a French mathematician, physicist and philosopher. He
-    invented some of the first mechanical calculators, as well as working on projective geometry,
-    probability and the physics of the vacuum.
+    __Blaise Pascal__ (1623 - 1662) war ein französischer Mathematiker, Physiker und Philosoph. Er
+    erfand einige der ersten mechanischen Taschenrechner und beschäftigte sich mit projektiver
+    Geometrie, Wahrscheinlichkeit und Physik des Vakuums.
 
-    Most famously, Pascal is remembered for naming _Pascal’s Triangle_, an infinite triangle of
-    numbers with some amazing properties.
+    Am bekanntesten ist, dass Pascal für die Benennung von _Pascals Dreieck_ bekannt ist, einem
+    unendlichen Dreieck von Zahlen mit einigen erstaunlichen Eigenschaften.
   links:
     - title: Probability
       url: /course/probability/introduction
@@ -1357,14 +1383,14 @@ peano:
   name: Peano
   small: true
   bio: |
-    The Italian mathematician __Giuseppe Peano__ (1858 – 1932) published over 200 books and papers
-    about logic and mathematics. He formulated the _Peano axioms_, which became the basis for
-    rigorous algebra and analysis, developed the notation for logic and set theory, constructed
-    continuous, space-filling curves (_Peano curves_), and worked on the method of proof by
-    induction.
+    Der italienische Mathematiker __Giuseppe Peano__ (1858 - 1932) veröffentlichte über 200 Bücher
+    und Artikel über Logik und Mathematik. Er formulierte die _Peano-Axiome_, die die Grundlage für
+    strenge Algebra und Analyse bildeten, entwickelte die Notation für Logik und Mengenlehre,
+    konstruierte kontinuierliche, raumfüllende Kurven (_Peano-Kurven_) und arbeitete an der Methode
+    des Beweises durch Induktion.
 
-    Peano also developed a new, international language, _Latino sine flexione_, which was a
-    simplified version of Latin.
+    Peano entwickelte auch eine neue internationale Sprache, _Latino sine flexione_, eine
+    vereinfachte Version des Lateinischen.
   links:
     - title: Proof by Induction
       url: /world/Axioms_and_Proof
@@ -1372,9 +1398,9 @@ peano:
 pearson:
   name: Pearson
   bio: |
-    __Karl Pearson__ (1857 – 1936) was an English mathematician and statistician. He worked on
-    biometrics, meteorology, and eugenics, among many other topics, and founded the world’s first
-    university statistics department, at University College London.
+    __Karl Pearson__ (1857 - 1936) war ein englischer Mathematiker und Statistiker. Er beschäftigte
+    sich unter anderem mit Biometrie, Meteorologie und Eugenik und gründete am University College
+    London die weltweit erste Abteilung für Universitätsstatistik.
 
 penrose:
   name: Penrose
@@ -1390,30 +1416,30 @@ penrose:
 
 perelman:
   born: 1966
-  died: 2020
   name: Perelman
   bio: |
-    In 2003, the Russian mathematician __Grigori Perelman__ (Григо́рий Перельма́нborn, born 1966)
-    proved the _Poincaré Conjecture_, which, until then, was one of the most famous unsolved
-    problems in mathematics.
+    2003 bewies der russische Mathematiker __Grigori Perelman__ (Григо́рий Перельма́нborn, geb.
+    1966) die _Poincaré-Vermutung_, die bis dahin eines der bekanntesten ungelösten Probleme in der
+    Mathematik war.
 
-    The complex proof was verified by 2006, but Perelman declined two big awards that came with it:
-    the $1 million Clay Millennium Prize, and the _Fields Medal_ which is the highest recognition in
-    mathematics. In fact, he said: _“I’m not interested in money or fame; I don’t want to be on
-    display like an animal in a zoo.”_
+    Der komplexe Beweis wurde bis 2006 verifiziert, aber Perelman lehnte zwei große Auszeichnungen
+    ab: den mit 1 Million US-Dollar dotierten Clay Millennium Prize und die _Fields Medal_, die
+    höchste Anerkennung in der Mathematik. Tatsächlich sagte er: _"Ich interessiere mich nicht für
+    Geld oder Ruhm; Ich möchte nicht wie ein Tier in einem Zoo ausgestellt werden. "_
 
-    Perelman also made contributions to Riemannian geometry and geometric topology, and the Poincaré
-    Conjecture is still the only one of the seven Millennium Prize problems to have been solved.
+    Perelman leistete auch Beiträge zur Riemannschen Geometrie und geometrischen Topologie, und die
+    Poincaré-Vermutung ist immer noch das einzige der sieben Probleme, die mit dem Millenniumspreis
+    gelöst wurden.
 
 pingala:
   name: Pingala
   born: -330
   died: -270
   bio: |
-    __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who lived around 300BC, but
-    very little is known about his life. He wrote the Chandaḥśāstra, where he analysed Sanskrit
-    poetry mathematically. It also contained the first known explanations of binary numbers,
-    Fibonacci numbers and Pascal’s triangle.
+    __Pingala__ (पिङ्गल) war ein alter indischer Dichter und Mathematiker, der um 300 v. Chr. Lebte,
+    aber über sein Leben ist nur sehr wenig bekannt. Er schrieb die Chandaḥśāstra, in der er die
+    Sanskrit-Poesie mathematisch analysierte. Es enthielt auch die ersten bekannten Erklärungen von
+    Binärzahlen, Fibonacci-Zahlen und Pascals Dreieck.
   links:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
@@ -1421,8 +1447,8 @@ pingala:
 planck:
   name: Plank
   bio: |
-    __Max Plank__ (1858 – 1947) was a German physicist and one of the original developers of Quantum
-    Mechanics – for which received the Nobel Prize in 1918.
+    __Max Plank__ (1858 - 1947) war ein deutscher Physiker und einer der ursprünglichen Entwickler
+    der Quantenmechanik - für die er 1918 den Nobelpreis erhielt.
 
 plato:
   name: Plato
@@ -1476,7 +1502,7 @@ ptolemy:
     _geozentrische_ Modell unseres Universums – dass die Erde im Zentrum steht und alle Planeten und
     die Sonne sich um sie herum drehen.
 
-    Während wir heute wissen, dass dieses Modell falsch ist, ist Ptolemäus' wissenschaftlicher
+    Obwohl wir heute wissen, dass dieses Modell falsch ist, ist Ptolemäus' wissenschaftlicher
     Einfluss unbestreitbar. Er entwickelte trigonometrische Tabellen mit vielen praktischen
     Anwendungen, die über viele Jahrhunderte hinweg als die genauesten galten. Er erstellte auch
     detaillierte Karten der Erde und schrieb über Musiktheorie und Optik.
@@ -1532,9 +1558,9 @@ regiomontanus:
   name: Regiomontanus
   overflow: true
   bio: |
-    __Johann Müller Regiomontanus__ (1436 – 1476) was a German mathematician and astronomer. He made
-    great advances in both fields, including creating detailed astronomical tables and publishing
-    multiple textbooks.
+    __Johann Müller Regiomontanus__ (1436 - 1476) war ein deutscher Mathematiker und Astronom. Er
+    machte große Fortschritte in beiden Bereichen, einschließlich der Erstellung detaillierter
+    astronomischer Tabellen und der Veröffentlichung mehrerer Lehrbücher.
 
 richardson:
   name: Richardson
@@ -1569,26 +1595,28 @@ russell:
   name: Russell
   small: true
   bio: |
-    __Bertrand Russell__ (1872 – 1970) was a British philosopher, mathematician and author. He is
-    widely considered to be one of the most important logicians of the 20th century.
+    __Bertrand Russell__ (1872 - 1970) war ein britischer Philosoph, Mathematiker und Autor. Er gilt
+    weithin als einer der wichtigsten Logiker des 20. Jahrhunderts.
 
-    Russell co-wrote the “Principia Mathematica”, where he attempted to create a formal foundation
-    for mathematics using logic. His work has had a significant impact not just on maths and
-    philosophy, but also on linguistics, artificial intelligence and metaphysics.
+    Russell war Co-Autor der „Principia Mathematica“, in der er versuchte, mithilfe von Logik eine
+    formale Grundlage für Mathematik zu schaffen. Seine Arbeit hat nicht nur die Mathematik und
+    Philosophie, sondern auch die Linguistik, die künstliche Intelligenz und die Metaphysik
+    maßgeblich beeinflusst.
 
-    Russell was a passionate pacifist and anti-war activist. In 1950, he received the Nobel Prize in
-    Literature, for his work “in which he champions humanitarian ideals and freedom of thought”.
+    Russell war ein leidenschaftlicher Pazifist und Antikriegsaktivist. 1950 erhielt er für seine
+    Arbeit, in der er sich für humanitäre Ideale und Gedankenfreiheit einsetzt, den Nobelpreis für
+    Literatur.
 
 shannon:
   name: Shannon
   born: 1898
   died: 1972
   bio: |
-    __Claude Shannon__ (1898 – 1972) was an American mathematician and electrical engineer,
-    remembered as the “father of information theory”. He worked on cryptography, including
-    codebreaking for national defence during World War II, but he was also interested in juggling,
-    unicycling and chess. In his spare times, he built machines that could juggle or solve the
-    Rubik’s Cube puzzle.
+    __Claude Shannon__ (1898 - 1972) war ein amerikanischer Mathematiker und Elektrotechniker, der
+    als „Vater der Informationstheorie“ bezeichnet wurde. Er beschäftigte sich mit Kryptographie,
+    einschließlich Codebreaking für die Landesverteidigung während des Zweiten Weltkriegs,
+    interessierte sich aber auch für Jonglieren, Einradfahren und Schach. In seiner Freizeit baute
+    er Maschinen, mit denen er das Rubik's Cube-Rätsel jonglieren oder lösen konnte.
   small: true
   links:
     - title: Computers for Gambling
@@ -1599,12 +1627,13 @@ shijie:
   died: 1314
   name: Zhu Shijie
   bio: |
-    __Zhu Shijie__ (朱世杰, 1249 – 1314) was one of the greatest Chinese mathematicians. In is book
-    _Jade Mirror of the Four Unknowns_, he showed how to solve 288 different problem using systems
-    of polynomial equations and four variables (called _Heaven_, _Earth_, _Man_ and _Matter_).
+    __Zhu Shijie__ (朱世杰, 1249 - 1314) war einer der größten chinesischen Mathematiker. In seinem
+    Buch _Jade Mirror of the Four Unknowns_ zeigte er, wie man 288 verschiedene Probleme mit
+    Polynomgleichungssystemen und vier Variablen löst (genannt _Himmel_, _Erde_, _Mensch_ und
+    _Materie_).
 
-    Zhu made extensive use of Pascal’s triangle. He also invented rules for solving systems of
-    linear equations – predating our modern matrix methods by many centuries.
+    Zhu nutzte Pascals Dreieck ausgiebig. Er erfand auch Regeln zum Lösen linearer Gleichungssysteme
+    - viele Jahrhunderte vor unseren modernen Matrixmethoden.
   links:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
@@ -1662,10 +1691,10 @@ thales:
   bio: |
     __Thales von Milet__ (ca. 624 – 546 v. Chr.) war ein griechischer Mathematiker und Philosoph.
 
-    Thales is often recognised as the first scientist in Western civilisation: Anstatt Religion oder
-    Mythologie zu verwenden, versuchte er, natürliche Phänomene mit einem wissenschaftlichen Ansatz
-    zu erklären. Er ist auch der erste Mensch in der Geschichte, nach dem eine mathematische
-    Entdeckung benannt wurde: Satz des Thales
+    Thales wird oft als der erste Wissenschaftler in der westlichen Zivilisation anerkannt: Anstatt
+    Religion oder Mythologie zu verwenden, versuchte er, Naturphänomene mit einem wissenschaftlichen
+    Ansatz zu erklären. Er ist auch das erste Individuum in der Geschichte, dessen mathematische
+    Entdeckung nach ihm benannt wurde: Thales 'Theorem.
   links:
     - title: Satz des Thales
       url: /course/euclidean-geometry/introduction
@@ -1673,28 +1702,30 @@ thales:
 thorp:
   name: Thorp
   bio: |
-    __Edward Thorp__ (born 1932) is an American hedge fund manager and blackjack player, known for
-    inventing _card counting_ and for building the first _wearable computer_ to beat casinos at
-    Roulette. He worked at MIT, is a professor of mathematics, and pioneered modern applications of
-    probability theory.
+    __Edward Thorp__ (geb. 1932) ist ein US-amerikanischer Hedgefonds-Manager und Blackjack-Spieler,
+    der dafür bekannt ist, _das Kartenzählen_ zu erfinden und den ersten _tragbaren Computer_ zu
+    bauen, der Casinos besiegt Roulette. Er arbeitete am MIT, ist Professor für Mathematik und
+    Pionier der modernen Anwendungen der Wahrscheinlichkeitstheorie.
 
 turing:
   born: 1912
   died: 1954
   name: Turing
   bio: |
-    __Alan Turing__ (1912 – 1954) was an English mathematician and is often called the “father of
-    computer science”.
+    __Alan Turing__ (1912 - 1954) war ein englischer Mathematiker und wird oft als "Vater der
+    Informatik" bezeichnet.
 
-    During the Second World War, Turing played a critical role in breaking the Enigma code used by
-    the German military, as part of the “Government Code and Cypher School” at Bletchley Park. This
-    helped the Allies win the war, and may have saved millions of lives.
+    Während des Zweiten Weltkriegs spielte Turing eine entscheidende Rolle bei der Verletzung des
+    vom deutschen Militär verwendeten Enigma-Codes im Rahmen der „Government Code and Cypher School“
+    im Bletchley Park. Dies hat den Alliierten geholfen, den Krieg zu gewinnen, und möglicherweise
+    Millionen von Menschenleben gerettet.
 
-    He also invented the _Turing machine_, a mathematical model of a general purpose computer, and
-    the _Turing test_, which can be used to judge the ability of artificial intelligence.
+    Er erfand auch die _Turing-Maschine_, ein mathematisches Modell eines Allzweckcomputers, und den
+    _Turing-Test_, mit dem die Fähigkeit der künstlichen Intelligenz beurteilt werden kann.
 
-    Turing was gay, which was still a crime during his life, and meant that his groundbreaking
-    accomplishments were never fully recognised. He committed suicide at the age of 41.
+    Turing war schwul, was in seinem Leben immer noch ein Verbrechen war und bedeutete, dass seine
+    bahnbrechenden Leistungen nie vollständig anerkannt wurden. Er beging im Alter von 41 Jahren
+    Selbstmord.
 
 ulam:
   name: Ulam
@@ -1750,13 +1781,14 @@ wiles:
     völlig zurückgezogen daran. Er kündigte seine Lösung 1993 an, obwohl eine kleine Lücke in seinem
     Argument die Lösung weitere zwei Jahre hinauszögerte.
 
-    He was too old to receive the _Fields medal_, the highest award in mathematics, which has an age
-    limit of 40. Instead, Wiles was awarded a special silver plaque for his work.
+    Er war zu alt, um die _Fields-Medaille_ zu erhalten, die höchste Auszeichnung in Mathematik mit
+    einer Altersgrenze von 40 Jahren. Stattdessen erhielt Wiles für seine Arbeit eine spezielle
+    silberne Plakette.
 
 wolfram:
   name: Wolfram
   bio: |
-    __Stephen Wolfram__ (* 1959) ist ein britisch-amerikanischer Informatiker, Physiker und
+    __Stephen Wolfram__ (geb. 1959) ist ein britisch-amerikanischer Informatiker, Physiker und
     Geschäftsmann. Er ist der Gründer und CEO von _Wolfram Research_, wo er das Computersystem
     _Mathematica_, die Antwortmaschine _Wolfram | Alpha_ und die Programmiersprache Wolfram
     entwickelte.
