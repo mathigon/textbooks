@@ -388,7 +388,7 @@ coordinate-system:
 coordinate-system-origin:
   title: Système de coordonnées
   text: |
-    L'origine ____ d'un système de coordonnées est le point avec les coordonnées (0, 0). Il s'agit
+    L'origined'un système de coordonnées est le point avec les coordonnées (0, 0). Il s'agit
     généralement du point de croisement des deux axes.
 
 corresponding-angles:

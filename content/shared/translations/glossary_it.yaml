@@ -50,7 +50,7 @@ algebraic-numbers:
 algorithm:
   title: Algoritmo
   text: |
-    Un algoritmo ____ è un insieme di regole o istruzioni che possono essere utilizzate per
+    Un algoritmoè un insieme di regole o istruzioni che possono essere utilizzate per
     risolvere un problema specifico. Sono comunemente usati dai computer e appaiono ovunque in
     matematica: da _lunga divisione_ a _eliminazione gaussiana_.
 
@@ -76,7 +76,7 @@ angle:
 angle-bisector:
   title: Bisettrice angolare
   text: |
-    Una bisettrice di angolo ____ è una linea o raggio che divide un angolo a metà, in due angoli
+    Una bisettrice di angoloè una linea o raggio che divide un angolo a metà, in due angoli
     congruenti e più piccoli.
   image: angle-bisector.svg
 
@@ -202,7 +202,7 @@ calculus:
 
 center-of-rotation:
   title: Centro di rotazione
-  text: Il centro di rotazione ____ è il punto attorno al quale viene ruotata una forma.
+  text: Il centro di rotazioneè il punto attorno al quale viene ruotata una forma.
   link: /course/transformations/rigid#rotations
 
 centroid:
@@ -226,12 +226,12 @@ circle:
 
 circle-area:
   title: Area di un cerchio
-  text: L'area ____ di un cerchio con raggio _r_ è data dalla folmula `A = pi r^2`.
+  text: L'areadi un cerchio con raggio _r_ è data dalla folmula `A = pi r^2`.
 
 circle-circumference:
   title: Circonferenza di un cerchio
   text: |
-    La circonferenza ____ di un cerchio è la distanza attorno al suo bordo esterno. Un cerchio con
+    La circonferenzadi un cerchio è la distanza attorno al suo bordo esterno. Un cerchio con
     raggio _r_ ha la circonferenza `C = 2 pi r`.
   link: /course/circles/introduction#radius
 
@@ -245,7 +245,7 @@ circle-diameter:
 circle-radius:
   title: Raggio
   text: |
-    Il raggio ____ di un cerchio è la distanza (o un segmento di linea) tra il suo centro e
+    Il raggiodi un cerchio è la distanza (o un segmento di linea) tra il suo centro e
     qualsiasi punto sulla sua circonferenza.
   link: /course/circles/introduction#radius
 
@@ -331,7 +331,7 @@ concave:
 cone:
   title: Cono
   text: |
-    Un cono ____ è un solido tridimensionale che ha una _base_ circolare unita a un singolo punto
+    Un conoè un solido tridimensionale che ha una _base_ circolare unita a un singolo punto
     (chiamato _vertice_) da un lato curvo. Potresti anche pensare a un cono come a una "piramide
     circolare".
 
@@ -364,7 +364,7 @@ congruent-angles:
 conic-section:
   title: Sezione conica
   text: |
-    Una sezione conica ____ è una curva creata come intersezione della superficie di un cono con un
+    Una sezione conicaè una curva creata come intersezione della superficie di un cono con un
     piano piatto. Esistono quattro diversi tipi di sezioni coniche, che condividono molte proprietà:
 
     * Cerchio
@@ -393,7 +393,7 @@ coordinate-system:
 coordinate-system-origin:
   title: Sistema di coordinate
   text: |
-    L'origine ____ di un sistema di coordinate è il punto con coordinate (0, 0). Di solito è il
+    L'originedi un sistema di coordinate è il punto con coordinate (0, 0). Di solito è il
     punto in cui i due assi si incrociano.
 
 corresponding-angles:
@@ -420,7 +420,7 @@ cpoct:
 
 cross-section:
   title: Sezione trasversale
-  text: Una sezione trasversale ____ è l'intersezione di un solido tridimensionale con un piano.
+  text: Una sezione trasversaleè l'intersezione di un solido tridimensionale con un piano.
 
 cryptography:
   title: Crittografia
@@ -431,7 +431,7 @@ cryptography:
 cube:
   title: Cubo
   text: |
-    Un cubo ____ (a volte chiamato __Hexahedron__) è un poliedro normale in cui ogni faccia è un
+    Un cubo(a volte chiamato __Hexahedron__) è un poliedro normale in cui ogni faccia è un
     quadrato. È uno dei cinque _solidi platonici_ e ha 6 facce, 8 vertici e 12 spigoli.
   link: /course/polyhedra/platonic#platonic-overview
 
@@ -467,13 +467,13 @@ degrees:
 denominator:
   title: Denominatore
   text: |
-    Il denominatore ____ è il numero inferiore in una frazione. Ad esempio, in `4/7`, il numero 7 è
+    Il denominatoreè il numero inferiore in una frazione. Ad esempio, in `4/7`, il numero 7 è
     il denominatore.
 
 dilation:
   title: dilatazione
   text: |
-    Una dilatazione ____ è una trasformazione che ridimensiona una forma geometrica, rendendola più
+    Una dilatazioneè una trasformazione che ridimensiona una forma geometrica, rendendola più
     grande o più piccola.
   image: dilation.svg
   link: /course/transformations/dilations
@@ -530,7 +530,7 @@ dot-machine:
 ellipse:
   title: Ellisse
   text: |
-    Un'ellisse ____ è un percorso curvo che circonda due punti focali. Qualsiasi punto sulla
+    Un'ellisseè un percorso curvo che circonda due punti focali. Qualsiasi punto sulla
     circonferenza dell'ellisse ha la stessa _somma delle distanze_ ai due fuochi.
 
     Se i fuochi sono molto vicini, l'ellisse sembra quasi un cerchio. Mentre si allontanano
@@ -543,7 +543,7 @@ ellipse:
 equation:
   title: Equazione
   text: |
-    Un'equazione ____ è un'istruzione matematica creata collegando due o più espressioni con il
+    Un'equazioneè un'istruzione matematica creata collegando due o più espressioni con il
     segno __equals__ `=`. Indica che tutte queste espressioni hanno lo stesso valore.
 
 equilateral-triangle:
@@ -636,7 +636,7 @@ fta:
 function:
   title: Funzione
   text: |
-    Una funzione ____ è una relazione matematica che converte un input (_x_) in esattamente un
+    Una funzioneè una relazione matematica che converte un input (_x_) in esattamente un
     output (_y_). Sono spesso espressi come equazioni matematiche della forma `f(x)`.
 
 function-graph:
@@ -679,7 +679,7 @@ glide-reflection:
 golden-ratio:
   title: Rapporto aureo
   text: |
-    Il rapporto aureo ____ è un numero irrazionale specifico con valore `φ = 1.61803398875…`. Può
+    Il rapporto aureoè un numero irrazionale specifico con valore `φ = 1.61803398875…`. Può
     essere approssimato dividendo due numeri consecutivi di Fibonacci.
 
     Il rapporto aureo è spesso considerato particolarmente esteticamente piacevole nell'arte e
@@ -708,12 +708,12 @@ graph-edge:
 
 graph-order:
   title: Ordine
-  text: L'ordine ____ di un grafico è il numero di vertici in esso.
+  text: L'ordinedi un grafico è il numero di vertici in esso.
   link: /course/graph-theory/introduction#intro-3
 
 graph-vertex:
   title: Vertice
-  text: Un vertice ____ è un punto o nodo che fa parte di un grafico.
+  text: Un verticeè un punto o nodo che fa parte di un grafico.
   link: /course/graph-theory/introduction
 
 gravity:
@@ -758,7 +758,7 @@ hexagon:
 hyperbola:
   title: Iperbole
   text: |
-    Un'iperbole ____ è la forma del grafico della funzione `y = 1/x`. Consiste di due parti
+    Un'iperboleè la forma del grafico della funzione `y = 1/x`. Consiste di due parti
     disgiunte, entrambe con approccio _asintoti_. È anche una sezione conica __.
   image: hyperbola.svg
 
@@ -843,7 +843,7 @@ julia-set:
 kite:
   title: Aquilone
   text: |
-    Un aquilone ____ è un quadrilatero in cui due coppie di lati adiacenti hanno la stessa
+    Un aquiloneè un quadrilatero in cui due coppie di lati adiacenti hanno la stessa
     lunghezza.
   link: /course/polyhedra/quadrilaterals#kites
 
@@ -893,14 +893,14 @@ line-slope:
 linear-equation:
   title: Equazione lineare
   text: |
-    Un'equazione lineare ____ ha la forma `ax + b = 0`, dove _x_ è una variabile e _a_ e _b_ sono
+    Un'equazione lineareha la forma `ax + b = 0`, dove _x_ è una variabile e _a_ e _b_ sono
     numeri. Se rappresentati in un sistema di coordinate, i valori di `ax+b` formano una linea
     retta.
 
 linear-function:
   title: Funzione lineare
   text: |
-    Una funzione lineare ____ è una funzione il cui grafico è una linea retta. Può essere definito
+    Una funzione lineareè una funzione il cui grafico è una linea retta. Può essere definito
     come `f(x) = mx + c`, dove _m_ è la pendenza della linea e _c_ è la sua intercettazione
     dell'asse _y_.
 
@@ -914,7 +914,7 @@ mandelbrot-set:
 
 matrix:
   title: Matrice
-  text: Una matrice ____ è una matrice rettangolare di numeri disposti in righe e colonne.
+  text: Una matriceè una matrice rettangolare di numeri disposti in righe e colonne.
 
 median:
   title: Mediano
@@ -956,7 +956,7 @@ millennium-prize:
 mode:
   title: Modalità
   text: |
-    La modalità ____ di un insieme di numeri è il numero che si verifica più spesso. Ad esempio, la
+    La modalitàdi un insieme di numeri è il numero che si verifica più spesso. Ad esempio, la
     modalità di [3, 4, 4, 4, 5, 5, 6] è 5.
 
 molecule:
@@ -1001,7 +1001,7 @@ np:
 numerator:
   title: Numeratore
   text: |
-    Il numeratore ____ è il numero superiore in una frazione. Ad esempio, in `4/7`, il numero 4 è il
+    Il numeratoreè il numero superiore in una frazione. Ad esempio, in `4/7`, il numero 4 è il
     numeratore.
 
 obtuse-angle:
@@ -1035,12 +1035,12 @@ order-of-symmetry:
 origin:
   title: Origine
   text: |
-    L'origine ____ di un sistema di coordinate è il punto (0, 0), in cui l'asse _x_ e l'asse _y_ si
+    L'originedi un sistema di coordinate è il punto (0, 0), in cui l'asse _x_ e l'asse _y_ si
     intersecano.
 
 origin-number-line:
   title: Origine di una linea numerica
-  text: L'origine ____ di una linea numerica è il punto 0.
+  text: L'originedi una linea numerica è il punto 0.
 
 palindrome:
   title: Palindrome
@@ -1106,7 +1106,7 @@ penrose:
 
 pentagon:
   title: Pentagono
-  text: Un pentagono ____ è un poligono con cinque lati.
+  text: Un pentagonoè un poligono con cinque lati.
 
 percent:
   title: Per cento
@@ -1132,7 +1132,7 @@ perpendicular:
 perpendicular-bisector:
   title: Bisettrice perpendicolare
   text: |
-    La bisettrice ____ di un segmento di linea passa attraverso il suo punto medio e lo interseca
+    La bisettricedi un segmento di linea passa attraverso il suo punto medio e lo interseca
     con un angolo di 90 °.
   image: perpendicular-bisector.svg
 
@@ -1161,7 +1161,7 @@ point:
 polygon:
   title: Poligono
   text: |
-    Un poligono ____ è una forma geometrica costituita da segmenti di retta. I poligoni non possono
+    Un poligonoè una forma geometrica costituita da segmenti di retta. I poligoni non possono
     contenere lati curvi o fori. Ad esempio, un quadrato è un poligono ma un cerchio no.
   image: polygon.svg
   link: /course/polyhedra/polygons#polygons
@@ -1169,7 +1169,7 @@ polygon:
 polygon-diagonal:
   title: Diagonale
   text: |
-    Una diagonale ____ di un poligono è un segmento di linea che collega due vertici che non si
+    Una diagonaledi un poligono è un segmento di linea che collega due vertici che non si
     trovano uno accanto all'altro.
 
 polygon-edge:
@@ -1199,12 +1199,12 @@ polyhedron-dual:
 
 polyhedron-edge:
   title: Bordo di un poliedro
-  text: I bordi ____ di un poliedro sono i segmenti di linea in cui sono collegate due delle sue facce.
+  text: I bordidi un poliedro sono i segmenti di linea in cui sono collegate due delle sue facce.
   link: /course/polyhedra/polyhedra
 
 polyhedron-face:
   title: Volto di un poliedro
-  text: Le facce ____ di un poliedro sono i poligoni che compongono la sua superficie.
+  text: Le faccedi un poliedro sono i poligoni che compongono la sua superficie.
   link: /course/polyhedra/polyhedra
 
 polyhedron-vertex:
@@ -1217,8 +1217,9 @@ polynomial:
   text: |
     Un __polinomio__ è un'espressione algebrica che consiste di costanti e multipli di variabili
     elevate a potenze intere. Ad esempio, `5x^3 - 2y^2 + x + 4` è un polinomio. La forma più
-    generale di un polinomio con una sola variabile è `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1
-    x + a_0`, dove `a_n`, `a_(n-1)`, ..., `a_0` sono tutte costanti specifiche.
+    generale di un polinomio con una sola variabile è
+    `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, dove `a_n`, `a_(n-1)`, ..., `a_0`
+    sono tutte costanti specifiche.
 
 polynomial-degree:
   title: Grado
@@ -1262,7 +1263,7 @@ prism:
 probability:
   title: Probabilità
   text: |
-    Una probabilità ____ è un numero compreso tra 0 e 1 che indica la probabilità che si verifichi
+    Una probabilitàè un numero compreso tra 0 e 1 che indica la probabilità che si verifichi
     un determinato evento. La probabilità di un evento _A_ è scritta come `P(A)`.
 
 probability-tree:
@@ -1326,7 +1327,7 @@ quadratic:
 quadratic-equation:
   title: Equazione quadrata
   text: |
-    Un'equazione quadratica ____ è un'equazione che contiene una singola variabile di grado 2. È
+    Un'equazione quadraticaè un'equazione che contiene una singola variabile di grado 2. È
     spesso scritta come `ax^2 + bx + c = 0`, dove _x_ è una variabile, _a_, _b_ e _c_ sono numeri e
     `a != 0`.
 
@@ -1341,7 +1342,7 @@ quadratic-formula:
 quadratic-function:
   title: Funzione quadratica
   text: |
-    Una funzione quadratica ____ è una funzione della forma `f(x) = ax^2+bx+c`, dove _a_, _b_ e _c_
+    Una funzione quadraticaè una funzione della forma `f(x) = ax^2+bx+c`, dove _a_, _b_ e _c_
     sono numeri e `a != 0`. Il grafico di una funzione quadratica è una curva a forma di U chiamata
     __parabola__.
 
@@ -1349,11 +1350,11 @@ quadratic-function-vertex-form:
   title: Forma del vertice di una funzione quadratica
   text: |
     Il __modulo vertice__ o __modulo standard__ di una funzione quadratica è `f(x) = a(x − h)^2 +
-    k`. Il punto `(h, k)` è il vertice ____ della parabola corrispondente.
+    k`. Il punto `(h, k)` è il verticedella parabola corrispondente.
 
 quadrilateral:
   title: Quadrilatero
-  text: Un quadrilatero ____ è un poligono con quattro lati.
+  text: Un quadrilateroè un poligono con quattro lati.
   link: /course/polyhedra/quadrilaterals
 
 quantum:
@@ -1398,7 +1399,7 @@ real-numbers:
 
 rectangle:
   title: Rettangolo
-  text: Un rettangolo ____ è un quadrilatero in cui tutti e quattro gli angoli sono 90 °.
+  text: Un rettangoloè un quadrilatero in cui tutti e quattro gli angoli sono 90 °.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 reflection:
@@ -1490,7 +1491,7 @@ roulette:
 scale-factor:
   title: Fattore di scala
   text: |
-    Il fattore di scala ____ di due figure geometriche simili è il rapporto tra due lunghezze
+    Il fattore di scaladi due figure geometriche simili è il rapporto tra due lunghezze
     corrispondenti.
 
     Un fattore di scala inferiore a 1 indica che la forma è ridotta e un fattore di scala maggiore
@@ -1512,7 +1513,7 @@ scientific-notation:
 sequence:
   title: Sequenza
   text: |
-    Una sequenza ____ è un elenco ordinato di numeri (o altri elementi come oggetti geometrici), che
+    Una sequenzaè un elenco ordinato di numeri (o altri elementi come oggetti geometrici), che
     spesso seguono uno schema o una funzione specifici. Le sequenze possono essere sia finite che
     infinite.
   link: /course/sequences/introduction#simple-patterns
@@ -1589,7 +1590,7 @@ sphere:
 sphere-radius:
   title: Raggio di una sfera
   text: |
-    Il raggio ____ di una sfera è la distanza (o un segmento di linea) tra il suo centro e qualsiasi
+    Il raggiodi una sfera è la distanza (o un segmento di linea) tra il suo centro e qualsiasi
     punto sulla sua superficie.
 
 square:
@@ -1601,11 +1602,11 @@ square:
 
 square-area:
   title: Area di una piazza
-  text: L'area ____ di un quadrato con lunghezza laterale _s_ è `A = s^2`.
+  text: L'areadi un quadrato con lunghezza laterale _s_ è `A = s^2`.
 
 square-matrix:
   title: Matrice quadrata
-  text: Una matrice quadrata ____ è una matrice che ha lo stesso numero di righe e colonne.
+  text: Una matrice quadrataè una matrice che ha lo stesso numero di righe e colonne.
 
 square-numbers:
   title: Numeri quadrati
@@ -1616,7 +1617,7 @@ square-numbers:
 
 subdivision:
   title: suddivisioni
-  text: 'Per creare una suddivisione ____ di un grafico, aggiungi vertici aggiuntivi lungo i suoi bordi.'
+  text: 'Per creare una suddivisionedi un grafico, aggiungi vertici aggiuntivi lungo i suoi bordi.'
 
 subgraph:
   title: sottografo
@@ -1664,7 +1665,7 @@ tangent:
 term:
   title: Termine (Algebra)
   text: |
-    I termini ____ sono le parti di un'espressione o equazione algebrica separate da segni + o -.
+    I terminisono le parti di un'espressione o equazione algebrica separate da segni + o -.
     Possono essere prodotti o frazioni o uno o più numeri, variabili o funzioni.
 
     Ad esempio, nell'espressione `2x^2 - 3ab + 4`, i tre termini sono `2x^2`, `3ab` e 4.
@@ -1672,7 +1673,7 @@ term:
 tessellation:
   title: Tassellazione
   text: |
-    Una tassellatura ____ è un motivo geometrico che copre una superficie senza spazi vuoti o
+    Una tassellaturaè un motivo geometrico che copre una superficie senza spazi vuoti o
     sovrapposizioni.
   link: /course/polyhedra/tessellations
 
@@ -1693,7 +1694,7 @@ tetrahedron:
 theorem:
   title: Teorema
   text: |
-    Un teorema ____ è un risultato o un'osservazione particolarmente importante in matematica. È
+    Un teoremaè un risultato o un'osservazione particolarmente importante in matematica. È
     stato dimostrato che è sempre vero, usando gli assiomi, la logica delle regole e i teoremi
     precedenti che erano già noti per essere veri.
 
@@ -1714,7 +1715,7 @@ transformation-image:
 translation:
   title: Traduzione
   text: |
-    Una traduzione ____ è una trasformazione che sposta una figura in una direzione specifica, senza
+    Una traduzioneè una trasformazione che sposta una figura in una direzione specifica, senza
     modificarne l'angolo o la forma.
   image: translation.svg
   link: /course/transformations/rigid#translations
@@ -1764,7 +1765,7 @@ triangle-legs:
 triangle-inequality:
   title: Disuguaglianza del triangolo
   text: |
-    La disuguaglianza del triangolo ____ afferma che la somma delle lunghezze di due lati qualsiasi
+    La disuguaglianza del triangoloafferma che la somma delle lunghezze di due lati qualsiasi
     di un triangolo è maggiore della lunghezza del terzo lato. Ciò significa anche che la distanza
     più breve tra due punti qualsiasi è una linea retta (perché passare attraverso un terzo punto è
     sempre più lungo).

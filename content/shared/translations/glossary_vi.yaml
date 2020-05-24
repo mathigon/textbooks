@@ -5,13 +5,13 @@
 absolute-value:absolute-value:
   title: Giá trị tuyệt đối
   text: |
-    Giá trị tuyệt đối ____ của một số là khoảng cách từ 0 trên dòng số. Nó làm cho số âm dương,
+    Giá trị tuyệt đốicủa một số là khoảng cách từ 0 trên dòng số. Nó làm cho số âm dương,
     nhưng không thay đổi số dương. Giá trị tuyệt đối của `x` được viết là `|x|`. Ví dụ: `|-5| = 5`
     và `|3| = 3`.
 
 acute-angle:
   title: Góc nhọn
-  text: Một góc cấp tính ____ là một góc có kích thước nhỏ hơn 90 °.
+  text: Một góc cấp tínhlà một góc có kích thước nhỏ hơn 90 °.
 
 acute-triangle:
   title: Tam giác nhọn
@@ -50,7 +50,7 @@ algebraic-numbers:
 algorithm:
   title: Thuật toán
   text: |
-    Thuật toán ____ là một tập hợp các quy tắc hoặc hướng dẫn có thể được sử dụng để giải quyết một
+    Thuật toánlà một tập hợp các quy tắc hoặc hướng dẫn có thể được sử dụng để giải quyết một
     vấn đề cụ thể. Chúng thường được sử dụng bởi các máy tính và xuất hiện ở mọi nơi trong toán học:
     từ _phép chia dài_ đến _Loại bỏ Gaussian_.
 
@@ -74,7 +74,7 @@ angle:
 angle-bisector:
   title: Góc bisector
   text: |
-    Một bisector góc ____ là một đường hoặc tia chia một góc thành một nửa, thành hai góc nhỏ hơn,
+    Một bisector góclà một đường hoặc tia chia một góc thành một nửa, thành hai góc nhỏ hơn,
     đồng dạng.
   image: angle-bisector.svg
 
@@ -88,13 +88,13 @@ anti-dot:
 apothem:
   title: Apothem
   text: |
-    Apothem ____ của đa giác thông thường là khoảng cách từ điểm giữa của một trong các cạnh của nó
+    Apothemcủa đa giác thông thường là khoảng cách từ điểm giữa của một trong các cạnh của nó
     đến tâm của nó.
 
 arabic-numerals:
   title: Chữ số Ả Rập
   text: |
-    Hệ thống chữ số Ả Rập ____ sử dụng mười chữ số khác nhau (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) cùng với
+    Hệ thống chữ số Ả Rậpsử dụng mười chữ số khác nhau (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) cùng với
     hệ thống giá trị thập phân, để viết bất kỳ số nào.
 
     Nó được phát triển đầu tiên ở Ấn Độ, sau đó được các nhà toán học Ả Rập điều chỉnh, trước khi
@@ -122,13 +122,13 @@ arithmetic-mean:
 arithmetic-sequence:
   title: Chuỗi số học
   text: |
-    Một chuỗi số học ____ (đôi khi được gọi là __tiến trình số học__) là một chuỗi các số trong đó
+    Một chuỗi số học(đôi khi được gọi là __tiến trình số học__) là một chuỗi các số trong đó
     sự khác biệt _d_ giữa các số hạng liên tục luôn không đổi.
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
 arithmetic series:
   title: Chuỗi số học
-  text: Một chuỗi số học ____ là tổng các thuật ngữ trong một chuỗi số học.
+  text: Một chuỗi số họclà tổng các thuật ngữ trong một chuỗi số học.
 
 associative:
   title: Kết hợp
@@ -156,20 +156,20 @@ axiom:
 
 axis-of-symmetry:
   title: Trục đối xứng
-  text: 'Nếu một hình có đối xứng phản xạ, trục đối xứng ____ là đường chia nó thành hai nửa bằng nhau.'
+  text: 'Nếu một hình có đối xứng phản xạ, trục đối xứnglà đường chia nó thành hai nửa bằng nhau.'
   image: reflectional-symmetry.svg
   link: /course/transformations/symmetry#reflectional-symmetry
 
 base-10:
   title: Cơ sở 10
   text: |
-    Hệ thống thập phân ____ (hoặc __cơ sở 10__) là hệ thống đánh số được sử dụng phổ biến nhất trên
+    Hệ thống thập phân(hoặc __cơ sở 10__) là hệ thống đánh số được sử dụng phổ biến nhất trên
     toàn thế giới. Mỗi chữ số trong một số có thể có một trong mười giá trị khác nhau, từ 0 đến 9.
 
 bipartite-graph:
   title: Đồ thị hai bên
   text: |
-    Một đồ thị lưỡng cực (hoàn chỉnh) ____ bao gồm hai bộ đỉnh. Mỗi đỉnh được kết nối với tất cả các
+    Một đồ thị lưỡng cực (hoàn chỉnh)bao gồm hai bộ đỉnh. Mỗi đỉnh được kết nối với tất cả các
     đỉnh trong tập đối diện, nhưng không có đỉnh nào trong tập riêng của nó.
   link: /course/graph-theory/handshakes#handshakes-4
 
@@ -197,13 +197,13 @@ calculus:
 
 center-of-rotation:
   title: Trung tâm luân chuyển
-  text: Tâm xoay ____ là điểm xung quanh hình đang được xoay.
+  text: Tâm xoaylà điểm xung quanh hình đang được xoay.
   link: /course/transformations/rigid#rotations
 
 centroid:
   title: Tâm
   text: |
-    Trung tâm ____ của một tam giác là điểm mà ba đường trung tuyến của nó cắt nhau. Đây cũng là
+    Trung tâmcủa một tam giác là điểm mà ba đường trung tuyến của nó cắt nhau. Đây cũng là
     trung tâm của khối lượng lớn của tam giác mật độ đồng nhất.
   link: /course/triangles/properties#center-of-mass
 
@@ -214,33 +214,33 @@ chaos:
 circle:
   title: Vòng tròn
   text: |
-    Vòng tròn ____ là tập hợp tất cả các điểm theo hai chiều, tại một khoảng cách cố định (bán kính
+    Vòng trònlà tập hợp tất cả các điểm theo hai chiều, tại một khoảng cách cố định (bán kính
     __) từ một điểm đã cho (tâm __).
   image: circle.svg
   link: /course/circles/introduction#radius
 
 circle-area:
   title: Diện tích hình tròn
-  text: Diện tích ____ của một vòng tròn có bán kính _r_ được đưa ra bởi folmula `A = pi r^2`.
+  text: Diện tíchcủa một vòng tròn có bán kính _r_ được đưa ra bởi folmula `A = pi r^2`.
 
 circle-circumference:
   title: Chu vi của một vòng tròn
   text: |
-    Chu vi ____ của một vòng tròn là khoảng cách xung quanh cạnh ngoài của nó. Một vòng tròn có bán
+    Chu vicủa một vòng tròn là khoảng cách xung quanh cạnh ngoài của nó. Một vòng tròn có bán
     kính _r_ có chu vi `C = 2 pi r`.
   link: /course/circles/introduction#radius
 
 circle-diameter:
   title: Đường kính (hình tròn)
   text: |
-    Đường kính ____ của một vòng tròn là khoảng cách giữa hai điểm đối diện trên chu vi của nó và đi
+    Đường kínhcủa một vòng tròn là khoảng cách giữa hai điểm đối diện trên chu vi của nó và đi
     qua tâm của nó.
   link: /course/circles/introduction#radius
 
 circle-radius:
   title: Bán kính
   text: |
-    Bán kính ____ của một vòng tròn là khoảng cách (hoặc một đoạn đường) giữa tâm của nó và bất kỳ
+    Bán kínhcủa một vòng tròn là khoảng cách (hoặc một đoạn đường) giữa tâm của nó và bất kỳ
     điểm nào trên chu vi của nó.
   link: /course/circles/introduction#radius
 
@@ -258,12 +258,12 @@ circle-sector:
 circle-segment:
   title: Phân đoạn vòng tròn
   text: |
-    Một đoạn ____ của một vòng tròn là một phần của phần bên trong của nó, được giới hạn bởi một hợp
+    Một đoạncủa một vòng tròn là một phần của phần bên trong của nó, được giới hạn bởi một hợp
     âm và cung tròn tương ứng.
 
 circumcircle:
   title: Vòng tròn của một hình tam giác
-  text: Vòng tròn ____ của một tam giác là đường tròn đi qua cả ba đỉnh của nó.
+  text: Vòng tròncủa một tam giác là đường tròn đi qua cả ba đỉnh của nó.
   image: circumcircle.svg
   link: /course/triangles/properties#circumcircle-1
 
@@ -297,7 +297,7 @@ complete-graph:
 complex-numbers:
   title: Số phức
   text: |
-    Các số phức ____ là tất cả các số là tổng hoặc hiệu của số thực và số ảo. Chúng thường được viết
+    Các số phứclà tất cả các số là tổng hoặc hiệu của số thực và số ảo. Chúng thường được viết
     là `a + bi`, trong đó _a_ là phần thực và _b_ là phần ảo.
 
     Số phức có thể được biểu diễn trên mặt phẳng hai chiều, trong đó _x_ -axis là số thực và _y_
@@ -308,7 +308,7 @@ complex-numbers:
 composite-number:
   title: Hợp số
   text: |
-    Số tổng hợp ____ là một số nguyên không phải là số nguyên tố. Điều này có nghĩa là nó có các yếu
+    Số tổng hợplà một số nguyên không phải là số nguyên tố. Điều này có nghĩa là nó có các yếu
     tố khác hơn 1 và chính nó.
 
 concave:
@@ -322,11 +322,11 @@ concave:
 cone:
   title: Nón
   text: |
-    Một hình nón ____ là một vật rắn ba chiều có cơ sở _tròn_ được nối với một điểm duy nhất (được
+    Một hình nónlà một vật rắn ba chiều có cơ sở _tròn_ được nối với một điểm duy nhất (được
     gọi là đỉnh __) bởi một cạnh cong. Bạn cũng có thể nghĩ về một hình nón như một kim tự tháp tròn
     hình tròn.
 
-    Một hình nón phải ____ là một hình nón có đỉnh ngay phía trên tâm của nó.
+    Một hình nón phảilà một hình nón có đỉnh ngay phía trên tâm của nó.
   link: /course/circles/spheres-cones-cylinders#cone
   image: cone.svg
 
@@ -354,7 +354,7 @@ congruent-angles:
 conic-section:
   title: Phần conic
   text: |
-    Phần hình nón ____ là một đường cong được tạo ra là giao điểm của bề mặt hình nón với mặt phẳng.
+    Phần hình nónlà một đường cong được tạo ra là giao điểm của bề mặt hình nón với mặt phẳng.
     Có bốn loại phần hình nón khác nhau, có chung nhiều thuộc tính:
 
     * Vòng tròn
@@ -376,12 +376,12 @@ convex:
 coordinate-system:
   title: Hệ tọa độ
   text: |
-    Hệ thống dây dẫn ____ là mặt phẳng hai chiều chứa hai trục vuông góc. Mỗi điểm trên mặt phẳng có
+    Hệ thống dây dẫnlà mặt phẳng hai chiều chứa hai trục vuông góc. Mỗi điểm trên mặt phẳng có
     thể được xác định bằng hai số (tọa độ), xác định khoảng cách của nó với hai trục.
 
 coordinate-system-origin:
   title: Hệ tọa độ
-  text: 'Nguồn gốc ____ của hệ tọa độ là điểm có tọa độ (0, 0). Nó thường là điểm mà hai trục giao nhau.'
+  text: 'Nguồn gốccủa hệ tọa độ là điểm có tọa độ (0, 0). Nó thường là điểm mà hai trục giao nhau.'
 
 corresponding-angles:
   title: Góc tương ứng
@@ -407,7 +407,7 @@ cpoct:
 
 cross-section:
   title: Mặt cắt ngang
-  text: Mặt cắt ____ là giao điểm của vật rắn ba chiều với mặt phẳng.
+  text: Mặt cắtlà giao điểm của vật rắn ba chiều với mặt phẳng.
 
 cryptography:
   title: Mật mã
@@ -416,7 +416,7 @@ cryptography:
 cube:
   title: Khối lập phương
   text: |
-    Một khối ____ (đôi khi được gọi là __Hexahedron__) là một khối đa diện đều trong đó mọi mặt là
+    Một khối(đôi khi được gọi là __Hexahedron__) là một khối đa diện đều trong đó mọi mặt là
     một hình vuông. Nó là một trong năm _chất rắn Platonic_, và nó có 6 mặt, 8 đỉnh và 12 cạnh.
   link: /course/polyhedra/platonic#platonic-overview
 
@@ -427,7 +427,7 @@ cube-volume:
 cylinder:
   title: Hình trụ
   text: |
-    Một hình trụ ____ là một vật rắn ba chiều bao gồm hai cạnh song song, song song (các cơ sở __),
+    Một hình trụlà một vật rắn ba chiều bao gồm hai cạnh song song, song song (các cơ sở __),
     được nối bởi một bề mặt cong. Bạn cũng có thể nghĩ về một hình trụ như một lăng kính tròn hình
     tròn.
   link: /course/circles/spheres-cones-cylinders#cylinder-prism
@@ -451,12 +451,12 @@ degrees:
 
 denominator:
   title: Mẫu số
-  text: 'Mẫu số ____ là số dưới cùng trong một phân số. Ví dụ: trong `4/7`, số 7 là mẫu số.'
+  text: 'Mẫu sốlà số dưới cùng trong một phân số. Ví dụ: trong `4/7`, số 7 là mẫu số.'
 
 dilation:
   title: Sự giãn nở
   text: |
-    Sự giãn nở ____ là một phép biến đổi kích thước hình dạng hình học, bằng cách làm cho nó lớn hơn
+    Sự giãn nởlà một phép biến đổi kích thước hình dạng hình học, bằng cách làm cho nó lớn hơn
     hoặc nhỏ hơn.
   image: dilation.svg
   link: /course/transformations/dilations
@@ -503,7 +503,7 @@ dot-annihilation:
 dot-machine:
   title: Máy chấm
   text: |
-    Máy chấm ____ bao gồm nhiều ô chứa dấu chấm. Bạn có thể thao tác các dấu chấm này theo các quy
+    Máy chấmbao gồm nhiều ô chứa dấu chấm. Bạn có thể thao tác các dấu chấm này theo các quy
     tắc cụ thể.
 
     Ví dụ: trong máy `1←3`, 3 chấm trong một ô có thể được chuyển đổi thành 1 chấm trong ô tiếp theo
@@ -513,7 +513,7 @@ dot-machine:
 ellipse:
   title: Hình elip
   text: |
-    Một hình elip ____ là một đường cong bao quanh hai tiêu điểm. Bất kỳ điểm nào trên chu vi của
+    Một hình eliplà một đường cong bao quanh hai tiêu điểm. Bất kỳ điểm nào trên chu vi của
     hình elip đều có cùng khoảng _tổng khoảng cách_ với hai tiêu điểm.
 
     Nếu các tiêu điểm rất gần, hình elip trông gần giống như một vòng tròn. Khi chúng di chuyển xa
@@ -526,12 +526,12 @@ ellipse:
 equation:
   title: Phương trình
   text: |
-    Phương trình ____ là một câu lệnh toán học được tạo bằng cách kết nối hai hoặc nhiều biểu thức
+    Phương trìnhlà một câu lệnh toán học được tạo bằng cách kết nối hai hoặc nhiều biểu thức
     với dấu __bằng dấu__ `=`. Nó chỉ ra rằng tất cả các biểu thức có cùng giá trị.
 
 equilateral-triangle:
   title: Tam giác đều
-  text: Một tam giác đều ____ là một tam giác trong đó cả ba cạnh có cùng độ dài.
+  text: Một tam giác đềulà một tam giác trong đó cả ba cạnh có cùng độ dài.
 
 euclidean-geometry:
   title: Hình học Euclide
@@ -545,14 +545,14 @@ euclidean-geometry:
 factor:
   title: Hệ số
   text: |
-    Một số _a_ là một yếu tố ____ (hoặc ____) của một số _b_, nếu bạn có thể chia _b_ bởi _a_ mà
+    Một số _a_ là một yếu tố(hoặc ____) của một số _b_, nếu bạn có thể chia _b_ bởi _a_ mà
     không có phần còn lại.
   link: /course/divisibility/factors-and-multiples
 
 factorial:
   title: yếu tố
   text: |
-    Yếu tố ____ của một số nguyên dương là sản phẩm của tất cả các số nguyên lên đến và bao gồm
+    Yếu tốcủa một số nguyên dương là sản phẩm của tất cả các số nguyên lên đến và bao gồm
     chính nó. Chúng tôi viết nó bằng cách sử dụng dấu chấm than, ví dụ
 
     {.text-center} `5! = 1×2×3×4×5`.
@@ -561,7 +561,7 @@ factorial:
 
 factorisation:
   title: Bao thanh toán cao cấp
-  text: Hệ số nguyên tố ____ của một số là một cách để viết nó như là một sản phẩm của các số nguyên tố.
+  text: Hệ số nguyên tốcủa một số là một cách để viết nó như là một sản phẩm của các số nguyên tố.
   link: /course/divisibility/primes
 
 fermat-last:
@@ -596,7 +596,7 @@ figurate-numbers:
 formula:
   title: Công thức
   text: |
-    Công thức ____ là quy tắc hoặc phương trình mô tả mối quan hệ giữa hai hoặc nhiều biến. Một ví
+    Công thứclà quy tắc hoặc phương trình mô tả mối quan hệ giữa hai hoặc nhiều biến. Một ví
     dụ là `A = πr^2`.
 
 fractal:
@@ -617,14 +617,14 @@ fta:
 function:
   title: Chức năng
   text: |
-    Hàm ____ là một quan hệ toán học chuyển đổi một đầu vào (_x_) thành chính xác một đầu ra (_y_).
+    Hàmlà một quan hệ toán học chuyển đổi một đầu vào (_x_) thành chính xác một đầu ra (_y_).
     Chúng thường được biểu diễn dưới dạng phương trình toán học có dạng `f(x)`.
 
 function-graph:
   title: Đồ thị của các hàm
   text: |
     Chúng ta có thể vẽ các hàm toán học có dạng `f(x)` trong một hệ tọa độ. Kết quả được gọi là đồ
-    thị ____ của hàm.
+    thịcủa hàm.
 
 gcf:
   title: Yếu tố chung lớn nhất
@@ -636,14 +636,14 @@ gcf:
 geometric-sequence:
   title: Trình tự hình học
   text: |
-    Một chuỗi hình học ____ (đôi khi được gọi là __tiến trình hình học__) là một chuỗi các số trong
+    Một chuỗi hình học(đôi khi được gọi là __tiến trình hình học__) là một chuỗi các số trong
     đó tỷ lệ _r_ giữa các số hạng liên tục luôn không đổi.
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
 geometric-series:
   title: Dòng hình học
   text: |
-    Một chuỗi hình học ____ là tổng vô hạn của các số hạng trong một chuỗi hình học, trong đó các số
+    Một chuỗi hình họclà tổng vô hạn của các số hạng trong một chuỗi hình học, trong đó các số
     hạng liên tiếp có tỷ lệ không đổi _r_. Ví dụ,
 
     {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
@@ -653,14 +653,14 @@ geometric-series:
 glide-reflection:
   title: Phản xạ trượt
   text: |
-    Phản xạ trượt ____ là một loại biến đổi đặc biệt. Nó là sự kết hợp của một phản xạ __ và một bản
+    Phản xạ trượtlà một loại biến đổi đặc biệt. Nó là sự kết hợp của một phản xạ __ và một bản
     dịch __ cùng hướng với trục phản chiếu.
   link: /course/transformations/symmetry-groups#footsteps
 
 golden-ratio:
   title: Tỉ lệ vàng
   text: |
-    Tỷ lệ vàng ____ là một số vô tỷ cụ thể có giá trị `φ = 1.61803398875…`. Nó có thể được xấp xỉ
+    Tỷ lệ vànglà một số vô tỷ cụ thể có giá trị `φ = 1.61803398875…`. Nó có thể được xấp xỉ
     bằng cách chia hai số Fibonacci liên tiếp.
 
     Tỷ lệ vàng thường được xem là đặc biệt thẩm mỹ trong nghệ thuật và kiến trúc, và nó xuất hiện
@@ -669,7 +669,7 @@ golden-ratio:
 
 graph:
   title: Đồ thị
-  text: Biểu đồ ____ là tập hợp các đỉnh được kết nối bởi các cạnh.
+  text: Biểu đồlà tập hợp các đỉnh được kết nối bởi các cạnh.
   link: /course/graph-theory/introduction
 
 graph-cycle:
@@ -689,12 +689,12 @@ graph-edge:
 
 graph-order:
   title: Đặt hàng
-  text: Thứ tự ____ của đồ thị là số đỉnh trong nó.
+  text: Thứ tựcủa đồ thị là số đỉnh trong nó.
   link: /course/graph-theory/introduction#intro-3
 
 graph-vertex:
   title: Đỉnh
-  text: Một đỉnh ____ là một điểm hoặc nút là một phần của biểu đồ.
+  text: Một đỉnhlà một điểm hoặc nút là một phần của biểu đồ.
   link: /course/graph-theory/introduction
 
 gravity:
@@ -735,22 +735,22 @@ hailstone-sequence:
 
 heptagon:
   title: Thất giác
-  text: Một heptagon ____ là một đa giác có bảy cạnh.
+  text: Một heptagonlà một đa giác có bảy cạnh.
 
 hexagon:
   title: Hình lục giác
-  text: Một hình lục giác ____ là một đa giác có sáu cạnh.
+  text: Một hình lục giáclà một đa giác có sáu cạnh.
 
 hyperbola:
   title: Hyperbola
   text: |
-    Một hyperbola ____ là hình dạng của đồ thị của hàm `y = 1/x`. Nó bao gồm hai phần rời rạc, cả
+    Một hyperbolalà hình dạng của đồ thị của hàm `y = 1/x`. Nó bao gồm hai phần rời rạc, cả
     hai đều tiếp cận _tiệm cận_. Nó cũng là một phần hình nón __.
   image: hyperbola.svg
 
 hypotenuse:
   title: Cạnh huyền
-  text: 'Đường huyền ____ của tam giác vuông là cạnh dài nhất của nó, nằm đối diện với góc vuông.'
+  text: 'Đường huyềncủa tam giác vuông là cạnh dài nhất của nó, nằm đối diện với góc vuông.'
   image: right-triangle.svg
 
 icosahedron:
@@ -766,7 +766,7 @@ imaginary:
     __Số ảo__ được tạo bằng cách lấy căn bậc hai của số âm. Mặc dù tên của họ, họ có tầm quan trọng
     lớn trong toán học, khoa học và kỹ thuật.
 
-    Đơn vị tưởng tượng ____ được viết là `i = sqrt(−1)` và các số ảo khác có thể được viết dưới dạng
+    Đơn vị tưởng tượngđược viết là `i = sqrt(−1)` và các số ảo khác có thể được viết dưới dạng
     bội số của nó. Ví dụ: `sqrt(-5) = 5i`.
 
 infinity:
@@ -784,12 +784,12 @@ information:
 integer:
   title: Số nguyên
   text: |
-    Các số nguyên ____ là các số nguyên dương và âm bao gồm 0: số, mật3, mật2, mật1, 0, 1, 2, 3,
+    Các số nguyênlà các số nguyên dương và âm bao gồm 0: số, mật3, mật2, mật1, 0, 1, 2, 3,
     lỗi. Chúng thường được ký hiệu bằng ký hiệu `ZZ`.
 
 internal-angle:
   title: Góc bên trong
-  text: 'Các góc trong ____ của đa giác là các góc ở bên trong, ở mọi đỉnh.'
+  text: 'Các góc trongcủa đa giác là các góc ở bên trong, ở mọi đỉnh.'
   image: internal-angle.svg
 
 irrational-numbers:
@@ -802,7 +802,7 @@ irrational-numbers:
 irregular-polygon:
   title: Đa giác không đều
   text: |
-    Một đa giác không đều ____ là một đa giác _không thường xuyên_. Điều này có nghĩa là cả hai bên
+    Một đa giác không đềulà một đa giác _không thường xuyên_. Điều này có nghĩa là cả hai bên
     hoặc các góc của don đều có cùng kích thước.
 
 isosceles-triangle:
@@ -812,7 +812,7 @@ isosceles-triangle:
 iss:
   title: Trạm không gian quốc tế
   text: |
-    Trạm vũ trụ quốc tế ____ (ISS) đã được phóng vào năm 1998 và quay quanh Trái đất ở độ cao khoảng
+    Trạm vũ trụ quốc tế(ISS) đã được phóng vào năm 1998 và quay quanh Trái đất ở độ cao khoảng
     400 km. Đây là cơ thể nhân tạo lớn nhất trong quỹ đạo Trái đất thấp và đã có người ở liên tục kể
     từ khi phóng. Nó có thể được nhìn thấy bằng mắt thường từ Trái đất.
 
@@ -828,7 +828,7 @@ julia-set:
 
 kite:
   title: cánh diều
-  text: Một diều ____ là một tứ giác trong đó hai cặp cạnh kề có cùng độ dài.
+  text: Một diềulà một tứ giác trong đó hai cặp cạnh kề có cùng độ dài.
   link: /course/polyhedra/quadrilaterals#kites
 
 koch-snowflake:
@@ -856,34 +856,34 @@ lcm:
 line:
   title: Hàng
   text: |
-    Một dòng ____ là một tập hợp vô số điểm kéo dài mãi mãi theo cả hai hướng. Các dòng luôn thẳng
+    Một dònglà một tập hợp vô số điểm kéo dài mãi mãi theo cả hai hướng. Các dòng luôn thẳng
     và không có chiều rộng __.
   link: /course/euclidean-geometry/definitions#lines
 
 line-segment:
   title: Đoạn đường
   text: |
-    Đoạn đường ____ là một phần của đường nằm giữa hai điểm, không kéo dài đến vô tận. Chúng tôi có
+    Đoạn đườnglà một phần của đường nằm giữa hai điểm, không kéo dài đến vô tận. Chúng tôi có
     thể gắn nhãn các phân đoạn dòng từ điểm _A_ đến điểm _B_ là `bar(AB)`.
   link: /course/euclidean-geometry/definitions#segments
 
 line-slope:
   title: Độ dốc của một dòng
   text: |
-    Độ dốc ____ của một dòng đo độ dốc của nó, và thường được biểu thị bằng chữ _m_. Đó là thay đổi
+    Độ dốccủa một dòng đo độ dốc của nó, và thường được biểu thị bằng chữ _m_. Đó là thay đổi
     trong _y_ cho một thay đổi đơn vị trong _x_ dọc theo dòng.
 
 linear-equation:
   title: Phương trình đường thẳng
   text: |
-    Phương trình tuyến tính ____ có dạng `ax + b = 0`, trong đó _x_ là một biến và _a_ và _b_ là các
+    Phương trình tuyến tínhcó dạng `ax + b = 0`, trong đó _x_ là một biến và _a_ và _b_ là các
     số. Khi được vẽ đồ thị trong một hệ tọa độ, các giá trị của `ax+b` tạo thành một đường thẳng.
 
 linear-function:
   title: Hàm tuyến tính
   text: |
-    Hàm tuyến tính ____ là một hàm có đồ thị là một đường thẳng. Nó có thể được định nghĩa là `f(x)
-    = mx + c`, trong đó _m_ là độ dốc của đường và _c_ là _y_ -axis chặn của nó.
+    Hàm tuyến tínhlà một hàm có đồ thị là một đường thẳng. Nó có thể được định nghĩa là
+    `f(x) = mx + c`, trong đó _m_ là độ dốc của đường và _c_ là _y_ -axis chặn của nó.
 
 mandelbrot-set:
   title: Bộ Mandelbrot
@@ -895,7 +895,7 @@ mandelbrot-set:
 
 matrix:
   title: Ma trận
-  text: Ma trận ____ là một mảng hình chữ nhật gồm các số được sắp xếp theo hàng và cột.
+  text: Ma trậnlà một mảng hình chữ nhật gồm các số được sắp xếp theo hàng và cột.
 
 median:
   title: Trung bình
@@ -906,8 +906,8 @@ median:
 midpoint:
   title: Điểm giữa
   text: |
-    Điểm giữa ____ của một đoạn thẳng là điểm trên đoạn đường phân chia đoạn ở giữa, thành hai phần
-    đồng dạng. Công thức trung điểm ____ nói rằng đối với điểm cuối `(x_1, y_1)` và `(x_2,y_2)`,
+    Điểm giữacủa một đoạn thẳng là điểm trên đoạn đường phân chia đoạn ở giữa, thành hai phần
+    đồng dạng. Công thức trung điểmnói rằng đối với điểm cuối `(x_1, y_1)` và `(x_2,y_2)`,
     điểm giữa là `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
 
 millennium-prize:
@@ -937,13 +937,13 @@ millennium-prize:
 mode:
   title: Chế độ
   text: |
-    Chế độ ____ của một tập hợp số là số xảy ra thường xuyên nhất. Ví dụ: chế độ của [3, 4, 4, 4, 5,
+    Chế độcủa một tập hợp số là số xảy ra thường xuyên nhất. Ví dụ: chế độ của [3, 4, 4, 4, 5,
     5, 6] là 5.
 
 molecule:
   title: Phân tử
   text: |
-    Một phân tử ____ bao gồm hai hoặc nhiều nguyên tử được liên kết với nhau bằng liên kết hóa học.
+    Một phân tửbao gồm hai hoặc nhiều nguyên tử được liên kết với nhau bằng liên kết hóa học.
     Nó không có điện tích, không giống như __ion__.
 
     Ví dụ về các phân tử bao gồm `O_2`, bao gồm hai nguyên tử Oxy được kết nối và `H_2 O`, bao gồm
@@ -957,7 +957,7 @@ multiple:
 natural-numbers:
   title: Số tự nhiên
   text: |
-    Các số tự nhiên ____ là các số nguyên dương bắt đầu từ 1: 1, 2, 3, 4, Tấn Chúng thường được ký
+    Các số tự nhiênlà các số nguyên dương bắt đầu từ 1: 1, 2, 3, 4, Tấn Chúng thường được ký
     hiệu bằng ký hiệu `NN`.
 
 net:
@@ -969,7 +969,7 @@ net:
 neutron:
   title: Nơtron
   text: |
-    Một neutron ____ là một trong những hạt tạo nên lõi của một nguyên tử. Nó không có điện tích và
+    Một neutronlà một trong những hạt tạo nên lõi của một nguyên tử. Nó không có điện tích và
     có khối lượng xấp xỉ bằng một proton.
 
 np:
@@ -981,11 +981,11 @@ np:
 
 numerator:
   title: Tử số
-  text: 'Tử số ____ là số đứng đầu trong một phân số. Ví dụ: trong `4/7`, số 4 là tử số.'
+  text: 'Tử sốlà số đứng đầu trong một phân số. Ví dụ: trong `4/7`, số 4 là tử số.'
 
 obtuse-angle:
   title: Góc tù
-  text: Một góc tù ____ là một góc có kích thước lớn hơn 90 ° nhưng nhỏ hơn 180 °.
+  text: Một góc tùlà một góc có kích thước lớn hơn 90 ° nhưng nhỏ hơn 180 °.
 
 obtuse-triangle:
   title: Hình tam giác
@@ -994,7 +994,7 @@ obtuse-triangle:
 
 octagon:
   title: Hình bát giác
-  text: Một hình bát giác ____ là một đa giác có tám cạnh.
+  text: Một hình bát giáclà một đa giác có tám cạnh.
 
 octahedron:
   title: Thiên niên kỷ
@@ -1013,11 +1013,11 @@ order-of-symmetry:
 
 origin:
   title: Gốc
-  text: 'Nguồn gốc ____ của hệ tọa độ là điểm (0, 0), trong đó _x_ -axis và _y_ -axis giao nhau.'
+  text: 'Nguồn gốccủa hệ tọa độ là điểm (0, 0), trong đó _x_ -axis và _y_ -axis giao nhau.'
 
 origin-number-line:
   title: Nguồn gốc của một số dòng
-  text: Nguồn gốc ____ của một dòng số là điểm 0.
+  text: Nguồn gốccủa một dòng số là điểm 0.
 
 palindrome:
   title: Palindrom
@@ -1029,26 +1029,26 @@ palindrome:
 parabola:
   title: Đĩa vệ tinh
   text: |
-    Parabola ____ là hình dạng của đồ thị của hàm số bậc hai như `y = x^2`. Nó là đối xứng, hình chữ
+    Parabolalà hình dạng của đồ thị của hàm số bậc hai như `y = x^2`. Nó là đối xứng, hình chữ
     U và có thể hướng lên trên hoặc xuống dưới. Nó cũng là một phần hình nón __.
   image: parabola.svg
 
 parabola-conic:
   title: Đĩa vệ tinh
   text: |
-    Parabola ____ là tập hợp tất cả các điểm trong mặt phẳng, có cùng khoảng cách với một đường cố
+    Parabolalà tập hợp tất cả các điểm trong mặt phẳng, có cùng khoảng cách với một đường cố
     định, được gọi là __directrix__ và một điểm cố định, được gọi là tiêu điểm ____.
 
 parabola-focus:
   title: Trọng tâm của một Parabola
   text: |
-    Trọng tâm ____ của parabol là một điểm cố định trong phần bên trong của nó. Đối với gương
+    Trọng tâmcủa parabol là một điểm cố định trong phần bên trong của nó. Đối với gương
     parabol, tất cả các tia sáng tới, song song giao nhau trong tiêu điểm sau khi bị phản xạ.
 
 parabola-vertex:
   title: Đỉnh của một Parabola
   text: |
-    Đỉnh ____ của parabol là điểm tại đó nó thay đổi hướng. Nó là cực đại hoặc cực tiểu của hàm bậc
+    Đỉnhcủa parabol là điểm tại đó nó thay đổi hướng. Nó là cực đại hoặc cực tiểu của hàm bậc
     hai tương ứng và nó nằm trên trục đối xứng của parabol.
 
 parallel:
@@ -1061,7 +1061,7 @@ parallel:
 
 parallelogram:
   title: Hình bình hành
-  text: Hình bình hành ____ là một hình tứ giác trong đó cả hai cặp cạnh đối diện đều song song.
+  text: Hình bình hànhlà một hình tứ giác trong đó cả hai cặp cạnh đối diện đều song song.
   link: /course/polyhedra/quadrilaterals#parallelograms
 
 pascals-triangle:
@@ -1080,7 +1080,7 @@ penrose:
 
 pentagon:
   title: Hình năm góc
-  text: Một hình ngũ giác ____ là một đa giác có năm cạnh.
+  text: Một hình ngũ giáclà một đa giác có năm cạnh.
 
 percent:
   title: Phần trăm
@@ -1089,7 +1089,7 @@ percent:
 perfect-numbers:
   title: Số hoàn hảo
   text: |
-    Số hoàn hảo ____ là một số bằng tổng các ước của nó (không bao gồm chính nó). Ví dụ: `28 = 1 + 2
+    Số hoàn hảolà một số bằng tổng các ước của nó (không bao gồm chính nó). Ví dụ: `28 = 1 + 2
     + 4 + 7 + 14` là một số hoàn hảo.
   link: /course/sequences/special#perfect-1
 
@@ -1124,36 +1124,36 @@ platonic-solid:
 point:
   title: Điểm
   text: |
-    Một điểm ____ là một vị trí cụ thể trong không gian. Điểm mô tả một vị trí, nhưng không có kích
+    Một điểmlà một vị trí cụ thể trong không gian. Điểm mô tả một vị trí, nhưng không có kích
     thước hoặc hình dạng bản thân.
   link: /course/euclidean-geometry/definitions#points
 
 polygon:
   title: Đa giác
   text: |
-    Đa giác ____ là hình dạng hình học được tạo thành từ các đoạn thẳng. Đa giác không thể chứa bất
+    Đa giáclà hình dạng hình học được tạo thành từ các đoạn thẳng. Đa giác không thể chứa bất
     kỳ cạnh cong hoặc lỗ. Ví dụ, hình vuông là một đa giác nhưng hình tròn thì không.
   image: polygon.svg
   link: /course/polyhedra/polygons#polygons
 
 polygon-diagonal:
   title: Đường chéo
-  text: Một đường chéo ____ của đa giác là một đoạn thẳng nối hai đỉnh không nằm cạnh nhau.
+  text: Một đường chéocủa đa giác là một đoạn thẳng nối hai đỉnh không nằm cạnh nhau.
 
 polygon-edge:
   title: Cạnh của đa giác
   text: |
-    Các cạnh ____ hoặc ____ của đa giác là các đoạn đường tạo thành đường viền của nó. Ví dụ, một
+    Các cạnhhoặccủa đa giác là các đoạn đường tạo thành đường viền của nó. Ví dụ, một
     hình tam giác có ba cạnh.
 
 polygon-vertex:
   title: Đỉnh của đa giác
-  text: Các đỉnh ____ của đa giác là các điểm mà các cạnh kề của nó gặp nhau (các góc góc của nó).
+  text: Các đỉnhcủa đa giác là các điểm mà các cạnh kề của nó gặp nhau (các góc góc của nó).
 
 polyhedron:
   title: Khối đa diện
   text: |
-    Một đa diện ____ (số nhiều là _polyhedra_) là một vật rắn ba chiều không có bề mặt hoặc cạnh
+    Một đa diện(số nhiều là _polyhedra_) là một vật rắn ba chiều không có bề mặt hoặc cạnh
     cong. Tất cả các mặt của khối đa diện đều là đa giác. Ví dụ, một khối lập phương và một kim tự
     tháp là khối đa diện, nhưng một hình cầu thì không.
   link: /course/polyhedra/polyhedra
@@ -1165,12 +1165,12 @@ polyhedron-dual:
 
 polyhedron-edge:
   title: Cạnh của khối đa diện
-  text: Các cạnh ____ của khối đa diện là các đoạn đường mà hai mặt của nó được kết nối.
+  text: Các cạnhcủa khối đa diện là các đoạn đường mà hai mặt của nó được kết nối.
   link: /course/polyhedra/polyhedra
 
 polyhedron-face:
   title: Khuôn mặt của khối đa diện
-  text: Các mặt ____ của đa diện là các đa giác tạo nên bề mặt của nó.
+  text: Các mặtcủa đa diện là các đa giác tạo nên bề mặt của nó.
   link: /course/polyhedra/polyhedra
 
 polyhedron-vertex:
@@ -1181,7 +1181,7 @@ polyhedron-vertex:
 polynomial:
   title: Đa thức
   text: |
-    Đa thức ____ là một biểu thức đại số bao gồm các hằng số và bội số của các biến được nâng lên
+    Đa thứclà một biểu thức đại số bao gồm các hằng số và bội số của các biến được nâng lên
     thành các số nguyên. Ví dụ: `5x^3 - 2y^2 + x + 4` là một đa thức. Dạng tổng quát nhất của đa
     thức chỉ có một biến là `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, trong đó `a_n`,
     `a_(n-1)`, Lỗi, `a_0` đều là các hằng số cụ thể.
@@ -1202,25 +1202,25 @@ powers:
 prime:
   title: Số nguyên tố
   text: |
-    Số nguyên tố ____ là số nguyên dương không có yếu tố nào ngoài 1 và chính nó. Các số nguyên tố
+    Số nguyên tốlà số nguyên dương không có yếu tố nào ngoài 1 và chính nó. Các số nguyên tố
     đầu tiên là 2, 3, 5, 7, 11, 13, Nhận
   link: /course/divisibility/primes
 
 prime-factor:
   title: Số nguyên tố
-  text: Một số nguyên tố ____ của một số chỉ đơn giản là một yếu tố là số nguyên tố.
+  text: Một số nguyên tốcủa một số chỉ đơn giản là một yếu tố là số nguyên tố.
   link: /course/divisibility/primes
 
 prime-factorisation:
   title: Bao thanh toán cao cấp
   text: |
-    Hệ số nguyên tố ____ của một số là một cách để biểu thị nó là tích của số nguyên tố. Ví dụ: hệ
+    Hệ số nguyên tốcủa một số là một cách để biểu thị nó là tích của số nguyên tố. Ví dụ: hệ
     số nguyên tố của 12 là `2 × 2 × 3`.
 
 prism:
   title: Lăng kính
   text: |
-    Lăng kính ____ là một vật rắn ba chiều có hai mặt đồng dạng là đa giác (được gọi là _cơ sở_), có
+    Lăng kínhlà một vật rắn ba chiều có hai mặt đồng dạng là đa giác (được gọi là _cơ sở_), có
     các đỉnh tương ứng được nối bởi các đoạn song song. Các mặt còn lại của lăng kính đều là hình
     chữ nhật hoặc hình bình hành.
   image: prism.svg
@@ -1228,37 +1228,37 @@ prism:
 probability:
   title: Xác suất
   text: |
-    Xác suất ____ là số từ 0 đến 1 cho biết khả năng xảy ra sự kiện nào đó. Xác suất của một sự kiện
+    Xác suấtlà số từ 0 đến 1 cho biết khả năng xảy ra sự kiện nào đó. Xác suất của một sự kiện
     _A_ được viết là `P(A)`.
 
 probability-tree:
   title: Cây xác suất
-  text: Cây xác suất ____ là sơ đồ cây biểu thị xác suất kết hợp của nhiều sự kiện liên tiếp.
+  text: Cây xác suấtlà sơ đồ cây biểu thị xác suất kết hợp của nhiều sự kiện liên tiếp.
 
 proof:
   title: Bằng chứng
   text: |
-    Bằng chứng ____ là một đối số logic cho thấy vượt quá mọi nghi ngờ rằng một tuyên bố nào đó là
+    Bằng chứnglà một đối số logic cho thấy vượt quá mọi nghi ngờ rằng một tuyên bố nào đó là
     đúng.
 
 protein:
   title: Chất đạm
   text: |
-    Protein ____ là một đại phân tử _lớn_ có thể thực hiện nhiều chức năng khác nhau trong cơ thể
+    Proteinlà một đại phân tử _lớn_ có thể thực hiện nhiều chức năng khác nhau trong cơ thể
     sống: từ tiêu hóa đến giao tiếp giữa các tế bào hoặc sao chép DNA. Protein bao gồm một hoặc
     nhiều chuỗi _dư lượng axit amin_.
 
 proton:
   title: Proton
   text: |
-    Một proton ____ là một trong những hạt tạo nên lõi của một nguyên tử. Nó có phí +1. Số lượng
+    Một protonlà một trong những hạt tạo nên lõi của một nguyên tử. Nó có phí +1. Số lượng
     proton trong một nguyên tử được gọi là số nguyên tử của nó, và nó xác định loại nguyên tố đó là
     gì.
 
 pyramid:
   title: Kim tự tháp
   text: |
-    Một kim tự tháp ____ là một khối đa diện có đa giác làm đáy và các mặt tam giác xung quanh bên
+    Một kim tự tháplà một khối đa diện có đa giác làm đáy và các mặt tam giác xung quanh bên
     ngoài, thuôn dần về một đỉnh.
 
     Trong một __kim tự tháp đều đặn__, cơ sở là một đa giác thông thường __ và đỉnh nằm ngay trên
@@ -1290,13 +1290,13 @@ quadratic:
 quadratic-equation:
   title: Phương trình bậc hai
   text: |
-    Phương trình bậc hai ____ là một phương trình chứa một biến số bậc 2. Nó thường được viết là
+    Phương trình bậc hailà một phương trình chứa một biến số bậc 2. Nó thường được viết là
     `ax^2 + bx + c = 0`, trong đó _x_ là một biến, _a_, _b_ và _c_ là các số và `a != 0`.
 
 quadratic-formula:
   title: Công thức phương trình bậc hai
   text: |
-    Công thức bậc hai ____ là một cách để xác định gốc của phương trình bậc hai. Phương trình `ax^2
+    Công thức bậc hailà một cách để xác định gốc của phương trình bậc hai. Phương trình `ax^2
     + bx + c = 0` có gốc
 
     {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
@@ -1304,18 +1304,18 @@ quadratic-formula:
 quadratic-function:
   title: Chức năng bậc hai
   text: |
-    Hàm bậc hai ____ là hàm có dạng `f(x) = ax^2+bx+c`, trong đó _a_, _b_ và _c_ là các số và `a !=
-    0`. Đồ thị của hàm số bậc hai là một đường cong hình chữ U được gọi là parabola ____.
+    Hàm bậc hailà hàm có dạng `f(x) = ax^2+bx+c`, trong đó _a_, _b_ và _c_ là các số và
+    `a != 0`. Đồ thị của hàm số bậc hai là một đường cong hình chữ U được gọi là parabola.
 
 quadratic-function-vertex-form:
   title: Dạng đỉnh của hàm bậc hai
   text: |
-    Dạng đỉnh ____ hoặc __dạng chuẩn__ của hàm bậc hai là `f(x) = a(x − h)^2 + k`. Điểm `(h, k)` là
-    đỉnh ____ của parabol tương ứng.
+    Dạng đỉnhhoặc __dạng chuẩn__ của hàm bậc hai là `f(x) = a(x − h)^2 + k`. Điểm `(h, k)` là
+    đỉnhcủa parabol tương ứng.
 
 quadrilateral:
   title: Tứ giác
-  text: Một tứ giác ____ là một đa giác có bốn cạnh.
+  text: Một tứ giáclà một đa giác có bốn cạnh.
   link: /course/polyhedra/quadrilaterals
 
 quantum:
@@ -1345,7 +1345,7 @@ rational-numbers:
 ray:
   title: cá đuối
   text: |
-    Tia ____ là một phần của một đường bắt đầu tại một điểm và kéo dài vô tận theo một hướng. Chúng
+    Tialà một phần của một đường bắt đầu tại một điểm và kéo dài vô tận theo một hướng. Chúng
     ta có thể gắn nhãn các tia bắt đầu từ `A` là `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
 
@@ -1358,12 +1358,12 @@ real-numbers:
 
 rectangle:
   title: Hình chữ nhật
-  text: Hình chữ nhật ____ là một hình tứ giác trong đó cả bốn góc là 90 °.
+  text: Hình chữ nhậtlà một hình tứ giác trong đó cả bốn góc là 90 °.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 reflection:
   title: Suy tư
-  text: Sự phản chiếu ____ là một phép biến đổi mà lật ngược lại
+  text: Sự phản chiếulà một phép biến đổi mà lật ngược lại
   link: /course/transformations/rigid#reflections
 
 reflectional-symmetry:
@@ -1383,13 +1383,13 @@ regular-polygon:
 rhombus:
   title: Hình thoi
   text: |
-    Một hình thoi ____ (số nhiều là _hình thoi_ hoặc _rhombi_) là một hình tứ giác trong đó tất cả
+    Một hình thoi(số nhiều là _hình thoi_ hoặc _rhombi_) là một hình tứ giác trong đó tất cả
     các cạnh có cùng độ dài.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 right-angle:
   title: Góc phải
-  text: Một góc phải ____ là một góc có kích thước 90 °.
+  text: Một góc phảilà một góc có kích thước 90 °.
 
 right-triangle:
   title: Tam giác vuông
@@ -1400,14 +1400,14 @@ right-triangle:
 rigid-transformation:
   title: Biến đổi cứng nhắc
   text: |
-    Một phép biến đổi cứng ____ (hoặc __isometry__) là một phép biến đổi không thay đổi kích thước
+    Một phép biến đổi cứng(hoặc __isometry__) là một phép biến đổi không thay đổi kích thước
     hoặc hình dạng của hình hình học.
   link: /course/transformations/rigid
 
 roman-numerals:
   title: Chữ số La Mã
   text: |
-    Hệ thống chữ số La Mã ____ được phát triển ở La Mã cổ đại và được sử dụng ở châu Âu cho đến thế
+    Hệ thống chữ số La Mãđược phát triển ở La Mã cổ đại và được sử dụng ở châu Âu cho đến thế
     kỷ 14. Nó cho phép bạn viết bất kỳ số nguyên nào bằng cách kết hợp bảy chữ cái khác nhau:
 
     * Tôi = 1
@@ -1427,7 +1427,7 @@ roman-numerals:
 rotation:
   title: Vòng xoay
   text: |
-    Xoay ____ là một phép biến đổi mà Luân biến hình dạng theo một góc nhất định xung quanh một điểm
+    Xoaylà một phép biến đổi mà Luân biến hình dạng theo một góc nhất định xung quanh một điểm
     cố định.
   link: /course/transformations/rigid#rotations
 
@@ -1446,7 +1446,7 @@ roulette:
 scale-factor:
   title: Yếu tố quy mô
   text: |
-    Hệ số tỷ lệ ____ của hai hình hình học tương tự là tỷ lệ của hai độ dài tương ứng.
+    Hệ số tỷ lệcủa hai hình hình học tương tự là tỷ lệ của hai độ dài tương ứng.
 
     Hệ số tỷ lệ nhỏ hơn 1 biểu thị hình dạng được thu nhỏ và hệ số tỷ lệ lớn hơn 1 cho biết hình
     dạng được phóng to.
@@ -1467,7 +1467,7 @@ scientific-notation:
 sequence:
   title: Sự nối tiếp
   text: |
-    Chuỗi ____ là danh sách các số (hoặc các phần tử khác như các đối tượng hình học), thường theo
+    Chuỗilà danh sách các số (hoặc các phần tử khác như các đối tượng hình học), thường theo
     một mẫu hoặc hàm cụ thể. Trình tự có thể là cả hữu hạn và vô hạn.
   link: /course/sequences/introduction#simple-patterns
 
@@ -1486,20 +1486,20 @@ sequence-divergence:
 sequence-explicit:
   title: Công thức rõ ràng
   text: |
-    Một công thức rõ ràng ____ cho một chuỗi biểu thị giá trị của _n_ thuật ngữ `x_n` là một hàm của
+    Một công thức rõ ràngcho một chuỗi biểu thị giá trị của _n_ thuật ngữ `x_n` là một hàm của
     _n_.
   link: /course/sequences/introduction#explicit
 
 sequence-recursive:
   title: Công thức đệ quy
   text: |
-    Một công thức đệ quy ____ cho một chuỗi biểu thị giá trị của mọi số hạng `x_n` như là một hàm
+    Một công thức đệ quycho một chuỗi biểu thị giá trị của mọi số hạng `x_n` như là một hàm
     của các số hạng trước đó.
   link: /course/sequences/introduction#recursive-1
 
 sequence-term:
   title: Điều khoản của một chuỗi
-  text: Các điều khoản ____ của một chuỗi là tất cả các số hoặc phần tử riêng lẻ của nó.
+  text: Các điều khoảncủa một chuỗi là tất cả các số hoặc phần tử riêng lẻ của nó.
   link: /course/sequences/introduction#simple-patterns
 
 sierpinski-triangle:
@@ -1534,46 +1534,46 @@ sin:
 sphere:
   title: Quả cầu
   text: |
-    Một hình cầu ____ là một vật rắn ba chiều bao gồm tất cả các điểm có cùng khoảng cách từ một
+    Một hình cầulà một vật rắn ba chiều bao gồm tất cả các điểm có cùng khoảng cách từ một
     trung tâm _đã cho_. Khoảng cách này được gọi là bán kính __ của hình cầu.
   link: /course/circles/spheres-cones-cylinders#sphere
 
 sphere-radius:
   title: Bán kính hình cầu
   text: |
-    Bán kính ____ của một hình cầu là khoảng cách (hoặc một đoạn thẳng) giữa tâm của nó và bất kỳ
+    Bán kínhcủa một hình cầu là khoảng cách (hoặc một đoạn thẳng) giữa tâm của nó và bất kỳ
     điểm nào trên bề mặt của nó.
 
 square:
   title: Quảng trường
   text: |
-    Một hình vuông ____ là một hình tứ giác đều: tất cả các cạnh đều có cùng độ dài và tất cả các
+    Một hình vuônglà một hình tứ giác đều: tất cả các cạnh đều có cùng độ dài và tất cả các
     góc đều có cùng kích thước (90 °).
   link: /course/polyhedra/quadrilaterals
 
 square-area:
   title: Diện tích của một quảng trường
-  text: Diện tích ____ của hình vuông có độ dài cạnh _s_ là `A = s^2`.
+  text: Diện tíchcủa hình vuông có độ dài cạnh _s_ là `A = s^2`.
 
 square-matrix:
   title: Ma trận vuông
-  text: Ma trận vuông ____ là ma trận có cùng số lượng hàng và cột.
+  text: Ma trận vuônglà ma trận có cùng số lượng hàng và cột.
 
 square-numbers:
   title: Số vuông
   text: |
-    Số vuông ____ là một số có thể được biểu thị dưới dạng bình phương của một số nguyên khác. Các
+    Số vuônglà một số có thể được biểu thị dưới dạng bình phương của một số nguyên khác. Các
     số vuông đầu tiên là 1, 4, 9, 16, 25, Tầm
   link: /course/sequences/introduction#squares
 
 subdivision:
   title: Phân khu
-  text: 'Để tạo phân vùng ____ của biểu đồ, bạn thêm các đỉnh bổ sung dọc theo các cạnh của nó.'
+  text: 'Để tạo phân vùngcủa biểu đồ, bạn thêm các đỉnh bổ sung dọc theo các cạnh của nó.'
 
 subgraph:
   title: Biểu đồ con
   text: |
-    Biểu đồ là một sơ đồ con ____ của một biểu đồ khác, nếu nó được hình thành bởi một tập hợp con
+    Biểu đồ là một sơ đồ concủa một biểu đồ khác, nếu nó được hình thành bởi một tập hợp con
     của các cạnh và đỉnh đồ thị lớn hơn.
   link: /course/graph-theory/introduction#intro-2
 
@@ -1591,7 +1591,7 @@ symmetry:
 symmetry-group:
   title: Nhóm đối xứng
   text: |
-    Nhóm đối xứng ____ của một đối tượng hình học là tập hợp của tất cả các đối xứng __ của nó (cũng
+    Nhóm đối xứngcủa một đối tượng hình học là tập hợp của tất cả các đối xứng __ của nó (cũng
     như nhận dạng __).
   link: /course/transformations/symmetry-groups#groups-1
 
@@ -1609,13 +1609,13 @@ tan:
 tangent:
   title: Đường tiếp tuyến
   text: |
-    Một đường tiếp tuyến ____ là một đường chạm vào một đường cong hoặc đường tròn tại một điểm, mà
+    Một đường tiếp tuyếnlà một đường chạm vào một đường cong hoặc đường tròn tại một điểm, mà
     không giao nhau. Điểm này đôi khi được gọi là điểm __của tiếp tuyến__.
 
 term:
   title: Thuật ngữ (Đại số)
   text: |
-    Các thuật ngữ ____ là các phần của biểu thức hoặc phương trình đại số được phân tách bằng dấu +
+    Các thuật ngữlà các phần của biểu thức hoặc phương trình đại số được phân tách bằng dấu +
     hoặc -. Chúng có thể là sản phẩm hoặc phân số hoặc một hoặc nhiều số, biến hoặc hàm.
 
     Ví dụ: trong biểu thức `2x^2 - 3ab + 4`, ba thuật ngữ là `2x^2`, `3ab` và 4.
@@ -1630,28 +1630,28 @@ tessellation:
 tetrahedral-numbers:
   title: Số tứ diện
   text: |
-    Số tứ diện ____ là một số được tạo bằng cách xếp nhiều khối cầu vào một tứ diện __. Các số tứ
+    Số tứ diệnlà một số được tạo bằng cách xếp nhiều khối cầu vào một tứ diện __. Các số tứ
     diện đầu tiên là 1, 4, 10, 20, 35, Năm
   link: /course/sequences/figurate#tetrahedral
 
 tetrahedron:
   title: Tứ diện
   text: |
-    Khối tứ diện ____ là một khối rắn Platonic và bao gồm bốn mặt là các tam giác đều. Nó có bốn
+    Khối tứ diệnlà một khối rắn Platonic và bao gồm bốn mặt là các tam giác đều. Nó có bốn
     đỉnh và sáu cạnh.
   link: /course/polyhedra/platonic#platonic-overview
 
 theorem:
   title: Định lý
   text: |
-    Định lý ____ là kết quả hoặc quan sát đặc biệt quan trọng trong toán học. Nó đã được chứng minh
+    Định lýlà kết quả hoặc quan sát đặc biệt quan trọng trong toán học. Nó đã được chứng minh
     là luôn luôn đúng, sử dụng các tiên đề, logic quy tắc và các định lý trước đây đã được biết là
     đúng.
 
 transformation:
   title: Biến đổi
   text: |
-    Phép biến đổi ____ chuyển đổi một hình dạng hình học thành một hình dạng khác. Có nhiều loại
+    Phép biến đổichuyển đổi một hình dạng hình học thành một hình dạng khác. Có nhiều loại
     biến đổi khác nhau, như phản xạ __ hoặc __.
   link: /course/transformations/rigid#transformations
 
@@ -1665,7 +1665,7 @@ transformation-image:
 translation:
   title: Dịch
   text: |
-    Bản dịch ____ là một phép biến đổi di chuyển một hình theo một hướng cụ thể, mà không thay đổi
+    Bản dịchlà một phép biến đổi di chuyển một hình theo một hướng cụ thể, mà không thay đổi
     góc hoặc hình dạng của nó.
   image: translation.svg
   link: /course/transformations/rigid#translations
@@ -1684,14 +1684,14 @@ transversal:
 trapezium:
   title: Hình thang
   text: |
-    Một hình thang ____ (đôi khi được gọi là __hình thang__) là một hình tứ giác trong đó hai cạnh
+    Một hình thang(đôi khi được gọi là __hình thang__) là một hình tứ giác trong đó hai cạnh
     đối diện song song. Chúng được gọi là _cơ sở_ của hình thang và hai bên còn lại được gọi là
     _chân_.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-2
 
 triangle:
   title: Tam giác
-  text: Tam giác ____ là hình dạng hình học có ba cạnh thẳng và ba góc trong.
+  text: Tam giáclà hình dạng hình học có ba cạnh thẳng và ba góc trong.
 
 triangle-aa:
   title: Điều kiện AA cho hình tam giác
@@ -1710,13 +1710,13 @@ triangle-altitude:
 triangle-legs:
   title: Chân tam giác
   text: |
-    Hai chân ____ của tam giác vuông là hai cạnh ngắn hơn (không phải cạnh huyền __). Họ đang ở bên
+    Hai châncủa tam giác vuông là hai cạnh ngắn hơn (không phải cạnh huyền __). Họ đang ở bên
     cạnh góc bên phải.
 
 triangle-inequality:
   title: Bất đẳng thức tam giác
   text: |
-    Bất đẳng thức tam giác ____ nói rằng tổng độ dài của hai cạnh bất kỳ của tam giác đều lớn hơn độ
+    Bất đẳng thức tam giácnói rằng tổng độ dài của hai cạnh bất kỳ của tam giác đều lớn hơn độ
     dài của cạnh thứ ba. Điều này cũng có nghĩa là khoảng cách ngắn nhất giữa hai điểm bất kỳ là một
     đường thẳng (vì đi qua điểm thứ ba luôn dài hơn).
 
@@ -1730,7 +1730,7 @@ triangle-median:
 triangle-midsegment:
   title: Xác nhận
   text: |
-    Các midsegments ____ của một tam giác là các đường nối các trung điểm của các cạnh khác nhau của
+    Các midsegmentscủa một tam giác là các đường nối các trung điểm của các cạnh khác nhau của
     tam giác.
   image: triangle-midsegment.svg
   link: /course/triangles/midsegments
@@ -1738,7 +1738,7 @@ triangle-midsegment:
 triangle-numbers:
   title: Số tam giác
   text: |
-    Số tam giác ____ là một số nguyên có thể được biểu diễn dưới dạng một tam giác đều của các chấm.
+    Số tam giáclà một số nguyên có thể được biểu diễn dưới dạng một tam giác đều của các chấm.
     Công thức cho số tam giác _n_ là `(n*(n+1))/ 2` và các số tam giác đầu tiên là 1, 3, 6, 10, 15,
     Lỗi
   image: triangle-numbers.svg
@@ -1775,12 +1775,12 @@ twin-primes:
 
 unit-circle:
   title: Vòng tròn đơn vị
-  text: Vòng tròn đơn vị ____ là một vòng tròn có bán kính 1.
+  text: Vòng tròn đơn vịlà một vòng tròn có bán kính 1.
 
 variable:
   title: Biến đổi
   text: |
-    Biến ____ là đại lượng không xác định hoặc có thể thay đổi giá trị. Trong một biểu thức đại số,
+    Biếnlà đại lượng không xác định hoặc có thể thay đổi giá trị. Trong một biểu thức đại số,
     nó thường được biểu thị bằng một chữ cái như _x_.
 
 venn-diagram:
@@ -1796,7 +1796,7 @@ vertical-angles:
 
 whole-numbers:
   title: Số nguyên
-  text: 'Các số nguyên ____ là các số đếm, bao gồm 0: 0, 1, 2, 3, 4, Nhẫn'
+  text: 'Các số nguyênlà các số đếm, bao gồm 0: 0, 1, 2, 3, 4, Nhẫn'
 
 zero-product:
   title: Tài sản sản phẩm

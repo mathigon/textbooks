@@ -50,7 +50,7 @@ algebraic-numbers:
 algorithm:
   title: Algoritmo
   text: |
-    Um algoritmo ____ é um conjunto de regras ou instruções que podem ser usadas para resolver um
+    Um algoritmoé um conjunto de regras ou instruções que podem ser usadas para resolver um
     problema específico. Eles são comumente usados por computadores e aparecem em toda parte na
     matemática: de _divisão longa_ a _eliminação gaussiana_.
 
@@ -74,7 +74,7 @@ angle:
 angle-bisector:
   title: Bissetriz de ângulo
   text: |
-    Uma bissetriz de ângulo ____ é uma linha ou raio que divide um ângulo ao meio, em dois ângulos
+    Uma bissetriz de ânguloé uma linha ou raio que divide um ângulo ao meio, em dois ângulos
     congruentes e menores.
   image: angle-bisector.svg
 
@@ -120,13 +120,13 @@ arithmetic-mean:
 arithmetic-sequence:
   title: Sequência aritmética
   text: |
-    Uma sequência aritmética ____ (às vezes chamada de __progressão aritmética__) é uma sequência de
+    Uma sequência aritmética(às vezes chamada de __progressão aritmética__) é uma sequência de
     números em que a diferença _d_ entre termos consecutivos é sempre constante.
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
 arithmetic series:
   title: Série Aritmética
-  text: Uma série aritmética ____ é a soma dos termos em uma sequência aritmética.
+  text: Uma série aritméticaé a soma dos termos em uma sequência aritmética.
 
 associative:
   title: Associatividade
@@ -215,19 +215,19 @@ chaos:
 circle:
   title: Círculo
   text: |
-    Um círculo ____ é o conjunto de todos os pontos em duas dimensões, a uma distância fixa (o raio
+    Um círculoé o conjunto de todos os pontos em duas dimensões, a uma distância fixa (o raio
     __) de um determinado ponto (o _centro_).
   image: circle.svg
   link: /course/circles/introduction#radius
 
 circle-area:
   title: Área de um círculo
-  text: A área ____ de um círculo com raio _r_ é dada pela folmula `A = pi r^2`.
+  text: A áreade um círculo com raio _r_ é dada pela folmula `A = pi r^2`.
 
 circle-circumference:
   title: Circunferência de um círculo
   text: |
-    A circunferência ____ de um círculo é a distância em torno de sua borda externa. Um círculo com
+    A circunferênciade um círculo é a distância em torno de sua borda externa. Um círculo com
     raio _r_ tem circunferência `C = 2 pi r`.
   link: /course/circles/introduction#radius
 
@@ -241,7 +241,7 @@ circle-diameter:
 circle-radius:
   title: Raio
   text: |
-    O raio ____ de um círculo é a distância (ou um segmento de linha) entre seu centro e qualquer
+    O raiode um círculo é a distância (ou um segmento de linha) entre seu centro e qualquer
     ponto em sua circunferência.
   link: /course/circles/introduction#radius
 
@@ -311,7 +311,7 @@ complex-numbers:
 composite-number:
   title: Número composto
   text: |
-    Um número composto ____ é um número inteiro que não é primo. Isso significa que ele possui
+    Um número compostoé um número inteiro que não é primo. Isso significa que ele possui
     outros fatores além de 1 e ele próprio.
 
 concave:
@@ -325,7 +325,7 @@ concave:
 cone:
   title: Cone
   text: |
-    Um cone ____ é um sólido tridimensional que possui uma base circular __ unida a um único ponto
+    Um coneé um sólido tridimensional que possui uma base circular __ unida a um único ponto
     (chamado de _vértice_) por um lado curvado. Você também pode pensar em um cone como uma
     "pirâmide circular".
 
@@ -387,7 +387,7 @@ coordinate-system:
 coordinate-system-origin:
   title: Sistema de coordenadas
   text: |
-    A origem ____ de um sistema de coordenadas é o ponto com coordenadas (0, 0). Geralmente é o
+    A origemde um sistema de coordenadas é o ponto com coordenadas (0, 0). Geralmente é o
     ponto em que os dois eixos se cruzam.
 
 corresponding-angles:
@@ -425,7 +425,7 @@ cryptography:
 cube:
   title: Cubo
   text: |
-    Um cubo ____ (às vezes chamado de __hexaedro__) é um poliedro regular em que cada face é um
+    Um cubo(às vezes chamado de __hexaedro__) é um poliedro regular em que cada face é um
     quadrado. É um dos cinco _sólidos platônicos_ e possui 6 faces, 8 vértices e 12 arestas.
   link: /course/polyhedra/platonic#platonic-overview
 
@@ -436,7 +436,7 @@ cube-volume:
 cylinder:
   title: Cilindro
   text: |
-    Um cilindro ____ é um sólido tridimensional que consiste em dois lados circulares congruentes,
+    Um cilindroé um sólido tridimensional que consiste em dois lados circulares congruentes,
     paralelos e circulares (as bases __), unidos por uma superfície curva. Você também pode pensar
     em um cilindro como um "prisma circular".
   link: /course/circles/spheres-cones-cylinders#cylinder-prism
@@ -461,13 +461,13 @@ degrees:
 denominator:
   title: Denominador
   text: |
-    O denominador ____ é o número inferior em uma fração. Por exemplo, em `4/7`, o número 7 é o
+    O denominadoré o número inferior em uma fração. Por exemplo, em `4/7`, o número 7 é o
     denominador.
 
 dilation:
   title: Dilatação
   text: |
-    Uma dilatação ____ é uma transformação que redimensiona uma forma geométrica, tornando-a maior
+    Uma dilataçãoé uma transformação que redimensiona uma forma geométrica, tornando-a maior
     ou menor.
   image: dilation.svg
   link: /course/transformations/dilations
@@ -524,7 +524,7 @@ dot-machine:
 ellipse:
   title: Elipse
   text: |
-    Uma elipse ____ é um caminho curvo que envolve dois pontos focais. Qualquer ponto na
+    Uma elipseé um caminho curvo que envolve dois pontos focais. Qualquer ponto na
     circunferência da elipse tem a mesma _soma das distâncias_ dos dois focos.
 
     Se os focos estão muito próximos, a elipse parece quase um círculo. À medida que se afastam, a
@@ -537,8 +537,8 @@ ellipse:
 equation:
   title: Equação
   text: |
-    Uma equação ____ é uma instrução matemática criada pela conexão de duas ou mais expressões com o
-    sinal de igual ____ `=`. Indica que todas essas expressões têm o mesmo valor.
+    Uma equaçãoé uma instrução matemática criada pela conexão de duas ou mais expressões com o
+    sinal de igual`=`. Indica que todas essas expressões têm o mesmo valor.
 
 equilateral-triangle:
   title: Triângulo Equilátero
@@ -556,7 +556,7 @@ euclidean-geometry:
 factor:
   title: Fator
   text: |
-    Um número _a_ é um fator ____ (ou __divisor__) de um número _b_, se você puder dividir _b_ por
+    Um número _a_ é um fator(ou __divisor__) de um número _b_, se você puder dividir _b_ por
     _a_ sem resto.
   link: /course/divisibility/factors-and-multiples
 
@@ -609,7 +609,7 @@ figurate-numbers:
 formula:
   title: Fórmula
   text: |
-    Uma fórmula ____ é uma regra ou equação que descreve o relacionamento entre duas ou mais
+    Uma fórmulaé uma regra ou equação que descreve o relacionamento entre duas ou mais
     variáveis. Um exemplo é `A = πr^2`.
 
 fractal:
@@ -630,7 +630,7 @@ fta:
 function:
   title: Função
   text: |
-    Uma função ____ é uma relação matemática que converte uma entrada (_x_) em exatamente uma saída
+    Uma funçãoé uma relação matemática que converte uma entrada (_x_) em exatamente uma saída
     (_e_). Eles são frequentemente expressos como equações matemáticas da forma `f(x)`.
 
 function-graph:
@@ -649,7 +649,7 @@ gcf:
 geometric-sequence:
   title: Sequência geométrica
   text: |
-    Uma sequência geométrica ____ (às vezes chamada de __progressão geométrica__) é uma sequência de
+    Uma sequência geométrica(às vezes chamada de __progressão geométrica__) é uma sequência de
     números em que a razão _r_ entre termos consecutivos é sempre constante.
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
@@ -682,7 +682,7 @@ golden-ratio:
 
 graph:
   title: Gráfico
-  text: Um gráfico ____ é uma coleção de vértices conectados por arestas.
+  text: Um gráficoé uma coleção de vértices conectados por arestas.
   link: /course/graph-theory/introduction
 
 graph-cycle:
@@ -752,12 +752,12 @@ heptagon:
 
 hexagon:
   title: Hexágono
-  text: Um hexágono ____ é um polígono com seis lados.
+  text: Um hexágonoé um polígono com seis lados.
 
 hyperbola:
   title: Hipérbole
   text: |
-    Uma hipérbole ____ é a forma do gráfico da função `y = 1/x`. Consiste em duas partes disjuntas,
+    Uma hipérboleé a forma do gráfico da função `y = 1/x`. Consiste em duas partes disjuntas,
     ambas abordando _assíntotas_. É também uma _seção cônica_.
   image: hyperbola.svg
 
@@ -839,7 +839,7 @@ julia-set:
 
 kite:
   title: Pipa
-  text: Uma pipa ____ é um quadrilátero em que dois pares de lados adjacentes têm o mesmo comprimento.
+  text: Uma pipaé um quadrilátero em que dois pares de lados adjacentes têm o mesmo comprimento.
   link: /course/polyhedra/quadrilaterals#kites
 
 koch-snowflake:
@@ -866,7 +866,7 @@ lcm:
 line:
   title: Linha
   text: |
-    Uma linha ____ é um conjunto de infinitos pontos que se estendem para sempre nas duas direções.
+    Uma linhaé um conjunto de infinitos pontos que se estendem para sempre nas duas direções.
     As linhas são sempre retas e não têm _largura_.
   link: /course/euclidean-geometry/definitions#lines
 
@@ -893,7 +893,7 @@ linear-equation:
 linear-function:
   title: Função linear
   text: |
-    Uma função linear ____ é uma função cujo gráfico é uma linha reta. Pode ser definido como `f(x)
+    Uma função linearé uma função cujo gráfico é uma linha reta. Pode ser definido como `f(x)
     = mx + c`, onde _m_ é a inclinação da linha e _c_ é sua interceptação de eixo _e_.
 
 mandelbrot-set:
@@ -906,7 +906,7 @@ mandelbrot-set:
 
 matrix:
   title: Matriz
-  text: Uma matriz ____ é uma matriz retangular de números organizados em linhas e colunas.
+  text: Uma matrizé uma matriz retangular de números organizados em linhas e colunas.
 
 median:
   title: Mediana
@@ -948,7 +948,7 @@ millennium-prize:
 mode:
   title: Modo
   text: |
-    O modo ____ de um conjunto de números é o número que ocorre com mais frequência. Por exemplo, o
+    O modode um conjunto de números é o número que ocorre com mais frequência. Por exemplo, o
     modo de [3, 4, 4, 4, 5, 5, 6] é 5.
 
 molecule:
@@ -993,7 +993,7 @@ np:
 numerator:
   title: Numerador
   text: |
-    O numerador ____ é o número superior em uma fração. Por exemplo, em `4/7`, o número 4 é o
+    O numeradoré o número superior em uma fração. Por exemplo, em `4/7`, o número 4 é o
     numerador.
 
 obtuse-angle:
@@ -1027,24 +1027,24 @@ order-of-symmetry:
 origin:
   title: Origem
   text: |
-    A origem ____ de um sistema de coordenadas é o ponto (0, 0), onde o eixo _x_ e o eixo _e_ se
+    A origemde um sistema de coordenadas é o ponto (0, 0), onde o eixo _x_ e o eixo _e_ se
     cruzam.
 
 origin-number-line:
   title: Origem de uma linha numérica
-  text: A origem ____ de uma linha numérica é o ponto 0.
+  text: A origemde uma linha numérica é o ponto 0.
 
 palindrome:
   title: Palíndromo
   text: |
-    Um palíndromo ____ é uma palavra ou número que lê o mesmo de trás para frente e da frente para
+    Um palíndromoé uma palavra ou número que lê o mesmo de trás para frente e da frente para
     trás. Por exemplo, 25752 e "ANNA" são ambos palíndromos.
   link: /course/transformations/symmetry#palindromes
 
 parabola:
   title: Antena parabólica
   text: |
-    Uma parábola ____ é a forma do gráfico de uma função quadrática como `y = x^2`. É simétrico, em
+    Uma parábolaé a forma do gráfico de uma função quadrática como `y = x^2`. É simétrico, em
     forma de U e pode apontar para cima ou para baixo. É também uma _seção cônica_.
   image: parabola.svg
 
@@ -1151,7 +1151,7 @@ point:
 polygon:
   title: Polígono
   text: |
-    Um polígono ____ é uma forma geométrica composta por segmentos de linha reta. Os polígonos não
+    Um polígonoé uma forma geométrica composta por segmentos de linha reta. Os polígonos não
     podem conter lados curvos ou furos. Por exemplo, um quadrado é um polígono, mas um círculo não.
   image: polygon.svg
   link: /course/polyhedra/polygons#polygons
@@ -1207,7 +1207,7 @@ polyhedron-vertex:
 polynomial:
   title: Polinomial
   text: |
-    Um polinômio ____ é uma expressão algébrica que consiste em constantes e múltiplos de variáveis
+    Um polinômioé uma expressão algébrica que consiste em constantes e múltiplos de variáveis
     aumentadas para potências inteiras. Por exemplo, `5x^3 - 2y^2 + x + 4` é um polinômio. A forma
     mais geral de um polinômio com apenas uma variável é `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 +
     a_1 x + a_0`, onde `a_n`, `a_(n-1)`,…, `a_0` são todas constantes específicas.
@@ -1254,25 +1254,25 @@ prism:
 probability:
   title: Probabilidade
   text: |
-    Uma probabilidade ____ é um número entre 0 e 1 que indica a probabilidade da ocorrência de
+    Uma probabilidadeé um número entre 0 e 1 que indica a probabilidade da ocorrência de
     determinado evento. A probabilidade de um evento _A_ é escrita como `P(A)`.
 
 probability-tree:
   title: Árvore de Probabilidades
   text: |
-    Uma árvore de probabilidade ____ é um diagrama em árvore que representa a probabilidade
+    Uma árvore de probabilidadeé um diagrama em árvore que representa a probabilidade
     combinada de vários eventos seqüenciais.
 
 proof:
   title: Prova
   text: |
-    Uma prova ____ é um argumento lógico que mostra além de qualquer dúvida que uma determinada
+    Uma provaé um argumento lógico que mostra além de qualquer dúvida que uma determinada
     afirmação é verdadeira.
 
 protein:
   title: Proteína
   text: |
-    Uma proteína ____ é uma macromolécula _grande_ que pode desempenhar muitas funções diferentes
+    Uma proteínaé uma macromolécula _grande_ que pode desempenhar muitas funções diferentes
     nos organismos vivos: da digestão à comunicação entre células ou ao DNA replicante. As proteínas
     consistem em uma ou mais cadeias de _resíduos de aminoácidos_.
 
@@ -1285,7 +1285,7 @@ proton:
 pyramid:
   title: Pirâmide
   text: |
-    Uma pirâmide ____ é um poliedro que tem um polígono como base e faces triangulares ao redor do
+    Uma pirâmideé um poliedro que tem um polígono como base e faces triangulares ao redor do
     lado de fora, que afunilam em um vértice.
 
     Em uma pirâmide regular __direita__, a base é um polígono regular __ e o vértice está
@@ -1376,7 +1376,7 @@ rational-numbers:
 ray:
   title: Raio
   text: |
-    Um raio ____ é a parte de uma linha que começa em um ponto e se estende infinitamente em uma
+    Um raioé a parte de uma linha que começa em um ponto e se estende infinitamente em uma
     direção. Podemos rotular raios começando em `A` como `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
 
@@ -1389,12 +1389,12 @@ real-numbers:
 
 rectangle:
   title: Retângulo
-  text: Um retângulo ____ é um quadrilátero em que todos os quatro ângulos são 90 °.
+  text: Um retânguloé um quadrilátero em que todos os quatro ângulos são 90 °.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 reflection:
   title: Reflexão
-  text: Um reflexo ____ é uma transformação que “inverte” ou “espelha” uma forma através de uma linha.
+  text: Um reflexoé uma transformação que “inverte” ou “espelha” uma forma através de uma linha.
   link: /course/transformations/rigid#reflections
 
 reflectional-symmetry:
@@ -1458,7 +1458,7 @@ roman-numerals:
 rotation:
   title: Rotação
   text: |
-    Uma rotação ____ é uma transformação que “transforma” uma forma em um determinado ângulo em
+    Uma rotaçãoé uma transformação que “transforma” uma forma em um determinado ângulo em
     torno de um ponto fixo.
   link: /course/transformations/rigid#rotations
 
@@ -1501,7 +1501,7 @@ scientific-notation:
 sequence:
   title: Seqüência
   text: |
-    Uma sequência ____ é uma lista ordenada de números (ou outros elementos, como objetos
+    Uma sequênciaé uma lista ordenada de números (ou outros elementos, como objetos
     geométricos), que geralmente seguem um padrão ou função específica. Sequências podem ser finitas
     e infinitas.
   link: /course/sequences/introduction#simple-patterns
@@ -1576,7 +1576,7 @@ sphere:
 sphere-radius:
   title: Raio de uma esfera
   text: |
-    O raio ____ de uma esfera é a distância (ou um segmento de linha) entre seu centro e qualquer
+    O raiode uma esfera é a distância (ou um segmento de linha) entre seu centro e qualquer
     ponto em sua superfície.
 
 square:
@@ -1592,7 +1592,7 @@ square-area:
 
 square-matrix:
   title: Matriz quadrada
-  text: Uma matriz quadrada ____ é uma matriz que possui o mesmo número de linhas e colunas.
+  text: Uma matriz quadradaé uma matriz que possui o mesmo número de linhas e colunas.
 
 square-numbers:
   title: Números quadrados
@@ -1647,7 +1647,7 @@ tan:
 tangent:
   title: Linha tangente
   text: |
-    Uma linha tangente ____ é uma linha que toca uma curva ou círculo em um único ponto, sem
+    Uma linha tangenteé uma linha que toca uma curva ou círculo em um único ponto, sem
     interceptá-la. Este ponto às vezes é chamado de __ponto de tangência__.
 
 term:
@@ -1660,7 +1660,7 @@ term:
 
 tessellation:
   title: Mosaico
-  text: Um mosaico ____ é um padrão geométrico que cobre uma superfície sem espaços ou sobreposições.
+  text: Um mosaicoé um padrão geométrico que cobre uma superfície sem espaços ou sobreposições.
   link: /course/polyhedra/tessellations
 
 tetrahedral-numbers:
@@ -1680,14 +1680,14 @@ tetrahedron:
 theorem:
   title: Teorema
   text: |
-    Um teorema ____ é um resultado ou observação particularmente importante em matemática. Foi
+    Um teoremaé um resultado ou observação particularmente importante em matemática. Foi
     provado ser sempre verdadeiro, usando axiomas, a lógica das regras e teoremas anteriores que já
     eram verdadeiros.
 
 transformation:
   title: Transformação
   text: |
-    Uma transformação ____ converte uma forma geométrica em outra. Existem muitos tipos diferentes
+    Uma transformaçãoconverte uma forma geométrica em outra. Existem muitos tipos diferentes
     de transformações, como _reflexões_ ou _dilatações_.
   link: /course/transformations/rigid#transformations
 
@@ -1701,7 +1701,7 @@ transformation-image:
 translation:
   title: Tradução
   text: |
-    Uma tradução ____ é uma transformação que move uma figura em uma direção específica, sem alterar
+    Uma traduçãoé uma transformação que move uma figura em uma direção específica, sem alterar
     seu ângulo ou forma.
   image: translation.svg
   link: /course/transformations/rigid#translations
@@ -1727,7 +1727,7 @@ trapezium:
 
 triangle:
   title: Triângulo
-  text: Um triângulo ____ é uma forma geométrica que possui três lados retos e três ângulos internos.
+  text: Um triânguloé uma forma geométrica que possui três lados retos e três ângulos internos.
 
 triangle-aa:
   title: Condição AA para triângulos
@@ -1776,7 +1776,7 @@ triangle-midsegment:
 triangle-numbers:
   title: Números de triângulo
   text: |
-    Um número do triângulo ____ é um número inteiro que pode ser representado como um triângulo
+    Um número do triânguloé um número inteiro que pode ser representado como um triângulo
     equilátero de pontos. A fórmula para o número do triângulo _n_ é `(n*(n+1))/ 2` e os primeiros
     números do triângulo são 1, 3, 6, 10, 15,…
   image: triangle-numbers.svg
@@ -1813,17 +1813,17 @@ twin-primes:
 
 unit-circle:
   title: Círculo unitário
-  text: Um círculo de unidade ____ é um círculo com raio 1.
+  text: Um círculo de unidadeé um círculo com raio 1.
 
 variable:
   title: Variável
   text: |
-    Uma variável ____ é uma quantidade desconhecida ou que pode alterar o valor. Em uma expressão
+    Uma variávelé uma quantidade desconhecida ou que pode alterar o valor. Em uma expressão
     algébrica, geralmente é representada por uma letra como _x_.
 
 venn-diagram:
   title: Diagrama de Venn
-  text: Um diagrama de Venn ____ visualiza várias propriedades ou eventos que se sobrepõem.
+  text: Um diagrama de Vennvisualiza várias propriedades ou eventos que se sobrepõem.
   image: venn.svg
 
 vertical-angles:

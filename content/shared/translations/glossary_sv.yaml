@@ -224,7 +224,7 @@ circle:
 
 circle-area:
   title: Område av en cirkel
-  text: Området ____ i en cirkel med radie _r_ ges av folmula `A = pi r^2`.
+  text: Områdeti en cirkel med radie _r_ ges av folmula `A = pi r^2`.
 
 circle-circumference:
   title: Cirkelns omkrets
@@ -945,7 +945,7 @@ millennium-prize:
 mode:
   title: Läge
   text: |
-    Läget ____ för en uppsättning nummer är det nummer som förekommer oftast. Till exempel är läget
+    Lägetför en uppsättning nummer är det nummer som förekommer oftast. Till exempel är läget
     för [3, 4, 4, 4, 5, 5, 6] 5.
 
 molecule:
@@ -986,7 +986,7 @@ np:
 
 numerator:
   title: Täljare
-  text: 'Siffran ____ är det översta numret i en bråk. Till exempel, i `4/7` är siffran 4 täljaren.'
+  text: 'Siffranär det översta numret i en bråk. Till exempel, i `4/7` är siffran 4 täljaren.'
 
 obtuse-angle:
   title: Trubbig vinkel
@@ -1570,7 +1570,7 @@ square:
 
 square-area:
   title: Area of a Square
-  text: Området ____ på en kvadrat med sidolängd _s_ är `A = s^2`.
+  text: Områdetpå en kvadrat med sidolängd _s_ är `A = s^2`.
 
 square-matrix:
   title: Fyrkantig matris

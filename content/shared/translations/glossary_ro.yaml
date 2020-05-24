@@ -380,14 +380,14 @@ convex:
 coordinate-system:
   title: Sistem de coordonate
   text: |
-    Un sistem coordonat ____ este un plan bidimensional care conține două axe perpendiculare.
+    Un sistem coordonateste un plan bidimensional care conține două axe perpendiculare.
     Fiecare punct al planului poate fi definit folosind două numere (coordonate), care specifică
     distanța sa față de cele două axe.
 
 coordinate-system-origin:
   title: Sistem de coordonate
   text: |
-    Originea ____ a unui sistem de coordonate este punctul cu coordonate (0, 0). De obicei este
+    Origineaa unui sistem de coordonate este punctul cu coordonate (0, 0). De obicei este
     punctul în care se traversează cele două axe.
 
 corresponding-angles:
@@ -459,7 +459,7 @@ degrees:
 denominator:
   title: Numitor
   text: |
-    Numitorul ____ este numărul de jos dintr-o fracțiune. De exemplu, în `4/7`, numărul 7 este
+    Numitoruleste numărul de jos dintr-o fracțiune. De exemplu, în `4/7`, numărul 7 este
     numitorul.
 
 dilation:
@@ -535,7 +535,7 @@ ellipse:
 equation:
   title: Ecuaţie
   text: |
-    O ecuație ____ este o afirmație matematică creată prin conectarea a două sau mai multe expresii
+    O ecuațieeste o afirmație matematică creată prin conectarea a două sau mai multe expresii
     cu semnul __egal cu__ `=`. Acesta indică faptul că toate aceste expresii au aceeași valoare.
 
 equilateral-triangle:
@@ -554,7 +554,7 @@ euclidean-geometry:
 factor:
   title: Factor
   text: |
-    Un număr _a_ este un factor ____ (sau __divizor__) al unui număr _b_, dacă puteți împărți _b_
+    Un număr _a_ este un factor(sau __divizor__) al unui număr _b_, dacă puteți împărți _b_
     până la _a_ fără rest.
   link: /course/divisibility/factors-and-multiples
 
@@ -607,7 +607,7 @@ figurate-numbers:
 formula:
   title: Formulă
   text: |
-    O formulă ____ este o regulă sau o ecuație care descrie relația dintre două sau mai multe
+    O formulăeste o regulă sau o ecuație care descrie relația dintre două sau mai multe
     variabile. Un exemplu este `A = πr^2`.
 
 fractal:
@@ -700,7 +700,7 @@ graph-edge:
 
 graph-order:
   title: Ordin
-  text: Ordinea ____ a unui grafic este numărul de vârfuri din el.
+  text: Ordineaa unui grafic este numărul de vârfuri din el.
   link: /course/graph-theory/introduction#intro-3
 
 graph-vertex:
@@ -767,7 +767,7 @@ hypotenuse:
 icosahedron:
   title: icosahedron
   text: |
-    Icozaedrul ____ este un solid platonic și este format din 20 de fețe care sunt toate triunghiuri
+    Icozaedruleste un solid platonic și este format din 20 de fețe care sunt toate triunghiuri
     echilaterale. Are 12 vârfuri și 30 de muchii.
   link: /course/polyhedra/platonic#platonic-overview
 
@@ -942,7 +942,7 @@ millennium-prize:
 mode:
   title: mod
   text: |
-    Modul ____ al unui set de numere este numărul care apare cel mai des. De exemplu, modul de [3,
+    Modulal unui set de numere este numărul care apare cel mai des. De exemplu, modul de [3,
     4, 4, 4, 5, 5, 6] este 5.
 
 molecule:
@@ -987,7 +987,7 @@ np:
 numerator:
   title: Numărător
   text: |
-    Numărul ____ este numărul superior dintr-o fracțiune. De exemplu, în `4/7`, numărul 4 este
+    Număruleste numărul superior dintr-o fracțiune. De exemplu, în `4/7`, numărul 4 este
     numărătorul.
 
 obtuse-angle:
@@ -1021,7 +1021,7 @@ order-of-symmetry:
 origin:
   title: Origine
   text: |
-    Originea ____ a unui sistem de coordonate este punctul (0, 0), unde intersectează _x_ -axis și
+    Origineaa unui sistem de coordonate este punctul (0, 0), unde intersectează _x_ -axis și
     _y_ -axis.
 
 origin-number-line:
@@ -1047,7 +1047,7 @@ parabola-conic:
   title: Antenă de satelit
   text: |
     O __parabola__ este ansamblul tuturor punctelor dintr-un plan, care au aceeași distanță față de
-    o linie fixă, numită directiva ____ și un punct fix, numit focalizarea ____.
+    o linie fixă, numită directivași un punct fix, numit focalizarea ____.
 
 parabola-focus:
   title: Focus al unei parabole
@@ -1059,7 +1059,7 @@ parabola-focus:
 parabola-vertex:
   title: Vertexul unei parabole
   text: |
-    Vârful ____ al unei parabole este punctul în care își schimbă direcția. Este fie maximul, fie
+    Vârfulal unei parabole este punctul în care își schimbă direcția. Este fie maximul, fie
     minimul funcției patratice corespunzătoare și se află pe axa de simetrie a parabolei.
 
 parallel:
@@ -1201,10 +1201,11 @@ polyhedron-vertex:
 polynomial:
   title: polinom
   text: |
-    Un polinom ____ este o expresie algebrică care constă din constante și multipli de variabile
+    Un polinomeste o expresie algebrică care constă din constante și multipli de variabile
     ridicate la puteri întregi. De exemplu, `5x^3 - 2y^2 + x + 4` este un polinom. Cea mai generală
-    formă a unui polinom cu o singură variabilă este `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1
-    x + a_0`, unde `a_n`, `a_(n-1)`, ..., `a_0` sunt toate constante specifice.
+    formă a unui polinom cu o singură variabilă este
+    `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, unde `a_n`, `a_(n-1)`, ..., `a_0` sunt
+    toate constante specifice.
 
 polynomial-degree:
   title: grad
@@ -1255,7 +1256,7 @@ probability:
 probability-tree:
   title: Arborele Probabilității
   text: |
-    O arbore de probabilitate ____ este o diagramă arbore reprezentând probabilitatea combinată a
+    O arbore de probabilitateeste o diagramă arbore reprezentând probabilitatea combinată a
     mai multor evenimente secvențiale.
 
 proof:
@@ -1274,7 +1275,7 @@ protein:
 proton:
   title: Proton
   text: |
-    Un proton ____ este una dintre particulele care alcătuiesc miezul unui atom. Are o taxă de +1.
+    Un protoneste una dintre particulele care alcătuiesc miezul unui atom. Are o taxă de +1.
     Numărul protonilor dintr-un atom se numește „numărul atomic” și determină ce fel de element
     este.
 
@@ -1336,7 +1337,7 @@ quadratic-function-vertex-form:
   title: Forma vertexului unei funcții pătratice
   text: |
     Forma __de vertex__ sau __forma standard__ a unei funcții cvadratice este `f(x) = a(x − h)^2 +
-    k`. Punctul `(h, k)` este vertexul ____ al parabolei corespunzătoare.
+    k`. Punctul `(h, k)` este vertexulal parabolei corespunzătoare.
 
 quadrilateral:
   title: Patrulater
@@ -1495,7 +1496,7 @@ scientific-notation:
 sequence:
   title: Secvenţă
   text: |
-    O secvență ____ este o listă ordonată de numere (sau alte elemente precum obiecte geometrice),
+    O secvențăeste o listă ordonată de numere (sau alte elemente precum obiecte geometrice),
     care urmează adesea un anumit tipar sau funcție. Secvențele pot fi atât finite, cât și infinite.
   link: /course/sequences/introduction#simple-patterns
 
@@ -1569,7 +1570,7 @@ sphere:
 sphere-radius:
   title: Raza unei sfere
   text: |
-    Raza ____ a unei sfere este distanța (sau un segment de linie) între centrul ei și orice punct
+    Razaa unei sfere este distanța (sau un segment de linie) între centrul ei și orice punct
     de pe suprafața sa.
 
 square:
@@ -1581,7 +1582,7 @@ square:
 
 square-area:
   title: Zona unui pătrat
-  text: Zona ____ a unui pătrat cu lungimea laterală _s_ este `A = s^2`.
+  text: Zonaa unui pătrat cu lungimea laterală _s_ este `A = s^2`.
 
 square-matrix:
   title: Matricea pătrată
@@ -1646,7 +1647,7 @@ tangent:
 term:
   title: Termen (Algebra)
   text: |
-    Termenii ____ sunt părțile unei expresii sau ecuații algebrice care sunt separate prin semne +
+    Termeniisunt părțile unei expresii sau ecuații algebrice care sunt separate prin semne +
     sau -. Ele pot fi produse sau fracții sau unul sau mai multe numere, variabile sau funcții.
 
     De exemplu, în expresia `2x^2 - 3ab + 4`, cei trei termeni sunt `2x^2`, `3ab` și 4.

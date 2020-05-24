@@ -1272,8 +1272,9 @@ quadratic:
 quadratic-equation:
   title: İkinci dereceden denklem
   text: |
-    __ikinci dereceden denklem__, tek bir derece 2 değişkeni içeren bir denklemdir. Genellikle `ax^2
-    + bx + c = 0` olarak yazılır, burada _x_ bir değişken, _a_, _b_ ve _c_ rakamlardır ve `a != 0`.
+    __ikinci dereceden denklem__, tek bir derece 2 değişkeni içeren bir denklemdir. Genellikle
+    `ax^2 + bx + c = 0` olarak yazılır, burada _x_ bir değişken, _a_, _b_ ve _c_ rakamlardır ve
+    `a != 0`.
 
 quadratic-formula:
   title: İkinci dereceden formül
@@ -1594,7 +1595,7 @@ tangent:
 term:
   title: Dönem (Cebir)
   text: |
-    ____ terimleri, bir cebirsel ifadenin veya denklemin + veya - işaretleriyle ayrılmış
+   terimleri, bir cebirsel ifadenin veya denklemin + veya - işaretleriyle ayrılmış
     bölümleridir. Ürünler veya kesirler veya bir veya daha fazla sayı, değişken veya fonksiyon
     olabilir.
 

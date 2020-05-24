@@ -5,7 +5,7 @@
 absolute-value:absolute-value:
   title: Apsolutna vrijednost
   text: |
-    Apsolutna vrijednost ____ broja je njegova udaljenost od broja 0 u brojaču. Negativne brojeve
+    Apsolutna vrijednostbroja je njegova udaljenost od broja 0 u brojaču. Negativne brojeve
     čini pozitivnim, ali pozitivne brojeve ostavlja nepromijenjene. Apsolutna vrijednost `x`
     zapisuje se kao `|x|`. Na primjer, `|-5| = 5` i `|3| = 3`.
 
@@ -50,7 +50,7 @@ algebraic-numbers:
 algorithm:
   title: Algoritam
   text: |
-    Algoritam ____ skup je pravila ili uputa koja se mogu koristiti za rješavanje određenog
+    Algoritamskup je pravila ili uputa koja se mogu koristiti za rješavanje određenog
     problema. Računala ih obično koriste i pojavljuju se svugdje u matematici: od _duge podjele_ do
     _Gaussove eliminacije_.
 
@@ -114,7 +114,7 @@ archimedean-solid:
 arithmetic-mean:
   title: Aritmetička srednja vrijednost
   text: |
-    Srednja vrijednost ____ je _prosjek_ skupa brojeva. Možete izračunati, ali zbrajajući sve
+    Srednja vrijednostje _prosjek_ skupa brojeva. Možete izračunati, ali zbrajajući sve
     brojeve u skupu i podijeliti ukupan s brojem predmeta.
 
 arithmetic-sequence:
@@ -126,7 +126,7 @@ arithmetic-sequence:
 
 arithmetic series:
   title: Aritmetička serija
-  text: Aritmetički niz ____ zbroj pojmova u aritmetičkom nizu.
+  text: Aritmetički nizzbroj pojmova u aritmetičkom nizu.
 
 associative:
   title: Asocijativnost
@@ -213,14 +213,14 @@ chaos:
 circle:
   title: Krug
   text: |
-    Krug ____ je skup svih točaka u dvije dimenzije, na određenoj udaljenosti (polumjer _) od
+    Krugje skup svih točaka u dvije dimenzije, na određenoj udaljenosti (polumjer _) od
     određene točke (središte __).
   image: circle.svg
   link: /course/circles/introduction#radius
 
 circle-area:
   title: Područje kruga
-  text: Područje ____ kruga s polumjerom _r_ dano je folom `A = pi r^2`.
+  text: Područjekruga s polumjerom _r_ dano je folom `A = pi r^2`.
 
 circle-circumference:
   title: Kružnica kruga
@@ -232,14 +232,14 @@ circle-circumference:
 circle-diameter:
   title: Promjer (krug)
   text: |
-    Promjer ____ kružnice je udaljenost između dviju suprotnih točaka na njegovom obodu i prolaska
+    Promjerkružnice je udaljenost između dviju suprotnih točaka na njegovom obodu i prolaska
     kroz njegovo središte.
   link: /course/circles/introduction#radius
 
 circle-radius:
   title: Radius
   text: |
-    Polje ____ kružnice je udaljenost (ili segment linije) između njegovog središta i bilo koje
+    Poljekružnice je udaljenost (ili segment linije) između njegovog središta i bilo koje
     točke na njegovom krugu.
   link: /course/circles/introduction#radius
 
@@ -305,7 +305,7 @@ complex-numbers:
 composite-number:
   title: Kompozitni broj
   text: |
-    Sastavni broj ____ je cijeli broj koji nije primarni. To znači da ima i druge faktore osim sebe
+    Sastavni brojje cijeli broj koji nije primarni. To znači da ima i druge faktore osim sebe
     i sebe.
 
 concave:
@@ -319,7 +319,7 @@ concave:
 cone:
   title: Konus
   text: |
-    Konus ____ trodimenzionalna je čvrsta tvar koja ima zaobljenu stranu kružnu _bazu_ spojenu u
+    Konustrodimenzionalna je čvrsta tvar koja ima zaobljenu stranu kružnu _bazu_ spojenu u
     jedinstvenu točku (zvanu _vrha_). Konus možete zamisliti i kao "kružnu piramidu".
 
     __desni konus__ je konus sa vrhom neposredno iznad središta svoje baze.
@@ -349,7 +349,7 @@ congruent-angles:
 conic-section:
   title: Konusni presjek
   text: |
-    Konski presjek ____ krivulja je koja nastaje kao sjecište površine stošca s ravnom ravninom.
+    Konski presjekkrivulja je koja nastaje kao sjecište površine stošca s ravnom ravninom.
     Postoje četiri različite vrste stožastog presjeka koji imaju mnoga svojstva:
 
     * Krug
@@ -371,7 +371,7 @@ convex:
 coordinate-system:
   title: Koordinatni sustav
   text: |
-    Kordinatni sustav ____ je dvodimenzionalna ravnina koja sadrži dvije okomite osi. Svaka točka na
+    Kordinatni sustavje dvodimenzionalna ravnina koja sadrži dvije okomite osi. Svaka točka na
     ravnini može se definirati pomoću dva broja (koordinate) koji određuju njezinu udaljenost od
     dvije osi.
 
@@ -405,7 +405,7 @@ cpoct:
 
 cross-section:
   title: Presjek
-  text: Presjek ____ je sjecište trodimenzionalne čvrste ravnine.
+  text: Presjekje sjecište trodimenzionalne čvrste ravnine.
 
 cryptography:
   title: Kriptografija
@@ -414,7 +414,7 @@ cryptography:
 cube:
   title: Kocka
   text: |
-    Kocka ____ (koja se ponekad naziva __šesterokut__) je pravilan višejednik u kojem je svako lice
+    Kocka(koja se ponekad naziva __šesterokut__) je pravilan višejednik u kojem je svako lice
     kvadrat. To je jedno od pet _platonskih krutih čestica_ i ima 6 lica, 8 vrhova i 12 rubova.
   link: /course/polyhedra/platonic#platonic-overview
 
@@ -448,7 +448,7 @@ degrees:
 
 denominator:
   title: Nazivnik
-  text: 'Imennik ____ je donji broj u ulomku. Na primjer, u `4/7`, nazivnik je broj 7.'
+  text: 'Imennikje donji broj u ulomku. Na primjer, u `4/7`, nazivnik je broj 7.'
 
 dilation:
   title: dilatacija
@@ -521,7 +521,7 @@ ellipse:
 equation:
   title: Jednadžba
   text: |
-    Jednadžba ____ je matematička izjava stvorena povezivanjem dvaju ili više izraza sa znakom
+    Jednadžbaje matematička izjava stvorena povezivanjem dvaju ili više izraza sa znakom
     __jednake__ `=`. Pokazuje da svi ti izrazi imaju istu vrijednost.
 
 equilateral-triangle:
@@ -540,7 +540,7 @@ euclidean-geometry:
 factor:
   title: Faktor
   text: |
-    Broj _a_ je faktor ____ (ili __razdjelnik__) broja _b_, ako možete podijeliti _b_ do _a_ bez
+    Broj _a_ je faktor(ili __razdjelnik__) broja _b_, ako možete podijeliti _b_ do _a_ bez
     ostatka.
   link: /course/divisibility/factors-and-multiples
 
@@ -593,13 +593,13 @@ figurate-numbers:
 formula:
   title: Formula
   text: |
-    Formula ____ je pravilo ili jednadžba koja opisuje odnos između dvije ili više varijabli.
+    Formulaje pravilo ili jednadžba koja opisuje odnos između dvije ili više varijabli.
     Primjer je `A = πr^2`.
 
 fractal:
   title: Fraktalna
   text: |
-    Fraktal ____ je geometrijski oblik koji ima _frakcijsku dimenziju_. Mnogi poznati fraktali su
+    Fraktalje geometrijski oblik koji ima _frakcijsku dimenziju_. Mnogi poznati fraktali su
     _slični_, što znači da se sastoje od manjih kopija sebe. Fraktali sadrže uzorke na svakoj razini
     uvećanja, a mogu se stvoriti ponavljanjem postupka ili ponavljanjem jednadžbe beskonačno mnogo
     puta.
@@ -614,7 +614,7 @@ fta:
 function:
   title: Funkcija
   text: |
-    Funkcija ____ je matematički odnos koji pretvara ulaz (_x_) u točno jedan izlaz (_y_). Često se
+    Funkcijaje matematički odnos koji pretvara ulaz (_x_) u točno jedan izlaz (_y_). Često se
     izražavaju kao matematičke jednadžbe oblika `f(x)`.
 
 function-graph:
@@ -666,7 +666,7 @@ golden-ratio:
 
 graph:
   title: Grafikon
-  text: Grafikon ____ je zbirka vrhova povezanih rubovima.
+  text: Grafikonje zbirka vrhova povezanih rubovima.
   link: /course/graph-theory/introduction
 
 graph-cycle:
@@ -691,7 +691,7 @@ graph-order:
 
 graph-vertex:
   title: tjeme
-  text: Verzija ____ je točka ili čvor koji je dio grafikona.
+  text: Verzijaje točka ili čvor koji je dio grafikona.
   link: /course/graph-theory/introduction
 
 gravity:
@@ -731,7 +731,7 @@ heptagon:
 
 hexagon:
   title: Šesterokut
-  text: Šesterokut ____ je poligon sa šest strana.
+  text: Šesterokutje poligon sa šest strana.
 
 hyperbola:
   title: Hiperbola
@@ -776,7 +776,7 @@ information:
 integer:
   title: cijeli brojevi
   text: |
-    Cijeli brojevi ____ su pozitivni i negativni cijeli brojevi, uključujući nulu:…, –3, –2, –1, 0,
+    Cijeli brojevisu pozitivni i negativni cijeli brojevi, uključujući nulu:…, –3, –2, –1, 0,
     1, 2, 3,…. Često se označavaju simbolom `ZZ`.
 
 internal-angle:
@@ -820,7 +820,7 @@ julia-set:
 
 kite:
   title: Zmaj
-  text: Kota ____ je četverokut u kojem dva para susjednih strana imaju jednaku duljinu.
+  text: Kotaje četverokut u kojem dva para susjednih strana imaju jednaku duljinu.
   link: /course/polyhedra/quadrilaterals#kites
 
 koch-snowflake:
@@ -847,7 +847,7 @@ lcm:
 line:
   title: Crta
   text: |
-    Linija ____ skup je beskonačno mnogo točaka koje se zauvijek protežu u oba smjera. Linije su
+    Linijaskup je beskonačno mnogo točaka koje se zauvijek protežu u oba smjera. Linije su
     uvijek ravne i nemaju _širinu_.
   link: /course/euclidean-geometry/definitions#lines
 
@@ -861,7 +861,7 @@ line-segment:
 line-slope:
   title: Nagib pruge
   text: |
-    Nagib ____ linije mjeri njegovu "strmu", a obično se označava slovom _m_. To je promjena u _y_
+    Nagiblinije mjeri njegovu "strmu", a obično se označava slovom _m_. To je promjena u _y_
     za promjenu jedinice u _x_ duž linije.
 
 linear-equation:
@@ -873,7 +873,7 @@ linear-equation:
 linear-function:
   title: Linearna funkcija
   text: |
-    Linearna funkcija ____ je funkcija čiji je graf ravna linija. Može se definirati kao `f(x) = mx
+    Linearna funkcijaje funkcija čiji je graf ravna linija. Može se definirati kao `f(x) = mx
     + c`, gdje je _m_ nagib linije, a _c_ je njegov _y_ -osni presjek.
 
 mandelbrot-set:
@@ -886,18 +886,18 @@ mandelbrot-set:
 
 matrix:
   title: Matriks
-  text: Matrica ____ je pravokutni niz brojeva raspoređenih u redove i stupce.
+  text: Matricaje pravokutni niz brojeva raspoređenih u redove i stupce.
 
 median:
   title: srednja
   text: |
-    Medijal ____ skupa brojeva je vrijednost za koju su pola brojeva veće, a polovica manja. Ako
+    Medijalskupa brojeva je vrijednost za koju su pola brojeva veće, a polovica manja. Ako
     postoje dva "srednja broja", to je prosjek tih brojeva.
 
 midpoint:
   title: središnja točka
   text: |
-    Središnja točka ____ segmenta linije je točka na segmentu linija koja dijeli segment u sredini,
+    Središnja točkasegmenta linije je točka na segmentu linija koja dijeli segment u sredini,
     na dva kongruentna dijela. Formula __srednje točke__ kaže da je za krajnje točke `(x_1, y_1)` i
     `(x_2,y_2)` srednja točka `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
 
@@ -928,13 +928,13 @@ millennium-prize:
 mode:
   title: Način
   text: |
-    Način ____ skupa brojeva je broj koji se najčešće događa. Na primjer, način rada [3, 4, 4, 4, 5,
+    Načinskupa brojeva je broj koji se najčešće događa. Na primjer, način rada [3, 4, 4, 4, 5,
     5, 6] je 5.
 
 molecule:
   title: Molekula
   text: |
-    Molekula ____ sastoji se od dva ili više atoma koji su kemijski vezani zajedno. Nema električni
+    Molekulasastoji se od dva ili više atoma koji su kemijski vezani zajedno. Nema električni
     naboj, za razliku od __Iona__.
 
     Primjeri molekula uključuju `O_2` koji se sastoji od dva povezana atoma kisika i `H_2 O` koji se
@@ -948,7 +948,7 @@ multiple:
 natural-numbers:
   title: Prirodni brojevi
   text: |
-    Prirodni brojevi ____ su pozitivni cijeli brojevi koji počinju s 1: 1, 2, 3, 4, ... Oni se često
+    Prirodni brojevisu pozitivni cijeli brojevi koji počinju s 1: 1, 2, 3, 4, ... Oni se često
     označavaju simbolom `NN`.
 
 net:
@@ -971,7 +971,7 @@ np:
 
 numerator:
   title: brojač
-  text: 'Brojač ____ gornji je broj u ulomku. Na primjer, u `4/7` je broj 4 brojnik.'
+  text: 'Brojačgornji je broj u ulomku. Na primjer, u `4/7` je broj 4 brojnik.'
 
 obtuse-angle:
   title: Tup kut
@@ -1002,7 +1002,7 @@ order-of-symmetry:
 
 origin:
   title: Podrijetlo
-  text: 'Izvor ____ koordinatnog sustava je točka (0, 0), gdje se osi _x_ -os i _y_ -osječu.'
+  text: 'Izvorkoordinatnog sustava je točka (0, 0), gdje se osi _x_ -os i _y_ -osječu.'
 
 origin-number-line:
   title: Podrijetlo brojčane linije
@@ -1025,19 +1025,19 @@ parabola:
 parabola-conic:
   title: Satelitska antena
   text: |
-    Parabola ____ je skup svih točaka u ravnini, koje imaju istu udaljenost od fiksne linije, zvane
+    Parabolaje skup svih točaka u ravnini, koje imaju istu udaljenost od fiksne linije, zvane
     __direktrix__, i fiksne točke, nazvane __fokus__.
 
 parabola-focus:
   title: Fokus parabole
   text: |
-    Fokus ____ parabole je fiksna točka u njenoj unutrašnjosti. Za parabolično ogledalo sve
+    Fokusparabole je fiksna točka u njenoj unutrašnjosti. Za parabolično ogledalo sve
     paralelne dolazne zrake svjetlosti sijeku se u fokusu nakon što se odražavaju.
 
 parabola-vertex:
   title: Vrhunac parabole
   text: |
-    Verzija ____ parabole je točka u kojoj mijenja smjer. Ona je ili maksimum ili minimum
+    Verzijaparabole je točka u kojoj mijenja smjer. Ona je ili maksimum ili minimum
     odgovarajuće kvadratne funkcije, a leži na osi simetrije parabole.
 
 parallel:
@@ -1114,7 +1114,7 @@ platonic-solid:
 
 point:
   title: Točka
-  text: 'Točka ____ je određeno mjesto u prostoru. Bodovi opisuju položaj, ali nemaju veličinu ili oblik.'
+  text: 'Točkaje određeno mjesto u prostoru. Bodovi opisuju položaj, ali nemaju veličinu ili oblik.'
   link: /course/euclidean-geometry/definitions#points
 
 polygon:
@@ -1128,7 +1128,7 @@ polygon:
 polygon-diagonal:
   title: dijagonala
   text: |
-    Dijagonala ____ poligona je linijski segment koji povezuje dvije vrhove koji nisu jedan pored
+    Dijagonalapoligona je linijski segment koji povezuje dvije vrhove koji nisu jedan pored
     drugog.
 
 polygon-edge:
@@ -1140,7 +1140,7 @@ polygon-edge:
 polygon-vertex:
   title: Vrh poligona
   text: |
-    Vertikli ____ poligona su točke na kojima se susreću njegovi susjedni bočni dijelovi (njegovi
+    Vertiklipoligona su točke na kojima se susreću njegovi susjedni bočni dijelovi (njegovi
     "uglovi").
 
 polyhedron:
@@ -1232,7 +1232,7 @@ probability-tree:
 
 proof:
   title: Dokaz
-  text: Dokaz ____ logičan je argument koji pokazuje van svake sumnje da je određena tvrdnja istinita.
+  text: Dokazlogičan je argument koji pokazuje van svake sumnje da je određena tvrdnja istinita.
 
 protein:
   title: Protein
@@ -1250,7 +1250,7 @@ proton:
 pyramid:
   title: Piramida
   text: |
-    Piramida ____ je višejednik koji ima poligon kao bazu i trokutasta lica oko vanjske strane, koja
+    Piramidaje višejednik koji ima poligon kao bazu i trokutasta lica oko vanjske strane, koja
     se sužava na vrh.
 
     U __desnoj pravilnoj piramidi__, baza je _pravilan mnogokut_, a vrh je neposredno iznad središta
@@ -1296,7 +1296,7 @@ quadratic-formula:
 quadratic-function:
   title: Kvadratna funkcija
   text: |
-    Kvadratna funkcija ____ funkcija je oblika `f(x) = ax^2+bx+c`, gdje su _a_, _b_, a _c_ su
+    Kvadratna funkcijafunkcija je oblika `f(x) = ax^2+bx+c`, gdje su _a_, _b_, a _c_ su
     brojevi, a `a != 0`. Graf kvadratne funkcije je krivulja u obliku slova U koja se naziva
     __parabola__.
 
@@ -1345,13 +1345,13 @@ ray:
 real-numbers:
   title: Pravi brojevi
   text: |
-    Realni brojevi ____ su svi brojevi koji se pojavljuju u brojevnoj liniji, uključujući pozitivne
+    Realni brojevisu svi brojevi koji se pojavljuju u brojevnoj liniji, uključujući pozitivne
     i negativne brojeve, racionalne brojeve (frakcije), kvadratne korijene, korijene kocke,
     decimalne brojeve, _π_, _e_, i još mnogo toga. Oni se često označavaju simbolom `RR`.
 
 rectangle:
   title: pravokutnik
-  text: Pravokutnik ____ je četverokut u kojem su sva četiri kuta 90 °.
+  text: Pravokutnikje četverokut u kojem su sva četiri kuta 90 °.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 reflection:
@@ -1380,7 +1380,7 @@ rhombus:
 
 right-angle:
   title: Pravi kut
-  text: Pravi kut ____ je kut veličine 90 °.
+  text: Pravi kutje kut veličine 90 °.
 
 right-triangle:
   title: Pravokutni trokut
@@ -1417,7 +1417,7 @@ roman-numerals:
 
 rotation:
   title: rotacija
-  text: Rotacija ____ je transformacija koja "okreće" oblik pod određenim kutem oko fiksne točke.
+  text: Rotacijaje transformacija koja "okreće" oblik pod određenim kutem oko fiksne točke.
   link: /course/transformations/rigid#rotations
 
 rotational-symmetry:
@@ -1457,7 +1457,7 @@ scientific-notation:
 sequence:
   title: slijed
   text: |
-    Niz ____ je redoslijed popisa brojeva (ili drugih elemenata poput geometrijskih objekata) koji
+    Nizje redoslijed popisa brojeva (ili drugih elemenata poput geometrijskih objekata) koji
     često slijede određeni obrazac ili funkciju. Sekvence mogu biti i konačne i beskonačne.
   link: /course/sequences/introduction#simple-patterns
 
@@ -1520,20 +1520,20 @@ sin:
 sphere:
   title: Sfera
   text: |
-    Sfera ____ trodimenzionalna je čvrsta tvar koja se sastoji od svih točaka koje imaju istu
+    Sferatrodimenzionalna je čvrsta tvar koja se sastoji od svih točaka koje imaju istu
     udaljenost od zadanog _središta_. Ta se udaljenost naziva polumjer __.
   link: /course/circles/spheres-cones-cylinders#sphere
 
 sphere-radius:
   title: Polumjer sfere
   text: |
-    Polje ____ sfere je udaljenost (ili segment linije) između njezinog središta i bilo koje točke
+    Poljesfere je udaljenost (ili segment linije) između njezinog središta i bilo koje točke
     na njegovoj površini.
 
 square:
   title: Kvadrat
   text: |
-    Kvadrat ____ je pravilan četverokut: sve strane imaju jednaku duljinu, a svi kutovi iste
+    Kvadratje pravilan četverokut: sve strane imaju jednaku duljinu, a svi kutovi iste
     veličine (90 °).
   link: /course/polyhedra/quadrilaterals
 
@@ -1548,7 +1548,7 @@ square-matrix:
 square-numbers:
   title: Kvadratni brojevi
   text: |
-    Kvadratni broj ____ je broj koji se može izraziti kao kvadrat drugog cijelog broja. Prvi
+    Kvadratni brojje broj koji se može izraziti kao kvadrat drugog cijelog broja. Prvi
     kvadratni brojevi su 1, 4, 9, 16, 25,…
   link: /course/sequences/introduction#squares
 
@@ -1626,14 +1626,14 @@ tetrahedron:
 theorem:
   title: Teorema
   text: |
-    Teorema ____ je posebno važan rezultat ili opažanje iz matematike. Dokazano je da je uvijek
+    Teoremaje posebno važan rezultat ili opažanje iz matematike. Dokazano je da je uvijek
     istinita, koristeći aksiome, logiku pravila i prethodne teoreme za koje se već znalo da su
     istinite.
 
 transformation:
   title: Transformacija
   text: |
-    Transformacija ____ pretvara jedan geometrijski oblik u drugi. Postoji mnogo različitih vrsta
+    Transformacijapretvara jedan geometrijski oblik u drugi. Postoji mnogo različitih vrsta
     transformacija, poput _refleksije_ ili _dilatacija_.
   link: /course/transformations/rigid#transformations
 
@@ -1647,7 +1647,7 @@ transformation-image:
 translation:
   title: Prijevod
   text: |
-    Prijevod ____ je transformacija koja pomiče lik u određenom smjeru, bez promjene njegovog kuta
+    Prijevodje transformacija koja pomiče lik u određenom smjeru, bez promjene njegovog kuta
     ili oblika.
   image: translation.svg
   link: /course/transformations/rigid#translations
@@ -1758,7 +1758,7 @@ unit-circle:
 variable:
   title: varijabla
   text: |
-    Promjena ____ je količina koja je nepoznata ili može promijeniti vrijednost. U algebarskom
+    Promjenaje količina koja je nepoznata ili može promijeniti vrijednost. U algebarskom
     izrazu obično je predstavljeno slovom poput _x_.
 
 venn-diagram:
@@ -1774,7 +1774,7 @@ vertical-angles:
 
 whole-numbers:
   title: Cijeli brojevi
-  text: 'Cijeli brojevi ____ su brojevi koji uključuju nula: 0, 1, 2, 3, 4,…'
+  text: 'Cijeli brojevisu brojevi koji uključuju nula: 0, 1, 2, 3, 4,…'
 
 zero-product:
   title: Nulta svojstvo proizvoda

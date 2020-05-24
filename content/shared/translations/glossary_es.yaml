@@ -50,7 +50,7 @@ algebraic-numbers:
 algorithm:
   title: Algoritmo
   text: |
-    Un algoritmo ____ es un conjunto de reglas o instrucciones que se pueden usar para resolver un
+    Un algoritmoes un conjunto de reglas o instrucciones que se pueden usar para resolver un
     problema específico. Son comúnmente utilizados por las computadoras, y aparecen en todas partes
     en matemáticas: desde _división larga_ hasta _eliminación gaussiana_.
 
@@ -75,7 +75,7 @@ angle:
 angle-bisector:
   title: Bisectriz
   text: |
-    Una bisectriz de ángulo ____ es una línea o rayo que divide un ángulo por la mitad, en dos
+    Una bisectriz de ánguloes una línea o rayo que divide un ángulo por la mitad, en dos
     ángulos congruentes y más pequeños.
   image: angle-bisector.svg
 
@@ -123,7 +123,7 @@ arithmetic-mean:
 arithmetic-sequence:
   title: Secuencia aritmética
   text: |
-    Una secuencia aritmética ____ (a veces llamada progresión aritmética ____) es una secuencia de
+    Una secuencia aritmética(a veces llamada progresión aritmética ____) es una secuencia de
     números en la que la diferencia _d_ entre términos consecutivos es siempre constante.
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
@@ -158,7 +158,7 @@ axiom:
 axis-of-symmetry:
   title: Eje de simetria
   text: |
-    Si una forma tiene simetría de reflexión, el eje de simetría ____ es la línea que la divide en
+    Si una forma tiene simetría de reflexión, el eje de simetríaes la línea que la divide en
     dos mitades iguales.
   image: reflectional-symmetry.svg
   link: /course/transformations/symmetry#reflectional-symmetry
@@ -420,7 +420,7 @@ cpoct:
 
 cross-section:
   title: Sección transversal
-  text: Una sección transversal ____ es la intersección de un sólido tridimensional con un plano.
+  text: Una sección transversales la intersección de un sólido tridimensional con un plano.
 
 cryptography:
   title: Criptografía
@@ -467,7 +467,7 @@ degrees:
 denominator:
   title: Denominador
   text: |
-    El denominador ____ es el número inferior en una fracción. Por ejemplo, en `4/7`, el número 7 es
+    El denominadores el número inferior en una fracción. Por ejemplo, en `4/7`, el número 7 es
     el denominador.
 
 dilation:
@@ -543,7 +543,7 @@ ellipse:
 equation:
   title: Ecuación
   text: |
-    Una ecuación ____ es una declaración matemática creada al conectar dos o más expresiones con el
+    Una ecuaciónes una declaración matemática creada al conectar dos o más expresiones con el
     signo igual __igual__ `=`. Indica que todas estas expresiones tienen el mismo valor.
 
 equilateral-triangle:
@@ -562,7 +562,7 @@ euclidean-geometry:
 factor:
   title: Factor
   text: |
-    Un número _a_ es un factor ____ (o __divisor__) de un número _b_, si puede dividir _b_ por _a_
+    Un número _a_ es un factor(o __divisor__) de un número _b_, si puede dividir _b_ por _a_
     sin resto.
   link: /course/divisibility/factors-and-multiples
 
@@ -638,7 +638,7 @@ fta:
 function:
   title: Función
   text: |
-    Una función ____ es una relación matemática que convierte una entrada (_x_) en exactamente una
+    Una funciónes una relación matemática que convierte una entrada (_x_) en exactamente una
     salida (_y_). A menudo se expresan como ecuaciones matemáticas de la forma `f(x)`.
 
 function-graph:
@@ -674,7 +674,7 @@ geometric-series:
 glide-reflection:
   title: Reflexiones de deslizamiento
   text: |
-    Una reflexión de deslizamiento ____ es un tipo especial de transformación. Es una combinación de
+    Una reflexión de deslizamientoes un tipo especial de transformación. Es una combinación de
     una _reflexión_ y una _traducción_ en la misma dirección que el eje de reflexión.
   link: /course/transformations/symmetry-groups#footsteps
 
@@ -710,12 +710,12 @@ graph-edge:
 
 graph-order:
   title: Orden
-  text: El orden ____ de un gráfico es el número de vértices que contiene.
+  text: El ordende un gráfico es el número de vértices que contiene.
   link: /course/graph-theory/introduction#intro-3
 
 graph-vertex:
   title: Vértice
-  text: Un vértice ____ es un punto o nodo que forma parte de un gráfico.
+  text: Un vérticees un punto o nodo que forma parte de un gráfico.
   link: /course/graph-theory/introduction
 
 gravity:
@@ -854,7 +854,7 @@ julia-set:
 kite:
   title: Cometa
   text: |
-    Una cometa ____ es un cuadrilátero en el que dos pares de lados adyacentes tienen la misma
+    Una cometaes un cuadrilátero en el que dos pares de lados adyacentes tienen la misma
     longitud.
   link: /course/polyhedra/quadrilaterals#kites
 
@@ -898,7 +898,7 @@ line-segment:
 line-slope:
   title: Pendiente de una línea
   text: |
-    La pendiente ____ de una línea mide su "inclinación", y generalmente se denota con la letra _m_.
+    La pendientede una línea mide su "inclinación", y generalmente se denota con la letra _m_.
     Es el cambio en _y_ para un cambio de unidad en _x_ a lo largo de la línea.
 
 linear-equation:
@@ -968,7 +968,7 @@ millennium-prize:
 mode:
   title: Modo
   text: |
-    El modo ____ de un conjunto de números es el número que ocurre con más frecuencia. Por ejemplo,
+    El modode un conjunto de números es el número que ocurre con más frecuencia. Por ejemplo,
     el modo de [3, 4, 4, 4, 5, 5, 6] es 5.
 
 molecule:
@@ -1039,7 +1039,7 @@ octahedron:
 order-of-symmetry:
   title: Orden de simetría
   text: |
-    Si una forma tiene simetría rotacional, el orden de simetría ____ es el número de orientaciones
+    Si una forma tiene simetría rotacional, el orden de simetríaes el número de orientaciones
     en las que la forma se ve igual. (O es la cantidad de veces que puede rotar la forma antes de
     volver al inicio).
   link: /course/transformations/symmetry#rotational-symmetry
@@ -1047,7 +1047,7 @@ order-of-symmetry:
 origin:
   title: Origen
   text: |
-    El origen ____ de un sistema de coordenadas es el punto (0, 0), donde se intersecan el eje _x_ y
+    El origende un sistema de coordenadas es el punto (0, 0), donde se intersecan el eje _x_ y
     el eje _y_.
 
 origin-number-line:
@@ -1064,7 +1064,7 @@ palindrome:
 parabola:
   title: Antena parabólica
   text: |
-    Una parábola ____ es la forma del gráfico de una función cuadrática como `y = x^2`. Es
+    Una parábolaes la forma del gráfico de una función cuadrática como `y = x^2`. Es
     simétrico, en forma de U y puede apuntar hacia arriba o hacia abajo. También es una _sección
     cónica_.
   image: parabola.svg
@@ -1072,7 +1072,7 @@ parabola:
 parabola-conic:
   title: Antena parabólica
   text: |
-    Una parábola ____ es el conjunto de todos los puntos en un plano, que tienen la misma distancia
+    Una parábolaes el conjunto de todos los puntos en un plano, que tienen la misma distancia
     desde una línea fija, llamada __directriz__, y un punto fijo, llamado __foco__.
 
 parabola-focus:
@@ -1233,8 +1233,9 @@ polynomial:
   text: |
     Un __polinomio__ es una expresión algebraica que consiste en constantes y múltiplos de variables
     elevadas a potencias enteras. Por ejemplo, `5x^3 - 2y^2 + x + 4` es un polinomio. La forma más
-    general de un polinomio con una sola variable es `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1
-    x + a_0`, donde `a_n`, `a_(n-1)`, ..., `a_0` son todas constantes específicas.
+    general de un polinomio con una sola variable es
+    `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, donde `a_n`, `a_(n-1)`, ..., `a_0` son
+    todas constantes específicas.
 
 polynomial-degree:
   title: La licenciatura
@@ -1366,7 +1367,7 @@ quadratic-function-vertex-form:
   title: Forma de vértice de una función cuadrática
   text: |
     La __forma de vértice__ o __forma estándar__ de una función cuadrática es `f(x) = a(x − h)^2 +
-    k`. El punto `(h, k)` es el vértice ____ de la parábola correspondiente.
+    k`. El punto `(h, k)` es el vérticede la parábola correspondiente.
 
 quadrilateral:
   title: Cuadrilátero
@@ -1528,7 +1529,7 @@ scientific-notation:
 sequence:
   title: Secuencia
   text: |
-    Una secuencia ____ es una lista ordenada de números (u otros elementos como objetos
+    Una secuenciaes una lista ordenada de números (u otros elementos como objetos
     geométricos), que a menudo siguen un patrón o función específica. Las secuencias pueden ser
     tanto finitas como infinitas.
   link: /course/sequences/introduction#simple-patterns
@@ -1548,7 +1549,7 @@ sequence-divergence:
 sequence-explicit:
   title: Fórmula explícita
   text: |
-    Una fórmula explícita ____ para una secuencia expresa el valor del término _n_ th `x_n` en
+    Una fórmula explícitapara una secuencia expresa el valor del término _n_ th `x_n` en
     función de _n_.
   link: /course/sequences/introduction#explicit
 
@@ -1620,7 +1621,7 @@ square-area:
 
 square-matrix:
   title: Matriz cuadrada
-  text: Una matriz cuadrada ____ es una matriz que tiene el mismo número de filas y columnas.
+  text: Una matriz cuadradaes una matriz que tiene el mismo número de filas y columnas.
 
 square-numbers:
   title: Números cuadrados
@@ -1710,14 +1711,14 @@ tetrahedron:
 theorem:
   title: Teorema
   text: |
-    Un teorema ____ es un resultado u observación particularmente importante en matemáticas. Se ha
+    Un teoremaes un resultado u observación particularmente importante en matemáticas. Se ha
     demostrado que siempre es cierto, utilizando axiomas, la lógica de las reglas y teoremas
     anteriores que ya se sabían que eran ciertos.
 
 transformation:
   title: Transformación
   text: |
-    Una transformación ____ convierte una forma geométrica en otra. Hay muchos tipos diferentes de
+    Una transformaciónconvierte una forma geométrica en otra. Hay muchos tipos diferentes de
     transformaciones, como _reflexiones_ o _dilataciones_.
   link: /course/transformations/rigid#transformations
 
@@ -1731,7 +1732,7 @@ transformation-image:
 translation:
   title: Traducción
   text: |
-    Una traducción ____ es una transformación que mueve una figura en una dirección específica, sin
+    Una traducciónes una transformación que mueve una figura en una dirección específica, sin
     cambiar su ángulo o forma.
   image: translation.svg
   link: /course/transformations/rigid#translations
@@ -1782,7 +1783,7 @@ triangle-legs:
 triangle-inequality:
   title: Desigualdad triangular
   text: |
-    La desigualdad del triángulo ____ establece que la suma de las longitudes de cualquiera de los
+    La desigualdad del triánguloestablece que la suma de las longitudes de cualquiera de los
     dos lados de un triángulo es mayor que la longitud del tercer lado. Esto también significa que
     la distancia más corta entre dos puntos es una línea recta (porque pasar por un tercer punto
     siempre es más largo).
