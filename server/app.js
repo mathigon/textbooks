@@ -6,7 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const yaml = require('yamljs');
+const yaml = require('js-yaml');
 const express = require('express');
 
 
@@ -14,7 +14,7 @@ const express = require('express');
 // Course Class
 
 const COURSE_PATH = path.join(__dirname, 'assets/resources/');
-const CURRICULUM = yaml.load(path.join(__dirname, `../curriculum.yaml`));
+const CURRICULUM = yaml.load(fs.readFileSync(path.join(__dirname, `../curriculum.yaml`), 'utf8'));
 
 class Course {
 

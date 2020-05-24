@@ -373,6 +373,7 @@ conic-section:
     A __conic section__ is a curve that is created as the intersection of
     the surface of a cone with a flat plane. There are four different types of
     conic sections, which share many properties:
+
     * Circle
     * Ellipse
     * Parabola
