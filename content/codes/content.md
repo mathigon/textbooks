@@ -156,16 +156,16 @@ Check out these other times (both real and fictional) when Morse code has been u
 
     x-gallery(slide-width="300")
       div
-        x-media(src="images/capitol-records.jpg" width=160 height=240 lightbox)
+        x-img(src="images/capitol-records.jpg" width=160 height=240 lightbox)
         p.caption The Capitol Records building in Los Angeles blinks out the word <em>HOLLYWOOD<em>
       div
-        x-media(src="images/johnny-book.jpeg" width=160 height=240 lightbox)
+        x-img(src="images/johnny-book.jpeg" width=160 height=240 lightbox)
         p.caption In the novel <em>Johnny Got His Gun<em> the protagonist loses nearly almost all control over his bodily movement, and communicates via Morse Code.
       div
-        x-media(src="images/denton.jpg" width=160 height=240 lightbox)
+        x-img(src="images/denton.jpg" width=160 height=240 lightbox)
         p.caption Jeremiah Denton was taken hostage during the Vietnam war and communicated a hidden message while on camera by blinking in Morse Code.
       div
-        x-media(src="images/british-pow.jpg" width=160 height=240 lightbox)
+        x-img(src="images/british-pow.jpg" width=160 height=240 lightbox)
         p.caption In World War II, a British Major used Morse Code to stitch hidden messages while held captive in a prison camp.
 
 
@@ -184,7 +184,7 @@ form of _letters_.
 
 
 ::: column(width=191)
-    x-media(src="images/native-telegraph.jpg" width=191 height=240)
+    x-img(src="images/native-telegraph.jpg" width=191 height=240)
 
 ::: column.grow
 
@@ -215,10 +215,10 @@ The NATO Phonetic Alphabet is used to communicate letters over radio by people l
 ::: column(width=400)
 __International Maritime Signal Flags__ are hung from boats at sea to communicate messages to other boats within sight range.
 
-    x-media(src="images/nautical-signal.jpg" width=320 height=225)
+    x-img(src="images/nautical-signal.jpg" width=320 height=225)
 
 ::: column.grow
-    x-media(src="images/nautical-flags.jpg" width=253 height=360)
+    x-img(src="images/nautical-flags.jpg" width=253 height=360)
 
 :::
 
@@ -248,7 +248,7 @@ __Flag Semaphore__ is used for communicating letters over long distances. It was
 
 
 ::: column(width=300)
-    x-media(src="images/help-album.jpg" width=300 height=300)
+    x-img(src="images/help-album.jpg" width=300 height=300)
 
 ::: column(width=300)
     
@@ -275,13 +275,13 @@ The same symbol can mean different things within completely different codes. For
 
     x-gallery(slide-width="100")
       div
-        x-media(src="images/maritime/Maritime_Charlie.svg" width="100px" height="100px")
+        x-img(src="images/maritime/Maritime_Charlie.svg" width="100px" height="100px")
         p.caption Maritime Flag for C
       div
-        x-media(src="images/semaphore/Semaphore_Charlie.svg" width="100px" height="100px")
+        x-img(src="images/semaphore/Semaphore_Charlie.svg" width="100px" height="100px")
         p.caption Semaphore signal for C
       div
-        x-media(src="images/dna/dna_cytosine.png" width="100px" height="100px")
+        x-img(src="images/dna/dna_cytosine.png" width="100px" height="100px")
         p.caption Molecule for Cytosine
     
 
@@ -304,7 +304,7 @@ How high can you count using only one hand, without skipping any numbers? When w
       tr
         for x in [1, 2, 3, 4, 5]
           td: div.bin-finger(padding="1px")
-            x-media(src="images/fingers/decimal_"+x+".jpg" width=100 height=100)
+            x-img(src="images/fingers/decimal_"+x+".jpg" width=100 height=100)
             .caption= x
 
 ---
@@ -313,7 +313,7 @@ How high can you count using only one hand, without skipping any numbers? When w
 A drawback of this strategy is that there are many unused finger combinations. For example, this finger combination to the right would represent [[2]]. With our traditional model there are two fingers up, so it means two. But we already have a configuration for two! We're wasting valuable space.
 
 ::: column(width=320)
-    x-media(src="images/fingers/binary_17.jpg" width=320 height=320)
+    x-img(src="images/fingers/binary_17.jpg" width=320 height=320)
 :::
 
 ---
@@ -414,7 +414,7 @@ Yes, there are [[32]] different combinations we can make with five fingers.
             - var n = x*8 + y
             // FINGERFADE: make this binary
             td: div.bin-finger(padding="1px")
-              x-media(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
+              x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
               .caption= n
           
 
@@ -435,7 +435,7 @@ And here are the same hands, but with their fingers shown as 1s and 0s.
                 for b4 in [0, 1]
                   - var n = b0*16 + b1*8 + b2*4 + b3*2 + b4*1
                   td: div.bin-finger(padding="1px")
-                    x-media(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=60 height=60)
+                    x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=60 height=60)
                     .caption= ""+b0+b1+b2+b3+b4
 
 ---
