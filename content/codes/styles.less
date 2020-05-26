@@ -9,6 +9,9 @@
 @import "./components/code-box";
 
 
+// -----------------------------------------------------------------------------
+// Introduction
+
 @keyframes electrons {
   from { stroke-dashoffset: 0; }
   to { stroke-dashoffset: 12px; }
@@ -38,6 +41,16 @@
   strong { display: inline-block; width: 30px; }
 }
 
+.flags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5em 0;
+  > div { width: 90px; margin: 5px; }
+  img { display: block; margin: 0 auto; }
+  strong { display: block; text-align: center; color: @text-dark; }
+}
+
 x-morse, .morse {
   .dot, .dash { display: inline-block; background: currentColor; height: 6px; margin: 0 2px 3px; border-radius: 3px; }
   .dot { width: 6px; }
@@ -54,6 +67,10 @@ x-code-box .morse > span {
   margin-right: 12px;
   &:hover, &.hover { margin-right: 9px; }
 }
+
+
+// -----------------------------------------------------------------------------
+// Introduction
 
 .bracket line {stroke: black}
 
@@ -153,13 +170,13 @@ x-code-box .morse > span {
   &.yellow { color: white; background: @yellow; }
   &.purple {color: white; background: @purple}
   &.l-purple-yellow { background: linear-gradient(to bottom right, fade(@purple, 40%) 50%, fade(@yellow, 40%) 50%); }
-  &.purple-yellow { color: white; 
-    background: linear-gradient(to bottom left, 
-    fade(@yellow, 40%) 10%, 
+  &.purple-yellow { color: white;
+    background: linear-gradient(to bottom left,
+    fade(@yellow, 40%) 10%,
     fade(@purple, 40%) 90%); } // i  have no idea how this works lol. oh well
-  &.green-yellow { color: white; 
-    background: linear-gradient(to bottom left, 
-    fade(@yellow, 40%) 10%, 
+  &.green-yellow { color: white;
+    background: linear-gradient(to bottom left,
+    fade(@yellow, 40%) 10%,
     fade(@green, 40%) 90%); } // i  have no idea how this works lol. oh well
 
   #divisibility6 &.blue.yellow { background: linear-gradient(to bottom right, @blue 50%, @yellow 50%); }
@@ -196,7 +213,7 @@ select {
   &:hover, &:focus, &:active { background-color: lighten(@dark-grey, 15%); }
 }
 
-.appear { 
+.appear {
   background: lighten(@grey, 15%);
   border-radius: 4px;
   width: 120px;
@@ -208,7 +225,7 @@ select {
   color: white;
   text-align: center;
   box-shadow: 0 3px 0 @dark-grey;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .bin-finger .caption {

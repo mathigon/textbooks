@@ -1,93 +1,74 @@
 # Codes and Ciphers
 
-    // SOURCES:
     // http://plus.maths.org/content/cracking-codes
     // http://plus.maths.org/content/exploring-enigma
     // http://nrich.maths.org/2198
-
-    // TELEGRAPH:
     // https://en.wikipedia.org/wiki/Morse_code#Development_and_history
     // https://en.wikipedia.org/wiki/First_transcontinental_telegraph#CITEREFPeters1996
     // https://historytogo.utah.gov/telegraph/
-
-
-    // IMAGES:
-    // CAPITAL RECORDS BUILDING
-    // https://commons.wikimedia.org/wiki/File:Capitol_Records_Building,_Hollywood_(2573870208).jpg
-
-    // JOHNNY GOT HIS GUN
-    // https://en.wikipedia.org/wiki/File:JohnnyGotHisGun.JPG
-    // "It is believed that the use of low-resolution images of book covers... - to illustrate an article discussing the book in question, - on the English-language Wikipedia..., qualifies as fair use under the copyright law of the United States. Other use of this image, on Wikipedia or elsewhere, might be copyright infringement. See (https://en.wikipedia.org/wiki/Wikipedia:Non-free_content) for more information
-    // ALTERNATIVELY: can use Movie Poster
-    // https://en.wikipedia.org/wiki/File:Johnny_Got_His_Gun_poster.jpg
-
-    // JEREMIAH DENTON:
-    // found on wikimedia commons. In the public domain. Would be better to have a shot of him actually blinking.
-    // https://commons.wikimedia.org/wiki/File:JeremiahDentonSenate.jpg
-
-    // BRITISH POW WWII
-    // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
-    // Photo Credit: David Fearn / newsteam
-
-    // NAUTICAL SIGNAL FLAGS
-    // flags made by Kevin DeLand
-    // nautical-signal.jpg from here (public domain)
-    // https://commons.wikimedia.org/wiki/File:Nautical_signal_flags_-_USS_Bonhomme_Richard_(LHD_6).jpg
-
-    // SEMAPHORE signals
-    // acquired from Wikimedia Commons, all licensed under the GNU Free Documentation License and the Creative Commons Attribution Share-Alike License
-    // https://commons.wikimedia.org/wiki/File:Semaphore_November.svg
-    // BEATLES ALBUM COVER
-    // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg
-    // This image may be covered under Fair Use? https://www.copyright.gov/fair-use/more-info.html
-
-    mixin nato(ltr, i)
-      - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
-      - w = words[i]
-      span= w
-
 
 ## Introduction
 
 > section: introduction
 > sectionStatus: dev
-> id: introduction
+> id: intro
+> goals: play
 
-Imagine you’re in the jungle, being held hostage. You’ve been there for three months and you’re losing hope. You just want to be free and see your family again. A song comes on the radio. You hear a secret message in the song that gives you reason to believe you will be rescued soon. But your captors have no idea. How might you get this message that someone else can’t hear?
+::: column.grow
 
-Listen to a clip of this song and see if you can find a hidden message (hint: the message is hidden after the chorus, at around 1:20):
+In the early 2000s, the Colombian government was fighting a civil war against groups of insugents
+and terrorists, who were hiding in camps in the South American rainforest. Occasionally, soldiers
+were captured by these rebels, and then had to spent months or even years in captivity.
+
+It is easy to lose hope when you’ve been chained up in a hostage camp for such a long time, unable
+to see your family, and guarded by armed guerilla forces. However, in 2010, there was reason to
+be hopeful: the army was approaching, and planning to rescue them shortly.
+
+::: column(width=260)
+
+{.fixme} IMAGE
+
+:::
+
+Unfortunately, it seemed impossible to tell the prisoners that help was coming, without also
+alerting their capturers – that is, until Colonel Jose Espejo came up with an ingenious idea. With
+his team, he wrote a new pop song, embedded a secret message in the chorus, and then played it
+thousands of times over the radio.
+
+To the rebels, it sounded just like meaningless music, but to the prisoners listening in, it was a
+message of hope. See if you can spot the message – it starts around 1:20.
 
     figure: iframe(width="100%" height=166 scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184253099&color=%23295869&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&sharing=false&download=false&show_playcount=false")
 
 
-
-It may be very difficult for the untrained ear to notice, but there is a secret message hidden in the song. There are lots of cases in the world where we want to communicate but we can't use our voices or our text, or we want to conceal our message from others.
-
-{.fixme} CONTINUE BUTTON
-
 ---
+> id: flashlight
+> goals: flashlight
 
-### Morse Code
+There are many other examples in our world, where we want to communicate with others, but we can’t
+use our voices or our text.
 
-Before we resolve our "hostage situation", let's try a thought experiment that's a bit safer. Imagine you and your friend who live across the street want a way to communicate at night time, without using phones or computers and without waking your family members. You both have flashlights which can be turned either off or on. How might you communicate with each other?
+{.fixme} Imagine you and your friend who live across the street want a way to communicate at night time, without using phones or computers and without waking your family members. You both have flashlights which can be turned either off or on. How might you communicate with each other?
 
-{.todo} A flashlight SVG with an on/off button (see the "conic section" section for an existing flashlight) {.caption} experiment with ways you might communicate using just a flashlight.
+{.fixme} A flashlight SVG with an on/off button (see the "conic section" section for an existing flashlight) {.caption} experiment with ways you might communicate using just a flashlight.
 
-One way we might communicate is by turning it on for different lengths of time, to represent different letters.
+{.fixme} One way we might communicate is by turning it on for different lengths of time, to represent different letters.
 
 {.fixme} CONTINUE AFTER PLAYING WITH FLASHLIGHT
 
 ---
-
 > id: telegraph
+> goals: press
 
-A similar technique was invented around the year 1837 by [Samuel Morse](bio:morse) after the invention of the [electric telegraph](gloss:telegraph).
+### Morse Code
+
+{.fixme} A similar technique was invented around the year 1837 by [Samuel Morse](bio:morse) after the invention of the [electric telegraph](gloss:telegraph).
 
 ::: column.grow
 
-The electric telegraph can send electrical messages across long distances. In 1861, a wire was built across the U.S. across which messages could be sent from coast to coast nearly instantly. Before telegraphs, messages could take hundreds of days to reach one coast from the other.
+{.fixme} The electric telegraph can send electrical messages across long distances. In 1861, a wire was built across the U.S. across which messages could be sent from coast to coast nearly instantly. Before telegraphs, messages could take hundreds of days to reach one coast from the other.
 
-Like in our flashlight scenario, the people who could work with telegraph could communicate in a very limited medium. Telegraphs work when you press down and connect a circut (on), or let go and disconnect the circuit (off). 
+{.fixme} Like in our flashlight scenario, the people who could work with telegraph could communicate in a very limited medium. Telegraphs work when you press down and connect a circut (on), or let go and disconnect the circuit (off). 
 
 ::: column(width=320)
 
@@ -96,14 +77,14 @@ Like in our flashlight scenario, the people who could work with telegraph could 
       img.handle(src="images/telegraph-handle.png" width=320 height=210)
       img.fg(src="images/telegraph-fg.png" width=320 height=210)
       svg(width=320 height=210): path(d="M-3.2,112.8c5.7-2.3,43.1-13.4,47.1-16.9l9.8-6.6c4.4-3.3,20.2-6.8,25.5-8.6,7.6-2,1.5-14.5,9.6-15,3.3.3,88.9,1.5,88.5,3a5.2,5.2,0,0,1,3.9,4.9V93.3a4.1,4.1,0,0,1-4,4.1l-92,.9a4.1,4.1,0,0,1-4.1-4c.1-3,.2-8.1-4.2-7.8l-24.2,1C40.1,89.4,30.2,106.2,22,114.6c-6.1,6.3-16.5,6.5-24.7,7.6")
+    x-gesture(to=".telegraph .handle")
 
 :::
 
-{.fixme} CONTINUE BUTTON?
-
 ---
+> id: morse
 
-Samuel Morse came up with a way to represent the letters of our alphabet by sequences of short beeps (dots) and long beeps (dashes). Each letter has a different sequence.
+{.fixme} Samuel Morse came up with a way to represent the letters of our alphabet by sequences of short beeps (dots) and long beeps (dashes). Each letter has a different sequence. [Morse Code](gloss:morse-code)
 
     .alphabet
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -111,182 +92,208 @@ Samuel Morse came up with a way to represent the letters of our alphabet by sequ
          strong= letter
          x-morse(char=letter)
 
-For example, to signal an E we would make a [[dot|dash]]. To signal a Y we would make a [[dash dot dash dash|dot dash dash|dot dot]].
+{.fixme} For example, to signal an E we would make a [[dot|dash]]. To signal a Y we would make a [[dash dot dash dash|dot dash dash|dot dot]].
 
+---
 > id: morse-encoding
+> goals: type
 
-The most well-known message sent in Morse Code is “SOS”, which is the emergency help message. SOS can be sent by 3 dots (S), 3 dashes (O), and 3 dots (S).
+The most famous Morse code message is “SOS”, which indicates that you have an emergency and need
+help. It is sent using three dots, followed by three dashes, followed by three more dots. Try
+writing other words or sentences in this box, and watch how they are encoded as Morse code:
 
     x-code-box
       .input(contenteditable="true" spellcheck="false") SOS
       .output.morse
 
-{.caption} Try writing your name in the box to see it written in Morse Code.
-
-
-{.fixme} CONTINUE: Should not advance til has written in the box.
-
 ---
-
 > id: resolution
+> goals: play
 
-Returning to our original hostage situation, it is [Morse Code](gloss:morse-code) that the creators of that song used to conceal their message. This was the message:
+Morse code was also what the Colombian army used to send a message to the hostages. Translated from
+Spanish, the message was _19 PEOPLE RESCUED. YOU'RE NEXT. DON'T GIVE UP._ Listen to the song once
+more, and see if you can hear the dots and dashes in the background:
 
-    x-code-box
-      .output.morse
-      .input(contenteditable="false" spellcheck="false") 19 LIBERADOS. SIGUEN USTEDES. ANIMO.
-
-{.fixme} CHECK COPYRIGHT
-
-Translated from Spanish, the message is __19 PEOPLE RESCUED. YOU'RE NEXT. DON'T GIVE UP.__
-
-    x-video(src="images/BetterDaysClip.mp4" poster="images/BetterDays.jpg" width=320 height=180 audio controls credit="YouTube")
-
-Let's try listening to the song again. To someone who does not understand Morse Code, it may just sound like part of the music. But the hostages were soldiers who had been trained in Morse Code, and recognized it in the song when they heard it on the radio. They used their training to understand the message and prepared to be rescued. They were rescued and returned home safely. You never know when knowing Morse Code will come in handy!
-
-{.fixme} CONTINUE after listening to clip
+    figure.fixme: x-video(src="images/BetterDaysClip.mp4" poster="images/BetterDays.jpg" width=320 height=180 audio controls credit="YouTube")
+    // TODO Audio rather than video, Show actual morse code while playing, score when finished
 
 ---
+> id: morse-application
 
-#### Morse Code in history and culture
+If you don’t know Morse code, this may just sound like part of the music – but the hostages were
+soldiers who had been trained in Morse code, and recognized it in the song when they heard it on the
+radio. A few days later, they were rescued and safely returned home.
 
-Check out these other times (both real and fictional) when Morse code has been used.
+It turns out that there were many other examples throughout history, where Morse code has been used
+to communicate secret (or not so secret) messages:
 
-{.fixme} Please check for appropriateness and for image copyright.
-
-    x-gallery(slide-width="300")
+    x-gallery.fixme(slide-width="300")
       div
+        // https://commons.wikimedia.org/wiki/File:Capitol_Records_Building,_Hollywood_(2573870208).jpg
         x-img(src="images/capitol-records.jpg" width=160 height=240 lightbox)
         p.caption The Capitol Records building in Los Angeles blinks out the word <em>HOLLYWOOD<em>
       div
+        // https://en.wikipedia.org/wiki/File:JohnnyGotHisGun.JPG
+        // alternative: https://en.wikipedia.org/wiki/File:Johnny_Got_His_Gun_poster.jpg
         x-img(src="images/johnny-book.jpeg" width=160 height=240 lightbox)
         p.caption In the novel <em>Johnny Got His Gun<em> the protagonist loses nearly almost all control over his bodily movement, and communicates via Morse Code.
       div
+        // https://commons.wikimedia.org/wiki/File:JeremiahDentonSenate.jpg
         x-img(src="images/denton.jpg" width=160 height=240 lightbox)
         p.caption Jeremiah Denton was taken hostage during the Vietnam war and communicated a hidden message while on camera by blinking in Morse Code.
       div
-        x-img(src="images/british-pow.jpg" width=160 height=240 lightbox)
+        // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
+        x-img(src="images/british-pow.jpg" width=160 height=240 lightbox credit="David Fearn / newsteam")
         p.caption In World War II, a British Major used Morse Code to stitch hidden messages while held captive in a prison camp.
 
-
 ---
+> id: information
 
 ### Codes and Information
 
-{.fixme} __Information__ is everywhere around us, but it is difficult to define what
-exactly "information" _means_. Instead we can give examples of things that
-contain information: books and newspapers, numbers and charts, images, sound or
-film clips.
+Wherever we look, we are surrounded by [__information__](gloss:information), like books and
+newspapers, numbers and charts, photos, images, music, or movie clips.
 
-{.fixme} __Codes__ are rules or algorithms to express information in certain formats. Our
-alphabet is a example of a code can can be used to express _language_ in the
-form of _letters_.
+A [__code__](gloss:code) is a rule or algorithm that can be used to express information in a certain
+format. One example is our _alphabet_, which can be used to express language as a series of written
+symbols (called _letters_). Another example we saw before is the [Morse code](gloss:morse), which
+expresses words as sequences of [[dots and dashes|letters and spaces|radio music]].
 
+---
+> id: smoke-signals
 
-::: column(width=191)
-    x-img(src="images/native-telegraph.jpg" width=191 height=240)
+But this is only the beginning, and there is a huge variety of codes that can be used for different
+purposes, or to encode different kinds of information. In this course, we will explore some of the
+most important and most interesting ones.
 
 ::: column.grow
 
-Codes are not a recent invention. For example, indigenous cultures used smoke signals to communicate messages over long distances where it was too far to shout.
+Codes are not a recent invention – they were used by ancient cultures, many thousands of years ago.
+
+For example, guards along the Great Wall of China used smoke to warn each other about potential
+attacks, and different tribes of indigenous peoples in North American each had their own signalling
+systems. They, too, created columns of smoke by burning damp grass, which allowed them to
+communicate over long distances.
+
+Smoke signals are even used today, for example as a distress signal at sea. When a new Pope is
+elected by the College of Cardinals, the outcome of each vote is indicated by black or white smoke.
+[Continue](btn:next)
+
+::: column(width=280)
+
+    x-img(src="images/smoke-signals.jpg" width=280 height=350 lightbox)
+    // https://commons.wikimedia.org/wiki/File:John_Mix_Stanley_-_Indian_Telegraph.jpg
+
+{.caption} Native American Smoke Signals, painted by _John Mix Stanley_
 
 :::
 
-{.fixme} Sometimes letters are not the best format to express information, and we can use
-other codes. In this course we will discover some of these codes as well as the
-algorithms to encode and decode messages.
+---
+> id: flags
 
-{.fixme} What we just communicated with was __morse code__.
+There are many examples where words or letters are not the best way to express information. Here
+are some other codes you might have heard of:
 
-Here are some more codes that are used commonly.
+::: tab
 
-#### NATO Phonetic Alphabet
-The NATO Phonetic Alphabet is used to communicate letters over radio by people like military, police, or EMS workers. Instead of saying a letter, we say its respective word. It might be used to communicate something like a license plate. 
+#### Phonetic Alphabet
 
+Many letters sound very similar – especially when spoken over the phone or radio, with lound
+background noise. That’s why the military, police, pilots, and many others use the __NATO Phonetic
+Alphabet__ when they have to spell names. Here, every individual letter is replaced with a unique
+word:
+
+    - nato = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
     .alphabet
-      for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+      for letter in nato
         div
-         strong= letter
-         +nato(letter, index)
+         strong= letter[0]
+         span= letter
 
+{.fixme} EXERCISE
 
-#### International Maritime Signal Flags
+::: tab
 
-::: column(width=400)
-__International Maritime Signal Flags__ are hung from boats at sea to communicate messages to other boats within sight range.
+#### Maritime Flags
+
+Ships can use __Maritime Signal Flags__, which are hung from their masts, to communicate with other
+ships within sight range.
+
+::: column(width=320)
 
     x-img(src="images/nautical-signal.jpg" width=320 height=225)
+    // https://commons.wikimedia.org/wiki/File:Nautical_signal_flags_-_USS_Bonhomme_Richard_(LHD_6).jpg
 
-::: column.grow
+::: column(width=320)
+
     x-img(src="images/nautical-flags.jpg" width=253 height=360)
 
 :::
 
-{.fixme} fix padding
+All flags have different colours or patterns, and represent a different letter:
 
-    .alphabet
-      - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
-      for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+    .flags
+      for l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         div
-          strong= letter
-          img(src="images/maritime/Maritime_" + words[index] + ".svg", width="50px", height="50px")
+          img(src=`images/maritime/${l.toLowerCase()}.svg` alt=l width=50 height=50)
+          strong= l
 
+{.fixme} EXERCISE
 
+::: tab
 
 #### Flag Semaphore
 
-__Flag Semaphore__ is used for communicating letters over long distances. It was used before the invention of the telegraph.
+__Flag Semaphore__ is another way to communicate using flags, which was used long befor the
+invention of the telegraph. In this case, all flags are the same, but holding them in different
+positions indicates different letters:
 
-{.fixme} Image Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Semaphore_Alpha.svg)
-
-    .alphabet
-      - words = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
-      for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+    // https://depositphotos.com/77499298/stock-illustration-semaphore-alphabet-flags-on-a.html
+    .flags
+      for l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         div
-          strong= letter
-          img(src="images/semaphore/Semaphore_" + words[index] + ".svg", width="100px", height="100px")
+          img(src=`images/semaphore/${l.toLowerCase()}.svg` alt=l width=90 height=80)
+          strong= l
 
+::: column.grow
+
+The Beatles wanted to use Semaphore to spell the word “HELP” on the cover of their album with the
+same name. However, they didn’t like the way it looked, so they just chose four random letters
+instead – spelling the word [[nuiv]].  
 
 ::: column(width=300)
+
+    // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg
     x-img(src="images/help-album.jpg" width=300 height=300)
 
-::: column(width=300)
-    
-The Beatles wanted to use Semaphore to spell the word "HELP" on the cover of their album with the same name. They didn't like the way it looked, so they chose different letters. What do their signals actually spell?
-
+:::
 :::
 
-
-#### Genetic Code
-{.fixme} The genetic code is what makes up our DNA. There are 4 different nucleotides. You may see a string of something like __CGATCGTTACGCGATTCGATCATTTGTGTCCATCGTGGG__. This is a _code_ for a sequence of molecules within a strand of DNA. In this case, the _letter_ is the code representing the nucleotide.
-
-    .alphabet
-      - words = ['Adenine', 'Thymine', 'Cytosine', 'Guanine']
-      for letter, index in 'ATCG'
-        div
-          div
-            img(src="images/dna/dna_" + words[index] + ".png", width="100px", height="100px")
-            span= words[index]
-          strong= letter
-
-The same symbol can mean different things within completely different codes. For example, the letter __C__ can be represented by "Charlie" in the NATO Phonetic Alphabet, __this maritime flag__, __these arms__, or it can represent Cytosine if placed within a strand of other DNA letters.
-
-{.fixme} How to put images inline?
-
-    x-gallery(slide-width="100")
-      div
-        x-img(src="images/maritime/Maritime_Charlie.svg" width="100px" height="100px")
-        p.caption Maritime Flag for C
-      div
-        x-img(src="images/semaphore/Semaphore_Charlie.svg" width="100px" height="100px")
-        p.caption Semaphore signal for C
-      div
-        x-img(src="images/dna/dna_cytosine.png" width="100px" height="100px")
-        p.caption Molecule for Cytosine
-    
-
-
 ---
+> id: genetic
+
+### The Genetic Code
+
+Codes even appear inside our own body! The [DNA](gloss:dna) is a long [molecule](gloss:molecule)
+that appears in every cell of your body, and contains the genetic instructions for how all living
+organisms work. It consists of four different components, called _nucleotides_:
+
+    .row.padded-thin
+      for a in ['Adenine', 'Thymine', 'Cytosine', 'Guanine']
+        div(style="width: 150px")
+          img(src=`images/dna/${a.toLowerCase()}.svg` width=150 height=120)
+          p.caption= a
+
+{.fixme} We can represent each of these using the letters __{.m-red} A__, __{.m-blue} T__,
+__{.m-green} C__ and __{.m-yellow} G__. You may see a string of something like
+__CGATCGTTACGCGATTCGATCATTTGTGTCCATCGTGGG__. This is a _code_ for a sequence of molecules within a
+strand of DNA. In this case, the _letter_ is the code representing the nucleotide.
+
+{.fixme} The same symbol can mean different things within completely different codes. For example, the letter __C__ can be represented by "Charlie" in the NATO Phonetic Alphabet, __this maritime flag__, __these arms__, or it can represent Cytosine if placed within a strand of other DNA letters.
+
+
+----------------------------------------------------------------------------------------------------
+
 
 ## Binary Codes
 

@@ -47,9 +47,13 @@ export class CodeBox extends CustomElementView {
     this.$input = this.$('.input')!;
     this.$output = this.$('.output')!;
 
+    let changes = 0;
+
     this.setPlainText(this.$input.text.trim());
     this.$input.on('change keyup input paste', () => {
       this.setPlainText(this.$input.text.trim());
+      changes += 1;
+      this.trigger('type', {text: this.plainText, changes});
     });
   }
 
