@@ -65,13 +65,32 @@ use our voices or our text.
 
 ### Morse Code
 
-{.fixme} A similar technique was invented around the year 1837 by [Samuel Morse](bio:morse) after the invention of the [electric telegraph](gloss:telegraph).
+In the early 19th century, the only way to transmit messages across long distances was my mail or
+by messenger. Companies like the “Pony Express” ran delivery routes with couriers riding on horses,
+but it could still take days or even weeks to send a message between distant cities.
+
+This all changed in 1837, with the invention of the [__telegraph__](gloss:telegraph). Using electric
+cables spanned across the country, it was possible to send messages almost instantly.
+
+::: figure
+
+    // https://commons.wikimedia.org/wiki/File:The_Overland_Pony_Express.jpg
+    img(src="images/pony-express.jpg" width=525 height=260)
+
+{.caption} The pony express next to a telegraph line under construction – a painting by _George Ottinger_
+
+:::
+
+The first commercial telegraph was developed by William Forthergill Cooke and Charles Wheatstone,
+and used compass needles to point at different letters on a display.
 
 ::: column.grow
 
-{.fixme} The electric telegraph can send electrical messages across long distances. In 1861, a wire was built across the U.S. across which messages could be sent from coast to coast nearly instantly. Before telegraphs, messages could take hundreds of days to reach one coast from the other.
+One year later, the inventor [Samuel Morse](bio:morse) developed an even better version of the
+telegraph, together with his assistant Alfred Vail.
 
-{.fixme} Like in our flashlight scenario, the people who could work with telegraph could communicate in a very limited medium. Telegraphs work when you press down and connect a circut (on), or let go and disconnect the circuit (off). 
+Pressing a button at one ond of the telegraph line closes an electronic circuit. This means that
+current is flowing, which triggers a buzzing sound at the other end of the telegraph line.
 
 ::: column(width=320)
 
@@ -80,14 +99,15 @@ use our voices or our text.
       img.handle(src="images/telegraph-handle.png" width=320 height=210)
       img.fg(src="images/telegraph-fg.png" width=320 height=210)
       svg(width=320 height=210): path(d="M-3.2,112.8c5.7-2.3,43.1-13.4,47.1-16.9l9.8-6.6c4.4-3.3,20.2-6.8,25.5-8.6,7.6-2,1.5-14.5,9.6-15,3.3.3,88.9,1.5,88.5,3a5.2,5.2,0,0,1,3.9,4.9V93.3a4.1,4.1,0,0,1-4,4.1l-92,.9a4.1,4.1,0,0,1-4.1-4c.1-3,.2-8.1-4.2-7.8l-24.2,1C40.1,89.4,30.2,106.2,22,114.6c-6.1,6.3-16.5,6.5-24.7,7.6")
-    x-gesture(target=".telegraph .handle")
+    x-gesture(target=".telegraph .handle" offset="108,-35")
 
 :::
 
 ---
 > id: morse
 
-{.fixme} Samuel Morse came up with a way to represent the letters of our alphabet by sequences of short beeps (dots) and long beeps (dashes). Each letter has a different sequence. [Morse Code](gloss:morse-code)
+To send more complex messages, Morse represented every letter in the alphabet using a unique
+sequences of short beeps (called dits or dots) and long beeps (called dahs or dashes):
 
     .alphabet
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -96,7 +116,33 @@ use our voices or our text.
          x-morse(char=letter)
 
 For example, to transmit the letter E, we just have to send one [[short beep|long beep]]. To send
-the letter U, we have to send [[dot-dot-dash|dot-dash-dot|dash-dash-dot]].
+the letter U, we have to send [[dot-dot-dash|dot-dash-dot|dash-dash-dot]]. Morse had invented a
+new “language”, which we now call the [Morse code](gloss:morse-code).
+
+---
+> id: morse-1
+
+::: column(width=280)
+
+    // https://depositphotos.com/59221337/stock-photo-vintage-morse-telegraph-machine.html
+    // alternative: https://americanhistory.si.edu/collections/search/object/nmah_1096762
+    x-img(src="images/morse.jpg" width=280 height=300)
+
+{.caption} This telegraph machine also records messages on a long strip of paper.
+
+::: column.grow
+
+Now we can send any message by first converting its letters into Morse code, and then tapping out
+the corresponding dots and dashes on the telegraph.
+
+One of Morse’s goals was to keep the messages as short as possible. This is why common letters
+like E and T have a very short code, while uncommon letters like J or Q have much longer codes.
+
+{.r} Morse code quickly became popular all around the world. Trained operators can send around 25
+words per minute, which corresponds to six dots or dashes _every second_!
+[Continue](btn:next)
+
+:::
 
 ---
 > id: morse-encoding
@@ -196,7 +242,7 @@ elected by the College of Cardinals, the outcome of each vote is indicated by bl
     x-img(src="images/smoke-signals.jpg" width=280 height=350 lightbox)
     // https://commons.wikimedia.org/wiki/File:John_Mix_Stanley_-_Indian_Telegraph.jpg
 
-{.caption} Native American Smoke Signals, painted by _John Mix Stanley_
+{.caption} Native American Smoke Signals – a painting by _John Mix Stanley_
 
 :::
 
