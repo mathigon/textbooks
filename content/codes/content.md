@@ -2,10 +2,6 @@
 
     // http://plus.maths.org/content/cracking-codes
     // http://plus.maths.org/content/exploring-enigma
-    // http://nrich.maths.org/2198
-    // https://en.wikipedia.org/wiki/Morse_code#Development_and_history
-    // https://en.wikipedia.org/wiki/First_transcontinental_telegraph#CITEREFPeters1996
-    // https://historytogo.utah.gov/telegraph/
 
 ## Introduction
 
@@ -26,6 +22,9 @@ be hopeful: the army was approaching, and planning to rescue them shortly.
 
 ::: column(width=260)
 
+    // https://depositphotos.com/97306690/stock-photo-jungle-in-colombian-green-mountains.html
+    x-img(src="images/rainforest.jpg" width=260 heght=320)
+
 {.fixme} IMAGE
 
 :::
@@ -36,7 +35,7 @@ his team, he wrote a new pop song, embedded a secret message in the chorus, and 
 thousands of times over the radio.
 
 To the rebels, it sounded just like meaningless music, but to the prisoners listening in, it was a
-message of hope. See if you can spot the message – it starts around 1:20.
+message of hope. See if you can spot the message – it starts around 1:30.
 
     figure: iframe(width="100%" height=166 scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184253099&color=%23295869&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&sharing=false&download=false&show_playcount=false")
 
@@ -48,13 +47,17 @@ message of hope. See if you can spot the message – it starts around 1:20.
 There are many other examples in our world, where we want to communicate with others, but we can’t
 use our voices or our text.
 
-{.fixme} Imagine you and your friend who live across the street want a way to communicate at night time, without using phones or computers and without waking your family members. You both have flashlights which can be turned either off or on. How might you communicate with each other?
+::: column.grow
 
-{.fixme} A flashlight SVG with an on/off button (see the "conic section" section for an existing flashlight) {.caption} experiment with ways you might communicate using just a flashlight.
+{.fixme} Imagine you and your friend who live across the street want a way to communicate at night time, without using phones or computers and without waking your family members. You both have flashlights which can be turned either off or on. How might you communicate with each other?
 
 {.fixme} One way we might communicate is by turning it on for different lengths of time, to represent different letters.
 
-{.fixme} CONTINUE AFTER PLAYING WITH FLASHLIGHT
+::: column(width=260)
+
+{.fixme} A flashlight SVG with an on/off button (see the "conic section" section for an existing flashlight) {.caption} experiment with ways you might communicate using just a flashlight.
+
+:::
 
 ---
 > id: telegraph
@@ -77,7 +80,7 @@ use our voices or our text.
       img.handle(src="images/telegraph-handle.png" width=320 height=210)
       img.fg(src="images/telegraph-fg.png" width=320 height=210)
       svg(width=320 height=210): path(d="M-3.2,112.8c5.7-2.3,43.1-13.4,47.1-16.9l9.8-6.6c4.4-3.3,20.2-6.8,25.5-8.6,7.6-2,1.5-14.5,9.6-15,3.3.3,88.9,1.5,88.5,3a5.2,5.2,0,0,1,3.9,4.9V93.3a4.1,4.1,0,0,1-4,4.1l-92,.9a4.1,4.1,0,0,1-4.1-4c.1-3,.2-8.1-4.2-7.8l-24.2,1C40.1,89.4,30.2,106.2,22,114.6c-6.1,6.3-16.5,6.5-24.7,7.6")
-    x-gesture(to=".telegraph .handle")
+    x-gesture(target=".telegraph .handle")
 
 :::
 
@@ -92,14 +95,15 @@ use our voices or our text.
          strong= letter
          x-morse(char=letter)
 
-{.fixme} For example, to signal an E we would make a [[dot|dash]]. To signal a Y we would make a [[dash dot dash dash|dot dash dash|dot dot]].
+For example, to transmit the letter E, we just have to send one [[short beep|long beep]]. To send
+the letter U, we have to send [[dot-dot-dash|dot-dash-dot|dash-dash-dot]].
 
 ---
 > id: morse-encoding
 > goals: type
 
-The most famous Morse code message is “SOS”, which indicates that you have an emergency and need
-help. It is sent using three dots, followed by three dashes, followed by three more dots. Try
+The most famous Morse code signal is “SOS”, which indicates that you have an emergency and need
+help. It is consists of three dots, followed by three dashes, followed by three more dots. Try
 writing other words or sentences in this box, and watch how they are encoded as Morse code:
 
     x-code-box
@@ -111,14 +115,15 @@ writing other words or sentences in this box, and watch how they are encoded as 
 > goals: play
 
 Morse code was also what the Colombian army used to send a message to the hostages. Translated from
-Spanish, the message was _19 PEOPLE RESCUED. YOU'RE NEXT. DON'T GIVE UP._ Listen to the song once
+Spanish, the message was _19 PEOPLE RESCUED. YOU’RE NEXT. DON’T GIVE UP._ Listen to the song once
 more, and see if you can hear the dots and dashes in the background:
 
     figure.fixme: x-video(src="images/BetterDaysClip.mp4" poster="images/BetterDays.jpg" width=320 height=180 audio controls credit="YouTube")
     // TODO Audio rather than video, Show actual morse code while playing, score when finished
 
 ---
-> id: morse-application
+> id: morse-applications
+> goals: play
 
 If you don’t know Morse code, this may just sound like part of the music – but the hostages were
 soldiers who had been trained in Morse code, and recognized it in the song when they heard it on the
@@ -127,24 +132,31 @@ radio. A few days later, they were rescued and safely returned home.
 It turns out that there were many other examples throughout history, where Morse code has been used
 to communicate secret (or not so secret) messages:
 
-    x-gallery.fixme(slide-width="300")
-      div
-        // https://commons.wikimedia.org/wiki/File:Capitol_Records_Building,_Hollywood_(2573870208).jpg
-        x-img(src="images/capitol-records.jpg" width=160 height=240 lightbox)
-        p.caption The Capitol Records building in Los Angeles blinks out the word <em>HOLLYWOOD<em>
-      div
-        // https://en.wikipedia.org/wiki/File:JohnnyGotHisGun.JPG
-        // alternative: https://en.wikipedia.org/wiki/File:Johnny_Got_His_Gun_poster.jpg
-        x-img(src="images/johnny-book.jpeg" width=160 height=240 lightbox)
-        p.caption In the novel <em>Johnny Got His Gun<em> the protagonist loses nearly almost all control over his bodily movement, and communicates via Morse Code.
-      div
-        // https://commons.wikimedia.org/wiki/File:JeremiahDentonSenate.jpg
-        x-img(src="images/denton.jpg" width=160 height=240 lightbox)
-        p.caption Jeremiah Denton was taken hostage during the Vietnam war and communicated a hidden message while on camera by blinking in Morse Code.
-      div
-        // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
-        x-img(src="images/british-pow.jpg" width=160 height=240 lightbox credit="David Fearn / newsteam")
-        p.caption In World War II, a British Major used Morse Code to stitch hidden messages while held captive in a prison camp.
+::: column(width=220 parent="padded-thin")
+
+    // https://depositphotos.com/310187600/stock-photo-capital-records-building.html
+    x-img(src="images/capitol-records.jpg" width=220 height=280)
+      .capitol-light
+
+{.caption} The red warning light at the top of the _Capitol Records_ building in Los Angeles blinks
+out the word _HOLLYWOOD_ in Morse code.
+
+::: column(width=220)
+
+    x-video(src="images/denton.mp4" poster="images/denton.jpg" width=220 height=280 audio)
+
+{.caption} When captured during the Vietnam war, Navy pilot Jeremiah Denton blinks the word
+_TORTURE_ in Morse, while being forced to record a propaganda video.
+
+::: column(width=220)
+
+    // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
+    x-img(src="images/stitching.jpg" width=220 height=280 lightbox credit="David Fearn / newsteam")
+
+{.caption} During World War II, a British prisoner was forced to create decorative stitchings like
+this one. Can you find (and decipher) the hidden Morse code messages?
+
+:::
 
 ---
 > id: information
@@ -175,7 +187,7 @@ attacks, and different tribes of indigenous peoples in North American each had t
 systems. They, too, created columns of smoke by burning damp grass, which allowed them to
 communicate over long distances.
 
-Smoke signals are even used today, for example as a distress signal at sea. When a new Pope is
+{.r} Smoke signals are even used today, for example as a distress signal at sea. When a new Pope is
 elected by the College of Cardinals, the outcome of each vote is indicated by black or white smoke.
 [Continue](btn:next)
 

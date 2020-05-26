@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {delay} from '@mathigon/core';
+import {delay, wait} from '@mathigon/core';
 import {$N, ElementView, slide, InputView, SVGView, loadScript} from '@mathigon/boost';
 import {Step, Slider, Slideshow} from '../shared/types';
 
@@ -53,22 +53,29 @@ export function morseEncoding($step: Step) {
 
   $codeBox.encode((char: string, $el: ElementView) => {
     for (const x of MORSE_CODE[char.toLowerCase()].split('')) {
-      $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
+      $N('span', {class: x === '•' ? 'dot' : 'dash'}, $el);
     }
   });
 
   $codeBox.on('type', () => $step.score('type'));
 }
 
-export function resolution($step: Step) {
-  console.log('resolution');
-  const $codeBox = $step.$('x-code-box') as CodeBox;
+export function morseApplications($step: Step) {
+  const code = 'hollywood'.split('').map(c => MORSE_CODE[c]).join('').split('');
+  const $light = $step.$('.capitol-light')!;
 
-  $codeBox.encode((char: string, $el: ElementView) => {
-    for (const x of MORSE_CODE[char.toLowerCase()].split('')) {
-      $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
+  async function flash() {
+    for (const c of code) {
+      $light.show();
+      await wait(c === '•' ? 200 : 500);
+      $light.hide();
+      await wait(100);
     }
-  });
+    flash();
+  }
+  flash();
+
+  $step.$('x-video')!.on('play', () => $step.score('play'));
 }
 
 
