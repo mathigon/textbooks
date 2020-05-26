@@ -206,9 +206,9 @@ elected by the College of Cardinals, the outcome of each vote is indicated by bl
 There are many examples where words or letters are not the best way to express information. Here
 are some other codes you might have heard of:
 
-::: tab
+::: tab(parent="sticky")
 
-#### Phonetic Alphabet
+#### Phonetic Alphabet _{span.check(when="blank-0")}_
 
 Many letters sound very similar – especially when spoken over the phone or radio, with lound
 background noise. That’s why the military, police, pilots, and many others use the __NATO Phonetic
@@ -222,11 +222,11 @@ word:
          strong= letter[0]
          span= letter
 
-{.fixme} EXERCISE
+For example, saying “Mike–Alpha–Tango–Hotel–Sierra” would spell the word [[Maths]].
 
 ::: tab
 
-#### Maritime Flags
+#### Maritime Flags _{span.check(when="blank-1")}_
 
 Ships can use __Maritime Signal Flags__, which are hung from their masts, to communicate with other
 ships within sight range.
@@ -250,11 +250,11 @@ All flags have different colours or patterns, and represent a different letter:
           img(src=`images/maritime/${l.toLowerCase()}.svg` alt=l width=50 height=50)
           strong= l
 
-{.fixme} EXERCISE
+{.fixme} EXERCISE [[word]]
 
 ::: tab
 
-#### Flag Semaphore
+#### Flag Semaphore _{span.check(when="blank-2")}_
 
 __Flag Semaphore__ is another way to communicate using flags, which was used long befor the
 invention of the telegraph. In this case, all flags are the same, but holding them in different
@@ -296,12 +296,28 @@ organisms work. It consists of four different components, called _nucleotides_:
           img(src=`images/dna/${a.toLowerCase()}.svg` width=150 height=120)
           p.caption= a
 
+::: column(width=260)
+
+{.fixme} DNA Helix image
+
+::: column.grow
+
 {.fixme} We can represent each of these using the letters __{.m-red} A__, __{.m-blue} T__,
 __{.m-green} C__ and __{.m-yellow} G__. You may see a string of something like
 __CGATCGTTACGCGATTCGATCATTTGTGTCCATCGTGGG__. This is a _code_ for a sequence of molecules within a
 strand of DNA. In this case, the _letter_ is the code representing the nucleotide.
 
-{.fixme} The same symbol can mean different things within completely different codes. For example, the letter __C__ can be represented by "Charlie" in the NATO Phonetic Alphabet, __this maritime flag__, __these arms__, or it can represent Cytosine if placed within a strand of other DNA letters.
+{.fixme} More about DNA
+
+:::
+
+---
+> id: intro-end
+
+Remember that the same symbol can mean completely different things within different codes. For
+example, the letter _C_ can be represented by “Charlie” in the NATO Phonetic Alphabet, it could be
+the maritime flag _{img(src="images/maritime/c.svg" width=22.5 height=20)}_, or it can represent
+_Cytosine_ if placed within a strand of DNA letters.
 
 
 ----------------------------------------------------------------------------------------------------

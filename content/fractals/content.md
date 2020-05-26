@@ -283,7 +283,7 @@ Snowflake is `§d = log_3(4) ≈ 1.262`._
 ---
 > id: koch-size
 
-::: tab
+::: tab(parent="sticky")
 
 #### Area _{span.check(when="blank-6")}_
 
