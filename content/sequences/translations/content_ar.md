@@ -45,28 +45,28 @@
 
 فيما يلي بعض الأمثلة عن التسلسلات. هل يمكنك العثور على أنماطهم وحساب المصطلحين التاليين؟
 
-{.text-center.s-orange.with-arrows} _{.n}3_, _{.n}6*{span.arrow}*_,
+{.text-center.s-orange.with-arrows(dir="ltr")} _{.n}3_, _{.n}6*{span.arrow}*_,
 _{.n}9*{span.arrow(hidden)}+3*_, _{.n}12*{span.arrow(hidden)}+3*_,
 _{.n}15*{span.arrow(hidden)}+3*_, _{.n}[[18]]*{span.arrow(hidden)}+3*_
 _{.n}[[21]]*{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-0 blank-1")}Pattern: “Add 3 to the previous
 number to get the next one.”_
 
-{.text-center.s-teal.with-arrows} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
+{.text-center.s-teal.with-arrows(dir="ltr")} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
 _{.n}16*{span.arrow(hidden)}+6*_, _{.n}22*{span.arrow(hidden)}+6*_,
 _{.n}28*{span.arrow(hidden)}+6*_, _{.n}[[34]]*{span.arrow(hidden)}+6*_,
 _{.n}[[40]]*{span.arrow(hidden)}+6*_, …
 _{span.pattern.reveal(when="blank-2 blank-3")} Pattern: “Add 6 to the previous
 number to get the next one.”_
 
-{.text-center.s-purple.with-arrows} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
+{.text-center.s-purple.with-arrows(dir="ltr")} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
 _{.n}7*{span.arrow(hidden)}+3*_, _{.n}8*{span.arrow(hidden)}+1*_,
 _{.n}11*{span.arrow(hidden)}+3*_, _{.n}[[12]]*{span.arrow(hidden)}+1*_,
 _{.n}[[15]]*{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-4 blank-5")} Pattern: “Alternatingly add 1 and
 add 3 to the previous number, to get the next one.”_
 
-{.text-center.s-lime.with-arrows} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
+{.text-center.s-lime.with-arrows(dir="ltr")} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
 _{.n}4*{span.arrow(hidden)}×2*_, _{.n}8*{span.arrow(hidden)}×2*_,
 _{.n}16*{span.arrow(hidden)}×2*_, _{.n}[[32]]*{span.arrow(hidden)}×2*_,
 _{.n}[[64]]*{span.arrow(hidden)}×2*_, …
@@ -142,7 +142,7 @@ number by 2, to get the next one.”_
 
 في كل خطوة ، نقوم بإضافة صف آخر إلى المثلث السابق. كما يزداد طول هذه الصفوف الجديدة بمقدار واحد في كل مرة. هل يمكنك رؤية النمط؟
 
-{.text-center.s-orange.with-arrows} _{.n}1_, _{.n}3*{span.arrow}+2*_,
+{.text-center.s-orange.with-arrows(dir="ltr")} _{.n}1_, _{.n}3*{span.arrow}+2*_,
 _{.n}6*{span.arrow}+3*_, _{.n}10*{span.arrow}+4*_,
 _{.n}15*{span.arrow}+5*_, _{.n}21*{span.arrow}+6*_
 _{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
@@ -318,7 +318,7 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 وخلص هالي إلى أن جميع الملاحظات الثلاث كانت في الواقع من نفس المذنب - الذي يُطلق عليه الآن _مذنب هالي_. تدور حول الشمس وتمرر الأرض كل 76 عامًا تقريبًا. كما توقع متى سيكون المذنب مرئيًا بعد ذلك:
 
-{.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
+{.text-center.s-orange.s-large.with-arrows(dir="ltr")} _{span.n}1530_,
 _{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
 _{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
 _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
@@ -355,7 +355,7 @@ _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
 لاحظ العلماء أن الكرة تفقد %20 من ارتفاعها بعد كل ارتداد. بعبارة أخرى ، يبلغ الحد الأقصى لارتفاع كل ارتداد %80 من الارتداد السابق. هذا سمح لهم بالتنبؤ بارتفاع كل ارتداد التالية:
 
-{.text-center.s-teal.s-large.with-arrows} _{span.n}10_,
+{.text-center.s-teal.s-large.with-arrows(dir="ltr")} _{span.n}10_,
 _{span.n}8*{span.arrow}×0.8*_, _{.n}[[6.4]]*{span.arrow}×0.8*_,
 _{span.n}[[5.12]]*{span.arrow}×0.8*_,
 _{span.n.reveal}4.096*{span.arrow}×0.8*_*{span.reveal},*
@@ -465,7 +465,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${arithmetic(a,d,0)}_,
+{.text-center.s-red.s-small(dir="ltr")} _{span.n}${arithmetic(a,d,0)}_,
 _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
@@ -481,7 +481,7 @@ _{span.n}${arithmetic(a,d,5)}_, …
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${geometric(b,r,0)}_,
+{.text-center.s-red.s-small(dir="ltr")} _{span.n}${geometric(b,r,0)}_,
 _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
@@ -950,7 +950,7 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
     x-slideshow
       .stage.rabbits(slot="stage")
-        .rabbits-wrap.s-orange.s-small
+        .rabbits-wrap.s-orange.s-small(dir="ltr")
           svg(width=760 height=456 viewBox="0 0 760 456")
             line(y1=51  x2=760 y2=51)
             line(y1=130 x2=760 y2=130)
@@ -1145,7 +1145,7 @@ _{.n}[[144]]_, …
 تمامًا مثل [المثلث](gloss:triangle-numbers) و [الأرقام المربعة](gloss:square-numbers) ، والتسلسلات الأخرى التي رأيناها من قبل ، يمكن تصور تسلسل فيبوناتشي باستخدام نمط هندسي:
 
     x-slideshow.golden-spiral
-      .stage(slot="stage"): include svg/spiral.svg
+      .stage(slot="stage" dir="ltr"): include svg/spiral.svg
       .legend(slot="legend") We start with two small squares of size 1.
       .legend(slot="legend") Next, we add a new square of size 2, to form a larger rectangle.
       .legend(slot="legend") Next, we add a square of size 3, to form an even larger rectangle.
