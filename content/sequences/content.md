@@ -29,7 +29,7 @@ rate in parts of Los Angeles by 12%!
 
 It turns out that __earthquakes__ follow similar patterns to crimes. Just like
 one crime might trigger retaliations, an earthquake might trigger aftershocks.
-In mathematics, this is called a “self-exciting processes”, and there are
+In mathematics, this is called a “self-exciting process”, and there are
 equations that help predict when the next one might happen.
 
 ::: column(width=160)
@@ -38,7 +38,7 @@ equations that help predict when the next one might happen.
 
 ::: column(width=400)
 
-Bankers also look at historic data of stock prices, interest rates and currency
+Bankers also look at historical data of stock prices, interest rates and currency
 exchange rates to estimate how __financial markets__ might change in the
 future. Being able to predict if the value of a stock will go up or down can be
 extremely lucrative!
