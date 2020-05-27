@@ -45,17 +45,21 @@ message of hope. See if you can spot the message – it starts around 1:30.
 > goals: flashlight
 
 There are many other examples in our world, where we want to communicate with others, but we can’t
-use our voices or our text.
+use our voices or our text. Maybe your friend lives across the street from you. At night, you
+secretly talk to each other using flashlights – without waking up your family by shouting.
 
 ::: column.grow
 
-{.fixme} Imagine you and your friend who live across the street want a way to communicate at night time, without using phones or computers and without waking your family members. You both have flashlights which can be turned either off or on. How might you communicate with each other?
+For example, one short flash might mean “hello” or “yes”. One long flash might mean “how are you?”,
+and two short flashes might mean “good night”. Can you come up with any other signals you might
+need?
 
-{.fixme} One way we might communicate is by turning it on for different lengths of time, to represent different letters.
+{.reveal(when="flashlight")} However, even if you agree many different signals for different words
+or questions, it will be difficult to have more complex conversations, or to talk about new topics…
 
-::: column(width=260)
+::: column(width=300)
 
-{.fixme} A flashlight SVG with an on/off button (see the "conic section" section for an existing flashlight) {.caption} experiment with ways you might communicate using just a flashlight.
+{.fixme} Interactive flashlight/window graphic
 
 :::
 
@@ -279,12 +283,17 @@ ships within sight range.
 
 ::: column(width=320)
 
-    x-img(src="images/nautical-signal.jpg" width=320 height=225)
+    x-img(src="images/maritime-flags-1.jpg" width=320 height=220 lightbox)
     // https://commons.wikimedia.org/wiki/File:Nautical_signal_flags_-_USS_Bonhomme_Richard_(LHD_6).jpg
 
-::: column(width=320)
+{.caption} Storage for signal flags onboard a US Navy ship
 
-    x-img(src="images/nautical-flags.jpg" width=253 height=360)
+::: column(width=320 parent="padded-thin")
+
+    x-img(src="images/maritime-flags-2.jpg" width=320 height=220 lightbox)
+    // https://depositphotos.com/39723603/stock-photo-colourful-signal-flags-on-a.html
+
+{.caption} Decorative flags on a sailing boat
 
 :::
 
@@ -296,7 +305,10 @@ All flags have different colours or patterns, and represent a different letter:
           img(src=`images/maritime/${l.toLowerCase()}.svg` alt=l width=50 height=50)
           strong= l
 
-{.fixme} EXERCISE [[word]]
+For example, if you see the flags _{img(src="images/maritime/i.svg" width=20 height=20)}_
+_{img(src="images/maritime/c.svg" width=20 height=20)}_ 
+_{img(src="images/maritime/e.svg" width=20 height=20)}_ on a passing ship, you should
+[[watch out for icebergs|give them assistance|reduce speed]].
 
 ::: tab
 
@@ -316,13 +328,15 @@ positions indicates different letters:
 ::: column.grow
 
 The Beatles wanted to use Semaphore to spell the word “HELP” on the cover of their album with the
-same name. However, they didn’t like the way it looked, so they just chose four random letters
-instead – spelling the word [[nuiv]].  
+same name.
 
-::: column(width=300)
+However, they didn’t like the way these specific letters looked – so they just chose four random
+letters instead! As you can see, they ended up spelling the word [[ruiv]]!
 
-    // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg
-    x-img(src="images/help-album.jpg" width=300 height=300)
+::: column(width=200)
+
+    // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg - FAIR USE
+    x-img.beatles(src="images/help-album.jpg" width=200 height=200 credit="© Parlophone")
 
 :::
 :::
@@ -362,7 +376,7 @@ strand of DNA. In this case, the _letter_ is the code representing the nucleotid
 
 Remember that the same symbol can mean completely different things within different codes. For
 example, the letter _C_ can be represented by “Charlie” in the NATO Phonetic Alphabet, it could be
-the maritime flag _{img(src="images/maritime/c.svg" width=22.5 height=20)}_, or it can represent
+the maritime flag _{img(src="images/maritime/c.svg" width=20 height=20)}_, or it can represent
 _Cytosine_ if placed within a strand of DNA letters.
 
 
