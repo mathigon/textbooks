@@ -12,7 +12,7 @@
 
 ::: column.grow
 
-In the early 2000s, the Colombian government was fighting a civil war against groups of insugents
+In the early 2000s, the Colombian government was fighting a civil war against groups of insurgents
 and terrorists, who were hiding in camps in the South American rainforest. Occasionally, soldiers
 were captured by these rebels, and then had to spent months or even years in captivity.
 
@@ -24,8 +24,6 @@ be hopeful: the army was approaching, and planning to rescue them shortly.
 
     // https://depositphotos.com/97306690/stock-photo-jungle-in-colombian-green-mountains.html
     x-img(src="images/rainforest.jpg" width=260 heght=320)
-
-{.fixme} IMAGE
 
 :::
 
@@ -45,8 +43,8 @@ message of hope. See if you can spot the message – it starts around 1:30.
 > goals: flashlight
 
 There are many other examples in our world, where we want to communicate with others, but we can’t
-use our voices or our text. Maybe your friend lives across the street from you. At night, you
-secretly talk to each other using flashlights – without waking up your family by shouting.
+use our voices or text. Maybe your friend lives across the street from you. At night, you secretly
+talk to each other using flashlights – without waking up your family by shouting.
 
 ::: column.grow
 
@@ -314,7 +312,7 @@ _{img(src="images/maritime/e.svg" width=20 height=20)}_ on a passing ship, you s
 
 #### Flag Semaphore _{span.check(when="blank-2")}_
 
-__Flag Semaphore__ is another way to communicate using flags, which was used long befor the
+__Flag Semaphore__ is another way to communicate using flags, which was used long before the
 invention of the telegraph. In this case, all flags are the same, but holding them in different
 positions indicates different letters:
 
@@ -383,7 +381,7 @@ _Cytosine_ if placed within a strand of DNA letters.
 ----------------------------------------------------------------------------------------------------
 
 
-## Binary Codes
+## Binary Numbers
 
 > id: finger32
 > section: binary
