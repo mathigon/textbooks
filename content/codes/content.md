@@ -103,7 +103,7 @@ current is flowing, which triggers a buzzing sound at the other end of the teleg
       img.handle(src="images/telegraph-handle.png" width=320 height=210)
       img.fg(src="images/telegraph-fg.png" width=320 height=210)
       svg(width=320 height=210): path(d="M-3.2,112.8c5.7-2.3,43.1-13.4,47.1-16.9l9.8-6.6c4.4-3.3,20.2-6.8,25.5-8.6,7.6-2,1.5-14.5,9.6-15,3.3.3,88.9,1.5,88.5,3a5.2,5.2,0,0,1,3.9,4.9V93.3a4.1,4.1,0,0,1-4,4.1l-92,.9a4.1,4.1,0,0,1-4.1-4c.1-3,.2-8.1-4.2-7.8l-24.2,1C40.1,89.4,30.2,106.2,22,114.6c-6.1,6.3-16.5,6.5-24.7,7.6")
-    x-gesture(target=".telegraph .handle" offset="108,-35")
+    x-gesture(target=".telegraph" offset="108,-35")
 
 :::
 

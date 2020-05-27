@@ -69,7 +69,7 @@ export class CodeBox extends CustomElementView {
     for (const char of str.split('')) {
       if (!char.match(/[a-zA-Z0-9]/)) {
         this.$input._el.appendChild(document.createTextNode(char));
-        this.$output._el.appendChild(document.createTextNode(char));
+        // this.$output._el.appendChild(document.createTextNode(char));
       } else {
         if (this.$inputChars.length <= i) this.createSpan();
         this.$input.append(this.$inputChars[i]);
