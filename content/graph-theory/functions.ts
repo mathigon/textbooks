@@ -653,8 +653,8 @@ export function euler2($section: Step) {
       $edges[2].exit('fade', 400);
     } else if (s === 4) {
       $vertices[2].enter('pop', 400);
-      $edges[1].enter('draw', 400);
-      $edges[2].enter('draw', 400);
+      $edges[1].enter('fade', 400);
+      $edges[2].enter('fade', 400);
     }
   });
 
@@ -666,7 +666,7 @@ export function euler2($section: Step) {
       $edges[0].exit('fade', 400);
       $edges[2].exit('fade', 400);
     } else if (s === 2) {
-      $edges[2].enter('draw', 400);
+      $edges[2].enter('fade', 400);
     } else if (s === 3) {
       $vertices[2].exit('pop');
       $edges[1].exit('fade', 400);

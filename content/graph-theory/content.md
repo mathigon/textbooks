@@ -550,7 +550,7 @@ see if Euler’s equation works. Instead we can try to find a simple
           circle.node(cx=270 cy=170 r=7 style="display: none")
           circle.node(cx=390 cy=100 r=7 style="display: none")
 
-        div(style="position: absolute; top: 20px; right: 0; font-size: 1.2em;")
+        .euler-table
           table.grid.table-small
             tr
               td: strong.blue.i F
