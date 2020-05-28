@@ -23,7 +23,7 @@ be hopeful: the army was approaching, and planning to rescue them shortly.
 ::: column(width=260)
 
     // https://depositphotos.com/97306690/stock-photo-jungle-in-colombian-green-mountains.html
-    x-img(src="images/rainforest.jpg" width=260 heght=320)
+    x-img(src="images/rainforest.jpg" width=260 height=320)
 
 :::
 
@@ -91,7 +91,7 @@ and used compass needles to point at different letters on a display.
 One year later, the inventor [Samuel Morse](bio:morse) developed an even better version of the
 telegraph, together with his assistant Alfred Vail.
 
-Pressing a button at one ond of the telegraph line closes an electronic circuit. This means that
+Pressing a button at one end of the telegraph line closes an electronic circuit. This means that
 current is flowing, which triggers a buzzing sound at the other end of the telegraph line.
 
 ::: column(width=320)
@@ -109,7 +109,7 @@ current is flowing, which triggers a buzzing sound at the other end of the teleg
 > id: morse
 
 To send more complex messages, Morse represented every letter in the alphabet using a unique
-sequences of short beeps (called dits or dots) and long beeps (called dahs or dashes):
+sequence of short beeps (called dits or dots) and long beeps (called dahs or dashes):
 
     .alphabet
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -151,7 +151,7 @@ words per minute, which corresponds to six dots or dashes _every second_!
 > goals: type
 
 The most famous Morse code signal is “SOS”, which indicates that you have an emergency and need
-help. It is consists of three dots, followed by three dashes, followed by three more dots. Try
+help. It consists of three dots, followed by three dashes, followed by three more dots. Try
 writing other words or sentences in this box, and watch how they are encoded as Morse code:
 
     x-code-box
@@ -837,6 +837,7 @@ using substitution ciphers:
 > sectionStatus: dev
 
 http://plus.maths.org/content/exploring-enigma
+https://www.youtube.com/watch?v=mcX7iO_XCFA
 
 {.todo} TODO
 
