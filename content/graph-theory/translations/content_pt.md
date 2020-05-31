@@ -136,7 +136,7 @@ Os grafos que consistem em um único anel de vértices são chamados de [__ciclo
 
 ::: column.grow
 
-Um dos primeiros matemáticos a pensar em gráficos e redes foi [Leonhard Euler](bio:euler). Euler ficou intrigado com um antigo problema relacionado à cidade de Königsberg, perto do mar Báltico.
+Um dos primeiros matemáticos a pensar em grafos e redes foi [Leonhard Euler](bio:euler). Euler ficou intrigado com um antigo problema relacionado à cidade de Königsberg, perto do mar Báltico.
 
 O rio Pregel divide Königsberg em quatro partes separadas, que são conectadas por sete pontes. É possível caminhar pela cidade atravessando todas as pontes exatamente uma vez - mas não mais de uma vez? (Você pode começar e terminar em qualquer lugar, não necessariamente no mesmo lugar.)
 
@@ -155,40 +155,40 @@ Tente encontrar uma rota válida desenhando nestes mapas:
 
     x-tabbox.full-width
       .tab
-        h3 Map 1#[span.check.incorrect(when="bridge-0")]
+        h3 Mapa 1#[span.check.incorrect(when="bridge-0")]
         x-solved
         include svg/bridges-1.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
       .tab
-        h3 Map 2#[span.check(when="bridge-1")]
+        h3 Mapa 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
 
 ---
 > id: bridges-1
 
-No caso de Königsberg, parece impossível encontrar uma rota válida, mas algumas das outras cidades funcionam. Euler conseguiu encontrar uma regra simples que pode ser aplicada a qualquer cidade, sem ter que tentar muitas possibilidades - usando a teoria dos grafos.
+No caso de Königsberg, parece impossível encontrar uma rota válida, mas em algumas outras cidades é possível. Euler conseguiu encontrar uma regra simples que pode ser aplicada a qualquer cidade, sem ter que tentar muitas possibilidades - usando a teoria dos grafos.
 
 ::: column.grow
 
-Primeiro, precisamos converter os mapas da cidade em gráficos com arestas e vértices. Toda ilha ou região de terra é representada por [[um vértice|an edge|an area]] e toda ponte que liga duas regiões é representada por uma [[borda|vertex|street]] correspondente.
+Primeiro, precisamos converter os mapas da cidade em grafos com arestas e vértices. Toda ilha ou região de terra é representada por [[um vértice|uma aresta|uma área]] e toda ponte que liga duas regiões é representada por uma [[aresta|vértice|rua]] correspondente.
 
-Agora, o problema de “percorrer uma cidade enquanto atravessa todas as pontes exatamente uma vez” tornou-se um problema de “desenhar um gráfico com um toque contínuo enquanto traça cada extremidade exatamente uma vez”.
+Agora, o problema de “percorrer uma cidade enquanto atravessa todas as pontes exatamente uma vez” tornou-se um problema de “desenhar um grafo com um traço contínuo enquanto se traça cada aresta exatamente uma vez”.
 
 ::: column(width=200)
 
@@ -199,39 +199,39 @@ Agora, o problema de “percorrer uma cidade enquanto atravessa todas as pontes 
 ---
 > id: bridges-2
 
-No papel, crie alguns gráficos diferentes e tente descobrir quais podem ser desenhados com um único traço contínuo.
+No papel, crie alguns grafos diferentes e tente descobrir quais podem ser desenhados com apenas um único traço contínuo.
 
 ---
 > id: bridges-3
 > goals: size prime eo
 
-Assim como nos mapas da cidade, descobrimos que alguns gráficos são possíveis, enquanto outros não. Para nos ajudar a entender o porquê, rotulemos cada vértice com seu grau [>>>>. Em seguida, podemos colorir os vértices de maneiras diferentes e tentar revelar um padrão:
+Assim como nos mapas da cidade, descobrimos que alguns grafos são possíveis, enquanto outros não. Para nos ajudar a entender o porquê, rotulemos cada vértice com seu [grau](gloss:graph-degree). Em seguida, podemos colorir os vértices de maneiras diferentes e tentar revelar um padrão:
 
     figure
       x-select.var.tabs(:bind="colour")
-        div(value="val") Value
-        div(value="size") Size
-        div(value="prime") Prime Numbers
-        div(value="eo") Even and Odd
+        div(value="val") Valor
+        div(value="size") Tamanho
+        div(value="prime") Números primos
+        div(value="eo") Par e ímpar
       .frame-body
-        p(style="margin: 0"): strong These graphs are possible:
+        p(style="margin: 0"): strong Esses grafos são possíveis:
         include svg/vertex-orders-1.svg
-        p(style="margin: 1em 0 0"): strong These graphs are not possible:
+        p(style="margin: 1em 0 0"): strong Esses grafos não são possíveis:
         include svg/vertex-orders-2.svg
 
 ---
 > id: bridges-4
 
-Comparando esses números para gráficos possíveis e não possíveis, parece que um gráfico pode ser desenhado se [[não tiver mais do que dois vértices “ímpares”|only has “even” vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3]]. Essa condição pode ser explicada se observarmos apenas um único vértice no gráfico:
+Comparando esses números para grafos possíveis e não possíveis, parece que um grafo pode ser desenhado se [[não tiver mais do que dois vértices “ímpares”|tiver somente vértices “pares”|não tiver vértices com grau maior que 4|tiver um número ímpar de vértices|não tiver vértices de ordem 3]]. Essa condição pode ser explicada se observarmos apenas um único vértice no grafo:
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
-      .legend(slot="legend") Here you can see a single, magnified vertex in a graph.
-      .legend(slot="legend") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
-      .legend(slot="legend") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
-      .legend(slot="legend") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
-      .legend(slot="legend") Notice that, either way, there always is an even number of edges meeting at the vertex.
-      .legend(slot="legend") The only two exceptions are the vertices where the path starts, and where it ends – these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+      .legend(slot="legend") Aqui pode ser visto um único vértice ampliado do grafo.
+      .legend(slot="legend") Se desenharmos o grafo, eventualmente teremos uma aresta entrando nesse vértice, e outra aresta saindo. Ou seja, temos duas arestas se encontrando neste vértice.
+      .legend(slot="legend") Possivelmente o vértice é um cruzamento em vez de uma beirada. Nesse caso se terá outra aresta entrando no vértice e outra aresta saindo vértice e teremos quatro arestas.
+      .legend(slot="legend") E em alguns grafos, pode até haver um terceiro par de arestas entrando e saindo do vértice. Nesse caso teremos seis arestas.
+      .legend(slot="legend") Em todo caso, note que sempre há um número par de arestas se encontrando no vértice.
+      .legend(slot="legend") As únicas exceções são os vértices onde o caminho começa e onde o caminho termina. Esses dois vértices podem ter um número ímpar de arestas. Se o ponto de partida e o ponto de término são o mesmo, todos vértices do grafo são possuem um número par de arestas.
 
 ---
 > id: bridges-5
@@ -240,7 +240,7 @@ Comparando esses números para gráficos possíveis e não possíveis, parece qu
 
 Se você voltar ao mapa de Königsberg, verá que existem mais de duas ilhas com um número ímpar de pontes. Portanto, uma rota que atravessa todas as pontes exatamente uma vez é realmente impossível - e foi isso que Leonard Euler descobriu.
 
-A descoberta de Euler pode não parecer particularmente útil na vida real, mas os gráficos estão na base de muitos outros problemas geográficos, como encontrar direções entre dois locais. Descobriremos mais desses aplicativos mais tarde.
+A descoberta de Euler pode não parecer particularmente útil na vida real, mas os grafos estão na base de muitos outros problemas geográficos, como encontrar direções entre dois locais. Descobriremos mais aplicações mais tarde.
 
 ::: column(width=240)
 
