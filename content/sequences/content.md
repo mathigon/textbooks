@@ -362,7 +362,7 @@ know that Halley’s comet was observed by ancient astronomers as early as 240 B
         x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
         x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
         x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
-      p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
+      p.caption Depictions of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
 > id: ball

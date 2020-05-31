@@ -258,7 +258,7 @@ are some other codes you might have heard of:
 
 #### Phonetic Alphabet _{span.check(when="blank-0")}_
 
-Many letters sound very similar – especially when spoken over the phone or radio, with lound
+Many letters sound very similar – especially when spoken over the phone or radio, with loud
 background noise. That’s why the military, police, pilots, and many others use the __NATO Phonetic
 Alphabet__ when they have to spell names. Here, every individual letter is replaced with a unique
 word:

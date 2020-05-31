@@ -560,7 +560,7 @@ see if Euler’s equation works. Instead we can try to find a simple
               td.xf 0
               td.xv 1
               td.xe 0
-          p #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
+          p.no-audio #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
 
       .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
       .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.

@@ -1,6 +1,8 @@
-# Translations
+# Utility Libraries
 
-## Manual Translations
+## Translations
+
+### Manual Translations
 
 All of Mathigon's content is stored in this GitHub repository. The text, including translations, are written in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), a special way of annotating HTML. We use some additional, custom syntax which is [documented here](https://mathigon.io/markdown), and you can have a look at one of our existing courses like [Circles and Pi](https://raw.githubusercontent.com/mathigon/textbooks/master/content/circles-and-pi/content.md).
 
@@ -10,7 +12,7 @@ Next, replace all the English text with the corresponding translation (but not a
 
 When adding a new language for the first time, you also have to add it to the [Gulpfile](https://github.com/mathigon/textbooks/blob/master/gulpfile.js#L20), to ensure it is parsed correctly. If you're familiar with GitHub and NodeJS, you can follow [these instructions](https://github.com/mathigon/textbooks/blob/master/README.md) to run a local webserver and test your changes. Otherwise, you can also just email the translations as a Word document to dev@mathigon.org.
 
-## Automated Translations
+### Automated Translations
 
 The scripts in this folder can help generating draft translations using Google Translate, while preserving all built-in tags, markup and syntax. Simply edit the constants at the beginning of `translate.js` (including a ink to a Google Cloud Service Account for the Translate API) and then run `node translations/translate.js`.
 
@@ -21,3 +23,7 @@ Note that the script might miss some words, and that Google's translations might
 * Text inside html blocks (indented by 4 characters) is never translated.
 * Markdown's bold and italic tags might no longer be valid, because Google inserts whitespace before and after them.
 * YAML files like `hints.yaml`, `bios.yaml` and `glossary.yaml` are not translated.
+
+## Audio Narrations
+
+You need to install __ffmpeg__ on your system, for exmaple using `$ brew install ffmpeg`.
