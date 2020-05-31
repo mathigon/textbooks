@@ -406,7 +406,7 @@ export function utilities($section: Step) {
     resolve();
   }
 
-  $section.$('button')!.on('click', clear);
+  $section.$('.btn')!.on('click', clear);
 
   for (const $ut of $section.$$('.utility') as SVGView[]) {
     const $c = $ut.children[0];
@@ -502,7 +502,7 @@ export function utilities1($section: Step) {
 
 export function planarity($section: Step) {
   const $svg = $section.$$('svg')[1] as SVGParentView;
-  const $newBtn = $section.$('button')!;
+  const $newBtn = $section.$('.btn')!;
   const $solveds = $section.$$('x-solved');
 
   const graph = new Graph($svg, 0, [], {r: 12, static: true, bound: true});

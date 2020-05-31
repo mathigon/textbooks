@@ -2033,16 +2033,16 @@ a torch:
     x-scale-box(width=760).conics
       .row
         .active
-          p: strong Circle
+          p.no-audio: strong Circle
           include svg/circle.svg
         .hide
-          p: strong Ellipse
+          p.no-audio: strong Ellipse
           include svg/ellipse.svg
         .hide
-          p: strong Parabola
+          p.no-audio: strong Parabola
           include svg/parabola.svg
         .hide
-          p: strong Hyperbola
+          p.no-audio: strong Hyperbola
           include svg/hyperbola.svg
 
 ---

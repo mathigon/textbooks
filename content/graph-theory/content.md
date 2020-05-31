@@ -272,9 +272,9 @@ and try to reveal a pattern:
         div(value="prime") Prime Numbers
         div(value="eo") Even and Odd
       .frame-body
-        p(style="margin: 0"): strong These graphs are possible:
+        p.no-audio(style="margin: 0"): strong These graphs are possible:
         include svg/vertex-orders-1.svg
-        p(style="margin: 1em 0 0"): strong These graphs are not possible:
+        p.no-audio(style="margin: 1em 0 0"): strong These graphs are not possible:
         include svg/vertex-orders-2.svg
 
 ---

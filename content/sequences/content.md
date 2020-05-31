@@ -503,11 +503,11 @@ the values of `a`, _d_ and _r_. Can you find any patterns?
 
 #### {.m-red} Arithmetic Sequence
 
-{.text-center} `a` = ${a}{a|2|-10,10,0.2}, _d_ = ${d}{d|2|-10,10,0.2}
+{.text-center.no-audio} `a` = ${a}{a|2|-10,10,0.2}, _d_ = ${d}{d|2|-10,10,0.2}
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${arithmetic(a,d,0)}_,
+{.text-center.s-red.s-small.no-audio} _{span.n}${arithmetic(a,d,0)}_,
 _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
@@ -519,11 +519,11 @@ _{span.n}${arithmetic(a,d,5)}_, …
 
 #### {.m-green} Geometric Sequence
 
-{.text-center} `a` = ${b}{b|2|-10,10,0.2}, _r_ = ${r}{r|2|-10,10,0.2}
+{.text-center.no-audio} `a` = ${b}{b|2|-10,10,0.2}, _r_ = ${r}{r|2|-10,10,0.2}
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${geometric(b,r,0)}_,
+{.text-center.s-red.s-small.no-audio} _{span.n}${geometric(b,r,0)}_,
 _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
@@ -672,7 +672,7 @@ Here is a short clip from the movie _Pay it Forward_, where 12-year-old Trevor
 explains his idea for making the world a better place:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward-poster.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
@@ -1758,7 +1758,7 @@ Only one number in the list above has a sum of factors that is _equal_ to itself
 The next perfect number is 28, because if we add up all its factors we get
 `1 + 2 + 4 + 7 + 14 = 28`. After that, perfect numbers become much rarer:
 
-{.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
+{.text-center.s-purple.s-vertical.perfect-list.no-audio} _{.n}6_, _{.n}28_,
 _{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}8,589,869,056_,
 _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 

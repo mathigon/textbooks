@@ -19,7 +19,7 @@ for the skateboards – and it turns out that building them is not cheap:
 
 In other words, the __cost__ of producing _n_ skateboards is
 
-{.text-center} _{.pill.orange}cost_ = _{x-equation(solution="5000+30×n")}_.
+{.text-center.no-audio} _{.pill.orange}cost_ = _{x-equation(solution="5000+30×n")}_.
 
 ---
 > id: demand
