@@ -23,6 +23,7 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 .idea
+.vscode
 
 # Folders to ignore
 node_modules
@@ -30,6 +31,7 @@ server/assets/resources
 ts_build
 content/.cache.json
 _*.yaml
+utilities/.tmp
 
 # Translations
 *_ger.*

@@ -294,7 +294,7 @@ We’ve still skipped number 6 – but we’ve already done all the hard work.
 Remember that 6 = 2 × 3.
 
     +grid(40)
-    p.btn-row.text-center(style="margin-bottom:1em")
+    p.btn-row.text-center.no-audio(style="margin-bottom:1em")
       button.btn.btn-small(data-display="visibility") Show multiple of 2
       button.btn.btn-small(data-display="visibility") Show multiple of 3
 
@@ -503,8 +503,8 @@ Here you can generate your own prime numbers with a given number of digits:
 
     .calculator
       h3 Prime Generator
-      p.md Number of digits: ${d}{d|6|2,16,1}
-      p(style="margin: 10px 0"): button.btn.btn-white Generate
+      p.no-audio.md Number of digits: ${d}{d|6|2,16,1}
+      p.no-audio(style="margin: 10px 0"): button.btn.btn-white Generate
       .result.var(:html="result")
 
 ---
@@ -574,7 +574,7 @@ is quite surprising, because primes are defined using multiplication and factors
 
     .calculator
       h3 Goldbach Calculator
-      p Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
+      p.no-audio Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
       input(type="number", min=4, step=2)
       .result.var(:html="result")
 

@@ -1,0 +1,25 @@
+﻿not-a-polygon-1: Uno dei lati di questa figura è ricurvo, quindi non è un poligono.
+not-a-polygon-2: Questa figura non è un poligono, perché contiene un buco.
+not-a-polygon-3: Uno dei lati di questa figura è ricurvo, quindi non è un poligono.
+
+no-overlap: Attenzione – i lati non possono incrociarsi, altrimenti non si tratta di un poligono.
+angles-repeat: Magnifico! Ora prova a spostare i vertici del quadrilatero e osserva cosa succede.
+
+not-a-diagonal: Questa non è una diagonale del quadrilatero.
+not-a-diagonal-1: Questa non è una diagonael del parallelogramma.
+
+not-concave-1: I triangoli non possono essere concavi: tutti gli angoli interni misurano meno di 180°.
+not-concave-2: Questo poligono è convesso – tutti gli angoli misurano meno di 180°.
+not-concave-3: Questo poligono è convesso – tutte le diagonali giacciono all'interno del pologono e tutti gli angoli misurano meno di 180°.
+
+not-regular-1: In questo poligono, alcuni lati hanno lunghezze diverse – quindi non può essere regolare.
+not-regular-2: Tutti i lati hanno la stessa lunghezza, ma alcuni anguli hanno un'ampiezza diversa, perciò  _non_ è un poligono regolare.
+not-regular-3: Questa è una circonferenza, non un poligono!
+
+parall-error-1: Non è vero – gli angoli possono avere qualsiasi ampiezza, basta la loro somma sia 360°.
+parall-error-2: È vero solo se il parallelogramma è anche un rombo, ma non per _ogni_ parallelogramma.
+parall-error-3: È corretto solo se il parallelogramma è anche un rettangolo, ma non per _ogni_ parallelogramma.
+parall-error-4: No: i lati adiacenti di un parallelogramma non hanno sempre la stessa lunghezza
+
+move-polyhedra: "I [poliedri tridimensionail](->#poly1) sono interattivi. Prova a ruotarli!"
+use-euler: Ricorda che puoi utilizzare la __formula di Eulero__ per trovare il numero di facce, vertici o spigoli.

@@ -60,7 +60,7 @@ export class WaterCanvas extends CustomElementView {
     this.touchPattern = this.createDropPattern(this.touchSize * 2);
 
     slide(this.$canvas, {
-      start: (p) => this.touchWater(p.scale(1 / r), 0.5),
+      down: (p) => this.touchWater(p.scale(1 / r), 0.5),
       move: (p) => this.touchWater(p.scale(1 / r), 0.1)
     });
   }

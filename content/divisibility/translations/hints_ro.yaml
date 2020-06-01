@@ -1,0 +1,8 @@
+is-prime: este număr prim
+not-prime: nu este număr prim
+no-solution: Nu s-a putut găsi o solutie :(
+too-large: Acel număr e prea mare :(
+not-even: Alege un număr par.
+
+gcd-yes: Funcționează!
+gcd-no: Nu pare să se potrivească…

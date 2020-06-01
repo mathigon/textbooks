@@ -246,7 +246,7 @@ ${round(180-360/x)}°._
 
 ::: column.grow
 Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
-sides. Every side has length [{.step-target.pill.green}1m](target:base). Let’s
+sides. Every side has length [{.pill.green} 1m](target:base). Let’s
 try to calculate its area!
 
 First, we can split the polygon into ${toWord(n)} congruent,
@@ -255,13 +255,13 @@ First, we can split the polygon into ${toWord(n)} congruent,
 {.reveal(when="blank-0")} We already know the [[base|height|area]] of these
 triangles, but we also need the [[height|legs|medians]] to be able to calculate
 its area. _{span.reveal(when="blank-2")} In regular polygons, this height
-is sometimes called the [{.step-target.pill.yellow}apothem](target:apothem)._
+is sometimes called the [{.pill.yellow}apothem](target:apothem)._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [right angled
 triangle](target:right-triangle) formed by the apothem and half the base of the
 isosceles triangle. This means that we can use trigonometry!
 
-{.reveal(when="blank-1 blank-2" delay=2000)} The [{.step-target.pill.blue}base angles](target:base-angle)
+{.reveal(when="blank-1 blank-2" delay=2000)} The [{.pill.blue}base angles](target:base-angle)
 of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
 size of the [internal angles](target:int-angle) of the polygon:
 
@@ -826,11 +826,11 @@ Like before, try to draw a rectangle that has the same area as this trapezium.
 _{span.reveal(when="draw-2")} Can you see how the [missing and added
 triangles](target:triangles-3) on the left and the right cancel out?_
 
-{.reveal(when="draw-2" delay=2000)} The [{.step-target.pill.green} height](target:t-height)
+{.reveal(when="draw-2" delay=2000)} The [{.pill.green} height](target:t-height)
 of this rectangle is the [[distance between|average of|length of]] the [parallel
 sides](target:bases) of the trapezium.
 
-{.reveal.r(when="blank-2")} The [{.step-target.pill.yellow} width](target:t-width)
+{.reveal.r(when="blank-2")} The [{.pill.yellow} width](target:t-width)
 of the rectangle is the distance between the [[midpoints|endpoints]] of the two
 non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
 called the __midsegment__ of the trapezium._
@@ -885,12 +885,12 @@ triangles](target:inside) that make up the kite are the same as the
 [four gaps](target:outside) outside it?_
 
 {.reveal(when="blank-5")} This means that the area of a kite with diagonals
-[{.step-target.i.pill.green}d1](target:d31) and
-[{.step-target.i.pill.yellow}d2](target:d32) is
+[{.i.pill.green}d1](target:d31) and
+[{.i.pill.yellow}d2](target:d32) is
 
 {.text-center.reveal(when="blank-5")} _Area_ = `1/2`
-[{.step-target.i.pill.green}d1](target:d31) ×
-[{.step-target.i.pill.yellow}d2](target:d32).
+[{.i.pill.green}d1](target:d31) ×
+[{.i.pill.yellow}d2](target:d32).
 :::
 
 ::: tab
@@ -926,10 +926,10 @@ we can use either the equation for the area of a parallelogram, or that for the
 area of a kite:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Area_ =
-[{.step-target.i.pill.blue}base](target:base) ×
-[{.step-target.i.pill.red}height](target:height) = `1/2`
-[{.step-target.i.pill.green}d1](target:d41) ×
-[{.step-target.i.pill.yellow}d2](target:d42).
+[{.i.pill.blue}base](target:base) ×
+[{.i.pill.red}height](target:height) = `1/2`
+[{.i.pill.green}d1](target:d41) ×
+[{.i.pill.yellow}d2](target:d42).
 
 {.reveal(when="blank-6 blank-7" delay=1000)} _In different contexts, you might
 be given different parts of a Rhombus (sides, height, diagonals), and you should
@@ -1377,7 +1377,7 @@ noticed that a non-periodic pattern can be rolled up without any bulges.
 > id: polyhedra
 
 Up to now we have just looked at what we can do with polygons in a flat,
-two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a 3-dimensional
+two-dimensional world. A [__polyhedron__](gloss:polyhedron) is a three-dimensional
 object that is made up of polygons. Here are some examples:
 
 ::: column.padded-thin(width=220)
@@ -1432,9 +1432,9 @@ you’ll learn how to actually prove it mathematically.
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Our entire world is 3-dimensional – but it is often much easier to draw or
-visualise flat, 2-dimensional objects. And there are a few different ways to
-view 3-dimensional polyhedra in a 2-dimensional way.
+Our entire world is three-dimensional – but it is often much easier to draw or
+visualise flat, two-dimensional objects. And there are a few different ways to
+view three-dimensional polyhedra in a two-dimensional way.
 
     //- x-folding(shape="Tetrahedron" size=400)
     //- x-folding(shape="Cube" size=400)
@@ -1496,7 +1496,7 @@ philosopher [Plato](bio:plato).
     //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 So what do the Platonic solids look like – and how many of them are there? To
-make a 3-dimensional shape, we need at least [[3]] faces to meet at every
+make a three-dimensional shape, we need at least [[3]] faces to meet at every
 vertex. Let’s start systematically with the smallest regular polygon:
 equilateral triangles:
 
@@ -1563,7 +1563,7 @@ If [[five]] triangles meet at every vertex, we get the __Icosahedron__. It has
 ::: column.grow
 If [[six]] triangles meet at every vertex, something different happens: we
 simply get [[a tessellation|a quadrilateral|another Icosahedron]],
-_{span.reveal(when="blank-1")}instead of a 3-dimensional polyhedron._
+_{span.reveal(when="blank-1")}instead of a three-dimensional polyhedron._
 :::
 
 ---
@@ -1663,7 +1663,7 @@ seems like there are no Platonic solids consisting of hexagons._
 > id: platonic-final
 
 The same also happens for all regular polygons with more than six sides. They
-don’t tessellate, and we certainly don’t get any 3-dimensional polygons.
+don’t tessellate, and we certainly don’t get any three-dimensional polygons.
 
 This means that there are just [[five]] Platonic solids! Let’s have a look at
 all of them together:

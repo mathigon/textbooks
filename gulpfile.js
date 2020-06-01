@@ -18,7 +18,7 @@ const tsconfig = require('./tsconfig.json');
 const rtl = require('postcss-rtl');
 
 const LANGUAGES = ['en',  'ar', 'cn', 'de', 'es', 'fr', 'hi', 'it', 'ja', 'pt',
-  'ru', 'sv', 'tr', 'vi', 'fa', 'mr', 'ro'];
+  'ru', 'sv', 'tr', 'vi', 'fa', 'mr', 'ro', 'hr'];
 const CACHE = __dirname + '/content/.cache.json';
 
 
@@ -31,7 +31,7 @@ function markdown() {
 function scripts() {
   return gulp.src(['content/*/*.ts', '!content/shared/**'])
       .pipe(rollup({
-        plugins: [typescript(tsconfig.compilerOptions), resolve()],
+        plugins: [resolve(), typescript(tsconfig.compilerOptions)],
         onwarn(e) {
           if (e.code !== 'CIRCULAR_DEPENDENCY') console.warn(e.message);
         }

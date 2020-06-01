@@ -39,7 +39,7 @@ export function race($step: Step) {
 }
 
 export function choice($step: Step) {
-  const $buttons = $step.$$('button');
+  const $buttons = $step.$$('.btn');
   for (const $b of $buttons) {
     $b.on('click', () => {
       $step.score('choice');
@@ -71,7 +71,7 @@ export function convergence($step: Step) {
 
 export function dots($step: Step) {
   const $machine = $step.$('x-dot-machine') as DotMachine;
-  const $btn = $step.$('button')!;
+  const $btn = $step.$('.btn')!;
 
   let dStep = 0;
   let xStep = 0;
@@ -158,7 +158,7 @@ function addDots($machine: DotMachine, className: string) {
 
 export function dots3($step: Step) {
   const $machine = $step.$('x-dot-machine') as DotMachine;
-  const $button = $step.$('button')!;
+  const $button = $step.$('.btn')!;
 
   $button.one('click', () => {
     addDots($machine, 'dark');

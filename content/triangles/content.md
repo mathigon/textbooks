@@ -427,8 +427,8 @@ parts of the triangle. This means that the rectangle is
 {.reveal(when="blank-0")} We can easily work out the area of the rectangle, so
 the area of the triangle must be half that:
 
-{.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.step-target.pill.red} base](target:base)
-`×` [{.step-target.pill.blue} height](target:height)
+{.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.pill.red} base](target:base)
+`×` [{.pill.blue} height](target:height)
 ::: column(width=300)
 
     x-geopad.sticky(width=300): svg
@@ -948,6 +948,7 @@ see that
 #### Algebra _{span.check(when="blank-2 blank-3 blank-4")}_
 
 ::: column.grow
+
 Here we have the same figure as before, but this time we’ll use _algebra_ rather
 than _rearrangement_ to prove Pythagoras’ theorem.
 
@@ -1006,11 +1007,11 @@ _{span.qed}_
 #### Similar Triangles _{span.check(when="next-0 next-1 next-2 blank-5")}_
 
 ::: column.grow
+
 {.r} Here you can see another right-angled triangle. If we draw one of the
 altitudes, it splits the triangle into two smaller triangle.
 It also divides the hypotenuse _c_ into [two smaller parts](target:hypotenuse)
-which we’ll call [{.step-target.i.pill.blue}x](target:x) and
-[{.step-target.i.pill.green}y](target:y).
+which we’ll call [{.i.pill.blue}x](target:x) and [{.i.pill.green}y](target:y).
 _{span.next-step} Continue_
 
 {.r.reveal(when="next-0")} Let’s separate out the two smaller triangles, so that
@@ -1074,14 +1075,15 @@ similar polygons:
 
 {.r.reveal(when="blank-5")} _{span.next-step} Continue_
 
-{.reveal(when="next-2")} But remember that _c_ = [{.step-target.i.pill.blue}x](target:x) +
-[{.step-target.i.pill.green}y](target:y). Therefore
+{.reveal(when="next-2")} But remember that _c_ = [{.i.pill.blue}x](target:x) +
+[{.i.pill.green}y](target:y). Therefore
 
 {.text-center.reveal(when="next-2")} `c = a^2/c + b^2/c`
 
 {.text-center.reveal(when="next-2")} `c^2 = a^2 + b^2`
 
 {.reveal(when="next-2")} Once more, we’ve proven Pythagoras’ theorem! _{span.qed}_
+
 :::
 
 ---
@@ -1093,14 +1095,18 @@ of  “number worship”. They believed that all numbers have their own characte
 and followed a variety of other bizarre customs.
 
 ::: column.grow
+
 The Pythagoreans are credited with many mathematical discoveries, including
 finding the first [irrational number](gloss:irrational-numbers), `sqrt(2)`.
 Irrational numbers cannot be expressed as a simple fraction – a concept the
 Pythagoreans found deeply troubling and (unsuccessfully) tried to cover up!
+
 ::: column(width=400)
+
     x-img(src="images/pythagoreans.jpg" width=400 height=200 lightbox)
 
 {.caption} “Pythagoreans celebrate sunrise” by Fyodor Bronnikov
+
 :::
 
 ---
@@ -1523,19 +1529,16 @@ have the tools to do it!
         path.yellow(x="segment(x,y)" target="right" label="height")
 
 The surveyors in India measured the angle of the top of a mountain from [two
-different positions](target:points), _{span.pill.step-target.yellow(data-to="base")}5km apart_.
-The results were _{span.pill.step-target.red(data-to="ang")}23°_ and
-_{span.pill.step-target.blue(data-to="ang1")}29°_.
+different positions](target:points), [{.pill.yellow} 5km apart](target:base).
+The results were [{.pill.red} 23°](target:ang) and [{.pill.blue} 29°](target:ang1).
 
-Because _{span.pill.step-target.green(data-to="a")}angle α_ is a [supplementary
-angle](gloss:supplementary-angles), we know that it must be [[151]]°.
-_{span.reveal(when="blank-0")}Now we can use the sum of the internal angles of
-a triangle to work out that *{span.pill.step-target(data-to="b")}angle β* is [[6]]°._
+Because [{.pill.green} angle α](target:a) is a [supplementary angle](gloss:supplementary-angles),
+we know that it must be [[151]]°. _{span.reveal(when="blank-0")}Now we can use the sum of the
+internal angles of a triangle to work out that [{.pill} angle β](target:b) is [[6]]°._
 
-{.reveal(when="blank-1")} Now we know [all three angles](target:angles) of the
-triangle, as well as _{span.pill.step-target.yellow(data-to="base")}one of the
-sides_. This is enough to use the [[sine rule|cosine rule]] to find the distance
-[_d_](target:d):
+{.reveal(when="blank-1")} Now we know [all three angles](target:angles) of the triangle, as well as
+[{.pill.yellow} one of the sides](target:base). This is enough to use the [[sine rule|cosine rule]]
+to find the distance [_d_](target:d):
 
     table.eqn-system
       tr.reveal(when="blank-2")

@@ -841,7 +841,7 @@ example, we can _add_ two symmetries to get new ones:
       mo +
       img.cube(src="images/cube-1.svg" width=54 height=54)
       mo =
-      span.sym-sum.pending: img.cube(src="images/cube-2.svg" width=54 height=54)
+      span.sym-sum.pending(tabindex=0): img.cube(src="images/cube-2.svg" width=54 height=54)
     x-gesture(target=".sym-sum")
 
 ::: column(width=260)
@@ -851,7 +851,7 @@ example, we can _add_ two symmetries to get new ones:
       mo +
       img.cube(src="images/cube-6.svg" width=54 height=54)
       mo =
-      span.sym-sum.pending: img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
+      span.sym-sum.pending(tabindex=0): img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
 
 :::
 
@@ -868,14 +868,14 @@ Whenever you add two symmetries of a square, you get a new one. Here is a
         .operator +
         .operator =
         .clear ×
-      .button + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
 
 ---
 > id: symmetry-arithmetic
@@ -1169,7 +1169,7 @@ about the motion when unscrewing a bottle).
     img(src="images/crystal.jpg" width=300 height=240)
 
 {.caption} Boron-Nitride has its molecules arranged in this crystal lattice,
-which has a 3-dimensional symmetry group.
+which has a three-dimensional symmetry group.
 :::
 
 ---
@@ -1257,6 +1257,7 @@ smaller._
 > id: dilations-1
 
 ::: column.grow
+
 All dilations have a [__center__](target:center) and a [__scale factor__](->.scale-target).
 The center is the point of reference for the dilation and scale factor tells us
 how much the figure stretches or shrinks.
@@ -1264,6 +1265,7 @@ how much the figure stretches or shrinks.
 If the [scale factor](gloss:scale-factor) is between 0 and 1, the image is
 [[smaller|larger]] than the original. If the scale factor is larger than 1, the
 image is [[larger|smaller]] than the original.
+
 ::: column(width=300)
 
     x-geopad(width=300 height=240): svg

@@ -192,8 +192,8 @@ this is what gives fractals their name: they have a __fractional dimension__.
 
 With every iteration, we remove some of the area of the Sierpinski triangle.
 If we could do this infinitely many times, there would actually be no area
-left: that’s why the Sierpinski triangle is something in-between a 2-dimensional
-area, and a 1-dimensional line.
+left: that’s why the Sierpinski triangle is something in-between a two-dimensional
+area, and a one-dimensional line.
 
 ::: .theorem
 While many fractals are _self-similar_, a better definition is that __fractals__
@@ -283,7 +283,7 @@ Snowflake is `§d = log_3(4) ≈ 1.262`._
 ---
 > id: koch-size
 
-::: tab
+::: tab(parent="sticky")
 
 #### Area _{span.check(when="blank-6")}_
 
@@ -388,7 +388,7 @@ Can you come up with any other ways to create your own fractals?
 ### Menger Sponge
 
 Fractals don’t have to be “flat”, like many of the examples above. One of the
-most famous fractals that look 3-dimensional is the __Menger sponge__, named
+most famous fractals that look three-dimensional is the __Menger sponge__, named
 after the mathematician [Karl Menger](bio:menger) who first described it in 1926.
 
 ::: column(width=320 parent="right")
@@ -412,9 +412,9 @@ Menger sponge just like we did for the Koch snowflake above. In this case we get
 
 :::
 
-{.reveal(when="blank-1")} If you imagine cutting out more and more holes,
+{.reveal(when="blank-1 slider-0")} If you imagine cutting out more and more holes,
 infinitely many times, there would be no actual volume left. That’s why the cube
-is “not quite” 3-dimensional!
+is “not quite” three-dimensional!
 [Continue](btn:next)
 
 ---
@@ -625,9 +625,9 @@ mathematician [Wacław Sierpiński](bio:sierpinski). It can be created by starti
 with one large, equilateral triangle, and then repeatedly cutting smaller
 triangles out of its center.
 
-{.r.reveal(when="slider-0")} Wacław Sierpiński was the first mathematicians to
-think about the properties of this triangle, but it has appeared many centuries
-earlier in artwork, patterns and mosaics.
+{.r.reveal(when="slider-0")} Wacław Sierpiński was the first mathematician to think about the
+properties of this triangle, but it has appeared many centuries earlier in artwork, patterns and
+mosaics.
 
 ::: column(width=300)
 
@@ -786,7 +786,7 @@ distribution of dots, but in other cases, we reveal even more fractals:
 
 {.reveal(when="s1 s2 play")} Did you discover the [Sierpinski
 carpet](action:carpet()) or this [pentagonal snowflake](action:snowflake())
-based on the [__Golden ratio__](gloss:golden-ratio)?
+based on the [__golden ratio__](gloss:golden-ratio)?
 
 ---
 > id: cellular
@@ -839,8 +839,8 @@ cellular automata, for example the colours on the shell of this snail.
 ### Sierpinski Tetrahedra
 
 There are many variants of the Sierpinski triangle, and other fractals with
-similar properties and creation processes. Some look 2-dimensional, like the
-_Sierpinski Carpet_ you saw above. Others look 3-dimensional, like these
+similar properties and creation processes. Some look two-dimensional, like the
+_Sierpinski Carpet_ you saw above. Others look three-dimensional, like these
 examples:
 
 ::: column(width=320)
@@ -1040,7 +1040,7 @@ _c_ where _every_ sequence diverges, so the entire complex plane remains white.
 > id: julia-3
 
 The different shapes that are formed by colouring in the numbers are called
-[__Julia Sets__](gloss:julia-set). They were discovered independently by two
+[__Julia sets__](gloss:julia-set). They were discovered independently by two
 French mathematicians, [Gaston Julia](bio:julia) and [Pierre Fatou](bio:fatou),
 around 1918.
 
@@ -1055,19 +1055,19 @@ diverges:
 
 ::: column(width=220)
 
-    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox alt="Julia Set")
+    x-img(src="images/julia-1.jpg" width=220 height=165 lightbox alt="Julia set")
 
 {.caption} `c = −0.70176 – 0.3842"i"`
 
 ::: column(width=220)
 
-    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox alt="Julia Set")
+    x-img(src="images/julia-2.jpg" width=220 height=165 lightbox alt="Julia set")
 
 {.caption} `c = −0.4 + 0.6"i"`
 
 ::: column(width=220)
 
-    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox alt="Julia Set")
+    x-img(src="images/julia-3.jpg" width=220 height=165 lightbox alt="Julia set")
 
 {.caption} `c = 0.285 + 0.01"i"`
 
@@ -1119,12 +1119,12 @@ remain bounded. What shapes do you expect to appear?
 ---
 > id: mandel-history
 
-This fractal is called the [__Mandelbrot Set__](gloss:mandelbrot-set), and when
+This fractal is called the [__Mandelbrot set__](gloss:mandelbrot-set), and when
 rotated by 90°, it looks almost like a person, with head, body and two arms. It
 was defined and drawn for the first time in 1978, in a research paper by the
 mathematicians Robert Brooks and Peter Matelski:
 
-    figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press" alt="Mandelbrot Set Drawing")
+    figure: x-img(src="images/printout.jpg" width=360 height=290 credit="© Princeton University Press" alt="Mandelbrot set drawing")
 
 A few years later, [Benoit Mandelbrot](bio:mandelbrot) used the powerful
 computers at IBM to create a much more detailed visualisation of the fractal,
