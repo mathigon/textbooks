@@ -702,7 +702,7 @@ Yo, banana [[boy]]!
 
 {.reveal(when="blank-0 blank-1")} But Palindromes are not just fun, they
 actually have practical importance. A few years ago, scientists discovered that
-parts of our [DNA](gloss:dna) are palindromic. This makes that more resilient to
+parts of our [DNA](gloss:dna) are palindromic. This makes them more resilient to
 mutations or damage – because there is a second backup copy of every piece.
 
 ---
