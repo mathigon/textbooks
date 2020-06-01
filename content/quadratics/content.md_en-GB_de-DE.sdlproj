@@ -1,0 +1,639 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="fa5f5f62-7356-4b9a-a3df-3a0b27ddb377" SettingsBundleGuid="0b19f54b-4bd9-429e-b50c-d6371fdd8ded" Version="4.0.0.0" Owner="DELL-EDITH\mathe" ProjectTemplateGuid="10004f3b-4acf-4425-a3e3-38d3b3514276" ReferenceProjectGuid="00000000-0000-0000-0000-000000000000">
+  <LanguageDirections>
+    <LanguageDirection Guid="3067cfed-8013-419e-9623-790fbe926adb" SettingsBundleGuid="78b10426-c24e-426f-a819-8f16b9206527" TargetLanguageCode="de-DE" SourceLanguageCode="en-GB">
+      <AutoSuggestDictionaries />
+      <CascadeItem OverrideParent="false" StopSearchingWhenResultsFound="false">
+        <CascadeEntryItem PerformConcordanceSearch="true" Penalty="0" PerformUpdate="true" PerformNormalSearch="true">
+          <MainTranslationProviderItem Uri="sdltm.file:///D:/Mathigon/Termbanken und Translationmemories/Coding.sdltm" Enabled="true" />
+        </CascadeEntryItem>
+        <CascadeEntryItem PerformConcordanceSearch="true" Penalty="0" PerformUpdate="false" PerformNormalSearch="true">
+          <MainTranslationProviderItem Uri="sdltm.file:///D:/Mathigon/Termbanken und Translationmemories/Mathe.sdltm" Enabled="true" />
+        </CascadeEntryItem>
+        <CascadeEntryItem PerformConcordanceSearch="false" Penalty="0" PerformUpdate="false" PerformNormalSearch="true">
+          <MainTranslationProviderItem Uri="deepltranslationprovider:///?resenddrafts=False" Enabled="true" />
+        </CascadeEntryItem>
+        <CascadeEntryItem PerformConcordanceSearch="true" Penalty="0" PerformUpdate="false" PerformNormalSearch="false">
+          <MainTranslationProviderItem Uri="mymemoryprovider:///" Enabled="true" />
+        </CascadeEntryItem>
+      </CascadeItem>
+    </LanguageDirection>
+  </LanguageDirections>
+  <TermbaseConfiguration>
+    <Termbases>
+      <Name>Mathigon</Name>
+      <SettingsXml>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;TermbaseSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Path&gt;D:\Mathigon\Termbanken und Translationmemories\mathe.sdltb&lt;/Path&gt;
+  &lt;IsOpen&gt;false&lt;/IsOpen&gt;
+  &lt;Filter&gt;0&lt;/Filter&gt;
+  &lt;FilterHighlight&gt;false&lt;/FilterHighlight&gt;
+  &lt;Layout&gt;0&lt;/Layout&gt;
+  &lt;Local&gt;true&lt;/Local&gt;
+  &lt;IsCustom&gt;false&lt;/IsCustom&gt;
+&lt;/TermbaseSettings&gt;</SettingsXml>
+      <Enabled>true</Enabled>
+    </Termbases>
+    <Termbases>
+      <Name>dict.cc math</Name>
+      <SettingsXml>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;TermbaseSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Path&gt;D:\Mathigon\Termbanken und Translationmemories\dict-math.sdltb&lt;/Path&gt;
+  &lt;IsOpen&gt;false&lt;/IsOpen&gt;
+  &lt;Filter&gt;0&lt;/Filter&gt;
+  &lt;FilterHighlight&gt;false&lt;/FilterHighlight&gt;
+  &lt;Layout&gt;0&lt;/Layout&gt;
+  &lt;Local&gt;true&lt;/Local&gt;
+  &lt;IsCustom&gt;false&lt;/IsCustom&gt;
+&lt;/TermbaseSettings&gt;</SettingsXml>
+      <Enabled>true</Enabled>
+    </Termbases>
+    <LanguageIndexMappings>
+      <Language>en-GB</Language>
+      <Index>English</Index>
+    </LanguageIndexMappings>
+    <LanguageIndexMappings>
+      <Language>de-DE</Language>
+      <Index>German</Index>
+    </LanguageIndexMappings>
+    <RecognitionOptions>
+      <ShowWithNoAvailableTranslation>false</ShowWithNoAvailableTranslation>
+      <MinimumMatchValue>70</MinimumMatchValue>
+      <SearchDepth>200</SearchDepth>
+      <SearchOrder>Parallel</SearchOrder>
+    </RecognitionOptions>
+  </TermbaseConfiguration>
+  <SettingsBundles>
+    <SettingsBundle Guid="0b19f54b-4bd9-429e-b50c-d6371fdd8ded">
+      <SettingsBundle>
+        <SettingsGroup Id="TerminologyProviderSettings">
+          <Setting Id="TermbasesOrder">
+            <ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+              <string>Mathigon</string>
+              <string>dict.cc math</string>
+            </ArrayOfstring>
+          </Setting>
+          <Setting Id="Termbases">
+            <ArrayOfTermbase xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Sdl.ProjectApi.Implementation.Xml">
+            </ArrayOfTermbase>
+          </Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="FileTypeManagerConfigurationSettingsGroup">
+          <Setting Id="FileTypeManagerConfigurationSettings">
+            <FileTypeManagerConfigurationList xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sdl.com/projectapi">
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>SDL XLIFF 1.0 v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>RegEx v 1.0.0.0</FileTypeDefinitionId>
+                <Profile xmlns:d3p1="http://www.sdl.com/filetypesupport">
+                  <d3p1:Description>
+                  </d3p1:Description>
+                  <d3p1:Expression>(^[\d\D]*\.[yY][aA][mM][lL]$)</d3p1:Expression>
+                  <d3p1:FileDialogWildcardExpression>*.yaml</d3p1:FileDialogWildcardExpression>
+                  <d3p1:FileTypeDefinitionId>Mathigon YAML 1.0</d3p1:FileTypeDefinitionId>
+                  <d3p1:FileTypeDocumentName>YAML</d3p1:FileTypeDocumentName>
+                  <d3p1:FileTypeDocumentsName>YAML</d3p1:FileTypeDocumentsName>
+                  <d3p1:FileTypeName>Mathigon YAML</d3p1:FileTypeName>
+                </Profile>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>RegEx v 1.0.0.0</FileTypeDefinitionId>
+                <Profile xmlns:d3p1="http://www.sdl.com/filetypesupport">
+                  <d3p1:Description>
+                  </d3p1:Description>
+                  <d3p1:Expression>(^[\d\D]*\.[mM][dD]$)</d3p1:Expression>
+                  <d3p1:FileDialogWildcardExpression>*.md</d3p1:FileDialogWildcardExpression>
+                  <d3p1:FileTypeDefinitionId>Mathigon 1.0</d3p1:FileTypeDefinitionId>
+                  <d3p1:FileTypeDocumentName>Markdown</d3p1:FileTypeDocumentName>
+                  <d3p1:FileTypeDocumentsName>Markdown</d3p1:FileTypeDocumentsName>
+                  <d3p1:FileTypeName>Mathigon Markdown</d3p1:FileTypeName>
+                </Profile>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>TTX 2.0 v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>ITD v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>DOC v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>WordprocessingML v. 2</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <FileTypeDefinitionId>Word 2007 v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>PPT v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>PresentationML v. 1</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>PowerPoint 2007 v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>SpreadsheetML v. 1</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Excel 2007 v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XLS v 3.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Excel 2003 v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Bilingual Excel v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Bilingual Workbench 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>RTF v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XHTML 1.1 v 1.2.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Html 5 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Html 4 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>FrameMaker 8.0 v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Inx 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>IDML v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>ICML Filter 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Odt 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Odp 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Ods 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>QuarkXPress v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XLIFF 1.1-1.2 v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>MemoQ v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XLIFF 2.0 v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>WsXliff 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>PDF v 3.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>CSV v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Tab Delimited v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Java Resources v 2.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>PO files v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>SubRip v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>JSON v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XML: RESX v 1.2.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XML: DITA 1.2 v 1.2.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>DocBook 4.5 v 1.2.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XML: Author-it 1.2 v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XML: MadCap 1.2 v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XML: ITS 1.0 v 1.2.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XML: Any v 1.2.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Plain Text v 1.0.0.0</FileTypeDefinitionId>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>Word 2000-2003 v 1.0.0.0</FileTypeDefinitionId>
+                <Hidden>true</Hidden>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>PowerPoint XP-2003 v 1.0.0.0</FileTypeDefinitionId>
+                <Hidden>true</Hidden>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <FileTypeDefinitionId>RTF v 1.0.0.0</FileTypeDefinitionId>
+                <Hidden>true</Hidden>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>PDF v 2.0.0.0</FileTypeDefinitionId>
+                <Hidden>true</Hidden>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+              <FileTypeManagerConfigurationItem>
+                <Enabled>true</Enabled>
+                <FileTypeDefinitionId>XML: DITA 1.1 v 1.2.0.0</FileTypeDefinitionId>
+                <Hidden>true</Hidden>
+                <Removed>false</Removed>
+              </FileTypeManagerConfigurationItem>
+            </FileTypeManagerConfigurationList>
+          </Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="Mathigon 1.0">
+          <Setting Id="LineBreakHandling">Replace</Setting>
+          <Setting Id="InlineRules24OpeningDef">\.large-.+</Setting>
+          <Setting Id="InlineRules24">True</Setting>
+          <Setting Id="InlineRules23OpeningDef">\/\/\s</Setting>
+          <Setting Id="InlineRules23">True</Setting>
+          <Setting Id="InlineRules22OpeningDef">p.caption\s</Setting>
+          <Setting Id="InlineRules22">True</Setting>
+          <Setting Id="InlineRules21OpeningDef">\|</Setting>
+          <Setting Id="InlineRules21">True</Setting>
+          <Setting Id="InlineRules20OpeningDef">\(btn:.+?\)</Setting>
+          <Setting Id="InlineRules20">True</Setting>
+          <Setting Id="InlineRules19OpeningDef">"</Setting>
+          <Setting Id="InlineRules19">True</Setting>
+          <Setting Id="InlineRules18OpeningDef">`</Setting>
+          <Setting Id="InlineRules18">True</Setting>
+          <Setting Id="InlineRules17OpeningDef">figure:.*</Setting>
+          <Setting Id="InlineRules17">True</Setting>
+          <Setting Id="InlineRules16OpeningDef">#{1,4}\s</Setting>
+          <Setting Id="InlineRules16">True</Setting>
+          <Setting Id="InlineRules15OpeningDef">\*{1,3}\s</Setting>
+          <Setting Id="InlineRules15">True</Setting>
+          <Setting Id="InlineRules14OpeningDef">_</Setting>
+          <Setting Id="InlineRules14">True</Setting>
+          <Setting Id="InlineRules13OpeningDef">__</Setting>
+          <Setting Id="InlineRules13">True</Setting>
+          <Setting Id="InlineRules12OpeningDef">\]</Setting>
+          <Setting Id="InlineRules12">True</Setting>
+          <Setting Id="InlineRules11OpeningDef">\[</Setting>
+          <Setting Id="InlineRules11">True</Setting>
+          <Setting Id="InlineRules10OpeningDef">\]\]</Setting>
+          <Setting Id="InlineRules10">True</Setting>
+          <Setting Id="InlineRules9OpeningDef">\[\[</Setting>
+          <Setting Id="InlineRules9">True</Setting>
+          <Setting Id="InlineRules8OpeningDef">\((bio|gloss|target|pill|todo):.*?\)</Setting>
+          <Setting Id="InlineRules8">True</Setting>
+          <Setting Id="InlineRules7OpeningDef">\{.+?\}</Setting>
+          <Setting Id="InlineRules7">True</Setting>
+          <Setting Id="InlineRules6OpeningDef">svg\..+</Setting>
+          <Setting Id="InlineRules6">True</Setting>
+          <Setting Id="InlineRules5OpeningDef">svg\(.+</Setting>
+          <Setting Id="StructureRules0IsMultiLine">True</Setting>
+          <Setting Id="StructureRules0ClosingPattern">\r\n\r\n</Setting>
+          <Setting Id="StructureRules0OpeningPattern">^</Setting>
+          <Setting Id="StructureRules0">True</Setting>
+          <Setting Id="StructureRules">True</Setting>
+          <Setting Id="InlineRules5">True</Setting>
+          <Setting Id="InlineRules4OpeningDef">x-(media|video|slider|geopad|play|gesture|select|solid).+</Setting>
+          <Setting Id="InlineRules4">True</Setting>
+          <Setting Id="InlineRules3OpeningDef">\$\{.+\}</Setting>
+          <Setting Id="InlineRules3">True</Setting>
+          <Setting Id="InlineRules2OpeningDef">-{3}.*</Setting>
+          <Setting Id="InlineRules2">True</Setting>
+          <Setting Id="InlineRules1OpeningDef">&gt;\s.+?:.*</Setting>
+          <Setting Id="InlineRules1">True</Setting>
+          <Setting Id="InlineRules0OpeningDef">:{3}.*</Setting>
+          <Setting Id="InlineRules0">True</Setting>
+          <Setting Id="InlineRules">True</Setting>
+          <Setting Id="FileTypeConfiguration_ComponentBuilderId">RegEx v 1.0.0.0</Setting>
+          <Setting Id="FileTypeConfiguration_ProfileData">
+            <FileTypeInformation xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sdl.com/filetypesupport">
+              <Description>
+              </Description>
+              <Expression>(^[\d\D]*\.[mM][dD]$)|(^[\d\D]*\.[yY][aA][mM][lL]$)</Expression>
+              <FileDialogWildcardExpression>*.md;*.yaml</FileDialogWildcardExpression>
+              <FileTypeDefinitionId>Mathigon 1.0</FileTypeDefinitionId>
+              <FileTypeDocumentName>Markdown</FileTypeDocumentName>
+              <FileTypeDocumentsName>Markdown</FileTypeDocumentsName>
+              <FileTypeName>Mathigon Markdown</FileTypeName>
+            </FileTypeInformation>
+          </Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="Html 4 2.0.0.0">
+          <Setting Id="DefaultOverridesList0">True</Setting>
+          <Setting Id="DefaultOverridesList1">True</Setting>
+          <Setting Id="DefaultOverridesList">True</Setting>
+          <Setting Id="DefaultOverridesList1Name">HTMLSPECIAL</Setting>
+          <Setting Id="DefaultOverridesList0Name">ISOLAT1</Setting>
+          <Setting Id="RemoveDefaultOverridesList">True</Setting>
+          <Setting Id="SubContentClientSideFileTypeId">Embedded Content Plain Text v 1.0.0.0</Setting>
+          <Setting Id="SubContentServerSideFileTypeId">Embedded Content Plain Text v 1.0.0.0</Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="Mathigon YAML 1.0">
+          <Setting Id="LineBreakHandling">Replace</Setting>
+          <Setting Id="InlineRules14OpeningDef">\r\n\s{4}</Setting>
+          <Setting Id="InlineRules14">True</Setting>
+          <Setting Id="InlineRules13OpeningDef">\s{4}-\stitle:\s</Setting>
+          <Setting Id="InlineRules13">True</Setting>
+          <Setting Id="InlineRules12OpeningDef">.*:\r\n</Setting>
+          <Setting Id="InlineRules12">True</Setting>
+          <Setting Id="InlineRules11OpeningDef">\s{2}(link|born|died|overflow|url):\s.+</Setting>
+          <Setting Id="InlineRules11">True</Setting>
+          <Setting Id="InlineRules10OpeningDef">\s{2}(title|text|image|bio|name):\s</Setting>
+          <Setting Id="InlineRules10">True</Setting>
+          <Setting Id="InlineRules9OpeningDef">"</Setting>
+          <Setting Id="InlineRules9">True</Setting>
+          <Setting Id="InlineRules8OpeningDef">`</Setting>
+          <Setting Id="InlineRules8">True</Setting>
+          <Setting Id="InlineRules7OpeningDef">figure:.*</Setting>
+          <Setting Id="InlineRules7">True</Setting>
+          <Setting Id="InlineRules6OpeningDef">#\s.*</Setting>
+          <Setting Id="InlineRules6">True</Setting>
+          <Setting Id="InlineRules5OpeningDef">\*{1,3}\s</Setting>
+          <Setting Id="StructureRules0IsMultiLine">True</Setting>
+          <Setting Id="StructureRules0ClosingPattern">\r\n\r\n</Setting>
+          <Setting Id="StructureRules0OpeningPattern">^</Setting>
+          <Setting Id="StructureRules0">True</Setting>
+          <Setting Id="StructureRules">True</Setting>
+          <Setting Id="InlineRules5">True</Setting>
+          <Setting Id="InlineRules4OpeningDef">_</Setting>
+          <Setting Id="InlineRules4">True</Setting>
+          <Setting Id="InlineRules3OpeningDef">__</Setting>
+          <Setting Id="InlineRules3">True</Setting>
+          <Setting Id="InlineRules2OpeningDef">\]</Setting>
+          <Setting Id="InlineRules2">True</Setting>
+          <Setting Id="InlineRules1OpeningDef">\[</Setting>
+          <Setting Id="InlineRules1">True</Setting>
+          <Setting Id="InlineRules0OpeningDef">x-(media|video|slider|geopad|play|gesture|select|solid).+</Setting>
+          <Setting Id="InlineRules0">True</Setting>
+          <Setting Id="InlineRules">True</Setting>
+          <Setting Id="FileTypeConfiguration_ComponentBuilderId">RegEx v 1.0.0.0</Setting>
+          <Setting Id="FileTypeConfiguration_ProfileData">
+            <FileTypeInformation xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sdl.com/filetypesupport">
+              <Description>
+              </Description>
+              <Expression>(^[\d\D]*\.[mM][dD]$)|(^[\d\D]*\.[yY][aA][mM][lL]$)</Expression>
+              <FileDialogWildcardExpression>*.yaml</FileDialogWildcardExpression>
+              <FileTypeDefinitionId>Mathigon YAML 1.0</FileTypeDefinitionId>
+              <FileTypeDocumentName>YAML</FileTypeDocumentName>
+              <FileTypeDocumentsName>YAML</FileTypeDocumentsName>
+              <FileTypeName>Mathigon YAML</FileTypeName>
+            </FileTypeInformation>
+          </Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="QAVerificationSettings">
+          <Setting Id="Enabled">True</Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="SettingsTagVerifier">
+          <Setting Id="Enabled">True</Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="SettingsTermVerifier">
+          <Setting Id="Enabled">True</Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="GrammarCheckerSettings">
+          <Setting Id="Enabled">False</Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="TermRecognitionSettings">
+          <Setting Id="EnableTwoLetterTermRecognition">False</Setting>
+          <Setting Id="RepetitionThreshold">10</Setting>
+          <Setting Id="AllowOverlappingTerms">False</Setting>
+        </SettingsGroup>
+        <SettingsGroup Id="FileViewServiceSettings">
+          <Setting Id="SelectedTargetLanguageCode">de-DE</Setting>
+        </SettingsGroup>
+      </SettingsBundle>
+    </SettingsBundle>
+    <SettingsBundle Guid="4ca2501b-3771-4b6b-9dcd-d1c4f3c7e595">
+      <SettingsBundle>
+        <SettingsGroup Id="IgnoredMessagesSettings">
+          <Setting Id="IgnoredMessagesData">
+            <IgnoredMessagesData xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Sdl.ProjectApi">
+              <IgnoredMessageIds>
+              </IgnoredMessageIds>
+              <IgnoredMessageTypes xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+              </IgnoredMessageTypes>
+            </IgnoredMessagesData>
+          </Setting>
+        </SettingsGroup>
+      </SettingsBundle>
+    </SettingsBundle>
+  </SettingsBundles>
+  <AnalysisBands>
+    <AnalysisBand MinimumMatchValue="50" />
+    <AnalysisBand MinimumMatchValue="75" />
+    <AnalysisBand MinimumMatchValue="85" />
+    <AnalysisBand MinimumMatchValue="95" />
+  </AnalysisBands>
+  <ManualTaskTemplates />
+  <Users>
+    <User UserId="DELL-EDITH\mathe" FullName="Edith March" Description="" Email="march.edith@gmail.com" PhoneNumber="" EmailType="Smtp" />
+  </Users>
+  <CascadeItem OverrideParent="true" StopSearchingWhenResultsFound="false">
+    <CascadeEntryItem PerformConcordanceSearch="true" Penalty="0" PerformUpdate="true" PerformNormalSearch="true">
+      <MainTranslationProviderItem Uri="sdltm.file:///C:/Users/mathe/OneDrive/EU Kommission Erteilte Aufträge/2020 EU Aufträge/CNECT 2020 03339/TM/cnect2020 03339.sdltm" Enabled="false" />
+    </CascadeEntryItem>
+    <CascadeEntryItem PerformConcordanceSearch="true" Penalty="0" PerformUpdate="true" PerformNormalSearch="true">
+      <MainTranslationProviderItem Uri="sdltm.file:///D:/Mathigon/Termbanken und Translationmemories/Mathe.sdltm" Enabled="true" />
+    </CascadeEntryItem>
+    <CascadeEntryItem PerformConcordanceSearch="true" Penalty="0" PerformUpdate="false" PerformNormalSearch="true">
+      <MainTranslationProviderItem Uri="sdltm.file:///D:/Mathigon/Termbanken und Translationmemories/Coding.sdltm" Enabled="false" />
+    </CascadeEntryItem>
+    <CascadeEntryItem PerformConcordanceSearch="false" Penalty="0" PerformUpdate="false" PerformNormalSearch="true">
+      <MainTranslationProviderItem Uri="deepltranslationprovider:///?resenddrafts=False" Enabled="true" />
+    </CascadeEntryItem>
+    <CascadeEntryItem PerformConcordanceSearch="true" Penalty="0" PerformUpdate="false" PerformNormalSearch="false">
+      <MainTranslationProviderItem Uri="mymemoryprovider:///" Enabled="true" />
+    </CascadeEntryItem>
+  </CascadeItem>
+  <GeneralProjectInfo StartedAt="2020-06-01T09:40:05.7247338Z" IsInPlace="true" IsImported="false" Name="content.md_en-GB_de-DE" Status="Started" CreatedBy="DELL-EDITH\mathe" CreatedAt="2020-06-01T09:40:05.593804Z" />
+  <SourceLanguageCode>en-GB</SourceLanguageCode>
+  <ProjectFiles>
+    <ProjectFile Guid="cc944603-2763-4894-aece-c4894e9a5e82" Path="" Role="Translatable" Name="content.md" ParentProjectFileGuid="00000000-0000-0000-0000-000000000000" FilterDefinitionId="Mathigon 1.0">
+      <SpecificTargetLanguages />
+      <LanguageFiles>
+        <LanguageFile Guid="d185163a-90e9-43b6-bd9c-34a7e893f0a0" SettingsBundleGuid="2851d4d6-b023-4655-8639-9ea27915eaf4" LanguageCode="en-GB">
+          <FileVersions>
+            <FileVersion Guid="581c27af-958e-44d7-864c-5715a55b3df6" VersionNumber="1" Size="77486" FileName="content.md" PhysicalPath="content.md" CreatedBy="DELL-EDITH\mathe" CreatedAt="2020-06-01T09:40:05.7227513Z" FileTimeStamp="2020-06-01T08:10:41.4888776Z" IsAutoUpload="false" />
+          </FileVersions>
+          <AnalysisStatistics WordCountStatus="None" AnalysisStatus="None">
+            <Total Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Repetitions Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Perfect Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <InContextExact Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Exact Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Fuzzy>
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            </Fuzzy>
+            <New Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <NewBaseline Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <NewLearnings Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Locked Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+          </AnalysisStatistics>
+          <ChildFiles />
+        </LanguageFile>
+        <LanguageFile Guid="d0e2c2a5-c638-4fa1-b0f3-bff6688733d8" SettingsBundleGuid="4ca2501b-3771-4b6b-9dcd-d1c4f3c7e595" LanguageCode="de-DE">
+          <FileVersions>
+            <FileVersion Guid="05be4613-2dd5-47ea-8738-ff129e4b3fe7" VersionNumber="2" Size="77486" FileName="content.md" PhysicalPath="content.md" CreatedBy="DELL-EDITH\mathe" CreatedAt="2020-06-01T09:40:05.7417441Z" FileTimeStamp="2020-06-01T08:10:41.4888776Z" IsAutoUpload="false" />
+          </FileVersions>
+          <AnalysisStatistics WordCountStatus="None" AnalysisStatus="None">
+            <Total Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Repetitions Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Perfect Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <InContextExact Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Exact Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Fuzzy>
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+              <CountData Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            </Fuzzy>
+            <New Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <NewBaseline Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <NewLearnings Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Locked Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+          </AnalysisStatistics>
+          <ConfirmationStatistics Status="None">
+            <Unspecified Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Draft Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <Translated Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <RejectedTranslation Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <ApprovedTranslation Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <RejectedSignOff Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+            <ApprovedSignOff Words="0" Characters="0" Segments="0" Placeables="0" Tags="0" />
+          </ConfirmationStatistics>
+          <ChildFiles />
+        </LanguageFile>
+      </LanguageFiles>
+      <PreviousBilingualFiles />
+    </ProjectFile>
+  </ProjectFiles>
+  <Tasks />
+</Project>

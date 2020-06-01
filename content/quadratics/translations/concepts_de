@@ -1,0 +1,97 @@
+# Quadratic Functions and Equations Concepts and Skills
+
+A5_1:
+  title: Erkennen von quadratischen Gleichungen
+
+A5_2:
+  title: Quadratische Gleichungen können keine, eine oder zwei Lösungen haben
+  dependencies: A5_1
+
+A5_3:
+  title: Das ± Zeichen
+
+A5_4:
+  title: Bei der Anwendung von Quadratwurzeln auf Gleichungen, muss ± hinzugefügt werden
+  dependencies: A5_3
+
+A5_5:
+  title: Quadratische Gleichungen mit Hilfe von Quadratwurzeln lösen
+  dependencies: [A5_1, A5_4]
+
+A5_6:
+  title: Wenn ein Produkt aus zwei Termen 0 ist, muss einer der Terme 0 sein.
+
+A5_7:
+  title: Lösen quadratischer Gleichungen ohne konstanten Term durch Faktorisierung
+  dependencies: [A5_1, A5_6]
+
+A5_8:
+  title: Quadratische Gleichungen, bei denen der Koeffizient von x^2 gleich 1 ist, durch Faktorisierung lösen
+  dependencies: [A5_1, A5_6]
+
+A5_9:
+  title: Komplexe quadratische Gleichungen durch Faktorisierung lösen
+  dependencies: A5_8
+
+A5_10:
+  title: Addieren und subtrahieren des richtigen Terms, um das Quadrat zu ergänzen
+
+A5_11:
+  title: Quadratische Gleichungen, bei denen der Koeffizient von x^2 gleich 1 ist, durch quadratische Ergänzung lösen
+  dependencies: [A5_1, A5_10]
+
+A5_12:
+  title: Komplexe quadratische Gleichungen durch quadratische Ergänzung lösen
+  dependencies: A5_11
+
+A5_13:
+  title: Die Lösungsformel der quadratischen Gleichung
+  dependencies: A5_12
+
+A5_14:
+  title: Lösen Sie quadratische Gleichungen mit der Lösungsformel
+  dependencies: A5_13
+
+A5_15:
+  title: Verwendung der Diskriminante, um zu bestimmen, wie viele Lösungen eine quadratische Gleichung hat
+  dependencies: [A5_2, A5_14]
+
+A5_16:
+  title: Auswahl der Methode, die beim Versuch, eine allgemeine quadratische Gleichung zu lösen, zu verwenden ist
+  dependencies: [A5_9, A5_12, A5_14]
+
+A5_17:
+  title: Erkennen von Graphen quadratischer Funktionen (Parabeln)
+
+A5_18:
+  title: Ermittlung der Schnittpunkte und Scheitelpunkte von Parabeln
+
+A5_19:
+  title: Berechnen des y-Achsenabschnitts einer quadratischen Funktion
+
+A5_20:
+  title: Berechnen der Schnittpunkte der x-Achse (Nullstellen) von quadratischen Funktionen
+
+A5_21:
+  title: Verwendung der Symmetrie zur Berechnung des Scheitelpunkts quadratischer Funktionen
+
+A5_22:
+  title: Bestimmung der Ausrichtung von quadratischen Funktionen
+
+A5_23:
+  title: Scheitelpunktform der quadratischen Gleichung
+
+A5_24:
+  title: Beziehung zwischen der Scheitelpunktform und den Scheitelpunktkoordinaten einer Parabel
+
+A5_25:
+  title: Quadratische Funktionen zwischen Standardform und Scheitelpunktform konvertieren
+
+A5_26:
+  title: Verschiebungen von quadratischen Funktionen verstehen
+
+A5_27:
+  title: Dehnung/Stauchung von quadratischen Funktionen verstehen
+
+A5_28:
+  title: Quadratische Funktionen zeichnen
