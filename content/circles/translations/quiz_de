@@ -1,0 +1,24 @@
+- id: p1
+  text: Wie gross ist die Fläche eines Kreises mit Radius {r}m?
+  choices:
+    - `{r}π`m
+    - `{r^2}π`m
+    - `{r}^2`m
+    - `{r}π^2`m
+  hints:
+    - Erinnere dich, dass die Fläche eines Kreises mit Radius `r` durch die Formel `A = r^2 π` gegeben ist.
+    - In diesem Fall ist `r = {10}`, was erhalten wir also für `A`?
+  variables:
+    # r: [5, 8, 10, 12, 20]
+    # r1: [5...50] :5
+  read-more: /course/circles/introduction#area
+
+- id: p2
+  text: Wie groß ist der Umfang eines Kreises mit Radius 4 cm?
+  choices:
+    - `4π`
+    - `8π`
+    - `16π`
+  hints:
+    - Erinnere dich, dass der Umfang eines Kreises mit Radius `r` durch die Formel `C = 2 r π` gegeben ist.
+  read-more: /course/circles/introduction#wheel
