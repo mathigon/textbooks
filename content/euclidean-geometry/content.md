@@ -35,9 +35,8 @@ _{span.reveal(when="p1 p2")} Let’s draw a semicircle around these points._
 {.reveal(when="p1 p2")} Now pick a third point that lies somewhere on the
 [circumference](target:circumf) of the semicircle.
 
-{.reveal(when="p3")} Let’s draw the [triangle](target:triangle) formed by the
-two corners of the semicircle, as well as the point you picked on the
-circumference.
+{.reveal(when="p3")} We can draw a [triangle](target:triangle) formed by the two corners of the
+semicircle, as well as the point you picked on the circumference.
 
 {.reveal(when="p3" delay=1000)} Try moving the position of the three points and
 observe what happens to the [angle](target:angle) at the top of the triangle.
