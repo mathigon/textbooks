@@ -84,7 +84,7 @@ async function generateAudio(id, locale='en') {
       await mp3Clip(`${output}/narration_en.mp3`, file, oldTimings[hash]);
     } else {
       const response = await CLIENT.synthesizeSpeech({
-        input: {text},
+        input: {ssml: `<text>${text}</text>`},
         voice: {languageCode: 'en-GB', name: 'en-GB-Wavenet-A'},
         audioConfig: {audioEncoding: 'MP3'},
       });

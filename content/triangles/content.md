@@ -815,7 +815,7 @@ equal to the sum of the squares of the other two sides. In other words,
 _{span.circled.yellow}`c^2`_
 
 _The converse is also true: if the three sides in a triangle satisfy
-a*{sup}2* + b*{sup}2* = c*{sup}2*, then it must be [[right-angled|acute|obtuse]]._
+`a^2 + b^2 = c^2`, then it must be [[right-angled|acute|obtuse]]._
 ::: column(width=300)
 
     x-geopad(width=300): svg
