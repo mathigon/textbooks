@@ -48,14 +48,13 @@ beginnen, wähle einen Punkt irgendwo auf der Geraden.
 Punkt und dem Ursprung des Koordinatensystems zeichnen.
 
 {.reveal(when="make-point" delay=1500)} Versuche, den Punkt entlang der Geraden zu verschieben:
-Beachte, wie verschiedene Punkte unterschiedlich große Dreiecke bilden, wobei alle diese Dreiecke 
+Beachte, wie verschiedene Punkte unterschiedlich große Dreiecke bilden, wobei alle diese Dreiecke
 [[ähnlich|kongruent|gleichseitig]] sind. _{.lgrey.reveal(when="blank-0")} Am besten sieht
 man das, wenn man die beiden Winkel entlang der x-Achse betrachtet. Sie sind immer
 gleich groß, so dass alle Dreiecke nach dem [WWW-Satz](gloss:triangle-aa)
 ähnlich sein müssen._
 
-{.reveal(when="blank-0" delay=1500)} Nun können wir eines der Ergebnisse nutzen, die wir von ähnlichen Dreiecken kennen
-: Das Verhältnis von zwei der Seiten ist immer konstant. Verschiebe
+{.reveal(when="blank-0" delay=1500)} Nun können wir eines der Ergebnisse nutzen, die wir von ähnlichen Dreiecken kennen: Das Verhältnis von zwei der Seiten ist immer konstant. Verschiebe
 den Punkt noch einmal und beobachte, was passiert:
 
     p.text-center.reveal(when="blank-0" delay=3000): span.math
