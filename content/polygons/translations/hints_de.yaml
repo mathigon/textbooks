@@ -1,0 +1,5 @@
+inequality-impossible: Vielleicht passen einige der Zahlenkombinationen nicht zusammen. Wenn du nicht weiterkommst, versuche eine andere!
+
+inequality-error-1: Das ist kein gültiges Dreieck, da 1 + 2 nicht größer als 3 ist.
+inequality-error-2: Das ist kein gültiges Dreieck, da 2 + 4 nicht größer als 7 ist.
+inequality-error-3: Das ist kein gültiges Dreieck, da 1 + 6 nicht größer als 8 ist.

@@ -128,8 +128,8 @@ Once again, we can think about this using physical objects: two sides of the
 triangle are metal rods of length 4 and 6, and the third side is a rubber band
 that can expand or contract.
 
-Now you can see that the rubber band will always be _{span.hover-target} longer
-than_ `6-4=2` and _{span.hover-target} shorter than_ `6+4=10`.
+Now you can see that the rubber band will always be _{span.hover-target} shorter
+than_ `6+4=10` and _{span.hover-target} longer than_ `6-4=2`.
 
 ::: column(width=300)
 
