@@ -279,7 +279,7 @@ Now it’s your turn – draw the reflection of each of these shapes:
 ---
 > id: reflections-2
 
-Notice that if a point lies on the line of reflection, its' image is
+Notice that if a point lies on the line of reflection, its image is
 [[the same as|smaller than|opposite to]] the original point.
 
 ---
@@ -471,7 +471,7 @@ transformations to determine whether two shapes are [congruent](gloss:congruent)
 > section: congruence
 > sectionStatus: dev
 
-{.todo} COMING SOON
+TODO
 
 ---
 
@@ -480,13 +480,13 @@ transformations to determine whether two shapes are [congruent](gloss:congruent)
 Of course, we can combine multiple translations, reflections and rotations to
 create more complex transformations.
 
-{.todo} COMING SOON: Example
+{.todo} TODO Example
 
 However, as it turns out, it doesn’t matter how many different transformations
 you combine: you can always find another transformation that does the same in
 one go!
 
-{.todo} COMING SOON: Transformation Composition Calculator
+{.todo} TODO Transformation composition calculator
 
 Combining two reflections is particularly interesting. There are two different
 cases we need to consider:
@@ -496,13 +496,13 @@ If the two lines of reflection are parallel, the result is a single translation.
 The direction of the translation is perpendicular to the lines of reflection,
 and the distance is twice the distance between the lines of reflection.
 
-{.todo} COMING SOON: Animation
+{.todo} TODO Animation
 ::: column.grow
 If the two lines of reflection intersect, the result is a single rotation. The
 center of rotation is the intersection between the lines of reflection, and the
 angle is twice the angle between the lines of reflection.
 
-{.todo} COMING SOON: Animation
+{.todo} TODO Animation
 :::
 
 ---
@@ -1203,11 +1203,13 @@ tell us a lot about our universe. Emmy Noether managed to prove that every
 symmetry corresponds to a certain physical quantity that is _conserved_.
 
 For example, time-symmetry implies that __Energy__ must be conserved in our
-universe: you can convert energy from one type to another (e.g. light to electricity), but you can never create or destroy energy. The total amount of energy in the universe will always stay constant.
+universe: you can convert energy from one type to another (e.g. light, or heat
+or electricity), but you can never create or destroy energy. The total amount
+of energy in the universe will always stay constant.
 
     figure
       x-media(src="images/cern.jpg" width=760 height=400 credit="© CERN")
-      p.caption CERN is the world’s largest particle accelerator. Scientists smash together fundamental particles at enormous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
+      p.caption CERN is the world’s largest particle accellerator. Scientists smash together fundamental particles at enourmous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
 
 ::: column(width=220)
 
