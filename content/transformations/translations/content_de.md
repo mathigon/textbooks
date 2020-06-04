@@ -1130,7 +1130,7 @@ Spiegelungsachsen](gloss:axis-of-symmetry) erkennen?
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
-Leider gibt es keinen einfachen Grund, warum es _17_ dieser Gruppen gibt.
+Leider ist der Grund dafür, warum es genau _17_ dieser Gruppen gibt, nicht einfach.
 Der Beweis dafür erfordert eine viel fortgeschrittenere Mathematik…
 
 Stattdessen kannst du versuchen, deine eigenen sich wiederholenden Muster für jede der 17
