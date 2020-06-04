@@ -1104,25 +1104,25 @@ Spiegelungsachsen](gloss:axis-of-symmetry) erkennen?
         p.caption <strong>Gruppe 10 - P3M1</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>GruppeGruppe 11 - P31M</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 11 - P31M</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>GruppeGruppe 12 - P4G</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 12 - P4G</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
-        p.caption <strong>GruppeGruppe 13 - CMM</strong><br>Senkrechte Spiegelungen, Drehungen (2), Verschiebungen
+        p.caption <strong>Gruppe 13 - CMM</strong><br>Senkrechte Spiegelungen, Drehungen (2), Verschiebungen
       div
         img(src="images/wallpapers/pmg.svg" width=360, height=240)
-        p.caption <strong>GruppeGruppe 14 - PMG</strong><br>Spiegelungen, Gleitspiegelungen, Drehungen (2), Verschiebungen
+        p.caption <strong>Gruppe 14 - PMG</strong><br>Spiegelungen, Gleitspiegelungen, Drehungen (2), Verschiebungen
       div
         img(src="images/wallpapers/pg.svg" width=360, height=240)
-        p.caption <strong>GruppeGruppe 15 - PG</strong><br>Parallele Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 15 - PG</strong><br>Parallele Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>GruppeGruppe 16 - CM</strong><br>Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 16 - CM</strong><br>Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
-        p.caption <strong>GruppeGruppe 17 - PGG</strong><br>Senkrechte Gleitspiegelungen, Drehungen (2), Verschiebungen
+        p.caption <strong>Gruppe 17 - PGG</strong><br>Senkrechte Gleitspiegelungen, Drehungen (2), Verschiebungen
 
 
 ---
