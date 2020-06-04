@@ -1616,7 +1616,7 @@ shannon:
     als „Vater der Informationstheorie“ bezeichnet wurde. Er beschäftigte sich mit Kryptographie,
     einschließlich Codebreaking für die Landesverteidigung während des Zweiten Weltkriegs,
     interessierte sich aber auch für Jonglieren, Einradfahren und Schach. In seiner Freizeit baute
-    er Maschinen, mit denen er das Rubik's Cube-Rätsel jonglieren oder lösen konnte.
+    er Maschinen, die jonglieren konnten oder mit denen er Rubik's Zauberwürfel lösen konnte.
   small: true
   links:
     - title: Computers for Gambling
@@ -1703,9 +1703,9 @@ thorp:
   name: Thorp
   bio: |
     __Edward Thorp__ (geb. 1932) ist ein US-amerikanischer Hedgefonds-Manager und Blackjack-Spieler,
-    der dafür bekannt ist, _das Kartenzählen_ zu erfinden und den ersten _tragbaren Computer_ zu
-    bauen, der Casinos besiegt Roulette. Er arbeitete am MIT, ist Professor für Mathematik und
-    Pionier der modernen Anwendungen der Wahrscheinlichkeitstheorie.
+    der dafür bekannt ist, das _Kartenzählen_ erfunden und den ersten _Wearable Computer_
+    gebaut zu haben, um Casinos beim Roulette zu besiegen. Er arbeitete am MIT, ist Professor für
+    Mathematik und Pionier der modernen Anwendungen der Wahrscheinlichkeitstheorie.
 
 turing:
   born: 1912

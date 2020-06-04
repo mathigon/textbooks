@@ -145,15 +145,16 @@ associative:
 atom:
   title: Atom
   text: |
-    __Atome__ sind die Partikel, aus denen alle gewöhnlichen Stoffe bestehen: Feststoffe,
-    Flüssigkeiten, Gase und Plasma. Atome bestehen aus einem positiv geladenen _Kern_ (oder _Kern_),
-    der aus _Protonen_ und _Neutronen_ besteht und von negativen Schalen umgeben ist geladene
-    _Elektronen_. Der Durchmesser eines Atoms beträgt ungefähr einen Zehnmillionstel Millimeter.
+    __Atome__ sind die Teilchen, aus denen alle gewöhnlichen Stoffe bestehen: Feststoffe,
+    Flüssigkeiten, Gase und Plasma. Atome bestehen aus einem positiv geladenen _Atomkern_
+    (oder _Kern_), der aus _Protonen_ und _Neutronen_ besteht und von negativ geladenen
+    _Elektronen_ in einer Schalen umgeben ist . Der Durchmesser eines Atoms beträgt ungefähr
+    einen Zehnmillionstel Millimeter.
 
 axiom:
   title: Axiom |
   text: |
-    Ein __Axiom__, manchmal auch __Postulat__genannt, ist eine mathematische Aussage , die als
+    Ein __Axiom__, manchmal auch __Postulat__ genannt, ist eine mathematische Aussage , die als
     "selbstverständlich" angesehen und ohne Beweis akzeptiert wird. Es sollte also so einfach sein,
     dass es offensichtlich und zweifellos wahr ist.
 
@@ -1295,7 +1296,7 @@ proton:
   title: Proton
   text: |
     Ein __Proton__ ist eines der Teilchen, aus denen der Kern eines Atoms besteht. Es hat eine
-    Gebühr von +1. Die Anzahl der Protonen in einem Atom wird als "Ordnungszahl" bezeichnet und
+    Ladung von +1. Die Anzahl der Protonen in einem Atom wird als "Ordnungszahl" bezeichnet und
     bestimmt, um welche Art von Element es sich handelt.
 
 pyramid:
