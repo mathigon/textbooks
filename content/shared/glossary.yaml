@@ -631,9 +631,8 @@ fta:
 
 function:
   title: Function
-  text: A __function__ is a mathematical relation that converts an input (_x_)
-    into exactly one output (_y_). They are often expressed as mathematical
-    equations of the form `f(x)`.
+  text: A __function__ is a mathematical relation that converts an input `x`
+    into exactly one output `f(x)`.
 
 function-graph:
   title: Graphs of Functions
