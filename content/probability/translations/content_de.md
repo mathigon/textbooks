@@ -331,7 +331,7 @@ Ergebnisse im Vergleich zu den vorhergesagten Wahrscheinlichkeiten ausfallen:
       .box-body
         .probTable.var(:html="probTable(d)")
         p.md Wir werfen ${d}{d|2|1,6,1} Würfel auf einmal und notieren die #[span.dice(style="width: auto; padding: 0 4px;") SUMME] ihrer Augenzahlen. Die #[strong.m-green grünen Linien] stellen die Wahrscheinlichkeiten jedes möglichen Ergebnisses dar, wie es durch die Wahrscheinlichkeitstheorie vorhergesagt wird, und die #[strong.m-blue blauen Balken] zeigen, wie oft jedes Ergebnis in diesem computergenerierten Experiment aufgetreten ist.
-        p.btn-row.no-audio
+        p.btn-row.no-voice
           button.btn Einmal werfen
           button.btn 100 mal werfen
           button.btn 1000 mal werfen
@@ -573,7 +573,7 @@ Prozess wird __Kohlenstoffdatierung__ genannt.
 ::: column(width=300)
 
     p: svg.radioactive(width=300 height=200 viewBox="0 0 300 200")
-    p.text-center.btn-row.no-audio: button.btn Zerfall starten
+    p.text-center.btn-row.no-voice: button.btn Zerfall starten
 
 :::
 

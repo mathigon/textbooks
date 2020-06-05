@@ -485,11 +485,14 @@ Jefferson](bio:jefferson). When writing the Declaration of Independence in 1776,
 he wanted to follow a similar approach. He begins by stating a few, simple
 “axioms” and then “proves” more complex results:
 
-{div.parchment} “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
+{div.parchment.voice} “We hold these truths to be self-evident: that all men are created equal,
+that they are endowed by their Creator with certain unalienable Rights, that among these are Life,
+Liberty and the pursuit of Happiness.”
 
-{.text-center.follows.no-audio} `=>`
+{.text-center.follows.no-voice} `=>`
 
-{div.parchment} We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
+{div.parchment.voice} We, therefore … declare, that these United Colonies are, and of right ought
+to be, free and independent states.”
 
 This is just one example where Euclid’s ideas in mathematics have inspired
 completely different subjects.
@@ -782,7 +785,7 @@ TODO
 Using straight-edge and compass is not the only way to construct geometric
 shapes. Another technique uses no tools at all: __Origami__.
 
-The word _Origami_ _{span.no-audio}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
+The word _Origami_ _{span.no-voice}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
 (paper). The goal is to make objects out of one or more sheets of paper,
 without any additional tools like glue or scissors. You can create incredibly
 beautiful and impressive designs – all of these figures were built using nothing

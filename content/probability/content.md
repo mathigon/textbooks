@@ -330,7 +330,7 @@ results compare to the predicted probabilities:
       .box-body
         .probTable.var(:html="probTable(d)")
         p.md We roll ${d}{d|2|1,6,1} dice at once and record the #[span.dice(style="width: auto; padding: 0 4px;") SUM] of their scores. The #[strong.m-green green lines] represent the probabilities of every possible outcome predicted by probability theory and the #[strong.m-blue blue bars] show how often each outcome happened in this computer generated experiment.
-        p.btn-row.no-audio
+        p.btn-row.no-voice
           button.btn Roll once
           button.btn Roll 100 times
           button.btn Roll 1000 times
@@ -573,7 +573,7 @@ process is called __Carbon dating__.
 ::: column(width=300)
 
     p: svg.radioactive(width=300 height=200 viewBox="0 0 300 200")
-    p.text-center.btn-row.no-audio: button.btn Start Decay
+    p.text-center.btn-row.no-voice: button.btn Start Decay
 
 :::
 
