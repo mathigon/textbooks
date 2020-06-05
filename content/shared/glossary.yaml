@@ -370,7 +370,7 @@ congruent:
   text: In geometry, two figures are __congruent__ if are identical in size,
     shape and measure. This means we could move, flip or rotate them to exactly
     fit on top of each other.
-  link: /course/euclidean-geometry/definitions#congruence
+  link: /course/euclidean-geometry/axioms#congruence
 
 congruent-angles:
   title: Congruent Angles
@@ -877,14 +877,14 @@ line:
   title: Line
   text: A __line__ is a set of infinitely many points that extend forever in
     both directions. Lines are always straight and have no _width_.
-  link: /course/euclidean-geometry/definitions#lines
+  link: /course/euclidean-geometry/axioms#lines
 
 line-segment:
   title: Line segment
   text: A __line segment__ is the part of a line that lies between two points,
     without extending to infinity. We can label line segments from point _A_ to
     point _B_ as `bar(AB)`.
-  link: /course/euclidean-geometry/definitions#segments
+  link: /course/euclidean-geometry/axioms#segments
 
 line-slope:
   title: Slope of a Line
@@ -1079,7 +1079,7 @@ parallel:
   text: Two or more lines are __parallel__ if they never intersect. They have
     the same slope and the distance between them is always constant.
   image: parallel.svg
-  link: /course/euclidean-geometry/definitions#parallel
+  link: /course/euclidean-geometry/axioms#parallel
 
 parallelogram:
   title: Parallelogram
@@ -1122,7 +1122,7 @@ perpendicular:
     _orthogonal_) if they intersect at a right angle.
   # Perpendicular lines have slopes that are negative reciprocals.
   image: perpendicular.svg
-  link: /course/euclidean-geometry/definitions#perpendicular
+  link: /course/euclidean-geometry/axioms#perpendicular
 
 perpendicular-bisector:
   title: Perpendicular bisector
@@ -1149,7 +1149,7 @@ point:
   title: Point
   text: A __point__ is a specific location in space. Points describe a position,
     but have no size or shape themselves.
-  link: /course/euclidean-geometry/definitions#points
+  link: /course/euclidean-geometry/axioms#points
 
 polygon:
   title: Polygon
@@ -1370,7 +1370,7 @@ ray:
   title: Ray
   text: A __ray__ is the part of a line that starts at a point and extends
     infinitely in one direction. We can label rays starting at `A` as `vec(AB)`.
-  link: /course/euclidean-geometry/definitions#rays
+  link: /course/euclidean-geometry/axioms#rays
 
 real-numbers:
   title: Real Numbers
