@@ -79,7 +79,8 @@ cables spanned across the country, it was possible to send messages almost insta
     // https://commons.wikimedia.org/wiki/File:The_Overland_Pony_Express.jpg
     img(src="images/pony-express.jpg" width=525 height=260)
 
-{.caption} The pony express next to a telegraph line under construction – a painting by _George Ottinger_
+{.caption} The pony express next to a telegraph line under construction – a painting by _George
+Ottinger_
 
 :::
 
@@ -216,8 +217,8 @@ newspapers, numbers and charts, photos, images, music, or movie clips.
 
 A [__code__](gloss:code) is a rule or algorithm that can be used to express information in a certain
 format. One example is our _alphabet_, which can be used to express language as a series of written
-symbols (called _letters_). Another example we saw before is the [Morse code](gloss:morse), which
-expresses words as sequences of [[dots and dashes|letters and spaces|radio music]].
+symbols (called _letters_). Another example we saw before is the [Morse code](gloss:morse-code),
+which expresses words as sequences of [[dots and dashes|letters and spaces|radio music]].
 
 ---
 > id: smoke-signals
@@ -356,25 +357,31 @@ organisms work. It consists of four different components, called _nucleotides_:
 
 ::: column(width=260)
 
-{.fixme} DNA Helix image
+    // https://depositphotos.com/220660220/stock-photo-dna-spiral-molecule-high-detailed.html
+    x-img(src="images/dna.jpg" width=260 height=380)
 
 ::: column.grow
 
-{.fixme} We can represent each of these using the letters __{.m-red} A__, __{.m-blue} T__,
-__{.m-green} C__ and __{.m-yellow} G__. You may see a string of something like
-__CGATCGTTACGCGATTCGATCATTTGTGTCCATCGTGGG__. This is a _code_ for a sequence of molecules within a
-strand of DNA. In this case, the _letter_ is the code representing the nucleotide.
+A strand of DNA consists of billions of these _nucleotides_, which contain the instructions for
+the development and functioning of our body. We can represent them using sequences of the letters
+__{.m-red} A__, __{.m-blue} T__, __{.m-green} C__ and __{.m-yellow} G__.
 
-{.fixme} More about DNA
+Similar to Morse code, every three consecutive nucleotides correspond to a specific [_amino
+acid_](gloss:amino-acid), a small component used by the cells in our body. For example,
+__{.m-red}AA__**{.m-yellow}G** represents _Lysine_, an amino acid we consume by eating food like
+eggs, meat or soybeans.
+
+The genetic code has space for `4^3 = 64` amino acids (four options for each of the three
+nucleotides in a triple), but only 20 are actually needed in our body.
 
 :::
 
 ---
 > id: intro-end
 
-Remember that the same symbol can mean completely different things within different codes. For
-example, the letter _C_ can be represented by “Charlie” in the NATO Phonetic Alphabet, it could be
-the maritime flag _{img(src="images/maritime/c.svg" width=20 height=20)}_, or it can represent
+Finally, remember that the same symbol can mean completely different things within different codes.
+For example, the letter _C_ can be represented by “Charlie” in the NATO Phonetic Alphabet, it could
+be the maritime flag _{img(src="images/maritime/c.svg" width=20 height=20)}_, or it can represent
 _Cytosine_ if placed within a strand of DNA letters.
 
 
