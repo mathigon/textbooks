@@ -64,6 +64,20 @@ eratosthenes:
     - title: Sieve of Eratosthenes
       url: /course/divisibility/primes#eratosthenes
 
+escher:
+  name: Escher
+  born: 1898
+  died: 1972
+  bio: |
+    __Maurits Cornelis Escher__ (1898 – 1972) a fost un artist olandez care a creat schițe, xilogravuri,
+    și litografii pentru obiecte și forme de inspirație matematică: inclusiv poliedre, mozaicări și 
+    forme imposibile. El a explorat grafic concepte precum simetria, infinitatea, perspectiva și
+    geometria euclidiană.
+  small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polyhedra/tessellations#escher
+      
 euclid:
   name: Euclid
   born: -330
@@ -99,7 +113,13 @@ euler:
     - title: Euler’s Formula
       url: /course/graph-theory/planar-graphs
     - title: Polyhedrons
-    
+ 
+fuller:
+  name: Fuller
+  bio: __Richard Buckminster “Bucky” Fuller__ (1895 – 1983) a fost un arhitect, designer și
+    inventator american. El este celebru pentru construirea _domului geodezic_ - o structura sferică mare. 
+    Moleculele de carbon cu aspect similar, _fulerenele_, au fost numite după el.
+ 
 gauss:
   name: Gauss
   born: 1777
@@ -221,6 +241,35 @@ noether:
     - title: Symmetry in Physics
       url: /course/transformations/physics
 
+penrose:
+  name: Penrose
+  born: 1931
+  bio: |
+    __Sir Roger Penrose__ (born 1931) este un matematician și fizician britanic cunoscut 
+    pentru lucrările sale inovatoare în relativitatea generală și cosmologie - colaborând
+    adesea cu alți oameni de știință faimoși precum Stephen Hawking și Michael Atiyah. 
+    De asemenea, el a descoperit _Placările Penrose_: mozaicări autosimilare neperiodice.
+  links:
+    - title: Penrose Tilings
+      url: /course/polyhedra/tessellations#penrose
+      
+plato:
+  name: Platon
+  born: -425
+  died: -347
+  bio: |
+    __Platon__ (c. 425 – 347 î.Hr.) a fost un filosof din Grecia Antică. Împreună cu Socrates, 
+    profesorul său, și Aristotel, studentul său, el a pus bazele filosofiei și științei
+    occidentale.
+
+    Platon a fondat Academia din Atena, prima instituție de învățământ superior
+    din lumea occidentală. Numeroasele sale lucrări de filosofie și teologie, știință
+    și matematică, politică și justiție, îl fac unul din cei mai influenți gânditori din
+    toate timpurile.
+  links:
+    - title: Platonic Solids
+      url: /course/polyhedra/platonic
+      
 pythagoras:
   name: Pitagora
   born: -570
