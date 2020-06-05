@@ -28,7 +28,7 @@ unserem Universum zugrunde liegende Ordnung.
 > id: radius
 > goals: compass
 
-Alle Punkt auf einem [__Kreis__](gloss:circle) haben den gleichen Abstand von seinem
+Alle Punkte auf einem [__Kreis__](gloss:circle) haben den gleichen Abstand von seinem
 Mittelpunkt. Das bedeutet, dass sie mit einem [Zirkel](gloss:compass) gezeichnet werden können:
 
 ::: column(width=320)

@@ -136,7 +136,7 @@ Os grafos que consistem em um único anel de vértices são chamados de [__ciclo
 
 ::: column.grow
 
-Um dos primeiros matemáticos a pensar em gráficos e redes foi [Leonhard Euler](bio:euler). Euler ficou intrigado com um antigo problema relacionado à cidade de Königsberg, perto do mar Báltico.
+Um dos primeiros matemáticos a pensar em grafos e redes foi [Leonhard Euler](bio:euler). Euler ficou intrigado com um antigo problema relacionado à cidade de Königsberg, perto do mar Báltico.
 
 O rio Pregel divide Königsberg em quatro partes separadas, que são conectadas por sete pontes. É possível caminhar pela cidade atravessando todas as pontes exatamente uma vez - mas não mais de uma vez? (Você pode começar e terminar em qualquer lugar, não necessariamente no mesmo lugar.)
 
@@ -155,40 +155,40 @@ Tente encontrar uma rota válida desenhando nestes mapas:
 
     x-tabbox.full-width
       .tab
-        h3 Map 1#[span.check.incorrect(when="bridge-0")]
+        h3 Mapa 1#[span.check.incorrect(when="bridge-0")]
         x-solved
         include svg/bridges-1.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
       .tab
-        h3 Map 2#[span.check(when="bridge-1")]
+        h3 Mapa 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
       .tab
         h3 Map 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
       .tab
         h3 Map 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Limpar
+        button.btn.right Pular
 
 ---
 > id: bridges-1
 
-No caso de Königsberg, parece impossível encontrar uma rota válida, mas algumas das outras cidades funcionam. Euler conseguiu encontrar uma regra simples que pode ser aplicada a qualquer cidade, sem ter que tentar muitas possibilidades - usando a teoria dos grafos.
+No caso de Königsberg, parece impossível encontrar uma rota válida, mas em algumas outras cidades é possível. Euler conseguiu encontrar uma regra simples que pode ser aplicada a qualquer cidade, sem ter que tentar muitas possibilidades - usando a teoria dos grafos.
 
 ::: column.grow
 
-Primeiro, precisamos converter os mapas da cidade em gráficos com arestas e vértices. Toda ilha ou região de terra é representada por [[um vértice|an edge|an area]] e toda ponte que liga duas regiões é representada por uma [[borda|vertex|street]] correspondente.
+Primeiro, precisamos converter os mapas da cidade em grafos com arestas e vértices. Toda ilha ou região de terra é representada por [[um vértice|uma aresta|uma área]] e toda ponte que liga duas regiões é representada por uma [[aresta|vértice|rua]] correspondente.
 
-Agora, o problema de “percorrer uma cidade enquanto atravessa todas as pontes exatamente uma vez” tornou-se um problema de “desenhar um gráfico com um toque contínuo enquanto traça cada extremidade exatamente uma vez”.
+Agora, o problema de “percorrer uma cidade enquanto atravessa todas as pontes exatamente uma vez” tornou-se um problema de “desenhar um grafo com um traço contínuo enquanto se traça cada aresta exatamente uma vez”.
 
 ::: column(width=200)
 
@@ -199,39 +199,39 @@ Agora, o problema de “percorrer uma cidade enquanto atravessa todas as pontes 
 ---
 > id: bridges-2
 
-No papel, crie alguns gráficos diferentes e tente descobrir quais podem ser desenhados com um único traço contínuo.
+No papel, crie alguns grafos diferentes e tente descobrir quais podem ser desenhados com apenas um único traço contínuo.
 
 ---
 > id: bridges-3
 > goals: size prime eo
 
-Assim como nos mapas da cidade, descobrimos que alguns gráficos são possíveis, enquanto outros não. Para nos ajudar a entender o porquê, rotulemos cada vértice com seu grau [>>>>. Em seguida, podemos colorir os vértices de maneiras diferentes e tentar revelar um padrão:
+Assim como nos mapas da cidade, descobrimos que alguns grafos são possíveis, enquanto outros não. Para nos ajudar a entender o porquê, rotulemos cada vértice com seu [grau](gloss:graph-degree). Em seguida, podemos colorir os vértices de maneiras diferentes e tentar revelar um padrão:
 
     figure
       x-select.var.tabs(:bind="colour")
-        div(value="val") Value
-        div(value="size") Size
-        div(value="prime") Prime Numbers
-        div(value="eo") Even and Odd
+        div(value="val") Valor
+        div(value="size") Tamanho
+        div(value="prime") Números primos
+        div(value="eo") Par e ímpar
       .frame-body
-        p(style="margin: 0"): strong These graphs are possible:
+        p(style="margin: 0"): strong Esses grafos são possíveis:
         include svg/vertex-orders-1.svg
-        p(style="margin: 1em 0 0"): strong These graphs are not possible:
+        p(style="margin: 1em 0 0"): strong Esses grafos não são possíveis:
         include svg/vertex-orders-2.svg
 
 ---
 > id: bridges-4
 
-Comparando esses números para gráficos possíveis e não possíveis, parece que um gráfico pode ser desenhado se [[não tiver mais do que dois vértices “ímpares”|only has “even” vertices|has no vertices with an order larger than 4|has an odd number of vertices|has no vertices of order 3]]. Essa condição pode ser explicada se observarmos apenas um único vértice no gráfico:
+Comparando esses números para grafos possíveis e não possíveis, parece que um grafo pode ser desenhado se [[não tiver mais do que dois vértices “ímpares”|tiver somente vértices “pares”|não tiver vértices com grau maior que 4|tiver um número ímpar de vértices|não tiver vértices de ordem 3]]. Essa condição pode ser explicada se observarmos apenas um único vértice no grafo:
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
-      .legend(slot="legend") Here you can see a single, magnified vertex in a graph.
-      .legend(slot="legend") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
-      .legend(slot="legend") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
-      .legend(slot="legend") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
-      .legend(slot="legend") Notice that, either way, there always is an even number of edges meeting at the vertex.
-      .legend(slot="legend") The only two exceptions are the vertices where the path starts, and where it ends – these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+      .legend(slot="legend") Aqui pode ser visto um único vértice ampliado do grafo.
+      .legend(slot="legend") Se desenharmos o grafo, eventualmente teremos uma aresta entrando nesse vértice, e outra aresta saindo. Ou seja, temos duas arestas se encontrando neste vértice.
+      .legend(slot="legend") Possivelmente o vértice é um cruzamento em vez de uma beirada. Nesse caso se terá outra aresta entrando no vértice e outra aresta saindo vértice e teremos quatro arestas.
+      .legend(slot="legend") E em alguns grafos, pode até haver um terceiro par de arestas entrando e saindo do vértice. Nesse caso teremos seis arestas.
+      .legend(slot="legend") Em todo caso, note que sempre há um número par de arestas se encontrando no vértice.
+      .legend(slot="legend") As únicas exceções são os vértices onde o caminho começa e onde o caminho termina. Esses dois vértices podem ter um número ímpar de arestas. Se o ponto de partida e o ponto de término são o mesmo, todos vértices do grafo são possuem um número par de arestas.
 
 ---
 > id: bridges-5
@@ -240,7 +240,7 @@ Comparando esses números para gráficos possíveis e não possíveis, parece qu
 
 Se você voltar ao mapa de Königsberg, verá que existem mais de duas ilhas com um número ímpar de pontes. Portanto, uma rota que atravessa todas as pontes exatamente uma vez é realmente impossível - e foi isso que Leonard Euler descobriu.
 
-A descoberta de Euler pode não parecer particularmente útil na vida real, mas os gráficos estão na base de muitos outros problemas geográficos, como encontrar direções entre dois locais. Descobriremos mais desses aplicativos mais tarde.
+A descoberta de Euler pode não parecer particularmente útil na vida real, mas os grafos estão na base de muitos outros problemas geográficos, como encontrar direções entre dois locais. Descobriremos mais aplicações mais tarde.
 
 ::: column(width=240)
 
@@ -252,11 +252,11 @@ A descoberta de Euler pode não parecer particularmente útil na vida real, mas 
 > id: handshakes-1
 > section: handshakes
 
-## Apertos de mão e festas
+## Apertos de mão e encontros
 
 ::: column.grow
 
-Você foi convidado para uma festa de aniversário extravagante. Incluindo você e o anfitrião, há ${hnd}{hnd|5|3,15,1} pessoas presentes. À noite, quando os convidados se preparam para sair, todo mundo aperta a mão de todo mundo. Quantos apertos de mão existem no total? Podemos representar os apertos de mão usando um gráfico: toda pessoa é [[um vértice|an edge]], e todo aperto de mão é [[uma aresta|a vertex]]. Agora, é fácil contar o número de arestas no gráfico. Nós achamos que lá com ${hnd} pessoas, existem ${hnd*(hnd-1)/2} apertos de mão.
+Você e seus amigos foram convidados para uma festa de aniversário maravilhosa. Incluindo você e o anfitrião, há ${hnd}{hnd|5|3,15,1} pessoas presentes. À noite, quando os convidados se preparam para sair, todo mundo aperta a mão de todo mundo. Quantos apertos de mão foram dados no total? Podemos representar os apertos de mão usando um grafo: toda pessoa é [[um vértice|uma aresta]], e todo aperto de mão é [[uma aresta|um vértice]]. Agora, é fácil contar o número de arestas no grafo. Com ${hnd} pessoas, existem ${hnd*(hnd-1)/2} apertos de mão.
 
 ::: column.s-hide(width=240)
     
@@ -268,7 +268,7 @@ Você foi convidado para uma festa de aniversário extravagante. Incluindo você
 ---
 > id: handshakes-2
 
-Em vez de contar todas as arestas em gráficos grandes, também podemos tentar encontrar uma fórmula simples que nos informe o resultado para _qualquer_ número de convidados . Cada uma das ${n}{n|5|2,8,1} pessoas na festa aperta a mão com outras ${n-1}. Isso faz ${n} × ${n-1} = ${n×(n-1)} apertos de mão no total. Para _n_ pessoas, o número de apertos de mão seria [[`n×(n-1)`|`n×(n+1)`|`n^2`]].
+Em vez de contar todas as arestas em grafos grandes, também podemos tentar encontrar uma fórmula simples que nos informe o resultado para _qualquer_ número de convidados. Cada uma das ${n}{n|5|2,8,1} pessoas na festa aperta a mão de outras ${n-1}. Com isso, há ${n} × ${n-1} = ${n×(n-1)} apertos de mão no total. Para _n_ pessoas, o número de apertos de mão seria [[`n×(n-1)`|`n×(n+1)`|`n^2`]].
     
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -276,14 +276,14 @@ Em vez de contar todas as arestas em gráficos grandes, também podemos tentar e
 ---
 > id: handshakes-2a
 
-Infelizmente, esta resposta não está certa: contamos cada aperto de mão [[duas vezes|once|three times]], _{span.reveal(when="blank-0")} uma vez para cada uma das duas pessoas envolvidas._
+Infelizmente, esta resposta não está correta. Note como <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)"> os primeiros elementos da linha do topo </x-target> são na realidade os mesmos, só que virados ao contrário.
 
-{.reveal(when="blank-0")} Por exemplo, <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">as duas primeiras entradas na linha superior</x-target> são realmente os mesmos. O número correto de apertos de mão para ${n}{n|5|2,25,1} convidados é <mfrac><mrow>${n} × ${n-1} </mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
+De fato, contamos cada aperto de mão [[duas vezes|uma única vez|três vezes]], _{span.reveal(when="blank-0")} pois contamos cada aperto de cada uma das duas pessoas que apertaram as mãos. Isso significa que o número correto de apertos de mãos para ${n}{n|5|2,25,1} convidados é `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
 
 ---
 > id: handshakes-3
 
-Os gráficos de handshake são especiais porque todos os vértices estão conectados a todos os outros vértices. Os gráficos com essa propriedade são chamados __gráficos completos__. O gráfico completo com 4 vértices é frequentemente abreviado como `K_4`, o gráfico completo com 5 vértices é conhecido como `K_5` e assim por diante. Acabamos de mostrar que um gráfico completo com `n` vértices `K_n` tem `(n × (n-1))/2` arestas.
+Os grafos de apertos de mão são especiais porque todos os vértices estão conectados a todos os outros vértices. Os grafos com essa propriedade são chamados __grafos completos__. O grafo completo com 4 vértices é frequentemente abreviado como `K_4`, o grafo completo com 5 vértices é conhecido como `K_5` e assim por diante. Acabamos de mostrar que um grafo completo com `n` vértices `K_n` tem `(n × (n-1))/2` arestas.
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -296,11 +296,11 @@ Os gráficos de handshake são especiais porque todos os vértices estão conect
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
-Em um dia diferente, você foi convidado para um evento de namoro rápido para ${m}{m|5|2,8,1} meninos e ${f}{f|4|2,8,1} meninas. Há muitas mesas pequenas e todo garoto passa 5 minutos com cada uma das meninas. Quantas “datas” individuais existem no total?
+Em um dia diferente, você foi convidado para um encontro rápido com ${m}{m|5|2,8,1} meninos e ${f}{f|4|2,8,1} meninas. Há muitas mesas pequenas e todo garoto passa 5 minutos com cada uma das meninas. Quantos “encontros” individuais existem no total?
 
 ::: column.grow
 
-Nesse caso, o gráfico correspondente consiste em dois conjuntos separados de vértices. Todo vértice está conectado a todos os vértices no conjunto oposto [[>>>>, mas nenhum dos vértices [[em seu próprio conjunto|the opposite]]. Os gráficos que possuem esse layout são chamados de __gráficos bipartidos__.
+Nesse caso, o grafo representando esta situação consiste em dois conjuntos de vértices. Estes conjuntos estão separados e todo vértice está conectado a todos os vértices do [[conjunto oposto|mesmo conjunto]]  mas nenhum dos vértices do [[mesmo conjunto|conjunto oposto]]. Os grafos que possuem essa configuração são chamados de __grafos bipartidos__.
 
 ::: column(width=300)
 
@@ -308,18 +308,18 @@ Nesse caso, o gráfico correspondente consiste em dois conjuntos separados de v�
 
 :::
 
-{.reveal(when="blank-0 blank-1")} O gráfico bipartido com dois conjuntos de tamanho _x_ e _y_ é frequentemente escrito como `K_"x,y"`. Possui [[`x×y`|`x+y`|`2x–y`]] arestas, _{span.reveal(when="blank-2")} o que significa que no exemplo acima existem ${m} × ${f} = ${m×f} datas._
+{.reveal(when="blank-0 blank-1")} O grafo bipartido com dois conjuntos de tamanho _x_ e _y_ é frequentemente escrito como `K_"x,y"`. Possui [[`x×y`|`x+y`|`2x–y`]] arestas, _{span.reveal(when="blank-2")} o que significa que no exemplo acima existem ${m} × ${f} = ${m×f} encontros._
 
 ---
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
 
-## Gráficos planares
+## Grafos planares
 
 ::: column.grow
 
-Aqui está outro quebra-cabeça relacionado à teoria dos grafos. Em uma pequena vila, existem três usinas que produzem água, eletricidade e gás, respectivamente. Há também três casas que precisam ser atendidas. Infelizmente, devido ao layout da cidade, os tubos ou cabos de todos os produtos não podem atravessar.
+Aqui está outro quebra-cabeça relacionado à teoria dos grafos. Em uma pequena vila, existem três fornecedores de água, eletricidade e gás, respectivamente. Há também três casas que precisam ser atendidas. Infelizmente, devido ao layout da cidade, os tubos e cabos dos fornecedores não podem se cruzar.
 
 ::: column(width=300)
 
@@ -327,7 +327,7 @@ Aqui está outro quebra-cabeça relacionado à teoria dos grafos. Em uma pequena
 
 :::
 
-Tente conectar cada uma das plantas abaixo a cada uma das casas, sem que nenhuma das linhas cruze:
+Tente conectar cada um dos fornecedores abaixo a cada uma das casas, sem que nenhuma das linhas cruze:
 
     .frame.fill
       include svg/utilities.svg
@@ -336,44 +336,46 @@ Tente conectar cada uma das plantas abaixo a cada uma das casas, sem que nenhuma
 ---
 > id: utilities-1
 
-Assim como as pontes de Königsberg, você rapidamente descobre que esse problema também é impossível. Parece que alguns gráficos podem ser desenhados sem arestas sobrepostas - esses são chamados __gráficos planares__ - mas outros não.
+Assim como as pontes de Königsberg, você rapidamente descobre que esse problema também é impossível. Parece que alguns grafos podem ser desenhados sem arestas sobrepostas - esses são chamados __grafos planares__ - mas outros não.
 
 ::: column(width=200)
 
     svg.graph(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center} `K_3` é plano.
+{.text-center} `K_3` é planar.
 
 ::: column(width=200)
 
     svg.graph#planar-2(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center} `K_4` [[é plano|is not planar]].
+{.text-center} `K_4` [[é planar|não é planar]].
 
 ::: column(width=200)
 
     svg.graph#planar-3(width=200 height=200 style="margin-bottom: .4em;")
 
-{.text-center} `K_5` [[não é plano|is planar]].
+{.text-center} `K_5` [[não é planar|é planar]].
 
 :::
 
 ---
 > id: utilities-2
 
-O [gráfico completo](gloss:complete-graph) `K_5` é o menor gráfico que não é plano. Qualquer outro gráfico que contenha `K_5` como subgráfico de alguma forma também não é plano. Isso inclui `K_6`, `K_7` e todos os gráficos completos maiores. O gráfico no quebra-cabeça dos três utilitários é o [gráfico bipartido](gloss:bipartite-graph) `K_"3,3"`. Acontece que qualquer gráfico não plano deve conter uma subdivisão `K_5` ou `K_"3,3"` ou [[desses dois gráficos como subgráfico.
+O [grafo completo](gloss:complete-graph) `K_5` é o menor grafo que não é planar. Qualquer outro grafo que contenha `K_5` como subgrafo também não é planar. Isso inclui `K_6`, `K_7` e todos os grafos completos que são maiores. O grafo no quebra-cabeça dos três serviços (água, energia e gás) é o [grafo bipartido](gloss:bipartite-graph) `K_"3,3"`. Acontece que qualquer grafo não-planar deve conter `K_5` ou `K_"3,3"` (ou uma [subdivisão](gloss:subdivision) desses dois grafos) como subgrafo. Este teorema é chamado de _teorema de Kuratowski_.
+
+    // TODO Add bio of Kazimierz Kuratowski
 
 ---
 > id: planarity
 > goals: planarity
 
     .box.problem-box
-      .box-title: h3 Planarity
+      .box-title: h3 Planaridade
       .box-body
         x-solved
         svg#planarity.frame(viewBox="0 0 640 320")
-        p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-        button.btn New Random Graph
+        p.md Esse é um grafo planar, mas os ${n}{n|7|5,20,1} vértices foram misturados. Rearranje os vértices de modo que nenhuma das arestas se cruzem.
+        button.btn Gerar novo grafo aleatório
 
 ---
 > id: euler
@@ -387,7 +389,7 @@ Todos os gráficos planares dividem o plano em que são desenhados em várias á
     include svg/euler-2.svg
 
 {.text-center} [[6]] Vértices  
-[[5]] Rostos  
+[[5]] Faces  
 [[10]] Arestas  
 _{span.euler-sum} 11 Vértices + Faces_
 
@@ -396,27 +398,27 @@ _{span.euler-sum} 11 Vértices + Faces_
     include svg/euler-1.svg
 
 {.text-center} [[8]] Vértices  
-[[7]] Rostos  
+[[7]] Faces  
 [[14]] Arestas  
-_{span.euler-sum} 15 vértices + faces_
+_{span.euler-sum} 15 Vértices + Faces_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] vértices  
-[[13]] Rostos  
-Bordas [[24]]  
-_{span.euler-sum} 25 vértices + faces_
+{.text-center} [[12]] Vértices  
+[[13]] Faces
+[[24]] Arestas
+_{span.euler-sum} 25 Vértices + Faces_
 
 :::
 
 ---
 > id: euler-1
 
-Ao comparar esses números, você notará que o número de arestas é sempre [[um a menos|bigger|the same]] do que o número de faces mais o número de vértices. Em outras palavras, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Esse resultado é chamado __Equação de Euler__ e recebe o nome do mesmo [matemático](bio:euler) que resolveu o problema de Königsberg Bridges.
+Ao comparar esses números, você notará que o número de arestas é sempre [[um a menos|maior|o mesmo]] do que o número de faces mais o número de vértices. Em outras palavras, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Esse resultado é chamado __equação de Euler__ e recebe o nome do mesmo [matemático](bio:euler) que resolveu o problema das pontes de Königsberg.
 
-Infelizmente, existem infinitos gráficos e não podemos verificar todos para ver se a equação de Euler funciona. Em vez disso, podemos tentar encontrar uma prova simples [<<<<](gloss:proof) que funcione para qualquer gráfico ...
+Infelizmente, existem infinitos grafos e não podemos verificar todos um a um para ver se a equação de Euler funciona mesmo. Em vez disso, podemos tentar encontrar uma [prova](gloss:proof) simples que funcione para qualquer grafo...
 
 ---
 > id: euler-2
@@ -445,23 +447,23 @@ Infelizmente, existem infinitos gráficos e não podemos verificar todos para ve
               td.xe 0
           p #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
 
-      .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
-      .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
-      .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
-      .legend(slot="legend") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler’s equation works.
-      .legend(slot="legend") Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face. Euler’s equation still works.
+      .legend(slot="legend") O grafo mais simples consiste de um único vértice. Podemos facilmente checar que a equação de Euler é válida.
+      .legend(slot="legend") Vamos adicionar um novo vértice ao nosso grafo. Podemos adicionar uma aresta, e a equação de Euler ainda é válida.
+      .legend(slot="legend") Se adicionarmos um terceiro vértice teremos duas possibilidades. Podemos criar um triângulo pequeno: isso adiciona mais um vértice, uma face e duas arestas, e a equação de Euler ainda é válida.
+      .legend(slot="legend") Outra possibilidade é estender a linha com o vértice adicional: assim temos mais um vértice e uma aresta, e a equação de Euler ainda é válida.
+      .legend(slot="legend") Vamos continuar: se criarmos um quadrilátero, adicionamos mais um vértice, duas arestas e uma face. A equação de Euler ainda é válida.
 
 ---
 > id: euler-3
 
-Qualquer gráfico (finito) pode ser construído começando com um vértice e adicionando mais vértices um por um. Mostramos que, independentemente da maneira como adicionamos novos vértices, a equação de Euler é válida. Portanto, é válido para todos os gráficos. O processo que usamos é chamado __indução matemática__. É uma técnica muito útil para provar resultados em infinitos casos, simplesmente iniciando com o caso mais simples e mostrando que o resultado é válido a cada passo na construção de casos mais complexos.
+Qualquer grafo (finito) pode ser construído começando com um vértice e adicionando mais vértices um por um. Mostramos que, independentemente da maneira como adicionamos novos vértices, a equação de Euler é válida. Portanto, é válido para todos os grafos. O processo que usamos é chamado de __indução matemática__. É uma técnica muito útil para provar resultados em infinitos casos, simplesmente iniciando com o caso mais simples e mostrando que o resultado é válido a cada passo na construção de casos mais complexos.
 
     .svg-block: include svg/dominoes.svg
 
 ---
 > id: euler-4
 
-Muitos gráficos planares se parecem muito com as redes do [poliedros](gloss:polyhedron), formas tridimensionais com [faces poligonais](gloss:polygon). Se pensarmos nos poliedros como elásticos, podemos imaginá-los esticando-os até que se tornem gráficos planos e planos:
+Muitos grafos planares se parecem muito com as planificações de [poliedros](gloss:polyhedron), formas tridimensionais com [faces poligonais](gloss:polygon). Se pensarmos nos poliedros como elásticos, podemos imaginá-los esticando-os até que se tornem grafos planares:
 
 ::: column(width=300)
 
@@ -478,34 +480,34 @@ Muitos gráficos planares se parecem muito com as redes do [poliedros](gloss:pol
 ---
 > id: euler-5
 
-Isso significa que nós pode usar a fórmula de Euler não apenas para gráficos planares, mas também para todos os poliedros - com uma pequena diferença. Ao transformar o poliedro em gráficos, uma das faces desaparece: a face superior do poliedro se torna o "exterior"; dos gráficos. Em outras palavras, se você contar o número de __{.red} arestas__, __{.blue} estará em__ e __{.green} vértices__ de _qualquer_ poliedro, você encontrará que _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + [[2]].
+Isso significa que nós pode usar a fórmula de Euler não apenas para grafos planares, mas também para todos os poliedros - com uma pequena diferença. Ao transformar o poliedro em grafos, uma das faces desaparece: a face superior do poliedro se torna o "exterior" dos grafos. Em outras palavras, se você contar o número de  __{.red}arestas__, __{.blue}faces__ e __{.green}vértices__ de _qualquer_ poliedro, você descobrirá que _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + [[2]].
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
 {.caption} __Icosaedro__  
-__{.blue} 20__ Rostos  
-__{.green} 12__ Vértices  
-__{.red} 30__ Bordas
+__{.blue}20__ Faces  
+__{.green}12__ Vértices  
+__{.red}30__ Arestas
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodecahedron__  
-__{.blue} 62__ Rostos  
-__{.green} 60__ Vértices  
-__{.red} 120__ Bordas
+{.caption} __Rombicosidodecaedro__  
+__{.blue}62__ Faces  
+__{.green}60__ Vértices  
+__{.red}120__ Arestas
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
 {.caption} __Icosaedro truncado__  
-__{.blue} 32__ Rostos (12 pretos, 20 brancos)  
-__{.green} 60__ Vértices  
-__{.red} 90__ Arestas
+__{.blue}32__ Faces (12 pretas, 20 brancas)  
+__{.green}60__ Vértices  
+__{.red}90__ Arestas
 
 :::
 

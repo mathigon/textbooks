@@ -35,9 +35,8 @@ _{span.reveal(when="p1 p2")} Let’s draw a semicircle around these points._
 {.reveal(when="p1 p2")} Now pick a third point that lies somewhere on the
 [circumference](target:circumf) of the semicircle.
 
-{.reveal(when="p3")} Let’s draw the [triangle](target:triangle) formed by the
-two corners of the semicircle, as well as the point you picked on the
-circumference.
+{.reveal(when="p3")} We can draw a [triangle](target:triangle) formed by the two corners of the
+semicircle, as well as the point you picked on the circumference.
 
 {.reveal(when="p3" delay=1000)} Try moving the position of the three points and
 observe what happens to the [angle](target:angle) at the top of the triangle.
@@ -258,7 +257,7 @@ and shape, and we could [turn and slide](target:move) one of them to exactly
 match up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
 
-The symbol for congruence is `≅`, so we would say that `A ≅ B`.
+The symbol for congruence is _{span(voice="this")}`≅`_, so we would say that `A ≅ B`.
 :::
 
 Here are a few different geometric objects – connect all pairs that are
@@ -412,8 +411,7 @@ You can join any [two points](target:1_point) using exactly one straight
       path(x="segment(c,d)" target="2_segment")
 
 {.text-center }__Second Axiom__  
-You can extend any [line segment](target:2_segment) to an<br>
-infinite line.
+You can extend any [line segment](target:2_segment) to an infinitely long line.
 
 ::: column(width=220)
 
@@ -488,7 +486,7 @@ he wanted to follow a similar approach. He begins by stating a few, simple
 
 {div.parchment} “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
 
-{.text-center.follows} `=>`
+{.text-center.follows.no-audio} `=>`
 
 {div.parchment} We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
 
@@ -783,7 +781,7 @@ TODO
 Using straight-edge and compass is not the only way to construct geometric
 shapes. Another technique uses no tools at all: __Origami__.
 
-The word _Origami_ (折り紙) comes from the Japanese _oru_ (to fold) and _kami_
+The word _Origami_ _{span.no-audio}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
 (paper). The goal is to make objects out of one or more sheets of paper,
 without any additional tools like glue or scissors. You can create incredibly
 beautiful and impressive designs – all of these figures were built using nothing

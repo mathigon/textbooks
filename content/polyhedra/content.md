@@ -246,7 +246,7 @@ ${round(180-360/x)}°._
 
 ::: column.grow
 Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
-sides. Every side has length [{.step-target.pill.green}1m](target:base). Let’s
+sides. Every side has length [{.pill.green} 1m](target:base). Let’s
 try to calculate its area!
 
 First, we can split the polygon into ${toWord(n)} congruent,
@@ -255,13 +255,13 @@ First, we can split the polygon into ${toWord(n)} congruent,
 {.reveal(when="blank-0")} We already know the [[base|height|area]] of these
 triangles, but we also need the [[height|legs|medians]] to be able to calculate
 its area. _{span.reveal(when="blank-2")} In regular polygons, this height
-is sometimes called the [{.step-target.pill.yellow}apothem](target:apothem)._
+is sometimes called the [{.pill.yellow}apothem](target:apothem)._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [right angled
 triangle](target:right-triangle) formed by the apothem and half the base of the
 isosceles triangle. This means that we can use trigonometry!
 
-{.reveal(when="blank-1 blank-2" delay=2000)} The [{.step-target.pill.blue}base angles](target:base-angle)
+{.reveal(when="blank-1 blank-2" delay=2000)} The [{.pill.blue}base angles](target:base-angle)
 of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
 size of the [internal angles](target:int-angle) of the polygon:
 
@@ -826,11 +826,11 @@ Like before, try to draw a rectangle that has the same area as this trapezium.
 _{span.reveal(when="draw-2")} Can you see how the [missing and added
 triangles](target:triangles-3) on the left and the right cancel out?_
 
-{.reveal(when="draw-2" delay=2000)} The [{.step-target.pill.green} height](target:t-height)
+{.reveal(when="draw-2" delay=2000)} The [{.pill.green} height](target:t-height)
 of this rectangle is the [[distance between|average of|length of]] the [parallel
 sides](target:bases) of the trapezium.
 
-{.reveal.r(when="blank-2")} The [{.step-target.pill.yellow} width](target:t-width)
+{.reveal.r(when="blank-2")} The [{.pill.yellow} width](target:t-width)
 of the rectangle is the distance between the [[midpoints|endpoints]] of the two
 non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
 called the __midsegment__ of the trapezium._
@@ -885,12 +885,12 @@ triangles](target:inside) that make up the kite are the same as the
 [four gaps](target:outside) outside it?_
 
 {.reveal(when="blank-5")} This means that the area of a kite with diagonals
-[{.step-target.i.pill.green}d1](target:d31) and
-[{.step-target.i.pill.yellow}d2](target:d32) is
+[{.i.pill.green}d1](target:d31) and
+[{.i.pill.yellow}d2](target:d32) is
 
 {.text-center.reveal(when="blank-5")} _Area_ = `1/2`
-[{.step-target.i.pill.green}d1](target:d31) ×
-[{.step-target.i.pill.yellow}d2](target:d32).
+[{.i.pill.green}d1](target:d31) ×
+[{.i.pill.yellow}d2](target:d32).
 :::
 
 ::: tab
@@ -926,10 +926,10 @@ we can use either the equation for the area of a parallelogram, or that for the
 area of a kite:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Area_ =
-[{.step-target.i.pill.blue}base](target:base) ×
-[{.step-target.i.pill.red}height](target:height) = `1/2`
-[{.step-target.i.pill.green}d1](target:d41) ×
-[{.step-target.i.pill.yellow}d2](target:d42).
+[{.i.pill.blue}base](target:base) ×
+[{.i.pill.red}height](target:height) = `1/2`
+[{.i.pill.green}d1](target:d41) ×
+[{.i.pill.yellow}d2](target:d42).
 
 {.reveal(when="blank-6 blank-7" delay=1000)} _In different contexts, you might
 be given different parts of a Rhombus (sides, height, diagonals), and you should

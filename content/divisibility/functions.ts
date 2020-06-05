@@ -252,7 +252,7 @@ export function primeTest($section: Step) {
 }
 
 export function primeGenerator($section: Step) {
-  $section.$('button')!.on('click', function () {
+  $section.$('.btn')!.on('click', () => {
     const d = +$section.model.d;
     if (!d) return $section.model.result = '';
 

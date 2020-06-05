@@ -1,7 +1,7 @@
 template#wallpaper
   x-select.tabs
-    for i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
-      .group(data-value=i)= i
+    for i, index in 'P1,P2,P3,P4,P6,PM,PMM,P4M,P6M,P3M1,P31M,P4G,CMM,PMG,PG,CM,PGG'.split(',')
+      .group(data-value=i)= index + 1
   canvas(width=1920 height=1280)
   x-select.colours
     for i in [1, 2, 3, 4, 5, 6, 7, 8]

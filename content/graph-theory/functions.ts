@@ -406,7 +406,7 @@ export function utilities($section: Step) {
     resolve();
   }
 
-  $section.$('button')!.on('click', clear);
+  $section.$('.btn')!.on('click', clear);
 
   for (const $ut of $section.$$('.utility') as SVGView[]) {
     const $c = $ut.children[0];
@@ -502,7 +502,7 @@ export function utilities1($section: Step) {
 
 export function planarity($section: Step) {
   const $svg = $section.$$('svg')[1] as SVGParentView;
-  const $newBtn = $section.$('button')!;
+  const $newBtn = $section.$('.btn')!;
   const $solveds = $section.$$('x-solved');
 
   const graph = new Graph($svg, 0, [], {r: 12, static: true, bound: true});
@@ -653,8 +653,8 @@ export function euler2($section: Step) {
       $edges[2].exit('fade', 400);
     } else if (s === 4) {
       $vertices[2].enter('pop', 400);
-      $edges[1].enter('draw', 400);
-      $edges[2].enter('draw', 400);
+      $edges[1].enter('fade', 400);
+      $edges[2].enter('fade', 400);
     }
   });
 
@@ -666,7 +666,7 @@ export function euler2($section: Step) {
       $edges[0].exit('fade', 400);
       $edges[2].exit('fade', 400);
     } else if (s === 2) {
-      $edges[2].enter('draw', 400);
+      $edges[2].enter('fade', 400);
     } else if (s === 3) {
       $vertices[2].exit('pop');
       $edges[1].exit('fade', 400);

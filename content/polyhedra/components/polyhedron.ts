@@ -25,7 +25,6 @@ const scales: Obj<number> = {
   Tetrahedron: 1.1
 };
 
-
 @register('x-polyhedron')
 export class Polyhedron extends Solid {
 

@@ -283,7 +283,7 @@ Snowflake is `§d = log_3(4) ≈ 1.262`._
 ---
 > id: koch-size
 
-::: tab
+::: tab(parent="sticky")
 
 #### Area _{span.check(when="blank-6")}_
 
@@ -412,7 +412,7 @@ Menger sponge just like we did for the Koch snowflake above. In this case we get
 
 :::
 
-{.reveal(when="blank-1")} If you imagine cutting out more and more holes,
+{.reveal(when="blank-1 slider-0")} If you imagine cutting out more and more holes,
 infinitely many times, there would be no actual volume left. That’s why the cube
 is “not quite” three-dimensional!
 [Continue](btn:next)

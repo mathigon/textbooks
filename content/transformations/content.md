@@ -5,7 +5,7 @@
 > id: intro
 > section: introduction
 
-Many geometric concepts, like [lines](gloss:line) and [points](gloss:point),
+Many geometric concepts like [lines](gloss:line) or [polygons](gloss:polygon)
 were “invented” by mathematicians. Symmetry, on the other hand, is everywhere
 around us. Almost all plants, animals, and even we humans are symmetric.
 
@@ -56,29 +56,32 @@ difficult than you might think. First, we have to learn about
 [__transformations__](gloss:transformation), which are ways to convert one
 geometric figure into another one. Here are a few examples:
 
-::: column.r(width=200)
-    .animation#star
+::: column.r(width=200 parent="padded-thin")
+
+    .animation
       include svg/transform-1.svg
       x-play-btn
+
 ::: column.r(width=200)
+
     .animation
       include svg/transform-2.svg
       x-play-btn
+
 ::: column.r(width=200)
+
     .animation
       include svg/transform-3.svg
       x-play-btn
+
 :::
 
 ---
 > id: transformations-1
 
-The result of a transformation is called the [__image__](gloss:transformation-image).
-The image of a figure `A` is usually denoted by `A'` (pronounced as “A prime”).
-
-The [first example](->#star) above is special, because it only moves and rotates
-the original star, but doesn’t change its size or shapes. Transformations with
-this property are called __rigid transformations__.
+The result of a transformation is called the [__image__](gloss:transformation-image). We often
+denote the image of a shape `A` as `A'`, pronounced “A prime”. There are many different types of
+transformation, which we’ll explore in more detail throughout this course.
 
 ---
 
@@ -87,12 +90,12 @@ this property are called __rigid transformations__.
 > id: rigid
 > section: rigid
 
-A [__rigid transformation__](gloss:rigid-transformation) is a special kind of
-transformation that don’t change the original figure’s size and shape. Imagine
-that it is made out of a solid material like wood or metal: we can move it, 
-turn it and flip it over, but we can’t stretch or otherwise deform it.
+A [__rigid transformation__](gloss:rigid-transformation) is a special kind of transformation that
+don’t change the size or shape of a figure. We could imagine that it is made out of a solid material
+like wood or metal: we can move it, turn it, or flip it over, but we can’t stretch, bend, or
+otherwise deform it.
 
-Which of these transformations are rigid?
+Which of these five transformations are rigid?
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -105,11 +108,10 @@ Which of these transformations are rigid?
 > id: rigid-1
 > goals: t1 t2 t3
 
-For rigid transformations, the image is always
-[[congruent to|the same as|opposite to]] the original. There are three different
-types of rigid transformations:
+It turns out that there are just three different types of rigid transformations:
 
-::: column.grow.r(width=200)
+::: column.r(width=200)
+
     .animation
       include svg/rigid-1.svg
       x-play-btn
@@ -117,7 +119,8 @@ types of rigid transformations:
 {.text-center} A transformation that simply _moves_ a shape is called a
 [__translation__](gloss:translation).
 
-::: column.grow.r(width=200)
+::: column.r(width=200)
+
     .animation
       include svg/rigid-2.svg
       x-play-btn
@@ -125,13 +128,15 @@ types of rigid transformations:
 {.text-center} A transformation that _flips_ a shape over is called a
 [__reflection__](gloss:reflection).
 
-::: column.grow.r(width=200)
+::: column.r(width=200)
+
     .animation
       include svg/rigid-3.svg
       x-play-btn
 
 {.text-center} A transformation that _spins_ a shape is called a
 [__rotation__](gloss:rotation).
+
 :::
 
 ---
@@ -291,8 +296,8 @@ Now it’s your turn – draw the reflection of each of these shapes:
 ---
 > id: reflections-2
 
-Notice that if a point lies on the line of reflection, its image is
-[[the same as|smaller than|opposite to]] the original point.
+Notice that if a point lies on the line of reflection, it [[doesn’t move|rotates|flips over]] when
+being reflected: _{span.reveal(when="blank-0")} its image is the same point as the original._
 
 ---
 > id: reflections-3
@@ -562,7 +567,7 @@ say that it has __rotational symmetry__.
 
 ### Reflectional Symmetry
 
-A shape has [__reflectional symmetry__](gloss:rotational-symmetry) if it looks
+A shape has [__reflectional symmetry__](gloss:reflectional-symmetry) if it looks
 the same after being reflected. The line of reflection is called the [__axis of
 symmetry__](gloss:axis-of-symmetry), and it splits the shape into two
 [[congruent|equal|similar]] halves. Some figures can also have more than one
@@ -702,7 +707,7 @@ Yo, banana [[boy]]!
 
 {.reveal(when="blank-0 blank-1")} But Palindromes are not just fun, they
 actually have practical importance. A few years ago, scientists discovered that
-parts of our [DNA](gloss:dna) are palindromic. This makes that more resilient to
+parts of our [DNA](gloss:dna) are palindromic. This makes them more resilient to
 mutations or damage – because there is a second backup copy of every piece.
 
 ---
@@ -721,7 +726,7 @@ the _number of times we can rotate the shape_, before we get back to the start.
 For example, this snowflake has order [[6]].
 
 {.reveal(when="blank-0")} The angle of each rotation is `"360°"/"order"`. In the
-snowflake, this is `"360°"/6` = [[60]]°.
+snowflake, this is `"360°"/6 = input(60)°`.
 
 ::: column(width=240)
 
@@ -729,23 +734,31 @@ snowflake, this is `"360°"/6` = [[60]]°.
 
 :::
 
+    // Maybe have another alphabeth to select all letters with rotational symmetry?
+
 ---
 > id: rotational-symmetry-1
 
 Find the order and the angle of rotation, for each of these shapes:
 
 ::: column(width=220)
+
     img(src="images/clover.jpg" width=200 height=200)
 
 {.caption} Order [[4]], angle [[90]]°
+
 ::: column(width=220)
+
     img(src="images/playing-card.jpg" width=200 height=200)
 
 {.caption} Order [[2]], angle [[180]]°
+
 ::: column(width=220)
+
     img(src="images/flower.jpg" width=200 height=200)
 
 {.caption} Order [[8]], angle [[45]]°
+
 :::
 
 ---
@@ -841,7 +854,7 @@ example, we can _add_ two symmetries to get new ones:
       mo +
       img.cube(src="images/cube-1.svg" width=54 height=54)
       mo =
-      span.sym-sum.pending: img.cube(src="images/cube-2.svg" width=54 height=54)
+      span.sym-sum.pending(tabindex=0): img.cube(src="images/cube-2.svg" width=54 height=54)
     x-gesture(target=".sym-sum")
 
 ::: column(width=260)
@@ -851,7 +864,7 @@ example, we can _add_ two symmetries to get new ones:
       mo +
       img.cube(src="images/cube-6.svg" width=54 height=54)
       mo =
-      span.sym-sum.pending: img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
+      span.sym-sum.pending(tabindex=0): img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
 
 :::
 
@@ -868,14 +881,14 @@ Whenever you add two symmetries of a square, you get a new one. Here is a
         .operator +
         .operator =
         .clear ×
-      .button + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
-      .button + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-0.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-1.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-2.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-3.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
+      .button(tabindex=0) + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
 
 ---
 > id: symmetry-arithmetic
@@ -1043,7 +1056,7 @@ of reflection.
 ---
 > id: wallpaper-groups-2
 
-A pattern can have more than one type of symmetry. And just like for squares,
+A pattern can have more than one Group 1 (of symmetry. And just like for squares,
 we can find the [symmetry group](gloss:symmetry-group) of a pattern, which
 contains all its different symmetries.
 
@@ -1072,6 +1085,7 @@ look more similar to the corresponding patterns on the left, than to each other.
 
 ---
 > id: wallpaper-groups-3
+> goals: gallery
 
 It turns out that, while there are infinitely many possible patterns, they all
 have one of just 17 different symmetry groups. These are called the __Wallpaper
@@ -1083,66 +1097,64 @@ reflection](gloss:axis-of-symmetry) in these examples?
     x-gallery(slide-width="320")
       div
         img(src="images/wallpapers/p1.svg" width=360, height=240)
-        p.caption <strong>Type P1</strong><br>Only translations
+        p.caption <strong>Group 1 – P1</strong><br>Only translations
       div
         img(src="images/wallpapers/p2.svg" width=360, height=240)
-        p.caption <strong>Type P2</strong><br>Rotations of order 2, translations
+        p.caption <strong>Group 2 – P2</strong><br>Rotations of order 2, translations
       div
         img(src="images/wallpapers/p3.svg" width=360, height=240)
-        p.caption <strong>Type P3</strong><br>Rotations of order 3 (120°), translations
+        p.caption <strong>Group 3 – P3</strong><br>Rotations of order 3 (120°), translations
       div
         img(src="images/wallpapers/p4.svg" width=360, height=240)
-        p.caption <strong>Type P4</strong><br>Four rotations of order 2 (180°), translations
+        p.caption <strong>Group 4 – P4</strong><br>Four rotations of order 2 (180°), translations
       div
         img(src="images/wallpapers/p6.svg" width=360, height=240)
-        p.caption <strong>Type P6</strong><br>Rotations of order 2, 3 and 6 (60°), translations
+        p.caption <strong>Group 5 – P6</strong><br>Rotations of order 2, 3 and 6 (60°), translations
       div
         img(src="images/wallpapers/pm.svg" width=360, height=240)
-        p.caption <strong>Type PM</strong><br>Parallel axes of reflection, translations
+        p.caption <strong>Group 6 – PM</strong><br>Parallel axes of reflection, translations
       div
         img(src="images/wallpapers/pmm.svg" width=360, height=240)
-        p.caption <strong>Type PMM</strong><br>Perpendicular reflections, rotations of order 2, translations
+        p.caption <strong>Group 7 – PMM</strong><br>Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/p4m.svg" width=360, height=240)
-        p.caption <strong>Type P4M</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
+        p.caption <strong>Group 8 – P4M</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p6m.svg" width=360, height=240)
-        p.caption <strong>Type P6M</strong><br>Rotations (ord 2 + 6), reflections, glide reflections, translations
+        p.caption <strong>Group 9 – P6M</strong><br>Rotations (ord 2 + 6), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-        p.caption <strong>Type P3M1</strong><br>Rotations of order 3, reflections, glide reflections, translations
+        p.caption <strong>Group 10 – P3M1</strong><br>Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
+        p.caption <strong>Group 11 – P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Type P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
+        p.caption <strong>Group 12 – P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
-        p.caption <strong>Type CMM</strong><br>Perpendicular reflections, rotations of order 2, translations
+        p.caption <strong>Group 13 – CMM</strong><br>Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pmg.svg" width=360, height=240)
-        p.caption <strong>Type PMG</strong><br>Reflections, glide reflections, rotations of order 2, translations
+        p.caption <strong>Group 14 – PMG</strong><br>Reflections, glide reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pg.svg" width=360, height=240)
-        p.caption <strong>Type PG</strong><br>Parallel glide reflections, translations
+        p.caption <strong>Group 15 – PG</strong><br>Parallel glide reflections, translations
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>Type CM</strong><br>Reflections, glide reflections, translations
+        p.caption <strong>Group 16 – CM</strong><br>Reflections, glide reflections, translations
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
-        p.caption <strong>Type PGG</strong><br>Perpendicular glide reflections, rotations of order 2, translations
-
-Unfortunately there is no simple reason why there are _17_ of these groups.
-Proving it requires much more advanced mathematics…
-
-Instead, you can try drawing your own repeated patterns for each of the 17
-wallpaper groups:
+        p.caption <strong>Group 17 – PGG</strong><br>Perpendicular glide reflections, rotations of order 2, translations
 
 ---
 > id: drawing
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
+
+Unfortunately there is no simple reason why there are _17_ of these groups, and proving it requires
+more advanced mathematics. Instead, you can try drawing your own repeated patterns for each of the
+17 wallpaper groups:
 
     include ./components/wallpaper
     x-wallpaper
@@ -1218,7 +1230,7 @@ tell us a lot about our universe. Emmy Noether managed to prove that every
 symmetry corresponds to a certain physical quantity that is _conserved_.
 
 For example, time-symmetry implies that __Energy__ must be conserved in our
-universe: you can convert energy from one type to another (e.g. light, or heat
+universe: you can convert energy from one Group 1 (to another (e.g. light, or heat
 or electricity), but you can never create or destroy energy. The total amount
 of energy in the universe will always stay constant.
 

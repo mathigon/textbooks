@@ -21,7 +21,7 @@ Na última década, __departamentos de polícia__ ao redor do mundo começaram a
 
 ::: column(width=400)
 
-Acontece que __terremotos__ seguem padrões semelhantes aos crimes. Assim como um crime pode provocar retaliações, um terremoto pode causar tremores secundários. Em matemática, isso é chamado de "processos auto-emocionantes", e existem equações que ajudam a prever quando o próximo pode acontecer.
+Acontece que __terremotos__ seguem padrões semelhantes aos crimes. Assim como um crime pode provocar retaliações, um terremoto pode causar tremores secundários. Em matemática, isso é chamado de "processos auto-excitantes", e existem equações que ajudam a prever quando o próximo terremoto pode acontecer.
 
 ::: column(width=160)
 
@@ -38,9 +38,9 @@ Os matemáticos profissionais usam algoritmos altamente complexos para encontrar
 ---
 > id: simple-patterns
 
-Sequências Simples
+### Sequências Simples
 
-Na matemática, uma sequência [__<<<<__](gloss:sequence) é uma cadeia de números (ou outros objetos) que geralmente seguem um padrão específico. Os elementos individuais em uma sequência são chamados [__termos__](gloss:sequence-term).
+Na matemática, uma [__sequência__](gloss:sequence) é uma cadeia de números (ou outros objetos) que geralmente seguem um padrão específico. Os elementos individuais em uma sequência são chamados [__termos__](gloss:sequence-term).
 
 Aqui estão alguns exemplos de sequências. Você consegue encontrar seus padrões e calcular os próximos dois termos?
 
@@ -60,7 +60,7 @@ _{span.pattern.reveal(when="blank-2 blank-3")} Padrão: “Adicione 6 ao número
 _{.n}7*{span.arrow(hidden)}+3*_, _{.n}8*{span.arrow(hidden)}+1*_,
 _{.n}11*{span.arrow(hidden)}+3*_, _{.n}[[12]]*{span.arrow(hidden)}+1*_,
 _{.n}[[15]]*{span.arrow(hidden)}+3*_, …
-_{span.pattern.reveal(when="blank-4 blank-5")} Padrão: “Adicione 1 alternadamente e adicione 3 ao número anterior, para obter o próximo.”_
+_{span.pattern.reveal(when="blank-4 blank-5")} Padrão: “Adicione alternadamente 1 e 3 ao número anterior, para obter o próximo.”_
 
 {.text-center.s-lime.with-arrows} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
 _{.n}4*{span.arrow(hidden)}×2*_, _{.n}8*{span.arrow(hidden)}×2*_,
@@ -87,7 +87,7 @@ O pequeno número após o _x_ é chamado de __subscrito__ e indica a posição d
 ---
 > id: triangles
 
-### Números de Triângulos e Quadrados
+### Números triangulares e quadrados
 
 Sequências em matemática nem sempre precisam ser números. Aqui está uma sequência que consiste em formas geométricas - triângulos de tamanho crescente:
 
@@ -152,12 +152,12 @@ Também podemos descrever esse padrão usando uma [fórmula](gloss:formula) espe
       | &nbsp;+&nbsp;
       em#t3 n
 
-Para obter o número do triângulo _n_, pegamos o número do triângulo [[anterior|first|next]] e adicionamos _n_. Por exemplo, se _n_ = ${n}{n|5|2,20,1}, a fórmula se tornará <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
+Para obter o _n_-ésimo número triangular, pegamos o número triangular [[anterior|inicial|seguinte]] e adicionamos _n_. Por exemplo, se _n_ = ${n}{n|5|2,20,1}, a fórmula se tornará <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
 
 ---
 > id: recursive-1
 
-Uma fórmula que expressa `x_n` como uma função de termos anteriores na sequência é chamada de [__fórmula recursiva__](gloss:sequence-recursive). Desde que conheça o [[primeiro termo|last term|second term]] na sequência, você poderá calcular todos os seguintes.
+Uma fórmula que expressa `x_n` como uma função de termos anteriores na sequência é chamada de [__fórmula recursiva__](gloss:sequence-recursive). Desde que se conheça o [[primeiro termo|último termo|segundo termo]] na sequência, você poderá calcular todos os termos seguintes.
 
 ---
 > id: squares
@@ -207,14 +207,14 @@ Outra sequência que consiste em formas geométricas são os __números quadrado
 ---
 > id: square-1
 
-Para os números dos triângulos, encontramos uma fórmula recursiva que informa o _próximo_ termo da sequência como uma função de seus _termos_ anteriores. Para números quadrados, podemos fazer ainda melhor: uma fórmula que informa diretamente o termo _n_, sem primeiro ter que calcular todos os anteriores:
+Para os números triangulares, encontramos uma fórmula recursiva que informa o _próximo_ termo da sequência como uma função de seus termos _anteriores_. Para números quadrados, podemos fazer ainda melhor: uma fórmula que informa diretamente o _n_-ésimo termo, sem ter que calcular todos os anteriores:
 
 {.text-center.s-purple} _{.n} `x_n`_ = _{x-equation(solution="n^2")}_
 
 ---
 > id: explicit
 
-Isso é chamado de fórmula explícita [__<<<<__](gloss:sequence-explicit). Podemos usá-lo, por exemplo, para calcular que o 13º número quadrado é [[169]], sem primeiro encontrar os 12 números quadrados anteriores.
+Isso é chamado de [__fórmula explícita__](gloss:sequence-explicit). Podemos usá-la, por exemplo, para calcular que o 13º número quadrado é [[169]], sem primeiro encontrar os 12 números quadrados anteriores.
 
 ---
 > id: definitions
@@ -227,24 +227,24 @@ Vamos resumir todas as definições que vimos até agora:
 
 Uma [__sequência__](gloss:sequence) é uma lista de números, formas geométricas ou outros objetos que seguem um padrão específico. Os itens individuais na sequência são chamados [__termos__](gloss:sequence-term) e representados por variáveis como `x_n`.
 
-Uma [__fórmula recursiva__](gloss:sequence-recursive) para uma sequência informa o valor do _n_ termo em função de [[seus termos anteriores|the first term]]. Você também precisa especificar o (s) primeiro (s) termo (s).
+Uma [__fórmula recursiva__](gloss:sequence-recursive) para uma sequência informa o valor do _n_-ésimo termo em função de [[seus termos anteriores|seu primeiro termo]]. Você também precisa especificar o(s) primeiro(s) termo(s).
 
-Uma [__fórmula explícita__](gloss:sequence-explicit) para uma sequência informa o valor do _n_ termo como uma função de [[apenas _n_|the previous term]], sem se referir a outros termos na sequência.
+Uma [__fórmula explícita__](gloss:sequence-explicit) para uma sequência informa o valor do _n_-ésimo termo como uma função de [[apenas _n_|termos anteriores]], sem se referir a outros termos na sequência.
 
 :::
 
 ---
 > id: action-sequence
 
-Fotografia de sequência de ação
+### Fotografia de sequência de ação
 
-Nas seções a seguir, você aprenderá sobre muitas sequências matemáticas diferentes, padrões surpreendentes e aplicativos inesperados.
+Nas seções a seguir, você aprenderá sobre muitas sequências matemáticas diferentes, padrões surpreendentes e aplicações inesperadas.
 
 Primeiro, porém, vamos ver algo completamente diferente: __fotografia de sequência de ação__. Um fotógrafo tira muitas fotos em rápida sucessão e as funde em uma única imagem:
 
     figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
-Você pode ver como o esquiador forma uma sequência? O padrão não é adição ou multiplicação, mas uma transformação geométrica [<<<<](gloss:rigid-transformation). Entre etapas consecutivas, o esquiador é traduzido e rodado [[>>>>.
+Você pode ver como o esquiador forma uma sequência? O padrão não é adição ou multiplicação, mas uma [transformação geométrica](gloss:rigid-transformation). Entre etapas consecutivas, o esquiador é transladado e [[rotacionado|refletido|dilatado]].
 
 ---
 > id: action-sequence-1

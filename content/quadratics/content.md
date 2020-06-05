@@ -19,7 +19,7 @@ for the skateboards – and it turns out that building them is not cheap:
 
 In other words, the __cost__ of producing _n_ skateboards is
 
-{.text-center} _{.pill.orange}cost_ = _{x-equation(solution="5000+30×n")}_.
+{.text-center.no-audio} _{.pill.orange}cost_ = _{x-equation(solution="5000+30×n")}_.
 
 ---
 > id: demand
@@ -124,7 +124,7 @@ We can maximise our profit by pricing the skateboards at approximately
 
     figure: x-img(src="images/skater-2.jpg" alt="Skateboarder" width=400 height=352)
 
-In the real word, it can be very difficult for companies to determine a precise
+In the real world, it can be very difficult for companies to determine a precise
 equation for their profit – and it is likely to be much more complicated than
 this example.
 
