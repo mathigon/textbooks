@@ -312,9 +312,14 @@ complete-graph:
 complex-numbers:
   title: Komplexe Zahlen
   text: |
-    Die __komplexen Zahlen__ sind alle Zahlen, die die Summe oder Differenz einer realen und einer
-    imaginären Zahl sind. Sie werden oft als `a + bi` geschrieben, wobei _a_ der Realteil und _b_
-    der Imaginärteil ist. Die Menge aller komplexen Zahlen wird oft mit dem Symbol `CC` bezeichnet.
+    Die __komplexen Zahlen__ sind alle Zahlen, die die Summe oder Differenz
+    einer realen und einer     imaginären Zahl sind. Sie werden oft als `a + bi`
+    geschrieben, wobei _a_ der Realteil und _b_ der Imaginärteil ist.
+    
+    Komplexe Zahlen können in einer zweidimensionalen Ebene dargestellt werden, wobei
+    die _x_-Achse die reellen Zahlen und die _y_-Achse die imaginären Zahlen sind.    
+    
+    Die Menge aller komplexen Zahlen wird oft mit dem Symbol `CC` bezeichnet.
 
 composite-number:
   title: Zusammengesetzte Zahl
@@ -368,9 +373,14 @@ congruent-angles:
 conic-section:
   title: Kegelschnitt
   text: |
-    Ein __Kegelschnitt__ ist eine Kurve, die aus den Schnittpunkten der Oberfläche eines Kegels mit
-    einer ebenen Fläche erzeugt wird. Es gibt vier verschiedene Arten von Kegelschnitten, die alle
-    viele gemeinsame Eigenschaften haben: Kreis * Ellipse * Parabel * Hyperbel
+    Ein __Kegelschnitt__ ist eine Kurve, die aus den Schnittpunkten der Oberfläche
+    eines Kegels mit einer ebenen Fläche erzeugt wird. Es gibt vier verschiedene Arten
+    von Kegelschnitten, die alle viele gemeinsame Eigenschaften haben:
+    
+    * Kreis 
+    * Ellipse 
+    * Parabel 
+    * Hyperbel
   link: /course/circles/conic-sections
 
 convex:
@@ -439,10 +449,10 @@ cube-volume:
 
 cylinder:
   title: Zylinder
-  text: |
-    Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei kongruenten, parallelen,
-    kreisförmigen Flächen (den _Grund- und Deckflächen_) besteht, die durch eine gekrümmte
-    Oberfläche verbunden sind. Man könnte sich einen Zylinder auch als "rundes Prisma" vorstellen.
+  text: Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei kongruenten,
+  	parallelen, kreisförmigen Flächen (den _Grund- und Deckflächen_) besteht, die durch
+  	eine gekrümmte Oberfläche verbunden sind. Man könnte sich einen Zylinder auch als "rundes Prisma" vorstellen.
+  	
   link: /course/circles/spheres-cones-cylinders#cylinder-prism
   image: cylinder.svg
 
@@ -666,7 +676,13 @@ geometric-sequence:
 
 geometric-series:
   title: Geometrische Reihe
-  text: Eine __geometrische Reihe__ ist die Summe der Terme in einer geometrischen Folge.
+  text: Eine __geometrische Reihe__ ist die unendliche Summe der Terme in einer
+  	geometrischen Folge, wobei aufeinanderfolgende Terme in einem konstanten Verhältnis _r_
+  	zueinander stehen. Zum Beispiel,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    ist eine geometrische Reihe mit dem konstantem Verhältnis `1/2`.
 
 glide-reflection:
   title: Gleitspiegelung
@@ -944,10 +960,13 @@ millennium-prize:
     Mathematik. Sie wurden im Jahr 2000 vom _Clay Mathematics Institute_ aufgelistet und mit jeweils
     einer Belohnung von 1 Million Dollar für die Lösung ausgeschrieben:
 
-    * Lösung des P-NP-Problems * Beweis der Vermutung von Hodge * Beweis der Poincaré-Vermutung *
-    Beweis der Riemannschen Vermutung * Erforschung der Gleichungen von Yang-Mills * Existenz und
-    Regularität von Lösungen der Navier-Stokes-Gleichungen * Beweis der Vermutung von Birch und
-    Swinnerton-Dyer
+    * Lösung des P-NP-Problems 
+    * Beweis der Vermutung von Hodge 
+    * Beweis der Poincaré-Vermutung 
+    * Beweis der Riemannschen Vermutung 
+    * Erforschung der Gleichungen von Yang-Mills 
+    * Existenz und Regularität von Lösungen der Navier-Stokes-Gleichungen 
+    * Beweis der Vermutung von Birch und Swinnerton-Dyer
 
     Bisher wurde nur eines der Probleme, die _Poincaré-Vermutung_, gelöst. Doch der Mathematiker,
     der es löste, Grigori Perelman, lehnte die Auszeichnung ab.
@@ -1465,7 +1484,13 @@ roman-numerals:
     Jahrhundert verwendet. Damit konnte man durch Kombination von sieben verschiedene Buchstaben
     jede beliebige ganze Zahl schreiben:
 
-    * I = 1 * V = 5 * X = 10 * L = 50 * C = 100 * D = 500 * M = 1000
+    * I = 1 
+    * V = 5 
+    * X = 10 
+    * L = 50 
+    * C = 100 
+    * D = 500 
+    * M = 1000
 
 rotation:
   title: Drehung
