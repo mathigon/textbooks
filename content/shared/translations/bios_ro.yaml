@@ -8,17 +8,17 @@ abel:
   name: Abel
   overflow: true
   bio: |
-    Niels Henrik Abel__ (1802 - 1829) a fost un important matematician norvegian. Chiar dacă a murit
-    la 26 de ani, a adus contribuții de ultimă oră la o gamă largă de subiecte.
+    Niels Henrik Abel__ (1802 - 1829) a fost un mare matematician norvegian. În ciuda faptului
+    că a murit la 26 de ani, el a avut contribuții inovatoare într-un număr mare de subiecte.
 
-    La 16 ani, Abel a dovedit teorema binomială. Trei ani mai târziu, el a dovedit că este imposibil
-    de rezolvat ecuațiile chintice - inventând independent teoria grupelor. Aceasta a fost o
-    problemă deschisă de peste 350 de ani! A lucrat, de asemenea, la funcții eliptice și a
-    descoperit _Abelian_ funcții.
+    La 16 ani, Abel a demonstrat Binomul lui Newton. Trei ani mai târziu, a demonstrat că 
+    demonstrarea ecuațiilor cvintice - prin inventarea independentă a teoriei grupurilor.
+    Aceasta a fost o problemă deschisă timp de peste 350 de ani! De asemenea, el a lucrat cu 
+    funcțiile eliptice și a descoperit funcțiile _abeliene_.
 
     Abel și-a petrecut viața în sărăcie: a avut șase frați, tatăl său a murit la 18 ani, nu a putut
-    să-și găsească un loc de muncă la o universitate și mulți matematicieni și-au demis inițial
-    munca. Astăzi, unul dintre cele mai înalte premii în matematică, premiul _Abel_ este numit după
+    să-și găsească un loc de muncă în mediul universitar și mulți matematicieni i-au respins inițial
+    lucrările. Astăzi, premiul _Abel_, unul dintre cele mai mari premii din matematică,  este numit după
     el.
   links:
     - title: Group Theory
@@ -29,15 +29,14 @@ al-haytham:
   died: 1050
   name: Al-Haytham
   bio: |
-    __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, c. 965 - 1050) a trăit la Cairo în
-    perioada de aur islamică și a studiat matematica, fizica, astronomia, filozofia și medicina. El
-    a fost un susținător al metodei științifice __: credința că orice ipoteză științifică trebuie
-    verificată folosind experimente sau logică matematică - cu secole înainte de oamenii de știință
-    europeni în timpul Renașterii.
+    __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, c. 965 - 1050) a trăit în Cairo în
+    Epoca de Aur a islamului și a studiat matematica, fizica, astronomia, filozofia și medicina. El
+    a fost un susținător al _metodei științifice_: convingerea că orice ipoteză științifică trebuie
+    verificată folosind experimente sau logică matematică - cu secole înaintea de oamenilor de știință
+    europeni din timpul Renașterii.
 
-    Al-Haytham era interesat în special de optică și percepția vizuală. El a derivat, de asemenea, o
-    formulă pentru suma puterilor a patra (`1^4 + 2^4 + 3^4 + … +
-
+    Al-Haytham a fost interesat în mod special de optică și percepția vizuală. De asemenea, el a derivat o
+    formulă pentru suma puterilor lui patru (`1^4 + 2^4 + 3^4 + … +
     n^4`) și a studiat legătura dintre algebră și geometrie.
 
 al-karaji:
@@ -46,8 +45,8 @@ al-karaji:
   name: Al-Karaji
   bio: |
     __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029) a fost un matematician și
-    inginer persan. El a fost prima persoană care a folosit _dovada prin inducție_, ceea ce i-a
-    permis să demonstreze teorema binomială.
+    inginer persan. El a fost prima persoană care a folosit _demonstrația prin inducție matematică_, ceea ce i-a
+    permis să demonstreze binomul lui Newton.
   links:
     - title: Proof by Induction
       url: /world/Axioms_and_Proof
@@ -538,23 +537,24 @@ erdos:
   died: 1996
   name: Erdős
   bio: |
-    __Paul Erdős__ (1913 - 1996) a fost unul dintre cei mai productivi matematicieni din istorie.
-    Născut în Ungaria, a rezolvat nenumărate probleme în teoria graficului, teoria numerelor,
-    combinatorică, analiză, probabilitate și alte părți ale matematicii.
+    __Paul Erdős__ (1913 – 1996) a fost unul dintre cei mai prolifici matematicieni
+    din istorie. Născut în Ungaria, el a rezolvat nenumărate probleme din teoria grafurilor,
+    teoria numerelor, combinatorică, analiză matematică, probabilități și alte ramurile
+    ale matematicii.
 
-    În timpul vieții sale, Erdős a publicat aproximativ 1.500 de lucrări și a colaborat cu peste 500
-    de alți matematicieni. De fapt, și-a petrecut cea mai mare parte a vieții trăind dintr-o valiză,
-    călătorind la seminarii și vizitând colegii!
-
+    De-a lungul vieții sale, Erdős a publicat aproximativ 1,500 de lucrări și a colaborat 
+    cu peste 500 de alți mathematicieni. De fapt, el și-a petrecut o mare parte din viață
+    călătorind doar cu o valiză la seminarii și în vizită la colegii săi!
+    
 escher:
   name: Escher
   born: 1898
   died: 1972
   bio: |
-    __Maurits Cornelis Escher__ (1898 - 1972) a fost un artist olandez care a creat schițe, tăieturi
-    de lemn și litografii de obiecte și forme inspirate din punct de vedere matematic: poliedre,
-    țesături și forme imposibile. El a explorat grafic concepte precum simetria, infinitul,
-    perspectiva și geometria non-euclidiană.
+    __Maurits Cornelis Escher__ (1898 – 1972) a fost un artist olandez care a creat schițe, xilogravuri,
+    și litografii pentru obiecte și forme de inspirație matematică: inclusiv poliedre, mozaicări și
+    forme imposibile. El a explorat grafic concepte precum simetria, infinitatea, perspectiva și
+    geometria euclidiană.
   small: true
   links:
     - title: Tessellations in Art
@@ -581,13 +581,13 @@ euler:
   born: 1707
   died: 1783
   bio: |
-    __Leonhard Euler__ (1707 – 1783) a fost unul dintre cei mai mari matematicieni din istorie. 
+    __Leonhard Euler__ (1707 – 1783) a fost unul dintre cei mai mari matematicieni din istorie.
     Munca sa acoperă toate ramurile matematicii și el a scris 80 de volume de cercetare.
 
     Euler s-a născut în Elveția și a studiat la Basel, dar a trăit marea parte a vieții sale în
     Berlin, Prusia și în St. Petersburg, Rusia.
 
-    Euler a inventat o mare parte din terminologia și notațiile matematicii moderne și a făcut 
+    Euler a inventat o mare parte din terminologia și notațiile matematicii moderne și a făcut
     descoperiri importante în analiză, teoria grafurilor, fizică, astronomie și în multe alte
     subiecte.
   links:
@@ -597,115 +597,20 @@ euler:
       url: /course/graph-theory/planar-graphs
     - title: Polyhedrons
 
-fatou:
-  name: Fatou
-  bio: |
-    __Pierre Joseph Louis Fatou__ (1878 - 1929) a fost un matematician și astronom francez. El a
-    descoperit setul _Julia_, iar inversul său, setul Fatou, poartă numele acestuia. El a adus
-    contribuții importante și la analize și mecanici cerești.
-
-fermat:
-  name: Fermat
-  born: 1607
-  died: 1665
-  bio: |
-    __Pierre de Fermat__ (1607 - 1665) a fost un matematician și avocat francez. A fost un pionier
-    timpuriu al calculului, precum și a lucrat în teoria numerelor, probabilitate, geometrie și
-    optică.
-
-    În 1637, a scris o notă scurtă în marja unuia dintre manualele sale, susținând că ecuația `a^n +
-    b^n = c^n` nu are soluții întregi pentru `n > 2` și că are o „dovadă minunată, pe care această
-    marjă este prea restrânsă pentru a o conține “. Aceasta a devenit cunoscută drept _Ultima
-    teoremă a lui Fermat_ și una dintre cele mai faimoase probleme nesoluționate în matematică -
-    până când a fost dovedită definitiv în 1994.
-  links:
-    - title: Probability
-      url: /course/probability/introduction
-
-fibonacci:
-  name: Fibonacci
-  born: 1175
-  died: 1250
-  bio: |
-    __Leonardo Pisano__, cunoscut drept __Fibonacci__ (1175 - 1250) a fost un matematician italian.
-    Este cel mai cunoscut pentru secvența de numere numită după el: 1, 1, 2, 3, 5, 8, 13, ...
-
-    Fibonacci este, de asemenea, responsabil pentru popularizarea cifrelor arabe (0, 1, 2, 3, 4,
-    ...) în Europa, care încă folosea cifre romane (I, V, X, D, ...) în secolul al XII-lea. El a
-    explicat sistemul zecimal într-o carte numită „Liber Abaci”, un manual manual pentru
-    comercianți.
-  links:
-    - title: Fibonacci Numbers
-      url: /course/sequences/fibonacci
-
-fourier:
-  born: 1768
-  died: 1830
-  name: Fourier
-  bio: |
-    __Joseph Fourier__ (1768 - 1830) a fost un matematician francez și un prieten și consilier al
-    lui Napoleon. În plus față de cercetările sale matematice, i se mai atribuie descoperirea
-    efectului de seră.
-
-    În timpul călătoriei în Egipt, Fourier a devenit deosebit de fascinat de _căldură_. El a studiat
-    transferul de căldură și vibrațiile și a descoperit că orice funcție periodică poate fi scrisă
-    ca o sumă infinită de funcții trigonometrice: o serie _Fourier_.
-
 fuller:
   name: Fuller
   bio: |
     __Richard Buckminster „Bucky” Fuller__ (1895 - 1983) a fost un arhitect, designer și inventator
-    american. Este faimos pentru construirea _cupole geodezice_ - structuri sferice mari. Molecule
-    similare de carbon similare, _fullerenele_, au fost numite mai târziu după el.
-
-galileo:
-  born: 1564
-  died: 1642
-  name: Galileo
-  bio: |
-    __Galileo Galilei__ (1564 - 1642) a fost un astronom, fizician și inginer italian. A folosit
-    unul dintre primele telescoape pentru a face observații despre cerul nopții, unde a descoperit
-    cele mai mari patru luni ale lui Jupiter, fazele lui Venus, petele solare și multe altele.
-
-    Galileo, numit uneori „părintele științei moderne”, a studiat și mișcarea obiectelor în cădere
-    liberă, cinematică, știința materialelor și a inventat termoscopul (un termometru timpuriu).
-
-    El a fost un promotor vocal al _Heliocentrism_, ideea că Soarele era în centrul sistemului
-    nostru solar. Acest lucru la determinat în cele din urmă să fie judecat de Inchiziția Catolică:
-    Galileo a fost obligat să recidiveze și și-a petrecut restul vieții în arest la domiciliu.
-
-galois:
-  born: 1811
-  died: 1832
-  name: Galois
-  overflow: true
-  bio: |
-    Matematicianul francez __Évariste Galois__ (1811 - 1832) a avut o viață scurtă și tragică,
-    totuși a inventat două domenii cu totul noi ale matematicii: _Teorie de grup_ și _Teorie Galois_
-    .
-
-    În timp ce era încă în adolescență, Galois a dovedit că nu există o soluție generală pentru
-    ecuațiile polinomiale de gradul cinci sau superior - simultan cu Niels Abel.
-
-    Din păcate, alți matematicieni cărora le-a împărtășit aceste descoperiri cu repetate poziții
-    greșite sau pur și simplu i-au întors munca, și nu a reușit examenele școlare și universitare,
-    concentrându-se în același timp pe o muncă mult mai complexă.
-
-    La 21 de ani, Galois a fost împușcat într-un duel (unii spun că o feudă asupra unei femei), iar
-    ulterior a murit din cauza rănilor sale. În noaptea dinaintea morții sale, el a rezumat
-    descoperirile sale matematice într-o scrisoare către un prieten. Ar fi nevoie de alți
-    matematicieni mulți ani pentru a realiza pe deplin impactul adevărat al lucrării sale.
-  links:
-    - title: Group Theory
-      url: /course/transformations/symmetry-groups
+    american. Este faimos pentru construirea _cupolei geodezice_ - o structură sferică mare. Moleculele
+    de carbon cu aspect similar, _fulerenele_, au fost numite mai târziu după el.
 
 gauss:
   name: Gauss
   born: 1777
   died: 1855
   bio: |
-    __Carl Friedrich Gauss__ (1777 – 1855) a fost probabil cel mai mare matematician din istorie. 
-    El a făcut descoperiri inovatoare în aproape toate domeniile matematicii, de la algebră și 
+    __Carl Friedrich Gauss__ (1777 – 1855) a fost probabil cel mai mare matematician din istorie.
+    El a făcut descoperiri inovatoare în aproape toate domeniile matematicii, de la algebră și
     teoria numerelor până la statistici, analiză matematică, geometrie, geologie și astronomie.
 
     Conform legendei, el a corectat o greșeală din calculele de contabilitate ale tatălui său  la
@@ -1375,10 +1280,10 @@ penrose:
   name: Penrose
   born: 1931
   bio: |
-    __Sir Roger Penrose__ (n. 1931) este un matematician și fizician britanic, cunoscut pentru
-    lucrările sale de ultimă generație în relativitate și cosmologie generală - adesea colaborând cu
-    alți oameni de știință celebri precum Stephen Hawking și Michael Atiyah. De asemenea, el a
-    descoperit _Penrose Tilings_: țesături similare, neperiodice.
+    __Sir Roger Penrose__ (n. 1931) este un matematician și fizician britanic cunoscut
+    pentru lucrările sale inovatoare în relativitatea generală și cosmologie - colaborând
+    adesea cu alți oameni de știință faimoși precum Stephen Hawking și Michael Atiyah.
+    De asemenea, el a descoperit _Placările Penrose_: mozaicări autosimilare neperiodice.
   links:
     - title: Penrose Tilings
       url: /course/polyhedra/tessellations#penrose

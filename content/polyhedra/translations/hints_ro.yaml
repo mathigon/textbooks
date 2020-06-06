@@ -1,0 +1,25 @@
+not-a-polygon-1: Una dintre laturile acestei forme este curbă, deci nu este un poligon.
+not-a-polygon-2: Această formă nu este un poligon deoarece conține un gol.
+not-a-polygon-3: Această formă are o latură curbă, deci nu poate fi un poligon.
+
+no-overlap: Atenție – laturile nu au voie să se intersecteze, altfel nu mai avem un poligon.
+angles-repeat: Minunat! Acum încearcă să muți câteva din vârfurile patrulaterului și vezi ce se întâmplă.
+
+not-a-diagonal: Aceasta nu este o diagonală a patrulaterului.
+not-a-diagonal-1: Aceasta nu este o diagonală a paralelogramului.
+
+not-concave-1: Triunghiurile nu pot fi niciodată concave: oricare din unghiurile lor sunt mai mici de 180°.
+not-concave-2: Acest poligon este convex - toate unghiurile sunt mai mici de 180°.
+not-concave-3: Acest poligon este convex – toate diagonalele se află în interior și toate unghiurile sunt mai mici de 180°.
+
+not-regular-1: În acest poligon unele laturi au lungimi diferite - prin urmare, nu poate fi regulat.
+not-regular-2: Toate laturile au aceeași lungime, dar unele dintre unghiuri au diferite măsuri. Așadar, acesta _nu_ este un poligon regulat.
+not-regular-3: Acesta e un cerc, nu un poligon!
+
+parall-error-1: Nu este adevărat - unghiurile pot avea orice măsură, atâta timp cât suma lor este 360°.
+parall-error-2: Este adevărat dacă paralelogramul este totodată și romb, dar nu se aplică în cazul _oricărui_ paralelogram.
+parall-error-3: Este corect dacă paralelogramul este totodată și dreptunghi, dar nu se aplică în cazul _oricărui_ paralelogram.
+parall-error-4: Nu: intr-un paralelogram laturile alăturate nu trebuie să aibă aceeași lungime.
+
+move-polyhedra: "[Poliedrele tridimensiona;](->#poly1) sunt interactive. Încearcă să le rotești!"
+use-euler: Nu uita că poți folosi __formula lui Euler__ pentru a afla numărul de fețe, vârfuri sau muchii.
