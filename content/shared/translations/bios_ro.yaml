@@ -8,17 +8,17 @@ abel:
   name: Abel
   overflow: true
   bio: |
-    Niels Henrik Abel__ (1802 - 1829) a fost un important matematician norvegian. Chiar dacă a murit
-    la 26 de ani, a adus contribuții de ultimă oră la o gamă largă de subiecte.
+    Niels Henrik Abel__ (1802 - 1829) a fost un mare matematician norvegian. În ciuda faptului
+    că a murit la 26 de ani, el a avut contribuții inovatoare într-un număr mare de subiecte.
 
-    La 16 ani, Abel a dovedit teorema binomială. Trei ani mai târziu, el a dovedit că este imposibil
-    de rezolvat ecuațiile chintice - inventând independent teoria grupelor. Aceasta a fost o
-    problemă deschisă de peste 350 de ani! A lucrat, de asemenea, la funcții eliptice și a
-    descoperit _Abelian_ funcții.
+    La 16 ani, Abel a demonstrat Binomul lui Newton. Trei ani mai târziu, a demonstrat că 
+    demonstrarea ecuațiilor cvintice - prin inventarea independentă a teoriei grupurilor.
+    Aceasta a fost o problemă deschisă timp de peste 350 de ani! De asemenea, el a lucrat cu 
+    funcțiile eliptice și a descoperit funcțiile _abeliene_.
 
     Abel și-a petrecut viața în sărăcie: a avut șase frați, tatăl său a murit la 18 ani, nu a putut
-    să-și găsească un loc de muncă la o universitate și mulți matematicieni și-au demis inițial
-    munca. Astăzi, unul dintre cele mai înalte premii în matematică, premiul _Abel_ este numit după
+    să-și găsească un loc de muncă în mediul universitar și mulți matematicieni i-au respins inițial
+    lucrările. Astăzi, premiul _Abel_, unul dintre cele mai mari premii din matematică,  este numit după
     el.
   links:
     - title: Group Theory
@@ -29,15 +29,14 @@ al-haytham:
   died: 1050
   name: Al-Haytham
   bio: |
-    __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, c. 965 - 1050) a trăit la Cairo în
-    perioada de aur islamică și a studiat matematica, fizica, astronomia, filozofia și medicina. El
-    a fost un susținător al metodei științifice __: credința că orice ipoteză științifică trebuie
-    verificată folosind experimente sau logică matematică - cu secole înainte de oamenii de știință
-    europeni în timpul Renașterii.
+    __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, c. 965 - 1050) a trăit în Cairo în
+    Epoca de Aur a islamului și a studiat matematica, fizica, astronomia, filozofia și medicina. El
+    a fost un susținător al _metodei științifice_: convingerea că orice ipoteză științifică trebuie
+    verificată folosind experimente sau logică matematică - cu secole înaintea de oamenilor de știință
+    europeni din timpul Renașterii.
 
-    Al-Haytham era interesat în special de optică și percepția vizuală. El a derivat, de asemenea, o
-    formulă pentru suma puterilor a patra (`1^4 + 2^4 + 3^4 + … +
-
+    Al-Haytham a fost interesat în mod special de optică și percepția vizuală. De asemenea, el a derivat o
+    formulă pentru suma puterilor lui patru (`1^4 + 2^4 + 3^4 + … +
     n^4`) și a studiat legătura dintre algebră și geometrie.
 
 al-karaji:
@@ -46,8 +45,8 @@ al-karaji:
   name: Al-Karaji
   bio: |
     __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029) a fost un matematician și
-    inginer persan. El a fost prima persoană care a folosit _dovada prin inducție_, ceea ce i-a
-    permis să demonstreze teorema binomială.
+    inginer persan. El a fost prima persoană care a folosit _demonstrația prin inducție matematică_, ceea ce i-a
+    permis să demonstreze binomul lui Newton.
   links:
     - title: Proof by Induction
       url: /world/Axioms_and_Proof
@@ -533,6 +532,20 @@ eratosthenes:
     - title: Sieve of Eratosthenes
       url: /course/divisibility/primes#eratosthenes
 
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __Paul Erdős__ (1913 – 1996) a fost unul dintre cei mai prolifici matematicieni
+    din istorie. Născut în Ungaria, el a rezolvat nenumărate probleme din teoria grafurilor,
+    teoria numerelor, combinatorică, analiză matematică, probabilități și alte ramurile
+    ale matematicii.
+
+    De-a lungul vieții sale, Erdős a publicat aproximativ 1,500 de lucrări și a colaborat 
+    cu peste 500 de alți mathematicieni. De fapt, el și-a petrecut o mare parte din viață
+    călătorind doar cu o valiză la seminarii și în vizită la colegii săi!
+    
 escher:
   name: Escher
   born: 1898
