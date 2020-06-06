@@ -16,8 +16,8 @@ const colours: Obj<number> = {
   4: 0x0f82f2,  // blue
   5: 0x22ab24,  // green
   6: 0xcd0e66,  // red
-  8: 0x6f27cc,  // violet
-  10: 0x18aa93  // teal
+  8: 0x6d3bbf,  // violet
+  10: 0x009ea6  // teal
 };
 
 function drawFace(face: number[], vertices: THREE.Vector3[]) {

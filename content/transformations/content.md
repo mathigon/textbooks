@@ -1056,7 +1056,7 @@ of reflection.
 ---
 > id: wallpaper-groups-2
 
-A pattern can have more than one Group 1 (of symmetry. And just like for squares,
+A pattern can have more than one type of symmetry. And just like for squares,
 we can find the [symmetry group](gloss:symmetry-group) of a pattern, which
 contains all its different symmetries.
 
@@ -1230,7 +1230,7 @@ tell us a lot about our universe. Emmy Noether managed to prove that every
 symmetry corresponds to a certain physical quantity that is _conserved_.
 
 For example, time-symmetry implies that __Energy__ must be conserved in our
-universe: you can convert energy from one Group 1 (to another (e.g. light, or heat
+universe: you can convert energy from one type to another (e.g. light, or heat
 or electricity), but you can never create or destroy energy. The total amount
 of energy in the universe will always stay constant.
 

@@ -72,7 +72,7 @@ async function generateAudio(id, locale='en') {
   const newFiles = [];
   let currentTime = 0;
 
-  for (const sentence of doc.querySelectorAll('.audio-s')) {
+  for (const sentence of doc.querySelectorAll('.sentence')) {
     const text = extractText(sentence).trim();
     if (!text) continue;
 

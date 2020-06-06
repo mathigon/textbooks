@@ -391,7 +391,7 @@ the _father of geometry_, published the five axioms of geometry:
 
 :::
 
-::: column(width=220)
+::: column(width=220 parent="padded-thin")
 
     x-geopad(width=220 height=160): svg
       circle.move(name="a" cx=30 cy=130 target="1_point")
@@ -399,19 +399,20 @@ the _father of geometry_, published the five axioms of geometry:
       path.red(x="segment(a,b)" target="1_line")
 
 {.text-center }__First Axiom__  
-You can join any [two points](target:1_point) using exactly one straight
-[line segment](target:1_line).
+You can join any [{.pill} two points](target:1_point) using exactly one straight [{.pill.red} line
+segment](target:1_line).
 
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      circle.move(name="c" cx=60 cy=100 target="2_segment")
-      circle.move(name="d" cx=180 cy=60 target="2_segment")
-      path.red(x="line(c,d)")
+      circle.move(name="c" cx=60 cy=100)
+      circle.move(name="d" cx=180 cy=60)
+      path.blue(x="line(c,d)" target="2_line")
       path(x="segment(c,d)" target="2_segment")
 
 {.text-center }__Second Axiom__  
-You can extend any [line segment](target:2_segment) to an infinitely long line.
+You can extend any [{.pill} line segment](target:2_segment) to an [{.pill.blue} infinitely long
+line](target:2_line).
 
 ::: column(width=220)
 
@@ -419,11 +420,11 @@ You can extend any [line segment](target:2_segment) to an infinitely long line.
       circle.move(name="e" cx=120 cy=80 target="3_center" label="P")
       circle.move(name="f" cx=170 cy=130)
       path(x="segment(e,f)" label="r" target="3_radius")
-      path.red(x="circle(e,distance(e,f))" target="3_circle")
+      path.green(x="circle(e,distance(e,f))" target="3_circle")
 
 {.text-center }__Third Axiom__  
-Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you
-can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
+Given a [{.pill} point _P_](target:3_center) and a [{.pill} distance _r_](target:3_radius), you can
+draw a [{.pill.green} circle](target:3_circle) with centre _P_ and radius _r_.
 
 ::: column(width=220)
 
@@ -431,30 +432,30 @@ can draw a [circle](target:3_circle) with centre _P_ and radius _r_.
       circle.move(name="x" cx=50 cy=100)
       circle(hidden name="xa" x="x.translate(point(110,80).subtract(x).rotate(pi/4).unitVector.scale(50))")
       circle(hidden name="xb" x="x.translate(point(110,80).subtract(x).rotate(-pi/4).unitVector.scale(50))")
-      path.fill.red(x="angle(xb,x,xa)")
+      path.fill.orange(x="angle(xb,x,xa)" target="4_angle")
       path.dark(x="segment(x,xa)")
       path.dark(x="segment(x,xb)")
 
       circle.move(name="y" cx=190 cy=60)
       circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).unitVector.scale(50))")
       circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).unitVector.scale(50))")
-      path.fill.red(x="angle(yb,y,ya)")
+      path.fill.orange(x="angle(yb,y,ya)" target="4_angle")
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
 {.text-center }__Fourth Axiom__  
-Any two right angles are congruent.
+Any two [{.pill.orange} right angles](target:4_angle) are congruent.
 
 ::: column(width=220)
 
     x-geopad(width=220 height=160): svg
-      circle.move(name="g" cx=170 cy=60 target="5_point" label="P")
-      path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
-      path.red(x="line5.parallel(g)" target="5_parallel")
+      circle.move(name="g" cx=160 cy=60 target="5_point" label="P")
+      path(name="line5" x="line(point(50,80),point(130,140))" target="5_line" label="L")
+      path.yellow(x="line5.parallel(g)" target="5_parallel")
 
 {.text-center }__Fifth Axiom__  
-Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_,
-there is exactly [one line](target:5_parallel) through _P_ that is
+Given a [{.pill} line _L_](target:5_line) and a [{.pill} point _P_](target:5_point) not on _L_,
+there is exactly [{.pill.yellow} one line](target:5_parallel) through _P_ that is
 [parallel](gloss:parallel) to _L_.
 :::
 
@@ -484,11 +485,14 @@ Jefferson](bio:jefferson). When writing the Declaration of Independence in 1776,
 he wanted to follow a similar approach. He begins by stating a few, simple
 “axioms” and then “proves” more complex results:
 
-{div.parchment} “We hold these truths to be self-evident: that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
+{div.parchment.voice} “We hold these truths to be self-evident: that all men are created equal,
+that they are endowed by their Creator with certain unalienable Rights, that among these are Life,
+Liberty and the pursuit of Happiness.”
 
-{.text-center.follows.no-audio} `=>`
+{.text-center.follows.no-voice} `=>`
 
-{div.parchment} We, therefore … declare, that these United Colonies are, and of right ought to be, free and independent states.”
+{div.parchment.voice} We, therefore … declare, that these United Colonies are, and of right ought
+to be, free and independent states.”
 
 This is just one example where Euclid’s ideas in mathematics have inspired
 completely different subjects.
@@ -781,7 +785,7 @@ TODO
 Using straight-edge and compass is not the only way to construct geometric
 shapes. Another technique uses no tools at all: __Origami__.
 
-The word _Origami_ _{span.no-audio}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
+The word _Origami_ _{span.no-voice}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
 (paper). The goal is to make objects out of one or more sheets of paper,
 without any additional tools like glue or scissors. You can create incredibly
 beautiful and impressive designs – all of these figures were built using nothing
