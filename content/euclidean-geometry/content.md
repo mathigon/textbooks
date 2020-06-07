@@ -409,6 +409,7 @@ segment](target:1_line).
       circle.move(name="d" cx=180 cy=60)
       path.blue(x="line(c,d)" target="2_line")
       path(x="segment(c,d)" target="2_segment")
+      path.blue.transparent(x="segment(c,d)" target="2_line")
 
 {.text-center }__Second Axiom__  
 You can extend any [{.pill} line segment](target:2_segment) to an [{.pill.blue} infinitely long
