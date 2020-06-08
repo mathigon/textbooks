@@ -4,19 +4,20 @@
 
 > section: relations
 > sectionStatus: dev
+> id: sorting-hat
 
 ::: column.grow
 
 Welcome to the Hoctagon School of Magic! You’ve taken the train from King’s Cross station in London,
 a boat across the great lake in front of the castle, and just arrived in the great hall with all the
-other students. But before the welcome feast can begin, the Sorting Hat has to assign all new
-students to a house.
+other students.
 
-Try dragging each of these students into a house:
+But before the welcome feast can begin, the Sorting Hat has to assign all new students to a house.
+Try sorting each of these students into one of the four house:
 
 ::: column(width=300)
 
-    x-img(src="images/hat.png" width=300 height=250 credit="Whatever" lightbox)
+{.fixme} Image
 
 :::
 
@@ -35,35 +36,46 @@ Try dragging each of these students into a house:
 
 ---
 
-::: column(width=300)
-
-    x-img(src="images/books.png" width=300 height=250 credit="Whatever" lightbox)
-
-::: column.grow
-
 After dinner, all students return to the common rooms of their new houses. Everyone settles into their dorms and returns to the common room to meet their new housemates. Heads of houses use this time to pass out class lists. Like before, connect each of the students with different classes:
 
-:::
-
-TODO Interactive goes here
-
-TODO Tutor messages
+    x-relation
+      .item(slot="domain" name="a") **Current User**
+      .item(slot="domain" name="b") Phineas Lynch
+      .item(slot="domain" name="c") Sturgis Switch
+      .item(slot="domain" name="d") Dilys Derwent
+      .item(slot="domain" name="e") Demelza Zabini
+      .item(slot="domain" name="f") Bogod Clearwater
+      .item(slot="range") Potions
+      .item(slot="range") Transfiguration
+      .item(slot="range") Magical Creatures
+      .item(slot="range") Broomstick Flying
+      .item(slot="range") Charms
 
 ---
 
-::: column.grow
-
 The next day, you and several of your classmates arrive early to your first lesson. Conversation quickly turns to your new wands. You trade stories about how the wands chose you. Connect each of these wands to a student.
 
-::: column(width=300)
-
-    x-img(src="images/wands.png" width=300 height=250 credit="Whatever" lightbox)
-
-:::
-
-TODO Interactive goes here
-
-TODO Tutor messages
+    x-relation
+      .item(slot="domain")
+        img(src="images/wand-1.png" width=200 height=30)
+        span.caption Birch, phoenix feather, 5 3/4
+      .item(slot="domain")
+        img(src="images/wand-2.png" width=200 height=30)
+        span.caption Oak,dragon heartstring, 6 9/16
+      .item(slot="domain")
+        img(src="images/wand-3.png" width=200 height=30)
+        span.caption Oak, unicorn hair, 6 5/8
+      .item(slot="domain")
+        img(src="images/wand-4.png" width=200 height=30)
+        span.caption Yew, kneazle whicker, 4 9/16
+      .item(slot="domain")
+        img(src="images/wand-5.png" width=200 height=30)
+        span.caption Yew, unicorn hair, 5 7/8
+      .item(slot="range" name="a") **Current User**
+      .item(slot="range" name="b") Phineas Lynch
+      .item(slot="range" name="c") Sturgis Switch
+      .item(slot="range" name="d") Dilys Derwent
+      .item(slot="range" name="e") Demelza Zabini
 
 ---
 
@@ -110,7 +122,8 @@ TODO Interactive here
 
 ---
 
-### Relations in a Coordinate System
+### Coordinate Systems
+
 We have been using mapping diagrams, coordinate pairs, and tables to represent relations. Graphs are another way to visualize relations. We can note a few interesting things when we look at relations on the [__coordinate plane__](gloss:coordinate-system).
 
 Let’s plot the relation {(0,0), (1,4), (-5,3), (-2,-1), (4, -3)} on the coordinate plane. Two points are already on the graph.
@@ -132,6 +145,7 @@ TODO Interactive here
 ---
 
 ### Functions
+
 In math, relations that are one-to-one or many-to-one are particularly important, and we will see many more examples in later chapters. That’s why they have a special name: Functions. A [__function__](gloss:function) is a rule that assigns each input to  [[exactly one | at least one]] output.
 
 ---
@@ -206,7 +220,6 @@ TODO coordinate plane
 ::: column.grow
 
 The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’s think about how we would figure out the highest y-value. If every student at the school bought a ticket, we would multiply [[student enrollment]] by $25 to calculate the highest possible y-value.
->>>>>>> origin/functions-course
 
 :::
 
