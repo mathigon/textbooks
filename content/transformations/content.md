@@ -1230,13 +1230,11 @@ tell us a lot about our universe. Emmy Noether managed to prove that every
 symmetry corresponds to a certain physical quantity that is _conserved_.
 
 For example, time-symmetry implies that __Energy__ must be conserved in our
-universe: you can convert energy from one type to another (e.g. light, or heat
-or electricity), but you can never create or destroy energy. The total amount
-of energy in the universe will always stay constant.
+universe: you can convert energy from one type to another (e.g. light to electricity), but you can never create or destroy energy. The total amount of energy in the universe will always stay constant.
 
     figure
       x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
-      p.caption CERN is the world’s largest particle accellerator. Scientists smash together fundamental particles at enourmous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
+      p.caption CERN is the world’s largest particle accelerator. Scientists smash together fundamental particles at enormous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
 
 ::: column(width=220)
 
