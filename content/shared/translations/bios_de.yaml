@@ -830,12 +830,14 @@ hamilton:
     __William Rowan Hamilton__ (1805 - 1865) war ein irischer Mathematiker und Wunderkind. Er erfand
     _Quaternionen_, das erste Beispiel einer „nicht kommutativen Algebra“, die wichtige Anwendungen
     in Mathematik, Physik und Informatik hat.
+    
+    
+    Auf die Idee kam er zum ersten Mal bei einem Spaziergang entlang des Royal Canal in
+    Dublin, und ritzte die Grundformel in eine Steinbrücke ein, die er passierte:
+    `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
 
-    Er kam zuerst auf die Idee, als er den Royal Canal in Dublin entlang ging, und schnitzte die
-    Grundformel in eine Steinbrücke, an der er vorbeikam: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
-
-    Hamilton leistete auch bedeutende Beiträge zur Physik, einschließlich der Optik und der
-    Newtonschen Mechanik.
+    Hamilton leistete auch bedeutende Beiträge zur Physik, einschließlich der Optik
+    und Newtonschen Mechanik.
 
 hardy:
   born: 1877
