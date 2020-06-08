@@ -1256,6 +1256,24 @@ monsky:
     Brandeis University. He proved that a square cannot be divided into an odd
     number of equal-area triangles – this is known as “Monsky’s theorem”.
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 – 1872) was an American inventor and painter. He grew
+    up near Boston and studied at Yale university, before starting a career as
+    an artist.
+
+    On his return journey from a trip to Europe to study art, Morse overheard
+    passengers talking about new electrical devices. This inspired him to work
+    on a significant improvement to the electric telegraph, using just a single
+    wire, and to develop _Morse code_ with his assistant Alfred Vail.
+
+    After some initial difficulties in receiving funding, Morse’s telegraph
+    quickly spread all across the United States and the world.
+
+    Morse also ran twice for mayor of New York City, but his support for slavery
+    and against immigration meant that he was defeated both times.
+
 napier:
   born: 1550
   died: 1617
