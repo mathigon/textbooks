@@ -1085,7 +1085,7 @@ Yo, banana [[boy]]!
 
 {.reveal(when="blank-1")} وأخيرًا ، لا يهم إذا أجرينا تجربة اليوم أو غدًا أو بعد عام. قوانين الطبيعة "متناظرة مع الزمن".
 
-::: column(width=300)
+::: column(width=300 dir="ltr")
 
     include svg/planets.svg
 

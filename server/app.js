@@ -31,7 +31,7 @@ class Course {
     try {
       return fs.readFileSync(path.join(COURSE_PATH, this.id, name));
     } catch (e) {
-      return null;
+      return undefined;
     }
   }
 

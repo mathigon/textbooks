@@ -272,9 +272,9 @@ and try to reveal a pattern:
         div(value="prime") Prime Numbers
         div(value="eo") Even and Odd
       .frame-body
-        p.no-audio(style="margin: 0"): strong These graphs are possible:
+        p.no-voice(style="margin: 0"): strong These graphs are possible:
         include svg/vertex-orders-1.svg
-        p.no-audio(style="margin: 1em 0 0"): strong These graphs are not possible:
+        p.no-voice(style="margin: 1em 0 0"): strong These graphs are not possible:
         include svg/vertex-orders-2.svg
 
 ---
@@ -560,7 +560,7 @@ see if Euler’s equation works. Instead we can try to find a simple
               td.xf 0
               td.xv 1
               td.xe 0
-          p.no-audio #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
+          p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
 
       .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
       .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.

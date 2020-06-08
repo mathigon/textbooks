@@ -1781,6 +1781,9 @@ turing:
     Turing was gay, which was still a crime during his life, and meant that his
     groundbreaking accomplishments were never fully recognised. He committed
     suicide at the age of 41.
+  links:
+    - title: Codes and Cryptography
+      url: /course/codes
 
 ulam:
   name: Ulam
