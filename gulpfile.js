@@ -31,7 +31,8 @@ function markdown() {
 function scripts() {
   return gulp.src(['content/*/*.ts', '!content/shared/**'])
       .pipe(rollup({
-        plugins: [resolve(), typescript(tsconfig.compilerOptions)],
+        plugins: [resolve({mainFields: ['main:ts', 'module', 'main']}),
+          typescript(tsconfig.compilerOptions)],
         onwarn(e) {
           if (e.code !== 'CIRCULAR_DEPENDENCY') console.warn(e.message);
         }
