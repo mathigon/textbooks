@@ -17,6 +17,9 @@ Try sorting each of these students into one of the four house:
 
 ::: column(width=300)
 
+    // EDITORIAL ONLY
+    // https://depositphotos.com/139592200/stock-photo-the-hogwarts-express-train.html
+
 {.fixme} Image
 
 :::

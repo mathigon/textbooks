@@ -5,9 +5,9 @@
 
 
 import {Obj} from '@mathigon/core';
-import {Point, nearlyEquals, Segment, isLineLike, isCircle, Circle} from '@mathigon/fermat';
+import {Point, Segment, isLineLike} from '@mathigon/fermat';
 import {$N, slide, SVGView} from '@mathigon/boost';
-import {Geopad, GeoPath, GeoPoint, GeoShape, Path, PlayBtn, Step, Video} from '../shared/types';
+import {Geopad, GeoPoint, Path, PlayBtn, Step, Video} from '../shared/types';
 
 
 export function thales($step: Step) {

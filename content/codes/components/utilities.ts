@@ -86,7 +86,7 @@ export function cipherLetterFreq(cipher: string) {
   const msg = cipher.toLowerCase();
   const freq = repeat(0, 26);
 
-  for (let l of msg) {
+  for (const l of msg) {
     if (l >= 'a' && l <= 'z') freq[LOWER_CASE.indexOf(l)] += 1;
   }
 

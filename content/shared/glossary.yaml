@@ -398,7 +398,7 @@ convex:
 
 coordinate-system:
   title: Coordinate System
-  text: A __cordinate system__ is a two-dimensional plane that contains two
+  text: A __coordinate system__ is a two-dimensional plane that contains two
     perpendicular axes. Every point on the plane can be defined using two
     numbers (coordinates), that specify its distance from the two axes.
 

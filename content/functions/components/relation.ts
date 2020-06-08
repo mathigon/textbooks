@@ -5,7 +5,7 @@
 
 
 import {$N, CustomElementView, ElementView, hover, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
-import {Bounds, Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/fermat';
 
 
 @register('x-relation', {templateId: '#relation'})
