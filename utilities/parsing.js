@@ -5,7 +5,7 @@
 
 
 const marked = require('marked');
-let originalP = null;  // Caching of unparsed paragraphs (for blockquotes)
+let originalP = undefined;  // Caching of unparsed paragraphs (for blockquotes)
 
 
 // -----------------------------------------------------------------------------

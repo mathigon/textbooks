@@ -19,7 +19,7 @@ für die Skateboards zu finden - und es stellt sich heraus, dass der Bau der Ska
 
 Mit anderen Worten, die __Kosten__ für die Herstellung von _n_ Skateboards betragen
 
-{.text-center.no-audio} _{.pill.orange}Kosten_ = _{x-equation(solution="5000+30×n")}_.
+{.text-center.no-voice} _{.pill.orange}Kosten_ = _{x-equation(solution="5000+30×n")}_.
 
 ---
 > id: demand

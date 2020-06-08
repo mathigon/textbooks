@@ -148,7 +148,7 @@ As humans, we can only ever write a finite number of 9s, say ${n}{n|1|1,15,1}:
         polygon(points="655 77 659.88 65.06 655 67.89 650.12 65.06 655 77")
     x-gesture(target="x-var" slide="100,0")
 
-{.convergence.no-audio} **{.m-yellow}0.9** is less than 1.  
+{.convergence.no-voice} **{.m-yellow}0.9** is less than 1.  
 _{span.reveal(when="n2")} **{.m-green}0.99** is less than 1._  
 _{span.reveal(when="n3")} **{.m-blue}0.999** is less than 1._  
 _{span.reveal(when="n4")} **{.m-red}0.9999** is less than 1._  

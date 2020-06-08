@@ -102,6 +102,12 @@ arabic-numerals:
     matematicienii arabi înainte de a fi introdus In Europa de către matematicianul italian Leonardo
     Fibonacci.
 
+archimedean-solid:
+  title: Solid arhimedian
+  text: Un__solid arhimedian__ este un poliedru alcătuit din tipuri diferite de poligoane regulate
+    care arată la fel din orice direcție. Există 13 solide arhimediene diferite.
+  link: /course/polyhedra/platonic#archimedean
+
 arccos:
   title: Arccosinus
   text: |
@@ -157,10 +163,10 @@ axiom:
     complexe.
 
 axis-of-symmetry:
-  title: Axa de Simetrie
+  title: Axa de simetrie
   text: |
-    Dacă o formă are simetrie reflexivă, __axa de simetrie__ este dreapta care o împarte în două
-    jumătăți egale.
+    Dacă o formă are simetrie reflexivă, __axa de simetrie__ este dreapta care
+    o împarte în două jumătăți egale.
   image: reflectional-symmetry.svg
   link: /course/transformations/symmetry#reflectional-symmetry
 
@@ -329,6 +335,14 @@ concave:
     este de a căuta o latură „ascunsă” a poligonului. _Concave_ este opusul _convexe_ poligoane.
   link: /course/polyhedra/polygons#concave
 
+concave:
+  title: Poligon concav
+  text: Un poligon __concav__ are cel puțin un unghi intern cu măsura mai mare ca 180°.
+    Cel puțin una din diagonale se află _în exteriorul_ poligonului. O metodă comună
+    de identificare a unui poligon concav este de a căuta o latură “săpată în interior”.
+    Poligoanele _concave_ sunt opusul poligoanelor _convexe_.
+  link: /course/polyhedra/polygons#concave
+
 cone:
   title: Con circular
   text: |
@@ -374,7 +388,7 @@ convex:
   title: Poligonul convex
   text: |
     Un poligon __convex__ nu conține unghiuri interne mai mari de 180 °. Toate diagonalele se află
-    în interiorul poligonului. Acesta este opusul _poligonilor concavi_.
+    în interiorul poligonului. Acesta este opusul poligonului _concav_.
   link: /course/polyhedra/polygons#concave
 
 coordinate-system:
@@ -418,18 +432,18 @@ cross-section:
 
 cryptography:
   title: Criptografie
-  text: __Criptografie__ este aria matematicii care studiază cifrarea și descifrarea mesajelor secrete.
+  text: __Criptografia__ este ramura matematicii care studiază cifrarea și descifrarea mesajelor secrete.
 
 cube:
   title: cub
   text: |
-    Un __cub__ (numit uneori __Hexahedron__) este un poliedru obișnuit în care fiecare față este un
-    pătrat. Este unul dintre cele cinci _solide platonice_, și are 6 fețe, 8 vârfuri și 12 muchii.
+    Un __cub__ (numit uneori și __hexaedru__) este un poliedru regulat în care fiecare față este un
+    pătrat. Este unul dintre cele cinci _solide platonice_ și are 6 fețe, 8 vârfuri și 12 muchii.
   link: /course/polyhedra/platonic#platonic-overview
 
 cube-volume:
   title: Volumul unui cub
-  text: Un cub cu lungimea laterală _a_ are volumul `V = a^3`.
+  text: Un cub cu latura de lungime _a_ are volumul `V = a^3`.
 
 cylinder:
   title: Cilindru
@@ -798,6 +812,12 @@ integer:
     Numerele întregi __sunt numerele întregi pozitive și negative, inclusiv zero:…, –3, –2, –1, 0,
     1, 2, 3,…. Acestea sunt adesea notate folosind simbolul `ZZ`.
 
+icosahedron:
+  title: Icosaedru
+  text: __Icosaedrul__ este un corp platonic alcătuit din 20 de fețe care sunt
+    triunghiuri echilaterale. El are 12 vârfuri și 30 de muchii.
+  link: /course/polyhedra/platonic#platonic-overview
+
 internal-angle:
   title: Unghiuri interne
   text: __Unghiurile interne__ ale unui poligon sunt unghiurile din interior aflate la fiecare vârf.
@@ -816,6 +836,11 @@ irregular-polygon:
   text: |
     Un __poligon neregulat__ este unul care _nu este regulat_. Aceasta înseamnă că fie laturile, cât
     și unghiurile nu au toate aceeași dimensiune.
+
+irregular-polygon:
+  title: Poligon neregulat
+  text: Un __poligon neregulat__ este un poligon care _nu este regulat_. Aceasta înseamnă că
+    fie laturile, fie unghiurile nu au acceași mărime.
 
 isosceles-triangle:
   title: Triunghi isoscel
@@ -1006,7 +1031,7 @@ octagon:
 octahedron:
   title: Octaedru
   text: |
-    __Octaedru__ este un solid platonic și este format din 8 fețe care sunt triunghiuri
+    __Octaedrul__ este un solid platonic și este alcătuit din 8 fețe care sunt triunghiuri
     echilaterale. Are 6 vârfuri și 12 muchii.
   link: /course/polyhedra/platonic#platonic-overview
 
@@ -1072,7 +1097,7 @@ parallel:
 
 parallelogram:
   title: Paralelogram
-  text: O __paralelogramă__ este un patrulater în care ambele perechi de laturi opuse sunt paralele.
+  text: Un __paralelogram__ este un patrulater în care ambele perechi de laturi opuse sunt paralele.
   link: /course/polyhedra/quadrilaterals#parallelograms
 
 pascals-triangle:
@@ -1128,11 +1153,11 @@ pi:
   link: /course/circles/introduction#pi-definition
 
 platonic-solid:
-  title: Solid solid platonic
-  text: |
-    Un __Solid platonic__ este un poliedru în care fiecare față este un poligon regulat cu același
-    număr de margini și unde același număr de fețe se întâlnesc la fiecare vertex. Există doar cinci
-    solide platonice diferite: Tetraedrul, Cubul, Octaedrul, Dodecaedrul și Icozaedrul.
+  title: Corp platonic
+  text: "Un __corp platonic__ este un poliedru în care fiecare față este un poligon regulat
+    ce are același număr de muchii și în care în fiecare vârf se întâlnesc același
+    număr de fețe. Există doar cinci corpuri platonice diferite: tetraedru, cub, octaedru,
+    dodecaedru și icosaedru."
   link: /course/polyhedra/platonic
 
 point:
@@ -1142,25 +1167,28 @@ point:
     sau formă.
   link: /course/euclidean-geometry/definitions#points
 
+polygon-diagonal:
+  title: Diagonală
+  text: __Diagonala__ unui poligon este un segment de dreaptă care unește două vârfuri
+    care nu sunt alăturate.
+
 polygon:
   title: Poligon
-  text: |
-    Un __poligon__ este o formă geometrică care este alcătuită din segmente drepte. Poligonii nu pot
-    conține laturi curbate sau găuri. De exemplu, un pătrat este un poligon, dar un cerc nu.
+  text: Un __poligon__ este o formă geometrică alcătuită din segmente de linie drepte.
+    Poligoanele nu pot conține laturi curbe sau goluri. De exemplu, un pătrat este
+    un poligon, dar un cerc nu.
   image: polygon.svg
   link: /course/polyhedra/polygons#polygons
 
 polygon-diagonal:
   title: Diagonală
-  text: |
-    O __diagonală__ a unui poligon este un segment de linie care leagă două vârfuri care nu sunt
-    unul lângă altul.
+  text: __Diagonala__  unui poligon este un segment de dreaptă care unește două vârfuri
+    care nu sunt alăturate.
 
 polygon-edge:
-  title: Marginea unui poligon
-  text: |
-    __laturile__ sau __marginile__ ale unui poligon sunt segmentele de linie care formează conturul
-    său. De exemplu, un triunghi are trei laturi.
+  title: Latura unui poligon
+  text: __Laturile__ unui poligon sunt segmentele de dreaptă care îi formează conturul.
+    De exemplu, un triunghi are trei laturi.
 
 polygon-vertex:
   title: Vârful unui poligon
@@ -1239,6 +1267,33 @@ prime-factorisation:
     __factorizare primă__ a unui număr este o modalitate de a-l exprima ca produs al numerelor
     prime. De exemplu, factorizarea primă a 12 este `2 × 2 × 3`.
 
+polyhedron:
+  title: Poliedru
+  text: Un __poliedru__ (pluralul este _poliedre_) este un corp geometric tridimensional
+    ce nu are suprafețe sau muchii curbate. Toate fețele unui poliedru sunt poligoane.
+    De exemplu, un cub și o piramidă sunt poliedre, dar o sferă nu este.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Dualul unui poliedru
+  text: TODO
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: Muchia unui poliedru
+  text: __Muchiile__ unui poliedru sunt segmentele de dreaptă în care se unesc două fețe.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: Fața unui poliedru
+  text: __Fețele__ unui poliedru sunt poligoanele ce îi alcătuiesc suprafața.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Vârful unui poliedru
+  text: “Colțurile” unui poliedru se numesc __vârfuri__.
+  link: /course/polyhedra/polyhedra
+
 prism:
   title: Prisma
   text: |
@@ -1250,8 +1305,8 @@ prism:
 probability:
   title: Probabilitate
   text: |
-    O __probabilitate__ este un număr între 0 și 1 care indică probabilitatea apariției unui anumit
-    eveniment. Probabilitatea unui eveniment _A_ este scrisă ca `P(A)`.
+    O __probabilitate__ este un număr între 0 și 1 care indică șansa apariției unui anumit
+    eveniment. Probabilitatea unui eveniment _A_ se notează cu `P(A)`.
 
 probability-tree:
   title: Arborele Probabilității
@@ -1402,17 +1457,21 @@ reflectional-symmetry:
 
 regular-polygon:
   title: Poligon regulat
-  text: |
-    Un __poligon regulat__ este un poligon în care toate laturile au aceeași lungime și toate
-    unghiurile interioare au aceeași dimensiune.
+  text: Un __poligon regulat__ este un poligon în care toate laturile au aceeași lungime și toate unghiurile
+    interne au aceeași măsură.
   image: regular-polygon.svg
   link: /course/polyhedra/polygons#regular-polygons
 
+rigid-transformation:
+  title: Transformare Rigidă
+  text: O __transformare rigidă__ (sau __izometrie__) este o transformare geometrică
+    ce nu schimbă dimensiunea sau forma unei figuri geometrice.
+  link: /course/transformations/rigid
+
 rhombus:
   title: Romb
-  text: |
-    Un __rombo__ (pluralul este _rombo_ sau _rhombi_) este un patrulater în care toate părțile au
-    aceeași lungime.
+  text: Un __romb__ (pluralul este _romburi_) este patrulaterul care are toate laturile
+    de aceeași lungime.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 right-angle:
@@ -1421,12 +1480,12 @@ right-angle:
 
 right-triangle:
   title: Triunghi dreptunghic
-  text: 'Într-un __triunghi cu unghi drept__, un unghi interior este exact 90 °.'
+  text: Un __triunghi dreptunghic__ este un triunghi ce are un unghi intern cu măsura de 90 °.'
   image: right-triangle.svg
   link: /course/triangles/properties#classification
 
 rigid-transformation:
-  title: Transformare Rigidă
+  title: Transformare rigidă
   text: |
     O __transformare rigidă__ (sau __izometrie__) este o transformare geometrică ce nu schimbă
     dimensiunea sau forma unei figuri geometrice.
@@ -1653,8 +1712,9 @@ term:
     De exemplu, în expresia `2x^2 - 3ab + 4`, cei trei termeni sunt `2x^2`, `3ab` și 4.
 
 tessellation:
-  title: tessellation
-  text: O __tesselare__ este un model geometric care acoperă o suprafață fără goluri sau suprapuneri.
+  title: Mozaicare
+  text: O __mozaicare__ este unșablon geometric care acoperă o suprafață astfel încât
+    să nu existe goluri sau suprapuneri.
   link: /course/polyhedra/tessellations
 
 tetrahedral-numbers:
@@ -1665,10 +1725,9 @@ tetrahedral-numbers:
   link: /course/sequences/figurate#tetrahedral
 
 tetrahedron:
-  title: tetraedru
-  text: |
-    __Tetraedrul__ este un solid platonic și este format din patru fețe care sunt triunghiuri
-    echilaterale. Are patru vârfuri și șase margini.
+  title: Tetraedru
+  text: Un __tetaedru__ este un corp platonc alcătuit din patru fețe care sunt triunghiuri echilaterale.
+    El are patru vârfuri și șase muchii.
   link: /course/polyhedra/platonic#platonic-overview
 
 theorem:
@@ -1790,10 +1849,9 @@ trigonometry:
   link: /course/triangles/trigonometry
 
 truncated-icosahedron:
-  title: Icozaedru trunchiat
-  text: |
-    __Icozaedrul trunchiat__ este un solid _arhimedean_ format din 12 pentagoni obișnuiți și 20 de
-    hexagoni obișnuiți.
+  title: Icosaedru trunchiat
+  text: __Icosaedrul trunchiat__ este un _solid arhimedian_ alcătuit din 12 pentagoane
+    regulate și 20 de hexagoane regulate.
   link: /course/polyhedra/platonic#archimedean
 
 twin-primes:
@@ -1803,6 +1861,11 @@ twin-primes:
     află la o distanță de două unități. Nu se știe dacă există o infinitate de perechi de numere
     prime gemene.
   link: /course/divisibility/the-distribution-of-primes#twin-primes
+
+venn-diagram:
+  title: Diagramă Venn
+  text: O __diagramă Venn__ prezintă în mod vizual mai multe proprietăți sau evenimente care se suprapun.
+  image: venn.svg
 
 unit-circle:
   title: Cerc unitate
