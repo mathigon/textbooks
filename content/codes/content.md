@@ -340,33 +340,10 @@ With each finger that we add, our number of options multiplies by two.
 
     svg.bracket(width=600 height=320)
       - var textb = 4
-      g#b32
+      g#b1
         - var i = 0
-        while i < 32
-          line(x1=500 y1=10+i*10 x2=600 y2=10+i*10)
-          line(x1=500 y1=10+i*10+(i%2==0?5:-5) x2=500 y2=10+i*10)
-          text(x=550 y=10+i*10-1 font-size=12)= i%2
-          - i += 1
-      g#b16
-        - var i = 0
-        while i < 16
-          line(x1=400 y1=15+i*20 x2=500 y2=15+i*20)
-          line(x1=400 y1=15+i*20+(i%2==0?10:-10) x2=400 y2=15+i*20)
-          text(x=450 y=15+i*20-textb font-size=16)= i%2
-          - i += 1
-      g#b8
-        - var i = 0
-        while i < 8
-          line(x1=300 y1=25+i*40 x2=400 y2=25+i*40)
-          line(x1=300 y1=25+i*40+(i%2==0?20:-20) x2=300 y2=25+i*40)
-          text(x=350 y=25+i*40-textb font-size=20)= i%2
-          -i += 1
-      g#b4
-        - var i = 0
-        while i < 4
-          line(x1=200 y1=45+i*80 x2=300 y2=45+i*80)
-          line(x1=200 y1=45+i*80+(i%2==0?40:-40) x2=200 y2=45+i*80)
-          text(x=250 y=45+i*80-textb font-size=30)= i%2
+        while i < 1
+          line(x1=0 y1=165+i*320 x2=100 y2=165+i*320)
           -i += 1
       g#b2
         - var i = 0
@@ -375,11 +352,34 @@ With each finger that we add, our number of options multiplies by two.
           line(x1=100 y1=85+i*160+(i%2==0?80:-80) x2=100 y2=85+i*160)
           text(x=150 y=85+i*160-textb font-size=40)= i%2
           -i += 1
-      g#b1
+      g#b4
         - var i = 0
-        while i < 1
-          line(x1=0 y1=165+i*320 x2=100 y2=165+i*320)
+        while i < 4
+          line(x1=200 y1=45+i*80 x2=300 y2=45+i*80)
+          line(x1=200 y1=45+i*80+(i%2==0?40:-40) x2=200 y2=45+i*80)
+          text(x=250 y=45+i*80-textb font-size=30)= i%2
           -i += 1
+      g#b8
+        - var i = 0
+        while i < 8
+          line(x1=300 y1=25+i*40 x2=400 y2=25+i*40)
+          line(x1=300 y1=25+i*40+(i%2==0?20:-20) x2=300 y2=25+i*40)
+          text(x=350 y=25+i*40-textb font-size=20)= i%2
+          -i += 1
+      g#b16
+        - var i = 0
+        while i < 16
+          line(x1=400 y1=15+i*20 x2=500 y2=15+i*20)
+          line(x1=400 y1=15+i*20+(i%2==0?10:-10) x2=400 y2=15+i*20)
+          text(x=450 y=15+i*20-textb font-size=16)= i%2
+          - i += 1
+      g#b32
+        - var i = 0
+        while i < 32
+          line(x1=500 y1=10+i*10 x2=600 y2=10+i*10)
+          line(x1=500 y1=10+i*10+(i%2==0?5:-5) x2=500 y2=10+i*10)
+          text(x=550 y=10+i*10-1 font-size=12)= i%2
+          - i += 1
 
 
     x-slider.bracket(steps=6 speed=0.5)

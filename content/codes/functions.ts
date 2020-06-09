@@ -47,6 +47,8 @@ export function bracket($step: Step) {
 
     const $slider = $step.$('x-slider.bracket') as Slider;
     const $rounds = $step.$$('g');
+    // [b1, b2, b4, b8, b16, b32]
+    // [ 0,  1,  2,  3,   4,   5]
     const count = $rounds.length;
 
     function move(x: number) {
@@ -54,15 +56,19 @@ export function bracket($step: Step) {
         lastStep = x;
 
         for (let i=0; i < x; i++) {
-            $rounds[count - 1 - i].show();
+            $rounds[i].show();
         }
         for (let i = x + 1; i < count; i++) {
-            $rounds[count - 1 - i].hide();
+            $rounds[i].hide();
+        }
+
+        if (direction < 0 && x == 0) {
+            $rounds[0].hide();
         }
 
         if (x == 0) return;
         if (direction > 0) {
-            let $lines = $rounds[count - x].$$('line');
+            let $lines = $rounds[x-1].$$('line');
             $lines.forEach((l, i) => {
                 if (i % 2 == 0) {
                     l.animate({
@@ -78,7 +84,7 @@ export function bracket($step: Step) {
     }
 
     $slider.on('move', move);
-    move(lastStep);
+    move(-1);
 }
 
 
