@@ -28,11 +28,14 @@ function markdown() {
       .pipe(gulp.dest('server/assets/resources'));
 }
 
+const TSConfig = Object.assign({}, tsconfig.compilerOptions,
+    {include: ['../*.ts', '../**/*.ts']});
+
 function scripts() {
   return gulp.src(['content/*/*.ts', '!content/shared/**'])
       .pipe(rollup({
         plugins: [resolve({mainFields: ['main:ts', 'module', 'main']}),
-          typescript(tsconfig.compilerOptions)],
+          typescript(TSConfig)],
         onwarn(e) {
           if (e.code !== 'CIRCULAR_DEPENDENCY') console.warn(e.message);
         }
