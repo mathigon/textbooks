@@ -5,9 +5,9 @@
 absolute-value:absolute-value:
   title: Mütləq dəyər
   text: |
-    Ədədin __mütləq dəyəri__, nömrə xəttindəki 0-dan məsafəsidir. Bu mənfi ədədləri müsbət hala
-    gətirir, lakin müsbət ədədləri dəyişməz buraxır. `x` -in mütləq dəyəri `|x|` olaraq yazılmışdır.
-    Məsələn, `|-5| = 5` və `|3| = 3`.
+    Ədədin __mütləq dəyəri__ nömrəli xəttdəki məsafədir. Bu mənfi ədədləri müsbət hala gətirir, amma
+    müsbət ədədləri dəyişməz buraxır. `x` -in mütləq dəyəri `|x|` olaraq yazılmışdır. Məsələn, `|-5|
+    = 5` və `|3| = 3`.
 
 acute-angle:
   title: Kəskin bucaq
@@ -63,6 +63,15 @@ alternate-angles:
 
     Paralel xətlərin kənarında yatdıqları üçün 1 və 2 bucaq cütlərinə __alternativ xarici açılar__
     deyilir və 3 və 4 bucaq cütlərinə __alternativ daxili açılar__ deyilir.
+
+amino-acid:
+  title: Amin turşusu
+  text: |
+    __Amin turşuları__, __zülalları__ təşkil edən kiçik üzvi birləşmələrdir. Bunlar bütün canlı
+    orqanizmlərin əsas qurucu hissələridir.
+
+    Vücudumuzda amin turşuları qidaları parçalamaq, bədən toxumasını bərpa etmək, enerji saxlamaq və
+    bir çox digər funksiyalar üçün istifadə olunur.
 
 angle:
   title: Bucaq
@@ -932,6 +941,16 @@ molecule:
     Molekullara misal olaraq iki bağlı Oksigen atomundan və `H_2 O` iki Hidrogen atomundan və bir
     Oksigen atomundan ibarət olan `O_2` aiddir.
 
+morse-code:
+  title: Morse Kodu
+  text: |
+    __Morse kodu__, qısa və uzun siqnallardan (nöqtələr və tire adlanır) istifadə edərək məktub və
+    rəqəmləri təmsil etmək üçün bir yoldur. _Samuel Morse_ adını aldı və əvvəlcə teleqraflardan
+    istifadə edərək uzun məsafələrdə əlaqə qurmaq üçün istifadə edildi.
+
+    Məsələn, "L" hərfi qısa və uzun siqnalların _{x-morse(char="L")}_ ardıcıllığından istifadə
+    olunmaqla təmsil olunurdu.
+
 multiple:
   title: Çoxsaylı
   text: '_a_ bir sıra _b_ sayının __çox__, əgər _b_ _a_ amilidirsə.'
@@ -1448,6 +1467,13 @@ scientific-notation:
     formasındadır, burada _n_ tamdır və `1 ≤ a < 10`.
 
     Məsələn, 4600 sayı `4.6 × 10^3` olaraq yazıla bilər.
+
+set:
+  title: Dəstlər
+  text: |
+    A __dəsti__ əşyalar və ya əşyalar toplusudur (element adlanır). Hər element yalnız bir dəstdən
+    birini görə bilər. {} S istifadə edərək dəstlər yazırıq, məsələn, 2, 3 və 4 ədədləri olan bir
+    dəst {2, 3, 4} olaraq yazılırdı.
 
 sequence:
   title: Ardıcıllıq

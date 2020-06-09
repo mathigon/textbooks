@@ -830,14 +830,13 @@ hamilton:
     __William Rowan Hamilton__ (1805 - 1865) war ein irischer Mathematiker und Wunderkind. Er erfand
     _Quaternionen_, das erste Beispiel einer „nicht kommutativen Algebra“, die wichtige Anwendungen
     in Mathematik, Physik und Informatik hat.
-    
-    
-    Auf die Idee kam er zum ersten Mal bei einem Spaziergang entlang des Royal Canal in
-    Dublin, und ritzte die Grundformel in eine Steinbrücke ein, die er passierte:
-    `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
 
-    Hamilton leistete auch bedeutende Beiträge zur Physik, einschließlich der Optik
-    und Newtonschen Mechanik.
+    Auf die Idee kam er zum ersten Mal bei einem Spaziergang entlang des Royal Canal in Dublin, und
+    ritzte die Grundformel in eine Steinbrücke ein, die er passierte: `"i"^2 = "j"^2 = "k"^2 = "ijk"
+    = -1`.
+
+    Hamilton leistete auch bedeutende Beiträge zur Physik, einschließlich der Optik und Newtonschen
+    Mechanik.
 
 hardy:
   born: 1877
@@ -1230,6 +1229,23 @@ monsky:
     __Paul Monsky__ (* 1936) ist ein US-amerikanischer Mathematiker und Professor an der Brandeis
     University. Er bewies, dass ein Quadrat nicht in eine ungerade Anzahl gleichflächiger Dreiecke
     unterteilt werden kann - dies ist als "Monskys Theorem" bekannt.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) war ein amerikanischer Erfinder und Maler. Er wuchs in der Nähe
+    von Boston auf und studierte an der Yale University, bevor er eine Karriere als Künstler begann.
+
+    Auf seiner Rückreise von einer Reise nach Europa zum Kunststudium hörte Morse, wie Passagiere
+    über neue elektrische Geräte sprachen. Dies inspirierte ihn, mit nur einem Draht an einer
+    signifikanten Verbesserung des elektrischen Telegraphen zu arbeiten und mit seinem Assistenten
+    Alfred Vail _Morsecode_ zu entwickeln.
+
+    Nach anfänglichen Schwierigkeiten bei der Finanzierung verbreitete sich Morses Telegraph schnell
+    in den Vereinigten Staaten und auf der ganzen Welt.
+
+    Morse kandidierte auch zweimal für den Bürgermeister von New York City, aber seine Unterstützung
+    für die Sklaverei und gegen die Einwanderung bedeutete, dass er beide Male besiegt wurde.
 
 napier:
   born: 1550
@@ -1705,9 +1721,9 @@ thorp:
   name: Thorp
   bio: |
     __Edward Thorp__ (geb. 1932) ist ein US-amerikanischer Hedgefonds-Manager und Blackjack-Spieler,
-    der dafür bekannt ist, das _Kartenzählen_ erfunden und den ersten _Wearable Computer_
-    gebaut zu haben, um Casinos beim Roulette zu besiegen. Er arbeitete am MIT, ist Professor für
-    Mathematik und Pionier der modernen Anwendungen der Wahrscheinlichkeitstheorie.
+    der dafür bekannt ist, das _Kartenzählen_ erfunden und den ersten _Wearable Computer_ gebaut zu
+    haben, um Casinos beim Roulette zu besiegen. Er arbeitete am MIT, ist Professor für Mathematik
+    und Pionier der modernen Anwendungen der Wahrscheinlichkeitstheorie.
 
 turing:
   born: 1912

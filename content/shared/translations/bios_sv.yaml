@@ -1176,6 +1176,23 @@ monsky:
     Han bevisade att en kvadrat inte kan delas upp i ett udda antal trianglar med lika stor yta -
     detta kallas ”Monskys teorem”.
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) var en amerikansk uppfinnare och målare. Han växte upp nära
+    Boston och studerade vid Yale universitet innan han började en karriär som konstnär.
+
+    På sin återresa från en resa till Europa för att studera konst, hörde Morse passagerare prata om
+    nya elektriska apparater. Detta inspirerade honom att arbeta med en betydande förbättring av den
+    elektriska telegrafen, med bara en enda tråd och att utveckla _Morse-kod_ med sin assistent
+    Alfred Vail.
+
+    Efter några initiala svårigheter med att få finansiering spridde Morses telegraf snabbt över
+    hela USA och världen.
+
+    Morse sprang också två gånger för borgmästare i New York City, men hans stöd för slaveri och mot
+    invandring innebar att han besegrades båda gångerna.
+
 napier:
   born: 1550
   died: 1617

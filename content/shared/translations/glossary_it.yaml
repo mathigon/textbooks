@@ -50,9 +50,9 @@ algebraic-numbers:
 algorithm:
   title: Algoritmo
   text: |
-    Un algoritmoè un insieme di regole o istruzioni che possono essere utilizzate per
-    risolvere un problema specifico. Sono comunemente usati dai computer e appaiono ovunque in
-    matematica: da _lunga divisione_ a _eliminazione gaussiana_.
+    Un algoritmoè un insieme di regole o istruzioni che possono essere utilizzate per risolvere un
+    problema specifico. Sono comunemente usati dai computer e appaiono ovunque in matematica: da
+    _lunga divisione_ a _eliminazione gaussiana_.
 
 alternate-angles:
   title: Angoli alternati
@@ -65,6 +65,15 @@ alternate-angles:
     Le coppie di angoli 1 e 2 sono chiamate __angoli esterni alternati__, perché si trovano al di
     fuori delle linee parallele e le coppie di angoli 3 e 4 sono chiamate __angoli interni
     alternati__.
+
+amino-acid:
+  title: Amminoacido
+  text: |
+    __Gli aminoacidi__ sono minuscoli composti organici che compongono __proteine__. Sono alcuni dei
+    mattoni fondamentali di tutti gli organismi viventi.
+
+    Nel nostro corpo, gli aminoacidi sono usati per scomporre il cibo, riparare i tessuti del corpo,
+    immagazzinare energia e per molte altre funzioni.
 
 angle:
   title: Angolo
@@ -231,8 +240,8 @@ circle-area:
 circle-circumference:
   title: Circonferenza di un cerchio
   text: |
-    La circonferenzadi un cerchio è la distanza attorno al suo bordo esterno. Un cerchio con
-    raggio _r_ ha la circonferenza `C = 2 pi r`.
+    La circonferenzadi un cerchio è la distanza attorno al suo bordo esterno. Un cerchio con raggio
+    _r_ ha la circonferenza `C = 2 pi r`.
   link: /course/circles/introduction#radius
 
 circle-diameter:
@@ -245,8 +254,8 @@ circle-diameter:
 circle-radius:
   title: Raggio
   text: |
-    Il raggiodi un cerchio è la distanza (o un segmento di linea) tra il suo centro e
-    qualsiasi punto sulla sua circonferenza.
+    Il raggiodi un cerchio è la distanza (o un segmento di linea) tra il suo centro e qualsiasi
+    punto sulla sua circonferenza.
   link: /course/circles/introduction#radius
 
 circle-sector:
@@ -364,8 +373,8 @@ congruent-angles:
 conic-section:
   title: Sezione conica
   text: |
-    Una sezione conicaè una curva creata come intersezione della superficie di un cono con un
-    piano piatto. Esistono quattro diversi tipi di sezioni coniche, che condividono molte proprietà:
+    Una sezione conicaè una curva creata come intersezione della superficie di un cono con un piano
+    piatto. Esistono quattro diversi tipi di sezioni coniche, che condividono molte proprietà:
 
     * Cerchio
 
@@ -393,8 +402,8 @@ coordinate-system:
 coordinate-system-origin:
   title: Sistema di coordinate
   text: |
-    L'originedi un sistema di coordinate è il punto con coordinate (0, 0). Di solito è il
-    punto in cui i due assi si incrociano.
+    L'originedi un sistema di coordinate è il punto con coordinate (0, 0). Di solito è il punto in
+    cui i due assi si incrociano.
 
 corresponding-angles:
   title: Angoli corrispondenti
@@ -431,8 +440,8 @@ cryptography:
 cube:
   title: Cubo
   text: |
-    Un cubo(a volte chiamato __Hexahedron__) è un poliedro normale in cui ogni faccia è un
-    quadrato. È uno dei cinque _solidi platonici_ e ha 6 facce, 8 vertici e 12 spigoli.
+    Un cubo(a volte chiamato __Hexahedron__) è un poliedro normale in cui ogni faccia è un quadrato.
+    È uno dei cinque _solidi platonici_ e ha 6 facce, 8 vertici e 12 spigoli.
   link: /course/polyhedra/platonic#platonic-overview
 
 cube-volume:
@@ -467,14 +476,14 @@ degrees:
 denominator:
   title: Denominatore
   text: |
-    Il denominatoreè il numero inferiore in una frazione. Ad esempio, in `4/7`, il numero 7 è
-    il denominatore.
+    Il denominatoreè il numero inferiore in una frazione. Ad esempio, in `4/7`, il numero 7 è il
+    denominatore.
 
 dilation:
   title: dilatazione
   text: |
-    Una dilatazioneè una trasformazione che ridimensiona una forma geometrica, rendendola più
-    grande o più piccola.
+    Una dilatazioneè una trasformazione che ridimensiona una forma geometrica, rendendola più grande
+    o più piccola.
   image: dilation.svg
   link: /course/transformations/dilations
 
@@ -530,8 +539,8 @@ dot-machine:
 ellipse:
   title: Ellisse
   text: |
-    Un'ellisseè un percorso curvo che circonda due punti focali. Qualsiasi punto sulla
-    circonferenza dell'ellisse ha la stessa _somma delle distanze_ ai due fuochi.
+    Un'ellisseè un percorso curvo che circonda due punti focali. Qualsiasi punto sulla circonferenza
+    dell'ellisse ha la stessa _somma delle distanze_ ai due fuochi.
 
     Se i fuochi sono molto vicini, l'ellisse sembra quasi un cerchio. Mentre si allontanano
     ulteriormente, l'ellisse diventa più allungata.
@@ -543,8 +552,8 @@ ellipse:
 equation:
   title: Equazione
   text: |
-    Un'equazioneè un'istruzione matematica creata collegando due o più espressioni con il
-    segno __equals__ `=`. Indica che tutte queste espressioni hanno lo stesso valore.
+    Un'equazioneè un'istruzione matematica creata collegando due o più espressioni con il segno
+    __equals__ `=`. Indica che tutte queste espressioni hanno lo stesso valore.
 
 equilateral-triangle:
   title: Triangolo equilatero
@@ -636,8 +645,8 @@ fta:
 function:
   title: Funzione
   text: |
-    Una funzioneè una relazione matematica che converte un input (_x_) in esattamente un
-    output (_y_). Sono spesso espressi come equazioni matematiche della forma `f(x)`.
+    Una funzioneè una relazione matematica che converte un input (_x_) in esattamente un output
+    (_y_). Sono spesso espressi come equazioni matematiche della forma `f(x)`.
 
 function-graph:
   title: Grafici di funzioni
@@ -679,8 +688,8 @@ glide-reflection:
 golden-ratio:
   title: Rapporto aureo
   text: |
-    Il rapporto aureoè un numero irrazionale specifico con valore `φ = 1.61803398875…`. Può
-    essere approssimato dividendo due numeri consecutivi di Fibonacci.
+    Il rapporto aureoè un numero irrazionale specifico con valore `φ = 1.61803398875…`. Può essere
+    approssimato dividendo due numeri consecutivi di Fibonacci.
 
     Il rapporto aureo è spesso considerato particolarmente esteticamente piacevole nell'arte e
     nell'architettura e appare nelle spirali di molte piante.
@@ -731,9 +740,9 @@ group:
   text: |
     Un gruppo è una raccolta di "cose" (come numeri o simmetrie) che seguono tre diverse regole:
 
-    * Puoi aggiungere / combinare due cose, per ottenerne un'altra che sia anche nel gruppo.
-    * Le cose sono _associative_, il che significa che `a+(b+c) + (a+b)+c`.
-    * C'è un'identità __ e ogni "cosa" ha un _inverso_ che, quando aggiunto, fornisce l'identità.
+    * Puoi aggiungere / combinare due cose, per ottenerne un'altra che sia anche nel gruppo. * Le
+    cose sono _associative_, il che significa che `a+(b+c) + (a+b)+c`. * C'è un'identità __ e ogni
+    "cosa" ha un _inverso_ che, quando aggiunto, fornisce l'identità.
   link: /course/transformations/symmetry-groups#groups-1
 
 hailstone-sequence:
@@ -758,8 +767,8 @@ hexagon:
 hyperbola:
   title: Iperbole
   text: |
-    Un'iperboleè la forma del grafico della funzione `y = 1/x`. Consiste di due parti
-    disgiunte, entrambe con approccio _asintoti_. È anche una sezione conica __.
+    Un'iperboleè la forma del grafico della funzione `y = 1/x`. Consiste di due parti disgiunte,
+    entrambe con approccio _asintoti_. È anche una sezione conica __.
   image: hyperbola.svg
 
 hypotenuse:
@@ -843,8 +852,7 @@ julia-set:
 kite:
   title: Aquilone
   text: |
-    Un aquiloneè un quadrilatero in cui due coppie di lati adiacenti hanno la stessa
-    lunghezza.
+    Un aquiloneè un quadrilatero in cui due coppie di lati adiacenti hanno la stessa lunghezza.
   link: /course/polyhedra/quadrilaterals#kites
 
 koch-snowflake:
@@ -893,16 +901,15 @@ line-slope:
 linear-equation:
   title: Equazione lineare
   text: |
-    Un'equazione lineareha la forma `ax + b = 0`, dove _x_ è una variabile e _a_ e _b_ sono
-    numeri. Se rappresentati in un sistema di coordinate, i valori di `ax+b` formano una linea
-    retta.
+    Un'equazione lineareha la forma `ax + b = 0`, dove _x_ è una variabile e _a_ e _b_ sono numeri.
+    Se rappresentati in un sistema di coordinate, i valori di `ax+b` formano una linea retta.
 
 linear-function:
   title: Funzione lineare
   text: |
-    Una funzione lineareè una funzione il cui grafico è una linea retta. Può essere definito
-    come `f(x) = mx + c`, dove _m_ è la pendenza della linea e _c_ è la sua intercettazione
-    dell'asse _y_.
+    Una funzione lineareè una funzione il cui grafico è una linea retta. Può essere definito come
+    `f(x) = mx + c`, dove _m_ è la pendenza della linea e _c_ è la sua intercettazione dell'asse
+    _y_.
 
 mandelbrot-set:
   title: Set di Mandelbrot
@@ -967,6 +974,16 @@ molecule:
 
     Esempi di molecole includono `O_2`, che consiste di due atomi di ossigeno collegati e `H_2 O`,
     che consiste di due atomi di idrogeno e un atomo di ossigeno.
+
+morse-code:
+  title: Codice Morse
+  text: |
+    __Il codice Morse__ è un modo per rappresentare lettere e numeri usando segnali brevi e lunghi
+    (chiamati punti e trattini). Prende il nome da _Samuel Morse_ ed è stato inizialmente utilizzato
+    per comunicare su lunghe distanze usando i telegrafi.
+
+    Ad esempio, la lettera "L" sarebbe rappresentata usando la sequenza _{x-morse(char="L")}_ di
+    segnali brevi e lunghi.
 
 multiple:
   title: multiplo
@@ -1132,8 +1149,8 @@ perpendicular:
 perpendicular-bisector:
   title: Bisettrice perpendicolare
   text: |
-    La bisettricedi un segmento di linea passa attraverso il suo punto medio e lo interseca
-    con un angolo di 90 °.
+    La bisettricedi un segmento di linea passa attraverso il suo punto medio e lo interseca con un
+    angolo di 90 °.
   image: perpendicular-bisector.svg
 
 pi:
@@ -1169,8 +1186,8 @@ polygon:
 polygon-diagonal:
   title: Diagonale
   text: |
-    Una diagonaledi un poligono è un segmento di linea che collega due vertici che non si
-    trovano uno accanto all'altro.
+    Una diagonaledi un poligono è un segmento di linea che collega due vertici che non si trovano
+    uno accanto all'altro.
 
 polygon-edge:
   title: Bordo di un poligono
@@ -1217,9 +1234,8 @@ polynomial:
   text: |
     Un __polinomio__ è un'espressione algebrica che consiste di costanti e multipli di variabili
     elevate a potenze intere. Ad esempio, `5x^3 - 2y^2 + x + 4` è un polinomio. La forma più
-    generale di un polinomio con una sola variabile è
-    `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, dove `a_n`, `a_(n-1)`, ..., `a_0`
-    sono tutte costanti specifiche.
+    generale di un polinomio con una sola variabile è `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1
+    x + a_0`, dove `a_n`, `a_(n-1)`, ..., `a_0` sono tutte costanti specifiche.
 
 polynomial-degree:
   title: Grado
@@ -1263,8 +1279,8 @@ prism:
 probability:
   title: Probabilità
   text: |
-    Una probabilitàè un numero compreso tra 0 e 1 che indica la probabilità che si verifichi
-    un determinato evento. La probabilità di un evento _A_ è scritta come `P(A)`.
+    Una probabilitàè un numero compreso tra 0 e 1 che indica la probabilità che si verifichi un
+    determinato evento. La probabilità di un evento _A_ è scritta come `P(A)`.
 
 probability-tree:
   title: Albero delle probabilità
@@ -1327,9 +1343,9 @@ quadratic:
 quadratic-equation:
   title: Equazione quadrata
   text: |
-    Un'equazione quadraticaè un'equazione che contiene una singola variabile di grado 2. È
-    spesso scritta come `ax^2 + bx + c = 0`, dove _x_ è una variabile, _a_, _b_ e _c_ sono numeri e
-    `a != 0`.
+    Un'equazione quadraticaè un'equazione che contiene una singola variabile di grado 2. È spesso
+    scritta come `ax^2 + bx + c = 0`, dove _x_ è una variabile, _a_, _b_ e _c_ sono numeri e `a !=
+    0`.
 
 quadratic-formula:
   title: Formula quadratica
@@ -1342,8 +1358,8 @@ quadratic-formula:
 quadratic-function:
   title: Funzione quadratica
   text: |
-    Una funzione quadraticaè una funzione della forma `f(x) = ax^2+bx+c`, dove _a_, _b_ e _c_
-    sono numeri e `a != 0`. Il grafico di una funzione quadratica è una curva a forma di U chiamata
+    Una funzione quadraticaè una funzione della forma `f(x) = ax^2+bx+c`, dove _a_, _b_ e _c_ sono
+    numeri e `a != 0`. Il grafico di una funzione quadratica è una curva a forma di U chiamata
     __parabola__.
 
 quadratic-function-vertex-form:
@@ -1510,6 +1526,13 @@ scientific-notation:
 
     Ad esempio, il numero 4600 potrebbe essere scritto come `4.6 × 10^3`.
 
+set:
+  title: Imposta
+  text: |
+    Un __set__ è una raccolta di cose o oggetti (chiamati elementi). Ogni elemento può apparire solo
+    uno in un set. Scriviamo set usando {} s, ad esempio, un set contenente i numeri 2, 3 e 4
+    verrebbe scritto come {2, 3, 4}.
+
 sequence:
   title: Sequenza
   text: |
@@ -1590,8 +1613,8 @@ sphere:
 sphere-radius:
   title: Raggio di una sfera
   text: |
-    Il raggiodi una sfera è la distanza (o un segmento di linea) tra il suo centro e qualsiasi
-    punto sulla sua superficie.
+    Il raggiodi una sfera è la distanza (o un segmento di linea) tra il suo centro e qualsiasi punto
+    sulla sua superficie.
 
 square:
   title: Piazza
@@ -1665,8 +1688,8 @@ tangent:
 term:
   title: Termine (Algebra)
   text: |
-    I terminisono le parti di un'espressione o equazione algebrica separate da segni + o -.
-    Possono essere prodotti o frazioni o uno o più numeri, variabili o funzioni.
+    I terminisono le parti di un'espressione o equazione algebrica separate da segni + o -. Possono
+    essere prodotti o frazioni o uno o più numeri, variabili o funzioni.
 
     Ad esempio, nell'espressione `2x^2 - 3ab + 4`, i tre termini sono `2x^2`, `3ab` e 4.
 
@@ -1694,9 +1717,9 @@ tetrahedron:
 theorem:
   title: Teorema
   text: |
-    Un teoremaè un risultato o un'osservazione particolarmente importante in matematica. È
-    stato dimostrato che è sempre vero, usando gli assiomi, la logica delle regole e i teoremi
-    precedenti che erano già noti per essere veri.
+    Un teoremaè un risultato o un'osservazione particolarmente importante in matematica. È stato
+    dimostrato che è sempre vero, usando gli assiomi, la logica delle regole e i teoremi precedenti
+    che erano già noti per essere veri.
 
 transformation:
   title: Trasformazione
@@ -1765,9 +1788,9 @@ triangle-legs:
 triangle-inequality:
   title: Disuguaglianza del triangolo
   text: |
-    La disuguaglianza del triangoloafferma che la somma delle lunghezze di due lati qualsiasi
-    di un triangolo è maggiore della lunghezza del terzo lato. Ciò significa anche che la distanza
-    più breve tra due punti qualsiasi è una linea retta (perché passare attraverso un terzo punto è
+    La disuguaglianza del triangoloafferma che la somma delle lunghezze di due lati qualsiasi di un
+    triangolo è maggiore della lunghezza del terzo lato. Ciò significa anche che la distanza più
+    breve tra due punti qualsiasi è una linea retta (perché passare attraverso un terzo punto è
     sempre più lungo).
 
 triangle-median:

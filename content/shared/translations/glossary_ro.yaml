@@ -3,11 +3,11 @@
 # ==============================================================================
 
 absolute-value:absolute-value:
-  title: Valoarea Absolută
+  title: Valoare absolută
   text: |
-    __Valoarea absolută__ a unui numar este distanța dintre acesta și 0. Numerele negative devin
-    pozitive, iar numerele pozitive rămân neschimbate. Valoarea absolută a lui `x` se notează `|x|`.
-    De exemplu, `|-5| = 5` și `|3| = 3`.
+    Valoarea __absolută__ a unui număr este distanța sa de la 0 pe linia numerică. Face numere
+    negative pozitive, dar lasă numerele pozitive neschimbate. Valoarea absolută a `x` este scrisă
+    ca `|x|`. De exemplu, `|-5| = 5` și `|3| = 3`.
 
 acute-angle:
   title: Unghi ascuțit
@@ -68,6 +68,15 @@ alternate-angles:
     de dinafară a dreptelor parelele, iar perechile de unghiuri 3 și 4 se numesc __unghiuri alterne
     interioare__.
 
+amino-acid:
+  title: Amino acid
+  text: |
+    __Aminoacizii__ sunt compuși organici minusculi care alcătuiesc __proteine__. Ele sunt câteva
+    dintre elementele cheie ale tuturor organismelor vii.
+
+    În corpul nostru, aminoacizii sunt folosiți pentru a descompune alimentele, pentru a repara
+    țesuturile corpului, pentru a păstra energia și pentru multe alte funcții.
+
 angle:
   title: Unghi
   text: |
@@ -101,12 +110,6 @@ arabic-numerals:
     Acest sistem a fost dezvoltat pentru prima oară în India, iar apoi a fost adaptat de
     matematicienii arabi înainte de a fi introdus In Europa de către matematicianul italian Leonardo
     Fibonacci.
-
-archimedean-solid:
-  title: Solid arhimedian
-  text: Un__solid arhimedian__ este un poliedru alcătuit din tipuri diferite de poligoane regulate
-    care arată la fel din orice direcție. Există 13 solide arhimediene diferite.
-  link: /course/polyhedra/platonic#archimedean
 
 arccos:
   title: Arccosinus
@@ -165,8 +168,8 @@ axiom:
 axis-of-symmetry:
   title: Axa de simetrie
   text: |
-    Dacă o formă are simetrie reflexivă, __axa de simetrie__ este dreapta care
-    o împarte în două jumătăți egale.
+    Dacă o formă are simetrie reflexivă, __axa de simetrie__ este dreapta care o împarte în două
+    jumătăți egale.
   image: reflectional-symmetry.svg
   link: /course/transformations/symmetry#reflectional-symmetry
 
@@ -328,19 +331,12 @@ composite-number:
     decât 1 și în sine.
 
 concave:
-  title: Poligonul concave
-  text: |
-    Un poligon __concave__ are cel puțin un unghi intern mai mare de 180 °. Cel puțin una dintre
-    diagonale se află _în afara_ poligonului. Un mod obișnuit de a identifica un poligon concave
-    este de a căuta o latură „ascunsă” a poligonului. _Concave_ este opusul _convexe_ poligoane.
-  link: /course/polyhedra/polygons#concave
-
-concave:
   title: Poligon concav
-  text: Un poligon __concav__ are cel puțin un unghi intern cu măsura mai mare ca 180°.
-    Cel puțin una din diagonale se află _în exteriorul_ poligonului. O metodă comună
-    de identificare a unui poligon concav este de a căuta o latură “săpată în interior”.
-    Poligoanele _concave_ sunt opusul poligoanelor _convexe_.
+  text: |
+    Un poligon __concav__ are cel puțin un unghi intern cu măsura mai mare ca 180°. Cel puțin una
+    din diagonale se află _în exteriorul_ poligonului. O metodă comună de identificare a unui
+    poligon concav este de a căuta o latură “săpată în interior”. Poligoanele _concave_ sunt opusul
+    poligoanelor _convexe_.
   link: /course/polyhedra/polygons#concave
 
 cone:
@@ -394,15 +390,15 @@ convex:
 coordinate-system:
   title: Sistem de coordonate
   text: |
-    Un sistem coordonateste un plan bidimensional care conține două axe perpendiculare.
-    Fiecare punct al planului poate fi definit folosind două numere (coordonate), care specifică
-    distanța sa față de cele două axe.
+    Un sistem coordonateste un plan bidimensional care conține două axe perpendiculare. Fiecare
+    punct al planului poate fi definit folosind două numere (coordonate), care specifică distanța sa
+    față de cele două axe.
 
 coordinate-system-origin:
   title: Sistem de coordonate
   text: |
-    Origineaa unui sistem de coordonate este punctul cu coordonate (0, 0). De obicei este
-    punctul în care se traversează cele două axe.
+    Origineaa unui sistem de coordonate este punctul cu coordonate (0, 0). De obicei este punctul în
+    care se traversează cele două axe.
 
 corresponding-angles:
   title: Unghiuri corespunzătoare
@@ -432,7 +428,9 @@ cross-section:
 
 cryptography:
   title: Criptografie
-  text: __Criptografia__ este ramura matematicii care studiază cifrarea și descifrarea mesajelor secrete.
+  text: |
+    __Criptografia__ este ramura matematicii care studiază cifrarea și descifrarea mesajelor
+    secrete.
 
 cube:
   title: cub
@@ -473,8 +471,7 @@ degrees:
 denominator:
   title: Numitor
   text: |
-    Numitoruleste numărul de jos dintr-o fracțiune. De exemplu, în `4/7`, numărul 7 este
-    numitorul.
+    Numitoruleste numărul de jos dintr-o fracțiune. De exemplu, în `4/7`, numărul 7 este numitorul.
 
 dilation:
   title: Scalare
@@ -549,8 +546,8 @@ ellipse:
 equation:
   title: Ecuaţie
   text: |
-    O ecuațieeste o afirmație matematică creată prin conectarea a două sau mai multe expresii
-    cu semnul __egal cu__ `=`. Acesta indică faptul că toate aceste expresii au aceeași valoare.
+    O ecuațieeste o afirmație matematică creată prin conectarea a două sau mai multe expresii cu
+    semnul __egal cu__ `=`. Acesta indică faptul că toate aceste expresii au aceeași valoare.
 
 equilateral-triangle:
   title: Triunghi echilateral
@@ -568,8 +565,8 @@ euclidean-geometry:
 factor:
   title: Factor
   text: |
-    Un număr _a_ este un factor(sau __divizor__) al unui număr _b_, dacă puteți împărți _b_
-    până la _a_ fără rest.
+    Un număr _a_ este un factor(sau __divizor__) al unui număr _b_, dacă puteți împărți _b_ până la
+    _a_ fără rest.
   link: /course/divisibility/factors-and-multiples
 
 factorial:
@@ -621,8 +618,8 @@ figurate-numbers:
 formula:
   title: Formulă
   text: |
-    O formulăeste o regulă sau o ecuație care descrie relația dintre două sau mai multe
-    variabile. Un exemplu este `A = πr^2`.
+    O formulăeste o regulă sau o ecuație care descrie relația dintre două sau mai multe variabile.
+    Un exemplu este `A = πr^2`.
 
 fractal:
   title: fractal
@@ -812,12 +809,6 @@ integer:
     Numerele întregi __sunt numerele întregi pozitive și negative, inclusiv zero:…, –3, –2, –1, 0,
     1, 2, 3,…. Acestea sunt adesea notate folosind simbolul `ZZ`.
 
-icosahedron:
-  title: Icosaedru
-  text: __Icosaedrul__ este un corp platonic alcătuit din 20 de fețe care sunt
-    triunghiuri echilaterale. El are 12 vârfuri și 30 de muchii.
-  link: /course/polyhedra/platonic#platonic-overview
-
 internal-angle:
   title: Unghiuri interne
   text: __Unghiurile interne__ ale unui poligon sunt unghiurile din interior aflate la fiecare vârf.
@@ -836,11 +827,6 @@ irregular-polygon:
   text: |
     Un __poligon neregulat__ este unul care _nu este regulat_. Aceasta înseamnă că fie laturile, cât
     și unghiurile nu au toate aceeași dimensiune.
-
-irregular-polygon:
-  title: Poligon neregulat
-  text: Un __poligon neregulat__ este un poligon care _nu este regulat_. Aceasta înseamnă că
-    fie laturile, fie unghiurile nu au acceași mărime.
 
 isosceles-triangle:
   title: Triunghi isoscel
@@ -967,8 +953,8 @@ millennium-prize:
 mode:
   title: mod
   text: |
-    Modulal unui set de numere este numărul care apare cel mai des. De exemplu, modul de [3,
-    4, 4, 4, 5, 5, 6] este 5.
+    Modulal unui set de numere este numărul care apare cel mai des. De exemplu, modul de [3, 4, 4,
+    4, 5, 5, 6] este 5.
 
 molecule:
   title: Moleculă
@@ -978,6 +964,16 @@ molecule:
 
     Exemplele de molecule includ `O_2`, ce este formată din doi atomi de oxigen legați și `H_2 O`,
     ce este formată din doi atomi de hidrogen și unul de oxigen.
+
+morse-code:
+  title: Codul Morse
+  text: |
+    __Codul Morse__ este o modalitate de a reprezenta litere și numere folosind semnale scurte și
+    lungi (numite puncte și liniuțe). Se numește după _Samuel Morse_ și a fost inițial folosit
+    pentru a comunica pe distanțe lungi folosind telegrafele.
+
+    De exemplu, litera „L” va fi reprezentată folosind secvența _{x-morse(char="L")}_ de semnale
+    scurte și lungi.
 
 multiple:
   title: Multiplu
@@ -1046,8 +1042,8 @@ order-of-symmetry:
 origin:
   title: Origine
   text: |
-    Origineaa unui sistem de coordonate este punctul (0, 0), unde intersectează _x_ -axis și
-    _y_ -axis.
+    Origineaa unui sistem de coordonate este punctul (0, 0), unde intersectează _x_ -axis și _y_
+    -axis.
 
 origin-number-line:
   title: Originea unei linii numerice
@@ -1084,8 +1080,8 @@ parabola-focus:
 parabola-vertex:
   title: Vertexul unei parabole
   text: |
-    Vârfulal unei parabole este punctul în care își schimbă direcția. Este fie maximul, fie
-    minimul funcției patratice corespunzătoare și se află pe axa de simetrie a parabolei.
+    Vârfulal unei parabole este punctul în care își schimbă direcția. Este fie maximul, fie minimul
+    funcției patratice corespunzătoare și se află pe axa de simetrie a parabolei.
 
 parallel:
   title: Drepte paralele
@@ -1154,10 +1150,10 @@ pi:
 
 platonic-solid:
   title: Corp platonic
-  text: "Un __corp platonic__ este un poliedru în care fiecare față este un poligon regulat
-    ce are același număr de muchii și în care în fiecare vârf se întâlnesc același
-    număr de fețe. Există doar cinci corpuri platonice diferite: tetraedru, cub, octaedru,
-    dodecaedru și icosaedru."
+  text: |
+    Un __corp platonic__ este un poliedru în care fiecare față este un poligon regulat ce are
+    același număr de muchii și în care în fiecare vârf se întâlnesc același număr de fețe. Există
+    doar cinci corpuri platonice diferite: tetraedru, cub, octaedru, dodecaedru și icosaedru.
   link: /course/polyhedra/platonic
 
 point:
@@ -1167,28 +1163,25 @@ point:
     sau formă.
   link: /course/euclidean-geometry/definitions#points
 
-polygon-diagonal:
-  title: Diagonală
-  text: __Diagonala__ unui poligon este un segment de dreaptă care unește două vârfuri
-    care nu sunt alăturate.
-
 polygon:
   title: Poligon
-  text: Un __poligon__ este o formă geometrică alcătuită din segmente de linie drepte.
-    Poligoanele nu pot conține laturi curbe sau goluri. De exemplu, un pătrat este
-    un poligon, dar un cerc nu.
+  text: |
+    Un __poligon__ este o formă geometrică alcătuită din segmente de linie drepte. Poligoanele nu
+    pot conține laturi curbe sau goluri. De exemplu, un pătrat este un poligon, dar un cerc nu.
   image: polygon.svg
   link: /course/polyhedra/polygons#polygons
 
 polygon-diagonal:
   title: Diagonală
-  text: __Diagonala__  unui poligon este un segment de dreaptă care unește două vârfuri
-    care nu sunt alăturate.
+  text: |
+    __Diagonala__ unui poligon este un segment de dreaptă care unește două vârfuri care nu sunt
+    alăturate.
 
 polygon-edge:
   title: Latura unui poligon
-  text: __Laturile__ unui poligon sunt segmentele de dreaptă care îi formează conturul.
-    De exemplu, un triunghi are trei laturi.
+  text: |
+    __Laturile__ unui poligon sunt segmentele de dreaptă care îi formează conturul. De exemplu, un
+    triunghi are trei laturi.
 
 polygon-vertex:
   title: Vârful unui poligon
@@ -1229,11 +1222,10 @@ polyhedron-vertex:
 polynomial:
   title: polinom
   text: |
-    Un polinomeste o expresie algebrică care constă din constante și multipli de variabile
-    ridicate la puteri întregi. De exemplu, `5x^3 - 2y^2 + x + 4` este un polinom. Cea mai generală
-    formă a unui polinom cu o singură variabilă este
-    `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, unde `a_n`, `a_(n-1)`, ..., `a_0` sunt
-    toate constante specifice.
+    Un polinomeste o expresie algebrică care constă din constante și multipli de variabile ridicate
+    la puteri întregi. De exemplu, `5x^3 - 2y^2 + x + 4` este un polinom. Cea mai generală formă a
+    unui polinom cu o singură variabilă este `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x +
+    a_0`, unde `a_n`, `a_(n-1)`, ..., `a_0` sunt toate constante specifice.
 
 polynomial-degree:
   title: grad
@@ -1267,33 +1259,6 @@ prime-factorisation:
     __factorizare primă__ a unui număr este o modalitate de a-l exprima ca produs al numerelor
     prime. De exemplu, factorizarea primă a 12 este `2 × 2 × 3`.
 
-polyhedron:
-  title: Poliedru
-  text: Un __poliedru__ (pluralul este _poliedre_) este un corp geometric tridimensional
-    ce nu are suprafețe sau muchii curbate. Toate fețele unui poliedru sunt poligoane.
-    De exemplu, un cub și o piramidă sunt poliedre, dar o sferă nu este.
-  link: /course/polyhedra/polyhedra
-
-polyhedron-dual:
-  title: Dualul unui poliedru
-  text: TODO
-  link: /course/polyhedra/platonic#platonic-dual
-
-polyhedron-edge:
-  title: Muchia unui poliedru
-  text: __Muchiile__ unui poliedru sunt segmentele de dreaptă în care se unesc două fețe.
-  link: /course/polyhedra/polyhedra
-
-polyhedron-face:
-  title: Fața unui poliedru
-  text: __Fețele__ unui poliedru sunt poligoanele ce îi alcătuiesc suprafața.
-  link: /course/polyhedra/polyhedra
-
-polyhedron-vertex:
-  title: Vârful unui poliedru
-  text: “Colțurile” unui poliedru se numesc __vârfuri__.
-  link: /course/polyhedra/polyhedra
-
 prism:
   title: Prisma
   text: |
@@ -1311,8 +1276,8 @@ probability:
 probability-tree:
   title: Arborele Probabilității
   text: |
-    O arbore de probabilitateeste o diagramă arbore reprezentând probabilitatea combinată a
-    mai multor evenimente secvențiale.
+    O arbore de probabilitateeste o diagramă arbore reprezentând probabilitatea combinată a mai
+    multor evenimente secvențiale.
 
 proof:
   title: Demonstrație
@@ -1330,9 +1295,8 @@ protein:
 proton:
   title: Proton
   text: |
-    Un protoneste una dintre particulele care alcătuiesc miezul unui atom. Are o taxă de +1.
-    Numărul protonilor dintr-un atom se numește „numărul atomic” și determină ce fel de element
-    este.
+    Un protoneste una dintre particulele care alcătuiesc miezul unui atom. Are o taxă de +1. Numărul
+    protonilor dintr-un atom se numește „numărul atomic” și determină ce fel de element este.
 
 pyramid:
   title: Piramidă
@@ -1457,21 +1421,17 @@ reflectional-symmetry:
 
 regular-polygon:
   title: Poligon regulat
-  text: Un __poligon regulat__ este un poligon în care toate laturile au aceeași lungime și toate unghiurile
-    interne au aceeași măsură.
+  text: |
+    Un __poligon regulat__ este un poligon în care toate laturile au aceeași lungime și toate
+    unghiurile interne au aceeași măsură.
   image: regular-polygon.svg
   link: /course/polyhedra/polygons#regular-polygons
 
-rigid-transformation:
-  title: Transformare Rigidă
-  text: O __transformare rigidă__ (sau __izometrie__) este o transformare geometrică
-    ce nu schimbă dimensiunea sau forma unei figuri geometrice.
-  link: /course/transformations/rigid
-
 rhombus:
   title: Romb
-  text: Un __romb__ (pluralul este _romburi_) este patrulaterul care are toate laturile
-    de aceeași lungime.
+  text: |
+    Un __romb__ (pluralul este _romburi_) este patrulaterul care are toate laturile de aceeași
+    lungime.
   link: /course/polyhedra/quadrilaterals#quadrilaterals-1
 
 right-angle:
@@ -1485,7 +1445,7 @@ right-triangle:
   link: /course/triangles/properties#classification
 
 rigid-transformation:
-  title: Transformare rigidă
+  title: Transformare Rigidă
   text: |
     O __transformare rigidă__ (sau __izometrie__) este o transformare geometrică ce nu schimbă
     dimensiunea sau forma unei figuri geometrice.
@@ -1552,11 +1512,18 @@ scientific-notation:
 
     De exemplu, numărul 4600 poate fi scris ca `4.6 × 10^3`.
 
+set:
+  title: seturi
+  text: |
+    Un __set__ este o colecție de lucruri sau obiecte (numite elemente). Fiecare element poate
+    apărea doar unul dintr-un set. Scriem seturi folosind {} s, de exemplu, un set care conține
+    numerele 2, 3 și 4 ar fi scris ca {2, 3, 4}.
+
 sequence:
   title: Secvenţă
   text: |
-    O secvențăeste o listă ordonată de numere (sau alte elemente precum obiecte geometrice),
-    care urmează adesea un anumit tipar sau funcție. Secvențele pot fi atât finite, cât și infinite.
+    O secvențăeste o listă ordonată de numere (sau alte elemente precum obiecte geometrice), care
+    urmează adesea un anumit tipar sau funcție. Secvențele pot fi atât finite, cât și infinite.
   link: /course/sequences/introduction#simple-patterns
 
 sequence-convergence:
@@ -1629,8 +1596,8 @@ sphere:
 sphere-radius:
   title: Raza unei sfere
   text: |
-    Razaa unei sfere este distanța (sau un segment de linie) între centrul ei și orice punct
-    de pe suprafața sa.
+    Razaa unei sfere este distanța (sau un segment de linie) între centrul ei și orice punct de pe
+    suprafața sa.
 
 square:
   title: Pătrat
@@ -1706,15 +1673,16 @@ tangent:
 term:
   title: Termen (Algebra)
   text: |
-    Termeniisunt părțile unei expresii sau ecuații algebrice care sunt separate prin semne +
-    sau -. Ele pot fi produse sau fracții sau unul sau mai multe numere, variabile sau funcții.
+    Termeniisunt părțile unei expresii sau ecuații algebrice care sunt separate prin semne + sau -.
+    Ele pot fi produse sau fracții sau unul sau mai multe numere, variabile sau funcții.
 
     De exemplu, în expresia `2x^2 - 3ab + 4`, cei trei termeni sunt `2x^2`, `3ab` și 4.
 
 tessellation:
   title: Mozaicare
-  text: O __mozaicare__ este unșablon geometric care acoperă o suprafață astfel încât
-    să nu existe goluri sau suprapuneri.
+  text: |
+    O __mozaicare__ este unșablon geometric care acoperă o suprafață astfel încât să nu existe
+    goluri sau suprapuneri.
   link: /course/polyhedra/tessellations
 
 tetrahedral-numbers:
@@ -1726,7 +1694,8 @@ tetrahedral-numbers:
 
 tetrahedron:
   title: Tetraedru
-  text: Un __tetaedru__ este un corp platonc alcătuit din patru fețe care sunt triunghiuri echilaterale.
+  text: |
+    Un __tetaedru__ este un corp platonc alcătuit din patru fețe care sunt triunghiuri echilaterale.
     El are patru vârfuri și șase muchii.
   link: /course/polyhedra/platonic#platonic-overview
 
@@ -1850,8 +1819,9 @@ trigonometry:
 
 truncated-icosahedron:
   title: Icosaedru trunchiat
-  text: __Icosaedrul trunchiat__ este un _solid arhimedian_ alcătuit din 12 pentagoane
-    regulate și 20 de hexagoane regulate.
+  text: |
+    __Icosaedrul trunchiat__ este un _solid arhimedian_ alcătuit din 12 pentagoane regulate și 20 de
+    hexagoane regulate.
   link: /course/polyhedra/platonic#archimedean
 
 twin-primes:
@@ -1861,11 +1831,6 @@ twin-primes:
     află la o distanță de două unități. Nu se știe dacă există o infinitate de perechi de numere
     prime gemene.
   link: /course/divisibility/the-distribution-of-primes#twin-primes
-
-venn-diagram:
-  title: Diagramă Venn
-  text: O __diagramă Venn__ prezintă în mod vizual mai multe proprietăți sau evenimente care se suprapun.
-  image: venn.svg
 
 unit-circle:
   title: Cerc unitate
@@ -1878,8 +1843,10 @@ variable:
     algebrică, este de obicei reprezentată printr-o literă ca _x_.
 
 venn-diagram:
-  title: diagrama Venn
-  text: O __diagrama Venn__ vizualizează mai multe proprietăți sau evenimente care se suprapun.
+  title: Diagramă Venn
+  text: |
+    O __diagramă Venn__ prezintă în mod vizual mai multe proprietăți sau evenimente care se
+    suprapun.
   image: venn.svg
 
 vertical-angles:

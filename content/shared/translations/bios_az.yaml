@@ -1159,6 +1159,23 @@ monsky:
     professorudur. O, bir kvadratın bərabər sahəli üçbucaqlara bölünməyəcəyini sübut etdi - bu
     "Monski teoremi" kimi tanınır.
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) amerikalı ixtiraçı və rəssam idi. Boston yaxınlığında böyüdü və
+    sənətçi karyerasına başlamazdan əvvəl Yale universitetində oxudu.
+
+    Sənət öyrənmək üçün Avropaya səyahətdən qayıdarkən Morse yeni elektrik cihazları haqqında
+    danışan sərnişinləri eşitdi. Bu, onu yalnız bir tel istifadə edərək, elektrik teleqrafında
+    əhəmiyyətli bir inkişaf üzərində işləməyə və köməkçisi Alfred Vail ilə _Morse kodu_ inkişaf
+    etdirməsinə ilham verdi.
+
+    Maliyyələşmədə bəzi ilkin çətinliklərdən sonra Morse teleqrafı tez bir zamanda ABŞ-a və bütün
+    dünyaya yayıldı.
+
+    Morse eyni zamanda iki dəfə Nyu-York şəhərinin meri vəzifəsinə namizəd oldu, lakin köləliyə və
+    immiqrasiyaya qarşı dəstəyi onun hər iki dəfə məğlub olduğu anlamına gəldi.
+
 napier:
   born: 1550
   died: 1617

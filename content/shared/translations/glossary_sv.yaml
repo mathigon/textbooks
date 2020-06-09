@@ -6,7 +6,7 @@ absolute-value:absolute-value:
   title: Absolutvärde
   text: |
     __absolutvärdet__ för ett nummer är dess avstånd från 0 på siffrelinjen. Det gör negativa
-    siffror positiva, men lämnar positiva siffror oförändrade. Det absoluta värdet på `x` skrivs som
+    siffror positiva men lämnar positiva siffror oförändrade. Det absoluta värdet på `x` skrivs som
     `|x|`. Till exempel `|-5| = 5` och `|3| = 3`.
 
 acute-angle:
@@ -64,6 +64,15 @@ alternate-angles:
 
     Vinkelparna 1 och 2 kallas __alternerande yttervinklar__, eftersom de ligger utanför de
     parallella linjerna, och vinkelparna 3 och 4 kallas __alternerande invändiga vinklar__.
+
+amino-acid:
+  title: Aminosyra
+  text: |
+    __Aminosyror__ är små organiska föreningar som utgör __proteiner__. De är några av de viktigaste
+    byggstenarna för alla levande organismer.
+
+    I vår kropp används aminosyror för att bryta ner mat, reparera kroppsvävnad, lagra energi och
+    för många andra funktioner.
 
 angle:
   title: Vinkel
@@ -945,8 +954,8 @@ millennium-prize:
 mode:
   title: Läge
   text: |
-    Lägetför en uppsättning nummer är det nummer som förekommer oftast. Till exempel är läget
-    för [3, 4, 4, 4, 5, 5, 6] 5.
+    Lägetför en uppsättning nummer är det nummer som förekommer oftast. Till exempel är läget för
+    [3, 4, 4, 4, 5, 5, 6] 5.
 
 molecule:
   title: Molekyl
@@ -956,6 +965,16 @@ molecule:
 
     Exempel på molekyler inkluderar `O_2`, som består av två kopplade syreatomer, och `H_2 O`, som
     består av två väteatomer och en syreatom.
+
+morse-code:
+  title: Morse kod
+  text: |
+    __Morskod__ är ett sätt att representera bokstäver och siffror med korta och långa signaler
+    (kallas prickar och streck). Den är uppkallad efter _Samuel Morse_ och användes ursprungligen
+    för att kommunicera över långa avstånd med hjälp av telegrafer.
+
+    Till exempel skulle bokstaven "L" representeras med hjälp av sekvensen _{x-morse(char="L")}_ för
+    korta och långa signaler.
 
 multiple:
   title: Flera olika
@@ -1481,6 +1500,13 @@ scientific-notation:
     siffror. Det är av formen `a × 10^n`, där _n_ är ett heltal och `1 ≤ a < 10`.
 
     Till exempel kan numret 4600 skrivas som `4.6 × 10^3`.
+
+set:
+  title: Ställer
+  text: |
+    En __uppsättning__ är en samling saker eller objekt (kallas element). Varje element kan bara
+    visas ett i en uppsättning. Vi skriver uppsättningar med hjälp av {} s, till exempel skulle en
+    uppsättning som innehåller siffrorna 2, 3 och 4 skrivas som {2, 3, 4}.
 
 sequence:
   title: Sekvens
