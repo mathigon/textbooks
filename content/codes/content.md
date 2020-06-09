@@ -285,12 +285,11 @@ The same symbol can mean different things within completely different codes. For
         p.caption Molecule for Cytosine
     
 
-
----
+----------------------------------------------------------------------------------------------------
 
 ## Binary Codes
 
-> id: finger32
+> id: finger5
 > section: binary
 > sectionStatus: dev
 
@@ -298,9 +297,10 @@ The same symbol can mean different things within completely different codes. For
 
 How high can you count using only one hand, without skipping any numbers? When we count with our hands, we traditionally use how many fingers are up to represent the number. We have five fingers, so that means the highest we can count with one hand is [[five|four|ten]].
 
----
+    button.appear APPEAR
 
-    table.finger-grid   
+
+    table.finger-grid
       tr
         for x in [1, 2, 3, 4, 5]
           td: div.bin-finger(padding="1px")
@@ -414,9 +414,7 @@ With each finger that we add, our number of options multiplies by two.
 
 --- 
 
-We can get our five-digit binary number by following any path from beginning to end. 
-
-{.todo} // DIGITZ: could make it point to a full number, e.g. [10110](->.yes)
+We can get our five-digit binary number by following any path from beginning to end. For example, this is the binary sequence for [10110](->.yes).
 
 Please enter the number of things into the table below.
 
@@ -432,29 +430,13 @@ More generally, with N fingers we can represent [[2^N]] possible combinations.
 ---
 
 #### Fingers
+> section: finger32
+> sectionStatus: dev
+> id: finger32
 
 Yes, there are [[32]] different combinations we can make with five fingers.
 
     table.finger-grid   
-      for x in [0, 1, 2, 3]
-        tr
-          for y in [0, 1, 2, 3, 4, 5, 6, 7]
-            - var n = x*8 + y
-            // FINGERFADE: make this binary
-            td: div.bin-finger(padding="1px")
-              x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
-              .caption= n
-          
-
-    button.appear FINGERS
-
-(we'll find out soon why we started with zero).
-
----
-
-And here are the same hands, but with their fingers shown as 1s and 0s.
-
-    table.finger-grid
       for b0 in [0, 1]
         for b1 in [0, 1]
           tr
@@ -462,9 +444,18 @@ And here are the same hands, but with their fingers shown as 1s and 0s.
               for b3 in [0, 1]
                 for b4 in [0, 1]
                   - var n = b0*16 + b1*8 + b2*4 + b3*2 + b4*1
+                  // FINGERFADE: make this binary
                   td: div.bin-finger(padding="1px")
-                    x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=60 height=60)
-                    .caption= ""+b0+b1+b2+b3+b4
+                    x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
+                    .caption.dec= n
+                    .caption.bin= ""+b0+b1+b2+b3+b4
+          
+
+    button.appear APPEAR
+    button.switch SWITCH
+
+(we'll find out soon why we started with zero).
+Click on the [SWITCH](->.switch) button to toggle between binary and decimal.
 
 ---
 

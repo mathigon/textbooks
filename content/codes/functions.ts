@@ -385,7 +385,7 @@ export function dec2bin($section: Step) {
 
 
 export function finger5($section: Step) {
-  const $fingers = $section.$$('.fingy');
+  const $fingers = $section.$$('.bin-finger');
   $fingers.forEach($f => $f.hide());
 
   // fade: opacity [0, 100]
@@ -397,7 +397,9 @@ export function finger5($section: Step) {
   // reveal: like fade, but elements below slide down
   // reveal-left/right: each element slides in from the left/right
   let i = 0;
-  let delay = 1000;
+  let delay = 300;
+
+  // FINGERZ: replace button with goal completion
   $section.$('.appear')?.on('click', () => $fingers.forEach(
     $f => $f.enter('slide', 500, i++ * delay)
   )); 
@@ -406,14 +408,29 @@ export function finger5($section: Step) {
 }
 
 export function finger32($section: Step) {
-  const $fingers = $section.$$('.fingy');
+  const $fingers = $section.$$('.bin-finger');
   $fingers.forEach($f => $f.hide());
 
+  const $decCaptions = $section.$$('.dec');
+  const $binCaptions = $section.$$('.bin');
+
+  $binCaptions.forEach($f => $f.hide());
+
   let i = 0; 
-  let delay = 500;
+  let delay = 200;
   $section.$('.appear')?.on('click', () => $fingers.forEach(
     $f => $f.enter('slide', 500, i++ * delay)
   ));
+
+  let showingBin = false;
+
+  // switch between binary and decimal display
+  $section.$('.switch')?.on('click', () => {
+    (showingBin ? $binCaptions : $decCaptions).forEach($f => $f.hide());
+    (showingBin ? $decCaptions : $binCaptions).forEach($f => $f.show());
+
+    showingBin = !showingBin;
+  })
 }
 
 // BINPATTERN: how to re-render with a drop down? (see Graph Theory?)
