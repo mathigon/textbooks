@@ -91,6 +91,20 @@ export function morseApplications($step: Step) {
   $step.$('x-video')!.on('play', () => $step.score('play'));
 }
 
+export function radio($step: Step) {
+  const audio = new Audio('/resources/codes/images/better-days-audio.mp3');
+  const $btn = $step.$('.radio-play')!
+
+  $btn.on('click', () => audio.paused ? audio.play() : audio.pause());
+  audio.addEventListener('play', () => $btn.addClass('playing'));
+  audio.addEventListener('pause', () => $btn.removeClass('playing'));
+
+  audio.addEventListener('ended', () => {
+    $step.score('play');
+    audio.currentTime = 0;
+  });
+}
+
 
 // -----------------------------------------------------------------------------
 // Binary Numbers

@@ -1,20 +1,16 @@
 # Codes and Ciphers
 
-    // http://plus.maths.org/content/cracking-codes
-    // http://plus.maths.org/content/exploring-enigma
-
 ## Introduction
 
 > section: introduction
-> sectionStatus: dev
 > id: intro
 > goals: play
 
 ::: column.grow
 
-In the early 2000s, the Colombian government was fighting a civil war against groups of insurgents
-and terrorists, who were hiding in camps in the South American rainforest. Occasionally, soldiers
-were captured by these rebels, and then had to spent months or even years in captivity.
+In the early 2000s, the Colombian government was fighting a civil war against groups of insurgents,
+who were hiding in camps in the South American rainforest. Occasionally, soldiers were captured by
+these rebels, and then had to spent months or even years in captivity.
 
 It is easy to lose hope when you’ve been chained up in a hostage camp for such a long time, unable
 to see your family, and guarded by armed guerilla forces. However, in 2010, there was reason to
@@ -162,15 +158,17 @@ writing other words or sentences in this box, and watch how they are encoded as 
       .output.morse
 
 ---
-> id: resolution
+> id: radio
 > goals: play
 
 Morse code was also what the Colombian army used to send a message to the hostages. Translated from
 Spanish, the message was _19 PEOPLE RESCUED. YOU’RE NEXT. DON’T GIVE UP._ Listen to the song once
 more, and see if you can hear the dots and dashes in the background:
 
-    figure.fixme: x-video(src="images/BetterDaysClip.mp4" poster="images/BetterDays.jpg" width=320 height=180 audio controls credit="YouTube")
-    // TODO Audio rather than video, Show actual morse code while playing, score when finished
+    figure: x-img(src="images/radio.png" width=225 height=220 style="margin-top: -24px")
+      button.radio-play
+    x-gesture(target=".radio-play")
+    // TODO Show actual morse code while playing
 
 ---
 > id: morse-applications
@@ -735,11 +733,8 @@ Name the band represented by each puzzle:
 > section: cryptography
 > sectionStatus: dev
 
-https://plus.maths.org/content/cracking-codes
-
-Some codes are designed in a way that only
-
-Alice and Bob
+    // http://plus.maths.org/content/cracking-codes
+    // http://plus.maths.org/content/exploring-enigma
 
 The science of creating secret codes is called __Cryptography__ and the are of
 breaking them is called __Cryptanalysis__.
