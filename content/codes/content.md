@@ -330,7 +330,7 @@ The Beatles wanted to use Semaphore to spell the word “HELP” on the cover of
 same name.
 
 However, they didn’t like the way these specific letters looked – so they just chose four random
-letters instead! As you can see, they ended up spelling the word [[ruiv]]!
+letters instead! As you can see, they ended up spelling the word [[rujv]]!
 
 ::: column(width=200)
 

@@ -93,6 +93,7 @@ export function morseApplications($step: Step) {
 
 export function radio($step: Step) {
   const audio = new Audio('/resources/codes/images/better-days-audio.mp3');
+  audio.preload = 'true';
   const $btn = $step.$('.radio-play')!
 
   $btn.on('click', () => audio.paused ? audio.play() : audio.pause());
