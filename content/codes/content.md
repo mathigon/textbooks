@@ -232,13 +232,13 @@ most important and most interesting ones.
 Codes are not a recent invention – they were used by ancient cultures, many thousands of years ago.
 
 For example, guards along the Great Wall of China used smoke to warn each other about potential
-attacks, and different tribes of indigenous peoples in North American each had their own signalling
-systems. They, too, created columns of smoke by burning damp grass, which allowed them to
-communicate over long distances.
+attacks. Different tribes of indigenous peoples in North American each had their own signalling
+systems: they created columns of smoke by burning damp grass, which allowed them to communicate
+over long distances.
 
-{.r} Smoke signals are even used today, for example as a distress signal at sea. When a new Pope is
-elected by the College of Cardinals, the outcome of each vote is indicated by black or white smoke.
-[Continue](btn:next)
+{.r} Smoke signals are even used today, for example as a distress signal at sea. And when a new Pope
+is elected by the College of Cardinals, the outcome of each vote is indicated by black or white
+smoke. [Continue](btn:next)
 
 ::: column(width=280)
 
@@ -252,8 +252,8 @@ elected by the College of Cardinals, the outcome of each vote is indicated by bl
 ---
 > id: flags
 
-There are many examples where words or letters are not the best way to express information. Here
-are some other codes you might have heard of:
+There are many other examples where words or letters are not the best way to express information.
+Here are some other codes you might have heard of:
 
 ::: tab(parent="sticky")
 
