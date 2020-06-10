@@ -12,6 +12,12 @@
 // -----------------------------------------------------------------------------
 // Introduction
 
+.window {
+  cursor: pointer;
+  .flash { position: absolute; top: 60px; left: 34px; opacity: 0; transition: opacity .2s; }
+  &.pressed .flash { opacity: 1; }
+}
+
 @keyframes electrons {
   from { stroke-dashoffset: 0; }
   to { stroke-dashoffset: 12px; }

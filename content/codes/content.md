@@ -46,6 +46,12 @@ There are many other examples in our world, where we want to communicate with ot
 use our voices or text. Maybe your friend lives across the street from you. At night, you secretly
 talk to each other using flashlights – without waking up your family by shouting.
 
+::: column(width=300)
+
+    x-img.window(src="images/window.png" width=300 height=280)
+      img.flash(src="images/light.png" width=74 height=74)
+    x-gesture(target=".window" offset="-80,-44")
+
 ::: column.grow
 
 For example, one short flash might mean “hello” or “yes”. One long flash might mean “how are you?”,
@@ -54,10 +60,6 @@ need?
 
 {.reveal(when="flashlight")} However, even if you agree many different signals for different words
 or questions, it will be difficult to have more complex conversations, or to talk about new topics…
-
-::: column(width=300)
-
-{.fixme} Interactive flashlight/window graphic
 
 :::
 

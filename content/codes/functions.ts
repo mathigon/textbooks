@@ -21,13 +21,26 @@ import './components/morse';
 // Introduction
 
 export function intro($step: Step) {
+  let hasSeenHint = false;
   loadScript('https://w.soundcloud.com/player/api.js').then(() => {
     // Trigger and event when students press 'play' in the iframe.
     const widget = (window as any).SC.Widget($step.$('iframe')!._el);
     widget.bind('play', () => {
-      setTimeout(() => $step.addHint('song'), 1000);
-      setTimeout(() => $step.score('play'), 2000);
+      if (!hasSeenHint) setTimeout(() => $step.addHint('song'), 5000);
+      setTimeout(() => $step.score('play'), 7000);
+      hasSeenHint = true;
     });
+  });
+}
+
+export function flashlight($step: Step) {
+  const $window = $step.$('.window')!;
+  slide($window, {
+    down: () => {
+      $window.addClass('pressed');
+      $step.score('flashlight');
+    },
+    up: () => $window.removeClass('pressed')
   });
 }
 
