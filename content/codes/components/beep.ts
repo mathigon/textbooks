@@ -4,9 +4,9 @@
 // ============================================================================
 
 
-const Context = AudioContext || (window as any).webkitAudioContext;
+const Context = (window as any).AudioContext || (window as any).webkitAudioContext;
 
-const ctx = Context ? new Context() : undefined;
+const ctx = Context ? (new Context() as AudioContext) : undefined;
 export type Beep = {stop: () => void};
 
 export function beep(duration = 0): Beep {

@@ -292,9 +292,9 @@ collinear:
   text: Tres o más puntos son __colineales__ si se encuentran en la misma línea.
 
 compass:
-  title: Brújula
+  title: Compás
   text: |
-    Una brújula es una herramienta de dibujo utilizada para crear círculos o arcos. Consiste en dos
+    Una compás es una herramienta de dibujo utilizada para crear círculos o arcos. Consiste en dos
     brazos: la aguja en un extremo se coloca en el centro, mientras que el lápiz en el otro extremo
     traza la curva.
 
