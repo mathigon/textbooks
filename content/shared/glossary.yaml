@@ -388,7 +388,7 @@ convex:
 
 coordinate-system:
   title: Coordinate System
-  text: A __cordinate system__ is a two-dimensional plane that contains two
+  text: A __coordinate system__ is a two-dimensional plane that contains two
     perpendicular axes. Every point on the plane can be defined using two
     numbers (coordinates), that specify its distance from the two axes.
 
@@ -506,6 +506,12 @@ dodecahedron:
   text: The __Dodecahedron__ is a Platonic solid and consists of 12 faces that
     are regular pentagons. It has 20 vertices and 30 edges.
   link: /course/polyhedra/platonic#platonic-overview
+
+domain:
+  title: Domain
+  text: A __domain__ is the set of elements that make up the _input_ of a function or
+  relation. Domain usually contains _x-values_. The elements of a domain can be
+  called _independent variables_.
 
 dot-annihilation:
   title: Annihilation
@@ -1353,6 +1359,12 @@ ray:
     infinitely in one direction. We can label rays starting at `A` as `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
 
+range:
+  title: Range
+  text: A __range__ is the set of elements that make up the _output_ of a function or
+  relation. Range usually contains _y-values_. The elements of a domain can be
+  called _dependent variables_.
+
 real-numbers:
   title: Real Numbers
   text: The __real numbers__ are all numbers that appear on the number line,
@@ -1384,6 +1396,11 @@ regular-polygon:
     length and all interior angles have the same size.
   image: regular-polygon.svg
   link: /course/polyhedra/polygons#regular-polygons
+
+relation:
+  title: Relation
+  text: A __relation__ is a relationship between two _sets_. Specifically, it is
+   a rule that assigns eeach input to at least one output.
 
 rhombus:
   title: Rhombus
