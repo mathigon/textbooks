@@ -79,6 +79,81 @@ From this, you might deduce that the next throw has a `5/20=0.25` chance to also
 
 For many centuries, mathematicians have struggled to deal with these uncertain situations – until the development of **probability** theory. In this course, we will explore what probability is, and give you some amazing new tools to be able to predict the future.
 
+---
+>id: representing-probabilities
+
+If you move the sliders above, you might notice that the probability is always between [[0]] (if you never hit the center) and [[1]] (if you always hit the center).
 
 
-----------------------------------------------------------------------------------------------------
+Probabilities always lie between 0 and 1. An event with a smaller probability (like 0.2) is always less likely than an event with a larger probability (like 0.8). If an outcome is impossible, we say it has probability 0. If it is certain, we say it has probability 1. If an event is equally likely to happen or not happen, its probability is exactly in the middle: [[0.5]]. 
+
+We can represent probabilities using a number line from 0 to 1. Try to drag the following words and events onto the line, to show their approximate probability:
+
+    blockquote List of events in the doc go here, along with a numberline
+
+---
+>id: formats
+
+There are several different ways to represent probabilities, and we have already seen two of them. In the first example above, 5 out of 20 of the dart throws landed in the center.
+
+::: column.highlight-yellow(width=300)
+We can represent probabilities as a fraction, that shows how many outcomes were successful. In this example,
+
+`p = [[5]]/[[20]]`
+
+::: column.highlight-blue(width=300)
+We can convert the fraction into a decimal number between 0 and 1. In this case,
+
+p = [[0.25]]
+
+::: column.highlight-green(width=300)
+We can also convert it into a percentage from 0% to 100%. In this case,
+
+p = [[25]]%
+:::
+
+We already know how to convert between fractions, decimals, and percentages, and we can do exactly the same for probabilities. Percentage literally means “Out of 100” - so 30% is the same thing as 30 times out of 100, or `30/100`! 
+
+
+**Here are a few more predictions and events. Connect the ones that correspond to the same probability:**
+<!-- Match the following interactive -->
+
+---
+>id: simulations
+
+**Simulations**
+::: column(width=500)
+
+A friend invites you to play a simple game: you toss a coin a few times. When it lands heads, you have to pay him 1, and when it lands tails, he has to pay you 1. This seems fair enough - you have as much to gain as you have to lose. 
+
+We know that the probability of a coin landing heads is ½ = 0.5. However, once you start playing, something strange happens: the coin lands heads five times in a row!
+
+::: column(width=200)
+
+*Coin flipping animation, it keeps track of the last 5 outcomes, which are all heads.*
+
+:::
+
+At this point, so start to suspect something. Maybe your friend is using a **trick coin** (or biased coin), where one side is weighted, and so the coin is more likely to land on it. But maybe you’ve also just been really unlucky! What do you think?
+
+    p
+        button.choice Unlucky
+        button.choice-2 Trick Coin
+
+---
+
+Probabilities can give us a sense of how likely a certain outcome is, but they don’t predict the future. Even if the weather forecast says there is only a 5% chance of rain, it might still happen. And our coin doesn’t “remember” the previous outcomes: every flip has the same probability of landing heads, which doesn’t depend on how many heads there were previously.
+
+However, probabilities become much more useful if we can repeat the same experiment many times. For example, we could flip the same coin 100 times and compare how many heads and tails there are in total. Here are three different coins – can you work out which one of them is biased?
+
+<!-- Simulation goes here -->
+
+In the simulation above, when we used a fair coin (blue) - which has an equal probability of landing on heads and tails. As you can see, the graphs of the fair coins slowly approach 0.5 as you flip them more and more times. But the first [[10 to 20]] tosses seem completely random, for both the fair and the biased coins.
+
+Maybe you performed 10 tosses, and 8 coins landed on heads - you might think that the coin is biased immediately! However, it’s too soon to make that conclusion - If you reset the simulation, and keep tossing the coin just 10 times, you’ll see that the graph formed can be very jagged, and each repetition is different from the previous. 
+
+However, If you keep tossing the coin for another 100, or 1000 tosses: you’ll see that the ratio of Heads will always approach 0.5, out actual probability.
+
+In probability theory, this phenomenon is known as the “Law of Large numbers” - The frequency of an event occurring in an experiment might not exactly match the actual probability of that event, but as the experiment is repeated many times, this frequency approaches the actual probability.
+
+Whenever performing an experiment to find the probability of an event, it’s very important to perform it enough times - Else you might select the wrong coin to wager on!
