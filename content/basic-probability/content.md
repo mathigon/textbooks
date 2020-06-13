@@ -8,140 +8,77 @@
 > goals: spin
 
 
-Often, we make decisions by measuring likelihoods of things - which team to support? what card to play? Lets start by ordering some events on this line.
-- Winning a lottery amonst 1 million people
-- A coin toss landing on head two times in a row
-- Shuffling a deck of cards two times and getting the same sequence
-- Two people in a room of 30 have the same birthday
+
+In previous courses, you have seen many examples of how we can try to predict the future using science and mathematics. For example, we can predict when a car will arrive at its destination if it is driving at a constant speed, or we can predict the next time when we’ll be able to see a particular comet.
+
+However, there are many examples in life where it is impossible to predict exactly what will happen. This could be because you don’t have all the information you need, because the decisions of other people might influence the result, or just because it is incredibly complicated.
+
+::: column(width=200 height=200)
+
+    img(src="https://st.depositphotos.com/1018414/4343/i/950/depositphotos_43434771-stock-photo-fragments-of-the-planet-earth.jpg")
+
+{.caption} The atmosphere consists of billions of molecules that interact with each other. That’s why it’s impossible to exactly predict the weather.
 
 
-    img(src="images/numberline.png")
+::: column(width=200 )
 
--- step --
+    img(src="https://st.depositphotos.com/1007566/3105/v/450/depositphotos_31050267-stock-illustration-financial-growth.jpg")
 
-You're right: It's unlikely to win that lottery, and unlikely for that shuffle to come out in sequence too. 
-
-The chance of winning the lottery is 1 in 1000000. But the chance of the same shuffle coming out? That's 1 in 80658175170943878571660636856403766975289505440883277824000000000000. 
-
-This is why words like "likely" and "unlikely" aren't particularly useful for us - they can mean a lot of things! In this course, we will gain a mathematical understanding of likelihood: called Probability.
-
-Think of probability as a scale of likelihood from 0 to 1 - 1 being that it is certain that an event will occur, while 0 means an event is impossible.
+{.caption} You don’t know exactly how people are going to vote. That’s why it’s impossible to exactly predict the outcome of an election.
 
 
-::: column.grow
+::: column(width=200)
 
-Let's now actually measure the exact probability of an event occuring.
+    img(src="https://static8.depositphotos.com/1000865/859/i/450/depositphotos_8594169-stock-photo-playing-cards.jpg")
 
-Here's a classic spinner, with four sections. When rotated, it will land on a randomly selected section. 
+{.caption} After shuffling, you don’t know the order of the cards in a deck. That’s why it is impossible to exactly predict the colour of the next card.
 
-Drag these colors in order of how likely it is that the spinner lands on them!
-
-    x-sortable
-      .item.md(data-index="3") Green
-      .item.md(data-index="0") Red
-      .item.md(data-index="1") Yellow
-      .item.md(data-index="2") Purple
-
-::: column(width=300)
-
-    svg.spinner(width=300 height=300)
-      circle(cx=150 cy=150 r=100)
 
 :::
 
-The chance that the spinner lands on a section is proportional to the area of the section - bigger the area, the more likely it is that the spinner lands on it.
-
-    img(src="images/angles.png" width=300)
-    br
-    br
-
-A circle had 360 degrees - so we can easily come up with what fraction of area each color is!
-
-Red is [[7/20]], Yellow is [[6/20]], Purple is [[4/20]], and Green is [[3/20]].
-
-It turns out the fraction of this area is the same as the probability of the spinner landing on the sector: 7/20 is the same thing as it's likely that the spinner lands on the red section 7 out of 20 times!
-
-We can represent probabilites in decimals too! 6/20 is the same thing as 0.3. And representing in percentages is a possibility too: the probability in percentage of the spinner landing on the Purple section is [[20]]%
 ---
+> id: drag
 
-* Comprehend and use the terms “impossible,” “unlikely,” “equally likely as not,” “likely,” and “certain” to describe the likelihood of an event.
-* Interpret percentages, fractions, and decimals that represent the likelihood of events.
-* Order a given set of events from least likely to most likely, and justify the reasoning.
+Of course, our language has many words we can use to describe the answer to these questions, without knowing exactly what will happen. Try to move each of these events to the best possible description.
 
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/2/preparation.html
+<!-- Drop events into buckets of impossible, unlikely, likely, certain -->
+
+* The sun rises tomorrow.
+* You see a mammoth while walking on the street.
+* 1 million bitcoins are mined tomorrow
+* You get homework tomorrow (assuming school is in session)
+* You roll a die and the number it lands on is less than 7.
+* Probability that any given calendar year has 366 days.
+* You roll a die and it lands on a 6.
+* A randomly selected human lives in asia.
+* Winning a lottery amongst 10 million people
+* Shuffling a deck of cards two times and getting the exact same sequence
+
+You might have noticed that some of the descriptions were a bit “imprecise”. For example, if you roll a die just once, it is unlikely that it lands on a 6 – but you certainly wouldn’t be surprised if it does. WInning the lottery is unlikely too - but obviously, more unlikely than rolling that 6! 
+
+Unfortunately, our four word scale to describe the likelihood or chance of events occurring isn’t too useful.
+
 
 ---
+> id: dartboard
 
-* Generalize the relationship between the probability of an event and the number of possible outcomes in the sample space, for an experiment in which each outcome in the sample space is equally likely.
-* List the sample space of a simple chance experiment.
-* Use the sample space to determine the probability of an event, and express it as a fraction, decimal, or percentage.
+::: column(width=500)
 
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/3/preparation.html
+<!-- Make number of darts + accuracy slidable -->
+
+One way to determine more accurately how likely a certain outcome is, is to look at how often it has happened in the past. For example, Imagine you’re playing a game of darts with your friend - and you want to numerically know how likely it is that your friend hits the bullseye. You could try to come up with some model to measure his skill, and learn how “good” he is - but a far easier method would be to listen to what his history says. In this case, your friend threw ${20} darts, ${5} of which landed in the center.
+
+::: column(width=200)
+
+    img(src="https://static9.depositphotos.com/1027309/1217/v/450/depositphotos_12178989-stock-illustration-dart-board.jpg")
+
+:::
+
+From this, you might deduce that the next throw has a `5/20=0.25` chance to also land in the center. We say that 0.25 is the probability of hitting the center. 
+
+
+For many centuries, mathematicians have struggled to deal with these uncertain situations – until the development of **probability** theory. In this course, we will explore what probability is, and give you some amazing new tools to be able to predict the future.
+
 
 
 ----------------------------------------------------------------------------------------------------
-
-
-## Coins, Cards and Dice
-
-> section: coins-cards-dice
-> sectionStatus: dev
-
-* Describe patterns observed on a table or graph that shows the relative frequency for a repeated experiment.
-* Generalize that the cumulative relative frequency approaches the probability of the event as an experiment is repeated many times.
-* Generate possible results that would or would not be surprising for a repeated experiment, and justify the reasoning.
-
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/4/preparation.html
-
----
-
-* Describe reasons why the relative frequency from an experiment may not exactly match the actual probability of the event.
-* Recognize that sometimes the outcomes in a sample space are not equally likely.
-* Use the results from a repeated experiment to estimate the probability of an event, and justify the estimate.
-
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/5/preparation.html
-
----
-
-* Comprehend the that term “simulation” refers to a chance experiment used to represent a real-world situation.
-* Describe a simple chance experiment that could be used to simulate a real-world event.
-* Perform a simulation, and use the results to estimate the probability of a simple event in a real-world situation.
-
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/6/preparation.html
-
-
-----------------------------------------------------------------------------------------------------
-
-
-## Multi-Step Experiments
-
-> section: multi-step
-> sectionStatus: dev
-
-* Compare and contrast different methods for representing the sample space of a compound event, and evaluate their usefulness.
-* Determine the total number of possible outcomes for a compound event, and justify the reasoning.
-* Interpret or create a list, table, or tree diagram that represents the sample space of a compound event.
-* Understand that the probabilities of all possible outcomes sum to 1
-
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/8/preparation.html
-
----
-
-* Choose a method for representing the sample space of a compound event, and justify the choice.
-* Use the sample space to determine the probability of a compound event, and explain the reasoning.
-
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/9/preparation.html
-
-
-----------------------------------------------------------------------------------------------------
-
-
-## Designing Simulations
-
-> section: simulations
-> sectionStatus: dev
-
-* Describe a multi-step experiment that could be used to simulate a compound event in a real-world situation, and justify that it represents the situation.
-* Perform a simulation to estimate the probability of a compound event, and explain how the simulation could be improved.
-
-https://curriculum.illustrativemathematics.org/MS/teachers/2/8/10/preparation.html
