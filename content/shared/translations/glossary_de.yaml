@@ -601,7 +601,6 @@ factorisation:
   title: Primfaktorenzerlegung
   text: |
     Mittels der __Primfaktorenzerlegung__ kann jede Zahl als Produkt von Primzahlen dargestellt werden.
-    schreiben.
   link: /course/divisibility/primes
 
 fermat-last:
