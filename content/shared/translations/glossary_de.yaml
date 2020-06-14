@@ -600,8 +600,7 @@ factorial:
 factorisation:
   title: Primfaktorenzerlegung
   text: |
-    Die __Primfaktorenzerlegung__ einer Zahl ist eine Möglichkeit, sie als Produkt von Primzahlen zu
-    schreiben.
+    Mittels der __Primfaktorenzerlegung__ kann jede Zahl als Produkt von Primzahlen dargestellt werden.
   link: /course/divisibility/primes
 
 fermat-last:
