@@ -606,11 +606,11 @@ fermat:
     Pierre de Fermat__ (1607 - 1665) foi um matemático e advogado francês. Ele foi pioneiro no
     cálculo, além de trabalhar em teoria dos números, probabilidade, geometria e óptica.
 
-    Em 1637, ele escreveu uma nota curta na margem de um de seus livros, alegando que a equação
-    `a^n + b^n = c^n` não tem soluções inteiras para `n > 2` e que ele tinha uma “prova maravilhosa,
-    que essa margem é muito estreita para conter ”. Isso ficou conhecido como _Último Teorema de
-    Fermat_ e um dos problemas não resolvidos mais famosos da matemática - até que finalmente foi
-    provado em 1994.
+    Em 1637, ele escreveu uma nota curta na margem de um de seus livros, alegando que a equação `a^n
+    + b^n = c^n` não tem soluções inteiras para `n > 2` e que ele tinha uma “prova maravilhosa, que
+    essa margem é muito estreita para conter ”. Isso ficou conhecido como _Último Teorema de Fermat_
+    e um dos problemas não resolvidos mais famosos da matemática - até que finalmente foi provado em
+    1994.
   links:
     - title: Probability
       url: /course/probability/introduction
@@ -1188,6 +1188,23 @@ monsky:
     __Paul Monsky__ (nascido em 1936) é um matemático e professor americano na Universidade
     Brandeis. Ele provou que um quadrado não pode ser dividido em um número ímpar de triângulos de
     área igual - isso é conhecido como "teorema de Monsky".
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) foi um inventor e pintor americano. Ele cresceu perto de Boston e
+    estudou na Universidade de Yale, antes de iniciar uma carreira como artista.
+
+    Em sua viagem de volta de uma viagem à Europa para estudar arte, Morse ouviu passageiros
+    conversando sobre novos dispositivos elétricos. Isso o inspirou a trabalhar em uma melhoria
+    significativa no telégrafo elétrico, usando apenas um único fio, e a desenvolver _código Morse_
+    com seu assistente Alfred Vail.
+
+    Após algumas dificuldades iniciais em receber financiamento, o telégrafo de Morse se espalhou
+    rapidamente por todos os Estados Unidos e pelo mundo.
+
+    Morse também concorreu duas vezes a prefeito da cidade de Nova York, mas seu apoio à escravidão
+    e à imigração fez com que ele fosse derrotado nas duas vezes.
 
 napier:
   born: 1550

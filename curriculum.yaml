@@ -503,8 +503,7 @@ exploding-dots:
   color: 6D3BBF
   hideTitle: true
 
-connections:
-  title: How Mathematics Connects Us
-  description: Discover the mathematical principles that connect our world, from shaking hands to travel and navigation, colouring maps and social networks.
+talks:
+  title: Talks and Workshops
   color: A7208A
   hideIcon: true

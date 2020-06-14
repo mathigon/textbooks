@@ -66,6 +66,15 @@ alternate-angles:
     fuera de las líneas paralelas, y los pares de ángulos 3 y 4 se denominan __ángulos alternos
     internos__.
 
+amino-acid:
+  title: Aminoácidos
+  text: |
+    Los __aminoácidos__ son pequeños compuestos orgánicos que forman __proteínas__. Son algunos de
+    los bloques de construcción clave de todos los organismos vivos.
+
+    En nuestro cuerpo, los aminoácidos se usan para descomponer los alimentos, reparar el tejido
+    corporal, almacenar energía y para muchas otras funciones.
+
 angle:
   title: Ángulo
   text: |
@@ -75,8 +84,8 @@ angle:
 angle-bisector:
   title: Bisectriz
   text: |
-    Una bisectriz de ánguloes una línea o rayo que divide un ángulo por la mitad, en dos
-    ángulos congruentes y más pequeños.
+    Una bisectriz de ánguloes una línea o rayo que divide un ángulo por la mitad, en dos ángulos
+    congruentes y más pequeños.
   image: angle-bisector.svg
 
 anti-dot:
@@ -123,8 +132,8 @@ arithmetic-mean:
 arithmetic-sequence:
   title: Secuencia aritmética
   text: |
-    Una secuencia aritmética(a veces llamada progresión aritmética ____) es una secuencia de
-    números en la que la diferencia _d_ entre términos consecutivos es siempre constante.
+    Una secuencia aritmética(a veces llamada progresión aritmética ____) es una secuencia de números
+    en la que la diferencia _d_ entre términos consecutivos es siempre constante.
   link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
 
 arithmetic series:
@@ -158,8 +167,8 @@ axiom:
 axis-of-symmetry:
   title: Eje de simetria
   text: |
-    Si una forma tiene simetría de reflexión, el eje de simetríaes la línea que la divide en
-    dos mitades iguales.
+    Si una forma tiene simetría de reflexión, el eje de simetríaes la línea que la divide en dos
+    mitades iguales.
   image: reflectional-symmetry.svg
   link: /course/transformations/symmetry#reflectional-symmetry
 
@@ -283,9 +292,9 @@ collinear:
   text: Tres o más puntos son __colineales__ si se encuentran en la misma línea.
 
 compass:
-  title: Brújula
+  title: Compás
   text: |
-    Una brújula es una herramienta de dibujo utilizada para crear círculos o arcos. Consiste en dos
+    Una compás es una herramienta de dibujo utilizada para crear círculos o arcos. Consiste en dos
     brazos: la aguja en un extremo se coloca en el centro, mientras que el lápiz en el otro extremo
     traza la curva.
 
@@ -467,8 +476,8 @@ degrees:
 denominator:
   title: Denominador
   text: |
-    El denominadores el número inferior en una fracción. Por ejemplo, en `4/7`, el número 7 es
-    el denominador.
+    El denominadores el número inferior en una fracción. Por ejemplo, en `4/7`, el número 7 es el
+    denominador.
 
 dilation:
   title: Dilatación
@@ -543,8 +552,8 @@ ellipse:
 equation:
   title: Ecuación
   text: |
-    Una ecuaciónes una declaración matemática creada al conectar dos o más expresiones con el
-    signo igual __igual__ `=`. Indica que todas estas expresiones tienen el mismo valor.
+    Una ecuaciónes una declaración matemática creada al conectar dos o más expresiones con el signo
+    igual __igual__ `=`. Indica que todas estas expresiones tienen el mismo valor.
 
 equilateral-triangle:
   title: Triángulo equilátero
@@ -562,8 +571,8 @@ euclidean-geometry:
 factor:
   title: Factor
   text: |
-    Un número _a_ es un factor(o __divisor__) de un número _b_, si puede dividir _b_ por _a_
-    sin resto.
+    Un número _a_ es un factor(o __divisor__) de un número _b_, si puede dividir _b_ por _a_ sin
+    resto.
   link: /course/divisibility/factors-and-multiples
 
 factorial:
@@ -638,8 +647,8 @@ fta:
 function:
   title: Función
   text: |
-    Una funciónes una relación matemática que convierte una entrada (_x_) en exactamente una
-    salida (_y_). A menudo se expresan como ecuaciones matemáticas de la forma `f(x)`.
+    Una funciónes una relación matemática que convierte una entrada (_x_) en exactamente una salida
+    (_y_). A menudo se expresan como ecuaciones matemáticas de la forma `f(x)`.
 
 function-graph:
   title: Gráficas de funciones
@@ -674,8 +683,8 @@ geometric-series:
 glide-reflection:
   title: Reflexiones de deslizamiento
   text: |
-    Una reflexión de deslizamientoes un tipo especial de transformación. Es una combinación de
-    una _reflexión_ y una _traducción_ en la misma dirección que el eje de reflexión.
+    Una reflexión de deslizamientoes un tipo especial de transformación. Es una combinación de una
+    _reflexión_ y una _traducción_ en la misma dirección que el eje de reflexión.
   link: /course/transformations/symmetry-groups#footsteps
 
 golden-ratio:
@@ -854,8 +863,7 @@ julia-set:
 kite:
   title: Cometa
   text: |
-    Una cometaes un cuadrilátero en el que dos pares de lados adyacentes tienen la misma
-    longitud.
+    Una cometaes un cuadrilátero en el que dos pares de lados adyacentes tienen la misma longitud.
   link: /course/polyhedra/quadrilaterals#kites
 
 koch-snowflake:
@@ -898,8 +906,8 @@ line-segment:
 line-slope:
   title: Pendiente de una línea
   text: |
-    La pendientede una línea mide su "inclinación", y generalmente se denota con la letra _m_.
-    Es el cambio en _y_ para un cambio de unidad en _x_ a lo largo de la línea.
+    La pendientede una línea mide su "inclinación", y generalmente se denota con la letra _m_. Es el
+    cambio en _y_ para un cambio de unidad en _x_ a lo largo de la línea.
 
 linear-equation:
   title: Ecuación lineal
@@ -968,8 +976,8 @@ millennium-prize:
 mode:
   title: Modo
   text: |
-    El modode un conjunto de números es el número que ocurre con más frecuencia. Por ejemplo,
-    el modo de [3, 4, 4, 4, 5, 5, 6] es 5.
+    El modode un conjunto de números es el número que ocurre con más frecuencia. Por ejemplo, el
+    modo de [3, 4, 4, 4, 5, 5, 6] es 5.
 
 molecule:
   title: Molécula
@@ -979,6 +987,16 @@ molecule:
 
     Los ejemplos de moléculas incluyen `O_2`, que consiste en dos átomos de oxígeno conectados, y
     `H_2 O`, que consiste en dos átomos de hidrógeno y un átomo de oxígeno.
+
+morse-code:
+  title: Código Morse
+  text: |
+    __El código Morse__ es una forma de representar letras y números usando señales cortas y largas
+    (llamadas puntos y guiones). Lleva el nombre de _Samuel Morse_ y se usó inicialmente para
+    comunicarse a largas distancias mediante telégrafos.
+
+    Por ejemplo, la letra "L" se representaría utilizando la secuencia _{x-morse(char="L")}_ de
+    señales cortas y largas.
 
 multiple:
   title: Múltiple
@@ -1039,16 +1057,16 @@ octahedron:
 order-of-symmetry:
   title: Orden de simetría
   text: |
-    Si una forma tiene simetría rotacional, el orden de simetríaes el número de orientaciones
-    en las que la forma se ve igual. (O es la cantidad de veces que puede rotar la forma antes de
-    volver al inicio).
+    Si una forma tiene simetría rotacional, el orden de simetríaes el número de orientaciones en las
+    que la forma se ve igual. (O es la cantidad de veces que puede rotar la forma antes de volver al
+    inicio).
   link: /course/transformations/symmetry#rotational-symmetry
 
 origin:
   title: Origen
   text: |
-    El origende un sistema de coordenadas es el punto (0, 0), donde se intersecan el eje _x_ y
-    el eje _y_.
+    El origende un sistema de coordenadas es el punto (0, 0), donde se intersecan el eje _x_ y el
+    eje _y_.
 
 origin-number-line:
   title: Origen de una recta numérica
@@ -1064,16 +1082,15 @@ palindrome:
 parabola:
   title: Antena parabólica
   text: |
-    Una parábolaes la forma del gráfico de una función cuadrática como `y = x^2`. Es
-    simétrico, en forma de U y puede apuntar hacia arriba o hacia abajo. También es una _sección
-    cónica_.
+    Una parábolaes la forma del gráfico de una función cuadrática como `y = x^2`. Es simétrico, en
+    forma de U y puede apuntar hacia arriba o hacia abajo. También es una _sección cónica_.
   image: parabola.svg
 
 parabola-conic:
   title: Antena parabólica
   text: |
-    Una parábolaes el conjunto de todos los puntos en un plano, que tienen la misma distancia
-    desde una línea fija, llamada __directriz__, y un punto fijo, llamado __foco__.
+    Una parábolaes el conjunto de todos los puntos en un plano, que tienen la misma distancia desde
+    una línea fija, llamada __directriz__, y un punto fijo, llamado __foco__.
 
 parabola-focus:
   title: Enfoque de una parábola
@@ -1233,9 +1250,8 @@ polynomial:
   text: |
     Un __polinomio__ es una expresión algebraica que consiste en constantes y múltiplos de variables
     elevadas a potencias enteras. Por ejemplo, `5x^3 - 2y^2 + x + 4` es un polinomio. La forma más
-    general de un polinomio con una sola variable es
-    `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, donde `a_n`, `a_(n-1)`, ..., `a_0` son
-    todas constantes específicas.
+    general de un polinomio con una sola variable es `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1
+    x + a_0`, donde `a_n`, `a_(n-1)`, ..., `a_0` son todas constantes específicas.
 
 polynomial-degree:
   title: La licenciatura
@@ -1526,12 +1542,19 @@ scientific-notation:
 
     Por ejemplo, el número 4600 podría escribirse como `4.6 × 10^3`.
 
+set:
+  title: Conjuntos
+  text: |
+    Un __conjunto__ es una colección de cosas u objetos (llamados elementos). Cada elemento solo
+    puede aparecer uno en un conjunto. Escribimos conjuntos usando {} s, por ejemplo, un conjunto
+    que contiene los números 2, 3 y 4 se escribiría como {2, 3, 4}.
+
 sequence:
   title: Secuencia
   text: |
-    Una secuenciaes una lista ordenada de números (u otros elementos como objetos
-    geométricos), que a menudo siguen un patrón o función específica. Las secuencias pueden ser
-    tanto finitas como infinitas.
+    Una secuenciaes una lista ordenada de números (u otros elementos como objetos geométricos), que
+    a menudo siguen un patrón o función específica. Las secuencias pueden ser tanto finitas como
+    infinitas.
   link: /course/sequences/introduction#simple-patterns
 
 sequence-convergence:
@@ -1549,8 +1572,8 @@ sequence-divergence:
 sequence-explicit:
   title: Fórmula explícita
   text: |
-    Una fórmula explícitapara una secuencia expresa el valor del término _n_ th `x_n` en
-    función de _n_.
+    Una fórmula explícitapara una secuencia expresa el valor del término _n_ th `x_n` en función de
+    _n_.
   link: /course/sequences/introduction#explicit
 
 sequence-recursive:
@@ -1783,9 +1806,9 @@ triangle-legs:
 triangle-inequality:
   title: Desigualdad triangular
   text: |
-    La desigualdad del triánguloestablece que la suma de las longitudes de cualquiera de los
-    dos lados de un triángulo es mayor que la longitud del tercer lado. Esto también significa que
-    la distancia más corta entre dos puntos es una línea recta (porque pasar por un tercer punto
+    La desigualdad del triánguloestablece que la suma de las longitudes de cualquiera de los dos
+    lados de un triángulo es mayor que la longitud del tercer lado. Esto también significa que la
+    distancia más corta entre dos puntos es una línea recta (porque pasar por un tercer punto
     siempre es más largo).
 
 triangle-median:

@@ -68,6 +68,15 @@ alternate-angles:
     Die Winkelpaare 1 und 2 werden als __äußere Wechselwinkel__bezeichnet, da sie außerhalb der
     parallelen Linien liegen, und die Winkelpaare 3 und 4 als __innere Wechselwinkel__.
 
+amino-acid:
+  title: Aminosäure
+  text: |
+    __Aminosäuren__ sind winzige organische Verbindungen, aus denen __Proteine__ bestehen. Sie sind
+    einige der Schlüsselbausteine aller lebenden Organismen.
+
+    In unserem Körper werden Aminosäuren verwendet, um Nahrung abzubauen, Körpergewebe zu
+    reparieren, Energie zu speichern und für viele andere Funktionen.
+
 angle:
   title: Winkel
   text: |
@@ -146,10 +155,10 @@ atom:
   title: Atom
   text: |
     __Atome__ sind die Teilchen, aus denen alle gewöhnlichen Stoffe bestehen: Feststoffe,
-    Flüssigkeiten, Gase und Plasma. Atome bestehen aus einem positiv geladenen _Atomkern_
-    (oder _Kern_), der aus _Protonen_ und _Neutronen_ besteht und von negativ geladenen
-    _Elektronen_ in einer Schalen umgeben ist . Der Durchmesser eines Atoms beträgt ungefähr
-    einen Zehnmillionstel Millimeter.
+    Flüssigkeiten, Gase und Plasma. Atome bestehen aus einem positiv geladenen _Atomkern_ (oder
+    _Kern_), der aus _Protonen_ und _Neutronen_ besteht und von negativ geladenen _Elektronen_ in
+    einer Schalen umgeben ist . Der Durchmesser eines Atoms beträgt ungefähr einen Zehnmillionstel
+    Millimeter.
 
 axiom:
   title: Axiom |
@@ -312,13 +321,13 @@ complete-graph:
 complex-numbers:
   title: Komplexe Zahlen
   text: |
-    Die __komplexen Zahlen__ sind alle Zahlen, die die Summe oder Differenz
-    einer realen und einer     imaginären Zahl sind. Sie werden oft als `a + bi`
-    geschrieben, wobei _a_ der Realteil und _b_ der Imaginärteil ist.
-    
-    Komplexe Zahlen können in einer zweidimensionalen Ebene dargestellt werden, wobei
-    die _x_-Achse die reellen Zahlen und die _y_-Achse die imaginären Zahlen sind.    
-    
+    Die __komplexen Zahlen__ sind alle Zahlen, die die Summe oder Differenz einer realen und
+    einer     imaginären Zahl sind. Sie werden oft als `a + bi` geschrieben, wobei _a_ der Realteil
+    und _b_ der Imaginärteil ist.
+
+    Komplexe Zahlen können in einer zweidimensionalen Ebene dargestellt werden, wobei die _x_-Achse
+    die reellen Zahlen und die _y_-Achse die imaginären Zahlen sind.
+
     Die Menge aller komplexen Zahlen wird oft mit dem Symbol `CC` bezeichnet.
 
 composite-number:
@@ -373,13 +382,13 @@ congruent-angles:
 conic-section:
   title: Kegelschnitt
   text: |
-    Ein __Kegelschnitt__ ist eine Kurve, die aus den Schnittpunkten der Oberfläche
-    eines Kegels mit einer ebenen Fläche erzeugt wird. Es gibt vier verschiedene Arten
-    von Kegelschnitten, die alle viele gemeinsame Eigenschaften haben:
-    
-    * Kreis 
-    * Ellipse 
-    * Parabel 
+    Ein __Kegelschnitt__ ist eine Kurve, die aus den Schnittpunkten der Oberfläche eines Kegels mit
+    einer ebenen Fläche erzeugt wird. Es gibt vier verschiedene Arten von Kegelschnitten, die alle
+    viele gemeinsame Eigenschaften haben:
+
+    * Kreis
+    * Ellipse
+    * Parabel
     * Hyperbel
   link: /course/circles/conic-sections
 
@@ -449,10 +458,10 @@ cube-volume:
 
 cylinder:
   title: Zylinder
-  text: Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei kongruenten,
-  	parallelen, kreisförmigen Flächen (den _Grund- und Deckflächen_) besteht, die durch
-  	eine gekrümmte Oberfläche verbunden sind. Man könnte sich einen Zylinder auch als "rundes Prisma" vorstellen.
-  	
+  text: |
+    Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei kongruenten, parallelen,
+    kreisförmigen Flächen (den _Grund- und Deckflächen_) besteht, die durch eine gekrümmte
+    Oberfläche verbunden sind. Man könnte sich einen Zylinder auch als "rundes Prisma" vorstellen.
   link: /course/circles/spheres-cones-cylinders#cylinder-prism
   image: cylinder.svg
 
@@ -676,9 +685,10 @@ geometric-sequence:
 
 geometric-series:
   title: Geometrische Reihe
-  text: Eine __geometrische Reihe__ ist die unendliche Summe der Terme in einer
-  	geometrischen Folge, wobei aufeinanderfolgende Terme in einem konstanten Verhältnis _r_
-  	zueinander stehen. Zum Beispiel,
+  text: |
+    Eine __geometrische Reihe__ ist die unendliche Summe der Terme in einer geometrischen Folge,
+    wobei aufeinanderfolgende Terme in einem konstanten Verhältnis _r_ zueinander stehen. Zum
+    Beispiel,
 
     {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
 
@@ -960,12 +970,12 @@ millennium-prize:
     Mathematik. Sie wurden im Jahr 2000 vom _Clay Mathematics Institute_ aufgelistet und mit jeweils
     einer Belohnung von 1 Million Dollar für die Lösung ausgeschrieben:
 
-    * Lösung des P-NP-Problems 
-    * Beweis der Vermutung von Hodge 
-    * Beweis der Poincaré-Vermutung 
-    * Beweis der Riemannschen Vermutung 
-    * Erforschung der Gleichungen von Yang-Mills 
-    * Existenz und Regularität von Lösungen der Navier-Stokes-Gleichungen 
+    * Lösung des P-NP-Problems
+    * Beweis der Vermutung von Hodge
+    * Beweis der Poincaré-Vermutung
+    * Beweis der Riemannschen Vermutung
+    * Erforschung der Gleichungen von Yang-Mills
+    * Existenz und Regularität von Lösungen der Navier-Stokes-Gleichungen
     * Beweis der Vermutung von Birch und Swinnerton-Dyer
 
     Bisher wurde nur eines der Probleme, die _Poincaré-Vermutung_, gelöst. Doch der Mathematiker,
@@ -985,6 +995,16 @@ molecule:
 
     Beispiele für Moleküle sind `O_2`, das aus zwei verbundenen Sauerstoffatomen besteht, und `H_2
     O`, das aus zwei Wasserstoffatomen und einem Sauerstoffatom besteht.
+
+morse-code:
+  title: Morse-Code
+  text: |
+    __Der Morsecode__ ist eine Möglichkeit, Buchstaben und Zahlen mit kurzen und langen Signalen
+    (Punkte und Striche genannt) darzustellen. Es ist nach _Samuel Morse_ benannt und wurde
+    ursprünglich verwendet, um über große Entfernungen mit Telegraphen zu kommunizieren.
+
+    Zum Beispiel würde der Buchstabe "L" unter Verwendung der Sequenz _{x-morse(char="L")}_ von
+    kurzen und langen Signalen dargestellt.
 
 multiple:
   title: Vielfache
@@ -1484,12 +1504,12 @@ roman-numerals:
     Jahrhundert verwendet. Damit konnte man durch Kombination von sieben verschiedene Buchstaben
     jede beliebige ganze Zahl schreiben:
 
-    * I = 1 
-    * V = 5 
-    * X = 10 
-    * L = 50 
-    * C = 100 
-    * D = 500 
+    * I = 1
+    * V = 5
+    * X = 10
+    * L = 50
+    * C = 100
+    * D = 500
     * M = 1000
 
 rotation:
@@ -1535,6 +1555,13 @@ scientific-notation:
     a < 10`.
 
     Zum Beispiel könnte die Zahl 4600 als `4,6 × 10^3` geschrieben werden.
+
+set:
+  title: Sets
+  text: |
+    Eine __Menge__ ist eine Sammlung von Dingen oder Objekten (Elemente genannt). Jedes Element kann
+    nur eines in einer Menge enthalten sein. Wir schreiben Mengen mit {} s, zum Beispiel würde eine
+    Menge, die die Zahlen 2, 3 und 4 enthält, als {2, 3, 4} geschrieben.
 
 sequence:
   title: Folge

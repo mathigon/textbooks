@@ -175,7 +175,8 @@ export function wheel($step: Step) {
         $pi.enter('pop');
         done = true;
       }
-    }
+    },
+    accessible: true
   });
 
   $wheel.css('cursor', 'ew-resize');

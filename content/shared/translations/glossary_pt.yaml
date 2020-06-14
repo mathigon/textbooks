@@ -21,8 +21,8 @@ acute-triangle:
 adic:
   title: Números adic
   text: |
-    Os números __*N*-adic__, para alguns números inteiros _n_, são um sistema numérico especial,
-    com uma definição de “proximidade” diferente da aritmética usual. Dois números adic _n_ estão
+    Os números __*N*-adic__, para alguns números inteiros _n_, são um sistema numérico especial, com
+    uma definição de “proximidade” diferente da aritmética usual. Dois números adic _n_ estão
     _próximos_ se a diferença for divisível por uma alta potência de _n_.
 
 adjacent-angles:
@@ -50,9 +50,9 @@ algebraic-numbers:
 algorithm:
   title: Algoritmo
   text: |
-    Um algoritmoé um conjunto de regras ou instruções que podem ser usadas para resolver um
-    problema específico. Eles são comumente usados por computadores e aparecem em toda parte na
-    matemática: de _divisão longa_ a _eliminação gaussiana_.
+    Um algoritmoé um conjunto de regras ou instruções que podem ser usadas para resolver um problema
+    específico. Eles são comumente usados por computadores e aparecem em toda parte na matemática:
+    de _divisão longa_ a _eliminação gaussiana_.
 
 alternate-angles:
   title: Ângulos alternativos
@@ -64,6 +64,15 @@ alternate-angles:
 
     Os pares de ângulos 1 e 2 são chamados __ângulos externos alternativos__, porque estão fora das
     linhas paralelas, e os pares de ângulos 3 e 4 são chamados __ângulos internos alternativos__.
+
+amino-acid:
+  title: Aminoácido
+  text: |
+    __Aminoácidos__ são pequenos compostos orgânicos que compõem __proteínas__. Eles são alguns dos
+    principais componentes de todos os organismos vivos.
+
+    No nosso corpo, os aminoácidos são usados para decompor os alimentos, reparar tecidos corporais,
+    armazenar energia e para muitas outras funções.
 
 angle:
   title: Ângulo
@@ -215,8 +224,8 @@ chaos:
 circle:
   title: Círculo
   text: |
-    Um círculoé o conjunto de todos os pontos em duas dimensões, a uma distância fixa (o raio
-    __) de um determinado ponto (o _centro_).
+    Um círculoé o conjunto de todos os pontos em duas dimensões, a uma distância fixa (o raio __) de
+    um determinado ponto (o _centro_).
   image: circle.svg
   link: /course/circles/introduction#radius
 
@@ -227,8 +236,8 @@ circle-area:
 circle-circumference:
   title: Circunferência de um círculo
   text: |
-    A circunferênciade um círculo é a distância em torno de sua borda externa. Um círculo com
-    raio _r_ tem circunferência `C = 2 pi r`.
+    A circunferênciade um círculo é a distância em torno de sua borda externa. Um círculo com raio
+    _r_ tem circunferência `C = 2 pi r`.
   link: /course/circles/introduction#radius
 
 circle-diameter:
@@ -241,8 +250,8 @@ circle-diameter:
 circle-radius:
   title: Raio
   text: |
-    O raiode um círculo é a distância (ou um segmento de linha) entre seu centro e qualquer
-    ponto em sua circunferência.
+    O raiode um círculo é a distância (ou um segmento de linha) entre seu centro e qualquer ponto em
+    sua circunferência.
   link: /course/circles/introduction#radius
 
 circle-sector:
@@ -311,8 +320,8 @@ complex-numbers:
 composite-number:
   title: Número composto
   text: |
-    Um número compostoé um número inteiro que não é primo. Isso significa que ele possui
-    outros fatores além de 1 e ele próprio.
+    Um número compostoé um número inteiro que não é primo. Isso significa que ele possui outros
+    fatores além de 1 e ele próprio.
 
 concave:
   title: Polígono côncavo
@@ -387,8 +396,8 @@ coordinate-system:
 coordinate-system-origin:
   title: Sistema de coordenadas
   text: |
-    A origemde um sistema de coordenadas é o ponto com coordenadas (0, 0). Geralmente é o
-    ponto em que os dois eixos se cruzam.
+    A origemde um sistema de coordenadas é o ponto com coordenadas (0, 0). Geralmente é o ponto em
+    que os dois eixos se cruzam.
 
 corresponding-angles:
   title: Ângulos correspondentes
@@ -425,8 +434,8 @@ cryptography:
 cube:
   title: Cubo
   text: |
-    Um cubo(às vezes chamado de __hexaedro__) é um poliedro regular em que cada face é um
-    quadrado. É um dos cinco _sólidos platônicos_ e possui 6 faces, 8 vértices e 12 arestas.
+    Um cubo(às vezes chamado de __hexaedro__) é um poliedro regular em que cada face é um quadrado.
+    É um dos cinco _sólidos platônicos_ e possui 6 faces, 8 vértices e 12 arestas.
   link: /course/polyhedra/platonic#platonic-overview
 
 cube-volume:
@@ -467,8 +476,8 @@ denominator:
 dilation:
   title: Dilatação
   text: |
-    Uma dilataçãoé uma transformação que redimensiona uma forma geométrica, tornando-a maior
-    ou menor.
+    Uma dilataçãoé uma transformação que redimensiona uma forma geométrica, tornando-a maior ou
+    menor.
   image: dilation.svg
   link: /course/transformations/dilations
 
@@ -524,8 +533,8 @@ dot-machine:
 ellipse:
   title: Elipse
   text: |
-    Uma elipseé um caminho curvo que envolve dois pontos focais. Qualquer ponto na
-    circunferência da elipse tem a mesma _soma das distâncias_ dos dois focos.
+    Uma elipseé um caminho curvo que envolve dois pontos focais. Qualquer ponto na circunferência da
+    elipse tem a mesma _soma das distâncias_ dos dois focos.
 
     Se os focos estão muito próximos, a elipse parece quase um círculo. À medida que se afastam, a
     elipse se torna mais alongada.
@@ -537,8 +546,8 @@ ellipse:
 equation:
   title: Equação
   text: |
-    Uma equaçãoé uma instrução matemática criada pela conexão de duas ou mais expressões com o
-    sinal de igual`=`. Indica que todas essas expressões têm o mesmo valor.
+    Uma equaçãoé uma instrução matemática criada pela conexão de duas ou mais expressões com o sinal
+    de igual`=`. Indica que todas essas expressões têm o mesmo valor.
 
 equilateral-triangle:
   title: Triângulo Equilátero
@@ -556,8 +565,8 @@ euclidean-geometry:
 factor:
   title: Fator
   text: |
-    Um número _a_ é um fator(ou __divisor__) de um número _b_, se você puder dividir _b_ por
-    _a_ sem resto.
+    Um número _a_ é um fator(ou __divisor__) de um número _b_, se você puder dividir _b_ por _a_ sem
+    resto.
   link: /course/divisibility/factors-and-multiples
 
 factorial:
@@ -609,8 +618,8 @@ figurate-numbers:
 formula:
   title: Fórmula
   text: |
-    Uma fórmulaé uma regra ou equação que descreve o relacionamento entre duas ou mais
-    variáveis. Um exemplo é `A = πr^2`.
+    Uma fórmulaé uma regra ou equação que descreve o relacionamento entre duas ou mais variáveis. Um
+    exemplo é `A = πr^2`.
 
 fractal:
   title: Fractal
@@ -630,8 +639,8 @@ fta:
 function:
   title: Função
   text: |
-    Uma funçãoé uma relação matemática que converte uma entrada (_x_) em exatamente uma saída
-    (_e_). Eles são frequentemente expressos como equações matemáticas da forma `f(x)`.
+    Uma funçãoé uma relação matemática que converte uma entrada (_x_) em exatamente uma saída (_e_).
+    Eles são frequentemente expressos como equações matemáticas da forma `f(x)`.
 
 function-graph:
   title: Gráficos de funções
@@ -757,8 +766,8 @@ hexagon:
 hyperbola:
   title: Hipérbole
   text: |
-    Uma hipérboleé a forma do gráfico da função `y = 1/x`. Consiste em duas partes disjuntas,
-    ambas abordando _assíntotas_. É também uma _seção cônica_.
+    Uma hipérboleé a forma do gráfico da função `y = 1/x`. Consiste em duas partes disjuntas, ambas
+    abordando _assíntotas_. É também uma _seção cônica_.
   image: hyperbola.svg
 
 hypotenuse:
@@ -866,8 +875,8 @@ lcm:
 line:
   title: Linha
   text: |
-    Uma linhaé um conjunto de infinitos pontos que se estendem para sempre nas duas direções.
-    As linhas são sempre retas e não têm _largura_.
+    Uma linhaé um conjunto de infinitos pontos que se estendem para sempre nas duas direções. As
+    linhas são sempre retas e não têm _largura_.
   link: /course/euclidean-geometry/definitions#lines
 
 line-segment:
@@ -893,8 +902,8 @@ linear-equation:
 linear-function:
   title: Função linear
   text: |
-    Uma função linearé uma função cujo gráfico é uma linha reta. Pode ser definido como `f(x)
-    = mx + c`, onde _m_ é a inclinação da linha e _c_ é sua interceptação de eixo _e_.
+    Uma função linearé uma função cujo gráfico é uma linha reta. Pode ser definido como `f(x) = mx +
+    c`, onde _m_ é a inclinação da linha e _c_ é sua interceptação de eixo _e_.
 
 mandelbrot-set:
   title: Conjunto de Mandelbrot
@@ -948,8 +957,8 @@ millennium-prize:
 mode:
   title: Modo
   text: |
-    O modode um conjunto de números é o número que ocorre com mais frequência. Por exemplo, o
-    modo de [3, 4, 4, 4, 5, 5, 6] é 5.
+    O modode um conjunto de números é o número que ocorre com mais frequência. Por exemplo, o modo
+    de [3, 4, 4, 4, 5, 5, 6] é 5.
 
 molecule:
   title: Molécula
@@ -959,6 +968,16 @@ molecule:
 
     Exemplos de moléculas incluem `O_2`, que consiste em dois átomos de oxigênio conectados e `H_2
     O`, que consiste em dois átomos de hidrogênio e um átomo de oxigênio.
+
+morse-code:
+  title: Código Morse
+  text: |
+    __Código Morse__ é uma maneira de representar letras e números usando sinais curtos e longos
+    (chamados pontos e traços). É nomeado após _Samuel Morse_ e foi inicialmente usado para se
+    comunicar por longas distâncias usando telégrafos.
+
+    Por exemplo, a letra "L" seria representada usando a sequência _{x-morse(char="L")}_ de sinais
+    curtos e longos.
 
 multiple:
   title: Múltiplo
@@ -993,8 +1012,7 @@ np:
 numerator:
   title: Numerador
   text: |
-    O numeradoré o número superior em uma fração. Por exemplo, em `4/7`, o número 4 é o
-    numerador.
+    O numeradoré o número superior em uma fração. Por exemplo, em `4/7`, o número 4 é o numerador.
 
 obtuse-angle:
   title: Ângulo obtuso
@@ -1027,8 +1045,7 @@ order-of-symmetry:
 origin:
   title: Origem
   text: |
-    A origemde um sistema de coordenadas é o ponto (0, 0), onde o eixo _x_ e o eixo _e_ se
-    cruzam.
+    A origemde um sistema de coordenadas é o ponto (0, 0), onde o eixo _x_ e o eixo _e_ se cruzam.
 
 origin-number-line:
   title: Origem de uma linha numérica
@@ -1037,15 +1054,15 @@ origin-number-line:
 palindrome:
   title: Palíndromo
   text: |
-    Um palíndromoé uma palavra ou número que lê o mesmo de trás para frente e da frente para
-    trás. Por exemplo, 25752 e "ANNA" são ambos palíndromos.
+    Um palíndromoé uma palavra ou número que lê o mesmo de trás para frente e da frente para trás.
+    Por exemplo, 25752 e "ANNA" são ambos palíndromos.
   link: /course/transformations/symmetry#palindromes
 
 parabola:
   title: Antena parabólica
   text: |
-    Uma parábolaé a forma do gráfico de uma função quadrática como `y = x^2`. É simétrico, em
-    forma de U e pode apontar para cima ou para baixo. É também uma _seção cônica_.
+    Uma parábolaé a forma do gráfico de uma função quadrática como `y = x^2`. É simétrico, em forma
+    de U e pode apontar para cima ou para baixo. É também uma _seção cônica_.
   image: parabola.svg
 
 parabola-conic:
@@ -1151,8 +1168,8 @@ point:
 polygon:
   title: Polígono
   text: |
-    Um polígonoé uma forma geométrica composta por segmentos de linha reta. Os polígonos não
-    podem conter lados curvos ou furos. Por exemplo, um quadrado é um polígono, mas um círculo não.
+    Um polígonoé uma forma geométrica composta por segmentos de linha reta. Os polígonos não podem
+    conter lados curvos ou furos. Por exemplo, um quadrado é um polígono, mas um círculo não.
   image: polygon.svg
   link: /course/polyhedra/polygons#polygons
 
@@ -1254,26 +1271,26 @@ prism:
 probability:
   title: Probabilidade
   text: |
-    Uma probabilidadeé um número entre 0 e 1 que indica a probabilidade da ocorrência de
-    determinado evento. A probabilidade de um evento _A_ é escrita como `P(A)`.
+    Uma probabilidadeé um número entre 0 e 1 que indica a probabilidade da ocorrência de determinado
+    evento. A probabilidade de um evento _A_ é escrita como `P(A)`.
 
 probability-tree:
   title: Árvore de Probabilidades
   text: |
-    Uma árvore de probabilidadeé um diagrama em árvore que representa a probabilidade
-    combinada de vários eventos seqüenciais.
+    Uma árvore de probabilidadeé um diagrama em árvore que representa a probabilidade combinada de
+    vários eventos seqüenciais.
 
 proof:
   title: Prova
   text: |
-    Uma provaé um argumento lógico que mostra além de qualquer dúvida que uma determinada
-    afirmação é verdadeira.
+    Uma provaé um argumento lógico que mostra além de qualquer dúvida que uma determinada afirmação
+    é verdadeira.
 
 protein:
   title: Proteína
   text: |
-    Uma proteínaé uma macromolécula _grande_ que pode desempenhar muitas funções diferentes
-    nos organismos vivos: da digestão à comunicação entre células ou ao DNA replicante. As proteínas
+    Uma proteínaé uma macromolécula _grande_ que pode desempenhar muitas funções diferentes nos
+    organismos vivos: da digestão à comunicação entre células ou ao DNA replicante. As proteínas
     consistem em uma ou mais cadeias de _resíduos de aminoácidos_.
 
 proton:
@@ -1285,8 +1302,8 @@ proton:
 pyramid:
   title: Pirâmide
   text: |
-    Uma pirâmideé um poliedro que tem um polígono como base e faces triangulares ao redor do
-    lado de fora, que afunilam em um vértice.
+    Uma pirâmideé um poliedro que tem um polígono como base e faces triangulares ao redor do lado de
+    fora, que afunilam em um vértice.
 
     Em uma pirâmide regular __direita__, a base é um polígono regular __ e o vértice está
     diretamente acima do centro da base.
@@ -1376,8 +1393,8 @@ rational-numbers:
 ray:
   title: Raio
   text: |
-    Um raioé a parte de uma linha que começa em um ponto e se estende infinitamente em uma
-    direção. Podemos rotular raios começando em `A` como `vec(AB)`.
+    Um raioé a parte de uma linha que começa em um ponto e se estende infinitamente em uma direção.
+    Podemos rotular raios começando em `A` como `vec(AB)`.
   link: /course/euclidean-geometry/definitions#rays
 
 real-numbers:
@@ -1458,8 +1475,8 @@ roman-numerals:
 rotation:
   title: Rotação
   text: |
-    Uma rotaçãoé uma transformação que “transforma” uma forma em um determinado ângulo em
-    torno de um ponto fixo.
+    Uma rotaçãoé uma transformação que “transforma” uma forma em um determinado ângulo em torno de
+    um ponto fixo.
   link: /course/transformations/rigid#rotations
 
 rotational-symmetry:
@@ -1498,12 +1515,18 @@ scientific-notation:
 
     Por exemplo, o número 4600 pode ser escrito como `4.6 × 10^3`.
 
+set:
+  title: Conjuntos
+  text: |
+    Um conjunto ____ é uma coleção de coisas ou objetos (chamados elementos). Cada elemento pode
+    aparecer apenas um em um conjunto. Escrevemos conjuntos usando {} s, por exemplo, um conjunto
+    contendo os números 2, 3 e 4 seria escrito como {2, 3, 4}.
+
 sequence:
   title: Seqüência
   text: |
-    Uma sequênciaé uma lista ordenada de números (ou outros elementos, como objetos
-    geométricos), que geralmente seguem um padrão ou função específica. Sequências podem ser finitas
-    e infinitas.
+    Uma sequênciaé uma lista ordenada de números (ou outros elementos, como objetos geométricos),
+    que geralmente seguem um padrão ou função específica. Sequências podem ser finitas e infinitas.
   link: /course/sequences/introduction#simple-patterns
 
 sequence-convergence:
@@ -1576,8 +1599,8 @@ sphere:
 sphere-radius:
   title: Raio de uma esfera
   text: |
-    O raiode uma esfera é a distância (ou um segmento de linha) entre seu centro e qualquer
-    ponto em sua superfície.
+    O raiode uma esfera é a distância (ou um segmento de linha) entre seu centro e qualquer ponto em
+    sua superfície.
 
 square:
   title: Quadrado
@@ -1680,15 +1703,15 @@ tetrahedron:
 theorem:
   title: Teorema
   text: |
-    Um teoremaé um resultado ou observação particularmente importante em matemática. Foi
-    provado ser sempre verdadeiro, usando axiomas, a lógica das regras e teoremas anteriores que já
-    eram verdadeiros.
+    Um teoremaé um resultado ou observação particularmente importante em matemática. Foi provado ser
+    sempre verdadeiro, usando axiomas, a lógica das regras e teoremas anteriores que já eram
+    verdadeiros.
 
 transformation:
   title: Transformação
   text: |
-    Uma transformaçãoconverte uma forma geométrica em outra. Existem muitos tipos diferentes
-    de transformações, como _reflexões_ ou _dilatações_.
+    Uma transformaçãoconverte uma forma geométrica em outra. Existem muitos tipos diferentes de
+    transformações, como _reflexões_ ou _dilatações_.
   link: /course/transformations/rigid#transformations
 
 transformation-image:
@@ -1701,8 +1724,8 @@ transformation-image:
 translation:
   title: Tradução
   text: |
-    Uma traduçãoé uma transformação que move uma figura em uma direção específica, sem alterar
-    seu ângulo ou forma.
+    Uma traduçãoé uma transformação que move uma figura em uma direção específica, sem alterar seu
+    ângulo ou forma.
   image: translation.svg
   link: /course/transformations/rigid#translations
 
@@ -1776,9 +1799,9 @@ triangle-midsegment:
 triangle-numbers:
   title: Números de triângulo
   text: |
-    Um número do triânguloé um número inteiro que pode ser representado como um triângulo
-    equilátero de pontos. A fórmula para o número do triângulo _n_ é `(n*(n+1))/ 2` e os primeiros
-    números do triângulo são 1, 3, 6, 10, 15,…
+    Um número do triânguloé um número inteiro que pode ser representado como um triângulo equilátero
+    de pontos. A fórmula para o número do triângulo _n_ é `(n*(n+1))/ 2` e os primeiros números do
+    triângulo são 1, 3, 6, 10, 15,…
   image: triangle-numbers.svg
   link: /course/sequences/figurate#triangle-numbers
 

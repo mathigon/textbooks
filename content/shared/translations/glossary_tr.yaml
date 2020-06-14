@@ -65,6 +65,15 @@ alternate-angles:
     Açı çiftleri 1 ve 2'ye __alternatif dış açılar__ denir, çünkü bunlar paralel çizgilerin
     dışındadır ve açı çiftleri 3 ve 4 __alternatif iç açılar__ olarak adlandırılır.
 
+amino-acid:
+  title: Amino asit
+  text: |
+    __Amino asitler__, __proteinleri__ oluşturan küçük organik bileşiklerdir. Bunlar tüm canlı
+    organizmaların temel yapı taşlarından bazılarıdır.
+
+    Vücudumuzda amino asitler yiyecekleri parçalamak, vücut dokusunu onarmak, enerji depolamak ve
+    diğer birçok işlev için kullanılır.
+
 angle:
   title: Açı
   text: |
@@ -706,9 +715,9 @@ group:
   text: |
     Grup, üç farklı kurala uyan “şeylerin” (sayılar veya simetriler gibi) bir koleksiyonudur:
 
-    * Grupta bulunan başka bir tane almak için iki şey ekleyebilir / birleştirebilirsiniz.
-    * İşler _çağrışımlı_, yani `a+(b+c) + (a+b)+c`.
-    * Bir _kimlik_ vardır ve her “şeyin” eklendiği zaman kimliği veren bir _ters_ vardır.
+    * Grupta bulunan başka bir tane almak için iki şey ekleyebilir / birleştirebilirsiniz. * İşler
+    _çağrışımlı_, yani `a+(b+c) + (a+b)+c`. * Bir _kimlik_ vardır ve her “şeyin” eklendiği zaman
+    kimliği veren bir _ters_ vardır.
   link: /course/transformations/symmetry-groups#groups-1
 
 hailstone-sequence:
@@ -933,6 +942,16 @@ molecule:
 
     Moleküllere örnek olarak, iki bağlı Oksijen atomundan oluşan `O_2` ve iki Hidrojen atomundan ve
     bir Oksijen atomundan oluşan `H_2 O` gösterilebilir.
+
+morse-code:
+  title: Mors kodu
+  text: |
+    __Mors kodu__, kısa ve uzun sinyaller (nokta ve tire denir) kullanarak harfleri ve sayıları
+    temsil etmenin bir yoludur. Adı _Samuel Morse_ 'ten sonradır ve başlangıçta uzun mesafelerde
+    telgraf kullanarak iletişim kurmak için kullanılmıştır.
+
+    Örneğin, “L” harfi kısa ve uzun sinyallerin _{x-morse(char="L")}_ dizisi kullanılarak temsil
+    edilir.
 
 multiple:
   title: çoklu
@@ -1272,9 +1291,8 @@ quadratic:
 quadratic-equation:
   title: İkinci dereceden denklem
   text: |
-    __ikinci dereceden denklem__, tek bir derece 2 değişkeni içeren bir denklemdir. Genellikle
-    `ax^2 + bx + c = 0` olarak yazılır, burada _x_ bir değişken, _a_, _b_ ve _c_ rakamlardır ve
-    `a != 0`.
+    __ikinci dereceden denklem__, tek bir derece 2 değişkeni içeren bir denklemdir. Genellikle `ax^2
+    + bx + c = 0` olarak yazılır, burada _x_ bir değişken, _a_, _b_ ve _c_ rakamlardır ve `a != 0`.
 
 quadratic-formula:
   title: İkinci dereceden formül
@@ -1448,6 +1466,13 @@ scientific-notation:
 
     Örneğin, 4600 sayısı `4.6 × 10^3` olarak yazılabilir.
 
+set:
+  title: Setler
+  text: |
+    __kümesi__, bir şeyler veya nesneler (öğeler denir) topluluğudur. Her öğe bir kümede yalnızca
+    bir tane görünebilir. {} S kullanarak kümeler yazıyoruz, örneğin, 2, 3 ve 4 sayılarını içeren
+    bir küme {2, 3, 4} olarak yazılacaktı.
+
 sequence:
   title: Sıra
   text: |
@@ -1595,11 +1620,11 @@ tangent:
 term:
   title: Dönem (Cebir)
   text: |
-   terimleri, bir cebirsel ifadenin veya denklemin + veya - işaretleriyle ayrılmış
-    bölümleridir. Ürünler veya kesirler veya bir veya daha fazla sayı, değişken veya fonksiyon
-    olabilir.
+    terimleri, bir cebirsel ifadenin veya denklemin + veya - işaretleriyle ayrılmış
+     bölümleridir. Ürünler veya kesirler veya bir veya daha fazla sayı, değişken veya fonksiyon
+     olabilir.
 
-    Örneğin, `2x^2 - 3ab + 4` ifadesinde üç terim `2x^2`, `3ab` ve 4'tür.
+     Örneğin, `2x^2 - 3ab + 4` ifadesinde üç terim `2x^2`, `3ab` ve 4'tür.
 
 tessellation:
   title: mozaik döşeme

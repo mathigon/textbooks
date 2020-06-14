@@ -1188,6 +1188,23 @@ monsky:
     Ông đã chứng minh rằng một hình vuông không thể được chia thành một số lẻ các hình tam giác có
     diện tích bằng nhau - điều này được gọi là định lý của nhà thờ Đức Bà.
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) là một nhà phát minh và họa sĩ người Mỹ. Anh lớn lên gần Boston
+    và học tại trường đại học Yale, trước khi bắt đầu sự nghiệp với tư cách là một nghệ sĩ.
+
+    Trong hành trình trở về từ chuyến đi đến Châu Âu để nghiên cứu nghệ thuật, Morse tình cờ nghe
+    thấy hành khách nói về các thiết bị điện mới. Điều này đã truyền cảm hứng cho anh ta để cải
+    thiện đáng kể cho điện báo điện, chỉ sử dụng một dây duy nhất và để phát triển _mã Morse_ với
+    trợ lý Alfred Vail.
+
+    Sau một số khó khăn ban đầu trong việc nhận tài trợ, điện báo Morse Hồi đã nhanh chóng lan rộng
+    khắp nước Mỹ và thế giới.
+
+    Morse cũng đã chạy hai lần cho thị trưởng thành phố New York, nhưng sự ủng hộ của ông đối với
+    chế độ nô lệ và chống nhập cư có nghĩa là ông đã bị đánh bại cả hai lần.
+
 napier:
   born: 1550
   died: 1617

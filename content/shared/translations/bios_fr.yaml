@@ -1226,6 +1226,23 @@ monsky:
     Brandeis. Il a prouvé qu’un carré ne peut pas être divisé en un nombre impair de triangles
     d’aire égale - c’est ce que l’on appelle le «théorème de Monsky».
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) était un inventeur et peintre américain. Il a grandi près de
+    Boston et a étudié à l'université de Yale, avant de commencer une carrière d'artiste.
+
+    À son retour d'un voyage en Europe pour étudier l'art, Morse a entendu des passagers parler de
+    nouveaux appareils électriques. Cela l'a inspiré à travailler sur une amélioration significative
+    du télégraphe électrique, en utilisant un seul fil, et à développer un _code Morse_ avec son
+    assistant Alfred Vail.
+
+    Après quelques difficultés initiales à recevoir des fonds, le télégraphe de Morse s'est
+    rapidement répandu aux États-Unis et dans le monde.
+
+    Morse a également couru deux fois pour le maire de New York, mais son soutien pour l'esclavage
+    et contre l'immigration a signifié qu'il a été battu les deux fois.
+
 napier:
   born: 1550
   died: 1617

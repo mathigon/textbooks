@@ -5,7 +5,7 @@
 absolute-value:absolute-value:
   title: Apsolutna vrijednost
   text: |
-    Apsolutna vrijednostbroja je njegova udaljenost od broja 0 u brojaču. Negativne brojeve
+    Apsolutna vrijednost ____ broja je njegova udaljenost od broja 0 u brojaču. Negativne brojeve
     čini pozitivnim, ali pozitivne brojeve ostavlja nepromijenjene. Apsolutna vrijednost `x`
     zapisuje se kao `|x|`. Na primjer, `|-5| = 5` i `|3| = 3`.
 
@@ -50,9 +50,9 @@ algebraic-numbers:
 algorithm:
   title: Algoritam
   text: |
-    Algoritamskup je pravila ili uputa koja se mogu koristiti za rješavanje određenog
-    problema. Računala ih obično koriste i pojavljuju se svugdje u matematici: od _duge podjele_ do
-    _Gaussove eliminacije_.
+    Algoritamskup je pravila ili uputa koja se mogu koristiti za rješavanje određenog problema.
+    Računala ih obično koriste i pojavljuju se svugdje u matematici: od _duge podjele_ do _Gaussove
+    eliminacije_.
 
 alternate-angles:
   title: Alternativni kutovi
@@ -64,6 +64,15 @@ alternate-angles:
 
     Kutni parovi 1 i 2 nazivaju se __alternativni vanjski kutovi__, jer leže izvan paralelnih
     linija, a parovi kutova 3 i 4 nazivaju se __alternativni unutarnji kutovi__.
+
+amino-acid:
+  title: Amino kiselina
+  text: |
+    __Aminokiseline__ su sitni organski spojevi koji čine __proteine__. Oni su jedan od ključnih
+    sastavnih dijelova svih živih organizama.
+
+    U našem se tijelu aminokiseline koriste za razgradnju hrane, popravljanje tjelesnog tkiva,
+    skladištenje energije i za mnoge druge funkcije.
 
 angle:
   title: Kut
@@ -114,8 +123,8 @@ archimedean-solid:
 arithmetic-mean:
   title: Aritmetička srednja vrijednost
   text: |
-    Srednja vrijednostje _prosjek_ skupa brojeva. Možete izračunati, ali zbrajajući sve
-    brojeve u skupu i podijeliti ukupan s brojem predmeta.
+    Srednja vrijednostje _prosjek_ skupa brojeva. Možete izračunati, ali zbrajajući sve brojeve u
+    skupu i podijeliti ukupan s brojem predmeta.
 
 arithmetic-sequence:
   title: Aritmetička sekvenca
@@ -213,8 +222,8 @@ chaos:
 circle:
   title: Krug
   text: |
-    Krugje skup svih točaka u dvije dimenzije, na određenoj udaljenosti (polumjer _) od
-    određene točke (središte __).
+    Krugje skup svih točaka u dvije dimenzije, na određenoj udaljenosti (polumjer _) od određene
+    točke (središte __).
   image: circle.svg
   link: /course/circles/introduction#radius
 
@@ -232,15 +241,15 @@ circle-circumference:
 circle-diameter:
   title: Promjer (krug)
   text: |
-    Promjerkružnice je udaljenost između dviju suprotnih točaka na njegovom obodu i prolaska
-    kroz njegovo središte.
+    Promjerkružnice je udaljenost između dviju suprotnih točaka na njegovom obodu i prolaska kroz
+    njegovo središte.
   link: /course/circles/introduction#radius
 
 circle-radius:
   title: Radius
   text: |
-    Poljekružnice je udaljenost (ili segment linije) između njegovog središta i bilo koje
-    točke na njegovom krugu.
+    Poljekružnice je udaljenost (ili segment linije) između njegovog središta i bilo koje točke na
+    njegovom krugu.
   link: /course/circles/introduction#radius
 
 circle-sector:
@@ -305,8 +314,8 @@ complex-numbers:
 composite-number:
   title: Kompozitni broj
   text: |
-    Sastavni brojje cijeli broj koji nije primarni. To znači da ima i druge faktore osim sebe
-    i sebe.
+    Sastavni brojje cijeli broj koji nije primarni. To znači da ima i druge faktore osim sebe i
+    sebe.
 
 concave:
   title: Konkavni poligon
@@ -349,8 +358,8 @@ congruent-angles:
 conic-section:
   title: Konusni presjek
   text: |
-    Konski presjekkrivulja je koja nastaje kao sjecište površine stošca s ravnom ravninom.
-    Postoje četiri različite vrste stožastog presjeka koji imaju mnoga svojstva:
+    Konski presjekkrivulja je koja nastaje kao sjecište površine stošca s ravnom ravninom. Postoje
+    četiri različite vrste stožastog presjeka koji imaju mnoga svojstva:
 
     * Krug
 
@@ -521,8 +530,8 @@ ellipse:
 equation:
   title: Jednadžba
   text: |
-    Jednadžbaje matematička izjava stvorena povezivanjem dvaju ili više izraza sa znakom
-    __jednake__ `=`. Pokazuje da svi ti izrazi imaju istu vrijednost.
+    Jednadžbaje matematička izjava stvorena povezivanjem dvaju ili više izraza sa znakom __jednake__
+    `=`. Pokazuje da svi ti izrazi imaju istu vrijednost.
 
 equilateral-triangle:
   title: Jednakostraničan trokut
@@ -540,8 +549,7 @@ euclidean-geometry:
 factor:
   title: Faktor
   text: |
-    Broj _a_ je faktor(ili __razdjelnik__) broja _b_, ako možete podijeliti _b_ do _a_ bez
-    ostatka.
+    Broj _a_ je faktor(ili __razdjelnik__) broja _b_, ako možete podijeliti _b_ do _a_ bez ostatka.
   link: /course/divisibility/factors-and-multiples
 
 factorial:
@@ -593,8 +601,8 @@ figurate-numbers:
 formula:
   title: Formula
   text: |
-    Formulaje pravilo ili jednadžba koja opisuje odnos između dvije ili više varijabli.
-    Primjer je `A = πr^2`.
+    Formulaje pravilo ili jednadžba koja opisuje odnos između dvije ili više varijabli. Primjer je
+    `A = πr^2`.
 
 fractal:
   title: Fraktalna
@@ -776,8 +784,8 @@ information:
 integer:
   title: cijeli brojevi
   text: |
-    Cijeli brojevisu pozitivni i negativni cijeli brojevi, uključujući nulu:…, –3, –2, –1, 0,
-    1, 2, 3,…. Često se označavaju simbolom `ZZ`.
+    Cijeli brojevisu pozitivni i negativni cijeli brojevi, uključujući nulu:…, –3, –2, –1, 0, 1, 2,
+    3,…. Često se označavaju simbolom `ZZ`.
 
 internal-angle:
   title: Unutarnji kutovi
@@ -847,8 +855,8 @@ lcm:
 line:
   title: Crta
   text: |
-    Linijaskup je beskonačno mnogo točaka koje se zauvijek protežu u oba smjera. Linije su
-    uvijek ravne i nemaju _širinu_.
+    Linijaskup je beskonačno mnogo točaka koje se zauvijek protežu u oba smjera. Linije su uvijek
+    ravne i nemaju _širinu_.
   link: /course/euclidean-geometry/definitions#lines
 
 line-segment:
@@ -861,8 +869,8 @@ line-segment:
 line-slope:
   title: Nagib pruge
   text: |
-    Nagiblinije mjeri njegovu "strmu", a obično se označava slovom _m_. To je promjena u _y_
-    za promjenu jedinice u _x_ duž linije.
+    Nagiblinije mjeri njegovu "strmu", a obično se označava slovom _m_. To je promjena u _y_ za
+    promjenu jedinice u _x_ duž linije.
 
 linear-equation:
   title: Linearna jednadžba
@@ -873,8 +881,8 @@ linear-equation:
 linear-function:
   title: Linearna funkcija
   text: |
-    Linearna funkcijaje funkcija čiji je graf ravna linija. Može se definirati kao `f(x) = mx
-    + c`, gdje je _m_ nagib linije, a _c_ je njegov _y_ -osni presjek.
+    Linearna funkcijaje funkcija čiji je graf ravna linija. Može se definirati kao `f(x) = mx + c`,
+    gdje je _m_ nagib linije, a _c_ je njegov _y_ -osni presjek.
 
 mandelbrot-set:
   title: Mandelbrot set
@@ -891,14 +899,14 @@ matrix:
 median:
   title: srednja
   text: |
-    Medijalskupa brojeva je vrijednost za koju su pola brojeva veće, a polovica manja. Ako
-    postoje dva "srednja broja", to je prosjek tih brojeva.
+    Medijalskupa brojeva je vrijednost za koju su pola brojeva veće, a polovica manja. Ako postoje
+    dva "srednja broja", to je prosjek tih brojeva.
 
 midpoint:
   title: središnja točka
   text: |
-    Središnja točkasegmenta linije je točka na segmentu linija koja dijeli segment u sredini,
-    na dva kongruentna dijela. Formula __srednje točke__ kaže da je za krajnje točke `(x_1, y_1)` i
+    Središnja točkasegmenta linije je točka na segmentu linija koja dijeli segment u sredini, na dva
+    kongruentna dijela. Formula __srednje točke__ kaže da je za krajnje točke `(x_1, y_1)` i
     `(x_2,y_2)` srednja točka `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
 
 millennium-prize:
@@ -928,17 +936,27 @@ millennium-prize:
 mode:
   title: Način
   text: |
-    Načinskupa brojeva je broj koji se najčešće događa. Na primjer, način rada [3, 4, 4, 4, 5,
-    5, 6] je 5.
+    Načinskupa brojeva je broj koji se najčešće događa. Na primjer, način rada [3, 4, 4, 4, 5, 5, 6]
+    je 5.
 
 molecule:
   title: Molekula
   text: |
-    Molekulasastoji se od dva ili više atoma koji su kemijski vezani zajedno. Nema električni
-    naboj, za razliku od __Iona__.
+    Molekulasastoji se od dva ili više atoma koji su kemijski vezani zajedno. Nema električni naboj,
+    za razliku od __Iona__.
 
     Primjeri molekula uključuju `O_2` koji se sastoji od dva povezana atoma kisika i `H_2 O` koji se
     sastoji od dva vodikova atoma i jednog atoma kisika.
+
+morse-code:
+  title: Morzeov kod
+  text: |
+    __Morseov kôd__ je način predstavljanja slova i brojeva pomoću kratkih i dugih signala (zvanih
+    točkice i crtice). Ime je dobio po _Samuel Morse_ i u početku se koristio za komunikaciju na
+    velike udaljenosti pomoću telegrafa.
+
+    Na primjer, slovo "L" predstavljeno je korištenjem slijeda _{x-morse(char="L")}_ kratkih i dugih
+    signala.
 
 multiple:
   title: višekratnik
@@ -1031,14 +1049,14 @@ parabola-conic:
 parabola-focus:
   title: Fokus parabole
   text: |
-    Fokusparabole je fiksna točka u njenoj unutrašnjosti. Za parabolično ogledalo sve
-    paralelne dolazne zrake svjetlosti sijeku se u fokusu nakon što se odražavaju.
+    Fokusparabole je fiksna točka u njenoj unutrašnjosti. Za parabolično ogledalo sve paralelne
+    dolazne zrake svjetlosti sijeku se u fokusu nakon što se odražavaju.
 
 parabola-vertex:
   title: Vrhunac parabole
   text: |
-    Verzijaparabole je točka u kojoj mijenja smjer. Ona je ili maksimum ili minimum
-    odgovarajuće kvadratne funkcije, a leži na osi simetrije parabole.
+    Verzijaparabole je točka u kojoj mijenja smjer. Ona je ili maksimum ili minimum odgovarajuće
+    kvadratne funkcije, a leži na osi simetrije parabole.
 
 parallel:
   title: Paralelne linije
@@ -1128,8 +1146,7 @@ polygon:
 polygon-diagonal:
   title: dijagonala
   text: |
-    Dijagonalapoligona je linijski segment koji povezuje dvije vrhove koji nisu jedan pored
-    drugog.
+    Dijagonalapoligona je linijski segment koji povezuje dvije vrhove koji nisu jedan pored drugog.
 
 polygon-edge:
   title: Rub poligona
@@ -1250,8 +1267,8 @@ proton:
 pyramid:
   title: Piramida
   text: |
-    Piramidaje višejednik koji ima poligon kao bazu i trokutasta lica oko vanjske strane, koja
-    se sužava na vrh.
+    Piramidaje višejednik koji ima poligon kao bazu i trokutasta lica oko vanjske strane, koja se
+    sužava na vrh.
 
     U __desnoj pravilnoj piramidi__, baza je _pravilan mnogokut_, a vrh je neposredno iznad središta
     baze.
@@ -1296,9 +1313,8 @@ quadratic-formula:
 quadratic-function:
   title: Kvadratna funkcija
   text: |
-    Kvadratna funkcijafunkcija je oblika `f(x) = ax^2+bx+c`, gdje su _a_, _b_, a _c_ su
-    brojevi, a `a != 0`. Graf kvadratne funkcije je krivulja u obliku slova U koja se naziva
-    __parabola__.
+    Kvadratna funkcijafunkcija je oblika `f(x) = ax^2+bx+c`, gdje su _a_, _b_, a _c_ su brojevi, a
+    `a != 0`. Graf kvadratne funkcije je krivulja u obliku slova U koja se naziva __parabola__.
 
 quadratic-function-vertex-form:
   title: Vrhunski oblik kvadratne funkcije
@@ -1345,9 +1361,9 @@ ray:
 real-numbers:
   title: Pravi brojevi
   text: |
-    Realni brojevisu svi brojevi koji se pojavljuju u brojevnoj liniji, uključujući pozitivne
-    i negativne brojeve, racionalne brojeve (frakcije), kvadratne korijene, korijene kocke,
-    decimalne brojeve, _π_, _e_, i još mnogo toga. Oni se često označavaju simbolom `RR`.
+    Realni brojevisu svi brojevi koji se pojavljuju u brojevnoj liniji, uključujući pozitivne i
+    negativne brojeve, racionalne brojeve (frakcije), kvadratne korijene, korijene kocke, decimalne
+    brojeve, _π_, _e_, i još mnogo toga. Oni se često označavaju simbolom `RR`.
 
 rectangle:
   title: pravokutnik
@@ -1454,11 +1470,18 @@ scientific-notation:
 
     Na primjer, broj 4600 mogao bi se zapisati kao `4.6 × 10^3`.
 
+set:
+  title: setovi
+  text: |
+    Skup ____ je skup stvari ili predmeta (koji se nazivaju elementi). Svaki se element može
+    pojaviti samo jedan u setu. Skupove pišemo koristeći {} s, na primjer, skup koji sadrži brojeve
+    2, 3 i 4 napisao bi se kao {2, 3, 4}.
+
 sequence:
   title: slijed
   text: |
-    Nizje redoslijed popisa brojeva (ili drugih elemenata poput geometrijskih objekata) koji
-    često slijede određeni obrazac ili funkciju. Sekvence mogu biti i konačne i beskonačne.
+    Nizje redoslijed popisa brojeva (ili drugih elemenata poput geometrijskih objekata) koji često
+    slijede određeni obrazac ili funkciju. Sekvence mogu biti i konačne i beskonačne.
   link: /course/sequences/introduction#simple-patterns
 
 sequence-convergence:
@@ -1520,21 +1543,21 @@ sin:
 sphere:
   title: Sfera
   text: |
-    Sferatrodimenzionalna je čvrsta tvar koja se sastoji od svih točaka koje imaju istu
-    udaljenost od zadanog _središta_. Ta se udaljenost naziva polumjer __.
+    Sferatrodimenzionalna je čvrsta tvar koja se sastoji od svih točaka koje imaju istu udaljenost
+    od zadanog _središta_. Ta se udaljenost naziva polumjer __.
   link: /course/circles/spheres-cones-cylinders#sphere
 
 sphere-radius:
   title: Polumjer sfere
   text: |
-    Poljesfere je udaljenost (ili segment linije) između njezinog središta i bilo koje točke
-    na njegovoj površini.
+    Poljesfere je udaljenost (ili segment linije) između njezinog središta i bilo koje točke na
+    njegovoj površini.
 
 square:
   title: Kvadrat
   text: |
-    Kvadratje pravilan četverokut: sve strane imaju jednaku duljinu, a svi kutovi iste
-    veličine (90 °).
+    Kvadratje pravilan četverokut: sve strane imaju jednaku duljinu, a svi kutovi iste veličine (90
+    °).
   link: /course/polyhedra/quadrilaterals
 
 square-area:
@@ -1548,8 +1571,8 @@ square-matrix:
 square-numbers:
   title: Kvadratni brojevi
   text: |
-    Kvadratni brojje broj koji se može izraziti kao kvadrat drugog cijelog broja. Prvi
-    kvadratni brojevi su 1, 4, 9, 16, 25,…
+    Kvadratni brojje broj koji se može izraziti kao kvadrat drugog cijelog broja. Prvi kvadratni
+    brojevi su 1, 4, 9, 16, 25,…
   link: /course/sequences/introduction#squares
 
 subdivision:
@@ -1626,9 +1649,8 @@ tetrahedron:
 theorem:
   title: Teorema
   text: |
-    Teoremaje posebno važan rezultat ili opažanje iz matematike. Dokazano je da je uvijek
-    istinita, koristeći aksiome, logiku pravila i prethodne teoreme za koje se već znalo da su
-    istinite.
+    Teoremaje posebno važan rezultat ili opažanje iz matematike. Dokazano je da je uvijek istinita,
+    koristeći aksiome, logiku pravila i prethodne teoreme za koje se već znalo da su istinite.
 
 transformation:
   title: Transformacija
@@ -1647,8 +1669,8 @@ transformation-image:
 translation:
   title: Prijevod
   text: |
-    Prijevodje transformacija koja pomiče lik u određenom smjeru, bez promjene njegovog kuta
-    ili oblika.
+    Prijevodje transformacija koja pomiče lik u određenom smjeru, bez promjene njegovog kuta ili
+    oblika.
   image: translation.svg
   link: /course/transformations/rigid#translations
 
@@ -1758,8 +1780,8 @@ unit-circle:
 variable:
   title: varijabla
   text: |
-    Promjenaje količina koja je nepoznata ili može promijeniti vrijednost. U algebarskom
-    izrazu obično je predstavljeno slovom poput _x_.
+    Promjenaje količina koja je nepoznata ili može promijeniti vrijednost. U algebarskom izrazu
+    obično je predstavljeno slovom poput _x_.
 
 venn-diagram:
   title: vennov dijagram

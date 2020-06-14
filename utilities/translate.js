@@ -7,8 +7,8 @@
 // ======== EDIT THESE VALUES ========
 const KEY = `../../mathigon.org/data/service-account.json`;
 const COURSES = [];
-const LANGUAGES = ['ar', 'cn', 'de', 'es', 'fr', 'hi', 'hr', 'it', 'ja', 'pt',
-  'ro', 'ru', 'sv', 'tr', 'vi'];
+const LANGUAGES = ['ar', 'az', 'cn', 'de', 'es', 'fr', 'hi', 'hr', 'it', 'ja',
+  'pt', 'ro', 'ru', 'sv', 'tr', 'vi'];
 // ===================================
 
 

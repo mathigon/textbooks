@@ -65,6 +65,15 @@ alternate-angles:
     The angle pairs 1 and 2 are called __alternate exterior angles__, because they lie outside the
     parallel lines, and the angle pairs 3 and 4 are called __alternate interior angles__.
 
+amino-acid:
+  title: Acide aminé
+  text: |
+    __Les acides aminés__ sont de minuscules composés organiques qui constituent les __protéines__.
+    Ils sont quelques-uns des éléments constitutifs clés de tous les organismes vivants.
+
+    Dans notre corps, les acides aminés sont utilisés pour décomposer les aliments, réparer les
+    tissus corporels, stocker l'énergie et pour de nombreuses autres fonctions.
+
 angle:
   title: Angle
   text: |
@@ -945,6 +954,16 @@ molecule:
     Examples of molecules include `O_2`, which consists of two connected Oxygen atoms, and `H_2 O`,
     which consists of two Hydrogen atoms and one Oxygen atom.
 
+morse-code:
+  title: Morse
+  text: |
+    __Le code Morse__ est un moyen de représenter des lettres et des chiffres en utilisant des
+    signaux courts et longs (appelés points et tirets). Il porte le nom de _Samuel Morse_ et était
+    initialement utilisé pour communiquer sur de longues distances à l'aide de télégraphes.
+
+    Par exemple, la lettre «L» serait représentée en utilisant la séquence _{x-morse(char="L")}_ de
+    signaux courts et longs.
+
 multiple:
   title: Multiple
   text: 'A number _a_ is a __multiple__ of a number _b_, if _b_ is a factor of _a_.'
@@ -1462,6 +1481,13 @@ scientific-notation:
     of the form `a × 10^n`, where _n_ is an integer and `1 ≤ a < 10`.
 
     For example, the number 4600 could be written as `4.6 × 10^3`.
+
+set:
+  title: Ensembles
+  text: |
+    Un __ensemble__ est une collection de choses ou d'objets (appelés éléments). Chaque élément ne
+    peut apparaître qu'un seul dans un ensemble. Nous écrivons des ensembles en utilisant {} s, par
+    exemple, un ensemble contenant les nombres 2, 3 et 4 serait écrit comme {2, 3, 4}.
 
 sequence:
   title: Sequence

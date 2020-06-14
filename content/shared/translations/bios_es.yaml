@@ -1198,6 +1198,23 @@ monsky:
     Brandeis. Él demostró que un cuadrado no se puede dividir en un número impar de triángulos de
     igual área; esto se conoce como "teorema de Monsky".
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) fue un inventor y pintor estadounidense. Creció cerca de Boston y
+    estudió en la universidad de Yale, antes de comenzar una carrera como artista.
+
+    En su viaje de regreso de un viaje a Europa para estudiar arte, Morse escuchó a los pasajeros
+    hablar sobre nuevos dispositivos eléctricos. Esto lo inspiró a trabajar en una mejora
+    significativa del telégrafo eléctrico, usando solo un cable, y desarrollar _código Morse_ con su
+    asistente Alfred Vail.
+
+    Después de algunas dificultades iniciales para recibir fondos, el telégrafo de Morse se extendió
+    rápidamente por todo Estados Unidos y el mundo.
+
+    Morse también se postuló dos veces para alcalde de la ciudad de Nueva York, pero su apoyo a la
+    esclavitud y contra la inmigración significó que fue derrotado en ambas ocasiones.
+
 napier:
   born: 1550
   died: 1617

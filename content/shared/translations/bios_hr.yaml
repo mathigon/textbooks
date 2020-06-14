@@ -1168,6 +1168,23 @@ monsky:
     Dokazao je da se kvadrat ne može podijeliti u neparni broj trokuta jednakih površina - to je
     poznato pod nazivom Monsky-ova teorema.
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791. - 1872.) bio je američki izumitelj i slikar. Odrastao je u blizini
+    Bostona i studirao na sveučilištu Yale, prije nego što je započeo karijeru kao umjetnik.
+
+    Na povratku s putovanja u Europu na studij umjetnosti, Morse je slušao kako putnici pričaju o
+    novim električnim uređajima. To ga je nadahnulo da radi na značajnom poboljšanju električnog
+    telegrafa, koristeći samo jednu žicu, i da razvije _Morseov kod_ sa svojim pomoćnikom Alfredom
+    Vailom.
+
+    Nakon nekih početnih poteškoća u primanju sredstava, Morseov se telegraf brzo proširio po
+    Sjedinjenim Državama i svijetu.
+
+    Morse se također dva puta kandidirao za gradonačelnika New Yorka, ali njegova podrška ropstvu i
+    imigraciji značila je da je oba puta poražen.
+
 napier:
   born: 1550
   died: 1617

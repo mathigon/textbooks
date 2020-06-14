@@ -1185,6 +1185,23 @@ monsky:
     matematikçidir. “Monsky teorem’” olarak bilinen, bir karenin tek sayıda eşit alana sahip
     üçgenlere bölünemeyeceği sonucunu kanıtlamıştır.
 
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791-1872) Amerikalı bir mucit ve ressamdı. Boston'da büyüdü ve sanatçı olarak
+    kariyere başlamadan önce Yale üniversitesinde okudu.
+
+    Avrupa'ya bir sanat gezisi gezisinden dönüş yolculuğunda, Morse kulak misafiri olan yolcular
+    yeni elektrikli cihazlar hakkında konuşuyor. Bu, ona tek bir kablo kullanarak elektrik
+    telgrafında önemli bir iyileştirme çalışması ve asistanı Alfred Vail ile _Mors kodu_
+    geliştirmesi için ilham verdi.
+
+    Finansman almaktaki bazı ilk zorluklardan sonra, Morse’nin telgrafı hızla ABD ve dünyaya
+    yayıldı.
+
+    Morse ayrıca New York Belediye Başkanı için iki kez koştu, ancak köleliğe ve göçe karşı verdiği
+    destek, her iki kez de yenildiği anlamına geliyordu.
+
 napier:
   born: 1550
   died: 1617

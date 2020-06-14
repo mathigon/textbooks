@@ -398,7 +398,7 @@ convex:
 
 coordinate-system:
   title: Coordinate System
-  text: A __cordinate system__ is a two-dimensional plane that contains two
+  text: A __coordinate system__ is a two-dimensional plane that contains two
     perpendicular axes. Every point on the plane can be defined using two
     numbers (coordinates), that specify its distance from the two axes.
 
@@ -1481,6 +1481,12 @@ scientific-notation:
     `1 ≤ a < 10`.
 
     For example, the number 4600 could be written as `4.6 × 10^3`.
+
+set:
+  title: Sets
+  text: A __set__ is a collection of things or objects (called elements). Every
+    element can only appear one in a set. We write sets using {}s, for example,
+    a set containing the numbers 2, 3 and 4 would be written as {2, 3, 4}.
 
 sequence:
   title: Sequence

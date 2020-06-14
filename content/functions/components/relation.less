@@ -1,0 +1,39 @@
+// =============================================================================
+// Relations Component
+// (c) Mathigon
+// =============================================================================
+
+
+x-relation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 680px;
+  margin: 1.5em auto;
+  position: relative;
+
+  user-select: none;
+
+  .item {
+    background: @grey-background;
+    border: 1px solid @border-light;
+    padding:3px 12px;
+    margin: 6px 0;
+    border-radius: 4px;
+    &.active { background: mix(@grey-background, @border-light); }
+  }
+
+  .domain, .range { width: 100/3%; }
+  .domain .item { cursor: pointer; }
+
+  svg.connections {
+    .fillParent();
+    pointer-events: none;
+  }
+
+  .connections line {
+    stroke: @medium-grey;
+    stroke-width: 4px;
+    stroke-linecap: round;
+  }
+}

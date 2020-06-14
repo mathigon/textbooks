@@ -26,7 +26,7 @@ Los antiguos astrónomos griegos fueron los primeros en descubrir que todos los 
 > id: radius
 > goals: compass
 
-Cada punto en un círculo [__<<<<__](gloss:circle) tiene la misma distancia desde su centro. Esto significa que se pueden dibujar con una [brújula](gloss:compass):
+Cada punto en un [__círculo__](gloss:circle) tiene la misma distancia desde su centro. Esto significa que se pueden dibujar con una [compás](gloss:compass):
 
 ::: column(width=320)
 

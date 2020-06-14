@@ -12,6 +12,13 @@
 // -----------------------------------------------------------------------------
 // Introduction
 
+.window {
+  cursor: pointer;
+  margin-top: -6px !important;
+  .flash { position: absolute; top: 60px; left: 34px; opacity: 0; transition: opacity .2s; }
+  &.pressed .flash { opacity: 1; }
+}
+
 @keyframes electrons {
   from { stroke-dashoffset: 0; }
   to { stroke-dashoffset: 12px; }
@@ -39,6 +46,24 @@
   margin: 1.5em 24px;
   line-height: 1.4;
   strong { display: inline-block; width: 30px; }
+  @media (max-width: 660px) { column-count: 3; }
+  @media (max-width: 480px) { column-count: 2; }
+}
+
+.radio-play {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 162px;
+  left: 142px;
+  transition: transform .2s, box-shadow .2s;
+  background: url(/resources/codes/images/radio-play.png);
+  background-size: 40px 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  &:hover { transform: scale(1.16); box-shadow: 0 0 10px @red; }
+  &:active { transform: scale(1.06); }
+  &.playing { background-image: url(/resources/codes/images/radio-pause.png); }
 }
 
 .flags {
@@ -60,6 +85,7 @@ x-morse, .morse {
 x-morse {
   cursor: pointer;
   &:hover, &:focus { color: @blue; outline: none; }
+  &:focus { box-shadow: 0 0 0 2px @blue; border-radius: 4px; }
 }
 
 x-code-box .morse > span {

@@ -1,20 +1,16 @@
 # Codes and Ciphers
 
-    // http://plus.maths.org/content/cracking-codes
-    // http://plus.maths.org/content/exploring-enigma
-
 ## Introduction
 
 > section: introduction
-> sectionStatus: dev
 > id: intro
 > goals: play
 
 ::: column.grow
 
-In the early 2000s, the Colombian government was fighting a civil war against groups of insurgents
-and terrorists, who were hiding in camps in the South American rainforest. Occasionally, soldiers
-were captured by these rebels, and then had to spent months or even years in captivity.
+In the early 2000s, the Colombian government was fighting a civil war against groups of insurgents,
+who were hiding in camps in the South American rainforest. Occasionally, soldiers were captured by
+these rebels, and then had to spent months or even years in captivity.
 
 It is easy to lose hope when you’ve been chained up in a hostage camp for such a long time, unable
 to see your family, and guarded by armed guerilla forces. However, in 2010, there was reason to
@@ -46,6 +42,12 @@ There are many other examples in our world, where we want to communicate with ot
 use our voices or text. Maybe your friend lives across the street from you. At night, you secretly
 talk to each other using flashlights – without waking up your family by shouting.
 
+::: column(width=300)
+
+    x-img.window(src="images/window.png" width=300 height=280)
+      img.flash(src="images/light.png" width=74 height=74)
+    x-gesture(target=".window" offset="-80,-44")
+
 ::: column.grow
 
 For example, one short flash might mean “hello” or “yes”. One long flash might mean “how are you?”,
@@ -54,10 +56,6 @@ need?
 
 {.reveal(when="flashlight")} However, even if you agree many different signals for different words
 or questions, it will be difficult to have more complex conversations, or to talk about new topics…
-
-::: column(width=300)
-
-{.fixme} Interactive flashlight/window graphic
 
 :::
 
@@ -160,15 +158,17 @@ writing other words or sentences in this box, and watch how they are encoded as 
       .output.morse
 
 ---
-> id: resolution
+> id: radio
 > goals: play
 
 Morse code was also what the Colombian army used to send a message to the hostages. Translated from
 Spanish, the message was _19 PEOPLE RESCUED. YOU’RE NEXT. DON’T GIVE UP._ Listen to the song once
 more, and see if you can hear the dots and dashes in the background:
 
-    figure.fixme: x-video(src="images/BetterDaysClip.mp4" poster="images/BetterDays.jpg" width=320 height=180 audio controls credit="YouTube")
-    // TODO Audio rather than video, Show actual morse code while playing, score when finished
+    figure: x-img(src="images/radio.png" width=225 height=220 style="margin-top: -24px")
+      button.radio-play
+    x-gesture(target=".radio-play")
+    // TODO Show actual morse code while playing
 
 ---
 > id: morse-applications
@@ -232,13 +232,13 @@ most important and most interesting ones.
 Codes are not a recent invention – they were used by ancient cultures, many thousands of years ago.
 
 For example, guards along the Great Wall of China used smoke to warn each other about potential
-attacks, and different tribes of indigenous peoples in North American each had their own signalling
-systems. They, too, created columns of smoke by burning damp grass, which allowed them to
-communicate over long distances.
+attacks. Different tribes of indigenous peoples in North American each had their own signalling
+systems: they created columns of smoke by burning damp grass, which allowed them to communicate
+over long distances.
 
-{.r} Smoke signals are even used today, for example as a distress signal at sea. When a new Pope is
-elected by the College of Cardinals, the outcome of each vote is indicated by black or white smoke.
-[Continue](btn:next)
+{.r} Smoke signals are even used today, for example as a distress signal at sea. And when a new Pope
+is elected by the College of Cardinals, the outcome of each vote is indicated by black or white
+smoke. [Continue](btn:next)
 
 ::: column(width=280)
 
@@ -252,8 +252,8 @@ elected by the College of Cardinals, the outcome of each vote is indicated by bl
 ---
 > id: flags
 
-There are many examples where words or letters are not the best way to express information. Here
-are some other codes you might have heard of:
+There are many other examples where words or letters are not the best way to express information.
+Here are some other codes you might have heard of:
 
 ::: tab(parent="sticky")
 
@@ -330,7 +330,7 @@ The Beatles wanted to use Semaphore to spell the word “HELP” on the cover of
 same name.
 
 However, they didn’t like the way these specific letters looked – so they just chose four random
-letters instead! As you can see, they ended up spelling the word [[ruiv]]!
+letters instead! As you can see, they ended up spelling the word [[rujv]]!
 
 ::: column(width=200)
 
@@ -733,11 +733,8 @@ Name the band represented by each puzzle:
 > section: cryptography
 > sectionStatus: dev
 
-https://plus.maths.org/content/cracking-codes
-
-Some codes are designed in a way that only
-
-Alice and Bob
+    // http://plus.maths.org/content/cracking-codes
+    // http://plus.maths.org/content/exploring-enigma
 
 The science of creating secret codes is called __Cryptography__ and the are of
 breaking them is called __Cryptanalysis__.

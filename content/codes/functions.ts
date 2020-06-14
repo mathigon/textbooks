@@ -21,13 +21,26 @@ import './components/morse';
 // Introduction
 
 export function intro($step: Step) {
+  let hasSeenHint = false;
   loadScript('https://w.soundcloud.com/player/api.js').then(() => {
     // Trigger and event when students press 'play' in the iframe.
     const widget = (window as any).SC.Widget($step.$('iframe')!._el);
     widget.bind('play', () => {
-      setTimeout(() => $step.addHint('song'), 1000);
-      setTimeout(() => $step.score('play'), 2000);
+      if (!hasSeenHint) setTimeout(() => $step.addHint('song'), 5000);
+      setTimeout(() => $step.score('play'), 7000);
+      hasSeenHint = true;
     });
+  });
+}
+
+export function flashlight($step: Step) {
+  const $window = $step.$('.window')!;
+  slide($window, {
+    down: () => {
+      $window.addClass('pressed');
+      $step.score('flashlight');
+    },
+    up: () => $window.removeClass('pressed')
   });
 }
 
@@ -78,6 +91,21 @@ export function morseApplications($step: Step) {
   $step.$('x-video')!.on('play', () => $step.score('play'));
 }
 
+export function radio($step: Step) {
+  const audio = new Audio('/resources/codes/images/better-days-audio.mp3');
+  audio.preload = 'true';
+  const $btn = $step.$('.radio-play')!
+
+  $btn.on('click', () => audio.paused ? audio.play() : audio.pause());
+  audio.addEventListener('play', () => $btn.addClass('playing'));
+  audio.addEventListener('pause', () => $btn.removeClass('playing'));
+
+  audio.addEventListener('ended', () => {
+    $step.score('play');
+    audio.currentTime = 0;
+  });
+}
+
 
 // -----------------------------------------------------------------------------
 // Binary Numbers
@@ -117,7 +145,7 @@ export function bracket($step: Step) {
   const count = $rounds.length;
 
   function move(x: number) {
-    let direction = x - lastStep;
+    const direction = x - lastStep;
     lastStep = x;
 
     for (let i = 0; i < x; i++) {
@@ -129,7 +157,7 @@ export function bracket($step: Step) {
 
     if (x == 0) return;
     if (direction > 0) {
-      let $lines = $rounds[count - x].$$('line');
+      const $lines = $rounds[count - x].$$('line');
       $lines.forEach((l, i) => {
         if (i % 2 == 0) {
           l.animate({
@@ -141,7 +169,7 @@ export function bracket($step: Step) {
         }
       });
     } else {
-
+      // TODO
     }
   }
 
@@ -157,7 +185,7 @@ export function dec2bin($section: Step) {
   const $slideshow = $section.$('x-slideshow') as Slideshow;
 
   // the remainder block
-  let $blockN = $section.$('#blockN') as SVGView;
+  const $blockN = $section.$('#blockN') as SVGView;
 
   // elements for each digit
   const digits = [16, 8, 4, 2, 1];
@@ -250,7 +278,7 @@ export function dec2bin($section: Step) {
   function moveBlockBetweenDigits(startDigit: number, endDigit: number) {
     // left to right
     if (startDigit < endDigit) {
-      let startX = startDigit < 0 ? BLOCK_X_START :
+      const startX = startDigit < 0 ? BLOCK_X_START :
                    Nbinary[startDigit] ? getClawEnd(startDigit) :
                    getClawStart(startDigit);
       $blockN.animate({
@@ -261,7 +289,7 @@ export function dec2bin($section: Step) {
           DURATION1);
     } else {
       // right to left
-      let endX = endDigit < 0 ? BLOCK_X_START :
+      const endX = endDigit < 0 ? BLOCK_X_START :
                  Nbinary[endDigit] ? getClawEnd(endDigit) :
                  getClawStart(endDigit);
       $blockN.animate({
@@ -290,7 +318,7 @@ export function dec2bin($section: Step) {
     $digitBlocks[digitIndex].show();
 
     const placeValue = digits[digitIndex];
-    let newN = N - placeValue;
+    const newN = N - placeValue;
     // change width
     $blockN.$('rect')?.setAttr('width', newN * 10);
     // translate, move to end of claw.
@@ -308,7 +336,7 @@ export function dec2bin($section: Step) {
       $blockN.hide();
       return;
     } else {
-      let textBuffer = newN >= 10 ? 14 : 7;
+      const textBuffer = newN >= 10 ? 14 : 7;
       $blockN.$('tspan')!.setAttr('x', (newN * 10) / 2 - textBuffer); // text positioning
       $blockN.$('tspan')!.textStr = newN;
     }
@@ -336,7 +364,7 @@ export function dec2bin($section: Step) {
           },
           DURATION1, DURATION2);
       // $blockN moves back to the beginning of the thing
-      let textBuffer = newN >= 10 ? 14 : 7; // make room for two-digit or one
+      const textBuffer = newN >= 10 ? 14 : 7; // make room for two-digit or one
       $blockN.$('tspan')!.setAttr('x', (newN * 10) / 2 - textBuffer); // text positioning
       $blockN.$('tspan')!.textStr = newN;
     }, DURATION1 + DURATION2);
@@ -479,7 +507,7 @@ export function finger5($section: Step) {
   // reveal: like fade, but elements below slide down
   // reveal-left/right: each element slides in from the left/right
   let i = 0;
-  let delay = 1000;
+  const delay = 1000;
   $section.$('.appear')?.on('click', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
@@ -492,7 +520,7 @@ export function finger32($section: Step) {
   $fingers.forEach($f => $f.hide());
 
   let i = 0;
-  let delay = 500;
+  const delay = 500;
   $section.$('.appear')?.on('click', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
@@ -513,14 +541,14 @@ export function binaryTable($section: Step) {
 
   function fx(digit: number) {
     return (i: string) => {
-      var s = '' + i;
+      const s = '' + i;
       return s[digit] === '0';
     };
   }
 
   function fy(digit: number) {
     return (i: string) => {
-      var s = '' + i;
+      const s = '' + i;
       return s[digit] === '1';
     };
   }
