@@ -579,7 +579,7 @@ definiert - und sollten nicht viel mit Addition zu tun haben.
       h3 Goldbach Rechner
       p Wähle eine beliebige gerade Zahl, um zu berechnen, wie#[br]sie als Summe zweier Primzahlen geschrieben werden kann.
       input(type="number", min=4, step=2)
-      p.result.var ${result}
+      .result.var(:html="result")
 
 Goldbach schrieb über seine Beobachtung in einem Brief an den berühmten Mathematiker
 [Leonhard Euler](bio:euler), aber keiner von ihnen konnte sie beweisen. So wurde
