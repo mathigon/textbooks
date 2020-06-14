@@ -507,7 +507,7 @@ Hier kannst du deine eigenen Primzahlen mit einer gegebenen Anzahl von Ziffern g
       h3 Primzahlgenerator
       p.md Anzahl an Ziffern: ${d}{d|6|2,16,1}
       p(style="margin: 10px 0"): button.btn.btn-white Generate
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: ulam
