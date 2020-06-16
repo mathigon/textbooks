@@ -36,3 +36,6 @@ _*.yaml
 *_ger.*
 *.7z
 *.WinMerge
+
+content/donotcommit
+Icon
