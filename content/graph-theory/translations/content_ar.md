@@ -548,14 +548,9 @@ __{.red} 90__ حواف
 
 عند تلوين خريطة الولايات الأمريكية ، من الواضح أن 50 لونًا كافية ، ولكن أقل بكثير ضرورية. حاول تلوين الخرائط أدناه بأقل عدد ممكن من الألوان:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
     
     x-tabbox.four-colours.full-width
       .tab

@@ -534,14 +534,9 @@ Já usamos a teoria dos grafos em certos mapas. À medida que diminuímos o zoom
 
 Ao colorir o mapa dos estados dos EUA, 50 cores são obviamente suficientes, mas são necessárias muito menos. Tente colorir os mapas abaixo com o mínimo de cores possível:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
     
     x-tabbox.four-colours.full-width
       .tab

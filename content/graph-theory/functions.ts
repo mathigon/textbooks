@@ -724,6 +724,7 @@ export function maps1($section: Step) {
   const colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', '#662D91',
     '#F15A24', '#29ABE2'];
   const $colours = $section.$$('.four-colour-icon');
+  $colours[0].addClass('on');
   let activeColour = 0;
   let warned = false;
 
