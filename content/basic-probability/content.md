@@ -147,8 +147,7 @@ However, probabilities become much more useful if we can repeat the same experim
 
 ::: column(width=320)
 
-    .coin-flip
-      .coin
+    x-coin-flip(size="120,200")
 
     p.btn-row.var
       button.btn.btn-red(@click="flip()") Flip
