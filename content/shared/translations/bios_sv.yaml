@@ -1,0 +1,1732 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  bio: |
+    __Niels Henrik Abel__ (1802 - 1829) var en viktig norsk matematiker. Trots att han dog vid 26
+    års ålder gjorde han banbrytande bidrag till ett brett spektrum av ämnen.
+
+    Vid en ålder av 16 bevisade Abel den binomiala teoremet. Tre år senare bevisade han att det är
+    omöjligt att lösa kvintiska ekvationer - genom att självständigt uppfinna gruppteori. Detta hade
+    varit ett öppet problem i över 350 år! Han arbetade också med elliptiska funktioner och
+    upptäckte _Abelian_ funktioner.
+
+    Abel tillbringade sitt liv i fattigdom: han hade sex syskon, hans far dog när han var 18 år, han
+    kunde inte hitta ett jobb på ett universitet och många matematiker avskedade sitt arbete. Idag
+    är en av de högsta utmärkelsen i matematik, _Abel-priset_ uppkallad efter honom.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, c. 965 - 1050) bodde i Kairo under
+    den islamiska guldåldern och studerade matematik, fysik, astronomi, filosofi och medicin. Han
+    var en förespråkare för den _vetenskapliga metoden_: tron att någon vetenskaplig hypotes måste
+    verifieras med hjälp av experiment eller matematisk logik - århundraden före europeiska forskare
+    under renässansen.
+
+    Al-Haytham var särskilt intresserad av optik och visuell uppfattning. Han härledde också en
+    formel för summan av fjärde krafter (`1^4 + 2^4 + 3^4 + … +
+
+    n^4`), och han studerade kopplingen mellan algebra och geometri.
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: |
+    __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029) var en persisk matematiker
+    och ingenjör. Han var den första som använde _bevis genom induktion_, vilket tillät honom att
+    bevisa den binomiala teorem.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: Al-Khwarizmi
+  overflow: true
+  bio: |
+    Den persiska matematikern __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي, 780 - 850) levde
+    under den muslimska abbasidregimens guldålder i Bagdad. Han arbetade på "Visdomshuset", som
+    innehöll den första stora samlingen av akademiska böcker sedan förstörelsen av
+    Alexandria-biblioteket.
+
+    Al-Khwarizmi har kallats "Fadern till algebra" - i själva verket kommer ordet _algebra_ från den
+    arabiska titeln på hans viktigaste bok: "Den kompensiva boken för beräkning genom slutförande
+    och balansering". I den visade han hur man kunde lösa linjära och kvadratiska ekvationer, och
+    under många århundraden var det den huvudsakliga matematikboken vid europeiska universitet.
+
+    Al-Khwarizmi arbetade också inom astronomi och geografi, och ordet "algoritm" är uppkallad efter
+    honom.
+
+apollonius:
+  name: Apollonius
+  born: -262
+  died: -190
+  bio: |
+    __Apollonius av Perga__ (ca 200 fvt) var en grekisk matematiker och astronom som mest känd för
+    sitt arbete på de fyra _koniska avsnitten_.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+appel:
+  name: Appel
+  bio: |
+    __Kenneth Appel__ (1932 - 2013) var en amerikansk matematiker, känd för sitt bevis på fyra
+    färger teorem med Wolfgang Haken.
+
+    Som erkännande fick han och Haken Fulkersonpriset från American Mathematical Society.
+
+    Appel studerade vid Queens College, New York och University of Michigan. Han undervisade vid
+    University of Illinois och University of New Hampshire.
+
+archimedes:
+  name: Archimedes
+  born: -287
+  died: -212
+  bio: |
+    __Archimedes__ (c. 287 - 212 fvt) var en forntida grekisk forskare och ingenjör och en av de
+    största matematikerna genom tiderna. Han upptäckte många kalkylbegrepp och arbetade inom
+    geometri, analys och mekanik.
+
+    När han badade upptäckte Archimedes ett sätt att bestämma volymen av oregelbundna föremål med
+    den mängd vatten de förflyttade när de var nedsänkta. Han var så upphetsad av denna upptäckt att
+    han sprang ut på gatan, fortfarande avklädd och skrek _“Eureka!”_ (grekisk för _“Jag har hittat
+    den!”_).
+
+    Som ingenjör byggde han geniala försvarsmaskiner under belägringen av sin hemstad Syracuse på
+    Sicilien. Efter två år lyckades romarna slutligen komma in, och Archimedes dödades. Hans sista
+    ord var _“Stör inte mina kretsar”_ - som han studerade då.
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristotle
+  bio: |
+    __Aristoteles__ (Ἀριστοτέλης, ca 384 - 322 fvt) var en filosof i antika Grekland. Tillsammans
+    med sin lärare _Platon_, betraktas han som "Far till den västerländska filosofin". Han var också
+    privatläraren för Alexander den store.
+
+    Aristoteles skrev om vetenskap, matematik, filosofi, poesi, musik, politik, retorik, lingvistik
+    och många andra ämnen. Hans arbete var mycket inflytelserikt under medeltiden och in i
+    renässansen, och hans åsikter om etik och andra filosofiska frågor diskuteras fortfarande i dag.
+
+    Aristoteles är också den första kända personen som formellt studerar _logik_, inklusive dess
+    tillämpningar inom vetenskap och matematik.
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: |
+    __Aryabhata__ (आर्यभट) var en av de första matematikerna och astronomerna i guldåldern av indisk
+    matematik. Han definierade trigonometriska funktioner, löst samtidiga kvadratiska ekvationer,
+    fann approximationer för _π_ och insåg att _π_ är irrationell.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Quadratic Equations
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __Charles Babbage__ (1791 - 1871) var en brittisk matematiker, filosof och ingenjör. Han kallas
+    ofta "datorns far", efter att ha uppfunnit den första mekaniska datorn (_Difference engine_) och
+    en förbättrad, programmerbar version (_Analytical Engine_).
+
+    I teorin kan dessa maskiner automatiskt utföra vissa beräkningar lagrade på kort eller band. På
+    grund av de höga produktionskostnaderna fullbordades de dock aldrig helt under Babbages livstid.
+    1991 konstruerades en funktionell kopia vid Science Museum i London.
+
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __Jacob Bernoulli__ (1655 - 1705) var en schweizisk matematiker och en av de många viktiga
+    forskarna i Bernoulli-familjen. Han hade faktiskt en djup akademisk rivalitet med flera av sina
+    bröder och söner.
+
+    Jacob gjorde betydande framsteg till kalkylen som uppfanns av Newton och Leibnitz, skapade
+    fältet för _beräkningar av variationer_, upptäckte den grundläggande konstanten _e_, utvecklade
+    tekniker för att lösa differentiella ekvationer och mycket Mer.
+
+    Han publicerade det första väsentliga arbetet om sannolikhet, inklusive permutationer,
+    kombinationer och lagen om stort antal, han bevisade binomialsatsen och härledde många av
+    Bernoullis egenskaper.
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __Daniel Bernoulli__ (1700 - 1782) var en schweizisk matematiker och fysiker. Han var en av de
+    många berömda forskarna från familjen Bernoulli - inklusive hans far Johann, hans farbror Jacob
+    och hans bror Nicholas.
+
+    Daniel Bernoulli visade att när hastigheten på en vätska ökar, minskar trycket. Nu kallad
+    _Bernoullis princip_, är detta den mekanism som används av flygvingar och förbränningsmotorer.
+    Han gjorde också viktiga upptäckter inom sannolikhet och statistik och mötte först
+    _Bessel-funktioner_.
+
+    Vid 34 års ålder förbjöds han från sin fars hus för att ha slagit honom vid en utmärkelsen från
+    Paris Academy, för vilka de båda lämnade in en post.
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: |
+    __Bhaskara II__ (1114 - 1185) var en indisk matematiker och astronom. Han upptäckte några av de
+    grundläggande begreppen kalkyl, mer än 500 år innan Leibnitz och Newton. Bhaskara fastställde
+    också att uppdelning med noll ger oändlighet och löste olika kvadratiska, kubiska, kvartiska och
+    diofantiska ekvationer.
+
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __David Blackwell__ (1919 - 2010) var en amerikansk statistiker och matematiker. Han arbetade
+    med spelteori, sannolikhetsteori, informationsteori och dynamisk programmering och skrev en av
+    de första läroböckerna om Bayesiansk statistik. _Rao-Blackwell-teoremet_ visar hur man kan
+    förbättra uppskattningarna av vissa mängder i statistik.
+
+    Blackwell var den första afroamerikanska som valde att gå med i American _National Academy of
+    Sciences_, och han var en av de första som fick en doktorsexamen i matematik.
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __János Bolyai__ (1802 - 1860) var en ungersk matematiker och en av grundarna av icke-euklidisk
+    geometri - en geometri där Euclids femte axiom om parallella linjer inte rymmer. Detta var ett
+    betydande genombrott inom matematik. Tyvärr för Bolyai upptäckte matematikerna Gauss och
+    Lobachevsky liknande resultat på samma gång och fick det mesta av krediterna.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: |
+    __George Boole__ (1815 - 1864) var en engelsk matematiker. Som barn lärde han sig latin, grekisk
+    och matematik i hopp om att undkomma hans lägre klassliv. Han skapade _Boolean algebra_, som
+    använder operatörer som AND, OR och NOT (snarare än tillägg eller multiplikation) och kan
+    användas när man arbetar med uppsättningar. Detta var grunden för formell matematisk logik och
+    har många tillämpningar inom datavetenskap.
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: |
+    Den indiska matematikern __Brahmagupta__ (c. 598 - 668 CE) uppfann reglerna för tillägg,
+    subtraktion och multiplikation med noll och negativa siffror. Han var också astronom och gjorde
+    många andra upptäckter i matematik. Tyvärr innehöll hans skrifter inga bevis, så vi vet inte hur
+    han härledde sina resultat.
+
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  bio: |
+    Den tyska matematikern __Georg Cantor__ (1845 - 1918) var uppfinnaren av setteorin och en
+    pionjär i vår förståelse av oändligheten. Under större delen av hans liv motarbetades Cantor
+    upptäckter av hans kollegor. Detta kan ha bidragit till hans depression och nervösa
+    nedbrytningar, och han tillbringade många decennier på en mentalinstitution.
+
+    Kantor bevisade att det finns _olika storlekar_ oändlighet. Uppsättningen med verkliga siffror
+    är till exempel _obestämbar_ - vilket betyder att den inte kan kopplas ihop med uppsättningen
+    med naturliga siffror.
+
+    Först mot slutet av sitt liv började Cantor få det erkännande som han förtjänade. David Hilbert
+    förklarade berömt att ”Ingen ska förvisa oss från det paradis som Cantor har skapat”.
+  links:
+    - title: Infinity
+      url: /world/Infinity
+    - title: Set Theory
+      url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    Den italienska __Gerolamo Cardano__ (1501 - 1576) var en av de mest inflytelserika matematikerna
+    och forskarna i renässansen. Han undersökte hypercykloider, publicerade Tartaglias och
+    Ferrari-lösningen för kubiska och kvartiska ekvationer, var den första europeiska som
+    systematiskt använde negativa tal och erkände till och med existensen av imaginära nummer
+    (baserat på `sqrt(-1)`).
+
+    Cardano gjorde också några tidiga framsteg inom sannolikhetsteorin och introducerade
+    binomialkoefficienter och binomial teorem till Europa. Han uppfann många mekaniska enheter,
+    inklusive kombinationslås, gyroskop med tre frihetsgrader och drivaxlar (eller kardanaxlar) som
+    fortfarande används i fordon idag.
+  links:
+    - title: Imaginary Numbers
+      url: /world/Real_Irrational_Imaginary
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  bio: |
+    __Charles Lutwidge Dodgson__ (1832 - 1898) är bäst känd under sitt pennnamn __Lewis Carroll__,
+    som författare till _Alice's Adventures in Wonderland_ och dess uppföljare _Genom Look-Glass_.
+
+    Men Carroll var också en lysande matematiker. Han försökte alltid integrera pussel och logik i
+    sina barns berättelser, vilket gjorde dem roligare och mer minnesvärda.
+
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Cauchy__ (1789 - 1857) var en fransk matematiker och fysiker. Han bidrog till
+    ett brett spektrum av områden inom matematik, och dussintals teorem är uppkallad efter honom.
+
+    Cauchy formaliserade kalkyler och analyser, genom att omformulera och bevisa resultat där
+    tidigare matematiker var mycket mer slarviga och ogynnsamma. Han grundade fältet för _komplex
+    analys_, studerade permutationsgrupper och arbetade med optik, vätskedynamik och
+    elasticitetsteori.
+
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598 - 1647) var en italiensk matematiker och munk. Han utvecklade en
+    föregångare till den infinitesimala beräkningen och kommer ihåg för Cavalieris princip att hitta
+    volymen av fasta ämnen i geometri.
+
+    Cavalieri arbetade också inom optik och mekanik, introducerade logaritmer till Italien och
+    utbytte många brev med Galileo Galilei.
+  links:
+    - title: Cavalieri’s Principle
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  bio: |
+    __Arthur Cayley__ (1821 - 1895) var en brittisk matematiker och advokat. Han var en av
+    pionjärerna inom _gruppteori_, föreslog först den moderna definitionen av en "grupp" och
+    generaliserade dem för att omfatta många fler tillämpningar i matematik. Cayley utvecklade också
+    matrisalgebra och arbetade med högdimensionell geometri.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+collatz:
+  name: Collatz
+  bio: |
+    __Lothar Collatz__ (1910 - 1990) var en tysk matematiker som arbetade med differentiella
+    ekvationer och optimeringsproblem. Problemet _Collatz conjecture_ eller `3x+1` heter efter honom
+    - och är fortfarande olöst.
+
+conway:
+  name: Conway
+  born: 1937
+  died: 2020
+  bio: |
+    __John Horton Conway__ (1937 - 2020) var en brittisk matematiker som arbetade vid Cambridge och
+    Princeton University. Han var en kollega i Royal Society och den första mottagaren av
+    Pólya-priset.
+
+    Han utforskade den underliggande matematiken för vardagsobjekt som knutar och spel, och han
+    bidrog till gruppteori, talteori och många andra områden inom matematik. Conway är känd för att
+    ha uppfunnit "Conway's Game of Life", en _mobilautomat_ med fascinerande egenskaper.
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __Nicolaus Copernicus__ (1473 - 1543) var en polsk matematiker, astronom och advokat. Under hans
+    liv trodde de flesta på den _geocentriska_ -modellen av universum, med jorden i centrum och allt
+    annat roterande runt det.
+
+    Copernicus skapade en ny modell, där solen är i centrum, och jorden rör sig runt den på en
+    cirkel. Han förutspådde också att Jorden roterar runt dess axel en gång varje dag. Rädd för att
+    det skulle uppröra den katolska kyrkan, publicerade han bara modellen strax före sin död - och
+    utlöste det som nu kallas _Copernican Revolution_.
+
+    Copernicus arbetade också som diplomat och läkare och gav viktiga bidrag till ekonomin.
+  links:
+    - title: Planetary Orbits
+      url: /course/circles/conic-sections#orbits
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __Abraham de Moivre__ (1667 - 1754) var en fransk matematiker som arbetade inom sannolikhet och
+    analytisk geometri. Han minns mest för _de Moivres formel_, som länkar trigonometri och komplexa
+    tal.
+
+    De Moivre upptäckte formeln för normalfördelning med sannolikhet och antog först _centrala
+    gränssatsen_. Han hittade också en icke-rekursiv formel för Fibonacci-nummer och kopplade dem
+    till det gyllene förhållandet `φ`.
+  links:
+    - title: Probability
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: |
+    __Richard Dedekind__ (1831 - 1916) var en tysk matematiker och en av eleverna i Gauss. Han
+    utvecklade många begrepp inom setteorin och uppfann _Dedekind-nedskärningar_ som den formella
+    definitionen av verkliga siffror. Han gav också de första definitionerna av _talfält_ och
+    _ringar_, två viktiga konstruktioner i abstrakt algebra.
+
+democritus:
+  born: -460
+  died: -370
+  name: Democritus
+  bio: |
+    Den grekiska matematikern __Democritus__ (c. 460 - 370 fvt), kan vara den första personen som
+    spekulerar i att allt ämne bestod av små _atomer_ och anses vara den moderna vetenskapens far ”.
+    Han gjorde också många upptäckter inom geometri, inklusive formeln för volymen prismor och
+    kottar.
+  links:
+    - title: Volume of a Cone
+      url: /course/circles/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  bio: |
+    __Girard Desargues__ (1591 - 1661) var en fransk matematiker, ingenjör och arkitekt. Han
+    designade många byggnader i Paris och Lyon, hjälpte till att bygga en dam och uppfann en
+    mekanism för att höja vatten med hjälp av epicykloider.
+
+    I matematik anses Desargues vara fadern till _projektiv geometri_. Detta är en speciell typ av
+    geometri där parallella linjer möts vid ”punkten i oändligheten”, storleken på former spelar
+    ingen roll (endast deras proportioner), och alla fyra koniska sektioner (cirkel, ellips,
+    parabola och hyperbola) är i huvudsak samma.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio: |
+    __René Descartes__ (1596 - 1650) var en fransk matematiker och filosof och en av nyckelfigurerna
+    i den vetenskapliga revolutionen. Han vägrade att acceptera myndighetens tidigare filosofer, och
+    en av hans mest kända citat är "Jag tror, därför är jag".
+
+    Descartes är far till _analytisk geometri_, vilket gör att vi kan beskriva geometriska former
+    med hjälp av algebra. Detta var en av förutsättningarna, som gjorde det möjligt för Newton och
+    Leibnitz att uppfinna _calculus_ några decennier senare.
+
+    Han krediteras den första användningen av superskript för makter eller exponenter, och
+    _kartesianska koordinatsystemet_ är uppkallad efter honom.
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantus
+  overflow: true
+  bio: |
+    __Diophantus__ var en hellenistisk matematiker som bodde i Alexandria. De flesta av hans verk
+    handlar om att lösa polynomekvationer med flera okända. Dessa kallas nu _Diophantine ekvation_
+    och är fortfarande ett viktigt forskningsområde idag.
+
+    Det var när jag läste en av Diophantus böcker, många hundra år senare, att _Pierre de Fermat_
+    föreslog en av dessa ekvationer hade ingen lösning. Detta blev känt som "Fermats sista sats" och
+    löstes först 1994.
+
+dirac:
+  name: Dirac
+  bio: |
+    __Paul Dirac__ (1898 - 1972) var en engelsk teoretisk fysiker som delade Nobelpriset 1933 med
+    Erwin Schrödinger. Dirac var en av pionjärerna inom kvantmekanik, formulerade den berömda
+    _Dirac-ekvationen_ och förutspådde först förekomsten av antimateria.
+
+    Han undervisade vid Cambridge University, innan han flyttade till Amerika. Dirac var berömd blyg
+    och, enligt Einstein, _"balanserande på den svimlande vägen mellan geni och galenskap"_.
+
+einstein:
+  name: Einstein
+  born: 1879
+  died: 1955
+  small: true
+  bio: |
+    __Albert Einstein__ (1879 - 1955) var en tysk fysiker och en av de mest inflytelserika forskarna
+    i historien. Han fick Nobelpriset för fysik och tidskriften TIME kallade honom _personen från
+    1900-talet_.
+
+    Einstein utlöste den mest betydande omvandlingen i vår syn på universum sedan Newton. Han insåg
+    att klassisk _Newtonian_ fysik inte längre var tillräckligt för att förklara vissa fysiska
+    fenomen.
+
+    Vid en ålder av 26, under sitt "mirakelår", publicerade han fyra banbrytande vetenskapliga
+    artiklar som förklarade den fotoelektriska effekten och Browns rörelse, introducerade särskild
+    relativitet och härledde formeln `E = m c^2`, som säger att energi (_E_) och massa (_m_) är
+    likvärdiga.
+
+eratosthenes:
+  name: Eratosthenes
+  born: -276
+  died: -195
+  bio: |
+    __Eratosthenes of Cyrene__ (c. 276 - 195 f.Kr.) var en grekisk matematiker, geograf, astronom,
+    historiker och poet. Han tillbringade mycket av sitt liv i Egypten som chef för Alexandrias
+    bibliotek. Bland många andra framsteg beräknade Eratosthenes jordens omkrets, mätt lutningen av
+    jordens rotationsaxel, uppskattade avståndet till solen och skapade några av de första kartorna
+    över världen. Han uppfann också ”Sieve of Eratosthenes”, ett effektivt sätt att beräkna
+    _primtal_.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility/primes#eratosthenes
+
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __Paul Erdős__ (1913 - 1996) var en av de mest produktiva matematikerna i historien. Född i
+    Ungern, han löst otaliga problem inom grafteori, talteori, kombinatorik, analys, sannolikhet och
+    andra delar av matematiken.
+
+    Under sitt liv publicerade Erds cirka 1 500 artiklar och samarbetade med mer än 500 andra
+    matematiker. Faktum är att han tillbringade större delen av sitt liv att leva ur en resväska,
+    resa till seminarier och besöka kollegor!
+
+escher:
+  name: Escher
+  born: 1898
+  died: 1972
+  bio: |
+    __Maurits Cornelis Escher__ (1898 - 1972) var en holländsk konstnär som skapade skisser,
+    träsnitt och litografier av matematiskt inspirerade föremål och former: inklusive polyhedra,
+    tessellationer och omöjliga former. Han utforskade grafiskt begrepp som symmetri, oändlighet,
+    perspektiv och icke-euklidisk geometri.
+  small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polyhedra/tessellations#escher
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __Euklid av Alexandria__ (cirka 300 fvt) var en grekisk matematiker och kallas ofta _geometriens
+    fader_. Han publicerade en bok _Elements_ som först introducerade euklidisk geometri och
+    innehöll många viktiga bevis inom geometri och talteori. Det var den huvudsakliga matematikboken
+    fram till 1800-talet. Han undervisade i matematik i Alexandria, men mycket lite annat är känt om
+    hans liv.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility/primes#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707 - 1783) var en av de största matematikerna i historien. Hans arbete
+    sträcker sig över alla områden inom matematik, och han skrev 80 volymer av forskning.
+
+    Euler föddes i Schweiz och studerade i Basel, men bodde större delen av sitt liv i Berlin,
+    Preussen och S: t Petersburg, Ryssland.
+
+    Euler uppfann mycket av den moderna matematiska terminologin och notationen och gjorde viktiga
+    upptäckter inom kalkyl, analys, grafteori, fysik, astronomi och många andra ämnen.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+      url: /course/polyhedra/polyhedra
+
+fatou:
+  name: Fatou
+  bio: |
+    __Pierre Joseph Louis Fatou__ (1878 - 1929) var en fransk matematiker och astronom. Han
+    upptäckte _Julia-uppsättningen_ och dess omvända, Fatou-uppsättningen, är uppkallad efter honom.
+    Han gav också viktiga bidrag till analys och himmelmekanik.
+
+fermat:
+  name: Fermat
+  born: 1607
+  died: 1665
+  bio: |
+    __Pierre de Fermat__ (1607 - 1665) var en fransk matematiker och advokat. Han var en tidig
+    pionjär inom beräkningen och arbetade inom talteori, sannolikhet, geometri och optik.
+
+    1637 skrev han en kort anteckning i marginalen i en av sina läroböcker och hävdade att
+    ekvationen `a^n + b^n = c^n` inte har några heltalslösningar för `n > 2`, och att han hade ett
+    "fantastiskt bevis, som denna marginal är för smal för att innehålla ”. Detta blev känt som
+    _Fermat's Last Theorem_, och ett av de mest berömda olösta problemen i matematik - tills det
+    slutligen bevisades 1994.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+
+fibonacci:
+  name: Fibonacci
+  born: 1175
+  died: 1250
+  bio: |
+    __Leonardo Pisano__, allmänt känd som __Fibonacci__ (1175 - 1250) var en italiensk matematiker.
+    Han är bäst känd för nummersekvensen uppkallad efter honom: 1, 1, 2, 3, 5, 8, 13, ...
+
+    Fibonacci ansvarar också för att popularisera de arabiska siffrorna (0, 1, 2, 3, 4, ...) i
+    Europa, som fortfarande använde romerska siffror (I, V, X, D, ...) under 1100-talet. Han
+    förklarade decimalsystemet i en bok som heter "Liber Abaci", en praktisk lärobok för köpmän.
+  links:
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+fourier:
+  born: 1768
+  died: 1830
+  name: Fourier
+  bio: |
+    __Joseph Fourier__ (1768 - 1830) var en fransk matematiker och en vän och rådgivare för
+    Napoleon. Förutom sin matematiska forskning krediteras han också upptäckten av växthuseffekten.
+
+    När han reser till Egypten blev Fourier särskilt fascinerad av _värme_. Han studerade
+    värmeöverföring och vibrationer och upptäckte att varje periodisk funktion kan skrivas som en
+    oändlig summa av trigonometriska funktioner: en _Fourier-serie_.
+
+fuller:
+  name: Fuller
+  bio: |
+    __Richard Buckminster “Bucky” Fuller__ (1895 - 1983) var en amerikansk arkitekt, designer och
+    uppfinnare. Han är känd för att konstruera _geodesisk kupol_ - stora, sfäriska strukturer.
+    Liknande kolmolekyler, _fullerenes_, fick senare namn efter honom.
+
+galileo:
+  born: 1564
+  died: 1642
+  name: Galileo
+  bio: |
+    __Galileo Galilei__ (1564 - 1642) var en italiensk astronom, fysiker och ingenjör. Han använde
+    ett av de första teleskopen för att göra observationer av natthimlen, där han upptäckte de fyra
+    största månarna i Jupiter, faserna i Venus, solfläckar och mycket mer.
+
+    Galileo, ibland kallad "modern vetenskapens far", studerade också föremålets rörelse i fritt
+    fall, kinematik, materialvetenskap och uppfann termoskopet (en tidig termometer).
+
+    Han var en vokal förespråkare för _Heliocentrism_, idén att solen stod i centrum av vårt
+    solsystem. Detta ledde så småningom till att han blev prövad av den katolska inkvisitionen:
+    Galileo tvingades att återvända och tillbringade resten av sitt liv under husarrest.
+
+galois:
+  born: 1811
+  died: 1832
+  name: Galois
+  overflow: true
+  bio: |
+    Den franska matematikern __Évariste Galois__ (1811 - 1832) hade ett kort och tragiskt liv, men
+    uppfann dock två helt nya matematikområden: _Gruppteori_ och _Galois teori_ .
+
+    Galois bevisade att han fortfarande var i tonåren att det inte finns någon allmän lösning för
+    polynomekvationer av grad fem eller högre - samtidigt med Niels Abel.
+
+    Tyvärr har andra matematiker som han delade dessa upptäckter med upprepade gånger misslyckats
+    eller helt enkelt återlämnat sitt arbete, och han misslyckades med sina skol- och
+    universitetsexaminer medan han koncentrerade sig på mycket mer komplicerat arbete.
+
+    Vid en ålder av 21 sköts Galois i en duell (vissa säger en fejd över en kvinna) och dog senare
+    av hans sår. Under natten före sin död sammanfattade han sina matematiska upptäckter i ett brev
+    till en vän. Det skulle ta andra matematiker i många år att fullt ut inse den verkliga effekten
+    av hans arbete.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Friedrich Gauss__ (1777 - 1855) var utan tvekan den största matematikern i historien. Han
+    gjorde banbrytande upptäckter inom nästan alla områden i matematik, från algebra och talteori
+    till statistik, kalkyl, geometri, geologi och astronomi.
+
+    Enligt legenden korrigerade han ett misstag i sin fars bokföring vid 3 års ålder och fann ett
+    sätt att snabbt lägga till alla heltal från 1 till 100 vid 8 års ålder. Han gjorde sina första
+    viktiga upptäckter medan han fortfarande var tonåring och lärde senare många andra kända
+    matematiker som professor.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility/the-distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+
+germain:
+  born: 1776
+  died: 1831
+  name: Germain
+  small: true
+  bio: |
+    __Marie-Sophie Germain__ (1776 - 1831) beslutade att hon ville bli matematiker vid 13 års ålder
+    efter att ha läst om Archimedes. Tyvärr mötte hon som kvinna en betydande motstånd. Hennes
+    föräldrar försökte förhindra att hon studerade när hon var ung, och hon fick aldrig en post på
+    ett universitet.
+
+    Germain var en pionjär när det gäller att förstå matematiken för elastiska ytor, för vilken hon
+    vann det stora priset från Paris Academy of Sciences. Hon gjorde också betydande framsteg när
+    det gällde att lösa Fermats sista sats och korresponderade regelbundet med Carl Friedrich Gauss.
+
+godel:
+  born: 1906
+  died: 1978
+  name: Gödel
+  small: true
+  bio: |
+    __Kurt Gödel__ (1906 - 1978) var en österrikisk matematiker som senare invandrade till Amerika
+    och anses vara en av de största logikerna i historien.
+
+    Vid 25 års ålder, precis efter avslutad doktorsexamen i Wien, publicerade han sina två
+    _ofullständiga teorem_. Dessa säger att alla (konsekventa och tillräckligt kraftfulla)
+    matematiska system innehåller vissa uttalanden som är sanna men inte kan bevisas. Med andra ord,
+    matematik innehåller vissa problem som är omöjliga att lösa.
+
+    Detta resultat hade en djup inverkan på matematikens utveckling och filosofi. Gödel fann också
+    ett exempel på dessa "omöjliga teorem": _kontinuumhypotesen_.
+  links:
+    - title: Unprovable Theorems
+      url: /world/Axioms_and_Proof
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: |
+    __Christian Goldbach__ (1690 - 1764) var en preussisk matematiker och samtida av Euler, Leibniz
+    och Bernoulli. Han var handledare för den ryska tsaren Peter II och minns för sin ”Goldbach
+    Conjecture”.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/the-distribution-of-primes#goldbach1
+
+grothendieck:
+  born: 1928
+  died: 2014
+  name: Grothendieck
+  small: true
+  bio: |
+    Den franska matematikern __Alexander Grothendieck__ (1928 - 2014) var en av nyckelfigurerna i
+    utvecklingen av _algebraisk geometri_. Han utökade fältet till att gälla många nya problem i
+    matematik, inklusive så småningom Fermats sista sats. 1966 tilldelades han Fields-medaljen.
+
+guthrie:
+  name: Guthrie
+  bio: |
+    __Francis Guthrie__ (1831 - 1899) var en sydafrikansk botaniker och matematiker, som först
+    uttalade fyra färgproblem 1852. Han var student till Augustus De Morgan, en av de största
+    brittiska matematikerna. Förutom att vara matematikprofessor och lärare, arbetade Guthrie som
+    advokat och forskade inom solkraft och luftfart.
+
+haken:
+  name: Haken
+  bio: |
+    __Wolfgang Haken__ (född 1928) är en tysk matematiker, känd för sitt bevis på _fyra färger
+    teorem_ med Kenneth Appel. Som erkännande fick han och Appell Fulkersonpriset från American
+    Mathematical Society. 1990 blev Haken medlem av Center for Advanced Study vid University of
+    Illinois, där han nu är professor i emeritus.
+
+halley:
+  name: Halley
+  bio: |
+    __Edmond Halley__ (1656 - 1742) var en engelsk matematiker och fysiker och den andra _Astronomen
+    Royal_. Han beräknade banan till Halley's Comet, som är uppkallad efter honom.
+
+hamilton:
+  born: 1805
+  died: 1865
+  name: Hamilton
+  small: true
+  bio: |
+    __William Rowan Hamilton__ (1805 - 1865) var en irländsk matematiker och barnbarn. Han uppfann
+    _kvaternioner_, det första exemplet på en "icke-kommutativ algebra", som har viktiga
+    tillämpningar inom matematik, fysik och datavetenskap.
+
+    Han kom först på idén när han gick längs Royal Canal i Dublin och snidade den grundläggande
+    formeln i en stenbro som han passerade: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
+
+    Hamilton gav också betydande bidrag till fysik, inklusive optik och Newtonian mekanik.
+
+hardy:
+  born: 1877
+  died: 1947
+  name: Hardy
+  small: true
+  bio: |
+    __G.H. Hardy__ (1877 - 1947) var en ledande engelska ren matematiker. Tillsammans med _John
+    Littlewood_ gjorde han viktiga upptäckter inom analys och talteori, inklusive fördelningen av
+    primtal.
+
+    År 1913 fick Hardy ett brev från _Srinivasa Ramanujan_, en okänd, självlärd kontorist från
+    Indien. Hardy kände igen genialt och ordnade för Ramanujan att resa till Cambridge där han
+    arbetade. Tillsammans gjorde de viktiga upptäckter och fick flera papper.
+
+    Hardy slog alltid ur tillämpad matematik och uttryckte detta i sin personliga redogörelse för
+    matematiskt tänkande, boken från 1940 _A Mathematician's Apology_.
+
+hilbert:
+  name: Hilbert
+  born: 1862
+  died: 1943
+  bio: |
+    __David Hilbert__ (1862 - 1943) var en av de mest inflytelserika matematikerna under 1900-talet.
+    Han arbetade på nästan alla områden inom matematik och var särskilt intresserad av att bygga en
+    formell, logisk grund för matematik.
+
+    Hilbert arbetade i Göttingen (Tyskland), där han handledde flera studenter som senare blev
+    berömda matematiker. Under den internationella matematikarkongressen 1900 presenterade han en
+    lista med 23 olösta problem. Dessa satte kursen för framtida forskning - och fyra av dem är
+    fortfarande olösta i dag!
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+
+hypatia:
+  born: 360
+  died: 415
+  name: Hypatia
+  overflow: true
+  bio: |
+    __Hypatia__ (ca 360 - 415 e.Kr.) var en framstående astronom och matematiker i det forntida
+    Alexandria. Hon var också den första kvinnliga matematikern vars liv och arbete är rimligt väl
+    inspelade. Hon redigerade eller skrev kommentarer till många av dess tids vetenskapliga böcker
+    och konstruerade astrolaber och hydrometrar.
+
+    Hon var känd under sitt liv som en stor lärare, och hon rådde Orestes, den romerska prefekten
+    Alexandria. Orestes feide med Cyril, biskopen i Alexandria, ledde till att Hypatia mördades av
+    en massa kristna.
+
+jacobi:
+  born: 1809
+  died: 1851
+  name: Jacobi
+  small: true
+  bio: |
+    __Carl Jacobi__ (1804 - 1851) var en tysk matematiker. Han arbetade med analys, differentiella
+    ekvationer och talteori och var en av pionjärerna i studien av _elliptiska funktioner_.
+
+jefferson:
+  name: Jefferson
+  bio: |
+    __Thomas Jefferson__ (1743 - 1826), var en av USA: s grundläggande fäder, deras tredje president
+    och huvudförfattaren till självständighetsförklaringen.
+
+    Förutom sitt arbete inom politik studerade han matematik, trädgårdsodling, mekanik och arbetade
+    som arkitekt. Efter att ha gått i pension från Jefferson University grundade Jefferson
+    University of Virginia.
+
+jiushao:
+  born: 1202
+  died: 1261
+  name: Qin Jiushao
+  overflow: true
+  bio: |
+    __Qin Jiushao__ (秦九韶, ca 1202 - 1261) var en kinesisk matematiker, uppfinnare och politiker. I
+    sin bok _Shùshū Jiǔzhāng_ publicerade han många matematiska upptäckter, inklusive den viktiga
+    _kinesiska restsatsen_, och skrev om mätningar, meteorologi och militären.
+
+    Qin utvecklade först en metod för numerisk lösning av polynomekvationer, som nu kallas _Horners
+    metod_. Han hittade en formel för området för en triangel baserat på längden på dess tre sidor,
+    beräknade summan av aritmetiska serier och introducerade en symbol för "noll" i kinesisk
+    matematik.
+
+    Qin uppfann också _Tianchi-bassängerna_, som användes för att mäta regn och samla meteorologiska
+    data som är viktiga för jordbruket.
+
+johnson:
+  born: 1918
+  died: 2020
+  name: Johnson
+  bio: |
+    __Katherine Johnson__ (1918 - 2020) var en afroamerikansk matematiker. Medan han arbetade på
+    NASA, beräknade Johnson banorna tagna av amerikanska astronauter - inklusive Alan Shepard, den
+    första amerikanen i rymden, landningsprogrammet Apollo Moon och till och med rymdfärjan.
+
+    Hennes extraordinära förmåga att beräkna banbanor, startfönster och nödåtervägar var allmänt
+    känd. Även efter ankomsten av datorer bad astronauten John Glenn henne att personligen
+    kontrollera de elektroniska resultaten igen.
+
+    2015 fick Johnson presidentens medalj för frihet.
+
+julia:
+  name: Julia
+  bio: |
+    __Gaston Maurice Julia__ (1893 - 1978) var en fransk matematiker som tillsammans upptäckte
+    _Julia-uppsättningen_, en fraktal som senare blev populariserad av Benoit Mandelbrot.
+
+karinthy:
+  name: Karinthy
+  bio: |
+    __Frigyes Karinthy__ (1887 - 1938) var en ungersk författare, poet och journalist. Han är mest
+    känd för novellen 1929 "Kedjor", som först introducerade begreppet _sex grader av separation_.
+
+kepler:
+  name: Kepler
+  born: 1571
+  died: 1630
+  bio: |
+    __Johannes Kepler__ (1571 - 1630) var en tysk astronom och matematiker. Han var den
+    _imperialistiska matematikern_ i Prag, och han är bäst känd för sina tre _lagar om
+    planetrörelse_. Kepler arbetade också inom optik och uppfann ett förbättrat teleskop för sina
+    observationer.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+khayyam:
+  name: Khayyam
+  born: 1048
+  died: 1131
+  bio: |
+    __Omar Khayyam__ (عمر خیّام, 1048 - 1131) var en persisk matematiker, astronom och poet. Han
+    lyckades klassificera och lösa alla kubiska ekvationer och fann nya sätt att förstå Euclids
+    _parallella axiom_. Khayyam designade också _Jalali-kalendern_, en exakt solkalender som
+    fortfarande används i vissa länder.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: |
+    __Niels Fabian Helge von Koch__ (1870 - 1924) var en svensk matematiker. Han beskrev först _Koch
+    snöflinga_, en fraktal som är uppkallad efter honom och bevisade förhållanden mellan
+    Riemann-hypotesen och fördelningen av primtal.
+
+lagrange:
+  born: 1736
+  died: 1813
+  name: Lagrange
+  bio: |
+    __Joseph-Louis Lagrange__ (1736 - 1813) var en italiensk matematiker som efterträdde Leonard
+    Euler som chef för Academy of Sciences i Berlin.
+
+    Han arbetade med analys och beräkningen av variationer, uppfann nya metoder för att lösa
+    differentiella ekvationer, bevisade teorier i talteori och lade grunden för gruppteori.
+
+    Lagrange skrev också om klassisk och himmelmekanik och hjälpte till att etablera det metriska
+    systemet i Europa.
+
+lambert:
+  born: 1728
+  died: 1777
+  name: Lambert
+  bio: |
+    __Johann Lambert__ (1728 - 1777) var en schweizisk matematiker, fysiker, astronom och filosof.
+    Han var den första som bevisade att _π_ är ett irrationellt antal, och han introducerade
+    hyperboliska trigonometriska funktioner. Lambert arbetade också med geometri och kartografi,
+    skapade kartprojektioner och förskådade upptäckten av icke-euklidiska utrymmen.
+
+laplace:
+  born: 1749
+  died: 1827
+  name: Laplace
+  small: true
+  bio: |
+    __Pierre-Simon Laplace__ (1749 - 1827) var en fransk matematiker och forskare. Han kallas ibland
+    ”Newton of France” på grund av hans stora intresseområde och den enorma effekten av hans arbete.
+
+    I en bok med fem volymer översatte Laplace problem i himmelmekanik från _geometri_ till
+    _kalkyl_. Detta öppnade ett brett utbud av nya strategier för att förstå vårt universum. Han
+    föreslog att solsystemet utvecklades från en roterande dammskiva.
+
+    Laplace var också banbrytande inom sannolikhetsområdet och visade hur sannolikhet kan hjälpa oss
+    att förstå data från den fysiska världen.
+
+leibniz:
+  name: Leibniz
+  born: 1646
+  died: 1716
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646 - 1716) var en tysk matematiker och filosof. Bland många
+    andra framsteg var han en av uppfinnarna av kalkylen och skapade några av de första mekaniska
+    kalkylatorerna.
+
+    Leibniz trodde att vårt universum är det "bästa möjliga universum" som Gud kunde ha skapat,
+    samtidigt som vi tillät oss att ha en fri vilja. Han var en stor förespråkare för _rationalism_
+    och gav också bidrag till fysik, medicin, lingvistik, lag, historia och många andra ämnen.
+
+leonardo:
+  born: 1452
+  died: 1519
+  name: Da Vinci
+  bio: |
+    __Leonardo da Vinci__ (1452 - 1519) var en italiensk konstnär och polymat. Hans intressen
+    sträckte sig från målning, skulptur och arkitektur till teknik, matematik, anatomi, astronomi,
+    botanik och kartografi. Han ses ofta som det främsta exemplet på ett "universellt geni" och var
+    en av de mest begåvade individerna som någonsin har levt.
+
+    Leonardo föddes i Vinci, utbildade i Florens och arbetade i Milano, Rom, Bologna och Venedig.
+    Endast 15 av hans målningar har överlevt, men bland dem är några av de mest kända och mest
+    reproducerade verken i världen, inklusive _Mona Lisa_ och _The Last Supper_.
+
+    Hans anteckningsböcker innehåller ett stort antal ritningar, uppfinningar och vetenskapliga
+    diagram - inklusive de första flygmaskinerna och helikoptrar, hydraulpumpar, broar och mycket
+    mer.
+
+lie:
+  born: 1842
+  died: 1899
+  name: Lie
+  small: true
+  bio: |
+    Den norska matematikern __Marius Sophus Lie__ (1842 - 1899) gjorde betydande framsteg i studien
+    av _kontinuerliga transformationsgrupper_ - nu kallad _Lie-grupper_. Han arbetade också med
+    differentiella ekvationer och icke-euklidisk geometri.
+
+lobachevsky:
+  born: 1792
+  died: 1856
+  name: Lobachevsky
+  small: true
+  bio: |
+    __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) var en rysk matematiker och en av grundarna av
+    icke-euklidisk geometri. Han lyckades visa att man kan bygga upp en konsekvent typ av geometri
+    där Euclids femte axiom (ungefär parallella linjer) inte rymmer.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+lorenz:
+  name: Lorenz
+  born: 1917
+  died: 2008
+  bio: |
+    __Edward Lorenz__ (1917 - 2008) var en amerikansk matematiker och meteorolog. Han var
+    banbrytande på _kaosteori_, upptäckte _konstiga attraherare_ och myntade uttrycket
+    ”fjärilseffekt”.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+
+lovelace:
+  born: 1815
+  died: 1852
+  name: Lovelace
+  overflow: true
+  bio: |
+    __Ada Lovelace__ (1815 - 1852) var en engelsk författare och matematiker. Tillsammans med
+    Charles Babbage arbetade hon på _Analytical Engine_ en tidig, mekanisk dator. Hon skrev också
+    den första algoritmen att köra på en sådan maskin (för att beräkna Bernoulli-nummer), vilket
+    gjorde henne till den första dataprogrammeraren i historien.
+
+    Ada beskrev sin strategi som ”poetisk vetenskap” och ägnade mycket tid åt att tänka på teknikens
+    inverkan på samhället.
+
+madhava:
+  born: 1340
+  died: 1425
+  name: Madhava
+  bio: |
+    __Madhava från Sangamagramma__ (c. 1340 - 1425) var en matematiker och astronom från södra
+    Indien. Allt hans ursprungliga arbete har gått förlorat, men han påverkade matematikens
+    utveckling mycket.
+
+    Madhava använde först oändliga serier för att ungefärliga trigonometriska funktioner, vilket var
+    ett viktigt steg mot utvecklingen av kalkylen många århundraden senare. Han studerade också
+    geometri och algebra och fann en exakt formel för _π_ (även med oändliga serier).
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Pi
+      url: /course/circles/introduction
+
+mandelbrot:
+  born: 1924
+  died: 2010
+  name: Mandelbrot
+  bio: |
+    Matematikern __Benoit Mandelbrot__ föddes i Polen, växte upp i Frankrike och flyttade så
+    småningom till USA. Han var en av pionjärerna inom _fraktal geometri_, och särskilt intresserad
+    av hur "grovhet" och "kaos" framträder i den verkliga världen (t.ex. moln eller kustlinjer).
+
+    När han arbetade hos IBM använde han tidiga datorer för att skapa grafiska framställningar av
+    fraktaler, och 1980 upptäckte han den berömda _Mandelbrot-uppsättningen_.
+  links:
+    - title: Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
+
+menger:
+  name: Menger
+  bio: |
+    __Karl Menger__ (1902 - 1985) var en österrikisk-amerikansk matematiker. Han forskade på
+    algebra, geometri, dimensioner, spelteori och samhällsvetenskap, men han minns bäst för
+    _Menger-svampen_, en berömd tredimensionell _fraktal_.
+
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __Marin Mersenne__ (1588 - 1648) var en fransk matematiker och präst. På grund av det ofta
+    utbytet med sina kontakter i den vetenskapliga världen under 1600-talet har han kallats "Europas
+    postbox".
+
+    I dag minns vi mest av honom för _Mersenne-primerna_, primtal som kan skrivas som `2^n - 1`. De
+    flesta av de största kända primorna är av denna typ. Han studerade också akustik och harmonierna
+    i en vibrerande sträng och skrev om teologi och filosofi.
+  links:
+    - title: Large Primes
+      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+
+milgram:
+  name: Milgram
+  bio: |
+    __Stanley Milgram__ (1933 - 1984) var en berömd socialpsykolog. Han är mest känd för experiment
+    på _lydnad_, och testat hur villiga vuxna är att följa beställningar, även när de skadar andra,
+    och för _experiment i små världen_, som testar graden av koppling av samhällen.
+
+mirzakhani:
+  born: 1977
+  died: 2017
+  name: Mirzakhani
+  overflow: true;
+  bio: |
+    __Maryam Mirzakhani__ (مریم میرزاخانی, 1977 - 2017) var en iransk matematiker och professor vid
+    Standford University. Hon är den enda kvinnan som har fått _Fields Medal_, den högsta
+    utmärkelsen i matematik.
+
+    Maryam arbetade i korsningen mellan dynamiska system och geometri. Hon studerade föremål som
+    _hyperboliska ytor_ och _komplexa grenrör_, men bidrog också till många andra områden inom
+    matematik.
+
+    När man löste problem, skulle Maryam rita doodles och diagram på stora pappersark för att se de
+    underliggande mönstren och skönheten. Hennes dotter beskrev till och med Maryams verk som
+    ”målning”. Vid 40 års ålder dog Maryam av bröstcancer.
+
+monge:
+  born: 1746
+  died: 1818
+  name: Monge
+  bio: |
+    __Gaspard Monge__ (1746 - 1818) var en fransk matematiker. Han betraktas som fadern till
+    _differentiell geometri_ och har infört konceptet med _krökningslinjer_ på ytor i
+    tredimensionellt utrymme (t.ex. på en sfär). Monge uppfann också _ortografisk projektion_ och
+    _deskriptiv geometri_, som möjliggör representation av tredimensionella objekt med hjälp av
+    tvådimensionella ritningar.
+
+    Under den franska revolutionen tjänade Monge som marinminister. Han hjälpte till att reformera
+    det franska utbildningssystemet och fann École Polytechnique.
+  small: true
+  links:
+    - title: Map Projections
+      url: /world/Dimensions_and_Distortions
+
+monsky:
+  name: Monsky
+  bio: |
+    __Paul Monsky__ (född 1936) är en amerikansk matematiker och professor vid Brandeis University.
+    Han bevisade att en kvadrat inte kan delas upp i ett udda antal trianglar med lika stor yta -
+    detta kallas ”Monskys teorem”.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) var en amerikansk uppfinnare och målare. Han växte upp nära
+    Boston och studerade vid Yale universitet innan han började en karriär som konstnär.
+
+    På sin återresa från en resa till Europa för att studera konst, hörde Morse passagerare prata om
+    nya elektriska apparater. Detta inspirerade honom att arbeta med en betydande förbättring av den
+    elektriska telegrafen, med bara en enda tråd och att utveckla _Morse-kod_ med sin assistent
+    Alfred Vail.
+
+    Efter några initiala svårigheter med att få finansiering spridde Morses telegraf snabbt över
+    hela USA och världen.
+
+    Morse sprang också två gånger för borgmästare i New York City, men hans stöd för slaveri och mot
+    invandring innebar att han besegrades båda gångerna.
+
+napier:
+  born: 1550
+  died: 1617
+  name: Napier
+  bio: |
+    __John Napier__ (1550 - 1617) var en skotsk matematiker, fysiker och astronom. Han uppfann
+    logaritmer, populariserade användningen av decimalpunkten och skapade "Napiers ben", en manuell
+    beräkningsenhet som hjälpte till att multiplicera och dela.
+
+nash:
+  born: 1928
+  died: 2015
+  name: Nash
+  bio: |
+    __John Forbes Nash__ (1928 - 2015) var en amerikansk matematiker som arbetade med spelteori,
+    differentiell geometri och partiella differentiella ekvationer. Han visade hur matematik kan
+    förklara beslutsfattandet i komplexa verkliga system - inklusive ekonomi och militär.
+
+    Under 30-talet diagnostiserades Nash med paranoid schizofreni, men han lyckades återhämta sig
+    och återgå till sitt akademiska arbete. Han är den enda personen som får både Nobelpriset för
+    ekonomi och _Abelpriset_, en av de högsta utmärkelsen i matematik.
+  links:
+    - title: Game Theory
+      url: /world/Game_Theory
+
+neumann:
+  born: 1903
+  died: 1957
+  name: von Neumann
+  small: true
+  bio: |
+    __John von Neumann__ (1903 - 1957) var en ungersk-amerikansk matematiker, fysiker och
+    datavetare. Han gav viktiga bidrag till ren matematik, var en pionjär inom kvantmekanik och
+    utvecklade koncept som spelteori, cellulära automatiska maskiner, självreplikerande maskiner och
+    linjär programmering.
+
+    Under andra världskriget var von Neumann en nyckelmedlem i _Manhattan-projektet_ och arbetade
+    med utvecklingen av vätebomben. Han konsulterade senare för Atomic Energy Commission och US Air
+    Force.
+
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642 - 1726) var en engelsk fysiker, matematiker och astronom och en av de
+    mest inflytelserika forskarna genom tiderna. Han var professor vid Cambridge University och
+    ordförande för Royal Society i London.
+
+    I sin bok _Principia Mathematica_ formulerade Newton lagarna om rörelse och tyngdkraft, som låg
+    till grund för klassisk fysik och dominerade vår syn på universumet under de kommande tre
+    århundradena.
+
+    Bland många andra saker var Newton en av uppfinnarna av kalkylen, byggde det första
+    reflekterande teleskopet, beräknade ljudets hastighet, studerade rörelserna hos vätskor och
+    utvecklade en teori om färg baserad på hur prismor delade solljus i ett regnbågefärgat spektrum
+    .
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+nicomachus:
+  name: Nicomachus
+  born: 60
+  died: 120
+  overflow: true
+  bio: |
+    __Nicomachus från Gerasa__ (ca 60 - 120) var en forntida grekisk matematiker som också
+    spenderade mycket tid på att tänka på de mystiska egenskaperna hos siffror. Hans bok
+    _Introduktion till aritmetik_ innehåller första omnämnandet av perfekta siffror.
+  links:
+    - title: Perfect Numbers
+      url: /course/sequences/special#perfect
+
+nightingale:
+  born: 1820
+  died: 1910
+  name: Nightingale
+  small: true
+  bio: |
+    __Florence Nightingale__ (1820 - 1910) var en engelsk sjuksköterska och statistiker. Under
+    Krimkriget ammade hon sårade brittiska soldater och grundade senare den första utbildningsskolan
+    för sjuksköterskor. Som "The Lady with the Lamp" fick hon en kulturikon, och nya sjuksköterskor
+    i USA tar fortfarande _Nightingale-löfte_.
+
+    Ett av hennes viktigaste bidrag till medicinen var användningen av statistik för att utvärdera
+    behandlingar. Hon skapade många infographics och var en av de första som använde cirkeldiagram.
+    Nightingale arbetade också för att förbättra saniteten och hungerlättnader i Indien, hjälpte
+    till att avskaffa prostitutionlagar och främjade nya karriärer för kvinnor.
+
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: |
+    __Amalie Emmy Noether__ (1882 - 1935) var en tysk matematiker som gjorde viktiga upptäckter inom
+    abstrakt algebra och teoretisk fysik, inklusive sambandet mellan symmetri och bevarande lagar.
+    Hon beskrivs ofta som den mest inflytelserika kvinnliga matematikern.
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
+oresme:
+  born: 1323
+  died: 1382
+  name: Oresme
+  bio: |
+    __Nicole Oresme__ (c. 1323 - 1382) var en viktig fransk matematiker, filosof och biskop, som
+    bodde i slutet av medeltiden. Han uppfann koordinatgeometri, långt innan Descartes, var den
+    första som använde fraktionella exponenter och arbetade med oändliga serier. Han skrev om
+    ekonomi, fysik, astronomi och teologi och var rådgivare till kung Charles V från Frankrike.
+
+pacioli:
+  born: 1446
+  died: 1517
+  name: Pacioli
+  bio: |
+    __Luca Pacioli__ var en inflytelserik italiensk friar och matematiker, som uppfann
+    standardsymbolerna för plus och minus (+ och -). Han var en av de första revisorerna i Europa,
+    där han introducerade bokföring med dubbla poster. Pacioli samarbetade med Leonardo da Vinci och
+    skrev också om aritmetik och geometri.
+
+pascal:
+  name: Pascal
+  born: 1623
+  died: 1662
+  bio: |
+    __Blaise Pascal__ (1623 - 1662) var en fransk matematiker, fysiker och filosof. Han uppfann
+    några av de första mekaniska räknarna, liksom arbetade med projektiv geometri, sannolikhet och
+    vakuumets fysik.
+
+    Mest känt är att Pascal kommer ihåg för att ha namngivit _Pascal's Triangle_, en oändlig
+    triangel med siffror med några fantastiska egenskaper.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+peano:
+  born: 1858
+  died: 1932
+  name: Peano
+  small: true
+  bio: |
+    Den italienska matematikern __Giuseppe Peano__ (1858 - 1932) publicerade över 200 böcker och
+    artiklar om logik och matematik. Han formulerade _Peano axioms_, som blev grunden för rigorös
+    algebra och analys, utvecklade notationen för logik och setteori, konstruerade kontinuerliga,
+    rymdfyllda kurvor (_Peano kurvor_) och arbetat med bevismetoden genom induktion.
+
+    Peano utvecklade också ett nytt, internationellt språk, _Latino sine flexione_, som var en
+    förenklad version av latin.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+pearson:
+  name: Pearson
+  bio: |
+    __Karl Pearson__ (1857 - 1936) var en engelsk matematiker och statistiker. Han arbetade med
+    biometri, meteorologi och eugenik, bland många andra ämnen, och grundade världens första
+    universitetsstatistiska avdelning, vid University College London.
+
+penrose:
+  name: Penrose
+  born: 1931
+  bio: |
+    __Sir Roger Penrose__ (född 1931) är en brittisk matematiker och fysiker som är känd för sitt
+    banbrytande arbete inom allmän relativitet och kosmologi - ofta i samarbete med andra berömda
+    forskare som Stephen Hawking och Michael Atiyah. Han upptäckte också _Penrose Tilings_:
+    självliknande, icke-periodiska tessellationer.
+  links:
+    - title: Penrose Tilings
+      url: /course/polyhedra/tessellations#penrose
+
+perelman:
+  born: 1966
+  name: Perelman
+  bio: |
+    2003 bevisade den ryska matematikern __Grigori Perelman__ (Григо́рий Перельма́нborn, född 1966)
+    _Poincaré Conjecture_, som fram till dess var ett av de mest berömda olösta problemen i
+    matematik.
+
+    Det komplexa beviset bekräftades 2006, men Perelman avslog två stora priser som medföljde: Clay
+    Millennium Prize på 1 miljon $ och _Fields Medal_ som är det högsta erkännandet i matematik. I
+    själva verket sa han: _”Jag är inte intresserad av pengar eller berömmelse; Jag vill inte visas
+    som ett djur i en djurpark. ”_
+
+    Perelman gjorde också bidrag till Riemannian geometri och geometrisk topologi, och Poincaré
+    Conjecture är fortfarande det enda av de sju tusenprisproblem som har lösts.
+
+pingala:
+  name: Pingala
+  born: -330
+  died: -270
+  bio: |
+    __Pingala__ (पिङ्गल) var en forntida indisk poet och matematiker som levde omkring 300 f.Kr.,
+    men mycket lite är känt om hans liv. Han skrev Chandaḥśāstra, där han analyserade sanskrit poesi
+    matematiskt. Den innehöll också de första kända förklaringarna om binära siffror,
+    Fibonacci-nummer och Pascal triangel.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+planck:
+  name: Plank
+  bio: |
+    __Max Plank__ (1858 - 1947) var en tysk fysiker och en av de ursprungliga utvecklarna av Quantum
+    Mechanics - för vilken han fick Nobelpriset 1918.
+
+plato:
+  name: Plato
+  born: -425
+  died: -347
+  bio: |
+    __Platon__ (c. 425 - 347 fvt) var en filosof i antika Grekland, och - tillsammans med sin lärare
+    Sokrates och hans student Aristoteles - lägger grunden till västerländsk filosofi och vetenskap.
+
+    Platon grundade Academy of Athens, den första institutionen för högre utbildning i den västra
+    världen. Hans många skrifter om filosofi och teologi, vetenskap och matematik, politik och
+    rättvisa gör honom till en av de mest inflytelserika tänkarna genom tiderna.
+  links:
+    - title: Platonic Solids
+      url: /course/polyhedra/platonic
+
+poincare:
+  born: 1854
+  died: 1912
+  name: Poincaré
+  bio: |
+    Den franska matematikern __Henri Poincaré__ (1854 - 1912) beskrivs ofta som _den sista
+    universalisten_, vilket betyder att han arbetade inom alla områden inom matematik som var känd
+    under sin livstid.
+
+    Poincaré är en av grundarna av fältet för _topologi_, och han kom med _Poincaré-antagandet_.
+    Detta var ett av de berömda olösta problemen i matematik, tills det bevisades 2003 av Grigori
+    Perelman
+
+    Han fann också en partiell lösning för "tre kroppsproblem" och upptäckte att rörelsen av tre
+    stjärnor eller planeter i rymden kan vara helt oförutsägbar. Detta lägger grunden för modern
+    _Kaosteori_.
+
+    Poincaré var den första som föreslog _gravitationella vågor_, och hans arbete med
+    Lorentz-transformationer var basen som Albert Einstein byggde sin teori om speciell relativitet.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+    - title: Topology
+      url: /world/Dimensions_and_Distortions
+
+ptolemy:
+  born: 90
+  died: 168
+  name: Ptolemy
+  bio: |
+    __Claudius Ptolemy__ (ca 100 - 170 e.Kr.) var en grekisk-romersk matematiker, astronom, geograf
+    och astrolog. Han minns bäst för _Ptolemaisk_ eller _Geocentrisk_ modell av vårt universum - att
+    Jorden är i centrum och alla planeter och solen kretsar kring detta.
+
+    Även om vi idag vet att denna modell är felaktig, är Ptolemys vetenskapliga inverkan
+    obestridlig. Han utvecklade trigonometriska tabeller med många praktiska tillämpningar, som
+    förblev de mest exakta under många århundraden. Han skapade också detaljerade kartor över jorden
+    och skrev om musikteori och optik.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Orbits
+      url: /course/circles/introduction
+
+pythagoras:
+  name: Pythagoras
+  born: -570
+  died: -495
+  bio: |
+    __Pythagoras of Samos__ (c. 570 - 495 fvt) var en grekisk filosof och matematiker. Han är mest
+    känd för att bevisa _Pythagoras 'teorem_, men gjorde många andra matematiska och vetenskapliga
+    upptäckter.
+
+    Pythagoras försökte förklara musik på ett matematiskt sätt och upptäckte att två toner låter
+    "trevligt" tillsammans (konsonant) om förhållandet mellan deras frekvenser är en enkel bråk.
+
+    Han grundade också en skola i Italien där han och hans elever dyrkade matematik nästan som en
+    religion, medan han följde ett antal bisarra regler - men skolan brändes så småningom av deras
+    motståndare.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
+ramanujan:
+  born: 1887
+  died: 1920
+  name: Ramanujan
+  overflow: true
+  bio: |
+    __Srinivasa Ramanujan__ (1887 - 1920) växte upp i Indien, där han fick mycket liten formell
+    utbildning i matematik. Ändå lyckades han utveckla nya idéer i fullständig isolering, medan han
+    arbetade som kontorist i en liten butik.
+
+    Efter några misslyckade försök att kontakta andra matematiker skrev han ett brev till den
+    berömda G.H. Härdig. Hardy kände igen genast Ramanujan och arrangerade att han skulle resa till
+    Cambridge i England. Tillsammans gjorde de många upptäckter i antal teori, analys och oändliga
+    serier.
+
+    Tyvärr blev Ramanujan snart sjuk och tvingades återvända till Indien, där han dog vid en ålder
+    av 32. Under sitt korta liv bevisade Ramanujan över 3000 teorem och ekvationer, på ett brett
+    spektrum av ämnen. Hans arbete skapade helt nya områden i matematik, och hans anteckningsböcker
+    studerades av andra matematiker i många decennier efter hans död.
+
+regiomontanus:
+  born: 1436
+  died: 1476
+  name: Regiomontanus
+  overflow: true
+  bio: |
+    __Johann Müller Regiomontanus__ (1436 - 1476) var en tysk matematiker och astronom. Han gjorde
+    stora framsteg inom båda områdena, inklusive att skapa detaljerade astronomiska tabeller och
+    publicera flera läroböcker.
+
+richardson:
+  name: Richardson
+  bio: |
+    __Lewis Fry Richardson__ (1881 - 1953) var en brittisk matematiker och fysiker. Han var
+    banbrytande på moderna matematiska tekniker för väderprognoser, uppfann akustiska maskiner för
+    att upptäcka isberg och utvecklade metoder för att lösa system med linjära ekvationer.
+
+    Han försökte också beräkna sannolikheten för att två länder förklarar krig mot varandra, med
+    tanke på deras delade gräns. Men han kunde inte hitta exakta mätningar för landets gränser.
+    Detta fick honom att inse att gränser och kustlinjer har många egenskaper hos _fraktaler_.
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: |
+    __Bernhard Riemann__ (1826 - 1866) var en tysk matematiker som arbetade inom områdena analys och
+    talteori. Han kom med den första noggranna definitionen av integration, studerade differentiell
+    geometri som lägger grunden för allmän relativitet och gjorde banbrytande upptäckter när det
+    gäller fördelningen av primtal.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/the-distribution-of-primes#riemann
+
+russell:
+  born: 1872
+  died: 1970
+  name: Russell
+  small: true
+  bio: |
+    __Bertrand Russell__ (1872 - 1970) var en brittisk filosof, matematiker och författare. Han
+    anses allmänt vara en av 1900-talets viktigaste logiker.
+
+    Russell co-skrev "Principia Mathematica", där han försökte skapa en formell grund för matematik
+    med logik. Hans arbete har haft en betydande inverkan inte bara på matematik och filosofi, utan
+    också på lingvistik, konstgjord intelligens och metafysik.
+
+    Russell var en passionerad pacifist och antikrigsaktivist. År 1950 fick han Nobelpriset i
+    litteratur för sitt arbete ”där han förkämpar humanitära ideal och tankefrihet”.
+
+shannon:
+  name: Shannon
+  born: 1898
+  died: 1972
+  bio: |
+    __Claude Shannon__ (1898 - 1972) var en amerikansk matematiker och elektrotekniker, ihågkommen
+    som ”informationsteorins far”. Han arbetade med kryptografi, inklusive kodbrytning för
+    nationellt försvar under andra världskriget, men han var också intresserad av jonglering,
+    enhjuling och schack. På fritiden byggde han maskiner som kunde jonglera eller lösa Rubiks
+    kub-pussel.
+  small: true
+  links:
+    - title: Computers for Gambling
+      url: /course/statistics/casino#dealer
+
+shijie:
+  born: 1249
+  died: 1314
+  name: Zhu Shijie
+  bio: |
+    __Zhu Shijie__ (朱世杰, 1249 - 1314) var en av de största kinesiska matematikerna. I boken _Jade
+    Mirror of the Four Unknowns_, visade han hur man löser 288 olika problem med system av
+    polynomekvationer och fyra variabler (kallas _Heaven_, _Earth_, _Man_ och _Matter_).
+
+    Zhu gjorde omfattande användning av Pascal triangel. Han uppfann också regler för att lösa
+    system med linjära ekvationer - förut för våra moderna matrismetoder under många århundraden.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __Wacław Franciszek Sierpiński__ (1882 - 1969) var en polsk matematiker. Han gjorde viktiga
+    upptäckter inom setteori, talteori, analys och topologier och publicerade över 700 artiklar och
+    50 böcker. Han uppfann också många populära _fraktaler_, inklusive _Sierpinski-triangeln_,
+    _Sierpinski-mattan_ och _Sierpinski-kurvan_.
+
+    _Sierpinski-nummer_ är udda naturliga siffror _k_ så att `k * 2^n +1` är sammansatt för alla
+    naturliga siffror _n_. _Sierpinski-problemet_ försöker hitta de minsta Sierpinski-siffrorna. Det
+    minsta kända sådana antalet är 78.557 - men det är fortfarande okänt om det finns mindre.
+
+sikdar:
+  name: Sikdar
+  bio: |
+    __Radhanath Sikdar__ (1813 - 1870) var en indisk matematiker. Han var den första som mätte
+    höjden på Mount Everest och visade att det är det högsta berget på jorden.
+
+singmaster:
+  name: Singmaster
+  bio: |
+    __David Singmaster__ (född 1939) är en amerikansk matematiker som är särskilt känd för sina
+    matematiska pussel och hjärnteatrar. Han var den första som kom med matematiska algoritmer för
+    att analysera och lösa _Rubik's Cube_.
+
+stevin:
+  born: 1548
+  died: 1620
+  name: Stevin
+  bio: |
+    __Simon Stevin__ (1548 - 1620) var flamländsk matematiker och ingenjör. Han var en av de första
+    människorna som använde och skrev om decimalbråk och gav många andra bidrag till vetenskap och
+    teknik.
+
+tartaglia:
+  born: 1499
+  died: 1557
+  name: Tartaglia
+  bio: |
+    __Niccolò Fontana Tartaglia__ (1499 - 1557) var en italiensk matematiker, ingenjör och
+    bokförare. Han publicerade de första italienska översättningarna av Archimedes och Euclid, fann
+    en formel för att lösa alla kubiska ekvationer (inklusive den första verkliga tillämpningen av
+    komplexa siffror) och använde matematik för att undersöka projektilrörelsen av kanonkulor.
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Thales of Miletus__ (c. 624 - 546 f.Kr.) var en grekisk matematiker och filosof.
+
+    Thales erkänns ofta som den första forskaren i västerländsk civilisation: snarare än att använda
+    religion eller mytologi försökte han förklara naturfenomen med hjälp av en vetenskaplig
+    strategi. Han är också den första individen i historien som har en matematisk upptäckt uppkallad
+    efter honom: Thales 'teorem.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
+
+thorp:
+  name: Thorp
+  bio: |
+    __Edward Thorp__ (född 1932) är en amerikansk hedgefondförvaltare och blackjackspelare, känd för
+    att ha uppfunnit _korträkning_ och för att bygga den första _bärbara datorn_ för att slå kasinon
+    på Roulett. Han arbetade på MIT, är professor i matematik och banbrytande moderna tillämpningar
+    av sannolikhetsteori.
+
+turing:
+  born: 1912
+  died: 1954
+  name: Turing
+  bio: |
+    __Alan Turing__ (1912 - 1954) var en engelsk matematiker och kallas ofta ”datavetenskapens far”.
+
+    Under andra världskriget spelade Turing en kritisk roll i att bryta den Enigma-koden som den
+    tyska militären använde, som en del av ”Government Code and Cypher School” i Bletchley Park.
+    Detta hjälpte de allierade vinna kriget och kan ha räddat miljoner liv.
+
+    Han uppfann också _Turing-maskinen_, en matematisk modell för en dator med allmänt syfte och
+    _Turing-testet_, som kan användas för att bedöma förmågan hos konstgjord intelligens.
+
+    Turing var homosexuell, vilket fortfarande var ett brott under hans liv och innebar att hans
+    banbrytande prestationer aldrig erkändes fullt ut. Han begick självmord vid 41 års ålder.
+
+ulam:
+  name: Ulam
+  bio: |
+    __Stanisław Ulam__ (1909 - 1984) var en polsk-amerikansk matematiker. Han spelade en viktig roll
+    i det amerikanska _Manhattan-projektet_ som utvecklade de första kärnvapnen. Han arbetade också
+    med raketframdrivning med kärnkraftspulser och utvecklade _Monte Carlo-metoden_ - ett viktigt
+    begrepp inom statistik.
+
+venn:
+  name: Venn
+  bio: |
+    __John Venn__ (1834 - 1923) var en engelsk matematiker och filosof som introducerade
+    _Venn-diagrammet_ som användes i uppsättningsteori och sannolikhet. Han undervisade vid
+    Cambridge University och var stipendiat vid Royal Society i London.
+
+viete:
+  born: 1540
+  died: 1603
+  name: Viète
+  bio: |
+    __François Viète__ (1540 - 1603) var en fransk matematiker, advokat och rådgivare för Kings
+    Henry III och IV i Frankrike. Han gjorde betydande framsteg inom Algebra och introducerade först
+    användningen av bokstäver för att representera variabler.
+
+    Viète upptäckte sambandet mellan rötter och koefficienter för ett polynom, kallad _Viète & # 39;
+    s formel_. Han skrev också böcker om geometri och trigonometri, inklusive beräkning av _π_ till
+    10 decimaler med hjälp av en polygon med 393216 sidor.
+
+wallis:
+  born: 1616
+  died: 1703
+  name: Wallis
+  bio: |
+    Den engelska matematikern __John Wallis__ (1616 - 1703) bidrog till utvecklingen av kalkylen,
+    uppfann siffrelinjen och symbolen ∞ för oändlighet och tjänade som huvudkryptograf för
+    parlamentet och kungliga domstolen.
+
+wiles:
+  born: 1953
+  name: Wiles
+  bio: |
+    Den brittiska matematikern Sir __Andrew Wiles__ (född 1953) är bäst känd för att bevisa Fermats
+    sista sats, som fram till dess var ett av de mest kända olösta problemen i matematik.
+
+    1637 skrev Pierre de Fermat, i marginalen i en lärobok att han hade ett underbart bevis på att
+    ekvationen `a^n + b^n = c^n` inte har några heltalslösningar för `n > 2`. Tyvärr kunde ingen
+    hitta ett bevis - förrän Wiles, cirka 400 år senare.
+
+    Wiles hade fascinerats av problemet sedan han var 10 år gammal och tillbringade sju år på att
+    arbeta med det i ensamhet. Han tillkännagav sin lösning 1993, även om en liten lucka i hans
+    argument tog ytterligare två år att fixa.
+
+    Han var för gammal för att få _Fields-medaljen_, den högsta utmärkelsen i matematik, som har en
+    åldersgräns på 40. I stället tilldelades Wiles en speciell silverplack för sitt arbete.
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __Stephen Wolfram__ (född 1959) är en brittisk-amerikansk datavetare, fysiker och affärsman. Han
+    är grundaren och VD för _Wolfram Research_, där han utvecklade _Mathematica_ datorsystemet,
+    _Wolfram | Alpha_ svarsmotorn och Wolfram-programmeringsspråket.

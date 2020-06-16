@@ -72,6 +72,15 @@ alternate-angles:
     called __alternate interior angles__.
   # TODO Image
 
+amino-acid:
+  title: Amino Acid
+  text: |
+    __Amino acids__ are tiny organic compounds that make up __proteins__. They
+    are some of the key building blocks of all living organisms.
+
+    In our body, amino acids are used to break down food, repair body tissue,
+    store energy, and for many other functions.
+
 angle:
   title: Angle
   text: An angle is formed by two rays that share a common endpoint. Each ray
@@ -361,7 +370,7 @@ congruent:
   text: In geometry, two figures are __congruent__ if are identical in size,
     shape and measure. This means we could move, flip or rotate them to exactly
     fit on top of each other.
-  link: /course/euclidean-geometry/definitions#congruence
+  link: /course/euclidean-geometry/axioms#congruence
 
 congruent-angles:
   title: Congruent Angles
@@ -373,6 +382,7 @@ conic-section:
     A __conic section__ is a curve that is created as the intersection of
     the surface of a cone with a flat plane. There are four different types of
     conic sections, which share many properties:
+
     * Circle
     * Ellipse
     * Parabola
@@ -388,7 +398,7 @@ convex:
 
 coordinate-system:
   title: Coordinate System
-  text: A __cordinate system__ is a two-dimensional plane that contains two
+  text: A __coordinate system__ is a two-dimensional plane that contains two
     perpendicular axes. Every point on the plane can be defined using two
     numbers (coordinates), that specify its distance from the two axes.
 
@@ -630,9 +640,8 @@ fta:
 
 function:
   title: Function
-  text: A __function__ is a mathematical relation that converts an input (_x_)
-    into exactly one output (_y_). They are often expressed as mathematical
-    equations of the form `f(x)`.
+  text: A __function__ is a mathematical relation that converts an input `x`
+    into exactly one output `f(x)`.
 
 function-graph:
   title: Graphs of Functions
@@ -868,14 +877,14 @@ line:
   title: Line
   text: A __line__ is a set of infinitely many points that extend forever in
     both directions. Lines are always straight and have no _width_.
-  link: /course/euclidean-geometry/definitions#lines
+  link: /course/euclidean-geometry/axioms#lines
 
 line-segment:
   title: Line segment
   text: A __line segment__ is the part of a line that lies between two points,
     without extending to infinity. We can label line segments from point _A_ to
     point _B_ as `bar(AB)`.
-  link: /course/euclidean-geometry/definitions#segments
+  link: /course/euclidean-geometry/axioms#segments
 
 line-slope:
   title: Slope of a Line
@@ -954,6 +963,16 @@ molecule:
     Examples of molecules include `O_2`, which consists of two connected Oxygen
     atoms, and `H_2 O`, which consists of two Hydrogen atoms and one Oxygen
     atom.
+
+morse-code:
+  title: Morse Code
+  text: |
+    __Morse code__ is a way to represent letters and numbers using short and
+    long signals (called dots and dashes). It is named after _Samuel Morse_ and
+    was initially used to communicate over long distances using telegraphs.
+
+    For example, the letter “L” would be represented using the sequence
+    _{x-morse(char="L")}_ of short and long signals.
 
 multiple:
   title: Multiple
@@ -1060,7 +1079,7 @@ parallel:
   text: Two or more lines are __parallel__ if they never intersect. They have
     the same slope and the distance between them is always constant.
   image: parallel.svg
-  link: /course/euclidean-geometry/definitions#parallel
+  link: /course/euclidean-geometry/axioms#parallel
 
 parallelogram:
   title: Parallelogram
@@ -1103,7 +1122,7 @@ perpendicular:
     _orthogonal_) if they intersect at a right angle.
   # Perpendicular lines have slopes that are negative reciprocals.
   image: perpendicular.svg
-  link: /course/euclidean-geometry/definitions#perpendicular
+  link: /course/euclidean-geometry/axioms#perpendicular
 
 perpendicular-bisector:
   title: Perpendicular bisector
@@ -1130,7 +1149,7 @@ point:
   title: Point
   text: A __point__ is a specific location in space. Points describe a position,
     but have no size or shape themselves.
-  link: /course/euclidean-geometry/definitions#points
+  link: /course/euclidean-geometry/axioms#points
 
 polygon:
   title: Polygon
@@ -1351,7 +1370,7 @@ ray:
   title: Ray
   text: A __ray__ is the part of a line that starts at a point and extends
     infinitely in one direction. We can label rays starting at `A` as `vec(AB)`.
-  link: /course/euclidean-geometry/definitions#rays
+  link: /course/euclidean-geometry/axioms#rays
 
 real-numbers:
   title: Real Numbers
@@ -1462,6 +1481,12 @@ scientific-notation:
     `1 ≤ a < 10`.
 
     For example, the number 4600 could be written as `4.6 × 10^3`.
+
+set:
+  title: Sets
+  text: A __set__ is a collection of things or objects (called elements). Every
+    element can only appear one in a set. We write sets using {}s, for example,
+    a set containing the numbers 2, 3 and 4 would be written as {2, 3, 4}.
 
 sequence:
   title: Sequence

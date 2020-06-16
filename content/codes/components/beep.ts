@@ -4,12 +4,15 @@
 // ============================================================================
 
 
-const ctx = new AudioContext();
-export type Beep = {stop: () => void; osc: OscillatorNode};
+const Context = (window as any).AudioContext || (window as any).webkitAudioContext;
+
+const ctx = Context ? (new Context() as AudioContext) : undefined;
+export type Beep = {stop: () => void};
 
 export function beep(duration = 0): Beep {
-  // TODO Prevent multiple beeps from running at once.
+  if (!ctx) return {stop: () => undefined};
 
+  // TODO Prevent multiple beeps from running at once.
   const osc = ctx.createOscillator();
   const gain = ctx.createGain();
 
@@ -30,5 +33,5 @@ export function beep(duration = 0): Beep {
 
   if (duration) setTimeout(stop, duration - 0.1);
 
-  return {stop, osc};
+  return {stop};
 }

@@ -89,8 +89,10 @@ x-tabbox .titles .check { border: 1px solid white; }
 
 .frame-body { background: @grey-background; padding: 30px 18px 18px; border-radius: 6px; }
 
-.four-colour-icon { width: 40px; height: 40px; padding: 8px; display: inline-block; margin: 0 5px; cursor: pointer; }
-.four-colour-icon.on { padding: 0; border: 8px solid rgba(0,0,0,0.6); }
+.four-colour-icons { display: flex; justify-content: center; margin-bottom: 1em; }
+.four-colour-icon { width: 40px; height: 40px; border: 5px solid transparent;
+  margin: 0 4px; cursor: pointer; border-radius: 100%; opacity: 0.6; }
+.four-colour-icon.on { border-color: fade(black, 60%); opacity: 1; }
 .four-colours .solve { left: auto; right: 10px; }
 .four-colours path { transition: .2s; cursor: pointer; &:hover { opacity: 0.8; } }
 
@@ -113,7 +115,7 @@ x-tabbox .titles .check { border: 1px solid white; }
 #dominoes { cursor: pointer; }
 #dominoes g rect { fill: #999; }
 #dominoes g text { fill: #F2F2F2; font-size: 18px; letter-spacing: -1px; }
-#dominoes g { transform-origin: bottom right; transition: transform .1s linear; }
+#dominoes g { transform-origin: bottom right /* rtl:ignore */; transition: transform .1s linear; }
 
 .tsm {
   background: url(/resources/graph-theory/images/map.jpg);
@@ -127,4 +129,16 @@ x-tabbox .titles .check { border: 1px solid white; }
 .vertex-orders text { font-size: 18px; fill: #FFF; }
 .vertex-orders circle { transition: fill .5s; }
 
-.euler-sum { opacity: 0; margin: 0.4em 0px 0px; padding-top: .4em; border-top: 1px solid #ddd; }
+.euler-sum { opacity: 0; margin: 0.4em 0 0; padding-top: .4em; border-top: 1px solid #ddd; }
+
+#euler-2 .node { stroke: white; }
+.euler-table {
+  position: absolute;
+  background: mix(@light-grey, white);
+  top: 20px;
+  right: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  line-height: 1.2;
+  p { margin: 0; }
+}

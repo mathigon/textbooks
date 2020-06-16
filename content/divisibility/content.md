@@ -294,7 +294,7 @@ We’ve still skipped number 6 – but we’ve already done all the hard work.
 Remember that 6 = 2 × 3.
 
     +grid(40)
-    p.btn-row.text-center(style="margin-bottom:1em")
+    p.btn-row.text-center.no-voice(style="margin-bottom:1em")
       button.btn.btn-small(data-display="visibility") Show multiple of 2
       button.btn.btn-small(data-display="visibility") Show multiple of 3
 
@@ -503,8 +503,8 @@ Here you can generate your own prime numbers with a given number of digits:
 
     .calculator
       h3 Prime Generator
-      p.md Number of digits: ${d}{d|6|2,16,1}
-      p(style="margin: 10px 0"): button.btn.btn-white Generate
+      p.no-voice.md Number of digits: ${d}{d|6|2,16,1}
+      p.no-voice(style="margin: 10px 0"): button.btn.btn-white Generate
       .result.var(:html="result")
 
 ---
@@ -574,7 +574,7 @@ is quite surprising, because primes are defined using multiplication and factors
 
     .calculator
       h3 Goldbach Calculator
-      p Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
+      p.no-voice Pick any even number, to calculate how it#[br]can be written as the sum of two primes.
       input(type="number", min=4, step=2)
       .result.var(:html="result")
 
@@ -706,10 +706,11 @@ the start line, when will they meet again at the start?
 This question really isn’t about the geometry of the race track, or about
 velocity and speed – it is about multiples and divisibility.
 
-The first runner crosses the start line after 60s, 120s, 180s, 240s, and so on.
-These are simply the [[multiples|factors]] of __{.m-blue}60__. The second runner
-crosses the start line after 40s, 80s, 120s, 160s, and so on. The first time
-both runners are back at the start line is after [[120]] seconds.
+The first runner crosses the start line after 60 seconds, 120 seconds, 180 seconds, 240 seconds,
+and so on. These are simply the [[multiples|factors]] of __{.m-blue}60__. The second runner crosses
+the start line after 40 _{span(voice="seconds")}s_, 80 _{span(voice="seconds")}s_, 120
+_{span(voice="seconds")}s_, 160 _{span(voice="seconds")}s_, and so on. The first time both runners
+are back at the start line is after [[120]] seconds.
 
 {.reveal(when="blank-0 blank-1")} What we’ve just found is the smallest number
 which is both a multiple of __{.m-green}40__ and a multiple of __{.m-blue}60__.
@@ -908,7 +909,7 @@ along the sides. What is the largest size of squares she can use?
 
     figure
       include svg/floorplan.svg
-      p.text-center.md The tiles have a size of ${x}{x|3|1,18,1}m.#[br]#[span.result.var]
+      p.text-center.md The tiles have a size of ${x}{x|3|1,18,1}m.#[br]#[span.result.var.no-voice]
 
 ---
 > id: gcd1

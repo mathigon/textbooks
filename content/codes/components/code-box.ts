@@ -47,9 +47,13 @@ export class CodeBox extends CustomElementView {
     this.$input = this.$('.input')!;
     this.$output = this.$('.output')!;
 
+    let changes = 0;
+
     this.setPlainText(this.$input.text.trim());
     this.$input.on('change keyup input paste', () => {
       this.setPlainText(this.$input.text.trim());
+      changes += 1;
+      this.trigger('type', {text: this.plainText, changes});
     });
   }
 
@@ -65,7 +69,7 @@ export class CodeBox extends CustomElementView {
     for (const char of str.split('')) {
       if (!char.match(/[a-zA-Z0-9]/)) {
         this.$input._el.appendChild(document.createTextNode(char));
-        this.$output._el.appendChild(document.createTextNode(char));
+        // this.$output._el.appendChild(document.createTextNode(char));
       } else {
         if (this.$inputChars.length <= i) this.createSpan();
         this.$input.append(this.$inputChars[i]);

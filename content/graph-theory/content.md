@@ -182,7 +182,7 @@ Euler](bio:euler). Euler was intrigued by an old problem regarding the town of
 Königsberg near the Baltic Sea.
 
 The river Pregel divides Königsberg into four separate parts, which are
-connected by seven Bridges. Is it possible to walk around the city crossing all
+connected by seven bridges. Is it possible to walk around the city crossing all
 of the bridges exactly once – but not more than once? (You can start and finish
 anywhere, not necessarily in the same place.)
 
@@ -272,9 +272,9 @@ and try to reveal a pattern:
         div(value="prime") Prime Numbers
         div(value="eo") Even and Odd
       .frame-body
-        p(style="margin: 0"): strong These graphs are possible:
+        p.no-voice(style="margin: 0"): strong These graphs are possible:
         include svg/vertex-orders-1.svg
-        p(style="margin: 1em 0 0"): strong These graphs are not possible:
+        p.no-voice(style="margin: 1em 0 0"): strong These graphs are not possible:
         include svg/vertex-orders-2.svg
 
 ---
@@ -550,7 +550,7 @@ see if Euler’s equation works. Instead we can try to find a simple
           circle.node(cx=270 cy=170 r=7 style="display: none")
           circle.node(cx=390 cy=100 r=7 style="display: none")
 
-        div(style="position: absolute; top: 20px; right: 0; font-size: 1.2em;")
+        .euler-table
           table.grid.table-small
             tr
               td: strong.blue.i F
@@ -560,7 +560,7 @@ see if Euler’s equation works. Instead we can try to find a simple
               td.xf 0
               td.xv 1
               td.xe 0
-          p #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
+          p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
 
       .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
       .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
@@ -671,14 +671,9 @@ When colouring the map of US states, 50 colours are obviously enough, but far
 fewer are necessary. Try colouring the maps below with as few colours as
 possible:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
 
     x-tabbox.four-colours.full-width
       .tab
@@ -977,11 +972,11 @@ very difficult to be solved by computers (at least for large numbers of cities).
 
 Finding a fast and exact algorithm would have serious implications in the field
 of computer science: it would mean that there are fast algorithms for _all_
-NP-hard problems. It would also render most of internet security useless, which
+NP-hard problems. It would also render most of Internet security useless, which
 relies on the fact that certain problems are believed to be very difficult for
 computers.
 
-Finding a fast algorithm to solve the travelling salesman problem would also
+Finding a fast algorithm to solve the Travelling Salesman problem would also
 solve one of the most famous open problems in mathematics and computer science,
 the __P vs NP__ problem. It is one of the seven [Millennium Prize
 Problems](gloss:millennium-prize), each carrying a \$1m prize.
@@ -993,7 +988,7 @@ Problems](gloss:millennium-prize), each carrying a \$1m prize.
 
 ## Scheduling Problems
 
-TODO
+{.todo} Coming Soon
 
 ---
 > id: applications
@@ -1007,7 +1002,7 @@ objects, concepts and processes in everyday life.
 
 ::: column.grow
 
-The internet, for example, is a vast, virtual graph. Every vertex is an
+The Internet, for example, is a vast, virtual graph. Every vertex is an
 individual webpage, and every edge means that there is a hyperlink between two
 pages. Note that links only go one way, so this graph is
 [[directed|multi-line|conected]], and that this graph is _very, very, large_.
@@ -1039,8 +1034,8 @@ search engines.
 ---
 > id: applications-2
 
-The internet is the largest network ever created by mankind. This image shows a
-very small proportion of all the servers connected to the internet:
+The Internet is the largest network ever created by mankind. This image shows a
+very small proportion of all the servers connected to the Internet:
 
     x-parallax.full-width(background="images/internet.jpg")
       .credit © LyonLabs, LLC and Barrett Lyon, 2014
@@ -1207,7 +1202,7 @@ will probably have a friend of a friend who knows a friend of one of your friend
 
 ::: column.grow
 In 1929, when the Hungarian author [Frigyes Karinthy](bio:karinthy) first
-proposed the idea of “six degrees of Separation”, there was no internet or
+proposed the idea of “six degrees of Separation”, there was no Internet or
 social media, but the world had already started to become more interconnected.
 
 In 1967, [Stanley Milgram](bio:milgram) conducted a first empirical experiment,
@@ -1219,4 +1214,4 @@ average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
 :::
 
 Today, every one of us is part of countless invisible graphs, which underlie our
-social interactions, travel, internet and technology, science, and so much more.
+social interactions, travel, Internet and technology, science, and so much more.
