@@ -586,14 +586,9 @@ Certaines «cartes» simples, comme un échiquier, n'ont besoin que de deux coul
 
 Lorsque vous colorez la carte des États américains, 50 couleurs suffisent évidemment, mais il en faut beaucoup moins. Essayez de colorier les cartes ci-dessous avec le moins de couleurs possible:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
     
     x-tabbox.four-colours.full-width
       .tab

@@ -65,14 +65,9 @@ intersecting?
 How many colours do you need for these maps, if adjacent countries or states cannot have the same
 colour?
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
 
     x-tabbox.four-colours.full-width
       .tab
@@ -118,8 +113,108 @@ can remove cities by tapping them, and you can add cities by clicking anywhere o
 
 ## MathsConf 23
 
-> title: Julia Sets
+> id: maps-v2
+> title: Map Colouring
 > section: mathsconf
+
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
+
+    x-tabbox.four-colours.full-width
+      .tab
+        h3 United States #[span.check(when="map-0")]
+        x-solved
+        include ../graph-theory/svg/colours-1.svg
+        .colour-count Number of colours: #[span 0]
+        button.btn.clear Clear
+        button.btn.solve(hidden) Solution
+      .tab
+        h3 South America #[span.check(when="map-1")]
+        x-solved
+        include ../graph-theory/svg/colours-2.svg
+        .colour-count Number of colours: #[span 0]
+        button.btn.clear Clear
+        button.btn.solve(hidden) Solution
+      .tab
+        h3 Germany #[span.check(when="map-2")]
+        x-solved
+        include ../graph-theory/svg/colours-3.svg
+        .colour-count Number of colours: #[span 0]
+        button.btn.clear Clear
+        button.btn.solve(hidden) Solution
+      .tab
+        h3 England #[span.check(when="map-3")]
+        x-solved
+        include ../graph-theory/svg/colours-4.svg
+        .colour-count Number of colours: #[span 0]
+        button.btn.clear Clear
+        button.btn.solve(hidden) Solution
+
+---
+> title: Three Body Problem
+> id: three-bodies
+
+Description
+
+    figure: x-geopad.simulation.r(width=480 height=480)
+      canvas(width=960 height=960)
+      svg
+        circle.large.move.red(name="a")
+        circle.large.move.blue(name="b")
+        circle.large.move.green(name="c")
+        path.thin(x="segment(a, a.translate(va))" arrows="end")
+        path.thin(x="segment(b, b.translate(vb))" arrows="end")
+        path.thin(x="segment(c, c.translate(vc))" arrows="end")
+      x-play-toggle
+      x-icon-btn.restore(icon="restore")
+
+---
+> id: bridges-v2
+> title: The Bridges of Königsberg
+
+Can you draw a path that crosses every bridge once, but _not more than once_, without entering the
+water? You can start and end on any area of land.
+
+    x-tabbox.full-width
+      .tab
+        h3 Map 1#[span.check.incorrect(when="bridge-0")]
+        x-solved
+        include ../graph-theory/svg/bridges-1.svg
+        button.btn Clear
+        button.btn.right(hidden) Skip
+      .tab
+        h3 Map 2#[span.check(when="bridge-1")]
+        x-solved
+        include ../graph-theory/svg/bridges-2.svg
+        button.btn Clear
+        button.btn.right(hidden) Skip
+      .tab
+        h3 Map 3#[span.check(when="bridge-2")]
+        x-solved
+        include ../graph-theory/svg/bridges-3.svg
+        button.btn Clear
+        button.btn.right(hidden) Skip
+      .tab
+        h3 Map 4 #[span.check.incorrect(when="bridge-3")]
+        x-solved
+        include ../graph-theory/svg/bridges-4.svg
+        button.btn Clear
+        button.btn.right(hidden) Skip
+
+---
+> id: utilities-v2
+> title: Three Utilities Puzzle
+
+Can you connect each of these utility companies to each of the houses, without any of the lines
+intersecting?
+
+    .frame.fill
+      include ../graph-theory/svg/utilities.svg
+      button.btn Clear
+
+---
+> title: Julia Sets
 > id: julia2
 
 In this diagram, we highlight all points `pill(x_0,"yellow","x0")` on the complex plane, for which
@@ -203,93 +298,3 @@ repeatedly pick a random vertex of a polygon, and then mark the midpoint of the 
 original point to that vertex. Then you continue from that new point. What shapes can you make?
 
     include ../fractals/components/chaos-game
-
----
-> id: bridges-v2
-> title: The Bridges of Königsberg
-
-Can you draw a path that crosses every bridge once, but _not more than once_, without entering the
-water? You can start and end on any area of land.
-
-    x-tabbox.full-width
-      .tab
-        h3 Map 1#[span.check.incorrect(when="bridge-0")]
-        x-solved
-        include ../graph-theory/svg/bridges-1.svg
-        button.btn Clear
-        button.btn.right(hidden) Skip
-      .tab
-        h3 Map 2#[span.check(when="bridge-1")]
-        x-solved
-        include ../graph-theory/svg/bridges-2.svg
-        button.btn Clear
-        button.btn.right(hidden) Skip
-      .tab
-        h3 Map 3#[span.check(when="bridge-2")]
-        x-solved
-        include ../graph-theory/svg/bridges-3.svg
-        button.btn Clear
-        button.btn.right(hidden) Skip
-      .tab
-        h3 Map 4 #[span.check.incorrect(when="bridge-3")]
-        x-solved
-        include ../graph-theory/svg/bridges-4.svg
-        button.btn Clear
-        button.btn.right(hidden) Skip
-
----
-> id: utilities-v2
-> title: Three Utilities Puzzle
-
-Can you connect each of these utility companies to each of the houses, without any of the lines
-intersecting?
-
-    .frame.fill
-      include ../graph-theory/svg/utilities.svg
-      button.btn Clear
-
----
-> id: maps-v2
-> title: Map Colouring
-
-How many colours do you need for these maps, if adjacent countries or states cannot have the same
-colour?
-
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-
-    x-tabbox.four-colours.full-width
-      .tab
-        h3 United States #[span.check(when="map-0")]
-        x-solved
-        include ../graph-theory/svg/colours-1.svg
-        .colour-count Number of colours: #[span 0]
-        button.btn.clear Clear
-        button.btn.solve(hidden) Solution
-      .tab
-        h3 South America #[span.check(when="map-1")]
-        x-solved
-        include ../graph-theory/svg/colours-2.svg
-        .colour-count Number of colours: #[span 0]
-        button.btn.clear Clear
-        button.btn.solve(hidden) Solution
-      .tab
-        h3 Germany #[span.check(when="map-2")]
-        x-solved
-        include ../graph-theory/svg/colours-3.svg
-        .colour-count Number of colours: #[span 0]
-        button.btn.clear Clear
-        button.btn.solve(hidden) Solution
-      .tab
-        h3 England #[span.check(when="map-3")]
-        x-solved
-        include ../graph-theory/svg/colours-4.svg
-        .colour-count Number of colours: #[span 0]
-        button.btn.clear Clear
-        button.btn.solve(hidden) Solution

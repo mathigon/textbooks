@@ -532,14 +532,9 @@ nhưng hầu hết các bản đồ phức tạp hơn cần nhiều màu hơn.
 
 Khi tô màu bản đồ của các tiểu  bang của Mỹ, hiển nhiên 50 màu chắc chắn là đủ, nhưng không cần thiết. Hãy thử tô màu bản đồ dưới đây sử dụng càng ít màu càng tốt:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
 
     x-tabbox.four-colours.full-width
       .tab

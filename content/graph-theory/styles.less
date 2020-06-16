@@ -89,8 +89,10 @@ x-tabbox .titles .check { border: 1px solid white; }
 
 .frame-body { background: @grey-background; padding: 30px 18px 18px; border-radius: 6px; }
 
-.four-colour-icon { width: 40px; height: 40px; padding: 8px; display: inline-block; margin: 0 5px; cursor: pointer; }
-.four-colour-icon.on { padding: 0; border: 8px solid rgba(0,0,0,0.6); }
+.four-colour-icons { display: flex; justify-content: center; margin-bottom: 1em; }
+.four-colour-icon { width: 40px; height: 40px; border: 5px solid transparent;
+  margin: 0 4px; cursor: pointer; border-radius: 100%; opacity: 0.6; }
+.four-colour-icon.on { border-color: fade(black, 60%); opacity: 1; }
 .four-colours .solve { left: auto; right: 10px; }
 .four-colours path { transition: .2s; cursor: pointer; &:hover { opacity: 0.8; } }
 
