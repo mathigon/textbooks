@@ -633,13 +633,105 @@ Name the band represented by each puzzle:
 > section: error-detection
 > sectionStatus: dev
 
+### Introduction
+
 {.todo} Satellite Communications
 
+{.fixme} We send satellites _very far away_. Voyager 1 is now _13 billion miles_ away from Earth. NASA spent three years making this satellite, investing millions of dollars and millions of work-hours into its creation.... etc
+
+{.todo} animation of a satellite streaming bits to a receiver on Earth.
+
 ---
+
+> section: error-detection
+> sectionStatus: dev
+> id: barcode-intro
+
+### Bar Codes
 
 {.todo} Bar Code
 
+    div
+      .quote
+        I remember I was thinking about dots and dashes when I poked my four fingers into the sand and, for whatever reason--I didn't know--I pulled my hand toward me and I had four lines. I said 'Golly! Now I have four lines and they could be wide lines and narrow lines, instead of dots and dashes. Now I have a better chance of finding the doggone thing.' Then only seconds later, I took my four fingers--they were still in the sand--and I swept them round in a circle.
+      .author
+        Joe Woodland, inventor of the Bar Code
+
+#### So how does it work?
+
+{.fixme} Each bar code is a 12-digit number. See here that we can read the numbers written on the bottom. But how does a computer read it?
+
+{.todo} image/interaction of a bar code
+
 ---
+
+#### Bar code values
+
+> id: barcode-drawing
+
+Look at this barcodes.
+
+    svg.barcode(width=400 height=220)
+      - var outer = {id: 'outer', size: 3, long: true}
+      - var left = {id: 'left', size: 7}
+      - var leftL = {id: 'left', size: 7, long: true}
+      - var center = {id: 'center', size: 5, long: true}
+      - var right = {id: 'right', size: 7}
+      - var rightL = {id: 'right', size: 7, long: true}
+
+      - var barGroups = [outer, leftL, left, left, left, left, left, center, right, right, right, right, right, rightL, outer]
+      - var barWidth = 4
+      - var numBars = 95
+      - var totalI = 0
+      - var heightLong = 200
+      - var heightShort = 180
+      g#bars
+        - var i = 0
+        while i < barGroups.length
+          - var j = 0
+          - var height = barGroups[i].long ? heightLong : heightShort
+          g.bar(class=barGroups[i].id target=barGroups[i].id)
+            while j < barGroups[i].size
+              - var color= i%2 ? "black" : "white"
+              rect(x=totalI*barWidth y=0 width=barWidth height=height)
+              - j += 1
+              - totalI += 1
+          - i += 1
+
+
+The guards are on the [{.step-target.pill.b.red}outside](target:outer) and in the [{.step-target.pill.b.red}center](target:center).
+The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
+The last six digits are on the [{.step-target.pill.b.green}right](target:right).
+
+
+{.fixme} This is my attempt at creating an importable component.
+
+    x-barcode
+      .input(contenteditable="true" spellcheck="false") SOS
+      .output.morse
+
+__The Guards__
+
+| LEFT | CENTER | RIGHT |
+| --- | --- | --- |
+| 101 | 01010 | 101 |
+
+__The Digits__
+
+| LEFT SIDE | | RIGHT SIDE | |
+|---|---|---|---|
+| 0 | 0001101 | 0 | 1110010 |
+| 1 | 0xxxxx1 | 1 | 1xxxxx0 |
+
+---
+
+### Hamming Codes
+
+{.todo} Hamming Codes
+
+---
+
+### Other Error Detection and Correction
 
 {.todo} CDs and DVDs
 
