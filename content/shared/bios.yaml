@@ -78,7 +78,7 @@ apollonius:
   name: Apollonius
   born: -262  # ???
   died: -190  # ???
-  bio: __Apollonius of Perga__ (c. 200 BC) was a Greek mathematician and
+  bio: __Apollonius of Perga__ (c. 200 BCE) was a Greek mathematician and
     astronomer best known for his work on the four _conic sections_.
   links:
     - title: Conic Sections
@@ -102,7 +102,7 @@ archimedes:
   born: -287
   died: -212
   bio: |
-    __Archimedes__ (c. 287 – c. 212 BC) was an ancient Greek scientist and
+    __Archimedes__ (c. 287 – 212 BCE) was an ancient Greek scientist and
     engineer, and one of the greatest mathematicians of all time. He discovered
     many concepts of calculus and worked in geometry, analysis and mechanics.
 
@@ -124,7 +124,7 @@ aristotle:
   died: -322
   name: Aristotle
   bio: |
-    __Aristotle__ (Ἀριστοτέλης, c. 384 – 322 BC) was a philosopher in Ancient
+    __Aristotle__ (Ἀριστοτέλης, c. 384 – 322 BCE) was a philosopher in Ancient
     Greece. Together with his teacher _Plato_, he is considered the “Father of
     Western Philosophy”. He was also the private tutor of Alexander the Great.
 
@@ -261,7 +261,7 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
-  bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 AD) invented the
+  bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 CE) invented the
     rules for addition, subtraction and multiplication with zero and negative
     numbers. He was also an astronomer and made many other discoveries in
     mathematics. Unfortunately, his writings did not contain any proofs, so we
@@ -447,7 +447,7 @@ democritus:
   born: -460
   died: -370
   name: Democritus
-  bio: The Greek mathematician __Democritus__ (c. 460 – 370 BC), may be the
+  bio: The Greek mathematician __Democritus__ (c. 460 – 370 BCE), may be the
     first person to speculate that all matter was made up of tiny _atoms_ and
     is considered the “father of modern science”. He also made many discoveries
     in geometry, including the formula for the volume of prisms and cones.
@@ -541,7 +541,7 @@ eratosthenes:
   name: Eratosthenes
   born: -276
   died: -195
-  bio: __Eratosthenes of Cyrene__ (c. 276 BC – 195 BC) was a Greek
+  bio: __Eratosthenes of Cyrene__ (c. 276 – 195 BCE) was a Greek
     mathematician, geographer, astronomer, historian, and poet. He spent much
     of his life in Egypt, as head of the library of Alexandria.
 
@@ -590,7 +590,7 @@ euclid:
   name: Euclid
   born: -330
   died: -270
-  bio: __Euclid of Alexandria__ (around 300 BC) was a Greek mathematician and
+  bio: __Euclid of Alexandria__ (around 300 BCE) was a Greek mathematician and
     is often called the _father of geometry_. He published a book _Elements_
     that first introduced Euclidean geometry and contained many important proofs
     in geometry and number theory. It was the main mathematics textbook until
@@ -662,7 +662,7 @@ fibonacci:
 
     Fibonacci is also responsible for popularising the Arabic numerals (0, 1, 2,
     3, 4, …) in Europe, which was still using Roman numerals (I, V, X, D, …) in
-    the 12th century AD. He explained the decimal system in a book called “Liber
+    the 12th century CE. He explained the decimal system in a book called “Liber
     Abaci”, a practical textbook for merchants.
   links:
     - title: Fibonacci Numbers
@@ -904,7 +904,7 @@ hypatia:
   name: Hypatia
   overflow: true
   bio: |
-    __Hypatia__ (c. 360 – 415 AD) was a prominent astronomer and mathematician
+    __Hypatia__ (c. 360 – 415 CE) was a prominent astronomer and mathematician
     in ancient Alexandria. She was also the first female mathematician whose
     life and work are reasonably well recorded. She edited or wrote commentaries
     on many of the scientific books of her time, and constructed astrolabes and
@@ -1123,6 +1123,9 @@ lorenz:
   bio: __Edward Lorenz__ (1917 – 2008) was an American mathematician and
     meteorologist. He pioneered _chaos theory_, discovered _strange attractors_,
     and coined the term “butterfly effect”.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
 
 lovelace:
   born: 1815
@@ -1183,7 +1186,7 @@ menger:
   bio: __Karl Menger__ (1902 – 1985) was an Austrian-American mathematician.
     He researched algebra, geometry, dimensions, game theory and social
     science, but he is best remembered for the _Menger sponge_, a famous
-    3-dimensional _fractal_.
+    three-dimensional _fractal_.
 
 mersenne:
   born: 1588
@@ -1252,6 +1255,24 @@ monsky:
   bio: __Paul Monsky__ (born 1936) is an American mathematician and professor at
     Brandeis University. He proved that a square cannot be divided into an odd
     number of equal-area triangles – this is known as “Monsky’s theorem”.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 – 1872) was an American inventor and painter. He grew
+    up near Boston and studied at Yale university, before starting a career as
+    an artist.
+
+    On his return journey from a trip to Europe to study art, Morse overheard
+    passengers talking about new electrical devices. This inspired him to work
+    on a significant improvement to the electric telegraph, using just a single
+    wire, and to develop _Morse code_ with his assistant Alfred Vail.
+
+    After some initial difficulties in receiving funding, Morse’s telegraph
+    quickly spread all across the United States and the world.
+
+    Morse also ran twice for mayor of New York City, but his support for slavery
+    and against immigration meant that he was defeated both times.
 
 napier:
   born: 1550
@@ -1463,7 +1484,7 @@ pingala:
   born: -330
   died: -270
   bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
-    lived around 300BC, but very little is known about his life. He wrote the
+    lived around 300 BCE, but very little is known about his life. He wrote the
     Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
     contained the first known explanations of binary numbers, Fibonacci numbers
     and Pascal’s triangle.
@@ -1482,7 +1503,7 @@ plato:
   born: -425
   died: -347
   bio: |
-    __Plato__ (c. 425 – 347 BC) was a philosopher in ancient Greece, and –
+    __Plato__ (c. 425 – 347 BCE) was a philosopher in ancient Greece, and –
     together with his teacher Socrates and his student Aristotle – laid the
     very foundation of Western philosophy and science.
 
@@ -1526,7 +1547,7 @@ ptolemy:
   died: 168
   name: Ptolemy
   bio: |
-    __Claudius Ptolemy__ (c. 100 – 170 AD) was a Greco-Roman mathematician,
+    __Claudius Ptolemy__ (c. 100 – 170 CE) was a Greco-Roman mathematician,
     astronomer, geographer and astrologer. He is best remembered for the
     _Ptolemaic_ or _Geocentric_ model of our universe – that Earth is in the
     centre and all planets and the sun revolve around this.
@@ -1546,7 +1567,7 @@ pythagoras:
   born: -570
   died: -495
   bio: |
-    __Pythagoras of Samos__ (c. 570 – 495 BC) was a Greek philosopher and
+    __Pythagoras of Samos__ (c. 570 – 495 BCE) was a Greek philosopher and
     mathematician. He is best known for proving _Pythagoras’ Theorem_, but made
     many other mathematical and scientific discoveries.
 
@@ -1721,7 +1742,7 @@ thales:
   born: -624
   died: -546
   bio: |
-    __Thales of Miletus__ (c. 624 – 546 BC) was a Greek mathematician and
+    __Thales of Miletus__ (c. 624 – 546 BCE) was a Greek mathematician and
     philosopher.
 
     Thales is often recognised as the first scientist in Western civilisation:
@@ -1760,6 +1781,9 @@ turing:
     Turing was gay, which was still a crime during his life, and meant that his
     groundbreaking accomplishments were never fully recognised. He committed
     suicide at the age of 41.
+  links:
+    - title: Codes and Cryptography
+      url: /course/codes
 
 ulam:
   name: Ulam

@@ -8,17 +8,6 @@ import {Obj} from '@mathigon/core';
 import {CustomElementView, ElementView, register} from '@mathigon/boost';
 
 
-// -----------------------------------------------------------------------------
-// Utility Classes
-
-class Rotor {
-  // TODO Implement...
-}
-
-
-// -----------------------------------------------------------------------------
-// Enigma Component Class
-
 @register('x-enigma', {templateId: '#enigma'})
 export class Enigma extends CustomElementView {
   private $lights: Obj<ElementView> = {};

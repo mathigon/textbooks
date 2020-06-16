@@ -74,7 +74,7 @@ export async function midsegments($step: Step) {
 
   $geopad.switchTool('point');
 
-  let a = await $geopad.waitForPoint();
+  const a = await $geopad.waitForPoint();
   let b = await $geopad.waitForPoint();
   let c = await $geopad.waitForPoint();
   let d = await $geopad.waitForPoint();

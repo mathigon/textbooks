@@ -17,6 +17,7 @@ x-code-box {
     color: black;
     line-height: 1.4em;
     padding: 10px 16px;
+    transition: background .2s, border .2s, box-shadow .2s;
   }
 
   .input { margin-right: -1px; border-radius: 6px 0 0 6px; }
@@ -31,8 +32,9 @@ x-code-box {
     appearance: none;
     height: auto;
     cursor: text;
-    &:hover, &:focus { background-color: #eee; }
-    &:focus { border-color: @blue; z-index: 1; outline: none; }
+    z-index: 1;
+    &:hover, &:focus { z-index: 2; border-color: @blue; background-color: #eee; }
+    &:focus { outline: none; box-shadow: 0 0 0 3px fade(@blue, 50%); }
   }
 
   .letter:hover, .letter.hover {

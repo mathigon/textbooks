@@ -46,15 +46,15 @@ export function intro1($section: Step) {
 export function intro2($section: Step) {
   const graphs = $section.$$('.graph') as SVGParentView[];
 
-  new Graph(graphs[0], 6, [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [2, 5]],
+  new Graph(graphs[1], 6, [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [2, 5]],
       {vertex: BLUE, edge: BLUE});
-  new Graph(graphs[2], 5, [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]],
+  new Graph(graphs[3], 5, [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0]],
       {vertex: GREEN, edge: GREEN});
-  new Graph(graphs[4], 6,
+  new Graph(graphs[5], 6,
       [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [4, 5], [5, 1]],
       {vertex: YELLOW, edge: YELLOW});
 
-  new Graph(graphs[1], 8,
+  new Graph(graphs[0], 8,
       [[0, 1], [1, 2], [2, 3], [3, 0], [1, 3], [1, 4], [4, 6], [6, 2], [3, 5],
         [5, 7], [7, 0]], {
         vertex: (v) => (v < 6 ? BLUE : '#DDD'),
@@ -62,7 +62,7 @@ export function intro2($section: Step) {
                         '#DDD'
       });
 
-  new Graph(graphs[3], 7,
+  new Graph(graphs[2], 7,
       [[0, 1], [1, 2], [2, 3], [3, 4], [4, 0], [0, 3], [1, 3], [2, 5], [5, 3],
         [5, 6], [6, 3], [6, 4]], {
         vertex: (v) => (v < 5 ? GREEN : '#DDD'),
@@ -70,7 +70,7 @@ export function intro2($section: Step) {
                         GREEN : '#DDD'
       });
 
-  new Graph(graphs[5], 8,
+  new Graph(graphs[4], 8,
       [[0, 1], [1, 2], [2, 3], [3, 0], [0, 4], [4, 5], [5, 1], [1, 3], [1, 4],
         [3, 6], [6, 0], [4, 7], [7, 0]], {
         vertex: (v) => (v < 6 ? YELLOW : '#DDD'),
@@ -406,7 +406,7 @@ export function utilities($section: Step) {
     resolve();
   }
 
-  $section.$('button')!.on('click', clear);
+  $section.$('.btn')!.on('click', clear);
 
   for (const $ut of $section.$$('.utility') as SVGView[]) {
     const $c = $ut.children[0];
@@ -502,7 +502,7 @@ export function utilities1($section: Step) {
 
 export function planarity($section: Step) {
   const $svg = $section.$$('svg')[1] as SVGParentView;
-  const $newBtn = $section.$('button')!;
+  const $newBtn = $section.$('.btn')!;
   const $solveds = $section.$$('x-solved');
 
   const graph = new Graph($svg, 0, [], {r: 12, static: true, bound: true});
@@ -653,8 +653,8 @@ export function euler2($section: Step) {
       $edges[2].exit('fade', 400);
     } else if (s === 4) {
       $vertices[2].enter('pop', 400);
-      $edges[1].enter('draw', 400);
-      $edges[2].enter('draw', 400);
+      $edges[1].enter('fade', 400);
+      $edges[2].enter('fade', 400);
     }
   });
 
@@ -666,7 +666,7 @@ export function euler2($section: Step) {
       $edges[0].exit('fade', 400);
       $edges[2].exit('fade', 400);
     } else if (s === 2) {
-      $edges[2].enter('draw', 400);
+      $edges[2].enter('fade', 400);
     } else if (s === 3) {
       $vertices[2].exit('pop');
       $edges[1].exit('fade', 400);
@@ -724,6 +724,7 @@ export function maps1($section: Step) {
   const colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', '#662D91',
     '#F15A24', '#29ABE2'];
   const $colours = $section.$$('.four-colour-icon');
+  $colours[0].addClass('on');
   let activeColour = 0;
   let warned = false;
 

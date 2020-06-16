@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {flatten, tabulate2D} from '@mathigon/core';
+import {flatten, tabulate2D, Obj} from '@mathigon/core';
 import {Point, Line} from '@mathigon/fermat';
 import {CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
 import {Select} from '../../shared/types';
@@ -57,21 +57,19 @@ function line(a1: number, a2: number, b1: number, b2: number) {
   return new Line(new Point(a1, a2), new Point(b1, b2));
 }
 
-export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
-  undefined,
-
-  p => {  // p1
+export const TRANSFORMATIONS: Obj<(p: Point) => Point[]> = {
+  P1: p => {
     const p1 = p.mod(480, 320);
     return grid([p1], 480, 320);
   },
 
-  p => {  // p2
+  P2: p => {
     const p1 = p.mod(480, 640);
     const p2 = p1.rotate(Math.PI, pointX1M);
     return grid([p1, p2], 480, 640);
   },
 
-  p => {  // p3
+  P3: p => {
     const h = 640;
     const w = h / Math.sqrt(3) / 2;
     return applyTransforms(p, [6 * w, h], [
@@ -86,7 +84,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     ]);
   },
 
-  p => {  // p4
+  P4: p => {
     const p1 = p.mod(720, 720);
     const p2 = p1.rotate(Math.PI / 2, pointS);
     const p3 = p2.rotate(Math.PI / 2, pointS);
@@ -94,7 +92,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     return grid([p1, p2, p3, p4], 720, 720);
   },
 
-  p => {  // p6
+  P6: p => {
     const h = 640;
     const w = h * 2 / Math.sqrt(3);
     return applyTransforms(p, [w, 2 * h], [
@@ -109,20 +107,20 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     ]);
   },
 
-  p => {  // pm
+  PM: p => {
     const p1 = p.mod(960, 320);
     const p2 = p1.reflect(lineY1);
     return grid([p1, p2], 960, 320);
   },
 
-  p => {  // pmm
+  PMM: p => {
     const p1 = p.mod(960, 640);
     const p2 = p1.reflect(lineY1);
     const p34 = [p1, p2].map(p => p.reflect(lineX1));
     return grid([p1, p2, ...p34], 960, 640);
   },
 
-  p => {  // p4m
+  P4M: p => {
     const p1 = p.mod(720, 720);
     const p2 = p1.rotate(Math.PI / 2, pointS);
     const p3 = p2.rotate(Math.PI / 2, pointS);
@@ -131,7 +129,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     return grid([p1, p2, p3, p4, ...p5678], 720, 720);
   },
 
-  p => {  // p6m
+  P6M: p => {
     const h = 640;
     const w = h / Math.sqrt(3);  // =370
     return applyTransforms(p, [w * 6, h * 2], [
@@ -148,7 +146,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     ]);
   },
 
-  p => {  // p3m1
+  P3M1: p => {
     const w = 480;
     const h = w * Math.sqrt(3) / 2;
     return applyTransforms(p, [w * 3, h * 2], [
@@ -164,7 +162,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     ]);
   },
 
-  p => {  // p31m
+  P31M: p => {
     return applyTransforms(p, [740, 2 * 640], [
       p => p.reflect(lineX(640)),
       p => p.rotate(2 * Math.PI / 3, new Point(0, 640 / 3 * 2)),
@@ -178,7 +176,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     ]);
   },
 
-  p => {  // p4g
+  P4G: p => {
     const p1 = p.mod(720, 720);
     const p2 = p1.reflect(lineS);
     const p3 = p1.rotate(-Math.PI / 2, new Point(0, 360));
@@ -187,7 +185,7 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     return grid([p1, p2, p3, p4, ...p5678], 720, 720);
   },
 
-  p => {  // cmm
+  CMM: p => {
     const p1 = p.mod(1280, 640);
     const p2 = p1.rotate(Math.PI,
         new Point(p1.x < 640 ? 320 : 960, p1.y < 320 ? 160 : 480));
@@ -196,20 +194,20 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     return grid([p1, p2, ...p34, ...p5678], 1280, 640);
   },
 
-  p => {  // pmg
+  PMG: p => {
     const p1 = p.mod(960, 640);
     const p2 = p1.rotate(Math.PI, new Point(480, p1.y < 320 ? 160 : 480));
     const p34 = [p1, p2].map(p => p.reflect(lineX1));
     return grid([p1, p2, ...p34], 960, 640);
   },
 
-  p => {  // pg
+  PG: p => {
     const p1 = p.mod(960, 320);
     const p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480, 320 - p1.y);
     return grid([p1, p2], 960, 320);
   },
 
-  p => {  // cm
+  CM: p => {
     const p1 = p.mod(960, 640);
     const p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480,
         p1.y > 320 ? 960 - p1.y : 320 - p1.y);
@@ -217,20 +215,20 @@ export const TRANSFORMATIONS: (((p: Point) => Point[])|undefined)[] = [
     return grid([p1, p2, ...p34], 960, 640);
   },
 
-  p => {  // pgg
+  PGG: p => {
     const p1 = p.mod(960, 640);
     const p2 = new Point(p1.x > 480 ? p1.x - 480 : p1.x + 480,
         p1.y > 320 ? 960 - p1.y : 320 - p1.y);
     const p34 = [p1, p2].map(p => p.rotate(Math.PI, pointX1Y1));
     return grid([p1, p2, ...p34], 960, 640);
   }
-];
+};
 
 // -------------------------------------------------------------------------
 // Component
 
-function drawPoint(ctx: CanvasRenderingContext2D, group: number, point: Point) {
-  for (const p of TRANSFORMATIONS[group]!(point)) {
+function drawPoint(ctx: CanvasRenderingContext2D, group: string, point: Point) {
+  for (const p of TRANSFORMATIONS[group](point)) {
     ctx.beginPath();
     ctx.arc(p.x, p.y, 8, 0, 2 * Math.PI);
     ctx.fill();
@@ -245,10 +243,10 @@ export class Wallpaper extends CustomElementView {
     const context = $canvas.ctx;
 
     const $groups = this.$('x-select.tabs') as Select;
-    let activeGroup = +$groups.$active.data.value!;
+    let activeGroup = $groups.$active.data.value!;
     $groups.on('change', $active => {
       context.clearRect(0, 0, 1e10, 1e10);
-      activeGroup = +$active.data.value;
+      activeGroup = $active.data.value;
       this.trigger('switch', activeGroup);
     });
 
@@ -262,12 +260,11 @@ export class Wallpaper extends CustomElementView {
     this.$('.save')!.on('click', e => e.target.href = $canvas.pngImage);
 
     slide($canvas, {
-      start: p => drawPoint(context, activeGroup, p),
+      down: p => drawPoint(context, activeGroup, p),
       move(p, _, last) {
         const l = new Line(last, p);
         const n = l.length / 8;
-        for (let i = 0; i < n; ++i) drawPoint(context, activeGroup,
-            l.at(i / n));
+        for (let i = 0; i < n; ++i) drawPoint(context, activeGroup, l.at(i / n));
       },
       end: () => this.trigger('draw'),
       justInside: true

@@ -48,8 +48,9 @@
 x-coordinate-system {
   margin: 0 auto .5em;
 
-  .grid, .axis, .plot, .labels { transition: opacity .2s; }
-  .focus & { .grid, .axis, .plot, .labels { opacity: 0.3; } }
+  .grid, .axes, .plot, .labels { transition: opacity .2s; }
+  .focus & { .axes, .plot, .labels { opacity: 0.1; } }
+  .focus & .grid { opacity: 0.01; }
   .focus & .triangle { fill: fade(@red, 5%); }
   .focus & .chart-point { background: mix(@red, white, 30%); }
 

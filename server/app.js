@@ -6,7 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const yaml = require('yamljs');
+const yaml = require('js-yaml');
 const express = require('express');
 
 
@@ -14,7 +14,7 @@ const express = require('express');
 // Course Class
 
 const COURSE_PATH = path.join(__dirname, 'assets/resources/');
-const CURRICULUM = yaml.load(path.join(__dirname, `../curriculum.yaml`));
+const CURRICULUM = yaml.load(fs.readFileSync(path.join(__dirname, `../curriculum.yaml`), 'utf8'));
 
 class Course {
 
@@ -31,7 +31,7 @@ class Course {
     try {
       return fs.readFileSync(path.join(COURSE_PATH, this.id, name));
     } catch (e) {
-      return null;
+      return undefined;
     }
   }
 
@@ -61,8 +61,9 @@ function getCourse(courseId, locale='en') {
 // -----------------------------------------------------------------------------
 // Web Server
 
+const port = process.env.PORT || 5000
 const app = express();
-app.set('port', 5000);
+app.set('port', port);
 app.set('env', 'development');
 app.set('views', path.join(__dirname, 'assets'));
 app.set('view engine', 'pug');
@@ -99,6 +100,6 @@ app.post('/course/:course/ask', function(req, res) {
   res.type('txt').send(JSON.stringify([{content: '[NOT IMPLEMENTED]'}]));
 });
 
-app.listen(5000, function() {
-  console.log('Server listening on port 5000');
+app.listen(port, function() {
+  console.log('Server listening on port ' + port);
 });
