@@ -346,7 +346,7 @@ With each finger that we add, our number of options multiplies by two.
         - xMax = 100
         while i < 1 
           - yHorizontal = 165+i*320
-          line(x1=xMin y1=yHorizontal x2=xMax y2=yHorizontal)
+          line(x1=xMin y1=yHorizontal x2=xMax y2=yHorizontal target="yes")
           -i += 1
       g#b2
         - var i = 0
@@ -356,9 +356,9 @@ With each finger that we add, our number of options multiplies by two.
           - yHorizontal = 85+i*160
           - yToMid = i%2 == 0 ? 80 : -80
           - cl = i==1 ? "yes" : "no" 
-          line(x1=xMin  y1=yHorizontal         x2=xMax   y2=yHorizontal)
-          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin   y2=yHorizontal)
-          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=40 class=cl)= i%2
+          line(x1=xMin  y1=yHorizontal         x2=xMax   y2=yHorizontal target=cl)
+          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin   y2=yHorizontal target=cl)
+          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=40 target=cl)= i%2
           -i += 1
       g#b4
         - var i = 0
@@ -368,9 +368,9 @@ With each finger that we add, our number of options multiplies by two.
           - yHorizontal = 45+i*80
           - yToMid = i%2 == 0 ? 40 : -40
           - cl = i==2 ? "yes" : "no"
-          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal)
-          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal)
-          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=30 class=cl)= i%2
+          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal target=cl)
+          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal target=cl)
+          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=30 target=cl)= i%2
           -i += 1
       g#b8
         - var i = 0
@@ -380,9 +380,9 @@ With each finger that we add, our number of options multiplies by two.
           - yHorizontal = 25+i*40
           - yToMid = i%2 == 0 ? 20 : -20
           - cl = i==5 ? "yes" : "no"
-          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal)
-          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal)
-          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=20 class=cl)= i%2
+          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal target=cl)
+          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal target=cl)
+          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=20 target=cl)= i%2
           -i += 1
       g#b16
         - var i = 0
@@ -392,9 +392,9 @@ With each finger that we add, our number of options multiplies by two.
           - yHorizontal = 15+i*20
           - yToMid = i%2 == 0 ? 10 : -10
           - cl = i==9 ? "yes" : "no"
-          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal)
-          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal)
-          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=16 class=cl)= i%2
+          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal target=cl)
+          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal target=cl)
+          text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=16 target=cl)= i%2
           - i += 1
       g#b32
         - var i = 0
@@ -403,18 +403,18 @@ With each finger that we add, our number of options multiplies by two.
         while i < 32
           - yHorizontal = 10+i*10
           - yToMid = i%2 == 0 ? 5 : -5
-          - cl = i==22 ? "yes" : "no"
-          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal)
-          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal)
-          text(x=(xMin+xMax)/2 y=yHorizontal-1 font-size=12 class=cl)= i%2
+          - cl = i==18 ? "yes" : "no"
+          line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal target=cl)
+          line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal target=cl)
+          text(x=(xMin+xMax)/2 y=yHorizontal-1 font-size=12 target=cl)= i%2
           - i += 1
 
 
     x-slider.bracket(steps=6 speed=0.5)
 
---- 
+We can get our five-digit binary number by following any path from beginning to end. For example, this is the binary sequence for [10110](target:yes).
 
-We can get our five-digit binary number by following any path from beginning to end. For example, this is the binary sequence for [10110](->.yes).
+---
 
 Please enter the number of things into the table below.
 
