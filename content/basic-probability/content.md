@@ -5,9 +5,6 @@
 > section: introduction
 > sectionStatus: dev
 > id: intro
-> goals: spin
-
-
 
 In previous courses, you have seen many examples of how we can try to predict the future using science and mathematics. For example, we can predict when a car will arrive at its destination if it is driving at a constant speed, or we can predict the next time when we’ll be able to see a particular comet.
 
@@ -141,14 +138,33 @@ At this point, so start to suspect something. Maybe your friend is using a **tri
         button.choice-2 Trick Coin
 
 ---
+> id: simulation
+> goals: flip
 
 Probabilities can give us a sense of how likely a certain outcome is, but they don’t predict the future. Even if the weather forecast says there is only a 5% chance of rain, it might still happen. And our coin doesn’t “remember” the previous outcomes: every flip has the same probability of landing heads, which doesn’t depend on how many heads there were previously.
 
 However, probabilities become much more useful if we can repeat the same experiment many times. For example, we could flip the same coin 100 times and compare how many heads and tails there are in total. Here are three different coins – can you work out which one of them is biased?
 
-<!-- Simulation goes here -->
+::: column(width=320)
 
-In the simulation above, when we used a fair coin (blue) - which has an equal probability of landing on heads and tails. As you can see, the graphs of the fair coins slowly approach 0.5 as you flip them more and more times. But the first [[10 to 20]] tosses seem completely random, for both the fair and the biased coins.
+    .coin-flip
+      .coin
+
+    p.btn-row.var
+      button.btn.btn-red(@click="flip()") Flip
+      button.btn.btn-red(@click="flip(100)") Flip 100 times
+
+::: column(width=320)
+
+    x-coordinate-system(width=320 height=320 y-axis="0,1.1,0.2" padding="8 8 20 28" axis-names="flips,proportion heads")
+
+You've done ${numberOfFlips} flips and seen ${numberOfHeads} heads.
+
+:::
+
+---
+
+In the simulation above, when we used a fair coin (blue) - which has an equal probability of landing on heads and tails. As you can see, the graphs of the fair coins slowly approach 0.5 as you flip them more and more times. But the first [[15 ± 5]] tosses seem completely random, for both the fair and the biased coins.
 
 Maybe you performed 10 tosses, and 8 coins landed on heads - you might think that the coin is biased immediately! However, it’s too soon to make that conclusion - If you reset the simulation, and keep tossing the coin just 10 times, you’ll see that the graph formed can be very jagged, and each repetition is different from the previous. 
 
