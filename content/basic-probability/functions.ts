@@ -8,6 +8,7 @@ import {wait} from '@mathigon/core';
 import {CoordinateSystem, Step} from '../shared/types';
 import {CoinFlip} from './components/coin';
 
+import './components/dragging';
 import './components/coin';
 
 

@@ -38,6 +38,26 @@ However, there are many examples in life where it is impossible to predict exact
 
 Of course, our language has many words we can use to describe the answer to these questions, without knowing exactly what will happen. Try to move each of these events to the best possible description.
 
+    x-dragging
+      .inputs
+        .input.md The sun rises tomorrow :sun:
+        .input.md LIKELY :sun:
+        .input.md You roll a die and it lands on a 6. :die:
+        .input.md You see a mammoth while walking on the street. :sun:
+        .input.md IMPOSSIBLE :sun:
+        .input.md CERTAIN :sun:
+        .input.md You win the lottery :money:
+        .input.md LIKELY :sun:
+      .buckets
+        .bucket
+          .title Impossible
+        .bucket
+          .title Unlikely
+        .bucket
+          .title Likely
+        .bucket
+          .title Certain
+
 <!-- Drop events into buckets of impossible, unlikely, likely, certain -->
 
 * The sun rises tomorrow.
