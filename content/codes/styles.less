@@ -220,3 +220,21 @@ select {
   text-align: center;
   font-size: large;
 }
+
+.bracket g text&.focus {
+  background: @red;
+  color: white;
+  opacity: 0.1;
+}
+
+.bracket g line&.focus {
+  opacity: 0.1;
+}
+
+.bar {
+  opacity: 0.4;
+
+  &.focus {
+    opacity: 1.0
+  }
+}
