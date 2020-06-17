@@ -172,6 +172,7 @@ However, probabilities become much more useful if we can repeat the same experim
     p.btn-row.var
       button.btn.btn-red(@click="flip()") Flip
       button.btn.btn-red(@click="flip(100)") Flip 100 times
+      button.btn.btn-red(@click="reset()") Reset
 
 ::: column(width=320)
 
