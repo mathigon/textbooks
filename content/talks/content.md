@@ -298,3 +298,15 @@ repeatedly pick a random vertex of a polygon, and then mark the midpoint of the 
 original point to that vertex. Then you continue from that new point. What shapes can you make?
 
     include ../fractals/components/chaos-game
+
+---
+> id: circles
+> title: Apollonian Gasket
+> section: alex
+
+## Alex Kontorovich
+
+Can you place all smaller circles inside the big one?
+
+    svg.circles(width=400 height=400 viewBox="0 0 260 260")
+      circle.outer(cx=130 cy=130 r=108.07)

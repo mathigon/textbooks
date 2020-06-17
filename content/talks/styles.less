@@ -7,3 +7,12 @@
 @import "../shared/variables";
 @import "../graph-theory/styles";
 @import "../fractals/styles";
+
+svg.circles {
+  width: 100%;
+  height: auto;
+
+  .inner { fill: @red; cursor: grab; stroke: white; stroke-width: 0.5px; }
+  .outer { fill: mix(@medium-grey, white); }
+  text { text-anchor: middle; font-size: 10px; fill: white; pointer-events: none; }
+}
