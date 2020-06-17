@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Circle, intersections, nearlyEquals, Point} from '@mathigon/fermat';
+import {Circle, intersections, nearlyEquals, Point, Polygon} from '@mathigon/fermat';
 import {$html, $N, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Step} from '../shared/types';
 
@@ -19,35 +19,18 @@ export {threeBodies} from '../chaos/functions';
 
 // -----------------------------------------------------------------------------
 
-function snapToCircle(posn: Point, c: Disk, radius: number) {
-  const snap = new Circle(c.posn, c.r + radius);
-  return snap.project(posn);
-}
-
-function snapToCircles(posn: Point, c1: Disk, c2: Disk, radius: number) {
-  const snap1 = new Circle(c1.posn, c1.r + radius);
-  const snap2 = new Circle(c2.posn, c2.r + radius);
-  for (const p of intersections(snap1, snap2)) {
-    if (Point.distance(p, posn) < 3) return p
-  }
-}
-
-function isClose(c1: Disk, c2: Disk) {
-  if (c1 === c2) return false;
-  return nearlyEquals(Point.distance(c1.posn, c2.posn), c1.r + c2.r, 2);
-}
-
 class Disk {
-  posn = new Point(0, 0);
+  posn: Point;
 
-  constructor(private readonly $svg: SVGParentView,
-              private readonly allCircles: Disk[],
-              label: number, readonly r: number) {
+  constructor($svg: SVGParentView, allDisks: Disk[], outer: Circle,
+              label: number, readonly r: number, initial: Point) {
 
     const $c = $N('circle', {class: 'inner', r}, $svg) as SVGView;
     const $t = $N('text', {text: label}, $svg) as SVGView;
 
-    let startPosn = this.posn;
+    let startPosn = this.posn = initial;
+    $c.setCenter(this.posn);
+    $t.setCenter(this.posn.shift(0, 3.4));
 
     slide($c, {
       down: () => {
@@ -59,17 +42,31 @@ class Disk {
       move: (p: Point, start: Point) => {
         this.posn = startPosn.add(p).subtract(start);
 
-        // TODO snap to outer circle
-        const snapCircles = allCircles.filter(c => isClose(this, c));
+        const snapCircles: Circle[] = [];
+
+        // Snap to outer circle
+        if (nearlyEquals(Point.distance(this.posn, outer.c), outer.r - r, 2)) {
+          snapCircles.push(new Circle(outer.c, outer.r - r))
+        }
+
+        // Snap to inner circles
+        for (const c of allDisks) {
+          if (c === this) continue;
+          if (nearlyEquals(Point.distance(this.posn, c.posn), this.r + c.r, 2)) {
+            snapCircles.push(new Circle(c.posn, c.r + r));
+          }
+        }
 
         if (snapCircles.length === 1) {
-          this.posn = snapToCircle(this.posn, snapCircles[0], r);
+          this.posn = snapCircles[0].project(this.posn);
         } else if (snapCircles.length > 1) {
-          this.posn = snapToCircles(this.posn, snapCircles[0], snapCircles[1], r) || this.posn;
+          for (const p of intersections(snapCircles[0], snapCircles[1])) {
+            if (Point.distance(p, this.posn) < 3) this.posn = p
+          }
         }
 
         $c.setCenter(this.posn);
-        $t.setCenter(this.posn.shift(0, 4));
+        $t.setCenter(this.posn.shift(0, 3.4));
       },
       end: () => $html.removeClass('grabbing')
     });
@@ -84,9 +81,14 @@ export function circles($step: Step) {
     [147, 0.735]
   ];
 
+  const initial = Polygon.regular(data.length + 1, 130).shift(140, 140);
+
+  const outerCircle = new Circle(new Point(140, 140), 108.07);
+
   const $svg = $step.$('svg.circles') as SVGParentView;
   const circles: Disk[] = [];
-  for (const [label, radius] of data) {
-    circles.push(new Disk($svg, circles, label, radius * 10));
+  for (const [i, [label, radius]] of data.entries()) {
+    circles.push(new Disk($svg, circles, outerCircle, label, radius * 10,
+        initial.points[i]));
   }
 }
