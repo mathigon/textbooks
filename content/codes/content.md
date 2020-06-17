@@ -390,9 +390,33 @@ _Cytosine_ if placed within a strand of DNA letters.
 
 ## Binary Numbers
 
-> id: finger5
 > section: binary
+> id: transistor
+> goals: switch
+
+Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many people, when they scroll through their social media feed, or search for a recipe, or stream a movie, actually know how the magic little box actually works?
+
+There are many many complex layers and processes that operate together get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
+
+::: column(width=320)
+
+    .transist
+      figure: include svg/transistor.svg
+
+::: column.grow
+
+Transistors are like tiny tiny tiny, microscopic electrical switches that transmit ELECTRONS. Turn it on, the electrons flow. Turn it off, the electrons stop (Does this sound familiar to another device? Perhaps the telegraph?).
+
+But how can a simple on/off switch store information as complex as videos? We learned in the last chapter about Morse Code. But Transistors are interpreted by a computer through very different means.
+
+:::
+
+---
+> id: finger5
 > sectionStatus: dev
+
+To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise…
+
 
 ### Fingers
 
@@ -428,9 +452,6 @@ If we want to use each combination of ups and downs to represent a different num
 ---
 
 ### 1s and 0s
-
-> section: bracket
-> sectionStatus: dev
 > id: bracket
 
 {.fixme} off-by-one error for animation
@@ -531,8 +552,6 @@ More generally, with N fingers we can represent [[2^N]] possible combinations.
 ---
 
 #### Fingers
-> section: finger32
-> sectionStatus: dev
 > id: finger32
 
 Yes, there are [[32]] different combinations we can make with five fingers.
@@ -663,9 +682,6 @@ The decimal value of  __{.m-green}101011__ is [[43]].
 ---
 
 ### Converting Base-Ten to Binary
-
-> section: dec2bin
-> sectionStatus: dev
 > id: dec2bin
 
 Now that we know how to convert a binary to decimal, how can we convert a decimal to a binary code?

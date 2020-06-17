@@ -13,6 +13,8 @@ import {CodeBox} from './components/code-box'
 import {Barcode} from './components/barcode'
 import {MORSE_CODE} from './components/utilities'
 
+import {Point} from '@mathigon/fermat';
+
 import './components/code-box';
 import './components/enigma';
 import './components/morse';
@@ -110,6 +112,70 @@ export function radio($step: Step) {
 
 // -----------------------------------------------------------------------------
 // Binary Numbers
+
+/**
+ * Animating a transistor
+ */
+export function transistor($section: Step) {
+
+  const $pathOn = $section.$('#path_on') as SVGView;
+  const $pathOff = $section.$('#path_off') as SVGView;
+  const $electrons = $section.$$('#electron') as SVGView[];
+  const $switch = $section.$('.transist')!;
+  let switchOn = false;
+
+  let electronPositions: number[];
+  const UPDATE_PERIOD = 100;
+
+  function move() {
+    if (!switchOn) return;
+    electronPositions = electronPositions.map(p => {
+        let pp = p + 0.02;
+        if (pp >= 1) pp = (pp - 1);
+        return pp;
+    })
+
+    $electrons.forEach((e, i) => {
+        const xy = $pathOn.getPointAt(electronPositions[i]);
+        const xyShift = new Point(xy.x - 12, xy.y - 12);
+        e.setTransform(xyShift);
+    });
+
+    setTimeout(move, UPDATE_PERIOD);
+}
+
+  function turnOn() {
+      // show all
+      $electrons.forEach((e) => e.show());
+      const totalLength = $pathOn.strokeLength;
+      const gap = totalLength / $electrons.length; // gap between electrons
+      // need way to scale this from linear to non-linear and back
+      electronPositions = $electrons.map((e, i) => (i * gap) / totalLength); // each electron has a position
+
+      setTimeout(move, UPDATE_PERIOD);
+  }
+
+  function turnOff() {
+      // NEXT: e[0:3] move to pathOff.pointAt(0.2, 0.4, 0.6, 0.8);
+      // hide them
+      $electrons.forEach((e, i) => {
+          if (i > 3) {
+              e.hide();
+          } else {
+              const xy = $pathOff.getPointAt([0.11, 0.37, 0.63, 0.89][i]); // one of four points
+              const xyShift = new Point(xy.x - 12, xy.y - 12);
+              e.setTransform(xyShift);
+          }
+      });
+  }
+
+  $switch.on('click', () => {
+    $section.score('switch');
+    switchOn = !switchOn;
+    if (switchOn) turnOn();
+    else turnOff();
+});
+}
 
 /**
  *
