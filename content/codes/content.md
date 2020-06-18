@@ -422,8 +422,10 @@ To understand how all sorts of different codes can be stored in the transistors 
 
 How high can you count using only one hand, without skipping any numbers? When we count with our hands, we traditionally use how many fingers are up to represent the number. We have five fingers, so that means the highest we can count with one hand is [[five|four|ten]].
 
-    button.appear APPEAR
+{.TODO PHILIPP how to make them appear after entering value into blank?}
 
+
+    button.appear APPEAR
 
     table.finger-grid
       tr
@@ -443,22 +445,63 @@ A drawback of this strategy is that there are many unused finger combinations. F
 
 ---
 
-{.todo} could possibly show a // TABLE with all the extra values...
+There is a way that we can count much higher while still using only one hand, and this counting method will also help us understand how transistors store information. The secret lies in something called [binary numbers](gloss:binary-numbers). Instead of using the number of fingers up as our count, we have to do something a bit more complicated.
 
-What if there was a way that we could count much higher while still using only one hand? The secret lies in something called [binary numbers](gloss:binary-numbers). Instead of using the number of fingers up as our count, we have to do something a bit more complicated. We can treat each of our fingers as a __digit__ with one of two possible values: down or up. Down can represent the number __0__ and up can represent the number __1__.
+::: column.grow
+We can treat each of our fingers as a __digit__ with one of two possible values: down or up. Down can represent the number __0__ and up can represent the number __1__.
 
-If we want to use each combination of ups and downs to represent a different number, then how many combinations can we represent?
+::: column(width=200)
+
+    table.finger-highlights
+      tr
+        td
+          x-img(src="images/fingers/finger_0_highlight.png" width=100)
+          .caption= 0
+        td
+          x-img(src="images/fingers/finger_1_highlight.png" width=100)
+          .caption= 1
+:::
+
+If we want to use each combination of ups and downs to represent a different number, then how many combinations can we represent? (Link back to combinatorics).
+
+---
+
+{.todo PHILIPP please help! How to style a table, while also accepting inputs?}
+
+
+
+    table.finger-combos
+      tr
+        td
+          .head Number of fingers
+        td
+          .head Possible combinations
+      - var i = 1
+      while i <= 5
+        tr
+          td
+            div= i
+          td
+            div= 2 ** i
+        - i+=1
+
+
+| .head Number of fingers | .head Possible combinations. |
+| 1 | [[2]] |
+| 2 | [[4]] |
+| 3 | [[8]] |
+| 4 | [[16]] |
+| 5 | [[32]] |
+
+More generally, with N fingers we can represent [[2^N]] possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any N-digit number can represent up to 2^N different values__.
+
 
 ---
 
 ### 1s and 0s
 > id: bracket
 
-{.fixme} off-by-one error for animation
-
-{.todo} clear up this exposition
-
-With each finger that we add, our number of options multiplies by two.
+Recalling our lesson on [probability trees](link/to/course), with each finger that we add our number of options multiplies by two.
 
     svg.bracket(width=600 height=320)
       - var textb = 4
@@ -534,20 +577,9 @@ With each finger that we add, our number of options multiplies by two.
 
     x-slider.bracket(steps=6 speed=0.5)
 
-We can get our five-digit binary number by following any path from beginning to end. For example, this is the binary sequence for [10110](target:yes).
+We can represent any five-digit binary number by following any path from beginning to end. For example, this is the binary sequence for [10110](target:yes).
 
----
-
-Please enter the number of things into the table below.
-
-| With __ fingers... | we can make __ possible combinations. |
-| 1 | [[2]] |
-| 2 | [[4]] |
-| 3 | [[8]] |
-| 4 | [[16]] |
-| 5 | [[32]] |
-
-More generally, with N fingers we can represent [[2^N]] possible combinations.
+{.todo // PHILIPP help make this pointer look good}
 
 ---
 
@@ -574,15 +606,30 @@ Yes, there are [[32]] different combinations we can make with five fingers.
     button.appear APPEAR
     button.switch SWITCH
 
+
+{.TODO PHILIPP how to make them appear after entering value into blank?}
+
 (we'll find out soon why we started with zero).
-Click on the [SWITCH](->.switch) button to toggle between binary and decimal.
+Click on the [SWITCH](->.switch) button to toggle between our binary values and their decimal counterparts. These are the values
 
 ---
 
 {.todo} Transistors
 
 
-A [transistor](gloss:transistor) is like a switch than can be either on or off. Recall how in our morse code/flashlight examples we were constrained by the medium’s ability to be on or off. Computers store data in transistors, so they store data as a collection of ons and offs, or 1s and 0s. Just like we just did with our fingers (by putting them up or down). If a computer had fingers (up/down), they would probably count to 31 on one hand. Everything that’s stored on a computer, from text and images to video and sound is stored in transistors as sequences of 1s and 0s, or binary code.
+Now that we have learned a bit about how we can represent different values by strings of 0s and 1s, let's tie this back to transistors. Recall how in our morse code/flashlight examples we were constrained by our medium’s ability to be on or off. Computers store data in transistors, so they store data as a collection of ons and offs, or 1s and 0s. Just like we just did with our fingers (by putting them up or down). If a computer had fingers, they would probably count to 31 on one hand. Everything that’s stored on a computer, from text and images to video and sound is stored in transistors as sequences of 1s and 0s, or binary code.
+
+Another way we can imagine these transistors is with a series of lights. 
+
+    table.led-binary
+      tr
+        for x in [1, 0, 0, 1, 1, 0, 1, 1]
+          - var on = x===1 ? 'on' : 'off'
+          td: div.led(padding="1px")
+            x-img(src="images/light_"+on+".png")
+
+
+This is how the sequence _{.ns.g}10011011_ would be stored.
 
 
 ---
