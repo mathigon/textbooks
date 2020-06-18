@@ -640,20 +640,23 @@ Before we can understand how computers use binary code to store complex things l
 
 Our number system operates as a [base ten](gloss:base-10) number system. Base ten numbers have ten possible values for each digit. 0 1 2 3 4 5 6 7 8 and 9. In a base-ten number, each digit is worth ten times as much as the previous smaller digit. The first right-most digit represents how many [[ones|tens|twos]] there are, the second right-most digit represents how many [[tens|hundreds|fives]] there are, and so on.
 
-| number | hundreds value | tens value | ones value |
+The value represented by each digit is the digit number times the value of the digit. So A four in the hundreds place represents the value [[400]].
+
+| __number__ | __hundreds value__ | __tens value__ | __ones value__ |
 | 432 | [[400]] | [[30]] | [[2]] |
 | 907 | [[900]] | [[0]] | [[7]] |
+{.table-small.grid}
 
 To find the value of a base ten number, we add up the values of each digit!
 
 ---
 
-Binary numbers work very similarly except they use a base-two number system. So instead of ten possible digit values, they only have [[2|1|5]]. In base-ten, each digit value increases by a multiple of ten (e.g. one hundred is ten times ten). However in binary, each digit value increases by a multiple of [[2]].
+Binary numbers work very similarly except they use a base-two number system. So instead of ten possible digit values, they only have 2. Each consective digit is worth [[twice|three times|ten times]] as much as the previous digit. And because in a binary number each digit can either be __1__ or __0__, each digit value can be either __on__ or __off__.
 
-Let's examine the binary number _{.ns.g}11111_, that is 5 consecutive 1s. How much is each digit worth?
+Let's examine the binary number _{.ns.g}11111_ (5 consecutive 1s). How much is each digit worth?
 
 | __{.m-red}digit__ | 1 | 1 | 1 | 1 | 1 |
-| __{.m-green}digit value__   | [[16]] | [[8]] | [[4]] | [[2]] | [[1]] |
+| __{.m-green}digit value__   | {.s-green}_{.n}[[16]]_ | {.s-green}_{.n}[[8]]_ | {.s-green}_{.n}[[4]]_ | {.s-green}_{.n}[[2]]_ | {.s-green}_{.n}[[1]]_ |
 {.table-small.grid}
 
 ---
@@ -661,8 +664,6 @@ Let's examine the binary number _{.ns.g}11111_, that is 5 consecutive 1s. How mu
 We can find the decimal value of this binary number _{.ns.g}11111_ by adding up the digit values. So its value is _not_ eleven thousand, one-hundred and eleven, but is 
 
 {.text-center.s-red} _{.n}16_ + _{.n}8_ + _{.n}4_ + _{.n}2_ + _{.n}1_ = _{.n}[[31]]_
-
-{.fixeme} Center the sum within page, make it look better
 
 ---
 
