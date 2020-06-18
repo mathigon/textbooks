@@ -644,11 +644,13 @@ Our number system operates as a [base ten](gloss:base-10) number system. Base te
 | 432 | [[400]] | [[30]] | [[2]] |
 | 907 | [[900]] | [[0]] | [[7]] |
 
+To find the value of a base ten number, we add up the values of each digit!
+
 ---
 
-Recall that binary numbers do not operate on the base ten number system, but a base-two number system. They do not have ten possible digit values, they only have [[2|1|5]]. In base-ten, each digit value increases by a multiple of ten (e.g. one hundred is ten times ten). However in binary, each digit value increases by a multiple of [[2]].
+Binary numbers work very similarly except they use a base-two number system. So instead of ten possible digit values, they only have [[2|1|5]]. In base-ten, each digit value increases by a multiple of ten (e.g. one hundred is ten times ten). However in binary, each digit value increases by a multiple of [[2]].
 
-Let's examine the binary number that is 5 consecutive 1s. How much is each digit worth?
+Let's examine the binary number _{.ns.g}11111_, that is 5 consecutive 1s. How much is each digit worth?
 
 | __{.m-red}digit__ | 1 | 1 | 1 | 1 | 1 |
 | __{.m-green}digit value__   | [[16]] | [[8]] | [[4]] | [[2]] | [[1]] |
@@ -656,82 +658,31 @@ Let's examine the binary number that is 5 consecutive 1s. How much is each digit
 
 ---
 
-So the full value of binary number 11111 is not eleven thousand, one-hundred and eleven, but is 
+We can find the decimal value of this binary number _{.ns.g}11111_ by adding up the digit values. So its value is _not_ eleven thousand, one-hundred and eleven, but is 
 
-16 + 8 + 4 + 2 + 1 = [[31]]
+{.text-center.s-red} _{.n}16_ + _{.n}8_ + _{.n}4_ + _{.n}2_ + _{.n}1_ = _{.n}[[31]]_
+
+{.fixeme} Center the sum within page, make it look better
 
 ---
 
-Here are some 6-digit binary numbers. Let's convert them to decimal.
+Here are some 6-digit binary numbers. Let's convert them to decimal by first writing the values of each digit, and then adding the digits together.
 
-{.text-center} _{.ns.b}100110_ = _{.ns.b}[[32]]_ + _{.ns.lb}0_ + _{.ns.lb}0_ + _{.ns.b}[[4]]_ + _{.ns.b}[[2]]_ + _{.ns.lb}0_ = _{.ns.b}[[38]]_
+{.text-center.s-purple} _{.ns}100110_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n}[[4]]_ + _{.n}[[2]]_ + _{.n.z}0_ = _{.n}[[38]]_
 
-{.text-center} _{.ns.y}111000_ = _{.ns.y}[[32]]_ + _{.ns.y}[[16]]_ + _{.ns.y}[[8]]_ + _{.ns.ly}0_ + _{.ns.ly}0_ + _{.ns.ly}0_ = _{.ns.y}[[56]]_
+{.text-center.s-yellow} _{.ns.y}111000_ = _{.n}[[32]]_ + _{.n}[[16]]_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n.z}0_ = _{.n}[[56]]_
 
-{.text-center} _{.ns.g}101011_ = _{.ns.g}[[32]]_ + _{.ns.lg}0_ + _{.ns.g}[[8]]_ + _{.ns.lg}0_ + _{.ns.g}[[2]]_ + _{.ns.g}[[1]]_ = _{.ns.g}[[43]]_
+{.text-center.s-teal} _{.ns.g}101011_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n}[[2]]_ + _{.n}[[1]]_ = _{.n}[[43]]_
 
-{.fixme} which looks better???
 
-    table.table-tiny
-      tr
-        td: .ns.b 100110
-        td: | =
-        td: .ns.b 32
-        td: | +
-        td: .ns.lb 0
-        td: | +
-        td: .ns.lb 0
-        td: | +
-        td: .ns.b 4
-        td: | +
-        td: .ns.b 2
-        td: | +
-        td: .ns.lb 0
-        td: | =
-        td: .ns.b 38
-      tr
-        td: .ns.y 111000
-        td: | =
-        td: .ns.y 32
-        td: | +
-        td: .ns.y 16
-        td: | +
-        td: .ns.y 8
-        td: | +
-        td: .ns.ly 0
-        td: | +
-        td: .ns.ly 0
-        td: | +
-        td: .ns.ly 0
-        td: | =
-        td: .ns.y 56
-      tr
-        td: .ns.g 101011
-        td: | =
-        td: .ns.g 32
-        td: | +
-        td: .ns.lg 0
-        td: | +
-        td: .ns.g 8
-        td: | +
-        td: .ns.lg 0
-        td: | +
-        td: .ns.g 2
-        td: | +
-        td: .ns.g 1
-        td: | =
-        td: .ns.g 43
-
-The decimal value of  __{.m-blue}100110__ is [[38]].
-The decimal value of __{.m-yellow}111000__ is [[56]].
-The decimal value of  __{.m-green}101011__ is [[43]].
+When computers (including digital calculators) add and subtract numbers, this is how the numbers are represented at the level of the transistor!
 
 ---
 
 ### Converting Base-Ten to Binary
 > id: dec2bin
 
-Now that we know how to convert a binary to decimal, how can we convert a decimal to a binary number? This problem is not as obvious. Follow the animation below to visualize how to break a decimal number into binary digits.
+Now that we know how to convert a binary to decimal, how can we convert a decimal to a binary number? This solution is not as obvious. Follow the animation below to visualize how to break a decimal number into binary digits.
 
 Imagine a conveyor belt that slides a large block of a gelatin-like material. This block has a length of a discrete integer. Along the conveyor belts are claws that can only fit the size of 2^N multiples. The claw will ONLY pick up a slice of its exact size, and will subtract it from the block. The block slides along until it has gone under each and every one of the claws (digits).
 
@@ -754,6 +705,8 @@ Imagine a conveyor belt that slides a large block of a gelatin-like material. Th
       .legend(slot="legend") We can subtract 1, so we write a #[strong 1] in the 1s place. We're left with 0, and we are finished.
 
 
+{.fixme} I'm not sure exactly how to format this, Could just leave as is, or could do as a proof (see below).
+
 Here is that simple method put into steps. 
 When converting decimal number N into binary:
 1. Start with the highest power of 2^n, d, that you can subtract from N. 
@@ -762,19 +715,15 @@ When converting decimal number N into binary:
 4. Divide d by 2 to get the next digits place.
 5. Repeat steps 2 through 4 until you have written the 1s place.
 
+{.fixme} I don't think "proof" is the right format, but it should look something like this.
 Here are the steps generalized:
 
     ol.proof
       li Find the highest power of 2 that you can subtract from #[em N], let's call it #[em d]
       li Subtract #[em d] from #[em N] to get how much you have left. Write a 1 in the first digit. Let's call this value #[em N']
-        .text-center #[em.number-ball N] = #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P]
       li Divide #[em d] by 2 to get the next digits place. This will always be the next highetst power of 2.
-        .text-center #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[.number-ball.blue P] #[span.divides] #[em.number-ball N]
-        .text-center #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[.number-ball.blue.cross P] #[span.divides] #[em.number-ball N] + 1
-      li If you can subtract #[em d] from #[em N'] (if N > d), then do so and go back to Step 2. Otherwise, do not subtract and write a 0.
-        .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
-      li In both cases we’ve found a new prime not in our original list – but we assumed that #[em all] primes were in this list.
-      li Clearly something went wrong! But since steps #[span.proof-step 2]–#[span.proof-step 4] were definitely valid, the only possibility is that our initial assumption in #[span.proof-step 1] was wrong. This means there must actually be infinitely many primes.
+      li If you can subtract #[em d] from #[em N'] (if N' > d), then do so and go back to Step 2. Otherwise, do not subtract and write a 0.
+      li Repeat steps #[span.proof-step 3] and #[span.proof-step 4] until you've done all digits.
 
 ---
 

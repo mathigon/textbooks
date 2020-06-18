@@ -122,6 +122,73 @@ x-code-box .morse > span {
   color: white;
 }
 
+.n {
+  display: inline-block;
+  width: 44px;
+  text-align: center;
+  color: white;
+  height: 26px;
+  line-height: 26px;
+  position: relative;
+  margin: 16px 2px;
+  font-style: normal;
+  white-space: nowrap;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 13px solid;
+  }
+
+  .s-wide { width: 80px; height: 30px; margin: 18px 3px; line-height: 30px; }
+  .s-wide:before, & .s-wide:after { border-width: 0 25px 15px 25px; }
+  
+  &:before { top: -13px; }
+  &:after { transform: rotate(180deg); bottom: -13px; }
+
+  .s-grey & { background: @grey; }
+  .s-grey &:before, .s-grey &:after { border-bottom-color: @grey; }
+
+  .s-orange & { background: @orange; }
+  .s-orange &:before, .s-orange &:after { border-bottom-color: @orange; }
+
+  .s-purple & { background: @purple; }
+  .s-purple &:before, .s-purple &:after { border-bottom-color: @purple; }
+  .s-purple &.z{ background: mix(@purple, white); }
+  .s-purple &.z:before, .s-purple &.z:after { border-bottom-color: mix(@purple, white); }
+
+  .s-teal & { background: @teal; }
+  .s-teal &:before, .s-teal &:after { border-bottom-color: @teal; }
+  .s-teal &.z { background: mix(@teal, white); }
+  .s-teal &.z:before, .s-teal &.z:after { border-bottom-color: mix(@teal, white); }
+
+  .s-lime & { background: @lime; }
+  .s-lime &:before, .s-lime &:after { border-bottom-color: @lime; }
+
+  .s-red & { background: @red; }
+  .s-red &:before, .s-red &:after { border-bottom-color: @red; }
+
+  .s-blue & { background: @blue; }
+  .s-blue &:before, .s-blue &:after { border-bottom-color: @blue; }
+
+  .s-green & { background: @green; }
+  .s-green &:before, .s-green &:after { border-bottom-color: @green; }
+
+  .s-yellow & { background: @yellow; }
+  .s-yellow &:before, .s-yellow &:after { border-bottom-color: @yellow; }
+  .s-yellow &.z { background: mix(@yellow, white); }
+  .s-yellow &.z:before, .s-yellow &.z:after { border-bottom-color: mix(@yellow, white); }
+
+  x-blank-input { display: block; margin: 1px 3px; max-width: 120px; }
+  x-blank-input .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px fade(white, 75%); }
+  x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
+  x-blank-input.done, x-blank-input.done .target { display: inline; line-height: inherit; box-shadow: none; color: white; }
+
+}
+
 // modified from divisibility
 .ns {
   display: inline-block;
@@ -137,6 +204,10 @@ x-code-box .morse > span {
   &.b { background: @blue; }
   &.g { background: @green; }
   &.y { background: @yellow; }
+
+  .s-purple & { background: @purple; }
+  .s-yellow & { background: @yellow; }
+  .s-teal & { background: @teal; }
 
   &.lb { background: fade(@blue, 40%); }
   &.lg { background: fade(@green, 40%); }
