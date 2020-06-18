@@ -728,28 +728,68 @@ Here are the steps generalized:
 
 ---
 
-### References in Culture and Whatnot
+### Other places you might find binary patterns.
 
-We've seen decimal, we've seen binary, but you can create a number system with any base. Cmoputers use something called a "hexidecimal" or base-16 number system to store colors. (// TODO: image of color palette with their hexidecimal colors on the right.)
-
-Computers.
+If you look around, you can find patterns related to binary numbers in computers, and in some other unexpected places!
 
 
-__There are 10 types of people in the world: those who understand binary numbers, and those who don't.__
+::: column(width=160 parent="padded-thin")
 
-Sports leagues often use tournaments where the number of teams is a power of two. The NCAA basketball tournament begins with 64 teams. Each round, half of the teams are eliminated. The rounds of 16, 8, and 4 are called respectively the Sweet Sixteen, the Elite Eight, and the Final Four. (// TODO: image of bracket)
+    x-img(src="images/smartphone.png" width=160 height=160 alt="Color Hex Codes")
 
-The I-Ching is an ancient Chinese divination text. Each I-Ching "Hexagram" is made of six horizontal lines, each of which can be either solid (Yang) or divided (Yin). There are 64 possible Hexagrams (2^6). (// TODO: image of I-Ching)
+::: column(width=400)
+
+When you’re looking to buy any digital device with memory like a Smartphone, Tablet, Computer, or SD Card the options often come with __Memory__ options that are a power of 2, like 16GB, 32GB, or 64GB.
 
 
+::: column(width=160 parent="padded-thin")
 
-### Bonus: Binary Brain Teasers
-Name the band represented by each puzzle:
+    x-img(src="images/colors_mathigon.png" width=160 height=160 alt="Color Hex Codes")
 
-{.todo} Matchbox 20, Blink 182, M83, Maroon 5
+::: column(width=400)
+
+ __Colors__ on computers are stored using a combination of letters and numbers. This is another base system called __hexadecimal__, which is a base-16 system. Each color has a Red, a Green, and a Blue value, each of which is a number between 0 and 255.
+
+
+::: column(width=160 parent="padded-thin")
+
+    x-img(src="images/whatsapp.png" width=160 height=160 alt="Color Hex Codes")
+
+::: column(width=400)
+
+In 2016, the messaging app __WhatsApp__ increased the maximum number of possible users in a single group to 256 (2^8).
+
+
+::: column(width=160)
+
+    x-img(src="images/ncaa_tourney.png" width=160 height=160 alt="Bracket")
+
+::: column(width=400)
+
+ Many sports tournaments start with a number of teams that is a power of two. The __NCAA Basketball Tournament__ begins with 64 (2^6) teams and has rounds called “The Sweet Sixteen”, “The Elite Eight”, and “The Final Four” (each of which is a power of two!).
+
+::: column(width=160)
+
+    x-img(src="images/i-ching.png" width=160 height=160 alt="I-ching")
+
+::: column(width=400)
+
+The __I-Ching__ is an ancient Chinese divination text. It contains 64 different "Hexagrams", each of which is made up of six horizontal lines which can be either solid (Yang) or divided (Yin). 
+
+:::
+
 
 ### Conclusion
 {.todo} Conclusion
+
+
+Now that you've learned about binary numbers, you can make this joke to your friends:
+
+{.fixme} Make this bigger and centered.
+
+__There are only 10 types of people in the world:__
+__those who understand binary,__
+__and those who don't.__
 
 
 ----------------------------------------------------------------------------------------------------
