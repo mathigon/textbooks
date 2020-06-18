@@ -731,18 +731,19 @@ The decimal value of  __{.m-green}101011__ is [[43]].
 ### Converting Base-Ten to Binary
 > id: dec2bin
 
-Now that we know how to convert a binary to decimal, how can we convert a decimal to a binary code?
+Now that we know how to convert a binary to decimal, how can we convert a decimal to a binary number? This problem is not as obvious. Follow the animation below to visualize how to break a decimal number into binary digits.
 
-Follow the slideshow below.
+Imagine a conveyor belt that slides a large block of a gelatin-like material. This block has a length of a discrete integer. Along the conveyor belts are claws that can only fit the size of 2^N multiples. The claw will ONLY pick up a slice of its exact size, and will subtract it from the block. The block slides along until it has gone under each and every one of the claws (digits).
 
-{.fixme} make this design more consistent with the rest of Mathigon
+{.fixme} make this design more consistent with the rest of Mathigon.
+{.fixme} there is potential to make the text in the slide legends point to the diagram (see third slide)
 
     x-slideshow
       .stage.cheesecake(slot="stage")
         figure: include svg/ch.svg
-      .legend(slot="legend") We have a full block of length #[strong 25]f.
+      .legend(slot="legend") We have a full block of length #[strong 25].
       .legend(slot="legend") We always start with the leftmost digit. In this case, 16 is the largest power of 2 that can fit into 25. So first we test the #[strong 16s] place.
-      .legend(slot="legend") We subtract 16, so we write a #[strong 1] in the 16s place. We're left with #[strong 9].
+      .legend(slot="legend") We can subtract 16, so we write a [1 in the 16s place](->.#digit16). We're left with #[strong 9].
       .legend(slot="legend") Next we test the #[strong 8s] place. 
       .legend(slot="legend") We can subtract 8, so we write a #[strong 1] in the 8s place. We're left with #[strong 1].
       .legend(slot="legend") Next we test the #[strong 4s] place.
@@ -754,7 +755,6 @@ Follow the slideshow below.
 
 
 Here is that simple method put into steps. 
-// BUTTER: format it
 When converting decimal number N into binary:
 1. Start with the highest power of 2^n, d, that you can subtract from N. 
 2. If you can subtract d from N, then write a 1 in that place and continue with N = N - d.
@@ -762,6 +762,19 @@ When converting decimal number N into binary:
 4. Divide d by 2 to get the next digits place.
 5. Repeat steps 2 through 4 until you have written the 1s place.
 
+Here are the steps generalized:
+
+    ol.proof
+      li Find the highest power of 2 that you can subtract from #[em N], let's call it #[em d]
+      li Subtract #[em d] from #[em N] to get how much you have left. Write a 1 in the first digit. Let's call this value #[em N']
+        .text-center #[em.number-ball N] = #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P] × #[em.number-ball.blue P]
+      li Divide #[em d] by 2 to get the next digits place. This will always be the next highetst power of 2.
+        .text-center #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[em.number-ball.blue P], #[.number-ball.blue P] #[span.divides] #[em.number-ball N]
+        .text-center #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[em.number-ball.blue.cross P], #[.number-ball.blue.cross P] #[span.divides] #[em.number-ball N] + 1
+      li If you can subtract #[em d] from #[em N'] (if N > d), then do so and go back to Step 2. Otherwise, do not subtract and write a 0.
+        .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
+      li In both cases we’ve found a new prime not in our original list – but we assumed that #[em all] primes were in this list.
+      li Clearly something went wrong! But since steps #[span.proof-step 2]–#[span.proof-step 4] were definitely valid, the only possibility is that our initial assumption in #[span.proof-step 1] was wrong. This means there must actually be infinitely many primes.
 
 ---
 
