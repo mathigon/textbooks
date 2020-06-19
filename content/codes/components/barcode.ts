@@ -22,16 +22,12 @@ export class Barcode extends CustomElementView {
   ready() {
     this.$svg = $N('svg', {viewBox: '0 0 400 200'}, this) as SVGParentView;
     this.draw(this.attr('value'));
-    this.on('attr:value', (e) => {
-      console.log('>>', e);
-      this.draw(e.newAttr)
-    });
+    this.on('attr:value', (e) => this.draw(e.newAttr));
   }
 
   private draw(value: string) {
     this.$svg.removeChildren();
     this.left = 0;
-    console.log(value);
 
     this.drawRect('101', 'start', true);
     this.drawRect(DIGITS[value[0]], 'left', true);
