@@ -145,7 +145,7 @@ x-code-box .morse > span {
 
   .s-wide { width: 80px; height: 30px; margin: 18px 3px; line-height: 30px; }
   .s-wide:before, & .s-wide:after { border-width: 0 25px 15px 25px; }
-  
+
   &:before { top: -13px; }
   &:after { transform: rotate(180deg); bottom: -13px; }
 
@@ -362,10 +362,17 @@ select {
   opacity: 0.1;
 }
 
-.bar {
-  opacity: 0.4;
 
-  &.focus {
-    opacity: 1.0
-  }
+// -----------------------------------------------------------------------------
+// Error Detection
+
+x-barcode {
+  display: block;
+  width: 400px;
+  height: 200px;
+  margin: 1em auto;
+  rect { fill: @grey; transition: opacity .2s }
+
+  .focus & rect { opacity: 0.4; }
+  .focus & rect.focus { opacity: 1; }
 }

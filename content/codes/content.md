@@ -836,46 +836,14 @@ __and those who don't.__
 
 > id: barcode-drawing
 
-Look at this barcodes.
+Look at this barcode.
 
-    svg.barcode(width=400 height=220)
-      - var outer = {id: 'outer', size: 3, long: true}
-      - var left = {id: 'left', size: 7}
-      - var leftL = {id: 'left', size: 7, long: true}
-      - var center = {id: 'center', size: 5, long: true}
-      - var right = {id: 'right', size: 7}
-      - var rightL = {id: 'right', size: 7, long: true}
+    x-barcode(value="012345678901")
 
-      - var barGroups = [outer, leftL, left, left, left, left, left, center, right, right, right, right, right, rightL, outer]
-      - var barWidth = 4
-      - var numBars = 95
-      - var totalI = 0
-      - var heightLong = 200
-      - var heightShort = 180
-      g#bars
-        - var i = 0
-        while i < barGroups.length
-          - var j = 0
-          - var height = barGroups[i].long ? heightLong : heightShort
-          g.bar(class=barGroups[i].id target=barGroups[i].id)
-            while j < barGroups[i].size
-              - var color= i%2 ? "black" : "white"
-              rect(x=totalI*barWidth y=0 width=barWidth height=height)
-              - j += 1
-              - totalI += 1
-          - i += 1
-
-
-The guards are on the [{.step-target.pill.b.red}outside](target:outer) and in the [{.step-target.pill.b.red}center](target:center).
-The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
-The last six digits are on the [{.step-target.pill.b.green}right](target:right).
-
-
-{.fixme} This is my attempt at creating an importable component.
-
-    x-barcode
-      .input(contenteditable="true" spellcheck="false") SOS
-      .output.morse
+The guards are on the [{.step-target.pill.b.red}outside](target:.bar-start) and in the
+[{.step-target.pill.b.red}center](target:.bar-middle).
+The first six digits are on the [{.step-target.pill.b.blue}left](target:.bar-left).
+The last six digits are on the [{.step-target.pill.b.green}right](target:.bar-right).
 
 __The Guards__
 
@@ -937,31 +905,6 @@ https://plus.maths.org/content/cracking-codes
 The diagram below shows how plaintext letters [{.letter.plain} *] are converted
 into cipher letters [{.letter.cipher} *]. The chart also shows the relative
 frequency of every letter in your text, as well as the entire english language.
-
-    .code-play
-      .freq-table-wrap
-        .freq-table
-          .freq-table-chart
-            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-              .freq-col
-                .letter-bar.plain
-                .letter-bar.real
-          .freq-table-plain
-            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-              .freq-col: .letter.plain= l
-          .freq-table-cipher
-            each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-              .freq-col
-            #letter-slider(data-slide-width="26")
-              each l in ('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ').split('')
-                .freq-col: .letter.cipher= l
-      .row
-        .code-area.grow
-          h3.code-title Plain Text
-          .plain-text(contenteditable="true", placeholder="Start typing to create your first cypher …")
-        .code-area.grow
-          h3.code-title Enciphered Text
-          .cipher-text
 
 Once you know the pattern the Caesar cipher is very easy to break: you just have
 to try all <25> possibilities. Try to decode the following secret messages:

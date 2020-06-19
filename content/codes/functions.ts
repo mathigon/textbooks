@@ -5,17 +5,16 @@
 
 
 import {delay, wait} from '@mathigon/core';
+import {Point} from '@mathigon/fermat';
 import {$N, ElementView, slide, InputView, SVGView, loadScript} from '@mathigon/boost';
 import {Step, Slider, Slideshow} from '../shared/types';
 
 import {beep, Beep} from './components/beep'
 import {CodeBox} from './components/code-box'
-import {Barcode} from './components/barcode'
 import {MORSE_CODE} from './components/utilities'
 
-import {Point} from '@mathigon/fermat';
-
 import './components/code-box';
+import './components/barcode';
 import './components/enigma';
 import './components/morse';
 
@@ -235,7 +234,7 @@ export function bracket($step: Step) {
                 if (i % 2 == 0) {
                     l.animate({
                         transform: [
-                            `translate(-50px, 0px) scale(0.0, 1.0)`, 
+                            `translate(-50px, 0px) scale(0.0, 1.0)`,
                             `translate(0px, 0px) scale(1.0, 1.0)`
                     ]}, 400, 100);
                 }
@@ -596,7 +595,7 @@ export function finger32($section: Step) {
 
   $binCaptions.forEach($f => $f.hide());
 
-  let i = 0; 
+  let i = 0;
   let delay = 200;
   $section.$('.appear')?.on('click', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
@@ -655,24 +654,13 @@ export function binaryTable($section: Step) {
 }
 
 export function binarySimulation($step: Step) {
-
-  console.log($step);
-  // NEXT NEXT NEXT let's get some code in here... make it display a random number
-
-
   const buttons = $step.$$('.btn');
   buttons[0].on('click', () => {
     $step.score('advance');
   });
 }
 
-import './components/code-box'
-import './components/enigma'
-import './components/morse'
-import './components/barcode'
-
 export function resolution($step: Step) {
-  console.log('resolution');
   const $codeBox = $step.$('x-code-box') as CodeBox;
 
   $codeBox.encode((char: string, $el: ElementView) => {
@@ -680,79 +668,4 @@ export function resolution($step: Step) {
       $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
     }
   });
-}
-
-// BARCODE:
-export function barcodeIntro($step: Step) {
-    console.log('barcodeIntro functions.ts');
-    const $barcode = $step.$('x-barcode') as Barcode;
-
-    console.log($barcode);
-}
-
-/**
- * Draw a barcode. There's some redundant code here, for sure.
- */
-export function barcodeDrawing($section: Step) {
-
-    const $bars = $section.$$('.bar') as SVGView[];
-    const barType = ['outer', 'left', 'left', 'left', 'left', 'left', 'left', 'center',
-                     'right', 'right', 'right', 'right', 'right', 'right', 'outer'];
-
-    const outer = '101';
-    const center = '01010';
-    const left = [
-        '0001101', // 0
-        '0011001', // 1
-        '0010011', // 2
-        '0111101', // 3
-        '0100011', // 4
-        '0110001', // 5
-        '0101111', // 6
-        '0111011', // 7
-        '0110111', // 8
-        '0001011' // 9
-    ];
-    const right = [
-        '1110010', // 0
-        '1100110', // 1
-        '1101100', // 2
-        '1000010', // 3
-        '1011100', // 4
-        '1001110', // 5
-        '1010000', // 6
-        '1000100', // 7
-        '1001000', // 8
-        '1110100' // 9
-    ];
-
-    let numbers = 'x051000x012517x';
-
-    $bars.forEach(($bar, i) => {
-        // console.log($bar);
-        $bar.children.forEach(($b, j) => {
-            // console.log($b);
-            let type = barType[i];
-            let stripes, number;
-
-            switch(type) {
-                case 'outer':
-                    stripes = outer;
-                    break;
-                case 'center':
-                    stripes = center;
-                    break;
-                case 'left':
-                    number = parseInt(numbers.charAt(i));
-                    stripes = left[number];
-                    break;
-                case 'right':
-                    number = parseInt(numbers.charAt(i));
-                    stripes = right[number];
-                    break;
-            }
-
-            $b.setAttr('fill', stripes?.charAt(j) === '1' ? 'black' : 'white');
-        });
-    });
 }
