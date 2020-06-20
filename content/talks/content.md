@@ -155,7 +155,7 @@ can remove cities by tapping them, and you can add cities by clicking anywhere o
 > title: Three Body Problem
 > id: three-bodies
 
-Description
+What happens when three plants orbit around each other in space?
 
     figure: x-geopad.simulation.r(width=480 height=480)
       canvas(width=960 height=960)
@@ -219,8 +219,7 @@ intersecting?
 
 In this diagram, we highlight all points `pill(x_0,"yellow","x0")` on the complex plane, for which
 the recursive sequence `pill(x_n,"yellow") = pill(x_(n-1),"yellow")^2 + pill(c,"red","c")` is
-bounded (it doesn't diverge). You can move the position of `pill(x_0,"yellow","x0")` and
-`pill(c,"red","c")` – which shapes do you expect to see?
+bounded (it doesn't diverge).
 
     x-geopad(width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
