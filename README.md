@@ -15,6 +15,10 @@ mathematics more fun and more interactive.
 
 ## Getting Started
 
+First, make sure you have Node installed in your environment before continue with the setup. You can check if Node is already installed by running the `node -v` command.
+
+If Node is not yet installed, please download and follow instructions for installation from its [official page](https://nodejs.org/en/).
+
 After forking and cloning this repository, install all dependencies using
 `npm install`.
 
