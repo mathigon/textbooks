@@ -83,7 +83,7 @@
   background: @background url('data:image/svg+xml;utf8,@{url}') no-repeat center;
 }
 
-.iconBackground(@foreground, @background, @path, @size: 24, @box: 28) {
+.iconBackground(@foreground, @background, @path, @size: 24, @box: 24) {
   .svgBackground('<path fill="@{foreground}" d="@{path}"/>', @size, @size, @background, ' viewBox="0 0 @{box} @{box}"');
 }
 
