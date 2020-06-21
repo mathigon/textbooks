@@ -10,7 +10,7 @@
 
 In the early 2000s, the Colombian government was fighting a civil war against groups of insurgents,
 who were hiding in camps in the South American rainforest. Occasionally, soldiers were captured by
-these rebels, and then had to spent months or even years in captivity.
+these rebels, and then had to spend months or even years in captivity.
 
 It is easy to lose hope when you’ve been chained up in a hostage camp for such a long time, unable
 to see your family, and guarded by armed guerilla forces. However, in 2010, there was reason to
@@ -87,8 +87,7 @@ and used compass needles to point at different letters on a display.
 
 ::: column.grow
 
-One year later, the inventor [Samuel Morse](bio:morse) developed an even better version of the
-telegraph, together with his assistant Alfred Vail.
+One year later, the inventor [Samuel Morse](bio:morse), together with his assistant Alfred Vail, developed an even better version of the telegraph.
 
 Pressing a button at one end of the telegraph line closes an electronic circuit. This means that
 current is flowing, which triggers a buzzing sound at the other end of the telegraph line.
