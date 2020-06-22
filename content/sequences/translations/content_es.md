@@ -1102,7 +1102,7 @@ Pero resulta que hay muchos otros lugares en la naturaleza donde aparecen los _n
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Dextrorso
       div(data-value="ccw") Sinistrórsum
@@ -1114,7 +1114,7 @@ Pero resulta que hay muchos otros lugares en la naturaleza donde aparecen los _n
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Dextrorso
       div(data-value="ccw") Sinistrórsum
@@ -1140,7 +1140,7 @@ Por supuesto, esto no es solo una coincidencia. Hay una razón importante por la
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div(data-value="male") Masculino
       div(data-value="female") Hembra
     .bees

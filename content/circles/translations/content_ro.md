@@ -155,7 +155,7 @@ devenind circulare sau sferice și reducându-și astfel suprafața.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triunghi
       div(data-value="1") Pătrat
       div(data-value="2") Pentagon

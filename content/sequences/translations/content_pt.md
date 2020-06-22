@@ -1030,7 +1030,7 @@ Mas acontece que existem muitos outros lugares na natureza onde os números de F
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1042,7 +1042,7 @@ Mas acontece que existem muitos outros lugares na natureza onde os números de F
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1066,7 +1066,7 @@ Claro, isso não é apenas uma coincidência. Há uma razão importante pela qua
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees

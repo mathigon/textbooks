@@ -140,7 +140,7 @@ En la naturaleza, los objetos como gotas de agua o burbujas de aire pueden _ahor
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triangle
       div(data-value="1") Square
       div(data-value="2") Pentagon

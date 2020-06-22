@@ -1076,7 +1076,7 @@ Ali ispada da u prirodi postoje mnoga druga mjesta na kojima se pojavljuju Fibon
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1088,7 +1088,7 @@ Ali ispada da u prirodi postoje mnoga druga mjesta na kojima se pojavljuju Fibon
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1114,7 +1114,7 @@ Naravno, to nije samo slučajnost. Postoji važan razlog zbog kojeg priroda voli
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees

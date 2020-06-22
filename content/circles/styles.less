@@ -31,26 +31,7 @@
 
 .pi-spiral { margin: 1em auto; max-width: 100%; width: 400px; }
 
-.area-tabs {
-  display: flex;
-  margin: 0 auto .5em;
-  width: fit-content;
-
-  > * {
-    width: 80px;
-    text-align: center;
-    border: 1px solid @red;
-    border-left: none;
-    transition: color .2s, background .2s;
-    cursor: pointer;
-    font-size: 16px;
-
-    &:first-child { border-radius: 6px 0 0 6px; border-left: 1px solid @red; }
-    &:last-child { border-radius: 0 6px 6px 0; }
-    &:hover { background: fade(@red, 20%);  }
-    &.active { color: white; background: @red; cursor: default; }
-  }
-}
+#max-area x-select.segmented > * { width: 80px; font-size: 16px; }
 
 #max-area  {
   path { fill: fade(@blue, 10%); stroke: @green; stroke-width: 8px; stroke-linejoin: round; }
