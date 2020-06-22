@@ -1083,10 +1083,10 @@ lobachevsky:
   name: Lobachevsky
   small: true
   bio: |
-    __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) war ein russischer Mathematiker und einer der
-    Begründer der nichteuklidischen Geometrie. Es gelang ihm zu zeigen, dass Sie eine konsistente
-    Art von Geometrie aufbauen können, in der Euklids fünftes Axiom (über parallele Linien) nicht
-    gilt.
+    __Nikolai Lobachevsky__ (Никола́й Лобаче́вский, 1792 – 1856) war ein russischer Mathematiker und
+    einer der Begründer der nichteuklidischen Geometrie. Es gelang ihm zu zeigen, dass man eine
+    konsistente Art von Geometrie entwickeln kann, in der Euklids fünftes Axiom (über parallele Linien)
+    nicht gilt.
   links:
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
@@ -1127,10 +1127,10 @@ madhava:
     Alle seine ursprünglichen Arbeiten sind verloren gegangen, aber er hatte einen großen Einfluss
     auf die Entwicklung der Mathematik.
 
-    Madhava verwendete zuerst unendliche Reihen, um trigonometrische Funktionen zu approximieren,
-    was viele Jahrhunderte später ein bedeutender Schritt in Richtung der Entwicklung des Kalküls
-    war. Er studierte auch Geometrie und Algebra und fand eine genaue Formel für _π_ (auch unter
-    Verwendung unendlicher Reihen).
+    Madhava verwendete als Erster unendliche Reihen, um trigonometrische Funktionen zu approximieren,
+    was viele Jahrhunderte später ein bedeutender Schritt in Richtung der Entwicklung der
+    Infinitesimalrechnung war. Er studierte auch Geometrie und Algebra und fand eine genaue Formel
+    für _π_ (auch unter Verwendung unendlicher Reihen).
   links:
     - title: Trigonometry
       url: /course/triangles/trigonometry
