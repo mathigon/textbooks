@@ -1105,7 +1105,7 @@ Men det visar sig att det finns många andra platser i naturen där Fibonacci-nu
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1117,7 +1117,7 @@ Men det visar sig att det finns många andra platser i naturen där Fibonacci-nu
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1143,7 +1143,7 @@ Naturligtvis är detta inte bara en slump. Det finns ett viktigt skäl till att 
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees

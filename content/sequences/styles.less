@@ -270,26 +270,6 @@ x-coordinate-system + .caption { margin-top: -1em; }
 .golden-spiral .stage { overflow: hidden; }
 .golden-spiral svg { margin: 0 auto 32px; transition: transform .4s linear; }
 
-.spiral-tabs {
-  display: flex;
-  margin: 0 auto .5em;
-  width: fit-content;
-
-  > * {
-    width: 100px;
-    text-align: center;
-    border: 1px solid @red;
-    border-left: none;
-    transition: color .2s, background .2s;
-    cursor: pointer;
-
-    &:first-child { border-radius: 6px 0 0 6px; border-left: 1px solid @red; }
-    &:last-child { border-radius: 0 6px 6px 0; }
-    &:hover { background: fade(@red, 20%);  }
-    &.active { color: white; background: @red; cursor: default; }
-  }
-}
-
 .spirals {
   padding-bottom: 100%;
   position: relative;

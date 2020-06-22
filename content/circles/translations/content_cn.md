@@ -135,7 +135,7 @@
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") 三角形
       div(data-value="1") 正方形
       div(data-value="2") 五边形

@@ -159,7 +159,7 @@ kreisförmig oder kugelförmig werden und damit ihre Oberfläche reduzieren.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Dreieck
       div(data-value="1") Quadrat
       div(data-value="2") Fünfeck

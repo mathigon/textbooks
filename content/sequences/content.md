@@ -1269,7 +1269,7 @@ spirals there are in each direction?
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1282,7 +1282,7 @@ counterclockwise spirals.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1311,7 +1311,7 @@ nature likes the Fibonacci sequence, which you’ll learn more about later.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees

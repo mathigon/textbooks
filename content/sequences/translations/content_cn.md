@@ -1182,7 +1182,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div 原样
       div(data-value="cw") 顺时针
       div(data-value="ccw") 逆时针.
@@ -1194,7 +1194,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div 原样
       div(data-value="cw") 顺时针
       div(data-value="ccw") 逆时针.
@@ -1219,7 +1219,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") 雄性
       div(data-value="female") 雌性
     .bees

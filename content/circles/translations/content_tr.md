@@ -137,7 +137,7 @@ Doğada su damlası ya da hava kabarcığı gibi nesneler yüzey alanlarını k�
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Üçgen
       div(data-value="1") Kare
       div(data-value="2") Beşgen

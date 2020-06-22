@@ -159,7 +159,7 @@ circular or spherical, and reducing their surface area.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triangle
       div(data-value="1") Square
       div(data-value="2") Pentagon
