@@ -306,9 +306,8 @@ there – and that is a perfectly valid view.
 This begs the question: is there an _unusual_ system of arithmetic for which
 …999999 is a meaningful number?
 
-::: .box.problem-box
-    .box-title: h3 Challenge
-::: .box-body
+::: .box.f-blue
+#### Challenge
 
 Let’s make matters worse! Consider the number with infinitely many 9s both to
 the left _and_ to the right of the decimal point: __{.m-red.nowrap}…9999.9999…__.
@@ -318,7 +317,6 @@ Try to use the same algebraic argument to show that this equals __{.m-red}zero__
 __{.m-green.nowrap}…9999__ + __{.m-yellow.nowrap}0.9999…__ = __{.m-green}−1__ +
 __{.m-yellow}1__ = __{.m-red}0__.*
 
-:::
 :::
 
 _{button.next-step} Continue_
@@ -443,15 +441,13 @@ know that _{span.nowrap}…6666667_ = `1/3`.*
 
 ---
 
-::: .box.problem-box
-    .box-title: h3 Challenge
-::: .box-body
+::: .box.f-blue
+#### Challenge
 
 Can you work out which ten-adic number behaves like `2/3`?
 
 What about other fractions like `4/7` or `2/13`?
 
-:::
 :::
 
 _It turns out that there are a few fractions that cannot be expressed in our

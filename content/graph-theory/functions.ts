@@ -173,7 +173,7 @@ export function handshakes4($section: Step) {
 
 export function bridges($section: Step) {
   $section.$$('.tab').forEach(($el, i) => {
-    const $svg = $el.$('svg.frame') as SVGParentView;
+    const $svg = $el.$('svg.map') as SVGParentView;
     const $paths = $('.paths', $svg) as SVGView;
     const $water = $('.water', $svg)!;
     const $bridges = $$('.bridge', $svg);
@@ -739,8 +739,7 @@ export function maps1($section: Step) {
 
   $section.$$('.tab').forEach(($map, i) => {
     const $count = $map.$('.colour-count span')!;
-    const $countries = $map.$('.frame')!.children;
-    const $solve = $map.$('.solve')!;
+    const $countries = $map.$('svg.map')!.children;
     const $solveds = $section.$$('x-solved');
 
     const countryIds: string[] = [];
@@ -749,18 +748,13 @@ export function maps1($section: Step) {
     let completed = 10;
     let used = 0;
 
-    $countries.forEach(function ($c, j) {
+    $countries.forEach(($c) => {
       const id = $c.id;
       const neighbours = borders[i][id] || [];
       countryIds.push(id);
 
-      const initial = colours.indexOf($c.attr('fill'));
+      // const initial = colours.indexOf($c.attr('fill'));
       $c.css('fill', '#CCC');
-      $solve.on('click', function () {
-        countryColours[id] = initial;
-        setTimeout(() => { $c.css('fill', colours[initial]); }, j * 10);
-        $section.score('map-' + i);
-      });
 
       $c.on('click', function () {
         for (const n of neighbours) if (countryColours[n] === activeColour) {
@@ -795,13 +789,6 @@ export function maps1($section: Step) {
       $countries.forEach($c => { $c.css('fill', '#CCC'); });
       $solveds[i].exit();
       colourUses = [0, 0, 0, 0, 0, 0, 0];
-    });
-
-    $solve.on('click', function () {
-      $count.textStr = used = 4;
-      completed = 1;  // TODO how is this used?
-      colourUses = [0, 0, 0, 0, 0, 0, 0];
-      countryIds.forEach(c => { colourUses[countryColours[c]] += 1; });
     });
   });
 }

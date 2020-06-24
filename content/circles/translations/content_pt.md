@@ -276,14 +276,17 @@ Aqui você pode ver os primeiros 100 dígitos do Pi. Mova algumas das células p
 
 Se Pi é normal, significa que você pode pensar em _qualquer_ sequência de dígitos e ela aparecerá em algum lugar em seus dígitos. Aqui você pode pesquisar o primeiro milhão de dígitos do Pi - eles contêm seu aniversário?
 
-    .box
-      .box-title: h3 One Million Digits of Pi
-      .box-body.pi-controls
-        | Search for a string of digits:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### One Million Digits of Pi
+
+    .pi-controls
+      | Search for a string of digits:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -1427,13 +1430,13 @@ Esse é um problema específico ao tentar criar mapas. A Terra possui uma superf
 
 Aqui você pode ver alguns tipos diferentes de mapas, chamados __projeções__. Tente mover o quadrado vermelho e observe como essa área _realmente_ se parece em um globo:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cylindrical
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline

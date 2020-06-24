@@ -42,7 +42,7 @@ water? You can start and end on any area of land.
 Can you connect each of these utility companies to each of the houses, without any of the lines
 intersecting?
 
-    .frame.fill
+    .box.no-padding
       include ../graph-theory/svg/utilities.svg
       button.btn Clear
 
@@ -50,13 +50,19 @@ intersecting?
 > id: planarity
 > title: Planarity Game
 
-    .box.problem-box
-      .box-title: h3 Planarity
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-        button.btn New Random Graph
+::: .box.f-blue
+
+#### Planarity
+
+    x-solved
+    svg#planarity(viewBox="0 0 720 360")
+
+This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the
+vertices so that none of the edges overlap.
+
+    p.btn-row: button.btn New Random Graph
+
+:::
 
 ---
 > id: maps-1
@@ -76,28 +82,24 @@ colour?
         include ../graph-theory/svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
         include ../graph-theory/svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
         include ../graph-theory/svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
         include ../graph-theory/svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
 
 ---
 > id: salesman-4
@@ -128,28 +130,24 @@ can remove cities by tapping them, and you can add cities by clicking anywhere o
         include ../graph-theory/svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
         include ../graph-theory/svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
         include ../graph-theory/svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
         include ../graph-theory/svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
 
 ---
 > title: Three Body Problem
@@ -209,7 +207,7 @@ water? You can start and end on any area of land.
 Can you connect each of these utility companies to each of the houses, without any of the lines
 intersecting?
 
-    .frame.fill
+    .box.no-padding
       include ../graph-theory/svg/utilities.svg
       button.btn Clear
 

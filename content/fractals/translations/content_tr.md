@@ -730,15 +730,15 @@ Bu, matematikte daha önce gördüğünüz başka bir konsepte benzer: [rekursif
 
 Sonuç dizisinin `x_0` başlangıç değerine bağlı olarak nasıl çok farklı davranabileceğine dikkat edin:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 `x_0 > 1` ise, dizi [[ıraksar|yakınsar]]: _{span.reveal(when="blank-0")} sonsuza kadar büyümeye devam eder._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0` –1 ve 1 arasındaysa, dizi [[yakınsar|ıraksar]] .
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0 < -1` ise, dizi [[ıraksar|yakınsar]] .
 

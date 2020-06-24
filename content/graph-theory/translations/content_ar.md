@@ -240,7 +240,7 @@ __نظرية الرسم البياني__ هي دراسة الرسوم البيا
         div(value="size") الحجم
         div(value="prime") الأعداد الأولية
         div(value="eo") زوجي و فردى
-      .frame-body
+      .box
         p(style="margin: 0"): strong هذه الرسوم البيانية ممكنة
         include svg/vertex-orders-1.svg
         p(style="margin: 1em 0 0"): strong هذه الرسوم البيانية ليست ممكنة
@@ -355,7 +355,7 @@ __نظرية الرسم البياني__ هي دراسة الرسوم البيا
 
 حاول توصيل كل منزل بكل شركة من شركات المرافق أدناه ، دون تقاطع أي من خطوطك:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn إمحي
 
@@ -393,14 +393,18 @@ __نظرية الرسم البياني__ هي دراسة الرسوم البيا
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 مستوي
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md هذا رسم بياني مستوي لكن ${n}{n|7|5,20,1} الرؤوس مجطلطين. إعادة ترتيب الرؤوس بحيث لا تتداخل أي من الحواف.
-        button.btn رسم بياني عشوائي جديد
+::: .box.f-blue
 
+#### مستوي
+
+    x-solved
+    svg#planarity.frame(viewBox="0 0 640 320")
+
+هذا رسم بياني مستوي لكن ${n}{n|7|5,20,1} الرؤوس مجطلطين. إعادة ترتيب الرؤوس بحيث لا تتداخل أي من الحواف.
+
+    p.btn-row: button.btn رسم بياني عشوائي جديد
+
+:::
 
 ---
 > id: euler
@@ -439,7 +443,7 @@ __نظرية الرسم البياني__ هي دراسة الرسوم البيا
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -559,28 +563,24 @@ __{.red} 90__ حواف
         include svg/colours-1.svg
         .colour-count عدد الألوان: #[span 0]
         button.btn.clear إمحي
-        button.btn.solve الحل
       .tab
         h3 امريكا الجنوبية #[span.check(when="map-1")]
         x-solved
         include svg/colours-2.svg
         .colour-count عدد الألوان: #[span 0]
         button.btn.clear إمحي
-        button.btn.solve الحل
       .tab
         h3 ألمانيا #[span.check(when="map-2")]
         x-solved
         include svg/colours-3.svg
         .colour-count عدد الألوان: #[span 0]
         button.btn.clear إمحي
-        button.btn.solve الحل
       .tab
         h3 إنكلترا #[span.check(when="map-3")]
         x-solved
         include svg/colours-4.svg
         .colour-count عدد الألوان: #[span 0]
         button.btn.clear إمحي
-        button.btn.solve الحل
 
 ---
 > id: maps-2

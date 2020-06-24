@@ -497,15 +497,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 {.reveal(when="blank-0 blank-1")} Geometriska sekvenser kan å andra sidan bete sig helt annorlunda baserat på värdena på `a` och _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 Om _{span.var-action} `r > 1`_ kommer termerna [[snabbt att bli större|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, upp till oändlighet. Matematiker säger att sekvensen [__avviker__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 Om _{span.var-action} *r* är mellan –1 och 1_ kommer termerna alltid [[att närma sig 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Vi säger att sekvensen [__konvergerar__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 Om _{span.var-action} `r < -1`_, kommer termerna att växla mellan positivt och negativt, medan deras [[absoluta värde|inverse|difference]] blir större.
 
@@ -829,19 +829,15 @@ Triangelnummer verkar dyka upp överallt i matematik, och du kommer att se dem i
 
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
-
-::: .box-body
+#### Problem Solving
 
 Vilken är summan av de första 100 positiva [heltal](gloss:integer)? Med andra ord, vad är värdet av
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
 I stället för att manuellt lägga till allt, kan du använda [triangelnumren](gloss:triangle-numbers) för att hjälpa dig? Vad sägs om summan av de första 1000 positiva heltalen?
-
-:::
 
 :::
 
@@ -1362,11 +1358,9 @@ Det visar sig att oavsett två startnummer du väljer, de resulterande sekvenser
 
 Det finns många andra pussel, mönster och applikationer relaterade till Fibonacci-nummer. Här är några exempel som du kan prova själv:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 __1. Fibonacci delbarhet__
 
@@ -1389,8 +1383,6 @@ När jag går uppför trappan kan jag antingen ta enstaka steg eller hoppa över
     figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 Hur många alternativ finns det för trappa med 6, 7 eller 8 steg? Kan du upptäcka ett mönster? Och hur är detta relaterat till Fibonacci-siffrorna?
-
-:::
 
 :::
 
@@ -1497,15 +1489,15 @@ För att avgöra om ett tal är [prim](gloss:prime) måste vi hitta alla dess [f
 
 Låt oss jämföra dessa siffror med deras summa av faktorer:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 För de flesta siffror är summan av dess faktorer [[mindre än|greater than|equal to]] själv. Dessa nummer kallas __bristfälliga nummer__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 För några få siffror är summan av dess faktorer större än sig själv. Dessa nummer kallas __rikligt med__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Endast ett nummer i listan ovan har en summa av faktorer som är _lika_ till sig själv: [[6]]. Detta kallas ett [__perfekt nummer__](gloss:perfect-numbers).
 
@@ -1660,11 +1652,9 @@ Du har nu sett otaliga olika matematiska sekvenser - några baserade på geometr
 
 I denna frågesport kan du kombinera all din kunskap om sekvenser. Det finns bara ett mål: hitta mönstret och beräkna de kommande två termerna!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1693,8 +1683,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} Mönster: +1, +2, ÷ 2, +1, +2,
 {.text-center.s-green} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Mönster: Udda kvadratiska nummer_
-
-:::
 
 :::
 

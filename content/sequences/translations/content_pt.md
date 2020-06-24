@@ -471,17 +471,17 @@ _{span.n}${geometric(b,r,5)}_, …
 
 {.reveal(when="blank-0 blank-1")} Seqüências geométricas, por outro lado, podem se comportar de maneira completamente diferente com base nos valores de `a` e _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 Se _{span.var-action} `r > 1`_, os termos [[rapidamente aumentarão|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, até o infinito. Os matemáticos dizem que a sequência [__diverge__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 Se _{span.var-action} _r_ estiver entre –1 e 1_, os termos sempre [[se aproximarão de 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Dizemos que a sequência [__converge__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-Se _{span.var-action} `r < -1`_, os termos alternarão entre positivo e negativo, enquanto o seu valor absoluto [[<<<<|inverse|difference]] aumenta.
+Se _{span.var-action} `r < -1`_, os termos alternarão entre positivo e negativo, enquanto o seu [[valor absoluto|inverse|difference]] aumenta.
 
 :::
 
@@ -766,19 +766,15 @@ Os números dos triângulos parecem aparecer em toda parte na matemática e voc�
 ---
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
-
-::: .box-body
+#### Problem Solving
 
 Qual é a soma dos 100 primeiros [números inteiros positivos](gloss:integer)? Em outras palavras, qual é o valor de
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
 Em vez de somar tudo manualmente, você pode usar os números do triângulo [<<<<](gloss:triangle-numbers) para ajudá-lo? E a soma dos primeiros 1000 números inteiros positivos?
-
-:::
 
 :::
 
@@ -1276,11 +1272,9 @@ _{span.n}${8×a+13×b}_, …
 
 Existem muitos outros quebra-cabeças, padrões e aplicativos relacionados aos números de Fibonacci. Aqui estão alguns exemplos, que você pode experimentar:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 __1. Divisibilidade de Fibonacci__
 
@@ -1303,8 +1297,6 @@ Ao subir as escadas, posso dar um único passo ou pular dois degraus por vez. Is
     figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 Quantas opções existem para escadas com 6, 7 ou 8 degraus? Você consegue detectar um padrão? E como isso está relacionado aos números de Fibonacci?
-
-:::
 
 :::
 
@@ -1404,15 +1396,15 @@ Para determinar se um número é [primo](gloss:prime), precisamos encontrar todo
 
 Vamos comparar esses números com a soma dos fatores:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 Para a maioria dos números, a soma de seus fatores é [[menor que o próprio|greater than|equal to]]. Esses números são chamados __números deficientes__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 Para alguns números, a soma de seus fatores é maior que ela mesma. Esses números são chamados __números abundantes__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Apenas um número na lista acima tem uma soma dos fatores que _são iguais a_ para si: [[6]]. Isso é chamado de [__número perfeito__](gloss:perfect-numbers).
 
@@ -1550,11 +1542,9 @@ Você já viu inúmeras sequências matemáticas diferentes - algumas baseadas e
 
 Neste questionário, você pode combinar todo o seu conhecimento sobre sequências. Há apenas um objetivo: encontre o padrão e calcule os próximos dois termos!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1584,7 +1574,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} Padrão: +1, +2, ÷2, +1, +2, �
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Padrão: Odd square numbers_
 
-:::
 :::
 
 ---

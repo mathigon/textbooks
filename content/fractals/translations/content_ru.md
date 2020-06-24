@@ -732,15 +732,15 @@ __Клеточный автомат__ - это сетка, состоящая и
 
 Обратите внимание, что получившаяся последовательность может вести себя очень по-разному, в зависимости от начального значения `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Если `x_0 > 1`, последовательность [[расходится|сходится]]: _{span.reveal(when="blank-0")}, она просто продолжает расти до бесконечности._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Если `x_0` находится между –1 и 1, последовательность [[сходится|расходится]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Если `x_0 < -1`, последовательность [[расходится|сходится]].
 

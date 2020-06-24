@@ -44,10 +44,13 @@ function scripts() {
       .pipe(gulp.dest('server/assets/resources'));
 }
 
+const RTL_BLACKLIST = ['background', 'background-color', 'background-image',
+  'background-repeat', 'background-size', 'cursor'];
+
 function stylesheets() {
   return gulp.src(['content/*/*.less', '!content/shared/**'])
       .pipe(less())
-      .pipe(postcss([rtl(), autoprefixer()]))
+      .pipe(postcss([rtl({blacklist: RTL_BLACKLIST}), autoprefixer()]))
       .pipe(rename({extname: '.css'}))
       .pipe(gulp.dest('server/assets/resources'));
 }

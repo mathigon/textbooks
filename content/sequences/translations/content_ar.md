@@ -490,15 +490,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 {.reveal(when="blank-0 blank-1")} من ناحية أخرى ، يمكن أن تتصرف التسلسلات الهندسية بشكل مختلف تمامًا استنادًا إلى قيم `a` و _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 إذا _{span.var-action} `r > 1`_ ، فإن الشروط [[ستزداد بسرعة|تنخفض بسرعة|تقترب إلي الصفر]] _{span.reveal(when="blank-2")}_ حتى اللانهاية. يقول علماء الرياضيات أن التسلسل [تتباعد](gloss:sequence-divergence)
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 إذا كان _{span.var-action} _r_ بين –1 و 1_ ، فستقترب البنود [[دائمًا من 0|ارخفاض إلي الانهاية السلبية|اصغر]] _{span.reveal(when="blank-3")}. نقول أن التسلسل [__يتقارب__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 إذا كانت _{span.var-action} `r < -1`_ ، فستتبادل المصطلحات بين الإيجابية والسلبية ، بينما تصبح [[قيمتها المطلقة|معكوس|فرق]] أكبر.
 
@@ -799,11 +799,9 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
-
-::: .box-body
+#### Problem Solving
 
 ما هو مجموع أول 100 [عدد صحيح](gloss:integer)؟ وبعبارة أخرى ، ما هي قيمة
 
@@ -811,7 +809,6 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 بدلاً من إضافة كل شيء يدويًا ، هل يمكنك استخدام [أرقام المثلثة](gloss:triangle-numbers) لمساعدتك؟ ماذا عن مجموع أول 1000 عدد صحيح موجب؟
 
-:::
 :::
 
 ---
@@ -1329,11 +1326,9 @@ _{.n}[[144]]_, …
 
 هناك العديد من الألغاز والأنماط والتطبيقات الأخرى المتعلقة بأرقام فيبوناتشي. إليك بعض الأمثلة التي يمكنك تجربتها بنفسك:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 __1. انقسام فيبوناتشي__
 
@@ -1356,8 +1351,6 @@ __3. سلالم فيبوناتشي__
     figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 كم عدد الخيارات للدرج مع 6 أو 7 أو 8 خطوات؟ هل يمكنك اكتشاف نمط؟ وكيف يرتبط هذا بأرقام فيبوناتشي؟
-
-:::
 
 :::
 
@@ -1455,15 +1448,16 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 دعنا نقارن هذه الأرقام بمجموع عواملها:
 
-::: column.perfect-box(width=220 parent="padded-thin") بالنسبة لمعظم الأرقام ، يكون مجموع عوامله
-
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
+ 
+ بالنسبة لمعظم الأرقام ، يكون مجموع عوامله
 [[أقل من|أكثر من|يساوي]] نفسها. تسمى هذه الأرقام __أرقام ناقصة__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 بالنسبة لعدد قليل من الأرقام ، يكون مجموع عوامله أكبر من نفسه. تسمى هذه الأرقام __أرقام وفيرة__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 يحتوي رقم واحد فقط في القائمة أعلاه على مجموعة عوامل _تساوي_ نفسها: [[6]]. وهذا ما يسمى [__رقمًا مثاليًا__](gloss:perfect-numbers).
 
@@ -1607,11 +1601,9 @@ _{button.next-step} متابعة_
 
 في هذا الاختبار يمكنك الجمع بين جميع معلوماتك حول التسلسلات. هناك هدف واحد: البحث عن النمط وحساب المصطلحين التاليين!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow(dir="ltr")} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1641,7 +1633,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} نمط: +1, +2, ÷2, +1, +2, ÷
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} نمط: أرقام مربعة فرذية_
 
-:::
 :::
 
 ---

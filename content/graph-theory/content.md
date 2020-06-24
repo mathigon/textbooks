@@ -271,7 +271,7 @@ and try to reveal a pattern:
         div(value="size") Size
         div(value="prime") Prime Numbers
         div(value="eo") Even and Odd
-      .frame-body
+      .box
         p.no-voice(style="margin: 0"): strong These graphs are possible:
         include svg/vertex-orders-1.svg
         p.no-voice(style="margin: 1em 0 0"): strong These graphs are not possible:
@@ -431,7 +431,7 @@ of the village, the different pipes and cables are not allowed to cross.
 Try to connect each of the houses to each of the utility companies below, without any of your lines
 intersecting:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn Clear
 
@@ -477,16 +477,21 @@ theorem_.
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 Planarity
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-        button.btn New Random Graph
+::: .box.f-blue
 
+#### Planarity
+
+    x-solved
+    svg#planarity(viewBox="0 0 720 360")
+
+This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the
+vertices so that none of the edges overlap.
+
+    p.btn-row: button.btn New Random Graph
     // TODO Maybe mention that the restriction to straight line edges in the Planarity puzzle isn't
     // a restriction that matters (Fáry's Theorem).
+
+:::
 
 ---
 > id: euler
@@ -540,7 +545,7 @@ see if Euler’s equation works. Instead we can try to find a simple
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -682,7 +687,6 @@ possible:
         include svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
         // Note that states or countries which only share a corner are allowed to have the same colour.
         // Alaska and Hawaii are isolated from all of the other states and can have any colour.
       .tab
@@ -691,21 +695,18 @@ possible:
         include svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
         include svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
         include svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
 
 ---
 > id: maps-2

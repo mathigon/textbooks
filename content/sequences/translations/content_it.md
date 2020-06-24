@@ -483,15 +483,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 {.reveal(when="blank-0 blank-1")} Le sequenze geometriche, invece, possono comportarsi in modo completamente diverso in base ai valori di `a` e _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 Se _{span.var-action} `r > 1`_, i termini [[aumenteranno rapidamente|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, fino all'infinito. I matematici affermano che la sequenza [__diverge__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 Se _{span.var-action} _r_ è compreso tra -1 e 1_, i termini [[si avvicinano sempre a 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Diciamo che la sequenza [__converge__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 Se _{span.var-action} `r < -1`_, i termini si alterneranno tra positivo e negativo, mentre il loro [[valore assoluto|inverse|difference]] aumenta.
 
@@ -787,19 +787,15 @@ I numeri dei triangoli sembrano spuntare ovunque in matematica e li vedrai di nu
 
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
-
-::: .box-body
+#### Problem Solving
 
 Qual è la somma dei primi 100 interi positivi [<<<<](gloss:integer)? In altre parole, qual è il valore di
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
 Invece di aggiungere manualmente tutto, puoi usare i [numeri del triangolo](gloss:triangle-numbers) per aiutarti? Che dire della somma dei primi 1000 numeri interi positivi?
-
-:::
 
 :::
 
@@ -1317,11 +1313,9 @@ _{span.n}${8×a+13×b}_, …
 
 Esistono molti altri enigmi, schemi e applicazioni relativi ai numeri di Fibonacci. Ecco alcuni esempi, che puoi provare tu stesso:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 __1. Divisibilità di Fibonacci__
 
@@ -1344,8 +1338,6 @@ Quando salgo le scale, posso fare singoli passi o saltare due passi alla volta. 
     figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 Quante scelte ci sono per le scale con 6, 7 o 8 gradini? Riesci a rilevare un modello? E in che modo questo è legato ai numeri di Fibonacci?
-
-:::
 
 :::
 
@@ -1445,15 +1437,15 @@ Per determinare se un numero è [primo](gloss:prime), dobbiamo trovare tutti i s
 
 Confrontiamo questi numeri con la loro somma di fattori:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 Per la maggior parte dei numeri, la somma dei suoi fattori è [[inferiore a|greater than|equal to]] stesso. Questi numeri sono chiamati __numeri carenti__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 Per alcuni numeri, la somma dei suoi fattori è maggiore di se stessa. Questi numeri sono chiamati __numeri abbondanti__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Solo un numero nell&#39;elenco sopra ha una somma di fattori che è _uguale a_ a se stesso: [[6]]. Questo si chiama [__numero perfetto__](gloss:perfect-numbers).
 
@@ -1600,11 +1592,9 @@ Ora hai visto innumerevoli sequenze matematiche diverse, alcune basate su forme 
 
 In questo quiz puoi combinare tutte le tue conoscenze sulle sequenze. C'è solo un obiettivo: trovare lo schema e calcolare i due termini successivi!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1634,7 +1624,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, �
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
-:::
 :::
 
 ---

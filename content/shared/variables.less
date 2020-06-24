@@ -21,11 +21,15 @@
 @light-grey:  #c5c2cc;
 
 @text-dark:   #333;
+@text-normal: #666;
 @text-medium: #999;
 @text-light:  #aaa;
 
 @border-light: #c5c2cc;
-@grey-background: mix(@grey, white, 4%);
+
+@grey-background: mix(@grey, white, 5%);
+@dark-mode: mix(@grey, @dark-grey, 30%);
+@dark-mode-background: mix(@dark-mode, white, 95%);
 
 @bounce: cubic-bezier(.33,1.9,.52,.7);
 

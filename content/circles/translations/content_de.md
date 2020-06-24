@@ -345,14 +345,17 @@ Wenn Pi normal ist, bedeutet das, dass du dir eine _beliebige_ Zahlenkette ausde
 wird irgendwo in den Ziffern von Pi erscheinen. Hier kannst du die erste
 Million Ziffern von Pi durchsuchen - enthalten sie deinen Geburtstag?
 
-    .box
-      .box-title: h3 Eine Million Stellen von Pi
-      .box-body.pi-controls
-        | Suche nach einer Zahlenkette:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### Eine Million Stellen von Pi
+
+    .pi-controls
+      | Suche nach einer Zahlenkette:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -1968,13 +1971,13 @@ Bereiche.
 Hier siehst du einige verschiedene Arten von Karten, die als __Projektionen__ bezeichnet werden. Versuche, das rote Feld zu verschieben
 und beobachte, wie dieser Bereich auf einer Kugel _tatsächlich_ aussieht:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Zylindrisch
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide")  Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline

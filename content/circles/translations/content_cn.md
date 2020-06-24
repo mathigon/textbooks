@@ -287,14 +287,17 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于_
 
 如果圆周率是一个常数，意味着你随便想一个数字串，它将出现在某个数位里面。下面你可以在圆周率的前1百万位搜索——是否包含你的生日？
 
-    .box
-      .box-title: h3 圆周率的前1百万位
-      .box-body.pi-controls
-        | 搜索一个数字串：
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### 圆周率的前1百万位
+
+    .pi-controls
+      | 搜索一个数字串：
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -1665,13 +1668,13 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 这里你可以看到不同形式的地图，称为__投影__。试着移动红色的正方形，你可以观察到这个区域在地球仪上的_实际_样子：
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") 墨卡托投影
         .projection(data-name="cylindrical") 圆柱投影
         .projection(data-name="robinson") 罗宾森投影
         .projection(data-name="mollweide") 摩尔威德投影
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline

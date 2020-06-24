@@ -296,14 +296,17 @@ Burada Pi'nin ilk 100 basamağını görebilirsiniz. Basamakların nasıl bir da
 
 Eğer Pi normal ise, bu şu demek: aklınıza gelen _herhangi_ bir sayı Pi’nin basamaklarının arasında bir yerde olacaktır. Burada Pi’nin ilk bir milyon basamağında arama yapabilirsiniz. Sizin doğum gününüz Pi’nin basamaklarında var mı?
 
-    .box
-      .box-title: h3 Pi’nin Bir Milyon Basamağı
-      .box-body.pi-controls
-        | Bir sayı dizisi arayabilirsiniz:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### Pi’nin Bir Milyon Basamağı
+
+    .pi-controls
+      | Bir sayı dizisi arayabilirsiniz:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -1714,13 +1717,13 @@ Bu özellikle harita yapanlar için bir problem. Dünyanın eğri, 3 boyutlu bir
 
 Burada __izdüşümler__ denilen bir kaç değişik çeşit harita görüyorsunuz. Kırmızı kareyi oynatarak bu alanın kürede _gerçekte_ nasıl göründüğüne bakın:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Silindirik
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline

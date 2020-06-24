@@ -493,15 +493,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 {.reveal(when="blank-0 blank-1")} Geometrijski nizovi, s druge strane, mogu se ponašati potpuno drugačije na osnovu vrijednosti `a` i _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 Ako se _{span.var-action} `r > 1`_, uvjeti [[brzo povećavaju|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, sve do beskonačnosti. Matematičari kažu da se redoslijed [__razlikuje__](gloss:sequence-divergence)_
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 Ako je _{span.var-action} _r_ između -1 i 1_, uvjeti će se uvijek [[približiti 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Kažemo da niz [__konvergira__](gloss:sequence-convergence)_
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 Ako se _{span.var-action} `r < -1`_ izrazi izmjenjuju između pozitivnih i negativnih, dok njihova [[apsolutna vrijednost|inverse|difference]] postaje veća.
 
@@ -802,19 +802,15 @@ Nažalost, rekurzivna formula nije od velike pomoći ako želimo pronaći stoti 
 
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
-
-::: .box-body
+#### Problem Solving
 
 Koliki je zbroj prvih 100 pozitivnih [celih brojeva](gloss:integer)? Drugim riječima, u čemu je vrijednost
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
 Umjesto da ručno dodajete sve, možete li vam pomoći [brojevi trokuta](gloss:triangle-numbers)? Što je sa zbrojem prvih 1000 pozitivnih brojeva?
-
-:::
 
 :::
 
@@ -1330,11 +1326,9 @@ Ispada da, bez obzira na dva početna broja koja odaberete, rezultirajući nizov
 
 Postoje mnoge druge zagonetke, obrasci i aplikacije povezane s Fibonaccijevim brojevima. Evo nekoliko primjera koje možete i sami isprobati:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 {1 1463}. Fibonacijeva podjela__
 
@@ -1358,7 +1352,6 @@ Kad hodam stubama, mogu napraviti pojedinačne korake ili preskočiti dvije kora
 
 Koliko ima izbora za stubište sa 6, 7 ili 8 stepenica? Možete li otkriti uzorak? I kako je to povezano s Fibonaccijevim brojevima?
 
-:::
 :::
 
     figure
@@ -1454,15 +1447,15 @@ Da bismo utvrdili da li je broj [<<<<](gloss:prime), moramo pronaći sve njegove
 
 Usporedimo ove brojeve s njihovim zbrojem faktora:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 Za većinu brojeva, zbroj njegovih faktora je [[manji od samog|greater than|equal to]]. Ti se brojevi nazivaju __manjkavi brojevi__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 Za nekoliko brojeva, zbroj njegovih faktora je veći od njega samog. Ti se brojevi nazivaju __obilni brojevi__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Samo jedan broj na gornjem popisu ima zbroj faktora koji je _jednak_ sebi: [[6]]. To se zove [__savršen broj__](gloss:perfect-numbers).
 
@@ -1606,11 +1599,9 @@ Sada ste vidjeli bezbroj različitih matematičkih nizova - neki temeljeni na ge
 
 U ovom kvizu možete kombinirati sve svoje znanje o nastavcima. Postoji samo jedan cilj: pronaći uzorak i izračunati sljedeća dva pojma!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1640,7 +1631,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, �
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
-:::
 :::
 
 ---
