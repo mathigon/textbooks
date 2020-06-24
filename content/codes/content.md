@@ -482,7 +482,7 @@ If we want to use each combination of ups and downs to represent a different num
           td
             div= i
           td
-            div= 2 ** i
+            div.md [[#{2**i}]]
         - i+=1
 
 
@@ -556,7 +556,7 @@ Recalling our lesson on [probability trees](link/to/course), with each finger th
         while i < 16
           - yHorizontal = 15+i*20
           - yToMid = i%2 == 0 ? 10 : -10
-          - cl = i==9 ? "yes" : "no"
+          - cl = i==11 ? "yes" : "no"
           line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal target=cl)
           line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal target=cl)
           text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=16 target=cl)= i%2
@@ -568,7 +568,7 @@ Recalling our lesson on [probability trees](link/to/course), with each finger th
         while i < 32
           - yHorizontal = 10+i*10
           - yToMid = i%2 == 0 ? 5 : -5
-          - cl = i==18 ? "yes" : "no"
+          - cl = i==22 ? "yes" : "no"
           line(x1=xMin  y1=yHorizontal         x2=xMax  y2=yHorizontal target=cl)
           line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin  y2=yHorizontal target=cl)
           text(x=(xMin+xMax)/2 y=yHorizontal-1 font-size=12 target=cl)= i%2
@@ -588,6 +588,9 @@ We can represent any five-digit binary number by following any path from beginni
 
 Yes, there are [[32]] different combinations we can make with five fingers.
 
+    x-select.segmented
+      div Decimal
+      div Binary
     table.finger-grid   
       for b0 in [0, 1]
         for b1 in [0, 1]
@@ -605,6 +608,7 @@ Yes, there are [[32]] different combinations we can make with five fingers.
 
     button.appear APPEAR
     button.switch SWITCH
+    // delete these buttons. Replace APPEAR w/ .reveal, SWITCH w/ .segmented
 
 
 {.TODO PHILIPP how to make them appear after entering value into blank?}

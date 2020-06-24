@@ -352,13 +352,8 @@ select {
   font-size: large;
 }
 
-.bracket g text&.focus {
-  background: @red;
-  color: white;
-  opacity: 0.1;
-}
-
-.bracket g line&.focus {
+.focus .bracket g text:not(.focus),
+.focus .bracket g line:not(.focus) {
   opacity: 0.1;
 }
 
