@@ -245,6 +245,9 @@ x-coordinate-system + .caption { margin-top: -1em; }
   path { stroke: @dark-grey; stroke-width: 2px; fill: none; }
   polygon { fill: @dark-grey; }
 
+  .dark-mode & path { stroke: white; }
+  .dark-mode & polygon { fill: white; }
+
   img.rabbit { position: absolute; width: 10%; height: auto; }
   .n { position: absolute; right: 0; margin: 0; z-index: 1; margin-top: 13px; }
 }
@@ -316,6 +319,7 @@ x-coordinate-system + .caption { margin-top: -1em; }
   margin: 1.5em auto;
   position: relative;
   user-select: none;
+  .dark-mode & { color: @dark-grey; }
 
   .r {
     display: flex;

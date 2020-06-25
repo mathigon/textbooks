@@ -15,6 +15,7 @@
 .similar-circles {
   background: @grey-background;
   border-radius: 4px;
+  .dark-mode & { background: @dark-mode-background; }
 
   .handle:not(.fixed) { cursor: move; transition: r .2s; fill: @red; }
   .handle:not(.fixed):hover { r: 20 }

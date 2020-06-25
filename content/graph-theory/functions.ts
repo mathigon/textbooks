@@ -13,7 +13,7 @@ import {Edge, edgeToSegment, Graph} from './components/graph';
 import {Sketch} from './components/sketch';
 import {borders} from './components/four-colour-maps';
 import {travellingSalesman} from './components/geometry';
-import {RED, BLUE, GREEN, YELLOW, ORANGE} from '../shared/constants';
+import {RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, TEAL} from '../shared/constants';
 
 
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';
@@ -308,7 +308,6 @@ export function bridges3($section: Step) {
 
   $section.model.watch((s: any) => {
     $section.score(s.colour);
-    console.log(s.colour);
     for (const $c of $circles) {
       const y = +$c.attr('data-value');
       $c.css('fill', '' + colours[s.colour][y - 2]);  // -2 because no 0s and 1s
@@ -721,8 +720,7 @@ export function euler4($step: Step) {
 }
 
 export function maps1($section: Step) {
-  const colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', '#662D91',
-    '#F15A24', '#29ABE2'];
+  const colours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, TEAL];
   const $colours = $section.$$('.four-colour-icon');
   $colours[0].addClass('on');
   let activeColour = 0;

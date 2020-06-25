@@ -6,7 +6,7 @@
 
 import {Color, delay, list, Obj, repeat, wait} from '@mathigon/core';
 import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
-import {$N, CanvasView, SVGView} from '@mathigon/boost';
+import {$html, $N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
 import {BLUE} from '../shared/constants';
@@ -401,7 +401,7 @@ export function julia($step: Step) {
   const origin = $geopad.toViewportCoords(new Point(0, 0)).scale(2);
   $canvases[0].draw(new Circle(origin, $geopad.plotScale * 2), {fill: BLUE});
 
-  $canvases[1].fill('#fff');
+  $canvases[1].fill($html.hasClass('dark-mode') ? '#22212e' : '#fff');
   $step.model.watch((s: any) => {
     const c = $geopad.toViewportCoords(s.x0).scale(2);
     $canvases[1].clearCircle(c, 25);
@@ -451,7 +451,7 @@ export function mandelPaint($step: Step) {
   $step.model.assign({iterate, spiral, complex});
   $step.model.setComputed('converges', (s: any) => converges(s.x0, s.c));
 
-  $canvas.fill('#fff');
+  $canvas.fill($html.hasClass('dark-mode') ? '#22212e' : '#fff');
   $step.model.watch((s: any) => {
     const c = $geopad.toViewportCoords(s.c).scale(2);
     $canvas.clearCircle(c, 25);
