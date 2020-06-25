@@ -392,6 +392,7 @@ _Cytosine_ if placed within a strand of DNA letters.
 > section: binary
 > id: transistor
 > goals: switch
+> sectionStatus: dev
 
 Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many people, when they scroll through their social media feed, or search for a recipe, or stream a movie, actually know how the magic little box actually works?
 
