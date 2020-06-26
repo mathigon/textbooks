@@ -252,7 +252,7 @@ Proprio come per le mappe della città prima, scopriamo che alcuni grafici sono 
         div(value="size") Size
         div(value="prime") Prime Numbers
         div(value="eo") Even and Odd
-      .frame-body
+      .box
         p(style="margin: 0"): strong These graphs are possible:
         include svg/vertex-orders-1.svg
         p(style="margin: 1em 0 0"): strong These graphs are not possible:
@@ -366,7 +366,7 @@ Ecco un altro enigma relativo alla teoria dei grafi. In un piccolo villaggio ci 
 
 Prova a collegare ciascuna delle case a ciascuna delle società di servizi sottostanti, senza che nessuna delle tue linee si intersechi:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn Clear
 
@@ -404,13 +404,18 @@ Il [grafico completo](gloss:complete-graph) `K_5` è il grafico più piccolo che
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 Planarity
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-        button.btn New Random Graph
+::: .box.f-blue
+
+#### Planarity
+
+    x-solved
+    svg#planarity.frame(viewBox="0 0 640 320")
+
+This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
+
+    p.btn-row: button.btn New Random Graph
+
+:::
 
 ---
 > id: euler
@@ -449,7 +454,7 @@ Quando si confrontano questi numeri, noterai che il numero di bordi è sempre [[
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -565,28 +570,24 @@ Quando si colora la mappa degli Stati USA, 50 colori sono ovviamente sufficienti
         include svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
         include svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
         include svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
         include svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
 
 ---
 > id: maps-2

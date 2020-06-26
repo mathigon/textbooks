@@ -728,15 +728,15 @@ Sierpinski त्रिकोण के कई प्रकार हैं, औ
 
 ध्यान दें कि परिणामी अनुक्रम कैसे अलग तरह से व्यवहार कर सकता है, जो शुरुआती मूल्य `x_0` पर निर्भर करता है:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 यदि `x_0 > 1`, अनुक्रम [[का विचलन|converges]]: _{span.reveal(when="blank-0")} तो यह अनंत तक बढ़ता रहता है,_।
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 यदि `x_0` -1 और 1 के बीच है, तो अनुक्रम [[<<<<|diverges]] में परिवर्तित हो जाता है।
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 यदि `x_0 < -1`, अनुक्रम [[<<<<|converges]] को विचलन करता है।
 

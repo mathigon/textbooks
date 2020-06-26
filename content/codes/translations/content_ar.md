@@ -134,7 +134,7 @@
 
 كان رمز مورس أيضًا ما استخدمه الجيش الكولومبي لإرسال رسالة إلى الرهائن. كانت الرسالة المترجمة من الإسبانية هي _19 شخصًا تم إنقاذهم. انت التالي. لا تستسلم._ استمع إلى الأغنية مرة أخرى ، وتحقق مما إذا كان بإمكانك سماع النقاط والشرطات في الخلفية:
 
-    figure: x-img(src="images/radio.png" width=225 height=220 style="margin-top: -24px")(dir='ltr')
+    figure: x-img(src="images/radio.png" width=225 height=220 style="margin-top: -24px" dir='ltr')
       button.radio-play
     x-gesture(target=".radio-play")
     // TODO Show actual morse code while playing

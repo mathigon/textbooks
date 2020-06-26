@@ -152,14 +152,6 @@ figure .row x-img { margin: 8px; }
   &.s-green .bubble-arrow { border-top-color: @green; }
 }
 
-.ag-limit-box {
-  text-align: center;
-  padding: 16px 12px;
-  border-radius: 6px;
-  background: mix(@blue, white, 10%);
-  box-sizing: border-box;
-}
-
 .ag-equation { max-width: 220px;  margin: 0 auto .5em; }
 
 .money-grid td {
@@ -224,16 +216,6 @@ x-coordinate-system + .caption { margin-top: -1em; }
   .c.small { .circled(22px); font-size: 15px; background: @orange; margin: 2px; }
 }
 
-.perfect-box {
-  text-align: center;
-  padding: 16px 12px;
-  border-radius: 6px;
-  background: mix(@red, white, 10%);
-  box-sizing: border-box;
-  &:nth-child(2) { background: mix(@blue, white, 10%); }
-  &:nth-child(3) { background: mix(@green, white, 10%); }
-}
-
 .perfect-list { max-width: 660px; margin: 0 auto 1em; }
 
 .hailstone-slider {
@@ -262,6 +244,9 @@ x-coordinate-system + .caption { margin-top: -1em; }
   line { stroke: @light-grey; stroke-width: 2px; }
   path { stroke: @dark-grey; stroke-width: 2px; fill: none; }
   polygon { fill: @dark-grey; }
+
+  .dark-mode & path { stroke: white; }
+  .dark-mode & polygon { fill: white; }
 
   img.rabbit { position: absolute; width: 10%; height: auto; }
   .n { position: absolute; right: 0; margin: 0; z-index: 1; margin-top: 13px; }
@@ -334,6 +319,7 @@ x-coordinate-system + .caption { margin-top: -1em; }
   margin: 1.5em auto;
   position: relative;
   user-select: none;
+  .dark-mode & { color: @dark-grey; }
 
   .r {
     display: flex;

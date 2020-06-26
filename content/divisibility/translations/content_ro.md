@@ -62,18 +62,21 @@ de __{.green}7__ și putem scrie __{.green}7__|__{.orange}21__.
 În acest scurt joc trebuie să determini cât de repede posibil care numere sunt divizori și care multipli. 
 Apasă [butonul play](->#divisibility-game_.toggle) pentru a începe.
 
-    .box.problem-box
-      .box-title: h3 Chestionar Divizori și Multipli
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | este un
-          .factor-value
-            .factor-bubble: .btn.btn-blue divizor
-            .factor-bubble: .btn.btn-blue multiplu
-            .factor-bubble: .btn.btn-blue niciunul
-          | al lui
-          .factor-number ${y}
+::: .box.f-blue.no-padding
+#### Chestionar Divizori și Multipli
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | este un
+        .factor-value
+          .factor-bubble: .btn.btn-blue divizor
+          .factor-bubble: .btn.btn-blue multiplu
+          .factor-bubble: .btn.btn-blue niciunul
+        | al lui
+        .factor-number ${y}
+
+:::
 
 ---
 > id: factors

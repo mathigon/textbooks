@@ -58,18 +58,20 @@ __{.green}7__|__{.orange}21__.
 
 在下面这个简短的游戏中你必须尽可能快的确定哪些数字是 因子或倍数。点击 [播放按钮](->#divisibility-game_.toggle) 开始游戏。
 
-    .box.problem-box
-      .box-title: h3 因子和倍数测试
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          |是
-          .factor-number ${y}
-          .factor-value
-            .factor-bubble: .btn.btn-blue 因子
-            .factor-bubble: .btn.btn-blue 倍数
-            .factor-bubble: .btn.btn-blue 都不是
-          |
+::: .box.f-blue.no-padding
+#### 因子和倍数测试
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | 是
+        .factor-number ${y}
+        .factor-value
+          .factor-bubble: .btn.btn-blue 因子
+          .factor-bubble: .btn.btn-blue 倍数
+          .factor-bubble: .btn.btn-blue 都不是
+
+:::
 
 ---
 > id: factors

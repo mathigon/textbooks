@@ -975,7 +975,7 @@ Yo, banana [[boy]]!
 
 اتضح أنه ، في حين أن هناك العديد من الأنماط الممكنة بشكل لا نهائي ، إلا أنها تحتوي جميعها على واحدة من 17 مجموعة تماثل مختلفة. تسمى هذه __مجموعات ورق الحائط__. يتم تعريف كل مجموعة ورق حائط من خلال مجموعة من الترجمات والتناوب والانعكاسات وانعكاسات الانزلاق. هل يمكنك مشاهدة [مراكز الدوران](gloss:center-of-rotation) و [محاور الانعكاس](gloss:axis-of-symmetry) في هذه الأمثلة؟
 
-    x-gallery(slide-width="320")(dir="ltr")
+    x-gallery(slide-width="320" dir="ltr")
       div
         img(src="images/wallpapers/p1.svg" width=360, height=240)
         p.caption <strong>Type P1</strong><br>إنتقالات فقط

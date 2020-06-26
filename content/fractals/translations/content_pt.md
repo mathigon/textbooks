@@ -730,15 +730,15 @@ Vamos usar a fórmula recursiva `§x_n = x_(n-1)^2` como exemplo e plotar seus t
 
 Observe como a sequência resultante pode se comportar de maneira muito diferente, dependendo do valor inicial `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Se `x_0 > 1`, a sequência [[diverge|converge]]: _{span.reveal(when="blank-0")} continua crescendo, até o infinito._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0` estiver entre –1 e 1, a sequência [[converge|diverge]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0 < -1`, a sequência [[diverge|converge]].
 

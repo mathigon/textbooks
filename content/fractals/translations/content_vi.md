@@ -727,15 +727,15 @@ Ví dụ, hãy lấy công thức đệ quy `§x_n = x_(n-1)^2` và vẽ các th
 
 Lưu ý cách chuỗi kết quả có thể hành xử rất khác nhau, tùy thuộc vào giá trị bắt đầu `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Nếu `x_0 > 1`, chuỗi [[phân kỳ|converges]]:|converges]] {span.reveal(when="blank-0")}, nó sẽ tiếp tục phát triển, lên đến vô cùng._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Nếu `x_0` nằm giữa dòng1 và 1, chuỗi [[hội tụ|diverges]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Nếu `x_0 < -1`, chuỗi [[phân kỳ|converges]].
 

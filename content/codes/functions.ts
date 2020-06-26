@@ -5,14 +5,16 @@
 
 
 import {delay, wait} from '@mathigon/core';
+import {Point} from '@mathigon/fermat';
 import {$N, ElementView, slide, InputView, SVGView, loadScript} from '@mathigon/boost';
 import {Step, Slider, Slideshow} from '../shared/types';
 
-import {beep, Beep} from './components/beep';
-import {CodeBox} from './components/code-box';
-import {MORSE_CODE} from './components/utilities';
+import {beep, Beep} from './components/beep'
+import {CodeBox} from './components/code-box'
+import {MORSE_CODE} from './components/utilities'
 
 import './components/code-box';
+import './components/barcode';
 import './components/enigma';
 import './components/morse';
 
@@ -111,6 +113,70 @@ export function radio($step: Step) {
 // Binary Numbers
 
 /**
+ * Animating a transistor
+ */
+export function transistor($section: Step) {
+
+  const $pathOn = $section.$('#path_on') as SVGView;
+  const $pathOff = $section.$('#path_off') as SVGView;
+  const $electrons = $section.$$('#electron') as SVGView[];
+  const $switch = $section.$('.transist')!;
+  let switchOn = false;
+
+  let electronPositions: number[];
+  const UPDATE_PERIOD = 100;
+
+  function move() {
+    if (!switchOn) return;
+    electronPositions = electronPositions.map(p => {
+        let pp = p + 0.02;
+        if (pp >= 1) pp = (pp - 1);
+        return pp;
+    })
+
+    $electrons.forEach((e, i) => {
+        const xy = $pathOn.getPointAt(electronPositions[i]);
+        const xyShift = new Point(xy.x - 12, xy.y - 12);
+        e.setTransform(xyShift);
+    });
+
+    setTimeout(move, UPDATE_PERIOD);
+}
+
+  function turnOn() {
+      // show all
+      $electrons.forEach((e) => e.show());
+      const totalLength = $pathOn.strokeLength;
+      const gap = totalLength / $electrons.length; // gap between electrons
+      // need way to scale this from linear to non-linear and back
+      electronPositions = $electrons.map((e, i) => (i * gap) / totalLength); // each electron has a position
+
+      setTimeout(move, UPDATE_PERIOD);
+  }
+
+  function turnOff() {
+      // NEXT: e[0:3] move to pathOff.pointAt(0.2, 0.4, 0.6, 0.8);
+      // hide them
+      $electrons.forEach((e, i) => {
+          if (i > 3) {
+              e.hide();
+          } else {
+              const xy = $pathOff.getPointAt([0.11, 0.37, 0.63, 0.89][i]); // one of four points
+              const xyShift = new Point(xy.x - 12, xy.y - 12);
+              e.setTransform(xyShift);
+          }
+      });
+  }
+
+  $switch.on('click', () => {
+    $section.score('switch');
+    switchOn = !switchOn;
+    if (switchOn) turnOn();
+    else turnOff();
+});
+}
+
+/**
  *
  * @param $grid the grid to put them into
  * @param time delay until the start of the animation, in ms
@@ -142,39 +208,42 @@ export function bracket($step: Step) {
 
   const $slider = $step.$('x-slider.bracket') as Slider;
   const $rounds = $step.$$('g');
+  // [b1, b2, b4, b8, b16, b32]
+  // [ 0,  1,  2,  3,   4,   5]
   const count = $rounds.length;
 
   function move(x: number) {
     const direction = x - lastStep;
     lastStep = x;
 
-    for (let i = 0; i < x; i++) {
-      $rounds[count - 1 - i].show();
-    }
-    for (let i = x + 1; i < count; i++) {
-      $rounds[count - 1 - i].hide();
-    }
-
-    if (x == 0) return;
-    if (direction > 0) {
-      const $lines = $rounds[count - x].$$('line');
-      $lines.forEach((l, i) => {
-        if (i % 2 == 0) {
-          l.animate({
-            transform: [
-              `translate(-50px, 0px) scale(0.0, 1.0)`,
-              `translate(0px, 0px) scale(1.0, 1.0)`
-            ]
-          }, 400, 100);
+        for (let i=0; i < x; i++) {
+            $rounds[i].show();
         }
-      });
-    } else {
-      // TODO
-    }
-  }
+        for (let i = x + 1; i < count; i++) {
+            $rounds[i].hide();
+        }
 
-  $slider.on('move', move);
-  move(lastStep);
+        if (direction < 0 && x == 0) {
+            $rounds[0].hide();
+        }
+
+        if (x == 0) return;
+        if (direction > 0) {
+            let $lines = $rounds[x-1].$$('line');
+            $lines.forEach((l, i) => {
+                if (i % 2 == 0) {
+                    l.animate({
+                        transform: [
+                            `translate(-50px, 0px) scale(0.0, 1.0)`,
+                            `translate(0px, 0px) scale(1.0, 1.0)`
+                    ]}, 400, 100);
+                }
+            });
+        }
+    }
+
+    $slider.on('move', move);
+    move(-1);
 }
 
 
@@ -276,6 +345,14 @@ export function dec2bin($section: Step) {
    * @param endDigit the index of the ending digit
    */
   function moveBlockBetweenDigits(startDigit: number, endDigit: number) {
+
+    function getClawStart(index: number) {
+      return basex + BLOCK_X_POSITIONS[index];
+    }
+
+    function getClawEnd(index: number) {
+      return basex + BLOCK_X_POSITIONS[index] + digits[index] * 10;
+    }
     // left to right
     if (startDigit < endDigit) {
       const startX = startDigit < 0 ? BLOCK_X_START :
@@ -298,14 +375,6 @@ export function dec2bin($section: Step) {
               `translate(${endX}px, ${BLOCK_Y}px)`]
           },
           DURATION2, DURATION1);
-    }
-
-    function getClawStart(index: number) {
-      return basex + BLOCK_X_POSITIONS[index];
-    }
-
-    function getClawEnd(index: number) {
-      return basex + BLOCK_X_POSITIONS[index] + digits[index] * 10;
     }
   }
 
@@ -495,7 +564,7 @@ export function dec2bin($section: Step) {
 
 
 export function finger5($section: Step) {
-  const $fingers = $section.$$('.fingy');
+  const $fingers = $section.$$('.bin-finger');
   $fingers.forEach($f => $f.hide());
 
   // fade: opacity [0, 100]
@@ -507,7 +576,9 @@ export function finger5($section: Step) {
   // reveal: like fade, but elements below slide down
   // reveal-left/right: each element slides in from the left/right
   let i = 0;
-  const delay = 1000;
+  let delay = 300;
+
+  // FINGERZ: replace button with goal completion
   $section.$('.appear')?.on('click', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
@@ -516,14 +587,29 @@ export function finger5($section: Step) {
 }
 
 export function finger32($section: Step) {
-  const $fingers = $section.$$('.fingy');
+  const $fingers = $section.$$('.bin-finger');
   $fingers.forEach($f => $f.hide());
 
+  const $decCaptions = $section.$$('.dec');
+  const $binCaptions = $section.$$('.bin');
+
+  $binCaptions.forEach($f => $f.hide());
+
   let i = 0;
-  const delay = 500;
+  let delay = 200;
   $section.$('.appear')?.on('click', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
+
+  let showingBin = false;
+
+  // switch between binary and decimal display
+  $section.$('.switch')?.on('click', () => {
+    (showingBin ? $binCaptions : $decCaptions).forEach($f => $f.hide());
+    (showingBin ? $decCaptions : $binCaptions).forEach($f => $f.show());
+
+    showingBin = !showingBin;
+  })
 }
 
 // BINPATTERN: how to re-render with a drop down? (see Graph Theory?)
@@ -568,15 +654,18 @@ export function binaryTable($section: Step) {
 }
 
 export function binarySimulation($step: Step) {
-
-  console.log($step);
-  // NEXT NEXT NEXT let's get some code in here... make it display a random number
-
-
   const buttons = $step.$$('.btn');
   buttons[0].on('click', () => {
     $step.score('advance');
   });
 }
 
+export function resolution($step: Step) {
+  const $codeBox = $step.$('x-code-box') as CodeBox;
 
+  $codeBox.encode((char: string, $el: ElementView) => {
+    for (const x of MORSE_CODE[char.toLowerCase()].split('')) {
+      $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
+    }
+  });
+}

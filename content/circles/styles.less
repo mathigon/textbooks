@@ -15,6 +15,7 @@
 .similar-circles {
   background: @grey-background;
   border-radius: 4px;
+  .dark-mode & { background: @dark-mode-background; }
 
   .handle:not(.fixed) { cursor: move; transition: r .2s; fill: @red; }
   .handle:not(.fixed):hover { r: 20 }
@@ -80,17 +81,19 @@
   .pi-cell { color: white; margin: 20px 3px 0 3px; }
 }
 
+.pi-box { padding: 0; }
 .pi-controls {
   margin-bottom: 1px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding: 12px 20px 11px;
+  border-bottom: 1px solid white;
   .clearfix();
   input { background: white; padding: 4px 8px; margin: -4px 0 -4px 8px; border-radius: 4px; width: 120px; }
   .pi-warning { color: @red; font-style: italic; float: right; }
 }
 
-x-pi-scroll.box-body {
+x-pi-scroll {
   height: 300px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -257,20 +260,12 @@ x-geopad.sketch {
 }
 
 .sphere-maps {
-  margin: 1.5rem 0;
-  @media screen and (max-width: @browser-small) { margin: 1.5em -24px; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-  .map-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background: @grey-background;
-    border-radius: 6px;
-    padding-top: 18px;
-  }
-
-  .left { width: 240px; margin: 12px; }
+.left { width: 240px; margin: 12px; }
   .right { width: 400px; flex-grow: 1; margin: 12px; }
   svg { width: 100%; }
   .right svg { touch-action: none; }

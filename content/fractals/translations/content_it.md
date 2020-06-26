@@ -730,15 +730,15 @@ Prendiamo la formula ricorsiva `§x_n = x_(n-1)^2` come esempio, e tracciamo i s
 
 Notare come la sequenza risultante può comportarsi in modo molto diverso, a seconda del valore iniziale `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Se `x_0 > 1`, la sequenza [[diverge|converge]]: _{span.reveal(when="blank-0")} continua a crescere, fino all'infinito._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0` è compreso tra -1 e 1, la sequenza [[converge|diverge]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0 < -1`, la sequenza [[differisce|converges]].
 

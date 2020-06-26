@@ -219,16 +219,17 @@ Sur papier, imaginez quelques graphes différents, puis essayez de déterminer l
 
 Tout comme pour les cartes de villes précédentes, nous constatons que certains graphes sont possibles, d'autres non. Pour nous aider à comprendre pourquoi, étiquetons chaque sommet avec son [degré](gloss:graph-degree):
 
-    .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong Ces graphes sont possibles :
-      include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong Ces graphes ne sont pas possibles :
-      include svg/vertex-orders-2.svg
-      p: select
-        option(value="val", selected) Colorier par valeur
-        option(value="size") Colorier par petit et grand
-        option(value="prime") Colorier par primalité
-        option(value="eo") Colorier par parité
+    figure
+      x-select.var.tabs(:bind="colour")
+        div(value="val") Valeur
+        div(value="size") Petit et grand
+        div(value="prime") Primalité
+        div(value="eo") Parité
+      .box
+        p(style="margin: 0"): strong Ces graphes sont possibles :
+        include svg/vertex-orders-1.svg
+        p(style="margin: 1em 0 0"): strong Ces graphes ne sont pas possibles :
+        include svg/vertex-orders-2.svg
 
 ---
 
@@ -361,7 +362,7 @@ Dans un petit village, il existe trois centrales produisant de l’eau, de l’�
 
 Essayez de connecter chacune des plantes ci-dessous à chacune des maisons, sans qu’une de vos lignes ne se croise:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn Clear
 
@@ -400,20 +401,23 @@ Le [graphe complet](gloss:complete-graph) `K_5` est le plus petit graphe non pla
 Le graphique du puzzle des trois utilitaires est le [graphique bipartite](gloss:bipartite-graph) `K_"3,3"`. Il s'avère que tout graphe non planaire doit contenir une [sous-division](gloss:subdivision) `K_5` ou `K_"3,3"` ou sous forme de sous-graphe.
 
 ---
-
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 Planarité
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md C'est un graphe planaire, mais les ${n}{n|7|5,20,1} sommets ont été brouillés. Réorganisez les sommets de manière à ce qu'aucun des bords ne se chevauche.
-        button.btn New Random Graph
+::: .box.f-blue
+
+#### Planarité
+
+    x-solved
+    svg#planarity.frame(viewBox="0 0 640 320")
+
+C'est un graphe planaire, mais les ${n}{n|7|5,20,1} sommets ont été brouillés. Réorganisez les sommets de manière à ce qu'aucun des bords ne se chevauche.
+
+    p.btn-row: button.btn New Random Graph
+
+:::
 
 ---
-
 > id: euler
 
 ### Formule d'Euler
@@ -464,7 +468,7 @@ Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas v�
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -597,28 +601,24 @@ Lorsque vous colorez la carte des États américains, 50 couleurs suffisent évi
         include svg/colours-1.svg
         .colour-count Nombre de couleurs: #[span 0]
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Amérique du sud #[span.check(when="map-1")]
         x-solved
         include svg/colours-2.svg
         .colour-count Nombre de couleurs: #[span 0]
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Allemagne #[span.check(when="map-2")]
         x-solved
         include svg/colours-3.svg
         .colour-count Nombre de couleurs: #[span 0]
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Angleterre #[span.check(when="map-3")]
         x-solved
         include svg/colours-4.svg
         .colour-count Nombre de couleurs: #[span 0]
         button.btn.clear Recommencer
-        button.btn.solve Solution
 
 ---
 

@@ -326,15 +326,20 @@ genauer.
 In dieser Animation kannst du viele "virtuelle" Würfel auf einmal werfen und sehen, wie die
 Ergebnisse im Vergleich zu den vorhergesagten Wahrscheinlichkeiten ausfallen:
 
-    .box
-      .box-title: h3 Würfeln
-      .box-body
-        .probTable.var(:html="probTable(d)")
-        p.md Wir werfen ${d}{d|2|1,6,1} Würfel auf einmal und notieren die #[span.dice(style="width: auto; padding: 0 4px;") SUMME] ihrer Augenzahlen. Die #[strong.m-green grünen Linien] stellen die Wahrscheinlichkeiten jedes möglichen Ergebnisses dar, wie es durch die Wahrscheinlichkeitstheorie vorhergesagt wird, und die #[strong.m-blue blauen Balken] zeigen, wie oft jedes Ergebnis in diesem computergenerierten Experiment aufgetreten ist.
-        p.btn-row.no-voice
-          button.btn Einmal werfen
-          button.btn 100 mal werfen
-          button.btn 1000 mal werfen
+::: .box.f-red
+
+#### Würfeln
+
+    .probTable.var(:html="probTable(d)")
+
+Wir werfen ${d}{d|2|1,6,1} Würfel auf einmal und notieren die _{span.dice(style="width: auto; padding: 0 4px;")} SUMME_ ihrer Augenzahlen. Die __{.m-green} grünen Linien__ stellen die Wahrscheinlichkeiten jedes möglichen Ergebnisses dar, wie es durch die Wahrscheinlichkeitstheorie vorhergesagt wird, und die __{.m-blue} blauen Balken__ zeigen, wie oft jedes Ergebnis in diesem computergenerierten Experiment aufgetreten ist.
+
+    p.btn-row.no-voice
+      button.btn Einmal werfen
+      button.btn 100 mal werfen
+      button.btn 1000 mal werfen
+
+:::
 
 {.reveal(when="roll")} Beachte, wie die beobachteten
 Häufigkeiten mit zunehmende Würfen immer näher an die Häufigkeiten herankommen, die wir mit Hilfe der
