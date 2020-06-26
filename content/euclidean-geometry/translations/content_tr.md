@@ -549,7 +549,7 @@ Efsaneye göre bir zamanlar bir Antik Yunan şehri olan Dilos, korkunç bir hast
 {.caption} Delfi’deki tapınağın bir modeli
 :::
 
-Şunu unutmamalıyız ki _hacmi ikiye katlamak_ _bir kübün kenarını ikiye katlamakla_ aynı şey değildir. Aslında eğer [[2 boyutlu|1 boyutlu|3 boyutlu]] hacim 2 kat artarsa, kübün [[2 boyutlu|1 boyutlu|3 boyutlu]] kenarı `root(3)(2)` kadar artacaktır.
+Şunu unutmamalıyız ki _hacmi ikiye katlamak_ _bir kübün kenarını ikiye katlamakla_ aynı şey değildir. Aslında eğer [[2 boyutlu|1 boyutlu|3 boyutlu]] hacim 2 kat artarsa, kübün [[2 boyutlu|1 boyutlu|3 boyutlu]] kenarı `root(2,3)` kadar artacaktır.
 
 ---
 > id: impossible-1

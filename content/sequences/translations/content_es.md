@@ -36,7 +36,6 @@ Los banqueros también observan datos históricos de precios de acciones, tasas 
 Los matemáticos profesionales usan algoritmos altamente complejos para encontrar y analizar todos estos patrones, pero vamos a comenzar con algo un poco más básico.
 
 ---
-
 > id: simple-patterns
 
 ### Secuencias simples
@@ -70,7 +69,6 @@ _{.n}[[64]]*{span.arrow(hidden)}×2*_, …
 _{span.pattern.reveal(when="blank-6 blank-7")} Patrón: "Multiplica el número anterior por 2, para obtener el siguiente"._
 
 ---
-
 > id: simple-patterns-1
 
 Los puntos (…) al final simplemente significan que la secuencia puede continuar para siempre. Cuando nos referimos a secuencias como esta en matemáticas, a menudo representamos cada término mediante una [variable especial](gloss:variable):
@@ -92,7 +90,6 @@ El pequeño número después del _x_ se llama un __subíndice__, e indica la pos
     // might go on forever!
 
 ---
-
 > id: triangles
 
 ### Triángulos y números cuadrados
@@ -138,7 +135,6 @@ Las secuencias en matemáticas no siempre tienen que ser números. Aquí hay una
 :::
 
 ---
-
 > id: triangle-1
 
 En cada paso, estamos agregando una fila más al triángulo anterior. La longitud de estas nuevas filas también aumenta en uno cada vez. ¿Puedes ver el patrón?
@@ -150,7 +146,6 @@ _{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
 _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ---
-
 > id: recursive
 
 También podemos describir este patrón usando una [fórmula especial](gloss:formula):
@@ -165,14 +160,12 @@ También podemos describir este patrón usando una [fórmula especial](gloss:for
 Para obtener el número de triángulo _n_, tomamos el número de triángulo [[anterior|first|next]] y agregamos _n_. Por ejemplo, si _n_ = ${n}{n|5|2,20,1}, la fórmula se convierte en <msub><mi>x</mi><mn>${n}</mn></msub> = <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
 
 ---
-
 > id: recursive-1
 
 
 Una fórmula que expresa `x_n` en función de términos anteriores en la secuencia se llama [__fórmula recursiva__](gloss:sequence-recursive). Mientras conozca el [[primer término|last term|second term]] de la secuencia, puede calcular todos los siguientes.
 
 ---
-
 > id: squares
 
     hr
@@ -218,7 +211,6 @@ Otra secuencia que consiste en formas geométricas son los __números cuadrados_
 :::
 
 ---
-
 > id: square-1
 
 Para los números de triángulo, encontramos una fórmula recursiva que le indica el _siguiente_ término de la secuencia en función de sus _términos_ anteriores. Para los números cuadrados podemos hacerlo aún mejor: una ecuación que le indica el _n_ término directamente, sin tener que calcular primero todos los anteriores:
@@ -226,13 +218,11 @@ Para los números de triángulo, encontramos una fórmula recursiva que le indic
 {.text-center.s-purple} _{.n} `x_n`_ = _{x-equation(solution="n^2")}_
 
 ---
-
 > id: explicit
 
 Las ecuaciones como esta se denominan [__fórmulas explícitas__](gloss:sequence-explicit). Podemos usarlo, por ejemplo, para calcular que el 13º número cuadrado es [[169]], sin encontrar primero los 12 números cuadrados anteriores.
 
 ---
-
 > id: definitions
 
     hr
@@ -250,7 +240,6 @@ Una [__fórmula explícita__](gloss:sequence-explicit) para una secuencia le dic
 :::
 
 ---
-
 > id: action-sequence
 
 ### Fotografía de secuencia de acción
@@ -264,7 +253,6 @@ Primero, sin embargo, veamos algo completamente diferente: __fotografía de secu
 ¿Puedes ver cómo el esquiador forma una secuencia? El patrón no es suma ni multiplicación, sino una [transformación geométrica](gloss:rigid-transformation). Entre los pasos consecutivos, el esquiador se traduce y [[gira|reflected|dilated]].
 
 ---
-
 > id: action-sequence-1
 
 Aquí hay algunos ejemplos más de fotografía de secuencia de acción para su disfrute:
@@ -316,7 +304,6 @@ Halley recordó que otros astrónomos habían observado cometas similares mucho 
 :::
 
 ---
-
 > id: halley-1
 
 Halley concluyó que las tres observaciones eran en realidad el mismo cometa, que ahora se llama _cometa Halley_. Está orbitando alrededor del sol y pasa la Tierra aproximadamente cada 76 años. También predijo cuándo sería visible el cometa a continuación:
@@ -327,7 +314,6 @@ _{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
 _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
 ---
-
 > id: halley-2
 
 En realidad, el intervalo de tiempo no siempre es _exactamente_ 76 años: puede variar en uno o dos años, ya que la órbita del cometa es interrumpida por otros planetas. ¡Hoy sabemos que los antiguos astrónomos observaron el cometa Halley desde el año 240 antes de Cristo!
@@ -341,7 +327,6 @@ En realidad, el intervalo de tiempo no siempre es _exactamente_ 76 años: puede 
       p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
-
 > id: ball
 
 Un grupo diferente de científicos está investigando el comportamiento de una pelota de tenis que rebota. Dejaron caer la pelota desde una altura de 10 metros y midieron su posición con el tiempo. Con cada rebote, la pelota pierde algo de su altura original:
@@ -352,7 +337,6 @@ Un grupo diferente de científicos está investigando el comportamiento de una p
     x-slider(steps=400 speed=0.5)
 
 ---
-
 > id: ball-1
 > goals: reveals
 
@@ -367,7 +351,6 @@ _{span.n.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
 _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ---
-
 > id: arithmetic-geometric
 
 ### Definiciones
@@ -375,7 +358,6 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 Si compara ambos problemas, puede notar que hay muchas similitudes: la secuencia del cometa Halley tiene la misma [[diferencia|ratio|product]] entre términos consecutivos, mientras que la secuencia de rebotes de pelotas de tenis tiene la misma proporción [[76]] entre términos consecutivos.
 
 ---
-
 > id: arithmetic-geometric-1
 
 Las secuencias con estas propiedades tienen un nombre especial:
@@ -407,7 +389,6 @@ Cada término se multiplica o se divide por el mismo número, para producir el s
 :::
 
 ---
-
 > id: arithmetic-geometric-select
 
 Aquí hay algunas secuencias diferentes. ¿Puede determinar cuáles son aritméticas, geométricas o ninguna, y cuáles son los valores de _{.b.m-red} d_ y _{.b.m-green} r_?
@@ -455,7 +436,6 @@ es [[geométrico|arithmetic|neither]] _{span.reveal(when="blank-7")}, con una re
 :::
 
 ---
-
 > id: arithmetic-geometric-graph
 
 Para definir una secuencia aritmética o geométrica, debemos conocer no solo la diferencia o relación común, sino también el valor inicial (llamado `a`). Aquí puede generar sus propias secuencias y trazar sus valores en un gráfico, cambiando los valores de `a`, _d_ y _r_. ¿Puedes encontrar algún patrón?
@@ -514,7 +494,6 @@ Si _{span.var-action} `r < -1`_, los términos alternarán entre positivo y nega
 {.reveal(when="blank-4 blank-5")} Aprenderá más sobre convergencia y divergencia en la [última sección](/course/sequences/convergence) de este curso.
 
 ---
-
 > id: arithmetic-geometric-recursive
 
 ### Fórmulas recursivas y explícitas
@@ -532,7 +511,6 @@ En la sección anterior, aprendiste que una [__fórmula recursiva__](gloss:seque
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit
 
 Un problema con las fórmulas recursivas es que para encontrar el término número 100, por ejemplo, primero tenemos que calcular los 99 términos anteriores, y eso puede llevar mucho tiempo. En cambio, podemos intentar encontrar una [__fórmula explícita__](gloss:sequence-explicit), que nos diga el valor del término _n_ directamente.
@@ -577,7 +555,6 @@ Para __{.m-green} secuencias geométricas__, tenemos que multiplicar _r_ en cada
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit-1
 
 Aquí hay un resumen de todas las definiciones y fórmulas que ha visto hasta ahora:
@@ -611,7 +588,6 @@ Una secuencia geométrica __{.m-green}__ tiene el primer término `a` y una rela
 ¡Ahora echemos un vistazo a algunos ejemplos en los que podemos usar todo esto!
 
 ---
-
 > id: pay-it-forward
 > goals: video
 
@@ -624,7 +600,6 @@ Aquí hay un breve clip de la película _Pay it Forward_, donde Trevor, de 12 a�
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
-
 > id: pay-it-forward-1
 
 La esencia de la idea de Trevor es que, si todos "lo pagan", una sola persona puede tener un gran impacto en el mundo:
@@ -639,7 +614,6 @@ _{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
 _{span.n}[[243]]*{span.arrow}×3*_, …
 
 ---
-
 > id: pay-it-forward-2
 
 Usando la [fórmula explícita](gloss:sequence-explicit) para secuencias geométricas, podemos calcular cuántas personas nuevas se ven afectadas en cualquier paso:
@@ -647,7 +621,6 @@ Usando la [fórmula explícita](gloss:sequence-explicit) para secuencias geomét
 {.text-center} `x_n` = _{x-equation(solution="3^(n-1)")}_
 
 ---
-
 > id: pay-it-forward-3
 
 El número de personas aumenta increíblemente rápido. En el décimo paso, alcanzarías 19,683 nuevos, y después de 22 pasos habrías llegado a más personas que las que actualmente están vivas en la Tierra.
@@ -657,7 +630,6 @@ Esta secuencia de números tiene un nombre especial: las potencias __de 3__. Com
 {.text-center.s-orange} _{span.n} `3^0`_, _{span.n} `3^1`_, _{span.n} `3^2`_, _{span.n} {996 }_, _{span.n} `3^4`_, _{span.n} `3^5`_, …
 
 ---
-
 > id: millionaire
 
 ### ​​¿Quién quiere ser millonario?
@@ -665,7 +637,6 @@ Esta secuencia de números tiene un nombre especial: las potencias __de 3__. Com
 {.todo} ¡MUY PRONTO!
 
 ---
-
 > id: chessboard
 
 ### El problema del tablero de ajedrez
@@ -684,7 +655,6 @@ El nombre de [secuencias geométricas](gloss:geometric-sequence) es bastante con
 Sin embargo, hay muchas otras secuencias que _son_ basadas en ciertas formas geométricas, algunas de las cuales ya viste en la [introducción](/course/sequences/introduction). Estas secuencias a menudo se denominan [__números figurados__](gloss:figurate-numbers), y en esta sección veremos más de cerca algunas de ellas.
 
 ---
-
 > id: triangle-numbers
 
 ### Números triangulares
@@ -732,7 +702,6 @@ Los __números de triángulo__ se generan creando triángulos de tamaño progres
 Ya has visto la fórmula recursiva para los números de triángulo: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
 
 ---
-
 > id: billiard-pool
 
 No es casualidad que siempre haya 10 pines cuando juegues al boliche o 15 bolas cuando juegues al billar: ¡ambos son números triangulares!
@@ -748,7 +717,6 @@ No es casualidad que siempre haya 10 pines cuando juegues al boliche o 15 bolas 
 :::
 
 ---
-
 > id: triangle-proof
 
 Desafortunadamente, la fórmula recursiva no es muy útil si queremos encontrar el número de triángulo número 100 o 5000, sin calcular primero todos los números anteriores. Pero, como hicimos con las secuencias aritméticas y geométricas, podemos intentar encontrar una fórmula explícita para los números triangulares.
@@ -777,7 +745,6 @@ Desafortunadamente, la fórmula recursiva no es muy útil si queremos encontrar 
     // :::
 
 ---
-
 > id: triangle-sums
 
 Los números de triángulos parecen aparecer en todas partes en matemáticas, y los verá nuevamente a lo largo de este curso. Un hecho particularmente interesante es que _cualquier_ número entero se puede escribir como la suma de como máximo tres números triangulares:
@@ -825,7 +792,6 @@ Los números de triángulos parecen aparecer en todas partes en matemáticas, y 
 {.reveal(when="slide")} El hecho de que esto funcione para _todos_ números enteros fue probado por primera vez en 1796 por el matemático alemán [Carl Friedrich Gauss](bio:gauss) - ¡a la edad de 19 años!
 
 ---
-
 > id: triangle-investigate
 
 ::: .box.f-blue
@@ -841,7 +807,6 @@ En lugar de sumar todo manualmente, ¿puedes usar los [números de triángulo](g
 :::
 
 ---
-
 > id: square-numbers
 
 ### Números cuadrados y poligonales
@@ -860,7 +825,6 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Puedes calcular los números en esta secuencia al cuadrar cada número entero (`1^2`, `2^2`, `3^2`, …), pero resulta que hay otro patrón: las diferencias entre los números cuadrados consecutivos son ¡[[números impares|triangle numbers|integers]] en orden creciente!
 
 ---
-
 > id: square-numbers-1
 
 ::: column.grow
@@ -879,13 +843,11 @@ La razón de este patrón se hace evidente si realmente dibujamos un cuadrado. C
 :::
 
 ---
-
 > id: square-numbers-2
 
 Además, cada número cuadrado también es la suma de dos números de triángulo [consecutivos](gloss:triangle-numbers). Por ejemplo, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. ¿Puedes ver cómo podemos dividir cada cuadrado a lo largo de su diagonal, en dos triángulos?
 
 ---
-
 > id: polygon-numbers
 
 ::: column(width=300)
@@ -905,7 +867,6 @@ Por ejemplo, si usamos polígonos con ${k}{k|5|3,10,1} lados, obtenemos la secue
 :::
 
 ---
-
 > id: tetrahedral
 
 ### Números tetraédricos y cúbicos
@@ -945,7 +906,6 @@ Por supuesto, tampoco tenemos que limitarnos a formas y patrones bidimensionales
 :::
 
 ---
-
 > id: tetrahedral-1
 
 Los matemáticos a menudo llaman a estas pirámides [__tetraedros__](gloss:tetrahedron), y la secuencia resultante [__números tetraédricos__](gloss:tetrahedral-numbers).
@@ -1035,13 +995,11 @@ Imagine que ha recibido un par de conejos, un macho y una hembra. Son conejos mu
       .legend(slot="legend") En el sexto mes, hay tres parejas más que dan a luz: la original, así como sus dos primeras parejas o hijos.
 
 ---
-
 > id: rabbits-1
 
 {.r} En el mes siguiente tendrías 13 pares de conejos: los 8 del mes anterior, más 5 nuevos grupos de bebés. ¿Puedes detectar un patrón en esta secuencia? _{button.next-step} Continuar_
 
 ---
-
 > id: rabbits-2
 
 El número de conejos en un mes en particular es [[la suma de los dos números anteriores|twice the previous number]]. _{span.reveal(when="blank-0")} En otras palabras, debe agregar los *dos términos* anteriores en la secuencia, para obtener el siguiente. La secuencia comienza con dos 1s, y la [fórmula recursiva](gloss:sequence-recursive) es_
@@ -1050,7 +1008,6 @@ El número de conejos en un mes en particular es [[la suma de los dos números a
 *{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
 
 ---
-
 > id: rabbits-3
 
 ¿Puedes calcular la cantidad de conejos después de unos meses más?
@@ -1063,7 +1020,6 @@ El número de conejos en un mes en particular es [[la suma de los dos números a
       x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
-
 > id: fibonacci
 
 Esta secuencia de números se llama [__Secuencia de Fibonacci__](gloss:fibonacci-numbers), llamada así por el matemático italiano [Leonardo Fibonacci](bio:fibonacci).
@@ -1089,7 +1045,6 @@ En una de las páginas de su libro, también investigó los patrones de reproduc
       p.caption Páginas de #[em Liber Abaci] de Fibonacci
 
 ---
-
 > id: spirals
 
 Por supuesto, los números de Fibonacci no son cómo pueblan los conejos _en realidad_ en la vida real. Los conejos no tienen exactamente una descendencia macho y una hembra cada mes, y no hemos tenido en cuenta que los conejos mueran eventualmente.
@@ -1123,7 +1078,6 @@ Pero resulta que hay muchos otros lugares en la naturaleza donde aparecen los _n
 :::
 
 ---
-
 > id: spirals-1
 
 En ambos casos, los números de espirales son números consecutivos de Fibonacci. Lo mismo es cierto para muchas otras plantas: la próxima vez que salga, cuente la cantidad de pétalos en una flor o la cantidad de hojas en un tallo. ¡Muy a menudo encontrarás que son números de Fibonacci!
@@ -1131,7 +1085,6 @@ En ambos casos, los números de espirales son números consecutivos de Fibonacci
 Por supuesto, esto no es solo una coincidencia. Hay una razón importante por la que a la naturaleza le gusta la secuencia de Fibonacci, de la que aprenderá más adelante.
 
 ---
-
 > id: bees
 
 ::: column(width=320)
@@ -1158,7 +1111,6 @@ Esto significa que las abejas hembras tienen [[dos padres|one parent]], mientras
 :::
 
 ---
-
 > id: golden-spiral
 
 ### La proporción áurea
@@ -1175,7 +1127,6 @@ Al igual que el [triángulo](gloss:triangle-numbers) y [números cuadrados](glos
       .legend(slot="legend") Es posible que haya notado que, a medida que los rectángulos se hacen más grandes, parecen comenzar a "girar en espiral" hacia afuera. Incluso podemos visualizar esto dibujando una espiral perfecta que conecte las esquinas de los cuadrados.
 
 ---
-
 > id: golden-ratio
 
 En cada paso, los cuadrados forman un rectángulo más grande. Su ancho y alto son siempre dos números consecutivos de Fibonacci. La __relación de aspecto__ del rectángulo es la relación de su ancho y su altura:
@@ -1219,7 +1170,6 @@ En cada paso, los cuadrados forman un rectángulo más grande. Su ancho y alto s
 :::
 
 ---
-
 > id: golden-ratio-1
 > goals: img-0 img-1
 
@@ -1249,7 +1199,6 @@ Mucha gente cree que la proporción áurea es particularmente agradable estétic
 :::
 
 ---
-
 > id: golden-ratio-2
 
 Podemos aproximar la proporción áurea entre [[dividiendo|adding|subtracting]] dos números consecutivos de Fibonacci.
@@ -1257,7 +1206,6 @@ Podemos aproximar la proporción áurea entre [[dividiendo|adding|subtracting]] 
 {.reveal(when="blank-0")} Sin embargo, resulta que el valor exacto de `φ` no puede escribirse como una fracción simple: es un [__número irracional__](gloss:irrational-numbers), al igual que [`π`](gloss:pi) y `sqrt(2)` y algunos otros números que has visto antes.
 
 ---
-
 > id: sunflower-growing
 
 ### Espirales de Fibonacci
@@ -1285,7 +1233,6 @@ Mueva el control deslizante hacia la derecha para visualizar cómo crece una pla
 :::
 
 ---
-
 > id: sunflower-spiral
 
 Es importante que las flores escojan un ángulo adecuado: las hojas o semillas deben estar aproximadamente a la misma distancia para que obtengan la mayor cantidad de luz solar y nutrientes. En el diagrama a continuación, puede explorar cómo se vería un girasol con diferentes ángulos entre sus semillas:
@@ -1316,7 +1263,6 @@ Es importante que las flores escojan un ángulo adecuado: las hojas o semillas d
     x-gesture(target=".fib-action")
 
 ---
-
 > id: sunflower-spiral-1
 
 ::: column(width=240)
@@ -1334,7 +1280,6 @@ Las plantas y los animales siempre quieren crecer de la manera más eficiente, y
 :::
 
 ---
-
 > id: lucas-numbers
 
 ### Fibonachos
@@ -1353,7 +1298,6 @@ _{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_,
 _{span.n}${8×a+13×b}_, …
 
 ---
-
 > id: fibonacci-puzzles
 
 Existen muchos otros acertijos, patrones y aplicaciones relacionados con los números de Fibonacci. Aquí hay algunos ejemplos, que puede probar usted mismo:
@@ -1400,7 +1344,6 @@ Al subir las escaleras, puedo dar pasos individuales o saltar dos pasos a la vez
 Además de [aritmética](gloss:arithmetic-sequence) y [secuencias geométricas](gloss:geometric-sequence), [números de Fibonacci](gloss:fibonacci-numbers) y [números figurados](gloss:figurate-numbers), hay innumerables secuencias interesantes que no siguen una secuencia similar , patron regular.
 
 ---
-
 > id: primes
 
 
@@ -1409,7 +1352,6 @@ Además de [aritmética](gloss:arithmetic-sequence) y [secuencias geométricas](
 Un ejemplo que ya has visto antes son los [__números primos__](gloss:prime). Decimos que un número es _primo_ si no tiene [factores](gloss:factor) [[distintos de 1 y en sí mismo|other than 1 and 2|and no multiples]].
 
 ---
-
 > id: primes-1
 
 Aquí están los primeros números primos:
@@ -1417,7 +1359,6 @@ Aquí están los primeros números primos:
 {.text-center.s-teal} _{.n} 2_, _{.n} 3_, _{.n} 5_, _{.n} 7_, _{.n} 11_, _{.n} [[13]]_, _{.n} [[17]]_, _{.n} [[19]]_, …
 
 ---
-
 > id: primes-2
 > goals: p2 p3 p5 p7
 
@@ -1447,7 +1388,6 @@ Los números primos tampoco tienen una representación geométrica simple como [
 :::
 
 ---
-
 > id: primes-3
 
 Puede obtener más información sobre estas y otras propiedades de los números primos en nuestro curso sobre [Divisibilidad y primos](/course/divisibility/primes). ¡Son algunos de los conceptos más importantes y misteriosos de las matemáticas!
@@ -1455,7 +1395,6 @@ Puede obtener más información sobre estas y otras propiedades de los números 
     figure: img(src="images/primes.svg" width=480 height=156) 
 
 ---
-
 > id: perfect
 
 ### Números perfectos
@@ -1483,7 +1422,6 @@ Para determinar si un número es [primo](gloss:prime), tenemos que encontrar tod
             td= total(factors(i))
 
 ---
-
 > id: perfect-1
 
 Comparemos estos números con su suma de factores:
@@ -1503,7 +1441,6 @@ Solo un número en la lista anterior tiene una suma de factores que es _igual_ a
 :::
 
 ---
-
 > id: perfect-2
 
 El siguiente número perfecto es 28, porque si sumamos todos sus factores obtenemos `1 + 2 + 4 + 7 + 14 = 28`. Después de eso, los números perfectos se vuelven mucho más raros:
@@ -1513,7 +1450,6 @@ El siguiente número perfecto es 28, porque si sumamos todos sus factores obtene
 Tenga en cuenta que todos estos números son [[incluso|multiples of 3|2 more than a square number]]. _{span.reveal(when="blank-0")} ¡Resulta que también son todos números de triángulo!_
 
 ---
-
 > id: perfect-3
 
 ::: column.grow
@@ -1531,7 +1467,6 @@ Hoy, los matemáticos han usado computadoras para verificar los primeros 10 núm
 :::
 
 ---
-
 > id: hailstone
 
 ### La secuencia de granizo
@@ -1558,7 +1493,6 @@ _{.n}[[2]]*{span.arrow.reveal(when="blank-5")}÷2*_,
 _{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 
 ---
-
 > id: hailstone-1
 
 Parece que después de algunos términos, la secuencia alcanza un "ciclo": 4, 2, 1 continuará repitiéndose una y otra vez, para siempre.
@@ -1570,7 +1504,6 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 *{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
 
 ---
-
 > id: hailstone-2
 
 
@@ -1582,7 +1515,6 @@ Parece que la longitud de la secuencia varía mucho, pero siempre terminará en 
 {.reveal(when="var-0")} Observe cómo algunos puntos de partida terminan muy rápidamente, mientras que otros (como _{span.var-action} 31_ o _{span.var-action} 47_) toman más de un centenar de pasos antes de llegar al 4, 2, 1 ciclo.
 
 ---
-
 > id: hailstone-3
 
 ::: column.grow
@@ -1602,7 +1534,6 @@ Sin embargo, hay infinitos enteros. Es imposible verificar cada uno de ellos, y 
 Al igual que la búsqueda de números perfectos impares, este sigue siendo un problema abierto en matemáticas. ¡Es sorprendente que estos patrones simples para secuencias puedan conducir a preguntas que han desconcertado incluso a los mejores matemáticos del mundo durante siglos!
 
 ---
-
 > id: look-and-say
 
 ### La secuencia de mirar y decir
@@ -1614,7 +1545,6 @@ Aquí hay una secuencia más que es un poco diferente de todas las que has visto
 _{button.next-step} Continuar_
 
 ---
-
 > id: look-and-say-1
 
 Esta secuencia se llama secuencia __Look-and-Say__, y el patrón es exactamente lo que dice el nombre: comienzas con un 1, y cada término siguiente es lo que obtienes si “lees en voz alta” el el anterior. Aquí hay un ejemplo:
@@ -1626,19 +1556,16 @@ Esta secuencia se llama secuencia __Look-and-Say__, y el patrón es exactamente 
 {.text-center.s-lime.s-vertical}…, _{.n} 312211_, _{.n} [[13112221]]_, _{.n} [[1113213211]]_, …
 
 ---
-
 > id: look-and-say-2
 
 Esta secuencia se usa a menudo como un rompecabezas para hacer tropezar a los matemáticos, porque el patrón parece ser completamente no matemático. Sin embargo, resulta que la secuencia tiene muchas propiedades interesantes. Por ejemplo, cada término termina en [[1]], y nunca se usa ningún dígito mayor que [[3]].
 
 ---
-
 > id: look-and-say-3
 
 El matemático británico [John Conway](bio:conway) descubrió que, sin importar el número que elija como valor inicial, la secuencia eventualmente se dividirá en distintas "secciones" que ya no interactúan entre sí. Conway llamó a esto el _Teorema cosmológico_, y nombró las diferentes secciones utilizando los elementos químicos _Hidrógeno_, _Helio_, _Litio_, …, hasta _Plutonio_.
 
 ---
-
 > id: quiz
 
 ### El cuestionario de secuencia
@@ -1707,13 +1634,11 @@ A continuación puede ver una pirámide numérica que se crea usando un patrón 
         - i += 1;
 
 ---
-
 > id: pascal-intro-1
 
 Este diagrama solo muestra las primeras doce filas, pero podríamos continuar para siempre, agregando nuevas filas en la parte inferior. Observe que el triángulo es [[simétrico|right-angled|equilateral]], lo que puede ayudarlo a calcular algunas de las celdas.
 
 ---
-
 > id: pascal-triangle
 
 El triángulo se llama [__El triángulo de Pascal__](gloss:pascals-triangle), llamado así por el matemático francés [Blaise Pascal](bio:pascal). Fue uno de los primeros matemáticos europeos en investigar sus patrones y propiedades, pero fue conocido por otras civilizaciones muchos siglos antes:
@@ -1743,7 +1668,6 @@ El triángulo de Pascal se puede crear usando un patrón muy simple, pero está 
 _{button.next-step} Continuar_
 
 ---
-
 > id: pascal-sequences
 
 ### Buscando secuencias
@@ -1815,7 +1739,6 @@ El diagrama anterior resalta las diagonales "superficiales" en diferentes colore
 :::
 
 ---
-
 > id: pascal-sequences-1
 
 Por supuesto, cada uno de estos patrones tiene una razón matemática que explica por qué aparece. ¡Quizás puedas encontrar algunos de ellos!
@@ -1823,7 +1746,6 @@ Por supuesto, cada uno de estos patrones tiene una razón matemática que explic
 Otra pregunta que puede hacer es con qué frecuencia aparece un número en el triángulo de Pascal. Claramente, hay infinitos 1s, uno 2, y todos los demás números aparecen [[al menos dos veces|at least once|exactly twice]], _{span.reveal(when="blank-0")} en la segunda diagonal a cada lado._
 
 ---
-
 > id: pascal-sequences-2
 
 Algunos números en el medio del triángulo también aparecen tres o cuatro veces. Incluso hay algunas que aparecen seis veces: puede ver tanto [120](->.s120) como [3003](->.s3003) cuatro veces en el triángulo de arriba, y aparecerán dos veces más cada una en las filas 120 y 3003 .
@@ -1833,7 +1755,6 @@ Como 3003 es un número de triángulo, en realidad aparece dos veces más en las
 Se desconoce si hay otros números que aparecen ocho veces en el triángulo, o si hay números que aparecen más de ocho veces. El matemático estadounidense [David Singmaster](bio:singmaster) planteó la hipótesis de que hay un límite fijo sobre la frecuencia con la que los números pueden aparecer en el triángulo de Pascal, pero aún no se ha demostrado.
 
 ---
-
 > id: modular
 > goals: select
 
@@ -1858,7 +1779,6 @@ Algunos patrones en el triángulo de Pascal no son tan fáciles de detectar. En 
 {.reveal(when="select")} Parece que el número par en el triángulo de Pascal forma otro triángulo [[más pequeño|matrix|square]].
 
 ---
-
 > id: modular-1
 > goals: c2 c3 c4 c5
 
@@ -1887,7 +1807,6 @@ Colorear cada celda manualmente lleva mucho tiempo, pero aquí puede ver qué su
         button.btn.btn-yellow(data-value="5") Divisible por 5
 
 ---
-
 > id: modular-2
 
 ::: column.grow
@@ -1905,7 +1824,6 @@ Si continuamos el patrón de celdas divisibles por 2, obtenemos uno que es muy s
 :::
 
 ---
-
 > id: pascal-binomial
 
 ### Coeficientes binomiales
