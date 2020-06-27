@@ -1631,6 +1631,12 @@ tangent:
   # the same slop as the slope of the curve at that point.
   # A line tangent to a circle is perpendicular to the radius at that point.
 
+telegraph:
+  title: Telegraph
+  text: | 
+    A __telegraph__ is system for transmitting messages across long distances,
+    by sending electric signals along wires.
+  
 term:
   title: Term (Algebra)
   text: |
