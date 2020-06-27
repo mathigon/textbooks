@@ -13,7 +13,7 @@
 
 ::: column(width=400)
 
-في العقد الماضي ، بدأت __أقسام الشرطة__ حول العالم في الاعتماد بشكل أكبر على الرياضيات. يمكن أن تستخدم الخوارزميات الخاصة بيانات الجرائم السابقة للتنبؤ بموعد ومكان وقوع الجرائم في المستقبل. على سبيل المثال ، ساعد نظام _PredPol_ (وهو اختصار لـ "الشرطة التنبؤية") على تقليل معدل الجريمة في أجزاء من لوس أنجلوس بنسبة 12٪!
+في العقد الماضي ، بدأت __أقسام الشرطة__ حول العالم في الاعتماد بشكل أكبر على الرياضيات. يمكن أن تستخدم الخوارزميات الخاصة بيانات الجرائم السابقة للتنبؤ بموعد ومكان وقوع الجرائم في المستقبل. على سبيل المثال ، ساعد نظام _PredPol_ (وهو اختصار لـ "الشرطة التنبؤية") على تقليل معدل الجريمة في أجزاء من لوس أنجلوس بنسبة %12!
 
 ::: column(width=160)
 
@@ -36,65 +36,58 @@
 يستخدم علماء الرياضيات المحترفون خوارزميات معقدة للغاية للعثور على جميع هذه الأنماط وتحليلها ، لكننا سنبدأ بشيء أكثر بساطة.
 
 ---
-
 > id: simple-patterns
 
 ### تسلسلات بسيطة
 
-في الرياضيات ، يعد تسلسل [__<<<<__](gloss:sequence) سلسلة من الأرقام (أو كائنات أخرى) تتبع عادة نمطًا معينًا. العناصر الفردية في تسلسل تسمى [__مصطلحات__](gloss:sequence-term).
+في الرياضيات ، يعد تسلسل [__تسلسل__](gloss:sequence) سلسلة من الأرقام (أو كائنات أخرى) تتبع عادة نمطًا معينًا. العناصر الفردية في تسلسل تسمى [__مصطلحات__](gloss:sequence-term).
 
 فيما يلي بعض الأمثلة عن التسلسلات. هل يمكنك العثور على أنماطهم وحساب المصطلحين التاليين؟
 
-{.text-center.s-orange.with-arrows} _{.n}3_, _{.n}6*{span.arrow}+3*_,
+{.text-center.s-orange.with-arrows(dir="ltr")} _{.n}3_, _{.n}6*{span.arrow}*_,
 _{.n}9*{span.arrow(hidden)}+3*_, _{.n}12*{span.arrow(hidden)}+3*_,
 _{.n}15*{span.arrow(hidden)}+3*_, _{.n}[[18]]*{span.arrow(hidden)}+3*_
 _{.n}[[21]]*{span.arrow(hidden)}+3*_, …
-_{span.pattern.reveal(when="blank-0 blank-1")}Pattern: “Add 3 to the previous
-number to get the next one.”_
+_{span.pattern.reveal(when="blank-0 blank-1")} نمط: أضف 3 إلي الرقم السابق للحصول علي الرقم التالي_
 
-{.text-center.s-teal.with-arrows} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
+{.text-center.s-teal.with-arrows(dir="ltr")} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
 _{.n}16*{span.arrow(hidden)}+6*_, _{.n}22*{span.arrow(hidden)}+6*_,
 _{.n}28*{span.arrow(hidden)}+6*_, _{.n}[[34]]*{span.arrow(hidden)}+6*_,
 _{.n}[[40]]*{span.arrow(hidden)}+6*_, …
-_{span.pattern.reveal(when="blank-2 blank-3")} Pattern: “Add 6 to the previous
-number to get the next one.”_
+_{span.pattern.reveal(when="blank-2 blank-3")} نمط: أضف 6 إلي الرقم السابق للحصول علي الرقم التالي_
 
-{.text-center.s-purple.with-arrows} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
+{.text-center.s-purple.with-arrows(dir="ltr")} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
 _{.n}7*{span.arrow(hidden)}+3*_, _{.n}8*{span.arrow(hidden)}+1*_,
 _{.n}11*{span.arrow(hidden)}+3*_, _{.n}[[12]]*{span.arrow(hidden)}+1*_,
 _{.n}[[15]]*{span.arrow(hidden)}+3*_, …
-_{span.pattern.reveal(when="blank-4 blank-5")} Pattern: “Alternatingly add 1 and
-add 3 to the previous number, to get the next one.”_
+_{span.pattern.reveal(when="blank-4 blank-5")} نمط: بالتناوب أضف 1 و أضف 3 إليالرقم السابق للحصول على الرقم التالي_
 
-{.text-center.s-lime.with-arrows} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
+{.text-center.s-lime.with-arrows(dir="ltr")} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
 _{.n}4*{span.arrow(hidden)}×2*_, _{.n}8*{span.arrow(hidden)}×2*_,
 _{.n}16*{span.arrow(hidden)}×2*_, _{.n}[[32]]*{span.arrow(hidden)}×2*_,
 _{.n}[[64]]*{span.arrow(hidden)}×2*_, …
-_{span.pattern.reveal(when="blank-6 blank-7")} Pattern: “Multiply the previous
-number by 2, to get the next one.”_
+_{span.pattern.reveal(when="blank-6 blank-7")} نمط: أضرب الرقم السابق ب 2 للحصول على الرقم التالي_
 
 ---
-
 > id: simple-patterns-1
 
-النقاط (...) في النهاية تعني ببساطة أن التسلسل يمكن أن يستمر إلى الأبد. عند الإشارة إلى تسلسلات مثل هذه في الرياضيات ، فإننا غالبًا ما نمثل كل مصطلح بمتغير خاص [<<<<](gloss:variable):
+النقاط (...) قي النهايةتعني ببساطة أن التساسل يمكن أن يستمر إلى الأبد. عند الإشارة إلى تسلسلات مثل هذه في الرياضيات، فإننا غالبا ما نمثل كل مصطلح [بمتغير](gloss:variable) جاص:
 
-    p.text-center.s-orange
+    p.text-center.s-orange(dir="ltr")
       for i in [1, 2, 3, 4, 5, 6, 7]
         span.math.n
           msub
             mi x
             mn= i
         | ,&nbsp;
-      | …
+      
 
 يُطلق على الرقم الصغير بعد _x_ اسم __منخفض__ ، ويشير إلى موضع المصطلح في التسلسل. هذا يعني أنه يمكننا تمثيل الحد _n_ في التسلسل بـ [[`x_n`|`x_i`|`x_2`]].
 
 ---
-
 > id: triangles
 
-### أرقام المثلث والمربع
+### أرقام المثلثة و المربعة
 
 لا يجب أن تكون التسلسلات في الرياضيات أرقامًا دائمًا. فيما يلي تسلسل يتكون من أشكال هندسية - مثلثات ذات حجم متزايد:
 
@@ -137,40 +130,36 @@ number by 2, to get the next one.”_
 :::
 
 ---
-
 > id: triangle-1
 
 في كل خطوة ، نقوم بإضافة صف آخر إلى المثلث السابق. كما يزداد طول هذه الصفوف الجديدة بمقدار واحد في كل مرة. هل يمكنك رؤية النمط؟
 
-{.text-center.s-orange.with-arrows} _{.n}1_, _{.n}3*{span.arrow}+2*_,
+{.text-center.s-orange.with-arrows(dir="ltr")} _{.n}1_, _{.n}3*{span.arrow}+2*_,
 _{.n}6*{span.arrow}+3*_, _{.n}10*{span.arrow}+4*_,
 _{.n}15*{span.arrow}+5*_, _{.n}21*{span.arrow}+6*_
 _{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
 _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ---
-
 > id: recursive
 
-يمكننا أيضًا وصف هذا النمط باستخدام صيغة [خاصة](gloss:formula):
+يمكننا أيضًا وصف هذا النمط باستخدام [صيغة](gloss:formula) خاصة:
 
-    p.text-center.s-orange
+    p.text-center.s-orange(dir="ltr")
       span.n.md `x_n`
       | &nbsp;=&nbsp;
       span.n.md `x_(n-1)`
       | &nbsp;+&nbsp;
       em#t3 n
 
-للحصول على رقم المثلث _n_ ، نأخذ رقم المثلث [[<<<<|first|next]] السابق ونضيف _n_. على سبيل المثال ، إذا كانت _n_ = ${n}{n|5|2,20,1} ، تصبح الصيغة <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
+للحصول على رقم المثلث _n_ ، نأخذ رقم المثلث [[السابق|الأول|التالي]] السابق ونضيف _n_. على سبيل المثال ، إذا كانت _n_ = ${n}{n|5|2,20,1} ، تصبح الصيغة <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
 
 ---
-
 > id: recursive-1
 
-الصيغة التي تعبر عن `x_n` كدالة للمصطلحات السابقة في التسلسل تسمى [__صيغة متكررة__](gloss:sequence-recursive). طالما أنك تعرف [[الحد الأول|last term|second term]] في التسلسل ، يمكنك حساب جميع المصطلحات التالية.
+الصيغة التي تعبر عن `x_n` كدالة للمصطلحات السابقة في التسلسل تسمى [__صيغة متكررة__](gloss:sequence-recursive). طالما أنك تعرف [[الحد الأول|الحد الأخير|الحد الثاني]] في التسلسل ، يمكنك حساب جميع المصطلحات التالية.
 
 ---
-
 > id: squares
 
     hr
@@ -216,21 +205,18 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 :::
 
 ---
-
 > id: square-1
 
-بالنسبة لأرقام المثلث ، وجدنا صيغة تعاودية تخبرك بالفترة _التالية_ من التسلسل كدالة لمصطلحاتها _<<<<_ السابقة. بالنسبة للأرقام المربعة ، يمكننا أن نفعل ما هو أفضل: صيغة تخبرك بالمصطلح _n_ مباشرة ، دون الحاجة أولاً إلى حساب جميع المصطلحات السابقة:
+بالنسبة لأرقام المثلث ، وجدنا صيغة تعاودية تخبرك بالفترة _التالية_ من التسلسل كدالة لمصطلحاتها  السابقة. بالنسبة للأرقام المربعة ، يمكننا أن نفعل ما هو أفضل: صيغة تخبرك بالمصطلح _n_ مباشرة ، دون الحاجة أولاً إلى حساب جميع المصطلحات السابقة:
 
-{.text-center.s-purple} _{.n} `x_n`_ = _{x-equation(solution="n^2")}_
+{.text-center.s-purple(dir="ltr")} _{.n} `x_n`_ = _{x-equation(solution="n^2")}_
 
 ---
-
 > id: explicit
 
 وهذا ما يسمى [__صيغة صريحة__](gloss:sequence-explicit). يمكننا استخدامه ، على سبيل المثال ، لحساب أن الرقم المربع الثالث عشر هو [[169]] ، دون إيجاد أول 12 رقمًا مربعًا.
 
 ---
-
 > id: definitions
 
     hr
@@ -241,14 +227,13 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 [__التسلسل__](gloss:sequence) عبارة عن قائمة بالأرقام أو الأشكال الهندسية أو الكائنات الأخرى التي تتبع نمطًا معينًا. العناصر الفردية في التسلسل تسمى [__مصطلحات__](gloss:sequence-term) ، وتمثلها متغيرات مثل `x_n`.
 
-تخبرك [__الصيغة العودية__](gloss:sequence-recursive) للتسلسل بقيمة الحد _n_ كدالة [[للمصطلحات السابقة|the first term]]. عليك أيضًا تحديد المصطلح الأول (المصطلحات).
+تخبرك [__الصيغة العودية__](gloss:sequence-recursive) للتسلسل بقيمة الحد _n_ كدالة [[للمصطلحات السابقة|الحد الأول]]. عليك أيضًا تحديد المصطلح الأول (المصطلحات).
 
-تخبرك [__صيغة صريحة__](gloss:sequence-explicit) للتسلسل بقيمة الحد _n_ كدالة [[فقط _n_|the previous term]] ، دون الرجوع إلى مصطلحات أخرى في التسلسل.
+تخبرك [__صيغة صريحة__](gloss:sequence-explicit) للتسلسل بقيمة الحد _n_ كدالة [[فقط _n_|الحد السابق]] ، دون الرجوع إلى مصطلحات أخرى في التسلسل.
 
 :::
 
 ---
-
 > id: action-sequence
 
 ### تصوير تسلسل الحركة
@@ -259,10 +244,9 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
     figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
-هل يمكنك أن ترى كيف يشكل المتزلج سلسلة؟ هذا النمط ليس إضافة أو ضرب ، بل هو تحويل هندسي [تحويل](gloss:rigid-transformation). بين خطوات متتالية ، يتم ترجمة المتزلج و [[استدارة|reflected|dilated]].
+هل يمكنك أن ترى كيف يشكل المتزلج سلسلة؟ هذا النمط ليس إضافة أو ضرب ، بل هو تحويل هندسي [تحويل](gloss:rigid-transformation). بين خطوات متتالية ، يتم ترجمة المتزلج و [[تم تدويرة|ينعكس|تمدد]].
 
 ---
-
 > id: action-sequence-1
 
 في ما يلي بعض الأمثلة على تصوير تسلسل الحركة للتمتع الخاص بك:
@@ -295,7 +279,7 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ---
 
-## التسلسل الحسابي والهندسي
+## تسلسلات حسابسة و هندسية
 
 > section: arithmetic-geometric
 > id: halley
@@ -309,7 +293,7 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 ::: column(width=320)
 
     x-img(width=320 height=256 src="images/halley.jpg" alt="Halley’s Comet")
-    p.caption Image of Halley’s Comet,#[br]taken in 1986 on Easter Island
+    p.caption صورة مذنب هالي#[br]اتخذت في عام 1986 قي جزيرة الفصح
 
 :::
 
@@ -318,13 +302,12 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 وخلص هالي إلى أن جميع الملاحظات الثلاث كانت في الواقع من نفس المذنب - الذي يُطلق عليه الآن _مذنب هالي_. تدور حول الشمس وتمرر الأرض كل 76 عامًا تقريبًا. كما توقع متى سيكون المذنب مرئيًا بعد ذلك:
 
-{.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
+{.text-center.s-orange.s-large.with-arrows(dir="ltr")} _{span.n}1530_,
 _{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
 _{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
 _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
 ---
-
 > id: halley-2
 
 في الواقع ، الفاصل الزمني ليس دائمًا _بالضبط_ 76 عامًا: يمكن أن يختلف باختلاف سنة أو سنتين ، حيث تتقاطع مدار المذنب مع الكواكب الأخرى. نعلم اليوم أن مذنب هالي لاحظه علماء الفلك القدماء في وقت مبكر من 240 قبل الميلاد!
@@ -335,10 +318,9 @@ _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
         x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
         x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
         x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
-      p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
+      p.caption قطع مذنب ّالي على مر الزمن: لوح بابلي (164 قبل الميلاد نسيج ((1070, مجلة علمية (1910, وختم سوفيتي (1986) ).
 
 ---
-
 > id: ball
 
 تبحث مجموعة مختلفة من العلماء في سلوك كرة التنس المرتدة. أسقطوا الكرة من ارتفاع 10 أمتار وقاسوا موقعها بمرور الوقت. مع كل ارتداد ، تفقد الكرة بعض ارتفاعها الأصلي:
@@ -349,13 +331,12 @@ _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
     x-slider(steps=400 speed=0.5)
 
 ---
-
 > id: ball-1
 > goals: reveals
 
-لاحظ العلماء أن الكرة تفقد 20٪ من ارتفاعها بعد كل ارتداد. بعبارة أخرى ، يبلغ الحد الأقصى لارتفاع كل ارتداد 80٪ من الارتداد السابق. هذا سمح لهم بالتنبؤ بارتفاع كل ارتداد التالية:
+لاحظ العلماء أن الكرة تفقد %20 من ارتفاعها بعد كل ارتداد. بعبارة أخرى ، يبلغ الحد الأقصى لارتفاع كل ارتداد %80 من الارتداد السابق. هذا سمح لهم بالتنبؤ بارتفاع كل ارتداد التالية:
 
-{.text-center.s-teal.s-large.with-arrows} _{span.n}10_,
+{.text-center.s-teal.s-large.with-arrows(dir="ltr")} _{span.n}10_,
 _{span.n}8*{span.arrow}×0.8*_, _{.n}[[6.4]]*{span.arrow}×0.8*_,
 _{span.n}[[5.12]]*{span.arrow}×0.8*_,
 _{span.n.reveal}4.096*{span.arrow}×0.8*_*{span.reveal},*
@@ -364,15 +345,13 @@ _{span.n.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
 _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ---
-
 > id: arithmetic-geometric
 
 ### التعريفات
 
-إذا قارنت هاتين المشكلتين ، فقد تلاحظ أن هناك العديد من أوجه التشابه: تسلسل مذنب هالي له نفس [[الفرق|ratio|product]] بين الفترات المتتالية ، في حين أن تسلسل ارتداد الكرة له نفس نسبة [[<<<<|difference|product]] بين الفصول المتتالية.
+|إذا قارنت هاتين المشكلتين ، فقد تلاحظ أن هناك العديد من أوجه التشابه: تسلسل مذنب هالي له نفس  [[الفرق|المنتج|النسبة]] بين الفترات المتتالية ، في حين أن تسلسل ارتداد الكرة له نفس نسبة [[النسبة|الفرق|المنتج]] بين الفصول المتتالية.
 
 ---
-
 > id: arithmetic-geometric-1
 
 التسلسلات مع هذه الخصائص لها اسم خاص:
@@ -383,7 +362,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
     p.text-center: include svg/comet.svg
 
-[__تسلسل حسابي__](gloss:arithmetic-sequence) له فرق ثابت __{.m-red} _<<<<___ بين الفترات المتتالية.
+[__التسلسل الحسابي__](gloss:arithmetic-sequence) له فرق ثابت بين الفترات المتتالية.
 
 يتم إضافة أو طرح نفس الرقم لكل مصطلح ، لإنتاج المصطلح التالي.
 
@@ -394,8 +373,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 ::: .theorem.s-green
 
     p.text-center: include svg/ball.svg
-
-التسلسل الهندسي [__<<<<__](gloss:geometric-sequence) له نسبة __{.m-green} ثابتة _ص___ بين الفترات المتتالية.
+[___التسلسل الهندسي___](gloss:geometric-sequence) له نسبة ثابتة بين الفترات المتتالية.
 
 يتم ضرب أو قسمة كل مصطلح على نفس العدد لإنتاج التالي.
 
@@ -404,10 +382,10 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 :::
 
 ---
-
 > id: arithmetic-geometric-select
 
-فيما يلي بعض التسلسلات المختلفة. هل يمكنك تحديد القيم الحسابية أو الهندسية أو لا ، وما هي قيم _{.b.m-red} d_ و _{.b.m-green} r_؟
+
+فيما يلي بعض التسلسلات المختلفة. هل يمكنك تحديد القيم الحسابية أو الهندسية أو لا ، وما هي قيم _{.b.m-red} d_ و _{.b.m-green} r_?
 
 ::: column(width=330 parent="ag-select")
 
@@ -415,7 +393,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ::: column(width=320)
 
-هي [[هندسية|arithmetic|neither]] _{span.reveal(when="blank-0")} ، بنسبة [[2]]._
+هي [[هندسية|حسابي|لا]] _{span.reveal(when="blank-0")} ، بنسبة [[2]]._
 
 ::: column(width=330)
 
@@ -423,7 +401,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ::: column(width=320)
 
-هو [[حسابي|geometric|neither]] _{span.reveal(when="blank-2")} ، مع فرق [[3]]._
+هو [[حسابي|هندسية|لا]] _{span.reveal(when="blank-2")} ، مع فرق [[3]]._
 
 ::: column(width=330)
 
@@ -431,7 +409,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ::: column(width=320)
 
-هو [[حسابي|geometric|neither]] _{span.reveal(when="blank-4")} ، مع فرق [[-4]]._
+هو [[حسابي|هندسية|لا]] _{span.reveal(when="blank-4")} ، مع فرق [[-4]]._
 
 ::: column(width=330)
 
@@ -439,7 +417,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ::: column(width=320)
 
-هو [[ولا|arithmetic|geometric]] _{span.reveal(when="blank-6")}._
+هو [[لا|حسابي|هندسية]] _{span.reveal(when="blank-6")}._
 
 ::: column(width=330)
 
@@ -447,12 +425,11 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ::: column(width=320)
 
-هي [[هندسية|arithmetic|neither]] _{span.reveal(when="blank-7")} ، بنسبة [[0.5]]._
+هي [[هندسية|حسابي|لا]] _{span.reveal(when="blank-7")} ، بنسبة [[0.5]]._
 
 :::
 
 ---
-
 > id: arithmetic-geometric-graph
 
 لتحديد تسلسل حسابي أو هندسي ، يجب أن نعرف ليس فقط الاختلاف أو النسبة المشتركة ، ولكن أيضًا القيمة الأولية (تسمى `a`). هنا يمكنك إنشاء تسلسلاتك الخاصة ورسم قيمها على رسم بياني ، بتغيير قيم `a` و _د_ و _ص_. هل تستطيع ايجاد اي انماط؟
@@ -461,11 +438,11 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 #### {.m-red} التسلسل الحسابي
 
-{.text-center} `a` = ${a}{a|2|-10,10,0.2} ، _يوم_ = ${d}{d|2|-10,10,0.2}
+{.text-center(dir="ltr")} `a` = ${a}{a|2|-10,10,0.2} ، `d` = ${d}{d|2|-10,10,0.2}
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${arithmetic(a,d,0)}_,
+{.text-center.s-red.s-small(dir="ltr")} _{span.n}${arithmetic(a,d,0)}_,
 _{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
 _{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
 _{span.n}${arithmetic(a,d,5)}_, …
@@ -475,13 +452,13 @@ _{span.n}${arithmetic(a,d,5)}_, …
 
 ::: column.ag-chart.s-green(width=320)
 
-#### {.m-green} تسلسل هندسي
+#### {.m-green} التسلسل الهندسي
 
-{.text-center} `a` = ${b}{b|2|-10,10,0.2} ، _ص_ = ${r}{r|2|-10,10,0.2}
+{.text-center(dir="ltr")} `a` = ${b}{b|2|-10,10,0.2} ، `r` = ${r}{r|2|-10,10,0.2}
 
     hr
 
-{.text-center.s-red.s-small} _{span.n}${geometric(b,r,0)}_,
+{.text-center.s-red.s-small(dir="ltr")} _{span.n}${geometric(b,r,0)}_,
 _{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
 _{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
 _{span.n}${geometric(b,r,5)}_, …
@@ -490,28 +467,27 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="var-0 var-1 var-2 var-3")} لاحظ كيف تبدو جميع __{.m-red} التسلسلات الحسابية__ متشابهة جدًا: إذا كان الفرق إيجابيًا ، فإنها [[تزداد|decrease]] بثبات ، وإذا كان الفرق سلبيًا ، فإنها تنخفض [[بثبات|increase]].
+{.reveal(when="var-0 var-1 var-2 var-3")} لاحظ كيف تبدو جميع __{.m-red} التسلسلات الحسابية__ متشابهة جدًا: إذا كان الفرق إيجابيًا ، فإنها [[تزداد|تخفيض]] بثبات ، وإذا كان الفرق سلبيًا ، فإنه[بثبات|تزيد]].
 
 {.reveal(when="blank-0 blank-1")} من ناحية أخرى ، يمكن أن تتصرف التسلسلات الهندسية بشكل مختلف تمامًا استنادًا إلى قيم `a` و _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-إذا _{span.var-action} `r > 1`_ ، فإن الشروط [[ستزداد بسرعة|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")} ، حتى اللانهاية. يقول علماء الرياضيات أن التسلسل [__يختلف عن 807}](gloss:sequence-divergence)._
+إذا _{span.var-action} `r > 1`_ ، فإن الشروط [[ستزداد بسرعة|تنخفض بسرعة|تقترب إلي الصفر]] _{span.reveal(when="blank-2")}_ حتى اللانهاية. يقول علماء الرياضيات أن التسلسل [تتباعد](gloss:sequence-divergence)
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-إذا كان _{span.var-action} _r_ بين –1 و 1_ ، فستقترب البنود [[دائمًا من 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. نقول أن التسلسل [__يتقارب__](gloss:sequence-convergence)._
+إذا كان _{span.var-action} _r_ بين –1 و 1_ ، فستقترب البنود [[دائمًا من 0|ارخفاض إلي الانهاية السلبية|اصغر]] _{span.reveal(when="blank-3")}. نقول أن التسلسل [__يتقارب__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-إذا كانت _{span.var-action} `r < -1`_ ، فستتبادل المصطلحات بين الإيجابية والسلبية ، بينما تصبح [[قيمتها المطلقة|inverse|difference]] أكبر.
+إذا كانت _{span.var-action} `r < -1`_ ، فستتبادل المصطلحات بين الإيجابية والسلبية ، بينما تصبح [[قيمتها المطلقة|معكوس|فرق]] أكبر.
 
 :::
 
 {.reveal(when="blank-4 blank-5")} سوف تتعلم المزيد حول التقارب والاختلاف في [القسم الأخير](/course/sequences/convergence) من هذه الدورة.
 
 ---
-
 > id: arithmetic-geometric-recursive
 
 ### صيغ تعاودية وصريحة
@@ -520,16 +496,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 ::: column.grow
 
-{.text-center} `x_n =` [[`x_(n-1) + d`|`x_(n-1) × d`|`x_d + n`]]
+{.text-center(dir="ltr")} `x_n =` [[`x_(n-1) + d`|`x_(n-1) × d`|`x_d + n`]]
 
 ::: column.grow
 
-{.text-center} `x_n =` [[`x_(n-1) × r`|`x_(n-1) - r`|`x_n - r + n`]]
+{.text-center(dir="ltr")} `x_n =` [[`x_(n-1) × r`|`x_(n-1) - r`|`x_n - r + n`]]
 
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit
 
 تتمثل إحدى مشكلات الصيغ العودية في أنه للعثور على الحد 100 ، على سبيل المثال ، يتعين علينا أولاً حساب المصطلحات الـ 99 السابقة - وقد يستغرق ذلك وقتًا طويلاً. بدلاً من ذلك ، يمكننا محاولة العثور على [__صيغة صريحة__](gloss:sequence-explicit) ، تخبرنا بقيمة الحد _n_ مباشرة.
@@ -538,42 +513,41 @@ _{span.n}${geometric(b,r,5)}_, …
 
 بالنسبة إلى __{.m-red} التسلسلات الحسابية__ ، يتعين علينا إضافة _يوم_ في كل خطوة:
 
-{.ag-equation} `x_1 =` `a`
+{.ag-equation(dir="ltr")} `x_1 =` `a`
 
-{.ag-equation} `x_2 =` `a + d`
+{.ag-equation(dir="ltr")} `x_2 =` `a + d`
 
-{.ag-equation} `x_3 =` `a + d + d`
+{.ag-equation(dir="ltr")} `x_3 =` `a + d + d`
 
-{.ag-equation} `x_4 =` _{x-equation(solution="a+d+d+d")}_
+{.ag-equation(dir="ltr")} `x_4 =` _{x-equation(solution="a+d+d+d")}_
 
-{.ag-equation.reveal(when="eqn-0")} `x_5 =` _{x-equation(solution="a+d+d+d+d")}_
+{.ag-equation.reveal(when="eqn-0" dir="ltr")} `x_5 =` _{x-equation(solution="a+d+d+d+d")}_
 
 {.reveal(when="eqn-1")} في الفصل _رقم_ ، نضيف [[`n-1`|`n`|`n+1`]] نسخًا من _يوم_ ، لذا فإن الصيغة العامة هي
 
-{.ag-equation.reveal(when="blank-0")} `x_n = a + d × (n-1)`.
+{.ag-equation.reveal(when="blank-0")} `x_n = a + d × ( n-1 )`
 
 ::: column.grow
 
 من أجل __{.m-green} تسلسل هندسي__ ، علينا ضرب _ص_ في كل خطوة:
 
-{.ag-equation} `x_1 = a`
+{.ag-equation(dir="ltr")} `x_1 = a`
 
-{.ag-equation} `x_2 = a × r`
+{.ag-equation(dir="ltr")} `x_2 = a × r`
 
-{.ag-equation} `x_3 = a × r × r`
+{.ag-equation(dir="ltr")} `x_3 = a × r × r`
 
-{.ag-equation} `x_4 =` _{x-equation(solution="a×r×r×r")}_
+{.ag-equation(dir="ltr")} `x_4 =` _{x-equation(solution="a×r×r×r")}_
 
-{.ag-equation.reveal(when="eqn-2")} `x_5 =` _{x-equation(solution="a×r×r×r×r")}_
+{.ag-equation.reveal(when="eqn-2" dir="ltr")} `x_5 =` _{x-equation(solution="a×r×r×r×r")}_
 
 {.reveal(when="eqn-3")} في الحد _رقم_ ، نضرب [[`n-1`|`n`|`n+1`]] نسخًا من _ص_ ، لذا فإن الصيغة العامة
 
-{.ag-equation.reveal(when="blank-1")} `x_n = a × r^(n-1)`.
+{.ag-equation.reveal(when="blank-1")} `x_n = a × r^(n-1)`
 
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit-1
 
 في ما يلي ملخص لجميع التعريفات والصيغ التي رأيتها حتى الآن:
@@ -607,7 +581,6 @@ __{.m-green} تسلسل هندسي__ له الحد الأول `a` والنسبة
 الآن دعونا نلقي نظرة على بعض الأمثلة حيث يمكننا استخدام كل هذا!
 
 ---
-
 > id: pay-it-forward
 > goals: video
 
@@ -617,44 +590,40 @@ __{.m-green} تسلسل هندسي__ له الحد الأول `a` والنسبة
 
     figure
       x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
-      .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
+      .caption استخراج من “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
-
 > id: pay-it-forward-1
 
 إن جوهر فكرة تريفور هو أنه إذا "دفعها الجميع إلى الأمام" ، يمكن لشخص واحد أن يكون له تأثير كبير على العالم:
 
     figure: img(src="images/pay-it-forward.png" width=700 height=220)
 
-لاحظ كيف يشكل عدد الأشخاص في كل خطوة [[تسلسلًا هندسيًا|arithmetic sequence|triangle number]] ، _{span.reveal(when="blank-0")} بنسبة مشتركة [[3]]:_
+لاحظ كيف يشكل عدد الأشخاص في كل خطوة [[تسلسلًا هندسيًا|تسلسلا حسابيا|رقم مثلث]] ، _{span.reveal(when="blank-0")} بنسبة مشتركة [[3]]:_
 
-{.text-center.s-orange.with-arrows.reveal(when="blank-1")} _{span.n}1_,
+{.text-center.s-orange.with-arrows.reveal(when="blank-1" dir="ltr")} _{span.n}1_,
 _{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
 _{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
 _{span.n}[[243]]*{span.arrow}×3*_, …
 
 ---
-
 > id: pay-it-forward-2
 
 باستخدام [الصيغة الصريحة](gloss:sequence-explicit) للتسلسلات الهندسية ، يمكننا معرفة عدد الأشخاص الجدد المتأثرين في أي خطوة:
 
-{.text-center} `x_n` = _{x-equation(solution="3^(n-1)")}_
+{.text-center(dir="ltr")} `x_n` = _{x-equation(solution="3^(n-1)")}_
 
 ---
-
 > id: pay-it-forward-3
 
 يزداد عدد الأشخاص بسرعة لا تصدق. في الخطوة العاشرة ، ستصل إلى 19،683 جديدًا ، وبعد 22 خطوة ، كنت ستصل إلى عدد أكبر من الأشخاص الذين هم على قيد الحياة حاليًا على الأرض.
 
 هذا التسلسل من الأرقام له اسم خاص: __قوى 3__. كما ترى ، كل مصطلح هو في الواقع مجرد قوة [مختلفة](gloss:powers) من 3:
 
-{.text-center.s-orange} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
+{.text-center.s-orange(dir="ltr")} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
 _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 ---
-
 > id: millionaire
 
 ### من يريد أن يكون مليونيرا؟
@@ -662,7 +631,6 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 {.todo} قريبًا!
 
 ---
-
 > id: chessboard
 
 ### مشكلة رقعة الشطرنج
@@ -678,15 +646,14 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 إن اسم [التسلسل الهندسي](gloss:geometric-sequence) مربك للغاية ، لأنه لا علاقة له بالهندسة. في الواقع ، تم تطوير الاسم قبل مئات السنين ، عندما فكر علماء الرياضيات في _الضرب_ و _الجذور التربيعية_ بطريقة هندسية أكثر.
 
-ومع ذلك ، هناك العديد من التسلسلات الأخرى التي _<<<<_ تستند إلى أشكال هندسية معينة - بعضها شاهدته بالفعل في [المقدمة](/course/sequences/introduction). غالبًا ما تسمى هذه التسلسلات [__أرقامًا رمزية__](gloss:figurate-numbers) ، وسنلقي نظرة فاحصة على بعضها في هذا القسم.
+ومع ذلك ، هناك العديد من التسلسلات الأخرى التي تستند إلى أشكال هندسية معينة - بعضها شاهدته بالفعل في [المقدمة](/course/sequences/introduction). غالبًا ما تسمى هذه التسلسلات [__أرقامًا رمزية__](gloss:figurate-numbers) ، وسنلقي نظرة فاحصة على بعضها في هذا القسم.
 
 ---
-
 > id: triangle-numbers
 
-### أرقام المثلث
+### أرقام المثلثة
 
-يتم إنشاء __أرقام المثلث__ من خلال إنشاء مثلثات ذات حجم أكبر تدريجيًا:
+يتم إنشاء __أرقام المثلثة__ من خلال إنشاء مثلثات ذات حجم أكبر تدريجيًا:
 
 ::: column(width=24 parent="padded-thin")
 
@@ -726,10 +693,9 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 :::
 
-لقد رأيت بالفعل الصيغة العودية لأرقام المثلث: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
+لقد رأيت بالفعل الصيغة العودية لأرقام المثلثة: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
 
 ---
-
 > id: billiard-pool
 
 ليس من قبيل الصدفة أن يكون هناك دائمًا 10 دبابيس عند البولينج أو 15 كرة عند لعب البلياردو: كلاهما أرقام مثلث!
@@ -745,7 +711,6 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 :::
 
 ---
-
 > id: triangle-proof
 
 لسوء الحظ ، فإن الصيغة العودية ليست مفيدة جدًا إذا أردنا العثور على رقم المثلث 100 أو 5000 ، دون حساب جميع الأرقام السابقة أولاً. ولكن ، كما فعلنا بالتسلسلات الحسابية والهندسية ، يمكننا محاولة إيجاد صيغة صريحة لأرقام المثلث.
@@ -753,7 +718,6 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 {.todo} يتوفر قريبًا: إثبات متحرك لصيغة رقم المثلث
 
 ---
-
 > id: triangle-sums
 
 يبدو أن أرقام المثلث تظهر في كل مكان في الرياضيات ، وستراها مرة أخرى طوال هذه الدورة. إحدى الحقائق المثيرة للاهتمام بشكل خاص هي أنه يمكن كتابة _أي_ عدد صحيح كمجموع ثلاثة أرقام مثلث على الأكثر:
@@ -800,33 +764,28 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 {.reveal(when="slide")} حقيقة أن هذا يعمل مع _جميع_ الأعداد الصحيحة تم إثباته لأول مرة في عام 1796 من قبل عالم الرياضيات الألماني [كارل فريدريش جاوس](bio:gauss) - في سن 19!
 
 ---
-
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
+#### Problem Solving
 
-::: .box-body
-
-ما هو مجموع أول 100 عدد صحيح موجب [<<<<](gloss:integer)؟ وبعبارة أخرى ، ما هي قيمة
+ما هو مجموع أول 100 [عدد صحيح](gloss:integer)؟ وبعبارة أخرى ، ما هي قيمة
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`؟
 
-بدلاً من إضافة كل شيء يدويًا ، هل يمكنك استخدام [أرقام المثلث](gloss:triangle-numbers) لمساعدتك؟ ماذا عن مجموع أول 1000 عدد صحيح موجب؟
+بدلاً من إضافة كل شيء يدويًا ، هل يمكنك استخدام [أرقام المثلثة](gloss:triangle-numbers) لمساعدتك؟ ماذا عن مجموع أول 1000 عدد صحيح موجب؟
 
-:::
 :::
 
 ---
-
 > id: square-numbers
 
 ### أرقام مربعة ومضلعة
 
-تسلسل آخر يعتمد على الأشكال الهندسية هو __الأرقام المربعة__:
+تسلسل آخر يعتمد على الأشكال الهندسية هو __أرقام المربعة__:
 
-{.text-center.s-purple.with-arrows} _{.n}1_,
+{.text-center.s-purple.with-arrows(dir="ltr")} _{.n}1_,
 _{.n}4*{span.arrow.reveal(when="blank-4")}+3*_,
 _{.n}9*{span.arrow.reveal(when="blank-4")}+5*_,
 _{.n}16*{span.arrow.reveal(when="blank-4")}+7*_,
@@ -835,10 +794,9 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-4")}+11*_,
 _{.n}[[49]]*{span.arrow.reveal(when="blank-4")}+13*_,
 _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
-{.reveal(when="blank-0 blank-1 blank-2 blank-3")} يمكنك حساب الأرقام هي هذا التسلسل عن طريق تربيع كل رقم صحيح (`1^2` ، `2^2` ، `3^2` ،…) ، ولكن اتضح أن هناك نمطًا آخر: الاختلافات بين الأرقام المربعة المتتالية هي [[أرقام فردية|triangle numbers|integers]] بترتيب متزايد!
+{.reveal(when="blank-0 blank-1 blank-2 blank-3")} يمكنك حساب الأرقام هي هذا التسلسل عن طريق تربيع كل رقم صحيح (`1^2` ، `2^2` ، `3^2` ،…) ، ولكن اتضح أن هناك نمطًا آخر: الاختلافات بين الأرقام المربعة المتتالية هي [[أرقام فردية|أرقام مثلثة|أعدد صحيحة]] بترتيب متزايد!
 
 ---
-
 > id: square-numbers-1
 
 ::: column.grow
@@ -847,7 +805,7 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
 وهذا يعني أيضًا أن الرقم المربع _n_ هو مجرد مجموع أول _رقم_ فردي! على سبيل المثال ، مجموع الأرقام الفردية الستة الأولى هو
 
-{.text-center} `1 + 3 + 5 + 7 + 9 + 11 =` [[36]].
+{.text-center(dir="ltr")} `1 + 3 + 5 + 7 + 9 + 11 =` [[36]].
 
 ::: column(width=240)
 
@@ -857,13 +815,11 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 :::
 
 ---
-
 > id: square-numbers-2
 
-بالإضافة إلى ذلك ، كل رقم مربع هو أيضًا مجموع [رقم مثلث متتاليين](gloss:triangle-numbers). على سبيل المثال ، ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. هل يمكنك أن ترى كيف يمكننا تقسيم كل مربع على طول قطره إلى مثلثين؟
+بالإضافة إلى ذلك ، كل رقم مربع هو أيضًا مجموع أرقم مثلثة متتاليين. على سبيل المثال ، ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. هل يمكنك أن ترى كيف يمكننا تقسيم كل مربع على طول قطره إلى مثلثين؟
 
 ---
-
 > id: polygon-numbers
 
 ::: column(width=300)
@@ -883,7 +839,6 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 :::
 
 ---
-
 > id: tetrahedral
 
 ### رباعي السطوح والأرقام المكعبة
@@ -923,7 +878,6 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 :::
 
 ---
-
 > id: tetrahedral-1
 
 غالبًا ما يطلق علماء الرياضيات هذه الأهرامات [__tetrahedra__](gloss:tetrahedron) ، والتسلسل الناتج [__أرقام رباعي السطوح__](gloss:tetrahedral-numbers).
@@ -937,7 +891,7 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 > section: functions
 > sectionStatus: dev
 
-لكى يفعل
+{.todo} قريبًا
 
 ---
 
@@ -950,7 +904,7 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
     x-slideshow
       .stage.rabbits(slot="stage")
-        .rabbits-wrap.s-orange.s-small
+        .rabbits-wrap.s-orange.s-small(dir="ltr")
           svg(width=760 height=456 viewBox="0 0 760 456")
             line(y1=51  x2=760 y2=51)
             line(y1=130 x2=760 y2=130)
@@ -1005,34 +959,32 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
     
-      .legend(slot="legend") In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
-      .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
-      .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
-      .legend(slot="legend") In the next month, your pair of rabbits will give birth to another couple. Meanwhile, the first pair of kids have grown up. You now have three pairs in total.
-      .legend(slot="legend") In the fifth month, your original pair of rabbits will give birth to a new pair. At the same time, their first pair of kids is now old enough to give birth to grandchildren. You now have five pairs of rabbits.
-      .legend(slot="legend") In the sixth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
+      .legend(slot="legend") قي الشهر الأول، تكونالأرانب صغيرة جدا و لا يمكنها فعل الكثير - لكنها تنمو بسرعة كبيرة.
+      .legend(slot="legend") بعد شهر واحد، تنمو الأرانب و يمكن أن تبدأ في التزاوج ...
+      .legend(slot="legend") ... وبعد شهر آخر، سوف يلدون أول زوج من أولادهم. لديك الأن زوجان من الأرانب.
+      .legend(slot="legend") في السهر التالي، سينجب زوج الأرانب زوجا آخر. في غضون ذمك، كبر الزوج الأول من الأطفال. لديك الأن ثلاثة أزواج في المجموع.
+      .legend(slot="legend") في الشهر الخامس، سينجب زوج الأرانب الأصلي زوجا جديدا. فى الوقت نفسه، أصبح أول زوج من أطفااهما أكبر سنا بما يكفي لأنجاب الأحفاد. لديك الآن خمسة أزواج من الأرانب.
+      .legend(slot="legend") في الشهر السادس، هناك ثلاثة أزواج آخرينيلدون: الزوج الأصلي، بالأضافة إلى أول زوجين أو أطفال.
 
 ---
-
 > id: rabbits-1
 
 {.r} في الشهر التالي ، سيكون لديك 13 زوجًا من الأرانب: 8 أزواج من الشهر السابق ، بالإضافة إلى 5 مجموعات جديدة من الأطفال. هل يمكنك اكتشاف نمط في هذا التسلسل؟ _{button.next-step} متابعة_
 
 ---
-
 > id: rabbits-2
 
-عدد الأرانب في شهر معين هو [[مجموع الرقمين السابقين|twice the previous number]]. _{span.reveal(when="blank-0")} بمعنى آخر ، يجب عليك إضافة المصطلحين _السابقين_ في التسلسل للحصول على المصطلح التالي. يبدأ التسلسل بقطعتين ، و [الصيغة العودية](gloss:sequence-recursive) هي_
+عدد الأرانب في شهر معين هو [[مجموع الرقمين السابقين|ضعف الرقم السابق]]. _{span.reveal(when="blank-0")} بمعنى آخر ، يجب عليك إضافة المصطلحين _السابقين_ في التسلسل للحصول على المصطلح التالي. يبدأ التسلسل بقطعتين ، و [الصيغة العودية](gloss:sequence-recursive) هي
 
-{.text-center.s-orange.reveal(when="blank-0")} _{span.n} `x_n`_ = _{span.n} `x_(n-1)`_ + _{span.n} `x_(n-2)`_
+{.text-center.s-orange.reveal(when="blank-0" dir="ltr")} *{span.n}`x_n`* =
+*{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
 
 ---
-
 > id: rabbits-3
 
 هل يمكنك حساب عدد الأرانب بعد بضعة أشهر أخرى؟
 
-{.text-center.s-orange} _{.n}1_, _{.n}1_, _{.n}2_, _{.n}3_, _{.n}5_, _{.n}8_,
+{.text-center.s-orange(dir="ltr")} _{.n}1_, _{.n}1_, _{.n}2_, _{.n}3_, _{.n}5_, _{.n}8_,
 _{.n}[[13]]_, _{.n}[[21]]_, _{.n}[[34]]_, _{.n}[[55]]_, _{.n}[[89]]_,
 _{.n}[[144]]_, …
 
@@ -1042,7 +994,6 @@ _{.n}[[144]]_, …
       x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
-
 > id: fibonacci
 
 يُطلق على تسلسل الأرقام هذا [__تسلسل فيبوناتشي__](gloss:fibonacci-numbers) ، الذي يحمل اسم عالم الرياضيات الإيطالي [ليوناردو فيبوناتشي](bio:fibonacci).
@@ -1056,7 +1007,7 @@ _{.n}[[144]]_, …
 ::: column(width=300)
 
     x-img(src="images/fibonacci.jpg" width=300 height=300)
-    .caption Portrait of Leonardo Fibonacci
+    .caption صورة ليوناردو فيبوناتشي
 
 :::
 
@@ -1064,19 +1015,18 @@ _{.n}[[144]]_, …
 
     figure
       x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
-      p.caption Pages from Fibonacci’s #[em Liber Abaci]
+      p.caption صفحات من فيبوناتشي #[em Liber Abaci]
 
 ---
-
 > id: spirals
 
 بالطبع ، أرقام فيبوناتشي ليست هي الطريقة التي يملأ بها الأرانب _في الواقع_ في الحياة الحقيقية. لا تمتلك الأرانب ذكورًا واحدًا ونسلًا واحدًا كل شهر ، ولم نحسب سبب وفاة الأرانب في نهاية المطاف.
 
-ولكن اتضح أن هناك العديد من الأماكن الأخرى في الطبيعة حيث تظهر أرقام فيبوناتشي _<<<<_: على سبيل المثال اللوالب في النباتات. هل يمكنك حساب عدد اللوالب الموجودة في كل اتجاه؟
+ولكن اتضح أن هناك العديد من الأماكن الأخرى في الطبيعة حيث تظهر أرقام فيبوناتشي: على سبيل المثال اللوالب في النباتات. هل يمكنك حساب عدد اللوالب الموجودة في كل اتجاه؟
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1088,7 +1038,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1101,7 +1051,6 @@ _{.n}[[144]]_, …
 :::
 
 ---
-
 > id: spirals-1
 
 في كلتا الحالتين ، أعداد اللوالب هي أرقام فيبوناتشي متتالية. وينطبق الشيء نفسه على العديد من النباتات الأخرى: في المرة القادمة التي تخرج فيها ، احسب عدد البتلات في الزهرة أو عدد الأوراق على الساق. في كثير من الأحيان ستجد أنها أرقام فيبوناتشي!
@@ -1109,12 +1058,11 @@ _{.n}[[144]]_, …
 بالطبع ، هذه ليست مجرد مصادفة. هناك سبب مهم لماذا تحب الطبيعة تسلسل فيبوناتشي ، والذي ستتعلم المزيد عنه لاحقًا.
 
 ---
-
 > id: bees
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1127,7 +1075,7 @@ _{.n}[[144]]_, …
 
 يوجد في كل مستعمرة نحل _ملكة_ واحدة تضع الكثير من البيض. إذا تم تخصيب بيضة بواسطة نحلة ذكر ، فإنها تفقس في نحلة __أنثى__. إذا لم يتم تخصيبها ، فإنها تفقس في نحلة __ذكر__ (تسمى طائرة بدون طيار).
 
-وهذا يعني أن النحل لدى الإناث [[والدين|one parent]] ، بينما لدى النحل الذكور فقط [[والد واحد|two parents]].
+وهذا يعني أن النحل لدى الإناث [[والدين|والد واحد]] ، بينما لدى النحل الذكور فقط [[والد واحد|والدين]].
 
 {.reveal(when="blank-0 blank-1")} إذا رسمنا شجرة النحل ، فإن عدد الآباء والأجداد والأجداد والأجيال السابقة دائمًا ما يكون أرقام فيبوناتشي!
 
@@ -1136,7 +1084,6 @@ _{.n}[[144]]_, …
 :::
 
 ---
-
 > id: golden-spiral
 
 ### النسبة الذهبية
@@ -1144,16 +1091,15 @@ _{.n}[[144]]_, …
 تمامًا مثل [المثلث](gloss:triangle-numbers) و [الأرقام المربعة](gloss:square-numbers) ، والتسلسلات الأخرى التي رأيناها من قبل ، يمكن تصور تسلسل فيبوناتشي باستخدام نمط هندسي:
 
     x-slideshow.golden-spiral
-      .stage(slot="stage"): include svg/spiral.svg
-      .legend(slot="legend") We start with two small squares of size 1.
-      .legend(slot="legend") Next, we add a new square of size 2, to form a larger rectangle.
-      .legend(slot="legend") Next, we add a square of size 3, to form an even larger rectangle.
-      .legend(slot="legend") The next square has size 5. Can you see that we’re recreating the Fibonacci numbers?
-      .legend(slot="legend") If we continue adding squares, they will have size 8, 13, 21, and so on.
-      .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
+      .stage(slot="stage" dir="ltr"): include svg/spiral.svg
+      .legend(slot="legend") نبدأ بمربعين صغيرين من الحجم 1.
+      .legend(slot="legend") بعد ذلك، نضيف مربعا جديدا من الحجم 2 لتشكيل مستطيل أكبر.
+      .legend(slot="legend") بعد ذلك، نضيف مربعا بحجم 3 لتشكيل مستطيل أكبر.
+      .legend(slot="legend") المربع التالي له حجم 5. هل ترى أننا نعيد إنشاد أرقام فيبوناتشي?
+      .legend(slot="legend") أذا واصلنا إضافة المربعات، فسيكون لها حجم 8, 13, 21, ....
+      .legend(slot="legend") ربما لاحظت أنه مع تكبر المستطيلات، يبدو أنهاتبدأ في "الدوران" للخارج. يمكننا حتي تصور ذلك من خلال رسم حلزونى مثالى يربط زوايا المربعات.
 
 ---
-
 > id: golden-ratio
 
 في كل خطوة ، تشكل المربعات مستطيلًا أكبر. عرضه وارتفاعه دائمًا رقمان فيبوناتشي متتاليان. __نسبة العرض إلى الارتفاع__ للمستطيل هي نسبة عرضه وارتفاعه:
@@ -1197,7 +1143,6 @@ _{.n}[[144]]_, …
 :::
 
 ---
-
 > id: golden-ratio-1
 > goals: img-0 img-1
 
@@ -1227,15 +1172,13 @@ _{.n}[[144]]_, …
 :::
 
 ---
-
 > id: golden-ratio-2
 
-يمكننا تقريب النسبة الذهبية من خلال [[قسمة|adding|subtracting]] رقمين متتاليين من أرقام فيبوناتشي.
+يمكننا تقريب النسبة الذهبية من خلال [[قسمة|جمع|طرح]] رقمين متتاليين من أرقام فيبوناتشي.
 
-{.reveal(when="blank-0")} ومع ذلك ، اتضح أنه لا يمكن كتابة القيمة الدقيقة لـ `φ` ككسر بسيط: فهي [__رقم غير منطقي__](gloss:irrational-numbers) ، تمامًا مثل [`π`](gloss:pi) و `sqrt(2)` وبعض الأرقام الأخرى التي رأيتها من قبل.
+{.reveal(when="blank-0")} ومع ذلك ، اتضح أنه لا يمكن كتابة القيمة الدقيقة لـ `φ` ككسر بسيط: فهي [__رقم غير منطقي__](gloss:irrational-numbers) ، تمامًا مثل [`π`](gloss:pi) و`sqrt(2)` وبعض الأرقام الأخرى التي رأيتها من قبل.
 
 ---
-
 > id: sunflower-growing
 
 ### لوالب فيبوناتشي
@@ -1262,7 +1205,6 @@ _{.n}[[144]]_, …
 :::
 
 ---
-
 > id: sunflower-spiral
 
 من المهم للزهور اختيار زاوية مناسبة: يجب أن تكون الأوراق أو البذور متباعدة بشكل متساوٍ تقريبًا حتى تحصل على أكبر قدر من ضوء الشمس والمغذيات. في الرسم البياني أدناه ، يمكنك استكشاف الشكل الذي قد تبدو عليه عباد الشمس بزوايا مختلفة بين بذورها:
@@ -1280,7 +1222,7 @@ _{.n}[[144]]_, …
 
 {div.inline(slot="legend")} إذا كانت الزاوية _{span.fib-action(data-value=0.5)} `1/2`_ لدوران كامل (180 درجة) ، فستتبادل البذور بين "ذراعيْن" منفصلين يبتعدان عن المركز.
 
-{div.inline(slot="legend")} إذا كان الدوران نسبة كسرية أخرى تبلغ 360 درجة ، على سبيل المثال _{span.fib-action(data-value=2/5)} `2/5`_ أو _{span.fib-action(data-value=1/3)} `1/3`_ أو _{span.fib-action(data-value=3/8)} `3/8`_ ، فسيكون عدد "الأسلحة" هو نفسه [[المقام|numerator|prime factor]] لهذا الكسر.
+{div.inline(slot="legend")} إذا كان الدوران نسبة كسرية أخرى تبلغ 360 درجة ، على سبيل المثال _{span.fib-action(data-value=2/5)} `2/5`_ أو _{span.fib-action(data-value=1/3)} `1/3`_ أو _{span.fib-action(data-value=3/8)} `3/8`_ ، فسيكون عدد "الأسلحة" هو نفسه [[المقام|بسط|العامل الرئيسي]] لهذا الكسر.
 
 {div(slot="legend")} للأسف "الأسلحة" سيئة ، لأنها تعني أن البذور غير موزعة بالتساوي: كل المساحة بين الذراعين تضيع. ولكن إذا لم تعمل [الأرقام المنطقية](gloss:rational-numbers) ، فلنجرّب [الأرقام غير المنطقية](gloss:irrational-numbers)!
 
@@ -1293,7 +1235,6 @@ _{.n}[[144]]_, …
     x-gesture(target=".fib-action")
 
 ---
-
 > id: sunflower-spiral-1
 
 ::: column(width=240)
@@ -1311,7 +1252,6 @@ _{.n}[[144]]_, …
 :::
 
 ---
-
 > id: lucas-numbers
 
 ### فيبوناتشوس
@@ -1322,21 +1262,18 @@ _{.n}[[144]]_, …
 
 يمكننا أيضًا محاولة اختيار نقاط بداية مختلفة لأرقام فيبوناتشي. على سبيل المثال ، إذا بدأنا بـ 2 ، 1 ، ... بدلاً من 1 ، 1 ، ... نحصل على تسلسل يسمى __أرقام لوكاس__.
 
-اتضح أنه ، بغض النظر عن رقمي البدء اللذين تختارهما ، فإن التسلسلات الناتجة تشترك في العديد من الخصائص. على سبيل المثال ، تتقارب نسب المصطلحات المتتالية _دائمًا_ [<<<<](gloss:sequence-convergence) إلى النسبة الذهبية.
+اتضح أنه ، بغض النظر عن رقمي البدء اللذين تختارهما ، فإن التسلسلات الناتجة تشترك في العديد من الخصائص. على سبيل المثال ، تتقارب نسب المصطلحات المتتالية _دائمًا_ [تقارب تسلسل](gloss:sequence-convergence) إلى النسبة الذهبية.
 
-{.text-center.s-purple.s-small} ${a}{a|1|0,10,1} ، ${b}{b|1|0,10,1} ، _{span.n} ${a+b}<<<<_ ، _{span.n} ${a+2×b}<<<<_ ، _{span.n} ${2×a+3×b}<<<<_ ، _{span.n} ${3×a+5×b}<<<<_ ، _{span.n} ${5×a+8×b}<<<<_ ، _{span.n} ${8×a+13×b}<<<<_ ، ...
+{.text-center.s-purple.s-small(dir="ltr")} ${a}{a|1|0,10,1} ، ${b}{b|1|0,10,1} ، _{span.n} ${a+b}_ ، _{span.n} ${a+2×b}_ ، _{span.n} ${2×a+3×b}_ ، _{span.n} ${3×a+5×b}_ ، _{span.n} ${5×a+8×b}_ ، _{span.n} ${8×a+13×b}_ ، ...
 
 ---
-
 > id: fibonacci-puzzles
 
 هناك العديد من الألغاز والأنماط والتطبيقات الأخرى المتعلقة بأرقام فيبوناتشي. إليك بعض الأمثلة التي يمكنك تجربتها بنفسك:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 __1. انقسام فيبوناتشي__
 
@@ -1362,8 +1299,6 @@ __3. سلالم فيبوناتشي__
 
 :::
 
-:::
-
     figure
       x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
@@ -1375,22 +1310,21 @@ __3. سلالم فيبوناتشي__
 > section: special
 > id: special-intro
 
-بالإضافة إلى التسلسل الحسابي [<<<<](gloss:arithmetic-sequence) و [الهندسي](gloss:geometric-sequence) ، و [أرقام فيبوناتشي](gloss:fibonacci-numbers) و [أرقام مجسمة](gloss:figurate-numbers) ، فهناك عدد لا يحصى من التسلسلات المثيرة للاهتمام التي لا تتبع متشابهة نمط عادي.
+بالإضافة إلى التسلسل [الحسابة](gloss:arithmetic-sequence) و [الهندسي](gloss:geometric-sequence) ، و [أرقام فيبوناتشي](gloss:fibonacci-numbers) و [أرقام مجسمة](gloss:figurate-numbers) ، فهناك عدد لا يحصى من التسلسلات المثيرة للاهتمام التي لا تتبع متشابهة نمط عادي.
 
 ---
-
 > id: primes
 
-### أرقام Prime
+### ألأعداد الأولية
 
-أحد الأمثلة التي رأيتها من قبل هي [__أرقام Prime__](gloss:prime). نقول أن الرقم _أولي_ إذا لم يكن لديه [عوامل](gloss:factor) [[بخلاف 1 ونفسه|other than 1 and 2|and no multiples]].
+أحد الأمثلة التي رأيتها من قبل هي [__أرقام الأولية__](gloss:prime). نقول أن الرقم _أولي_ إذا لم يكن لديه [عوامل](gloss:factor) [[بخلاف 1 ونفسه|بخلاف 1 و 2|و لا مضاعف]].
 
 ---
 > id: primes-1
 
 إليك أول عدد قليل من الأعداد الأولية:
 
-{.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
+{.text-center.s-teal(dir="ltr")} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
 _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 ---
@@ -1430,12 +1364,14 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 ---
 > id: perfect
 
+### أرقام مثالية
+
 أرقام مثالية لتحديد ما إذا كان الرقم [أوليًا](gloss:prime) ، يجب علينا العثور على جميع [عوامله](gloss:factor). عادةً ما نقوم _بضرب_ هذه العوامل لاستعادة الرقم الأصلي ، ولكن دعنا نرى ما يحدث إذا _أضفنا_ جميع عوامل الرقم (باستثناء الرقم نفسه):
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }    
-    table.grid.perfect-table
+    table.grid.perfect-table(dir="ltr")
       tr
         td: strong Number
         td: strong Factors
@@ -1456,15 +1392,16 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 دعنا نقارن هذه الأرقام بمجموع عواملها:
 
-::: column.perfect-box(width=220 parent="padded-thin") بالنسبة لمعظم الأرقام ، يكون مجموع عوامله
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
+ 
+ بالنسبة لمعظم الأرقام ، يكون مجموع عوامله
+[[أقل من|أكثر من|يساوي]] نفسها. تسمى هذه الأرقام __أرقام ناقصة__.
 
-[[أقل من|greater than|equal to]] نفسها. تسمى هذه الأرقام __أرقام ناقصة__.
-
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 بالنسبة لعدد قليل من الأرقام ، يكون مجموع عوامله أكبر من نفسه. تسمى هذه الأرقام __أرقام وفيرة__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 يحتوي رقم واحد فقط في القائمة أعلاه على مجموعة عوامل _تساوي_ نفسها: [[6]]. وهذا ما يسمى [__رقمًا مثاليًا__](gloss:perfect-numbers).
 
@@ -1475,11 +1412,11 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 الرقم المثالي التالي هو 28 ، لأنه إذا جمعنا جميع عوامله نحصل على `1 + 2 + 4 + 7 + 14 = 28`. بعد ذلك ، تصبح الأرقام المثالية أكثر ندرة:
 
-{.text-center.s-purple.s-vertical.perfect-list} _{.n}6_, _{.n}28_,
+{.text-center.s-purple.s-vertical.perfect-list(dir="ltr")} _{.n}6_, _{.n}28_,
 _{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}8,589,869,056_,
 _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 
-لاحظ أن كل هذه الأرقام [[حتى|multiples of 3|2 more than a square number]]. _{span.reveal(when="blank-0")} اتضح أنها كلها أيضًا أرقام مثلث!_
+لاحظ أن كل هذه الأرقام [[زوخية|مضاعفت|ّأكتر من رقم مربع]]. _{span.reveal(when="blank-0")} اتضح أنها كلها أيضًا أرقام مثلث!_
 
 ---
 > id: perfect-3
@@ -1499,11 +1436,11 @@ _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 ---
 > id: hailstone
 
-### تسلسل Hailstone
+### تسلسل هيلستون
 
 معظم التسلسلات التي رأيناها حتى الآن لها قاعدة أو نمط واحد. ولكن لا يوجد سبب يمنعنا من الجمع بين عدة صيغ مختلفة - على سبيل المثال صيغة تعاودية مثل هذه:
 
-    table.grid.text-left
+    table.grid.text-left(dir="ltr")
       tr
         td: strong.md If `x_n` is even:
         td.md `x_(n+1) = x_n // 2`
@@ -1511,9 +1448,9 @@ _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
         td: strong.md If `x_n` is odd:
         td.md `x_(n+1) = 3 x_n + 1`
 
-فلنبدأ بـ `x_1 = 5` ونرى ما سيحدث:
+فلنبدأـ `x_1 = 5` ونرى ما سيحدث:
 
-{.text-center.s-orange.with-arrows} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
+{.text-center.s-orange.with-arrows(dir="ltr")} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
 _{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
 _{.n}[[4]]*{span.arrow.reveal(when="blank-1")}÷2*_,
 _{.n}[[2]]*{span.arrow.reveal(when="blank-2")}÷2*_,
@@ -1527,7 +1464,7 @@ _{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 
 يبدو أنه بعد بضعة مصطلحات ، يصل التسلسل إلى "دورة ": 4 ، 2 ، 1 ستستمر في التكرار مرارًا وتكرارًا إلى الأبد. بالطبع ، كان بإمكاننا اختيار نقطة بداية مختلفة ، مثل ${n}{n|10|5,40,1}. ثم سيبدو التسلسل على النحو التالي:
 
-{.text-center} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.n}4_,
+{.text-center(dir="ltr")} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.n}4_,
 _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 *{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
 
@@ -1542,14 +1479,13 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 {.reveal(when="var-0")} لاحظ كيف تنتهي بعض نقاط البداية بسرعة كبيرة ، بينما تأخذ نقاط أخرى (مثل _{span.var-action} 31_ أو _{span.var-action} 47_) أكثر من مائة خطوة قبل أن تصل إلى النقاط الأربع ، 2 ، 1 دورة.
 
 ---
-
 > id: hailstone-3
 
 ::: column.grow
 
-تسمى جميع التسلسلات التي تتبع هذه الصيغة العودية [__Hailstone Sequences__](gloss:hailstone-sequence) ، لأنها تبدو وكأنها تتحرك بشكل عشوائي لأعلى ولأسفل قبل الوصول إلى دورة 4 ، 2 ، 1 - تمامًا مثل حبات البَرَد التي تتحرك لأعلى و في سحابة قبل أن تصطدم بالأرض.
+تسمى جميع التسلسلات التي تتبع هذه الصيغة العودية [__تسلسلات هيلستون__](gloss:hailstone-sequence) ، لأنها تبدو وكأنها تتحرك بشكل عشوائي لأعلى ولأسفل قبل الوصول إلى دورة 4 ، 2 ، 1 - تمامًا مثل حبات البَرَد التي تتحرك لأعلى و في سحابة قبل أن تصطدم بالأرض.
 
-في عام 1937 ، اقترح عالم الرياضيات [Lothar Collatz](bio:collatz) أن _كل_ تسلسل من بَرَد ينتهي في نهاية المطاف بدورة 4 ، 2 ، 1 - مهما كانت قيمة البداية التي تختارها. لقد تحققت بالفعل من بعض نقاط البداية أعلاه ، وجربت أجهزة الكمبيوتر بالفعل جميع الأرقام حتى `10^20` - أي 100 مليار مليار أو 1 متبوعًا بعشرين أصفار.
+في عام 1937 ، اقترح عالم الرياضيات [لوثار كولاتز](bio:collatz) أن _كل_ تسلسل من بَرَد ينتهي في نهاية المطاف بدورة 4 ، 2 ، 1 - مهما كانت قيمة البداية التي تختارها. لقد تحققت بالفعل من بعض نقاط البداية أعلاه ، وجربت أجهزة الكمبيوتر بالفعل جميع الأرقام حتى `10^20` - أي 100 مليار مليار أو 1 متبوعًا بعشرين أصفار.
 
 ::: column(width=240)
 
@@ -1562,20 +1498,18 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 تمامًا مثل البحث عن الأرقام المثالية الفردية ، لا تزال هذه مشكلة مفتوحة في الرياضيات. من المدهش أن هذه الأنماط البسيطة للتسلسل يمكن أن تؤدي إلى أسئلة غامضت حتى أفضل علماء الرياضيات في العالم لعدة قرون!
 
 ---
-
 > id: look-and-say
 
 ### تسلسل الشكل والقل
 
 في ما يلي تسلسل آخر مختلف قليلاً عن كل التسلسلات التي رأيتها أعلاه. هل يمكنك العثور على النمط؟
 
-{.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
+{.text-center.s-lime.s-vertical(dir="ltr")} _{span.n}1_, _{span.n}11_, _{.n}21_,
 _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 
 _{button.next-step} متابعة_
 
 ---
-
 > id: look-and-say-1
 
 يُطلق على هذا التسلسل تسلسل __الشكل والقول__ ، والنمط هو بالضبط ما يقوله الاسم: تبدأ بـ 1 ، وكل مصطلح يلي هو ما تحصل عليه إذا "قرأت بصوت عالٍ" السابق. هنا مثال:
@@ -1584,22 +1518,19 @@ _{button.next-step} متابعة_
 
 هل يمكنك الآن العثور على المصطلحات التالية؟
 
-{.text-center.s-lime.s-vertical}… ، _{.n} 312211_ ، _{.n} [[13112221]]_ ، _{.n} [[1113213211]]_ ، ...
+{.text-center.s-lime.s-vertical(dir="ltr")}… ، _{.n} 312211_ ، _{.n} [[13112221]]_ ، _{.n} [[1113213211]]_ ، ...
 
 ---
-
 > id: look-and-say-2
 
 غالبًا ما يتم استخدام هذا التسلسل كألغاز لرحلة علماء الرياضيات - لأن النمط يبدو غير رياضي تمامًا. ومع ذلك ، كما اتضح ، فإن التسلسل له العديد من الخصائص المثيرة للاهتمام. على سبيل المثال ، ينتهي كل مصطلح بالرقم [[1]] ، ولا يتم استخدام أي رقم أكبر من [[3]].
 
 ---
-
 > id: look-and-say-3
 
 اكتشف عالم الرياضيات البريطاني [جون كونواي](bio:conway) أنه ، بغض النظر عن الرقم الذي تختاره كقيمة ابتدائية ، سينقسم التسلسل في النهاية إلى "أقسام" مميزة لم تعد تتفاعل مع بعضها البعض. أطلق كونواي على هذا اسم _نظرية الكونية_ ، وأطلق على الأقسام المختلفة باستخدام العناصر الكيميائية _هيدروجين_ ، _هيليوم_ ، _ليثيوم_ ،… ، حتى _بلوتونيوم_.
 
 ---
-
 > id: quiz
 
 ### اختبار التسلسل
@@ -1608,41 +1539,38 @@ _{button.next-step} متابعة_
 
 في هذا الاختبار يمكنك الجمع بين جميع معلوماتك حول التسلسلات. هناك هدف واحد: البحث عن النمط وحساب المصطلحين التاليين!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
+#### Find the next number
 
-::: .box-body
-
-{.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
+{.text-center.s-yellow(dir="ltr")} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
-_{span.pattern.reveal(when="blank-0 blank-1")} Pattern: Always +4_
+_{span.pattern.reveal(when="blank-0 blank-1")} نمط: دائما +4_
 
-{.text-center.s-orange} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
+{.text-center.s-orange(dir="ltr")} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
 _{.n}36_, _{.n}[[44]]_, _{.n}[[53]]_, …
-_{span.pattern.reveal(when="blank-2 blank-3")} Pattern: +3, +4, +5, +6, …_
+_{span.pattern.reveal(when="blank-2 blank-3")} نمط: +3, +4, +5, +6_
 
-{.text-center.s-red} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
+{.text-center.s-red(dir="ltr")} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
 _{.n}13_, _{.n}[[12]]_, _{.n}[[16]]_, …
-_{span.pattern.reveal(when="blank-4 blank-5")} Pattern: +4, –1, +4, –1, …_
+_{span.pattern.reveal(when="blank-4 blank-5")} نمط: +4, –1, +4, –1_
 
-{.text-center.s-purple} _{span.n}2_, _{span.n}4_, _{.n}6_, _{.n}12_, _{.n}14_,
+{.text-center.s-purple(dir="ltr")} _{span.n}2_, _{span.n}4_, _{.n}6_, _{.n}12_, _{.n}14_,
 _{.n}28_, _{.n}[[30]]_, _{.n}[[60]]_, …
-_{span.pattern.reveal(when="blank-6 blank-7")} Pattern: ×2, +2, ×2, +2, …_
+_{span.pattern.reveal(when="blank-6 blank-7")} نمط: ×2, +2, ×2, +2_
 
-{.text-center.s-blue} _{span.n}1_, _{span.n}1_, _{.n}2_, _{.n}3_, _{.n}5_,
+{.text-center.s-blue(dir="ltr")} _{span.n}1_, _{span.n}1_, _{.n}2_, _{.n}3_, _{.n}5_,
 _{.n}8_, _{.n}[[13]]_, _{.n}[[21]]_, …
-_{span.pattern.reveal(when="blank-8 blank-9")} Pattern: Fibonacci Numbers_
+_{span.pattern.reveal(when="blank-8 blank-9")} نمط: أرقام فيبو ناتشي_
 
-{.text-center.s-teal} _{span.n}27_, _{span.n}28_, _{.n}30_, _{.n}15_, _{.n}16_,
+{.text-center.s-teal(dir="ltr")} _{span.n}27_, _{span.n}28_, _{.n}30_, _{.n}15_, _{.n}16_,
 _{.n}18_, _{.n}[[9]]_, _{.n}[[10]]_, …
-_{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, ÷2, …_
+_{span.pattern.reveal(when="blank-10 blank-11")} نمط: +1, +2, ÷2, +1, +2, ÷2_
 
-{.text-center.s-green} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
+{.text-center.s-green(dir="ltr")} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
-_{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
+_{span.pattern.reveal(when="blank-12 blank-13")} نمط: أرقام مربعة فرذية_
 
-:::
 :::
 
 ---
@@ -1652,7 +1580,7 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 > section: pascals-triangle
 > id: pascal-intro
 
-أدناه يمكنك أن ترى هرم عدد تم إنشاؤه باستخدام نمط بسيط: يبدأ بـ "1" واحد في الأعلى ، وكل خلية تالية هي مجموع الخليتين أعلاه مباشرة. حرك مؤشر الماوس فوق بعض الخلايا لترى كيف يتم حسابها ، ثم املأ الخلايا المفقودة:
+أدناه يمكنك أن ترى هرم عدد تم إنشاؤه باستخدام نمط بسيط: يبدأ بـ "1" واحد في الأعلي ، وكل خلية تالية هي مجموع الخليتين أعلاه مباشرة. حرك مؤشر الماوس فوق بعض الخلايا لترى كيف يتم حسابها ، ثم املأ الخلايا المفقودة:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1671,13 +1599,11 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
         - i += 1;
 
 ---
-
 > id: pascal-intro-1
 
-أظهر هذا الرسم البياني الصفوف الاثني عشر الأولى فقط ، ولكن يمكننا الاستمرار إلى الأبد ، بإضافة صفوف جديدة في الأسفل. لاحظ أن المثلث [[متماثل|right-angled|equilateral]] ، والذي يمكن أن يساعدك في حساب بعض الخلايا.
+أظهر هذا الرسم البياني الصفوف الاثني عشر الأولى فقط ، ولكن يمكننا الاستمرار إلى الأبد ، بإضافة صفوف جديدة في الأسفل. لاحظ أن المثلث [[متماثل|بزاوية قاأمة|متساوي]] ، والذي يمكن أن يساعدك في حساب بعض الخلايا.
 
 ---
-
 > id: pascal-triangle
 
 يسمى المثلث [__مثلث باسكال__](gloss:pascals-triangle) ، والذي سمي على اسم عالم الرياضيات الفرنسي [بليز باسكال](bio:pascal). كان من أوائل علماء الرياضيات الأوروبيين الذين درسوا أنماطه وخصائصه ، ولكنه كان معروفًا للحضارات الأخرى قبل عدة قرون:
@@ -1707,7 +1633,6 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 _{button.next-step} متابعة_
 
 ---
-
 > id: pascal-sequences
 
 ### البحث عن التسلسل
@@ -1738,56 +1663,54 @@ _{button.next-step} متابعة_
 
 #### {.btn.yellow} _{span.check(when="blank-0")}_
 
-الأرقام في القطر الأول على كلا الجانبين هي [[أرقام|increasing|even]].
+الأرقام في القطر الأول على كلا الجانبين هي [[واحد|تزيد|زوجية]].
 
 ::: tab
 
 #### {.btn.orange} _{span.check(when="blank-1")}_
 
-الأرقام في القطر الثاني على كلا الجانبين هي [[أعداد صحيحة|primes|square numbers]].
+الأرقام في القطر الثاني على كلا الجانبين هي [[أعداد صحيحة|أعداد أولية|أرقام مربعة]].
 
 ::: tab
 
 #### {.btn.red} _{span.check(when="blank-2")}_
 
-الأرقام في القطر الثالث على كلا الجانبين هي {مثلث} أرقام [[<<<<|square numbers|Fibonacci numbers]].
+الأرقام في القطر الثالث على كلا الجانبين هي [[أرقام مثلثة|أرقام مربعة|أرقام فيبوناتشي]].
 
 ::: tab
 
 #### {.btn.purple} _{span.check(when="blank-3")}_
 
-الأرقام في القطر الرابع هي [[أرقام رباعي السطوح|cubic numbers|powers of 2]].
+الأرقام في القطر الرابع هي [[أرقام رباعي السطوح|أرقام مكعبة|سلاحيات اثنين]].
 
 ::: tab
 
 #### {.btn.blue} _{span.check(when="blank-4")}_
 
-إذا قمت بتجميع كل الأرقام في صف واحد ، فستكون مجاميعها بمثابة تسلسل آخر: [[قوى اثنتين|perfect numbers|prime numbers]].
+إذا قمت بتجميع كل الأرقام في صف واحد ، فستكون مجاميعها بمثابة تسلسل آخر: [[قوى اثنتين|أرقم كاملة|أرقام أولية]].
 
 ::: tab
 
 #### {.btn.teal} _{span.check(when="blank-5")}_
 
-في كل صف يحتوي على رقم أولي في خليته الثانية ، تكون جميع الأرقام التالية [[مضاعفات|factors|inverses]] من ذلك الرقم الأولي.
+في كل صف يحتوي على رقم أولي في خليته الثانية ، تكون جميع الأرقام التالية [[مضاعفات|العوامل|معكوس]] من ذلك الرقم الأولي.
 
 ::: tab
 
 #### {.btn.green} _{span.check(when="blank-6")}_
 
-يسلط الرسم البياني أعلاه الضوء على الأقطار "الضحلة" بألوان مختلفة. إذا جمعنا الأرقام في كل قطر ، نحصل على [[أرقام فيبوناتشي|Hailstone numbers|geometric sequence]].
+يسلط الرسم البياني أعلاه الضوء على الأقطار "الضحلة" بألوان مختلفة. إذا جمعنا الأرقام في كل قطر ، نحصل على [[أرقام فيبوناتشي|أرقام هيلستون |سلسلة هندسي]].
 
 :::
 
 ---
-
 > id: pascal-sequences-1
 
 بالطبع ، لكل من هذه الأنماط سبب رياضي يفسر سبب ظهوره. ربما يمكنك أن تجد بعضها!
 
-سؤال آخر قد تطرحه هو عدد المرات التي يظهر فيها رقم في مثلث باسكال. من الواضح أن هناك عددًا لا نهائيًا من 1s ، واحد 2 ، وكل رقم آخر يظهر [[مرتين على الأقل|at least once|exactly twice]] ، _{span.reveal(when="blank-0")} في القطر الثاني على كلا الجانبين._
+سؤال آخر قد تطرحه هو عدد المرات التي يظهر فيها رقم في مثلث باسكال. من الواضح أن هناك عددًا لا نهائيًا من 1s ، واحد 2 ، وكل رقم آخر يظهر [[مرتين على الأقل|مرة علا الأقل|مرتين بالضبط]] ، _{span.reveal(when="blank-0")} في القطر الثاني على كلا الجانبين._
 
 ---
-
 > id: pascal-sequences-2
 
 تظهر أيضًا بعض الأرقام الموجودة في منتصف المثلث ثلاث أو أربع مرات. حتى أن هناك القليل منها الذي يظهر ست مرات: يمكنك رؤية كل من [120](->.s120) و [3003](->.s3003) أربع مرات في المثلث أعلاه ، وستظهر مرتين إضافيتين في الصفين 120 و 3003 .
@@ -1797,7 +1720,6 @@ _{button.next-step} متابعة_
 من غير المعروف ما إذا كانت هناك أرقام أخرى تظهر ثماني مرات في المثلث ، أو إذا كانت هناك أرقام تظهر أكثر من ثماني مرات. افترض عالم الرياضيات الأمريكي [ديفيد سينجماستر](bio:singmaster) أن هناك حدًا ثابتًا لعدد المرات التي يمكن أن تظهر فيها الأرقام في مثلث باسكال - ولكن لم يثبت ذلك بعد.
 
 ---
-
 > id: modular
 > goals: select
 
@@ -1819,10 +1741,9 @@ _{button.next-step} متابعة_
         - i += 1;
     x-gesture(target="#pascal-select .r:nth-child(3) .c:nth-child(2)")
 
-{.reveal(when="select")} يبدو أن الرقم الزوجي في مثلث باسكال يشكل مثلثًا آخر أصغر [[<<<<|matrix|square]].
+{.reveal(when="select")} يبدو أن الرقم الزوجي في مثلث باسكال يشكل مثلثًا آخر أصغر [[مثلث|مصفوفة|مربع]].
 
 ---
-
 > id: modular-1
 > goals: c2 c3 c4 c5
 
@@ -1851,24 +1772,22 @@ _{button.next-step} متابعة_
         button.btn.btn-yellow(data-value="5") Divisible by 5
 
 ---
-
 > id: modular-2
 
 ::: column.grow
 
-رائع! تظهر الخلايا الملونة دائمًا في [[مثلثات|squares|pairs]] (باستثناء بعض الخلايا الفردية ، والتي يمكن رؤيتها كمثلثات بالحجم 1).
+رائع! تظهر الخلايا الملونة دائمًا في [[مثلثات|مربعات|أزواج]] (باستثناء بعض الخلايا الفردية ، والتي يمكن رؤيتها كمثلثات بالحجم 1).
 
-إذا واصلنا نمط الخلايا القابلة للقسمة على 2 ، نحصل على خلية مشابهة جدًا لـ __Sierpinski triangle__ على اليمين. تسمى مثل هذه الأشكال ، التي تتكون من نمط بسيط يبدو أنه يستمر إلى الأبد مع صغره وأصغره ، [__فركتلات__](gloss:fractal). سوف تتعلم المزيد عنها في المستقبل ...
+إذا واصلنا نمط الخلايا القابلة للقسمة على 2 ، نحصل على خلية مشابهة جدًا __لمثلث سيربينسكي__ على اليمين. تسمى مثل هذه الأشكال ، التي تتكون من نمط بسيط يبدو أنه يستمر إلى الأبد مع صغره وأصغره ، [__فركتلات__](gloss:fractal). سوف تتعلم المزيد عنها في المستقبل ...
 
 ::: column.width(280)
 
     img(src="images/sierpinski.svg" width=280 height=243 alt="Sierpinski Triangle")
-    p.caption The Sierpinski Triangle
+    p.caption مثلث سيربينسكي
 
 :::
 
 ---
-
 > id: pascal-binomial
 
 ### المعاملات ذات الحدين

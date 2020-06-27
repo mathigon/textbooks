@@ -1108,7 +1108,7 @@ lobachevsky:
   died: 1856
   name: Lobachevsky
   small: true
-  bio: __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) was a Russian
+  bio: __Nikolai Lobachevsky__ (Никола́й Лобаче́вский, 1792 – 1856) was a Russian
     mathematician, and one of the founders of non-Euclidean geometry. He managed
     to show that you can build up a consistent type of geometry in which
     Euclid’s fifth axiom (about parallel lines) does not hold.
@@ -1255,6 +1255,24 @@ monsky:
   bio: __Paul Monsky__ (born 1936) is an American mathematician and professor at
     Brandeis University. He proved that a square cannot be divided into an odd
     number of equal-area triangles – this is known as “Monsky’s theorem”.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 – 1872) was an American inventor and painter. He grew
+    up near Boston and studied at Yale university, before starting a career as
+    an artist.
+
+    On his return journey from a trip to Europe to study art, Morse overheard
+    passengers talking about new electrical devices. This inspired him to work
+    on a significant improvement to the electric telegraph, using just a single
+    wire, and to develop _Morse code_ with his assistant Alfred Vail.
+
+    After some initial difficulties in receiving funding, Morse’s telegraph
+    quickly spread all across the United States and the world.
+
+    Morse also ran twice for mayor of New York City, but his support for slavery
+    and against immigration meant that he was defeated both times.
 
 napier:
   born: 1550
@@ -1763,6 +1781,9 @@ turing:
     Turing was gay, which was still a crime during his life, and meant that his
     groundbreaking accomplishments were never fully recognised. He committed
     suicide at the age of 41.
+  links:
+    - title: Codes and Cryptography
+      url: /course/codes
 
 ulam:
   name: Ulam

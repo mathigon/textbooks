@@ -54,19 +54,22 @@ ve __{.green}7__|__{.orange}21__.
 
 Bu kısa oyunda hangi sayıların faktör veya kat olduğunu mümkün olduğunca hızlı bir şekilde belirlemelisiniz. Başlamak için [başlat butonuna](->#divisibility-game_.toggle) tıklayın.
 
-    .box.problem-box
-      .box-title: h3 Çarpan ve Kat Yarışması
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | sayısı
-          .factor-number ${y}
-          |'nin
-          .factor-value
-            .factor-bubble: .btn.btn-blue çarpanı
-            .factor-bubble: .btn.btn-blue katı
-            .factor-bubble: .btn.btn-blue hiçbir şeyi
-          |dir.
+::: .box.f-blue.no-padding
+#### Çarpan ve Kat Yarışması
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | sayısı
+        .factor-number ${y}
+        |'nin
+        .factor-value
+          .factor-bubble: .btn.btn-blue çarpanı
+          .factor-bubble: .btn.btn-blue katı
+          .factor-bubble: .btn.btn-blue hiçbir şeyi
+        | dir.
+
+:::
 
 ---
 > id: factors

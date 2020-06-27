@@ -199,16 +199,17 @@ Trên giấy nháp, bạn hãy thử vẽ các đồ thị khác nhau dưới đ
 Cũng như bản đồ ở trên, ta thấy rằng một số đồ thị có giải pháp khả thi trong khi một số khác thì không. Để hiểu vì sao chúng ta có thể đánh số [cấp độ](gloss:graph-degree) của mỗi đỉnh trong đồ thị.
 :
 
-    .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong Những đồ thị này khả thi:
-      include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong Những đồ thị này không khả thi:
-      include svg/vertex-orders-2.svg
-      p: select
-        option(value="val", selected) Phân màu theo giá trị
-        option(value="size") Phân màu theo nhỏ và lớn
-        option(value="prime") Phân màu theo số nguyên tố và số đa hợp
-        option(value="eo") Phân màu theo chẵn lẽ
+    figure
+      x-select.var.tabs(:bind="colour")
+        div(value="val") Giá trị
+        div(value="size") Nhỏ và lớn
+        div(value="prime") Số nguyên tố và số đa hợp
+        div(value="eo") Chẵn lẽ
+      .box
+        p(style="margin: 0"): strong Những đồ thị này khả thi:
+        include svg/vertex-orders-1.svg
+        p(style="margin: 1em 0 0"): strong Những đồ thị này không khả thi:
+        include svg/vertex-orders-2.svg
 
 ---
 > id: bridges-4
@@ -337,7 +338,7 @@ Trong một ngôi làng nhỏ có 3 nhà máy sản xuất nước, gas và đi�
 
 Hãy thử kết nối các nhà máy với nhà của khách hàng sao cho các đường dẫn không cắt ngang nhau:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn Clear
 
@@ -374,13 +375,18 @@ Cũng như bài toán của thị trấn Königsberg ở trên, bạn nhận ra 
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 Planarity
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md Đây là đồ thị phẳng nhưng ${n}{n|7|5,20,1} đỉnh đã bị xáo trộn. Hãy sắp xếp lại các cạnh này sao cho chúng không cắt nhau. 
-        button.btn Thử đồ thị khác
+::: .box.f-blue
+
+#### Planarity
+
+    x-solved
+    svg#planarity.frame(viewBox="0 0 640 320")
+
+Đây là đồ thị phẳng nhưng ${n}{n|7|5,20,1} đỉnh đã bị xáo trộn. Hãy sắp xếp lại các cạnh này sao cho chúng không cắt nhau. 
+
+    p.btn-row: button.btn Thử đồ thị khác
+
+:::
 
 ---
 > id: euler
@@ -428,7 +434,7 @@ Khi so sánh các con số này, bạn sẽ nhận thấy rằng số cạnh lu�
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -532,14 +538,9 @@ nhưng hầu hết các bản đồ phức tạp hơn cần nhiều màu hơn.
 
 Khi tô màu bản đồ của các tiểu  bang của Mỹ, hiển nhiên 50 màu chắc chắn là đủ, nhưng không cần thiết. Hãy thử tô màu bản đồ dưới đây sử dụng càng ít màu càng tốt:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
 
     x-tabbox.four-colours.full-width
       .tab
@@ -548,30 +549,24 @@ Khi tô màu bản đồ của các tiểu  bang của Mỹ, hiển nhiên 50 m�
         include svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
-        // Note that states or countries which only share a corner are allowed to have the same colour.
-        // Alaska and Hawaii are isolated from all of the other states and can have any colour.
       .tab
         h3 Nam Phi #[span.check(when="map-1")]
         x-solved
         include svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 Đức #[span.check(when="map-2")]
         x-solved
         include svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 Anh #[span.check(when="map-3")]
         x-solved
         include svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve Solution
 
 ---
 > id: maps-2

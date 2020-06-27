@@ -141,7 +141,7 @@ Un cubo ha [[3]] dimensioni. _{span.reveal(when="blank-0")} Quando lo ingrandiam
 
 ::: column.grow
 
-Ora diamo un'occhiata al triangolo di Sierpinski. Se lo ingrandiamo di un fattore 2, puoi vedere che la sua "area" aumenta di un fattore [[3]].
+Ora diamo un'occhiata al triangolo di Sierpinski. Se lo ingrandiamo di un fattore 2, puoi vedere che la sua "area" aumenta di un fattore di [[3]].
 
 {.reveal(when="blank-0")} Supponiamo che _d_ sia la dimensione del triangolo di Sierpinski. Usando lo stesso modello di cui sopra, otteniamo `2^d = 3`. In altre parole, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1,585…_
 
@@ -730,15 +730,15 @@ Prendiamo la formula ricorsiva `§x_n = x_(n-1)^2` come esempio, e tracciamo i s
 
 Nota come la sequenza risultante può comportarsi in modo molto diverso, a seconda del valore iniziale `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Se `x_0 > 1`, la sequenza [[diverge|converge]]: _{span.reveal(when="blank-0")} continua a crescere, fino all'infinito._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0` è compreso tra -1 e 1, la sequenza [[converge|diverge]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0 < -1`, la sequenza [[diverge|converge]].
 
@@ -836,7 +836,6 @@ I punti di colore blu indicano che la sequenza corrispondente converge o ha un'o
 :::
 
 ---
-
 > id: julia-3
 
 Le diverse forme che si creano colorando i numeri sono chiamate [__Insiemi di Julia__](gloss:julia-set). Furono scoperti indipendentemente da due matematici francesi, [Gaston Julia](bio:julia) e [Pierre Fatou](bio:fatou), intorno al 1918.
@@ -868,7 +867,6 @@ Non abbiamo questo problema oggi: tutte le immagini qui sotto sono diversi insie
 [Continua](btn:next)
 
 ---
-
 > id: mandel-paint
 > goals: wipe-a wipe-b wipe-c
 
@@ -903,7 +901,6 @@ Ancora una volta, spostati sul piano complesso per rivelare l'area in cui le seq
             strong.var(:show="!converges" data-display="inline") Diverge!
 
 ---
-
 > id: mandel-history
 
 Questo frattale è chiamato [__Insieme di Mandelbrot__](gloss:mandelbrot-set) e, quando viene ruotato di 90 °, sembra quasi ad una persona, con testa, corpo e due braccia. È stato definito e disegnato per la prima volta in un articolo scientifico del 1978 dei matematici Robert Brooks e Peter Matelski:
@@ -913,7 +910,6 @@ Questo frattale è chiamato [__Insieme di Mandelbrot__](gloss:mandelbrot-set) e,
 Alcuni anni dopo, [Benoit Mandelbrot](bio:mandelbrot) usò i potenti computer dell’IBM per creare una visualizzazione molto più dettagliata del frattale, che in seguito prese il suo nome. Le prime stampe avevano un aspetto diverso da quello che si aspettava, e poi si rese conto che i tecnici delle stampanti ripulivano la "sfocatura" attorno al bordo, supponendo che fosse causata da particelle di polvere o errori della stampante, mentre invece erano una caratteristica distintiva dei frattali! [Continua](btn:next)
 
 ---
-
 > id: mandel-zoom
 
 Come tutti i frattali, possiamo "ingrandire" il set di Mandelbrot all’infinito, trovando nuovi schemi su ogni scala. Qui puoi ingrandire una parte del set di Mandelbrot che si chiama __Cavalluccio Marino__. I punti neri sono _all'interno_ dell’insieme di Mandelbrot, dove la sequenza è limitata. I punti colorati sono _all'esterno_ dell'insieme di Mandelbrot, dove la sequenza diverge, e i diversi colori indicano _quanto velocemente_ cresce all'infinito:
@@ -927,13 +923,11 @@ Come tutti i frattali, possiamo "ingrandire" il set di Mandelbrot all’infinito
     x-slider(steps=27 continuous speed=0.1 :bind="scale")
 
 ---
-
 > id: mandel-zoom-1
 
 Questa barra di scorrimento è composta da 27 singole immagini, fino ad un livello di zoom di oltre 14 quadrilioni o `2^54`. Complessivamente, ci sono voluti quasi 45 minuti per il rendering su un laptop moderno. Il set di Mandelbrot può essere creato con una sola, semplice equazione, `§x_n = x_(n-1)^2 + c`, ma è infinitamente complesso e straordinariamente bello.
 
 ---
-
 > id: mandel-orbits
 
 ::: column(width=360 parent="right")
@@ -961,7 +955,6 @@ Mentre sposti il valore di [{.pill.red} c](target:c) attorno all'insieme di Mand
 {.reveal(when="blank-3")} Ogni cerchio ha un'orbita di dimensioni diverse, e i cerchi più piccoli hanno sempre più punti nelle loro orbite. Le dimensioni di queste orbite sono strettamente correlate alla __Mappa Logistica__, un concetto importante nella [Teoria del Caos](/course/chaos).
 
 ---
-
 > id: mandel-outro
 
 ::: column.grow
@@ -977,14 +970,9 @@ Nel 1985, l’insieme di Mandelbrot è apparso sulla copertina della rivista _Sc
 :::
 
 ---
-
 ## Curve di Riempimento dello Spazio
 
 > section: space-filling
 > sectionStatus: dev
 
-{.todo} Stiamo ancora lavorando su questa sezione. Torna presto!
-
-
-
-
+{.todo} Prossimamente!

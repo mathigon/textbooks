@@ -275,15 +275,20 @@ Eğer 30 defa zar atarsak, yaklaşık `1/6 × 30 = 5` defa altı geleceğini bil
 
 Bu animasyonda aynı anda bir çok defa “sanal” zar atabilir ve gelen sonuçları öngördüğümüz olasılıklarla karşılaştırabilirsiniz:
 
-    .box
-      .box-title: h3 Zar atmak
-      .box-body
-        .probTable.var ${ probTable(d) }
-        p.md Aynı anda ${d}{d|2|1,6,1} tane zar atıyoruz ve gelen sayıların #[span.dice(style="width: auto; padding: 0 4px;") TOPLAMINI] not ediyoruz. #[strong.m-green yeşil çizgiler] olasılık teorisinin öngördüğü, her sonucun gelme olasılığını temsil ediyor ve  #[strong.m-blue mavi çizgiler] bu bilgisayar deneyinde her bir sonucun ne sıklıkla elde edildiğini gösteriyor
-        p.btn-row
-          button.btn Zar at
-          button.btn Roll 100 defa zar at
-          button.btn Roll 1000 defa zar at
+::: .box.f-red
+
+#### Zar atmak
+
+    .probTable.var(:html="probTable(d)")
+
+Aynı anda ${d}{d|2|1,6,1} tane zar atıyoruz ve gelen sayıların _{span.dice(style="width: auto; padding: 0 4px;")} TOPLAMINI_ not ediyoruz. __{.m-green} yeşil çizgiler__ olasılık teorisinin öngördüğü, her sonucun gelme olasılığını temsil ediyor ve  __{.m-blue} mavi çizgiler__ bu bilgisayar deneyinde her bir sonucun ne sıklıkla elde edildiğini gösteriyor
+
+    p.btn-row.no-voice
+      button.btn Zar at
+      button.btn Roll 100 defa zar at
+      button.btn Roll 1000 defa zar at
+
+:::
 
 {.reveal(when="roll")} Dikkat ederseniz, gittikçe daha fazla zar atarsak, gözlemlediğimiz frekanslar, olasılık teorisi kullanarak öngördüğümüz frekanslara gittikçe yaklaşıyor. Bu prensibi bütün olasılık deneylerine uygulanabilir, buna __Büyük Sayılar Yasası__ diyoruz.
 

@@ -5,7 +5,7 @@
 > id: intro
 > section: introduction
 
-Viele geometrische Grundvorstellungen, wie [Geraden](gloss:line) und [Punkte](gloss:point),
+Viele geometrische Grundvorstellungen, wie [Geraden](gloss:line) oder [Punkte](gloss:point),
 wurden von Mathematikern "erfunden". Symmetrie hingegen ist überall
 um uns herum. Fast alle Pflanzen, Tiere und sogar wir Menschen sind symmetrisch.
 
@@ -29,7 +29,7 @@ _zu sein_ als unsymmetrische.
     x-img(src="images/window.jpg" width=200 height=200 lightbox)
 :::
 
-Aber bei der Symmetrie geht es um viel mehr, als einfach nur _schön auszusehen_. Sie liegt 
+Aber bei der Symmetrie geht es um viel mehr, als einfach nur _schön auszusehen_. Sie liegt
 unserem Universum zu Grunde und kann sogar die grundlegendsten
 Gesetze der Physik erklären.
 
@@ -40,9 +40,9 @@ _{button.next-step} Weiter_
 > goals: t1 t2 t3
 
 Obwohl man sich unter Symmetrie sehr leicht etwas vorstellen kann, ist es
-schwieriger als man vermuten würde, sie mathematisch zu beschreiben. Zuerst
-müssen wir über [__Abbildung__](gloss:transformation) lernen. Darunter versteht
-spezielle Regeln, wie eine geometrische Figur in eine andere umgewandelt wird.
+schwieriger als man vermuten würde, sie mathematisch zu beschreiben. Zunächst müssen wir etwas
+über [__Abbildungen__](gloss:transformation) lernen, d.h. über Möglichkeiten, eine geometrische
+Figur in eine andere umzuwandeln.
 Hier sind einige Beispiele:
 
 ::: column.r(width=200)
@@ -63,12 +63,9 @@ Hier sind einige Beispiele:
 > id: transformations-1
 
 {.reveal(when="t1 t2 t3")} Das Ergebnis einer Abbildung wird als
-[__Bild__](gloss:transformation-image) bezeichnet. Das Bild einer Figur `A` wird in der Regel
-mit `A'` bezeichnet (ausgesprochen als "A Strich").
-
-Das erste Beispiel oben ist besonderes, da wir den ursprüngliche Stern nur
-bewegen und drehen, aber nicht seine Größe oder Form verändern. Abbildungen mit
-dieset Eigenschaft nennt man [__Kongruenzabbildungen__](gloss:rigid-transformation).
+[__Bild__](gloss:transformation-image) bezeichnet. Das Bild einer Figur `A` wird in
+der Regel mit `A'` bezeichnet (ausgesprochen als "A Strich"). Es gibt viele verschiedene Arten von
+Abbildungen, auf die wir im Laufe dieses Kurses näher eingehen werden.
 
 ---
 
@@ -78,12 +75,12 @@ dieset Eigenschaft nennt man [__Kongruenzabbildungen__](gloss:rigid-transformati
 > section: rigid
 
 Eine [__Kongruenzabbildungen (längentreue Abbildungen)__](gloss:rigid-transformation)
-ist eine Abbildung die Größe und Form der ursprüngliche Figur nicht verändert.
-Stell dir vor, sie besteht aus einem festen Material wie Holz oder Metall: Wir
+ist eine besondere Art der Abbildung, die Größe und Form der ursprünglichen Figur nicht verändert.
+Stell dir vor, diese Figur würde aus einem festen Material wie Holz oder Metall bestehen: Wir
 können sie bewegen, drehen und wenden, aber wir können sie nicht dehnen
 oder irgendwie verformen.
 
-Welche dieser Abbildungen sind längentreu?
+Welche dieser fünf Abbildungen sind längentreu?
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -96,9 +93,7 @@ Welche dieser Abbildungen sind längentreu?
 > id: rigid-1
 > goals: t1 t2 t3
 
-Bei Kongruenzabbildungen ist das Bild immer
-[[kongruent|gleich|umgedreht]] im Vergleich mit dem Original. Es gibt drei verschiedene
-Arten von Kongruenzabbildungen:
+Es stellt sich heraus, dass es nur drei verschiedene Arten von Kongruenzabbildungen gibt:
 
 ::: column.grow.r(width=200)
     .animation
@@ -480,6 +475,39 @@ TODO
 
 ---
 
+### Zusammengesetzte Abbildungen
+
+Natürlich können wir mehrere Verschiebungen, Spiegelungen und Drehungen kombinieren,
+um komplexere Abbildungen zu erzeugen.
+
+{.todo} TODO Example
+
+Wie sich jedoch herausstellt, spielt es keine Rolle, wie viele verschiedene Abbildungen
+man kombiniert: Man kann immer eine andere Abbildung finden, die das Gleiche in einem
+einzigen Schritt erreicht!
+
+{.todo} TODO Transformation composition calculator
+
+Die Kombination von zwei Spiegelungen ist besonders interessant. Es gibt zwei verschiedene
+Fälle, die wir in Betracht ziehen müssen:
+
+::: column.grow
+Wenn die beiden Spiegelungsachsen parallel sind, ist das Ergebnis gleich wie bei
+einer einzigen Verschiebung.
+Die Richtung der Verschiebung verläuft senkrecht zu den Spiegelungsachsen,
+und der Abstand ist doppelt so groß wie der Abstand zwischen den Spiegelungsachsen.
+
+{.todo} TODO Animation
+::: column.grow
+Wenn sich die beiden Spiegelungsachsen schneiden, ist das Ergebnis wie bei einer einzige Drehung.
+Der Drehpunkt ist der Schnittpunkt zwischen den Spiegelungsachsen, und der
+Winkel ist der doppelte Winkel zwischen den Spiegelungsachsen.
+
+{.todo} TODO Animation
+:::
+
+---
+
 ## Symmetrie
 
 > id: symmetry
@@ -677,7 +705,7 @@ Ausrichtungen, in denen die Figur gleich aussieht. Du kannst dir das auch so vor
 Zum Beispiel hat diese Schneeflocke die Zähligkeit [[6]].
 
 {.reveal(when="blank-0")} Der Winkel jeder Drehung beträgt `"360°"/"Zähligkeit"`. Für der
-Schneeflocke sind das `"360°"/6` = [[60]]°.
+Schneeflocke sind das `"360°"/6 = input(60)°`.
 
 ::: column(width=240)
 
@@ -691,17 +719,23 @@ Schneeflocke sind das `"360°"/6` = [[60]]°.
 Finde die Zähligkeit und den Drehwinkel für jede dieser Figuren:
 
 ::: column(width=220)
+
     img(src="images/clover.jpg" width=200 height=200)
 
 {.caption} Zähligkeit [[4]],Winkel [[90]]°
+
 ::: column(width=220)
+
     img(src="images/playing-card.jpg" width=200 height=200)
 
 {.caption} Zähligkeit [[2]], Winkel [[180]]°
+
 ::: column(width=220)
+
     img(src="images/flower.jpg" width=200 height=200)
 
 {.caption} Zähligkeit [[8]], Winkel [[45]]°
+
 :::
 
 ---
@@ -775,9 +809,10 @@ Du hast bereits oben gezeigt, dass ein Quadrat [[4]] Spiegelachsen hat.
 {.reveal(when="blank-0")} Es ist auch rotationssymmetrisch und zwar um [[90]]°,
 [[180]]° und [[270]]°.
 
-{.reveal(when="blank-1 blank-2 blank-3")} Und schließlich können wir uns als eine weitere besondere Art der Symmetrie das "Nichts tun" vorstellen
-- denn das Ergebnis
-ist (eh klar) das gleiche wie zuvor. Dies wird manchmal als die __Identität__ bezeichnet.
+{.reveal(when="blank-1 blank-2 blank-3")} Und schließlich können wir uns als eine weitere besondere
+Art der Symmetrie das "Nichts tun" vorstellen - denn das Ergebnis
+ist (eh klar) das
+gleiche wie zuvor. Dies wird manchmal als die __Identität__ bezeichnet.
 
 {.reveal(when="blank-1 blank-2 blank-3" delay=1000)} Insgesamt haben wir [[8]]
 verschiedene "Symmetrien des Quadrats" gefunden.
@@ -999,9 +1034,9 @@ Spiegelung und einer Verschiebung in die Richtung der Spiegelachse.
 ---
 > id: wallpaper-groups-2
 
-Ein Muster kann auch mehr als eine Art von Symmetrie aufweisen. Und wir finden die [Symmetriegruppe](gloss:symmetry-group) eines Musters
-, die alle seine verschiedenen Symmetrien
-enthält, genau wie bei Quadraten.
+Ein Muster kann auch mehr als eine Symmetrieart aufweisen. Und, genau wie bei den Quadraten,
+können wir die [Symmetriegruppe](gloss:symmetry-group) eines Musters finden, die alle
+seine verschiedenen Symmetrien beinhaltet.
 
 Diese Gruppen sagen wenig darüber aus, wie das Muster _aussieht_ (z.B. seine
 Farben und Formen), man erfährt nur wie es sich _wiederholt_. Mehrere verschiedene Muster können die gleiche Symmetriegruppe
@@ -1039,66 +1074,67 @@ Spiegelungsachsen](gloss:axis-of-symmetry) erkennen?
     x-gallery(slide-width="320")
       div
         img(src="images/wallpapers/p1.svg" width=360, height=240)
-        p.caption <strong>Gruppe p1</strong><br>Nur Verschiebungen
+        p.caption <strong>Gruppe 1 - p1</strong><br>Nur Verschiebungen
       div
         img(src="images/wallpapers/p2.svg" width=360, height=240)
-        p.caption <strong>Gruppe p2</strong><br>zweizählige Drehung, Verschiebungen
+        p.caption <strong>Gruppe 2 - p2</strong><br>zweizählige Drehung, Verschiebungen
       div
         img(src="images/wallpapers/p3.svg" width=360, height=240)
-        p.caption <strong>Gruppe p3</strong><br>Dreizählige Drehungen (120°), Verschiebungen
+        p.caption <strong>Gruppe 3 - p3</strong><br>Dreizählige Drehungen (120°), Verschiebungen
       div
         img(src="images/wallpapers/p4.svg" width=360, height=240)
-        p.caption <strong>Gruppe p4</strong><br>Vier zweizählige Drehungen (180°), Verschiebungen
+        p.caption <strong>Gruppe 4 - p4</strong><br>Vier zweizählige Drehungen (180°), Verschiebungen
       div
         img(src="images/wallpapers/p6.svg" width=360, height=240)
-        p.caption <strong>Gruppe p6</strong><br>Zwei-, drei- und sechszählige Drehungen (60°), Verschiebungen
+        p.caption <strong>Gruppe 5 - p6</strong><br>Zwei-, drei- und sechszählige Drehungen (60°), Verschiebungen
       div
         img(src="images/wallpapers/pm.svg" width=360, height=240)
-        p.caption <strong>Gruppe PM</strong><br>Parallele Spiegelachsen, Verschiebungen
+        p.caption <strong>Gruppe 6 - PM</strong><br>Parallele Spiegelachsen, Verschiebungen
       div
         img(src="images/wallpapers/pmm.svg" width=360, height=240)
-        p.caption <strong>Gruppe PMM</strong><br>Senkrechte Spiegelungen, zweizählige Drehungen, Verschiebungen
+        p.caption <strong>Gruppe 7 - PMM</strong><br>Senkrechte Spiegelungen, zweizählige Drehungen, Verschiebungen
       div
         img(src="images/wallpapers/p4m.svg" width=360, height=240)
-        p.caption <strong>Gruppe P4M</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 8 - P4M</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p6m.svg" width=360, height=240)
-        p.caption <strong>Gruppe P6M</strong><br>Drehungen (2 + 6), Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 9 - P6M</strong><br>Drehungen (2 + 6), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-        p.caption <strong>Gruppe P3M1</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 10 - P3M1</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>Gruppe P31M</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 11 - P31M</strong><br>Drehungen (3), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Gruppe P4G</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 12 - P4G</strong><br>Drehungen (2 + 4), Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
-        p.caption <strong>Gruppe CMM</strong><br>Senkrechte Spiegelungen, Drehungen (2), Verschiebungen
+        p.caption <strong>Gruppe 13 - CMM</strong><br>Senkrechte Spiegelungen, Drehungen (2), Verschiebungen
       div
         img(src="images/wallpapers/pmg.svg" width=360, height=240)
-        p.caption <strong>Gruppe PMG</strong><br>Spiegelungen, Gleitspiegelungen, Drehungen (2), Verschiebungen
+        p.caption <strong>Gruppe 14 - PMG</strong><br>Spiegelungen, Gleitspiegelungen, Drehungen (2), Verschiebungen
       div
         img(src="images/wallpapers/pg.svg" width=360, height=240)
-        p.caption <strong>Gruppe PG</strong><br>Parallele Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 15 - PG</strong><br>Parallele Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>Gruppe CM</strong><br>Spiegelungen, Gleitspiegelungen, Verschiebungen
+        p.caption <strong>Gruppe 16 - CM</strong><br>Spiegelungen, Gleitspiegelungen, Verschiebungen
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
-        p.caption <strong>Gruppe PGG</strong><br>Senkrechte Gleitspiegelungen, Drehungen (2), Verschiebungen
+        p.caption <strong>Gruppe 17 - PGG</strong><br>Senkrechte Gleitspiegelungen, Drehungen (2), Verschiebungen
 
-Leider gibt es keinen einfachen Grund, warum es _17_ dieser Gruppen gibt.
-Der Beweis dafür erfordert eine viel fortgeschrittenere Mathematik…
-
-Stattdessen kannst du versuchen, deine eigenen sich wiederholenden Muster für jede der 17
-Ornamentgruppen zu zeichnen:
 
 ---
 > id: drawing
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
+
+Leider ist der Grund dafür, warum es genau _17_ dieser Gruppen gibt, nicht einfach.
+Der Beweis dafür erfordert eine viel fortgeschrittenere Mathematik…
+
+Stattdessen kannst du versuchen, deine eigenen sich wiederholenden Muster für jede der 17
+Ornamentgruppen zu zeichnen:
 
     include ./components/wallpaper
     x-wallpaper

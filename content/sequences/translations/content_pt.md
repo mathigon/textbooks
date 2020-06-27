@@ -21,7 +21,7 @@ Na última década, __departamentos de polícia__ ao redor do mundo começaram a
 
 ::: column(width=400)
 
-Acontece que __terremotos__ seguem padrões semelhantes aos crimes. Assim como um crime pode provocar retaliações, um terremoto pode causar tremores secundários. Em matemática, isso é chamado de "processos auto-emocionantes", e existem equações que ajudam a prever quando o próximo pode acontecer.
+Acontece que __terremotos__ seguem padrões semelhantes aos crimes. Assim como um crime pode provocar retaliações, um terremoto pode causar tremores secundários. Em matemática, isso é chamado de "processos auto-excitantes", e existem equações que ajudam a prever quando o próximo terremoto pode acontecer.
 
 ::: column(width=160)
 
@@ -38,9 +38,9 @@ Os matemáticos profissionais usam algoritmos altamente complexos para encontrar
 ---
 > id: simple-patterns
 
-Sequências Simples
+### Sequências Simples
 
-Na matemática, uma sequência [__<<<<__](gloss:sequence) é uma cadeia de números (ou outros objetos) que geralmente seguem um padrão específico. Os elementos individuais em uma sequência são chamados [__termos__](gloss:sequence-term).
+Na matemática, uma [__sequência__](gloss:sequence) é uma cadeia de números (ou outros objetos) que geralmente seguem um padrão específico. Os elementos individuais em uma sequência são chamados [__termos__](gloss:sequence-term).
 
 Aqui estão alguns exemplos de sequências. Você consegue encontrar seus padrões e calcular os próximos dois termos?
 
@@ -60,7 +60,7 @@ _{span.pattern.reveal(when="blank-2 blank-3")} Padrão: “Adicione 6 ao número
 _{.n}7*{span.arrow(hidden)}+3*_, _{.n}8*{span.arrow(hidden)}+1*_,
 _{.n}11*{span.arrow(hidden)}+3*_, _{.n}[[12]]*{span.arrow(hidden)}+1*_,
 _{.n}[[15]]*{span.arrow(hidden)}+3*_, …
-_{span.pattern.reveal(when="blank-4 blank-5")} Padrão: “Adicione 1 alternadamente e adicione 3 ao número anterior, para obter o próximo.”_
+_{span.pattern.reveal(when="blank-4 blank-5")} Padrão: “Adicione alternadamente 1 e 3 ao número anterior, para obter o próximo.”_
 
 {.text-center.s-lime.with-arrows} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
 _{.n}4*{span.arrow(hidden)}×2*_, _{.n}8*{span.arrow(hidden)}×2*_,
@@ -87,7 +87,7 @@ O pequeno número após o _x_ é chamado de __subscrito__ e indica a posição d
 ---
 > id: triangles
 
-### Números de Triângulos e Quadrados
+### Números triangulares e quadrados
 
 Sequências em matemática nem sempre precisam ser números. Aqui está uma sequência que consiste em formas geométricas - triângulos de tamanho crescente:
 
@@ -152,12 +152,12 @@ Também podemos descrever esse padrão usando uma [fórmula](gloss:formula) espe
       | &nbsp;+&nbsp;
       em#t3 n
 
-Para obter o número do triângulo _n_, pegamos o número do triângulo [[anterior|first|next]] e adicionamos _n_. Por exemplo, se _n_ = ${n}{n|5|2,20,1}, a fórmula se tornará <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
+Para obter o _n_-ésimo número triangular, pegamos o número triangular [[anterior|inicial|seguinte]] e adicionamos _n_. Por exemplo, se _n_ = ${n}{n|5|2,20,1}, a fórmula se tornará <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
 
 ---
 > id: recursive-1
 
-Uma fórmula que expressa `x_n` como uma função de termos anteriores na sequência é chamada de [__fórmula recursiva__](gloss:sequence-recursive). Desde que conheça o [[primeiro termo|last term|second term]] na sequência, você poderá calcular todos os seguintes.
+Uma fórmula que expressa `x_n` como uma função de termos anteriores na sequência é chamada de [__fórmula recursiva__](gloss:sequence-recursive). Desde que se conheça o [[primeiro termo|último termo|segundo termo]] na sequência, você poderá calcular todos os termos seguintes.
 
 ---
 > id: squares
@@ -207,14 +207,14 @@ Outra sequência que consiste em formas geométricas são os __números quadrado
 ---
 > id: square-1
 
-Para os números dos triângulos, encontramos uma fórmula recursiva que informa o _próximo_ termo da sequência como uma função de seus _termos_ anteriores. Para números quadrados, podemos fazer ainda melhor: uma fórmula que informa diretamente o termo _n_, sem primeiro ter que calcular todos os anteriores:
+Para os números triangulares, encontramos uma fórmula recursiva que informa o _próximo_ termo da sequência como uma função de seus termos _anteriores_. Para números quadrados, podemos fazer ainda melhor: uma fórmula que informa diretamente o _n_-ésimo termo, sem ter que calcular todos os anteriores:
 
 {.text-center.s-purple} _{.n} `x_n`_ = _{x-equation(solution="n^2")}_
 
 ---
 > id: explicit
 
-Isso é chamado de fórmula explícita [__<<<<__](gloss:sequence-explicit). Podemos usá-lo, por exemplo, para calcular que o 13º número quadrado é [[169]], sem primeiro encontrar os 12 números quadrados anteriores.
+Isso é chamado de [__fórmula explícita__](gloss:sequence-explicit). Podemos usá-la, por exemplo, para calcular que o 13º número quadrado é [[169]], sem primeiro encontrar os 12 números quadrados anteriores.
 
 ---
 > id: definitions
@@ -227,24 +227,24 @@ Vamos resumir todas as definições que vimos até agora:
 
 Uma [__sequência__](gloss:sequence) é uma lista de números, formas geométricas ou outros objetos que seguem um padrão específico. Os itens individuais na sequência são chamados [__termos__](gloss:sequence-term) e representados por variáveis como `x_n`.
 
-Uma [__fórmula recursiva__](gloss:sequence-recursive) para uma sequência informa o valor do _n_ termo em função de [[seus termos anteriores|the first term]]. Você também precisa especificar o (s) primeiro (s) termo (s).
+Uma [__fórmula recursiva__](gloss:sequence-recursive) para uma sequência informa o valor do _n_-ésimo termo em função de [[seus termos anteriores|seu primeiro termo]]. Você também precisa especificar o(s) primeiro(s) termo(s).
 
-Uma [__fórmula explícita__](gloss:sequence-explicit) para uma sequência informa o valor do _n_ termo como uma função de [[apenas _n_|the previous term]], sem se referir a outros termos na sequência.
+Uma [__fórmula explícita__](gloss:sequence-explicit) para uma sequência informa o valor do _n_-ésimo termo como uma função de [[apenas _n_|termos anteriores]], sem se referir a outros termos na sequência.
 
 :::
 
 ---
 > id: action-sequence
 
-Fotografia de sequência de ação
+### Fotografia de sequência de ação
 
-Nas seções a seguir, você aprenderá sobre muitas sequências matemáticas diferentes, padrões surpreendentes e aplicativos inesperados.
+Nas seções a seguir, você aprenderá sobre muitas sequências matemáticas diferentes, padrões surpreendentes e aplicações inesperadas.
 
 Primeiro, porém, vamos ver algo completamente diferente: __fotografia de sequência de ação__. Um fotógrafo tira muitas fotos em rápida sucessão e as funde em uma única imagem:
 
     figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
-Você pode ver como o esquiador forma uma sequência? O padrão não é adição ou multiplicação, mas uma transformação geométrica [<<<<](gloss:rigid-transformation). Entre etapas consecutivas, o esquiador é traduzido e rodado [[>>>>.
+Você pode ver como o esquiador forma uma sequência? O padrão não é adição ou multiplicação, mas uma [transformação geométrica](gloss:rigid-transformation). Entre etapas consecutivas, o esquiador é transladado e [[rotacionado|refletido|dilatado]].
 
 ---
 > id: action-sequence-1
@@ -471,17 +471,17 @@ _{span.n}${geometric(b,r,5)}_, …
 
 {.reveal(when="blank-0 blank-1")} Seqüências geométricas, por outro lado, podem se comportar de maneira completamente diferente com base nos valores de `a` e _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 Se _{span.var-action} `r > 1`_, os termos [[rapidamente aumentarão|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, até o infinito. Os matemáticos dizem que a sequência [__diverge__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 Se _{span.var-action} _r_ estiver entre –1 e 1_, os termos sempre [[se aproximarão de 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Dizemos que a sequência [__converge__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-Se _{span.var-action} `r < -1`_, os termos alternarão entre positivo e negativo, enquanto o seu valor absoluto [[<<<<|inverse|difference]] aumenta.
+Se _{span.var-action} `r < -1`_, os termos alternarão entre positivo e negativo, enquanto o seu [[valor absoluto|inverse|difference]] aumenta.
 
 :::
 
@@ -766,19 +766,15 @@ Os números dos triângulos parecem aparecer em toda parte na matemática e voc�
 ---
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
-
-::: .box-body
+#### Problem Solving
 
 Qual é a soma dos 100 primeiros [números inteiros positivos](gloss:integer)? Em outras palavras, qual é o valor de
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
 Em vez de somar tudo manualmente, você pode usar os números do triângulo [<<<<](gloss:triangle-numbers) para ajudá-lo? E a soma dos primeiros 1000 números inteiros positivos?
-
-:::
 
 :::
 
@@ -1030,7 +1026,7 @@ Mas acontece que existem muitos outros lugares na natureza onde os números de F
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1042,7 +1038,7 @@ Mas acontece que existem muitos outros lugares na natureza onde os números de F
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1066,7 +1062,7 @@ Claro, isso não é apenas uma coincidência. Há uma razão importante pela qua
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1276,11 +1272,9 @@ _{span.n}${8×a+13×b}_, …
 
 Existem muitos outros quebra-cabeças, padrões e aplicativos relacionados aos números de Fibonacci. Aqui estão alguns exemplos, que você pode experimentar:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 __1. Divisibilidade de Fibonacci__
 
@@ -1303,8 +1297,6 @@ Ao subir as escadas, posso dar um único passo ou pular dois degraus por vez. Is
     figure: x-img(src="images/stairs.svg" width=530 height=200)
 
 Quantas opções existem para escadas com 6, 7 ou 8 degraus? Você consegue detectar um padrão? E como isso está relacionado aos números de Fibonacci?
-
-:::
 
 :::
 
@@ -1404,15 +1396,15 @@ Para determinar se um número é [primo](gloss:prime), precisamos encontrar todo
 
 Vamos comparar esses números com a soma dos fatores:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 Para a maioria dos números, a soma de seus fatores é [[menor que o próprio|greater than|equal to]]. Esses números são chamados __números deficientes__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 Para alguns números, a soma de seus fatores é maior que ela mesma. Esses números são chamados __números abundantes__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Apenas um número na lista acima tem uma soma dos fatores que _são iguais a_ para si: [[6]]. Isso é chamado de [__número perfeito__](gloss:perfect-numbers).
 
@@ -1550,11 +1542,9 @@ Você já viu inúmeras sequências matemáticas diferentes - algumas baseadas e
 
 Neste questionário, você pode combinar todo o seu conhecimento sobre sequências. Há apenas um objetivo: encontre o padrão e calcule os próximos dois termos!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1584,7 +1574,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} Padrão: +1, +2, ÷2, +1, +2, �
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Padrão: Odd square numbers_
 
-:::
 :::
 
 ---

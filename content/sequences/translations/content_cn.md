@@ -497,17 +497,17 @@ _{span.n}${geometric(b,r,5)}_, …
 {.reveal(when="blank-0 blank-1")} 另一方面，几何序列会由于`a`和*r*的不同值而
 展现出完全不一样的曲线行为。
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 如果 _{span.var-action}`r > 1`_, 则后面项将[[快速变大|快速变小|趋近0]]_{span.reveal(when="blank-2")}, 直到无穷。数学家称该序列[__发散__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 如果 _{span.var-action}*r* 是介于 –1 和 1_之间, 后面项将总是
 [[趋近0|降至负无穷|变小]]_{span.reveal(when="blank-3")}.
 我们称该序列[__收敛__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 如果_{span.var-action}`r < -1`_，则后面项将在正数和负数之间交替，而它们的
 [[绝对值|相反数|差]]将变大。
@@ -899,9 +899,9 @@ _任意_整数都可以写成最多三个三角形数的和：
 ---
 > id: triangle-investigate
 
-::: .box.problem-box
-    .box-title: h3 问题求解
-::: .box-body
+::: .box.f-blue
+
+#### 问题求解
 
 前100个正[整数](gloss:integer)的和是多少？换句话说，下面式子的结果值是多少:
 
@@ -910,7 +910,6 @@ _任意_整数都可以写成最多三个三角形数的和：
 你能不用手工一个个加起来, 而用[三角形数](gloss:triangle-numbers)辅助来求结果吗?
 算算前1000个正整数的和怎么样？
 
-:::
 :::
 
 ---
@@ -1182,7 +1181,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div 原样
       div(data-value="cw") 顺时针
       div(data-value="ccw") 逆时针.
@@ -1194,7 +1193,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div 原样
       div(data-value="cw") 顺时针
       div(data-value="ccw") 逆时针.
@@ -1219,7 +1218,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") 雄性
       div(data-value="female") 雌性
     .bees
@@ -1455,9 +1454,9 @@ _{span.n}${8×a+13×b}_, …
 
 还有许多其他的谜题、模式和应用与斐波那契数相关。以下是几个例子，你可以自己尝试：
 
-::: .box.problem-box
-    .box-title: h3 问题求解
-::: .box-body
+::: .box.f-blue
+
+#### 问题求解
 
 __1. 斐波那契整除性__
 
@@ -1482,7 +1481,6 @@ __3. 斐波那契楼梯__
 
 对6、7或8阶楼梯有多少种选择？你能发现一个模式吗？这和斐波那契数有什么关系？
 
-:::
 :::
 
     figure
@@ -1596,15 +1594,15 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 让我们将这些数字与它们的因子之和进行比较：
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 对于大多数数字，其因子之和是[[小于|大于|等于]]自身。这些数字被称为__亏数__。
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 对于一些数字，其因子之和大于其本身。这些数字被称为__盈数__。
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 上面列表中只有一个数的因子之和等于其自身：[[6]]。这被称为一个[完美数字](gloss:perfect-numbers)。
 
@@ -1769,9 +1767,9 @@ _氦_、_锂_、... _钚_来命名不同的部分。
 在这个测验中，你可以结合你对序列的所有知识。只有一个目标：找到模式并计算接下
 来的两项！
 
-::: .box.problem-box
-    .box-title: h3 找下个数
-::: .box-body
+::: .box.f-blue
+
+#### 找下个数
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1801,7 +1799,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} 模式: +1, +2, ÷2, +1, +2, ÷
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} 模式: 奇数平方数_
 
-:::
 :::
 
 

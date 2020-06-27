@@ -283,7 +283,7 @@ Snowflake is `§d = log_3(4) ≈ 1.262`._
 ---
 > id: koch-size
 
-::: tab
+::: tab(parent="sticky")
 
 #### Area _{span.check(when="blank-6")}_
 
@@ -412,7 +412,7 @@ Menger sponge just like we did for the Koch snowflake above. In this case we get
 
 :::
 
-{.reveal(when="blank-1")} If you imagine cutting out more and more holes,
+{.reveal(when="blank-1 slider-0")} If you imagine cutting out more and more holes,
 infinitely many times, there would be no actual volume left. That’s why the cube
 is “not quite” three-dimensional!
 [Continue](btn:next)
@@ -908,16 +908,16 @@ terms on a number line. You can change the value of `pill(x_0,"yellow","x0")`:
 Notice how the resulting sequence can behave very differently, depending on the
 starting value `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 If `x_0 > 1`, the sequence [[diverges|converges]]:
 _{span.reveal(when="blank-0")}it just keeps growing, up to infinity._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 If `x_0` is between –1 and 1, the sequence [[converges|diverges]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 If `x_0 < -1`, the sequence [[diverges|converges]].
 

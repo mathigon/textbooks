@@ -26,7 +26,7 @@ Los antiguos astrónomos griegos fueron los primeros en descubrir que todos los 
 > id: radius
 > goals: compass
 
-Cada punto en un círculo [__<<<<__](gloss:circle) tiene la misma distancia desde su centro. Esto significa que se pueden dibujar con una [brújula](gloss:compass):
+Cada punto en un [__círculo__](gloss:circle) tiene la misma distancia desde su centro. Esto significa que se pueden dibujar con una [compás](gloss:compass):
 
 ::: column(width=320)
 
@@ -140,7 +140,7 @@ En la naturaleza, los objetos como gotas de agua o burbujas de aire pueden _ahor
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triangle
       div(data-value="1") Square
       div(data-value="2") Pentagon
@@ -293,14 +293,17 @@ Aquí puedes ver los primeros 100 dígitos de Pi. Muévase sobre algunas de las 
 
 Si Pi es normal, significa que puede pensar en _cualquier_ cadena de dígitos, y aparecerá en algún lugar de sus dígitos. Aquí puede buscar el primer millón de dígitos de Pi: ¿contienen su cumpleaños?
 
-    .box
-      .box-title: h3 One Million Digits of Pi
-      .box-body.pi-controls
-        | Search for a string of digits:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### One Million Digits of Pi
+
+    .pi-controls
+      | Search for a string of digits:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 
@@ -1605,13 +1608,13 @@ Este es un problema particular cuando se trata de crear mapas. La Tierra tiene u
 
 Aquí puede ver algunos tipos diferentes de mapas, llamados __proyecciones__. Intente mover el cuadrado rojo y observe cómo se ve esta área _en realidad_ en un globo:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cylindrical
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline

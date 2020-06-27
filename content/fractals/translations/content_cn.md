@@ -730,15 +730,15 @@ Sierpinski三角形有许多变体，并且其他分形具有相似的特性和�
 
 请注意，取决于起始值`x_0`，所得序列的行为会有很大不同：
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 如果`x_0 > 1`，序列[[会偏离|converges]]：_{span.reveal(when="blank-0")}，但它会一直增长，直到无穷大。_
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 如果`x_0`在–1和1之间，则序列[[收敛|diverges]]。
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 如果为`x_0 < -1`，则序列[[与|converges]]分开。
 

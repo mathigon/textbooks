@@ -13,7 +13,7 @@ import {Edge, edgeToSegment, Graph} from './components/graph';
 import {Sketch} from './components/sketch';
 import {borders} from './components/four-colour-maps';
 import {travellingSalesman} from './components/geometry';
-import {RED, BLUE, GREEN, YELLOW, ORANGE} from '../shared/constants';
+import {RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, TEAL} from '../shared/constants';
 
 
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';
@@ -173,7 +173,7 @@ export function handshakes4($section: Step) {
 
 export function bridges($section: Step) {
   $section.$$('.tab').forEach(($el, i) => {
-    const $svg = $el.$('svg.frame') as SVGParentView;
+    const $svg = $el.$('svg.map') as SVGParentView;
     const $paths = $('.paths', $svg) as SVGView;
     const $water = $('.water', $svg)!;
     const $bridges = $$('.bridge', $svg);
@@ -308,7 +308,6 @@ export function bridges3($section: Step) {
 
   $section.model.watch((s: any) => {
     $section.score(s.colour);
-    console.log(s.colour);
     for (const $c of $circles) {
       const y = +$c.attr('data-value');
       $c.css('fill', '' + colours[s.colour][y - 2]);  // -2 because no 0s and 1s
@@ -406,7 +405,7 @@ export function utilities($section: Step) {
     resolve();
   }
 
-  $section.$('button')!.on('click', clear);
+  $section.$('.btn')!.on('click', clear);
 
   for (const $ut of $section.$$('.utility') as SVGView[]) {
     const $c = $ut.children[0];
@@ -502,7 +501,7 @@ export function utilities1($section: Step) {
 
 export function planarity($section: Step) {
   const $svg = $section.$$('svg')[1] as SVGParentView;
-  const $newBtn = $section.$('button')!;
+  const $newBtn = $section.$('.btn')!;
   const $solveds = $section.$$('x-solved');
 
   const graph = new Graph($svg, 0, [], {r: 12, static: true, bound: true});
@@ -653,8 +652,8 @@ export function euler2($section: Step) {
       $edges[2].exit('fade', 400);
     } else if (s === 4) {
       $vertices[2].enter('pop', 400);
-      $edges[1].enter('draw', 400);
-      $edges[2].enter('draw', 400);
+      $edges[1].enter('fade', 400);
+      $edges[2].enter('fade', 400);
     }
   });
 
@@ -666,7 +665,7 @@ export function euler2($section: Step) {
       $edges[0].exit('fade', 400);
       $edges[2].exit('fade', 400);
     } else if (s === 2) {
-      $edges[2].enter('draw', 400);
+      $edges[2].enter('fade', 400);
     } else if (s === 3) {
       $vertices[2].exit('pop');
       $edges[1].exit('fade', 400);
@@ -721,9 +720,9 @@ export function euler4($step: Step) {
 }
 
 export function maps1($section: Step) {
-  const colours = ['#C2240C', '#005FAB', '#009542', '#FFDD00', '#662D91',
-    '#F15A24', '#29ABE2'];
+  const colours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, TEAL];
   const $colours = $section.$$('.four-colour-icon');
+  $colours[0].addClass('on');
   let activeColour = 0;
   let warned = false;
 
@@ -738,8 +737,7 @@ export function maps1($section: Step) {
 
   $section.$$('.tab').forEach(($map, i) => {
     const $count = $map.$('.colour-count span')!;
-    const $countries = $map.$('.frame')!.children;
-    const $solve = $map.$('.solve')!;
+    const $countries = $map.$('svg.map')!.children;
     const $solveds = $section.$$('x-solved');
 
     const countryIds: string[] = [];
@@ -748,18 +746,13 @@ export function maps1($section: Step) {
     let completed = 10;
     let used = 0;
 
-    $countries.forEach(function ($c, j) {
+    $countries.forEach(($c) => {
       const id = $c.id;
       const neighbours = borders[i][id] || [];
       countryIds.push(id);
 
-      const initial = colours.indexOf($c.attr('fill'));
+      // const initial = colours.indexOf($c.attr('fill'));
       $c.css('fill', '#CCC');
-      $solve.on('click', function () {
-        countryColours[id] = initial;
-        setTimeout(() => { $c.css('fill', colours[initial]); }, j * 10);
-        $section.score('map-' + i);
-      });
 
       $c.on('click', function () {
         for (const n of neighbours) if (countryColours[n] === activeColour) {
@@ -794,13 +787,6 @@ export function maps1($section: Step) {
       $countries.forEach($c => { $c.css('fill', '#CCC'); });
       $solveds[i].exit();
       colourUses = [0, 0, 0, 0, 0, 0, 0];
-    });
-
-    $solve.on('click', function () {
-      $count.textStr = used = 4;
-      completed = 1;  // TODO how is this used?
-      colourUses = [0, 0, 0, 0, 0, 0, 0];
-      countryIds.forEach(c => { colourUses[countryColours[c]] += 1; });
     });
   });
 }

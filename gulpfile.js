@@ -28,10 +28,14 @@ function markdown() {
       .pipe(gulp.dest('server/assets/resources'));
 }
 
+const TSConfig = Object.assign({}, tsconfig.compilerOptions,
+    {include: ['../*.ts', '../**/*.ts']});
+
 function scripts() {
   return gulp.src(['content/*/*.ts', '!content/shared/**'])
       .pipe(rollup({
-        plugins: [resolve(), typescript(tsconfig.compilerOptions)],
+        plugins: [resolve({mainFields: ['main:ts', 'module', 'main']}),
+          typescript(TSConfig)],
         onwarn(e) {
           if (e.code !== 'CIRCULAR_DEPENDENCY') console.warn(e.message);
         }
@@ -40,10 +44,13 @@ function scripts() {
       .pipe(gulp.dest('server/assets/resources'));
 }
 
+const RTL_BLACKLIST = ['background', 'background-color', 'background-image',
+  'background-repeat', 'background-size', 'cursor'];
+
 function stylesheets() {
   return gulp.src(['content/*/*.less', '!content/shared/**'])
       .pipe(less())
-      .pipe(postcss([rtl(), autoprefixer()]))
+      .pipe(postcss([rtl({blacklist: RTL_BLACKLIST}), autoprefixer()]))
       .pipe(rename({extname: '.css'}))
       .pipe(gulp.dest('server/assets/resources'));
 }

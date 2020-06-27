@@ -48,12 +48,12 @@ center. This means that they can be drawn using a [compass](gloss:compass):
 {.reveal(when="compass")} There are three important measurements related to
 circles that you need to know:
 
-* {.reveal(when="compass" delay="1000")} The [{.step-target.pill.b.red}radius](target:r)
+* {.reveal(when="compass" delay="1000")} The [{.pill.red.b}radius](target:r)
   is the distance from the center of a circle to its outer rim.
-* {.reveal(when="compass" delay="4000")} The [{.step-target.pill.b.blue}diameter](target:d)
+* {.reveal(when="compass" delay="4000")} The [{.pill.blue.b}diameter](target:d)
   is the distance between two opposite points on a circle. It goes through its
   center, and its length is [[twice|half|the same as]] the radius.
-* {.reveal(when="blank-0")} The [{.step-target.pill.b.green}circumference](target:c) 
+* {.reveal(when="blank-0")} The [{.pill.green.b}circumference](target:c) 
   (or perimeter) is the distance around a circle.
 
 :::
@@ -159,7 +159,7 @@ circular or spherical, and reducing their surface area.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triangle
       div(data-value="1") Square
       div(data-value="2") Pentagon
@@ -347,14 +347,17 @@ If Pi is normal, it means that you can think of _any_ string of digits, and it
 will appear somewhere in its digits. Here you can search the first one
 million digits of Pi – do they contain your birthday?
 
-    .box
-      .box-title: h3 One Million Digits of Pi
-      .box-body.pi-controls
-        | Search for a string of digits:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### One Million Digits of Pi
+
+    .pi-controls
+      | Search for a string of digits:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -1667,11 +1670,10 @@ _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 
 ::: column.grow
 
-The radius of the __{.m-green}sector__ is the same as the distance from the
-rim of a cone to its vertex. This is called the __{.pill.green.step-target(data-to="s")}
-slant height *s*__ of the cone, and not the same as the normal
-__{.pill.blue.step-target(data-to="h")}height *h*__. We can find the slant
-height using [Pythagoras](gloss:pythagoras-theorem):
+The radius of the __{.m-green}sector__ is the same as the distance from the rim of a cone to its
+vertex. This is called the [{.pill.green.b} slant height *s*](target:s) of the cone, and not the
+same as the normal [{.pill.blue.b} height *h*](target:h). We can find the slant height using
+[Pythagoras](gloss:pythagoras-theorem):
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
 | `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1698,8 +1700,8 @@ height using [Pythagoras](gloss:pythagoras-theorem):
 
 ::: column.grow
 
-The _{span.pill.step-target.red(data-to="arc")}arc length_ of the sector is the
-same as the [[circumference|diameter|arc]] of the _{span.pill.step-target.yellow(data-to="base")}base_:
+The [{.pill.red} arc length](target:arc) of the sector is the same as the
+[[circumference|diameter|arc]] of the [{.pill.yellow}base](target:base):
 _{span.reveal(when="blank-0")}`2 π r`. Now we can find the area of the sector
 using the [formula](gloss:circle-sector) we derived in a previous section:_
 
@@ -1824,18 +1826,17 @@ shapes at a specific height above the base:
     x-slider(steps=100)
 
 
-{.reveal(when="slider-0")} Let us try to find the cross-sectional area of both
-these solids, at a distance __{span.pill.blue.step-target(data-to="h")}height *h*__
-above the base.
+{.reveal(when="slider-0")} Let us try to find the cross-sectional area of both these solids, at a
+distance [{.pill.blue} height *h*](target:h) above the base.
 
 ::: column.grow
 
 {.reveal(when="slider-0")} The cross-section of the hemisphere is always a
 [[circle|ring|cylinder]].
 
-{.reveal(when="blank-0")} The __{span.pill.red.step-target(data-to="x")}radius
-*x*__ of the cross-section is part of a _{span.pill.yellow.step-target(data-to="tri")}
-right-angled triangle_, so we can use [Pythagoras](gloss:pythagoras-theorem):
+{.reveal(when="blank-0")} The [{.pill.red} radius *x*](target:x) of the cross-section is part of a
+[{.pill.yellow} right-angled triangle](target:tri), so we can use
+[Pythagoras](gloss:pythagoras-theorem):
 
 ::: .reveal(when="blank-0")
 {.text-center} `pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
@@ -1967,13 +1968,13 @@ areas.
 Here you can see few different types of maps, called __projections__. Try moving
 the red square, and watch what this area _actually_ looks like on a globe:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cylindrical
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline
@@ -2035,16 +2036,16 @@ a torch:
     x-scale-box(width=760).conics
       .row
         .active
-          p: strong Circle
+          p.no-voice: strong Circle
           include svg/circle.svg
         .hide
-          p: strong Ellipse
+          p.no-voice: strong Ellipse
           include svg/ellipse.svg
         .hide
-          p: strong Parabola
+          p.no-voice: strong Parabola
           include svg/parabola.svg
         .hide
-          p: strong Hyperbola
+          p.no-voice: strong Hyperbola
           include svg/hyperbola.svg
 
 ---

@@ -15,8 +15,8 @@ const colours: Obj<number> = {
   4: 0x0f82f2,  // blue
   5: 0x22ab24,  // green
   6: 0xcd0e66,  // red
-  8: 0x6f27cc,  // violet
-  10: 0x18aa93  // teal
+  8: 0x6d3bbf,  // violet
+  10: 0x009ea6  // teal
 };
 
 const scales: Obj<number> = {
@@ -24,7 +24,6 @@ const scales: Obj<number> = {
   Octahedron: 1.3,
   Tetrahedron: 1.1
 };
-
 
 @register('x-polyhedron')
 export class Polyhedron extends Solid {

@@ -62,18 +62,21 @@ von __{.green}7__ - kurz: __{.green}7__|__{.orange}21__.
 In diesem kurzen Spiel sollst du
 so schnell wie möglich bestimmen, welche Zahlen Teiler oder Vielfache sind. Klicke auf den [Startknopf](->#divisibility-game_.toggle), um zu beginnen.
 
-    .box.problem-box
-      .box-title: h3 Teiler und Vielfache Quiz
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | ist
-          .factor-value
-            .factor-bubble: .btn.btn-blue Teiler
-            .factor-bubble: .btn.btn-blue Vielfaches
-            .factor-bubble: .btn.btn-blue Keines
-          | von
-          .factor-number ${y}
+::: .box.f-blue.no-padding
+#### Teiler und Vielfache Quiz
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | ist
+        .factor-value
+          .factor-bubble: .btn.btn-blue Teiler
+          .factor-bubble: .btn.btn-blue Vielfaches
+          .factor-bubble: .btn.btn-blue Keines
+        | von
+        .factor-number ${y}
+
+:::
 
 ---
 > id: factors
@@ -467,7 +470,7 @@ Hier ist ein Taschenrechner, mit dem du überprüfen kannst, ob eine Zahl eine P
     .calculator
       h3 Primzahl-Checker
       input(type="number" min="2")
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: prime-test-1
@@ -500,13 +503,14 @@ Die Berechnung dieser großen Primzahlen mag wie Zeitverschwendung erscheinen, a
 später in diesem Kurs wirst du mehr über verschiedene reale Anwendungen erfahren, bei denen
 Computer große Primzahlen verwenden müssen.
 
-Hier kannst du deine eigenen Primzahlen mit einer gegebenen Anzahl von Ziffern generieren:
+Hier kannst du deine eigenen Primzahlen mit einer gegebenen Anzahl von Ziffern generieren
+(beachte, dass die Kommas im Ergebnis im englischsprachigen Raum Tausendertrennzeichen sind):
 
     .calculator
       h3 Primzahlgenerator
       p.md Anzahl an Ziffern: ${d}{d|6|2,16,1}
       p(style="margin: 10px 0"): button.btn.btn-white Generate
-      p.result.var ${result}
+      .result.var(:html="result")
 
 ---
 > id: ulam
@@ -578,7 +582,7 @@ definiert - und sollten nicht viel mit Addition zu tun haben.
       h3 Goldbach Rechner
       p Wähle eine beliebige gerade Zahl, um zu berechnen, wie#[br]sie als Summe zweier Primzahlen geschrieben werden kann.
       input(type="number", min=4, step=2)
-      p.result.var ${result}
+      .result.var(:html="result")
 
 Goldbach schrieb über seine Beobachtung in einem Brief an den berühmten Mathematiker
 [Leonhard Euler](bio:euler), aber keiner von ihnen konnte sie beweisen. So wurde

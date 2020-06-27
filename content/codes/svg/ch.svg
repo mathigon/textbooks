@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1086px" height="362px" viewBox="0 0 1086 362" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>ch_full</title>
+    <desc>Created with Sketch.</desc>
+    <g id="dec2binCHEESE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ch_full" transform="translate(1, 1)">
+            <rect id="bkg" stroke="#979797" fill="#FFFFFF" x="0" y="0" width="1084" height="360"></rect>
+            <g id="blockN" transform="translate(166, 234)">
+                <rect fill="#22AB24" x="0" y="0" width="250" height="50"></rect>
+                <text font-family="Source Sans Pro,Helvetica,sans-serif" font-size="20" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="111" y="32">25</tspan>
+                </text>
+            </g>
+            <g id="digitText" transform="translate(468, 60)">
+                <text id="digit16" transform="translate(0, 0)" font-family="Source Sans Pro,Helvetica,sans-serif" font-size="40" font-weight="normal" fill="#000000">
+                    <tspan x="75" y="32">1</tspan>
+                </text>
+                <text id="digit8" transform="translate(227, 0)" font-family="Source Sans Pro,Helvetica,sans-serif" font-size="40" font-weight="normal" fill="#000000">
+                    <tspan x="35" y="32">1</tspan>
+                </text>
+                <text id="digit4" transform="translate(374, 0)" font-family="Source Sans Pro,Helvetica,sans-serif" font-size="40" font-weight="normal" fill="#000000">
+                    <tspan x="15" y="32">0</tspan>
+                </text>
+                <text id="digit2" transform="translate(445, 0)" font-family="Source Sans Pro,Helvetica,sans-serif" font-size="40" font-weight="normal" fill="#000000">
+                    <tspan x="5" y="32">0</tspan>
+                </text>
+                <text id="digit1" transform="translate(496, 0)" font-family="Source Sans Pro,Helvetica,sans-serif" font-size="40" font-weight="normal" fill="#000000">
+                    <tspan x="0" y="32">1</tspan>
+                </text>
+            </g>
+            <g id="blocks" transform="translate(473, 0)">
+                <g id="block16" transform="translate(0, 234)">
+                    <rect fill="#22AB24" x="0" y="0" width="160" height="50"></rect>
+                    <text font-family="Source Sans Pro,Helvetica,sans-serif" font-size="20" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="75" y="32">16</tspan>
+                    </text>
+                </g>
+                <g id="block8" transform="translate(227, 234)">
+                    <rect fill="#22AB24" x="0" y="0" width="80" height="50"></rect>
+                    <text font-family="Source Sans Pro,Helvetica,sans-serif" font-size="20" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="35" y="32">8</tspan>
+                    </text>
+                </g>
+                <g id="block4" transform="translate(374, 234)">
+                    <rect fill="#22AB24" x="0" y="0" width="40" height="50"></rect>
+                    <text font-family="Source Sans Pro,Helvetica,sans-serif" font-size="20" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="15" y="32">4</tspan>
+                    </text>
+                </g>
+                <g id="block2" transform="translate(445, 234)">
+                    <rect fill="#22AB24" x="0" y="0" width="20" height="50"></rect>
+                    <text font-family="Source Sans Pro,Helvetica,sans-serif" font-size="20" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="5" y="32">2</tspan>
+                    </text>
+                </g>
+                <g id="block1" transform="translate(496, 234)">
+                    <rect fill="#22AB24" x="0" y="0" width="10" height="50"></rect>
+                    <text font-family="Source Sans Pro,Helvetica,sans-serif" font-size="20" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="0" y="32">1</tspan>
+                    </text>
+                </g>
+            </g>  
+            <g id="claws16" transform="translate(473, 106)" fill="#4A4A4A">
+                <g id="thingy16">
+                    <path d="M160,92 L160,42 L2,42 L2,92 L0,92 L0,40 L162,40 L162,92 L162,92 Z" id="thing16"></path>
+                    <rect id="Rectangle" x="81" y="0" width="2" height="40"></rect>
+                </g>
+                <g id="thingy8" transform="translate(227, 0)">
+                    <path d="M80,92 L80,42 L2,42 L2,92 L0,92 L0,40 L82,40 L82,92 L82,92 Z" id="thing8"></path>
+                    <rect id="Rectangle-Copy-4" x="41" y="0" width="2" height="40"></rect>
+                </g>
+                <g id="thingy4" transform="translate(374, 0)">
+                    <path d="M40,92 L40,42 L2,42 L2,92 L0,92 L0,40 L42,40 L42,92 L42,92 Z" id="thing4"></path>
+                    <rect id="Rectangle-Copy-5" x="21" y="0" width="2" height="40"></rect>
+                </g>
+                <g id="thingy2" transform="translate(445, 0)">
+                    <path d="M20,92 L20,42 L2,42 L2,92 L0,92 L0,40 L22,40 L22,92 Z" id="thing2"></path>
+                    <rect id="Rectangle-Copy-6" x="11" y="0" width="2" height="40"></rect>
+                </g>
+                <g id="thingy1" transform="translate(496, 0)">
+                    <path d="M10,92 L10,42 L2,42 L2,92 L0,92 L0,40 L12,40 L12,92 Z" id="thing1"></path>
+                    <rect id="Rectangle-Copy-7" x="6" y="0" width="2" height="40"></rect>
+                </g>
+            </g>
+            <rect id="ceiling" fill="#4A4A4A" x="470" y="96" width="513" height="10"></rect>
+            <rect id="floor" fill="#4A4A4A" x="150" y="284" width="843" height="10"></rect>
+        </g>
+    </g>
+</svg>

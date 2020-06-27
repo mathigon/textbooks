@@ -730,15 +730,15 @@ Nehmen wir als Beispiel die rekursive Formel `§x_n = x_(n-1)^2` und zeichnen ih
 
 Beachten Sie, wie sich die resultierende Sequenz je nach Startwert `x_0` sehr unterschiedlich verhalten kann:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Wenn `x_0 > 1`, [[divergiert|konvergiert]] die Sequenz: _{span.reveal(when="blank-0")} wächst sie einfach weiter bis unendlich._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Wenn `x_0` zwischen –1 und 1 liegt, [[konvergiert|divergiert]] die Sequenz.
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Wenn `x_0 < -1`, [[divergiert|konvergiert]] die Sequenz.
 

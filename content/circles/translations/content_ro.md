@@ -155,7 +155,7 @@ devenind circulare sau sferice și reducându-și astfel suprafața.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triunghi
       div(data-value="1") Pătrat
       div(data-value="2") Pentagon
@@ -335,14 +335,17 @@ vedea cum sunt distribuite zecimalele.
 Dacă Pi este un număr normal, asta înseamnă că ne putem gândi la _orice_ șir de cifre și el va apărea 
 undeva între zecimalele lui. Aici poți căuta în primul milion de zecimale ale lui Pi - conțin ele ziua ta de naștere?
 
-    .box
-      .box-title: h3 Primul milion de zecimale ale lui Pi
-      .box-body.pi-controls
-        | Caută un șir de zecimale:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### Primul milion de zecimale ale lui Pi
+
+    .pi-controls
+      | Caută un șir de zecimale:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -1932,13 +1935,13 @@ sau turtirea anumitor zone.
 Aici se pot vedea diferite tipuri de hărți, numite __proiecții__. Încearcă să muți 
 pătratul roșu și privește cum arată _de fapt_ această zona pe un glob:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cilindrică
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline

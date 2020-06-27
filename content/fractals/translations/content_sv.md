@@ -730,15 +730,15 @@ Låt oss ta den rekursiva formeln `§x_n = x_(n-1)^2` som ett exempel och plotta
 
 Lägg märke till hur den resulterande sekvensen kan bete sig mycket annorlunda beroende på startvärdet `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Om `x_0 > 1` avviker sekvensen [[<<<<|converges]]: _{span.reveal(when="blank-0")} fortsätter den bara att växa upp till oändligheten._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Om `x_0` är mellan –1 och 1, konvergerar sekvensen [[<<<<|diverges]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Om `x_0 < -1` avviker sekvensen [[<<<<|converges]].
 

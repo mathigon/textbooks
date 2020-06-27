@@ -726,15 +726,15 @@ __セルオートマトン__ は、多くの個別のセルで構成されるグ
 
 開始値`x_0`に応じて、結果のシーケンスの動作が大きく異なることに注意してください。
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 `x_0 > 1`の場合、シーケンス[[は分岐します|converges]]：_{span.reveal(when="blank-0")}それは無限にまで成長し続けます。_
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0`が–1と1の間にある場合、シーケンス[[は|diverges]]に収束します。
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0 < -1`の場合、シーケンス[[は|converges]]を分岐します。
 

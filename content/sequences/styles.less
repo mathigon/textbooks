@@ -152,14 +152,6 @@ figure .row x-img { margin: 8px; }
   &.s-green .bubble-arrow { border-top-color: @green; }
 }
 
-.ag-limit-box {
-  text-align: center;
-  padding: 16px 12px;
-  border-radius: 6px;
-  background: mix(@blue, white, 10%);
-  box-sizing: border-box;
-}
-
 .ag-equation { max-width: 220px;  margin: 0 auto .5em; }
 
 .money-grid td {
@@ -224,16 +216,6 @@ x-coordinate-system + .caption { margin-top: -1em; }
   .c.small { .circled(22px); font-size: 15px; background: @orange; margin: 2px; }
 }
 
-.perfect-box {
-  text-align: center;
-  padding: 16px 12px;
-  border-radius: 6px;
-  background: mix(@red, white, 10%);
-  box-sizing: border-box;
-  &:nth-child(2) { background: mix(@blue, white, 10%); }
-  &:nth-child(3) { background: mix(@green, white, 10%); }
-}
-
 .perfect-list { max-width: 660px; margin: 0 auto 1em; }
 
 .hailstone-slider {
@@ -263,32 +245,15 @@ x-coordinate-system + .caption { margin-top: -1em; }
   path { stroke: @dark-grey; stroke-width: 2px; fill: none; }
   polygon { fill: @dark-grey; }
 
+  .dark-mode & path { stroke: white; }
+  .dark-mode & polygon { fill: white; }
+
   img.rabbit { position: absolute; width: 10%; height: auto; }
   .n { position: absolute; right: 0; margin: 0; z-index: 1; margin-top: 13px; }
 }
 
 .golden-spiral .stage { overflow: hidden; }
 .golden-spiral svg { margin: 0 auto 32px; transition: transform .4s linear; }
-
-.spiral-tabs {
-  display: flex;
-  margin: 0 auto .5em;
-  width: fit-content;
-
-  > * {
-    width: 100px;
-    text-align: center;
-    border: 1px solid @red;
-    border-left: none;
-    transition: color .2s, background .2s;
-    cursor: pointer;
-
-    &:first-child { border-radius: 6px 0 0 6px; border-left: 1px solid @red; }
-    &:last-child { border-radius: 0 6px 6px 0; }
-    &:hover { background: fade(@red, 20%);  }
-    &.active { color: white; background: @red; cursor: default; }
-  }
-}
 
 .spirals {
   padding-bottom: 100%;
@@ -354,6 +319,7 @@ x-coordinate-system + .caption { margin-top: -1em; }
   margin: 1.5em auto;
   position: relative;
   user-select: none;
+  .dark-mode & { color: @dark-grey; }
 
   .r {
     display: flex;
