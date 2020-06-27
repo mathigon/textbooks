@@ -1634,8 +1634,8 @@ tangent:
 telegraph:
   title: Telegraph
   text: | 
-    A __telegraph__ is an apparatus for communication by coded signals at a distance by electric transmission over wires. 
-    Morse code was initially used to communicate using telegraphs.
+    A __telegraph__ is system for transmitting messages across long distances,
+    by sending electric signals along wires.
   
 term:
   title: Term (Algebra)
