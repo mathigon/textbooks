@@ -598,26 +598,26 @@ Lorsque vous colorez la carte des États américains, 50 couleurs suffisent évi
       .tab
         h3 États Unis #[span.check(when="map-0")]
         x-solved
-        include svg/colours-1.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-1.svg
         button.btn.clear Recommencer
       .tab
         h3 Amérique du sud #[span.check(when="map-1")]
         x-solved
-        include svg/colours-2.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-2.svg
         button.btn.clear Recommencer
       .tab
         h3 Allemagne #[span.check(when="map-2")]
         x-solved
-        include svg/colours-3.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-3.svg
         button.btn.clear Recommencer
       .tab
         h3 Angleterre #[span.check(when="map-3")]
         x-solved
-        include svg/colours-4.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-4.svg
         button.btn.clear Recommencer
 
 ---

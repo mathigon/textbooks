@@ -560,26 +560,26 @@ __{.red} 90__ حواف
       .tab
         h3 الولايات المتحدة الأمريكية #[span.check(when="map-0")]
         x-solved
-        include svg/colours-1.svg
         .colour-count عدد الألوان: #[span 0]
+        include svg/colours-1.svg
         button.btn.clear إمحي
       .tab
         h3 امريكا الجنوبية #[span.check(when="map-1")]
         x-solved
-        include svg/colours-2.svg
         .colour-count عدد الألوان: #[span 0]
+        include svg/colours-2.svg
         button.btn.clear إمحي
       .tab
         h3 ألمانيا #[span.check(when="map-2")]
         x-solved
-        include svg/colours-3.svg
         .colour-count عدد الألوان: #[span 0]
+        include svg/colours-3.svg
         button.btn.clear إمحي
       .tab
         h3 إنكلترا #[span.check(when="map-3")]
         x-solved
-        include svg/colours-4.svg
         .colour-count عدد الألوان: #[span 0]
+        include svg/colours-4.svg
         button.btn.clear إمحي
 
 ---

@@ -547,26 +547,26 @@ Ao colorir o mapa dos estados dos EUA, 50 cores são obviamente suficientes, mas
       .tab
         h3 United States #[span.check(when="map-0")]
         x-solved
-        include svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-1.svg
         button.btn.clear Clear
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
-        include svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-2.svg
         button.btn.clear Clear
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
-        include svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-3.svg
         button.btn.clear Clear
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
-        include svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-4.svg
         button.btn.clear Clear
 
 ---
