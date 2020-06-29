@@ -26,6 +26,25 @@ abel:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
 
+agnesi:
+  born: 1718
+  died: 1799
+  name: Agnesi
+  bio: |
+    __Maria Gaetana Agnesi__ (17180-01799) was an Italian mathematician,
+    philosopher, theologian, and humanitarian.  Agnesi was the first western
+    woman to write a mathematics textbook. She was also the first woman to be
+    appointed professor at a university.
+
+    Her textbook, the _Analytical Institutions for the use of Italian youth_
+    combined differential and integral caluclus, and was an international
+    success.
+
+    Maria also studied a bell-shaped curve described by the equation
+    `y=a^3/(x^2+a^2)`. This function is now called the _Witch of Agnesi_. The
+    strage name might come from a pun in the Italian language, were the word
+    “versiera” for “witch” sounds similar to the ropes used when sailing.
+
 al-haytham:
   born: 965
   died: 1050
@@ -368,6 +387,21 @@ cayley:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
 
+ceva:
+  born: 1647
+  died: 1734
+  name: Ceva
+  bio: |
+    __Giovanni Ceva__ (1647 - 1734) was an Italian mathematician, physicist,
+    and hydraulic engineer. One of his most enduring contributions to
+    mathematics is Ceva’s Theorem, about the relationship between different line
+    segments in a triangle. However, its publication in _De lineis rectis_
+    was recieved with little fanfair, and his discoveries weren’t fully
+    recognized until the 1800s.
+  links:
+    - title: Properties of Triangles
+      url: /course/triangles/properties
+
 collatz:
   name: Collatz
   bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
@@ -625,6 +659,22 @@ euler:
     - title: Polyhedrons
       url: /course/polyhedra/polyhedra
 
+eudoxus:
+  born: -410
+  died: -355
+  name: Eudoxus
+  bio: |
+    __Eudoxus of Cnidus__ (Εὔδοξος ὁ Κνίδιος, c. 390 - 337 BCE) was an ancient
+    Greek astronomer and mathematician. Among his most enduring contributions
+    to astronomy are his planetary models.
+
+    History remembers him as the first to write mathematical explanation of the
+    planets. He developed the method of exhaustion in mathematics, which laid
+    the foundation for integral calculus. Eudoxus traveled to several places
+    around the Mediterranean to study. He studied under Plato in Athens, Greece
+    and under Egyptian priests in Heliopolis, Egypt. He later returned to Athens
+    to teach in Plato's Academy during the time Aristotle was a student.
+
 fatou:
   name: Fatou
   bio: __Pierre Joseph Louis Fatou__ (1878 – 1929) was a French mathematician
@@ -879,6 +929,20 @@ hardy:
     Hardy always dislkied applied mathematics and expressed this in his personal
     account of mathematical thinking, the 1940 book _A Mathematician’s Apology_.
 
+hauptman:
+  born: 1917
+  died: 2011
+  name: Hauptman
+  bio: |
+    __Herbert Hauptman__ (1917 - 2011) was an American mathematician and a
+    Nobel laureate. He and Jerome Karle earned the 1985 Nobel prize in Chrmistry
+    for their work on x-ray crystallogaphy.
+
+    Hauptman joined the Medical Foundation of Buffalo as a researcher in the
+    crystallogaphic group. He was quickly promoted to director, and the
+    Foundation was later renamed as _Hauptman-Woodward Medical Research
+    Institute_.
+
 hilbert:
   name: Hilbert
   born: 1862
@@ -1014,6 +1078,21 @@ koch:
     He first described the _Koch snowflake_, a fractal which is named after him,
     and proved relationships between the Riemann hypothesis and the distribution
     of prime numbers.
+
+kovalevskaya:
+  born: 1850
+  died: 1891
+  name: Kovalevskaya
+  bio: |
+    __Sofia Kovalevskaya__ (Софья Васильевна Ковалевская 1850 – 1891) was a
+    Russian mathematician, and the first woman to earn a modern doctorate in
+    mathematics. She was also the first woman to hold full professorship in
+    Nothern Europe, and is among the first women to be an editor of a scietific
+    journal.
+
+    Sofia made major contributions to analysis, partial differential equations,
+    and mechanics. She also wrote several works about her life including a
+    memoir, a play and an autobiographical novel.
 
 lagrange:
   born: 1736
@@ -1180,6 +1259,21 @@ mandelbrot:
       url: /course/fractals/introduction
     - title: Mandelbrot Set
       url: /course/fractals/mandelbrot
+
+mascheroni:
+  born: 1750
+  died: 1800
+  name: Mascheroni
+  bio: |
+    __Lorenzo Mascheroni__ (1750 - 1800) was in Italian mathematician who
+    focused in Geometry. He was ordained to the priesthood when he was 17. After
+    that, he taught rhetoric before teaching physics and mathematics.
+
+    He proved that all Euclidean constructions can be made with just a compass.
+    Until this point, constructions required both a compass and a straightedge.
+  links:
+    - title: Ruler and Compass Construction
+      url: /course/euclidean-geometry/construction
 
 menger:
   name: Menger
@@ -1712,6 +1806,18 @@ sikdar:
     the first to measure the height of Mount Everest, and to show that it is
     the tallest mountain on Earth.
 
+simson:
+  born: 1687
+  died: 1768
+  name: Simson
+  bio: |
+    __Robert Simson__ (1687 - 1768) was a Scottish mathematician who studied
+    ancient Greek geometers. He studied at the University of Glasgow, and later
+    returned as a professor.
+
+    He discovered that certain points you construct using the circumcircle of a
+    triangle lie on a single line, which is now known as the Simson line.
+
 singmaster:
   name: Singmaster
   bio: __David Singmaster__ (born 1939) is an American mathematician who is
@@ -1726,6 +1832,21 @@ stevin:
   bio: __Simon Stevin__ (1548 – 1620) was Flemish mathematician and engineer. He
     was one of the first people to use and write about decimal fractions, and
     made many other contributions to science and engineering.
+
+sylvester:
+  born: 1814
+  died: 1897
+  name: Sylvester
+  bio: |
+    __James Joseph Sylvester__ (1814 – 1897) was an English mathematician. He
+    contributed to matrix theory, number theory, partition theory, and
+    combinatorics. Together with Arthur Cayley, he cofounded _invariant theory_.
+    Sylvester coined many of the terms we are familar with today including
+    “graph”, “discriminant”, and “matrix”.
+
+    Throughout his career, Sylvester faced antisemitism. He was denied a degree
+    from Cambridge, and he later experienced violence from students at the
+    University of Virginia during his short stay as a professor.
 
 tartaglia:
   born: 1499
@@ -1784,6 +1905,20 @@ turing:
   links:
     - title: Codes and Cryptography
       url: /course/codes
+
+tusi:
+  born: 1201
+  died: 1274
+  name: al-Din Tusi
+  bio: |
+    __Nasir al-Din Tusi__ (1201 – 1274, نصیر الدین طوسی‎), also known as Muhammad
+    ibn Muhammad ibn al-Hasan al-Tūsī, was an architect, philospher, physician,
+    scientis, and theologian, as well as a prolific writer.
+
+    Many consider Nasir al-Din to be the father of trigonometry, and he was
+    perhaps the first person to work on trigonometry independent of astronomy.
+    He also proposed and studied the Tusi couple: a device in which a circle
+    rolls around the inside of a larger circle with twice the diameter.
 
 ulam:
   name: Ulam
