@@ -7,7 +7,6 @@ abel:
   born: 1802
   died: 1829
   name: Abel
-  overflow: true
   bio: |
     __Niels Henrik Abel__ (1802 – 1829) was an important Norwegian
     mathematician. Even though he died at the age of 26, he made groundbreaking
@@ -31,7 +30,7 @@ agnesi:
   died: 1799
   name: Agnesi
   bio: |
-    __Maria Gaetana Agnesi__ (17180-01799) was an Italian mathematician,
+    __Maria Gaetana Agnesi__ (1718 – 1799) was an Italian mathematician,
     philosopher, theologian, and humanitarian.  Agnesi was the first western
     woman to write a mathematics textbook. She was also the first woman to be
     appointed professor at a university.
@@ -49,6 +48,7 @@ al-haytham:
   born: 965
   died: 1050
   name: Al-Haytham
+  location: middle-east
   bio: |
     __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 – 1050)
     lived in Cairo during the Islamic Golden Age, and studied mathematics,
@@ -65,6 +65,7 @@ al-karaji:
   born: 953
   died: 1029
   name: Al-Karaji
+  location: middle-east
   bio: __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 – 1029) was
     a Persian mathematician and engineer. He was the first person to use _proof
     by induction_, which allowed him to prove the binomial theorem.
@@ -77,6 +78,7 @@ al-khwarizmi:
   died: 850
   name: Al-Khwarizmi
   overflow: true
+  location: middle-east
   bio: |
     The Persian mathematician __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي‎,
     780 – 850) lived during the golden age of the Muslim Abbasid regime in
@@ -161,6 +163,7 @@ aryabhata:
   died: 550
   name: Aryabhata
   overflow: true
+  location: asia
   bio: __Aryabhata__ (आर्यभट) was one of the first mathematicians and astronomers
     in the golden age of Indian mathematics. He defined trigonometric functions,
     solved simultaneous quadratic equations, found approximations for _π_, and
@@ -226,6 +229,7 @@ bhaskara:
   born: 1114
   died: 1185
   name: Bhaskara
+  location: asia
   bio: __Bhaskara II__ (1114 – 1185) was an Indian mathematician and astronomer.
     He discovered some of the basic concepts of calculus, more than 500 years
     before Leibnitz and Newton. Bhaskara also established that division by zero
@@ -237,6 +241,7 @@ blackwell:
   died: 2010
   name: Blackwell
   small: true
+  location: america
   bio: |
     __David Blackwell__ (1919 – 2010) was an American statistician and
     mathematician. He worked on game theory, probability theory, information
@@ -280,6 +285,7 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
+  location: asia
   bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 CE) invented the
     rules for addition, subtraction and multiplication with zero and negative
     numbers. He was also an astronomer and made many other discoveries in
@@ -335,6 +341,7 @@ carroll:
   born: 1832
   died: 1898
   name: Carroll
+  small: true
   bio: |
     __Charles Lutwidge Dodgson__ (1832 – 1898) is best know under his pen name
     __Lewis Carroll__, as the author of _Alice’s Adventures in Wonderland_ and
@@ -392,7 +399,7 @@ ceva:
   died: 1734
   name: Ceva
   bio: |
-    __Giovanni Ceva__ (1647 - 1734) was an Italian mathematician, physicist,
+    __Giovanni Ceva__ (1647 – 1734) was an Italian mathematician, physicist,
     and hydraulic engineer. One of his most enduring contributions to
     mathematics is Ceva’s Theorem, about the relationship between different line
     segments in a triangle. However, its publication in _De lineis rectis_
@@ -412,6 +419,7 @@ conway:
   name: Conway
   born: 1937
   died: 2020
+  location: america
   bio: |
     __John Horton Conway__ (1937 – 2020) was a British mathematician who worked
     at Cambridge and Princeton University. He was a fellow of the Royal Society,
@@ -575,6 +583,7 @@ eratosthenes:
   name: Eratosthenes
   born: -276
   died: -195
+  location: africa
   bio: __Eratosthenes of Cyrene__ (c. 276 – 195 BCE) was a Greek
     mathematician, geographer, astronomer, historian, and poet. He spent much
     of his life in Egypt, as head of the library of Alexandria.
@@ -595,6 +604,7 @@ erdos:
   born: 1913
   died: 1996
   name: Erdős
+  small: true
   bio: |
     __Paul Erdős__ (1913 – 1996) was one of the most productive mathematicians
     in history. Born in Hungary, he solved countless problems in graph theory,
@@ -624,6 +634,7 @@ euclid:
   name: Euclid
   born: -330
   died: -270
+  location: africa
   bio: __Euclid of Alexandria__ (around 300 BCE) was a Greek mathematician and
     is often called the _father of geometry_. He published a book _Elements_
     that first introduced Euclidean geometry and contained many important proofs
@@ -663,8 +674,9 @@ eudoxus:
   born: -410
   died: -355
   name: Eudoxus
+  overflow: true
   bio: |
-    __Eudoxus of Cnidus__ (Εὔδοξος ὁ Κνίδιος, c. 390 - 337 BCE) was an ancient
+    __Eudoxus of Cnidus__ (Εὔδοξος ὁ Κνίδιος, c. 390 – 337 BCE) was an ancient
     Greek astronomer and mathematician. Among his most enduring contributions
     to astronomy are his planetary models.
 
@@ -722,6 +734,7 @@ fourier:
   born: 1768
   died: 1830
   name: Fourier
+  small: true
   bio: |
     __Joseph Fourier__ (1768 – 1830) was a French mathematician, and a friend
     and advisor of Napoleon. In addition to his mathematical research, he is
@@ -933,8 +946,10 @@ hauptman:
   born: 1917
   died: 2011
   name: Hauptman
+  small: true
+  location: america
   bio: |
-    __Herbert Hauptman__ (1917 - 2011) was an American mathematician and a
+    __Herbert Hauptman__ (1917 – 2011) was an American mathematician and a
     Nobel laureate. He and Jerome Karle earned the 1985 Nobel prize in Chrmistry
     for their work on x-ray crystallogaphy.
 
@@ -947,6 +962,7 @@ hilbert:
   name: Hilbert
   born: 1862
   died: 1943
+  small: true
   bio: |
     __David Hilbert__ (1862 – 1943) was one of the most influential
     mathematicians of the 20th century. He worked on almost every area of
@@ -967,6 +983,7 @@ hypatia:
   died: 415
   name: Hypatia
   overflow: true
+  location: africa
   bio: |
     __Hypatia__ (c. 360 – 415 CE) was a prominent astronomer and mathematician
     in ancient Alexandria. She was also the first female mathematician whose
@@ -1003,6 +1020,7 @@ jiushao:
   died: 1261
   name: Qin Jiushao
   overflow: true
+  location: asia
   bio: |
     __Qin Jiushao__ (秦九韶, c. 1202 – 1261) was a Chinese mathematician,
     inventor and politician. In his book _Shùshū Jiǔzhāng_, he published
@@ -1022,6 +1040,7 @@ johnson:
   born: 1918
   died: 2020
   name: Johnson
+  location: america
   bio: |
     __Katherine Johnson__ (1918 – 2020) was an African-American mathematician.
     While working at NASA, Johnson calculated the orbits taken by American
@@ -1063,6 +1082,7 @@ khayyam:
   name: Khayyam
   born: 1048
   died: 1131
+  location: middle-east
   bio: __Omar Khayyam__ (عمر خیّام‎, 1048 – 1131) was a Persian mathematician,
     astronomer and poet. He managed to classify and solve all cubic equations,
     and found new ways to understand Euclid’s _parallel axiom_. Khayyam also
@@ -1176,7 +1196,6 @@ lie:
   born: 1842
   died: 1899
   name: Lie
-  small: true
   bio: The Norwegian mathematician __Marius Sophus Lie__ (1842 – 1899) made
     significant advances in the study of _continuous transformation groups_ –
     now called _Lie groups_. He also worked on differential equations and
@@ -1199,6 +1218,8 @@ lorenz:
   name: Lorenz
   born: 1917
   died: 2008
+  small: true
+  location: america
   bio: __Edward Lorenz__ (1917 – 2008) was an American mathematician and
     meteorologist. He pioneered _chaos theory_, discovered _strange attractors_,
     and coined the term “butterfly effect”.
@@ -1210,7 +1231,6 @@ lovelace:
   born: 1815
   died: 1852
   name: Lovelace
-  overflow: true
   bio: |
     __Ada Lovelace__ (1815 – 1852) was an English writer and mathematician.
     Together with Charles Babbage, she worked on the _Analytical Engine_ an
@@ -1225,6 +1245,7 @@ madhava:
   born: 1340
   died: 1425
   name: Madhava
+  location: asia
   bio: |
     __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and
     astronomer from southern India. All of his original work has been lost, but
@@ -1265,12 +1286,13 @@ mascheroni:
   died: 1800
   name: Mascheroni
   bio: |
-    __Lorenzo Mascheroni__ (1750 - 1800) was in Italian mathematician who
-    focused in Geometry. He was ordained to the priesthood when he was 17. After
-    that, he taught rhetoric before teaching physics and mathematics.
+    __Lorenzo Mascheroni__ (1750 – 1800) was in Italian mathematician who
+    was particularly interested in Geometry. He proved that all Euclidean
+    constructions that can be done with compass and straightedge can also be
+    done with just a compass: this is now known as the Mohr–Mascheroni theorem.
 
-    He proved that all Euclidean constructions can be made with just a compass.
-    Until this point, constructions required both a compass and a straightedge.
+    Mascheroni was ordained to the priesthood at the agoe of 17, and he taught
+    rhetoric in addition to teaching physics and mathematics.
   links:
     - title: Ruler and Compass Construction
       url: /course/euclidean-geometry/construction
@@ -1310,7 +1332,7 @@ mirzakhani:
   born: 1977
   died: 2017
   name: Mirzakhani
-  overflow: true;
+  location: middle-east
   bio: |
     __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
     mathematician and professor at Standford University. She is the only woman
@@ -1381,6 +1403,7 @@ nash:
   born: 1928
   died: 2015
   name: Nash
+  location: america
   bio: |
     __John Forbes Nash__ (1928 – 2015) was an American mathematician who worked
     on game theory, differential geometry and partial differential equations.
@@ -1474,7 +1497,6 @@ noether:
     important discoveries in abstract algebra and theoretical physics, including
     the connection between symmetry and conservation laws. She is often
     described as the most influential female mathematician.
-  small: true
   links:
     - title: Symmetry in Physics
       url: /course/transformations/physics
@@ -1577,6 +1599,7 @@ pingala:
   name: Pingala
   born: -330
   died: -270
+  location: asia
   bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
     lived around 300 BCE, but very little is known about his life. He wrote the
     Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
@@ -1640,6 +1663,7 @@ ptolemy:
   born: 90
   died: 168
   name: Ptolemy
+  overflow: true
   bio: |
     __Claudius Ptolemy__ (c. 100 – 170 CE) was a Greco-Roman mathematician,
     astronomer, geographer and astrologer. He is best remembered for the
@@ -1660,6 +1684,7 @@ pythagoras:
   name: Pythagoras
   born: -570
   died: -495
+  overflow: true
   bio: |
     __Pythagoras of Samos__ (c. 570 – 495 BCE) was a Greek philosopher and
     mathematician. He is best known for proving _Pythagoras’ Theorem_, but made
@@ -1681,6 +1706,7 @@ ramanujan:
   died: 1920
   name: Ramanujan
   overflow: true
+  location: asia
   bio: |
     __Srinivasa Ramanujan__ (1887 – 1920) grew up in India, where he received
     very little formal education in mathematics. Yet, he managed to develop new
@@ -1725,7 +1751,6 @@ riemann:
   name: Riemann
   born: 1826
   died: 1866
-  overflow: true
   bio: __Bernhard Riemann__ (1826 – 1866) was a German mathematician working in
     the fields of analysis and number theory. He came up with the first rigorous
     definition of integration, studied differential geometry which laid the
@@ -1758,6 +1783,7 @@ shannon:
   name: Shannon
   born: 1898
   died: 1972
+  location: america
   bio: __Claude Shannon__ (1898 – 1972) was an American mathematician and
     electrical engineer, remembered as the “father of information theory”. He
     worked on cryptography, including codebreaking for national defence during
@@ -1773,6 +1799,7 @@ shijie:
   born: 1249
   died: 1314
   name: Zhu Shijie
+  location: asia
   bio: |
     __Zhu Shijie__ (朱世杰, 1249 – 1314) was one of the greatest Chinese
     mathematicians. In is book _Jade Mirror of the Four Unknowns_, he showed how
@@ -1810,13 +1837,14 @@ simson:
   born: 1687
   died: 1768
   name: Simson
+  small: true
   bio: |
-    __Robert Simson__ (1687 - 1768) was a Scottish mathematician who studied
+    __Robert Simson__ (1687 – 1768) was a Scottish mathematician who studied
     ancient Greek geometers. He studied at the University of Glasgow, and later
     returned as a professor.
 
-    He discovered that certain points you construct using the circumcircle of a
-    triangle lie on a single line, which is now known as the Simson line.
+    The Simson line in a triangle is named after him, which can be constructed
+    using the circumcircle.
 
 singmaster:
   name: Singmaster
@@ -1837,6 +1865,7 @@ sylvester:
   born: 1814
   died: 1897
   name: Sylvester
+  small: true
   bio: |
     __James Joseph Sylvester__ (1814 – 1897) was an English mathematician. He
     contributed to matrix theory, number theory, partition theory, and
@@ -1862,6 +1891,7 @@ thales:
   name: Thales
   born: -624
   died: -546
+  location: asia
   bio: |
     __Thales of Miletus__ (c. 624 – 546 BCE) was a Greek mathematician and
     philosopher.
@@ -1909,7 +1939,8 @@ turing:
 tusi:
   born: 1201
   died: 1274
-  name: al-Din Tusi
+  name: Al-Din Tusi
+  location: middle-east
   bio: |
     __Nasir al-Din Tusi__ (1201 – 1274, نصیر الدین طوسی‎), also known as Muhammad
     ibn Muhammad ibn al-Hasan al-Tūsī, was an architect, philospher, physician,
@@ -1919,6 +1950,19 @@ tusi:
     perhaps the first person to work on trigonometry independent of astronomy.
     He also proposed and studied the Tusi couple: a device in which a circle
     rolls around the inside of a larger circle with twice the diameter.
+
+uhlenbeck:
+  born: 1942
+  name: Uhlenbeck
+  location: america
+  bio: |
+    __Karen Uhlenbeck__ (born 1942) is an American mathematician, professor
+    emeritus at the University of Texas, and distinguished visiting professor
+    at Princeton University.
+
+    She is one of the founders of the field of modern geometric analysis, and
+    the only woman to have received the _Abel Prize_, one of the highest awards
+    in mathematics.
 
 ulam:
   name: Ulam
