@@ -468,7 +468,6 @@ conway:
   full: John Horton Conway
   born: 1937
   died: 2020
-  location: america
   bio: |
     __John Horton Conway__ (1937 – 2020) was a British mathematician who worked
     at Cambridge and Princeton University. He was a fellow of the Royal Society,
@@ -1625,7 +1624,7 @@ nightingale:
     __Florence Nightingale__ (1820 – 1910) was an English nurse and
     statistician. During the Crimean War, she nursed wounded British soldiers,
     and later founded the first training school for nurses. As the “The Lady
-    with the Lamp”, she bacame a cultural icon, and new nurses in the US still
+    with the Lamp”, she became a cultural icon, and new nurses in the US still
     take the _Nightingale pledge_.
 
     One of her most important contributions to medicine was the use of
@@ -1958,8 +1957,7 @@ shannon:
 shijie:
   born: 1249
   died: 1314
-  name: Shijie
-  full: Zhu Shijie
+  name: Zhu Shijie
   location: asia
   bio: |
     __Zhu Shijie__ (朱世杰, 1249 – 1314) was one of the greatest Chinese
