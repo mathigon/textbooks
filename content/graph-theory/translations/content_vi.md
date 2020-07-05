@@ -546,26 +546,26 @@ Khi tô màu bản đồ của các tiểu  bang của Mỹ, hiển nhiên 50 m�
       .tab
         h3 Hoa Kỳ #[span.check(when="map-0")]
         x-solved
-        include svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-1.svg
         button.btn.clear Clear
       .tab
         h3 Nam Phi #[span.check(when="map-1")]
         x-solved
-        include svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-2.svg
         button.btn.clear Clear
       .tab
         h3 Đức #[span.check(when="map-2")]
         x-solved
-        include svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-3.svg
         button.btn.clear Clear
       .tab
         h3 Anh #[span.check(when="map-3")]
         x-solved
-        include svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-4.svg
         button.btn.clear Clear
 
 ---

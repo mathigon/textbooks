@@ -8,18 +8,18 @@ abel:
   name: Abel
   overflow: true
   bio: |
-    __Niels Henrik Abel__ (1802-1829) fu un importante matematico norvegese. Anche se è morto
-    all'età di 26 anni, ha dato contributi rivoluzionari a una vasta gamma di argomenti.
+    __Niels Henrik Abel__ (1802-1829) fu un importante matematico norvegese. Morì
+    all'età di 26 anni, ma portò contributi rivoluzionari ad una vasta gamma di argomenti.
 
-    All'età di 16 anni, Abele dimostrò il teorema binomiale. Tre anni dopo, ha dimostrato che è
+    All'età di 16 anni, Abele dimostrò il teorema binomiale. Tre anni dopo, dimostrò che è
     impossibile risolvere equazioni quintiche, inventando in modo indipendente la teoria dei gruppi.
-    Questo è stato un problema aperto da oltre 350 anni! Ha anche lavorato su funzioni ellittiche e
-    ha scoperto _funzioni abeliane_.
+    Questo era stato un problema irrisolto da oltre 350 anni! Lavorò anche sulle funzioni ellittiche e
+    scoprì le _funzioni abeliane_.
 
     Abele trascorse la sua vita in povertà: aveva sei fratelli, suo padre morì quando aveva 18 anni,
-    non riuscì a trovare un lavoro in un'università e molti matematici inizialmente abbandonarono il
-    suo lavoro. Oggi, uno dei più alti riconoscimenti in matematica, il _Abel Prize_ prende il nome
-    da lui.
+    non riuscì a trovare un impiego all'università e molti matematici inizialmente abbandonarono il
+    suo lavoro. Oggi, uno dei più alti riconoscimenti in matematica, l' _Abel Prize_ prende il nome
+    proprio da lui.
   links:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
@@ -32,13 +32,11 @@ al-haytham:
     __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, c. 965-1050) visse al Cairo
     durante l'età d'oro islamica e studiò matematica, fisica, astronomia, filosofia e medicina. Era
     un sostenitore del _metodo scientifico_: la convinzione che qualsiasi ipotesi scientifica
-    dovesse essere verificata usando esperimenti o logiche matematiche - secoli prima degli
-    scienziati europei durante il Rinascimento.
+    dovesse essere verificata usando esperimenti o logiche matematiche - secoli prima del
+   Rinascimento europeo.
 
     Al-Haytham era particolarmente interessato all'ottica e alla percezione visiva. Ha anche
-    derivato una formula per la somma dei quarti di poteri (`1^4 + 2^4 + 3^4 + … +
-
-    n^4`) e ha studiato il legame tra algebra e geometria.
+    derivato una formula per la somma dei quarti di poteri (`1^4 + 2^4 + 3^4 + … +n^4`) e ha studiato il legame tra algebra e geometria.
 
 al-karaji:
   born: 953
@@ -46,7 +44,7 @@ al-karaji:
   name: Al-Karaji
   bio: |
     __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029) era un matematico e
-    ingegnere persiano. Fu la prima persona a usare _prove per induzione_, che gli permise di
+    ingegnere persiano. Fu la prima persona a usare le _prove per induzione_, che gli permisero di
     dimostrare il teorema binomiale.
   links:
     - title: Proof by Induction
@@ -59,16 +57,16 @@ al-khwarizmi:
   overflow: true
   bio: |
     Il matematico persiano __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي, 780 - 850) visse
-    durante l'epoca d'oro del regime musulmano Abbaside a Baghdad. Ha lavorato presso la "Casa della
+    durante l'epoca d'oro del regime musulmano Abbaside a Baghdad. Lavorò presso la "Casa della
     Saggezza", che conteneva la prima grande collezione di libri accademici dopo la distruzione
     della Biblioteca di Alessandria.
 
     Al-Khwarizmi è stato chiamato il "padre dell'algebra" - in effetti, la parola _algebra_ deriva
     dal titolo arabo del suo libro più importante: "Il libro compendio sul calcolo per completamento
-    e bilanciamento". In esso, ha mostrato come risolvere le equazioni lineari e quadratiche e, per
+    e bilanciamento". In esso, mostrò come risolvere le equazioni lineari e quadratiche e, per
     molti secoli, è stato il principale libro di testo di matematica nelle università europee.
 
-    Al-Khwarizmi ha anche lavorato in astronomia e geografia e la parola "algoritmo" prende il nome
+    Al-Khwarizmi lavorò anche in astronomia e geografia e la parola "algoritmo" prende il nome
     da lui.
 
 apollonius:
@@ -103,14 +101,14 @@ archimedes:
     grandi matematici di tutti i tempi. Ha scoperto molti concetti di calcolo e ha lavorato in
     geometria, analisi e meccanica.
 
-    Durante il bagno, Archimede ha scoperto un modo per determinare il volume di oggetti irregolari
-    utilizzando la quantità di acqua che hanno spostato quando sono stati immersi. Era così eccitato
-    da questa scoperta che è finito per strada, ancora spogliato, urlando _“Eureka!”_ (in greco per
+    Durante un bagno, Archimede scoprì un modo per determinare il volume di oggetti irregolari
+    utilizzando la quantità di acqua che spostano quando sono immersi. Era così eccitato
+    da questa scoperta che corse per strada, ancora nudo, urlando _“Eureka!”_ (in greco per
     _“L'ho trovato!”_).
 
     Come ingegnere, costruì ingegnose macchine da difesa durante l'assedio della sua città natale,
     Siracusa, in Sicilia. Dopo due anni, i romani riuscirono finalmente ad entrare e Archimede fu
-    ucciso. Le sue ultime parole sono state _"Non disturbare le mie cerchie"_ - che stava studiando
+    ucciso. Le sue ultime parole sono state _"Non rovinare i miei disegni"_ - che stava studiando
     in quel momento.
   links:
     - title: Archimedean Solids
@@ -130,7 +128,7 @@ aristotle:
     nel Rinascimento, e le sue opinioni sull'etica e altre questioni filosofiche sono ancora in
     discussione oggi.
 
-    Aristotele è anche la prima persona conosciuta a studiare formalmente _logica_, comprese le sue
+    Aristotele è anche la prima persona conosciuta a studiare formalmente la _logica_, comprese le sue
     applicazioni in scienze e matematica.
 
 aryabhata:
@@ -140,8 +138,8 @@ aryabhata:
   overflow: true
   bio: |
     __Aryabhata__ (आर्यभट) fu uno dei primi matematici e astronomi nell'età d'oro della matematica
-    indiana. Ha definito le funzioni trigonometriche, risolto equazioni quadratiche simultanee,
-    trovato approssimazioni per _π_ e realizzato che _π_ è irrazionale.
+    indiana. Definì le funzioni trigonometriche, risolse equazioni quadratiche simultanee,
+    trovò approssimazioni per _π_, e scoprì che _π_ è irrazionale.
   links:
     - title: Trigonometry
       url: /course/triangles/trigonometry
@@ -155,26 +153,26 @@ babbage:
   small: true
   bio: |
     __Charles Babbage__ (1791-1871) era un matematico, filosofo e ingegnere britannico. Viene spesso
-    chiamato il "padre del computer", avendo inventato il primo computer meccanico (il _motore di
-    differenza_) e una versione migliorata e programmabile (il _motore analitico_).
+    chiamato il "padre del computer", siccome inventò il primo computer meccanico (la _macchina
+    differenziale_) e una versione migliorata e programmabile (la _macchina analitica_).
 
     In teoria, queste macchine potrebbero eseguire automaticamente determinati calcoli memorizzati
-    su schede o nastro. Tuttavia, a causa degli elevati costi di produzione, non sono mai stati
-    completati completamente durante la vita di Babbage. Nel 1991, una replica funzionale fu
-    costruita allo Science Museum di Londra.
+    su schede o nastro. Tuttavia, a causa degli elevati costi di produzione, non sono mai state
+    costruite completamente durante la vita di Babbage. Nel 1991, una replica funzionale venne
+    costruita al Science Museum di Londra.
 
 bernoulli-1:
   born: 1654
   died: 1705
   name: Bernoulli
   bio: |
-    __Jacob Bernoulli__ (1655 - 1705) era un matematico svizzero e uno dei molti importanti
+    __Jacob Bernoulli__ (1655 - 1705) era un matematico svizzero e uno degli importanti
     scienziati della famiglia Bernoulli. In effetti, ebbe una profonda rivalità accademica con molti
     dei suoi fratelli e figli.
 
     Jacob fece significativi progressi nel calcolo inventato da Newton e Leibnitz, creò il campo del
-    _calcolo delle variazioni_, scoprì la costante fondamentale _e_, sviluppò tecniche per risolvere
-    equazioni differenziali e molto Di Più.
+    _calcolo delle variazioni_, scoprì la costante fondamentale, sviluppò tecniche per risolvere
+    equazioni differenziali e molto di più.
 
     Ha pubblicato il primo lavoro sostanziale sulla probabilità, comprese permutazioni, combinazioni
     e la legge di grandi numeri, ha dimostrato il teorema binomiale e ha derivato molte delle
@@ -189,13 +187,13 @@ bernoulli-2:
     scienziati della famiglia Bernoulli - tra cui suo padre Johann, suo zio Jacob e suo fratello
     Nicholas.
 
-    Daniel Bernoulli ha dimostrato che all'aumentare della velocità di un fluido, la sua pressione
+    Daniel Bernoulli dimostrò che all'aumentare della velocità di un fluido, la sua pressione
     diminuisce. Ora chiamato _principio di Bernoulli_, questo è il meccanismo usato dalle ali degli
-    aeroplani e dai motori a combustione. Ha anche fatto importanti scoperte in probabilità e
-    statistiche, e per la prima volta ha incontrato _funzioni di Bessel_.
+    aeroplani e dai motori a combustione. Fece anche importanti scoperte in probabilità e
+    statistiche, e per la prima volta definì le _armoniche cilindriche_.
 
-    All'età di 34 anni, è stato bandito dalla casa di suo padre per averlo picchiato a un premio
-    dell'Accademia di Parigi, per il quale entrambi hanno presentato un ingresso.
+    All'età di 34 anni, venne bandito dalla casa di suo padre per averlo picchiato ad un premio
+    dell'Accademia di Parigi, per il quale entrambi avevano partecipato.
 
 bhaskara:
   born: 1114
@@ -216,7 +214,7 @@ blackwell:
     __David Blackwell__ (1919 - 2010) era uno statistico e matematico americano. Ha lavorato sulla
     teoria dei giochi, la teoria della probabilità, la teoria dell'informazione e la programmazione
     dinamica e ha scritto uno dei primi libri di testo sulle statistiche bayesiane. Il _Teorema di
-    Rao-Blackwell_ mostra come migliorare gli stimatori di determinate quantità nelle statistiche.
+    Rao-Blackwell_ mostra come migliorare gli stimatori di determinate quantità statistiche.
 
     Blackwell è stato il primo afro-americano eletto a far parte dell'American _National Academy of
     Sciences_, ed è stato uno dei primi a ricevere un dottorato in matematica.
@@ -230,7 +228,7 @@ bolyai:
     __János Bolyai__ (1802-1860) era un matematico ungherese e uno dei fondatori della geometria non
     euclidea - una geometria in cui il quinto assioma di Euclide sulle linee parallele non regge.
     Questa è stata una svolta significativa in matematica. Sfortunatamente per Bolyai, i matematici
-    Gauss e Lobachevsky hanno scoperto risultati simili allo stesso tempo e hanno ricevuto la
+    Gauss e Lobachevsky scoprirono risultati simili allo stesso tempo e ricevettero la
     maggior parte del merito.
   links:
     - title: Non-Euclidean Geometry
@@ -242,9 +240,9 @@ boole:
   name: Boole
   bio: |
     __George Boole__ (1815-1864) era un matematico inglese. Da bambino, ha insegnato se stesso
-    latino, greco e matematica, sperando di sfuggire alla sua vita di classe inferiore. Ha creato
+    latino, greco e matematica, sperando di sfuggire alla sua vita di classe inferiore. Ha creato l'
     _algebra booleana_, che utilizza operatori come AND, OR e NOT (anziché addizione o
-    moltiplicazione) e può essere utilizzato quando si lavora con i set. Questa era la base per la
+    moltiplicazione) e può essere utilizzata quando si lavora con gli insiemi. Questa è la base della
     logica matematica formale e ha molte applicazioni nell'informatica.
 
 brahmagupta:
@@ -264,7 +262,7 @@ cantor:
   name: Cantor
   bio: |
     Il matematico tedesco __Georg Cantor__ (1845-1918) fu l'inventore della teoria degli insiemi e
-    un pioniere nella nostra comprensione dell'infinito. Per gran parte della sua vita, le scoperte
+    un pioniere della nostra comprensione dell'infinito. Per gran parte della sua vita, le scoperte
     di Cantor furono fortemente opposte dai suoi colleghi. Ciò potrebbe aver contribuito alla sua
     depressione e ai suoi esaurimenti nervosi, e ha trascorso molti decenni in un istituto mentale.
 
@@ -273,7 +271,7 @@ cantor:
     numeri naturali.
 
     Solo verso la fine della sua vita, Cantor iniziò a ricevere il riconoscimento che meritava.
-    David Hilbert ha dichiarato che "Nessuno ci espellerà dal paradiso che Cantor ha creato".
+    David Hilbert ha dichiarato che "Nessuno ci espellerà dal paradiso che Cantor ha creato per noi".
   links:
     - title: Infinity
       url: /world/Infinity
@@ -288,11 +286,11 @@ cardano:
     L'italiano __Gerolamo Cardano__ (1501-1576) fu uno dei più influenti matematici e scienziati del
     Rinascimento. Ha studiato gli ipercicloidi, ha pubblicato la soluzione di Tartaglia e Ferrari
     per le equazioni cubiche e quartiche, è stato il primo europeo a utilizzare sistematicamente
-    numeri negativi e ha persino riconosciuto l'esistenza di numeri immaginari (basato su
+    numeri negativi e ha persino riconosciuto l'esistenza dei numeri immaginari (basato su
     `sqrt(-1)`).
 
     Cardano fece anche alcuni primi progressi nella teoria della probabilità e introdusse in Europa
-    coefficienti binomiali e teorema binomiale. Ha inventato molti dispositivi meccanici, tra cui
+    i coefficienti binomiali e il teorema binomiale. Inventò molti dispositivi meccanici, tra cui
     serrature a combinazione, giroscopi con tre gradi di libertà e alberi di trasmissione (o alberi
     cardanici) che sono ancora oggi utilizzati nei veicoli.
   links:
@@ -318,10 +316,10 @@ cauchy:
   small: true
   bio: |
     __Augustin-Louis Cauchy__ (1789-1857) era un matematico e fisico francese. Ha contribuito a una
-    vasta gamma di aree in matematica e decine di teoremi prendono il nome da lui.
+    vasta gamma di aree in matematica e decine di teoremi prendono il suo nome.
 
-    Cauchy ha formalizzato il calcolo e l'analisi, riformulando e dimostrando risultati in cui i
-    matematici precedenti erano molto più imprudenti e imprecisi. Ha fondato il campo di _analisi
+    Cauchy ha formalizzato il calcolo e l'analisi, riformulando e dimostrando risultati di alcuni
+    matematici precedenti che erano molto più imprudenti e imprecisi. Ha fondato il campo dell' _analisi
     complessa_, studiato gruppi di permutazione e lavorato su ottica, fluidodinamica e teoria
     dell'elasticità.
 
@@ -331,8 +329,7 @@ cavalieri:
   died: 1647
   bio: |
     __Bonaventura Cavalieri__ (1598-1647) era un matematico e monaco italiano. Ha sviluppato un
-    precursore del calcolo infinitesimale ed è ricordato per il principio di Cavalieri di trovare il
-    volume dei solidi nella geometria.
+    precursore del calcolo infinitesimale ed è ricordato per il principio di Cavalieri, usato in geometria per trovare il volume dei solidi.
 
     Cavalieri lavorò anche in ottica e meccanica, introdusse i logaritmi in Italia e scambiò molte
     lettere con Galileo Galilei.
@@ -346,7 +343,7 @@ cayley:
   name: Cayley
   bio: |
     __Arthur Cayley__ (1821-1895) era un matematico e avvocato britannico. Fu uno dei pionieri della
-    _teoria dei gruppi_, per primo propose la moderna definizione di "gruppo" e li generalizzò per
+    _teoria dei gruppi_, per primo propose la moderna definizione di "gruppo" e generalizzò questo concetto per
     includere molte più applicazioni in matematica. Cayley sviluppò anche l'algebra matriciale e
     lavorò su geometrie di dimensioni superiori.
   links:
@@ -358,15 +355,15 @@ collatz:
   bio: |
     __Lothar Collatz__ (1910 - 1990) era un matematico tedesco che lavorava su equazioni
     differenziali e problemi di ottimizzazione. Il problema _congettura di Collatz_ o `3x+1` prende
-    il nome da lui - e ancora irrisolto.
+    il nome da lui - ed ancora irrisolto.
 
 conway:
   name: Conway
   born: 1937
   died: 2020
   bio: |
-    __John Horton Conway__ (1937-2020) era un matematico britannico che lavorava alla Cambridge e
-    alla Princeton University. Era un membro della Royal Society e il primo destinatario del Premio
+    __John Horton Conway__ (1937-2020) era un matematico britannico che lavorava alle università di Cambridge
+   e Princeton. Era un membro della Royal Society e il primo destinatario del Premio
     Pólya.
 
     Ha esplorato la matematica sottostante di oggetti quotidiani come nodi e giochi e ha contribuito
@@ -406,7 +403,7 @@ de-moivre:
     trigonometria e numeri complessi.
 
     De Moivre ha scoperto la formula per la normale distribuzione in probabilità, e per prima cosa
-    ha congetturato il teorema del limite centrale __. Ha anche trovato una formula non ricorsiva
+    ha congetturato il teorema del limite centrale. Ha anche trovato una formula non ricorsiva
     per i numeri di Fibonacci, collegandoli al rapporto aureo `φ`.
   links:
     - title: Probability
@@ -421,8 +418,8 @@ dedekind:
   small: true
   bio: |
     __Richard Dedekind__ (1831-1916) era un matematico tedesco e uno degli studenti di Gauss. Ha
-    sviluppato molti concetti nella teoria degli insiemi e ha inventato _tagli di Dedekind_ come
-    definizione formale di numeri reali. Ha anche dato le prime definizioni di _campi numerici_ e
+    sviluppato molti concetti nella teoria degli insiemi e ha inventato i _tagli di Dedekind_ come
+    definizione formale dei numeri reali. Ha anche dato le prime definizioni di _campi numerici_ e
     _anelli_, due importanti costrutti in algebra astratta.
 
 democritus:
@@ -431,8 +428,8 @@ democritus:
   name: Democritus
   bio: |
     Il matematico greco __Democritus__ (ca. 460 - 370 a.C.), potrebbe essere la prima persona a
-    ipotizzare che tutta la materia fosse formata da piccoli _atomi_ ed è considerata il "padre
-    della scienza moderna" ”. Ha anche fatto molte scoperte in geometria, inclusa la formula per il
+    ipotizzare che tutta la materia sia formata da piccoli _atomi_, ed è considerato il "padre
+    della scienza moderna". Fece anche molte scoperte in geometria, inclusa la formula per il
     volume di prismi e coni.
   links:
     - title: Volume of a Cone
@@ -447,9 +444,9 @@ desargues:
     numerosi edifici a Parigi e Lione, aiutò a costruire una diga e inventò un meccanismo per
     sollevare l'acqua usando epicicloidi.
 
-    In matematica, Desargues è considerato il padre di _geometria proiettiva_. Questo è un tipo
+    In matematica, Desargues è considerato il padre della _geometria proiettiva_. Questo è un tipo
     speciale di geometria in cui le linee parallele si incontrano nel "punto all'infinito", la
-    dimensione delle forme non ha importanza (solo le loro proporzioni) e tutte e quattro le sezioni
+    dimensione delle forme non ha importanza (solo le loro proporzioni), e tutte e quattro le sezioni
     coniche (cerchio, ellisse, parabola e iperbole) sono essenzialmente le stesso.
   links:
     - title: Conic Sections
@@ -460,16 +457,16 @@ descartes:
   died: 1650
   name: Descartes
   bio: |
-    __René Descartes__ (1596-1650) fu un matematico e filosofo francese e una delle figure chiave
+    __René Descartes (Renato Cartesio)__ (1596-1650) fu un matematico e filosofo francese e una delle figure chiave
     della Rivoluzione scientifica. Ha rifiutato di accettare l'autorità dei precedenti filosofi e
     una delle sue citazioni più conosciute è "Penso, quindi sono".
 
-    Cartesio è il padre di _geometria analitica_, che ci permette di descrivere forme geometriche
-    usando l'algebra. Questo era uno dei prerequisiti, che permise a Newton e Leibnitz di inventare
-    _calculus_ qualche decennio dopo.
+    Cartesio è il padre della _geometria analitica_, che ci permette di descrivere forme geometriche
+    usando l'algebra. Questo era uno dei prerequisiti, che permise a Newton e Leibnitz di inventare il
+    _calcolo infinitesimale_ qualche decennio dopo.
 
-    Gli viene attribuito il primo utilizzo di apice per poteri o esponenti e il _sistema di
-    coordinate cartesiane_ prende il nome da lui.
+    Gli viene attribuito il primo utilizzo dell'apice per la potenza o esponente, e il _sistema di
+    coordinate cartesiane_ prende il nome proprio da lui.
 
 diophantus:
   born: 200
@@ -478,10 +475,10 @@ diophantus:
   overflow: true
   bio: |
     __Diophantus__ era un matematico ellenistico che viveva ad Alessandria. Molte delle sue opere
-    riguardano la risoluzione di equazioni polinomiali con diverse incognite. Questi sono ora
-    chiamati _equazione diofantea_ e rimangono oggi un'importante area di ricerca.
+    riguardano la risoluzione di equazioni polinomiali con diverse incognite. Queste sono ora
+    chiamate _equazione diofantee_ e rimangono oggi un'importante area di ricerca.
 
-    È stato durante la lettura di uno dei libri di Diophantus, molti secoli dopo, che _Pierre de
+    È stato durante la lettura di uno dei libri di Diofanto, molti secoli dopo, che _Pierre de
     Fermat_ ha proposto che una di queste equazioni non avesse soluzione. Questo divenne noto come
     "L'ultimo teorema di Fermat", e fu risolto solo nel 1994.
 
@@ -504,14 +501,14 @@ einstein:
   bio: |
     __Albert Einstein__ (1879-1955) era un fisico tedesco e uno degli scienziati più influenti della
     storia. Ha ricevuto il premio Nobel per la fisica e la rivista TIME lo ha definito la _persona
-    del 20 ° secolo_.
+    del 20° secolo_.
 
-    Einstein ha innescato la trasformazione più significativa nella nostra visione dell'universo da
+    Einstein ha innescato la trasformazione più significativa nella nostra visione dell'universo dai tempi di
     Newton. Si rese conto che la fisica classica, _newtoniana_, non era più sufficiente per spiegare
     alcuni fenomeni fisici.
 
-    All'età di 26 anni, durante il suo "anno miracoloso", ha pubblicato quattro rivoluzionari
-    articoli scientifici che spiegavano l'effetto fotoelettrico e il moto browniano, introdotto una
+    All'età di 26 anni, durante il suo "anno miracoloso", ha pubblicato quattro
+    articoli scientifici rivoluzionari che spiegavano l'effetto fotoelettrico e il moto browniano, introdotto una
     relatività speciale e derivato la formula `E = m c^2`, che afferma quell'energia (_E_) e massa
     (_m_) sono equivalenti.
 
@@ -520,12 +517,12 @@ eratosthenes:
   born: -276
   died: -195
   bio: |
-    __Eratosthenes of Cyrene__ (276-195 a.C. circa) era un matematico, geografo, astronomo, storico
+    __Eratostene di Cirene__ (276-195 a.C. circa) era un matematico, geografo, astronomo, storico
     e poeta greco. Trascorse gran parte della sua vita in Egitto, come capo della biblioteca di
     Alessandria. Tra le molte altre conquiste, Eratostene calcolò la circonferenza della Terra,
     misurò l'inclinazione dell'asse di rotazione terrestre, stimò la distanza dal sole e creò alcune
-    delle prime mappe del mondo. Ha anche inventato il "setaccio di Eratostene", un modo efficace
-    per calcolare _numeri primi_.
+    delle prime mappe del mondo. Ha anche inventato il "crivello di Eratostene", un modo efficace
+    per calcolare i _numeri primi_.
   links:
     - title: Radius of the Earth
       url: /course/circles/tangets-chords-arcs#eratosthenes
@@ -538,11 +535,11 @@ erdos:
   name: Erdős
   bio: |
     __Paul Erdős__ (1913 - 1996) fu uno dei matematici più produttivi della storia. Nato in
-    Ungheria, ha risolto innumerevoli problemi in teoria dei grafi, teoria dei numeri, combinatoria,
+    Ungheria, ha risolto innumerevoli problemi di teoria dei grafi, teoria dei numeri, combinatoria,
     analisi, probabilità e altre parti della matematica.
 
     Durante la sua vita, Erdős pubblicò circa 1.500 articoli e collaborò con oltre 500 altri
-    matematici. In effetti, ha trascorso gran parte della sua vita vivendo fuori da una valigia,
+    matematici. In effetti, ha trascorso gran parte della sua vita vivendo con una valigia,
     viaggiando per seminari e visitando colleghi!
 
 escher:
@@ -552,7 +549,7 @@ escher:
   bio: |
     __Maurits Cornelis Escher__ (1898 - 1972) fu un artista olandese che creò schizzi, xilografie e
     litografie di oggetti e forme di ispirazione matematica: poliedri, tessellazioni e forme
-    impossibili. Ha esplorato graficamente concetti come simmetria, infinito, prospettiva e
+    impossibili. Esplorò graficamente concetti come simmetria, infinito, prospettiva e
     geometria non euclidea.
   small: true
   links:
@@ -565,8 +562,8 @@ euclid:
   died: -270
   bio: |
     __Euclide di Alessandria__ (intorno al 300 a.C.) era un matematico greco ed è spesso chiamato
-    _padre della geometria_. Ha pubblicato un libro _Elements_ che per primo ha introdotto la
-    geometria euclidea e conteneva molte prove importanti in geometria e teoria dei numeri. Fu il
+    _padre della geometria_. Ha pubblicato un libro _Elementi_, con la prima introduzione alla
+    geometria euclidea e molte prove importanti di geometria e teoria dei numeri. Fu il
     principale libro di testo di matematica fino al XIX secolo. Ha insegnato matematica ad
     Alessandria, ma si sa molto poco della sua vita.
   links:
@@ -580,11 +577,11 @@ euler:
   born: 1707
   died: 1783
   bio: |
-    __Leonhard Euler__ (1707 - 1783) fu uno dei più grandi matematici della storia. Il suo lavoro
+    __Leonhard Euler (Eulero)__ (1707 - 1783) fu uno dei più grandi matematici della storia. Il suo lavoro
     copre tutte le aree della matematica e ha scritto 80 volumi di ricerca.
 
-    Euler è nato in Svizzera e ha studiato a Basilea, ma ha vissuto gran parte della sua vita a
-    Berlino, in Prussia e San Pietroburgo, in Russia.
+    Eulero è nato in Svizzera e ha studiato a Basilea, ma ha vissuto gran parte della sua vita a
+    Berlino, in Prussia e a San Pietroburgo, in Russia.
 
     Eulero inventò gran parte della moderna terminologia e notazione matematica e fece importanti
     scoperte in calcolo, analisi, teoria dei grafi, fisica, astronomia e molti altri argomenti.
@@ -600,7 +597,7 @@ fatou:
   name: Fatou
   bio: |
     __Pierre Joseph Louis Fatou__ (1878-1929) era un matematico e astronomo francese. Ha scoperto il
-    _set di Julia_ e il suo inverso, il set di Fatou, prende il suo nome. Ha anche dato importanti
+    _set di Julia_ e il suo inverso, il set di Fatou, che prende il suo nome. Ha anche dato importanti
     contributi all'analisi e alla meccanica celeste.
 
 fermat:
@@ -613,8 +610,8 @@ fermat:
 
     Nel 1637, scrisse una breve nota a margine di uno dei suoi libri di testo, sostenendo che
     l'equazione `a^n + b^n = c^n` non ha soluzioni intere per `n > 2` e che aveva una "meravigliosa
-    prova, che questo margine è troppo stretto per contenere ”. Questo divenne noto come _Last
-    Teorem di Fermat_ e uno dei più famosi problemi irrisolti in matematica - fino a quando non fu
+    prova, che questo margine è troppo stretto per contenere". Questo divenne noto come _L'ultimo
+    teorema di Fermat_ e uno dei più famosi problemi irrisolti in matematica - fino a quando non fu
     finalmente dimostrato nel 1994.
   links:
     - title: Probability
@@ -629,7 +626,7 @@ fibonacci:
     italiano. È noto per la sequenza numerica che prende il suo nome: 1, 1, 2, 3, 5, 8, 13, ...
 
     Fibonacci è anche responsabile della divulgazione dei numeri arabi (0, 1, 2, 3, 4, ...) in
-    Europa, che utilizzava ancora numeri romani (I, V, X, D, ...) nel XII secolo d.C. Ha spiegato il
+    Europa nel XII secolo d.C, quando si utilizzavano ancora numeri romani (I, V, X, D, ...). Ha spiegato il
     sistema decimale in un libro chiamato "Liber Abaci", un manuale pratico per i commercianti.
   links:
     - title: Fibonacci Numbers
@@ -643,17 +640,17 @@ fourier:
     __Joseph Fourier__ (1768-1830) era un matematico francese, amico e consigliere di Napoleone.
     Oltre alla sua ricerca matematica, gli viene anche attribuita la scoperta dell'effetto serra.
 
-    Durante un viaggio in Egitto, Fourier è stato particolarmente affascinato da _calore_. Ha
-    studiato il trasferimento di calore e le vibrazioni e ha scoperto che qualsiasi funzione
-    periodica può essere scritta come una somma infinita di funzioni trigonometriche: una _serie di
+    Durante un viaggio in Egitto, Fourier è stato particolarmente affascinato dal _calore_. Ha
+    studiato il trasferimento del calore e delle vibrazioni e ha scoperto che qualsiasi funzione
+    periodica può essere scritta come una somma infinita di funzioni trigonometriche: la _serie di
     Fourier_.
 
 fuller:
   name: Fuller
   bio: |
     __Richard Buckminster "Bucky" Fuller__ (1895-1983) era un architetto, designer e inventore
-    americano. È famoso per la costruzione di _cupola geodetica_ - grandi strutture sferiche.
-    Molecole di carbonio dall'aspetto simile, i _fullereni_, furono in seguito chiamati con lui.
+    americano. È famoso per la costruzione di _cupole geodetiche_ - grandi strutture sferiche.
+    Alle molecole di carbonio dall'aspetto simile a queste cupole, i _fullereni_, venne attribuito il suo nome.
 
 galileo:
   born: 1564
@@ -665,10 +662,10 @@ galileo:
     grandi di Giove, le fasi di Venere, le macchie solari e molto altro.
 
     Galileo, a volte chiamato il "padre della scienza moderna", studiò anche il movimento degli
-    oggetti in caduta libera, la cinematica, la scienza dei materiali e inventò il termoscopio (un
+    oggetti in caduta libera, la cinematica, la scienza dei materiali e inventò il termoscopio (il
     primo termometro).
 
-    Era un sostenitore vocale di _eliocentrismo_, l'idea che il sole fosse al centro del nostro
+    Era un sostenitore vocale dell'_eliocentrismo_, l'idea che il sole fosse al centro del nostro
     sistema solare. Questo alla fine lo portò a essere processato dall'Inquisizione cattolica:
     Galileo fu costretto a ritrattare e trascorse il resto della sua vita agli arresti domiciliari.
 
@@ -679,19 +676,18 @@ galois:
   overflow: true
   bio: |
     Il matematico francese __Évariste Galois__ (1811-1832) ebbe una vita breve e tragica, tuttavia
-    inventò due campi della matematica completamente nuovi: _teoria dei gruppi_ e _teoria di Galois_
-    .
+    inventò due campi della matematica completamente nuovi: la _teoria dei gruppi_ e la _teoria di Galois_.
 
-    Mentre era ancora adolescente, Galois ha dimostrato che non esiste una soluzione generale per
-    equazioni polinomiali di grado cinque o superiore - contemporaneamente a Niels Abel.
+    Mentre era ancora adolescente, Galois dimostrò contemporaneamente a Niels Abel che non esiste una soluzione generale per
+    equazioni polinomiali di grado cinque o superiore.
 
-    Sfortunatamente, altri matematici con cui ha condiviso queste scoperte con ripetutamente
-    smarrito o semplicemente restituito il suo lavoro, e ha fallito gli esami scolastici e
-    universitari mentre si concentrava su un lavoro molto più complesso.
+    Sfortunatamente, altri matematici con cui condivideva queste scoperte smarrivano o semplicemente
+    gli restituivano il suo lavoro. Concentrandosi su un lavoro molto più complesso, fallì gli esami 
+    scolastici e universitari.
 
     All'età di 21 anni, Galois fu colpito in un duello (alcuni dicono una faida su una donna), e in
     seguito morì per le sue ferite. Durante la notte prima della sua morte, ha riassunto le sue
-    scoperte matematiche in una lettera ad un amico. Altri matematici impiegherebbero molti anni a
+    scoperte matematiche in una lettera ad un amico. I matematici impiegarono molti anni per
     comprendere appieno il vero impatto del suo lavoro.
   links:
     - title: Group Theory
@@ -708,8 +704,8 @@ gauss:
 
     Secondo la leggenda, ha corretto un errore nella contabilità di suo padre all'età di 3 anni e ha
     trovato un modo per sommare rapidamente tutti i numeri interi da 1 a 100 all'età di 8 anni. Ha
-    fatto le sue prime scoperte importanti mentre era ancora adolescente , e in seguito ha insegnato
-    a molti altri famosi matematici come professore.
+    fatto le sue prime scoperte importanti mentre era ancora adolescente, e in seguito divenne professore di
+    molti altri famosi matematici.
   links:
     - title: Prime Number Theorem
       url: /course/divisibility/the-distribution-of-primes#riemann
@@ -740,12 +736,12 @@ godel:
   name: Gödel
   small: true
   bio: |
-    __Kurt Gödel__ (1906 - 1978) era un matematico austriaco che in seguito emigrò in America ed è
+    __Kurt Gödel__ (1906 - 1978) era un matematico austriaco, immigrato in America, ed è
     considerato uno dei più grandi logici della storia.
 
     All'età di 25 anni, subito dopo aver terminato il dottorato a Vienna, pubblicò i suoi due
     _teoremi di incompletezza_. Questi affermano che qualsiasi sistema matematico (coerente e
-    sufficientemente potente) contiene certe affermazioni che sono vere ma che non possono essere
+    sufficientemente potente) contiene certe affermazioni che sono vere, ma che non possono essere
     provate. In altre parole, la matematica contiene alcuni problemi che sono impossibili da
     risolvere.
 
@@ -777,7 +773,7 @@ grothendieck:
   bio: |
     Il matematico francese __Alexander Grothendieck__ (1928-2014) è stato una delle figure chiave
     nello sviluppo della _geometria algebrica_. Ha esteso la portata del campo per applicarsi a
-    molti nuovi problemi in matematica, incluso, infine, l'ultimo teorema di Fermat. Nel 1966 gli fu
+    molti nuovi problemi in matematica, incluso, l'ultimo teorema di Fermat. Nel 1966 gli fu
     assegnata la medaglia Fields.
 
 guthrie:
@@ -809,12 +805,11 @@ hamilton:
   small: true
   bio: |
     __William Rowan Hamilton__ (1805-1865) era un matematico irlandese e un bambino prodigio. Ha
-    inventato _quaternioni_, il primo esempio di "algebra non commutativa", che ha importanti
+    inventato i _quaternioni_, il primo esempio di "algebra non commutativa", che hanno importanti
     applicazioni in matematica, fisica e informatica.
 
-    Ha avuto l'idea per la prima volta mentre camminava lungo il Royal Canal a Dublino, e ha
-    scolpito la formula fondamentale in un ponte di pietra che ha superato: `"i"^2 = "j"^2 = "k"^2 =
-    "ijk" = -1`.
+    Formulò questa idea per la prima volta mentre camminava lungo il Royal Canal a Dublino, e 
+    incise la formula: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1` su una pietra del ponte.
 
     Hamilton ha anche dato un contributo significativo alla fisica, compresa l'ottica e la meccanica
     newtoniana.
@@ -825,17 +820,17 @@ hardy:
   name: Hardy
   small: true
   bio: |
-    __G.H. Hardy__ (1877-1947) fu un eminente matematico inglese puro. Insieme a _John Littlewood_,
-    ha fatto importanti scoperte nell'analisi e nella teoria dei numeri, inclusa la distribuzione
+    __Godfrey Harold Hardy__ (1877-1947) fu un eminente matematico inglese. Insieme a _John Littlewood_,
+    fece importanti scoperte nell'analisi e nella teoria dei numeri, inclusa la distribuzione
     dei numeri primi.
 
-    Nel 1913, Hardy ricevette una lettera da _Srinivasa Ramanujan_, un impiegato autodidatta
-    sconosciuto dall'India. Hardy riconobbe immediatamente il suo genio e fece in modo che Ramanujan
-    viaggiasse a Cambridge dove lavorava. Insieme, hanno fatto importanti scoperte e autore di
+    Nel 1913, Hardy ricevette una lettera dall'India, che gli era stata inviata da _Srinivasa Ramanujan_,
+    un impiegato autodidatta sconosciuto. Hardy riconobbe immediatamente il suo genio e fece in modo che Ramanujan
+    viaggiasse a Cambridge dove lavorava. Insieme, hanno fatto importanti scoperte e divennero autori di
     numerosi articoli.
 
     Hardy scrisse sempre la matematica applicata e lo espresse nel suo resoconto personale del
-    pensiero matematico, il libro del 1940 _A Mathematician's Apology_.
+    pensiero matematico, il libro del 1940 _Apologia di un matematico_.
 
 hilbert:
   name: Hilbert
@@ -849,7 +844,7 @@ hilbert:
     Hilbert ha lavorato a Gottinga (Germania), dove ha insegnato a numerosi studenti che in seguito
     sono diventati famosi matematici. Durante il Congresso internazionale dei matematici del 1900,
     presentò un elenco di 23 problemi irrisolti. Questi hanno aperto la strada alla ricerca futura -
-    e quattro di loro sono ancora irrisolti oggi!
+    e quattro di loro sono tuttora irrisolti!
   links:
     - title: Hilbert’s Hotel
       url: /world/Infinity
@@ -860,14 +855,14 @@ hypatia:
   name: Hypatia
   overflow: true
   bio: |
-    __Ipazia__ (ca. 360 - 415 d.C.) era un astronomo e un matematico di spicco nell'antica
-    Alessandria. Fu anche la prima matematica di sesso femminile la cui vita e lavoro sono
+    __Ipazia__ (ca. 360 - 415 d.C.) era un astronomo e un matematico di spicco dell'antica
+    Alessandria. Fu anche la prima donna nella storia della matematica la cui vita e lavoro sono
     ragionevolmente ben registrati. Ha curato o scritto commenti su molti dei libri scientifici del
     suo tempo e ha costruito astrolabi e idrometri.
 
-    Fu rinomata durante la sua vita come grande insegnante e consigliò Oreste, prefetto romano di
-    Alessandria. La faida di Oreste con Cirillo, il vescovo di Alessandria, portò all'Ipazia
-    assassinata da una folla di cristiani.
+    Fu rinomata durante la sua vita come grande insegnante e consigliera di Oreste, prefetto romano di
+    Alessandria. Morì assassinata da un folla di cristiani durante una faida di Oreste con Cirillo, 
+    il vescovo di Alessandria.
 
 jacobi:
   born: 1809
@@ -901,10 +896,10 @@ jiushao:
 
     Qin ha inizialmente sviluppato un metodo per risolvere numericamente equazioni polinomiali, che
     ora è noto come _metodo di Horner_. Trovò una formula per l'area di un triangolo in base alla
-    lunghezza dei suoi tre lati, calcolò la somma delle serie aritmetiche e introdusse un simbolo di
-    "zero" nella matematica cinese.
+    lunghezza dei suoi tre lati, calcolò la somma delle serie aritmetiche e introdusse un simbolo 
+    corrispondente allo "zero" nella matematica cinese.
 
-    Qin ha anche inventato _bacini di Tianchi_, che sono stati usati per misurare le precipitazioni
+    Qin ha anche inventato i _bacini di Tianchi_, che sono stati usati per misurare le precipitazioni
     e raccogliere dati meteorologici importanti per l'agricoltura.
 
 johnson:
@@ -925,14 +920,14 @@ johnson:
 julia:
   name: Julia
   bio: |
-    __Gaston Maurice Julia__ (1893 - 1978) era un matematico francese che scoprì insieme il _set di
+    __Gaston Maurice Julia__ (1893 - 1978) era un matematico francese che scoprì l' _insieme di
     Julia_, un frattale che fu successivamente reso popolare da Benoit Mandelbrot.
 
 karinthy:
   name: Karinthy
   bio: |
     __Frigyes Karinthy__ (1887-1938) era un autore, poeta e giornalista ungherese. È noto
-    soprattutto per il racconto del 1929 "Chains", che per primo introdusse il concetto di _sei
+    soprattutto per il racconto del 1929 "Catene", che per primo introdusse il concetto di _sei
     gradi di separazione_.
 
 kepler:
@@ -940,9 +935,9 @@ kepler:
   born: 1571
   died: 1630
   bio: |
-    __Johannes Kepler__ (1571-1630) era un astronomo e matematico tedesco. Era il _matematico
+    __Giovanni Keplero__ (1571-1630) era un astronomo e matematico tedesco. Era il _matematico
     imperiale_ a Praga, ed è meglio conosciuto per le sue tre _leggi del moto planetario_. Keplero
-    lavorò anche nell'ottica e inventò un telescopio migliorato per le sue osservazioni.
+    lavorò anche nell'ottica e inventò un telescopio per le sue osservazioni.
   links:
     - title: Elliptical Orbits
       url: /course/circles/conic-sections#kepler
@@ -954,7 +949,7 @@ khayyam:
   bio: |
     __Omar Khayyam__ (عمر خیّام, 1048-1131) era un matematico persiano, astronomo e poeta. Riuscì a
     classificare e risolvere tutte le equazioni cubiche e trovò nuovi modi di comprendere l'assioma
-    parallelo _di Euclide_. Khayyam ha anche progettato il _calendario Jalali_, un calendario solare
+    parallelo di _Euclide_. Khayyam ha anche progettato il _calendario del Jalal (calendario persiano)_, un calendario solare
     preciso che è ancora utilizzato in alcuni paesi.
   links:
     - title: Pascal’s Triangle
@@ -964,7 +959,7 @@ koch:
   name: von Koch
   bio: |
     __Niels Fabian Helge von Koch__ (1870-1924) era un matematico svedese. Descrisse per la prima
-    volta il _fiocco di neve di Koch_, un frattale che porta il suo nome, e dimostrò relazioni tra
+    volta la _curva di Koch_, un frattale a forma di fiocco di neve che porta il suo nome, e dimostrò relazioni tra
     l'ipotesi di Riemann e la distribuzione dei numeri primi.
 
 lagrange:
@@ -972,8 +967,8 @@ lagrange:
   died: 1813
   name: Lagrange
   bio: |
-    __Joseph-Louis Lagrange__ (1736-1813) era un matematico italiano che succedette a Leonard Euler
-    come direttore dell'Accademia delle Scienze di Berlino.
+    __Joseph-Louis Lagrange (Giuseppe Luigi Lagrangia)__ (1736-1813) era un matematico italiano che 
+    succedette a Leonard Euler (Eulero) come direttore dell'Accademia delle Scienze di Berlino.
 
     Lavorò sull'analisi e sul calcolo delle variazioni, inventò nuovi metodi per risolvere equazioni
     differenziali, dimostrò teoremi nella teoria dei numeri e gettò le basi della teoria dei gruppi.
@@ -1033,7 +1028,7 @@ leonardo:
 
     Leonardo è nato a Vinci, ha studiato a Firenze e ha lavorato a Milano, Roma, Bologna e Venezia.
     Solo 15 dei suoi dipinti sono sopravvissuti, ma tra questi ci sono alcune delle opere più
-    conosciute e più riprodotte al mondo, tra cui _Mona Lisa_ e _The Last Supper_.
+    conosciute e più riprodotte al mondo, tra cui _Mona Lisa_ e _L'ultima cena_.
 
     I suoi quaderni contengono un vasto numero di disegni, invenzioni e diagrammi scientifici, tra
     cui le prime macchine volanti ed elicotteri, pompe idrauliche, ponti e molto altro.
@@ -1045,7 +1040,7 @@ lie:
   small: true
   bio: |
     Il matematico norvegese __Marius Sophus Lie__ (1842-1899) ha fatto notevoli progressi nello
-    studio di _gruppi di trasformazione continua_ - ora chiamato _gruppi di Lie_. Ha anche lavorato
+    studio di _gruppi di trasformazione continua_ - ora chiamati _gruppi di Lie_. Ha anche lavorato
     su equazioni differenziali e geometria non euclidea.
 
 lobachevsky:
@@ -1066,8 +1061,8 @@ lorenz:
   born: 1917
   died: 2008
   bio: |
-    __Edward Lorenz__ (1917 - 2008) era un matematico e meteorologo americano. Ha aperto la strada a
-    _teoria del caos_, ha scoperto _strani attrattori_ e ha coniato il termine "effetto farfalla".
+    __Edward Lorenz__ (1917 - 2008) era un matematico e meteorologo americano. Ha aperto la strada alla
+    _teoria del caos_, ha scoperto _attrattori strani_ e ha coniato il termine "effetto farfalla".
   links:
     - title: Chaos Theory
       url: /course/chaos/introduction
@@ -1079,8 +1074,8 @@ lovelace:
   overflow: true
   bio: |
     __Ada Lovelace__ (1815-1852) era uno scrittore e matematico inglese. Insieme a Charles Babbage,
-    ha lavorato su _Analytical Engine_ un primo computer meccanico. Ha anche scritto il primo
-    algoritmo per funzionare su una macchina del genere (per calcolare i numeri di Bernoulli),
+    ha lavorato sulla _macchina analitica_ un primo computer meccanico. Ha anche scritto il primo
+    algoritmo che poteva funzionare su una macchina del genere (per calcolare i numeri di Bernoulli),
     rendendola la prima programmatrice di computer nella storia.
 
     Ada ha descritto il suo approccio come "scienza poetica" e ha trascorso molto tempo a riflettere
@@ -1112,10 +1107,10 @@ mandelbrot:
     Il matematico __Benoit Mandelbrot__ è nato in Polonia, è cresciuto in Francia e alla fine si è
     trasferito negli Stati Uniti. È stato uno dei pionieri della _geometria frattale_ e
     particolarmente interessato al modo in cui "rugosità" e "caos" appaiono nel mondo reale (ad
-    esempio nuvole o coste).
+    esempio in nuvole o coste).
 
-    Mentre lavorava in IBM, ha usato i primi computer per creare rappresentazioni grafiche di
-    frattali e nel 1980 ha scoperto il famoso _set di Mandelbrot_.
+    Mentre lavorava all'IBM, ha usato i primi computer per creare rappresentazioni grafiche di
+    frattali e nel 1980 ha scoperto il famoso _insieme di Mandelbrot_.
   links:
     - title: Fractals
       url: /course/fractals/introduction
@@ -1127,7 +1122,7 @@ menger:
   bio: |
     __Karl Menger__ (1902 - 1985) era un matematico austriaco-americano. Ha studiato algebra,
     geometria, dimensioni, teoria dei giochi e scienze sociali, ma è ricordato soprattutto per la
-    _spugna di Menger_, un famoso frattale tridimensionale __.
+    _spugna di Menger_, un famoso frattale tridimensionale.
 
 mersenne:
   born: 1588
@@ -1135,8 +1130,8 @@ mersenne:
   name: Mersenne
   bio: |
     __Marin Mersenne__ (1588-1648) era un matematico e sacerdote francese. A causa dei frequenti
-    scambi con i suoi contatti nel mondo scientifico durante il 17 ° secolo, è stato chiamato il
-    "postbox dell'Europa".
+    scambi con i suoi contatti nel mondo scientifico durante il 17° secolo, è stato chiamato il
+    "casella postale d'Europa".
 
     Oggi lo ricordiamo principalmente per i _numeri primi di Mersenne_, numeri primi che possono
     essere scritti come `2^n - 1`. La maggior parte dei numeri primi più grandi conosciuti sono di
@@ -1149,7 +1144,7 @@ mersenne:
 milgram:
   name: Milgram
   bio: |
-    __Stanley Milgram__ (1933 - 1984) era un famoso psicologo sociale. È noto per gli esperimenti su
+    __Stanley Milgram__ (1933 - 1984) era un famoso psicologo sociale. È noto per gli esperimenti sull'
     _obbedienza_, per testare come gli adulti disposti a seguire gli ordini, anche quando fanno del
     male agli altri, e per _esperimento sul piccolo mondo_, che verifica il grado di connessione di
     società.
@@ -1177,7 +1172,7 @@ monge:
   died: 1818
   name: Monge
   bio: |
-    __Gaspard Monge__ (1746-1818) era un matematico francese. È considerato il padre di _geometria
+    __Gaspard Monge__ (1746-1818) era un matematico francese. È considerato il padre della _geometria
     differenziale_, avendo introdotto il concetto di _linee di curvatura_ su superfici nello spazio
     tridimensionale (ad esempio su una sfera). Monge ha anche inventato la _proiezione ortografica_
     e la _geometria descrittiva_, che consente la rappresentazione di oggetti tridimensionali usando
@@ -1197,29 +1192,12 @@ monsky:
     Brandeis. Ha dimostrato che un quadrato non può essere diviso in un numero dispari di triangoli
     di uguale area - questo è noto come "teorema di Monsky".
 
-morse:
-  name: Morse
-  bio: |
-    __Samuel Morse__ (1791-1872) fu un inventore e pittore americano. È cresciuto vicino a Boston e
-    ha studiato all'università di Yale, prima di iniziare una carriera come artista.
-
-    Nel suo viaggio di ritorno da un viaggio in Europa per studiare arte, Morse sentì i passeggeri
-    parlare di nuovi dispositivi elettrici. Questo lo ha ispirato a lavorare su un significativo
-    miglioramento del telegrafo elettrico, usando solo un filo, e a sviluppare _codice Morse_ con il
-    suo assistente Alfred Vail.
-
-    Dopo alcune iniziali difficoltà a ricevere finanziamenti, il telegrafo di Morse si diffuse
-    rapidamente in tutti gli Stati Uniti e nel mondo.
-
-    Morse ha anche corso due volte per il sindaco di New York City, ma il suo sostegno alla
-    schiavitù e contro l'immigrazione ha fatto sì che sia stato sconfitto entrambe le volte.
-
 napier:
   born: 1550
   died: 1617
   name: Napier
   bio: |
-    __John Napier__ (1550-1617) era un matematico, un fisico e un astronomo scozzesi. Inventò i
+    __John Napier__ (1550-1617) era un matematico, un fisico e un astronomo scozzese. Inventò i
     logaritmi, rese popolare l'uso del punto decimale e creò le "ossa di Napier", un dispositivo di
     calcolo manuale che aiutò con la moltiplicazione e la divisione.
 
@@ -1248,8 +1226,8 @@ neumann:
   bio: |
     __John von Neumann__ (1903 - 1957) era un matematico, fisico e scienziato informatico
     ungherese-americano. Ha dato importanti contributi alla matematica pura, è stato un pioniere
-    della meccanica quantistica e ha sviluppato concetti come teoria dei giochi, automi cellulari,
-    macchine autoreplicanti e programmazione lineare.
+    della meccanica quantistica e ha sviluppato concetti come la teoria dei giochi, gli automi cellulari,
+    le macchine autoreplicanti e la programmazione lineare.
 
     Durante la seconda guerra mondiale, von Neumann fu un membro chiave del _Progetto Manhattan_,
     lavorando allo sviluppo della bomba all'idrogeno. In seguito ha consultato la Commissione per
@@ -1270,8 +1248,7 @@ newton:
 
     Tra le altre cose, Newton fu uno degli inventori del calcolo, costruì il primo telescopio
     riflettore, calcolò la velocità del suono, studiò il movimento dei fluidi e sviluppò una teoria
-    del colore basata sul modo in cui i prismi dividevano la luce solare in uno spettro color
-    arcobaleno .
+    del colore basata sul modo in cui i prismi dividono la luce solare in uno spettro arcobaleno.
   links:
     - title: Gravity
       url: /course/circles/conic-sections#newton
@@ -1297,14 +1274,14 @@ nightingale:
   name: Nightingale
   small: true
   bio: |
-    __Florence Nightingale__ (1820-1910) era un infermiere e statistico inglese. Durante la guerra
-    di Crimea, allattò i soldati britannici feriti e in seguito fondò la prima scuola di
-    addestramento per infermiere. Come "La signora con la lampada", è diventata un'icona culturale e
-    le nuove infermiere negli Stati Uniti mantengono ancora il _impegno di Nightingale_.
+    __Florence Nightingale__ (1820-1910) era un'infermiera ed esperta in statistica inglese. Durante la guerra
+    di Crimea, curò i soldati britannici feriti e in seguito fondò la prima scuola di
+    addestramento per infermieri. Rappresentata come "La signora con la lampada", è diventata un'icona culturale e
+    le nuove infermiere negli Stati Uniti mantengono ancora l'_impegno di Nightingale_.
 
     Uno dei suoi contributi più importanti alla medicina è stato l'uso delle statistiche per
     valutare i trattamenti. Ha creato numerose infografiche ed è stata una delle prime a utilizzare
-    i grafici a torta. Usignolo ha anche lavorato per migliorare i servizi igienico-sanitari e
+    i grafici a torta. Nightingale ha anche lavorato per migliorare i servizi igienico-sanitari e
     alleviare la fame in India, ha aiutato ad abolire le leggi sulla prostituzione e ha promosso
     nuove carriere per le donne.
 
@@ -1315,7 +1292,7 @@ noether:
   bio: |
     __Amalie Emmy Noether__ (1882-1935) fu un matematico tedesco che fece importanti scoperte in
     algebra astratta e fisica teorica, compreso il legame tra simmetria e leggi di conservazione.
-    Viene spesso descritta come la matematica femminile più influente.
+    Viene spesso descritta come l'esperta di matematica più influente.
   small: true
   links:
     - title: Symmetry in Physics
@@ -1350,7 +1327,7 @@ pascal:
     dei primi calcolatori meccanici, oltre a lavorare su geometria proiettiva, probabilità e fisica
     del vuoto.
 
-    Più famoso, Pascal è ricordato per la denominazione di _Pascal’s Triangle_, un triangolo
+    In particolare, Pascal è ricordato per la denominazione del _Triangolo di Pascal_, un triangolo
     infinito di numeri con alcune proprietà sorprendenti.
   links:
     - title: Probability
@@ -1366,7 +1343,7 @@ peano:
   bio: |
     Il matematico italiano __Giuseppe Peano__ (1858-1932) pubblicò oltre 200 libri e articoli su
     logica e matematica. Ha formulato gli _assiomi di Peano_, che sono diventati la base per una
-    rigorosa algebra e analisi, ha sviluppato la notazione per la logica e la teoria degli insiemi,
+    algebra e analisi rigorose, ha sviluppato la notazione per la logica e la teoria degli insiemi,
     ha costruito curve continue e di riempimento dello spazio (_curve di Peano_) e ha lavorato sul
     metodo di prova per induzione.
 
@@ -1388,7 +1365,7 @@ penrose:
   born: 1931
   bio: |
     __Sir Roger Penrose__ (nato nel 1931) è un matematico e fisico britannico noto per il suo
-    rivoluzionario lavoro di relatività generale e cosmologia, che collabora spesso con altri
+    rivoluzionario lavoro di relatività generale e cosmologia. Ha collaborato spesso con altri
     scienziati famosi come Stephen Hawking e Michael Atiyah. Ha anche scoperto _Penrose Tilings_:
     tessellazioni auto-simili, non periodiche.
   links:
@@ -1403,13 +1380,13 @@ perelman:
     dimostrato la _congettura di Poincaré_, che, fino ad allora, era uno dei problemi irrisolti più
     famosi in matematica.
 
-    La complessa dimostrazione è stata verificata entro il 2006, ma Perelman ha rifiutato due grandi
+    La complessa dimostrazione è stata verificata nel 2006, ma Perelman ha rifiutato due grandi
     premi che ne sono derivati: il Premio del Millennio Clay da 1 milione di dollari e la _Fields
     Medal_ che è il più alto riconoscimento in matematica. In realtà, ha detto: _"Non mi interessano
-    i soldi o la fama; Non voglio essere esposto come un animale in uno zoo. "_
+    i soldi o la fama; non voglio essere esposto come un animale in uno zoo. "_
 
     Perelman ha anche contribuito alla geometria riemanniana e alla topologia geometrica, e la
-    congettura di Poincaré è ancora l'unico dei sette problemi del Premio del Millennio che è stato
+    congettura di Poincaré è ancora l'unico dei sette problemi del Premio del Millennio ad essere stato
     risolto.
 
 pingala:
@@ -1417,7 +1394,7 @@ pingala:
   born: -330
   died: -270
   bio: |
-    __Pingala__ (पिङ्गल) era un antico poeta e matematico indiano che visse intorno al 300 aEV, ma
+    __Pingala__ (पिङ्गल) era un antico poeta e matematico indiano che visse intorno al 300 aC, ma
     si sa molto poco della sua vita. Ha scritto il Chandaḥśāstra, dove ha analizzato matematicamente
     la poesia sanscrita. Conteneva anche le prime spiegazioni note di numeri binari, numeri di
     Fibonacci e triangolo di Pascal.
@@ -1428,15 +1405,15 @@ pingala:
 planck:
   name: Plank
   bio: |
-    __Max Plank__ (1858-1947) fu un fisico tedesco e uno degli sviluppatori originali di Quantum
-    Mechanics - per il quale ricevette il premio Nobel nel 1918.
+    __Max Plank__ (1858-1947) fu un fisico tedesco e uno degli sviluppatori originali della meccanica
+    quantistica - per il quale ricevette il premio Nobel nel 1918.
 
 plato:
   name: Plato
   born: -425
   died: -347
   bio: |
-    __Platone__ (c. 425 - 347 a.C.) era un filosofo nell'antica Grecia e, insieme al suo insegnante
+    __Platone__ (c. 425 - 347 a.C.) era un filosofo dell'antica Grecia e, insieme al suo insegnante
     Socrate e al suo studente Aristotele, gettò le basi stesse della filosofia e della scienza
     occidentale.
 
@@ -1456,15 +1433,15 @@ poincare:
     universalista_, il che significa che ha lavorato in tutti i campi della matematica conosciuti
     durante la sua vita.
 
-    Poincaré è uno dei fondatori del campo di _Topology_ e ha realizzato la _congettura di
-    Poincaré_. Questo è stato uno dei famosi problemi irrisolti in matematica, fino a quando non è
-    stato dimostrato nel 2003 da Grigori Perelman
+    Poincaré è uno dei fondatori del campo della _topologia_ e ha realizzato la _congettura di
+    Poincaré_. Questo è stato uno dei famosi problemi irrisolti in matematica, fino a quando è
+    stato dimostrato nel 2003 da Grigori Perelman.
 
     Ha anche trovato una soluzione parziale per il "problema dei tre corpi" e ha scoperto che il
     movimento di tre stelle o pianeti nello spazio può essere completamente imprevedibile. Ciò ha
     gettato le basi per la moderna _teoria del caos_.
 
-    Poincaré fu il primo a proporre _onde gravitazionali_, e il suo lavoro sulle trasformazioni di
+    Poincaré fu il primo a proporre le _onde gravitazionali_, e il suo lavoro sulle trasformazioni di
     Lorentz fu la base su cui Albert Einstein costruì la sua teoria della relatività speciale.
   links:
     - title: Chaos Theory
@@ -1482,9 +1459,9 @@ ptolemy:
     la Terra è al centro e tutti i pianeti e il sole ruotano attorno a questo.
 
     Mentre sappiamo che questo modello è errato, l'impatto scientifico di Tolomeo è indiscutibile.
-    Ha sviluppato tavoli trigonometrici con molte applicazioni pratiche, che sono rimasti i più
-    precisi per molti secoli. Ha anche creato mappe dettagliate della Terra e ha scritto sulla
-    teoria e l'ottica della musica.
+    Ha sviluppato tavole trigonometriche con molte applicazioni pratiche, che sono rimaste le più
+    precise per molti secoli. Ha anche creato mappe dettagliate della Terra e ha scritto di
+    teoria e ottica della musica.
   links:
     - title: Trigonometry
       url: /course/triangles/trigonometry
@@ -1497,7 +1474,7 @@ pythagoras:
   died: -495
   bio: |
     __Pitagora di Samo__ (570 - 495 a.C. circa) era un filosofo e matematico greco. È noto per aver
-    dimostrato _Teorema di Pitagora_, ma ha fatto molte altre scoperte matematiche e scientifiche.
+    dimostrato il _Teorema di Pitagora_, ma ha fatto molte altre scoperte matematiche e scientifiche.
 
     Pitagora ha cercato di spiegare la musica in modo matematico e ha scoperto che due toni suonano
     "bene" insieme (consonanti) se il rapporto delle loro frequenze è una frazione semplice.
@@ -1537,14 +1514,14 @@ regiomontanus:
   bio: |
     __Johann Müller Regiomontanus__ (1436-1476) era un matematico e astronomo tedesco. Ha fatto
     grandi progressi in entrambi i campi, compresa la creazione di tabelle astronomiche dettagliate
-    e la pubblicazione di più libri di testo.
+    e la pubblicazione di molti libri di testo.
 
 richardson:
   name: Richardson
   bio: |
     __Lewis Fry Richardson__ (1881-1953) era un matematico e fisico britannico. Ha aperto la strada
     a moderne tecniche matematiche di previsioni meteorologiche, ha inventato macchine acustiche per
-    rilevare iceberg e sviluppato metodi per risolvere sistemi di equazioni lineari.
+    rilevare gli iceberg e sviluppato metodi per risolvere sistemi di equazioni lineari.
 
     Ha anche provato a calcolare la probabilità che due paesi si dichiarino guerra l'uno con
     l'altro, data la lunghezza del loro confine condiviso. Tuttavia, non è stato in grado di trovare
@@ -1558,7 +1535,7 @@ riemann:
   overflow: true
   bio: |
     __Bernhard Riemann__ (1826-1866) era un matematico tedesco che lavorava nei campi dell'analisi e
-    della teoria dei numeri. Ha inventato la prima rigorosa definizione di integrazione, ha studiato
+    della teoria dei numeri. Ha inventato la prima definizione rigorosa di integrazione, ha studiato
     la geometria differenziale che ha gettato le basi per la relatività generale e ha fatto scoperte
     rivoluzionarie sulla distribuzione dei numeri primi.
   links:
@@ -1572,7 +1549,7 @@ russell:
   small: true
   bio: |
     __Bertrand Russell__ (1872-1970) era un filosofo, matematico e autore britannico. È ampiamente
-    considerato uno dei logici più importanti del 20 ° secolo.
+    considerato uno dei logici più importanti del 20° secolo.
 
     Russell ha co-scritto la "Principia Mathematica", dove ha cercato di creare una base formale per
     la matematica usando la logica. Il suo lavoro ha avuto un impatto significativo non solo sulla
@@ -1605,7 +1582,7 @@ shijie:
   bio: |
     __Zhu Shijie__ (朱世杰, 1249 - 1314) fu uno dei più grandi matematici cinesi. Nel suo libro _Jade
     Mirror of the Four Unknowns_, ha mostrato come risolvere 288 problemi diversi usando sistemi di
-    equazioni polinomiali e quattro variabili (chiamate _Heaven_, _Earth_, _Man_ e _Matter_).
+    equazioni polinomiali e quattro variabili (chiamate _cielo_, _terra_, _uomo_ e _materia_).
 
     Zhu fece ampio uso del triangolo di Pascal. Ha anche inventato le regole per risolvere i sistemi
     di equazioni lineari, precedendo i nostri moderni metodi a matrice di molti secoli.
@@ -1618,11 +1595,11 @@ sierpinski:
   bio: |
     __Wacław Franciszek Sierpiński__ (1882-1969) era un matematico polacco. Ha fatto importanti
     scoperte in teoria degli insiemi, teoria dei numeri, analisi e topologie, pubblicando oltre 700
-    articoli e 50 libri. Ha anche inventato molti famosi _frattali_, tra cui il _triangolo
-    Sierpinski_, il _tappeto Sierpinski_ e la _curva Sierpinski_.
+    articoli e 50 libri. Ha anche inventato molti famosi _frattali_, tra cui il _triangolo di
+    Sierpinski_, il _tappeto di Sierpinski_ e la _curva di Sierpinski_.
 
-    _I numeri Sierpinski_ sono numeri naturali dispari _k_ tali che `k * 2^n +1` è composto per
-    tutti i numeri naturali _n_. Il _problema Sierpinski_ sta cercando di trovare i numeri
+    _I numeri di Sierpinski_ sono numeri naturali dispari _k_, tali che `k * 2^n +1` sono composti per
+    ogni numero naturale _n_. Il _problema di Sierpinski_ consiste nel trovare i numeri di
     Sierpinski più piccoli. Il numero più piccolo conosciuto è 78.557 - ma non è ancora noto se ce
     ne siano di più piccoli.
 
@@ -1656,7 +1633,7 @@ tartaglia:
     __Niccolò Fontana Tartaglia__ (1499-1557) era un matematico, ingegnere e contabile italiano. Ha
     pubblicato le prime traduzioni italiane di Archimede ed Euclide, ha trovato una formula per
     risolvere qualsiasi equazione cubica (inclusa la prima vera applicazione di numeri complessi) e
-    ha usato la matematica per studiare il moto proiettile delle palle di cannone.
+    ha usato la matematica per studiare il moto di proiettile delle palle di cannone.
 
 thales:
   name: Thales
@@ -1678,8 +1655,8 @@ thorp:
   bio: |
     __Edward Thorp__ (nato nel 1932) è un gestore di hedge fund e un giocatore di blackjack
     americani, noto per aver inventato _il conteggio delle carte_ e per aver costruito il primo
-    _computer indossabile_ per battere i casinò di Roulette. Ha lavorato al MIT, è professore di
-    matematica e ha aperto la strada a moderne applicazioni della teoria della probabilità.
+    _computer indossabile_ per battere le roulette dei casinò. Ha lavorato al MIT, è professore di
+    matematica e ha aperto la strada alle moderne applicazioni della teoria della probabilità.
 
 turing:
   born: 1912
@@ -1698,14 +1675,14 @@ turing:
     e il _test di Turing_, che può essere usato per giudicare l'abilità dell'intelligenza
     artificiale.
 
-    Turing era gay, che era ancora un crimine durante la sua vita, e significava che i suoi
-    risultati rivoluzionari non furono mai pienamente riconosciuti. Si suicidò all'età di 41 anni.
+    Turing era gay, e siccome questo era ancora considerato un crimine, i suoi risultati rivoluzionari 
+    non furono mai pienamente riconosciuti. Si suicidò all'età di 41 anni.
 
 ulam:
   name: Ulam
   bio: |
     __Stanisław Ulam__ (1909 - 1984) era un matematico polacco-americano. Ha svolto un ruolo
-    importante nel progetto americano _Manhattan_ che ha sviluppato le prime armi nucleari. Ha anche
+    importante nel progetto americano _Manhattan_ per lo sviluppo delle prime armi nucleari. Ha anche
     lavorato sulla propulsione a razzo usando impulsi nucleari e sviluppato il _metodo Monte Carlo_
     - un concetto importante in statistica.
 
@@ -1722,7 +1699,7 @@ viete:
   name: Viète
   bio: |
     __François Viète__ (1540 - 1603) era un matematico, avvocato e consigliere francese di re Enrico
-    III e IV di Francia. Ha fatto progressi significativi in Algebra e ha introdotto per la prima
+    III e IV di Francia. Ha fatto progressi significativi in algebra e ha introdotto per la prima
     volta l'uso delle lettere per rappresentare le variabili.
 
     Viète ha scoperto la connessione tra le radici e i coefficienti di un polinomio, chiamato
@@ -1747,14 +1724,14 @@ wiles:
     matematica.
 
     Nel 1637, Pierre de Fermat, a margine di un libro di testo, scrisse che aveva una prova
-    meravigliosa che l'equazione `a^n + b^n = c^n` non ha soluzioni intere per `n > 2`.
+    meravigliosa che l'equazione `a^n + b^n = c^n` non avesse soluzioni intere per `n > 2`.
     Sfortunatamente, nessuno fu in grado di trovare una prova - fino a Wiles, circa 400 anni dopo.
 
     Wiles era stato affascinato dal problema dall'età di 10 anni e aveva trascorso sette anni
-    lavorando su di esso in solitudine. Ha annunciato la sua soluzione nel 1993, anche se un piccolo
-    divario nella sua discussione ha richiesto altri due anni per risolvere.
+    lavorandoci in solitudine. Ha annunciato la sua soluzione nel 1993, anche se un piccolo
+    divario nella sua discussione ha richiesto altri due anni per risolverla.
 
-    Era troppo vecchio per ricevere la _medaglia Fields_, il più alto riconoscimento in matematica,
+    Era troppo vecchio per ricevere la _medaglia Fields_, il più alto riconoscimento per la matematica,
     che ha un limite di età di 40 anni. Invece, a Wiles è stata assegnata una speciale targa
     d'argento per il suo lavoro.
 
@@ -1765,3 +1742,4 @@ wolfram:
     È il fondatore e CEO di _Wolfram Research_, dove ha sviluppato il sistema di elaborazione
     _Mathematica_, il motore di risposta _Wolfram | Alpha_ e il linguaggio di programmazione
     Wolfram.
+

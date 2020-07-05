@@ -684,28 +684,28 @@ possible:
       .tab
         h3 United States #[span.check(when="map-0")]
         x-solved
+        .colour-count(style="margin-bottom: -32px") #[span 0] colours used
         include svg/colours-1.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
         // Note that states or countries which only share a corner are allowed to have the same colour.
         // Alaska and Hawaii are isolated from all of the other states and can have any colour.
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
+        .colour-count #[span 0] colours used
         include svg/colours-2.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
+        .colour-count #[span 0] colours used
         include svg/colours-3.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
+        .colour-count #[span 0] colours used
         include svg/colours-4.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
 
 ---

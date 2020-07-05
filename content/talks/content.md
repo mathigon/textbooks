@@ -79,26 +79,26 @@ colour?
       .tab
         h3 United States #[span.check(when="map-0")]
         x-solved
+        .colour-count(style="margin-bottom: -32px") #[span 0] colours used
         include ../graph-theory/svg/colours-1.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-2.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-3.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-4.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
 
 ---
@@ -127,26 +127,26 @@ can remove cities by tapping them, and you can add cities by clicking anywhere o
       .tab
         h3 United States #[span.check(when="map-0")]
         x-solved
+        .colour-count(style="margin-bottom: -32px") #[span 0] colours used
         include ../graph-theory/svg/colours-1.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-2.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-3.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-4.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
 
 ---

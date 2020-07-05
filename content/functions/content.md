@@ -284,4 +284,8 @@ Draw a Function:
     x-coordinate-sketch(width=600 height=400 x-axis="-1,10,1" y-axis="-5,5,1")
       button.btn.clear Clear
 
+Type some text:
+
+    x-free-text(placeholder="Your answer…")
+
 {.todo} Coming Soon!

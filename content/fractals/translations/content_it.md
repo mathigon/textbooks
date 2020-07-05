@@ -12,18 +12,18 @@ Guardando la natura intorno a te, potresti aver notato delle piante intricate co
     img(src="images/fern.jpg" width=320 height=240)
     img.fractal-overlay(src="images/fern-overlay.png" width=320 height=240)
 
-{.caption} Questa __felce__ è composta da molte piccole foglie che si ramificano per una più grande.
+{.caption} Questa __felce__ è composta da molte foglie che si ramificano dalla più grande alla più piccola.
 
 ::: column.r(width=320)
 
     img(src="images/romanesco.jpg" width=320 height=240)
     img.fractal-overlay(src="images/romanesco-overlay.png" width=320 height=240)
 
-{.caption} Questo __broccolo romanesco__ è costituito da [[coni|cubi|sfere]] disposti a spirale dal più piccolo al più grande.
+{.caption} Questo __broccolo romanesco__ è costituito da [[coni|cubi|sfere]] disposti a spirale dal più grande al più piccolo.
 
 :::
 
-{.reveal(when="blank-0")} Inizialmente, queste forme sembrano molto complesse, ma quando le guardi più da vicino, potresti notare che entrambe seguono uno schema relativamente semplice: tutte le [singole parti](target:fractal) della pianta sembrano l’intera pianta in miniatura. Lo stesso modello viene ripetuto più e più volte, su scale sempre più piccole. [Continua](btn:next)
+{.reveal(when="blank-0")} Inizialmente, queste forme sembrano molto complesse, ma quando le guardi più da vicino, potresti notare che entrambe seguono uno schema relativamente semplice: tutte le [singole parti](target:fractal) della pianta assomigliano all’intera pianta in miniatura. Lo stesso modello viene ripetuto più e più volte, su scale sempre più piccole. [Continua](btn:next)
 
 ---
 
@@ -35,7 +35,7 @@ Per creare i frattali, dobbiamo iniziare con un modello semplice e quindi ripete
 
 ::: column.grow
 
-Uno dei modelli più semplici potrebbe essere un [{.pill.red} segmento di linea](target:s1), con [{.pill.blue} altri due segmenti](target:s2) che si diramano da un'estremità. Se ripetiamo questo schema, entrambi questi segmenti blu avranno altri due rami alle estremità.
+Uno dei modelli più semplici potrebbe essere un [{.pill.red} segmento](target:s1), con [{.pill.blue} altri due segmenti](target:s2) che si diramano da un'estremità. Se ripetiamo questo schema, entrambi i segmenti blu avranno altri due rami alle estremità.
 
 Puoi spostare i [punti blu](target:dot) per modificare la lunghezza e l'angolo di tutti i rami. Poi aumenta il numero di iterazioni utilizzando [la barra di scorrimento](->#fern-slider) sotto alla figura.
 
@@ -62,9 +62,9 @@ Puoi spostare i [punti blu](target:dot) per modificare la lunghezza e l'angolo d
 
 ::: column.grow(parent="right")
 
-Un altro famoso frattale è il [__triangolo di Sierpinski__](gloss:sierpinski-triangle). In questo caso, iniziamo con un grande triangolo equilatero, quindi lo tagliamo ripetutamente in triangoli più piccoli.
+Un altro frattale famoso è il [__triangolo di Sierpinski__](gloss:sierpinski-triangle). In questo caso, iniziamo con un grande triangolo equilatero, quindi lo tagliamo ripetutamente in triangoli più piccoli.
 
-{.reveal(when="slider=0")} Nota che la forma finale è composta da [tre copie identiche di se stessa](target:x), e ognuna di queste è costituita da copie ancora più piccole dell'intero triangolo! Potresti guardare il triangolo sempre più da vicino, e vedrai come i motivi e le forme continueranno a ripetersi.
+{.reveal(when="slider=0")} Nota che la forma finale è composta da [tre copie identiche di se stessa](target:x), e ognuna di queste è costituita da copie ancora più piccole dell'intero triangolo! Puoi guardare il triangolo sempre più da vicino, e notare come i motivi e le forme continuano a ripetersi.
 
 ::: column(width=300)
 
@@ -87,9 +87,9 @@ Un altro famoso frattale è il [__triangolo di Sierpinski__](gloss:sierpinski-tr
 
 > id: real
 
-Le piante all'inizio di questo capitolo _sembrano_ proprio come i frattali, ma è chiaramente impossibile creare dei _veri_ frattali nella vita reale. Se continuiamo a ripetere lo stesso schema più e più volte, in scale sempre più piccole, arriveremmo a cellule, molecole o atomi che non possono più essere divisi.
+Le piante all'inizio di questo capitolo _sembrano_ proprio ai frattali, ma è chiaramente impossibile creare dei _veri_ frattali nella vita reale. Se continuiamo a ripetere lo stesso schema più e più volte, in scale sempre più piccole, arriveremmo a cellule, molecole o atomi che non possono essere divisi ulteriormente.
 
-Tuttavia, usando la matematica, possiamo pensare alle proprietà che "avrebbero" i veri frattali - sono molto sorprendenti... [Continua](btn:next)
+Tuttavia, usando la matematica, possiamo riflettere sulle proprietà dei veri frattali e scoprire che sono davvero sorprendenti... [Continua](btn:next)
 
 ---
 > id: dimension
@@ -128,7 +128,7 @@ Un quadrato ha [[2]] dimensioni. _{span.reveal(when="blank-0")} Quando lo ingran
 
 ::: column.grow
 
-Un cubo ha [[3]] dimensioni. _{span.reveal(when="blank-0")} Quando lo ingrandiamo di un fattore 2, il suo volume aumenta di un fattore di `2^3 =` [[8]]._ _{span.reveal(when="blank-1")} Nota che il cubo più grande nell'immagine consiste di 8 copie di quello più piccolo!_
+Un cubo ha [[3]] dimensioni. _{span.reveal(when="blank-0")} Quando lo ingrandiamo di un fattore 2, il suo volume aumenta di un fattore di `2^3 =` [[8]]._ _{span.reveal(when="blank-1")} Nota che il cubo più grande nell'immagine è formato da 8 copie del cubo più piccolo!_
 
 :::
 
@@ -143,16 +143,16 @@ Un cubo ha [[3]] dimensioni. _{span.reveal(when="blank-0")} Quando lo ingrandiam
 
 Ora diamo un'occhiata al triangolo di Sierpinski. Se lo ingrandiamo di un fattore 2, puoi vedere che la sua "area" aumenta di un fattore di [[3]].
 
-{.reveal(when="blank-0")} Supponiamo che _d_ sia la dimensione del triangolo Sierpinski. Usando lo stesso modello di cui sopra, otteniamo `2^d = 3`. In altre parole, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1,585…_
+{.reveal(when="blank-0")} Supponiamo che _d_ sia la dimensione del triangolo di Sierpinski. Usando lo stesso modello di cui sopra, otteniamo `2^d = 3`. In altre parole, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1,585…_
 
 :::
 
 ---
 > id: dimension-4
 
-Ma aspetta ... come può qualcosa avere una dimensione che non è un numero intero? Sembra impossibile, ma questa è solo una delle strane proprietà dei frattali. In effetti, questo è ciò che dà il nome ai frattali: hanno una __dimensione frazionaria__.
+Ma aspetta... questa dimensione non è un numero intero! Sembra impossibile, ma questa è solo una delle strane proprietà dei frattali. In effetti, questo è ciò che dà il nome ai frattali: hanno una __dimensione frazionaria__.
 
-Con ogni iterazione, rimuoviamo parte dell'area del triangolo di Sierpinski. Se potessimo farlo molte volte all'infinito, non rimarrebbe alcuna area: ecco perché il triangolo di Sierpinski è qualcosa tra un'area bidimensionale e una linea monodimensionale.
+Con ogni iterazione, rimuoviamo parte dell'area del triangolo di Sierpinski. Se potessimo farlo molte volte all'infinito, tutta l'area sarebbe rimossa: ecco perché il triangolo di Sierpinski è qualcosa tra un'area bidimensionale e una linea monodimensionale.
 
 ::: .theorem
 
@@ -168,7 +168,7 @@ Mentre molti frattali sono _auto-simili_, una definizione migliore è che i __fr
 
 ### Curva di Koch
 
-Ci sono molte forme in natura che sembrano a frattali. Abbiamo già visto alcune piante all'inizio di questo capitolo. Altri esempi sono i fiocchi di neve e i cristalli di ghiaccio:
+Ci sono molte forme in natura che sembrano ai frattali. Abbiamo già visto alcune piante all'inizio di questo capitolo. Altri esempi sono i fiocchi di neve e i cristalli di ghiaccio:
 
 ::: column(width=120 parent="padded-thin")
 
@@ -202,7 +202,7 @@ Per creare il nostro fiocco di neve frattale, dobbiamo ancora una volta trovare 
 
 Come per il triangolo di Sierpinski, iniziamo con un singolo triangolo equilatero. Tuttavia, anziché _rimuovere_ i triangoli più piccoli ad ogni passo, li _aggiungiamo_ lungo i lati. La lunghezza del lato di ogni triangolo aggiunto è [[`1/3`|`1/4`|`1/2`]] di quella del triangolo nel passaggio precedente.
 
-{.reveal(when="blank-0")} La forma risultante si chiama [__curva di Koch__](gloss:koch-snowflake), dal nome del matematico svedese [Helge von Koch](bio:koch). Nota, ancora una volta, che [piccole sezioni](target:t2) di un bordo del fiocco di neve sembrano esattamente le stesse delle [sezioni più grandi](target:t1).
+{.reveal(when="blank-0")} La forma risultante si chiama [__curva di Koch__](gloss:koch-snowflake), dal nome del matematico svedese [Helge von Koch](bio:koch). Nota, ancora una volta, che [piccole sezioni](target:t2) di un bordo del fiocco di neve sembrano esattamente alle [sezioni più grandi](target:t1).
 
 ::: column(width=300)
 
@@ -278,7 +278,7 @@ La creazione dei fiocchi di neve di Koch è quasi come una [sequenza ricorsiva](
 
 ::: column.grow
 
-Possiamo anche provare a calcolare il perimetro del fiocco di neve di Koch. Come abbiamo già visto prima, la lunghezza del perimetro cambia di un fattore di [[`4/3`|`3/4`|`1/4`]] ad ogni passo.
+Possiamo anche provare a calcolare il perimetro del fiocco di neve di Koch. Come abbiamo già visto prima, la lunghezza del perimetro cambia di un fattore pari a [[`4/3`|`3/4`|`1/4`]] ad ogni passo.
 
 {.reveal(when="blank-8")} Ciò significa che, ancora una volta, abbiamo una serie geometrica, ma in questo caso [[non convergente|converge a 0|senza il primo termine]]. _{span.reveal(when="blank-9")} Ciò significa che il perimetro del fiocco di neve di Koch è in realtà __infinitamente lungo__!_
 
@@ -288,7 +288,7 @@ Possiamo anche provare a calcolare il perimetro del fiocco di neve di Koch. Come
 
 :::
 
-{.reveal(when="blank-9")} _Se questo sembra controintuitivo, ricorda solo che moltiplichiamo il perimetro di `§4/3` ad ogni passo e lo facciamo per un infinito numero di volte._
+{.reveal(when="blank-9")} _Se questo ti sembra controintuitivo, ricorda che moltiplichiamo il perimetro di `§4/3` ad ogni passo e lo facciamo per un infinito numero di volte._
 
 :::
 
@@ -298,7 +298,7 @@ Possiamo anche provare a calcolare il perimetro del fiocco di neve di Koch. Come
 
 ::: column.grow
 
-È quasi impensabile che tu possa avere una forma con un'area _finita_ e un perimetro _infinito_ - ma questa è solo una delle tante proprietà inattese dei frattali.
+È incredibile avere una forma con un'area _finita_ e un perimetro _infinito_ - ma questa è solo una delle tante proprietà inattese dei frattali.
 
 Puoi trovare altri modi per creare i tuoi frattali? [Continua](btn:next)
 
@@ -306,7 +306,7 @@ Puoi trovare altri modi per creare i tuoi frattali? [Continua](btn:next)
 
     x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 audio credit="© Disney")
 
-{.caption} "My soul is spiralling on frozen fractals all around. Si traduce come: La mia anima sta crescendo su frattali congelati tutt'intorno."
+{.caption} "My soul is spiralling on frozen fractals all around." (Traduzione: La mia anima sta crescendo su frattali congelati tutt'intorno).
 
 :::
 
@@ -325,7 +325,7 @@ I frattali non devono essere "piatti", come molti degli esempi sopra. Uno dei fr
 
 ::: column.grow
 
-Iniziamo con un cubo solido ed eseguiamo ripetutamente dei fori sempre più piccoli sui suoi lati. Ogni nuova iterazione di fori ha [[`1/3`|`1/2`|`1/4`]] della larghezza della precedente iterazione di fori.
+Iniziamo con un cubo solido ed eseguiamo ripetutamente dei fori sempre più piccoli sui suoi lati. Ogni nuova iterazione ha [[`1/3`|`1/2`|`1/4`]] della larghezza della precedente.
 
 {.reveal(when="blank-0")} Un cubo `3×3×3` è composto da 27 cubi più piccoli, ma qui ne abbiamo rimossi alcuni. La spugna di Menger è composta da [[20]] copie di se stessa, che sono 3 volte più piccole.
 
@@ -339,9 +339,9 @@ Iniziamo con un cubo solido ed eseguiamo ripetutamente dei fori sempre più picc
 
 > id: coastlines
 
-### Frattali Lungo le Coste
+### Frattali Lungo Le Coste
 
-Una delle caratteristiche chiave di tutti i frattali che abbiamo visto finora è che puoi continuare ad “ingrandirli” e trovare sempre nuovi modelli. Intorno al 1920, il matematico britannico [Lewis Fry Richardson](bio:richardson) si rese conto che lo stesso vale per il confine o la costa di molti paesi.
+Una delle caratteristiche chiave di tutti i frattali che abbiamo visto finora è che puoi continuare ad “ingrandirli” e trovare sempre nuovi modelli. Intorno al 1920, il matematico britannico [Lewis Fry Richardson](bio:richardson) si rese conto che lo stesso vale per il confine o la costa di molti Paesi.
 
 Inizi con la forma base del paese e, ingrandendo, aggiungi insenature, baie ed estuari dei fiumi, quindi singole scogliere, rocce, ciottoli e così via:
 
@@ -375,13 +375,13 @@ Inizi con la forma base del paese e, ingrandendo, aggiungi insenature, baie ed e
 
 ::: column.grow
 
-Questo è un problema significativo quando si tenta di calcolare la lunghezza del confine di un Paese: come si decide quanto ingrandire e quali angoli e fessure includere?
+Questo è un problema significativo nel calcolo della lunghezza dei confini di un Paese: come si decide quanto ingrandire e quali angoli e dettagli includere?
 
-Un modo in cui potremmo misurare la lunghezza della costa britannica, ad esempio, è prendere un lungo righello, camminare lungo le spiagge e quindi sommare tutte le distanze.
+Un modo in cui potremmo misurare la lunghezza della costa britannica, ad esempio, è quello di prendere un lungo righello, camminare lungo le spiagge e quindi sommare tutte le distanze.
 
 Se il righello è lungo ${rulers[index]}{index|0|0,8,1} km, dobbiamo usarlo ${count} volte, quindi otteniamo una linea costiera totale di ${count} × ${rulers[index]} = ${count * rulers[index]} km.
 
-{.reveal(when="var-0")} Possiamo semplicemente continuare, con righelli sempre più piccoli, e ogni volta il nostro risultato per la lunghezza della costa aumenterebbe un po' di più. Proprio come prima con la curva di Koch, sembra che la costa della Gran Bretagna sia infinitamente lunga! Questo è spesso chiamato __paradosso della linea costiera__. [Continua](btn:next)
+{.reveal(when="var-0")} Possiamo semplicemente continuare, con righelli sempre più piccoli, e ogni volta il risultato della lunghezza della costa aumenterebbe un po' di più. Proprio come prima con la curva di Koch, sembra che la costa della Gran Bretagna sia infinitamente lunga! Questo è spesso chiamato __paradosso della linea costiera__. [Continua](btn:next)
 
 ::: column(width=280)
 
@@ -393,7 +393,7 @@ Se il righello è lungo ${rulers[index]}{index|0|0,8,1} km, dobbiamo usarlo ${co
 
 > id: coastline-grid
 
-Qualche decennio più tardi, il matematico [Benoit Mandelbrot](bio:mandelbrot) si imbatté sul lavoro di Richardson in un libro di biblioteca che era stato scartato, mentre lavorava all’IBM. Riconobbe il suo significato e anche il modo in cui si collegava a ricerche più recenti su frattali e dimensioni.
+Qualche decennio più tardi, il matematico [Benoit Mandelbrot](bio:mandelbrot) dell'IBM si imbatté sul lavoro di Richardson in un libro della biblioteca che era stato scartato. Riconobbe il suo significato e anche il modo in cui si collegava a ricerche più recenti su frattali e dimensioni.
 
 ::: column(width=340)
 
@@ -406,7 +406,7 @@ La costa della Gran Bretagna certamente "sembra" frattale, ma non è _auto-simil
 
 {.r.reveal(when="slider-0")} Inizialmente, ci sono __{.pill.yellow} 88__ celle intersecanti. Se ingrandiamo la costa di un fattore 2, ci sono __{.pill.yellow} 197__ celle intersecanti - più del doppio! [Continua](btn:next)
 
-{.r.reveal(when="next-0")} La dimensione della costa è aumentata di un fattore di `§197/88`. Come prima, questo significa che la dimensione della costa è
+{.r.reveal(when="next-0")} La dimensione della costa è aumentata di un fattore `§197/88`. Come prima, questo significa che la dimensione della costa è
 
 {.text-center.reveal(when="next-0")} `§d = log_2(197/88) ≈ 1.16`
 
@@ -416,15 +416,15 @@ La costa della Gran Bretagna certamente "sembra" frattale, ma non è _auto-simil
 
 > id: coastline-dimension-1
 
-Se lo ripetessimo con griglie più grandi, scopriremmo che la dimensione della costa britannica è in realtà circa 1,21. Mandelbrot capì che questa dimensione frattale è anche una misura della __rugosità__ di una forma - un nuovo concetto, che ha trovato importanti applicazioni in molte altre aree della matematica e della scienza.
+Se lo ripetessimo con griglie più grandi, scopriremmo che la dimensione della costa britannica è in realtà circa 1,21. Mandelbrot capì che questa dimensione frattale è anche una misura della __rugosità__ di una forma – un nuovo concetto, che ha trovato importanti applicazioni in molte altre aree della matematica e della scienza.
 
 ---
 
 > id: nature
 
-### Più Frattali nella Natura e nella Tecnologia
+### Tanti Frattali nella Natura e nella Tecnologia
 
-Mentre i veri frattali non possono mai apparire in natura, ci sono molti oggetti che assomigliano _quasi_ a dei frattali. Abbiamo già visto piante, fiocchi di neve e coste, e qui ci sono altri esempi:
+Mentre i veri frattali non possono esistere in natura, ci sono molti oggetti che assomigliano _quasi_ a dei frattali. Abbiamo già visto piante, fiocchi di neve e coste, e qui ci sono altri esempi:
 
 ::: column(width=200)
 
@@ -468,7 +468,7 @@ Mentre i veri frattali non possono mai apparire in natura, ci sono molti oggetti
 
 :::
 
-Tutti questi oggetti potrebbero apparire completamente casuali, ma, proprio come i frattali, c'è un modello sottostante che determina come sono formati. La matematica può aiutarci a capire meglio le forme, e i frattali hanno applicazioni in vari campi come medicina, biologia, geologia e meteorologia. [Continua](btn:next)
+Tutti questi oggetti potrebbero apparire completamente casuali, ma proprio come i frattali, c'è un modello sottostante che determina come sono formati. La matematica può aiutarci a capire meglio le forme, e i frattali hanno applicazioni in vari campi, come medicina, biologia, geologia e meteorologia. [Continua](btn:next)
 
     // TODO https://en.wikipedia.org/wiki/Fractal_antenna
     // TODO Fractals in African Art
@@ -486,7 +486,7 @@ Tutti questi oggetti potrebbero apparire completamente casuali, ma, proprio come
 
 ::: column.grow
 
-Possiamo anche usare i frattali per creare "copie" realistiche della natura, ad esempio paesaggi e superfici usati nei videogiochi o nei film generati al computer. L'acqua, le montagne e le nuvole in questa immagine sono realizzate interamente al computer, con l'aiuto di frattali!
+Possiamo anche usare i frattali per creare "copie" realistiche della natura, ad esempio i paesaggi e le superfici usati nei videogiochi o nei film generati al computer. L'acqua, le montagne e le nuvole in questa immagine sono realizzate interamente al computer, con l'aiuto di frattali!
 
 E possiamo persino invertire questo processo per comprimere le immagini digitali, per ridurne le dimensioni. I primi algoritmi sono stati sviluppati da Michael Barnsley e Alan Sloan negli anni '80 e se ne stanno ancora studiando di nuovi.
 
@@ -501,9 +501,9 @@ E possiamo persino invertire questo processo per comprimere le immagini digitali
 
 ::: column.grow
 
-Uno dei frattali che abbiamo visto nel capitolo precedente era il [__triangolo di Sierpinski__](gloss:sierpinski-triangle), che prende il nome dal matematico polacco [Wacław Sierpiński](bio:sierpinski). Può essere creato iniziando con un grande triangolo equilatero, quindi tagliando ripetutamente triangoli più piccoli dal suo centro.
+Uno dei frattali che abbiamo visto nel capitolo precedente era il [__triangolo di Sierpinski__](gloss:sierpinski-triangle), dal matematico polacco [Wacław Sierpiński](bio:sierpinski). Può essere creato iniziando con un grande triangolo equilatero, quindi tagliando ripetutamente triangoli più piccoli a partire dal centro.
 
-{.r.reveal(when="slider-0")} Wacław Sierpiński è stato il primo matematico a pensare alle proprietà di questo triangolo, ma era apparso molti secoli prima in opere d'arte, disegni e mosaici.
+{.r.reveal(when="slider-0")} Wacław Sierpiński è stato il primo matematico a pensare alle proprietà di questo triangolo, ma questa figura geometrica era apparsa molti secoli prima in opere d'arte, disegni e mosaici.
 
 ::: column(width=300)
 
@@ -551,7 +551,7 @@ A quanto pare, il triangolo di Sierpinski appare in una vasta gamma di altre are
 
 ### Triangolo di Pascal
 
-Potresti già ricordare il triangolo di Sierpinski dal nostro capitolo sul [__Triangolo di Pascal__](gloss:pascals-triangle). Questa è una piramide numerica in cui ogni numero è la somma dei due numeri sopra. Clicca su tutti i numeri _pari_ nel triangolo in basso, per evidenziarli - e vedi se noti uno schema:
+Potresti già ricordare il triangolo di Sierpinski dal nostro capitolo sul [__Triangolo di Pascal__](gloss:pascals-triangle). Questa è una piramide numerica in cui ogni numero è la somma dei due numeri sopra. Clicca su tutti i numeri _pari_ nel triangolo in basso, per evidenziarli – e vedi se noti uno schema:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -582,9 +582,9 @@ Se due celle adiacenti sono divisibili per 2, anche la loro somma nella cella so
       canvas.pascal(width=960 height=840)
       .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
-Qui puoi vedere una versione minuscola delle prime 128 file del triangolo di Pascal. Abbiamo evidenziato tutte le celle che sono divisibili per ${n}{n|2|2,40,1} - che cosa noti?
+Qui puoi vedere una versione rimpicciolita delle prime 128 file del triangolo di Pascal. Abbiamo evidenziato tutte le celle che sono divisibili per ${n}{n|2|2,40,1} - che cosa noti?
 
-{.reveal(when="var-0")} Per ogni numero, abbiamo un diverso modello triangolare, simile al triangolo Sierpinski. Il modello è particolarmente regolare se scegliamo un [[numero primo|numero triangolare|numero di Fibonacci]]. _{span.reveal(when="blank-0")} Se il numero ha _molti fattori primi_, il modello sembra più casuale._
+{.reveal(when="var-0")} Per ogni numero, abbiamo un modello triangolare diverso, simile al triangolo di Sierpinski. Il modello è particolarmente regolare se scegliamo un [[numero primo|numero triangolare|numero di Fibonacci]]. Se il numero ha molti fattori primi diversi, il modello sembra più casuale.
 
     x-gesture(target="#pascal-large x-var" slide="100,0")
 
@@ -611,7 +611,7 @@ Qui puoi vedere i tre vertici di un triangolo equilatero. Tocca un punto qualsia
 
 {.r.reveal(when="point")} Facciamo un semplice gioco: scegliamo uno dei vertici del triangolo in modo casuale, tracciamo un segmento tra il nostro punto e il vertice, quindi troviamo il [{.pill.red} punto medio](target:p1) di quel segmento. [Continua](btn:next)
 
-{.r.reveal(when="next-0")} Ora ripetiamo il processo: scegliamo un altro vertice casuale, disegniamo il segmento dal nostro ultimo punto e quindi troviamo il [{.pill.green} punto medio](target:p2). Nota che coloriamo questi nuovi punti in base al colore del vertice del triangolo che abbiamo scelto. [Continua](btn:next)
+{.r.reveal(when="next-0")} Ora ripetiamo il processo: scegliamo un altro vertice casuale, disegniamo il segmento dal nostro ultimo punto e quindi troviamo il [{.pill.green} punto medio](target:p2). Nota che il colore di questi nuovi punti corrisponde al colore del vertice del triangolo che abbiamo scelto. [Continua](btn:next)
 
 {.reveal(when="next-1")} Finora non è successo nulla di sorprendente, ma guarda cosa succede se ripetiamo lo stesso processo molte volte:
 
@@ -626,7 +626,7 @@ Qui puoi vedere i tre vertici di un triangolo equilatero. Tocca un punto qualsia
 
 Questo processo è chiamato __Gioco del Caos__. Potrebbero esserci alcuni punti vaganti all'inizio, ma se ripeti gli stessi passaggi più volte ancora, la distribuzione dei punti inizia ad assomigliare esattamente al triangolo di Sierpinski!
 
-Ci sono molte altre versioni di questo processo - ad esempio, potremmo iniziare con un quadrato o un pentagono, potremmo aggiungere regole, come quella di non essere in grado di selezionare lo stesso vertice due volte di seguito, oppure potremmo scegliere il punto successivo con un rapporto diverso da `§1/2` lungo il segmento. In alcuni di questi casi, avremo solo una distribuzione casuale di punti, ma in altri casi, riveleremo ancora più frattali:
+Ci sono molte altre versioni di questo processo – ad esempio, potremmo iniziare con un quadrato o un pentagono, potremmo aggiungere regole, come quella di non essere in grado di selezionare lo stesso vertice due volte di seguito, oppure potremmo scegliere il punto successivo con un rapporto diverso da un `§1/2` del segmento. In alcuni di questi casi, avremo solo una distribuzione casuale di punti, ma in altri casi, riveleremo ancora più frattali:
 
     include components/chaos-game
 
@@ -641,11 +641,11 @@ Ci sono molte altre versioni di questo processo - ad esempio, potremmo iniziare 
 
 Un __automa cellulare__ è una griglia costituita da molte singole celle. Ogni cella può trovarsi in diversi "stati" (ad esempio colori diversi) e lo stato di ogni cella è determinato dalle celle circostanti.
 
-Nel nostro esempio, ogni cella può essere bianca o nera. Iniziamo con una riga che contiene un solo quadrato nero. In ogni riga successiva, il colore di ogni cella è determinato dalle tre celle immediatamente sopra. Tocca le otto possibili opzioni sottostanti per capovolgerne il colore: puoi trovare una serie di regole che creano uno schema simile al triangolo di Sierpinski?
+Nel nostro esempio, ogni cella può essere bianca o nera. Iniziamo con una riga che contiene un solo quadrato nero. In ogni riga successiva, il colore di ogni cella è determinato dalle tre celle immediatamente sopra. Tocca le otto possibili opzioni sottostanti per capovolgerne il colore: puoi trovare una serie di regole per creare uno schema simile al triangolo di Sierpinski?
 
     figure: x-automaton(size=28)
 
-{.reveal(when="sierpinski")} Sono disponibili due scelte per ciascuna delle otto opzioni, il che significa che ci sono `2^8 =` [[256]] possibili regole in totale. Alcuni, come la [Regola 126](action:setRule('01111110')), sembrano il triangolo di Sierpinski. Altri, come la [Regola 30](action:setRule('01111000')), sembrano completamente caotici. È stata scoperta da [Stephen Wolfram](bio:wolfram) nel 1983 e i computer possono persino usarla per generare numeri casuali!
+{.reveal(when="sierpinski")} Sono disponibili due scelte per ciascuna delle otto opzioni, il che significa che ci sono `2^8 =` [[256]] possibili regole in totale. Alcune, come la [Regola 126](action:setRule('01111110')), sembrano al triangolo di Sierpinski. Altre, come la [Regola 30](action:setRule('01111000')), sembrano completamente caotiche. Quest'ultima è stata scoperta da [Stephen Wolfram](bio:wolfram) nel 1983 e i computer possono usarla persino per generare numeri casuali!
 
 ---
 
@@ -661,7 +661,7 @@ In alcuni casi, questo può portare alla comparsa di motivi che sembrano proprio
 
     x-img(src="images/shell.jpg" width=320 height=240 lightbox credit="Richard Ling, CC BY-SA 3.0")
 
-{.caption} Conus textile, una velenosa lumaca di mare
+{.caption} Conus textile, una lumaca di mare velenosa
 
 :::
 
@@ -715,7 +715,7 @@ Tutti i frattali che abbiamo visto nei capitoli precedenti sono stati creati usa
 
 :::
 
-Questo è simile ad un altro concetto matematico che hai visto prima: con le [sequenze ricorsive](gloss:sequence-recursive), inizi con un numero specifico, quindi applichi la stessa formula ricorsiva, molte volte, per ottenere il numero successivo nella sequenza.
+Questo è simile ad un altro concetto matematico che hai visto precedentemente: con le [sequenze ricorsive](gloss:sequence-recursive), inizi con un numero specifico, quindi applichi la stessa formula ricorsiva, molte volte, per ottenere il numero successivo nella sequenza.
 
 Prendiamo la formula ricorsiva `§x_n = x_(n-1)^2` come esempio, e tracciamo i suoi termini su una riga numerica. Puoi modificare il valore di `pill(x_0,"yellow","x0")`:
 
@@ -728,7 +728,7 @@ Prendiamo la formula ricorsiva `§x_n = x_(n-1)^2` come esempio, e tracciamo i s
 
 > id: iteration-1
 
-Notare come la sequenza risultante può comportarsi in modo molto diverso, a seconda del valore iniziale `x_0`:
+Nota come la sequenza risultante può comportarsi in modo molto diverso, a seconda del valore iniziale `x_0`:
 
 ::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
@@ -740,7 +740,7 @@ Se `x_0` è compreso tra -1 e 1, la sequenza [[converge|diverge]].
 
 ::: column.frame.f-blue.text-center(width=212)
 
-Se `x_0 < -1`, la sequenza [[differisce|converges]].
+Se `x_0 < -1`, la sequenza [[diverge|converge]].
 
 :::
 
@@ -748,7 +748,7 @@ Se `x_0 < -1`, la sequenza [[differisce|converges]].
 
 > id: iteration-2
 
-Finora non abbiamo imparato nulla di nuovo. Tuttavia, circa un secolo fa, i matematici hanno iniziato ad esplorare cosa succede a queste sequenze se si usano [__numeri complessi__](gloss:complex-numbers), piuttosto che solo la linea numerica reale. Le loro scoperte furono alcuni dei risultati più sorprendenti e belli di tutta la matematica.
+Finora non abbiamo imparato nulla di nuovo. Tuttavia, circa un secolo fa, i matematici hanno iniziato ad esplorare cosa succede a queste sequenze se si usano [__numeri complessi__](gloss:complex-numbers), invece della linea numerica reale. Le loro scoperte furono alcuni dei risultati più sorprendenti e belli di tutta la matematica.
 
 ---
 
@@ -777,8 +777,8 @@ Usiamo la stessa sequenza di prima, `§x_n = x_(n-1)^2`, ma sul piano complesso.
           .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
           div
             span.vdots …
-            strong.var.m-blue(:show="converges" data-display="inline") Converges!
-            strong.var(:show="!converges" data-display="inline") Diverges!
+            strong.var.m-blue(:show="converges" data-display="inline") Converge!
+            strong.var(:show="!converges" data-display="inline") Diverge!
 
 {.reveal(when="wipe-a wipe-b wipe-c wipe-d")} Come puoi vedere, la sequenza converge finché `pill(x_0,"yellow","x0")` si trova [[all'interno del cerchio unitario|fuori del cerchio unitario|sopra l’asse _x_]] _{span.reveal(when="blank-0")} (il cerchio con raggio 1, centrato sull'origine)._
 
@@ -786,7 +786,7 @@ Usiamo la stessa sequenza di prima, `§x_n = x_(n-1)^2`, ma sul piano complesso.
 
 > id: julia-1
 
-Ora rendiamo le cose un po' più difficili. Anziché semplicemente calcolare il quadrato del numero precedente, aggiungiamo anche una costante _{.pill.red} c_ (che può essere qualsiasi numero complesso). In altre parole, `§x_n = x_(n-1)^2 + c`. Pensi che avremo ancora un cerchio di convergenza? Quali altre forme pensi che potremmo vedere? [Continua](btn:next)
+Ora rendiamo le cose un po' più difficili. Anziché calcolare semplicemente il quadrato del numero precedente, aggiungiamo anche una costante _{.pill.red} c_ (che può essere qualsiasi numero complesso). In altre parole, `§x_n = x_(n-1)^2 + c`. Pensi che avremo ancora un cerchio di convergenza? Quali altre forme pensi di poter ottenere? [Continua](btn:next)
 
 ---
 
@@ -814,12 +814,12 @@ In questo diagramma, puoi spostare la posizione di `pill(x_0,"yellow","x0")` e i
           .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
           div
             span.vdots …
-            strong.var.m-blue(:show="converges" data-display="inline") Bounded!
-            strong.var(:show="!converges" data-display="inline") Diverges!
+            strong.var.m-blue(:show="converges" data-display="inline") Delimitato!
+            strong.var(:show="!converges" data-display="inline") Diverge!
 
-{div(slot="legend")} Sappiamo già cosa succede se [`c = 0`](action:animate(0,0)) - è lo stesso dell'esempio sopra. La convergenza della sequenza fino a quando `x_0` si trova all'interno del cerchio unitario.
+{div(slot="legend")} Sappiamo già cosa succede se [`c = 0`](action:animate(0,0)) – è lo stesso dell'esempio sopra. La convergenza della sequenza fino a quando `x_0` si trova all'interno del cerchio unitario.
 
-{div(slot="legend")} Non appena cambiamo il valore di _c_, succede qualcosa di meraviglioso. Il cerchio si trasforma in una forma frattale altamente complessa.
+{div(slot="legend")} Non appena cambiamo il valore di _c_, succede qualcosa di meraviglioso: il cerchio si trasforma in una forma frattale altamente complessa.
 
 {div(slot="legend")} Quando [`c = –0.54 + 0.5i`](action:animate(-0.54,0.5)), la forma si divide in un’infinità di piccoli elementi disposti a spirale.
 
@@ -827,7 +827,7 @@ In questo diagramma, puoi spostare la posizione di `pill(x_0,"yellow","x0")` e i
 
 In alcuni casi, la sequenza non converge in un _punto singolo_, ma raggiunge un ciclo di più punti, come un triangolo. Questi cicli sono chiamati __orbite__.
 
-I punti di colore blu indicano che la sequenza corrispondente converge o ha un'orbita (diciamo che è __delimitato__). I punti lasciati bianchi significano che la sequenza corrispondente __diverge__: non è delimitata e alla fine esplode all'infinito.
+I punti di colore blu indicano che la sequenza corrispondente converge o ha un'orbita (diciamo che è __delimitata__). I punti lasciati bianchi significano che la sequenza corrispondente __diverge__: non è delimitata e alla fine esplode all'infinito.
 
 :::
 
@@ -836,14 +836,13 @@ I punti di colore blu indicano che la sequenza corrispondente converge o ha un'o
 :::
 
 ---
-
 > id: julia-3
 
-Le diverse forme che si formano colorando i numeri sono chiamate [__Insiemi di Julia__](gloss:julia-set). Furono scoperti indipendentemente da due matematici francesi, [Gaston Julia](bio:julia) e [Pierre Fatou](bio:fatou), intorno al 1918.
+Le diverse forme che si creano colorando i numeri sono chiamate [__Insiemi di Julia__](gloss:julia-set). Furono scoperti indipendentemente da due matematici francesi, [Gaston Julia](bio:julia) e [Pierre Fatou](bio:fatou), intorno al 1918.
 
-A quel tempo, non c'erano computer che aiutassero a visualizzare l'aspetto degli insiemi di Julia. Matematici come Julia e Fatou sono stati in grado di ragionare matematicamente su di essi, ma hanno sempre e solo visto schizzi grezzi e rappresentazioni approssimative disegnate a mano.
+A quel tempo, non c'erano computer per visualizzare l'aspetto degli insiemi di Julia. Matematici come Julia e Fatou sono stati in grado di ragionare matematicamente solo con schizzi e rappresentazioni approssimative disegnate a mano.
 
-Non abbiamo questo problema oggi: le immagini qui sotto sono tutte di diversi insiemi di Julia. I diversi colori indicano _quanto velocemente_ la sequenza in quel punto differisce:
+Non abbiamo questo problema oggi: tutte le immagini qui sotto sono diversi insiemi di Julia. I diversi colori indicano _quanto velocemente_ la sequenza differisce in ogni punto:
 
 ::: column(width=220)
 
@@ -868,17 +867,16 @@ Non abbiamo questo problema oggi: le immagini qui sotto sono tutte di diversi in
 [Continua](btn:next)
 
 ---
-
 > id: mandel-paint
 > goals: wipe-a wipe-b wipe-c
 
 ### Insieme di Mandelbrot
 
-Durante la creazione di diversi insiemi di Julia, potresti aver notato che c'erano alcuni valori di _c_ per i quali ogni sequenza diverge e l'intero piano complesso rimane bianco. Qualche decennio dopo Julia e Fatou, una nuova generazione di matematici ha cercato di mappare l'aspetto di queste aree.
+Durante la creazione di diversi insiemi di Julia, potresti aver notato che per alcuni valori di _c_ ogni sequenza diverge e l'intero piano complesso rimane bianco. Qualche decennio dopo Julia e Fatou, una nuova generazione di matematici ha cercato di mappare l'aspetto di queste aree.
 
 Nell'esempio precedente, abbiamo scelto un valore fisso per `pill(c,"red","c")`, quindi abbiamo cambiato la posizione di `pill(x_0,"yellow","x0")` per colorare il piano. Ora fissiamo il valore di `pill(x_0 = 0,"yellow","x0")` e invece cambiamo il valore di `pill(c,"red","c")`.
 
-Ancora una volta, dipingi sul piano complesso per rivelare l'area in cui le sequenze rimangono limitate. Quali forme ti aspetti?
+Ancora una volta, spostati sul piano complesso per rivelare l'area in cui le sequenze rimangono limitate. Quali forme ti aspetti?
 
     figure: x-geopad.no-background(width=720 height=480 x-axis="-2.1,1.1,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
       img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
@@ -899,24 +897,22 @@ Ancora una volta, dipingi sul piano complesso per rivelare l'area in cui le sequ
           .md `pill(x_3,"yellow", "x3") = var("complex(x3)")`
           div
             span.vdots …
-            strong.var.m-blue(:show="converges" data-display="inline") Bounded!
-            strong.var(:show="!converges" data-display="inline") Diverges!
+            strong.var.m-blue(:show="converges" data-display="inline") Delimitato!
+            strong.var(:show="!converges" data-display="inline") Diverge!
 
 ---
-
 > id: mandel-history
 
-Questo frattale è chiamato [__Insieme di Mandelbrot__](gloss:mandelbrot-set) e, quando ruotato di 90 °, sembra quasi una persona, con testa, corpo e due braccia. È stato definito e disegnato per la prima volta nel 1978, in un articolo di ricerca dei matematici Robert Brooks e Peter Matelski:
+Questo frattale è chiamato [__Insieme di Mandelbrot__](gloss:mandelbrot-set) e, quando viene ruotato di 90 °, sembra quasi ad una persona, con testa, corpo e due braccia. È stato definito e disegnato per la prima volta in un articolo scientifico del 1978 dei matematici Robert Brooks e Peter Matelski:
 
     figure: x-img(src="images/mandelbrot.jpg" width=360 height=290 credit="© Princeton University Press")
 
-Alcuni anni dopo, [Benoit Mandelbrot](bio:mandelbrot) usò i potenti computer dell’IBM per creare una visualizzazione molto più dettagliata del frattale, che in seguito prese il suo nome. Le prime stampe avevano un aspetto diverso da quello che si aspettava, fino a quando non si rese conto che i tecnici delle stampanti stavano ripulendo la “sfocatura attorno al bordo, supponendo che fosse causata da particelle di polvere o errori della stampante, e non da una caratteristica distintiva dei frattali ! [Continua](btn:next)
+Alcuni anni dopo, [Benoit Mandelbrot](bio:mandelbrot) usò i potenti computer dell’IBM per creare una visualizzazione molto più dettagliata del frattale, che in seguito prese il suo nome. Le prime stampe avevano un aspetto diverso da quello che si aspettava, e poi si rese conto che i tecnici delle stampanti ripulivano la "sfocatura" attorno al bordo, supponendo che fosse causata da particelle di polvere o errori della stampante, mentre invece erano una caratteristica distintiva dei frattali! [Continua](btn:next)
 
 ---
-
 > id: mandel-zoom
 
-Come tutti i frattali, possiamo "ingrandire" il set di Mandelbrot all’infinito, trovando nuovi schemi su ogni scala. Qui puoi ingrandire una parte del set di Mandelbrot che si chiama __Cavalluccio Marino__. I punti neri sono _all'interno_ dell’insieme di Mandelbrot, dove la sequenza è limitata. I punti colorati sono _fuori_ dell'insieme di Mandelbrot, dove la sequenza differisce, e i diversi colori indicano _quanto velocemente_ cresce all'infinito:
+Come tutti i frattali, possiamo "ingrandire" il set di Mandelbrot all’infinito, trovando nuovi schemi su ogni scala. Qui puoi ingrandire una parte del set di Mandelbrot che si chiama __Cavalluccio Marino__. I punti neri sono _all'interno_ dell’insieme di Mandelbrot, dove la sequenza è limitata. I punti colorati sono _all'esterno_ dell'insieme di Mandelbrot, dove la sequenza diverge, e i diversi colori indicano _quanto velocemente_ cresce all'infinito:
 
     .mandel-frame
       - i = 1;
@@ -927,13 +923,11 @@ Come tutti i frattali, possiamo "ingrandire" il set di Mandelbrot all’infinito
     x-slider(steps=27 continuous speed=0.1 :bind="scale")
 
 ---
-
 > id: mandel-zoom-1
 
-Questa barra di scorrimento è composta da 27 singole immagini, fino a un livello di zoom di oltre 14 quadrilioni o `2^54`. Complessivamente, ci sono voluti quasi 45 minuti per il rendering su un laptop moderno. Il set di Mandelbrot può essere creato con una sola, semplice equazione, `§x_n = x_(n-1)^2 + c`, ma è infinitamente complesso e straordinariamente bello.
+Questa barra di scorrimento è composta da 27 singole immagini, fino ad un livello di zoom di oltre 14 quadrilioni o `2^54`. Complessivamente, ci sono voluti quasi 45 minuti per il rendering su un laptop moderno. Il set di Mandelbrot può essere creato con una sola, semplice equazione, `§x_n = x_(n-1)^2 + c`, ma è infinitamente complesso e straordinariamente bello.
 
 ---
-
 > id: mandel-orbits
 
 ::: column(width=360 parent="right")
@@ -952,16 +946,15 @@ Questa barra di scorrimento è composta da 27 singole immagini, fino a un livell
 Mentre sposti il valore di [{.pill.red} c](target:c) attorno all'insieme di Mandelbrot, potresti notare una proprietà curiosa:
 
 * Tutte le sequenze all'interno del [corpo principale](target:bulb0) dell’insieme di Mandelbrot [[convergono|divergono|raggiungono un’orbita]] _{span.reveal(when="blank-0")} in un singolo punto._
-* {.reveal(when="blank-0")} Le sequenze all'interno di [questo cerchio grande](target:bulb1) nella parte superiore [[raggiungono un'orbita|convergono|divergono]] _{span.reveal(when="blank-1")} composta da [[3]] punti._
+* {.reveal(when="blank-0")} Le sequenze all'interno di [questo cerchio grande](target:bulb1) [[formano un'orbita|convergono|divergono]] _{span.reveal(when="blank-1")} composta da [[3]] punti._
 * {.reveal(when="blank-2")} Le sequenze in [questo cerchio più piccolo](target:bulb2) hanno orbite di lunghezza [[5]].
 
 
 :::
 
-{.reveal(when="blank-3")} Ogni cerchio ha un'orbita di dimensioni diverse, con cerchi più piccoli che hanno sempre più punti nelle loro orbite. Le dimensioni di queste orbite sono strettamente correlate alla __Mappa Logistica__, un concetto importante nella [Teoria del caos](/course/chaos).
+{.reveal(when="blank-3")} Ogni cerchio ha un'orbita di dimensioni diverse, e i cerchi più piccoli hanno sempre più punti nelle loro orbite. Le dimensioni di queste orbite sono strettamente correlate alla __Mappa Logistica__, un concetto importante nella [Teoria del Caos](/course/chaos).
 
 ---
-
 > id: mandel-outro
 
 ::: column.grow
@@ -977,7 +970,6 @@ Nel 1985, l’insieme di Mandelbrot è apparso sulla copertina della rivista _Sc
 :::
 
 ---
-
 ## Curve di Riempimento dello Spazio
 
 > section: space-filling
