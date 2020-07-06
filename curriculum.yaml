@@ -232,22 +232,20 @@ sequences:
   color: F97E08
   next: quadratics
 
-equations:
-  title: Linear Equations and Inequalities
+quadratics:
+  title: Quadratic Equations
   color: F6700F
+  next: graph-theory
+
+equations:
+  title: Inequalities and Systems of Equations
+  color: F26317
   sections:
-    - title: Solving Linear Equations
-    - title: Graphing Linear Functions
     - title: Systems of Linear Equations
     - title: Row Operations and Elimination
     - title: Linear Inequalities
-    - title: Inequalities in Two Variables
     - title: Systems of Inequalities
-
-quadratics:
-  title: Quadratic Equations
-  color: F26317
-  next: graph-theory
+    - title: Quadratic Inequalities
 
 exponentials:
   title: Exponential Functions
