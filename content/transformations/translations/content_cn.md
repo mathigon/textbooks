@@ -1,11 +1,11 @@
-# Transformacije i simetrija
+#变换与对称
 
-## Uvod
+## 介绍
 
 > id: intro
 > section: introduction
 
-Mnoge geometrijske koncepte poput [linija](gloss:line) ili [poligona](gloss:polygon) izmislili su matematičari. S druge strane, simetrija je svugdje oko nas. Gotovo sve biljke, životinje, pa čak i mi ljudi simetrične smo.
+数学家“发明”了许多几何概念，例如[直线](gloss:line)或[多边形](gloss:polygon) 。另一方面，对称性在我们周围无处不在。几乎所有的植物，动物，甚至我们人类都是对称的。 
 
 ::: column(width=200)
 
@@ -21,7 +21,7 @@ Mnoge geometrijske koncepte poput [linija](gloss:line) ili [poligona](gloss:poly
 
 :::
 
-Vremenom smo oponašali simetriju prirode u umjetnosti, arhitekturi, tehnologiji i dizajnu. Simetrični oblici i obrasci samo izgledaju _ljepše_ od nesimetričnih.
+随着时间的流逝，我们在艺术，建筑，技术和设计中都模仿了自然的对称性。对称的形状和图案看起来比不对称的形状和图案_更漂亮_ 。 
 
 ::: column(width=200)
 
@@ -37,16 +37,15 @@ Vremenom smo oponašali simetriju prirode u umjetnosti, arhitekturi, tehnologiji
 
 :::
 
-Ali simetrija je mnogo važnija od toga da jednostavno _izgleda lijepo_. Leži u samim temeljima našeg svemira i može objasniti čak i najosnovnije zakone fizike.
+但是对称比简单_看起来_更重要。它是我们宇宙的基础，甚至可以解释物理学的最基本定律。 
 
-_{button.next-step} Nastavi_
+ _{button.next-step}继续_ 
 
 ---
-
 > id: transformations
 > goals: t1 t2 t3
 
-Iako je simetrija vrlo intuitivan pojam, opisati je matematički teže nego što možda mislite. Prvo moramo naučiti o [__transformacijama__](gloss:transformation), koji su načini pretvaranja jedne geometrijske figure u drugu. Evo nekoliko primjera:
+虽然对称性是一个非常直观的概念，但是用数学方法描述对称性要比您想象的要困难。首先，我们必须学习[__变换__](gloss:transformation) ，这是将一个几何图形转换为另一个几何图形的方法。这里有一些例子： 
 
 ::: column.r(width=200 parent="padded-thin")
 
@@ -69,21 +68,20 @@ Iako je simetrija vrlo intuitivan pojam, opisati je matematički teže nego što
 :::
 
 ---
-
 > id: transformations-1
 
-Rezultat transformacije se zove [__slika__](gloss:transformation-image). Često označavamo sliku oblika `A` kao `A'`, koja se izgovara sa "premijerom". Postoji mnogo različitih vrsta transformacija koje ćemo detaljnije istražiti tijekom ovog tečaja.
+转换的结果称为[__图像__](gloss:transformation-image) 。我们经常表示形状的图像`A`如`A'` ，发音为“ A prime”。有许多不同类型的转换，我们将在本课程中更详细地探讨这些转换。 
 
 ---
 
-## Krute transformacije
+## 刚性转换
 
 > id: rigid
 > section: rigid
 
-[__kruta transformacija__](gloss:rigid-transformation) posebna je vrsta transformacije koja ne mijenja veličinu ili oblik figure. Mogli bismo zamisliti da je izrađen od čvrstog materijala poput drveta ili metala: možemo ga premjestiti, okrenuti ili preokrenuti, ali ne možemo ga rastezati, savijati ili na drugi način deformirati.
+ [__刚性变换__](gloss:rigid-transformation)是一种特殊的变换，它不会更改图形的大小或形状。我们可以想象它是由木材或金属之类的固体材料制成的：我们可以移动，旋转或翻转它，但不能拉伸，弯曲或使其变形。 
 
-Koja je od ovih pet transformacija kruta?
+这五个转换中哪些是固定的？ 
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -93,11 +91,10 @@ Koja je od ovih pet transformacija kruta?
       .item: img(src="images/picker-5.svg" width=130 height=240)
 
 ---
-
 > id: rigid-1
 > goals: t1 t2 t3
 
-Ispada da postoje samo tri različite vrste krutih transformacija:
+事实证明，只有三种不同类型的刚性转换： 
 
 ::: column.r(width=200)
 
@@ -105,7 +102,7 @@ Ispada da postoje samo tri različite vrste krutih transformacija:
       include svg/rigid-1.svg
       x-play-btn
 
-{.text-center} Transformacija koja jednostavno _pomiče_ oblik zove se [__prijevod__](gloss:translation).
+{.text-center}仅_移动_形状的变换称为[__平移__](gloss:translation) 。 
 
 ::: column.r(width=200)
 
@@ -113,7 +110,7 @@ Ispada da postoje samo tri različite vrste krutih transformacija:
       include svg/rigid-2.svg
       x-play-btn
 
-{.text-center} Transformacija koja _okreće_ oblik preko naziva se [__odraz__](gloss:reflection).
+{.text-center}将形状_翻转_的变换称为[__反射__](gloss:reflection) 。 
 
 ::: column.r(width=200)
 
@@ -121,27 +118,25 @@ Ispada da postoje samo tri različite vrste krutih transformacija:
       include svg/rigid-3.svg
       x-play-btn
 
-{.text-center} Transformacija koja _vrti_ oblik naziva se [__rotacija__](gloss:rotation).
+{.text-center} _旋转_形状的变换称为[__旋转__](gloss:rotation) 。 
 
 :::
 
 ---
-
 > id: rigid-2
 
-Također možemo kombinirati više vrsta transformacije kako bismo stvorili složenije - primjerice, prijevod praćen rotacijom.
+我们还可以结合多种类型的转换来创建更复杂的转换-例如，平移后再旋转。 
 
-Prvo, pogledajmo detaljnije svaku od tih vrsta transformacija.
+但首先，让我们更详细地研究每种类型的转换。 
 
 ---
-
 > id: translations
 
-### Prijevodi
+### 翻译
 
-[__prijevod__](gloss:translation) transformacija je koja pomiče svaku točku figure jednakom udaljenošću u istom smjeru.
+ [__平移__](gloss:translation)是指将图形的每个点沿相同方向移动相同距离的变换。 
 
-U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik pomaknut prema osi _x_ i osi _y_. Na primjer, transformacija pomoću (3, 5) pomiče oblik za 3 duž osi _x_ i za 5 kroz osovinu _y_.
+在坐标平面中，我们可以指定形状沿_x_轴和_y_轴移动的距离。例如，通过（3，5）进行的变换将形状沿_x_轴移动3，并沿_y_轴移动5。 
 
 ::: column(width=220)
 
@@ -151,7 +146,7 @@ U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik poma
       path.reveal(x="segment(point(4,5),point(9,5))" mark="arrow" when="blank-0" animation="draw")
       path.reveal(x="segment(point(9,5),point(9,4))" mark="arrow" when="blank-1" animation="draw")
 
-{.caption} Preveo ([[5]], [[1]])
+{.caption}通过翻译[[[[（5，1）]]]] 
 
 ::: column(width=220)
 
@@ -161,7 +156,7 @@ U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik poma
       path.reveal(x="segment(point(6,5),point(2,5))" mark="arrow" when="blank-2" animation="draw")
       path.reveal(x="segment(point(2,5),point(2,3))" mark="arrow" when="blank-3" animation="draw")
 
-{.caption} Preveo ([[-4]], [[2]])
+{.caption}通过翻译[[[[（-4，2）]]]] 
 
 ::: column(width=220)
 
@@ -171,16 +166,15 @@ U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik poma
       path.reveal(x="segment(point(2,6),point(6,6))" mark="arrow" when="blank-4" animation="draw")
       path.reveal(x="segment(point(2,4),point(2,6))" mark="arrow" when="blank-5" animation="draw")
 
-{.caption} Preveo ([[4]], [[-2]])
+{.caption}翻译成（ [[4]] ， [[-2]] ） 
 
 :::
 
 ---
-
 > id: translations-1
 > goals: drag-0 drag-1 drag-2
 
-Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
+现在轮到您了–如图所示平移以下形状： 
 
 ::: column(width=220)
 
@@ -192,7 +186,7 @@ Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
       polygon(points="30,10 10,70 70,70 50,10" style="fill: #289782; opacity: .5;")
       polygon(points="30,10 10,70 70,70 50,10" style="fill: #289782; cursor: move")
 
-{.caption} Prevedi po (3, 1) _{span.check(when="drag-0")}_
+{.caption}翻译成（3，1） _{span.check(when="drag-0")}_ 
 
 ::: column(width=220)
 
@@ -204,7 +198,7 @@ Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
       polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; opacity: .5;")
       polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; cursor: move")
 
-{.caption} Prevedi po (–4, –2) _{span.check(when="drag-1")}_
+{.caption}翻译（–4，–2） _{span.check(when="drag-1")}_ 
 
 ::: column(width=220)
 
@@ -216,20 +210,19 @@ Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
       polygon(points="10,10 30,10 30,50 50,50 50,10 70,10 70,70 10,70" style="fill: #2ea92e; opacity: .5;")
       polygon(points="10,10 30,10 30,50 50,50 50,10 70,10 70,70 10,70" style="fill: #2ea92e; cursor: move")
 
-{.caption} Prevedi po (5, -1) _{span.check(when="drag-2")}_
+{.caption}翻译为（5，–1） _{span.check(when="drag-2")}_ 
 
 :::
 
 ---
-
 > id: reflections
 > goals: r0 r1 r2
 
-### Razmišljanja
+### 感言
 
-[__odraz__](gloss:reflection) je transformacija koja "okreće" ili "ogledala" oblik preko crte. Ova linija naziva se __linija refleksije__.
+ [__反射__](gloss:reflection)是一种在直线上“翻转”或“镜像”形状的变换。这条线称为__反射线__ 。 
 
-Nacrtajte liniju razmišljanja u svakom od ovih primjera:
+在以下每个示例中绘制反射线： 
 
 ::: column(width=220)
 
@@ -258,7 +251,7 @@ Nacrtajte liniju razmišljanja u svakom od ovih primjera:
 > id: reflections-1
 > goals: r0 r1 r2
 
-Sada je na vama red - nacrtajte odraz svakog od ovih oblika:
+现在轮到您了–绘制以下每种形状的反射： 
 
 ::: column(width=220)
 
@@ -286,12 +279,12 @@ Sada je na vama red - nacrtajte odraz svakog od ovih oblika:
 ---
 > id: reflections-2
 
-Primijetite da ako točka leži na liniji refleksije, [[se ne pomiče|rotates|flips over]] kada se odražava: _{span.reveal(when="blank-0")} njegova slika je ista točka kao i izvornik._
+请注意，如果点位于反射线上，则[[它不会移动|旋转|]]被反射时[[翻转]] ： _{span.reveal(when="blank-0")}它的图像与原始图像相同。_ 
 
 ---
 > id: reflections-3
 
-U svim gore navedenim primjerima linija refleksije bila je vodoravna, okomita ili pod kutom od 45 ° - što je olakšalo crtanje odraz. Ako to nije slučaj, za izgradnju je potrebno malo više posla:
+在以上所有示例中，反射线都是水平，垂直或成45°角的，这使得绘制反射线变得容易。如果不是这种情况，则需要更多的工作： 
 
 ::: column(width=300)
 
@@ -331,15 +324,15 @@ U svim gore navedenim primjerima linija refleksije bila je vodoravna, okomita il
 
 ::: column.grow
 
-{.r} Da bismo ovaj oblik prikazali kroz [liniju refleksije](target:refl), moramo odražavati svaku [verteks](gloss:polygon-vertex), a zatim ih ponovo povezati. _{button.next-step} Nastavi_
+{.r}为了在[反射线上反射](target:refl)此形状，我们必须分别反射每个[顶点](gloss:polygon-vertex) ，然后再次连接它们。 _{button.next-step}继续_ 
 
-{.r.reveal(when="next-0")} Odaberemo jednu od vrhova i povučemo crtu preko te vrhove koja je okomita na liniju refleksije. _{button.next-step} Nastavi_
+{.r.reveal(when="next-0")}让我们选择一个顶点，并通过垂直于反射线的该顶点绘制线。 _{button.next-step}继续_ 
 
-{.r.reveal(when="next-1")} Sada možemo izmjeriti [udaljenost](target:d1) od vrha do linije refleksije i napraviti točku koja ima [isto razmak](target:d2) na drugoj strani. _{span.lgrey} (Možemo koristiti ravnalo ili [kompas](target:circ) za to.)_ _{button.next-step} Nastavite_
+{.r.reveal(when="next-1")}现在，我们可以测量从顶点到反射线的[距离](target:d1) ，并作出对对方的[距离相等](target:d2)的点。 _{span.lgrey} （我们可以使用标尺或[指南针](target:circ)来执行此操作。）_ _{button.next-step}继续_ 
 
-{.r.reveal(when="next-2")} To možemo učiniti za sve ostale vrhove našeg oblika. _{button.next-step} Nastavi_
+{.r.reveal(when="next-2")}我们可以对形状的所有其他顶点执行相同的操作。 _{button.next-step}继续_ 
 
-{.r.reveal(when="next-3")} Sada moramo spojiti reflektirane vrhove u ispravnom redoslijedu i pronašli smo odraz!
+{.r.reveal(when="next-3")}现在，我们只需要以正确的顺序连接反射的顶点，就可以找到反射！ 
 
 :::
 
@@ -347,11 +340,11 @@ U svim gore navedenim primjerima linija refleksije bila je vodoravna, okomita il
 > id: rotations
 > goals: r0 r1 r2
 
-### Rotacije
+### 轮换
 
-[__rotacija__](gloss:rotation) je transformacija koja "okreće" oblik pod određenim uglom oko fiksne točke. Ta se točka zove [__središte rotacije__](gloss:center-of-rotation). Rotacije mogu biti u smjeru kazaljke na satu ili obrnuto.
+ [__旋转__](gloss:rotation)是一种将形状围绕固定点“旋转”一定角度的变换。该点称为[__旋转中心__](gloss:center-of-rotation) 。旋转可以是顺时针或逆时针。 
 
-Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
+尝试围绕红色旋转中心旋转以下形状： 
 
 ::: column(width=220)
 
@@ -360,7 +353,7 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
       circle.red(x="point(5,6)" name="c0")
       path.finished(hidden x="from0.rotate(pi/2,c0)" name="to0" style="fill: rgba(34,132,213,0.4)")
 
-{.caption} Zakrenite za 90 ° u smjeru kazaljke na satu.
+{.caption}顺时针旋转90°。 
 
 ::: column(width=220)
 
@@ -369,7 +362,7 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
       circle.red(x="point(5,4)" name="c1")
       path.finished(hidden x="from1.rotate(pi,c1)" name="to1" style="fill: rgba(40,151,130,0.4)")
 
-{.caption} Zakrenite za 180 °.
+{.caption}旋转180°。 
 
 ::: column(width=220)
 
@@ -378,7 +371,7 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
       circle.red(x="point(6,3)" name="c2")
       path.finished(hidden x="from2.rotate(-pi/2,c2)" name="to2" style="fill: rgba(46,169,46,0.4)")
 
-{.caption} Zakrenite za 90 ° u smjeru suprotnom od kazaljke na satu.
+{.caption}逆时针旋转90°。 
 
 :::
 
@@ -425,47 +418,75 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
 
 ::: column.grow
 
-Teže je crtati rotacije koje nisu točno 90 ° ili 180 °. Pokušajmo zakretati ovaj oblik za ${10*ang}{ang|6|-18,18,1} ° oko [središta rotacije](target:rot).
+绘制不完全为90°或180°的旋转更加困难。让我们尝试旋转此形状${10*ang}{ang|6|-18,18,1}°围绕[旋转中心](target:rot) 。 
 
-{.r} Kao i za odraz, moramo svaku točku u obliku rotirati pojedinačno. _{button.next-step} Nastavi_
+{.r}像反射一样，我们必须分别旋转形状中的每个点。 _{button.next-step}继续_ 
 
-{.r.reveal(when="next-0")} Počinjemo odabirom jednog od vrhova i crtanjem crte do središta rotacije. _{button.next-step} Nastavi_
+{.r.reveal(when="next-0")}我们首先选择一个顶点并在旋转中心画一条线。 _{button.next-step}继续_ 
 
-{.r.reveal(when="next-1")} Koristeći [nosač](target:protractor), možemo izmjeriti [kut ${ang*10} °](target:angle) oko središta rotacije. Nacrtajmo [drugu liniju](target:l2) pod tim kutom. _{button.next-step} Nastavi_
+{.r.reveal(when="next-1")}使用[量角器](target:protractor) ，我们可以测量[角度${ang*10}°](target:angle)围绕旋转中心。让我们以该角度绘制[第二条线](target:l2) 。 _{button.next-step}继续_ 
 
-{.r.reveal(when="next-2")} Koristeći [kompas](target:compass) ili ravnalo, možemo pronaći [točku](target:a1) na ovoj liniji koja ima istu udaljenost od središta rotacije kao i izvorna točka. _{button.next-step} Nastavi_
+{.r.reveal(when="next-2")}使用[指南针](target:compass)或尺子，我们可以发现在这条线将距旋转中心为原点的距离相等的[点](target:a1) 。 _{button.next-step}继续_ 
 
-{.r.reveal(when="next-3")} Sada moramo ponoviti ove korake za sve ostale vrhove našeg oblika. _{button.next-step} Nastavi_
+{.r.reveal(when="next-3")}现在，我们必须对形状的所有其他顶点重复这些步骤。 _{button.next-step}继续_ 
 
-{.reveal(when="next-4")} I na kraju, kao i prije, možemo povezati pojedinačne vrhove da bismo dobili zakrenutu sliku našeg izvornog oblika.
+{.reveal(when="next-4")}最后，像以前一样，我们可以连接各个顶点以获得原始形状的旋转图像。 
 
 :::
 
 ---
 > id: composition-1
 
-Transformacije su važan pojam u mnogim dijelovima matematike, a ne samo u geometriji. Na primjer, možete transformirati [_funkcije_](gloss:function) pomicanjem ili rotiranjem njihovih [grafova](gloss:function-graph). Pomoću transformacija možete odrediti jesu li dva oblika [kongruentna](gloss:congruent).
+变换是数学许多部分的重要概念，而不仅仅是几何。例如，您可以通过移动或旋转[_函数_](gloss:function) [图](gloss:function-graph)来变换[_函数_](gloss:function) 。您还可以使用变换来确定两个形状是否[一致](gloss:congruent) 。 
 
 ---
 
-## Congruence
+## 一致
 
 > section: congruence
 > sectionStatus: dev
 
-NAPRAVITI
+去做
 
 ---
 
-## Simetrija
+### 转换的组成
+
+当然，我们可以结合多个平移，反射和旋转来创建更复杂的变换。 
+
+{.todo} TODO示例
+
+但是，事实证明，组合多少个不同的转换并不重要：您总能找到一次完成相同转换的另一个转换！ 
+
+{.todo} TODO变换组成计算器
+
+结合两个反射特别有趣。我们需要考虑两种不同的情况： 
+
+::: column.grow
+
+如果两条反射线平行，则结果是一次平移。平移的方向垂直于反射线，并且该距离是反射线之间的距离的两倍。 
+
+{.todo} TODO动画
+
+::: column.grow
+
+如果两条反射线相交，则结果是旋转一圈。旋转中心是反射线之间的交点，并且角度是反射线之间的角度的两倍。 
+
+{.todo} TODO动画
+
+:::
+
+---
+
+## 对称
 
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
 
-[__Simetrija__](gloss:symmetry) je svuda oko nas, a intuitivan koncept: različiti dijelovi predmeta izgledaju _isto_ na neki način. Ali pomoću transformacija možemo dati mnogo precizniju, matematičku definiciju onoga što simetrija _zaista_ znači:
+ [__对称性__](gloss:symmetry)无处不在，这是一个直观的概念：对象的不同部分在某种程度上看起来_是相同的_ 。但是使用变换，我们可以对对称_真正的_含义给出更精确的数学定义： 
 
-{.definition} Objekt je _simetričan_ ako izgleda isto, čak i nakon primjene određene transformacije.
+{.definition}如果对象看起来相同，则即使它是经过_对称_变换的对象，也是_对称的_ 。 
 
 ::: column.grow
 
@@ -474,7 +495,7 @@ NAPRAVITI
       img(src="images/symmetry-1.png" width=320 height=240)
       x-play-btn
 
-{.text-center} Možemo odraziti ovog leptira, a nakon toga izgleda isto. Kažemo da ima __odraznu simetriju__.
+{.text-center}我们可以反映出这只蝴蝶，之后看起来也一样。我们说它具有__反射对称性__ 。 
 
 ::: column.grow
 
@@ -483,22 +504,22 @@ NAPRAVITI
       img(src="images/symmetry-2.jpg" width=320 height=240)
       x-play-btn
 
-{.text-center} Ovaj cvijet možemo zakretati, a on će nakon toga izgledati isto. Kažemo da ima __rotacijsku simetriju__.
+{.text-center}我们可以旋转这朵花，然后看起来一样。我们说它具有__旋转对称性__ 。 
 
 :::
 
 ---
 > id: reflectional-symmetry
 
-### Reflektivna simetrija
+### 反射对称
 
-Oblik ima [__reflektirajuću simetriju__](gloss:reflectional-symmetry) ako izgleda isto nakon što se odrazi. Linija refleksije naziva se [__simetrija osi__](gloss:axis-of-symmetry) i dijeli oblik na dvije [[kongruentne|equal|similar]] polovice. Neke figure mogu imati i više od jedne osi simetrije.
+如果形状在[__反射__](gloss:reflectional-symmetry)后看起来相同，则具有[__反射对称性__](gloss:reflectional-symmetry) 。反射线称为[__对称轴__](gloss:axis-of-symmetry) ，它将形状分成两个[[全等|等于|类似的]]一半。一些图形还可以具有多个对称轴。 
 
 ---
 > id: reflectional-symmetry-1
 > goals: r0 r1 r2 r3 r4 r5
 
-Nacrtajte sve osi simetrije u ovih šest slika i oblika:
+在这六个图像和形状中绘制所有对称轴： 
 
 ::: column(width=220)
 
@@ -528,7 +549,7 @@ Nacrtajte sve osi simetrije u ovih šest slika i oblika:
       path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
 
-{.caption} Ovaj oblik ima [[2]] osi simetrije.
+{.caption}此形状有[[2]]个对称轴。 
 
 ::: column(width=220)
 
@@ -539,7 +560,7 @@ Nacrtajte sve osi simetrije u ovih šest slika i oblika:
       path(hidden name="line4c" x="line(point(0,-1),point(10,9))")
       path(hidden name="line4d" x="line(point(10,-1),point(0,9))")
 
-{.caption} Kvadrat ima [[4]] ose simetrije.
+{.caption}正方形具有[[4]]个对称轴。 
 
 ::: column(width=220)
 
@@ -548,14 +569,14 @@ Nacrtajte sve osi simetrije u ovih šest slika i oblika:
       path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
       path(hidden name="line5b" x="line(point(7,-1),point(3,11))")
 
-{.caption} Ovaj oblik ima [[2]] ose simetrije.
+{.caption}此形状有[[2]]个对称轴。 
 
 :::
 
 ---
 > id: alphabet
 
-Mnoga slova u abecedi imaju reflektirajuću simetriju. Odaberite sve one koji rade:
+字母表中的许多字母具有反射对称性。选择所有可做的事情： 
 
     x-picker.letters
       - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
@@ -569,7 +590,7 @@ Mnoga slova u abecedi imaju reflektirajuću simetriju. Odaberite sve one koji ra
 > id: reflectional-symmetry-2
 > goals: r0 r1 r2
 
-Evo još nekoliko oblika. Ispunite ih tako da imaju reflektirajuću simetriju:
+这里还有一些形状。完成它们，使它们具有反射对称性： 
 
 ::: column(width=220)
 
@@ -602,9 +623,9 @@ Evo još nekoliko oblika. Ispunite ih tako da imaju reflektirajuću simetriju:
 > id: palindromes
 > goals: p0 p1 p2
 
-Oblici, slova i slike mogu imati odraznu simetriju, ali mogu postojati i cijeli brojevi, riječi i rečenice!
+形状，字母和图像可以具有反射对称性，但是整数，单词和句子也可以具有反射对称性！ 
 
-Na primjer, "25352" i "ANNA" čitaju isto od naprijed. Brojevi ili riječi poput ove se nazivaju [__Palindromi__](gloss:palindrome). Možete li se sjetiti bilo kojeg drugog palindroma?
+例如，“ 25352”和“ ANNA”从后到前都读相同。这样的数字或单词称为[__回文记__](gloss:palindrome) 。您还能想到其他回文吗？ 
 
     form.palindromes.text-center.form-field
       input(type="text")
@@ -617,16 +638,26 @@ Na primjer, "25352" i "ANNA" čitaju isto od naprijed. Brojevi ili riječi poput
 ---
 > id: palindromes-1
 
-Ako zanemarimo razmake i interpunkcijske znakove, kratke rečenice u nastavku također imaju odraznu simetriju. Možete li smisliti svoje? {.text-center} Nikad neparno ili parno. <br> [[orah]] za staklenku tunjevine. <br> Yo, banana [[dečko]]! {.reveal(when="blank-0 blank-1")} Ali Palindromi nisu samo zabava, oni zapravo imaju praktičnu važnost. Prije nekoliko godina, znanstvenici su otkrili da su dijelovi našeg [DNA](gloss:dna) palindromni. To ih čini otpornijima na mutacije ili oštećenja - jer postoji svaka sigurnosna kopija svakog komada.
+如果我们忽略空格和标点符号，则下面的短句也具有反射对称性。你能提出自己的建议吗？ 
+
+{.text-center}永远不要奇数或偶数。  
+一罐金枪鱼的[[坚果]] 。  
+哟，香蕉[[男孩]] ！ 
+
+{.reveal(when="blank-0 blank-1")}但是回文报不仅好玩，而且实际上具有实际意义。几年前，科学家发现我们[DNA的一部分](gloss:dna)是回文的。这使它们对突变或损坏更具弹性-因为每件都有第二个备份副本。 
 
 ---
 > id: rotational-symmetry
 
-### Rotaciona simetrija
+### 旋转对称
 
 ::: column.grow
 
-Oblik ima [__rotacijsku simetriju__](gloss:rotational-symmetry) ako izgleda isto nakon zakretanja (za manje od 360 °). [Središte rotacije](gloss:center-of-rotation) obično je samo sredina oblika. [__red simetrije__](gloss:order-of-symmetry) je broj različitih orijentacija u kojima oblik izgleda isto. Možete razmišljati i o tome _koliko puta možemo okretati oblik_, prije nego što se vratimo na početak. Na primjer, ova snježna pahuljica ima redoslijed [[6]]. {.reveal(when="blank-0")} Kut svake rotacije je `"360°"/"order"`. U pahuljici, ovo je `"360°"/6 = input(60)°`.
+如果形状在[__旋转__](gloss:rotational-symmetry)后看起来相同（小于360°），则具有[__旋转对称性__](gloss:rotational-symmetry) 。 [旋转中心](gloss:center-of-rotation)通常只是形状的中间。 
+
+ [__对称顺序__](gloss:order-of-symmetry)是形状看起来相同的不同方向的数量。您也可以将其视为_可以旋转形状的次数_ ，然后再回到起点。例如，此雪花的阶数为[[6]] 。 
+
+{.reveal(when="blank-0")}每次旋转的角度是`"360°"/"order"` 。在雪花中，这是`"360°"/6 = input(60)°` 。 
 
 ::: column(width=240)
 
@@ -634,34 +665,38 @@ Oblik ima [__rotacijsku simetriju__](gloss:rotational-symmetry) ako izgleda isto
 
 :::
 
+    // Maybe have another alphabeth to select all letters with rotational symmetry?
+
 ---
 > id: rotational-symmetry-1
 
-Pronađite red i ugao rotacije, za svaki od ovih oblika:
+找到以下每种形状的顺序和旋转角度： 
 
 ::: column(width=220)
 
     img(src="images/clover.jpg" width=200 height=200)
 
-{.caption} Redoslijed [[4]], kut [[90]]°
+{.caption}阶数[[4]] ，角度[[90]]° 
 
 ::: column(width=220)
 
     img(src="images/playing-card.jpg" width=200 height=200)
 
-{.caption} Naredba [[2]], kut [[180]]°
+{.caption}阶数[[2]] ，角度[[180]]° 
 
 ::: column(width=220)
 
     img(src="images/flower.jpg" width=200 height=200)
 
-{.caption} Naredba [[8]], kut [[45]]°
+{.caption}阶数[[8]] ，角度[[45]]° 
 
 :::
 
 ---
 > id: rotational-symmetry-2
-> goals: r0 r1 r2 Dovršite ove oblike tako da imaju rotacijsku simetriju:
+> goals: r0 r1 r2
+
+现在完成以下形状，使其具有旋转对称性： 
 
 ::: column(width=220)
 
@@ -673,7 +708,7 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
       path.red(x="segment(point(5,4),point(11,4))")
       path(hidden x="polyline(point(9,4),point(6,5),point(5,8),point(4,5),point(1,4),point(4,3),point(5,0))" name="to0")
 
-{.caption} Red 4
+{.caption}订单4 
 
 ::: column(width=220)
 
@@ -684,7 +719,7 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
       path.red(x="segment(point(5,-1),point(5,9))")
       path(hidden x="from1.rotate(pi,c1)" name="to1")
 
-{.caption} Redoslijed 2
+{.caption}订单2 
 
 ::: column(width=220)
 
@@ -696,17 +731,21 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
       path.red(x="segment(point(5,4),point(-1,4))")
       path(hidden x="polyline(point(4,4),point(2,6),point(3,7),point(5,5),point(7,7),point(8,6),point(6,4),point(8,2),point(7,1),point(5,3))" name="to2")
 
-{.caption} Naredba 4
+{.caption}订单4 
 
 :::
 
 ---
-## Grupe simetrije i pozadine
+
+## 对称组和墙纸
 
 > id: groups
 > section: symmetry-groups
 
->Neki oblici imaju više od jedne simetrije - pogledajmo [kvadrat](gloss:square) kao jednostavan primjer.
+    // HINT: To recognise different configurations, we need to highlight the
+    // four corners in different colours.
+
+有些形状具有多个对称性-让我们以一个简单的例子来看一下[正方形](gloss:square) 。 
 
 ::: column(width=400 parent="padded-thin")
 
@@ -722,13 +761,13 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
 
 ::: column.grow(width=200)
 
-Već ste pokazali da kvadrat ima [[4]] ose refleksije.
+上面已经显示了一个正方形具有[[4]]个反射轴。 
 
-{.reveal(when="blank-0")} Također ima rotacijsku simetriju za [[90]]°, [[180]]° i [[270]]°.
+{.reveal(when="blank-0")}它还具有[[90]]°， [[180]]°和[[270]]°的旋转对称性。 
 
-{.reveal(when="blank-1 blank-2 blank-3")} I na kraju, možemo razmišljati o tome da ne radimo ništa kao drugu posebnu simetriju - jer je rezultat (očito) isti kao prije. To se ponekad naziva __identitet__.
+{.reveal(when="blank-1 blank-2 blank-3")}最后，我们可以将“什么都不做”考虑为另一种特殊的对称性-因为结果（显然）与以前相同。有时称为__身份__ 。 
 
-{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} Ukupno smo pronašli [[8]] različite "simetrije kvadrata".
+{.reveal(when="blank-1 blank-2 blank-3" delay=1000)}总共，我们发现了[[8个]]不同的“正方形的对称性”。 
 
 :::
 
@@ -736,7 +775,7 @@ Već ste pokazali da kvadrat ima [[4]] ose refleksije.
 > id: add-symmetries
 > goals: sum-0 sum-1
 
-Sada zapravo možemo početi raditi aritmetiku s tim simetrijama. Na primjer, možemo _dodati_ dvije simetrije kako bismo dobili nove:
+现在，我们实际上可以开始对这些对称性进行一些算术运算。例如，我们可以_添加_两个对称以获得新的对称： 
 
 ::: column(width=260)
 
@@ -764,7 +803,7 @@ Sada zapravo možemo početi raditi aritmetiku s tim simetrijama. Na primjer, mo
 > title: Symmetry Calculator
 > goals: calculate
 
-Kad god dodate dvije simetrije kvadrata, nabavite novi. Ovdje je "kalkulator simetrije", gdje možete i sami da ga isprobate:
+只要添加一个正方形的两个对称，就可以得到一个新的对称。这是一个“对称计算器”，您可以自己尝试： 
 
     .calculator
       .display
@@ -783,19 +822,17 @@ Kad god dodate dvije simetrije kvadrata, nabavite novi. Ovdje je "kalkulator sim
 ---
 > id: symmetry-arithmetic
 
-Provedite malo vremena igrajući se s računalom simetrije i pokušajte pronaći bilo koji obrazac. Možete li dovršiti ova zapažanja?
+花一些时间玩对称计算器，然后尝试找到任何模式。你能完成这些观察吗？ 
 
-* Dodavanje dvije rotacije uvijek će [[postići|a reflection]] rotaciju (ili identitet).
-* Dodavanje dva razmišljanja uvijek će omogućiti [[rotaciju|a reflection]] (ili identitet).
-* Dodavanje istih dviju simetrija u suprotnom redoslijedu [[ponekad daje drukčiji|always gives a different|always gives the same]] rezultat.
-* Dodavanje identiteta [[ne znači ništa|returns a reflection|returns the opposite]].
+ *增加两个旋转将始终产生[[一个旋转|反思]] （或身份）。 *添加两个反射将始终[[旋转|反思]] （或身份）。 *以相反的顺序添加相同的两个对称[[有时会产生不同的结果|总是给与众不同|总是给出相同的]]结果。 *添加身份[[不会做任何事情|返回反射|返回相反]] 。 
 
 ---
 > id: group-axioms
 
-Možda ste shvatili da je dodavanje __{.orange} simetrija__ zapravo vrlo slično dodavanju __{.green} celih brojeva__:
+您可能已经意识到添加__{.orange}对称__实际上与添加非常相似__{.green}整数__ ： 
 
-    ol.proof    
+    ol.proof
+    
       li.r
         | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
         .text-center.axiom 
@@ -857,33 +894,40 @@ Možda ste shvatili da je dodavanje __{.orange} simetrija__ zapravo vrlo slično
 ---
 > id: groups-1
 
-u matematike, svaka zbirka koja ima ta svojstva naziva se [__grupa__](gloss:group). Neke grupe (poput __{.orange} simetrije__ kvadrata) imaju samo konačan broj elemenata. Drugi (poput __{.green} celih brojeva__) su beskonačni. U ovom primjeru započeli smo s osam simetrija kvadrata. U stvari, svaki geometrijski oblik ima svoju __grupu simetrije__. Svi imaju različite elemente, ali uvijek zadovoljavaju tri gore navedena pravila. Grupe se pojavljuju svugdje u matematici. Elementi mogu biti brojevi ili simetrije, ali također i polinomi, permutacije, matrice, funkcije ... _bilo što_ što se pridržava tri pravila. Ključna ideja _teorije grupa_ je da nas ne zanimaju pojedini elementi, baš u _kako oni međusobno djeluju_.
+在数学中，具有这些属性的任何集合都称为[__group__](gloss:group) 。一些团体（例如__{.orange}__正方形的__对称性__ ）只有有限数量的元素。其他人（例如__{.green}整数__ ）是无限的。 
+
+在此示例中，我们从正方形的八个对称开始。实际上，每个几何形状都有自己的__对称组__ 。它们都有不同的元素，但是它们始终满足上述三个规则。 
+
+组在数学中无处不在。元素可以是数字或对称性，也可以是多项式，置换，矩阵，函数…… _任何_符合这三个规则的东西。 _小组理论_的关键思想是，我们对单个元素不感兴趣，而对_它们之间如何相互作用_不感兴趣。 
 
 ::: column.grow
 
-Na primjer, simetrijske skupine različitih molekula mogu znanstvenicima pomoći da predvide i objasne svojstva odgovarajućih materijala. Grupe se također mogu koristiti za analizu pobjedničke strategije u društvenim igrama, ponašanja virusa u medicini, različitih harmonija u glazbi i mnogih drugih koncepata ...
+例如，不同分子的对称基团可以帮助科学家预测和解释相应材料的特性。 
+
+小组还可以用来分析棋盘游戏的制胜策略，药物中的病毒行为，音乐中的不同谐调以及许多其他概念…… 
 
 ::: column(width=340)
 
     img(src="images/molecule.jpg" width=160 height=160 style="margin-right: 20px")
     img(src="images/virus.jpg" width=160 height=160)
 
-{.caption} Svojstva molekule CCl <sub>4</sub> (lijevo) a Adenovirus (desno) određen je njihovim simetrijama.
+{.caption} CCl <sub>4</sub>分子（左）和腺病毒（右）的特性由它们的对称性决定。 
 
 :::
 
 ---
+
+### 墙纸组
+
 > id: wallpaper-groups
 
-### Grupe pozadina
-
-U [prethodnim odjeljcima](/course/transformations/symmetry) vidjeli smo dvije različite vrste simetrije koje odgovaraju dvije različite transformacije: rotacije i refleksije. Ali postoji i simetrija za treću vrstu krute transformacije: [[prijevodi|spins|flips]].
+在[前面的部分中，](/course/transformations/symmetry)我们看到了与两种不同的变换相对应的两种不同的对称性：旋转和反射。但是，第三种刚性转换也具有对称性： [[翻译|旋转|翻转]] 。 
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
-[__Translacijska simetrija__](gloss:translational-symmetry) ne djeluje na izolirane predmete poput cvijeća ili leptira, ali radi se na uobičajenim obrascima koji se protežu u svakom smjeru:
+ [__平移对称性__](gloss:translational-symmetry)不适用于花朵或蝴蝶等孤立的对象，但适用于延伸到各个方向的规则模式： 
 
 ::: column.grow
 
@@ -892,7 +936,7 @@ U [prethodnim odjeljcima](/course/transformations/symmetry) vidjeli smo dvije ra
       img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
       x-play-btn
 
-{.caption} Šesterokutna honiecomb
+{.caption}六角形蜂窝
 
 ::: column.grow
 
@@ -901,14 +945,14 @@ U [prethodnim odjeljcima](/course/transformations/symmetry) vidjeli smo dvije ra
       img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
       x-play-btn
 
-{.caption} Keramička zidna obloga
+{.caption}陶瓷墙地砖
 
 :::
 
 ---
 > id: footsteps
 
-Uz reflektirajuću, rotacijsku i translacijsku simetriju, postoji čak i četvrta vrsta: [__refleksije klizanja__](gloss:glide-reflection). Ovo je kombinacija refleksije i prijevoda u istom smjeru kao i os refleksije.
+除了反射，旋转和平移对称性之外，还有第四种类型： [__滑行反射__](gloss:glide-reflection) 。这是反射和沿与反射轴相同的方向平移的组合。 
 
     figure
       .footsteps
@@ -919,9 +963,9 @@ Uz reflektirajuću, rotacijsku i translacijsku simetriju, postoji čak i četvrt
 ---
 > id: wallpaper-groups-2
 
-Uzorak može imati više vrsta simetrije. Kao i kod kvadrata, možemo pronaći [grupu simetrije](gloss:symmetry-group) obrasca, koja sadrži sve njegove različite simetrije.
+图案可以具有不止一种类型的对称性。就像正方形一样，我们可以找到模式的[对称组](gloss:symmetry-group) ，其中包含所有不同的对称性。 
 
-Te vam grupe ne govore mnogo o tome kako izgleda obrazac _<<<<_ (npr. Njegove boje i oblici), koliko se ponavlja _<<<<_. Više različitih uzoraka može imati istu skupinu simetrije - sve dok su raspoređeni i ponovljeni na isti način.
+这些小组并没有告诉您有关图案的_外观_ （例如颜色和形状）的更多信息，而只是告诉您如何_重复_图案。多个不同的模式可以具有相同的对称组-只要以相同的方式排列和重复该模式即可。 
 
 ::: column.grow
 
@@ -929,7 +973,7 @@ Te vam grupe ne govore mnogo o tome kako izgleda obrazac _<<<<_ (npr. Njegove bo
       img(src="images/wallpaper-1.svg" width=150 height=150 style="margin: 0 10px")
       img(src="images/wallpaper-2.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} Ova dva uzorka imaju iste simetrije, iako izgledaju vrlo različito. Ali simetrije se ne tiču boja ili površnih oblika.
+{.caption}这两种模式具有相同的对称性，即使它们看起来非常不同。但是对称性与颜色或表面形状无关。 
 
 ::: column.grow
 
@@ -937,7 +981,7 @@ Te vam grupe ne govore mnogo o tome kako izgleda obrazac _<<<<_ (npr. Njegove bo
       img(src="images/wallpaper-3.svg" width=150 height=150 style="margin: 0 10px")
       img(src="images/wallpaper-4.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} Ova dva obrasca također imaju iste simetrije - iako izgledaju sličnije odgovarajućim obrascima na lijevoj strani, nego jedni drugima.
+{.caption}这两种模式也具有相同的对称性-即使它们看起来更类似于左侧的对应模式，而不是彼此相似。 
 
 :::
 
@@ -945,67 +989,84 @@ Te vam grupe ne govore mnogo o tome kako izgleda obrazac _<<<<_ (npr. Njegove bo
 > id: wallpaper-groups-3
 > goals: gallery
 
-Ispada da, iako postoji beskonačno mnogo mogućih obrazaca, svi imaju jednu od samo 17 različitih skupina simetrije. Nazivaju se __pozadinske grupe__. Svaka skupina pozadina definirana je kombinacijom prijevoda, rotacija, odraz i odraz klizanja. Možete li vidjeti [središta rotacije](gloss:center-of-rotation) i [osi refleksije](gloss:axis-of-symmetry) u ovim primjerima?
+事实证明，尽管存在无限多种可能的模式，但它们都只有17个不同的对称组之一。这些称为__墙纸组__ 。每个墙纸组均由平移，旋转，反射和滑动反射的组合定义。您可以在这些示例中看到[旋转中心](gloss:center-of-rotation)和[反射轴](gloss:axis-of-symmetry)吗？ 
 
     x-gallery(slide-width="320")
       div
         img(src="images/wallpapers/p1.svg" width=360, height=240)
-        p.caption <strong>Group 1 – P1</strong><br>Only translations
+        p.caption <strong>Group 1 – P1</strong>  
+Only translations
       div
         img(src="images/wallpapers/p2.svg" width=360, height=240)
-        p.caption <strong>Group 2 – P2</strong><br>Rotations of order 2, translations
+        p.caption <strong>Group 2 – P2</strong>  
+Rotations of order 2, translations
       div
         img(src="images/wallpapers/p3.svg" width=360, height=240)
-        p.caption <strong>Group 3 – P3</strong><br>Rotations of order 3 (120°), translations
+        p.caption <strong>Group 3 – P3</strong>  
+Rotations of order 3 (120°), translations
       div
         img(src="images/wallpapers/p4.svg" width=360, height=240)
-        p.caption <strong>Group 4 – P4</strong><br>Four rotations of order 2 (180°), translations
+        p.caption <strong>Group 4 – P4</strong>  
+Four rotations of order 2 (180°), translations
       div
         img(src="images/wallpapers/p6.svg" width=360, height=240)
-        p.caption <strong>Group 5 – P6</strong><br>Rotations of order 2, 3 and 6 (60°), translations
+        p.caption <strong>Group 5 – P6</strong>  
+Rotations of order 2, 3 and 6 (60°), translations
       div
         img(src="images/wallpapers/pm.svg" width=360, height=240)
-        p.caption <strong>Group 6 – PM</strong><br>Parallel axes of reflection, translations
+        p.caption <strong>Group 6 – PM</strong>  
+Parallel axes of reflection, translations
       div
         img(src="images/wallpapers/pmm.svg" width=360, height=240)
-        p.caption <strong>Group 7 – PMM</strong><br>Perpendicular reflections, rotations of order 2, translations
+        p.caption <strong>Group 7 – PMM</strong>  
+Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/p4m.svg" width=360, height=240)
-        p.caption <strong>Group 8 – P4M</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
+        p.caption <strong>Group 8 – P4M</strong>  
+Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p6m.svg" width=360, height=240)
-        p.caption <strong>Group 9 – P6M</strong><br>Rotations (ord 2 + 6), reflections, glide reflections, translations
+        p.caption <strong>Group 9 – P6M</strong>  
+Rotations (ord 2 + 6), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-        p.caption <strong>Group 10 – P3M1</strong><br>Rotations of order 3, reflections, glide reflections, translations
+        p.caption <strong>Group 10 – P3M1</strong>  
+Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>Group 11 – P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
+        p.caption <strong>Group 11 – P31M</strong>  
+Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Group 12 – P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
+        p.caption <strong>Group 12 – P4G</strong>  
+Rotations (ord 2 + 4), reflections, glide reflections, translations 
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
-        p.caption <strong>Group 13 – CMM</strong><br>Perpendicular reflections, rotations of order 2, translations
+        p.caption <strong>Group 13 – CMM</strong>  
+Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pmg.svg" width=360, height=240)
-        p.caption <strong>Group 14 – PMG</strong><br>Reflections, glide reflections, rotations of order 2, translations
+        p.caption <strong>Group 14 – PMG</strong>  
+Reflections, glide reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pg.svg" width=360, height=240)
-        p.caption <strong>Group 15 – PG</strong><br>Parallel glide reflections, translations
+        p.caption <strong>Group 15 – PG</strong>  
+Parallel glide reflections, translations
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>Group 16 – CM</strong><br>Reflections, glide reflections, translations
+        p.caption <strong>Group 16 – CM</strong>  
+Reflections, glide reflections, translations
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
-        p.caption <strong>Group 17 – PGG</strong><br>Perpendicular glide reflections, rotations of order 2, translations
+        p.caption <strong>Group 17 – PGG</strong>  
+Perpendicular glide reflections, rotations of order 2, translations
 
 ---
 > id: drawing
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
-Nažalost, ne postoji jednostavan razlog zašto postoji _17_ ovih grupa, a dokazivanje toga zahtijeva napredniju matematiku. Umjesto toga, možete pokušati nacrtati vlastite ponovljene uzorke za svaku od 17 grupa pozadina:
+不幸的是，没有简单的理由说明为什么有_17_个这样的小组，要证明这一点需要更高级的数学。相反，您可以尝试为17个壁纸组的每一个绘制自己的重复图案： 
 
     include ./components/wallpaper
     x-wallpaper
@@ -1021,38 +1082,39 @@ Nažalost, ne postoji jednostavan razlog zašto postoji _17_ ovih grupa, a dokaz
 
 ::: column.grow
 
-Skupine tapeta bile su sve o ravnim, dvodimenzionalnim uzorcima. Za trodimenzionalne uzorke možemo učiniti nešto slično: to se naziva kristalografskim skupinama, a ima ih 219!
+墙纸组都是关于平面二维图案的。我们可以对三维图案进行类似的处理：这些称为晶体学群，其中有219个！ 
 
-Osim prijevoda, refleksija, rotacija i odmahivanja, ove grupe uključuju simetrije poput __aviona za klizanje__ i __osi vijka__ (razmislite o pokretu prilikom odvrtanja boce).
+除了平移，反射，旋转和滑行反射之外，这些组还包括__滑行平面__和__螺旋轴之__类的对称性（拧开瓶子时请考虑一下运动）。 
 
 ::: column(width=300)
 
     img(src="images/crystal.jpg" width=300 height=240)
 
-{.caption} Bor-nitrid ima svoje molekule raspoređene u ovoj kristalnoj rešetki koja ima trodimenzionalnu grupu simetrije.
+{.caption}氮化硼的分子排列在具有三维对称基团的该晶格中。 
 
 :::
 
 ---
-## Simetrija u fizici
+
+## 物理对称
 
 > id: planets
 > sectionBackground: dark stars
 > section: physics
 
-Do sada su sve simetrije koje smo gledali bile _vizualne_ u nekom smislu: vidljivi oblici, slike ili obrasci. U stvari, simetrija može biti puno širi pojam: _imunitet na promjene_.
+到目前为止，我们所看到的所有对称在某种意义上都是_视觉_上的：可见的形状，图像或图案。实际上，对称可以是一个更广泛的概念： _对变化的免疫力_ 。 
 
-Na primjer, ako volite sok od jabuke onoliko koliko volite sok od naranče, onda je vaša preferencija "simetrična" pod preobrazbom koja zamjenjuje jabuke i naranče.
+例如，如果您喜欢苹果汁和喜欢橙汁一样多，那么在交换苹果和橙子的转换下，您的偏好是“对称”。 
 
-Godine 1915. njemački matematičar [Emmy Noether](bio:noether) primijetio je da nešto slično vrijedi za [zakone prirode](gloss:laws-of-nature).
+ 1915年，德国数学家[艾米·诺瑟（Emmy Noether）](bio:noether)观察到， [自然法则也有](gloss:laws-of-nature)相似之处。 
 
 ::: column.grow
 
-Na primjer, naše iskustvo govori nam da su zakoni Fizike jednaki svuda u svemiru. Nije važno je li eksperiment izveo u Londonu, New Yorku ili Marsu - zakoni fizike uvijek bi trebali biti isti. Na neki način imaju [[translacijsku simetriju|reflectional symmetry]].
+例如，我们的经验告诉我们，宇宙中的物理定律都是相同的。无论您是在伦敦，纽约还是在火星上进行实验都没关系-物理定律应始终相同。在某种程度上，它们具有[[平移对称性|反射对称性]] 。 
 
-{.reveal(when="blank-0")} Slično tome, ne bi trebalo biti da provedemo eksperiment dok smo okrenuti sjeveru, jugu, istoku ili zapadu: zakoni prirode imaju [[rotacijsku simetriju|glide reflection symmetry]].
+{.reveal(when="blank-0")}同样，我们在面对北方，南方或东方或西方时进行实验也没关系：自然定律具有[[旋转对称性|滑行反射对称性]] 。 
 
-{.reveal(when="blank-1")} I na kraju, ne bi trebalo biti važno da li ćemo eksperiment provesti danas, sutra ili za godinu dana. Zakoni prirode su "vremenski simetrični".
+{.reveal(when="blank-1")}最后，我们今天，明天还是一年内进行实验都没有关系。自然规律是“时间对称的”。 
 
 ::: column(width=300)
 
@@ -1063,9 +1125,9 @@ Na primjer, naše iskustvo govori nam da su zakoni Fizike jednaki svuda u svemir
 ---
 > id: planets-1
 
-Te „simetrije“ mogu se u početku činiti potpuno besmislenim, ali zapravo nam mogu reći puno o našem svemiru. Emmy Noether uspio je dokazati da svaka simetrija odgovara određenoj fizičkoj veličini koju je _sačuvano_.
+这些“对称性”一开始看起来似乎毫无意义，但实际上它们可以告诉我们有关宇宙的很多信息。艾米•诺瑟（Emmy Noether）设法证明每个对称性都对应于一个_守恒_的特定物理量。 
 
-Na primjer, vremenska simetrija podrazumijeva da se u našem svemiru mora čuvati __Energija__: energiju možete pretvoriti iz jedne vrste u drugu (npr. Svjetlost u električnu energiju), ali nikad ne možete stvoriti ili uništiti energiju. Ukupna količina energije u svemiru uvijek će ostati konstantna.
+例如，时间对称性意味着__能量__必须在我们的宇宙中守恒：您可以将能量从一种类型转换为另一种类型（例如从光转换为电），但永远不能产生或破坏能量。宇宙中的总能量将始终保持恒定。 
 
     figure
       x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
@@ -1078,27 +1140,29 @@ Na primjer, vremenska simetrija podrazumijeva da se u našem svemiru mora čuvat
 
 ::: column.grow
 
-Ispada da, samo znajući za simetriju, fizičari mogu izvući većinu prirodnih zakona koji upravljaju našim svemirom - bez da ikada moraju raditi eksperiment ili opažanje.
+事实证明，仅通过了解对称性，物理学家就可以得出控制我们宇宙的大多数自然法则，而无需进行实验或观察。 
 
-Simetrija čak može predvidjeti postojanje temeljnih čestica. Jedan primjer je poznati __Higgs Boson__: predviđali su ga 1960-ih teorijski fizičari, ali nisu ga promatrali u stvarnom svijetu do 2012. godine.
+对称甚至可以预测基本粒子的存在。一个例子就是著名的__希格斯玻色子__ ：它是在1960年代由理论物理学家预测的，但直到2012年才在现实世界中观察到。 
 
 :::
 
 ---
 
-## Razredi
+## 膨胀
 
 > id: dilations
 > section: dilations
 
-Do sada smo samo gledali [[krute|congruent|visual]] transformacije. _{span.reveal(when="blank-0")} Razmislimo o onom koji nije: [__dilatacija__](gloss:dilation) mijenja veličinu oblika čineći ga većim ili manjim._
+到目前为止，我们只是研究了[[刚性|全等|视觉]]转换。 _{span.reveal(when="blank-0")}现在让我们考虑一个不是这样的问题： [__膨胀__](gloss:dilation)会通过增大或减小形状来改变形状的大小。_ 
 
 ---
 > id: dilations-1
 
 ::: column.grow
 
-Sve dilatacije imaju [__središte__](target:center) i [__faktor razmjera__](->.scale-target). Središte je referentne točke za faktor dilatacije i razmjera govori koliko se lik rasteže ili smanjuje. Ako je [faktor skaliranja](gloss:scale-factor) između 0 i 1, slika je [[manja|larger]] od originala. Ako je faktor skaliranja veći od 1, slika je [[veća|smaller]] od originala.
+所有膨胀都有[__中心__](target:center)和[__比例因子__](->.scale-target) 。中心是膨胀的参考点，比例因子告诉我们图形拉伸或收缩的程度。 
+
+如果[比例因子](gloss:scale-factor)在0和1之间，则图像[[较小|]]比原来[[大]] 。如果比例因子大于1，则图像[[较大|]]比原来的[[小]] 。 
 
 ::: column(width=300)
 
@@ -1120,18 +1184,200 @@ Sve dilatacije imaju [__središte__](target:center) i [__faktor razmjera__](->.s
       path.light.thin(x="segment(C,s<1?b:b1)")
       path.light.thin(x="segment(C,s<1?c:c1)")
 
-{.text-center.scale-target} Faktor skale: ${s}{s|2|0,3,0.1}
+{.text-center.scale-target}比例因子： ${s}{s|2|0,3,0.1}
 
 :::
 
-{.todo} DOLAZI - Više o dilatacijama
+{.todo}即将推出–有关膨胀的更多信息
+
+    // Here is how we can construct the dilation of a geometric shape:
+    // 
+    // ::: column(width=300)
+    // {.todo} COMING SOON – Animation
+    // ::: column.grow
+    // First we draw rays from the center of dilation to every point in the shape.
+    // 
+    // Now let’s measure the distance of all these points from the center of dilation.
+    // Then we can multiply the distance by the scale factor, and the measure the
+    // image of the point along the same ray.
+    // 
+    // All that’s left is to connect the transformed points in the image … all done!
+    // :::
 
 ---
 
-## Sličnost
+## 相似
 
 > section: similarity
 > sectionStatus: dev
 > id: similarity
 
-TODO
+::: column.grow
+
+对于刚性变换，图像始终是[[一致的|大一点|小于]]原始[[尺寸]] -但这[[不再|仍然]]适用于扩张。相反，我们说两个形状[__相似__](gloss:similar) 。它们具有相同的总体形状，但不一定具有相同的大小。 
+
+相似的符号是`∼` （类似于全等符号， `≅` ）。在这个例子中，我们将写`A ∼ A'` 。 
+
+::: column(width=240)
+
+{.todo}即将推出–插图
+
+:::
+
+---
+> id: perspective
+
+### 透视图
+
+您可能已经注意到，这些带有连接光线的膨胀几乎看起来像__透视图__ 。膨胀的中心称为__消失点__ ，因为它看起来像一切都在“消失”的地方。 
+
+在下图中找到消失点： 
+
+{.todo}即将推出–互动式
+
+现在，您可以绘制另一幢与现有房屋匹配的房屋吗？ 
+
+---
+> id: similar-polygons
+
+### 相似多边形
+
+相似性可以告诉我们很多有关形状的信息。例如， [圆形](gloss:circle) ， [正方形](gloss:square)和[等边三角形](gloss:equilateral-triangle) [[总是|有时|从未]]相似。它们的大小可能不同，但总体形状始终相同。 
+
+::: column.grow
+
+右边的两个四边形相似。我们的第一个重要观察结果是，在相似的多边形中，所有匹配的角度对都是[全等的](gloss:congruent-angles) 。这意味着
+
+{.text-center} [_{.m-red} ∡ABC≅_ _{.m-red} 'A'B'C'_](target:a) _{.space}_ [_{.m-blue} ∡BCD≅_ _{.m-blue} ∡B'C'D'_](target:b)  
+[_{.m-green} ∡CDE≅_ _{.m-green} ∡C'D'E'_](target:c) _{.space}_ [_{.m-yellow} ∡DEA≅_ _{.m-yellow} ∡D'E'A'_](target:d) 
+
+第二个重要事实是，在相似的多边形中，所有侧面均按相应扩张的比例因子按__比例__缩放。如果比例因子是${k}{k|1.5|0.5,2,0.1} ， 然后
+
+{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
+`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
+
+相反，我们可以重新排列这些等式并完全消除比例因子： 
+
+{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
+
+    // This proportional relationship is true not just for the sides of the
+    // polygon, but also for properties like diagonals.
+
+我们可以用它来解决涉及相似多边形的现实生活中的问题-例如，如果我们知道其他一些面，则可以找到缺失面的长度。在以下部分中，您将看到一些示例。 
+
+::: column(width=240)
+
+    x-geopad.sticky(width=240 height=360): svg
+      - var x = ['a', 'b', 'c', 'd']
+      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
+      - var next = {a:'b', b:'c', c:'d', d:'a'}
+      - var prev = {a:'d', b:'a', c:'b', d:'c'}
+      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
+      each l in x
+        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
+        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
+        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
+        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
+        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
+        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
+
+:::
+
+---
+> id: similar-triangles
+
+### 相似三角形
+
+三角形的相似性概念特别有效。我们已经知道相似多边形中相应的内角相等。 
+
+对于三角形，情况也相反：这意味着，如果两个三角形具有相同的三个角度大小，则这些三角形必须相似。 
+
+而且变得更好！我们知道，三角形的内角总和为[[180]]°。这意味着，如果我们知道一个三角形中有两个角度，则总是可以计算出第三个角度。 
+
+为了相似，这意味着我们还只需要检查_两个角度_即可确定三角形是否相似。如果两个三角形具有相同大小的两个角度，则第三个角度在两个角度上也必须相同。 
+
+此结果有时称为三角形的[__AA相似性条件__](gloss:triangle-aa) 。 （两个_As_代表我们比较的两个_角度_ 。） 
+
+::: .theorem
+
+如果一个三角形中的两个角度与另一个三角形中的两个角度一致，则两个三角形相似。 
+
+:::
+
+---
+> id: similar-triangles-1
+
+让我们看一些有用的示例： 
+
+::: column(width=320)
+
+{.todo}即将推出-动画
+
+::: column.grow
+
+在这里，您可以看到大型灯塔的图像。您想和一个朋友一起测量灯塔的高度，但是很遗憾，我们无法爬到顶部。 
+
+事实证明，该图非常隐蔽地包含两个相似的三角形：一个是由灯塔及其阴影构成的，另一个是由您的朋友及其阴影构成的。 
+
+两个三角形的底部都有一个直角。太阳光线是平行的，这意味着底部的其他两个角度是对应的角度，并且也相等。根据三角形的AA条件，这两个必须相似。 
+
+我们可以轻松测量阴影的长度，我们也知道您朋友的身高。现在，我们可以使用相似三角形中边的比例来找到灯塔的高度： 
+
+{.todo}即将推出-方程式
+
+因此，灯塔高1.5m。 
+
+:::
+
+---
+> id: similar-triangles-2
+
+::: column(width=320)
+
+{.todo}即将推出-动画
+
+::: column.grow
+
+我们可以使用相同的技术来测量地面上的距离。在这里我们想找到一条大河的宽度。河的一侧有一棵大树，我有一根长一米的木棍。 
+
+尝试在此图中绘制另外两个相似的三角形。 
+
+您可以在河边标记点，该点直接位于从木棍末端到树的视线上。然后，我们可以测量到木棍的距离，以及到树正对点的距离。 
+
+同样，由于AA条件，这两个三角形相似。它们都成直角，并且成对成对角。 
+
+根据比例规则，这意味着
+
+{.todo}即将推出-方程式
+
+因此，河的宽度为45米。 
+
+:::
+
+---
+
+### 射线相似
+
+定理：如果光线将三角形的二等分，则它将相对的一面分为与其他两边的长度成比例的线段。 
+
+我们可以将该定理扩展到三角形之外的情况，在三角形之外我们有多个由横切线平行的线。 
+
+定理：如果三个或更多平行线被两个横向切开，则它们按比例划分横向。 
+
+考虑一个三角形的中段。中段平行于三角形的一侧，并将另一侧分成相等的两半。中段将这两个侧面成比例地分配。 
+
+三角形比例定理：如果一条平行于三角形一侧的线与另一侧相交，则它按比例划分这些侧。 
+
+三角形比例定理相反：如果一条线按比例划分三角形的两个边，则它平行于第三边。 
+
+---
+
+### 自我相似
+
+有一些奇怪的数学形状类似于_自己的_一小部分。 __Sierpinksi三角形__就是一个例子：整个三角形与它所组成的任何较小三角形相似。您可以放大并无限增加许多越来越小的三角形。 
+
+具有此属性的形状称为__分形__ 。它们具有一些令人惊讶且真正的XXX属性，您将来会了解更多。 
+
+---
+
+三角形不仅对测量距离有用。在下一课程中，我们将学习有关三角形及其属性的更多信息。

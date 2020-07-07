@@ -278,7 +278,7 @@ Le soir, alors que les invités se préparent à partir, tout le monde se serre 
 
 Nous pouvons représenter les poignées de main à l'aide d'un graphique: chaque personne est [[un sommet|une arête]] et chaque poignée de main est [[une arête|un sommet]].
 
-{.reveal(when=&#39;blank-0 blank-1&#39;)} Il est maintenant facile de compter le nombre d'arêtes dans le graphique. Nous constatons que là-bas avec ${hnd} personnes, il y a ${hnd*(hnd-1)/2} poignées de main.
+{.reveal(when='blank-0 blank-1')} Il est maintenant facile de compter le nombre d'arêtes dans le graphique. Nous constatons que là-bas avec ${hnd} personnes, il y a ${hnd*(hnd-1)/2} poignées de main.
 
 ::: column.s-hide(width=240)
 

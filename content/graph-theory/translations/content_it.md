@@ -295,7 +295,7 @@ Se scorri indietro sulla mappa di Königsberg, scoprirai che ci sono più di due
 
 Sei stato invitato ad una meravigliosa festa di compleanno con i tuoi amici. Oltre a te e al festeggiato, ci sono ${hnd}{hnd|5|3,15,1} persone presenti. La sera, mentre gli ospiti si preparano a partire, tutti si stringono la mano con tutti gli altri. Quante strette di mano vengono fatte in totale? Possiamo rappresentare le strette di mano usando un grafo: ogni persona è [[un vertice|uno spigolo]] e ogni stretta di mano è [[uno spigolo|un vertice]].
 
-{.reveal(when=&#39;blank-0 blank-1&#39;)} Ora è facile contare il numero di spigoli nel grafico. Troviamo che lì con ${hnd} persone, ci sono ${hnd*(hnd-1)/2} strette di mano.
+{.reveal(when='blank-0 blank-1')} Ora è facile contare il numero di spigoli nel grafico. Troviamo che lì con ${hnd} persone, ci sono ${hnd*(hnd-1)/2} strette di mano.
 
 ::: column.s-hide(width=240)
 
@@ -345,7 +345,7 @@ In questo caso, il grafo corrispondente è costituito da due serie separate di v
 
 :::
 
-{.reveal(when="blank-0 blank-1")} I grafi bipartiti con due serie di dimensioni _x_ e _y_ sono spesso scritti come `K_"x,y"`. Hanno [[`x×y`|`x+y`|`2x–y`]] spigoli, il che significa che nell&#39;esempio precedente vengono svolti ${m} × ${f} = ${m×f} appuntamenti.
+{.reveal(when="blank-0 blank-1")} I grafi bipartiti con due serie di dimensioni _x_ e _y_ sono spesso scritti come `K_"x,y"`. Hanno [[`x×y`|`x+y`|`2x–y`]] spigoli, il che significa che nell'esempio precedente vengono svolti ${m} × ${f} = ${m×f} appuntamenti.
 
 ---
 > id: utilities
@@ -442,7 +442,7 @@ Tutti i grafi planari dividono il piano su cui sono disegnati in un numero di ar
 ---
 > id: euler-1
 
-Quando si confrontano questi numeri, noterai che il numero di spigoli è sempre [[uno in meno|più grande|uguale]] rispetto alla somma del numero di facce e del numero di vertici. In altre parole, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Questo risultato si chiama __equazione di Eulero__ e prende il nome dallo stesso [matematico](bio:euler) che ha risolto il problema dei ponti di Königsberg. Sfortunatamente, esistono infiniti grafi e non possiamo controllarli tutti per vedere se l&#39;equazione di Eulero funziona. Invece possiamo provare a trovare una semplice [prova](gloss:proof) che funzioni per qualsiasi grafo...
+Quando si confrontano questi numeri, noterai che il numero di spigoli è sempre [[uno in meno|più grande|uguale]] rispetto alla somma del numero di facce e del numero di vertici. In altre parole, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Questo risultato si chiama __equazione di Eulero__ e prende il nome dallo stesso [matematico](bio:euler) che ha risolto il problema dei ponti di Königsberg. Sfortunatamente, esistono infiniti grafi e non possiamo controllarli tutti per vedere se l'equazione di Eulero funziona. Invece possiamo provare a trovare una semplice [prova](gloss:proof) che funzioni per qualsiasi grafo...
 
 ---
 > id: euler-2
@@ -480,7 +480,7 @@ Quando si confrontano questi numeri, noterai che il numero di spigoli è sempre 
 ---
 > id: euler-3
 
-Qualsiasi grafo (finito) può essere costruito iniziando da un vertice e aggiungendo più vertici, uno alla volta. Abbiamo dimostrato che, in qualunque modo aggiungiamo nuovi vertici, l&#39;equazione di Eulero è valida. Pertanto è valida per tutti i grafi. Il processo che abbiamo usato si chiama __induzione matematica__. È una tecnica molto utile per dimostrare i risultati in tantissimi casi, semplicemente partendo dal caso più semplice e dimostrando che il risultato vale in ogni fase della costruzione di casi più complessi.     
+Qualsiasi grafo (finito) può essere costruito iniziando da un vertice e aggiungendo più vertici, uno alla volta. Abbiamo dimostrato che, in qualunque modo aggiungiamo nuovi vertici, l'equazione di Eulero è valida. Pertanto è valida per tutti i grafi. Il processo che abbiamo usato si chiama __induzione matematica__. È una tecnica molto utile per dimostrare i risultati in tantissimi casi, semplicemente partendo dal caso più semplice e dimostrando che il risultato vale in ogni fase della costruzione di casi più complessi.     
 
     .svg-block: include svg/dominoes.svg
 

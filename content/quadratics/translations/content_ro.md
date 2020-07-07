@@ -63,7 +63,7 @@ Ceea ce ne interesează cel mai mult este __profitul nostru__: veniturile pe car
 ---
 > id: intro-table
 
-Observați că această ecuație conține _{.pill.purple} prețul_, precum și _{.pill.purple} `prețul^2`_. Ea se numește ecuație de gradul al doilea sau [__ecuație pătratică__](gloss:quadratic-equation), numită după cuvântul latin „quadratus” pentru pătrat.
+Observați că această ecuație conține _{.pill.purple} prețul_, precum și _{.pill.purple} `pretul^2`_. Ea se numește ecuație de gradul al doilea sau [__ecuație pătratică__](gloss:quadratic-equation), numită după cuvântul latin „quadratus” pentru pătrat.
 
 Pentru a afla modul în care ne putem maximiza profitul, să calculăm profitul pentru câteva prețuri diferite:
 

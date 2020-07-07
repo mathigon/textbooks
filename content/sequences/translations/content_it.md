@@ -1328,9 +1328,9 @@ Ecco i primi numeri primi:
 > id: primes-2
 > goals: p2 p3 p5 p7
 
-Sfortunatamente, i numeri primi non seguono un modello semplice o una formula ricorsiva. A volte appaiono direttamente uno accanto all&#39;altro (questi sono chiamati [twin primes](gloss:twin-primes)), e talvolta ci sono enormi lacune tra di loro. Sembrano essere distribuiti quasi casualmente!
+Sfortunatamente, i numeri primi non seguono un modello semplice o una formula ricorsiva. A volte appaiono direttamente uno accanto all'altro (questi sono chiamati [twin primes](gloss:twin-primes)), e talvolta ci sono enormi lacune tra di loro. Sembrano essere distribuiti quasi casualmente!
 
-Inoltre, i numeri primi non hanno una semplice rappresentazione geometrica come [triangolo](gloss:triangle-numbers) o [numeri quadrati](gloss:square-numbers), ma con un po &#39;di lavoro possiamo rivelare modelli interessanti:
+Inoltre, i numeri primi non hanno una semplice rappresentazione geometrica come [triangolo](gloss:triangle-numbers) o [numeri quadrati](gloss:square-numbers), ma con un po 'di lavoro possiamo rivelare modelli interessanti:
 
 ::: column(width=320)
 
@@ -1349,7 +1349,7 @@ Inoltre, i numeri primi non hanno una semplice rappresentazione geometrica come 
 
     x-coordinate-system(width=320 height=320 padding="8 8 20 24" axis-names="x,number of primes less than x")
 
-{.caption} Se disegniamo un grafico che aumenta di 1 ogni volta che c&#39;è un numero primo, otteniamo una funzione "a gradini" con proprietà affascinanti.
+{.caption} Se disegniamo un grafico che aumenta di 1 ogni volta che c'è un numero primo, otteniamo una funzione "a gradini" con proprietà affascinanti.
 
 :::
 
@@ -1402,7 +1402,7 @@ Per alcuni numeri, la somma dei suoi fattori è maggiore di se stessa. Questi nu
 
 ::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
-Solo un numero nell&#39;elenco sopra ha una somma di fattori che è _uguale a_ a se stesso: [[6]]. Questo si chiama [__numero perfetto__](gloss:perfect-numbers).
+Solo un numero nell'elenco sopra ha una somma di fattori che è _uguale a_ a se stesso: [[6]]. Questo si chiama [__numero perfetto__](gloss:perfect-numbers).
 
 :::
 
