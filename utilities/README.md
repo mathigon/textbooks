@@ -18,11 +18,10 @@ The scripts in this folder can help generating draft translations using Google T
 
 Note that the script might miss some words, and that Google's translations might not be perfect. In particular:
 
-* Sometimes placeholders like `{10}` or `<<<<` will be left in the translated code. These need to be fixed manually, and might cause compile errors when running the server.
-* Only the correct, first answer of multiple choice questions is translated.
+* All multiple choice questions have to be reviewed for their grammatical correctness.
 * Text inside html blocks (indented by 4 characters) is never translated.
-* Markdown's bold and italic tags might no longer be valid, because Google inserts whitespace before and after them.
-* YAML files like `hints.yaml`, `bios.yaml` and `glossary.yaml` are not translated.
+* Markdown's bold and italic tags might no longer be valid, because Google inserts whitespace before and after them, or because we replace `*` and `**` tokens with `_` or `__`.
+* YAML files like `hints.yaml`, `bios.yaml` and `glossary.yaml` are not translated by default.
 
 ## Audio Narrations
 
