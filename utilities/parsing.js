@@ -137,5 +137,6 @@ module.exports.decode = function decode(text, STORE) {
 
   return output.replace(/\n\n+/g, '\n\n').replace(/---\n\n>/g, '---\n>')
       .replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<')
-      .replace(/\s°/g, '°').replace(/\s*<br>\s*/g, '  \n').trim() + '\n';
+      .replace(/'/g, '\'').replace(/\s°/g, '°').replace(/\s*<br>\s*/g, '  \n')
+      .trim() + '\n';
 };
