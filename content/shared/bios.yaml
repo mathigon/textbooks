@@ -1113,7 +1113,7 @@ jefferson:
 jiushao:
   born: 1202
   died: 1261
-  name: Jiushao
+  name: Qin
   full: Qin Jiushao
   location: asia
   bio: |
@@ -2204,7 +2204,7 @@ wolfram:
 zhenyi:
   born: 1768
   died: 1797
-  name: Zhenyi
+  name: Wang
   full: Wang Zhenyi
   location: asia
   bio: |
@@ -2213,6 +2213,6 @@ zhenyi:
     preventing women from receiving higher education, she studied subjects like
     astronomy, mathematics, geography and medicine.
 
-    In her books and articles, Zhenyi wrote about trigonometry and Pythagoras’
+    In her books and articles, Wang wrote about trigonometry and Pythagoras’
     theorem, studied solar and lunar eclipses, and explained many other
     celestial phenomena.
