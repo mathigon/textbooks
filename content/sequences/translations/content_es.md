@@ -245,7 +245,7 @@ Primero, sin embargo, veamos algo completamente diferente: __fotografía de secu
 
     figure: x-img(src="images/action-1.jpg" width=640 height=320)
 
-¿Puedes ver cómo el esquiador forma una secuencia? El patrón no es suma ni multiplicación, sino una [transformación geométrica](gloss:rigid-transformation). Entre los pasos consecutivos, el esquiador se traduce y [[gira|se refleja|se dilata]].
+¿Puedes ver cómo el esquiador forma una secuencia? El patrón no es suma ni multiplicación, sino una [transformación geométrica](gloss:rigid-transformation). Entre los pasos consecutivos, el esquiador se traslada y [[gira|se refleja|se dilata]].
 
 ---
 > id: action-sequence-1
@@ -923,24 +923,24 @@ Imagine que ha recibido un par de conejos, un macho y una hembra. Son conejos mu
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -949,14 +949,14 @@ Imagine que ha recibido un par de conejos, un macho y una hembra. Son conejos mu
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
           .n(style="top: 49%") 3
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
-    
+
       .legend(slot="legend") En el primer mes, los conejos son muy pequeños y no pueden hacer mucho, pero crecen muy rápido.
       .legend(slot="legend") Después de un mes, los conejos crecen y pueden comenzar a aparearse ...
       .legend(slot="legend") ... y después de otro mes, darán a luz a su primer par de hijos. Ahora tienes dos pares de conejos.
@@ -1197,7 +1197,7 @@ Mueve el control deslizante hacia la derecha para visualizar cómo crece una pla
       while i < 40
         path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
         - i += 1
-    
+
     x-slider(steps=39 speed=0.5)
 
 :::
@@ -1360,7 +1360,7 @@ Los números primos tampoco tienen una representación geométrica simple como l
 
 Puede obtener más información sobre estas y otras propiedades de los números primos en nuestro curso sobre [Divisibilidad y primos](/course/divisibility/primes). ¡Son algunos de los conceptos más importantes y misteriosos de las matemáticas!
 
-    figure: img(src="images/primes.svg" width=480 height=156) 
+    figure: img(src="images/primes.svg" width=480 height=156)
 
 ---
 > id: perfect
@@ -1372,7 +1372,7 @@ Para determinar si un número es [primo](gloss:prime), tenemos que encontrar tod
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-    
+
     table.grid.perfect-table
       tr
         td: strong Número
@@ -1587,7 +1587,7 @@ A continuación podemos ver una pirámide numérica que se crea usando un patró
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid(style="width: 560px")
       - var i = 0;
       while i < 13
@@ -1644,7 +1644,7 @@ En las secciones anteriores vimos innumerables secuencias matemáticas diferente
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid.sums(style="width: 760px")
       - var i = 0;
       while i < 17
@@ -1732,7 +1732,7 @@ Algunos patrones en el triángulo de Pascal no son tan fáciles de detectar. En 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid#pascal-select(style="width: 340px")
       - var i = 0;
       while i < 8
@@ -1754,7 +1754,7 @@ Colorear cada celda manualmente lleva mucho tiempo, pero aquí puede ver qué su
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25

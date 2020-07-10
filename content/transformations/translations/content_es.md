@@ -125,7 +125,7 @@
 ---
 > id: rigid-2
 
- También podemos combinar múltiples tipos de transformación para crear otros más complejos, por ejemplo, una traducción seguida de una rotación.
+ También podemos combinar múltiples tipos de transformación para crear otros más complejos, por ejemplo, una traslación seguida de una rotación.
 
  Pero primero, echemos un vistazo a cada uno de estos tipos de transformaciones con más detalle.
 
@@ -174,7 +174,7 @@
 > id: translations-1
 > goals: drag-0 drag-1 drag-2
 
- Ahora es tu turno: traduce las siguientes formas como se muestra:
+ Ahora es tu turno: traslada las siguientes formas como se muestra:
 
 ::: column(width=220)
 
@@ -452,7 +452,7 @@
 
 ### Composición de transformaciones
 
- Por supuesto, podemos combinar múltiples traducciones, reflexiones y rotaciones para crear transformaciones más complejas.
+ Por supuesto, podemos combinar múltiples traslaciones, reflexiones y rotaciones para crear transformaciones más complejas.
 
 {.todo} TODO Ejemplo
 
@@ -464,7 +464,7 @@
 
 ::: column.grow
 
- Si las dos líneas de reflexión son paralelas, el resultado es una sola traducción. La dirección de la traducción es perpendicular a las líneas de reflexión, y la distancia es el doble de la distancia entre las líneas de reflexión.
+ Si las dos líneas de reflexión son paralelas, el resultado es una sola traslación. La dirección de la traslación es perpendicular a las líneas de reflexión, y la distancia es el doble de la distancia entre las líneas de reflexión.
 
 {.todo} TODO Animación
 
@@ -921,7 +921,7 @@ Yo, [[chico]] banana!
 
 > id: wallpaper-groups
 
- En las [secciones anteriores](/course/transformations/symmetry) vimos dos tipos diferentes de simetría correspondientes a dos transformaciones diferentes: rotaciones y reflexiones. Pero también hay una simetría para el tercer tipo de transformación rígida: las [[traducciones | giros | voltea]]
+ En las [secciones anteriores](/course/transformations/symmetry) vimos dos tipos diferentes de simetría correspondientes a dos transformaciones diferentes: rotaciones y reflexiones. Pero también hay una simetría para el tercer tipo de transformación rígida: las [[traslaciones | giros | voltea]]
 
 ---
 > id: wallpaper-groups-1
@@ -952,7 +952,7 @@ Yo, [[chico]] banana!
 ---
 > id: footsteps
 
- Además de la simetría de reflexión, rotación y traslación, incluso hay un cuarto tipo: [__reflexiones de deslizamiento__](gloss:glide-reflection) . Esta es una combinación de una reflexión y una traducción en la misma dirección que el eje de reflexión.
+ Además de la simetría de reflexión, rotación y traslación, incluso hay un cuarto tipo: [__reflexiones de deslizamiento__](gloss:glide-reflection) . Esta es una combinación de una reflexión y una traslación en la misma dirección que el eje de reflexión.
 
     figure
       .footsteps
@@ -1084,7 +1084,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 
  Los grupos de papel tapiz tenían que ver con patrones planos y bidimensionales. Podemos hacer algo similar para los patrones tridimensionales: estos se llaman grupos cristalográficos, ¡y hay 219 de ellos!
 
- Además de las traducciones, reflexiones, rotaciones y reflejos de deslizamiento, estos grupos incluyen simetrías como __planos de deslizamiento__ y __ejes de tornillo__ (piense en el movimiento al desenroscar una botella).
+ Además de las traslaciones, reflexiones, rotaciones y reflejos de deslizamiento, estos grupos incluyen simetrías como __planos de deslizamiento__ y __ejes de tornillo__ (piense en el movimiento al desenroscar una botella).
 
 ::: column(width=300)
 
