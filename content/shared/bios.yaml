@@ -172,6 +172,7 @@ aryabhata:
   name: Aryabhata
   overflow: true
   location: asia
+  keywords: India
   bio: __Aryabhata__ (आर्यभट, 476 – 550) was one of the first mathematicians and
     astronomers in the golden age of Indian mathematics. He defined
     trigonometric functions, solved simultaneous quadratic equations, found
@@ -240,6 +241,7 @@ bhaskara:
   born: 1114
   died: 1185
   name: Bhaskara II
+  keywords: India
   location: asia
   bio: __Bhaskara II__ (1114 – 1185) was an Indian mathematician and astronomer.
     He discovered some of the basic concepts of calculus, more than 500 years
@@ -300,6 +302,7 @@ brahmagupta:
   name: Brahmagupta
   overflow: true
   location: asia
+  keywords: India
   bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 CE) invented the
     rules for addition, subtraction and multiplication with zero and negative
     numbers. He was also an astronomer and made many other discoveries in
@@ -1116,6 +1119,7 @@ jiushao:
   name: Qin
   full: Qin Jiushao
   location: asia
+  keywords: China
   bio: |
     __Qin Jiushao__ (秦九韶, c. 1202 – 1261) was a Chinese mathematician,
     inventor and politician. In his book _Shùshū Jiǔzhāng_, he published
@@ -1371,6 +1375,7 @@ madhava:
   died: 1425
   name: Madhava
   full: Madhava of Sangamagramma
+  keywords: India
   location: asia
   bio: |
     __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and
@@ -1471,7 +1476,7 @@ mirzakhani:
   location: middle-east
   bio: |
     __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
-    mathematician and professor at Standford University. She is the only woman
+    mathematician and professor at Stanford University. She is the only woman
     to have received the _Fields Medal_, the highest award in mathematics.
 
     Mirzakhani worked at the intersection of dynamical systems and geometry. She
@@ -1862,6 +1867,7 @@ ramanujan:
   full: Srinivasa Ramanujan
   overflow: true
   location: asia
+  keywords: India
   bio: |
     __Srinivasa Ramanujan__ (1887 – 1920) grew up in India, where he received
     very little formal education in mathematics. Yet, he managed to develop new
@@ -1959,6 +1965,7 @@ shijie:
   died: 1314
   name: Zhu Shijie
   location: asia
+  keywords: China
   bio: |
     __Zhu Shijie__ (朱世杰, 1249 – 1314) was one of the greatest Chinese
     mathematicians. In is book _Jade Mirror of the Four Unknowns_, he showed how
@@ -2207,6 +2214,7 @@ zhenyi:
   name: Wang
   full: Wang Zhenyi
   location: asia
+  keywords: China
   bio: |
     __Wang Zhenyi__ (王贞仪, 1768 – 1797) was a Chinese scientist and
     mathematician living during the Qing dynasty. Despite laws and customs
