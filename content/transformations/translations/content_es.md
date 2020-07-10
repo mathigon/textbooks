@@ -921,7 +921,7 @@ Yo, [[chico]] banana!
 
 > id: wallpaper-groups
 
- En las [secciones anteriores](/course/transformations/symmetry) vimos dos tipos diferentes de simetría correspondientes a dos transformaciones diferentes: rotaciones y reflexiones. Pero también hay una simetría para el tercer tipo de transformación rígida: las [[traslaciones | giros | voltea]]
+ En las [secciones anteriores](/course/transformations/symmetry) vimos dos tipos diferentes de simetría correspondientes a dos transformaciones diferentes: rotaciones y reflexiones. Pero también hay una simetría para el tercer tipo de transformación rígida: las [[traslaciones | giros | volteos]]
 
 ---
 > id: wallpaper-groups-1
