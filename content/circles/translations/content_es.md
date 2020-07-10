@@ -83,7 +83,7 @@ Aquí hay una rueda con diámetro 1. A medida que "desenrolla" la circunferencia
 
 > id: circumference
 
-Para un círculo con diámetro _d_, la circunferencia es `C = π × d`. De manera similar, para un círculo con radio [<<<<](gloss:circle-radius) _r_, la circunferencia es
+Para un círculo con diámetro _d_, la circunferencia es `C = π × d`. De manera similar, para un círculo con [radio](gloss:circle-radius) _r_, la circunferencia es
 
 {.text-center} `C =` [[`2 π r`|`π r`|`π r^2`]].
 
@@ -141,13 +141,13 @@ En la naturaleza, los objetos como gotas de agua o burbujas de aire pueden _ahor
 ::: column(width=320)
 
     x-select.segmented
-      div(data-value="0") Triangle
-      div(data-value="1") Square
-      div(data-value="2") Pentagon
-      div(data-value="3") Circle
+      div(data-value="0") Triángulo
+      div(data-value="1") Cuadrado
+      div(data-value="2") Pentágono
+      div(data-value="3") Círculo
     svg(width=320 height=200)
 
-{.caption} _Circunferencia_ = __{.m-green} 100__, _Área_ = __${area}<<<<__
+{.caption} _Circunferencia_ = __{.m-green} 100__, _Área_ = __${area}__
 
 :::
 
@@ -179,9 +179,9 @@ La única diferencia es que, debido a que los círculos son curvos, tenemos que 
 
 Aquí puede ver un círculo dividido en ${toWord(n1)} cuñas. Mueva el control deslizante para alinear las cuñas en una fila.
 
-{.reveal(when="slider")} Si aumentamos el número de cuñas a ${n1}{n1|6|6,30,2}, esta forma comienza a parecerse cada vez más a un rectángulo [[<<<<|circle|square]].
+{.reveal(when="slider")} Si aumentamos el número de cuñas a ${n1}{n1|6|6,30,2}, esta forma comienza a parecerse cada vez más a un [[rectángulo|circle|square]].
 
-{.reveal(when="blank-0")} La altura del rectángulo es igual al radio [[<<<<|circumference|diameter]] del círculo. _{span.reveal(when="blank-1")} El ancho del rectángulo es igual a [[la mitad de la circunferencia|the circumference|twice the radius]] del círculo._ _{span.reveal(when="blank-2")} (Observe cómo la mitad de las cuñas están boca abajo y la otra mitad de ellas arriba)_
+{.reveal(when="blank-0")} La altura del rectángulo es igual al [[radio|circumference|diameter]] del círculo. _{span.reveal(when="blank-1")} El ancho del rectángulo es igual a [[la mitad de la circunferencia|the circumference|twice the radius]] del círculo._ _{span.reveal(when="blank-2")} (Observe cómo la mitad de las cuñas están boca abajo y la otra mitad de ellas arriba)_
 
 {.reveal(when="blank-2" delay=1000)} Por lo tanto, el área total del rectángulo es aproximadamente `A = π r^2`.
 
@@ -206,9 +206,9 @@ Aquí puede ver un círculo dividido en ${toWord(n1)} cuñas. Mueva el control d
 
 Aquí puede ver un círculo dividido en ${toWord(n)} anillos. Como antes, puede mover el control deslizante para "desenrollar" los anillos.
 
-{.reveal(when="slider")} Si aumentamos el número de anillos a ${n2}{n2|4|2,12,1}, esta forma comienza a parecerse cada vez más a un triángulo [[<<<<|rectangle|trapezium]].
+{.reveal(when="slider")} Si aumentamos el número de anillos a ${n2}{n2|4|2,12,1}, esta forma comienza a parecerse cada vez más a un [[triángulo|rectángulo|trapecio]].
 
-{.reveal(when="blank-0")} La altura del triángulo es igual al radio [[<<<<|diameter|circumference]] del círculo. _{span.reveal(when="blank-1")} La base del triángulo es igual a [[la circunferencia|twice the diameter]] del círculo._ _{span.reveal(when="blank-2")} Por lo tanto, el área total del triángulo es aproximadamente_
+{.reveal(when="blank-0")} La altura del triángulo es igual al [[radio|diámetro|circunferencia]] del círculo. _{span.reveal(when="blank-1")} La base del triángulo es igual a [[la circunferencia|twice the diameter]] del círculo._ _{span.reveal(when="blank-2")} Por lo tanto, el área total del triángulo es aproximadamente_
 
 {.text-center.reveal(when="blank-2")} `A = 1/2 "base" × "height" = π r^2`.
 
@@ -1066,17 +1066,17 @@ En las secciones anteriores, estudiamos las propiedades de los círculos en una 
 
     x-solid(size=220)
 
-{.text-center} Un cono [__<<<<__](gloss:cone) tiene una base circular que se une a un solo punto (llamado vértice).
+{.text-center} Un [__cono__](gloss:cone) tiene una base circular que se une a un solo punto (llamado vértice).
 
 ::: column(width=220)
 
     x-solid(size=220 static)
 
-{.text-center} Cada punto en la superficie de una esfera [__<<<<__](gloss:sphere) tiene la misma distancia desde su centro.
+{.text-center} Cada punto en la superficie de una [__esfera__](gloss:sphere) tiene la misma distancia desde su centro.
 
 :::
 
-Observe cómo la definición de una esfera es casi la misma que la definición de un círculo [[<<<<|radius|cube]], ¡excepto en tres dimensiones!
+Observe cómo la definición de una esfera es casi la misma que la definición de un [[círculo|radio|cubo]], ¡excepto en tres dimensiones!
 
 ---
 
@@ -1188,10 +1188,10 @@ Imagine cortar un cilindro en muchos discos delgados. Luego podemos deslizar est
 
 Para encontrar el área de superficie de un cilindro, tenemos que "desenrollarlo" en su plano [net](gloss:net). Puede probarlo usted mismo, por ejemplo, quitando la etiqueta de una lata de comida.
 
-Hay dos [[círculos|spheres|squares]], uno en la parte superior y otro en la parte inferior del cilindro. El lado curvo es en realidad un gran rectángulo [[<<<<|square|ellipse]].
+Hay dos [[círculos|spheres|squares]], uno en la parte superior y otro en la parte inferior del cilindro. El lado curvo es en realidad un gran [[rectángulo|cuadrado|elipse]].
 
 * {.reveal(when="blank-0 blank-1")} Los dos círculos tienen cada uno un área _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
-* {.reveal(when="eqn-0")} La altura del rectángulo es _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} y el ancho del rectángulo es el mismo que la circunferencia [[<<<<|diameter|tangent]] de los círculos:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
+* {.reveal(when="eqn-0")} La altura del rectángulo es _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} y el ancho del rectángulo es el mismo que la [[circunferencia|diametro|tangente]] de los círculos:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
 
 ::: column(width=320)
@@ -1227,7 +1227,7 @@ El _Gasómetro_ anterior tenía un radio de 35 my una altura de 120 m. Ahora pod
 
 ::: column.grow
 
-Un cono [__<<<<__](gloss:cone) es un sólido tridimensional que tiene una base circular __{.m-red}__. Su lado “se estrecha hacia arriba” como se muestra en el diagrama, y termina en un solo punto llamado vértice __{.m-green}__.
+Un [__cono__](gloss:cone) es un sólido tridimensional que tiene una base circular __{.m-red}__. Su lado “se estrecha hacia arriba” como se muestra en el diagrama, y termina en un solo punto llamado vértice __{.m-green}__.
 
 El radio __{.m-red}__ del cono es el radio de la base circular, y la altura __{.m-blue}__ del cono es la distancia perpendicular desde la base hasta el vértice.
 
@@ -1269,7 +1269,7 @@ Al igual que otras formas que conocimos antes, los conos están en todas partes:
 
 ::: column.grow
 
-Anteriormente encontramos el volumen de un cilindro aproximándolo con un prisma. De manera similar, podemos encontrar el volumen de un cono aproximándolo usando una pirámide [__<<<<__](gloss:pyramid).
+Anteriormente encontramos el volumen de un cilindro aproximándolo con un prisma. De manera similar, podemos encontrar el volumen de un cono aproximándolo usando una [__pirámide__](gloss:pyramid).
 
 Aquí puede ver una pirámide de ${n}{n|5|3,18,1} lados. A medida que aumenta el número de lados, la pirámide comienza a parecerse cada vez más a un cono. De hecho, ¡podríamos pensar en un cono como una pirámide con _infinitamente muchos_ lados!
 
@@ -1327,7 +1327,7 @@ Una vez más, podemos usar el principio de Cavalieri para mostrar que todos los 
 
 ::: column.grow
 
-Encontrar el área de superficie de un cono es un poco más complicado. Como antes, podemos desenredar un cono en su red. Mueva el control deslizante para ver qué sucede: en este caso, obtenemos un círculo y un sector de círculo [[<<<<|circle segment|circle arc]].
+Encontrar el área de superficie de un cono es un poco más complicado. Como antes, podemos desenredar un cono en su red. Mueva el control deslizante para ver qué sucede: en este caso, obtenemos un círculo y un [[sector circular|segmento circular|arco]].
 
 {.reveal(when="blank-0")} Ahora solo tenemos que sumar el área de ambos componentes. La base __{.m-yellow}__ es un círculo con radio _r_, por lo que su área es
 
@@ -1372,7 +1372,7 @@ El | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | El 
 
 ::: column.grow
 
-La _{span.pill.step-target.red(data-to="arc")} longitud del arco_ del sector es la misma que la [[circunferencia|diameter|arc]] de la _{span.pill.step-target.yellow(data-to="base")} base_: _{span.reveal(when="blank-0")} `2 π r`. Ahora podemos encontrar el área del sector utilizando la fórmula [<<<<](gloss:circle-sector) que derivamos en una sección anterior:_
+La _{span.pill.step-target.red(data-to="arc")} longitud del arco_ del sector es la misma que la [[circunferencia|diameter|arc]] de la _{span.pill.step-target.yellow(data-to="base")} base_: _{span.reveal(when="blank-0")} `2 π r`. Ahora podemos encontrar el área del sector utilizando la [fórmula](gloss:circle-sector) que derivamos en una sección anterior:_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1421,7 +1421,7 @@ Finalmente, solo tenemos que sumar el área de la __{.m-yellow} base__ y el áre
 
 Una [__esfera__](gloss:sphere) es un sólido tridimensional que consta de todos los puntos que tienen la misma distancia desde un __{.m-green} centro _C___. Esta distancia se denomina radio __{.m-red} _r___ de la esfera.
 
-Puede pensar en una esfera como un "círculo tridimensional [<<<<](gloss:circle)". Al igual que un círculo, una esfera también tiene un __{.m-blue} diámetro _d___, que es [[dos veces|half]] la longitud del radio, así como acordes y secantes.
+Puede pensar en una esfera como un "[círculo](gloss:circle) tridimensional". Al igual que un círculo, una esfera también tiene un __{.m-blue} diámetro _d___, que es [[dos veces|half]] la longitud del radio, así como acordes y secantes.
 
 ::: column(width=240)
 
@@ -1490,7 +1490,7 @@ A medida que mueve el control deslizante hacia arriba, puede ver la sección tra
 
 ::: column.grow
 
-{.reveal(when="slider-0")} La sección transversal del hemisferio es siempre un círculo [[<<<<|ring|cylinder]].
+{.reveal(when="slider-0")} La sección transversal del hemisferio es siempre un [[círculo|anillo|cilindro]].
 
 {.reveal(when="blank-0")} El radio __{span.pill.red.step-target(data-to="x")} _x___ de la sección transversal es parte de un triángulo en ángulo recto _{span.pill.yellow.step-target(data-to="tri")}_, por lo que podemos usar {1111 } Pitágoras](gloss:pythagoras-theorem):
 
@@ -1510,7 +1510,7 @@ Ahora, el área de la sección transversal es
 
 ::: column.grow.reveal(when="eqn-0")
 
-La sección transversal del cilindro recortado siempre es un anillo [[<<<<|circle|cone]].
+La sección transversal del cilindro recortado siempre es un  [[anillo|círculo|cono]].
 
 ::: .reveal(when="blank-1")
 
@@ -1790,7 +1790,7 @@ Para solucionar esto, los astrónomos agregaron __Epiciclos__ a su modelo del si
         circle.earth(cx=310 cy=160 r=10 fill="#fd8c00")
       x-play-btn
 
-{.caption} Este planeta realiza ${n}{n|6|2,12,1} rotaciones alrededor del círculo pequeño (el epiciclo __<<<<__) durante una rotación alrededor del círculo grande (el __deferente__).
+{.caption} Este planeta realiza ${n}{n|6|2,12,1} rotaciones alrededor del círculo pequeño (el __epiciclo__) durante una rotación alrededor del círculo grande (el __deferente__).
 
 ::: column(width=320)
 
