@@ -177,6 +177,7 @@ properties and applications of graphs.
 ## The Bridges of Königsberg
 
 ::: column.grow
+
 One of the first mathematicians to think about graphs and networks was [Leonhard
 Euler](bio:euler). Euler was intrigued by an old problem regarding the town of
 Königsberg near the Baltic Sea.
@@ -187,6 +188,7 @@ of the bridges exactly once – but not more than once? (You can start and finis
 anywhere, not necessarily in the same place.)
 
 Try to find a valid route by drawing on these maps:
+
 ::: column(width=250)
 
     img.shifted(src="images/konigsberg1.jpg" width=250 height=350)
@@ -233,6 +235,7 @@ be applied to any city, without having to try lots of possibilities – using
 graph theory.
 
 ::: column.grow
+
 First, we need to convert the city maps into graphs with edges and vertices.
 Every island or region of land is represented by [[a vertex|an edge|an area]]
 and every bridge connecting two regions is represented by a corresponding
@@ -280,7 +283,7 @@ and try to reveal a pattern:
 ---
 > id: bridges-4
 
-Comparing these numbers for graphs which are possible and those which are not
+Comparing these numbers for graphs which are possible, and those which are not
 possible, it seems that a graph can be drawn if it [[has no more than two “odd”
 vertices|only has “even” vertices|has no vertices with an order larger than
 4|has an odd number of vertices|has no vertices of order 3]]. This condition can
@@ -301,13 +304,14 @@ be explained if we look at just a single vertex in the graph:
 ::: column.grow(parent="right")
 
 If you scroll back to the map of Königsberg, you will find that there are more
-than two islands with an odd number of bridges. Therefore a route that crosses
+than two islands with an odd number of bridges. Therefore, a route that crosses
 every bridge exactly once is indeed impossible – and this is what Leonard Euler
 discovered.
 
 Euler’s discovery may not seem particularly useful in real life, but graphs are
 at the foundation of many other geographic problems, such as finding directions
 between two locations. We will discover more of these applications later.
+
 ::: column(width=240)
 
     x-img(lightbox width=240 height=260 src="images/prague.jpg")
@@ -447,16 +451,19 @@ edges – these are called __planar graphs__ – but others cannot.
     svg.graph(width=200 height=200 style="margin-bottom: .4em")
 
 {.text-center} `K_3` is planar.
+
 ::: column(width=200)
 
     svg.graph#planar-2(width=200 height=200 style="margin-bottom: .4em")
 
 {.text-center} `K_4` [[is planar|is not planar]].
+
 ::: column(width=200)
 
     svg.graph#planar-3(width=200 height=200 style="margin-bottom: .4em;")
 
 {.text-center} `K_5` [[is not planar|is planar]].
+
 :::
 
 ---
@@ -509,6 +516,7 @@ called __faces__.
 [[5]] Faces  
 [[10]] Edges  
 _{span.euler-sum} 11 Vertices + Faces_
+
 ::: column(width=200)
 
     include svg/euler-1.svg
@@ -517,6 +525,7 @@ _{span.euler-sum} 11 Vertices + Faces_
 [[7]] Faces  
 [[14]] Edges  
 _{span.euler-sum} 15 Vertices + Faces_
+
 ::: column(width=200)
 
     include svg/euler-3.svg
@@ -525,6 +534,7 @@ _{span.euler-sum} 15 Vertices + Faces_
 [[13]] Faces  
 [[24]] Edges  
 _{span.euler-sum} 25 Vertices + Faces_
+
 :::
 
 ---
@@ -536,8 +546,8 @@ vertices. In other words, _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1. This
 result is called __Euler’s equation__ and is named after the same
 [mathematician](bio:euler) who solved the Königsberg Bridges problem.
 
-Unfortunately, there are infinitely many graphs and we can’t check every one to
-see if Euler’s equation works. Instead we can try to find a simple
+Unfortunately, there are infinitely many graphs, and we can’t check every one to
+see if Euler’s equation works. Instead, we can try to find a simple
 [proof](gloss:proof) that works for any graph…
 
 ---
@@ -578,7 +588,7 @@ see if Euler’s equation works. Instead we can try to find a simple
 
 Any (finite) graph can be constructed by starting with one vertex and adding
 more vertices one by one. We have shown that, whichever way we add new vertices,
-Euler’s equation is valid. Therefore it is valid for all graphs.
+Euler’s equation is valid. Therefore, it is valid for all graphs.
 
 The process we have used is called __mathematical induction__. It is a very
 useful technique for proving results in infinitely many cases, simply by
@@ -591,7 +601,7 @@ step when constructing more complex cases.
 > id: euler-4
 
 Many planar graphs look very similar to the nets of [polyhedra](gloss:polyhedron),
-three dimensional shapes with [polygonal](gloss:polygon) faces. If we think of
+three-dimensional shapes with [polygonal](gloss:polygon) faces. If we think of
 polyhedra as made of elastic bands, we can imagine stretching them out until
 they become flat, planar graphs:
 
@@ -627,6 +637,7 @@ _{.b.green}V_ = _{.b.red}E_ + [[2]].
 __{.blue}20__ Faces  
 __{.green}12__ Vertices  
 __{.red}30__ Edges
+
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
@@ -635,6 +646,7 @@ __{.red}30__ Edges
 __{.blue}62__ Faces  
 __{.green}60__ Vertices  
 __{.red}120__ Edges
+
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
@@ -643,6 +655,7 @@ __{.red}120__ Edges
 __{.blue}32__ Faces (12 black, 20 white)  
 __{.green}60__ Vertices  
 __{.red}90__ Edges
+
 :::
 
 ---
@@ -652,6 +665,7 @@ __{.red}90__ Edges
 ## Map Colouring
 
 ::: column.grow
+
 We have already used graph theory with certain maps. As we zoom out, individual
 roads and bridges disappear and instead we see the outline of entire countries.
 
@@ -661,6 +675,7 @@ different colours as possible.
 
 Some simple “maps”, like a chessboard, only need two colours (black and white),
 but most complex maps need more.
+
 ::: column(width=240 style="margin-top: -10px")
 
     x-img.shifted(src="images/globe.jpg" width=240 height=320)
@@ -713,10 +728,12 @@ possible:
 > title: The Four Colour Theorem
 
 ::: column.grow
+
 All of these maps can be coloured with only four different colours, but it is
 not hard to imagine that other, very complicated maps might need many more
 colours. In fact, some maps need __at least__ four colours, whenever they
 contain four countries all connected to each other.
+
 ::: column(width=200)
 
     img(src="images/four-colours.png" width=200 height=120)
@@ -740,6 +757,7 @@ and two vertices must have a different colour if they are connected by an edge.
     x-img(lightbox width=240 height=320 src="images/england-counties.jpg")
 
 ::: column.grow
+
 In 1852, the botany student [Francis Guthrie](bio:guthrie) had to colour a map
 of counties in England. He observed that four colours seemed to suffice for any
 map he tried, but he was not able to find a proof that worked for _all_ maps.
@@ -752,6 +770,7 @@ proofs were so convincing that it took more than 10 years to discover errors.
 
 For a long time, mathematicians were unable to either prove that four colours
 are enough, or to find a map that needed more than four colours.
+
 :::
 
 ---
@@ -767,7 +786,7 @@ which were each checked by a computer taking over 1000 hours in total.
 ---
 > id: maps-5
 
-The four colour theorem is the first well-known mathematical theorem to be
+The __four colour theorem__ is the first well-known mathematical theorem to be
 proven using a computer, something that has become much more common and less
 controversial since. Faster computers and a more efficient algorithm mean that
 today you can prove the four colour theorem on a laptop in just a few hours.
@@ -780,13 +799,15 @@ today you can prove the four colour theorem on a laptop in just a few hours.
 > id: maps-6
 
 ::: column.grow
+
 The four colour theorem only works for maps on a flat plane or a sphere, and
 where all countries consist of a single area.
 
-However mathematicians have also looked at maps of _empires_, where countries
+However, mathematicians have also looked at maps of _empires_, where countries
 can consist of multiple disconnected components, and at maps on
 differently-shaped planets, such as a torus (doughnut shape). In these cases you
-may need more than four colours and the proofs become even more difficult.
+may need more than four colours, and the proofs become even more difficult.
+
 ::: column(width=300)
 
     x-video(width=300 height=220 src="images/torus.mp4" hover loop)
@@ -801,9 +822,10 @@ may need more than four colours and the proofs become even more difficult.
 ## The Travelling Salesman Problem
 
 ::: column.grow(parent="right")
+
 Let us think, once more, about networks and maps. Imagine that a delivery
 service has to visit ${tsn}{tsn|8|2,50,1} different cities to distribute
-parcels. We can think of these cities as the vertices in a graph. If all of the
+parcels. We can think of these cities as the vertices in a graph. If all the
 cities are connected by roads, this is a [[complete graph|cycle|bipartite graph]],
 so there are <mfrac><mrow>${tsn} × (${tsn} – 1)</mrow><mn>2</mn></mfrac> =
 ${tsn*(tsn-1)/2} edges in total.
@@ -812,6 +834,7 @@ The delivery truck has to visit all cities, in any order. In the Königsberg
 bridges problem we wanted to find paths which travel along _every edge_ exactly
 one. Now we want to find paths which visit _every vertex_ exactly once. These
 paths are called __Hamiltonian cycles__.
+
 ::: column(width=260)
 
     x-img(src="images/truck.jpg" width=260 height=280)
@@ -849,6 +872,7 @@ all, becomes much more difficult.
 > id: salesman-3
 
 ::: column.grow(parent="right")
+
 So far we have ignored the fact that some cities might be further apart than
 others. In real life, however, this is a very important consideration: we don’t
 just want to find _any_ path but we want to find the shortest one. This is
@@ -862,6 +886,7 @@ each, and then picking the shortest one. However we have just shown that, even
 with just ${tsn2}{tsn2|10|2,20,1} cities there are ${tsn2}! = ${factorial(tsn2)}
 possible paths. Once you have hundreds or thousands of vertices, trying all
 possible paths becomes impossible, even using powerful computers.
+
 ::: column(width=220)
 
     x-img(lightbox src="images/microchip.jpg" width=210 height=365)
@@ -872,7 +897,7 @@ possible paths becomes impossible, even using powerful computers.
 > id: salesman-4
 > goals: move
 
-Unfortunately there is no more efficient algorithm to solve the travelling
+Unfortunately, there is no more efficient algorithm to solve the travelling
 salesman problem. Instead, mathematicians and computer scientists have developed
 various algorithms that find _good_ solutions, even if they may not be the very
 best one. These algorithms, which only give approximate solutions, are called
@@ -889,11 +914,15 @@ clicking anywhere on the map (up to 8):
 > id: salesman-5
 
 ::: column.grow
+
 The __Greedy Algorithm__ (or Nearest Neighbour Algorithm) is very simple: you
 start in a random city and consecutively move to the closest city you haven’t
 visited before. Once you have visited all cities, you stop.
+
 ::: column(width=300)
+
 {.todo} Animation coming soon…
+
 :::
 
 You can show that, on average, paths found using the greedy algorithm are 25% longer than the shortest possible path.
@@ -902,12 +931,16 @@ You can show that, on average, paths found using the greedy algorithm are 25% lo
 > id: salesman-6
 
 ::: column.grow
+
 The __2-Opt Algorithm__ starts with a random possible path. Then you repeatedly
 pick two edges and swap them around if that would reduce the length of the path.
 You stop when you can't reduce the length further by swapping any pairs of
 edges.
+
 ::: column(width=300)
+
 {.todo} Animation coming soon…
+
 :::
 
 ---
@@ -939,7 +972,9 @@ leave along their trail, and which other ants can follow.
   strength increases faster.
 
 ::: column(width=240)
+
 {.todo} Diagram coming soon…
+
 :::
 
 ---
@@ -950,6 +985,7 @@ leave along their trail, and which other ants can follow.
     x-img(style="margin-top: 5px" src="images/ant.jpg" width=220 height=220)
 
 ::: column.grow
+
 Ant Colony System (ACS) algorithms try to replicate this behaviour on computers,
 using many “virtual” ants. They can quickly find very good solutions for the
 travelling salesman problem.
@@ -958,6 +994,7 @@ One particularly useful property of ACS algorithms is that they can run
 continuously and adapt in real time to changes to the graph. These changes could
 be caused by car accidents and road closures on street networks, or by traffic
 spikes to web servers on computer networks.
+
 :::
 
 ---
@@ -968,6 +1005,7 @@ spikes to web servers on computer networks.
     img(src="images/binary.jpg" width=140 height=320)
 
 ::: column.grow
+
 The Travelling Salesman problem is [NP-hard](gloss:np), which means that it is
 very difficult to be solved by computers (at least for large numbers of cities).
 
@@ -981,6 +1019,7 @@ Finding a fast algorithm to solve the Travelling Salesman problem would also
 solve one of the most famous open problems in mathematics and computer science,
 the __P vs NP__ problem. It is one of the seven [Millennium Prize
 Problems](gloss:millennium-prize), each carrying a \$1m prize.
+
 :::
 
 ---
@@ -998,7 +1037,7 @@ Problems](gloss:millennium-prize), each carrying a \$1m prize.
 ## Graphs in Everyday Life
 
 We have seen many different applications of graph theory in the previous chapters, although some of
-them were a bit contrived. It turns out, however, that graphs are at the very foundation of many
+them were a bit contrived. However, it turns out that graphs are at the very foundation of many
 objects, concepts and processes in everyday life.
 
 ::: column.grow
@@ -1029,7 +1068,7 @@ Websites with more incoming links tend to be of higher quality and should be
 shown at the top of the search results. For example, when searching for “London”,
 official tourist information sites are shown before small shops in London, or
 blogs of people who live in London. This simple idea from graph theory, the
-__Page Rank Algorithm__, made Google significantly better than other early
+__Page Rank Algorithm__, made Google much better than other early
 search engines.
 
 ---
@@ -1048,11 +1087,13 @@ While websites and hyperlinks form a _virtual_ graph, there is also the
 _physical_ network of computers, servers, routers, phone lines and cables.
 
 ::: column.grow(parent="right")
+
 Every time you make a phone call or load a website, network operators have to
 find a way to connect sender and receiver, without exceeding the capacity of any
 individual cable or connection. Graph theory and probability make it possible to
 guarantee a reliable service, for example by finding diversions when a
 particular connection is busy.
+
 ::: column(width=220)
 
     x-img(lightbox src="images/phone.jpg" width=220 height=166)
@@ -1072,25 +1113,28 @@ schedules. One of the most recognisable graphs is the London Underground map:
 > id: applications-5
 
 ::: column.grow
+
 All roads and motorways also form a large network, which is used by navigation
 services like Google Maps when working out the shortest route between two given
 points.
+
 ::: column(width=60)
 
     x-img(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
 
 :::
-
 ::: column(width=280)
 
     x-img(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
+
 In the future, __Intelligent Transportation Systems__ will reduce congestion and
 accidents by routing cars more efficiently, using location data collected from
 smartphones and self-driving cars. This could save millions of hours lost on the
 road every year, significantly reduce pollution, and allow emergency services to
 travel faster.
+
 :::
 
 ---
@@ -1110,35 +1154,41 @@ There are countless other graphs in science, engineering or everyday life:
     x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
 {.caption} The links between atoms in __molecules__ and crystal grids form a graph.
+
 ::: column(width=200)
 
     x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
 {.caption} The __spread of diseases__ and epidemics can be modelled using a network.
+
 ::: column(width=200)
 
     x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
 {.caption} In Biology, the __evolutionary trees__ that show the ancestry of
 species form a graph.
+
 ::: column(width=200)
 
     x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
 {.caption} The different components of __electric circuits__ and computer chips
 form a network.
+
 ::: column(width=200)
 
     x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
 {.caption} The grammatical structure of __languages__ can be modelled using
 graphs, for example to create translation algorithms.
+
 ::: column(width=200)
 
     x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
 {.caption} Graphs also have many applications in __probability__, __game
 theory__ and __financial mathematics__.
+
 :::
 
 ---
@@ -1202,6 +1252,7 @@ will probably have a friend of a friend who knows a friend of one of your friend
     x-img(credit="© Metro-Goldwyn-Mayer" src="images/six-degrees.jpg" width=200 height=265 style="border: 1px solid #ccc")
 
 ::: column.grow
+
 In 1929, when the Hungarian author [Frigyes Karinthy](bio:karinthy) first
 proposed the idea of “six degrees of Separation”, there was no Internet or
 social media, but the world had already started to become more interconnected.
@@ -1212,6 +1263,7 @@ letter to a particular person living in Boston, Massachusetts. They all had to
 choose a friend to send the letter to, who then picked another friend. At every
 step, the letter moved closer to Boston. Milgram found that there were, on
 average, only 5.2 intermediate friends &#8211; 5.2 degrees of separation.
+
 :::
 
 Today, every one of us is part of countless invisible graphs, which underlie our
