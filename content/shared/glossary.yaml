@@ -3,7 +3,7 @@
 # ==============================================================================
 
 absolute-value:
-  title: Absolute balue
+  title: Absolute value
   text: The __absolute value__ of a number is its distance from 0 on the number
     line. It makes negative numbers positive, but leaves positive numbers
     unchanged. The absolute value of `x` is written as `|x|`. For example,
@@ -222,7 +222,7 @@ calculus:
     function, and finding the area under a curve.
 
 center-of-rotation:
-  title: Center of totation
+  title: Center of rotation
   text: The __center of rotation__ is the point around which a shape is being
     rotated.
   link: /course/transformations/rigid#rotations
@@ -615,7 +615,7 @@ fibonacci-numbers:
   link: /course/sequences/fibonacci#fibonacci
 
 figurate-numbers:
-  title: Firgurate numbers
+  title: Figurate numbers
   text: __Figurate numbers__ are numbers that can be represented using geometric
     shapes. Examples include square, triangle and tetrahedral numbers.
   link: /course/sequences/figurate#figurate
@@ -636,7 +636,7 @@ fractal:
 
 fta:
   title: Fundamental theorem of arithemtic
-  text: The __Fundamental theorem of arithemtic__ (FTA) says that every integer
+  text: The __fundamental theorem of arithemtic__ (FTA) says that every integer
     has a unique prime factorisation.
 
 function:
@@ -951,9 +951,9 @@ millennium-prize:
     * Navier-Stokes existence and smoothness
     * The Birch and Swinnerton-Dyer conjecture
 
-    So far, just one of the problems, the _Poincaré conjecture_, was solved.
-    However the mathematician who solved it, Grigori Perelman, declined the
-    award.
+    So far, just one of the problems, the _Poincaré conjecture_, has been
+    solved. However the mathematician who solved it, Grigori Perelman, declined
+    the award.
 
 mode:
   title: Mode
