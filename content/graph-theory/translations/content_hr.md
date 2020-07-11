@@ -283,7 +283,7 @@ Ako se vratite na kartu Königsberga, vidjet ćete da postoji više od dva otoka
 
 Pozvani ste na prekrasnu rođendansku zabavu sa svojim prijateljima. Uključujući sebe i domaćina, prisutni su ${hnd}{hnd|5|3,15,1} ljudi. Uveče, dok se gosti spremaju da odu, svi odmahnu rukom sa svima ostalima. Koliko ima rukovanja ukupno? Rukovanje možemo predstaviti grafikonom: svaka osoba je [[vrhova|an edge]], a svaka stisak ruke je [[ivica|a vertex]].
 
-{.reveal(when=&#39;blank-0 blank-1&#39;)} Sada je lako izbrojiti broj rubova u grafikonu. Otkrivamo da tamo sa ${hnd} ljudima postoje ${hnd*(hnd-1)/2} stisci ruku.
+{.reveal(when='blank-0 blank-1')} Sada je lako izbrojiti broj rubova u grafikonu. Otkrivamo da tamo sa ${hnd} ljudima postoje ${hnd*(hnd-1)/2} stisci ruku.
 
 ::: column.s-hide(width=240)
 
@@ -319,7 +319,9 @@ Grafikoni stiska ruku su posebni jer je svaki vrh povezan sa svakom drugom vrhom
 ---
 > id: handshakes-4
 
-    figure: img(src="images/flags.jpg" width=855 height=100) Drugog dana, pozvani ste na brzi sastanak za ${m}{m|5|2,8,1} dečaka i ${f}{f|4|2,8,1} djevojke. Mnogo je malih stolova i svaki dječak provodi 5 minuta sa svakom od djevojčica. Koliko pojedinačnih „datuma“ ima ukupno?
+    figure: img(src="images/flags.jpg" width=855 height=100)
+
+Drugog dana, pozvani ste na brzi sastanak za ${m}{m|5|2,8,1} dečaka i ${f}{f|4|2,8,1} djevojke. Mnogo je malih stolova i svaki dječak provodi 5 minuta sa svakom od djevojčica. Koliko pojedinačnih „datuma“ ima ukupno?
 
 ::: column.grow
 

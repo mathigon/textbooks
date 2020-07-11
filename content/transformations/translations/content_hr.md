@@ -72,7 +72,7 @@ Iako je simetrija vrlo intuitivan pojam, opisati je matematički teže nego što
 
 > id: transformations-1
 
-Rezultat transformacije se zove [__slika__](gloss:transformation-image). Često označavamo sliku oblika `A` kao `A&#39;`, koja se izgovara sa "premijerom". Postoji mnogo različitih vrsta transformacija koje ćemo detaljnije istražiti tijekom ovog tečaja.
+Rezultat transformacije se zove [__slika__](gloss:transformation-image). Često označavamo sliku oblika `A` kao `A'`, koja se izgovara sa "premijerom". Postoji mnogo različitih vrsta transformacija koje ćemo detaljnije istražiti tijekom ovog tečaja.
 
 ---
 

@@ -56,7 +56,7 @@ Cada punto en un [__círculo__](gloss:circle) tiene la misma distancia desde su 
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
-Una propiedad importante de los círculos es que todos los círculos son [similares](gloss:similar). Puede demostrarlo mostrando cómo se pueden combinar todos los círculos usando simplemente [traducciones](gloss:translation) y [dilataciones](gloss:dilation):
+Una propiedad importante de los círculos es que todos los círculos son [similares](gloss:similar). Puede demostrarlo mostrando cómo se pueden combinar todos los círculos usando simplemente [traslaciones](gloss:translation) y [dilataciones](gloss:dilation):
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -83,7 +83,7 @@ Aquí hay una rueda con diámetro 1. A medida que "desenrolla" la circunferencia
 
 > id: circumference
 
-Para un círculo con diámetro _d_, la circunferencia es `C = π × d`. De manera similar, para un círculo con radio [<<<<](gloss:circle-radius) _r_, la circunferencia es
+Para un círculo con diámetro _d_, la circunferencia es `C = π × d`. De manera similar, para un círculo con [radio](gloss:circle-radius) _r_, la circunferencia es
 
 {.text-center} `C =` [[`2 π r`|`π r`|`π r^2`]].
 
@@ -141,13 +141,13 @@ En la naturaleza, los objetos como gotas de agua o burbujas de aire pueden _ahor
 ::: column(width=320)
 
     x-select.segmented
-      div(data-value="0") Triangle
-      div(data-value="1") Square
-      div(data-value="2") Pentagon
-      div(data-value="3") Circle
+      div(data-value="0") Triángulo
+      div(data-value="1") Cuadrado
+      div(data-value="2") Pentágono
+      div(data-value="3") Círculo
     svg(width=320 height=200)
 
-{.caption} _Circunferencia_ = __{.m-green} 100__, _Área_ = __${area}<<<<__
+{.caption} _Circunferencia_ = __{.m-green} 100__, _Área_ = __${area}__
 
 :::
 
@@ -179,9 +179,9 @@ La única diferencia es que, debido a que los círculos son curvos, tenemos que 
 
 Aquí puede ver un círculo dividido en ${toWord(n1)} cuñas. Mueva el control deslizante para alinear las cuñas en una fila.
 
-{.reveal(when="slider")} Si aumentamos el número de cuñas a ${n1}{n1|6|6,30,2}, esta forma comienza a parecerse cada vez más a un rectángulo [[<<<<|circle|square]].
+{.reveal(when="slider")} Si aumentamos el número de cuñas a ${n1}{n1|6|6,30,2}, esta forma comienza a parecerse cada vez más a un [[rectángulo|circle|square]].
 
-{.reveal(when="blank-0")} La altura del rectángulo es igual al radio [[<<<<|circumference|diameter]] del círculo. _{span.reveal(when="blank-1")} El ancho del rectángulo es igual a [[la mitad de la circunferencia|the circumference|twice the radius]] del círculo._ _{span.reveal(when="blank-2")} (Observe cómo la mitad de las cuñas están boca abajo y la otra mitad de ellas arriba)_
+{.reveal(when="blank-0")} La altura del rectángulo es igual al [[radio|circumference|diameter]] del círculo. _{span.reveal(when="blank-1")} El ancho del rectángulo es igual a [[la mitad de la circunferencia|the circumference|twice the radius]] del círculo._ _{span.reveal(when="blank-2")} (Observe cómo la mitad de las cuñas están boca abajo y la otra mitad de ellas arriba)_
 
 {.reveal(when="blank-2" delay=1000)} Por lo tanto, el área total del rectángulo es aproximadamente `A = π r^2`.
 
@@ -206,9 +206,9 @@ Aquí puede ver un círculo dividido en ${toWord(n1)} cuñas. Mueva el control d
 
 Aquí puede ver un círculo dividido en ${toWord(n)} anillos. Como antes, puede mover el control deslizante para "desenrollar" los anillos.
 
-{.reveal(when="slider")} Si aumentamos el número de anillos a ${n2}{n2|4|2,12,1}, esta forma comienza a parecerse cada vez más a un triángulo [[<<<<|rectangle|trapezium]].
+{.reveal(when="slider")} Si aumentamos el número de anillos a ${n2}{n2|4|2,12,1}, esta forma comienza a parecerse cada vez más a un [[triángulo|rectángulo|trapecio]].
 
-{.reveal(when="blank-0")} La altura del triángulo es igual al radio [[<<<<|diameter|circumference]] del círculo. _{span.reveal(when="blank-1")} La base del triángulo es igual a [[la circunferencia|twice the diameter]] del círculo._ _{span.reveal(when="blank-2")} Por lo tanto, el área total del triángulo es aproximadamente_
+{.reveal(when="blank-0")} La altura del triángulo es igual al [[radio|diámetro|circunferencia]] del círculo. _{span.reveal(when="blank-1")} La base del triángulo es igual a [[la circunferencia|twice the diameter]] del círculo._ _{span.reveal(when="blank-2")} Por lo tanto, el área total del triángulo es aproximadamente_
 
 {.text-center.reveal(when="blank-2")} `A = 1/2 "base" × "height" = π r^2`.
 
@@ -428,7 +428,7 @@ También funcionó bien con su sistema de números base 60 existente (desde `6 x
 
 ::: column.grow
 
-Para muchos de nosotros, medir ángulos en grados es una segunda naturaleza: hay un video de 360 °, los patinadores pueden tirar de 540 segundos, y alguien que cambie su decisión podría hacer un giro de 180 °. Pero desde un punto de vista matemático, la elección de 360 es completamente arbitraria. Si viviéramos en Marte, un círculo podría tener 670 °, y un año en Júpiter incluso tiene 10,475 días. 
+Para muchos de nosotros, medir ángulos en grados es una segunda naturaleza: hay un video de 360 °, los patinadores pueden tirar de 540 segundos, y alguien que cambie su decisión podría hacer un giro de 180 °. Pero desde un punto de vista matemático, la elección de 360 es completamente arbitraria. Si viviéramos en Marte, un círculo podría tener 670 °, y un año en Júpiter incluso tiene 10,475 días.
 
 :: column(width=280)
 
@@ -455,7 +455,7 @@ En lugar de dividir un círculo en algún número de segmentos (como 360 grados)
       path.fill.green(x="angle(b,c,a)" label="${round(ang.deg)}°" name="ang" round)
       path.red.thick(x="arc(c,b,ang.rad)" label="${rad(ang.rad)}π")
       path.thin(x="segment(c,a)")
-      path.thin(x="segment(c,b)") 
+      path.thin(x="segment(c,b)")
 
 ::: column.grow
 
@@ -564,7 +564,7 @@ La mayoría de las calculadoras tienen un [botón especial](->.button.mode) para
 
 :::
 
---- 
+---
 > id: small-angle
 
 El uso de radianes tiene una ventaja particularmente interesante cuando se usa la función [__Seno__](gloss:sin). Si `θ` es un ángulo muy pequeño (menos de 20 ° o 0.3 rad), entonces `sin(θ) ≈ θ`. Por ejemplo,
@@ -586,23 +586,23 @@ En las secciones anteriores, aprendió los nombres dados a varias partes diferen
 
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
-    
+
       path.teal.fill.reveal(x="sector(x,d1,pi/2.5)" target="sector" when="next-3" label="Sector" label-class="white")
       path.purple.fill.reveal(x="arc(x,b1,pi/2.5)" target="segment" when="next-4" label="Segment")
-    
+
       path.black(x="circle(x,100)" name="c")
-    
+
       circle.red(x="c.at(0.5)" name="a1" target="secant")
       circle.red(x="c.at(0.7)" name="a2" target="secant")
       path.red.thick(x="line(a1,a2)" label="Secant" target="secant")
-    
+
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
       path.green.thick.reveal(x="segment(b1,b2)" label="Chord" target="chord" when="next-0" animation="draw")
-    
+
       circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
       path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Tangent" target="tangent" when="next-1" animation="draw")
-    
+
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
       path.yellow.thick.reveal(x="arc(x,d1,pi/2.5)" label="Arc" target="arc" when="next-2" animation="draw")
@@ -634,23 +634,23 @@ En esta sección, veremos la relación entre todos estos elementos y probaremos 
     // https://www.mathopenref.com/tangentline.html
     // https://www.mathopenref.com/consttangents.html
     // https://www.mathopenref.com/consttangent.html
-    
+
     // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
+    //
     // Point of Tangency: The point where a tangent line touches the circle.
-    // 
+    //
     // The tangent line and the radius drawn to the point of tangency have a unique
     // relationship. Let’s investigate it here.
-    // 
+    //
     // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
     // line is perpendicular to the radius drawn to the point of tangency.
-    // 
+    //
     // To prove this theorem, the easiest way to do so is indirectly (proof by
     // contradiction). Also, notice that this theorem uses the words “if and only if,”
     // making it a biconditional statement. Therefore, the converse of this theorem is
     // also true. Now let’s look at two tangent segments, drawn from the same external
     // point. If we were to measure these two segments, we would find that they are equal.
-    // 
+    //
     // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
     // point, then the segments are equal.
     //
@@ -668,10 +668,10 @@ En esta sección, veremos la relación entre todos estos elementos y probaremos 
     // A chord is a line segment whose endpoints are on a circle. A diameter is the
     // longest chord in a circle. There are several theorems that explore the
     // properties of chords.
-    // 
+    //
     // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
     // congruent if and only if their corresponding chords are congruent.
-    // 
+    //
     // Notice the “if and only if” in the middle of the theorem. This means that Chord
     // Theorem #1 is a biconditional statement. Taking this theorem one step further,
     // any time two central angles are congruent, the chords and arcs from the
@@ -679,36 +679,36 @@ En esta sección, veremos la relación entre todos estos elementos y probaremos 
     // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
     // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
     // radii (SAS). By CPCTC, BE≅CD.
-    // 
+    //
     // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
+    // 1. Draw a circle. Label the center A.
     // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
+    // 3. Find the midpoint of BC by using a ruler. Label it D.
+    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC?
+    //
     // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
     // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
     // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
+    //
     // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
     // bisects the chord and its corresponding arc.
-    // 
+    //
     // Investigation: Properties of Congruent Chords
     // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
+    //    inches. Label as in the picture to the right. This diagram is drawn to scale.
     // 2. From the center, draw the perpendicular segment to AB and CD.
     // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
+    //    and E. Find the measure of these segments. What do you notice?
+    //
     // Chord Theorem #4: In the same circle or congruent circles, two chords are
     // congruent if and only if they are equidistant from the center.
-    // 
+    //
     // Recall that two lines are equidistant from the same point if and only if the
     // shortest distance from the point to the line is congruent. The shortest distance
     // from any point to a line is the perpendicular line between them. In this
     // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
     // and AB≅CD.
-    
+
     // Concentric Circles: Two or more circles that have the same center, but different radii.
     // Congruent Circles: Two or more circles with the same radius, but different centers.
 
@@ -741,7 +741,7 @@ Desafortunadamente, nadie sabía exactamente _cuán grande era_ la Tierra, hasta
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
-    
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Arc" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
@@ -787,11 +787,11 @@ Podemos expresar esta relación en una ecuación:
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
-    
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Arc" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
-    
+
       path.fill.orange.transparent(x="circ" target="area")
       path.thick.purple.transparent(x="circ" target="circ")
       path.teal.fill.transparent(x="circle(c,32)" target="fangle")
@@ -819,7 +819,7 @@ donde _r_ es el radio del círculo y _c_ es el tamaño del ángulo central.
     // What the formulae are doing is taking the area of the whole circle, and
     // then taking a fraction of that depending on what fraction of the circle
     // the sector fills.
-    
+
     // The length of an arc is the distance along the curved line of the
     // circumference of the circle. It is slightly longer than the straight
     // line connecting the same two points (the chord).
@@ -918,22 +918,22 @@ Finalmente, sabemos que la circunferencia de un círculo es `C = 2 pi r`, por lo
         defs: radialGradient#grad1(cx=200 cy=200 r=200 gradientUnits="userSpaceOnUse")
           stop(offset=0 stop-color="#63a3ff")
           stop(offset=1 stop-color="#0f82f2")
-    
+
         circle(x="point(150,250)" name="c" hidden)
         circle(x="point(150,120)" name="a" hidden)
         circle.move.pulsate(cx=80 cy=140 name="b" project="arc(c,point(64,155),1.47)")
         circle(x="c.add(b.subtract(c).scale(1.465))" name="d" hidden)
-    
+
         path.shadow(x="triangle(c,d,point(d.x,c.y))")
         path.earth(d="M153,120,152,150h-4l-.95-30a130,130,0,1,0,5.9,0Z" fill="url(#grad1)")
         path.earth-cover.fill(x="circle(c,130)")
-    
+
         path.red.thick.reveal(when="next-0" animation="draw" x="arc(c,b,angle(b,c,a).rad).minor" target="arc")
         path.fill.teal.reveal(when="next-0" x="angle(c,d,point(d.x,c.y)).sup" target="angle1")
         path.fill.purple.reveal(when="next-0" x="angle(b,c,a).sup" name="ang" target="angle2")
         path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
         path.blue.transparent(x="circle(c,130)" target="circ")
-    
+
         image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 style="transform: translate(${b.x-4}px, ${b.y-60}px) rotate(-${angle(b,c,a).rad}rad)")
 
 :::
@@ -1066,17 +1066,17 @@ En las secciones anteriores, estudiamos las propiedades de los círculos en una 
 
     x-solid(size=220)
 
-{.text-center} Un cono [__<<<<__](gloss:cone) tiene una base circular que se une a un solo punto (llamado vértice).
+{.text-center} Un [__cono__](gloss:cone) tiene una base circular que se une a un solo punto (llamado vértice).
 
 ::: column(width=220)
 
     x-solid(size=220 static)
 
-{.text-center} Cada punto en la superficie de una esfera [__<<<<__](gloss:sphere) tiene la misma distancia desde su centro.
+{.text-center} Cada punto en la superficie de una [__esfera__](gloss:sphere) tiene la misma distancia desde su centro.
 
 :::
 
-Observe cómo la definición de una esfera es casi la misma que la definición de un círculo [[<<<<|radius|cube]], ¡excepto en tres dimensiones!
+Observe cómo la definición de una esfera es casi la misma que la definición de un [[círculo|radio|cubo]], ¡excepto en tres dimensiones!
 
 ---
 
@@ -1174,7 +1174,7 @@ Imagine cortar un cilindro en muchos discos delgados. Luego podemos deslizar est
 
     // TODO You must always use the _perpendicular_ height. This is
     // the vertical line to left in the figure above.
-    
+
     // TODO Volume of horizontal cylinder segments
     // https://www.mathopenref.com/cylindervolpartial.html
 
@@ -1188,10 +1188,10 @@ Imagine cortar un cilindro en muchos discos delgados. Luego podemos deslizar est
 
 Para encontrar el área de superficie de un cilindro, tenemos que "desenrollarlo" en su plano [net](gloss:net). Puede probarlo usted mismo, por ejemplo, quitando la etiqueta de una lata de comida.
 
-Hay dos [[círculos|spheres|squares]], uno en la parte superior y otro en la parte inferior del cilindro. El lado curvo es en realidad un gran rectángulo [[<<<<|square|ellipse]].
+Hay dos [[círculos|spheres|squares]], uno en la parte superior y otro en la parte inferior del cilindro. El lado curvo es en realidad un gran [[rectángulo|cuadrado|elipse]].
 
 * {.reveal(when="blank-0 blank-1")} Los dos círculos tienen cada uno un área _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
-* {.reveal(when="eqn-0")} La altura del rectángulo es _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} y el ancho del rectángulo es el mismo que la circunferencia [[<<<<|diameter|tangent]] de los círculos:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
+* {.reveal(when="eqn-0")} La altura del rectángulo es _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} y el ancho del rectángulo es el mismo que la [[circunferencia|diametro|tangente]] de los círculos:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
 
 ::: column(width=320)
@@ -1227,7 +1227,7 @@ El _Gasómetro_ anterior tenía un radio de 35 my una altura de 120 m. Ahora pod
 
 ::: column.grow
 
-Un cono [__<<<<__](gloss:cone) es un sólido tridimensional que tiene una base circular __{.m-red}__. Su lado “se estrecha hacia arriba” como se muestra en el diagrama, y termina en un solo punto llamado vértice __{.m-green}__.
+Un [__cono__](gloss:cone) es un sólido tridimensional que tiene una base circular __{.m-red}__. Su lado “se estrecha hacia arriba” como se muestra en el diagrama, y termina en un solo punto llamado vértice __{.m-green}__.
 
 El radio __{.m-red}__ del cono es el radio de la base circular, y la altura __{.m-blue}__ del cono es la distancia perpendicular desde la base hasta el vértice.
 
@@ -1269,7 +1269,7 @@ Al igual que otras formas que conocimos antes, los conos están en todas partes:
 
 ::: column.grow
 
-Anteriormente encontramos el volumen de un cilindro aproximándolo con un prisma. De manera similar, podemos encontrar el volumen de un cono aproximándolo usando una pirámide [__<<<<__](gloss:pyramid).
+Anteriormente encontramos el volumen de un cilindro aproximándolo con un prisma. De manera similar, podemos encontrar el volumen de un cono aproximándolo usando una [__pirámide__](gloss:pyramid).
 
 Aquí puede ver una pirámide de ${n}{n|5|3,18,1} lados. A medida que aumenta el número de lados, la pirámide comienza a parecerse cada vez más a un cono. De hecho, ¡podríamos pensar en un cono como una pirámide con _infinitamente muchos_ lados!
 
@@ -1327,7 +1327,7 @@ Una vez más, podemos usar el principio de Cavalieri para mostrar que todos los 
 
 ::: column.grow
 
-Encontrar el área de superficie de un cono es un poco más complicado. Como antes, podemos desenredar un cono en su red. Mueva el control deslizante para ver qué sucede: en este caso, obtenemos un círculo y un sector de círculo [[<<<<|circle segment|circle arc]].
+Encontrar el área de superficie de un cono es un poco más complicado. Como antes, podemos desenredar un cono en su red. Mueva el control deslizante para ver qué sucede: en este caso, obtenemos un círculo y un [[sector circular|segmento circular|arco]].
 
 {.reveal(when="blank-0")} Ahora solo tenemos que sumar el área de ambos componentes. La base __{.m-yellow}__ es un círculo con radio _r_, por lo que su área es
 
@@ -1372,7 +1372,7 @@ El | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | El 
 
 ::: column.grow
 
-La _{span.pill.step-target.red(data-to="arc")} longitud del arco_ del sector es la misma que la [[circunferencia|diameter|arc]] de la _{span.pill.step-target.yellow(data-to="base")} base_: _{span.reveal(when="blank-0")} `2 π r`. Ahora podemos encontrar el área del sector utilizando la fórmula [<<<<](gloss:circle-sector) que derivamos en una sección anterior:_
+La _{span.pill.step-target.red(data-to="arc")} longitud del arco_ del sector es la misma que la [[circunferencia|diameter|arc]] de la _{span.pill.step-target.yellow(data-to="base")} base_: _{span.reveal(when="blank-0")} `2 π r`. Ahora podemos encontrar el área del sector utilizando la [fórmula](gloss:circle-sector) que derivamos en una sección anterior:_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1387,15 +1387,15 @@ El | `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)
       circle(x="point(45,141.5)" name="b" hidden)
-    
+
       path.yellow.fill.light(x="circle(c2, 40)" target="base")
       path.yellow(x="circle(c2, 40)" target="base")
       path.yellow(x="segment(c2,point(180, 250))" label="r" target="base")
       path.red.thick.reveal(when="blank-0" animation="draw" duration=1500 x="circle(c2, 40)")
-    
+
       path.teal.fill.light(x="circle(c1, 100)" name="circ" target="circle")
       path.green.fill.light(x="sector(c1, a, 2.5)" target="sector circle")
-    
+
       path.green(x="segment(c1, a)" label="s")
       path.green(x="segment(c1, b)" label="s")
       path.red.thick(x="arc(c1, a, 2.5)" target="arc")
@@ -1421,7 +1421,7 @@ Finalmente, solo tenemos que sumar el área de la __{.m-yellow} base__ y el áre
 
 Una [__esfera__](gloss:sphere) es un sólido tridimensional que consta de todos los puntos que tienen la misma distancia desde un __{.m-green} centro _C___. Esta distancia se denomina radio __{.m-red} _r___ de la esfera.
 
-Puede pensar en una esfera como un "círculo tridimensional [<<<<](gloss:circle)". Al igual que un círculo, una esfera también tiene un __{.m-blue} diámetro _d___, que es [[dos veces|half]] la longitud del radio, así como acordes y secantes.
+Puede pensar en una esfera como un "[círculo](gloss:circle) tridimensional". Al igual que un círculo, una esfera también tiene un __{.m-blue} diámetro _d___, que es [[dos veces|half]] la longitud del radio, así como acordes y secantes.
 
 ::: column(width=240)
 
@@ -1448,12 +1448,12 @@ A medida que mueve el control deslizante hacia arriba, puede ver la sección tra
 ::: column(width=240)
 
     x-solid(size=240 style="margin: -24px 0 10px")
-    
+
     x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(110,110)" name="c1")
       circle(x="c1.shift(0,-100*h)" name="h1")
       circle(x="h1.shift(-100 * sqrt(1-h*h),0)" name="a1")
-    
+
       path.yellow.fill.light(x="triangle(c1,a1,h1)" target="tri")
       path(x="arc(c1,point(10,c1.x),pi)")
       path(x="segment(point(10,c1.x),point(210,c1.x))")
@@ -1465,16 +1465,16 @@ A medida que mueve el control deslizante hacia arriba, puede ver la sección tra
 ::: column(width=240)
 
     x-solid(size=240 style="margin: -24px 0 10px")
-    
+
     x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(10,10)" name="a2" hidden)
       circle(x="point(210,10)" name="b2" hidden)
       path(x="polygon(a2,b2,point(210,110),point(10,110))")
-    
+
       circle(x="point(110,110)" name="c2")
       circle(x="c2.shift(0,-100*h)" name="h2")
       circle(x="h2.shift(-100*h,0)" name="x2")
-    
+
       path.thin(x="segment(a2,c2)")
       path.thin(x="segment(b2,c2)")
       path.blue.thin(x="segment(h1,c1)" label="h" target="h")
@@ -1490,7 +1490,7 @@ A medida que mueve el control deslizante hacia arriba, puede ver la sección tra
 
 ::: column.grow
 
-{.reveal(when="slider-0")} La sección transversal del hemisferio es siempre un círculo [[<<<<|ring|cylinder]].
+{.reveal(when="slider-0")} La sección transversal del hemisferio es siempre un [[círculo|anillo|cilindro]].
 
 {.reveal(when="blank-0")} El radio __{span.pill.red.step-target(data-to="x")} _x___ de la sección transversal es parte de un triángulo en ángulo recto _{span.pill.yellow.step-target(data-to="tri")}_, por lo que podemos usar {1111 } Pitágoras](gloss:pythagoras-theorem):
 
@@ -1510,7 +1510,7 @@ Ahora, el área de la sección transversal es
 
 ::: column.grow.reveal(when="eqn-0")
 
-La sección transversal del cilindro recortado siempre es un anillo [[<<<<|circle|cone]].
+La sección transversal del cilindro recortado siempre es un  [[anillo|círculo|cono]].
 
 ::: .reveal(when="blank-1")
 
@@ -1641,18 +1641,18 @@ Para encontrar el área de superficie de una esfera, una vez más podemos aproxi
     // If we connect the small polygons to the center of the sphere, we get
     // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
     // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
-    
+
     // Here is a
     // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
-    
+
     // And therefore,
-    // surface area = 3 * volume / radius = 
-    
+    // surface area = 3 * volume / radius =
+
     // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-    
+
     // ---
     // > id: earth-surface
-    // 
+    //
     // surface of earth
 
 ---
@@ -1790,7 +1790,7 @@ Para solucionar esto, los astrónomos agregaron __Epiciclos__ a su modelo del si
         circle.earth(cx=310 cy=160 r=10 fill="#fd8c00")
       x-play-btn
 
-{.caption} Este planeta realiza ${n}{n|6|2,12,1} rotaciones alrededor del círculo pequeño (el epiciclo __<<<<__) durante una rotación alrededor del círculo grande (el __deferente__).
+{.caption} Este planeta realiza ${n}{n|6|2,12,1} rotaciones alrededor del círculo pequeño (el __epiciclo__) durante una rotación alrededor del círculo grande (el __deferente__).
 
 ::: column(width=320)
 
@@ -1850,6 +1850,3 @@ Usando las leyes de Newton, puede derivar el camino que toman los objetos cuando
 Según la leyenda, una manzana que cae inspiró a Newton a pensar en la gravedad. Fue uno de los científicos más influyentes de todos los tiempos, y sus ideas dieron forma a nuestra comprensión del mundo durante casi 300 años, hasta que Albert Einstein descubrió la relatividad en 1905.
 
 :::
-
-
-
