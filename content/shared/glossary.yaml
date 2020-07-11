@@ -247,7 +247,7 @@ circle:
 
 circle-area:
   title: Area of a Circle
-  text: The __area__ of a circle with radius _r_ is given by the folmula
+  text: The __area of a circle__ with radius _r_ is given by the folmula
     `A = pi r^2`.
 
 circle-circumference:
@@ -651,10 +651,10 @@ function-graph:
 
 gcf:
   title: Greatest Common Factor
-  keywords: gcf
+  keywords: gcf gcd divisor
   text: The __greatest common factor__ (gcf) of two numbers _a_ and _b_ is the
     largest integer that is a factor of both _a_ and _b_.
-  link: /course/divisibility/greatest-common-factors
+  link: /course/divisibility/gcf
 
 geometric-sequence:
   title: Geometric Sequence
@@ -872,10 +872,10 @@ laws-of-nature:
 
 lcm:
   title: Lowest Common Multiple
-  keywords: lcm
+  keywords: lcm least
   text: The __Lowest Common Multiple__ (lcm) of two numbers _a_ and _b_ is the
     smallest integer that is a multiple of both _a_ and _b_.
-  link: /course/divisibility/least-common-multiples
+  link: /course/divisibility/lcm
 
 line:
   title: Line
@@ -1795,7 +1795,7 @@ twin-primes:
   text: __Twin primes__ are pairs of prime numbers like 17 and 19 or 101 and
     103, which are exactly two apart. It is unknown if there are infinitely
     many pairs of twin primes.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Unit Circle
