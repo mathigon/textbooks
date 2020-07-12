@@ -310,7 +310,7 @@ _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 ---
 > id: halley-2
 
-Na verdade, o intervalo de tempo nem sempre é exatamente _<<<<_ 76 anos: pode variar em um ou dois anos, pois a órbita do cometa é interrompida por outros planetas. Hoje sabemos que o cometa de Halley foi observado pelos astrônomos antigos em 240 aC!
+Na verdade, o intervalo de tempo nem sempre é _exatamente_ 76 anos: pode variar em um ou dois anos, pois a órbita do cometa é interrompida por outros planetas. Hoje sabemos que o cometa de Halley foi observado pelos astrônomos antigos em 240 aC!
 
     figure
       .row
@@ -362,7 +362,7 @@ Sequências com essas propriedades têm um nome especial:
 
     p.text-center: include svg/comet.svg
 
-Uma sequência aritmética [__<<<<__](gloss:arithmetic-sequence) tem uma constante __{.m-red} de diferença _d___ entre termos consecutivos.
+Uma sequência [__aritmética__](gloss:arithmetic-sequence) tem uma constante __{.m-red} de diferença _d___ entre termos consecutivos.
 
 O mesmo número é adicionado ou subtraído a cada termo, para produzir o próximo.
 
@@ -417,7 +417,7 @@ Aqui estão algumas sequências diferentes. Você pode determinar quais são ari
 
 ::: column(width=320)
 
-não é [[<<<<|arithmetic|geometric]] _{span.reveal(when="blank-6")}._
+não [[é|arithmetic|geometric]] _{span.reveal(when="blank-6")}._
 
 ::: column(width=330)
 
@@ -467,7 +467,7 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="var-0 var-1 var-2 var-3")} Observe como todas as __{.m-red} seqüências aritméticas__ parecem muito semelhantes: se a diferença é positiva, elas [[aumentam|decrease]] constantemente, e se a diferença é negativa, elas diminuem [[<<<<|increase]].
+{.reveal(when="var-0 var-1 var-2 var-3")} Observe como todas as __{.m-red} seqüências aritméticas__ parecem muito semelhantes: se a diferença é positiva, elas [[aumentam|decrease]] constantemente, e se a diferença é negativa, elas [[diminuem|increase]].
 
 {.reveal(when="blank-0 blank-1")} Seqüências geométricas, por outro lado, podem se comportar de maneira completamente diferente com base nos valores de `a` e _r_:
 
@@ -492,7 +492,7 @@ Se _{span.var-action} `r < -1`_, os termos alternarão entre positivo e negativo
 
 ### Fórmulas Recursivas e Explícitas
 
-Na seção anterior, você aprendeu que uma fórmula recursiva [__<<<<__](gloss:sequence-recursive) informa o valor de cada termo como uma função dos termos anteriores. Aqui estão as fórmulas recursivas para sequências aritméticas e geométricas:
+Na seção anterior, você aprendeu que uma fórmula [__recursiva__](gloss:sequence-recursive) informa o valor de cada termo como uma função dos termos anteriores. Aqui estão as fórmulas recursivas para sequências aritméticas e geométricas:
 
 ::: column.grow
 
@@ -774,7 +774,7 @@ Qual é a soma dos 100 primeiros [números inteiros positivos](gloss:integer)? E
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
-Em vez de somar tudo manualmente, você pode usar os números do triângulo [<<<<](gloss:triangle-numbers) para ajudá-lo? E a soma dos primeiros 1000 números inteiros positivos?
+Em vez de somar tudo manualmente, você pode usar os números do [triângulo](gloss:triangle-numbers) para ajudá-lo? E a soma dos primeiros 1000 números inteiros positivos?
 
 :::
 
@@ -817,7 +817,7 @@ Isso também significa que o número do quadrado _n_ é apenas a soma dos primei
 ---
 > id: square-numbers-2
 
-Além disso, todo número quadrado também é a soma de dois números consecutivos de triângulo [<<<<](gloss:triangle-numbers). Por exemplo, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. Você pode ver como podemos dividir cada quadrado ao longo de sua diagonal em dois triângulos?
+Além disso, todo número quadrado também é a soma de dois números consecutivos de [triângulo](gloss:triangle-numbers). Por exemplo, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. Você pode ver como podemos dividir cada quadrado ao longo de sua diagonal em dois triângulos?
 
 ---
 > id: polygon-numbers
@@ -830,7 +830,7 @@ Além disso, todo número quadrado também é a soma de dois números consecutiv
 
 ::: column.grow
 
-Após números triangulares e quadrados, podemos continuar com polígonos maiores [<<<<](gloss:polygon). As seqüências numéricas resultantes são chamadas __números poligonais__.
+Após números triangulares e quadrados, podemos continuar com polígonos [maiores](gloss:polygon). As seqüências numéricas resultantes são chamadas __números poligonais__.
 
 Por exemplo, se usarmos polígonos com lados ${k}{k|5|3,10,1}, obteremos a sequência de __${polygonName(k)} números__.
 
@@ -1102,7 +1102,7 @@ Assim como os números quadrados [triângulo](gloss:triangle-numbers) e [quadrad
 ---
 > id: golden-ratio
 
-A cada passo, os quadrados formam um retângulo maior. Sua largura e altura são sempre dois números consecutivos de Fibonacci. A proporção de aspecto __<<<<__ do retângulo é a proporção de sua largura e altura:
+A cada passo, os quadrados formam um retângulo maior. Sua largura e altura são sempre dois números consecutivos de Fibonacci. A proporção de __aspecto__ do retângulo é a proporção de sua largura e altura:
 
 ::: column(width=100 parent="padded-thin golden-rect")
 
@@ -1187,7 +1187,7 @@ Espirais de Fibonacci
 
 A proporção áurea explica por que os números de Fibonacci aparecem na natureza, como o girassol e a pinha que você viu no início desta seção.
 
-Ambas as plantas crescem para fora do centro (uma parte da planta chamada meristema _<<<<_). À medida que novas sementes, folhas ou pétalas são adicionadas, elas empurram as existentes ainda mais para fora.
+Ambas as plantas crescem para fora do centro (uma parte da planta chamada _meristema_). À medida que novas sementes, folhas ou pétalas são adicionadas, elas empurram as existentes ainda mais para fora.
 
 Mova o controle deslizante à direita para visualizar como uma planta cresce. Observe como cada folha é adicionada em uma rotação diferente da anterior. O ângulo entre duas folhas consecutivas é sempre o mesmo.
 
@@ -1220,7 +1220,7 @@ Mova o controle deslizante à direita para visualizar como uma planta cresce. Ob
 
 {div.inline(slot="legend")} Se o ângulo é _{span.fib-action(data-value=0.5)} `1/2`_ de uma rotação completa (180 °), as sementes alternam entre dois “braços” separados que se afastam do centro.
 
-{div.inline(slot="legend")} Se a rotação for outra proporção fracionária de 360 °, por exemplo _{span.fib-action(data-value=2/5)} `2/5`_ ou _{span.fib-action(data-value=1/3)} `1/3`_ ou _{span.fib-action(data-value=3/8)} `3/8`_, o número de “armas” será o mesmo que o denominador [[<<<<|numerator|prime factor]] dessa fração.
+{div.inline(slot="legend")} Se a rotação for outra proporção fracionária de 360 °, por exemplo _{span.fib-action(data-value=2/5)} `2/5`_ ou _{span.fib-action(data-value=1/3)} `1/3`_ ou _{span.fib-action(data-value=3/8)} `3/8`_, o número de “armas” será o mesmo que o [[denominador|numerator|prime factor]] dessa fração.
 
 {div(slot="legend")} Infelizmente, “braços” são ruins, porque significam que as sementes não são distribuídas igualmente: todo o espaço entre os braços é desperdiçado. Mas se [números racionais](gloss:rational-numbers) não estão funcionando, vamos tentar [números irracionais](gloss:irrational-numbers)!
 
@@ -1496,7 +1496,7 @@ Em 1937, o matemático [Lothar Collatz](bio:collatz) propôs que _todas as seqü
 
 :::
 
-No entanto, existem infinitos muitos números inteiros. É impossível verificar cada um deles, e ninguém foi capaz de encontrar uma prova [<<<<](gloss:proof) que funcione para todos.
+No entanto, existem infinitos muitos números inteiros. É impossível verificar cada um deles, e ninguém foi capaz de encontrar uma [prova](gloss:proof) que funcione para todos.
 
 Assim como a busca por números perfeitos ímpares, esse ainda é um problema em aberto na matemática. É incrível que esses padrões simples de sequências possam levar a perguntas que confundiram até os melhores matemáticos do mundo por séculos!
 
@@ -1678,7 +1678,7 @@ Os números na segunda diagonal de cada lado são os [[números inteiros|primes|
 
 #### {.btn.red} _{span.check(when="blank-2")}_
 
-Os números na terceira diagonal de cada lado são os números do triângulo [[<<<<|square numbers|Fibonacci numbers]].
+Os números na terceira diagonal de cada lado são os números do [[triângulo|square numbers|Fibonacci numbers]].
 
 ::: tab
 
@@ -1744,7 +1744,7 @@ Alguns padrões no triângulo de Pascal não são tão fáceis de detectar. No d
         - i += 1;
     x-gesture(target="#pascal-select .r:nth-child(3) .c:nth-child(2)")
 
-{.reveal(when="select")} Parece que o número par no triângulo de Pascal forma outro triângulo menor [[<<<<|matrix|square]].
+{.reveal(when="select")} Parece que o número par no triângulo de Pascal forma outro triângulo [[menor|matrix|square]].
 
 ---
 > id: modular-1

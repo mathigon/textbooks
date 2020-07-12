@@ -45,7 +45,7 @@ _{button.next-step} Continua_
 > id: transformations
 > goals: t1 t2 t3
 
-Mentre la simmetria è un concetto molto intuitivo, descriverla matematicamente è più difficile di quanto si possa pensare. Innanzitutto, dobbiamo conoscere le trasformazioni [__<<<<__](gloss:transformation), che sono modi per convertire una figura geometrica in un'altra. Ecco alcuni esempi:
+Mentre la simmetria è un concetto molto intuitivo, descriverla matematicamente è più difficile di quanto si possa pensare. Innanzitutto, dobbiamo conoscere le [__trasformazioni__](gloss:transformation), che sono modi per convertire una figura geometrica in un'altra. Ecco alcuni esempi:
 
 ::: column.r(width=200)
 
@@ -136,7 +136,7 @@ Ma prima, diamo un'occhiata a ciascuno di questi tipi di trasformazioni in modo 
 
 ### Traduzioni
 
-Una traduzione [__<<<<__](gloss:translation) è una trasformazione che sposta ogni punto di una figura della stessa distanza nella stessa direzione.
+Una [__traduzione__](gloss:translation) è una trasformazione che sposta ogni punto di una figura della stessa distanza nella stessa direzione.
 
 Nel piano delle coordinate, possiamo specificare una traduzione di quanto la forma viene spostata lungo l'asse _x_ e l'asse _y_. Ad esempio, una trasformazione di (3, 5) sposta una forma di 3 lungo l'asse _x_ e di 5 lungo l'asse _y_.
 
@@ -925,7 +925,7 @@ Oltre alla simmetria riflessiva, rotazionale e traslazionale, esiste anche un qu
 
 Un modello può avere più di un tipo di simmetria. E proprio come per i quadrati, possiamo trovare il [gruppo di simmetria](gloss:symmetry-group) di un modello, che contiene tutte le sue diverse simmetrie.
 
-Questi gruppi non ti dicono molto su come appare il modello _<<<<_ (ad esempio i suoi colori e forme), come è ripetuto _<<<<_. Più modelli diversi possono avere lo stesso gruppo di simmetria, purché siano disposti e ripetuti allo stesso modo.
+Questi gruppi non ti dicono molto su come appare il _modello_ (ad esempio i suoi colori e forme), come è _ripetuto_. Più modelli diversi possono avere lo stesso gruppo di simmetria, purché siano disposti e ripetuti allo stesso modo.
 
 ::: column.grow
 

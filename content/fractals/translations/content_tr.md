@@ -951,7 +951,7 @@ Bu kaydırma çizgisini kullanarak, 27 ayrı resimden oluşan bu seride 14 katri
 
 [{.pill.red} c](target:c) değerini Mandelbrot setinin etrafında hareket ettirdikçe, ilginç bir özellik fark edebilirsiniz:
 
-* Mandelbrot setinin [[ana gövdesi](target:bulb0) içerisindeki tüm diziler [[<<<<|ıraksar|yörüngeye ulaşır]] _{span.reveal(when="blank-0")} tek bir noktaya yakınsar._
+* Mandelbrot setinin [[ana gövdesi](target:bulb0) içerisindeki tüm [[diziler|ıraksar|yörüngeye ulaşır]] _{span.reveal(when="blank-0")} tek bir noktaya yakınsar._
 * {.reveal(when="blank-0")} Üstteki [büyük ampul içindeki](target:bulb1) diziler, [[3]] noktadan oluşan [[yörüngesine ulaşır|yakınsar|ıraksar]] _{span.reveal(when="blank-1")}._
 * {.reveal(when="blank-2")} [Küçük ampulün içindeki](target:bulb2) diziler [[5]] uzunluğunda yörüngelere sahiptir.
 

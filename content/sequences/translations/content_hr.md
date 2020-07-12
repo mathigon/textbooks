@@ -353,7 +353,7 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ### Definicije
 
-Ako uspoređujemo oba ova problema, primijećujemo da postoje mnoge sličnosti: niz Halleyevog kometa ima istu [[razliku|ratio|product]] između uzastopnih elemenata niza, dok redoslijed odskoka za tenisku lopticu ima isti kvocijent [[<<<<|difference|product]] između uzastopnih elemenata niza.
+Ako uspoređujemo oba ova problema, primijećujemo da postoje mnoge sličnosti: niz Halleyevog kometa ima istu [[razliku|ratio|product]] između uzastopnih elemenata niza, dok redoslijed odskoka za tenisku lopticu ima isti [[kvocijent|difference|product]] između uzastopnih elemenata niza.
 
 ---
 > id: arithmetic-geometric-1
@@ -471,7 +471,7 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="var-0 var-1 var-2 var-3")} Primjetite kako svi __{.m-red} aritmetički nizovi__ izgledaju vrlo slično: ako je razlika pozitivna, oni konstantno [[rastu|decrease]], a ako je razlika negativna, oni konstantno padaju [[<<<<|increase]].
+{.reveal(when="var-0 var-1 var-2 var-3")} Primjetite kako svi __{.m-red} aritmetički nizovi__ izgledaju vrlo slično: ako je razlika pozitivna, oni konstantno [[rastu|decrease]], a ako je razlika negativna, oni konstantno [[padaju|increase]].
 
 {.reveal(when="blank-0 blank-1")} Geometrijski nizovi, s druge strane, mogu se ponašati potpuno drugačije ovisno o vrijednosti `a` i _r_:
 
@@ -622,7 +622,7 @@ Pomoću [eksplicitne formule](gloss:sequence-explicit) za geometrijski niz, mož
 
 Broj ljudi se nevjerojatno brzo povećava. U 10. koraku zahvatili biste 19.683 novih, a nakon 22 koraka zahvatili biste više ljudi nego što trenutno živi na Zemlji.
 
-Ovaj niz brojeva ima posebno ime: __potencija od 3__. Kao što vidite, svaki je element neka potencija [<<<<](gloss:powers) od 3:
+Ovaj niz brojeva ima posebno ime: __potencija od 3__. Kao što vidite, svaki je element neka [potencija](gloss:powers) od 3:
 
 {.text-center.s-orange} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
 _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
@@ -650,14 +650,14 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 Naziv [geometrijski niz](gloss:geometric-sequence) prilično je zbunjujuć jer ovi nizovi nemaju ništa s geometrijom. U stvari, ime je nastalo prije više stotina godina, kada su matematičari razmišljali o _množenju_ i _korjenovanju_ na mnogo geometrijskiji način.
 
-Međutim, postoje mnogi drugi nizovi koji se _temelje na određenim geometrijskim oblicima - neke od njih ste već vidjeli u uvodu [<<<<](/course/sequences/introduction). Ove nizove često nazivamo [__figurativnim brojevima__](gloss:figurate-numbers), a u ovom ćemo dijelu detaljnije pogledati neke od njih.
+Međutim, postoje mnogi drugi nizovi koji se _temelje na određenim geometrijskim oblicima - neke od njih ste već vidjeli u [uvodu](/course/sequences/introduction). Ove nizove često nazivamo [__figurativnim brojevima__](gloss:figurate-numbers), a u ovom ćemo dijelu detaljnije pogledati neke od njih.
 
 ---
 > id: triangle-numbers
 
 ### Trokutni brojevi
 
-Trokutni brojevi __<<<<__ generiraju se stvaranjem trokuta čija veličina progresivno raste:
+Trokutni __brojevi__ generiraju se stvaranjem trokuta čija veličina progresivno raste:
 
 ::: column(width=24 parent="padded-thin")
 
@@ -1024,7 +1024,7 @@ Na jednoj od stranica u svojoj knjizi, također je istraživao uzgojne obrasce z
 ---
 > id: spirals
 
-Naravno, Fibonaccijevi brojevi ne opisuju način na koji se zečevi _<<<<_ razmnožavaju u stvarnom životu. Kunići nemaju točno jednog muškog i jednog ženskog potomka svaki mjesec, a nije uračunato ni da će kunići na kraju i umrijeti.
+Naravno, Fibonaccijevi brojevi ne opisuju način na koji se _zečevi_ razmnožavaju u stvarnom životu. Kunići nemaju točno jednog muškog i jednog ženskog potomka svaki mjesec, a nije uračunato ni da će kunići na kraju i umrijeti.
 
 Ipak, čini se da u prirodi postoje mnoga druga mjesta na kojima se pojavljuju Fibonaccijevi brojevi: na primjer spirale u biljkama. Možete li prebrojati koliko spirala ima u svakom smjeru?
 
@@ -1366,7 +1366,7 @@ Možete saznati više o tim i drugim svojstvima prostih brojeva u našem poglavl
 
 ### Savršeni brojevi
 
-Da bismo utvrdili je li broj [<<<<](gloss:prime), moramo pronaći sve njegove [faktore](gloss:factor). Obično _množimo_ ove faktore da bismo dobili izvorni broj, ali da vidimo što će se dogoditi ako _zbrojimo_ sve faktore broja (bez samog broja):
+Da bismo utvrdili je li [broj](gloss:prime), moramo pronaći sve njegove [faktore](gloss:factor). Obično _množimo_ ove faktore da bismo dobili izvorni broj, ali da vidimo što će se dogoditi ako _zbrojimo_ sve faktore broja (bez samog broja):
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
