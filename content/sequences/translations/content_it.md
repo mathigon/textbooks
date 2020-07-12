@@ -40,7 +40,7 @@ I matematici professionisti usano algoritmi molto complessi per trovare e analiz
 
 ### Sequenze semplici
 
-In matematica, una sequenza [__<<<<__](gloss:sequence) è una catena di numeri (o altri oggetti) che di solito seguono uno schema particolare. I singoli elementi di una sequenza sono chiamati [__termini__](gloss:sequence-term).
+In matematica, una [__sequenza__](gloss:sequence) è una catena di numeri (o altri oggetti) che di solito seguono uno schema particolare. I singoli elementi di una sequenza sono chiamati [__termini__](gloss:sequence-term).
 
 Ecco alcuni esempi di sequenze. Riesci a trovare i loro modelli e calcolare i prossimi due termini?
 
@@ -75,7 +75,7 @@ number by 2, to get the next one.”_
 ---
 > id: simple-patterns-1
 
-I punti (...) alla fine significano semplicemente che la sequenza può continuare all'infinito. Quando ci riferiamo a sequenze come questa in matematica, spesso rappresentiamo ogni termine con una speciale variabile [<<<<](gloss:variable):
+I punti (...) alla fine significano semplicemente che la sequenza può continuare all'infinito. Quando ci riferiamo a sequenze come questa in matematica, spesso rappresentiamo ogni termine con una speciale [variabile](gloss:variable):
 
     p.text-center.s-orange
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -229,7 +229,7 @@ Riassumiamo tutte le definizioni che abbiamo visto finora:
 
 ::: .theorem
 
-Una sequenza [__<<<<__](gloss:sequence) è un elenco di numeri, forme geometriche o altri oggetti che seguono uno schema specifico. I singoli elementi nella sequenza sono chiamati [__termini__](gloss:sequence-term) e rappresentati da variabili come `x_n`.
+Una [__sequenza__](gloss:sequence) è un elenco di numeri, forme geometriche o altri oggetti che seguono uno schema specifico. I singoli elementi nella sequenza sono chiamati [__termini__](gloss:sequence-term) e rappresentati da variabili come `x_n`.
 
 Una [__formula ricorsiva__](gloss:sequence-recursive) per una sequenza indica il valore del _n_ th termine in funzione di [[dei suoi termini precedenti|the first term]]. Devi anche specificare i primi termini.
 
@@ -248,7 +248,7 @@ Per prima cosa, diamo un'occhiata a qualcosa di completamente diverso: __fotogra
 
     figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
-Riesci a vedere come lo sciatore forma una sequenza? Il modello non è addizione o moltiplicazione, ma una trasformazione geometrica [<<<<](gloss:rigid-transformation). Tra una sequenza e l'altra, lo sciatore viene tradotto e [[ruotato|reflected|dilated]].
+Riesci a vedere come lo sciatore forma una sequenza? Il modello non è addizione o moltiplicazione, ma una trasformazione [geometrica](gloss:rigid-transformation). Tra una sequenza e l'altra, lo sciatore viene tradotto e [[ruotato|reflected|dilated]].
 
 ---
 > id: action-sequence-1
@@ -365,7 +365,7 @@ Le sequenze con queste proprietà hanno un nome speciale:
 
     p.text-center: include svg/comet.svg
 
-Una sequenza aritmetica [__<<<<__](gloss:arithmetic-sequence) ha una differenza __{.m-red} costante _d___ tra termini consecutivi.
+Una sequenza [__aritmetica__](gloss:arithmetic-sequence) ha una differenza __{.m-red} costante _d___ tra termini consecutivi.
 
 Lo stesso numero viene aggiunto o sottratto ad ogni termine, per produrre quello successivo.
 
@@ -375,7 +375,7 @@ Lo stesso numero viene aggiunto o sottratto ad ogni termine, per produrre quello
 
     p.text-center: include svg/ball.svg
 
-Una sequenza geometrica [__<<<<__](gloss:geometric-sequence) ha una costante __{.m-green} rapporto _r___ tra termini consecutivi.
+Una sequenza [__geometrica__](gloss:geometric-sequence) ha una costante __{.m-green} rapporto _r___ tra termini consecutivi.
 
 Ogni termine viene moltiplicato o diviso per lo stesso numero, per produrre il prossimo.
 
@@ -467,7 +467,7 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="var-0 var-1 var-2 var-3")} Nota come tutte le __{.m-red} sequenze aritmetiche__ sembrano molto simili: se la differenza è positiva, aumentano costantemente [[aumentano|decrease]] e se la differenza è negativa, diminuiscono costantemente [[<<<<|increase]].
+{.reveal(when="var-0 var-1 var-2 var-3")} Nota come tutte le __{.m-red} sequenze aritmetiche__ sembrano molto simili: se la differenza è positiva, aumentano costantemente [[aumentano|decrease]] e se la differenza è negativa, diminuiscono [[costantemente|increase]].
 
 {.reveal(when="blank-0 blank-1")} Le sequenze geometriche, invece, possono comportarsi in modo completamente diverso in base ai valori di `a` e _r_:
 
@@ -645,7 +645,7 @@ Questa sequenza di numeri ha un nome speciale: i poteri __di 3__. Come puoi vede
 
 Il nome per [sequenze geometriche](gloss:geometric-sequence) è piuttosto confuso, perché non hanno nulla a che fare con la geometria. In effetti, il nome è stato sviluppato centinaia di anni fa, quando i matematici pensavano alla _moltiplicazione_ e _radici quadrate_ in un modo molto più geometrico.
 
-Tuttavia, ci sono molte altre sequenze che _sono_ basate su determinate forme geometriche - alcune delle quali hai già visto nell'introduzione [<<<<](/course/sequences/introduction). Queste sequenze sono spesso chiamate [__numeri figurati__](gloss:figurate-numbers) e in questa sezione daremo uno sguardo più da vicino ad alcuni di essi.
+Tuttavia, ci sono molte altre sequenze che _sono_ basate su determinate forme geometriche - alcune delle quali hai già visto nell'[introduzione](/course/sequences/introduction). Queste sequenze sono spesso chiamate [__numeri figurati__](gloss:figurate-numbers) e in questa sezione daremo uno sguardo più da vicino ad alcuni di essi.
 
 ---
 > id: triangle-numbers
@@ -769,7 +769,7 @@ I numeri dei triangoli sembrano spuntare ovunque in matematica e li vedrai di nu
 
 #### Problem Solving
 
-Qual è la somma dei primi 100 interi positivi [<<<<](gloss:integer)? In altre parole, qual è il valore di
+Qual è la somma dei primi 100 interi [positivi](gloss:integer)? In altre parole, qual è il valore di
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
@@ -1019,7 +1019,7 @@ In una delle pagine del suo libro, ha anche studiato gli schemi genetici dei con
 
 Naturalmente, i numeri di Fibonacci non sono come i conigli _in realtà_ popolano nella vita reale. I conigli non hanno esattamente un figlio maschio e una femmina ogni mese, e alla fine non abbiamo tenuto conto della morte dei conigli.
 
-Ma si scopre che ci sono molti altri luoghi in natura in cui compaiono i numeri di Fibonacci _<<<<_: ad esempio le spirali nelle piante. Riesci a contare quante spirali ci sono in ogni direzione?
+Ma si scopre che ci sono molti altri luoghi in natura in cui compaiono i numeri di _Fibonacci_: ad esempio le spirali nelle piante. Riesci a contare quante spirali ci sono in ogni direzione?
 
 ::: column(width=320)
 
@@ -1099,7 +1099,7 @@ Proprio come il [triangolo](gloss:triangle-numbers) e [numeri quadrati](gloss:sq
 ---
 > id: golden-ratio
 
-Ad ogni passo, i quadrati formano un rettangolo più grande. La sua larghezza e altezza sono sempre due numeri consecutivi di Fibonacci. Le proporzioni __<<<<__ del rettangolo sono il rapporto tra la sua larghezza e la sua altezza:
+Ad ogni passo, i quadrati formano un rettangolo più grande. La sua larghezza e altezza sono sempre due numeri consecutivi di Fibonacci. Le __proporzioni__ del rettangolo sono il rapporto tra la sua larghezza e la sua altezza:
 
 ::: column(width=100 parent="padded-thin golden-rect")
 
@@ -1164,7 +1164,7 @@ Molte persone credono che il rapporto aureo sia particolarmente esteticamente gr
       x-img(src="images/dali.jpg" width=320 height=198)
       img(src="images/dali-box.png" width=320 height=198)
 
-{.caption} _The Sacrament of the Last Supper_, dell'artista spagnolo Salvador Dalí, è uno dei tanti dipinti nella sezione aurea. Sullo sfondo, puoi anche vedere un grande dodecaedro [<<<<](gloss:dodecahedron).
+{.caption} _The Sacrament of the Last Supper_, dell'artista spagnolo Salvador Dalí, è uno dei tanti dipinti nella sezione aurea. Sullo sfondo, puoi anche vedere un grande [dodecaedro](gloss:dodecahedron).
 
 :::
 
@@ -1530,7 +1530,7 @@ Questa sequenza viene spesso utilizzata come puzzle per far inciampare i matemat
 ---
 > id: look-and-say-3
 
-Il matematico britannico [John Conway](bio:conway) ha scoperto che, indipendentemente dal numero selezionato come valore iniziale, la sequenza alla fine verrà suddivisa in "sezioni" distinte che non interagiscono più tra loro. Conway lo chiamò _Teorema cosmologico_ e nominò le diverse sezioni usando gli elementi chimici _Hydrogen_, _Helium_, _Lithium_, ..., fino a _<<<<_ Il plutonio.
+Il matematico britannico [John Conway](bio:conway) ha scoperto che, indipendentemente dal numero selezionato come valore iniziale, la sequenza alla fine verrà suddivisa in "sezioni" distinte che non interagiscono più tra loro. Conway lo chiamò _Teorema cosmologico_ e nominò le diverse sezioni usando gli elementi chimici _Hydrogen_, _Helium_, _Lithium_, ..., fino _a_ Il plutonio.
 
 ---
 > id: quiz
@@ -1677,7 +1677,7 @@ I numeri nella seconda diagonale su entrambi i lati sono i [[numeri interi|prime
 
 #### {.btn.red} _{span.check(when="blank-2")}_
 
-I numeri nella terza diagonale su entrambi i lati sono i numeri del triangolo [[<<<<|square numbers|Fibonacci numbers]].
+I numeri nella terza diagonale su entrambi i lati sono i numeri del [[triangolo|square numbers|Fibonacci numbers]].
 
 ::: tab
 

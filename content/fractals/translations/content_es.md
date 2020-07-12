@@ -150,7 +150,7 @@ Ahora echemos un vistazo al triángulo de Sierpinski. Si lo escalamos por un fac
 ---
 > id: dimension-4
 
-Pero espera ... ¿cómo puede algo tener una dimensión que no sea un número entero? Parece imposible, pero esta es solo una de las propiedades extrañas de los fractales. De hecho, esto es lo que les da su nombre a los fractales: tienen una dimensión fraccional __<<<<__.
+Pero espera ... ¿cómo puede algo tener una dimensión que no sea un número entero? Parece imposible, pero esta es solo una de las propiedades extrañas de los fractales. De hecho, esto es lo que les da su nombre a los fractales: tienen una dimensión __fraccional__.
 
 Con cada iteración, eliminamos parte del área del triángulo de Sierpinski. Si pudiéramos hacer esto infinitamente muchas veces, en realidad no quedaría ningún área: es por eso que el triángulo de Sierpinski es algo entre un área bidimensional y una línea unidimensional.
 
@@ -238,7 +238,7 @@ Cuando escalamos un segmento de borde del Copo de nieve Koch por un factor de 3,
 
 #### Área _{span.check(when="blank-6")}_
 
-Crear los copos de nieve Koch es casi como una secuencia recursiva [<<<<](gloss:sequence-recursive): conocemos la forma inicial (un triángulo) y sabemos cómo pasar de un término al siguiente (agregando más triángulos en cada borde):
+Crear los copos de nieve Koch es casi como una secuencia [recursiva](gloss:sequence-recursive): conocemos la forma inicial (un triángulo) y sabemos cómo pasar de un término al siguiente (agregando más triángulos en cada borde):
 
 ::: column(width=140)
 
@@ -381,7 +381,7 @@ Una manera de medir la longitud de la costa de Gran Bretaña, por ejemplo, es to
 
 Si la regla tiene ${rulers[index]}{index|0|0,8,1} km de largo, tenemos que usarla ${count} veces, por lo que obtenemos una línea costera total de ${count} × ${rulers[index]} = ${count * rulers[index]} km.
 
-{.reveal(when="var-0")} Podemos seguir adelante, con gobernantes cada vez más pequeños, y cada vez que nuestro resultado para la longitud de la costa sea un poco más largo. Al igual que el Copo de nieve de Koch, ¡parece que la costa de Gran Bretaña es infinitamente larga! Esto a menudo se llama la paradoja de la costa __<<<<__. [Continuar](btn:next)
+{.reveal(when="var-0")} Podemos seguir adelante, con gobernantes cada vez más pequeños, y cada vez que nuestro resultado para la longitud de la costa sea un poco más largo. Al igual que el Copo de nieve de Koch, ¡parece que la costa de Gran Bretaña es infinitamente larga! Esto a menudo se llama la paradoja de la __costa__. [Continuar](btn:next)
 
 ::: column(width=280)
 

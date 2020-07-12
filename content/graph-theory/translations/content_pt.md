@@ -642,7 +642,7 @@ No entanto, os matemáticos também analisaram mapas de _impérios_, onde os pa�
 
 ::: column.grow(parent="right")
 
-Vamos pensar, mais uma vez, em redes e mapas. Imagine que um serviço de entrega precise visitar ${tsn}{tsn|8|2,50,1} cidades diferentes para distribuir encomendas. Podemos pensar nessas cidades como os vértices de um gráfico. Se todas as cidades estiverem conectadas por estradas, este é um gráfico completo [[<<<<|cycle|bipartite graph]], então há <mfrac> <mrow> ${tsn} × (${tsn} - 1) </mrow> <mn> 2 </mn> </mfrac> = ${tsn*(tsn-1)/2} arestas no total.
+Vamos pensar, mais uma vez, em redes e mapas. Imagine que um serviço de entrega precise visitar ${tsn}{tsn|8|2,50,1} cidades diferentes para distribuir encomendas. Podemos pensar nessas cidades como os vértices de um gráfico. Se todas as cidades estiverem conectadas por estradas, este é um gráfico [[completo|cycle|bipartite graph]], então há <mfrac> <mrow> ${tsn} × (${tsn} - 1) </mrow> <mn> 2 </mn> </mfrac> = ${tsn*(tsn-1)/2} arestas no total.
 
 O caminhão de entrega deve visitar todas as cidades, em qualquer ordem. No problema das pontes de Königsberg, queríamos encontrar caminhos que percorrem _todas as margens_ exatamente um. Agora, queremos encontrar caminhos que visitam _todos os vértices_ exatamente uma vez. Esses caminhos são chamados __ciclos hamiltonianos__.
 
@@ -827,7 +827,7 @@ A internet é a maior rede já criada pela humanidade. Esta imagem mostra uma pr
 ---
 > id: applications-3
 
-Enquanto sites e hiperlinks formam um gráfico _virtual_, também existe a rede física _<<<<_ de computadores, servidores, roteadores, linhas telefônicas e cabos.
+Enquanto sites e hiperlinks formam um gráfico _virtual_, também existe a rede _física_ de computadores, servidores, roteadores, linhas telefônicas e cabos.
 
 ::: column.grow(parent="right")
 
