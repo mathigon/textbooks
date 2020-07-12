@@ -23,7 +23,7 @@ Drevni grčki astronomi bili su prvi koji su otkrili da se svi nebeski objekti k
 > id: radius
 > goals: compass
 
-Svaka točka [__kruga__](gloss:circle) ima istu udaljenost od središta. To znači da se mogu nacrtati kompasom [<<<<](gloss:compass):
+Svaka točka [__kruga__](gloss:circle) ima istu udaljenost od središta. To znači da se mogu nacrtati [kompasom](gloss:compass):
 
 ::: column(width=320)
 
@@ -76,7 +76,7 @@ Ovdje je kotač promjera 1. Dok "odmotavate" obod, možete vidjeti da je njegova
 ---
 > id: circumference
 
-Za krug promjera _d_, obim je `C = π × d`. Slično tome, za krug s polumjerom [<<<<](gloss:circle-radius) _r_, obim je
+Za krug promjera _d_, obim je `C = π × d`. Slično tome, za krug s [polumjerom](gloss:circle-radius) _r_, obim je
 
 {.text-center} `C =` [[`2 π r`|`π r`|`π r^2`]].
 
@@ -1243,7 +1243,7 @@ Polumjer __{.m-green} sektora__ jednak je udaljenosti od ruba konusa do njegove 
 
 ::: column.grow
 
-[{.pill.red} Dužina luka](target:arc) sektora jednaka je [[obodu|diameter|arc]] baze [{.pill.yellow} baze](target:base): _{span.reveal(when="blank-0")} `2 π r`. Sada možemo pronaći područje sektora pomoću formule [<<<<](gloss:circle-sector) koju smo dobili u prethodnom odjeljku:_
+[{.pill.red} Dužina luka](target:arc) sektora jednaka je [[obodu|diameter|arc]] baze [{.pill.yellow} baze](target:base): _{span.reveal(when="blank-0")} `2 π r`. Sada možemo pronaći područje sektora pomoću [formule](gloss:circle-sector) koju smo dobili u prethodnom odjeljku:_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1393,7 +1393,7 @@ Polumjer rupe je _h_. Područje prstena možemo pronaći oduzimanjem područja r
 ---
 > id: sphere-volume-1
 
-Čini se da obje čvrste tvari imaju isto područje poprečnog presjeka na svakoj razini. Prema Cavalierijevom principu, obje čvrste tvari moraju također imati isti volumen [[<<<<|surface area|circumference]]! _{span.reveal(when="blank-0")} Volumen hemisfere možemo pronaći ako oduzmemo volumen [cilindra](gloss:cylinder-volume) i volumen [konusa](gloss:cone-volume):_
+Čini se da obje čvrste tvari imaju isto područje poprečnog presjeka na svakoj razini. Prema Cavalierijevom principu, obje čvrste tvari moraju također imati isti [[volumen|surface area|circumference]]! _{span.reveal(when="blank-0")} Volumen hemisfere možemo pronaći ako oduzmemo volumen [cilindra](gloss:cylinder-volume) i volumen [konusa](gloss:cone-volume):_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 

@@ -734,11 +734,11 @@ Sierpinski त्रिकोण के कई प्रकार हैं, औ
 
 ::: column.frame.f-blue.text-center(width=212)
 
-यदि `x_0` -1 और 1 के बीच है, तो अनुक्रम [[<<<<|diverges]] में परिवर्तित हो जाता है।
+यदि `x_0` -1 और के बीच है, तो अनुक्रम [[1|diverges]] में परिवर्तित हो जाता है।
 
 ::: column.frame.f-blue.text-center(width=212)
 
-यदि `x_0 < -1`, अनुक्रम [[<<<<|converges]] को विचलन करता है।
+यदि `x_0 < -1`, अनुक्[[रम|converges]] को विचलन करता है।
 
 :::
 
@@ -778,7 +778,7 @@ Sierpinski त्रिकोण के कई प्रकार हैं, औ
             strong.var.m-blue(:show="converges" data-display="inline") Converges!
             strong.var(:show="!converges" data-display="inline") Diverges!
 
-{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} जैसा कि आप देख सकते हैं, यह क्रम इकाई के सर्कल {<<<<| outside the unit square|above the _>>>>x<<<<_-axis]] _{span.reveal(when="blank-0")} (त्रिज्या के साथ वृत्त, मूल में केंद्रित)_ के अंदर `pill(x_0,"yellow","x0")` झूठ [[है।
+{.reveal(when="wipe-a wipe-b wipe-c wipe-d")} कि आप देख सकते हैं, यह क्रम इकाई के सर्कल {जैसा| outside the unit square|above the _>>>>x<<<<_-axis]] _{span.reveal(when="blank-0")} (त्रिज्या के साथ वृत्त, मूल में केंद्रित)_ के अंदर `pill(x_0,"yellow","x0")` झूठ [[है।
 
 ---
 

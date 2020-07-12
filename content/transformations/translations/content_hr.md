@@ -921,7 +921,7 @@ Uz reflektirajuću, rotacijsku i translacijsku simetriju, postoji čak i četvrt
 
 Uzorak može imati više vrsta simetrije. Kao i kod kvadrata, možemo pronaći [grupu simetrije](gloss:symmetry-group) obrasca, koja sadrži sve njegove različite simetrije.
 
-Te vam grupe ne govore mnogo o tome kako izgleda obrazac _<<<<_ (npr. Njegove boje i oblici), koliko se ponavlja _<<<<_. Više različitih uzoraka može imati istu skupinu simetrije - sve dok su raspoređeni i ponovljeni na isti način.
+Te vam grupe ne govore mnogo o tome kako izgleda _obrazac_ (npr. Njegove boje i oblici), koliko se _ponavlja_. Više različitih uzoraka može imati istu skupinu simetrije - sve dok su raspoređeni i ponovljeni na isti način.
 
 ::: column.grow
 

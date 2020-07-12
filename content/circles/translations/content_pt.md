@@ -489,9 +489,9 @@ Você pode pensar em radianos como a “distância percorrida” ao longo da cir
 
 Por exemplo, a [Estação Espacial Internacional](gloss:iss) orbita a Terra uma vez a cada 1,5\ horas. Isso significa que sua __velocidade de rotação__ é [[`(2 pi)/1.5`| `1.5/(2 pi)`|`1.5 * pi`]] radianos por hora.
 
-{.reveal(when="blank-0")} Em um círculo unitário](gloss:unit-circle)](gloss:unit-circle), a velocidade de rotação é a mesma que a velocidade real _<<<<_, porque o comprimento da circunferência é o mesmo que uma rotação completa em radianos (ambos são `2pi`).
+{.reveal(when="blank-0")} Em um círculo unitário](gloss:unit-circle)](gloss:unit-circle), a velocidade de rotação é a mesma que a velocidade _real_, porque o comprimento da circunferência é o mesmo que uma rotação completa em radianos (ambos são `2pi`).
 
-{.reveal(when="blank-0" delay=1000)} O raio da órbita da ISS é 6800\ km, o que significa que a velocidade _<<<<_ real da ISS deve ser [[`(2 pi)/1.5 xx 6800`| `(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")} = 28483 km por hora._
+{.reveal(when="blank-0" delay=1000)} O raio da órbita da ISS é 6800\ km, o que significa que a _velocidade_ real da ISS deve ser [[`(2 pi)/1.5 xx 6800`| `(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")} = 28483 km por hora._
 
 ::: column(width=300)
 
@@ -522,7 +522,7 @@ Você pode ver que, neste exemplo, os radianos são uma unidade muito mais conve
 
 ### Trigonometria
 
-Para a maioria dos problemas simples de geometria, os graus e os radianos são completamente intercambiáveis - você pode escolher qual deles prefere ou uma pergunta pode dizer em que unidade você deve responder. , depois de estudar os cálculos mais avançados da [trigonometria](gloss:trigonometry) ou [<<<<](gloss:calculus), verifica-se que os radianos são muito mais convenientes do que graus.
+Para a maioria dos problemas simples de geometria, os graus e os radianos são completamente intercambiáveis - você pode escolher qual deles prefere ou uma pergunta pode dizer em que unidade você deve responder. , depois de estudar os cálculos mais avançados da [trigonometria](gloss:trigonometry) [ou](gloss:calculus), verifica-se que os radianos são muito mais convenientes do que graus.
 
 ::: column.grow
 
@@ -559,7 +559,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: small-angle
 
-O uso de radianos tem uma vantagem particularmente interessante ao usar a função Seno [__<<<<__](gloss:sin). Se `θ` for um ângulo muito pequeno (menor que 20 ° ou 0,3 rad), então `sin(θ) ≈ θ`. Por exemplo, {.text-center} sin (${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
+O uso de radianos tem uma vantagem particularmente interessante ao usar a função [__Seno__](gloss:sin). Se `θ` for um ângulo muito pequeno (menor que 20 ° ou 0,3 rad), então `sin(θ) ≈ θ`. Por exemplo, {.text-center} sin (${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
 {.reveal(when="var-0")} Isso é chamado de __aproximação de ângulo pequeno__, e pode simplificar bastante certas equações que contêm funções trigonométricas. Você aprenderá muito mais sobre isso no futuro.
 
@@ -662,7 +662,7 @@ Infelizmente, ninguém sabia exatamente o tamanho da Terra - até cerca de 200 a
 
 ::: column.grow
 
-Como você pode ver no diagrama, um arco [{.red}](pill:arc) faz parte da circunferência [[<<<<|diameter|tangent]] de um círculo e um setor [{.yellow}](pill:sector) faz parte do [[interior|radius|perimeter]] de um círculo.
+Como você pode ver no diagrama, um arco [{.red}](pill:arc) faz parte da [[circunferência|diameter|tangent]] de um círculo e um setor [{.yellow}](pill:sector) faz parte do [[interior|radius|perimeter]] de um círculo.
 
 ::: .reveal(when="blank-0 blank-1")
 
@@ -1255,7 +1255,7 @@ Você pode pensar em uma esfera como um "[círculo](gloss:circle) tridimensional
 ---
 > id: sphere-1
 
-{.r} Em uma seção anterior de [<<<<](/course/circles/tangets-chords-arcs#eratosthenes-1), você aprendeu como o matemático grego [Eratóstenes](bio:eratosthenes) calculou o raio da Terra usando a sombra de um poste - eram 6.371 km. Agora, vamos tentar encontrar o volume total e a área de superfície da Terra. [Continuar](btn:next)
+{.r} Em uma seção anterior [de](/course/circles/tangets-chords-arcs#eratosthenes-1), você aprendeu como o matemático grego [Eratóstenes](bio:eratosthenes) calculou o raio da Terra usando a sombra de um poste - eram 6.371 km. Agora, vamos tentar encontrar o volume total e a área de superfície da Terra. [Continuar](btn:next)
 
 ---
 > id: sphere-volume

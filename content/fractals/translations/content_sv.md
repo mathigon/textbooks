@@ -732,15 +732,15 @@ Lägg märke till hur den resulterande sekvensen kan bete sig mycket annorlunda 
 
 ::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
-Om `x_0 > 1` avviker sekvensen [[<<<<|converges]]: _{span.reveal(when="blank-0")} fortsätter den bara att växa upp till oändligheten._
+Om `x_0 > 1` avviker [[sekvensen|converges]]: _{span.reveal(when="blank-0")} fortsätter den bara att växa upp till oändligheten._
 
 ::: column.frame.f-blue.text-center(width=212)
 
-Om `x_0` är mellan –1 och 1, konvergerar sekvensen [[<<<<|diverges]].
+Om `x_0` är mellan –1 och 1, konvergerar [[sekvensen|diverges]].
 
 ::: column.frame.f-blue.text-center(width=212)
 
-Om `x_0 < -1` avviker sekvensen [[<<<<|converges]].
+Om `x_0 < -1` avviker [[sekvensen|converges]].
 
 :::
 

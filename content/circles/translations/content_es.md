@@ -1526,7 +1526,7 @@ El | _A_ | = | `π r^2 - π h^2` | El | El | = | `π (r^2 - h^2)` | {.eqn-system
 
 > id: sphere-volume-1
 
-Parece que ambos sólidos tienen la misma área de sección transversal en todos los niveles. Según el principio de Cavalieri, ¡ambos sólidos también deben tener el mismo [[volumen|surface area|circumference]]! _{span.reveal(when="blank-0")} Podemos encontrar el volumen del hemisferio restando el volumen del cilindro [<<<<](gloss:cylinder-volume) y el volumen del cono [<<<<](gloss:cone-volume):_
+Parece que ambos sólidos tienen la misma área de sección transversal en todos los niveles. Según el principio de Cavalieri, ¡ambos sólidos también deben tener el mismo [[volumen|surface area|circumference]]! _{span.reveal(when="blank-0")} Podemos encontrar el volumen del hemisferio restando el volumen del [cilindro](gloss:cylinder-volume) y el volumen del [cono](gloss:cone-volume):_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
@@ -1663,7 +1663,7 @@ Para encontrar el área de superficie de una esfera, una vez más podemos aproxi
 > id: conics
 > goals: ellipse parabola hyperbola
 
-El círculo es una de las cuatro formas diferentes que se pueden crear utilizando "cortes" a través de un cono [<<<<](gloss:cone). Esto se puede demostrar usando el cono de luz de una antorcha:
+El círculo es una de las cuatro formas diferentes que se pueden crear utilizando "cortes" a través de un [cono](gloss:cone). Esto se puede demostrar usando el cono de luz de una antorcha:
 
     x-conic-section
     x-scale-box(width=760).conics
