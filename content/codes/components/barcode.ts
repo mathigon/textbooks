@@ -25,7 +25,10 @@ export class Barcode extends CustomElementView {
     this.$svg = $N('svg', {viewBox: '0 0 400 200'}, this) as SVGParentView;
     this.computeParityDigit(this.attr('value'));
     this.draw(this.attr('value'));
-    this.on('attr:value', (e) => this.draw(e.newAttr));
+    this.on('attr:value', (e) => {
+      this.computeParityDigit(e.newAttr);
+      this.draw(e.newAttr);
+    }); // I suspect this looks for changes in the "value" attribute.
   }
 
   private draw(value: string) {
