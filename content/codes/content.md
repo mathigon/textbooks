@@ -794,6 +794,8 @@ __and those who don't.__
 
 ----------------------------------------------------------------------------------------------------
 
+    // EDC photo resources
+    // https://commons.wikimedia.org/wiki/File:Barcodedmail.JPG
 
 ## Error Detection 
 
@@ -817,7 +819,7 @@ __and those who don't.__
 {.fixme} Let's think about some ways we could possibly make sure that we know the correct message.
 
 Perhaps the simplest way to do it would be to send multiple copies of the same message.
-If we send two copies (animation), then we know that there's an error, but we won't know which is the correct message (if you've ever seen a movie where there are two people and one might be an evil twin, you've experienced this before!). This would be an [Error Detecting Code](gloss)
+If we send two copies (DIAGRAM), then we know that there's an error, but we won't know which is the correct message (if you've ever seen a movie where there are two people and one might be an evil twin, you've experienced this before!). This would be an [Error Detecting Code](gloss)
 If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss)
 But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory, used this type of error correction. It would only be able to hold less than [[32]] GB of memory! Two thirds of it would be repeated data.
 
@@ -892,12 +894,20 @@ __The Guards__
 
 __The Digits__
 
-{.fixme} Let's recognize that these values are **not** the same as the binary representations we learned last chapter. They are still a binary code because they use two values (black and white), but the code to represent the digits is different.
+{.fixme} Let's recognize that these values are **not** the same as the binary representations we learned last chapter. They are still a binary code because they use two values (black and white), but the code to represent the digits is different.s
 
-| LEFT SIDE | | RIGHT SIDE | |
-|---|---|---|---|
-| 0 | 0001101 | 0 | 1110010 |
-| 1 | 0xxxxx1 | 1 | 1xxxxx0 |
+| DIGIT | LEFT SIDE | RIGHT SIDE |
+|---|---|---|
+| 0 | 0001101 | 1110010 |
+| 1 | 0011001 | 1100110 |
+| 2 | 0010011 | 1101100 |
+| 3 | 0111101 | 1000010 |
+| 4 | 0100011 | 1011100 |
+| 5 | 0110001 | 1001110 |
+| 6 | 0101111 | 1010000 |
+| 7 | 0111011 | 1000100 |
+| 8 | 0110111 | 1001000 |
+| 9 | 0001011 | 1110100 |
 
 {.fixme} There are a few interesting patterns we can recognize here. First, notice that the codes on the left side are different from the codes on the right side. This allows the bar code to be read upside down or backwards.
 
@@ -950,12 +960,26 @@ It's actually not quite as simple as giving the five digits 2-6 to each individu
 
 {.todo} Hamming Codes
 
+Let's go back to our original problem of how we might detect errors sent from a satellite. The information received from the satellite is unknown, and there is no backup plan, like a cashier who can look at a number and type it into the computer.
+
+A mathematician named [Richard Hamming](bio:hamming) had this same problem not with data from satellites, but from computers.
+
+Computers used to be programmed with [punch cards](gloss: punch cards). In 1947, Hamming programmed a computer to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered an error had occurred and his entire calculation was useless. He felt a need to invent a way to correct when an error had happened.
+
+
+// INTERACTIVE --- Encoding a Hamming Code
+
 ---
 
 ### Other Error Detection and Correction
 
 {.todo} CDs and DVDs
 
+{.todo} // PHOTOS
+- credit cards use "Luhn's algorithm" to compare the last digit ... RESEARCH
+- MD5 or SHA-1 hash included with a software application
+- CDs
+- Snapchat/Facebook profile codes
 
 ----------------------------------------------------------------------------------------------------
 
