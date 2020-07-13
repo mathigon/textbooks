@@ -879,7 +879,8 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 
 Look at this barcode. // INTERACTIVE
 
-    x-barcode(value="012345678901")
+    // only takes 11 values (last digit is error digit)
+    x-barcode(value="01234567890")
 
 The guards are on the [{.step-target.pill.b.red}outside](target:.bar-start) and in the
 [{.step-target.pill.b.red}center](target:.bar-middle).

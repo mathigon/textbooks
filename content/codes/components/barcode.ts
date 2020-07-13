@@ -19,13 +19,18 @@ export class Barcode extends CustomElementView {
   private $svg!: SVGParentView;
   private left = 0;
 
+  private errorDigit = 0;
+
   ready() {
     this.$svg = $N('svg', {viewBox: '0 0 400 200'}, this) as SVGParentView;
+    this.computeParityDigit(this.attr('value'));
     this.draw(this.attr('value'));
     this.on('attr:value', (e) => this.draw(e.newAttr));
   }
 
   private draw(value: string) {
+    console.log('drawing barcode', value);
+    console.log('parity digit =', this.errorDigit);
     this.$svg.removeChildren();
     this.left = 0;
 
@@ -34,7 +39,8 @@ export class Barcode extends CustomElementView {
     for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], 'left', false);
     this.drawRect('01010', 'middle', true);
     for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], 'right', false, true);
-    this.drawRect(DIGITS[value[11]], 'right', true, true);
+    // this is the error check digit
+    this.drawRect(DIGITS[this.errorDigit], 'right', true, true);
     this.drawRect('101', 'end', true);
   }
 
@@ -47,5 +53,20 @@ export class Barcode extends CustomElementView {
       $N('rect', {width: 4, height, x: (this.left + i) * 4}, $group);
     }
     this.left += sequence.length;
+  }
+
+  // TODO: could move this to a separate utility file
+  private computeParityDigit(value: string) {
+    // TODO do this here.
+    let odds = 0, evens = 0;
+    // 1-indexed. Only check first 11.
+    for (let i=1; i < 12; i++) {
+      const digitVal = parseInt(value.charAt(i-1));
+      if (i%2==0) evens += digitVal
+      else odds += digitVal;
+    }
+    const sum = 3*odds + evens;
+
+    this.errorDigit = 10 - sum%10;
   }
 }
