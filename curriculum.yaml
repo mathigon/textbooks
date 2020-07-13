@@ -502,8 +502,8 @@ chaos:
   color: 009EA6
   level: Advanced
 
-adv-probability:
-  title: Advanced Probability
+random-variables:
+  title: Random Variables
   color: CD0E66
   level: Advanced
   sections:
@@ -514,7 +514,7 @@ adv-probability:
     - title: Continuous Random Variables
     - title: Random Walks
 
-adv-statistics:
+hypothesis-tests:
   title: Statistics and Hypothesis Tests
   color: BA1778
   level: Advanced
@@ -548,7 +548,6 @@ machine-learning-1:
     - title: Support Vector Machines
     - title: Neural Networks
     - title: Unsupervised Learning
-    - title: Tensor Flow
 
 
 # ------------------------------------------------------------------------------
