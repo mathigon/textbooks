@@ -12,11 +12,13 @@ import {Step, Slider, Slideshow} from '../shared/types';
 import {beep, Beep} from './components/beep'
 import {CodeBox} from './components/code-box'
 import {MORSE_CODE} from './components/utilities'
+import {HammingCode} from './components/hamming';
 
 import './components/code-box';
 import './components/barcode';
 import './components/enigma';
 import './components/morse';
+import './components/hamming';
 
 
 // -----------------------------------------------------------------------------
@@ -668,4 +670,11 @@ export function resolution($step: Step) {
       $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
     }
   });
+}
+
+export function hammingEncode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+  const $testButton = $step.$('#testButton')!;
+
+  $testButton.on('click', () => $hamming.makeRoomForParities());
 }
