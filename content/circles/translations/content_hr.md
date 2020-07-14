@@ -738,12 +738,14 @@ Ako se središnji kut mjeri u [radijanima](gloss:radians) a ne [stupnjeva](gloss
 ::: column(width=320 parent="padded-thin")
 
 | [{.red} Dužina luka](pill) | = | `2 π r × c/(2π)` |
-| | = | `r × c` | {.eqn-system}
+| | = | `r × c` |
+{.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow} Područje sektora](pill) | = | `π r^2 × c/(2π)` |
-| | = | `1/2 r^2 c` | {.eqn-system}
+| | = | `1/2 r^2 c` |
+{.eqn-system}
 
 :::
 

@@ -785,11 +785,15 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red} चाप की लंबाई](pill) | = | `"circumference" × c/360` | | | = | `2 π r × c/360` | {.eqn-system}
+| [{.red} चाप की लंबाई](pill) | = | `"circumference" × c/360` |
+| | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow} सेक्टर क्षेत्र](pill) | = | `"circle area" × c/360` | | | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow} सेक्टर क्षेत्र](pill) | = | `"circle area" × c/360` |
+| | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 
@@ -812,11 +816,15 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red} चाप की लंबाई](pill) | = | `2 π r × c/(2π)` | | | = | `r × c` | {.eqn-system}
+| [{.red} चाप की लंबाई](pill) | = | `2 π r × c/(2π)` |
+| | = | `r × c` |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow} सेक्टर क्षेत्र](pill) | = | `π r^2 × c/(2π)` | | | = | `1/2 r^2 c` | {.eqn-system}
+| [{.yellow} सेक्टर क्षेत्र](pill) | = | `π r^2 × c/(2π)` |
+| | = | `1/2 r^2 c` |
+{.eqn-system}
 
 :::
 
@@ -1303,7 +1311,9 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
  की त्रिज्या __{.m-green} सेक्टर__ एक शंकु के रिम से उसके शीर्ष तक की दूरी के समान है। इसे कहते हैं [{.pill.green.b} तिरछी ऊंचाई](target:s) नहीं शंकु के [_है,_](target:s) और सामान्य रूप में एक ही [{.pill.blue.b} ऊंचाई _एच_](target:h) । [पाइथागोरस](gloss:pythagoras-theorem) का उपयोग करके हम तिरछी ऊँचाई पा सकते हैं: 
 
- | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ | {.eqn-system}
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
+| `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
 
 ::: column(width=280)
 
@@ -1330,7 +1340,8 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
- | `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` | | | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
+| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
 
 :::
 
@@ -1466,7 +1477,9 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
  छेद का त्रिज्या _h है_ । हम छेद के क्षेत्र को बड़े सर्कल के क्षेत्र से घटाकर रिंग का क्षेत्र पा सकते हैं: 
 
- | _ए_ | = | `π r^2 - π h^2` | | | = | `π (r^2 - h^2)` | {.eqn-system}
+| _ए_ | = | `π r^2 - π h^2` |
+| | = | `π (r^2 - h^2)` |
+{.eqn-system}
 
 :::
 
@@ -1479,7 +1492,8 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
- | `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` | | | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
+| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+| | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
 
 :::
 
@@ -1498,7 +1512,9 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
  पृथ्वी 6,371 \ किमी के त्रिज्या के साथ (लगभग) एक गोला है। इसलिए इसकी मात्रा है 
 
- | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | | | `=` | _{span.numbers} 1_ `"km"^3` | {.eqn-system}
+| `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+| | `=` | _{span.numbers} 1_ `"km"^3` |
+{.eqn-system}
 
 {.reveal(when="numbers")} पृथ्वी का औसत घनत्व है `5510 "kg/m"^3` । इसका मतलब है कि इसका कुल द्रव्यमान है 
 

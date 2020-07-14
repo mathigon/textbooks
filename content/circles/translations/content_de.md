@@ -971,13 +971,13 @@ interessiert. Zum Beispiel,
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × α/360` |
-|                          | = | `2 r π × α/360`          |
+|                               | = | `2 r π × α/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × α/360` |
-|                              | = | `r^2 π × α/360`         |
+|                               | = | `r^2 π × α/360`         |
 {.eqn-system}
 
 :::
@@ -1004,13 +1004,13 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}Kreisbogenlänge](pill) | = | `2 r π × α/(2π)` |
-|                          | = | `r × α`          |
+|                               | = | `r × α`          |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow}Sektorfläche](pill) | = | `r^2 π × α/(2π)` |
-|                              | = | `1/2 r^2 α`      |
+|                               | = | `1/2 r^2 α`      |
 {.eqn-system}
 
 :::
@@ -1879,7 +1879,7 @@ und das Volumen des [Kegels](gloss:cone-volume) voneinander abziehen_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 | `V_"Halbkugel"` | = | `V_"Zylinder" - V_"Kegel"` |
-|                  | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
+|                 | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
 :::
 
 ---

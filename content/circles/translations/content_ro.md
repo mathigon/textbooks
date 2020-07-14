@@ -945,7 +945,7 @@ De exemplu,
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}lungime arc](pill) | = | `"circumferință" × c/360` |
-|                          | = | `2 π r × c/360`          |
+|                           | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)

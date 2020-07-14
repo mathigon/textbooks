@@ -781,15 +781,19 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: arcs-2
 
- Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui nous intéresse. Par exemple, 
+Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui nous intéresse. Par exemple, 
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red} longueur d'arc](pill) | = | `"circumference" × c/360` | | | = | `2 π r × c/360` | {.eqn-system}
+| [{.red} longueur d'arc](pill) | = | `"circumference" × c/360` |
+| | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow} zone sectorielle](pill) | = | `"circle area" × c/360` | | | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow} zone sectorielle](pill) | = | `"circle area" × c/360` |
+| | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 
@@ -812,11 +816,15 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red} longueur d'arc](pill) | = | `2 π r × c/(2π)` | | | = | `r × c` | {.eqn-system}
+| [{.red} longueur d'arc](pill) | = | `2 π r × c/(2π)` |
+| | = | `r × c` |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow} zone sectorielle](pill) | = | `π r^2 × c/(2π)` | | | = | `1/2 r^2 c` | {.eqn-system}
+| [{.yellow} zone sectorielle](pill) | = | `π r^2 × c/(2π)` |
+| | = | `1/2 r^2 c` |
+{.eqn-system}
 
 :::
 
@@ -1303,7 +1311,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
  Le rayon du __{.m-green} secteur__ est la même que la distance entre le bord d'un cône et son sommet. C'est ce qu'on appelle le [{.pill.green.b} hauteur inclinée _s_](target:s) du cône, et pas la même que la normale [{.pill.blue.b} hauteur _h_](target:h) . Nous pouvons trouver la hauteur inclinée en utilisant [Pythagore](gloss:pythagoras-theorem) : 
 
- | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ | {.eqn-system}
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
+| `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
 
 ::: column(width=280)
 
@@ -1330,7 +1340,8 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
- | `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` | | | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
+| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
 
 :::
 
@@ -1466,7 +1477,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
  Le rayon du trou est _h_ . Nous pouvons trouver l'aire de l'anneau en soustrayant l'aire du trou de l'aire du grand cercle: 
 
- | _A_ | = | `π r^2 - π h^2` | | | = | `π (r^2 - h^2)` | {.eqn-system}
+| _A_ | = | `π r^2 - π h^2` |
+| | = | `π (r^2 - h^2)` |
+{.eqn-system}
 
 :::
 
@@ -1479,7 +1492,8 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
- | `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` | | | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
+| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+| | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
 
 :::
 
@@ -1498,7 +1512,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
  La Terre est (approximativement) une sphère d'un rayon de 6 371 \ km. Par conséquent, son volume est 
 
- | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | | | `=` | _{span.numbers} 1_ `"km"^3` | {.eqn-system}
+| `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+|     | `=` | _{span.numbers} 1_ `"km"^3` |
+{.eqn-system}
 
 {.reveal(when="numbers")} La densité moyenne de la Terre est `5510 "kg/m"^3` . Cela signifie que sa masse totale est 
 

@@ -717,11 +717,15 @@ Agora, podemos reorganizar essas equações para encontrar a variável em que es
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` | | | = | `2 π r × c/360` | {.eqn-system}
+| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` |
+| | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` | | | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` |
+| | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 

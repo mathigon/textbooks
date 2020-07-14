@@ -806,11 +806,15 @@ Ahora podemos reorganizar estas ecuaciones para encontrar la variable que nos in
 
 ::: column(width=320 parent="padded-thin")
 
-El | [{.red} longitud de arco](pill) | = | `"circumference" × c/360` | El | El | = | `2 π r × c/360` | {.eqn-system}
+| [{.red} longitud de arco](pill) | = | `"circumference" × c/360` |
+|                                 | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
-El | [{.yellow} área del sector](pill) | = | `"circle area" × c/360` | El | El | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow} área del sector](pill) | = | `"circle area" × c/360` |
+|                                   | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 
@@ -834,11 +838,15 @@ Si el ángulo central se mide en [radianes](gloss:radians) en lugar de [grados](
 
 ::: column(width=320 parent="padded-thin")
 
-El | [{.red} longitud del arco](pill) | = | `2 π r × c/(2π)` | El | El | = | `r × c` | {.eqn-system}
+| [{.red} longitud del arco](pill) | = | `2 π r × c/(2π)` |
+|                                  | = | `r × c` |
+{.eqn-system}
 
 ::: column(width=320)
 
-El | [{.yellow} área del sector](pill) | = | `π r^2 × c/(2π)` | El | El | = | `1/2 r^2 c` | {.eqn-system}
+| [{.yellow} área del sector](pill) | = | `π r^2 × c/(2π)` |
+|                                   | = | `1/2 r^2 c` |
+{.eqn-system}
 
 :::
 
@@ -1348,7 +1356,9 @@ Encontrar el área de superficie de un cono es un poco más complicado. Como ant
 
 El radio del sector __{.m-green}__ es el mismo que la distancia desde el borde de un cono hasta su vértice. Esto se llama __{.pill.green.step-target(data-to="s")} altura inclinada _s___ del cono, y no es lo mismo que la altura normal __{.pill.blue.step-target(data-to="h")} _h___ . Podemos encontrar la altura inclinada usando [Pitágoras](gloss:pythagoras-theorem):
 
-El | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | El | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ | {.eqn-system}
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
+| `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
 
 ::: column(width=280)
 
@@ -1376,7 +1386,8 @@ La _{span.pill.step-target.red(data-to="arc")} longitud del arco_ del sector es 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
-El | `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` | El | El | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 
 :::
 
@@ -1516,7 +1527,9 @@ La sección transversal del cilindro recortado siempre es un  [[anillo|círculo|
 
 El radio del hoyo es _h_. Podemos encontrar el área del anillo restando el área del agujero del área del círculo más grande:
 
-El | _A_ | = | `π r^2 - π h^2` | El | El | = | `π (r^2 - h^2)` | {.eqn-system}
+| _A_ | = | `π r^2 - π h^2` |
+|     | = | `π (r^2 - h^2)` |
+{.eqn-system}
 
 :::
 
@@ -1530,7 +1543,8 @@ Parece que ambos sólidos tienen la misma área de sección transversal en todos
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
-El | `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` | El | El | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
+| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+| | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
 
 :::
 
@@ -1551,7 +1565,9 @@ Una esfera consta de [[dos]] hemisferios, _{span.reveal(when="blank-0")}, lo que
 
 La Tierra es (aproximadamente) una esfera con un radio de 6.371 \ km. Por lo tanto su volumen es
 
-El | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | El | El | `=` | _{span.numbers} 1_ `"km"^3` | {.eqn-system}
+| `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+|     | `=` | _{span.numbers} 1_ `"km"^3` |
+{.eqn-system}
 
 {.reveal(when="numbers")} La densidad media de la Tierra es `5510 "kg/m"^3`. Esto significa que su masa total es
 

@@ -1,4 +1,4 @@
-# الدوائر وبي 
+# الدوائر و Pi 
 
 ## المقدمة 
 
@@ -23,7 +23,7 @@
 > id: radius
 > goals: compass
 
- كل نقطة على [__دائرة__](gloss:circle) لها نفس المسافة من مركزها. هذا يعني أنه يمكن رسمها باستخدام [البوصلة](gloss:compass) : 
+ كل نقطة على [__دائرة__](gloss:circle) لها نفس المسافة من وسطها. هذا يعني أنه يمكن رسمها باستخدام [البوصلة](gloss:compass) : 
 
 ::: column(width=320)
 
@@ -41,7 +41,9 @@
 
 {.reveal(when="compass")} هناك ثلاثة قياسات مهمة تتعلق بالدوائر تحتاج إلى معرفتها: 
 
- * {.reveal(when="compass" delay="1000")} ال [{.pill.red.b} نصف القطر](target:r) هو المسافة من مركز الدائرة إلى حافتها الخارجية. * {.reveal(when="compass" delay="4000")} ال [{.pill.blue.b} القطر](target:d) هو المسافة بين نقطتين متقابلتين على دائرة. يمر مركزه ، وطوله [[مرتين | نصف | نفس]] نصف القطر. * {.reveal(when="blank-0")} ال [{.pill.green.b} محيط](target:c) (أو محيط) هو المسافة حول دائرة. 
+ * {.reveal(when="compass" delay="1000")} [{.pill.red.b} النسف القطر](target:r) هو المسافة من وسط الدائرة إلى حافتها الخارجية. 
+ * {.reveal(when="compass" delay="4000")} [{.pill.blue.b} القطر](target:d) هو المسافة بين نقطتين متقابلتين على دائرة. يمر وسها ، وطوله [[مرتين | نصف | نفس]] نصف القطر. 
+ * {.reveal(when="blank-0")} [{.pill.green.b} المحيت](target:c) (أو المحيط الدائرة) هو المسافة حول دائرة. 
 
 :::
 
@@ -57,7 +59,7 @@
 > id: pi-definition
 > goals: digits
 
- قد تتذكر أنه بالنسبة للمضلعات المماثلة ، تكون النسبة بين الأضلاع المقابلة ثابتة دائمًا. شيء مشابه يعمل في الدوائر: النسبة بين [المحيط](gloss:circle-circumference) [والقطر](gloss:circle-diameter) متساوية _لجميع الدوائر_ . إنه دائمًا 3.14159 ... - رقم غامض يسمى [__Pi__](gloss:pi) ، والذي غالبًا ما يتم كتابته بالحرف اليوناني _π_ لـ "p". يحتوي Pi على عدد لا نهائي من الأرقام العشرية التي تستمر إلى الأبد بدون أي نمط محدد: 
+ قد تتذكر أنه بالنسبة للمضلعات المماثلة ، تكون النسبة بين الأضلاع المقابلة ثابتة دائمًا. شيء مشابه يعمل في الدوائر: النسبة بين [المحيط الدائرة](gloss:circle-circumference) [والقطر](gloss:circle-diameter) متساوية _لجميع الدوائر_ . إنه دائمًا 3.14159 ... - رقم غامض يسمى [__Pi__](gloss:pi) ، والذي غالبًا ما يتم كتابته بالحرف اليوناني _π_ لـ "p". يحتوي Pi على عدد لا نهائي من الأرقام العشرية التي تستمر إلى الأبد بدون أي نمط محدد: 
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -65,7 +67,7 @@
 > id: wheel
 > goals: unroll
 
- هنا عجلة بقطر 1. عندما "تطيل" المحيط ، يمكنك أن ترى أن طوله بالضبط [[`pi`|`2 * pi`| 3]] : 
+ هنا عجلة بقطر 1. عندما "تطيل" المحيط الدائرة ، يمكنك أن ترى أن طوله بالضبط [[`pi`|`2 pi`| 3]] : 
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -75,7 +77,7 @@
 
  بالنسبة لدائرة قطرها _d_ ، يكون المحيط `C = π × d` . وبالمثل ، بالنسبة لدائرة [نصف قطرها](gloss:circle-radius) _r_ ، يكون المحيط 
 
-{.text-center}`C =` [[`2 π r`|`π r`|`π r^2`]] . 
+{.text-center(dir="ltr")} `C =` [[`2 π r`|`π r`|`π r^2`]] . 
 
 ---
 > id: nature
@@ -122,20 +124,20 @@
 
 ::: column.grow
 
- يتبين أيضًا أن الدائرة هي الشكل الذي يحتوي على أكبر مساحة لمحيط معين. على سبيل المثال ، إذا كان لديك حبل بطول 100 \ م ، يمكنك استخدامه لإحاطة أكبر مساحة إذا قمت بتشكيل دائرة (بدلاً من الأشكال الأخرى مثل المستطيل أو المثلث). 
+ يتبين أيضًا أن الدائرة هي الشكل الذي يحتوي على أكبر مساحة لمحيط الدائرة معين. على سبيل المثال ، إذا كان لديك حبل بطول 100 \ م ، يمكنك استخدامه لإحاطة أكبر مساحة إذا قمت بتشكيل دائرة (بدلاً من الأشكال الأخرى مثل المستطيل أو المثلث). 
 
  في الطبيعة ، يمكن لأشياء مثل قطرات الماء أو فقاعات الهواء _توفير الطاقة من_ خلال أن تصبح دائرية أو كروية ، وتقليل مساحة سطحها. 
 
 ::: column(width=320)
 
     x-select.segmented
-      div(data-value="0") Triangle
-      div(data-value="1") Square
-      div(data-value="2") Pentagon
-      div(data-value="3") Circle
+      div(data-value="0") مثلث
+      div(data-value="1") مربع
+      div(data-value="2") مخمس
+      div(data-value="3") دائرة
     svg(width=320 height=200)
 
-{.caption} _محيط_ = __{.m-green} 100__ ، _المساحة_ = __${area}__ 
+{.caption} _المحيط_ = __{.m-green} 100__ ، _المساحة_ = __${area}__ 
 
 :::
 
@@ -166,11 +168,11 @@
 
  هنا يمكنك أن ترى دائرة مقسمة إلى ${toWord(n1)} أسافين. حرّك شريط التمرير ، لتحاذي الأوتاد في صف واحد. 
 
-{.reveal(when="slider")} إذا قمنا بزيادة عدد الأوتاد إلى ${n1}{n1|6|6,30,2} ، يبدأ هذا الشكل في الظهور أكثر فأكثر مثل [[المستطيل | دائرة | مربع]] . 
+{.reveal(when="slider")} إذا قمنا بزيادة عدد الأوتاد إلى ${n1}{n1|6|6,30,2} ، يبدأ هذا الشكل في الظهور أكثر فأكثر مثل [[مستطيل | دائرة | مربع]] . 
 
-{.reveal(when="blank-0")} ارتفاع المستطيل يساوي [[نصف القطر | محيط | قطر]] الدائرة. _{span.reveal(when="blank-1")} عرض المستطيل يساوي [[نصف المحيط | المحيط | ضعف نصف قطر]] الدائرة._ _{span.reveal(when="blank-2")} (لاحظ كيف أن نصف الأوتاد لأسفل ونصفها لأعلى.)_ 
+{.reveal(when="blank-0")} ارتفاع المستطيل يساوي [[نصف القطر | محيط | قطر]] الدائرة. _{span.reveal(when="blank-1")} عرض المستطيل يساوي [[نصف المحيط | محيط | ضعف نصف قطر]] الدائرة._ _{span.reveal(when="blank-2")} (لاحظ كيف أن نصف الأوتاد لأسفل ونصفها لأعلى.)_ 
 
-{.reveal(when="blank-2" delay=1000)} وبالتالي فإن المساحة الإجمالية للمستطيل تكون تقريبًا `A = π r^2` . 
+{.reveal(when="blank-2" delay=1000)} وبالتالي فإن المساحة الإجمالية للمستطيل تكون تقريبًا `A = π r^2`
 
 :::
 
@@ -194,9 +196,9 @@
 
 {.reveal(when="slider")} إذا قمنا بزيادة عدد الحلقات إلى ${n2}{n2|4|2,12,1} ، يبدأ هذا الشكل في الظهور أكثر وأكثر مثل [[المثلث | مستطيل | شبه منحرف]] . 
 
-{.reveal(when="blank-0")} ارتفاع المثلث يساوي [[نصف القطر | قطر الدائرة | محيط]] الدائرة. _{span.reveal(when="blank-1")} قاعدة المثلث تساوي [[المحيط | ضعف قطر]] الدائرة._ _{span.reveal(when="blank-2")} وبالتالي فإن المساحة الإجمالية للمثلث تقارب_ 
+{.reveal(when="blank-0")} ارتفاع المثلث يساوي [[نصف القطر | قطر الدائرة | محيط]] الدائرة. _{span.reveal(when="blank-1")} قاعدة المثلث تساوي [محيط | ضعف قطر]] الدائرة._ _{span.reveal(when="blank-2")} وبالتالي فإن المساحة الإجمالية للمثلث تقارب_ 
 
-{.text-center.reveal(when="blank-2")}`A = 1/2 "base" × "height" = π r^2` . 
+{.text-center.reveal(when="blank-2")} `A = 1/2 "base" × "height" = π r^2` 
 
 :::
 
@@ -205,7 +207,7 @@
 
  إذا تمكنا من استخدام العديد من الحلقات أو الأوتاد بشكل لا نهائي ، فسيكون التقريب أعلاه مثاليًا - وكلاهما يعطينا نفس الصيغة لمنطقة الدائرة: 
 
-{.text-center.r}`A = π r^2` . [استمر](btn:next) 
+{.text-center.r} `A = π r^2` [استمر](btn:next) 
 
 ---
 > id: pi-approximations
@@ -214,7 +216,7 @@
 
  كما رأيت أعلاه ، `π = 3.1415926…` ليس عددًا صحيحًا بسيطًا ، وأرقامه العشرية تستمر إلى الأبد ، دون أي نمط متكرر. تسمى الأرقام التي تحتوي على هذه الخاصية [__أرقامًا غير منطقية__](gloss:irrational-numbers) ، وهذا يعني ذلك `π` لا يمكن التعبير عنه على أنه كسر بسيط `a/b` . 
 
- هذا يعني أيضًا أنه لا يمكننا أبدًا تدوين _جميع_ أرقام Pi - بعد كل شيء ، هناك الكثير بلا حدود. قام علماء الرياضيات اليونانيون والصينيون القدماء بحساب الأرقام الأربعة العشرية الأولى لـ Pi عن طريق تقريب الدوائر باستخدام المضلعات العادية. لاحظ كيف أنه ، عندما تضيف المزيد من الجوانب ، يبدأ المضلع في الظهور [[أكثر فأكثر | أقل | تمامًا]] مثل الدائرة: 
+ هذا يعني أيضًا أنه لا يمكننا أبدًا تدوين _جميع_ أرقام Pi - بعد كل شيء ، هناك الكثير بلا حدود. قام علماء الرياضيات اليونانيون والصينيون القدماء بحساب الأرقام الأربعة العشرية الأولى لـ Pi عن طريق تقريب الدوائر باستخدام المضلعات العادية. لاحظ كيف أنه ، عندما تضيف المزيد من الجوانب ، يبدأ المضلع في الظهور [[أكثر و أكثر | أقل | تمامًا]] مثل الدائرة: 
 
     figure: x-img(src="images/polygons.svg" width=460 height=110)
 
@@ -273,12 +275,13 @@
 
  إذا كانت Pi طبيعية ، فهذا يعني أنه يمكنك التفكير في _أي_ سلسلة من الأرقام ، وستظهر في مكان ما في أرقامها. هنا يمكنك البحث في أول مليون رقم من Pi - هل تحتوي على عيد ميلادك؟ 
 
+
 ::: .box.f-red.pi-box
 
 #### مليون رقم من Pi 
 
     .pi-controls
-      | Search for a string of digits:
+      | ابحث عن سلسلة من الأرقام:
       input(type="text" pattern="[0-9]*" maxlength=12)
       .pi-warning
     x-pi-scroll
@@ -296,17 +299,17 @@
 ::: column(width=220 parent="padded-thin")
 
     x-video(src="images/museum.mp4" poster="images/museum.jpg" width=220 height=140 audio credit="© 20th Century Fox")
-    p.caption Pi is the secret combination for the tablet in “Night at the Museum 2”.
+    p.caption Pi هو المزيج السري للكمبيوتر اللوحي في "Night at the Museum 2".
 
 ::: column(width=220)
 
     x-video(src="images/simpsons.mp4" poster="images/simpsons.jpg" width=220 height=140 audio credit="© Fox")
-    p.caption Professor Frink (“Simpsons”) silences a room of scientists by saying that Pi equals 3.
+    p.caption يقوم البروفيسور فرينك ("سمبسنز") بإسكات غرفة من العلماء بقولهم إن Pi تساوي 3.
 
 ::: column(width=220)
 
     x-video(src="images/star-trek.mp4" poster="images/star-trek.jpg" width=220 height=140 audio credit="© NBC")
-    p.caption Spock (“Star Trek”) disables an evil computer by asking it to calculate the last digit of Pi.
+    p.caption يعطل Spock ("Star Trek") جهاز كمبيوتر شرير من خلال مطالبته بحساب الرقم الأخير من Pi.
 
 :::
 
@@ -387,7 +390,7 @@
  لاحظ علماء الفلك أن الأبراج المرئية في وقت محدد أثناء الليل تتغير قليلاً كل يوم - حتى بعد 360 يومًا تقريبًا ، تعود إلى نقطة البداية. وربما كان هذا هو السبب في تقسيم الدائرة إلى 360 درجة. 
 
     figure: .constellations
-      .label.md Midnight on day ${day}
+      .label.md منتصف الليل في النهار ${day}
       .bg
       .wheel: svg(width=760 height=760 viewBox="0 0 760 760")
       .fg
@@ -436,13 +439,13 @@
 
 ::: column.grow
 
- أ _{span.var-action} دائرة كاملة_ لديها محيط _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+ _{span.var-action} دائرة كاملة_ لديها محيط _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} أ _{span.var-action} دوران نصف دائرة_ ، المسافة المقابلة على طول المحيط _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} _{span.var-action} دوران نصف دائرة_ ، المسافة المقابلة على طول المحيط _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} أ _{span.var-action} دوران ربع الدائرة_ ، المسافة على طول المحيط _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} _{span.var-action} دوران ربع الدائرة_ ، المسافة على طول المحيط _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
-{.reveal(when="eqn-2")} وهكذا: تسمى طريقة قياس الزوايا [__بالتقدير الدائري__](gloss:radians) (يمكنك أن تتذكر هذا على أنه "وحدات نصف قطر"). 
+{.reveal(when="eqn-2")} وهكذا: تسمى طريقة قياس الزوايا [__الراديان__](gloss:radians) (يمكنك أن تتذكر هذا على أنه "وحدات نصف قطر"). 
 
 :::
 
@@ -451,17 +454,17 @@
 
  لكل زاوية بالدرجات حجم مكافئ بوحدات الراديان. التحويل بين الاثنين سهل للغاية - تمامًا كما يمكنك التحويل بين وحدات أخرى مثل الأمتار والكيلومترات ، أو مئوية وفهرنهايت: 
 
-{.text-center} __{.m-red} 360 درجة__ _{span.space} =_ __{.m-green} 2 _π_ راد__ 
+{.text-center} __{.m-red} 360 درجة__ _{span.space} =_ __{.m-green} 2 _π_ راديان__ 
 
 ::: column(width=180 parent="padded-thin")
 
 {.text-center} _{span.rotate.left}`=>`_  
-__{.m-red} 1 درجة__ _{span.space} =_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} راد__ 
+__{.m-red} 1 درجة__ _{span.space} =_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} راديان__ 
 
 ::: column(width=180)
 
 {.text-center} _{span.rotate.right}`=>`_  
-__{.m-green} 1 راد__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}°__ 
+__{.m-green} 1 راديان__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}°__ 
 
 :::
 
@@ -470,7 +473,9 @@ __{.m-green} 1 راد__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-r
 
  يمكنك كتابة قيمة الراديان إما كمضاعف _π_ ، أو كرقم عشري واحد فقط. هل يمكنك ملء هذا الجدول بأحجام الزاوية المتساوية بالدرجات والراديان؟ 
 
- | __{.m-red} درجات__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ | | __{.m-green} راديان__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` | {.table-small.grid}
+| __{.m-red}درجات__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
+| __{.m-green}راديار__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
 
 ---
 > id: radians-distance
@@ -526,12 +531,12 @@ __{.m-green} 1 راد__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-r
 
  حاول استخدام هذه الآلة الحاسبة لحساب ذلك 
 
-{.text-center} sin (30°) = [[0.5]] _{span.eqn-gap}_ cos (1°) = [[0.999]]  
+{.text-center(dir="ltr")} sin (30°) = [[0.5]] _{span.eqn-gap}_ cos (1°) = [[0.999]]  
 sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]] 
 
 ::: column(width=300)
 
-    .calculator
+    .calculator(dir="ltr")
       .display
         span
         .setting DEG
@@ -599,14 +604,20 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow(parent="right")
 
- * {.r} أ [{.red} القاطع](pill:secant) هو خط يتقاطع مع دائرة عند نقطتين. [تواصل](btn:next) * {.r.reveal(when="next-0")} أ [{.green} الكورد](pill:chord) هو جزء من الخط تقع نقاط نهايته على محيط الدائرة. [تواصل](btn:next) * {.r.reveal(when="next-1")} أ [{.blue} الظل](pill:tangent) هو خط يلمس دائرة عند نقطة واحدة بالضبط. وهذا ما يسمى __نقطة التماس__ . [تواصل](btn:next) * {.r.reveal(when="next-2")} An [{.yellow} القوس](pill:arc) هو جزء من محيط الدائرة. [تواصل](btn:next) * {.r.reveal(when="next-3")} أ [{.teal} القطاع](pill:sector) هو جزء من الجزء الداخلي من الدائرة ، ويحده _قوس_ ونصف _قطري_ . [تواصل](btn:next) * {.r.reveal(when="next-4")} أخيرا ، أ [{.purple} الجزء](pill:segment) هو جزء من الجزء الداخلي من دائرة ، يحده _قوس_ _وتر_ . [استمر](btn:next) 
+* {.r} [{.red} القاطع](pill:secant) هو خط يتقاطع مع دائرة عند نقطتين. [تواصل](btn:next)
+* {.r.reveal(when="next-0")} [{.green} الكورد](pill:chord) هو جزء من الخط تقع نقاط نهايته على محيط الدائرة. [تواصل](btn:next) 
+* {.r.reveal(when="next-1")} [{.blue} الظل](pill:tangent) هو خط يلمس دائرة عند نقطة واحدة بالضبط. وهذا ما يسمى __نقطة التماس__ . [تواصل](btn:next) 
+* {.r.reveal(when="next-2")} [{.yellow} القوس](pill:arc) هو جزء من محيط الدائرة. [تواصل](btn:next) 
+* {.r.reveal(when="next-3")} [{.teal} القطاع](pill:sector) هو جزء من الجزء الداخلي من الدائرة ، ويحده _قوس_ ونصف _قطري_ . [تواصل](btn:next) 
+* {.r.reveal(when="next-4")} أخيرا [{.purple} الجزء](pill:segment) هو جزء من الجزء الداخلي من دائرة ، يحده _قوس_ _وتر_ . [استمر](btn:next) 
 
 :::
 
 ---
 > id: circle-parts-1
 
- في هذا القسم ، سنلقي نظرة على العلاقة بين كل هذه العناصر ، ونثبت النظريات حول خصائصها. لا تقلق بشأن حفظ جميع التعريفات في الوقت الحالي - يمكنك دائمًا استخدام [المسرد](->.footer-link[data-modal=glossarym]) . 
+ في هذا القسم ، سنلقي نظرة على العلاقة بين كل هذه العناصر ، ونثبت النظريات حول خصائصها. لا تقلق بشأن حفظ جميع التعريفات في الوقت الحالي - يمكنك دائمًا استخدام [قائمة كلمات
+](->.footer-link[data-modal=glossarym]) . 
 
 ---
 
@@ -614,86 +625,11 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 {.todo} قريبا! 
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-    
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### الحبال 
 
 {.todo} قريبا! 
-
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-    
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -729,11 +665,11 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- كما ترون في الرسم البياني ، أ [{.red} القوس](pill:arc) هو جزء من [[المحيط | قطر الدائرة | ظل]] دائرة ، و [{.yellow} القطاع](pill:sector) هو جزء من [[الداخل | نصف القطر | محيط]] الدائرة. 
+ كما ترون في الرسم البياني ، [{.red} القوس](pill:arc) هو جزء من [[محيط الدائرة | قطر الدائرة | المماس]] دائرة ، و [{.yellow} القطاع](pill:sector) هو جزء من [[داخل | نصف القطر | محيط]] الدائرة. 
 
 ::: .reveal(when="blank-0 blank-1")
 
- غالباً ما يكتب القوس بين نقطتين _A_ و _B_ كـ `arc(AB)` . هذا التعريف غامض بعض الشيء: هناك [{.purple} القوس الثاني](pill:major) الذي يربط _A_ و _B_ ولكنه يذهب في الاتجاه الآخر حول الدائرة. 
+ غالباً ما يكتب القوس بين نقطتين _A_ و _B_ `arc(AB)` . هذا التعريف غامض بعض الشيء: هناك [{.purple} القوس الثاني](pill:major) الذي يربط _A_ و _B_ ولكنه يذهب في الاتجاه الآخر حول الدائرة. 
 
  يسمى أصغر القوسين __القوس الصغير__ ، ويسمى __القوس الأكبر القوس الرئيسي__ . إذا كانت النقطتان _A_ و _B_ متقابلتين تمامًا تمامًا ، فإن كلا القوسين لهما نفس الطول وهما [[نصف دائرة | أقطار | محيطات]] . 
 
@@ -752,11 +688,12 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: .reveal(when="blank-0")
 
- وهذا يعني أن [{.red} طول القوس](pill:arc) أيضا `1/4` من [{.purple} محيط](pill:circ) الدائرة [كله](pill:circ) و [{.yellow} مجال القطاع](pill:sector) `1/4` من [{.orange} كامل مساحة](pill:area) الدائرة. 
+ وهذا يعني أن [{.red} طول القوس](pill:arc) أيضا `1/4` من [{.purple} محيط الدائرة كلة](pill:circ)
+ [{.yellow} مجال القطاع](pill:sector) `1/4` من [{.orange} كامل مساحة](pill:area) الدائرة. 
 
  يمكننا التعبير عن هذه العلاقة في معادلة: 
 
-{.text-center}`"arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
+{.text-center}`pill("طول القوس","red","arc") / pill("محيط الدائرة","blue","circ") = blank("مجال القطاع","نصف القطر","منطقة القوس") / pill("الزاوية المركزية","blue","circ") = pill("الزاوية المركزية","blue","circ") / blank("360°","180°","90°") `
 
 :::
 
@@ -785,23 +722,19 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red} طول القوس](pill) | = | `"circumference" × c/360` | | | = | `2 π r × c/360` | {.eqn-system}
+| [{.red}طول القوس](pill) | = | `"محيط الدائرة" × c/360` |
+|                        | = | `2 π r × c/360`       |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow} قطاع القطاع](pill) | = | `"circle area" × c/360` | | | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow}منطقة القطاع](pill) | = | `"منطقة الدائرة" × c/360` |
+|                            | = | `π r^2 × c/360`      |
+{.eqn-system}
 
 :::
 
  حيث _r_ هو نصف قطر الدائرة ، و _c_ هو حجم الزاوية المركزية. 
-
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
-    
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
@@ -812,11 +745,15 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red} طول القوس](pill) | = | `2 π r × c/(2π)` | | | = | `r × c` | {.eqn-system}
+| [{.red}طول القوس](pill) | = | `2 π r × c/(2π)` |
+|                          | = | `r × c`          |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow} قطاع القطاع](pill) | = | `π r^2 × c/(2π)` | | | = | `1/2 r^2 c` | {.eqn-system}
+| [{.yellow}منطقة القطاع](pill) | = | `π r^2 × c/(2π)` |
+|                              | = | `1/2 r^2 c`      |
+{.eqn-system}
 
 :::
 
@@ -858,7 +795,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: .reveal(when="next-0")
 
- قياس إراتوستينس أن [{.teal} كانت زاوية](pill:angle1) الظل 7.2 درجة. هذا هو نفس [{.purple} الزاوية المركزية](pill:angle2) لل [{.red} قوس](pill:arc) من الإسكندرية إلى سوينت ، لأنهم [[يتناوبون | عمودي |]] الزوايا [[المقابلة]] . 
+ قياس إراتوستينس أن كانت [{.teal} زاوية](pill:angle1) الظل 7.2 درجة. هذا هو نفس [{.purple} الزاوية المركزية](pill:angle2) لل [{.red} قوس](pill:arc) من الإسكندرية إلى سوينت ، لأنهم [[يتناوبون | عمودي |المقابلة]] الزوايا . 
 
 :::
 
@@ -866,7 +803,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
  يمكننا الآن استخدام معادلة طول القوس الذي استخلصناه أعلاه: 
 
-{.text-center}`pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
+{.text-center}`pill("طول القوس","red","arc") / pill("محيط الدائرة","blue","circ") = (input(7.2)"°") / "360°"`
 
 :::
 
@@ -874,7 +811,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
  إذا أعدنا ترتيب ذلك ، نجد أن محيط الأرض هو 
 
-{.text-center}`pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
+{.text-center}`pill("محيط الدائرة","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 
 :::
 
@@ -939,11 +876,6 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 {.todo} قريبا! 
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
 ---
 
 ## نظريات الدائرة 
@@ -951,59 +883,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > section: circle-theorems
 > sectionStatus: dev
 
- https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
-
- __[CC] تحديد ووصف العلاقات بين الزوايا ، ونصف القطر ، والحبال. تتضمن العلاقة بين الزوايا المركزية ، والنقوش ، والمحدودة ؛ الزوايا المنقوشة على القطر هي الزوايا القائمة ؛ يكون نصف قطر الدائرة عموديًا على المماس حيث يتقاطع نصف القطر مع الدائرة.__ 
-
- الزاوية المنقوشة هي الزاوية مع رأسها هي الدائرة وتحتوي جوانبها على الحبال. القوس الذي تم اعتراضه هو القوس الموجود داخل الزاوية المنقوشة والتي تكون نقاط نهايتها على الزاوية. يمكن أن يكون رأس الزاوية المنقوشة في أي مكان على الدائرة طالما أن جوانبها تتقاطع مع الدائرة لتشكيل قوس يتم اعتراضه. 
-
- __نظرية__ الزاوية المنقوشة قياس الزاوية المنقوشة هو نصف قياس قوسه المعترض. لإثبات نظرية الزاوية المنقوشة ، ستحتاج إلى تقسيمها إلى ثلاث حالات ، مثل الزوايا الثلاث المختلفة المستمدة من التحقيق. 
-
- __تتطابق نظرية الزاوية__ المتطابقة مع الزوايا المنقوشة التي تعترض نفس القوس. 
-
- __نظرية الزوايا المنقوشة__ الزاوية الزاوية التي تعترض نصف دائرة هي زاوية قائمة. 
-
- في نظرية الزوايا النصف المنقوشة يمكننا أن نقول أن الزاوية منقوشة في نصف دائرة. في أي وقت يتم تسجيل الزاوية اليمنى في دائرة ، ونقاط النهاية للزاوية هي نقاط النهاية للقطر. لذلك ، فإن العكس من نظرية الزاوية النصف المنقوشة صحيح أيضًا. 
-
- عندما تكون الزاوية على دائرة ، يكون الرأس على محيط الدائرة. نوع واحد من الزاوية على شكل دائرة هو شكل يتكون من المماس والوتر. 
-
- __نظرية الوتر / الزاوية المظلمة__ قياس الزاوية التي شكلها الوتر والمماس الذي يتقاطع على الدائرة هو نصف مقياس القوس المتقاطع. 
-
- من نظرية وتر / Tangent Angle Theorem ، نعرف الآن أن هناك نوعين من الزوايا التي تمثل نصف مقياس القوس المتقاطع ؛ زاوية منقوشة وزاوية شكلها وتر وظل. لذلك ، فإن أي زاوية برأسها على شكل دائرة ستكون نصف مقياس القوس المعترض. 
-
- تعتبر الزاوية داخل دائرة عندما يكون الرأس في مكان ما داخل الدائرة ، ولكن ليس في المنتصف. كل الزوايا الموجودة داخل الدائرة تتكون من حبلين متقاطعين. 
-
- __تقاطع نظرية__ الحبال المتداخلة قياس الزاوية المكونة من حبلين يتقاطعان داخل دائرة هو متوسط قياس الأقواس المتقاطعة. 
-
- تعتبر الزاوية خارج الدائرة إذا كان رأس الزاوية خارج الدائرة وكان الجانبان المماس أو القواطع. هناك ثلاثة أنواع من الزوايا خارج الدائرة: زاوية تتكون من ظلين ، وزاوية تتكون من ظل وقاطع ، وزاوية مكونة من قبل اثنين. تمامًا مثل زاوية داخل أو على دائرة ، فإن الزاوية خارج الدائرة لها صيغة محددة ، تتضمن الأقواس المتقاطعة. 
-
- __نظرية الزاوية الخارجية__ إن قياس الزاوية المكونة من قبل اثنين من المقاطعات أو المماس أو المماس المرسوم من نقطة خارج الدائرة يساوي نصف اختلاف مقاييس الأقواس المعترضة. 
-
- عندما يتقاطع وتران داخل دائرة ، فإن المثلثين اللذين ينشئهما متشابهان ، مما يجعل جانبي كل مثلث يتناسب مع بعضهما البعض. إذا أزلنا AD و BC ، فإن النسب بين AE و EC و DE و EB ستظل كما هي. 
-
- __تقاطع نظرية الحبال__ إذا تقاطع حبالان داخل دائرة بحيث ينقسم أحدهما إلى مقاطع طول a و b والآخر إلى مقاطع طول c و d ثم ab = cd. وبعبارة أخرى ، فإن ناتج شرائح الوتر الواحد يساوي ناتج شرائح الوتر الثاني. 
-
- بالإضافة إلى تشكيل زاوية خارج الدائرة ، يمكن للدائرة أن تقسم القواطع إلى أجزاء متناسبة مع بعضها البعض. 
-
- إذا قمنا برسم الحبال المتقاطعة ، فسيكون لدينا مثلثان متشابهان. 
-
- من الزوايا المنقوشة وخاصية الانعكاس (≅∠R≅∠R) ، △ PRS∼ △ TRQ. نظرًا لأن المثلثين متشابهان ، يمكننا إنشاء نسبة بين الجانبين المطابقين. ثم اضرب الضرب. ac + d = ca + b⇒a (a + b) = c (c + d) 
-
- __اثنان من مقاطع القطعان النظرية__ إذا تم رسم أثنين من نقطة مشتركة خارج دائرة وتم تصنيف الأجزاء على النحو الوارد أعلاه ، فإن أ (أ + ب) = ج (ج + د). بمعنى آخر ، فإن ناتج الجزء الخارجي وكل القاطع الواحد يساوي ناتج المقطع الخارجي وكل القاطع الآخر. 
-
- إذا التقى المماس والقاطع في نقطة مشتركة خارج الدائرة ، فإن الأجزاء التي تم إنشاؤها لها علاقة مشابهة بعلاقة الأشعة بين اثنين. تذكر أن منتج الجزء الخارجي من القاطع والكل يساوي نفس الناتج من القاطع الآخر. إذا كان أحد هذه الأجزاء ظلًا ، فسيظل منتج الجزء الخارجي والكل. ومع ذلك ، بالنسبة لخط المماس ، فإن الجزء الخارجي والكل متساويان. 
-
- __نظرية جزء__ المماس __المماسح__ إذا تم رسم المماس والثاني من نقطة مشتركة خارج الدائرة (وتم تسمية المقاطع مثل الصورة إلى اليسار) ، عندئذٍ a2 = b (b + c). هذا يعني أن ناتج الجزء الخارجي من القاطع والكل يساوي مربع المقطع المماس. 
-
----
-
-### نظرية طاليس 
-
- والدليل على استخدام مثلثات متساوي الساقين 
-
- يجمع كل الهندسة الإقليدية 
-
-{.todo} لكى يفعل 
+TODO
 
 ---
 
@@ -1012,15 +892,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > sectionStatus: dev
 > section: cyclic-polygons
 
- __[CC] قم ببناء مثلث متساوي الأضلاع ومربع وسداسي منتظم منقوش في دائرة.__ 
-
- المضلع المدرج هو مضلع حيث يكون كل قمة على شكل دائرة. لاحظ أنه لا يمكن كتابة كل رباعي أو مضلع في دائرة. تسمى الرباعية المنقوشة أيضًا الرباعية الدورية. لهذه الأنواع من الأضلاع الرباعية ، يجب أن يكون لديهم خاصية خاصة واحدة. سوف نحقق فيه هنا. 
-
- يظهر هذا التحقيق أن الزوايا المعاكسة في الرباعي المدرج مكملة. من خلال قطع الرباعي إلى النصف ، من خلال القطر ، تمكنا من إظهار أن الزوايا الأخرى (التي لم نقطعها) شكلت زوجًا خطيًا عند مطابقتها. 
-
- النظرية الرباعية المنقوشة: يتم كتابة الرباعي في دائرة إذا وفقط إذا كانت الزوايا المعاكسة مكملة. 
-
- https://www.youtube.com/watch؟v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -1062,7 +934,8 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
  هنا يمكنك رؤية _مقياس الغاز_ الأسطواني في أوبرهاوزن بألمانيا. كانت تستخدم لتخزين الغاز الطبيعي الذي كان يستخدم كوقود في المصانع القريبة ومحطات الطاقة. يبلغ طول جهاز قياس الغاز 120 م ، وقاعدة وسقف دائرتين كبيرتين بنصف قطر 35 م. هناك سؤالان مهمان قد يرغب المهندسون في الإجابة عليهم: 
 
- * كم يمكن تخزين الغاز الطبيعي؟ هذا هو [[الحجم | منطقة | قطر]] الاسطوانة. * {.reveal(when="blank-0")} ما مقدار الفولاذ المطلوب لبناء مقياس الغاز؟ هذه (تقريبًا) [[مساحة السطح | محيط | قطر]] الاسطوانة. 
+ * كم يمكن تخزين الغاز الطبيعي؟ هذا هو [[الحجم | منطقة | قطر]] الاسطوانة. 
+ * {.reveal(when="blank-0")} ما مقدار الفولاذ المطلوب لبناء مقياس الغاز؟ هذه (تقريبًا) [[مساحة السطح | محيط | قطر]] الاسطوانة. 
 
 {.reveal(when="blank-0 blank-1")} دعونا نحاول العثور على صيغ لكل من هذه النتائج! 
 
@@ -1139,12 +1012,6 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
     x-gesture(target=".slide-me" slide="60,0")
 
 :::
-
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
-    
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
 > id: cylinder-surface
@@ -1303,7 +1170,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
  نصف قطر __{.m-green} القطاع__ هو نفس المسافة من حافة المخروط إلى قمته. هذا يسمى [{.pill.green.b} ارتفاع الميل _ق_](target:s) المخروط، وليس نفس وضعها الطبيعي [{.pill.blue.b} ارتفاع _ح_](target:h) . يمكننا إيجاد الارتفاع المائل باستخدام [فيثاغورس](gloss:pythagoras-theorem) : 
 
- | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ | {.eqn-system}
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
+| `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
 
 ::: column(width=280)
 
@@ -1330,7 +1199,8 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
- | `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` | | | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
+| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+|                | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 
 :::
 
@@ -1466,7 +1336,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
  نصف قطر الثقب _h_ . يمكننا إيجاد مساحة الحلقة بطرح مساحة الحفرة من مساحة الدائرة الأكبر: 
 
- | _أ_ | = | `π r^2 - π h^2` | | | = | `π (r^2 - h^2)` | {.eqn-system}
+| _أ_ | = | `π r^2 - π h^2` |
+|     | = | `π (r^2 - h^2)` |
+{.eqn-system}
 
 :::
 
@@ -1479,7 +1351,8 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
- | `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` | | | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
+| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+|                  | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
 
 :::
 
@@ -1498,7 +1371,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
  الأرض (تقريبًا) كرة نصف قطرها 6،371 \ كم. لذلك حجمه 
 
- | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | | | `=` | _{span.numbers} 1_ `"km"^3` | {.eqn-system}
+| `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+|     | `=` | _{span.numbers} 1_ `"km"^3` |
+{.eqn-system}
 
 {.reveal(when="numbers")} متوسط كثافة الأرض `5510 "kg/m"^3` . هذا يعني أن كتلته الكلية 
 
@@ -1582,23 +1457,6 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 {.todo} قريبًا: إثبات مساحة سطح الكرة 
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
-    
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
-    
-    // And therefore,
-    // surface area = 3 * volume / radius = 
-    
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-    
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
-
 ---
 
 ## المقاطع المخروطية 
@@ -1613,16 +1471,16 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
     x-scale-box(width=760).conics
       .row
         .active
-          p.no-voice: strong Circle
+          p.no-voice: strong دائرة
           include svg/circle.svg
         .hide
-          p.no-voice: strong Ellipse
+          p.no-voice: strong الشكل البيضاوي
           include svg/ellipse.svg
         .hide
-          p.no-voice: strong Parabola
+          p.no-voice: strong القطع المكافئ
           include svg/parabola.svg
         .hide
-          p.no-voice: strong Hyperbola
+          p.no-voice: strong القطع الزائد
           include svg/hyperbola.svg
 
 ---
@@ -1658,12 +1516,6 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 {.todo} قريبا: الحذف الرسم التفاعلي 
 
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
-
 ---
 > id: ellipses-2
 > goals: v0 v1 v2 v3
@@ -1673,22 +1525,22 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ::: column(width=320 parent="padded-thin")
 
     x-video(src="images/gears.mp4" poster="images/gears.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Gears
+    p.caption التروس
 
 ::: column(width=320)
 
     x-video(src="images/trammel.mp4" poster="images/trammel.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Trammel
+    p.caption تراميل
 
 ::: column(width=320)
 
     x-video(src="images/disk.mp4" poster="images/disk.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Disk
+    p.caption أسطوانة
 
 ::: column(width=320)
 
     x-video(src="images/swing.mp4" poster="images/swing.jpg" width=320 height=230 credit="© Pavel Boytchev, Elica Logo")
-    p.caption Swing
+    p.caption أرجوحة
 
 :::
 
@@ -1701,7 +1553,8 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
  قد تتذكر منذ بداية هذه الدورة ، أن علماء الفلك اليونانيين القدماء اعتقدوا أن الأرض في مركز الكون وأن الشمس والقمر والكواكب تتحرك حول الأرض في مدارات دائرية. 
 
- لسوء الحظ ، لم تدعم الملاحظة الفلكية للسماء هذا الأمر تمامًا. على سبيل المثال ، بدت الشمس أكبر خلال بعض أجزاء السنة وأصغر خلال أجزاء أخرى. في الدائرة ، يجب أن يكون لكل نقطة [[نفس]] النقطة [[| زيادة |]] مسافة [[متناقصة]] من مركزها. 
+ لسوء الحظ ، لم تدعم الملاحظة الفلكية للسماء هذا الأمر تمامًا. على سبيل المثال ، بدت الشمس أكبر خلال بعض أجزاء السنة وأصغر خلال أجزاء أخرى. في الدائرة ، يجب أن يكون لكل نقطة [[نفس|زيادة
+|تناقص]] من المسافة وسطة. 
 
 ::: column(width=330)
 
@@ -1715,7 +1568,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > id: epicycles
 > goals: play
 
- لإصلاح ذلك ، أضاف علماء الفلك __Epicycles__ إلى نموذجهم من النظام الشمسي: تتحرك الكواكب على دائرة كبيرة حول الأرض ، بينما تدور في نفس الوقت على دائرة أصغر. على الرغم من كونه معقدًا للغاية ، إلا أن هذا كان النموذج الأكثر قبولًا في عالمنا لأكثر من 1000 عام: 
+ لإصلاح ذلك ، أضاف علماء الفلك __فلك التدوير__ إلى نموذجهم من النظام الشمسي: تتحرك الكواكب على دائرة كبيرة حول الأرض ، بينما تدور في نفس الوقت على دائرة أصغر. على الرغم من كونه معقدًا للغاية ، إلا أن هذا كان النموذج الأكثر قبولًا في عالمنا لأكثر من 1000 عام: 
 
 ::: column(width=320)
 
@@ -1728,13 +1581,13 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
         circle.earth(cx=310 cy=160 r=10 fill="#fd8c00")
       x-play-btn
 
-{.caption} يجعل هذا الكوكب ${n}{n|6|2,12,1} يدور حول الدائرة الصغيرة ( __الحشوة__ ) خلال دورة واحدة حول الدائرة الكبيرة ( __المحمية__ ). 
+{.caption} يجعل هذا الكوكب ${n}{n|6|2,12,1} يدور حول الدائرة الصغيرة ( __فلك التدوير__ ) خلال دورة واحدة حول الدائرة الكبيرة ( __المحمية__ ). 
 
 ::: column(width=320)
 
     x-img(src="images/epicycles.jpg" width=320 height=320)
 
-{.caption} رسم من القرن السادس عشر __للهزات في نموذج مركزية الأرض__ . الكلمة اليونانية "Planetes" تعني "المتجولين". 
+{.caption} رسم من القرن السادس عشر فلك التدوير في __نموذج مركزية الأرض__ . الكلمة اليونانية "Planetes" تعني "المتجولين". 
 
 :::
 
@@ -1771,7 +1624,6 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)
