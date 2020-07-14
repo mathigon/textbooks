@@ -31,6 +31,7 @@ agnesi:
   died: 1799
   name: Agnesi
   full: Maria Gaetana Agnesi
+  keywords: Woman Female
   bio: |
     __Maria Gaetana Agnesi__ (1718 – 1799) was an Italian mathematician,
     philosopher, theologian, and humanitarian.  Agnesi was the first western
@@ -623,6 +624,7 @@ easley:
   small: true
   name: Easley
   full: Annie Easley
+  keywords: Woman Female NASA
   location: america
   bio: |
     __Annie Easley__ (1933 – 2011) was an American mathematician and computer
@@ -913,6 +915,7 @@ germain:
   name: Germain
   full: Marie-Sophie Germain
   small: true
+  keywords: Woman Female
   bio: |
     __Marie-Sophie Germain__ (1776 – 1831) decided that she wanted to be a
     mathematician at the age of 13, after reading about Archimedes.
@@ -1080,6 +1083,7 @@ hypatia:
   name: Hypatia
   overflow: true
   location: africa
+  keywords: Woman Female
   bio: |
     __Hypatia__ (c. 360 – 415 CE) was a prominent astronomer and mathematician
     in ancient Alexandria. She was also the first female mathematician whose
@@ -1140,6 +1144,7 @@ johnson:
   died: 2020
   name: Johnson
   full: Katherine Johnson
+  keywords: Woman Female NASA
   location: america
   bio: |
     __Katherine Johnson__ (1918 – 2020) was an African-American mathematician.
@@ -1206,6 +1211,7 @@ kovalevskaya:
   died: 1891
   name: Kovalevskaya
   full: Sofia Kovalevskaya
+  keywords: Woman Female
   bio: |
     __Sofia Kovalevskaya__ (Софья Васильевна Ковалевская 1850 – 1891) was a
     Russian mathematician, and the first woman to earn a modern doctorate in
@@ -1474,6 +1480,7 @@ mirzakhani:
   name: Mirzakhani
   full: Maryam Mirzakhani
   location: middle-east
+  keywords: Woman Female
   bio: |
     __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
     mathematician and professor at Stanford University. She is the only woman
@@ -1643,6 +1650,7 @@ noether:
   full: Amalie Emmy Noether
   born: 1882
   died: 1935
+  keywords: Woman Female
   bio: __Amalie Emmy Noether__ (1882 – 1935) was a German mathematician who made
     important discoveries in abstract algebra and theoretical physics, including
     the connection between symmetry and conservation laws. She is often
@@ -2113,6 +2121,7 @@ tusi:
   died: 1274
   name: Al-Din Tusi
   full: Nasir al-Din Tusi
+  keywords: Arabic Middle East
   location: middle-east
   bio: |
     __Nasir al-Din Tusi__ (1201 – 1274, نصیر الدین طوسی‎), also known as Muhammad
@@ -2129,6 +2138,7 @@ uhlenbeck:
   name: Uhlenbeck
   full: Karen Uhlenbeck
   location: america
+  keywords: Woman Female
   bio: |
     __Karen Uhlenbeck__ (born 1942) is an American mathematician, professor
     emeritus at the University of Texas, and distinguished visiting professor
@@ -2214,7 +2224,7 @@ zhenyi:
   name: Wang
   full: Wang Zhenyi
   location: asia
-  keywords: China
+  keywords: China Woman Female
   bio: |
     __Wang Zhenyi__ (王贞仪, 1768 – 1797) was a Chinese scientist and
     mathematician living during the Qing dynasty. Despite laws and customs

@@ -17,8 +17,8 @@ const gulpTextbooks = require('@mathigon/parser').gulp;
 const tsconfig = require('./tsconfig.json');
 const rtl = require('postcss-rtl');
 
-const LANGUAGES = ['en', 'ar', 'az', 'cn', 'de', 'es', 'fr', 'hi', 'hr', 'it',
-    'ja', 'pt', 'ro', 'ru', 'sv', 'tr', 'vi'];
+const LANGUAGES = ['en', 'ar', 'az', 'ca', 'cn', 'de', 'es', 'fr', 'hi', 'hr',
+  'it', 'ja', 'pt', 'ro', 'ru', 'sv', 'tr', 'vi'];
 const CACHE = __dirname + '/content/.cache.json';
 
 
