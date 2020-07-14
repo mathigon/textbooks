@@ -469,10 +469,8 @@ integration:
   level: Advanced
   sections:
     - title: Introduction
-    - title: Integration Rules I
-    - title: Integration Rules II
+    - title: Integration Rules
     - title: Definite Integrals and Areas under a Curve
-    - title: Numerical Integration
     - title: Improper Integrals
     - title: Solids of Revolution
 
@@ -483,6 +481,7 @@ numerical:
   sections:
     - title: Solving Equations Numerically
     - title: The Newton­-Raphson Method
+    - title: Numerical Integration
     - title: Maclaurin and Taylor series
 
 diff-equations:
@@ -509,22 +508,20 @@ random-variables:
   sections:
     - title: Introduction
     - title: Discrete Random Variables
-    - title: The Normal Distribution
     - title: Binomial and Poisson Distribution
     - title: Continuous Random Variables
-    - title: Random Walks
+    - title: The Normal Distribution
+    - title: The Central Limit Theorem
 
 hypothesis-tests:
   title: Statistics and Hypothesis Tests
   color: BA1778
   level: Advanced
   sections:
-    - title: Data Representation
-    - title: Experiments and Sampling
-    - title: Hypothesis Tests
-    - title: Estimation and Confidence Intervals
-    - title: The Law of Large Numbers and Central Limit Theorem
-    - title: Chi Squared Tests and Correlation Coefficients
+    - title: Sampling and Estimation
+    - title: Hypothesis Tests and Confidence Intervals
+    - title: Linear Models and Correlation Coefficients
+    - title: Contingency tables and Chi Squared Tests
     - title: Bayesian Statistics
 
 algorithms:
