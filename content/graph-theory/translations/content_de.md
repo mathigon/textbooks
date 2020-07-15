@@ -1,47 +1,50 @@
-# Grafiken und Netzwerke 
+# Graphen und Netzwerke
 
-## Einführung 
+## Einführung
 
 > id: intro-0
 > section: introduction
 
- Jeden Tag sind wir von unzähligen Verbindungen und Netzen umgeben: Straßen und Schienen, Telefonleitungen, Internet, elektronische Schaltkreise und sogar molekulare Bindungen. Es gibt sogar _soziale Netzwerke_ zwischen Freunden und Familien. Können Sie sich andere Beispiele vorstellen? 
+ Wir haben es in unserem täglichen Umfeld mit unzähligen Netzwerken und Verbindungen zu tun: Straßen
+ und Eisenbahnschienen, Telefonleitungen, das Internet, elektronische Schaltkreise und sogar
+ Molekülbindungen. Außerdem gibt es _soziale Netzwerke_ zwischen Freunden und Familien. Kannst du
+ dir noch andere Beispiele vorstellen?
 
 ::: column(width=220 parent="padded-thin")
 
     x-img(src="images/network1.jpg" width=220 height=220 lightbox)
 
-{.caption} Straßen- und Schienennetze 
+{.caption} Straßen- und Schienennetze
 
 ::: column(width=220)
 
     x-img(src="images/network6.jpg" width=220 height=220 lightbox)
 
-{.caption} Computer-Chips 
+{.caption} Computer-Chips
 
 ::: column(width=220)
 
     x-img(src="images/network3.jpg" width=220 height=220 lightbox)
 
-{.caption} Lieferketten 
+{.caption} Lieferketten
 
 ::: column(width=220)
 
     x-img(src="images/network2.jpg" width=220 height=220 lightbox)
 
-{.caption} Freundschaften 
+{.caption} Freundschaften
 
 ::: column(width=220)
 
     x-img(src="images/network7.jpg" width=220 height=220 lightbox)
 
-{.caption} Neuronale Verbindungen 
+{.caption} Neuronale Verbindungen
 
 ::: column(width=220)
 
     x-img(src="images/network4.jpg" width=220 height=220 lightbox)
 
-{.caption} Das Internet 
+{.caption} Das Internet
 
 :::
 
@@ -50,9 +53,13 @@
 
 ::: column.grow
 
- In der Mathematik können alle diese Beispiele als [__Diagramme dargestellt werden__](gloss:graph) (nicht zu verwechseln mit dem _Diagramm_ einer Funktion). Ein Graph besteht aus bestimmten _Punkten, die_ als [[Eckpunkte bezeichnet werden | Kreise | Kreuzungen]] , von denen einige durch [[Kanten verbunden sind | Grenzen | Paare]] . 
+ In der Mathematik können all diese Beispiele als __Graphen__](gloss:graph) dargestellt werden
+ (nicht zu verwechseln mit dem _Graph_ einer Funktion). Ein Graph besteht aus einzelnen
+ _Punkten_ die [[Knoten|Kreise|Kreuzungen]] genannt werden, von denen einige durch
+ [[Kanten|Grenzen|Paare]] verbunden sind.
 
- __Die Graphentheorie__ ist das Studium von Graphen und ihren Eigenschaften. Es ist eines der aufregendsten und visuellsten Gebiete der Mathematik und hat unzählige wichtige Anwendungen. 
+ Die __Graphentheorie__ beschäftigt sich mit Graphen und ihren Eigenschaften. Sie ist
+ eines der spannendsten und visuell ansprechendsten Gebiete der Mathematik und hat unzählige wichtige Anwendungen.
 
 ::: column(width=180)
 
@@ -63,25 +70,30 @@
 ---
 > id: intro-1
 
- Wir können das Layout einfacher Diagramme mit Kreisen und Linien zeichnen. Die Position der Eckpunkte und die Länge der Kanten spielen keine Rolle - wir kümmern uns nur darum, _wie sie miteinander verbunden_ sind. Die Kanten können sich sogar kreuzen und müssen nicht gerade sein. 
+ Wir können das Layout von einfachen Graphen mit Kreisen und Linien zeichnen. Die Position
+ der Knoten und die Länge der Kanten spielt dabei keine Rolle - uns interessiert nur, _wie sie
+ miteinander verbunden_ sind. Die Kanten können sich sogar kreuzen und müssen nicht unbedingt gerade sein.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.caption} In einigen Diagrammen gehen die Kanten nur in eine Richtung. Diese werden als [__gerichtete Graphen bezeichnet__](gloss:directed-graph) . 
+{.caption} In manchen Graphen verlaufen die Kanten nur in eine Richtung. Diese werden [__gerichtete
+Graphen__](gloss:directed-graph) genannt.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.caption} Einige Diagramme bestehen aus mehreren Gruppen von Scheitelpunkten, die nicht durch Kanten miteinander verbunden sind. Diese Grafiken sind __nicht verbunden__ . 
+{.caption} Manche Graphen bestehen aus mehreren Gruppen von Knoten, die nicht durch Kanten miteinander
+verbunden sind. Diese Graphen nennt man __nicht zusammenhängend__.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.caption} Andere Diagramme können mehrere Kanten zwischen denselben Scheitelpunktpaaren oder Scheitelpunkten enthalten, die mit sich selbst verbunden sind (Schleifen). 
+{.caption} Andere Graphen können mehrere Kanten zwischen denselben Knotenpaaren enthalten,
+oder Knoten, die mit sich selbst verbunden sind (Schleifen).
 
 :::
 
@@ -91,7 +103,10 @@
 ---
 > id: intro-2
 
- Wir können neue Diagramme aus einem vorhandenen Diagramm erstellen, indem wir einige der Scheitelpunkte und Kanten entfernen. Das Ergebnis wird als [__Untergraph bezeichnet__](gloss:subgraph) . Hier sehen Sie einige weitere Beispiele für Diagramme mit farbigen Kanten und Scheitelpunkten, die auf einen möglichen Untergraphen hinweisen: 
+ Wir können neue Graphen aus einem bestehenden Graphen erstellen, indem wir einige der Knoten und
+ Kanten entfernen. Das Ergebnis nennt sich [__Teilgraph__](gloss:subgraph). Hier siehst du ein paar
+ weitere Beispiele für Graphen, mit farbigen Kanten und Knoten, die auf einen möglichen
+ Teilgraphen hinweisen:
 
 ::: column(width=212 parent="padded-thin")
 
@@ -113,52 +128,56 @@
 ---
 > id: intro-3
 
- Wir sagen, dass die [__Reihenfolge__](gloss:graph-order) eines Graphen die Anzahl der Eckpunkte ist, die er hat. Der [__Grad__](gloss:graph-degree) eines Scheitelpunkts ist die Anzahl der Kanten, die sich an diesem Scheitelpunkt treffen. 
+ Wir sagen, dass die [__Ordnung__](gloss:graph-order) eines Graphen die Anzahl der Knoten ist,
+ die er hat. Der [__Grad__]( gloss: graph-degree) eines Knotens ist die Anzahl der Kanten, die
+ sich an diesem Knoten treffen.
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Bestellung: [[5]] 
+{.text-center} Ordnung: [[5]]
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Bestellung: [[8]] 
+{.text-center} Ordnung: [[8]]
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Abschluss: [[3]] 
+{.text-center} Grad: [[3]]
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Abschluss: [[6]] 
+{.text-center} Grad: [[6]]
 
 :::
 
 ---
 > id: intro-4
 
- Diagramme, die aus einer einzelnen Scheitelpunktschleife bestehen, werden als [__Zyklen bezeichnet__](gloss:graph-cycle) . Alle Zyklen haben [[die gleiche Anzahl von Kanten und Eckpunkten | mehr Kanten als Eckpunkte | weniger Kanten als Eckpunkte]] . 
+ Graphen, die aus einem einzigen Knoten-Ring bestehen, werden als [__Kreisgraphen__](gloss:graph-cycle)
+ bezeichnet. Alle Kreisgraphen haben [[die gleiche Anzahl von Kanten und Knoten|mehr Kanten als Knoten|weniger Kanten als Knoten]].
 
     .row
       svg.graph(style='width: 120px; height: 120px;')
       svg.graph(style='width: 120px; height: 120px;')
       svg.graph(style='width: 120px; height: 120px;')
 
-{.reveal(when="blank-0")} Ausgestattet mit diesen neuen Definitionen wollen wir einige der faszinierenden Eigenschaften und Anwendungen von Graphen untersuchen. 
+{.reveal(when="blank-0")} Nachdem wir diese neuen Definitionen eingeführt haben, wollen wir nun einige der
+faszinierenden Eigenschaften und Anwendungen von Graphen näher betrachten.
 
 ---
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
 
-## Die Brücken von Königsberg 
+## Die Brücken von Königsberg
 
 ::: column.grow
 
