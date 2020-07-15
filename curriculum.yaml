@@ -82,12 +82,6 @@ shapes:
   title: Area and Shapes
   color: 0F82F2
   level: Foundations
-  sections:
-    - title: Introduction
-    - title: Parallelograms and Triangles
-    - title: Polygons
-    - title: Circles and Circumferences
-    - title: Area of Circles
 
 polygons:
   title: Angles and Polygons
@@ -98,13 +92,6 @@ solids:
   title: 3D Solids
   color: 4E53D0
   level: Foundations
-  sections:
-    - title: Polyhedra
-    - title: Nets and Surface Area
-    - title: Volumes and Cuboids
-    - title: Prisms and Pyramids
-    - title: Cylinders and Cones
-    - title: Spheres
 
 measuring:
   title: Units and Measuring
@@ -179,14 +166,6 @@ data:
   title: Data and Statistics
   color: 8D2CA1
   level: Foundations
-  sections:
-    - title: Introduction
-    - title: Dot Plots and Histograms
-    - title: Box Plots
-    - title: Mean, Median and Mode
-    - title: Sampling
-    - title: Comparing Populations
-    - title: Scatter Plots and Linear Models
 
 
 # ------------------------------------------------------------------------------
