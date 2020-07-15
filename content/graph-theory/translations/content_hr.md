@@ -85,9 +85,6 @@ Izgled jednostavnih grafova možemo nacrtati pomoću krugova i linija. Položaj 
 
 :::
 
-    // TODO maybe include examples of graphs with edges crossing, curved edges, etc.
-    // could include an "is this a graph?" quiz
-
 ---
 > id: intro-2
 
@@ -226,9 +223,6 @@ Prvo moramo pretvoriti karte gradova u grafikone s rubovima i vrhovima. Svaki ot
 > id: bridges-2
 
 Na papiru smislite nekoliko različitih grafova, a zatim pokušajte utvrditi koji se mogu izvući jednim kontinuiranim taktom.
-
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
 
 ---
 > id: bridges-3
@@ -760,7 +754,6 @@ Mravi žele pronaći najkraće moguće rute između svog gnijezda i mogućih izv
 * Ostali mravi imaju tendenciju da slijede trag kada pronađu jednog, koji ih vodi do hrane. Na povratku, oni polažu više feromona i na taj način pojačavaju trag.
 * S vremenom feromon isparava. Što je put duži, to više treba vremena da mravi putuju po njemu i tako feromon ima više vremena za isparavanje. S druge strane, kratki se putovi mogu brže pojačati pa se njihova snaga brže povećava.
 
-
 ::: column(width=240)
 
 {.todo} Dijagram uskoro stiže ...
@@ -818,10 +811,6 @@ Vidjeli smo mnogo različitih primjena teorije grafova u prethodnim poglavljima,
 ::: column.grow
 
 Na primjer, Internet je ogroman, virtualni graf. Svaka vršica pojedinačna je web stranica, a svaki rub znači da postoji hiperveza između dvije stranice. Imajte na umu da veze idu samo u jednom smjeru, tako da je ovaj grafikon [[usmjeren|multi-line|conected]] i da je ovaj grafikon _vrlo, vrlo velik_.
-
-    // * "can be viewed as" instead of "is a vast, virtual graph". "Every
-    // vertex represens an individual webpage and every edge a hyperlink
-    // from one page to another".
 
 Neke web stranice, poput Wikipedije ili Facebooka, imaju puno dolaznih veza, dok mnoge manje web stranice mogu imati vrlo malo dolaznih veza. To je temeljni koncept koji Google koristi za razvrstavanje rezultata pretraživanja.
 

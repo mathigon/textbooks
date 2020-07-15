@@ -785,9 +785,6 @@ Vervollständige diese Figuren, so dass sie rotationssymmetrisch sind:
 > id: groups
 > section: symmetry-groups
 
-    // TIPP: Um verschiedene Konfigurationen zu erkennen, müssen wir die
-    // vier Ecken in verschiedenen Farben hervorheben.
-
 Einige Formen haben mehr als eine Symmetrie - schauen wir uns das
 [Quadrat](gloss:square) als einfaches Beispiel an.
 
@@ -1123,7 +1120,6 @@ Spiegelungsachsen](gloss:axis-of-symmetry) erkennen?
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
         p.caption <strong>Gruppe 17 - PGG</strong><br>Senkrechte Gleitspiegelungen, Drehungen (2), Verschiebungen
-
 
 ---
 > id: drawing

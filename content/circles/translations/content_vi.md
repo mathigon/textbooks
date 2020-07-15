@@ -7,9 +7,9 @@
 
 ::: column.grow
 
- Từ lâu, con người đã tồn tại, chúng ta đã nhìn lên bầu trời và cố gắng giải thích sự sống trên Trái đất bằng chuyển động của các ngôi sao, hành tinh và mặt trăng. 
+Từ lâu, con người đã tồn tại, chúng ta đã nhìn lên bầu trời và cố gắng giải thích sự sống trên Trái đất bằng chuyển động của các ngôi sao, hành tinh và mặt trăng. 
 
- Các nhà thiên văn học Hy Lạp cổ đại là những người đầu tiên phát hiện ra rằng tất cả các thiên thể di chuyển trên những con đường thông thường, được gọi là __quỹ đạo__ . Họ tin rằng những quỹ đạo này luôn có hình tròn. Xét cho cùng, các vòng tròn là các hình dạng hoàn hảo nhất của tất cả các hình dạng: đối xứng theo mọi hướng, và do đó là một lựa chọn phù hợp cho trật tự cơ bản của vũ trụ của chúng ta. 
+Các nhà thiên văn học Hy Lạp cổ đại là những người đầu tiên phát hiện ra rằng tất cả các thiên thể di chuyển trên những con đường thông thường, được gọi là __quỹ đạo__ . Họ tin rằng những quỹ đạo này luôn có hình tròn. Xét cho cùng, các vòng tròn là các hình dạng hoàn hảo nhất của tất cả các hình dạng: đối xứng theo mọi hướng, và do đó là một lựa chọn phù hợp cho trật tự cơ bản của vũ trụ của chúng ta. 
 
 ::: column(width=320)
 
@@ -23,7 +23,7 @@
 > id: radius
 > goals: compass
 
- Mỗi điểm trên một [__vòng tròn__](gloss:circle) có cùng khoảng cách từ tâm của nó. Điều này có nghĩa là chúng có thể được vẽ bằng [la bàn](gloss:compass) : 
+Mỗi điểm trên một [__vòng tròn__](gloss:circle) có cùng khoảng cách từ tâm của nó. Điều này có nghĩa là chúng có thể được vẽ bằng [la bàn](gloss:compass) : 
 
 ::: column(width=320)
 
@@ -41,7 +41,9 @@
 
 {.reveal(when="compass")} Có ba phép đo quan trọng liên quan đến vòng tròn mà bạn cần biết: 
 
- * {.reveal(when="compass" delay="1000")} Các [{.pill.red.b} bán kính](target:r) là khoảng cách từ tâm của vòng tròn đến vành ngoài của nó. * {.reveal(when="compass" delay="4000")} Các [{.pill.blue.b} đường kính](target:d) là khoảng cách giữa hai điểm đối diện trên một vòng tròn. Nó đi qua trung tâm của nó, và chiều dài của nó là [[hai lần | một nửa | giống như]] bán kính. * {.reveal(when="blank-0")} Các [{.pill.green.b} chu vi](target:c) (hay chu vi) là khoảng cách xung quanh một vòng tròn. 
+* {.reveal(when="compass" delay="1000")} Các [{.pill.red.b} bán kính](target:r) là khoảng cách từ tâm của vòng tròn đến vành ngoài của nó.
+* {.reveal(when="compass" delay="4000")} Các [{.pill.blue.b} đường kính](target:d) là khoảng cách giữa hai điểm đối diện trên một vòng tròn. Nó đi qua trung tâm của nó, và chiều dài của nó là [[hai lần | một nửa | giống như]] bán kính.
+* {.reveal(when="blank-0")} Các [{.pill.green.b} chu vi](target:c) (hay chu vi) là khoảng cách xung quanh một vòng tròn. 
 
 :::
 
@@ -49,7 +51,7 @@
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
- Một thuộc tính quan trọng của vòng tròn là tất cả các vòng tròn đều [giống nhau](gloss:similar) . Bạn có thể chứng minh rằng bằng cách hiển thị cách tất cả các vòng tròn có thể được khớp với nhau bằng cách sử dụng các [bản dịch](gloss:translation) và độ [giãn](gloss:dilation) đơn giản: 
+Một thuộc tính quan trọng của vòng tròn là tất cả các vòng tròn đều [giống nhau](gloss:similar) . Bạn có thể chứng minh rằng bằng cách hiển thị cách tất cả các vòng tròn có thể được khớp với nhau bằng cách sử dụng các [bản dịch](gloss:translation) và độ [giãn](gloss:dilation) đơn giản: 
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -57,7 +59,7 @@
 > id: pi-definition
 > goals: digits
 
- Bạn có thể nhớ rằng, đối với các đa giác tương tự, tỷ lệ giữa các cạnh tương ứng luôn không đổi. Một cái gì đó tương tự hoạt động cho các vòng tròn: tỷ lệ giữa [chu vi](gloss:circle-circumference) và [đường kính](gloss:circle-diameter) là bằng nhau cho _tất cả các vòng tròn_ . Nó luôn là 3.14159, một con số bí ẩn có tên là [__Pi__](gloss:pi) , thường được viết là chữ Hy Lạp _π_ cho tiếng pát. Pi có vô số chữ số thập phân cứ kéo dài mãi mà không có mẫu cụ thể nào: 
+Bạn có thể nhớ rằng, đối với các đa giác tương tự, tỷ lệ giữa các cạnh tương ứng luôn không đổi. Một cái gì đó tương tự hoạt động cho các vòng tròn: tỷ lệ giữa [chu vi](gloss:circle-circumference) và [đường kính](gloss:circle-diameter) là bằng nhau cho _tất cả các vòng tròn_ . Nó luôn là 3.14159, một con số bí ẩn có tên là [__Pi__](gloss:pi) , thường được viết là chữ Hy Lạp _π_ cho tiếng pát. Pi có vô số chữ số thập phân cứ kéo dài mãi mà không có mẫu cụ thể nào: 
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -65,7 +67,7 @@
 > id: wheel
 > goals: unroll
 
- Đây là một bánh xe có đường kính 1. Khi bạn mở khóa chu vi, bạn có thể thấy rằng chiều dài của nó là chính xác [[`pi`|`2 * pi`| 3]] : 
+Đây là một bánh xe có đường kính 1. Khi bạn mở khóa chu vi, bạn có thể thấy rằng chiều dài của nó là chính xác [[`pi`|`2 * pi`| 3]] : 
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -73,14 +75,14 @@
 ---
 > id: circumference
 
- Đối với hình tròn có đường kính _d_ , chu vi là `C = π × d` . Tương tự, đối với đường tròn có [bán kính](gloss:circle-radius) _r_ , chu vi là 
+Đối với hình tròn có đường kính _d_ , chu vi là `C = π × d` . Tương tự, đối với đường tròn có [bán kính](gloss:circle-radius) _r_ , chu vi là 
 
 {.text-center}`C =` [[`2 π r`|`π r`|`π r^2`]] . 
 
 ---
 > id: nature
 
- Các vòng tròn hoàn toàn đối xứng và chúng không có bất kỳ điểm yếu nào của điểm giống như các góc của đa giác. Đây là một trong những lý do tại sao chúng có thể được tìm thấy ở mọi nơi trong tự nhiên: 
+Các vòng tròn hoàn toàn đối xứng và chúng không có bất kỳ điểm yếu nào của điểm giống như các góc của đa giác. Đây là một trong những lý do tại sao chúng có thể được tìm thấy ở mọi nơi trong tự nhiên: 
 
 ::: column(width=130 parent="padded-thin")
 
@@ -122,9 +124,9 @@
 
 ::: column.grow
 
- Nó cũng chỉ ra rằng một vòng tròn là hình dạng có diện tích lớn nhất cho một chu vi nhất định. Ví dụ: nếu bạn có một sợi dây có chiều dài 100 \ m, bạn có thể sử dụng nó để bao quanh không gian lớn nhất nếu bạn tạo thành một vòng tròn (thay vì các hình dạng khác như hình chữ nhật hoặc hình tam giác). 
+Nó cũng chỉ ra rằng một vòng tròn là hình dạng có diện tích lớn nhất cho một chu vi nhất định. Ví dụ: nếu bạn có một sợi dây có chiều dài 100 \ m, bạn có thể sử dụng nó để bao quanh không gian lớn nhất nếu bạn tạo thành một vòng tròn (thay vì các hình dạng khác như hình chữ nhật hoặc hình tam giác). 
 
- Trong tự nhiên, các vật thể như giọt nước hoặc bọt khí có thể _tiết kiệm năng lượng_ bằng cách trở thành hình tròn hoặc hình cầu, và giảm diện tích bề mặt của chúng. 
+Trong tự nhiên, các vật thể như giọt nước hoặc bọt khí có thể _tiết kiệm năng lượng_ bằng cách trở thành hình tròn hoặc hình cầu, và giảm diện tích bề mặt của chúng. 
 
 ::: column(width=320)
 
@@ -145,9 +147,9 @@
 
 ### Diện tích hình tròn 
 
- Nhưng làm thế nào để chúng ta thực sự tính diện tích của một vòng tròn? Chúng ta hãy thử cùng một kỹ thuật mà chúng ta đã sử dụng để [tìm diện tích tứ giác](/course/polyhedra/quadrilaterals) : chúng ta cắt hình thành nhiều phần khác nhau, sau đó sắp xếp lại chúng thành một hình dạng khác nhau mà chúng ta đã biết diện tích (ví dụ hình chữ nhật hoặc hình tam giác). 
+Nhưng làm thế nào để chúng ta thực sự tính diện tích của một vòng tròn? Chúng ta hãy thử cùng một kỹ thuật mà chúng ta đã sử dụng để [tìm diện tích tứ giác](/course/polyhedra/quadrilaterals) : chúng ta cắt hình thành nhiều phần khác nhau, sau đó sắp xếp lại chúng thành một hình dạng khác nhau mà chúng ta đã biết diện tích (ví dụ hình chữ nhật hoặc hình tam giác). 
 
- Sự khác biệt duy nhất là, bởi vì các vòng tròn bị cong, chúng ta phải sử dụng một số phép tính gần đúng: 
+Sự khác biệt duy nhất là, bởi vì các vòng tròn bị cong, chúng ta phải sử dụng một số phép tính gần đúng: 
 
 ::: column(width=340)
 
@@ -164,7 +166,7 @@
 
 ::: column.grow
 
- Ở đây bạn có thể thấy một vòng tròn được chia thành ${toWord(n1)} giày cao gót đế bằng. Di chuyển thanh trượt, để sắp xếp các nêm trong một hàng. 
+Ở đây bạn có thể thấy một vòng tròn được chia thành ${toWord(n1)} giày cao gót đế bằng. Di chuyển thanh trượt, để sắp xếp các nêm trong một hàng. 
 
 {.reveal(when="slider")} Nếu chúng ta tăng số lượng nêm lên ${n1}{n1|6|6,30,2} , hình dạng này bắt đầu trông ngày càng giống [[hình chữ nhật | vòng tròn | hình vuông]] . 
 
@@ -190,7 +192,7 @@
 
 ::: column.grow
 
- Ở đây bạn có thể thấy một vòng tròn được chia thành ${toWord(n)} Nhẫn. Giống như trước đây, bạn có thể di chuyển thanh trượt sang các vòng khác. 
+Ở đây bạn có thể thấy một vòng tròn được chia thành ${toWord(n)} Nhẫn. Giống như trước đây, bạn có thể di chuyển thanh trượt sang các vòng khác. 
 
 {.reveal(when="slider")} Nếu chúng ta tăng số lượng nhẫn lên ${n2}{n2|4|2,12,1} , hình dạng này bắt đầu trông giống như một [[hình tam giác | hình chữ nhật | hình thang]] . 
 
@@ -203,7 +205,7 @@
 ---
 > id: area-2
 
- Nếu chúng ta có thể sử dụng vô số vòng hoặc nêm, các phép tính gần đúng ở trên sẽ hoàn hảo - và cả hai đều cho chúng ta cùng một công thức cho diện tích hình tròn: 
+Nếu chúng ta có thể sử dụng vô số vòng hoặc nêm, các phép tính gần đúng ở trên sẽ hoàn hảo - và cả hai đều cho chúng ta cùng một công thức cho diện tích hình tròn: 
 
 {.text-center.r}`A = π r^2` . [Tiếp tục](btn:next) 
 
@@ -212,9 +214,9 @@
 
 ### Tính Pi 
 
- Như bạn đã thấy ở trên, `π = 3.1415926…` không phải là một số nguyên đơn giản và các chữ số thập phân của nó sẽ tồn tại mãi mãi mà không có bất kỳ mẫu lặp lại nào. Các số có thuộc tính này được gọi là [__số vô tỷ__](gloss:irrational-numbers) và có nghĩa là `π` không thể được biểu thị dưới dạng một phần đơn giản `a/b` . 
+Như bạn đã thấy ở trên, `π = 3.1415926…` không phải là một số nguyên đơn giản và các chữ số thập phân của nó sẽ tồn tại mãi mãi mà không có bất kỳ mẫu lặp lại nào. Các số có thuộc tính này được gọi là [__số vô tỷ__](gloss:irrational-numbers) và có nghĩa là `π` không thể được biểu thị dưới dạng một phần đơn giản `a/b` . 
 
- Điều đó cũng có nghĩa là chúng ta không bao giờ có thể viết ra _tất cả_ các chữ số của Pi - sau tất cả, có vô số. Các nhà toán học Hy Lạp và Trung Quốc cổ đại đã tính toán bốn chữ số thập phân đầu tiên của Pi bằng cách xấp xỉ các vòng tròn bằng cách sử dụng đa giác thông thường. Lưu ý cách, khi bạn thêm nhiều cạnh, đa giác bắt đầu trông [[ngày càng nhiều | ít hơn | chính xác]] như một vòng tròn: 
+Điều đó cũng có nghĩa là chúng ta không bao giờ có thể viết ra _tất cả_ các chữ số của Pi - sau tất cả, có vô số. Các nhà toán học Hy Lạp và Trung Quốc cổ đại đã tính toán bốn chữ số thập phân đầu tiên của Pi bằng cách xấp xỉ các vòng tròn bằng cách sử dụng đa giác thông thường. Lưu ý cách, khi bạn thêm nhiều cạnh, đa giác bắt đầu trông [[ngày càng nhiều | ít hơn | chính xác]] như một vòng tròn: 
 
     figure: x-img(src="images/polygons.svg" width=460 height=110)
 
@@ -227,18 +229,18 @@
 
 ::: column.grow
 
- Năm 1665, [Isaac Newton](bio:newton) đã tính được 15 chữ số. Ngày nay, chúng ta có thể sử dụng các máy tính mạnh mẽ để tính giá trị của Pi với độ chính xác cao hơn nhiều. 
+Năm 1665, [Isaac Newton](bio:newton) đã tính được 15 chữ số. Ngày nay, chúng ta có thể sử dụng các máy tính mạnh mẽ để tính giá trị của Pi với độ chính xác cao hơn nhiều. 
 
- Kỷ lục hiện tại là 31,4 nghìn tỷ chữ số. Một cuốn sách in chứa tất cả các chữ số này sẽ dày khoảng 400 \ km - đó là độ cao mà [Trạm vũ trụ quốc tế](gloss:iss) quay quanh Trái đất! 
+Kỷ lục hiện tại là 31,4 nghìn tỷ chữ số. Một cuốn sách in chứa tất cả các chữ số này sẽ dày khoảng 400 \ km - đó là độ cao mà [Trạm vũ trụ quốc tế](gloss:iss) quay quanh Trái đất! 
 
- Tất nhiên, bạn không cần phải nhớ nhiều chữ số của Pi. Trong thực tế, phần nhỏ `22/7 = 3.142…` là một xấp xỉ lớn. 
+Tất nhiên, bạn không cần phải nhớ nhiều chữ số của Pi. Trong thực tế, phần nhỏ `22/7 = 3.142…` là một xấp xỉ lớn. 
 
 :::
 
 ---
 > id: pi-sequence
 
- Một cách tiếp cận để tính Pi là sử dụng các dãy số vô hạn. Đây là một ví dụ được phát hiện bởi [Gottfried Wilhelm Leibniz](bio:leibniz) vào năm 1676: 
+Một cách tiếp cận để tính Pi là sử dụng các dãy số vô hạn. Đây là một ví dụ được phát hiện bởi [Gottfried Wilhelm Leibniz](bio:leibniz) vào năm 1676: 
 
 {.text-center}`π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
@@ -250,9 +252,9 @@
 
 ::: column.grow
 
- Nhiều nhà toán học tin rằng Pi có một tính chất thậm chí còn gây tò mò hơn: đó là một __con số bình thường__ . Điều này có nghĩa là các chữ số từ 0 đến 9 xuất hiện hoàn toàn ngẫu nhiên, như thể tự nhiên đã gieo xúc xắc 10 mặt vô hạn nhiều lần, để xác định giá trị của Pi. 
+Nhiều nhà toán học tin rằng Pi có một tính chất thậm chí còn gây tò mò hơn: đó là một __con số bình thường__ . Điều này có nghĩa là các chữ số từ 0 đến 9 xuất hiện hoàn toàn ngẫu nhiên, như thể tự nhiên đã gieo xúc xắc 10 mặt vô hạn nhiều lần, để xác định giá trị của Pi. 
 
- Tại đây bạn có thể thấy 100 chữ số đầu tiên của Pi. Di chuyển qua một số ô, để xem cách các chữ số được phân phối. 
+Tại đây bạn có thể thấy 100 chữ số đầu tiên của Pi. Di chuyển qua một số ô, để xem cách các chữ số được phân phối. 
 
 ::: column(width=330)
 
@@ -271,7 +273,7 @@
 > id: pi-digits
 > goals: search
 
- Nếu Pi bình thường, điều đó có nghĩa là bạn có thể nghĩ về _bất kỳ_ chuỗi chữ số nào và nó sẽ xuất hiện ở đâu đó trong các chữ số của nó. Tại đây bạn có thể tìm kiếm một triệu chữ số đầu tiên của Pi - chúng có chứa ngày sinh của bạn không? 
+Nếu Pi bình thường, điều đó có nghĩa là bạn có thể nghĩ về _bất kỳ_ chuỗi chữ số nào và nó sẽ xuất hiện ở đâu đó trong các chữ số của nó. Tại đây bạn có thể tìm kiếm một triệu chữ số đầu tiên của Pi - chúng có chứa ngày sinh của bạn không? 
 
 ::: .box.f-red.pi-box
 
@@ -289,9 +291,9 @@
 ---
 > id: pi-movies
 
- Chúng tôi thậm chí có thể chuyển đổi toàn bộ một cuốn sách, như Harry Potter, thành một chuỗi các chữ số rất dài (a = 01, b = 02, v.v.). Nếu Pi bình thường, chuỗi này sẽ xuất hiện ở đâu đó trong các chữ số của nó - nhưng phải mất hàng triệu năm để tính đủ các chữ số để tìm thấy nó. 
+Chúng tôi thậm chí có thể chuyển đổi toàn bộ một cuốn sách, như Harry Potter, thành một chuỗi các chữ số rất dài (a = 01, b = 02, v.v.). Nếu Pi bình thường, chuỗi này sẽ xuất hiện ở đâu đó trong các chữ số của nó - nhưng phải mất hàng triệu năm để tính đủ các chữ số để tìm thấy nó. 
 
- Pi rất dễ hiểu, nhưng có tầm quan trọng cơ bản trong khoa học và toán học. Đó có thể là một lý do tại sao Pi trở nên phổ biến khác thường trong văn hóa của chúng tôi (ít nhất, so với các chủ đề khác của toán học): 
+Pi rất dễ hiểu, nhưng có tầm quan trọng cơ bản trong khoa học và toán học. Đó có thể là một lý do tại sao Pi trở nên phổ biến khác thường trong văn hóa của chúng tôi (ít nhất, so với các chủ đề khác của toán học): 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -313,7 +315,7 @@
 ---
 > id: pi-day
 
- Thậm chí còn có một _ngày Pi_ mỗi năm, rơi vào ngày 14 tháng 3, bởi vì `pi ≈ 3.14` hoặc vào ngày 22 tháng 7 vì `pi ≈ 22/7` . 
+Thậm chí còn có một _ngày Pi_ mỗi năm, rơi vào ngày 14 tháng 3, bởi vì `pi ≈ 3.14` hoặc vào ngày 22 tháng 7 vì `pi ≈ 22/7` . 
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -324,7 +326,7 @@
 > section: radians
 > id: degrees
 
- Cho đến nay trong hình học, chúng ta luôn đo góc theo [độ](gloss:degrees) . Một __{.m-red} vòng tròn đầy đủ__ là [[360]]°, một __{.m-green} một nửa vòng tròn__ là [[180]]°, một __{.m-yellow} vòng tròn quý__ là [[90]]°, v.v. 
+Cho đến nay trong hình học, chúng ta luôn đo góc theo [độ](gloss:degrees) . Một __{.m-red} vòng tròn đầy đủ__ là [[360]]°, một __{.m-green} một nửa vòng tròn__ là [[180]]°, một __{.m-yellow} vòng tròn quý__ là [[90]]°, v.v. 
 
 ::: column(width=160)
 
@@ -368,9 +370,9 @@
 
 ::: column.grow
 
- Khi nó xảy ra, 360 độ là một trong những khái niệm lâu đời nhất trong toán học mà chúng ta vẫn sử dụng ngày nay. Chúng được phát triển ở Babylon cổ đại, hơn 5000 năm trước! 
+Khi nó xảy ra, 360 độ là một trong những khái niệm lâu đời nhất trong toán học mà chúng ta vẫn sử dụng ngày nay. Chúng được phát triển ở Babylon cổ đại, hơn 5000 năm trước! 
 
- Vào thời điểm đó, một trong những ứng dụng quan trọng nhất của toán học là trong thiên văn học. _Mặt trời_ quyết định bốn mùa, mà nông dân phải biết khi trồng trọt. Tương tự, _mặt trăng_ xác định thủy triều, rất quan trọng đối với ngư dân. Mọi người cũng nghiên cứu các ngôi sao để dự đoán tương lai, hoặc để giao tiếp với các vị thần. 
+Vào thời điểm đó, một trong những ứng dụng quan trọng nhất của toán học là trong thiên văn học. _Mặt trời_ quyết định bốn mùa, mà nông dân phải biết khi trồng trọt. Tương tự, _mặt trăng_ xác định thủy triều, rất quan trọng đối với ngư dân. Mọi người cũng nghiên cứu các ngôi sao để dự đoán tương lai, hoặc để giao tiếp với các vị thần. 
 
 ::: column(width=260)
 
@@ -384,7 +386,7 @@
 > id: constellations
 > goals: rotate
 
- Các nhà thiên văn nhận thấy rằng các chòm sao có thể nhìn thấy vào một thời điểm cụ thể trong đêm đã thay đổi một chút xíu mỗi ngày - cho đến sau khoảng 360 ngày, chúng đã quay trở lại điểm xuất phát. Và đây có thể là lý do tại sao họ chia vòng tròn thành 360 độ. 
+Các nhà thiên văn nhận thấy rằng các chòm sao có thể nhìn thấy vào một thời điểm cụ thể trong đêm đã thay đổi một chút xíu mỗi ngày - cho đến sau khoảng 360 ngày, chúng đã quay trở lại điểm xuất phát. Và đây có thể là lý do tại sao họ chia vòng tròn thành 360 độ. 
 
     figure: .constellations
       .label.md Midnight on day ${day}
@@ -397,15 +399,15 @@
 > id: constellations-1
 > goals: video
 
- Tất nhiên, thực sự có 365 ngày trong một năm (chính xác là 365.242199), nhưng các nhà toán học Babylon đã làm việc với các đồng hồ mặt trời đơn giản, và phép tính gần đúng này là hoàn toàn phù hợp. 
+Tất nhiên, thực sự có 365 ngày trong một năm (chính xác là 365.242199), nhưng các nhà toán học Babylon đã làm việc với các đồng hồ mặt trời đơn giản, và phép tính gần đúng này là hoàn toàn phù hợp. 
 
- Nó cũng hoạt động tốt với hệ thống số 60 cơ sở hiện tại của họ (kể từ đó `6 xx 60 = 360` ). Hệ thống này là lý do tại sao chúng ta vẫn có 60 giây trong một phút và 60 phút trong một giờ - mặc dù hầu hết các đơn vị khác được đo ở [cơ sở 10](gloss:base-10) (ví dụ 10 năm trong một thập kỷ hoặc 100 năm trong một thế kỷ). 
+Nó cũng hoạt động tốt với hệ thống số 60 cơ sở hiện tại của họ (kể từ đó `6 xx 60 = 360` ). Hệ thống này là lý do tại sao chúng ta vẫn có 60 giây trong một phút và 60 phút trong một giờ - mặc dù hầu hết các đơn vị khác được đo ở [cơ sở 10](gloss:base-10) (ví dụ 10 năm trong một thập kỷ hoặc 100 năm trong một thế kỷ). 
 
 ::: column.grow
 
- Đối với nhiều người trong chúng ta, đo góc theo độ là bản chất thứ hai: có video 360°, người trượt ván có thể kéo được 540 giây và ai đó thay đổi quyết định của họ có thể quay 180°. 
+Đối với nhiều người trong chúng ta, đo góc theo độ là bản chất thứ hai: có video 360°, người trượt ván có thể kéo được 540 giây và ai đó thay đổi quyết định của họ có thể quay 180°. 
 
- Nhưng theo quan điểm toán học, việc lựa chọn 360 là hoàn toàn tùy ý. Nếu chúng ta đang sống trên Sao Hỏa, một vòng tròn có thể có 670° và một năm trên Sao Mộc thậm chí có 10,475 ngày. 
+Nhưng theo quan điểm toán học, việc lựa chọn 360 là hoàn toàn tùy ý. Nếu chúng ta đang sống trên Sao Hỏa, một vòng tròn có thể có 670° và một năm trên Sao Mộc thậm chí có 10,475 ngày. 
 
 ::: column(width=280)
 
@@ -420,7 +422,7 @@
 
 ### Xạ hương 
 
- Thay vì chia một vòng tròn thành một số phân đoạn (như 360 độ), các nhà toán học thường thích đo các góc bằng [chu vi](gloss:circle-circumference) của một [__vòng tròn đơn vị__](gloss:unit-circle) (một vòng tròn có bán kính 1). 
+Thay vì chia một vòng tròn thành một số phân đoạn (như 360 độ), các nhà toán học thường thích đo các góc bằng [chu vi](gloss:circle-circumference) của một [__vòng tròn đơn vị__](gloss:unit-circle) (một vòng tròn có bán kính 1). 
 
 ::: column(width=280)
 
@@ -436,7 +438,7 @@
 
 ::: column.grow
 
- Một _{span.var-action} vòng tròn đầy đủ_ có chu vi _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+Một _{span.var-action} vòng tròn đầy đủ_ có chu vi _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
 {.reveal(when="eqn-0")} Cho một _{span.var-action} Xoay nửa vòng tròn_ , khoảng cách tương ứng dọc theo chu vi là _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
@@ -449,7 +451,7 @@
 ---
 > id: radians-conversion
 
- Mỗi góc tính theo độ có kích thước tương đương tính bằng radian. Chuyển đổi giữa hai thứ rất dễ dàng - giống như bạn có thể chuyển đổi giữa các đơn vị khác như mét và km, hoặc Celsius và Fahrenheit: 
+Mỗi góc tính theo độ có kích thước tương đương tính bằng radian. Chuyển đổi giữa hai thứ rất dễ dàng - giống như bạn có thể chuyển đổi giữa các đơn vị khác như mét và km, hoặc Celsius và Fahrenheit: 
 
 {.text-center} __{.m-red} 360°__ _{span.space} = =_ __{.m-green} 2 rad _π___ 
 
@@ -468,20 +470,22 @@ __{.m-green} 1 rad__ _{span.space} = =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-re
 ---
 > id: radians-table
 
- Bạn có thể viết đánh giá radian hoặc là một bội số của _π,_ hoặc như chỉ là một số thập phân đơn. Bạn có thể điền vào bảng này kích thước góc tương đương theo độ và radian không? 
+Bạn có thể viết đánh giá radian hoặc là một bội số của _π,_ hoặc như chỉ là một số thập phân đơn. Bạn có thể điền vào bảng này kích thước góc tương đương theo độ và radian không? 
 
- | __{.m-red} độ__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ | | __{.m-green} radian__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` | {.table-small.grid}
+| __{.m-red} độ__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ |
+| __{.m-green} radian__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
 
 ---
 > id: radians-distance
 
 ### Khoảng cách di chuyển 
 
- Bạn có thể nghĩ về radian khi khoảng cách của người du hành trên đường đi dọc theo chu vi của một vòng tròn đơn vị. Điều này đặc biệt hữu ích khi làm việc với các đối tượng đang di chuyển trên một đường tròn. 
+Bạn có thể nghĩ về radian khi khoảng cách của người du hành trên đường đi dọc theo chu vi của một vòng tròn đơn vị. Điều này đặc biệt hữu ích khi làm việc với các đối tượng đang di chuyển trên một đường tròn. 
 
 ::: column.grow
 
- Ví dụ: [Trạm vũ trụ quốc tế](gloss:iss) quay quanh Trái đất cứ sau 1,5 giờ. Điều này có nghĩa là __tốc độ quay của nó__ là [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] radian mỗi giờ. 
+Ví dụ: [Trạm vũ trụ quốc tế](gloss:iss) quay quanh Trái đất cứ sau 1,5 giờ. Điều này có nghĩa là __tốc độ quay của nó__ là [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] radian mỗi giờ. 
 
 {.reveal(when="blank-0")} Trong một [vòng tròn đơn vị](gloss:unit-circle) , tốc độ quay giống như tốc độ _thực tế_ , bởi vì độ dài của chu vi giống như một vòng quay đầy đủ tính bằng radian (cả hai đều `2pi` ). 
 
@@ -508,9 +512,9 @@ __{.m-green} 1 rad__ _{span.space} = =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-re
 ---
 > id: radians-distance-1
 
- Bạn có thể thấy rằng, trong ví dụ này, radian là một đơn vị thuận tiện hơn nhiều so với độ không? Khi chúng ta biết tốc độ quay, chúng ta chỉ cần nhân với bán kính để có được tốc độ thực tế. 
+Bạn có thể thấy rằng, trong ví dụ này, radian là một đơn vị thuận tiện hơn nhiều so với độ không? Khi chúng ta biết tốc độ quay, chúng ta chỉ cần nhân với bán kính để có được tốc độ thực tế. 
 
- Đây là một ví dụ khác: xe của bạn có bánh xe với bán kính 0,25 \ m. Nếu bạn đang lái xe ở tốc độ 20 \ m / s, thì bánh xe của bạn sẽ quay ở [[`20/0.25 =
+Đây là một ví dụ khác: xe của bạn có bánh xe với bán kính 0,25 \ m. Nếu bạn đang lái xe ở tốc độ 20 \ m / s, thì bánh xe của bạn sẽ quay ở [[`20/0.25 =
 80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] radian mỗi giây _{span.reveal(when="blank-0")} (hoặc là `80/(2pi) = 13` vòng quay mỗi giây)._ 
 
 ---
@@ -518,13 +522,13 @@ __{.m-green} 1 rad__ _{span.space} = =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-re
 
 ### Lượng giác 
 
- Đối với hầu hết các bài toán hình học đơn giản, độ và radian hoàn toàn có thể thay thế cho nhau - bạn có thể chọn câu nào bạn thích hoặc câu hỏi có thể cho bạn biết đơn vị nào sẽ đưa ra câu trả lời của bạn. Tuy nhiên, khi bạn nghiên cứu [lượng giác](gloss:trigonometry) hoặc [phép tính](gloss:calculus) nâng cao hơn, nó sẽ xuất hiện radian thuận tiện hơn nhiều so với độ. 
+Đối với hầu hết các bài toán hình học đơn giản, độ và radian hoàn toàn có thể thay thế cho nhau - bạn có thể chọn câu nào bạn thích hoặc câu hỏi có thể cho bạn biết đơn vị nào sẽ đưa ra câu trả lời của bạn. Tuy nhiên, khi bạn nghiên cứu [lượng giác](gloss:trigonometry) hoặc [phép tính](gloss:calculus) nâng cao hơn, nó sẽ xuất hiện radian thuận tiện hơn nhiều so với độ. 
 
 ::: column.grow
 
- Hầu hết các máy tính có một [nút đặc biệt](->.button.mode) để chuyển đổi giữa độ và radian. Các hàm lượng giác như [__sin__](gloss:sin) , [__cos__](gloss:cos) và __tan__ lấy các góc làm đầu vào và các hàm nghịch đảo của chúng là __arcsin__ , __arccos__ và __arctan__ trả về các góc làm đầu ra. Cài đặt máy tính hiện tại xác định đơn vị nào được sử dụng cho các góc này. 
+Hầu hết các máy tính có một [nút đặc biệt](->.button.mode) để chuyển đổi giữa độ và radian. Các hàm lượng giác như [__sin__](gloss:sin) , [__cos__](gloss:cos) và __tan__ lấy các góc làm đầu vào và các hàm nghịch đảo của chúng là __arcsin__ , __arccos__ và __arctan__ trả về các góc làm đầu ra. Cài đặt máy tính hiện tại xác định đơn vị nào được sử dụng cho các góc này. 
 
- Hãy thử sử dụng máy tính này để tính toán 
+Hãy thử sử dụng máy tính này để tính toán 
 
 {.text-center} tội lỗi (30°) = [[0,5]] _{span.eqn-gap}_ cos (1°) = [[0,999]]  
 tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]] 
@@ -557,7 +561,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: small-angle
 
- Sử dụng radian có một lợi thế đặc biệt thú vị khi sử dụng chức năng Sine. Nếu `θ` là một góc rất nhỏ (dưới 20° hoặc 0,3 rad), sau đó `sin(θ) ≈ θ` . Ví dụ, 
+Sử dụng radian có một lợi thế đặc biệt thú vị khi sử dụng chức năng Sine. Nếu `θ` là một góc rất nhỏ (dưới 20° hoặc 0,3 rad), sau đó `sin(θ) ≈ θ` . Ví dụ, 
 
 {.text-center} tội( ${x}{x|0.1|0,0.5,0.05} ) `≈`${sin(x)} Giáo dục 
 
@@ -570,7 +574,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > section: tangets-chords-arcs
 > id: circle-parts
 
- Trong các phần trước, bạn đã học các tên được đặt cho một số phần khác nhau của vòng tròn - như tâm, bán kính, đường kính và chu vi. Tuy nhiên, có nhiều yếu tố hình học liên quan đến một vòng tròn, chúng ta sẽ cần giải quyết các vấn đề phức tạp hơn: 
+Trong các phần trước, bạn đã học các tên được đặt cho một số phần khác nhau của vòng tròn - như tâm, bán kính, đường kính và chu vi. Tuy nhiên, có nhiều yếu tố hình học liên quan đến một vòng tròn, chúng ta sẽ cần giải quyết các vấn đề phức tạp hơn: 
 
 ::: column(width=300)
 
@@ -599,14 +603,19 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow(parent="right")
 
- * {.r} Một [{.red} secant](pill:secant) là một đường thẳng cắt một vòng tròn tại hai điểm. [Tiếp tục](btn:next) * {.r.reveal(when="next-0")} Một [{.green} hợp âm](pill:chord) là một đoạn dòng có điểm cuối nằm trên chu vi của một vòng tròn. [Tiếp tục](btn:next) * {.r.reveal(when="next-1")} Một [{.blue} tiếp tuyến](pill:tangent) là một đường chạm vào một vòng tròn tại đúng một điểm. Đây được gọi là __điểm tiếp tuyến__ . [Tiếp tục](btn:next) * {.r.reveal(when="next-2")} An [{.yellow} cung](pill:arc) là một phần của chu vi của một vòng tròn. [Tiếp tục](btn:next) * {.r.reveal(when="next-3")} Một [{.teal} sector](pill:sector) là một phần bên trong của một vòng tròn, giới hạn bởi một _vòng cung_ và _hai bán kính_ . [Tiếp tục](btn:next) * {.r.reveal(when="next-4")} Cuối cùng, một [{.purple} phân khúc](pill:segment) là một phần của nội thất của một vòng tròn, giới hạn bởi một _vòng cung_ và _hợp âm_ . [Tiếp tục](btn:next) 
+* {.r} Một [{.red} secant](pill:secant) là một đường thẳng cắt một vòng tròn tại hai điểm. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-0")} Một [{.green} hợp âm](pill:chord) là một đoạn dòng có điểm cuối nằm trên chu vi của một vòng tròn. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-1")} Một [{.blue} tiếp tuyến](pill:tangent) là một đường chạm vào một vòng tròn tại đúng một điểm. Đây được gọi là __điểm tiếp tuyến__ . [Tiếp tục](btn:next)
+* {.r.reveal(when="next-2")} An [{.yellow} cung](pill:arc) là một phần của chu vi của một vòng tròn. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-3")} Một [{.teal} sector](pill:sector) là một phần bên trong của một vòng tròn, giới hạn bởi một _vòng cung_ và _hai bán kính_ . [Tiếp tục](btn:next)
+* {.r.reveal(when="next-4")} Cuối cùng, một [{.purple} phân khúc](pill:segment) là một phần của nội thất của một vòng tròn, giới hạn bởi một _vòng cung_ và _hợp âm_ . [Tiếp tục](btn:next) 
 
 :::
 
 ---
 > id: circle-parts-1
 
- Trong phần này, chúng ta sẽ xem xét mối quan hệ giữa tất cả các yếu tố này và chứng minh các định lý về tính chất của chúng. Đừng lo lắng về việc ghi nhớ tất cả các định nghĩa bây giờ - bạn luôn có thể sử dụng [bảng chú giải](->.footer-link[data-modal=glossarym]) . 
+Trong phần này, chúng ta sẽ xem xét mối quan hệ giữa tất cả các yếu tố này và chứng minh các định lý về tính chất của chúng. Đừng lo lắng về việc ghi nhớ tất cả các định nghĩa bây giờ - bạn luôn có thể sử dụng [bảng chú giải](->.footer-link[data-modal=glossarym]) . 
 
 ---
 
@@ -614,33 +623,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} SẮP CÓ! 
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
     
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
 
 ---
 
@@ -648,52 +631,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} SẮP CÓ! 
 
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
     
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -702,9 +640,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Hầu hết các nhà khoa học ở Hy Lạp cổ đại đều đồng ý rằng Trái đất là một hình cầu. Có rất nhiều bằng chứng: từ những con tàu biến mất sau đường chân trời trên biển, đến chuyển động tròn của các ngôi sao trong đêm. 
+Hầu hết các nhà khoa học ở Hy Lạp cổ đại đều đồng ý rằng Trái đất là một hình cầu. Có rất nhiều bằng chứng: từ những con tàu biến mất sau đường chân trời trên biển, đến chuyển động tròn của các ngôi sao trong đêm. 
 
- Thật không may, không ai biết chính xác Trái đất _lớn như thế nào_ - cho đến khoảng năm 200 trước Công nguyên, khi nhà toán học [Eratosthenes](bio:eratosthenes) tìm thấy một cách khéo léo để đo bán kính Trái đất, sử dụng hình học cơ bản. Tất cả những gì chúng ta cần là thêm một chút kiến thức về cung và cung của một vòng tròn. 
+Thật không may, không ai biết chính xác Trái đất _lớn như thế nào_ - cho đến khoảng năm 200 trước Công nguyên, khi nhà toán học [Eratosthenes](bio:eratosthenes) tìm thấy một cách khéo léo để đo bán kính Trái đất, sử dụng hình học cơ bản. Tất cả những gì chúng ta cần là thêm một chút kiến thức về cung và cung của một vòng tròn. 
 
 ::: column(width=280)
 
@@ -729,13 +667,13 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Như bạn có thể thấy trong sơ đồ, một [{.red} vòng cung](pill:arc) là một phần của [[chu vi | đường kính | tiếp tuyến]] của một vòng tròn và một [{.yellow} lĩnh vực](pill:sector) này là một phần của [[nội thất | bán kính | chu vi]] của một vòng tròn. 
+Như bạn có thể thấy trong sơ đồ, một [{.red} vòng cung](pill:arc) là một phần của [[chu vi | đường kính | tiếp tuyến]] của một vòng tròn và một [{.yellow} lĩnh vực](pill:sector) này là một phần của [[nội thất | bán kính | chu vi]] của một vòng tròn. 
 
 ::: .reveal(when="blank-0 blank-1")
 
- Vòng cung giữa hai điểm _A_ và _B_ thường được viết là `arc(AB)` . Định nghĩa này hơi mơ hồ: có một [{.purple} cung thứ hai](pill:major) nối _A_ và _B_ nhưng đi theo hướng khác xung quanh vòng tròn. 
+Vòng cung giữa hai điểm _A_ và _B_ thường được viết là `arc(AB)` . Định nghĩa này hơi mơ hồ: có một [{.purple} cung thứ hai](pill:major) nối _A_ và _B_ nhưng đi theo hướng khác xung quanh vòng tròn. 
 
- Cung nhỏ hơn trong hai cung được gọi là __cung nhỏ__ và cung lớn hơn được gọi là __cung chính__ . Nếu các điểm _A_ và _B_ hoàn toàn đối diện nhau, cả hai cung có cùng độ dài và là [[hình bán nguyệt | đường kính | chu vi]] . 
+Cung nhỏ hơn trong hai cung được gọi là __cung nhỏ__ và cung lớn hơn được gọi là __cung chính__ . Nếu các điểm _A_ và _B_ hoàn toàn đối diện nhau, cả hai cung có cùng độ dài và là [[hình bán nguyệt | đường kính | chu vi]] . 
 
 :::
 
@@ -746,15 +684,15 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Để tìm độ dài của một cung hoặc diện tích của một khu vực, chúng ta cần biết về góc tương ứng ở tâm của vòng tròn: đây được gọi là [{.blue} góc trung tâm](pill:angle) . 
+Để tìm độ dài của một cung hoặc diện tích của một khu vực, chúng ta cần biết về góc tương ứng ở tâm của vòng tròn: đây được gọi là [{.blue} góc trung tâm](pill:angle) . 
 
- Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](pill:angle) là _{span.var-action} 90°_ , phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](pill:fangle) . 
+Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](pill:angle) là _{span.var-action} 90°_ , phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](pill:fangle) . 
 
 ::: .reveal(when="blank-0")
 
- Điều này có nghĩa là [{.red} chiều dài của cung](pill:arc) cũng là `1/4` sau đó [{.purple} toàn bộ chu vi](pill:circ) của vòng tròn và [{.yellow} diện tích của ngành](pill:sector) là `1/4` sau đó [{.orange} Toàn bộ diện tích](pill:area) hình tròn. 
+Điều này có nghĩa là [{.red} chiều dài của cung](pill:arc) cũng là `1/4` sau đó [{.purple} toàn bộ chu vi](pill:circ) của vòng tròn và [{.yellow} diện tích của ngành](pill:sector) là `1/4` sau đó [{.orange} Toàn bộ diện tích](pill:area) hình tròn. 
 
- Chúng ta có thể biểu thị mối quan hệ này theo một phương trình: 
+Chúng ta có thể biểu thị mối quan hệ này theo một phương trình: 
 
 {.text-center}`"arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
 
@@ -781,7 +719,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: arcs-2
 
- Bây giờ chúng ta có thể sắp xếp lại các phương trình này để tìm bất kỳ biến nào chúng ta quan tâm. Ví dụ: 
+Bây giờ chúng ta có thể sắp xếp lại các phương trình này để tìm bất kỳ biến nào chúng ta quan tâm. Ví dụ: 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -797,20 +735,14 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- Trong đó _r_ là bán kính của đường tròn và _c_ là kích thước của góc trung tâm. 
+Trong đó _r_ là bán kính của đường tròn và _c_ là kích thước của góc trung tâm. 
 
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
     
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
 
- Nếu góc trung tâm được đo [bằng radian](gloss:radians) chứ không phải [độ](gloss:degrees) , chúng ta có thể sử dụng cùng phương trình, nhưng phải thay 360° bằng [[`2 π`|`1/2 π`|`π`]] : 
+Nếu góc trung tâm được đo [bằng radian](gloss:radians) chứ không phải [độ](gloss:degrees) , chúng ta có thể sử dụng cùng phương trình, nhưng phải thay 360° bằng [[`2 π`|`1/2 π`|`π`]] : 
 
 ::: .reveal(when="blank-0")
 
@@ -828,16 +760,16 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- Lưu ý cách các phương trình trở nên đơn giản hơn nhiều và _π_ hủy bỏ ở mọi nơi. Điều này là do, như bạn có thể nhớ lại, [định nghĩa về radian](/course/circles/radians#radians) về cơ bản là độ dài của một cung trong một vòng tròn có bán kính 1. 
+Lưu ý cách các phương trình trở nên đơn giản hơn nhiều và _π_ hủy bỏ ở mọi nơi. Điều này là do, như bạn có thể nhớ lại, [định nghĩa về radian](/course/circles/radians#radians) về cơ bản là độ dài của một cung trong một vòng tròn có bán kính 1. 
 
- Bây giờ hãy xem làm thế nào chúng ta có thể sử dụng các cung và cung để tính chu vi của Trái đất. [Tiếp tục](btn:next) 
+Bây giờ hãy xem làm thế nào chúng ta có thể sử dụng các cung và cung để tính chu vi của Trái đất. [Tiếp tục](btn:next) 
 
 :::
 
 ---
 > id: eratosthenes
 
- Ở Ai Cập cổ đại, thành phố _Swenet_ nằm dọc theo sông Nile. Swenet nổi tiếng với một cái giếng với một tài sản tò mò: có một khoảnh khắc mỗi năm khi ánh sáng mặt trời chạm đến đáy giếng - vào buổi trưa ngày 21 tháng 6, ngày của ngày _hạ chí_ . Vào thời điểm chính xác đó, đáy giếng được chiếu sáng, nhưng không phải là các mặt của nó, có nghĩa là Mặt trời đang đứng ngay trên giếng. 
+Ở Ai Cập cổ đại, thành phố _Swenet_ nằm dọc theo sông Nile. Swenet nổi tiếng với một cái giếng với một tài sản tò mò: có một khoảnh khắc mỗi năm khi ánh sáng mặt trời chạm đến đáy giếng - vào buổi trưa ngày 21 tháng 6, ngày của ngày _hạ chí_ . Vào thời điểm chính xác đó, đáy giếng được chiếu sáng, nhưng không phải là các mặt của nó, có nghĩa là Mặt trời đang đứng ngay trên giếng. 
 
 ::: column(width=300)
 
@@ -853,9 +785,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- Nhà toán học [Eratosthenes](bio:eratosthenes) sống ở _Alexandria_ , cách Swenet khoảng 800 km về phía bắc, nơi ông là giám đốc của Thư viện lớn. Ở trung tâm thành phố Alexandria có một đài tưởng niệm, một tượng đài cao, hẹp với đỉnh hình kim tự tháp. 
+Nhà toán học [Eratosthenes](bio:eratosthenes) sống ở _Alexandria_ , cách Swenet khoảng 800 km về phía bắc, nơi ông là giám đốc của Thư viện lớn. Ở trung tâm thành phố Alexandria có một đài tưởng niệm, một tượng đài cao, hẹp với đỉnh hình kim tự tháp. 
 
- Eratosthenes nhận thấy rằng vào buổi trưa vào ngày hạ chí, obelisk đã ném một cái bóng - có nghĩa là mặt trời _không_ ở ngay trên nó. Ông đã suy luận rằng điều này là do độ cong của Trái đất và nhận ra rằng nó có thể được sử dụng để tính chu vi của hành tinh chúng ta. 
+Eratosthenes nhận thấy rằng vào buổi trưa vào ngày hạ chí, obelisk đã ném một cái bóng - có nghĩa là mặt trời _không_ ở ngay trên nó. Ông đã suy luận rằng điều này là do độ cong của Trái đất và nhận ra rằng nó có thể được sử dụng để tính chu vi của hành tinh chúng ta. 
 
 ---
 > id: eratosthenes-1
@@ -866,13 +798,13 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: .reveal(when="next-0")
 
- Eratosthenes đo rằng [{.teal} góc](pill:angle1) của bóng là 7,2°. Điều này giống như [{.purple} góc trung tâm](pill:angle2) của [{.red} vòng cung](pill:arc) từ Alexandria đến Swenet, vì chúng [[xen kẽ | theo chiều dọc |]] góc [[tương ứng]] . 
+Eratosthenes đo rằng [{.teal} góc](pill:angle1) của bóng là 7,2°. Điều này giống như [{.purple} góc trung tâm](pill:angle2) của [{.red} vòng cung](pill:arc) từ Alexandria đến Swenet, vì chúng [[xen kẽ | theo chiều dọc |]] góc [[tương ứng]] . 
 
 :::
 
 ::: .reveal(when="blank-0")
 
- Bây giờ chúng ta có thể sử dụng phương trình cho độ dài cung mà chúng ta đã dẫn ở trên: 
+Bây giờ chúng ta có thể sử dụng phương trình cho độ dài cung mà chúng ta đã dẫn ở trên: 
 
 {.text-center}`pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
 
@@ -880,7 +812,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: .reveal(when="blank-1")
 
- Nếu chúng ta sắp xếp lại thứ này, chúng ta thấy rằng chu vi của Trái đất là 
+Nếu chúng ta sắp xếp lại thứ này, chúng ta thấy rằng chu vi của Trái đất là 
 
 {.text-center}`pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 
@@ -888,7 +820,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: .reveal(when="blank-2")
 
- Cuối cùng, chúng ta biết rằng chu vi của một vòng tròn là `C = 2 pi r` , vì vậy bán kính Trái đất là 
+Cuối cùng, chúng ta biết rằng chu vi của một vòng tròn là `C = 2 pi r` , vì vậy bán kính Trái đất là 
 
 {.text-center}`r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"` . 
 
@@ -925,7 +857,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: eratosthenes-2
 
- Phép đo của Eratosthenes là một trong những thí nghiệm quan trọng nhất trong thời cổ đại. Ước tính của ông về kích thước Trái đất là chính xác đáng ngạc nhiên, đặc biệt khi xem xét rằng ông chỉ có quyền truy cập vào các công cụ đo lường rất cơ bản. 
+Phép đo của Eratosthenes là một trong những thí nghiệm quan trọng nhất trong thời cổ đại. Ước tính của ông về kích thước Trái đất là chính xác đáng ngạc nhiên, đặc biệt khi xem xét rằng ông chỉ có quyền truy cập vào các công cụ đo lường rất cơ bản. 
 
 ::: column(width=280)
 
@@ -933,11 +865,11 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Tất nhiên, có thể khó dịch các kết quả ban đầu của anh ấy thành các đơn vị hiện đại như km. Ở Hy Lạp cổ đại, khoảng cách được đo bằng _stadia_ (khoảng 160 m), nhưng không có tiêu chuẩn chung. Mỗi khu vực có một phiên bản hơi khác nhau và chúng tôi không biết Eratosthenes nào được sử dụng. 
+Tất nhiên, có thể khó dịch các kết quả ban đầu của anh ấy thành các đơn vị hiện đại như km. Ở Hy Lạp cổ đại, khoảng cách được đo bằng _stadia_ (khoảng 160 m), nhưng không có tiêu chuẩn chung. Mỗi khu vực có một phiên bản hơi khác nhau và chúng tôi không biết Eratosthenes nào được sử dụng. 
 
- Trong các thế kỷ tiếp theo, các nhà khoa học đã cố gắng sử dụng các phương pháp khác để tính bán kính Trái đất - đôi khi có kết quả rất khác nhau và không chính xác. 
+Trong các thế kỷ tiếp theo, các nhà khoa học đã cố gắng sử dụng các phương pháp khác để tính bán kính Trái đất - đôi khi có kết quả rất khác nhau và không chính xác. 
 
- Đó là một trong những phép đo không chính xác đã khiến Christopher Columbus đi thuyền về phía tây từ Bồ Đào Nha. Ông cho rằng Trái đất nhỏ hơn nhiều so với thực tế và hy vọng đến được Ấn Độ. Trên thực tế, anh đến một lục địa khác ở giữa: Châu Mỹ. 
+Đó là một trong những phép đo không chính xác đã khiến Christopher Columbus đi thuyền về phía tây từ Bồ Đào Nha. Ông cho rằng Trái đất nhỏ hơn nhiều so với thực tế và hy vọng đến được Ấn Độ. Trên thực tế, anh đến một lục địa khác ở giữa: Châu Mỹ. 
 
 :::
 
@@ -947,11 +879,6 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} SẮP CÓ! 
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
 ---
 
 ## Định lý đường tròn 
@@ -959,57 +886,57 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > section: circle-theorems
 > sectionStatus: dev
 
- https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsADEeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheet/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
+https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsADEeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheet/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
 
- __[CC] Xác định và mô tả mối quan hệ giữa các góc được ghi, bán kính và hợp âm. Bao gồm mối quan hệ giữa các góc trung tâm, được ghi và bao quanh; các góc được ghi trên một đường kính là các góc vuông; bán kính của một đường tròn vuông góc với tiếp tuyến nơi bán kính cắt đường tròn.__ 
+__[CC] Xác định và mô tả mối quan hệ giữa các góc được ghi, bán kính và hợp âm. Bao gồm mối quan hệ giữa các góc trung tâm, được ghi và bao quanh; các góc được ghi trên một đường kính là các góc vuông; bán kính của một đường tròn vuông góc với tiếp tuyến nơi bán kính cắt đường tròn.__ 
 
- Một góc được ghi là một góc với đỉnh của nó là hình tròn và các cạnh của nó chứa hợp âm. Vòng cung bị chặn là vòng cung nằm ở phía trong của góc được ghi và có điểm cuối nằm trên góc. Đỉnh của một góc được ghi có thể là bất cứ nơi nào trên vòng tròn miễn là các cạnh của nó cắt nhau thành vòng tròn để tạo thành một vòng cung bị chặn. 
+Một góc được ghi là một góc với đỉnh của nó là hình tròn và các cạnh của nó chứa hợp âm. Vòng cung bị chặn là vòng cung nằm ở phía trong của góc được ghi và có điểm cuối nằm trên góc. Đỉnh của một góc được ghi có thể là bất cứ nơi nào trên vòng tròn miễn là các cạnh của nó cắt nhau thành vòng tròn để tạo thành một vòng cung bị chặn. 
 
- __Định lý góc bị bỏ qua__ Số đo của một góc được ghi bằng một nửa số đo của cung bị chặn của nó. Để chứng minh Định lý góc đã đăng ký, bạn cần chia nó thành ba trường hợp, giống như ba góc khác nhau được rút ra từ Điều tra. 
+__Định lý góc bị bỏ qua__ Số đo của một góc được ghi bằng một nửa số đo của cung bị chặn của nó. Để chứng minh Định lý góc đã đăng ký, bạn cần chia nó thành ba trường hợp, giống như ba góc khác nhau được rút ra từ Điều tra. 
 
- __Các định lý__ góc đồng quy Các góc được đánh dấu chặn cùng một cung là đồng dạng. 
+__Các định lý__ góc đồng quy Các góc được đánh dấu chặn cùng một cung là đồng dạng. 
 
- __Định lý hình bán nguyệt__ góc bị bỏ qua Một góc chặn hình bán nguyệt là một góc vuông. 
+__Định lý hình bán nguyệt__ góc bị bỏ qua Một góc chặn hình bán nguyệt là một góc vuông. 
 
- Trong Định lý hình bán nguyệt góc đã ký, chúng ta cũng có thể nói rằng góc được ghi trong hình bán nguyệt. Bất cứ khi nào một góc vuông được ghi trong một vòng tròn, điểm cuối của góc là điểm cuối của đường kính. Do đó, điều ngược lại của Định lý hình bán nguyệt góc bị bỏ qua cũng đúng. 
+Trong Định lý hình bán nguyệt góc đã ký, chúng ta cũng có thể nói rằng góc được ghi trong hình bán nguyệt. Bất cứ khi nào một góc vuông được ghi trong một vòng tròn, điểm cuối của góc là điểm cuối của đường kính. Do đó, điều ngược lại của Định lý hình bán nguyệt góc bị bỏ qua cũng đúng. 
 
- Khi một góc nằm trên một vòng tròn, đỉnh nằm trên chu vi của vòng tròn. Một loại góc trên một vòng tròn là một loại được hình thành bởi một tiếp tuyến và hợp âm. 
+Khi một góc nằm trên một vòng tròn, đỉnh nằm trên chu vi của vòng tròn. Một loại góc trên một vòng tròn là một loại được hình thành bởi một tiếp tuyến và hợp âm. 
 
- __Định lý hợp âm / góc__ tiếp tuyến Số đo của một góc được tạo bởi hợp âm và tiếp tuyến cắt nhau trên vòng tròn là một nửa số đo của cung bị chặn. 
+__Định lý hợp âm / góc__ tiếp tuyến Số đo của một góc được tạo bởi hợp âm và tiếp tuyến cắt nhau trên vòng tròn là một nửa số đo của cung bị chặn. 
 
- Từ Định lý Hợp âm / Góc tiếp tuyến, bây giờ chúng ta biết rằng có hai loại góc bằng một nửa số đo của cung bị chặn; một góc được ghi và một góc được hình thành bởi một hợp âm và một tiếp tuyến. Do đó, bất kỳ góc nào với đỉnh của nó trên một vòng tròn sẽ bằng một nửa số đo của cung bị chặn. 
+Từ Định lý Hợp âm / Góc tiếp tuyến, bây giờ chúng ta biết rằng có hai loại góc bằng một nửa số đo của cung bị chặn; một góc được ghi và một góc được hình thành bởi một hợp âm và một tiếp tuyến. Do đó, bất kỳ góc nào với đỉnh của nó trên một vòng tròn sẽ bằng một nửa số đo của cung bị chặn. 
 
- Một góc được xem xét bên trong một vòng tròn khi đỉnh nằm ở đâu đó bên trong vòng tròn, nhưng không nằm ở trung tâm. Tất cả các góc bên trong một vòng tròn được hình thành bởi hai hợp âm giao nhau. 
+Một góc được xem xét bên trong một vòng tròn khi đỉnh nằm ở đâu đó bên trong vòng tròn, nhưng không nằm ở trung tâm. Tất cả các góc bên trong một vòng tròn được hình thành bởi hai hợp âm giao nhau. 
 
- __Định lý góc hợp âm xen kẽ__ Số đo của góc được tạo bởi hai hợp âm giao nhau bên trong một vòng tròn là trung bình của số đo của các cung bị chặn. 
+__Định lý góc hợp âm xen kẽ__ Số đo của góc được tạo bởi hai hợp âm giao nhau bên trong một vòng tròn là trung bình của số đo của các cung bị chặn. 
 
- Một góc được coi là nằm ngoài một vòng tròn nếu đỉnh của góc nằm ngoài vòng tròn và các cạnh là tiếp tuyến hoặc tiếp tuyến. Có ba loại góc nằm ngoài một vòng tròn: một góc được tạo bởi hai tiếp tuyến, một góc được tạo bởi một tiếp tuyến và một tiếp tuyến và một góc được tạo bởi hai tiếp. Cũng giống như một góc bên trong hoặc trên một vòng tròn, một góc bên ngoài một vòng tròn có một công thức cụ thể, liên quan đến các cung bị chặn. 
+Một góc được coi là nằm ngoài một vòng tròn nếu đỉnh của góc nằm ngoài vòng tròn và các cạnh là tiếp tuyến hoặc tiếp tuyến. Có ba loại góc nằm ngoài một vòng tròn: một góc được tạo bởi hai tiếp tuyến, một góc được tạo bởi một tiếp tuyến và một tiếp tuyến và một góc được tạo bởi hai tiếp. Cũng giống như một góc bên trong hoặc trên một vòng tròn, một góc bên ngoài một vòng tròn có một công thức cụ thể, liên quan đến các cung bị chặn. 
 
- __Định lý góc bên ngoài__ Số đo của một góc được tạo bởi hai giây, hai tiếp tuyến hoặc một tiếp tuyến và tiếp tuyến được vẽ từ một điểm bên ngoài vòng tròn bằng một nửa độ chênh lệch của các số đo của các cung bị chặn. 
+__Định lý góc bên ngoài__ Số đo của một góc được tạo bởi hai giây, hai tiếp tuyến hoặc một tiếp tuyến và tiếp tuyến được vẽ từ một điểm bên ngoài vòng tròn bằng một nửa độ chênh lệch của các số đo của các cung bị chặn. 
 
- Khi hai hợp âm giao nhau bên trong một vòng tròn, hai tam giác mà chúng tạo ra tương tự nhau, làm cho các cạnh của mỗi tam giác cân xứng với nhau. Nếu chúng ta loại bỏ AD và BC, các tỷ lệ giữa AE, EC, DE và EB sẽ vẫn như nhau. 
+Khi hai hợp âm giao nhau bên trong một vòng tròn, hai tam giác mà chúng tạo ra tương tự nhau, làm cho các cạnh của mỗi tam giác cân xứng với nhau. Nếu chúng ta loại bỏ AD và BC, các tỷ lệ giữa AE, EC, DE và EB sẽ vẫn như nhau. 
 
- __Định lý__ hợp âm giao nhau Nếu hai hợp âm giao nhau trong một vòng tròn sao cho một hợp âm được chia thành các đoạn có độ dài a và b và đoạn kia thành các đoạn có độ dài c và d thì ab = cd. Nói cách khác, tích của các phân đoạn của một hợp âm bằng với sản phẩm của các phân đoạn của hợp âm thứ hai. 
+__Định lý__ hợp âm giao nhau Nếu hai hợp âm giao nhau trong một vòng tròn sao cho một hợp âm được chia thành các đoạn có độ dài a và b và đoạn kia thành các đoạn có độ dài c và d thì ab = cd. Nói cách khác, tích của các phân đoạn của một hợp âm bằng với sản phẩm của các phân đoạn của hợp âm thứ hai. 
 
- Ngoài việc hình thành một góc bên ngoài một vòng tròn, vòng tròn có thể chia các phần tử thành các phân đoạn tỷ lệ với nhau. 
+Ngoài việc hình thành một góc bên ngoài một vòng tròn, vòng tròn có thể chia các phần tử thành các phân đoạn tỷ lệ với nhau. 
 
- Nếu chúng ta vẽ trong các hợp âm giao nhau, chúng ta sẽ có hai hình tam giác tương tự. 
+Nếu chúng ta vẽ trong các hợp âm giao nhau, chúng ta sẽ có hai hình tam giác tương tự. 
 
- Từ các góc được ghi và Thuộc tính phản xạ (R≅∠R), △ PRS∼ TRQ. Vì hai tam giác tương tự nhau, chúng ta có thể thiết lập tỷ lệ giữa các cạnh tương ứng. Sau đó, nhân chéo. ac + d = ca + b⇒a (a + b) = c (c + d) 
+Từ các góc được ghi và Thuộc tính phản xạ (R≅∠R), △ PRS∼ TRQ. Vì hai tam giác tương tự nhau, chúng ta có thể thiết lập tỷ lệ giữa các cạnh tương ứng. Sau đó, nhân chéo. ac + d = ca + b⇒a (a + b) = c (c + d) 
 
- __Định lý__ hai __phân đoạn__ Nếu hai giây được rút ra từ một điểm chung bên ngoài một vòng tròn và các phân đoạn được dán nhãn như trên, thì a (a + b) = c (c + d). Nói cách khác, sản phẩm của phân khúc bên ngoài và toàn bộ một secant bằng với sản phẩm của phân khúc bên ngoài và toàn bộ của secant khác. 
+__Định lý__ hai __phân đoạn__ Nếu hai giây được rút ra từ một điểm chung bên ngoài một vòng tròn và các phân đoạn được dán nhãn như trên, thì a (a + b) = c (c + d). Nói cách khác, sản phẩm của phân khúc bên ngoài và toàn bộ một secant bằng với sản phẩm của phân khúc bên ngoài và toàn bộ của secant khác. 
 
- Nếu một tiếp tuyến và tiếp tuyến gặp nhau tại một điểm chung bên ngoài một vòng tròn, thì các phân đoạn được tạo ra có mối quan hệ tương tự như hai tia sáng. Hãy nhớ lại rằng sản phẩm của phần bên ngoài của một secant và toàn bộ bằng với cùng một secant khác. Nếu một trong những phân đoạn này là một tiếp tuyến, nó vẫn sẽ là sản phẩm của phần bên ngoài và toàn bộ. Tuy nhiên, đối với một đường tiếp tuyến, phần bên ngoài và toàn bộ là bằng nhau. 
+Nếu một tiếp tuyến và tiếp tuyến gặp nhau tại một điểm chung bên ngoài một vòng tròn, thì các phân đoạn được tạo ra có mối quan hệ tương tự như hai tia sáng. Hãy nhớ lại rằng sản phẩm của phần bên ngoài của một secant và toàn bộ bằng với cùng một secant khác. Nếu một trong những phân đoạn này là một tiếp tuyến, nó vẫn sẽ là sản phẩm của phần bên ngoài và toàn bộ. Tuy nhiên, đối với một đường tiếp tuyến, phần bên ngoài và toàn bộ là bằng nhau. 
 
- __Định lý phân đoạn__ tiếp tuyến Nếu tiếp tuyến và tiếp tuyến được vẽ từ một điểm chung bên ngoài vòng tròn (và các phân đoạn được gắn nhãn như hình ảnh bên trái), thì a2 = b (b + c). Điều này có nghĩa là sản phẩm của phân khúc bên ngoài của secant và toàn bộ bằng với bình phương của phân khúc tiếp tuyến. 
+__Định lý phân đoạn__ tiếp tuyến Nếu tiếp tuyến và tiếp tuyến được vẽ từ một điểm chung bên ngoài vòng tròn (và các phân đoạn được gắn nhãn như hình ảnh bên trái), thì a2 = b (b + c). Điều này có nghĩa là sản phẩm của phân khúc bên ngoài của secant và toàn bộ bằng với bình phương của phân khúc tiếp tuyến. 
 
 ---
 
 ### Định lý của Thales 
 
- Chứng minh sử dụng tam giác cân 
+Chứng minh sử dụng tam giác cân 
 
- Kết hợp tất cả các hình học Euclide 
+Kết hợp tất cả các hình học Euclide 
 
 {.todo} LÀM 
 
@@ -1020,15 +947,15 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > sectionStatus: dev
 > section: cyclic-polygons
 
- __[CC] Xây dựng một hình tam giác đều, hình vuông và hình lục giác đều được ghi trong một hình tròn.__ 
+__[CC] Xây dựng một hình tam giác đều, hình vuông và hình lục giác đều được ghi trong một hình tròn.__ 
 
- Một đa giác được ghi là một đa giác trong đó mọi đỉnh nằm trên một vòng tròn. Lưu ý rằng không phải mọi hình tứ giác hoặc đa giác đều có thể được ghi trong một vòng tròn. Các tứ giác được đăng ký cũng được gọi là tứ giác tuần hoàn. Đối với các loại hình tứ giác này, chúng phải có một thuộc tính đặc biệt. Chúng tôi sẽ điều tra nó ở đây. 
+Một đa giác được ghi là một đa giác trong đó mọi đỉnh nằm trên một vòng tròn. Lưu ý rằng không phải mọi hình tứ giác hoặc đa giác đều có thể được ghi trong một vòng tròn. Các tứ giác được đăng ký cũng được gọi là tứ giác tuần hoàn. Đối với các loại hình tứ giác này, chúng phải có một thuộc tính đặc biệt. Chúng tôi sẽ điều tra nó ở đây. 
 
- Điều tra này cho thấy các góc đối diện trong một hình tứ giác được ghi là bổ sung. Bằng cách cắt tứ giác làm đôi, qua đường chéo, chúng tôi có thể chỉ ra rằng hai góc còn lại (mà chúng tôi không cắt qua) tạo thành một cặp tuyến tính khi khớp với nhau. 
+Điều tra này cho thấy các góc đối diện trong một hình tứ giác được ghi là bổ sung. Bằng cách cắt tứ giác làm đôi, qua đường chéo, chúng tôi có thể chỉ ra rằng hai góc còn lại (mà chúng tôi không cắt qua) tạo thành một cặp tuyến tính khi khớp với nhau. 
 
- Định lý tứ giác đã đăng ký: Một tứ giác được ghi trong một vòng tròn khi và chỉ khi các góc đối diện là bổ sung. 
+Định lý tứ giác đã đăng ký: Một tứ giác được ghi trong một vòng tròn khi và chỉ khi các góc đối diện là bổ sung. 
 
- https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+https://www.youtube.com/watch?v=bJOuzqu3MUQ 
 
 ---
 
@@ -1037,7 +964,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > section: spheres-cones-cylinders
 > id: solids
 
- Trong các phần trước, chúng tôi đã nghiên cứu các thuộc tính của các vòng tròn trên một bề mặt phẳng. Nhưng thế giới của chúng ta thực sự là ba chiều, vì vậy hãy xem xét một số chất rắn 3D dựa trên các vòng tròn: 
+Trong các phần trước, chúng tôi đã nghiên cứu các thuộc tính của các vòng tròn trên một bề mặt phẳng. Nhưng thế giới của chúng ta thực sự là ba chiều, vì vậy hãy xem xét một số chất rắn 3D dựa trên các vòng tròn: 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -1059,7 +986,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- Lưu ý cách định nghĩa của hình cầu gần giống với định nghĩa của hình [[tròn | bán kính | khối lập phương]] - ngoại trừ trong ba chiều! 
+Lưu ý cách định nghĩa của hình cầu gần giống với định nghĩa của hình [[tròn | bán kính | khối lập phương]] - ngoại trừ trong ba chiều! 
 
 ---
 > id: gasometer
@@ -1068,9 +995,10 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Ở đây bạn có thể thấy _Gasometer_ hình trụ ở Oberhausen, Đức. Nó được sử dụng để lưu trữ khí đốt tự nhiên được sử dụng làm nhiên liệu trong các nhà máy và nhà máy điện gần đó. Gasometer cao 120m, và đế và trần của nó là hai vòng tròn lớn với bán kính 35m. Có hai câu hỏi quan trọng mà các kỹ sư có thể muốn trả lời: 
+Ở đây bạn có thể thấy _Gasometer_ hình trụ ở Oberhausen, Đức. Nó được sử dụng để lưu trữ khí đốt tự nhiên được sử dụng làm nhiên liệu trong các nhà máy và nhà máy điện gần đó. Gasometer cao 120m, và đế và trần của nó là hai vòng tròn lớn với bán kính 35m. Có hai câu hỏi quan trọng mà các kỹ sư có thể muốn trả lời: 
 
- * Bao nhiêu khí tự nhiên có thể được lưu trữ? Đây là [[âm lượng | khu vực | đường kính]] của xi lanh. * {.reveal(when="blank-0")} Cần bao nhiêu thép để chế tạo Gasometer? Đây là (khoảng) [[diện tích bề mặt | chu vi | đường chéo]] của hình trụ. 
+* Bao nhiêu khí tự nhiên có thể được lưu trữ? Đây là [[âm lượng | khu vực | đường kính]] của xi lanh.
+* {.reveal(when="blank-0")} Cần bao nhiêu thép để chế tạo Gasometer? Đây là (khoảng) [[diện tích bề mặt | chu vi | đường chéo]] của hình trụ. 
 
 {.reveal(when="blank-0 blank-1")} Hãy thử tìm công thức cho cả hai kết quả này! 
 
@@ -1087,9 +1015,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 #### Thể tích của một hình trụ 
 
- Trên cùng và dưới cùng của một hình trụ là hai vòng tròn đồng dạng, được gọi là __cơ sở__ . Các __{.m-blue} chiều cao _h___ của hình trụ là khoảng cách vuông góc giữa các cơ sở này và __{.m-red} bán kính _r___ của hình trụ đơn giản là bán kính của các đáy tròn. 
+Trên cùng và dưới cùng của một hình trụ là hai vòng tròn đồng dạng, được gọi là __cơ sở__ . Các __{.m-blue} chiều cao _h___ của hình trụ là khoảng cách vuông góc giữa các cơ sở này và __{.m-red} bán kính _r___ của hình trụ đơn giản là bán kính của các đáy tròn. 
 
- Chúng ta có thể ước chừng một hình trụ bằng cách sử dụng một ${n}{n|5|3,20,1} [__lăng kính hai__](gloss:prism) mặt. Khi số cạnh tăng lên, lăng kính bắt đầu trông ngày càng giống hình trụ: 
+Chúng ta có thể ước chừng một hình trụ bằng cách sử dụng một ${n}{n|5|3,20,1} [__lăng kính hai__](gloss:prism) mặt. Khi số cạnh tăng lên, lăng kính bắt đầu trông ngày càng giống hình trụ: 
 
 ::: column(width=240)
 
@@ -1104,7 +1032,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cylinder-volume
 
- Mặc dù một hình trụ về mặt kỹ thuật không phải là lăng kính, chúng có chung nhiều đặc tính. Trong cả hai trường hợp, chúng ta có thể tìm thấy âm lượng bằng cách nhân diện tích của chúng __{.m-red} căn cứ__ với họ __{.m-blue} chiều cao__ . Điều này có nghĩa là một hình trụ có bán kính _{.b.m-red} r_ và chiều cao _{.b.m-blue} h_ có âm lượng 
+Mặc dù một hình trụ về mặt kỹ thuật không phải là lăng kính, chúng có chung nhiều đặc tính. Trong cả hai trường hợp, chúng ta có thể tìm thấy âm lượng bằng cách nhân diện tích của chúng __{.m-red} căn cứ__ với họ __{.m-blue} chiều cao__ . Điều này có nghĩa là một hình trụ có bán kính _{.b.m-red} r_ và chiều cao _{.b.m-blue} h_ có âm lượng 
 
 {.text-center}`V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_ 
 
@@ -1116,7 +1044,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Trong các ví dụ trên, hai cơ sở của hình trụ luôn _trực tiếp với nhau_ : đây được gọi là __hình trụ bên phải__ . Nếu các căn cứ không trực tiếp với nhau, chúng ta có một __hình trụ xiên__ . Các căn cứ vẫn song song, nhưng hai bên dường như nghiêng về phía góc nghiêng của góc nghiêng không phải là 90°. 
+Trong các ví dụ trên, hai cơ sở của hình trụ luôn _trực tiếp với nhau_ : đây được gọi là __hình trụ bên phải__ . Nếu các căn cứ không trực tiếp với nhau, chúng ta có một __hình trụ xiên__ . Các căn cứ vẫn song song, nhưng hai bên dường như nghiêng về phía góc nghiêng của góc nghiêng không phải là 90°. 
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1133,9 +1061,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: cavalieri
 > goals: slide
 
- Thể tích của một hình trụ xiên hóa ra giống hệt như hình trụ của một hình trụ bên phải có cùng bán kính và chiều cao. Điều này là do [__Nguyên lý của Cavalier__](gloss:cavalieri) , được đặt theo tên nhà toán học người Ý [Bonaventura Cavalieri](bio:cavalieri) : nếu hai vật rắn có cùng diện tích mặt cắt ngang ở mọi độ cao, thì chúng sẽ có cùng thể tích. 
+Thể tích của một hình trụ xiên hóa ra giống hệt như hình trụ của một hình trụ bên phải có cùng bán kính và chiều cao. Điều này là do [__Nguyên lý của Cavalier__](gloss:cavalieri) , được đặt theo tên nhà toán học người Ý [Bonaventura Cavalieri](bio:cavalieri) : nếu hai vật rắn có cùng diện tích mặt cắt ngang ở mọi độ cao, thì chúng sẽ có cùng thể tích. 
 
- Hãy tưởng tượng cắt một hình trụ thành nhiều đĩa mỏng. Sau đó chúng ta có thể trượt các đĩa này theo chiều ngang để có được một hình trụ xiên. Âm lượng của các đĩa riêng lẻ không thay đổi khi bạn làm cho nó xiên, do đó tổng âm lượng cũng không đổi: 
+Hãy tưởng tượng cắt một hình trụ thành nhiều đĩa mỏng. Sau đó chúng ta có thể trượt các đĩa này theo chiều ngang để có được một hình trụ xiên. Âm lượng của các đĩa riêng lẻ không thay đổi khi bạn làm cho nó xiên, do đó tổng âm lượng cũng không đổi: 
 
 ::: column(width=240)
 
@@ -1148,11 +1076,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
     
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
 > id: cylinder-surface
@@ -1161,11 +1085,12 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Để tìm diện tích bề mặt của một hình trụ, chúng ta phải hủy bỏ nó vào [lưới](gloss:net) phẳng. Bạn có thể tự thử, ví dụ bằng cách bóc nhãn trên hộp thức ăn. 
+Để tìm diện tích bề mặt của một hình trụ, chúng ta phải hủy bỏ nó vào [lưới](gloss:net) phẳng. Bạn có thể tự thử, ví dụ bằng cách bóc nhãn trên hộp thức ăn. 
 
- Có hai [[vòng tròn | hình cầu | hình vuông]] , một ở phía trên và một ở dưới cùng của hình trụ. Mặt cong thực sự là một [[hình chữ nhật]] lớn [[| Quảng trường | hình elip]] . 
+Có hai [[vòng tròn | hình cầu | hình vuông]] , một ở phía trên và một ở dưới cùng của hình trụ. Mặt cong thực sự là một [[hình chữ nhật]] lớn [[| Quảng trường | hình elip]] . 
 
- * {.reveal(when="blank-0 blank-1")} Hai vòng tròn đều có diện tích _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . * {.reveal(when="eqn-0")} Chiều cao của hình chữ nhật là _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} và chiều rộng của hình chữ nhật giống như [[chu vi | đường kính | tiếp tuyến]] của các vòng tròn:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
+* {.reveal(when="blank-0 blank-1")} Hai vòng tròn đều có diện tích _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ .
+* {.reveal(when="eqn-0")} Chiều cao của hình chữ nhật là _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} và chiều rộng của hình chữ nhật giống như [[chu vi | đường kính | tiếp tuyến]] của các vòng tròn:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
 
 ::: column(width=320)
 
@@ -1177,7 +1102,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cylinder-surface-1
 
- Điều này có nghĩa là tổng diện tích bề mặt của hình trụ có bán kính _r_ và chiều cao _h_ được cho bởi 
+Điều này có nghĩa là tổng diện tích bề mặt của hình trụ có bán kính _r_ và chiều cao _h_ được cho bởi 
 
 {.text-center}`A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_ . 
 
@@ -1186,9 +1111,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
     figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
- Xi lanh có thể được tìm thấy ở khắp mọi nơi trên thế giới của chúng ta - từ lon soda đến giấy vệ sinh hoặc ống nước. Bạn có thể nghĩ về bất kỳ ví dụ khác? 
+Xi lanh có thể được tìm thấy ở khắp mọi nơi trên thế giới của chúng ta - từ lon soda đến giấy vệ sinh hoặc ống nước. Bạn có thể nghĩ về bất kỳ ví dụ khác? 
 
- _Gasometer_ ở trên có bán kính 35m và cao 120m. Bây giờ chúng ta có thể tính toán rằng khối lượng của nó là khoảng [[461.000 ± 1000]] `"m"^3` và diện tích bề mặt của nó là khoảng [[34.080 ± 100]] `"m"^2` . 
+_Gasometer_ ở trên có bán kính 35m và cao 120m. Bây giờ chúng ta có thể tính toán rằng khối lượng của nó là khoảng [[461.000 ± 1000]] `"m"^3` và diện tích bề mặt của nó là khoảng [[34.080 ± 100]] `"m"^2` . 
 
 ---
 > id: cone
@@ -1197,11 +1122,11 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Một [__hình nón__](gloss:cone) là một vật rắn ba chiều có hình tròn __{.m-red} cơ sở__ . Mặt bên của nó hướng lên trên hướng lên trên như thể hiện trong sơ đồ và kết thúc ở một điểm duy nhất gọi là __{.m-green} đỉnh__ . 
+Một [__hình nón__](gloss:cone) là một vật rắn ba chiều có hình tròn __{.m-red} cơ sở__ . Mặt bên của nó hướng lên trên hướng lên trên như thể hiện trong sơ đồ và kết thúc ở một điểm duy nhất gọi là __{.m-green} đỉnh__ . 
 
- Các __{.m-red} bán kính__ của hình nón là bán kính của hình tròn và __{.m-blue} chiều cao__ của hình nón là khoảng cách vuông góc từ đáy đến đỉnh. 
+Các __{.m-red} bán kính__ của hình nón là bán kính của hình tròn và __{.m-blue} chiều cao__ của hình nón là khoảng cách vuông góc từ đáy đến đỉnh. 
 
- Cũng giống như những hình dạng khác mà chúng ta đã gặp trước đây, hình nón có ở khắp mọi nơi xung quanh chúng ta: nón kem, nón giao thông, mái nhà nhất định và thậm chí cả cây thông giáng sinh. Bạn có thể nghĩ gì khác? 
+Cũng giống như những hình dạng khác mà chúng ta đã gặp trước đây, hình nón có ở khắp mọi nơi xung quanh chúng ta: nón kem, nón giao thông, mái nhà nhất định và thậm chí cả cây thông giáng sinh. Bạn có thể nghĩ gì khác? 
 
 ::: column(width=280)
 
@@ -1238,9 +1163,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Trước đây chúng tôi đã tìm thấy thể tích của một hình trụ bằng cách xấp xỉ nó bằng lăng kính. Tương tự như vậy, chúng ta có thể tìm thấy khối lượng của một hình nón bằng cách xấp xỉ nó bằng cách sử dụng một [__kim tự tháp__](gloss:pyramid) . 
+Trước đây chúng tôi đã tìm thấy thể tích của một hình trụ bằng cách xấp xỉ nó bằng lăng kính. Tương tự như vậy, chúng ta có thể tìm thấy khối lượng của một hình nón bằng cách xấp xỉ nó bằng cách sử dụng một [__kim tự tháp__](gloss:pyramid) . 
 
- Ở đây bạn có thể thấy một ${n}{n|5|3,18,1} kim tự tháp hai mặt. Khi số cạnh tăng lên, kim tự tháp bắt đầu trông ngày càng giống hình nón. Trong thực tế, chúng ta có thể nghĩ về một hình nón như một kim tự tháp với _vô số_ mặt! 
+Ở đây bạn có thể thấy một ${n}{n|5|3,18,1} kim tự tháp hai mặt. Khi số cạnh tăng lên, kim tự tháp bắt đầu trông ngày càng giống hình nón. Trong thực tế, chúng ta có thể nghĩ về một hình nón như một kim tự tháp với _vô số_ mặt! 
 
 ::: column(width=280)
 
@@ -1251,14 +1176,14 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cone-volume-1
 
- Điều này cũng có nghĩa là chúng ta cũng có thể sử dụng phương trình cho âm lượng: `V = 1/3 "base" × "height"` . Cơ sở của hình nón là một hình tròn, nên thể tích của hình nón có bán kính _r_ và chiều cao _h_ là 
+Điều này cũng có nghĩa là chúng ta cũng có thể sử dụng phương trình cho âm lượng: `V = 1/3 "base" × "height"` . Cơ sở của hình nón là một hình tròn, nên thể tích của hình nón có bán kính _r_ và chiều cao _h_ là 
 
 {.text-center}`V =` _{x-equation(solution="1/3 π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cone-volume-hint1 cone-volume-hint2")}_ 
 
 ---
 > id: cone-circumscribed
 
- Lưu ý sự tương đồng với phương trình cho thể tích của một hình trụ. Hãy tưởng tượng vẽ một hình trụ _xung quanh_ hình nón, có cùng đế và chiều cao - đây được gọi là __hình trụ có__ hình tròn. Bây giờ, hình nón sẽ chiếm chính xác [[một phần ba | một nửa | một phần tư]] thể tích của hình trụ: 
+Lưu ý sự tương đồng với phương trình cho thể tích của một hình trụ. Hãy tưởng tượng vẽ một hình trụ _xung quanh_ hình nón, có cùng đế và chiều cao - đây được gọi là __hình trụ có__ hình tròn. Bây giờ, hình nón sẽ chiếm chính xác [[một phần ba | một nửa | một phần tư]] thể tích của hình trụ: 
 
     figure: x-solid(size=280)
 
@@ -1273,9 +1198,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Cũng giống như một hình trụ, một hình nón không nhất thiết phải là đường thẳng. Nếu đỉnh trực tiếp trên tâm của cơ sở, chúng ta có một __hình nón bên phải__ . Mặt khác, chúng tôi gọi nó là một __hình nón xiên__ . 
+Cũng giống như một hình trụ, một hình nón không nhất thiết phải là đường thẳng. Nếu đỉnh trực tiếp trên tâm của cơ sở, chúng ta có một __hình nón bên phải__ . Mặt khác, chúng tôi gọi nó là một __hình nón xiên__ . 
 
- Một lần nữa, chúng ta có thể sử dụng nguyên tắc của Cavalieri để chỉ ra rằng tất cả các hình nón xiên có cùng một thể tích, miễn là chúng có cùng chiều cao và chiều cao cơ sở. 
+Một lần nữa, chúng ta có thể sử dụng nguyên tắc của Cavalieri để chỉ ra rằng tất cả các hình nón xiên có cùng một thể tích, miễn là chúng có cùng chiều cao và chiều cao cơ sở. 
 
 ::: column(width=280)
 
@@ -1291,7 +1216,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Tìm diện tích bề mặt của hình nón là một chút khó khăn hơn. Giống như trước đây, chúng ta có thể làm sáng tỏ một hình nón vào lưới của nó. Di chuyển thanh trượt để xem điều gì xảy ra: trong trường hợp này, chúng ta có một [[khu vực]] vòng tròn và một [[vòng tròn | phân khúc vòng tròn | vòng cung tròn]] . 
+Tìm diện tích bề mặt của hình nón là một chút khó khăn hơn. Giống như trước đây, chúng ta có thể làm sáng tỏ một hình nón vào lưới của nó. Di chuyển thanh trượt để xem điều gì xảy ra: trong trường hợp này, chúng ta có một [[khu vực]] vòng tròn và một [[vòng tròn | phân khúc vòng tròn | vòng cung tròn]] . 
 
 {.reveal(when="blank-0")} Bây giờ chúng ta chỉ cần thêm diện tích của cả hai thành phần này. Các __{.m-yellow} cơ sở__ là một hình tròn có bán kính _r_ , nên diện tích của nó là 
 
@@ -1309,7 +1234,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Bán kính của __{.m-green} sector__ giống như khoảng cách từ vành của hình nón đến đỉnh của nó. Cái này được gọi là [{.pill.green.b} chiều cao nghiêng _là_](target:s) của hình nón, và không giống như bình thường [{.pill.blue.b} chiều cao _h_](target:h) . Chúng ta có thể tìm thấy chiều cao nghiêng bằng [Pythagoras](gloss:pythagoras-theorem) : 
+Bán kính của __{.m-green} sector__ giống như khoảng cách từ vành của hình nón đến đỉnh của nó. Cái này được gọi là [{.pill.green.b} chiều cao nghiêng _là_](target:s) của hình nón, và không giống như bình thường [{.pill.blue.b} chiều cao _h_](target:h) . Chúng ta có thể tìm thấy chiều cao nghiêng bằng [Pythagoras](gloss:pythagoras-theorem) : 
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
 | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1336,7 +1261,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Các [{.pill.red} chiều dài cung](target:arc) của ngành giống như [[chu vi | đường kính | vòng cung]] của [{.pill.yellow} cơ sở](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Bây giờ chúng ta có thể tìm thấy khu vực của khu vực bằng cách sử dụng [công thức](gloss:circle-sector) mà chúng ta đã bắt nguồn trong phần trước:_ 
+Các [{.pill.red} chiều dài cung](target:arc) của ngành giống như [[chu vi | đường kính | vòng cung]] của [{.pill.yellow} cơ sở](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Bây giờ chúng ta có thể tìm thấy khu vực của khu vực bằng cách sử dụng [công thức](gloss:circle-sector) mà chúng ta đã bắt nguồn trong phần trước:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1371,7 +1296,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cone-surface-2
 
- Cuối cùng, chúng ta chỉ cần thêm diện tích của __{.m-yellow} cơ sở__ và diện tích của __{.m-green} ngành__ , để có được tổng bề mặt là hình nón: 
+Cuối cùng, chúng ta chỉ cần thêm diện tích của __{.m-yellow} cơ sở__ và diện tích của __{.m-green} ngành__ , để có được tổng bề mặt là hình nón: 
 
 {.text-center}`A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ 
 
@@ -1382,9 +1307,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Một [__hình cầu__](gloss:sphere) là một vật rắn ba chiều bao gồm tất cả các điểm có cùng khoảng cách từ một vật đã cho __{.m-green} trung tâm _C.___ Khoảng cách này được gọi là __{.m-red} bán kính _r___ của quả cầu. 
+Một [__hình cầu__](gloss:sphere) là một vật rắn ba chiều bao gồm tất cả các điểm có cùng khoảng cách từ một vật đã cho __{.m-green} trung tâm _C.___ Khoảng cách này được gọi là __{.m-red} bán kính _r___ của quả cầu. 
 
- Bạn có thể nghĩ về một quả cầu như một [vòng tròn](gloss:circle) ba chiều của người [Viking](gloss:circle) . Giống như một vòng tròn, một hình cầu cũng có một __{.m-blue} đường kính _d___ , [[gấp đôi | một nửa]] chiều dài của bán kính, cũng như hợp âm và secants. 
+Bạn có thể nghĩ về một quả cầu như một [vòng tròn](gloss:circle) ba chiều của người [Viking](gloss:circle) . Giống như một vòng tròn, một hình cầu cũng có một __{.m-blue} đường kính _d___ , [[gấp đôi | một nửa]] chiều dài của bán kính, cũng như hợp âm và secants. 
 
 ::: column(width=240)
 
@@ -1402,9 +1327,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 #### Khối lượng của một hình cầu 
 
- Để tìm thể tích của một khối cầu, một lần nữa chúng ta phải sử dụng Nguyên lý của Cavalier. Hãy bắt đầu với một bán cầu - một hình cầu cắt làm đôi dọc theo đường xích đạo. Chúng ta cũng cần một hình trụ có bán kính và chiều cao tương đương với bán cầu, nhưng với một hình nón ngược thì cắt ra hình chữ nhật ở giữa. 
+Để tìm thể tích của một khối cầu, một lần nữa chúng ta phải sử dụng Nguyên lý của Cavalier. Hãy bắt đầu với một bán cầu - một hình cầu cắt làm đôi dọc theo đường xích đạo. Chúng ta cũng cần một hình trụ có bán kính và chiều cao tương đương với bán cầu, nhưng với một hình nón ngược thì cắt ra hình chữ nhật ở giữa. 
 
- Khi bạn di chuyển thanh trượt bên dưới, bạn có thể thấy mặt cắt ngang của cả hai hình dạng này ở độ cao cụ thể phía trên cơ sở: 
+Khi bạn di chuyển thanh trượt bên dưới, bạn có thể thấy mặt cắt ngang của cả hai hình dạng này ở độ cao cụ thể phía trên cơ sở: 
 
 ::: column(width=240)
 
@@ -1459,7 +1384,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.text-center}`pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")` . 
 
- Bây giờ, diện tích của mặt cắt là 
+Bây giờ, diện tích của mặt cắt là 
 
     x-equation-system(steps="π x^2" hints="circle-cross-sec")
       table: tr
@@ -1471,11 +1396,11 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow.reveal(when="eqn-0")
 
- Mặt cắt ngang của hình trụ cắt luôn là một [[vòng | vòng tròn | hình nón]] . 
+Mặt cắt ngang của hình trụ cắt luôn là một [[vòng | vòng tròn | hình nón]] . 
 
 ::: .reveal(when="blank-1")
 
- Bán kính của lỗ là _h_ . Chúng ta có thể tìm thấy diện tích của vòng bằng cách trừ diện tích của lỗ khỏi diện tích của vòng tròn lớn hơn: 
+Bán kính của lỗ là _h_ . Chúng ta có thể tìm thấy diện tích của vòng bằng cách trừ diện tích của lỗ khỏi diện tích của vòng tròn lớn hơn: 
 
 | _Một_ | = | `π r^2 - π h^2` |
 | | = | `π (r^2 - h^2)` |
@@ -1488,7 +1413,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-volume-1
 
- Có vẻ như cả hai chất rắn có cùng diện tích mặt cắt ngang ở mọi cấp độ. Theo nguyên lý của Cavalieri, cả hai chất rắn cũng phải có cùng một [[thể tích | diện tích bề mặt | chu vi]] ! _{span.reveal(when="blank-0")} Chúng ta có thể tìm thể tích của bán cầu bằng cách trừ thể tích của [hình trụ](gloss:cylinder-volume) và thể tích của [hình nón](gloss:cone-volume) :_ 
+Có vẻ như cả hai chất rắn có cùng diện tích mặt cắt ngang ở mọi cấp độ. Theo nguyên lý của Cavalieri, cả hai chất rắn cũng phải có cùng một [[thể tích | diện tích bề mặt | chu vi]] ! _{span.reveal(when="blank-0")} Chúng ta có thể tìm thể tích của bán cầu bằng cách trừ thể tích của [hình trụ](gloss:cylinder-volume) và thể tích của [hình nón](gloss:cone-volume) :_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
@@ -1500,7 +1425,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-volume-2
 
- Một hình cầu bao gồm [[hai]] bán cầu, _{span.reveal(when="blank-0")} có nghĩa là khối lượng của nó phải_ 
+Một hình cầu bao gồm [[hai]] bán cầu, _{span.reveal(when="blank-0")} có nghĩa là khối lượng của nó phải_ 
 
 {.text-center.reveal(when="blank-0")}`V = 4/3 π r^3` . 
 
@@ -1510,7 +1435,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Trái đất là (xấp xỉ) một quả cầu có bán kính 6.371 \ km. Do đó, khối lượng của nó là 
+Trái đất là (xấp xỉ) một quả cầu có bán kính 6.371 \ km. Do đó, khối lượng của nó là 
 
 | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 |     | `=` | _{span.numbers} 1_ `"km"^3` |
@@ -1531,7 +1456,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-sum
 
- Nếu bạn so sánh các phương trình cho thể tích của hình trụ, hình nón và hình cầu, bạn có thể nhận thấy một trong những mối quan hệ thỏa mãn nhất trong hình học. Hãy tưởng tượng chúng ta có một hình trụ có cùng chiều cao với đường kính của đế của nó. Bây giờ chúng ta có thể lắp cả hình nón và hình cầu một cách hoàn hảo vào bên trong: 
+Nếu bạn so sánh các phương trình cho thể tích của hình trụ, hình nón và hình cầu, bạn có thể nhận thấy một trong những mối quan hệ thỏa mãn nhất trong hình học. Hãy tưởng tượng chúng ta có một hình trụ có cùng chiều cao với đường kính của đế của nó. Bây giờ chúng ta có thể lắp cả hình nón và hình cầu một cách hoàn hảo vào bên trong: 
 
 ::: column.r(width=220)
 
@@ -1563,11 +1488,11 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 #### Diện tích bề mặt của một hình cầu 
 
- Tìm một công thức cho diện tích bề mặt của một hình cầu là rất khó. Một lý do là chúng ta không thể mở và làm phẳng bề mặt của một hình cầu, giống như chúng ta đã làm cho hình nón và hình trụ trước đây. 
+Tìm một công thức cho diện tích bề mặt của một hình cầu là rất khó. Một lý do là chúng ta không thể mở và làm phẳng bề mặt của một hình cầu, giống như chúng ta đã làm cho hình nón và hình trụ trước đây. 
 
- Đây là một vấn đề cụ thể khi cố gắng tạo bản đồ. Trái đất có bề mặt cong, ba chiều, nhưng mọi bản đồ in phải phẳng và hai chiều. Điều này có nghĩa là Nhà địa lý phải gian lận: bằng cách kéo dài hoặc squishing một số khu vực nhất định. 
+Đây là một vấn đề cụ thể khi cố gắng tạo bản đồ. Trái đất có bề mặt cong, ba chiều, nhưng mọi bản đồ in phải phẳng và hai chiều. Điều này có nghĩa là Nhà địa lý phải gian lận: bằng cách kéo dài hoặc squishing một số khu vực nhất định. 
 
- Ở đây bạn có thể thấy một vài loại bản đồ khác nhau, được gọi là __phép chiếu__ . Hãy thử di chuyển hình vuông màu đỏ và xem khu vực này _thực sự_ trông như thế nào trên quả địa cầu: 
+Ở đây bạn có thể thấy một vài loại bản đồ khác nhau, được gọi là __phép chiếu__ . Hãy thử di chuyển hình vuông màu đỏ và xem khu vực này _thực sự_ trông như thế nào trên quả địa cầu: 
 
     figure
       x-select.tabs
@@ -1594,26 +1519,14 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-surface
 
- Để tìm diện tích bề mặt của một hình cầu, một lần nữa chúng ta có thể ước chừng nó bằng một hình dạng khác - ví dụ như một khối đa diện có nhiều mặt. Khi số lượng khuôn mặt tăng lên, khối đa diện bắt đầu trông ngày càng giống hình cầu. 
+Để tìm diện tích bề mặt của một hình cầu, một lần nữa chúng ta có thể ước chừng nó bằng một hình dạng khác - ví dụ như một khối đa diện có nhiều mặt. Khi số lượng khuôn mặt tăng lên, khối đa diện bắt đầu trông ngày càng giống hình cầu. 
 
 {.todo} SẮP RA MẮT: Bằng chứng diện tích bề mặt hình cầu 
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
     
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
 
 ---
 
@@ -1623,7 +1536,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: conics
 > goals: ellipse parabola hyperbola
 
- Vòng tròn là một trong bốn hình dạng khác nhau có thể được tạo ra bằng cách sử dụng các lát cắt của Google thông qua một [hình nón](gloss:cone) . Điều này có thể được chứng minh bằng cách sử dụng hình nón ánh sáng của một ngọn đuốc: 
+Vòng tròn là một trong bốn hình dạng khác nhau có thể được tạo ra bằng cách sử dụng các lát cắt của Google thông qua một [hình nón](gloss:cone) . Điều này có thể được chứng minh bằng cách sử dụng hình nón ánh sáng của một ngọn đuốc: 
 
     x-conic-section
     x-scale-box(width=760).conics
@@ -1644,18 +1557,18 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: conics-1
 
- Nếu bạn hướng ngọn đuốc theo chiều dọc xuống dưới, bạn sẽ thấy một [[vòng tròn | hình elip | hình bầu dục]] của ánh sáng. _{span.reveal(when="blank-0")} Nếu bạn nghiêng hình nón, bạn sẽ có được một [__hình elip__](gloss:ellipse) . Nếu bạn nghiêng nó hơn nữa, bạn sẽ có một [__parabola__](gloss:parabola) hoặc [__hyperbola__](gloss:hyperbola) ._ 
+Nếu bạn hướng ngọn đuốc theo chiều dọc xuống dưới, bạn sẽ thấy một [[vòng tròn | hình elip | hình bầu dục]] của ánh sáng. _{span.reveal(when="blank-0")} Nếu bạn nghiêng hình nón, bạn sẽ có được một [__hình elip__](gloss:ellipse) . Nếu bạn nghiêng nó hơn nữa, bạn sẽ có một [__parabola__](gloss:parabola) hoặc [__hyperbola__](gloss:hyperbola) ._ 
 
 ---
 > id: conics-2
 
 ::: column.grow
 
- Chung, bốn hình dạng này được gọi là [__phần hình nón__](gloss:conic-section) . Mặc dù tất cả chúng trông rất khác nhau, nhưng chúng có liên quan chặt chẽ với nhau: trên thực tế, tất cả chúng đều có thể được tạo bằng cùng một phương trình! 
+Chung, bốn hình dạng này được gọi là [__phần hình nón__](gloss:conic-section) . Mặc dù tất cả chúng trông rất khác nhau, nhưng chúng có liên quan chặt chẽ với nhau: trên thực tế, tất cả chúng đều có thể được tạo bằng cùng một phương trình! 
 
- Các phần hình nón được nghiên cứu đầu tiên bởi nhà toán học Hy Lạp cổ đại [Apollonius của Perga](bio:apollonius) , người cũng đặt cho chúng những cái tên khác thường. 
+Các phần hình nón được nghiên cứu đầu tiên bởi nhà toán học Hy Lạp cổ đại [Apollonius của Perga](bio:apollonius) , người cũng đặt cho chúng những cái tên khác thường. 
 
- Trong các khóa học sau, bạn sẽ học được nhiều hơn về parabolas và hyperbolas. Bây giờ, chúng ta hãy xem xét kỹ hơn về hình elip. 
+Trong các khóa học sau, bạn sẽ học được nhiều hơn về parabolas và hyperbolas. Bây giờ, chúng ta hãy xem xét kỹ hơn về hình elip. 
 
 ::: column(width=300)
 
@@ -1668,23 +1581,17 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ### Dấu chấm lửng 
 
- Một hình elip trông gần giống như một vòng tròn kéo dài của Google. Trên thực tế, bạn có thể nghĩ về nó như một vòng tròn có _hai trung tâm_ - đây được gọi là các __tiêu điểm__ . Giống như mọi điểm trên một vòng tròn có cùng khoảng cách từ tâm của nó, mọi điểm trên một hình elip có cùng _khoảng cách_ đến hai tiêu điểm của nó. 
+Một hình elip trông gần giống như một vòng tròn kéo dài của Google. Trên thực tế, bạn có thể nghĩ về nó như một vòng tròn có _hai trung tâm_ - đây được gọi là các __tiêu điểm__ . Giống như mọi điểm trên một vòng tròn có cùng khoảng cách từ tâm của nó, mọi điểm trên một hình elip có cùng _khoảng cách_ đến hai tiêu điểm của nó. 
 
- Nếu bạn có một chuỗi dài được kết nối với hai điểm cố định, bạn có thể vẽ một hình elip hoàn hảo bằng cách truy tìm phạm vi tối đa của chuỗi: 
+Nếu bạn có một chuỗi dài được kết nối với hai điểm cố định, bạn có thể vẽ một hình elip hoàn hảo bằng cách truy tìm phạm vi tối đa của chuỗi: 
 
 {.todo} Sắp có: Ellipses vẽ tương tác 
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
 > goals: v0 v1 v2 v3
 
- Có nhiều biểu diễn vật lý khác về cách bạn có thể vẽ một hình elip: 
+Có nhiều biểu diễn vật lý khác về cách bạn có thể vẽ một hình elip: 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -1715,9 +1622,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Bạn có thể nhớ từ khi bắt đầu khóa học này, các nhà thiên văn học Hy Lạp cổ đại tin rằng Trái đất nằm ở trung tâm của vũ trụ và mặt trời, mặt trăng và các hành tinh di chuyển quanh Trái đất trên các quỹ đạo tròn. 
+Bạn có thể nhớ từ khi bắt đầu khóa học này, các nhà thiên văn học Hy Lạp cổ đại tin rằng Trái đất nằm ở trung tâm của vũ trụ và mặt trời, mặt trăng và các hành tinh di chuyển quanh Trái đất trên các quỹ đạo tròn. 
 
- Thật không may, quan sát thiên văn của bầu trời không hỗ trợ điều này. Ví dụ, mặt trời xuất hiện lớn hơn trong một số phần của năm và nhỏ hơn trong những phần khác. Trên một vòng tròn, mọi điểm phải [[giống nhau | Sự gia tăng | một]] khoảng cách [[giảm]] từ trung tâm của nó. 
+Thật không may, quan sát thiên văn của bầu trời không hỗ trợ điều này. Ví dụ, mặt trời xuất hiện lớn hơn trong một số phần của năm và nhỏ hơn trong những phần khác. Trên một vòng tròn, mọi điểm phải [[giống nhau | Sự gia tăng | một]] khoảng cách [[giảm]] từ trung tâm của nó. 
 
 ::: column(width=330)
 
@@ -1731,7 +1638,7 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: epicycles
 > goals: play
 
- Để khắc phục điều này, các nhà thiên văn học đã thêm __Epiciking__ vào mô hình hệ mặt trời của họ: các hành tinh di chuyển trên một vòng tròn lớn quanh Trái đất, đồng thời quay trên một vòng tròn nhỏ hơn. Mặc dù rất phức tạp, đây là mô hình được chấp nhận rộng rãi nhất trong vũ trụ của chúng ta trong hơn 1000 năm: 
+Để khắc phục điều này, các nhà thiên văn học đã thêm __Epiciking__ vào mô hình hệ mặt trời của họ: các hành tinh di chuyển trên một vòng tròn lớn quanh Trái đất, đồng thời quay trên một vòng tròn nhỏ hơn. Mặc dù rất phức tạp, đây là mô hình được chấp nhận rộng rãi nhất trong vũ trụ của chúng ta trong hơn 1000 năm: 
 
 ::: column(width=320)
 
@@ -1760,9 +1667,9 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Theo thời gian, mọi người nhận ra rằng Trái đất chỉ là một trong nhiều hành tinh quay quanh mặt trời ( __mô hình nhật tâm__ ), nhưng mãi đến năm 1609, nhà thiên văn học [Julian Kepler mới](bio:kepler) phát hiện ra rằng các hành tinh thực sự di chuyển trên _quỹ đạo hình elip_ . 
+Theo thời gian, mọi người nhận ra rằng Trái đất chỉ là một trong nhiều hành tinh quay quanh mặt trời ( __mô hình nhật tâm__ ), nhưng mãi đến năm 1609, nhà thiên văn học [Julian Kepler mới](bio:kepler) phát hiện ra rằng các hành tinh thực sự di chuyển trên _quỹ đạo hình elip_ . 
 
- Mặt trời nằm ở một trong hai tiêu điểm của những hình elip này. Các hành tinh tăng tốc khi chúng đến gần mặt trời hơn và chậm lại khi chúng di chuyển xa hơn. 
+Mặt trời nằm ở một trong hai tiêu điểm của những hình elip này. Các hành tinh tăng tốc khi chúng đến gần mặt trời hơn và chậm lại khi chúng di chuyển xa hơn. 
 
 ::: column(width=320)
 
@@ -1781,13 +1688,12 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: newton
 > goals: apple
 
- Vài thập kỷ sau, [Isaac Newton](bio:newton) đã có thể chứng minh những quan sát của Kepler, bằng cách sử dụng định luật [__hấp dẫn__](gloss:gravity) mới được phát triển của mình. Newton nhận ra rằng có một lực giữa bất kỳ hai khối lượng nào trong vũ trụ - tương tự như lực hút giữa hai nam châm. 
+Vài thập kỷ sau, [Isaac Newton](bio:newton) đã có thể chứng minh những quan sát của Kepler, bằng cách sử dụng định luật [__hấp dẫn__](gloss:gravity) mới được phát triển của mình. Newton nhận ra rằng có một lực giữa bất kỳ hai khối lượng nào trong vũ trụ - tương tự như lực hút giữa hai nam châm. 
 
- Trọng lực là thứ khiến mọi thứ rơi xuống đất và trọng lực cũng là thứ khiến các hành tinh di chuyển xung quanh mặt trời. Nó chỉ là tốc độ tuyệt vời mà các hành tinh di chuyển, ngăn chúng rơi trực tiếp vào mặt trời. 
+Trọng lực là thứ khiến mọi thứ rơi xuống đất và trọng lực cũng là thứ khiến các hành tinh di chuyển xung quanh mặt trời. Nó chỉ là tốc độ tuyệt vời mà các hành tinh di chuyển, ngăn chúng rơi trực tiếp vào mặt trời. 
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)
@@ -1797,8 +1703,8 @@ tội lỗi (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Sử dụng định luật Newton, bạn có thể rút ra con đường mà các vật thể đi khi di chuyển dưới lực hấp dẫn. Hóa ra các hành tinh di chuyển trên các hình elip, nhưng các vật thể khác như sao chổi có thể di chuyển trên [các](gloss:hyperbola) đường [parabol](gloss:parabola) hoặc [hyperbolic](gloss:hyperbola) : chúng bay gần mặt trời trước khi quay lại và bắn vào vũ trụ, không bao giờ quay trở lại. 
+Sử dụng định luật Newton, bạn có thể rút ra con đường mà các vật thể đi khi di chuyển dưới lực hấp dẫn. Hóa ra các hành tinh di chuyển trên các hình elip, nhưng các vật thể khác như sao chổi có thể di chuyển trên [các](gloss:hyperbola) đường [parabol](gloss:parabola) hoặc [hyperbolic](gloss:hyperbola) : chúng bay gần mặt trời trước khi quay lại và bắn vào vũ trụ, không bao giờ quay trở lại. 
 
- Theo truyền thuyết, một quả táo rơi đã truyền cảm hứng cho Newton nghĩ về trọng lực. Ông là một trong những nhà khoa học có ảnh hưởng nhất mọi thời đại và ý tưởng của ông đã định hình sự hiểu biết của chúng ta về thế giới trong gần 300 năm - cho đến khi Albert Einstein phát hiện ra thuyết tương đối vào năm 1905. 
+Theo truyền thuyết, một quả táo rơi đã truyền cảm hứng cho Newton nghĩ về trọng lực. Ông là một trong những nhà khoa học có ảnh hưởng nhất mọi thời đại và ý tưởng của ông đã định hình sự hiểu biết của chúng ta về thế giới trong gần 300 năm - cho đến khi Albert Einstein phát hiện ra thuyết tương đối vào năm 1905. 
 
 :::

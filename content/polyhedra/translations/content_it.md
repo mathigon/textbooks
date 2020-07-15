@@ -118,7 +118,6 @@ Possiamo suddividere un pentagono in [[3]] triangoli, quindi la somma dei suoi a
 Per un poligono con ${x}{x|7|3,15,1} lati la somma degli angoli interni sarà:
 180° × ${x-2} = ${(x-2)*180}°. Più in generale, un poligono con _n_ lati può essere suddiviso in  [[n – 2|n – 1|n]] triangoli. Dunque: 
 
-
 {.text-center.reveal(when="blank-0")} Somma degli angoli interni in un poligono di _n_ lati
 `= (n - 2) × 180°`.
 
@@ -573,8 +572,6 @@ opposti](target:sides) sono congruenti, e entrambe le [coppie di angoli opposti]
 coppie di lati (o angoli) opposti in un quadrilatero sono cungruenti, allora il
 quadrilatero dev'essere un parallelogramma.
 
-    //- Adjacent angles are supplementary.
-
 ::: tab
 #### Diagonali _{span.check(when="diagonal blank-2 blank-3")}_
 
@@ -921,26 +918,6 @@ quindi scegliere la formula più efficace._
 
 :::
 
-    //- ### Quadrilateri ciclici
-
-    //- ### Trapezoide isoscele
-    //- 
-    //- Un trapezoide isoscele è un trapezoide che ha due lati obliqui 
-    //- congruenti. Il terzo trapezoide sopra è un esempio di 
-    //- trapezoide isoscele. Puoi immaginarlo come un triangolo isoscele a cui è stata tagliata la cima.
-    //- Le grandezze dei trapezoidi isosceli hanno nomi analoghi a quelli di un
-    //- triangolo isoscele. Entrambi i lati paralleli si chiamano basi.
-    //- 
-    //- In un triangolo isoscele, i due angoli alla base sono congruenti. Questa
-    //- proprietà vale anche per i trapezoidi isosceli.
-    //- 
-    //- Anche l'opposto è vero: Se in un trapezoide gli angoli alla base sono congruenti,
-    //- allora è isoscele.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
-
 ---
 
 ## Tassellazioni 
@@ -1023,11 +1000,6 @@ in tecnologia – dall'antica Roma fino ad oggi. Ecco qualche esempio:
 {.caption} _Studio della divisione rettangolare del piano con rettili_, M. C. Escher
 :::
 
-    // TODO Nanotubo in carbonio
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
@@ -1087,7 +1059,6 @@ somma di tutti questi angoli dev'essere [[360]]°, altrimenti avremo un buco o u
 {.caption} I pentagoni [[non possono tassellare|possono tassellare]] _{span.reveal(when="blank-2")} il piano, perché nessun multiplo di 108°
 corrisponde a 360°._
 
-    //- {.caption}3 × 108° = 324° è troppo piccolo, ma 4 × 108° = 432° è troppo grande.
 ::: column(width=160)
     include svg/tessellations/hexagons.svg
 
@@ -1218,7 +1189,6 @@ La somma degli angoli interni di un tiangolo è [[180]]°. Se usiamo ogni angolo
           if x || y
             path.blue.fill(x=`x.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
             path.green.fill(x=`y.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
-
 
 ::: column.grow    
 Sorprendentemente, _ogni quadrilatero_ può tassellare il piano! La somma dei suoi angoli interni
@@ -1414,12 +1384,6 @@ Il nostro mondo è tridimensionale – ma spesso è molto più semplice disegnar
 e visualizzare oggetti piatti, bidimensionali. Ci sono diversi modi di 
 visualizzare un poliedro tridimensionale in due dimensioni.
 
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
 Quale di questi sviluppi forma un cubo?
 Associa ogni sviluppo all'oggetto tridimensionale
 https://github.com/polymake/matchthenet
@@ -1468,10 +1432,6 @@ di poligono regolare, e lo stesso numero di facce si incontra in ogni
 [vertice](gloss:polyhedron-vertex). I poliedri con queste due proprietà si dicono
  [__solidi platonici__](gloss:platonic-solid), in onore del filosofo greco
  [Platone](bio:plato).
-
-    //- La piramide a destra non è un solido platonico: è delimitata da due
-    //- differenti tipi di poligono (quadrato e triangolo e ha [[4]]
-    //- facce che si incontrano nel vertice superiore, ma solo [[3]] nei vertici inferiori.
 
 Allora, come sono fatti i solidi platonici – e quanti ce ne sono? per
 creare un solido, abbiamo bisogno che almeno [[3]] facce si incontrino in ogni
@@ -1811,10 +1771,6 @@ di Siracusa](bio:archimedes), e ne esistono 13:
 {.caption} __Dodecaedro camuso__  
 92 facce, 60 vertici, 150 spigoli
 :::
-
-    // Prismi e antiprismi, che hanno come gruppo di simmetria il gruppo diedrico, non sono
-    // generalmente considerati solidi archimedei, malgrado il fatto che essi
-    // soddisfino la definizione sopra.
 
 ---
 > id: polyhedra-applications

@@ -45,7 +45,6 @@ Svaka točka [__kruga__](gloss:circle) ima istu udaljenost od središta. To zna�
 * {.reveal(when="compass" delay="4000")} [{.pill.blue.b} promjer](target:d) je udaljenost između dviju suprotnih točaka u krugu. Prolazi kroz njegovo središte, a njegova dužina je [[dva puta|half|the same as]] polumjer.
 * {.reveal(when="blank-0")} Opseg [{.pill.green.b}](target:c) (ili obod) je udaljenost oko kruga.
 
-
 :::
 
 ---
@@ -1074,7 +1073,6 @@ Postoje dva [[kruga|spheres|squares]], jedan na vrhu i jedan na dnu cilindra. Za
 
 * {.reveal(when="blank-0 blank-1")} Svaka od dva kruga imaju područje _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 * {.reveal(when="eqn-0")} Visina pravokutnika je _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")}, a širina pravokutnika je jednaka [[obodu|diameter|tangent]] krugova:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
-
 
 ::: column(width=320)
 

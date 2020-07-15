@@ -7,9 +7,9 @@
 
 ::: column.grow
 
- İnsanlar mövcud olduğu müddətə qədər göyə baxdıq və ulduzların, planetlərin və ayın hərəkətindən istifadə edərək Yerdəki həyatı izah etməyə çalışdıq. 
+İnsanlar mövcud olduğu müddətə qədər göyə baxdıq və ulduzların, planetlərin və ayın hərəkətindən istifadə edərək Yerdəki həyatı izah etməyə çalışdıq. 
 
- Qədim Yunan astronomları ilk dəfə bütün göy cisimlərinin __orbit__ adlanan müntəzəm yollarla hərəkət etdiyini kəşf etdilər. Bu orbitlərin həmişə dairəvi olduğuna inanırdılar. Axı, dairələr bütün formaların "ən mükəmməlidir": hər istiqamətdə simmetrikdir və beləliklə kainatımızın əsas nizamı üçün uyğun bir seçimdir. 
+Qədim Yunan astronomları ilk dəfə bütün göy cisimlərinin __orbit__ adlanan müntəzəm yollarla hərəkət etdiyini kəşf etdilər. Bu orbitlərin həmişə dairəvi olduğuna inanırdılar. Axı, dairələr bütün formaların "ən mükəmməlidir": hər istiqamətdə simmetrikdir və beləliklə kainatımızın əsas nizamı üçün uyğun bir seçimdir. 
 
 ::: column(width=320)
 
@@ -23,7 +23,7 @@
 > id: radius
 > goals: compass
 
- Bir [__dairənin__](gloss:circle) hər nöqtəsi mərkəzindən eyni məsafədədir. Bu, bir [kompas](gloss:compass) istifadə edərək çəkilə biləcəkləri deməkdir: 
+Bir [__dairənin__](gloss:circle) hər nöqtəsi mərkəzindən eyni məsafədədir. Bu, bir [kompas](gloss:compass) istifadə edərək çəkilə biləcəkləri deməkdir: 
 
 ::: column(width=320)
 
@@ -41,7 +41,9 @@
 
 {.reveal(when="compass")} Bilməlisiniz dairələr ilə əlaqəli üç vacib ölçü var: 
 
- * {.reveal(when="compass" delay="1000")} The [{.pill.red.b} radius](target:r) bir dairənin mərkəzindən xarici halqasına olan məsafədir. * {.reveal(when="compass" delay="4000")} The [{.pill.blue.b} diametri](target:d) bir dairədə iki əks nöqtə arasındakı məsafədir. Onun mərkəzindən keçir və uzunluğu [[iki qatdır | yarım |]] radiusla [[eyni]] . * {.reveal(when="blank-0")} The [{.pill.green.b} dairə](target:c) (və ya perimetr) bir dairənin ətrafındakı məsafədir. 
+* {.reveal(when="compass" delay="1000")} The [{.pill.red.b} radius](target:r) bir dairənin mərkəzindən xarici halqasına olan məsafədir.
+* {.reveal(when="compass" delay="4000")} The [{.pill.blue.b} diametri](target:d) bir dairədə iki əks nöqtə arasındakı məsafədir. Onun mərkəzindən keçir və uzunluğu [[iki qatdır | yarım |]] radiusla [[eyni]] .
+* {.reveal(when="blank-0")} The [{.pill.green.b} dairə](target:c) (və ya perimetr) bir dairənin ətrafındakı məsafədir. 
 
 :::
 
@@ -49,7 +51,7 @@
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
- Dairələrin bir vacib xüsusiyyəti, bütün dairələrin [oxşar olmasıdır](gloss:similar) . Bütün çevrələrin sadəcə [tərcümələr](gloss:translation) və [dilations](gloss:dilation) istifadə edərək necə uyğunlaşacağını göstərməklə sübut edə bilərsiniz: 
+Dairələrin bir vacib xüsusiyyəti, bütün dairələrin [oxşar olmasıdır](gloss:similar) . Bütün çevrələrin sadəcə [tərcümələr](gloss:translation) və [dilations](gloss:dilation) istifadə edərək necə uyğunlaşacağını göstərməklə sübut edə bilərsiniz: 
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -57,7 +59,7 @@
 > id: pi-definition
 > goals: digits
 
- Bənzər çoxbucaqlılar üçün uyğun tərəflər arasındakı nisbət həmişə sabit olduğunu xatırlaya bilərsiniz. Bənzər bir şey dairələr üçün işləyir: [dairə](gloss:circle-circumference) və [diametr](gloss:circle-diameter) arasındakı nisbət _bütün dairələr_ üçün bərabərdir. Bu ... həmişə 3,14159 deyil - tez-tez "p" üçün yunan məktub _π_ kimi yazılmışdır [__Pi__](gloss:pi) adlı sirli sayı. Pi, heç bir xüsusi nümunə olmadan əbədi davam edən sonsuz sayda onluğa malikdir: 
+Bənzər çoxbucaqlılar üçün uyğun tərəflər arasındakı nisbət həmişə sabit olduğunu xatırlaya bilərsiniz. Bənzər bir şey dairələr üçün işləyir: [dairə](gloss:circle-circumference) və [diametr](gloss:circle-diameter) arasındakı nisbət _bütün dairələr_ üçün bərabərdir. Bu ... həmişə 3,14159 deyil - tez-tez "p" üçün yunan məktub _π_ kimi yazılmışdır [__Pi__](gloss:pi) adlı sirli sayı. Pi, heç bir xüsusi nümunə olmadan əbədi davam edən sonsuz sayda onluğa malikdir: 
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -65,7 +67,7 @@
 > id: wheel
 > goals: unroll
 
- Budur, diametri 1 olan bir çarx. Dövrəni "sökün", onun uzunluğunun tam olduğunu görə bilərsiniz [[`pi`|`2 * pi`| 3]] : 
+Budur, diametri 1 olan bir çarx. Dövrəni "sökün", onun uzunluğunun tam olduğunu görə bilərsiniz [[`pi`|`2 * pi`| 3]] : 
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -73,14 +75,14 @@
 ---
 > id: circumference
 
- Diametri _d_ olan bir dairə üçün, dairədir `C = π × d` . Eynilə, [radius](gloss:circle-radius) _r_ olan bir dairə üçün, dairədir 
+Diametri _d_ olan bir dairə üçün, dairədir `C = π × d` . Eynilə, [radius](gloss:circle-radius) _r_ olan bir dairə üçün, dairədir 
 
 {.text-center}`C =` [[`2 π r`|`π r`|`π r^2`]] . 
 
 ---
 > id: nature
 
- Dairələr mükəmməl simmetrikdir və bir çoxbucağın küncləri kimi "zəif nöqtələr" yoxdur. Bu onların təbiətdə hər yerdə tapılmasının səbəblərindən biridir: 
+Dairələr mükəmməl simmetrikdir və bir çoxbucağın küncləri kimi "zəif nöqtələr" yoxdur. Bu onların təbiətdə hər yerdə tapılmasının səbəblərindən biridir: 
 
 ::: column(width=130 parent="padded-thin")
 
@@ -122,9 +124,9 @@
 
 ::: column.grow
 
- Ayrıca bir dairənin müəyyən bir dairə üçün ən böyük sahəsi olan bir forma olduğu ortaya çıxır. Məsələn, uzunluğu 100 \ m olan bir ipiniz varsa, bir dairə meydana gətirsəniz (ən çox düzbucaqlı və ya üçbucaq kimi digər formalardan daha çox) onu istifadə edə bilərsiniz. 
+Ayrıca bir dairənin müəyyən bir dairə üçün ən böyük sahəsi olan bir forma olduğu ortaya çıxır. Məsələn, uzunluğu 100 \ m olan bir ipiniz varsa, bir dairə meydana gətirsəniz (ən çox düzbucaqlı və ya üçbucaq kimi digər formalardan daha çox) onu istifadə edə bilərsiniz. 
 
- Təbiətdə su damcıları və ya hava baloncukları kimi əşyalar dairəvi və ya sferik hala gəlməklə və səth sahələrini azaltmaqla _enerjiyə qənaət_ edə bilər. 
+Təbiətdə su damcıları və ya hava baloncukları kimi əşyalar dairəvi və ya sferik hala gəlməklə və səth sahələrini azaltmaqla _enerjiyə qənaət_ edə bilər. 
 
 ::: column(width=320)
 
@@ -145,9 +147,9 @@
 
 ### Bir dairənin sahəsi 
 
- Bəs bir dairənin sahəsini necə hesablayırıq? [Dördrilateralların sahəsini tapmaq](/course/polyhedra/quadrilaterals) üçün istifadə etdiyimiz eyni texnikanı sınayın: şəklini bir çox fərqli hissəyə ayırırıq və daha sonra sahəsini (məsələn, düzbucaqlı və ya üçbucaq) bildiyimiz fərqli bir forma düzəldirik. 
+Bəs bir dairənin sahəsini necə hesablayırıq? [Dördrilateralların sahəsini tapmaq](/course/polyhedra/quadrilaterals) üçün istifadə etdiyimiz eyni texnikanı sınayın: şəklini bir çox fərqli hissəyə ayırırıq və daha sonra sahəsini (məsələn, düzbucaqlı və ya üçbucaq) bildiyimiz fərqli bir forma düzəldirik. 
 
- Yeganə fərq ondadır ki, dairələr əyri olduğu üçün bəzi yaxınlaşmalardan istifadə etməliyik: 
+Yeganə fərq ondadır ki, dairələr əyri olduğu üçün bəzi yaxınlaşmalardan istifadə etməliyik: 
 
 ::: column(width=340)
 
@@ -164,7 +166,7 @@
 
 ::: column.grow
 
- Burada bölünmüş bir dairəni görə bilərsiniz ${toWord(n1)} xanalar. Dikləri bir sıra düzmək üçün sürüşəni sürüşdürün. 
+Burada bölünmüş bir dairəni görə bilərsiniz ${toWord(n1)} xanalar. Dikləri bir sıra düzmək üçün sürüşəni sürüşdürün. 
 
 {.reveal(when="slider")} Əgər takozların sayını artırsaq ${n1}{n1|6|6,30,2} , bu forma daha çox [[düzbucağa bənzəməyə başlayır | dairə | kvadrat]] . 
 
@@ -190,7 +192,7 @@
 
 ::: column.grow
 
- Burada bölünmüş bir dairəni görə bilərsiniz ${toWord(n)} üzüklər. Əvvəllər olduğu kimi, kaydırıcıyı halqaları "bükmək" üçün hərəkət edə bilərsiniz. 
+Burada bölünmüş bir dairəni görə bilərsiniz ${toWord(n)} üzüklər. Əvvəllər olduğu kimi, kaydırıcıyı halqaları "bükmək" üçün hərəkət edə bilərsiniz. 
 
 {.reveal(when="slider")} Üzüklərin sayını artırsaq ${n2}{n2|4|2,12,1} , bu forma getdikcə daha çox [[üçbucağa bənzəməyə başlayır | düzbucaqlı | trapezium]] . 
 
@@ -203,7 +205,7 @@
 ---
 > id: area-2
 
- Sonsuz sayda üzük və ya kəndirdən istifadə edə bilsək, yuxarıdakı yaxınlaşmalar mükəmməl olardı - və ikisi də bizə dairənin sahəsi üçün eyni formul verir: 
+Sonsuz sayda üzük və ya kəndirdən istifadə edə bilsək, yuxarıdakı yaxınlaşmalar mükəmməl olardı - və ikisi də bizə dairənin sahəsi üçün eyni formul verir: 
 
 {.text-center.r}`A = π r^2` . [Davam edin](btn:next) 
 
@@ -212,9 +214,9 @@
 
 ### Pi hesablanır 
 
- Yuxarıda gördüyünüz kimi `π = 3.1415926…` sadə bir tam ədəd deyil və onun onluq rəqəmləri heç bir təkrarlanmadan, əbədi olaraq davam edir. Bu [__xassəyə malik nömrələrə irrasional ədədlər__](gloss:irrational-numbers) deyilir və bu o deməkdir `π` sadə bir fraksiya şəklində ifadə edilə bilməz `a/b` . 
+Yuxarıda gördüyünüz kimi `π = 3.1415926…` sadə bir tam ədəd deyil və onun onluq rəqəmləri heç bir təkrarlanmadan, əbədi olaraq davam edir. Bu [__xassəyə malik nömrələrə irrasional ədədlər__](gloss:irrational-numbers) deyilir və bu o deməkdir `π` sadə bir fraksiya şəklində ifadə edilə bilməz `a/b` . 
 
- Bu həm də Pi-nin _bütün_ rəqəmlərini heç vaxt yaza bilməyəcəyimiz deməkdir - axırda sonsuz çoxdur. Qədim Yunan və Çin riyaziyyatçıları, Pi'nin ilk dörd onluq rəqəmini müntəzəm çoxbucaqlılardan istifadə edərək dairələri yaxınlaşdıraraq hesabladılar. Diqqət yetirin, daha çox tərəf əlavə etdikdə çoxbucaqlı [[getdikcə daha çox]] görünməyə başlayır [[| az | tam]] bir dairə kimi: 
+Bu həm də Pi-nin _bütün_ rəqəmlərini heç vaxt yaza bilməyəcəyimiz deməkdir - axırda sonsuz çoxdur. Qədim Yunan və Çin riyaziyyatçıları, Pi'nin ilk dörd onluq rəqəmini müntəzəm çoxbucaqlılardan istifadə edərək dairələri yaxınlaşdıraraq hesabladılar. Diqqət yetirin, daha çox tərəf əlavə etdikdə çoxbucaqlı [[getdikcə daha çox]] görünməyə başlayır [[| az | tam]] bir dairə kimi: 
 
     figure: x-img(src="images/polygons.svg" width=460 height=110)
 
@@ -227,18 +229,18 @@
 
 ::: column.grow
 
- 1665-ci ildə [Isaac Newton](bio:newton) 15 rəqəmi hesablamağı bacardı. Bu gün Pi dəyərini daha yüksək dəqiqliyə hesablamaq üçün güclü kompüterlərdən istifadə edə bilərik. 
+1665-ci ildə [Isaac Newton](bio:newton) 15 rəqəmi hesablamağı bacardı. Bu gün Pi dəyərini daha yüksək dəqiqliyə hesablamaq üçün güclü kompüterlərdən istifadə edə bilərik. 
 
- Mövcud rekord 31,4 trilyon rəqəmdir. Bütün bu rəqəmləri özündə əks etdirən çap kitabının qalınlığı təxminən 400 \ km olacaqdır - [Beynəlxalq Kosmik Stansiyanın](gloss:iss) Yerin orbitinə çıxdığı hündürlükdür! 
+Mövcud rekord 31,4 trilyon rəqəmdir. Bütün bu rəqəmləri özündə əks etdirən çap kitabının qalınlığı təxminən 400 \ km olacaqdır - [Beynəlxalq Kosmik Stansiyanın](gloss:iss) Yerin orbitinə çıxdığı hündürlükdür! 
 
- Əlbəttə ki, Pi rəqəmlərinin çox olduğunu xatırlamaq lazım deyil. Əslində fraksiya `22/7 = 3.142…` böyük bir yaxınlaşmadır. 
+Əlbəttə ki, Pi rəqəmlərinin çox olduğunu xatırlamaq lazım deyil. Əslində fraksiya `22/7 = 3.142…` böyük bir yaxınlaşmadır. 
 
 :::
 
 ---
 > id: pi-sequence
 
- Pi hesablamaq üçün bir yanaşma sonsuz ədəd ardıcıllığından istifadə etməkdir. 1676-cı ildə [Gottfried Vilhelm Leibniz](bio:leibniz) tərəfindən kəşf edilmiş bir nümunə: 
+Pi hesablamaq üçün bir yanaşma sonsuz ədəd ardıcıllığından istifadə etməkdir. 1676-cı ildə [Gottfried Vilhelm Leibniz](bio:leibniz) tərəfindən kəşf edilmiş bir nümunə: 
 
 {.text-center}`π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
@@ -250,9 +252,9 @@
 
 ::: column.grow
 
- Bir çox riyaziyyatçı Pi'nin daha da maraqlı bir xüsusiyyətə sahib olduğuna inanır: bu __normal__ bir __saydır__ . Bu o deməkdir ki, 0-dan 9-a qədər olan rəqəmlər tamamilə təsadüfi görünür, sanki təbiət Pi dəyərini təyin etmək üçün 10 tərəfli bir zarın sonsuz dəfələrlə yuvarlandığını göstərir. 
+Bir çox riyaziyyatçı Pi'nin daha da maraqlı bir xüsusiyyətə sahib olduğuna inanır: bu __normal__ bir __saydır__ . Bu o deməkdir ki, 0-dan 9-a qədər olan rəqəmlər tamamilə təsadüfi görünür, sanki təbiət Pi dəyərini təyin etmək üçün 10 tərəfli bir zarın sonsuz dəfələrlə yuvarlandığını göstərir. 
 
- Burada Pi’nin ilk 100 rəqəmini görə bilərsiniz. Rəqəmlərin necə paylandığını görmək üçün bəzi hücrələr üzərində hərəkət edin. 
+Burada Pi’nin ilk 100 rəqəmini görə bilərsiniz. Rəqəmlərin necə paylandığını görmək üçün bəzi hücrələr üzərində hərəkət edin. 
 
 ::: column(width=330)
 
@@ -271,7 +273,7 @@
 > id: pi-digits
 > goals: search
 
- Pi normaldırsa, bu _hər hansı bir_ sətir barədə düşünə biləcəyiniz deməkdir və rəqəmlərində bir yerdə görünəcəkdir. Burada Pi'nin ilk bir milyon rəqəmini axtara bilərsiniz - bunlarda doğum gününüz var? 
+Pi normaldırsa, bu _hər hansı bir_ sətir barədə düşünə biləcəyiniz deməkdir və rəqəmlərində bir yerdə görünəcəkdir. Burada Pi'nin ilk bir milyon rəqəmini axtara bilərsiniz - bunlarda doğum gününüz var? 
 
 ::: .box.f-red.pi-box
 
@@ -289,9 +291,9 @@
 ---
 > id: pi-movies
 
- Harri Potter kimi bütün bir kitabı çox uzun bir rəqəm sətirinə çevirə bilərdik (a = 01, b = 02 və s.). Pi normaldırsa, bu sətir rəqəmlərində bir yerdə görünəcək - ancaq tapmaq üçün kifayət qədər rəqəm hesablamaq milyonlarla il çəkəcək. 
+Harri Potter kimi bütün bir kitabı çox uzun bir rəqəm sətirinə çevirə bilərdik (a = 01, b = 02 və s.). Pi normaldırsa, bu sətir rəqəmlərində bir yerdə görünəcək - ancaq tapmaq üçün kifayət qədər rəqəm hesablamaq milyonlarla il çəkəcək. 
 
- Pi anlamaq asandır, lakin elm və riyaziyyatda fundamental əhəmiyyətə malikdir. Bu, Pi'nin mədəniyyətimizdə qeyri-adi dərəcədə populyarlaşmasına səbəb ola bilər (ən azı, riyaziyyatın digər mövzularına nisbətən): 
+Pi anlamaq asandır, lakin elm və riyaziyyatda fundamental əhəmiyyətə malikdir. Bu, Pi'nin mədəniyyətimizdə qeyri-adi dərəcədə populyarlaşmasına səbəb ola bilər (ən azı, riyaziyyatın digər mövzularına nisbətən): 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -313,7 +315,7 @@
 ---
 > id: pi-day
 
- Hər il bir _Pi günü var_ , ya da 14 Marta düşür, çünki `pi ≈ 3.14` , və ya 22 iyulda, çünki `pi ≈ 22/7` . 
+Hər il bir _Pi günü var_ , ya da 14 Marta düşür, çünki `pi ≈ 3.14` , və ya 22 iyulda, çünki `pi ≈ 22/7` . 
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -324,7 +326,7 @@
 > section: radians
 > id: degrees
 
- Həndəsə mövzusunda indiyə qədər həmişə açıları [dərəcə](gloss:degrees) ilə [ölçmüşük](gloss:degrees) . A __{.m-red} tam dairənin__ fırlanması [[360]]°, a __{.m-green} yarım dairə__ [[180]]°, a __{.m-yellow} dörddəbir dairə__ [[90]]° və s. 
+Həndəsə mövzusunda indiyə qədər həmişə açıları [dərəcə](gloss:degrees) ilə [ölçmüşük](gloss:degrees) . A __{.m-red} tam dairənin__ fırlanması [[360]]°, a __{.m-green} yarım dairə__ [[180]]°, a __{.m-yellow} dörddəbir dairə__ [[90]]° və s. 
 
 ::: column(width=160)
 
@@ -368,9 +370,9 @@
 
 ::: column.grow
 
- Baş verən kimi, 360 dərəcə bu gün də riyaziyyatda istifadə etdiyimiz ən qədim anlayışlardan biridir. Bunlar 5000 il əvvəl, qədim Babildə hazırlanmışdı! 
+Baş verən kimi, 360 dərəcə bu gün də riyaziyyatda istifadə etdiyimiz ən qədim anlayışlardan biridir. Bunlar 5000 il əvvəl, qədim Babildə hazırlanmışdı! 
 
- O dövrdə riyaziyyatın ən vacib tətbiqlərindən biri astronomiyada idi. _Günəş_ , əkinçilər məhsul yetişdirərkən bilməli olduqları dörd fəsli müəyyənləşdirir. Eynilə, _ay_ balıqçılar üçün vacib olan gelgitləri müəyyənləşdirir. İnsanlar ulduzları gələcəyi proqnozlaşdırmaq və ya tanrılarla ünsiyyət qurmaq üçün də araşdırdılar. 
+O dövrdə riyaziyyatın ən vacib tətbiqlərindən biri astronomiyada idi. _Günəş_ , əkinçilər məhsul yetişdirərkən bilməli olduqları dörd fəsli müəyyənləşdirir. Eynilə, _ay_ balıqçılar üçün vacib olan gelgitləri müəyyənləşdirir. İnsanlar ulduzları gələcəyi proqnozlaşdırmaq və ya tanrılarla ünsiyyət qurmaq üçün də araşdırdılar. 
 
 ::: column(width=260)
 
@@ -384,7 +386,7 @@
 > id: constellations
 > goals: rotate
 
- Astronomlar gecənin müəyyən bir vaxtında görünən bürclərin hər gün kiçik bir yer dəyişdiyini gördülər - təxminən 360 gündən sonra yenidən başlanğıc nöqtələrinə dönmüşdülər. Və bu, dairəni 360 dərəcəyə bölmələrinin səbəbi ola bilər. 
+Astronomlar gecənin müəyyən bir vaxtında görünən bürclərin hər gün kiçik bir yer dəyişdiyini gördülər - təxminən 360 gündən sonra yenidən başlanğıc nöqtələrinə dönmüşdülər. Və bu, dairəni 360 dərəcəyə bölmələrinin səbəbi ola bilər. 
 
     figure: .constellations
       .label.md Midnight on day ${day}
@@ -397,15 +399,15 @@
 > id: constellations-1
 > goals: video
 
- Əlbətdə ki, bir ildə 365 gün var (dəqiqliklə desək, 365.242199), amma Babil riyaziyyatçıları sadə sundiallarla işləyirdilər və bu yaxınlaşma mükəmməl uyğun idi. 
+Əlbətdə ki, bir ildə 365 gün var (dəqiqliklə desək, 365.242199), amma Babil riyaziyyatçıları sadə sundiallarla işləyirdilər və bu yaxınlaşma mükəmməl uyğun idi. 
 
- Həm də mövcud baza-60 nömrəli sistemi ilə yaxşı işləmişdir (bəri `6 xx 60 = 360` ). Bu sistem, bir dəqiqə içində 60 saniyəyə və bir saatda 60 dəqiqəyə sahib olmağımızın səbəbidir - baxmayaraq ki, digər bölmələrin əksəriyyəti [baza 10-da](gloss:base-10) ölçülür (məsələn, on ildə 10 il və ya bir əsrdə 100 il). 
+Həm də mövcud baza-60 nömrəli sistemi ilə yaxşı işləmişdir (bəri `6 xx 60 = 360` ). Bu sistem, bir dəqiqə içində 60 saniyəyə və bir saatda 60 dəqiqəyə sahib olmağımızın səbəbidir - baxmayaraq ki, digər bölmələrin əksəriyyəti [baza 10-da](gloss:base-10) ölçülür (məsələn, on ildə 10 il və ya bir əsrdə 100 il). 
 
 ::: column.grow
 
- Bir çoxumuz üçün bucaqları dərəcə ilə ölçmək ikinci təbiətdir: 360° video var, skeytbordlar 540s çəkə bilər və qərarını dəyişdirən kimsə 180° dönüş edə bilər. 
+Bir çoxumuz üçün bucaqları dərəcə ilə ölçmək ikinci təbiətdir: 360° video var, skeytbordlar 540s çəkə bilər və qərarını dəyişdirən kimsə 180° dönüş edə bilər. 
 
- Amma riyazi baxımdan 360 seçim tamamilə özbaşına olur. Əgər Marsda yaşasaydıq, bir dairənin 670°, Yupiterdə bir il isə 10,475 gün ola bilər. 
+Amma riyazi baxımdan 360 seçim tamamilə özbaşına olur. Əgər Marsda yaşasaydıq, bir dairənin 670°, Yupiterdə bir il isə 10,475 gün ola bilər. 
 
 ::: column(width=280)
 
@@ -420,7 +422,7 @@
 
 ### Radianlar 
 
- Əksinə seqmentləri (360 kimi dərəcə) bəzi sıra bir dairə bölünməsi daha riyaziyyatçı tez-tez [__vahid dairə__](gloss:unit-circle) [dövrə](gloss:circle-circumference) (radius 1 ilə bir dairə) istifadə açılar ölçmək üçün üstünlük verirlər. 
+Əksinə seqmentləri (360 kimi dərəcə) bəzi sıra bir dairə bölünməsi daha riyaziyyatçı tez-tez [__vahid dairə__](gloss:unit-circle) [dövrə](gloss:circle-circumference) (radius 1 ilə bir dairə) istifadə açılar ölçmək üçün üstünlük verirlər. 
 
 ::: column(width=280)
 
@@ -436,7 +438,7 @@
 
 ::: column.grow
 
- A _{span.var-action} tam dairənin çevrəsi_ var _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+A _{span.var-action} tam dairənin çevrəsi_ var _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
 {.reveal(when="eqn-0")} A üçün _{span.var-action} yarım dairənin fırlanması_ , _dairə_ boyunca müvafiq məsafədir _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
@@ -449,7 +451,7 @@
 ---
 > id: radians-conversion
 
- Dərəcələrdəki hər bucağın radianlarda ekvivalent ölçüsü var. İkisi arasında çevirmək çox asandır - eynilə metr və kilometr və ya Celsius və Fahrenheit kimi digər bölmələr arasında dəyişə biləcəyiniz kimi: 
+Dərəcələrdəki hər bucağın radianlarda ekvivalent ölçüsü var. İkisi arasında çevirmək çox asandır - eynilə metr və kilometr və ya Celsius və Fahrenheit kimi digər bölmələr arasında dəyişə biləcəyiniz kimi: 
 
 {.text-center} __{.m-red} 360°__ _{span.space} =_ __{.m-green} 2 _π_ rad__ 
 
@@ -468,20 +470,22 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 ---
 > id: radians-table
 
- Radians dəyərini ya _π_ , ya da tək bir onluq say kimi yaza bilərsiniz. Bu cədvəldə dərəcə və radianla bərabər bucaq ölçülərini doldura bilərsinizmi? 
+Radians dəyərini ya _π_ , ya da tək bir onluq say kimi yaza bilərsiniz. Bu cədvəldə dərəcə və radianla bərabər bucaq ölçülərini doldura bilərsinizmi? 
 
- | __{.m-red} dərəcə__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ | | __{.m-green} radians__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` | {.table-small.grid}
+| __{.m-red} dərəcə__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ |
+| __{.m-green} radians__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
 
 ---
 > id: radians-distance
 
 ### Məsafə səyahət 
 
- Vahid dairəsinin dairəsi boyunca "məsafəni qət etdik" kimi radianları düşünə bilərsiniz. Bu, dairəvi yolda hərəkət edən obyektlərlə işləyərkən xüsusilə faydalıdır. 
+Vahid dairəsinin dairəsi boyunca "məsafəni qət etdik" kimi radianları düşünə bilərsiniz. Bu, dairəvi yolda hərəkət edən obyektlərlə işləyərkən xüsusilə faydalıdır. 
 
 ::: column.grow
 
- Məsələn, [Beynəlxalq Kosmik Stansiya](gloss:iss) Yer kürəsini hər 1.5 \ saatda bir dəfə orbitə çıxarır. Bu, onun __fırlanma sürətinin__ olduğunu göstərir [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] saatda radian. 
+Məsələn, [Beynəlxalq Kosmik Stansiya](gloss:iss) Yer kürəsini hər 1.5 \ saatda bir dəfə orbitə çıxarır. Bu, onun __fırlanma sürətinin__ olduğunu göstərir [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] saatda radian. 
 
 {.reveal(when="blank-0")} Bir [vahid dairədə](gloss:unit-circle) fırlanma sürəti _həqiqi_ sürətlə eynidır, çünki dairənin uzunluğu radianlarda bir tam dönmə ilə eynidir (hər ikisi də `2pi` ). 
 
@@ -508,23 +512,22 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 ---
 > id: radians-distance-1
 
- Bu misalda radianların dərəcələrdən daha əlverişli bir vahid olduğunu görə bilərsinizmi? Dönmə sürətini bildikdən sonra, həqiqi sürəti əldə etmək üçün sadəcə radiusla çoxalmalıyıq. 
+Bu misalda radianların dərəcələrdən daha əlverişli bir vahid olduğunu görə bilərsinizmi? Dönmə sürətini bildikdən sonra, həqiqi sürəti əldə etmək üçün sadəcə radiusla çoxalmalıyıq. 
 
- Başqa bir nümunə: avtomobilinizdə radius 0,25 \ m olan təkərlər var. 20 m / s sürətlə sürürsən, avtomobilin təkərləri dönər [[`20/0.25 =
-80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] saniyədə radian _{span.reveal(when="blank-0")} (və ya `80/(2pi) = 13` saniyədə fırlanma)._ 
+Başqa bir nümunə: avtomobilinizdə radius 0,25 m olan təkərlər var. 20 m/s sürətlə sürürsən, avtomobilin təkərləri dönər [[`20/0.25 = 80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] saniyədə radian _{span.reveal(when="blank-0")} (və ya `80/(2pi) = 13` saniyədə fırlanma)._ 
 
 ---
 > id: radians-trig
 
 ### Triqonometriya 
 
- Ən sadə həndəsə problemləri üçün dərəcələr və radianlar tamamilə bir-birini əvəz edir - seçdiyiniz birini seçə bilərsiniz və ya cavab hansı vahidə cavab verəcəyinizi söyləyə bilər. Ancaq daha inkişaf etmiş [trigonometriya](gloss:trigonometry) və ya [hesablamanı](gloss:calculus) öyrəndiyiniz zaman ortaya çıxır ki, radianlar dərəcələrdən daha əlverişlidir. 
+Ən sadə həndəsə problemləri üçün dərəcələr və radianlar tamamilə bir-birini əvəz edir - seçdiyiniz birini seçə bilərsiniz və ya cavab hansı vahidə cavab verəcəyinizi söyləyə bilər. Ancaq daha inkişaf etmiş [trigonometriya](gloss:trigonometry) və ya [hesablamanı](gloss:calculus) öyrəndiyiniz zaman ortaya çıxır ki, radianlar dərəcələrdən daha əlverişlidir. 
 
 ::: column.grow
 
- Kalkulyatorların əksəriyyətində dərəcə və radian arasında keçmək üçün [xüsusi bir düymə](->.button.mode) var. [__Sin__](gloss:sin) , [__cos__](gloss:cos) və __tan__ kimi triqonometrik funksiyalar açı kimi açılar götürür və onların tərs funksiyaları __arcsin__ , __arccos__ və __arktan__ çıxış nöqtələri verir. Mövcud kalkulyator parametrləri bu açılar üçün hansı bölmələrin istifadə olunduğunu müəyyənləşdirir. 
+Kalkulyatorların əksəriyyətində dərəcə və radian arasında keçmək üçün [xüsusi bir düymə](->.button.mode) var. [__Sin__](gloss:sin) , [__cos__](gloss:cos) və __tan__ kimi triqonometrik funksiyalar açı kimi açılar götürür və onların tərs funksiyaları __arcsin__ , __arccos__ və __arktan__ çıxış nöqtələri verir. Mövcud kalkulyator parametrləri bu açılar üçün hansı bölmələrin istifadə olunduğunu müəyyənləşdirir. 
 
- Bunu hesablamaq üçün bu kalkulyatordan istifadə edin 
+Bunu hesablamaq üçün bu kalkulyatordan istifadə edin 
 
 {.text-center} sin (30°) = [[0,5]] _{span.eqn-gap}_ cos (1°) = [[0.999]]  
 sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]] 
@@ -557,7 +560,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: small-angle
 
- Sine funksiyasından istifadə edərkən radianların istifadəsi xüsusilə maraqlı bir üstünlüyə malikdir. Əgər `θ` çox kiçik bir açıdır (20° -dən az və ya 0,3 rad), sonra `sin(θ) ≈ θ` . Misal üçün, 
+Sine funksiyasından istifadə edərkən radianların istifadəsi xüsusilə maraqlı bir üstünlüyə malikdir. Əgər `θ` çox kiçik bir açıdır (20° -dən az və ya 0,3 rad), sonra `sin(θ) ≈ θ` . Misal üçün, 
 
 {.text-center} günah ( ${x}{x|0.1|0,0.5,0.05} ) `≈`${sin(x)} … 
 
@@ -570,7 +573,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > section: tangets-chords-arcs
 > id: circle-parts
 
- Əvvəlki hissələrdə bir dairənin bir neçə fərqli hissəsinə - mərkəz, radius, diametr və dövrə kimi adları öyrəndiniz. Ancaq bir dairə ilə əlaqəli bir çox həndəsi element var ki, daha mürəkkəb problemləri həll etməliyik: 
+Əvvəlki hissələrdə bir dairənin bir neçə fərqli hissəsinə - mərkəz, radius, diametr və dövrə kimi adları öyrəndiniz. Ancaq bir dairə ilə əlaqəli bir çox həndəsi element var ki, daha mürəkkəb problemləri həll etməliyik: 
 
 ::: column(width=300)
 
@@ -599,14 +602,19 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow(parent="right")
 
- * {.r} A [{.red} secant](pill:secant) iki nöqtədə bir dairəni kəsən bir xəttdir. [Davam et](btn:next) * {.r.reveal(when="next-0")} A [{.green} akkord](pill:chord) son nöqtələri bir dairənin ətrafına uzanan bir xətt seqmentidir. [Davam et](btn:next) * {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) tam bir nöqtədə bir dairəyə toxunan bir xəttdir. Buna __toxluq nöqtəsi deyilir__ . [Davam et](btn:next) * {.r.reveal(when="next-2")} Bir [{.yellow} qövs](pill:arc) bir dairənin çevrəsinin bir hissəsidir. [Davam et](btn:next) * {.r.reveal(when="next-3")} A [{.teal} sektor](pill:sector) bir _qövs_ və _iki radii ilə bağlanmış_ bir dairənin daxili hissəsidir. [Davam et](btn:next) * {.r.reveal(when="next-4")} Nəhayət, a [{.purple} seqment](pill:segment) bir _qövs_ və _bir akkordla_ bağlanmış bir dairənin daxili hissəsidir. [Davam edin](btn:next) 
+* {.r} A [{.red} secant](pill:secant) iki nöqtədə bir dairəni kəsən bir xəttdir. [Davam et](btn:next)
+* {.r.reveal(when="next-0")} A [{.green} akkord](pill:chord) son nöqtələri bir dairənin ətrafına uzanan bir xətt seqmentidir. [Davam et](btn:next)
+* {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) tam bir nöqtədə bir dairəyə toxunan bir xəttdir. Buna __toxluq nöqtəsi deyilir__ . [Davam et](btn:next)
+* {.r.reveal(when="next-2")} Bir [{.yellow} qövs](pill:arc) bir dairənin çevrəsinin bir hissəsidir. [Davam et](btn:next)
+* {.r.reveal(when="next-3")} A [{.teal} sektor](pill:sector) bir _qövs_ və _iki radii ilə bağlanmış_ bir dairənin daxili hissəsidir. [Davam et](btn:next)
+* {.r.reveal(when="next-4")} Nəhayət, a [{.purple} seqment](pill:segment) bir _qövs_ və _bir akkordla_ bağlanmış bir dairənin daxili hissəsidir. [Davam edin](btn:next) 
 
 :::
 
 ---
 > id: circle-parts-1
 
- Bu hissədə bütün bu elementlər arasındakı əlaqəyə baxacağıq və xüsusiyyətləri haqqında teoremləri sübut edəcəyik. Artıq bütün tərifləri yadda saxlamağınızdan narahat olmayın - həmişə [lüğətdən](->.footer-link[data-modal=glossarym]) istifadə edə bilərsiniz. 
+Bu hissədə bütün bu elementlər arasındakı əlaqəyə baxacağıq və xüsusiyyətləri haqqında teoremləri sübut edəcəyik. Artıq bütün tərifləri yadda saxlamağınızdan narahat olmayın - həmişə [lüğətdən](->.footer-link[data-modal=glossarym]) istifadə edə bilərsiniz. 
 
 ---
 
@@ -614,86 +622,11 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 {.todo} TEZLİKLƏ! 
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-    
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### Akkordlar 
 
 {.todo} TEZLİKLƏ! 
-
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-    
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -702,9 +635,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Qədim Yunanıstanda elm adamlarının çoxu Yerin bir kürə olduğuna razılaşdılar. Dəlil çox idi: dənizdə üfüqdə itən gəmilərdən tutmuş gecə boyunca ulduzların dairəvi hərəkətinə qədər. 
+Qədim Yunanıstanda elm adamlarının çoxu Yerin bir kürə olduğuna razılaşdılar. Dəlil çox idi: dənizdə üfüqdə itən gəmilərdən tutmuş gecə boyunca ulduzların dairəvi hərəkətinə qədər. 
 
- Təəssüf ki, heç kim Yerin _nə qədər böyük_ olduğunu dəqiq bilmirdi - e.ə. 200 ilə qədər, riyaziyyatçı [Eratosthenes](bio:eratosthenes) əsas həndəsə üsulundan istifadə edərək Yer radiusunu ölçmək üçün usta bir yol tapdı. Bizə lazım olan yalnız bir qövs və bir dairənin sektorları haqqında bir az daha çox bilikdir. 
+Təəssüf ki, heç kim Yerin _nə qədər böyük_ olduğunu dəqiq bilmirdi - e.ə. 200 ilə qədər, riyaziyyatçı [Eratosthenes](bio:eratosthenes) əsas həndəsə üsulundan istifadə edərək Yer radiusunu ölçmək üçün usta bir yol tapdı. Bizə lazım olan yalnız bir qövs və bir dairənin sektorları haqqında bir az daha çox bilikdir. 
 
 ::: column(width=280)
 
@@ -729,16 +662,15 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Diaqramda gördüyünüz kimi, bir [{.red} arc](pill:arc) [[dövrə]] bir hissəsidir [[| Diametr |]] bir dairənin [[tangensi]] və a [{.yellow} sektor](pill:sector) [[daxili]] bir hissəsidir [[| radius |]] bir dairənin [[perimetri]] . 
+Diaqramda gördüyünüz kimi, bir [{.red} arc](pill:arc) [[dövrə]] bir hissəsidir [[| Diametr |]] bir dairənin [[tangensi]] və a [{.yellow} sektor](pill:sector) [[daxili]] bir hissəsidir [[| radius |]] bir dairənin [[perimetri]] . 
 
 ::: .reveal(when="blank-0 blank-1")
 
- _A_ və _B_ nöqtələri arasındakı qövs tez-tez olduğu kimi yazılır `arc(AB)` . Bu tərif bir qədər qeyri-müəyyəndir: a var [{.purple}](pill:major) _A_ və _B-_ ni birləşdirən _,_ lakin dairə boyunca başqa bir şəkildə gedən [ikinci qövs](pill:major) . 
+_A_ və _B_ nöqtələri arasındakı qövs tez-tez olduğu kimi yazılır `arc(AB)` . Bu tərif bir qədər qeyri-müəyyəndir: a var [{.purple}](pill:major) _A_ və _B-_ ni birləşdirən _,_ lakin dairə boyunca başqa bir şəkildə gedən [ikinci qövs](pill:major) . 
 
- İki __qövsün__ ən __kiçikinə kiçik qövs__ , daha __böyüyünə__ isə __əsas qövs__ deyilir. _A_ və _B_ nöqtələri tam bir-birinə tam ziddirsə, hər iki qövs eyni uzunluğa malikdir və [[yarı dairələrdir | çaplar | dairələr]] . 
+İki __qövsün__ ən __kiçikinə kiçik qövs__ , daha __böyüyünə__ isə __əsas qövs__ deyilir. _A_ və _B_ nöqtələri tam bir-birinə tam ziddirsə, hər iki qövs eyni uzunluğa malikdir və [[yarı dairələrdir | çaplar | dairələr]] . 
 
 :::
-
 :::
 
 ---
@@ -746,15 +678,15 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Bir qövsün uzunluğunu və ya bir sektorun sahəsini tapmaq üçün dairənin mərkəzindəki müvafiq bucaq haqqında bilməliyik: [{.blue} mərkəzi bucaq](pill:angle) . 
+Bir qövsün uzunluğunu və ya bir sektorun sahəsini tapmaq üçün dairənin mərkəzindəki müvafiq bucaq haqqında bilməliyik: [{.blue} mərkəzi bucaq](pill:angle) . 
 
- Qövsün, sektorun və bucağın hamısının tam bir dairə _nisbətini_ necə aldığına diqqət yetirin. Məsələn, əgər [{.blue} mərkəzi bucaqdır](pill:angle) _{span.var-action} 90°_ , [[dörddə birini]] alır [[| bir yarım |]] a-nın [[üçdə biri]] [{.teal} tam dairə](pill:fangle) . 
+Qövsün, sektorun və bucağın hamısının tam bir dairə _nisbətini_ necə aldığına diqqət yetirin. Məsələn, əgər [{.blue} mərkəzi bucaqdır](pill:angle) _{span.var-action} 90°_ , [[dörddə birini]] alır [[| bir yarım |]] a-nın [[üçdə biri]] [{.teal} tam dairə](pill:fangle) . 
 
 ::: .reveal(when="blank-0")
 
- Bu o deməkdir ki [{.red} qövsün uzunluğu](pill:arc) da `1/4` nin [{.purple}](pill:circ) dairənin [bütün ətrafı](pill:circ) və [{.yellow} sektorun sahəsi](pill:sector) `1/4` nin [{.orange}](pill:area) dairənin [bütün sahəsi](pill:area) . 
+Bu o deməkdir ki [{.red} qövsün uzunluğu](pill:arc) da `1/4` nin [{.purple}](pill:circ) dairənin [bütün ətrafı](pill:circ) və [{.yellow} sektorun sahəsi](pill:sector) `1/4` nin [{.orange}](pill:area) dairənin [bütün sahəsi](pill:area) . 
 
- Bu əlaqəni bir tənlikdə ifadə edə bilərik: 
+Bu əlaqəni bir tənlikdə ifadə edə bilərik: 
 
 {.text-center}`"arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
 
@@ -781,7 +713,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: arcs-2
 
- İndi bu tənlikləri yenidən maraqlandıran dəyişənləri tapmaq üçün yenidən düzəldə bilərik. Məsələn, 
+İndi bu tənlikləri yenidən maraqlandıran dəyişənləri tapmaq üçün yenidən düzəldə bilərik. Məsələn, 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -797,12 +729,12 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 :::
 
- burada _r_ - dairənin radiusu, _c_ - mərkəzi bucağın ölçüsü. 
+burada _r_ - dairənin radiusu, _c_ - mərkəzi bucağın ölçüsü. 
 
 ---
 > id: arcs-rad
 
- Mərkəzi bucaq [dərəcə ilə](gloss:degrees) deyil, [radianla](gloss:radians) ölçülürsə, eyni tənliklərdən istifadə edə bilərik, ancaq 360° ilə əvəz etməliyik [[`2 π`|`1/2 π`|`π`]] : 
+Mərkəzi bucaq [dərəcə ilə](gloss:degrees) deyil, [radianla](gloss:radians) ölçülürsə, eyni tənliklərdən istifadə edə bilərik, ancaq 360° ilə əvəz etməliyik [[`2 π`|`1/2 π`|`π`]] : 
 
 ::: .reveal(when="blank-0")
 
@@ -820,16 +752,16 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 :::
 
- Notice tənliklər çox sadə olmaq, və _π_ hər yerdə həyata ləğv necə. Bunun səbəbi, xatırlatdığınız kimi [, radianların tərifi](/course/circles/radians#radians) əsasən radius 1 ilə bir dairədə olan bir qövsün uzunluğundan ibarətdir. 
+Notice tənliklər çox sadə olmaq, və _π_ hər yerdə həyata ləğv necə. Bunun səbəbi, xatırlatdığınız kimi [, radianların tərifi](/course/circles/radians#radians) əsasən radius 1 ilə bir dairədə olan bir qövsün uzunluğundan ibarətdir. 
 
- İndi gəlin, Yerin dairəsini hesablamaq üçün qövslərdən və sektorlardan necə istifadə edə biləcəyimizə baxaq. [Davam edin](btn:next) 
+İndi gəlin, Yerin dairəsini hesablamaq üçün qövslərdən və sektorlardan necə istifadə edə biləcəyimizə baxaq. [Davam edin](btn:next) 
 
 :::
 
 ---
 > id: eratosthenes
 
- Qədim Misirdə _Svenet_ şəhəri Nil çayı boyunca yerləşirdi. Swenet, maraqlı bir mülkü olan bir quyu ilə məşhur idi: hər il günəş işığı quyunun dibinə çatanda bir an var idi - 21 iyun, günorta _yaz yayının_ günü. Bu dəqiq vaxtda quyunun dibi işıqlandı, ancaq yanları yox idi, yəni Günəş birbaşa quyunun üstündə dayandı. 
+Qədim Misirdə _Svenet_ şəhəri Nil çayı boyunca yerləşirdi. Swenet, maraqlı bir mülkü olan bir quyu ilə məşhur idi: hər il günəş işığı quyunun dibinə çatanda bir an var idi - 21 iyun, günorta _yaz yayının_ günü. Bu dəqiq vaxtda quyunun dibi işıqlandı, ancaq yanları yox idi, yəni Günəş birbaşa quyunun üstündə dayandı. 
 
 ::: column(width=300)
 
@@ -845,9 +777,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 :::
 
- Riyaziyyatçı [Eratosthenes](bio:eratosthenes) , Böyük Kitabxananın direktoru olduğu Swenetdən təxminən 800 km şimalda olan _İsgəndəriyyədə_ yaşayırdı. İsgəndəriyyənin şəhər mərkəzində bir piramida şəkilli üstü olan hündür, dar bir abidə dayanmışdı. 
+Riyaziyyatçı [Eratosthenes](bio:eratosthenes) , Böyük Kitabxananın direktoru olduğu Swenetdən təxminən 800 km şimalda olan _İsgəndəriyyədə_ yaşayırdı. İsgəndəriyyənin şəhər mərkəzində bir piramida şəkilli üstü olan hündür, dar bir abidə dayanmışdı. 
 
- Eratosthenes, yaz ayının günorta saatlarında obelisk bir kölgə atdığını gördü - yəni günəş birbaşa onun üstündə _deyildi_ . Bunun Yer kürəsinin əyriliyinə görə olduğunu söylədi və bunun planetimizin çevrəsini hesablamaq üçün istifadə edilə biləcəyini başa düşdü. 
+Eratosthenes, yaz ayının günorta saatlarında obelisk bir kölgə atdığını gördü - yəni günəş birbaşa onun üstündə _deyildi_ . Bunun Yer kürəsinin əyriliyinə görə olduğunu söylədi və bunun planetimizin çevrəsini hesablamaq üçün istifadə edilə biləcəyini başa düşdü. 
 
 ---
 > id: eratosthenes-1
@@ -858,13 +790,13 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: .reveal(when="next-0")
 
- Eratosthenes ölçüldü [{.teal}](pill:angle1) kölgənin [açısı](pill:angle1) 7,2° idi. Bu, eynidir [{.purple} mərkəzi açı](pill:angle2) [{.red}](pill:arc) İsgəndəriyyədən Swenetə qədər olan [qövs](pill:arc) , çünki onlar [[alternativdirlər | şaquli | uyğun]] açılar. 
+Eratosthenes ölçüldü [{.teal}](pill:angle1) kölgənin [açısı](pill:angle1) 7,2° idi. Bu, eynidir [{.purple} mərkəzi açı](pill:angle2) [{.red}](pill:arc) İsgəndəriyyədən Swenetə qədər olan [qövs](pill:arc) , çünki onlar [[alternativdirlər | şaquli | uyğun]] açılar. 
 
 :::
 
 ::: .reveal(when="blank-0")
 
- İndi yuxarıda əldə etdiyimiz qövs uzunluğu üçün tənliyi istifadə edə bilərik: 
+İndi yuxarıda əldə etdiyimiz qövs uzunluğu üçün tənliyi istifadə edə bilərik: 
 
 {.text-center}`pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
 
@@ -872,7 +804,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: .reveal(when="blank-1")
 
- Bunu yenidən təşkil etsək, Yerin dairəsini tapırıq 
+Bunu yenidən təşkil etsək, Yerin dairəsini tapırıq 
 
 {.text-center}`pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 
@@ -880,7 +812,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: .reveal(when="blank-2")
 
- Nəhayət, bir dairənin çevrəsinin olduğunu bilirik `C = 2 pi r` , beləliklə Yer radiusu 
+Nəhayət, bir dairənin çevrəsinin olduğunu bilirik `C = 2 pi r` , beləliklə Yer radiusu 
 
 {.text-center}`r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"` . 
 
@@ -917,7 +849,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: eratosthenes-2
 
- Eratosthenesin ölçülməsi antik dövrdə ən vacib təcrübələrdən biri idi. Onun Yer ölçüsünü qiymətləndirməsi təəccüblü dərəcədə dəqiq idi, xüsusən yalnız çox əsas ölçmə vasitələrinə girdiyini nəzərə alaraq. 
+Eratosthenesin ölçülməsi antik dövrdə ən vacib təcrübələrdən biri idi. Onun Yer ölçüsünü qiymətləndirməsi təəccüblü dərəcədə dəqiq idi, xüsusən yalnız çox əsas ölçmə vasitələrinə girdiyini nəzərə alaraq. 
 
 ::: column(width=280)
 
@@ -925,11 +857,11 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Əlbətdə, orijinal nəticələrini kilometr kimi müasir vahidlərə tərcümə etmək çətin ola bilər. Qədim Yunanıstanda məsafə _stadiyada_ (təxminən 160 m) ölçülürdü, lakin ümumdünya standartı yox idi. Hər bölgədə bir az fərqli bir versiya vardı və hansı Eratosthenin istifadə olunduğunu bilmirik. 
+Əlbətdə, orijinal nəticələrini kilometr kimi müasir vahidlərə tərcümə etmək çətin ola bilər. Qədim Yunanıstanda məsafə _stadiyada_ (təxminən 160 m) ölçülürdü, lakin ümumdünya standartı yox idi. Hər bölgədə bir az fərqli bir versiya vardı və hansı Eratosthenin istifadə olunduğunu bilmirik. 
 
- Sonrakı əsrlərdə elm adamları Yer radiusunu hesablamaq üçün başqa üsullardan istifadə etməyə çalışdılar - bəzən çox fərqli və səhv nəticələr göstərdilər. 
+Sonrakı əsrlərdə elm adamları Yer radiusunu hesablamaq üçün başqa üsullardan istifadə etməyə çalışdılar - bəzən çox fərqli və səhv nəticələr göstərdilər. 
 
- Kristofer Kolumbun Portuqaliyadan qərbə üzməsinə səbəb olan bu səhv ölçmələrdən biri idi. Yerin əslində olduğundan daha kiçik olduğunu zənn etdi və Hindistana çatacağına ümid etdi. Əslində, o, fərqli bir qitəyə gəldi: Amerika. 
+Kristofer Kolumbun Portuqaliyadan qərbə üzməsinə səbəb olan bu səhv ölçmələrdən biri idi. Yerin əslində olduğundan daha kiçik olduğunu zənn etdi və Hindistana çatacağına ümid etdi. Əslində, o, fərqli bir qitəyə gəldi: Amerika. 
 
 :::
 
@@ -939,11 +871,6 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 {.todo} TEZLİKLƏ! 
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
 ---
 
 ## Dairə teoremləri 
@@ -951,59 +878,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > section: circle-theorems
 > sectionStatus: dev
 
- https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / müəllim_modullar / Dairə_Geometriya.html 
-
- __[CC] Yazılmış açılar, radii və akkordlar arasındakı əlaqələri müəyyənləşdirin və təsvir edin. Mərkəzi, yazılmış və dairəvi açılar arasındakı əlaqəni daxil edin; bir diametrdə yazılmış açılar sağ açılardır; bir dairənin radiusu dairənin kəsişdiyi yerdəki tangensə dikdir.__ 
-
- Yazılmış bir bucaq, ucu dairə və tərəfləri akkordlar olan bir açıdır. Tutulmuş qövs, yazılmış bucağın daxili hissəsindəki və son nöqtələri bucaqda olan qövsdür. Yazılmış bir bucağın ucu, dairələri kəsişən bir qövs meydana gətirmək üçün dairəni kəsdikcə dairənin hər hansı bir yerində ola bilər. 
-
- __Yazılmış bucaq teoremi__ Yazılmış bucağın ölçüsü onun tutulmuş qövsünün yarısıdır. Yazılmış bucaq teoremini sübut etmək üçün onu İstintaqdan çəkilən üç fərqli bucaq kimi üç hala bölmək lazımdır. 
-
- __Konqres yazılı bucaq teoremi__ Eyni qövsü tutan yazılmış bucaqlar uyğun gəlir. 
-
- __Yazılmış__ bucaq yarı dairəvi __teorem__ Bir yarımdairəni kəsən bir bucaq düzgün bir açıdır. 
-
- Yazılmış bucaq yarımdairəsi teoremində bucağın yarı dairədə yazıldığını da söyləyə bilərik. Hər zaman bir bucaq bir dairəyə yazılır, bucağın uc nöqtələri bir diametrin son nöqtələridir. Buna görə, Yazılmış Bucaq Yarımdaqiqəli teoremin tərsliyi də doğrudur. 
-
- Bir bucaq bir dairədə olduqda, ucu dairənin ətrafındadır. Bir dairə üzərində bir növ bucaq və bir akkord yaranır. 
-
- __Akkord / Tangent Bucaq teoremi__ Dairə ilə kəsişən bir akkord və bir tanjentin yaratdığı bir bucağın ölçüsü tutulmuş qövsün yarısıdır. 
-
- Akkord / Tangent Bucaq teoremindən bilirik ki, kəsilmiş qövsün yarısı ölçüsü olan iki növ bucaq var; yazılmış bir bucaq və bir akkord və bir tangens tərəfindən yaranan bir bucaq. Buna görə bir dairədə vertexi olan hər hansı bir bucaq, kəsilmiş qövsün yarısı olacaqdır. 
-
- Dairəvi bir dairənin içərisindədir, ancaq mərkəzdə deyilsə bir dairə içərisində bir bucaq nəzərə alınır. Bir dairənin içərisindəki bütün açılar iki kəsişən akkordlar tərəfindən meydana gəlir. 
-
- __Kəsişən akkordlar bucağı teoremi__ Bir dairə içərisində kəsişən iki akkordun yaratdığı bucağın ölçüsü, kəsilmiş qövslərin ölçüsünün ortalamasıdır. 
-
- Bucağın ucu dairənin xaricindədirsə və tərəfləri tangents və ya gizlidirsə, bir dairə xaricində hesab olunur. Bir dairənin xaricində olan üç növ bucaq var: iki cingiltinin əmələ gətirdiyi bir bucaq, bir cərgə və bir kəsiklə əmələ gələn bucaq və iki sekansın yaratdığı bucaq. Bir dairənin içərisində və ya bir dairədə olduğu kimi, bir dairənin xaricindəki bir bucaq da kəsilmiş qövsləri əhatə edən xüsusi bir formulaya malikdir. 
-
- __Kənar bucaq teoremi__ Dairə xaricində bir nöqtədən tərtib edilmiş iki sekspor, iki cərgə və ya bir kəsici və bir cərgə ilə yaranan bir bucağın ölçüsü, tutulan qövslərin ölçü fərqinin yarısına bərabərdir. 
-
- İki akkad bir dairənin içərisində kəsişdikdə, yaratdıqları iki üçbucaq bənzərdir və hər üçbucağın tərəflərini bir-birinə nisbətdə düzəldir. AD və BC-ni çıxarsaq, AE, EC, DE və EB arasındakı nisbət yenə də eyni olacaq. 
-
- __Kəsişən akkordlar teoremi__ İki akkord bir dairənin içərisində __kəsilirsə__ , biri uzunluq a və b, digəri isə uzunluq c və d seqmentlərinə bölünür, sonra ab = cd. Başqa sözlə, bir akkordun seqmentlərinin məhsulu ikinci akkordun seqmentlərinin məhsuluna bərabərdir. 
-
- Bir dairədən kənar bir bucaq meydana gətirməklə yanaşı, dairə bağlayanları bir-birinə mütənasib olan hissələrə bölə bilər. 
-
- Kəsişən akkordları çəksək, iki oxşar üçbucaq olacaq. 
-
- Yazılmış bucaqlardan və Reflexive Property (∠R≅∠R), PRS∼ △ TRQ. İki üçbucaq bir-birinə bənzər olduğu üçün uyğun tərəflər arasında bir nisbət qura bilərik. Sonra çarpaz vur. ac + d = ca + b⇒a (a + b) = c (c + d) 
-
- __İki gizli seqment teoremi İki sekant__ bir dairənin xaricindəki ümumi nöqtədən çəkilib və seqmentlər yuxarıda göstərildiyi kimi işarələnirsə, onda a (a + b) = c (c + d). Başqa sözlə, xarici seqmentin məhsulu və bir sekspanın bütövlüyü xarici seqmentin məhsulu və digər hissənin məhsulu ilə bərabərdir. 
-
- Bir cırtdan və gizli bir dairənin xaricində ortaq bir nöqtədə görüşsələr, yaradılan seqmentlər iki gizli şüa ilə oxşar bir əlaqəyə malikdirlər. Xatırladaq ki, bir qıvrımın xarici hissəsinin məhsulu və digəri digər bağlananın məhsuluna bərabərdir. Bu seqmentlərdən biri bir dolğunluq olsa, yenə də xarici hissənin və bütövlükdə məhsul olacaqdır. Bununla birlikdə, dolğun bir xətt üçün xarici hissə və bütün bərabərdir. 
-
- __Tangent Secant Seqment teoremi__ Əgər bir dairə xaricində ümumi bir nöqtədən bir və bir __hissə çəkilirsə__ (və seqmentlər sola şəkil kimi etiketlənir), onda a2 = b (b + c). Bu o deməkdir ki, kənar hissənin məhsulu və bütövlükdə tangent seqmentinin kvadratına bərabərdir. 
-
----
-
-### Thales teoremi 
-
- Isosceles üçbucağından istifadə edərək sübut edin 
-
- Evklidin hamısını birləşdirir 
-
-{.todo} ETMƏK 
+TODO
 
 ---
 
@@ -1012,15 +887,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > sectionStatus: dev
 > section: cyclic-polygons
 
- __[CC] Dairəyə yazılmış bərabər tərəfli üçbucaq, kvadrat və nizamlı altıbucaqlı düzəldin.__ 
-
- Yazılmış çoxbucaq, hər bir ucun bir dairədə olduğu çoxbucaqlıdır. Qeyd edək ki, hər dörd tərəfli ya da çoxbucaqlı bir dairəyə yazıla bilməz. Yazılmış dördrilaterallara tsiklik dördrilaterallar da deyilir. Bu tip kvadrilaterallar üçün bir xüsusi əmlak olmalıdır. Bunu burada araşdıracağıq. 
-
- Bu araşdırma, yazılmış dörd tərəfli tərəflərin əks tərəflərinin əlavə olduğunu göstərir. Dördbucaqlıları yarıya bölməklə, diaqonal vasitəsilə digər iki bucağın (kəsmədiyimiz) uyğunlaşdıqda xətti cüt yaratdıqlarını göstərə bildik. 
-
- Yazılmış dördlü tərəfli teorem: Dörd tərəfli bir dairədə, əks tərəflər əlavə olduqda yazılmışdır. 
-
- https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -1029,7 +896,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > section: spheres-cones-cylinders
 > id: solids
 
- Əvvəlki hissələrdə düz bir səthdə dairələrin xüsusiyyətlərini araşdırdıq. Ancaq dünyamız əslində üç ölçülüdür, buna görə dairələrə əsaslanan bəzi 3D bərk şeylərə nəzər salaq: 
+Əvvəlki hissələrdə düz bir səthdə dairələrin xüsusiyyətlərini araşdırdıq. Ancaq dünyamız əslində üç ölçülüdür, buna görə dairələrə əsaslanan bəzi 3D bərk şeylərə nəzər salaq: 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -1051,7 +918,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 :::
 
- Bir sahənin tərifinin bir [[dairənin]] tərifi ilə demək olar ki, eyni olduğuna diqqət yetirin [[| radius | kub]] - üç ölçüdən başqa! 
+Bir sahənin tərifinin bir [[dairənin]] tərifi ilə demək olar ki, eyni olduğuna diqqət yetirin [[| radius | kub]] - üç ölçüdən başqa! 
 
 ---
 > id: gasometer
@@ -1060,9 +927,10 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Burada Almaniyanın Oberhausen şəhərindəki silindrik _qazometrini_ görə bilərsiniz. Yaxınlıqdakı fabriklərdə və elektrik stansiyalarında yanacaq kimi istifadə olunan təbii qazı saxlayırdı. Qazometr 120 m hündürlükdədir, təməli və tavanı radiusu 35 m olan iki böyük dairədir. Mühəndislərin cavab vermək istədikləri iki vacib sual var: 
+Burada Almaniyanın Oberhausen şəhərindəki silindrik _qazometrini_ görə bilərsiniz. Yaxınlıqdakı fabriklərdə və elektrik stansiyalarında yanacaq kimi istifadə olunan təbii qazı saxlayırdı. Qazometr 120 m hündürlükdədir, təməli və tavanı radiusu 35 m olan iki böyük dairədir. Mühəndislərin cavab vermək istədikləri iki vacib sual var: 
 
- * Nə qədər təbii qaz saxlanıla bilər? Bu [[həcmdir | sahəsi |]] silindrin [[diametri]] . * {.reveal(when="blank-0")} Qazometr qurmaq üçün nə qədər polad lazımdır? Bu (təxminən) [[səth sahəsi | dövrə |]] silindrin [[diaqonalı]] . 
+* Nə qədər təbii qaz saxlanıla bilər? Bu [[həcmdir | sahəsi |]] silindrin [[diametri]].
+* {.reveal(when="blank-0")} Qazometr qurmaq üçün nə qədər polad lazımdır? Bu (təxminən) [[səth sahəsi | dövrə |]] silindrin [[diaqonalı]] . 
 
 {.reveal(when="blank-0 blank-1")} Hər iki nəticənin düsturlarını tapmağa çalışaq! 
 
@@ -1079,9 +947,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 #### Silindr həcmi 
 
- Bir silindrin yuxarı və alt hissəsi __əsas__ deyilən iki konqres dairəsidir. The __{.m-blue}__ bir silindr __hündürlüyü _h___ bu əsasları arasında şaquli məsafə və __{.m-red}__ bir silindr __radius _r___ sadəcə dairəvi əsasların radiusudur. 
+Bir silindrin yuxarı və alt hissəsi __əsas__ deyilən iki konqres dairəsidir. The __{.m-blue}__ bir silindr __hündürlüyü _h___ bu əsasları arasında şaquli məsafə və __{.m-red}__ bir silindr __radius _r___ sadəcə dairəvi əsasların radiusudur. 
 
- Bir istifadə edərək bir silindrini təqib edə bilərik ${n}{n|5|3,20,1} tərəfli [__prizma__](gloss:prism) . Tərəflərin sayı artdıqca, prizma daha çox silindr kimi görünməyə başlayır: 
+Bir istifadə edərək bir silindrini təqib edə bilərik ${n}{n|5|3,20,1} tərəfli [__prizma__](gloss:prism) . Tərəflərin sayı artdıqca, prizma daha çox silindr kimi görünməyə başlayır: 
 
 ::: column(width=240)
 
@@ -1096,7 +964,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: cylinder-volume
 
- Bir silindr texniki cəhətdən prizma olmasa da, bir çox xüsusiyyətlərini bölüşürlər. Hər iki halda da, həcmini onların sahəsini çoxaltmaqla tapa bilərik __{.m-red}__ ilə birlikdə __baza__ __{.m-blue} boyu__ . Bu, radiusu olan bir silindr deməkdir _{.b.m-red} r_ və boy _{.b.m-blue} h_ həcmi var 
+Bir silindr texniki cəhətdən prizma olmasa da, bir çox xüsusiyyətlərini bölüşürlər. Hər iki halda da, həcmini onların sahəsini çoxaltmaqla tapa bilərik __{.m-red}__ ilə birlikdə __baza__ __{.m-blue} boyu__ . Bu, radiusu olan bir silindr deməkdir _{.b.m-red} r_ və boy _{.b.m-blue} h_ həcmi var 
 
 {.text-center}`V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_ 
 
@@ -1108,7 +976,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Yuxarıdakı nümunələrdə silindrin iki əsası həmişə _birbaşa bir-birinin üstündə_ idi: buna __sağ silindr__ deyilir. Baza bir-birindən birbaşa yuxarıda deyilsə, bizdə bir __oblique silindr var__ . Döşəmələr hələ də paraleldir, lakin tərəflər 90° -dən çox olmayan bir açıya "söykənir". 
+Yuxarıdakı nümunələrdə silindrin iki əsası həmişə _birbaşa bir-birinin üstündə_ idi: buna __sağ silindr__ deyilir. Baza bir-birindən birbaşa yuxarıda deyilsə, bizdə bir __oblique silindr var__ . Döşəmələr hələ də paraleldir, lakin tərəflər 90° -dən çox olmayan bir açıya "söykənir". 
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1125,9 +993,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 > id: cavalieri
 > goals: slide
 
- Bir oblique silindrinin həcmi eyni radius və hündürlüyə malik bir sağ silindrlə eyni olur. Bu, İtaliyalı riyaziyyatçı [Bonaventura Cavalierinin](bio:cavalieri) adını daşıyan [__Cavalieri prinsipi ilə__](gloss:cavalieri) əlaqədardır: hər hündürlükdə iki bərk sahənin eyni kəsişmə sahəsi varsa, onda eyni həcmə sahib olacaqlar. 
+Bir oblique silindrinin həcmi eyni radius və hündürlüyə malik bir sağ silindrlə eyni olur. Bu, İtaliyalı riyaziyyatçı [Bonaventura Cavalierinin](bio:cavalieri) adını daşıyan [__Cavalieri prinsipi ilə__](gloss:cavalieri) əlaqədardır: hər hündürlükdə iki bərk sahənin eyni kəsişmə sahəsi varsa, onda eyni həcmə sahib olacaqlar. 
 
- Bir silindrin çox nazik disklərə dilimləndiyini düşünün. Bundan sonra bu diskləri üfüqi bir silindr əldə etmək üçün üfüqi sürüşdürə bilərik. Fərdi disklərin həcmi onu oblique halında dəyişmir, buna görə ümumi həcm də sabit qalır: 
+Bir silindrin çox nazik disklərə dilimləndiyini düşünün. Bundan sonra bu diskləri üfüqi bir silindr əldə etmək üçün üfüqi sürüşdürə bilərik. Fərdi disklərin həcmi onu oblique halında dəyişmir, buna görə ümumi həcm də sabit qalır: 
 
 ::: column(width=240)
 
@@ -1140,11 +1008,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
     
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
 > id: cylinder-surface
@@ -1153,11 +1017,12 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Bir silindr səthinin sahəsi tapmaq üçün, biz onun düz [xalis](gloss:net) onu "açmaq" var. Bunu özünüz cəhd edə bilərsiniz, məsələn, bir qutu qabdakı etiketi silməklə. 
+Bir silindr səthinin sahəsi tapmaq üçün, biz onun düz [xalis](gloss:net) onu "açmaq" var. Bunu özünüz cəhd edə bilərsiniz, məsələn, bir qutu qabdakı etiketi silməklə. 
 
- İki [[dairə var | kürələr | kvadratlar]] , biri başında, biri silindrin altındadır. Əyri tərəf əslində böyük bir [[düzbucaqlıdır | kvadrat | ellips]] . 
+İki [[dairə var | kürələr | kvadratlar]] , biri başında, biri silindrin altındadır. Əyri tərəf əslində böyük bir [[düzbucaqlıdır | kvadrat | ellips]] . 
 
- * {.reveal(when="blank-0 blank-1")} Hər iki dairənin sahəsi var _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . * {.reveal(when="eqn-0")} Düzbucağın hündürlüyü _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} və düzbucağın eni [[dairəvi]] ilə eynidir [[| Diametr |]] dairələrin [[tangensi]] :_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
+* {.reveal(when="blank-0 blank-1")} Hər iki dairənin sahəsi var _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ .
+* {.reveal(when="eqn-0")} Düzbucağın hündürlüyü _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} və düzbucağın eni [[dairəvi]] ilə eynidir [[| Diametr |]] dairələrin [[tangensi]] :_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
 
 ::: column(width=320)
 
@@ -1169,7 +1034,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: cylinder-surface-1
 
- Bu o deməkdir ki, radiusu _r_ və hündürlüyü _h_ olan bir silindrin ümumi səth sahəsi verilir 
+Bu o deməkdir ki, radiusu _r_ və hündürlüyü _h_ olan bir silindrin ümumi səth sahəsi verilir 
 
 {.text-center}`A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_ . 
 
@@ -1178,9 +1043,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
     figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
- Silindrlər dünyanın hər yerində - soda qutularından tualet kağızı və ya su borularına qədər tapıla bilər. Başqa nümunələri düşünə bilərsinizmi? 
+Silindrlər dünyanın hər yerində - soda qutularından tualet kağızı və ya su borularına qədər tapıla bilər. Başqa nümunələri düşünə bilərsinizmi? 
 
- Yuxarıdakı _Qazometr_ radiusu 35 m və hündürlüyü 120 m idi. İndi onun həcminin təxminən [[461,000 ± 1000]] olduğunu hesablaya bilərik `"m"^3` və onun səth sahəsi təxminən [[34,080 ± 100-]] dir `"m"^2` . 
+Yuxarıdakı _Qazometr_ radiusu 35 m və hündürlüyü 120 m idi. İndi onun həcminin təxminən [[461,000 ± 1000]] olduğunu hesablaya bilərik `"m"^3` və onun səth sahəsi təxminən [[34,080 ± 100-]] dir `"m"^2` . 
 
 ---
 > id: cone
@@ -1189,11 +1054,11 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Bir [__konus__](gloss:cone) , dairəvi olan üç ölçülü bir bərkdir __{.m-red} baza__ . Diaqramda göstərildiyi kimi yan tərəfi "yuxarıya doğru" və bir nöqtədə deyilir __{.m-green} dik__ . 
+Bir [__konus__](gloss:cone) , dairəvi olan üç ölçülü bir bərkdir __{.m-red} baza__ . Diaqramda göstərildiyi kimi yan tərəfi "yuxarıya doğru" və bir nöqtədə deyilir __{.m-green} dik__ . 
 
- The __{.m-red}__ konus __radius__ dairəvi bazasının radius və __{.m-blue}__ konusun __hündürlüyü__ bazadan dikliyə perpendikulyar məsafədir. 
+The __{.m-red}__ konus __radius__ dairəvi bazasının radius və __{.m-blue}__ konusun __hündürlüyü__ bazadan dikliyə perpendikulyar məsafədir. 
 
- Əvvəllər tanış olduğumuz digər formalar kimi, konuslar ətrafımızda hər yerdədir: dondurma konusları, yol konusları, müəyyən damlar və hətta Milad ağacları. Başqa nə düşünə bilərsən? 
+Əvvəllər tanış olduğumuz digər formalar kimi, konuslar ətrafımızda hər yerdədir: dondurma konusları, yol konusları, müəyyən damlar və hətta Milad ağacları. Başqa nə düşünə bilərsən? 
 
 ::: column(width=280)
 
@@ -1230,9 +1095,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Daha əvvəl bir prizdən istifadə edərək bir silindrin həcmini tapdıq. Eynilə, bir [__piramida__](gloss:pyramid) istifadə edərək bir konusun həcmini tapa bilərik. 
+Daha əvvəl bir prizdən istifadə edərək bir silindrin həcmini tapdıq. Eynilə, bir [__piramida__](gloss:pyramid) istifadə edərək bir konusun həcmini tapa bilərik. 
 
- Burada a görə bilərsiniz ${n}{n|5|3,18,1} tərəfli piramida. Tərəflərin sayı artdıqca, piramida daha çox konus kimi görünməyə başlayır. Əslində, bir konusun _sonsuz_ tərəfləri olan bir piramida olaraq düşünə bilərdik! 
+Burada a görə bilərsiniz ${n}{n|5|3,18,1} tərəfli piramida. Tərəflərin sayı artdıqca, piramida daha çox konus kimi görünməyə başlayır. Əslində, bir konusun _sonsuz_ tərəfləri olan bir piramida olaraq düşünə bilərdik! 
 
 ::: column(width=280)
 
@@ -1243,14 +1108,14 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: cone-volume-1
 
- Bu həm də o deməkdir ki, həcm üçün tənliyindən də istifadə edə bilərik: `V = 1/3 "base" × "height"` . Bir konusun əsası bir dairədir, buna görə radiusu _r_ və hündürlüyü _h_ olan bir konusun həcmi 
+Bu həm də o deməkdir ki, həcm üçün tənliyindən də istifadə edə bilərik: `V = 1/3 "base" × "height"` . Bir konusun əsası bir dairədir, buna görə radiusu _r_ və hündürlüyü _h_ olan bir konusun həcmi 
 
 {.text-center}`V =` _{x-equation(solution="1/3 π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cone-volume-hint1 cone-volume-hint2")}_ 
 
 ---
 > id: cone-circumscribed
 
- Bir silindr həcmi üçün tənlik ilə oxşarlığa diqqət yetirin. Konusun _ətrafında_ eyni baza və hündürlüklə bir silindr çəkməyi düşünün - buna __dairəvi silindr__ deyilir. İndi konus tam [[üçdə birini]] alacaq [[| yarım |]] Silindr həcminin [[dörddə biri]] 
+Bir silindr həcmi üçün tənlik ilə oxşarlığa diqqət yetirin. Konusun _ətrafında_ eyni baza və hündürlüklə bir silindr çəkməyi düşünün - buna __dairəvi silindr__ deyilir. İndi konus tam [[üçdə birini]] alacaq [[| yarım |]] Silindr həcminin [[dörddə biri]] 
 
     figure: x-solid(size=280)
 
@@ -1265,9 +1130,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Bir silindr kimi, bir konus "düz" olmalıdır. Əgər vertex birbaşa bazanın mərkəzindən yuxarıdırsa, bizim __sağ konusumuz var__ . Əks təqdirdə, biz onu __oblique konus adlandırırıq__ . 
+Bir silindr kimi, bir konus "düz" olmalıdır. Əgər vertex birbaşa bazanın mərkəzindən yuxarıdırsa, bizim __sağ konusumuz var__ . Əks təqdirdə, biz onu __oblique konus adlandırırıq__ . 
 
- Bir daha Cavalieri prinsipindən istifadə edərək bütün oblique konusların eyni baza və hündürlüyə sahib olduqları halda eyni həcmdə olduğunu göstərə bilərik. 
+Bir daha Cavalieri prinsipindən istifadə edərək bütün oblique konusların eyni baza və hündürlüyə sahib olduqları halda eyni həcmdə olduğunu göstərə bilərik. 
 
 ::: column(width=280)
 
@@ -1283,7 +1148,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Bir konusun səth sahəsini tapmaq bir az daha çətindir. Əvvəllər olduğu kimi, bir konusu da toruna sala bilərik. Nə baş verdiyini görmək üçün kaydırıcıyı hərəkət etdirin: bu vəziyyətdə bir dairə və bir [[dairə sektoru]] alırıq [[| dairə seqmenti | dairə qövsü]] . 
+Bir konusun səth sahəsini tapmaq bir az daha çətindir. Əvvəllər olduğu kimi, bir konusu da toruna sala bilərik. Nə baş verdiyini görmək üçün kaydırıcıyı hərəkət etdirin: bu vəziyyətdə bir dairə və bir [[dairə sektoru]] alırıq [[| dairə seqmenti | dairə qövsü]] . 
 
 {.reveal(when="blank-0")} İndi yalnız bu iki komponentin sahəsini əlavə etməliyik. The __{.m-yellow} baza__ radius _r_ olan bir dairədir, buna görə də sahəsi 
 
@@ -1301,7 +1166,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Radiusu __{.m-green} sektor__ bir konusun halqasından onun ucuna qədər olan məsafədir. Buna deyilir [{.pill.green.b} maili boyu](target:s) normal eyni konus [_var,_](target:s) və [{.pill.blue.b} hündürlük _h_](target:h) . Biz [Pifaqor](gloss:pythagoras-theorem) istifadə maili boyu tapa bilərsiniz: 
+Radiusu __{.m-green} sektor__ bir konusun halqasından onun ucuna qədər olan məsafədir. Buna deyilir [{.pill.green.b} maili boyu](target:s) normal eyni konus [_var,_](target:s) və [{.pill.blue.b} hündürlük _h_](target:h) . Biz [Pifaqor](gloss:pythagoras-theorem) istifadə maili boyu tapa bilərsiniz: 
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
 | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1328,7 +1193,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- The [{.pill.red}](target:arc) sektorun [qövs uzunluğu](target:arc) [[ətraf]] ilə eynidir [[| Diametr | qövsü]] [{.pill.yellow} baza](target:base) : _{span.reveal(when="blank-0")}`2 π r` . İndi əvvəlki hissədə əldə etdiyimiz [düsturdan](gloss:circle-sector) istifadə edərək sektorun sahəsini tapa bilərik:_ 
+The [{.pill.red}](target:arc) sektorun [qövs uzunluğu](target:arc) [[ətraf]] ilə eynidir [[| Diametr | qövsü]] [{.pill.yellow} baza](target:base) : _{span.reveal(when="blank-0")}`2 π r` . İndi əvvəlki hissədə əldə etdiyimiz [düsturdan](gloss:circle-sector) istifadə edərək sektorun sahəsini tapa bilərik:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1363,7 +1228,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: cone-surface-2
 
- Nəhayət, yalnız sahəni əlavə etməliyik __{.m-yellow} baza__ və sahəsi __{.m-green} sektor__ , konusun cəmi səthini almaq üçün: 
+Nəhayət, yalnız sahəni əlavə etməliyik __{.m-yellow} baza__ və sahəsi __{.m-green} sektor__ , konusun cəmi səthini almaq üçün: 
 
 {.text-center}`A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ 
 
@@ -1374,9 +1239,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow
 
- Bir [__sahə__](gloss:sphere) , veriləndən eyni məsafədə olan bütün nöqtələrdən ibarət olan üç ölçülü bir bərkdir __{.m-green} mərkəzi _C.___ Bu məsafəyə deyilir __{.m-red} kürənin radiusu _r___ . 
+Bir [__sahə__](gloss:sphere) , veriləndən eyni məsafədə olan bütün nöqtələrdən ibarət olan üç ölçülü bir bərkdir __{.m-green} mərkəzi _C.___ Bu məsafəyə deyilir __{.m-red} kürənin radiusu _r___ . 
 
- Bir sahəni "üç ölçülü bir [dairə](gloss:circle) " kimi düşünə bilərsiniz. Bir dairə kimi, bir sahənin də a __{.m-blue} diametri _d___ , bu [[iki dəfədir |]] radiusun uzunluğunun [[yarısı]] , həmçinin akkordlar və sekanlar. 
+Bir sahəni "üç ölçülü bir [dairə](gloss:circle) " kimi düşünə bilərsiniz. Bir dairə kimi, bir sahənin də a __{.m-blue} diametri _d___ , bu [[iki dəfədir |]] radiusun uzunluğunun [[yarısı]] , həmçinin akkordlar və sekanlar. 
 
 ::: column(width=240)
 
@@ -1394,9 +1259,9 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 #### Bir sahənin həcmi 
 
- Bir sferanın həcmini tapmaq üçün bir daha Cavalieri prinsipindən istifadə etməliyik. Bir yarımkürədən başlayaq - ekvator boyunca kəsilmiş bir sahə. Həm də yarımkürədə olduğu kimi eyni radius və hündürlüyə malik, lakin ortada "kəsilmiş" bir konus olan bir silindirə ehtiyacımız var. 
+Bir sferanın həcmini tapmaq üçün bir daha Cavalieri prinsipindən istifadə etməliyik. Bir yarımkürədən başlayaq - ekvator boyunca kəsilmiş bir sahə. Həm də yarımkürədə olduğu kimi eyni radius və hündürlüyə malik, lakin ortada "kəsilmiş" bir konus olan bir silindirə ehtiyacımız var. 
 
- Aşağıdakı kaydırıcıyı hərəkət etdirərkən, hər iki şəklin kəsişməsini təməlin üstündəki müəyyən bir yüksəklikdə görə bilərsiniz: 
+Aşağıdakı kaydırıcıyı hərəkət etdirərkən, hər iki şəklin kəsişməsini təməlin üstündəki müəyyən bir yüksəklikdə görə bilərsiniz: 
 
 ::: column(width=240)
 
@@ -1451,7 +1316,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 {.text-center}`pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")` . 
 
- İndi kəsişmənin sahəsi 
+İndi kəsişmənin sahəsi 
 
     x-equation-system(steps="π x^2" hints="circle-cross-sec")
       table: tr
@@ -1463,11 +1328,11 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 
 ::: column.grow.reveal(when="eqn-0")
 
- Kəsilmiş silindrinin kəsişməsi həmişə bir [[üzükdür | dairə | konus]] . 
+Kəsilmiş silindrinin kəsişməsi həmişə bir [[üzükdür | dairə | konus]] . 
 
 ::: .reveal(when="blank-1")
 
- Çuxurun radiusu _h-_ dir. Çuxurun sahəsini daha böyük dairənin sahəsindən çıxarmaqla tapa bilərik: 
+Çuxurun radiusu _h-_ dir. Çuxurun sahəsini daha böyük dairənin sahəsindən çıxarmaqla tapa bilərik: 
 
 | _A_ | = | `π r^2 - π h^2` |
 | | = | `π (r^2 - h^2)` |
@@ -1480,7 +1345,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: sphere-volume-1
 
- Hər iki bərkin hər səviyyədə eyni kəsişmə sahəsinə sahib olduğu görünür. Cavalieri prinsipi ilə hər iki qatı eyni [[həcmdə olmalıdır | səth sahəsi | dairə]] ! _{span.reveal(when="blank-0")} Biz [silindr](gloss:cylinder-volume) həcmi və [konus](gloss:cone-volume) həcmi çıxarılaraq yarımkürəsində həcmi tapa bilərsiniz:_ 
+Hər iki bərkin hər səviyyədə eyni kəsişmə sahəsinə sahib olduğu görünür. Cavalieri prinsipi ilə hər iki qatı eyni [[həcmdə olmalıdır | səth sahəsi | dairə]] ! _{span.reveal(when="blank-0")} Biz [silindr](gloss:cylinder-volume) həcmi və [konus](gloss:cone-volume) həcmi çıxarılaraq yarımkürəsində həcmi tapa bilərsiniz:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
@@ -1492,7 +1357,7 @@ sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0.54]]
 ---
 > id: sphere-volume-2
 
- Bir sahə [[iki]] yarımkürədən ibarətdir, _{span.reveal(when="blank-0")} deməkdir ki, həcmi olmalıdır_ 
+Bir sahə [[iki]] yarımkürədən ibarətdir, _{span.reveal(when="blank-0")} deməkdir ki, həcmi olmalıdır_ 
 
 {.text-center.reveal(when="blank-0")}`V = 4/3 π r^3` . 
 
@@ -1555,11 +1420,11 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 
 #### Bir sferanın səthi sahəsi 
 
- Bir sferanın səthi sahəsi üçün bir düstur tapmaq çox çətindir. Bir səbəb, əvvəllər konuslar və silindrlər hazırladığımız kimi bir sferanın səthini aça və "düzləşdirə" bilməyəcəyimizdir. 
+Bir sferanın səthi sahəsi üçün bir düstur tapmaq çox çətindir. Bir səbəb, əvvəllər konuslar və silindrlər hazırladığımız kimi bir sferanın səthini aça və "düzləşdirə" bilməyəcəyimizdir. 
 
- Xəritə yaratmağa çalışarkən bu müəyyən bir məsələdir. Yer əyri, üç ölçülü bir səthə malikdir, lakin hər bir çap olunmuş xəritə düz və iki ölçülü olmalıdır. Bu o deməkdir ki, Coğrafiyaçılar aldatmaq məcburiyyətindədir: müəyyən əraziləri uzatmaq və ya büzməklə. 
+Xəritə yaratmağa çalışarkən bu müəyyən bir məsələdir. Yer əyri, üç ölçülü bir səthə malikdir, lakin hər bir çap olunmuş xəritə düz və iki ölçülü olmalıdır. Bu o deməkdir ki, Coğrafiyaçılar aldatmaq məcburiyyətindədir: müəyyən əraziləri uzatmaq və ya büzməklə. 
 
- Burada __proqnozlar__ adlanan bir neçə fərqli xəritəni görə bilərsiniz. Qırmızı kvadratı hərəkət etdirməyə çalışın və bu ərazinin _həqiqətən_ dünyanın necə göründüyünə baxın: 
+Burada __proqnozlar__ adlanan bir neçə fərqli xəritəni görə bilərsiniz. Qırmızı kvadratı hərəkət etdirməyə çalışın və bu ərazinin _həqiqətən_ dünyanın necə göründüyünə baxın: 
 
     figure
       x-select.tabs
@@ -1586,26 +1451,14 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 ---
 > id: sphere-surface
 
- Bir sferanın səthini tapmaq üçün başqa bir forma istifadə edərək bir daha təqribi şəkildə qiymətləndirə bilərik - məsələn, çox üzlü bir polyhedron. Üzlərin sayı artdıqca polyhedron daha çox kürə kimi görünməyə başlayır. 
+Bir sferanın səthini tapmaq üçün başqa bir forma istifadə edərək bir daha təqribi şəkildə qiymətləndirə bilərik - məsələn, çox üzlü bir polyhedron. Üzlərin sayı artdıqca polyhedron daha çox kürə kimi görünməyə başlayır. 
 
 {.todo} Tezliklə: Sahə Səthi Sahəsi Sübut 
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
     
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
 
 ---
 
@@ -1615,7 +1468,7 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 > id: conics
 > goals: ellipse parabola hyperbola
 
- Dairə bir [konus](gloss:cone) vasitəsilə "dilimlər" istifadə edərək yaradıla bilən dörd müxtəlif formadan biridir. Bunu bir məşəlin yüngül konusundan istifadə etməklə göstərmək olar: 
+Dairə bir [konus](gloss:cone) vasitəsilə "dilimlər" istifadə edərək yaradıla bilən dörd müxtəlif formadan biridir. Bunu bir məşəlin yüngül konusundan istifadə etməklə göstərmək olar: 
 
     x-conic-section
     x-scale-box(width=760).conics
@@ -1636,18 +1489,18 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 ---
 > id: conics-1
 
- Məşəri şaquli olaraq aşağıya doğru yönəltsəniz, bir [[dairə]] görürsünüz [[| ellips | oval]] işıq. _{span.reveal(when="blank-0")} [__Konusa əyilmişsinizsə,__](gloss:ellipse) bir [__ellips__](gloss:ellipse) əldə edirsiniz. Daha da [__əyilmişsinizsə, parabola__](gloss:parabola) və ya [__hiperbola__](gloss:hyperbola) əldə edirsiniz._ 
+Məşəri şaquli olaraq aşağıya doğru yönəltsəniz, bir [[dairə]] görürsünüz [[| ellips | oval]] işıq. _{span.reveal(when="blank-0")} [__Konusa əyilmişsinizsə,__](gloss:ellipse) bir [__ellips__](gloss:ellipse) əldə edirsiniz. Daha da [__əyilmişsinizsə, parabola__](gloss:parabola) və ya [__hiperbola__](gloss:hyperbola) əldə edirsiniz._ 
 
 ---
 > id: conics-2
 
 ::: column.grow
 
- [__Birlikdə__](gloss:conic-section) bu dörd forma [__konik hissələr__](gloss:conic-section) adlanır. Hamısı çox fərqli görünsələr də, bir-biri ilə sıx bağlıdırlar: əslində hamısı eyni tənlikdən istifadə edərək yarana bilər! 
+[__Birlikdə__](gloss:conic-section) bu dörd forma [__konik hissələr__](gloss:conic-section) adlanır. Hamısı çox fərqli görünsələr də, bir-biri ilə sıx bağlıdırlar: əslində hamısı eyni tənlikdən istifadə edərək yarana bilər! 
 
- Konik bölmələr ilk dəfə qədim yunan riyaziyyatçısı [Perga Apollonius](bio:apollonius) tərəfindən araşdırılmış və onlara da qeyri-adi adlar verilmişdir. 
+Konik bölmələr ilk dəfə qədim yunan riyaziyyatçısı [Perga Apollonius](bio:apollonius) tərəfindən araşdırılmış və onlara da qeyri-adi adlar verilmişdir. 
 
- Sonrakı kurslarda parabolalar və hiperbolalar haqqında daha çox məlumat əldə edəcəksiniz. Hələlik, ellipsə daha yaxından nəzər salaq. 
+Sonrakı kurslarda parabolalar və hiperbolalar haqqında daha çox məlumat əldə edəcəksiniz. Hələlik, ellipsə daha yaxından nəzər salaq. 
 
 ::: column(width=300)
 
@@ -1660,23 +1513,17 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 
 ### Ellips 
 
- Bir ellips sadəcə "uzadılmış bir dairə" kimi görünür. Əslində bu barədə _iki mərkəzi_ olan bir dairə kimi düşünə bilərsiniz - bunlara __fokus nöqtələri__ deyilir. Bir dairənin hər nöqtəsi mərkəzindən eyni məsafədə olduğu kimi, bir ellipsdəki hər nöqtə eyni iki _məsafəyə_ bərabər _məsafələrin cəminə_ malikdir. 
+Bir ellips sadəcə "uzadılmış bir dairə" kimi görünür. Əslində bu barədə _iki mərkəzi_ olan bir dairə kimi düşünə bilərsiniz - bunlara __fokus nöqtələri__ deyilir. Bir dairənin hər nöqtəsi mərkəzindən eyni məsafədə olduğu kimi, bir ellipsdəki hər nöqtə eyni iki _məsafəyə_ bərabər _məsafələrin cəminə_ malikdir. 
 
- İki sabit nöqtəyə bağlanmış uzun bir siminiz varsa, iplərin maksimum çatışmazlığını izləyərək mükəmməl bir elips çəkə bilərsiniz: 
+İki sabit nöqtəyə bağlanmış uzun bir siminiz varsa, iplərin maksimum çatışmazlığını izləyərək mükəmməl bir elips çəkə bilərsiniz: 
 
 {.todo} Tezliklə: Ellipses interaktiv rəsm 
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
 > goals: v0 v1 v2 v3
 
- Bir ellips çəkə biləcəyinizin bir çox digər fiziki təsvirləri var: 
+Bir ellips çəkə biləcəyinizin bir çox digər fiziki təsvirləri var: 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -1707,9 +1554,9 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 
 ::: column.grow
 
- Bu kursun əvvəlindən xatırlaya bilərsiniz ki, qədim yunan astronomları Yerin kainatın mərkəzində olduğuna və günəş, ay və planetlərin Yer kürəsində dairəvi orbitlərdə hərəkət etdiyinə inandılar. 
+Bu kursun əvvəlindən xatırlaya bilərsiniz ki, qədim yunan astronomları Yerin kainatın mərkəzində olduğuna və günəş, ay və planetlərin Yer kürəsində dairəvi orbitlərdə hərəkət etdiyinə inandılar. 
 
- Təəssüf ki, göyün astronomik müşahidəsi bunu tam dəstəkləmədi. Məsələn, günəş ilin bəzi hissələrində daha böyük, digərləri ərzində daha kiçik görünürdü. Bir dairədə, hər nöqtə [[eyni]] olmalıdır [[| artan |]] mərkəzindən [[azalma]] məsafəsi. 
+Təəssüf ki, göyün astronomik müşahidəsi bunu tam dəstəkləmədi. Məsələn, günəş ilin bəzi hissələrində daha böyük, digərləri ərzində daha kiçik görünürdü. Bir dairədə, hər nöqtə [[eyni]] olmalıdır [[| artan |]] mərkəzindən [[azalma]] məsafəsi. 
 
 ::: column(width=330)
 
@@ -1723,7 +1570,7 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 > id: epicycles
 > goals: play
 
- Bunu düzəltmək üçün astronomlar Günəş sisteminin modellərinə __Episiklləri__ əlavə etdilər: planetlər eyni zamanda daha kiçik bir dairədə fırlanarkən Yer ətrafında geniş bir dairə üzərində hərəkət edirlər. Çox mürəkkəb olsa da, bu, 1000 ildən çox müddətdə kainatın ən çox qəbul edilmiş modeli idi: 
+Bunu düzəltmək üçün astronomlar Günəş sisteminin modellərinə __Episiklləri__ əlavə etdilər: planetlər eyni zamanda daha kiçik bir dairədə fırlanarkən Yer ətrafında geniş bir dairə üzərində hərəkət edirlər. Çox mürəkkəb olsa da, bu, 1000 ildən çox müddətdə kainatın ən çox qəbul edilmiş modeli idi: 
 
 ::: column(width=320)
 
@@ -1752,9 +1599,9 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 
 ::: column.grow
 
- Zamanla insanlar Yerin Günəşi ( __Heliocentric model__ ) orbit edən bir çox planetdən biri olduğunu başa düşdülər, ancaq astronom [Yohannes Kepler](bio:kepler) planetlərin əslində _elliptik orbitlərdə_ hərəkət etdiyini kəşf etdi. 
+Zamanla insanlar Yerin Günəşi ( __Heliocentric model__ ) orbit edən bir çox planetdən biri olduğunu başa düşdülər, ancaq astronom [Yohannes Kepler](bio:kepler) planetlərin əslində _elliptik orbitlərdə_ hərəkət etdiyini kəşf etdi. 
 
- Günəş bu ellipslərin iki mərkəz nöqtəsindən birindədir. Planetlər günəşə yaxınlaşdıqca sürətlənir və uzaqlaşdıqca yavaşlayır. 
+Günəş bu ellipslərin iki mərkəz nöqtəsindən birindədir. Planetlər günəşə yaxınlaşdıqca sürətlənir və uzaqlaşdıqca yavaşlayır. 
 
 ::: column(width=320)
 
@@ -1773,13 +1620,12 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 > id: newton
 > goals: apple
 
- Bir neçə onillikdən sonra [İsaak Nyuton](bio:newton) yeni hazırlanmış [__cazibə__](gloss:gravity) qanunlarından istifadə edərək Keplerin müşahidələrini sübut edə bildi. Nyuton kainatda hər iki kütlə arasında bir qüvvənin - iki maqnit arasındakı cazibə bənzər bir qüvvənin olduğunu başa düşdü. 
+Bir neçə onillikdən sonra [İsaak Nyuton](bio:newton) yeni hazırlanmış [__cazibə__](gloss:gravity) qanunlarından istifadə edərək Keplerin müşahidələrini sübut edə bildi. Nyuton kainatda hər iki kütlə arasında bir qüvvənin - iki maqnit arasındakı cazibə bənzər bir qüvvənin olduğunu başa düşdü. 
 
- Ağırlıq hər şeyin yerə düşməsinə səbəb olur və cazibə qüvvəsi də planetlərin günəş ətrafında hərəkət etməsinə səbəb olur. Yalnız planetlərin hərəkət etdiyi böyük sürət, birbaşa günəşə düşməsini maneə törədir. 
+Ağırlıq hər şeyin yerə düşməsinə səbəb olur və cazibə qüvvəsi də planetlərin günəş ətrafında hərəkət etməsinə səbəb olur. Yalnız planetlərin hərəkət etdiyi böyük sürət, birbaşa günəşə düşməsini maneə törədir. 
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)
@@ -1789,8 +1635,8 @@ Bir silindr, konus və sferanın həcminə görə olan tənlikləri müqayisə e
 
 ::: column.grow
 
- Newton qanunlarından istifadə edərək cazibə qüvvəsi altında hərəkət edərkən cisimlərin çəkdiyi yolu əldə edə bilərsiniz. Məlum olub ki, planetlər ellips üzərində hərəkət edir, lakin kometalar kimi digər cisimlər [parabolik](gloss:parabola) və ya [hiperbolik](gloss:hyperbola) yollarla səyahət edə bilər: ətrafa dönmədən və kainata atılmadan günəşə yaxın uçurlar, heç geri qayıtmayacaqlar. 
+Newton qanunlarından istifadə edərək cazibə qüvvəsi altında hərəkət edərkən cisimlərin çəkdiyi yolu əldə edə bilərsiniz. Məlum olub ki, planetlər ellips üzərində hərəkət edir, lakin kometalar kimi digər cisimlər [parabolik](gloss:parabola) və ya [hiperbolik](gloss:hyperbola) yollarla səyahət edə bilər: ətrafa dönmədən və kainata atılmadan günəşə yaxın uçurlar, heç geri qayıtmayacaqlar. 
 
- Rəvayətə görə, düşən bir alma Nyutonu cazibə haqqında düşünməyə ruhlandırdı. O, bütün dövrlərin ən nüfuzlu elm adamlarından biri idi və onun fikirləri təxminən 300 ildir - Albert Eynşteyn nisbiliyi kəşf edənədək dünyanı dərk etməyimizi formalaşdırdı. 
+Rəvayətə görə, düşən bir alma Nyutonu cazibə haqqında düşünməyə ruhlandırdı. O, bütün dövrlərin ən nüfuzlu elm adamlarından biri idi və onun fikirləri təxminən 300 ildir - Albert Eynşteyn nisbiliyi kəşf edənədək dünyanı dərk etməyimizi formalaşdırdı. 
 
 :::

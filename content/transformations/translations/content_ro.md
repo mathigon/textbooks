@@ -437,7 +437,6 @@ sau în sens invers acelor de ceasornic.
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
-
 ::: column.grow
 Este mult mai dificil să desenăm rotații care nu sunt exact la 90° sau 180°. Hai să
 încercăm să rotim această formă cu ${10*ang}{ang|6|-18,18,1}° în jurul [centrului de rotație](target:rot).
@@ -784,9 +783,6 @@ Acum completează aceste forme astfel încât să aibă simetrie rotațională:
 
 > id: groups
 > section: symmetry-groups
-
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
 
 Unele forme au mai mult de o axă de simetrie - hai să aruncăm o privire 
 la [pătrat](gloss:square) ca exemplu simplu.
@@ -1271,20 +1267,6 @@ imaginea este [[mai mare|mai mică]] decât originalul.
 
 {.todo} COMING SOON – Mai multe despre Omotetii
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## Asemănare
@@ -1352,9 +1334,6 @@ Dacă factorul de scalare este ${k}{k|1.5|0.5,2,0.1}, atunci
 Putem rearanja aceste ecuații și elimina în întregime factorul de scalare:
 
 {.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
 
 Putem folosi aceasta pentru a rezolva probleme din viața reală ce implică poligoane 
 asemenea - de exemplu la găsirea lungimii laturilor lipsă atunci când se cunosc alte laturi.

@@ -710,7 +710,7 @@ Completa ora queste forme, in modo che abbiano una simmetria rotazionale:
 > id: groups
 > section: symmetry-groups
 
- Alcune forme hanno più di una simmetria - diamo un'occhiata al [square](gloss:square) come semplice esempio.
+Alcune forme hanno più di una simmetria - diamo un'occhiata al [square](gloss:square) come semplice esempio.
 
 ::: column(width=400 parent="padded-thin")
 

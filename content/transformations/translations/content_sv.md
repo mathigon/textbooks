@@ -5,7 +5,7 @@
 > id: intro
 > section: introduction
 
- Många geometriska begrepp som [linjer](gloss:line) eller [polygoner](gloss:polygon) "uppfanns" av matematiker. Symmetri, å andra sidan, finns överallt runt omkring oss. Nästan alla växter, djur och till och med vi människor är symmetriska. 
+Många geometriska begrepp som [linjer](gloss:line) eller [polygoner](gloss:polygon) "uppfanns" av matematiker. Symmetri, å andra sidan, finns överallt runt omkring oss. Nästan alla växter, djur och till och med vi människor är symmetriska. 
 
 ::: column(width=200)
 
@@ -21,7 +21,7 @@
 
 :::
 
- Med tiden har vi imiterat naturens symmetri inom konst, arkitektur, teknik och design. Symmetriska former och mönster verkar bara se _vackrare ut_ än icke-symmetriska. 
+Med tiden har vi imiterat naturens symmetri inom konst, arkitektur, teknik och design. Symmetriska former och mönster verkar bara se _vackrare ut_ än icke-symmetriska. 
 
 ::: column(width=200)
 
@@ -37,15 +37,15 @@
 
 :::
 
- Men symmetri är mycket viktigare än att bara vara _vacker_ . Det ligger i grunden för vårt universum och kan till och med förklara fysikens mest grundläggande lagar. 
+Men symmetri är mycket viktigare än att bara vara _vacker_ . Det ligger i grunden för vårt universum och kan till och med förklara fysikens mest grundläggande lagar. 
 
- _{button.next-step} Fortsätta_ 
+_{button.next-step} Fortsätta_ 
 
 ---
 > id: transformations
 > goals: t1 t2 t3
 
- Medan symmetri är ett mycket intuitivt koncept, är det svårare att beskriva det matematiskt än du kanske tror. Först måste vi lära oss om [__transformationer__](gloss:transformation) , som är sätt att konvertera en geometrisk figur till en annan. Här är några exempel: 
+Medan symmetri är ett mycket intuitivt koncept, är det svårare att beskriva det matematiskt än du kanske tror. Först måste vi lära oss om [__transformationer__](gloss:transformation) , som är sätt att konvertera en geometrisk figur till en annan. Här är några exempel: 
 
 ::: column.r(width=200 parent="padded-thin")
 
@@ -70,7 +70,7 @@
 ---
 > id: transformations-1
 
- Resultatet av en omvandling kallas [__bilden__](gloss:transformation-image) . Vi betecknar ofta bilden av en form `A` som `A'` , uttalas "A prime". Det finns många olika typer av transformationer, som vi kommer att utforska mer detaljerat under hela denna kurs. 
+Resultatet av en omvandling kallas [__bilden__](gloss:transformation-image) . Vi betecknar ofta bilden av en form `A` som `A'` , uttalas "A prime". Det finns många olika typer av transformationer, som vi kommer att utforska mer detaljerat under hela denna kurs. 
 
 ---
 
@@ -79,9 +79,9 @@
 > id: rigid
 > section: rigid
 
- En [__styv transformation__](gloss:rigid-transformation) är en speciell typ av transformation som inte förändrar storleken eller formen på en figur. Vi kan föreställa oss att det är gjord av ett fast material som trä eller metall: vi kan flytta det, vända det eller vända det, men vi kan inte sträcka, böja eller på annat sätt deformera det. 
+En [__styv transformation__](gloss:rigid-transformation) är en speciell typ av transformation som inte förändrar storleken eller formen på en figur. Vi kan föreställa oss att det är gjord av ett fast material som trä eller metall: vi kan flytta det, vända det eller vända det, men vi kan inte sträcka, böja eller på annat sätt deformera det. 
 
- Vilka av dessa fem transformationer är styva? 
+Vilka av dessa fem transformationer är styva? 
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -94,7 +94,7 @@
 > id: rigid-1
 > goals: t1 t2 t3
 
- Det visar sig att det bara finns tre olika typer av styva transformationer: 
+Det visar sig att det bara finns tre olika typer av styva transformationer: 
 
 ::: column.r(width=200)
 
@@ -125,18 +125,18 @@
 ---
 > id: rigid-2
 
- Vi kan också kombinera flera typer av transformation för att skapa mer komplexa - till exempel en översättning följt av en rotation. 
+Vi kan också kombinera flera typer av transformation för att skapa mer komplexa - till exempel en översättning följt av en rotation. 
 
- Men låt oss först titta på var och en av dessa typer av transformationer mer detaljerat. 
+Men låt oss först titta på var och en av dessa typer av transformationer mer detaljerat. 
 
 ---
 > id: translations
 
 ### översättningar 
 
- En [__översättning__](gloss:translation) är en transformation som förflyttar varje punkt i en figur med samma avstånd i samma riktning. 
+En [__översättning__](gloss:translation) är en transformation som förflyttar varje punkt i en figur med samma avstånd i samma riktning. 
 
- I koordinatplanet kan vi specificera en översättning av hur långt formen flyttas längs _x_ -ax och _y_ -ax. Till exempel förflyttar en transformation med (3, 5) en form med 3 längs _x_ -axen och med 5 längs _y_ -axeln. 
+I koordinatplanet kan vi specificera en översättning av hur långt formen flyttas längs _x_ -ax och _y_ -ax. Till exempel förflyttar en transformation med (3, 5) en form med 3 längs _x_ -axen och med 5 längs _y_ -axeln. 
 
 ::: column(width=220)
 
@@ -174,7 +174,7 @@
 > id: translations-1
 > goals: drag-0 drag-1 drag-2
 
- Nu är det din tur - översätt följande former som visas: 
+Nu är det din tur - översätt följande former som visas: 
 
 ::: column(width=220)
 
@@ -220,9 +220,9 @@
 
 ### Reflections 
 
- En [__reflektion__](gloss:reflection) är en transformation som "vänder" eller "speglar" en form över en linje. Denna linje kallas __reflektionslinjen__ . 
+En [__reflektion__](gloss:reflection) är en transformation som "vänder" eller "speglar" en form över en linje. Denna linje kallas __reflektionslinjen__ . 
 
- Rita reflektionslinjen i vart och ett av dessa exempel: 
+Rita reflektionslinjen i vart och ett av dessa exempel: 
 
 ::: column(width=220)
 
@@ -251,7 +251,7 @@
 > id: reflections-1
 > goals: r0 r1 r2
 
- Nu är det din tur - rita reflektionen av var och en av dessa former: 
+Nu är det din tur - rita reflektionen av var och en av dessa former: 
 
 ::: column(width=220)
 
@@ -279,12 +279,12 @@
 ---
 > id: reflections-2
 
- Lägg märke till att om en punkt ligger på reflektionslinjen, [[rör sig den inte | roterar | vänder över]] när det reflekteras: _{span.reveal(when="blank-0")} dess bild är samma punkt som originalet._ 
+Lägg märke till att om en punkt ligger på reflektionslinjen, [[rör sig den inte | roterar | vänder över]] när det reflekteras: _{span.reveal(when="blank-0")} dess bild är samma punkt som originalet._ 
 
 ---
 > id: reflections-3
 
- I alla exemplen ovan var reflektionslinjen horisontell, vertikal eller i 45° vinkel - vilket gjorde det enkelt att rita reflektionerna. Om så inte är fallet kräver konstruktionen lite mer arbete: 
+I alla exemplen ovan var reflektionslinjen horisontell, vertikal eller i 45° vinkel - vilket gjorde det enkelt att rita reflektionerna. Om så inte är fallet kräver konstruktionen lite mer arbete: 
 
 ::: column(width=300)
 
@@ -342,9 +342,9 @@
 
 ### rotationer 
 
- En [__rotation__](gloss:rotation) är en transformation som "vänder" en form med en viss vinkel runt en fast punkt. Den punkten kallas [__rotationscentrum__](gloss:center-of-rotation) . Rotationer kan vara medurs eller moturs. 
+En [__rotation__](gloss:rotation) är en transformation som "vänder" en form med en viss vinkel runt en fast punkt. Den punkten kallas [__rotationscentrum__](gloss:center-of-rotation) . Rotationer kan vara medurs eller moturs. 
 
- Försök att rotera formerna nedanför den röda rotationscentrum: 
+Försök att rotera formerna nedanför den röda rotationscentrum: 
 
 ::: column(width=220)
 
@@ -418,7 +418,7 @@
 
 ::: column.grow
 
- Det är svårare att dra rotationer som inte är exakt 90° eller 180°. Låt oss försöka rotera denna form genom ${10*ang}{ang|6|-18,18,1}° runt [rotationscentrum](target:rot) . 
+Det är svårare att dra rotationer som inte är exakt 90° eller 180°. Låt oss försöka rotera denna form genom ${10*ang}{ang|6|-18,18,1}° runt [rotationscentrum](target:rot) . 
 
 {.r} Liksom för reflektioner måste vi rotera varje punkt i en form individuellt. _{button.next-step} Fortsätta_ 
 
@@ -437,7 +437,7 @@
 ---
 > id: composition-1
 
- Transformationer är ett viktigt begrepp i många delar av matematiken, inte bara geometri. Du kan till exempel transformera [_funktioner_](gloss:function) genom att flytta eller rotera deras [diagram](gloss:function-graph) . Du kan också använda transformationer för att avgöra om två former är [kongruenta](gloss:congruent) . 
+Transformationer är ett viktigt begrepp i många delar av matematiken, inte bara geometri. Du kan till exempel transformera [_funktioner_](gloss:function) genom att flytta eller rotera deras [diagram](gloss:function-graph) . Du kan också använda transformationer för att avgöra om två former är [kongruenta](gloss:congruent) . 
 
 ---
 
@@ -446,31 +446,31 @@
 > section: congruence
 > sectionStatus: dev
 
- ATT GÖRA 
+ATT GÖRA 
 
 ---
 
 ### Transformationers sammansättning 
 
- Naturligtvis kan vi kombinera flera översättningar, reflektioner och rotationer för att skapa mer komplexa transformationer. 
+Naturligtvis kan vi kombinera flera översättningar, reflektioner och rotationer för att skapa mer komplexa transformationer. 
 
 {.todo} TODO Exempel 
 
- Men det visar sig, det spelar ingen roll hur många olika transformationer du kombinerar: du kan alltid hitta en annan transformation som gör samma sak på en gång! 
+Men det visar sig, det spelar ingen roll hur många olika transformationer du kombinerar: du kan alltid hitta en annan transformation som gör samma sak på en gång! 
 
 {.todo} TODO Kalkylator för transformationssammansättning 
 
- Att kombinera två reflektioner är särskilt intressant. Det finns två olika fall som vi måste överväga: 
+Att kombinera två reflektioner är särskilt intressant. Det finns två olika fall som vi måste överväga: 
 
 ::: column.grow
 
- Om de två reflektionsraderna är parallella är resultatet en enda översättning. Riktningen för översättningen är vinkelrätt mot reflektionslinjerna och avståndet är dubbelt avståndet mellan reflektionslinjerna. 
+Om de två reflektionsraderna är parallella är resultatet en enda översättning. Riktningen för översättningen är vinkelrätt mot reflektionslinjerna och avståndet är dubbelt avståndet mellan reflektionslinjerna. 
 
 {.todo} TODO-animering 
 
 ::: column.grow
 
- Om de två reflektionsraderna korsar var resultatet en enda rotation. Rotationscentrumet är skärningspunkten mellan reflektionslinjerna och vinkeln är dubbelt vinkeln mellan reflektionslinjerna. 
+Om de två reflektionsraderna korsar var resultatet en enda rotation. Rotationscentrumet är skärningspunkten mellan reflektionslinjerna och vinkeln är dubbelt vinkeln mellan reflektionslinjerna. 
 
 {.todo} TODO-animering 
 
@@ -484,7 +484,7 @@
 > goals: play-0 play-1
 > section: symmetry
 
- [__Symmetri__](gloss:symmetry) finns överallt runt omkring oss och ett intuitivt koncept: olika delar av ett objekt ser _likadant ut_ på något sätt. Men med transformationer kan vi ge en mycket mer exakt, matematisk definition av vad symmetri _egentligen_ betyder: 
+[__Symmetri__](gloss:symmetry) finns överallt runt omkring oss och ett intuitivt koncept: olika delar av ett objekt ser _likadant ut_ på något sätt. Men med transformationer kan vi ge en mycket mer exakt, matematisk definition av vad symmetri _egentligen_ betyder: 
 
 {.definition} Ett objekt är _symmetriskt_ om det ser lika ut, även efter tillämpning av en viss transformation. 
 
@@ -513,13 +513,13 @@
 
 ### Reflektionssymmetri 
 
- En form har [__reflektionssymmetri__](gloss:reflectional-symmetry) om den ser densamma ut efter [__reflektion__](gloss:reflectional-symmetry) . Reflektionslinjen kallas [__symmetriaxeln__](gloss:axis-of-symmetry) , och den delar formen i två [[kongruenta | likvärdig | liknande]] halvor. Vissa figurer kan också ha mer än en symmetriaxel. 
+En form har [__reflektionssymmetri__](gloss:reflectional-symmetry) om den ser densamma ut efter [__reflektion__](gloss:reflectional-symmetry) . Reflektionslinjen kallas [__symmetriaxeln__](gloss:axis-of-symmetry) , och den delar formen i två [[kongruenta | likvärdig | liknande]] halvor. Vissa figurer kan också ha mer än en symmetriaxel. 
 
 ---
 > id: reflectional-symmetry-1
 > goals: r0 r1 r2 r3 r4 r5
 
- Rita alla symmetriaxlar i dessa sex bilder och former: 
+Rita alla symmetriaxlar i dessa sex bilder och former: 
 
 ::: column(width=220)
 
@@ -576,7 +576,7 @@
 ---
 > id: alphabet
 
- Många bokstäver i alfabetet har reflektionssymmetri. Välj alla som gör: 
+Många bokstäver i alfabetet har reflektionssymmetri. Välj alla som gör: 
 
     x-picker.letters
       - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
@@ -590,7 +590,7 @@
 > id: reflectional-symmetry-2
 > goals: r0 r1 r2
 
- Här är några fler former. Slutför dem så att de har reflektionssymmetri: 
+Här är några fler former. Slutför dem så att de har reflektionssymmetri: 
 
 ::: column(width=220)
 
@@ -623,9 +623,9 @@
 > id: palindromes
 > goals: p0 p1 p2
 
- Former, bokstäver och bilder kan ha reflektionssymmetri, men så kan hela siffror, ord och meningar! 
+Former, bokstäver och bilder kan ha reflektionssymmetri, men så kan hela siffror, ord och meningar! 
 
- Till exempel "25352" och "ANNA" läser båda samma från bakåt till framsidan. Siffror eller ord som detta kallas [__Palindromes__](gloss:palindrome) . Kan du tänka på några andra palindromer? 
+Till exempel "25352" och "ANNA" läser båda samma från bakåt till framsidan. Siffror eller ord som detta kallas [__Palindromes__](gloss:palindrome) . Kan du tänka på några andra palindromer? 
 
     form.palindromes.text-center.form-field
       input(type="text")
@@ -638,7 +638,7 @@
 ---
 > id: palindromes-1
 
- Om vi ignorerar mellanslag och skiljetecken, har de korta meningarna nedan också reflektionssymmetri. Kan du komma med dina egna? 
+Om vi ignorerar mellanslag och skiljetecken, har de korta meningarna nedan också reflektionssymmetri. Kan du komma med dina egna? 
 
 {.text-center} Aldrig udda eller jämnt.  
 En [[mutter]] för en burk tonfisk.  
@@ -653,9 +653,9 @@ Yo, banan [[boy!]]
 
 ::: column.grow
 
- En form har [__rotationssymmetri__](gloss:rotational-symmetry) om den ser densamma ut efter att ha roterats (med mindre än 360°). [Rotationscentrum](gloss:center-of-rotation) är vanligtvis bara mitten av formen. 
+En form har [__rotationssymmetri__](gloss:rotational-symmetry) om den ser densamma ut efter att ha roterats (med mindre än 360°). [Rotationscentrum](gloss:center-of-rotation) är vanligtvis bara mitten av formen. 
 
- [__Ordningen på symmetri__](gloss:order-of-symmetry) är antalet distinkta orienteringar där formen ser densamma ut. Du kan också tänka på det som _antalet gånger vi kan rotera formen_ innan vi kommer tillbaka till start. Till exempel har detta snöflinga ordning [[6]] . 
+[__Ordningen på symmetri__](gloss:order-of-symmetry) är antalet distinkta orienteringar där formen ser densamma ut. Du kan också tänka på det som _antalet gånger vi kan rotera formen_ innan vi kommer tillbaka till start. Till exempel har detta snöflinga ordning [[6]] . 
 
 {.reveal(when="blank-0")} Vinkeln för varje rotation är `"360°"/"order"` . I snöflingan är detta `"360°"/6 = input(60)°` . 
 
@@ -665,12 +665,10 @@ Yo, banan [[boy!]]
 
 :::
 
-    // Maybe have another alphabeth to select all letters with rotational symmetry?
-
 ---
 > id: rotational-symmetry-1
 
- Hitta ordningen och rotationsvinkeln för var och en av dessa former: 
+Hitta ordningen och rotationsvinkeln för var och en av dessa former: 
 
 ::: column(width=220)
 
@@ -696,7 +694,7 @@ Yo, banan [[boy!]]
 > id: rotational-symmetry-2
 > goals: r0 r1 r2
 
- Fyll nu i dessa former så att de har rotationssymmetri: 
+Fyll nu i dessa former så att de har rotationssymmetri: 
 
 ::: column(width=220)
 
@@ -742,9 +740,6 @@ Yo, banan [[boy!]]
 > id: groups
 > section: symmetry-groups
 
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
-
  Vissa former har mer än en symmetri - låt oss titta på [torget](gloss:square) som ett enkelt exempel. 
 
 ::: column(width=400 parent="padded-thin")
@@ -761,7 +756,7 @@ Yo, banan [[boy!]]
 
 ::: column.grow(width=200)
 
- Du har redan visat ovan att en fyrkant har [[fyra]] reflektionsaxlar. 
+Du har redan visat ovan att en fyrkant har [[fyra]] reflektionsaxlar. 
 
 {.reveal(when="blank-0")} Den har också rotationssymmetri med [[90]]°, [[180]]° och [[270]]°. 
 
@@ -775,7 +770,7 @@ Yo, banan [[boy!]]
 > id: add-symmetries
 > goals: sum-0 sum-1
 
- Nu kan vi faktiskt börja göra lite aritmetik med dessa symmetrier. Vi kan till exempel _lägga till_ två symmetrier för att få nya: 
+Nu kan vi faktiskt börja göra lite aritmetik med dessa symmetrier. Vi kan till exempel _lägga till_ två symmetrier för att få nya: 
 
 ::: column(width=260)
 
@@ -803,7 +798,7 @@ Yo, banan [[boy!]]
 > title: Symmetry Calculator
 > goals: calculate
 
- När du lägger till två symmetrier på en kvadrat får du en ny. Här är en "symmetriskräknare" där du kan prova själv: 
+När du lägger till två symmetrier på en kvadrat får du en ny. Här är en "symmetriskräknare" där du kan prova själv: 
 
     .calculator
       .display
@@ -822,14 +817,14 @@ Yo, banan [[boy!]]
 ---
 > id: symmetry-arithmetic
 
- Spendera lite tid med att leka med symmeträknaren och försök hitta mönster. Kan du slutföra dessa observationer? 
+Spendera lite tid med att leka med symmeträknaren och försök hitta mönster. Kan du slutföra dessa observationer? 
 
- * Att lägga till två rotationer ger alltid [[en rotation | en reflektion]] (eller identiteten). * Att lägga till två reflektioner ger alltid [[en rotation | en reflektion]] (eller identiteten). * Att lägga till samma två symmetrier i motsatt ordning [[ger ibland en annan | ger alltid en annan | ger alltid samma]] resultat. * Att lägga till identiteten [[gör ingenting | ger en reflektion | ger motsatsen]] . 
+* Att lägga till två rotationer ger alltid [[en rotation | en reflektion]] (eller identiteten). * Att lägga till två reflektioner ger alltid [[en rotation | en reflektion]] (eller identiteten). * Att lägga till samma två symmetrier i motsatt ordning [[ger ibland en annan | ger alltid en annan | ger alltid samma]] resultat. * Att lägga till identiteten [[gör ingenting | ger en reflektion | ger motsatsen]] . 
 
 ---
 > id: group-axioms
 
- Du kanske redan har insett att lägga till __{.orange} symmetrier__ liknar faktiskt mycket att lägga till __{.green} heltal__ : 
+Du kanske redan har insett att lägga till __{.orange} symmetrier__ liknar faktiskt mycket att lägga till __{.green} heltal__ : 
 
     ol.proof
     
@@ -894,17 +889,17 @@ Yo, banan [[boy!]]
 ---
 > id: groups-1
 
- I matematik kallas varje samling som har dessa egenskaper en [__grupp__](gloss:group) . Vissa grupper (som __{.orange} symmetrier__ av en kvadrat) har endast ett begränsat antal element. Andra (som __{.green} heltal__ ) är oändliga. 
+I matematik kallas varje samling som har dessa egenskaper en [__grupp__](gloss:group) . Vissa grupper (som __{.orange} symmetrier__ av en kvadrat) har endast ett begränsat antal element. Andra (som __{.green} heltal__ ) är oändliga. 
 
- I det här exemplet började vi med de åtta symmetrierna på torget. Faktum är att varje geometrisk form har sin egen __symmetergrupp__ . De har alla olika element, men de uppfyller alltid de tre reglerna ovan. 
+I det här exemplet började vi med de åtta symmetrierna på torget. Faktum är att varje geometrisk form har sin egen __symmetergrupp__ . De har alla olika element, men de uppfyller alltid de tre reglerna ovan. 
 
- Grupper visas överallt i matematik. Elementen kan vara siffror eller symmetrier, men också polynomier, permutationer, matriser, funktioner ... _allt_ som följer de tre reglerna. Den centrala idén med _gruppteori_ är att vi inte är intresserade av de enskilda elementen, bara i _hur de interagerar med varandra_ . 
+Grupper visas överallt i matematik. Elementen kan vara siffror eller symmetrier, men också polynomier, permutationer, matriser, funktioner ... _allt_ som följer de tre reglerna. Den centrala idén med _gruppteori_ är att vi inte är intresserade av de enskilda elementen, bara i _hur de interagerar med varandra_ . 
 
 ::: column.grow
 
- Exempelvis kan symmeturgrupperna för olika molekyler hjälpa forskare att förutsäga och förklara egenskaperna hos motsvarande material. 
+Exempelvis kan symmeturgrupperna för olika molekyler hjälpa forskare att förutsäga och förklara egenskaperna hos motsvarande material. 
 
- Grupper kan också användas för att analysera den vinnande strategin i brädspel, uppförandet av virus i medicin, olika harmonier i musik och många andra begrepp ... 
+Grupper kan också användas för att analysera den vinnande strategin i brädspel, uppförandet av virus i medicin, olika harmonier i musik och många andra begrepp ... 
 
 ::: column(width=340)
 
@@ -921,13 +916,13 @@ Yo, banan [[boy!]]
 
 > id: wallpaper-groups
 
- I de [föregående avsnitten](/course/transformations/symmetry) såg vi två olika slags symmetri motsvarande två olika transformationer: rotationer och reflektioner. Men det finns också en symmetri för den tredje typen av styv transformation: [[översättningar | snurrar | vänder]] . 
+I de [föregående avsnitten](/course/transformations/symmetry) såg vi två olika slags symmetri motsvarande två olika transformationer: rotationer och reflektioner. Men det finns också en symmetri för den tredje typen av styv transformation: [[översättningar | snurrar | vänder]] . 
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
- [__Translational symmetry__](gloss:translational-symmetry) fungerar inte för isolerade föremål som blommor eller fjärilar, men det gör för vanliga mönster som sträcker sig i alla riktningar: 
+[__Translational symmetry__](gloss:translational-symmetry) fungerar inte för isolerade föremål som blommor eller fjärilar, men det gör för vanliga mönster som sträcker sig i alla riktningar: 
 
 ::: column.grow
 
@@ -952,7 +947,7 @@ Yo, banan [[boy!]]
 ---
 > id: footsteps
 
- Förutom reflektions-, rotations- och translationssymmetri finns det till och med en fjärde typ: [__glidreflektioner__](gloss:glide-reflection) . Detta är en kombination av en reflektion och en översättning i samma riktning som reflektionsaxeln. 
+Förutom reflektions-, rotations- och translationssymmetri finns det till och med en fjärde typ: [__glidreflektioner__](gloss:glide-reflection) . Detta är en kombination av en reflektion och en översättning i samma riktning som reflektionsaxeln. 
 
     figure
       .footsteps
@@ -963,9 +958,9 @@ Yo, banan [[boy!]]
 ---
 > id: wallpaper-groups-2
 
- Ett mönster kan ha mer än en typ av symmetri. Och precis som för rutor kan vi hitta [symmetrigruppen](gloss:symmetry-group) i ett mönster, som innehåller alla dess olika symmetrier. 
+Ett mönster kan ha mer än en typ av symmetri. Och precis som för rutor kan vi hitta [symmetrigruppen](gloss:symmetry-group) i ett mönster, som innehåller alla dess olika symmetrier. 
 
- Dessa grupper berättar inte så mycket om hur mönstret _ser_ ut (t.ex. dess färger och former), bara hur det _upprepas_ . Flera olika mönster kan ha samma symmeturgrupp - så länge är ordnade och upprepade på samma sätt. 
+Dessa grupper berättar inte så mycket om hur mönstret _ser_ ut (t.ex. dess färger och former), bara hur det _upprepas_ . Flera olika mönster kan ha samma symmeturgrupp - så länge är ordnade och upprepade på samma sätt. 
 
 ::: column.grow
 
@@ -989,7 +984,7 @@ Yo, banan [[boy!]]
 > id: wallpaper-groups-3
 > goals: gallery
 
- Det visar sig att även om det finns oändligt många möjliga mönster har de alla en av bara 17 olika symmeturgrupper. Dessa kallas __tapetgrupper__ . Varje tapetgrupp definieras av en kombination av översättningar, rotationer, reflektioner och glidreflektioner. Kan du se [rotationscentra](gloss:center-of-rotation) och [reflektionsaxlarna](gloss:axis-of-symmetry) i dessa exempel? 
+Det visar sig att även om det finns oändligt många möjliga mönster har de alla en av bara 17 olika symmeturgrupper. Dessa kallas __tapetgrupper__ . Varje tapetgrupp definieras av en kombination av översättningar, rotationer, reflektioner och glidreflektioner. Kan du se [rotationscentra](gloss:center-of-rotation) och [reflektionsaxlarna](gloss:axis-of-symmetry) i dessa exempel? 
 
     x-gallery(slide-width="320")
       div
@@ -1066,7 +1061,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
- Tyvärr finns det ingen enkel anledning till att det finns _17_ av dessa grupper, och för att bevisa att det kräver mer avancerad matematik. Istället kan du prova att rita dina egna upprepade mönster för var och en av de 17 tapetgrupperna: 
+Tyvärr finns det ingen enkel anledning till att det finns _17_ av dessa grupper, och för att bevisa att det kräver mer avancerad matematik. Istället kan du prova att rita dina egna upprepade mönster för var och en av de 17 tapetgrupperna: 
 
     include ./components/wallpaper
     x-wallpaper
@@ -1082,9 +1077,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Tapetgrupperna handlade om platta, tvådimensionella mönster. Vi kan göra något liknande för tredimensionella mönster: dessa kallas kristallografiska grupper, och det finns 219 av dem! 
+Tapetgrupperna handlade om platta, tvådimensionella mönster. Vi kan göra något liknande för tredimensionella mönster: dessa kallas kristallografiska grupper, och det finns 219 av dem! 
 
- Förutom översättningar, reflektioner, rotationer och glidreflektioner inkluderar dessa grupper symmetrier som __glidplan__ och __skruvaxlar__ (tänk på rörelsen när du skruvar av en flaska). 
+Förutom översättningar, reflektioner, rotationer och glidreflektioner inkluderar dessa grupper symmetrier som __glidplan__ och __skruvaxlar__ (tänk på rörelsen när du skruvar av en flaska). 
 
 ::: column(width=300)
 
@@ -1102,15 +1097,15 @@ Perpendicular glide reflections, rotations of order 2, translations
 > sectionBackground: dark stars
 > section: physics
 
- Hittills var alla symmetrier vi tittade på _visuella_ i någon mening: synliga former, bilder eller mönster. I själva verket kan symmetri vara ett mycket bredare begrepp: _immunitet mot förändring_ . 
+Hittills var alla symmetrier vi tittade på _visuella_ i någon mening: synliga former, bilder eller mönster. I själva verket kan symmetri vara ett mycket bredare begrepp: _immunitet mot förändring_ . 
 
- Till exempel, om du gillar äppeljuice lika mycket som du gillar apelsinjuice, är din preferens "symmetrisk" under omvandlingen som byter äpplen och apelsiner. 
+Till exempel, om du gillar äppeljuice lika mycket som du gillar apelsinjuice, är din preferens "symmetrisk" under omvandlingen som byter äpplen och apelsiner. 
 
- 1915 observerade den tyska matematikern [Emmy Noether](bio:noether) att något liknande är sant för [naturlagarna](gloss:laws-of-nature) . 
+1915 observerade den tyska matematikern [Emmy Noether](bio:noether) att något liknande är sant för [naturlagarna](gloss:laws-of-nature) . 
 
 ::: column.grow
 
- Till exempel berättar vår erfarenhet att fysikens lagar är desamma överallt i universum. Det spelar ingen roll om du genomför ett experiment i London, eller i New York eller på Mars - fysikens lagar bör alltid vara desamma. På ett sätt har de [[translationell symmetri | reflektionssymmetri]] . 
+Till exempel berättar vår erfarenhet att fysikens lagar är desamma överallt i universum. Det spelar ingen roll om du genomför ett experiment i London, eller i New York eller på Mars - fysikens lagar bör alltid vara desamma. På ett sätt har de [[translationell symmetri | reflektionssymmetri]] . 
 
 {.reveal(when="blank-0")} På samma sätt borde det inte göra någon roll om vi utför ett experiment när vi vetter mot nord, söder eller öst eller väst: naturlagarna har [[rotationssymmetri | glidreflektionssymmetri]] . 
 
@@ -1125,9 +1120,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 ---
 > id: planets-1
 
- Dessa ”symmetrier” kanske till en början verkar ganska meningslösa, men de kan faktiskt berätta mycket om vårt universum. Emmy Noether lyckades bevisa att varje symmetri motsvarar en viss fysisk mängd som _bevaras_ . 
+Dessa ”symmetrier” kanske till en början verkar ganska meningslösa, men de kan faktiskt berätta mycket om vårt universum. Emmy Noether lyckades bevisa att varje symmetri motsvarar en viss fysisk mängd som _bevaras_ . 
 
- Tidsymmetri innebär till exempel att __energi__ måste bevaras i vårt universum: du kan konvertera energi från en typ till en annan (t.ex. ljus till elektricitet), men du kan aldrig skapa eller förstöra energi. Den totala mängden energi i universum kommer alltid att vara konstant. 
+Tidsymmetri innebär till exempel att __energi__ måste bevaras i vårt universum: du kan konvertera energi från en typ till en annan (t.ex. ljus till elektricitet), men du kan aldrig skapa eller förstöra energi. Den totala mängden energi i universum kommer alltid att vara konstant. 
 
     figure
       x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
@@ -1140,9 +1135,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Det visar sig att fysiker, bara genom att veta om symmetri, kan härleda de flesta naturlagar som styr vårt universum - utan att behöva göra något experiment eller observation. 
+Det visar sig att fysiker, bara genom att veta om symmetri, kan härleda de flesta naturlagar som styr vårt universum - utan att behöva göra något experiment eller observation. 
 
- Symmetri kan till och med förutsäga existensen av grundläggande partiklar. Ett exempel är den berömda __Higgs Boson__ : den förutsades på 1960-talet av teoretiska fysiker, men observerades inte i den verkliga världen förrän 2012. 
+Symmetri kan till och med förutsäga existensen av grundläggande partiklar. Ett exempel är den berömda __Higgs Boson__ : den förutsades på 1960-talet av teoretiska fysiker, men observerades inte i den verkliga världen förrän 2012. 
 
 :::
 
@@ -1153,16 +1148,16 @@ Perpendicular glide reflections, rotations of order 2, translations
 > id: dilations
 > section: dilations
 
- Hittills har vi bara tittat på [[styva | kongruent | visuella]] transformationer. _{span.reveal(when="blank-0")} Låt oss nu tänka på en som inte är det: en [__utvidgning__](gloss:dilation) ändrar formens storlek genom att göra den större eller mindre._ 
+Hittills har vi bara tittat på [[styva | kongruent | visuella]] transformationer. _{span.reveal(when="blank-0")} Låt oss nu tänka på en som inte är det: en [__utvidgning__](gloss:dilation) ändrar formens storlek genom att göra den större eller mindre._ 
 
 ---
 > id: dilations-1
 
 ::: column.grow
 
- Alla utvidgningar har ett [__centrum__](target:center) och en [__skalfaktor__](->.scale-target) . Mitten är referenspunkten för utvidgningen och skalfaktorn berättar hur mycket figuren sträcker sig eller krymper. 
+Alla utvidgningar har ett [__centrum__](target:center) och en [__skalfaktor__](->.scale-target) . Mitten är referenspunkten för utvidgningen och skalfaktorn berättar hur mycket figuren sträcker sig eller krymper. 
 
- Om [skalfaktorn](gloss:scale-factor) är mellan 0 och 1 är bilden [[mindre | större]] än originalet. Om skalfaktorn är större än 1 är bilden [[större | mindre]] än originalet. 
+Om [skalfaktorn](gloss:scale-factor) är mellan 0 och 1 är bilden [[mindre | större]] än originalet. Om skalfaktorn är större än 1 är bilden [[större | mindre]] än originalet. 
 
 ::: column(width=300)
 
@@ -1190,20 +1185,6 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 {.todo} Kommer snart - Mer om Dilations 
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## Likhet 
@@ -1214,9 +1195,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- För styva transformationer är bilden alltid [[kongruent | större | mindre än]] originalet - men det är [[inte längre | fortfarande]] sant för dilateringar. Istället säger vi att två former är [__lika__](gloss:similar) . De har samma totala form, men inte nödvändigtvis samma storlek. 
+För styva transformationer är bilden alltid [[kongruent | större | mindre än]] originalet - men det är [[inte längre | fortfarande]] sant för dilateringar. Istället säger vi att två former är [__lika__](gloss:similar) . De har samma totala form, men inte nödvändigtvis samma storlek. 
 
- Symbolen för likhet är `∼` (liknar symbolen för kongruens, som var `≅` ). I det här exemplet skulle vi skriva `A ∼ A'` . 
+Symbolen för likhet är `∼` (liknar symbolen för kongruens, som var `≅` ). I det här exemplet skulle vi skriva `A ∼ A'` . 
 
 ::: column(width=240)
 
@@ -1229,39 +1210,36 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ### Perspektivteckningar 
 
- Du kanske har lagt märke till att dessa dilatationer med anslutande strålar nästan ser ut som __perspektivritningar__ . Utvidgningens centrum kallas __försvinnande punkt__ , eftersom det ser ut så här är allt där "försvinner i fjärran". 
+Du kanske har lagt märke till att dessa dilatationer med anslutande strålar nästan ser ut som __perspektivritningar__ . Utvidgningens centrum kallas __försvinnande punkt__ , eftersom det ser ut så här är allt där "försvinner i fjärran". 
 
- Hitta försvinnande punkt i figuren nedan: 
+Hitta försvinnande punkt i figuren nedan: 
 
 {.todo} KOMMER GÅNG - Interaktiv 
 
- Nu kan du rita ett annat hus som matchar de befintliga? 
+Nu kan du rita ett annat hus som matchar de befintliga? 
 
 ---
 > id: similar-polygons
 
 ### Liknande polygoner 
 
- Likhet kan berätta mycket om former. Till exempel är [cirklar](gloss:circle) , [rutor](gloss:square) och [liksidiga trianglar](gloss:equilateral-triangle) [[alltid | ibland | aldrig]] liknande. De kan ha olika storlekar, men alltid samma allmänna form. 
+Likhet kan berätta mycket om former. Till exempel är [cirklar](gloss:circle) , [rutor](gloss:square) och [liksidiga trianglar](gloss:equilateral-triangle) [[alltid | ibland | aldrig]] liknande. De kan ha olika storlekar, men alltid samma allmänna form. 
 
 ::: column.grow
 
- De två fyrhjulingarna till höger är likadana. Vår första viktiga observation är att i liknande polygoner är alla matchande vinkelpar [kongruenta](gloss:congruent-angles) . Detta innebär att 
+De två fyrhjulingarna till höger är likadana. Vår första viktiga observation är att i liknande polygoner är alla matchande vinkelpar [kongruenta](gloss:congruent-angles) . Detta innebär att 
 
 {.text-center} [_{.m-red} ∡ABC_ ≅ _{.m-red} ∡A'B'C'_](target:a) _{.space}_ [_{.m-blue} ∡BCD_ ≅ _{.m-blue} ∡B'C'D'_](target:b)  
 [_{.m-green} ∡CDE_ ≅ _{.m-green} ∡C'D'E'_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ ≅ _{.m-yellow} ∡D'E'A'_](target:d) 
 
- Det andra viktiga faktum är att i liknande polygoner skalas alla sidor __proportionellt__ med skalfaktorn för motsvarande utvidgning. Om skalfaktorn är ${k}{k|1.5|0.5,2,0.1} då 
+Det andra viktiga faktum är att i liknande polygoner skalas alla sidor __proportionellt__ med skalfaktorn för motsvarande utvidgning. Om skalfaktorn är ${k}{k|1.5|0.5,2,0.1} då 
 
 {.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
 `|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
 
- Vi kan istället ordna om dessa ekvationer och eliminera skalfaktorn helt: 
+Vi kan istället ordna om dessa ekvationer och eliminera skalfaktorn helt: 
 
 {.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
 
  Vi kan använda detta för att lösa verkliga problem som involverar liknande polygoner - till exempel att hitta längden på saknade sidor, om vi känner till några av de andra sidorna. I följande avsnitt ser du några exempel. 
 
@@ -1288,26 +1266,26 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ### Liknande trianglar 
 
- Likhetskonceptet är särskilt kraftfullt med trianglar. Vi vet redan att motsvarande inre vinklar i liknande polygoner är lika. 
+Likhetskonceptet är särskilt kraftfullt med trianglar. Vi vet redan att motsvarande inre vinklar i liknande polygoner är lika. 
 
- För trianglar är det motsatta också sant: det betyder att om du har två trianglar med samma tre vinkelstorlekar, måste trianglarna vara lika. 
+För trianglar är det motsatta också sant: det betyder att om du har två trianglar med samma tre vinkelstorlekar, måste trianglarna vara lika. 
 
- Och det blir ännu bättre! Vi vet att de inre vinklarna i en triangel alltid lägger till [[180]]°. Detta betyder att om vi känner till två vinklar i en triangel, kan vi alltid räkna ut den tredje. 
+Och det blir ännu bättre! Vi vet att de inre vinklarna i en triangel alltid lägger till [[180]]°. Detta betyder att om vi känner till två vinklar i en triangel, kan vi alltid räkna ut den tredje. 
 
- För likhet innebär detta att vi också bara behöver kontrollera _två vinklar för_ att avgöra om trianglar är lika. Om två trianglar har två vinklar av samma storlek, måste den tredje vinkeln också vara densamma i båda. 
+För likhet innebär detta att vi också bara behöver kontrollera _två vinklar för_ att avgöra om trianglar är lika. Om två trianglar har två vinklar av samma storlek, måste den tredje vinkeln också vara densamma i båda. 
 
- Detta resultat kallas ibland [__AA-likhetsvillkor__](gloss:triangle-aa) för trianglar. (De två _som_ står för de två _vinklarna som_ vi jämför.) 
+Detta resultat kallas ibland [__AA-likhetsvillkor__](gloss:triangle-aa) för trianglar. (De två _som_ står för de två _vinklarna som_ vi jämför.) 
 
 ::: .theorem
 
- Om två vinklar i en triangel överensstämmer med två vinklar i en annan triangel är de två trianglarna lika. 
+Om två vinklar i en triangel överensstämmer med två vinklar i en annan triangel är de två trianglarna lika. 
 
 :::
 
 ---
 > id: similar-triangles-1
 
- Låt oss titta på några exempel där det är användbart: 
+Låt oss titta på några exempel där det är användbart: 
 
 ::: column(width=320)
 
@@ -1315,17 +1293,17 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Här kan du se bilden av en stor fyr. Tillsammans med en vän vill du mäta fyrens höjd, men tyvärr kan vi inte klättra upp till toppen. 
+Här kan du se bilden av en stor fyr. Tillsammans med en vän vill du mäta fyrens höjd, men tyvärr kan vi inte klättra upp till toppen. 
 
- Det visar sig att diagrammet, mycket väl doldt, innehåller två liknande trianglar: en bildas av fyren och dess skugga, och en bildas av din vän och hennes skugga. 
+Det visar sig att diagrammet, mycket väl doldt, innehåller två liknande trianglar: en bildas av fyren och dess skugga, och en bildas av din vän och hennes skugga. 
 
- Båda trianglarna har en rät vinkel i botten. Solstrålarna är parallella, vilket innebär att de andra två vinklarna i botten är motsvarande vinklar och också lika. Genom AA-villkoret för trianglar måste dessa två vara liknande. 
+Båda trianglarna har en rät vinkel i botten. Solstrålarna är parallella, vilket innebär att de andra två vinklarna i botten är motsvarande vinklar och också lika. Genom AA-villkoret för trianglar måste dessa två vara liknande. 
 
- Vi kan enkelt mäta längden på skuggorna, och vi känner också till din väns höjd. Nu kan vi använda proportionaliteten hos sidor i liknande trianglar för att hitta fyrens höjd: 
+Vi kan enkelt mäta längden på skuggorna, och vi känner också till din väns höjd. Nu kan vi använda proportionaliteten hos sidor i liknande trianglar för att hitta fyrens höjd: 
 
 {.todo} Kommer snart - Ekvation 
 
- Därför är fyren 1,5 meter lång. 
+Därför är fyren 1,5 meter lång. 
 
 :::
 
@@ -1338,19 +1316,19 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Vi kan använda samma teknik för att mäta avstånd på marken. Här vill vi hitta bredden på en stor flod. Det finns ett stort träd på ena sidan av floden, och jag har en pinne som är en meter lång. 
+Vi kan använda samma teknik för att mäta avstånd på marken. Här vill vi hitta bredden på en stor flod. Det finns ett stort träd på ena sidan av floden, och jag har en pinne som är en meter lång. 
 
- Försök att rita ytterligare två liknande trianglar i detta diagram. 
+Försök att rita ytterligare två liknande trianglar i detta diagram. 
 
- Du kan markera punkten längs floden, som ligger direkt på siktlinjen från slutet av pinnen till trädet. Då kan vi mäta avståndet till pinnen och till punkten mittemot trädet. 
+Du kan markera punkten längs floden, som ligger direkt på siktlinjen från slutet av pinnen till trädet. Då kan vi mäta avståndet till pinnen och till punkten mittemot trädet. 
 
- Återigen är dessa två trianglar liknande på grund av AA-tillståndet. De har båda en rätt vinkel och i par motsatta vinklar. 
+Återigen är dessa två trianglar liknande på grund av AA-tillståndet. De har båda en rätt vinkel och i par motsatta vinklar. 
 
- Enligt proportionalitetsregeln betyder detta det 
+Enligt proportionalitetsregeln betyder detta det 
 
 {.todo} Kommer snart - Ekvation 
 
- Därför är flodens bredd 45 meter. 
+Därför är flodens bredd 45 meter. 
 
 :::
 
@@ -1358,26 +1336,26 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ### Likhet med strålar 
 
- Teorem: Om en stråle halverar en vinkel på en triangel, delar den motsatta sidan i segment som är proportionella mot längden på de andra två sidorna. 
+Teorem: Om en stråle halverar en vinkel på en triangel, delar den motsatta sidan i segment som är proportionella mot längden på de andra två sidorna. 
 
- Vi kan utöka detta teorem till en situation utanför trianglar där vi har flera parallella linjer skära av transversaler. 
+Vi kan utöka detta teorem till en situation utanför trianglar där vi har flera parallella linjer skära av transversaler. 
 
- Teorem: Om tre eller fler parallella linjer skärs av två tvärgående delar de tvärgående proportionellt. 
+Teorem: Om tre eller fler parallella linjer skärs av två tvärgående delar de tvärgående proportionellt. 
 
- Tänk på ett midsegment av en triangel. Ett mellansegment är parallellt med en sida av en triangel och delar de andra två sidorna i kongruenta halvor. Mellansegmentet delar de två sidorna proportionellt. 
+Tänk på ett midsegment av en triangel. Ett mellansegment är parallellt med en sida av en triangel och delar de andra två sidorna i kongruenta halvor. Mellansegmentet delar de två sidorna proportionellt. 
 
- Triangelproportionalitetsteorem: Om en linje parallell med ena sidan av en triangel korsar de andra två sidorna, delar den dessa sidor proportionellt. 
+Triangelproportionalitetsteorem: Om en linje parallell med ena sidan av en triangel korsar de andra två sidorna, delar den dessa sidor proportionellt. 
 
- Triangel Proportionalitetsteorem Converse: Om en linje delar två sidor av en triangel proportionellt, är den parallell med den tredje sidan. 
+Triangel Proportionalitetsteorem Converse: Om en linje delar två sidor av en triangel proportionellt, är den parallell med den tredje sidan. 
 
 ---
 
 ### Själv likhet 
 
- Det finns några nyfikna matematiska former som liknar en mindre del _av sig själva_ . Ett exempel är __Sierpinksi-triangeln__ : hela triangeln liknar någon av de mindre trianglarna som den består av. Du kan zooma in och oändligt många mindre och mindre trianglar. 
+Det finns några nyfikna matematiska former som liknar en mindre del _av sig själva_ . Ett exempel är __Sierpinksi-triangeln__ : hela triangeln liknar någon av de mindre trianglarna som den består av. Du kan zooma in och oändligt många mindre och mindre trianglar. 
 
- Former med den här egenskapen kallas __Fractals__ . De har några överraskande och verkligen XXX egenskaper, som du kommer att lära dig mer om i framtiden. 
+Former med den här egenskapen kallas __Fractals__ . De har några överraskande och verkligen XXX egenskaper, som du kommer att lära dig mer om i framtiden. 
 
 ---
 
- Trianglar är inte bara användbara för att mäta avstånd. I nästa kurs kommer vi att lära oss mycket mer om trianglar och deras egenskaper.
+Trianglar är inte bara användbara för att mäta avstånd. I nästa kurs kommer vi att lära oss mycket mer om trianglar och deras egenskaper.

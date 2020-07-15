@@ -428,14 +428,12 @@ Om vi upprepar detta med större rutnät hittar vi att dimensionen av Storbritan
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Bergskedja i centrala Asien
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Ganges floddelta i Indien
@@ -448,14 +446,12 @@ Om vi upprepar detta med större rutnät hittar vi att dimensionen av Storbritan
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Blodkärl i näthinnan
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Grand Canyon i USA
@@ -470,16 +466,12 @@ Om vi upprepar detta med större rutnät hittar vi att dimensionen av Storbritan
 
 Alla dessa objekt kan verka helt slumpmässiga, men precis som fraktaler finns det ett underliggande mönster som avgör hur de bildas. Matematik kan hjälpa oss att förstå formerna bättre, och fraktaler har tillämpningar inom områden som medicin, biologi, geologi och meteorologi. [Fortsätt](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Datorgenererad fraktal terräng
@@ -522,22 +514,18 @@ Här är några exempel på golvbeläggningar från olika kyrkor i Rom:
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -955,14 +943,9 @@ När du flyttar värdet på [{.pill.red} c](target:c) runt Mandelbrot-uppsättni
 * {.reveal(when="blank-0")} Sekvenserna i den [stora lampan](target:bulb1) överst [[når en bana|converge|diverge]] _{span.reveal(when="blank-1")} som består av [[3]] poäng._
 * {.reveal(when="blank-2")} Sekvenser i [denna mindre glödlampa](target:bulb2) har banor med längden [[5]].
 
-
 :::
 
 {.reveal(when="blank-3")} Varje glödlampa har en bana i olika storlekar, med mindre glödlampor med fler och fler punkter i sina banor. Storleken på dessa banor är nära besläktade med __Logistic Map__, ett viktigt begrepp i [Chaos theory](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 
@@ -988,6 +971,4 @@ Bernoit Mandelbrot ägnade större delen av sitt liv åt studiet av fraktaler, l
 > sectionStatus: dev
 
 {.todo} kommer snart!
-
-
 

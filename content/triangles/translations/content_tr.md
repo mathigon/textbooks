@@ -102,7 +102,6 @@ Sanatçılar ve yazılım mühendisleri, bu üçgenleri gerçekçi bir şekilde 
 :::
 
     figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
 
 ---
 
@@ -685,10 +684,6 @@ Burada __{.m-red}6m__ uzunluğunda duvara yaslanmış bir merdiven görüyorsunu
 
 Merdiven, duvar ve yerin bir dik üçgen oluşturduğunu fark edelim. Pisagor Teoremi’ni kullanarak şunu elde ederiz:
 
-    //- Ideal syntax:
-    //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
-    //- |          `=> green(h^2)` | `= blank(35)`       |
-    //- |            `=> green(h)` | `= sqrt(35) = 5.92` |
     
     table.eqn-system
       tr
@@ -781,10 +776,6 @@ Büyük karenin bir kenarı `a + b` uzunluğunda ve alanı
 
 {.reveal(when="blank-3 blank-4")} Eğer tüm bu bilgileri kullanacak olursak, şuna ulaşırız
 
-    //- Ideal syntax:
-    //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
-    //- | `a^2 + 2ab + b^2` | `= 2ab + c^2`        |
-    //- |       `a^2 + b^2` | `= c^2`              |
 
     table.eqn-system.reveal(when="blank-3 blank-4")
       tr
@@ -1006,12 +997,6 @@ Bu üçlüleri, koordinat sisteminde karelaj noktaları olarak düşünebiliriz.
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Bu noktaların dağılmasında herhangi bir yöntem farkettiniz mi?
 
-    // The mathematician Euclid found a clever method for generating new
-    // Pythagorean triples. First, we need to pick any two integers _m_ and _n_:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
-    // Now we can calculate the three numbers that make up the triple:
-    // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
-    // And there you have your pythagorean triple! You can check that a2 + b2 = c2.
 
 ----
 
@@ -1035,27 +1020,6 @@ Proof by constructing angle bisector and using SAS result.
 
 {.todo} COMING SOON – Find the height of an Isosceles Triangles using Pythagoras
 
-    // {.todo} The angles between the base and the congruent sides are
-    // called base angles. The angle made by the two legs of the isosceles triangle is
-    // called the vertex angle.
-    // 
-    // {.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
-    // To prove the Base Angles Theorem, we will construct the angle bisector through
-    // the vertex angle of an isosceles triangle.
-    // 
-    // {.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
-    // isosceles triangle is also the perpendicular bisector to the base.
-    // 
-    // {.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
-    // both true. If two angles in a triangle are congruent, then
-    // the opposite sides are also congruent. And if the perpendicular bisector of the base of
-    // an isosceles triangle is also the angle bisector of the vertex angle.
-    // 
-    // {.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-    // 
-    // {.todo} Find the Height of an Isosceles Triangle
-    // One way to use The Pythagorean Theorem is to identify the heights in isosceles
-    // triangles so you can calculate the area.
 
 ---
 > id: equilateral
@@ -1067,13 +1031,6 @@ its sides  have the same length. You’ve [already
 seen](/course/euclidean-geometry/geometric-construction) how to construct an
 equilateral triangle using straight-edge and compass.
 
-    // Any equilateral triangle is always also isosceles. From the base angle theorem
-    // we know that angles opposite congruent sides in a triangle are also congruent.
-    // In an equilateral triangle, all of the sides are congruent, so all of the angles
-    // must also be congruent.
-    // 
-    // Since we know that the sum of all three angles is 180°, every individual angle
-    // in an equilateral triangle must be [[60]]°.
 
 {.todo} COMING SOON – Size of angles in an equilateral triangle
 
@@ -1193,10 +1150,6 @@ Bu üç Trigonometrik fonksiyon, dik açılı üçgenlerin kenarlarının oranla
 
 {.todo} YAKINDA – Trigonometri üzerine daha fazla
 
-    // {.todo} COMING SOON – Abbreviations: sin x, cos y
-    // {.todo} COMING SOON – Using calculators
-    // {.todo} COMING SOON – Examples
-    // {.todo} COMING SOON – Rationalize the denominator
 
 ---
 > id: inverse-trig
@@ -1205,19 +1158,7 @@ Bu üç Trigonometrik fonksiyon, dik açılı üçgenlerin kenarlarının oranla
 
 {.todo} YAKINDA – Ters Fonksiyonlar
 
-    // The word inverse is probably familiar to you. In mathematics, once you learn how
-    // to do an operation, you also learn how to “undo” it. For example, you may
-    // remember that addition and subtraction are considered inverse operations.
-    // Multiplication and division are also inverse operations. In algebra you used
-    // inverse operations to solve equations and inequalities. When we apply the word
-    // inverse to the trigonometric ratios, we can find the acute angle measures within
-    // a right triangle. Normally, if you are given an angle and a side of a right
-    // triangle, you can find the other two sides, using sine, cosine or tangent. With
-    // the inverse trig ratios, you can find the angle measure, given two sides.
 
-    // On most scientific and graphing calculators, the buttons look like
-    // [SIN−1],[COS−1], and [TAN−1]. Typically, you might have to hit a shift
-    // button to access these functions.
 
 ---
 
@@ -1236,9 +1177,6 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
 :::
 
-    // {.todo} Use Law of Sines when given:
-    // An angle and its opposite side.
-    // Any two angles and one side.
 
 ::: column.grow
 ::: .theorem
@@ -1250,13 +1188,6 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-    // {.todo} Even though there are three formulas, they are all very similar. First, notice
-    // that whatever angle is in the cosine, the opposite side is on the other side of
-    // the equal sign.
-    // 
-    // {.todo} Use Law of Cosines when given:
-    // Two sides and the included angle.
-    // All three sides.
 :::
 
 ---
@@ -1264,7 +1195,6 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 
 {.todo} YAKINDA – Kanıt, örnek ve uygulamalar
 
-    // TODO Future stuff about trigonometry
 
 ---
 > id: mountains

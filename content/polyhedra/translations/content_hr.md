@@ -5,7 +5,7 @@
 > section: polygons
 > id: polygons
 
- [__Poligon__](gloss:polygon) je zatvorenog, ravnog oblika koji ima samo ravne strane. Poligoni mogu imati bilo koji broj strana i kutova, ali strane ne mogu biti zakrivljene. Koji od oblika ispod su poligoni? 
+[__Poligon__](gloss:polygon) je zatvorenog, ravnog oblika koji ima samo ravne strane. Poligoni mogu imati bilo koji broj strana i kutova, ali strane ne mogu biti zakrivljene. Koji od oblika ispod su poligoni? 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -20,7 +20,7 @@
 ---
 > id: polygons-1
 
- Poligonima dajemo različita imena, ovisno o tome koliko strana imaju: 
+Poligonima dajemo različita imena, ovisno o tome koliko strana imaju: 
 
     .row.padded-thin
       div(style="width: 100px")
@@ -47,7 +47,7 @@
 
 ### Kutovi u poligonima 
 
- Svaki poligon s _n_ stranama također ima _n_ [unutarnjih kutova](gloss:internal-angle) . Već znamo da je zbroj unutarnjih kutova u trokutu uvijek [[180]]°, ali što je s ostalim mnogokutima? 
+Svaki poligon s _n_ stranama također ima _n_ [unutarnjih kutova](gloss:internal-angle) . Već znamo da je zbroj unutarnjih kutova u trokutu uvijek [[180]]°, ali što je s ostalim mnogokutima? 
 
 ---
 > id: angles
@@ -92,7 +92,7 @@
 ---
 > id: angles-1
 
- Izgleda da je zbroj unutarnjih kutova u četverostraniku uvijek [[360]]° - točno [[dva puta | tri puta | pola]] zbroja uglova u trokutu. _{span.reveal(when="blank-0 blank-1")} To nije slučajnost: svaki se četverokut može podijeliti u dva trokuta._ 
+Izgleda da je zbroj unutarnjih kutova u četverostraniku uvijek [[360]]° - točno [[dva puta | tri puta | pola]] zbroja uglova u trokutu. _{span.reveal(when="blank-0 blank-1")} To nije slučajnost: svaki se četverokut može podijeliti u dva trokuta._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -105,7 +105,7 @@
 ---
 > id: internal-angle-sum
 
- Poligon sa ${x}{x|7|3,15,1} strane će imati unutarnji kut od 180° × ${x-2} = ${(x-2)*180}°. Općenitije, poligon s _n_ stranama može se podijeliti na [[n - 2 | n - 1 | n]] trokuta. Stoga, 
+Poligon sa ${x}{x|7|3,15,1} strane će imati unutarnji kut od 180° × ${x-2} = ${(x-2)*180}°. Općenitije, poligon s _n_ stranama može se podijeliti na [[n - 2 | n - 1 | n]] trokuta. Stoga, 
 
 {.text-center.reveal(when="blank-0")} Zbroj unutarnjih kutova u _n_ -gonu `= (n - 2) × 180°` , 
 
@@ -118,11 +118,11 @@
 
 ::: column.grow
 
- Kažemo da je poligon [__konkavan__](gloss:concave) ako ima presjek koji "pokazuje prema unutra". Možete zamisliti da se ovaj dio ["uklesao"](target:cave) . Poligoni koji _nisu_ konkavni nazivaju se [__konveksni__](gloss:convex) . 
+Kažemo da je poligon [__konkavan__](gloss:concave) ako ima presjek koji "pokazuje prema unutra". Možete zamisliti da se ovaj dio ["uklesao"](target:cave) . Poligoni koji _nisu_ konkavni nazivaju se [__konveksni__](gloss:convex) . 
 
- Dva su načina na koja lako možete prepoznati konkavne poligone: oni imaju barem jedan [unutarnji kut koji je veći od 180°](target:angle) . Također imaju barem jednu [dijagonalu koja leži _izvan_ poligona](target:diagonal) . 
+Dva su načina na koja lako možete prepoznati konkavne poligone: oni imaju barem jedan [unutarnji kut koji je veći od 180°](target:angle) . Također imaju barem jednu [dijagonalu koja leži _izvan_ poligona](target:diagonal) . 
 
- U konveksnim mnogokutima, s druge strane, svi su unutarnji kutovi manji od [[180]]°, a sve dijagonale leže [[unutar | izvan]] poligona. 
+U konveksnim mnogokutima, s druge strane, svi su unutarnji kutovi manji od [[180]]°, a sve dijagonale leže [[unutar | izvan]] poligona. 
 
 ::: column(width=240)
 
@@ -146,7 +146,7 @@
 ---
 > id: concave-1
 
- Koji je od ovih poligona konkavan? 
+Koji je od ovih poligona konkavan? 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -161,7 +161,7 @@
 
 ### Regularni poligoni 
 
- Kažemo da je poligon [__pravilan__](gloss:regular-polygon) ako sve njegove strane imaju jednaku duljinu, a svi kutovi imaju istu veličinu. Koji su od tih oblika pravilni poligoni? 
+Kažemo da je poligon [__pravilan__](gloss:regular-polygon) ako sve njegove strane imaju jednaku duljinu, a svi kutovi imaju istu veličinu. Koji su od tih oblika pravilni poligoni? 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -174,12 +174,12 @@
 ---
 > id: regular-1
 
- Redoviti poligoni mogu biti u raznim veličinama - ali svi pravilni poligoni s istim brojem strana [[slični su | kongruentne su | imaju isto područje]] ! 
+Redoviti poligoni mogu biti u raznim veličinama - ali svi pravilni poligoni s istim brojem strana [[slični su | kongruentne su | imaju isto područje]] ! 
 
 ---
 > id: regular-2
 
- Već znamo zbroj svih [unutarnjih kutova](gloss:internal-angle) u mnogokutima. Za pravilne poligone svi su ovi kutovi [[iste veličine | su alternativni kutovi]] , tako da možemo izračunati veličinu jednog unutarnjeg kuta: 
+Već znamo zbroj svih [unutarnjih kutova](gloss:internal-angle) u mnogokutima. Za pravilne poligone svi su ovi kutovi [[iste veličine | su alternativni kutovi]] , tako da možemo izračunati veličinu jednog unutarnjeg kuta: 
 
 {.text-center.reveal(when="blank-0")} kut = <mfrac><mrow>[[zbroj svih uglova | broj kutova]]</mrow><mrow>[[broj kutova | zbroj svih uglova]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x` ,_ 
 
@@ -217,9 +217,9 @@
 
 ::: column.grow
 
- Ovdje možete vidjeti [redoviti poligon](gloss:regular-polygon) sa ${n}{n|5|4,12,1} strane. Svaka strana ima duljinu [{.pill.green} 1m](target:base) . Pokušajmo izračunati njegovu površinu! 
+Ovdje možete vidjeti [redoviti poligon](gloss:regular-polygon) sa ${n}{n|5|4,12,1} strane. Svaka strana ima duljinu [{.pill.green} 1m](target:base) . Pokušajmo izračunati njegovu površinu! 
 
- Prvo možemo poligon podijeliti u ${toWord(n)} kongruentne, [[isosceles | jednakostranični | pravokutni]] trokut. 
+Prvo možemo poligon podijeliti u ${toWord(n)} kongruentne, [[isosceles | jednakostranični | pravokutni]] trokut. 
 
 {.reveal(when="blank-0")} Već znamo [[bazu | visina | područje]] ovih trokuta, ali trebamo i [[visinu | noge | medijani]] da bi mogli izračunati njegovo područje. _{span.reveal(when="blank-2")} U pravilnim mnogokutima ova se visina ponekad naziva i [{.pill.yellow} apotema](target:apothem) ._ 
 
@@ -261,9 +261,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: quadrilaterals
 > id: quadrilaterals
 
- U [prethodnom tečaju](/course/triangles) istraživali smo mnoga različita svojstva trokuta. Sada pogledajmo četverostrane. 
+U [prethodnom tečaju](/course/triangles) istraživali smo mnoga različita svojstva trokuta. Sada pogledajmo četverostrane. 
 
- _Pravilni četverostrani_ naziva se [[kvadrat | pravokutnik | jednakostranični četverokut]] . Sve njegove strane imaju jednaku duljinu, a svi su mu kutovi jednaki. 
+_Pravilni četverostrani_ naziva se [[kvadrat | pravokutnik | jednakostranični četverokut]] . Sve njegove strane imaju jednaku duljinu, a svi su mu kutovi jednaki. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -289,7 +289,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-1
 
- Za malo manje redovne četverokute, imamo dvije mogućnosti. Ako samo želimo da _kutovi_ budu jednaki, dobivamo [__pravokutnik__](gloss:rectangle) . Ako samo želimo da _stranice_ budu jednake, dobit ćemo [__romb__](gloss:rhombus) . 
+Za malo manje redovne četverokute, imamo dvije mogućnosti. Ako samo želimo da _kutovi_ budu jednaki, dobivamo [__pravokutnik__](gloss:rectangle) . Ako samo želimo da _stranice_ budu jednake, dobit ćemo [__romb__](gloss:rhombus) . 
 
 ::: column.quadrilateral
 
@@ -330,7 +330,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-2
 
- Postoji nekoliko drugih četverokuta, koji su još manje pravilni, ali imaju određena važna svojstva: 
+Postoji nekoliko drugih četverokuta, koji su još manje pravilni, ali imaju određena važna svojstva: 
 
 ::: column.quadrilateral
 
@@ -382,11 +382,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
- Četverostrani mogu spadati u više tih kategorija. Možemo prikazati hijerarhiju različitih vrsta četverostrana kao [Vennov dijagram](gloss:venn-diagram) : 
+Četverostrani mogu spadati u više tih kategorija. Možemo prikazati hijerarhiju različitih vrsta četverostrana kao [Vennov dijagram](gloss:venn-diagram) : 
 
     figure: include svg/venn.svg
 
- Na primjer, svaki je pravokutnik [[paralelogram | romb | kvadrat]] i svaki [[romb | trapezoid | paralelogram]] je također zmaj. [[Ponekad]] je romb [[| stalno | nikad]] kvadrat i pravokutnik nisu [[uvijek | ponekad | nikad]] trapez. 
+Na primjer, svaki je pravokutnik [[paralelogram | romb | kvadrat]] i svaki [[romb | trapezoid | paralelogram]] je također zmaj. [[Ponekad]] je romb [[| stalno | nikad]] kvadrat i pravokutnik nisu [[uvijek | ponekad | nikad]] trapez. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Da ne bi došlo do nejasnoća, obično koristimo upravo najkonkretniju vrstu. 
 
@@ -399,7 +399,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Sada odaberite četiri točke bilo gdje u sivom okviru s lijeve strane. _{span.reveal(when="points")} Sve ih možemo povezati da bismo tvorili četverokut._ 
+Sada odaberite četiri točke bilo gdje u sivom okviru s lijeve strane. _{span.reveal(when="points")} Sve ih možemo povezati da bismo tvorili četverokut._ 
 
 {.reveal(when="points" delay=1000)} Nađimo sredinu svake od četiri strane. Ako povežemo srednje točke, dobit ćemo [[još jedan četverokut | trokut | pravokutnik]] . 
 
@@ -420,7 +420,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### paralelograma 
 
- Ispada da paralelogrami imaju i mnoga druga zanimljiva svojstva, osim što su suprotne strane paralelne. Koja je od sljedećih šest tvrdnji istinita? 
+Ispada da paralelogrami imaju i mnoga druga zanimljiva svojstva, osim što su suprotne strane paralelne. Koja je od sljedećih šest tvrdnji istinita? 
 
 ::: column.grow
 
@@ -458,7 +458,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
- Naravno, jednostavno "promatranje" ovih svojstava nije dovoljno. Da bismo bili sigurni da su _uvijek_ istinite, moramo ih _dokazati_ : 
+Naravno, jednostavno "promatranje" ovih svojstava nije dovoljno. Da bismo bili sigurni da su _uvijek_ istinite, moramo ih _dokazati_ : 
 
 ::: tab
 
@@ -494,7 +494,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Pokušajmo dokazati da su suprotne strane i kutovi u paralelogramu uvijek jednaki. 
 
- Započnite crtanjem jedne dijagonale paralelograma. 
+Započnite crtanjem jedne dijagonale paralelograma. 
 
 {.reveal(when="diagonal")} Dijagonala stvara četiri nova kuta sa stranicama paralelograma. Dva [crvena](target:red-angle) i dva [plava kuta](target:blue-angle) su [naizmjenični kutovi](gloss:alternate-angles) , tako da moraju biti [[sukladni | susjedan | dopunski]] . 
 
@@ -505,8 +505,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 :::
 
 {.reveal(when="blank-1")} Ispada da je i obratno: ako su oba para suprotnih strana (ili kutova) u četverostraniku jednaka, tada četverostrani mora biti paralelogram. 
-
-    //- Adjacent angles are supplementary.
 
 ::: tab
 
@@ -544,9 +542,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Sada dokažite da se dvije dijagonale u paralelogramu dijele jedna na drugu. 
 
- Razmislimo o dva žuta trokuta generirana dijagonalama: 
+Razmislimo o dva žuta trokuta generirana dijagonalama: 
 
- * Upravo smo dokazali da su [dvije zelene strane](target:side1) jednake, jer su suprotne strane paralelograma. * [Dva crvena](target:anglesR) i [dva plava kuta](target:anglesB) su jednaka jer su [[naizmjenični kutovi | suprotnih kutova | pravim kutovima]] . 
+* Upravo smo dokazali da su [dvije zelene strane](target:side1) jednake, jer su suprotne strane paralelograma. * [Dva crvena](target:anglesR) i [dva plava kuta](target:anglesB) su jednaka jer su [[naizmjenični kutovi | suprotnih kutova | pravim kutovima]] . 
 
 {.reveal(when="blank-2")} Od strane [[ASA | SSS | AAS]] uvjet, oba žuta trougla moraju stoga biti sukladni. 
 
@@ -565,9 +563,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Pokazali smo gore da su dva para [[suprotnih | susjedne]] strane paralelograma su skladne. U kitu su dva para _susjednih_ strana sukladna. 
+Pokazali smo gore da su dva para [[suprotnih | susjedne]] strane paralelograma su skladne. U kitu su dva para _susjednih_ strana sukladna. 
 
- Naziv _Kite_ jasno dolazi iz njegovog oblika: izgleda kao zmajevi kojima možete letjeti nebom. Međutim, od svih specijalnih četverostrana koje smo vidjeli do sada, Kite je jedini koji također može biti [konkavan](gloss:concave) : ako je u obliku strelice ili strelice: 
+Naziv _Kite_ jasno dolazi iz njegovog oblika: izgleda kao zmajevi kojima možete letjeti nebom. Međutim, od svih specijalnih četverostrana koje smo vidjeli do sada, Kite je jedini koji također može biti [konkavan](gloss:concave) : ako je u obliku strelice ili strelice: 
 
 ::: column(width=320)
 
@@ -643,7 +641,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Možda ste primijetili da su svi zmajevi [[simetrični | slično]] . _{span.reveal(when="blank-0")} [Os simetrije](gloss:axis-of-symmetry) [[jedna je od dijagonala | jedna od strana | srednji segment]] ._ 
+Možda ste primijetili da su svi zmajevi [[simetrični | slično]] . _{span.reveal(when="blank-0")} [Os simetrije](gloss:axis-of-symmetry) [[jedna je od dijagonala | jedna od strana | srednji segment]] ._ 
 
 {.reveal.r(when="blank-1")} Dijagonala dijeli zmaj na [dva složena trokuta](target:triangle1) . Znamo da su kongruentni iz [SSS](gloss:triangle-sss) stanja: oba trokuta imaju [tri kongruentne strane](target:sss) (crvena, zelena i plava). _{button.next-step} Nastaviti_ 
 
@@ -665,7 +663,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Područje četverostrana 
 
- Prilikom izračunavanja površine trokuta u prethodnom tečaju koristili smo trik kako ga pretvoriti u [[pravokutnik | kvadrat | pentagon]] . Ispada da to možemo učiniti i za neke četverokute: 
+Prilikom izračunavanja površine trokuta u prethodnom tečaju koristili smo trik kako ga pretvoriti u [[pravokutnik | kvadrat | pentagon]] . Ispada da to možemo učiniti i za neke četverokute: 
 
 ::: tab
 
@@ -685,7 +683,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Pokušajte nacrtati pravokutnik s istog područja kao i paralelogram. 
+Pokušajte nacrtati pravokutnik s istog područja kao i paralelogram. 
 
 {.reveal(when="draw-1")} Možete li vidjeti da je [trokut](target:triangle-1) koji [nedostaje](target:triangle-1) na lijevoj strani [[potpuno isti kao | manji od | veći od]] [trokuta koji se preklapa](target:triangle-2) s desne strane? _{span.reveal(when="blank-1")} Stoga je područje paralelograma_ 
 
@@ -699,7 +697,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### trapezoid _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
- Podsjetimo da su trapezi četverostrani s jednim parom [paralelnih strana](target:bases) . Te se paralelne strane nazivaju __bazama__ trapeza. 
+Podsjetimo da su trapezi četverostrani s jednim parom [paralelnih strana](target:bases) . Te se paralelne strane nazivaju __bazama__ trapeza. 
 
 ::: column(width=300)
 
@@ -721,7 +719,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Kao i prije, pokušajte nacrtati pravokutnik koji ima isto područje kao i ovaj trapez. _{span.reveal(when="draw-2")} Možete li vidjeti kako nestaju [i dodani trokuti](target:triangles-3) s lijeve i desne strane otkazuju?_ 
+Kao i prije, pokušajte nacrtati pravokutnik koji ima isto područje kao i ovaj trapez. _{span.reveal(when="draw-2")} Možete li vidjeti kako nestaju [i dodani trokuti](target:triangles-3) s lijeve i desne strane otkazuju?_ 
 
 {.reveal(when="draw-2" delay=2000)} [{.pill.green} visina](target:t-height) ovog pravokutnika je [[udaljenost između | prosjek od | duljina]] [paralelnih strana](target:bases) trapeza. 
 
@@ -765,9 +763,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- U ovom zmaju [dvije dijagonale](target:diag3) tvore širinu i visinu velikog [pravokutnika](target:rect4) koji okružuje zmaj. 
+U ovom zmaju [dvije dijagonale](target:diag3) tvore širinu i visinu velikog [pravokutnika](target:rect4) koji okružuje zmaj. 
 
- Površina ovog pravokutnika je [[dva puta | isto kao | tri puta]] veće površine kita. _{span.reveal(when="blank-5")} Možete li vidjeti kako su svaki od [četiri trokuta](target:inside) koji čine zmaj jednaki kao i [četiri praznine](target:outside) izvan njega?_ 
+Površina ovog pravokutnika je [[dva puta | isto kao | tri puta]] veće površine kita. _{span.reveal(when="blank-5")} Možete li vidjeti kako su svaki od [četiri trokuta](target:inside) koji čine zmaj jednaki kao i [četiri praznine](target:outside) izvan njega?_ 
 
 {.reveal(when="blank-5")} To znači da je područje kita dijagonalama [{.i.pill.green} d1](target:d31) i [{.i.pill.yellow} d2](target:d32) je 
 
@@ -801,7 +799,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [Rhombus](gloss:rhombus) je četverostranik koji ima četiri povezane strane. Možda se sjećate da je svaki romb [[paralelogram | pravokutnik | trg]] - i također [[zmaj | šesterokut | konkavni poligon]] . 
+[Rhombus](gloss:rhombus) je četverostranik koji ima četiri povezane strane. Možda se sjećate da je svaki romb [[paralelogram | pravokutnik | trg]] - i također [[zmaj | šesterokut | konkavni poligon]] . 
 
 {.reveal(when="blank-6 blank-7")} To znači da za pronalaženje područja romba možemo upotrijebiti ili jednadžbu za područje paralelograma ili onu za područje zmaja: 
 
@@ -813,25 +811,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    //- ### Cyclic quadrilaterals
     
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -840,7 +820,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: tessellations
 > id: tessellations
 
- [Poligoni se](gloss:polygon) pojavljuju svuda u prirodi. Posebno su korisni ako želite obložiti veliku površinu, jer možete polirati poligone zajedno bez praznina ili preklapanja. Takvi se obrasci nazivaju [__tessellations__](gloss:tessellation) . 
+[Poligoni se](gloss:polygon) pojavljuju svuda u prirodi. Posebno su korisni ako želite obložiti veliku površinu, jer možete polirati poligone zajedno bez praznina ili preklapanja. Takvi se obrasci nazivaju [__tessellations__](gloss:tessellation) . 
 
 ::: column(width=200)
 
@@ -883,7 +863,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
- Ljudi su kopirali mnoge od tih prirodnih obrazaca u umjetnosti, arhitekturi i tehnologiji - od antičkog Rima do danas. Evo nekoliko primjera: 
+Ljudi su kopirali mnoge od tih prirodnih obrazaca u umjetnosti, arhitekturi i tehnologiji - od antičkog Rima do danas. Evo nekoliko primjera: 
 
 ::: column(width=200)
 
@@ -923,16 +903,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
- Ovdje možete stvoriti vlastite tessellations koristeći pravilne poligone. Jednostavno povucite nove oblike s bočne trake na platno. Koji oblik tessellate dobro? Postoje li oblici koji se uopšte ne dišu? Pokušajte stvoriti zanimljive uzorke! 
+Ovdje možete stvoriti vlastite tessellations koristeći pravilne poligone. Jednostavno povucite nove oblike s bočne trake na platno. Koji oblik tessellate dobro? Postoje li oblici koji se uopšte ne dišu? Pokušajte stvoriti zanimljive uzorke! 
 
     figure: .tessellation
       x-polypad
@@ -956,12 +931,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Tesselacije iz pravilnih poligona 
 
- Možda ste primijetili da postoje neki [pravilni poligoni](gloss:regular-polygon) (poput [[kvadrata | pentagoni]] ) tessellate vrlo lako, dok drugi (poput [[pentagona) | trokuti | šesterokutni]] ) uopće ne izgledaju tesno. 
+Možda ste primijetili da postoje neki [pravilni poligoni](gloss:regular-polygon) (poput [[kvadrata | pentagoni]] ) tessellate vrlo lako, dok drugi (poput [[pentagona) | trokuti | šesterokutni]] ) uopće ne izgledaju tesno. 
 
 ---
 > id: tessellation-regular-1
 
- To ima veze s veličinom njihovih [unutarnjih kutova](gloss:internal-angle) , koje smo ranije naučili izračunati. U svakoj [vrhovi](gloss:polygon-vertex) teskele sastaju se unutarnji kutovi više različitih poligona. Sve ove kutove trebamo dodati do [[360]]°, inače će doći do zazora ili preklapanja. 
+To ima veze s veličinom njihovih [unutarnjih kutova](gloss:internal-angle) , koje smo ranije naučili izračunati. U svakoj [vrhovi](gloss:polygon-vertex) teskele sastaju se unutarnji kutovi više različitih poligona. Sve ove kutove trebamo dodati do [[360]]°, inače će doći do zazora ili preklapanja. 
 
 ---
 > id: tessellation-regular-2
@@ -984,8 +959,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption} Pentagoni [[se ne sjeckaju | tessellate]] _{span.reveal(when="blank-2")} jer se množine 108° ne zbrajaju do 360°._ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -997,9 +970,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular-3
 
- Isto tako možete provjeriti da se, poput pentagona, nijedan običan poligon sa 7 ili više strana ne tesi. To znači da su jedini pravilni poligoni koje tessellate trokut, kvadrat i šesterokut! 
+Isto tako možete provjeriti da se, poput pentagona, nijedan običan poligon sa 7 ili više strana ne tesi. To znači da su jedini pravilni poligoni koje tessellate trokut, kvadrat i šesterokut! 
 
- Naravno da možete kombinirati različite vrste pravilnih poligona u tessellaciji, pod uvjetom da se njihovi unutarnji kutovi mogu dodati i do 360°: 
+Naravno da možete kombinirati različite vrste pravilnih poligona u tessellaciji, pod uvjetom da se njihovi unutarnji kutovi mogu dodati i do 360°: 
 
     x-gallery(slide-width="520")
       div
@@ -1032,7 +1005,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Tesselacije s nepravilnih poligona 
 
- Također možemo pokušati napraviti tesselacije iz [nepravilnih poligona](gloss:irregular-polygon) - sve dok smo oprezni pri rotiranju i rasporedu. 
+Također možemo pokušati napraviti tesselacije iz [nepravilnih poligona](gloss:irregular-polygon) - sve dok smo oprezni pri rotiranju i rasporedu. 
 
 ::: column(width=360)
 
@@ -1052,9 +1025,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Ispada da možete teskirati ne samo jednakostranični trokut, već _bilo koji trokut_ ! Pokušajte pomicati [vrhove](target:vertex) na ovom dijagramu. 
+Ispada da možete teskirati ne samo jednakostranični trokut, već _bilo koji trokut_ ! Pokušajte pomicati [vrhove](target:vertex) na ovom dijagramu. 
 
- Zbroj unutarnjih kutova u trokutu je [[180]]°. Ako svaki kut koristimo [[dvaput | jednom | tri puta]] u svakoj verziji u tessellaciji dobijemo 360°: 
+Zbroj unutarnjih kutova u trokutu je [[180]]°. Ako svaki kut koristimo [[dvaput | jednom | tri puta]] u svakoj verziji u tessellaciji dobijemo 360°: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1117,7 +1090,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
- Što je još iznenađujuće, _bilo koji četverostrani_ također tessellate! Njihov unutarnji zbroj kuta je [[360]]°, pa ako svaki kut koristimo [[jednom | dvaput | tri puta]] u svakom vrhu u tesselliji dobivamo 360°. 
+Što je još iznenađujuće, _bilo koji četverostrani_ također tessellate! Njihov unutarnji zbroj kuta je [[360]]°, pa ako svaki kut koristimo [[jednom | dvaput | tri puta]] u svakom vrhu u tesselliji dobivamo 360°. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1159,7 +1132,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
- Pentagoni su malo zamršeniji. Već smo vidjeli da se _redoviti_ pentagoni [[ne sjede | testenlat]] , ali što je s onima koji nisu normalni? 
+Pentagoni su malo zamršeniji. Već smo vidjeli da se _redoviti_ pentagoni [[ne sjede | testenlat]] , ali što je s onima koji nisu normalni? 
 
 ---
 > id: tessellation-pentagons-1
@@ -1178,16 +1151,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Evo tri različita primjera tessellation s pentagona. Nisu _pravilni_ , ali savršeno vrijede 5-jednostrani poligoni. 
+Evo tri različita primjera tessellation s pentagona. Nisu _pravilni_ , ali savršeno vrijede 5-jednostrani poligoni. 
 
- Do sada su matematičari pronašli samo 15 različitih vrsta tessela s (konveksnim) pentagonima - od kojih je najnovija otkrivena u 2015. Nitko ne zna ima li drugih ili je tih 15 jedina ... 
+Do sada su matematičari pronašli samo 15 različitih vrsta tessela s (konveksnim) pentagonima - od kojih je najnovija otkrivena u 2015. Nitko ne zna ima li drugih ili je tih 15 jedina ... 
 
 ---
 > id: escher
 
 ### Tesselacije u čl 
 
- Tesselacije smo i alat i inspiracija mnogim umjetnicima, arhitektima i dizajnerima - najpoznatijim nizozemskim umjetnikom [MC Escherom](bio:escher) . Escherovo djelo sadrži čudna, mutirajuća stvorenja, obrasce i pejzaže: 
+Tesselacije smo i alat i inspiracija mnogim umjetnicima, arhitektima i dizajnerima - najpoznatijim nizozemskim umjetnikom [MC Escherom](bio:escher) . Escherovo djelo sadrži čudna, mutirajuća stvorenja, obrasce i pejzaže: 
 
     .row
       div(style="width: 220px")
@@ -1209,7 +1182,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
- Ova umjetnička djela često izgledaju zabavno i bez napora, ali osnovni matematički principi su isti kao i prije: kutovi, rotacije, prijevodi i poligoni. Ako matematika nije u redu, tesketa neće raditi! 
+Ova umjetnička djela često izgledaju zabavno i bez napora, ali osnovni matematički principi su isti kao i prije: kutovi, rotacije, prijevodi i poligoni. Ako matematika nije u redu, tesketa neće raditi! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
@@ -1219,9 +1192,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Peninove pločice 
 
- Sve tesselacije koje smo vidjeli do sada imaju jedno zajedničko: one su __periodične__ . To znači da se sastoje od redovitog uzorka koji se ponavlja iznova i iznova. Oni mogu zauvijek nastaviti u svim smjerovima i izgledat će svugdje isto. 
+Sve tesselacije koje smo vidjeli do sada imaju jedno zajedničko: one su __periodične__ . To znači da se sastoje od redovitog uzorka koji se ponavlja iznova i iznova. Oni mogu zauvijek nastaviti u svim smjerovima i izgledat će svugdje isto. 
 
- U 1970-ima je britanski matematičar i fizičar [Roger Penrose](bio:penrose) otkrio _neperiodične_ teshelacije - one i dalje traju beskonačno u svim smjerovima, ali _nikada ne_ izgledaju potpuno isto. Zove se __Penrose nagib__ , a za stvaranje jednog vam je potrebno samo nekoliko različitih vrsta poligona: 
+U 1970-ima je britanski matematičar i fizičar [Roger Penrose](bio:penrose) otkrio _neperiodične_ teshelacije - one i dalje traju beskonačno u svim smjerovima, ali _nikada ne_ izgledaju potpuno isto. Zove se __Penrose nagib__ , a za stvaranje jednog vam je potrebno samo nekoliko različitih vrsta poligona: 
 
     figure
       include svg/penrose.svg
@@ -1231,7 +1204,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: penrose-1
 
- Penrose je istraživao tesselacije isključivo radi zabave, ali ispada da unutarnja struktura nekih stvarnih materijala (poput aluminija) slijedi sličan obrazac. Uzorak je čak korišten i na toaletnom papiru, jer su proizvođači primijetili da se neperiodični uzorak može namotati bez ispupčenja. 
+Penrose je istraživao tesselacije isključivo radi zabave, ali ispada da unutarnja struktura nekih stvarnih materijala (poput aluminija) slijedi sličan obrazac. Uzorak je čak korišten i na toaletnom papiru, jer su proizvođači primijetili da se neperiodični uzorak može namotati bez ispupčenja. 
 
 ---
 
@@ -1240,7 +1213,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: polyhedra
 > id: polyhedra
 
- Do sada smo samo pogledali što s poligonima možemo učiniti u ravnom, dvodimenzionalnom svijetu. [__Poliedron__](gloss:polyhedron) je trodimenzionalni objekt sastavljen od poligona. Evo nekoliko primjera: 
+Do sada smo samo pogledali što s poligonima možemo učiniti u ravnom, dvodimenzionalnom svijetu. [__Poliedron__](gloss:polyhedron) je trodimenzionalni objekt sastavljen od poligona. Evo nekoliko primjera: 
 
 ::: column.padded-thin(width=220)
 
@@ -1256,32 +1229,32 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Poheded ne može sadržavati zakrivljene površine - na primjer, sfere i cilindri nisu poliedri. 
+Poheded ne može sadržavati zakrivljene površine - na primjer, sfere i cilindri nisu poliedri. 
 
- Poligoni koji čine poliedar nazivaju se njegova [__lica__](gloss:polyhedron-face) . Linije u kojima su dva lica povezana nazivaju se [__rubovi__](gloss:polyhedron-edge) , a uglovi gdje se rubovi nazivaju [__vrhovima__](gloss:polyhedron-vertex) . 
+Poligoni koji čine poliedar nazivaju se njegova [__lica__](gloss:polyhedron-face) . Linije u kojima su dva lica povezana nazivaju se [__rubovi__](gloss:polyhedron-edge) , a uglovi gdje se rubovi nazivaju [__vrhovima__](gloss:polyhedron-vertex) . 
 
 ---
 > id: euler
 
- Polidedri dolaze u raznim oblicima i veličinama - od jednostavnih kockica ili piramida s samo nekoliko lica, do složenih predmeta poput zvijezde iznad, koja ima 60 trokutastih lica. Ispada, međutim, da _svi_ poliedri imaju jedno važno zajedničko svojstvo: 
+Polidedri dolaze u raznim oblicima i veličinama - od jednostavnih kockica ili piramida s samo nekoliko lica, do složenih predmeta poput zvijezde iznad, koja ima 60 trokutastih lica. Ispada, međutim, da _svi_ poliedri imaju jedno važno zajedničko svojstvo: 
 
 ::: .theorem
 
- __Eulerova poliedronska formula__  
+__Eulerova poliedronska formula__  
 U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od broja rubova ( _E_ ). Drugim riječima, 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
- Na primjer, ako poliedar ima 12 lica i 18 vrhova, znamo da mora imati [[28]] rubova. 
+Na primjer, ako poliedar ima 12 lica i 18 vrhova, znamo da mora imati [[28]] rubova. 
 
 ---
 > id: euler-1
 
- Ovu je jednadžbu otkrio poznati švicarski matematičar [Leonard Euler](bio:euler) . To vrijedi za bilo koji polihedron, sve dok ne sadrži rupe. 
+Ovu je jednadžbu otkrio poznati švicarski matematičar [Leonard Euler](bio:euler) . To vrijedi za bilo koji polihedron, sve dok ne sadrži rupe. 
 
- Ako isprobate različite poliedre, poput onih gore, otkrit ćete da Eulerova formula uvijek djeluje. U [kasnijem tečaju](/course/graph-theory/planar-graphs) naučit ćete kako to zapravo dokazati matematički. 
+Ako isprobate različite poliedre, poput onih gore, otkrit ćete da Eulerova formula uvijek djeluje. U [kasnijem tečaju](/course/graph-theory/planar-graphs) naučit ćete kako to zapravo dokazati matematički. 
 
 ---
 
@@ -1290,21 +1263,15 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 > section: nets-cross-sections
 > sectionStatus: dev
 
- Čitav naš svijet je trodimenzionalan - ali često je puno lakše crtati ili vizualizirati ravne dvodimenzionalne predmete. A postoji nekoliko različitih načina gledanja trodimenzionalnih poliedra na dvodimenzionalni način. 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
+Čitav naš svijet je trodimenzionalan - ali često je puno lakše crtati ili vizualizirati ravne dvodimenzionalne predmete. A postoji nekoliko različitih načina gledanja trodimenzionalnih poliedra na dvodimenzionalni način. 
 
  Koja od ovih mreža čini kocku Uskladite mrežu s objektom https://github.com/polymake/matchthenet Crtanje mreže 
 
- Opišite presjek koji nastaje sjecištem ravnine i krute tvari. 
+Opišite presjek koji nastaje sjecištem ravnine i krute tvari. 
 
- Presjek je sjecište ravnine s krutinom. Drugi način predstavljanja trodimenzionalne figure u dvodimenzionalnoj ravnini je upotreba mreže. Mreža je rašireni, ravni prikaz strana trodimenzionalnog oblika. 
+Presjek je sjecište ravnine s krutinom. Drugi način predstavljanja trodimenzionalne figure u dvodimenzionalnoj ravnini je upotreba mreže. Mreža je rašireni, ravni prikaz strana trodimenzionalnog oblika. 
 
- zakrenite kocku kako biste napravili šesterokutni presjek 
+zakrenite kocku kako biste napravili šesterokutni presjek 
 
 ---
 
@@ -1313,7 +1280,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 > section: prisms-pyramids
 > sectionStatus: dev
 
- NAPRAVITI 
+NAPRAVITI 
 
 ---
 
@@ -1322,7 +1289,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 > section: scaling
 > sectionStatus: dev
 
- NAPRAVITI 
+NAPRAVITI 
 
 ---
 
@@ -1331,13 +1298,9 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 > section: platonic
 > id: platonic
 
- Na početku ovog tečaja definirali smo [pravilne poligone](gloss:regular-polygon) kao posebno „simetrične“ poligone, pri čemu su sve strane i kutovi jednaki. Za poliedre možemo učiniti nešto slično. 
+Na početku ovog tečaja definirali smo [pravilne poligone](gloss:regular-polygon) kao posebno „simetrične“ poligone, pri čemu su sve strane i kutovi jednaki. Za poliedre možemo učiniti nešto slično. 
 
- U _pravilnom poliedru_ sva su [lica](gloss:polyhedron-face) ista vrsta pravilnog poligona, a isti se broj lica susreće u svakom [vrhu](gloss:polyhedron-vertex) . Poliedri s ta dva svojstva nazivaju se [__platonski kruti dijelovi__](gloss:platonic-solid) , nazvani po grčkom filozofu [Platonu](bio:plato) . 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+U _pravilnom poliedru_ sva su [lica](gloss:polyhedron-face) ista vrsta pravilnog poligona, a isti se broj lica susreće u svakom [vrhu](gloss:polyhedron-vertex) . Poliedri s ta dva svojstva nazivaju se [__platonski kruti dijelovi__](gloss:platonic-solid) , nazvani po grčkom filozofu [Platonu](bio:plato) . 
 
  Pa kako izgledaju platonski kruti dijelovi - i koliko ih ima? Da bismo napravili trodimenzionalni oblik, potrebna su nam najmanje [[3]] lica koja se susreću u svakom vrhu. Krenimo sustavno s najmanjim pravilnim mnogokutom: jednakostranični trokut: 
 
@@ -1354,7 +1317,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako stvorimo poliedar u kojem se tri [jednakostranična trokuta](gloss:equilateral-triangle) susreću u svakoj vertikali, dobit ćemo oblik na lijevoj strani. Zove se __Tetrahedron__ i ima [[4]] lica. _{.reveal(when="blank-0")} ("Tetra" na grčkom znači "četiri"._ 
+Ako stvorimo poliedar u kojem se tri [jednakostranična trokuta](gloss:equilateral-triangle) susreću u svakoj vertikali, dobit ćemo oblik na lijevoj strani. Zove se __Tetrahedron__ i ima [[4]] lica. _{.reveal(when="blank-0")} ("Tetra" na grčkom znači "četiri"._ 
 
 :::
 
@@ -1371,7 +1334,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako se četiri jednakostranična trokuta susreću u svakoj vrhu, dobit ćemo različitu platonsku krutinu. Zove se __Oktahedron__ i ima [[8]] lica. _{.reveal(when="blank-0")} ("Octa" znači "osam" na grčkom. Baš kao što je i "Octagon" znači osmerostrani oblik, "Octahedron" znači čvrsta osoba s 8 strana.)_ 
+Ako se četiri jednakostranična trokuta susreću u svakoj vrhu, dobit ćemo različitu platonsku krutinu. Zove se __Oktahedron__ i ima [[8]] lica. _{.reveal(when="blank-0")} ("Octa" znači "osam" na grčkom. Baš kao što je i "Octagon" znači osmerostrani oblik, "Octahedron" znači čvrsta osoba s 8 strana.)_ 
 
 :::
 
@@ -1388,7 +1351,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako se [[pet]] trokuta sastane u svakoj vrhovi, dobivamo __ikozaedar__ . Ima [[20]] lica. _{.reveal(when="blank-1")} ("Icosa" znači "dvadeset" na grčkom.)_ 
+Ako se [[pet]] trokuta sastane u svakoj vrhovi, dobivamo __ikozaedar__ . Ima [[20]] lica. _{.reveal(when="blank-1")} ("Icosa" znači "dvadeset" na grčkom.)_ 
 
 :::
 
@@ -1403,7 +1366,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako se [[šest]] trokuta susreće u svakoj vertikali, događa se nešto drugačije: jednostavno dobivamo [[tespiralu | četverostrana | još jedan ikosahedron]] , _{span.reveal(when="blank-1")} umjesto trodimenzionalnog poliedra._ 
+Ako se [[šest]] trokuta susreće u svakoj vertikali, događa se nešto drugačije: jednostavno dobivamo [[tespiralu | četverostrana | još jedan ikosahedron]] , _{span.reveal(when="blank-1")} umjesto trodimenzionalnog poliedra._ 
 
 :::
 
@@ -1418,11 +1381,11 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- A sedam ili više trokuta u svakoj verziji također ne stvaraju nove poliedre: nema dovoljno prostora oko vrha, da se uklopi u toliko trokut. 
+A sedam ili više trokuta u svakoj verziji također ne stvaraju nove poliedre: nema dovoljno prostora oko vrha, da se uklopi u toliko trokut. 
 
 :::
 
- To znači da smo pronašli [[tri]] platonske krute tvari koje se sastoje od trokuta. Prijeđimo na sljedeći redoviti poligon: kvadrati. 
+To znači da smo pronašli [[tri]] platonske krute tvari koje se sastoje od trokuta. Prijeđimo na sljedeći redoviti poligon: kvadrati. 
 
 ---
 > id: platonic-cube
@@ -1437,7 +1400,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako se [[tri]] kvadrata susretnu u svakoj vrhovi, dobivamo __kocku__ . Baš poput kockica, ima [[6]] lica. _{span.reveal(when="blank-1")} Kocka se ponekad naziva i _heksahedron_ , nakon grčke riječi „hexa“ za „šest“._ 
+Ako se [[tri]] kvadrata susretnu u svakoj vrhovi, dobivamo __kocku__ . Baš poput kockica, ima [[6]] lica. _{span.reveal(when="blank-1")} Kocka se ponekad naziva i _heksahedron_ , nakon grčke riječi „hexa“ za „šest“._ 
 
 :::
 
@@ -1452,14 +1415,14 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako se u svakom vrhu nalaze [[četiri]] kvadrata, dobit ćemo [[drugu tessellaciju | tetraedar | još jedna kocka]] . _{span.reveal(when="blank-1")} I kao i prije, pet ili više kvadrata također neće raditi._ 
+Ako se u svakom vrhu nalaze [[četiri]] kvadrata, dobit ćemo [[drugu tessellaciju | tetraedar | još jedna kocka]] . _{span.reveal(when="blank-1")} I kao i prije, pet ili više kvadrata također neće raditi._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
- Zatim pokušajmo s redovitim pentagonima: 
+Zatim pokušajmo s redovitim pentagonima: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1471,7 +1434,7 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako se [[tri]] pentagona susreću u svim vrhovima, dobit ćemo __dodekahedron__ . Ima [[12]] lica. _{.reveal(when="blank-1")} ("Dodeka" znači "dvanaest" na grčkom.)_ 
+Ako se [[tri]] pentagona susreću u svim vrhovima, dobit ćemo __dodekahedron__ . Ima [[12]] lica. _{.reveal(when="blank-1")} ("Dodeka" znači "dvanaest" na grčkom.)_ 
 
 :::
 
@@ -1486,14 +1449,14 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Kao i prije, četiri ili više pentagona [[ne funkcioniraju | mogući su]] jer nema dovoljno prostora. 
+Kao i prije, četiri ili više pentagona [[ne funkcioniraju | mogući su]] jer nema dovoljno prostora. 
 
 :::
 
 ---
 > id: platonic-hexagons
 
- Sljedeći redovni poligon za pokušaj su šesterokutnici: 
+Sljedeći redovni poligon za pokušaj su šesterokutnici: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1503,67 +1466,67 @@ U svakom poliedru broj lica ( _F_ ) plus broj vrhova ( _V_ ) dva je više od bro
 
 ::: column.grow
 
- Ako se tri šesterokuta susreću u svakom vrhu, odmah dobivamo [[tessellaciju | poliedar | šesterokut]] . _{span.reveal(when="blank-0")} Kako nema mjesta za više od tri, čini se da nema platonskih krutih tvari koje se sastoje od šesterokuta._ 
+Ako se tri šesterokuta susreću u svakom vrhu, odmah dobivamo [[tessellaciju | poliedar | šesterokut]] . _{span.reveal(when="blank-0")} Kako nema mjesta za više od tri, čini se da nema platonskih krutih tvari koje se sastoje od šesterokuta._ 
 
 :::
 
 ---
 > id: platonic-final
 
- Isto se događa i za sve redovne poligone s više od šest strana. Oni se ne sjedaju, a mi zasigurno ne dobivamo nikakve trodimenzionalne poligone. 
+Isto se događa i za sve redovne poligone s više od šest strana. Oni se ne sjedaju, a mi zasigurno ne dobivamo nikakve trodimenzionalne poligone. 
 
- To znači da postoji samo [[pet]] platonskih krutih čestica! Pogledajmo ih sve zajedno: 
+To znači da postoji samo [[pet]] platonskih krutih čestica! Pogledajmo ih sve zajedno: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __Tetraedar__ 
+__Tetraedar__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]] Lica_  
+_{span.dual} [[4]] Lica_  
 _{span.dual} [[4]] Vrhovi_  
 _{span.dual} [[6]] ivica_ 
 
 ::: column.grow.text-center(width=120)
 
- __Kocka__ 
+__Kocka__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]] Lica_  
+_{span.dual(target="dual1")} [[6]] Lica_  
 _{span.dual(target="dual1")} [[8]] Vrhova_  
 _{span.dual} [[12]] ivica_ 
 
 ::: column.grow.text-center(width=120)
 
- __oktaedar__ 
+__oktaedar__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]] Lica_  
+_{span.dual(target="dual1")} [[8]] Lica_  
 _{span.dual(target="dual1")} [[6]] Vrhova_  
 _{span.dual} [[12]] ivica_ 
 
 ::: column.grow.text-center(width=120)
 
- __dodekahedron__ 
+__dodekahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]] Lica_  
+_{span.dual(target="dual2")} [[12]] Lica_  
 _{span.dual(target="dual2")} 20 Vrhova_  
 _{span.dual} 30 ivica_ 
 
 ::: column.grow.text-center(width=120)
 
- __ikozaedra__ 
+__ikozaedra__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]] Lica_  
+_{span.dual(target="dual2")} [[20]] Lica_  
 _{span.dual(target="dual2")} 12 Vrhova_  
 _{span.dual} 30 ivica_ 
 
@@ -1574,7 +1537,7 @@ _{span.dual} 30 ivica_
 ---
 > id: platonic-dual
 
- Polededar možemo pretvoriti u njegov dual, „zamjenom“ svakog lica s vrhom, i svakog vrha s licem. Ove animacije pokazuju kako: 
+Polededar možemo pretvoriti u njegov dual, „zamjenom“ svakog lica s vrhom, i svakog vrha s licem. Ove animacije pokazuju kako: 
 
 ::: column(width=300)
 
@@ -1588,12 +1551,12 @@ _{span.dual} 30 ivica_
 
 :::
 
- Tetraedar je dvostruk sa sobom. Budući da ima isti broj lica i vrhova, njihovo mijenjanje ne bi ništa promijenilo. 
+Tetraedar je dvostruk sa sobom. Budući da ima isti broj lica i vrhova, njihovo mijenjanje ne bi ništa promijenilo. 
 
 ---
 > id: platonic-elements
 
- [Platon je](bio:plato) vjerovao da se sva materija u Svemiru sastoji od četiri elementa: zraka, zemlje, vode i vatre. Mislio je da svaki element odgovara jednoj od platonovih tvari, dok će peti predstavljati svemir kao cjelinu. Danas znamo da postoji više od 100 različitih elemenata koji se sastoje od sfernih atoma, a ne poliedra. 
+[Platon je](bio:plato) vjerovao da se sva materija u Svemiru sastoji od četiri elementa: zraka, zemlje, vode i vatre. Mislio je da svaki element odgovara jednoj od platonovih tvari, dok će peti predstavljati svemir kao cjelinu. Danas znamo da postoji više od 100 različitih elemenata koji se sastoje od sfernih atoma, a ne poliedra. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1605,9 +1568,9 @@ _{span.dual} 30 ivica_
 
 > id: archimedean
 
- Platonske krute tvari posebno su važni poliedri, ali postoji bezbroj drugih. 
+Platonske krute tvari posebno su važni poliedri, ali postoji bezbroj drugih. 
 
- Primjerice, [__arhimedske čvrste tvari__](gloss:archimedean-solid) i dalje se moraju sastojati od [redovitih poligona](gloss:regular-polygon) , ali možete koristiti više različitih vrsta. Ime su dobili po drugom grčkom matematičaru, [Arhimedu iz Sirakuze](bio:archimedes) , a ima ih 13: 
+Primjerice, [__arhimedske čvrste tvari__](gloss:archimedean-solid) i dalje se moraju sastojati od [redovitih poligona](gloss:regular-polygon) , ali možete koristiti više različitih vrsta. Ime su dobili po drugom grčkom matematičaru, [Arhimedu iz Sirakuze](bio:archimedes) , a ima ih 13: 
 
 ::: column(width=170 parent="padded-thin")
 
@@ -1702,16 +1665,12 @@ _{span.dual} 30 ivica_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
 ### Prijave 
 
- Platon je pogrešno vjerovao da se svi elementi sastoje od platonskih krutih čestica. Ali obični poliedri imaju mnoga posebna svojstva zbog kojih se pojavljuju drugdje u prirodi - i ta svojstva možemo kopirati u znanost i inženjerstvo. 
+Platon je pogrešno vjerovao da se svi elementi sastoje od platonskih krutih čestica. Ali obični poliedri imaju mnoga posebna svojstva zbog kojih se pojavljuju drugdje u prirodi - i ta svojstva možemo kopirati u znanost i inženjerstvo. 
 
 ::: column(width=180)
 
@@ -1725,7 +1684,7 @@ _{span.dual} 30 ivica_
 
 ::: column.grow
 
- Mnogi __virusi__ , __bakterije__ i drugi mali __organizmi__ imaju oblik [ikosaedra](gloss:icosahedron) . Primjerice, virusi moraju svoj genetski materijal zatvoriti unutar ljuske mnogih identičnih proteinskih jedinica. Ikosaedar je najučinkovitiji način za to, jer se sastoji od nekoliko pravilnih elemenata, ali je gotovo oblikovan poput sfere. 
+Mnogi __virusi__ , __bakterije__ i drugi mali __organizmi__ imaju oblik [ikosaedra](gloss:icosahedron) . Primjerice, virusi moraju svoj genetski materijal zatvoriti unutar ljuske mnogih identičnih proteinskih jedinica. Ikosaedar je najučinkovitiji način za to, jer se sastoji od nekoliko pravilnih elemenata, ali je gotovo oblikovan poput sfere. 
 
 :::
 
@@ -1741,9 +1700,9 @@ _{span.dual} 30 ivica_
 
 ::: column.grow
 
- Mnoge su __molekule__ oblikovane poput redovitih poliedra. Najpoznatiji primjer je `C_60` koji se sastoji od 60 atoma ugljika raspoređenih u obliku [Trnovitog ikozaedra](gloss:truncated-icosahedron) . 
+Mnoge su __molekule__ oblikovane poput redovitih poliedra. Najpoznatiji primjer je `C_60` koji se sastoji od 60 atoma ugljika raspoređenih u obliku [Trnovitog ikozaedra](gloss:truncated-icosahedron) . 
 
- Otkriven je 1985. kada su znanstvenici istraživali međuzvjezdanu prašinu. Nazvali su je "Buckyball" (ili Buckminsterfullerene) po arhitektu [Buckminsteru Fulleru](bio:fuller) , poznatom po izgradnji građevina sličnog izgleda. 
+Otkriven je 1985. kada su znanstvenici istraživali međuzvjezdanu prašinu. Nazvali su je "Buckyball" (ili Buckminsterfullerene) po arhitektu [Buckminsteru Fulleru](bio:fuller) , poznatom po izgradnji građevina sličnog izgleda. 
 
 :::
 
@@ -1759,7 +1718,7 @@ _{span.dual} 30 ivica_
 
 ::: column.grow
 
- Većina __kristala__ ima svoje atome raspoređene u pravilnoj mreži koja se sastoji od [tetraedra](gloss:tetrahedron) , [kocke](gloss:cube) ili [oktaedra](gloss:octahedron) . Kad puknu ili se razbiju, ove oblike možete vidjeti u većoj mjeri. 
+Većina __kristala__ ima svoje atome raspoređene u pravilnoj mreži koja se sastoji od [tetraedra](gloss:tetrahedron) , [kocke](gloss:cube) ili [oktaedra](gloss:octahedron) . Kad puknu ili se razbiju, ove oblike možete vidjeti u većoj mjeri. 
 
 :::
 
@@ -1775,7 +1734,7 @@ _{span.dual} 30 ivica_
 
 ::: column.grow
 
- Tetrahedri i oktaedri su nevjerojatno kruti i stabilni, što ih čini vrlo korisnim u __gradnji__ . _Svemirski okviri_ su poligonalne strukture koje mogu podupirati velike krovove i teške mostove. 
+Tetrahedri i oktaedri su nevjerojatno kruti i stabilni, što ih čini vrlo korisnim u __gradnji__ . _Svemirski okviri_ su poligonalne strukture koje mogu podupirati velike krovove i teške mostove. 
 
 :::
 
@@ -1791,8 +1750,8 @@ _{span.dual} 30 ivica_
 
 ::: column.grow
 
- Platonske krute tvari također se koriste za stvaranje __kockica__ . zbog svoje simetrije, svaka strana ima [vjerojatnost](gloss:probability) da će sletjeti okrenuta prema gore - tako da su kockice poštene. 
+Platonske krute tvari također se koriste za stvaranje __kockica__ . zbog svoje simetrije, svaka strana ima [vjerojatnost](gloss:probability) da će sletjeti okrenuta prema gore - tako da su kockice poštene. 
 
- [Trnoviti ikosahedron](gloss:truncated-icosahedron) je vjerojatno najpoznatiji [polededr](gloss:truncated-icosahedron) na svijetu: to je oblik nogometa. 
+[Trnoviti ikosahedron](gloss:truncated-icosahedron) je vjerojatno najpoznatiji [polededr](gloss:truncated-icosahedron) na svijetu: to je oblik nogometa. 
 
 :::

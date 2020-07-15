@@ -7,9 +7,9 @@
 
 ::: column.grow
 
- Depuis que l'homme existe, nous avons regardé le ciel et essayé d'expliquer la vie sur Terre en utilisant le mouvement des étoiles, des planètes et de la lune. 
+Depuis que l'homme existe, nous avons regardé le ciel et essayé d'expliquer la vie sur Terre en utilisant le mouvement des étoiles, des planètes et de la lune. 
 
- Les astronomes de la Grèce antique ont été les premiers à découvrir que tous les objets célestes se déplacent sur des chemins réguliers, appelés __orbites__ . Ils pensaient que ces orbites étaient toujours circulaires. Après tout, les cercles sont les «plus parfaits» de toutes les formes: symétriques dans toutes les directions, et donc un choix approprié pour l'ordre sous-jacent de notre univers. 
+Les astronomes de la Grèce antique ont été les premiers à découvrir que tous les objets célestes se déplacent sur des chemins réguliers, appelés __orbites__ . Ils pensaient que ces orbites étaient toujours circulaires. Après tout, les cercles sont les «plus parfaits» de toutes les formes: symétriques dans toutes les directions, et donc un choix approprié pour l'ordre sous-jacent de notre univers. 
 
 ::: column(width=320)
 
@@ -23,7 +23,7 @@
 > id: radius
 > goals: compass
 
- Chaque point sur un [__cercle__](gloss:circle) a la même distance de son centre. Cela signifie qu'ils peuvent être dessinés à l'aide d'une [boussole](gloss:compass) : 
+Chaque point sur un [__cercle__](gloss:circle) a la même distance de son centre. Cela signifie qu'ils peuvent être dessinés à l'aide d'une [boussole](gloss:compass) : 
 
 ::: column(width=320)
 
@@ -41,7 +41,9 @@
 
 {.reveal(when="compass")} Il existe trois mesures importantes liées aux cercles que vous devez connaître: 
 
- * {.reveal(when="compass" delay="1000")} le [{.pill.red.b} rayon](target:r) est la distance entre le centre d'un cercle et son bord extérieur. * {.reveal(when="compass" delay="4000")} le [{.pill.blue.b} diamètre](target:d) est la distance entre deux points opposés sur un cercle. Il passe par son centre, et sa longueur est [[deux fois | moitié | le même que]] le rayon. * {.reveal(when="blank-0")} le [{.pill.green.b} la circonférence](target:c) (ou périmètre) est la distance autour d'un cercle. 
+* {.reveal(when="compass" delay="1000")} le [{.pill.red.b} rayon](target:r) est la distance entre le centre d'un cercle et son bord extérieur.
+* {.reveal(when="compass" delay="4000")} le [{.pill.blue.b} diamètre](target:d) est la distance entre deux points opposés sur un cercle. Il passe par son centre, et sa longueur est [[deux fois | moitié | le même que]] le rayon.
+* {.reveal(when="blank-0")} le [{.pill.green.b} la circonférence](target:c) (ou périmètre) est la distance autour d'un cercle. 
 
 :::
 
@@ -49,7 +51,7 @@
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
- Une propriété importante des cercles est que tous les cercles sont [similaires](gloss:similar) . Vous pouvez le prouver en montrant comment tous les cercles peuvent être mis en correspondance en utilisant simplement des [traductions](gloss:translation) et des [dilatations](gloss:dilation) : 
+Une propriété importante des cercles est que tous les cercles sont [similaires](gloss:similar) . Vous pouvez le prouver en montrant comment tous les cercles peuvent être mis en correspondance en utilisant simplement des [traductions](gloss:translation) et des [dilatations](gloss:dilation) : 
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -57,7 +59,7 @@
 > id: pi-definition
 > goals: digits
 
- Vous vous souvenez peut-être que, pour des polygones similaires, le rapport entre les côtés correspondants est toujours constant. Quelque chose de similaire fonctionne pour les cercles: le rapport entre la [circonférence](gloss:circle-circumference) et le [diamètre](gloss:circle-diameter) est égal pour _tous les cercles_ . C'est toujours 3,14159… - un nombre mystérieux appelé [__Pi__](gloss:pi) , qui est souvent écrit comme la lettre grecque _π_ pour «p». Pi a une infinité de chiffres décimaux qui durent indéfiniment sans motif spécifique: 
+Vous vous souvenez peut-être que, pour des polygones similaires, le rapport entre les côtés correspondants est toujours constant. Quelque chose de similaire fonctionne pour les cercles: le rapport entre la [circonférence](gloss:circle-circumference) et le [diamètre](gloss:circle-diameter) est égal pour _tous les cercles_ . C'est toujours 3,14159… - un nombre mystérieux appelé [__Pi__](gloss:pi) , qui est souvent écrit comme la lettre grecque _π_ pour «p». Pi a une infinité de chiffres décimaux qui durent indéfiniment sans motif spécifique: 
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -65,7 +67,7 @@
 > id: wheel
 > goals: unroll
 
- Voici une roue de diamètre 1. En "déroulant" la circonférence, vous pouvez voir que sa longueur est exactement [[`pi`|`2 * pi`| 3]] : 
+Voici une roue de diamètre 1. En "déroulant" la circonférence, vous pouvez voir que sa longueur est exactement [[`pi`|`2 * pi`| 3]] : 
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -73,14 +75,14 @@
 ---
 > id: circumference
 
- Pour un cercle de diamètre _d_ , la circonférence est `C = π × d` . De même, pour un cercle de [rayon](gloss:circle-radius) _r_ , la circonférence est 
+Pour un cercle de diamètre _d_ , la circonférence est `C = π × d` . De même, pour un cercle de [rayon](gloss:circle-radius) _r_ , la circonférence est 
 
 {.text-center}`C =` [[`2 π r`|`π r`|`π r^2`]] . 
 
 ---
 > id: nature
 
- Les cercles sont parfaitement symétriques et n'ont pas de «points faibles» comme les coins d'un polygone. C'est l'une des raisons pour lesquelles ils peuvent être trouvés partout dans la nature: 
+Les cercles sont parfaitement symétriques et n'ont pas de «points faibles» comme les coins d'un polygone. C'est l'une des raisons pour lesquelles ils peuvent être trouvés partout dans la nature: 
 
 ::: column(width=130 parent="padded-thin")
 
@@ -122,9 +124,9 @@
 
 ::: column.grow
 
- Il s'avère également qu'un cercle est la forme ayant la plus grande surface pour une circonférence donnée. Par exemple, si vous avez une corde d'une longueur de 100 \ m, vous pouvez l'utiliser pour enfermer le plus grand espace si vous formez un cercle (plutôt que d'autres formes comme un rectangle ou un triangle). 
+Il s'avère également qu'un cercle est la forme ayant la plus grande surface pour une circonférence donnée. Par exemple, si vous avez une corde d'une longueur de 100 \ m, vous pouvez l'utiliser pour enfermer le plus grand espace si vous formez un cercle (plutôt que d'autres formes comme un rectangle ou un triangle). 
 
- Dans la nature, des objets comme des gouttes d'eau ou des bulles d'air peuvent _économiser de l'énergie_ en devenant circulaires ou sphériques et en réduisant leur surface. 
+Dans la nature, des objets comme des gouttes d'eau ou des bulles d'air peuvent _économiser de l'énergie_ en devenant circulaires ou sphériques et en réduisant leur surface. 
 
 ::: column(width=320)
 
@@ -145,9 +147,9 @@
 
 ### L'aire d'un cercle 
 
- Mais comment calculer réellement l'aire d'un cercle? Essayons la même technique que nous avons utilisée pour [trouver l'aire des quadrilatères](/course/polyhedra/quadrilaterals) : nous coupons la forme en plusieurs parties différentes, puis les réorganisons dans une forme différente dont nous connaissons déjà l'aire (par exemple un rectangle ou un triangle). 
+Mais comment calculer réellement l'aire d'un cercle? Essayons la même technique que nous avons utilisée pour [trouver l'aire des quadrilatères](/course/polyhedra/quadrilaterals) : nous coupons la forme en plusieurs parties différentes, puis les réorganisons dans une forme différente dont nous connaissons déjà l'aire (par exemple un rectangle ou un triangle). 
 
- La seule différence est que, comme les cercles sont courbes, nous devons utiliser quelques approximations: 
+La seule différence est que, comme les cercles sont courbes, nous devons utiliser quelques approximations: 
 
 ::: column(width=340)
 
@@ -164,7 +166,7 @@
 
 ::: column.grow
 
- Ici, vous pouvez voir un cercle divisé en ${toWord(n1)} cales. Déplacez le curseur pour aligner les coins sur une rangée. 
+Ici, vous pouvez voir un cercle divisé en ${toWord(n1)} cales. Déplacez le curseur pour aligner les coins sur une rangée. 
 
 {.reveal(when="slider")} Si nous augmentons le nombre de coins à ${n1}{n1|6|6,30,2} , cette forme commence à ressembler de plus en plus à un [[rectangle | cercle | carré]] . 
 
@@ -190,7 +192,7 @@
 
 ::: column.grow
 
- Ici, vous pouvez voir un cercle divisé en ${toWord(n)} anneaux. Comme précédemment, vous pouvez déplacer le curseur pour «dérouler» les anneaux. 
+Ici, vous pouvez voir un cercle divisé en ${toWord(n)} anneaux. Comme précédemment, vous pouvez déplacer le curseur pour «dérouler» les anneaux. 
 
 {.reveal(when="slider")} Si nous augmentons le nombre de sonneries à ${n2}{n2|4|2,12,1} , cette forme ressemble de plus en plus à un [[triangle | rectangle | trapèze]] . 
 
@@ -203,7 +205,7 @@
 ---
 > id: area-2
 
- Si nous pouvions utiliser une infinité d'anneaux ou de coins, les approximations ci-dessus seraient parfaites - et elles nous donnent toutes les deux la même formule pour l'aire d'un cercle: 
+Si nous pouvions utiliser une infinité d'anneaux ou de coins, les approximations ci-dessus seraient parfaites - et elles nous donnent toutes les deux la même formule pour l'aire d'un cercle: 
 
 {.text-center.r}`A = π r^2` . [Continuer](btn:next) 
 
@@ -212,9 +214,9 @@
 
 ### Calcul de Pi 
 
- Comme vous l'avez vu ci-dessus, `π = 3.1415926…` n'est pas un simple entier, et ses chiffres décimaux continuent indéfiniment, sans motif répétitif. Les nombres avec cette propriété sont appelés [__nombres irrationnels__](gloss:irrational-numbers) , ce qui signifie que `π` ne peut pas être exprimé comme une simple fraction `a/b` . 
+Comme vous l'avez vu ci-dessus, `π = 3.1415926…` n'est pas un simple entier, et ses chiffres décimaux continuent indéfiniment, sans motif répétitif. Les nombres avec cette propriété sont appelés [__nombres irrationnels__](gloss:irrational-numbers) , ce qui signifie que `π` ne peut pas être exprimé comme une simple fraction `a/b` . 
 
- Cela signifie également que nous ne pouvons jamais écrire _tous_ les chiffres de Pi - après tout, ils sont infiniment nombreux. Les mathématiciens grecs et chinois anciens ont calculé les quatre premiers chiffres décimaux de Pi en approximant les cercles à l'aide de polygones réguliers. Remarquez comment, lorsque vous ajoutez plus de côtés, le polygone commence à apparaître de [[plus en plus | Moins | exactement]] comme un cercle: 
+Cela signifie également que nous ne pouvons jamais écrire _tous_ les chiffres de Pi - après tout, ils sont infiniment nombreux. Les mathématiciens grecs et chinois anciens ont calculé les quatre premiers chiffres décimaux de Pi en approximant les cercles à l'aide de polygones réguliers. Remarquez comment, lorsque vous ajoutez plus de côtés, le polygone commence à apparaître de [[plus en plus | Moins | exactement]] comme un cercle: 
 
     figure: x-img(src="images/polygons.svg" width=460 height=110)
 
@@ -227,18 +229,18 @@
 
 ::: column.grow
 
- En 1665, [Isaac Newton a](bio:newton) réussi à calculer 15 chiffres. Aujourd'hui, nous pouvons utiliser des ordinateurs puissants pour calculer la valeur de Pi avec une précision beaucoup plus élevée. 
+En 1665, [Isaac Newton a](bio:newton) réussi à calculer 15 chiffres. Aujourd'hui, nous pouvons utiliser des ordinateurs puissants pour calculer la valeur de Pi avec une précision beaucoup plus élevée. 
 
- Le record actuel est de 31,4 billions de chiffres. Un livre imprimé contenant tous ces chiffres aurait une épaisseur d'environ 400 \ km - c'est la hauteur à laquelle la [Station spatiale internationale](gloss:iss) orbite autour de la Terre! 
+Le record actuel est de 31,4 billions de chiffres. Un livre imprimé contenant tous ces chiffres aurait une épaisseur d'environ 400 \ km - c'est la hauteur à laquelle la [Station spatiale internationale](gloss:iss) orbite autour de la Terre! 
 
- Bien sûr, vous n'avez pas besoin de vous rappeler que de nombreux chiffres de Pi. En fait, la fraction `22/7 = 3.142…` est une grande approximation. 
+Bien sûr, vous n'avez pas besoin de vous rappeler que de nombreux chiffres de Pi. En fait, la fraction `22/7 = 3.142…` est une grande approximation. 
 
 :::
 
 ---
 > id: pi-sequence
 
- Une approche pour calculer Pi utilise des séquences infinies de nombres. Voici un exemple qui a été découvert par [Gottfried Wilhelm Leibniz](bio:leibniz) en 1676: 
+Une approche pour calculer Pi utilise des séquences infinies de nombres. Voici un exemple qui a été découvert par [Gottfried Wilhelm Leibniz](bio:leibniz) en 1676: 
 
 {.text-center}`π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
@@ -250,9 +252,9 @@
 
 ::: column.grow
 
- De nombreux mathématiciens pensent que Pi a une propriété encore plus curieuse: qu'il s'agit d'un __nombre normal__ . Cela signifie que les chiffres de 0 à 9 apparaissent complètement au hasard, comme si la nature avait lancé un dé à 10 faces infiniment de fois, pour déterminer la valeur de Pi. 
+De nombreux mathématiciens pensent que Pi a une propriété encore plus curieuse: qu'il s'agit d'un __nombre normal__ . Cela signifie que les chiffres de 0 à 9 apparaissent complètement au hasard, comme si la nature avait lancé un dé à 10 faces infiniment de fois, pour déterminer la valeur de Pi. 
 
- Ici, vous pouvez voir les 100 premiers chiffres de Pi. Passez sur certaines cellules pour voir comment les chiffres sont répartis. 
+Ici, vous pouvez voir les 100 premiers chiffres de Pi. Passez sur certaines cellules pour voir comment les chiffres sont répartis. 
 
 ::: column(width=330)
 
@@ -271,7 +273,7 @@
 > id: pi-digits
 > goals: search
 
- Si Pi est normal, cela signifie que vous pouvez penser à _n'importe quelle_ chaîne de chiffres, et il apparaîtra quelque part dans ses chiffres. Ici, vous pouvez rechercher le premier million de chiffres de Pi - contiennent-ils votre anniversaire? 
+Si Pi est normal, cela signifie que vous pouvez penser à _n'importe quelle_ chaîne de chiffres, et il apparaîtra quelque part dans ses chiffres. Ici, vous pouvez rechercher le premier million de chiffres de Pi - contiennent-ils votre anniversaire? 
 
 ::: .box.f-red.pi-box
 
@@ -289,9 +291,9 @@
 ---
 > id: pi-movies
 
- Nous pourrions même convertir un livre entier, comme Harry Potter, en une très longue chaîne de chiffres (a = 01, b = 02, etc.). Si Pi est normal, cette chaîne apparaîtra quelque part dans ses chiffres - mais il faudrait des millions d'années pour calculer suffisamment de chiffres pour la trouver. 
+Nous pourrions même convertir un livre entier, comme Harry Potter, en une très longue chaîne de chiffres (a = 01, b = 02, etc.). Si Pi est normal, cette chaîne apparaîtra quelque part dans ses chiffres - mais il faudrait des millions d'années pour calculer suffisamment de chiffres pour la trouver. 
 
- Pi est facile à comprendre, mais d'une importance fondamentale en science et en mathématiques. Cela pourrait être une raison pour laquelle Pi est devenu inhabituellement populaire dans notre culture (au moins, par rapport à d'autres sujets de mathématiques): 
+Pi est facile à comprendre, mais d'une importance fondamentale en science et en mathématiques. Cela pourrait être une raison pour laquelle Pi est devenu inhabituellement populaire dans notre culture (au moins, par rapport à d'autres sujets de mathématiques): 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -313,7 +315,7 @@
 ---
 > id: pi-day
 
- Il y a même un _jour Pi_ chaque année, qui tombe soit le 14 mars, car `pi ≈ 3.14` , ou le 22 juillet, car `pi ≈ 22/7` . 
+Il y a même un _jour Pi_ chaque année, qui tombe soit le 14 mars, car `pi ≈ 3.14` , ou le 22 juillet, car `pi ≈ 22/7` . 
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -324,7 +326,7 @@
 > section: radians
 > id: degrees
 
- Jusqu'à présent en géométrie, nous avons toujours mesuré les angles en [degrés](gloss:degrees) . UNE __{.m-red} la__ rotation du __cercle complet__ est de [[360]]°, un __{.m-green} demi-cercle__ est de [[180]]°, un __{.m-yellow} le quart de cercle__ est de [[90]]°, etc. 
+Jusqu'à présent en géométrie, nous avons toujours mesuré les angles en [degrés](gloss:degrees) . UNE __{.m-red} la__ rotation du __cercle complet__ est de [[360]]°, un __{.m-green} demi-cercle__ est de [[180]]°, un __{.m-yellow} le quart de cercle__ est de [[90]]°, etc. 
 
 ::: column(width=160)
 
@@ -368,9 +370,9 @@
 
 ::: column.grow
 
- En fait, 360 degrés sont l'un des plus anciens concepts mathématiques que nous utilisons encore aujourd'hui. Ils ont été développés dans l'ancienne Babylone, il y a plus de 5000 ans! 
+En fait, 360 degrés sont l'un des plus anciens concepts mathématiques que nous utilisons encore aujourd'hui. Ils ont été développés dans l'ancienne Babylone, il y a plus de 5000 ans! 
 
- À cette époque, l'une des applications les plus importantes des mathématiques était en astronomie. Le _soleil_ détermine les quatre saisons, que les agriculteurs doivent connaître lors de la culture. De même, la _lune_ détermine les marées, ce qui était important pour les pêcheurs. Les gens ont également étudié les étoiles pour prédire l'avenir ou pour communiquer avec les dieux. 
+À cette époque, l'une des applications les plus importantes des mathématiques était en astronomie. Le _soleil_ détermine les quatre saisons, que les agriculteurs doivent connaître lors de la culture. De même, la _lune_ détermine les marées, ce qui était important pour les pêcheurs. Les gens ont également étudié les étoiles pour prédire l'avenir ou pour communiquer avec les dieux. 
 
 ::: column(width=260)
 
@@ -384,7 +386,7 @@
 > id: constellations
 > goals: rotate
 
- Les astronomes ont remarqué que les constellations visibles à un moment précis de la nuit se déplaçaient un peu chaque jour - jusqu'à ce qu'après environ 360 jours, elles soient retournées à leur point de départ. Et c'est peut-être la raison pour laquelle ils ont divisé le cercle en 360 degrés. 
+Les astronomes ont remarqué que les constellations visibles à un moment précis de la nuit se déplaçaient un peu chaque jour - jusqu'à ce qu'après environ 360 jours, elles soient retournées à leur point de départ. Et c'est peut-être la raison pour laquelle ils ont divisé le cercle en 360 degrés. 
 
     figure: .constellations
       .label.md Midnight on day ${day}
@@ -397,15 +399,15 @@
 > id: constellations-1
 > goals: video
 
- Bien sûr, il y a en fait 365 jours en un an (enfin 365.242199 pour être exact), mais les mathématiciens babyloniens ont travaillé avec de simples cadrans solaires, et cette approximation était parfaitement adéquate. 
+Bien sûr, il y a en fait 365 jours en un an (enfin 365.242199 pour être exact), mais les mathématiciens babyloniens ont travaillé avec de simples cadrans solaires, et cette approximation était parfaitement adéquate. 
 
- Il a également bien fonctionné avec leur système de numérotation de base 60 existant (depuis `6 xx 60 = 360` ). Ce système est la raison pour laquelle nous avons encore 60 secondes en une minute et 60 minutes en une heure - même si la plupart des autres unités sont mesurées en [base 10](gloss:base-10) (par exemple 10 ans dans une décennie ou 100 ans dans un siècle). 
+Il a également bien fonctionné avec leur système de numérotation de base 60 existant (depuis `6 xx 60 = 360` ). Ce système est la raison pour laquelle nous avons encore 60 secondes en une minute et 60 minutes en une heure - même si la plupart des autres unités sont mesurées en [base 10](gloss:base-10) (par exemple 10 ans dans une décennie ou 100 ans dans un siècle). 
 
 ::: column.grow
 
- Pour beaucoup d'entre nous, mesurer les angles en degrés est une seconde nature: il y a une vidéo à 360°, les planchistes peuvent tirer des 540, et quelqu'un qui change de décision peut faire un virage à 180°. 
+Pour beaucoup d'entre nous, mesurer les angles en degrés est une seconde nature: il y a une vidéo à 360°, les planchistes peuvent tirer des 540, et quelqu'un qui change de décision peut faire un virage à 180°. 
 
- Mais d'un point de vue mathématique, le choix de 360 est complètement arbitraire. Si nous vivions sur Mars, un cercle pourrait avoir 670°, et un an sur Jupiter a même 10 475 jours. 
+Mais d'un point de vue mathématique, le choix de 360 est complètement arbitraire. Si nous vivions sur Mars, un cercle pourrait avoir 670°, et un an sur Jupiter a même 10 475 jours. 
 
 ::: column(width=280)
 
@@ -420,7 +422,7 @@
 
 ### Radians 
 
- Plutôt que de diviser un cercle en un certain nombre de segments (comme 360 degrés), les mathématiciens préfèrent souvent mesurer les angles en utilisant la [circonférence](gloss:circle-circumference) d'un [__cercle unitaire__](gloss:unit-circle) (un cercle de rayon 1). 
+Plutôt que de diviser un cercle en un certain nombre de segments (comme 360 degrés), les mathématiciens préfèrent souvent mesurer les angles en utilisant la [circonférence](gloss:circle-circumference) d'un [__cercle unitaire__](gloss:unit-circle) (un cercle de rayon 1). 
 
 ::: column(width=280)
 
@@ -436,7 +438,7 @@
 
 ::: column.grow
 
- UNE _{span.var-action} le cercle complet_ a une circonférence _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+UNE _{span.var-action} le cercle complet_ a une circonférence _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
 {.reveal(when="eqn-0")} Pour un _{span.var-action} rotation en demi-cercle_ , la distance correspondante le long de la circonférence est _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
@@ -449,7 +451,7 @@
 ---
 > id: radians-conversion
 
- Chaque angle en degrés a une taille équivalente en radians. La conversion entre les deux est très facile - tout comme vous pouvez convertir entre d'autres unités comme les mètres et les kilomètres, ou Celsius et Fahrenheit: 
+Chaque angle en degrés a une taille équivalente en radians. La conversion entre les deux est très facile - tout comme vous pouvez convertir entre d'autres unités comme les mètres et les kilomètres, ou Celsius et Fahrenheit: 
 
 {.text-center} __{.m-red} 360°__ _{span.space} =_ __{.m-green} 2 _π_ rad__ 
 
@@ -468,20 +470,22 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 ---
 > id: radians-table
 
- Vous pouvez écrire la valeur des radians soit comme un multiple de _π_ , soit comme un simple nombre décimal. Pouvez-vous remplir ce tableau des tailles d'angles équivalentes en degrés et radians? 
+Vous pouvez écrire la valeur des radians soit comme un multiple de _π_ , soit comme un simple nombre décimal. Pouvez-vous remplir ce tableau des tailles d'angles équivalentes en degrés et radians? 
 
- | __{.m-red} degrés__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ | | __{.m-green} radians__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` | {.table-small.grid}
+| __{.m-red} degrés__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ |
+| __{.m-green} radians__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
 
 ---
 > id: radians-distance
 
 ### Distance parcourue 
 
- Vous pouvez considérer les radians comme la «distance parcourue» le long de la circonférence d'un cercle unitaire. Ceci est particulièrement utile lorsque vous travaillez avec des objets qui se déplacent sur une trajectoire circulaire. 
+Vous pouvez considérer les radians comme la «distance parcourue» le long de la circonférence d'un cercle unitaire. Ceci est particulièrement utile lorsque vous travaillez avec des objets qui se déplacent sur une trajectoire circulaire. 
 
 ::: column.grow
 
- Par exemple, la [Station spatiale internationale](gloss:iss) orbite autour de la Terre toutes les 1,5 heure. Cela signifie que sa __vitesse de rotation__ est [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] radians par heure. 
+Par exemple, la [Station spatiale internationale](gloss:iss) orbite autour de la Terre toutes les 1,5 heure. Cela signifie que sa __vitesse de rotation__ est [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] radians par heure. 
 
 {.reveal(when="blank-0")} Dans un [cercle unitaire](gloss:unit-circle) , la vitesse de rotation est la même que la vitesse _réelle_ , car la longueur de la circonférence est la même qu'une rotation complète en radians (les deux sont `2pi` ). 
 
@@ -508,9 +512,9 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 ---
 > id: radians-distance-1
 
- Pouvez-vous voir que, dans cet exemple, les radians sont une unité beaucoup plus pratique que les degrés? Une fois que nous connaissons la vitesse de rotation, nous devons simplement multiplier par le rayon pour obtenir la vitesse réelle. 
+Pouvez-vous voir que, dans cet exemple, les radians sont une unité beaucoup plus pratique que les degrés? Une fois que nous connaissons la vitesse de rotation, nous devons simplement multiplier par le rayon pour obtenir la vitesse réelle. 
 
- Voici un autre exemple: votre voiture a des roues avec un rayon de 0,25 \ m. Si vous conduisez à une vitesse de 20 \ m / s, les roues de votre voiture tournent à [[`20/0.25 =
+Voici un autre exemple: votre voiture a des roues avec un rayon de 0,25 \ m. Si vous conduisez à une vitesse de 20 \ m / s, les roues de votre voiture tournent à [[`20/0.25 =
 80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] radians par seconde _{span.reveal(when="blank-0")} (ou `80/(2pi) = 13` rotations par seconde)._ 
 
 ---
@@ -518,13 +522,13 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 
 ### Trigonométrie 
 
- Pour la plupart des problèmes de géométrie simples, les degrés et les radians sont complètement interchangeables - vous pouvez choisir celui que vous préférez, ou une question peut vous dire dans quelle unité donner votre réponse. Cependant, une fois que vous avez étudié la [trigonométrie](gloss:trigonometry) ou le [calcul](gloss:calculus) plus avancé, il s'avère que les radians sont beaucoup plus pratiques que les degrés. 
+Pour la plupart des problèmes de géométrie simples, les degrés et les radians sont complètement interchangeables - vous pouvez choisir celui que vous préférez, ou une question peut vous dire dans quelle unité donner votre réponse. Cependant, une fois que vous avez étudié la [trigonométrie](gloss:trigonometry) ou le [calcul](gloss:calculus) plus avancé, il s'avère que les radians sont beaucoup plus pratiques que les degrés. 
 
 ::: column.grow
 
- La plupart des calculatrices ont un [bouton spécial](->.button.mode) pour basculer entre degrés et radians. Les fonctions trigonométriques comme [__sin__](gloss:sin) , [__cos__](gloss:cos) et __tan__ prennent des angles en entrée, et leurs fonctions inverses __arcsin__ , __arccos__ et __arctan__ renvoient des angles en sortie. Le paramètre actuel de la calculatrice détermine les unités utilisées pour ces angles. 
+La plupart des calculatrices ont un [bouton spécial](->.button.mode) pour basculer entre degrés et radians. Les fonctions trigonométriques comme [__sin__](gloss:sin) , [__cos__](gloss:cos) et __tan__ prennent des angles en entrée, et leurs fonctions inverses __arcsin__ , __arccos__ et __arctan__ renvoient des angles en sortie. Le paramètre actuel de la calculatrice détermine les unités utilisées pour ces angles. 
 
- Essayez d'utiliser cette calculatrice pour calculer que 
+Essayez d'utiliser cette calculatrice pour calculer que 
 
 {.text-center} sin (30°) = [[0,5]] _{span.eqn-gap}_ cos (1°) = [[0,999]]  
 sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]] 
@@ -557,7 +561,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: small-angle
 
- L'utilisation de radians présente un avantage particulièrement intéressant lors de l'utilisation de la fonction Sinus. Si `θ` est un très petit angle (moins de 20° ou 0,3 rad), alors `sin(θ) ≈ θ` . Par exemple, 
+L'utilisation de radians présente un avantage particulièrement intéressant lors de l'utilisation de la fonction Sinus. Si `θ` est un très petit angle (moins de 20° ou 0,3 rad), alors `sin(θ) ≈ θ` . Par exemple, 
 
 {.text-center} péché( ${x}{x|0.1|0,0.5,0.05} ) `≈`${sin(x)} … 
 
@@ -570,7 +574,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > section: tangets-chords-arcs
 > id: circle-parts
 
- Dans les sections précédentes, vous avez appris les noms donnés à plusieurs parties différentes d'un cercle - comme le centre, le rayon, le diamètre et la circonférence. Cependant, il existe de nombreux éléments géométriques liés à un cercle, dont nous aurons besoin pour résoudre des problèmes plus complexes: 
+Dans les sections précédentes, vous avez appris les noms donnés à plusieurs parties différentes d'un cercle - comme le centre, le rayon, le diamètre et la circonférence. Cependant, il existe de nombreux éléments géométriques liés à un cercle, dont nous aurons besoin pour résoudre des problèmes plus complexes: 
 
 ::: column(width=300)
 
@@ -599,14 +603,19 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow(parent="right")
 
- * {.r} UNE [{.red} sécante](pill:secant) est une ligne qui coupe un cercle en deux points. [Continuer](btn:next) * {.r.reveal(when="next-0")} UNE [{.green} l'accord](pill:chord) est un segment de ligne dont les extrémités se trouvent sur la circonférence d'un cercle. [Continuer](btn:next) * {.r.reveal(when="next-1")} UNE [{.blue} tangente](pill:tangent) est une ligne qui touche un cercle à exactement un point. C'est ce qu'on appelle le __point de tangence__ . [Continuer](btn:next) * {.r.reveal(when="next-2")} Une [{.yellow} arc](pill:arc) est une section de la circonférence d'un cercle. [Continuer](btn:next) * {.r.reveal(when="next-3")} UNE [{.teal} secteur](pill:sector) fait partie de l'intérieur d'un cercle, délimité par un _arc_ et _deux rayons_ . [Continuer](btn:next) * {.r.reveal(when="next-4")} Enfin, un [{.purple} segment](pill:segment) est une partie de l'intérieur d'un cercle, délimité par un _arc_ et _un accord_ . [Continuer](btn:next) 
+* {.r} UNE [{.red} sécante](pill:secant) est une ligne qui coupe un cercle en deux points. [Continuer](btn:next)
+* {.r.reveal(when="next-0")} UNE [{.green} l'accord](pill:chord) est un segment de ligne dont les extrémités se trouvent sur la circonférence d'un cercle. [Continuer](btn:next)
+* {.r.reveal(when="next-1")} UNE [{.blue} tangente](pill:tangent) est une ligne qui touche un cercle à exactement un point. C'est ce qu'on appelle le __point de tangence__ . [Continuer](btn:next)
+* {.r.reveal(when="next-2")} Une [{.yellow} arc](pill:arc) est une section de la circonférence d'un cercle. [Continuer](btn:next)
+* {.r.reveal(when="next-3")} UNE [{.teal} secteur](pill:sector) fait partie de l'intérieur d'un cercle, délimité par un _arc_ et _deux rayons_ . [Continuer](btn:next)
+* {.r.reveal(when="next-4")} Enfin, un [{.purple} segment](pill:segment) est une partie de l'intérieur d'un cercle, délimité par un _arc_ et _un accord_ . [Continuer](btn:next) 
 
 :::
 
 ---
 > id: circle-parts-1
 
- Dans cette section, nous allons examiner la relation entre tous ces éléments et prouver des théorèmes sur leurs propriétés. Ne vous inquiétez pas de mémoriser toutes les définitions pour l'instant - vous pouvez toujours utiliser le [glossaire](->.footer-link[data-modal=glossarym]) . 
+Dans cette section, nous allons examiner la relation entre tous ces éléments et prouver des théorèmes sur leurs propriétés. Ne vous inquiétez pas de mémoriser toutes les définitions pour l'instant - vous pouvez toujours utiliser le [glossaire](->.footer-link[data-modal=glossarym]) . 
 
 ---
 
@@ -614,33 +623,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} BIENTÔT DISPONIBLE! 
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
     
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
 
 ---
 
@@ -648,52 +631,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} BIENTÔT DISPONIBLE! 
 
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
     
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -702,9 +640,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- La plupart des scientifiques de la Grèce antique ont convenu que la Terre est une sphère. Il y avait beaucoup de preuves: des navires disparaissant derrière l'horizon en mer, au mouvement circulaire des étoiles pendant la nuit. 
+La plupart des scientifiques de la Grèce antique ont convenu que la Terre est une sphère. Il y avait beaucoup de preuves: des navires disparaissant derrière l'horizon en mer, au mouvement circulaire des étoiles pendant la nuit. 
 
- Malheureusement, personne ne savait exactement _la taille de la_ Terre - jusqu'à environ 200 avant JC, lorsque le mathématicien [Ératosthène a](bio:eratosthenes) trouvé un moyen ingénieux de mesurer le rayon de la Terre, en utilisant la géométrie de base. Tout ce dont nous avons besoin, c'est d'un peu plus de connaissances sur les arcs et les secteurs d'un cercle. 
+Malheureusement, personne ne savait exactement _la taille de la_ Terre - jusqu'à environ 200 avant JC, lorsque le mathématicien [Ératosthène a](bio:eratosthenes) trouvé un moyen ingénieux de mesurer le rayon de la Terre, en utilisant la géométrie de base. Tout ce dont nous avons besoin, c'est d'un peu plus de connaissances sur les arcs et les secteurs d'un cercle. 
 
 ::: column(width=280)
 
@@ -729,13 +667,13 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Comme vous pouvez le voir sur le schéma, un [{.red} l'arc](pill:arc) fait partie de la [[circonférence | diamètre | tangente]] d'un cercle, et un [{.yellow} le secteur](pill:sector) fait partie de l' [[intérieur | rayon | périmètre]] d'un cercle. 
+Comme vous pouvez le voir sur le schéma, un [{.red} l'arc](pill:arc) fait partie de la [[circonférence | diamètre | tangente]] d'un cercle, et un [{.yellow} le secteur](pill:sector) fait partie de l' [[intérieur | rayon | périmètre]] d'un cercle. 
 
 ::: .reveal(when="blank-0 blank-1")
 
- L'arc entre deux points _A_ et _B_ est souvent écrit comme `arc(AB)` . Cette définition est légèrement ambiguë: il existe un [{.purple} deuxième arc](pill:major) qui relie _A_ et _B_ mais fait le contraire dans le cercle. 
+L'arc entre deux points _A_ et _B_ est souvent écrit comme `arc(AB)` . Cette définition est légèrement ambiguë: il existe un [{.purple} deuxième arc](pill:major) qui relie _A_ et _B_ mais fait le contraire dans le cercle. 
 
- Le plus petit des deux arcs est appelé __arc mineur__ et le plus grand est appelé __arc majeur__ . Si les points _A_ et _B_ sont exactement opposés, les deux arcs ont la même longueur et sont des [[demi]] - [[cercles | diamètres | circonférences]] . 
+Le plus petit des deux arcs est appelé __arc mineur__ et le plus grand est appelé __arc majeur__ . Si les points _A_ et _B_ sont exactement opposés, les deux arcs ont la même longueur et sont des [[demi]] - [[cercles | diamètres | circonférences]] . 
 
 :::
 
@@ -746,15 +684,15 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Pour trouver la longueur d'un arc ou l'aire d'un secteur, nous devons connaître l'angle correspondant au centre du cercle: c'est ce qu'on appelle le [{.blue} angle central](pill:angle) . 
+Pour trouver la longueur d'un arc ou l'aire d'un secteur, nous devons connaître l'angle correspondant au centre du cercle: c'est ce qu'on appelle le [{.blue} angle central](pill:angle) . 
 
- Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](pill:angle) est _{span.var-action} 90°_ , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](pill:fangle) . 
+Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](pill:angle) est _{span.var-action} 90°_ , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](pill:fangle) . 
 
 ::: .reveal(when="blank-0")
 
- Cela signifie que le [{.red} la longueur de l'arc](pill:arc) est également `1/4` du [{.purple} toute la circonférence](pill:circ) du cercle, et la [{.yellow} secteur du secteur](pill:sector) est `1/4` du [{.orange} toute la zone](pill:area) du cercle. 
+Cela signifie que le [{.red} la longueur de l'arc](pill:arc) est également `1/4` du [{.purple} toute la circonférence](pill:circ) du cercle, et la [{.yellow} secteur du secteur](pill:sector) est `1/4` du [{.orange} toute la zone](pill:area) du cercle. 
 
- Nous pouvons exprimer cette relation dans une équation: 
+Nous pouvons exprimer cette relation dans une équation: 
 
 {.text-center}`"arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
 
@@ -797,20 +735,14 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 :::
 
- où _r_ est le rayon du cercle et _c_ est la taille de l'angle central. 
+où _r_ est le rayon du cercle et _c_ est la taille de l'angle central. 
 
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
     
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
 
- Si l'angle central est mesuré en [radians](gloss:radians) plutôt qu'en [degrés](gloss:degrees) , nous pouvons utiliser les mêmes équations, mais nous devons remplacer 360° par [[`2 π`|`1/2 π`|`π`]] : 
+Si l'angle central est mesuré en [radians](gloss:radians) plutôt qu'en [degrés](gloss:degrees) , nous pouvons utiliser les mêmes équations, mais nous devons remplacer 360° par [[`2 π`|`1/2 π`|`π`]] : 
 
 ::: .reveal(when="blank-0")
 
@@ -828,16 +760,16 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 :::
 
- Remarquez comment les équations deviennent beaucoup plus simples et _π_ s'annule partout. En effet, comme vous vous en souvenez peut-être, la [définition des radians](/course/circles/radians#radians) est essentiellement la longueur d'un arc dans un cercle de rayon 1. 
+Remarquez comment les équations deviennent beaucoup plus simples et _π_ s'annule partout. En effet, comme vous vous en souvenez peut-être, la [définition des radians](/course/circles/radians#radians) est essentiellement la longueur d'un arc dans un cercle de rayon 1. 
 
- Voyons maintenant comment utiliser les arcs et les secteurs pour calculer la circonférence de la Terre. [Continuer](btn:next) 
+Voyons maintenant comment utiliser les arcs et les secteurs pour calculer la circonférence de la Terre. [Continuer](btn:next) 
 
 :::
 
 ---
 > id: eratosthenes
 
- Dans l'Égypte ancienne, la ville de _Swenet_ était située le long du Nil. Swenet était célèbre pour un puits avec une propriété curieuse: il y avait un moment chaque année où la lumière du soleil atteignait le fond du puits - à midi le 21 juin, le jour du _solstice d'été_ . À ce moment précis, le fond du puits était éclairé, mais pas ses côtés, ce qui signifie que le Soleil se tenait directement au-dessus du puits. 
+Dans l'Égypte ancienne, la ville de _Swenet_ était située le long du Nil. Swenet était célèbre pour un puits avec une propriété curieuse: il y avait un moment chaque année où la lumière du soleil atteignait le fond du puits - à midi le 21 juin, le jour du _solstice d'été_ . À ce moment précis, le fond du puits était éclairé, mais pas ses côtés, ce qui signifie que le Soleil se tenait directement au-dessus du puits. 
 
 ::: column(width=300)
 
@@ -853,9 +785,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 :::
 
- Le mathématicien [Eratosthène](bio:eratosthenes) vivait à _Alexandrie_ , à environ 800 km au nord de Swenet, où il était directeur de la Grande Bibliothèque. Dans le centre-ville d'Alexandrie se dressait un obélisque, un monument haut et étroit avec un sommet en forme de pyramide. 
+Le mathématicien [Eratosthène](bio:eratosthenes) vivait à _Alexandrie_ , à environ 800 km au nord de Swenet, où il était directeur de la Grande Bibliothèque. Dans le centre-ville d'Alexandrie se dressait un obélisque, un monument haut et étroit avec un sommet en forme de pyramide. 
 
- Ératosthène a remarqué qu'à midi, le jour du solstice d'été, l'obélisque a jeté une ombre - ce qui signifie que le soleil n'était _pas_ directement au-dessus. Il en a déduit que c'était à cause de la courbure de la Terre, et a réalisé qu'elle pouvait être utilisée pour calculer la circonférence de notre planète. 
+Ératosthène a remarqué qu'à midi, le jour du solstice d'été, l'obélisque a jeté une ombre - ce qui signifie que le soleil n'était _pas_ directement au-dessus. Il en a déduit que c'était à cause de la courbure de la Terre, et a réalisé qu'elle pouvait être utilisée pour calculer la circonférence de notre planète. 
 
 ---
 > id: eratosthenes-1
@@ -866,13 +798,13 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: .reveal(when="next-0")
 
- Ératosthène a mesuré que le [{.teal} l'angle](pill:angle1) de l'ombre était de 7,2°. C'est le même que le [{.purple} angle central](pill:angle2) du [{.red} arc](pill:arc) d'Alexandrie à Swenet, car ils [[alternent | verticale |]] angles [[correspondants]] . 
+Ératosthène a mesuré que le [{.teal} l'angle](pill:angle1) de l'ombre était de 7,2°. C'est le même que le [{.purple} angle central](pill:angle2) du [{.red} arc](pill:arc) d'Alexandrie à Swenet, car ils [[alternent | verticale |]] angles [[correspondants]] . 
 
 :::
 
 ::: .reveal(when="blank-0")
 
- Maintenant, nous pouvons utiliser l'équation de la longueur d'arc que nous avons dérivée ci-dessus: 
+Maintenant, nous pouvons utiliser l'équation de la longueur d'arc que nous avons dérivée ci-dessus: 
 
 {.text-center}`pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
 
@@ -880,7 +812,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: .reveal(when="blank-1")
 
- Si nous réorganisons cela, nous constatons que la circonférence de la Terre est 
+Si nous réorganisons cela, nous constatons que la circonférence de la Terre est 
 
 {.text-center}`pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 
@@ -888,7 +820,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: .reveal(when="blank-2")
 
- Enfin, nous savons que la circonférence d'un cercle est `C = 2 pi r` , donc le rayon de la Terre est 
+Enfin, nous savons que la circonférence d'un cercle est `C = 2 pi r` , donc le rayon de la Terre est 
 
 {.text-center}`r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"` . 
 
@@ -925,7 +857,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: eratosthenes-2
 
- La mesure d'Ératosthène a été l'une des expériences les plus importantes de l'Antiquité. Son estimation de la taille de la Terre était étonnamment précise, surtout si l'on considère qu'il n'avait accès qu'à des outils de mesure très basiques. 
+La mesure d'Ératosthène a été l'une des expériences les plus importantes de l'Antiquité. Son estimation de la taille de la Terre était étonnamment précise, surtout si l'on considère qu'il n'avait accès qu'à des outils de mesure très basiques. 
 
 ::: column(width=280)
 
@@ -933,11 +865,11 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Bien sûr, il peut être difficile de traduire ses résultats originaux en unités modernes comme les kilomètres. Dans la Grèce antique, la distance était mesurée dans les _stades_ (environ 160 m), mais il n'y avait pas de norme universelle. Chaque zone avait une version légèrement différente, et nous ne savons pas laquelle Eratosthène a utilisé. 
+Bien sûr, il peut être difficile de traduire ses résultats originaux en unités modernes comme les kilomètres. Dans la Grèce antique, la distance était mesurée dans les _stades_ (environ 160 m), mais il n'y avait pas de norme universelle. Chaque zone avait une version légèrement différente, et nous ne savons pas laquelle Eratosthène a utilisé. 
 
- Au cours des siècles suivants, les scientifiques ont essayé d'utiliser d'autres méthodes pour calculer le rayon de la Terre - parfois avec des résultats très différents et incorrects. 
+Au cours des siècles suivants, les scientifiques ont essayé d'utiliser d'autres méthodes pour calculer le rayon de la Terre - parfois avec des résultats très différents et incorrects. 
 
- C'est l'une de ces mesures incorrectes qui a incité Christophe Colomb à naviguer vers l'ouest depuis le Portugal. Il a supposé que la Terre était beaucoup plus petite qu'elle ne l'est réellement et espérait atteindre l'Inde. En fait, il est arrivé sur un autre continent entre les deux: les Amériques. 
+C'est l'une de ces mesures incorrectes qui a incité Christophe Colomb à naviguer vers l'ouest depuis le Portugal. Il a supposé que la Terre était beaucoup plus petite qu'elle ne l'est réellement et espérait atteindre l'Inde. En fait, il est arrivé sur un autre continent entre les deux: les Amériques. 
 
 :::
 
@@ -947,11 +879,6 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 {.todo} BIENTÔT DISPONIBLE! 
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
 ---
 
 ## Les théorèmes du cercle 
@@ -959,57 +886,57 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 > section: circle-theorems
 > sectionStatus: dev
 
- https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
+https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
 
- __[CC] Identifier et décrire les relations entre les angles, les rayons et les accords inscrits. Inclure la relation entre les angles centraux, inscrits et circonscrits; les angles inscrits sur un diamètre sont des angles droits; le rayon d'un cercle est perpendiculaire à la tangente où le rayon coupe le cercle.__ 
+__[CC] Identifier et décrire les relations entre les angles, les rayons et les accords inscrits. Inclure la relation entre les angles centraux, inscrits et circonscrits; les angles inscrits sur un diamètre sont des angles droits; le rayon d'un cercle est perpendiculaire à la tangente où le rayon coupe le cercle.__ 
 
- Un angle inscrit est un angle dont le sommet est le cercle et ses côtés contiennent des accords. L'arc intercepté est l'arc qui se trouve à l'intérieur de l'angle inscrit et dont les extrémités se trouvent sur l'angle. Le sommet d'un angle inscrit peut être n'importe où sur le cercle tant que ses côtés coupent le cercle pour former un arc intercepté. 
+Un angle inscrit est un angle dont le sommet est le cercle et ses côtés contiennent des accords. L'arc intercepté est l'arc qui se trouve à l'intérieur de l'angle inscrit et dont les extrémités se trouvent sur l'angle. Le sommet d'un angle inscrit peut être n'importe où sur le cercle tant que ses côtés coupent le cercle pour former un arc intercepté. 
 
- __Théorème__ de l'angle inscrit La mesure d'un angle inscrit est la moitié de la mesure de son arc intercepté. Pour prouver le théorème de l'angle inscrit, vous devez le diviser en trois cas, comme les trois angles différents tirés de l'enquête. 
+__Théorème__ de l'angle inscrit La mesure d'un angle inscrit est la moitié de la mesure de son arc intercepté. Pour prouver le théorème de l'angle inscrit, vous devez le diviser en trois cas, comme les trois angles différents tirés de l'enquête. 
 
- __Théorème des__ angles __inscrits congruents Les__ angles inscrits qui interceptent le même arc sont congruents. 
+__Théorème des__ angles __inscrits congruents Les__ angles inscrits qui interceptent le même arc sont congruents. 
 
- __Théorème de__ demi-cercle à __angle inscrit__ Un angle qui intercepte un demi-cercle est un angle droit. 
+__Théorème de__ demi-cercle à __angle inscrit__ Un angle qui intercepte un demi-cercle est un angle droit. 
 
- Dans le théorème de demi-cercle à angle inscrit, nous pourrions également dire que l'angle est inscrit dans un demi-cercle. Chaque fois qu'un angle droit est inscrit dans un cercle, les extrémités de l'angle sont les extrémités d'un diamètre. Par conséquent, l'inverse du théorème de demi-cercle à angle inscrit est également vrai. 
+Dans le théorème de demi-cercle à angle inscrit, nous pourrions également dire que l'angle est inscrit dans un demi-cercle. Chaque fois qu'un angle droit est inscrit dans un cercle, les extrémités de l'angle sont les extrémités d'un diamètre. Par conséquent, l'inverse du théorème de demi-cercle à angle inscrit est également vrai. 
 
- Lorsqu'un angle est sur un cercle, le sommet est sur la circonférence du cercle. Un type d'angle sur un cercle est celui formé par une tangente et un accord. 
+Lorsqu'un angle est sur un cercle, le sommet est sur la circonférence du cercle. Un type d'angle sur un cercle est celui formé par une tangente et un accord. 
 
- __Théorème de l'angle / tangente__ La mesure d'un angle formé par un accord et une tangente qui se coupent sur le cercle est la moitié de la mesure de l'arc intercepté. 
+__Théorème de l'angle / tangente__ La mesure d'un angle formé par un accord et une tangente qui se coupent sur le cercle est la moitié de la mesure de l'arc intercepté. 
 
- Du théorème de la corde / angle tangent, nous savons maintenant qu'il existe deux types d'angles qui sont la moitié de la mesure de l'arc intercepté; un angle inscrit et un angle formé par un accord et une tangente. Par conséquent, tout angle avec son sommet sur un cercle sera la moitié de la mesure de l'arc intercepté. 
+Du théorème de la corde / angle tangent, nous savons maintenant qu'il existe deux types d'angles qui sont la moitié de la mesure de l'arc intercepté; un angle inscrit et un angle formé par un accord et une tangente. Par conséquent, tout angle avec son sommet sur un cercle sera la moitié de la mesure de l'arc intercepté. 
 
- Un angle est considéré à l'intérieur d'un cercle lorsque le sommet est quelque part à l'intérieur du cercle, mais pas au centre. Tous les angles à l'intérieur d'un cercle sont formés par deux accords qui se croisent. 
+Un angle est considéré à l'intérieur d'un cercle lorsque le sommet est quelque part à l'intérieur du cercle, mais pas au centre. Tous les angles à l'intérieur d'un cercle sont formés par deux accords qui se croisent. 
 
- __Théorème__ de l'angle des accords croisés La mesure de l'angle formé par deux accords qui se croisent à l'intérieur d'un cercle est la moyenne de la mesure des arcs interceptés. 
+__Théorème__ de l'angle des accords croisés La mesure de l'angle formé par deux accords qui se croisent à l'intérieur d'un cercle est la moyenne de la mesure des arcs interceptés. 
 
- Un angle est considéré comme étant en dehors d'un cercle si le sommet de l'angle est en dehors du cercle et que les côtés sont tangents ou sécants. Il existe trois types d'angles qui sont à l'extérieur d'un cercle: un angle formé par deux tangentes, un angle formé par une tangente et une sécante, et un angle formé par deux sécantes. Tout comme un angle à l'intérieur ou sur un cercle, un angle à l'extérieur d'un cercle a une formule spécifique, impliquant les arcs interceptés. 
+Un angle est considéré comme étant en dehors d'un cercle si le sommet de l'angle est en dehors du cercle et que les côtés sont tangents ou sécants. Il existe trois types d'angles qui sont à l'extérieur d'un cercle: un angle formé par deux tangentes, un angle formé par une tangente et une sécante, et un angle formé par deux sécantes. Tout comme un angle à l'intérieur ou sur un cercle, un angle à l'extérieur d'un cercle a une formule spécifique, impliquant les arcs interceptés. 
 
- __Théorème de l'angle extérieur__ La mesure d'un angle formé par deux sécantes, deux tangentes ou une sécante et une tangente tirées d'un point extérieur au cercle est égale à la moitié de la différence des mesures des arcs interceptés. 
+__Théorème de l'angle extérieur__ La mesure d'un angle formé par deux sécantes, deux tangentes ou une sécante et une tangente tirées d'un point extérieur au cercle est égale à la moitié de la différence des mesures des arcs interceptés. 
 
- Lorsque deux accords se croisent à l'intérieur d'un cercle, les deux triangles qu'ils créent sont similaires, ce qui rend les côtés de chaque triangle proportionnels l'un à l'autre. Si nous supprimons AD et BC, les rapports entre AE, EC, DE et EB seront toujours les mêmes. 
+Lorsque deux accords se croisent à l'intérieur d'un cercle, les deux triangles qu'ils créent sont similaires, ce qui rend les côtés de chaque triangle proportionnels l'un à l'autre. Si nous supprimons AD et BC, les rapports entre AE, EC, DE et EB seront toujours les mêmes. 
 
- __Théorème des__ accords croisés Si deux accords se croisent à l'intérieur d'un cercle de sorte que l'un est divisé en segments de longueur a et b et l'autre en segments de longueur c et d alors ab = cd. En d'autres termes, le produit des segments d'un accord est égal au produit des segments du second accord. 
+__Théorème des__ accords croisés Si deux accords se croisent à l'intérieur d'un cercle de sorte que l'un est divisé en segments de longueur a et b et l'autre en segments de longueur c et d alors ab = cd. En d'autres termes, le produit des segments d'un accord est égal au produit des segments du second accord. 
 
- En plus de former un angle à l'extérieur d'un cercle, le cercle peut diviser les sécantes en segments qui sont proportionnels les uns aux autres. 
+En plus de former un angle à l'extérieur d'un cercle, le cercle peut diviser les sécantes en segments qui sont proportionnels les uns aux autres. 
 
- Si nous dessinons les accords qui se croisent, nous aurons deux triangles similaires. 
+Si nous dessinons les accords qui se croisent, nous aurons deux triangles similaires. 
 
- D'après les angles inscrits et la propriété réflexive (∠R≅∠R), △ PRS∼ △ TRQ. Parce que les deux triangles sont similaires, nous pouvons définir une proportion entre les côtés correspondants. Ensuite, multipliez-vous. ac + d = ca + b⇒a (a + b) = c (c + d) 
+D'après les angles inscrits et la propriété réflexive (∠R≅∠R), △ PRS∼ △ TRQ. Parce que les deux triangles sont similaires, nous pouvons définir une proportion entre les côtés correspondants. Ensuite, multipliez-vous. ac + d = ca + b⇒a (a + b) = c (c + d) 
 
- __Théorème des__ deux __segments sécants__ Si deux sécants sont dessinés à partir d'un point commun à l'extérieur d'un cercle et que les segments sont étiquetés comme ci-dessus, alors a (a + b) = c (c + d). En d'autres termes, le produit du segment extérieur et de l'ensemble d'une sécante est égal au produit du segment extérieur et de l'ensemble de l'autre sécante. 
+__Théorème des__ deux __segments sécants__ Si deux sécants sont dessinés à partir d'un point commun à l'extérieur d'un cercle et que les segments sont étiquetés comme ci-dessus, alors a (a + b) = c (c + d). En d'autres termes, le produit du segment extérieur et de l'ensemble d'une sécante est égal au produit du segment extérieur et de l'ensemble de l'autre sécante. 
 
- Si une tangente et une sécante se rencontrent en un point commun à l'extérieur d'un cercle, les segments créés ont une relation similaire à celle de deux rayons sécants. Rappelons que le produit de la partie extérieure d'une sécante et de l'ensemble est égal au même de l'autre sécante. Si l'un de ces segments est une tangente, il restera le produit de la partie extérieure et de l'ensemble. Cependant, pour une ligne tangente, la partie extérieure et l'ensemble sont égaux. 
+Si une tangente et une sécante se rencontrent en un point commun à l'extérieur d'un cercle, les segments créés ont une relation similaire à celle de deux rayons sécants. Rappelons que le produit de la partie extérieure d'une sécante et de l'ensemble est égal au même de l'autre sécante. Si l'un de ces segments est une tangente, il restera le produit de la partie extérieure et de l'ensemble. Cependant, pour une ligne tangente, la partie extérieure et l'ensemble sont égaux. 
 
- __Théorème du segment__ sécant tangent Si une tangente et une sécante sont dessinées à partir d'un point commun à l'extérieur du cercle (et que les segments sont étiquetés comme l'image de gauche), alors a2 = b (b + c). Cela signifie que le produit du segment extérieur de la sécante et de l'ensemble est égal au carré du segment tangent. 
+__Théorème du segment__ sécant tangent Si une tangente et une sécante sont dessinées à partir d'un point commun à l'extérieur du cercle (et que les segments sont étiquetés comme l'image de gauche), alors a2 = b (b + c). Cela signifie que le produit du segment extérieur de la sécante et de l'ensemble est égal au carré du segment tangent. 
 
 ---
 
 ### Théorème de Thales 
 
- Preuve à l'aide de triangles isocèles 
+Preuve à l'aide de triangles isocèles 
 
- Combine toute la géométrie euclidienne 
+Combine toute la géométrie euclidienne 
 
 {.todo} FAIRE 
 
@@ -1020,15 +947,15 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 > sectionStatus: dev
 > section: cyclic-polygons
 
- __[CC] Construisez un triangle équilatéral, un carré et un hexagone régulier inscrit dans un cercle.__ 
+__[CC] Construisez un triangle équilatéral, un carré et un hexagone régulier inscrit dans un cercle.__ 
 
- Un polygone inscrit est un polygone où chaque sommet est sur un cercle. Notez que tous les quadrilatères ou polygones ne peuvent pas être inscrits dans un cercle. Les quadrilatères inscrits sont également appelés quadrilatères cycliques. Pour ces types de quadrilatères, ils doivent avoir une propriété spéciale. Nous allons enquêter ici. 
+Un polygone inscrit est un polygone où chaque sommet est sur un cercle. Notez que tous les quadrilatères ou polygones ne peuvent pas être inscrits dans un cercle. Les quadrilatères inscrits sont également appelés quadrilatères cycliques. Pour ces types de quadrilatères, ils doivent avoir une propriété spéciale. Nous allons enquêter ici. 
 
- Cette enquête montre que les angles opposés dans un quadrilatère inscrit sont supplémentaires. En coupant le quadrilatère en deux, à travers la diagonale, nous avons pu montrer que les deux autres angles (que nous n'avons pas coupés) formaient une paire linéaire lorsqu'ils étaient appariés. 
+Cette enquête montre que les angles opposés dans un quadrilatère inscrit sont supplémentaires. En coupant le quadrilatère en deux, à travers la diagonale, nous avons pu montrer que les deux autres angles (que nous n'avons pas coupés) formaient une paire linéaire lorsqu'ils étaient appariés. 
 
- Théorème du quadrilatère inscrit: Un quadrilatère est inscrit dans un cercle si et seulement si les angles opposés sont supplémentaires. 
+Théorème du quadrilatère inscrit: Un quadrilatère est inscrit dans un cercle si et seulement si les angles opposés sont supplémentaires. 
 
- https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+https://www.youtube.com/watch?v=bJOuzqu3MUQ 
 
 ---
 
@@ -1037,7 +964,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 > section: spheres-cones-cylinders
 > id: solids
 
- Dans les sections précédentes, nous avons étudié les propriétés des cercles sur une surface plane. Mais notre monde est en fait en trois dimensions, alors jetons un œil à certains solides 3D basés sur des cercles: 
+Dans les sections précédentes, nous avons étudié les propriétés des cercles sur une surface plane. Mais notre monde est en fait en trois dimensions, alors jetons un œil à certains solides 3D basés sur des cercles: 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -1059,7 +986,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 :::
 
- Remarquez comment la définition d'une sphère est presque la même que la définition d'un [[cercle | rayon | cube]] - sauf en trois dimensions! 
+Remarquez comment la définition d'une sphère est presque la même que la définition d'un [[cercle | rayon | cube]] - sauf en trois dimensions! 
 
 ---
 > id: gasometer
@@ -1068,9 +995,10 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Ici vous pouvez voir le _gazomètre_ cylindrique à Oberhausen, en Allemagne. Il stockait le gaz naturel qui était utilisé comme carburant dans les usines et les centrales électriques à proximité. Le gazomètre mesure 120 m de haut et sa base et son plafond sont deux grands cercles d'un rayon de 35 m. Les ingénieurs peuvent vouloir répondre à deux questions importantes: 
+Ici vous pouvez voir le _gazomètre_ cylindrique à Oberhausen, en Allemagne. Il stockait le gaz naturel qui était utilisé comme carburant dans les usines et les centrales électriques à proximité. Le gazomètre mesure 120 m de haut et sa base et son plafond sont deux grands cercles d'un rayon de 35 m. Les ingénieurs peuvent vouloir répondre à deux questions importantes: 
 
- * Quelle quantité de gaz naturel peut être stockée? C'est le [[volume | zone | diamètre]] du cylindre. * {.reveal(when="blank-0")} Quelle quantité d'acier est nécessaire pour construire le gazomètre? C'est (approximativement) la [[surface | circonférence | diagonale]] du cylindre. 
+* Quelle quantité de gaz naturel peut être stockée? C'est le [[volume | zone | diamètre]] du cylindre.
+* {.reveal(when="blank-0")} Quelle quantité d'acier est nécessaire pour construire le gazomètre? C'est (approximativement) la [[surface | circonférence | diagonale]] du cylindre. 
 
 {.reveal(when="blank-0 blank-1")} Essayons de trouver des formules pour ces deux résultats! 
 
@@ -1087,9 +1015,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 #### Volume d'un cylindre 
 
- Le haut et le bas d'un cylindre sont deux cercles congrus, appelés __bases__ . le __{.m-blue} la hauteur _h___ d'un cylindre est la distance perpendiculaire entre ces bases, et la __{.m-red} le rayon _r___ d'un cylindre est simplement le rayon des bases circulaires. 
+Le haut et le bas d'un cylindre sont deux cercles congrus, appelés __bases__ . le __{.m-blue} la hauteur _h___ d'un cylindre est la distance perpendiculaire entre ces bases, et la __{.m-red} le rayon _r___ d'un cylindre est simplement le rayon des bases circulaires. 
 
- Nous pouvons approximer un cylindre en utilisant un ${n}{n|5|3,20,1} [__prisme à deux__](gloss:prism) faces. À mesure que le nombre de côtés augmente, le prisme commence à ressembler de plus en plus à un cylindre: 
+Nous pouvons approximer un cylindre en utilisant un ${n}{n|5|3,20,1} [__prisme à deux__](gloss:prism) faces. À mesure que le nombre de côtés augmente, le prisme commence à ressembler de plus en plus à un cylindre: 
 
 ::: column(width=240)
 
@@ -1104,7 +1032,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: cylinder-volume
 
- Même si un cylindre n'est techniquement pas un prisme, ils partagent de nombreuses propriétés. Dans les deux cas, on peut trouver le volume en multipliant l'aire de leur __{.m-red} base__ avec leur __{.m-blue} hauteur__ . Cela signifie qu'un cylindre de rayon _{.b.m-red} r_ et hauteur _{.b.m-blue} h_ a du volume 
+Même si un cylindre n'est techniquement pas un prisme, ils partagent de nombreuses propriétés. Dans les deux cas, on peut trouver le volume en multipliant l'aire de leur __{.m-red} base__ avec leur __{.m-blue} hauteur__ . Cela signifie qu'un cylindre de rayon _{.b.m-red} r_ et hauteur _{.b.m-blue} h_ a du volume 
 
 {.text-center}`V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_ 
 
@@ -1116,7 +1044,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Dans les exemples ci-dessus, les deux bases du cylindre étaient toujours _directement l'une au-dessus de l'autre_ : c'est ce qu'on appelle un __cylindre droit__ . Si les bases ne sont pas directement les unes au-dessus des autres, nous avons un __cylindre oblique__ . Les bases sont toujours parallèles, mais les côtés semblent se pencher à un angle qui n'est pas de 90°. 
+Dans les exemples ci-dessus, les deux bases du cylindre étaient toujours _directement l'une au-dessus de l'autre_ : c'est ce qu'on appelle un __cylindre droit__ . Si les bases ne sont pas directement les unes au-dessus des autres, nous avons un __cylindre oblique__ . Les bases sont toujours parallèles, mais les côtés semblent se pencher à un angle qui n'est pas de 90°. 
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1133,9 +1061,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 > id: cavalieri
 > goals: slide
 
- Le volume d'un cylindre oblique se révèle être exactement le même que celui d'un cylindre droit avec le même rayon et la même hauteur. Cela est dû au [__principe de Cavalieri__](gloss:cavalieri) , nommé d'après le mathématicien italien [Bonaventura Cavalieri](bio:cavalieri) : si deux solides ont la même aire de section transversale à chaque hauteur, alors ils auront le même volume. 
+Le volume d'un cylindre oblique se révèle être exactement le même que celui d'un cylindre droit avec le même rayon et la même hauteur. Cela est dû au [__principe de Cavalieri__](gloss:cavalieri) , nommé d'après le mathématicien italien [Bonaventura Cavalieri](bio:cavalieri) : si deux solides ont la même aire de section transversale à chaque hauteur, alors ils auront le même volume. 
 
- Imaginez trancher un cylindre en beaucoup de disques minces. On peut alors faire glisser ces disques horizontalement pour obtenir un cylindre oblique. Le volume des disques individuels ne change pas lorsque vous le rendez oblique, donc le volume total reste également constant: 
+Imaginez trancher un cylindre en beaucoup de disques minces. On peut alors faire glisser ces disques horizontalement pour obtenir un cylindre oblique. Le volume des disques individuels ne change pas lorsque vous le rendez oblique, donc le volume total reste également constant: 
 
 ::: column(width=240)
 
@@ -1148,11 +1076,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
     
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
 > id: cylinder-surface
@@ -1161,11 +1085,12 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Pour trouver la surface d'un cylindre, il faut le «dérouler» dans son [filet](gloss:net) plat. Vous pouvez l'essayer vous-même, par exemple en décollant l'étiquette sur une boîte de nourriture. 
+Pour trouver la surface d'un cylindre, il faut le «dérouler» dans son [filet](gloss:net) plat. Vous pouvez l'essayer vous-même, par exemple en décollant l'étiquette sur une boîte de nourriture. 
 
- Il y a deux [[cercles | sphères | carrés]] , un en haut et un en bas du cylindre. Le côté incurvé est en fait un grand [[rectangle | carré | ellipse]] . 
+Il y a deux [[cercles | sphères | carrés]] , un en haut et un en bas du cylindre. Le côté incurvé est en fait un grand [[rectangle | carré | ellipse]] . 
 
- * {.reveal(when="blank-0 blank-1")} Les deux cercles ont chacun une aire _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . * {.reveal(when="eqn-0")} La hauteur du rectangle est _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} et la largeur du rectangle est la même que la [[circonférence | diamètre | tangente]] des cercles:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
+* {.reveal(when="blank-0 blank-1")} Les deux cercles ont chacun une aire _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ .
+* {.reveal(when="eqn-0")} La hauteur du rectangle est _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} et la largeur du rectangle est la même que la [[circonférence | diamètre | tangente]] des cercles:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
 
 ::: column(width=320)
 
@@ -1177,7 +1102,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: cylinder-surface-1
 
- Cela signifie que la surface totale d'un cylindre de rayon _r_ et de hauteur _h_ est donnée par 
+Cela signifie que la surface totale d'un cylindre de rayon _r_ et de hauteur _h_ est donnée par 
 
 {.text-center}`A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_ . 
 
@@ -1186,9 +1111,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
     figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
- Les cylindres peuvent être trouvés partout dans notre monde - des canettes de soda au papier toilette ou aux tuyaux d'eau. Pouvez-vous penser à d'autres exemples? 
+Les cylindres peuvent être trouvés partout dans notre monde - des canettes de soda au papier toilette ou aux tuyaux d'eau. Pouvez-vous penser à d'autres exemples? 
 
- Le _gazomètre_ ci-dessus avait un rayon de 35 m et une hauteur de 120 m. On peut maintenant calculer que son volume est d'environ [[461 000 ± 1000]] `"m"^3` et sa surface est d'environ [[34 080 ± 100]] `"m"^2` . 
+Le _gazomètre_ ci-dessus avait un rayon de 35 m et une hauteur de 120 m. On peut maintenant calculer que son volume est d'environ [[461 000 ± 1000]] `"m"^3` et sa surface est d'environ [[34 080 ± 100]] `"m"^2` . 
 
 ---
 > id: cone
@@ -1197,11 +1122,11 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Un [__cône__](gloss:cone) est un solide en trois dimensions qui a une circulaire __{.m-red} base__ . Son côté «se rétrécit vers le haut» comme le montre le diagramme et se termine en un seul point appelé __{.m-green} sommet__ . 
+Un [__cône__](gloss:cone) est un solide en trois dimensions qui a une circulaire __{.m-red} base__ . Son côté «se rétrécit vers le haut» comme le montre le diagramme et se termine en un seul point appelé __{.m-green} sommet__ . 
 
- le __{.m-red} rayon__ du cône est le rayon de la base circulaire, et le __{.m-blue} la hauteur__ du cône est la distance perpendiculaire de la base au sommet. 
+le __{.m-red} rayon__ du cône est le rayon de la base circulaire, et le __{.m-blue} la hauteur__ du cône est la distance perpendiculaire de la base au sommet. 
 
- Tout comme les autres formes que nous avons rencontrées auparavant, les cônes sont partout autour de nous: des cônes de crème glacée, des cônes de signalisation, certains toits et même des arbres de Noël. De quoi d'autre pouvez vous penser? 
+Tout comme les autres formes que nous avons rencontrées auparavant, les cônes sont partout autour de nous: des cônes de crème glacée, des cônes de signalisation, certains toits et même des arbres de Noël. De quoi d'autre pouvez vous penser? 
 
 ::: column(width=280)
 
@@ -1238,9 +1163,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Nous avons précédemment trouvé le volume d'un cylindre en l'approximant à l'aide d'un prisme. De même, nous pouvons trouver le volume d'un cône en l'approximant à l'aide d'une [__pyramide__](gloss:pyramid) . 
+Nous avons précédemment trouvé le volume d'un cylindre en l'approximant à l'aide d'un prisme. De même, nous pouvons trouver le volume d'un cône en l'approximant à l'aide d'une [__pyramide__](gloss:pyramid) . 
 
- Ici vous pouvez voir un ${n}{n|5|3,18,1} pyramide à côtés. À mesure que le nombre de côtés augmente, la pyramide commence à ressembler de plus en plus à un cône. En fait, nous pourrions penser à un cône comme une pyramide avec une _infinité de_ côtés! 
+Ici vous pouvez voir un ${n}{n|5|3,18,1} pyramide à côtés. À mesure que le nombre de côtés augmente, la pyramide commence à ressembler de plus en plus à un cône. En fait, nous pourrions penser à un cône comme une pyramide avec une _infinité de_ côtés! 
 
 ::: column(width=280)
 
@@ -1251,14 +1176,14 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: cone-volume-1
 
- Cela signifie également que nous pouvons également utiliser l'équation pour le volume: `V = 1/3 "base" × "height"` . La base d'un cône est un cercle, donc le volume d'un cône de rayon _r_ et de hauteur _h_ est 
+Cela signifie également que nous pouvons également utiliser l'équation pour le volume: `V = 1/3 "base" × "height"` . La base d'un cône est un cercle, donc le volume d'un cône de rayon _r_ et de hauteur _h_ est 
 
 {.text-center}`V =` _{x-equation(solution="1/3 π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cone-volume-hint1 cone-volume-hint2")}_ 
 
 ---
 > id: cone-circumscribed
 
- Remarquez la similitude avec l'équation du volume d'un cylindre. Imaginez dessiner un cylindre _autour_ du cône, avec la même base et la même hauteur - c'est ce qu'on appelle le __cylindre circonscrit__ . Maintenant, le cône prendra exactement [[un tiers | moitié | un quart]] du volume du cylindre: 
+Remarquez la similitude avec l'équation du volume d'un cylindre. Imaginez dessiner un cylindre _autour_ du cône, avec la même base et la même hauteur - c'est ce qu'on appelle le __cylindre circonscrit__ . Maintenant, le cône prendra exactement [[un tiers | moitié | un quart]] du volume du cylindre: 
 
     figure: x-solid(size=280)
 
@@ -1273,9 +1198,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Tout comme un cylindre, un cône n'a pas à être «droit». Si le sommet est directement au-dessus du centre de la base, nous avons un __cône droit__ . Sinon, nous l'appelons un __cône oblique__ . 
+Tout comme un cylindre, un cône n'a pas à être «droit». Si le sommet est directement au-dessus du centre de la base, nous avons un __cône droit__ . Sinon, nous l'appelons un __cône oblique__ . 
 
- Encore une fois, nous pouvons utiliser le principe de Cavalieri pour montrer que tous les cônes obliques ont le même volume, tant qu'ils ont la même base et la même hauteur. 
+Encore une fois, nous pouvons utiliser le principe de Cavalieri pour montrer que tous les cônes obliques ont le même volume, tant qu'ils ont la même base et la même hauteur. 
 
 ::: column(width=280)
 
@@ -1291,7 +1216,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Trouver la surface d'un cône est un peu plus délicat. Comme auparavant, nous pouvons démêler un cône dans son filet. Déplacez le curseur pour voir ce qui se passe: dans ce cas, nous obtenons un cercle et un [[secteur de cercle | segment de cercle | arc de cercle]] . 
+Trouver la surface d'un cône est un peu plus délicat. Comme auparavant, nous pouvons démêler un cône dans son filet. Déplacez le curseur pour voir ce qui se passe: dans ce cas, nous obtenons un cercle et un [[secteur de cercle | segment de cercle | arc de cercle]] . 
 
 {.reveal(when="blank-0")} Il ne nous reste plus qu'à additionner la surface de ces deux composants. le __{.m-yellow} la base__ est un cercle de rayon _r_ , donc son aire est 
 
@@ -1309,7 +1234,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Le rayon du __{.m-green} secteur__ est la même que la distance entre le bord d'un cône et son sommet. C'est ce qu'on appelle le [{.pill.green.b} hauteur inclinée _s_](target:s) du cône, et pas la même que la normale [{.pill.blue.b} hauteur _h_](target:h) . Nous pouvons trouver la hauteur inclinée en utilisant [Pythagore](gloss:pythagoras-theorem) : 
+Le rayon du __{.m-green} secteur__ est la même que la distance entre le bord d'un cône et son sommet. C'est ce qu'on appelle le [{.pill.green.b} hauteur inclinée _s_](target:s) du cône, et pas la même que la normale [{.pill.blue.b} hauteur _h_](target:h) . Nous pouvons trouver la hauteur inclinée en utilisant [Pythagore](gloss:pythagoras-theorem) : 
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
 | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1336,7 +1261,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- le [{.pill.red} la longueur d'arc](target:arc) du secteur est la même que la [[circonférence | diamètre | arc]] de la [{.pill.yellow} base](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Maintenant, nous pouvons trouver l'aire du secteur en utilisant la [formule que](gloss:circle-sector) nous avons dérivée dans une section précédente:_ 
+le [{.pill.red} la longueur d'arc](target:arc) du secteur est la même que la [[circonférence | diamètre | arc]] de la [{.pill.yellow} base](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Maintenant, nous pouvons trouver l'aire du secteur en utilisant la [formule que](gloss:circle-sector) nous avons dérivée dans une section précédente:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1371,7 +1296,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: cone-surface-2
 
- Enfin, il suffit d'ajouter la zone de la __{.m-yellow} base__ et la zone de la __{.m-green} secteur__ , pour obtenir la surface totale sont du cône: 
+Enfin, il suffit d'ajouter la zone de la __{.m-yellow} base__ et la zone de la __{.m-green} secteur__ , pour obtenir la surface totale sont du cône: 
 
 {.text-center}`A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ 
 
@@ -1382,9 +1307,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Une [__sphère__](gloss:sphere) est un solide tridimensionnel composé de tous les points qui ont la même distance par rapport à un __{.m-green} centre _C.___ Cette distance est appelée __{.m-red} rayon _r___ de la sphère. 
+Une [__sphère__](gloss:sphere) est un solide tridimensionnel composé de tous les points qui ont la même distance par rapport à un __{.m-green} centre _C.___ Cette distance est appelée __{.m-red} rayon _r___ de la sphère. 
 
- Vous pouvez considérer une sphère comme un « [cercle](gloss:circle) tridimensionnel». Tout comme un cercle, une sphère a également un __{.m-blue} diamètre _d___ , qui est [[deux fois | la moitié de]] la longueur du rayon, ainsi que les accords et les sécants. 
+Vous pouvez considérer une sphère comme un « [cercle](gloss:circle) tridimensionnel». Tout comme un cercle, une sphère a également un __{.m-blue} diamètre _d___ , qui est [[deux fois | la moitié de]] la longueur du rayon, ainsi que les accords et les sécants. 
 
 ::: column(width=240)
 
@@ -1402,9 +1327,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 #### Volume d'une sphère 
 
- Pour trouver le volume d'une sphère, nous devons encore une fois utiliser le principe de Cavalieri. Commençons par un hémisphère - une sphère coupée en deux le long de l'équateur. Nous avons également besoin d'un cylindre ayant le même rayon et la même hauteur que l'hémisphère, mais avec un cône inversé «découpé» au milieu. 
+Pour trouver le volume d'une sphère, nous devons encore une fois utiliser le principe de Cavalieri. Commençons par un hémisphère - une sphère coupée en deux le long de l'équateur. Nous avons également besoin d'un cylindre ayant le même rayon et la même hauteur que l'hémisphère, mais avec un cône inversé «découpé» au milieu. 
 
- Lorsque vous déplacez le curseur ci-dessous, vous pouvez voir la coupe transversale de ces deux formes à une hauteur spécifique au-dessus de la base: 
+Lorsque vous déplacez le curseur ci-dessous, vous pouvez voir la coupe transversale de ces deux formes à une hauteur spécifique au-dessus de la base: 
 
 ::: column(width=240)
 
@@ -1459,7 +1384,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 {.text-center}`pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")` . 
 
- Maintenant, l'aire de la section transversale est 
+Maintenant, l'aire de la section transversale est 
 
     x-equation-system(steps="π x^2" hints="circle-cross-sec")
       table: tr
@@ -1471,11 +1396,11 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow.reveal(when="eqn-0")
 
- La section transversale du cylindre découpé est toujours un [[anneau | cercle | cône]] . 
+La section transversale du cylindre découpé est toujours un [[anneau | cercle | cône]] . 
 
 ::: .reveal(when="blank-1")
 
- Le rayon du trou est _h_ . Nous pouvons trouver l'aire de l'anneau en soustrayant l'aire du trou de l'aire du grand cercle: 
+Le rayon du trou est _h_ . Nous pouvons trouver l'aire de l'anneau en soustrayant l'aire du trou de l'aire du grand cercle: 
 
 | _A_ | = | `π r^2 - π h^2` |
 | | = | `π (r^2 - h^2)` |
@@ -1488,7 +1413,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: sphere-volume-1
 
- Il semble que les deux solides aient la même section transversale à tous les niveaux. Selon le principe de Cavalieri, les deux solides doivent également avoir le même [[volume | surface | circonférence]] ! _{span.reveal(when="blank-0")} On peut trouver le volume de l'hémisphère en soustrayant le volume du [cylindre](gloss:cylinder-volume) et le volume du [cône](gloss:cone-volume) :_ 
+Il semble que les deux solides aient la même section transversale à tous les niveaux. Selon le principe de Cavalieri, les deux solides doivent également avoir le même [[volume | surface | circonférence]] ! _{span.reveal(when="blank-0")} On peut trouver le volume de l'hémisphère en soustrayant le volume du [cylindre](gloss:cylinder-volume) et le volume du [cône](gloss:cone-volume) :_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
@@ -1500,7 +1425,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: sphere-volume-2
 
- Une sphère se compose de [[deux]] hémisphères, _{span.reveal(when="blank-0")} ce qui signifie que son volume doit être_ 
+Une sphère se compose de [[deux]] hémisphères, _{span.reveal(when="blank-0")} ce qui signifie que son volume doit être_ 
 
 {.text-center.reveal(when="blank-0")}`V = 4/3 π r^3` . 
 
@@ -1510,7 +1435,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- La Terre est (approximativement) une sphère d'un rayon de 6 371 \ km. Par conséquent, son volume est 
+La Terre est (approximativement) une sphère d'un rayon de 6 371 \ km. Par conséquent, son volume est 
 
 | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 |     | `=` | _{span.numbers} 1_ `"km"^3` |
@@ -1531,7 +1456,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: sphere-sum
 
- Si vous comparez les équations du volume d'un cylindre, d'un cône et d'une sphère, vous remarquerez peut-être l'une des relations les plus satisfaisantes en géométrie. Imaginez que nous ayons un cylindre de la même hauteur que le diamètre de sa base. Nous pouvons maintenant parfaitement adapter un cône et une sphère à l'intérieur: 
+Si vous comparez les équations du volume d'un cylindre, d'un cône et d'une sphère, vous remarquerez peut-être l'une des relations les plus satisfaisantes en géométrie. Imaginez que nous ayons un cylindre de la même hauteur que le diamètre de sa base. Nous pouvons maintenant parfaitement adapter un cône et une sphère à l'intérieur: 
 
 ::: column.r(width=220)
 
@@ -1563,11 +1488,11 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 #### Surface d'une sphère 
 
- Il est très difficile de trouver une formule pour la surface d'une sphère. L'une des raisons est que nous ne pouvons pas ouvrir et «aplatir» la surface d'une sphère, comme nous l'avons fait pour les cônes et les cylindres auparavant. 
+Il est très difficile de trouver une formule pour la surface d'une sphère. L'une des raisons est que nous ne pouvons pas ouvrir et «aplatir» la surface d'une sphère, comme nous l'avons fait pour les cônes et les cylindres auparavant. 
 
- Il s'agit d'un problème particulier lorsque vous essayez de créer des cartes. La Terre a une surface incurvée en trois dimensions, mais chaque carte imprimée doit être plate et en deux dimensions. Cela signifie que les géographes doivent tricher: en étirant ou en écrasant certaines zones. 
+Il s'agit d'un problème particulier lorsque vous essayez de créer des cartes. La Terre a une surface incurvée en trois dimensions, mais chaque carte imprimée doit être plate et en deux dimensions. Cela signifie que les géographes doivent tricher: en étirant ou en écrasant certaines zones. 
 
- Ici, vous pouvez voir différents types de cartes, appelées __projections__ . Essayez de déplacer le carré rouge et regardez à quoi ressemble _réellement_ cette zone sur un globe: 
+Ici, vous pouvez voir différents types de cartes, appelées __projections__ . Essayez de déplacer le carré rouge et regardez à quoi ressemble _réellement_ cette zone sur un globe: 
 
     figure
       x-select.tabs
@@ -1594,26 +1519,14 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: sphere-surface
 
- Pour trouver la surface d'une sphère, nous pouvons à nouveau l'approximer en utilisant une forme différente - par exemple un polyèdre avec beaucoup de faces. À mesure que le nombre de faces augmente, le polyèdre commence à ressembler de plus en plus à une sphère. 
+Pour trouver la surface d'une sphère, nous pouvons à nouveau l'approximer en utilisant une forme différente - par exemple un polyèdre avec beaucoup de faces. À mesure que le nombre de faces augmente, le polyèdre commence à ressembler de plus en plus à une sphère. 
 
 {.todo} À VENIR: Sphère Surface Proof 
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
     
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
 
 ---
 
@@ -1623,7 +1536,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 > id: conics
 > goals: ellipse parabola hyperbola
 
- Le cercle est l'une des quatre formes différentes qui peuvent être créées à l'aide de «tranches» à travers un [cône](gloss:cone) . Cela peut être démontré en utilisant le cône de lumière d'une torche: 
+Le cercle est l'une des quatre formes différentes qui peuvent être créées à l'aide de «tranches» à travers un [cône](gloss:cone) . Cela peut être démontré en utilisant le cône de lumière d'une torche: 
 
     x-conic-section
     x-scale-box(width=760).conics
@@ -1644,18 +1557,18 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 ---
 > id: conics-1
 
- Si vous pointez la torche verticalement vers le bas, vous voyez un [[cercle | ellipse | ovale]] de lumière. _{span.reveal(when="blank-0")} Si vous inclinez le cône, vous obtenez une [__ellipse__](gloss:ellipse) . Si vous l'inclinez encore plus, vous obtenez une [__parabole__](gloss:parabola) ou une [__hyperbole__](gloss:hyperbola) ._ 
+Si vous pointez la torche verticalement vers le bas, vous voyez un [[cercle | ellipse | ovale]] de lumière. _{span.reveal(when="blank-0")} Si vous inclinez le cône, vous obtenez une [__ellipse__](gloss:ellipse) . Si vous l'inclinez encore plus, vous obtenez une [__parabole__](gloss:parabola) ou une [__hyperbole__](gloss:hyperbola) ._ 
 
 ---
 > id: conics-2
 
 ::: column.grow
 
- Collectivement, ces quatre formes sont appelées [__sections coniques__](gloss:conic-section) . Même s'ils ont tous l'air très différents, ils sont étroitement liés: en fait, ils peuvent tous être générés en utilisant la même équation! 
+Collectivement, ces quatre formes sont appelées [__sections coniques__](gloss:conic-section) . Même s'ils ont tous l'air très différents, ils sont étroitement liés: en fait, ils peuvent tous être générés en utilisant la même équation! 
 
- Les sections coniques ont d'abord été étudiées par le mathématicien grec ancien [Apollonius de Perga](bio:apollonius) , qui leur a également donné leurs noms inhabituels. 
+Les sections coniques ont d'abord été étudiées par le mathématicien grec ancien [Apollonius de Perga](bio:apollonius) , qui leur a également donné leurs noms inhabituels. 
 
- Dans les cours ultérieurs, vous en apprendrez beaucoup plus sur les paraboles et les hyperboles. Pour l'instant, regardons de plus près l'ellipse. 
+Dans les cours ultérieurs, vous en apprendrez beaucoup plus sur les paraboles et les hyperboles. Pour l'instant, regardons de plus près l'ellipse. 
 
 ::: column(width=300)
 
@@ -1668,23 +1581,17 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ### Ellipses 
 
- Une ellipse ressemble presque à un «cercle allongé». En fait, vous pourriez le considérer comme un cercle avec _deux centres_ - ce sont des __points focaux__ . Tout comme chaque point d'un cercle a la même distance de son centre, chaque point d'une ellipse a la même _somme de distances_ à ses deux points focaux. 
+Une ellipse ressemble presque à un «cercle allongé». En fait, vous pourriez le considérer comme un cercle avec _deux centres_ - ce sont des __points focaux__ . Tout comme chaque point d'un cercle a la même distance de son centre, chaque point d'une ellipse a la même _somme de distances_ à ses deux points focaux. 
 
- Si vous avez une longue chaîne connectée à deux points fixes, vous pouvez dessiner une ellipse parfaite en traçant la portée maximale des chaînes: 
+Si vous avez une longue chaîne connectée à deux points fixes, vous pouvez dessiner une ellipse parfaite en traçant la portée maximale des chaînes: 
 
 {.todo} Bientôt: Ellipses dessin interactif 
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
 > goals: v0 v1 v2 v3
 
- Il existe de nombreuses autres représentations physiques de la façon dont vous pourriez dessiner une ellipse: 
+Il existe de nombreuses autres représentations physiques de la façon dont vous pourriez dessiner une ellipse: 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -1715,9 +1622,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Vous vous souvenez peut-être dès le début de ce cours, que les anciens astronomes grecs croyaient que la Terre était au centre de l'univers et que le soleil, la lune et les planètes se déplaçaient autour de la Terre sur des orbites circulaires. 
+Vous vous souvenez peut-être dès le début de ce cours, que les anciens astronomes grecs croyaient que la Terre était au centre de l'univers et que le soleil, la lune et les planètes se déplaçaient autour de la Terre sur des orbites circulaires. 
 
- Malheureusement, l'observation astronomique du ciel ne supportait pas tout à fait cela. Par exemple, le soleil est apparu plus grand pendant certaines parties de l'année et plus petit pendant d'autres. Sur un cercle, chaque point doit avoir [[le même | une augmentation | une]] distance [[décroissante]] de son centre. 
+Malheureusement, l'observation astronomique du ciel ne supportait pas tout à fait cela. Par exemple, le soleil est apparu plus grand pendant certaines parties de l'année et plus petit pendant d'autres. Sur un cercle, chaque point doit avoir [[le même | une augmentation | une]] distance [[décroissante]] de son centre. 
 
 ::: column(width=330)
 
@@ -1731,7 +1638,7 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 > id: epicycles
 > goals: play
 
- Pour résoudre ce problème, les astronomes ont ajouté des __épicycles__ à leur modèle du système solaire: les planètes se déplacent sur un grand cercle autour de la Terre, tout en tournant simultanément sur un cercle plus petit. Bien que très compliqué, c'était le modèle le plus largement accepté de notre univers depuis plus de 1000 ans: 
+Pour résoudre ce problème, les astronomes ont ajouté des __épicycles__ à leur modèle du système solaire: les planètes se déplacent sur un grand cercle autour de la Terre, tout en tournant simultanément sur un cercle plus petit. Bien que très compliqué, c'était le modèle le plus largement accepté de notre univers depuis plus de 1000 ans: 
 
 ::: column(width=320)
 
@@ -1760,9 +1667,9 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- Au fil du temps, les gens ont réalisé que la Terre n'était qu'une des nombreuses planètes en orbite autour du soleil (le __modèle héliocentrique__ ), mais ce n'est qu'en 1609 que l'astronome [Johannes Kepler a](bio:kepler) découvert que les planètes se déplaçaient réellement sur _des orbites elliptiques_ . 
+Au fil du temps, les gens ont réalisé que la Terre n'était qu'une des nombreuses planètes en orbite autour du soleil (le __modèle héliocentrique__ ), mais ce n'est qu'en 1609 que l'astronome [Johannes Kepler a](bio:kepler) découvert que les planètes se déplaçaient réellement sur _des orbites elliptiques_ . 
 
- Le soleil est dans l'un des deux points focaux de ces ellipses. Les planètes accélèrent à mesure qu'elles se rapprochent du soleil et ralentissent à mesure qu'elles s'éloignent. 
+Le soleil est dans l'un des deux points focaux de ces ellipses. Les planètes accélèrent à mesure qu'elles se rapprochent du soleil et ralentissent à mesure qu'elles s'éloignent. 
 
 ::: column(width=320)
 
@@ -1781,13 +1688,12 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 > id: newton
 > goals: apple
 
- Quelques décennies plus tard, [Isaac Newton](bio:newton) a pu prouver les observations de Kepler en utilisant ses nouvelles lois de la [__gravité__](gloss:gravity) . Newton s'est rendu compte qu'il existe une force entre deux masses quelconques dans l'univers - similaire à l'attraction entre deux aimants. 
+Quelques décennies plus tard, [Isaac Newton](bio:newton) a pu prouver les observations de Kepler en utilisant ses nouvelles lois de la [__gravité__](gloss:gravity) . Newton s'est rendu compte qu'il existe une force entre deux masses quelconques dans l'univers - similaire à l'attraction entre deux aimants. 
 
- La gravité est ce qui fait tout tomber au sol et la gravité est également ce qui fait que les planètes se déplacent autour du soleil. Ce n'est que la grande vitesse à laquelle les planètes se déplacent qui les empêche de tomber directement dans le soleil. 
+La gravité est ce qui fait tout tomber au sol et la gravité est également ce qui fait que les planètes se déplacent autour du soleil. Ce n'est que la grande vitesse à laquelle les planètes se déplacent qui les empêche de tomber directement dans le soleil. 
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)
@@ -1797,8 +1703,8 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column.grow
 
- En utilisant les lois de Newton, vous pouvez dériver le chemin emprunté par les objets lorsqu'ils se déplacent sous la force de la gravité. Il s'avère que les planètes se déplacent sur des ellipses, mais d'autres objets comme les comètes peuvent voyager sur [des](gloss:parabola) chemins [paraboliques](gloss:parabola) ou [hyperboliques](gloss:hyperbola) : ils volent près du soleil avant de se retourner et de décoller dans l'univers, pour ne jamais revenir. 
+En utilisant les lois de Newton, vous pouvez dériver le chemin emprunté par les objets lorsqu'ils se déplacent sous la force de la gravité. Il s'avère que les planètes se déplacent sur des ellipses, mais d'autres objets comme les comètes peuvent voyager sur [des](gloss:parabola) chemins [paraboliques](gloss:parabola) ou [hyperboliques](gloss:hyperbola) : ils volent près du soleil avant de se retourner et de décoller dans l'univers, pour ne jamais revenir. 
 
- Selon la légende, une pomme qui tombe a inspiré Newton à penser à la gravité. Il était l'un des scientifiques les plus influents de tous les temps, et ses idées ont façonné notre compréhension du monde pendant près de 300 ans - jusqu'à ce qu'Albert Einstein découvre la relativité en 1905. 
+Selon la légende, une pomme qui tombe a inspiré Newton à penser à la gravité. Il était l'un des scientifiques les plus influents de tous les temps, et ses idées ont façonné notre compréhension du monde pendant près de 300 ans - jusqu'à ce qu'Albert Einstein découvre la relativité en 1905. 
 
 :::

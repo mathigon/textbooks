@@ -84,11 +84,6 @@ Prickarna (...) i slutet betyder helt enkelt att sekvensen kan fortsätta för a
 
 Det lilla antalet efter _x_ kallas ett __-underlag__ och indikerar termens position i sekvensen. Det betyder att vi kan representera _n_ termen i sekvensen med [[`x_n`|`x_i`|`x_2`]].
 
-    // You might think that it would be easier to label the terms in the
-    // sequence as _a_, _b_, _c_, _d_, and so on. However you’ll eventually
-    // [[run out of letters|reach 100|forget a letter]], while the sequence
-    // might go on forever!
-
 ---
 > id: triangles
 
@@ -161,7 +156,6 @@ För att få _n_ -de triangelnumret tar vi [[föregående|first|next]] triangeln
 
 ---
 > id: recursive-1
-
 
 En formel som uttrycker `x_n` som en funktion av tidigare termer i sekvensen kallas en [__rekursiv formel__](gloss:sequence-recursive). Så länge du känner till [[första termen|last term|second term]] i sekvensen kan du beräkna alla följande.
 
@@ -519,7 +513,6 @@ Ett problem med rekursiva formler är att för att hitta den 100: e termen, till
 
 För __{.m-red} aritmetiska sekvenser__ måste vi lägga till _d_ i varje steg:
 
-
 {.ag-equation} `x_1 =` `a`
 
 {.ag-equation} `x_2 =` `a + d`
@@ -724,26 +717,14 @@ Tyvärr är den rekursiva formeln inte så bra om vi vill hitta det 100: e eller
 
 {.todo} COMING SOON: Animerat bevis för triangelnummerformeln
 
-    // ::: column(width=300)
     
-    // svg(width=300 height=300)
       g
     
-    // ::: column.grow
-    // Let’s start with a triangle of size ${x}{x|5|1,10,1}.
     
-    // First, we need to make a second copy of the triangle.
     
-    // Now we can rearrange the two triangles, to fit together in a rectangle.
     
-    // The size of the rectangle is ${x} × ${x + 1}, so it must have an area of
-    // ${x * (x + 1)}
     
-    // Since the rectangle is twice as large as the original triangle, we know that
-    // the ${n}th triangle number must be ${x*(x+1)/2}.
     
-    // In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
-    // :::
 
 ---
 > id: triangle-sums
@@ -788,7 +769,6 @@ Triangelnummer verkar dyka upp överallt i matematik, och du kommer att se dem i
     svg.t-sum.green(width=140 height=140)
 
 :::
-
 
 {.reveal(when="slide")} Det faktum att detta fungerar för _alla_ hela siffror bevisades först 1796 av den tyska matematikern [Carl Friedrich Gauss](bio:gauss) - vid 19 års ålder!
 
@@ -1029,7 +1009,6 @@ Denna sekvens av nummer kallas [__Fibonacci Sequence__](gloss:fibonacci-numbers)
 
 ::: column.grow
 
-
 När Fibonacci föddes 1175 använde de flesta människor i Europa fortfarande det [romerska siffrsystemet](gloss:roman-numerals) för nummer (t.ex. IVX eller MCMLIV). Fibonciens far var köpman och tillsammans reste de både till norra Afrika och Mellanöstern. Det var där Fibonacci först lärde sig [arabiska siffersystemet](gloss:arabic-numerals).
 
 När han återvände till Italien skrev Fibonacci en bok som heter _Liber Abaci_ (latin för ”The Book of Calculations”), där han först introducerade de nya arabiska siffrorna för europeiska handlare. De var en omedelbar framgång - och vi använder dem fortfarande idag.
@@ -1217,7 +1196,6 @@ Vi kan ungefärligt gyllene förhållandet genom att [[dela|adding|subtracting]]
 
 Det gyllene förhållandet förklarar varför Fibonacci-siffror visas i naturen, som solrosen och kotten som du såg i början av detta avsnitt.
 
-
 Båda dessa växter växer utåt från deras centrum (en del av växten som kallas _meristem_). När nya frön, löv eller kronblad läggs, skjuter de de befintliga längre utåt.
 
 Flytta reglaget till höger för att visualisera hur en växt växer. Lägg märke till hur varje blad läggs till med en annan rotation än det föregående. Vinkeln mellan två på varandra följande blad är alltid densamma.
@@ -1239,8 +1217,6 @@ Flytta reglaget till höger för att visualisera hur en växt växer. Lägg mär
 > id: sunflower-spiral
 
 Det är viktigt för blommor att välja en lämplig vinkel: bladen eller frönna måste vara ungefär lika fördelade så att de får den största mängden solljus och näringsämnen. I diagrammet nedan kan du undersöka hur en solros kan se ut med olika vinklar mellan dess frön:
-
-    // Notice how even tiny changes to the angle can produce a completely different arrangement:
 
 ::: x-slideshow
 
@@ -1345,7 +1321,6 @@ Förutom [aritmetiska](gloss:arithmetic-sequence) och [geometriska](gloss:geomet
 
 ---
 > id: primes
-
 
 ### Prime Numbers
 
@@ -1508,7 +1483,6 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 
 ---
 > id: hailstone-2
-
 
 Det verkar som att sekvensens längd varierar mycket, men den kommer alltid att hamna i en cykel på 4, 2, 1 - oavsett vilket första nummer vi väljer. Vi kan till och med visualisera termerna i sekvensen i ett diagram:
 
@@ -1817,7 +1791,6 @@ Att färga varje cell manuellt tar lång tid, men här kan du se vad som händer
 ::: column.grow
 
 Wow! De färgade cellerna visas alltid i [[trianglar|squares|pairs]] (utom några få enskilda celler, som kan ses som trianglar i storlek 1).
-
 
 Om vi fortsätter med mönstret av celler som kan delas med 2, får vi ett som är mycket likt __Sierpinski triangeln__ till höger. Formar som denna, som består av ett enkelt mönster som verkar fortsätta för alltid medan det blir mindre och mindre, kallas [__Fraktaler__](gloss:fractal). Du kommer att lära dig mer om dem i framtiden ...
 

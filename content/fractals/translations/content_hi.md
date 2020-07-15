@@ -426,14 +426,12 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} मध्य एशिया में पर्वत श्रृंखला
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} भारत में गंगा नदी का डेल्टा
@@ -446,14 +444,12 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} रेटिना में रक्त वाहिकाएं
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} यूएसए में ग्रांड कैन्यन
@@ -468,16 +464,12 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 
 ये सभी ऑब्जेक्ट पूरी तरह से यादृच्छिक दिखाई दे सकते हैं, लेकिन, भग्न की तरह, एक अंतर्निहित पैटर्न है जो निर्धारित करता है कि वे कैसे बनते हैं। गणित हमें आकृतियों को बेहतर ढंग से समझने में मदद कर सकता है, और फ्रैक्टल्स में चिकित्सा, जीव विज्ञान, भूविज्ञान और मौसम विज्ञान जैसे क्षेत्रों में अनुप्रयोग हैं। [जारी रखें](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} कंप्यूटर जनित भग्न इलाका
@@ -520,22 +512,18 @@ Sierpinski त्रिकोण की तरह, एक एकल, एकत�
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -953,14 +941,9 @@ Sierpinski त्रिकोण के कई प्रकार हैं, औ
 * {.reveal(when="blank-0")} [बड़े बल्ब](target:bulb1) शीर्ष [[पर अनुक्रम [[3]] अंक_ से मिलकर|converge|diverge]] _{span.reveal(when="blank-1")} एक कक्षा में पहुंचते हैं।
 * {.reveal(when="blank-2")} क्रम में [इस छोटे बल्ब](target:bulb2) की लंबाई [[5]] की परिक्रमा है।
 
-
 :::
 
 {.reveal(when="blank-3")} {२४प्रत्येक बल्ब की एक अलग आकार की कक्षा होती है, जिसमें छोटे बल्ब अपनी कक्षाओं में अधिक से अधिक अंक रखते हैं। इन कक्षाओं का आकार __लॉजिस्टिक मैप__ से संबंधित है, [कैओस सिद्धांत](/course/chaos) में एक महत्वपूर्ण अवधारणा है।
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 

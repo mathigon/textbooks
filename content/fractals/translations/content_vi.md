@@ -425,14 +425,12 @@ Mặc dù fractals thực sự không bao giờ có thể xuất hiện trong t�
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Dãy núi ở Trung Á
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Đồng bằng sông Hằng ở Ấn Độ
@@ -445,14 +443,12 @@ Mặc dù fractals thực sự không bao giờ có thể xuất hiện trong t�
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Mạch máu ở võng mạc
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Grand Canyon ở Hoa Kỳ
@@ -467,16 +463,12 @@ Mặc dù fractals thực sự không bao giờ có thể xuất hiện trong t�
 
 Tất cả các đối tượng này có thể xuất hiện hoàn toàn ngẫu nhiên, nhưng, giống như fractals, có một mô hình cơ bản xác định cách chúng được hình thành. Toán học có thể giúp chúng ta hiểu các hình dạng tốt hơn và fractals có các ứng dụng trong các lĩnh vực như y học, sinh học, địa chất và khí tượng. [Tiếp tục](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Địa hình fractal do máy tính tạo ra
@@ -519,22 +511,18 @@ Dưới đây là một số ví dụ về việc lát sàn từ các nhà thờ
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -952,14 +940,9 @@ Khi bạn di chuyển giá trị [{.pill.red} c](target:c) xung quanh bộ Mande
 * {.reveal(when="blank-0")} Các chuỗi trong [bóng đèn lớn](target:bulb1) ở đầu [[đạt đến quỹ đạo|converge|diverge]] _{span.reveal(when="blank-1")} bao gồm [[3]] điểm._
 * {.reveal(when="blank-2")} Chuỗi trong [bóng đèn nhỏ hơn này](target:bulb2) có quỹ đạo có chiều dài [[5]].
 
-
 :::
 
 {.reveal(when="blank-3")} Mỗi bóng đèn có quỹ đạo có kích thước khác nhau, với các bóng đèn nhỏ hơn có càng nhiều điểm trên quỹ đạo của chúng. Kích thước của các quỹ đạo này có liên quan chặt chẽ với __Bản đồ logistic__, một khái niệm quan trọng trong [lý thuyết hỗn loạn](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 

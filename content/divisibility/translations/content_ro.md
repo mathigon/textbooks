@@ -114,8 +114,6 @@ până ajungem la mijloc.
 
 Singurul caz special al acestei metode apare la numerele pătrate perfecte: în acest caz, punctul de întâlnire din mijloc este un singur număr, precum 64 = 8 × 8.
 
-    //- TODO Factorisation exercises
-
 ---
 
 ## Criterii de Divizibilitate
@@ -126,7 +124,6 @@ Singurul caz special al acestei metode apare la numerele pătrate perfecte: în 
 Există câteva criterii diferite care pot ușura surprinzător de mult verificarea dacă 
 un număr este divizibil cu altul. În acest capitol vom arunca o privire asupra 
 câtorva dintre acestea...
-
 
 ### Criteriul de divizibilitate cu 2 și 5
 
@@ -306,8 +303,6 @@ este divizibil cu 2 [[și|sau]] 3. De reținut că această regulă funcționeaz
 pentru 6, dar cu siguranță nu pentru _orice_ număr care este produsul a două numere.
 Mai multe despre toate acestea mai târziu…
 
-    //- TODO Practice exercises
-
 ---
 
 ## Numere Prime
@@ -322,8 +317,6 @@ sub forma unui produs de numere mai mici, iar asta le face, într-un fel sa fie 
 
 Să observăm că 1 _nu_ este număr prim, așa că primele numere prime sunt
 2, 3, 5, 7, 11, 13, …
-
-    //- TODO Exercises
 
 ---
 > id: primes1
@@ -376,8 +369,6 @@ Folosirea TFA poate simplifica multe probleme de matematică: descompunem numere
 factori primi, rezolvăm problema pentru numerele prime individuale, care
 adesea poate fi mult mai ușoară, iar apoi combinăm aceste rezultate pentru a rezolva
 problema inițială.
-
-    //- TODO Exercises
 
 ---
 > id: eratosthenes
@@ -436,10 +427,6 @@ că există o infinitate de numere prime, folosind următorul raționament:
         .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
       li În ambele cazuri am găsit un nou număr prim care nu se află în lista noastră inițială, dar am presupus ca #[em toate] numerele prime se aflau în această listă.
       li Cu siguranță că ceva nu e în regulă! Dar, având în vedere că pașii #[span.proof-step 2]–#[span.proof-step 4] erau mai mult ca sigur valizi, singura posibilitate este că presupunerea noastră inițială din pasul #[span.proof-step 1] a fost greșită. Așadar, există o infinitate de numere prime.
-
-    // Notice that any prime that divides N cannot divide N + 1. (If it would,
-    // it also had to divide the difference between N and N + 1 which is 1. But
-    // the only number that divides 1 is 1 itself.)
 
 ---
 > id: primes4
@@ -511,8 +498,6 @@ Aici poți genera propriile tale numere prime cu un număr dat de cifre:
 
 ---
 > id: ulam
-
-    //- Stanislaw M. Ulam was doodling during the presentation of a "long and very boring paper" at a scientific meeting in 1963.
 
 ### Spirala Ulam
 
@@ -849,8 +834,6 @@ Numerele prime sunt un caz special: cmmmc pentru două numere prime diferite est
 [[produsul|suma|diferența]] lor, pentru că ele nu au niciun factor prim comun care 
 s-ar putea “tăia”.
 
-    //- TODO Exercises
-
 ---
 > id: cicadas
 > goals: bound-low bound-high
@@ -894,8 +877,6 @@ Bineînțeles că cicadele nu au nicio idee ce sunt numerele prime, dar de-a lun
 de ani evoluția a stabilit că numerele prime sunt cea mai sigură opțiune pentru durata 
 ciclului de viață. Animalul prădător pare să fi dispărut de-a lungul timpului, dar 
 ciclurile de viață cu numere prime au ramas.
-
-    //- TODO Exercises
 
 ---
 

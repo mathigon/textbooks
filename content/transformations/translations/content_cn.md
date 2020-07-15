@@ -39,7 +39,7 @@
 
 但是对称比简单_看起来_更重要。它是我们宇宙的基础，甚至可以解释物理学的最基本定律。 
 
- _{button.next-step}继续_ 
+_{button.next-step}继续_ 
 
 ---
 > id: transformations
@@ -79,7 +79,7 @@
 > id: rigid
 > section: rigid
 
- [__刚性变换__](gloss:rigid-transformation)是一种特殊的变换，它不会更改图形的大小或形状。我们可以想象它是由木材或金属之类的固体材料制成的：我们可以移动，旋转或翻转它，但不能拉伸，弯曲或使其变形。 
+[__刚性变换__](gloss:rigid-transformation)是一种特殊的变换，它不会更改图形的大小或形状。我们可以想象它是由木材或金属之类的固体材料制成的：我们可以移动，旋转或翻转它，但不能拉伸，弯曲或使其变形。 
 
 这五个转换中哪些是固定的？ 
 
@@ -134,7 +134,7 @@
 
 ### 翻译
 
- [__平移__](gloss:translation)是指将图形的每个点沿相同方向移动相同距离的变换。 
+[__平移__](gloss:translation)是指将图形的每个点沿相同方向移动相同距离的变换。 
 
 在坐标平面中，我们可以指定形状沿_x_轴和_y_轴移动的距离。例如，通过（3，5）进行的变换将形状沿_x_轴移动3，并沿_y_轴移动5。 
 
@@ -220,7 +220,7 @@
 
 ### 感言
 
- [__反射__](gloss:reflection)是一种在直线上“翻转”或“镜像”形状的变换。这条线称为__反射线__ 。 
+[__反射__](gloss:reflection)是一种在直线上“翻转”或“镜像”形状的变换。这条线称为__反射线__ 。 
 
 在以下每个示例中绘制反射线： 
 
@@ -342,7 +342,7 @@
 
 ### 轮换
 
- [__旋转__](gloss:rotation)是一种将形状围绕固定点“旋转”一定角度的变换。该点称为[__旋转中心__](gloss:center-of-rotation) 。旋转可以是顺时针或逆时针。 
+[__旋转__](gloss:rotation)是一种将形状围绕固定点“旋转”一定角度的变换。该点称为[__旋转中心__](gloss:center-of-rotation) 。旋转可以是顺时针或逆时针。 
 
 尝试围绕红色旋转中心旋转以下形状： 
 
@@ -484,7 +484,7 @@
 > goals: play-0 play-1
 > section: symmetry
 
- [__对称性__](gloss:symmetry)无处不在，这是一个直观的概念：对象的不同部分在某种程度上看起来_是相同的_ 。但是使用变换，我们可以对对称_真正的_含义给出更精确的数学定义： 
+[__对称性__](gloss:symmetry)无处不在，这是一个直观的概念：对象的不同部分在某种程度上看起来_是相同的_ 。但是使用变换，我们可以对对称_真正的_含义给出更精确的数学定义： 
 
 {.definition}如果对象看起来相同，则即使它是经过_对称_变换的对象，也是_对称的_ 。 
 
@@ -655,7 +655,7 @@
 
 如果形状在[__旋转__](gloss:rotational-symmetry)后看起来相同（小于360°），则具有[__旋转对称性__](gloss:rotational-symmetry) 。 [旋转中心](gloss:center-of-rotation)通常只是形状的中间。 
 
- [__对称顺序__](gloss:order-of-symmetry)是形状看起来相同的不同方向的数量。您也可以将其视为_可以旋转形状的次数_ ，然后再回到起点。例如，此雪花的阶数为[[6]] 。 
+[__对称顺序__](gloss:order-of-symmetry)是形状看起来相同的不同方向的数量。您也可以将其视为_可以旋转形状的次数_ ，然后再回到起点。例如，此雪花的阶数为[[6]] 。 
 
 {.reveal(when="blank-0")}每次旋转的角度是`"360°"/"order"` 。在雪花中，这是`"360°"/6 = input(60)°` 。 
 
@@ -664,8 +664,6 @@
     include svg/snowflake.svg
 
 :::
-
-    // Maybe have another alphabeth to select all letters with rotational symmetry?
 
 ---
 > id: rotational-symmetry-1
@@ -741,9 +739,6 @@
 
 > id: groups
 > section: symmetry-groups
-
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
 
 有些形状具有多个对称性-让我们以一个简单的例子来看一下[正方形](gloss:square) 。 
 
@@ -824,7 +819,7 @@
 
 花一些时间玩对称计算器，然后尝试找到任何模式。你能完成这些观察吗？ 
 
- *增加两个旋转将始终产生[[一个旋转|反思]] （或身份）。 *添加两个反射将始终[[旋转|反思]] （或身份）。 *以相反的顺序添加相同的两个对称[[有时会产生不同的结果|总是给与众不同|总是给出相同的]]结果。 *添加身份[[不会做任何事情|返回反射|返回相反]] 。 
+*增加两个旋转将始终产生[[一个旋转|反思]] （或身份）。 *添加两个反射将始终[[旋转|反思]] （或身份）。 *以相反的顺序添加相同的两个对称[[有时会产生不同的结果|总是给与众不同|总是给出相同的]]结果。 *添加身份[[不会做任何事情|返回反射|返回相反]] 。 
 
 ---
 > id: group-axioms
@@ -927,7 +922,7 @@
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
- [__平移对称性__](gloss:translational-symmetry)不适用于花朵或蝴蝶等孤立的对象，但适用于延伸到各个方向的规则模式： 
+[__平移对称性__](gloss:translational-symmetry)不适用于花朵或蝴蝶等孤立的对象，但适用于延伸到各个方向的规则模式： 
 
 ::: column.grow
 
@@ -1106,7 +1101,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 例如，如果您喜欢苹果汁和喜欢橙汁一样多，那么在交换苹果和橙子的转换下，您的偏好是“对称”。 
 
- 1915年，德国数学家[艾米·诺瑟（Emmy Noether）](bio:noether)观察到， [自然法则也有](gloss:laws-of-nature)相似之处。 
+1915年，德国数学家[艾米·诺瑟（Emmy Noether）](bio:noether)观察到， [自然法则也有](gloss:laws-of-nature)相似之处。 
 
 ::: column.grow
 
@@ -1190,20 +1185,6 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 {.todo}即将推出–有关膨胀的更多信息
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## 相似
@@ -1259,9 +1240,6 @@ Perpendicular glide reflections, rotations of order 2, translations
 相反，我们可以重新排列这些等式并完全消除比例因子： 
 
 {.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
 
 我们可以用它来解决涉及相似多边形的现实生活中的问题-例如，如果我们知道其他一些面，则可以找到缺失面的长度。在以下部分中，您将看到一些示例。 
 

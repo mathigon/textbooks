@@ -5,7 +5,7 @@
 > id: intro-0
 > section: introduction
 
- În fiecare zi suntem înconjurați de nenumărate conexiuni și rețele: drumuri și căi ferate, linii telefonice, internet, circuite electronice și chiar legături moleculare. Există chiar și _rețele sociale_ între prieteni și familii. Vă puteți gândi la alte exemple? 
+În fiecare zi suntem înconjurați de nenumărate conexiuni și rețele: drumuri și căi ferate, linii telefonice, internet, circuite electronice și chiar legături moleculare. Există chiar și _rețele sociale_ între prieteni și familii. Vă puteți gândi la alte exemple? 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -50,9 +50,9 @@
 
 ::: column.grow
 
- În matematică, toate aceste exemple pot fi reprezentate ca [__grafice__](gloss:graph) (nu trebuie confundate cu _graficul_ unei funcții). Un grafic este format din anumite _puncte_ numite [[vârfuri | cerc | traversări]] , unele dintre ele fiind conectate prin [[margini | limite | perechi]] . 
+În matematică, toate aceste exemple pot fi reprezentate ca [__grafice__](gloss:graph) (nu trebuie confundate cu _graficul_ unei funcții). Un grafic este format din anumite _puncte_ numite [[vârfuri | cerc | traversări]] , unele dintre ele fiind conectate prin [[margini | limite | perechi]] . 
 
- __Teoria graficului__ este studiul graficelor și a proprietăților acestora. Este una dintre cele mai interesante și vizuale domenii ale matematicii și are nenumărate aplicații importante. 
+__Teoria graficului__ este studiul graficelor și a proprietăților acestora. Este una dintre cele mai interesante și vizuale domenii ale matematicii și are nenumărate aplicații importante. 
 
 ::: column(width=180)
 
@@ -63,7 +63,7 @@
 ---
 > id: intro-1
 
- Putem realiza aspectul graficelor simple folosind cercuri și linii. Poziția vârfurilor și lungimea marginilor este irelevantă - ne interesează doar _modul în care acestea sunt conectate_ între ele. Marginile se pot încrucișa și nu trebuie să fie drepte. 
+Putem realiza aspectul graficelor simple folosind cercuri și linii. Poziția vârfurilor și lungimea marginilor este irelevantă - ne interesează doar _modul în care acestea sunt conectate_ între ele. Marginile se pot încrucișa și nu trebuie să fie drepte. 
 
 ::: column(width=200)
 
@@ -85,13 +85,10 @@
 
 :::
 
-    // TODO maybe include examples of graphs with edges crossing, curved edges, etc.
-    // could include an "is this a graph?" quiz
-
 ---
 > id: intro-2
 
- Putem crea noi grafice dintr-un grafic existent eliminând unele dintre vârfuri și muchii. Rezultatul se numește [__subgrafă__](gloss:subgraph) . Aici puteți vedea câteva alte exemple de grafice, cu margini colorate și vârfuri care indică o posibilă subgrafă: 
+Putem crea noi grafice dintr-un grafic existent eliminând unele dintre vârfuri și muchii. Rezultatul se numește [__subgrafă__](gloss:subgraph) . Aici puteți vedea câteva alte exemple de grafice, cu margini colorate și vârfuri care indică o posibilă subgrafă: 
 
 ::: column(width=212 parent="padded-thin")
 
@@ -113,7 +110,7 @@
 ---
 > id: intro-3
 
- Spunem că [__ordinea__](gloss:graph-order) unui grafic este numărul de vârfuri pe care le are. [__Gradul__](gloss:graph-degree) unui vertex este numărul de muchii care se întâlnesc la acel vertex. 
+Spunem că [__ordinea__](gloss:graph-order) unui grafic este numărul de vârfuri pe care le are. [__Gradul__](gloss:graph-degree) unui vertex este numărul de muchii care se întâlnesc la acel vertex. 
 
 ::: column(width=130)
 
@@ -144,7 +141,7 @@
 ---
 > id: intro-4
 
- Graficele care constau dintr-o singură buclă de vârfuri se numesc [__cicluri__](gloss:graph-cycle) . Toate ciclurile au [[același număr de muchii și vârfuri | mai multe margini decât vârfuri | mai puțini margini decât vârfurile]] . 
+Graficele care constau dintr-o singură buclă de vârfuri se numesc [__cicluri__](gloss:graph-cycle) . Toate ciclurile au [[același număr de muchii și vârfuri | mai multe margini decât vârfuri | mai puțini margini decât vârfurile]] . 
 
     .row
       svg.graph(style='width: 120px; height: 120px;')
@@ -162,11 +159,11 @@
 
 ::: column.grow
 
- Unul dintre primii matematicieni care s-a gândit la grafice și rețele a fost [Leonhard Euler](bio:euler) . Euler a fost intrigat de o veche problemă cu privire la orașul Königsberg, lângă Marea Baltică. 
+Unul dintre primii matematicieni care s-a gândit la grafice și rețele a fost [Leonhard Euler](bio:euler) . Euler a fost intrigat de o veche problemă cu privire la orașul Königsberg, lângă Marea Baltică. 
 
- Râul Pregel împarte Königsberg în patru părți separate, care sunt conectate de șapte poduri. Este posibil să vă plimbați prin oraș care traversează toate podurile exact o dată - dar nu mai mult de o dată? (Puteți începe și termina oriunde, nu neapărat în același loc.) 
+Râul Pregel împarte Königsberg în patru părți separate, care sunt conectate de șapte poduri. Este posibil să vă plimbați prin oraș care traversează toate podurile exact o dată - dar nu mai mult de o dată? (Puteți începe și termina oriunde, nu neapărat în același loc.) 
 
- Încercați să găsiți un traseu valid desenând pe aceste hărți: 
+Încercați să găsiți un traseu valid desenând pe aceste hărți: 
 
 ::: column(width=250)
 
@@ -208,11 +205,11 @@
 ---
 > id: bridges-1
 
- În cazul Königsberg se pare că este imposibil să se găsească o rută validă, dar unele dintre celelalte orașe funcționează. Euler a reușit să găsească o regulă simplă care să poată fi aplicată oricărui oraș, fără a fi nevoie să încerci o mulțime de posibilități - folosind teoria graficului. 
+În cazul Königsberg se pare că este imposibil să se găsească o rută validă, dar unele dintre celelalte orașe funcționează. Euler a reușit să găsească o regulă simplă care să poată fi aplicată oricărui oraș, fără a fi nevoie să încerci o mulțime de posibilități - folosind teoria graficului. 
 
 ::: column.grow
 
- În primul rând, trebuie să convertim hărțile orașului în grafice cu margini și vertexuri. Fiecare insulă sau regiune de pământ este reprezentată de [[un vertex | o margine | o zonă]] și fiecare pod care leagă două regiuni este reprezentat de o [[margine]] corespunzătoare [[| zenit | stradă]] . 
+În primul rând, trebuie să convertim hărțile orașului în grafice cu margini și vertexuri. Fiecare insulă sau regiune de pământ este reprezentată de [[un vertex | o margine | o zonă]] și fiecare pod care leagă două regiuni este reprezentat de o [[margine]] corespunzătoare [[| zenit | stradă]] . 
 
 {.reveal(when="blank-0 blank-1")} Acum, problema „turului unui oraș în timp ce traversați fiecare pod exact o dată” a devenit o problemă a „desenării unui grafic cu o cursă continuă în timp ce urmărim fiecare muchie exact o dată”. 
 
@@ -225,16 +222,13 @@
 ---
 > id: bridges-2
 
- Pe hârtie, apăsați cu câteva grafice diferite și apoi încercați să aflați care pot fi desenate cu un singur accident continuu. 
-
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
+Pe hârtie, apăsați cu câteva grafice diferite și apoi încercați să aflați care pot fi desenate cu un singur accident continuu. 
 
 ---
 > id: bridges-3
 > goals: size prime eo
 
- La fel ca și pentru hărțile orașului de dinainte, descoperim că unele grafice sunt posibile în timp ce altele nu. Pentru a ne ajuta să înțelegem de ce, să etichetăm fiecare vertex cu [gradul](gloss:graph-degree) său. Apoi putem colora vârfurile în moduri diferite și vom încerca să dezvăluim un model: 
+La fel ca și pentru hărțile orașului de dinainte, descoperim că unele grafice sunt posibile în timp ce altele nu. Pentru a ne ajuta să înțelegem de ce, să etichetăm fiecare vertex cu [gradul](gloss:graph-degree) său. Apoi putem colora vârfurile în moduri diferite și vom încerca să dezvăluim un model: 
 
     figure
       x-select.var.tabs(:bind="colour")
@@ -251,7 +245,7 @@
 ---
 > id: bridges-4
 
- Comparând aceste numere pentru grafice care sunt posibile și cele care nu sunt posibile, se pare că un grafic poate fi desenat dacă nu [[are mai mult de două vârfuri „impare” | are doar vârfuri „uniforme” | nu are vârfuri cu o ordine mai mare de 4 | are un număr impar de vârfuri | nu are vârfuri de ordin 3]] . Această condiție poate fi explicată dacă ne uităm la un singur vertex în grafic: 
+Comparând aceste numere pentru grafice care sunt posibile și cele care nu sunt posibile, se pare că un grafic poate fi desenat dacă nu [[are mai mult de două vârfuri „impare” | are doar vârfuri „uniforme” | nu are vârfuri cu o ordine mai mare de 4 | are un număr impar de vârfuri | nu are vârfuri de ordin 3]] . Această condiție poate fi explicată dacă ne uităm la un singur vertex în grafic: 
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
@@ -267,9 +261,9 @@
 
 ::: column.grow(parent="right")
 
- Dacă derulați înapoi la harta Königsberg, veți vedea că există mai mult de două insule cu un număr impar de poduri. Prin urmare, un traseu care traversează fiecare pod exact o dată este într-adevăr imposibil - și asta a descoperit Leonard Euler. 
+Dacă derulați înapoi la harta Königsberg, veți vedea că există mai mult de două insule cu un număr impar de poduri. Prin urmare, un traseu care traversează fiecare pod exact o dată este într-adevăr imposibil - și asta a descoperit Leonard Euler. 
 
- Descoperirea lui Euler nu poate părea deosebit de utilă în viața reală, dar graficele sunt la baza multor alte probleme geografice, cum ar fi găsirea direcțiilor între două locații. Mai multe dintre aceste aplicații vom descoperi mai târziu. 
+Descoperirea lui Euler nu poate părea deosebit de utilă în viața reală, dar graficele sunt la baza multor alte probleme geografice, cum ar fi găsirea direcțiilor între două locații. Mai multe dintre aceste aplicații vom descoperi mai târziu. 
 
 ::: column(width=240)
 
@@ -285,11 +279,11 @@
 
 ::: column.grow
 
- Ai fost invitat la o minunată petrecere de naștere alături de prieteni. Inclusiv tu și gazda, există ${hnd}{hnd|5|3,15,1} oameni prezenți. 
+Ai fost invitat la o minunată petrecere de naștere alături de prieteni. Inclusiv tu și gazda, există ${hnd}{hnd|5|3,15,1} oameni prezenți. 
 
- Seara, pe măsură ce oaspeții se pregătesc să plece, toată lumea dă mâna cu toți ceilalți. Câte strângeri de mână sunt în total? 
+Seara, pe măsură ce oaspeții se pregătesc să plece, toată lumea dă mâna cu toți ceilalți. Câte strângeri de mână sunt în total? 
 
- Putem reprezenta strângerile de mână folosind un grafic: fiecare persoană este [[un vertex | o margine]] și fiecare strângere de mână este [[o margine | un vertex]] . 
+Putem reprezenta strângerile de mână folosind un grafic: fiecare persoană este [[un vertex | o margine]] și fiecare strângere de mână este [[o margine | un vertex]] . 
 
 {.reveal(when='blank-0 blank-1')} Acum este ușor să numeri numărul de muchii din grafic. O găsim acolo cu ${hnd} oameni, există ${hnd*(hnd-1)/2} strângeri de mână. 
 
@@ -303,9 +297,9 @@
 ---
 > id: handshakes-2
 
- În loc să numărați toate marginile în grafice mari, am putea încerca, de asemenea, să găsim o formulă simplă care să ne spună rezultatul pentru _orice_ număr de invitați. 
+În loc să numărați toate marginile în grafice mari, am putea încerca, de asemenea, să găsim o formulă simplă care să ne spună rezultatul pentru _orice_ număr de invitați. 
 
- Fiecare din ${n}{n|5|2,8,1} oamenii de la petrecere dau mâna cu ${n-1} alții. Asta face ${n} × ${n-1} = ${n×(n-1)} strângeri de mână în total. Pentru _n_ oameni, numărul de strângeri de mână ar fi [[`n×(n–1)`|`n×(n+1)`|`n^2`]] . 
+Fiecare din ${n}{n|5|2,8,1} oamenii de la petrecere dau mâna cu ${n-1} alții. Asta face ${n} × ${n-1} = ${n×(n-1)} strângeri de mână în total. Pentru _n_ oameni, numărul de strângeri de mână ar fi [[`n×(n–1)`|`n×(n+1)`|`n^2`]] . 
 
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -313,16 +307,16 @@
 ---
 > id: handshakes-2a
 
- Din păcate, acest răspuns nu este chiar corect. Observați cum <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">primele două intrări din rândul de sus</x-target> sunt de fapt aceleași, doar răsucite. 
+Din păcate, acest răspuns nu este chiar corect. Observați cum <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">primele două intrări din rândul de sus</x-target> sunt de fapt aceleași, doar răsucite. 
 
- De fapt, am numărat fiecare strângere de mână de [[două ori | o singura data | de trei ori]] , _{span.reveal(when="blank-0")} o dată pentru fiecare dintre cele două persoane implicate. Acest lucru înseamnă că numărul corect de strângeri de mână pentru ${n}{n|5|2,25,1} oaspeții este `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
+De fapt, am numărat fiecare strângere de mână de [[două ori | o singura data | de trei ori]] , _{span.reveal(when="blank-0")} o dată pentru fiecare dintre cele două persoane implicate. Acest lucru înseamnă că numărul corect de strângeri de mână pentru ${n}{n|5|2,25,1} oaspeții este `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 
 ---
 > id: handshakes-3
 
- Graficele de strângere de mână sunt speciale, deoarece fiecare vertex este conectat la fiecare alt vertex. Graficele cu această proprietate sunt numite __grafice complete__ . Graficul complet cu 4 vârfuri este adesea prescurtat ca `K_4` , graficul complet cu 5 vârfuri este cunoscut ca `K_5` , si asa mai departe. 
+Graficele de strângere de mână sunt speciale, deoarece fiecare vertex este conectat la fiecare alt vertex. Graficele cu această proprietate sunt numite __grafice complete__ . Graficul complet cu 4 vârfuri este adesea prescurtat ca `K_4` , graficul complet cu 5 vârfuri este cunoscut ca `K_5` , si asa mai departe. 
 
- Tocmai am arătat că un grafic complet cu `n` noduri, `K_n` , are `(n × (n-1))/2` margini. 
+Tocmai am arătat că un grafic complet cu `n` noduri, `K_n` , are `(n × (n-1))/2` margini. 
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -335,11 +329,11 @@
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
- Într-o altă zi, sunteți invitat la un eveniment de întâlnire rapidă pentru ${m}{m|5|2,8,1} băieți și ${f}{f|4|2,8,1} fete. Există multe mese mici și fiecare băiat petrece 5 minute cu fiecare dintre fete. Câte „date” individuale există în total? 
+Într-o altă zi, sunteți invitat la un eveniment de întâlnire rapidă pentru ${m}{m|5|2,8,1} băieți și ${f}{f|4|2,8,1} fete. Există multe mese mici și fiecare băiat petrece 5 minute cu fiecare dintre fete. Câte „date” individuale există în total? 
 
 ::: column.grow
 
- În acest caz, graficul corespunzător este format din două seturi de vârfuri separate. Fiecare vertex este conectat la toate vârfurile din [[opus |]] setul [[propriu]] , dar niciunul dintre vârfurile [[sale |]] setul [[opus]] . Graficele care dispun de acest aspect se numesc __grafice bipartite__ . 
+În acest caz, graficul corespunzător este format din două seturi de vârfuri separate. Fiecare vertex este conectat la toate vârfurile din [[opus |]] setul [[propriu]] , dar niciunul dintre vârfurile [[sale |]] setul [[opus]] . Graficele care dispun de acest aspect se numesc __grafice bipartite__ . 
 
 ::: column(width=300)
 
@@ -358,9 +352,9 @@
 
 ::: column.grow
 
- Iată un alt puzzle care are legătură cu teoria graficului. 
+Iată un alt puzzle care are legătură cu teoria graficului. 
 
- Într-un sat mic există trei case și trei uzine care produc apă, energie electrică și gaz. Trebuie să conectăm fiecare dintre cursuri la fiecare dintre instalațiile de utilitate, dar, datorită amenajării satului, nu se permite traversarea țevilor și cablurilor. 
+Într-un sat mic există trei case și trei uzine care produc apă, energie electrică și gaz. Trebuie să conectăm fiecare dintre cursuri la fiecare dintre instalațiile de utilitate, dar, datorită amenajării satului, nu se permite traversarea țevilor și cablurilor. 
 
 ::: column(width=300)
 
@@ -368,7 +362,7 @@
 
 :::
 
- Încercați să conectați fiecare dintre case la fiecare dintre companiile de servicii de mai jos, fără ca oricare dintre liniile dvs. să se intersecteze: 
+Încercați să conectați fiecare dintre case la fiecare dintre companiile de servicii de mai jos, fără ca oricare dintre liniile dvs. să se intersecteze: 
 
     .box.no-padding
       include svg/utilities.svg
@@ -377,7 +371,7 @@
 ---
 > id: utilities-1
 
- La fel ca podurile din Königsberg înainte, descoperiți rapid că această problemă este imposibilă. Se pare că unele grafice pot fi desenate fără margini suprapuse - acestea se numesc __grafice plane__ - dar altele nu pot. 
+La fel ca podurile din Königsberg înainte, descoperiți rapid că această problemă este imposibilă. Se pare că unele grafice pot fi desenate fără margini suprapuse - acestea se numesc __grafice plane__ - dar altele nu pot. 
 
 ::: column(width=200)
 
@@ -402,11 +396,9 @@
 ---
 > id: utilities-2
 
- [Graficul complet](gloss:complete-graph) `K_5` este cel mai mic grafic care nu este plan. Orice alt grafic care conține `K_5` întrucât, într-un fel, o subgrafă nu este plană. Aceasta include `K_6` . `K_7` , și toate graficele complete mai mari. 
+[Graficul complet](gloss:complete-graph) `K_5` este cel mai mic grafic care nu este plan. Orice alt grafic care conține `K_5` întrucât, într-un fel, o subgrafă nu este plană. Aceasta include `K_6` . `K_7` , și toate graficele complete mai mari. 
 
- Graficul din puzzle-ul celor trei utilități este [graficul bipartit](gloss:bipartite-graph) `K_"3,3"` . Se pare că orice grafic non-planar trebuie să conțină fie o `K_5` sau a `K_"3,3"` (sau o [subdiviziune](gloss:subdivision) a acestor două grafice) ca subgrafă. Aceasta se numește _teorema lui Kuratowski_ . 
-
-    // TODO Add bio of Kazimierz Kuratowski
+Graficul din puzzle-ul celor trei utilități este [graficul bipartit](gloss:bipartite-graph) `K_"3,3"` . Se pare că orice grafic non-planar trebuie să conțină fie o `K_5` sau a `K_"3,3"` (sau o [subdiviziune](gloss:subdivision) a acestor două grafice) ca subgrafă. Aceasta se numește _teorema lui Kuratowski_ . 
 
 ---
 > id: planarity
@@ -419,11 +411,9 @@
     x-solved
     svg#planarity(viewBox="0 0 720 360")
 
- Acesta este un grafic plan, dar ${n}{n|7|5,20,1} vârfurile au fost zguduite. Rearanjați vârfurile astfel încât niciunul dintre margini să nu se suprapună. 
+Acesta este un grafic plan, dar ${n}{n|7|5,20,1} vârfurile au fost zguduite. Rearanjați vârfurile astfel încât niciunul dintre margini să nu se suprapună. 
 
     p.btn-row: button.btn New Random Graph
-    // TODO Maybe mention that the restriction to straight line edges in the Planarity puzzle isn't
-    // a restriction that matters (Fáry's Theorem).
 
 :::
 
@@ -432,7 +422,7 @@
 
 ### Formula lui Euler 
 
- Toate graficele plane împart planul pe care sunt desenate într-un număr de zone, numite __fețe__ . 
+Toate graficele plane împart planul pe care sunt desenate într-un număr de zone, numite __fețe__ . 
 
 ::: column(width=200)
 
@@ -466,9 +456,9 @@ _{span.euler-sum} 25 Vârfuri + fețe_
 ---
 > id: euler-1
 
- Când compari aceste numere, vei observa că numărul de muchii este întotdeauna [[unul mai mic | mai mare | la fel]] decât numărul de fețe plus numărul de vârfuri. Cu alte cuvinte, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Acest rezultat se numește __ecuația lui Euler__ și poartă numele aceluiași [matematician](bio:euler) care a rezolvat problema Königsberg Bridges. 
+Când compari aceste numere, vei observa că numărul de muchii este întotdeauna [[unul mai mic | mai mare | la fel]] decât numărul de fețe plus numărul de vârfuri. Cu alte cuvinte, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Acest rezultat se numește __ecuația lui Euler__ și poartă numele aceluiași [matematician](bio:euler) care a rezolvat problema Königsberg Bridges. 
 
- Din păcate, există foarte multe grafice și nu putem verifica fiecare pentru a vedea dacă ecuația lui Euler funcționează. În schimb, putem încerca să găsim o simplă [dovadă](gloss:proof) care funcționează pentru orice grafic ... 
+Din păcate, există foarte multe grafice și nu putem verifica fiecare pentru a vedea dacă ecuația lui Euler funcționează. În schimb, putem încerca să găsim o simplă [dovadă](gloss:proof) care funcționează pentru orice grafic ... 
 
 ---
 > id: euler-2
@@ -506,16 +496,16 @@ _{span.euler-sum} 25 Vârfuri + fețe_
 ---
 > id: euler-3
 
- Orice grafic (finit) poate fi construit începând cu un vertex și adăugând mai multe vertexuri unul câte unul. Am arătat că, indiferent de modul în care adăugăm noi noduri, ecuația lui Euler este valabilă. Prin urmare, este valabil pentru toate graficele. 
+Orice grafic (finit) poate fi construit începând cu un vertex și adăugând mai multe vertexuri unul câte unul. Am arătat că, indiferent de modul în care adăugăm noi noduri, ecuația lui Euler este valabilă. Prin urmare, este valabil pentru toate graficele. 
 
- Procesul pe care l-am folosit se numește __inducție matematică__ . Este o tehnică foarte utilă pentru dovedirea rezultatelor în infinit de multe cazuri, pur și simplu începând cu cel mai simplu caz și arătând că rezultatul se menține la fiecare pas atunci când se construiește cazuri mai complexe. 
+Procesul pe care l-am folosit se numește __inducție matematică__ . Este o tehnică foarte utilă pentru dovedirea rezultatelor în infinit de multe cazuri, pur și simplu începând cu cel mai simplu caz și arătând că rezultatul se menține la fiecare pas atunci când se construiește cazuri mai complexe. 
 
     .svg-block: include svg/dominoes.svg
 
 ---
 > id: euler-4
 
- Multe grafice plane arată foarte asemănătoare cu plasele de [poliedre](gloss:polyhedron) , cu forme tridimensionale cu fețe [poligonale](gloss:polygon) . Dacă ne gândim la poliedre ca fiind formate din benzi elastice, ne putem imagina întinzându-le până devin grafice plane, plane: 
+Multe grafice plane arată foarte asemănătoare cu plasele de [poliedre](gloss:polyhedron) , cu forme tridimensionale cu fețe [poligonale](gloss:polygon) . Dacă ne gândim la poliedre ca fiind formate din benzi elastice, ne putem imagina întinzându-le până devin grafice plane, plane: 
 
 ::: column(width=300)
 
@@ -532,9 +522,9 @@ _{span.euler-sum} 25 Vârfuri + fețe_
 ---
 > id: euler-5
 
- Aceasta înseamnă că putem folosi formula lui Euler nu numai pentru graficele plane, ci și pentru toate poliedrele - cu o mică diferență. La transformarea poliedrelor în grafice, una dintre fețe dispare: fața superioară a poliedrului devine „afară”; a graficelor. 
+Aceasta înseamnă că putem folosi formula lui Euler nu numai pentru graficele plane, ci și pentru toate poliedrele - cu o mică diferență. La transformarea poliedrelor în grafice, una dintre fețe dispare: fața superioară a poliedrului devine „afară”; a graficelor. 
 
- Cu alte cuvinte, dacă numeri numărul de __{.red} marginile__ , __{.blue} chipuri__ și __{.green} vârfuri__ ale _oricărui_ poliedru, veți găsi asta _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + [[2]] . 
+Cu alte cuvinte, dacă numeri numărul de __{.red} marginile__ , __{.blue} chipuri__ și __{.green} vârfuri__ ale _oricărui_ poliedru, veți găsi asta _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + [[2]] . 
 
 ::: column(width=200)
 
@@ -573,11 +563,11 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- Am folosit deja teoria graficului cu anumite hărți. Pe măsură ce mărim, drumurile și podurile individuale dispar și, în schimb, vedem conturul țărilor întregi. 
+Am folosit deja teoria graficului cu anumite hărți. Pe măsură ce mărim, drumurile și podurile individuale dispar și, în schimb, vedem conturul țărilor întregi. 
 
- Atunci când colorați o hartă - sau orice alt desen format din regiuni distincte - țările adiacente nu pot avea aceeași culoare. De asemenea, am putea dori să folosim cât mai puține culori diferite. 
+Atunci când colorați o hartă - sau orice alt desen format din regiuni distincte - țările adiacente nu pot avea aceeași culoare. De asemenea, am putea dori să folosim cât mai puține culori diferite. 
 
- Unele „hărți” simple, precum o tablă de șah, au nevoie doar de două culori (alb-negru), dar cele mai complexe hărți au nevoie de mai multe. 
+Unele „hărți” simple, precum o tablă de șah, au nevoie doar de două culori (alb-negru), dar cele mai complexe hărți au nevoie de mai multe. 
 
 ::: column(width=240 style="margin-top: -10px")
 
@@ -590,7 +580,7 @@ __{.red} 90__ muchii
 > goals: map-0 map-1 map-2 map-3
 > title: Colouring Maps
 
- Când colorați harta statelor din SUA, sunt evident 50 de culori, dar sunt necesare mult mai puține. Încercați să colorați hărțile de mai jos cu cât mai puține culori: 
+Când colorați harta statelor din SUA, sunt evident 50 de culori, dar sunt necesare mult mai puține. Încercați să colorați hărțile de mai jos cu cât mai puține culori: 
 
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -630,7 +620,7 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- Toate aceste hărți pot fi colorate doar cu patru culori diferite, dar nu este greu de imaginat că alte hărți foarte complicate ar putea avea nevoie de mult mai multe culori. De fapt, unele hărți au __cel puțin__ patru culori, ori de câte ori conțin patru țări toate conectate între ele. 
+Toate aceste hărți pot fi colorate doar cu patru culori diferite, dar nu este greu de imaginat că alte hărți foarte complicate ar putea avea nevoie de mult mai multe culori. De fapt, unele hărți au __cel puțin__ patru culori, ori de câte ori conțin patru țări toate conectate între ele. 
 
 ::: column(width=200)
 
@@ -638,7 +628,7 @@ __{.red} 90__ muchii
 
 :::
 
- Ca și înainte, putem converti o hartă cu țări și granițe într-un grafic plan: fiecare țară devine [[un vertex | o margine | o față]] și țările care [[au o frontieră | au aceeași culoare]] să fie conectate de o margine: 
+Ca și înainte, putem converti o hartă cu țări și granițe într-un grafic plan: fiecare țară devine [[un vertex | o margine | o față]] și țările care [[au o frontieră | au aceeași culoare]] să fie conectate de o margine: 
 
     .svg-block: include svg/colour-graph.svg
 
@@ -653,25 +643,25 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- În 1852, studentul de botanică [Francis Guthrie a](bio:guthrie) trebuit să coloreze o hartă a județelor din Anglia. El a observat că patru culori păreau să fie suficiente pentru orice hartă încercată, dar nu a fost în stare să găsească o dovadă care să funcționeze pentru _toate_ hărțile. Aceasta s-a dovedit a fi o problemă extrem de dificilă și a devenit cunoscută sub numele de __teorema__ celor __patru culori__ . 
+În 1852, studentul de botanică [Francis Guthrie a](bio:guthrie) trebuit să coloreze o hartă a județelor din Anglia. El a observat că patru culori păreau să fie suficiente pentru orice hartă încercată, dar nu a fost în stare să găsească o dovadă care să funcționeze pentru _toate_ hărțile. Aceasta s-a dovedit a fi o problemă extrem de dificilă și a devenit cunoscută sub numele de __teorema__ celor __patru culori__ . 
 
- În următorii 100 de ani, mulți matematicieni au publicat „dovezi” la cele patru culori ale teoremei, doar pentru a găsi greșeli mai târziu. Unele dintre aceste dovezi invalide au fost atât de convingătoare încât a fost nevoie de mai mult de 10 ani pentru a descoperi erori. 
+În următorii 100 de ani, mulți matematicieni au publicat „dovezi” la cele patru culori ale teoremei, doar pentru a găsi greșeli mai târziu. Unele dintre aceste dovezi invalide au fost atât de convingătoare încât a fost nevoie de mai mult de 10 ani pentru a descoperi erori. 
 
- Pentru o lungă perioadă de timp, matematicienii nu au putut nici să dovedească faptul că patru culori sunt suficiente, nici să găsească o hartă care avea nevoie de mai mult de patru culori. 
+Pentru o lungă perioadă de timp, matematicienii nu au putut nici să dovedească faptul că patru culori sunt suficiente, nici să găsească o hartă care avea nevoie de mai mult de patru culori. 
 
 :::
 
 ---
 > id: maps-4
 
- Nu s-au înregistrat progrese în ceea ce privește problema celor patru culori până în 1976, când [Wolfgang Haken](bio:haken) și [Kenneth Appel au](bio:appel) folosit un computer pentru a rezolva definitiv. Aceștia au redus la infinit multe hărți posibile la 1936 cazuri speciale, care au fost verificate fiecare de un computer în total peste 1000 de ore. 
+Nu s-au înregistrat progrese în ceea ce privește problema celor patru culori până în 1976, când [Wolfgang Haken](bio:haken) și [Kenneth Appel au](bio:appel) folosit un computer pentru a rezolva definitiv. Aceștia au redus la infinit multe hărți posibile la 1936 cazuri speciale, care au fost verificate fiecare de un computer în total peste 1000 de ore. 
 
     x-parallax.full-width(background="images/ibm-360.jpg")
 
 ---
 > id: maps-5
 
- Teorema în patru culori este prima teoremă matematică bine cunoscută care a fost dovedită folosind un computer, ceva care a devenit mult mai comun și mai puțin controversat de atunci. Calculatoare mai rapide și un algoritm mai eficient înseamnă că astăzi poți dovedi teorema de patru culori pe un laptop în doar câteva ore. 
+Teorema în patru culori este prima teoremă matematică bine cunoscută care a fost dovedită folosind un computer, ceva care a devenit mult mai comun și mai puțin controversat de atunci. Calculatoare mai rapide și un algoritm mai eficient înseamnă că astăzi poți dovedi teorema de patru culori pe un laptop în doar câteva ore. 
 
     figure
       x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
@@ -682,9 +672,9 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- Teorema celor patru culori funcționează numai pentru hărți pe un plan plat sau o sferă și în care toate țările constau dintr-o singură zonă. 
+Teorema celor patru culori funcționează numai pentru hărți pe un plan plat sau o sferă și în care toate țările constau dintr-o singură zonă. 
 
- Cu toate acestea, matematicienii s-au uitat, de asemenea, la hărțile _imperiilor_ , unde țările pot consta din mai multe componente deconectate și la hărți de pe planete în formă diferită, cum ar fi un torus (formă de gogoși). În aceste cazuri, este posibil să aveți nevoie de mai mult de patru culori, iar dovezile devin și mai dificile. 
+Cu toate acestea, matematicienii s-au uitat, de asemenea, la hărțile _imperiilor_ , unde țările pot consta din mai multe componente deconectate și la hărți de pe planete în formă diferită, cum ar fi un torus (formă de gogoși). În aceste cazuri, este posibil să aveți nevoie de mai mult de patru culori, iar dovezile devin și mai dificile. 
 
 ::: column(width=300)
 
@@ -701,9 +691,9 @@ __{.red} 90__ muchii
 
 ::: column.grow(parent="right")
 
- Să ne gândim, încă o dată, la rețele și hărți. Imaginați-vă că trebuie să vizitați un serviciu de livrare ${tsn}{tsn|8|2,50,1} diferite orașe pentru distribuirea coletelor. Putem gândi la aceste orașe la vârfurile unui grafic. Dacă toate orașele sunt conectate pe drumuri, acesta este un [[grafic complet | ciclu | grafic bipartit]] , deci există <mfrac><mrow>${tsn} × ( ${tsn} - 1)</mrow><mn>2</mn></mfrac> = ${tsn*(tsn-1)/2} marginile în total. 
+Să ne gândim, încă o dată, la rețele și hărți. Imaginați-vă că trebuie să vizitați un serviciu de livrare ${tsn}{tsn|8|2,50,1} diferite orașe pentru distribuirea coletelor. Putem gândi la aceste orașe la vârfurile unui grafic. Dacă toate orașele sunt conectate pe drumuri, acesta este un [[grafic complet | ciclu | grafic bipartit]] , deci există <mfrac><mrow>${tsn} × ( ${tsn} - 1)</mrow><mn>2</mn></mfrac> = ${tsn*(tsn-1)/2} marginile în total. 
 
- Camionul de livrare trebuie să viziteze toate orașele, în orice comandă. În problema podurilor din Königsberg am vrut să găsim căi care să călătorească de-a lungul _oricărei margini_ exact una. Acum vrem să găsim căi care vizită _fiecare vertex_ exact o dată. Aceste căi se numesc __cicluri hamiltoniene__ . 
+Camionul de livrare trebuie să viziteze toate orașele, în orice comandă. În problema podurilor din Königsberg am vrut să găsim căi care să călătorească de-a lungul _oricărei margini_ exact una. Acum vrem să găsim căi care vizită _fiecare vertex_ exact o dată. Aceste căi se numesc __cicluri hamiltoniene__ . 
 
 ::: column(width=260)
 
@@ -714,7 +704,7 @@ __{.red} 90__ muchii
 ---
 > id: salesman-1
 
- Există nenumărate posibilități diferite pentru ciclurile hamiltoniene în grafice complete. De fapt, putem alege orice vertex ca vertex de pornire și apoi să alegem oricare dintre orașele rămase în orice ordine: 
+Există nenumărate posibilități diferite pentru ciclurile hamiltoniene în grafice complete. De fapt, putem alege orice vertex ca vertex de pornire și apoi să alegem oricare dintre orașele rămase în orice ordine: 
 
     .row
       .grow: p.todo Diagram coming soon…
@@ -723,22 +713,22 @@ __{.red} 90__ muchii
 ---
 > id: salesman-2
 
- Într-un grafic cu ${tsn1}{tsn1|4|2,10,1} orașe, fiecare ciclu hamiltonian trebuie să conțină și ele ${tsn1} orase. Acum, 
+Într-un grafic cu ${tsn1}{tsn1|4|2,10,1} orașe, fiecare ciclu hamiltonian trebuie să conțină și ele ${tsn1} orase. Acum, 
 
     ul.var(:html="tsmString(tsn1)")
 
- Aceasta înseamnă că, în total, există ${tsnPaths(tsn1)} căi posibile. O scurtătură pentru acest produs este ${tsn1} ! sau ${tsn1} __Factorial__ . 
+Aceasta înseamnă că, în total, există ${tsnPaths(tsn1)} căi posibile. O scurtătură pentru acest produs este ${tsn1} ! sau ${tsn1} __Factorial__ . 
 
- Vă puteți imagina că este posibil să nu puteți călători direct între două orașe - fără a trece printr-un alt oraș. În acest caz, nu mai avem un grafic complet, iar găsirea numărului de cicluri hamiltoniene, dacă există deloc, devine mult mai dificilă. 
+Vă puteți imagina că este posibil să nu puteți călători direct între două orașe - fără a trece printr-un alt oraș. În acest caz, nu mai avem un grafic complet, iar găsirea numărului de cicluri hamiltoniene, dacă există deloc, devine mult mai dificilă. 
 
 ---
 > id: salesman-3
 
 ::: column.grow(parent="right")
 
- Până acum am ignorat faptul că unele orașe ar putea fi mai departe de altele. În viața reală, însă, aceasta este o considerație foarte importantă: nu dorim doar să găsim _vreo_ cale, ci vrem să o găsim pe cea mai scurtă. Aceasta se numește __Travelling Travelling Problem__ . Trebuie rezolvat nu numai în transport și logistică, ci și atunci când poziționați tranzistoarele pe microcipuri, pentru a face computere mai rapide sau când analizați structura [ADN-ului](gloss:dna) . 
+Până acum am ignorat faptul că unele orașe ar putea fi mai departe de altele. În viața reală, însă, aceasta este o considerație foarte importantă: nu dorim doar să găsim _vreo_ cale, ci vrem să o găsim pe cea mai scurtă. Aceasta se numește __Travelling Travelling Problem__ . Trebuie rezolvat nu numai în transport și logistică, ci și atunci când poziționați tranzistoarele pe microcipuri, pentru a face computere mai rapide sau când analizați structura [ADN-ului](gloss:dna) . 
 
- O metodă simplă ar fi să încercați toate căile posibile, găsind lungimea fiecăreia, apoi selectând cea mai scurtă. Cu toate acestea, tocmai am arătat asta, chiar și cu doar ${tsn2}{tsn2|10|2,20,1} orașe există ${tsn2} ! = ${factorial(tsn2)} căi posibile. După ce ai sute sau mii de vertexuri, încercarea tuturor căilor posibile devine imposibilă, chiar și folosind computere puternice. 
+O metodă simplă ar fi să încercați toate căile posibile, găsind lungimea fiecăreia, apoi selectând cea mai scurtă. Cu toate acestea, tocmai am arătat asta, chiar și cu doar ${tsn2}{tsn2|10|2,20,1} orașe există ${tsn2} ! = ${factorial(tsn2)} căi posibile. După ce ai sute sau mii de vertexuri, încercarea tuturor căilor posibile devine imposibilă, chiar și folosind computere puternice. 
 
 ::: column(width=220)
 
@@ -750,9 +740,9 @@ __{.red} 90__ muchii
 > id: salesman-4
 > goals: move
 
- Din păcate, nu există un algoritm mai eficient pentru a rezolva problema vânzătorului în călătorie. În schimb, matematicienii și informaticienii au dezvoltat diferiți algoritmi care găsesc soluții _bune_ , chiar dacă este posibil să nu fie cei mai buni. Acești algoritmi, care dau doar soluții aproximative, se numesc __Heuristic__ . 
+Din păcate, nu există un algoritm mai eficient pentru a rezolva problema vânzătorului în călătorie. În schimb, matematicienii și informaticienii au dezvoltat diferiți algoritmi care găsesc soluții _bune_ , chiar dacă este posibil să nu fie cei mai buni. Acești algoritmi, care dau doar soluții aproximative, se numesc __Heuristic__ . 
 
- Încercați să rearanjați orașele de pe această hartă și urmăriți cum se schimbă calea cea mai scurtă dintre ele. Puteți elimina orașele atingând-le și puteți adăuga orașe făcând clic oriunde pe hartă (până la 8): 
+Încercați să rearanjați orașele de pe această hartă și urmăriți cum se schimbă calea cea mai scurtă dintre ele. Puteți elimina orașele atingând-le și puteți adăuga orașe făcând clic oriunde pe hartă (până la 8): 
 
     figure: .tsm
       svg(width=760 height=480 viewBox="0 0 760 480")
@@ -762,7 +752,7 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- __Greedy Algorithm__ (sau __Algoritmul__ cel mai apropiat) este foarte simplu: începeți într-un oraș aleatoriu și vă mutați consecutiv în cel mai apropiat oraș pe care nu l-ați vizitat până acum. După ce ați vizitat toate orașele, vă opriți. 
+__Greedy Algorithm__ (sau __Algoritmul__ cel mai apropiat) este foarte simplu: începeți într-un oraș aleatoriu și vă mutați consecutiv în cel mai apropiat oraș pe care nu l-ați vizitat până acum. După ce ați vizitat toate orașele, vă opriți. 
 
 ::: column(width=300)
 
@@ -770,14 +760,14 @@ __{.red} 90__ muchii
 
 :::
 
- Puteți arăta că, în medie, căile găsite folosind algoritmul lacom sunt cu 25% mai lungi decât cea mai scurtă cale posibilă. 
+Puteți arăta că, în medie, căile găsite folosind algoritmul lacom sunt cu 25% mai lungi decât cea mai scurtă cale posibilă. 
 
 ---
 > id: salesman-6
 
 ::: column.grow
 
- __Algoritmul 2-Opt__ începe cu o cale posibilă aleatorie. Apoi, alegeți în mod repetat două muchii și le schimbați în jurul valorii dacă acest lucru ar reduce lungimea căii. Vă opriți atunci când nu puteți reduce lungimea mai departe schimbând orice pereche de margini. 
+__Algoritmul 2-Opt__ începe cu o cale posibilă aleatorie. Apoi, alegeți în mod repetat două muchii și le schimbați în jurul valorii dacă acest lucru ar reduce lungimea căii. Vă opriți atunci când nu puteți reduce lungimea mai departe schimbând orice pereche de margini. 
 
 ::: column(width=300)
 
@@ -788,18 +778,18 @@ __{.red} 90__ muchii
 ---
 > id: ants
 
- Se dovedește că, cu mult înainte ca computerele să existe chiar, Natura a găsit o modalitate inteligentă de a găsi căi optime între diferite locații: în coloniile de furnici. 
+Se dovedește că, cu mult înainte ca computerele să existe chiar, Natura a găsit o modalitate inteligentă de a găsi căi optime între diferite locații: în coloniile de furnici. 
 
     x-parallax.full-width(background="images/ants.jpg")
 
- Furnicile vor să găsească cele mai scurte rute posibile între cuibul lor și sursele de hrană posibile. Ele pot comunica între ele prin intermediul substanțelor chimice pe care le lasă de-a lungul urmelor lor și pe care alte furnici le pot urma. 
+Furnicile vor să găsească cele mai scurte rute posibile între cuibul lor și sursele de hrană posibile. Ele pot comunica între ele prin intermediul substanțelor chimice pe care le lasă de-a lungul urmelor lor și pe care alte furnici le pot urma. 
 
 ---
 > id: ants-1
 
 ::: column.grow
 
- * Colonia de furnici trimite numeroase cercete care călătoresc inițial în direcții aleatorii. Odată ce găsesc mâncare, se întorc, lăsând în urmă o urmă de feromoni. * Alte furnici tind să urmeze o potecă atunci când găsesc una, ceea ce îi duce la mâncare. În călătoria lor de întoarcere depun mai multe feromoni, întărind astfel calea. * În timp, feromona se evaporă. Cu cât este mai lungă calea, cu atât mai mult timp este nevoie ca furnicile să călătorească de-a lungul ei și astfel feromona are mai mult timp să se evapore. Căile scurte, pe de altă parte, se pot întări mai repede, astfel încât rezistența lor crește mai repede. 
+* Colonia de furnici trimite numeroase cercete care călătoresc inițial în direcții aleatorii. Odată ce găsesc mâncare, se întorc, lăsând în urmă o urmă de feromoni. * Alte furnici tind să urmeze o potecă atunci când găsesc una, ceea ce îi duce la mâncare. În călătoria lor de întoarcere depun mai multe feromoni, întărind astfel calea. * În timp, feromona se evaporă. Cu cât este mai lungă calea, cu atât mai mult timp este nevoie ca furnicile să călătorească de-a lungul ei și astfel feromona are mai mult timp să se evapore. Căile scurte, pe de altă parte, se pot întări mai repede, astfel încât rezistența lor crește mai repede. 
 
 ::: column(width=240)
 
@@ -816,9 +806,9 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- Algoritmii Sistemului de colonii antice (ACS) încearcă să reproducă acest comportament pe computere, folosind multe furnici „virtuale”. Ei pot găsi rapid soluții foarte bune pentru problema vânzătorului în călătorie. 
+Algoritmii Sistemului de colonii antice (ACS) încearcă să reproducă acest comportament pe computere, folosind multe furnici „virtuale”. Ei pot găsi rapid soluții foarte bune pentru problema vânzătorului în călătorie. 
 
- O proprietate deosebit de utilă a algoritmilor ACS este că aceștia pot rula continuu și se pot adapta în timp real la modificările grafice. Aceste modificări ar putea fi cauzate de accidente auto și închideri rutiere în rețelele stradale sau de vârfurile de trafic către serverele web din rețelele de calculatoare. 
+O proprietate deosebit de utilă a algoritmilor ACS este că aceștia pot rula continuu și se pot adapta în timp real la modificările grafice. Aceste modificări ar putea fi cauzate de accidente auto și închideri rutiere în rețelele stradale sau de vârfurile de trafic către serverele web din rețelele de calculatoare. 
 
 :::
 
@@ -831,11 +821,11 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- Problema Traveling Salesman este [NP-hard](gloss:np) , ceea ce înseamnă că este foarte dificil de rezolvat de către calculatoare (cel puțin pentru un număr mare de orașe). 
+Problema Traveling Salesman este [NP-hard](gloss:np) , ceea ce înseamnă că este foarte dificil de rezolvat de către calculatoare (cel puțin pentru un număr mare de orașe). 
 
- Găsirea unui algoritm rapid și exact ar avea implicații grave în domeniul informaticii: ar însemna că există algoritmi rapizi pentru _toate_ problemele dificile NP. De asemenea, aceasta ar face inutilă securitatea Internetului, ceea ce se bazează pe faptul că anumite probleme sunt considerate a fi foarte dificile pentru calculatoare. 
+Găsirea unui algoritm rapid și exact ar avea implicații grave în domeniul informaticii: ar însemna că există algoritmi rapizi pentru _toate_ problemele dificile NP. De asemenea, aceasta ar face inutilă securitatea Internetului, ceea ce se bazează pe faptul că anumite probleme sunt considerate a fi foarte dificile pentru calculatoare. 
 
- Găsirea unui algoritm rapid pentru rezolvarea problemei de vânzător de călători ar rezolva, de asemenea, una dintre cele mai faimoase probleme deschise în matematică și informatică, problema __P vs NP__ . Este una dintre cele șapte [probleme ale premiului Mileniului](gloss:millennium-prize) , fiecare purtând un premiu de 1 milion USD. 
+Găsirea unui algoritm rapid pentru rezolvarea problemei de vânzător de călători ar rezolva, de asemenea, una dintre cele mai faimoase probleme deschise în matematică și informatică, problema __P vs NP__ . Este una dintre cele șapte [probleme ale premiului Mileniului](gloss:millennium-prize) , fiecare purtând un premiu de 1 milion USD. 
 
 :::
 
@@ -853,15 +843,11 @@ __{.red} 90__ muchii
 
 ## Grafice în viața de zi cu zi 
 
- Am văzut multe aplicații diferite ale teoriei graficelor în capitolele anterioare, deși unele dintre ele au fost puțin conturate. Totuși, se dovedește că graficele sunt la baza multor obiecte, concepte și procese din viața de zi cu zi. 
+Am văzut multe aplicații diferite ale teoriei graficelor în capitolele anterioare, deși unele dintre ele au fost puțin conturate. Totuși, se dovedește că graficele sunt la baza multor obiecte, concepte și procese din viața de zi cu zi. 
 
 ::: column.grow
 
- Internetul, de exemplu, este un grafic vast, virtual. Fiecare vertex este o pagină web individuală și fiecare muchie înseamnă că există un hyperlink între două pagini. Rețineți că legăturile merg doar într-un singur sens, astfel încât acest grafic este [[direcționat | multi-line | conectat]] și că acest grafic este _foarte, foarte, mare_ . 
-
-    // * "can be viewed as" instead of "is a vast, virtual graph". "Every
-    // vertex represens an individual webpage and every edge a hyperlink
-    // from one page to another".
+Internetul, de exemplu, este un grafic vast, virtual. Fiecare vertex este o pagină web individuală și fiecare muchie înseamnă că există un hyperlink între două pagini. Rețineți că legăturile merg doar într-un singur sens, astfel încât acest grafic este [[direcționat | multi-line | conectat]] și că acest grafic este _foarte, foarte, mare_ . 
 
  Unele site-uri web, cum ar fi Wikipedia sau Facebook, au o mulțime de link-uri primite, în timp ce multe site-uri web mai mici pot avea foarte puține legături primite. Acesta este conceptul de bază pe care Google îl folosește pentru a sorta rezultatele căutării. 
 
@@ -874,12 +860,12 @@ __{.red} 90__ muchii
 ---
 > id: applications-1
 
- Site-urile web cu mai multe link-uri primite tind să fie de o calitate superioară și ar trebui să fie afișate în partea de sus a rezultatelor căutării. De exemplu, atunci când căutați „Londra”, site-urile de informații turistice oficiale sunt afișate în fața magazinelor mici din Londra sau a blogurilor oamenilor care locuiesc în Londra. Această idee simplă din teoria graficului, __algoritmul Page Rank__ , a făcut ca Google să fie semnificativ mai bun decât alte motoare de căutare timpurii. 
+Site-urile web cu mai multe link-uri primite tind să fie de o calitate superioară și ar trebui să fie afișate în partea de sus a rezultatelor căutării. De exemplu, atunci când căutați „Londra”, site-urile de informații turistice oficiale sunt afișate în fața magazinelor mici din Londra sau a blogurilor oamenilor care locuiesc în Londra. Această idee simplă din teoria graficului, __algoritmul Page Rank__ , a făcut ca Google să fie semnificativ mai bun decât alte motoare de căutare timpurii. 
 
 ---
 > id: applications-2
 
- Internetul este cea mai mare rețea creată vreodată de omenire. Această imagine arată o proporție foarte mică din toate serverele conectate la Internet: 
+Internetul este cea mai mare rețea creată vreodată de omenire. Această imagine arată o proporție foarte mică din toate serverele conectate la Internet: 
 
     x-parallax.full-width(background="images/internet.jpg")
       .credit © LyonLabs, LLC and Barrett Lyon, 2014
@@ -887,11 +873,11 @@ __{.red} 90__ muchii
 ---
 > id: applications-3
 
- În timp ce site-urile web și hyperlink-urile formează un grafic _virtual_ , există și rețeaua _fizică_ de computere, servere, routere, linii de telefon și cabluri. 
+În timp ce site-urile web și hyperlink-urile formează un grafic _virtual_ , există și rețeaua _fizică_ de computere, servere, routere, linii de telefon și cabluri. 
 
 ::: column.grow(parent="right")
 
- De fiecare dată când efectuați un apel telefonic sau încărcați un site web, operatorii de rețele trebuie să găsească o modalitate de a conecta expeditorul și receptorul, fără a depăși capacitatea fiecărui cablu sau conexiune individuală. Teoria și probabilitatea graficului fac posibilă garantarea unui serviciu fiabil, de exemplu, găsind devieri atunci când o anumită conexiune este ocupată. 
+De fiecare dată când efectuați un apel telefonic sau încărcați un site web, operatorii de rețele trebuie să găsească o modalitate de a conecta expeditorul și receptorul, fără a depăși capacitatea fiecărui cablu sau conexiune individuală. Teoria și probabilitatea graficului fac posibilă garantarea unui serviciu fiabil, de exemplu, găsind devieri atunci când o anumită conexiune este ocupată. 
 
 ::: column(width=220)
 
@@ -902,7 +888,7 @@ __{.red} 90__ muchii
 ---
 > id: applications-4
 
- De asemenea, graficele joacă un rol important în transport și navigație. Toate rețelele de zbor, tren și metrou formează grafice, care pot fi utilizate la crearea de programe eficiente. Unul dintre cele mai recunoscute grafice este harta metroului din Londra: 
+De asemenea, graficele joacă un rol important în transport și navigație. Toate rețelele de zbor, tren și metrou formează grafice, care pot fi utilizate la crearea de programe eficiente. Unul dintre cele mai recunoscute grafice este harta metroului din Londra: 
 
     figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
@@ -911,7 +897,7 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- Toate drumurile și autostrăzile formează, de asemenea, o rețea mare, care este utilizată de serviciile de navigație, cum ar fi Google Maps, atunci când se lucrează la cea mai scurtă rută între două puncte. 
+Toate drumurile și autostrăzile formează, de asemenea, o rețea mare, care este utilizată de serviciile de navigație, cum ar fi Google Maps, atunci când se lucrează la cea mai scurtă rută între două puncte. 
 
 ::: column(width=60)
 
@@ -925,21 +911,21 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- În viitor, __sistemele de transport inteligent__ vor reduce congestia și accidentele, dirijând mașinile mai eficient, folosind datele despre locația colectate de pe smartphone-uri și autovehiculele auto. Acest lucru ar putea economisi milioane de ore pierdute pe drum în fiecare an, reduce semnificativ poluarea și permite serviciilor de urgență să călătorească mai rapid. 
+În viitor, __sistemele de transport inteligent__ vor reduce congestia și accidentele, dirijând mașinile mai eficient, folosind datele despre locația colectate de pe smartphone-uri și autovehiculele auto. Acest lucru ar putea economisi milioane de ore pierdute pe drum în fiecare an, reduce semnificativ poluarea și permite serviciilor de urgență să călătorească mai rapid. 
 
 :::
 
 ---
 > id: applications-6
 
- Această imagine arată rețeaua de zboruri aeriene comerciale din toată Europa de nord. 
+Această imagine arată rețeaua de zboruri aeriene comerciale din toată Europa de nord. 
 
     x-parallax.full-width(background="images/flights.jpg")
 
 ---
 > id: applications-7
 
- Există nenumărate alte grafice în știință, inginerie sau viața de zi cu zi: 
+Există nenumărate alte grafice în știință, inginerie sau viața de zi cu zi: 
 
 ::: column(width=200)
 
@@ -984,9 +970,9 @@ __{.red} 90__ muchii
 
 ### Retele sociale 
 
- În cele din urmă, să ne gândim la un exemplu deosebit de bun de grafice care există în viața de zi cu zi: social media. Aici, vârfurile reprezintă [[oameni | prieteni | rețelele]] și marginile reprezintă prietenii, like-uri, abonamente sau adepți. 
+În cele din urmă, să ne gândim la un exemplu deosebit de bun de grafice care există în viața de zi cu zi: social media. Aici, vârfurile reprezintă [[oameni | prieteni | rețelele]] și marginile reprezintă prietenii, like-uri, abonamente sau adepți. 
 
- Când desenăm graficele social media, s-ar putea să vedem anumite __grupuri__ de prieteni reciproci, care poate au plecat la aceeași școală sau au locuit în același oraș. De asemenea, putem determina __centralitatea__ oamenilor, care depinde de cât de bine este conectat un vertex și care poate fi o măsură a popularității unei persoane pe rețelele de socializare. 
+Când desenăm graficele social media, s-ar putea să vedem anumite __grupuri__ de prieteni reciproci, care poate au plecat la aceeași școală sau au locuit în același oraș. De asemenea, putem determina __centralitatea__ oamenilor, care depinde de cât de bine este conectat un vertex și care poate fi o măsură a popularității unei persoane pe rețelele de socializare. 
 
     figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
@@ -995,9 +981,9 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- În 2014, Facebook a avut 1,4 miliarde de utilizatori activi și un total de peste 200 de miliarde de prieteni. Jumătate dintre utilizatorii Facebook au peste 200 de prieteni și, din moment ce majoritatea prietenilor noștri au un număr similar de prieteni, am putea avea cu ușurință zeci de mii _de prieteni_ . 
+În 2014, Facebook a avut 1,4 miliarde de utilizatori activi și un total de peste 200 de miliarde de prieteni. Jumătate dintre utilizatorii Facebook au peste 200 de prieteni și, din moment ce majoritatea prietenilor noștri au un număr similar de prieteni, am putea avea cu ușurință zeci de mii _de prieteni_ . 
 
- O întrebare interesantă ar fi acum: dacă alegeți doi utilizatori Facebook aleatori, câte „muchii de prietenie” ar trebui să urmați pentru a trece de la unul la altul? De exemplu, distanța dintre prieteni este [[1]] , distanța dintre prietenii prietenilor este de [[2]] și așa mai departe. 
+O întrebare interesantă ar fi acum: dacă alegeți doi utilizatori Facebook aleatori, câte „muchii de prietenie” ar trebui să urmați pentru a trece de la unul la altul? De exemplu, distanța dintre prieteni este [[1]] , distanța dintre prietenii prietenilor este de [[2]] și așa mai departe. 
 
 ::: column(width=200)
 
@@ -1008,9 +994,9 @@ __{.red} 90__ muchii
 ---
 > id: social-2
 
- În 2016, Facebook a realizat [un studiu](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/) pentru a determina modul în care utilizatorii săi sunt conectați între ei. Ei au descoperit că, în medie, sunteți conectat la _oricine altcineva_ pe Facebook prin cel mult 3.57 alte persoane. Și asta include celebrități, politicieni sau chiar regalitate! 
+În 2016, Facebook a realizat [un studiu](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/) pentru a determina modul în care utilizatorii săi sunt conectați între ei. Ei au descoperit că, în medie, sunteți conectat la _oricine altcineva_ pe Facebook prin cel mult 3.57 alte persoane. Și asta include celebrități, politicieni sau chiar regalitate! 
 
- Cu alte cuvinte, dacă alegeți unul dintre miliardele de utilizatori Facebook din întreaga lume, probabil vor avea un prieten al unui prieten care cunoaște un prieten al unuia dintre prietenii tăi. Spunem că există 3,57 __grade de separare__ . 
+Cu alte cuvinte, dacă alegeți unul dintre miliardele de utilizatori Facebook din întreaga lume, probabil vor avea un prieten al unui prieten care cunoaște un prieten al unuia dintre prietenii tăi. Spunem că există 3,57 __grade de separare__ . 
 
     figure
       x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
@@ -1025,10 +1011,10 @@ __{.red} 90__ muchii
 
 ::: column.grow
 
- În 1929, când autorul maghiar [Frigyes Karinthy a](bio:karinthy) propus prima dată ideea „șase grade de separare”, nu exista internet sau social media, dar lumea începuse deja să fie mai interconectată. 
+În 1929, când autorul maghiar [Frigyes Karinthy a](bio:karinthy) propus prima dată ideea „șase grade de separare”, nu exista internet sau social media, dar lumea începuse deja să fie mai interconectată. 
 
- În 1967, [Stanley Milgram a](bio:milgram) realizat un prim experiment empiric, unde 296 de participanți care locuiesc în Nebraska și Kansas au fost rugați să livreze o scrisoare unei anumite persoane care locuiește în Boston, Massachusetts. Toți au fost nevoiți să aleagă un prieten pentru a trimite scrisoarea, care apoi a ales un alt prieten. La fiecare pas, scrisoarea s-a apropiat de Boston. Milgram a descoperit că, în medie, erau doar 5,2 prieteni intermediari - 5,2 grade de separare. 
+În 1967, [Stanley Milgram a](bio:milgram) realizat un prim experiment empiric, unde 296 de participanți care locuiesc în Nebraska și Kansas au fost rugați să livreze o scrisoare unei anumite persoane care locuiește în Boston, Massachusetts. Toți au fost nevoiți să aleagă un prieten pentru a trimite scrisoarea, care apoi a ales un alt prieten. La fiecare pas, scrisoarea s-a apropiat de Boston. Milgram a descoperit că, în medie, erau doar 5,2 prieteni intermediari - 5,2 grade de separare. 
 
 :::
 
- Astăzi, fiecare dintre noi face parte din nenumărate grafice invizibile, care stau la baza interacțiunilor noastre sociale, călătorii, internet și tehnologie, știință și multe altele.
+Astăzi, fiecare dintre noi face parte din nenumărate grafice invizibile, care stau la baza interacțiunilor noastre sociale, călătorii, internet și tehnologie, știință și multe altele.

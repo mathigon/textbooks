@@ -428,14 +428,12 @@ Mentre i veri frattali non possono esistere in natura, ci sono molti oggetti che
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Catena montuosa in Asia centrale
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Delta del fiume Gange in India
@@ -448,14 +446,12 @@ Mentre i veri frattali non possono esistere in natura, ci sono molti oggetti che
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Vasi sanguigni nella retina
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Grand Canyon negli Stati Uniti
@@ -470,16 +466,12 @@ Mentre i veri frattali non possono esistere in natura, ci sono molti oggetti che
 
 Tutti questi oggetti potrebbero apparire completamente casuali, ma proprio come i frattali, c'è un modello sottostante che determina come sono formati. La matematica può aiutarci a capire meglio le forme, e i frattali hanno applicazioni in vari campi, come medicina, biologia, geologia e meteorologia. [Continua](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Terreno frattale generato al computer
@@ -522,22 +514,18 @@ Ecco alcuni esempi di soffitti di diverse chiese di Roma:
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -948,7 +936,6 @@ Mentre sposti il valore di [{.pill.red} c](target:c) attorno all'insieme di Mand
 * Tutte le sequenze all'interno del [corpo principale](target:bulb0) dell’insieme di Mandelbrot [[convergono|divergono|raggiungono un’orbita]] _{span.reveal(when="blank-0")} in un singolo punto._
 * {.reveal(when="blank-0")} Le sequenze all'interno di [questo cerchio grande](target:bulb1) [[formano un'orbita|convergono|divergono]] _{span.reveal(when="blank-1")} composta da [[3]] punti._
 * {.reveal(when="blank-2")} Le sequenze in [questo cerchio più piccolo](target:bulb2) hanno orbite di lunghezza [[5]].
-
 
 :::
 

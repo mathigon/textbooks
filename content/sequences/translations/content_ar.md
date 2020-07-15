@@ -384,7 +384,6 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 ---
 > id: arithmetic-geometric-select
 
-
 فيما يلي بعض التسلسلات المختلفة. هل يمكنك تحديد القيم الحسابية أو الهندسية أو لا ، وما هي قيم _{.b.m-red} d_ و _{.b.m-green} r_?
 
 ::: column(width=330 parent="ag-select")
@@ -1208,8 +1207,6 @@ _{.n}[[144]]_, …
 > id: sunflower-spiral
 
 من المهم للزهور اختيار زاوية مناسبة: يجب أن تكون الأوراق أو البذور متباعدة بشكل متساوٍ تقريبًا حتى تحصل على أكبر قدر من ضوء الشمس والمغذيات. في الرسم البياني أدناه ، يمكنك استكشاف الشكل الذي قد تبدو عليه عباد الشمس بزوايا مختلفة بين بذورها:
-
-    // Notice how even tiny changes to the angle can produce a completely different arrangement:
 
 ::: x-slideshow
 

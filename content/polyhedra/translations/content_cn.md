@@ -5,7 +5,7 @@
 > section: polygons
 > id: polygons
 
- [__多边形__](gloss:polygon)是仅具有直边的封闭，扁平形状。多边形可以具有任意数量的边和角度，但是边不能弯曲。以下哪个形状是多边形？ 
+[__多边形__](gloss:polygon)是仅具有直边的封闭，扁平形状。多边形可以具有任意数量的边和角度，但是边不能弯曲。以下哪个形状是多边形？ 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -263,7 +263,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 在[先前的课程中，](/course/triangles)我们研究了三角形的许多不同属性。现在让我们看一下四边形。 
 
- _正四边形_称为[[正方形|长方形|等边四边形]] 。它的所有侧面都有相同的长度，并且所有角度都相等。 
+_正四边形_称为[[正方形|长方形|等边四边形]] 。它的所有侧面都有相同的长度，并且所有角度都相等。 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -506,8 +506,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.reveal(when="blank-1")}事实证明，反之亦然：如果四边形中的两对相对的边（或角度）相等，则四边形必须是平行四边形。 
 
-    //- Adjacent angles are supplementary.
-
 ::: tab
 
 #### 对角线_{span.check(when="diagonal blank-2 blank-3")}_ 
@@ -546,7 +544,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 让我们考虑一下对角线生成的两个黄色三角形： 
 
- *我们刚刚证明[两个绿色边](target:side1)是一致的，因为它们是平行四边形的相对边。 * [两个红色角度](target:anglesR)和[两个蓝色角度](target:anglesB)是一致的，因为它们是[[交替的角度|对角|直角]] 。 
+*我们刚刚证明[两个绿色边](target:side1)是一致的，因为它们是平行四边形的相对边。 * [两个红色角度](target:anglesR)和[两个蓝色角度](target:anglesB)是一致的，因为它们是[[交替的角度|对角|直角]] 。 
 
 {.reveal(when="blank-2")}由[[ASA | SSS |在AAS]]条件下，两个黄色三角形也必须相等。 
 
@@ -567,7 +565,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 上面我们显示了两对[[相反|]]平行四边形的[[相邻]]边是一致的。在风筝中，两对_相邻的_边是一致的。 
 
- _风筝_这个名字显然来自其形状：看起来就像您可以在空中飞翔的风筝。但是，到目前为止，在所有特殊的四边形中，风筝是唯一也可以[凹入](gloss:concave)的风筝：如果风筝的形状像飞镖或箭头： 
+_风筝_这个名字显然来自其形状：看起来就像您可以在空中飞翔的风筝。但是，到目前为止，在所有特殊的四边形中，风筝是唯一也可以[凹入](gloss:concave)的风筝：如果风筝的形状像飞镖或箭头： 
 
 ::: column(width=320)
 
@@ -801,7 +799,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [菱形](gloss:rhombus)是具有四个全等边的四边形。您可能还记得，每个菱形都是[[平行四边形|长方形|广场]] –还有[[风筝|六边形|凹面多边形]] 。 
+[菱形](gloss:rhombus)是具有四个全等边的四边形。您可能还记得，每个菱形都是[[平行四边形|长方形|广场]] –还有[[风筝|六边形|凹面多边形]] 。 
 
 {.reveal(when="blank-6 blank-7")}这意味着要找到菱形的面积，我们可以将方程式用于平行四边形的面积，也可以将其用于风筝的面积： 
 
@@ -813,25 +811,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    //- ### Cyclic quadrilaterals
     
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -840,7 +820,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: tessellations
 > id: tessellations
 
- [多边形](gloss:polygon)在自然界中无处不在。如果要平铺较大的区域，它们特别有用，因为可以将多边形组合在一起而没有任何间隙或重叠。像这样的模式称为[__镶嵌__](gloss:tessellation) 。 
+[多边形](gloss:polygon)在自然界中无处不在。如果要平铺较大的区域，它们特别有用，因为可以将多边形组合在一起而没有任何间隙或重叠。像这样的模式称为[__镶嵌__](gloss:tessellation) 。 
 
 ::: column(width=200)
 
@@ -923,11 +903,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
@@ -983,8 +958,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
     include svg/tessellations/pentagons.svg
 
 {.caption}五角大楼[[不会细分|棋盘格]] _{span.reveal(when="blank-2")}因为108°的倍数加起来不会等于360°。_ 
-
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
 
 ::: column(width=160)
 
@@ -1187,7 +1160,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### 艺术镶嵌
 
- Tessellations是许多艺术家，建筑师和设计师（最著名的是荷兰艺术家[MC Escher）](bio:escher)的工具和启发。埃舍尔的作品包含奇怪的，变异的生物，图案和风景： 
+Tessellations是许多艺术家，建筑师和设计师（最著名的是荷兰艺术家[MC Escher）](bio:escher)的工具和启发。埃舍尔的作品包含奇怪的，变异的生物，图案和风景： 
 
     .row
       div(style="width: 220px")
@@ -1267,7 +1240,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: .theorem
 
- __欧拉多面体公式__  
+__欧拉多面体公式__  
 在每个多面体中，面的数量（ _F_ ）加上顶点的数量（ _V_ ）比边缘的数量（ _E_ ）多两倍。换一种说法， 
 
 {.text-center}`F + V = E + 2`
@@ -1291,12 +1264,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > sectionStatus: dev
 
 我们的整个世界都是三维的-但是绘制或可视化平面的二维对象通常要容易得多。还有几种不同的方法可以以二维方式查看三维多面体。 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
 
 这些网中的哪一个使立方体匹配该网与对象https://github.com/polymake/matchthenet绘制网
 
@@ -1334,10 +1301,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 在本课程开始时，我们将[规则多边形](gloss:regular-polygon)定义为特别是“对称”多边形，其中所有边和角度都相同。我们可以为多面体做类似的事情。 
 
 在_规则多面体中，_所有[面](gloss:polyhedron-face)都是相同种类的规则多边形，并且在每个[顶点](gloss:polyhedron-vertex)处都遇到相同数量的面。具有这两种特性的多面体被称为[__柏拉图固体__](gloss:platonic-solid) ，以希腊哲学家[柏拉图](bio:plato)命名。 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 那么柏拉图固体是什么样子？其中有多少种？要制作三维形状，我们需要在每个顶点至少有[[3个]]面相交。让我们从最小的规则多边形开始：等边三角形： 
 
@@ -1519,51 +1482,51 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __四面体__ 
+__四面体__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4张]]脸_  
+_{span.dual} [[4张]]脸_  
 _{span.dual} [[4个]]顶点_  
 _{span.dual} [[6条优势]]_ 
 
 ::: column.grow.text-center(width=120)
 
- __立方体__ 
+__立方体__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6张]]脸_  
+_{span.dual(target="dual1")} [[6张]]脸_  
 _{span.dual(target="dual1")} [[8个]]顶点_  
 _{span.dual} [[12条优势]]_ 
 
 ::: column.grow.text-center(width=120)
 
- __八面体__ 
+__八面体__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8张]]脸_  
+_{span.dual(target="dual1")} [[8张]]脸_  
 _{span.dual(target="dual1")} [[6个]]顶点_  
 _{span.dual} [[12条优势]]_ 
 
 ::: column.grow.text-center(width=120)
 
- __十二面体__ 
+__十二面体__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12张]]面孔_  
+_{span.dual(target="dual2")} [[12张]]面孔_  
 _{span.dual(target="dual2")} 20个顶点_  
 _{span.dual} 30条优势_ 
 
 ::: column.grow.text-center(width=120)
 
- __二十面体__ 
+__二十面体__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20张]]面孔_  
+_{span.dual(target="dual2")} [[20张]]面孔_  
 _{span.dual(target="dual2")} 12个顶点_  
 _{span.dual} 30条优势_ 
 
@@ -1593,7 +1556,7 @@ _{span.dual} 30条优势_
 ---
 > id: platonic-elements
 
- [柏拉图](bio:plato)认为，宇宙中的所有物质都由四个元素组成：空气，地球，水和火。他认为每个元素都对应一种柏拉图固体，而第五种元素则代表整个宇宙。今天，我们知道有100多种不同的元素由球形原子组成，而不是多面体。 
+[柏拉图](bio:plato)认为，宇宙中的所有物质都由四个元素组成：空气，地球，水和火。他认为每个元素都对应一种柏拉图固体，而第五种元素则代表整个宇宙。今天，我们知道有100多种不同的元素由球形原子组成，而不是多面体。 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1702,10 +1665,6 @@ _{span.dual} 30条优势_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
@@ -1793,6 +1752,6 @@ _{span.dual} 30条优势_
 
 柏拉图固体也可以用来制造__骰子__ 。由于它们的对称性，每一侧都有着陆的[可能性](gloss:probability) ，因此骰子很公平。 
 
- [截短的二十面体](gloss:truncated-icosahedron)可能是世界上最著名的多面体：它是足球的形状。 
+[截短的二十面体](gloss:truncated-icosahedron)可能是世界上最著名的多面体：它是足球的形状。 
 
 :::

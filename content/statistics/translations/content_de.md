@@ -185,18 +185,7 @@ später in Casinos verboten. Thorp wurde sogar aus allen Casinos in Las
 Vegas verbannt, aber zu diesem Zeitpunkt hatte er sich bereits zu noch gewinnbringenderen Unternehmungen entschlossen:
 Mathematik und Computer an der Börse einzusetzen.
 
-    // Shannon cryptography and code-breaking during World War II, and would go
-    // on to become known as the father of information theory - and, indeed, the
-    // information age. Shannon taught him to juggle three balls, and that he
-    // rode a unicycle on a steel cable strung between two tree stumps. "He
-    // later reached his goal," he wrote, "which was to juggle the balls while
-    // riding the unicycle on the tightrope."
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Data Visualisation
 

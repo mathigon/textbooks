@@ -5,7 +5,7 @@
 > section: introduction
 > id: intro
 
- En mirar al voltant de la natura, potser haureu notat plantes complexes com aquestes: 
+En mirar al voltant de la natura, potser haureu notat plantes complexes com aquestes: 
 
 ::: column.r(width=320)
 
@@ -28,15 +28,15 @@
 ---
 > id: fern
 
- En matemàtiques, l'anomenem aquesta propietat __autosemblança__ i les formes que la tenen s'anomenen [__fractals__](gloss:fractal) . Són alguns dels objectes més bells i estranys de totes les matemàtiques. 
+En matemàtiques, l'anomenem aquesta propietat __autosemblança__ i les formes que la tenen s'anomenen [__fractals__](gloss:fractal) . Són alguns dels objectes més bells i estranys de totes les matemàtiques. 
 
- Per crear els nostres propis fractals, hem de començar per un senzill patró i repetir-ho una vegada i una altra a petites escales. 
+Per crear els nostres propis fractals, hem de començar per un senzill patró i repetir-ho una vegada i una altra a petites escales. 
 
 ::: column.grow
 
- Un dels patrons més senzills podria ser un [{.pill.red} segment de línia](target:s1) , amb [{.pill.blue} dos segments més que es](target:s2) ramifiquen per un extrem. Si repetim aquest patró, tots dos segments blaus també tindran dues branques més als seus extrems. 
+Un dels patrons més senzills podria ser un [{.pill.red} segment de línia](target:s1) , amb [{.pill.blue} dos segments més que es](target:s2) ramifiquen per un extrem. Si repetim aquest patró, tots dos segments blaus també tindran dues branques més als seus extrems. 
 
- Podeu moure els [punts blaus](target:dot) per canviar la longitud i l'angle de totes les branques. A continuació, augmenteu el nombre d'iteracions mitjançant [la barra lliscant que hi ha a](->#fern-slider) continuació. 
+Podeu moure els [punts blaus](target:dot) per canviar la longitud i l'angle de totes les branques. A continuació, augmenteu el nombre d'iteracions mitjançant [la barra lliscant que hi ha a](->#fern-slider) continuació. 
 
 {.reveal(when="slider-0")} Depenent de la posició de les branques, es poden fer patrons completament diferents, com la [falguera de](action:set(130,228,197,184)) dalt, un [arbre](action:set(160,186,200,186)) o [pentagons imbricats](action:set(113,235,232,238)) . Què més podeu trobar? [Continuar](btn:next) 
 
@@ -60,7 +60,7 @@
 
 ::: column.grow(parent="right")
 
- Un altre famós fractal és el [__triangle de Sierpinski__](gloss:sierpinski-triangle) . En aquest cas, comencem per un gran triangle equilàter i, posteriorment, tallem repetidament triangles més petits de les parts restants. 
+Un altre famós fractal és el [__triangle de Sierpinski__](gloss:sierpinski-triangle) . En aquest cas, comencem per un gran triangle equilàter i, posteriorment, tallem repetidament triangles més petits de les parts restants. 
 
 {.reveal(when="slider=0")} Observeu com la forma final es compon de [tres còpies idèntiques](target:x) i cadascuna d'elles està formada per còpies encara més petites de tot el triangle! Podeu continuar fent zoom al triangle per sempre, i els patrons i les formes continuaran repetint-se. 
 
@@ -84,9 +84,9 @@
 ---
 > id: real
 
- Les plantes al començament d’aquest capítol _semblen_ fractals, però és clarament impossible crear fractals _veritables_ a la vida real. Si continuem repetint el mateix patró una vegada i una altra, cada cop més petita, arribaríem a cèl·lules, molècules o àtoms que ja no es poden dividir. 
+Les plantes al començament d’aquest capítol _semblen_ fractals, però és clarament impossible crear fractals _veritables_ a la vida real. Si continuem repetint el mateix patró una vegada i una altra, cada cop més petita, arribaríem a cèl·lules, molècules o àtoms que ja no es poden dividir. 
 
- Tot i això, utilitzant les matemàtiques, podem pensar en les propietats que tindrien els fractals reals, i aquestes són molt sorprenents ... [Continuar](btn:next) 
+Tot i això, utilitzant les matemàtiques, podem pensar en les propietats que tindrien els fractals reals, i aquestes són molt sorprenents ... [Continuar](btn:next) 
 
 ---
 > id: dimension
@@ -99,7 +99,7 @@
 
 ::: column.grow
 
- Primer, pensem en la dimensió dels fractals. Una línia té la dimensió [[1]] . _{span.reveal(when="blank-0")} En escalar-lo per un factor de 2, la seva longitud augmenta un factor de `2^1 = 2` . Evidentment!_ 
+Primer, pensem en la dimensió dels fractals. Una línia té la dimensió [[1]] . _{span.reveal(when="blank-0")} En escalar-lo per un factor de 2, la seva longitud augmenta un factor de `2^1 = 2` . Evidentment!_ 
 
 :::
 
@@ -112,7 +112,7 @@
 
 ::: column.grow
 
- Un quadrat té la dimensió [[2]] . _{span.reveal(when="blank-0")} En escalar-lo per un factor de 2, la seva àrea augmenta un factor de `2^2 =` [[4]] ._ 
+Un quadrat té la dimensió [[2]] . _{span.reveal(when="blank-0")} En escalar-lo per un factor de 2, la seva àrea augmenta un factor de `2^2 =` [[4]] ._ 
 
 :::
 
@@ -125,7 +125,7 @@
 
 ::: column.grow
 
- Un cub té la dimensió [[3]] . _{span.reveal(when="blank-0")} En escalar-lo per un factor de 2, el seu volum augmenta en un factor de `2^3 =` [[8]] ._ _{span.reveal(when="blank-1")} Observeu que el cub més gran de la imatge consta de 8 còpies del més petit._ 
+Un cub té la dimensió [[3]] . _{span.reveal(when="blank-0")} En escalar-lo per un factor de 2, el seu volum augmenta en un factor de `2^3 =` [[8]] ._ _{span.reveal(when="blank-1")} Observeu que el cub més gran de la imatge consta de 8 còpies del més petit._ 
 
 :::
 
@@ -138,7 +138,7 @@
 
 ::: column.grow
 
- Ara fem un cop d’ull al triangle de Sierpinski. Si l'escalem per un factor de 2, podreu veure que la seva "àrea" augmenta un factor de [[3]] . 
+Ara fem un cop d’ull al triangle de Sierpinski. Si l'escalem per un factor de 2, podreu veure que la seva "àrea" augmenta un factor de [[3]] . 
 
 {.reveal(when="blank-0")} Diguem que _d_ és la dimensió del triangle de Sierpinski. Utilitzant el mateix patró que anteriorment, obtenim `2^d = 3` . En altres paraules, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1.585 ..._ 
 
@@ -147,24 +147,24 @@
 ---
 > id: dimension-4
 
- Però espera… com pot tenir una dimensió que no sigui un nombre enter? Sembla impossible, però aquesta és només una de les estranyes propietats dels fractals. De fet, això és el que dóna nom als fractals: tenen una __dimensió fraccionada__ . 
+Però espera… com pot tenir una dimensió que no sigui un nombre enter? Sembla impossible, però aquesta és només una de les estranyes propietats dels fractals. De fet, això és el que dóna nom als fractals: tenen una __dimensió fraccionada__ . 
 
- Amb cada iteració, eliminem part de l’àrea del triangle de Sierpinski. Si ho poguéssim fer infinitament moltes vegades, en realitat no hi hauria cap àrea: per això el triangle de Sierpinski es troba entre una àrea bidimensional i una línia unidimensional. 
+Amb cada iteració, eliminem part de l’àrea del triangle de Sierpinski. Si ho poguéssim fer infinitament moltes vegades, en realitat no hi hauria cap àrea: per això el triangle de Sierpinski es troba entre una àrea bidimensional i una línia unidimensional. 
 
 ::: .theorem
 
- Si bé molts fractals són _autònoms_ , una definició millor és que les __fractals__ són formes que no tenen una __dimensió entera__ . 
+Si bé molts fractals són _autònoms_ , una definició millor és que les __fractals__ són formes que no tenen una __dimensió entera__ . 
 
 :::
 
- [Continuar](btn:next) 
+[Continuar](btn:next) 
 
 ---
 > id: snowflake
 
 ### El floc de neu de Koch 
 
- Hi ha moltes formes a la natura que semblen fractals. Ja hem vist algunes plantes al començament d’aquest capítol. Altres exemples excel·lents són els flocs de neu i els cristalls de gel: 
+Hi ha moltes formes a la natura que semblen fractals. Ja hem vist algunes plantes al començament d’aquest capítol. Altres exemples excel·lents són els flocs de neu i els cristalls de gel: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -191,11 +191,11 @@
 ---
 > id: koch
 
- Per crear el nostre propi floc de neu fractal, hem de trobar una vegada més un simple procediment que podem aplicar una i altra vegada. 
+Per crear el nostre propi floc de neu fractal, hem de trobar una vegada més un simple procediment que podem aplicar una i altra vegada. 
 
 ::: column.grow
 
- Com el triangle de Sierpinski, comencem per un sol triangle equilàter. No obstant això, en lloc de _treure_ triangles més petits a cada pas, _afegim_ triangles més petits al llarg de la vora. La longitud lateral de cada triangle és [[`1/3`|`1/4`|`1/2`]] dels triangles del pas anterior. 
+Com el triangle de Sierpinski, comencem per un sol triangle equilàter. No obstant això, en lloc de _treure_ triangles més petits a cada pas, _afegim_ triangles més petits al llarg de la vora. La longitud lateral de cada triangle és [[`1/3`|`1/4`|`1/2`]] dels triangles del pas anterior. 
 
 {.reveal(when="blank-0")} La forma resultant s’anomena [__floc de neu de Koch__](gloss:koch-snowflake) , batejat amb el nom del matemàtic suec [Helge von Koch](bio:koch) . Observeu, una vegada més, que [petites seccions](target:t2) de la vora del floc de neu semblen exactament igual que [les seccions més grans](target:t1) . 
 
@@ -218,7 +218,7 @@
 
 ::: column.grow
 
- Quan escalem un segment d’aresta del Floc de neu de Koch per un factor de 3, la seva longitud es [[quadruplica | triples | dobles]] 
+Quan escalem un segment d’aresta del Floc de neu de Koch per un factor de 3, la seva longitud es [[quadruplica | triples | dobles]] 
 
 {.reveal(when="blank-0")} Utilitzant la mateixa relació entre dimensions i factors d’escala que anteriorment, obtenim l’equació [[`3^d=4`|`2^d=4`|`2^d=3`|`4^d=3`]] . _{span.reveal(when="blank-1")} Això vol dir que la dimensió del Floc de neu de Koch és `§d = log_3(4) ≈ 1.262` ._ 
 
@@ -231,7 +231,7 @@
 
 #### Àrea _{span.check(when="blank-6")}_ 
 
- La creació dels flocs de neu de Koch és gairebé com una [seqüència recursiva](gloss:sequence-recursive) : coneixem la forma inicial (un triangle) i sabem com passar d’un terme a l’altre (afegint més triangles a cada cantó): 
+La creació dels flocs de neu de Koch és gairebé com una [seqüència recursiva](gloss:sequence-recursive) : coneixem la forma inicial (un triangle) i sabem com passar d’un terme a l’altre (afegint més triangles a cada cantó): 
 
 ::: column(width=140)
 
@@ -271,7 +271,7 @@
 
 ::: column.grow
 
- També podem intentar calcular el perímetre del floc de neu de Koch. Com ja hem vist anteriorment, la longitud del perímetre canvia per un factor de [[`4/3`|`3/4`|`1/4`]] a cada pas. 
+També podem intentar calcular el perímetre del floc de neu de Koch. Com ja hem vist anteriorment, la longitud del perímetre canvia per un factor de [[`4/3`|`3/4`|`1/4`]] a cada pas. 
 
 {.reveal(when="blank-8")} Això vol dir que, una vegada més, tenim una sèrie geomètrica, però en aquest cas [[no convergeix | convergeix a 0 | no té un primer terme]] _{span.reveal(when="blank-9")} Això vol dir que el perímetre del floc de neu de Koch és __infinitament llarg__ !_ 
 
@@ -290,9 +290,9 @@
 
 ::: column.grow
 
- És gairebé impensable que es pugui tenir una forma amb una àrea _finita_ i també una circumferència _infinita_ , però aquesta és només una de les moltes propietats inesperades dels fractals. 
+És gairebé impensable que es pugui tenir una forma amb una àrea _finita_ i també una circumferència _infinita_ , però aquesta és només una de les moltes propietats inesperades dels fractals. 
 
- Pot trobar altres maneres de crear fractals propis? [Continuar](btn:next) 
+Pot trobar altres maneres de crear fractals propis? [Continuar](btn:next) 
 
 ::: column(width=352)
 
@@ -307,7 +307,7 @@
 
 ### Esponja de Menger 
 
- Els fractals no han de ser “plans”, com molts dels exemples anteriors. Un dels fractals més famosos que tenen aspecte tridimensional és l’ __esponja de Menger__ , batejada amb el nom del matemàtic [Karl Menger](bio:menger) que la va descriure per primera vegada el 1926. 
+Els fractals no han de ser “plans”, com molts dels exemples anteriors. Un dels fractals més famosos que tenen aspecte tridimensional és l’ __esponja de Menger__ , batejada amb el nom del matemàtic [Karl Menger](bio:menger) que la va descriure per primera vegada el 1926. 
 
 ::: column(width=320 parent="right")
 
@@ -316,7 +316,7 @@
 
 ::: column.grow
 
- Comencem amb un cub sòlid i foradem repetidament forats cada cop més petits als seus costats. Cada nova iteració de forats té [[`1/3`|`1/2`|`1/4`]] l'amplada de la iteració anterior dels forats. 
+Comencem amb un cub sòlid i foradem repetidament forats cada cop més petits als seus costats. Cada nova iteració de forats té [[`1/3`|`1/2`|`1/4`]] l'amplada de la iteració anterior dels forats. 
 
 {.reveal(when="blank-0")} A `3×3×3` el cub consta de 27 cubs més petits, però aquí hem eliminat alguns d’aquests. L’esponja Menger consta de [[20]] còpies de si mateixes, que són 3 vegades més petites. 
 
@@ -331,9 +331,9 @@
 
 ### Litorals fractals 
 
- Una de les característiques clau de tots els fractals que hem vist fins ara és que podeu "fer zoom" per sempre i trobar sempre nous patrons. Al voltant de 1920, el matemàtic britànic [Lewis Fry Richardson es va](bio:richardson) adonar que el mateix és cert per a la frontera o la costa de molts països. 
+Una de les característiques clau de tots els fractals que hem vist fins ara és que podeu "fer zoom" per sempre i trobar sempre nous patrons. Al voltant de 1920, el matemàtic britànic [Lewis Fry Richardson es va](bio:richardson) adonar que el mateix és cert per a la frontera o la costa de molts països. 
 
- Comenceu amb la forma bàsica del país i, a mesura que us feu zoom, afegiu entrades de riu, badies i estuaris, després penya-segats, roques, còdols i així successivament: 
+Comenceu amb la forma bàsica del país i, a mesura que us feu zoom, afegiu entrades de riu, badies i estuaris, després penya-segats, roques, còdols i així successivament: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -357,18 +357,18 @@
 
 :::
 
- [Continuar](btn:next) 
+[Continuar](btn:next) 
 
 ---
 > id: coastlines-1
 
 ::: column.grow
 
- Aquest és un problema important quan es tracta de calcular la longitud de la frontera d’un país: com es decideix fins a quin punt podreu fer zoom i quins punts i racons incloure? 
+Aquest és un problema important quan es tracta de calcular la longitud de la frontera d’un país: com es decideix fins a quin punt podreu fer zoom i quins punts i racons incloure? 
 
- Una manera de poder mesurar la longitud de la costa britànica, per exemple, és agafar un llarg regle, recórrer totes les platges i després sumar totes les distàncies. 
+Una manera de poder mesurar la longitud de la costa britànica, per exemple, és agafar un llarg regle, recórrer totes les platges i després sumar totes les distàncies. 
 
- Si el governant ho és ${rulers[index]}{index|0|0,8,1} km de llarg, l’hem d’utilitzar ${count} vegades, així que obtenim un litoral total de ${count} × ${rulers[index]} = ${count * rulers[index]} km. 
+Si el governant ho és ${rulers[index]}{index|0|0,8,1} km de llarg, l’hem d’utilitzar ${count} vegades, així que obtenim un litoral total de ${count} × ${rulers[index]} = ${count * rulers[index]} km. 
 
 {.reveal(when="var-0")} Només podem seguir endavant, amb regles més petites i més petites, i cada cop el nostre resultat per a la longitud de la línia de costa seria una mica més llarg. Igual que el Cop de neu de Koch abans, sembla que la costa britànica és infinitament llarga! Sovint s’anomena __paradoxa de__ la __costa__ . [Continuar](btn:next) 
 
@@ -381,7 +381,7 @@
 ---
 > id: coastline-grid
 
- Unes dècades després, el matemàtic [Benoit Mandelbrot va](bio:mandelbrot) topar amb l'obra de Richardson en un llibre de la biblioteca descartat, mentre treballava a IBM. Va reconèixer la seva importància, i també com es relaciona amb investigacions més recents sobre fractals i dimensions. 
+Unes dècades després, el matemàtic [Benoit Mandelbrot va](bio:mandelbrot) topar amb l'obra de Richardson en un llibre de la biblioteca descartat, mentre treballava a IBM. Va reconèixer la seva importància, i també com es relaciona amb investigacions més recents sobre fractals i dimensions. 
 
 ::: column(width=340)
 
@@ -390,7 +390,7 @@
 
 ::: column.grow
 
- El litoral britànic, certament, "sembla" fractal, però no és _similar a si mateix_ , com altres fractals que hem vist abans. Per trobar la seva mida, podem dibuixar-la en una graella i comptar el nombre de cel·les amb les quals s’entrecreua. 
+El litoral britànic, certament, "sembla" fractal, però no és _similar a si mateix_ , com altres fractals que hem vist abans. Per trobar la seva mida, podem dibuixar-la en una graella i comptar el nombre de cel·les amb les quals s’entrecreua. 
 
 {.r.reveal(when="slider-0")} Inicialment, n’hi ha __{.pill.yellow} 88__ cel·les que s’entrecreuen. Si escalem la costa amb un factor de 2, n’hi ha __{.pill.yellow} 197__ cel·les que s’encreuen, més del doble! [Continuar](btn:next) 
 
@@ -403,25 +403,23 @@
 ---
 > id: coastline-dimension-1
 
- Si repetim això amb quadrícules més grans, trobaríem que la dimensió del litoral britànic és aproximadament 1,21. Mandelbrot es va adonar que aquesta dimensió fractal és també una mesura de la __rugositat__ d'una forma: un concepte nou, per al qual va trobar aplicacions importants en moltes altres àrees de les matemàtiques i de la ciència. 
+Si repetim això amb quadrícules més grans, trobaríem que la dimensió del litoral britànic és aproximadament 1,21. Mandelbrot es va adonar que aquesta dimensió fractal és també una mesura de la __rugositat__ d'una forma: un concepte nou, per al qual va trobar aplicacions importants en moltes altres àrees de les matemàtiques i de la ciència. 
 
 ---
 > id: nature
 
 ### Més fractals en natura i tecnologia 
 
- Si bé els veritables fractals mai poden aparèixer a la natura, hi ha molts objectes que semblen _gairebé_ fractals. Ja hem vist plantes, flocs de neu i litorals, i en deixem alguns exemples més: 
+Si bé els veritables fractals mai poden aparèixer a la natura, hi ha molts objectes que semblen _gairebé_ fractals. Ja hem vist plantes, flocs de neu i litorals, i en deixem alguns exemples més: 
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC" alt="Mountain range")
 
 {.caption} Serralada a l'Àsia central 
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA" alt="River delta")
 
 {.caption} Delta del riu Ganges a l'Índia 
@@ -434,14 +432,12 @@
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA" alt="Blood vessels")
 
 {.caption} Vasos sanguinis a la retina 
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey" alt="Grand Canyon")
 
 {.caption} Grand Canyon als EUA 
@@ -454,26 +450,22 @@
 
 :::
 
- Tots aquests objectes poden semblar completament aleatoris, però, igual que els fractals, hi ha un patró subjacent que determina com es formen. Les matemàtiques ens poden ajudar a entendre millor les formes i les fractals tenen aplicacions en camps com la medicina, la biologia, la geologia i la meteorologia. [Continuar](btn:next) 
-
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
+Tots aquests objectes poden semblar completament aleatoris, però, igual que els fractals, hi ha un patró subjacent que determina com es formen. Les matemàtiques ens poden ajudar a entendre millor les formes i les fractals tenen aplicacions en camps com la medicina, la biologia, la geologia i la meteorologia. [Continuar](btn:next) 
 
 ---
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox alt="Computer-generated fractal terrain with mountains and water")
 
 {.caption} Terreny fractal generat per ordinador 
 
 ::: column.grow
 
- També podem utilitzar fractals per crear “còpies” realistes de la natura, per exemple, com a paisatges i textures usades en videojocs o pel·lícules generades per ordinador. L’aigua, muntanyes i núvols d’aquesta imatge estan realitzats íntegrament per un ordinador, amb l’ajut de fractals! 
+També podem utilitzar fractals per crear “còpies” realistes de la natura, per exemple, com a paisatges i textures usades en videojocs o pel·lícules generades per ordinador. L’aigua, muntanyes i núvols d’aquesta imatge estan realitzats íntegrament per un ordinador, amb l’ajut de fractals! 
 
- I fins i tot podem revertir aquest procés per comprimir imatges digitals, per reduir la mida del seu fitxer. Els primers algoritmes van ser desenvolupats per Michael Barnsley i Alan Sloan a la dècada de 1980, i encara se n’investiguen de nous. 
+I fins i tot podem revertir aquest procés per comprimir imatges digitals, per reduir la mida del seu fitxer. Els primers algoritmes van ser desenvolupats per Michael Barnsley i Alan Sloan a la dècada de 1980, i encara se n’investiguen de nous. 
 
 :::
 
@@ -486,7 +478,7 @@
 
 ::: column.grow
 
- Un dels fractals que vam veure al capítol anterior va ser el [__triangle de Sierpinski__](gloss:sierpinski-triangle) , que rep el nom del matemàtic polonès [Wacław Sierpiński](bio:sierpinski) . Es pot crear començant per un gran triangle equilàter i, posteriorment, tallant repetidament triangles més petits fora del seu centre. 
+Un dels fractals que vam veure al capítol anterior va ser el [__triangle de Sierpinski__](gloss:sierpinski-triangle) , que rep el nom del matemàtic polonès [Wacław Sierpiński](bio:sierpinski) . Es pot crear començant per un gran triangle equilàter i, posteriorment, tallant repetidament triangles més petits fora del seu centre. 
 
 {.r.reveal(when="slider-0")} Wacław Sierpiński va ser el primer matemàtic que va pensar en les propietats d’aquest triangle, però ha aparegut molts segles abans en obres d’art, patrons i mosaics. 
 
@@ -502,31 +494,27 @@
 ---
 > id: sierpinski-history
 
- A continuació, es mostren alguns exemples de paviments de diferents esglésies de Roma: 
+A continuació, es mostren alguns exemples de paviments de diferents esglésies de Roma: 
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire" alt="Mosaic Floor with Sierpinski Triangle")
 
 :::
 
- Segons resulta, el triangle de Sierpinski apareix en una àmplia gamma d’altres àrees de les matemàtiques, i hi ha moltes maneres diferents de generar-lo. En aquest capítol, explorarem alguns d’ells! [Continuar](btn:next) 
+Segons resulta, el triangle de Sierpinski apareix en una àmplia gamma d’altres àrees de les matemàtiques, i hi ha moltes maneres diferents de generar-lo. En aquest capítol, explorarem alguns d’ells! [Continuar](btn:next) 
 
 ---
 > id: pascal
@@ -534,7 +522,7 @@
 
 ### Triangle de Pascal 
 
- Ja podeu recordar el triangle de Sierpinski del nostre capítol sobre [__el triangle de Pascal__](gloss:pascals-triangle) . Es tracta d'una piràmide de números en la qual cada nombre és la suma dels dos nombres anteriors. Toqueu tots els números _parells_ del triangle que hi ha a continuació, per ressaltar-los i vegeu si noteu un patró: 
+Ja podeu recordar el triangle de Sierpinski del nostre capítol sobre [__el triangle de Pascal__](gloss:pascals-triangle) . Es tracta d'una piràmide de números en la qual cada nombre és la suma dels dos nombres anteriors. Toqueu tots els números _parells_ del triangle que hi ha a continuació, per ressaltar-los i vegeu si noteu un patró: 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -552,9 +540,9 @@
 ---
 > id: pascal-1
 
- El triangle de Pascal es pot continuar cap avall per sempre i el patró de Sierpinski continuarà amb triangles més grans i més grans. Ja podeu veure l’inici d’un triangle encara més gran, a partir de la fila 16. 
+El triangle de Pascal es pot continuar cap avall per sempre i el patró de Sierpinski continuarà amb triangles més grans i més grans. Ja podeu veure l’inici d’un triangle encara més gran, a partir de la fila 16. 
 
- Si dues cèl·lules adjacents són divisibles per 2, la suma de la cel·la que hi ha a sota també ha de ser divisible per 2, per això només podem obtenir triangles de colors (o cel·les singulars). Per descomptat, també podem provar de pintar totes les cel·les divisibles per nombres _diferents de 2_ . Què creus que passarà en aquests casos? [Continuar](btn:next) 
+Si dues cèl·lules adjacents són divisibles per 2, la suma de la cel·la que hi ha a sota també ha de ser divisible per 2, per això només podem obtenir triangles de colors (o cel·les singulars). Per descomptat, també podem provar de pintar totes les cel·les divisibles per nombres _diferents de 2_ . Què creus que passarà en aquests casos? [Continuar](btn:next) 
 
 ---
 > id: pascal-large
@@ -563,7 +551,7 @@
       canvas.pascal(width=960 height=840)
       .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
- Aquí podeu veure una petita versió de les primeres 128 files del triangle de Pascal. Hem destacat totes les cel·les divisibles per ${n}{n|2|2,40,1} - què nota? 
+Aquí podeu veure una petita versió de les primeres 128 files del triangle de Pascal. Hem destacat totes les cel·les divisibles per ${n}{n|2|2,40,1} - què nota? 
 
 {.reveal(when="var-0")} Per a cada nombre, obtenim un patró triangular diferent al triangle de Sierpinski. El patró és particularment regular si escollim un [[nombre primer | número del triangle | Número de Fibonacci]] . _{span.reveal(when="blank-0")} Si el nombre té _molts_ factors primers _diferents_ , el patró sembla més aleatori._ 
 
@@ -587,7 +575,7 @@
 
 ::: column.grow
 
- Aquí podeu veure els tres vèrtexs d’un triangle equilàter. Toqueu qualsevol part de la zona grisa per crear un quart punt. 
+Aquí podeu veure els tres vèrtexs d’un triangle equilàter. Toqueu qualsevol part de la zona grisa per crear un quart punt. 
 
 {.r.reveal(when="point")} Juguem a un joc senzill: escollim un dels vèrtexs del triangle a l’atzar, dibuixem un segment de línia entre el nostre punt i el vèrtex i, a continuació, trobem el [{.pill.red} punt mig](target:p1) d’aquest segment. [Continuar](btn:next) 
 
@@ -603,9 +591,9 @@
 > id: fractal-builder
 > goals: s1 s2 shape play
 
- Aquest procés s’anomena __Joc__ del __Caos__ . Pot ser que hi hagi uns quants punts perduts al principi, però si repetiu els mateixos passos moltes vegades, la distribució de punts comença a semblar exactament al triangle de Sierpinski. 
+Aquest procés s’anomena __Joc__ del __Caos__ . Pot ser que hi hagi uns quants punts perduts al principi, però si repetiu els mateixos passos moltes vegades, la distribució de punts comença a semblar exactament al triangle de Sierpinski. 
 
- Hi ha moltes altres versions del mateix, per exemple, podríem començar per un quadrat o un pentàgon, podríem afegir regles addicionals com ara no poder seleccionar el mateix vèrtex dues vegades seguides, o podríem escollir el següent punt a proporció. un altre que `§1/2` al llarg del segment. En alguns d’aquests casos, només obtindrem una distribució aleatòria de punts, però en altres casos, revelem encara més fractals: 
+Hi ha moltes altres versions del mateix, per exemple, podríem començar per un quadrat o un pentàgon, podríem afegir regles addicionals com ara no poder seleccionar el mateix vèrtex dues vegades seguides, o podríem escollir el següent punt a proporció. un altre que `§1/2` al llarg del segment. En alguns d’aquests casos, només obtindrem una distribució aleatòria de punts, però en altres casos, revelem encara més fractals: 
 
     include components/chaos-game
 
@@ -617,9 +605,9 @@
 
 ### Automàtics mòbils 
 
- Un __autòmat cel·lular__ és una graella formada per moltes cèl·lules individuals. Cada cèl·lula pot estar en diferents "estats" (per exemple, colors diferents), i l'estat de cada cel·la està determinat per les seves cel·les circumdants. 
+Un __autòmat cel·lular__ és una graella formada per moltes cèl·lules individuals. Cada cèl·lula pot estar en diferents "estats" (per exemple, colors diferents), i l'estat de cada cel·la està determinat per les seves cel·les circumdants. 
 
- En el nostre exemple, totes les cel·les poden ser blanques o negres. Comencem amb una fila que conté només un quadrat negre. A cada fila següent, el color de cada cel·la està determinat per les tres cel·les immediatament anteriors. Toqueu les vuit opcions possibles a continuació per canviar el seu color. Podeu trobar un conjunt de regles que crei un patró similar al triangle de Sierpinski? 
+En el nostre exemple, totes les cel·les poden ser blanques o negres. Comencem amb una fila que conté només un quadrat negre. A cada fila següent, el color de cada cel·la està determinat per les tres cel·les immediatament anteriors. Toqueu les vuit opcions possibles a continuació per canviar el seu color. Podeu trobar un conjunt de regles que crei un patró similar al triangle de Sierpinski? 
 
     figure: x-automaton(size=28)
 
@@ -630,9 +618,9 @@
 
 ::: column.grow
 
- Els autòmats cel·lulars mostren com es poden crear patrons altament complexos mitjançant regles molt simples, igual que els fractals. Molts processos a la natura també segueixen regles simples, però produeixen sistemes molt complexos. 
+Els autòmats cel·lulars mostren com es poden crear patrons altament complexos mitjançant regles molt simples, igual que els fractals. Molts processos a la natura també segueixen regles simples, però produeixen sistemes molt complexos. 
 
- En alguns casos, això pot conduir a l’aparició de patrons que s’assemblen igualment a autòmats mòbils, per exemple els colors de la closca d’aquest caragol. 
+En alguns casos, això pot conduir a l’aparició de patrons que s’assemblen igualment a autòmats mòbils, per exemple els colors de la closca d’aquest caragol. 
 
 ::: column(width=320)
 
@@ -647,7 +635,7 @@
 
 ### Tetraedres de Sierpinski 
 
- Hi ha moltes variants del triangle de Sierpinski i d'altres fractals amb propietats i processos de creació similars. Alguns tenen una mirada bidimensional, com la _catifa Sierpinski_ que heu vist més amunt. Altres semblen tridimensionals, com aquests exemples: 
+Hi ha moltes variants del triangle de Sierpinski i d'altres fractals amb propietats i processos de creació similars. Alguns tenen una mirada bidimensional, com la _catifa Sierpinski_ que heu vist més amunt. Altres semblen tridimensionals, com aquests exemples: 
 
 ::: column(width=320)
 
@@ -671,7 +659,7 @@
 > id: iteration
 > goals: move-1 move-2
 
- Totes les fractals que vam veure als capítols anteriors es van crear mitjançant un procés d’ __iteració__ : comenceu amb un patró específic, i després el repetiu una i altra vegada. 
+Totes les fractals que vam veure als capítols anteriors es van crear mitjançant un procés d’ __iteració__ : comenceu amb un patró específic, i després el repetiu una i altra vegada. 
 
 ::: column(width=112 parent="padded-thin")
 
@@ -691,9 +679,9 @@
 
 :::
 
- Això és similar a un altre concepte en matemàtiques que vau veure abans: amb [seqüències recursives](gloss:sequence-recursive) , comenceu amb un número específic, i després apliqueu una i altra vegada la mateixa fórmula recursiva, per obtenir el següent número de la seqüència. 
+Això és similar a un altre concepte en matemàtiques que vau veure abans: amb [seqüències recursives](gloss:sequence-recursive) , comenceu amb un número específic, i després apliqueu una i altra vegada la mateixa fórmula recursiva, per obtenir el següent número de la seqüència. 
 
- Prenguem la fórmula recursiva `§x_n = x_(n-1)^2` com a exemple, i traça els seus termes en una línia numèrica. Podeu canviar el valor de `pill(x_0,"yellow","x0")` : 
+Prenguem la fórmula recursiva `§x_n = x_(n-1)^2` com a exemple, i traça els seus termes en una línia numèrica. Podeu canviar el valor de `pill(x_0,"yellow","x0")` : 
 
     figure: x-geopad.no-background(width=720 height=120 x-axis="-2.4,4.4,1" y-axis="-0.1,0.1" axes="yes,no" padding="40 20 0"): svg
       circle.yellow.move.pulsate(x="point(0,0)" name="x0" project="line(point(-3,0),point(3,0))" target="x0")
@@ -703,26 +691,26 @@
 ---
 > id: iteration-1
 
- Observeu com la seqüència resultant es pot comportar de manera molt diferent, segons el valor inicial `x_0` : 
+Observeu com la seqüència resultant es pot comportar de manera molt diferent, segons el valor inicial `x_0` : 
 
 ::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
- Si `x_0 > 1` , la seqüència es [[desvia | convergeix]] : _{span.reveal(when="blank-0")} només continua creixent fins a l’infinit._ 
+Si `x_0 > 1` , la seqüència es [[desvia | convergeix]] : _{span.reveal(when="blank-0")} només continua creixent fins a l’infinit._ 
 
 ::: column.frame.f-blue.text-center(width=212)
 
- Si `x_0` està entre –1 i 1, la seqüència [[convergeix | divergeix]] . 
+Si `x_0` està entre –1 i 1, la seqüència [[convergeix | divergeix]] . 
 
 ::: column.frame.f-blue.text-center(width=212)
 
- Si `x_0 < -1` , la seqüència es [[desvia | convergeix]] . 
+Si `x_0 < -1` , la seqüència es [[desvia | convergeix]] . 
 
 :::
 
 ---
 > id: iteration-2
 
- Fins ara, no hem après res de nou. No obstant això, fa aproximadament un segle, els matemàtics van començar a explorar què passa amb aquestes seqüències si utilitzeu [__nombres complexos__](gloss:complex-numbers) , en lloc de només la línia de números reals. Els seus descobriments van ser alguns dels resultats més sorprenents i bells en tota la matemàtica. 
+Fins ara, no hem après res de nou. No obstant això, fa aproximadament un segle, els matemàtics van començar a explorar què passa amb aquestes seqüències si utilitzeu [__nombres complexos__](gloss:complex-numbers) , en lloc de només la línia de números reals. Els seus descobriments van ser alguns dels resultats més sorprenents i bells en tota la matemàtica. 
 
 ---
 > id: julia
@@ -730,7 +718,7 @@
 
 ### Julia Sets 
 
- Utilitzem la mateixa seqüència que abans, `§x_n = x_(n-1)^2` , però en el plànol complex. Podeu moure la posició de `pill(x_0,"yellow","x0")` , per veure què passa amb els termes següents. Si la seqüència sembla que convergirà, acolorem el punt corresponent al pla endins _{span.pill.blue} blau_ : 
+Utilitzem la mateixa seqüència que abans, `§x_n = x_(n-1)^2` , però en el plànol complex. Podeu moure la posició de `pill(x_0,"yellow","x0")` , per veure què passa amb els termes següents. Si la seqüència sembla que convergirà, acolorem el punt corresponent al pla endins _{span.pill.blue} blau_ : 
 
     figure: x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
@@ -758,12 +746,12 @@
 ---
 > id: julia-1
 
- Ara posem les coses una mica més difícils. En lloc de no quadrar el número anterior, també hi afegim una constant _{.pill.red} c_ cada vegada (que pot ser qualsevol nombre complex). En altres paraules, `§x_n = x_(n-1)^2 + c` . Creus que encara obtindrem un cercle de convergència? Quines altres formes creus que podríem veure? [Continuar](btn:next) 
+Ara posem les coses una mica més difícils. En lloc de no quadrar el número anterior, també hi afegim una constant _{.pill.red} c_ cada vegada (que pot ser qualsevol nombre complex). En altres paraules, `§x_n = x_(n-1)^2 + c` . Creus que encara obtindrem un cercle de convergència? Quines altres formes creus que podríem veure? [Continuar](btn:next) 
 
 ---
 > id: julia-2
 
- En aquest diagrama, podeu moure la posició de `pill(x_0,"yellow","x0")` així com el valor de `pill(c,"red","c")` : 
+En aquest diagrama, podeu moure la posició de `pill(x_0,"yellow","x0")` així com el valor de `pill(c,"red","c")` : 
 
 ::: x-slideshow
 
@@ -796,9 +784,9 @@
 
 ::: div(slot="legend")
 
- En alguns casos, la seqüència no convergeix a un _sol punt_ , sinó que arriba a un cicle de diversos punts, com un triangle. Aquests cicles s’anomenen __òrbites__ . 
+En alguns casos, la seqüència no convergeix a un _sol punt_ , sinó que arriba a un cicle de diversos punts, com un triangle. Aquests cicles s’anomenen __òrbites__ . 
 
- Els punts de color blau vol dir que la seqüència corresponent o bé convergeix o té una òrbita (diem que està __delimitada__ ). Els punts que es deixen blancs signifiquen que la seqüència corresponent es __desvia__ : no es limita i, finalment, es bufa fins a l’infinit. 
+Els punts de color blau vol dir que la seqüència corresponent o bé convergeix o té una òrbita (diem que està __delimitada__ ). Els punts que es deixen blancs signifiquen que la seqüència corresponent es __desvia__ : no es limita i, finalment, es bufa fins a l’infinit. 
 
 :::
 
@@ -809,11 +797,11 @@
 ---
 > id: julia-3
 
- Les diferents formes que es formen per colorant en els nombres s’anomenen [__conjunts de Julia__](gloss:julia-set) . Van ser descoberts de forma independent per dos matemàtics francesos, [Gaston Julia](bio:julia) i [Pierre Fatou](bio:fatou) , cap al 1918. 
+Les diferents formes que es formen per colorant en els nombres s’anomenen [__conjunts de Julia__](gloss:julia-set) . Van ser descoberts de forma independent per dos matemàtics francesos, [Gaston Julia](bio:julia) i [Pierre Fatou](bio:fatou) , cap al 1918. 
 
- Aleshores, no hi havia ordinadors que permetessin visualitzar el que semblaven els conjunts de Julia. Matemàtics com Julia i Fatou van poder raonar sobre ells matemàticament, però només van veure esbossos encisats i dibuixats a mà del que podrien semblar. 
+Aleshores, no hi havia ordinadors que permetessin visualitzar el que semblaven els conjunts de Julia. Matemàtics com Julia i Fatou van poder raonar sobre ells matemàticament, però només van veure esbossos encisats i dibuixats a mà del que podrien semblar. 
 
- Avui no tenim aquest problema: les imatges a continuació són diferents conjunts de Julia. Els diferents colors indiquen _la rapidesa_ en què es desvia la seqüència en aquest punt: 
+Avui no tenim aquest problema: les imatges a continuació són diferents conjunts de Julia. Els diferents colors indiquen _la rapidesa_ en què es desvia la seqüència en aquest punt: 
 
 ::: column(width=220)
 
@@ -835,7 +823,7 @@
 
 :::
 
- [Continuar](btn:next) 
+[Continuar](btn:next) 
 
 ---
 > id: mandel-paint
@@ -843,11 +831,11 @@
 
 ### El Conjunt Mandelbrot 
 
- En crear els diferents conjunts de Julia, és possible que hagueu adonat que hi havia alguns valors de _c_ pels quals cada seqüència es desvia i que tot el pla complex roman en blanc. Unes dècades després de Julia i Fatou, una nova generació de matemàtics van intentar fer un mapa com eren aquestes àrees. 
+En crear els diferents conjunts de Julia, és possible que hagueu adonat que hi havia alguns valors de _c_ pels quals cada seqüència es desvia i que tot el pla complex roman en blanc. Unes dècades després de Julia i Fatou, una nova generació de matemàtics van intentar fer un mapa com eren aquestes àrees. 
 
- A l'exemple anterior, vam triar un valor fix per a `pill(c,"red","c")` i després canvieu la posició de `pill(x_0,"yellow","x0")` per acolorir el plànol. Ara fixem el valor de `pill(x_0 = 0,"yellow","x0")` i en canvi canvieu el valor de `pill(c,"red","c")` . 
+A l'exemple anterior, vam triar un valor fix per a `pill(c,"red","c")` i després canvieu la posició de `pill(x_0,"yellow","x0")` per acolorir el plànol. Ara fixem el valor de `pill(x_0 = 0,"yellow","x0")` i en canvi canvieu el valor de `pill(c,"red","c")` . 
 
- Una vegada més, pinta sobre el pla complex per revelar la zona on resten les seqüències. Quines formes espera que apareguin? 
+Una vegada més, pinta sobre el pla complex per revelar la zona on resten les seqüències. Quines formes espera que apareguin? 
 
     figure: x-geopad.no-background(width=720 height=480 x-axis="-2.1,1.1,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
       img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
@@ -874,16 +862,16 @@
 ---
 > id: mandel-history
 
- Aquest fractal s’anomena [__conjunt Mandelbrot__](gloss:mandelbrot-set) i, quan es gira per 90°, sembla gairebé una persona, amb el cap, el cos i els dos braços. Va ser definit i dibuixat per primera vegada el 1978, en un treball de recerca dels matemàtics Robert Brooks i Peter Matelski: 
+Aquest fractal s’anomena [__conjunt Mandelbrot__](gloss:mandelbrot-set) i, quan es gira per 90°, sembla gairebé una persona, amb el cap, el cos i els dos braços. Va ser definit i dibuixat per primera vegada el 1978, en un treball de recerca dels matemàtics Robert Brooks i Peter Matelski: 
 
     figure: x-img(src="images/printout.jpg" width=360 height=290 credit="© Princeton University Press" alt="Mandelbrot set drawing")
 
- Pocs anys després, [Benoit Mandelbrot va](bio:mandelbrot) utilitzar els potents ordinadors d’IBM per crear una visualització molt més detallada del fractal, que després va rebre el seu nom. Les primeres impressions tenien un aspecte diferent del que esperava, fins que es va adonar que els tècnics que treballaven a les impressores netejaven la "borrosa" al voltant de la seva vora, suposant que era causada per partícules de pols o errors de la impressora i no una característica definidora dels fractals. ! [Continuar](btn:next) 
+Pocs anys després, [Benoit Mandelbrot va](bio:mandelbrot) utilitzar els potents ordinadors d’IBM per crear una visualització molt més detallada del fractal, que després va rebre el seu nom. Les primeres impressions tenien un aspecte diferent del que esperava, fins que es va adonar que els tècnics que treballaven a les impressores netejaven la "borrosa" al voltant de la seva vora, suposant que era causada per partícules de pols o errors de la impressora i no una característica definidora dels fractals. ! [Continuar](btn:next) 
 
 ---
 > id: mandel-zoom
 
- Com tots els fractals, podem “ampliar” el conjunt de Mandelbrot per sempre, trobant nous patrons a cada escala. Aquí podeu fer zoom a una part del conjunt de Mandelbrot que s’anomena la __vall de Seahorse__ . Els punts negres es troben _dins_ del conjunt de Mandelbrot, on la seqüència està delimitada. Els punts de colors es troben _fora_ del conjunt de Mandelbrot, on la seqüència es desvia i els diferents colors indiquen _la rapidesa amb_ què creix fins a l’infinit: 
+Com tots els fractals, podem “ampliar” el conjunt de Mandelbrot per sempre, trobant nous patrons a cada escala. Aquí podeu fer zoom a una part del conjunt de Mandelbrot que s’anomena la __vall de Seahorse__ . Els punts negres es troben _dins_ del conjunt de Mandelbrot, on la seqüència està delimitada. Els punts de colors es troben _fora_ del conjunt de Mandelbrot, on la seqüència es desvia i els diferents colors indiquen _la rapidesa amb_ què creix fins a l’infinit: 
 
     .mandel-frame
       - i = 1;
@@ -896,7 +884,7 @@
 ---
 > id: mandel-zoom-1
 
- Aquest control lliscant consta de 27 imatges individuals, fins a un nivell de zoom de més de 14 quadrillions o `2^54` . En total, van trigar gairebé 45 minuts a rendir-se en un ordinador portàtil modern. El conjunt Mandelbrot es pot crear amb una única equació simple, `§x_n = x_(n-1)^2 + c` , però, és infinitament complex i impressionant. 
+Aquest control lliscant consta de 27 imatges individuals, fins a un nivell de zoom de més de 14 quadrillions o `2^54` . En total, van trigar gairebé 45 minuts a rendir-se en un ordinador portàtil modern. El conjunt Mandelbrot es pot crear amb una única equació simple, `§x_n = x_(n-1)^2 + c` , però, és infinitament complex i impressionant. 
 
 ---
 > id: mandel-orbits
@@ -914,26 +902,22 @@
 
 ::: column.grow
 
- A mesura que es mou el valor de [{.pill.red} c](target:c) al voltant del conjunt Mandelbrot, podríeu notar una propietat curiosa: 
+A mesura que es mou el valor de [{.pill.red} c](target:c) al voltant del conjunt Mandelbrot, podríeu notar una propietat curiosa: 
 
- * Totes les seqüències del [cos principal](target:bulb0) del conjunt Mandelbrot [[conflueixen | divergir | arribar a una òrbita]] _{span.reveal(when="blank-0")} fins a un sol punt._ * {.reveal(when="blank-0")} Les seqüències dins del [gran bulb](target:bulb1) de la part superior [[arriben a una òrbita | convergir | divergir]] _{span.reveal(when="blank-1")} format per [[3]] punts._ * {.reveal(when="blank-2")} Les seqüències d’ [aquest bulb més petit](target:bulb2) tenen òrbites de longitud [[5]] . 
+* Totes les seqüències del [cos principal](target:bulb0) del conjunt Mandelbrot [[conflueixen | divergir | arribar a una òrbita]] _{span.reveal(when="blank-0")} fins a un sol punt._ * {.reveal(when="blank-0")} Les seqüències dins del [gran bulb](target:bulb1) de la part superior [[arriben a una òrbita | convergir | divergir]] _{span.reveal(when="blank-1")} format per [[3]] punts._ * {.reveal(when="blank-2")} Les seqüències d’ [aquest bulb més petit](target:bulb2) tenen òrbites de longitud [[5]] . 
 
 :::
 
 {.reveal(when="blank-3")} Cada bulb té una òrbita de diferent mida, i els bulbs més petits tenen cada cop més punts en les seves òrbites. La mida d’aquestes òrbites estan estretament relacionades amb el __Mapa Logístic__ , un concepte important en la [teoria del caos](/course/chaos) . 
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 > id: mandel-outro
 
 ::: column.grow
 
- Bernoit Mandelbrot va dedicar la major part de la seva vida a l’estudi dels fractals, així com a les matemàtiques de la _rugositat_ i l’ _autosemblança_ . El seu treball va tenir aplicacions en física, meteorologia, neurologia, economia, geologia, enginyeria, informàtica i molts altres camps. 
+Bernoit Mandelbrot va dedicar la major part de la seva vida a l’estudi dels fractals, així com a les matemàtiques de la _rugositat_ i l’ _autosemblança_ . El seu treball va tenir aplicacions en física, meteorologia, neurologia, economia, geologia, enginyeria, informàtica i molts altres camps. 
 
- El 1985, el conjunt Mandelbrot va aparèixer a la portada de la revista _Scientific American_ , i des d’aleshores s’ha convertit en una de les formes matemàtiques més reconeixibles del món. Podeu trobar-lo en samarretes, en vídeos musicals i com a protectors de pantalla, i heu fet referència a molts llibres i pel·lícules populars. 
+El 1985, el conjunt Mandelbrot va aparèixer a la portada de la revista _Scientific American_ , i des d’aleshores s’ha convertit en una de les formes matemàtiques més reconeixibles del món. Podeu trobar-lo en samarretes, en vídeos musicals i com a protectors de pantalla, i heu fet referència a molts llibres i pel·lícules populars. 
 
 ::: column(width=220)
 

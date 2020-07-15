@@ -39,7 +39,6 @@ __Lý thuyết về đồ thị__ là môn học về đồ thị và các đặ
 
 Chúng ta có thể vẽ một đồ thị đơn giản sử dụng các đường và vòng tròn. Vị trí của các vòng tròn hay chiều dài của mỗi đường không quan trọng – chúng ta chỉ quan tâm cách chúng kết nối với nhau như thế nào. Các đường có thể cắt nhau và không cần phải là đường thẳng.
 
-
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
@@ -189,8 +188,6 @@ và mỗi cây cầu kết nối hai vùng đất khác nhau được đại di�
 > id: bridges-2
 
 Trên giấy nháp, bạn hãy thử vẽ các đồ thị khác nhau dưới đây và xem đồ thị nào có thể vẽ được bằng một đường liên tục duy nhất. 
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
 
 ---
 > id: bridges-3

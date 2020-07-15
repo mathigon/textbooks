@@ -7,9 +7,9 @@
 
 ::: column.grow
 
- Så länge människor har funnits har vi tittat på himlen och försökt förklara livet på jorden med hjälp av stjärnor, planeter och månen. 
+Så länge människor har funnits har vi tittat på himlen och försökt förklara livet på jorden med hjälp av stjärnor, planeter och månen. 
 
- Forntida grekiska astronomer var de första som upptäckte att alla himmelobjekt rör sig på vanliga vägar, kallade __banor__ . De trodde att dessa bana alltid är cirkulära. När allt kommer omkring är cirklar den "mest perfekta" av alla former: symmetrisk i alla riktningar, och därmed ett passande val för vårt universums underliggande ordning. 
+Forntida grekiska astronomer var de första som upptäckte att alla himmelobjekt rör sig på vanliga vägar, kallade __banor__ . De trodde att dessa bana alltid är cirkulära. När allt kommer omkring är cirklar den "mest perfekta" av alla former: symmetrisk i alla riktningar, och därmed ett passande val för vårt universums underliggande ordning. 
 
 ::: column(width=320)
 
@@ -23,7 +23,7 @@
 > id: radius
 > goals: compass
 
- Varje punkt på en [__cirkel__](gloss:circle) har samma avstånd från centrum. Detta innebär att de kan ritas med en [kompass](gloss:compass) : 
+Varje punkt på en [__cirkel__](gloss:circle) har samma avstånd från centrum. Detta innebär att de kan ritas med en [kompass](gloss:compass) : 
 
 ::: column(width=320)
 
@@ -41,7 +41,9 @@
 
 {.reveal(when="compass")} Det finns tre viktiga mätningar relaterade till cirklar som du behöver veta: 
 
- * {.reveal(when="compass" delay="1000")} De [{.pill.red.b} radie](target:r) är avståndet från mitten av en cirkel till dess ytterkant. * {.reveal(when="compass" delay="4000")} De [{.pill.blue.b} diameter](target:d) är avståndet mellan två motsatta punkter på en cirkel. Den går igenom dess centrum, och dess längd är [[två gånger | halv | samma som]] radien. * {.reveal(when="blank-0")} De [{.pill.green.b} omkrets](target:c) (eller omkrets) är avståndet runt en cirkel. 
+* {.reveal(when="compass" delay="1000")} De [{.pill.red.b} radie](target:r) är avståndet från mitten av en cirkel till dess ytterkant.
+* {.reveal(when="compass" delay="4000")} De [{.pill.blue.b} diameter](target:d) är avståndet mellan två motsatta punkter på en cirkel. Den går igenom dess centrum, och dess längd är [[två gånger | halv | samma som]] radien.
+* {.reveal(when="blank-0")} De [{.pill.green.b} omkrets](target:c) (eller omkrets) är avståndet runt en cirkel. 
 
 :::
 
@@ -49,7 +51,7 @@
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
- En viktig egenskap hos cirklar är att alla cirklar är [lika](gloss:similar) . Du kan bevisa att genom att visa hur alla cirklar kan matchas med helt enkelt [översättningar](gloss:translation) och [utvidgningar](gloss:dilation) : 
+En viktig egenskap hos cirklar är att alla cirklar är [lika](gloss:similar) . Du kan bevisa att genom att visa hur alla cirklar kan matchas med helt enkelt [översättningar](gloss:translation) och [utvidgningar](gloss:dilation) : 
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -57,7 +59,7 @@
 > id: pi-definition
 > goals: digits
 
- Du kanske kommer ihåg att för liknande polygoner är förhållandet mellan motsvarande sidor alltid konstant. Något liknande fungerar för cirklar: förhållandet mellan [periferin](gloss:circle-circumference) och [diametern](gloss:circle-diameter) är lika för _alla cirklar_ . Det är alltid 3.14159 ... - ett mystiskt nummer som heter [__Pi__](gloss:pi) , som ofta skrivs som den grekiska bokstaven _π_ för “p”. Pi har oändligt många decimalsiffror som pågår för alltid utan något specifikt mönster: 
+Du kanske kommer ihåg att för liknande polygoner är förhållandet mellan motsvarande sidor alltid konstant. Något liknande fungerar för cirklar: förhållandet mellan [periferin](gloss:circle-circumference) och [diametern](gloss:circle-diameter) är lika för _alla cirklar_ . Det är alltid 3.14159 ... - ett mystiskt nummer som heter [__Pi__](gloss:pi) , som ofta skrivs som den grekiska bokstaven _π_ för “p”. Pi har oändligt många decimalsiffror som pågår för alltid utan något specifikt mönster: 
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -65,7 +67,7 @@
 > id: wheel
 > goals: unroll
 
- Här är ett hjul med diameter 1. När du "rullar upp" omkretsen kan du se att dess längd är exakt [[`pi`|`2 * pi`| 3]] : 
+Här är ett hjul med diameter 1. När du "rullar upp" omkretsen kan du se att dess längd är exakt [[`pi`|`2 * pi`| 3]] : 
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -73,14 +75,14 @@
 ---
 > id: circumference
 
- För en cirkel med diameter _d_ är omkretsen `C = π × d` . På samma sätt är omkretsen för en cirkel med [radie](gloss:circle-radius) _r_ 
+För en cirkel med diameter _d_ är omkretsen `C = π × d` . På samma sätt är omkretsen för en cirkel med [radie](gloss:circle-radius) _r_ 
 
 {.text-center}`C =` [[`2 π r`|`π r`|`π r^2`]] . 
 
 ---
 > id: nature
 
- Cirklar är perfekt symmetriska, och de har inga "svaga punkter" som hörnen på en polygon. Detta är en av orsakerna till att de finns överallt i naturen: 
+Cirklar är perfekt symmetriska, och de har inga "svaga punkter" som hörnen på en polygon. Detta är en av orsakerna till att de finns överallt i naturen: 
 
 ::: column(width=130 parent="padded-thin")
 
@@ -122,9 +124,9 @@
 
 ::: column.grow
 
- Det visar sig också att en cirkel är formen med det största området för en given omkrets. Om du till exempel har ett rep på längden 100 \ m kan du använda det för att omsluta det största utrymmet om du bildar en cirkel (snarare än andra former som en rektangel eller triangel). 
+Det visar sig också att en cirkel är formen med det största området för en given omkrets. Om du till exempel har ett rep på längden 100 \ m kan du använda det för att omsluta det största utrymmet om du bildar en cirkel (snarare än andra former som en rektangel eller triangel). 
 
- I naturen kan föremål som vattendroppar eller luftbubblor _spara energi_ genom att bli cirkulära eller sfäriska och minska ytytan. 
+I naturen kan föremål som vattendroppar eller luftbubblor _spara energi_ genom att bli cirkulära eller sfäriska och minska ytytan. 
 
 ::: column(width=320)
 
@@ -145,9 +147,9 @@
 
 ### Området för en cirkel 
 
- Men hur beräknar vi faktiskt en cirkelyta? Låt oss försöka samma teknik som vi använde för att [hitta området med fyrkantiga sidor](/course/polyhedra/quadrilaterals) : vi skär formen i flera olika delar och ordnar sedan dem till en annan form som vi redan känner till området (t.ex. en rektangel eller en triangel). 
+Men hur beräknar vi faktiskt en cirkelyta? Låt oss försöka samma teknik som vi använde för att [hitta området med fyrkantiga sidor](/course/polyhedra/quadrilaterals) : vi skär formen i flera olika delar och ordnar sedan dem till en annan form som vi redan känner till området (t.ex. en rektangel eller en triangel). 
 
- Den enda skillnaden är att eftersom cirklar är böjda, måste vi använda några tillnärmningar: 
+Den enda skillnaden är att eftersom cirklar är böjda, måste vi använda några tillnärmningar: 
 
 ::: column(width=340)
 
@@ -164,7 +166,7 @@
 
 ::: column.grow
 
- Här kan du se en cirkel uppdelad i ${toWord(n1)} kilar. Flytta skjutreglaget för att ställa in kilen i en rad. 
+Här kan du se en cirkel uppdelad i ${toWord(n1)} kilar. Flytta skjutreglaget för att ställa in kilen i en rad. 
 
 {.reveal(when="slider")} Om vi ökar antalet kil till ${n1}{n1|6|6,30,2} , denna form börjar se mer och mer ut som en [[rektangel | cirkel | fyrkant]] . 
 
@@ -190,7 +192,7 @@
 
 ::: column.grow
 
- Här kan du se en cirkel uppdelad i ${toWord(n)} ringar. Liksom tidigare kan du flytta skjutreglaget till "otydliga" ringarna. 
+Här kan du se en cirkel uppdelad i ${toWord(n)} ringar. Liksom tidigare kan du flytta skjutreglaget till "otydliga" ringarna. 
 
 {.reveal(when="slider")} Om vi ökar antalet ringar till ${n2}{n2|4|2,12,1} , denna form börjar se mer och mer ut som en [[triangel | rektangel | trapez]] . 
 
@@ -203,7 +205,7 @@
 ---
 > id: area-2
 
- Om vi skulle kunna använda oändligt många ringar eller kilar skulle tillnärmningarna ovan vara perfekta - och de båda ger oss samma formel för området med en cirkel: 
+Om vi skulle kunna använda oändligt många ringar eller kilar skulle tillnärmningarna ovan vara perfekta - och de båda ger oss samma formel för området med en cirkel: 
 
 {.text-center.r}`A = π r^2` . [Fortsätta](btn:next) 
 
@@ -212,9 +214,9 @@
 
 ### Beräknar Pi 
 
- Som du såg ovan, `π = 3.1415926…` är inte ett enkelt heltal och dess decimalsiffror fortsätter för evigt, utan att upprepa ett mönster. Nummer med den här egenskapen kallas [__irrationella nummer__](gloss:irrational-numbers) , och det betyder det `π` kan inte uttryckas som en enkel bråk `a/b` . 
+Som du såg ovan, `π = 3.1415926…` är inte ett enkelt heltal och dess decimalsiffror fortsätter för evigt, utan att upprepa ett mönster. Nummer med den här egenskapen kallas [__irrationella nummer__](gloss:irrational-numbers) , och det betyder det `π` kan inte uttryckas som en enkel bråk `a/b` . 
 
- Det betyder också att vi aldrig kan skriva ner _alla_ siffrorna i Pi - det finns ju oändligt många. Antika grekiska och kinesiska matematiker beräknade de första fyra decimalsiffrorna av Pi genom att ungefärliga cirklar med vanliga polygoner. Lägg märke till hur, när du lägger till fler sidor, polygonen börjar se [[mer och mer ut | mindre | precis]] som en cirkel: 
+Det betyder också att vi aldrig kan skriva ner _alla_ siffrorna i Pi - det finns ju oändligt många. Antika grekiska och kinesiska matematiker beräknade de första fyra decimalsiffrorna av Pi genom att ungefärliga cirklar med vanliga polygoner. Lägg märke till hur, när du lägger till fler sidor, polygonen börjar se [[mer och mer ut | mindre | precis]] som en cirkel: 
 
     figure: x-img(src="images/polygons.svg" width=460 height=110)
 
@@ -227,18 +229,18 @@
 
 ::: column.grow
 
- 1665 lyckades [Isaac Newton](bio:newton) beräkna 15 siffror. Idag kan vi använda kraftfulla datorer för att beräkna värdet på Pi till mycket högre noggrannhet. 
+1665 lyckades [Isaac Newton](bio:newton) beräkna 15 siffror. Idag kan vi använda kraftfulla datorer för att beräkna värdet på Pi till mycket högre noggrannhet. 
 
- Den nuvarande posten är 31,4 biljoner siffror. En tryckt bok som innehåller alla dessa siffror skulle vara ungefär 400 \ km tjock - det är den höjd som den [internationella rymdstationen](gloss:iss) kretsar runt jorden! 
+Den nuvarande posten är 31,4 biljoner siffror. En tryckt bok som innehåller alla dessa siffror skulle vara ungefär 400 \ km tjock - det är den höjd som den [internationella rymdstationen](gloss:iss) kretsar runt jorden! 
 
- Naturligtvis behöver du inte komma ihåg att många siffror av Pi. I själva verket bråk `22/7 = 3.142…` är en bra tillnärmning. 
+Naturligtvis behöver du inte komma ihåg att många siffror av Pi. I själva verket bråk `22/7 = 3.142…` är en bra tillnärmning. 
 
 :::
 
 ---
 > id: pi-sequence
 
- En metod för att beräkna Pi är att använda oändliga antal sekvenser. Här är ett exempel som upptäcktes av [Gottfried Wilhelm Leibniz](bio:leibniz) 1676: 
+En metod för att beräkna Pi är att använda oändliga antal sekvenser. Här är ett exempel som upptäcktes av [Gottfried Wilhelm Leibniz](bio:leibniz) 1676: 
 
 {.text-center}`π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
@@ -250,9 +252,9 @@
 
 ::: column.grow
 
- Många matematiker tror att Pi har en ännu mer nyfiken egenskap: att det är ett __normalt antal__ . Detta betyder att siffrorna från 0 till 9 verkar helt slumpmässigt, som om naturen hade rullat en 10-sidig tärning oändligt många gånger för att bestämma värdet på Pi. 
+Många matematiker tror att Pi har en ännu mer nyfiken egenskap: att det är ett __normalt antal__ . Detta betyder att siffrorna från 0 till 9 verkar helt slumpmässigt, som om naturen hade rullat en 10-sidig tärning oändligt många gånger för att bestämma värdet på Pi. 
 
- Här kan du se de första 100 siffrorna på Pi. Flytta över några av cellerna för att se hur siffrorna är fördelade. 
+Här kan du se de första 100 siffrorna på Pi. Flytta över några av cellerna för att se hur siffrorna är fördelade. 
 
 ::: column(width=330)
 
@@ -271,7 +273,7 @@
 > id: pi-digits
 > goals: search
 
- Om Pi är normalt betyder det att du kan tänka på _vilken_ siffra som _helst_ och att den kommer att visas någonstans i siffrorna. Här kan du söka efter de första en miljon siffrorna i Pi - innehåller de din födelsedag? 
+Om Pi är normalt betyder det att du kan tänka på _vilken_ siffra som _helst_ och att den kommer att visas någonstans i siffrorna. Här kan du söka efter de första en miljon siffrorna i Pi - innehåller de din födelsedag? 
 
 ::: .box.f-red.pi-box
 
@@ -289,9 +291,9 @@
 ---
 > id: pi-movies
 
- Vi kunde till och med konvertera en hel bok, som Harry Potter, till en mycket lång rad siffror (a = 01, b = 02, och så vidare). Om Pi är normalt visas den här strängen någonstans i siffrorna - men det tar miljoner år att beräkna tillräckligt med siffror för att hitta den. 
+Vi kunde till och med konvertera en hel bok, som Harry Potter, till en mycket lång rad siffror (a = 01, b = 02, och så vidare). Om Pi är normalt visas den här strängen någonstans i siffrorna - men det tar miljoner år att beräkna tillräckligt med siffror för att hitta den. 
 
- Pi är lätt att förstå, men av grundläggande betydelse i vetenskap och matematik. Det kan vara en anledning till att Pi har blivit ovanligt populärt i vår kultur (åtminstone jämfört med andra ämnen i matematik): 
+Pi är lätt att förstå, men av grundläggande betydelse i vetenskap och matematik. Det kan vara en anledning till att Pi har blivit ovanligt populärt i vår kultur (åtminstone jämfört med andra ämnen i matematik): 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -313,7 +315,7 @@
 ---
 > id: pi-day
 
- Det finns till och med en _Pi-dag_ varje år, som antingen faller den 14 mars, för `pi ≈ 3.14` , eller den 22 juli, för `pi ≈ 22/7` . 
+Det finns till och med en _Pi-dag_ varje år, som antingen faller den 14 mars, för `pi ≈ 3.14` , eller den 22 juli, för `pi ≈ 22/7` . 
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -324,7 +326,7 @@
 > section: radians
 > id: degrees
 
- Hittills inom geometri har vi alltid mätt vinklar i [grader](gloss:degrees) . EN __{.m-red} full__ cirkelrotation är [[360]]°, a __{.m-green} halvcirkeln__ är [[180]]°, a __{.m-yellow} kvartcirkeln__ är [[90]]°, och så vidare. 
+Hittills inom geometri har vi alltid mätt vinklar i [grader](gloss:degrees) . EN __{.m-red} full__ cirkelrotation är [[360]]°, a __{.m-green} halvcirkeln__ är [[180]]°, a __{.m-yellow} kvartcirkeln__ är [[90]]°, och så vidare. 
 
 ::: column(width=160)
 
@@ -368,9 +370,9 @@
 
 ::: column.grow
 
- Som det händer är 360 grader ett av de äldsta begreppen i matematik som vi fortfarande använder idag. De utvecklades i antika Babylon för mer än 5000 år sedan! 
+Som det händer är 360 grader ett av de äldsta begreppen i matematik som vi fortfarande använder idag. De utvecklades i antika Babylon för mer än 5000 år sedan! 
 
- Vid den tiden var en av de viktigaste tillämpningarna av matematik inom astronomi. _Solen_ avgör de fyra säsongerna, som jordbrukarna måste veta om när de odlar grödor. På liknande sätt bestämmer _månen_ tidvattnet, vilket var viktigt för fiskare. Människor studerade också stjärnorna för att förutsäga framtiden eller för att kommunicera med gudar. 
+Vid den tiden var en av de viktigaste tillämpningarna av matematik inom astronomi. _Solen_ avgör de fyra säsongerna, som jordbrukarna måste veta om när de odlar grödor. På liknande sätt bestämmer _månen_ tidvattnet, vilket var viktigt för fiskare. Människor studerade också stjärnorna för att förutsäga framtiden eller för att kommunicera med gudar. 
 
 ::: column(width=260)
 
@@ -384,7 +386,7 @@
 > id: constellations
 > goals: rotate
 
- Astronomer märkte att konstellationerna som var synliga vid en viss tid under natten skiftade en liten bit varje dag - tills de efter ungefär 360 dagar hade roterat tillbaka till sin utgångspunkt. Och det kan ha varit orsaken till att de delade cirkeln i 360 grader. 
+Astronomer märkte att konstellationerna som var synliga vid en viss tid under natten skiftade en liten bit varje dag - tills de efter ungefär 360 dagar hade roterat tillbaka till sin utgångspunkt. Och det kan ha varit orsaken till att de delade cirkeln i 360 grader. 
 
     figure: .constellations
       .label.md Midnight on day ${day}
@@ -397,15 +399,15 @@
 > id: constellations-1
 > goals: video
 
- Naturligtvis finns det faktiskt 365 dagar på ett år (väl, 365.242199 för att vara exakt), men babyloniska matematiker arbetade med enkla solurar, och denna tillnärmning var helt tillräcklig. 
+Naturligtvis finns det faktiskt 365 dagar på ett år (väl, 365.242199 för att vara exakt), men babyloniska matematiker arbetade med enkla solurar, och denna tillnärmning var helt tillräcklig. 
 
- Det fungerade också bra med deras befintliga bas-60-nummersystem (sedan `6 xx 60 = 360` ). Detta system är anledningen till att vi fortfarande har 60 sekunder på en minut och 60 minuter på en timme - även om de flesta andra enheter mäts i [bas 10](gloss:base-10) (t.ex. 10 år på ett decennium, eller 100 år på ett sekel). 
+Det fungerade också bra med deras befintliga bas-60-nummersystem (sedan `6 xx 60 = 360` ). Detta system är anledningen till att vi fortfarande har 60 sekunder på en minut och 60 minuter på en timme - även om de flesta andra enheter mäts i [bas 10](gloss:base-10) (t.ex. 10 år på ett decennium, eller 100 år på ett sekel). 
 
 ::: column.grow
 
- För många av oss är att mäta vinklar i grader andra naturen: det finns 360° -video, skateboardåkare kan dra 540-tal, och någon som ändrar sitt beslut kan göra en 180° -sväng. 
+För många av oss är att mäta vinklar i grader andra naturen: det finns 360° -video, skateboardåkare kan dra 540-tal, och någon som ändrar sitt beslut kan göra en 180° -sväng. 
 
- Men ur en matematisk synvinkel är valet av 360 helt godtyckligt. Om vi bodde på Mars kan en cirkel ha 670° och ett år på Jupiter har till och med 10 475 dagar. 
+Men ur en matematisk synvinkel är valet av 360 helt godtyckligt. Om vi bodde på Mars kan en cirkel ha 670° och ett år på Jupiter har till och med 10 475 dagar. 
 
 ::: column(width=280)
 
@@ -420,7 +422,7 @@
 
 ### radianer 
 
- I stället för att dela upp en cirkel i ett visst antal segment (som 360 grader) föredrar matematiker ofta att mäta vinklar med hjälp av [omkretsen](gloss:circle-circumference) av en [__enhetscirkel__](gloss:unit-circle) (en cirkel med radie 1). 
+I stället för att dela upp en cirkel i ett visst antal segment (som 360 grader) föredrar matematiker ofta att mäta vinklar med hjälp av [omkretsen](gloss:circle-circumference) av en [__enhetscirkel__](gloss:unit-circle) (en cirkel med radie 1). 
 
 ::: column(width=280)
 
@@ -436,7 +438,7 @@
 
 ::: column.grow
 
- EN _{span.var-action} hela cirkeln_ har omkrets _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+EN _{span.var-action} hela cirkeln_ har omkrets _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
 {.reveal(when="eqn-0")} För en _{span.var-action} halvcirkelrotation_ , motsvarande avstånd längs omkretsen _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
@@ -449,7 +451,7 @@
 ---
 > id: radians-conversion
 
- Varje vinkel i grader har en motsvarande storlek i radianer. Det är mycket enkelt att konvertera mellan de två - precis som du kan konvertera mellan andra enheter som meter och kilometer, eller Celsius och Fahrenheit: 
+Varje vinkel i grader har en motsvarande storlek i radianer. Det är mycket enkelt att konvertera mellan de två - precis som du kan konvertera mellan andra enheter som meter och kilometer, eller Celsius och Fahrenheit: 
 
 {.text-center} __{.m-red} 360°__ _{span.space} =_ __{.m-green} 2 _π_ rad__ 
 
@@ -468,20 +470,22 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 ---
 > id: radians-table
 
- Du kan skriva radianvärdet antingen som en multipel av _π_ eller som bara ett decimaltal. Kan du fylla i denna tabell med ekvivalenta vinkelstorlekar i grader och radianer? 
+Du kan skriva radianvärdet antingen som en multipel av _π_ eller som bara ett decimaltal. Kan du fylla i denna tabell med ekvivalenta vinkelstorlekar i grader och radianer? 
 
- | __{.m-red} grader__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ | | __{.m-green} radianer__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` | {.table-small.grid}
+| __{.m-red} grader__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ |
+| __{.m-green} radianer__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
 
 ---
 > id: radians-distance
 
 ### Resa avstånd 
 
- Du kan tänka på radianer som "rest avstånd" längs en enhetscirkel. Detta är särskilt användbart när du arbetar med föremål som rör sig på en cirkulär bana. 
+Du kan tänka på radianer som "rest avstånd" längs en enhetscirkel. Detta är särskilt användbart när du arbetar med föremål som rör sig på en cirkulär bana. 
 
 ::: column.grow
 
- Till exempel går den [internationella rymdstationen runt](gloss:iss) jorden en gång var 1,5 / timme. Detta betyder att dess __rotationshastighet__ är [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] radianer per timme. 
+Till exempel går den [internationella rymdstationen runt](gloss:iss) jorden en gång var 1,5 / timme. Detta betyder att dess __rotationshastighet__ är [[`(2 pi)/1.5`|`1.5/(2 pi)`|`1.5 * pi`]] radianer per timme. 
 
 {.reveal(when="blank-0")} I en [enhetscirkel](gloss:unit-circle) är rotationshastigheten densamma som den _verkliga_ hastigheten, eftersom omkretsens längd är densamma som en full rotation i radianer (båda är `2pi` ). 
 
@@ -508,9 +512,9 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 ---
 > id: radians-distance-1
 
- Kan du se att radianer i detta exempel är en mycket bekvämare enhet än grader? När vi väl vet rotationshastigheten måste vi helt enkelt multiplicera med radien för att få den faktiska hastigheten. 
+Kan du se att radianer i detta exempel är en mycket bekvämare enhet än grader? När vi väl vet rotationshastigheten måste vi helt enkelt multiplicera med radien för att få den faktiska hastigheten. 
 
- Här är ett annat exempel: din bil har hjul med radie 0,25 \ m. Om du kör med en hastighet av 20 \ m / s, roterar bilens hjul på [[`20/0.25 =
+Här är ett annat exempel: din bil har hjul med radie 0,25 \ m. Om du kör med en hastighet av 20 \ m / s, roterar bilens hjul på [[`20/0.25 =
 80`|`20 xx 0.25 = 5`|`0.25/50 = 0.0125`]] radianer per sekund _{span.reveal(when="blank-0")} (eller `80/(2pi) = 13` rotationer per sekund)._ 
 
 ---
@@ -518,13 +522,13 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 
 ### Trigonometri 
 
- För de flesta enkla geometriproblem, grader och radianer är helt utbytbara - du kan antingen välja vilken du föredrar, eller så kan en fråga säga vilken enhet du ska ge ditt svar på. Men när du studerar mer avancerad [trigonometri](gloss:trigonometry) eller [kalkyl](gloss:calculus) visar det sig att radianer är mycket bekvämare än grader. 
+För de flesta enkla geometriproblem, grader och radianer är helt utbytbara - du kan antingen välja vilken du föredrar, eller så kan en fråga säga vilken enhet du ska ge ditt svar på. Men när du studerar mer avancerad [trigonometri](gloss:trigonometry) eller [kalkyl](gloss:calculus) visar det sig att radianer är mycket bekvämare än grader. 
 
 ::: column.grow
 
- De flesta miniräknare har en [speciell knapp för](->.button.mode) att växla mellan grader och radianer. Trigonometriska funktioner som [__synd__](gloss:sin) , [__cos__](gloss:cos) och __solbränna__ tar vinklar som ingång, och deras omvända funktioner __arcsin__ , __arccos__ och __arctan__ returr vinklar som utgång. Den aktuella räknarinställningen bestämmer vilka enheter som används för dessa vinklar. 
+De flesta miniräknare har en [speciell knapp för](->.button.mode) att växla mellan grader och radianer. Trigonometriska funktioner som [__synd__](gloss:sin) , [__cos__](gloss:cos) och __solbränna__ tar vinklar som ingång, och deras omvända funktioner __arcsin__ , __arccos__ och __arctan__ returr vinklar som utgång. Den aktuella räknarinställningen bestämmer vilka enheter som används för dessa vinklar. 
 
- Försök använda den här räknaren för att beräkna det 
+Försök använda den här räknaren för att beräkna det 
 
 {.text-center} sin (30°) = [[0,5]] _{span.eqn-gap}_ cos (1°) = [[0,999]]  
 sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]] 
@@ -557,7 +561,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: small-angle
 
- Att använda radianer har en särskilt intressant fördel när du använder Sine-funktionen. Om `θ` är en mycket liten vinkel (mindre än 20° eller 0,3 rad), då `sin(θ) ≈ θ` . Till exempel, 
+Att använda radianer har en särskilt intressant fördel när du använder Sine-funktionen. Om `θ` är en mycket liten vinkel (mindre än 20° eller 0,3 rad), då `sin(θ) ≈ θ` . Till exempel, 
 
 {.text-center} synd( ${x}{x|0.1|0,0.5,0.05} ) `≈`${sin(x)} ... 
 
@@ -570,7 +574,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > section: tangets-chords-arcs
 > id: circle-parts
 
- I de föregående avsnitten lärde du dig namnen som givits till flera olika delar av en cirkel - som mitt, radie, diameter och omkrets. Det finns dock många geometriska element relaterade till en cirkel, som vi måste lösa mer komplexa problem: 
+I de föregående avsnitten lärde du dig namnen som givits till flera olika delar av en cirkel - som mitt, radie, diameter och omkrets. Det finns dock många geometriska element relaterade till en cirkel, som vi måste lösa mer komplexa problem: 
 
 ::: column(width=300)
 
@@ -599,14 +603,19 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow(parent="right")
 
- * {.r} EN [{.red} secant](pill:secant) är en linje som skär en cirkel vid två punkter. [Fortsätt](btn:next) * {.r.reveal(when="next-0")} EN [{.green} ackord](pill:chord) är ett linjesegment vars ändpunkter ligger på en cirkelns omkrets. [Fortsätt](btn:next) * {.r.reveal(when="next-1")} EN [{.blue} tangent](pill:tangent) är en linje som vidrör en cirkel på exakt en punkt. Detta kallas __punkten för tangens__ . [Fortsätt](btn:next) * {.r.reveal(when="next-2")} En [{.yellow} båge](pill:arc) är en sektion av en cirkelns omkrets. [Fortsätt](btn:next) * {.r.reveal(when="next-3")} EN [{.teal} sektor](pill:sector) är en del av det inre av en cirkel, avgränsat av en _båge_ och _två radier_ . [Fortsätt](btn:next) * {.r.reveal(when="next-4")} Slutligen, a [{.purple} segment](pill:segment) är en del av det inre av en cirkel, avgränsat av en _båge_ och _ett ackord_ . [Fortsätta](btn:next) 
+* {.r} EN [{.red} secant](pill:secant) är en linje som skär en cirkel vid två punkter. [Fortsätt](btn:next)
+* {.r.reveal(when="next-0")} EN [{.green} ackord](pill:chord) är ett linjesegment vars ändpunkter ligger på en cirkelns omkrets. [Fortsätt](btn:next)
+* {.r.reveal(when="next-1")} EN [{.blue} tangent](pill:tangent) är en linje som vidrör en cirkel på exakt en punkt. Detta kallas __punkten för tangens__ . [Fortsätt](btn:next)
+* {.r.reveal(when="next-2")} En [{.yellow} båge](pill:arc) är en sektion av en cirkelns omkrets. [Fortsätt](btn:next)
+* {.r.reveal(when="next-3")} EN [{.teal} sektor](pill:sector) är en del av det inre av en cirkel, avgränsat av en _båge_ och _två radier_ . [Fortsätt](btn:next)
+* {.r.reveal(when="next-4")} Slutligen, a [{.purple} segment](pill:segment) är en del av det inre av en cirkel, avgränsat av en _båge_ och _ett ackord_ . [Fortsätta](btn:next) 
 
 :::
 
 ---
 > id: circle-parts-1
 
- I det här avsnittet kommer vi att titta på förhållandet mellan alla dessa element och bevisa teorier om deras egenskaper. Oroa dig inte för att memorera alla definitioner för tillfället - du kan alltid använda [ordlistan](->.footer-link[data-modal=glossarym]) . 
+I det här avsnittet kommer vi att titta på förhållandet mellan alla dessa element och bevisa teorier om deras egenskaper. Oroa dig inte för att memorera alla definitioner för tillfället - du kan alltid använda [ordlistan](->.footer-link[data-modal=glossarym]) . 
 
 ---
 
@@ -614,33 +623,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} KOMMER SNART! 
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
     
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
 
 ---
 
@@ -648,52 +631,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} KOMMER SNART! 
 
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
     
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -702,9 +640,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- De flesta forskare i antika Grekland var överens om att jorden är en sfär. Det fanns gott om bevis: från fartyg som försvann bakom horisonten vid havet, till stjärnornas cirkulära rörelse under natten. 
+De flesta forskare i antika Grekland var överens om att jorden är en sfär. Det fanns gott om bevis: från fartyg som försvann bakom horisonten vid havet, till stjärnornas cirkulära rörelse under natten. 
 
- Tyvärr visste ingen exakt _hur stor_ jorden var - förrän omkring 200 f.Kr., när matematikern [Eratosthenes](bio:eratosthenes) hittade ett genialt sätt att mäta jordens radie med hjälp av grundläggande geometri. Allt vi behöver är lite mer kunskap om bågar och sektorer i en cirkel. 
+Tyvärr visste ingen exakt _hur stor_ jorden var - förrän omkring 200 f.Kr., när matematikern [Eratosthenes](bio:eratosthenes) hittade ett genialt sätt att mäta jordens radie med hjälp av grundläggande geometri. Allt vi behöver är lite mer kunskap om bågar och sektorer i en cirkel. 
 
 ::: column(width=280)
 
@@ -729,13 +667,13 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Som du kan se i diagrammet, en [{.red} båge](pill:arc) är en del av [[omkretsen | diameter | tangent]] för en cirkel, och a [{.yellow} sektor](pill:sector) är en del av [[interiören | radie | omkretsen]] av en cirkel. 
+Som du kan se i diagrammet, en [{.red} båge](pill:arc) är en del av [[omkretsen | diameter | tangent]] för en cirkel, och a [{.yellow} sektor](pill:sector) är en del av [[interiören | radie | omkretsen]] av en cirkel. 
 
 ::: .reveal(when="blank-0 blank-1")
 
- Bågen mellan två punkter _A_ och _B_ skrivs ofta som `arc(AB)` . Denna definition är något tvetydig: det finns en [{.purple} andra bågen](pill:major) som förbinder _A_ och _B_ men går tvärtom runt cirkeln. 
+Bågen mellan två punkter _A_ och _B_ skrivs ofta som `arc(AB)` . Denna definition är något tvetydig: det finns en [{.purple} andra bågen](pill:major) som förbinder _A_ och _B_ men går tvärtom runt cirkeln. 
 
- Den mindre av de två bågarna kallas den __mindre bågen__ , och den större kallas den __stora bågen__ . Om punkterna _A_ och _B_ är exakt mitt emot varandra, har båda bågarna samma längd och är [[halvcirklar | diametrar | omkretser]] . 
+Den mindre av de två bågarna kallas den __mindre bågen__ , och den större kallas den __stora bågen__ . Om punkterna _A_ och _B_ är exakt mitt emot varandra, har båda bågarna samma längd och är [[halvcirklar | diametrar | omkretser]] . 
 
 :::
 
@@ -746,15 +684,15 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- För att hitta längden på en båge eller området för en sektor måste vi veta om motsvarande vinkel i mitten av cirkeln: detta kallas [{.blue} central vinkel](pill:angle) . 
+För att hitta längden på en båge eller området för en sektor måste vi veta om motsvarande vinkel i mitten av cirkeln: detta kallas [{.blue} central vinkel](pill:angle) . 
 
- Lägg märke till hur bågen, sektorn och vinkeln tar upp _samma andel_ av en hel cirkel. Till exempel om [{.blue} central vinkel](pill:angle) är _{span.var-action} 90°_ , det tar [[en fjärdedel | en halv | en tredjedel]] av [{.teal} hela cirkeln](pill:fangle) . 
+Lägg märke till hur bågen, sektorn och vinkeln tar upp _samma andel_ av en hel cirkel. Till exempel om [{.blue} central vinkel](pill:angle) är _{span.var-action} 90°_ , det tar [[en fjärdedel | en halv | en tredjedel]] av [{.teal} hela cirkeln](pill:fangle) . 
 
 ::: .reveal(when="blank-0")
 
- Detta innebär att [{.red} längden på bågen](pill:arc) är också `1/4` av [{.purple} hela omkretsen](pill:circ) av cirkeln och [{.yellow} sektoren](pill:sector) är `1/4` av [{.orange} hela området](pill:area) av cirkeln. 
+Detta innebär att [{.red} längden på bågen](pill:arc) är också `1/4` av [{.purple} hela omkretsen](pill:circ) av cirkeln och [{.yellow} sektoren](pill:sector) är `1/4` av [{.orange} hela området](pill:area) av cirkeln. 
 
- Vi kan uttrycka detta förhållande i en ekvation: 
+Vi kan uttrycka detta förhållande i en ekvation: 
 
 {.text-center}`"arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
 
@@ -781,7 +719,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: arcs-2
 
- Nu kan vi ordna om dessa ekvationer för att hitta vilken variabel vi är intresserad av. Till exempel 
+Nu kan vi ordna om dessa ekvationer för att hitta vilken variabel vi är intresserad av. Till exempel 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -797,20 +735,14 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- där _r_ är cirkelns radie, och _c_ är storleken på den centrala vinkeln. 
+där _r_ är cirkelns radie, och _c_ är storleken på den centrala vinkeln. 
 
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
     
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
 
- Om den centrala vinkeln mäts i [radianer](gloss:radians) snarare än [grader](gloss:degrees) , kan vi använda samma ekvationer, men måste ersätta 360° med [[`2 π`|`1/2 π`|`π`]] : 
+Om den centrala vinkeln mäts i [radianer](gloss:radians) snarare än [grader](gloss:degrees) , kan vi använda samma ekvationer, men måste ersätta 360° med [[`2 π`|`1/2 π`|`π`]] : 
 
 ::: .reveal(when="blank-0")
 
@@ -828,16 +760,16 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- Lägg märke till hur ekvationerna blir mycket enklare och _π_ avbryter överallt. Detta beror på, som ni kanske minns, att [definitionen av radianer i](/course/circles/radians#radians) princip är en bågs längd i en cirkel med radie 1. 
+Lägg märke till hur ekvationerna blir mycket enklare och _π_ avbryter överallt. Detta beror på, som ni kanske minns, att [definitionen av radianer i](/course/circles/radians#radians) princip är en bågs längd i en cirkel med radie 1. 
 
- Låt oss nu se hur vi kan använda bågar och sektorer för att beräkna jordens omkrets. [Fortsätta](btn:next) 
+Låt oss nu se hur vi kan använda bågar och sektorer för att beräkna jordens omkrets. [Fortsätta](btn:next) 
 
 :::
 
 ---
 > id: eratosthenes
 
- I det forna Egypten låg staden _Swenet_ längs floden Nilen. Swenet var berömd för en brunn med en nyfiken egendom: det fanns ett ögonblick varje år när solljuset nådde botten av brunnen - klockan 21 juni, _sommardagens sommarsolstånd_ . Vid den exakta tiden belyses brunnens botten, men inte dess sidor, vilket innebar att solen stod direkt ovanför brunnen. 
+I det forna Egypten låg staden _Swenet_ längs floden Nilen. Swenet var berömd för en brunn med en nyfiken egendom: det fanns ett ögonblick varje år när solljuset nådde botten av brunnen - klockan 21 juni, _sommardagens sommarsolstånd_ . Vid den exakta tiden belyses brunnens botten, men inte dess sidor, vilket innebar att solen stod direkt ovanför brunnen. 
 
 ::: column(width=300)
 
@@ -853,9 +785,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- Matematikern [Eratosthenes](bio:eratosthenes) bodde i _Alexandria_ , cirka 800 km norr om Swenet, där han var chef för det stora biblioteket. I centrum av Alexandria stod en obelisk, ett högt, smalt monument med en pyramidformad topp. 
+Matematikern [Eratosthenes](bio:eratosthenes) bodde i _Alexandria_ , cirka 800 km norr om Swenet, där han var chef för det stora biblioteket. I centrum av Alexandria stod en obelisk, ett högt, smalt monument med en pyramidformad topp. 
 
- Eratosthenes märkte att vid middagstid dagen på sommarsolståndet kastade obelisken en skugga - vilket betyder att solen _inte låg_ direkt ovanför den. Han drog slutsatsen att detta berodde på jordens krökning och insåg att den kunde användas för att beräkna vår planet omkrets. 
+Eratosthenes märkte att vid middagstid dagen på sommarsolståndet kastade obelisken en skugga - vilket betyder att solen _inte låg_ direkt ovanför den. Han drog slutsatsen att detta berodde på jordens krökning och insåg att den kunde användas för att beräkna vår planet omkrets. 
 
 ---
 > id: eratosthenes-1
@@ -866,13 +798,13 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: .reveal(when="next-0")
 
- Eratosthenes mätte att [{.teal} skuggvinkeln](pill:angle1) var 7,2°. Detta är samma sak som [{.purple} centrala vinkeln](pill:angle2) på [{.red} båge](pill:arc) från Alexandria till Swenet, för de [[växlar | vertikal | motsvarande]] vinklar. 
+Eratosthenes mätte att [{.teal} skuggvinkeln](pill:angle1) var 7,2°. Detta är samma sak som [{.purple} centrala vinkeln](pill:angle2) på [{.red} båge](pill:arc) från Alexandria till Swenet, för de [[växlar | vertikal | motsvarande]] vinklar. 
 
 :::
 
 ::: .reveal(when="blank-0")
 
- Nu kan vi använda ekvationen för båglängd som vi härledde ovan: 
+Nu kan vi använda ekvationen för båglängd som vi härledde ovan: 
 
 {.text-center}`pill("arc length","red","arc") / pill("circumference","blue","circ") = (input(7.2)"°") / "360°"`
 
@@ -880,7 +812,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: .reveal(when="blank-1")
 
- Om vi omorganiserar detta finner vi att jordens omkrets är 
+Om vi omorganiserar detta finner vi att jordens omkrets är 
 
 {.text-center}`pill("circumference","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 
@@ -888,7 +820,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: .reveal(when="blank-2")
 
- Slutligen vet vi att cirkelns omkrets är `C = 2 pi r` , så jordens radie är 
+Slutligen vet vi att cirkelns omkrets är `C = 2 pi r` , så jordens radie är 
 
 {.text-center}`r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"` . 
 
@@ -925,7 +857,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: eratosthenes-2
 
- Eratosthenes mätning var ett av de viktigaste experimenten i antiken. Hans uppskattning av jordens storlek var förvånansvärt korrekt, särskilt när han tänkte på att han bara hade tillgång till mycket grundläggande mätverktyg. 
+Eratosthenes mätning var ett av de viktigaste experimenten i antiken. Hans uppskattning av jordens storlek var förvånansvärt korrekt, särskilt när han tänkte på att han bara hade tillgång till mycket grundläggande mätverktyg. 
 
 ::: column(width=280)
 
@@ -933,11 +865,11 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Naturligtvis kan det vara svårt att översätta hans ursprungliga resultat till moderna enheter som kilometer. I det antika Grekland mättes avståndet i _stadia_ (cirka 160 m), men det fanns ingen universell standard. Varje område hade en något annorlunda version, och vi vet inte vilken Eratosthenes använde. 
+Naturligtvis kan det vara svårt att översätta hans ursprungliga resultat till moderna enheter som kilometer. I det antika Grekland mättes avståndet i _stadia_ (cirka 160 m), men det fanns ingen universell standard. Varje område hade en något annorlunda version, och vi vet inte vilken Eratosthenes använde. 
 
- Under följande århundraden försökte forskare att använda andra metoder för att beräkna jordens radie - ibland med mycket olika och felaktiga resultat. 
+Under följande århundraden försökte forskare att använda andra metoder för att beräkna jordens radie - ibland med mycket olika och felaktiga resultat. 
 
- Det var en av dessa felaktiga mätningar som fick Christopher Columbus att segla västerut från Portugal. Han antog att jorden var mycket mindre än den faktiskt är och hoppades att nå Indien. I själva verket anlände han till en annan kontinent däremellan: Amerika. 
+Det var en av dessa felaktiga mätningar som fick Christopher Columbus att segla västerut från Portugal. Han antog att jorden var mycket mindre än den faktiskt är och hoppades att nå Indien. I själva verket anlände han till en annan kontinent däremellan: Amerika. 
 
 :::
 
@@ -947,11 +879,6 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.todo} KOMMER SNART! 
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
 ---
 
 ## The Circle Theorems 
@@ -959,57 +886,57 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > section: circle-theorems
 > sectionStatus: dev
 
- https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
+https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
 
- __[CC] Identifiera och beskriv förhållanden mellan inskriven vinklar, radier och ackord. Inkludera förhållandet mellan centrala, inskriven och omskriven vinklar; inskriven vinklar på en diameter är rät vinkel; en cirkelns radie är vinkelrätt mot tangenten där radien korsar cirkeln.__ 
+__[CC] Identifiera och beskriv förhållanden mellan inskriven vinklar, radier och ackord. Inkludera förhållandet mellan centrala, inskriven och omskriven vinklar; inskriven vinklar på en diameter är rät vinkel; en cirkelns radie är vinkelrätt mot tangenten där radien korsar cirkeln.__ 
 
- En inskriven vinkel är en vinkel med dess topp är cirkeln och dess sidor innehåller ackord. Den fångade bågen är bågen som ligger på insidan av den inskriven vinkeln och vars ändpunkter är i vinkeln. Korsningen på en inskriven vinkel kan vara var som helst på cirkeln så länge dess sidor korsar cirkeln för att bilda en fångad båge. 
+En inskriven vinkel är en vinkel med dess topp är cirkeln och dess sidor innehåller ackord. Den fångade bågen är bågen som ligger på insidan av den inskriven vinkeln och vars ändpunkter är i vinkeln. Korsningen på en inskriven vinkel kan vara var som helst på cirkeln så länge dess sidor korsar cirkeln för att bilda en fångad båge. 
 
- __Insected Angle Theorem__ Måttet på en inscripted vinkel är halva måttet på dess fångade båge. För att bevisa det inskrivna vinklarna, måste du dela upp det i tre fall, liksom de tre olika vinklarna som dras från utredningen. 
+__Insected Angle Theorem__ Måttet på en inscripted vinkel är halva måttet på dess fångade båge. För att bevisa det inskrivna vinklarna, måste du dela upp det i tre fall, liksom de tre olika vinklarna som dras från utredningen. 
 
- __Congruent Inscribed Angle Theorem__ Inscribed vinklar som fångar upp samma båge är kongruenta. 
+__Congruent Inscribed Angle Theorem__ Inscribed vinklar som fångar upp samma båge är kongruenta. 
 
- __Insected Angle Halvcirkelteorem__ En vinkel som fångar upp en halvcirkel är en rät vinkel. 
+__Insected Angle Halvcirkelteorem__ En vinkel som fångar upp en halvcirkel är en rät vinkel. 
 
- I teoret för inskriven vinkel halvcirkel kan vi också säga att vinkeln är inskriven i en halvcirkel. Varje gång en rät vinkel är inskriven i en cirkel, vinkelns ändpunkter är ändpunkterna med en diameter. Därför är konversationen av Inscrib Angle Semicircle Theorem också sant. 
+I teoret för inskriven vinkel halvcirkel kan vi också säga att vinkeln är inskriven i en halvcirkel. Varje gång en rät vinkel är inskriven i en cirkel, vinkelns ändpunkter är ändpunkterna med en diameter. Därför är konversationen av Inscrib Angle Semicircle Theorem också sant. 
 
- När en vinkel är på en cirkel är toppmaterialet på cirkelns omkrets. En typ av vinkel på en cirkel är en bildad av en tangent och ett ackord. 
+När en vinkel är på en cirkel är toppmaterialet på cirkelns omkrets. En typ av vinkel på en cirkel är en bildad av en tangent och ett ackord. 
 
- __Chord / Tangent Angle Theorem__ Måttet på en vinkel som bildas av ett ackord och en tangent som korsar varandra i cirkeln är halva måttet på den fångade bågen. 
+__Chord / Tangent Angle Theorem__ Måttet på en vinkel som bildas av ett ackord och en tangent som korsar varandra i cirkeln är halva måttet på den fångade bågen. 
 
- Från Chord / Tangent Angle Theorem vet vi nu att det finns två typer av vinklar som är halva måttet på den avlyssnade bågen; en inskriven vinkel och en vinkel som bildas av ett ackord och en tangens. Därför kommer varje vinkel med dess topp på en cirkel att vara halva måttet på den avlyssnade bågen. 
+Från Chord / Tangent Angle Theorem vet vi nu att det finns två typer av vinklar som är halva måttet på den avlyssnade bågen; en inskriven vinkel och en vinkel som bildas av ett ackord och en tangens. Därför kommer varje vinkel med dess topp på en cirkel att vara halva måttet på den avlyssnade bågen. 
 
- En vinkel anses inne i en cirkel när toppmaterialet är någonstans inuti cirkeln, men inte i mitten. Alla vinklar i en cirkel bildas av två korsande ackord. 
+En vinkel anses inne i en cirkel när toppmaterialet är någonstans inuti cirkeln, men inte i mitten. Alla vinklar i en cirkel bildas av två korsande ackord. 
 
- __Korsande kordvinklar Teorem__ Måttet på vinkeln som bildas av två ackord som korsar sig inuti en cirkel är medelvärdet för måttet på de avlyssnade bågarna. 
+__Korsande kordvinklar Teorem__ Måttet på vinkeln som bildas av två ackord som korsar sig inuti en cirkel är medelvärdet för måttet på de avlyssnade bågarna. 
 
- En vinkel anses vara utanför en cirkel om vinkelns topp är utanför cirkeln och sidorna är tangenter eller fästen. Det finns tre typer av vinklar som är utanför en cirkel: en vinkel som bildas av två tangenter, en vinkel som bildas av en tangent och en sektion, och en vinkel som bildas av två tangenter. Precis som en vinkel inuti eller på en cirkel har en vinkel utanför en cirkel en specifik formel som involverar de avlyssnade bågarna. 
+En vinkel anses vara utanför en cirkel om vinkelns topp är utanför cirkeln och sidorna är tangenter eller fästen. Det finns tre typer av vinklar som är utanför en cirkel: en vinkel som bildas av två tangenter, en vinkel som bildas av en tangent och en sektion, och en vinkel som bildas av två tangenter. Precis som en vinkel inuti eller på en cirkel har en vinkel utanför en cirkel en specifik formel som involverar de avlyssnade bågarna. 
 
- __Yttre vinkelteorem__ Måttet på en vinkel som bildas av två sekanter, två tangenter eller en sekant och en tangens som dras från en punkt utanför cirkeln är lika med hälften av skillnaden mellan måtten på de avlyssnade bågarna. 
+__Yttre vinkelteorem__ Måttet på en vinkel som bildas av två sekanter, två tangenter eller en sekant och en tangens som dras från en punkt utanför cirkeln är lika med hälften av skillnaden mellan måtten på de avlyssnade bågarna. 
 
- När två ackord korsar varandra i en cirkel är de två trianglarna som de skapar lika, vilket gör sidorna på varje triangel i proportion till varandra. Om vi tar bort AD och BC är förhållandena mellan AE, EC, DE och EB fortfarande desamma. 
+När två ackord korsar varandra i en cirkel är de två trianglarna som de skapar lika, vilket gör sidorna på varje triangel i proportion till varandra. Om vi tar bort AD och BC är förhållandena mellan AE, EC, DE och EB fortfarande desamma. 
 
- __Växande ackordssats__ Om två ackord korsar varandra inuti en cirkel så att den ena delas upp i segment med längd a och b och den andra i segment med längd c och d, då ab = cd. Med andra ord är produkten från segmenten i ett ackord lika med produkten från segmenten i det andra ackordet. 
+__Växande ackordssats__ Om två ackord korsar varandra inuti en cirkel så att den ena delas upp i segment med längd a och b och den andra i segment med längd c och d, då ab = cd. Med andra ord är produkten från segmenten i ett ackord lika med produkten från segmenten i det andra ackordet. 
 
- Förutom att bilda en vinkel utanför en cirkel, kan cirkeln dela upp sekanterna i segment som är proportionella med varandra. 
+Förutom att bilda en vinkel utanför en cirkel, kan cirkeln dela upp sekanterna i segment som är proportionella med varandra. 
 
- Om vi drar in de korsande ackorden kommer vi att ha två liknande trianglar. 
+Om vi drar in de korsande ackorden kommer vi att ha två liknande trianglar. 
 
- Från de inskrivna vinklarna och den reflexiva egenskapen (∠R≅∠R), △ PRS∼ △ TRQ. Eftersom de två trianglarna är lika kan vi ställa in en proportion mellan motsvarande sidor. Krym sedan sedan. ac + d = ca + b⇒a (a + b) = c (c + d) 
+Från de inskrivna vinklarna och den reflexiva egenskapen (∠R≅∠R), △ PRS∼ △ TRQ. Eftersom de två trianglarna är lika kan vi ställa in en proportion mellan motsvarande sidor. Krym sedan sedan. ac + d = ca + b⇒a (a + b) = c (c + d) 
 
- __Två Secants Segment Teorem__ Om två Secants dras från en gemensam punkt utanför en cirkel och segmenten är märkta som ovan, då a (a + b) = c (c + d). Med andra ord, är produkten från det yttre segmentet och hela en sekants lika med produkten från det yttre segmentet och hela det andra sekantets hela. 
+__Två Secants Segment Teorem__ Om två Secants dras från en gemensam punkt utanför en cirkel och segmenten är märkta som ovan, då a (a + b) = c (c + d). Med andra ord, är produkten från det yttre segmentet och hela en sekants lika med produkten från det yttre segmentet och hela det andra sekantets hela. 
 
- Om en tangent och sekant möts på en gemensam punkt utanför en cirkel, har de skapade segmenten ett liknande förhållande till två sekanta strålar. Kom ihåg att produkten från den yttre delen av en sektion och helheten är lika med den som den andra sektionen. Om ett av dessa segment är en tangens kommer det fortfarande att vara produkten från den yttre delen och helheten. För en tangentlinje är emellertid den yttre delen och helheten lika. 
+Om en tangent och sekant möts på en gemensam punkt utanför en cirkel, har de skapade segmenten ett liknande förhållande till två sekanta strålar. Kom ihåg att produkten från den yttre delen av en sektion och helheten är lika med den som den andra sektionen. Om ett av dessa segment är en tangens kommer det fortfarande att vara produkten från den yttre delen och helheten. För en tangentlinje är emellertid den yttre delen och helheten lika. 
 
- __Tangent Secant Segment Teorem__ Om en tangent och en secant dras från en gemensam punkt utanför cirkeln (och segmenten är märkta som bilden till vänster), a2 = b (b + c). Detta innebär att produkten från det yttersegmentet av det säkrade och det hela är lika med kvadratet på tangentsegmentet. 
+__Tangent Secant Segment Teorem__ Om en tangent och en secant dras från en gemensam punkt utanför cirkeln (och segmenten är märkta som bilden till vänster), a2 = b (b + c). Detta innebär att produkten från det yttersegmentet av det säkrade och det hela är lika med kvadratet på tangentsegmentet. 
 
 ---
 
 ### Thales 'sats 
 
- Bevis med användning av likbeniga trianglar 
+Bevis med användning av likbeniga trianglar 
 
- Kombinerar all euklidisk geometri 
+Kombinerar all euklidisk geometri 
 
 {.todo} ATT GÖRA 
 
@@ -1020,15 +947,15 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > sectionStatus: dev
 > section: cyclic-polygons
 
- __[CC] Konstruera en liksidig triangel, en fyrkant och en vanlig hexagon inskriven i en cirkel.__ 
+__[CC] Konstruera en liksidig triangel, en fyrkant och en vanlig hexagon inskriven i en cirkel.__ 
 
- En inskriven polygon är en polygon där varje toppunkt är i en cirkel. Observera att inte alla fyrkantiga eller polygoner kan skrivas in i en cirkel. Inskrivna fyrkantiga benämningar kallas också cykliska fyrhjulingar. För dessa typer av fyrdubblar måste de ha en speciell egenskap. Vi kommer att undersöka det här. 
+En inskriven polygon är en polygon där varje toppunkt är i en cirkel. Observera att inte alla fyrkantiga eller polygoner kan skrivas in i en cirkel. Inskrivna fyrkantiga benämningar kallas också cykliska fyrhjulingar. För dessa typer av fyrdubblar måste de ha en speciell egenskap. Vi kommer att undersöka det här. 
 
- Undersökningen visar att motsatta vinklar i en inskriven fyrkant är kompletterande. Genom att skära det fyrkantiga i hälften, genom diagonalen, kunde vi visa att de andra två vinklarna (som vi inte skar igenom) bildade ett linjärt par när de matchades upp. 
+Undersökningen visar att motsatta vinklar i en inskriven fyrkant är kompletterande. Genom att skära det fyrkantiga i hälften, genom diagonalen, kunde vi visa att de andra två vinklarna (som vi inte skar igenom) bildade ett linjärt par när de matchades upp. 
 
- Inskriven fyrkantig teorem: En fyrkantig inskrivning i en cirkel om och bara om motsatta vinklar är kompletterande. 
+Inskriven fyrkantig teorem: En fyrkantig inskrivning i en cirkel om och bara om motsatta vinklar är kompletterande. 
 
- https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+https://www.youtube.com/watch?v=bJOuzqu3MUQ 
 
 ---
 
@@ -1037,7 +964,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > section: spheres-cones-cylinders
 > id: solids
 
- I de föregående avsnitten studerade vi egenskaperna hos cirklar på en plan yta. Men vår värld är faktiskt tredimensionell, så låt oss titta på vissa 3D-fasta material som är baserade på cirklar: 
+I de föregående avsnitten studerade vi egenskaperna hos cirklar på en plan yta. Men vår värld är faktiskt tredimensionell, så låt oss titta på vissa 3D-fasta material som är baserade på cirklar: 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -1059,7 +986,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
- Lägg märke till hur definitionen av en sfär nästan är densamma som definitionen av en [[cirkel | radie | kub]] - utom i tre dimensioner! 
+Lägg märke till hur definitionen av en sfär nästan är densamma som definitionen av en [[cirkel | radie | kub]] - utom i tre dimensioner! 
 
 ---
 > id: gasometer
@@ -1068,9 +995,10 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Här kan du se den cylindriska _gasometern_ i Oberhausen, Tyskland. Det brukade lagra naturgas som användes som bränsle i närliggande fabriker och kraftverk. Gasometern är 120 m lång, och dess bas och tak är två stora cirklar med radie 35 m. Det finns två viktiga frågor som ingenjörer kanske vill besvara: 
+Här kan du se den cylindriska _gasometern_ i Oberhausen, Tyskland. Det brukade lagra naturgas som användes som bränsle i närliggande fabriker och kraftverk. Gasometern är 120 m lång, och dess bas och tak är två stora cirklar med radie 35 m. Det finns två viktiga frågor som ingenjörer kanske vill besvara: 
 
- * Hur mycket naturgas kan lagras? Detta är [[volymen | område |]] cylinderns [[diameter.]] * {.reveal(when="blank-0")} Hur mycket stål behövs för att bygga gasmätaren? Detta är (ungefär) [[ytytan | omkrets | diagonal]] i cylindern. 
+* Hur mycket naturgas kan lagras? Detta är [[volymen | område |]] cylinderns [[diameter.]]
+* {.reveal(when="blank-0")} Hur mycket stål behövs för att bygga gasmätaren? Detta är (ungefär) [[ytytan | omkrets | diagonal]] i cylindern. 
 
 {.reveal(when="blank-0 blank-1")} Låt oss försöka hitta formler för båda dessa resultat! 
 
@@ -1087,9 +1015,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 #### Volym av en cylinder 
 
- Den övre och nedre delen av en cylinder är två kongruenta cirklar, kallade __baser__ . De __{.m-blue} höjden _h___ av en cylinder är det vinkelräta avståndet mellan dessa baser, och den __{.m-red} radien _r___ hos en cylinder är helt enkelt radien hos de cirkulära baserna. 
+Den övre och nedre delen av en cylinder är två kongruenta cirklar, kallade __baser__ . De __{.m-blue} höjden _h___ av en cylinder är det vinkelräta avståndet mellan dessa baser, och den __{.m-red} radien _r___ hos en cylinder är helt enkelt radien hos de cirkulära baserna. 
 
- Vi kan ungefärliga en cylinder med en ${n}{n|5|3,20,1} -sidig [__prisma__](gloss:prism) . När antalet sidor ökar börjar prismen se mer och mer ut som en cylinder: 
+Vi kan ungefärliga en cylinder med en ${n}{n|5|3,20,1} -sidig [__prisma__](gloss:prism) . När antalet sidor ökar börjar prismen se mer och mer ut som en cylinder: 
 
 ::: column(width=240)
 
@@ -1104,7 +1032,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cylinder-volume
 
- Även om en cylinder tekniskt inte är ett prisma, delar de många egenskaper. I båda fallen kan vi hitta volymen genom att multiplicera området för deras __{.m-red} bas__ med deras __{.m-blue} höjd__ . Detta betyder att en cylinder med radie _{.b.m-red} r_ och höjd _{.b.m-blue} h_ har volym 
+Även om en cylinder tekniskt inte är ett prisma, delar de många egenskaper. I båda fallen kan vi hitta volymen genom att multiplicera området för deras __{.m-red} bas__ med deras __{.m-blue} höjd__ . Detta betyder att en cylinder med radie _{.b.m-red} r_ och höjd _{.b.m-blue} h_ har volym 
 
 {.text-center}`V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_ 
 
@@ -1116,7 +1044,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- I exemplen ovan var de två baserna på cylindern alltid _direkt ovanför varandra_ : detta kallas en __höger cylinder__ . Om baserna inte ligger direkt ovanför varandra har vi en __sned cylinder__ . Baserna är fortfarande parallella, men sidorna verkar ”luta sig över” i en vinkel som inte är 90°. 
+I exemplen ovan var de två baserna på cylindern alltid _direkt ovanför varandra_ : detta kallas en __höger cylinder__ . Om baserna inte ligger direkt ovanför varandra har vi en __sned cylinder__ . Baserna är fortfarande parallella, men sidorna verkar ”luta sig över” i en vinkel som inte är 90°. 
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1133,9 +1061,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: cavalieri
 > goals: slide
 
- Volymen på en sned cylinder visar sig vara exakt densamma som för en höger cylinder med samma radie och höjd. Detta beror på [__Cavalieris princip__](gloss:cavalieri) , uppkallad efter den italienska matematikern [Bonaventura Cavalieri](bio:cavalieri) : om två fasta ämnen har samma tvärsnittsarea i varje höjd, kommer de att ha samma volym. 
+Volymen på en sned cylinder visar sig vara exakt densamma som för en höger cylinder med samma radie och höjd. Detta beror på [__Cavalieris princip__](gloss:cavalieri) , uppkallad efter den italienska matematikern [Bonaventura Cavalieri](bio:cavalieri) : om två fasta ämnen har samma tvärsnittsarea i varje höjd, kommer de att ha samma volym. 
 
- Föreställ dig att skära en cylinder i massor av tunna skivor. Vi kan sedan skjuta dessa skivor horisontellt för att få en sned cylinder. Volymen för de enskilda skivorna förändras inte när du gör dem sned, därför förblir den totala volymen också konstant: 
+Föreställ dig att skära en cylinder i massor av tunna skivor. Vi kan sedan skjuta dessa skivor horisontellt för att få en sned cylinder. Volymen för de enskilda skivorna förändras inte när du gör dem sned, därför förblir den totala volymen också konstant: 
 
 ::: column(width=240)
 
@@ -1148,11 +1076,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
     
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
 > id: cylinder-surface
@@ -1161,11 +1085,12 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- För att hitta ytan på en cylinder måste vi "rulla upp" den i dess platta [nät](gloss:net) . Du kan prova detta själv, till exempel genom att skala bort etiketten på en burk mat. 
+För att hitta ytan på en cylinder måste vi "rulla upp" den i dess platta [nät](gloss:net) . Du kan prova detta själv, till exempel genom att skala bort etiketten på en burk mat. 
 
- Det finns två [[cirklar | sfärer | rutor]] , en längst upp och en längst ner på cylindern. Den böjda sidan är faktiskt en stor [[rektangel | fyrkant | ellips]] . 
+Det finns två [[cirklar | sfärer | rutor]] , en längst upp och en längst ner på cylindern. Den böjda sidan är faktiskt en stor [[rektangel | fyrkant | ellips]] . 
 
- * {.reveal(when="blank-0 blank-1")} De två cirklarna har vardera området _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . * {.reveal(when="eqn-0")} Rektangelns höjd är _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} och rektangelns bredd är densamma som [[omkretsen | diameter | cirklarens tangent]] :_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
+* {.reveal(when="blank-0 blank-1")} De två cirklarna har vardera området _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ .
+* {.reveal(when="eqn-0")} Rektangelns höjd är _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} och rektangelns bredd är densamma som [[omkretsen | diameter | cirklarens tangent]] :_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
 
 ::: column(width=320)
 
@@ -1177,7 +1102,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cylinder-surface-1
 
- Detta innebär att den totala ytarean för en cylinder med radie _r_ och höjd _h_ ges av 
+Detta innebär att den totala ytarean för en cylinder med radie _r_ och höjd _h_ ges av 
 
 {.text-center}`A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_ . 
 
@@ -1186,9 +1111,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
     figure: x-img(src="images/cylinders.jpg" width=460 height=125)
 
- Cylindrar finns överallt i vår värld - från sodavatten till toalettpapper eller vattenledningar. Kan du tänka på några andra exempel? 
+Cylindrar finns överallt i vår värld - från sodavatten till toalettpapper eller vattenledningar. Kan du tänka på några andra exempel? 
 
- _Gasometern_ ovan hade en radie på 35 m och en höjd av 120 m. Vi kan nu beräkna att dess volym är ungefär [[461 000 ± 1000]] `"m"^3` och dess ytarea är ungefär [[34 080 ± 100]] `"m"^2` . 
+_Gasometern_ ovan hade en radie på 35 m och en höjd av 120 m. Vi kan nu beräkna att dess volym är ungefär [[461 000 ± 1000]] `"m"^3` och dess ytarea är ungefär [[34 080 ± 100]] `"m"^2` . 
 
 ---
 > id: cone
@@ -1197,11 +1122,11 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- En [__kon__](gloss:cone) är en tredimensionell fast substans som har en cirkulär __{.m-red} bas__ . Dess sida "avsmalnar uppåt" som visas i diagrammet och slutar i en enda punkt som kallas __{.m-green} toppunkt__ . 
+En [__kon__](gloss:cone) är en tredimensionell fast substans som har en cirkulär __{.m-red} bas__ . Dess sida "avsmalnar uppåt" som visas i diagrammet och slutar i en enda punkt som kallas __{.m-green} toppunkt__ . 
 
- De __{.m-red} radie__ av könen är radien hos den cirkulära basen, och __{.m-blue}__ konens __höjd__ är vinkelrätt avstånd från bas till topp. 
+De __{.m-red} radie__ av könen är radien hos den cirkulära basen, och __{.m-blue}__ konens __höjd__ är vinkelrätt avstånd från bas till topp. 
 
- Precis som andra former vi träffade tidigare, är kottar överallt runt oss: glass kottar, trafikkottar, vissa tak och till och med julgranar. Vad mer kan du tänka på? 
+Precis som andra former vi träffade tidigare, är kottar överallt runt oss: glass kottar, trafikkottar, vissa tak och till och med julgranar. Vad mer kan du tänka på? 
 
 ::: column(width=280)
 
@@ -1238,9 +1163,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Vi hittade tidigare volymen på en cylinder genom att approximera den med ett prisma. På liknande sätt kan vi hitta volummen på en kon genom att approximera den med en [__pyramid__](gloss:pyramid) . 
+Vi hittade tidigare volymen på en cylinder genom att approximera den med ett prisma. På liknande sätt kan vi hitta volummen på en kon genom att approximera den med en [__pyramid__](gloss:pyramid) . 
 
- Här kan du se en ${n}{n|5|3,18,1} -sidig pyramid. När antalet sidor ökar börjar pyramiden se mer och mer ut som en kon. Vi kan faktiskt tänka på en kon som en pyramid med _oändligt många_ sidor! 
+Här kan du se en ${n}{n|5|3,18,1} -sidig pyramid. När antalet sidor ökar börjar pyramiden se mer och mer ut som en kon. Vi kan faktiskt tänka på en kon som en pyramid med _oändligt många_ sidor! 
 
 ::: column(width=280)
 
@@ -1251,14 +1176,14 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cone-volume-1
 
- Detta innebär också att vi också kan använda ekvationen för volymen: `V = 1/3 "base" × "height"` . Basen på en kon är en cirkel, så volymen för en kon med radie _r_ och höjd _h_ är 
+Detta innebär också att vi också kan använda ekvationen för volymen: `V = 1/3 "base" × "height"` . Basen på en kon är en cirkel, så volymen för en kon med radie _r_ och höjd _h_ är 
 
 {.text-center}`V =` _{x-equation(solution="1/3 π × r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cone-volume-hint1 cone-volume-hint2")}_ 
 
 ---
 > id: cone-circumscribed
 
- Lägg märke till likheten med ekvationen för volymen på en cylinder. Tänk dig att rita en cylinder _runt_ konen, med samma bas och höjd - det kallas den __omskrevna cylindern__ . Nu tar konan upp exakt [[en tredjedel | halv | en fjärdedel]] av cylinderns volym: 
+Lägg märke till likheten med ekvationen för volymen på en cylinder. Tänk dig att rita en cylinder _runt_ konen, med samma bas och höjd - det kallas den __omskrevna cylindern__ . Nu tar konan upp exakt [[en tredjedel | halv | en fjärdedel]] av cylinderns volym: 
 
     figure: x-solid(size=280)
 
@@ -1273,9 +1198,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Precis som en cylinder behöver en kon inte vara "rak". Om toppmaterialet är direkt över basens centrum har vi en __rätt kon__ . Annars kallar vi det en __sned kon__ . 
+Precis som en cylinder behöver en kon inte vara "rak". Om toppmaterialet är direkt över basens centrum har vi en __rätt kon__ . Annars kallar vi det en __sned kon__ . 
 
- Återigen kan vi använda Cavalieris princip för att visa att alla sneda kottar har samma volym, så länge de har samma bas och höjd. 
+Återigen kan vi använda Cavalieris princip för att visa att alla sneda kottar har samma volym, så länge de har samma bas och höjd. 
 
 ::: column(width=280)
 
@@ -1291,7 +1216,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Att hitta ytan på en kon är lite svårare. Som tidigare kan vi ta upp en kon i dess nät. Flytta reglaget för att se vad som händer: i det här fallet får vi en cirkel och en [[cirkel sektor | cirkel segment | cirkelbåge]] . 
+Att hitta ytan på en kon är lite svårare. Som tidigare kan vi ta upp en kon i dess nät. Flytta reglaget för att se vad som händer: i det här fallet får vi en cirkel och en [[cirkel sektor | cirkel segment | cirkelbåge]] . 
 
 {.reveal(when="blank-0")} Nu måste vi bara lägga till området för båda dessa komponenter. De __{.m-yellow} basen__ är en cirkel med radie _r_ , så dess yta är 
 
@@ -1309,7 +1234,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Radien för __{.m-green} sektoren__ är densamma som avståndet från kottens kant till dess topp. Detta kallas [{.pill.green.b} lutningshöjden _s_](target:s) på konen, och inte samma som den normala [{.pill.blue.b} höjd _h_](target:h) . Vi kan hitta snedhöjden med [Pythagoras](gloss:pythagoras-theorem) : 
+Radien för __{.m-green} sektoren__ är densamma som avståndet från kottens kant till dess topp. Detta kallas [{.pill.green.b} lutningshöjden _s_](target:s) på konen, och inte samma som den normala [{.pill.blue.b} höjd _h_](target:h) . Vi kan hitta snedhöjden med [Pythagoras](gloss:pythagoras-theorem) : 
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
 | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1336,7 +1261,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- De [{.pill.red} sektorens båglängd](target:arc) är densamma som [[omkretsen | diameter | bågen]] av [{.pill.yellow} bas](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Nu kan vi hitta området inom sektorn med [formeln](gloss:circle-sector) vi härledde i ett tidigare avsnitt:_ 
+De [{.pill.red} sektorens båglängd](target:arc) är densamma som [[omkretsen | diameter | bågen]] av [{.pill.yellow} bas](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Nu kan vi hitta området inom sektorn med [formeln](gloss:circle-sector) vi härledde i ett tidigare avsnitt:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1371,7 +1296,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: cone-surface-2
 
- Slutligen måste vi bara lägga till området __{.m-yellow} basen__ och området för __{.m-green} sektor__ , för att få den totala ytan är av konen: 
+Slutligen måste vi bara lägga till området __{.m-yellow} basen__ och området för __{.m-green} sektor__ , för att få den totala ytan är av konen: 
 
 {.text-center}`A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ 
 
@@ -1382,9 +1307,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- En [__sfär__](gloss:sphere) är en tredimensionell fast substans som består av alla punkter som har samma avstånd från en given __{.m-green} centrum _C.___ Detta avstånd kallas __{.m-red}__ sfärens __radie _r___ . 
+En [__sfär__](gloss:sphere) är en tredimensionell fast substans som består av alla punkter som har samma avstånd från en given __{.m-green} centrum _C.___ Detta avstånd kallas __{.m-red}__ sfärens __radie _r___ . 
 
- Du kan tänka på en sfär som en "tredimensionell [cirkel](gloss:circle) ". Precis som en cirkel har en sfär också en __{.m-blue} diameter _d___ , som är [[två gånger | halva]] radieens längd, liksom ackord och fästen. 
+Du kan tänka på en sfär som en "tredimensionell [cirkel](gloss:circle) ". Precis som en cirkel har en sfär också en __{.m-blue} diameter _d___ , som är [[två gånger | halva]] radieens längd, liksom ackord och fästen. 
 
 ::: column(width=240)
 
@@ -1402,9 +1327,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 #### Volym av en sfär 
 
- För att hitta volymen på en sfär måste vi än en gång använda Cavalieris princip. Låt oss börja med en halvkula - en sfär skuren i hälften längs ekvatorn. Vi behöver också en cylinder med samma radie och höjd som halvklotet, men med en inverterad kon "utskuren" i mitten. 
+För att hitta volymen på en sfär måste vi än en gång använda Cavalieris princip. Låt oss börja med en halvkula - en sfär skuren i hälften längs ekvatorn. Vi behöver också en cylinder med samma radie och höjd som halvklotet, men med en inverterad kon "utskuren" i mitten. 
 
- När du flyttar reglaget under kan du se tvärsnittet av båda dessa former i en specifik höjd över basen: 
+När du flyttar reglaget under kan du se tvärsnittet av båda dessa former i en specifik höjd över basen: 
 
 ::: column(width=240)
 
@@ -1459,7 +1384,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 {.text-center}`pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")` . 
 
- Nu är tvärsnittsområdet 
+Nu är tvärsnittsområdet 
 
     x-equation-system(steps="π x^2" hints="circle-cross-sec")
       table: tr
@@ -1471,11 +1396,11 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow.reveal(when="eqn-0")
 
- Tvärsnittet på den utskurna cylindern är alltid en [[ring | cirkel | kon]] . 
+Tvärsnittet på den utskurna cylindern är alltid en [[ring | cirkel | kon]] . 
 
 ::: .reveal(when="blank-1")
 
- Hålets radie är _h_ . Vi kan hitta området på ringen genom att subtrahera hålets area från området med den större cirkeln: 
+Hålets radie är _h_ . Vi kan hitta området på ringen genom att subtrahera hålets area från området med den större cirkeln: 
 
 | _A_ | = | `π r^2 - π h^2` |
 | | = | `π (r^2 - h^2)` |
@@ -1488,7 +1413,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-volume-1
 
- Det ser ut som att båda fasta partiklar har samma tvärsnittsarea på alla nivåer. Enligt Cavalieris princip måste båda fasta partiklar också ha samma [[volym | ytarea | omkrets]] ! _{span.reveal(when="blank-0")} Vi kan hitta volymen på halvklotet genom att subtrahera volymen på [cylindern](gloss:cylinder-volume) och [konens](gloss:cone-volume) volym:_ 
+Det ser ut som att båda fasta partiklar har samma tvärsnittsarea på alla nivåer. Enligt Cavalieris princip måste båda fasta partiklar också ha samma [[volym | ytarea | omkrets]] ! _{span.reveal(when="blank-0")} Vi kan hitta volymen på halvklotet genom att subtrahera volymen på [cylindern](gloss:cylinder-volume) och [konens](gloss:cone-volume) volym:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
@@ -1500,7 +1425,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-volume-2
 
- En sfär består av [[två]] halvsfärer, _{span.reveal(when="blank-0")} vilket betyder att dess volym måste vara_ 
+En sfär består av [[två]] halvsfärer, _{span.reveal(when="blank-0")} vilket betyder att dess volym måste vara_ 
 
 {.text-center.reveal(when="blank-0")}`V = 4/3 π r^3` . 
 
@@ -1510,7 +1435,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Jorden är (ungefär) en sfär med en radie av 6 371 \ km. Därför är dess volym 
+Jorden är (ungefär) en sfär med en radie av 6 371 \ km. Därför är dess volym 
 
 | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 | | `=` | _{span.numbers} 1_ `"km"^3` |
@@ -1531,7 +1456,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-sum
 
- Om du jämför ekvationerna för volymen på en cylinder, kon och sfär, kanske du märker ett av de mest tillfredsställande förhållandena inom geometri. Föreställ dig att vi har en cylinder med samma höjd som basens diameter. Vi kan nu passa både en kon och en sfär perfekt inuti: 
+Om du jämför ekvationerna för volymen på en cylinder, kon och sfär, kanske du märker ett av de mest tillfredsställande förhållandena inom geometri. Föreställ dig att vi har en cylinder med samma höjd som basens diameter. Vi kan nu passa både en kon och en sfär perfekt inuti: 
 
 ::: column.r(width=220)
 
@@ -1563,11 +1488,11 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 #### Ytan på en sfär 
 
- Att hitta en formel för ytan på en sfär är mycket svårt. En anledning är att vi inte kan öppna och "platta" ytan på en sfär, som vi gjorde för kottar och cylindrar tidigare. 
+Att hitta en formel för ytan på en sfär är mycket svårt. En anledning är att vi inte kan öppna och "platta" ytan på en sfär, som vi gjorde för kottar och cylindrar tidigare. 
 
- Detta är en speciell fråga när du försöker skapa kartor. Jorden har en krökt, tredimensionell yta, men varje tryckt karta måste vara platt och tvådimensionell. Detta innebär att geografer måste fuska: genom att sträcka eller klämma in vissa områden. 
+Detta är en speciell fråga när du försöker skapa kartor. Jorden har en krökt, tredimensionell yta, men varje tryckt karta måste vara platt och tvådimensionell. Detta innebär att geografer måste fuska: genom att sträcka eller klämma in vissa områden. 
 
- Här kan du se några olika typer av kartor, så kallade __projektioner__ . Försök flytta det röda torget och se hur det här området _verkligen_ ser ut i världen: 
+Här kan du se några olika typer av kartor, så kallade __projektioner__ . Försök flytta det röda torget och se hur det här området _verkligen_ ser ut i världen: 
 
     figure
       x-select.tabs
@@ -1594,26 +1519,14 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: sphere-surface
 
- För att hitta en sfärs ytarea kan vi återigen ungefärliga det med en annan form - till exempel en polyhedron med många ansikten. När antalet ansikten ökar börjar polyederen se mer och mer ut som en sfär. 
+För att hitta en sfärs ytarea kan vi återigen ungefärliga det med en annan form - till exempel en polyhedron med många ansikten. När antalet ansikten ökar börjar polyederen se mer och mer ut som en sfär. 
 
 {.todo} KOMMER GÅNGT: Sfärytans ytskydd 
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
     
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
 
 ---
 
@@ -1623,7 +1536,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: conics
 > goals: ellipse parabola hyperbola
 
- Cirkeln är en av fyra olika former som kan skapas med "skivor" genom en [kon](gloss:cone) . Detta kan demonstreras med hjälp av ljuskotten från en fackla: 
+Cirkeln är en av fyra olika former som kan skapas med "skivor" genom en [kon](gloss:cone) . Detta kan demonstreras med hjälp av ljuskotten från en fackla: 
 
     x-conic-section
     x-scale-box(width=760).conics
@@ -1644,18 +1557,18 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: conics-1
 
- Om du pekar facklan vertikalt nedåt ser du en [[cirkel | ellips | oval]] av ljus. _{span.reveal(when="blank-0")} Om du lutar konen får du en [__ellips__](gloss:ellipse) . Om du lutar den ännu längre får du en [__parabola__](gloss:parabola) eller en [__hyperbola__](gloss:hyperbola) ._ 
+Om du pekar facklan vertikalt nedåt ser du en [[cirkel | ellips | oval]] av ljus. _{span.reveal(when="blank-0")} Om du lutar konen får du en [__ellips__](gloss:ellipse) . Om du lutar den ännu längre får du en [__parabola__](gloss:parabola) eller en [__hyperbola__](gloss:hyperbola) ._ 
 
 ---
 > id: conics-2
 
 ::: column.grow
 
- Sammantaget kallas dessa fyra former [__koniska sektioner__](gloss:conic-section) . Även om de alla ser väldigt olika ut, är de nära besläktade: de kan faktiskt genereras med samma ekvation! 
+Sammantaget kallas dessa fyra former [__koniska sektioner__](gloss:conic-section) . Även om de alla ser väldigt olika ut, är de nära besläktade: de kan faktiskt genereras med samma ekvation! 
 
- Koniska sektioner studerades först av den antika grekiska matematikern [Apollonius av Perga](bio:apollonius) , som också gav dem sina ovanliga namn. 
+Koniska sektioner studerades först av den antika grekiska matematikern [Apollonius av Perga](bio:apollonius) , som också gav dem sina ovanliga namn. 
 
- På senare kurser lär du dig mycket mer om parabolas och hyperbolor. Låt oss nu titta närmare på ellipsen. 
+På senare kurser lär du dig mycket mer om parabolas och hyperbolor. Låt oss nu titta närmare på ellipsen. 
 
 ::: column(width=300)
 
@@ -1668,23 +1581,17 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ### ellipser 
 
- En ellips ser bara nästan ut som en "långsträckt cirkel". I själva verket kan du tänka på det som en cirkel med _två centra_ - dessa kallas __kontaktpunkter__ . Precis som varje punkt på en cirkel har samma avstånd från sitt centrum, så har varje punkt på en ellips samma _summa avstånd_ till dess två kontaktpunkter. 
+En ellips ser bara nästan ut som en "långsträckt cirkel". I själva verket kan du tänka på det som en cirkel med _två centra_ - dessa kallas __kontaktpunkter__ . Precis som varje punkt på en cirkel har samma avstånd från sitt centrum, så har varje punkt på en ellips samma _summa avstånd_ till dess två kontaktpunkter. 
 
- Om du har en lång sträng ansluten till två fasta punkter kan du rita en perfekt ellips genom att spåra strängarnas maximala räckvidd: 
+Om du har en lång sträng ansluten till två fasta punkter kan du rita en perfekt ellips genom att spåra strängarnas maximala räckvidd: 
 
 {.todo} Kommer snart: Ellipses ritning interaktiv 
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
 > goals: v0 v1 v2 v3
 
- Det finns många andra fysiska framställningar av hur du kan rita en ellips: 
+Det finns många andra fysiska framställningar av hur du kan rita en ellips: 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -1715,9 +1622,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Du kanske kommer ihåg från början av denna kurs, att antika grekiska astronomer trodde att jorden är i universums centrum och att solen, månen och planeterna rör sig runt jorden på cirkulära banor. 
+Du kanske kommer ihåg från början av denna kurs, att antika grekiska astronomer trodde att jorden är i universums centrum och att solen, månen och planeterna rör sig runt jorden på cirkulära banor. 
 
- Tyvärr stödde inte astronomisk observation av himlen detta. Till exempel verkade solen större under vissa delar av året och mindre under andra. På en cirkel bör varje punkt ha [[samma | en ökande | ett minskande]] avstånd från dess centrum. 
+Tyvärr stödde inte astronomisk observation av himlen detta. Till exempel verkade solen större under vissa delar av året och mindre under andra. På en cirkel bör varje punkt ha [[samma | en ökande | ett minskande]] avstånd från dess centrum. 
 
 ::: column(width=330)
 
@@ -1731,7 +1638,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: epicycles
 > goals: play
 
- För att fixa detta lade astronomer __Epicycles__ till sin modell av solsystemet: planeter rör sig på en stor cirkel runt jorden, samtidigt som de roterar på en mindre cirkel. Även om det var mycket komplicerat, var detta den mest accepterade modellen av vårt universum i mer än 1000 år: 
+För att fixa detta lade astronomer __Epicycles__ till sin modell av solsystemet: planeter rör sig på en stor cirkel runt jorden, samtidigt som de roterar på en mindre cirkel. Även om det var mycket komplicerat, var detta den mest accepterade modellen av vårt universum i mer än 1000 år: 
 
 ::: column(width=320)
 
@@ -1760,9 +1667,9 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Med tiden insåg människor att jorden bara var en av många planeter som kretsar runt solen (den __heliocentriska modellen__ ), men det var inte förrän 1609, att astronomen [Johannes Kepler](bio:kepler) upptäckte att planeterna faktiskt rör sig på _elliptiska banor_ . 
+Med tiden insåg människor att jorden bara var en av många planeter som kretsar runt solen (den __heliocentriska modellen__ ), men det var inte förrän 1609, att astronomen [Johannes Kepler](bio:kepler) upptäckte att planeterna faktiskt rör sig på _elliptiska banor_ . 
 
- Solen befinner sig i en av de två ellipsernas två fokuspunkter. Planeterna snabbar upp när de kommer närmare solen och saknar ner när de rör sig längre bort. 
+Solen befinner sig i en av de två ellipsernas två fokuspunkter. Planeterna snabbar upp när de kommer närmare solen och saknar ner när de rör sig längre bort. 
 
 ::: column(width=320)
 
@@ -1781,13 +1688,12 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 > id: newton
 > goals: apple
 
- Några decennier senare kunde [Isaac Newton](bio:newton) bevisa Keplers iakttagelser genom att använda sina nyutvecklade [__gravitationslagar__](gloss:gravity) . Newton insåg att det finns en kraft mellan två massor i universum - liknande attraktionen mellan två magneter. 
+Några decennier senare kunde [Isaac Newton](bio:newton) bevisa Keplers iakttagelser genom att använda sina nyutvecklade [__gravitationslagar__](gloss:gravity) . Newton insåg att det finns en kraft mellan två massor i universum - liknande attraktionen mellan två magneter. 
 
- Tyngdkraften är det som får allt att falla till marken och tyngdkraften är också det som får planeterna att röra sig runt solen. Det är bara den stora hastigheten som planeterna rör sig på, som hindrar dem från att falla direkt i solen. 
+Tyngdkraften är det som får allt att falla till marken och tyngdkraften är också det som får planeterna att röra sig runt solen. Det är bara den stora hastigheten som planeterna rör sig på, som hindrar dem från att falla direkt i solen. 
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)
@@ -1797,8 +1703,8 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column.grow
 
- Med hjälp av Newtons lagar kan du härleda den väg som objekt tar när du rör sig under tyngdkraften. Det visar sig att planeter rör sig på ellipser, men andra föremål som kometer kan färdas på [paraboliska](gloss:parabola) eller [hyperboliska](gloss:hyperbola) vägar: de flyger nära solen innan de vänder sig om och skjuter ut i universum, för att aldrig komma tillbaka. 
+Med hjälp av Newtons lagar kan du härleda den väg som objekt tar när du rör sig under tyngdkraften. Det visar sig att planeter rör sig på ellipser, men andra föremål som kometer kan färdas på [paraboliska](gloss:parabola) eller [hyperboliska](gloss:hyperbola) vägar: de flyger nära solen innan de vänder sig om och skjuter ut i universum, för att aldrig komma tillbaka. 
 
- Enligt legenden inspirerade ett fallande äpple Newton att tänka på allvar. Han var en av de mest inflytelserika forskarna genom tiderna, och hans idéer formade vår förståelse av världen i nästan 300 år - tills Albert Einstein upptäckte relativitet 1905. 
+Enligt legenden inspirerade ett fallande äpple Newton att tänka på allvar. Han var en av de mest inflytelserika forskarna genom tiderna, och hans idéer formade vår förståelse av världen i nästan 300 år - tills Albert Einstein upptäckte relativitet 1905. 
 
 :::

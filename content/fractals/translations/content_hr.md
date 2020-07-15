@@ -433,14 +433,12 @@ Iako se istinski fraktali nikada ne mogu pojaviti u prirodi, postoji mnogo objek
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC" alt="Mountain range")
 
 {.caption} Planinski lanac u središnjoj Aziji
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA" alt="River delta")
 
 {.caption} Delta rijeke Ganges u Indiji
@@ -453,14 +451,12 @@ Iako se istinski fraktali nikada ne mogu pojaviti u prirodi, postoji mnogo objek
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA" alt="Blood vessels")
 
 {.caption} Krvne žile u mrežnici
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey" alt="Grand Canyon")
 
 {.caption} Grand Canyon u SAD-u
@@ -475,16 +471,12 @@ Iako se istinski fraktali nikada ne mogu pojaviti u prirodi, postoji mnogo objek
 
 Svi ti predmeti mogu se činiti potpuno slučajni, ali, baš kao i fraktali, postoji temeljni obrazac koji određuje kako su formirani. Matematika nam može pomoći da bolje razumijemo oblike, a fraktali imaju primjenu u područjima poput medicine, biologije, geologije i meteorologije. [Nastaviti](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox alt="Computer-generated fractal terrain with mountains and water")
 
 {.caption} Fraktalni teren generiran od računala
@@ -527,22 +519,18 @@ Evo nekoliko primjera podnih obloga iz različitih crkava u Rimu:
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire" alt="Mosaic Floor with Sierpinski Triangle")
 
 :::
@@ -960,14 +948,9 @@ Dok pomičete vrijednost [{.pill.red} c](target:c) oko Mandelbrotovog skupa, mo�
 * {.reveal(when="blank-0")} Sekvence unutar [velike žarulje](target:bulb1) na vrhu [[dosežu orbitu|converge|diverge]] _{span.reveal(when="blank-1")} koja se sastoji od [[3]] točaka._
 * {.reveal(when="blank-2")} Sekvence u [ovoj manjoj žarulji](target:bulb2) imaju orbite duljine [[5]].
 
-
 :::
 
 {.reveal(when="blank-3")} Svaka žarulja ima orbitu različitog veličine, a manje žarulje imaju sve više i više točaka u svojoj orbiti. Veličina ovih orbita je usko povezana sa __logističkom zemljovidom__, važnim konceptom u [teoriji haosa](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 

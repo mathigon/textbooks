@@ -5,7 +5,7 @@
 > section: polygons
 > id: polygons
 
- Un [__polygone__](gloss:polygon) est une forme plate fermée qui n'a que des côtés droits. Les polygones peuvent avoir un nombre illimité de côtés et d'angles, mais les côtés ne peuvent pas être incurvés. Lesquelles des formes ci-dessous sont des polygones? 
+Un [__polygone__](gloss:polygon) est une forme plate fermée qui n'a que des côtés droits. Les polygones peuvent avoir un nombre illimité de côtés et d'angles, mais les côtés ne peuvent pas être incurvés. Lesquelles des formes ci-dessous sont des polygones? 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -20,7 +20,7 @@
 ---
 > id: polygons-1
 
- Nous donnons des noms différents aux polygones, selon le nombre de côtés qu'ils ont: 
+Nous donnons des noms différents aux polygones, selon le nombre de côtés qu'ils ont: 
 
     .row.padded-thin
       div(style="width: 100px")
@@ -47,7 +47,7 @@
 
 ### Angles dans les polygones 
 
- Chaque polygone à _n_ côtés a également _n_ [angles internes](gloss:internal-angle) . Nous savons déjà que la somme des angles internes dans un triangle est toujours de [[180]]° mais qu'en est-il des autres polygones? 
+Chaque polygone à _n_ côtés a également _n_ [angles internes](gloss:internal-angle) . Nous savons déjà que la somme des angles internes dans un triangle est toujours de [[180]]° mais qu'en est-il des autres polygones? 
 
 ---
 > id: angles
@@ -92,7 +92,7 @@
 ---
 > id: angles-1
 
- Il semble que la somme des angles internes dans un quadrilatère soit toujours à [[360]]° - exactement [[deux fois | trois fois | la moitié de]] la somme des angles dans un triangle. _{span.reveal(when="blank-0 blank-1")} Ce n'est pas un hasard: chaque quadrilatère peut être divisé en deux triangles._ 
+Il semble que la somme des angles internes dans un quadrilatère soit toujours à [[360]]° - exactement [[deux fois | trois fois | la moitié de]] la somme des angles dans un triangle. _{span.reveal(when="blank-0 blank-1")} Ce n'est pas un hasard: chaque quadrilatère peut être divisé en deux triangles._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -105,7 +105,7 @@
 ---
 > id: internal-angle-sum
 
- Un polygone avec ${x}{x|7|3,15,1} les côtés auront une somme d'angle interne de 180° × ${x-2} = ${(x-2)*180}°. Plus généralement, un polygone à _n_ côtés peut être divisé en [[n - 2 | n - 1 | n]] triangles. Par conséquent, 
+Un polygone avec ${x}{x|7|3,15,1} les côtés auront une somme d'angle interne de 180° × ${x-2} = ${(x-2)*180}°. Plus généralement, un polygone à _n_ côtés peut être divisé en [[n - 2 | n - 1 | n]] triangles. Par conséquent, 
 
 {.text-center.reveal(when="blank-0")} Somme des angles internes dans un _n_ -gon `= (n - 2) × 180°` . 
 
@@ -118,11 +118,11 @@
 
 ::: column.grow
 
- Nous disons qu'un polygone est [__concave__](gloss:concave) s'il a une section qui «pointe vers l'intérieur». Vous pouvez imaginer que cette partie a [«cédé»](target:cave) . Les polygones qui _ne_ sont _pas_ concaves sont appelés [__convexes__](gloss:convex) . 
+Nous disons qu'un polygone est [__concave__](gloss:concave) s'il a une section qui «pointe vers l'intérieur». Vous pouvez imaginer que cette partie a [«cédé»](target:cave) . Les polygones qui _ne_ sont _pas_ concaves sont appelés [__convexes__](gloss:convex) . 
 
- Il existe deux façons d'identifier facilement les polygones concaves: ils ont au moins un [angle interne supérieur à 180°](target:angle) . Ils ont également au moins une [diagonale située en _dehors_ du polygone](target:diagonal) . 
+Il existe deux façons d'identifier facilement les polygones concaves: ils ont au moins un [angle interne supérieur à 180°](target:angle) . Ils ont également au moins une [diagonale située en _dehors_ du polygone](target:diagonal) . 
 
- Dans les polygones convexes, en revanche, tous les angles internes sont inférieurs à [[180]]°, et toutes les diagonales se trouvent à l' [[intérieur | en dehors]] du polygone. 
+Dans les polygones convexes, en revanche, tous les angles internes sont inférieurs à [[180]]°, et toutes les diagonales se trouvent à l' [[intérieur | en dehors]] du polygone. 
 
 ::: column(width=240)
 
@@ -146,7 +146,7 @@
 ---
 > id: concave-1
 
- Lesquels de ces polygones sont concaves? 
+Lesquels de ces polygones sont concaves? 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -161,7 +161,7 @@
 
 ### Polygones réguliers 
 
- Nous disons qu'un polygone est [__régulier__](gloss:regular-polygon) si tous ses côtés ont la même longueur et tous les angles ont la même taille. Lesquelles de ces formes sont des polygones réguliers? 
+Nous disons qu'un polygone est [__régulier__](gloss:regular-polygon) si tous ses côtés ont la même longueur et tous les angles ont la même taille. Lesquelles de ces formes sont des polygones réguliers? 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -174,12 +174,12 @@
 ---
 > id: regular-1
 
- Les polygones réguliers peuvent avoir de nombreuses tailles différentes - mais tous les polygones réguliers avec le même nombre de côtés [[sont similaires | sont congruents | avoir la même zone]] ! 
+Les polygones réguliers peuvent avoir de nombreuses tailles différentes - mais tous les polygones réguliers avec le même nombre de côtés [[sont similaires | sont congruents | avoir la même zone]] ! 
 
 ---
 > id: regular-2
 
- Nous connaissons déjà la somme de tous [les angles internes](gloss:internal-angle) dans les polygones. Pour les polygones réguliers, tous ces angles ont [[la même taille | sont des angles alternés]] , nous pouvons donc calculer la taille d'un seul angle interne: 
+Nous connaissons déjà la somme de tous [les angles internes](gloss:internal-angle) dans les polygones. Pour les polygones réguliers, tous ces angles ont [[la même taille | sont des angles alternés]] , nous pouvons donc calculer la taille d'un seul angle interne: 
 
 {.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[somme de tous les angles | nombre d'angles]]</mrow><mrow>[[nombre d'angles | somme de tous les angles]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x` ._ 
 
@@ -217,9 +217,9 @@
 
 ::: column.grow
 
- Ici vous pouvez voir un [polygone régulier](gloss:regular-polygon) avec ${n}{n|5|4,12,1} côtés. Chaque côté a une longueur [{.pill.green} 1m](target:base) . Essayons de calculer sa superficie! 
+Ici vous pouvez voir un [polygone régulier](gloss:regular-polygon) avec ${n}{n|5|4,12,1} côtés. Chaque côté a une longueur [{.pill.green} 1m](target:base) . Essayons de calculer sa superficie! 
 
- Tout d'abord, nous pouvons diviser le polygone en ${toWord(n)} congruente, [[isocèle | équilatéral |]] triangles [[à angle droit.]] 
+Tout d'abord, nous pouvons diviser le polygone en ${toWord(n)} congruente, [[isocèle | équilatéral |]] triangles [[à angle droit.]] 
 
 {.reveal(when="blank-0")} Nous connaissons déjà la [[base | la taille | zone]] de ces triangles, mais nous avons également besoin de la [[hauteur | jambes | médianes]] pour pouvoir calculer sa superficie. _{span.reveal(when="blank-2")} Dans les polygones réguliers, cette hauteur est parfois appelée [{.pill.yellow} apothème](target:apothem) ._ 
 
@@ -261,9 +261,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: quadrilaterals
 > id: quadrilaterals
 
- Dans le [cours précédent,](/course/triangles) nous avons étudié de nombreuses propriétés différentes des triangles. Voyons maintenant les quadrilatères. 
+Dans le [cours précédent,](/course/triangles) nous avons étudié de nombreuses propriétés différentes des triangles. Voyons maintenant les quadrilatères. 
 
- Un _quadrilatère régulier_ est appelé un [[carré | rectangle | quadrilatère équilatéral]] . Tous ses côtés ont la même longueur et tous ses angles sont égaux. 
+Un _quadrilatère régulier_ est appelé un [[carré | rectangle | quadrilatère équilatéral]] . Tous ses côtés ont la même longueur et tous ses angles sont égaux. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -289,7 +289,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-1
 
- Pour les quadrilatères légèrement «moins réguliers», nous avons deux options. Si nous voulons juste que les _angles_ soient égaux, nous obtenons un [__rectangle__](gloss:rectangle) . Si nous voulons juste que les _côtés_ soient égaux, nous obtenons un [__losange__](gloss:rhombus) . 
+Pour les quadrilatères légèrement «moins réguliers», nous avons deux options. Si nous voulons juste que les _angles_ soient égaux, nous obtenons un [__rectangle__](gloss:rectangle) . Si nous voulons juste que les _côtés_ soient égaux, nous obtenons un [__losange__](gloss:rhombus) . 
 
 ::: column.quadrilateral
 
@@ -330,7 +330,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-2
 
- Il existe quelques autres quadrilatères, qui sont encore moins réguliers mais qui ont quand même certaines propriétés importantes: 
+Il existe quelques autres quadrilatères, qui sont encore moins réguliers mais qui ont quand même certaines propriétés importantes: 
 
 ::: column.quadrilateral
 
@@ -382,11 +382,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
- Les quadrilatères peuvent appartenir à plusieurs de ces catégories. Nous pouvons visualiser la hiérarchie des différents types de quadrilatères sous forme de [diagramme de Venn](gloss:venn-diagram) : 
+Les quadrilatères peuvent appartenir à plusieurs de ces catégories. Nous pouvons visualiser la hiérarchie des différents types de quadrilatères sous forme de [diagramme de Venn](gloss:venn-diagram) : 
 
     figure: include svg/venn.svg
 
- Par exemple, chaque rectangle est également un [[parallélogramme | rhombe | carré]] , et chaque [[losange | trapèze | le parallélogramme]] est également un cerf-volant. Un losange est [[parfois | toujours | jamais]] un carré et un rectangle est [[toujours | quelquefois | jamais]] un trapèze. 
+Par exemple, chaque rectangle est également un [[parallélogramme | rhombe | carré]] , et chaque [[losange | trapèze | le parallélogramme]] est également un cerf-volant. Un losange est [[parfois | toujours | jamais]] un carré et un rectangle est [[toujours | quelquefois | jamais]] un trapèze. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Pour éviter toute ambiguïté, nous utilisons généralement uniquement le type le plus spécifique. 
 
@@ -399,7 +399,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Choisissez maintenant quatre points, n'importe où dans la case grise à gauche. _{span.reveal(when="points")} Nous pouvons les connecter tous pour former un quadrilatère._ 
+Choisissez maintenant quatre points, n'importe où dans la case grise à gauche. _{span.reveal(when="points")} Nous pouvons les connecter tous pour former un quadrilatère._ 
 
 {.reveal(when="points" delay=1000)} Trouvons le milieu de chacun des quatre côtés. Si nous connectons les points médians, nous obtenons [[un autre quadrilatère | un triangle | un rectangle]] . 
 
@@ -420,7 +420,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Parallélogrammes 
 
- Il s'avère que les parallélogrammes ont de nombreuses autres propriétés intéressantes, autres que les côtés opposés étant parallèles. Lesquelles des six affirmations suivantes sont vraies? 
+Il s'avère que les parallélogrammes ont de nombreuses autres propriétés intéressantes, autres que les côtés opposés étant parallèles. Lesquelles des six affirmations suivantes sont vraies? 
 
 ::: column.grow
 
@@ -458,7 +458,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
- Bien sûr, simplement «observer» ces propriétés ne suffit pas. Pour être sûrs qu'ils sont _toujours_ vrais, nous devons les _prouver_ : 
+Bien sûr, simplement «observer» ces propriétés ne suffit pas. Pour être sûrs qu'ils sont _toujours_ vrais, nous devons les _prouver_ : 
 
 ::: tab
 
@@ -494,7 +494,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Essayons de prouver que les côtés et les angles opposés dans un parallélogramme sont toujours congruents. 
 
- Commencez par dessiner l'une des diagonales du parallélogramme. 
+Commencez par dessiner l'une des diagonales du parallélogramme. 
 
 {.reveal(when="diagonal")} La diagonale crée quatre nouveaux angles avec les côtés du parallélogramme. Les deux [angles rouges](target:red-angle) et les deux [angles bleus](target:blue-angle) sont [des angles alternés](gloss:alternate-angles) , donc ils doivent chacun être [[congruents | adjacent | supplémentaire]] . 
 
@@ -505,8 +505,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 :::
 
 {.reveal(when="blank-1")} Il s'avère que l'inverse est également vrai: si les deux paires de côtés (ou angles) opposés dans un quadrilatère sont congruentes, alors le quadrilatère doit être un parallélogramme. 
-
-    //- Adjacent angles are supplementary.
 
 ::: tab
 
@@ -544,9 +542,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Maintenant, prouvez que les deux diagonales d'un parallélogramme se coupent en deux. 
 
- Pensons aux deux triangles jaunes générés par les diagonales: 
+Pensons aux deux triangles jaunes générés par les diagonales: 
 
- * Nous venons de prouver que les [deux côtés verts](target:side1) sont congruents, car ce sont des côtés opposés d'un parallélogramme. * Les [deux angles rouges](target:anglesR) et les [deux angles bleus](target:anglesB) sont congruents, car ce sont [[des angles alternés | angles opposés | angles droits]] . 
+* Nous venons de prouver que les [deux côtés verts](target:side1) sont congruents, car ce sont des côtés opposés d'un parallélogramme. * Les [deux angles rouges](target:anglesR) et les [deux angles bleus](target:anglesB) sont congruents, car ce sont [[des angles alternés | angles opposés | angles droits]] . 
 
 {.reveal(when="blank-2")} Par l' [[ASA | SSS |]] Condition [[AAS]] , les deux triangles jaunes doivent donc également être congruents. 
 
@@ -565,9 +563,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Nous avons montré ci-dessus que les deux paires d' [[opposés | les]] côtés [[adjacents]] d'un parallélogramme sont congruents. Dans un cerf-volant, deux paires de côtés _adjacents_ sont congruentes. 
+Nous avons montré ci-dessus que les deux paires d' [[opposés | les]] côtés [[adjacents]] d'un parallélogramme sont congruents. Dans un cerf-volant, deux paires de côtés _adjacents_ sont congruentes. 
 
- Le nom _Kite_ vient clairement de sa forme: il ressemble aux cerfs-volants que vous pouvez voler dans le ciel. Cependant, de tous les quadrilatères spéciaux que nous avons vus jusqu'à présent, le cerf-volant est le seul qui peut également être [concave](gloss:concave) : s'il a la forme d'une fléchette ou d'une flèche: 
+Le nom _Kite_ vient clairement de sa forme: il ressemble aux cerfs-volants que vous pouvez voler dans le ciel. Cependant, de tous les quadrilatères spéciaux que nous avons vus jusqu'à présent, le cerf-volant est le seul qui peut également être [concave](gloss:concave) : s'il a la forme d'une fléchette ou d'une flèche: 
 
 ::: column(width=320)
 
@@ -643,7 +641,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Vous avez peut-être remarqué que tous les cerfs-volants sont [[symétriques | similaire]] . _{span.reveal(when="blank-0")} L' [axe de symétrie](gloss:axis-of-symmetry) est l' [[une des diagonales | un des côtés | un segment intermédiaire]] ._ 
+Vous avez peut-être remarqué que tous les cerfs-volants sont [[symétriques | similaire]] . _{span.reveal(when="blank-0")} L' [axe de symétrie](gloss:axis-of-symmetry) est l' [[une des diagonales | un des côtés | un segment intermédiaire]] ._ 
 
 {.reveal.r(when="blank-1")} La diagonale divise le cerf-volant en [deux triangles congrus](target:triangle1) . Nous savons qu'ils sont congruents à partir de la condition [SSS](gloss:triangle-sss) : les deux triangles ont [trois côtés congruents](target:sss) (rouge, vert et bleu). _{button.next-step} Continuer_ 
 
@@ -665,7 +663,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Zone de quadrilatères 
 
- Lors du calcul de l'aire des triangles dans le cours précédent, nous avons utilisé l'astuce de la convertir en [[rectangle | carré | pentagone]] . Il s'avère que nous pouvons également le faire pour certains quadrilatères: 
+Lors du calcul de l'aire des triangles dans le cours précédent, nous avons utilisé l'astuce de la convertir en [[rectangle | carré | pentagone]] . Il s'avère que nous pouvons également le faire pour certains quadrilatères: 
 
 ::: tab
 
@@ -685,7 +683,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Sur la gauche, essayez de dessiner un rectangle qui a la même zone que le parallélogramme. 
+Sur la gauche, essayez de dessiner un rectangle qui a la même zone que le parallélogramme. 
 
 {.reveal(when="draw-1")} Pouvez-vous voir que le [triangle manquant](target:triangle-1) à gauche est [[exactement le même que | plus petit que | plus grand que]] le [triangle se chevauchant](target:triangle-2) à droite? _{span.reveal(when="blank-1")} Par conséquent, l'aire d'un parallélogramme est_ 
 
@@ -699,7 +697,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### Trapèze _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
- Rappelons que les trapèzes sont des quadrilatères avec une paire de [côtés parallèles](target:bases) . Ces côtés parallèles sont appelés les __bases__ du trapèze. 
+Rappelons que les trapèzes sont des quadrilatères avec une paire de [côtés parallèles](target:bases) . Ces côtés parallèles sont appelés les __bases__ du trapèze. 
 
 ::: column(width=300)
 
@@ -721,7 +719,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Comme précédemment, essayez de dessiner un rectangle qui a la même surface que ce trapèze. _{span.reveal(when="draw-2")} Pouvez-vous voir comment les [triangles manquants et ajoutés](target:triangles-3) à gauche et à droite s'annulent?_ 
+Comme précédemment, essayez de dessiner un rectangle qui a la même surface que ce trapèze. _{span.reveal(when="draw-2")} Pouvez-vous voir comment les [triangles manquants et ajoutés](target:triangles-3) à gauche et à droite s'annulent?_ 
 
 {.reveal(when="draw-2" delay=2000)} le [{.pill.green} la hauteur](target:t-height) de ce rectangle est la [[distance entre | moyenne de | longueur des]] [côtés parallèles](target:bases) du trapèze. 
 
@@ -765,9 +763,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Dans ce cerf-volant, les [deux diagonales](target:diag3) forment la largeur et la hauteur d'un grand [rectangle](target:rect4) qui entoure le cerf-volant. 
+Dans ce cerf-volant, les [deux diagonales](target:diag3) forment la largeur et la hauteur d'un grand [rectangle](target:rect4) qui entoure le cerf-volant. 
 
- L'aire de ce rectangle est [[deux fois | le même que | trois fois]] la surface du cerf-volant. _{span.reveal(when="blank-5")} Pouvez-vous voir comment chacun des [quatre triangles](target:inside) qui composent le cerf-volant est le même que les [quatre espaces à l'](target:outside) extérieur?_ 
+L'aire de ce rectangle est [[deux fois | le même que | trois fois]] la surface du cerf-volant. _{span.reveal(when="blank-5")} Pouvez-vous voir comment chacun des [quatre triangles](target:inside) qui composent le cerf-volant est le même que les [quatre espaces à l'](target:outside) extérieur?_ 
 
 {.reveal(when="blank-5")} Cela signifie que la zone d'un cerf-volant avec des diagonales [{.i.pill.green} d1](target:d31) et [{.i.pill.yellow} d2](target:d32) est 
 
@@ -801,7 +799,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Un [losange](gloss:rhombus) est un quadrilatère qui a quatre côtés congruents. Vous vous souvenez peut-être que chaque losange est un [[parallélogramme | rectangle | carré]] - et aussi un [[cerf]] - [[volant | hexagone | polygone concave]] . 
+Un [losange](gloss:rhombus) est un quadrilatère qui a quatre côtés congruents. Vous vous souvenez peut-être que chaque losange est un [[parallélogramme | rectangle | carré]] - et aussi un [[cerf]] - [[volant | hexagone | polygone concave]] . 
 
 {.reveal(when="blank-6 blank-7")} Cela signifie que pour trouver l'aire d'un losange, nous pouvons utiliser soit l'équation pour l'aire d'un parallélogramme, soit celle pour l'aire d'un cerf-volant: 
 
@@ -813,25 +811,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    //- ### Cyclic quadrilaterals
     
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -840,7 +820,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: tessellations
 > id: tessellations
 
- [Les polygones](gloss:polygon) apparaissent partout dans la nature. Ils sont particulièrement utiles si vous souhaitez carreler une grande surface, car vous pouvez assembler des polygones sans aucun espace ni chevauchement. De tels modèles sont appelés [__pavages__](gloss:tessellation) . 
+[Les polygones](gloss:polygon) apparaissent partout dans la nature. Ils sont particulièrement utiles si vous souhaitez carreler une grande surface, car vous pouvez assembler des polygones sans aucun espace ni chevauchement. De tels modèles sont appelés [__pavages__](gloss:tessellation) . 
 
 ::: column(width=200)
 
@@ -883,7 +863,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
- Les humains ont copié bon nombre de ces modèles naturels dans l'art, l'architecture et la technologie - de la Rome antique à nos jours. Voici quelques exemples: 
+Les humains ont copié bon nombre de ces modèles naturels dans l'art, l'architecture et la technologie - de la Rome antique à nos jours. Voici quelques exemples: 
 
 ::: column(width=200)
 
@@ -923,16 +903,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
- Ici, vous pouvez créer vos propres pavages en utilisant des polygones réguliers. Faites simplement glisser de nouvelles formes de la barre latérale sur la toile. Quelles formes tessellent bien? Y a-t-il des formes qui ne tessellent pas du tout? Essayez de créer des motifs intéressants! 
+Ici, vous pouvez créer vos propres pavages en utilisant des polygones réguliers. Faites simplement glisser de nouvelles formes de la barre latérale sur la toile. Quelles formes tessellent bien? Y a-t-il des formes qui ne tessellent pas du tout? Essayez de créer des motifs intéressants! 
 
     figure: .tessellation
       x-polypad
@@ -956,12 +931,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Pavages de polygones réguliers 
 
- Vous avez peut-être remarqué que certains [polygones réguliers](gloss:regular-polygon) (comme les [[carrés | pentagones]] ) se tessèlent très facilement, tandis que d’autres (comme les [[pentagones | Triangles | hexagones]] ) ne semblent pas du tout tesseller. 
+Vous avez peut-être remarqué que certains [polygones réguliers](gloss:regular-polygon) (comme les [[carrés | pentagones]] ) se tessèlent très facilement, tandis que d’autres (comme les [[pentagones | Triangles | hexagones]] ) ne semblent pas du tout tesseller. 
 
 ---
 > id: tessellation-regular-1
 
- Cela a à voir avec la taille de leurs [angles internes](gloss:internal-angle) , que nous avons appris à calculer auparavant. À chaque [sommet](gloss:polygon-vertex) de la mosaïque, les angles internes de plusieurs polygones différents se rencontrent. Nous avons besoin de tous ces angles pour atteindre [[360]]°, sinon il y aura soit un écart soit un chevauchement. 
+Cela a à voir avec la taille de leurs [angles internes](gloss:internal-angle) , que nous avons appris à calculer auparavant. À chaque [sommet](gloss:polygon-vertex) de la mosaïque, les angles internes de plusieurs polygones différents se rencontrent. Nous avons besoin de tous ces angles pour atteindre [[360]]°, sinon il y aura soit un écart soit un chevauchement. 
 
 ---
 > id: tessellation-regular-2
@@ -984,8 +959,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption} Les pentagones [[ne tessellent pas | tessellé]] _{span.reveal(when="blank-2")} car les multiples de 108° ne totalisent pas 360°._ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -997,9 +970,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular-3
 
- Vous pouvez également vérifier que, tout comme les pentagones, tout polygone régulier à 7 côtés ou plus n'est pas tessellé. Cela signifie que les seuls polygones réguliers qui tessellent sont des triangles, des carrés et des hexagones! 
+Vous pouvez également vérifier que, tout comme les pentagones, tout polygone régulier à 7 côtés ou plus n'est pas tessellé. Cela signifie que les seuls polygones réguliers qui tessellent sont des triangles, des carrés et des hexagones! 
 
- Bien sûr, vous pouvez combiner différents types de polygones réguliers dans une tessellation, à condition que leurs angles internes puissent atteindre 360°: 
+Bien sûr, vous pouvez combiner différents types de polygones réguliers dans une tessellation, à condition que leurs angles internes puissent atteindre 360°: 
 
     x-gallery(slide-width="520")
       div
@@ -1032,7 +1005,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Tessellations de polygones irréguliers 
 
- Nous pouvons également essayer de créer des pavages à partir de [polygones irréguliers](gloss:irregular-polygon) - à condition de faire attention lors de leur rotation et de leur disposition. 
+Nous pouvons également essayer de créer des pavages à partir de [polygones irréguliers](gloss:irregular-polygon) - à condition de faire attention lors de leur rotation et de leur disposition. 
 
 ::: column(width=360)
 
@@ -1052,9 +1025,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Il s'avère que vous pouvez tesseller non seulement des triangles équilatéraux, mais _n'importe quel triangle_ ! Essayez de déplacer les [sommets](target:vertex) de ce diagramme. 
+Il s'avère que vous pouvez tesseller non seulement des triangles équilatéraux, mais _n'importe quel triangle_ ! Essayez de déplacer les [sommets](target:vertex) de ce diagramme. 
 
- La somme des angles internes dans un triangle est de [[180]]°. Si nous utilisons [[deux fois]] chaque angle [[| une fois que | trois fois]] à chaque sommet de la tessellation, on obtient 360°: 
+La somme des angles internes dans un triangle est de [[180]]°. Si nous utilisons [[deux fois]] chaque angle [[| une fois que | trois fois]] à chaque sommet de la tessellation, on obtient 360°: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1117,7 +1090,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
- Plus surprenant, _tout quadrilatère est_ également pavé! Leur somme d'angle interne est de [[360]]°, donc si nous utilisons chaque angle [[une fois | deux fois | trois fois]] à chaque sommet de la mosaïque, nous obtenons 360°. 
+Plus surprenant, _tout quadrilatère est_ également pavé! Leur somme d'angle interne est de [[360]]°, donc si nous utilisons chaque angle [[une fois | deux fois | trois fois]] à chaque sommet de la mosaïque, nous obtenons 360°. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1159,7 +1132,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
- Les pentagones sont un peu plus compliqués. Nous avons déjà vu que _les_ pentagones _réguliers_ [[ne tessellaient pas | tessellé]] , mais qu'en est-il des non-réguliers? 
+Les pentagones sont un peu plus compliqués. Nous avons déjà vu que _les_ pentagones _réguliers_ [[ne tessellaient pas | tessellé]] , mais qu'en est-il des non-réguliers? 
 
 ---
 > id: tessellation-pentagons-1
@@ -1178,16 +1151,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Voici trois exemples différents de pavages avec des pentagones. Ils ne sont pas _réguliers_ , mais ce sont des polygones à 5 faces parfaitement valides. 
+Voici trois exemples différents de pavages avec des pentagones. Ils ne sont pas _réguliers_ , mais ce sont des polygones à 5 faces parfaitement valides. 
 
- Jusqu'à présent, les mathématiciens n'ont trouvé que 15 types de pavages différents avec des pentagones (convexes) - dont le plus récent a été découvert en 2015. Personne ne sait s'il y en a d'autres, ou si ces 15 sont les seuls… 
+Jusqu'à présent, les mathématiciens n'ont trouvé que 15 types de pavages différents avec des pentagones (convexes) - dont le plus récent a été découvert en 2015. Personne ne sait s'il y en a d'autres, ou si ces 15 sont les seuls… 
 
 ---
 > id: escher
 
 ### Tessellations dans l'art 
 
- Tessellations nous à la fois un outil et une inspiration pour de nombreux artistes, architectes et designers - le plus célèbre artiste néerlandais [MC Escher](bio:escher) . Le travail d'Escher contient d'étranges créatures, motifs et paysages en mutation: 
+Tessellations nous à la fois un outil et une inspiration pour de nombreux artistes, architectes et designers - le plus célèbre artiste néerlandais [MC Escher](bio:escher) . Le travail d'Escher contient d'étranges créatures, motifs et paysages en mutation: 
 
     .row
       div(style="width: 220px")
@@ -1209,7 +1182,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
- Ces œuvres d'art ont souvent l'air amusantes et sans effort, mais les principes mathématiques sous-jacents sont les mêmes qu'auparavant: angles, rotations, traductions et polygones. Si les maths ne sont pas corrects, la tessellation ne fonctionnera pas! 
+Ces œuvres d'art ont souvent l'air amusantes et sans effort, mais les principes mathématiques sous-jacents sont les mêmes qu'auparavant: angles, rotations, traductions et polygones. Si les maths ne sont pas corrects, la tessellation ne fonctionnera pas! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
@@ -1219,9 +1192,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Penrose Tilings 
 
- Toutes les pavages que nous avons vus jusqu'à présent ont une chose en commun: ils sont __périodiques__ . Cela signifie qu'ils consistent en un motif régulier qui se répète encore et encore. Ils peuvent continuer indéfiniment dans toutes les directions et ils se ressembleront partout. 
+Toutes les pavages que nous avons vus jusqu'à présent ont une chose en commun: ils sont __périodiques__ . Cela signifie qu'ils consistent en un motif régulier qui se répète encore et encore. Ils peuvent continuer indéfiniment dans toutes les directions et ils se ressembleront partout. 
 
- Dans les années 1970, le mathématicien et physicien britannique [Roger Penrose a](bio:penrose) découvert des [pavages](bio:penrose) _non périodiques_ - ils continuent toujours infiniment dans toutes les directions, mais _ne se_ ressemblent _jamais_ exactement. Ce sont des __pavages Penrose__ , et vous n'avez besoin que de quelques types de polygones différents pour en créer un: 
+Dans les années 1970, le mathématicien et physicien britannique [Roger Penrose a](bio:penrose) découvert des [pavages](bio:penrose) _non périodiques_ - ils continuent toujours infiniment dans toutes les directions, mais _ne se_ ressemblent _jamais_ exactement. Ce sont des __pavages Penrose__ , et vous n'avez besoin que de quelques types de polygones différents pour en créer un: 
 
     figure
       include svg/penrose.svg
@@ -1231,7 +1204,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: penrose-1
 
- Penrose explorait les pavages uniquement pour le plaisir, mais il s'avère que la structure interne de certains matériaux réels (comme l'aluminium) suit un modèle similaire. Le motif a même été utilisé sur du papier toilette, car les fabricants ont remarqué qu'un motif non périodique peut être enroulé sans renflement. 
+Penrose explorait les pavages uniquement pour le plaisir, mais il s'avère que la structure interne de certains matériaux réels (comme l'aluminium) suit un modèle similaire. Le motif a même été utilisé sur du papier toilette, car les fabricants ont remarqué qu'un motif non périodique peut être enroulé sans renflement. 
 
 ---
 
@@ -1240,7 +1213,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: polyhedra
 > id: polyhedra
 
- Jusqu'à présent, nous venons de voir ce que nous pouvons faire avec des polygones dans un monde plat et bidimensionnel. Un [__polyèdre__](gloss:polyhedron) est un objet tridimensionnel composé de polygones. Voici quelques exemples: 
+Jusqu'à présent, nous venons de voir ce que nous pouvons faire avec des polygones dans un monde plat et bidimensionnel. Un [__polyèdre__](gloss:polyhedron) est un objet tridimensionnel composé de polygones. Voici quelques exemples: 
 
 ::: column.padded-thin(width=220)
 
@@ -1256,32 +1229,32 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Les polyèdres ne peuvent pas contenir de surfaces courbes - les sphères et les cylindres, par exemple, ne sont pas des polyèdres. 
+Les polyèdres ne peuvent pas contenir de surfaces courbes - les sphères et les cylindres, par exemple, ne sont pas des polyèdres. 
 
- Les polygones qui composent un polyèdre sont appelés ses [__faces__](gloss:polyhedron-face) . Les lignes où deux faces sont connectées sont appelées [__arêtes__](gloss:polyhedron-edge) et les coins où les arêtes se rencontrent sont appelés [__sommets__](gloss:polyhedron-vertex) . 
+Les polygones qui composent un polyèdre sont appelés ses [__faces__](gloss:polyhedron-face) . Les lignes où deux faces sont connectées sont appelées [__arêtes__](gloss:polyhedron-edge) et les coins où les arêtes se rencontrent sont appelés [__sommets__](gloss:polyhedron-vertex) . 
 
 ---
 > id: euler
 
- Les polyèdres se présentent sous de nombreuses formes et tailles différentes - des simples cubes ou pyramides avec seulement quelques faces, aux objets complexes comme l'étoile ci-dessus, qui a 60 faces triangulaires. Il s'avère cependant que _tous les_ polyèdres ont une propriété importante en commun: 
+Les polyèdres se présentent sous de nombreuses formes et tailles différentes - des simples cubes ou pyramides avec seulement quelques faces, aux objets complexes comme l'étoile ci-dessus, qui a 60 faces triangulaires. Il s'avère cependant que _tous les_ polyèdres ont une propriété importante en commun: 
 
 ::: .theorem
 
- __Formule polyèdre d'Euler__  
+__Formule polyèdre d'Euler__  
 Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V_ ) est deux de plus que le nombre d'arêtes ( _E_ ). En d'autres termes, 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
- Par exemple, si un polyèdre a 12 faces et 18 sommets, nous savons qu'il doit avoir [[28]] arêtes. 
+Par exemple, si un polyèdre a 12 faces et 18 sommets, nous savons qu'il doit avoir [[28]] arêtes. 
 
 ---
 > id: euler-1
 
- Cette équation a été découverte par le célèbre mathématicien suisse [Leonard Euler](bio:euler) . C'est vrai pour tout polyèdre, tant qu'il ne contient pas de trous. 
+Cette équation a été découverte par le célèbre mathématicien suisse [Leonard Euler](bio:euler) . C'est vrai pour tout polyèdre, tant qu'il ne contient pas de trous. 
 
- Si vous essayez différents polyèdres, comme ceux ci-dessus, vous constaterez que la formule d'Euler fonctionne toujours. Dans [un cours ultérieur,](/course/graph-theory/planar-graphs) vous apprendrez à le prouver mathématiquement. 
+Si vous essayez différents polyèdres, comme ceux ci-dessus, vous constaterez que la formule d'Euler fonctionne toujours. Dans [un cours ultérieur,](/course/graph-theory/planar-graphs) vous apprendrez à le prouver mathématiquement. 
 
 ---
 
@@ -1290,21 +1263,15 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 > section: nets-cross-sections
 > sectionStatus: dev
 
- Notre monde entier est en trois dimensions - mais il est souvent beaucoup plus facile de dessiner ou de visualiser des objets plats en deux dimensions. Et il existe plusieurs façons de visualiser les polyèdres tridimensionnels de manière bidimensionnelle. 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
+Notre monde entier est en trois dimensions - mais il est souvent beaucoup plus facile de dessiner ou de visualiser des objets plats en deux dimensions. Et il existe plusieurs façons de visualiser les polyèdres tridimensionnels de manière bidimensionnelle. 
 
  Lequel de ces filets fait un cube Faites correspondre le filet à l'objet https://github.com/polymake/matchthenet Nets de dessin 
 
- Décrivez la section transversale formée par l'intersection du plan et du solide. 
+Décrivez la section transversale formée par l'intersection du plan et du solide. 
 
- Une coupe est l'intersection d'un plan avec un solide. Une autre façon de représenter une figure tridimensionnelle dans un plan bidimensionnel consiste à utiliser un filet. Un filet est une représentation dépliée et plate des côtés d'une forme tridimensionnelle. 
+Une coupe est l'intersection d'un plan avec un solide. Une autre façon de représenter une figure tridimensionnelle dans un plan bidimensionnel consiste à utiliser un filet. Un filet est une représentation dépliée et plate des côtés d'une forme tridimensionnelle. 
 
- faire pivoter un cube pour créer une coupe hexagonale 
+faire pivoter un cube pour créer une coupe hexagonale 
 
 ---
 
@@ -1313,7 +1280,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 > section: prisms-pyramids
 > sectionStatus: dev
 
- FAIRE 
+FAIRE 
 
 ---
 
@@ -1322,7 +1289,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 > section: scaling
 > sectionStatus: dev
 
- FAIRE 
+FAIRE 
 
 ---
 
@@ -1331,13 +1298,9 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 > section: platonic
 > id: platonic
 
- Au début de ce cours, nous avons défini [les polygones réguliers](gloss:regular-polygon) comme des [polygones](gloss:regular-polygon) particulièrement «symétriques», où tous les côtés et les angles sont identiques. Nous pouvons faire quelque chose de similaire pour les polyèdres. 
+Au début de ce cours, nous avons défini [les polygones réguliers](gloss:regular-polygon) comme des [polygones](gloss:regular-polygon) particulièrement «symétriques», où tous les côtés et les angles sont identiques. Nous pouvons faire quelque chose de similaire pour les polyèdres. 
 
- Dans un _polyèdre régulier,_ toutes les [faces](gloss:polyhedron-face) sont toutes du même type de polygone régulier, et le même nombre de faces se rencontrent à chaque [sommet](gloss:polyhedron-vertex) . Les polyèdres possédant ces deux propriétés sont appelés [__solides platoniciens__](gloss:platonic-solid) , du nom du philosophe grec [Platon](bio:plato) . 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+Dans un _polyèdre régulier,_ toutes les [faces](gloss:polyhedron-face) sont toutes du même type de polygone régulier, et le même nombre de faces se rencontrent à chaque [sommet](gloss:polyhedron-vertex) . Les polyèdres possédant ces deux propriétés sont appelés [__solides platoniciens__](gloss:platonic-solid) , du nom du philosophe grec [Platon](bio:plato) . 
 
  À quoi ressemblent les solides platoniciens - et combien y en a-t-il? Pour créer une forme tridimensionnelle, nous avons besoin d'au moins [[3]] faces à rencontrer à chaque sommet. Commençons systématiquement par le plus petit polygone régulier: triangles équilatéraux: 
 
@@ -1354,7 +1317,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si nous créons un polyèdre où trois [triangles équilatéraux se](gloss:equilateral-triangle) rencontrent à chaque sommet, nous obtenons la forme à gauche. Il s'appelle un __tétraèdre__ et a [[4]] faces. _{.reveal(when="blank-0")} («Tetra» signifie «quatre» en grec)._ 
+Si nous créons un polyèdre où trois [triangles équilatéraux se](gloss:equilateral-triangle) rencontrent à chaque sommet, nous obtenons la forme à gauche. Il s'appelle un __tétraèdre__ et a [[4]] faces. _{.reveal(when="blank-0")} («Tetra» signifie «quatre» en grec)._ 
 
 :::
 
@@ -1371,7 +1334,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si quatre triangles équilatéraux se rencontrent à chaque sommet, nous obtenons un solide platonicien différent. Il s'appelle l' __Octaèdre__ et a [[8]] faces. _{.reveal(when="blank-0")} ("Octa" signifie "huit" en grec. Tout comme "Octagon" signifie forme à 8 côtés, "Octaèdre" signifie solide à 8 faces.)_ 
+Si quatre triangles équilatéraux se rencontrent à chaque sommet, nous obtenons un solide platonicien différent. Il s'appelle l' __Octaèdre__ et a [[8]] faces. _{.reveal(when="blank-0")} ("Octa" signifie "huit" en grec. Tout comme "Octagon" signifie forme à 8 côtés, "Octaèdre" signifie solide à 8 faces.)_ 
 
 :::
 
@@ -1388,7 +1351,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si [[cinq]] triangles se rencontrent à chaque sommet, nous obtenons l' __icosaèdre__ . Il a [[20]] visages. _{.reveal(when="blank-1")} («Icosa» signifie «vingt» en grec.)_ 
+Si [[cinq]] triangles se rencontrent à chaque sommet, nous obtenons l' __icosaèdre__ . Il a [[20]] visages. _{.reveal(when="blank-1")} («Icosa» signifie «vingt» en grec.)_ 
 
 :::
 
@@ -1403,7 +1366,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si [[six]] triangles se rencontrent à chaque sommet, quelque chose de différent se produit: nous obtenons simplement [[une tessellation | un quadrilatère | un autre Icosaèdre]] , _{span.reveal(when="blank-1")} au lieu d'un polyèdre tridimensionnel._ 
+Si [[six]] triangles se rencontrent à chaque sommet, quelque chose de différent se produit: nous obtenons simplement [[une tessellation | un quadrilatère | un autre Icosaèdre]] , _{span.reveal(when="blank-1")} au lieu d'un polyèdre tridimensionnel._ 
 
 :::
 
@@ -1418,11 +1381,11 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Et sept triangles ou plus à chaque sommet ne produisent pas non plus de nouveaux polyèdres: il n'y a pas assez d'espace autour d'un sommet pour s'adapter à autant de triangles. 
+Et sept triangles ou plus à chaque sommet ne produisent pas non plus de nouveaux polyèdres: il n'y a pas assez d'espace autour d'un sommet pour s'adapter à autant de triangles. 
 
 :::
 
- Cela signifie que nous avons trouvé [[trois]] solides platoniciens constitués de triangles. Passons au polygone régulier suivant: les carrés. 
+Cela signifie que nous avons trouvé [[trois]] solides platoniciens constitués de triangles. Passons au polygone régulier suivant: les carrés. 
 
 ---
 > id: platonic-cube
@@ -1437,7 +1400,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si [[trois]] carrés se rencontrent à chaque sommet, nous obtenons le __cube__ . Tout comme les dés, il a [[6]] faces. _{span.reveal(when="blank-1")} Le cube est parfois aussi appelé _hexaèdre_ , après le mot grec «hexa» pour «six»._ 
+Si [[trois]] carrés se rencontrent à chaque sommet, nous obtenons le __cube__ . Tout comme les dés, il a [[6]] faces. _{span.reveal(when="blank-1")} Le cube est parfois aussi appelé _hexaèdre_ , après le mot grec «hexa» pour «six»._ 
 
 :::
 
@@ -1452,14 +1415,14 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si [[quatre]] carrés se rencontrent à chaque sommet, nous obtenons [[une autre pavage | un tétraèdre | un autre cube]] . _{span.reveal(when="blank-1")} Et comme avant, cinq carrés ou plus ne fonctionneront pas non plus._ 
+Si [[quatre]] carrés se rencontrent à chaque sommet, nous obtenons [[une autre pavage | un tétraèdre | un autre cube]] . _{span.reveal(when="blank-1")} Et comme avant, cinq carrés ou plus ne fonctionneront pas non plus._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
- Ensuite, essayons les pentagones réguliers: 
+Ensuite, essayons les pentagones réguliers: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1471,7 +1434,7 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si [[trois]] pentagones se rencontrent à chaque sommet, nous obtenons le __Dodécaèdre__ . Il a [[12]] faces. _{.reveal(when="blank-1")} («Dodeca» signifie «douze» en grec.)_ 
+Si [[trois]] pentagones se rencontrent à chaque sommet, nous obtenons le __Dodécaèdre__ . Il a [[12]] faces. _{.reveal(when="blank-1")} («Dodeca» signifie «douze» en grec.)_ 
 
 :::
 
@@ -1486,14 +1449,14 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Comme auparavant, quatre pentagones ou plus [[ne fonctionnent pas | sont possibles]] car il n'y a pas assez d'espace. 
+Comme auparavant, quatre pentagones ou plus [[ne fonctionnent pas | sont possibles]] car il n'y a pas assez d'espace. 
 
 :::
 
 ---
 > id: platonic-hexagons
 
- Le prochain polygone régulier à essayer sont les hexagones: 
+Le prochain polygone régulier à essayer sont les hexagones: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1503,67 +1466,67 @@ Dans chaque polyèdre, le nombre de faces ( _F_ ) plus le nombre de sommets ( _V
 
 ::: column.grow
 
- Si trois hexagones se rencontrent à chaque sommet, nous obtenons immédiatement une [[tessellation | polyèdre | hexaèdre]] . _{span.reveal(when="blank-0")} Puisqu'il n'y a pas d'espace pour plus de trois, il semble qu'il n'y ait pas de solides platoniciens constitués d'hexagones._ 
+Si trois hexagones se rencontrent à chaque sommet, nous obtenons immédiatement une [[tessellation | polyèdre | hexaèdre]] . _{span.reveal(when="blank-0")} Puisqu'il n'y a pas d'espace pour plus de trois, il semble qu'il n'y ait pas de solides platoniciens constitués d'hexagones._ 
 
 :::
 
 ---
 > id: platonic-final
 
- Il en va de même pour tous les polygones réguliers à plus de six côtés. Ils ne tessellent pas, et nous n'avons certainement pas de polygones tridimensionnels. 
+Il en va de même pour tous les polygones réguliers à plus de six côtés. Ils ne tessellent pas, et nous n'avons certainement pas de polygones tridimensionnels. 
 
- Cela signifie qu'il n'y a que [[cinq]] solides platoniciens! Jetons un coup d'œil à tous ensemble: 
+Cela signifie qu'il n'y a que [[cinq]] solides platoniciens! Jetons un coup d'œil à tous ensemble: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __Tétraèdre__ 
+__Tétraèdre__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]] visages_  
+_{span.dual} [[4]] visages_  
 _{span.dual} [[4]] sommets_  
 _{span.dual} [[6]] arêtes_ 
 
 ::: column.grow.text-center(width=120)
 
- __cube__ 
+__cube__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]] visages_  
+_{span.dual(target="dual1")} [[6]] visages_  
 _{span.dual(target="dual1")} [[8]] sommets_  
 _{span.dual} [[12]] arêtes_ 
 
 ::: column.grow.text-center(width=120)
 
- __Octaèdre__ 
+__Octaèdre__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]] visages_  
+_{span.dual(target="dual1")} [[8]] visages_  
 _{span.dual(target="dual1")} [[6]] sommets_  
 _{span.dual} [[12]] arêtes_ 
 
 ::: column.grow.text-center(width=120)
 
- __Dodécaèdre__ 
+__Dodécaèdre__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]] visages_  
+_{span.dual(target="dual2")} [[12]] visages_  
 _{span.dual(target="dual2")} 20 sommets_  
 _{span.dual} 30 arêtes_ 
 
 ::: column.grow.text-center(width=120)
 
- __Icosaèdre__ 
+__Icosaèdre__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]] visages_  
+_{span.dual(target="dual2")} [[20]] visages_  
 _{span.dual(target="dual2")} 12 sommets_  
 _{span.dual} 30 arêtes_ 
 
@@ -1574,7 +1537,7 @@ _{span.dual} 30 arêtes_
 ---
 > id: platonic-dual
 
- Nous pouvons transformer un polyèdre en son dual, en «remplaçant» chaque face par un sommet, et chaque sommet par une face. Ces animations montrent comment: 
+Nous pouvons transformer un polyèdre en son dual, en «remplaçant» chaque face par un sommet, et chaque sommet par une face. Ces animations montrent comment: 
 
 ::: column(width=300)
 
@@ -1588,12 +1551,12 @@ _{span.dual} 30 arêtes_
 
 :::
 
- Le tétraèdre est double avec lui-même. Puisqu'il a le même nombre de faces et de sommets, les échanger ne changerait rien. 
+Le tétraèdre est double avec lui-même. Puisqu'il a le même nombre de faces et de sommets, les échanger ne changerait rien. 
 
 ---
 > id: platonic-elements
 
- [Platon](bio:plato) croyait que toute matière dans l'Univers se compose de quatre éléments: l'air, la terre, l'eau et le feu. Il pensait que chaque élément correspondait à l'un des solides platoniciens, tandis que le cinquième représenterait l'univers dans son ensemble. Aujourd'hui, nous savons qu'il existe plus de 100 éléments différents qui sont constitués d'atomes sphériques et non de polyèdres. 
+[Platon](bio:plato) croyait que toute matière dans l'Univers se compose de quatre éléments: l'air, la terre, l'eau et le feu. Il pensait que chaque élément correspondait à l'un des solides platoniciens, tandis que le cinquième représenterait l'univers dans son ensemble. Aujourd'hui, nous savons qu'il existe plus de 100 éléments différents qui sont constitués d'atomes sphériques et non de polyèdres. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1605,9 +1568,9 @@ _{span.dual} 30 arêtes_
 
 > id: archimedean
 
- Les solides platoniciens sont des polyèdres particulièrement importants, mais il en existe d'innombrables autres. 
+Les solides platoniciens sont des polyèdres particulièrement importants, mais il en existe d'innombrables autres. 
 
- [__Les solides archimédiens__](gloss:archimedean-solid) , par exemple, doivent encore être constitués de [polygones réguliers](gloss:regular-polygon) , mais vous pouvez utiliser plusieurs types différents. Ils portent le nom d'un autre mathématicien grec, [Archimède de Syracuse](bio:archimedes) , et ils sont au nombre de 13: 
+[__Les solides archimédiens__](gloss:archimedean-solid) , par exemple, doivent encore être constitués de [polygones réguliers](gloss:regular-polygon) , mais vous pouvez utiliser plusieurs types différents. Ils portent le nom d'un autre mathématicien grec, [Archimède de Syracuse](bio:archimedes) , et ils sont au nombre de 13: 
 
 ::: column(width=170 parent="padded-thin")
 
@@ -1702,16 +1665,12 @@ _{span.dual} 30 arêtes_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
 ### Applications 
 
- Platon avait tort de croire que tous les éléments sont constitués de solides platoniciens. Mais les polyèdres réguliers ont de nombreuses propriétés spéciales qui les font apparaître ailleurs dans la nature - et nous pouvons copier ces propriétés en science et en génie. 
+Platon avait tort de croire que tous les éléments sont constitués de solides platoniciens. Mais les polyèdres réguliers ont de nombreuses propriétés spéciales qui les font apparaître ailleurs dans la nature - et nous pouvons copier ces propriétés en science et en génie. 
 
 ::: column(width=180)
 
@@ -1725,7 +1684,7 @@ _{span.dual} 30 arêtes_
 
 ::: column.grow
 
- De nombreux __virus__ , __bactéries__ et autres petits __organismes__ ont la forme d' [icosaèdres](gloss:icosahedron) . Les virus, par exemple, doivent enfermer leur matériel génétique à l'intérieur d'une coquille de nombreuses unités protéiques identiques. L'icosaèdre est le moyen le plus efficace de le faire, car il se compose de quelques éléments réguliers mais a presque la forme d'une sphère. 
+De nombreux __virus__ , __bactéries__ et autres petits __organismes__ ont la forme d' [icosaèdres](gloss:icosahedron) . Les virus, par exemple, doivent enfermer leur matériel génétique à l'intérieur d'une coquille de nombreuses unités protéiques identiques. L'icosaèdre est le moyen le plus efficace de le faire, car il se compose de quelques éléments réguliers mais a presque la forme d'une sphère. 
 
 :::
 
@@ -1741,9 +1700,9 @@ _{span.dual} 30 arêtes_
 
 ::: column.grow
 
- De nombreuses __molécules__ ont la forme de polyèdres réguliers. L'exemple le plus célèbre est `C_60` qui se compose de 60 atomes de carbone disposés sous la forme d'un [icosaèdre tronqué](gloss:truncated-icosahedron) . 
+De nombreuses __molécules__ ont la forme de polyèdres réguliers. L'exemple le plus célèbre est `C_60` qui se compose de 60 atomes de carbone disposés sous la forme d'un [icosaèdre tronqué](gloss:truncated-icosahedron) . 
 
- Il a été découvert en 1985 lorsque des scientifiques ont étudié la poussière interstellaire. Ils l'ont baptisée «Buckyball» (ou Buckminsterfullerene) du nom de l'architecte [Buckminster Fuller](bio:fuller) , célèbre pour la construction de bâtiments d'apparence similaire. 
+Il a été découvert en 1985 lorsque des scientifiques ont étudié la poussière interstellaire. Ils l'ont baptisée «Buckyball» (ou Buckminsterfullerene) du nom de l'architecte [Buckminster Fuller](bio:fuller) , célèbre pour la construction de bâtiments d'apparence similaire. 
 
 :::
 
@@ -1759,7 +1718,7 @@ _{span.dual} 30 arêtes_
 
 ::: column.grow
 
- La plupart des __cristaux__ ont leurs atomes disposés dans une grille régulière composée de [tétraèdres](gloss:tetrahedron) , de [cubes](gloss:cube) ou d' [octaèdres](gloss:octahedron) . Lorsqu'elles se fissurent ou se brisent, vous pouvez voir ces formes à plus grande échelle. 
+La plupart des __cristaux__ ont leurs atomes disposés dans une grille régulière composée de [tétraèdres](gloss:tetrahedron) , de [cubes](gloss:cube) ou d' [octaèdres](gloss:octahedron) . Lorsqu'elles se fissurent ou se brisent, vous pouvez voir ces formes à plus grande échelle. 
 
 :::
 
@@ -1775,7 +1734,7 @@ _{span.dual} 30 arêtes_
 
 ::: column.grow
 
- Les tétraèdres et les octaèdres sont incroyablement rigides et stables, ce qui les rend très utiles dans la __construction__ . _Les cadres spatiaux_ sont des structures polygonales qui peuvent supporter de grands toits et des ponts lourds. 
+Les tétraèdres et les octaèdres sont incroyablement rigides et stables, ce qui les rend très utiles dans la __construction__ . _Les cadres spatiaux_ sont des structures polygonales qui peuvent supporter de grands toits et des ponts lourds. 
 
 :::
 
@@ -1791,8 +1750,8 @@ _{span.dual} 30 arêtes_
 
 ::: column.grow
 
- Les solides platoniciens sont également utilisés pour créer des __dés__ . en raison de leur symétrie, chaque côté a la [probabilité](gloss:probability) d'atterrir face vers le haut - donc les dés sont justes. 
+Les solides platoniciens sont également utilisés pour créer des __dés__ . en raison de leur symétrie, chaque côté a la [probabilité](gloss:probability) d'atterrir face vers le haut - donc les dés sont justes. 
 
- L' [icosaèdre tronqué](gloss:truncated-icosahedron) est probablement le polyèdre le plus célèbre au monde: c'est la forme du ballon de football. 
+L' [icosaèdre tronqué](gloss:truncated-icosahedron) est probablement le polyèdre le plus célèbre au monde: c'est la forme du ballon de football. 
 
 :::
