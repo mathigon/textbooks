@@ -54,8 +54,6 @@ Wenn zum Beispiel ein Skateboard 80 € kostet, wird die Nachfrage bei [[1600]] 
 ---
 > id: intro4
 
-    //- img.text-wrap.s-hide(src="images/skater-3.jpg" style="shape-outside: url(images/skater-3-mask.png)" width=280 height=480)
-
 Der __Umsatz__ unseres Unternehmens sind die Gesamteinnahmen, die wir erzielen. Er ergibt sich aus der Anzahl der verkauften
 Skateboards (die _Nachfrage_) multipliziert mit dem Stückpreis:
 
@@ -132,9 +130,7 @@ Wie auch immer, quadratische Gleichungen tauchen überall in der Natur, Technik 
 Wirtschaft auf. In diesem Kurs lernst du verschiedene Methoden kennen, um quadratische Gleichungen zu lösen
 und ihre Graphen zu verstehen.
 
-
 --------------------------------------------------------------------------------
-
 
 ## Binomische Formeln
 
@@ -143,9 +139,7 @@ und ihre Graphen zu verstehen.
 
 TODO
 
-
 --------------------------------------------------------------------------------
-
 
 ## Quadratische Gleichungen Lösen
 
@@ -154,9 +148,7 @@ TODO
 
 TODO
 
-
 --------------------------------------------------------------------------------
-
 
 ## Die Quadratische Formel
 
@@ -165,9 +157,7 @@ TODO
 
 TODO
 
-
 --------------------------------------------------------------------------------
-
 
 ## Quadratische Funktionen
 
@@ -176,9 +166,7 @@ TODO
 
 TODO
 
-
 --------------------------------------------------------------------------------
-
 
 ## Projektilbewegung
 
@@ -188,9 +176,7 @@ TODO
 
 TODO
 
-
 --------------------------------------------------------------------------------
-
 
 ## Noch Mehr Anwendungen
 

@@ -4,8 +4,9 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
- Nhiều khái niệm hình học như [đường](gloss:line) hoặc [đa giác](gloss:polygon) đã được các nhà toán học phát minh ra. Đối xứng, mặt khác, là ở khắp mọi nơi xung quanh chúng ta. Hầu như tất cả các loài thực vật, động vật và thậm chí cả con người chúng ta đều đối xứng. 
+Nhiều khái niệm hình học như [đường](gloss:line) hoặc [đa giác](gloss:polygon) đã được các nhà toán học phát minh ra. Đối xứng, mặt khác, là ở khắp mọi nơi xung quanh chúng ta. Hầu như tất cả các loài thực vật, động vật và thậm chí cả con người chúng ta đều đối xứng. 
 
 ::: column(width=200)
 
@@ -21,7 +22,7 @@
 
 :::
 
- Theo thời gian, chúng ta đã bắt chước sự đối xứng của tự nhiên trong nghệ thuật, kiến trúc, công nghệ và thiết kế. Hình dạng và mẫu đối xứng dường như trông _đẹp_ hơn so với hình không đối xứng. 
+Theo thời gian, chúng ta đã bắt chước sự đối xứng của tự nhiên trong nghệ thuật, kiến trúc, công nghệ và thiết kế. Hình dạng và mẫu đối xứng dường như trông _đẹp_ hơn so với hình không đối xứng. 
 
 ::: column(width=200)
 
@@ -37,15 +38,15 @@
 
 :::
 
- Nhưng đối xứng là quan trọng hơn nhiều so với chỉ đơn giản là _nhìn đẹp_ . Nó nằm ở chính nền tảng của vũ trụ của chúng ta, và thậm chí có thể giải thích các định luật vật lý cơ bản nhất. 
+Nhưng đối xứng là quan trọng hơn nhiều so với chỉ đơn giản là _nhìn đẹp_ . Nó nằm ở chính nền tảng của vũ trụ của chúng ta, và thậm chí có thể giải thích các định luật vật lý cơ bản nhất. 
 
- _{button.next-step} Tiếp tục_ 
+_{button.next-step} Tiếp tục_ 
 
 ---
 > id: transformations
 > goals: t1 t2 t3
 
- Mặc dù đối xứng là một khái niệm rất trực quan, nhưng việc mô tả nó về mặt toán học khó khăn hơn bạn nghĩ. Đầu tiên, chúng ta phải tìm hiểu về các [__phép biến đổi__](gloss:transformation) , đó là những cách để chuyển đổi một hình hình học thành một hình khác. Đây là vài ví dụ: 
+Mặc dù đối xứng là một khái niệm rất trực quan, nhưng việc mô tả nó về mặt toán học khó khăn hơn bạn nghĩ. Đầu tiên, chúng ta phải tìm hiểu về các [__phép biến đổi__](gloss:transformation) , đó là những cách để chuyển đổi một hình hình học thành một hình khác. Đây là vài ví dụ: 
 
 ::: column.r(width=200 parent="padded-thin")
 
@@ -70,7 +71,7 @@
 ---
 > id: transformations-1
 
- Kết quả của một biến đổi được gọi là [__hình ảnh__](gloss:transformation-image) . Chúng ta thường biểu thị hình ảnh của một hình dạng `A` như `A'` , phát âm là Một thủ tướng. Có nhiều loại chuyển đổi khác nhau, chúng ta sẽ khám phá chi tiết hơn trong suốt khóa học này. 
+Kết quả của một biến đổi được gọi là [__hình ảnh__](gloss:transformation-image) . Chúng ta thường biểu thị hình ảnh của một hình dạng `A` như `A'` , phát âm là Một thủ tướng. Có nhiều loại chuyển đổi khác nhau, chúng ta sẽ khám phá chi tiết hơn trong suốt khóa học này. 
 
 ---
 
@@ -78,10 +79,11 @@
 
 > id: rigid
 > section: rigid
+> translated: auto
 
- [__Biến đổi cứng nhắc__](gloss:rigid-transformation) là một loại biến đổi đặc biệt không thay đổi kích thước hoặc hình dạng của hình. Chúng ta có thể tưởng tượng rằng nó được làm từ một vật liệu rắn như gỗ hoặc kim loại: chúng ta có thể di chuyển nó, xoay hoặc lật nó, nhưng chúng ta không thể kéo dài, uốn cong hoặc làm biến dạng nó. 
+[__Biến đổi cứng nhắc__](gloss:rigid-transformation) là một loại biến đổi đặc biệt không thay đổi kích thước hoặc hình dạng của hình. Chúng ta có thể tưởng tượng rằng nó được làm từ một vật liệu rắn như gỗ hoặc kim loại: chúng ta có thể di chuyển nó, xoay hoặc lật nó, nhưng chúng ta không thể kéo dài, uốn cong hoặc làm biến dạng nó. 
 
- Cái nào trong năm biến đổi này là cứng nhắc? 
+Cái nào trong năm biến đổi này là cứng nhắc? 
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -94,7 +96,7 @@
 > id: rigid-1
 > goals: t1 t2 t3
 
- Nó chỉ ra rằng chỉ có ba loại biến đổi cứng nhắc khác nhau: 
+Nó chỉ ra rằng chỉ có ba loại biến đổi cứng nhắc khác nhau: 
 
 ::: column.r(width=200)
 
@@ -125,18 +127,18 @@
 ---
 > id: rigid-2
 
- Chúng ta cũng có thể kết hợp nhiều loại chuyển đổi để tạo ra các loại biến đổi phức tạp hơn - ví dụ: bản dịch theo sau là xoay vòng. 
+Chúng ta cũng có thể kết hợp nhiều loại chuyển đổi để tạo ra các loại biến đổi phức tạp hơn - ví dụ: bản dịch theo sau là xoay vòng. 
 
- Nhưng trước tiên, chúng ta hãy xem xét từng loại biến đổi chi tiết hơn. 
+Nhưng trước tiên, chúng ta hãy xem xét từng loại biến đổi chi tiết hơn. 
 
 ---
 > id: translations
 
 ### Bản dịch 
 
- Một [__bản dịch__](gloss:translation) là một phép biến đổi di chuyển mọi điểm của một hình theo cùng một khoảng cách theo cùng một hướng. 
+Một [__bản dịch__](gloss:translation) là một phép biến đổi di chuyển mọi điểm của một hình theo cùng một khoảng cách theo cùng một hướng. 
 
- Trong mặt phẳng tọa độ, chúng ta có thể chỉ định một bản dịch bằng cách hình dạng được di chuyển dọc theo _x_ -axis và _y_ -axis. Ví dụ, một phép biến đổi theo (3, 5) di chuyển một hình bằng 3 dọc theo _x_ -axis và 5 dọc theo _y_ -axis. 
+Trong mặt phẳng tọa độ, chúng ta có thể chỉ định một bản dịch bằng cách hình dạng được di chuyển dọc theo _x_ -axis và _y_ -axis. Ví dụ, một phép biến đổi theo (3, 5) di chuyển một hình bằng 3 dọc theo _x_ -axis và 5 dọc theo _y_ -axis. 
 
 ::: column(width=220)
 
@@ -174,7 +176,7 @@
 > id: translations-1
 > goals: drag-0 drag-1 drag-2
 
- Bây giờ đến lượt bạn - dịch các hình dạng sau như được hiển thị: 
+Bây giờ đến lượt bạn - dịch các hình dạng sau như được hiển thị: 
 
 ::: column(width=220)
 
@@ -220,9 +222,9 @@
 
 ### Những phản ánh 
 
- Một [__sự phản chiếu__](gloss:reflection) là một sự biến đổi mà những người khác lật lại những người khác hay một người khác. Dòng này được gọi là __dòng phản ánh__ . 
+Một [__sự phản chiếu__](gloss:reflection) là một sự biến đổi mà những người khác lật lại những người khác hay một người khác. Dòng này được gọi là __dòng phản ánh__ . 
 
- Vẽ đường phản chiếu trong mỗi ví dụ sau: 
+Vẽ đường phản chiếu trong mỗi ví dụ sau: 
 
 ::: column(width=220)
 
@@ -251,7 +253,7 @@
 > id: reflections-1
 > goals: r0 r1 r2
 
- Bây giờ đến lượt bạn - vẽ sự phản chiếu của từng hình dạng sau: 
+Bây giờ đến lượt bạn - vẽ sự phản chiếu của từng hình dạng sau: 
 
 ::: column(width=220)
 
@@ -279,12 +281,12 @@
 ---
 > id: reflections-2
 
- Lưu ý rằng nếu một điểm nằm trên đường phản xạ, nó [[sẽ không di chuyển | xoay | lật qua]] khi được phản ánh: _{span.reveal(when="blank-0")} hình ảnh của nó là cùng một điểm với bản gốc._ 
+Lưu ý rằng nếu một điểm nằm trên đường phản xạ, nó [[sẽ không di chuyển | xoay | lật qua]] khi được phản ánh: _{span.reveal(when="blank-0")} hình ảnh của nó là cùng một điểm với bản gốc._ 
 
 ---
 > id: reflections-3
 
- Trong tất cả các ví dụ ở trên, đường phản xạ là ngang, dọc hoặc ở góc 45° - giúp bạn dễ dàng vẽ các phản xạ. Nếu đó không phải là trường hợp, việc xây dựng đòi hỏi một chút công việc: 
+Trong tất cả các ví dụ ở trên, đường phản xạ là ngang, dọc hoặc ở góc 45° - giúp bạn dễ dàng vẽ các phản xạ. Nếu đó không phải là trường hợp, việc xây dựng đòi hỏi một chút công việc: 
 
 ::: column(width=300)
 
@@ -342,9 +344,9 @@
 
 ### Xoay 
 
- Một [__vòng quay__](gloss:rotation) là một phép biến đổi mà khu vực này biến hình thành một góc nhất định xung quanh một điểm cố định. Điểm đó được gọi là [__tâm quay__](gloss:center-of-rotation) . Các vòng quay có thể theo chiều kim đồng hồ hoặc ngược chiều kim đồng hồ. 
+Một [__vòng quay__](gloss:rotation) là một phép biến đổi mà khu vực này biến hình thành một góc nhất định xung quanh một điểm cố định. Điểm đó được gọi là [__tâm quay__](gloss:center-of-rotation) . Các vòng quay có thể theo chiều kim đồng hồ hoặc ngược chiều kim đồng hồ. 
 
- Cố gắng xoay các hình bên dưới xung quanh tâm xoay màu đỏ: 
+Cố gắng xoay các hình bên dưới xung quanh tâm xoay màu đỏ: 
 
 ::: column(width=220)
 
@@ -418,7 +420,7 @@
 
 ::: column.grow
 
- Việc vẽ các phép quay không chính xác 90° hoặc 180° là khó khăn hơn. Hãy thử xoay hình này bằng cách ${10*ang}{ang|6|-18,18,1}° quanh [tâm quay](target:rot) . 
+Việc vẽ các phép quay không chính xác 90° hoặc 180° là khó khăn hơn. Hãy thử xoay hình này bằng cách ${10*ang}{ang|6|-18,18,1}° quanh [tâm quay](target:rot) . 
 
 {.r} Giống như đối với phản xạ, chúng ta phải xoay từng điểm trong một hình dạng riêng lẻ. _{button.next-step} Tiếp tục_ 
 
@@ -437,7 +439,7 @@
 ---
 > id: composition-1
 
- Biến đổi là một khái niệm quan trọng trong nhiều phần của toán học, không chỉ hình học. Ví dụ: bạn có thể chuyển đổi các [_hàm_](gloss:function) bằng cách dịch chuyển hoặc xoay [đồ thị](gloss:function-graph) của chúng. Bạn cũng có thể sử dụng các phép biến đổi để xác định xem hai hình có [đồng dạng hay không](gloss:congruent) . 
+Biến đổi là một khái niệm quan trọng trong nhiều phần của toán học, không chỉ hình học. Ví dụ: bạn có thể chuyển đổi các [_hàm_](gloss:function) bằng cách dịch chuyển hoặc xoay [đồ thị](gloss:function-graph) của chúng. Bạn cũng có thể sử dụng các phép biến đổi để xác định xem hai hình có [đồng dạng hay không](gloss:congruent) . 
 
 ---
 
@@ -445,36 +447,9 @@
 
 > section: congruence
 > sectionStatus: dev
+> translated: auto
 
- LÀM 
-
----
-
-### Thành phần biến đổi 
-
- Tất nhiên, chúng ta có thể kết hợp nhiều bản dịch, phản xạ và xoay để tạo ra các phép biến đổi phức tạp hơn. 
-
-{.todo} Ví dụ TODO 
-
- Tuy nhiên, hóa ra, không quan trọng bạn kết hợp bao nhiêu biến đổi khác nhau: bạn luôn có thể tìm thấy một biến đổi khác thực hiện tương tự trong một lần! 
-
-{.todo} Máy tính thành phần chuyển đổi TODO 
-
- Kết hợp hai phản xạ là đặc biệt thú vị. Có hai trường hợp khác nhau chúng ta cần xem xét: 
-
-::: column.grow
-
- Nếu hai dòng phản xạ song song, kết quả là một bản dịch duy nhất. Hướng của bản dịch vuông góc với các đường phản xạ và khoảng cách gấp đôi khoảng cách giữa các đường phản xạ. 
-
-{.todo} Hoạt hình TODO 
-
-::: column.grow
-
- Nếu hai đường phản xạ cắt nhau, kết quả là một vòng quay đơn. Tâm quay là giao điểm giữa các đường phản xạ và góc gấp đôi góc giữa các đường phản xạ. 
-
-{.todo} Hoạt hình TODO 
-
-:::
+TODO
 
 ---
 
@@ -483,8 +458,9 @@
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
- [__Đối xứng__](gloss:symmetry) là ở khắp mọi nơi xung quanh chúng ta, và một khái niệm trực quan: các phần khác nhau của một đối tượng trông _giống nhau_ theo một cách nào đó. Nhưng bằng cách sử dụng các phép biến đổi, chúng ta có thể đưa ra một định nghĩa toán học chính xác hơn nhiều về ý nghĩa đối xứng _thực sự_ có nghĩa là gì: 
+[__Đối xứng__](gloss:symmetry) là ở khắp mọi nơi xung quanh chúng ta, và một khái niệm trực quan: các phần khác nhau của một đối tượng trông _giống nhau_ theo một cách nào đó. Nhưng bằng cách sử dụng các phép biến đổi, chúng ta có thể đưa ra một định nghĩa toán học chính xác hơn nhiều về ý nghĩa đối xứng _thực sự_ có nghĩa là gì: 
 
 {.definition} Một đối tượng là _đối xứng_ nếu nó trông giống nhau, ngay cả sau khi áp dụng một biến đổi nhất định. 
 
@@ -513,13 +489,13 @@
 
 ### Đối xứng phản xạ 
 
- Một hình có [__đối xứng phản xạ__](gloss:reflectional-symmetry) nếu nó trông giống nhau sau khi được phản chiếu. Đường phản xạ được gọi là [__trục đối xứng__](gloss:axis-of-symmetry) và nó chia hình dạng thành hai [[đồng dạng | công bằng |]] một nửa [[tương tự]] . Một số hình cũng có thể có nhiều hơn một trục đối xứng. 
+Một hình có [__đối xứng phản xạ__](gloss:reflectional-symmetry) nếu nó trông giống nhau sau khi được phản chiếu. Đường phản xạ được gọi là [__trục đối xứng__](gloss:axis-of-symmetry) và nó chia hình dạng thành hai [[đồng dạng | công bằng |]] một nửa [[tương tự]] . Một số hình cũng có thể có nhiều hơn một trục đối xứng. 
 
 ---
 > id: reflectional-symmetry-1
 > goals: r0 r1 r2 r3 r4 r5
 
- Vẽ tất cả các trục đối xứng trong sáu hình ảnh và hình dạng này: 
+Vẽ tất cả các trục đối xứng trong sáu hình ảnh và hình dạng này: 
 
 ::: column(width=220)
 
@@ -576,7 +552,7 @@
 ---
 > id: alphabet
 
- Nhiều chữ cái trong bảng chữ cái có sự đối xứng phản chiếu. Chọn tất cả những cái mà làm: 
+Nhiều chữ cái trong bảng chữ cái có sự đối xứng phản chiếu. Chọn tất cả những cái mà làm: 
 
     x-picker.letters
       - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
@@ -590,7 +566,7 @@
 > id: reflectional-symmetry-2
 > goals: r0 r1 r2
 
- Dưới đây là một số hình dạng hơn. Hoàn thành chúng sao cho chúng có tính đối xứng phản xạ: 
+Dưới đây là một số hình dạng hơn. Hoàn thành chúng sao cho chúng có tính đối xứng phản xạ: 
 
 ::: column(width=220)
 
@@ -623,9 +599,9 @@
 > id: palindromes
 > goals: p0 p1 p2
 
- Hình dạng, chữ cái và hình ảnh có thể có sự đối xứng phản chiếu, nhưng vì vậy có thể toàn bộ số, từ và câu! 
+Hình dạng, chữ cái và hình ảnh có thể có sự đối xứng phản chiếu, nhưng vì vậy có thể toàn bộ số, từ và câu! 
 
- Ví dụ, cả hai đều có thể đọc giống nhau từ trước ra sau. Những con số hoặc những từ như thế này được gọi là [__Palindromes__](gloss:palindrome) . Bạn có thể nghĩ về bất kỳ palindromes khác? 
+Ví dụ, cả hai đều có thể đọc giống nhau từ trước ra sau. Những con số hoặc những từ như thế này được gọi là [__Palindromes__](gloss:palindrome) . Bạn có thể nghĩ về bất kỳ palindromes khác? 
 
     form.palindromes.text-center.form-field
       input(type="text")
@@ -638,7 +614,7 @@
 ---
 > id: palindromes-1
 
- Nếu chúng ta bỏ qua khoảng trắng và dấu câu, các câu ngắn dưới đây cũng có tính đối xứng phản xạ. Bạn có thể đến với của riêng bạn? 
+Nếu chúng ta bỏ qua khoảng trắng và dấu câu, các câu ngắn dưới đây cũng có tính đối xứng phản xạ. Bạn có thể đến với của riêng bạn? 
 
 {.text-center} Không bao giờ lẻ hoặc thậm chí.  
 Một [[hạt]] cho một lọ cá ngừ.  
@@ -653,9 +629,9 @@ Yo, [[cậu bé]] chuối!
 
 ::: column.grow
 
- Một hình có [__đối xứng quay__](gloss:rotational-symmetry) nếu nó trông giống nhau sau khi được xoay (dưới 360°). [Trung tâm của vòng quay](gloss:center-of-rotation) thường chỉ là giữa hình. 
+Một hình có [__đối xứng quay__](gloss:rotational-symmetry) nếu nó trông giống nhau sau khi được xoay (dưới 360°). [Trung tâm của vòng quay](gloss:center-of-rotation) thường chỉ là giữa hình. 
 
- Thứ [__tự đối xứng__](gloss:order-of-symmetry) là số lượng các hướng khác nhau trong đó hình dạng trông giống nhau. Bạn cũng có thể nghĩ về nó như _số lần chúng ta có thể xoay hình dạng_ , trước khi chúng ta quay lại bắt đầu. Ví dụ, bông tuyết này có thứ tự [[6]] . 
+Thứ [__tự đối xứng__](gloss:order-of-symmetry) là số lượng các hướng khác nhau trong đó hình dạng trông giống nhau. Bạn cũng có thể nghĩ về nó như _số lần chúng ta có thể xoay hình dạng_ , trước khi chúng ta quay lại bắt đầu. Ví dụ, bông tuyết này có thứ tự [[6]] . 
 
 {.reveal(when="blank-0")} Góc của mỗi vòng quay là `"360°"/"order"` . Trong bông tuyết, đây là `"360°"/6 = input(60)°` . 
 
@@ -665,12 +641,10 @@ Yo, [[cậu bé]] chuối!
 
 :::
 
-    // Maybe have another alphabeth to select all letters with rotational symmetry?
-
 ---
 > id: rotational-symmetry-1
 
- Tìm thứ tự và góc quay, cho mỗi hình dạng sau: 
+Tìm thứ tự và góc quay, cho mỗi hình dạng sau: 
 
 ::: column(width=220)
 
@@ -696,7 +670,7 @@ Yo, [[cậu bé]] chuối!
 > id: rotational-symmetry-2
 > goals: r0 r1 r2
 
- Bây giờ hoàn thành các hình dạng này, để chúng có đối xứng quay: 
+Bây giờ hoàn thành các hình dạng này, để chúng có đối xứng quay: 
 
 ::: column(width=220)
 
@@ -741,9 +715,7 @@ Yo, [[cậu bé]] chuối!
 
 > id: groups
 > section: symmetry-groups
-
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
+> translated: auto
 
  Một số hình có nhiều hơn một đối xứng - hãy xem [hình vuông](gloss:square) là một ví dụ đơn giản. 
 
@@ -761,7 +733,7 @@ Yo, [[cậu bé]] chuối!
 
 ::: column.grow(width=200)
 
- Bạn đã chỉ ra ở trên rằng một hình vuông có [[4]] trục phản xạ. 
+Bạn đã chỉ ra ở trên rằng một hình vuông có [[4]] trục phản xạ. 
 
 {.reveal(when="blank-0")} Nó cũng có tính đối xứng quay [[90]]°, [[180]]° và [[270]]°. 
 
@@ -775,7 +747,7 @@ Yo, [[cậu bé]] chuối!
 > id: add-symmetries
 > goals: sum-0 sum-1
 
- Bây giờ chúng ta thực sự có thể bắt đầu thực hiện một số số học với các đối xứng này. Ví dụ: chúng ta có thể _thêm_ hai đối xứng để có được những đối xứng mới: 
+Bây giờ chúng ta thực sự có thể bắt đầu thực hiện một số số học với các đối xứng này. Ví dụ: chúng ta có thể _thêm_ hai đối xứng để có được những đối xứng mới: 
 
 ::: column(width=260)
 
@@ -803,7 +775,7 @@ Yo, [[cậu bé]] chuối!
 > title: Symmetry Calculator
 > goals: calculate
 
- Bất cứ khi nào bạn thêm hai đối xứng của một hình vuông, bạn sẽ có một hình mới. Đây là một máy tính đối xứng của người Viking, nơi bạn có thể tự mình thử: 
+Bất cứ khi nào bạn thêm hai đối xứng của một hình vuông, bạn sẽ có một hình mới. Đây là một máy tính đối xứng của người Viking, nơi bạn có thể tự mình thử: 
 
     .calculator
       .display
@@ -822,14 +794,14 @@ Yo, [[cậu bé]] chuối!
 ---
 > id: symmetry-arithmetic
 
- Dành thời gian chơi xung quanh với máy tính đối xứng và cố gắng tìm bất kỳ mẫu nào. Bạn có thể hoàn thành những quan sát này? 
+Dành thời gian chơi xung quanh với máy tính đối xứng và cố gắng tìm bất kỳ mẫu nào. Bạn có thể hoàn thành những quan sát này? 
 
- * Thêm hai phép quay sẽ luôn cho [[phép xoay | một phản ánh]] (hoặc bản sắc). * Thêm hai phản xạ sẽ luôn luôn cho [[một vòng quay | một phản ánh]] (hoặc bản sắc). * Thêm hai đối xứng giống nhau theo thứ tự ngược lại [[đôi khi tạo ra sự khác biệt | luôn luôn cho một sự khác biệt | luôn cho]] kết quả [[như nhau]] * Thêm danh tính [[không làm gì cả | trả lại một phản ánh | trả lại ngược lại]] . 
+* Thêm hai phép quay sẽ luôn cho [[phép xoay | một phản ánh]] (hoặc bản sắc). * Thêm hai phản xạ sẽ luôn luôn cho [[một vòng quay | một phản ánh]] (hoặc bản sắc). * Thêm hai đối xứng giống nhau theo thứ tự ngược lại [[đôi khi tạo ra sự khác biệt | luôn luôn cho một sự khác biệt | luôn cho]] kết quả [[như nhau]] * Thêm danh tính [[không làm gì cả | trả lại một phản ánh | trả lại ngược lại]] . 
 
 ---
 > id: group-axioms
 
- Bạn có thể đã nhận ra rằng thêm __{.orange} đối xứng__ thực sự rất giống với việc thêm __{.green} số nguyên__ : 
+Bạn có thể đã nhận ra rằng thêm __{.orange} đối xứng__ thực sự rất giống với việc thêm __{.green} số nguyên__ : 
 
     ol.proof
     
@@ -894,17 +866,17 @@ Yo, [[cậu bé]] chuối!
 ---
 > id: groups-1
 
- Trong toán học, bất kỳ bộ sưu tập nào có các tính chất này được gọi là một [__nhóm__](gloss:group) . Một số nhóm (như __{.orange} đối xứng__ của một hình vuông) chỉ có một số phần tử hữu hạn. Những người khác (như __{.green} số nguyên__ ) là vô hạn. 
+Trong toán học, bất kỳ bộ sưu tập nào có các tính chất này được gọi là một [__nhóm__](gloss:group) . Một số nhóm (như __{.orange} đối xứng__ của một hình vuông) chỉ có một số phần tử hữu hạn. Những người khác (như __{.green} số nguyên__ ) là vô hạn. 
 
- Trong ví dụ này, chúng tôi bắt đầu với tám đối xứng của hình vuông. Trong thực tế, mỗi hình dạng hình học có __nhóm đối xứng__ riêng. Chúng đều có các yếu tố khác nhau, nhưng chúng luôn đáp ứng ba quy tắc trên. 
+Trong ví dụ này, chúng tôi bắt đầu với tám đối xứng của hình vuông. Trong thực tế, mỗi hình dạng hình học có __nhóm đối xứng__ riêng. Chúng đều có các yếu tố khác nhau, nhưng chúng luôn đáp ứng ba quy tắc trên. 
 
- Các nhóm xuất hiện ở mọi nơi trong toán học. Các phần tử có thể là số hoặc đối xứng, nhưng cũng là đa thức, hoán vị, ma trận, hàm số _bất cứ thứ gì_ tuân theo ba quy tắc. Ý tưởng chính của _lý thuyết nhóm_ là chúng ta không quan tâm đến các yếu tố riêng lẻ, chỉ là _cách chúng tương tác với nhau_ . 
+Các nhóm xuất hiện ở mọi nơi trong toán học. Các phần tử có thể là số hoặc đối xứng, nhưng cũng là đa thức, hoán vị, ma trận, hàm số _bất cứ thứ gì_ tuân theo ba quy tắc. Ý tưởng chính của _lý thuyết nhóm_ là chúng ta không quan tâm đến các yếu tố riêng lẻ, chỉ là _cách chúng tương tác với nhau_ . 
 
 ::: column.grow
 
- Ví dụ, các nhóm đối xứng của các phân tử khác nhau có thể giúp các nhà khoa học dự đoán và giải thích các tính chất của các vật liệu tương ứng. 
+Ví dụ, các nhóm đối xứng của các phân tử khác nhau có thể giúp các nhà khoa học dự đoán và giải thích các tính chất của các vật liệu tương ứng. 
 
- Các nhóm cũng có thể được sử dụng để phân tích chiến lược chiến thắng trong các trò chơi trên bàn cờ, hành vi của virus trong y học, các hòa âm khác nhau trong âm nhạc và nhiều khái niệm khác. 
+Các nhóm cũng có thể được sử dụng để phân tích chiến lược chiến thắng trong các trò chơi trên bàn cờ, hành vi của virus trong y học, các hòa âm khác nhau trong âm nhạc và nhiều khái niệm khác. 
 
 ::: column(width=340)
 
@@ -921,13 +893,13 @@ Yo, [[cậu bé]] chuối!
 
 > id: wallpaper-groups
 
- Trong các [phần trước](/course/transformations/symmetry) chúng ta đã thấy hai loại đối xứng khác nhau tương ứng với hai phép biến đổi khác nhau: phép quay và phản xạ. Nhưng cũng có một sự đối xứng cho loại chuyển đổi cứng nhắc thứ ba: [[bản dịch | quay | lật]] . 
+Trong các [phần trước](/course/transformations/symmetry) chúng ta đã thấy hai loại đối xứng khác nhau tương ứng với hai phép biến đổi khác nhau: phép quay và phản xạ. Nhưng cũng có một sự đối xứng cho loại chuyển đổi cứng nhắc thứ ba: [[bản dịch | quay | lật]] . 
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
- [__Đối xứng tịnh tiến__](gloss:translational-symmetry) không hoạt động đối với các đối tượng bị cô lập như hoa hoặc bướm, nhưng đối với các mẫu thông thường kéo dài theo mọi hướng: 
+[__Đối xứng tịnh tiến__](gloss:translational-symmetry) không hoạt động đối với các đối tượng bị cô lập như hoa hoặc bướm, nhưng đối với các mẫu thông thường kéo dài theo mọi hướng: 
 
 ::: column.grow
 
@@ -952,7 +924,7 @@ Yo, [[cậu bé]] chuối!
 ---
 > id: footsteps
 
- Ngoài đối xứng phản xạ, quay và đối xứng, thậm chí còn có một loại thứ tư: [__phản xạ trượt__](gloss:glide-reflection) . Đây là sự kết hợp giữa sự phản chiếu và bản dịch theo cùng hướng với trục phản chiếu. 
+Ngoài đối xứng phản xạ, quay và đối xứng, thậm chí còn có một loại thứ tư: [__phản xạ trượt__](gloss:glide-reflection) . Đây là sự kết hợp giữa sự phản chiếu và bản dịch theo cùng hướng với trục phản chiếu. 
 
     figure
       .footsteps
@@ -963,9 +935,9 @@ Yo, [[cậu bé]] chuối!
 ---
 > id: wallpaper-groups-2
 
- Một mẫu có thể có nhiều hơn một loại đối xứng. Và cũng giống như đối với hình vuông, chúng ta có thể tìm thấy [nhóm đối xứng](gloss:symmetry-group) của một mẫu, trong đó chứa tất cả các đối xứng khác nhau của nó. 
+Một mẫu có thể có nhiều hơn một loại đối xứng. Và cũng giống như đối với hình vuông, chúng ta có thể tìm thấy [nhóm đối xứng](gloss:symmetry-group) của một mẫu, trong đó chứa tất cả các đối xứng khác nhau của nó. 
 
- Các nhóm này không cho bạn biết nhiều về hình mẫu _trông_ như thế nào (ví dụ như màu sắc và hình dạng của nó), chỉ là cách nó được _lặp lại_ . Nhiều mẫu khác nhau có thể có cùng một nhóm đối xứng - miễn là được sắp xếp và lặp lại theo cùng một cách. 
+Các nhóm này không cho bạn biết nhiều về hình mẫu _trông_ như thế nào (ví dụ như màu sắc và hình dạng của nó), chỉ là cách nó được _lặp lại_ . Nhiều mẫu khác nhau có thể có cùng một nhóm đối xứng - miễn là được sắp xếp và lặp lại theo cùng một cách. 
 
 ::: column.grow
 
@@ -989,7 +961,7 @@ Yo, [[cậu bé]] chuối!
 > id: wallpaper-groups-3
 > goals: gallery
 
- Nó chỉ ra rằng, trong khi có vô số các mẫu có thể, tất cả chúng đều có một trong số 17 nhóm đối xứng khác nhau. Chúng được gọi là __Nhóm hình nền__ . Mỗi nhóm hình nền được xác định bởi sự kết hợp của các bản dịch, xoay, phản xạ và phản xạ trượt. Bạn có thể thấy các [tâm quay](gloss:center-of-rotation) và [trục phản xạ](gloss:axis-of-symmetry) trong các ví dụ này không? 
+Nó chỉ ra rằng, trong khi có vô số các mẫu có thể, tất cả chúng đều có một trong số 17 nhóm đối xứng khác nhau. Chúng được gọi là __Nhóm hình nền__ . Mỗi nhóm hình nền được xác định bởi sự kết hợp của các bản dịch, xoay, phản xạ và phản xạ trượt. Bạn có thể thấy các [tâm quay](gloss:center-of-rotation) và [trục phản xạ](gloss:axis-of-symmetry) trong các ví dụ này không? 
 
     x-gallery(slide-width="320")
       div
@@ -1066,7 +1038,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
- Thật không may, không có lý do đơn giản tại sao có _17_ nhóm này, và chứng minh nó đòi hỏi toán học tiên tiến hơn. Thay vào đó, bạn có thể thử vẽ các mẫu lặp lại của riêng mình cho mỗi trong số 17 nhóm hình nền: 
+Thật không may, không có lý do đơn giản tại sao có _17_ nhóm này, và chứng minh nó đòi hỏi toán học tiên tiến hơn. Thay vào đó, bạn có thể thử vẽ các mẫu lặp lại của riêng mình cho mỗi trong số 17 nhóm hình nền: 
 
     include ./components/wallpaper
     x-wallpaper
@@ -1082,9 +1054,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Các nhóm hình nền là tất cả về mô hình hai chiều phẳng. Chúng ta có thể làm một cái gì đó tương tự cho các mô hình ba chiều: chúng được gọi là các nhóm tinh thể học, và có 219 trong số chúng! 
+Các nhóm hình nền là tất cả về mô hình hai chiều phẳng. Chúng ta có thể làm một cái gì đó tương tự cho các mô hình ba chiều: chúng được gọi là các nhóm tinh thể học, và có 219 trong số chúng! 
 
- Ngoài các bản dịch, phản xạ, xoay và phản xạ trượt, các nhóm này bao gồm các đối xứng như __mặt phẳng trượt__ và __trục vít__ (nghĩ về chuyển động khi tháo nắp chai). 
+Ngoài các bản dịch, phản xạ, xoay và phản xạ trượt, các nhóm này bao gồm các đối xứng như __mặt phẳng trượt__ và __trục vít__ (nghĩ về chuyển động khi tháo nắp chai). 
 
 ::: column(width=300)
 
@@ -1101,16 +1073,17 @@ Perpendicular glide reflections, rotations of order 2, translations
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
- Cho đến nay, tất cả các đối xứng chúng ta nhìn vào đều có _hình ảnh_ theo một nghĩa nào đó: hình dạng, hình ảnh hoặc mô hình có thể nhìn thấy. Trong thực tế, đối xứng có thể là một khái niệm rộng hơn nhiều: _miễn dịch với thay đổi_ . 
+Cho đến nay, tất cả các đối xứng chúng ta nhìn vào đều có _hình ảnh_ theo một nghĩa nào đó: hình dạng, hình ảnh hoặc mô hình có thể nhìn thấy. Trong thực tế, đối xứng có thể là một khái niệm rộng hơn nhiều: _miễn dịch với thay đổi_ . 
 
- Ví dụ, nếu bạn thích nước táo nhiều như bạn thích nước cam, thì sở thích của bạn là đối xứng trực tiếp theo sự biến đổi hoán đổi táo và cam. 
+Ví dụ, nếu bạn thích nước táo nhiều như bạn thích nước cam, thì sở thích của bạn là đối xứng trực tiếp theo sự biến đổi hoán đổi táo và cam. 
 
- Năm 1915, nhà toán học người Đức [Emmy Noether đã](bio:noether) quan sát thấy rằng một cái gì đó tương tự là đúng với [quy luật tự nhiên](gloss:laws-of-nature) . 
+Năm 1915, nhà toán học người Đức [Emmy Noether đã](bio:noether) quan sát thấy rằng một cái gì đó tương tự là đúng với [quy luật tự nhiên](gloss:laws-of-nature) . 
 
 ::: column.grow
 
- Ví dụ, kinh nghiệm của chúng tôi cho chúng ta biết rằng các định luật Vật lý giống nhau ở mọi nơi trong vũ trụ. Không thành vấn đề nếu bạn tiến hành một thí nghiệm ở London, hoặc ở New York hoặc trên Sao Hỏa - các định luật Vật lý phải luôn giống nhau. Theo một cách nào đó, chúng có [[tính đối xứng tịnh tiến | đối xứng phản xạ]] . 
+Ví dụ, kinh nghiệm của chúng tôi cho chúng ta biết rằng các định luật Vật lý giống nhau ở mọi nơi trong vũ trụ. Không thành vấn đề nếu bạn tiến hành một thí nghiệm ở London, hoặc ở New York hoặc trên Sao Hỏa - các định luật Vật lý phải luôn giống nhau. Theo một cách nào đó, chúng có [[tính đối xứng tịnh tiến | đối xứng phản xạ]] . 
 
 {.reveal(when="blank-0")} Tương tự như vậy, sẽ không có vấn đề gì nếu chúng ta tiến hành một thí nghiệm trong khi hướng về phía Bắc, hoặc Nam hoặc Đông hoặc Tây: quy luật tự nhiên có [[sự đối xứng quay | đối xứng phản xạ trượt]] . 
 
@@ -1125,9 +1098,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 ---
 > id: planets-1
 
- Những đối xứng của người Viking ban đầu có vẻ khá vô nghĩa, nhưng chúng thực sự có thể cho chúng ta biết rất nhiều về vũ trụ của chúng ta. Emmy Noether quản lý để chứng minh rằng mọi đối xứng tương ứng với một lượng vật lý nhất định được _bảo toàn_ . 
+Những đối xứng của người Viking ban đầu có vẻ khá vô nghĩa, nhưng chúng thực sự có thể cho chúng ta biết rất nhiều về vũ trụ của chúng ta. Emmy Noether quản lý để chứng minh rằng mọi đối xứng tương ứng với một lượng vật lý nhất định được _bảo toàn_ . 
 
- Ví dụ, đối xứng thời gian ngụ ý rằng __Năng lượng__ phải được bảo toàn trong vũ trụ của chúng ta: bạn có thể chuyển đổi năng lượng từ loại này sang loại khác (ví dụ ánh sáng thành điện năng), nhưng bạn không bao giờ có thể tạo hoặc phá hủy năng lượng. Tổng lượng năng lượng trong vũ trụ sẽ luôn không đổi. 
+Ví dụ, đối xứng thời gian ngụ ý rằng __Năng lượng__ phải được bảo toàn trong vũ trụ của chúng ta: bạn có thể chuyển đổi năng lượng từ loại này sang loại khác (ví dụ ánh sáng thành điện năng), nhưng bạn không bao giờ có thể tạo hoặc phá hủy năng lượng. Tổng lượng năng lượng trong vũ trụ sẽ luôn không đổi. 
 
     figure
       x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
@@ -1140,9 +1113,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Nó chỉ ra rằng, chỉ cần biết về sự đối xứng, các nhà vật lý có thể rút ra hầu hết các định luật tự nhiên chi phối vũ trụ của chúng ta - mà không cần phải thực hiện một thí nghiệm hay quan sát. 
+Nó chỉ ra rằng, chỉ cần biết về sự đối xứng, các nhà vật lý có thể rút ra hầu hết các định luật tự nhiên chi phối vũ trụ của chúng ta - mà không cần phải thực hiện một thí nghiệm hay quan sát. 
 
- Đối xứng thậm chí có thể dự đoán sự tồn tại của các hạt cơ bản. Một ví dụ là __Higgs Boson__ nổi tiếng: nó được dự đoán vào những năm 1960 bởi các nhà vật lý lý thuyết, nhưng không được quan sát trong thế giới thực cho đến năm 2012. 
+Đối xứng thậm chí có thể dự đoán sự tồn tại của các hạt cơ bản. Một ví dụ là __Higgs Boson__ nổi tiếng: nó được dự đoán vào những năm 1960 bởi các nhà vật lý lý thuyết, nhưng không được quan sát trong thế giới thực cho đến năm 2012. 
 
 :::
 
@@ -1152,17 +1125,18 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 > id: dilations
 > section: dilations
+> translated: auto
 
- Cho đến nay, chúng tôi chỉ nhìn vào [[cứng nhắc | đồng dạng |]] biến đổi [[hình ảnh]] . _{span.reveal(when="blank-0")} Bây giờ chúng ta hãy nghĩ về một thứ không phải là: [__sự giãn nở__](gloss:dilation) thay đổi kích thước của hình dạng bằng cách làm cho nó lớn hơn hoặc nhỏ hơn._ 
+Cho đến nay, chúng tôi chỉ nhìn vào [[cứng nhắc | đồng dạng |]] biến đổi [[hình ảnh]] . _{span.reveal(when="blank-0")} Bây giờ chúng ta hãy nghĩ về một thứ không phải là: [__sự giãn nở__](gloss:dilation) thay đổi kích thước của hình dạng bằng cách làm cho nó lớn hơn hoặc nhỏ hơn._ 
 
 ---
 > id: dilations-1
 
 ::: column.grow
 
- Tất cả các pha loãng có một [__trung tâm__](target:center) và một [__yếu tố quy mô__](->.scale-target) . Trung tâm là điểm tham chiếu cho hệ số giãn nở và tỷ lệ cho chúng ta biết con số kéo dài hoặc co lại bao nhiêu. 
+Tất cả các pha loãng có một [__trung tâm__](target:center) và một [__yếu tố quy mô__](->.scale-target) . Trung tâm là điểm tham chiếu cho hệ số giãn nở và tỷ lệ cho chúng ta biết con số kéo dài hoặc co lại bao nhiêu. 
 
- Nếu hệ số [tỷ lệ](gloss:scale-factor) nằm trong khoảng từ 0 đến 1, hình ảnh [[nhỏ hơn | lớn]] hơn bản gốc. Nếu hệ số tỷ lệ lớn hơn 1, hình ảnh [[lớn hơn | nhỏ]] hơn bản gốc. 
+Nếu hệ số [tỷ lệ](gloss:scale-factor) nằm trong khoảng từ 0 đến 1, hình ảnh [[nhỏ hơn | lớn]] hơn bản gốc. Nếu hệ số tỷ lệ lớn hơn 1, hình ảnh [[lớn hơn | nhỏ]] hơn bản gốc. 
 
 ::: column(width=300)
 
@@ -1190,20 +1164,6 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 {.todo} SẮP RA MẮT - Thông tin thêm về Pha loãng 
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## Tương tự 
@@ -1212,172 +1172,4 @@ Perpendicular glide reflections, rotations of order 2, translations
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
- Đối với các biến đổi cứng nhắc, hình ảnh luôn luôn [[đồng nhất | lớn hơn | nhỏ hơn]] bản gốc - nhưng điều này [[không còn | vẫn]] đúng cho sự giãn nở. Thay vào đó, chúng tôi nói rằng hai hình dạng là [__tương tự nhau__](gloss:similar) . Chúng có hình dạng tổng thể giống nhau, nhưng không nhất thiết phải có cùng kích thước. 
-
- Biểu tượng cho sự tương đồng là `∼` (tương tự như biểu tượng cho sự đồng dạng, đó là `≅` ). Trong ví dụ này, chúng tôi sẽ viết `A ∼ A'` . 
-
-::: column(width=240)
-
-{.todo} SẮP RA MẮT - Minh họa 
-
-:::
-
----
-> id: perspective
-
-### Bản vẽ phối cảnh 
-
- Bạn có thể nhận thấy rằng các độ giãn nở này với các tia kết nối gần giống như __các bản vẽ phối cảnh__ . Trung tâm của sự giãn nở được gọi là __điểm biến mất__ , bởi vì có vẻ như đây là nơi mà mọi thứ đều biến mất trong khoảng cách xa. 
-
- Tìm điểm biến mất trong hình dưới đây: 
-
-{.todo} SẮP RA MẮT - Tương tác 
-
- Bây giờ bạn có thể vẽ một ngôi nhà khác phù hợp với những cái hiện có? 
-
----
-> id: similar-polygons
-
-### Đa giác tương tự 
-
- Sự tương đồng có thể cho chúng ta biết rất nhiều về hình dạng. Ví dụ: [hình tròn](gloss:circle) , [hình vuông](gloss:square) và [hình tam giác](gloss:equilateral-triangle) đều [[luôn luôn | đôi khi | không bao giờ]] giống nhau Chúng có thể có kích thước khác nhau, nhưng luôn có hình dạng chung giống nhau. 
-
-::: column.grow
-
- Hai hình tứ giác bên phải là tương tự nhau. Quan sát quan trọng đầu tiên của chúng tôi là trong các đa giác tương tự, tất cả các cặp góc [phù hợp](gloss:congruent-angles) là [đồng dạng](gloss:congruent-angles) . Điều này có nghĩa rằng 
-
-{.text-center} [_{.m-red} ABC_ _{.m-red} A'B'C '_](target:a) _{.space}_ [_{.m-blue} CDBCD_ _{.m-blue} B'C'D '_](target:b)  
-[_{.m-green} ∡CDE_ _{.m-green} C'D'E '_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ _{.m-yellow} D'E'A '_](target:d) 
-
- Một thực tế quan trọng thứ hai là trong các đa giác tương tự, tất cả các mặt được chia __tỷ lệ__ theo hệ số __tỷ lệ__ của độ giãn tương ứng. Nếu hệ số tỷ lệ là ${k}{k|1.5|0.5,2,0.1} , sau đó 
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
- Thay vào đó, chúng ta có thể sắp xếp lại các phương trình này và loại bỏ hoàn toàn hệ số tỷ lệ: 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
-
- Chúng ta có thể sử dụng điều này để giải quyết các vấn đề thực tế trong cuộc sống liên quan đến các đa giác tương tự - ví dụ: tìm độ dài của các mặt bị thiếu, nếu chúng ta biết một số mặt khác. Trong phần sau bạn sẽ thấy một vài ví dụ. 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### Tam giác tương tự 
-
- Khái niệm tương tự là đặc biệt mạnh mẽ với hình tam giác. Chúng ta đã biết rằng các góc bên trong tương ứng trong các đa giác tương tự là bằng nhau. 
-
- Đối với hình tam giác, điều ngược lại cũng đúng: điều này có nghĩa là nếu bạn có hai hình tam giác có cùng kích thước ba góc thì hình tam giác phải giống nhau. 
-
- Và nó thậm chí còn tốt hơn! Chúng ta biết rằng các góc bên trong một hình tam giác luôn cộng tới [[180]]°. Điều này có nghĩa là nếu chúng ta biết hai góc trong một tam giác, chúng ta luôn có thể tìm ra góc thứ ba. 
-
- Để tương tự, điều này có nghĩa là chúng ta cũng chỉ cần kiểm tra _hai góc_ để xác định xem hình tam giác có giống nhau không. Nếu hai hình tam giác có hai góc có cùng kích thước thì góc thứ ba cũng phải giống nhau ở cả hai. 
-
- Kết quả này đôi khi được gọi là [__Điều kiện tương tự AA__](gloss:triangle-aa) cho hình tam giác. (Hai chữ _As là viết_ tắt của hai _góc_ mà chúng ta so sánh.) 
-
-::: .theorem
-
- Nếu hai góc trong một tam giác đồng dạng với hai góc trong một tam giác khác thì hai tam giác tương tự nhau. 
-
-:::
-
----
-> id: similar-triangles-1
-
- Chúng ta hãy xem một vài ví dụ trong đó điều này hữu ích: 
-
-::: column(width=320)
-
-{.todo} SẮP RA MẮT - Hoạt hình 
-
-::: column.grow
-
- Ở đây bạn có thể thấy hình ảnh của một ngọn hải đăng lớn. Cùng với một người bạn, bạn muốn đo chiều cao của ngọn hải đăng, nhưng tiếc là chúng ta không thể leo lên đỉnh. 
-
- Hóa ra, ẩn rất rõ, sơ đồ chứa hai hình tam giác tương tự: một được hình thành bởi ngọn hải đăng và bóng của nó, và một được hình thành bởi bạn của bạn và bóng của cô ấy. 
-
- Cả hai hình tam giác đều có một góc vuông ở phía dưới. Các tia mặt trời song song, có nghĩa là hai góc còn lại ở phía dưới là các góc tương ứng, và cũng bằng nhau. Theo điều kiện AA cho các tam giác, hai điều này phải giống nhau. 
-
- Chúng tôi có thể dễ dàng đo chiều dài của bóng và chúng tôi cũng biết chiều cao của bạn. Bây giờ chúng ta có thể sử dụng tỷ lệ của các cạnh trong các hình tam giác tương tự để tìm chiều cao của ngọn hải đăng: 
-
-{.todo} SẮP RA MẮT - Phương trình 
-
- Do đó ngọn hải đăng cao 1,5m. 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo} SẮP RA MẮT - Hoạt hình 
-
-::: column.grow
-
- Chúng ta có thể sử dụng kỹ thuật tương tự để đo khoảng cách trên mặt đất. Ở đây chúng tôi muốn tìm chiều rộng của một con sông lớn. Có một cái cây lớn ở một bên bờ sông, và tôi có một cây gậy dài một mét. 
-
- Hãy thử vẽ hai hình tam giác tương tự khác trong sơ đồ này. 
-
- Bạn có thể đánh dấu điểm dọc theo bờ sông, nằm ngay trên đường ngắm từ đầu cây gậy đến gốc cây. Sau đó, chúng ta có thể đo khoảng cách đến cây gậy, và đến điểm đối diện trực tiếp với cây. 
-
- Một lần nữa, hai hình tam giác này giống nhau vì điều kiện AA. Cả hai đều có một góc vuông, và trên cặp góc đối diện. 
-
- Theo quy tắc tỷ lệ, điều này có nghĩa là 
-
-{.todo} SẮP RA MẮT - Phương trình 
-
- Do đó chiều rộng của dòng sông là 45 mét. 
-
-:::
-
----
-
-### Độ tương tự trên tia 
-
- Định lý: Nếu một tia chia đôi một góc của một tam giác, thì nó chia cạnh đối diện thành các đoạn tỷ lệ với độ dài của hai cạnh còn lại. 
-
- Chúng ta có thể mở rộng định lý này đến một tình huống bên ngoài các tam giác nơi chúng ta có nhiều đường thẳng song song bị cắt bởi các chuyển vị. 
-
- Định lý: Nếu ba hoặc nhiều đường thẳng song song bị cắt bởi hai đường ngang, thì chúng chia các đường ngang theo tỷ lệ. 
-
- Hãy suy nghĩ về một trung gian của một hình tam giác. Một đường giữa song song với một cạnh của một tam giác và chia hai cạnh còn lại thành hai nửa đồng dạng. Phần giữa chia hai bên theo tỷ lệ. 
-
- Định lý tỷ lệ tam giác: Nếu một đường thẳng song song với một cạnh của một tam giác cắt hai cạnh kia, thì nó chia các cạnh đó theo tỷ lệ. 
-
- Định lý tỷ lệ tam giác Converse: Nếu một đường thẳng chia hai cạnh của một tam giác theo tỷ lệ, thì nó song song với cạnh thứ ba. 
-
----
-
-### Tự tương tự 
-
- Có một số hình dạng toán học tò mò tương tự như một phần nhỏ hơn _của chính họ_ . Một ví dụ là __Tam giác Sierpinksi__ : toàn bộ tam giác tương tự như bất kỳ một trong các tam giác nhỏ hơn mà nó bao gồm. Bạn có thể phóng to và vô số hình tam giác nhỏ hơn và nhỏ hơn. 
-
- Hình dạng với đặc tính này được gọi là __Fractals__ . Họ có một số thuộc tính XXX đáng ngạc nhiên và thực sự, mà bạn sẽ tìm hiểu thêm trong tương lai. 
-
----
-
- Tam giác không chỉ hữu ích để đo khoảng cách. Trong khóa học tiếp theo, chúng ta sẽ tìm hiểu thêm rất nhiều về hình tam giác và tính chất của chúng.
+TODO

@@ -106,8 +106,6 @@ __{.green}7__|__{.orange}21__.
 
 这个方法的特殊地方在遇到平方数时: 这种情况下，你在中点会遇到只有一个数的情形，就像64 = 8 × 8.
 
-    //- TODO Factorisation exercises
-
 ---
 
 ## 整除规律
@@ -116,7 +114,6 @@ __{.green}7__|__{.orange}21__.
 > section: rules
 
 有些许的不同规则能够简单的检测一个数是否能被另一个数整除。在本节我们将看看其中的一些规则…
-
 
 ### 被2和5整除
 
@@ -276,8 +273,6 @@ __{.m-yellow.digit-sum-is}4__.
 为了检测一个数是否能被6整除我们只用检测它是否能被2整除[[同时也|或]]被3整除。
 注意到这对6有效，但是不一定对 _任意_ 两个数的乘积数有效。关于那我们稍后再论…
 
-    //- TODO Practice exercises
-
 ---
 > id: primes
 > section: primes
@@ -289,8 +284,6 @@ __{.m-yellow.digit-sum-is}4__.
 某种程度上，它们成了“原子数”。
 
 注意 1 自身 _不是_ 一个素数, 所以首批的一些素数是 2, 3, 5, 7, 11, 13, …
-
-    //- TODO Exercises
 
 ---
 > id: primes1
@@ -338,8 +331,6 @@ __{.m-yellow.digit-sum-is}4__.
 利用算术基本定理能够使许多数学问题变得简单多了: 我们做多个数的质因数分解时，我们先独立
 分解一个个数来解决问题，这样通常会简单很多，然后把这些结果组合起来从而解决原来
 的问题。
-
-    //- TODO Exercises
 
 ---
 > id: eratosthenes
@@ -395,10 +386,6 @@ __{.m-yellow.digit-sum-is}4__.
         .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
       li 在这两种情况下，我们找到了一个新的素数它却不在我们的原始列表中，但我们又假设了所有素数都在这个列表中。
       li 显然出了什么问题！但是从步骤#[span.proof-step 2]–#[span.proof-step 4]都是绝对有效的，唯一的可能性是我们在步骤#[span.proof-step 1]中的初始假设是错误的。这意味着一定有无穷多个的素数。
-
-    // Notice that any prime that divides N cannot divide N + 1. (If it would,
-    // it also had to divide the difference between N and N + 1 which is 1. But
-    // the only number that divides 1 is 1 itself.)
 
 ---
 > id: primes4
@@ -461,8 +448,6 @@ __{.m-yellow.digit-sum-is}4__.
 
 ---
 > id: ulam
-
-    //- Stanislaw M. Ulam was doodling during the presentation of a "long and very boring paper" at a scientific meeting in 1963.
 
 ### 乌拉姆螺旋
 
@@ -770,8 +755,6 @@ __{.m-green}30__和__{.m-yellow}45__：
 一个特例是质数：两个不同质数的最小公倍数是它们简单的求[[积|和|差]], 因为它们没
 有任何共同的数素因子会被“消去”。
 
-    //- TODO Exercises
-
 ---
 > id: cicadas
 > goals: bound-low bound-high
@@ -808,8 +791,6 @@ __{.m-green}30__和__{.m-yellow}45__：
 
 当然，蝉不知道素数是什么，但在数百万年的时间里，进化证明了素数周期是最安全的。
 捕食者似乎已经随着时间的推移而灭绝，但素数周期仍然存在。
-
-    //- TODO Exercises
 
 ---
 > id: gcd

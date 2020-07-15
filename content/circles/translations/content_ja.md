@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -23,7 +24,7 @@
 > id: radius
 > goals: compass
 
- [__円の__](gloss:circle)すべての点は、中心からの距離が同じです。これは、 [コンパス](gloss:compass)を使用して描画できることを意味します。 
+[__円の__](gloss:circle)すべての点は、中心からの距離が同じです。これは、 [コンパス](gloss:compass)を使用して描画できることを意味します。 
 
 ::: column(width=320)
 
@@ -41,7 +42,9 @@
 
 {.reveal(when="compass")}知っておくべき円に関連する3つの重要な測定があります。 
 
- * {.reveal(when="compass" delay="1000")}の[{.pill.red.b}半径](target:r)は、円の中心からその外縁までの距離です。 * {.reveal(when="compass" delay="4000")}の[{.pill.blue.b}直径](target:d)は、円の2つの向かい合う点の間の距離です。中央を通り、長さは[[2倍|ハーフ|]]半径[[と同じ]]です。 * {.reveal(when="blank-0")}の[{.pill.green.b}円周](target:c) （または周長）は、円の周りの距離です。 
+* {.reveal(when="compass" delay="1000")}の[{.pill.red.b}半径](target:r)は、円の中心からその外縁までの距離です。
+* {.reveal(when="compass" delay="4000")}の[{.pill.blue.b}直径](target:d)は、円の2つの向かい合う点の間の距離です。中央を通り、長さは[[2倍|ハーフ|]]半径[[と同じ]]です。
+* {.reveal(when="blank-0")}の[{.pill.green.b}円周](target:c) （または周長）は、円の周りの距離です。 
 
 :::
 
@@ -227,7 +230,7 @@
 
 ::: column.grow
 
- 1665年、 [アイザックニュートン](bio:newton)は15桁の計算に成功しました。今日では、強力なコンピューターを使用してPiの値をはるかに高い精度で計算できます。 
+1665年、 [アイザックニュートン](bio:newton)は15桁の計算に成功しました。今日では、強力なコンピューターを使用してPiの値をはるかに高い精度で計算できます。 
 
 現在の記録は31.4兆桁です。これらすべての数字を含む印刷された本は、約400 \ kmの厚さになります。これが、 [国際宇宙ステーションが](gloss:iss)地球を周回する高さです。 
 
@@ -238,7 +241,7 @@
 ---
 > id: pi-sequence
 
- Piを計算する1つの方法は、無限の数列を使用することです。 1676年に[Gottfried Wilhelm Leibniz](bio:leibniz)によって発見された1つの例を次に示します。 
+Piを計算する1つの方法は、無限の数列を使用することです。 1676年に[Gottfried Wilhelm Leibniz](bio:leibniz)によって発見された1つの例を次に示します。 
 
 {.text-center}`π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
@@ -271,7 +274,7 @@
 > id: pi-digits
 > goals: search
 
- Piが正常である場合は、 _任意_の数字列を考えることができ、数字のどこかに表示されます。ここでは、Piの最初の100万桁を検索できます。これには誕生日が含まれていますか？ 
+Piが正常である場合は、 _任意_の数字列を考えることができ、数字のどこかに表示されます。ここでは、Piの最初の100万桁を検索できます。これには誕生日が含まれていますか？ 
 
 ::: .box.f-red.pi-box
 
@@ -291,7 +294,7 @@
 
 ハリーポッターのような本全体を非常に長い数字の文字列（a = 01、b = 02など）に変換することもできます。 Piが正常である場合、この文字列は数字のどこかに表示されますが、それを見つけるのに十分な数字を計算するには数百万年かかります。 
 
- Piは理解しやすいですが、科学と数学では基本的に重要です。それがPiが私たちの文化で異常に人気になった理由かもしれません（少なくとも、他の数学のトピックと比較して）： 
+Piは理解しやすいですが、科学と数学では基本的に重要です。それがPiが私たちの文化で異常に人気になった理由かもしれません（少なくとも、他の数学のトピックと比較して）： 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -323,6 +326,7 @@
 
 > section: radians
 > id: degrees
+> translated: auto
 
 これまでのジオメトリでは、角度を[度](gloss:degrees)単位で常に測定してきました。あ__{.m-red}全円__回転は[[360]]°、 __{.m-green}半円__は[[180]]°、 __{.m-yellow}四分円__は[[90]]°、などです。 
 
@@ -470,7 +474,9 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 
 ラジアン値は、 _πの_倍数として、または単一の10進数として書き込むことができます。度とラジアンで表した同等の角度サイズの表に記入できますか？ 
 
- | __{.m-red}度__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ | | __{.m-green}ラジアン__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` | {.table-small.grid}
+| __{.m-red}度__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ |
+| __{.m-green}ラジアン__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
+{.table-small.grid}
 
 ---
 > id: radians-distance
@@ -569,6 +575,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 前のセクションでは、中心、半径、直径、円周など、円のいくつかの異なる部分に付けられた名前を学びました。ただし、円に関連する多くの幾何学的要素があり、より複雑な問題を解決する必要があります。 
 
@@ -599,7 +606,12 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column.grow(parent="right")
 
- * {.r}あ[{.red}割線](pill:secant)は、2点で円と交差する線です。 [続行](btn:next) * {.r.reveal(when="next-0")}あ[{.green}弦](pill:chord)は、端点が円の円周上にある線分です。 [続行](btn:next) * {.r.reveal(when="next-1")}あ[{.blue}接線](pill:tangent)は、正確に1点で円に接する線です。これは__接点__と呼ばれます。 [続行](btn:next) * {.r.reveal(when="next-2")}あ[{.yellow}円弧](pill:arc)は円周の一部です。 [続行](btn:next) * {.r.reveal(when="next-3")}あ[{.teal}セクター](pill:sector)は、 _円弧_と_2つの半径_で囲まれた円の内部の一部です。 [続行](btn:next) * {.r.reveal(when="next-4")}最後に、 [{.purple}セグメント](pill:segment)は、 _円弧_と_弦_で囲まれた円の内部の一部です。 [継続する](btn:next) 
+* {.r}あ[{.red}割線](pill:secant)は、2点で円と交差する線です。 [続行](btn:next)
+* {.r.reveal(when="next-0")}あ[{.green}弦](pill:chord)は、端点が円の円周上にある線分です。 [続行](btn:next)
+* {.r.reveal(when="next-1")}あ[{.blue}接線](pill:tangent)は、正確に1点で円に接する線です。これは__接点__と呼ばれます。 [続行](btn:next)
+* {.r.reveal(when="next-2")}あ[{.yellow}円弧](pill:arc)は円周の一部です。 [続行](btn:next)
+* {.r.reveal(when="next-3")}あ[{.teal}セクター](pill:sector)は、 _円弧_と_2つの半径_で囲まれた円の内部の一部です。 [続行](btn:next)
+* {.r.reveal(when="next-4")}最後に、 [{.purple}セグメント](pill:segment)は、 _円弧_と_弦_で囲まれた円の内部の一部です。 [継続する](btn:next) 
 
 :::
 
@@ -658,9 +670,9 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: .reveal(when="blank-0 blank-1")
 
- 2つの点_A_と_Bの_間の弧は、 `arc(AB)` 。この定義は少しあいまいです。 [{.purple}](pill:major) _A_と_B_を結ぶ[2番目の円弧](pill:major)ですが、円の周りを逆方向に進みます。 
+2つの点_A_と_Bの_間の弧は、 `arc(AB)` 。この定義は少しあいまいです。 [{.purple}](pill:major) _A_と_B_を結ぶ[2番目の円弧](pill:major)ですが、円の周りを逆方向に進みます。 
 
- 2つの円弧の小さい方が__マイナーアーク__と呼ばれ、大きい方が__大きな弧を__呼ばれています。点_A_と_B_が互いに正反対の場合、両方の弧は同じ長さで[[半円に]]なります[[|直径|円周]] 。 
+2つの円弧の小さい方が__マイナーアーク__と呼ばれ、大きい方が__大きな弧を__呼ばれています。点_A_と_B_が互いに正反対の場合、両方の弧は同じ長さで[[半円に]]なります[[|直径|円周]] 。 
 
 :::
 
@@ -710,23 +722,21 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red}弧長](pill) | = | `"circumference" × c/360` | | | = | `2 π r × c/360` | {.eqn-system}
+| [{.red}弧長](pill) | = | `"circumference" × c/360` |
+| | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow}セクターエリア](pill) | = | `"circle area" × c/360` | | | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow}セクターエリア](pill) | = | `"circle area" × c/360` |
+| | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 
 ここで、 _r_は円の半径、 _c_は中心角のサイズです。 
 
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
     
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
@@ -737,11 +747,15 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
- | [{.red}弧長](pill) | = | `2 π r × c/(2π)` | | | = | `r × c` | {.eqn-system}
+| [{.red}弧長](pill) | = | `2 π r × c/(2π)` |
+| | = | `r × c` |
+{.eqn-system}
 
 ::: column(width=320)
 
- | [{.yellow}セクターエリア](pill) | = | `π r^2 × c/(2π)` | | | = | `1/2 r^2 c` | {.eqn-system}
+| [{.yellow}セクターエリア](pill) | = | `π r^2 × c/(2π)` |
+| | = | `1/2 r^2 c` |
+{.eqn-system}
 
 :::
 
@@ -871,59 +885,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 > section: circle-theorems
 > sectionStatus: dev
 
- https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http：// amsi .org.au / teacher_modules / Circle_Geometry.html 
-
- __[CC]内接された角度、半径、および弦の間の関係を識別して説明します。中心角、内接角、外接角の関係を含めます。直径の内接角は直角です。円の半径は、半径が円と交差する接線に垂直です。__ 
-
-内接角度は、その頂点が円であり、その側面に弦が含まれている角度です。インターセプトされた弧は、内接された角度の内側にあり、その端点が角度にある弧です。内接された角度の頂点は、その側面が円と交差して切片の弧を形成する限り、円のどこにあってもかまいません。 
-
- __内接角度定理内接角度__の測定値は、遮断された弧の測定値の半分です。内接角度定理を証明するには、調査から引き出された3つの異なる角度のように、3つのケースに分割する必要があります。 
-
-一致する__内接角の定理__同じ弧を横切る内接角は合同です。 
-
- __内接角半円定理__半円を遮る角度が直角です。 
-
-内接角半円定理では、角度が半円に内接しているとも言えます。直角が円に内接しているときはいつでも、角度の端点は直径の端点です。したがって、内接角半円定理の逆も当てはまります。 
-
-角度が円上にある場合、頂点は円の円周上にあります。円の角度の1つのタイプは、接線と弦によって形成される角度です。 
-
- __弦/接線の角度定理__円と交差する弦と接線によって形成される角度の大きさは、切片の弧の大きさの半分です。 
-
-コード/接線角度定理から、切片の弧の半分の大きさである2種類の角度があることがわかりました。内接角度と、弦と接線がなす角度。したがって、円の頂点との角度は、遮断された円弧の測定値の半分になります。 
-
-頂点が円のどこかにあるが、中心にはない場合、角度は円の内側と見なされます。円内のすべての角度は、交差する2つの弦によって形成されます。 
-
- __交差する弦の角度定理__円の内側で交差する2つの弦によって形成される角度の測定値は、遮断された円弧の測定値の平均です。 
-
-角度の頂点が円の外側にあり、側面が接線または割線である場合、角度は円の外側にあると見なされます。円の外側にある角度には、2つの接線がなす角度、接線と割線がなす角度、2つの割線がなす角度の3種類があります。円の内側または円上の角度と同様に、円の外側の角度には、遮断された弧を含む特定の式があります。 
-
-外角__定理__ 2つのセカント、2つの接線、またはセカントと円の外側の点から引かれた接線によって形成される角度の測定値は、遮断された弧の測定値の差の半分に等しくなります。 
-
- 2つの弦が円内で交差する場合、それらが作成する2つの三角形は類似しており、各三角形の辺が互いに比例します。 ADとBCを削除しても、AE、EC、DE、EBの比率は同じです。 
-
- __交差するコードの定理__ 2つのコードが円内で交差し、一方が長さaとbのセグメントに分割され、もう一方が長さcとdのセグメントに分割される場合、ab = cdになります。言い換えると、1つのコードのセグメントの積は、2番目のコードのセグメントの積と等しくなります。 
-
-円は、円の外側に角度を形成するだけでなく、割線を互いに比例するセグメントに分割することもできます。 
-
-交差する弦を描くと、2つの類似した三角形ができます。 
-
-内接角度と反射特性（∠R≅∠R）から、△PRS∼△TRQ。 2つの三角形は類似しているため、対応する辺の間に比率を設定できます。次に、交差乗算します。 ac + d = ca +b⇒a（a + b）= c（c + d） 
-
- __2つのセカントセグメントの定理__ 2つのセカントが円の外側の共通点から描かれ、セグメントに上記のようにラベルが付けられている場合、a（a + b）= c（c + d）になります。言い換えると、外側のセグメントと1つの割線の全体の積は、外側のセグメントともう一方の割線の全体の積に等しくなります。 
-
-接線と割線が円の外の共通点で交わる場合、作成されるセグメントは2つの割線と同様の関係になります。割線の外側の部分と全体の積は、他の割線と同じであることを思い出してください。これらのセグメントの1つが接線である場合、それは依然として外側部分と全体の積になります。ただし、接線の場合、外側の部分と全体が等しくなります。 
-
- __接線__割線の__セグメント定理__接線と割線が円の外側の共通点から描かれている場合（セグメントは左の図のようにラベル付けされている）、a2 = b（b + c）になります。これは、割線の外側のセグメントと全体の積が接線セグメントの2乗に等しいことを意味します。 
-
----
-
-### タレスの定理
-
-二等辺三角形を使用した証明
-
-すべてのユークリッド幾何学を組み合わせます
-
-{.todo} TODO 
+TODO 
 
 ---
 
@@ -932,15 +894,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 > sectionStatus: dev
 > section: cyclic-polygons
 
- __[CC]正三角形、正方形、および円に内接する正六角形を作成します。__ 
-
-内接ポリゴンは、すべての頂点が円上にあるポリゴンです。すべての四辺形または多角形が円に内接できるわけではないことに注意してください。内接四辺形は、周期四辺形とも呼ばれます。これらのタイプの四辺形には、1つの特別なプロパティが必要です。ここで調査します。 
-
-この調査は、内接四辺形の反対の角度が補足であることを示しています。四角形を対角線で半分にカットすることにより、他の2つの角度（カットしなかった）が一致したときに線形ペアを形成することを示すことができました。 
-
-内接四辺形定理：四角形は、反対の角度が補足的である場合にのみ、円に内接されます。 
-
- https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -948,6 +902,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 前のセクションでは、平面上の円の特性を調査しました。しかし、私たちの世界は実際には3次元なので、円に基づくいくつかの3Dソリッドを見てみましょう。 
 
@@ -982,7 +937,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ここでは、ドイツのオーバーハウゼンにある円筒形の_ガスメーター_を見ることができます。近くの工場や発電所で燃料として使用されていた天然ガスを貯蔵するために使用されていました。 Gasometerの高さは120mで、底面と天井は半径35mの2つの大きな円です。エンジニアが回答したいと思う2つの重要な質問があります。 
 
- *どれだけの天然ガスを貯蔵できますか？これは[[ボリュームです|範囲|]]円柱の[[直径]] 。 * {.reveal(when="blank-0")}ガスメーターを構築するにはどのくらいの鋼が必要ですか？これは（およそ） [[表面積です|周|]]円柱の[[対角線]] 。 
+*どれだけの天然ガスを貯蔵できますか？これは[[ボリュームです|範囲|]]円柱の[[直径]] 。 * {.reveal(when="blank-0")}ガスメーターを構築するにはどのくらいの鋼が必要ですか？これは（およそ） [[表面積です|周|]]円柱の[[対角線]] 。 
 
 {.reveal(when="blank-0 blank-1")}これらの両方の結果の数式を見つけてみましょう！ 
 
@@ -1060,11 +1015,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
     
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
 > id: cylinder-surface
@@ -1075,9 +1026,10 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 シリンダーの表面積を見つけるには、それをフラット[ネット](gloss:net)に「展開」する必要があります。たとえば、食品の缶のラベルをはがすことで、これを自分で試すことができます。 
 
- 2つの[[円]]があります[[|球|正方形]] 。1つは円柱の上部にあり、もう1つは円柱の下部にあります。湾曲した側は実際には大きな[[長方形です|平方|楕円形]] 。 
+2つの[[円]]があります[[|球|正方形]] 。1つは円柱の上部にあり、もう1つは円柱の下部にあります。湾曲した側は実際には大きな[[長方形です|平方|楕円形]] 。 
 
- * {.reveal(when="blank-0 blank-1")} 2つの円にはそれぞれ領域があります_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ 。 * {.reveal(when="eqn-0")}長方形の高さは_{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")}長方形の幅は[[円周]]と同じです[[|直径|]]円の[[接線]] ：_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ 。 
+* {.reveal(when="blank-0 blank-1")} 2つの円にはそれぞれ領域があります_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ 。
+* {.reveal(when="eqn-0")}長方形の高さは_{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")}長方形の幅は[[円周]]と同じです[[|直径|]]円の[[接線]] ：_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ 。 
 
 ::: column(width=320)
 
@@ -1109,7 +1061,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column.grow
 
- [__円錐__](gloss:cone)は、円形の3次元ソリッドです。 __{.m-red}ベース__ 。図に示されているように、その側面は「上向きに先細り」になっており、 __{.m-green}頂点__ 。 
+[__円錐__](gloss:cone)は、円形の3次元ソリッドです。 __{.m-red}ベース__ 。図に示されているように、その側面は「上向きに先細り」になっており、 __{.m-green}頂点__ 。 
 
 の__{.m-red}__円錐の__半径は、__円形基部の半径であり、そして__{.m-blue}__コーンの__高さ__は、ベースから頂点までの垂直距離です。 
 
@@ -1223,7 +1175,9 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 の半径__{.m-green}セクター__は、円錐の縁から頂点までの距離と同じです。これは[{.pill.green.b}](target:s)コーン[_の_傾斜高さ_s。_](target:s)通常とは異なります[{.pill.blue.b}高さ_h_](target:h) 。 [ピタゴラス](gloss:pythagoras-theorem)を使用して傾斜高さを見つけることができます： 
 
- | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ | {.eqn-system}
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
+| `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
 
 ::: column(width=280)
 
@@ -1250,7 +1204,8 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
- | `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` | | | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
+| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
 
 :::
 
@@ -1291,7 +1246,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column.grow
 
- [__球__](gloss:sphere)は、指定された距離から同じ距離にあるすべての点で構成される3次元の立体です__{.m-green}センター_C。___この距離は__{.m-red}__球の__半径_r___ 。 
+[__球__](gloss:sphere)は、指定された距離から同じ距離にあるすべての点で構成される3次元の立体です__{.m-green}センター_C。___この距離は__{.m-red}__球の__半径_r___ 。 
 
 球は「3次元の[円](gloss:circle) 」と考えることができます。まるで円のように、球も__{.m-blue}直径_d___ 、 [[2倍|]]半径の長さの[[半分]]だけでなく、和音と割線。 
 
@@ -1386,7 +1341,9 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 穴の半径は_h_です。大きな円の面積から穴の面積を引くと、リングの面積がわかります。 
 
- | _A_ | = | `π r^2 - π h^2` | | | = | `π (r^2 - h^2)` | {.eqn-system}
+| _A_ | = | `π r^2 - π h^2` |
+| | = | `π (r^2 - h^2)` |
+{.eqn-system}
 
 :::
 
@@ -1399,7 +1356,8 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
- | `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` | | | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
+| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+| | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ | 
 
 :::
 
@@ -1418,7 +1376,9 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 地球は（おおよそ）半径6,371 \ kmの球体です。したがって、そのボリュームは
 
- | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | | | `=` | _{span.numbers} 1_ `"km"^3` | {.eqn-system}
+| `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+|     | `=` | _{span.numbers} 1_ `"km"^3` |
+{.eqn-system}
 
 {.reveal(when="numbers")}地球の平均密度は`5510 "kg/m"^3` 。これは、その総質量が
 
@@ -1502,22 +1462,10 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 {.todo}近日公開：球の表面積の証明
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
     
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
 
 ---
 
@@ -1526,6 +1474,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 円は、 [コーンを](gloss:cone)通る「スライス」を使用して作成できる4つの異なる形状の1つです。これは、トーチのライトコーンを使用して説明できます。 
 
@@ -1574,15 +1523,9 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 楕円は、単に「細長い円」のように見えます。実際、 _2つの中心_を持つ円と考えることもできます。これらは__フォーカルポイント__と呼ばれます。円上のすべての点が中心からの距離が同じであるように、楕円上のすべての点は、2つの焦点まで_の距離の合計が_同じです。 
 
- 2つの固定点に接続された長い文字列がある場合、文字列の最大距離をトレースすることにより、完全な楕円を描くことができます。 
+2つの固定点に接続された長い文字列がある場合、文字列の最大距離をトレースすることにより、完全な楕円を描くことができます。 
 
 {.todo}近日提供予定：楕円のインタラクティブな描画
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
@@ -1691,7 +1634,6 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

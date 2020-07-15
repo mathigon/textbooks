@@ -239,12 +239,3 @@ TODO
 > sectionStatus: dev
 
 TODO
-
----
-
-## Causation vs Correlation
-
-> section: causation-correlation
-> sectionStatus: dev
-
-TODO

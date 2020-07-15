@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Molte professioni che usano la matematica sono interessate a un aspetto specifico: _trovare schemi_ e poter predire il futuro. Ecco alcuni esempi:
 
@@ -287,6 +288,7 @@ Ecco alcuni altri esempi di fotografia in sequenza d'azione per il tuo divertime
 
 > section: arithmetic-geometric
 > id: halley
+> translated: auto
 
 ::: column.grow
 
@@ -642,6 +644,7 @@ Questa sequenza di numeri ha un nome speciale: i poteri __di 3__. Come puoi vede
 
 > section: figurate
 > id: figurate
+> translated: auto
 
 Il nome per [sequenze geometriche](gloss:geometric-sequence) è piuttosto confuso, perché non hanno nulla a che fare con la geometria. In effetti, il nome è stato sviluppato centinaia di anni fa, quando i matematici pensavano alla _moltiplicazione_ e _radici quadrate_ in un modo molto più geometrico.
 
@@ -898,6 +901,7 @@ FARE
 
 > section: fibonacci
 > id: rabbits
+> translated: auto
 
 Immagina di aver ricevuto un paio di coniglietti, un maschio e una femmina. Sono conigli molto speciali, perché non muoiono mai, e quella femmina dà alla luce una nuova coppia di conigli esattamente una volta al mese (sempre un'altra coppia di maschi e femmine).
 
@@ -1307,6 +1311,7 @@ Quante scelte ci sono per le scale con 6, 7 o 8 gradini? Riesci a rilevare un mo
 
 > section: special
 > id: special-intro
+> translated: auto
 
 Oltre alle [sequenze aritmetiche](gloss:arithmetic-sequence) e [geometriche](gloss:geometric-sequence), [numeri di Fibonacci](gloss:fibonacci-numbers) e [numeri figurati](gloss:figurate-numbers), ci sono innumerevoli sequenze interessanti che non seguono una simile , schema regolare.
 
@@ -1581,6 +1586,7 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
 > section: pascals-triangle
 > id: pascal-intro
+> translated: auto
 
 Di seguito puoi vedere una piramide numerica creata usando un modello semplice: inizia con un singolo “1” in alto e ogni cella successiva è la somma delle due celle direttamente sopra. Passa il mouse sopra alcune celle per vedere come vengono calcolate, quindi compila quelle mancanti:
 

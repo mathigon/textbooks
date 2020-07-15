@@ -4,8 +4,9 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
- [線](gloss:line)や[多角形](gloss:polygon)などの多くの幾何学的概念は、数学者によって「発明」されました。一方、対称性は私たちの周りのいたるところにあります。ほとんどすべての植物、動物、そして私たち人間でさえ対称です。 
+[線](gloss:line)や[多角形](gloss:polygon)などの多くの幾何学的概念は、数学者によって「発明」されました。一方、対称性は私たちの周りのいたるところにあります。ほとんどすべての植物、動物、そして私たち人間でさえ対称です。 
 
 ::: column(width=200)
 
@@ -39,7 +40,7 @@
 
 しかし、対称性は単に_美しく見える_ことよりもはるかに重要です。それは私たちの宇宙のまさに基礎にあり、物理学の最も基本的な法則を説明することさえできます。 
 
- _{button.next-step}継続する_ 
+_{button.next-step}継続する_ 
 
 ---
 > id: transformations
@@ -78,8 +79,9 @@
 
 > id: rigid
 > section: rigid
+> translated: auto
 
- [__リジッド変換__](gloss:rigid-transformation)は、Figureのサイズや形状を変更しない特殊な変換です。木や金属などの固い素材でできていると想像できます。移動、回転、裏返すことはできますが、伸ばしたり、曲げたり、その他の方法で変形することはできません。 
+[__リジッド変換__](gloss:rigid-transformation)は、Figureのサイズや形状を変更しない特殊な変換です。木や金属などの固い素材でできていると想像できます。移動、回転、裏返すことはできますが、伸ばしたり、曲げたり、その他の方法で変形することはできません。 
 
 これら5つの変換のどれが固定的ですか？ 
 
@@ -134,7 +136,7 @@
 
 ### 翻訳
 
- [__平行__](gloss:translation)移動は、図のすべての点を同じ方向に同じ距離だけ移動する変換です。 
+[__平行__](gloss:translation)移動は、図のすべての点を同じ方向に同じ距離だけ移動する変換です。 
 
 座標平面では、 _x_軸と_y_軸に沿って図形を移動する距離によって移動を指定できます。たとえば、（3、5）による変換では、 _x_軸に沿って3だけ、 _y_軸に沿って5だけ図形が移動します。 
 
@@ -220,7 +222,7 @@
 
 ### 反射
 
- [__反射__](gloss:reflection)は、線を横切って形状を「反転」または「 [__鏡映__](gloss:reflection) 」する変換です。この線は__反射__線と呼ばれます。 
+[__反射__](gloss:reflection)は、線を横切って形状を「反転」または「 [__鏡映__](gloss:reflection) 」する変換です。この線は__反射__線と呼ばれます。 
 
 これらの例のそれぞれに反射線を引きます。 
 
@@ -342,7 +344,7 @@
 
 ### 回転
 
- [__回転__](gloss:rotation)は、固定点を中心に特定の角度で形状を「回転」させる変換です。その点[__を回転中心__](gloss:center-of-rotation)といいます。回転は時計回りでも反時計回りでもかまいません。 
+[__回転__](gloss:rotation)は、固定点を中心に特定の角度で形状を「回転」させる変換です。その点[__を回転中心__](gloss:center-of-rotation)といいます。回転は時計回りでも反時計回りでもかまいません。 
 
 下の図形を赤い回転の中心を中心に回転してみてください。 
 
@@ -446,35 +448,7 @@
 > section: congruence
 > sectionStatus: dev
 
- TODO 
-
----
-
-### 変換の構成
-
-もちろん、複数の平行移動、反射、回転を組み合わせて、より複雑な変換を作成できます。 
-
-{.todo} TODOの例
-
-しかし、結局のところ、組み合わせる変換の数は関係ありません。同じことを一度に行う別の変換をいつでも見つけることができます。 
-
-{.todo} TODO変換構成計算機
-
- 2つの反射を組み合わせると特に興味深いです。考慮する必要がある2つの異なるケースがあります。 
-
-::: column.grow
-
- 2つの反射線が平行である場合、結果は1つの平行移動になります。平行移動の方向は反射線に垂直であり、距離は反射線間の距離の2倍です。 
-
-{.todo} TODOアニメーション
-
-::: column.grow
-
- 2つの反射線が交差する場合、結果は単一の回転になります。回転の中心は反射線間の交点であり、角度は反射線間の角度の2倍です。 
-
-{.todo} TODOアニメーション
-
-:::
+TODO 
 
 ---
 
@@ -483,8 +457,9 @@
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
- [__対称性__](gloss:symmetry)は私たちの周りのいたるところにあり、直観的な概念：オブジェクトのさまざまな部分が_同じ_ように見える。しかし、変換を使用すると、対称性が_実際_に何を意味するかについて、より正確で数学的な定義を与えることができます。 
+[__対称性__](gloss:symmetry)は私たちの周りのいたるところにあり、直観的な概念：オブジェクトのさまざまな部分が_同じ_ように見える。しかし、変換を使用すると、対称性が_実際_に何を意味するかについて、より正確で数学的な定義を与えることができます。 
 
 {.definition}特定の変換を適用した後でも、オブジェクトが同じに見える場合、オブジェクトは_対称的_です。 
 
@@ -653,9 +628,9 @@
 
 ::: column.grow
 
- [__回転__](gloss:rotational-symmetry)後（360°未満）に同じように見える場合、形状は[__回転対称__](gloss:rotational-symmetry)です。 [回転](gloss:center-of-rotation)の[中心](gloss:center-of-rotation)は通常、形状のちょうど中央です。 
+[__回転__](gloss:rotational-symmetry)後（360°未満）に同じように見える場合、形状は[__回転対称__](gloss:rotational-symmetry)です。 [回転](gloss:center-of-rotation)の[中心](gloss:center-of-rotation)は通常、形状のちょうど中央です。 
 
- [__対称__](gloss:order-of-symmetry)の[__次数は__](gloss:order-of-symmetry) 、形状が同じに見える異なる方向の数です。最初に戻る前に_、図形を回転できる回数_と考えることもできます。たとえば、このスノーフレークの次数は[[6]]です。 
+[__対称__](gloss:order-of-symmetry)の[__次数は__](gloss:order-of-symmetry) 、形状が同じに見える異なる方向の数です。最初に戻る前に_、図形を回転できる回数_と考えることもできます。たとえば、このスノーフレークの次数は[[6]]です。 
 
 {.reveal(when="blank-0")}各回転の角度は`"360°"/"order"` 。スノーフレークでは、これは`"360°"/6 = input(60)°` 。 
 
@@ -664,8 +639,6 @@
     include svg/snowflake.svg
 
 :::
-
-    // Maybe have another alphabeth to select all letters with rotational symmetry?
 
 ---
 > id: rotational-symmetry-1
@@ -741,9 +714,7 @@
 
 > id: groups
 > section: symmetry-groups
-
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
+> translated: auto
 
 一部の形状には複数の対称性があります。簡単な例として[正方形](gloss:square)を見てみましょう。 
 
@@ -824,7 +795,7 @@
 
 対称計算機をいじって、パターンを見つけてみてください。これらの観察を完了することができますか？ 
 
- *常に[[回転を]]与える2つの回転を追加します[[|反射]] （またはアイデンティティ）。 * 2つの反射を追加すると、常に[[回転が行われます|反射]] （またはアイデンティティ）。 *同じ2つの対称性を逆の順序で追加すると[[、異なる|いつも違う|常に同じ]]結果になります。 * IDを追加[[しても何も]]起こり[[ません|反射を返します|反対を返します]] 。 
+*常に[[回転を]]与える2つの回転を追加します[[|反射]] （またはアイデンティティ）。 * 2つの反射を追加すると、常に[[回転が行われます|反射]] （またはアイデンティティ）。 *同じ2つの対称性を逆の順序で追加すると[[、異なる|いつも違う|常に同じ]]結果になります。 * IDを追加[[しても何も]]起こり[[ません|反射を返します|反対を返します]] 。 
 
 ---
 > id: group-axioms
@@ -921,13 +892,13 @@
 
 > id: wallpaper-groups
 
- [前のセクションで](/course/transformations/symmetry)は、回転と反射という2つの異なる変換に対応する2種類の対称性について説明しました。しかし、また、剛体変換の三種類の対称性があります： [[翻訳|スピン|反転し]]ます。 
+[前のセクションで](/course/transformations/symmetry)は、回転と反射という2つの異なる変換に対応する2種類の対称性について説明しました。しかし、また、剛体変換の三種類の対称性があります： [[翻訳|スピン|反転し]]ます。 
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
- [__並進対称性__](gloss:translational-symmetry)は、花や蝶などの孤立したオブジェクトでは機能しませんが、あらゆる方向に広がる規則的なパターンでは機能します。 
+[__並進対称性__](gloss:translational-symmetry)は、花や蝶などの孤立したオブジェクトでは機能しませんが、あらゆる方向に広がる規則的なパターンでは機能します。 
 
 ::: column.grow
 
@@ -1101,12 +1072,13 @@ Perpendicular glide reflections, rotations of order 2, translations
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 これまでのところ、私たちが調べたすべての対称性は、ある意味で_視覚的_でした：目に見える形、画像、またはパターン。実際、対称性はより広い概念である可能性があります： _変化に対する耐性_ 
 
 たとえば、リンゴジュースがオレンジジュースと同じくらい好きな場合、リンゴとオレンジを入れ替える変換では、好みは「対称」です。 
 
- 1915年、ドイツの数学者[Emmy Noether](bio:noether)は、同様の[ことが自然](gloss:laws-of-nature)の[法則に](gloss:laws-of-nature)も当てはまることを認めました。 
+1915年、ドイツの数学者[Emmy Noether](bio:noether)は、同様の[ことが自然](gloss:laws-of-nature)の[法則に](gloss:laws-of-nature)も当てはまることを認めました。 
 
 ::: column.grow
 
@@ -1152,6 +1124,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 これまでのところ、私たちは[[剛体を]]見てきました[[|合同|視覚]]変換。 _{span.reveal(when="blank-0")}次に、そうではないものについて考えてみましょう。 [__膨張__](gloss:dilation)は、シェイプのサイズを大きくまたは小さくすることによって変更します。_ 
 
@@ -1162,7 +1135,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 すべての膨張には、 [__中心__](target:center)と[__スケール係数があり__](->.scale-target)ます。中心は膨張の基準点であり、スケールファクターは、図がどれだけ伸縮するかを示します。 
 
- [倍率](gloss:scale-factor)が0〜1の場合、画像は[[小さくなります|]]オリジナル[[より]]も[[大きい]] 。倍率が1より大きい場合、画像は[[大きくなります|]]オリジナル[[より]]も[[小さい]] 。 
+[倍率](gloss:scale-factor)が0〜1の場合、画像は[[小さくなります|]]オリジナル[[より]]も[[大きい]] 。倍率が1より大きい場合、画像は[[大きくなります|]]オリジナル[[より]]も[[小さい]] 。 
 
 ::: column(width=300)
 
@@ -1190,20 +1163,6 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 {.todo}近日–拡張の詳細
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## 類似点
@@ -1212,172 +1171,4 @@ Perpendicular glide reflections, rotations of order 2, translations
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
-厳密な変換の場合、画像は常に[[合同です|大きい|]]オリジナル[[よりも小さい]] –これは[[もはや|]]膨張に[[も]]当てはまります。代わりに、2つの形状は[__似__](gloss:similar)ていると言います。全体の形状は同じですが、必ずしも同じサイズである必要はありません。 
-
-類似性の記号は`∼` （合同の記号に似ていましたが、 `≅` ）。この例では、 `A ∼ A'` 。 
-
-::: column(width=240)
-
-{.todo}近日–イラスト
-
-:::
-
----
-> id: perspective
-
-### 透視図
-
-接続光線を使用したこれらの膨張は、 __遠近法の図面の__ように見えることに気づいたかもしれません。膨張の中心は__消失点__と呼ばれます。これは、すべてが「遠くに消失」しているように見えるためです。 
-
-下の図で消失点を見つけます。 
-
-{.todo}近日公開–インタラクティブ
-
-今、あなたは既存のものと一致する別の家を描くことができますか？ 
-
----
-> id: similar-polygons
-
-### 類似のポリゴン
-
-類似性は形状について多くのことを教えてくれます。たとえば、 [円](gloss:circle) 、 [正方形](gloss:square) 、 [正三角形](gloss:equilateral-triangle)は[[常に|時々 |決して]]似てい[[ない]] 。サイズは異なる場合がありますが、全体的な形状は常に同じです。 
-
-::: column.grow
-
-右側の2つの四辺形は似ています。私たちの最初の重要な観察は、類似のポリゴンでは、一致するすべての角度のペアが[合同であるということ](gloss:congruent-angles)です。この意味は
-
-{.text-center} [_{.m-red} ∡ABC≅_ _{.m-red} ∡A'B'C '_](target:a) _{.space}_ [_{.m-blue} ∡BCD≅_ _{.m-blue} ∡B'C'D '_](target:b)  
-[_{.m-green} ∡CDE≅_ _{.m-green} ∡C'D'E '_](target:c) _{.space}_ [_{.m-yellow} ∡DEA≅_ _{.m-yellow} ∡D'E'A '_](target:d) 
-
- 2つ目の重要な事実は、同様のポリゴンでは、すべての辺が対応する膨張のスケールファクターに__比例__してスケーリングされることです。スケール係数が${k}{k|1.5|0.5,2,0.1} 、その後
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
-代わりに、これらの方程式を並べ替えて、スケールファクターを完全に取り除くことができます。 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
-
-これを使用して、同様のポリゴンが関係する実際の問題を解決できます。たとえば、他の辺の一部がわかっている場合、欠落している辺の長さを見つけることができます。次のセクションでは、いくつかの例を示します。 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### 同様の三角形
-
-類似性の概念は、三角形では特に強力です。同様のポリゴンの対応する内角が等しいことはすでにわかっています。 
-
-三角形の場合も逆になります。つまり、3つの角度サイズが同じ2つの三角形がある場合、三角形は類似している必要があります。 
-
-そして、それはさらに良くなります！三角形の内角は常に[[180]]度になります。これは、三角形の2つの角度がわかっている場合、常に3番目の角度を計算できることを意味します。 
-
-類似性については、これは、三角形が類似しているかどうかを判断するために_2つの角度_をチェックする必要があることも意味します。 2つの三角形に同じサイズの2つの角度がある場合、3番目の角度も両方で同じでなければなりません。 
-
-この結果は、三角形の[__AA類似条件__](gloss:triangle-aa)と呼ばれることもあります。 （2つの_As_は、比較する2つの_角度_を表します。） 
-
-::: .theorem
-
- 1つの三角形の2つの角度が別の三角形の2つの角度に合同である場合、2つの三角形は類似しています。 
-
-:::
-
----
-> id: similar-triangles-1
-
-これが役立ついくつかの例を見てみましょう： 
-
-::: column(width=320)
-
-{.todo}近日公開–アニメーション
-
-::: column.grow
-
-ここでは、大きな灯台の画像を見ることができます。友達と一緒に灯台の高さを測りたいのですが、残念ながら頂上まで登れません。 
-
-非常によく隠されているように、図には2つの類似した三角形が含まれています。1つは灯台とその影によって形成され、もう1つは友達と彼女の影によって形成されます。 
-
-両方の三角形の下部に1つの直角があります。太陽光線は平行です。つまり、下部にある他の2つの角度は対応する角度であり、等しくなっています。三角形のAA条件により、これら2つは類似している必要があります。 
-
-影の長さも簡単に測れますし、友達の身長もわかります。これで、同様の三角形の辺の比例関係を使用して、灯台の高さを見つけることができます。 
-
-{.todo}近日–方程式
-
-したがって、灯台の高さは1.5mです。 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo}近日公開–アニメーション
-
-::: column.grow
-
-同じ手法を使用して、地上の距離を測定できます。ここでは、大きな川の幅を求めます。川の片側に大きな木があり、1メートルの長さの棒を持っています。 
-
-この図で、さらに2つの類似した三角形を描いてみてください。 
-
-スティックの端から木までの視線上に直接ある川の側面に沿ってポイントをマークできます。次に、スティックまでの距離、および木の真向かいのポイントまでの距離を測定できます。 
-
-繰り返しますが、AA条件のため、これらの2つの三角形は似ています。どちらも直角で、対をなす対角線上にあります。 
-
-比例則によれば、これは
-
-{.todo}近日–方程式
-
-したがって、川の幅は45メートルです。 
-
-:::
-
----
-
-### 光線の類似性
-
-定理：光線が三角形の角度を2等分する場合、反対側を他の2つの辺の長さに比例するセグメントに分割します。 
-
-この定理を三角形の外側の状況に拡張して、複数の平行線を経頂点でカットすることができます。 
-
-定理：3つ以上の平行線が2つの横線で切断されている場合、横線はそれに比例して分割されます。 
-
-三角形の中央部分について考えてみましょう。中間セグメントは、三角形の1つの辺に平行で、他の2つの辺を合同な半分に分割します。中央セグメントはこれらの2つの側面を比例的に分割します。 
-
-三角形の比例定理：三角形の1つの辺に平行な線が他の2つの辺と交差する場合、それらの辺を比例的に分割します。 
-
- Triangle Proportionality Theorem Converse：ラインが三角形の2つの辺を比例的に分割する場合、それは3番目の辺に平行です。 
-
----
-
-### 自己相似
-
- _自分自身の_小さな部分_に_似ているいくつかの奇妙な数学の形があります。例は__Sierpinksi Triangle__です：三角形全体はそれが構成する小さな三角形のいずれかに似ています。あなたはズームインすることができ、無限に多くのより小さな三角形ができます。 
-
-このプロパティを持つ形状は、 __フラクタル__と呼ばれます。それらには、驚くべき、本当にXXXのプロパティがいくつかあります。これらについては、後で詳しく説明します。 
-
----
-
-三角形は距離の測定に役立つだけではありません。次のコースでは、三角形とそのプロパティについて詳しく学びます。
+TODO

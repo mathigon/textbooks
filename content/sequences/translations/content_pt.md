@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Muitas profissões que usam matemática estão interessadas em um aspecto específico - _encontrar padrões_ e ser capaz de prever o futuro. Aqui estão alguns exemplos:
 
@@ -283,6 +284,7 @@ Aqui estão mais alguns exemplos de fotografias de sequência de ação para sua
 
 > section: arithmetic-geometric
 > id: halley
+> translated: auto
 
 ::: column.grow
 
@@ -643,6 +645,7 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 > section: figurate
 > id: figurate
+> translated: auto
 
 O nome das [sequências geométricas](gloss:geometric-sequence) é bastante confuso, porque elas não têm nada a ver com geometria. De fato, o nome foi desenvolvido há centenas de anos atrás, quando os matemáticos pensavam na _multiplicação_ e _raízes quadradas_ de uma maneira muito mais geométrica.
 
@@ -899,6 +902,7 @@ FAÇAM
 
 > section: fibonacci
 > id: rabbits
+> translated: auto
 
 Imagine que você recebeu um par de coelhos bebê, um macho e uma fêmea. São coelhos muito especiais, porque nunca morrem, e a fêmea dá à luz um novo par de coelhos exatamente uma vez por mês (sempre outro par de machos e fêmeas).
 
@@ -1306,10 +1310,11 @@ Quantas opções existem para escadas com 6, 7 ou 8 degraus? Você consegue dete
 
 ---
 
-Sequências Especiais
+## Sequências Especiais
 
 > section: special
 > id: special-intro
+> translated: auto
 
 Além das sequências aritméticas](gloss:arithmetic-sequence) e [geométricas](gloss:geometric-sequence), [números de Fibonacci](gloss:fibonacci-numbers) e [números figurados](gloss:figurate-numbers), existem inúmeras sequências interessantes que não seguem uma sequência semelhante. , padrão regular.
 
@@ -1582,6 +1587,7 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Padrão: Odd square numbers_
 
 > section: pascals-triangle
 > id: pascal-intro
+> translated: auto
 
 Abaixo, você pode ver uma pirâmide numérica criada usando um padrão simples: começa com um único "1" na parte superior e cada célula a seguir é a soma das duas células diretamente acima. Passe o mouse sobre algumas das células para ver como elas são calculadas e preencha as que estão faltando:
 

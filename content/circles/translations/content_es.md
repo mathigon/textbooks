@@ -48,7 +48,6 @@ Cada punto en un [__círculo__](gloss:circle) tiene la misma distancia desde su 
 * {.reveal(when="compass" delay="4000")} El [{.step-target.pill.b.blue} diámetro](target:d) es la distancia entre dos puntos opuestos en un círculo. Atraviesa su centro y su longitud es [[dos veces|half|the same as]] el radio.
 * {.reveal(when="blank-0")} La [{.step-target.pill.b.green} circunferencia](target:c) (o perímetro) es la distancia alrededor de un círculo.
 
-
 :::
 
 ---
@@ -616,7 +615,6 @@ En las secciones anteriores, aprendió los nombres dados a varias partes diferen
 * {.r.reveal(when="next-3")} Un [{.teal} sector](pill:sector) es una parte del interior de un círculo, delimitado por un _arco_ y _dos radios_. [Continuar](btn:next)
 * {.r.reveal(when="next-4")} Finalmente, un [{.purple} segmento](pill:segment) es parte del interior de un círculo, delimitado por un _arco_ y _un acorde_. [Continuar](btn:next)
 
-
 :::
 
 ---
@@ -631,86 +629,11 @@ En esta sección, veremos la relación entre todos estos elementos y probaremos 
 
 {.todo} ¡MUY PRONTO!
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    //
-    // Point of Tangency: The point where a tangent line touches the circle.
-    //
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    //
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    //
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    //
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### Acordes
 
 {.todo} ¡MUY PRONTO!
-
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    //
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    //
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    //
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A.
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D.
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC?
-    //
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    //
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    //
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale.
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice?
-    //
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    //
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 
@@ -806,23 +729,19 @@ Ahora podemos reorganizar estas ecuaciones para encontrar la variable que nos in
 
 ::: column(width=320 parent="padded-thin")
 
-El | [{.red} longitud de arco](pill) | = | `"circumference" × c/360` | El | El | = | `2 π r × c/360` | {.eqn-system}
+| [{.red} longitud de arco](pill) | = | `"circumference" × c/360` |
+|                                 | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
-El | [{.yellow} área del sector](pill) | = | `"circle area" × c/360` | El | El | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow} área del sector](pill) | = | `"circle area" × c/360` |
+|                                   | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 
 donde _r_ es el radio del círculo y _c_ es el tamaño del ángulo central.
-
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
-
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 
@@ -834,11 +753,15 @@ Si el ángulo central se mide en [radianes](gloss:radians) en lugar de [grados](
 
 ::: column(width=320 parent="padded-thin")
 
-El | [{.red} longitud del arco](pill) | = | `2 π r × c/(2π)` | El | El | = | `r × c` | {.eqn-system}
+| [{.red} longitud del arco](pill) | = | `2 π r × c/(2π)` |
+|                                  | = | `r × c` |
+{.eqn-system}
 
 ::: column(width=320)
 
-El | [{.yellow} área del sector](pill) | = | `π r^2 × c/(2π)` | El | El | = | `1/2 r^2 c` | {.eqn-system}
+| [{.yellow} área del sector](pill) | = | `π r^2 × c/(2π)` |
+|                                   | = | `1/2 r^2 c` |
+{.eqn-system}
 
 :::
 
@@ -964,11 +887,6 @@ Fue una de estas medidas incorrectas lo que llevó a Cristóbal Colón a navegar
 
 ¡{.todo} MUY PRONTO!
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
 ---
 
 ## Los teoremas del círculo
@@ -1091,7 +1009,6 @@ Aquí puede ver el _Gasómetro cilíndrico_ en Oberhausen, Alemania. Solía alma
 * ¿Cuánto gas natural se puede almacenar? Este es el [[volumen|area|diameter]] del cilindro.
 * {.reveal(when="blank-0")} ¿Cuánto acero se necesita para construir el gasómetro? Esta es (aproximadamente) la [[área de superficie|circumference|diagonal]] del cilindro.
 
-
 {.reveal(when="blank-0 blank-1")} ¡Intentemos encontrar fórmulas para ambos resultados!
 
 ::: column(width=300)
@@ -1172,12 +1089,6 @@ Imagine cortar un cilindro en muchos discos delgados. Luego podemos deslizar est
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
-
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
-
 ---
 
 > id: cylinder-surface
@@ -1192,7 +1103,6 @@ Hay dos [[círculos|spheres|squares]], uno en la parte superior y otro en la par
 
 * {.reveal(when="blank-0 blank-1")} Los dos círculos tienen cada uno un área _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 * {.reveal(when="eqn-0")} La altura del rectángulo es _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} y el ancho del rectángulo es el mismo que la [[circunferencia|diametro|tangente]] de los círculos:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
-
 
 ::: column(width=320)
 
@@ -1348,7 +1258,9 @@ Encontrar el área de superficie de un cono es un poco más complicado. Como ant
 
 El radio del sector __{.m-green}__ es el mismo que la distancia desde el borde de un cono hasta su vértice. Esto se llama __{.pill.green.step-target(data-to="s")} altura inclinada _s___ del cono, y no es lo mismo que la altura normal __{.pill.blue.step-target(data-to="h")} _h___ . Podemos encontrar la altura inclinada usando [Pitágoras](gloss:pythagoras-theorem):
 
-El | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ | El | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ | {.eqn-system}
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
+| `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
 
 ::: column(width=280)
 
@@ -1376,7 +1288,8 @@ La _{span.pill.step-target.red(data-to="arc")} longitud del arco_ del sector es 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
-El | `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` | El | El | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 
 :::
 
@@ -1516,7 +1429,9 @@ La sección transversal del cilindro recortado siempre es un  [[anillo|círculo|
 
 El radio del hoyo es _h_. Podemos encontrar el área del anillo restando el área del agujero del área del círculo más grande:
 
-El | _A_ | = | `π r^2 - π h^2` | El | El | = | `π (r^2 - h^2)` | {.eqn-system}
+| _A_ | = | `π r^2 - π h^2` |
+|     | = | `π (r^2 - h^2)` |
+{.eqn-system}
 
 :::
 
@@ -1530,7 +1445,8 @@ Parece que ambos sólidos tienen la misma área de sección transversal en todos
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 
-El | `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` | El | El | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
+| `V_"Hemisphere"` | = | `V_"Cylinder" - V_"Cone"` |
+| | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
 
 :::
 
@@ -1551,7 +1467,9 @@ Una esfera consta de [[dos]] hemisferios, _{span.reveal(when="blank-0")}, lo que
 
 La Tierra es (aproximadamente) una esfera con un radio de 6.371 \ km. Por lo tanto su volumen es
 
-El | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | El | El | `=` | _{span.numbers} 1_ `"km"^3` | {.eqn-system}
+| `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+|     | `=` | _{span.numbers} 1_ `"km"^3` |
+{.eqn-system}
 
 {.reveal(when="numbers")} La densidad media de la Tierra es `5510 "kg/m"^3`. Esto significa que su masa total es
 
@@ -1638,23 +1556,6 @@ Para encontrar el área de superficie de una esfera, una vez más podemos aproxi
 
 {.todo} PRÓXIMAMENTE: Prueba de área de superficie de esfera
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
-
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
-
-    // And therefore,
-    // surface area = 3 * volume / radius =
-
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-
-    // ---
-    // > id: earth-surface
-    //
-    // surface of earth
-
 ---
 
 ## Secciones cónicas
@@ -1716,12 +1617,6 @@ Una elipse se ve casi como un "círculo alargado". De hecho, podría pensarlo co
 Si tiene una cadena larga conectada a dos puntos fijos, puede dibujar una elipse perfecta trazando el alcance máximo de las cadenas:
 
 {.todo} Próximamente: Elipses de dibujo interactivo
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 
@@ -1835,7 +1730,6 @@ La gravedad es lo que hace que todo caiga al suelo y la gravedad también es lo 
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

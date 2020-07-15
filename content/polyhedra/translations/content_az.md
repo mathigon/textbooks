@@ -4,8 +4,9 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
- [__Çoxbucaqlı__](gloss:polygon) , yalnız düz tərəfləri olan qapalı, düz bir forma. Çoxbucaqlıların hər hansı bir tərəfi və açıları ola bilər, lakin tərəflər əyri ola bilməz. Aşağıdakı şekillerdən hansı çoxbucaqlıdır? 
+[__Çoxbucaqlı__](gloss:polygon) , yalnız düz tərəfləri olan qapalı, düz bir forma. Çoxbucaqlıların hər hansı bir tərəfi və açıları ola bilər, lakin tərəflər əyri ola bilməz. Aşağıdakı şekillerdən hansı çoxbucaqlıdır? 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -20,7 +21,7 @@
 ---
 > id: polygons-1
 
- Çox tərəflərinə görə, çoxbucaqlılara müxtəlif adlar veririk: 
+Çox tərəflərinə görə, çoxbucaqlılara müxtəlif adlar veririk: 
 
     .row.padded-thin
       div(style="width: 100px")
@@ -47,7 +48,7 @@
 
 ### Poliqonlardakı bucaqlar 
 
- _N_ tərəfləri olan hər çoxbucağın da _n_ [daxili açıları var](gloss:internal-angle) . Üçbucaqdakı daxili açıların cəminin həmişə [[180]]° olduğunu bilirik, amma digər çoxbucaqlılar haqqında nə demək olar? 
+_N_ tərəfləri olan hər çoxbucağın da _n_ [daxili açıları var](gloss:internal-angle) . Üçbucaqdakı daxili açıların cəminin həmişə [[180]]° olduğunu bilirik, amma digər çoxbucaqlılar haqqında nə demək olar? 
 
 ---
 > id: angles
@@ -92,7 +93,7 @@
 ---
 > id: angles-1
 
- Dörd tərəfli daxili açıların cəminə həmişə [[360]]° bənzəyir - tam [[iki dəfə | üç dəfə |]] üçbucaqdakı açıların [[yarısı]] . _{span.reveal(when="blank-0 blank-1")} Bu təsadüfi deyil: hər dörd tərəfli iki üçbucağa bölmək olar._ 
+Dörd tərəfli daxili açıların cəminə həmişə [[360]]° bənzəyir - tam [[iki dəfə | üç dəfə |]] üçbucaqdakı açıların [[yarısı]] . _{span.reveal(when="blank-0 blank-1")} Bu təsadüfi deyil: hər dörd tərəfli iki üçbucağa bölmək olar._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -105,7 +106,7 @@
 ---
 > id: internal-angle-sum
 
- Bir çoxbucaqlı ${x}{x|7|3,15,1} tərəflər daxili bucaq cəmi 180° × olacaqdır ${x-2} = ${(x-2)*180}°. Ümumiyyətlə _n_ tərəfləri olan çoxbucaqlı [[n - 2-ə]] bölünə bilər [[| n - 1 | n]] üçbucaq. Buna görə də 
+Bir çoxbucaqlı ${x}{x|7|3,15,1} tərəflər daxili bucaq cəmi 180° × olacaqdır ${x-2} = ${(x-2)*180}°. Ümumiyyətlə _n_ tərəfləri olan çoxbucaqlı [[n - 2-ə]] bölünə bilər [[| n - 1 | n]] üçbucaq. Buna görə də 
 
 {.text-center.reveal(when="blank-0")} Bir _n_ -gonda daxili açıların cəmi `= (n - 2) × 180°` . 
 
@@ -118,11 +119,11 @@
 
 ::: column.grow
 
- Bir çoxbucağın "içəri işarə edən" bir bölməsi varsa [__konkret__](gloss:concave) olduğunu söyləyirik. Təsəvvür edə bilərsiniz ki, bu hissə ["düzəldilib"](target:cave) . Konkav _olmayan_ çoxbucaqlılara [__konveks__](gloss:convex) deyilir. 
+Bir çoxbucağın "içəri işarə edən" bir bölməsi varsa [__konkret__](gloss:concave) olduğunu söyləyirik. Təsəvvür edə bilərsiniz ki, bu hissə ["düzəldilib"](target:cave) . Konkav _olmayan_ çoxbucaqlılara [__konveks__](gloss:convex) deyilir. 
 
- Konkav poliqonlarını asanlıqla müəyyən edə biləcəyiniz iki yol var: bunlar ən azı [180° -dən böyük olan](target:angle) bir [daxili açıya malikdirlər](target:angle) . Həm də ən azı [çoxbucağın _kənarında_ olan](target:diagonal) bir [diaqonal var](target:diagonal) . 
+Konkav poliqonlarını asanlıqla müəyyən edə biləcəyiniz iki yol var: bunlar ən azı [180° -dən böyük olan](target:angle) bir [daxili açıya malikdirlər](target:angle) . Həm də ən azı [çoxbucağın _kənarında_ olan](target:diagonal) bir [diaqonal var](target:diagonal) . 
 
- Konveks çoxbucaqlılarda, digər tərəfdən bütün daxili açılar [[180]]° -dən azdır və bütün diaqonallar [[içəridə |]] çoxbucağın [[xaricində]] . 
+Konveks çoxbucaqlılarda, digər tərəfdən bütün daxili açılar [[180]]° -dən azdır və bütün diaqonallar [[içəridə |]] çoxbucağın [[xaricində]] . 
 
 ::: column(width=240)
 
@@ -146,7 +147,7 @@
 ---
 > id: concave-1
 
- Bu çoxbucaqlılardan hansısı konkavdur? 
+Bu çoxbucaqlılardan hansısı konkavdur? 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -161,7 +162,7 @@
 
 ### Daimi çoxbucaqlılar 
 
- Biz tərəflərin eyni uzunluğu varsa bir poliqon [__müntəzəm__](gloss:regular-polygon) deyil ki, və açılar eyni ölçüsü var. Bu şekillerdən hansı müntəzəm çoxbucaqlıdır? 
+Biz tərəflərin eyni uzunluğu varsa bir poliqon [__müntəzəm__](gloss:regular-polygon) deyil ki, və açılar eyni ölçüsü var. Bu şekillerdən hansı müntəzəm çoxbucaqlıdır? 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -174,12 +175,12 @@
 ---
 > id: regular-1
 
- Daimi çoxbucaqlılar çox fərqli ölçülərdə ola bilər - lakin eyni sayda tərəfləri [[olan]] bütün müntəzəm çoxbucaqlılar [[oxşardır | həmfikirdirlər | eyni sahəyə sahib olun]] ! 
+Daimi çoxbucaqlılar çox fərqli ölçülərdə ola bilər - lakin eyni sayda tərəfləri [[olan]] bütün müntəzəm çoxbucaqlılar [[oxşardır | həmfikirdirlər | eyni sahəyə sahib olun]] ! 
 
 ---
 > id: regular-2
 
- Poliqonlardakı bütün [daxili açıların](gloss:internal-angle) cəmini artıq bilirik. Daimi çoxbucaqlılar üçün bütün bu açılar [[eyni ölçüyə malikdir | alternativ açılardır]] , buna görə bir daxili bucağın ölçüsünü işləyə bilərik: 
+Poliqonlardakı bütün [daxili açıların](gloss:internal-angle) cəmini artıq bilirik. Daimi çoxbucaqlılar üçün bütün bu açılar [[eyni ölçüyə malikdir | alternativ açılardır]] , buna görə bir daxili bucağın ölçüsünü işləyə bilərik: 
 
 {.text-center.reveal(when="blank-0")} bucaq = <mfrac><mrow>[[bütün açıların cəmidir | açıların sayı]]</mrow><mrow>[[açıların sayı | bütün açıların cəmidir]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x` ._ 
 
@@ -217,9 +218,9 @@
 
 ::: column.grow
 
- Burada [adi bir çoxbucaq](gloss:regular-polygon) görə bilərsiniz ${n}{n|5|4,12,1} tərəflər. Hər tərəfin uzunluğu var [{.pill.green} 1m](target:base) . Onun sahəsini hesablamağa çalışaq! 
+Burada [adi bir çoxbucaq](gloss:regular-polygon) görə bilərsiniz ${n}{n|5|4,12,1} tərəflər. Hər tərəfin uzunluğu var [{.pill.green} 1m](target:base) . Onun sahəsini hesablamağa çalışaq! 
 
- Əvvəlcə çoxbucaqlıya bölmək olar ${toWord(n)} konqresli, [[isosceles | bərabər tərəfli | sağ açılı]] üçbucaqlar. 
+Əvvəlcə çoxbucaqlıya bölmək olar ${toWord(n)} konqresli, [[isosceles | bərabər tərəfli | sağ açılı]] üçbucaqlar. 
 
 {.reveal(when="blank-0")} Artıq [[bazanı]] tanıyırıq [[| hündürlük |]] bu üçbucaqların [[sahəsi]] , ancaq [[hündürlüyə]] də ehtiyacımız var [[| ayaqları |]] sahələrini hesablaya bilmək üçün [[medianlar]] . _{span.reveal(when="blank-2")} Daimi çoxbucaqlılarda bu hündürlüyə bəzən deyilir [{.pill.yellow} apothem](target:apothem) ._ 
 
@@ -260,10 +261,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
- [Əvvəlki kursda](/course/triangles) üçbucaqların fərqli xüsusiyyətlərini araşdırdıq. İndi dördbucaqlılara nəzər salaq. 
+[Əvvəlki kursda](/course/triangles) üçbucaqların fərqli xüsusiyyətlərini araşdırdıq. İndi dördbucaqlılara nəzər salaq. 
 
- _Daimi dörd tərəfli_ bir [[kvadrat]] deyilir [[| düzbucaqlı | bərabər tərəfli dörd tərəfli]] . Onun tərəflərinin hamısı eyni uzunluğa malikdir və bütün açıları bərabərdir. 
+_Daimi dörd tərəfli_ bir [[kvadrat]] deyilir [[| düzbucaqlı | bərabər tərəfli dörd tərəfli]] . Onun tərəflərinin hamısı eyni uzunluğa malikdir və bütün açıları bərabərdir. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -289,7 +291,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-1
 
- Bir az "daha az müntəzəm" dördrilaterallar üçün iki seçimimiz var. Yalnız _açıların_ bərabər olmasını istəyiriksə, bir [__düzbucaqlı__](gloss:rectangle) alırıq. Yalnız _tərəflərin_ bərabər olmasını istəyiriksə, bir [__romb__](gloss:rhombus) alırıq. 
+Bir az "daha az müntəzəm" dördrilaterallar üçün iki seçimimiz var. Yalnız _açıların_ bərabər olmasını istəyiriksə, bir [__düzbucaqlı__](gloss:rectangle) alırıq. Yalnız _tərəflərin_ bərabər olmasını istəyiriksə, bir [__romb__](gloss:rhombus) alırıq. 
 
 ::: column.quadrilateral
 
@@ -330,7 +332,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-2
 
- Daha az müntəzəm, lakin hələ də müəyyən vacib xüsusiyyətlərə malik olan bir neçə başqa dördbucaqlı var: 
+Daha az müntəzəm, lakin hələ də müəyyən vacib xüsusiyyətlərə malik olan bir neçə başqa dördbucaqlı var: 
 
 ::: column.quadrilateral
 
@@ -382,11 +384,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
- Dördrilaterallar bu kateqoriyadan çoxuna düşə bilər. [Venn diaqramı](gloss:venn-diagram) olaraq müxtəlif növ dördbucaqlıların iyerarxiyasını görüntüləyə bilərik: 
+Dördrilaterallar bu kateqoriyadan çoxuna düşə bilər. [Venn diaqramı](gloss:venn-diagram) olaraq müxtəlif növ dördbucaqlıların iyerarxiyasını görüntüləyə bilərik: 
 
     figure: include svg/venn.svg
 
- Məsələn, hər düzbucaqlı [[paraleloqramdır | romb | kvadrat]] və hər bir [[romb | trapezium | paraleloqram]] da uçurtmadır. Bir romb [[bəzən olur | həmişə | heç vaxt]] bir kvadrat və bir düzbucaqlı [[həmişə olmur | bəzən | heç vaxt]] bir trapezium. 
+Məsələn, hər düzbucaqlı [[paraleloqramdır | romb | kvadrat]] və hər bir [[romb | trapezium | paraleloqram]] da uçurtmadır. Bir romb [[bəzən olur | həmişə | heç vaxt]] bir kvadrat və bir düzbucaqlı [[həmişə olmur | bəzən | heç vaxt]] bir trapezium. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Hər hansı bir qeyri-müəyyənliyin qarşısını almaq üçün ümumiyyətlə yalnız ən xüsusi növdən istifadə edirik. 
 
@@ -399,7 +401,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- İndi dörd nöqtəni, soldakı boz qutuda seçin. _{span.reveal(when="points")} Hamısını dörd tərəfli bir forma yaratmaq üçün birləşdirə bilərik._ 
+İndi dörd nöqtəni, soldakı boz qutuda seçin. _{span.reveal(when="points")} Hamısını dörd tərəfli bir forma yaratmaq üçün birləşdirə bilərik._ 
 
 {.reveal(when="points" delay=1000)} Dörd tərəfin hər birinin orta nöqtəsini tapaq. Orta nöqtələri birləşdirsək, [[başqa dördlüyə sahib]] oluruq [[| üçbucaq | düzbucaqlı]] . 
 
@@ -420,7 +422,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Paraleloqramlar 
 
- Məlum oldu ki, paraleloqramların əks tərəflərin paralel olmasından başqa bir çox maraqlı xüsusiyyətləri var. Aşağıdakı altı ifadədən hansını doğrudur? 
+Məlum oldu ki, paraleloqramların əks tərəflərin paralel olmasından başqa bir çox maraqlı xüsusiyyətləri var. Aşağıdakı altı ifadədən hansını doğrudur? 
 
 ::: column.grow
 
@@ -458,7 +460,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
- Əlbəttə ki, bu xüsusiyyətlərə sadəcə "baxmaq" kifayət deyil. Onların _həmişə_ doğru olduğundan əmin olmaq _üçün_ onları _sübut_ etməliyik: 
+Əlbəttə ki, bu xüsusiyyətlərə sadəcə "baxmaq" kifayət deyil. Onların _həmişə_ doğru olduğundan əmin olmaq _üçün_ onları _sübut_ etməliyik: 
 
 ::: tab
 
@@ -494,7 +496,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Bir paraleloqramdakı əks tərəflərin və açıların hər zaman uyğun olduğunu sübut etməyə çalışaq. 
 
- Paraleloqramın diaqonallarından birini çəkərək başlayın. 
+Paraleloqramın diaqonallarından birini çəkərək başlayın. 
 
 {.reveal(when="diagonal")} Diaqonal paraleloqramın tərəfləri ilə dörd yeni açı yaradır. İki [qırmızı bucaq](target:red-angle) və iki [mavi bucaq](target:blue-angle) [alternativ açılardır](gloss:alternate-angles) , buna görə hər biri [[uyğun]] olmalıdır [[| bitişik | əlavə]] . 
 
@@ -505,8 +507,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 :::
 
 {.reveal(when="blank-1")} Konversiya da doğrudur: dörd tərəfli qarşı tərəflərin hər iki cütü (və ya bucaqları) bir-birinə uyğundursa, dörd tərəfli bir paraleloqram olmalıdır. 
-
-    //- Adjacent angles are supplementary.
 
 ::: tab
 
@@ -544,9 +544,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} İndi bir paraleloqramdakı iki diaqonalın bir-birini bükdüyünü sübut edin. 
 
- Diaqonalların yaratdığı iki sarı üçbucaq barədə düşünək: 
+Diaqonalların yaratdığı iki sarı üçbucaq barədə düşünək: 
 
- * Bir az paraleloqramın əks tərəfləri olduğu üçün [iki yaşıl tərəfin bir-](target:side1) birinə uyğun olduğunu sübut etdik. * [İki qırmızı bucaq](target:anglesR) və [iki mavi bucaq](target:anglesB) birləşir, çünki [[alternativ bucaqlardır | əks açılar | sağ açılar]] . 
+* Bir az paraleloqramın əks tərəfləri olduğu üçün [iki yaşıl tərəfin bir-](target:side1) birinə uyğun olduğunu sübut etdik. * [İki qırmızı bucaq](target:anglesR) və [iki mavi bucaq](target:anglesB) birləşir, çünki [[alternativ bucaqlardır | əks açılar | sağ açılar]] . 
 
 {.reveal(when="blank-2")} [[ASA tərəfindən | SSS | AAS]] vəziyyəti, sarı üçbucağın hər ikisi də uyğun olmalıdır. 
 
@@ -565,9 +565,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Yuxarıda [[əks]] cüt olduğunu göstərdik [[|]] bir paraleloqramın [[qonşu]] tərəfləri bir-birinə uyğundur. Bir uçurtma içərisində iki cüt _bitişik_ tərəf uyğun gəlir. 
+Yuxarıda [[əks]] cüt olduğunu göstərdik [[|]] bir paraleloqramın [[qonşu]] tərəfləri bir-birinə uyğundur. Bir uçurtma içərisində iki cüt _bitişik_ tərəf uyğun gəlir. 
 
- _Uçurtma_ adı açıq şəkildə formasından irəli gəlir: göydə uça biləcəyiniz uçurtmalara bənzəyir. Lakin, biz bu günə qədər gördük bütün xüsusi quadrilaterals ki, Kite da [concave](gloss:concave) ola bilər ki, yalnız bir: bu bir dart və ya arrow kimi formalaşmasına əgər: 
+_Uçurtma_ adı açıq şəkildə formasından irəli gəlir: göydə uça biləcəyiniz uçurtmalara bənzəyir. Lakin, biz bu günə qədər gördük bütün xüsusi quadrilaterals ki, Kite da [concave](gloss:concave) ola bilər ki, yalnız bir: bu bir dart və ya arrow kimi formalaşmasına əgər: 
 
 ::: column(width=320)
 
@@ -643,7 +643,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Bütün uçurtmaların [[simmetrik]] olduğunu [[gördünüz | oxşar]] . _{span.reveal(when="blank-0")} [Simmetriya oxu](gloss:axis-of-symmetry) [[diaqonallardan biridir | tərəflərdən biri | bir ortaqlıq]] ._ 
+Bütün uçurtmaların [[simmetrik]] olduğunu [[gördünüz | oxşar]] . _{span.reveal(when="blank-0")} [Simmetriya oxu](gloss:axis-of-symmetry) [[diaqonallardan biridir | tərəflərdən biri | bir ortaqlıq]] ._ 
 
 {.reveal.r(when="blank-1")} Diaqonal uçurtmanı [iki konqresli üçbucağa](target:triangle1) bölür. Biz [SSS](gloss:triangle-sss) vəziyyətindən uyğun olduğunu bilirik: hər iki üçbucağın [üç bərabər tərəfi var](target:sss) (qırmızı, yaşıl və mavi). _{button.next-step} Davam edin_ 
 
@@ -665,7 +665,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Dördrilateralların sahəsi 
 
- Əvvəlki kursda üçbucaqların sahəsini hesablayarkən, onu [[dördbucağa]] çevirmək hiyləsindən istifadə etdik [[| kvadrat | beşbucaq]] . Məlum olur ki, bunu bəzi dördrilaterallar üçün də edə bilərik: 
+Əvvəlki kursda üçbucaqların sahəsini hesablayarkən, onu [[dördbucağa]] çevirmək hiyləsindən istifadə etdik [[| kvadrat | beşbucaq]] . Məlum olur ki, bunu bəzi dördrilaterallar üçün də edə bilərik: 
 
 ::: tab
 
@@ -685,7 +685,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Solda, paraleloqram ilə eyni sahəsi olan bir düzbucaqlı çəkməyə çalışın. 
+Solda, paraleloqram ilə eyni sahəsi olan bir düzbucaqlı çəkməyə çalışın. 
 
 {.reveal(when="draw-1")} Solda [itkin üçbucağın](target:triangle-1) [[tam eyni]] olduğunu görürsən [[| daha kiçik |]] sağdakı [üst-üstə düşən üçbucaqdan](target:triangle-2) [[böyükdür]] ? _{span.reveal(when="blank-1")} Buna görə bir paraleloqramın sahəsi_ 
 
@@ -699,7 +699,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### Trapezium _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
- Xatırladaq ki, trapeziumlar bir cüt [paralel tərəfli](target:bases) dördbucaqlıdır. Bu paralel tərəflərə trapesiyanın __əsasları__ deyilir. 
+Xatırladaq ki, trapeziumlar bir cüt [paralel tərəfli](target:bases) dördbucaqlıdır. Bu paralel tərəflərə trapesiyanın __əsasları__ deyilir. 
 
 ::: column(width=300)
 
@@ -721,7 +721,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Əvvəllər olduğu kimi, bu trapezi ilə eyni sahəyə sahib olan bir düzbucaqlı çəkməyə çalışın. _{span.reveal(when="draw-2")} Sol və sağdakı [itkin və əlavə üçbucaqların](target:triangles-3) necə ləğv olunduğunu görə bilərsinizmi?_ 
+Əvvəllər olduğu kimi, bu trapezi ilə eyni sahəyə sahib olan bir düzbucaqlı çəkməyə çalışın. _{span.reveal(when="draw-2")} Sol və sağdakı [itkin və əlavə üçbucaqların](target:triangles-3) necə ləğv olunduğunu görə bilərsinizmi?_ 
 
 {.reveal(when="draw-2" delay=2000)} The [{.pill.green}](target:t-height) bu düzbucağın [hündürlüyü](target:t-height) [[arasındakı məsafədir | orta |]] trapesiyanın [paralel tərəflərinin](target:bases) [[uzunluğu]] . 
 
@@ -765,9 +765,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Bu uçurtma içərisində, [iki diaqonal](target:diag3) uçurtma ətrafını əhatə edən geniş bir [düzbucağın](target:rect4) eni və hündürlüyünü təşkil edir. 
+Bu uçurtma içərisində, [iki diaqonal](target:diag3) uçurtma ətrafını əhatə edən geniş bir [düzbucağın](target:rect4) eni və hündürlüyünü təşkil edir. 
 
- Bu düzbucağın sahəsi [[iki dəfədir | ilə eyni |]] uçurtma sahəsindən [[üç qat]] . _{span.reveal(when="blank-5")} Uçurtma yaradan [dörd üçbucağın](target:inside) hər birinin kənarındakı [dörd boşluqla](target:outside) eyni olduğunu görə bilərsinizmi?_ 
+Bu düzbucağın sahəsi [[iki dəfədir | ilə eyni |]] uçurtma sahəsindən [[üç qat]] . _{span.reveal(when="blank-5")} Uçurtma yaradan [dörd üçbucağın](target:inside) hər birinin kənarındakı [dörd boşluqla](target:outside) eyni olduğunu görə bilərsinizmi?_ 
 
 {.reveal(when="blank-5")} Bu, diaqonalları olan bir uçurtmanın sahəsi deməkdir [{.i.pill.green} d1](target:d31) və [{.i.pill.yellow} d2](target:d32) edir 
 
@@ -801,7 +801,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Bir [Rhombus](gloss:rhombus) dörd bərabər tərəfli dördbucaqlıdır. Hər bir rombun bir [[paraleloqram]] olduğunu xatırlaya bilərsiniz [[| düzbucaqlı | kvadrat]] - həm də [[uçurtma | altıbucaqlı | konkav poliqonu]] . 
+Bir [Rhombus](gloss:rhombus) dörd bərabər tərəfli dördbucaqlıdır. Hər bir rombun bir [[paraleloqram]] olduğunu xatırlaya bilərsiniz [[| düzbucaqlı | kvadrat]] - həm də [[uçurtma | altıbucaqlı | konkav poliqonu]] . 
 
 {.reveal(when="blank-6 blank-7")} Bu, bir rombusun sahəsini tapmaq üçün ya paraleloqramın sahəsi üçün, ya da uçurtma sahəsi üçün olan tənliyi istifadə edə biləcəyimiz deməkdir: 
 
@@ -810,28 +810,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 {.reveal(when="blank-6 blank-7" delay=1000)} _Fərqli kontekstlərdə bir Rhombusun müxtəlif hissələri (tərəflər, boy, diaqonallar) verilə bilər və hansı tənliyin daha uyğun olduğunu seçməlisiniz._ 
 
 :::
-
 :::
-
-    //- ### Cyclic quadrilaterals
-    
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -839,8 +818,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
- [Poliqonlar](gloss:polygon) təbiətdə hər yerdə görünür. Böyük bir ərazini kafel etmək istəyirsinizsə, onlar xüsusilə faydalıdır, çünki çoxbucaqlıları boşluqlar və ya üst-üstə düşmədən bir-birinə bağlaya bilərsiniz. Buna bənzər nümunələrə [__tessellations__](gloss:tessellation) deyilir. 
+[Poliqonlar](gloss:polygon) təbiətdə hər yerdə görünür. Böyük bir ərazini kafel etmək istəyirsinizsə, onlar xüsusilə faydalıdır, çünki çoxbucaqlıları boşluqlar və ya üst-üstə düşmədən bir-birinə bağlaya bilərsiniz. Buna bənzər nümunələrə [__tessellations__](gloss:tessellation) deyilir. 
 
 ::: column(width=200)
 
@@ -883,7 +863,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
- İnsanlar bu təbii naxışların bir çoxunu sənətdə, memarlıqda və texnologiyada - qədim Romadan tutmuş bu günə qədər köçürmüşlər. Bir neçə nümunə: 
+İnsanlar bu təbii naxışların bir çoxunu sənətdə, memarlıqda və texnologiyada - qədim Romadan tutmuş bu günə qədər köçürmüşlər. Bir neçə nümunə: 
 
 ::: column(width=200)
 
@@ -923,16 +903,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
- Burada müntəzəm çoxbucaqlılardan istifadə edərək öz tessellations yarada bilərsiniz. Sadəcə, yeni şekilleri yan çubuğundan kətan üzərinə sürün. Hansı tessellate forması yaxşıdır? Heç bir şəkildə tərpənməyən formalar varmı? Maraqlı naxışlar yaratmağa çalışın! 
+Burada müntəzəm çoxbucaqlılardan istifadə edərək öz tessellations yarada bilərsiniz. Sadəcə, yeni şekilleri yan çubuğundan kətan üzərinə sürün. Hansı tessellate forması yaxşıdır? Heç bir şəkildə tərpənməyən formalar varmı? Maraqlı naxışlar yaratmağa çalışın! 
 
     figure: .tessellation
       x-polypad
@@ -956,12 +931,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Mütəmadi çoxbucaqlılardan hazırlanan boşqablar 
 
- Bəzi [müntəzəm çoxbucaqlıları](gloss:regular-polygon) ( [[kvadratlar]] kimi) [[görmüş ola bilərsiniz | beşbucaqlar]] ) asanlıqla tessellate edir, digərləri ( [[beşbucaqlar]] kimi) [[| üçbucaqlar | hexagons]] ) ümumiyyətlə tessellate kimi görünmür. 
+Bəzi [müntəzəm çoxbucaqlıları](gloss:regular-polygon) ( [[kvadratlar]] kimi) [[görmüş ola bilərsiniz | beşbucaqlar]] ) asanlıqla tessellate edir, digərləri ( [[beşbucaqlar]] kimi) [[| üçbucaqlar | hexagons]] ) ümumiyyətlə tessellate kimi görünmür. 
 
 ---
 > id: tessellation-regular-1
 
- Bunun əvvəlcədən hesablamağı öyrəndiyimiz [daxili açılarının](gloss:internal-angle) ölçüsü ilə əlaqəsi var. Tessellation'ın hər bir [ucunda](gloss:polygon-vertex) çox fərqli çoxbucaqlıların daxili açıları qarşılaşır. [[360]]° -ə qədər əlavə etmək üçün bu açıların hamısına ehtiyacımız var, əks halda ya boşluq olacaq, ya da üst-üstə düşəcəkdir. 
+Bunun əvvəlcədən hesablamağı öyrəndiyimiz [daxili açılarının](gloss:internal-angle) ölçüsü ilə əlaqəsi var. Tessellation'ın hər bir [ucunda](gloss:polygon-vertex) çox fərqli çoxbucaqlıların daxili açıları qarşılaşır. [[360]]° -ə qədər əlavə etmək üçün bu açıların hamısına ehtiyacımız var, əks halda ya boşluq olacaq, ya da üst-üstə düşəcəkdir. 
 
 ---
 > id: tessellation-regular-2
@@ -984,8 +959,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption} Pentaqonlar [[boşalmır | tessellate]] _{span.reveal(when="blank-2")} çünki 108° çoxluğu 360° -ə çatmır._ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -997,9 +970,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular-3
 
- Eyni şəkildə, beşbucaqlar kimi, 7 və ya daha çox tərəfi olan hər hansı bir adi çoxbucağın tessellate etmədiyini yoxlaya bilərsiniz. Bu o deməkdir ki, tessellate edən müntəzəm çoxbucaqlılar üçbucaqlar, kvadrat və altıbucaqlılardır! 
+Eyni şəkildə, beşbucaqlar kimi, 7 və ya daha çox tərəfi olan hər hansı bir adi çoxbucağın tessellate etmədiyini yoxlaya bilərsiniz. Bu o deməkdir ki, tessellate edən müntəzəm çoxbucaqlılar üçbucaqlar, kvadrat və altıbucaqlılardır! 
 
- Əlbəttə ki, daxili müntəzəmlik 360° -ə qədər əlavə olacağı təqdirdə müxtəlif növ çoxbucaqlı birləşmələri birləşdirə bilərsiniz. 
+Əlbəttə ki, daxili müntəzəmlik 360° -ə qədər əlavə olacağı təqdirdə müxtəlif növ çoxbucaqlı birləşmələri birləşdirə bilərsiniz. 
 
     x-gallery(slide-width="520")
       div
@@ -1032,7 +1005,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Düzensiz çoxbucaqlılardan hazırlanan boşqablar 
 
- Düzəlməz [çoxbucaqlılardan](gloss:irregular-polygon) kənarlaşdırma işlərini də cəhd edə bilərik - onları fırladarkən və düzəldərkən diqqətli olacağıq. 
+Düzəlməz [çoxbucaqlılardan](gloss:irregular-polygon) kənarlaşdırma işlərini də cəhd edə bilərik - onları fırladarkən və düzəldərkən diqqətli olacağıq. 
 
 ::: column(width=360)
 
@@ -1052,9 +1025,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Belə çıxır ki, yalnız bərabər tərəfli üçbucaqları deyil, _istənilən üçbucağı da_ tərtib edə bilərsiniz! Bu diaqramdakı [ucları](target:vertex) hərəkət [etdirməyə](target:vertex) çalışın. 
+Belə çıxır ki, yalnız bərabər tərəfli üçbucaqları deyil, _istənilən üçbucağı da_ tərtib edə bilərsiniz! Bu diaqramdakı [ucları](target:vertex) hərəkət [etdirməyə](target:vertex) çalışın. 
 
- Üçbucaqdakı daxili açıların cəmi [[180]]° -dir. Hər bucağı [[iki dəfə]] istifadə etsək [[| bir dəfə |]] döngənin hər ucunda [[üç dəfə]] 360° qazanırıq: 
+Üçbucaqdakı daxili açıların cəmi [[180]]° -dir. Hər bucağı [[iki dəfə]] istifadə etsək [[| bir dəfə |]] döngənin hər ucunda [[üç dəfə]] 360° qazanırıq: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1117,7 +1090,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
- Daha təəccüblüsü, _hər dörd tərəfli_ də tessellates! Onların daxili açı bucağı [[360]]° -dir, buna görə hər bucağı [[bir dəfə]] istifadə etsək [[| iki dəfə |]] tessellation hər vertex [[üç dəfə]] , biz 360° əldə. 
+Daha təəccüblüsü, _hər dörd tərəfli_ də tessellates! Onların daxili açı bucağı [[360]]° -dir, buna görə hər bucağı [[bir dəfə]] istifadə etsək [[| iki dəfə |]] tessellation hər vertex [[üç dəfə]] , biz 360° əldə. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1159,7 +1132,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
- Pentaqonlar bir az hiyləgərdir. Artıq gördük ki, _müntəzəm_ pentaqonlar [[boşalmır | tessellate]] , lakin qeyri-müntəzəm olanlar haqqında nə demək olar? 
+Pentaqonlar bir az hiyləgərdir. Artıq gördük ki, _müntəzəm_ pentaqonlar [[boşalmır | tessellate]] , lakin qeyri-müntəzəm olanlar haqqında nə demək olar? 
 
 ---
 > id: tessellation-pentagons-1
@@ -1178,16 +1151,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Budur, beşbucaqlı işarələrin üç fərqli nümunəsi. Onlar _nizamlı_ deyillər, lakin mükəmməl etibarlı 5 tərəfli çoxbucaqlıdırlar. 
+Budur, beşbucaqlı işarələrin üç fərqli nümunəsi. Onlar _nizamlı_ deyillər, lakin mükəmməl etibarlı 5 tərəfli çoxbucaqlıdırlar. 
 
- İndiyə qədər riyaziyyatçılar yalnız (konveks) pentaqonları olan 15 müxtəlif növ boşluq tapdılar. Ən sonu 2015-ci ildə kəşf edildi. Başqasının olub olmadığını və ya bu 15-nin tək olub olmadığını heç kim bilmir ... 
+İndiyə qədər riyaziyyatçılar yalnız (konveks) pentaqonları olan 15 müxtəlif növ boşluq tapdılar. Ən sonu 2015-ci ildə kəşf edildi. Başqasının olub olmadığını və ya bu 15-nin tək olub olmadığını heç kim bilmir ... 
 
 ---
 > id: escher
 
 ### İncəsənətdəki məşğələlər 
 
- Tessellations həm bir çox sənətkar, həm memar, həm də dizayner üçün bir vasitə və bir ilhamdır - ən məşhuru Hollandiyalı rəssam [MC Escher](bio:escher) . Escher'in əsərində qəribə, mutasiya edən canlılar, naxışlar və mənzərələr var: 
+Tessellations həm bir çox sənətkar, həm memar, həm də dizayner üçün bir vasitə və bir ilhamdır - ən məşhuru Hollandiyalı rəssam [MC Escher](bio:escher) . Escher'in əsərində qəribə, mutasiya edən canlılar, naxışlar və mənzərələr var: 
 
     .row
       div(style="width: 220px")
@@ -1209,7 +1182,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
- Bu sənət əsərləri çox vaxt əyləncəli və səysiz görünür, lakin əsas riyazi prinsiplər əvvəlkilərlə eynidır: açılar, dönüşlər, tərcümələr və çoxbucaqlılar. Riyaziyyat düzgün deyilsə, imtahan işə yaramır! 
+Bu sənət əsərləri çox vaxt əyləncəli və səysiz görünür, lakin əsas riyazi prinsiplər əvvəlkilərlə eynidır: açılar, dönüşlər, tərcümələr və çoxbucaqlılar. Riyaziyyat düzgün deyilsə, imtahan işə yaramır! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
@@ -1219,9 +1192,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Penrose Tilings 
 
- İndiyə qədər gördüyümüz bütün boşluqlarda ortaq bir şey var: onlar __dövri__ xarakter __daşıyır__ . Demək ki, bunlar təkrar-təkrar təkrarlanan adi bir naxışdan ibarətdir. Hər istiqamətdə əbədi davam edə bilərlər və hər yerdə eyni görünəcəklər. 
+İndiyə qədər gördüyümüz bütün boşluqlarda ortaq bir şey var: onlar __dövri__ xarakter __daşıyır__ . Demək ki, bunlar təkrar-təkrar təkrarlanan adi bir naxışdan ibarətdir. Hər istiqamətdə əbədi davam edə bilərlər və hər yerdə eyni görünəcəklər. 
 
- 1970-ci illərdə İngilis riyaziyyatçısı və fiziki [Roger Penrose](bio:penrose) _qeyri-dövri_ tessellations kəşf etdi - onlar hələ də bütün istiqamətlərdə sonsuz olaraq davam edirlər, lakin _heç vaxt_ eyni görünməzlər. Bunlara __Penrose plitələri__ deyilir və birini yaratmaq üçün yalnız bir neçə müxtəlif növ çoxbucaqlı lazımdır: 
+1970-ci illərdə İngilis riyaziyyatçısı və fiziki [Roger Penrose](bio:penrose) _qeyri-dövri_ tessellations kəşf etdi - onlar hələ də bütün istiqamətlərdə sonsuz olaraq davam edirlər, lakin _heç vaxt_ eyni görünməzlər. Bunlara __Penrose plitələri__ deyilir və birini yaratmaq üçün yalnız bir neçə müxtəlif növ çoxbucaqlı lazımdır: 
 
     figure
       include svg/penrose.svg
@@ -1231,7 +1204,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: penrose-1
 
- Penrose, əyləncələr üçün sırf kəşfiyyat işləri aparırdı, lakin məlum olur ki, bəzi həqiqi materialların (alüminium kimi) daxili quruluşu bənzər bir nümunəni izləyir. Nümunə hətta tualet kağızı üzərində də istifadə edilmişdir, çünki istehsalçılar dövri olmayan bir naxışın heç bir qabarıqlıq olmadan yuvarlana biləcəyini qeyd etdilər. 
+Penrose, əyləncələr üçün sırf kəşfiyyat işləri aparırdı, lakin məlum olur ki, bəzi həqiqi materialların (alüminium kimi) daxili quruluşu bənzər bir nümunəni izləyir. Nümunə hətta tualet kağızı üzərində də istifadə edilmişdir, çünki istehsalçılar dövri olmayan bir naxışın heç bir qabarıqlıq olmadan yuvarlana biləcəyini qeyd etdilər. 
 
 ---
 
@@ -1239,8 +1212,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
- İndiyə qədər düz, iki ölçülü bir dünyada çoxbucaqlı nələr edə biləcəyimizə baxdıq. Bir [__polyhedron__](gloss:polyhedron) , çoxbucaqlılardan ibarət üçölçülü bir cisimdir. Bəzi nümunələr: 
+İndiyə qədər düz, iki ölçülü bir dünyada çoxbucaqlı nələr edə biləcəyimizə baxdıq. Bir [__polyhedron__](gloss:polyhedron) , çoxbucaqlılardan ibarət üçölçülü bir cisimdir. Bəzi nümunələr: 
 
 ::: column.padded-thin(width=220)
 
@@ -1256,32 +1230,32 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Polyhedra əyri səthləri ehtiva edə bilməz - kürələr və silindrlər, məsələn, polyhedra deyildir. 
+Polyhedra əyri səthləri ehtiva edə bilməz - kürələr və silindrlər, məsələn, polyhedra deyildir. 
 
- Bir polyhedron meydana gətirən çoxbucaqlılara onun [__üzləri__](gloss:polyhedron-face) deyilir. İki üzün bağlandığı xətlərə [__kənarlar__](gloss:polyhedron-edge) , kənarların qovuşduğu künclərə isə [__uclar__](gloss:polyhedron-vertex) deyilir. 
+Bir polyhedron meydana gətirən çoxbucaqlılara onun [__üzləri__](gloss:polyhedron-face) deyilir. İki üzün bağlandığı xətlərə [__kənarlar__](gloss:polyhedron-edge) , kənarların qovuşduğu künclərə isə [__uclar__](gloss:polyhedron-vertex) deyilir. 
 
 ---
 > id: euler
 
- Polyhedra bir çox müxtəlif formada və ölçüdə olur - sadə kublar və ya bir neçə üzü olan piramidalardan tutmuş, üçbucaqlı üzləri olan yuxarıdakı ulduz kimi mürəkkəb obyektlərə qədər. Bununla birlikdə, _bütün_ polyhedra'nın ortaq bir əhəmiyyətli bir mülkü olduğu ortaya çıxır: 
+Polyhedra bir çox müxtəlif formada və ölçüdə olur - sadə kublar və ya bir neçə üzü olan piramidalardan tutmuş, üçbucaqlı üzləri olan yuxarıdakı ulduz kimi mürəkkəb obyektlərə qədər. Bununla birlikdə, _bütün_ polyhedra'nın ortaq bir əhəmiyyətli bir mülkü olduğu ortaya çıxır: 
 
 ::: .theorem
 
- __Eyler Polyhedron Formula__  
+__Eyler Polyhedron Formula__  
 Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kənarların sayından ( _E_ ) iki dəfə çoxdur. Başqa sözlə, 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
- Məsələn, bir polyhedronun 12 üzü və 18 ucu varsa, bilirik ki, onun [[28]] kənarı olmalıdır. 
+Məsələn, bir polyhedronun 12 üzü və 18 ucu varsa, bilirik ki, onun [[28]] kənarı olmalıdır. 
 
 ---
 > id: euler-1
 
- Bu tənliyi məşhur İsveçrə riyaziyyatçısı [Leonard Euler](bio:euler) kəşf etdi. Hər hansı bir çuxur olmadıqca hər hansı bir polyhedron üçün doğrudur. 
+Bu tənliyi məşhur İsveçrə riyaziyyatçısı [Leonard Euler](bio:euler) kəşf etdi. Hər hansı bir çuxur olmadıqca hər hansı bir polyhedron üçün doğrudur. 
 
- Yuxarıdakılar kimi fərqli polyhedra cəhd etsəniz, Euler düsturunun həmişə işlədiyini görərsiniz. [Sonrakı bir kursda](/course/graph-theory/planar-graphs) həqiqətən riyazi olaraq necə sübut edəcəyinizi öyrənəcəksiniz. 
+Yuxarıdakılar kimi fərqli polyhedra cəhd etsəniz, Euler düsturunun həmişə işlədiyini görərsiniz. [Sonrakı bir kursda](/course/graph-theory/planar-graphs) həqiqətən riyazi olaraq necə sübut edəcəyinizi öyrənəcəksiniz. 
 
 ---
 
@@ -1290,21 +1264,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 > section: nets-cross-sections
 > sectionStatus: dev
 
- Bütün dünyamız üç ölçülüdür, lakin düz, iki ölçülü cisimləri çəkmək və ya görüntüləmək çox vaxt daha asandır. Üçölçülü polyhedra iki ölçülü şəkildə baxmağın bir neçə fərqli yolu var. 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
- Bu şəbəkələrdən hansını bir kub edir Şəbəkəyə obyektlə uyğunlaşdırın https://github.com/polymake/matchthenet Rəsm şəbəkələri 
-
- Təyyarənin və bərkin kəsişməsindən əmələ gələn kəsiyi təsvir edin. 
-
- Bir kəsişmə bir təyyarənin bərk ilə kəsişməsidir. Üç ölçülü bir fiquru iki ölçülü bir müstəvidə təmsil etməyin başqa bir yolu ağdan istifadə etməkdir. Bir ağ, üç ölçülü bir formanın tərəflərinin açılmamış, düz bir təmsilidir. 
-
- altıbucaqlı bir kəsik etmək üçün bir kubu döndərin 
+TODO
 
 ---
 
@@ -1313,7 +1273,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 > section: prisms-pyramids
 > sectionStatus: dev
 
- ETMƏK 
+ETMƏK 
 
 ---
 
@@ -1322,7 +1282,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 > section: scaling
 > sectionStatus: dev
 
- ETMƏK 
+ETMƏK 
 
 ---
 
@@ -1330,14 +1290,11 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 > section: platonic
 > id: platonic
+> translated: auto
 
- Bu kursun əvvəlində [müntəzəm çoxbucaqlıları](gloss:regular-polygon) , xüsusən də "simmetrik" çoxbucaqlılar, bütün tərəfləri və bucaqları eyni olduğu təyin etdik. Polyedra üçün oxşar bir şey edə bilərik. 
+Bu kursun əvvəlində [müntəzəm çoxbucaqlıları](gloss:regular-polygon) , xüsusən də "simmetrik" çoxbucaqlılar, bütün tərəfləri və bucaqları eyni olduğu təyin etdik. Polyedra üçün oxşar bir şey edə bilərik. 
 
- _Müntəzəm bir polyhedronda_ bütün [üzlər](gloss:polyhedron-face) eyni tipli müntəzəm çoxbucaqlıdır və eyni sayda üzlər hər [vertexdə](gloss:polyhedron-vertex) görüşürlər. Bu iki xassəyə sahib olan polyhedra, Yunan filosofu [Platonun](bio:plato) adını daşıyan [__Platonik bərk__](gloss:platonic-solid) adlanır. 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+_Müntəzəm bir polyhedronda_ bütün [üzlər](gloss:polyhedron-face) eyni tipli müntəzəm çoxbucaqlıdır və eyni sayda üzlər hər [vertexdə](gloss:polyhedron-vertex) görüşürlər. Bu iki xassəyə sahib olan polyhedra, Yunan filosofu [Platonun](bio:plato) adını daşıyan [__Platonik bərk__](gloss:platonic-solid) adlanır. 
 
  Beləliklə, Platonik bərk cisimlər nəyə oxşayır - və bunların neçəsi var? Üç ölçülü bir forma düzəltmək üçün hər ucunda görüşmək üçün ən azı [[3]] üzə ehtiyacımız var. Sistematik olaraq ən kiçik müntəzəm çoxbucaqla başlayaq: bərabər tərəfli üçbucaqlar: 
 
@@ -1354,7 +1311,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- Hər bir ucunda üç [bərabər tərəfli üçbucağın](gloss:equilateral-triangle) görüşdüyü bir polyhedron yaratsaq, solda forma alırıq. __Tetrahedron__ adlanır və [[4]] üzə malikdir. _{.reveal(when="blank-0")} ("Tetra" yunanca "dörd" deməkdir)._ 
+Hər bir ucunda üç [bərabər tərəfli üçbucağın](gloss:equilateral-triangle) görüşdüyü bir polyhedron yaratsaq, solda forma alırıq. __Tetrahedron__ adlanır və [[4]] üzə malikdir. _{.reveal(when="blank-0")} ("Tetra" yunanca "dörd" deməkdir)._ 
 
 :::
 
@@ -1371,7 +1328,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- Dörd bərabər tərəfli üçbucaq hər dikbaşda görüşərsə, fərqli bir Platonik bərk olur. __Oktahedron__ adlanır və [[8]] üzə malikdir. _{.reveal(when="blank-0")} ("Octa" yunan dilində "səkkiz" deməkdir. Eynilə "Octagon" 8 tərəfli forma deməkdir, "Octahedron" 8 üzlü bərk deməkdir.)_ 
+Dörd bərabər tərəfli üçbucaq hər dikbaşda görüşərsə, fərqli bir Platonik bərk olur. __Oktahedron__ adlanır və [[8]] üzə malikdir. _{.reveal(when="blank-0")} ("Octa" yunan dilində "səkkiz" deməkdir. Eynilə "Octagon" 8 tərəfli forma deməkdir, "Octahedron" 8 üzlü bərk deməkdir.)_ 
 
 :::
 
@@ -1388,7 +1345,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- [[Beş]] üçbucaq hər vertexdə __görüşsə__ , __Icosahedron alırıq__ . [[20]] üzü var. _{.reveal(when="blank-1")} ("Icosa" yunan dilində "iyirmi" deməkdir.)_ 
+[[Beş]] üçbucaq hər vertexdə __görüşsə__ , __Icosahedron alırıq__ . [[20]] üzü var. _{.reveal(when="blank-1")} ("Icosa" yunan dilində "iyirmi" deməkdir.)_ 
 
 :::
 
@@ -1403,7 +1360,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- [[Altı]] üçbucaq hər vertexdə qarşılaşırsa, fərqli bir şey olur: biz sadəcə [[bir tessellation]] alırıq [[| dörd tərəfli | başqa Icosahedron]] , _{span.reveal(when="blank-1")} əvəzinə üçölçülü bir polyhedron._ 
+[[Altı]] üçbucaq hər vertexdə qarşılaşırsa, fərqli bir şey olur: biz sadəcə [[bir tessellation]] alırıq [[| dörd tərəfli | başqa Icosahedron]] , _{span.reveal(when="blank-1")} əvəzinə üçölçülü bir polyhedron._ 
 
 :::
 
@@ -1418,11 +1375,11 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- Hər bir ucunda yeddi və ya daha çox üçbucaq da yeni polyhedra əmələ gətirmir: bir çoxbucağın ətrafında o qədər üçbucağa uyğun yer yoxdur. 
+Hər bir ucunda yeddi və ya daha çox üçbucaq da yeni polyhedra əmələ gətirmir: bir çoxbucağın ətrafında o qədər üçbucağa uyğun yer yoxdur. 
 
 :::
 
- Bu, üçbucaqlardan ibarət [[üç]] Platon qatı tapdığımız deməkdir. Növbəti müntəzəm çoxbucağa keçək: kvadratlar. 
+Bu, üçbucaqlardan ibarət [[üç]] Platon qatı tapdığımız deməkdir. Növbəti müntəzəm çoxbucağa keçək: kvadratlar. 
 
 ---
 > id: platonic-cube
@@ -1437,7 +1394,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- [[Üç]] kvadrat hər bir ucunda görüşsələr, __kubu__ alırıq. Zərf kimi, [[6]] üzü var. _{span.reveal(when="blank-1")} Kub, bəzən Yunan dilində "altı" üçün "hexa" sözündən sonra _Hexahedron_ da deyilir._ 
+[[Üç]] kvadrat hər bir ucunda görüşsələr, __kubu__ alırıq. Zərf kimi, [[6]] üzü var. _{span.reveal(when="blank-1")} Kub, bəzən Yunan dilində "altı" üçün "hexa" sözündən sonra _Hexahedron_ da deyilir._ 
 
 :::
 
@@ -1452,14 +1409,14 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- Hər [[dördbucaqda dörd]] meydan [[bir-birinə qovuşursa, başqa bir boşalma]] alırıq [[| bir tetraedron | başqa bir kub]] . _{span.reveal(when="blank-1")} Əvvəlki kimi, beş və ya daha çox meydan da işləməyəcəkdir._ 
+Hər [[dördbucaqda dörd]] meydan [[bir-birinə qovuşursa, başqa bir boşalma]] alırıq [[| bir tetraedron | başqa bir kub]] . _{span.reveal(when="blank-1")} Əvvəlki kimi, beş və ya daha çox meydan da işləməyəcəkdir._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
- Sonrakı, nizamlı beşbucaqları sınayaq: 
+Sonrakı, nizamlı beşbucaqları sınayaq: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1471,7 +1428,7 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- [[Üç]] pentaqon hər __dikdə görüşsəydi__ , __Dodecahedron alırıq__ . [[12]] üzü var. _{.reveal(when="blank-1")} ("Dodeca" yunan dilində "on iki" deməkdir.)_ 
+[[Üç]] pentaqon hər __dikdə görüşsəydi__ , __Dodecahedron alırıq__ . [[12]] üzü var. _{.reveal(when="blank-1")} ("Dodeca" yunan dilində "on iki" deməkdir.)_ 
 
 :::
 
@@ -1486,14 +1443,14 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- Əvvəlki kimi, dörd və ya daha çox beşbucaq [[işləmir |]] kifayət qədər yer olmadığı [[üçün mümkündür]] . 
+Əvvəlki kimi, dörd və ya daha çox beşbucaq [[işləmir |]] kifayət qədər yer olmadığı [[üçün mümkündür]] . 
 
 :::
 
 ---
 > id: platonic-hexagons
 
- Növbəti müntəzəm çoxbucaqlı altıbucaqlılardır: 
+Növbəti müntəzəm çoxbucaqlı altıbucaqlılardır: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1503,67 +1460,67 @@ Hər bir polyhedronda üzlərin sayı ( _F_ ) və uclarının sayı ( _V_ ) kən
 
 ::: column.grow
 
- Üç altıbucaqlı hər vertexdə görüşərsə, dərhal bir [[imtahan]] alırıq [[| polyhedron | hexahedron]] . _{span.reveal(when="blank-0")} Üçdən çox boşluq olmadığına görə, altıbucaqlılardan ibarət Platonic bərk maddələrin olmadığı görünür._ 
+Üç altıbucaqlı hər vertexdə görüşərsə, dərhal bir [[imtahan]] alırıq [[| polyhedron | hexahedron]] . _{span.reveal(when="blank-0")} Üçdən çox boşluq olmadığına görə, altıbucaqlılardan ibarət Platonic bərk maddələrin olmadığı görünür._ 
 
 :::
 
 ---
 > id: platonic-final
 
- Eyni, altı tərəfdən çox olan bütün müntəzəm çoxbucaqlılarda da eyni vəziyyətdədir. Tessellate etmirlər və əlbəttə ki, üçölçülü çoxbucaqlı almırıq. 
+Eyni, altı tərəfdən çox olan bütün müntəzəm çoxbucaqlılarda da eyni vəziyyətdədir. Tessellate etmirlər və əlbəttə ki, üçölçülü çoxbucaqlı almırıq. 
 
- Bu, yalnız [[beş]] Platonik qatı var deməkdir! Hamısına birlikdə nəzər salaq: 
+Bu, yalnız [[beş]] Platonik qatı var deməkdir! Hamısına birlikdə nəzər salaq: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __Tetrahedron__ 
+__Tetrahedron__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]] üzlər_  
+_{span.dual} [[4]] üzlər_  
 _{span.dual} [[4]] Vertices_  
 _{span.dual} [[6]] kənarları_ 
 
 ::: column.grow.text-center(width=120)
 
- __Küp__ 
+__Küp__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]] üzlər_  
+_{span.dual(target="dual1")} [[6]] üzlər_  
 _{span.dual(target="dual1")} [[8]] Vertices_  
 _{span.dual} [[12]] kənarları_ 
 
 ::: column.grow.text-center(width=120)
 
- __Oktahedron__ 
+__Oktahedron__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]] üzlər_  
+_{span.dual(target="dual1")} [[8]] üzlər_  
 _{span.dual(target="dual1")} [[6]] Vertices_  
 _{span.dual} [[12]] kənarları_ 
 
 ::: column.grow.text-center(width=120)
 
- __Dodecahedron__ 
+__Dodecahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]] üzlər_  
+_{span.dual(target="dual2")} [[12]] üzlər_  
 _{span.dual(target="dual2")} 20 Vertices_  
 _{span.dual} 30 kənarları_ 
 
 ::: column.grow.text-center(width=120)
 
- __Icosahedron__ 
+__Icosahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]] üz_  
+_{span.dual(target="dual2")} [[20]] üz_  
 _{span.dual(target="dual2")} 12 Vertices_  
 _{span.dual} 30 kənarları_ 
 
@@ -1574,7 +1531,7 @@ _{span.dual} 30 kənarları_
 ---
 > id: platonic-dual
 
- Hər bir üzü bir vertekslə, hər bir ucu da bir üzlə "əvəz etməklə" çoxqütbü ikili hala gətirə bilərik. Bu animasiyalar göstərir: 
+Hər bir üzü bir vertekslə, hər bir ucu da bir üzlə "əvəz etməklə" çoxqütbü ikili hala gətirə bilərik. Bu animasiyalar göstərir: 
 
 ::: column(width=300)
 
@@ -1588,12 +1545,12 @@ _{span.dual} 30 kənarları_
 
 :::
 
- Tetrahedron özü ilə ikiqatdır. Üz və ucları eyni sayda olduğundan onları dəyişdirmək heç nəyi dəyişdirməz. 
+Tetrahedron özü ilə ikiqatdır. Üz və ucları eyni sayda olduğundan onları dəyişdirmək heç nəyi dəyişdirməz. 
 
 ---
 > id: platonic-elements
 
- [Platon](bio:plato) , Kainatdakı bütün maddələrin dörd elementdən ibarət olduğuna inanırdı: Hava, Yer, Su və Od. Düşünürdü ki, hər bir element Platon qatı birinə uyğundur, beşincisi isə kainatı bütövlükdə təmsil edəcəkdir. Bu gün bilirik ki, polyhedra deyil, sferik atomlardan ibarət 100-dən çox fərqli element var. 
+[Platon](bio:plato) , Kainatdakı bütün maddələrin dörd elementdən ibarət olduğuna inanırdı: Hava, Yer, Su və Od. Düşünürdü ki, hər bir element Platon qatı birinə uyğundur, beşincisi isə kainatı bütövlükdə təmsil edəcəkdir. Bu gün bilirik ki, polyhedra deyil, sferik atomlardan ibarət 100-dən çox fərqli element var. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1605,9 +1562,9 @@ _{span.dual} 30 kənarları_
 
 > id: archimedean
 
- Platonik qatılar xüsusilə vacib polyhedradır, lakin saysız-hesabsız başqaları var. 
+Platonik qatılar xüsusilə vacib polyhedradır, lakin saysız-hesabsız başqaları var. 
 
- [__Arximed qatı__](gloss:archimedean-solid) məsələn, hələ də [müntəzəm çoxbucaqlılardan ibarət olmalıdır](gloss:regular-polygon) , ancaq bir çox fərqli növdən istifadə edə bilərsiniz. Onlara başqa bir yunan riyaziyyatçısı, [Sirakuzanın Arximedinin](bio:archimedes) adı verilib və onlardan 13-ü var: 
+[__Arximed qatı__](gloss:archimedean-solid) məsələn, hələ də [müntəzəm çoxbucaqlılardan ibarət olmalıdır](gloss:regular-polygon) , ancaq bir çox fərqli növdən istifadə edə bilərsiniz. Onlara başqa bir yunan riyaziyyatçısı, [Sirakuzanın Arximedinin](bio:archimedes) adı verilib və onlardan 13-ü var: 
 
 ::: column(width=170 parent="padded-thin")
 
@@ -1702,16 +1659,12 @@ _{span.dual} 30 kənarları_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
 ### Proqramlar 
 
- Platon, bütün elementlərin Platon bərklərindən ibarət olduğuna inanmaqda səhv idi. Ancaq müntəzəm polyhedra təbiətdə başqa yerlərdə görünməyə imkan verən bir çox xüsusi xüsusiyyətə malikdir - və bu xüsusiyyətləri elm və mühəndislikdə kopyalaya bilərik. 
+Platon, bütün elementlərin Platon bərklərindən ibarət olduğuna inanmaqda səhv idi. Ancaq müntəzəm polyhedra təbiətdə başqa yerlərdə görünməyə imkan verən bir çox xüsusi xüsusiyyətə malikdir - və bu xüsusiyyətləri elm və mühəndislikdə kopyalaya bilərik. 
 
 ::: column(width=180)
 
@@ -1725,7 +1678,7 @@ _{span.dual} 30 kənarları_
 
 ::: column.grow
 
- Bir çox __virus__ , __bakteriya__ və digər kiçik __orqanizmlər__ [icosahedra](gloss:icosahedron) şəklindədir. Məsələn, viruslar öz genetik materiallarını çox sayda eyni protein zülalının qabığına daxil etməlidirlər. İzosahedron bunun ən səmərəli yoludur, çünki bir neçə müntəzəm elementdən ibarətdir, lakin demək olar ki, bir sahə şəklindədir. 
+Bir çox __virus__ , __bakteriya__ və digər kiçik __orqanizmlər__ [icosahedra](gloss:icosahedron) şəklindədir. Məsələn, viruslar öz genetik materiallarını çox sayda eyni protein zülalının qabığına daxil etməlidirlər. İzosahedron bunun ən səmərəli yoludur, çünki bir neçə müntəzəm elementdən ibarətdir, lakin demək olar ki, bir sahə şəklindədir. 
 
 :::
 
@@ -1741,9 +1694,9 @@ _{span.dual} 30 kənarları_
 
 ::: column.grow
 
- Bir çox __molekul__ müntəzəm polyhedra şəklində olur. Ən məşhur nümunədir `C_60` bir [kəsilmiş İcosahedron](gloss:truncated-icosahedron) şəklində [qurulmuş](gloss:truncated-icosahedron) 60 karbon atomundan ibarətdir. 
+Bir çox __molekul__ müntəzəm polyhedra şəklində olur. Ən məşhur nümunədir `C_60` bir [kəsilmiş İcosahedron](gloss:truncated-icosahedron) şəklində [qurulmuş](gloss:truncated-icosahedron) 60 karbon atomundan ibarətdir. 
 
- 1985-ci ildə elm adamları ulduzlararası toz araşdırması zamanı kəşf edildi. Bənzər binaların inşası ilə məşhur olan memar [Buckminster Fullerdən](bio:fuller) sonra onu "Buckyball" (və ya Buckminsterfullerene) adlandırdılar. 
+1985-ci ildə elm adamları ulduzlararası toz araşdırması zamanı kəşf edildi. Bənzər binaların inşası ilə məşhur olan memar [Buckminster Fullerdən](bio:fuller) sonra onu "Buckyball" (və ya Buckminsterfullerene) adlandırdılar. 
 
 :::
 
@@ -1759,7 +1712,7 @@ _{span.dual} 30 kənarları_
 
 ::: column.grow
 
- Əksər __kristalların__ atomları [tetraedra](gloss:tetrahedron) , [kublar](gloss:cube) və ya [oktaedradan](gloss:octahedron) ibarət müntəzəm bir şəbəkə [şəklində qurulmuşdur](gloss:octahedron) . Qırıldıqda və ya parçalandıqda bu formaları daha böyük miqyasda görə bilərsiniz. 
+Əksər __kristalların__ atomları [tetraedra](gloss:tetrahedron) , [kublar](gloss:cube) və ya [oktaedradan](gloss:octahedron) ibarət müntəzəm bir şəbəkə [şəklində qurulmuşdur](gloss:octahedron) . Qırıldıqda və ya parçalandıqda bu formaları daha böyük miqyasda görə bilərsiniz. 
 
 :::
 
@@ -1775,7 +1728,7 @@ _{span.dual} 30 kənarları_
 
 ::: column.grow
 
- Tetrahedra və oktahedra olduqca sərt və sabitdir, bu da onları __tikintidə__ çox faydalı edir. _Kosmik çərçivələr_ böyük damları və ağır körpüləri dəstəkləyə biləcək çoxbucaqlı quruluşdur. 
+Tetrahedra və oktahedra olduqca sərt və sabitdir, bu da onları __tikintidə__ çox faydalı edir. _Kosmik çərçivələr_ böyük damları və ağır körpüləri dəstəkləyə biləcək çoxbucaqlı quruluşdur. 
 
 :::
 
@@ -1791,8 +1744,8 @@ _{span.dual} 30 kənarları_
 
 ::: column.grow
 
- Platonik bərk də __zar__ yaratmaq üçün istifadə olunur. simmetriyasına görə hər tərəfin eniş [ehtimalı yüksəkdir](gloss:probability) - buna görə zar ədalətli olur. 
+Platonik bərk də __zar__ yaratmaq üçün istifadə olunur. simmetriyasına görə hər tərəfin eniş [ehtimalı yüksəkdir](gloss:probability) - buna görə zar ədalətli olur. 
 
- [Kəsilmiş Icosahedron](gloss:truncated-icosahedron) , ehtimal ki, dünyanın ən məşhur [polhedrondur](gloss:truncated-icosahedron) : futbolun formasıdır. 
+[Kəsilmiş Icosahedron](gloss:truncated-icosahedron) , ehtimal ki, dünyanın ən məşhur [polhedrondur](gloss:truncated-icosahedron) : futbolun formasıdır. 
 
 :::

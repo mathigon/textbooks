@@ -14,7 +14,6 @@
 
 ::: column(width=260)
 
-    // https://depositphotos.com/97306690/stock-photo-jungle-in-colombian-green-mountains.html
     x-img(src="images/rainforest.jpg" width=260 height=320)
 
 :::
@@ -57,7 +56,6 @@
 
 ::: figure
 
-    // https://commons.wikimedia.org/wiki/File:The_Overland_Pony_Express.jpg
     img(src="images/pony-express.jpg" width=525 height=260)
 
 {.caption} المهر السريع بجوار خط التلغراف قيد الإنشاء - لوحة رسمها _جورج أوتينجر_
@@ -102,8 +100,6 @@
 
 ::: column(width=280)
 
-    // https://depositphotos.com/59221337/stock-photo-vintage-morse-telegraph-machine.html
-    // alternative: https://americanhistory.si.edu/collections/search/object/nmah_1096762
     x-img(src="images/morse.jpg" width=280 height=300)
 
 {.caption} تقوم آلة التلغراف هذه أيضًا بتسجيل الرسائل على شريط طويل من الورق.
@@ -137,7 +133,6 @@
     figure: x-img(src="images/radio.png" width=225 height=220 style="margin-top: -24px" dir='ltr')
       button.radio-play
     x-gesture(target=".radio-play")
-    // TODO Show actual morse code while playing
 
 ---
 > id: morse-applications
@@ -149,7 +144,6 @@
 
 ::: column(width=220 parent="padded-thin")
 
-    // https://depositphotos.com/310187600/stock-photo-capital-records-building.html
     x-img(src="images/capitol-records.jpg" width=220 height=280)
       .capitol-light
 
@@ -163,7 +157,6 @@
 
 ::: column(width=220)
 
-    // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
     x-img(src="images/stitching.jpg" width=220 height=280 lightbox credit="David Fearn / newsteam")
 
 {.caption} خلال الحرب العالمية الثانية ، أُجبر سجين بريطاني على عمل غرز زخرفية مثل هذه. هل يمكنك العثور على (وفك) رسائل مورس المخفية؟
@@ -177,7 +170,7 @@
 
 أينما نظرنا ، نحن محاطون [__بالمعلومات__](gloss:information) ، مثل الكتب والصحف والأرقام والرسوم البيانية والصور أو الصور أو الموسيقى أو مقاطع الأفلام.
 
- [__رمز__](gloss:code) هو قاعدة أو خوارزمية يمكن استخدامها للتعبير عن المعلومات بتنسيق معين. أحد الأمثلة على ذلك هو _الأبجدية_ ، والتي يمكن استخدامها للتعبير عن اللغة على أنها سلسلة من الرموز المكتوبة (تسمى _الحروف_). مثال آخر رأيناه من قبل هو [رمز مورس](gloss:morse-code) ، التي تعبر عن الكلمات على أنها تسلسلات من [[النقاط و الخطوط|حروف و فراغ|موسيقى راديو
+[__رمز__](gloss:code) هو قاعدة أو خوارزمية يمكن استخدامها للتعبير عن المعلومات بتنسيق معين. أحد الأمثلة على ذلك هو _الأبجدية_ ، والتي يمكن استخدامها للتعبير عن اللغة على أنها سلسلة من الرموز المكتوبة (تسمى _الحروف_). مثال آخر رأيناه من قبل هو [رمز مورس](gloss:morse-code) ، التي تعبر عن الكلمات على أنها تسلسلات من [[النقاط و الخطوط|حروف و فراغ|موسيقى راديو
  ]].
 
 ---
@@ -196,7 +189,6 @@
 ::: column(width=280)
 
     x-img(src="images/smoke-signals.jpg" width=280 height=350 lightbox)
-    // https://commons.wikimedia.org/wiki/File:John_Mix_Stanley_-_Indian_Telegraph.jpg
 
 {.caption} إشارات الدخان الأمريكية الأصلية - لوحة بواسطة _جون ميكس ستانلي_
 
@@ -231,14 +223,12 @@
 ::: column(width=320)
 
     x-img(src="images/maritime-flags-1.jpg" width=320 height=220 lightbox)
-    // https://commons.wikimedia.org/wiki/File:Nautical_signal_flags_-_USS_Bonhomme_Richard_(LHD_6).jpg
 
 {.caption} تخزين لأعلام الإشارة على متن سفينة تابعة للبحرية الأمريكية
 
 ::: column(width=320 parent="padded-thin")
 
     x-img(src="images/maritime-flags-2.jpg" width=320 height=220 lightbox)
-    // https://depositphotos.com/39723603/stock-photo-colourful-signal-flags-on-a.html
 
 {.caption} أعلام زخرفية على مركب شراعي
 
@@ -260,7 +250,6 @@
 
 __علام Semaphore__ هي طريقة أخرى للتواصل باستخدام الأعلام ، والتي تم استخدامها قبل وقت طويل من اختراع التلغراف. في هذه الحالة ، تكون جميع الأعلام متشابهة ، ولكن حملها في مواضع مختلفة يشير إلى أحرف مختلفة:
 
-    // https://depositphotos.com/77499298/stock-illustration-semaphore-alphabet-flags-on-a.html
     .flags
       for l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         div
@@ -275,7 +264,6 @@ __علام Semaphore__ هي طريقة أخرى للتواصل باستخدام 
 
 ::: column(width=200)
 
-    // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg - FAIR USE
     x-img.beatles(src="images/help-album.jpg" width=200 height=200 credit="© Parlophone")
 
 :::
@@ -297,7 +285,6 @@ __علام Semaphore__ هي طريقة أخرى للتواصل باستخدام 
 
 ::: column(width=260)
 
-    // https://depositphotos.com/220660220/stock-photo-dna-spiral-molecule-high-detailed.html
     x-img(src="images/dna.jpg" width=260 height=380)
 
 ::: column.grow

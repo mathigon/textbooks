@@ -4,8 +4,9 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
- Hər gün saysız bağlantılar və şəbəkələr əhatə edir: yollar və dəmir yolları, telefon xətləri, internet, elektron sxemlər və hətta molekulyar bağlar. Dostları və ailələri arasında hətta _sosial şəbəkələr_ var. Başqa nümunələri düşünə bilərsinizmi? 
+Hər gün saysız bağlantılar və şəbəkələr əhatə edir: yollar və dəmir yolları, telefon xətləri, internet, elektron sxemlər və hətta molekulyar bağlar. Dostları və ailələri arasında hətta _sosial şəbəkələr_ var. Başqa nümunələri düşünə bilərsinizmi? 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -50,9 +51,9 @@
 
 ::: column.grow
 
- Riyaziyyatda bütün bu nümunələr [__qrafik__](gloss:graph) şəklində göstərilə bilər (bir funksiyanın _qrafiki_ ilə qarışdırılmamaq üçün). Bir qraf, [[ucları]] adlanan müəyyən _nöqtələrdən_ ibarətdir [[| dairələr |]] bəziləri [[kənarları]] ilə bağlanmış [[keçidlər]] [[| sərhədləri | cütlər]] . 
+Riyaziyyatda bütün bu nümunələr [__qrafik__](gloss:graph) şəklində göstərilə bilər (bir funksiyanın _qrafiki_ ilə qarışdırılmamaq üçün). Bir qraf, [[ucları]] adlanan müəyyən _nöqtələrdən_ ibarətdir [[| dairələr |]] bəziləri [[kənarları]] ilə bağlanmış [[keçidlər]] [[| sərhədləri | cütlər]] . 
 
- __Qrafika nəzəriyyəsi__ qrafiklərin və onların xüsusiyyətlərinin öyrənilməsidir. Riyaziyyatın ən maraqlı və vizual sahələrindən biridir və saysız-hesabsız vacib tətbiqlərə malikdir. 
+__Qrafika nəzəriyyəsi__ qrafiklərin və onların xüsusiyyətlərinin öyrənilməsidir. Riyaziyyatın ən maraqlı və vizual sahələrindən biridir və saysız-hesabsız vacib tətbiqlərə malikdir. 
 
 ::: column(width=180)
 
@@ -63,7 +64,7 @@
 ---
 > id: intro-1
 
- Dairələr və xətlərdən istifadə edərək sadə qrafiklərin sxemini çəkə bilərik. Düzbucaqların mövqeyi və kənarların uzunluğu əhəmiyyətsizdir - yalnız bir-birlərinə _necə bağlı olduqları_ barədə düşünürük. Kenarlar hətta bir-birlərini keçə bilər və düz olmağa ehtiyac yoxdur. 
+Dairələr və xətlərdən istifadə edərək sadə qrafiklərin sxemini çəkə bilərik. Düzbucaqların mövqeyi və kənarların uzunluğu əhəmiyyətsizdir - yalnız bir-birlərinə _necə bağlı olduqları_ barədə düşünürük. Kenarlar hətta bir-birlərini keçə bilər və düz olmağa ehtiyac yoxdur. 
 
 ::: column(width=200)
 
@@ -85,13 +86,10 @@
 
 :::
 
-    // TODO maybe include examples of graphs with edges crossing, curved edges, etc.
-    // could include an "is this a graph?" quiz
-
 ---
 > id: intro-2
 
- Bəzi ucları və kənarları çıxarmaqla mövcud qrafikdən yeni qrafiklər yarada bilərik. Nəticə [__subqraf__](gloss:subgraph) adlanır. Burada rəngli kənarları və mümkün subqrafı göstərən vertices ilə daha bir neçə qrafik nümunəsini görə bilərsiniz: 
+Bəzi ucları və kənarları çıxarmaqla mövcud qrafikdən yeni qrafiklər yarada bilərik. Nəticə [__subqraf__](gloss:subgraph) adlanır. Burada rəngli kənarları və mümkün subqrafı göstərən vertices ilə daha bir neçə qrafik nümunəsini görə bilərsiniz: 
 
 ::: column(width=212 parent="padded-thin")
 
@@ -113,7 +111,7 @@
 ---
 > id: intro-3
 
- Deyirik ki, bir qrafin [__əmri__](gloss:graph-order) , vertikalların sayına bərabərdir. Bir verteksin [__dərəcəsi__](gloss:graph-degree) , həmin verteksdə rast gəlinən kənarların sayıdır. 
+Deyirik ki, bir qrafin [__əmri__](gloss:graph-order) , vertikalların sayına bərabərdir. Bir verteksin [__dərəcəsi__](gloss:graph-degree) , həmin verteksdə rast gəlinən kənarların sayıdır. 
 
 ::: column(width=130)
 
@@ -144,7 +142,7 @@
 ---
 > id: intro-4
 
- Tək bir döngədən ibarət olan qrafalar [__dövrə__](gloss:graph-cycle) adlanır. Bütün dövrlərdə [[eyni sayda kənar və uclar var | uclarından daha çox kənar | uclarından daha az kənar]] . 
+Tək bir döngədən ibarət olan qrafalar [__dövrə__](gloss:graph-cycle) adlanır. Bütün dövrlərdə [[eyni sayda kənar və uclar var | uclarından daha çox kənar | uclarından daha az kənar]] . 
 
     .row
       svg.graph(style='width: 120px; height: 120px;')
@@ -157,16 +155,17 @@
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Königsberg körpüləri 
 
 ::: column.grow
 
- Qrafiklər və şəbəkələr haqqında düşünən ilk riyaziyyatçılardan biri [Leonhard Euler idi](bio:euler) . Euler, Baltik dənizi yaxınlığındakı Königsberg qəsəbəsi ilə bağlı köhnə bir problemlə maraqlandı. 
+Qrafiklər və şəbəkələr haqqında düşünən ilk riyaziyyatçılardan biri [Leonhard Euler idi](bio:euler) . Euler, Baltik dənizi yaxınlığındakı Königsberg qəsəbəsi ilə bağlı köhnə bir problemlə maraqlandı. 
 
- Pregel çayı Königsberg'i yeddi körpü ilə bağlanan dörd ayrı hissəyə ayırır. Bütün körpülərin hamısını bir dəfə - ancaq bir dəfədən çox keçməyən şəhərin ətrafında gəzmək mümkündürmü? (Hər yerdə başlaya və bitirə bilərsən, mütləq eyni yerdə deyil.) 
+Pregel çayı Königsberg'i yeddi körpü ilə bağlanan dörd ayrı hissəyə ayırır. Bütün körpülərin hamısını bir dəfə - ancaq bir dəfədən çox keçməyən şəhərin ətrafında gəzmək mümkündürmü? (Hər yerdə başlaya və bitirə bilərsən, mütləq eyni yerdə deyil.) 
 
- Bu xəritələrdə rəsm çəkərək etibarlı bir yol tapmağa çalışın: 
+Bu xəritələrdə rəsm çəkərək etibarlı bir yol tapmağa çalışın: 
 
 ::: column(width=250)
 
@@ -208,11 +207,11 @@
 ---
 > id: bridges-1
 
- Königsberg vəziyyətində etibarlı bir marşrut tapmaq mümkün olmur, ancaq digər şəhərlərdən bəziləri işləyir. Euler, çox sayda fürsət sınamadan - hər hansı bir şəhərə tətbiq oluna biləcək sadə bir qayda - grafik nəzəriyyəsini istifadə edərək tapmağı bacardı. 
+Königsberg vəziyyətində etibarlı bir marşrut tapmaq mümkün olmur, ancaq digər şəhərlərdən bəziləri işləyir. Euler, çox sayda fürsət sınamadan - hər hansı bir şəhərə tətbiq oluna biləcək sadə bir qayda - grafik nəzəriyyəsini istifadə edərək tapmağı bacardı. 
 
 ::: column.grow
 
- Əvvəlcə şəhər xəritələrini kənarları və ucları olan qrafiklərə çevirməliyik. Hər ada və ya torpaq sahəsi [[bir vertex]] ilə təmsil olunur [[| bir kənar | bir bölgə]] və iki bölgəni birləşdirən hər körpü uyğun bir [[kənar ilə]] təmsil olunur [[| dik | küçə]] . 
+Əvvəlcə şəhər xəritələrini kənarları və ucları olan qrafiklərə çevirməliyik. Hər ada və ya torpaq sahəsi [[bir vertex]] ilə təmsil olunur [[| bir kənar | bir bölgə]] və iki bölgəni birləşdirən hər körpü uyğun bir [[kənar ilə]] təmsil olunur [[| dik | küçə]] . 
 
 {.reveal(when="blank-0 blank-1")} İndi "hər körpünü bir dəfə keçərkən bir şəhər gəzmək" problemi "hər kənarı tam bir dəfə izləyərkən bir fasiləsiz vuruşla bir qrafik çəkmək" probleminə çevrildi. 
 
@@ -225,16 +224,13 @@
 ---
 > id: bridges-2
 
- Kağızda bir neçə fərqli qrafik hazırlayın və sonra hansının tək, davamlı vuruşla çəkilə biləcəyini çalışın. 
-
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
+Kağızda bir neçə fərqli qrafik hazırlayın və sonra hansının tək, davamlı vuruşla çəkilə biləcəyini çalışın. 
 
 ---
 > id: bridges-3
 > goals: size prime eo
 
- Əvvəllər şəhər xəritələrində olduğu kimi, digərlərində olmadıqda bəzi qrafiklərin mümkün olduğunu görürük. Bunun səbəbini anlamağımızı təmin etmək üçün gəlin hər bir ucu öz [dərəcəsi](gloss:graph-degree) ilə etiketləyin. Sonra ucları müxtəlif yollarla rəngləyə bilərik və bir nümunə ortaya qoymağa çalışırıq: 
+Əvvəllər şəhər xəritələrində olduğu kimi, digərlərində olmadıqda bəzi qrafiklərin mümkün olduğunu görürük. Bunun səbəbini anlamağımızı təmin etmək üçün gəlin hər bir ucu öz [dərəcəsi](gloss:graph-degree) ilə etiketləyin. Sonra ucları müxtəlif yollarla rəngləyə bilərik və bir nümunə ortaya qoymağa çalışırıq: 
 
     figure
       x-select.var.tabs(:bind="colour")
@@ -251,7 +247,7 @@
 ---
 > id: bridges-4
 
- Mümkün olan və mümkün olmayan qrafiklər üçün bu rəqəmləri müqayisə edərək görünür ki, [[iki dənə "tək" ucu yoxdursa]] bir qraf tərtib edilə bilər [[| yalnız "hətta" ucları var | 4dən böyük bir sifariş vertikallarına sahib deyil | tək sayda uclara malikdir | əmr 3-ə çatmır]] . Bu şərt qrafikdə yalnız bir dikliyə baxsaq izah edilə bilər: 
+Mümkün olan və mümkün olmayan qrafiklər üçün bu rəqəmləri müqayisə edərək görünür ki, [[iki dənə "tək" ucu yoxdursa]] bir qraf tərtib edilə bilər [[| yalnız "hətta" ucları var | 4dən böyük bir sifariş vertikallarına sahib deyil | tək sayda uclara malikdir | əmr 3-ə çatmır]] . Bu şərt qrafikdə yalnız bir dikliyə baxsaq izah edilə bilər: 
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
@@ -267,9 +263,9 @@
 
 ::: column.grow(parent="right")
 
- Königsberg-in xəritəsinə dönsəniz, tək sayda körpü olan ikidən çox adanın olduğunu görərsiniz. Buna görə hər körpünü tam bir dəfə keçən bir yol həqiqətən mümkün deyil - Leonard Euler'in kəşf etdiyi budur. 
+Königsberg-in xəritəsinə dönsəniz, tək sayda körpü olan ikidən çox adanın olduğunu görərsiniz. Buna görə hər körpünü tam bir dəfə keçən bir yol həqiqətən mümkün deyil - Leonard Euler'in kəşf etdiyi budur. 
 
- Euler-in kəşfi real həyatda xüsusilə faydalı görünə bilməz, lakin qrafiklər iki yer arasında istiqamət tapmaq kimi bir çox digər coğrafi problemlərin əsasını təşkil edir. Bu tətbiqlərdən daha sonra kəşf edəcəyik. 
+Euler-in kəşfi real həyatda xüsusilə faydalı görünə bilməz, lakin qrafiklər iki yer arasında istiqamət tapmaq kimi bir çox digər coğrafi problemlərin əsasını təşkil edir. Bu tətbiqlərdən daha sonra kəşf edəcəyik. 
 
 ::: column(width=240)
 
@@ -280,16 +276,17 @@
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Əl görüşmələri və Tanışlıq 
 
 ::: column.grow
 
- Dostlarınızla birlikdə gözəl bir doğum gününə dəvət aldınız. Özünüz və ev sahibi daxil olmaqla, var ${hnd}{hnd|5|3,15,1} insanlar təqdim edir. 
+Dostlarınızla birlikdə gözəl bir doğum gününə dəvət aldınız. Özünüz və ev sahibi daxil olmaqla, var ${hnd}{hnd|5|3,15,1} insanlar təqdim edir. 
 
- Axşam qonaqlar ayrılmağa hazırlaşdıqca hər kəs başqaları ilə əl sıxır. Cəmi neçə əl toplantısı var? 
+Axşam qonaqlar ayrılmağa hazırlaşdıqca hər kəs başqaları ilə əl sıxır. Cəmi neçə əl toplantısı var? 
 
- Bir qrafı istifadə edərək əl sıxışmalarını təmsil edə bilərik: hər bir şəxs [[bir vertexdir | bir kənar]] və hər [[bir əlaqə bir kənardır | bir vertex]] . 
+Bir qrafı istifadə edərək əl sıxışmalarını təmsil edə bilərik: hər bir şəxs [[bir vertexdir | bir kənar]] və hər [[bir əlaqə bir kənardır | bir vertex]] . 
 
 {.reveal(when='blank-0 blank-1')} İndi qrafikdəki kənarların sayını saymaq asandır. Orada tapırıq ${hnd} insanlar var ${hnd*(hnd-1)/2} əl sıxma. 
 
@@ -303,9 +300,9 @@
 ---
 > id: handshakes-2
 
- Bütün kənarları böyük qrafiklərdə saymaqdansa, _istənilən_ sayda qonaq üçün nəticəni izah edən sadə bir düstur tapmağa da cəhd edə bilərik. 
+Bütün kənarları böyük qrafiklərdə saymaqdansa, _istənilən_ sayda qonaq üçün nəticəni izah edən sadə bir düstur tapmağa da cəhd edə bilərik. 
 
- Hər biri ${n}{n|5|2,8,1} Yığıncaqdakı insanlar əl sıxır ${n-1} digərləri. Bu edir ${n} × ${n-1} = ${n×(n-1)} ümumilikdə əl sıxma. _N_ insanlar üçün əl sıxma sayı olardı [[`n×(n–1)`|`n×(n+1)`|`n^2`]] . 
+Hər biri ${n}{n|5|2,8,1} Yığıncaqdakı insanlar əl sıxır ${n-1} digərləri. Bu edir ${n} × ${n-1} = ${n×(n-1)} ümumilikdə əl sıxma. _N_ insanlar üçün əl sıxma sayı olardı [[`n×(n–1)`|`n×(n+1)`|`n^2`]] . 
 
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -313,16 +310,16 @@
 ---
 > id: handshakes-2a
 
- Təəssüf ki, bu cavab düzgün deyil. Diqqət yetirin <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">üst sıra ilk iki giriş</x-target> əslində eynidır, sadəcə ətrafa yuvarlanıblar. 
+Təəssüf ki, bu cavab düzgün deyil. Diqqət yetirin <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">üst sıra ilk iki giriş</x-target> əslində eynidır, sadəcə ətrafa yuvarlanıblar. 
 
- Əslində hər əl sıxmağı [[iki dəfə]] saydıq [[| bir dəfə | üç dəfə]] , _{span.reveal(when="blank-0")} cəlb olunan iki nəfərin hər biri üçün bir dəfə. Bu, düzgün əl yığmağın sayı deməkdir ${n}{n|5|2,25,1} qonaqlar `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
+Əslində hər əl sıxmağı [[iki dəfə]] saydıq [[| bir dəfə | üç dəfə]] , _{span.reveal(when="blank-0")} cəlb olunan iki nəfərin hər biri üçün bir dəfə. Bu, düzgün əl yığmağın sayı deməkdir ${n}{n|5|2,25,1} qonaqlar `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 
 ---
 > id: handshakes-3
 
- Əl vermə qrafikləri xüsusi bir yerdədir, çünki hər vertex hər bir digər ucuna bağlıdır. Bu xassəyə malik __qrafiklər tam qrafiklər__ adlanır. 4 ucu olan tam qrafik tez-tez olduğu kimi qısaldılır `K_4` , 5 ucu olan tam qrafik kimi tanınır `K_5` , və sair. 
+Əl vermə qrafikləri xüsusi bir yerdədir, çünki hər vertex hər bir digər ucuna bağlıdır. Bu xassəyə malik __qrafiklər tam qrafiklər__ adlanır. 4 ucu olan tam qrafik tez-tez olduğu kimi qısaldılır `K_4` , 5 ucu olan tam qrafik kimi tanınır `K_5` , və sair. 
 
- Biz yalnız ilə tam bir qrafik göstərdik `n` ucları, `K_n` , var `(n × (n-1))/2` kənarları. 
+Biz yalnız ilə tam bir qrafik göstərdik `n` ucları, `K_n` , var `(n × (n-1))/2` kənarları. 
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -335,11 +332,11 @@
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
- Fərqli bir gündə sizi sürətli bir tanışlıq tədbirinə dəvət edirsiniz ${m}{m|5|2,8,1} oğlanlar və ${f}{f|4|2,8,1} qızlar. Çox kiçik masalar var və hər oğlan qızların hər biri ilə 5 dəqiqə vaxt keçirir. Cəmi neçə fərdi "tarix" var? 
+Fərqli bir gündə sizi sürətli bir tanışlıq tədbirinə dəvət edirsiniz ${m}{m|5|2,8,1} oğlanlar və ${f}{f|4|2,8,1} qızlar. Çox kiçik masalar var və hər oğlan qızların hər biri ilə 5 dəqiqə vaxt keçirir. Cəmi neçə fərdi "tarix" var? 
 
 ::: column.grow
 
- Bu vəziyyətdə, müvafiq qrafik iki ayrı uc dəstindən ibarətdir. Hər bir vertex [[, əksinə,]] bütün uclarına bağlıdır [[| öz]] dəsti, lakin heç birinin [[öz tərəfində deyil | əks]] dəsti. Bu nizama sahib olan __qrafiklərə iki tərəfli qrafiklər__ deyilir. 
+Bu vəziyyətdə, müvafiq qrafik iki ayrı uc dəstindən ibarətdir. Hər bir vertex [[, əksinə,]] bütün uclarına bağlıdır [[| öz]] dəsti, lakin heç birinin [[öz tərəfində deyil | əks]] dəsti. Bu nizama sahib olan __qrafiklərə iki tərəfli qrafiklər__ deyilir. 
 
 ::: column(width=300)
 
@@ -353,14 +350,15 @@
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Planar Qrafiklər 
 
 ::: column.grow
 
- Budur, grafika nəzəriyyəsi ilə əlaqəli başqa bir tapmacadır. 
+Budur, grafika nəzəriyyəsi ilə əlaqəli başqa bir tapmacadır. 
 
- Kiçik bir kənddə su, elektrik və qaz istehsal edən üç ev və üç köməkçi zavod var. Kursların hər birini kommunal zavodların hər birinə bağlamalıyıq, ancaq kəndin yerləşməsi səbəbindən fərqli borular və kabellərin keçməsinə icazə verilmir. 
+Kiçik bir kənddə su, elektrik və qaz istehsal edən üç ev və üç köməkçi zavod var. Kursların hər birini kommunal zavodların hər birinə bağlamalıyıq, ancaq kəndin yerləşməsi səbəbindən fərqli borular və kabellərin keçməsinə icazə verilmir. 
 
 ::: column(width=300)
 
@@ -368,7 +366,7 @@
 
 :::
 
- Evlərin hər birini xəttlərinizin heç biri kəsişmədən aşağıdakı kommunal şirkətlərə bağlamağa çalışın: 
+Evlərin hər birini xəttlərinizin heç biri kəsişmədən aşağıdakı kommunal şirkətlərə bağlamağa çalışın: 
 
     .box.no-padding
       include svg/utilities.svg
@@ -377,7 +375,7 @@
 ---
 > id: utilities-1
 
- Əvvəllər Königsberg körpüləri kimi tez bir zamanda bu problemin də mümkün olmadığını aşkar edirsiniz. Bəzi qrafların kənarları üst-üstə düşmədən tərtib edilə biləcəyi görünür - bunlara __planar qrafiklər__ deyilir - amma digərləri bilməz. 
+Əvvəllər Königsberg körpüləri kimi tez bir zamanda bu problemin də mümkün olmadığını aşkar edirsiniz. Bəzi qrafların kənarları üst-üstə düşmədən tərtib edilə biləcəyi görünür - bunlara __planar qrafiklər__ deyilir - amma digərləri bilməz. 
 
 ::: column(width=200)
 
@@ -402,11 +400,9 @@
 ---
 > id: utilities-2
 
- [Tam qrafik](gloss:complete-graph) `K_5` planar olmayan ən kiçik qrafikdir. Tərkibində olan hər hansı digər qrafik `K_5` bir şəkildə bir alt yazı da planar deyil. Bura daxildir `K_6` , `K_7` və bütün daha böyük qrafiklər. 
+[Tam qrafik](gloss:complete-graph) `K_5` planar olmayan ən kiçik qrafikdir. Tərkibində olan hər hansı digər qrafik `K_5` bir şəkildə bir alt yazı da planar deyil. Bura daxildir `K_6` , `K_7` və bütün daha böyük qrafiklər. 
 
- Üç kommunal tapmacanın içindəki [qrafik ikitərəfli qrafikdir](gloss:bipartite-graph) `K_"3,3"` . Məlum olur ki, hər hansı bir planar olmayan qrafada ya a olmalıdır `K_5` və ya a `K_"3,3"` (və ya bu iki qrafikin bir [bölməsi](gloss:subdivision) ) alt şəkil kimi. Buna _Kuratowski teoremi_ deyilir. 
-
-    // TODO Add bio of Kazimierz Kuratowski
+Üç kommunal tapmacanın içindəki [qrafik ikitərəfli qrafikdir](gloss:bipartite-graph) `K_"3,3"` . Məlum olur ki, hər hansı bir planar olmayan qrafada ya a olmalıdır `K_5` və ya a `K_"3,3"` (və ya bu iki qrafikin bir [bölməsi](gloss:subdivision) ) alt şəkil kimi. Buna _Kuratowski teoremi_ deyilir. 
 
 ---
 > id: planarity
@@ -419,11 +415,9 @@
     x-solved
     svg#planarity(viewBox="0 0 720 360")
 
- Bu planar qrafikdir, amma ${n}{n|7|5,20,1} dik nöqtələr bükülmüşdür. Dikləri düzəldin ki, kənarların heç biri üst-üstə düşməsin. 
+Bu planar qrafikdir, amma ${n}{n|7|5,20,1} dik nöqtələr bükülmüşdür. Dikləri düzəldin ki, kənarların heç biri üst-üstə düşməsin. 
 
     p.btn-row: button.btn New Random Graph
-    // TODO Maybe mention that the restriction to straight line edges in the Planarity puzzle isn't
-    // a restriction that matters (Fáry's Theorem).
 
 :::
 
@@ -432,7 +426,7 @@
 
 ### Euler Formulu 
 
- Bütün planar qrafiklər çəkdikləri təyyarəni __üzlər__ adlanan bir sıra bölgələrə bölürlər. 
+Bütün planar qrafiklər çəkdikləri təyyarəni __üzlər__ adlanan bir sıra bölgələrə bölürlər. 
 
 ::: column(width=200)
 
@@ -466,9 +460,9 @@ _{span.euler-sum} 25 Vertices + Üzlər_
 ---
 > id: euler-1
 
- Bu nömrələri müqayisə edərkən, kənarların sayının həmişə [[bir az]] olduğunu görəcəksiniz [[| daha böyük |]] üzlərin sayı üstə də ucların sayından [[eyni]] . Başqa sözlə, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Bu nəticə __Euler tənliyi__ adlanır və Königsberg Körpülər problemini həll edən eyni [riyaziyyatçının](bio:euler) adını daşıyır. 
+Bu nömrələri müqayisə edərkən, kənarların sayının həmişə [[bir az]] olduğunu görəcəksiniz [[| daha böyük |]] üzlərin sayı üstə də ucların sayından [[eyni]] . Başqa sözlə, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Bu nəticə __Euler tənliyi__ adlanır və Königsberg Körpülər problemini həll edən eyni [riyaziyyatçının](bio:euler) adını daşıyır. 
 
- Təəssüf ki, sonsuz sayda qrafik var və Euler tənliyinin işlədiyini görmək üçün hər birini yoxlaya bilmirik. Bunun əvəzinə hər hansı bir qrafik üçün işləyən sadə bir [sübut](gloss:proof) tapmağa çalışa bilərik ... 
+Təəssüf ki, sonsuz sayda qrafik var və Euler tənliyinin işlədiyini görmək üçün hər birini yoxlaya bilmirik. Bunun əvəzinə hər hansı bir qrafik üçün işləyən sadə bir [sübut](gloss:proof) tapmağa çalışa bilərik ... 
 
 ---
 > id: euler-2
@@ -506,16 +500,16 @@ _{span.euler-sum} 25 Vertices + Üzlər_
 ---
 > id: euler-3
 
- Hər hansı bir (sonlu) bir qrafik bir vertexdən başlayaraq və daha çox ucu bir-bir əlavə etməklə inşa edilə bilər. Biz göstərdik ki, hansı yeni nöqtələr əlavə etsək də, Euler tənliyi doğrudur. Buna görə bütün qrafiklər üçün etibarlıdır. 
+Hər hansı bir (sonlu) bir qrafik bir vertexdən başlayaraq və daha çox ucu bir-bir əlavə etməklə inşa edilə bilər. Biz göstərdik ki, hansı yeni nöqtələr əlavə etsək də, Euler tənliyi doğrudur. Buna görə bütün qrafiklər üçün etibarlıdır. 
 
- İstifadə etdiyimiz prosesə __riyazi induksiya__ deyilir. Sadə nəticələrdən başlayaraq və daha mürəkkəb işlərin qurulması zamanı nəticənin hər addımda dayandığını göstərmək üçün sonsuz sayda nəticəni sübut etmək üçün çox faydalıdır. 
+İstifadə etdiyimiz prosesə __riyazi induksiya__ deyilir. Sadə nəticələrdən başlayaraq və daha mürəkkəb işlərin qurulması zamanı nəticənin hər addımda dayandığını göstərmək üçün sonsuz sayda nəticəni sübut etmək üçün çox faydalıdır. 
 
     .svg-block: include svg/dominoes.svg
 
 ---
 > id: euler-4
 
- Bir çox planar qrafiklər [çoxbucaqlı](gloss:polygon) üzlü üç ölçülü formalı [polyhedra](gloss:polyhedron) torlarına çox bənzəyir. Elastik lentlərdən düzəldilmiş polyhedra düşünsək, düz, planar qrafik halına gətirilənə qədər uzatdıqlarını xəyal edə bilərik: 
+Bir çox planar qrafiklər [çoxbucaqlı](gloss:polygon) üzlü üç ölçülü formalı [polyhedra](gloss:polyhedron) torlarına çox bənzəyir. Elastik lentlərdən düzəldilmiş polyhedra düşünsək, düz, planar qrafik halına gətirilənə qədər uzatdıqlarını xəyal edə bilərik: 
 
 ::: column(width=300)
 
@@ -532,9 +526,9 @@ _{span.euler-sum} 25 Vertices + Üzlər_
 ---
 > id: euler-5
 
- Bu, Euler düsturundan yalnız plan qrafikləri üçün deyil, bütün polyhedra üçün istifadə edə biləcəyimiz deməkdir - bir kiçik fərqlə. Polyedra qrafikə çevrilərkən üzlərdən biri yox olur: polyhedranın ən üst üzü "kənar" olur; qrafiklərdən. 
+Bu, Euler düsturundan yalnız plan qrafikləri üçün deyil, bütün polyhedra üçün istifadə edə biləcəyimiz deməkdir - bir kiçik fərqlə. Polyedra qrafikə çevrilərkən üzlərdən biri yox olur: polyhedranın ən üst üzü "kənar" olur; qrafiklərdən. 
 
- Başqa sözlə, sayını sayırsan __{.red} kənarları__ , __{.blue} üzlər__ və __{.green}__ _Hər hansı bir_ polyhedron __təpə,__ siz ki, tapa bilərsiniz _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + [[2]] . 
+Başqa sözlə, sayını sayırsan __{.red} kənarları__ , __{.blue} üzlər__ və __{.green}__ _Hər hansı bir_ polyhedron __təpə,__ siz ki, tapa bilərsiniz _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + [[2]] . 
 
 ::: column(width=200)
 
@@ -568,16 +562,17 @@ __{.red} 90__ kənarları
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Xəritə Boyama 
 
 ::: column.grow
 
- Artıq müəyyən xəritələrlə qrafik nəzəriyyəsindən istifadə etmişik. Böyüdükcə fərdi yollar və körpülər yox olur və əvəzində bütün ölkələrin konturlarını görürük. 
+Artıq müəyyən xəritələrlə qrafik nəzəriyyəsindən istifadə etmişik. Böyüdükcə fərdi yollar və körpülər yox olur və əvəzində bütün ölkələrin konturlarını görürük. 
 
- Xəritəni rəngləyərkən - və ya ayrı bölgələrdən ibarət hər hansı bir rəsm - qonşu ölkələr eyni rəngə sahib ola bilməzlər. Mümkün qədər az fərqli rənglərdən istifadə etmək istəyə bilərik. 
+Xəritəni rəngləyərkən - və ya ayrı bölgələrdən ibarət hər hansı bir rəsm - qonşu ölkələr eyni rəngə sahib ola bilməzlər. Mümkün qədər az fərqli rənglərdən istifadə etmək istəyə bilərik. 
 
- Şahmat taxtası kimi bəzi sadə "xəritələrə" yalnız iki rəng (qara və ağ) lazımdır, lakin mürəkkəb xəritələrin daha çoxuna ehtiyac var. 
+Şahmat taxtası kimi bəzi sadə "xəritələrə" yalnız iki rəng (qara və ağ) lazımdır, lakin mürəkkəb xəritələrin daha çoxuna ehtiyac var. 
 
 ::: column(width=240 style="margin-top: -10px")
 
@@ -590,7 +585,7 @@ __{.red} 90__ kənarları
 > goals: map-0 map-1 map-2 map-3
 > title: Colouring Maps
 
- ABŞ ştatlarının xəritəsini rənglədikdə 50 rəng açıqca kifayətdir, lakin daha az sayda zəruridir. Aşağıdakı xəritələri mümkün qədər az rənglə rəngləməyə çalışın: 
+ABŞ ştatlarının xəritəsini rənglədikdə 50 rəng açıqca kifayətdir, lakin daha az sayda zəruridir. Aşağıdakı xəritələri mümkün qədər az rənglə rəngləməyə çalışın: 
 
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -630,7 +625,7 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- Bu xəritələrin hamısı cəmi dörd fərqli rəng ilə rənglənə bilər, lakin digər, çox mürəkkəb xəritələrin daha çox rəngə ehtiyacı olacağını təsəvvür etmək çətin deyil. Əslində, bəzi xəritələrdə bir-birinə bağlı dörd ölkə olduqda __ən az__ dörd rəng lazımdır. 
+Bu xəritələrin hamısı cəmi dörd fərqli rəng ilə rənglənə bilər, lakin digər, çox mürəkkəb xəritələrin daha çox rəngə ehtiyacı olacağını təsəvvür etmək çətin deyil. Əslində, bəzi xəritələrdə bir-birinə bağlı dörd ölkə olduqda __ən az__ dörd rəng lazımdır. 
 
 ::: column(width=200)
 
@@ -638,7 +633,7 @@ __{.red} 90__ kənarları
 
 :::
 
- Əvvəllər olduğu kimi, ölkələr və sərhədlər ilə bir xəritəni planar qrafikə çevirə bilərik: hər ölkə [[bir vertex]] olur [[| bir kənar | bir üz]] və [[bir sərhədi bölüşən]] ölkələr [[| eyni rəng]] bir kənar ilə bağlanır: 
+Əvvəllər olduğu kimi, ölkələr və sərhədlər ilə bir xəritəni planar qrafikə çevirə bilərik: hər ölkə [[bir vertex]] olur [[| bir kənar | bir üz]] və [[bir sərhədi bölüşən]] ölkələr [[| eyni rəng]] bir kənar ilə bağlanır: 
 
     .svg-block: include svg/colour-graph.svg
 
@@ -653,25 +648,25 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- 1852-ci ildə botanika tələbəsi [Francis Guthrie](bio:guthrie) İngiltərədəki ölkələrin xəritəsini rəngləməli oldu. Dörd rəngin cəhd etdiyi hər bir xəritə üçün kifayət qədər göründüyünü müşahidə etdi, lakin _bütün_ xəritələr üçün işləyən bir sübut tapa bilmədi. Bu son dərəcə çətin bir problem oldu və __dörd rəng teoremi__ kimi tanındı. 
+1852-ci ildə botanika tələbəsi [Francis Guthrie](bio:guthrie) İngiltərədəki ölkələrin xəritəsini rəngləməli oldu. Dörd rəngin cəhd etdiyi hər bir xəritə üçün kifayət qədər göründüyünü müşahidə etdi, lakin _bütün_ xəritələr üçün işləyən bir sübut tapa bilmədi. Bu son dərəcə çətin bir problem oldu və __dörd rəng teoremi__ kimi tanındı. 
 
- Sonrakı 100 il ərzində bir çox riyaziyyatçı dörd rəng teoreminə yalnız "sonradan tapılan səhvlər üçün" sübutlar nəşr etdi. Bu etibarsız sübutlardan bəziləri o qədər inandırıcı idi ki, səhvləri tapmaq üçün 10 ildən çox vaxt lazım idi. 
+Sonrakı 100 il ərzində bir çox riyaziyyatçı dörd rəng teoreminə yalnız "sonradan tapılan səhvlər üçün" sübutlar nəşr etdi. Bu etibarsız sübutlardan bəziləri o qədər inandırıcı idi ki, səhvləri tapmaq üçün 10 ildən çox vaxt lazım idi. 
 
- Uzun müddət riyaziyyatçılar ya dörd rəngin kifayət olduğunu sübut edə bilmədi, ya da dörd rəngdən çox ehtiyacı olan bir xəritə tapa bilmədilər. 
+Uzun müddət riyaziyyatçılar ya dörd rəngin kifayət olduğunu sübut edə bilmədi, ya da dörd rəngdən çox ehtiyacı olan bir xəritə tapa bilmədilər. 
 
 :::
 
 ---
 > id: maps-4
 
- 1976-cı ilədək [Wolfgang Haken](bio:haken) və [Kenneth Appel](bio:appel) bir kompüterdən nəhayət onu həll etmək üçün istifadə etdikdə dörd rəng problemi üzərində az irəliləyiş əldə edildi. 1936 xüsusi xəritəyə sonsuz sayda xəritəni azaltdılar, bunların hər biri bir kompüter tərəfindən cəmi 1000 saatdan çox çəkdi. 
+1976-cı ilədək [Wolfgang Haken](bio:haken) və [Kenneth Appel](bio:appel) bir kompüterdən nəhayət onu həll etmək üçün istifadə etdikdə dörd rəng problemi üzərində az irəliləyiş əldə edildi. 1936 xüsusi xəritəyə sonsuz sayda xəritəni azaltdılar, bunların hər biri bir kompüter tərəfindən cəmi 1000 saatdan çox çəkdi. 
 
     x-parallax.full-width(background="images/ibm-360.jpg")
 
 ---
 > id: maps-5
 
- Dörd rəng teoremi, kompüter istifadə edərək sübut edilmiş ilk məşhur riyazi teoremdir, bu gündən bəri daha çox yayılmış və daha az mübahisəli bir şeydir. Daha sürətli kompüterlər və daha səmərəli bir alqoritm deməkdir ki, bu gün dörd rəng teoremini noutbukda bir neçə saat ərzində sübut edə bilərsiniz. 
+Dörd rəng teoremi, kompüter istifadə edərək sübut edilmiş ilk məşhur riyazi teoremdir, bu gündən bəri daha çox yayılmış və daha az mübahisəli bir şeydir. Daha sürətli kompüterlər və daha səmərəli bir alqoritm deməkdir ki, bu gün dörd rəng teoremini noutbukda bir neçə saat ərzində sübut edə bilərsiniz. 
 
     figure
       x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
@@ -682,9 +677,9 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- Dörd rəng teoremi yalnız düz bir müstəvidə və ya bir sahədəki xəritələr üçün işləyir və bütün ölkələrin vahid bir ərazidən ibarət olduğu yerdir. 
+Dörd rəng teoremi yalnız düz bir müstəvidə və ya bir sahədəki xəritələr üçün işləyir və bütün ölkələrin vahid bir ərazidən ibarət olduğu yerdir. 
 
- Bununla birlikdə riyaziyyatçılar, ölkələrin çoxlu bir-birindən ayrılan komponentlərdən ibarət ola biləcəyi _imperiyaların_ xəritələrinə və torus (donut forması) kimi fərqli formalı planetlərin xəritələrinə də baxdılar. Bu hallarda dörddən çox rəngə ehtiyacınız ola bilər və sübutlar daha da çətinləşir. 
+Bununla birlikdə riyaziyyatçılar, ölkələrin çoxlu bir-birindən ayrılan komponentlərdən ibarət ola biləcəyi _imperiyaların_ xəritələrinə və torus (donut forması) kimi fərqli formalı planetlərin xəritələrinə də baxdılar. Bu hallarda dörddən çox rəngə ehtiyacınız ola bilər və sübutlar daha da çətinləşir. 
 
 ::: column(width=300)
 
@@ -696,14 +691,15 @@ __{.red} 90__ kənarları
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Səyahət Satış Problemi 
 
 ::: column.grow(parent="right")
 
- Şəbəkələr və xəritələr haqqında bir daha düşünək. Təsəvvür edin ki, bir çatdırılma xidməti ziyarət etməlidir ${tsn}{tsn|8|2,50,1} bağlamalar paylamaq üçün fərqli şəhərlər. Bu şəhərləri bir qrafikdəki ucları kimi düşünə bilərik. Bütün şəhərlər yollarla bağlıdırsa, bu [[tam bir qrafikdir | dövrü | ikitərəfli qrafik]] , buna görə də var <mfrac><mrow>${tsn} × ( ${tsn} - 1)</mrow><mn>2</mn></mfrac> = ${tsn*(tsn-1)/2} cəmi kənarları. 
+Şəbəkələr və xəritələr haqqında bir daha düşünək. Təsəvvür edin ki, bir çatdırılma xidməti ziyarət etməlidir ${tsn}{tsn|8|2,50,1} bağlamalar paylamaq üçün fərqli şəhərlər. Bu şəhərləri bir qrafikdəki ucları kimi düşünə bilərik. Bütün şəhərlər yollarla bağlıdırsa, bu [[tam bir qrafikdir | dövrü | ikitərəfli qrafik]] , buna görə də var <mfrac><mrow>${tsn} × ( ${tsn} - 1)</mrow><mn>2</mn></mfrac> = ${tsn*(tsn-1)/2} cəmi kənarları. 
 
- Çatdırılma maşını istənilən qaydada bütün şəhərləri ziyarət etməlidir. Königsberg körpüləri problemində _hər tərəfi_ tam olaraq gedən yolları tapmaq istədik. İndi _hər vertexə_ tam olaraq bir dəfə gedən yolları tapmaq istəyirik. Bu yollara __Hamiltonian dövrlər__ deyilir. 
+Çatdırılma maşını istənilən qaydada bütün şəhərləri ziyarət etməlidir. Königsberg körpüləri problemində _hər tərəfi_ tam olaraq gedən yolları tapmaq istədik. İndi _hər vertexə_ tam olaraq bir dəfə gedən yolları tapmaq istəyirik. Bu yollara __Hamiltonian dövrlər__ deyilir. 
 
 ::: column(width=260)
 
@@ -714,7 +710,7 @@ __{.red} 90__ kənarları
 ---
 > id: salesman-1
 
- Tam qrafiklərdə Həmilton dövrü üçün saysız-hesabsız fərqli imkanlar mövcuddur. Əslində hər hansı bir vertexi başlanğıc vertexdən başlayaraq istənilən şəhərdə istənilən şəhərdən birini seçə bilərik: 
+Tam qrafiklərdə Həmilton dövrü üçün saysız-hesabsız fərqli imkanlar mövcuddur. Əslində hər hansı bir vertexi başlanğıc vertexdən başlayaraq istənilən şəhərdə istənilən şəhərdən birini seçə bilərik: 
 
     .row
       .grow: p.todo Diagram coming soon…
@@ -723,22 +719,22 @@ __{.red} 90__ kənarları
 ---
 > id: salesman-2
 
- İlə bir qrafikdə ${tsn1}{tsn1|4|2,10,1} şəhərlərdə hər Hamiltonian dövrü də olmalıdır ${tsn1} şəhərlər. İndi, 
+İlə bir qrafikdə ${tsn1}{tsn1|4|2,10,1} şəhərlərdə hər Hamiltonian dövrü də olmalıdır ${tsn1} şəhərlər. İndi, 
 
     ul.var(:html="tsmString(tsn1)")
 
- Bu, ümumilikdə, var deməkdir ${tsnPaths(tsn1)} mümkün yolları. Bu məhsul üçün stenoqramdır ${tsn1} ! və ya ${tsn1} __Faktiki__ . 
+Bu, ümumilikdə, var deməkdir ${tsnPaths(tsn1)} mümkün yolları. Bu məhsul üçün stenoqramdır ${tsn1} ! və ya ${tsn1} __Faktiki__ . 
 
- Təsəvvür edirsiniz ki, iki şəhər arasında - başqa bir şəhərə getmədən birbaşa səyahət etmək mümkün olmaya bilər. Bu vəziyyətdə artıq tam bir qrafikə sahib deyilik və Hamiltonian dövrlərinin sayını tapmaq, əgər ümumiyyətlə mövcuddursa, daha çətin olur. 
+Təsəvvür edirsiniz ki, iki şəhər arasında - başqa bir şəhərə getmədən birbaşa səyahət etmək mümkün olmaya bilər. Bu vəziyyətdə artıq tam bir qrafikə sahib deyilik və Hamiltonian dövrlərinin sayını tapmaq, əgər ümumiyyətlə mövcuddursa, daha çətin olur. 
 
 ---
 > id: salesman-3
 
 ::: column.grow(parent="right")
 
- İndiyə qədər bəzi şəhərlərin digərlərindən daha ayrı ola biləcəyini nəzərə almamışıq. Həqiqi həyatda isə bu çox vacib bir məqamdır: biz yalnız _hər hansı bir_ yol tapmaq istəmirik, ancaq ən qısa yolu tapmaq istəyirik. Buna __Səyahət Satış Problemi deyilir__ . Yalnız nəqliyyat və logistika məsələsində deyil, həm də tranzistorları mikroçiplərə yerləşdirərkən, daha sürətli kompüter hazırlamaqda və ya [DNT-nin](gloss:dna) quruluşunu təhlil edərkən həll edilməlidir. 
+İndiyə qədər bəzi şəhərlərin digərlərindən daha ayrı ola biləcəyini nəzərə almamışıq. Həqiqi həyatda isə bu çox vacib bir məqamdır: biz yalnız _hər hansı bir_ yol tapmaq istəmirik, ancaq ən qısa yolu tapmaq istəyirik. Buna __Səyahət Satış Problemi deyilir__ . Yalnız nəqliyyat və logistika məsələsində deyil, həm də tranzistorları mikroçiplərə yerləşdirərkən, daha sürətli kompüter hazırlamaqda və ya [DNT-nin](gloss:dna) quruluşunu təhlil edərkən həll edilməlidir. 
 
- Bir sadə üsul, mümkün olan bütün yolları sınamaq, hər birinin uzunluğunu tapmaq və ən qısa yolunu seçmək olardı. Ancaq biz bunu ədalətlə də göstərdik ${tsn2}{tsn2|10|2,20,1} şəhərlər var ${tsn2} ! = ${factorial(tsn2)} mümkün yolları. Yüzlərlə və ya minlərlə yüksəkliklərə sahib olduqda, bütün mümkün yolları sınamaq, hətta güclü kompüterlərdən istifadə etməklə mümkünsüz olur. 
+Bir sadə üsul, mümkün olan bütün yolları sınamaq, hər birinin uzunluğunu tapmaq və ən qısa yolunu seçmək olardı. Ancaq biz bunu ədalətlə də göstərdik ${tsn2}{tsn2|10|2,20,1} şəhərlər var ${tsn2} ! = ${factorial(tsn2)} mümkün yolları. Yüzlərlə və ya minlərlə yüksəkliklərə sahib olduqda, bütün mümkün yolları sınamaq, hətta güclü kompüterlərdən istifadə etməklə mümkünsüz olur. 
 
 ::: column(width=220)
 
@@ -750,9 +746,9 @@ __{.red} 90__ kənarları
 > id: salesman-4
 > goals: move
 
- Təəssüf ki, səyahət satıcısı problemini həll etmək üçün daha səmərəli bir alqoritm yoxdur. Bunun əvəzinə, riyaziyyatçılar və kompüter alimləri ən yaxşısı olmasa da, _yaxşı_ həll tapan müxtəlif alqoritmlər hazırlamışlar. Yalnız təxmini həllər verən bu alqoritmlərə __Heuristics__ deyilir. 
+Təəssüf ki, səyahət satıcısı problemini həll etmək üçün daha səmərəli bir alqoritm yoxdur. Bunun əvəzinə, riyaziyyatçılar və kompüter alimləri ən yaxşısı olmasa da, _yaxşı_ həll tapan müxtəlif alqoritmlər hazırlamışlar. Yalnız təxmini həllər verən bu alqoritmlərə __Heuristics__ deyilir. 
 
- Bu xəritədəki şəhərləri yenidən dəyişdirməyə çalışın və aralarındakı ən qısa yolun necə dəyişdiyini izləyin. Şəhərləri vuraraq onları silə bilərsiniz və xəritənin istənilən yerinə (8-ə qədər) tıklayaraq şəhərlər əlavə edə bilərsiniz: 
+Bu xəritədəki şəhərləri yenidən dəyişdirməyə çalışın və aralarındakı ən qısa yolun necə dəyişdiyini izləyin. Şəhərləri vuraraq onları silə bilərsiniz və xəritənin istənilən yerinə (8-ə qədər) tıklayaraq şəhərlər əlavə edə bilərsiniz: 
 
     figure: .tsm
       svg(width=760 height=480 viewBox="0 0 760 480")
@@ -762,7 +758,7 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- __Xəsis alqoritm__ (və ya yaxın qonşu alqoritmi) çox sadədir: təsadüfi bir şəhərdən başlayırsınız və ardıcıl olaraq əvvəl ziyarət etmədiyiniz ən yaxın şəhərə keçirsiniz. Bütün şəhərləri gəzdikdən sonra durursunuz. 
+__Xəsis alqoritm__ (və ya yaxın qonşu alqoritmi) çox sadədir: təsadüfi bir şəhərdən başlayırsınız və ardıcıl olaraq əvvəl ziyarət etmədiyiniz ən yaxın şəhərə keçirsiniz. Bütün şəhərləri gəzdikdən sonra durursunuz. 
 
 ::: column(width=300)
 
@@ -770,14 +766,14 @@ __{.red} 90__ kənarları
 
 :::
 
- Orta hesabla xəsis alqoritmi istifadə edərək tapılan yolların ən qısa yoldan 25% daha uzun olduğunu göstərə bilərsiniz. 
+Orta hesabla xəsis alqoritmi istifadə edərək tapılan yolların ən qısa yoldan 25% daha uzun olduğunu göstərə bilərsiniz. 
 
 ---
 > id: salesman-6
 
 ::: column.grow
 
- __2 Opt Alqoritmi__ təsadüfi mümkün bir yol ilə başlayır. Sonra təkrar-təkrar iki kənarı götür və yolun uzunluğunu azaldacağı təqdirdə onları dəyişdirərsən. Uzunluğu daha da azaltmaq olmadıqda hər hansı bir cüt kənarı dəyişdirərək dayana bilərsiniz. 
+__2 Opt Alqoritmi__ təsadüfi mümkün bir yol ilə başlayır. Sonra təkrar-təkrar iki kənarı götür və yolun uzunluğunu azaldacağı təqdirdə onları dəyişdirərsən. Uzunluğu daha da azaltmaq olmadıqda hər hansı bir cüt kənarı dəyişdirərək dayana bilərsiniz. 
 
 ::: column(width=300)
 
@@ -788,18 +784,18 @@ __{.red} 90__ kənarları
 ---
 > id: ants
 
- Məlum olur ki, kompüterlər hələ mövcud olmamışdan xeyli əvvəl Təbiət müxtəlif yerlər arasında optimal yolu tapmaq üçün ağıllı bir yol tapmışdı: qarışqa koloniyalarında. 
+Məlum olur ki, kompüterlər hələ mövcud olmamışdan xeyli əvvəl Təbiət müxtəlif yerlər arasında optimal yolu tapmaq üçün ağıllı bir yol tapmışdı: qarışqa koloniyalarında. 
 
     x-parallax.full-width(background="images/ants.jpg")
 
- Qarışqalar yuvaları və mümkün qida mənbələri arasında ən qısa yolu tapmaq istəyirlər. Bir-biri ilə izləri boyunca buraxdıqları və digər qarışqalar təqib edə bildikləri kimyəvi maddələrlə əlaqə qura bilərlər. 
+Qarışqalar yuvaları və mümkün qida mənbələri arasında ən qısa yolu tapmaq istəyirlər. Bir-biri ilə izləri boyunca buraxdıqları və digər qarışqalar təqib edə bildikləri kimyəvi maddələrlə əlaqə qura bilərlər. 
 
 ---
 > id: ants-1
 
 ::: column.grow
 
- * Qarışqa koloniyası əvvəlcə təsadüfi istiqamətlərə səyahət edən bir çox skaut göndərir. Yemək tapdıqdan sonra feromon izi qoyub geri qayıdırlar. * Digər qarışqalar tapdıqda cığır izləməyə meyllidirlər ki, bu da onları qidaya aparır. Geri qayıdarkən daha çox feromona əmanət qoyur və bununla da cığırı gücləndirir. * Zaman keçdikcə feromon buxarlanır. Bir yol nə qədər uzun olarsa, qarışqalar onun boyunca getməsinə nə qədər çox vaxt sərf edirlər və buna görə də feromonun buxarlanması üçün daha çox vaxtı olur. Qısa yollar, əksinə, daha sürətli güclənə bilər, buna görə də onların gücü daha sürətli artır. 
+* Qarışqa koloniyası əvvəlcə təsadüfi istiqamətlərə səyahət edən bir çox skaut göndərir. Yemək tapdıqdan sonra feromon izi qoyub geri qayıdırlar. * Digər qarışqalar tapdıqda cığır izləməyə meyllidirlər ki, bu da onları qidaya aparır. Geri qayıdarkən daha çox feromona əmanət qoyur və bununla da cığırı gücləndirir. * Zaman keçdikcə feromon buxarlanır. Bir yol nə qədər uzun olarsa, qarışqalar onun boyunca getməsinə nə qədər çox vaxt sərf edirlər və buna görə də feromonun buxarlanması üçün daha çox vaxtı olur. Qısa yollar, əksinə, daha sürətli güclənə bilər, buna görə də onların gücü daha sürətli artır. 
 
 ::: column(width=240)
 
@@ -816,9 +812,9 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- Qarışqa koloniyası sistemi (ACS) alqoritmləri bir çox "virtual" qarışqalardan istifadə edərək bu davranışları kompüterlərdə təkrarlamağa çalışırlar. Səyyah satıcısı problemi üçün tez bir zamanda çox yaxşı həll yollarını tapa bilirlər. 
+Qarışqa koloniyası sistemi (ACS) alqoritmləri bir çox "virtual" qarışqalardan istifadə edərək bu davranışları kompüterlərdə təkrarlamağa çalışırlar. Səyyah satıcısı problemi üçün tez bir zamanda çox yaxşı həll yollarını tapa bilirlər. 
 
- ACS alqoritmlərinin xüsusilə faydalı xüsusiyyəti, fasiləsiz işləyə bilməsi və real vaxtda qrafikdəki dəyişikliklərə uyğunlaşmasıdır. Bu dəyişikliklər avtomobil qəzaları və küçə şəbəkələrində yol bağlanması və ya kompüter şəbəkələrindəki veb serverlərə tıxanma səbəb ola bilər. 
+ACS alqoritmlərinin xüsusilə faydalı xüsusiyyəti, fasiləsiz işləyə bilməsi və real vaxtda qrafikdəki dəyişikliklərə uyğunlaşmasıdır. Bu dəyişikliklər avtomobil qəzaları və küçə şəbəkələrində yol bağlanması və ya kompüter şəbəkələrindəki veb serverlərə tıxanma səbəb ola bilər. 
 
 :::
 
@@ -831,11 +827,11 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- Gəzinti satıcısı problemi [NP-çətindir](gloss:np) , yəni kompüterlər (ən azı çox sayda şəhər üçün) həll etmək çox çətindir. 
+Gəzinti satıcısı problemi [NP-çətindir](gloss:np) , yəni kompüterlər (ən azı çox sayda şəhər üçün) həll etmək çox çətindir. 
 
- Sürətli və dəqiq bir alqoritm tapmaq kompüter elmləri sahəsində ciddi nəticələrə səbəb olacaqdır: demək olar ki, _bütün_ NP-lər üçün sürətli alqoritmlər mövcuddur. Ayrıca İnternet təhlükəsizliyinin əksər hissəsini yararsız hala gətirər, bu da müəyyən problemlərin kompüterlər üçün çox çətin olduğuna inanır. 
+Sürətli və dəqiq bir alqoritm tapmaq kompüter elmləri sahəsində ciddi nəticələrə səbəb olacaqdır: demək olar ki, _bütün_ NP-lər üçün sürətli alqoritmlər mövcuddur. Ayrıca İnternet təhlükəsizliyinin əksər hissəsini yararsız hala gətirər, bu da müəyyən problemlərin kompüterlər üçün çox çətin olduğuna inanır. 
 
- Səyahət edən Satışçı problemini həll etmək üçün sürətli bir alqoritm tapmaq eyni zamanda riyaziyyat və kompüter elmindəki ən məşhur açıq problemlərdən birini, __P vs NP__ problemini həll edərdi. Hər biri 1 milyon dollar mükafat daşıyan yeddi [Minillik Mükafat Problemlərindən](gloss:millennium-prize) biridir. 
+Səyahət edən Satışçı problemini həll etmək üçün sürətli bir alqoritm tapmaq eyni zamanda riyaziyyat və kompüter elmindəki ən məşhur açıq problemlərdən birini, __P vs NP__ problemini həll edərdi. Hər biri 1 milyon dollar mükafat daşıyan yeddi [Minillik Mükafat Problemlərindən](gloss:millennium-prize) biridir. 
 
 :::
 
@@ -850,18 +846,15 @@ __{.red} 90__ kənarları
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Gündəlik həyatda qrafiklər 
 
- Əvvəlki fəsillərdə qrafika nəzəriyyəsinin bir çox fərqli tətbiqini gördük, baxmayaraq ki, bəziləri bir az düşünülmüşdü. Bununla belə məlum olur ki, qrafiklər gündəlik həyatda bir çox obyekt, anlayış və proseslərin əsasını təşkil edir. 
+Əvvəlki fəsillərdə qrafika nəzəriyyəsinin bir çox fərqli tətbiqini gördük, baxmayaraq ki, bəziləri bir az düşünülmüşdü. Bununla belə məlum olur ki, qrafiklər gündəlik həyatda bir çox obyekt, anlayış və proseslərin əsasını təşkil edir. 
 
 ::: column.grow
 
- Məsələn, İnternet geniş, virtual bir qrafikdir. Hər bir vertex fərdi bir veb səhifədir və hər bir kənar iki səhifə arasında bir keçid var deməkdir. Qeyd edək ki, bağlantılar yalnız bir yolla gedir, buna görə də bu qrafik [[yönəldilib | çox xətti | konfiqurasiya edilmiş]] və bu qrafikin _çox, çox, böyük olduğu bildirilir_ . 
-
-    // * "can be viewed as" instead of "is a vast, virtual graph". "Every
-    // vertex represens an individual webpage and every edge a hyperlink
-    // from one page to another".
+Məsələn, İnternet geniş, virtual bir qrafikdir. Hər bir vertex fərdi bir veb səhifədir və hər bir kənar iki səhifə arasında bir keçid var deməkdir. Qeyd edək ki, bağlantılar yalnız bir yolla gedir, buna görə də bu qrafik [[yönəldilib | çox xətti | konfiqurasiya edilmiş]] və bu qrafikin _çox, çox, böyük olduğu bildirilir_ . 
 
  Vikipediya və ya Facebook kimi bəzi veb saytlarda çox sayda giriş bağlantısı var, bir çox kiçik veb saytlarda isə daxilolma əlaqələri çox azdır. Bu Google axtarış nəticələrini çeşidləmək üçün istifadə etdiyi əsas konsepsiya. 
 
@@ -874,12 +867,12 @@ __{.red} 90__ kənarları
 ---
 > id: applications-1
 
- Daha çox gələn bağlantısı olan veb saytlar daha keyfiyyətli olur və axtarış nəticələrinin başında göstərilməlidir. Məsələn, "London" axtardıqda rəsmi turistik məlumat saytları Londondakı kiçik dükanların və ya Londonda yaşayan insanların bloglarının qarşısında göstərilir. Qrafik nəzəriyyəsindən olan bu sadə fikir, __Səhifə dərəcəsi alqoritmi__ , Google-ı digər erkən axtarış motorlarından xeyli yaxşı etdi. 
+Daha çox gələn bağlantısı olan veb saytlar daha keyfiyyətli olur və axtarış nəticələrinin başında göstərilməlidir. Məsələn, "London" axtardıqda rəsmi turistik məlumat saytları Londondakı kiçik dükanların və ya Londonda yaşayan insanların bloglarının qarşısında göstərilir. Qrafik nəzəriyyəsindən olan bu sadə fikir, __Səhifə dərəcəsi alqoritmi__ , Google-ı digər erkən axtarış motorlarından xeyli yaxşı etdi. 
 
 ---
 > id: applications-2
 
- İnternet bəşəriyyətin yaratdığı ən böyük şəbəkədir. Bu görüntü İnternetə qoşulmuş bütün serverlərin çox az bir hissəsini göstərir: 
+İnternet bəşəriyyətin yaratdığı ən böyük şəbəkədir. Bu görüntü İnternetə qoşulmuş bütün serverlərin çox az bir hissəsini göstərir: 
 
     x-parallax.full-width(background="images/internet.jpg")
       .credit © LyonLabs, LLC and Barrett Lyon, 2014
@@ -887,11 +880,11 @@ __{.red} 90__ kənarları
 ---
 > id: applications-3
 
- Veb saytlar və hiperlinklər _virtual_ qrafik təşkil edərkən, kompüterlərin, serverlərin, marşrutlaşdırıcıların, telefon xətləri və kabellərin _fiziki_ şəbəkəsi də mövcuddur. 
+Veb saytlar və hiperlinklər _virtual_ qrafik təşkil edərkən, kompüterlərin, serverlərin, marşrutlaşdırıcıların, telefon xətləri və kabellərin _fiziki_ şəbəkəsi də mövcuddur. 
 
 ::: column.grow(parent="right")
 
- Hər dəfə bir telefon zəngi etdikdə və ya veb sayt yüklədiyiniz zaman, şəbəkə operatorları, hər hansı bir fərdi kabelin və ya əlaqənin həcmini aşmadan, göndərən və qəbuledicini birləşdirmək üçün bir yol tapmalı olurlar. Qrafika nəzəriyyəsi və ehtimal, etibarlı bir xidmətə zəmanət verməyə imkan verir, məsələn müəyyən bir əlaqə məşğul olduqda dalğaları tapmaqla. 
+Hər dəfə bir telefon zəngi etdikdə və ya veb sayt yüklədiyiniz zaman, şəbəkə operatorları, hər hansı bir fərdi kabelin və ya əlaqənin həcmini aşmadan, göndərən və qəbuledicini birləşdirmək üçün bir yol tapmalı olurlar. Qrafika nəzəriyyəsi və ehtimal, etibarlı bir xidmətə zəmanət verməyə imkan verir, məsələn müəyyən bir əlaqə məşğul olduqda dalğaları tapmaqla. 
 
 ::: column(width=220)
 
@@ -902,7 +895,7 @@ __{.red} 90__ kənarları
 ---
 > id: applications-4
 
- Qrafiklər nəqliyyatda və naviqasiyada da mühüm rol oynayır. Bütün uçuş, qatar və metro şəbəkələri qrafiklər yaradır ki, bu da səmərəli cədvəllər yaratarkən istifadə edilə bilər. Ən tanınan qrafiklərdən biri London metrosunun xəritəsidir: 
+Qrafiklər nəqliyyatda və naviqasiyada da mühüm rol oynayır. Bütün uçuş, qatar və metro şəbəkələri qrafiklər yaradır ki, bu da səmərəli cədvəllər yaratarkən istifadə edilə bilər. Ən tanınan qrafiklərdən biri London metrosunun xəritəsidir: 
 
     figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
@@ -911,7 +904,7 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- Bütün yollar və avtomobil yolları eyni zamanda iki nöqtə arasındakı ən qısa marşrutu işləyərkən Google Maps kimi naviqasiya xidmətləri tərəfindən istifadə olunan geniş bir şəbəkə təşkil edir. 
+Bütün yollar və avtomobil yolları eyni zamanda iki nöqtə arasındakı ən qısa marşrutu işləyərkən Google Maps kimi naviqasiya xidmətləri tərəfindən istifadə olunan geniş bir şəbəkə təşkil edir. 
 
 ::: column(width=60)
 
@@ -925,21 +918,21 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- Gələcəkdə __Ağıllı Nəqliyyat Sistemləri__ , smartfonlardan və özünü idarə edən avtomobillərdən toplanan yer məlumatlarından istifadə edərək avtomobilləri daha səmərəli istiqamətləndirərək tıxanma və qəzaları azaldacaqdır. Bu, hər il yolda itirilən milyonlarla saatı xilas edə bilər, çirkliliyi əhəmiyyətli dərəcədə azaldır və təcili yardım xidmətlərinə daha sürətli səyahət etməyə imkan verir. 
+Gələcəkdə __Ağıllı Nəqliyyat Sistemləri__ , smartfonlardan və özünü idarə edən avtomobillərdən toplanan yer məlumatlarından istifadə edərək avtomobilləri daha səmərəli istiqamətləndirərək tıxanma və qəzaları azaldacaqdır. Bu, hər il yolda itirilən milyonlarla saatı xilas edə bilər, çirkliliyi əhəmiyyətli dərəcədə azaldır və təcili yardım xidmətlərinə daha sürətli səyahət etməyə imkan verir. 
 
 :::
 
 ---
 > id: applications-6
 
- Bu görüntü, Avropanın şimalına ticari aviareyslər şəbəkəsini göstərir. 
+Bu görüntü, Avropanın şimalına ticari aviareyslər şəbəkəsini göstərir. 
 
     x-parallax.full-width(background="images/flights.jpg")
 
 ---
 > id: applications-7
 
- Elm, mühəndislik və ya gündəlik həyatda saysız-hesabsız digər qrafiklər var: 
+Elm, mühəndislik və ya gündəlik həyatda saysız-hesabsız digər qrafiklər var: 
 
 ::: column(width=200)
 
@@ -984,9 +977,9 @@ __{.red} 90__ kənarları
 
 ### Sosial şəbəkələr 
 
- Nəhayət, gündəlik həyatda mövcud olan qrafiklərin ən yaxşı bir nümunəsini düşünək: sosial media. Burada vertices [[insanları]] təmsil edir [[| dostlar | şəbəkələr]] və kənarlar dostluq, bəyənmə, abunə və ya izləyiciləri təmsil edir. 
+Nəhayət, gündəlik həyatda mövcud olan qrafiklərin ən yaxşı bir nümunəsini düşünək: sosial media. Burada vertices [[insanları]] təmsil edir [[| dostlar | şəbəkələr]] və kənarlar dostluq, bəyənmə, abunə və ya izləyiciləri təmsil edir. 
 
- Sosial media qrafiklərini çəkərkən, eyni məktəbə gedən və ya eyni şəhərdə yaşamış ola bilən qarşılıqlı dostların müəyyən __qruplarını__ görə bilərik. İnsanların __mərkəzliliyini__ də müəyyənləşdirə bilərik ki, bu da bir vertexin nə dərəcədə yaxşı bağlı olduğundan və bir insanın sosial mediada populyarlığının ölçüsü ola bilər. 
+Sosial media qrafiklərini çəkərkən, eyni məktəbə gedən və ya eyni şəhərdə yaşamış ola bilən qarşılıqlı dostların müəyyən __qruplarını__ görə bilərik. İnsanların __mərkəzliliyini__ də müəyyənləşdirə bilərik ki, bu da bir vertexin nə dərəcədə yaxşı bağlı olduğundan və bir insanın sosial mediada populyarlığının ölçüsü ola bilər. 
 
     figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
@@ -995,9 +988,9 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- 2014-cü ildə Facebookun 1,4 milyard aktiv istifadəçisi və cəmi 200 milyarddan çox dostluğu var. Bütün Facebook istifadəçilərinin yarısının 200-dən çox dostu var və dostlarımızın əksəriyyətinin oxşar sayda dostu olduğundan asanlıqla on minlərlə _dost_ dostumuz ola bilər. 
+2014-cü ildə Facebookun 1,4 milyard aktiv istifadəçisi və cəmi 200 milyarddan çox dostluğu var. Bütün Facebook istifadəçilərinin yarısının 200-dən çox dostu var və dostlarımızın əksəriyyətinin oxşar sayda dostu olduğundan asanlıqla on minlərlə _dost_ dostumuz ola bilər. 
 
- İndi həyəcan verici bir sual meydana çıxacaq: hər iki təsadüfi Facebook istifadəçisini seçsəniz, birindən digərinə keçmək üçün neçə "dostluq kənarları" na əməl etməlisiniz? Məsələn, dostlar arasındakı məsafə [[1]] , dostların dostları arasındakı məsafə [[2]] və s. 
+İndi həyəcan verici bir sual meydana çıxacaq: hər iki təsadüfi Facebook istifadəçisini seçsəniz, birindən digərinə keçmək üçün neçə "dostluq kənarları" na əməl etməlisiniz? Məsələn, dostlar arasındakı məsafə [[1]] , dostların dostları arasındakı məsafə [[2]] və s. 
 
 ::: column(width=200)
 
@@ -1008,9 +1001,9 @@ __{.red} 90__ kənarları
 ---
 > id: social-2
 
- 2016-cı ildə Facebook istifadəçilərinin bir-birlərinə necə bağlı olduğunu müəyyənləşdirmək üçün [bir araşdırma](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/) apardı. Tapdılar ki, ortalama olaraq ən çox 3.57 nəfərdən _başqa biri_ ilə Facebook-da əlaqə qurursan. Bura məşhurlar, siyasətçilər və ya hətta qonorar da daxildir! 
+2016-cı ildə Facebook istifadəçilərinin bir-birlərinə necə bağlı olduğunu müəyyənləşdirmək üçün [bir araşdırma](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/) apardı. Tapdılar ki, ortalama olaraq ən çox 3.57 nəfərdən _başqa biri_ ilə Facebook-da əlaqə qurursan. Bura məşhurlar, siyasətçilər və ya hətta qonorar da daxildir! 
 
- Başqa sözlə, bütün dünyada milyardlarla Facebook istifadəçisindən birini seçsəniz, yəqin ki, dostlarınızdan birinin dostunu tanıyan bir dostu olacaq. 3.57 __dərəcə ayrılığın__ olduğunu söyləyirik. 
+Başqa sözlə, bütün dünyada milyardlarla Facebook istifadəçisindən birini seçsəniz, yəqin ki, dostlarınızdan birinin dostunu tanıyan bir dostu olacaq. 3.57 __dərəcə ayrılığın__ olduğunu söyləyirik. 
 
     figure
       x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
@@ -1025,10 +1018,10 @@ __{.red} 90__ kənarları
 
 ::: column.grow
 
- 1929-cu ildə, macar müəllifi [Frigyes Karinthy,](bio:karinthy) ilk növbədə "Altı dərəcə ayrılıq" ideyasını irəli [sürəndə](bio:karinthy) , İnternet və ya sosial media yox idi, lakin dünya artıq bir-birinə daha çox bağlanmağa başlamışdı. 
+1929-cu ildə, macar müəllifi [Frigyes Karinthy,](bio:karinthy) ilk növbədə "Altı dərəcə ayrılıq" ideyasını irəli [sürəndə](bio:karinthy) , İnternet və ya sosial media yox idi, lakin dünya artıq bir-birinə daha çox bağlanmağa başlamışdı. 
 
- 1967-ci ildə [Stanley Milgram](bio:milgram) ilk empirik təcrübə keçirdi, burada Nebraska və Kanzasda yaşayan 296 iştirakçının Bostonda, Massachusettsdə yaşayan müəyyən bir şəxsə məktub göndərmələri istəndi. Hamısı məktubu göndərmək üçün bir dost seçməli idi, sonra başqa bir dost seçdi. Hər addımda məktub Bostona yaxınlaşdı. Milgram, orta hesabla, yalnız 5.2 ara dostunun - 5.2 dərəcə ayrılıqda olduğunu tapdı. 
+1967-ci ildə [Stanley Milgram](bio:milgram) ilk empirik təcrübə keçirdi, burada Nebraska və Kanzasda yaşayan 296 iştirakçının Bostonda, Massachusettsdə yaşayan müəyyən bir şəxsə məktub göndərmələri istəndi. Hamısı məktubu göndərmək üçün bir dost seçməli idi, sonra başqa bir dost seçdi. Hər addımda məktub Bostona yaxınlaşdı. Milgram, orta hesabla, yalnız 5.2 ara dostunun - 5.2 dərəcə ayrılıqda olduğunu tapdı. 
 
 :::
 
- Bu gün hər birimiz sosial qarşılıqlı münasibətlərimizin, səyahət, İnternet və texnologiya, elm və sairənin əsasını təşkil edən saysız-hesabsız görünməz qrafiklərin bir hissəsidir.
+Bu gün hər birimiz sosial qarşılıqlı münasibətlərimizin, səyahət, İnternet və texnologiya, elm və sairənin əsasını təşkil edən saysız-hesabsız görünməz qrafiklərin bir hissəsidir.

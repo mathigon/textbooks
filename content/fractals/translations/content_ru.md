@@ -430,14 +430,12 @@
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Горный массив в Центральной Азии
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Дельта реки Ганг в Индии
@@ -450,14 +448,12 @@
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Кровеносные сосуды сетчатки глаза
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Гранд-Каньон в США
@@ -472,16 +468,12 @@
 
 Все эти объекты могли образоваться совершенно случайно, но, как и у фракталов, существует шаблон, по которому они формируются. Математика может помочь нам лучше понять формы, а фракталы находят применение в таких областях, как медицина, биология, геология и метеорология. [Продолжить](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Компьютерная графика созданная с помощью фракталов
@@ -524,22 +516,18 @@
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -957,14 +945,9 @@ __Клеточный автомат__ - это сетка, состоящая и
 * {.reveal(when="blank-0")} Последовательности внутри [большого круга](target:bulb1) в верхней части [[имеют орбиты|сходятся|расходятся]] _{span.reveal(when="blank-1")}, состоящие из [[3]] точек._
 * {.reveal(when="blank-2")} Последовательности в [этом меньшем круге](target:bulb2) имеют орбиты из [[5]] точек.
 
-
 :::
 
 {.reveal(when="blank-3")} В каждом круге последовательности имеют орбиты с разным количеством циклов, причем, чем меньше круг, тем больше циклов в орбитах. Размер этих орбит тесно связан с __логистической картой__, важной концепцией в [теории хаоса](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 

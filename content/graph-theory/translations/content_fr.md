@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 ::: column.grow
 
@@ -136,6 +137,7 @@ Les graphes constitués d'une seule chaîne de sommets sont appelés [__cycles__
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Les ponts de Königsberg
 
@@ -209,9 +211,6 @@ Premièrement, nous devons convertir les cartes de la ville en graphes avec des 
 
 Sur papier, imaginez quelques graphes différents, puis essayez de déterminer lesquels peuvent être dessinés avec un seul trait continu.
 
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
-
 ---
 
 > id: bridges-3
@@ -266,11 +265,11 @@ La découverte d’Euler peut ne pas sembler particulièrement utile dans la vie
 
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Poignées de main et fêtes
 
 ::: column.grow
-
 
 Vous avez été invité à une fête d'anniversaire extravagante. Vous et l'hôte inclus, ${hnd}{hnd|5|3,15,1} personnes sont présentes.
 
@@ -345,6 +344,7 @@ Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts 
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Graphes plans
 
@@ -459,7 +459,6 @@ _{span.euler-sum} 25 sommets + faces_
 
 En comparant ces nombres, vous remarquerez que le nombre d'arêtes correspond toujours à [[un|bigger|the same]] de moins que le nombre de faces plus le nombre de sommets. En d'autres termes, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Ce résultat s'appelle __l'équation d'Euler__ et est nommé d'après le même [mathématicien](bio:euler) qui a résolu le problème des ponts de Königsberg.
 
-
 Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas vérifier chacun d’eux pour voir si l’équation d’Euler fonctionne. Au lieu de cela, nous pouvons essayer de trouver une [preuve](gloss:proof) simple qui fonctionne pour tous les graphes…
 
 ---
@@ -565,6 +564,7 @@ __{.red} 90__ bords
 
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Coloration de la carte
 
@@ -698,6 +698,7 @@ Cependant, les mathématiciens ont également examiné des cartes de _empires_, 
 
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Le problème du vendeur ambulant
 
@@ -866,6 +867,7 @@ FAIRE
 
 > id: applications
 > section: applications
+> translated: auto
 
 ## Les graphiques au quotidien
 
@@ -993,7 +995,6 @@ Il existe d'innombrables autres graphiques dans la science, l'ingénierie ou la 
 ::: column(width=200)
 
     x-img(lightbox src="images/finance.jpg" width=200 height=200)
-
 
 {.caption} Les graphes ont également de nombreuses applications en __probabilités__, __en théorie des jeux__ et en __mathématiques financières__.
 

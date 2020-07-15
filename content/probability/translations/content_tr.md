@@ -133,8 +133,6 @@ Olasılıkları genelde üzerinde çok düşünmeden günlük hayatta sıklıkla
 
 (Hilesiz) Madeni bir para atmanın iki muhtemel sonucu vardır; eşit olasılığa sahip olan _tura_ ve _yazı_. Yukarıdaki denkleme göre, atılan bir madeni paranın _tura_ gelme olasılığı `1/2` = 0,5 veya %50 olmalıdır.
 
-    // TODO However, the equation is not very helpful if the different outcomes
-    // are not all equally likely, or if there are infinitely many possible outcomes.
 
 Sadece sonuçlardan biri gerçekleşebilir olsa bile bu olasılığın  0 ile 1 _arasında_ olduğunu not edelim. Fakat olasılıkların gerçek sonuçlarla çok az ilgisi vardır: eğer madeni bir parayı çok kez atarsak sonuçların [[yaklaşık olarak yarısının|tam olarak yarısının|hepsinin|hiçbirinin]] tura olacağını biliyoruz – ama _tam olarak hangi_ atışların tura geleceğini tahmin etmemizin hiçbir yolu yok.
 
@@ -170,8 +168,6 @@ Olasılıkları düşünmenin çok farklı yolları vardır ancak pratikte sıkl
 {.text-center} __Öznel__ olasılık bize paranın tura geleceğine ne kadar _inandığımızı_ söyler.
 :::
 
-    // TODO Notice that subjectivist probabilities may be different for
-    // different people – often depending on how much they know.
 
 Olasılıklar _tahmin etmek ve öngörmek_ için harika iken, _aslında_ ne olacağını hiçbir zaman söyleyemediğimizi hatırlayın.
 
@@ -453,8 +449,6 @@ Diğer bir yandan, bütün bir parçanın zaman içinde bozunma oranı o kadar d
 
 :::
 
-    // TODO Possible probability distributions of the position of an electron in
-    // a hydrogen atom. Lighter areas represent more likely locations of the electron.
 
 ---
 > id: radioactive-1
