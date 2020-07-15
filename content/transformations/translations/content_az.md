@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 [Xəttlər](gloss:line) və ya [çoxbucaqlılar](gloss:polygon) kimi bir çox həndəsi anlayış riyaziyyatçılar tərəfindən "icad edilmişdir". Simmetriya, digər tərəfdən, ətrafımızda hər yerdədir. Demək olar ki, bütün bitkilər, heyvanlar və hətta insanlar simmetrikdirlər. 
 
@@ -78,6 +79,7 @@ Bir çevrilmənin nəticəsi [__görüntü__](gloss:transformation-image) adlan�
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 [__Sərt bir çevrilmə__](gloss:rigid-transformation) , bir rəqəmin ölçüsünü və ya formasını dəyişdirməyən xüsusi bir çevrilmədir. Təsəvvür edə bilərik ki, o, ağac və ya metal kimi möhkəm bir materialdan hazırlanmışdır: onu hərəkətə gətirə, çevirə və ya kənara çevirə bilərik, ancaq uzanmırıq, əyilmək və ya başqa şəkildə deformasiya etmək olmur. 
 
@@ -446,35 +448,7 @@ Transformasiyalar yalnız həndəsə deyil, riyaziyyatın bir çox hissəsində 
 > section: congruence
 > sectionStatus: dev
 
-ETMƏK 
-
----
-
-### Dəyişikliklərin tərkibi 
-
-Əlbəttə ki, daha mürəkkəb çevrilmələr yaratmaq üçün çoxlu tərcümə, əks və dönüş birləşdirə bilərik. 
-
-{.todo} TODO nümunəsi 
-
-Ancaq göründüyü kimi, neçə fərqli dəyişikliyi birləşdirdiyinizin fərqi yoxdur: hər zaman eyni bir dəyişikliyi edə bilərsiniz. 
-
-{.todo} TODO Çevrilmə tərkibi kalkulyatoru 
-
-İki əksini birləşdirmək xüsusilə maraqlıdır. Hesab etməli olduğumuz iki fərqli hal var: 
-
-::: column.grow
-
-Yansıtmanın iki xətti paraleldirsə, nəticə tək bir tərcümədir. Tərcümə istiqaməti əks sətirlərinə dikdir və məsafə əks xətlər arasındakı məsafədən iki dəfə çoxdur. 
-
-{.todo} TODO Animasiya 
-
-::: column.grow
-
-Yansıtmanın iki xətti kəsişirsə, nəticə tək bir dönüşdür. Fırlanma mərkəzi əks xətlər arasındakı kəsişmədir və bucaq əks xətlər arasındakı iki qat bucaqdır. 
-
-{.todo} TODO Animasiya 
-
-:::
+TODO
 
 ---
 
@@ -483,6 +457,7 @@ Yansıtmanın iki xətti kəsişirsə, nəticə tək bir dönüşdür. Fırlanma
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__Simmetriya__](gloss:symmetry) ətrafımızda hər yerdədir və intuitiv bir anlayışdır: bir cismin müxtəlif hissələri müəyyən mənada _eyni_ görünür. Dəyişikliklərdən istifadə edərək simmetriyanın _həqiqətən_ nə demək olduğunu daha dəqiq, riyazi bir tərif verə bilərik: 
 
@@ -739,6 +714,7 @@ Bu şekillerin hər biri üçün sıranı və fırlanma bucağını tapın:
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
  Bəzi şekillerdə birdən çox simmetriya var - [meydanda](gloss:square) sadə bir nümunə olaraq nəzər salaq. 
 
@@ -1096,6 +1072,7 @@ Tərcümə, əks, dönmə və sürüşmə əks etdirmələrinə əlavə olaraq, 
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 İndiyə qədər baxdığımız bütün simmetriklər müəyyən mənada _vizual_ idi: görünən formalar, şəkillər və ya naxışlar. Əslində simmetriya daha geniş bir konsepsiya ola bilər: _dəyişmə toxunulmazlığı_ . 
 
@@ -1147,6 +1124,7 @@ Simmetriya hətta fundamental hissəciklərin mövcudluğunu proqnozlaşdıra bi
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Bu günə qədər yalnız [[sərt]] baxdı [[| məcmu | vizual]] çevrilmələr. _{span.reveal(when="blank-0")} İndi olmayan biri haqqında düşünək: bir [__dilation__](gloss:dilation) daha böyük və ya kiçik etməklə bir formanın ölçüsünü dəyişdirir._ 
 
@@ -1193,169 +1171,4 @@ Bütün dilatların bir [__mərkəzi__](target:center) və bir [__miqyas amili v
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
-Sərt dəyişikliklər üçün görüntü həmişə [[uyğun gəlir | daha böyük |]] orijinaldan [[kiçik]] - amma bu [[artıq deyil |]] dilatasyonlar üçün [[hələ də]] doğrudur. Bunun əvəzinə iki şəklin [__oxşar__](gloss:similar) olduğunu söyləyirik. Ümumi forma eyni, lakin mütləq eyni ölçüdə deyil. 
-
-Bənzərliyin simvolu `∼` (olduğu üçün uyğunluq simvoluna bənzəyir `≅` ). Bu nümunədə yazardıq `A ∼ A'` . 
-
-::: column(width=240)
-
-{.todo} GƏLƏCƏK - illüstrasiya 
-
-:::
-
----
-> id: perspective
-
-### Perspektiv rəsmlər 
-
-Birləşdirən şüalarla olan bu uzatmaların, demək olar ki, __perspektiv təsvirlərə bənzədiyini gördünüz__ . Dilation mərkəzi __yoxa çıxma nöqtəsi__ adlanır, çünki hər şeyin "uzaqda yoxa çıxdığı" olduğu kimi görünür. 
-
-Aşağıdakı şəkildəki yox olan nöqtəni tapın: 
-
-{.todo} Tezliklə Gələn - İnteraktiv 
-
-İndi mövcud olanlara uyğun başqa bir ev çəkə bilərsinizmi? 
-
----
-> id: similar-polygons
-
-### Bənzər çoxbucaqlar 
-
-Bənzərlik bizə şekiller haqqında çox şey deyə bilər. Məsələn, [dairələr](gloss:circle) , [meydanlar](gloss:square) və [bərabər tərəfli üçbucaqlar](gloss:equilateral-triangle) [[həmişə olur | bəzən | heç]] oxşar deyil. Fərqli ölçülərə sahib ola bilərlər, lakin həmişə eyni ümumi formaya malikdirlər. 
-
-::: column.grow
-
-Sağdakı iki dördbucaqlı oxşar. İlk vacib müşahidəmiz, bənzər çoxbucaqlılarda, uyğun açıların hamısı bir-birinə [uyğundur](gloss:congruent-angles) . Bu o deməkdir ki 
-
-{.text-center} [_{.m-red} ∡ABC_ ≅ _{.m-red} ∡A'B'C '_](target:a) _{.space}_ [_{.m-blue} ∡BCD_ ≅ _{.m-blue} ∡B'C'D '_](target:b)  
-[_{.m-green} ∡CDE_ ≅ _{.m-green} ∡C'D'E '_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ ≅ _{.m-yellow} ∡D'E'A '_](target:d) 
-
-İkinci vacib fakt, bənzər çoxbucaqlılarda, bütün tərəflər müvafiq genişlənmənin miqyas amili ilə __mütənasib__ şəkildə ölçülür. Əgər miqyas amili olarsa ${k}{k|1.5|0.5,2,0.1} , sonra 
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
-Bunun əvəzinə bu tənlikləri yenidən düzəldə və miqyas amilini tamamilə aradan qaldıra bilərik: 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
- Buna bənzər çoxbucaqlıları cəlb edən həqiqi həyat problemlərini həll etmək üçün istifadə edə bilərik - məsələn, digər tərəfləri bilsək itmiş tərəflərin uzunluğunu tapmaq. Növbəti hissədə bir neçə nümunə görəcəksiniz. 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### Bənzər üçbucaqlar 
-
-Bənzərlik anlayışı üçbucaqlarla xüsusilə güclüdür. Bənzər çoxbucaqlılarda müvafiq daxili açıların bərabər olduğunu artıq bilirik. 
-
-Üçbucaqlar üçün bunun əksi də doğrudur: bu o deməkdir ki, əgər eyni üç bucaq ölçüsü olan iki üçbucaq varsa, onda üçbucaqlar oxşar olmalıdır. 
-
-Və daha da yaxşılaşır! Bilirik ki, üçbucaqdakı daxili açılar həmişə [[180]]° -ə qədər əlavə edir. Bu o deməkdir ki, üçbucaqda iki bucağı bilsək, həmişə üçüncüsünü işləyə bilərik. 
-
-Bənzərlik üçün bu, üçbucaqların oxşar olub olmadığını müəyyən etmək üçün yalnız _iki bucağı_ yoxlamaq lazım olduğunu bildirir. İki üçbucağın eyni ölçülü iki bucağı varsa, üçüncü bucaq hər ikisində də eyni olmalıdır. 
-
-Bu nəticə bəzən üçbucaqlar üçün [__AA oxşarlıq şərti__](gloss:triangle-aa) adlanır. (İki _biz_ müqayisə iki _açılar_ üçün durmaq.) 
-
-::: .theorem
-
-Bir üçbucaqdakı iki bucaq başqa üçbucaqdakı iki bucağa uyğundursa, iki üçbucaq oxşardır. 
-
-:::
-
----
-> id: similar-triangles-1
-
-Bunun faydalı olduğu bir neçə nümunəyə nəzər salaq: 
-
-::: column(width=320)
-
-{.todo} Tezliklə GƏLƏCƏK - Animasiya 
-
-::: column.grow
-
-Burada geniş bir mayak şəklini görə bilərsiniz. Bir dostunuzla birlikdə mayak hündürlüyünü ölçmək istəyirsiniz, amma təəssüf ki, zirvəyə qalxa bilmirik. 
-
-Məlum olur ki, çox yaxşı gizlədilmiş diaqramda iki oxşar üçbucaq var: biri mayak və onun kölgəsi, digəri dostunuz və onun kölgəsi tərəfindən formalaşmışdır. 
-
-Hər iki üçbucağın altındakı bir sağ açı var. Günəş şüaları paraleldir, yəni altındakı digər iki bucaq uyğun açılardır, eyni zamanda bərabərdir. Üçbucaqlar üçün AA şərti ilə bu ikisi oxşar olmalıdır. 
-
-Kölgələrin uzunluğunu asanlıqla ölçə bilərik və dostunuzun boyunu da bilirik. İndi mayakın hündürlüyünü tapmaq üçün oxşar üçbucaqlarda tərəflərin nisbətini istifadə edə bilərik: 
-
-{.todo} Tezliklə - tənlik 
-
-Buna görə mayak 1,5 m hündürdür. 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo} Tezliklə GƏLƏCƏK - Animasiya 
-
-::: column.grow
-
-Eyni texnikanı yerdəki məsafələri ölçmək üçün istifadə edə bilərik. Burada böyük bir çayın genişliyini tapmaq istəyirik. Çayın bir tərəfində böyük bir ağac var və uzunluğu bir metr olan bir çubuq var. 
-
-Bu diaqramda başqa iki oxşar üçbucaq çəkməyə çalışın. 
-
-Çayın kənarındakı nöqtəni, çubuqun ucundan ağaca birbaşa görmə xəttində olan nöqtəni qeyd edə bilərsiniz. Sonra məsafəni çubuqa və birbaşa ağacın qarşısındakı nöqtəyə qədər ölçə bilərik. 
-
-Bir daha təkrar edirəm, bu iki üçbucaq AA vəziyyətinə görə oxşardır. Onların hər ikisi düzgün bucaq və bir-birinə əks açılardır. 
-
-Mütənasiblik qaydasına görə, bu o deməkdir 
-
-{.todo} Tezliklə - tənlik 
-
-Buna görə çayın eni 45 metrdir. 
-
-:::
-
----
-
-### Şüalardakı oxşarlıq 
-
-Teorem: Bir şüa üçbucağın bir bucağını bükərsə, əks tərəfi digər iki tərəfin uzunluğuna mütənasib olan hissələrə bölür. 
-
-Bu teoremi transverals ilə kəsilmiş çoxsaylı paralel xətlərin olduğu üçbucaqlardan kənar bir vəziyyətə uzada bilərik. 
-
-Teorem: Əgər üç və ya daha çox paralel xətt iki eninə keçidlə kəsilirsə, o zaman keçidləri mütənasib olaraq bölürlər. 
-
-Üçbucağın ortalama nöqtəsi haqqında düşünün. Bir ortalama üçbucağın bir tərəfinə paralel olur və digər iki tərəfi bərabər tutarlı yarıya bölür. Orta yarı bu iki tərəfi mütənasib olaraq bölür. 
-
-Üçbucağın nisbi teoremi: Üçbucağın bir tərəfinə paralel bir xətt digər iki tərəfi kəsirsə, o tərəfləri mütənasib olaraq bölür. 
-
-Üçbucaq nisbəti teoreminin tərsliyi: Bir xətt üçbucağın iki tərəfini mütənasib olaraq bölürsə, o zaman üçüncü tərəfə paraleldir. 
-
----
-
-### Özünə oxşarlıq 
-
-_Özlərini_ daha kiçik hissəsinə bənzəyən bəzi maraqlı riyazi formalar var. Buna misal olaraq __Sierpinksi Üçbucağıdır__ : bütün üçbucaq, __qurulduğu__ kiçik üçbucaqlardan hər hansı birinə bənzəyir. Böyütmək və sonsuz sayda daha kiçik və kiçik üçbucaq edə bilərsiniz. 
-
-Bu xassəyə malik formalar __Fraktallar__ adlanır. Onların bəzi təəccüblü və həqiqətən XXX xassələri var ki, bunları gələcəkdə daha çox öyrənəcəksiniz. 
-
----
-
-Üçbucaqlar yalnız məsafələri ölçmək üçün yararlı deyil. Növbəti kursda üçbucaqlar və onların xüsusiyyətləri haqqında daha çox şey öyrənəcəyik.
+TODO

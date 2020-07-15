@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -325,6 +326,7 @@ Thậm chí còn có một _ngày Pi_ mỗi năm, rơi vào ngày 14 tháng 3, b
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Cho đến nay trong hình học, chúng ta luôn đo góc theo [độ](gloss:degrees) . Một __{.m-red} vòng tròn đầy đủ__ là [[360]]°, một __{.m-green} một nửa vòng tròn__ là [[180]]°, một __{.m-yellow} vòng tròn quý__ là [[90]]°, v.v. 
 
@@ -573,6 +575,7 @@ Sử dụng radian có một lợi thế đặc biệt thú vị khi sử dụng
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 Trong các phần trước, bạn đã học các tên được đặt cho một số phần khác nhau của vòng tròn - như tâm, bán kính, đường kính và chu vi. Tuy nhiên, có nhiều yếu tố hình học liên quan đến một vòng tròn, chúng ta sẽ cần giải quyết các vấn đề phức tạp hơn: 
 
@@ -886,59 +889,7 @@ Trong các thế kỷ tiếp theo, các nhà khoa học đã cố gắng sử d�
 > section: circle-theorems
 > sectionStatus: dev
 
-https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsADEeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheet/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
-
-__[CC] Xác định và mô tả mối quan hệ giữa các góc được ghi, bán kính và hợp âm. Bao gồm mối quan hệ giữa các góc trung tâm, được ghi và bao quanh; các góc được ghi trên một đường kính là các góc vuông; bán kính của một đường tròn vuông góc với tiếp tuyến nơi bán kính cắt đường tròn.__ 
-
-Một góc được ghi là một góc với đỉnh của nó là hình tròn và các cạnh của nó chứa hợp âm. Vòng cung bị chặn là vòng cung nằm ở phía trong của góc được ghi và có điểm cuối nằm trên góc. Đỉnh của một góc được ghi có thể là bất cứ nơi nào trên vòng tròn miễn là các cạnh của nó cắt nhau thành vòng tròn để tạo thành một vòng cung bị chặn. 
-
-__Định lý góc bị bỏ qua__ Số đo của một góc được ghi bằng một nửa số đo của cung bị chặn của nó. Để chứng minh Định lý góc đã đăng ký, bạn cần chia nó thành ba trường hợp, giống như ba góc khác nhau được rút ra từ Điều tra. 
-
-__Các định lý__ góc đồng quy Các góc được đánh dấu chặn cùng một cung là đồng dạng. 
-
-__Định lý hình bán nguyệt__ góc bị bỏ qua Một góc chặn hình bán nguyệt là một góc vuông. 
-
-Trong Định lý hình bán nguyệt góc đã ký, chúng ta cũng có thể nói rằng góc được ghi trong hình bán nguyệt. Bất cứ khi nào một góc vuông được ghi trong một vòng tròn, điểm cuối của góc là điểm cuối của đường kính. Do đó, điều ngược lại của Định lý hình bán nguyệt góc bị bỏ qua cũng đúng. 
-
-Khi một góc nằm trên một vòng tròn, đỉnh nằm trên chu vi của vòng tròn. Một loại góc trên một vòng tròn là một loại được hình thành bởi một tiếp tuyến và hợp âm. 
-
-__Định lý hợp âm / góc__ tiếp tuyến Số đo của một góc được tạo bởi hợp âm và tiếp tuyến cắt nhau trên vòng tròn là một nửa số đo của cung bị chặn. 
-
-Từ Định lý Hợp âm / Góc tiếp tuyến, bây giờ chúng ta biết rằng có hai loại góc bằng một nửa số đo của cung bị chặn; một góc được ghi và một góc được hình thành bởi một hợp âm và một tiếp tuyến. Do đó, bất kỳ góc nào với đỉnh của nó trên một vòng tròn sẽ bằng một nửa số đo của cung bị chặn. 
-
-Một góc được xem xét bên trong một vòng tròn khi đỉnh nằm ở đâu đó bên trong vòng tròn, nhưng không nằm ở trung tâm. Tất cả các góc bên trong một vòng tròn được hình thành bởi hai hợp âm giao nhau. 
-
-__Định lý góc hợp âm xen kẽ__ Số đo của góc được tạo bởi hai hợp âm giao nhau bên trong một vòng tròn là trung bình của số đo của các cung bị chặn. 
-
-Một góc được coi là nằm ngoài một vòng tròn nếu đỉnh của góc nằm ngoài vòng tròn và các cạnh là tiếp tuyến hoặc tiếp tuyến. Có ba loại góc nằm ngoài một vòng tròn: một góc được tạo bởi hai tiếp tuyến, một góc được tạo bởi một tiếp tuyến và một tiếp tuyến và một góc được tạo bởi hai tiếp. Cũng giống như một góc bên trong hoặc trên một vòng tròn, một góc bên ngoài một vòng tròn có một công thức cụ thể, liên quan đến các cung bị chặn. 
-
-__Định lý góc bên ngoài__ Số đo của một góc được tạo bởi hai giây, hai tiếp tuyến hoặc một tiếp tuyến và tiếp tuyến được vẽ từ một điểm bên ngoài vòng tròn bằng một nửa độ chênh lệch của các số đo của các cung bị chặn. 
-
-Khi hai hợp âm giao nhau bên trong một vòng tròn, hai tam giác mà chúng tạo ra tương tự nhau, làm cho các cạnh của mỗi tam giác cân xứng với nhau. Nếu chúng ta loại bỏ AD và BC, các tỷ lệ giữa AE, EC, DE và EB sẽ vẫn như nhau. 
-
-__Định lý__ hợp âm giao nhau Nếu hai hợp âm giao nhau trong một vòng tròn sao cho một hợp âm được chia thành các đoạn có độ dài a và b và đoạn kia thành các đoạn có độ dài c và d thì ab = cd. Nói cách khác, tích của các phân đoạn của một hợp âm bằng với sản phẩm của các phân đoạn của hợp âm thứ hai. 
-
-Ngoài việc hình thành một góc bên ngoài một vòng tròn, vòng tròn có thể chia các phần tử thành các phân đoạn tỷ lệ với nhau. 
-
-Nếu chúng ta vẽ trong các hợp âm giao nhau, chúng ta sẽ có hai hình tam giác tương tự. 
-
-Từ các góc được ghi và Thuộc tính phản xạ (R≅∠R), △ PRS∼ TRQ. Vì hai tam giác tương tự nhau, chúng ta có thể thiết lập tỷ lệ giữa các cạnh tương ứng. Sau đó, nhân chéo. ac + d = ca + b⇒a (a + b) = c (c + d) 
-
-__Định lý__ hai __phân đoạn__ Nếu hai giây được rút ra từ một điểm chung bên ngoài một vòng tròn và các phân đoạn được dán nhãn như trên, thì a (a + b) = c (c + d). Nói cách khác, sản phẩm của phân khúc bên ngoài và toàn bộ một secant bằng với sản phẩm của phân khúc bên ngoài và toàn bộ của secant khác. 
-
-Nếu một tiếp tuyến và tiếp tuyến gặp nhau tại một điểm chung bên ngoài một vòng tròn, thì các phân đoạn được tạo ra có mối quan hệ tương tự như hai tia sáng. Hãy nhớ lại rằng sản phẩm của phần bên ngoài của một secant và toàn bộ bằng với cùng một secant khác. Nếu một trong những phân đoạn này là một tiếp tuyến, nó vẫn sẽ là sản phẩm của phần bên ngoài và toàn bộ. Tuy nhiên, đối với một đường tiếp tuyến, phần bên ngoài và toàn bộ là bằng nhau. 
-
-__Định lý phân đoạn__ tiếp tuyến Nếu tiếp tuyến và tiếp tuyến được vẽ từ một điểm chung bên ngoài vòng tròn (và các phân đoạn được gắn nhãn như hình ảnh bên trái), thì a2 = b (b + c). Điều này có nghĩa là sản phẩm của phân khúc bên ngoài của secant và toàn bộ bằng với bình phương của phân khúc tiếp tuyến. 
-
----
-
-### Định lý của Thales 
-
-Chứng minh sử dụng tam giác cân 
-
-Kết hợp tất cả các hình học Euclide 
-
-{.todo} LÀM 
+TODO
 
 ---
 
@@ -947,15 +898,7 @@ Kết hợp tất cả các hình học Euclide
 > sectionStatus: dev
 > section: cyclic-polygons
 
-__[CC] Xây dựng một hình tam giác đều, hình vuông và hình lục giác đều được ghi trong một hình tròn.__ 
-
-Một đa giác được ghi là một đa giác trong đó mọi đỉnh nằm trên một vòng tròn. Lưu ý rằng không phải mọi hình tứ giác hoặc đa giác đều có thể được ghi trong một vòng tròn. Các tứ giác được đăng ký cũng được gọi là tứ giác tuần hoàn. Đối với các loại hình tứ giác này, chúng phải có một thuộc tính đặc biệt. Chúng tôi sẽ điều tra nó ở đây. 
-
-Điều tra này cho thấy các góc đối diện trong một hình tứ giác được ghi là bổ sung. Bằng cách cắt tứ giác làm đôi, qua đường chéo, chúng tôi có thể chỉ ra rằng hai góc còn lại (mà chúng tôi không cắt qua) tạo thành một cặp tuyến tính khi khớp với nhau. 
-
-Định lý tứ giác đã đăng ký: Một tứ giác được ghi trong một vòng tròn khi và chỉ khi các góc đối diện là bổ sung. 
-
-https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -963,6 +906,7 @@ https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 Trong các phần trước, chúng tôi đã nghiên cứu các thuộc tính của các vòng tròn trên một bề mặt phẳng. Nhưng thế giới của chúng ta thực sự là ba chiều, vì vậy hãy xem xét một số chất rắn 3D dựa trên các vòng tròn: 
 
@@ -1535,6 +1479,7 @@ Tìm một công thức cho diện tích bề mặt của một hình cầu là 
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 Vòng tròn là một trong bốn hình dạng khác nhau có thể được tạo ra bằng cách sử dụng các lát cắt của Google thông qua một [hình nón](gloss:cone) . Điều này có thể được chứng minh bằng cách sử dụng hình nón ánh sáng của một ngọn đuốc: 
 

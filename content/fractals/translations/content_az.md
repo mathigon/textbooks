@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Təbiətə baxarkən, bu kimi mürəkkəb bitkiləri görmüş ola bilərsiniz: 
 
@@ -475,6 +476,7 @@ Rəqəmsal şəkilləri sıxışdırmaq, fayl ölçüsünü azaltmaq üçün bu 
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -658,6 +660,7 @@ Sierpinski üçbucağının bir çox variantı və oxşar xüsusiyyətləri və 
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Əvvəlki fəsillərdə gördüyümüz bütün fraksiyalar __iterasiya__ prosesi istifadə edərək yaradıldı: müəyyən bir __naxışla__ başlayırsınız və sonra təkrar-təkrar təkrarlayırsınız. 
 

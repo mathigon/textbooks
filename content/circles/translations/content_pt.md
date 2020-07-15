@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -329,6 +330,7 @@ Existe até um _dia Pi_ a cada ano, que cai em 14 de março, porque `pi ≈ 3.14
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Até agora em geometria, sempre medimos ângulos em [graus](gloss:degrees). Uma rotação do __{.m-red} círculo completo__ é [[360]]°, um meio-círculo __{.m-green}__ é [[180]]°, um __{.m-yellow} quarto de círculo__ é [[90]]° e assim por diante.
 
@@ -569,6 +571,7 @@ O uso de radianos tem uma vantagem particularmente interessante ao usar a funç�
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 Nas seções anteriores, você aprendeu os nomes dados a várias partes diferentes de um círculo - como centro, raio, diâmetro e circunferência. No entanto, existem muitos elementos geométricos relacionados a um círculo, dos quais precisamos resolver problemas mais complexos:
 
@@ -892,6 +895,7 @@ Foi uma dessas medidas incorretas que levou Cristóvão Colombo a navegar para o
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 Nas seções anteriores, estudamos as propriedades dos círculos em uma superfície plana. Mas nosso mundo é realmente tridimensional, então vamos dar uma olhada em alguns sólidos 3D baseados em círculos:
 
@@ -1469,6 +1473,7 @@ Para encontrar a área da superfície de uma esfera, podemos mais uma vez aproxi
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 O círculo é uma das quatro formas diferentes que podem ser criadas usando “fatias” através de um [cone](gloss:cone). Isso pode ser demonstrado usando o cone de luz de uma tocha:
 

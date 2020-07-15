@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 环顾大自然时，您可能已经注意到像这样的复杂植物：
 
@@ -490,6 +491,7 @@
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -682,6 +684,7 @@ Sierpinski三角形有许多变体，并且其他分形具有相似的特性和�
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 我们在前几章中看到的所有分形都是使用__迭代__的过程创建的：首先从特定的模式开始，然后一遍又一遍地重复。
 

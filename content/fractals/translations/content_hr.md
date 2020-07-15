@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Gledajući prirodu, možda ste primijetili zamršene biljke poput ovih:
 
@@ -495,6 +496,7 @@ A čak i možemo obrnuti ovaj postupak za komprimiranje digitalnih slika, kako b
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -687,6 +689,7 @@ Postoje mnoge varijante Sierpinskog trokuta i drugih fraktala sa sličnim svojst
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Svi fraktali koje smo vidjeli u prethodnim poglavljima stvoreni su postupkom __iteracije__: započinjete s određenim uzorkom, a zatim ga ponavljate iznova i iznova.
 

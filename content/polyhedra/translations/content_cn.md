@@ -4,6 +4,7 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
 [__多边形__](gloss:polygon)是仅具有直边的封闭，扁平形状。多边形可以具有任意数量的边和角度，但是边不能弯曲。以下哪个形状是多边形？ 
 
@@ -260,6 +261,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
 在[先前的课程中，](/course/triangles)我们研究了三角形的许多不同属性。现在让我们看一下四边形。 
 
@@ -819,6 +821,7 @@ _风筝_这个名字显然来自其形状：看起来就像您可以在空中飞
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
 [多边形](gloss:polygon)在自然界中无处不在。如果要平铺较大的区域，它们特别有用，因为可以将多边形组合在一起而没有任何间隙或重叠。像这样的模式称为[__镶嵌__](gloss:tessellation) 。 
 
@@ -1212,6 +1215,7 @@ Tessellations是许多艺术家，建筑师和设计师（最著名的是荷兰�
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 到目前为止，我们仅研究了在平面二维世界中使用多边形可以做什么。 [__多面体__](gloss:polyhedron)是由多边形组成的三维对象。这里有些例子： 
 
@@ -1263,15 +1267,7 @@ __欧拉多面体公式__
 > section: nets-cross-sections
 > sectionStatus: dev
 
-我们的整个世界都是三维的-但是绘制或可视化平面的二维对象通常要容易得多。还有几种不同的方法可以以二维方式查看三维多面体。 
-
-这些网中的哪一个使立方体匹配该网与对象https://github.com/polymake/matchthenet绘制网
-
-描述由平面和实体的相交形成的横截面。 
-
-横截面是平面与实体的交点。在二维平面中表示三维图形的另一种方法是使用网络。网是三维形状侧面的展开的扁平表示。 
-
-旋转立方体以形成六角形横截面
+TODO
 
 ---
 
@@ -1297,6 +1293,7 @@ __欧拉多面体公式__
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 在本课程开始时，我们将[规则多边形](gloss:regular-polygon)定义为特别是“对称”多边形，其中所有边和角度都相同。我们可以为多面体做类似的事情。 
 

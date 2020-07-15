@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -325,6 +326,7 @@ C'è anche un _giorno Pi_ ogni anno, che cade il 14 marzo, perché `pi ≈ 3.14`
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Finora in geometria, abbiamo sempre misurato gli angoli in [gradi](gloss:degrees) . UN __{.m-red} la__ rotazione del __cerchio completo__ è di [[360]]°, a __{.m-green} il semicerchio__ è di [[180]]°, a __{.m-yellow} il quarto di cerchio__ è di [[90]]° e così via. 
 
@@ -573,6 +575,7 @@ L'uso dei radianti ha un vantaggio particolarmente interessante quando si utiliz
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 Nelle sezioni precedenti, hai appreso i nomi dati a diverse parti di un cerchio - come centro, raggio, diametro e circonferenza. Tuttavia, ci sono molti elementi geometrici correlati a un cerchio, che dovremo risolvere problemi più complessi: 
 
@@ -886,59 +889,7 @@ Fu una di queste misurazioni errate che spinse Cristoforo Colombo a navigare ver
 > section: circle-theorems
 > sectionStatus: dev
 
-https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
-
-__[CC] Identifica e descrivi le relazioni tra angoli, raggi e accordi inscritti. Includi la relazione tra angoli centrali, inscritti e circoscritti; gli angoli incisi su un diametro sono angoli retti; il raggio di un cerchio è perpendicolare alla tangente in cui il raggio interseca il cerchio.__ 
-
-Un angolo inscritto è un angolo con il suo vertice è il cerchio e i suoi lati contengono accordi. L'arco intercettato è l'arco che si trova all'interno dell'angolo inscritto e i cui punti finali si trovano sull'angolo. Il vertice di un angolo inscritto può essere in qualsiasi punto del cerchio, purché i suoi lati si intersecino con il cerchio per formare un arco intercettato. 
-
-__Teorema dell'angolo inscritto__ La misura di un angolo inscritto è metà della misura del suo arco intercettato. Per provare il Teorema dell'angolo inscritto, dovresti dividerlo in tre casi, come i tre diversi angoli disegnati dall'Investigazione. 
-
-__Teorema dell'angolo inscritto congruente Gli__ angoli inscritti che intercettano lo stesso arco sono congruenti. 
-
-__Teorema del semicerchio con angolo inscritto__ Un angolo che intercetta un semicerchio è un angolo retto. 
-
-Nel teorema del semicerchio dell'angolo inscritto potremmo anche dire che l'angolo è inscritto in un semicerchio. Ogni volta che un angolo retto è inscritto in un cerchio, i punti finali dell'angolo sono i punti finali di un diametro. Pertanto, è vero anche il contrario del teorema del semicerchio d'angolo inscritto. 
-
-Quando un angolo si trova su un cerchio, il vertice si trova sulla circonferenza del cerchio. Un tipo di angolo su un cerchio è quello formato da una tangente e un accordo. 
-
-__Teorema__ di un __accordo / angolo tangente__ La misura di un angolo formato da un accordo e una tangente che si intersecano sul cerchio è metà della misura dell'arco intercettato. 
-
-Dal teorema di accordo / angolo tangente, ora sappiamo che ci sono due tipi di angoli che sono la metà della misura dell'arco intercettato; un angolo inscritto e un angolo formato da un accordo e una tangente. Pertanto, qualsiasi angolo con il suo vertice su un cerchio sarà la metà della misura dell'arco intercettato. 
-
-Un angolo viene considerato all'interno di un cerchio quando il vertice si trova da qualche parte all'interno del cerchio, ma non al centro. Tutti gli angoli all'interno di un cerchio sono formati da due accordi intersecanti. 
-
-__Teorema dell'angolo di intersezione degli accordi__ La misura dell'angolo formato da due accordi che si intersecano all'interno di un cerchio è la media della misura degli archi intercettati. 
-
-Un angolo è considerato esterno a un cerchio se il vertice dell'angolo è esterno al cerchio e i lati sono tangenti o secanti. Esistono tre tipi di angoli esterni a un cerchio: un angolo formato da due tangenti, un angolo formato da una tangente e una secante e un angolo formato da due secanti. Proprio come un angolo all'interno o su un cerchio, un angolo esterno a un cerchio ha una formula specifica, che coinvolge gli archi intercettati. 
-
-__Teorema dell'angolo esterno__ La misura di un angolo formato da due secanti, due tangenti o una secante e una tangente disegnata da un punto esterno al cerchio è uguale alla metà della differenza delle misure degli archi intercettati. 
-
-Quando due accordi si intersecano all'interno di un cerchio, i due triangoli che creano sono simili, rendendo i lati di ciascun triangolo proporzionati l'uno all'altro. Se rimuoviamo AD e BC i rapporti tra AE, EC, DE ed EB saranno sempre gli stessi. 
-
-__Teorema di__ accordi intersecanti Se due accordi si intersecano all'interno di un cerchio in modo tale che uno sia diviso in segmenti di lunghezza aeb, l'altro in segmenti di lunghezza ce d, quindi ab = cd. In altre parole, il prodotto dei segmenti di un accordo è uguale al prodotto dei segmenti del secondo accordo. 
-
-Oltre a formare un angolo al di fuori di un cerchio, il cerchio può dividere le secanti in segmenti che sono proporzionali tra loro. 
-
-Se disegniamo gli accordi che si intersecano, avremo due triangoli simili. 
-
-Dagli angoli inscritti e dalla Proprietà riflessiva (∠R≅∠R), △ PRS∼ △ TRQ. Poiché i due triangoli sono simili, possiamo impostare una proporzione tra i lati corrispondenti. Quindi, moltiplicare in modo incrociato. ac + d = ca + b⇒a (a + b) = c (c + d) 
-
-__Teorema dei segmenti di__ due secanti Se due secanti sono disegnati da un punto comune fuori da un cerchio e i segmenti sono etichettati come sopra, allora a (a + b) = c (c + d). In altre parole, il prodotto del segmento esterno e l'intero di una secante è uguale al prodotto del segmento esterno e l'intero altro secante. 
-
-Se una tangente e una secante si incontrano in un punto comune all'esterno di un cerchio, i segmenti creati hanno una relazione simile a quella di due raggi secanti. Ricordiamo che il prodotto della porzione esterna di una secante e il tutto è uguale alla stessa dell'altra secante. Se uno di questi segmenti è una tangente, sarà comunque il prodotto della porzione esterna e del tutto. Tuttavia, per una linea tangente, la parte esterna e il tutto sono uguali. 
-
-__Teorema del segmento del__ secante tangente Se una tangente e un secante sono disegnati da un punto comune fuori dal cerchio (e i segmenti sono etichettati come l'immagine a sinistra), allora a2 = b (b + c). Ciò significa che il prodotto del segmento esterno della secante e il tutto è uguale al quadrato del segmento tangente. 
-
----
-
-### Teorema di Thales 
-
-Prova usando i triangoli isosceli 
-
-Combina tutta la geometria euclidea 
-
-{.todo} FARE 
+TODO
 
 ---
 
@@ -947,15 +898,7 @@ Combina tutta la geometria euclidea
 > sectionStatus: dev
 > section: cyclic-polygons
 
-__[CC] Costruisci un triangolo equilatero, un quadrato e un esagono regolare inscritto in un cerchio.__ 
-
-Un poligono inscritto è un poligono in cui ogni vertice si trova su un cerchio. Nota che non tutti i quadrilateri o poligoni possono essere inscritti in un cerchio. I quadrilateri inscritti sono anche chiamati quadrilateri ciclici. Per questi tipi di quadrilateri, devono avere una proprietà speciale. Lo esamineremo qui. 
-
-Questa indagine mostra che gli angoli opposti in un quadrilatero inscritto sono supplementari. Tagliando il quadrilatero a metà, attraverso la diagonale, siamo stati in grado di mostrare che gli altri due angoli (che non abbiamo tagliato) formavano una coppia lineare quando accoppiati. 
-
-Teorema quadrilatero inscritto: un quadrilatero è inscritto in un cerchio se e solo se gli angoli opposti sono supplementari. 
-
-https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -963,6 +906,7 @@ https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 Nelle sezioni precedenti, abbiamo studiato le proprietà dei cerchi su una superficie piana. Ma il nostro mondo è in realtà tridimensionale, quindi diamo un'occhiata ad alcuni solidi 3D basati su cerchi: 
 
@@ -1535,6 +1479,7 @@ Per trovare la superficie di una sfera, possiamo ancora una volta approssimarla 
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 Il cerchio è una delle quattro diverse forme che possono essere create usando "sezioni" attraverso un [cono](gloss:cone) . Questo può essere dimostrato usando il cono di luce di una torcia: 
 

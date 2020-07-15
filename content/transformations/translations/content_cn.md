@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 数学家“发明”了许多几何概念，例如[直线](gloss:line)或[多边形](gloss:polygon) 。另一方面，对称性在我们周围无处不在。几乎所有的植物，动物，甚至我们人类都是对称的。 
 
@@ -78,6 +79,7 @@ _{button.next-step}继续_
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 [__刚性变换__](gloss:rigid-transformation)是一种特殊的变换，它不会更改图形的大小或形状。我们可以想象它是由木材或金属之类的固体材料制成的：我们可以移动，旋转或翻转它，但不能拉伸，弯曲或使其变形。 
 
@@ -446,35 +448,7 @@ _{button.next-step}继续_
 > section: congruence
 > sectionStatus: dev
 
-去做
-
----
-
-### 转换的组成
-
-当然，我们可以结合多个平移，反射和旋转来创建更复杂的变换。 
-
-{.todo} TODO示例
-
-但是，事实证明，组合多少个不同的转换并不重要：您总能找到一次完成相同转换的另一个转换！ 
-
-{.todo} TODO变换组成计算器
-
-结合两个反射特别有趣。我们需要考虑两种不同的情况： 
-
-::: column.grow
-
-如果两条反射线平行，则结果是一次平移。平移的方向垂直于反射线，并且该距离是反射线之间的距离的两倍。 
-
-{.todo} TODO动画
-
-::: column.grow
-
-如果两条反射线相交，则结果是旋转一圈。旋转中心是反射线之间的交点，并且角度是反射线之间的角度的两倍。 
-
-{.todo} TODO动画
-
-:::
+TODO
 
 ---
 
@@ -483,6 +457,7 @@ _{button.next-step}继续_
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__对称性__](gloss:symmetry)无处不在，这是一个直观的概念：对象的不同部分在某种程度上看起来_是相同的_ 。但是使用变换，我们可以对对称_真正的_含义给出更精确的数学定义： 
 
@@ -739,6 +714,7 @@ _{button.next-step}继续_
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
 有些形状具有多个对称性-让我们以一个简单的例子来看一下[正方形](gloss:square) 。 
 
@@ -1096,6 +1072,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 到目前为止，我们所看到的所有对称在某种意义上都是_视觉_上的：可见的形状，图像或图案。实际上，对称可以是一个更广泛的概念： _对变化的免疫力_ 。 
 
@@ -1147,6 +1124,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 到目前为止，我们只是研究了[[刚性|全等|视觉]]转换。 _{span.reveal(when="blank-0")}现在让我们考虑一个不是这样的问题： [__膨胀__](gloss:dilation)会通过增大或减小形状来改变形状的大小。_ 
 
@@ -1193,169 +1171,4 @@ Perpendicular glide reflections, rotations of order 2, translations
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
-对于刚性变换，图像始终是[[一致的|大一点|小于]]原始[[尺寸]] -但这[[不再|仍然]]适用于扩张。相反，我们说两个形状[__相似__](gloss:similar) 。它们具有相同的总体形状，但不一定具有相同的大小。 
-
-相似的符号是`∼` （类似于全等符号， `≅` ）。在这个例子中，我们将写`A ∼ A'` 。 
-
-::: column(width=240)
-
-{.todo}即将推出–插图
-
-:::
-
----
-> id: perspective
-
-### 透视图
-
-您可能已经注意到，这些带有连接光线的膨胀几乎看起来像__透视图__ 。膨胀的中心称为__消失点__ ，因为它看起来像一切都在“消失”的地方。 
-
-在下图中找到消失点： 
-
-{.todo}即将推出–互动式
-
-现在，您可以绘制另一幢与现有房屋匹配的房屋吗？ 
-
----
-> id: similar-polygons
-
-### 相似多边形
-
-相似性可以告诉我们很多有关形状的信息。例如， [圆形](gloss:circle) ， [正方形](gloss:square)和[等边三角形](gloss:equilateral-triangle) [[总是|有时|从未]]相似。它们的大小可能不同，但总体形状始终相同。 
-
-::: column.grow
-
-右边的两个四边形相似。我们的第一个重要观察结果是，在相似的多边形中，所有匹配的角度对都是[全等的](gloss:congruent-angles) 。这意味着
-
-{.text-center} [_{.m-red} ∡ABC≅_ _{.m-red} 'A'B'C'_](target:a) _{.space}_ [_{.m-blue} ∡BCD≅_ _{.m-blue} ∡B'C'D'_](target:b)  
-[_{.m-green} ∡CDE≅_ _{.m-green} ∡C'D'E'_](target:c) _{.space}_ [_{.m-yellow} ∡DEA≅_ _{.m-yellow} ∡D'E'A'_](target:d) 
-
-第二个重要事实是，在相似的多边形中，所有侧面均按相应扩张的比例因子按__比例__缩放。如果比例因子是${k}{k|1.5|0.5,2,0.1} ， 然后
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
-相反，我们可以重新排列这些等式并完全消除比例因子： 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-我们可以用它来解决涉及相似多边形的现实生活中的问题-例如，如果我们知道其他一些面，则可以找到缺失面的长度。在以下部分中，您将看到一些示例。 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### 相似三角形
-
-三角形的相似性概念特别有效。我们已经知道相似多边形中相应的内角相等。 
-
-对于三角形，情况也相反：这意味着，如果两个三角形具有相同的三个角度大小，则这些三角形必须相似。 
-
-而且变得更好！我们知道，三角形的内角总和为[[180]]°。这意味着，如果我们知道一个三角形中有两个角度，则总是可以计算出第三个角度。 
-
-为了相似，这意味着我们还只需要检查_两个角度_即可确定三角形是否相似。如果两个三角形具有相同大小的两个角度，则第三个角度在两个角度上也必须相同。 
-
-此结果有时称为三角形的[__AA相似性条件__](gloss:triangle-aa) 。 （两个_As_代表我们比较的两个_角度_ 。） 
-
-::: .theorem
-
-如果一个三角形中的两个角度与另一个三角形中的两个角度一致，则两个三角形相似。 
-
-:::
-
----
-> id: similar-triangles-1
-
-让我们看一些有用的示例： 
-
-::: column(width=320)
-
-{.todo}即将推出-动画
-
-::: column.grow
-
-在这里，您可以看到大型灯塔的图像。您想和一个朋友一起测量灯塔的高度，但是很遗憾，我们无法爬到顶部。 
-
-事实证明，该图非常隐蔽地包含两个相似的三角形：一个是由灯塔及其阴影构成的，另一个是由您的朋友及其阴影构成的。 
-
-两个三角形的底部都有一个直角。太阳光线是平行的，这意味着底部的其他两个角度是对应的角度，并且也相等。根据三角形的AA条件，这两个必须相似。 
-
-我们可以轻松测量阴影的长度，我们也知道您朋友的身高。现在，我们可以使用相似三角形中边的比例来找到灯塔的高度： 
-
-{.todo}即将推出-方程式
-
-因此，灯塔高1.5m。 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo}即将推出-动画
-
-::: column.grow
-
-我们可以使用相同的技术来测量地面上的距离。在这里我们想找到一条大河的宽度。河的一侧有一棵大树，我有一根长一米的木棍。 
-
-尝试在此图中绘制另外两个相似的三角形。 
-
-您可以在河边标记点，该点直接位于从木棍末端到树的视线上。然后，我们可以测量到木棍的距离，以及到树正对点的距离。 
-
-同样，由于AA条件，这两个三角形相似。它们都成直角，并且成对成对角。 
-
-根据比例规则，这意味着
-
-{.todo}即将推出-方程式
-
-因此，河的宽度为45米。 
-
-:::
-
----
-
-### 射线相似
-
-定理：如果光线将三角形的二等分，则它将相对的一面分为与其他两边的长度成比例的线段。 
-
-我们可以将该定理扩展到三角形之外的情况，在三角形之外我们有多个由横切线平行的线。 
-
-定理：如果三个或更多平行线被两个横向切开，则它们按比例划分横向。 
-
-考虑一个三角形的中段。中段平行于三角形的一侧，并将另一侧分成相等的两半。中段将这两个侧面成比例地分配。 
-
-三角形比例定理：如果一条平行于三角形一侧的线与另一侧相交，则它按比例划分这些侧。 
-
-三角形比例定理相反：如果一条线按比例划分三角形的两个边，则它平行于第三边。 
-
----
-
-### 自我相似
-
-有一些奇怪的数学形状类似于_自己的_一小部分。 __Sierpinksi三角形__就是一个例子：整个三角形与它所组成的任何较小三角形相似。您可以放大并无限增加许多越来越小的三角形。 
-
-具有此属性的形状称为__分形__ 。它们具有一些令人惊讶且真正的XXX属性，您将来会了解更多。 
-
----
-
-三角形不仅对测量距离有用。在下一课程中，我们将学习有关三角形及其属性的更多信息。
+TODO

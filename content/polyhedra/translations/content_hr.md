@@ -4,6 +4,7 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
 [__Poligon__](gloss:polygon) je zatvorenog, ravnog oblika koji ima samo ravne strane. Poligoni mogu imati bilo koji broj strana i kutova, ali strane ne mogu biti zakrivljene. Koji od oblika ispod su poligoni? 
 
@@ -260,6 +261,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
 U [prethodnom tečaju](/course/triangles) istraživali smo mnoga različita svojstva trokuta. Sada pogledajmo četverostrane. 
 
@@ -819,6 +821,7 @@ Površina ovog pravokutnika je [[dva puta | isto kao | tri puta]] veće površin
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
 [Poligoni se](gloss:polygon) pojavljuju svuda u prirodi. Posebno su korisni ako želite obložiti veliku površinu, jer možete polirati poligone zajedno bez praznina ili preklapanja. Takvi se obrasci nazivaju [__tessellations__](gloss:tessellation) . 
 
@@ -1212,6 +1215,7 @@ Penrose je istraživao tesselacije isključivo radi zabave, ali ispada da unutar
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 Do sada smo samo pogledali što s poligonima možemo učiniti u ravnom, dvodimenzionalnom svijetu. [__Poliedron__](gloss:polyhedron) je trodimenzionalni objekt sastavljen od poligona. Evo nekoliko primjera: 
 
@@ -1263,15 +1267,7 @@ Ako isprobate različite poliedre, poput onih gore, otkrit ćete da Eulerova for
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Čitav naš svijet je trodimenzionalan - ali često je puno lakše crtati ili vizualizirati ravne dvodimenzionalne predmete. A postoji nekoliko različitih načina gledanja trodimenzionalnih poliedra na dvodimenzionalni način. 
-
- Koja od ovih mreža čini kocku Uskladite mrežu s objektom https://github.com/polymake/matchthenet Crtanje mreže 
-
-Opišite presjek koji nastaje sjecištem ravnine i krute tvari. 
-
-Presjek je sjecište ravnine s krutinom. Drugi način predstavljanja trodimenzionalne figure u dvodimenzionalnoj ravnini je upotreba mreže. Mreža je rašireni, ravni prikaz strana trodimenzionalnog oblika. 
-
-zakrenite kocku kako biste napravili šesterokutni presjek 
+TODO
 
 ---
 
@@ -1297,6 +1293,7 @@ NAPRAVITI
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 Na početku ovog tečaja definirali smo [pravilne poligone](gloss:regular-polygon) kao posebno „simetrične“ poligone, pri čemu su sve strane i kutovi jednaki. Za poliedre možemo učiniti nešto slično. 
 

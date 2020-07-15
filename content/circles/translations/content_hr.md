@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -328,6 +329,7 @@ Postoji čak i _Pi dan_ svake godine, koji ili pada 14. ožujka, jer `pi ≈ 3.1
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Do sada smo u geometriji uvijek mjerili kutove u [stupnjevima](gloss:degrees). __{.m-red} puni krug__ rotacija je [[360]] °, __{.m-green} polovina kruga__ je [[180]] °, __{.m-yellow} četvrtina kruga__ je [[90]] °, i tako dalje.
 
@@ -568,6 +570,7 @@ Korištenje radijana ima jednu posebno zanimljivu prednost kod korištenja funkc
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 U prethodnim smo odjeljcima naučili nazive dane nekoliko različitih dijelova kruga - poput središta, polumjera, promjera i obima. Međutim, postoji mnogo geometrijskih elemenata koji se odnose na krug i trebamo ih riješiti složenije probleme:
 
@@ -870,59 +873,7 @@ Jedno je od tih netočnih mjerenja natjeralo Kristofora Kolumba da zaplovi zapad
 > section: circle-theorems
 > sectionStatus: dev
 
-https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html
-
-__[CC] Identificirati i opisati odnose između upisanih kutova, radijusa i akorda. Uključi odnos između središnjih, upisanih i ograničenih kutova; upisani uglovi na promjeru su pravi kutovi; polumjer kruga je okomit na tangentu gdje polumjer presijeca krug.__
-
-Upisani kut je kut, a njegov vrh je kružnica, a stranice sadrže akorde. Presječeni luk je luk koji se nalazi na unutrašnjosti upisanog kuta i čije su krajnje točke na kutu. Vrhovi upisanog kuta mogu biti bilo gdje na krugu sve dok njegove strane presijecaju krug i tvore presrećeni luk.
-
-__Teorema upisanog kuta__ Mjera upisanog kuta je polovina mjere njegovog presijecanog luka. Da biste dokazali teoremu upisanog kuta, trebate je podijeliti u tri slučaja, poput tri različita kuta izvučena iz istrage.
-
-__Teorem kutova s upisanim kongruentom__ Upisani kutovi koji presijecaju isti luk su sukladni.
-
-__Teorem upisanog kutnog polukruga__ Kut koji presijeca polukrug pravi je kut.
-
-U teoremi upisanih kutova polukruga možemo reći i da je kut upisan u polukrug. Kad god je pravi kut upisan u krug, krajnje točke kuta su krajnje točke promjera. Stoga je i obratna teorema upisanog kutnog polukruga.
-
-Kad je kut na kružnici, vrh je na obodu kruga. Jedna vrsta kuta na kružnici je ona koja je tangenta i akord.
-
-__Teorema uglova / tangencijalnog kuta__ Mjera kuta formiranog akordom i tangente koja se presijeca na krug je polovica mjere presijecanog luka.
-
-Iz teoreme akordnog / tangencijalnog kuta sada znamo da postoje dvije vrste kutova koji su polovina mjere presretnutog luka; upisani kut i kut formiran akordom i tangentom. Stoga će svaki kut s njegovom vrhom na kružnici biti polovica mjere presretnutog luka.
-
-Ugao se smatra kutom unutar kruga kada je vršica negdje unutar kruga, ali ne i u središtu. Svi kutovi unutar kruga formirani su od dva presjekajuća akorda.
-
-__Teorema kuta koji se presijeca__ Mjera kuta formirana od dva akorda koja se presijecaju unutar kruga prosjek je mjere presječenih lukova.
-
-Smatra se da je kut izvan kruga ako je vrh kuta izvan kružnice, a stranice su tangente ili sekunde. Postoje tri vrste kutova koji su izvan kruga: kut formiran od dvije tangente, kut formiran tangencijom i sekantom i kut formiran od dva sekanta. Baš kao kut unutar ili u krugu, i kut izvan kruga ima određenu formulu, koja uključuje presrećene lukove.
-
-__Teorem izvan kuta__ Mjera kuta formiranog od dvije sekunde, dvije tangente ili sekunde i tangente izvučene iz točke izvan kruga jednaka je polovini razlike mjere presječenih lukova.
-
-Kad se dva akorda presijecaju unutar kruga, dva trokuta koja stvaraju su slična, čineći stranice svakog trokuta proporcionalno jedna drugoj. Ako uklonimo AD i BC, omjeri između AE, EC, DE i EB i dalje će biti isti.
-
-__Teorem presijecanja akorda__ Ako se dva akorda presijecaju unutar kruga tako da je jedan podijeljen u segmente duljine a i b, a drugi na segmente duljine c i d, onda je ab = cd. Drugim riječima, produkt segmenata jednog akorda jednak je proizvodu segmenata drugog akorda.
-
-Osim što tvori kut izvan kruga, krug može podijeliti sekance na segmente koji su proporcionalni jedni drugima.
-
-Ako nacrtamo u isprekidajućim akordima, imat ćemo dva slična trokuta.
-
-Iz upisanih uglova i refleksivnog svojstva (∠R≅∠R), △ PRS∼ △ TRQ. Budući da su dva trokuta slična, možemo postaviti proporciju između odgovarajućih strana. Zatim, umnožite se. ac + d = ca + b⇒a (a + b) c = (c + d)
-
-__Teorem segmenata s dvije tajne__ Ako su dva segmenta izvučena iz zajedničke točke izvan kruga i segmenti su označeni kao gore, tada je a (a + b) = c (c + d). Drugim riječima, produkt vanjskog segmenta i cijelog jednog sekanta jednak je proizvodu vanjskog segmenta i cijelog drugog sekanta.
-
-Ako se dodirna i seantna sastaju u zajedničkoj točki izvan kruga, stvoreni segmenti imaju sličan odnos kao s dvjema sekantnim zracima. Podsjetimo da je produkt vanjskog dijela sekunde i cjeline jednak proizvodu drugog sekanta. Ako je jedan od tih segmenata tangenta, on će i dalje biti proizvod vanjskog dijela i cjeline. Međutim, za tangencijalnu liniju, vanjski dio i cjelina su jednaki.
-
-__Teorema tajnog segmenta segmenta__ Ako se tangenta i sekant crtaju iz zajedničke točke izvan kruga (a segmenti su označeni kao slika s lijeve strane), tada je a2 = b (b + c). To znači da je produkt vanjskog segmenta sekante i cjeline jednak kvadratu tangenta.
-
----
-
-### Thales & # 39; Teorema
-
-Dokaz korištenjem isosceles trokuta
-
-Kombinira svu euklidsku geometriju
-
-{.todo} TODO
+TODO
 
 ---
 
@@ -931,15 +882,7 @@ Kombinira svu euklidsku geometriju
 > sectionStatus: dev
 > section: cyclic-polygons
 
-__[CC] Konstruirajte jednakostranični trokut, kvadrat i pravilni šesterokut upisan u krug.__
-
-Upisani poligon je poligon gdje je svaki vrh na krugu. Imajte na umu da nije svaki četverokut ili poligon može biti upisan u krug. Upisani četverostrani također se nazivaju ciklički četverostrani. Za ove vrste četverostrana moraju imati jedno posebno svojstvo. Ovdje ćemo istražiti.
-
-Ovo istraživanje pokazuje da su suprotni kutovi u upisanom četverostraniku dodatni. Izreživši četverostranik na pola, dijagonalom, uspjeli smo pokazati da ostala dva kuta (koja nismo prorezali) tvore linearni par kada se podudaraju.
-
-Napisani četverokutni teorem: Četverokut je upisan u krug ako i samo ako su suprotni kutovi dopunski.
-
-https://www.youtube.com/watch?v=bJOuzqu3MUQ
+TODO
 
 ---
 
@@ -947,6 +890,7 @@ https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 U prethodnim smo odjeljcima proučavali svojstva kružnica na ravnoj površini. No, naš je svijet zapravo trodimenzionalan, pa pogledajmo neke 3D čvrste sastojke koji se temelje na krugovima:
 
@@ -1510,6 +1454,7 @@ Da bismo pronašli površinu neke kugle, još jednom je možemo približiti drug
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 Krug je jedan od četiri različita oblika koji se mogu stvoriti pomoću kriški kroz [konus](gloss:cone). To se može pokazati svjetlošću konusa baklje:
 

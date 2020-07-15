@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -325,6 +326,7 @@ Fins i tot hi ha un _dia de pi_ cada any, que o bé cau el 14 de març, perquè 
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Fins ara, en geometria, sempre hem mesurat angles en [graus](gloss:degrees) . A __{.m-red} la__ rotació __completa del cercle__ és de [[360]] º, a __{.m-green} el mig cercle__ és de [[180]] º, a __{.m-yellow} quart de cercle__ és de [[90]]°, etc. 
 
@@ -573,6 +575,7 @@ L’ús de radians té un avantatge especialment interessant quan s’utilitza l
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 A les seccions anteriors, heu après els noms donats a diverses parts diferents d’un cercle, com ara el centre, el radi, el diàmetre i la circumferència. Tot i així, hi ha molts elements geomètrics relacionats amb un cercle, que haurem de resoldre problemes més complexos: 
 
@@ -884,59 +887,7 @@ Va ser una d’aquestes mesures incorrectes que va impulsar a Cristòfor Colom a
 > section: circle-theorems
 > sectionStatus: dev
 
-https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / professor_modules / Cercle_Geometria.html 
-
-__[CC] Identificar i descriure relacions entre angles, radis i acords inscrits. Incloure la relació entre angles centrals, inscrits i circumscrits; els angles inscrits en un diàmetre són angles rectes; el radi d’un cercle és perpendicular a la tangent on el radi s’entrecreu amb el cercle.__ 
-
-Un angle inscrit és un angle amb el seu vèrtex és el cercle i els seus costats contenen acords. L’arc interceptat és l’arc que es troba a l’interior de l’angle inscrit i els extrems del qual es troben a l’angle. El vèrtex d'un angle inscrit es pot trobar en qualsevol part del cercle sempre que els seus costats creuin el cercle per formar un arc interceptat. 
-
-__Teorema__ d’angle inscrit La mesura d’un angle inscrit és la meitat de la seva arc interceptat. Per provar el teorema d’angle inscrit, haureu de dividir-lo en tres casos, com els tres angles diferents obtinguts de la investigació. 
-
-__Teorema d’angle inscrit congruent Els__ angles inscrits que intercepten el mateix arc són congruents. 
-
-__Angle inscrit Teorema del semicercle__ Un angle que intercepta un semicercle és un angle recte. 
-
-Al teorema del semicercle d’angle inscrit també podríem dir que l’angle està inscrit en un semicercle. Cada vegada que un angle recte s'inscriu en un cercle, els extrems de l'angle són els extrems d'un diàmetre. Per tant, el convers del teorema del semicercle de l'angle inscrit també és cert. 
-
-Quan un angle es troba en un cercle, el vèrtex es troba en la circumferència del cercle. Un tipus d'angle sobre un cercle és el format per una tangent i un acord. 
-
-__Teorema d’angle d’acord / tangència__ La mesura d’un angle format per un acord i una tangent que s’entrecreuen en el cercle és la meitat de la mesura de l’arc interceptat. 
-
-Des del teorema de l’acord i l’angle tangible, ara sabem que hi ha dos tipus d’angles que són la meitat de la mesura de l’arc interceptat; un angle inscrit i un angle format per un acord i una tangent. Per tant, qualsevol angle amb el seu vèrtex sobre un cercle serà la meitat de la mesura de l’arc interceptat. 
-
-Es considera un angle dins d’un cercle quan el vèrtex es troba en algun lloc dins del cercle, però no al centre. Tots els angles dins d’un cercle estan formats per dos acords que s’entrecreuen. 
-
-__Teorema__ de l'angle entre els acords intersectorials La mesura de l'angle format per dos acords que s'entrecreuen dins d'un cercle és la mitjana de la mesura dels arcs interceptats. 
-
-Es considera que un angle està fora d'un cercle si el vèrtex de l'angle es troba fora del cercle i els costats són tangents o secants. Hi ha tres tipus d’angles que es troben fora d’un cercle: un angle format per dues tangents, un angle format per una tangent i un secant i un angle format per dos secants. Igual que un angle dins o sobre un cercle, un angle fora d’un cercle té una fórmula específica, que inclou els arcs interceptats. 
-
-__Teorema de l’angle exterior__ La mesura d’un angle format per dos secants, dues tangents o una secant i una tangent extreta des d’un punt fora del cercle és igual a la meitat de la diferència de les mesures dels arcs interceptats. 
-
-Quan dos acords s'entrecreuen dins d'un cercle, els dos triangles que creen són similars, cosa que fa que els costats de cada triangle siguin proporcionals entre si. Si eliminem AD i BC, les relacions entre AE, EC, DE i EB continuaran sent les mateixes. 
-
-__Teorema d’__ acords interseccionant Si dos acords s’entrecreuen dins d’un cercle de manera que un es divideix en segments de longitud a i b i l’altre en segments de longitud c i d aleshores ab = cd. En altres paraules, el producte dels segments d'un acord és igual al producte dels segments del segon acord. 
-
-A més de formar un angle fora d’un cercle, el cercle pot dividir els secants en segments que són proporcionals entre si. 
-
-Si dibuixem els acords que s’entrecreuen, tindrem dos triangles semblants. 
-
-Des dels angles inscrits i la propietat reflexa (∠R≅∠R), △ PRS∼ △ TRQ. Com que els dos triangles són similars, podem configurar una proporció entre els costats corresponents. A continuació, multiplica la creu. ac + d = ca + b⇒a (a + b) = c (c + d) 
-
-__Teorema de__ dos __segments secundaris__ Si dos secants s'extreuen d'un punt comú fora d'un cercle i els segments s'etiqueten com anteriorment, llavors a (a + b) = c (c + d). Dit d'una altra manera, el producte del segment exterior i del conjunt d'un secant és igual al producte del segment exterior i del conjunt de l'altre secant. 
-
-Si una tangent i una secant es troben en un punt comú fora d’un cercle, els segments creats tenen una relació similar a la dels dos raigs secants. Recordem que el producte de la porció exterior d’un secant i el conjunt és igual al de l’altre secant. Si un d’aquests segments és una tangent, seguirà sent el producte de la porció exterior i del conjunt. No obstant això, per a una línia tangent, la porció exterior i la totalitat són iguals. 
-
-__Teorema del segment secient__ tangencial Si es __desprèn__ una tangent i una secant des d’un punt comú fora del cercle (i els segments s’etiqueten com la imatge a l’esquerra), llavors a2 = b (b + c). Això significa que el producte del segment exterior del secant i del conjunt és igual al quadrat del segment tangent. 
-
----
-
-### Teorema de Thales 
-
-Prova d'utilitzar triangles isòsceles 
-
-Combina tota la geometria euclidiana 
-
-{.todo} FER 
+TODO
 
 ---
 
@@ -945,15 +896,7 @@ Combina tota la geometria euclidiana
 > sectionStatus: dev
 > section: cyclic-polygons
 
-__[CC] Construeix un triangle equilàter, un quadrat i un hexàgon regular inscrits en un cercle.__ 
-
-Un polígon inscrit és un polígon on cada vèrtex es troba en un cercle. Tingueu en compte que no tots els quadrilàters o polígons es poden inscriure en un cercle. Els quadrilàters inscrits també s’anomenen quadrilàters cíclics. Per a aquests tipus de quadrilàters han de tenir una propietat especial. Ho investigarem aquí. 
-
-Aquesta investigació mostra que els angles oposats en un quadrilàter inscrit són suplementaris. Al tallar el quadrilàter per la meitat, a través de la diagonal, vam poder demostrar que els altres dos angles (que no vam tallar) formaven un parell lineal quan es corresponia. 
-
-Teorema de quadrilàters inscrits: Un quadrilàter s'inscriu en un cercle si i només si els angles oposats són suplementaris. 
-
-https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -961,6 +904,7 @@ https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 En els apartats anteriors, es van estudiar les propietats dels cercles en una superfície plana. Però el nostre món és realment tridimensional, de manera que anem a fer una ullada a alguns sòlids 3D basats en cercles: 
 
@@ -1533,6 +1477,7 @@ Per trobar la superfície d’una esfera, podem aproximar-la de nou amb una form
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 El cercle és una de les quatre formes diferents que es poden crear mitjançant “rodanxes” a través d’un [con](gloss:cone) . Això es pot demostrar mitjançant el con de llum d’una torxa: 
 

@@ -4,6 +4,7 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
 [__Çoxbucaqlı__](gloss:polygon) , yalnız düz tərəfləri olan qapalı, düz bir forma. Çoxbucaqlıların hər hansı bir tərəfi və açıları ola bilər, lakin tərəflər əyri ola bilməz. Aşağıdakı şekillerdən hansı çoxbucaqlıdır? 
 
@@ -260,6 +261,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
 [Əvvəlki kursda](/course/triangles) üçbucaqların fərqli xüsusiyyətlərini araşdırdıq. İndi dördbucaqlılara nəzər salaq. 
 
@@ -808,10 +810,7 @@ Bir [Rhombus](gloss:rhombus) dörd bərabər tərəfli dördbucaqlıdır. Hər b
 {.reveal(when="blank-6 blank-7" delay=1000)} _Fərqli kontekstlərdə bir Rhombusun müxtəlif hissələri (tərəflər, boy, diaqonallar) verilə bilər və hansı tənliyin daha uyğun olduğunu seçməlisiniz._ 
 
 :::
-
 :::
-
-    
 
 ---
 
@@ -819,6 +818,7 @@ Bir [Rhombus](gloss:rhombus) dörd bərabər tərəfli dördbucaqlıdır. Hər b
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
 [Poliqonlar](gloss:polygon) təbiətdə hər yerdə görünür. Böyük bir ərazini kafel etmək istəyirsinizsə, onlar xüsusilə faydalıdır, çünki çoxbucaqlıları boşluqlar və ya üst-üstə düşmədən bir-birinə bağlaya bilərsiniz. Buna bənzər nümunələrə [__tessellations__](gloss:tessellation) deyilir. 
 
@@ -1212,6 +1212,7 @@ Penrose, əyləncələr üçün sırf kəşfiyyat işləri aparırdı, lakin mə
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 İndiyə qədər düz, iki ölçülü bir dünyada çoxbucaqlı nələr edə biləcəyimizə baxdıq. Bir [__polyhedron__](gloss:polyhedron) , çoxbucaqlılardan ibarət üçölçülü bir cisimdir. Bəzi nümunələr: 
 
@@ -1263,15 +1264,7 @@ Yuxarıdakılar kimi fərqli polyhedra cəhd etsəniz, Euler düsturunun həmiş
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Bütün dünyamız üç ölçülüdür, lakin düz, iki ölçülü cisimləri çəkmək və ya görüntüləmək çox vaxt daha asandır. Üçölçülü polyhedra iki ölçülü şəkildə baxmağın bir neçə fərqli yolu var. 
-
- Bu şəbəkələrdən hansını bir kub edir Şəbəkəyə obyektlə uyğunlaşdırın https://github.com/polymake/matchthenet Rəsm şəbəkələri 
-
-Təyyarənin və bərkin kəsişməsindən əmələ gələn kəsiyi təsvir edin. 
-
-Bir kəsişmə bir təyyarənin bərk ilə kəsişməsidir. Üç ölçülü bir fiquru iki ölçülü bir müstəvidə təmsil etməyin başqa bir yolu ağdan istifadə etməkdir. Bir ağ, üç ölçülü bir formanın tərəflərinin açılmamış, düz bir təmsilidir. 
-
-altıbucaqlı bir kəsik etmək üçün bir kubu döndərin 
+TODO
 
 ---
 
@@ -1297,6 +1290,7 @@ ETMƏK
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 Bu kursun əvvəlində [müntəzəm çoxbucaqlıları](gloss:regular-polygon) , xüsusən də "simmetrik" çoxbucaqlılar, bütün tərəfləri və bucaqları eyni olduğu təyin etdik. Polyedra üçün oxşar bir şey edə bilərik. 
 

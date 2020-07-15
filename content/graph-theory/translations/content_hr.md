@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 Svakodnevno smo okruženi bezbroj veza i mreža: prometnice i željezničke pruge, telefonske linije, internet, elektronički sklopovi, pa čak i molekularne veze. Postoje čak _društvene mreže_ između prijatelja i obitelji. Možete li smisliti još neke primjere?
 
@@ -154,6 +155,7 @@ Grafovi koji se sastoje od jedne petlje vrhova nazivaju se [__ciklusom__](gloss:
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Königsberški mostovi
 
@@ -270,6 +272,7 @@ Ako se vratite na kartu Königsberga, vidjet ćete da postoji više od dva otoka
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Rukovanje i druženje
 
@@ -332,6 +335,7 @@ U ovom se slučaju odgovarajući graf sastoji od dva odvojena skupa. Svaka vrhov
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Ravni grafikoni
 
@@ -531,6 +535,7 @@ __{.red} 90__ Rubovi
 ---
 > id: maps
 > section: map-colouring ## Bojanje karte
+> translated: auto
 
 ::: column.grow
 
@@ -647,6 +652,7 @@ Međutim, matematičari su također pogledali mape _carstava_, gdje se zemlje mo
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Problem putničkog prodavca
 
@@ -803,6 +809,7 @@ Pronalaženje brzog algoritma za rješavanje problema Putničkog prodavača tako
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Grafovi u svakodnevnom životu
 

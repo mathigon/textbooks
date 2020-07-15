@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 ::: column.grow
 Până la începutul secolului 19, exploratorii descoperiseră cea mai mare parte a lumii.
@@ -140,6 +141,7 @@ mișca și transforma aceste triunghiuri în mod realist și pentru a le calcula
 
 > id: angle-sum
 > section: properties
+> translated: auto
 
 Hai să începem simplu: un triunghi este o formă închisă care are trei laturi (care
 sunt [segmente de dreaptă](gloss:line-segment)) și trei vârfuri ([punctele](gloss:point) 
@@ -489,6 +491,7 @@ dintre înălțimile sale sunt de fapt chiar laturile triunghiului.
 > sectionStatus: dev
 > id: midsegments
 > goals: s0 s1 s2
+> translated: auto
 
 ::: column(width=300)
 
@@ -543,6 +546,7 @@ cum se leagă de asemănare și proporționalitate.
 > id: sss-construction
 > section: congruence
 > goals: draw-base draw-c1 draw-c2
+> translated: auto
 
 Acum că putem verifica dacă trei laturi pot forma un triunghi, să ne gândim la
 modul în care am putea _construi_ de fapt un triunghi cu aceste laturi.
@@ -773,6 +777,7 @@ LLU nu este suficient pentru a confirma că două triunghiuri sunt congruente.
 
 > id: pythagoras
 > section: pythagoras
+> translated: auto
 
 Am ajuns acum într-un punct important din geometrie – să putem formula și întelege una 
 dintre cele mai faimoase [teoreme](gloss:theorem) din întreaga matematică: 
@@ -1224,6 +1229,7 @@ cum se construiește un triunghi echilateral folosind dreptarul și compasul.
 
 > id: trigonometry
 > section: trigonometry
+> translated: auto
 
 Până acum am văzut relații între __unghiurile__ triunghirilor (ex: suma unghiurilor
 unui triunghi este 180°) și relații între __laturile__ triunghiurilor 
@@ -1359,6 +1365,7 @@ laturilor unui triunghi dreptunghic. Fiecare dintre ele are un nume, precum
 
 > section: sine-cosine-rule
 > id: sine-cosine-rule
+> translated: auto
 
 Până acum, tot ce-am învățat despre trigonometrie se aplică doar în triunghiurile 
 dreptunghice. Dar majoritatea triunghiurilor nu sunt dreptunghice și există două 

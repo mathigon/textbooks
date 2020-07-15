@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -325,6 +326,7 @@ Hər il bir _Pi günü var_ , ya da 14 Marta düşür, çünki `pi ≈ 3.14` , v
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Həndəsə mövzusunda indiyə qədər həmişə açıları [dərəcə](gloss:degrees) ilə [ölçmüşük](gloss:degrees) . A __{.m-red} tam dairənin__ fırlanması [[360]]°, a __{.m-green} yarım dairə__ [[180]]°, a __{.m-yellow} dörddəbir dairə__ [[90]]° və s. 
 
@@ -572,6 +574,7 @@ Sine funksiyasından istifadə edərkən radianların istifadəsi xüsusilə mar
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 Əvvəlki hissələrdə bir dairənin bir neçə fərqli hissəsinə - mərkəz, radius, diametr və dövrə kimi adları öyrəndiniz. Ancaq bir dairə ilə əlaqəli bir çox həndəsi element var ki, daha mürəkkəb problemləri həll etməliyik: 
 
@@ -895,6 +898,7 @@ TODO
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 Əvvəlki hissələrdə düz bir səthdə dairələrin xüsusiyyətlərini araşdırdıq. Ancaq dünyamız əslində üç ölçülüdür, buna görə dairələrə əsaslanan bəzi 3D bərk şeylərə nəzər salaq: 
 
@@ -1467,6 +1471,7 @@ Bir sferanın səthini tapmaq üçün başqa bir forma istifadə edərək bir da
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 Dairə bir [konus](gloss:cone) vasitəsilə "dilimlər" istifadə edərək yaradıla bilən dörd müxtəlif formadan biridir. Bunu bir məşəlin yüngül konusundan istifadə etməklə göstərmək olar: 
 

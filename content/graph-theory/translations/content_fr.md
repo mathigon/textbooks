@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 ::: column.grow
 
@@ -136,6 +137,7 @@ Les graphes constitués d'une seule chaîne de sommets sont appelés [__cycles__
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Les ponts de Königsberg
 
@@ -263,6 +265,7 @@ La découverte d’Euler peut ne pas sembler particulièrement utile dans la vie
 
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Poignées de main et fêtes
 
@@ -341,6 +344,7 @@ Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts 
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Graphes plans
 
@@ -560,6 +564,7 @@ __{.red} 90__ bords
 
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Coloration de la carte
 
@@ -693,6 +698,7 @@ Cependant, les mathématiciens ont également examiné des cartes de _empires_, 
 
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Le problème du vendeur ambulant
 
@@ -861,6 +867,7 @@ FAIRE
 
 > id: applications
 > section: applications
+> translated: auto
 
 ## Les graphiques au quotidien
 

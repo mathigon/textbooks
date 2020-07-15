@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 Cada dia ens envolten infinitat de connexions i xarxes: carreteres i vies ferroviàries, línies telefòniques, internet, circuits electrònics i fins i tot enllaços moleculars. Fins i tot hi ha _xarxes socials_ entre amics i famílies. Pot pensar en altres exemples? 
 
@@ -154,6 +155,7 @@ Els gràfics que consisteixen en un sol bucle de vèrtexs s’anomenen [__cicles
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Els ponts de Königsberg 
 
@@ -274,6 +276,7 @@ Pot ser que el descobriment d'Euler no sembli especialment útil a la vida real,
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Enganxaments de mans i cites 
 
@@ -347,6 +350,7 @@ En aquest cas, el gràfic corresponent consta de dos conjunts de vèrtexs separa
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Gràfics plans 
 
@@ -558,6 +562,7 @@ __{.red} 90__ Vores
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Pintar Mapa 
 
@@ -686,6 +691,7 @@ Tanmateix, els matemàtics també han mirat mapes d’ _imperis_ , on els païso
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## El problema del venedor ambulant 
 
@@ -840,6 +846,7 @@ Trobar un algorisme ràpid per resoldre el problema del venedor de viatges tamb�
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Gràfics a la vida quotidiana 
 

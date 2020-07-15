@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 În fiecare zi suntem înconjurați de nenumărate conexiuni și rețele: drumuri și căi ferate, linii telefonice, internet, circuite electronice și chiar legături moleculare. Există chiar și _rețele sociale_ între prieteni și familii. Vă puteți gândi la alte exemple? 
 
@@ -154,6 +155,7 @@ Graficele care constau dintr-o singură buclă de vârfuri se numesc [__cicluri_
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Podurile din Königsberg 
 
@@ -274,6 +276,7 @@ Descoperirea lui Euler nu poate părea deosebit de utilă în viața reală, dar
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Strângeri de mână și întâlniri 
 
@@ -347,6 +350,7 @@ Tocmai am arătat că un grafic complet cu `n` noduri, `K_n` , are `(n × (n-1))
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Graficele planare 
 
@@ -558,6 +562,7 @@ __{.red} 90__ muchii
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Harta de colorat 
 
@@ -686,6 +691,7 @@ Cu toate acestea, matematicienii s-au uitat, de asemenea, la hărțile _imperiil
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Problema vânzătorului călător 
 
@@ -840,6 +846,7 @@ Găsirea unui algoritm rapid pentru rezolvarea problemei de vânzător de călă
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Grafice în viața de zi cu zi 
 

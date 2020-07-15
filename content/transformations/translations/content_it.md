@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 Molti concetti geometrici, come [linee](gloss:line) e [punti](gloss:point), sono stati "inventati" dai matematici. La simmetria, d'altra parte, è ovunque intorno a noi. Quasi tutte le piante, gli animali e persino noi umani sono simmetrici.
 
@@ -80,6 +81,7 @@ Il [primo esempio](->#star) sopra è speciale, perché sposta e ruota solo la st
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 Una [__trasformazione rigida__](gloss:rigid-transformation) è un tipo speciale di trasformazione che non cambia le dimensioni e la forma della figura originale. Immagina che sia fatto di un materiale solido come il legno o il metallo: possiamo spostarlo, girarlo e capovolgerlo, ma non possiamo allungarlo o deformarlo in altro modo.
 
@@ -457,6 +459,7 @@ TODO
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__Symmetry__](gloss:symmetry) è ovunque intorno a noi e un concetto intuitivo: parti diverse di un oggetto sembrano _lo stesso_ in qualche modo. Ma usando le trasformazioni, possiamo dare una definizione matematica molto più precisa di ciò che la simmetria _in realtà_ significa:
 
@@ -709,6 +712,7 @@ Completa ora queste forme, in modo che abbiano una simmetria rotazionale:
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
 Alcune forme hanno più di una simmetria - diamo un'occhiata al [square](gloss:square) come semplice esempio.
 
@@ -1045,6 +1049,7 @@ Oltre alle traduzioni, riflessioni, rotazioni e riflessi di planata, questi grup
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 Finora, tutte le simmetrie che abbiamo esaminato erano _visive_ in un certo senso: forme, immagini o motivi visibili. In effetti, la simmetria può essere un concetto molto più ampio: _immunità al cambiamento_.
 
@@ -1096,6 +1101,7 @@ La simmetria può persino prevedere l'esistenza di particelle fondamentali. Un e
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Finora abbiamo appena esaminato [[rigide trasformazioni|congruent|visual]]. _{span.reveal(when="blank-0")} Ora pensiamo a uno che non lo è: una [__dilatazione__](gloss:dilation) cambia la dimensione di una forma rendendola più grande o più piccola._
 

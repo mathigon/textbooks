@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 Todos los días estamos rodeados de innumerables conexiones y redes: carreteras y vías férreas, líneas telefónicas, Internet, circuitos electrónicos e incluso enlaces moleculares. Incluso hay _redes sociales_ entre amigos y familiares. ¿Se te ocurren otros ejemplos? 
 
@@ -154,6 +155,7 @@ Los gráficos que consisten en un solo bucle de vértices se denominan [__ciclos
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Los puentes de Königsberg 
 
@@ -274,6 +276,7 @@ El descubrimiento de Euler puede no parecer particularmente útil en la vida rea
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Apretones de manos y citas 
 
@@ -347,6 +350,7 @@ En este caso, el gráfico correspondiente consta de dos conjuntos separados de v
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Gráficos Planos 
 
@@ -558,6 +562,7 @@ __{.red} 90__ bordes
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Mapa para colorear 
 
@@ -686,6 +691,7 @@ Sin embargo, los matemáticos también han observado mapas de _imperios_ , donde
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## El problema del vendedor ambulante 
 
@@ -840,6 +846,7 @@ Encontrar un algoritmo rápido para resolver el problema del vendedor ambulante 
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Gráficos en la vida cotidiana 
 

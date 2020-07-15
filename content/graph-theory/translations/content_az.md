@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 Hər gün saysız bağlantılar və şəbəkələr əhatə edir: yollar və dəmir yolları, telefon xətləri, internet, elektron sxemlər və hətta molekulyar bağlar. Dostları və ailələri arasında hətta _sosial şəbəkələr_ var. Başqa nümunələri düşünə bilərsinizmi? 
 
@@ -154,6 +155,7 @@ Tək bir döngədən ibarət olan qrafalar [__dövrə__](gloss:graph-cycle) adla
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Königsberg körpüləri 
 
@@ -274,6 +276,7 @@ Euler-in kəşfi real həyatda xüsusilə faydalı görünə bilməz, lakin qraf
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Əl görüşmələri və Tanışlıq 
 
@@ -347,6 +350,7 @@ Bu vəziyyətdə, müvafiq qrafik iki ayrı uc dəstindən ibarətdir. Hər bir 
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Planar Qrafiklər 
 
@@ -558,6 +562,7 @@ __{.red} 90__ kənarları
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Xəritə Boyama 
 
@@ -686,6 +691,7 @@ Bununla birlikdə riyaziyyatçılar, ölkələrin çoxlu bir-birindən ayrılan 
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Səyahət Satış Problemi 
 
@@ -840,6 +846,7 @@ Səyahət edən Satışçı problemini həll etmək üçün sürətli bir alqori
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Gündəlik həyatda qrafiklər 
 

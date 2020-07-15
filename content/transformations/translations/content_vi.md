@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 Nhiều khái niệm hình học như [đường](gloss:line) hoặc [đa giác](gloss:polygon) đã được các nhà toán học phát minh ra. Đối xứng, mặt khác, là ở khắp mọi nơi xung quanh chúng ta. Hầu như tất cả các loài thực vật, động vật và thậm chí cả con người chúng ta đều đối xứng. 
 
@@ -78,6 +79,7 @@ Kết quả của một biến đổi được gọi là [__hình ảnh__](gloss
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 [__Biến đổi cứng nhắc__](gloss:rigid-transformation) là một loại biến đổi đặc biệt không thay đổi kích thước hoặc hình dạng của hình. Chúng ta có thể tưởng tượng rằng nó được làm từ một vật liệu rắn như gỗ hoặc kim loại: chúng ta có thể di chuyển nó, xoay hoặc lật nó, nhưng chúng ta không thể kéo dài, uốn cong hoặc làm biến dạng nó. 
 
@@ -445,36 +447,9 @@ Biến đổi là một khái niệm quan trọng trong nhiều phần của to�
 
 > section: congruence
 > sectionStatus: dev
+> translated: auto
 
-LÀM 
-
----
-
-### Thành phần biến đổi 
-
-Tất nhiên, chúng ta có thể kết hợp nhiều bản dịch, phản xạ và xoay để tạo ra các phép biến đổi phức tạp hơn. 
-
-{.todo} Ví dụ TODO 
-
-Tuy nhiên, hóa ra, không quan trọng bạn kết hợp bao nhiêu biến đổi khác nhau: bạn luôn có thể tìm thấy một biến đổi khác thực hiện tương tự trong một lần! 
-
-{.todo} Máy tính thành phần chuyển đổi TODO 
-
-Kết hợp hai phản xạ là đặc biệt thú vị. Có hai trường hợp khác nhau chúng ta cần xem xét: 
-
-::: column.grow
-
-Nếu hai dòng phản xạ song song, kết quả là một bản dịch duy nhất. Hướng của bản dịch vuông góc với các đường phản xạ và khoảng cách gấp đôi khoảng cách giữa các đường phản xạ. 
-
-{.todo} Hoạt hình TODO 
-
-::: column.grow
-
-Nếu hai đường phản xạ cắt nhau, kết quả là một vòng quay đơn. Tâm quay là giao điểm giữa các đường phản xạ và góc gấp đôi góc giữa các đường phản xạ. 
-
-{.todo} Hoạt hình TODO 
-
-:::
+TODO
 
 ---
 
@@ -483,6 +458,7 @@ Nếu hai đường phản xạ cắt nhau, kết quả là một vòng quay đ�
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__Đối xứng__](gloss:symmetry) là ở khắp mọi nơi xung quanh chúng ta, và một khái niệm trực quan: các phần khác nhau của một đối tượng trông _giống nhau_ theo một cách nào đó. Nhưng bằng cách sử dụng các phép biến đổi, chúng ta có thể đưa ra một định nghĩa toán học chính xác hơn nhiều về ý nghĩa đối xứng _thực sự_ có nghĩa là gì: 
 
@@ -739,6 +715,7 @@ Bây giờ hoàn thành các hình dạng này, để chúng có đối xứng q
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
  Một số hình có nhiều hơn một đối xứng - hãy xem [hình vuông](gloss:square) là một ví dụ đơn giản. 
 
@@ -1096,6 +1073,7 @@ Ngoài các bản dịch, phản xạ, xoay và phản xạ trượt, các nhóm
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 Cho đến nay, tất cả các đối xứng chúng ta nhìn vào đều có _hình ảnh_ theo một nghĩa nào đó: hình dạng, hình ảnh hoặc mô hình có thể nhìn thấy. Trong thực tế, đối xứng có thể là một khái niệm rộng hơn nhiều: _miễn dịch với thay đổi_ . 
 
@@ -1147,6 +1125,7 @@ Nó chỉ ra rằng, chỉ cần biết về sự đối xứng, các nhà vật
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Cho đến nay, chúng tôi chỉ nhìn vào [[cứng nhắc | đồng dạng |]] biến đổi [[hình ảnh]] . _{span.reveal(when="blank-0")} Bây giờ chúng ta hãy nghĩ về một thứ không phải là: [__sự giãn nở__](gloss:dilation) thay đổi kích thước của hình dạng bằng cách làm cho nó lớn hơn hoặc nhỏ hơn._ 
 
@@ -1193,169 +1172,4 @@ Nếu hệ số [tỷ lệ](gloss:scale-factor) nằm trong khoảng từ 0 đ�
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
-Đối với các biến đổi cứng nhắc, hình ảnh luôn luôn [[đồng nhất | lớn hơn | nhỏ hơn]] bản gốc - nhưng điều này [[không còn | vẫn]] đúng cho sự giãn nở. Thay vào đó, chúng tôi nói rằng hai hình dạng là [__tương tự nhau__](gloss:similar) . Chúng có hình dạng tổng thể giống nhau, nhưng không nhất thiết phải có cùng kích thước. 
-
-Biểu tượng cho sự tương đồng là `∼` (tương tự như biểu tượng cho sự đồng dạng, đó là `≅` ). Trong ví dụ này, chúng tôi sẽ viết `A ∼ A'` . 
-
-::: column(width=240)
-
-{.todo} SẮP RA MẮT - Minh họa 
-
-:::
-
----
-> id: perspective
-
-### Bản vẽ phối cảnh 
-
-Bạn có thể nhận thấy rằng các độ giãn nở này với các tia kết nối gần giống như __các bản vẽ phối cảnh__ . Trung tâm của sự giãn nở được gọi là __điểm biến mất__ , bởi vì có vẻ như đây là nơi mà mọi thứ đều biến mất trong khoảng cách xa. 
-
-Tìm điểm biến mất trong hình dưới đây: 
-
-{.todo} SẮP RA MẮT - Tương tác 
-
-Bây giờ bạn có thể vẽ một ngôi nhà khác phù hợp với những cái hiện có? 
-
----
-> id: similar-polygons
-
-### Đa giác tương tự 
-
-Sự tương đồng có thể cho chúng ta biết rất nhiều về hình dạng. Ví dụ: [hình tròn](gloss:circle) , [hình vuông](gloss:square) và [hình tam giác](gloss:equilateral-triangle) đều [[luôn luôn | đôi khi | không bao giờ]] giống nhau Chúng có thể có kích thước khác nhau, nhưng luôn có hình dạng chung giống nhau. 
-
-::: column.grow
-
-Hai hình tứ giác bên phải là tương tự nhau. Quan sát quan trọng đầu tiên của chúng tôi là trong các đa giác tương tự, tất cả các cặp góc [phù hợp](gloss:congruent-angles) là [đồng dạng](gloss:congruent-angles) . Điều này có nghĩa rằng 
-
-{.text-center} [_{.m-red} ABC_ _{.m-red} A'B'C '_](target:a) _{.space}_ [_{.m-blue} CDBCD_ _{.m-blue} B'C'D '_](target:b)  
-[_{.m-green} ∡CDE_ _{.m-green} C'D'E '_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ _{.m-yellow} D'E'A '_](target:d) 
-
-Một thực tế quan trọng thứ hai là trong các đa giác tương tự, tất cả các mặt được chia __tỷ lệ__ theo hệ số __tỷ lệ__ của độ giãn tương ứng. Nếu hệ số tỷ lệ là ${k}{k|1.5|0.5,2,0.1} , sau đó 
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
-Thay vào đó, chúng ta có thể sắp xếp lại các phương trình này và loại bỏ hoàn toàn hệ số tỷ lệ: 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
- Chúng ta có thể sử dụng điều này để giải quyết các vấn đề thực tế trong cuộc sống liên quan đến các đa giác tương tự - ví dụ: tìm độ dài của các mặt bị thiếu, nếu chúng ta biết một số mặt khác. Trong phần sau bạn sẽ thấy một vài ví dụ. 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### Tam giác tương tự 
-
-Khái niệm tương tự là đặc biệt mạnh mẽ với hình tam giác. Chúng ta đã biết rằng các góc bên trong tương ứng trong các đa giác tương tự là bằng nhau. 
-
-Đối với hình tam giác, điều ngược lại cũng đúng: điều này có nghĩa là nếu bạn có hai hình tam giác có cùng kích thước ba góc thì hình tam giác phải giống nhau. 
-
-Và nó thậm chí còn tốt hơn! Chúng ta biết rằng các góc bên trong một hình tam giác luôn cộng tới [[180]]°. Điều này có nghĩa là nếu chúng ta biết hai góc trong một tam giác, chúng ta luôn có thể tìm ra góc thứ ba. 
-
-Để tương tự, điều này có nghĩa là chúng ta cũng chỉ cần kiểm tra _hai góc_ để xác định xem hình tam giác có giống nhau không. Nếu hai hình tam giác có hai góc có cùng kích thước thì góc thứ ba cũng phải giống nhau ở cả hai. 
-
-Kết quả này đôi khi được gọi là [__Điều kiện tương tự AA__](gloss:triangle-aa) cho hình tam giác. (Hai chữ _As là viết_ tắt của hai _góc_ mà chúng ta so sánh.) 
-
-::: .theorem
-
-Nếu hai góc trong một tam giác đồng dạng với hai góc trong một tam giác khác thì hai tam giác tương tự nhau. 
-
-:::
-
----
-> id: similar-triangles-1
-
-Chúng ta hãy xem một vài ví dụ trong đó điều này hữu ích: 
-
-::: column(width=320)
-
-{.todo} SẮP RA MẮT - Hoạt hình 
-
-::: column.grow
-
-Ở đây bạn có thể thấy hình ảnh của một ngọn hải đăng lớn. Cùng với một người bạn, bạn muốn đo chiều cao của ngọn hải đăng, nhưng tiếc là chúng ta không thể leo lên đỉnh. 
-
-Hóa ra, ẩn rất rõ, sơ đồ chứa hai hình tam giác tương tự: một được hình thành bởi ngọn hải đăng và bóng của nó, và một được hình thành bởi bạn của bạn và bóng của cô ấy. 
-
-Cả hai hình tam giác đều có một góc vuông ở phía dưới. Các tia mặt trời song song, có nghĩa là hai góc còn lại ở phía dưới là các góc tương ứng, và cũng bằng nhau. Theo điều kiện AA cho các tam giác, hai điều này phải giống nhau. 
-
-Chúng tôi có thể dễ dàng đo chiều dài của bóng và chúng tôi cũng biết chiều cao của bạn. Bây giờ chúng ta có thể sử dụng tỷ lệ của các cạnh trong các hình tam giác tương tự để tìm chiều cao của ngọn hải đăng: 
-
-{.todo} SẮP RA MẮT - Phương trình 
-
-Do đó ngọn hải đăng cao 1,5m. 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo} SẮP RA MẮT - Hoạt hình 
-
-::: column.grow
-
-Chúng ta có thể sử dụng kỹ thuật tương tự để đo khoảng cách trên mặt đất. Ở đây chúng tôi muốn tìm chiều rộng của một con sông lớn. Có một cái cây lớn ở một bên bờ sông, và tôi có một cây gậy dài một mét. 
-
-Hãy thử vẽ hai hình tam giác tương tự khác trong sơ đồ này. 
-
-Bạn có thể đánh dấu điểm dọc theo bờ sông, nằm ngay trên đường ngắm từ đầu cây gậy đến gốc cây. Sau đó, chúng ta có thể đo khoảng cách đến cây gậy, và đến điểm đối diện trực tiếp với cây. 
-
-Một lần nữa, hai hình tam giác này giống nhau vì điều kiện AA. Cả hai đều có một góc vuông, và trên cặp góc đối diện. 
-
-Theo quy tắc tỷ lệ, điều này có nghĩa là 
-
-{.todo} SẮP RA MẮT - Phương trình 
-
-Do đó chiều rộng của dòng sông là 45 mét. 
-
-:::
-
----
-
-### Độ tương tự trên tia 
-
-Định lý: Nếu một tia chia đôi một góc của một tam giác, thì nó chia cạnh đối diện thành các đoạn tỷ lệ với độ dài của hai cạnh còn lại. 
-
-Chúng ta có thể mở rộng định lý này đến một tình huống bên ngoài các tam giác nơi chúng ta có nhiều đường thẳng song song bị cắt bởi các chuyển vị. 
-
-Định lý: Nếu ba hoặc nhiều đường thẳng song song bị cắt bởi hai đường ngang, thì chúng chia các đường ngang theo tỷ lệ. 
-
-Hãy suy nghĩ về một trung gian của một hình tam giác. Một đường giữa song song với một cạnh của một tam giác và chia hai cạnh còn lại thành hai nửa đồng dạng. Phần giữa chia hai bên theo tỷ lệ. 
-
-Định lý tỷ lệ tam giác: Nếu một đường thẳng song song với một cạnh của một tam giác cắt hai cạnh kia, thì nó chia các cạnh đó theo tỷ lệ. 
-
-Định lý tỷ lệ tam giác Converse: Nếu một đường thẳng chia hai cạnh của một tam giác theo tỷ lệ, thì nó song song với cạnh thứ ba. 
-
----
-
-### Tự tương tự 
-
-Có một số hình dạng toán học tò mò tương tự như một phần nhỏ hơn _của chính họ_ . Một ví dụ là __Tam giác Sierpinksi__ : toàn bộ tam giác tương tự như bất kỳ một trong các tam giác nhỏ hơn mà nó bao gồm. Bạn có thể phóng to và vô số hình tam giác nhỏ hơn và nhỏ hơn. 
-
-Hình dạng với đặc tính này được gọi là __Fractals__ . Họ có một số thuộc tính XXX đáng ngạc nhiên và thực sự, mà bạn sẽ tìm hiểu thêm trong tương lai. 
-
----
-
-Tam giác không chỉ hữu ích để đo khoảng cách. Trong khóa học tiếp theo, chúng ta sẽ tìm hiểu thêm rất nhiều về hình tam giác và tính chất của chúng.
+TODO

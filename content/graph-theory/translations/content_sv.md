@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 Varje dag omges vi av otaliga anslutningar och nätverk: vägar och järnvägsspår, telefonlinjer, internet, elektroniska kretsar och till och med molekylära bindningar. Det finns till och med _sociala nätverk_ mellan vänner och familjer. Kan du tänka på några andra exempel? 
 
@@ -154,6 +155,7 @@ Grafer som består av en enda ögla med vertikaler kallas [__cykler__](gloss:gra
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Königsbergs broar 
 
@@ -274,6 +276,7 @@ Eulers upptäckt kanske inte verkar särskilt användbar i verkligheten, men dia
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Handskakningar och dejting 
 
@@ -347,6 +350,7 @@ I detta fall består motsvarande graf av två separata uppsättningar av hörn. 
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Plana diagram 
 
@@ -558,6 +562,7 @@ __{.red} 90__ kanter
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Kartläggning 
 
@@ -686,6 +691,7 @@ Men matematiker har också tittat på kartor över _imperier_ , där länder kan
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Det resande säljaren problemet 
 
@@ -840,6 +846,7 @@ Att hitta en snabb algoritm för att lösa Travelling Salesman-problemet skulle 
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Grafer i vardagen 
 

@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Khi nhìn xung quanh thiên nhiên, bạn có thể nhận thấy những loài thực vật phức tạp như thế này:
 
@@ -487,6 +488,7 @@ Và chúng tôi thậm chí có thể đảo ngược quá trình này để né
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -679,6 +681,7 @@ Có nhiều biến thể của tam giác Sierpinki và các hình chữ nhật k
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Tất cả các fractals mà chúng ta đã thấy trong các chương trước đã được tạo bằng quy trình __lặp__: bạn bắt đầu với một mẫu cụ thể, và sau đó bạn lặp đi lặp lại nhiều lần.
 

@@ -4,6 +4,7 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
 Un [__polygone__](gloss:polygon) est une forme plate fermée qui n'a que des côtés droits. Les polygones peuvent avoir un nombre illimité de côtés et d'angles, mais les côtés ne peuvent pas être incurvés. Lesquelles des formes ci-dessous sont des polygones? 
 
@@ -260,6 +261,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
 Dans le [cours précédent,](/course/triangles) nous avons étudié de nombreuses propriétés différentes des triangles. Voyons maintenant les quadrilatères. 
 
@@ -819,6 +821,7 @@ Un [losange](gloss:rhombus) est un quadrilatère qui a quatre côtés congruents
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
 [Les polygones](gloss:polygon) apparaissent partout dans la nature. Ils sont particulièrement utiles si vous souhaitez carreler une grande surface, car vous pouvez assembler des polygones sans aucun espace ni chevauchement. De tels modèles sont appelés [__pavages__](gloss:tessellation) . 
 
@@ -1212,6 +1215,7 @@ Penrose explorait les pavages uniquement pour le plaisir, mais il s'avère que l
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 Jusqu'à présent, nous venons de voir ce que nous pouvons faire avec des polygones dans un monde plat et bidimensionnel. Un [__polyèdre__](gloss:polyhedron) est un objet tridimensionnel composé de polygones. Voici quelques exemples: 
 
@@ -1263,15 +1267,7 @@ Si vous essayez différents polyèdres, comme ceux ci-dessus, vous constaterez q
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Notre monde entier est en trois dimensions - mais il est souvent beaucoup plus facile de dessiner ou de visualiser des objets plats en deux dimensions. Et il existe plusieurs façons de visualiser les polyèdres tridimensionnels de manière bidimensionnelle. 
-
- Lequel de ces filets fait un cube Faites correspondre le filet à l'objet https://github.com/polymake/matchthenet Nets de dessin 
-
-Décrivez la section transversale formée par l'intersection du plan et du solide. 
-
-Une coupe est l'intersection d'un plan avec un solide. Une autre façon de représenter une figure tridimensionnelle dans un plan bidimensionnel consiste à utiliser un filet. Un filet est une représentation dépliée et plate des côtés d'une forme tridimensionnelle. 
-
-faire pivoter un cube pour créer une coupe hexagonale 
+TODO
 
 ---
 
@@ -1297,6 +1293,7 @@ FAIRE
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 Au début de ce cours, nous avons défini [les polygones réguliers](gloss:regular-polygon) comme des [polygones](gloss:regular-polygon) particulièrement «symétriques», où tous les côtés et les angles sont identiques. Nous pouvons faire quelque chose de similaire pour les polyèdres. 
 

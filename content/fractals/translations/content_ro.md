@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Când priviți în jurul naturii, este posibil să fi observat plante complicate ca acestea: 
 
@@ -475,6 +476,7 @@ De asemenea, putem folosi fractali pentru a crea „copii” realiste, de exempl
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -658,6 +660,7 @@ Există multe variante ale triunghiului Sierpinski și alte fractale cu propriet
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Toate fractalele pe care le-am văzut în capitolele anterioare au fost create folosind un proces de __iterație__ : începeți cu un model specific, apoi îl repetați iar și iar. 
 

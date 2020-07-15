@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 Många geometriska begrepp som [linjer](gloss:line) eller [polygoner](gloss:polygon) "uppfanns" av matematiker. Symmetri, å andra sidan, finns överallt runt omkring oss. Nästan alla växter, djur och till och med vi människor är symmetriska. 
 
@@ -78,6 +79,7 @@ Resultatet av en omvandling kallas [__bilden__](gloss:transformation-image) . Vi
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 En [__styv transformation__](gloss:rigid-transformation) är en speciell typ av transformation som inte förändrar storleken eller formen på en figur. Vi kan föreställa oss att det är gjord av ett fast material som trä eller metall: vi kan flytta det, vända det eller vända det, men vi kan inte sträcka, böja eller på annat sätt deformera det. 
 
@@ -446,35 +448,7 @@ Transformationer är ett viktigt begrepp i många delar av matematiken, inte bar
 > section: congruence
 > sectionStatus: dev
 
-ATT GÖRA 
-
----
-
-### Transformationers sammansättning 
-
-Naturligtvis kan vi kombinera flera översättningar, reflektioner och rotationer för att skapa mer komplexa transformationer. 
-
-{.todo} TODO Exempel 
-
-Men det visar sig, det spelar ingen roll hur många olika transformationer du kombinerar: du kan alltid hitta en annan transformation som gör samma sak på en gång! 
-
-{.todo} TODO Kalkylator för transformationssammansättning 
-
-Att kombinera två reflektioner är särskilt intressant. Det finns två olika fall som vi måste överväga: 
-
-::: column.grow
-
-Om de två reflektionsraderna är parallella är resultatet en enda översättning. Riktningen för översättningen är vinkelrätt mot reflektionslinjerna och avståndet är dubbelt avståndet mellan reflektionslinjerna. 
-
-{.todo} TODO-animering 
-
-::: column.grow
-
-Om de två reflektionsraderna korsar var resultatet en enda rotation. Rotationscentrumet är skärningspunkten mellan reflektionslinjerna och vinkeln är dubbelt vinkeln mellan reflektionslinjerna. 
-
-{.todo} TODO-animering 
-
-:::
+TODO
 
 ---
 
@@ -483,6 +457,7 @@ Om de två reflektionsraderna korsar var resultatet en enda rotation. Rotationsc
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__Symmetri__](gloss:symmetry) finns överallt runt omkring oss och ett intuitivt koncept: olika delar av ett objekt ser _likadant ut_ på något sätt. Men med transformationer kan vi ge en mycket mer exakt, matematisk definition av vad symmetri _egentligen_ betyder: 
 
@@ -739,6 +714,7 @@ Fyll nu i dessa former så att de har rotationssymmetri:
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
  Vissa former har mer än en symmetri - låt oss titta på [torget](gloss:square) som ett enkelt exempel. 
 
@@ -1096,6 +1072,7 @@ Förutom översättningar, reflektioner, rotationer och glidreflektioner inklude
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 Hittills var alla symmetrier vi tittade på _visuella_ i någon mening: synliga former, bilder eller mönster. I själva verket kan symmetri vara ett mycket bredare begrepp: _immunitet mot förändring_ . 
 
@@ -1147,6 +1124,7 @@ Symmetri kan till och med förutsäga existensen av grundläggande partiklar. Et
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Hittills har vi bara tittat på [[styva | kongruent | visuella]] transformationer. _{span.reveal(when="blank-0")} Låt oss nu tänka på en som inte är det: en [__utvidgning__](gloss:dilation) ändrar formens storlek genom att göra den större eller mindre._ 
 
@@ -1193,169 +1171,4 @@ Om [skalfaktorn](gloss:scale-factor) är mellan 0 och 1 är bilden [[mindre | st
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
-För styva transformationer är bilden alltid [[kongruent | större | mindre än]] originalet - men det är [[inte längre | fortfarande]] sant för dilateringar. Istället säger vi att två former är [__lika__](gloss:similar) . De har samma totala form, men inte nödvändigtvis samma storlek. 
-
-Symbolen för likhet är `∼` (liknar symbolen för kongruens, som var `≅` ). I det här exemplet skulle vi skriva `A ∼ A'` . 
-
-::: column(width=240)
-
-{.todo} Kommer snart - illustration 
-
-:::
-
----
-> id: perspective
-
-### Perspektivteckningar 
-
-Du kanske har lagt märke till att dessa dilatationer med anslutande strålar nästan ser ut som __perspektivritningar__ . Utvidgningens centrum kallas __försvinnande punkt__ , eftersom det ser ut så här är allt där "försvinner i fjärran". 
-
-Hitta försvinnande punkt i figuren nedan: 
-
-{.todo} KOMMER GÅNG - Interaktiv 
-
-Nu kan du rita ett annat hus som matchar de befintliga? 
-
----
-> id: similar-polygons
-
-### Liknande polygoner 
-
-Likhet kan berätta mycket om former. Till exempel är [cirklar](gloss:circle) , [rutor](gloss:square) och [liksidiga trianglar](gloss:equilateral-triangle) [[alltid | ibland | aldrig]] liknande. De kan ha olika storlekar, men alltid samma allmänna form. 
-
-::: column.grow
-
-De två fyrhjulingarna till höger är likadana. Vår första viktiga observation är att i liknande polygoner är alla matchande vinkelpar [kongruenta](gloss:congruent-angles) . Detta innebär att 
-
-{.text-center} [_{.m-red} ∡ABC_ ≅ _{.m-red} ∡A'B'C'_](target:a) _{.space}_ [_{.m-blue} ∡BCD_ ≅ _{.m-blue} ∡B'C'D'_](target:b)  
-[_{.m-green} ∡CDE_ ≅ _{.m-green} ∡C'D'E'_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ ≅ _{.m-yellow} ∡D'E'A'_](target:d) 
-
-Det andra viktiga faktum är att i liknande polygoner skalas alla sidor __proportionellt__ med skalfaktorn för motsvarande utvidgning. Om skalfaktorn är ${k}{k|1.5|0.5,2,0.1} då 
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
-Vi kan istället ordna om dessa ekvationer och eliminera skalfaktorn helt: 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
- Vi kan använda detta för att lösa verkliga problem som involverar liknande polygoner - till exempel att hitta längden på saknade sidor, om vi känner till några av de andra sidorna. I följande avsnitt ser du några exempel. 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### Liknande trianglar 
-
-Likhetskonceptet är särskilt kraftfullt med trianglar. Vi vet redan att motsvarande inre vinklar i liknande polygoner är lika. 
-
-För trianglar är det motsatta också sant: det betyder att om du har två trianglar med samma tre vinkelstorlekar, måste trianglarna vara lika. 
-
-Och det blir ännu bättre! Vi vet att de inre vinklarna i en triangel alltid lägger till [[180]]°. Detta betyder att om vi känner till två vinklar i en triangel, kan vi alltid räkna ut den tredje. 
-
-För likhet innebär detta att vi också bara behöver kontrollera _två vinklar för_ att avgöra om trianglar är lika. Om två trianglar har två vinklar av samma storlek, måste den tredje vinkeln också vara densamma i båda. 
-
-Detta resultat kallas ibland [__AA-likhetsvillkor__](gloss:triangle-aa) för trianglar. (De två _som_ står för de två _vinklarna som_ vi jämför.) 
-
-::: .theorem
-
-Om två vinklar i en triangel överensstämmer med två vinklar i en annan triangel är de två trianglarna lika. 
-
-:::
-
----
-> id: similar-triangles-1
-
-Låt oss titta på några exempel där det är användbart: 
-
-::: column(width=320)
-
-{.todo} COMING SOON - Animering 
-
-::: column.grow
-
-Här kan du se bilden av en stor fyr. Tillsammans med en vän vill du mäta fyrens höjd, men tyvärr kan vi inte klättra upp till toppen. 
-
-Det visar sig att diagrammet, mycket väl doldt, innehåller två liknande trianglar: en bildas av fyren och dess skugga, och en bildas av din vän och hennes skugga. 
-
-Båda trianglarna har en rät vinkel i botten. Solstrålarna är parallella, vilket innebär att de andra två vinklarna i botten är motsvarande vinklar och också lika. Genom AA-villkoret för trianglar måste dessa två vara liknande. 
-
-Vi kan enkelt mäta längden på skuggorna, och vi känner också till din väns höjd. Nu kan vi använda proportionaliteten hos sidor i liknande trianglar för att hitta fyrens höjd: 
-
-{.todo} Kommer snart - Ekvation 
-
-Därför är fyren 1,5 meter lång. 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo} COMING SOON - Animering 
-
-::: column.grow
-
-Vi kan använda samma teknik för att mäta avstånd på marken. Här vill vi hitta bredden på en stor flod. Det finns ett stort träd på ena sidan av floden, och jag har en pinne som är en meter lång. 
-
-Försök att rita ytterligare två liknande trianglar i detta diagram. 
-
-Du kan markera punkten längs floden, som ligger direkt på siktlinjen från slutet av pinnen till trädet. Då kan vi mäta avståndet till pinnen och till punkten mittemot trädet. 
-
-Återigen är dessa två trianglar liknande på grund av AA-tillståndet. De har båda en rätt vinkel och i par motsatta vinklar. 
-
-Enligt proportionalitetsregeln betyder detta det 
-
-{.todo} Kommer snart - Ekvation 
-
-Därför är flodens bredd 45 meter. 
-
-:::
-
----
-
-### Likhet med strålar 
-
-Teorem: Om en stråle halverar en vinkel på en triangel, delar den motsatta sidan i segment som är proportionella mot längden på de andra två sidorna. 
-
-Vi kan utöka detta teorem till en situation utanför trianglar där vi har flera parallella linjer skära av transversaler. 
-
-Teorem: Om tre eller fler parallella linjer skärs av två tvärgående delar de tvärgående proportionellt. 
-
-Tänk på ett midsegment av en triangel. Ett mellansegment är parallellt med en sida av en triangel och delar de andra två sidorna i kongruenta halvor. Mellansegmentet delar de två sidorna proportionellt. 
-
-Triangelproportionalitetsteorem: Om en linje parallell med ena sidan av en triangel korsar de andra två sidorna, delar den dessa sidor proportionellt. 
-
-Triangel Proportionalitetsteorem Converse: Om en linje delar två sidor av en triangel proportionellt, är den parallell med den tredje sidan. 
-
----
-
-### Själv likhet 
-
-Det finns några nyfikna matematiska former som liknar en mindre del _av sig själva_ . Ett exempel är __Sierpinksi-triangeln__ : hela triangeln liknar någon av de mindre trianglarna som den består av. Du kan zooma in och oändligt många mindre och mindre trianglar. 
-
-Former med den här egenskapen kallas __Fractals__ . De har några överraskande och verkligen XXX egenskaper, som du kommer att lära dig mer om i framtiden. 
-
----
-
-Trianglar är inte bara användbara för att mäta avstånd. I nästa kurs kommer vi att lära oss mycket mer om trianglar och deras egenskaper.
+TODO

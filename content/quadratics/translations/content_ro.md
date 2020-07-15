@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
 

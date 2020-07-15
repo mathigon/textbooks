@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 De nombreux concepts géométriques comme les [lignes](gloss:line) ou les [polygones](gloss:polygon) ont été «inventés» par les mathématiciens. La symétrie, en revanche, est partout autour de nous. Presque toutes les plantes, les animaux et même nous, les humains, sont symétriques. 
 
@@ -78,6 +79,7 @@ Le résultat d'une transformation s'appelle l' [__image__](gloss:transformation-
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 Une [__transformation rigide__](gloss:rigid-transformation) est un type spécial de transformation qui ne change pas la taille ou la forme d'une figure. Nous pourrions imaginer qu'il est fait d'un matériau solide comme le bois ou le métal: nous pouvons le déplacer, le tourner ou le retourner, mais nous ne pouvons pas l'étirer, le plier ou le déformer. 
 
@@ -446,35 +448,7 @@ Les transformations sont un concept important dans de nombreuses parties des mat
 > section: congruence
 > sectionStatus: dev
 
-FAIRE 
-
----
-
-### Composition des transformations 
-
-Bien sûr, nous pouvons combiner plusieurs traductions, réflexions et rotations pour créer des transformations plus complexes. 
-
-{.todo} Exemple TODO 
-
-Cependant, il s'avère que peu importe le nombre de transformations différentes que vous combinez: vous pouvez toujours trouver une autre transformation qui fait de même en une seule fois! 
-
-{.todo} Calculateur de composition de transformation TODO 
-
-La combinaison de deux réflexions est particulièrement intéressante. Il y a deux cas différents que nous devons considérer: 
-
-::: column.grow
-
-Si les deux lignes de réflexion sont parallèles, le résultat est une seule translation. La direction de la translation est perpendiculaire aux lignes de réflexion et la distance est le double de la distance entre les lignes de réflexion. 
-
-{.todo} TODO Animation 
-
-::: column.grow
-
-Si les deux lignes de réflexion se croisent, le résultat est une seule rotation. Le centre de rotation est l'intersection entre les lignes de réflexion et l'angle est le double de l'angle entre les lignes de réflexion. 
-
-{.todo} TODO Animation 
-
-:::
+TODO
 
 ---
 
@@ -483,6 +457,7 @@ Si les deux lignes de réflexion se croisent, le résultat est une seule rotatio
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 La [__symétrie__](gloss:symmetry) est partout autour de nous, et un concept intuitif: les différentes parties d'un regard d'objet _même_ d' une certaine façon. Mais en utilisant des transformations, nous pouvons donner une définition mathématique beaucoup plus précise de ce que signifie _réellement la_ symétrie: 
 
@@ -739,6 +714,7 @@ Complétez maintenant ces formes, afin qu'elles aient une symétrie de rotation:
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
  Certaines formes ont plus d'une symétrie - jetons un œil au [carré](gloss:square) comme exemple simple. 
 
@@ -1096,6 +1072,7 @@ En plus des translations, des réflexions, des rotations et des réflexions de g
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 Jusqu'à présent, toutes les symétries que nous avons examinées étaient _visuelles_ dans un certain sens: formes, images ou motifs visibles. En fait, la symétrie peut être un concept beaucoup plus large: l' _immunité au changement_ . 
 
@@ -1147,6 +1124,7 @@ La symétrie peut même prédire l'existence de particules fondamentales. Un exe
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Jusqu'à présent, nous venons de regarder [[rigide | conforme |]] transformations [[visuelles]] . _{span.reveal(when="blank-0")} Maintenant, réfléchissons à une autre: une [__dilatation__](gloss:dilation) change la taille d'une forme en l'agrandissant ou en la diminuant._ 
 
@@ -1193,169 +1171,4 @@ Si le [facteur d'échelle](gloss:scale-factor) est compris entre 0 et 1, l'image
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
-Pour les transformations rigides, l'image est toujours [[congruente | plus grand | plus petit que]] l'original - mais ce [[n'est plus | toujours]] vrai pour les dilatations. Au lieu de cela, nous disons que deux formes sont [__similaires__](gloss:similar) . Ils ont la même forme générale, mais pas nécessairement la même taille. 
-
-Le symbole de similitude est `∼` (similaire au symbole de congruence, qui était `≅` ). Dans cet exemple, nous écririons `A ∼ A'` . 
-
-::: column(width=240)
-
-{.todo} À VENIR - Illustration 
-
-:::
-
----
-> id: perspective
-
-### Dessins en perspective 
-
-Vous avez peut-être remarqué que ces dilatations avec les rayons de connexion ressemblent presque à des __dessins en perspective__ . Le centre de dilatation est appelé le __point de fuite__ , car il semble que c'est là que tout «disparaît au loin». 
-
-Trouvez le point de fuite dans la figure ci-dessous: 
-
-{.todo} À VENIR - Interactif 
-
-Pouvez-vous maintenant dessiner une autre maison qui correspond aux maisons existantes? 
-
----
-> id: similar-polygons
-
-### Polygones similaires 
-
-La similitude peut nous en dire beaucoup sur les formes. Par exemple, les [cercles](gloss:circle) , les [carrés](gloss:square) et les [triangles équilatéraux](gloss:equilateral-triangle) sont [[toujours | quelquefois | jamais]] pareil. Ils peuvent avoir des tailles différentes, mais toujours la même forme générale. 
-
-::: column.grow
-
-Les deux quadrilatères de droite sont similaires. Notre première observation importante est que dans des polygones similaires, toutes les paires d'angles correspondantes sont [congruentes](gloss:congruent-angles) . Cela signifie que 
-
-{.text-center} [_{.m-red} ∡ABC_ ≅ _{.m-red} ∡A'B'C '_](target:a) _{.space}_ [_{.m-blue} ∡BCD_ ≅ _{.m-blue} ∡B'C'D '_](target:b)  
-[_{.m-green} ∡CDE_ ≅ _{.m-green} ∡C'D'E '_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ ≅ _{.m-yellow} ∡D'E'A '_](target:d) 
-
-Le deuxième fait important est que dans des polygones similaires, tous les côtés sont mis à l'échelle __proportionnellement__ par le facteur d'échelle de la dilatation correspondante. Si le facteur d'échelle est ${k}{k|1.5|0.5,2,0.1} , puis 
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
-Nous pouvons plutôt réorganiser ces équations et éliminer complètement le facteur d'échelle: 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
- Nous pouvons l'utiliser pour résoudre des problèmes réels qui impliquent des polygones similaires - par exemple, trouver la longueur des côtés manquants, si nous connaissons certains des autres côtés. Dans la section suivante, vous verrez quelques exemples. 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### Triangles similaires 
-
-Le concept de similitude est particulièrement puissant avec les triangles. Nous savons déjà que les angles internes correspondants dans des polygones similaires sont égaux. 
-
-Pour les triangles, l'inverse est également vrai: cela signifie que si vous avez deux triangles avec les mêmes trois angles, les triangles doivent être similaires. 
-
-Et c'est encore mieux! Nous savons que les angles internes d'un triangle totalisent toujours [[180]]°. Cela signifie que si nous connaissons deux angles dans un triangle, nous pouvons toujours déterminer le troisième. 
-
-Pour des raisons de similitude, cela signifie que nous devons également vérifier _deux angles_ pour déterminer si les triangles sont similaires. Si deux triangles ont deux angles de même taille, le troisième angle doit également être le même dans les deux. 
-
-Ce résultat est parfois appelé la [__condition de similarité AA__](gloss:triangle-aa) pour les triangles. (Les deux _As_ représentent les deux _angles que_ nous comparons.) 
-
-::: .theorem
-
-Si deux angles dans un triangle sont congruents à deux angles dans un autre triangle, les deux triangles sont similaires. 
-
-:::
-
----
-> id: similar-triangles-1
-
-Voyons quelques exemples où cela est utile: 
-
-::: column(width=320)
-
-{.todo} À VENIR - Animation 
-
-::: column.grow
-
-Ici, vous pouvez voir l'image d'un grand phare. Avec un ami, vous voulez mesurer la hauteur du phare, mais malheureusement nous ne pouvons pas grimper au sommet. 
-
-Il s'avère que, très bien caché, le diagramme contient deux triangles similaires: l'un est formé par le phare et son ombre, et l'autre est formé par votre ami et son ombre. 
-
-Les deux triangles ont un angle droit en bas. Les rayons du soleil sont parallèles, ce qui signifie que les deux autres angles en bas sont des angles correspondants, et également égaux. Par la condition AA pour les triangles, ces deux doivent être similaires. 
-
-Nous pouvons facilement mesurer la longueur des ombres, et nous connaissons également la hauteur de votre ami. Maintenant, nous pouvons utiliser la proportionnalité des côtés dans des triangles similaires pour trouver la hauteur du phare: 
-
-{.todo} À VENIR - Équation 
-
-Par conséquent, le phare mesure 1,5 m de haut. 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo} À VENIR - Animation 
-
-::: column.grow
-
-On peut utiliser la même technique pour mesurer des distances au sol. Ici, nous voulons trouver la largeur d'une grande rivière. Il y a un grand arbre d'un côté de la rivière et j'ai un bâton d'un mètre de long. 
-
-Essayez de dessiner deux autres triangles similaires dans ce diagramme. 
-
-Vous pouvez marquer le point le long du côté de la rivière, qui se trouve directement sur la ligne de visée de l'extrémité du bâton à l'arbre. Ensuite, nous pouvons mesurer les distances au bâton et au point directement en face de l'arbre. 
-
-Encore une fois, ces deux triangles sont similaires en raison de la condition AA. Ils ont tous les deux un angle droit et une paire d'angles opposés. 
-
-Selon la règle de proportionnalité, cela signifie que 
-
-{.todo} À VENIR - Équation 
-
-Par conséquent, la largeur de la rivière est de 45 mètres. 
-
-:::
-
----
-
-### Similitude sur les rayons 
-
-Théorème: si un rayon bissecte un angle d'un triangle, alors il divise le côté opposé en segments qui sont proportionnels aux longueurs des deux autres côtés. 
-
-Nous pouvons étendre ce théorème à une situation en dehors des triangles où nous avons plusieurs lignes parallèles coupées par des transverales. 
-
-Théorème: Si trois lignes parallèles ou plus sont coupées par deux transversales, alors elles divisent les transversales proportionnellement. 
-
-Pensez à un segment médian d'un triangle. Un segment médian est parallèle à un côté d'un triangle et divise les deux autres côtés en moitiés congruentes. Le segment médian divise ces deux parties proportionnellement. 
-
-Théorème de proportionnalité du triangle: si une ligne parallèle à un côté d'un triangle coupe les deux autres côtés, elle divise ces côtés proportionnellement. 
-
-Triangle Théorème de proportionnalité Converse: Si une ligne divise deux côtés d'un triangle proportionnellement, alors elle est parallèle au troisième côté. 
-
----
-
-### Auto-similitude 
-
-Il existe des formes mathématiques curieuses qui sont similaires à une plus petite partie _d'eux-mêmes_ . Un exemple est le __Triangle Sierpinksi__ : le triangle entier est similaire à l'un des triangles plus petits sur lesquels il se compose. Vous pouvez zoomer et infiniment de triangles de plus en plus petits. 
-
-Les formes possédant cette propriété sont appelées __fractales__ . Ils ont des propriétés surprenantes et vraiment XXX, que vous en apprendrez plus à l'avenir. 
-
----
-
-Les triangles ne sont pas seulement utiles pour mesurer les distances. Dans le prochain cours, nous en apprendrons beaucoup plus sur les triangles et leurs propriétés.
+TODO

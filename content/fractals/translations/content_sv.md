@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 När du tittar runt naturen kanske du har märkt intrikata växter som dessa:
 
@@ -490,6 +491,7 @@ Och vi kan till och med vända den här processen för att komprimera digitala b
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -682,6 +684,7 @@ Det finns många varianter av Sierpinski-triangeln och andra fraktaler med likna
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Alla fraktaler som vi såg i de föregående kapitlen skapades med en process med __iteration__: du börjar med ett specifikt mönster och sedan upprepar det om och om igen.
 

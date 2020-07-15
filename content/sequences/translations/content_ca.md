@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Moltes professions que utilitzen matemàtiques estan interessades en un aspecte concret: _trobar patrons_ i ser capaços de predir el futur. Aquests són alguns exemples: 
 
@@ -263,6 +264,7 @@ A continuació, es mostren alguns exemples més de fotografia de seqüència d�
 
 > section: arithmetic-geometric
 > id: halley
+> translated: auto
 
 ::: column.grow
 
@@ -591,18 +593,6 @@ Aquesta seqüència de nombres té un nom especial: les __potències de 3__ . Co
 
 {.todo} PRÒXIMAMENT! 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 ---
 > id: chessboard
 
@@ -610,18 +600,13 @@ Aquesta seqüència de nombres té un nom especial: les __potències de 3__ . Co
 
 {.todo} PRÒXIMAMENT! 
 
-    
-    
-    
-    
-    
-
 ---
 
 ## Nombres figurats 
 
 > section: figurate
 > id: figurate
+> translated: auto
 
 El nom de [seqüències geomètriques](gloss:geometric-sequence) és força confús, perquè no tenen res a veure amb la geometria. De fet, el nom es va desenvolupar fa centenars d’anys, quan els matemàtics van pensar en la _multiplicació_ i l’ _arrelament quadrat_ d’una manera molt més geomètrica. 
 
@@ -695,15 +680,6 @@ No és casual que sempre hi hagi 10 pins quan es fan bitlles o 15 pilotes quan j
 Malauradament, la fórmula recursiva no és de gran ajuda si volem trobar el número del triangle número 100 o 5000, sense calcular primer tots els anteriors. Però, com vam fer amb les seqüències aritmètiques i geomètriques, podem intentar trobar una fórmula explícita per als nombres del triangle. 
 
 {.todo} COM VEURE: Prova animada de la fórmula del número del triangle 
-
-    
-      g
-    
-    
-    
-    
-    
-    
 
 ---
 > id: triangle-sums
@@ -880,6 +856,7 @@ FER
 
 > section: fibonacci
 > id: rabbits
+> translated: auto
 
 Imagineu-vos que heu rebut un parell de conills, un mascle i una femella. Són conills molt especials, perquè no moren mai, i la femella dóna a llum una nova parella de conills exactament un cop al mes (sempre una altra parella de mascles i femelles). 
 
@@ -1285,6 +1262,7 @@ Quantes opcions hi ha per a escala amb 6, 7 o 8 graons? Podeu detectar un patró
 
 > section: special
 > id: special-intro
+> translated: auto
 
 A més de [les](gloss:geometric-sequence) seqüències [aritmètiques](gloss:arithmetic-sequence) i [geomètriques](gloss:geometric-sequence) , [els nombres de Fibonacci](gloss:fibonacci-numbers) i els [nombres](gloss:fibonacci-numbers) [figurats](gloss:figurate-numbers) , hi ha infinitat de seqüències interessants que no segueixen un patró regular i similar. 
 
@@ -1534,6 +1512,7 @@ En aquest qüestionari podeu combinar tots els vostres coneixements sobre seqü�
 
 > section: pascals-triangle
 > id: pascal-intro
+> translated: auto
 
 A continuació, es pot veure una piràmide de números que es crea mitjançant un patró simple: comença amb una sola "1" a la part superior, i cada cel·la següent és la suma de les dues cel·les directament a sobre. Passa el ratolí sobre algunes de les cel·les per veure com es calculen i, a continuació, empleneu les que falten: 
 
@@ -1750,20 +1729,6 @@ Si continuem el patró de cèl·lules divisibles per 2, obtenim una que és molt
 De la qual hem de parlar una propietat més important del triangle de Pascal. Per entendre-ho, intentarem resoldre el mateix problema amb dos mètodes completament diferents i, a continuació, veurem com es relacionen. 
 
 {.todo} PRÒXIMAMENT 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 ---
 

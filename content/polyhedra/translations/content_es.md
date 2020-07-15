@@ -4,6 +4,7 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
 Un [__polígono__](gloss:polygon) es una forma cerrada y plana que solo tiene lados rectos. Los polígonos pueden tener cualquier número de lados y ángulos, pero los lados no pueden ser curvos. ¿Cuál de las siguientes formas son polígonos? 
 
@@ -260,6 +261,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
 En el [curso anterior](/course/triangles) investigamos muchas propiedades diferentes de los triángulos. Ahora echemos un vistazo a los cuadriláteros. 
 
@@ -819,6 +821,7 @@ Un [rombo](gloss:rhombus) es un cuadrilátero que tiene cuatro lados congruentes
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
 [Los polígonos](gloss:polygon) aparecen en todas partes en la naturaleza. Son especialmente útiles si desea enlosar un área grande, porque puede encajar polígonos juntos sin espacios ni superposiciones. Patrones como ese se llaman [__teselaciones__](gloss:tessellation) . 
 
@@ -1212,6 +1215,7 @@ Penrose estaba explorando los mosaicos puramente por diversión, pero resulta qu
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 Hasta ahora hemos visto lo que podemos hacer con los polígonos en un mundo plano y bidimensional. Un [__poliedro__](gloss:polyhedron) es un objeto tridimensional que se compone de polígonos. Aquí hay unos ejemplos: 
 
@@ -1263,15 +1267,7 @@ Si prueba diferentes poliedros, como los anteriores, encontrará que la fórmula
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Nuestro mundo entero es tridimensional, pero a menudo es mucho más fácil dibujar o visualizar objetos planos bidimensionales. Y hay algunas formas diferentes de ver los poliedros tridimensionales de una manera bidimensional. 
-
- ¿Cuál de estas redes forma un cubo? Haga coincidir la red con el objeto https://github.com/polymake/matchthenet Redes de dibujo 
-
-Describa la sección transversal formada por la intersección del plano y el sólido. 
-
-Una sección transversal es la intersección de un plano con un sólido. Otra forma de representar una figura tridimensional en un plano bidimensional es usar una red. Una red es una representación plana desplegada de los lados de una forma tridimensional. 
-
-girar un cubo para hacer una sección transversal hexagonal 
+TODO
 
 ---
 
@@ -1297,6 +1293,7 @@ QUE HACER
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 Al comienzo de este curso definimos [polígonos regulares](gloss:regular-polygon) como [polígonos](gloss:regular-polygon) particularmente "simétricos", donde todos los lados y ángulos son iguales. Podemos hacer algo similar para los poliedros. 
 

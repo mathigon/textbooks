@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -325,6 +326,7 @@ Det finns till och med en _Pi-dag_ varje år, som antingen faller den 14 mars, f
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Hittills inom geometri har vi alltid mätt vinklar i [grader](gloss:degrees) . EN __{.m-red} full__ cirkelrotation är [[360]]°, a __{.m-green} halvcirkeln__ är [[180]]°, a __{.m-yellow} kvartcirkeln__ är [[90]]°, och så vidare. 
 
@@ -573,6 +575,7 @@ Att använda radianer har en särskilt intressant fördel när du använder Sine
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 I de föregående avsnitten lärde du dig namnen som givits till flera olika delar av en cirkel - som mitt, radie, diameter och omkrets. Det finns dock många geometriska element relaterade till en cirkel, som vi måste lösa mer komplexa problem: 
 
@@ -886,59 +889,7 @@ Det var en av dessa felaktiga mätningar som fick Christopher Columbus att segla
 > section: circle-theorems
 > sectionStatus: dev
 
-https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
-
-__[CC] Identifiera och beskriv förhållanden mellan inskriven vinklar, radier och ackord. Inkludera förhållandet mellan centrala, inskriven och omskriven vinklar; inskriven vinklar på en diameter är rät vinkel; en cirkelns radie är vinkelrätt mot tangenten där radien korsar cirkeln.__ 
-
-En inskriven vinkel är en vinkel med dess topp är cirkeln och dess sidor innehåller ackord. Den fångade bågen är bågen som ligger på insidan av den inskriven vinkeln och vars ändpunkter är i vinkeln. Korsningen på en inskriven vinkel kan vara var som helst på cirkeln så länge dess sidor korsar cirkeln för att bilda en fångad båge. 
-
-__Insected Angle Theorem__ Måttet på en inscripted vinkel är halva måttet på dess fångade båge. För att bevisa det inskrivna vinklarna, måste du dela upp det i tre fall, liksom de tre olika vinklarna som dras från utredningen. 
-
-__Congruent Inscribed Angle Theorem__ Inscribed vinklar som fångar upp samma båge är kongruenta. 
-
-__Insected Angle Halvcirkelteorem__ En vinkel som fångar upp en halvcirkel är en rät vinkel. 
-
-I teoret för inskriven vinkel halvcirkel kan vi också säga att vinkeln är inskriven i en halvcirkel. Varje gång en rät vinkel är inskriven i en cirkel, vinkelns ändpunkter är ändpunkterna med en diameter. Därför är konversationen av Inscrib Angle Semicircle Theorem också sant. 
-
-När en vinkel är på en cirkel är toppmaterialet på cirkelns omkrets. En typ av vinkel på en cirkel är en bildad av en tangent och ett ackord. 
-
-__Chord / Tangent Angle Theorem__ Måttet på en vinkel som bildas av ett ackord och en tangent som korsar varandra i cirkeln är halva måttet på den fångade bågen. 
-
-Från Chord / Tangent Angle Theorem vet vi nu att det finns två typer av vinklar som är halva måttet på den avlyssnade bågen; en inskriven vinkel och en vinkel som bildas av ett ackord och en tangens. Därför kommer varje vinkel med dess topp på en cirkel att vara halva måttet på den avlyssnade bågen. 
-
-En vinkel anses inne i en cirkel när toppmaterialet är någonstans inuti cirkeln, men inte i mitten. Alla vinklar i en cirkel bildas av två korsande ackord. 
-
-__Korsande kordvinklar Teorem__ Måttet på vinkeln som bildas av två ackord som korsar sig inuti en cirkel är medelvärdet för måttet på de avlyssnade bågarna. 
-
-En vinkel anses vara utanför en cirkel om vinkelns topp är utanför cirkeln och sidorna är tangenter eller fästen. Det finns tre typer av vinklar som är utanför en cirkel: en vinkel som bildas av två tangenter, en vinkel som bildas av en tangent och en sektion, och en vinkel som bildas av två tangenter. Precis som en vinkel inuti eller på en cirkel har en vinkel utanför en cirkel en specifik formel som involverar de avlyssnade bågarna. 
-
-__Yttre vinkelteorem__ Måttet på en vinkel som bildas av två sekanter, två tangenter eller en sekant och en tangens som dras från en punkt utanför cirkeln är lika med hälften av skillnaden mellan måtten på de avlyssnade bågarna. 
-
-När två ackord korsar varandra i en cirkel är de två trianglarna som de skapar lika, vilket gör sidorna på varje triangel i proportion till varandra. Om vi tar bort AD och BC är förhållandena mellan AE, EC, DE och EB fortfarande desamma. 
-
-__Växande ackordssats__ Om två ackord korsar varandra inuti en cirkel så att den ena delas upp i segment med längd a och b och den andra i segment med längd c och d, då ab = cd. Med andra ord är produkten från segmenten i ett ackord lika med produkten från segmenten i det andra ackordet. 
-
-Förutom att bilda en vinkel utanför en cirkel, kan cirkeln dela upp sekanterna i segment som är proportionella med varandra. 
-
-Om vi drar in de korsande ackorden kommer vi att ha två liknande trianglar. 
-
-Från de inskrivna vinklarna och den reflexiva egenskapen (∠R≅∠R), △ PRS∼ △ TRQ. Eftersom de två trianglarna är lika kan vi ställa in en proportion mellan motsvarande sidor. Krym sedan sedan. ac + d = ca + b⇒a (a + b) = c (c + d) 
-
-__Två Secants Segment Teorem__ Om två Secants dras från en gemensam punkt utanför en cirkel och segmenten är märkta som ovan, då a (a + b) = c (c + d). Med andra ord, är produkten från det yttre segmentet och hela en sekants lika med produkten från det yttre segmentet och hela det andra sekantets hela. 
-
-Om en tangent och sekant möts på en gemensam punkt utanför en cirkel, har de skapade segmenten ett liknande förhållande till två sekanta strålar. Kom ihåg att produkten från den yttre delen av en sektion och helheten är lika med den som den andra sektionen. Om ett av dessa segment är en tangens kommer det fortfarande att vara produkten från den yttre delen och helheten. För en tangentlinje är emellertid den yttre delen och helheten lika. 
-
-__Tangent Secant Segment Teorem__ Om en tangent och en secant dras från en gemensam punkt utanför cirkeln (och segmenten är märkta som bilden till vänster), a2 = b (b + c). Detta innebär att produkten från det yttersegmentet av det säkrade och det hela är lika med kvadratet på tangentsegmentet. 
-
----
-
-### Thales 'sats 
-
-Bevis med användning av likbeniga trianglar 
-
-Kombinerar all euklidisk geometri 
-
-{.todo} ATT GÖRA 
+TODO
 
 ---
 
@@ -947,15 +898,7 @@ Kombinerar all euklidisk geometri
 > sectionStatus: dev
 > section: cyclic-polygons
 
-__[CC] Konstruera en liksidig triangel, en fyrkant och en vanlig hexagon inskriven i en cirkel.__ 
-
-En inskriven polygon är en polygon där varje toppunkt är i en cirkel. Observera att inte alla fyrkantiga eller polygoner kan skrivas in i en cirkel. Inskrivna fyrkantiga benämningar kallas också cykliska fyrhjulingar. För dessa typer av fyrdubblar måste de ha en speciell egenskap. Vi kommer att undersöka det här. 
-
-Undersökningen visar att motsatta vinklar i en inskriven fyrkant är kompletterande. Genom att skära det fyrkantiga i hälften, genom diagonalen, kunde vi visa att de andra två vinklarna (som vi inte skar igenom) bildade ett linjärt par när de matchades upp. 
-
-Inskriven fyrkantig teorem: En fyrkantig inskrivning i en cirkel om och bara om motsatta vinklar är kompletterande. 
-
-https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -963,6 +906,7 @@ https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 I de föregående avsnitten studerade vi egenskaperna hos cirklar på en plan yta. Men vår värld är faktiskt tredimensionell, så låt oss titta på vissa 3D-fasta material som är baserade på cirklar: 
 
@@ -1523,11 +1467,6 @@ För att hitta en sfärs ytarea kan vi återigen ungefärliga det med en annan f
 
 {.todo} KOMMER GÅNGT: Sfärytans ytskydd 
 
-    
-    
-    
-    
-
 ---
 
 ## Koniska sektioner 
@@ -1535,6 +1474,7 @@ För att hitta en sfärs ytarea kan vi återigen ungefärliga det med en annan f
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 Cirkeln är en av fyra olika former som kan skapas med "skivor" genom en [kon](gloss:cone) . Detta kan demonstreras med hjälp av ljuskotten från en fackla: 
 

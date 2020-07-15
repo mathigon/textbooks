@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 Her gün sayısız bağlantı ve ağ ile çevriliyiz: yollar ve demiryolu hatları, telefon hatları, internet, elektronik devreler ve hatta moleküler bağlar. Arkadaşlar ve aileler arasında _sosyal ağlar_ bile var. Başka örnekler düşünebilir misiniz? 
 
@@ -154,6 +155,7 @@ Köşe tek bir döngü oluşur Grafikler [__çevrimler olarak__](gloss:graph-cyc
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Königsberg Köprüleri 
 
@@ -274,6 +276,7 @@ Euler'nin keşfi gerçek hayatta özellikle yararlı görünmeyebilir, ancak gra
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## El Sıkışma ve Flört 
 
@@ -347,6 +350,7 @@ Bu durumda, karşılık gelen grafik iki ayrı köşe kümesinden oluşur. Her k
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Düzlemsel Grafikler 
 
@@ -558,6 +562,7 @@ __{.red} 90__ Kenar
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Harita Boyama 
 
@@ -686,6 +691,7 @@ Ancak matematikçiler, ülkelerin birden fazla bağlantısız bileşenden oluşa
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Gezgin Satıcı Sorunu 
 
@@ -840,6 +846,7 @@ Gezgin Satıcı problemini çözmek için hızlı bir algoritma bulmak, matemati
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Günlük Yaşamda Grafikler 
 

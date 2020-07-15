@@ -4,6 +4,7 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
 Một [__đa giác__](gloss:polygon) là một hình dạng khép kín, phẳng, chỉ có các cạnh thẳng. Đa giác có thể có bất kỳ số cạnh và góc, nhưng các cạnh không thể cong. Hình nào dưới đây là đa giác? 
 
@@ -260,6 +261,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
 Trong [khóa học trước,](/course/triangles) chúng tôi đã nghiên cứu nhiều tính chất khác nhau của hình tam giác. Bây giờ chúng ta hãy nhìn vào tứ giác. 
 
@@ -819,6 +821,7 @@ Diện tích của hình chữ nhật này là [[hai lần | giống như | ba l
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
 [Đa giác](gloss:polygon) xuất hiện ở mọi nơi trong tự nhiên. Chúng đặc biệt hữu ích nếu bạn muốn xếp một khu vực rộng lớn, bởi vì bạn có thể ghép các đa giác lại với nhau mà không có bất kỳ khoảng trống hoặc chồng chéo nào. Các mô hình như thế được gọi là [__tessellations__](gloss:tessellation) . 
 
@@ -1212,6 +1215,7 @@ Penrose đã khám phá các tessellations hoàn toàn cho vui, nhưng hóa ra c
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 Cho đến nay chúng ta chỉ nhìn vào những gì chúng ta có thể làm với đa giác trong một thế giới hai chiều phẳng. [__Đa diện__](gloss:polyhedron) là một vật thể ba chiều được tạo thành từ các đa giác. Dưới đây là một số ví dụ: 
 
@@ -1263,15 +1267,7 @@ Nếu bạn thử các khối đa diện khác nhau, như các khối đa diện
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Toàn bộ thế giới của chúng ta là ba chiều - nhưng thường dễ dàng hơn nhiều để vẽ hoặc hình dung các vật thể phẳng, hai chiều. Và có một vài cách khác nhau để xem đa diện ba chiều theo cách hai chiều. 
-
- Mạng nào trong số này tạo ra một khối Ghép lưới với đối tượng https://github.com/polymake/matchthenet Vẽ lưới 
-
-Mô tả mặt cắt được hình thành bởi giao điểm của mặt phẳng và vật rắn. 
-
-Mặt cắt là giao điểm của mặt phẳng với vật rắn. Một cách khác để biểu diễn hình ba chiều trong mặt phẳng hai chiều là sử dụng mạng. Một mạng lưới là một đại diện phẳng, mở ra của các mặt của hình dạng ba chiều. 
-
-xoay một khối lập phương để tạo ra một mặt cắt hình lục giác 
+TODO
 
 ---
 
@@ -1297,6 +1293,7 @@ LÀM
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 Khi bắt đầu khóa học này, chúng tôi đã định nghĩa [các đa giác thông thường là các đa giác](gloss:regular-polygon) đặc biệt đối xứng trực tiếp, trong đó tất cả các cạnh và góc đều giống nhau. Chúng ta có thể làm một cái gì đó tương tự cho khối đa diện. 
 

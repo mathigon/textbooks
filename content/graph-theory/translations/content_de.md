@@ -293,6 +293,7 @@ Eulers Entdeckung mag im wirklichen Leben nicht besonders nützlich erscheinen, 
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Handshakes und Dating 
 
@@ -366,6 +367,7 @@ In diesem Fall besteht der entsprechende Graph aus zwei getrennten Sätzen von E
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Planare Graphen 
 
@@ -577,6 +579,7 @@ __{.red} 90__ Kanten
 ---
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Kartenfärbung 
 
@@ -705,6 +708,7 @@ Mathematiker haben sich jedoch auch Karten von _Imperien angesehen_ , in denen L
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Das Problem des reisenden Verkäufers 
 
@@ -859,8 +863,9 @@ Die Suche nach einem schnellen Algorithmus zur Lösung des Problems des Handlung
 ---
 > id: applications
 > section: applications
+> translated: auto
 
-## Grafiken im Alltag 
+## Anwendungen von Graphen 
 
 Wir haben in den vorhergehenden Kapiteln viele verschiedene Anwendungen der Graphentheorie gesehen, obwohl einige davon etwas erfunden wurden. Es stellt sich jedoch heraus, dass Graphen die Grundlage vieler Objekte, Konzepte und Prozesse im Alltag bilden. 
 

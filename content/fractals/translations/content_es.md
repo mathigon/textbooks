@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Al mirar alrededor de la naturaleza, es posible que haya notado plantas complejas como estas:
 
@@ -490,6 +491,7 @@ E incluso podemos revertir este proceso para comprimir imágenes digitales, para
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -682,6 +684,7 @@ Hay muchas variantes del triángulo de Sierpinski y otros fractales con propieda
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Todos los fractales que vimos en los capítulos anteriores se crearon utilizando un proceso de __iteración__: comienzas con un patrón específico y luego lo repites una y otra vez.
 

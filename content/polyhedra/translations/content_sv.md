@@ -4,6 +4,7 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
 En [__polygon__](gloss:polygon) är en sluten, platt form som endast har raka sidor. Polygoner kan ha valfritt antal sidor och vinklar, men sidorna kan inte vara böjda. Vilka av formerna nedan är polygoner? 
 
@@ -260,6 +261,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
 I den [föregående kursen](/course/triangles) undersökte vi många olika egenskaper hos trianglar. Låt oss nu titta på fyrhjulingar. 
 
@@ -819,6 +821,7 @@ En [romb](gloss:rhombus) är en fyrkant som har fyra sammanhängande sidor. Du k
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
 [Polygoner](gloss:polygon) förekommer överallt i naturen. De är särskilt användbara om du vill kakla in ett stort område, eftersom du kan passa polygoner utan några luckor eller överlappningar. Mönster som det kallas [__tessellationer__](gloss:tessellation) . 
 
@@ -1212,6 +1215,7 @@ Penrose utforskade tessellationerna bara för skojs skull, men det visar sig att
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 Hittills har vi bara tittat på vad vi kan göra med polygoner i en platt, tvådimensionell värld. En [__polyhedron__](gloss:polyhedron) är ett tredimensionellt objekt som består av polygoner. Här är några exempel: 
 
@@ -1263,15 +1267,7 @@ Om du försöker olika polyeder, som de ovan, kommer du att upptäcka att Eulers
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Hela vår värld är tredimensionell - men det är ofta mycket lättare att rita eller visualisera platta, tvådimensionella objekt. Och det finns några olika sätt att se tredimensionell polyeder på ett tvådimensionellt sätt. 
-
- Vilket av dessa nät gör en kub Matcha nätet med objektet https://github.com/polymake/matchthenet Ritningsnät 
-
-Beskriv tvärsnittet som bildas genom skärningspunkten mellan planet och det fasta ämnet. 
-
-Ett tvärsnitt är skärningspunkten mellan ett plan med ett fast ämne. Ett annat sätt att representera en tredimensionell figur i ett tvådimensionellt plan är att använda ett nät. Ett nät är en utbredd, platt representation av sidorna av en tredimensionell form. 
-
-rotera en kub för att skapa ett hexagonalt tvärsnitt 
+TODO
 
 ---
 
@@ -1297,6 +1293,7 @@ ATT GÖRA
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 I början av denna kurs definierade vi [vanliga polygoner](gloss:regular-polygon) som särskilt ”symmetriska” polygoner, där alla sidor och vinklar är desamma. Vi kan göra något liknande för polyeder. 
 

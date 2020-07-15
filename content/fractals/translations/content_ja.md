@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 自然を見回すと、次のような複雑な植物に気づいたかもしれません。
 
@@ -486,6 +487,7 @@ _有限_の領域と_無限_の円周を持つ形状を作成できるとは考�
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -678,6 +680,7 @@ __セルオートマトン__ は、多くの個別のセルで構成されるグ
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 前の章で見たフラクタルはすべて、__反復__ のプロセスを使用して作成されました。特定のパターンから始めて、それを何度も繰り返します。
 

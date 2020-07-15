@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 En mirar al voltant de la natura, potser haureu notat plantes complexes com aquestes: 
 
@@ -475,6 +476,7 @@ I fins i tot podem revertir aquest procés per comprimir imatges digitals, per r
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -658,6 +660,7 @@ Hi ha moltes variants del triangle de Sierpinski i d'altres fractals amb propiet
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Totes les fractals que vam veure als capítols anteriors es van crear mitjançant un procés d’ __iteració__ : comenceu amb un patró específic, i després el repetiu una i altra vegada. 
 

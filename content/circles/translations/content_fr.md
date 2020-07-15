@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -325,6 +326,7 @@ Il y a même un _jour Pi_ chaque année, qui tombe soit le 14 mars, car `pi ≈ 
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Jusqu'à présent en géométrie, nous avons toujours mesuré les angles en [degrés](gloss:degrees) . UNE __{.m-red} la__ rotation du __cercle complet__ est de [[360]]°, un __{.m-green} demi-cercle__ est de [[180]]°, un __{.m-yellow} le quart de cercle__ est de [[90]]°, etc. 
 
@@ -573,6 +575,7 @@ L'utilisation de radians présente un avantage particulièrement intéressant lo
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 Dans les sections précédentes, vous avez appris les noms donnés à plusieurs parties différentes d'un cercle - comme le centre, le rayon, le diamètre et la circonférence. Cependant, il existe de nombreux éléments géométriques liés à un cercle, dont nous aurons besoin pour résoudre des problèmes plus complexes: 
 
@@ -886,59 +889,7 @@ C'est l'une de ces mesures incorrectes qui a incité Christophe Colomb à navigu
 > section: circle-theorems
 > sectionStatus: dev
 
-https://www.mathsisfun.com/geometry/circle-theorems.html https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/ http: // amsi .org.au / teacher_modules / Circle_Geometry.html 
-
-__[CC] Identifier et décrire les relations entre les angles, les rayons et les accords inscrits. Inclure la relation entre les angles centraux, inscrits et circonscrits; les angles inscrits sur un diamètre sont des angles droits; le rayon d'un cercle est perpendiculaire à la tangente où le rayon coupe le cercle.__ 
-
-Un angle inscrit est un angle dont le sommet est le cercle et ses côtés contiennent des accords. L'arc intercepté est l'arc qui se trouve à l'intérieur de l'angle inscrit et dont les extrémités se trouvent sur l'angle. Le sommet d'un angle inscrit peut être n'importe où sur le cercle tant que ses côtés coupent le cercle pour former un arc intercepté. 
-
-__Théorème__ de l'angle inscrit La mesure d'un angle inscrit est la moitié de la mesure de son arc intercepté. Pour prouver le théorème de l'angle inscrit, vous devez le diviser en trois cas, comme les trois angles différents tirés de l'enquête. 
-
-__Théorème des__ angles __inscrits congruents Les__ angles inscrits qui interceptent le même arc sont congruents. 
-
-__Théorème de__ demi-cercle à __angle inscrit__ Un angle qui intercepte un demi-cercle est un angle droit. 
-
-Dans le théorème de demi-cercle à angle inscrit, nous pourrions également dire que l'angle est inscrit dans un demi-cercle. Chaque fois qu'un angle droit est inscrit dans un cercle, les extrémités de l'angle sont les extrémités d'un diamètre. Par conséquent, l'inverse du théorème de demi-cercle à angle inscrit est également vrai. 
-
-Lorsqu'un angle est sur un cercle, le sommet est sur la circonférence du cercle. Un type d'angle sur un cercle est celui formé par une tangente et un accord. 
-
-__Théorème de l'angle / tangente__ La mesure d'un angle formé par un accord et une tangente qui se coupent sur le cercle est la moitié de la mesure de l'arc intercepté. 
-
-Du théorème de la corde / angle tangent, nous savons maintenant qu'il existe deux types d'angles qui sont la moitié de la mesure de l'arc intercepté; un angle inscrit et un angle formé par un accord et une tangente. Par conséquent, tout angle avec son sommet sur un cercle sera la moitié de la mesure de l'arc intercepté. 
-
-Un angle est considéré à l'intérieur d'un cercle lorsque le sommet est quelque part à l'intérieur du cercle, mais pas au centre. Tous les angles à l'intérieur d'un cercle sont formés par deux accords qui se croisent. 
-
-__Théorème__ de l'angle des accords croisés La mesure de l'angle formé par deux accords qui se croisent à l'intérieur d'un cercle est la moyenne de la mesure des arcs interceptés. 
-
-Un angle est considéré comme étant en dehors d'un cercle si le sommet de l'angle est en dehors du cercle et que les côtés sont tangents ou sécants. Il existe trois types d'angles qui sont à l'extérieur d'un cercle: un angle formé par deux tangentes, un angle formé par une tangente et une sécante, et un angle formé par deux sécantes. Tout comme un angle à l'intérieur ou sur un cercle, un angle à l'extérieur d'un cercle a une formule spécifique, impliquant les arcs interceptés. 
-
-__Théorème de l'angle extérieur__ La mesure d'un angle formé par deux sécantes, deux tangentes ou une sécante et une tangente tirées d'un point extérieur au cercle est égale à la moitié de la différence des mesures des arcs interceptés. 
-
-Lorsque deux accords se croisent à l'intérieur d'un cercle, les deux triangles qu'ils créent sont similaires, ce qui rend les côtés de chaque triangle proportionnels l'un à l'autre. Si nous supprimons AD et BC, les rapports entre AE, EC, DE et EB seront toujours les mêmes. 
-
-__Théorème des__ accords croisés Si deux accords se croisent à l'intérieur d'un cercle de sorte que l'un est divisé en segments de longueur a et b et l'autre en segments de longueur c et d alors ab = cd. En d'autres termes, le produit des segments d'un accord est égal au produit des segments du second accord. 
-
-En plus de former un angle à l'extérieur d'un cercle, le cercle peut diviser les sécantes en segments qui sont proportionnels les uns aux autres. 
-
-Si nous dessinons les accords qui se croisent, nous aurons deux triangles similaires. 
-
-D'après les angles inscrits et la propriété réflexive (∠R≅∠R), △ PRS∼ △ TRQ. Parce que les deux triangles sont similaires, nous pouvons définir une proportion entre les côtés correspondants. Ensuite, multipliez-vous. ac + d = ca + b⇒a (a + b) = c (c + d) 
-
-__Théorème des__ deux __segments sécants__ Si deux sécants sont dessinés à partir d'un point commun à l'extérieur d'un cercle et que les segments sont étiquetés comme ci-dessus, alors a (a + b) = c (c + d). En d'autres termes, le produit du segment extérieur et de l'ensemble d'une sécante est égal au produit du segment extérieur et de l'ensemble de l'autre sécante. 
-
-Si une tangente et une sécante se rencontrent en un point commun à l'extérieur d'un cercle, les segments créés ont une relation similaire à celle de deux rayons sécants. Rappelons que le produit de la partie extérieure d'une sécante et de l'ensemble est égal au même de l'autre sécante. Si l'un de ces segments est une tangente, il restera le produit de la partie extérieure et de l'ensemble. Cependant, pour une ligne tangente, la partie extérieure et l'ensemble sont égaux. 
-
-__Théorème du segment__ sécant tangent Si une tangente et une sécante sont dessinées à partir d'un point commun à l'extérieur du cercle (et que les segments sont étiquetés comme l'image de gauche), alors a2 = b (b + c). Cela signifie que le produit du segment extérieur de la sécante et de l'ensemble est égal au carré du segment tangent. 
-
----
-
-### Théorème de Thales 
-
-Preuve à l'aide de triangles isocèles 
-
-Combine toute la géométrie euclidienne 
-
-{.todo} FAIRE 
+TODO
 
 ---
 
@@ -947,15 +898,7 @@ Combine toute la géométrie euclidienne
 > sectionStatus: dev
 > section: cyclic-polygons
 
-__[CC] Construisez un triangle équilatéral, un carré et un hexagone régulier inscrit dans un cercle.__ 
-
-Un polygone inscrit est un polygone où chaque sommet est sur un cercle. Notez que tous les quadrilatères ou polygones ne peuvent pas être inscrits dans un cercle. Les quadrilatères inscrits sont également appelés quadrilatères cycliques. Pour ces types de quadrilatères, ils doivent avoir une propriété spéciale. Nous allons enquêter ici. 
-
-Cette enquête montre que les angles opposés dans un quadrilatère inscrit sont supplémentaires. En coupant le quadrilatère en deux, à travers la diagonale, nous avons pu montrer que les deux autres angles (que nous n'avons pas coupés) formaient une paire linéaire lorsqu'ils étaient appariés. 
-
-Théorème du quadrilatère inscrit: Un quadrilatère est inscrit dans un cercle si et seulement si les angles opposés sont supplémentaires. 
-
-https://www.youtube.com/watch?v=bJOuzqu3MUQ 
+TODO
 
 ---
 
@@ -963,6 +906,7 @@ https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 Dans les sections précédentes, nous avons étudié les propriétés des cercles sur une surface plane. Mais notre monde est en fait en trois dimensions, alors jetons un œil à certains solides 3D basés sur des cercles: 
 
@@ -1523,11 +1467,6 @@ Pour trouver la surface d'une sphère, nous pouvons à nouveau l'approximer en u
 
 {.todo} À VENIR: Sphère Surface Proof 
 
-    
-    
-    
-    
-
 ---
 
 ## Sections coniques 
@@ -1535,6 +1474,7 @@ Pour trouver la surface d'une sphère, nous pouvons à nouveau l'approximer en u
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 Le cercle est l'une des quatre formes différentes qui peuvent être créées à l'aide de «tranches» à travers un [cône](gloss:cone) . Cela peut être démontré en utilisant le cône de lumière d'une torche: 
 
