@@ -132,11 +132,23 @@ function toString(element, STORE) {
 
 module.exports.decode = function decode(text, STORE) {
   const body = (new JSDom(text)).window.document.body;
-  const output = Array.from(body.querySelectorAll('p[sx]'))
+  let output = Array.from(body.querySelectorAll('p[sx]'))
       .map(p => toString(p, STORE)).join('\n\n');
 
-  return output.replace(/\n\n+/g, '\n\n').replace(/---\n\n>/g, '---\n>')
+  // Clean up syntax and special characters
+  output = output.replace(/\n\n+/g, '\n\n').replace(/---\n\n>/g, '---\n>')
       .replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<')
       .replace(/'/g, '\'').replace(/\s°/g, '°').replace(/\s*<br>\s*/g, '  \n')
       .trim() + '\n';
+
+  // Remove comments
+  output = output.split('\n').filter(s => !s.startsWith('    //')).join('\n');
+
+  // Remove leading whitespace
+  output = output.split('\n\n').map(s => (s.startsWith(' ') && !s.startsWith('    ')) ? s.slice(1) : s)
+      .join('\n\n').replace(/\n\n+/g, '\n\n');
+
+  // TODO Fix tables and lists
+
+  return output;
 };
