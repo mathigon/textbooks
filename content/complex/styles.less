@@ -6,4 +6,29 @@
 
 @import "../shared/variables";
 
-// TODO
+
+.timeline {
+  position: relative;
+  height: 160px;
+  margin: 2em 0;
+  border-bottom: 2px solid @border-light;
+
+  .timeline-item {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: @border-light;
+    border-radius: 20px;
+    margin-left: -6px;
+    bottom: -7px;
+  }
+
+  .timeline-panel {
+    position: absolute;
+    width: 140px;
+    left: -64px;
+    bottom: 20px;
+    p { margin: 0; line-height: 1.3; font-size: 16px; text-align: center; }
+    img { width: 120px; height: 80px; margin: 0 auto 8px; display: block; }
+  }
+}
