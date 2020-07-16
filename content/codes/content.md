@@ -394,9 +394,9 @@ _Cytosine_ if placed within a strand of DNA letters.
 > goals: switch
 > sectionStatus: dev
 
-Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many people, when they scroll through their social media feed, or search for a recipe, or stream a movie, actually know how the magic little box actually works?
+Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many of us, as we scroll through ur social media feed, or search for a recipe, or watch a movie from our favorite streaming service, actually know how what's happening actually works?
 
-There are many many complex layers and processes that operate together get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
+There are many many complex layers and processes that operate together to get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
 
 ::: column(width=320)
 
@@ -405,9 +405,9 @@ There are many many complex layers and processes that operate together get infor
 
 ::: column.grow
 
-Transistors are like tiny tiny tiny, microscopic electrical switches that transmit ELECTRONS. Turn it on, the electrons flow. Turn it off, the electrons stop (Does this sound familiar to another device? Perhaps the telegraph?).
+Transistors are like tiny microscopic electrical switches that transmit electrons. Turn on a transistor and the electrons flow. Turn it off and the electrons stop (Perhaps this sounds familiar to the telegraph).
 
-But how can a simple on/off switch store information as complex as videos? We learned in the last chapter about Morse Code. But Transistors are interpreted by a computer through very different means.
+But how can a simple on/off switch store information as complex as sound, images, and videos? We learned in the last chapter about Morse Code, which is used to communicate letters via sound or light. But transistors store data that is interpreted by a computer through very different means.
 
 :::
 
