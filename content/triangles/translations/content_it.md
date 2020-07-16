@@ -287,18 +287,6 @@ orizzontale ad un filo che è attaccato al baricentro:
 Funziona perché il peso del triangolo è distribuito in modo uniforme attorno al
 baricentro. In fisica, questo punto è spesso chiamato il __centro di massa__.
 
-      circle.move(name="a" cx=70 cy=50)
-      circle.move(name="b" cx=60 cy=160)
-      circle.move(name="c" cx=180 cy=130)
-      circle.yellow(x="triangle(a,b,c).centroid" name="d")
-      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
-      circle(hidden name="q" x="p.rotate(pi,d)")
-
-      path.dark(x="triangle(a,b,c)" name="t")
-      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
-      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
-      path.blue(x="line(p,d)")
-
 ---
 > id: circumcircle
 > goals: s0 s1 s2
