@@ -331,7 +331,7 @@ Einschließlich dir selbst und dem Gastgeber sind ${hnd}{hnd|5|3,15,1} Gäste an
 Als die Gäste sich abends zum Aufbruch bereit machen, schüttelt jeder jedem anderen die Hand.
 Wie oft werden insgesamt die Hände geschüttelt?
 
-Wir können das Händeschütteln mit einem Graphen darstellen: jede Person ist [[ein Knoten|eine Kante]], und jeder Handschlag ist [[eine Kante|ein Knoten]].
+Wir können das Händeschütteln mit einem Graphen darstellen: jede Person ist [[ein Knoten|eine Kante]], und jedes Händesschütteln ist [[eine Kante|ein Knoten]].
 
 {.reveal(when='blank-0 blank-1')} Jetzt ist es einfach, die Anzahl der Kanten im Graph zu zählen. Wir stellen
 fest, dass bei ${hnd} Leuten ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden.
@@ -347,11 +347,11 @@ fest, dass bei ${hnd} Leuten ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden
 > id: handshakes-2
 
 Anstatt alle Kanten in großen Graphen zu zählen, könnten wir auch versuchen,
-eine einfache Formel zu finden, die uns das Ergebnis für _jede_ Anzahl von Gästen angibt.
+eine einfache Formel zu finden, die uns das Ergebnis für eine _beliebige_ Anzahl von Gästen angibt.
 
 Jeder der ${n}{n|5|2,8,1} Gäste auf der Party schüttelt ${n-1} anderen die Hand.
 Das macht ${n} × ${n-1} = ${n×(n-1)} geschüttelte Hände insgesamt. Für _n_ Gäste
-wäre die Anzahl der geschüttelten Hände [[`n×(n–1)`|`n×(n+1)`|`n^2`]].
+wäre das ein [[`n×(n–1)`|`n×(n+1)`|`n^2`]] - maliges Händeschütteln.
 
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -363,16 +363,20 @@ Leider ist diese Antwort nicht ganz richtig. Beachte, dass <x-target to=".handsh
 td:first-child, .handshakes tr:first-child td:nth-child(2)">die ersten beiden Einträge
 in der obersten Zeile</x-target> eigentlich die gleichen sind, nur umgedreht.
 
-Tatsächlich haben wir jeden Handschlag [[zweimal|einmal|dreimal]] gezählt, _{span.reveal(when="blank-0")}
+Tatsächlich haben wir jedes Händeschütteln [[zweimal|einmal|dreimal]] gezählt, _{span.reveal(when="blank-0")}
 einmal für jede der beiden beteiligten Personen. Das bedeutet, dass die korrekte
-Anzahl geschüttelter Hände für ${n}{n|5|2,25,1} Gäste `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
+Anzahl des Händeschüttelns für ${n}{n|5|2,25,1} Gäste `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
 
 ---
 > id: handshakes-3
 
-Die Handshake-Diagramme sind etwas Besonderes, da jeder Scheitelpunkt mit jedem anderen Scheitelpunkt verbunden ist. __Diagramme__ mit dieser Eigenschaft werden als __vollständige Diagramme bezeichnet__ . Das vollständige Diagramm mit 4 Eckpunkten wird häufig als abgekürzt `K_4` ist der vollständige Graph mit 5 Eckpunkten bekannt als `K_5` , und so weiter. 
+Die Händeschüttel-Graphen sind ein besonderer Fall, weil jeder Knoten mit jedem
+anderen Knoten verbunden ist. Graphen mit dieser Eigenschaft werden __vollständige Graphen__
+genannt. Ein vollständiger Graph mit 4 Knoten wird oft als `K_4` abgekürzt, ein
+vollständiger Graph mit 5 Knoten wird als `K_5` bezeichnet, und so weiter.
 
-Wir haben gerade gezeigt, dass eine vollständige Grafik mit `n` Eckpunkte, `K_n` , hat `(n × (n-1))/2` Kanten. 
+Wir haben gerade gezeigt, dass ein vollständiger Graph mit `n` Knoten, `K_n`,
+`(n × (n-1))/2` Kanten hat.
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -385,11 +389,16 @@ Wir haben gerade gezeigt, dass eine vollständige Grafik mit `n` Eckpunkte, `K_n
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
-An einem anderen Tag sind Sie zu einem Speed-Dating-Event für eingeladen ${m}{m|5|2,8,1} Jungs und ${f}{f|4|2,8,1} Mädchen. Es gibt viele kleine Tische und jeder Junge verbringt 5 Minuten mit jedem der Mädchen. Wie viele einzelne "Daten" gibt es insgesamt? 
+An einem anderen Tag bist du zu einem Speed-Dating-Event für ${m}{m|5|2,8,1}
+Jungs und ${f}{f|4|2,8,1} Mädchen eingeladen. Es gibt viele kleine Tische und jeder Junge
+verbringt 5 Minuten mit jedem der Mädchen. Wie viele einzelne "Dates" gibt es insgesamt?
 
 ::: column.grow
 
-In diesem Fall besteht der entsprechende Graph aus zwei getrennten Sätzen von Eckpunkten. Jeder Scheitelpunkt ist mit allen Scheitelpunkten im [[Gegenteil verbunden | seine eigene]] Menge, aber keine der Eckpunkte in [[seiner eigenen | der entgegengesetzte]] Satz. __Diagramme__ mit diesem Layout werden als __zweiteilige Diagramme bezeichnet__ . 
+In diesem Fall besteht der entsprechende Graph aus zwei getrennten Gruppen von Knoten.
+Jeder Knoten ist mit allen Knoten in der [[anderen|eigenen]], aber keiner der Knoten
+mit denen in [[seiner eigenen|der anderen]] Gruppe verbunden. Graphen, die diese
+Anordnung haben, werden __bipartite Graphen__ oder __paare Graphen__ genannt.
 
 ::: column(width=300)
 
