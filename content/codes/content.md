@@ -796,6 +796,10 @@ __and those who don't.__
 
     // EDC photo resources
     // https://commons.wikimedia.org/wiki/File:Barcodedmail.JPG
+    // Satellite
+    // https://commons.wikimedia.org/wiki/File:Erdfunkstelle_Raisting_2.jpg
+    // https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Night_Sky.png/1024px-Night_Sky.png
+    // https://upload.wikimedia.org/wikipedia/commons/6/61/Satellite_Cylinder_%28PSF%29.png
 
 ## Error Detection 
 
@@ -811,6 +815,8 @@ __and those who don't.__
 {.fixme} Unforuntately, our atmosphere gets in the way of our messages. Just like looking through a glass of water distorts what's behind it, the charged particles in our atmosphere might distort some of the signals coming from the satellite.
 
 {.todo} satellite streaming bits to a receiver on Earth. // INTERACTIVE
+
+    x-img(src="images/night_sky.png")
 
 {.fixme} There is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
 
