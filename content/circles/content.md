@@ -1675,9 +1675,12 @@ vertex. This is called the [{.pill.green.b} slant height *s*](target:s) of the c
 same as the normal [{.pill.blue.b} height *h*](target:h). We can find the slant height using
 [Pythagoras](gloss:pythagoras-theorem):
 
-| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
-| `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
-{.eqn-system}
+
+{.text-center.reveal(when="blank-0")} `s^2 =`
+_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_
+
+{.text-center.reveal(when="blank-0")} `s =`
+_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_
 
 ::: column(width=280)
 
