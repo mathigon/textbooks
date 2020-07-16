@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@mathigon/boost": "^0.5.1",
-    "@mathigon/core": "^0.5.0",
-    "@mathigon/fermat": "^0.5.0",
+    "@mathigon/core": "^0.5.1",
+    "@mathigon/fermat": "^0.5.1",
     "@mathigon/hilbert": "^0.5.0",
     "@types/d3": "^5.7.2",
     "@types/topojson": "^3.2.2",
@@ -30,7 +30,7 @@
     "@mathigon/parser": "^0.5.2",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
-    "autoprefixer": "^9.7.1",
+    "autoprefixer": "^9.8.5",
     "emojione-assets": "^3.1.1",
     "eslint": "^6.8.0",
     "express": "^4.16.4",
@@ -42,7 +42,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "js-yaml": "^3.14.0",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.3.0",
     "marked": "^0.7.0",
     "npm-run-all": "^4.1.5",
     "postcss-rtl": "^1.7.2",
@@ -51,6 +51,6 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-typescript": "^1.0.1",
     "tslib": "^1.10.0",
-    "typescript": "^3.7.2"
+    "typescript": "^3.9.6"
   }
 }
