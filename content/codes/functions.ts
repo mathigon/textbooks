@@ -7,7 +7,7 @@
 import {delay, wait} from '@mathigon/core';
 import {Point} from '@mathigon/fermat';
 import {$N, ElementView, slide, InputView, SVGView, loadScript} from '@mathigon/boost';
-import {Step, Slider, Slideshow} from '../shared/types';
+import {Step, Slider, Slideshow, Select} from '../shared/types';
 
 import {beep, Beep} from './components/beep'
 import {CodeBox} from './components/code-box'
@@ -576,14 +576,11 @@ export function finger5($section: Step) {
   // reveal: like fade, but elements below slide down
   // reveal-left/right: each element slides in from the left/right
   let i = 0;
-  let delay = 300;
+  const delay = 300;
 
-  // FINGERZ: replace button with goal completion
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
-      $f => $f.enter('slide', 500, i++ * delay)
+  $section.onScore('blank-0', () => $fingers.forEach(
+    $f => $f.enter('slide', 500, i++ * delay)
   ));
-  // I love how this looks
-
 }
 
 export function finger32($section: Step) {
@@ -592,19 +589,19 @@ export function finger32($section: Step) {
 
   const $decCaptions = $section.$$('.dec');
   const $binCaptions = $section.$$('.bin');
+  let showingBin = false;
 
   $binCaptions.forEach($f => $f.hide());
 
   let i = 0;
-  let delay = 200;
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
-      $f => $f.enter('slide', 500, i++ * delay)
+  const delay = 200;
+  $section.onScore('blank-0', () => $fingers.forEach(
+    $f => $f.enter('slide', 500, i++ * delay)
   ));
 
-  let showingBin = false;
-
-  // switch between binary and decimal display
-  $section.$('.switch')?.on('click', () => {
+  const $select = $section.$('x-select') as Select;
+  $select.on('change', ($el: ElementView) => {
+    console.log($el.data.name);
     (showingBin ? $binCaptions : $decCaptions).forEach($f => $f.hide());
     (showingBin ? $decCaptions : $binCaptions).forEach($f => $f.show());
 

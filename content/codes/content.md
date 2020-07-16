@@ -422,11 +422,6 @@ To understand how all sorts of different codes can be stored in the transistors 
 
 How high can you count using only one hand, without skipping any numbers? When we count with our hands, we traditionally use how many fingers are up to represent the number. We have five fingers, so that means the highest we can count with one hand is [[five|four|ten]].
 
-{.TODO PHILIPP how to make them appear after entering value into blank?}
-
-
-    button.appear APPEAR
-
     table.finger-grid
       tr
         for x in [1, 2, 3, 4, 5]
@@ -604,17 +599,12 @@ Yes, there are [[32]] different combinations we can make with five fingers.
                     x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
                     .caption.dec= n
                     .caption.bin= ""+b0+b1+b2+b3+b4
-          
-
-    button.appear APPEAR
-    button.switch SWITCH
-    // delete these buttons. Replace APPEAR w/ .reveal, SWITCH w/ .segmented
 
 
 {.TODO PHILIPP how to make them appear after entering value into blank?}
 
 (we'll find out soon why we started with zero).
-Click on the [SWITCH](->.switch) button to toggle between our binary values and their decimal counterparts. These are the values
+Change the [tabs](->.segmented) to toggle between the binary values and their decimal counterparts.
 
 ---
 
