@@ -39,5 +39,4 @@ utilities/.tmp
 *.WinMerge
 
 content/donotcommit
-Icon
-package-lock.json
+Icon
