@@ -12,6 +12,13 @@ absolute-value:
   # origin. This connects the notion of _absolute value_ to the modulus of a
   # complex number and the magnitude of a vector.
 
+acceleration:
+  title: Acceleration
+  text: Acceleration is change in velocity over time. In calculus, we understand
+  acceleration to be the derivative of velocity. In everyday life, we typically
+  of acceleration in terms of vehicles. For example, a top speed car can
+  accelerate from 0 to 100 kilometers per hour in 3 seconds.
+
 acute-angle:
   title: Acute angle
   text: An __acute angle__ is an angle of size less than 90°.
@@ -467,6 +474,11 @@ denominator:
   title: Denominator
   text: The __denominator__ is the bottom number in a fraction. For example, in
     `4/7`, the number 7 is the denominator.
+
+derivative:
+  title: Derivative
+  text: A derivative is the function that descriibes the slope of a curve.
+  ## definition needs to be fleshed output
 
 dilation:
   title: Dilation
@@ -1480,6 +1492,12 @@ scientific-notation:
 
     For example, the number 4600 could be written as `4.6 × 10^3`.
 
+secant:
+  title: Secant Line
+  text: A secant line is a line that intersects a curve at least twice. For
+  example, line AB intersects circle P at two points. {.fixme} insert described
+  diagram.
+  
 set:
   title: Sets
   text: A __set__ is a collection of things or objects (called elements). Every
@@ -1628,7 +1646,10 @@ tangent:
   # Formally, it is a line through a point of a differentiable curve, which has
   # the same slop as the slope of the curve at that point.
   # A line tangent to a circle is perpendicular to the radius at that point.
-
+  # A tangent line is a line that has exactly one point of intersection with a
+  # curve. This means a tangent line with touch a curve without crossing it.
+  # {.fixme} insert diagram of tangent line in functions and tangent line to a
+  # circle
 term:
   title: Term (Algebra)
   text: |
