@@ -334,9 +334,9 @@ many handshakes are there in total?
 
 We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
 and every handshake is [[an edge|a vertex]].
- 
+
 {.reveal(when='blank-0 blank-1')} Now it is easy to count the number of edges in the graph. We find
-that there with ${hnd} people, there are ${hnd*(hnd-1)/2} handshakes.
+that with ${hnd} people, there are ${hnd*(hnd-1)/2} handshakes.
 
 ::: column.s-hide(width=240)
 
