@@ -1170,11 +1170,9 @@ TODO
 
 نصف قطر __{.m-green} القطاع__ هو نفس المسافة من حافة المخروط إلى قمته. هذا يسمى [{.pill.green.b} ارتفاع الميل _ق_](target:s) المخروط، وليس نفس وضعها الطبيعي [{.pill.blue.b} ارتفاع ](target:h) . يمكننا إيجاد الارتفاع المائل باستخدام [فيثاغورس](gloss:pythagoras-theorem) : 
 
-{.text-center.reveal(when="blank-0")(dir="ltr")} `s^2 =`
-_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_
-
-{.text-center.reveal(when="blank-0")(dir="ltr")} `s =`
-_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_
+| `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
+| `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+{.eqn-system}
 
 ::: column(width=280)
 
