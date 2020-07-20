@@ -1167,6 +1167,13 @@ pi:
     and its value is approximately 3.14159265…
   link: /course/circles/introduction#pi-definition
 
+piecewise:
+  title: Piecewise functions
+  text: A __piecewise function__ is function that uses different rules for different parts of its domain.
+
+        For example,
+        f(x)= {(3-x, x<10),(x^3,10<=x<=40), (5, x>40:}
+
 platonic-solid:
   title: Platonic solid
   text: |
@@ -1631,6 +1638,11 @@ square-numbers:
   text: A __square number__ is a number that can be expressed as the square of
     another integer. The first square numbers are 1, 4, 9, 16, 25, …
   link: /course/sequences/introduction#squares
+
+step-function:
+  title: Step Function
+  test: A step function is a piecewise function that has only constant rules (components). For example, f(x)={(3,0<=x<4),(-2, 4<=x<5),(0, 6<=x<10):}
+  ## Include accompanying graph.
 
 subdivision:
   title: Subdivisions
