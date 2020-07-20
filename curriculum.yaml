@@ -358,10 +358,8 @@ logic:
   sections:
     - title: Logic and Paradoxes
       preview: /world/Logic_and_Paradoxes
-    - title: Sets, Axioms and Proof
+    - title: Axioms and Proof
       preview: /world/Axioms_and_Proof
-    - title: Proof by Contradiction
-      preview: /world/Axioms_and_Proof#contradiction
     - title: Proof by Induction
       preview: /world/Axioms_and_Proof#induction
     - title: Infinity and Hilbert’s Hotel
