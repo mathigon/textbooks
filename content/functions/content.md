@@ -712,51 +712,73 @@ TODO: draw chart
 > section: piecewise
 > sectionStatus: dev
 
-{.todo} Coming Soon!
 
 Chapter 3: Piecewise Functions
 
 Multisport races test athletes endurance. Swimrun is a rather new multi sport competition that started in 2002 in Sweden. The story goes that the owner of the Utö Värdshus hotel, his friend, and two hotel staff challenged each other to a two-versus-two race from the Utö Värdshus hotel, across three islands, to Sandhamn. The losing team would pay for everyone’s post-race meals. How long do you think the race lasted?
 
-Map between these two locations. Include images from each place. I like David’s map zoom effect he has mentioned in a couple of chapters. While it wouldn’t necessarily add to the math directly, it would make the story more interesting and help student intuit distance.
+// NOTES
+// Anders Malm - owner of Utö Värdshus, Janne Lindberg - friend, Andersson brothers - staff at Utö Värdshus
+// [citation](https://en.wikipedia.org/wiki/Swimrun)
 
+// Map between these two locations. Include images from each place. I like David’s map zoom effect he has mentioned in a couple of chapters. While it wouldn’t necessarily add to the math directly, it would make the story more interesting and help student intuit distance.
+// EDITOR USE ONLY
+// [Utö Värdshus](https://www.utovardshus.se/wp-content/uploads/2019/03/Liggande_VH-fr%C3%A5n-Bastun_Copyright-Ut%C3%B6-V%C3%A4rdshus-1.jpg)
+
+// [map view](https://www.google.com/maps/dir/Sandhamn,+Sweden/Ut%C3%B6+V%C3%A4rdshus,+Pr%C3%A4stbacken+22,+130+56+Ut%C3%B6,+Sweden/@59.1054899,18.3165704,10z/data=!4m14!4m13!1m5!1m1!1s0x46f5741069214bbf:0xbfee8fb6ece8997c!2m2!1d18.9108304!2d59.2878703!1m5!1m1!1s0x46f58b4425a902e9:0xb792bc38be8de224!2m2!1d18.329336!2d58.967417!3e4)
+
+//[Sandham](https://upload.wikimedia.org/wikipedia/commons/c/c1/Sandhamn_February_2013_04.jpg)
 
 The race ended up taking over 24 hours! The friends did the same race the next year, and the idea for the ÖtillÖ (island to island) was born.
 
 ---
+::: column(width 240)
+
+// NOTES
+// Something like this would be awesome. Transition from water to run. Setting. Dressed for water in Sweden.
+
+// EDITORIAL ONLY
+[https://www.flickr.com/photos/otillorace/48213036251/in/album-72157709467500756/](https://www.flickr.com/photos/otillorace/48213036251/in/album-72157709467500756/)
+::: column.grow
 
 We are training for the ÖtillÖ. We need to get used to the feeling of swimming then immediately running. We decide to swim for 500 meters then run for 5 kilometers. Choose the graph that represents the athlete’s distance as a function of time, d(t).
 
-Multiple selector with one choice
+:::
 
+// NOTES
+// Multiple selector with one choice
+// [option 1](https://drive.google.com/file/d/1UhFc87ir21UUNnQWmJ0UhvrXn6bZu6Lo/view?usp=sharing)
+// [option 2](https://drive.google.com/file/d/1T0q0btNyuiNaOVWk6NbM8dQydXthhwtv/view?usp=sharing)
+// [option 3](https://drive.google.com/file/d/18DMyDqbjmOq7Wdou-yTuMvI0NTBfSg-T/view?usp=sharing)
+// [option 4](https://drive.google.com/file/d/1zKhk2t_V00SSEsmyXWCvohxnOyzMk0Q6/view?usp=sharing)
+// Option 2 is the object of the targets below.
 
-
-This is an example of a [__piecewise function__](gloss:piecewise-function) where different rules apply to different sets of input values. We can see the first section of the graph has a different slope than the second section.
+This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [first section](target:1_piecewise) of the graph has a different slope than the [second section](target:2_piecewise).
 
 One of the most common ways to write piecewise functions is by using cases.
 
-d(t)= {(1/20t,0<=t<10),(1/6 t-7/6,10<=t<=40):}
+// NOTES
+// It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
+
+`d(t)= {(1/20t,0<=t<10),(1/6 t-7/6,10<=t<=40):}`
 
 Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “The function d has a value of (1/20)t when t is at least 0 and up to 10. Function d is (⅙)t-(7/6) when t is at least 10 and no more than 40.”
 
 Let’s continue to get our feet wet in the world of piecewise functions.
 ---
 
-The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes backstroke, breaststroke, butterfly, and freestyle in that order. The graph below shows s(d). Notice the vertical axis is [[distance | speed]] in meters. The horizontal axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
+::: column.grow
 
-> section: rates-of-change
-> sectionStatus: dev
-> id: fn-sketch
+The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](https://www.desmos.com/calculator/y3zz7gphmo), and [freestyle](https://www.desmos.com/calculator/y3zz7gphmo) in that order. The graph below shows s(d). Notice the vertical axis is [[distance | speed]] in meters. The horizontal axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
 
-Draw a Function:
+::: column(width 240)
 
-    x-coordinate-sketch(width=600 height=400 x-axis="-1,10,1" y-axis="-5,5,1")
-      button.btn.clear Clear
-
-Type some text:
-
-    x-free-text(placeholder="Your answer…")
-
+// EDITORIAL USE ONLY
+// [image](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
+// NOTES
+// Add vertical line test tool.
+// [200 Medley Mock-up](https://www.desmos.com/calculator/y3zz7gphmo)
+// Graph above is the object of the targets in relay paragraph.
 
 Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
 
@@ -764,53 +786,11 @@ Recall that functions cannot have one input going to [[more than one | only one]
 
 We need to pay close attention to the endpoints of each section of the domain. The endpoints ensure each element of the domain is matched to only one element of the range. With this in mind, select the function that matches the graph above.
 
-Multiple selector with one correct answer
+// NOTES
+// Multiple selector with one correct answer
 
-
-
-
-
-1.3,
- 0<=d<=100
-
-
-
-
-1.3,
- 0<=d<=100
-
-
-
-
-1.2,
- 100<d<=200
-
-
-
-
-1.2,
- 100<=d<=200
-s(d)
-=
-1.4,
-200<d<=300
-s(d)
-=
-1.4,
-200<= d<300
-
-
-
-
-1.5,
-300<d<=400
-
-
-
-
-1.5,
-300<d<=400
-
+[option 1](s(d)={(1.3, 0<=d<=100),(1.2, 100<d<=200),(1.4, 200<d<=300),(1.5, 300<d<=400):})
+[option 2](s(d)={(1.3, 0<=d<=100),(1.2, 100<=d<=200),(1.4, 200<=d<300),(1.5, 300<d<=400):})
 
 Notice the graph shows “<” as an open circle - the same would be true for endpoint containing “>”. The closed circles inculcate “<=” and “>=”.
 
@@ -825,53 +805,30 @@ We’re ready to dive into graphing.
 
 One of the most common multisport competitions is a triathlon where athletes swim, bike, and run. The function l(t), Lisa Laws’s race, is given below. Use the given line segments to draw l(t) on the coordinate plane.
 
+//EDITORIAL USE ONLY
+// Fun, quick [video](https://tokyo2020.org/en/sports/triathlon/) of triathlon. Nod to 2020 Olympics, especially if they don't happen. Includes map of courses.
 
+`l(t)={(75x, 0<=t<=20),(50000, 20<t<=21),(-615.385t+63000, 21<t<=86),(10000, 86<t<=87),(-277.778t+34166.7, 87<t<=123):}`
 
+//EDITORIAL USE ONLY
+// [triathlon transition](https://depositphotos.com/stock-photos/triathlon-competition-woman.html?filter=all&qview=111615040)
 
+// NOTES
+// There is a paper-based activity in the [IM chapter](https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html) on piecewise functions “Students are given the equations that define two piecewise functions, along with strips of paper, each containing a part of a graph and a portion of the horizontal axis (no scale is shown). Their job is to arrange the strips, apply a scale on each axis, and add open and closed circles to the graph to accurately represent the function values at each interval of input.” - IM After building the first function, students label with the given cards.
+// Maybe shuffle order and orientation? Students can spin them as they would a paper cut out?
 
+[piece 1](https://www.desmos.com/calculator/pqdjlinaf1)
+[piece 2](https://www.desmos.com/calculator/yauvuvkbpx)
+[piece 3](https://www.desmos.com/calculator/t9ltbpdotk)
+[piece 4](https://www.desmos.com/calculator/zaa3wcoa05)
+[piece 5](https://www.desmos.com/calculator/hcghou4mr7)
+[solution](https://www.desmos.com/calculator/mkyxyep0jv)
 
-75x
- 0<=t<=20
-
-
-
-
-1500
- 20<t<=21
-l(t)
-=
-615.385x-11423.1
-21<= x<86
-
-
-
-
-41500
-86<t<=87
-
-
-
-
-277.778x+17333.3
-87<t<=123
-
-
-
-
-
-There is a paper-based activity in the IM chapter on piecewise functions “Students are given the equations that define two piecewise functions, along with strips of paper, each containing a part of a graph and a portion of the horizontal axis (no scale is shown). Their job is to arrange the strips, apply a scale on each axis, and add open and closed circles to the graph to accurately represent the function values at each interval of input.” - IM
-After building the first function, students label with the given cards.
-
-Pieces: l(t)
-
-
-Solution:
-
-Tutor prompts:
-What do you remember about slope?
-Positive slope increases from left to right.
-Negative slope decreases from left to right.
-What does a linear function with zero slope look like?
+// TUTOR PROMPTS
+// What do you remember about slope?
+// Positive slope increases from left to right.
+// Negative slope decreases from left to right.
+// What does a linear function with zero slope look like?
 
 Noticing that each slope is either constant or [[positive | negative]] helps us determine the orientation of each piece of the graph. Constant slope is a [[horizontal | vertical]] line. Positive slope moves [[up | down]] as we read from left to right.
 
@@ -879,115 +836,76 @@ Slope can also help us determine the order of the pieces from left to right. For
 
 ---
 
-Recall that a function’s key features give us insights into what’s going on during the race. For example, the starting line is represented by the (multiple select) [[y-intercept | x-intercept | maximum | minimum]]. We can write this point in function notation as l([[0]])=[[0]]. Place the remaining statements on the graph.
+Recall that a function’s key features give us insights into what’s going on during the race. For example, the starting line is represented by the {.FIXME} (multiple select) [[y-intercept | x-intercept | maximum | minimum]]. We can write this point in function notation as l([[0]])=[[0]]. Place the remaining statements on the graph.
 
-Students label with the given cards.
-Place cards on graph
-Contextual Statement
-Appears with card is placed
-Target Key Feature
-Appears with card is placed
-Function notation
-Law crosses the finish line.
-maximum
-l(123)=51500
-Law is cycling toward the transition point.
-increasing
-21 < t <= 86
-Law is transitioning from swimming to cycling.
-constant
-20 < t <= 21
-
-
-Law is transitioning from cycling to running.
-constant
-86 < t <= 87
+// NOTES
+// Students label with the given cards.
+| Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
+| :---: | | :---: | | :---: |
+| Law crosses the finish line. | | maximum | | l(123)=51500 |
+| Law is cycling toward the transition point. | | increasing | | 21 < t <= 86 |
+| Law is transitioning from swimming to cycling. | | constant | | 20 < t <= 21 |
+| Law is transitioning from cycling to running. | | constant | | 86 < t <= 87 |
 
 ---
 
 Now you get to race Law. One of the exciting things about triathlons is that you don’t need to be the fastest at each of the three sports, you just need to cross the finish line first. Here you can adjust your graph, s(t), to see how the race changes. Let’s say your most challenging leg of this race is swimming. As you can see, this segment cannot be adjusted. Can you beat Law with a swim leg that’s [[4]] minutes slower?
 
-Slider in blue. Adjusts to match given input.
+::: column.grow
 
+// NOTES
+// Slider in __bold__ . Like slider graphs in https://mathigon.org/course/sequences/arithmetic-geometric. Or drag endpoints along the transition lines to change slopes.
+// Adjusts to match given input _italics_.
 
+`s(t) = {(60t, 0<=t<=25),(1500, 25<t<=26.5),(_695.652_t-_16934.8_, __26.5+-0.75__<=t<__84+-0.75__),(41500, _84_<t<=_85.5_), (_298.50_t+_15977.6_, _85.5_<t<=__123+-5__):}`
 
-
-60x
- 0<=t<=25
-Actually adjusting these points in the background.
-
-
-
-
-1500
- 25<t<=26.5
-
-
-s(t)
-=
-695.652x-16934.8
-26.5+-.75<= x<84+-.75
-(26.5+-.75, 1500) and (84+-.75, 41500)
-
-
-
-
-41500
-84<t<=85.5
-(84, 41500) and (85.5, 41500)
-
-
-
-
-298.507x+15977.6
-85.5<t<=123+-5
- (85.5, 41500) and (123+-5, 51500)
-
-Graph: l(t) is blue, s(t) is orange
-
-
-
-Try adjusting the graph so that your swim __and__ run are slower than Law’s. You need to cycle at [[  ]] meters per minute in order to beat Law.
+// NOTES for 60t line: Actually adjusting these points in the background.
+// NOTES for 695.652 line: (__26.5+-.75__, 1500) and (__84+-.75__, 41500)
+// NOTES for 41500 line: (_84_, 41500) and (_85.5_, 41500), _84_ matches slider in last case, _85.5_ Adjusts to be lower bound + 1.5
+// NOTES for 298.50 line: (_85.5_, 41500) and (__123+-5__, 51500), _85.5_ matches previous case
 
 ---
 
+Try adjusting the graph so that your swim __and__ run are slower than Law’s. You need to cycle at [[{.fixme} Is there a way to accept a range of slopes that are dependent on the slider values? ]] meters per minute in order to beat Law.
+
+::: column(width 240)
+
+// NOTES
+// Graph: l(t) is blue, s(t) is orange
+[mock-up triathlon graph](https://www.desmos.com/calculator/1wcntarqcv)
+
+:::
+
+---
+
+::: column(width 240)
+
+[sundae image](https://depositphotos.com/4537530/stock-photo-ice-cream.html)
+
+::: column.grow
+
 Let’s go get some ice cream to celebrate you win! Ice-agon gives two pricing schemes. You can pay by the gram or buy one of three sizes. What do you want to order?
 
-Students interact with the graph. Small, medium, and large are in orange. Price per gram is in purple.
+:::
 
+// NOTES
+// Students interact with the graph. Small, medium, and large are in orange. Price per gram is in purple.
+
+[graph mock-up](https://www.desmos.com/calculator/i0iatpatrn)
 
 As you can see, your choice will depend on a few different factors. Fill out the table below to have a clearer understanding of your options.
 
-Weight
-Cost
-Cost
-50
-Not available
-0.10
-75
-[[2.75]]
-[[1.50+-0.1]]
-125
-[[2.75]]
-[[2.50+-0.1]]
-150
-[[Not available]]
-[[3+-0.1]]
-175
-[[4.25]]
-[[3.50+-0.1]]
-225
-[[4.25]]
-[[4.50+-0.1]]
-275
-[[Not available]]
-[[5.50+-0.1]]
-325
-[[5]]
-[[6.50+-0.1]]
-335
-[[Not available]]
-[[6.70+-0.1]]
+| Weight | | Cost | | Cost |
+| :---: | | :---: | | :---: |
+| 50 | | [[ Not available ]] {.fixme} also accept NA, N/A, na, n/a, none, no | | 0.10 |
+| 75 | | [[2.75]] | | [[1.50+-0.1]] |
+| 125 | | [[2.75]] | | [[2.50+-0.1]] |
+| 150 | | [[Not available]] | | [[3+-0.1]] |
+| 175 | | [[4.25]] | | [[3.50+-0.1]] |
+| 225 | | [[4.25]] | | [[4.50+-0.1]] |
+| 275 | | [[Not available]] | | [[5.50+-0.1]] |
+| 325 | | [[5]] | | [[6.50+-0.1]] |
+| 335 | | [[Not available]] | | [[6.70+-0.1]] |
 
 The most ice cream you can buy with $5  is about [[300+-30]] grams with the large size container. The best buy if you want 200 grams of ice cream is [[pay per gram | medium container]], which costs [[4]].
 
