@@ -4,54 +4,81 @@
 
 > section: relations
 > sectionStatus: dev
+> id: sorting-hat
 
 ::: column.grow
 
-Welcome to the Hoctagon School of Magic! You’ve taken the train from King’s Cross station in London, a boat across the great lake in front of the castle, and just arrived in the great hall with all the other students. But before the welcome feast can begin, all new students need to be assigned to a house by the Sorting Hat.
+Welcome to the Hoctagon School of Magic! You’ve taken the train from King’s Cross station in London,
+a boat across the great lake in front of the castle, and just arrived in the great hall with all the
+other students.
+
+But before the welcome feast can begin, the Sorting Hat has to assign all new students to a house.
+Try sorting each of these students into one of the four house:
 
 ::: column(width=300)
 
-    x-img(src="images/hat.png" width=300 height=250 credit="Whatever" lightbox)
+    // EDITORIAL ONLY
+    // https://depositphotos.com/139592200/stock-photo-the-hogwarts-express-train.html
+
+{.fixme} Image
 
 :::
 
-Drag each of these students into one of the four houses:
-
-TODO Interactive goes here
-
-TODO Tutor messages
+    include components/relation
+    x-relation
+      .item(slot="domain" name="a") **Current User**
+      .item(slot="domain" name="b") Phineas Lynch
+      .item(slot="domain" name="c") Sturgis Switch
+      .item(slot="domain" name="d") Dilys Derwent
+      .item(slot="domain" name="e") Demelza Zabini
+      .item(slot="domain" name="f") Bogod Clearwater
+      .item(slot="range") Lionpaw
+      .item(slot="range") Eaglewing
+      .item(slot="range") Badgerclaw
+      .item(slot="range") Serpentfang
 
 ---
-
-::: column(width=300)
-
-    x-img(src="images/books.png" width=300 height=250 credit="Whatever" lightbox)
-
-::: column.grow
 
 After dinner, all students return to the common rooms of their new houses. Everyone settles into their dorms and returns to the common room to meet their new housemates. Heads of houses use this time to pass out class lists. Like before, connect each of the students with different classes:
 
-:::
-
-TODO Interactive goes here
-
-TODO Tutor messages
+    x-relation
+      .item(slot="domain" name="a") **Current User**
+      .item(slot="domain" name="b") Phineas Lynch
+      .item(slot="domain" name="c") Sturgis Switch
+      .item(slot="domain" name="d") Dilys Derwent
+      .item(slot="domain" name="e") Demelza Zabini
+      .item(slot="domain" name="f") Bogod Clearwater
+      .item(slot="range") Potions
+      .item(slot="range") Transfiguration
+      .item(slot="range") Magical Creatures
+      .item(slot="range") Broomstick Flying
+      .item(slot="range") Charms
 
 ---
 
-::: column.grow
-
 The next day, you and several of your classmates arrive early to your first lesson. Conversation quickly turns to your new wands. You trade stories about how the wands chose you. Connect each of these wands to a student.
 
-::: column(width=300)
-
-    x-img(src="images/wands.png" width=300 height=250 credit="Whatever" lightbox)
-
-:::
-
-TODO Interactive goes here
-
-TODO Tutor messages
+    x-relation
+      .item(slot="domain")
+        img(src="images/wand-1.png" width=200 height=30)
+        span.caption Birch, phoenix feather, 5 3/4
+      .item(slot="domain")
+        img(src="images/wand-2.png" width=200 height=30)
+        span.caption Oak,dragon heartstring, 6 9/16
+      .item(slot="domain")
+        img(src="images/wand-3.png" width=200 height=30)
+        span.caption Oak, unicorn hair, 6 5/8
+      .item(slot="domain")
+        img(src="images/wand-4.png" width=200 height=30)
+        span.caption Yew, kneazle whicker, 4 9/16
+      .item(slot="domain")
+        img(src="images/wand-5.png" width=200 height=30)
+        span.caption Yew, unicorn hair, 5 7/8
+      .item(slot="range" name="a") **Current User**
+      .item(slot="range" name="b") Phineas Lynch
+      .item(slot="range" name="c") Sturgis Switch
+      .item(slot="range" name="d") Dilys Derwent
+      .item(slot="range" name="e") Demelza Zabini
 
 ---
 
@@ -98,7 +125,8 @@ TODO Interactive here
 
 ---
 
-### Relations in a Coordinate System
+### Coordinate Systems
+
 We have been using mapping diagrams, coordinate pairs, and tables to represent relations. Graphs are another way to visualize relations. We can note a few interesting things when we look at relations on the [__coordinate plane__](gloss:coordinate-system).
 
 Let’s plot the relation {(0,0), (1,4), (-5,3), (-2,-1), (4, -3)} on the coordinate plane. Two points are already on the graph.
@@ -120,6 +148,7 @@ TODO Interactive here
 ---
 
 ### Functions
+
 In math, relations that are one-to-one or many-to-one are particularly important, and we will see many more examples in later chapters. That’s why they have a special name: Functions. A [__function__](gloss:function) is a rule that assigns each input to  [[exactly one | at least one]] output.
 
 ---
@@ -678,10 +707,9 @@ TODO: draw chart
 
 --------------------------------------------------------------------------------
 
-
 ## Piecewise Functions
 
-> section: solving-graphically
+> section: piecewise
 > sectionStatus: dev
 
 {.todo} Coming Soon!
@@ -716,7 +744,18 @@ Let’s continue to get our feet wet in the world of piecewise functions.
 
 The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes backstroke, breaststroke, butterfly, and freestyle in that order. The graph below shows s(d). Notice the vertical axis is [[distance | speed]] in meters. The horizontal axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
 
-Students can also drag a vertical line across the coordinate plane. When the line intersects with the function, the intersection point shows.
+> section: rates-of-change
+> sectionStatus: dev
+> id: fn-sketch
+
+Draw a Function:
+
+    x-coordinate-sketch(width=600 height=400 x-axis="-1,10,1" y-axis="-5,5,1")
+      button.btn.clear Clear
+
+Type some text:
+
+    x-free-text(placeholder="Your answer…")
 
 
 Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
@@ -960,49 +999,77 @@ The most ice cream you can buy with $5  is about [[300+-30]] grams with the larg
 > section: absolute-value
 > sectionStatus: dev
 
-{.todo} Coming Soon!
+::: column.grow
 
 Atari's Pong, released in 1972, launched the video gaming industry as we know it. The game is effectively a digital table tennis game. Pong is so popular that pop culture still references it today.
 
 These days gamers can play internet-based variations of pong or visit an arcade with an original Atari Ping console.
 
-[https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo](https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo)
+// REFERENCE ONLY
+//[https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo](https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo)
 
 MathiPong pays homage to this titan in gaming history. The objective is to direct the ball to the target. Choose regular or challenge mode to get started.
 
-Onboard the game.
-
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png)
-
-User uses arrow keys to move platform. Platform is wider than the point shown.
+::: column(width 240)
 
 ![https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg](https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg)
 
 [citation](https://commons.wikimedia.org/wiki/File:Signed_Pong_Cabinet.jpg)
 
+:::
+
+// NOTES
+// onboard the game. User uses arrow keys to move platform. Platform is wider than the point shown.
 User plays several rounds.
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png)
 
 Now that you've played a few rounds and have the idea of how the game works, let's think about a strategy for hitting the target. Let's take a look at the game on a coordinate plane.
 
-The animation mock-ups are on a loop for minimal clicking in this draft. I don't think they need to be on a loop in the final. In fact, I actually envision these happening on one coordinate plane. This would make each a different state of the same interactive.
+// NOTES
+// The animation mock-ups are on a loop for minimal clicking in this draft. I don't think they need to be on a loop in the final. In fact, I actually envision these happening on one coordinate plane. This would make each a different state of the same interactive.
+// Left column shows states of game. Right column is the text matching the state. In final version of the chapter, this won't need to be a series of columns.
+
+::: column(width 240)
 
 [https://www.desmos.com/calculator/vy9nhnyp1z](https://www.desmos.com/calculator/vy9nhnyp1z)
 
-If we just let the ball fall from the upper left part of the screen. It's path will look like this. Here we recognise the slope of the line describing the path of the ball is [[-1]]. Given that this line crosses the origin, the function is f(x)=-x
+::: column.grow
+
+If we just let the ball fall from the upper left part of the screen. It's path will look like [this](target:1_linearGraph). Here we recognise the slope of the line describing the path of the ball is [[-1]]. Given that this line crosses the origin, the function is f(x)=-x.
+
+:::
+
+::: column(width 240)
 
 [https://www.desmos.com/calculator/yyoqeezli2](https://www.desmos.com/calculator/yyoqeezli2)
 
-We know we want the path of the ball to look like this in order to hit the target. This new line describing the intended path of the ball is [[1]]. Interestingly, this is simply the opposite of the slope above. The function of this line is g(x)=x.
+::: column.grow
+
+We know we want the path of the ball to look like [this](target:2_linearGraph) in order to hit the target. This new line describing the intended path of the ball is [[1]]. Interestingly, this is simply the opposite of the slope above. The function of this line is g(x)=x.
+
+:::
+
+::: column(width 240)
 
 [https://www.desmos.com/calculator/jr6scyqzdn](https://www.desmos.com/calculator/jr6scyqzdn)
 
+::: column.grow
+
 If we move the platform to the intersection of these two lines, the path of  the ball will move from its original path to our desired path. The intersection is at ([[0]], [[0]]).
 
+:::
+
+::: column(width 240)
+
 [https://www.desmos.com/calculator/jjbzth2pta](https://www.desmos.com/calculator/jjbzth2pta)
+
+::: column.grow
 
 In the chapter on piecewise functions, we practised writing functions to describe situations like this. That is, we want to use a specific section of one function and a specific section of another. The domain values for the piecewise function describing this path are:
 
 $$h(x)= \begin{matrix}-x & x [[\ge]]\ [[0]] \\x & x\ [[<]]\ [[0]]\end{matrix}$$
+
+:::
 
 There is actually another way to express the same shape using a different function.
 
@@ -1010,25 +1077,32 @@ There is actually another way to express the same shape using a different functi
 
 [https://www.desmos.com/calculator/ihajfmgvkl](https://www.desmos.com/calculator/ihajfmgvkl)
 
-This v-shaped graph is called an absolute value function. As you can see, the shape is the same as the one described by the piecewise function. In addition to function notation, it uses bars to mean absolute value. Recall that [**absolute value**](gloss:absolute-value) is the distance between the given number and zero. In other words, absolute value of any number is not negative. The same idea applies to this function.
+This [v-shaped graph](target:1_absGraph) is called an absolute value function. As you can see, the shape is the same as the one described by the piecewise function. In addition to function notation, it uses bars to mean absolute value. Recall that [**absolute value**](gloss:absolute-value) is the distance between the given number and zero. In other words, absolute value of any number is not negative. The same idea applies to this function.
 
 f(x)=|x|
 
 Absolute value functions have many of the same key features we have been looking at through the functions course. The platform is at a key point called the [vertex](gloss:graph-vertex) of a graph. It is the turning point in all absolute value graphs. The vertex of this absolute value function is at ([[0]], [[0]]).
 
-Missing: x+2 then |x+2|, graph y=x+2 then reflecting the bottom is abs, then reflecting then shifting is a different graph. Order matters. Discover @Philipp Legner
-
 Now Mathipong wouldn't be much of a game if the ball always fell from the same spot and the target never moved. Likewise, absolute vallue functions wouldn't be very useful if they only ever occured with the rule f(x)=|x|. Let's have a look at how they move around the coordinate plane.
 
-This section will likely work better with some animations. The graphs here can be mock-ups of key points in the animations.
+// NOTES
+// This section will likely work better with some animations. The graphs here can be mock-ups of key points in the animations.
 
-So far, when we have been graphing functions, we have been either plotting points on the line and connecting them with a line, or we have been finding a significant point, like the y-intercept or x-intercept and counting the slope to construct the line. The graphs and their respective equations actually leads us to a new way of understanding graphs on the coordinate plane. We can think of graphing in terms of **[transformations](gloss:graph-transformations).** Let's take a look at this with a lin we are familiar with graphing y=x.
+So far, when we have been graphing functions, we have been either plotting points on the line and connecting them with a line, or we have been finding a significant point, like the y-intercept or x-intercept and counting the slope to construct the line. The graphs and their respective equations actually leads us to a new way of understanding graphs on the coordinate plane. We can think of graphing in terms of **[transformations](gloss:transformations).** Let's take a look at this with a lin we are familiar with graphing y=x.
+
+::: column(width 240)
 
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.18.28.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.18.28.png)
 
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.47.44.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.47.44.png)
+
+::: column.grow
+
 Now graph the line y=x+2.
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.47.44.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.47.44.png)
+:::
+
+::: column(width 240)
 
 [https://www.desmos.com/calculator/mcwyh3toux](https://www.desmos.com/calculator/mcwyh3toux)
 
@@ -1036,21 +1110,38 @@ Notice that this line is y=x shift up 2. Or, we could see if as y=x shifted left
 
 Then let's reflect it over the x-axis.
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png)
+:::
 
-The right side of the original like, the portion above the x-axis, remained unmoved. The left side, everything below the x-axis, reflected up above the x-axis. The position above the x-axis is the same as the graph of f(x)=|x+2|.
+::: column(width 240)
+
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png)
 
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.53.38.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.53.38.png)
 
+::: column.grow
+
+The right side of the original like, the portion above the x-axis, remained unmoved. The left side, everything below the x-axis, reflected up above the x-axis. The position above the x-axis is the same as the graph of f(x)=|x+2|.
+
+:::
+
+::: column(width 240)
+
 [https://www.desmos.com/calculator/6fpbvgfrny](https://www.desmos.com/calculator/6fpbvgfrny)
+
+::: column.grow
 
 Notice y=|x+2| is y=|x| shift to the left 2.
 
 Now suppose we add a number to y=|x| similar to y=x+2. What do you think will happen to the graph?
 
+:::
 ---
 
+::: column(width 240)
+
 [https://www.desmos.com/calculator/aqly16ptq5](https://www.desmos.com/calculator/aqly16ptq5)
+
+::: column.grow
 
 The graph of y=|x| shift up.
 
@@ -1058,14 +1149,19 @@ Notice that moving the graph left and right changes values [[inside | outside]] 
 
 These two transformations, which we call shifts, clearly result in different graphs. The left graph shows a [[horizontal | vertical]] shift while the graph on the right shows a [[vertical | horizontal]] shift. We will look at transformations in more detail in the [Function Transformations](https://mathigon.org/course/function-transformations) course.
 
+:::
+
 ---
 
 Match the function with its graph. Keep in mind the shifts f(x)=|x-h|+k where h is the horizontal shift and k is the vertical shift.
 
-Students drag functions to their respective graphs.
+// NOTES
+// Students drag functions to their respective graphs.
 
+// Functions for cards.
 [https://lh6.googleusercontent.com/bjmVukpDAuueGt7ShvzlA7ciunIpVLBrQPg-WNbdw0JZSFb59imu8XM4rDi_sS1mIn8FcooZjyUbeJnj04TExksgfPn70I0CdNL6kN65eIHZ611gFplehLVgMMnl11QhTOUUl0C-](https://lh6.googleusercontent.com/bjmVukpDAuueGt7ShvzlA7ciunIpVLBrQPg-WNbdw0JZSFb59imu8XM4rDi_sS1mIn8FcooZjyUbeJnj04TExksgfPn70I0CdNL6kN65eIHZ611gFplehLVgMMnl11QhTOUUl0C-)
 
+// Graph mock-ups for cards.
 [https://lh6.googleusercontent.com/BiB7qoKIoH-Ct1EKL54qUHd5DaPt8yEC11EHxDh0NY8jv_baTSmdjCIxuT4I-bEkGIgpj_zUhe-Q-vYyURKf6rv9mWpFtkWF8ClKaPNfkle5r575c3isjwp47h8128K9Dol5Pael](https://lh6.googleusercontent.com/BiB7qoKIoH-Ct1EKL54qUHd5DaPt8yEC11EHxDh0NY8jv_baTSmdjCIxuT4I-bEkGIgpj_zUhe-Q-vYyURKf6rv9mWpFtkWF8ClKaPNfkle5r575c3isjwp47h8128K9Dol5Pael)
 
 [https://lh5.googleusercontent.com/qDPHACr6mN2lDyvT2T4HzeV93FcMRj0yXAvctg0Wu00_WrB3VSRacBLURLB_A3VQazxfFoIjJ9mtRvZEsl9uYnPvl3zOgOOIemy6GXwziJR1A-PdxQpl2FKFJ23flqUg2rHdGTXY](https://lh5.googleusercontent.com/qDPHACr6mN2lDyvT2T4HzeV93FcMRj0yXAvctg0Wu00_WrB3VSRacBLURLB_A3VQazxfFoIjJ9mtRvZEsl9uYnPvl3zOgOOIemy6GXwziJR1A-PdxQpl2FKFJ23flqUg2rHdGTXY)
@@ -1078,35 +1174,42 @@ Students drag functions to their respective graphs.
 
 ---
 
-Let's return to this idea of reflecting a graph over the x-axis. This is actually not a coincidence that this action give the absolute value function of the orginal linear function. The same property holds of the absolute value of other kinds of function.
+Let's return to this idea of reflecting a graph over the x-axis. This is actually not a coincidence that this action give the absolute value function of the original linear function. The same property holds for the absolute value of other kinds of function.
 
-**Slideshow** functions: https://www.desmos.com/calculator/l2lveli1ey
+// NOTES
+// **Slideshow** functions: https://www.desmos.com/calculator/l2lveli1ey
+// This could be a cool graph drawing interactive once your tool is done.
+// Function mock-ups. Left column is original graph. Right column is absolute value Superimposed over original.
 
-This could be a cool graph drawing interactive once your tool is done.
+::: column (width240)
 
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.27.58.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.27.58.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.23.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.23.png)
-
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.12.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.12.png)
-
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.13.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.13.png)
 
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.35.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.35.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.22.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.22.png)
-
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.36.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.36.png)
-
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.47.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.47.png)
 
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.06.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.06.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.55.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.55.png)
-
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.58.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.58.png)
 
+::: column(width240)
+
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.23.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.23.png)
+
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.13.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.13.png)
+
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.22.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.22.png)
+
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.47.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.47.png)
+
+![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.55.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.55.png)
+
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.30.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.30.png)
+
+:::
 
 We explore reflections more in [Reflecting Functions](https://mathigon.org/course/function-transformations/refleticing).
 
@@ -1114,13 +1217,17 @@ We explore reflections more in [Reflecting Functions](https://mathigon.org/cours
 
 ### Absolute Error
 
+// NOTES
+// This section may not work with final chapter. Editors may strike.
+
 Let's take a look at how the idea of absolute value can relate to data analysis. There is an kind of measurement called absolute error that quantifies the difference between an expected value and a measured value. For example, we know our thermometer has an error of 2 degrees. The thermometer says it is 25 C right now. We can use absolute values to determine what the lowest and highest possible temperatures the air could be given the error on the theromometer.
 
 Let x represent the actual temperature while 25 is the measured temperature. Their difference gives us the error, which we know is 2. Therefore, we can use the equation |x-25|=2 to determine the possible actual temperatures.
 
 Recall that absolute value measures the distance from zero. This means that that measurement can go in the positive direction **or** in the negative direction. We don't actually know the intended direction when we are given a value like *absolute error is 5*. To account for this, we need to look at both options.
 
-Algebra Flow
+// NOTES
+// Algebra Flow. Currently written step-by-step in step then description.
 
 $$|x-25|=2 $$
 
@@ -1128,7 +1235,7 @@ Given
 
 $$x-25=2 \ \text{or}\ -(x-25)=2 $$
 
-Account for the value in the positive direction and the value in the negative direction.
+Account for the value in the [positive direction](target:1_leftEquation) and the value in the [negative direction](target:2_rightEquation).
 
 $$x=27 \ \text{or} \ x-25=-2$$
 
@@ -1138,6 +1245,8 @@ $$x=27\ \text{or}\ x=23$$
 
 The solutions give the lowest and highest possible temperatures.
 
+// END ALGEBRA FLOW
+
 In order to know whether the temperature is higher or lower than our measured value, we would need additional information like a measurement from another thermometer.
 
 Many different kinds of function have situations like this where they can actually have more than one solution to a problem. We will explore this idea in more depth in [quadratic functions](https://mathigon.org/course/quadratics/introduction).
@@ -1146,7 +1255,8 @@ Many different kinds of function have situations like this where they can actual
 
 Now that we know more about absolute value functions and how they work, take a swing at the next level of Mathipong.
 
-Ball comes at different locations on the upper left side of the screen. Path is at different angels (slopes).
+// NOTES
+// Ball comes at different locations on the upper left side of the screen. Path is at different angels (slopes).
 --------------------------------------------------------------------------------
 
 
