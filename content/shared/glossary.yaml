@@ -834,11 +834,26 @@ integer:
     zero: …, –3, –2, –1, 0, 1, 2, 3, …. They are often denoted using the
     symbol `ZZ`.
 
+intercept:
+  title: Intercept
+  text: A __intercept__ is the point where a graph crosses an axis. It is often names after the axis, so the y-intercept is the point of intersection between the graph and the y-axis.
+        ## Include graph with x- and y-intercepts highlighted.
+
 internal-angle:
   title: Internal angles
   text: The __internal angles__ of a polygon are the angles on the inside, at
     every vertex.
   image: internal-angle.svg
+
+interval:
+  title: Interval
+  text: An __interval__ is a set of numbers between to two endpoints. The endpoints may be included or excluded from the interval depending on the context.
+
+  _Closed_ intervals include the endpoints. (e.g. 3<=x<=6)
+
+  _Open_ intervals exclude the endpoints. (e.g. 3<x<6)
+
+  _Half-open_ or _half-closed_ intervals include one endpoint and exclude the other. (e.g 3<=x<6 or 3<x<=6)
 
 irrational-numbers:
   title: Irrational numbers
@@ -1670,6 +1685,14 @@ symmetry-group:
   text: The __symmetry group__ of a geometric object is the collection of all of
     its _symmetries_ (as well as the _identity_).
   link: /course/transformations/symmetry-groups#groups-1
+
+system-of-equations:
+  title: Systems of Equations
+  text: A __system of equations__ is two or more equations that share common variables. For example,
+  `4x+y=20`
+  `x+y=-1`
+
+  Typically, systems of equations are used together to solve for each variable.
 
 tan:
   title: Tangent
