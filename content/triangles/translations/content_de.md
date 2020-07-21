@@ -272,29 +272,8 @@ waagrecht an einem Stück Schnur aufhängen, die an seinem Schwerpunkt befestigt
 
     figure: img(src="images/center-of-mass.jpg" width=600 height=190)
 
-::: column.grow
 Das funktioniert, weil das Gewicht des Dreiecks gleichmäßig um den
 Schwerpunkt verteilt ist. In der Physik wird dieser Punkt oft als __Massenschwerpunkt__ bezeichnet.
-
-Jede gerade Linie, die durch den Schwerpunkt verläuft, teilt das Dreieck in zwei
-Teile, die genau die gleiche Fläche haben. Verschiebe den [blauen Punkt](target:move) in der
-Abbildung rechts. Die roten und grünen Bereiche haben immer die gleiche Fläche.
-::: column(width=220)
-
-    x-geopad(width=220): svg
-      circle.move(name="a" cx=70 cy=50)
-      circle.move(name="b" cx=60 cy=160)
-      circle.move(name="c" cx=180 cy=130)
-      circle.yellow(x="triangle(a,b,c).centroid" name="d")
-      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
-      circle(hidden name="q" x="p.rotate(pi,d)")
-
-      path.dark(x="triangle(a,b,c)" name="t")
-      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
-      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
-      path.blue(x="line(p,d)")
-
-:::
 
 ---
 > id: circumcircle

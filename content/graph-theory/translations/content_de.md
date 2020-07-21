@@ -6,9 +6,9 @@
 > section: introduction
 
 Wir haben es in unserem täglichen Umfeld mit unzähligen Netzwerken und Verbindungen zu tun: Straßen
- und Eisenbahnschienen, Telefonleitungen, das Internet, elektronische Schaltkreise und sogar
- Molekülbindungen. Außerdem gibt es _soziale Netzwerke_ zwischen Freunden und Familien. Kannst du
- dir noch andere Beispiele vorstellen?
+und Eisenbahnschienen, Telefonleitungen, das Internet, elektronische Schaltkreise und sogar
+Molekülbindungen. Außerdem gibt es _soziale Netzwerke_ zwischen Freunden und Familien. Kannst du
+dir noch andere Beispiele vorstellen?
 
 ::: column(width=220 parent="padded-thin")
 
@@ -53,13 +53,13 @@ Wir haben es in unserem täglichen Umfeld mit unzähligen Netzwerken und Verbind
 
 ::: column.grow
 
-In der Mathematik können all diese Beispiele als __Graphen__](gloss:graph) dargestellt werden
- (nicht zu verwechseln mit dem _Graph_ einer Funktion). Ein Graph besteht aus einzelnen
- _Punkten_ die [[Knoten|Kreise|Kreuzungen]] genannt werden, von denen einige durch
- [[Kanten|Grenzen|Paare]] verbunden sind.
+In der Mathematik können all diese Beispiele als [__Graphen__](gloss:graph) dargestellt werden
+(nicht zu verwechseln mit dem _Graph_ einer Funktion). Ein Graph besteht aus einzelnen
+_Punkten_ die [[Knoten|Kreise|Kreuzungen]] genannt werden, von denen einige durch
+[[Kanten|Grenzen|Paare]] verbunden sind.
 
 Die __Graphentheorie__ beschäftigt sich mit Graphen und ihren Eigenschaften. Sie ist
- eines der spannendsten und visuell ansprechendsten Gebiete der Mathematik und hat unzählige wichtige Anwendungen.
+eines der spannendsten und visuell ansprechendsten Gebiete der Mathematik und hat unzählige wichtige Anwendungen.
 
 ::: column(width=180)
 
@@ -71,8 +71,8 @@ Die __Graphentheorie__ beschäftigt sich mit Graphen und ihren Eigenschaften. Si
 > id: intro-1
 
 Wir können das Layout von einfachen Graphen mit Kreisen und Linien zeichnen. Die Position
- der Knoten und die Länge der Kanten spielt dabei keine Rolle - uns interessiert nur, _wie sie
- miteinander verbunden_ sind. Die Kanten können sich sogar kreuzen und müssen nicht unbedingt gerade sein.
+der Knoten und die Länge der Kanten spielt dabei keine Rolle - uns interessiert nur, _wie sie
+miteinander verbunden_ sind. Die Kanten können sich sogar kreuzen und müssen nicht unbedingt gerade sein.
 
 ::: column(width=200)
 
@@ -101,9 +101,9 @@ oder Knoten, die mit sich selbst verbunden sind (Schleifen).
 > id: intro-2
 
 Wir können neue Graphen aus einem bestehenden Graphen erstellen, indem wir einige der Knoten und
- Kanten entfernen. Das Ergebnis nennt sich [__Teilgraph__](gloss:subgraph). Hier siehst du ein paar
- weitere Beispiele für Graphen, mit farbigen Kanten und Knoten, die auf einen möglichen
- Teilgraphen hinweisen:
+Kanten entfernen. Das Ergebnis nennt sich [__Teilgraph__](gloss:subgraph). Hier siehst du ein paar
+weitere Beispiele für Graphen, mit farbigen Kanten und Knoten, die auf einen möglichen
+Teilgraphen hinweisen:
 
 ::: column(width=212 parent="padded-thin")
 
@@ -126,8 +126,8 @@ Wir können neue Graphen aus einem bestehenden Graphen erstellen, indem wir eini
 > id: intro-3
 
 Wir sagen, dass die [__Ordnung__](gloss:graph-order) eines Graphen die Anzahl der Knoten ist,
- die er hat. Der [__Grad__]( gloss: graph-degree) eines Knotens ist die Anzahl der Kanten, die
- sich an diesem Knoten treffen.
+die er hat. Der [__Grad__]( gloss: graph-degree) eines Knotens ist die Anzahl der Kanten, die
+sich an diesem Knoten treffen.
 
 ::: column(width=130)
 
@@ -159,7 +159,7 @@ Wir sagen, dass die [__Ordnung__](gloss:graph-order) eines Graphen die Anzahl de
 > id: intro-4
 
 Graphen, die aus einem einzigen Knoten-Ring bestehen, werden als [__Kreisgraphen__](gloss:graph-cycle)
- bezeichnet. Alle Kreisgraphen haben [[die gleiche Anzahl von Kanten und Knoten|mehr Kanten als Knoten|weniger Kanten als Knoten]].
+bezeichnet. Alle Kreisgraphen haben [[die gleiche Anzahl von Kanten und Knoten|mehr Kanten als Knoten|weniger Kanten als Knoten]].
 
     .row
       svg.graph(style='width: 120px; height: 120px;')
@@ -178,11 +178,15 @@ faszinierenden Eigenschaften und Anwendungen von Graphen näher betrachten.
 
 ::: column.grow
 
-Einer der ersten Mathematiker, der über Graphen und Netzwerke nachdachte, war [Leonhard Euler](bio:euler) . Euler war fasziniert von einem alten Problem in Bezug auf die Stadt Königsberg in der Nähe der Ostsee. 
+Einer der ersten Mathematiker, der sich Gedanken zu Graphen und Netzwerke machte, war [Leonhard Euler](bio:euler).
+Euler war fasziniert von einem alten Problem in Bezug auf die Stadt Königsberg nahe der Ostsee.
 
-Der Fluss Pregel teilt Königsberg in vier separate Teile, die durch sieben Brücken verbunden sind. Ist es möglich, alle Brücken genau einmal zu durchqueren - aber nicht mehr als einmal? (Sie können überall beginnen und enden, nicht unbedingt am selben Ort.) 
+Der Fluss Pregel teilt Königsberg in vier voneinander getrennte Teile, die durch sieben Brücken
+miteinander verbunden sind. Ist es möglich, durch die Stadt zu gehen und alle Brücken genau einmal
+zu überqueren - aber nicht mehr als einmal? (Start und Ziel können überall sein und müssen nicht
+unbedingt am selben Ort sein).
 
-Versuchen Sie, eine gültige Route zu finden, indem Sie auf diese Karten zeichnen: 
+Versuche, eine passende Route zu finden, indem du auf diese Karten einen Weg einzeichnest:
 
 ::: column(width=250)
 
@@ -224,13 +228,20 @@ Versuchen Sie, eine gültige Route zu finden, indem Sie auf diese Karten zeichne
 ---
 > id: bridges-1
 
-Im Fall von Königsberg scheint es unmöglich zu sein, eine gültige Route zu finden, aber einige der anderen Städte funktionieren. Euler gelang es, eine einfache Regel zu finden, die auf jede Stadt angewendet werden kann, ohne viele Möglichkeiten ausprobieren zu müssen - mithilfe der Graphentheorie. 
+Im Fall von Königsberg scheint es unmöglich zu sein, eine gültige Route zu finden,
+aber einige der anderen Städte funktionieren. Euler gelang es, eine einfache
+Regel zu finden, die auf jede Stadt angewendet werden kann, ohne viele Möglichkeiten
+ausprobieren zu müssen - mithilfe der Graphentheorie.
 
 ::: column.grow
 
-Zuerst müssen wir die Stadtpläne in Diagramme mit Kanten und Eckpunkten konvertieren. Jede Insel oder Region des Landes wird durch [[einen Scheitelpunkt dargestellt | eine Ecke | Ein Bereich]] und jede Brücke, die zwei Regionen verbindet, wird durch eine entsprechende [[Kante dargestellt | Scheitel | Straße]] . 
+Zuerst müssen wir die Stadtpläne in Graphen mit Kanten und Knoten umwandeln.
+Jede Insel oder Region des Landes wird durch [[einen Knoten|eine Kante|eine Fläche]]
+dargestellt und jede Brücke, die zwei Regionen verbindet, wird durch eine/n entsprechende/n [[Kante|Knoten|Straße]] dargestellt.
 
-{.reveal(when="blank-0 blank-1")} Das Problem, „eine Stadt zu bereisen, während jede Brücke genau einmal überquert wird“, ist nun zu einem Problem geworden, „einen Graphen mit einem kontinuierlichen Strich zu zeichnen, während jede Kante genau einmal verfolgt wird“. 
+{.reveal(when="blank-0 blank-1")} Jetzt ist das Problem, "eine Stadt zu durchwandern,
+während man jede Brücke genau einmal überquert", zu einem Problem geworden, "einen Graphen
+mit einem Strich ohne abzusetzen zu zeichnen, während man jede Kante genau einmal nachzieht".
 
 ::: column(width=200)
 
@@ -241,48 +252,63 @@ Zuerst müssen wir die Stadtpläne in Diagramme mit Kanten und Eckpunkten konver
 ---
 > id: bridges-2
 
-Überlegen Sie sich auf dem Papier ein paar verschiedene Grafiken und versuchen Sie dann herauszufinden, welche mit einem einzigen, kontinuierlichen Strich gezeichnet werden können. 
+Überlege dir auf dem Papier ein paar unterschiedliche Graphen und versuche dann herauszufinden,
+welche mit einem einzigen, kontinuierlichen Strich gezeichnet werden können.
 
 ---
 > id: bridges-3
 > goals: size prime eo
 
-Genau wie bei den Stadtplänen zuvor stellen wir fest, dass einige Grafiken möglich sind, andere nicht. Um zu verstehen, warum, beschriften wir jeden Scheitelpunkt mit seinem [Grad](gloss:graph-degree) . Dann können wir die Eckpunkte auf verschiedene Arten färben und versuchen, ein Muster aufzudecken: 
+Genau wie bei den Stadtplänen zuvor, stellen wir fest, dass einige Graphen möglich sind,
+während andere nicht möglich sind. Um zu verstehen, warum das so ist, beschriften wir
+jeden Knoten mit seinem [Grad](gloss:graph-degree). Dann können wir die Knoten auf
+verschiedene Weise einfärben und versuchen, ein Muster zu erkennen:
 
     figure
       x-select.var.tabs(:bind="colour")
-        div(value="val") Value
-        div(value="size") Size
-        div(value="prime") Prime Numbers
-        div(value="eo") Even and Odd
+        div(value="val") Wert
+        div(value="size") Größe
+        div(value="prime") Primzahlen
+        div(value="eo") Gerade und ungerade
       .box
-        p.no-voice(style="margin: 0"): strong These graphs are possible:
+        p.no-voice(style="margin: 0"): strong Diese Graphen sind möglich:
         include svg/vertex-orders-1.svg
-        p.no-voice(style="margin: 1em 0 0"): strong These graphs are not possible:
+        p.no-voice(style="margin: 1em 0 0"): strong Diese Graphen sind nicht möglich:
         include svg/vertex-orders-2.svg
 
 ---
 > id: bridges-4
 
-Vergleicht man diese Zahlen mit Graphen, die möglich sind, und solchen, die nicht möglich sind, so scheint es, dass ein Graph gezeichnet werden kann, wenn er [[nicht mehr als zwei „ungerade“ Eckpunkte hat | hat nur "gerade" Eckpunkte | hat keine Eckpunkte mit einer Ordnung größer als 4 | hat eine ungerade Anzahl von Eckpunkten | hat keine Eckpunkte der Ordnung 3]] . Diese Bedingung kann erklärt werden, wenn wir nur einen einzelnen Scheitelpunkt in der Grafik betrachten: 
+Vergleicht man diese Zahlen für Graphen, die möglich sind, und solche, die nicht
+möglich sind, scheint es, dass ein Graph gezeichnet werden kann, wenn er [[nicht
+mehr als zwei "ungerade" Knoten hat|nur "gerade" Knoten hat|keine Knoten mit einer
+Ordnung größer als 4 hat|eine ungerade Anzahl von Knoten hat|keine Knoten der
+Ordnung 3 hat]]. Diese Bedingung kann erklärt werden, wenn wir nur einen einzigen
+Knoten im Graphen betrachten:
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
-      .legend(slot="legend") Here you can see a single, magnified vertex in a graph.
-      .legend(slot="legend") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
-      .legend(slot="legend") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
-      .legend(slot="legend") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
-      .legend(slot="legend") Notice that, either way, there always is an even number of edges meeting at the vertex.
-      .legend(slot="legend") The only two exceptions are the vertices where the path starts, and where it ends – these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+      .legend(slot="legend") Hier siehst du einen einzelnen, vergrößerten Knoten in einem Graphen.
+      .legend(slot="legend") Wenn wir den Graphen zeichnen, werden wir irgendwann eine Kante haben, die zu diesem Knoten führt, und dann eine andere, die wegführt. Auf diese Weise treffen zwei Kanten am Knoten aufeinander.
+      .legend(slot="legend") Vielleicht ist der Knoten eher eine Kreuzung als eine Ecke. In diesem Fall gibt es eine andere Kante, die zum Knoten hinführt, und eine weitere Kante, die wegführt. Jetzt haben wir vier Kanten.
+      .legend(slot="legend") Und in manchen Graphen kann es sogar ein drittes Kantenpaar geben, das auf den Knoten zu und von ihm weg führt. Jetzt gibt es sechs Kanten.
+      .legend(slot="legend") Beachte, dass es in jedem Fall immer eine gerade Anzahl von Kanten gibt, die sich am Knoten treffen.
+      .legend(slot="legend") Die einzigen zwei Ausnahmen sind die Knoten, wo der Pfad beginnt und wo er endet - diese beiden können eine ungerade Anzahl von Kanten haben. Wenn der Start- und Endpunkt derselbe ist, ist der Grad aller Knoten im Graphen gerade.
 
 ---
 > id: bridges-5
 
 ::: column.grow(parent="right")
 
-Wenn Sie zurück zur Karte von Königsberg scrollen, werden Sie feststellen, dass es mehr als zwei Inseln mit einer ungeraden Anzahl von Brücken gibt. Daher ist eine Route, die jede Brücke genau einmal überquert, in der Tat unmöglich - und genau das hat Leonard Euler entdeckt. 
+Wenn du zur Karte von Königsberg zurückscrollst, wirst du feststellen, dass es mehr
+als zwei Inseln mit einer ungeraden Anzahl von Brücken gibt. Daher ist eine Route,
+die jede Brücke genau einmal überquert, natürlich unmöglich - und das ist es,
+was Leonard Euler entdeckt hat.
 
-Eulers Entdeckung mag im wirklichen Leben nicht besonders nützlich erscheinen, aber Diagramme bilden die Grundlage für viele andere geografische Probleme, z. B. das Finden von Richtungen zwischen zwei Orten. Wir werden später mehr von diesen Anwendungen entdecken. 
+Eulers Entdeckung mag im wirklichen Leben nicht besonders nützlich erscheinen,
+aber Graphen sind die Grundlage für viele andere geografische Probleme, wie zum
+Beispiel das Finden von Wegstrecken zwischen zwei Orten. Wir werden später noch mehr
+von diesen Anwendungen kennenlernen.
 
 ::: column(width=240)
 
@@ -295,17 +321,20 @@ Eulers Entdeckung mag im wirklichen Leben nicht besonders nützlich erscheinen, 
 > section: handshakes
 > translated: auto
 
-## Handshakes und Dating 
+## Händeschütteln und Dating
 
 ::: column.grow
 
-Sie wurden zu einer wundervollen Geburtstagsfeier mit Ihren Freunden eingeladen. Einschließlich sich selbst und des Gastgebers gibt es ${hnd}{hnd|5|3,15,1} anwesende Personen. 
+Du bist zu einer tollen Geburtstagsparty mit deinen Freunden eingeladen worden.
+Einschließlich dir selbst und dem Gastgeber sind ${hnd}{hnd|5|3,15,1} Gäste anwesend.
 
-Am Abend, wenn die Gäste bereit sind zu gehen, geben sich alle anderen die Hand. Wie viele Handshakes gibt es insgesamt? 
+Als die Gäste sich abends zum Aufbruch bereit machen, schüttelt jeder jedem anderen die Hand.
+Wie oft werden insgesamt die Hände geschüttelt?
 
-Wir können die Handshakes anhand eines Diagramms darstellen: Jede Person ist [[ein Scheitelpunkt | eine Kante]] , und jeder Handschlag ist [[eine Kante | ein Scheitelpunkt]] . 
+Wir können das Händeschütteln mit einem Graphen darstellen: jede Person ist [[ein Knoten|eine Kante]], und jedes Händesschütteln ist [[eine Kante|ein Knoten]].
 
-{.reveal(when='blank-0 blank-1')} Jetzt ist es einfach, die Anzahl der Kanten im Diagramm zu zählen. Wir finden das dort mit ${hnd} Menschen gibt es ${hnd*(hnd-1)/2} Handshakes. 
+{.reveal(when='blank-0 blank-1')} Jetzt ist es einfach, die Anzahl der Kanten im Graph zu zählen. Wir stellen
+fest, dass bei ${hnd} Leuten ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden.
 
 ::: column.s-hide(width=240)
 
@@ -317,9 +346,12 @@ Wir können die Handshakes anhand eines Diagramms darstellen: Jede Person ist [[
 ---
 > id: handshakes-2
 
-Anstatt alle Kanten in großen Diagrammen zu zählen, könnten wir auch versuchen, eine einfache Formel zu finden, die das Ergebnis für eine _beliebige_ Anzahl von Gästen angibt. 
+Anstatt alle Kanten in großen Graphen zu zählen, könnten wir auch versuchen,
+eine einfache Formel zu finden, die uns das Ergebnis für eine _beliebige_ Anzahl von Gästen angibt.
 
-Jedes von den ${n}{n|5|2,8,1} Leute auf der Party geben sich die Hand ${n-1} Andere. Das macht ${n} × ${n-1} = ${n×(n-1)} Handshakes insgesamt. Für _n_ Personen wäre die Anzahl der Handshakes [[`n×(n–1)`|`n×(n+1)`|`n^2`]] . 
+Jeder der ${n}{n|5|2,8,1} Gäste auf der Party schüttelt ${n-1} anderen die Hand.
+Das macht ${n} × ${n-1} = ${n×(n-1)} geschüttelte Hände insgesamt. Für _n_ Gäste
+wäre das ein [[`n×(n–1)`|`n×(n+1)`|`n^2`]] - maliges Händeschütteln.
 
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -327,16 +359,24 @@ Jedes von den ${n}{n|5|2,8,1} Leute auf der Party geben sich die Hand ${n-1} And
 ---
 > id: handshakes-2a
 
-Leider ist diese Antwort nicht ganz richtig. Beachte wie <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">die ersten beiden Einträge in der oberen Reihe</x-target> sind eigentlich gleich, nur umgedreht. 
+Leider ist diese Antwort nicht ganz richtig. Beachte, dass <x-target to=".handshakes tr:first-child
+td:first-child, .handshakes tr:first-child td:nth-child(2)">die ersten beiden Einträge
+in der obersten Zeile</x-target> eigentlich die gleichen sind, nur umgedreht.
 
-Tatsächlich haben wir jeden Handschlag [[zweimal gezählt | Einmal | dreimal]] _{span.reveal(when="blank-0")} einmal für jede der beiden beteiligten Personen. Dies bedeutet, dass die richtige Anzahl von Handshakes für ${n}{n|5|2,25,1} Gäste ist `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
+Tatsächlich haben wir jedes Händeschütteln [[zweimal|einmal|dreimal]] gezählt, _{span.reveal(when="blank-0")}
+einmal für jede der beiden beteiligten Personen. Das bedeutet, dass die korrekte
+Anzahl des Händeschüttelns für ${n}{n|5|2,25,1} Gäste `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
 
 ---
 > id: handshakes-3
 
-Die Handshake-Diagramme sind etwas Besonderes, da jeder Scheitelpunkt mit jedem anderen Scheitelpunkt verbunden ist. __Diagramme__ mit dieser Eigenschaft werden als __vollständige Diagramme bezeichnet__ . Das vollständige Diagramm mit 4 Eckpunkten wird häufig als abgekürzt `K_4` ist der vollständige Graph mit 5 Eckpunkten bekannt als `K_5` , und so weiter. 
+Die Händeschüttel-Graphen sind ein besonderer Fall, weil jeder Knoten mit jedem
+anderen Knoten verbunden ist. Graphen mit dieser Eigenschaft werden __vollständige Graphen__
+genannt. Ein vollständiger Graph mit 4 Knoten wird oft als `K_4` abgekürzt, ein
+vollständiger Graph mit 5 Knoten wird als `K_5` bezeichnet, und so weiter.
 
-Wir haben gerade gezeigt, dass eine vollständige Grafik mit `n` Eckpunkte, `K_n` , hat `(n × (n-1))/2` Kanten. 
+Wir haben gerade gezeigt, dass ein vollständiger Graph mit `n` Knoten, `K_n`,
+`(n × (n-1))/2` Kanten hat.
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -349,11 +389,16 @@ Wir haben gerade gezeigt, dass eine vollständige Grafik mit `n` Eckpunkte, `K_n
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
-An einem anderen Tag sind Sie zu einem Speed-Dating-Event für eingeladen ${m}{m|5|2,8,1} Jungs und ${f}{f|4|2,8,1} Mädchen. Es gibt viele kleine Tische und jeder Junge verbringt 5 Minuten mit jedem der Mädchen. Wie viele einzelne "Daten" gibt es insgesamt? 
+An einem anderen Tag bist du zu einem Speed-Dating-Event für ${m}{m|5|2,8,1}
+Jungs und ${f}{f|4|2,8,1} Mädchen eingeladen. Es gibt viele kleine Tische und jeder Junge
+verbringt 5 Minuten mit jedem der Mädchen. Wie viele einzelne "Dates" gibt es insgesamt?
 
 ::: column.grow
 
-In diesem Fall besteht der entsprechende Graph aus zwei getrennten Sätzen von Eckpunkten. Jeder Scheitelpunkt ist mit allen Scheitelpunkten im [[Gegenteil verbunden | seine eigene]] Menge, aber keine der Eckpunkte in [[seiner eigenen | der entgegengesetzte]] Satz. __Diagramme__ mit diesem Layout werden als __zweiteilige Diagramme bezeichnet__ . 
+In diesem Fall besteht der entsprechende Graph aus zwei getrennten Gruppen von Knoten.
+Jeder Knoten ist mit allen Knoten in der [[anderen|eigenen]], aber keiner der Knoten
+mit denen in [[seiner eigenen|der anderen]] Gruppe verbunden. Graphen, die diese
+Anordnung haben, werden __bipartite Graphen__ oder __paare Graphen__ genannt.
 
 ::: column(width=300)
 
