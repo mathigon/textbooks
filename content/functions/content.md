@@ -118,7 +118,6 @@ You can think of relations as an operation: you pass in an item from the __set__
 
 The input set for the first example is {14, 3, 11, 6, -6}. Note that these numbers don’t have to be in order from least to greatest. The output set for this example is {even, odd}. Notice the elements even and odd are not repeated.
 
-
 These input and output sets have special names. The complete set of all possible inputs is called [__domain__](gloss:domain). Similarly,  [__range__](gloss:range) is the set of all possible output values. We use the same curly brace notation in the example above.  Sometimes we use inequalities to communicate domain and range. We will look at this in more detail later. Use the tabs to answer the questions below.
 
 TODO Interactive here
@@ -214,8 +213,6 @@ TODO coordinate plane
 
 The graph only appears in the [[1st]] quadrant. We can see that all output values must be [[positive | negative | zero]].
 
-:::
-
 ::: column(width=300)
 
 TODO coordinate plane
@@ -226,6 +223,7 @@ The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’
 
 :::
 
+
 --------------------------------------------------------------------------------
 
 
@@ -234,11 +232,11 @@ The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’
 > section: graphing
 > sectionStatus: dev
 
-// NOTE
-// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
+    // NOTE
+    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
-// EDITORIAL USE ONLY
-// [mock-up title image](https://drive.google.com/file/d/1P7d1Tfb7NwYLR5FM-e0zMbj5JKYgpJMJ/view?usp=sharing)
+    // EDITORIAL USE ONLY
+    // [mock-up title image](https://drive.google.com/file/d/1P7d1Tfb7NwYLR5FM-e0zMbj5JKYgpJMJ/view?usp=sharing)
 
 The Olympics is full of incredible athletic feats. It’s also full of interesting data. Graphs help us visualize that data. During our time together today, we will watch Olympic competitions and analyse their graphs for interesting information. Let’s head over to the gymnastics arena!
 
@@ -252,9 +250,9 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
 
 :::
 
-// NOTES
-// [citation](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault)
-// Student presses play on a [video](https://www.youtube.com/watch?v=85v0Un19A94) (0:00-0:18) of Ri’s vault. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+    // NOTES
+    // [citation](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault)
+    // Student presses play on a [video](https://www.youtube.com/watch?v=85v0Un19A94) (0:00-0:18) of Ri’s vault. Simultaneously, a distance-time graph populates in a card to the right of the animation.
 
 [vault mock-up](https://www.desmos.com/calculator/td3fynck7q)
 
@@ -270,9 +268,9 @@ On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri
 
 Let’s build some intuition for what graphs of different events look like. Match the graph to the event. Be sure to pay close attention to what the axes represent.
 
-// NOTE
-// Organized as a table in the Google Doc, so I (Dani) put it in a table here. The idea is to make it cards.
-// Match graphs to sports of time functions
+    // NOTE
+    // Organized as a table in the Google Doc, so I (Dani) put it in a table here. The idea is to make it cards.
+    // Match graphs to sports of time functions
 
 | Triple Jump | | 50 M Freestyle | | 100 M Hurdles | | Vault | | Diving | | Skiing | |       |
 | :---------: | | :------------: | | :-----------: | | :---: | | :----: | | :----: | | :---: |
@@ -281,7 +279,7 @@ Let’s build some intuition for what graphs of different events look like. Matc
 | [Video](https://www.youtube.com/watch?v=wVqYjmK-T3w) | | [Video](https://www.youtube.com/watch?v=qZvdhv9uhi0) | | [Video](https://www.youtube.com/watch?v=AFNqbhJ3kmw) | | [Video](https://www.youtube.com/watch?v=85v0Un19A94) | | [Video](https://www.youtube.com/watch?v=wTX13JZFHd4) | | [Video](https://www.youtube.com/watch?v=kU0a-kvvKW4) | |     |
 |       | |       | | :50-1:05 | |All videos are either of stills from 2016 or from other competitions. | | 0:00-0:12  All videos are either of stills from 2016 or from other competitions. | | 7:42-8:32| |     |
 | [Françoise Mbango Etone](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Cameroon holds the Olympic record in women’s triple jump with a length of 15.39 meters. | | [César Cielo](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds. | | [Sally Pearson](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Australia holds the Olympic record in the women’s 100 meter hurdles with a time of 12.35 seconds. | | [Ri Se-gwang](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault) of the People’s Republic of Korea won the gold medal for the vault in the 2016 Summer Olympic Games. | | [Ren Qian](https://en.wikipedia.org/wiki/Diving_at_the_2016_Summer_Olympics_–_Women%27s_10_metre_platform) of China won the gold medal for diving in the 2016 Summer Olympic Games. | |     | |     |
-| https://www.spokesman.com/copyright/ | | I like this as an action cut out. The lighting isn't amazing, though. And not for $20. I can look for others if we decide having an action photo of each of these record holders is worth having. | | $$$ | |      | | Too good not to include as a reference. | | Start | | 985m |
+| https://www.spokesman.com/copyright/ | | I like this as an action cut out. The lighting isn't amazing, though. And not for $20. I can look for others if we decide having an action photo of each of these record holders is worth having. | | $$ | |      | | Too good not to include as a reference. | | Start | | 985m |
 |       | |       | |        | |       | |       | | Finish | | 805m |
 |       | |       | |        | |       | |       | | Vertical drop| | 180m |
 |       | |       | |        | |       | |       | | Gates| | 66|
@@ -289,8 +287,9 @@ Let’s build some intuition for what graphs of different events look like. Matc
 
 As you can see there are several different perspectives for graphing motion. One perspective is distance as a function of time. Select the events represented with this perspective.
 
-// NOTES
-// Multiple Select
+    // NOTES
+    // Multiple Select
+
 [option 1](Triple Jump)
 [option 2](50 M Freestyle)
 [option 3](100 M Hurdles)
@@ -303,8 +302,8 @@ We see the other two events are [[height | distance]] as a function of [[distanc
 
 We are just in time for the men’s 50 meter freestyle finals. Keep a close eye on César Cielo Filho of Brazil. The graph of his swim will appear as the video plays.
 
-// NOTES
-// Student presses play on a [video](https://www.youtube.com/watch?v=qZvdhv9uhi0) (0:12-1:21) of Cielo’s record setting swim. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+    // NOTES
+    // Student presses play on a [video](https://www.youtube.com/watch?v=qZvdhv9uhi0) (0:12-1:21) of Cielo’s record setting swim. Simultaneously, a distance-time graph populates in a card to the right of the animation.
 
 ::: column.grow
 
@@ -312,8 +311,9 @@ César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a 
 
 ::: column(width240)
 
-// EDITORIAL USE ONLY
-// [César Cielo](https://www.alamy.com/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-image332214503.html?pv=1&stamp=2&imageid=4E4EF72A-A00B-4C2E-9F1F-FA7688F2F792&p=1229576&n=0&orientation=0&pn=1&searchtype=0&IsFromSearch=1&srch=foo%3dbar%26st%3d0%26pn%3d1%26ps%3d100%26sortby%3d2%26resultview%3dsortbyPopular%26npgs%3d0%26qt%3dcesar%2520cielo%26qt_raw%3dcesar%2520cielo%26lic%3d3%26mr%3d0%26pr%3d0%26ot%3d0%26creative%3d%26ag%3d0%26hc%3d0%26pc%3d%26blackwhite%3d%26cutout%3d%26tbar%3d1%26et%3d0x000000000000000000000%26vp%3d0%26loc%3d0%26imgt%3d0%26dtfr%3d%26dtto%3d%26size%3d0xFF%26archive%3d1%26groupid%3d%26pseudoid%3d%26a%3d%26cdid%3d%26cdsrt%3d%26name%3d%26qn%3d%26apalib%3d%26apalic%3d%26lightbox%3d%26gname%3d%26gtype%3d%26xstx%3d0%26simid%3d%26saveQry%3d%26editorial%3d1%26nu%3d%26t%3d%26edoptin%3d%26customgeoip%3d%26cap%3d1%26cbstore%3d1%26vd%3d0%26lb%3d%26fi%3d2%26edrf%3d%26ispremium%3d1%26flip%3d0%26pl%3d)
+    // EDITORIAL USE ONLY
+
+[César Cielo](https://www.alamy.com/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-image332214503.html?pv=1&stamp=2&imageid=4E4EF72A-A00B-4C2E-9F1F-FA7688F2F792&p=1229576&n=0&orientation=0&pn=1&searchtype=0&IsFromSearch=1&srch=foo%3dbar%26st%3d0%26pn%3d1%26ps%3d100%26sortby%3d2%26resultview%3dsortbyPopular%26npgs%3d0%26qt%3dcesar%2520cielo%26qt_raw%3dcesar%2520cielo%26lic%3d3%26mr%3d0%26pr%3d0%26ot%3d0%26creative%3d%26ag%3d0%26hc%3d0%26pc%3d%26blackwhite%3d%26cutout%3d%26tbar%3d1%26et%3d0x000000000000000000000%26vp%3d0%26loc%3d0%26imgt%3d0%26dtfr%3d%26dtto%3d%26size%3d0xFF%26archive%3d1%26groupid%3d%26pseudoid%3d%26a%3d%26cdid%3d%26cdsrt%3d%26name%3d%26qn%3d%26apalib%3d%26apalic%3d%26lightbox%3d%26gname%3d%26gtype%3d%26xstx%3d0%26simid%3d%26saveQry%3d%26editorial%3d1%26nu%3d%26t%3d%26edoptin%3d%26customgeoip%3d%26cap%3d1%26cbstore%3d1%26vd%3d0%26lb%3d%26fi%3d2%26edrf%3d%26ispremium%3d1%26flip%3d0%26pl%3d)
 
 :::
 
@@ -337,9 +337,9 @@ Notice the [horizontal-axis](target:1_xAxis), in this graph shows [[time]] in se
 
 We are only missing slope. In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
-// NOTES
-// This might work better as an animation to keep the stairs equal distances. We won't have to worry about reducing ratios.
-// Students can click two points on the graph. These coordinates appear in a x-y table. Dashed lines with the horizontal and vertical measurements appear one unit at a time as though counting the slope. Students can choose between one and five points to see a pattern (slope).
+    // NOTES
+    // This might work better as an animation to keep the stairs equal distances. We won't have to worry about reducing ratios.
+    // Students can click two points on the graph. These coordinates appear in a x-y table. Dashed lines with the horizontal and vertical measurements appear one unit at a time as though counting the slope. Students can choose between one and five points to see a pattern (slope).
 
 As we move from left to right along the line, the vertical distances measure [[-2.35]] meters. The horizontal distances measure [[1]] second. Cielo’s speed [[stayed constant | increased | decreased]] for this race, which is a key feature of linear functions.
 
@@ -357,8 +357,9 @@ f(t)=[[2.35]]t+0
 
 Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at [f(t)=10](target:1_cieloGraph). The phrase “how long” indicates we are solving for t.
 
-// NOTE
-// Algebra Flow
+    // NOTE
+    // Algebra Flow
+
 {.text-center.follows} `f(t)=2.35t`
 {.text-center.follows} `10=2.35t`
 {.text-center.follows} `(10)/(2.35)=t`
@@ -370,8 +371,8 @@ Cielo swims the first 10 meters in just over [[4.1+-0.1]] seconds.
 
 Take a look at the top four finishers during this race:
 
-// NOTES
-// Lines are labeled with the swimmer’s name and the function name. Moving the cursor along the active line show crosshairs extending to the axes. Students can also select a line, then select a value along one of the axes to lock the crosshairs to that value.
+    // NOTES
+    // Lines are labeled with the swimmer’s name and the function name. Moving the cursor along the active line show crosshairs extending to the axes. Students can also select a line, then select a value along one of the axes to lock the crosshairs to that value.
 | Swimmer | | Function Name | | Color |
 | :------ | | :------------ | | :---- |
 | Cesar Cielo Filho | | f(t) | | green |
@@ -389,8 +390,8 @@ All the lines cross the y-axis at [[0]] meters because this is the distance of t
 
 Say we want to figure out how many seconds Cielo is ahead of Leveaux after 10 meters. We already know Cielo swam this distance in 4.25 seconds. We don’t know the function rule for l(t), Leveaux’s swim, but we do have the graph. Find the time, t, where l(t) = [[10]].
 
-// NOTES
-// Student clicks on l(t) to make it the active function. Student clicks on 10 on the y-axis. Dotted line from y-axis to l(t) appears. Dotted line from l(t) at 10 meters to corresponding t-value appears.
+    // NOTES
+    // Student clicks on l(t) to make it the active function. Student clicks on 10 on the y-axis. Dotted line from y-axis to l(t) appears. Dotted line from l(t) at 10 meters to corresponding t-value appears.
 
 Leveaux swims the first 10 meters in [[4.56+-.02]] seconds. That means Cielo was only [[0.46+-0.12]] seconds ahead of Leaveaux!
 
@@ -413,7 +414,9 @@ Let’s head over to the diving pool for the women’s 10 meter platform competi
 ::: column.grow
 
 Meanwhile, on the other side of the Aquatics center, a diving competition is in progress.
-Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4) // NOTES (0:00-0:12)!
+Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4)
+     
+    // NOTES (0:00-0:12)!
 
 Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games.
 
@@ -421,12 +424,10 @@ Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games
 
 [Ren image mock-up](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog)
 
-:::
-
 ::: column(width240)
 
-// NOTES
-// make sticky  
+    // NOTES
+    // make sticky  
 [dive mock-up](https://www.desmos.com/calculator/es8ugnvxeq)
 
 ::: column.grow
@@ -437,8 +438,8 @@ Graphs with this shape are called cubic functions. We can get important informat
 
 :::
 
-// NOTES
-// Students cards for all of the items below, and then drag them onto the corresponding point along the graph. Let’s show all the contextual statements, but talk about one key feature at a time.
+    // NOTES
+    // Students cards for all of the items below, and then drag them onto the corresponding point along the graph. Let’s show all the contextual statements, but talk about one key feature at a time.
 
 | Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
 | :---: | | :---: | | :---: |
@@ -449,11 +450,10 @@ Graphs with this shape are called cubic functions. We can get important informat
 | Ren turns around under water. | | minimum | | d(2.556)=-1.623 |
 | Ren surfaces after a nearly flawless dive. | | Horizontal intercept | | d(2.989)=0|
 
-
-// NOTES
-// If I read this correctly, the explanation of the various features of the graph would come up and then students would drag the corresponding ones into place? Is that correct? If so, I wonder how it would go if the order is flipped - students choose any item from the table above and then when they drag it into the correct spot, some narrative comes up explaining the math of that point. I'm only suggesting this because as I read the table without any of the text below, I found myself moving all the "cards" into the correct spot on the graph and enjoyed that. Maybe the scaffolding is needed and important tot the math here. Just sharing my 1st experience of reading the table.
+    // NOTES
+    // If I read this correctly, the explanation of the various features of the graph would come up and then students would drag the corresponding ones into place? Is that correct? If so, I wonder how it would go if the order is flipped - students choose any item from the table above and then when they drag it into the correct spot, some narrative comes up explaining the math of that point. I'm only suggesting this because as I read the table without any of the text below, I found myself moving all the "cards" into the correct spot on the graph and enjoyed that. Maybe the scaffolding is needed and important tot the math here. Just sharing my 1st experience of reading the table.
 Recall the y-intercept is where x=[[0]]. In function notation, this looks like d([[0]])=10. The pattern of d(0)=y-intercept is true for any function.
-// That's an interesting thought. +philipp@mathigon.org can text oder be dependent on how the student uses the interactive? In this case, what order they choose to place the cards on the graph?
+    // That's an interesting thought. +philipp@mathigon.org can text oder be dependent on how the student uses the interactive? In this case, what order they choose to place the cards on the graph?
 
 Similarly, the x-intercepts are were [[d(x) | x]]=0. This graph has [[2]] x-intercepts. They represent the surface of the water in the pool.
 
@@ -465,23 +465,24 @@ The minimum is Ren’s lowest height. In this graph her lowest point is underwat
 
 ---
 
-// NOTES
-// +philipp@mathigon.org I pulled the intervals of increase from the cards. Do we want to pull it from the discussion, too? It gives a few more opportunities to use intevals.
+    // NOTES
+    // +philipp@mathigon.org I pulled the intervals of increase from the cards. Do we want to pull it from the discussion, too? It gives a few more opportunities to use intevals.
 
 Intuitively, we understand that the graph is increasing when Ren’s body is moving [[up | down]]. The notation for increasing is different from tuning points and intercepts. Since the graph increases for more than one point, we represent the section of the graph using an [__interval__](gloss:interval). The interval communicates the [[x | d(x)]] values corresponding to Ren’s increasing height. Note that there are many different ways to write intervals, we use inequalities in this chapter.
 
 Ren moves up during the intervals:
 
-// NOTES
-// Multiple selector (shuffle order)
+    // NOTES
+    // Multiple selector (shuffle order)
+
 0<x<0.335		0.335<x<2.556		2.556<x<2.989
 
 The unchecked interval is where the graph is [[decreasing]]. Ren is moving down from d(0.335)= [[10.941+-0.1]] meters to d(2.556)=[[-1.623+-0.1]] meters.
 
 Notice the [[maximum | minimum]] is where the Ren’s path changes from increasing to decreasing heights.  The minimum is where Ren’s path changes from decreasing to increasing.
 
-// NOTES
-// Not sure where to put the comment, so putting it here. I like how in the 1st example, students see the graph being made as the video is playing. Maybe at the end of this section, something similar could happen? They have the graph labeled with the cards correctly. Then, the graph goes away and the cards stay in place. Then, they hit play on the video and see the graph made in real time as they watch the dive?
+    // NOTES
+    // Not sure where to put the comment, so putting it here. I like how in the 1st example, students see the graph being made as the video is playing. Maybe at the end of this section, something similar could happen? They have the graph labeled with the cards correctly. Then, the graph goes away and the cards stay in place. Then, they hit play on the video and see the graph made in real time as they watch the dive?
 
 ---
 
@@ -497,10 +498,10 @@ Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, th
 
 Let’s head to the beach for the gold medal men’s volleyball match between Brazil and Italy. The teams engage in a beautiful [volley](https://www.youtube.com/watch?v=k4ux0jau_ws) (5:56-6:01). As you watch the video, notice the shape of the graph. Is it what you expect?
 
-// NOTES
-// Students watch the video of the volley and the graph appears simultaneously.
-// I'm thinking students can use estimates for y-values. The times should be pretty close to the video, but the heights should just be correct relative to each other (e.g. the second relative max is higher than the first and lower than the third). We can have the net height on the graph for reference.
-// We make this graph, add discussion.
+    // NOTES
+    // Students watch the video of the volley and the graph appears simultaneously.
+    // I'm thinking students can use estimates for y-values. The times should be pretty close to the video, but the heights should just be correct relative to each other (e.g. the second relative max is higher than the first and lower than the third). We can have the net height on the graph for reference.
+    // We make this graph, add discussion.
 
 [sketch](https://drive.google.com/file/d/1mrT-d6Xwunc6I6hC7y2U_38bWR1y-lF5/view?usp=sharing)
 
@@ -514,22 +515,24 @@ ___
 
 ### Creating Graphs
 
-// NOTES
-// From David re: diving graph. Capturing idea.
-// Great graph. I really like how you included the part under the water. That's nice to show. I wonder if before showing the graph, students could draw the shape they think the graph would be? Maybe have an image of a diving board at the 10 meter mark and they use like a "scribble" or "line" tool to draw in the line they think the graph will be. Then, when they are done, the graph you have gets superimposed on their graph and their line fades away.
-// Create videos similar to the ball bouncing activity here: https://curriculum.illustrativemathematics.org/HS/teachers/1/4/8/index.html
-// Students place a point on the coordinate plane and label it with a key feature name. The might also be able to place approximate points on the internals of increase and decrease. Students click “graph”, or some such button, to see a line connect the points according to their labels. Once students see the graph, they can choose to edit or submit for checking.
-// Alternate interactive ideas
-// Give components of this similar to the piecing it together activity. [This is the same idea](https://www.google.com/url?q=https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html&sa=D&ust=1595249230079000&usg=AFQjCNFlsjZxKJ9PGN9cluHSZm-OAFBaOA) used in the next chapter for building the tri graph.
+    // NOTES
+    // From David re: diving graph. Capturing idea.
+    // Great graph. I really like how you included the part under the water. That's nice to show. I wonder if before showing the graph, students could draw the shape they think the graph would be? Maybe have an image of a diving board at the 10 meter mark and they use like a "scribble" or "line" tool to draw in the line they think the graph will be. Then, when they are done, the graph you have gets superimposed on their graph and their line fades away.
+    // Create videos similar to the ball bouncing activity here: https://curriculum.illustrativemathematics.org/HS/teachers/1/4/8/index.html
+    // Students place a point on the coordinate plane and label it with a key feature name. The might also be able to place approximate points on the internals of increase and decrease. Students click “graph”, or some such button, to see a line connect the points according to their labels. Once students see the graph, they can choose to edit or submit for checking.
+    // Alternate interactive ideas
+    // Give components of this similar to the piecing it together activity. [This is the same idea](https://www.google.com/url?q=https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html&sa=D&ust=1595249230079000&usg=AFQjCNFlsjZxKJ9PGN9cluHSZm-OAFBaOA) used in the next chapter for building the tri graph.
 
 The women’s pole vault is just about to start. You will be drawing the graph for this event.
-// NOTES
-// Allow scrubbing in video. Superimpose timer on the frames to make graphing easier. [1:00 - 1:15](https://www.youtube.com/watch?v=PPaUgaBor2I)
+
+    // NOTES
+    // Allow scrubbing in video. Superimpose timer on the frames to make graphing easier. [1:00 - 1:15](https://www.youtube.com/watch?v=PPaUgaBor2I)
 
 We like to start graphing using a table. Fill in the table below. Note the landing pad, called the pit, is 0.81 meters tall.
 
-// NOTES
-// Students fill in the missing values.
+    // NOTES
+    // Students fill in the missing values.
+
 | Time (s) | | Height (m) |
 | :------: | | :--------: |
 | 0 | | 0 |
@@ -554,8 +557,9 @@ This graph is interesting because between [[0]] and about  [[5.7+-0.2]] seconds,
 
 Let’s head over to the track for the women’s 800 meter final. Looks like we arrive in time to catch the last 200 meters of the race. [3:22-4:00](https://www.youtube.com/watch?v=h83yS9gPkA8)
 
-// NOTES
-// Information for the interactive:
+    // NOTES
+    // Information for the interactive:
+
 | __Athlete__ | | Adelle Tracey | | Laila Boufaarirane | | Raevyn Rogers |
 | :---------: | | :-----------: | | :----------------: | | :------------:|
 | __Country__ | | GBR | | FRA | | USA |
@@ -564,15 +568,16 @@ Let’s head over to the track for the women’s 800 meter final. Looks like we 
 | __color__ | | black | | green | | orange |
 | __function__ | | g(t)=6.58545x+3.16101 | | f(t)=5.71105x+80.4071 | | u(t)=7.10179x-53.6354 |
 
-// NOTES
-// Students see the graph populate in time with the video.
-// We'll need to think about where we want to place this in the coordinate plane. Floating axes are nice as seen here. We could also change it such that 90.63s is t=0, though I think that would be a higher barrier to understand than not seeing the origin on the coordinate plane.
+    // NOTES
+    // Students see the graph populate in time with the video.
+    // We'll need to think about where we want to place this in the coordinate plane. Floating axes are nice as seen here. We could also change it such that 90.63s is t=0, though I think that would be a higher barrier to understand than not seeing the origin on the coordinate plane.
+
 [800 M mock-up](https://www.desmos.com/calculator/msryjohuz9)
 
 When we have two or more function on the same coordinate plane, we call them a [[__system of equations__]](gloss:system-of-equations). Systems like this add key features that help us further understand what is happening in the race between Tracey, Boufaarirane, and Rogers. For example, something interesting is happening when the graphs intersect. Select all the true statements about the intersection points in this system.
 
-// NOTES
-// Multiple select
+    // NOTES
+    // Multiple select
 
 | Tracey and Rogers are at the same location. | | g(t) = u(t) | | Rogers is ahead of Boufaarirane. | | u(t) < f(t) |
 | Boufaarirane and Rogers are at the same location. | | f(t) = u(t) | | Tracey is behind Rogers. | | g(t) > u(t) |
@@ -589,9 +594,10 @@ About [[13.5+-.25]] seconds later, [[Rogers | Boufaarirane | Tracey]] overtakes 
 
 The slopes of each function tell us each runner’s [[speed | distance | cadence]]. Rogers is running at about [[7.1+-0.2]] meters per second.
 
-// NOTES
-// We looked at counting slope above. This is a review of calculating slope. They need to pull the values off of the graph.
-// Algebra Flow
+    // NOTES
+    // We looked at counting slope above. This is a review of calculating slope. They need to pull the values off of the graph.
+    // Algebra Flow
+
 {.text-center.follows} `m=(y_2 - y_1)/(x_2 - x_1)`
 {.text-center.follows} `m= (y_2 - 590)/(x_2 - 90.63)`
 {.text-center.follows} `m= (800-590)/(120.2-90.63)`
@@ -604,15 +610,16 @@ Roger’s speed is [[0.6+-0.2]] meters per second faster than Boufaarirane and [
 
 In this system of functions, we can see who is ahead at any given time during the race. For example, we write f(t) > u(t) when [[Boufaarirane is ahead of Rogers | Rogers is ahead of Boufaarirane]].
 
-// NOTES
-// Used both < and > to show both. Would it be better for students to see a "readable" pattern than matches the sentences, which would only use > ?
+    // NOTES
+    // Used both < and > to show both. Would it be better for students to see a "readable" pattern than matches the sentences, which would only use > ?
+
 | Students label with the given contextual statement cards. | | This information appears after the functions notation card is correctly placed. | | Extra information. Not cards. |
 | :---: | | :---: | | :---: |
-| Boufaarirane is ahead of Rogers. | | f(t) > u(t) | | {90.63=<t<96.382} |
-| Rogers is ahead of Boufaarirane. | | f(t) < u(t) | | {96.382<t<=120.2} |
-| Tracey is ahead of Rogers. | | u(t) < g(t) | | {90.63<=t<109.998} |
+| Boufaarirane is ahead of Rogers. | | f(t) > u(t) | | 90.63=<t<96.382 |
+| Rogers is ahead of Boufaarirane. | | f(t) < u(t) | | 96.382<t<=120.2 |
+| Tracey is ahead of Rogers. | | u(t) < g(t) | | 90.63<=t<109.998 |
 | Tracey is ahead of Boufaarirane. | | g(t) > f(t) | |   |
-| Rogers is ahead of Tracey. | | g(t) < u(t) | | {109.998<t<=120.2} |
+| Rogers is ahead of Tracey. | | g(t) < u(t) | | 109.998<t<=120.2 |
 
 When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | values]]. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] <= t <= [[121]]. We can do a similar analysis for each pair of functions.
 
@@ -626,9 +633,8 @@ TODO: draw chart
 << free-form text input >>
 
 
-
-
 --------------------------------------------------------------------------------
+
 
 ## Piecewise Functions
 
@@ -645,73 +651,77 @@ Type some text:
 
     x-free-text(placeholder="Your answer…")
 
-// NOTE
-// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
+    // NOTE
+    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
 Multisport races test athletes endurance. Swimrun is a rather new multi sport competition that started in 2002 in Sweden. The story goes that the owner of the Utö Värdshus hotel, his friend, and two hotel staff challenged each other to a two-versus-two race from the Utö Värdshus hotel, across three islands, to Sandhamn. The losing team would pay for everyone’s post-race meals. How long do you think the race lasted?
 
-// NOTES
-// Anders Malm - owner of Utö Värdshus, Janne Lindberg - friend, Andersson brothers - staff at Utö Värdshus
-// [citation](https://en.wikipedia.org/wiki/Swimrun)
+    // NOTES
+    // Anders Malm - owner of Utö Värdshus, Janne Lindberg - friend, Andersson brothers - staff at Utö Värdshus
+    // [citation](https://en.wikipedia.org/wiki/Swimrun)
 
-// Map between these two locations. Include images from each place. I like David’s map zoom effect he has mentioned in a couple of chapters. While it wouldn’t necessarily add to the math directly, it would make the story more interesting and help student intuit distance.
-// EDITOR USE ONLY
-// [Utö Värdshus](https://www.utovardshus.se/wp-content/uploads/2019/03/Liggande_VH-fr%C3%A5n-Bastun_Copyright-Ut%C3%B6-V%C3%A4rdshus-1.jpg)
+    // Map between these two locations. Include images from each place. I like David’s map zoom effect he has mentioned in a couple of chapters. While it wouldn’t necessarily add to the math directly, it would make the story more interesting and help student intuit distance.
+    // EDITOR USE ONLY
+    // [Utö Värdshus](https://www.utovardshus.se/wp-content/uploads/2019/03/Liggande_VH-fr%C3%A5n-Bastun_Copyright-Ut%C3%B6-V%C3%A4rdshus-1.jpg)
 
-// [map view](https://www.google.com/maps/dir/Sandhamn,+Sweden/Ut%C3%B6+V%C3%A4rdshus,+Pr%C3%A4stbacken+22,+130+56+Ut%C3%B6,+Sweden/@59.1054899,18.3165704,10z/data=!4m14!4m13!1m5!1m1!1s0x46f5741069214bbf:0xbfee8fb6ece8997c!2m2!1d18.9108304!2d59.2878703!1m5!1m1!1s0x46f58b4425a902e9:0xb792bc38be8de224!2m2!1d18.329336!2d58.967417!3e4)
+    // [map view](https://www.google.com/maps/dir/Sandhamn,+Sweden/Ut%C3%B6+V%C3%A4rdshus,+Pr%C3%A4stbacken+22,+130+56+Ut%C3%B6,+Sweden/@59.1054899,18.3165704,10z/data=!4m14!4m13!1m5!1m1!1s0x46f5741069214bbf:0xbfee8fb6ece8997c!2m2!1d18.9108304!2d59.2878703!1m5!1m1!1s0x46f58b4425a902e9:0xb792bc38be8de224!2m2!1d18.329336!2d58.967417!3e4)
 
-//[Sandham](https://upload.wikimedia.org/wikipedia/commons/c/c1/Sandhamn_February_2013_04.jpg)
+[Sandham](https://upload.wikimedia.org/wikipedia/commons/c/c1/Sandhamn_February_2013_04.jpg)
 
 The race ended up taking over 24 hours! The friends did the same race the next year, and the idea for the ÖtillÖ (island to island) was born.
 
 ---
-::: column(width 240)
 
-// NOTES
-// Something like this would be awesome. Transition from water to run. Setting. Dressed for water in Sweden.
+::: column(width=240)
 
-// EDITORIAL ONLY
+    // NOTES
+    // Something like this would be awesome. Transition from water to run. Setting. Dressed for water in Sweden.
+
+    // EDITORIAL ONLY
+
 [https://www.flickr.com/photos/otillorace/48213036251/in/album-72157709467500756/](https://www.flickr.com/photos/otillorace/48213036251/in/album-72157709467500756/)
+
 ::: column.grow
 
 We are training for the ÖtillÖ. We need to get used to the feeling of swimming then immediately running. We decide to swim for 500 meters then run for 5 kilometers. Choose the graph that represents the athlete’s distance as a function of time, d(t).
 
 :::
 
-// NOTES
-// Multiple selector with one choice
-// [option 1](https://drive.google.com/file/d/1UhFc87ir21UUNnQWmJ0UhvrXn6bZu6Lo/view?usp=sharing)
-// [option 2](https://drive.google.com/file/d/1T0q0btNyuiNaOVWk6NbM8dQydXthhwtv/view?usp=sharing)
-// [option 3](https://drive.google.com/file/d/18DMyDqbjmOq7Wdou-yTuMvI0NTBfSg-T/view?usp=sharing)
-// [option 4](https://drive.google.com/file/d/1zKhk2t_V00SSEsmyXWCvohxnOyzMk0Q6/view?usp=sharing)
-// Option 2 is the object of the targets below.
+    // NOTES
+    // Multiple selector with one choice
+    // [option 1](https://drive.google.com/file/d/1UhFc87ir21UUNnQWmJ0UhvrXn6bZu6Lo/view?usp=sharing)
+    // [option 2](https://drive.google.com/file/d/1T0q0btNyuiNaOVWk6NbM8dQydXthhwtv/view?usp=sharing)
+    // [option 3](https://drive.google.com/file/d/18DMyDqbjmOq7Wdou-yTuMvI0NTBfSg-T/view?usp=sharing)
+    // [option 4](https://drive.google.com/file/d/1zKhk2t_V00SSEsmyXWCvohxnOyzMk0Q6/view?usp=sharing)
+    // Option 2 is the object of the targets below.
 
 This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [first section](target:1_piecewise) of the graph has a different slope than the [second section](target:2_piecewise).
 
 One of the most common ways to write piecewise functions is by using cases.
 
-// NOTES
-// It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
+    // NOTES
+    // It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
 
 `d(t)= {(1/20t,0<=t<10),(1/6 t-7/6,10<=t<=40):}`
 
 Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “The function d has a value of (1/20)t when t is at least 0 and up to 10. Function d is (⅙)t-(7/6) when t is at least 10 and no more than 40.”
 
 Let’s continue to get our feet wet in the world of piecewise functions.
+
 ---
 
 ::: column.grow
 
 The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](https://www.desmos.com/calculator/y3zz7gphmo), and [freestyle](https://www.desmos.com/calculator/y3zz7gphmo) in that order. The graph below shows s(d). Notice the vertical axis is [[distance | speed]] in meters. The horizontal axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
 
-::: column(width 240)
+::: column(width=240)
 
-// EDITORIAL USE ONLY
-// [image](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
-// NOTES
-// Add vertical line test tool.
-// [200 Medley Mock-up](https://www.desmos.com/calculator/y3zz7gphmo)
-// Graph above is the object of the targets in relay paragraph.
+    // EDITORIAL USE ONLY
+    // [image](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
+    // NOTES
+    // Add vertical line test tool.
+    // [200 Medley Mock-up](https://www.desmos.com/calculator/y3zz7gphmo)
+    // Graph above is the object of the targets in relay paragraph.
 
 Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
 
@@ -719,8 +729,8 @@ Recall that functions cannot have one input going to [[more than one | only one]
 
 We need to pay close attention to the endpoints of each section of the domain. The endpoints ensure each element of the domain is matched to only one element of the range. With this in mind, select the function that matches the graph above.
 
-// NOTES
-// Multiple selector with one correct answer
+    // NOTES
+    // Multiple selector with one correct answer
 
 [option 1](s(d)={(1.3, 0<=d<=100),(1.2, 100<d<=200),(1.4, 200<d<=300),(1.5, 300<d<=400):})
 [option 2](s(d)={(1.3, 0<=d<=100),(1.2, 100<=d<=200),(1.4, 200<=d<300),(1.5, 300<d<=400):})
@@ -734,21 +744,23 @@ The function s(d) is a special kind of piecewise function called a [__step funct
 The fastest leg of the relay is [[freestyle | butterfly | breaststroke | backstroke]] with a speed of [[1.5+-0.025]] meters per second. The slowest leg was [[breaststroke | freestyle | butterfly | backstroke]] completed in [[1.2+-0.025]] meters per second. Each leg of the race was [[100]] meters long.
 
 We’re ready to dive into graphing.
+
 ---
 
 One of the most common multisport competitions is a triathlon where athletes swim, bike, and run. The function l(t), Lisa Laws’s race, is given below. Use the given line segments to draw l(t) on the coordinate plane.
 
-//EDITORIAL USE ONLY
-// Fun, quick [video](https://tokyo2020.org/en/sports/triathlon/) of triathlon. Nod to 2020 Olympics, especially if they don't happen. Includes map of courses.
+    // EDITORIAL USE ONLY
+    // Fun, quick [video](https://tokyo2020.org/en/sports/triathlon/) of triathlon. Nod to 2020 Olympics, especially if they don't happen. Includes map of courses.
 
 `l(t)={(75x, 0<=t<=20),(50000, 20<t<=21),(-615.385t+63000, 21<t<=86),(10000, 86<t<=87),(-277.778t+34166.7, 87<t<=123):}`
 
-//EDITORIAL USE ONLY
-// [triathlon transition](https://depositphotos.com/stock-photos/triathlon-competition-woman.html?filter=all&qview=111615040)
+    // EDITORIAL USE ONLY
 
-// NOTES
-// There is a paper-based activity in the [IM chapter](https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html) on piecewise functions “Students are given the equations that define two piecewise functions, along with strips of paper, each containing a part of a graph and a portion of the horizontal axis (no scale is shown). Their job is to arrange the strips, apply a scale on each axis, and add open and closed circles to the graph to accurately represent the function values at each interval of input.” - IM After building the first function, students label with the given cards.
-// Maybe shuffle order and orientation? Students can spin them as they would a paper cut out?
+[triathlon transition](https://depositphotos.com/stock-photos/triathlon-competition-woman.html?filter=all&qview=111615040)
+
+    // NOTES
+    // There is a paper-based activity in the [IM chapter](https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html) on piecewise functions “Students are given the equations that define two piecewise functions, along with strips of paper, each containing a part of a graph and a portion of the horizontal axis (no scale is shown). Their job is to arrange the strips, apply a scale on each axis, and add open and closed circles to the graph to accurately represent the function values at each interval of input.” - IM After building the first function, students label with the given cards.
+    // Maybe shuffle order and orientation? Students can spin them as they would a paper cut out?
 
 [piece 1](https://www.desmos.com/calculator/pqdjlinaf1)
 [piece 2](https://www.desmos.com/calculator/yauvuvkbpx)
@@ -757,11 +769,11 @@ One of the most common multisport competitions is a triathlon where athletes swi
 [piece 5](https://www.desmos.com/calculator/hcghou4mr7)
 [solution](https://www.desmos.com/calculator/mkyxyep0jv)
 
-// TUTOR PROMPTS
-// What do you remember about slope?
-// Positive slope increases from left to right.
-// Negative slope decreases from left to right.
-// What does a linear function with zero slope look like?
+    // TUTOR PROMPTS
+    // What do you remember about slope?
+    // Positive slope increases from left to right.
+    // Negative slope decreases from left to right.
+    // What does a linear function with zero slope look like?
 
 Noticing that each slope is either constant or [[positive | negative]] helps us determine the orientation of each piece of the graph. Constant slope is a [[horizontal | vertical]] line. Positive slope moves [[up | down]] as we read from left to right.
 
@@ -771,8 +783,9 @@ Slope can also help us determine the order of the pieces from left to right. For
 
 Recall that a function’s key features give us insights into what’s going on during the race. For example, the starting line is represented by the {.FIXME} (multiple select) [[y-intercept | x-intercept | maximum | minimum]]. We can write this point in function notation as l([[0]])=[[0]]. Place the remaining statements on the graph.
 
-// NOTES
-// Students label with the given cards.
+    // NOTES
+    // Students label with the given cards.
+
 | Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
 | :---: | | :---: | | :---: |
 | Law crosses the finish line. | | maximum | | l(123)=51500 |
@@ -786,32 +799,32 @@ Now you get to race Law. One of the exciting things about triathlons is that you
 
 ::: column.grow
 
-// NOTES
-// Slider in __bold__ . Like slider graphs in https://mathigon.org/course/sequences/arithmetic-geometric. Or drag endpoints along the transition lines to change slopes.
-// Adjusts to match given input _italics_.
+    // NOTES
+    // Slider in __bold__ . Like slider graphs in https://mathigon.org/course/sequences/arithmetic-geometric. Or drag endpoints along the transition lines to change slopes.
+    // Adjusts to match given input _italics_.
 
-`s(t) = {(60t, 0<=t<=25),(1500, 25<t<=26.5),(_695.652_t-_16934.8_, __26.5+-0.75__<=t<__84+-0.75__),(41500, _84_<t<=_85.5_), (_298.50_t+_15977.6_, _85.5_<t<=__123+-5__):}`
+s(t) = {(60t, 0<=t<=25),(1500, 25<t<=26.5),(_695.652_t-_16934.8_, __26.5+-0.75__<=t<__84+-0.75__),(41500, _84_<t<=_85.5_), (_298.50_t+_15977.6_, _85.5_<t<=__123+-5__):}
 
-// NOTES for 60t line: Actually adjusting these points in the background.
-// NOTES for 695.652 line: (__26.5+-.75__, 1500) and (__84+-.75__, 41500)
-// NOTES for 41500 line: (_84_, 41500) and (_85.5_, 41500), _84_ matches slider in last case, _85.5_ Adjusts to be lower bound + 1.5
-// NOTES for 298.50 line: (_85.5_, 41500) and (__123+-5__, 51500), _85.5_ matches previous case
+    // NOTES for 60t line: Actually adjusting these points in the background.
+    // NOTES for 695.652 line: (__26.5+-.75__, 1500) and (__84+-.75__, 41500)
+    // NOTES for 41500 line: (_84_, 41500) and (_85.5_, 41500), _84_ matches slider in last case, _85.5_ Adjusts to be lower bound + 1.5
+    // NOTES for 298.50 line: (_85.5_, 41500) and (__123+-5__, 51500), _85.5_ matches previous case
 
 ---
 
 Try adjusting the graph so that your swim __and__ run are slower than Law’s. You need to cycle at [[{.fixme} Is there a way to accept a range of slopes that are dependent on the slider values? ]] meters per minute in order to beat Law.
 
-::: column(width 240)
+::: column(width=240)
 
-// NOTES
-// Graph: l(t) is blue, s(t) is orange
-[mock-up triathlon graph](https://www.desmos.com/calculator/1wcntarqcv)
+    // NOTES
+    // Graph: l(t) is blue, s(t) is orange
+    // [mock-up triathlon graph](https://www.desmos.com/calculator/1wcntarqcv)
 
 :::
 
 ---
 
-::: column(width 240)
+::: column(width=240)
 
 [sundae image](https://depositphotos.com/4537530/stock-photo-ice-cream.html)
 
@@ -821,8 +834,8 @@ Let’s go get some ice cream to celebrate you win! Ice-agon gives two pricing s
 
 :::
 
-// NOTES
-// Students interact with the graph. Small, medium, and large are in orange. Price per gram is in purple.
+    // NOTES
+    // Students interact with the graph. Small, medium, and large are in orange. Price per gram is in purple.
 
 [graph mock-up](https://www.desmos.com/calculator/i0iatpatrn)
 
@@ -842,6 +855,7 @@ As you can see, your choice will depend on a few different factors. Fill out the
 
 The most ice cream you can buy with $5  is about [[300+-30]] grams with the large size container. The best buy if you want 200 grams of ice cream is [[pay per gram | medium container]], which costs [[4]].
 
+
 --------------------------------------------------------------------------------
 
 
@@ -850,8 +864,8 @@ The most ice cream you can buy with $5  is about [[300+-30]] grams with the larg
 > section: absolute-value
 > sectionStatus: dev
 
-// NOTE
-// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
+    // NOTE
+    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
 ::: column.grow
 
@@ -859,12 +873,12 @@ Atari's Pong, released in 1972, launched the video gaming industry as we know it
 
 These days gamers can play internet-based variations of pong or visit an arcade with an original Atari Ping console.
 
-// REFERENCE ONLY
-//[https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo](https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo)
+    // REFERENCE ONLY
+    // [https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo](https://www.youtube.com/watch?time_continue=9&v=fiShX2pTz9A&feature=emb_logo)
 
 MathiPong pays homage to this titan in gaming history. The objective is to direct the ball to the target. Choose regular or challenge mode to get started.
 
-::: column(width 240)
+::: column(width=240)
 
 ![https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg](https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg)
 
@@ -872,18 +886,19 @@ MathiPong pays homage to this titan in gaming history. The objective is to direc
 
 :::
 
-// NOTES
-// onboard the game. User uses arrow keys to move platform. Platform is wider than the point shown.
-User plays several rounds.
+    // NOTES
+    // onboard the game. User uses arrow keys to move platform. Platform is wider than the point shown.
+    // User plays several rounds.
+
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png)
 
 Now that you've played a few rounds and have the idea of how the game works, let's think about a strategy for hitting the target. Let's take a look at the game on a coordinate plane.
 
-// NOTES
-// The animation mock-ups are on a loop for minimal clicking in this draft. I don't think they need to be on a loop in the final. In fact, I actually envision these happening on one coordinate plane. This would make each a different state of the same interactive.
-// Left column shows states of game. Right column is the text matching the state. In final version of the chapter, this won't need to be a series of columns.
+    // NOTES
+    // The animation mock-ups are on a loop for minimal clicking in this draft. I don't think they need to be on a loop in the final. In fact, I actually envision these happening on one coordinate plane. This would make each a different state of the same interactive.
+    // Left column shows states of game. Right column is the text matching the state. In final version of the chapter, this won't need to be a series of columns.
 
-::: column(width 240)
+::: column(width=240)
 
 [https://www.desmos.com/calculator/vy9nhnyp1z](https://www.desmos.com/calculator/vy9nhnyp1z)
 
@@ -891,9 +906,7 @@ Now that you've played a few rounds and have the idea of how the game works, let
 
 If we just let the ball fall from the upper left part of the screen. It's path will look like [this](target:1_linearGraph). Here we recognise the slope of the line describing the path of the ball is [[-1]]. Given that this line crosses the origin, the function is f(x)=-x.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 [https://www.desmos.com/calculator/yyoqeezli2](https://www.desmos.com/calculator/yyoqeezli2)
 
@@ -901,9 +914,7 @@ If we just let the ball fall from the upper left part of the screen. It's path w
 
 We know we want the path of the ball to look like [this](target:2_linearGraph) in order to hit the target. This new line describing the intended path of the ball is [[1]]. Interestingly, this is simply the opposite of the slope above. The function of this line is g(x)=x.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 [https://www.desmos.com/calculator/jr6scyqzdn](https://www.desmos.com/calculator/jr6scyqzdn)
 
@@ -911,9 +922,7 @@ We know we want the path of the ball to look like [this](target:2_linearGraph) i
 
 If we move the platform to the intersection of these two lines, the path of  the ball will move from its original path to our desired path. The intersection is at ([[0]], [[0]]).
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 [https://www.desmos.com/calculator/jjbzth2pta](https://www.desmos.com/calculator/jjbzth2pta)
 
@@ -921,7 +930,7 @@ If we move the platform to the intersection of these two lines, the path of  the
 
 In the chapter on piecewise functions, we practised writing functions to describe situations like this. That is, we want to use a specific section of one function and a specific section of another. The domain values for the piecewise function describing this path are:
 
-$$h(x)= \begin{matrix}-x & x [[\ge]]\ [[0]] \\x & x\ [[<]]\ [[0]]\end{matrix}$$
+h(x)= \begin{matrix}-x & x [[\ge]]\ [[0]] \\x & x\ [[<]]\ [[0]]\end{matrix}
 
 :::
 
@@ -939,12 +948,12 @@ Absolute value functions have many of the same key features we have been looking
 
 Now Mathipong wouldn't be much of a game if the ball always fell from the same spot and the target never moved. Likewise, absolute vallue functions wouldn't be very useful if they only ever occured with the rule f(x)=|x|. Let's have a look at how they move around the coordinate plane.
 
-// NOTES
-// This section will likely work better with some animations. The graphs here can be mock-ups of key points in the animations.
+    // NOTES
+    // This section will likely work better with some animations. The graphs here can be mock-ups of key points in the animations.
 
 So far, when we have been graphing functions, we have been either plotting points on the line and connecting them with a line, or we have been finding a significant point, like the y-intercept or x-intercept and counting the slope to construct the line. The graphs and their respective equations actually leads us to a new way of understanding graphs on the coordinate plane. We can think of graphing in terms of **[transformations](gloss:transformations).** Let's take a look at this with a lin we are familiar with graphing y=x.
 
-::: column(width 240)
+::: column(width=240)
 
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.18.28.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.18.28.png)
 
@@ -954,9 +963,7 @@ So far, when we have been graphing functions, we have been either plotting point
 
 Now graph the line y=x+2.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 [https://www.desmos.com/calculator/mcwyh3toux](https://www.desmos.com/calculator/mcwyh3toux)
 
@@ -964,9 +971,7 @@ Notice that this line is y=x shift up 2. Or, we could see if as y=x shifted left
 
 Then let's reflect it over the x-axis.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png)
 
@@ -976,9 +981,7 @@ Then let's reflect it over the x-axis.
 
 The right side of the original like, the portion above the x-axis, remained unmoved. The left side, everything below the x-axis, reflected up above the x-axis. The position above the x-axis is the same as the graph of f(x)=|x+2|.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 [https://www.desmos.com/calculator/6fpbvgfrny](https://www.desmos.com/calculator/6fpbvgfrny)
 
@@ -989,9 +992,10 @@ Notice y=|x+2| is y=|x| shift to the left 2.
 Now suppose we add a number to y=|x| similar to y=x+2. What do you think will happen to the graph?
 
 :::
+
 ---
 
-::: column(width 240)
+::: column(width=240)
 
 [https://www.desmos.com/calculator/aqly16ptq5](https://www.desmos.com/calculator/aqly16ptq5)
 
@@ -1009,13 +1013,15 @@ These two transformations, which we call shifts, clearly result in different gra
 
 Match the function with its graph. Keep in mind the shifts f(x)=|x-h|+k where h is the horizontal shift and k is the vertical shift.
 
-// NOTES
-// Students drag functions to their respective graphs.
+    // NOTES
+    // Students drag functions to their respective graphs.
 
-// Functions for cards.
+    // Functions for cards.
+
 [https://lh6.googleusercontent.com/bjmVukpDAuueGt7ShvzlA7ciunIpVLBrQPg-WNbdw0JZSFb59imu8XM4rDi_sS1mIn8FcooZjyUbeJnj04TExksgfPn70I0CdNL6kN65eIHZ611gFplehLVgMMnl11QhTOUUl0C-](https://lh6.googleusercontent.com/bjmVukpDAuueGt7ShvzlA7ciunIpVLBrQPg-WNbdw0JZSFb59imu8XM4rDi_sS1mIn8FcooZjyUbeJnj04TExksgfPn70I0CdNL6kN65eIHZ611gFplehLVgMMnl11QhTOUUl0C-)
 
-// Graph mock-ups for cards.
+    // Graph mock-ups for cards.
+
 [https://lh6.googleusercontent.com/BiB7qoKIoH-Ct1EKL54qUHd5DaPt8yEC11EHxDh0NY8jv_baTSmdjCIxuT4I-bEkGIgpj_zUhe-Q-vYyURKf6rv9mWpFtkWF8ClKaPNfkle5r575c3isjwp47h8128K9Dol5Pael](https://lh6.googleusercontent.com/BiB7qoKIoH-Ct1EKL54qUHd5DaPt8yEC11EHxDh0NY8jv_baTSmdjCIxuT4I-bEkGIgpj_zUhe-Q-vYyURKf6rv9mWpFtkWF8ClKaPNfkle5r575c3isjwp47h8128K9Dol5Pael)
 
 [https://lh5.googleusercontent.com/qDPHACr6mN2lDyvT2T4HzeV93FcMRj0yXAvctg0Wu00_WrB3VSRacBLURLB_A3VQazxfFoIjJ9mtRvZEsl9uYnPvl3zOgOOIemy6GXwziJR1A-PdxQpl2FKFJ23flqUg2rHdGTXY](https://lh5.googleusercontent.com/qDPHACr6mN2lDyvT2T4HzeV93FcMRj0yXAvctg0Wu00_WrB3VSRacBLURLB_A3VQazxfFoIjJ9mtRvZEsl9uYnPvl3zOgOOIemy6GXwziJR1A-PdxQpl2FKFJ23flqUg2rHdGTXY)
@@ -1030,10 +1036,10 @@ Match the function with its graph. Keep in mind the shifts f(x)=|x-h|+k where h 
 
 Let's return to this idea of reflecting a graph over the x-axis. This is actually not a coincidence that this action give the absolute value function of the original linear function. The same property holds for the absolute value of other kinds of function.
 
-// NOTES
-// **Slideshow** functions: https://www.desmos.com/calculator/l2lveli1ey
-// This could be a cool graph drawing interactive once your tool is done.
-// Function mock-ups. Left column is original graph. Right column is absolute value Superimposed over original.
+    // NOTES
+    // **Slideshow** functions: https://www.desmos.com/calculator/l2lveli1ey
+    // This could be a cool graph drawing interactive once your tool is done.
+    // Function mock-ups. Left column is original graph. Right column is absolute value Superimposed over original.
 
 ::: column (width240)
 
@@ -1071,8 +1077,8 @@ We explore reflections more in [Reflecting Functions](https://mathigon.org/cours
 
 ### Absolute Error
 
-// NOTES
-// This section may not work with final chapter. Editors may strike.
+    // NOTES
+    // This section may not work with final chapter. Editors may strike.
 
 Let's take a look at how the idea of absolute value can relate to data analysis. There is an kind of measurement called absolute error that quantifies the difference between an expected value and a measured value. For example, we know our thermometer has an error of 2 degrees. The thermometer says it is 25 C right now. We can use absolute values to determine what the lowest and highest possible temperatures the air could be given the error on the theromometer.
 
@@ -1080,26 +1086,26 @@ Let x represent the actual temperature while 25 is the measured temperature. The
 
 Recall that absolute value measures the distance from zero. This means that that measurement can go in the positive direction **or** in the negative direction. We don't actually know the intended direction when we are given a value like *absolute error is 5*. To account for this, we need to look at both options.
 
-// NOTES
-// Algebra Flow. Currently written step-by-step in step then description.
+    // NOTES
+    // Algebra Flow. Currently written step-by-step in step then description.
 
-$$|x-25|=2 $$
+$|x-25|=2 $
 
 Given
 
-$$x-25=2 \ \text{or}\ -(x-25)=2 $$
+$x-25=2 \ \text{or}\ -(x-25)=2 $
 
 Account for the value in the [positive direction](target:1_leftEquation) and the value in the [negative direction](target:2_rightEquation).
 
-$$x=27 \ \text{or} \ x-25=-2$$
+$x=27 \ \text{or} \ x-25=-2$
 
 Solve each equation normally.
 
-$$x=27\ \text{or}\ x=23$$
+$x=27\ \text{or}\ x=23$
 
 The solutions give the lowest and highest possible temperatures.
 
-// END ALGEBRA FLOW
+    // END ALGEBRA FLOW
 
 In order to know whether the temperature is higher or lower than our measured value, we would need additional information like a measurement from another thermometer.
 
@@ -1109,8 +1115,10 @@ Many different kinds of function have situations like this where they can actual
 
 Now that we know more about absolute value functions and how they work, take a swing at the next level of Mathipong.
 
-// NOTES
-// Ball comes at different locations on the upper left side of the screen. Path is at different angels (slopes).
+    // NOTES
+    // Ball comes at different locations on the upper left side of the screen. Path is at different angels (slopes).
+
+
 --------------------------------------------------------------------------------
 
 
@@ -1119,31 +1127,33 @@ Now that we know more about absolute value functions and how they work, take a s
 > section: inverse
 > sectionStatus: dev
 
-// NOTE
-// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
-// Many links go to databases in Notion where design elements and texts are stored.
+    // NOTE
+    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
+    // Many links go to databases in Notion where design elements and texts are stored.
 
 Team sports is a world of split-second decisions and fast-moving bodies. Teammates choose where to place a pass. Referees decide who gains possession of the ball. Fans follow the action from great distances. In all these cases, jersey colour is deciding factor in how these instantaneous decisions are made.
 
 Let's take a look at the the Balligon Soccer League. Match each team to a jersey colour such that you have a [function](gloss:function).
 
-// NOTES
-// Same interactive as chapter 1. Links go to the databases with assets and text.
+    // NOTES
+    // Same interactive as chapter 1. Links go to the databases with assets and text.
 
 [team mascots](https://www.notion.so/a89f42d0f2b447f89f0d4ae58ad565be)
 
 [Jersey Colours](https://www.notion.so/e13166523b5e47ef96044c922bac940b)
 
 Recall that the team mascots make up the [[domain | range]] of the function,
-// NOTE
-{.fixme} hide until blank is filled
- while jersey colours make up the range. In function notation, we write this relationship as f([[team]])=[[jersey colour]].
- // NOTE
- // also accept "domain", "mascot", "team name"; also accept "range", "colour", "color", "jersey"; OR make multi-select
+
+    // NOTE hide until blank is filled
+
+while jersey colours make up the range. In function notation, we write this relationship as f([[team]])=[[jersey colour]].
+
+    // NOTE
+    // also accept "domain", "mascot", "team name"; also accept "range", "colour", "color", "jersey"; OR make multi-select
 
 Take a look at the end of season tournament brackets.
 
-::: column(width 240)
+::: column(width=240)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_16.50.26.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_16.50.26.png)
 
@@ -1161,66 +1171,68 @@ This idea of seeing jersey colour and immediately knowing what team the player b
 
 The inverse function we are looking at identifies the team based on jersey colour. Take a look at the mapping for the function above moving from left to right.
 
-// NOTES
-// Show mapping from above with copy of the team group to the right of colour.
-// Think about how to guide students toward adding a colour to the output. This should be integrated into the interactive design.
+    // NOTES
+    // Show mapping from above with copy of the team group to the right of colour.
+    // Think about how to guide students toward adding a colour to the output. This should be integrated into the interactive design.
 
 Here we can see that the [relation](target:1_mapping) between colour and team is not a function. What would fix this relationship between `f(team)` and  so that `f^(-1)(colour)`  is a function?
 
 ---
 
-// NOTES
-// Show mapping from above with copy of the team group to the right of colour. Students can add a colour option. Change the mapping s.t. `f(team)` is one-to-one.
+    // NOTES
+    // Show mapping from above with copy of the team group to the right of colour. Students can add a colour option. Change the mapping s.t. `f(team)` is one-to-one.
 
 Now  `f^(-1)(colour)` is a function. In fact, recall from [Relations and Functions](https://mathigon.org/course/functions/relations) there are several types of functions. `f(team)`is now a [[one-to-one | one-to-many | many-to-one | many-to-many]].
 
-// Decide whether or not to include all relation classificiations or just function classifications.
+    // Decide whether or not to include all relation classificiations or just function classifications.
+
 ---
 
 Let's look at this mapping relationship in a function machine. Choose a team to pass through the machine. The machine assigns the team to a colour, then reverses the assignment. In other words, the machine applied the function rule then the inverse function rule.
 
-// NOTES
-// Visual inspiration
-// Apples are team names. Lemons are jersey colours. Label the first machine with `f(team)` and the second with `f^1(colour)`.
-// EDITORIAL USE ONLY
+    // NOTES
+    // Visual inspiration
+    // Apples are team names. Lemons are jersey colours. Label the first machine with `f(team)` and the second with `f^1(colour)`.
+    // EDITORIAL USE ONLY
+
 ![https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG](https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG)
 
-// Technical inspiration
+    // Technical inspiration
 [https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html](https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html)
 
 Every time you pass `{team}` through both machines, you get out the team's [[name | jersey color]]. Algebraically we write this as `f(f^1(x))=x`. We will look more closely at why this is important throughout the chapter.
 
-// NOTES
-// Highlight that f^-1 is not exponent
+    // NOTES
+    // Highlight that f^-1 is not exponent
 
 ---
 
-## Currency Conversion
+### Currency Conversion
 
 International tourism reached over 4 million arrivals each day in 2019. With so much travel between countries, people are more aware of their spending power.  That is, how far a `{user's currency unit e.g. dollar}` in `{user's home country's currency}` goes in another currency. Let's explore this idea of spending power - choose a destination from the cities listed.
 
-// NOTES
-// Do not show city options located in the same country as the user.
-// Could be great to tie the conversion rate in this interactive to the daily rates. This would complicate the rest of the chapter's text and [[blanks]]. I think it could be a nice touch, though. Users who return to this chapter would see how (potentially) volatile, or at least not-static, this rate is in real life.
+    // NOTES
+    // Do not show city options located in the same country as the user.
+    // Could be great to tie the conversion rate in this interactive to the daily rates. This would complicate the rest of the chapter's text and [[blanks]]. I think it could be a nice touch, though. Users who return to this chapter would see how (potentially) volatile, or at least not-static, this rate is in real life.
 
 [Cities and Currencies](https://www.notion.so/554f2cbfc43640799fff025363f6d2fc)
 
-// NOTES
-// The text below is build on visiting Machu Picchu from the USA.
+    // NOTES
+    // The text below is build on visiting Machu Picchu from the USA.
 
-Along your trip, you find many different markets take only cash. To prepare for your next trip to the market, you withdraw cash. The conversion function is `{destination currency}={conversion rate}*{home currency}` . Based on your budget you have about [[`{home currency}`]]
+Along your trip, you find many different markets take only cash. To prepare for your next trip to the market, you withdraw cash. The conversion function is `{destination currency}={conversion rate}*{home currency}` . Based on your budget you have about [[home currency]]
 
 {.fixme} user enters whatever amount they want
 
- to spend on souvenirs, which means you need to withdraw [[`{destination currency}={conversion rate}*{home currency}`]]
+to spend on souvenirs, which means you need to withdraw [[{destination currency}={conversion rate}*{home currency}]]
 
 {.fixme} user must do this calculation and enter the amount +- .5
 
- Take a stroll through the market and decide what you want to buy.
+Take a stroll through the market and decide what you want to buy.
 
- // MOCK UP
- // Souvenir cards
- // Images have local price. Rollover shows price in `{home currency}`. Even cooler, user calculates and inputs on the back of the card.
+    // MOCK UP
+    // Souvenir cards
+    // Images have local price. Rollover shows price in `{home currency}`. Even cooler, user calculates and inputs on the back of the card.
 
 [https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FAItjhFAz9DsTkH0elhIbNt%2FUntitled%3Fnode-id%3D10%253A5%26viewport%3D-720%252C470%252C0.9163351058959961%26scaling%3Dmin-zoom](https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FAItjhFAz9DsTkH0elhIbNt%2FUntitled%3Fnode-id%3D10%253A5%26viewport%3D-720%252C470%252C0.9163351058959961%26scaling%3Dmin-zoom)
 
@@ -1228,9 +1240,7 @@ Along your trip, you find many different markets take only cash. To prepare for 
 
 ---
 
-## Visual relationship
-
-::: column.grow
+### Visual relationship
 
 We can represent this relationship between the cost in `{destination currency}` and `{home currency}` as (`{destination currency}`, `{user home currency}`). This relationship means `{destination currency}` is the [[input | output]] and `{user home}` is the [[output | input]]. The points fall on a line. Let's call this line f(`{destination currency}`)=`{conversion rate}`x`{destination currency}`.
 
@@ -1244,16 +1254,16 @@ In fact, the most important difference is that the input and output values are s
 
 The graphs of inverse functions have some interesting features. First, this idea of switching inout and output values helps us plot points for `f^(-1)({home currency})`. Let's plot the souvenir points for the inverse function.
 
-::: column(width 240
+::: column(width=240)
 
-// NOTES
-// f(x)=3.54x where x is soles and f(x) is dollars. The souvenir labels would be stronger if they were the name of the souvenir purchased.
-// Object of f(x) target above.
+    // NOTES
+    // f(x)=3.54x where x is soles and f(x) is dollars. The souvenir labels would be stronger if they were the name of the souvenir purchased.
+    // Object of f(x) target above.
 [https://www.desmos.com/calculator/ff6489z9ns](https://www.desmos.com/calculator/ff6489z9ns)
 
 [https://www.desmos.com/calculator/tlscgnsyy3](https://www.desmos.com/calculator/tlscgnsyy3)
 
-// Students plot these points.
+    // Students plot these points.
 [https://www.desmos.com/calculator/ccbs3quxpu](https://www.desmos.com/calculator/ccbs3quxpu)
 
 [https://www.desmos.com/calculator/mgmj8jbz26](https://www.desmos.com/calculator/mgmj8jbz26)
@@ -1264,17 +1274,17 @@ There is another interesting feature of inverse functions, though it may not be 
 
 Begin by measuring the vertical distance from `{souvenir 1}` on `f^(-1)({home currency})`to  `f({destination currency})`. The distance is
 
-// NOTES
-// Students read this from the measurement tool on the graph. I'm not as worried about the exact measurement as I interested in their noticing the vertical and horizontal distances are the same. I also want them to eventually key into the intersection points.
+    // NOTES
+    // Students read this from the measurement tool on the graph. I'm not as worried about the exact measurement as I interested in their noticing the vertical and horizontal distances are the same. I also want them to eventually key into the intersection points.
 
-[[`f({cost of souvenir 1 in destination currency})`- `f^(-1)({cost of souvenir 1 in home currency})`]]. Similarly measure the horizontal distance between `{souvenir 1}` on  `f({destination currency})` to `f^(-1)({home currency})`.
+[[`f({cost of souvenir 1 in destination currency})`- `f^(-1)({cost of souvenir 1 in home currency})`|xxx]]. Similarly measure the horizontal distance between `{souvenir 1}` on  `f({destination currency})` to `f^(-1)({home currency})`.
 
 ---
 
 This distance is the same as the vertical distance you measured! Make the same measurements for each of the souvenir points.
 
-// NOTES
-// Interactive states
+    // NOTES
+    // Interactive states
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png)
 
@@ -1285,8 +1295,8 @@ This distance is the same as the vertical distance you measured! Make the same m
 
 Notice that the intersection points of each of these measurements fall on their own line.
 
-// NOTES
-// Interactive states
+    // NOTES
+    // Interactive states
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png)
 
@@ -1304,12 +1314,12 @@ In fact, all inverse functions are symmetric over the line y=x. The tools we use
 
 ---
 
-## Parabolas
+### Parabolas
 
-::: column(width 240)
+::: column(width=240)
 
-// NOTES
-// Interactive states - not shown: vertical line test
+    // NOTES
+    // Interactive states - not shown: vertical line test
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.33.18.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.33.18.png)
@@ -1325,8 +1335,8 @@ The parabola passes the vertical line test, so it is a function. We just observe
 :::
 
 
-// NOTES
-// New parabola can snap to inverse when user gets close.
+    // NOTES
+    // New parabola can snap to inverse when user gets close.
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.37.42.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.37.42.png)
 
@@ -1336,13 +1346,13 @@ The inverse parabola has the same mirror look as the currency functions. Recall 
 
 Fill in the table with the coordinate points for each key feature in the original parabola. Verify that their inverses appear on the rotated parabola.
 
-// NOTES
-// All values are fill-in-the-blank. Students can indicate or track that they have found the corresponding coordinate points.
+    // NOTES
+    // All values are fill-in-the-blank. Students can indicate or track that they have found the corresponding coordinate points.
 
-::: column(width 240)
+::: column(width=240)
 
-// NOTES
-// **Note** students should check several points to verify.
+    // NOTES
+    // **Note** students should check several points to verify.
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.43.10.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.43.10.png)
 
 :::
@@ -1351,7 +1361,7 @@ Fill in the table with the coordinate points for each key feature in the origina
 
 ---
 
-::: column(width 240)
+::: column(width=240)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.47.25.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.47.25.png)
 
@@ -1366,9 +1376,9 @@ The inverse function doesn’t pass the vertical line test. It isn’t actually 
 
 :::
 
-// NOTES
-// CTA: Use the sliders to adjust the original function so that the second parabola is a function.
-// Sliders here prototype the slider function in the chapter. They restrict the domain from each direction.
+    // NOTES
+    // CTA: Use the sliders to adjust the original function so that the second parabola is a function.
+    // Sliders here prototype the slider function in the chapter. They restrict the domain from each direction.
 
 [https://www.desmos.com/calculator/ywpamz642r](https://www.desmos.com/calculator/ywpamz642r)
 
@@ -1376,9 +1386,9 @@ When we change the [domain](gloss:domain) of the original parabola, we can make 
 
 ---
 
-## Algebraic Relationship
+### Algebraic Relationship
 
-::: column(width 240)
+::: column(width=240)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_21.27.34.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_21.27.34.png)
 
@@ -1392,54 +1402,54 @@ Recall that inverting money from one currency to another are inverse functions. 
 
 ---
 
-The forecast calls for a high of 27 degrees Celsius today. We missed the report that included the temperature in Fahrenheit, so we Google the conversion and find C(x)= $$\frac{5}{9}(x-32)$$. Find today's high in Fahrenheit.
+The forecast calls for a high of 27 degrees Celsius today. We missed the report that included the temperature in Fahrenheit, so we Google the conversion and find C(x)= $\frac{5}{9}(x-32)$. Find today's high in Fahrenheit.
 
 :::
 
-// NOTES
-// Algebra Flow. Written as step, description, step, description, etc.
+    // NOTES
+    // Algebra Flow. Written as step, description, step, description, etc.
 
-$$27=\frac{5}{9}(x-32) $$
+$27=\frac{5}{9}(x-32) $
 
 Substitute 27 in for C(X)
 
-$$9*27=[\frac{5}{9}(x-32)]x9$$
+$9*27=[\frac{5}{9}(x-32)]x9$
 
 Use inverse operation on to move 9
 
-$$\frac{9}{5}x27=\frac{5*(x-32)}{5}$$
+$\frac{9}{5}x27=\frac{5*(x-32)}{5}$
 
 Use inverse operation to move 5
 
-$$\frac{9}{5}x27+32=x-32+32$$
+$\frac{9}{5}x27+32=x-32+32$
 
 Use inverse operation to move 32
 
-$$\frac{9}{5}x27+32=x$$
+$\frac{9}{5}x27+32=x$
 
 x, representing the temperature in Fahrenheit, is isolated
 
-$$80.6=x$$
+$80.6=x$
 
 Today's high in Fahrenheit
 
-// END Algebra FLOW
+    // END Algebra FLOW
 
 This is a familiar process for solving equations. We can use this same process to find inverse functions algebraically. Let's take a look at two key steps in solving the equations above.
 
 
-// NOTES
-// Several columns to show alignment between text and steps. Does not need to remain as several columns.
+    // NOTES
+    // Several columns to show alignment between text and steps. Does not need to remain as several columns.
 
-::: column(width 240)
+::: column(width=240)
 
 {.text-center.follows} Original Function
-{.text-center.follows} $$27=\frac{5}{9}(x-32) $$
+{.text-center.follows} $27=\frac{5}{9}(x-32) $
 
-::: column(width 240)
+::: column(width=240)
 
 {.text-center.follows} Inverse Function
-{.text-center.follows} $$\frac{9}{5}x27+32=x$$
+{.text-center.follows} $\frac{9}{5}x27+32=x$
 
 :::
 
@@ -1448,24 +1458,20 @@ Recall that we substituted 27 in for C(x) since it was our given temperature. Le
 ::: column.grow
 
 {.text-center.follows} Original Function
-{.text-center.follows} $$y=\frac{5}{9}(x-32) $$
+{.text-center.follows} $y=\frac{5}{9}(x-32) $
 
-::: column(width 240)
+::: column(width=240)
 
 {.text-center.follows} Inverse Function
-{.text-center.follows} $$\frac{9}{5}y+32=x$$
-
-:::
+{.text-center.follows} $\frac{9}{5}y+32=x$
 
 ::: column.grow
 
 Now remember that to graph the inverse function when we were buying souvenirs at the market in `{destination}`, we swapped the x and y coordinates. That is, we switched the input and output. Let's do that same thing in the inverse function.
 
-::: column(width 240)
+::: column(width=240)
 
-{.text-center.follows} $$\frac{9}{5}x+32=y$$
-
-:::
+{.text-center.follows} $\frac{9}{5}x+32=y$
 
 ::: column.grow
 
@@ -1473,34 +1479,32 @@ Recall the notation for inverse functions use the letter name of the original fu
 
 Take another look at the original and inverse functions side-by-side.
 
-::: column(width 240)
+::: column(width=240)
 
-{.text-center.follows} $$\frac{9}{5}x+32=C^{-1}(x)$$
-
-:::
+{.text-center.follows} $\frac{9}{5}x+32=C^{-1}(x)$
 
 ::: column.grow
 
-{.text-center.follows} $$C(x)=\frac{5}{9}(x-32) $$
+{.text-center.follows} $C(x)=\frac{5}{9}(x-32) $
 
-::: column(width 240)
+::: column(width=240)
 
-{.text-center.follows} $$\frac{9}{5}x+32=C^{-1}(x)$$
+{.text-center.follows} $\frac{9}{5}x+32=C^{-1}(x)$
 
 :::
 
  Recall from the jersey example above that passing a value through a function machine then its inverse function machine gives the same value in the end. We called this `f(f^(-1)(x))=x`. Let's verify that this works for C(x) and `C^(-1)(x)`.
 
-// NOTES
-// Use same function builder inspirations as above.
-// Let's use the function machine as the way to explore `f(f^(-1)(x))=x`. List lots of numbers to pass through the machines. List a few variables, including x, to pass through. We can dig into the algebraic composition  functions in another chapter.
+    // NOTES
+    // Use same function builder inspirations as above.
+    // Let's use the function machine as the way to explore `f(f^(-1)(x))=x`. List lots of numbers to pass through the machines. List a few variables, including x, to pass through. We can dig into the algebraic composition  functions in another chapter.
 
 Let's determine whether these two functions are inverses.
 
-{.text-center.follows} $$f(x)=4-\frac{3}{2}x\\ g(x)=\frac{1}{2}x+\frac{3}{2}$$
+{.text-center.follows} $f(x)=4-\frac{3}{2}x\\ g(x)=\frac{1}{2}x+\frac{3}{2}$
 
-// NOTES
-// Students use function machine. They see they are not inverses.
+    // NOTES
+    // Students use function machine. They see they are not inverses.
 
 The function machine indicates that f(x) and g(x) [[are not | are]] inverse functions.
 
@@ -1508,62 +1512,51 @@ The function machine indicates that f(x) and g(x) [[are not | are]] inverse func
 
 Let's find the inverse function of f(x).
 
-// NOTES
-// Students put the steps cards in order, then match the equation cards to the steps cards.
+    // NOTES
+    // Students put the steps cards in order, then match the equation cards to the steps cards.
 
-{.text-center.follows} $$f(x)=4-\frac{3}{2}x $$
+{.text-center.follows} $f(x)=4-\frac{3}{2}x $
 
-// NOTES
-// Several columns to show alignment between text and steps. Does not need to remain as several columns.
-// Left column indicates equation cards. Right column represents steps cards.
-// Students put the steps cards in order, then they fill in the blanks of the equations cards.
+    // NOTES
+    // Several columns to show alignment between text and steps. Does not need to remain as several columns.
+    // Left column indicates equation cards. Right column represents steps cards.
+    // Students put the steps cards in order, then they fill in the blanks of the equations cards.
 
-::: column(width 240)
+::: column(width=240)
 
-{.text-center.follows} $$y=4-\frac{3}{2}x$$
+{.text-center.follows} $y=4-\frac{3}{2}x$
 
-::: column(width 240)
+::: column(width=240)
 
 substitute y in for f(x)
 
-:::
+::: column(width=240)
 
-::: column(width 240)
+{.text-center.follows} $x=4-\frac{3}{2}y$
 
-{.text-center.follows} $$x=4-\frac{3}{2}y$$
-
-::: column(width 240)
+::: column(width=240)
 
 switch x and y
 
-:::
+::: column(width=240)
 
-::: column(width 240)
+{.text-center.follows} $x-4=-\frac{3}{2}y$
 
-{.text-center.follows} $$x-4=-\frac{3}{2}y$$
-
-::: column(width 240)
+::: column(width=240)
 
 solve for y as usual
 
-:::
+::: column(width=240)
 
-::: column(width 240)
+{.text-center.follows} $-2(x-4)={3}y$
 
-{.text-center.follows} $$-2(x-4)={3}y$$
+{.text-center.follows} $\frac{-2x+8}{3}=y$
 
-{.text-center.follows} $$\frac{-2x+8}{3}=y$$
+::: column(width=240)
 
-::: column(width 240)
+{.text-center.follows} $\frac{-2x+8}{3}=f^{-1}(x)$
 
-
-:::
-
-::: column(width 240)
-
-{.text-center.follows} $$\frac{-2x+8}{3}=f^{-1}(x)$$
-
-::: column(width 240)
+::: column(width=240)
 
 substitute `f^(-1)(x)` in for y
 
@@ -1571,18 +1564,19 @@ substitute `f^(-1)(x)` in for y
 
 We know have several ways of identifying and verifying inverse functions. Select your favourite method and describe why.
 
-// NOTES
-// Multiple select. No correct answer (i.e. open ended)
+    // NOTES
+    // Multiple select. No correct answer (i.e. open ended)
 
 [option 1](inverting equations algebraically)
 [option 2](graphing using coordinate points and their inverses)
 [option 3](graphing using y=x as the line of symmetry)
 [option 4](mapping diagram)
 
-// NOTES
-// Open-ended answer field
+    // NOTES
+    // Open-ended answer field
 
 Functions and inverse functions are fundamental ideas in coding and deciphering. Check out [Codes and Ciphers](https://mathigon.org/course/codes/introduction) to see these ideas in action!
+
 
 --------------------------------------------------------------------------------
 
@@ -1592,14 +1586,14 @@ Functions and inverse functions are fundamental ideas in coding and deciphering.
 > section: rates-of-change
 > sectionStatus: dev
 
-// NOTE
-// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
+    // NOTE
+    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
 Throughout history, bacteria and viruses have plagued populations ranging in size from villages to entire civilisations. We see cycles of infectious diseases such as small pox, black death, salmonella,  yellow fever, flu, polio, AIDS, ebola, Zika, and  COVID-19 change the course of history.
 
 Math can help us understand the scale and impact of disease outbreaks. Today we will be focusing on the [function](gloss:function) describing the cumulative confirmed cases of COVID-19.
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.32.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.32.png)
 
@@ -1612,9 +1606,7 @@ The table to the right shows the cumulative confirmed cases as a function of tim
 
 This word cumulative means current total over all time. That means this number only goes up, even if the daily confirmed cases begins to decrease. To get a more accurate picture of what's going on, we can calculate the number of new cases every day.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.45.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.45.png)
 
@@ -1622,9 +1614,7 @@ This word cumulative means current total over all time. That means this number o
 
 For example, we can place points on the graph to the right on January 26 and June 12. The slope of the line running through these two points is called [t](gloss:secant-line)he **average rate of change** for this timeframe.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.53.21.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.53.21.png)
 
@@ -1632,9 +1622,7 @@ For example, we can place points on the graph to the right on January 26 and Jun
 
 This line estimates the confirmed cases have been increasing at a rate of over [[14]] billion per day.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.00.25.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.00.25.png)
 
@@ -1644,9 +1632,7 @@ Now, we can see that this line doesn't do a great job of telling the story of ho
 
 Let's see if there is a way to make the average rate of change better estimate the actual daily change.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.11.24.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.11.24.png)
 
@@ -1672,7 +1658,7 @@ Average rate of change can also give a way to compare change among different cou
 
 We can see that Italy had a higher cumulative case count until March [[27]]. This means that Italy had more cases of COVID-19 for most of March.
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.52.43.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.52.43.png)
 
@@ -1684,7 +1670,7 @@ When we look at the average rates of change for the two countries between March 
 
 It makes sense that the country with the highest case count would be seeing a higher number of cases per day. But something interesting happens between March 19 and 26.
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.49.26.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.49.26.png)
 
@@ -1698,7 +1684,7 @@ During this week, the total case count in the USA was still lower than Italy's. 
 
 While it may seem opposite of our expectations, this odd relationship between average rates of change and total count is the only way that the USA's total case count surpasses Italy's.
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_11.01.15.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_11.01.15.png)
 
@@ -1708,9 +1694,9 @@ As we have seen, average rates of change can be helpful for understanding statis
 
 ---
 
-## SUBA Diving
+### SCUBA Diving
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_13.03.48.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_13.03.48.png)
 
@@ -1718,20 +1704,17 @@ As we have seen, average rates of change can be helpful for understanding statis
 
 Scuba diving (self-contained underwater breathing apparatus) is a XXX dollar industry globally. People travel to destinations to dive in new and different waters. With this recreation XXX industry growing, diver education and safety is a high priority for organisations like PADI and DAN. The pressure of the water on the human body is higher than we are used to at ground level in the atmosphere. And, those pressure increase the deeper a diver travels.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 [Stock Video of Group of Divers During Safety Stop at Adobe Stock](https://stock.adobe.com/video/group-of-divers-during-safety-stop/122711283?prev_url=detail)
 
 {.fixme} Nice 14s video of safety stop
 
 ::: column.grow
+
 The laws of gasses and pressures are such that the air we breathe, even with scuba gear, can change XXX and XXX as the water pressure increases. This compression needs to reverse as the pressure decreases when a diver ascends to the water's surface. If a diver resurfaces too quickly, the gases in their cells won't have time to XXX - creating bubbles in tissues and joints. This can lead to decompression illness. To prevent this, divers pay close attention to the rate at which they are ascending. Yep, rate. The idea is to ascend slower than 10-15 meters per minute.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.28.42.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.28.42.png)
 
@@ -1741,15 +1724,13 @@ The laws of gasses and pressures are such that the air we breathe, even with scu
 
 The S.S. Thistlegorm is one of the top 10 wreck diving sites in the world. This British Merchant Navy ship sank on 6 October, 1941 during the Second World War. Jacques Cousteau discovered her wreck site in the early 1950s.
 
-:::
-
 ::: column.grow
 
 This is the depth profile of a typical dive to the SS Thistlegorm. We call a graph like this one a **position** function. The y-values tell us where the diver is in relation to the the surface of the water, while the x-axis tell us *when* they are at any given position.
 
 The diver's maximum depth was about [[30+-.25]] meters about [[40+-2]] minutes into the dive. Let's take a look at other key features in this graph. They will give us areas to focus on as we think about whether the diver ascended at a safe rate. Label the graph with each key feature.
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.30.23.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.30.23.png)
 
@@ -1763,7 +1744,7 @@ The diver's maximum depth was about [[30+-.25]] meters about [[40+-2]] minutes i
 
 {.fixme} Design cards for the words below. Students drag to above graph.
 
-::: column(width 100)
+::: column(width=100)
 
 x-intercept
 
@@ -1771,7 +1752,7 @@ maximum
 
 x-intercept
 
-::: column(width 100)
+::: column(width=100)
 
 increasing
 
@@ -1779,7 +1760,7 @@ increasing
 
 increasing
 
-::: column(width 100)
+::: column(width=100)
 
 decreasing
 
@@ -1793,7 +1774,7 @@ Notice the graph has a bunch of peaks and valleys. These seemingly random highs 
 
 We can use average rates of change to smooth out this graph just like we did in the COVID-19 graph above.
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.52.19.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.52.19.png)
 
@@ -1805,9 +1786,7 @@ We can use average rates of change to smooth out this graph just like we did in 
 
 We see that the diver's position function more or less increases from (45, -30) to ([[60+-5, [[0]]). These two points give us enough information to calculate the diver's **average rate of change** of [[2]] meters per minute, well below the threshold of 10-15 meters per minute. So far, it seems like this diver prevents decompression illness.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.56.16.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.56.16.png)
 
@@ -1853,7 +1832,7 @@ Slope of the secant line changes.
 
 {.fixme} Design similar for the "depth vs. time" data. Images below are mock-ups with old data.
 
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.06.21.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.06.21.png)
 
@@ -1863,9 +1842,7 @@ Slope of the secant line changes.
 
 Data based in GPS reading like this often have a lot of "noise", or points that seem inconsistent with the general trend of the rest of the points. One way to deal with points like these is to think of them as outliers. Average rates of change should cut out the noise.
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.16.57.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.16.57.png)
 
@@ -1877,9 +1854,7 @@ Lines of best fit like this reduce, or eliminate, the noise from GPS. From here,
 
 To do this, we are going to look at *many* average rates of change.  
 
-:::
-
-::: column(width 240)
+::: column(width=240)
 
 ![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.22.50.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.22.50.png)
 
@@ -1911,7 +1886,8 @@ The position and speed graphs look very different but are generated from the sam
 
 Match the use/information with the appropriate graph
 
-::: column(width 100)
+::: column(width=100)
+
 location in the pool
 
 length of the race
@@ -1920,7 +1896,8 @@ race time
 
 time of turn
 
-::: column(width 100)
+::: column(width=100)
+
 when he got tired
 
 speed during first length
@@ -1931,10 +1908,12 @@ slowest part of the race
 
 relationship to other swimmers
 
-::: column(width 100)
+::: column(width=100)
+
 position graph
 
 velocity graph
+
 :::
 
 The relations between these two graphs, really  between the two functions represented by the graphs, is called a **[derivative](gloss:derivative)**. Specifically, the velocity graph is the derivative of the position graph. This relationship exists with many functions. The derivative can give useful information that is hidden in the position graph. In this case, the diver can quickly determine whether he/she/they stayed in the safety recommendations for decompression illness.
@@ -1943,7 +1922,7 @@ Let's look at another application of derivatives.
 
 ---
 
-## Space Shuttle Discovery
+### Space Shuttle Discovery
 
 {.fixme} Data from: https://www.nasa.gov/pdf/522588main_AP_ED_Phys_ShuttleLaunch.pdf
 
@@ -1981,25 +1960,30 @@ The ascent phase of the mission include several events between lift-off and reac
 
 {.fixme} design cards for each line below
 
-::: column(width 100)
+::: column(width=100)
+
 Space shuttle lift-off
 
 Solid Rocket Booster separation
 
 Main Engine Cutoff
 
-::: column(width 100)
+::: column(width=100)
+
 Space Shuttle Main Engines provide smoothly changing acceleration
 
 External Tank Separation
 
-::: column(width 100)
+::: column(width=100)
+
 Negative rate of change of acceleration (large air drag)
 
 Constant acceleration (3 g’s)
 
 On orbit
+
 :::
+
 ---
 
 From virus spread to diving decompression to space flights, the relationship between velocity and position stays constant. The velocity is the derivative of position. What position graphs show in steepness, velocity graphs show in coordinate points. Continue practicing visualising this relationship by matching the position graphs on the left to the velocity graphs on the right.

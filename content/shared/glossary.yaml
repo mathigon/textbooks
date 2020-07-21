@@ -15,9 +15,9 @@ absolute-value:
 acceleration:
   title: Acceleration
   text: Acceleration is change in velocity over time. In calculus, we understand
-  acceleration to be the derivative of velocity. In everyday life, we typically
-  of acceleration in terms of vehicles. For example, a top speed car can
-  accelerate from 0 to 100 kilometers per hour in 3 seconds.
+    acceleration to be the derivative of velocity. In everyday life, we typically
+    of acceleration in terms of vehicles. For example, a top speed car can
+    accelerate from 0 to 100 kilometers per hour in 3 seconds.
 
 acute-angle:
   title: Acute angle
@@ -531,9 +531,9 @@ dodecahedron:
 
 domain:
   title: Domain
-  text: A __domain__ is the set of elements that make up the _input_ of a function or
-  relation. Domain usually contains _x-values_. The elements of a domain can be
-  called _independent variables_.
+  text: A __domain__ is the set of elements that make up the _input_ of a
+    function or relation. Domain usually contains _x-values_. The elements of a
+    domain can be called _independent variables_.
 
 dot-annihilation:
   title: Annihilation
@@ -843,13 +843,16 @@ internal-angle:
 
 interval:
   title: Interval
-  text: An __interval__ is a set of numbers between to two endpoints. The endpoints may be included or excluded from the interval depending on the context.
+  text: |
+    An __interval__ is a set of numbers between to two endpoints. The endpoints
+    may be included or excluded from the interval depending on the context.
 
-  _Closed_ intervals include the endpoints. (e.g. 3<=x<=6)
+    _Closed_ intervals include the endpoints. (e.g. 3<=x<=6)
 
-  _Open_ intervals exclude the endpoints. (e.g. 3<x<6)
+    _Open_ intervals exclude the endpoints. (e.g. 3<x<6)
 
-  _Half-open_ or _half-closed_ intervals include one endpoint and exclude the other. (e.g 3<=x<6 or 3<x<=6)
+    _Half-open_ or _half-closed_ intervals include one endpoint and exclude the
+    other. (e.g 3<=x<6 or 3<x<=6)
 
 inverse-function:
   title: Inverse Function
@@ -1432,9 +1435,9 @@ ray:
 
 range:
   title: Range
-  text: A __range__ is the set of elements that make up the _output_ of a function or
-  relation. Range usually contains _y-values_. The elements of a domain can be
-  called _dependent variables_.
+  text: A __range__ is the set of elements that make up the _output_ of a
+    function or relation. Range usually contains _y-values_. The elements of a
+    domain can be called _dependent variables_.
 
 real-numbers:
   title: Real numbers
@@ -1554,8 +1557,8 @@ scientific-notation:
 secant:
   title: Secant Line
   text: A secant line is a line that intersects a curve at least twice. For
-  example, line AB intersects circle P at two points. {.fixme} insert described
-  diagram.
+    example, line AB intersects circle P at two points.
+  # TODO Insert described diagram
 
 set:
   title: Set
@@ -1693,11 +1696,13 @@ symmetry-group:
 
 system-of-equations:
   title: Systems of Equations
-  text: A __system of equations__ is two or more equations that share common variables. For example,
-  `4x+y=20`
-  `x+y=-1`
+  text: |
+    A __system of equations__ is two or more equations that share common
+    variables. For example,
 
-  Typically, systems of equations are used together to solve for each variable.
+    {.text-center} `4x+y=20`<br>`x+y=-1`
+
+    Typically, systems of equations are used together to solve for each variable.
 
 tan:
   title: Tangent
@@ -1721,8 +1726,7 @@ tangent:
   # A line tangent to a circle is perpendicular to the radius at that point.
   # A tangent line is a line that has exactly one point of intersection with a
   # curve. This means a tangent line with touch a curve without crossing it.
-  # {.fixme} insert diagram of tangent line in functions and tangent line to a
-  # circle
+  # TODO Image
 
 telegraph:
   title: Telegraph
