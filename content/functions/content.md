@@ -1111,30 +1111,39 @@ Now that we know more about absolute value functions and how they work, take a s
 
 // NOTE
 // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
+// Many links go to databases in Notion where design elements and texts are stored.
 
-{.todo} Coming Soon!
 Team sports is a world of split-second decisions and fast-moving bodies. Teammates choose where to place a pass. Referees decide who gains possession of the ball. Fans follow the action from great distances. In all these cases, jersey colour is deciding factor in how these instantaneous decisions are made.
 
 Let's take a look at the the Balligon Soccer League. Match each team to a jersey colour such that you have a [function](gloss:function).
 
-Same interactive as chapter 1
+// NOTES
+// Same interactive as chapter 1. Links go to the databases with assets and text.
 
 [team mascots](https://www.notion.so/a89f42d0f2b447f89f0d4ae58ad565be)
 
 [Jersey Colours](https://www.notion.so/e13166523b5e47ef96044c922bac940b)
 
 Recall that the team mascots make up the [[domain | range]] of the function,
-
-##fixme: hide until blank is filled
+// NOTE
+{.fixme} hide until blank is filled
  while jersey colours make up the range. In function notation, we write this relationship as f([[team]])=[[jersey colour]].
+ // NOTE
+ // also accept "domain", "mascot", "team name"; also accept "range", "colour", "color", "jersey"; OR make multi-select
 
 Take a look at the end of season tournament brackets.
+
+::: column(width 240)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_16.50.26.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_16.50.26.png)
 
 Example brackets. Fill in with teams matched to colours.
 
+::: column.grow
+
 The game between `team1 assigned to same color` and `team2 assigned to same color` is going to be a challenge for the players, referees, and fans. The jersey colours are `{jersey colour}` for both teams. Imagine keeping track of who has possession of the ball from 30 meters away. The consequences of wearing the same colours are so challenging, in fact, that many sports leagues give penalties to teams who are in the wrong uniform.
+
+:::
 
 ---
 
@@ -1142,31 +1151,37 @@ This idea of seeing jersey colour and immediately knowing what team the player b
 
 The inverse function we are looking at identifies the team based on jersey colour. Take a look at the mapping for the function above moving from left to right.
 
-Show mapping from above with copy of the team group to the right of colour.
+// NOTES
+// Show mapping from above with copy of the team group to the right of colour.
+// Think about how to guide students toward adding a colour to the output. This should be integrated into the interactive design.
 
-Think about how to guide students toward adding a colour to the output. This should be integrated into the interactive design.
-
-Here we can see that the relation between colour and team is not a function. What would fix this relationship between `f(team)` and  so that `f^(-1)(colour)`  is a function?
+Here we can see that the [relation](target:1_mapping) between colour and team is not a function. What would fix this relationship between `f(team)` and  so that `f^(-1)(colour)`  is a function?
 
 ---
 
-Show mapping from above with copy of the team group to the right of colour. Students can add a colour option. Change the mapping s.t. `f(team)` is one-to-one.
+// NOTES
+// Show mapping from above with copy of the team group to the right of colour. Students can add a colour option. Change the mapping s.t. `f(team)` is one-to-one.
 
 Now  `f^(-1)(colour)` is a function. In fact, recall from [Relations and Functions](https://mathigon.org/course/functions/relations) there are several types of functions. `f(team)`is now a [[one-to-one | one-to-many | many-to-one | many-to-many]].
 
+// Decide whether or not to include all relation classificiations or just function classifications.
 ---
 
 Let's look at this mapping relationship in a function machine. Choose a team to pass through the machine. The machine assigns the team to a colour, then reverses the assignment. In other words, the machine applied the function rule then the inverse function rule.
 
+// NOTES
+// Visual inspiration
+// Apples are team names. Lemons are jersey colours. Label the first machine with `f(team)` and the second with `f^1(colour)`.
+// EDITORIAL USE ONLY
 ![https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG](https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG)
 
-Apples are team names. Lemons are jersey colours. Label the first machine with f(team) and the second with f^1(colour).
-
+// Technical inspiration
 [https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html](https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html)
 
 Every time you pass `{team}` through both machines, you get out the team's [[name | jersey color]]. Algebraically we write this as `f(f^1(x))=x`. We will look more closely at why this is important throughout the chapter.
 
-highlight that f^-1 is not exponent
+// NOTES
+// Highlight that f^-1 is not exponent
 
 ---
 
@@ -1174,21 +1189,30 @@ highlight that f^-1 is not exponent
 
 International tourism reached over 4 million arrivals each day in 2019. With so much travel between countries, people are more aware of their spending power.  That is, how far a `{user's currency unit e.g. dollar}` in `{user's home country's currency}` goes in another currency. Let's explore this idea of spending power - choose a destination from the cities listed.
 
-Do not show city options located in the same country as the user.
-
-Could be great to tie the conversion rate in this interactive to the daily rates. This would complicate the rest of the chapter's text and [[blanks]]. I think it could be a nice touch, though. Users who return to this chapter would see how (potentially) volatile, or at least not-static, this rate is in real life.
+// NOTES
+// Do not show city options located in the same country as the user.
+// Could be great to tie the conversion rate in this interactive to the daily rates. This would complicate the rest of the chapter's text and [[blanks]]. I think it could be a nice touch, though. Users who return to this chapter would see how (potentially) volatile, or at least not-static, this rate is in real life.
 
 [Cities and Currencies](https://www.notion.so/554f2cbfc43640799fff025363f6d2fc)
 
-The text below is build on visiting Machu Picchu from the USA.
+// NOTES
+// The text below is build on visiting Machu Picchu from the USA.
 
-Along your trip, you find many different markets take only cash. To prepare for your next trip to the market, you withdraw cash. The conversion function is `{destination currency}={conversion rate}*{home currency}` . Based on your budget you have about [[`{home currency}`]] to spend on souvenirs, which means you need to withdraw [[`{destination currency}={conversion rate}*{home currency}`]] Take a stroll through the market and decide what you want to buy.
+Along your trip, you find many different markets take only cash. To prepare for your next trip to the market, you withdraw cash. The conversion function is `{destination currency}={conversion rate}*{home currency}` . Based on your budget you have about [[`{home currency}`]]
+
+{.fixme} user enters whatever amount they want
+
+ to spend on souvenirs, which means you need to withdraw [[`{destination currency}={conversion rate}*{home currency}`]]
+
+{.fixme} user must do this calculation and enter the amount +- .5
+
+ Take a stroll through the market and decide what you want to buy.
+
+ // MOCK UP
+ // Souvenir cards
+ // Images have local price. Rollover shows price in `{home currency}`. Even cooler, user calculates and inputs on the back of the card.
 
 [https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FAItjhFAz9DsTkH0elhIbNt%2FUntitled%3Fnode-id%3D10%253A5%26viewport%3D-720%252C470%252C0.9163351058959961%26scaling%3Dmin-zoom](https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FAItjhFAz9DsTkH0elhIbNt%2FUntitled%3Fnode-id%3D10%253A5%26viewport%3D-720%252C470%252C0.9163351058959961%26scaling%3Dmin-zoom)
-
-Souvenir cards
-
-Images have local price. Rollover shows price in `{home currency}`. Even cooler, user calculates and inputs on the back of the card.
 
 [Souvenirs by city](https://www.notion.so/20a2f11c078940b6ae0170578e84c4ea)
 
@@ -1196,35 +1220,31 @@ Images have local price. Rollover shows price in `{home currency}`. Even cooler,
 
 ## Visual relationship
 
-[https://www.desmos.com/calculator/ck4ilqoxmz](https://www.desmos.com/calculator/ck4ilqoxmz)
+::: column.grow
 
-This section is build from this set of graphs.
-
-[5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/05-functions-USDsol.mov](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/05-functions-USDsol.mov)
-
-Quick talk through the user flow for this section.
-
-We can represent this relationship between the cost in `{destination currency}` and `{home currency}` as (`{destination currency}`, `{user home currency}`). This relationship means `{destination currency}` is the [[input | output]] and `{user home}` is the [[output | input]]. The points fall on a line. Let's call this line f(`{destination currency}`)=`{conversion rate}`*`{destination currency}`.
+We can represent this relationship between the cost in `{destination currency}` and `{home currency}` as (`{destination currency}`, `{user home currency}`). This relationship means `{destination currency}` is the [[input | output]] and `{user home}` is the [[output | input]]. The points fall on a line. Let's call this line f(`{destination currency}`)=`{conversion rate}`x`{destination currency}`.
 
 ---
 
-Recall that earlier we used the equation `{destination currency}={conversion rate}*{home currency}` to calculate how much money to withdraw from the bank before our trip to the market. Notice that the this equation is strikingly similar to the f(x) on the graph.
+Recall that earlier we used the equation `{destination currency}={conversion rate}*{home currency}` to calculate how much money to withdraw from the bank before our trip to the market. Notice that the this equation is strikingly similar to the [f(x)](target:1_souvenirGraph) on the graph.
 
-In fact, the most important difference is that the input and output values are switched. We saw this relationship between functions above in the jersey example. Using this observation, we can see that `{destination currency}={conversion rate}*{home currency}` is the inverse function of f(`{destination currency}`)=`{conversion rate}`*`{destination currency}`. This means we can use the notation `f^(-1)({home currency})` for the function representing the exchange from `{home currency}` to `{destination currency}`.
+In fact, the most important difference is that the input and output values are switched. We saw this relationship between functions above in the jersey example. Using this observation, we can see that `{destination currency}={conversion rate}*{home currency}` is the inverse function of f(`{destination currency}`)=`{conversion rate}`x`{destination currency}`. This means we can use the notation `f^(-1)({home currency})` for the function representing the exchange from `{home currency}` to `{destination currency}`.
 
 ---
 
 The graphs of inverse functions have some interesting features. First, this idea of switching inout and output values helps us plot points for `f^(-1)({home currency})`. Let's plot the souvenir points for the inverse function.
 
-[https://www.desmos.com/calculator/ff6489z9ns](https://www.desmos.com/calculator/ff6489z9ns)
+::: column(width 240
 
-f(x)=3.54x where x is soles and f(x) is dollars. The souvenir labels would be stronger if they were the name of the souvenir purchased.
+// NOTES
+// f(x)=3.54x where x is soles and f(x) is dollars. The souvenir labels would be stronger if they were the name of the souvenir purchased.
+// Object of f(x) target above.
+[https://www.desmos.com/calculator/ff6489z9ns](https://www.desmos.com/calculator/ff6489z9ns)
 
 [https://www.desmos.com/calculator/tlscgnsyy3](https://www.desmos.com/calculator/tlscgnsyy3)
 
+// Students plot these points.
 [https://www.desmos.com/calculator/ccbs3quxpu](https://www.desmos.com/calculator/ccbs3quxpu)
-
-Students plot these points.
 
 [https://www.desmos.com/calculator/mgmj8jbz26](https://www.desmos.com/calculator/mgmj8jbz26)
 
@@ -1232,41 +1252,41 @@ Students plot these points.
 
 There is another interesting feature of inverse functions, though it may not be immediately obvious. Let's make some measurements between lines to see if the interesting feature emerges.
 
-Begin by measuring the vertical distance from `{souvenir 1}` on `f^(-1)({home currency})`to  `f({destination currency})`. The distance is [[`f({cost of souvenir 1 in destination currency})`- `f^(-1)({cost of souvenir 1 in home currency})`]]. Similarly measure the horizontal distance between `{souvenir 1}` on  `f({destination currency})` to `f^(-1)({home currency})`.
+Begin by measuring the vertical distance from `{souvenir 1}` on `f^(-1)({home currency})`to  `f({destination currency})`. The distance is
+
+// NOTES
+// Students read this from the measurement tool on the graph. I'm not as worried about the exact measurement as I interested in their noticing the vertical and horizontal distances are the same. I also want them to eventually key into the intersection points.
+
+[[`f({cost of souvenir 1 in destination currency})`- `f^(-1)({cost of souvenir 1 in home currency})`]]. Similarly measure the horizontal distance between `{souvenir 1}` on  `f({destination currency})` to `f^(-1)({home currency})`.
 
 ---
 
 This distance is the same as the vertical distance you measured! Make the same measurements for each of the souvenir points.
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png)
+// NOTES
+// Interactive states
 
-State 5
+![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.39.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.39.png)
 
-State 6
-
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.00.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.00.png)
 
-State 7
 
 Notice that the intersection points of each of these measurements fall on their own line.
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png)
+// NOTES
+// Interactive states
 
-State 8
+![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.00.10.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.00.10.png)
 
-State 9
-
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.11.11.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.11.11.png)
 
-State 10
+The equation of this [line](target:2_souvenirGraph) is y= [[1]]m+[[0]]
 
-The equation of this line is y= [[1]]m+[[0]]
-
-###fixme: hide until blank filled
+{.fixme} hide until blank filled
 
 which simplifies to y=x. Notice that if we were to fold the coordinate plane along the line y=x,  `f({destination currency})` and `f^(-1)({home currency})`would lie on top of each other.  The line y=x would remain in the same position during this fold.
 
@@ -1276,43 +1296,57 @@ In fact, all inverse functions are symmetric over the line y=x. The tools we use
 
 ## Parabolas
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png)
+::: column(width 240)
 
-State 1 (not shown: vertical line test)
+// NOTES
+// Interactive states - not shown: vertical line test
+![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png)
 
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.33.18.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.33.18.png)
 
-State 2
+::: column.grow
 
-We call this shape a [parabola](gloss:parabola). Check to make sure it is indeed a function.
+We call this shape a [parabola](gloss:parabola). [Check](target:1_lineTest) to make sure it is indeed a function.
 
 ---
 
 The parabola passes the vertical line test, so it is a function. We just observed that inverses are symmetric about the line y=x. Make a copy of the parabola and rotate it in the coordinate plane to make it a reflection of the original parabola over the line y=x. Reflection in this case means that the two parabolas are symmetric over y=x.
 
+:::
+
+
+// NOTES
+// New parabola can snap to inverse when user gets close.
+
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.37.42.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.37.42.png)
 
-State 3
-
-New parabola can snap to inverse when user gets close.
+::: column.grow
 
 The inverse parabola has the same mirror look as the currency functions. Recall the ordered pairs on those line were switched. That is (`destination currency`, `home currency`) was on one line and (`home currency`, `destination currency`) was on the other line. Check that this pattern hold for these two parabolas.
 
 Fill in the table with the coordinate points for each key feature in the original parabola. Verify that their inverses appear on the rotated parabola.
 
-All values are fill-in-the-blank. Students can indicate or track that they have found the corresponding coordinate points.
+// NOTES
+// All values are fill-in-the-blank. Students can indicate or track that they have found the corresponding coordinate points.
 
+::: column(width 240)
+
+// NOTES
+// **Note** students should check several points to verify.
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.43.10.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.43.10.png)
 
-State 4 **Note** students should check several points to verify.
+:::
 
 [Untitled](https://www.notion.so/3c9309dafa2f4ed6b49e3d5a9cb6004a)
 
 ---
 
+::: column(width 240)
+
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.47.25.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.47.25.png)
 
-State 9
+
+::: column.grow
 
 According to the properties of inverses, this is the inverse of the original parabola. It's symmetric over y=x and the points on this curve are the inverses of the points on the original parabola. The last thing we need to do is check that it is a function.
 
@@ -1320,11 +1354,13 @@ According to the properties of inverses, this is the inverse of the original par
 
 The inverse function doesn’t pass the vertical line test. It isn’t actually a function! When we were looking at the jersey example, we changed the team to colour function so that each team was assign to only one colour. Can you apply that idea here?
 
-CTA: Use the sliders to adjust the original function so that the second parabola is a function.
+:::
+
+// NOTES
+// CTA: Use the sliders to adjust the original function so that the second parabola is a function.
+// Sliders here prototype the slider function in the chapter. They restrict the domain from each direction.
 
 [https://www.desmos.com/calculator/ywpamz642r](https://www.desmos.com/calculator/ywpamz642r)
-
-Sliders here prototype the slider function in the chapter. They restrict the domain from each direction.
 
 When we change the [domain](gloss:domain) of the original parabola, we can make the inverse parabola a function. In fact, the domain must be restricted so that each input value is matched to only one output. This means that some functions have inverses and some functions don’t. Specifically, only one-to-one functions have inverse functions.
 
@@ -1332,9 +1368,13 @@ When we change the [domain](gloss:domain) of the original parabola, we can make 
 
 ## Algebraic Relationship
 
+::: column(width 240)
+
 ![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_21.27.34.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_21.27.34.png)
 
 [https://stock.adobe.com/images/beachside-hammock/328924634?prev_url=detail](https://stock.adobe.com/images/beachside-hammock/328924634?prev_url=detail)
+
+::: column.grow
 
 The Caribbean islands are another popular tourist destination. Their iconic beaches and crystal blue waters paint a picture of relaxation. Bermuda, an island country in the Caribbean, is one of the few places in the world that use both Celsius and Fahrenheit temperature scales in meteorology.  Let's set up a hammock in the this shady nook and take a look at the relationship between these temperature scales.
 
@@ -1344,7 +1384,10 @@ Recall that inverting money from one currency to another are inverse functions. 
 
 The forecast calls for a high of 27 degrees Celsius today. We missed the report that included the temperature in Fahrenheit, so we Google the conversion and find C(x)= $$\frac{5}{9}(x-32)$$. Find today's high in Fahrenheit.
 
-Algebra Flow
+:::
+
+// NOTES
+// Algebra Flow. Written as step, description, step, description, etc.
 
 $$27=\frac{5}{9}(x-32) $$
 
@@ -1370,55 +1413,84 @@ $$80.6=x$$
 
 Today's high in Fahrenheit
 
+// END Algebra FLOW
+
 This is a familiar process for solving equations. We can use this same process to find inverse functions algebraically. Let's take a look at two key steps in solving the equations above.
 
-### Original Function
 
-$$27=\frac{5}{9}(x-32) $$
+// NOTES
+// Several columns to show alignment between text and steps. Does not need to remain as several columns.
 
-### Inverse Function
+::: column(width 240)
 
-$$\frac{9}{5}x27+32=x$$
+{.text-center.follows} Original Function
+{.text-center.follows} $$27=\frac{5}{9}(x-32) $$
+
+::: column(width 240)
+
+{.text-center.follows} Inverse Function
+{.text-center.follows} $$\frac{9}{5}x27+32=x$$
+
+:::
 
 Recall that we substituted 27 in for C(x) since it was our given temperature. Let's put y in for 27 to represent the output value in an ordered pair.
 
-### Original Function
+::: column.grow
 
-### Inverse Function
+{.text-center.follows} Original Function
+{.text-center.follows} $$y=\frac{5}{9}(x-32) $$
 
-$$y=\frac{5}{9}(x-32) $$
+::: column(width 240)
 
-$$\frac{9}{5}y+32=x$$
+{.text-center.follows} Inverse Function
+{.text-center.follows} $$\frac{9}{5}y+32=x$$
+
+:::
+
+::: column.grow
 
 Now remember that to graph the inverse function when we were buying souvenirs at the market in `{destination}`, we swapped the x and y coordinates. That is, we switched the input and output. Let's do that same thing in the inverse function.
 
-$$\frac{9}{5}x+32=y$$
+::: column(width 240)
+
+{.text-center.follows} $$\frac{9}{5}x+32=y$$
+
+:::
+
+::: column.grow
 
 Recall the notation for inverse functions use the letter name of the original function with a -1 in the exponent location. This means y in the inverse function represents `C^(-1)(x)`.
 
 Take another look at the original and inverse functions side-by-side.
 
-$$\frac{9}{5}x+32=C^{-1}(x)$$
+::: column(width 240)
 
-$$C(x)=\frac{5}{9}(x-32) $$
+{.text-center.follows} $$\frac{9}{5}x+32=C^{-1}(x)$$
 
-$$\frac{9}{5}x+32=C^{-1}(x)$$
+:::
+
+::: column.grow
+
+{.text-center.follows} $$C(x)=\frac{5}{9}(x-32) $$
+
+::: column(width 240)
+
+{.text-center.follows} $$\frac{9}{5}x+32=C^{-1}(x)$$
+
+:::
 
  Recall from the jersey example above that passing a value through a function machine then its inverse function machine gives the same value in the end. We called this `f(f^(-1)(x))=x`. Let's verify that this works for C(x) and `C^(-1)(x)`.
 
-![https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG](https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG)
-
-Apples are F. Lemons are C. Overlay the function for F → C on the first machine. Overlay C → F on the second machine.
-
-Let's use the function machine as the way to explore `f(f^(-1)(x))=x`. List lots of numbers to pass through the machines. List a few variables, including x, to pass through. We can dig into the algebraic composition  functions in another chapter.
-
-[https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html](https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html)
+// NOTES
+// Use same function builder inspirations as above.
+// Let's use the function machine as the way to explore `f(f^(-1)(x))=x`. List lots of numbers to pass through the machines. List a few variables, including x, to pass through. We can dig into the algebraic composition  functions in another chapter.
 
 Let's determine whether these two functions are inverses.
 
-$$f(x)=4-\frac{3}{2}x\\ g(x)=\frac{1}{2}x+\frac{3}{2}$$
+{.text-center.follows} $$f(x)=4-\frac{3}{2}x\\ g(x)=\frac{1}{2}x+\frac{3}{2}$$
 
-Students use function machine. They see they are not inverses.
+// NOTES
+// Students use function machine. They see they are not inverses.
 
 The function machine indicates that f(x) and g(x) [[are not | are]] inverse functions.
 
@@ -1426,47 +1498,79 @@ The function machine indicates that f(x) and g(x) [[are not | are]] inverse func
 
 Let's find the inverse function of f(x).
 
-Students put the steps cards in order, then match the equation cards to the steps cards.
+// NOTES
+// Students put the steps cards in order, then match the equation cards to the steps cards.
 
-$$f(x)=4-\frac{3}{2}x $$
+{.text-center.follows} $$f(x)=4-\frac{3}{2}x $$
 
-Equation cards
+// NOTES
+// Several columns to show alignment between text and steps. Does not need to remain as several columns.
+// Left column indicates equation cards. Right column represents steps cards.
+// Students put the steps cards in order, then they fill in the blanks of the equations cards.
 
-Students put the steps cards in order, then they fill in the blanks of the equations cards.
+::: column(width 240)
 
-$$y=4-\frac{3}{2}x$$
+{.text-center.follows} $$y=4-\frac{3}{2}x$$
+
+::: column(width 240)
 
 substitute y in for f(x)
 
-$$x=4-\frac{3}{2}y$$
+:::
+
+::: column(width 240)
+
+{.text-center.follows} $$x=4-\frac{3}{2}y$$
+
+::: column(width 240)
 
 switch x and y
 
-$$x-4=-\frac{3}{2}y$$
+:::
+
+::: column(width 240)
+
+{.text-center.follows} $$x-4=-\frac{3}{2}y$$
+
+::: column(width 240)
 
 solve for y as usual
 
-$$-2(x-4)={3}y$$
+:::
 
-$$\frac{-2x+8}{3}=y$$
+::: column(width 240)
 
-$$\frac{-2x+8}{3}=f^{-1}(x)$$
+{.text-center.follows} $$-2(x-4)={3}y$$
+
+{.text-center.follows} $$\frac{-2x+8}{3}=y$$
+
+::: column(width 240)
+
+
+:::
+
+::: column(width 240)
+
+{.text-center.follows} $$\frac{-2x+8}{3}=f^{-1}(x)$$
+
+::: column(width 240)
 
 substitute `f^(-1)(x)` in for y
 
+:::
+
 We know have several ways of identifying and verifying inverse functions. Select your favourite method and describe why.
 
-inverting equations algebraically
+// NOTES
+// Multiple select. No correct answer (i.e. open ended)
 
-graphing using coordinate points and their inverses
+[option 1](inverting equations algebraically)
+[option 2](graphing using coordinate points and their inverses)
+[option 3](graphing using y=x as the line of symmetry)
+[option 4](mapping diagram)
 
-graphing using y=x as the line of symmetry
-
-mapping diagram
-
-Open-ended answer field
-
-Open-ended question encourages metacognition. We can also store the responses to see if any patterns emerge.
+// NOTES
+// Open-ended answer field
 
 Functions and inverse functions are fundamental ideas in coding and deciphering. Check out [Codes and Ciphers](https://mathigon.org/course/codes/introduction) to see these ideas in action!
 
