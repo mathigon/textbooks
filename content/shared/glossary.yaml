@@ -855,6 +855,15 @@ interval:
 
   _Half-open_ or _half-closed_ intervals include one endpoint and exclude the other. (e.g 3<=x<6 or 3<x<=6)
 
+inverse-function:
+  title: Inverse Function
+  text: An __inverse function__ is the relation which maps a function's range to its domain. Not all inverse functions are themselves functions. In fact, only one-to-one functions have inverse functions that qualify as functions.
+
+inverse-operation:
+  title: Inverse Function
+  text: An __inverse operation__ reverses a previous operation. One way to check if operations are inverses is see if they combine to give an inverse. For example, combining 3 and -3 gives 0, the additive identity. Likewise combining 3 and 1/3 gives 1, the multiplicative idetity.
+  ## Determine linking structure among glossary entries. Or change the technical components to be more approachable.
+
 irrational-numbers:
   title: Irrational numbers
   text: __Irrational numbers__ are numbers that cannot be expressed as fractions
