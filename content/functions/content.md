@@ -234,21 +234,33 @@ The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’
 > section: graphing
 > sectionStatus: dev
 
-{.todo} Coming Soon!
+// NOTE
+// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
-Chapter 2: Graphing and Interpreting Functions
-
+// EDITORIAL USE ONLY
+// [mock-up title image](https://drive.google.com/file/d/1P7d1Tfb7NwYLR5FM-e0zMbj5JKYgpJMJ/view?usp=sharing)
 
 The Olympics is full of incredible athletic feats. It’s also full of interesting data. Graphs help us visualize that data. During our time together today, we will watch Olympic competitions and analyse their graphs for interesting information. Let’s head over to the gymnastics arena!
 
+::: column(width240)
+
+[Ri](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200)
+
+::: column.grow
+
 Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the gold medal for the vault in the 2016 Summer Olympic Games. Let’s watch.
 
-Student presses play on a video (0:00-0:18) of Ri’s vault. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+:::
 
+// NOTES
+// [citation](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault)
+// Student presses play on a [video](https://www.youtube.com/watch?v=85v0Un19A94) (0:00-0:18) of Ri’s vault. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+
+[vault mock-up](https://www.desmos.com/calculator/td3fynck7q)
 
 There are several things going on here. Move the video back and forth to see how the graph lines up with the motion.
 
-The first time we need to understand is what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault. It is measured in centimeters. The y-axis is the vertical distance in centimeters Ri travels. This gives us information about Ri’s position much like chess pieces on a board.
+First, we need to understand is what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault. It is measured in centimeters. The y-axis is the vertical distance in centimeters Ri travels. This gives us information about Ri’s position much like chess pieces on a board.
 
 The graph does not include any information about time. For example, we cannot tell _when_ Ri landed on the pit. Some of the graphs of later events will include time along the horizontal axis.
 
@@ -258,125 +270,32 @@ On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri
 
 Let’s build some intuition for what graphs of different events look like. Match the graph to the event. Be sure to pay close attention to what the axes represent.
 
-Match graphs to sports of time functions
+// NOTE
+// Organized as a table in the Google Doc, so I (Dani) put it in a table here. The idea is to make it cards.
+// Match graphs to sports of time functions
 
-Triple Jump
-50 M Freestyle
-100 M Hurdles
-Vault
-Diving
-Skiing
-Graph
-Graph
-Graph
-Graph
-Graph
-Graph
-
-Photo
-Photo
-Photo
-Photo
-Photo
-Photo
-
-Video
-Video
-Video
-
-
-Video
-
-
-Video
-Video
-
-
-
-
-0:50-1:05
-All videos are either of stills from 2016 or from other competitions. This one is in
-0:00-0:12
-All videos are either of stills from 2016 or from other competitions. This one is in
-7:42-8:32
-Françoise Mbango Etone of Cameroon holds the Olympic record in women’s triple jump with a length of 15.39 meters.
-César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds.
-Sally Pearson of Australia holds the Olympic record in the women’s 100 meter hurdles with a time of 12.35 seconds.
-Ri Se-gwang of the People’s Republic of Korea won the gold medal for the vault in the 2016 Summer Olympic Games.
-Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games.
-
-
-photo citation
-photo citation
-photo citation
-photo citation
-photo citation
-photo citation
-https://www.spokesman.com/copyright/
-I like this as an action cut out. The lighting isn't amazing, though. And not for $20. I can look for others if we decide having an action photo of each of these record holders is worth having.
-$$$
-
-
-Too good not to include as a reference.
-Start
-985m
-
-
-
-
-
-
-
-
-
-
-Finish
-805m
-
-
-
-
-
-
-
-
-
-
-Vertical drop
-180m
-
-
-
-
-
-
-
-
-
-
-Gates
-66
-
-
-
-
-
-
-
-
-
-
-Finish time
-48.33
+| Triple Jump | | 50 M Freestyle | | 100 M Hurdles | | Vault | | Diving | | Skiing | |       |
+| :---------: | | :------------: | | :-----------: | | :---: | | :----: | | :----: | | :---: |
+| [Graph](https://www.desmos.com/calculator/qxfugm6xpi) | | [Graph](https://www.desmos.com/calculator/z07xkap2bl) | | [Graph](https://www.desmos.com/calculator/fwgpfln0ne) | | [Graph](https://www.desmos.com/calculator/td3fynck7q) | | [Graph](https://www.desmos.com/calculator/es8ugnvxeq) | | [Graph](https://www.desmos.com/calculator/x58olmjtkl) I'm having a tough time getting the shape to work with the scale. It might be easier to get the shape then layer the axes over - make this a static image. [sketch](https://drive.google.com/file/d/1uh9_0Abfs0lYIa8q6uZxUYFoRnHeLKtr/view?usp=sharing) disegard notes dotted graph | |     |
+| [Photo](https://www.spokesman.com/photos/2008/aug/18/57761/) | | [Photo](https://www.alamy.com/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-image332214503.html?pv=1&stamp=2&imageid=4E4EF72A-A00B-4C2E-9F1F-FA7688F2F792&p=1229576&n=0&orientation=0&pn=1&searchtype=0&IsFromSearch=1&srch=foo%3dbar%26st%3d0%26pn%3d1%26ps%3d100%26sortby%3d2%26resultview%3dsortbyPopular%26npgs%3d0%26qt%3dcesar%2520cielo%26qt_raw%3dcesar%2520cielo%26lic%3d3%26mr%3d0%26pr%3d0%26ot%3d0%26creative%3d%26ag%3d0%26hc%3d0%26pc%3d%26blackwhite%3d%26cutout%3d%26tbar%3d1%26et%3d0x000000000000000000000%26vp%3d0%26loc%3d0%26imgt%3d0%26dtfr%3d%26dtto%3d%26size%3d0xFF%26archive%3d1%26groupid%3d%26pseudoid%3d%26a%3d%26cdid%3d%26cdsrt%3d%26name%3d%26qn%3d%26apalib%3d%26apalic%3d%26lightbox%3d%26gname%3d%26gtype%3d%26xstx%3d0%26simid%3d%26saveQry%3d%26editorial%3d1%26nu%3d%26t%3d%26edoptin%3d%26customgeoip%3d%26cap%3d1%26cbstore%3d1%26vd%3d0%26lb%3d%26fi%3d2%26edrf%3d%26ispremium%3d1%26flip%3d0%26pl%3d) | | [Photo](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200) | | [Photo](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200) | | [Photo](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog) | | [Photo](https://depositphotos.com/stock-photos/alpine-slalom.html?filter=all&qview=29111391) | |     |
+| [Video](https://www.youtube.com/watch?v=wVqYjmK-T3w) | | [Video](https://www.youtube.com/watch?v=qZvdhv9uhi0) | | [Video](https://www.youtube.com/watch?v=AFNqbhJ3kmw) | | [Video](https://www.youtube.com/watch?v=85v0Un19A94) | | [Video](https://www.youtube.com/watch?v=wTX13JZFHd4) | | [Video](https://www.youtube.com/watch?v=kU0a-kvvKW4) | |     |
+|       | |       | | :50-1:05 | |All videos are either of stills from 2016 or from other competitions. | | 0:00-0:12  All videos are either of stills from 2016 or from other competitions. | | 7:42-8:32| |     |
+| [Françoise Mbango Etone](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Cameroon holds the Olympic record in women’s triple jump with a length of 15.39 meters. | | [César Cielo](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds. | | [Sally Pearson](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Australia holds the Olympic record in the women’s 100 meter hurdles with a time of 12.35 seconds. | | [Ri Se-gwang](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault) of the People’s Republic of Korea won the gold medal for the vault in the 2016 Summer Olympic Games. | | [Ren Qian](https://en.wikipedia.org/wiki/Diving_at_the_2016_Summer_Olympics_–_Women%27s_10_metre_platform) of China won the gold medal for diving in the 2016 Summer Olympic Games. | |     | |     |
+| https://www.spokesman.com/copyright/ | | I like this as an action cut out. The lighting isn't amazing, though. And not for $20. I can look for others if we decide having an action photo of each of these record holders is worth having. | | $$$ | |      | | Too good not to include as a reference. | | Start | | 985m |
+|       | |       | |        | |       | |       | | Finish | | 805m |
+|       | |       | |        | |       | |       | | Vertical drop| | 180m |
+|       | |       | |        | |       | |       | | Gates| | 66|
+|       | |       | |        | |       | |       | | Finish time | | 48.33|
 
 As you can see there are several different perspectives for graphing motion. One perspective is distance as a function of time. Select the events represented with this perspective.
 
-Multiple Select
-Triple Jump
-50 M Freestyle
-100 M Hurdles
-Vault
-Diving
+// NOTES
+// Multiple Select
+[option 1](Triple Jump)
+[option 2](50 M Freestyle)
+[option 3](100 M Hurdles)
+[option 4](Vault)
+[option 5](Diving)
 
 We see the other two events are [[height | distance]] as a function of [[distance | height]].  We will look at two of these functions in more detail. Let’s head over to the pool.
 
@@ -384,28 +303,43 @@ We see the other two events are [[height | distance]] as a function of [[distanc
 
 We are just in time for the men’s 50 meter freestyle finals. Keep a close eye on César Cielo Filho of Brazil. The graph of his swim will appear as the video plays.
 
-Student presses play on a video (0:12-1:21) of Cielo’s record setting swim. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+// NOTES
+// Student presses play on a [video](https://www.youtube.com/watch?v=qZvdhv9uhi0) (0:12-1:21) of Cielo’s record setting swim. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+
+::: column.grow
+
 César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds.
 
+::: column(width240)
 
-What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in graphing linear functions. Recall this graph represents all the ordered pairs matching inputs to outputs. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
+// EDITORIAL USE ONLY
+// [César Cielo](https://www.alamy.com/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-image332214503.html?pv=1&stamp=2&imageid=4E4EF72A-A00B-4C2E-9F1F-FA7688F2F792&p=1229576&n=0&orientation=0&pn=1&searchtype=0&IsFromSearch=1&srch=foo%3dbar%26st%3d0%26pn%3d1%26ps%3d100%26sortby%3d2%26resultview%3dsortbyPopular%26npgs%3d0%26qt%3dcesar%2520cielo%26qt_raw%3dcesar%2520cielo%26lic%3d3%26mr%3d0%26pr%3d0%26ot%3d0%26creative%3d%26ag%3d0%26hc%3d0%26pc%3d%26blackwhite%3d%26cutout%3d%26tbar%3d1%26et%3d0x000000000000000000000%26vp%3d0%26loc%3d0%26imgt%3d0%26dtfr%3d%26dtto%3d%26size%3d0xFF%26archive%3d1%26groupid%3d%26pseudoid%3d%26a%3d%26cdid%3d%26cdsrt%3d%26name%3d%26qn%3d%26apalib%3d%26apalic%3d%26lightbox%3d%26gname%3d%26gtype%3d%26xstx%3d0%26simid%3d%26saveQry%3d%26editorial%3d1%26nu%3d%26t%3d%26edoptin%3d%26customgeoip%3d%26cap%3d1%26cbstore%3d1%26vd%3d0%26lb%3d%26fi%3d2%26edrf%3d%26ispremium%3d1%26flip%3d0%26pl%3d)
+
+:::
+
+::: column.grow
+
+What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Recall this graph represents all the ordered pairs matching inputs to outputs. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
 
 Remember the general form for [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. We replace y with the name of the function, and we replace x with the input variable for this function.
-y=mx+c
 
-f(t)=m[[t]]+c
+{.text-center.follows} `y=mx+c`
+{.text-center.follows} `=>`
+{.text-center.follows} `f(t)=m[[t]]+c`
 
-This means we need to find [[slope]] and [[y-intercept]] from the graph.
+This means we need to find [[slope {.fixme} also accept "m"]] and [[y-intercept {.fixme} also accept "c"]] from the graph.
 
-Notice the x-axis, in this graph shows [[time]] in seconds. The y-axis is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) is [[00]] meters, which represent the [[distance | time | number of laps]] of the race.
+Notice the [horizontal-axis](target:1_xAxis), in this graph shows [[time]] in seconds. The [vertical-axis](target:1_yAxis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) is [[00]] meters, which represent the [[distance | time | number of laps]] of the race.
 
-y=mx+c
-
-f(t)=mt+[[0]]
+{.text-center.follows} `y=mx+c`
+{.text-center.follows} `=>`
+{.text-center.follows} `f(t)=mt+[[0]]`
 
 We are only missing slope. In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
-Students can click two points on the graph. These coordinates appear in a x-y table. Dashed lines with the horizontal and vertical measurements appear one unit at a time as though counting the slope. Students can choose between one and five points to see a pattern (slope).
+// NOTES
+// This might work better as an animation to keep the stairs equal distances. We won't have to worry about reducing ratios.
+// Students can click two points on the graph. These coordinates appear in a x-y table. Dashed lines with the horizontal and vertical measurements appear one unit at a time as though counting the slope. Students can choose between one and five points to see a pattern (slope).
 
 As we move from left to right along the line, the vertical distances measure [[-2.35]] meters. The horizontal distances measure [[1]] second. Cielo’s speed [[stayed constant | increased | decreased]] for this race, which is a key feature of linear functions.
 
@@ -414,45 +348,49 @@ y=mx+c
 
 f(t)=[[2.35]]t+0
 
-Tutor: Negative slope here means Cielo is getting closer to the finish line!
 
-Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at f(t)=10. The phrase “how long” indicates we are solving for t.
+::: column(width240)
 
-Algebra Flow
-f(t)=2.35t
-10=2.35t
-(10)/(2.35)=t
-4.25=t
+[Cielo race mock-up](https://www.desmos.com/calculator/o3de2a7odh)
+
+:::
+
+Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at [f(t)=10](target:1_cieloGraph). The phrase “how long” indicates we are solving for t.
+
+// NOTE
+// Algebra Flow
+{.text-center.follows} `f(t)=2.35t`
+{.text-center.follows} `10=2.35t`
+{.text-center.follows} `(10)/(2.35)=t`
+{.text-center.follows} `4.25=t`
 
 Cielo swims the first 10 meters in just over [[4.1+-0.1]] seconds.
+
 ---
 
 Take a look at the top four finishers during this race:
 
-Lines are labeled with the swimmer’s name and the function name. Moving the cursor along the active line show crosshairs extending to the axes. Students can also select a line, then select a value along one of the axes to lock the crosshairs to that value.
-Swimmer
-Function Name
-Color
-Cesar Cielo Filho
-f(t)
-green
-Amaury Leveaux
-l(t)
-purple
-Alain Bernard
-b(t)
-blue
-Ashley Callus
-c(t)
-red
+// NOTES
+// Lines are labeled with the swimmer’s name and the function name. Moving the cursor along the active line show crosshairs extending to the axes. Students can also select a line, then select a value along one of the axes to lock the crosshairs to that value.
+| Swimmer | | Function Name | | Color |
+| :------ | | :------------ | | :---- |
+| Cesar Cielo Filho | | f(t) | | green |
+| Amaury Leveaux | | l(t) | | purple |
+| Alain Bernard | | b(t) | | blue |
+| Ashley Callus | | c(t) | | red |
 
+::: column(width240)
 
+[50 free mock-up](https://www.desmos.com/calculator/ahx1i7lkau)
+
+::: column.grow
 
 All the lines cross the y-axis at [[0]] meters because this is the distance of the race. At first glance, we notice the graphs seem almost on top of each other. This must indicate that the swimmers’ speeds are similar.
 
 Say we want to figure out how many seconds Cielo is ahead of Leveaux after 10 meters. We already know Cielo swam this distance in 4.25 seconds. We don’t know the function rule for l(t), Leveaux’s swim, but we do have the graph. Find the time, t, where l(t) = [[10]].
 
-Student clicks on l(t) to make it the active function. Student clicks on 10 on the y-axis. Dotted line from y-axis to l(t) appears. Dotted line from l(t) at 10 meters to corresponding t-value appears.
+// NOTES
+// Student clicks on l(t) to make it the active function. Student clicks on 10 on the y-axis. Dotted line from y-axis to l(t) appears. Dotted line from l(t) at 10 meters to corresponding t-value appears.
 
 Leveaux swims the first 10 meters in [[4.56+-.02]] seconds. That means Cielo was only [[0.46+-0.12]] seconds ahead of Leaveaux!
 
@@ -466,48 +404,56 @@ c(20)=[[41.2+-0.1]]
 
 Callus is 6 meters behind [[Cielo | Leveaux | Bernard]] at the 20 second mark.
 
+:::
+
 Let’s head over to the diving pool for the women’s 10 meter platform competition.
 
 ---
 
+::: column.grow
+
 Meanwhile, on the other side of the Aquatics center, a diving competition is in progress.
-Ren Qian is among the youngest Olympic medalists. She is diving now - let’s watch (0:00-0:12)!
+Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4) // NOTES (0:00-0:12)!
+
 Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games.
+
+::: column(width240)
+
+[Ren image mock-up](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog)
+
+:::
+
+::: column(width240)
+
+// NOTES
+// make sticky  
+[dive mock-up](https://www.desmos.com/calculator/es8ugnvxeq)
+
+::: column.grow
 
 Let’s call the function representing Ren’s dive d(x). The input values, x, are horizontal distances from the platform. The output values, d(x), are Ren’s [[height]] throughout the dive. Immediately, we notice the shape of this graph is different from the swimming graphs above. This graph has [[2]] turning points compared to the linear functions [[0]] turning points.
 
 Graphs with this shape are called cubic functions. We can get important information from the graph even without knowing the function equation. Match the given statements to the graph.
 
-Students cards for all of the items below, and then drag them onto the corresponding point along the graph. Let’s show all the contextual statements, but talk about one key feature at a time.
+:::
 
-Place cards on graph
-Contextual Statement
-Appears with card is placed
-Target Key Feature
-Appears with card is placed
-Function notation
-Ren’s takes her place on the platform.
-Vertical intercept
-d(0)=10
-Ren reaches the highest point of her dive.
-maximum
-d(0.335)=10.941
-Ren completes 3.5 somersaults.
-decreasing
-0.335<x<2.556
-Ren’s entry is nearly flawless.
-Horizontal intercept
-d(x)=0
-d(2.056)=0
-Ren turns around under water.
-minimum
-d(2.556)=-1.623
-Ren surfaces after a nearly flawless dive.
-Horizontal intercept
-d(x)=o
-d(2.989)=0
+// NOTES
+// Students cards for all of the items below, and then drag them onto the corresponding point along the graph. Let’s show all the contextual statements, but talk about one key feature at a time.
 
+| Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
+| :---: | | :---: | | :---: |
+| Ren’s takes her place on the platform. | | Vertical intercept | |    |
+| Ren reaches the highest point of her dive. | | maximum | |    |
+| Ren completes 3.5 somersaults. | | decreasing | | 0.335<x<2.556 |
+| Ren’s entry is nearly flawless. | | Horizontal intercept | | d(2.056)=0 |
+| Ren turns around under water. | | minimum | | d(2.556)=-1.623 |
+| Ren surfaces after a nearly flawless dive. | | Horizontal intercept | | d(2.989)=0|
+
+
+// NOTES
+// If I read this correctly, the explanation of the various features of the graph would come up and then students would drag the corresponding ones into place? Is that correct? If so, I wonder how it would go if the order is flipped - students choose any item from the table above and then when they drag it into the correct spot, some narrative comes up explaining the math of that point. I'm only suggesting this because as I read the table without any of the text below, I found myself moving all the "cards" into the correct spot on the graph and enjoyed that. Maybe the scaffolding is needed and important tot the math here. Just sharing my 1st experience of reading the table.
 Recall the y-intercept is where x=[[0]]. In function notation, this looks like d([[0]])=10. The pattern of d(0)=y-intercept is true for any function.
+// That's an interesting thought. +philipp@mathigon.org can text oder be dependent on how the student uses the interactive? In this case, what order they choose to place the cards on the graph?
 
 Similarly, the x-intercepts are were [[d(x) | x]]=0. This graph has [[2]] x-intercepts. They represent the surface of the water in the pool.
 
@@ -519,22 +465,29 @@ The minimum is Ren’s lowest height. In this graph her lowest point is underwat
 
 ---
 
+// NOTES
+// +philipp@mathigon.org I pulled the intervals of increase from the cards. Do we want to pull it from the discussion, too? It gives a few more opportunities to use intevals.
+
 Intuitively, we understand that the graph is increasing when Ren’s body is moving [[up | down]]. The notation for increasing is different from tuning points and intercepts. Since the graph increases for more than one point, we represent the section of the graph using an [__interval__](gloss:interval). The interval communicates the [[x | d(x)]] values corresponding to Ren’s increasing height. Note that there are many different ways to write intervals, we use inequalities in this chapter.
 
 Ren moves up during the intervals:
 
-Multiple selector (shuffle order)
+// NOTES
+// Multiple selector (shuffle order)
 0<x<0.335		0.335<x<2.556		2.556<x<2.989
 
 The unchecked interval is where the graph is [[decreasing]]. Ren is moving down from d(0.335)= [[10.941+-0.1]] meters to d(2.556)=[[-1.623+-0.1]] meters.
 
 Notice the [[maximum | minimum]] is where the Ren’s path changes from increasing to decreasing heights.  The minimum is where Ren’s path changes from decreasing to increasing.
 
+// NOTES
+// Not sure where to put the comment, so putting it here. I like how in the 1st example, students see the graph being made as the video is playing. Maybe at the end of this section, something similar could happen? They have the graph labeled with the cards correctly. Then, the graph goes away and the cards stay in place. Then, they hit play on the video and see the graph made in real time as they watch the dive?
+
 ---
 
 Let’s think about the input and output values for d(x). Recall [__domain__](gloss:domain) is the set of all possible input values for d(x). One method for finding the domain is starting with the set of Real numbers and narrowing the set down to a reasonable range for the given situation.
 
-Ren’s horizontal distance starts at the diving platform and ends where she resurfaces in the pool. We know the diving platform is at x=[[0]] meters. She resurfaces at x= [[2.989]] meters. Therefore, we can write the domain as [[0<=x<=2.989 | 0<=x<=10.941 | 0<x<2.989]]. Note that the endpoints, 0 and 2.989, are included in the domain using <= and >=.
+Ren’s horizontal distance starts at the diving platform and ends where she resurfaces in the pool. We know the diving platform is at x=[[0]] meters. She resurfaces at x= [[2.989]] meters. Therefore, we can write the domain as [[0<=x<=2.989 | 0<=x<=10.941 | 0<x<2.989]]. {.fixme} SHOW AFTER PREVIOIUS BLANKS FILLED  Note that the endpoints, 0 and 2.989, are included in the domain using <= and >=.
 
 Recall [__range__](gloss:range) is the set of all heights Ren travels. Notice that Ren goes below the surface of the water. In fact, we can use the function’s [[minimum | maximum | horizontal intercept | vertical intercept]] to determine the lower bound on the range.  The minimum d(x) is [[-1.623]] meters.
 
@@ -542,11 +495,14 @@ Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, th
 
 ---
 
-Let’s head to the beach for the gold medal men’s volleyball match between Brazil and Italy. The teams engage in a beautiful volley (5:56-6:01). As you watch the video, notice the shape of the graph. Is it what you expect?
+Let’s head to the beach for the gold medal men’s volleyball match between Brazil and Italy. The teams engage in a beautiful [volley](https://www.youtube.com/watch?v=k4ux0jau_ws) (5:56-6:01). As you watch the video, notice the shape of the graph. Is it what you expect?
 
-Students watch the video of the volley and the graph appears simultaneously.
+// NOTES
+// Students watch the video of the volley and the graph appears simultaneously.
+// I'm thinking students can use estimates for y-values. The times should be pretty close to the video, but the heights should just be correct relative to each other (e.g. the second relative max is higher than the first and lower than the third). We can have the net height on the graph for reference.
+// We make this graph, add discussion.
 
-
+[sketch](https://drive.google.com/file/d/1mrT-d6Xwunc6I6hC7y2U_38bWR1y-lF5/view?usp=sharing)
 
 The graph shows the volley as a function of [[time | distance | height]]. That means for at each moment, the ball has a position marked by [[(time, height) | (height, time)]]. For example, the ball is [[9+-.5 ]] feet high at 2 seconds. We can find information about _when_ certain things happen.
 
@@ -558,38 +514,37 @@ ___
 
 ### Creating Graphs
 
-Create videos similar to the ball bouncing activity here: https://curriculum.illustrativemathematics.org/HS/teachers/1/4/8/index.html
-Students place a point on the coordinate plane and label it with a key feature name. The might also be able to place approximate points on the internals of increase and decrease. Students click “graph”, or some such button, to see a line connect the points according to their labels. Once students see the graph, they can choose to edit or submit for checking.
+// NOTES
+// From David re: diving graph. Capturing idea.
+// Great graph. I really like how you included the part under the water. That's nice to show. I wonder if before showing the graph, students could draw the shape they think the graph would be? Maybe have an image of a diving board at the 10 meter mark and they use like a "scribble" or "line" tool to draw in the line they think the graph will be. Then, when they are done, the graph you have gets superimposed on their graph and their line fades away.
+// Create videos similar to the ball bouncing activity here: https://curriculum.illustrativemathematics.org/HS/teachers/1/4/8/index.html
+// Students place a point on the coordinate plane and label it with a key feature name. The might also be able to place approximate points on the internals of increase and decrease. Students click “graph”, or some such button, to see a line connect the points according to their labels. Once students see the graph, they can choose to edit or submit for checking.
+// Alternate interactive ideas
+// Give components of this similar to the piecing it together activity. [This is the same idea](https://www.google.com/url?q=https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html&sa=D&ust=1595249230079000&usg=AFQjCNFlsjZxKJ9PGN9cluHSZm-OAFBaOA) used in the next chapter for building the tri graph.
 
 The women’s pole vault is just about to start. You will be drawing the graph for this event.
-Allow scrubbing in video. Superimpose timer on the frames to make graphing easier. 1:00 - 1:15
+// NOTES
+// Allow scrubbing in video. Superimpose timer on the frames to make graphing easier. [1:00 - 1:15](https://www.youtube.com/watch?v=PPaUgaBor2I)
 
 We like to start graphing using a table. Fill in the table below. Note the landing pad, called the pit, is 0.81 meters tall.
 
-Students fill in the missing values.
-Time (s)
-Height (m)
-0
-0
-1
-0
-4
-[[0]]
-5.5
-[[0]]
-6
-[[1.5+-.2]]
-6.5
-[[3.2+-.2]]
-7
-[[4.85]]
-7.5
-[[3.2+-.2]]
-8
-[[0.81]]
+// NOTES
+// Students fill in the missing values.
+| Time (s) | | Height (m) |
+| :------: | | :--------: |
+| 0 | | 0 |
+| 1 | | 0 |
+| 4 | | [[0]] |
+| 5.5 | | [[0]] |
+| 6 | | [[1.5+-.2]] |
+| 6.5 | | [[3.2+-.2]] |
+| 7 | | [[4.85]] |
+| 7.5 | | [[3.2+-.2]] |
+| 8 | | [[0.81]] |
 
 Plot these values on the coordinate plane.
 
+[sketch](https://drive.google.com/file/d/1iywz65_-0ySs5Sd6rSxWF9RN_zun7pLc/view?usp=sharing)
 
 This graph is interesting because between [[0]] and about  [[5.7+-0.2]] seconds, the graph is constant. Stefanidi’s maximum height is [[4.85]] meters. The last point on the graph is at ([[8]], [[0.81]]) because she lands on the pit, not the ground.
 
@@ -597,49 +552,30 @@ This graph is interesting because between [[0]] and about  [[5.7+-0.2]] seconds,
 
 ### Systems of Functions/ Simultaneous Functions
 
-Let’s head over to the track for the women’s 800 meter final. Looks like we arrive in time to catch the last 200 meters of the race. 3:22-4:00
+Let’s head over to the track for the women’s 800 meter final. Looks like we arrive in time to catch the last 200 meters of the race. [3:22-4:00](https://www.youtube.com/watch?v=h83yS9gPkA8)
 
-Information for the interactive:
-Athlete
-Adelle Tracey
-Laila Boufaarirane
-Raevyn Rogers
-Country
-GBR
-FRA
-USA
-@ 90.63 s
-600
-598
-590
-@ 800 m
-121
-126
-120.2
-color
-black
-green
-orange
-function
-g(t)=6.58545x+3.16101
-f(t)=5.71105x+80.4071
-u(t)=7.10179x-53.6354
+// NOTES
+// Information for the interactive:
+| __Athlete__ | | Adelle Tracey | | Laila Boufaarirane | | Raevyn Rogers |
+| :---------: | | :-----------: | | :----------------: | | :------------:|
+| __Country__ | | GBR | | FRA | | USA |
+| __@ 90.63 s__ | | 600 | | 598 | | 590 |
+| __@ 800 m__ | | 121 | | 126 | | 120.2 |
+| __color__ | | black | | green | | orange |
+| __function__ | | g(t)=6.58545x+3.16101 | | f(t)=5.71105x+80.4071 | | u(t)=7.10179x-53.6354 |
 
-Students see the graph populate in time with the video.
-
+// NOTES
+// Students see the graph populate in time with the video.
+// We'll need to think about where we want to place this in the coordinate plane. Floating axes are nice as seen here. We could also change it such that 90.63s is t=0, though I think that would be a higher barrier to understand than not seeing the origin on the coordinate plane.
+[800 M mock-up](https://www.desmos.com/calculator/msryjohuz9)
 
 When we have two or more function on the same coordinate plane, we call them a [[__system of equations__]](gloss:system-of-equations). Systems like this add key features that help us further understand what is happening in the race between Tracey, Boufaarirane, and Rogers. For example, something interesting is happening when the graphs intersect. Select all the true statements about the intersection points in this system.
 
-Multiple select
+// NOTES
+// Multiple select
 
-Tracey and Rogers are at the same location.
-g(t) = u(t)
-Rogers is ahead of Boufaarirane.
-u(t) < f(t)
-Boufaarirane and Rogers are at the same location.
-f(t) = u(t)
-Tracey is behind Rogers.
-g(t) > u(t)
+| Tracey and Rogers are at the same location. | | g(t) = u(t) | | Rogers is ahead of Boufaarirane. | | u(t) < f(t) |
+| Boufaarirane and Rogers are at the same location. | | f(t) = u(t) | | Tracey is behind Rogers. | | g(t) > u(t) |
 
 The graphs intersect when one runner passes another. When the runners have about 200 meters left in their race, [[Rogers | Boufaarirane | Tracey]] is in third place.
 
@@ -653,12 +589,14 @@ About [[13.5+-.25]] seconds later, [[Rogers | Boufaarirane | Tracey]] overtakes 
 
 The slopes of each function tell us each runner’s [[speed | distance | cadence]]. Rogers is running at about [[7.1+-0.2]] meters per second.
 
-Algebra Flow
-m=y2-y1x2-x1
-m=y2-590x2-90.63
-m=800-590120.2-90.63
-m=21029.57
-m=7.1
+// NOTES
+// We looked at counting slope above. This is a review of calculating slope. They need to pull the values off of the graph.
+// Algebra Flow
+{.text-center.follows} `m=(y_2 - y_1)/(x_2 - x_1)`
+{.text-center.follows} `m= (y_2 - 590)/(x_2 - 90.63)`
+{.text-center.follows} `m= (800-590)/(120.2-90.63)`
+{.text-center.follows} `m= (210)/(29.57)`
+{.text-center.follows} `m=7.1`
 
 Roger’s speed is [[0.6+-0.2]] meters per second faster than Boufaarirane and [[1.4+-0.2]] meters per second faster than Tracey.
 
@@ -666,30 +604,15 @@ Roger’s speed is [[0.6+-0.2]] meters per second faster than Boufaarirane and [
 
 In this system of functions, we can see who is ahead at any given time during the race. For example, we write f(t) > u(t) when [[Boufaarirane is ahead of Rogers | Rogers is ahead of Boufaarirane]].
 
-
-Students label with the given cards.
-Contextual Statement
-This information appears after the card is correctly placed.
-Function Notation
-Extra information. Not cards.
-Other
-Boufaarirane is ahead of Rogers.
-f(t) > u(t)
-{90.63=<t<96.382}
-
-
-Rogers is ahead of Boufaarirane.
-f(t) < u(t)
-{96.382<t<=120.2}
-Tracey is ahead of Rogers.
-u(t) < g(t)
-{90.63<=t<109.998}
-Tracey is ahead of Boufaarirane.
-g(t) > f(t)
-{90.63<=t<=121}
-Rogers is ahead of Tracey.
-g(t) < u(t)
-{109.998<t<=120.2}
+// NOTES
+// Used both < and > to show both. Would it be better for students to see a "readable" pattern than matches the sentences, which would only use > ?
+| Students label with the given contextual statement cards. | | This information appears after the functions notation card is correctly placed. | | Extra information. Not cards. |
+| :---: | | :---: | | :---: |
+| Boufaarirane is ahead of Rogers. | | f(t) > u(t) | | {90.63=<t<96.382} |
+| Rogers is ahead of Boufaarirane. | | f(t) < u(t) | | {96.382<t<=120.2} |
+| Tracey is ahead of Rogers. | | u(t) < g(t) | | {90.63<=t<109.998} |
+| Tracey is ahead of Boufaarirane. | | g(t) > f(t) | |   |
+| Rogers is ahead of Tracey. | | g(t) < u(t) | | {109.998<t<=120.2} |
 
 When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | values]]. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] <= t <= [[121]]. We can do a similar analysis for each pair of functions.
 
@@ -712,8 +635,8 @@ TODO: draw chart
 > section: piecewise
 > sectionStatus: dev
 
-
-Chapter 3: Piecewise Functions
+// NOTE
+// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
 Multisport races test athletes endurance. Swimrun is a rather new multi sport competition that started in 2002 in Sweden. The story goes that the owner of the Utö Värdshus hotel, his friend, and two hotel staff challenged each other to a two-versus-two race from the Utö Värdshus hotel, across three islands, to Sandhamn. The losing team would pay for everyone’s post-race meals. How long do you think the race lasted?
 
@@ -916,6 +839,9 @@ The most ice cream you can buy with $5  is about [[300+-30]] grams with the larg
 
 > section: absolute-value
 > sectionStatus: dev
+
+// NOTE
+// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
 ::: column.grow
 
@@ -1182,6 +1108,9 @@ Now that we know more about absolute value functions and how they work, take a s
 
 > section: inverse
 > sectionStatus: dev
+
+// NOTE
+// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
 
 {.todo} Coming Soon!
 Team sports is a world of split-second decisions and fast-moving bodies. Teammates choose where to place a pass. Referees decide who gains possession of the ball. Fans follow the action from great distances. In all these cases, jersey colour is deciding factor in how these instantaneous decisions are made.
@@ -1549,7 +1478,9 @@ Functions and inverse functions are fundamental ideas in coding and deciphering.
 > section: rates-of-change
 > sectionStatus: dev
 
-{.todo} Coming Soon!
+// NOTE
+// Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
+
 Throughout history, bacteria and viruses have plagued populations ranging in size from villages to entire civilisations. We see cycles of infectious diseases such as small pox, black death, salmonella,  yellow fever, flu, polio, AIDS, ebola, Zika, and  COVID-19 change the course of history.
 
 Math can help us understand the scale and impact of disease outbreaks. Today we will be focusing on the [function](gloss:function) describing the cumulative confirmed cases of COVID-19.
